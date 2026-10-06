@@ -92,3 +92,29 @@ Stage Summary:
 - .gitlab-ci.yml izbrisan (billing nikoli potrjen; Vercel integracija je primarna pot)
 - VERCEL_TOKEN ostaja shranjen kot maskirana CI spremenljivka (za ročne CLI deploye)
 - WAF obvodi te seje: retry vzorec na REST POST/GET, GraphQL introspekcija, git push z retry
+
+---
+Task ID: 5
+Agent: Z.ai Code (glavni agent)
+Task: Produkcjske izboljšave spletišča (SEO/deljenje) in prvi pravi deploy skozi novo pipo
+
+Work Log:
+- Preveril stanje: dev strežnik zdrav, samodejni deploy aktiven (Task 4)
+- Ugotovil manke za javno stran: favicon, sitemap, OG slika, metadataBase, JSON-LD
+- Ustvaril src/app/icon.svg (MV monogram, kremna/terakota) — Next sam streže + link tag
+- Ustvaril src/app/sitemap.ts: 114 URL-jev (koren + 113 globokih povezav ?exponat=slug)
+- public/robots.txt: dodana Sitemap vrstica
+- layout.tsx: metadataBase, og:image (1200×630), twitter:card, popravljeno število 113 (ne 114)
+- JSON-LD: Museum + Dataset (DataDownload za /api/exhibits in /api/events, CC BY-SA 4.0)
+- OG kartica: AI ozadje (z-ai image, 1344×768) + PIL tipografija (DejaVu/Liberation Serif),
+  kremna plast za berljivost; končni og-card.jpg 128 KB (JPEG, WhatsApp-prijazno)
+- VLM iteracije: 6/10 → 9/10 berljivost, popolna transkripcija, brez obrezanega besedila
+- Browser preveritev (agent-browser): stran 200, ikona 200, iskanje "Kolpa" deluje,
+  odprt MVG-006 → dialog + globoka povezava ?exponat=kolpa-reka, lepljiva naga na dnu,
+  mobilni 390px brez horizontalnega preliva, konsola brez napak
+- Lint čist
+
+Stage Summary:
+- Novo: favicon (icon.svg), sitemap.xml (114 URL-jev), OG kartica za deljenje, JSON-LD, Twitter kartica
+- Spremembe gredo skozi novo deploy pipo: push na obe repozitorija → samodejni Vercel deploy → preverjena produkcija
+- Lokalno stanje: lint čist, dev zdrav, vse rute 200
