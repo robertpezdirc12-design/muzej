@@ -118,3 +118,8 @@ Stage Summary:
 - Novo: favicon (icon.svg), sitemap.xml (114 URL-jev), OG kartica za deljenje, JSON-LD, Twitter kartica
 - Spremembe gredo skozi novo deploy pipo: push na obe repozitorija → samodejni Vercel deploy → preverjena produkcija
 - Lokalno stanje: lint čist, dev zdrav, vse rute 200
+
+Verifikacija produkcije (po samodejnem deployu dpl_FwaozDkaBAqg, READY v 36 s):
+- /sitemap.xml 200 (114 URL-jev), /robots.txt 200 (Sitemap vrstica), /og-card.jpg 200 (128 KB),
+  /icon.svg 200, og:image + twitter:card + icon link v HTML, JSON-LD Museum + Dataset, /api/exhibits 200
+- Celoten cikel potrjen: sprememba → push na oba repoja → samodejni Vercel deploy → živa produkcija
