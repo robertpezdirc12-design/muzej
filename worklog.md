@@ -45,3 +45,22 @@ Stage Summary:
 - Povezava GitLab → Vercel: CI pripravljen in pravilen, a GitLab.com račun ne more zagnati jobov (potrebna potrditev plačilne kartice) ALI Vercel OAuth Login Connection (priporočeno, 1 korak za uporabnika)
 - VERCEL_TOKEN varno shranjen kot maskirana CI spremenljivka; noben žeton ni v repozitoriju
 - Svetujem rotacijo vseh žetonov (3× GitLab PAT + Vercel token so bili prilepljeni v klepet)
+
+---
+Task ID: 3
+Agent: Z.ai Code (glavni agent)
+Task: Nadaljevanje — preverjanje stanja povezave GitLab ↔ Vercel po premoru seje
+
+Work Log:
+- Preveril worklog + git stanje: lokalni main 0f5309b (samo posodobitev worklog.md), remote fc772a8
+- Varnostni pregled pred pushom: v datotekah, ki gredo na GitLab, ni dejanskih žetonov (samo ime spremenljivke VERCEL_TOKEN)
+- Push 0f5309b na gitlab/main uspešen → sprožil pipeline 7 kot diagnostiko
+- Pipeline 7: takoj FAILED, 0 jobov — enako kot 1–6 → GitLab.com račun še vedno ne more poganjati CI jobov (billing ni potrjen)
+- Produkcija živa: https://griblje-museum.vercel.app 200, /api/exhibits 200
+- Vercel žeton ni več dostopen lokalno (shranjen samo kot maskirana GitLab CI spremenljivka) — OAuth povezave v Vercelu ni mogoče preveriti/namestiti brez uporabnikovega dejanja
+
+Stage Summary:
+- GitLab main sinhroniziran: 0f5309b; produkcija živi na Vercelu
+- Samodejni deploy ob pushu ŠE VEDNO blokiran na strani GitLab CI (0 jobov, 7 zaporednih neuspešnih pipeline-ov)
+- Edini preostali korak zahteva uporabnika: (A) Vercel → Settings → Login Methods → GitLab OAuth [priporočeno] ali (B) GitLab → Billing → potrditev kartice
+- Po (A): naslednji push na main avtomatsko deploya prek Vercelove integracije; po (B): pripravljen .gitlab-ci.yml prevzame deploy
