@@ -58,3 +58,5 @@ server.log
 # lokalne baze
 /db/*.db
 /db/*.db-journal
+
+.env
