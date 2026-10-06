@@ -60,22 +60,24 @@ Produkcija teče na Vercelu: **https://griblje-museum.vercel.app**
 
 | Plast | Stanje |
 |---|---|
-| Vsebina | repozitorij `markec-group/muzej` (veja `main`) — identična produkciji |
-| Produkcija | uspešno nameščena iz tega repozitorija (Vercel, okolje `production`) |
-| CI/CD | `.gitlab-ci.yml` pripravljen; zaživi, ko GitLab račun lahko poganja jobe (glej spodaj) |
+| Kanonični repozitorij | `markec-group/muzej` (veja `main`) — vsebina identična produkciji |
+| Deploy sprožilec | `robert.pezdirc12/muzej` (osebni, zasebni) — nanj je povezan Vercel |
+| Samodejni deploy | ✅ AKTIVEN — vsak push na `main` deploy repozitorija zgradi in objavi Vercel |
 | Skrivnost | `VERCEL_TOKEN` shranjen kot maskirana CI/CD spremenljivka projekta |
 
-### Kako omogočiti samodejni deployment ob vsakem pushu na `main`
+### Zakaj dva repozitorija?
 
-1. **Priporočena pot — Vercelova GitLab integracija (brez GitLab CI):**
-   - Vercel → Account Settings → Login Methods & Connections → poveži **GitLab** (OAuth);
-   - nato Projekt `griblje-museum` → Settings → Git → poveži repozitorij `markec-group/muzej`
-     (production branch: `main`).
-   - Odslej vsak push na `main` zgradi in objavi Vercel sam.
-2. **Alternativna pot — GitLab CI pipeline:**
-   - GitLab → User Settings → Billing → potrdi plačilno kartico (na brezplačnem načrtu
-     je to pogoj za razpoložljivost compute minut);
-   - obstoječa `.gitlab-ci.yml` pipeline bo nato samodejno delovala pri vsakem pushu.
+Brezplačni (Hobby) Vercel načrt ne povezuje **zasebnih repozitorijev v lasti skupin**
+(zahteva Pro) — zato je Vercel povezan na zasebni osebni repozitorij
+`robert.pezdirc12/muzej`, ki služi kot *deploy sprožilec*. Skupinski repozitorij
+`markec-group/muzej` ostaja kanonična kopija z enako vsebino in zgodovino.
+
+**Pri vsaki spremembi potisni na OBE repozitorija:**
+
+```bash
+git push gitlab main   # kanonična kopija (markec-group/muzej)
+git push deploy main   # sprožilec samodejnega deploya (robert.pezdirc12/muzej)
+```
 
 ### Ročni deployment (iz klona repozitorija)
 
