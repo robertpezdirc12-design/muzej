@@ -1,0 +1,25 @@
+# Muzej vasi Griblje — povezava GitLab -> Vercel
+#
+# Vsak push na vejo 'main' sproži samodejni produkcijski deployment na Vercel
+# (projekt: griblje-museum, tim: robertpezdirc12-designs-projects,
+#  produkcijska domena: griblje-museum.vercel.app).
+#
+# Zahteva CI/CD spremenljivko VERCEL_TOKEN (masked), nastavljeno v:
+#   GitLab -> markec-group/muzej -> Settings -> CI/CD -> Variables
+
+stages:
+  - deploy
+
+deploy:production:
+  stage: deploy
+  image: node:22
+  interruptible: true
+  resource_group: vercel-production
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_BRANCH == "main"'
+  script:
+    - npm install --global vercel@latest
+    - vercel deploy --prod --yes --token="$VERCEL_TOKEN" --project=griblje-museum --scope=robertpezdirc12-designs-projects
+  environment:
+    name: production
+    url: https://griblje-museum.vercel.app
