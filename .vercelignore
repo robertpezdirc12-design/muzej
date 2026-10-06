@@ -1,0 +1,32 @@
+# Vercel: kaj NE gre v deployment
+# (velja za lokalne CLI deploye in GitLab CI deploye)
+
+# sandbox / obnovitveni ostanki (niso del aplikacije)
+download
+skills
+upload
+db
+examples
+mini-services
+tests
+.zscripts
+Caddyfile
+worklog.md
+
+# gradbeni ostanki (vedno izključeno, a načrtovito)
+.next
+node_modules
+out
+
+# skrivnosti in dnevniki — NIKOLI na Vercel
+.env
+.env.*
+*.log
+dev.log
+dev.out.log
+server.log
+
+# lokalni ostanki
+.z-ai-config
+.claude
+local-*
