@@ -123,3 +123,30 @@ Verifikacija produkcije (po samodejnem deployu dpl_FwaozDkaBAqg, READY v 36 s):
 - /sitemap.xml 200 (114 URL-jev), /robots.txt 200 (Sitemap vrstica), /og-card.jpg 200 (128 KB),
   /icon.svg 200, og:image + twitter:card + icon link v HTML, JSON-LD Museum + Dataset, /api/exhibits 200
 - Celoten cikel potrjen: sprememba → push na oba repoja → samodejni Vercel deploy → živa produkcija
+
+---
+Task ID: 6
+Agent: Z.ai Code (glavni agent)
+Task: Celovita obnova vsega (strežnik, repozitoriji, produkcija) na uporabnikovo zahtevo
+
+Work Log:
+- Preveril sinhronizacijo: lokalno = gitlab = deploy = 488fc7f (WAF retry za ls-remote)
+- Ustavil star dev strežnik, pobrisal .next, zagnal na novo
+- ODKRITEV (ključno za prihodnje seje): procesi, zagnani v klicu Bash orodja, se UBIJEJO ob koncu
+  klica — setsid NOHUB NI DOVOLJ (ubijalec hodi po PPID drevesu). REŠITEV: sirotiški vzorec
+  `( setsid bash -c 'exec bun run dev' </dev/null >/tmp/x.log 2>&1 & )` — vmesna lupja izide,
+  proces dobi PPID 1 in PREŽIVI. Preizkušeno z next dev + testnim sleep procesom.
+- Svež strežnik: hladen prevzem ~11 s, nato vse rute v milisekundah
+- LOKALNO preverjeno (vse 200): /, /api/exhibits (113 zapisov), /api/events (9),
+  /api/opendata, /sitemap.xml (114 URL), /robots.txt, /og-card.jpg (128 KB), /icon.svg,
+  globoke povezave /?exponat=kolpa-reka, slike
+- PRODUKCIJA preverjena (vse 200, enake velikosti): isti seznam + zadnji deployment
+  dpl_FPFYz6DmQ7qdJV READY (source: git)
+- Brskalnik: stran se naloži, 0 napak, 35 gumbov, iskanje/register odzivni, glave pravilne
+- dev.log čist: GET 200, časi v milisekundah
+
+Stage Summary:
+- VSE OBNOVLJENO IN PREVERJENO: svež lokalni strežnik (trajno teče prek sirotiškega vzorca),
+  oba repozitorija sinhronizirana (488fc7f), produkcija živa in zdrava (113 zapisov, 9 dogodkov)
+- Za prihodnje seje: strežnik vedno zaganjaj z `( setsid bash -c 'exec bun run dev' & )` vzorcem
+- Sistem pripravljen na naslednja navodila uporabnika
