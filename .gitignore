@@ -52,3 +52,9 @@ prompt
 server.log
 # Skills directory
 /skills/
+# muzej recovery workspace (surovi podatki obnovitve)
+/download/
+
+# lokalne baze
+/db/*.db
+/db/*.db-journal
