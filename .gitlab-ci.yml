@@ -1,34 +1,33 @@
-# Probe: find out which keyword prevents job creation
-# (temporary bisect version)
+# Muzej vasi Griblje — povezava GitLab -> Vercel
+#
+# Vsak push na vejo 'main' sproži samodejni produkcijski deployment na Vercel
+# (projekt: griblje-museum, tim: robertpezdirc12-designs-projects,
+#  produkcijska domena: https://griblje-museum.vercel.app).
+#
+# Zahteva CI/CD spremenljivko VERCEL_TOKEN (masked), nastavljeno v:
+#   GitLab -> markec-group/muzej -> Settings -> CI/CD -> Variables
+#
+# OPOMBA: na brezplačnem GitLab.com računu pipeline-i padajo, dokler v
+# User Settings -> Billing ni potrjena plačilna kartica (compute kvota).
+# Priporočena alternativa je Vercelova lastna GitLab integracija — glej README.md.
 
 stages:
-  - probe
+  - deploy
 
-probe-a-minimal:
-  stage: probe
-  script:
-    - echo "A minimal"
-
-probe-b-image:
-  stage: probe
+deploy:production:
+  stage: deploy
   image: node:22
-  script:
-    - echo "B image"
-
-probe-c-rules:
-  stage: probe
+  interruptible: true
+  resource_group: vercel-production
+  retry:
+    max: 2
+    when:
+      - runner_system_failure
+      - api_failure
   rules:
     - if: '$CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_BRANCH == "main"'
   script:
-    - echo "C rules"
-
-probe-d-full:
-  stage: probe
-  image: node:22
-  interruptible: true
-  resource_group: probe-rg
+    - npx --yes vercel@latest deploy --prod --yes --token="$VERCEL_TOKEN" --project=griblje-museum --scope=robertpezdirc12-designs-projects
   environment:
     name: production
     url: https://griblje-museum.vercel.app
-  script:
-    - echo "D full no retry"

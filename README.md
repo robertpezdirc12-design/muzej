@@ -53,3 +53,43 @@ bun run dev        # http://localhost:3000
 Spletišje je bilo obnovljeno iz zadnjega delujočega produkcjskega deploymenta
 (2026-10-06 11:32 UTC) po incidentu z neavtoriziranim dostopom do GitHub računa.
 Vsa vsebina, besedila, viri in slike izhajajo iz izvirne zbirke.
+
+## Povezava GitLab ↔ Vercel
+
+Produkcija teče na Vercelu: **https://griblje-museum.vercel.app**
+
+| Plast | Stanje |
+|---|---|
+| Vsebina | repozitorij `markec-group/muzej` (veja `main`) — identična produkciji |
+| Produkcija | uspešno nameščena iz tega repozitorija (Vercel, okolje `production`) |
+| CI/CD | `.gitlab-ci.yml` pripravljen; zaživi, ko GitLab račun lahko poganja jobe (glej spodaj) |
+| Skrivnost | `VERCEL_TOKEN` shranjen kot maskirana CI/CD spremenljivka projekta |
+
+### Kako omogočiti samodejni deployment ob vsakem pushu na `main`
+
+1. **Priporočena pot — Vercelova GitLab integracija (brez GitLab CI):**
+   - Vercel → Account Settings → Login Methods & Connections → poveži **GitLab** (OAuth);
+   - nato Projekt `griblje-museum` → Settings → Git → poveži repozitorij `markec-group/muzej`
+     (production branch: `main`).
+   - Odslej vsak push na `main` zgradi in objavi Vercel sam.
+2. **Alternativna pot — GitLab CI pipeline:**
+   - GitLab → User Settings → Billing → potrdi plačilno kartico (na brezplačnem načrtu
+     je to pogoj za razpoložljivost compute minut);
+   - obstoječa `.gitlab-ci.yml` pipeline bo nato samodejno delovala pri vsakem pushu.
+
+### Ročni deployment (iz klona repozitorija)
+
+```bash
+git clone https://gitlab.com/markec-group/muzej.git
+cd muzej
+npx --yes vercel@latest deploy --prod --yes \
+  --token="$VERCEL_TOKEN" \
+  --project=griblje-museum \
+  --scope=robertpezdirc12-designs-projects
+```
+
+### Varnost
+
+Žeton `VERCEL_TOKEN` je v GitLabu shranjen izključno kot **maskirana CI/CD
+spremenljivka** in ni v repozitoriju. Datoteki `.gitignore` in `.vercelignore`
+preprečujeta prenos `.env*` in lokalnih datotek pri deployu.
