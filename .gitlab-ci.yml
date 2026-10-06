@@ -18,8 +18,7 @@ deploy:production:
   rules:
     - if: '$CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_BRANCH == "main"'
   script:
-    - npm install --global vercel@latest
-    - vercel deploy --prod --yes --token="$VERCEL_TOKEN" --project=griblje-museum --scope=robertpezdirc12-designs-projects
+    - npx --yes vercel@latest deploy --prod --yes --token="$VERCEL_TOKEN" --project=griblje-museum --scope=robertpezdirc12-designs-projects
   environment:
     name: production
     url: https://griblje-museum.vercel.app
