@@ -11,6 +11,9 @@ import { MuseumStories, MuseumEvents } from "@/components/museum/museum-stories-
 import { MuseumAbout } from "@/components/museum/museum-about";
 import { MuseumFooter } from "@/components/museum/museum-footer";
 import { ExhibitDetail } from "@/components/museum/exhibit-detail";
+import { getExhibit } from "@/lib/museum";
+
+const DEFAULT_TITLE = "Muzej vasi Griblje — digitalni muzej vasi ob Kolpi";
 
 function MuseumIntro({ done }: { done: boolean }) {
   const { t } = useLang();
@@ -40,6 +43,18 @@ function MuseumIntro({ done }: { done: boolean }) {
 function MuseumApp() {
   const [activeSlug, setActiveSlug] = useState<string | null>(null);
   const [introDone, setIntroDone] = useState(false);
+  const { lang } = useLang();
+
+  /* naslov zavihka sledi odprtemu zapisu (deljenje / zaznamki / zgodovina) */
+  useEffect(() => {
+    const ex = activeSlug ? getExhibit(activeSlug) : undefined;
+    if (ex) {
+      const title = lang === "si" ? ex.titleSi : ex.titleEn;
+      document.title = `${ex.museumNo} — ${title} · Muzej vasi Griblje`;
+    } else {
+      document.title = DEFAULT_TITLE;
+    }
+  }, [activeSlug, lang]);
 
   /* uvodni zaslon — kot v izvirniku; nato odpremo globo povezavo ?exponat=slug */
   useEffect(() => {
