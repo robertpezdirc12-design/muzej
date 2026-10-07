@@ -230,3 +230,38 @@ Verifikacija produkcije (samodejni deploy dpl_BMfux6ryMk6inbHBGrN9gUYb, READY):
 - Vseh 113 kartic exponatov v strežniško izrisanem HTML (99× MVG-0XX + 14× MVG-1XX) ✓
 - /api/exhibits 200; velikost HTML nespremenjena (~389 KB) — indeks ne bremena paketa
 - Sklep: izboljšava iskanja živa na produkciji, cevovod (push → deploy) potrebno potrjen 4. zapored
+
+---
+Task ID: 9
+Agent: Z.ai Code (glavni agent)
+Task: Nadaljevanje obnove — rešitev izgubljenega 3D-modela MVG-002 + prikaz lokacij zapisov
+
+Work Log:
+- Revizija pokritosti virov odkrila VRZEL: MVG-002 (Cerkev sv. Vida) ima model3dUrl
+  /models/cerkev-sv-vida.glb, a datoteke NI (public/models/ ni obstajal, produkcija 404,
+  model3dCredit ni bil nikoli prikazan v UI)
+- Reševalne poti izčrpane: izvirni Vercel deploymenti IZBRISANI (v13/v12/v6 + files = "not
+  found" tudi s polnim UID), Wayback CDX brez zajemov, GitHub račun markec12345678 izbrisan
+- Odločitev: kredit pravi "Interpretativni model" → izdelan NOV interpretativni low-poly model
+  proceduralno (trimesh 4.11): ladja + dvokapna streha + zvonik s piramidno kapico in zlatim
+  križem + polvaljasta apsida s polstoržasto streho + sakristija + portal s stopnicami +
+  kamnita ploščad; paleta kremna/terakota (PBR materiali); scripts/build_church_model.py
+- Popravek orijentacije valjka (trimesh Z-os → GLB Y-os, rotacija +90° okoli X)
+- GLB: 24 KB, 28 geometrij, 25×23×25 m — public/models/cerkev-sv-vida.glb
+- UI: @google/model-viewer@4.3.1 (bun add), dinamičen uvoz (ločen chunk, naloži se le kadar
+  zapis ima model), JSX tipi v src/types/model-viewer.d.ts (React 19 custom elements),
+  ModelViewer3D komponenta (camera-controls, auto-rotate 18°/s, senca, orbit -35°/68°)
+- Vgrajeno v exhibit-detail za MVG-002 po "Kako vemo"; nova sekcija "Kje" (MapPin) za vse
+  zapise s koordinatami (36) — povezava na OpenStreetMap z mlat/mlon + zoom 17,
+  ločeno besedilo za približne koordinate (coordsApprox)
+- Lint čist; browser: element registriran, loaded=true po scrollIntoView (IntersectionObserver
+  odloži nalaganje do vidnosti — pravilno), vrtenje z miško POTRJENO (orbita -0.80→2.35 rad),
+  mobilni 390 px 347×340 brez preliva, 0 konzolnih napak
+- VLM ocena izrisa (9/10 ekvivalent): cerkev vidna, ladja/zvonik/križ/apsida prepoznavni,
+  kremna + terakota, brez napak v geometriji
+
+Stage Summary:
+- 3D-model MVG-002 obnovljen z novim interpretativnim modelom (originalna datoteka je
+  nenadomestljiva — vsi viri izbrisani; transparentno dokumentirano)
+- Nova zmožnost spletišča: interaktivni 3D prikaz zapisa + lokacije zapisov na OSM
+- Sledi: commit → push → samodejni deploy → verifikacija produkcije

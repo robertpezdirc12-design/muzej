@@ -22,6 +22,7 @@ import {
   X,
 } from "lucide-react";
 import { useLang } from "./language-context";
+import { ModelViewer3D } from "./model-viewer-3d";
 import {
   getExhibit,
   getExtra,
@@ -142,6 +143,14 @@ export function ExhibitDetail({
               ))}
             </div>
           </section>
+
+          {/* interpretativni 3D-model zapisa */}
+          {exhibit.model3dUrl && (
+            <ModelViewer3D
+              src={exhibit.model3dUrl}
+              credit={exhibit.model3dCredit}
+            />
+          )}
 
           {/* življenje predmeta */}
           {extra && extra.lifeStations.length > 0 && (
@@ -395,6 +404,27 @@ export function ExhibitDetail({
                   </li>
                 ))}
               </ul>
+            </section>
+          )}
+
+          {/* lokacija zapisa */}
+          {exhibit.lat != null && exhibit.lng != null && (
+            <section className="mt-6" aria-labelledby="kje">
+              <h2 id="kje" className="flex items-center gap-2 font-display text-xl font-semibold">
+                <MapPin className="size-5 text-primary" aria-hidden="true" />
+                {t("Kje", "Where")}
+              </h2>
+              <a
+                href={`https://www.openstreetmap.org/?mlat=${exhibit.lat.toFixed(5)}&mlon=${exhibit.lng.toFixed(5)}#map=17/${exhibit.lat.toFixed(5)}/${exhibit.lng.toFixed(5)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 inline-flex min-h-11 items-center gap-2 rounded-full border px-4 py-2 text-xs font-medium transition-colors hover:border-primary/40 hover:text-primary"
+              >
+                <ExternalLink className="size-3.5" aria-hidden="true" />
+                {exhibit.coordsApprox
+                  ? t("Kraj približno → karta OpenStreetMap", "Place approximate → OpenStreetMap map")
+                  : t("Prikaži na karti OpenStreetMap", "Show on OpenStreetMap map")}
+              </a>
             </section>
           )}
 
