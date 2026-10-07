@@ -237,31 +237,55 @@ export function storyAttribution(
 
 /* ─────────────────────────  ISKANJE  ───────────────────────── */
 
+/**
+ * Zloži diakritike (č→c, š→s, ž→z, à→a …) — zadetki tudi, ko uporabnik tipka
+ * brez šumnikov ("sokcev" najde "Šokčev", "zunici" najde "Žuniči").
+ */
+function foldDiacritics(s: string): string {
+  return s
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/đ/g, "d");
+}
+
+/** Iskalni kop zapisa: številka, naziva, povzetka, obdobja, polno kuratorsko besedilo, viri, letnice. */
+function searchHay(e: Exhibit): string {
+  const parts: string[] = [
+    e.museumNo,
+    e.titleSi,
+    e.titleEn,
+    e.summarySi,
+    e.summaryEn,
+    e.periodSi,
+    e.periodEn,
+    e.storySi,
+    e.storyEn,
+    e.yearFrom != null ? String(e.yearFrom) : "",
+    e.yearTo != null ? String(e.yearTo) : "",
+    ...(e.sources ?? []).flatMap((s) => [s.nameSi ?? "", s.nameEn ?? ""]),
+  ];
+  return foldDiacritics(parts.join(" "));
+}
+
+/** Vnaprej zložen iskalni indeks (redko, enkrat ob zagonu — brez dela ob vsakem pritisku tipke). */
+const SEARCH_INDEX: { exhibit: Exhibit; hay: string }[] =
+  exhibitsByMuseumNo().map((e) => ({ exhibit: e, hay: searchHay(e) }));
+
 export function filterExhibits(
   query: string,
   category: CategoryCode | "all",
   evidence: EvidenceCode | "all",
   featuredOnly: boolean,
 ): Exhibit[] {
-  const q = query.trim().toLowerCase();
-  return exhibitsByMuseumNo().filter((e) => {
+  const q = foldDiacritics(query.trim());
+  return SEARCH_INDEX.filter(({ exhibit: e, hay }) => {
     if (featuredOnly && !e.featured) return false;
     if (category !== "all" && e.category !== category) return false;
     if (evidence !== "all" && e.evidenceStatus !== evidence) return false;
-    if (q) {
-      const hay = [
-        e.titleSi,
-        e.titleEn,
-        e.museumNo,
-        e.summarySi,
-        e.periodSi,
-      ]
-        .join(" ")
-        .toLowerCase();
-      if (!hay.includes(q)) return false;
-    }
+    if (q && !hay.includes(q)) return false;
     return true;
-  });
+  }).map(({ exhibit }) => exhibit);
 }
 
 export const STATS = {

@@ -198,3 +198,29 @@ Verifikacija po rotaciji (novo verigo od konca do konca):
   jezik SI↔EN, temni način on/off, mobilni 390px brez horizontalnega preliva, 0 konzolnih napak,
   lepljiva noga, screenshot 1440×900 (1 MB, polno izrisan)
 - Sklep: SAMODEJNI DEPLOY DELUJE TUDI Z NOVIMI ŽETONI — rotacija ni prekinila cevovoda
+
+---
+Task ID: 8
+Agent: Z.ai Code (glavni agent)
+Task: Nadaljevanje obnove — UX izboljšava iskanja po registru (diakritike + polno besedilo)
+
+Work Log:
+- Preveril pokritost podatkov: extra.json (lifeStations 375, claims 6, related 565, walk 113)
+  vse prikazano v exhibit-detail; meta.json (museumInfo, counts, evidenceScale, stories)
+  uporabljeno; events 9 v MuseumEvents — pokritost 100 %
+- Ugotovil vrzeli iskanja: (a) občutljivost na šumnike — "sokcev"/"zunici" brez zadetkov,
+  (b) iskano polje le 5 (titleSi/En, museumNo, summarySi, periodSi) — brez polnega
+  kuratorskega besedila (storySi/En), povzetkov/obdobij EN, virov, letnic
+- src/lib/museum.ts: foldDiacritics() (NFD + odstranitev combining marks, ES6-safe brez \p{}),
+  searchHay() čez vsa besedilna polja + letnice + vire, SEARCH_INDEX predizračunan enkrat
+  ob zagonu (113 zapisov), filterExhibits() prepisana na indeks
+- src/components/museum/museum-register.tsx: posodobljen placeholder
+  ("Išči po naslovu, besedilu, virih … (šumniki niso obvezni)")
+- Lint čist; browser testi: "sokcev"→Šokčev dvor v Žuničih ✓, "zunici" ✓, "mlin" (polno
+  besedilo) → 5+ zadetkov ✓, "1945" (letnice) → vojna obdobja ✓, "pricevanje" (brez šumnikov
+  v besedilu) ✓, prazno → 113 od 113 ✓, 0 konzolnih napak ✓
+
+Stage Summary:
+- Iskanje zdaj: diakritično-neobčutljivo (č/š/ž→c/s/z), čez nazive, povzetke, obdobja, POLNO
+  kuratorsko besedilo, vire in letnice; indeks predizračunan (hitrejše od prejšnje logike)
+- Sledi: commit → push na obe repozitorija → samodejni deploy → verifikacija produkcije

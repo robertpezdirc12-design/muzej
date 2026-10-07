@@ -68,7 +68,7 @@ export function MuseumRegister({ onOpen }: { onOpen: (slug: string) => void }) {
               <Input
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder={t("Išči po naslovu, številki, obdobju …", "Search by title, number, period …")}
+                placeholder={t("Išči po naslovu, besedilu, virih … (šumniki niso obvezni)", "Search titles, full text, sources … (diacritics optional)")}
                 className="h-11 pl-10"
                 aria-label={t("Iskanje po zbirki", "Search the collection")}
               />
