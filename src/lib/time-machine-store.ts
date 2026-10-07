@@ -1,11 +1,12 @@
 "use client";
 
 /**
- * Skupna trgovina časovnega stroja (issue #10).
+ * Skupna trgovina časovnega stroja (issue #10, razširjeno #11).
  *
  * Zemljevid muzeja, AR vodnik in ATLAS 1825 odpirajo isti celozaslonski
  * 3D rekonstrukciji vasi; globa povezava `?casovni=1825|1900|danes`
- * jo odpre direktno na izbrani letnici.
+ * (od #11 tudi `&spot=<id>` AR Time Spota) jo odpre direktno na izbrani
+ * letnici s kontekstom točke.
  */
 
 import { create } from "zustand";
@@ -15,17 +16,23 @@ export type TimeYear = 1825 | 1900 | 2026;
 interface TimeMachineState {
   open: boolean;
   year: TimeYear;
-  openTM: (year?: TimeYear) => void;
+  /** AR Time Spot kontekst (id iz TIME_SPOTS) ali null */
+  spot: string | null;
+  openTM: (year?: TimeYear, spot?: string | null) => void;
   close: () => void;
   setYear: (year: TimeYear) => void;
+  setSpot: (spot: string | null) => void;
 }
 
 export const useTimeMachine = create<TimeMachineState>((set) => ({
   open: false,
   year: 1825,
-  openTM: (year) => set({ open: true, ...(year ? { year } : {}) }),
+  spot: null,
+  openTM: (year, spot) =>
+    set({ open: true, ...(year ? { year } : {}), spot: spot ?? null }),
   close: () => set({ open: false }),
   setYear: (year) => set({ year }),
+  setSpot: (spot) => set({ spot }),
 }));
 
 /** ?casovni= → TimeYear (neveljavno → 1825) */

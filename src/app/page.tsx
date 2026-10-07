@@ -19,6 +19,7 @@ import { ExhibitDetail } from "@/components/museum/exhibit-detail";
 import { getExhibit } from "@/lib/museum";
 import { useGeolocation } from "@/hooks/use-geolocation";
 import { useTimeMachine, parseYearParam } from "@/lib/time-machine-store";
+import { getSpotById } from "@/data/atlas/timespots";
 import dynamic from "next/dynamic";
 
 const ARTimeMachine = dynamic(
@@ -72,8 +73,9 @@ function MuseumApp() {
     }
   }, [activeSlug, lang]);
 
-  /* uvodni zaslon — kot v izvirniku; nato odpremo globo povezavo ?exponat=slug
-     ali ?odsek=id (npr. iz PWA bližnjic) ali ?casovni=1825|1900|danes (3D) */
+  /* uvodni zaslon — kot v izvirniku; nato odpremo globo povezavo ?exponat=slug,
+     ?odsek=id (npr. iz PWA bližnjic), ?casovni=1825|1900|danes (3D) ter
+     ?spot=<id> AR Time Spota (QR tablice na lokaciji, issue #11) */
   useEffect(() => {
     const t1 = window.setTimeout(() => {
       setIntroDone(true);
@@ -82,9 +84,10 @@ function MuseumApp() {
       if (slug) {
         setActiveSlug(slug);
       } else {
-        const casovni = parseYearParam(params.get("casovni"));
+        const spot = getSpotById(params.get("spot"));
+        const casovni = parseYearParam(params.get("casovni")) ?? spot?.year ?? null;
         if (casovni) {
-          useTimeMachine.getState().openTM(casovni);
+          useTimeMachine.getState().openTM(casovni, spot?.id ?? null);
         } else {
           const odsek = params.get("odsek");
           if (odsek) {

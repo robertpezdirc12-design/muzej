@@ -39,6 +39,8 @@ import {
 } from "@/lib/geo";
 import { Clock, Landmark, Trees, Wheat, Hourglass } from "lucide-react";
 import { useTimeMachine } from "@/lib/time-machine-store";
+import { findNearestSpot, spotYearParam } from "@/data/atlas/timespots";
+import { useTimespots, TOTAL_SPOTS } from "@/lib/timespots-store";
 
 const ARCameraView = dynamic(
   () => import("./ar-camera").then((m) => m.ARCameraView),
@@ -347,6 +349,11 @@ function pointInZone(lat: number, lng: number, z: { bounds: [[number, number], [
 function TimeLayer1825({ fix }: { fix: GeoFix | null }) {
   const { t, lang } = useLang();
   const { openTM } = useTimeMachine();
+  const { unlocked } = useTimespots();
+  const nearestSpot = useMemo(
+    () => (fix ? findNearestSpot(fix) : null),
+    [fix],
+  );
 
   /* stojite v coni rabe tal? + najbližje 1825 stavbe (vektorizacija A02) */
   const info = useMemo(() => {
@@ -378,6 +385,15 @@ function TimeLayer1825({ fix }: { fix: GeoFix | null }) {
       <h3 className="flex flex-wrap items-center gap-2 font-display text-lg font-semibold">
         <Clock className="size-5 text-primary" aria-hidden="true" />
         {t("Časovna plast 1825 — kaj je tu stalo pred 200 leti", "Time layer 1825 — what stood here 200 years ago")}
+        <span
+          className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/5 px-2.5 py-1 text-[11px] font-semibold text-primary"
+          aria-live="polite"
+        >
+          {t(
+            `časovne točke odklenjene: ${unlocked.length}/${TOTAL_SPOTS}`,
+            `time spots unlocked: ${unlocked.length}/${TOTAL_SPOTS}`,
+          )}
+        </span>
         <button
           type="button"
           onClick={() => openTM(1825)}
@@ -397,6 +413,36 @@ function TimeLayer1825({ fix }: { fix: GeoFix | null }) {
         </p>
       ) : (
         <div className="mt-3 space-y-3">
+          {/* najbližja časovna točka (AR TIME SPOTS, issue #11) */}
+          {nearestSpot && (
+            <div className="flex flex-wrap items-center gap-2 rounded-lg border border-primary/30 bg-primary/5 p-3 text-sm">
+              <Clock className="size-4 shrink-0 text-primary" aria-hidden />
+              <span className="font-medium">
+                {t(
+                  `Najbližja časovna točka: ${lang === "si" ? nearestSpot.spot.titleSi : nearestSpot.spot.titleEn}`,
+                  `Nearest time spot: ${lang === "si" ? nearestSpot.spot.titleSi : nearestSpot.spot.titleEn}`,
+                )}
+              </span>
+              <span className="text-xs text-muted-foreground">
+                {t(
+                  `${formatDistance(nearestSpot.dist, lang)}${nearestSpot.dist <= nearestSpot.spot.radius ? " — znotraj radija" : ""}`,
+                  `${formatDistance(nearestSpot.dist, lang)}${nearestSpot.dist <= nearestSpot.spot.radius ? " — within radius" : ""}`,
+                )}
+              </span>
+              <button
+                type="button"
+                onClick={() => openTM(nearestSpot.spot.year, nearestSpot.spot.id)}
+                className="ml-auto inline-flex items-center gap-1.5 rounded-lg bg-primary px-3 py-1.5 text-xs font-semibold text-primary-foreground transition hover:bg-primary/90"
+              >
+                <Hourglass className="size-3.5" aria-hidden="true" />
+                {t(
+                  `POGLEJ V AR — ${spotYearParam(nearestSpot.spot.year)}`,
+                  `VIEW IN AR — ${spotYearParam(nearestSpot.spot.year)}`,
+                )}
+              </button>
+            </div>
+          )}
+
           {/* raba tal pod nogami */}
           <div className="rounded-lg border bg-secondary/40 p-3">
             <div className="flex items-center gap-2 text-sm font-medium">

@@ -6,6 +6,7 @@ import "leaflet/dist/leaflet.css";
 import { useLang } from "./language-context";
 import type { Exhibit } from "@/lib/museum";
 import type { GeoFix } from "@/lib/geo";
+import { TIME_SPOTS, type TimeSpot } from "@/data/atlas/timespots";
 
 /**
  * Leafletov zemljevid zbirke — naložen izključno na odjemalcu (next/dynamic,
@@ -15,6 +16,9 @@ import type { GeoFix } from "@/lib/geo";
  *  · uporabnikova lokacija (GPS) — utripajoča točka + krog natančnosti;
  *  · zgodovinska plast »vas ~1825« — poligon jedra in črtkane poti,
  *    VSAK element jasno označen kot interpretacija (kataster ~1825 ni ohranjen).
+ *
+ * AR TIME SPOTS (issue #11): plamenjače časovnih točk (TimeLens koncept) —
+ * klik na točko odpre kartico s [POGLEJ V AR] na letnici točke.
  */
 
 /** Leta zgodovinske plasti (izdih terezijansko-franciškanske dobe). */
@@ -82,12 +86,14 @@ export function MapCanvas({
   historic,
   userFix,
   onOpen,
+  onSpot,
 }: {
   exhibits: Exhibit[];
   vintage: boolean;
   historic: boolean;
   userFix: GeoFix | null;
   onOpen: (slug: string) => void;
+  onSpot: (spot: TimeSpot) => void;
 }) {
   const { lang } = useLang();
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -95,13 +101,16 @@ export function MapCanvas({
   const layerRef = useRef<L.LayerGroup | null>(null);
   const userLayerRef = useRef<L.LayerGroup | null>(null);
   const historicLayerRef = useRef<L.LayerGroup | null>(null);
+  const spotLayerRef = useRef<L.LayerGroup | null>(null);
   const centeredRef = useRef(false);
   const openRef = useRef(onOpen);
+  const onSpotRef = useRef(onSpot);
 
   /* zadnja različica odprtega povratnega klica za klinčke */
   useEffect(() => {
     openRef.current = onOpen;
-  }, [onOpen]);
+    onSpotRef.current = onSpot;
+  }, [onOpen, onSpot]);
 
   /* zemljevid ustvarimo enkrat */
   useEffect(() => {
@@ -127,6 +136,7 @@ export function MapCanvas({
     layerRef.current = L.layerGroup().addTo(map);
     userLayerRef.current = L.layerGroup().addTo(map);
     historicLayerRef.current = L.layerGroup().addTo(map);
+    spotLayerRef.current = L.layerGroup().addTo(map);
     mapRef.current = map;
 
     return () => {
@@ -135,6 +145,7 @@ export function MapCanvas({
       layerRef.current = null;
       userLayerRef.current = null;
       historicLayerRef.current = null;
+      spotLayerRef.current = null;
       centeredRef.current = false;
     };
   }, []);
@@ -172,6 +183,39 @@ export function MapCanvas({
       marker.addTo(layer);
     }
   }, [exhibits, lang]);
+
+  /* ── AR TIME SPOTS: terakota plamenjače z letnico (vedno na karti) ── */
+  useEffect(() => {
+    const layer = spotLayerRef.current;
+    if (!layer) return;
+    layer.clearLayers();
+
+    for (const spot of TIME_SPOTS) {
+      const title = lang === "si" ? spot.titleSi : spot.titleEn;
+      const yearLabel = spot.year === 2026 ? "danes" : spot.year === 1900 ? "~1900" : "1825";
+
+      const marker = L.marker([spot.lat, spot.lng], {
+        icon: L.divIcon({
+          className: "mvg-spot",
+          html: `<span class="mvg-spot-badge" aria-hidden="true">${yearLabel}</span>`,
+          iconSize: [52, 24],
+          iconAnchor: [26, 12],
+        }),
+        title: `TimeSpot — ${title}`,
+        alt: `TimeSpot — ${title}`,
+        keyboard: true,
+        zIndexOffset: 500,
+      });
+
+      marker.bindTooltip(
+        `<strong class="mvg-tooltip-no">🕰 ${yearLabel}</strong> ${title}`,
+        { direction: "top", offset: [0, -10], className: "mvg-tooltip" },
+      );
+
+      marker.on("click", () => onSpotRef.current(spot));
+      marker.addTo(layer);
+    }
+  }, [lang]);
 
   /* ── uporabnikova lokacija: utripajoča točka + krog natančnosti ── */
   useEffect(() => {

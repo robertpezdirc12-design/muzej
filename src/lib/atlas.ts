@@ -6,6 +6,7 @@ import { ATLAS_HOUSES, type AtlasHouse } from "@/data/atlas/houses";
 import { ATLAS_OWNERS, ATLAS_LOCATIONS, SHEET_GEOREFS, VECTOR_BUILDINGS } from "@/data/atlas/model";
 import { PARISH, PARISH_BOOKS, HOUSE_VITALS, type HouseVital, type ParishBook } from "@/data/atlas/parish";
 import { BUILDINGS_1825, GROWTH_1900, PERIODS } from "@/lib/village3d";
+import { TIME_SPOTS, spotYearParam } from "@/data/atlas/timespots";
 
 export interface AtlasModel {
   meta: {
@@ -147,6 +148,21 @@ export function getAtlasModel(): AtlasModel {
         "Procedural extrusion of cadastral footprints (LagunAR approach): footprints measured (sheet A02), heights/orientations interpreted; land use from VLM analysis; Kolpa georeferenced; church = museum GLB model.",
       deepLink: "/?casovni=1825",
     },
+    /* AR TIME SPOTS (issue #11) — časovne točke s QR vhodi (Nîmes vzorec) */
+    timeSpots: TIME_SPOTS.map((s) => ({
+      id: s.id,
+      year: s.year,
+      radius: s.radius,
+      lat: s.lat,
+      lng: s.lng,
+      titleSi: s.titleSi,
+      titleEn: s.titleEn,
+      evidenceSi: s.evidenceSi,
+      evidenceEn: s.evidenceEn,
+      exhibitSlug: s.exhibitSlug,
+      houseNo: s.houseNo ?? null,
+      deepLink: `/?casovni=${spotYearParam(s.year)}&spot=${s.id}`,
+    })),
   };
 }
 

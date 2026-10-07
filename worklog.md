@@ -981,3 +981,90 @@ Stage Summary:
   hiše/lastniki/matrike/raba tal/3D vas/viri/pokritost), AR vodnik (GPS/kamera/
   časovna plast), 3D AR časovni stroj (vas skozi čas, zajem, hišne zgodbe),
   PWA; QA 12/12, lint čist, 14. deploy
+
+---
+Task ID: R-1
+Agent: research (TimeLens + Nîmes)
+Task: Benchmark raziskava TimeLens in Nîmes la Romaine
+
+Work Log:
+- Spletne iskanice (z-ai web_search, EN): "TimeLens AR app historic places",
+  "TimeLens TimeSpot Erechtheion Acropolis", "timelens.eu Athens locations",
+  "TimeLens TimeSpot unlock map", "timelens Ciceroni technology", "Local Time
+  Machine timelens", "Nîmes la Romaine AR 3D METASENSE", "nimes-la-romaine.app
+  QR WebGL", "site:meta-sense.fr nimes-la-romaine", "METASENSE agence
+  creative tech Vélizy"
+- Pridobljene in prebrane strani (page_reader): timelens.eu (domača, /athens,
+  /locations, /about-us, /partner, blog "Reconstructing Ancient Athens"),
+  App Store vtis (id1569859703 — opis, posodobitve 1.0.1→2.0), timemachine.eu
+  LTM-profil TimeLens; meta-sense.fr (projektna stran Nîmes la Romaine + 3
+  članki: case study 3D parcours, WebAR sans téléchargement, médiation 3D/IA),
+  nimes-la-romaine.app (Nuxt ogrodje, navigacija: enciklopedija 3D, jeu de
+  piste, zemljevid, vstopnice, jeziki FR/EN/ES)
+- Tehnična analiza produkcije nimes-la-romaine.app (prenos _payload.json +
+  _nuxt javaskript): potrjeno Three.js (WebXRManager), navigator.geolocation
+  .watchPosition, HDRI+gyro vsebinski tip, spline kamera; vsak objekt ima
+  .glb IN .usdz → WebXR (Android) + iOS AR Quick Look fallback; CMS shema
+  (monumentsMarkdown: coords, ages, camera, splineSettings ...)
+- Ločevanje zavajajočih zadetkov: "TimeLens" GEM Kairo (arXiv), timelens.fr
+  (vrtljiva kamera), Chronos/Telekom in ZUBR Acropolis AR = drugi projekti;
+  MetaSense Inc (ZDA, kadrovsko) ≠ METASENSE FR
+
+Stage Summary:
+- TimeLens (Ciceroni, NL, aplikacija iOS/Android): 360° panorame "magic
+  window" zasidrane s kompasom/žiroskopom; TimeSpot-i se odklenijo ob prihodu
+  (GPS), zbirka/badge-i/TimeCoins/selfie; dokazi: imenovani strokovnjaki
+  (Kanellopoulos, Tsalkanis), partnerstvo z muzeji, EU Time Machine LTM
+- Nîmes la Romaine (METASENSE za mesto Nîmes/Auro): PWA (Three.js+Nuxt) prek
+  QR, brez prenosa; adaptivno 3D (LOD), filmska spline-kamera, 100+ AI
+  (ElevenLabs) zvokov FR/EN/ES, AR enciklopedija (GLB+USDZ = WebXR/Android +
+  iOS Quick Look), Lov zaklada z Lukom (5 iger → QR kupon za lokalne
+  trgovine), CMS + KPI nadzorna plošča; 6 mesecev, 6 ljudi
+- Za Griblje: QR-vstop brez namestitve, GPS+kompas sidranje (brez SLAM),
+  GLB+USDZ dual, več časovnih plasti na eno točko, zgodovinska kartica z
+  viri na objekt, AI pripoved, malo iger fizično nagrajenih
+
+---
+Task ID: R-2
+Agent: research (Knossos + Himera)
+Task: Benchmark raziskava Knossos AR in Himera
+
+Work Log:
+- Spletno iskanje (z-ai web_search) po več poizvedbah: "Knossos AR", "Knossos Palace AR FORTH", MDPI članki, "Himera smart glasses ARtGlass", "Capitale Cultura Himera", "Noreal Interactive Himera", "ARtGlass Epson Moverio", parcoarcheologicohimera.it, Pompeii/webAR primeri.
+- Prebrani ključni viri s page_reader: MDPI Heritage 2023 6(3):2489-2502 (Visiting Heritage Sites in AR and VR: Knossos), MDPI Heritage 2023 6(2):904-927 (3D Digitization of Knossos), capitalecultura.com Himera (EN+IT), norealinteractive.it/en/home/digital-heritage-en/himera, parcoarcheologicohimera.it (+ /resources/himeratempio — 3DVista player), artglassgroup.com/about-us.
+- Ugotovitve Knossos: app "Knossos Palace AR" (com.FORTH.KnossosPalaceAR) sta izdelala ICS-FORTH + Univerza na Kreti v okviru projekta "Knossos Digital Tour Guide" (Eforat antiquities Heraklion; NSRF 2014–2020 RIS3 Crete). Unity, ARCore/ARKit VIO tracking, 12 POI/11+ 3D scen (Throne Room, Temple Tomb, Little Palace, Royal Villa, South House, Caravan Serai, Queen's Megaron …), asset-bundle streaming (40–80 MB/scena), sken fizičnega zemljevida na lokaciji sproži AR zemljevid s pini, joystick-locomotion, info postaje; VR (Quest 2) + desktop različice; digitalizacija: DJI Phantom 4 v2 UAV + Faro Focus M70 TLS + DSLR foto, 16k teksture, Zenodo dataseti.
+- Ugotovitve Himera: Capitale Cultura Group (IT, Monza/Verona) — popolna digitalna akvizicija parka + digitalizacija muzejske zbirke v muzejski cloud + AR Tempelj zmage na platformi ARtGlass prek Epson Moverio pametnih očal (izposoja na sedežu parka, tudi v italijanskem znakovnem jeziku LIS), 3DVista spletni virtualni ogledi (Tempio, Museo Pirro Marconi, Antiquarium) za oddaljeni in živ ogled, mobilna app za muzej; 3D rekonstrukcijo templja (2016, NoReal Interactive) so validirali Soprintendenza Palermo (Agata Villa) + zgodovinarji (Allegro, D'Angelo, Mertens, Vassallo). Financiranje PO FESR 2014-2020 Sicilija.
+- Dodatni primeri: LIFE Pompeii (EPFL Papagiannakis 2002–05, seminalni on-site MR), Portyl Pompeii AR app (2026), Middle Stoa Agora Atene AR (2026 članek).
+
+Stage Summary:
+- Knossos AR = zlat standard akademske rešitve: 3D digitalizacija (UAV+TLS+fotografija) → enaki viri za raziskavo, VR, AR in desktop; AR "virtualni ogledi" scen, ki jih javnost ne more obiskati, sproženi s skeniranjem fizičnega zemljevida na lokaciji; 800.000 obiskovalcev/leto in pritisk od prevelikega turizma so glavno motivacija.
+- Himera = celovit "park+muzej" ekosistem komercialnega ponudnika: digitalni dvojček parka, digitalizirana zbirka v cloud, AR na izposojenih pametnih očalah ARtGlass/Epson Moverio na lokaciji, spletni virtualni ogledi za pred-obisk in oddaljene uporabnike, dostopnost (LIS).
+- Oba projekta ločujeta ZNANOSTVENO validirano rekonstrukcijo (arheologi/soprintendenza) od predstavitvene plasti — za Griblje 1825/156 zgradb je to ključni model: kataster + strokovna validacija = verodostojnost.
+- Za mali vaški muzej s WEB AR (brez native app): vzeti iz Knossosa segmentacijo na posamezne scene + lazy-loading assetov + info-točke; iz Himere povezavo lokacija↔muzej in brezplačen spletni dostop pred obiskom.
+- Citirani viri: mdpi.com/2571-9408/6/3/131, mdpi.com/2571-9408/6/2/50, play.google.com (com.FORTH.KnossosPalaceAR), knossospalace.gr, capitalecultura.com/en/works/newtechnologies/himera-archaeological-park-and-museum, parcoarcheologicohimera.it, norealinteractive.it, artglassgroup.com.
+
+---
+Task ID: 11 (issue #11 — AR TIME SPOTS v1)
+Agent: Z.ai Code (glavni agent)
+Task: Analiza svetovnih AR benchmarkov + implementacija AR Time Spots v1 (QR vhod, odklepanje na lokaciji, evidence kartice)
+
+Work Log:
+- Analiza uporabnikovega benchmarka (TimeLens, Nîmes/METASENSE, Knossos, Himera) + preverjanje dejanskega stanja repozitorija (issue #10 zaprt, 14. deploy, ar-time-machine/village-scene/village3d prisotni)
+- Raziskava R-1 (TimeLens + Nîmes) in R-2 (Knossos + Himera) — vzporedna agenta, 20+ virov, ugotovitve v worklog + issue #11
+- GitLab issue #11 ustvarjen (benchmark, inventura, odločitve, P0/P1/P2, DoD) + komentar z izbiro 6 točk (mlini/letališče → P1, ker izven obsega prizora)
+- src/data/atlas/timespots.ts: 6 točk (cerkev/jedro/kolpa/ribnik/gornje/meja — vse koordinate iz zapisov zbirke), findNearestSpot, spotDeepLink, spotYearParam
+- src/lib/timespots-store.ts: zustand + persist (localStorage mvg-timespots), TOTAL_SPOTS
+- time-machine-store.ts: spot kontekst v openTM(year, spotId)
+- museum-map-canvas.tsx: plast mvg-spot plamenjač (terakota letnica, zIndex 500, tooltip, klik); globals.css .mvg-spot-badge
+- museum-map.tsx: kartica točke (desc, viri, razdalja, odklenjeno, QR palec, [POGLEJ V AR] → openTM(year, id)) + <details> QR tablice za fizični muzej (6 QR, A6 tisk)
+- ar-time-machine.tsx: kartica TimeSpota (pravkar odklenjeto/odklenjeno/odklenjeno bo na lokaciji + razdalja), GPS odklep v radiju (autoSpotRef proti ponovitvam), čipi točk x/6 z zaklenjenimi ključavnice, evidence čip na kartici stavbe (REKONSTRUIRANO/OCENA + vir A02)
+- museum-ar.tsx (TimeLayer1825): števec odklenjenih točk + najbližja točka z [POGLEJ V AR]
+- page.tsx: globa povezava ?casovni=&spot= (QR vhod)
+- scripts/gen-qr.py → public/qr/spot-<id>.png (6×, 492×584, naslov+URL pod kodo, FG #171310 / BG #F7F3EB)
+- sw.js: VERSION v2, /qr v cache-first; atlas.ts API: timeSpots blok (6 zapisov, deepLink)
+- E2E (agent-browser): globa povezava (dialog+kartica cerkev+leto 1825), GPS mock na cerkvi → »pravkar odklenjeno!« + 1/6 + localStorage, map badge klik ribnik → kartica → POGLEJ V AR → leto 1900, tap hiša → REKONSTRUIRANO čip + vir + tloris, preklop ~1900 → 191 stavb, zajem → »shranjeno (PNG)«, QR slike 6/6 HTTP 200, AR vodnik števec 1/6, mobilni 390px čist (VLM), /api/atlas timeSpots 6, 0 napak konzole; lint čist
+
+Stage Summary:
+- AR TIME SPOTS v1 zgrajen na obstoječi arhitekturi (brez novega sistema) — TimeLens vzorec odklepanja, Nîmes QR-0-install vhod, evidence kartice po TimeLens/Himera
+- 6 točk s preverljivimi viri (koordinate iz zbirke), QR tablice za fizični muzej, odprti podatki timeSpots v API
+- P1 odložen: mlini/letališče (izven prizora), 360° pogovor s cerkve, »Kaj je izginilo« (podatkovna naloga OSM), TTS, USDZ

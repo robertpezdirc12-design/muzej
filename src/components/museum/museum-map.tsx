@@ -2,13 +2,16 @@
 
 import { useMemo, useState } from "react";
 import dynamic from "next/dynamic";
-import { Hourglass, Map, Sparkles } from "lucide-react";
+import { CheckCircle2, Hourglass, Map, QrCode, Sparkles, X } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { useLang } from "./language-context";
 import { exhibits as allExhibits } from "@/lib/museum";
 import type { GeoFix } from "@/lib/geo";
+import { distanceM, formatDistance } from "@/lib/geo";
+import { TIME_SPOTS, spotDeepLink, spotYearParam, type TimeSpot } from "@/data/atlas/timespots";
 import { useTimeMachine } from "@/lib/time-machine-store";
+import { useTimespots } from "@/lib/timespots-store";
 
 const MapCanvas = dynamic(
   () => import("./museum-map-canvas").then((m) => m.MapCanvas),
@@ -33,10 +36,12 @@ export function MuseumMap({
 }) {
   const { t, lang } = useLang();
   const { openTM } = useTimeMachine();
+  const { isUnlocked } = useTimespots();
   const [vintage, setVintage] = useState(false);
   const [timeTravel, setTimeTravel] = useState(false);
   const [year, setYear] = useState(MAX_YEAR);
   const [historic, setHistoric] = useState(false);
+  const [activeSpot, setActiveSpot] = useState<TimeSpot | null>(null);
 
   const located = useMemo(
     () => allExhibits.filter((e) => e.lat && e.lng),
@@ -200,8 +205,139 @@ export function MuseumMap({
             historic={historic}
             userFix={userFix}
             onOpen={onOpen}
+            onSpot={(s) => setActiveSpot(s)}
           />
         </div>
+
+        {/* ── AR TIME SPOT: kartica točke (klik na 🕰 na zemljevidu) ── */}
+        {activeSpot && (
+          <div
+            className="mt-4 rounded-xl border bg-card p-4 shadow-sm sm:p-5"
+            role="region"
+            aria-label={t("Kartica časovne točke", "Time spot card")}
+          >
+            <div className="flex items-start justify-between gap-3">
+              <div className="min-w-0">
+                <p className="flex flex-wrap items-center gap-2">
+                  <span className="inline-flex items-center rounded-full bg-primary px-2.5 py-1 text-xs font-bold text-primary-foreground">
+                    🕰 {spotYearParam(activeSpot.year)}
+                  </span>
+                  <span className="font-display text-base font-semibold leading-snug">
+                    {lang === "si" ? activeSpot.titleSi : activeSpot.titleEn}
+                  </span>
+                  {isUnlocked(activeSpot.id) && (
+                    <span className="inline-flex items-center gap-1 rounded-full border border-emerald-600/30 bg-emerald-600/10 px-2 py-0.5 text-[11px] font-medium text-emerald-700 dark:text-emerald-300">
+                      <CheckCircle2 className="size-3" aria-hidden="true" />
+                      {t("odklenjeno", "unlocked")}
+                    </span>
+                  )}
+                </p>
+                <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+                  {lang === "si" ? activeSpot.descSi : activeSpot.descEn}
+                </p>
+                {userFix && (
+                  <p className="mt-1.5 text-xs text-muted-foreground">
+                    {t(
+                      `od vas ≈ ${formatDistance(distanceM(userFix, { lat: activeSpot.lat, lng: activeSpot.lng }), lang)}`,
+                      `from you ≈ ${formatDistance(distanceM(userFix, { lat: activeSpot.lat, lng: activeSpot.lng }), lang)}`,
+                    )}
+                  </p>
+                )}
+              </div>
+              <button
+                type="button"
+                onClick={() => setActiveSpot(null)}
+                aria-label={t("Zapri kartico točke", "Close the spot card")}
+                className="shrink-0 rounded-full border p-1.5 text-muted-foreground transition-colors hover:bg-secondary"
+              >
+                <X className="size-4" aria-hidden="true" />
+              </button>
+            </div>
+
+            <div className="mt-3 flex flex-wrap items-center gap-3">
+              <button
+                type="button"
+                onClick={() => {
+                  openTM(activeSpot.year, activeSpot.id);
+                  setActiveSpot(null);
+                }}
+                className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90"
+              >
+                <Hourglass className="size-4" aria-hidden="true" />
+                {t(
+                  `POGLEJ V AR — ${spotYearParam(activeSpot.year)}`,
+                  `VIEW IN AR — ${spotYearParam(activeSpot.year)}`,
+                )}
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  onOpen(activeSpot.exhibitSlug);
+                  setActiveSpot(null);
+                }}
+                className="inline-flex items-center gap-2 rounded-lg border px-4 py-2.5 text-sm font-semibold transition-colors hover:bg-secondary"
+              >
+                {t("Zapis zbirke", "Collection record")}
+              </button>
+              {/* QR natisnjene tablice — ista koda kot na lokaciji */}
+              <img
+                src={`/qr/spot-${activeSpot.id}.png`}
+                alt={t(`QR koda točke ${activeSpot.titleSi}`, `QR code of the ${activeSpot.titleEn} spot`)}
+                width={64}
+                height={64}
+                loading="lazy"
+                className="h-16 w-16 rounded-md border bg-[#F7F3EB]"
+              />
+              <span className="min-w-0 flex-1 truncate font-mono text-[11px] text-muted-foreground">
+                {spotDeepLink(activeSpot)}
+              </span>
+            </div>
+
+            <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
+              {t("Vir: ", "Source: ")}
+              {lang === "si" ? activeSpot.evidenceSi : activeSpot.evidenceEn}
+            </p>
+          </div>
+        )}
+
+        {/* ── QR tablice za fizični muzej (natisni) ── */}
+        <details className="group mt-4 rounded-xl border bg-card">
+          <summary className="flex cursor-pointer list-none items-center gap-2 p-4 text-sm font-semibold">
+            <QrCode className="size-4 text-primary" aria-hidden="true" />
+            {t(
+              "Časovne točke po vasi — QR tablice (natisni za fizični muzej)",
+              "Time spots around the village — QR plates (print for the physical museum)",
+            )}
+          </summary>
+          <div className="grid gap-4 border-t p-4 sm:grid-cols-2 lg:grid-cols-3">
+            {TIME_SPOTS.map((s) => (
+              <div key={s.id} className="flex items-center gap-3 rounded-lg border p-3">
+                <img
+                  src={`/qr/spot-${s.id}.png`}
+                  alt={t(`QR koda točke ${s.titleSi}`, `QR code of the ${s.titleEn} spot`)}
+                  width={88}
+                  height={88}
+                  loading="lazy"
+                  className="h-[88px] w-[88px] shrink-0 rounded-md border bg-[#F7F3EB]"
+                />
+                <div className="min-w-0">
+                  <p className="text-sm font-semibold leading-tight">
+                    🕰 {spotYearParam(s.year)} · {lang === "si" ? s.titleSi : s.titleEn}
+                  </p>
+                  <p className="mt-1 break-all font-mono text-[10px] leading-tight text-muted-foreground">
+                    {spotDeepLink(s)}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="px-4 pb-4 text-xs leading-relaxed text-muted-foreground">
+            {t(
+              "Vsaka koda odpre časovni stroj na točki in letnici — skeniraj na lokaciji (Nîmes vzorec: brez namestitve, brez računa) ali natisni A6 tabelo za fizični muzej.",
+              "Each code opens the time machine at the spot and year — scan on site (Nîmes pattern: no install, no account) or print an A6 plate for the physical museum.",
+            )}
+          </p>
+        </details>
 
         {historic ? (
           <p className="mt-3 text-xs leading-relaxed text-muted-foreground">

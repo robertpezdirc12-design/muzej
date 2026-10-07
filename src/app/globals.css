@@ -178,6 +178,38 @@
   outline-offset: 2px;
 }
 
+/* AR TIME SPOT plamenjača (issue #11) — terakota ploščica z letnico */
+.mvg-spot {
+  background: none;
+  border: none;
+}
+.mvg-spot-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 52px;
+  height: 24px;
+  border-radius: 9999px;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border: 2px solid var(--background);
+  box-shadow: 0 1px 5px color-mix(in oklch, var(--primary) 45%, transparent);
+  white-space: nowrap;
+  transition: transform 0.15s ease;
+}
+.mvg-spot:hover .mvg-spot-badge {
+  transform: scale(1.12);
+}
+.mvg-spot:focus-visible .mvg-spot-badge {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
 /* namig nad klinčkom */
 .mvg-tooltip {
   font-family: var(--font-sans);

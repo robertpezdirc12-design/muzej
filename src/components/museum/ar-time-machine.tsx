@@ -1,14 +1,19 @@
 "use client";
 
 /**
- * AR ČASOVNI STROJ (issue #10) — 3D rekonstrukcija vasi Griblje skozi čas.
+ * AR ČASOVNI STROJ (issue #10, razširjen #11 — TIME SPOTS) — 3D rekonstrukcija
+ * vasi Griblje skozi čas.
  *
  * Zaslon telefona = okno v leto 1825 (ali ~1900 / danes):
  *  · zadaj živa kamera (getUserMedia), spredaj proceduralna 3D vas iz
  *    Franciscejskega katastra (156 stavb) zasidrana na GPS + kompas;
  *  · drsnik let: 1825 · ~1900 (ocena) · danes (duhovi);
  *  · zajem: gumb sprožilc → PNG s podpisom (prenos/deljenje);
- *  · tap na hišo → kartica stavbe s hišno zgodbo (register × matrike);
+ *  · tap na hišo → kartica stavbe s hišno zgodbo (register × matrike)
+ *    in evidence čipom (REKONSTRUIRANO / OCENA + vir);
+ *  · AR TIME SPOTS (issue #11): ko obiskovalec stopi znotraj radija točke,
+ *    se ta odklene (TimeLens vzorec) in pokaže kartico »kaj je tu nekoč
+ *    stalo« z viri; brez senzorjev se točko izbere ročno (pošten predogled);
  *  · brez senzorjev: pošten predogled (vlečenje obrača pogled).
  *
  * Kot pri ar-camera: nič se ne izmišljuje — kar manjka (kamera, kompas, GPS),
@@ -23,8 +28,10 @@ import {
   Compass,
   Download,
   Home,
+  Lock,
   MapPin,
   Share2,
+  Sparkles,
   X,
 } from "lucide-react";
 import { useLang } from "./language-context";
@@ -34,6 +41,14 @@ import { distanceM, formatDistance, type GeoFix } from "@/lib/geo";
 import type { UseGeolocation } from "@/hooks/use-geolocation";
 import type { PickResult } from "./village-scene";
 import { HOUSE_VITALS } from "@/data/atlas/parish";
+import {
+  TIME_SPOTS,
+  findNearestSpot,
+  getSpotById,
+  spotYearParam,
+  type TimeSpot,
+} from "@/data/atlas/timespots";
+import { useTimespots } from "@/lib/timespots-store";
 
 interface DeviceOrientationEventIOS extends DeviceOrientationEvent {
   webkitCompassHeading?: number;
@@ -56,7 +71,8 @@ export function ARTimeMachine({
   onOpenExhibit: (slug: string) => void;
 }) {
   const { t, lang } = useLang();
-  const { year, setYear, close } = useTimeMachine();
+  const { year, setYear, close, spot: storeSpot } = useTimeMachine();
+  const { unlock, isUnlocked, unlocked } = useTimespots();
   const { fix, status, start } = geo;
 
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -72,8 +88,20 @@ export function ARTimeMachine({
   const [hint, setHint] = useState(true);
   const [flash, setFlash] = useState(false);
   const [saved, setSaved] = useState<"none" | "saved" | "shared" | "error">("none");
+  const [spotCard, setSpotCard] = useState<TimeSpot | null>(null);
+  const [spotJustUnlocked, setSpotJustUnlocked] = useState<TimeSpot | null>(null);
+  const autoSpotRef = useRef<string | null>(null);
 
   const period = PERIODS.find((p) => p.year === year) ?? PERIODS[0];
+
+  /* ── kontekst točke iz globo povezave (?spot=) ── */
+  useEffect(() => {
+    const sp = getSpotById(storeSpot);
+    if (sp) {
+      setSpotCard(sp);
+      setHint(false);
+    }
+  }, [storeSpot]);
 
   /* ── 3D prizor (three.js dinamično — izven glavnega snopa) ── */
   useEffect(() => {
@@ -177,6 +205,25 @@ export function ARTimeMachine({
       sceneRef.current?.setFix(x, z);
     }
   }, [fix]);
+
+  /* ── GPS → bližina TIME SPOTA: odklep ob prihodu (TimeLens vzorec) ── */
+  useEffect(() => {
+    if (!fix) return;
+    const { spot, dist } = findNearestSpot(fix);
+    if (dist > spot.radius) {
+      if (autoSpotRef.current === spot.id) autoSpotRef.current = null;
+      return;
+    }
+    if (autoSpotRef.current === spot.id) return;
+    autoSpotRef.current = spot.id;
+    setSpotCard(spot);
+    setHint(false);
+    if (!isUnlocked(spot.id)) {
+      unlock(spot.id);
+      setSpotJustUnlocked(spot);
+      window.setTimeout(() => setSpotJustUnlocked(null), 3600);
+    }
+  }, [fix, unlock, isUnlocked]);
 
   /* ── ESC ── */
   useEffect(() => {
@@ -390,13 +437,52 @@ export function ARTimeMachine({
         )}
       </div>
 
+      {/* ── AR TIME SPOTS: izbirnik točk (odklop GPS → ročna izbira, pošteno) ── */}
+      <div
+        className="relative z-10 mt-2 flex items-center gap-2 overflow-x-auto px-4 pb-1"
+        role="group"
+        aria-label={t("Časovne točke po vasi", "Time spots around the village")}
+      >
+        <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-white/25 bg-black/45 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur">
+          <Clock className="size-3.5 shrink-0" aria-hidden="true" />
+          {t(`točke ${unlocked.length}/${TIME_SPOTS.length}`, `spots ${unlocked.length}/${TIME_SPOTS.length}`)}
+        </span>
+        {TIME_SPOTS.map((s) => (
+          <button
+            key={s.id}
+            type="button"
+            onClick={() => {
+              setSpotCard(s);
+              setCard(null);
+              setHint(false);
+            }}
+            aria-pressed={spotCard?.id === s.id}
+            className={`inline-flex shrink-0 items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs backdrop-blur transition-colors ${
+              spotCard?.id === s.id
+                ? "border-primary bg-primary text-primary-foreground"
+                : "border-white/25 bg-black/45 text-white/90 hover:bg-black/60"
+            }`}
+          >
+            {isUnlocked(s.id) ? (
+              <CheckCircle2 className="size-3.5 shrink-0" aria-hidden="true" />
+            ) : (
+              <Lock className="size-3.5 shrink-0 text-white/60" aria-hidden="true" />
+            )}
+            <span className="font-semibold">{spotYearParam(s.year)}</span>
+            <span className="max-w-32 truncate">
+              {lang === "si" ? s.titleSi : s.titleEn}
+            </span>
+          </button>
+        ))}
+      </div>
+
       {/* prvi namig */}
-      {hint && (
+      {hint && !spotCard && (
         <div className="relative z-10 mx-auto mt-8 max-w-sm rounded-xl border border-white/20 bg-black/50 p-4 text-center backdrop-blur">
           <p className="text-sm leading-relaxed text-white/90">
             {t(
-              "Usmerite telefon — vas 1825 stoji pred vami. Vlecite po zaslonu za obrat pogleda, tapnite hišo za njeno zgodbo.",
-              "Point your phone — the village of 1825 stands before you. Drag the screen to look around, tap a house for its story.",
+              "Usmerite telefon — vas 1825 stoji pred vami. Vlecite po zaslonu za obrat pogleda, tapnite hišo za njeno zgodbo. Časovne točke po vasi izberete na čipih — na lokaciji se odklenejo same.",
+              "Point your phone — the village of 1825 stands before you. Drag the screen to look around, tap a house for its story. Pick time spots on the chips — on site they unlock by themselves.",
             )}
           </p>
           <button
@@ -409,8 +495,109 @@ export function ARTimeMachine({
         </div>
       )}
 
+      {/* kartica AR TIME SPOTA (odklep / izbira / globa povezava) */}
+      {spotCard && (
+        <div className="absolute inset-x-4 bottom-44 z-20 sm:left-1/2 sm:right-auto sm:w-[440px] sm:-translate-x-1/2">
+          <div
+            className="rounded-xl border border-white/20 bg-black/70 p-4 text-white backdrop-blur"
+            role="region"
+            aria-label={t("Kartica časovne točke", "Time spot card")}
+          >
+            <div className="flex items-start justify-between gap-3">
+              <div className="min-w-0">
+                <p className="flex flex-wrap items-center gap-2">
+                  <span className="inline-flex items-center rounded-full bg-primary px-2.5 py-1 text-xs font-bold text-primary-foreground">
+                    🕰 {spotYearParam(spotCard.year)}
+                  </span>
+                  <span className="font-display text-sm font-semibold">
+                    {lang === "si" ? spotCard.titleSi : spotCard.titleEn}
+                  </span>
+                  {spotJustUnlocked?.id === spotCard.id ? (
+                    <span className="inline-flex animate-pulse items-center gap-1 rounded-full border border-emerald-300/40 bg-emerald-400/20 px-2 py-0.5 text-[11px] font-semibold text-emerald-200">
+                      <Sparkles className="size-3" aria-hidden="true" />
+                      {t("pravkar odklenjeno!", "just unlocked!")}
+                    </span>
+                  ) : isUnlocked(spotCard.id) ? (
+                    <span className="inline-flex items-center gap-1 rounded-full border border-emerald-300/30 bg-emerald-400/10 px-2 py-0.5 text-[11px] font-medium text-emerald-200">
+                      <CheckCircle2 className="size-3" aria-hidden="true" />
+                      {t("odklenjeno", "unlocked")}
+                    </span>
+                  ) : fix ? (
+                    <span className="inline-flex items-center gap-1 rounded-full border border-white/25 bg-white/10 px-2 py-0.5 text-[11px] font-medium text-white/80">
+                      <Lock className="size-3" aria-hidden="true" />
+                      {t(
+                        `odklenjeno bo na lokaciji (${formatDistance(
+                          distanceM(fix, { lat: spotCard.lat, lng: spotCard.lng }),
+                          lang,
+                        )} od vas)`,
+                        `unlocks on site (${formatDistance(
+                          distanceM(fix, { lat: spotCard.lat, lng: spotCard.lng }),
+                          lang,
+                        )} from you)`,
+                      )}
+                    </span>
+                  ) : (
+                    <span className="inline-flex items-center gap-1 rounded-full border border-white/25 bg-white/10 px-2 py-0.5 text-[11px] font-medium text-white/80">
+                      <Lock className="size-3" aria-hidden="true" />
+                      {t("odklenjeno bo na lokaciji", "unlocks on site")}
+                    </span>
+                  )}
+                </p>
+                <p className="mt-2 text-xs leading-relaxed text-white/85">
+                  {lang === "si" ? spotCard.descSi : spotCard.descEn}
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setSpotCard(null)}
+                aria-label={t("Zapri kartico točke", "Close the spot card")}
+                className="shrink-0 rounded-full border border-white/25 p-1.5 hover:bg-white/10"
+              >
+                <X className="size-4" aria-hidden="true" />
+              </button>
+            </div>
+
+            <p className="mt-2 text-[11px] leading-relaxed text-white/60">
+              {t("Vir: ", "Source: ")}
+              {lang === "si" ? spotCard.evidenceSi : spotCard.evidenceEn}
+            </p>
+
+            <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 border-t border-white/15 pt-2 text-xs">
+              <button
+                type="button"
+                onClick={() => {
+                  close();
+                  onOpenExhibit(spotCard.exhibitSlug);
+                }}
+                className="font-medium text-amber-200 underline decoration-white/30 underline-offset-2 hover:decoration-amber-200"
+              >
+                {t("Zapis zbirke (MVG)", "Collection record (MVG)")}
+              </button>
+              {spotCard.houseNo && (
+                <a
+                  href={`/?atlas=hi%C5%A1a-61&odsek=atlas`}
+                  className="font-medium text-amber-200 underline decoration-white/30 underline-offset-2 hover:decoration-amber-200"
+                >
+                  {t("Register hiš 1825", "1825 house register")}
+                </a>
+              )}
+              <button
+                type="button"
+                onClick={() => setYear(spotCard.year)}
+                className="font-medium text-amber-200 underline decoration-white/30 underline-offset-2 hover:decoration-amber-200"
+              >
+                {t(
+                  `postavi leto na ${spotYearParam(spotCard.year)}`,
+                  `set year to ${spotYearParam(spotCard.year)}`,
+                )}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* kartica stavbe (tap) */}
-      {card && (
+      {card && !spotCard && (
         <div className="absolute inset-x-4 bottom-44 z-20 sm:left-1/2 sm:right-auto sm:w-[440px] sm:-translate-x-1/2">
           <div className="rounded-xl border border-white/20 bg-black/70 p-4 text-white backdrop-blur">
             <div className="flex items-start justify-between gap-3">
@@ -419,6 +606,36 @@ export function ARTimeMachine({
                   {card.kind === "growth"
                     ? t("Stavba ~1900 (ocena)", "Building ~1900 (estimate)")
                     : t("Stavba ~1825 — kataster", "Building ~1825 — cadastre")}
+                </p>
+                {/* evidence čip po stavbi (TimeLens/Himera: domneve nikoli kot dejstva) */}
+                <p className="mt-1.5 flex flex-wrap items-center gap-2 text-[11px]">
+                  {card.kind === "growth" ? (
+                    <>
+                      <span className="inline-flex items-center gap-1.5 rounded-full border border-amber-300/40 bg-amber-400/15 px-2 py-0.5 font-semibold text-amber-200">
+                        <span className="size-1.5 rounded-full bg-amber-300" aria-hidden="true" />
+                        OCENA
+                      </span>
+                      <span className="text-white/70">
+                        {t(
+                          "ocena zgoščevanja jedra ~1900 — ni v katastru 1825",
+                          "core-densification estimate ~1900 — not in the 1825 cadastre",
+                        )}
+                      </span>
+                    </>
+                  ) : (
+                    <>
+                      <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-300/40 bg-emerald-400/15 px-2 py-0.5 font-semibold text-emerald-200">
+                        <span className="size-1.5 rounded-full bg-emerald-300" aria-hidden="true" />
+                        REKONSTRUIRANO
+                      </span>
+                      <span className="text-white/70">
+                        {t(
+                          "Vir: franciscejski kataster, list A02 (SI AS 176) · tloris izmerjen, višina interpretirana",
+                          "Source: Franciscean cadastre, sheet A02 (SI AS 176) · footprint measured, height interpreted",
+                        )}
+                      </span>
+                    </>
+                  )}
                 </p>
                 <p className="mt-1 text-xs text-white/75">
                   {t(
