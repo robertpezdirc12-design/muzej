@@ -1,0 +1,52 @@
+{
+  "name": "Muzej vasi Griblje",
+  "short_name": "Muzej Griblje",
+  "description": "Digitalni muzej resnične vasi ob Kolpi: 113 zapisov, ATLAS 1825, AR vodnik in vodeni sprehodi skozi Griblje.",
+  "lang": "sl",
+  "dir": "ltr",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#F7F3EB",
+  "theme_color": "#9F4A2B",
+  "categories": ["education", "museums", "history", "travel"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Register zapisov",
+      "url": "/?odsek=register",
+      "description": "Iskanje po 113 zapisih zbirke"
+    },
+    {
+      "name": "ATLAS 1825",
+      "url": "/?odsek=atlas",
+      "description": "Franciscejski kataster Gribelj"
+    },
+    {
+      "name": "AR vodnik",
+      "url": "/?odsek=ar",
+      "description": "Kamerna AR in GPS sprehod po vasi"
+    }
+  ]
+}

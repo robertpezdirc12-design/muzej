@@ -65,13 +65,22 @@ function MuseumApp() {
     }
   }, [activeSlug, lang]);
 
-  /* uvodni zaslon — kot v izvirniku; nato odpremo globo povezavo ?exponat=slug */
+  /* uvodni zaslon — kot v izvirniku; nato odpremo globo povezavo ?exponat=slug
+     ali ?odsek=id (npr. iz PWA bližnjic) */
   useEffect(() => {
     const t1 = window.setTimeout(() => {
       setIntroDone(true);
       const params = new URLSearchParams(window.location.search);
       const slug = params.get("exponat");
-      if (slug) setActiveSlug(slug);
+      if (slug) {
+        setActiveSlug(slug);
+      } else {
+        const odsek = params.get("odsek");
+        if (odsek) {
+          const el = document.getElementById(odsek);
+          if (el) el.scrollIntoView({ behavior: "auto", block: "start" });
+        }
+      }
     }, 900);
     return () => window.clearTimeout(t1);
   }, []);

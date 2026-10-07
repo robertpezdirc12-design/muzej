@@ -1,7 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Fraunces } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
+import { ServiceWorkerRegistrar } from "@/components/museum/sw-registrar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,6 +38,20 @@ export const metadata: Metadata = {
     "zgodovina",
     "etnografija",
   ],
+  manifest: "/manifest.webmanifest",
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/icons/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icons/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [{ url: "/icons/apple-touch-icon.png", sizes: "180x180" }],
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Muzej Griblje",
+  },
   openGraph: {
     title: "Muzej vasi Griblje — digitalni muzej vasi ob Kolpi",
     description:
@@ -61,6 +76,16 @@ export const metadata: Metadata = {
       "Digitalni muzej resnične vasi v Beli krajini: 113 zapisov, 589 dokazljivih virov, odprti podatki.",
     images: ["/og-card.jpg"],
   },
+};
+
+/* Tema PWA: spojitev z glavo strani (smetana / temna zelena) */
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#F7F3EB" },
+    { media: "(prefers-color-scheme: dark)", color: "#0F1610" },
+  ],
+  width: "device-width",
+  initialScale: 1,
 };
 
 /* JSON-LD: muzej in odprti podatki zbirke */
@@ -114,6 +139,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${fraunces.variable} antialiased bg-background text-foreground`}
       >
         {children}
+        <ServiceWorkerRegistrar />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
