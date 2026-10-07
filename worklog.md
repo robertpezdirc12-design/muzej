@@ -539,3 +539,82 @@ Work Log:
 Stage Summary:
 - 9. zaporedni uspešen samodejni deploy; lokalno = gitlab = 994cc35
 - GitLab issue #1 (AR vizija) v celoti izveden, dokumentiran in zaključen
+
+---
+Task ID: 15-a
+Agent: Z.ai Code (glavni agent)
+Task: GitLab issue #2 — ATLAS 1825: recovery iskanje + pridobitev pravih arhivskih virov
+
+Work Log:
+- Prebr issue #2 v celoti (52 točk): zahteva obnovo ATLAS-a 1825 z dejanskim
+  katastrom, hišami, parcelami, lastniki, knowledge-graph/dokazi, georeferenco,
+  primerjavo 1825↔danes, pokritostjo, negativnimi rezultati, brez izmišljanja
+- Recovery iskanje po vseh virih: git bundle (samo trenutna zgodovina),
+  markec-group/muzej-arhiv (ne obstaja več), diski, /tmp, vsi 28 Vercel
+  deploymentov — stari Atlas model NI obnovljiv (NOT_FOUND, evidentirano)
+- Nadomestek: DEJANSKI javni arhivski viri — VAČ (Virtualna arhivska čitalnica
+  Arhiva RS), prebrskana hierarhija SI AS 176 → N Novomeška kresija →
+  N83 Griblje k.o. (Grüble, k.o. št. 83, prejšnja signatura N083A)
+- Pridobljenih VSEH 9 enot N83: listi A01 (2826×2273) + A02 (3010×2158) iz
+  IIIF (full/full ločljivost) + 7 PDF-jev (PG skica, PR opis meje, PS seznam
+  zemljiških parcel 143 str., PT stavbne parcele 8 str., PUA abecedni lastniki
+  49 str., PV raba, PZ cenilni elaborat 71 str.) — skupaj 279 strani (~83 MB)
+- Prepis PT (protokol stavbnih parcel 1825): hiše 1–98 (80 zapisov) z lastniki
+  in parcelnimi sklici — VLM pomožen prepis Kurrenta, vsi status REVIEW;
+  PUA strani A–B za navzkrižno preverjanje imen (Bring = Brinig ✓)
+- Georeferenca A01: afina transformacija (vas 45,5725/15,2926, severna skupina,
+  reka Kolpa ↔ sodobna struga 15,2994), iterativno izboljšana na prekrivki —
+  vas 8/10, reka 9/10; razmerje stranic 1,246 ≈ slika 1,243 (konsistenca)
+- Georeferenca A02: sidro cerkev sv. Vida (list px 1995,577 ↔ MVG-002
+  45,5728/15,2922) — ujemanje NA PIKSEL, vizualna ocena 9/10
+- Vektorizacija 156 stavb ~1825 iz lista A02 (povezane komponente, rdeči tint,
+  velikostni/gostotni filter) — cerkev izluščena na 45,57287/15,29217 (razlika
+  od MVG-002 < 20 m) — validacija georeference
+- OSM referenčni mozaik zgrajen prek brskalniškega Leaflet (curl 403),
+  mrežne analize + VLM za kontrolne točke
+
+Stage Summary:
+- Dejanski arhivski viri (ne rekonstrukcija!) za vseh 9 enot N83 z javnimi
+  VAČ povezavami, 2 georeferencirana lista, 80 prebranih hiš, ~60 lastnikov
+- Vsa gradiva v download/atlas-1825/n83/ + slike v public/atlas/
+
+---
+Task ID: 15-b
+Agent: Z.ai Code (glavni agent)
+Task: GitLab issue #2 — ATLAS 1825: podatkovni model, API, UI, testi, produkcija
+
+Work Log:
+- Podatkovni model src/data/atlas/: sources.ts (9 enot N83 + SI AS 749, SI AS 1138,
+  EŠD register 2122/19324/19326/11118 + negativni rezultati 6), houses.ts (80 hiš
+  + 20 parcelnih vrstic, vsi REVIEW s stranmi vira), model.ts (lastniki 21 s
+  navzkrižnimi PT×PUA povezavami, georeferenca z metodami/kontrolnimi točkami/
+  natančnostjo, lokacije, 156 vektoriziranih stavb)
+- src/lib/atlas.ts: celoten model + iskanje (hiša/parcela/lastnik/vir/EŠD,
+  neobčutljivo na šumnike) + GeoJSON (CRS84, 160 features) + dokazna veriga
+  (getEvidenceChain: vir → trditev → dokaz → povezave) + INTEGRITETNI TESTI
+  (9 preverjanj hiša↔parcela↔lastnik↔vir — /api/atlas/integrity, vsa ✓)
+- API: /api/atlas (model), /api/atlas/geojson, /api/atlas/integrity — vsi
+  force-static, brez runtime AI (zahteva #36)
+- UI museum-atlas.tsx (#atlas med zemljevidom in AR vodnikom, navigacija
+  posodobljena): pokritost 6 kartic, iskanje z živimi zadetki, 5 zavihkov
+  (Zemljevid/Register hiš/Lastniki/Viri/Pokritost), zemljevid s sloji (A01/A02
+  prekrivki + prosojnost 0-100%, objekti 1825, cerkev, EŠD, sepia), dokazni
+  panel z VAČ povezavami in MVG prehodom, register s filtriranjem +
+  paginacijo, legenda statusov, negativni rezultati; atlas-canvas.tsx
+  (Leaflet, isolate z-index fix, čiščenje ob unmount)
+- E2E brskalnik: search "73" → Hiša št. 73 (Peutinger Mihel) → dokazni panel →
+  MVG-010 dialog + naslov zavihka; vektorizacija 156 objektov + 2 prekrivki +
+  cerkev na zemljevidu; VLM ocena zemljevida 9/10, mobilni 390px brez preliva;
+  temni način 9/10; globa povezava ?atlas=hiša-75 → panel odprt po hydraciji
+  (fix: setTimeout v efektu, ne lazy initializer — hidracijska napaka odpravljena);
+  integrity 9/9 ✓; GeoJSON 160 features ✓; 0 napak aplikacije po sveži seji
+- README razširjen z ATLAS razdelkom (viri, API dokumentacija)
+- Metadata description posodobljena (ATLAS 1825)
+
+Stage Summary:
+- ATLAS 1825 v celoti implementiran po issue #2: dejanski katastrski listi kot
+  zemljevidni sloji (ne samo sepia), strukturirani zapisi hiš/lastnikov/parcel,
+  dokazna veriga vir→trditev→dokaz, pokritost + negativni rezultati, iskanje,
+  globa povezava, GeoJSON/JSON izvoz, integritetni testi 9/9, mobilno + temno
+- E2E zahteva #37 izpolnjena: arhivski vir → hiša 73 → dokazi → MVG-010 →
+  (3D/AR prek MVG-002 cerkve)

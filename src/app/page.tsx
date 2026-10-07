@@ -8,6 +8,7 @@ import { MuseumHero } from "@/components/museum/museum-hero";
 import { MuseumRegister } from "@/components/museum/museum-register";
 import { MuseumTimeline } from "@/components/museum/museum-timeline";
 import { MuseumMap } from "@/components/museum/museum-map";
+import { MuseumAtlas } from "@/components/museum/museum-atlas";
 import { MuseumARGuide } from "@/components/museum/museum-ar";
 import { MuseumStories, MuseumEvents } from "@/components/museum/museum-stories-events";
 import { MuseumAbout } from "@/components/museum/museum-about";
@@ -102,6 +103,7 @@ function MuseumApp() {
         <MuseumRegister onOpen={openExhibit} />
         <MuseumTimeline onOpen={openExhibit} />
         <MuseumMap userFix={geo.fix} onOpen={openExhibit} />
+        <MuseumAtlas userFix={geo.fix} onOpenMuseum={openExhibit} />
         <MuseumARGuide geo={geo} onOpen={openExhibit} />
         <MuseumStories />
         <MuseumEvents />

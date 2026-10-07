@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Muzej vasi Griblje — digitalni muzej vasi ob Kolpi",
   description:
-    "Muzej vasi Griblje je večjezični digitalni muzej resnične vasi v Beli krajini: 113 zapisov, 589 dokazljivih virov, lestvica zanesljivosti, odprti podatki in časovnica od leta 1468.",
+    "Muzej vasi Griblje je večjezični digitalni muzej resnične vasi v Beli krajini: 113 zapisov, 589 dokazljivih virov, ATLAS 1825 (franciscejski kataster, georeferencirana lista, register hiš), AR vodnik, odprti podatki in časovnica od leta 1468.",
   keywords: [
     "Griblje",
     "Muzej",

@@ -90,7 +90,31 @@ npx --yes vercel@latest deploy --prod --yes \
   --scope=robertpezdirc12-designs-projects
 ```
 
-### Varnost
+#
+## ATLAS 1825 (GitLab issue #2)
+
+Zgodovinska katastrska slika vasi (franciscejski kataster, k.o. Griblje št. 83 / Grüble):
+
+- **arhivski viri** — Arhiv RS, fond SI AS 176/N/N83, 9 enot javno dostopnih prek
+  [VAČ](https://vac.sjas.gov.si) (listi A01/A02, skica, opis meje, seznami parcel,
+  stavbni protokol 1825, abecedni lastniki, raba, cenilni elaborat);
+- **georeferencirana lista** A01 in A02 kot slikovni prekrivki nad OSM (Leaflet),
+  prosojnost 0–100 %, cerkev sv. Vida kot kontrolna točka (VERIFIED);
+- **register hiš 1–98** (80 prebranih zapisov, status REVIEW — Kurrent rokopis),
+  lastniki (navzkrižno PT × PUA), parcelni sklici;
+- **vektorizacija** 156 objektov ~1825 iz lista A02 (RECONSTRUCTED);
+- **dokazni vmesnik**: vir → trditev → dokaz → povezave (N083PT str. + VAČ povezave);
+- **pokritost + negativni rezultati** — raziskovalna provenienca vključno s statusi
+  VERIFIED/DOCUMENTED/REVIEW/RECONSTRUCTED/APPROXIMATE/TO_COLLECT/NOT_FOUND;
+- **globa povezava** `?atlas=hiša-75` (hiša št. 73 — demonstracijska veriga do MVG-010).
+
+API (statični, brez runtime AI):
+
+- `GET /api/atlas` — celoten podatkovni model (JSON, provenienca vključena);
+- `GET /api/atlas/geojson` — prostorski sloji (GeoJSON, CRS84);
+- `GET /api/atlas/integrity` — test povezav hiša ↔ parcela ↔ lastnik ↔ vir (9 preverjanj).
+
+## Varnost
 
 Žeton `VERCEL_TOKEN` je v GitLabu shranjen izključno kot **maskirana CI/CD
 spremenljivka** in ni v repozitoriju. Datoteki `.gitignore` in `.vercelignore`

@@ -282,3 +282,32 @@
     #26211c;
   background-size: auto, 22px 22px;
 }
+
+/* ── ATLAS 1825 — markerji in sloji ── */
+
+.mvg-atlas-church {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  background: color-mix(in oklch, var(--primary) 82%, white 18%);
+  border: 2px solid color-mix(in oklch, var(--primary-foreground) 90%, transparent);
+  box-shadow: 0 1px 4px color-mix(in oklch, var(--foreground) 35%, transparent);
+}
+.mvg-atlas-church span {
+  transform: rotate(45deg);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--primary-foreground);
+  line-height: 1;
+}
+.mvg-atlas-bld {
+  cursor: pointer;
+  transition: fill-opacity 0.15s ease;
+}
+.mvg-atlas-bld:hover {
+  fill-opacity: 0.95;
+}

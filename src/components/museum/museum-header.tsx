@@ -12,6 +12,7 @@ const NAV = [
   { href: "#register", si: "Zbirka", en: "Collection" },
   { href: "#timeline", si: "Časovnica", en: "Timeline" },
   { href: "#zemljevid", si: "Zemljevid", en: "Map" },
+  { href: "#atlas", si: "Atlas 1825", en: "Atlas 1825" },
   { href: "#vodic", si: "AR vodnik", en: "AR guide" },
   { href: "#stories", si: "Zgodbe", en: "Stories" },
   { href: "#events", si: "Dogodki", en: "Events" },
