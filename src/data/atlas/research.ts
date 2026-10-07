@@ -545,3 +545,200 @@ export const ORAL_TOPICS: OralTopic[] = [
     status: "TO_COLLECT",
   },
 ];
+
+// ——— 8. PRENOS IZ ARHIVA markec-group/muzej-arhiv (issue #16) ——————————
+
+/**
+ * ISSUE #16 — revizija prenosa iz arhiviranega repozitorija.
+ *
+ * Programatska primerjava (2026-10-07) je ugotovila: NOV repozitorij je
+ * striktni nadnabor arhiva. Arhiv vsebuje star podatkovni model
+ * (exhibits/extra/meta/events, 101 slik, 3D model cerkve) — vse to je v
+ * novem repu enako ali izboljšano. Celoten ATLAS 1825 / Kurrent sloj v
+ * arhivu NI OBSTOJAL (niti v enem od 27 commitov) — vse Kurrent raziskave
+ * so nastale izključno v novem repozitoriju.
+ *
+ * Metoda primerjave (dejavstva, ne ugibanja): klon + unshallow (27
+ * commitov), MD5 kontrolne vsote vseh 106 datotek public/, polje-po-polju
+ * diff JSON zapisov (po museumNo), primerjava množic 589 virov, pregled
+ * vseh 211 datotek, ki so kdarkoli obstajale v zgodovini arhiva.
+ */
+export interface ArchiveTransferRow {
+  /** področje primerjave */
+  areaSi: string;
+  areaEn: string;
+  /** dejansko stanje v arhivu (številke iz datotek) */
+  archiveSi: string;
+  archiveEn: string;
+  /** dejansko stanje v novem muzeju */
+  currentSi: string;
+  currentEn: string;
+  /** izvedena akcija */
+  actionSi: string;
+  actionEn: string;
+  /** število prenesenih vnosov (issue #16: 0 = že prisotno) */
+  transferred: number;
+}
+
+export const ARCHIVE_TRANSFER_ROWS: ArchiveTransferRow[] = [
+  {
+    areaSi: "Raziskovalni zapisi (exhibits.json)",
+    areaEn: "Research records (exhibits.json)",
+    archiveSi: "113 zapisov",
+    archiveEn: "113 records",
+    currentSi: "113 istih zapisov (isti museumNo/slug); 3 zapisi z GeoTruth popravkom koordinat (MVG-002, -003, -029 → uradni EŠD 2122)",
+    currentEn: "113 identical records (same museumNo/slug); 3 with GeoTruth coordinate corrections (MVG-002, -003, -029 → official EŠD 2122)",
+    actionSi: "0 prenosov — novi repo je natančnejši (koordinate arhiva so stare, napačne ~500–790 m)",
+    actionEn: "0 transfers — the new repo is more accurate (archive coordinates are old, ~500–790 m off)",
+    transferred: 0,
+  },
+  {
+    areaSi: "Viri",
+    areaEn: "Sources",
+    archiveSi: "589 virov",
+    archiveEn: "589 sources",
+    currentSi: "589 istih virov (identična množica ID-jev)",
+    currentEn: "589 identical sources (identical ID set)",
+    actionSi: "0 prenosov — brez razlike",
+    actionEn: "0 transfers — no difference",
+    transferred: 0,
+  },
+  {
+    areaSi: "Kurrent: PT (protokol stavbnih parcel)",
+    areaEn: "Kurrent: PT (building parcels protocol)",
+    archiveSi: "serija v arhivu NI obstajala (0 datotek, 0 commitov)",
+    archiveEn: "series never existed in the archive (0 files, 0 commits)",
+    currentSi: "8/8 strani, 80 stavbnih vrstic, status REVIEW",
+    currentEn: "8/8 pages, 80 building rows, REVIEW status",
+    actionSi: "0 prenosov — prepis je izključno delo novega repa; pregled ni potreben",
+    actionEn: "0 transfers — the transcription is exclusively the new repo's work; no re-reading needed",
+    transferred: 0,
+  },
+  {
+    areaSi: "Kurrent: PUA (abecedni seznam lastnikov)",
+    areaEn: "Kurrent: PUA (alphabetical owners register)",
+    archiveSi: "serija v arhivu NI obstajala",
+    archiveEn: "series never existed in the archive",
+    currentSi: "2 strani (A–B), 21 lastnikov, status REVIEW",
+    currentEn: "2 pages (A–B), 21 owners, REVIEW status",
+    actionSi: "0 prenosov — v arhivu ni bilo dodatnih lastnikov",
+    actionEn: "0 transfers — no additional owners existed in the archive",
+    transferred: 0,
+  },
+  {
+    areaSi: "Kurrent: PS (seznam zemljiških parcel)",
+    areaEn: "Kurrent: PS (land parcels register)",
+    archiveSi: "serija v arhivu NI obstajala",
+    archiveEn: "series never existed in the archive",
+    currentSi: "20 vrstic v pripravljenem modelu; poln 143-stranski prepis TO_COLLECT",
+    currentEn: "20 rows in a prepared model; the full 143-page transcription is TO_COLLECT",
+    actionSi: "0 prenosov — arhiv ni vseboval parcelnih vzorcev",
+    actionEn: "0 transfers — the archive contained no parcel samples",
+    transferred: 0,
+  },
+  {
+    areaSi: "Kurrent: PR, PZ, PG, PV",
+    areaEn: "Kurrent: PR, PZ, PG, PV",
+    archiveSi: "serije v arhivu NI obstajale",
+    archiveEn: "series never existed in the archive",
+    currentSi: "model + status TO_COLLECT (prepis ni izdelan)",
+    currentEn: "model + TO_COLLECT status (transcription not made)",
+    actionSi: "0 prenosov — ni bilo česa prenesti",
+    actionEn: "0 transfers — nothing to transfer",
+    transferred: 0,
+  },
+  {
+    areaSi: "Hiše / parcele / Atlas 1825",
+    areaEn: "Houses / parcels / Atlas 1825",
+    archiveSi: "atlas v arhivu NI obstajal (src/data/atlas/ ni v nobenem commitu)",
+    archiveEn: "atlas never existed in the archive (src/data/atlas/ in no commit)",
+    currentSi: "Atlas 1825: sources (N083*), houses (80), research, geotruth, reconciliation, coverage",
+    currentEn: "Atlas 1825: sources (N083*), houses (80), research, geotruth, reconciliation, coverage",
+    actionSi: "0 prenosov — celoten atlas je nastal v novem repu",
+    actionEn: "0 transfers — the entire atlas originated in the new repo",
+    transferred: 0,
+  },
+  {
+    areaSi: "Dogodki (events.json)",
+    areaEn: "Events (events.json)",
+    archiveSi: "9 dogodkov",
+    archiveEn: "9 events",
+    currentSi: "11 dogodkov (2 dodana v novem repu — 500-letnice 2026)",
+    currentEn: "11 events (2 added in the new repo — 2026 anniversaries)",
+    actionSi: "0 prenosov — novi repo je nadnabor",
+    actionEn: "0 transfers — the new repo is a superset",
+    transferred: 0,
+  },
+  {
+    areaSi: "Slike in 3D modeli (public/)",
+    areaEn: "Images and 3D models (public/)",
+    archiveSi: "106 datotek (101 slik + cerkev-sv-vida.glb + logotip + …)",
+    archiveEn: "106 files (101 images + cerkev-sv-vida.glb + logo + …)",
+    currentSi: "vseh 106 prisotnih z IDENTIČNIMI kontrolnimi vsotami (MD5) + 41 novih (atlas/qr/panorame/audio)",
+    currentEn: "all 106 present with IDENTICAL checksums (MD5) + 41 new ones (atlas/qr/panoramas/audio)",
+    actionSi: "0 prenosov — nobena datoteka ne manjka",
+    actionEn: "0 transfers — no file is missing",
+    transferred: 0,
+  },
+  {
+    areaSi: "extra.json (postaje življenja, trditve, sorodni, sprehod)",
+    areaEn: "extra.json (life stations, claims, related, walks)",
+    archiveSi: "identična vsebina",
+    archiveEn: "identical content",
+    currentSi: "identična vsebina",
+    currentEn: "identical content",
+    actionSi: "0 prenosov — datoteki sta enaki",
+    actionEn: "0 transfers — the files are equal",
+    transferred: 0,
+  },
+];
+
+/** Namerno NE preneseno iz arhiva (dokumentirane odločitve). */
+export interface ArchiveNonTransfer {
+  path: string;
+  reasonSi: string;
+  reasonEn: string;
+}
+
+export const ARCHIVE_NON_TRANSFERS: ArchiveNonTransfer[] = [
+  {
+    path: "download/README.md",
+    reasonSi: "Vsebina: »Here are all the generated files.« — mapo generiranih (neraziskovalnih) datotek je arhiv sam izločil prek .vercelignore; ni raziskovalna vsebina.",
+    reasonEn: "Content: “Here are all the generated files.” — the folder of generated (non-research) files was itself excluded via .vercelignore; not research content.",
+  },
+  {
+    path: ".gitlab-ci.yml",
+    reasonSi: "CI konfiguracija, namerno odstranjena v novem repu (GitLab CI brez potrjene kartice ni mogel poganjati jobov; primarna pot je Vercel integracija). Infrastruktura, ne vsebina.",
+    reasonEn: "CI configuration, deliberately removed in the new repo (GitLab CI without a confirmed card could not run jobs; the Vercel integration is the primary path). Infrastructure, not content.",
+  },
+];
+
+/** Skupni revizijski zapis issue #16 (strojno berljiv). */
+export const ARCHIVE_TRANSFER_AUDIT = {
+  issue: 16,
+  comparedAt: "2026-10-07",
+  archiveRepo: {
+    path: "markec-group/muzej-arhiv",
+    gitlabProjectId: 87313405,
+    archived: true,
+    headSha: "f519bd95ddec43a699ffa4373b5a75fef0eacead",
+    commits: 27,
+    /** vseh datotek, ki so kdarkoli obstajale v zgodovini */
+    filesEverInHistory: 211,
+    srcFiles: 78,
+    publicFiles: 106,
+  },
+  canonicalRepo: {
+    path: "robert.pezdirc12/muzej",
+    headShaAtComparison: "19a6b7cfb56abae0a45b35264df2a33b5c181869",
+  },
+  methodSi:
+    "Klon arhiva + unshallow (27 commitov); MD5 kontrolne vsote vseh datotek public/; polje-po-polju diff exhibits/extra/meta/events po museumNo; primerjava množic virov; pregled vseh 211 datotek zgodovine; iskanje Kurrent/N083/PUA po celotni zgodovini (0 zadetkov).",
+  methodEn:
+    "Archive clone + unshallow (27 commits); MD5 checksums of all public/ files; field-by-field diff of exhibits/extra/meta/events by museumNo; source-set comparison; review of all 211 files in history; Kurrent/N083/PUA search across the whole history (0 hits).",
+  verdictSi:
+    "Novi muzej je striktni nadnabor arhiva: 0 manjkajočih raziskav, 0 manjkajočih virov, 0 manjkajočih datotek z vsebino. Kurrent/Atlas sloj v arhivu nikoli ni obstajal — prenos ni bil potreben in NIČ ni bilo podvojeno.",
+  verdictEn:
+    "The new museum is a strict superset of the archive: 0 missing research, 0 missing sources, 0 missing content files. The Kurrent/Atlas layer never existed in the archive — no transfer was needed and NOTHING was duplicated.",
+  totalTransferredEntries: 0,
+};

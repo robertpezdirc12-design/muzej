@@ -6,6 +6,9 @@ import exhibitsRaw from "@/data/museum/exhibits.json";
 import { ATLAS_SOURCES, NEGATIVE_RESULTS, HERITAGE_UNITS } from "@/data/atlas/sources";
 import { KURRENT_SERIES, GEODATA_SOURCES, SCHOOL_ARCHIVE, ORAL_INTERVIEWS, ORAL_TOPICS } from "@/data/atlas/research";
 
+/** ISSUE #16 — revizija prenosa iz arhiva (0 prenosov, nadnabor) je
+    vstopila v raziskovalni model; različica podatkov ostaja enaka, ker se
+    vsebinski podatki niso spremenili (dodana je le revizija sama). */
 export const DATA_VERSION = "2026-10-07";
 
 interface ExhibitSource {

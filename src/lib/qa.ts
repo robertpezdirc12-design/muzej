@@ -12,6 +12,11 @@ import { NEGATIVE_RESULTS } from "@/data/atlas/sources";
 import { parishStats } from "./atlas";
 import { PANORAMAS } from "@/data/atlas/panoramas";
 import { TIME_SPOTS } from "@/data/atlas/timespots";
+import {
+  ARCHIVE_TRANSFER_ROWS,
+  ARCHIVE_NON_TRANSFERS,
+  ARCHIVE_TRANSFER_AUDIT,
+} from "@/data/atlas/research";
 
 interface ExhibitRow {
   id: string;
@@ -257,6 +262,48 @@ export function runQA(): QAReport {
     panoErrors.length === 0
       ? `${PANORAMAS.length} panorame (${PANORAMAS.map((p) => p.timeSpotId).join(", ")}); trditve: ${PANORAMAS.reduce((a, p) => a + p.claims.length, 0)}; asseti v /panoramas`
       : panoErrors.join("; "),
+  );
+
+  // 14. prenos iz arhiva (issue #16): revizija mora biti notranje dosledna
+  const archErrors: string[] = [];
+  if (ARCHIVE_TRANSFER_ROWS.length < 8) {
+    archErrors.push(`premalo vrstic matrike: ${ARCHIVE_TRANSFER_ROWS.length}`);
+  }
+  const badRows = ARCHIVE_TRANSFER_ROWS.filter(
+    (r) => !r.areaSi || !r.areaEn || !r.archiveSi || !r.currentSi || !r.actionSi,
+  );
+  if (badRows.length) {
+    archErrors.push(`vrstice s praznimi polji: ${badRows.map((r) => r.areaEn).join(", ")}`);
+  }
+  const kurrentRows = ARCHIVE_TRANSFER_ROWS.filter((r) => /Kurrent/i.test(r.areaEn));
+  if (kurrentRows.length < 2) {
+    archErrors.push("matrika ne pokriva Kurrent serij");
+  }
+  for (const r of ARCHIVE_TRANSFER_ROWS) {
+    if (r.transferred !== 0) {
+      archErrors.push(`${r.areaEn}: transferred=${r.transferred}, pričakovano 0 (nadnabor)`);
+    }
+  }
+  if (ARCHIVE_TRANSFER_AUDIT.totalTransferredEntries !== 0) {
+    archErrors.push("totalTransferredEntries ≠ 0");
+  }
+  if (!ARCHIVE_TRANSFER_AUDIT.archiveRepo.archived) {
+    archErrors.push("revizija ne potrjuje, da je arhiv arhiviran");
+  }
+  if (!/^[0-9a-f]{40}$/.test(ARCHIVE_TRANSFER_AUDIT.archiveRepo.headSha)) {
+    archErrors.push("archiveRepo.headSha ni veljaven SHA-1");
+  }
+  if (!ARCHIVE_NON_TRANSFERS.some((n) => n.path === "download/README.md")) {
+    archErrors.push("namerno neprenesen download/README.md ni dokumentiran");
+  }
+  push(
+    "qa-archive-transfer",
+    "prenos iz arhiva: matrika, verifikacija nadnaborja, dokumentirane izjeme (issue #16)",
+    "archive transfer: matrix, superset verification, documented exceptions (issue #16)",
+    archErrors.length === 0,
+    archErrors.length === 0
+      ? `${ARCHIVE_TRANSFER_ROWS.length} področij primerjanih; 0 prenosov (novi repo = striktni nadnabor); ${ARCHIVE_NON_TRANSFERS.length} namerno nepreneseno; arhiv ${ARCHIVE_TRANSFER_AUDIT.archiveRepo.path} @ ${ARCHIVE_TRANSFER_AUDIT.archiveRepo.headSha.slice(0, 7)} (archived, ${ARCHIVE_TRANSFER_AUDIT.archiveRepo.commits} commitov)`
+      : archErrors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;

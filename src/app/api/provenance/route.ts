@@ -10,6 +10,9 @@ import {
   MAP_1812,
   ORAL_INTERVIEWS,
   ORAL_TOPICS,
+  ARCHIVE_TRANSFER_ROWS,
+  ARCHIVE_NON_TRANSFERS,
+  ARCHIVE_TRANSFER_AUDIT,
 } from "@/data/atlas/research";
 
 export const dynamic = "force-static";
@@ -67,6 +70,11 @@ export async function GET() {
         },
         negativeResults: NEGATIVE_RESULTS,
         heritageUnits: HERITAGE_UNITS,
+        archiveTransfer: {
+          audit: ARCHIVE_TRANSFER_AUDIT,
+          rows: ARCHIVE_TRANSFER_ROWS,
+          nonTransfers: ARCHIVE_NON_TRANSFERS,
+        },
       },
     },
     {

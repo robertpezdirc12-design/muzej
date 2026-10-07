@@ -18,6 +18,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import {
+  Archive,
   BookOpen,
   CheckCircle2,
   Database,
@@ -46,6 +47,9 @@ import {
   F0000212_PROVENANCE,
   MAP_1812,
   ORAL_TOPICS,
+  ARCHIVE_TRANSFER_ROWS,
+  ARCHIVE_NON_TRANSFERS,
+  ARCHIVE_TRANSFER_AUDIT,
 } from "@/data/atlas/research";
 import { ATLAS_SOURCES, NEGATIVE_RESULTS } from "@/data/atlas/sources";
 
@@ -77,7 +81,7 @@ function StatusBadge({ status }: { status: string }) {
   );
 }
 
-type Tab = "audit" | "kurrent" | "geodata" | "sola" | "posebno" | "negativni";
+type Tab = "audit" | "kurrent" | "geodata" | "sola" | "posebno" | "negativni" | "arhiv";
 
 const TABS: { id: Tab; si: string; en: string; icon: React.ComponentType<{ className?: string }> }[] = [
   { id: "audit", si: "Provinienca 113", en: "Provenance 113", icon: Microscope },
@@ -86,6 +90,7 @@ const TABS: { id: Tab; si: string; en: string; icon: React.ComponentType<{ class
   { id: "sola", si: "Šolski arhiv", en: "School archive", icon: GraduationCap },
   { id: "posebno", si: "Posebne raziskave", en: "Special research", icon: Users },
   { id: "negativni", si: "Negativni rezultati", en: "Negative results", icon: FileX2 },
+  { id: "arhiv", si: "Prenos iz arhiva", en: "Archive transfer", icon: Archive },
 ];
 
 export function MuseumResearch() {
@@ -563,6 +568,105 @@ export function MuseumResearch() {
                       {lang === "si" ? n.detailSi : n.detailEn}
                     </p>
                     <p className="mt-1.5 font-mono text-[10px] text-muted-foreground/70">{n.id}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
+        )}
+
+        {/* ——— 7. PRENOS IZ ARHIVA (issue #16) ——— */}
+        {tab === "arhiv" && (
+          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mt-6 grid gap-4">
+            <div className="rounded-xl border bg-card p-6 shadow-sm">
+              <h3 className="flex items-center gap-2 font-display text-lg font-semibold">
+                <Archive className="size-4 text-primary" aria-hidden="true" />
+                {t(
+                  `Prenos iz arhiva markec-group/muzej-arhiv (issue #16)`,
+                  `Transfer from the markec-group/muzej-arhiv archive (issue #16)`,
+                )}
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                {lang === "si"
+                  ? ARCHIVE_TRANSFER_AUDIT.verdictSi
+                  : ARCHIVE_TRANSFER_AUDIT.verdictEn}
+              </p>
+              <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+                <strong className="text-foreground">{t("Metoda:", "Method:")}</strong>{" "}
+                {lang === "si" ? ARCHIVE_TRANSFER_AUDIT.methodSi : ARCHIVE_TRANSFER_AUDIT.methodEn}
+              </p>
+              <div className="mt-3 flex flex-wrap gap-2 text-[10px] font-mono text-muted-foreground">
+                <span className="rounded-full bg-secondary px-2 py-0.5">
+                  arhiv @ {ARCHIVE_TRANSFER_AUDIT.archiveRepo.headSha.slice(0, 7)} ·{" "}
+                  {ARCHIVE_TRANSFER_AUDIT.archiveRepo.commits} commitov · archived
+                </span>
+                <span className="rounded-full bg-secondary px-2 py-0.5">
+                  primerjava {ARCHIVE_TRANSFER_AUDIT.comparedAt}
+                </span>
+                <span className="rounded-full bg-secondary px-2 py-0.5">
+                  {t(
+                    `preneseno vnosov: ${ARCHIVE_TRANSFER_AUDIT.totalTransferredEntries}`,
+                    `transferred entries: ${ARCHIVE_TRANSFER_AUDIT.totalTransferredEntries}`,
+                  )}
+                </span>
+              </div>
+            </div>
+
+            {/* primerjalna matrika */}
+            <div className="overflow-hidden rounded-xl border bg-card shadow-sm">
+              <div className="border-b bg-secondary/40 px-6 py-4">
+                <h4 className="font-display text-base font-semibold">
+                  {t("Primerjalna matrika (številke iz datotek)", "Comparison matrix (numbers from files)")}
+                </h4>
+              </div>
+              <div className="divide-y">
+                {ARCHIVE_TRANSFER_ROWS.map((r) => (
+                  <div key={r.areaEn} className="grid gap-2 px-6 py-4 md:grid-cols-[1.1fr_1fr_1fr_1.1fr]">
+                    <p className="text-sm font-semibold text-foreground">
+                      {lang === "si" ? r.areaSi : r.areaEn}
+                    </p>
+                    <div className="text-xs leading-relaxed text-muted-foreground">
+                      <p className="mb-0.5 font-mono font-bold text-[10px] uppercase tracking-wide">
+                        {t("Arhiv", "Archive")}
+                      </p>
+                      {lang === "si" ? r.archiveSi : r.archiveEn}
+                    </div>
+                    <div className="text-xs leading-relaxed text-muted-foreground">
+                      <p className="mb-0.5 font-mono font-bold text-[10px] uppercase tracking-wide">
+                        {t("Novi muzej", "New museum")}
+                      </p>
+                      {lang === "si" ? r.currentSi : r.currentEn}
+                    </div>
+                    <div className="text-xs leading-relaxed">
+                      <p className="mb-0.5 font-mono font-bold text-[10px] uppercase tracking-wide text-primary">
+                        {t("Akcija", "Action")}
+                      </p>
+                      {lang === "si" ? r.actionSi : r.actionEn}
+                      <span className="ml-1.5 inline-flex items-center rounded-full bg-emerald-100 px-1.5 py-0.5 font-mono text-[10px] font-semibold text-emerald-900 dark:bg-emerald-900/60 dark:text-emerald-100">
+                        {t(`+${r.transferred}`, `+${r.transferred}`)}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* namerno NE preneseno */}
+            <div className="rounded-xl border bg-card p-6 shadow-sm">
+              <h4 className="flex items-center gap-2 font-display text-base font-semibold">
+                <FileX2 className="size-4 text-muted-foreground" aria-hidden="true" />
+                {t(
+                  `Namerno NE preneseno (${ARCHIVE_NON_TRANSFERS.length})`,
+                  `Deliberately NOT transferred (${ARCHIVE_NON_TRANSFERS.length})`,
+                )}
+              </h4>
+              <ul className="mt-3 grid gap-3">
+                {ARCHIVE_NON_TRANSFERS.map((n) => (
+                  <li key={n.path} className="rounded-lg border bg-secondary/30 p-3">
+                    <p className="font-mono text-xs font-semibold text-foreground">{n.path}</p>
+                    <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                      {lang === "si" ? n.reasonSi : n.reasonEn}
+                    </p>
                   </li>
                 ))}
               </ul>

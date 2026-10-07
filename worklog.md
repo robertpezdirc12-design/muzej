@@ -1364,3 +1364,34 @@ Stage Summary:
 - Obiskovalčeva pot v produkciji: QR (vstop/lokacija) → dobrodošlica → oseba → postaja za postajo (razdalja, status, AR, 360°, navigacija, Q&A) → samodejni zaključek s statistiko → digitalni spomin (razglednica PNG, deljenje) — BREZ nove arhitekture (reuse TimeSpot/GeoTruth/zbirka/openTM)
 - Stanje muzeja: 113 zapisov, 15/15 issuejev zaprtih (cel backlog), 20. deploy v produkciji, AI Guide podatkovni sloj (18 preverjenih Q&A) pripravljen za bodočega AI vodnika
 - Naslednji korak: odprt za nove issueje uporabnika (P3+ — npr. zagon AI vodnika na guide podatkih, več panoram, gamifikacija)
+
+---
+Task ID: 16 (issue #16 — PRENOS IZ ARHIVA)
+Agent: Z.ai Code (glavni agent)
+Task: Programatska primerjava arhiviranega repa markec-group/muzej-arhiv s kanoničnim robert.pezdirc12/muzej; prenos SAMO manjkajočih raziskav in podatkov, brez podvajanja (issue #16).
+
+Work Log:
+- Klon arhiva (65 MB) + unshallow → 27 commitov; GitLab potrditev: projekt 87313405 archived=True, HEAD f519bd9 (2026-10-07 08:32)
+- PROGRAMATSKA PRIMERJAVA (vse številke iz datotek, ne ugibane):
+  * exhibits.json: 113 = 113 zapisov (isti museumNo/slug); RAZLIKA le lat/lng na 3 zapisih (MVG-002/003/029) — arhiv ima STARE napačne koordinate (~500–790 m odmik), novi repo ima GeoTruth EŠD 2122 popravke → novi JE NATANČNEJŠI, arhivovih vrednosti NI preneseno
+  * viri: 589 = 589 (identična množica ID-jev, 0 manjkajočih)
+  * extra.json: IDENTIČEN; events: arhiv 9, novi 11 (2 novi — 500-letnice 2026) → nadnabor
+  * public/: 106 datotek arhiva, VSE prisotne v novem repo z IDENTIČNIMI MD5 vsotami (101 slik + cerkev-sv-vida.glb + logotip/og/robots); novi ima +41 novih (atlas/qr/panorame/audio/icons)
+  * src/: 78 datotek arhiva, VSE obstajajo v novem (0 samo-arhivnih); 15 skupnih z razliko = evolucija novega repa (USDZ/AR/provenanca/dataVersion/11 dogodkov)
+  * CELA ZGODOVINA: 211 datotek, ki so kdarkoli obstajale; v novem manjka SAMO download/README.md ("Here are all the generated files." — generirane datoteke, namerno izločene prek .vercelignore) + .gitlab-ci.yml (CI namerno umaknjen)
+  * KURRENT/ATLAS: src/data/atlas/ NI OBSTOJAL v arhivu (0 datotek, 0 commitov; iskanje N083/Kurrent/PUA po zgodovini = 0 zadetkov) → PT 8/8 + PUA 2 strani + PS vzorec + hiše + geotruth so IZKLJUČNO delo novega repa; ničesar ni bilo treba narediti znova
+- SKLEP: novi repo je STRIKTNI NADNABOR arhiva → 0 prenosov, 0 podvajanj (glavno pravilo issueja izpolnjeno: nič ponovno izdelano)
+- Implementacija revizije (brez paralelnih modelov, obstoječe strukture):
+  * research.ts: nov razdelek 8 — ARCHIVE_TRANSFER_ROWS (10 področij matrike z realnimi številkami), ARCHIVE_NON_TRANSFERS (2 dokumentirani izjemi), ARCHIVE_TRANSFER_AUDIT (issue, datum, SHA obeh repov, 27 commitov, 211 datotek, metoda, verdikt, totalTransferred=0)
+  * museum-research.tsx: nov zavihek »Prenos iz arhiva« (ikona Archive) — verdikt, metoda, čipi (arhiv @ f519bd9 · 27 commitov · archived), matrika ARHIV/NOVI MUZEJ/AKCIJA z +0 žetoni, namerno nepreneseno
+  * qa.ts: test 14 qa-archive-transfer (≥8 vrstic, vsa polja neprazna, Kurrent pokrit, transferred=0, archived=True, veljaven SHA, download/README.md dokumentiran)
+  * /api/provenance: research.archiveTransfer {audit, rows, nonTransfers} — strojno berljivo
+  * provenance.ts: opomba k DATA_VERSION (vsebina nespremenjena, dodana le revizija); sw.js v7→v8
+- QA: lint čist; /api/qa 14/14 PASS (nov test: "10 področij primerjanih; 0 prenosov; 2 namerno nepreneseno; arhiv @ f519bd9 (archived, 27 commitov)"); /api/provenance archiveTransfer OK
+- E2E (agent-browser): ?odsek=raziskave → zavihek Prenos iz arhiva → verdikt + metoda + matrika (ARHIV/NOVI MUZEJ/AKCIJA stolpci) + namerno nepreneseno; mobilni 390px brez horizontalnega preliva; 0 napak; dev.log čist
+
+Stage Summary:
+- ISSUE #16 REŠEN POŠTENO: programatska primerjava je dokazala, da je novi muzej striktni nadnabor arhiva — Kurrent/Atlas sloj v arhivu nikoli ni obstajal, vsi arhivski podatki (113 zapisov, 589 virov, 106 datotek) so v novem repu enaki ali izboljšani (GeoTruth), 0 vsebin prenesenih, 0 podvajanj
+- Revizija je trajno dokumentirana v repu (matrika + metoda + SHA + verdikt), vidna v Raziskavah in strojno berljiva prek /api/provenance; QA 14/14
+- Statusi Kurrent serij nespremenjeni (pravilni: PT 8/8 REVIEW, PUA 2 strani REVIEW, PS/PR/PZ/PG/PV TO_COLLECT)
+- Sledi: commit + push → Vercel 21. deploy → produkcijska verifikacija → GitLab #16 zaključek z matriko
