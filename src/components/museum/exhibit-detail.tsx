@@ -22,6 +22,7 @@ import {
   X,
 } from "lucide-react";
 import { useLang } from "./language-context";
+import { ArchivalHeaderBand } from "./archival-placeholder";
 import { ModelViewer3D } from "./model-viewer-3d";
 import {
   getExhibit,
@@ -66,9 +67,9 @@ export function ExhibitDetail({
         side="right"
         className="muzej-scroll w-full overflow-y-auto p-0 sm:max-w-2xl"
       >
-        {/* glava zapisa */}
+        {/* glava zapisa — fotografija ali arhivski list */}
         <div className="relative">
-          {exhibit.image && (
+          {exhibit.image ? (
             <div className="relative h-56 w-full overflow-hidden sm:h-64">
               <img
                 src={exhibit.image}
@@ -82,6 +83,8 @@ export function ExhibitDetail({
                 </p>
               )}
             </div>
+          ) : (
+            <ArchivalHeaderBand museumNo={exhibit.museumNo} category={exhibit.category} />
           )}
           <button
             type="button"

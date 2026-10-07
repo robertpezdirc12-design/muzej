@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Star, ChevronRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { useLang } from "./language-context";
+import { ArchivalCardImage } from "./archival-placeholder";
 import { EVIDENCE_LABELS, CATEGORY_LABELS, type Exhibit } from "@/lib/museum";
 
 export function ExhibitCard({
@@ -42,9 +43,7 @@ export function ExhibitCard({
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
         ) : (
-          <div className="flex h-full w-full items-center justify-center font-display text-3xl text-muted-foreground/40">
-            {exhibit.museumNo}
-          </div>
+          <ArchivalCardImage category={exhibit.category} />
         )}
         <span className="absolute left-3 top-3 rounded-full bg-background/90 px-2.5 py-1 font-mono text-[11px] font-semibold text-primary backdrop-blur">
           {exhibit.museumNo}
