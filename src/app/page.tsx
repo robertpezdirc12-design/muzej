@@ -7,6 +7,7 @@ import { MuseumHeader } from "@/components/museum/museum-header";
 import { MuseumHero } from "@/components/museum/museum-hero";
 import { MuseumRegister } from "@/components/museum/museum-register";
 import { MuseumTimeline } from "@/components/museum/museum-timeline";
+import { MuseumMap } from "@/components/museum/museum-map";
 import { MuseumStories, MuseumEvents } from "@/components/museum/museum-stories-events";
 import { MuseumAbout } from "@/components/museum/museum-about";
 import { MuseumFooter } from "@/components/museum/museum-footer";
@@ -95,6 +96,7 @@ function MuseumApp() {
         <MuseumHero />
         <MuseumRegister onOpen={openExhibit} />
         <MuseumTimeline onOpen={openExhibit} />
+        <MuseumMap onOpen={openExhibit} />
         <MuseumStories />
         <MuseumEvents />
         <MuseumAbout />

@@ -152,3 +152,74 @@
     radial-gradient(color-mix(in oklch, var(--primary) 7%, transparent) 1px, transparent 1px);
   background-size: 22px 22px;
 }
+
+/* ── zemljevid zbirke (Leaflet) ── */
+
+/* posamezni klinček zapisa */
+.mvg-pin {
+  background: none;
+  border: none;
+}
+.mvg-pin-dot {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  background: var(--primary);
+  border: 2.5px solid var(--background);
+  box-shadow: 0 1px 4px color-mix(in oklch, var(--foreground) 30%, transparent);
+  transition: transform 0.15s ease;
+}
+.mvg-pin:hover .mvg-pin-dot {
+  transform: scale(1.35);
+}
+.mvg-pin:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* namig nad klinčkom */
+.mvg-tooltip {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  line-height: 1.4;
+  padding: 5px 9px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--background);
+  color: var(--foreground);
+  box-shadow: 0 2px 8px color-mix(in oklch, var(--foreground) 18%, transparent);
+  max-width: 230px;
+  white-space: normal;
+}
+.mvg-tooltip-no {
+  color: var(--primary);
+  font-family: var(--font-mono);
+  margin-right: 4px;
+}
+.leaflet-tooltip-top.mvg-tooltip::before {
+  border-top-color: var(--background);
+}
+
+/* tipografija lista pripisov */
+.leaflet-container .leaflet-control-attribution {
+  font-size: 10px;
+  background: color-mix(in oklch, var(--background) 88%, transparent);
+  color: var(--muted-foreground);
+}
+.leaflet-container .leaflet-control-attribution a {
+  color: var(--primary);
+}
+.leaflet-container .leaflet-control-zoom a {
+  color: var(--foreground);
+  border-color: var(--border);
+}
+
+/* zgodovinski (sepia) pogled ploščic */
+.mvg-vintage .leaflet-tile {
+  filter: sepia(0.62) saturate(0.72) contrast(0.88) brightness(1.03) hue-rotate(-6deg);
+}
+.mvg-vintage .leaflet-container,
+.leaflet-container.mvg-vintage {
+  background: var(--secondary);
+}
