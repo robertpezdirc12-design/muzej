@@ -69,23 +69,29 @@ export function MuseumAbout() {
             </h3>
             <p className="mt-3 text-sm leading-relaxed text-foreground/85">
               {t(
-                `Celotna zbirka — ${STATS.exhibits} zapisov in ${STATS.sources} virov — je javno dostopna v JSON obliki. Zemljevidski podatki © OpenStreetMap prispevali.`,
-                `The entire collection — ${STATS.exhibits} records and ${STATS.sources} sources — is publicly available as JSON. Map data © OpenStreetMap contributors.`,
+                `Celotna zbirka — ${STATS.exhibits} zapisov in ${STATS.sources} virov — je javno dostopna v JSON obliki, skupaj z Atlasom 1825, provenienčnim poročilom in testi kakovosti. Zemljevidski podatki © OpenStreetMap prispevali.`,
+                `The entire collection — ${STATS.exhibits} records and ${STATS.sources} sources — is publicly available as JSON, together with the 1825 Atlas, the provenance report and the QA tests. Map data © OpenStreetMap contributors.`,
               )}
             </p>
-            <ul className="mt-4 space-y-2">
+            <ul className="mt-4 grid gap-2 sm:grid-cols-2">
               {[
-                { href: "/api/exhibits", label: "/api/exhibits" },
-                { href: "/api/events", label: "/api/events" },
-                { href: "/api/opendata", label: "/api/opendata" },
+                { href: "/api/exhibits", label: "/api/exhibits", si: "zbirka 113", en: "collection 113" },
+                { href: "/api/events", label: "/api/events", si: "dogodki", en: "events" },
+                { href: "/api/opendata", label: "/api/opendata", si: "odprti podatki + licence", en: "open data + licenses" },
+                { href: "/api/atlas", label: "/api/atlas", si: "ATLAS 1825 (hiše, lastniki)", en: "ATLAS 1825 (houses, owners)" },
+                { href: "/api/provenance", label: "/api/provenance", si: "provinienčni audit", en: "provenance audit" },
+                { href: "/api/coverage", label: "/api/coverage", si: "coverage + 3D/AR", en: "coverage + 3D/AR" },
+                { href: "/api/qa", label: "/api/qa", si: "testi kakovosti (11)", en: "quality tests (11)" },
+                { href: "/api/atlas/reconciliation", label: "/api/atlas/reconciliation", si: "zero-loss uskladitev", en: "zero-loss reconciliation" },
               ].map((l) => (
                 <li key={l.href}>
                   <a
                     href={l.href}
-                    className="inline-flex items-center gap-2 rounded-lg border px-3 py-2 font-mono text-xs text-primary transition-colors hover:border-primary/40 hover:bg-secondary"
+                    className="flex min-h-11 items-center gap-2 rounded-lg border px-3 py-2 font-mono text-xs text-primary transition-colors hover:border-primary/40 hover:bg-secondary"
+                    title={t(l.si, l.en)}
                   >
-                    <FileJson className="size-3.5" aria-hidden="true" />
-                    {l.label}
+                    <FileJson className="size-3.5 shrink-0" aria-hidden="true" />
+                    <span className="min-w-0 break-all">{l.label}</span>
                   </a>
                 </li>
               ))}

@@ -790,3 +790,25 @@ Stage Summary:
   (#1 AR, #2 ATLAS 1825, #3 raziskave/provenienca, #4 zaključek, #5 kontrola)
 - Produkcija https://griblje-museum.vercel.app: 113 zapisov + ATLAS 1825 +
   raziskave/provienca + coverage/QA + AR + sprehodi z eksplicitno vrzeljo 32
+
+---
+Task ID: 7
+Agent: Z.ai Code (glavni agent)
+Task: Zaključno poliranje + celovit E2E regresijski pregled
+
+Work Log:
+- O muzeju → Odprti podatki: seznam razširjen z 8 endpointi (exhibits, events,
+  opendata, atlas, provenance, coverage, qa, atlas/reconciliation) z tooltipi
+  SI/EN, mreža 2 stolpca, min-h-11 dotik
+- Metapodatki: description dopolnjena (raziskave in provenienca), JSON-LD
+  Dataset distribution razširjen (atlas, provenance, coverage, qa)
+- E2E regresija vseh 10 odsekov: register iskanje (kolpa → 8), globa povezava
+  ?exponat=kolpa-reka + dinamičen naslov zavihka, detail z 9 viri + Escape,
+  jezik SI/EN, atlas iskanje 73 (House no. 73 — Peutinger Mihel), leaflet,
+  zgodbe 12, dogodki 9, AR vodnik (GPS + Objekti v AR 1 + sprehod 35),
+  raziskave 6 zavihkov, coverage QA 11/11, noga, temni način, mobilno 390 brez
+  overflow — 0 napak v konzoli
+- GitHub sinhronizacija (CI 64ea47f, uporabnikova nastavitev) — samodejna
+
+Stage Summary:
+- Poliranje objavljeno; celotno spletišče preverjeno end-to-end

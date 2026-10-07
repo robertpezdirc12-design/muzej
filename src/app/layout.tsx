@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Muzej vasi Griblje — digitalni muzej vasi ob Kolpi",
   description:
-    "Muzej vasi Griblje je večjezični digitalni muzej resnične vasi v Beli krajini: 113 zapisov, 589 dokazljivih virov, ATLAS 1825 (franciscejski kataster, georeferencirana lista, register hiš), AR vodnik, odprti podatki in časovnica od leta 1468.",
+    "Muzej vasi Griblje je večjezični digitalni muzej resnične vasi v Beli krajini: 113 zapisov, 589 dokazljivih virov, ATLAS 1825 (franciscejski kataster, georeferencirana lista, register hiš), raziskave in provenienca, AR vodnik, odprti podatki in časovnica od leta 1468.",
   keywords: [
     "Griblje",
     "Muzej",
@@ -85,13 +85,17 @@ const jsonLd = {
       "@type": "Dataset",
       name: "Zbirka Muzeja vasi Griblje (MVG-001–114)",
       description:
-        "Odprti podatki digitalnega muzeja: 113 zapisov o vasi Griblje z dokazljivimi viri, lestvico zanesljivosti, časovnico in zemljevidom.",
+        "Odprti podatki digitalnega muzeja: 113 zapisov o vasi Griblje z dokazljivimi viri, lestvico zanesljivosti, časovnico, zemljevidom, Atlasom 1825 in provenienčnim poročilom.",
       url: `${SITE_URL}/api/opendata`,
       creator: { "@id": `${SITE_URL}/#museum` },
       license: "https://creativecommons.org/licenses/by-sa/4.0/",
       distribution: [
         { "@type": "DataDownload", encodingFormat: "application/json", contentUrl: `${SITE_URL}/api/exhibits` },
         { "@type": "DataDownload", encodingFormat: "application/json", contentUrl: `${SITE_URL}/api/events` },
+        { "@type": "DataDownload", encodingFormat: "application/json", contentUrl: `${SITE_URL}/api/atlas` },
+        { "@type": "DataDownload", encodingFormat: "application/json", contentUrl: `${SITE_URL}/api/provenance` },
+        { "@type": "DataDownload", encodingFormat: "application/json", contentUrl: `${SITE_URL}/api/coverage` },
+        { "@type": "DataDownload", encodingFormat: "application/json", contentUrl: `${SITE_URL}/api/qa` },
       ],
       inLanguage: ["sl", "en"],
       isAccessibleForFree: true,
