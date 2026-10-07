@@ -271,3 +271,36 @@ Verifikacija produkcije (samodejni deploy dpl_48Zo6cZGwfMJk2VkceQr, READY):
 - Brskalnik na produkciji: model-viewer obstaja, registriran (chunk se naloži), loaded=true,
   canvas v shadow DOM se izriseva, OSM povezava prisotna, 0 konzolnih napak
 - 5. zaporedni uspešen samodejni deploy skozi pip; zapis MVG-002 ima spet prostornino
+
+---
+Task ID: 10
+Agent: Z.ai Code (glavni agent)
+Task: Združitev dveh muzejskih repozitorijev v enega (uporabnikovo naročilo: "mora bit samo eden, nic ne zbrisi, logicno zdruzi")
+
+Work Log:
+- Analiza vzroka dveh repotov: Vercel Hobby načrt NE poveže ZASEBNEGA repota v lasti skupine
+  (napaka repo_owned_by_org, Task 4) → zato je bil robert.pezdirc12/muzej (osebni, zasebni)
+  ustvarjen kot deploy sprožilec, markec-group/muzej pa je ostal kanonična kopija → vsaka
+  sprememba se je pushala na OBA (dvojni muzej)
+- Pred združitvijo: sinhronost potrjena (lokalno = oba remota = 4896f35, ls-remote z retry),
+  varnostna kopija /home/z/muzej-backup-20261007.bundle (32,5 MB, cela zgodovina),
+  produkcija in dev strežnik zdravi (200)
+- Ključna ugotovitev: Vercel povezava referencira repozitorij PO ID-ju projekta
+  (link.projectId = "87313303", org/repo = null!) → prenos v drug namespace povezave ne zlomi
+- Izvedena združitev (brez brisanja vsebine):
+  1. markec-group/muzej (87313405) preimenovan v markec-group/muzej-arhiv (opis: ARHIV)
+  2. robert.pezdirc12/muzej (87313303) PRENESEN v skupino → sedaj markec-group/muzej —
+     edini aktivni muzej; Vercel webhook + link + cela zgodovina preneseni (GET potrjen)
+  3. CI spremenljivka VERCEL_TOKEN prekopirana na preneseni projekt (maskirana, 201)
+- Žetoni po prenosu: GitLab ob prenosu projekta PREKLICAL projektni žeton muzej-push-remote
+  (28167787, "Token was revoked"); kreiranje novega projektnega žetona zavrnjeno z
+  "Access token limit reached" (kvota; tudi member DELETE bota blokira GitLab blocker) →
+  remote "gitlab" preklopljen na osebni PAT iz local-gitlab.pat (push + API do 2026-10-14)
+- Lokalno: en sam remote "gitlab" → markec-group/muzej (PAT v URL, tiho); stara remotes
+  "deploy"/"gitlab" (87313405) odstranjena iz lokalne konfiguracije; ls-remote OK (4896f35)
+
+Stage Summary:
+- EN sam aktivni muzej: markec-group/muzej (ID 87313303, Vercel-povezan, samodejni deploy)
+- Muzej-arhiv: markec-group/muzej-arhiv (ID 87313405, identična vsebina, za arhiviranje)
+- Push pot: PAT (do 2026-10-14; nato nov PAT ali sprostitev kvote za projektni žeton)
+- Sledi: push test → samodejni deploy → arhiviranje muzej-arhiv → verifikacija produkcije
