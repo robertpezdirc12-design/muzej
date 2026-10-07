@@ -886,3 +886,24 @@ Stage Summary:
 - Atlas razširjen z dvema novima zavihkoma (Matrike, Raba tal) + zemljevidsko
   plastjo; AR vodnik ima časovno plast 1825; dogodki 11 z 500-letnico
 - 4 committi (3b97070, 5c23a76, 8852acd, 04a214c) pripravljeni za push
+
+---
+Task ID: 10
+Agent: Z.ai Code (glavni agent)
+Task: Push, deploy, produkcijska verifikacija, GitLab komentarji + zaprtje #6–#9
+
+Work Log:
+- Push 5480d9b (4 issuejski committi + worklog); 13. zaporedni Vercel deploy
+- Produkcija: QA 12/12, events 11, /api/atlas z parish blokom; brskalniška
+  verifikacija: Matrike 23 Matricula povezav + hišna zgodba 61 (Katarina/
+  Anton), Raba tal 3 cone na zemljevidu, 500-letnica v dogodkih (3 omembe),
+  AR časovna plast, 0 napak konzole
+- GitLab: komentarji s preslikavo zahtevkov na #6, #7, #8, #9; vsi štirije
+  issueji ZAPRTI (WAF retry 403→200)
+
+Stage Summary:
+- GitLab: 9/9 issuejev zaprtih (obnova + razvoj); Atlas z matrikami in rabo
+  tal, AR s časovno plastjo 1825, dogodki z 500-letnico
+- Muzej vasi Griblje: 113 zapisov + ATLAS 1825 (zemljevid/hiše/lastniki/
+  matrike/raba tal/viri/coverage) + AR (GPS/kamera/časovna plast/sprehodi)
+  + PWA namestljiva aplikacija; QA 12/12, integrity 11, 13. deploy
