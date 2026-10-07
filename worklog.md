@@ -187,3 +187,14 @@ Stage Summary:
   izda nov PAT in ga tiho vpiše; Vercel žeton ostaja prilepljen v klepetu → uporabnik naj ga
   rotira na dashboardu (navodila v zaključnem poročilu) in posodobi CI spremenljivko VERCEL_TOKEN
 - Repozitoriji čisti (noben žeton v sledenih datotekah)
+
+Verifikacija po rotaciji (novo verigo od konca do konca):
+- Commit 1582127 → push na OBA repozitorija s projektnima žetonoma → samodejni Vercel deploy
+  dpl_EzYfxovnGGQjqst3XdbM7UgAu9in (BUILDING → READY, production, source=git)
+- Produkcija: /, /api/exhibits (113), /api/events, /sitemap.xml, /robots.txt, /og-card.jpg,
+  /icon.svg — vse 200
+- Browser E2E na dev strežniku: iskanje "Kolpa" filtrira register, MVG-006 dialog + globoka
+  povezava ?exponat=kolpa-reka (5.431 znakov vsebine, postaje življenja), Escape zapre,
+  jezik SI↔EN, temni način on/off, mobilni 390px brez horizontalnega preliva, 0 konzolnih napak,
+  lepljiva noga, screenshot 1440×900 (1 MB, polno izrisan)
+- Sklep: SAMODEJNI DEPLOY DELUJE TUDI Z NOVIMI ŽETONI — rotacija ni prekinila cevovoda
