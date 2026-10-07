@@ -4,6 +4,7 @@
 import { ATLAS_SOURCES, NEGATIVE_RESULTS, HERITAGE_UNITS, type AtlasSource } from "@/data/atlas/sources";
 import { ATLAS_HOUSES, type AtlasHouse } from "@/data/atlas/houses";
 import { ATLAS_OWNERS, ATLAS_LOCATIONS, SHEET_GEOREFS, VECTOR_BUILDINGS } from "@/data/atlas/model";
+import { PARISH, PARISH_BOOKS, HOUSE_VITALS, type HouseVital, type ParishBook } from "@/data/atlas/parish";
 
 export interface AtlasModel {
   meta: {
@@ -28,6 +29,13 @@ export interface AtlasModel {
   heritage: typeof HERITAGE_UNITS;
   negativeResults: typeof NEGATIVE_RESULTS;
   coverage: Coverage;
+  /** matrične knjige župnije Podzemelj + vpisi hiš (issue #6) */
+  parish: {
+    info: typeof PARISH;
+    books: ParishBook[];
+    houseVitals: HouseVital[];
+    stats: ReturnType<typeof parishStats>;
+  };
 }
 
 export interface Coverage {
@@ -113,6 +121,12 @@ export function getAtlasModel(): AtlasModel {
     heritage: HERITAGE_UNITS,
     negativeResults: NEGATIVE_RESULTS,
     coverage: getCoverage(),
+    parish: {
+      info: PARISH,
+      books: PARISH_BOOKS,
+      houseVitals: HOUSE_VITALS,
+      stats: parishStats(),
+    },
   };
 }
 
@@ -187,7 +201,7 @@ export function getAtlasGeoJSON() {
 // ——— ISKANJE ————————————————————————————————
 
 export interface AtlasSearchHit {
-  type: "house" | "parcel" | "owner" | "source" | "location" | "heritage" | "negative";
+  type: "house" | "parcel" | "owner" | "source" | "location" | "heritage" | "negative" | "parish-book" | "house-vital";
   id: string;
   titleSi: string;
   titleEn: string;
@@ -264,6 +278,42 @@ export function searchAtlas(q: string): AtlasSearchHit[] {
         id: `esd-${h.esd}`,
         titleSi: `EŠD ${h.esd} — ${h.titleSi}`,
         titleEn: `EŠD ${h.esd} — ${h.titleEn}`,
+      });
+    }
+  }
+  /* matrične knjige župnije Podzemelj (issue #6) */
+  const bookTypeName: Record<ParishBook["type"], string> = {
+    baptism: "Krstna knjiga",
+    marriage: "Poročna knjiga",
+    death: "Mrliška knjiga",
+  };
+  for (const b of PARISH_BOOKS) {
+    if (
+      matches(b.signature) ||
+      matches(bookTypeName[b.type]) ||
+      matches(`${b.from}`) ||
+      matches(`${b.to}`) ||
+      matches(`matrika`)
+    ) {
+      hits.push({
+        type: "parish-book",
+        id: `matrika-${b.signature}`,
+        titleSi: `${bookTypeName[b.type]} ${b.from}–${b.to} · ${b.signature}`,
+        titleEn: `${bookTypeName[b.type]} ${b.from}–${b.to} · ${b.signature}`,
+        detail: `župnija Podzemelj · Matricula Online`,
+        status: b.status,
+      });
+    }
+  }
+  for (const v of HOUSE_VITALS) {
+    if (matches(`hiša ${v.houseNo}`) || matches(`${v.houseNo}`)) {
+      hits.push({
+        type: "house-vital",
+        id: `zivilo-${v.houseNo}-${v.year}`,
+        titleSi: `Vpis v matriki: hiša št. ${v.houseNo} (${v.year})`,
+        titleEn: `Parish record: house no. ${v.houseNo} (${v.year})`,
+        detail: `${v.whatSi} · knjiga ${v.bookSignature}`,
+        status: v.status,
       });
     }
   }
@@ -396,5 +446,68 @@ export function checkIntegrity(): IntegrityReport {
     detail: `${NEGATIVE_RESULTS.length} zapisov`,
   });
 
+  // 10. matrične knjige Podzemelj: 22 enot s signaturo, obdobjem in povezavo (issue #6)
+  const booksOk =
+    PARISH_BOOKS.length === 22 &&
+    PARISH_BOOKS.every((b) => /^\d{5}$/.test(b.signature) && b.from <= b.to && /^https:/.test(b.url));
+  checks.push({
+    name: "matrične knjige Podzemelj (issue #6): 22 enot, signature in povezave",
+    pass: booksOk,
+    detail: `${PARISH_BOOKS.length} knjig; krstnih ${PARISH_BOOKS.filter((b) => b.type === "baptism").length}, poročnih ${PARISH_BOOKS.filter((b) => b.type === "marriage").length}, mrliških ${PARISH_BOOKS.filter((b) => b.type === "death").length}`,
+  });
+
+  // 11. hišni vpisi iz matrik se nanašajo na obstoječe hiše (issue #6)
+  const housesNoSet = new Set(ATLAS_HOUSES.filter((h) => h.no !== "—").map((h) => h.no));
+  const vitalsOk = HOUSE_VITALS.every((v) => housesNoSet.has(v.houseNo) && PARISH_BOOKS.some((b) => b.signature === v.bookSignature));
+  checks.push({
+    name: "matrični vpisi → obstoječe hiše in knjige (issue #6)",
+    pass: vitalsOk,
+    detail: `${HOUSE_VITALS.length} vpisov; vsi se nanašajo na hiše PT in knjige ${[...new Set(HOUSE_VITALS.map((v) => v.bookSignature))].join(", ")}`,
+  });
+
   return { ok: checks.every((c) => c.pass), checks };
+}
+
+// ——— ŽUPNIJA PODZEMELJ: MATIKE + HIŠNE ZGODBE (issue #6) ——————
+
+export interface HouseStory {
+  house: AtlasHouse;
+  ownerCrossRef: { name: string; puaRef?: string; status: string } | null;
+  vitals: HouseVital[];
+  vitalsStatus: "DOCUMENTED" | "TO_COLLECT";
+}
+
+/** Hišna zgodba: lastnik 1825 (PT) × potrditev (PUA) × matrični vpisi (kdaj, kdo). */
+export function getHouseStory(houseNo: string): HouseStory | null {
+  const house = ATLAS_HOUSES.find((h) => h.no === houseNo && h.no !== "—");
+  if (!house) return null;
+  const owner = ATLAS_OWNERS.find((o) => o.houseRefs.some((r) => r === house.no)) ?? null;
+  const vitals = HOUSE_VITALS.filter((v) => v.houseNo === house.no);
+  return {
+    house,
+    ownerCrossRef: owner ? { name: owner.nameAsWritten, puaRef: owner.puaRef, status: owner.status } : null,
+    vitals,
+    vitalsStatus: vitals.length > 0 ? "DOCUMENTED" : "TO_COLLECT",
+  };
+}
+
+/** agregati matrik za odsek in QA */
+export function parishStats() {
+  const housesNo = ATLAS_HOUSES.filter((h) => h.no !== "—").map((h) => h.no);
+  const withVitals = new Set(HOUSE_VITALS.map((v) => v.houseNo));
+  return {
+    parish: PARISH.nameSi,
+    books: PARISH_BOOKS.length,
+    byType: {
+      baptism: PARISH_BOOKS.filter((b) => b.type === "baptism").length,
+      marriage: PARISH_BOOKS.filter((b) => b.type === "marriage").length,
+      death: PARISH_BOOKS.filter((b) => b.type === "death").length,
+    },
+    period: PARISH.period,
+    housesTotal: housesNo.length,
+    housesWithVitals: [...withVitals].length,
+    vitalRecords: HOUSE_VITALS.length,
+    source: PARISH.url,
+    accessedAt: PARISH.accessedAt,
+  };
 }

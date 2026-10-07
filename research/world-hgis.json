@@ -1,0 +1,83 @@
+[
+  {
+    "url": "https://www.mdpi.com",
+    "name": "Implementation of Web Map Services for Old Cadastral Maps",
+    "snippet": "by A Verdu-Candela · 2023 · Cited by 7 — old cadastral maps have multiple uses, such as reestablishing cadastral parcel boundaries , municipality boundaries , and coastal limits,",
+    "host_name": "www.mdpi.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.sciencedirect.com",
+    "name": "Evaluating the use of old cadastral maps",
+    "snippet": "by C Femenia-Ribera · 2022 · Cited by 37 — After the cadastral maps were vectorised, they were updated over time . The physical condition of the old paper maps depended on where and how they were stored. Read more",
+    "host_name": "www.sciencedirect.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.researchgate.net",
+    "name": "valorisation of como historical cadastral maps through",
+    "snippet": "MapServer allowed to visualize the historical cadastral maps through the OGC standard WMS ( Web Map Service).",
+    "host_name": "www.researchgate.net",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://isprs-archives.copernicus.org",
+    "name": "INTEGRATION OF HISTORICAL GIS DATA IN A HBIM",
+    "snippet": "by N Bruno · 2020 · Cited by 57 — The project involved the high-resolution digital replica of over 12,000 nineteenth-century cadastral maps , their filing, and their georeferencing. 8 pages",
+    "host_name": "isprs-archives.copernicus.org",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://giscarta.com",
+    "name": "Historical Maps for GIS: Where to Find and Georeference",
+    "snippet": "Jun 29, 2026 — Historical GIS data helps analyze territorial changes over time . The main sources are old maps , aerial photography, and satellite archives. Read more",
+    "host_name": "giscarta.com",
+    "rank": 4,
+    "date": "Jun 29, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://guides.library.utoronto.ca",
+    "name": "Global Online Slavic and East European Resources: Maps",
+    "snippet": "Jul 6, 2026 — The website provides access to recently digitized oldest cadastral maps of municipalities in the territory of the former country of the mid-19 ...",
+    "host_name": "guides.library.utoronto.ca",
+    "rank": 5,
+    "date": "Jul 6, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.maptiler.com",
+    "name": "TimeMachine Atlas : history of Europe on the map with a",
+    "snippet": "Oct 29, 2018 — The TimeMachine project allows traveling through the time by mapping the last 2000 years of history. visualization and building online maps . ...",
+    "host_name": "www.maptiler.com",
+    "rank": 6,
+    "date": "Oct 29, 2018",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.facebook.com",
+    "name": "Historical maps in modern GIS applications",
+    "snippet": "Jul 9, 2026 — Historical maps become powerful spatial datasets that can support research, education, cultural heritage preservation, and historical analysis.",
+    "host_name": "www.facebook.com",
+    "rank": 7,
+    "date": "Jul 9, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://libguides.lib.mtu.edu",
+    "name": "Historical GIS and Spatial Humanities: Example Applications",
+    "snippet": "Aug 6, 2025 — A guide for resources pertaining to Historical GIS and the Spatial Humanities. Topics covered are where to find historical maps and data and ... Read more",
+    "host_name": "libguides.lib.mtu.edu",
+    "rank": 8,
+    "date": "Aug 6, 2025",
+    "favicon": ""
+  }
+]

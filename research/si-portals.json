@@ -1,0 +1,56 @@
+[
+  {
+    "url": "https://www.gov.si",
+    "name": "Slovenski elektronski arhiv",
+    "snippet": "Slovenski elektronski arhiv s tega vidika sestavlja kompleksno okolje, ki bo omogočilo dolgoročno ohranjanje elektronskega arhivskega gradiva , katerega skrbnik ... Read more",
+    "host_name": "www.gov.si",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.sistory.si",
+    "name": "Arhivi in organizacije za varstvo naravne in kulturne",
+    "snippet": "Varstvo naravne in kulturne dediščine — prikaz temeljnih načel in delovnih metod. Prikaz te dejavnosti kot uporabnika arhivov in kot ustvarjalca arhivskega ... Read more",
+    "host_name": "www.sistory.si",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://geohub.gov.si",
+    "name": "GisKD pregledovalnik",
+    "snippet": "Register nepremične kulturne dediščine · Register nesnovne kulturne dediščine · eArheologija · Pravni režimi varstva kulturne dediščine (eVRD) · Mednarodno varstvo ... Read more",
+    "host_name": "geohub.gov.si",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.zal-lj.si",
+    "name": "Digitalno gradivo",
+    "snippet": "Digitalno gradivo . Dokumentarno gradivo v digitalni obliki je gradivo v digitalni obliki zapisa in shranjeno na strojno berljivem nosilcu zapisa. Read more",
+    "host_name": "www.zal-lj.si",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.ekulturno.si",
+    "name": "Kulturna dediščina - eKultura",
+    "snippet": "7 days ago — Portal eKultura na enem mestu ponuja informacije o aktualnem dogajanju na področju slovenske kulture in umetnosti.",
+    "host_name": "www.ekulturno.si",
+    "rank": 4,
+    "date": "Sep 30, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://portal.ehri-project.eu",
+    "name": "Arhiv Republike Slovenije - The EHRI Portal",
+    "snippet": "The VARR information solution offers users a tool for ordering and using physical and electronic archival material in Slovenian archives.",
+    "host_name": "portal.ehri-project.eu",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  }
+]

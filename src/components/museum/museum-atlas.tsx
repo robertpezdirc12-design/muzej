@@ -37,7 +37,8 @@ import {
 import { ATLAS_HOUSES } from "@/data/atlas/houses";
 import { ATLAS_OWNERS, SHEET_GEOREFS } from "@/data/atlas/model";
 import { ATLAS_SOURCES, NEGATIVE_RESULTS, HERITAGE_UNITS } from "@/data/atlas/sources";
-import { getCoverage } from "@/lib/atlas";
+import { PARISH, PARISH_BOOKS, HOUSE_VITALS, type HouseVital } from "@/data/atlas/parish";
+import { getCoverage, parishStats, getHouseStory } from "@/lib/atlas";
 import type { GeoFix } from "@/lib/geo";
 
 const Canvas = dynamic(() => import("./atlas-canvas").then((m) => m.AtlasCanvas), {
@@ -47,7 +48,7 @@ const Canvas = dynamic(() => import("./atlas-canvas").then((m) => m.AtlasCanvas)
   ),
 });
 
-type Tab = "map" | "houses" | "owners" | "sources" | "coverage";
+type Tab = "map" | "houses" | "owners" | "parish" | "sources" | "coverage";
 
 const STATUS_STYLE: Record<string, string> = {
   VERIFIED: "bg-emerald-100 text-emerald-900 dark:bg-emerald-900/60 dark:text-emerald-100",
@@ -297,6 +298,7 @@ export function MuseumAtlas({
               ["map", <MapIcon key="i" className="h-4 w-4" />, "Zemljevid", "Map"],
               ["houses", <Home key="i" className="h-4 w-4" />, "Register hiš", "House register"],
               ["owners", <Users key="i" className="h-4 w-4" />, "Lastniki", "Owners"],
+              ["parish", <BookOpen key="i" className="h-4 w-4" />, "Matrike 1669–1947", "Parish registers"],
               ["sources", <Archive key="i" className="h-4 w-4" />, "Viri in dokazi", "Sources & evidence"],
               ["coverage", <Gauge key="i" className="h-4 w-4" />, "Pokritost", "Coverage"],
             ] as [Tab, React.ReactNode, string, string][]
@@ -633,6 +635,9 @@ export function MuseumAtlas({
           </div>
         )}
 
+        {/* MATRIKE (issue #6) */}
+        {tab === "parish" && <ParishTab />}
+
         {/* VIRI */}
         {tab === "sources" && (
           <div>
@@ -780,6 +785,182 @@ function SourceCard({
             <ExternalLink className="h-3 w-3" aria-hidden />
           </a>
         )}
+      </div>
+    </div>
+  );
+}
+
+/* ——— MATRIKE 1669–1947 (issue #6): brskalnik knjig + hišne zgodbe ——— */
+
+function ParishTab() {
+  const { lang, t } = useLang();
+  const [type, setType] = useState<"all" | "baptism" | "marriage" | "death">("all");
+
+  const stats = parishStats();
+  const books = useMemo(
+    () => PARISH_BOOKS.filter((b) => type === "all" || b.type === type),
+    [type],
+  );
+  const vitalsByHouse = useMemo(() => {
+    const m = new Map<string, HouseVital[]>();
+    for (const v of HOUSE_VITALS) {
+      const arr = m.get(v.houseNo) ?? [];
+      arr.push(v);
+      m.set(v.houseNo, arr);
+    }
+    return m;
+  }, []);
+
+  const typeLabel: Record<"all" | "baptism" | "marriage" | "death", string> = {
+    all: t("Vse knjige", "All books"),
+    baptism: t("Krstne", "Baptisms"),
+    marriage: t("Poročne", "Marriages"),
+    death: t("Mrliške", "Deaths"),
+  };
+  const typeName: Record<"baptism" | "marriage" | "death", string> = {
+    baptism: t("Krstna knjiga", "Baptismal register"),
+    marriage: t("Poročna knjiga", "Marriage register"),
+    death: t("Mrliška knjiga", "Death register"),
+  };
+
+  return (
+    <div className="space-y-6">
+      {/* župnija — info */}
+      <div className="rounded-xl border bg-card/60 p-5">
+        <h3 className="flex items-center gap-2 font-serif text-lg font-semibold">
+          <BookOpen className="h-4 w-4 text-primary" aria-hidden />
+          {t("Matične knjige župnije Podzemelj", "Parish registers of Podzemelj")}
+        </h3>
+        <p className="mt-2 text-sm text-muted-foreground">
+          {t(
+            `Griblje so bile v zgodovinskem matičnem območju župnije Podzemelj (${PARISH.patronSi}); sv. Vid v Gribljah je njena 3. podružnica. Nadškofijski arhiv Ljubljana je digitaliziral in javno objavil ${stats.books} zvezkov (${stats.period}) — krstne, poročne in mrliške vpise Gribeljcev.`,
+            `Griblje lay in the historical parish territory of Podzemelj (${PARISH.patronEn}); St. Vitus in Griblje is its 3rd filial church. The Archdiocesan Archive of Ljubljana digitised and published ${stats.books} volumes (${stats.period}) — baptisms, marriages and deaths of the people of Griblje.`,
+          )}
+        </p>
+        <div className="mt-3 flex flex-wrap gap-2 text-xs">
+          <span className="rounded-full border px-3 py-1">{PARISH.archiveSi}</span>
+          <span className="rounded-full border px-3 py-1">
+            {stats.byType.baptism} {t("krstnih", "baptismal")} · {stats.byType.marriage} {t("poročnih", "marriage")} · {stats.byType.death} {t("mrliških", "death")}
+          </span>
+          <span className="rounded-full border px-3 py-1">
+            {t("dostop", "access")}: {PARISH.accessedAt}
+          </span>
+          <a
+            href={PARISH.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 rounded-full border border-primary/40 px-3 py-1 text-primary hover:bg-accent"
+          >
+            Matricula Online
+            <ExternalLink className="h-3 w-3" aria-hidden />
+          </a>
+        </div>
+      </div>
+
+      {/* brskalnik knjig */}
+      <div>
+        <div className="mb-3 flex flex-wrap items-center gap-2" role="group" aria-label={t("Filter po vrsti knjige", "Filter by register type")}>
+          {(["all", "baptism", "marriage", "death"] as const).map((k) => (
+            <button
+              key={k}
+              role="radio"
+              aria-checked={type === k}
+              onClick={() => setType(k)}
+              className={`rounded-full border px-4 py-1.5 text-sm font-medium transition ${
+                type === k ? "border-primary bg-primary text-primary-foreground" : "border-border hover:border-primary/40 hover:bg-accent"
+              }`}
+            >
+              {typeLabel[k]}
+            </button>
+          ))}
+          <span className="ml-auto text-sm text-muted-foreground">
+            {books.length} {t("zvezkov", "volumes")}
+          </span>
+        </div>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {books.map((b) => (
+            <a
+              key={b.signature}
+              href={b.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group rounded-xl border bg-card/60 p-4 transition hover:border-primary/40 hover:bg-accent"
+            >
+              <div className="flex items-start justify-between gap-2">
+                <div className="min-w-0">
+                  <span className="text-xs font-mono text-primary">{b.signature}</span>
+                  <div className="font-medium leading-snug">{typeName[b.type]}</div>
+                </div>
+                <ExternalLink className="h-3.5 w-3.5 shrink-0 text-muted-foreground group-hover:text-primary" aria-hidden />
+              </div>
+              <div className="mt-2 text-2xl font-semibold tabular-nums">
+                {b.from}–{b.to}
+              </div>
+              <div className="mt-1 text-xs text-muted-foreground">
+                {t(`${b.to - b.from} let vpisov · Matricula Online`, `${b.to - b.from} years of entries · Matricula Online`)}
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      {/* hišne zgodbe */}
+      <div className="rounded-xl border bg-card/60 p-5">
+        <h3 className="flex items-center gap-2 font-serif text-lg font-semibold">
+          <Home className="h-4 w-4 text-primary" aria-hidden />
+          {t("Hišne zgodbe: matrike × register hiš 1825", "House stories: parish registers × 1825 house register")}
+        </h3>
+        <p className="mt-2 text-sm text-muted-foreground">
+          {t(
+            `Krstna knjiga 04105 vpisuje rojstva v Gribljih s hišnimi številkami — te se nanašajo na konskripcijske številke iz registra hiš (PT, 1825). Prepisov je doslej ${stats.vitalRecords} za ${stats.housesWithVitals} hišo; ostalih ${stats.housesTotal - stats.housesWithVitals} hiš čaka branje (TO_COLLECT).`,
+            `Baptismal register 04105 records births in Griblje with house numbers — these refer to the conscription numbers of the 1825 house register (PT). ${stats.vitalRecords} entries transcribed so far for ${stats.housesWithVitals} house(s); the remaining ${stats.housesTotal - stats.housesWithVitals} await reading (TO_COLLECT).`,
+          )}
+        </p>
+        <div className="mt-4 grid gap-3 sm:grid-cols-2">
+          {[...vitalsByHouse.entries()].map(([houseNo, vitals]) => {
+            const story = getHouseStory(houseNo);
+            if (!story) return null;
+            return (
+              <div key={houseNo} className="rounded-lg border bg-background/60 p-4">
+                <div className="flex items-start justify-between gap-2">
+                  <div>
+                    <div className="text-xs uppercase tracking-wide text-muted-foreground">
+                      {t("Hiša št.", "House no.")} {houseNo}
+                    </div>
+                    <div className="font-medium">{story.house.owner}</div>
+                    {story.ownerCrossRef?.puaRef && (
+                      <div className="text-xs text-muted-foreground">
+                        {t("potrjeno v", "confirmed in")} PUA ({story.ownerCrossRef.puaRef})
+                      </div>
+                    )}
+                  </div>
+                  <span className={`shrink-0 rounded px-1.5 py-0.5 text-[10px] font-semibold ${STATUS_STYLE.DOCUMENTED}`}>
+                    {t("vpisi DOCUMENTED", "entries DOCUMENTED")}
+                  </span>
+                </div>
+                <ul className="mt-3 space-y-2 text-sm">
+                  {vitals.map((v) => (
+                    <li key={`${v.year}-${v.scan}`} className="rounded border p-2">
+                      <span className="font-semibold tabular-nums">{v.year}</span> —{" "}
+                      {lang === "si" ? v.whatSi : v.whatEn}
+                      <div className="mt-1 text-xs text-muted-foreground">
+                        {t("knjiga", "book")} {v.bookSignature}
+                        {v.scan != null ? ` · ${t("sken", "scan")} ${v.scan}` : ""}
+                        {v.page != null ? ` · ${t("str.", "p.")} ${v.page}` : ""}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
+        </div>
+        <p className="mt-3 text-xs text-muted-foreground">
+          {t(
+            "Vir vseh vpisov: Matricula Online, Krstna knjiga 04105 (1886–1919) — Nadškofijski arhiv Ljubljana; transkribirano v zapisu sveti-vid. Priimki v Kurrentu so negotovi (REVIEW) in čakajo paleografski pregled.",
+            "Source of all entries: Matricula Online, baptismal register 04105 (1886–1919) — Archdiocesan Archive of Ljubljana; transcribed in the sveti-vid record. Surnames in Kurrent script are uncertain (REVIEW) and await palaeographic review.",
+          )}
+        </p>
       </div>
     </div>
   );

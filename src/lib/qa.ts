@@ -9,6 +9,7 @@ import { WALKS, walkItemsWithGaps, WALK_GAPS } from "./walks";
 import { computeCoverage } from "./coverage";
 import { buildReconciliation } from "./reconciliation";
 import { NEGATIVE_RESULTS } from "@/data/atlas/sources";
+import { parishStats } from "./atlas";
 
 interface ExhibitRow {
   id: string;
@@ -193,6 +194,22 @@ export function runQA(): QAReport {
     "every walk entry in extra.json refers to an existing record",
     orphanWalks.length === 0,
     `${Object.values(EXTRA).filter((v) => v?.walk?.name && v.walk.station != null).length} walk vnosov; ${orphanWalks.length} osirotelih`,
+  );
+
+  // 12. matrične knjige Podzemelj (issue #6): 22 knjig z veljavnimi povezavami + vpisi hiš
+  const parish = parishStats();
+  const parishBooksOk =
+    parish.books === 22 &&
+    parish.byType.baptism === 11 &&
+    parish.byType.marriage === 5 &&
+    parish.byType.death === 6 &&
+    parish.housesWithVitals >= 1;
+  push(
+    "qa-parish-books",
+    "matrične knjige župnije Podzemelj: 22 enot s povezavami (issue #6)",
+    "parish registers of Podzemelj: 22 units with links (issue #6)",
+    parishBooksOk,
+    `${parish.books} knjig (${parish.byType.baptism} krstnih, ${parish.byType.marriage} poročnih, ${parish.byType.death} mrliških), obdobje ${parish.period}; vpisi: ${parish.vitalRecords} za ${parish.housesWithVitals}/${parish.housesTotal} hiš`,
   );
 
   const passed = tests.filter((t) => t.pass).length;
