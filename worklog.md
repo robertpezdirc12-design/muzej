@@ -1298,3 +1298,21 @@ Stage Summary:
 - Zgodovinska verodostojnost: 18 trditev s statusi (visual asset → claim → vir → status); kar ni dokumentirano, v prizoru NI (ljudje, carinarnica); metodologija TimeLens pipeline javna na vsaki sceni; »primerjaj z danes« = živa kamera (danes se ne generira)
 - Obstoječi sistem NESPREMENJEN: proceduralna 3D vas ostane fallback (setHidden GPU pavza), GPS/kompas/odklep/zbirka/deep link/QR/TTS/zajem — vse reuse
 - Stanje: lint čist, QA 13/13, dev E2E zelen; sledita commit/push → Vercel 19. deploy → produkcijska verifikacija (https SW offline) → GitLab #13 odkljukan in zaprt
+
+---
+Task ID: 15-zaključek (issue #13 — produkcija + GitLab)
+Agent: Z.ai Code (glavni agent)
+Task: Push, deploy, produkcijska verifikacija (vključno offline SW), GitLab zaključek #13.
+
+Work Log:
+- Commit 56977be (30 datotek: panoramas.ts, panorama-viewer.tsx, 6 JPEG assetov, integracije, skripti, qa test) → push na gitlab/main (WAF 403×1 → OK)
+- Vercel 19. samodejni deploy: produkcija živa (~80 s); /panoramas/*.jpg + preview 200 (331–350 KB / 33–37 KB); /api/qa 13/13; /api/atlas panoramas: 3, trditve: 18
+- Produkcija E2E (agent-browser + VLM): globa ?spot=cerkev&pano=1 → panorama + banner + kontrole, 0 napak; SW aktiven (https)
+- OFFLINE test: set offline → reload → stran in panorama naložena IZ SW predpomnilnika (DoD §13 ✓)
+- GitLab #13: 56/56 odkljukanih polj (faze A–F + DoD §19), zaključni komentar (3230 znakov, dokazna pot: arhitektura, hero tabele, poštenostne odločitve, pipeline, QA matrika), issue ZAPRT
+- Stanje: 14/14 issuejev zaprtih (ni odprtih); dev strežnik zdrav (dvojni-fork daemon)
+
+Stage Summary:
+- P2 HISTORICAL PANORAMA zaključen in zaprt v produkciji: TimeLens-style magic window na 3 hero lokacijah
+- Celoten backlog (14 issuejev) zaprt: muzej ima 113 zapisov, 9 TimeSpotov, GeoTruth, 3 hero panorame, mini-scene, TTS, USDZ, PWA offline
+- Naslednji korak: odprt za nove issueje uporabnika (P3+ — npr. več panoram po istem pipeline-u, hišne zgodbe v AR, gamifikacija P2)
