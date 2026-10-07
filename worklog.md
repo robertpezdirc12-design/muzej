@@ -959,3 +959,25 @@ Stage Summary:
 - Vhodovi: zemljevid muzeja, ATLAS 3D zavihek, AR vodnik, ?casovni= globa
   povezava; API village3d blok za strojno uporabo
 - Pripravljeno za commit/push → 14. deploy + zaprtje issue #10
+
+---
+Task ID: 12
+Agent: Z.ai Code (glavni agent)
+Task: Push, 14. deploy, produkcijska verifikacija, GitLab komentar + zaprtje #10
+
+Work Log:
+- Push 025ef63 (WAF retry 1×); 14. zaporedni Vercel deploy
+- Produkcija: /api/atlas village3d (156/35, periode 1825-RECONSTRUCTED,
+  ~1900-191-ESTIMATE, danes-INTERPRETATION), GLB 200
+- Brskalniška verifikacija produkcije: ?casovni=1825 → dialog (156 stavb),
+  preklop ~1900, zajem → »shranjeno (PNG)«, zapiranje, ATLAS zavihek 3D vas
+  (kanvas + AR gumb), service worker aktiven, 0 napak konzole
+- GitLab: komentar s preslikavo zahtevkov na #10 (201), issue ZAPRT
+  (WAF retry 403×3 → 200, state=closed)
+- Worklog commit + push
+
+Stage Summary:
+- 10/10 issuejev zaprtih; muzej ima zdaj: 113 zapisov, ATLAS 1825 (zemljevid/
+  hiše/lastniki/matrike/raba tal/3D vas/viri/pokritost), AR vodnik (GPS/kamera/
+  časovna plast), 3D AR časovni stroj (vas skozi čas, zajem, hišne zgodbe),
+  PWA; QA 12/12, lint čist, 14. deploy
