@@ -459,6 +459,20 @@ export class VillageScene {
     this.compassYaw = deg;
   }
 
+  /** Historical Panorama (issue #13): skrij prizor — raf preskoči render,
+      GPU miruje, dokler je aktiven 360° pogled (prizor ostane živ v spominu).
+      Ob ponovnem priklicu se zanka samodejno znova zažene (brez dvojne). */
+  private hidden = false;
+  setHidden(h: boolean) {
+    const was = this.hidden;
+    this.hidden = h;
+    if (!h && was && !this.disposed) {
+      /* zanka je obstala med skritostjo — znova zaženi */
+      cancelAnimationFrame(this.raf);
+      this.raf = requestAnimationFrame(this.loop);
+    }
+  }
+
   /** vlečenje prstom po zaslonu (izpad kompasa / popravek) */
   nudgeLook(dxPx: number, dyPx: number) {
     const k = 0.12;
@@ -674,7 +688,7 @@ export class VillageScene {
   }
 
   private loop = () => {
-    if (this.disposed) return;
+    if (this.disposed || this.hidden) return;
     this.raf = requestAnimationFrame(this.loop);
 
     /* mini-scena (issue #12): lastna vsebina, vas skrita */

@@ -19,6 +19,10 @@
  *  · mlini      — proceduralna scena vodnega mlina (tip, ne konkretn mlin);
  *  · otok       — story kartica z dogodki 1944–45 (brez 3D: spomenik je fizičen);
  *  · cerkvišče  — tri cerkvice kot duhovi (1408) + kapelica 1994.
+ *
+ * P2 (issue #13) dodaja HISTORICAL PANORAMA plast: cerkev, jedro in kolpa
+ * imajo hero 360° prizor (panoramaId) — imerzivna plast ČEZ proceduralni
+ * 3D, ki ostane kot podatkovni/fallback sloj.
  */
 
 import type { GeoPoint } from "@/lib/geo";
@@ -57,6 +61,9 @@ export interface TimeSpot {
   miniScene?: "mlini" | "cerkvisce";
   /** dogodki za story kartico (issue #12 — Otok: story-only) */
   events?: SpotEvent[];
+  /** Historical Panorama (issue #13 — P2): hero 360° prizor te točke,
+      ID iz PANORAMAS; proceduralna 3D scena ostane fallback */
+  panoramaId?: string;
 }
 
 /** dogodek na story kartici točke (issue #12 — Otok 1944–45) */
@@ -90,6 +97,7 @@ export const TIME_SPOTS: TimeSpot[] = [
     evidenceSi: "EŠD 2122 (Register nepremične kulturne dediščine, uradni vir) · MVG-002 · MVG-003 · kataster, list A02 (SI AS 176)",
     evidenceEn: "EŠD 2122 (Register of Immovable Cultural Heritage, official source) · MVG-002 · MVG-003 · cadastre, sheet A02 (SI AS 176)",
     exhibitSlug: "sveti-vid",
+    panoramaId: "pano-cerkev-1825",
   },
   {
     id: "jedro",
@@ -109,6 +117,7 @@ export const TIME_SPOTS: TimeSpot[] = [
     evidenceEn: "MVG-001 · cadastre sheet A02 (SI AS 176, GEOTRUTH affine, issue #14) · 1825 house register · Podzemelj parish books",
     exhibitSlug: "griblje-vas",
     houseNo: "61",
+    panoramaId: "pano-jedro-1825",
   },
   {
     id: "kolpa",
@@ -126,6 +135,7 @@ export const TIME_SPOTS: TimeSpot[] = [
     evidenceSi: "MVG-006 · MVG-092 (carinarnica 1809–1813) · georeferencirana struga (sidro 15,2994 E)",
     evidenceEn: "MVG-006 · MVG-092 (customs post 1809–1813) · georeferenced riverbed (anchor 15.2994 E)",
     exhibitSlug: "kolpa-reka",
+    panoramaId: "pano-kolpa-1825",
   },
   {
     id: "ribnik",

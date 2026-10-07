@@ -1,12 +1,13 @@
 "use client";
 
 /**
- * Skupna trgovina časovnega stroja (issue #10, razširjeno #11 in #12).
+ * Skupna trgovina časovnega stroja (issue #10, razširjena #11, #12 in #13).
  *
  * Zemljevid muzeja, AR vodnik in ATLAS 1825 odpirajo isti celozaslonski
  * 3D rekonstrukciji vasi; globa povezava `?casovni=1825|1900|danes`
- * (od #11 tudi `&spot=<id>` AR Time Spota, od #12 pa `&360=1` — virtualni
- * 360° pogled s cerkve) jo odpre direktno na izbrani letnici s kontekstom.
+ * (od #11 tudi `&spot=<id>` AR Time Spota, od #12 `&360=1` — virtualni
+ * 360° pogled s cerkve, od #13 pa `&pano=1` — Historical Panorama)
+ * jo odpre direktno na izbrani letnici s kontekstom.
  */
 
 import { create } from "zustand";
@@ -20,11 +21,14 @@ interface TimeMachineState {
   spot: string | null;
   /** 360° način — fiksno stališče pri cerkvi sv. Vida (issue #12) */
   p360: boolean;
-  openTM: (year?: TimeYear, spot?: string | null, p360?: boolean) => void;
+  /** Historical Panorama (issue #13) — spot odpre 360° zgodovinski pogled */
+  pano: boolean;
+  openTM: (year?: TimeYear, spot?: string | null, p360?: boolean, pano?: boolean) => void;
   close: () => void;
   setYear: (year: TimeYear) => void;
   setSpot: (spot: string | null) => void;
   setP360: (on: boolean) => void;
+  setPano: (on: boolean) => void;
 }
 
 export const useTimeMachine = create<TimeMachineState>((set) => ({
@@ -32,17 +36,20 @@ export const useTimeMachine = create<TimeMachineState>((set) => ({
   year: 1825,
   spot: null,
   p360: false,
-  openTM: (year, spot, p360) =>
+  pano: false,
+  openTM: (year, spot, p360, pano) =>
     set({
       open: true,
       ...(year ? { year } : {}),
       spot: spot ?? null,
       p360: p360 ?? false,
+      pano: pano ?? false,
     }),
-  close: () => set({ open: false, p360: false }),
+  close: () => set({ open: false, p360: false, pano: false }),
   setYear: (year) => set({ year }),
   setSpot: (spot) => set({ spot }),
   setP360: (on) => set({ p360: on }),
+  setPano: (on) => set({ pano: on }),
 }));
 
 /** ?casovni= → TimeYear (neveljavno → 1825) */

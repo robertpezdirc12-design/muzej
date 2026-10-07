@@ -19,6 +19,11 @@
  *  · 360° S CERKVE (issue #12): fiksno stališče pri cerkvi sv. Vida — obrat
  *    pogleda na žiroskopu/kompasu (ali vlečenju), preklapljanje 1825 ⇄ danes
  *    = pogovor preteklost ↔ sedanjost (Nîmes Tour Magne vzorec);
+ *  · HISTORICAL PANORAMA (issue #13, P2): hero TimeSpoti (cerkev, jedro,
+ *    kolpa) odprejo »Doživi 360°« — imerziven equirect prizor, ki ga obrača
+ *    kompas/žiroskop (magic window, ne WebXR); proceduralna 3D vas ostane
+ *    kot pošteno označen fallback; »primerjaj z danes« = živa kamera (danes
+ *    je realnost, ne generirana slika); zajem/TTS/viri se ponovno uporabijo;
  *  · TTS (issue #12): kartica točke se prebere naglas — statični MP3 ali
  *    brskalnikov speechSynthesis kot zastonj fallback (brez plačljivih API);
  *  · brez senzorjev: pošten predogled (vlečenje obrača pogled).
@@ -84,6 +89,12 @@ import {
   type TimeSpot,
 } from "@/data/atlas/timespots";
 import { useTimespots } from "@/lib/timespots-store";
+import {
+  getPanoramaForSpot,
+  spotHasPanorama,
+  type HistoricalPanorama,
+} from "@/data/atlas/panoramas";
+import { PanoramaViewer, type PanoramaScene } from "./panorama-viewer";
 
 interface BuildingCard {
   kind: "1825" | "growth" | "present";
@@ -137,7 +148,16 @@ export function ARTimeMachine({
   onOpenExhibit: (slug: string) => void;
 }) {
   const { t, lang } = useLang();
-  const { year, setYear, close, spot: storeSpot, p360, setP360 } = useTimeMachine();
+  const {
+    year,
+    setYear,
+    close,
+    spot: storeSpot,
+    p360,
+    setP360,
+    pano: storePano,
+    setPano,
+  } = useTimeMachine();
   const { unlock, isUnlocked, unlocked } = useTimespots();
   const { fix, status, start, quality } = geo;
 
@@ -175,6 +195,62 @@ export function ARTimeMachine({
     ? (TIME_SPOTS.find((s) => s.miniScene === mini) ?? null)
     : null;
 
+  /* ── HISTORICAL PANORAMA (issue #13, P2): imerzivna plast ──
+     aktivna panorama (null = proceduralna 3D vas), njena scena, blend z
+     danes (živa kamera) in razprte evidence trditve */
+  const [pano, setPanoState] = useState<HistoricalPanorama | null>(null);
+  const panoRef = useRef<HistoricalPanorama | null>(null);
+  panoRef.current = pano;
+  const panoSceneRef = useRef<PanoramaScene | null>(null);
+  const [todayBlend, setTodayBlend] = useState(false);
+  const [panoClaimsOpen, setPanoClaimsOpen] = useState(false);
+  const panoSpot = pano
+    ? (TIME_SPOTS.find((s) => s.id === pano.timeSpotId) ?? null)
+    : null;
+
+  /* vstop v 360° zgodovinski pogled — 3D vas se skrije (GPU miruje),
+     karta točke se zapre, p360/mini se ugasneta (samo ena plast naenkrat) */
+  const enterPano = useCallback(
+    (spot: TimeSpot) => {
+      const p = getPanoramaForSpot(spot.id);
+      if (!p) return;
+      setPanoState(p);
+      setTodayBlend(false);
+      setPanoClaimsOpen(false);
+      setP360(false);
+      setMini(null);
+      setCard(null);
+      setSpotCard(null);
+      setHint(false);
+      sceneRef.current?.setHidden(true);
+    },
+    [setP360],
+  );
+
+  const exitPano = useCallback(() => {
+    setPanoState(null);
+    setTodayBlend(false);
+    setPanoClaimsOpen(false);
+    setPano(false);
+    sceneRef.current?.setHidden(false);
+  }, [setPano]);
+
+  /* globa povezava ?spot=<id>&pano=1 → direktno v 360° pogled (QR/ mapa) */
+  const panoFlagRef = useRef(storePano);
+  panoFlagRef.current = storePano;
+  useEffect(() => {
+    const sp = getSpotById(storeSpot);
+    if (sp) {
+      if (panoFlagRef.current) {
+        enterPano(sp);
+      } else {
+        setSpotCard(sp);
+        setMini(sp.miniScene ?? null);
+        setHint(false);
+      }
+    }
+  }, [storeSpot, enterPano]);
+
   /* kalibracija kompasa (issue #14, točka 7) — prostovoljna, enkrat na napravo */
   const [showCal, setShowCal] = useState(false);
   const calOfferedRef = useRef(false);
@@ -192,16 +268,6 @@ export function ARTimeMachine({
   const [playing, setPlaying] = useState(false);
 
   const period = PERIODS.find((p) => p.year === year) ?? PERIODS[0];
-
-  /* ── kontekst točke iz globo povezave (?spot=) ── */
-  useEffect(() => {
-    const sp = getSpotById(storeSpot);
-    if (sp) {
-      setSpotCard(sp);
-      setMini(sp.miniScene ?? null);
-      setHint(false);
-    }
-  }, [storeSpot]);
 
   /* ── mini-scena → prizor (issue #12) ── */
   useEffect(() => {
@@ -317,10 +383,17 @@ export function ARTimeMachine({
     };
   }, []);
 
-  /* kompas: glajen heading iz use-compass → prizor (issue #14: brez sunkov) */
+  /* kompas: glajen heading iz use-compass → prizor (issue #14: brez sunkov);
+     v 360° panorami isti heading obrača magic-window pogled */
   useEffect(() => {
     sceneRef.current?.setCompassYaw(heading);
+    panoSceneRef.current?.setCompassYaw(heading);
   }, [heading]);
+
+  /* primerjaj z danes (issue #13): sfera → duh, živa kamera → danes */
+  useEffect(() => {
+    panoSceneRef.current?.setTodayBlend(todayBlend && camera === "live");
+  }, [todayBlend, camera]);
 
   /* ── preklop letnice → prizor ── */
   useEffect(() => {
@@ -476,10 +549,64 @@ export function ARTimeMachine({
   const readiness = sceneReadiness({ gps: quality, compass: compassStability });
   const nearest = fix ? findNearestSpot(fix) : null;
 
-  /* ── zajem fotografije ── */
+  /* ── deljenje/prenos PNG (skupno 3D/mini/panorama zajemu) ── */
+  const setSaveError = useCallback(() => {
+    setSaved("error");
+    window.setTimeout(() => setSaved("none"), 2600);
+  }, []);
+
+  const shareOrDownload = useCallback(
+    async (data: string, fname: string, title: string) => {
+      /* najprej deljenje (telefon), sicer prenos */
+      try {
+        const blob = await (await fetch(data)).blob();
+        const file = new File([blob], fname, { type: "image/png" });
+        const nav = navigator as Navigator & {
+          canShare?: (d: { files: File[] }) => boolean;
+        };
+        if (nav.share && nav.canShare?.({ files: [file] })) {
+          await nav.share({ files: [file], title });
+          setSaved("shared");
+          window.setTimeout(() => setSaved("none"), 2600);
+          return;
+        }
+      } catch {
+        /* preklic deljenja ni napaka — nadaljuj s prenosom */
+      }
+      const a = document.createElement("a");
+      a.href = data;
+      a.download = fname;
+      a.click();
+      setSaved("saved");
+      window.setTimeout(() => setSaved("none"), 2600);
+    },
+    [],
+  );
+
+  /* ── zajem fotografije (3D vas, mini-scena ALI 360° panorama — isti
+     deljivi PNG sistem, druga napisnica) ── */
   const capture = useCallback(async () => {
     setFlash(true);
     window.setTimeout(() => setFlash(false), 260);
+
+    /* 360° zgodovinski pogled (issue #13): zajem gledišča panorame */
+    const p = panoRef.current;
+    const ps = panoSceneRef.current;
+    if (p && ps) {
+      const yy = p.year === 2026 ? "danes" : p.year === 1900 ? "~1900" : "1825";
+      const data = ps.capture(videoRef.current, {
+        title: `${p.titleSi} — ${yy}${todayBlend ? t(" (danes skozi 1825)", " (today through 1825)") : ""}`,
+        sub: t(
+          "Muzej vasi Griblje · 360° zgodovinski pogled · INTERPRETACIJA na dokumentiranih legah",
+          "Museum of Griblje village · 360° historical view · INTERPRETATION on documented positions",
+        ),
+        credit: `griblje-museum.vercel.app · ${p.id} · ${p.status}`,
+      });
+      if (data) await shareOrDownload(data, `griblje-${p.id}.png`, `Griblje ${yy}`);
+      else setSaveError();
+      return;
+    }
+
     const sc = sceneRef.current;
     if (!sc) return;
     const y = year === 2026 ? "danes" : year === 1900 ? "~1900" : "1825";
@@ -513,32 +640,8 @@ export function ARTimeMachine({
       return;
     }
     const fname = miniSpot ? `griblje-${miniSpot.id}.png` : `griblje-${year === 2026 ? "danes" : year}.png`;
-    /* najprej deljenje (telefon), sicer prenos */
-    try {
-      const blob = await (await fetch(data)).blob();
-      const file = new File([blob], fname, { type: "image/png" });
-      const nav = navigator as Navigator & {
-        canShare?: (d: { files: File[] }) => boolean;
-      };
-      if (nav.share && nav.canShare?.({ files: [file] })) {
-        await nav.share({
-          files: [file],
-          title: `Griblje ${y}`,
-        });
-        setSaved("shared");
-        window.setTimeout(() => setSaved("none"), 2600);
-        return;
-      }
-    } catch {
-      /* preklic deljenja ni napaka — nadaljuj s prenosom */
-    }
-    const a = document.createElement("a");
-    a.href = data;
-    a.download = miniSpot ? `griblje-${miniSpot.id}.png` : `griblje-${year === 2026 ? "danes" : year}.png`;
-    a.click();
-    setSaved("saved");
-    window.setTimeout(() => setSaved("none"), 2600);
-  }, [year, t, miniSpot, mini]);
+    await shareOrDownload(data, fname, `Griblje ${y}`);
+  }, [year, t, miniSpot, mini, todayBlend]);
 
   const yearButtons: [TimeYear, string, string][] = [
     [1825, "1825", "1825"],
@@ -571,15 +674,29 @@ export function ARTimeMachine({
         <div aria-hidden="true" className="mvg-ar-backdrop absolute inset-0" />
       )}
 
-      {/* 3D vas čez kamero */}
+      {/* 3D vas čez kamero — skrita, ko je aktivna 360° panorama (GPU miruje) */}
       <canvas
         ref={canvasRef}
         aria-label={t(
           "3D rekonstrukcija vasi — vlecite za obrat pogleda, tapnite hišo",
           "3D village reconstruction — drag to look around, tap a house",
         )}
-        className="absolute inset-0 h-full w-full touch-none"
+        className={`absolute inset-0 h-full w-full touch-none ${
+          pano ? "invisible" : ""
+        }`}
       />
+
+      {/* HISTORICAL PANORAMA (issue #13): imerzivni 360° zgodovinski pogled —
+          magic window na kompas/žiroskop, vlečenje kot fallback, lazy nalaganje
+          (predogled → polna slika), sfera se zna prelije v duha nad kamero */}
+      {pano && (
+        <PanoramaViewer
+          pano={pano}
+          heading={heading}
+          onExit={exitPano}
+          sceneRef={panoSceneRef}
+        />
+      )}
 
       {/* gradienta berljivosti */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/70 to-transparent" />
@@ -600,10 +717,14 @@ export function ARTimeMachine({
         </button>
         <div className="min-w-0 flex-1 text-right">
           <p className="truncate font-display text-sm font-semibold text-white">
-            {t("Časovni stroj — Griblje", "Time machine — Griblje")}
+            {pano
+              ? t("360° zgodovinski pogled — Griblje", "360° historical view — Griblje")
+              : t("Časovni stroj — Griblje", "Time machine — Griblje")}
           </p>
           <p className="truncate text-[11px] text-white/70">
-            {t("3D rekonstrukcija vasi skozi čas", "3D village reconstruction through time")}
+            {pano
+              ? t("Obrni telefon in poglej okoli sebe", "Turn your phone and look around")
+              : t("3D rekonstrukcija vasi skozi čas", "3D village reconstruction through time")}
           </p>
         </div>
       </div>
@@ -654,14 +775,27 @@ export function ARTimeMachine({
             </>
           )}
         </div>
-        <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/45 px-3 py-1.5 text-xs text-white backdrop-blur">
-          <Clock className="size-3.5 shrink-0 text-white/80" aria-hidden="true" />
-          <span>
-            {period.labelSi} ·{" "}
-            {period.buildingCount}{" "}
-            {t("stavb", "buildings")}
-          </span>
-        </div>
+        {/* period chip: skrit v 360° panorami (panorama ima svoje leto) */}
+        {!pano && (
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/45 px-3 py-1.5 text-xs text-white backdrop-blur">
+            <Clock className="size-3.5 shrink-0 text-white/80" aria-hidden="true" />
+            <span>
+              {period.labelSi} ·{" "}
+              {period.buildingCount}{" "}
+              {t("stavb", "buildings")}
+            </span>
+          </div>
+        )}
+        {/* 360° panorama: chip statusa vizualizacije (issue #13) */}
+        {pano && (
+          <div
+            className="inline-flex items-center gap-2 rounded-full border border-amber-300/40 bg-amber-400/15 px-3 py-1.5 text-xs font-semibold text-amber-100 backdrop-blur"
+            role="status"
+          >
+            <Sparkles className="size-3.5 shrink-0" aria-hidden="true" />
+            {pano.status} · {t("vizualizacija na dokumentiranih legah", "visualisation on documented positions")}
+          </div>
+        )}
         {/* sidro scene (issue #14, točka 11): HIGH = poravnana, MEDIUM = poravnava …, LOW = približno */}
         <div
           className={`inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-xs backdrop-blur ${
@@ -729,8 +863,8 @@ export function ARTimeMachine({
           </button>
         )}
         {/* 360° s cerkve (issue #12): fiksno stališče, žiroskop/kompas obrača pogled
-            (v mini sceni skrito — mini ima svoje stališče) */}
-        {!mini && (
+            (v mini sceni in 360° panorami skrito — ena plast naenkrat) */}
+        {!mini && !pano && (
           <button
             type="button"
             onClick={() => {
@@ -751,8 +885,8 @@ export function ARTimeMachine({
       </div>
 
       {/* ── KAJ JE IZGINILO? legenda (leto »danes«, issue #12; v mini sceni
-          ima duhov lasten pomen — cerkvišče/mlin) ── */}
-      {year === 2026 && !mini && (
+          ima duhov lasten pomen — cerkvišče/mlin; v panorami svoj pomen ni) ── */}
+      {year === 2026 && !mini && !pano && (
         <div
           className="relative z-10 mt-2 flex flex-wrap items-center gap-2 px-4"
           role="group"
@@ -779,8 +913,55 @@ export function ARTimeMachine({
         </div>
       )}
 
+      {/* ── 360° PANORAMA (issue #13): poudarjena plošča z naslovom, letnico
+          in navodilom (TimeLens UX — uporabnik ve, da gleda zgodovinski
+          trenutek, ne 3D maketo) ── */}
+      {pano && (
+        <div
+          className="relative z-10 mx-auto mt-3 max-w-md rounded-xl border border-primary/50 bg-black/60 p-3 text-center backdrop-blur"
+          role="region"
+          aria-label={t("360° zgodovinski pogled", "360° historical view")}
+        >
+          <p className="font-display text-sm font-bold tracking-wide text-white">
+            {t("360° ZGODOVINSKI POGLED", "360° HISTORICAL VIEW")}
+          </p>
+          <p className="mt-0.5 text-xs font-semibold text-amber-200">
+            {pano.titleSi}
+          </p>
+          <p className="mt-1 text-[11px] leading-relaxed text-white/75">
+            {compassStability === "unavailable" && !iosCompassBlocked
+              ? t(
+                  "Kompas ni na voljo — vlecite po zaslonu za obrat pogleda.",
+                  "Compass unavailable — drag the screen to look around.",
+                )
+              : t(
+                  "Obrni telefon in poglej okoli sebe — pogled sledi kompasu.",
+                  "Turn your phone and look around — the view follows the compass.",
+                )}
+          </p>
+        </div>
+      )}
+
       {/* ── AR TIME SPOTS: izbirnik točk (odklop GPS → ročna izbira, pošteno) —
-          vaške točke + oddaljene (issue #12) z lastno vsebino ── */}
+          vaške točke + oddaljene (issue #12) z lastno vsebino; v 360° panorami
+          samo izhod na 3D rekonstrukcijo (enoben fokus) ── */}
+      {pano ? (
+        <div className="relative z-10 mt-2 flex items-center gap-2 overflow-x-auto px-4 pb-1">
+          <button
+            type="button"
+            onClick={exitPano}
+            className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-primary/60 bg-primary/20 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur transition-colors hover:bg-primary/30"
+          >
+            <Home className="size-3.5 shrink-0" aria-hidden="true" />
+            {t("← nazaj na 3D rekonstrukcijo", "← back to the 3D reconstruction")}
+          </button>
+          {heading == null && (
+            <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-white/20 bg-black/45 px-3 py-1.5 text-[11px] text-white/70 backdrop-blur">
+              {t("brez kompasa — vlečenje", "no compass — dragging")}
+            </span>
+          )}
+        </div>
+      ) : (
       <div
         className="relative z-10 mt-2 flex items-center gap-2 overflow-x-auto px-4 pb-1"
         role="group"
@@ -872,6 +1053,7 @@ export function ARTimeMachine({
           </button>
         ))}
       </div>
+      )}
 
       {/* KALIBRACIJA POGLEDA (issue #14, točka 7) — enkrat na napravo, prostovoljna */}
       {showCal && calTarget && (
@@ -976,7 +1158,7 @@ export function ARTimeMachine({
       )}
 
       {/* prvi namig */}
-      {hint && !spotCard && !p360 && (
+      {hint && !spotCard && !p360 && !pano && (
         <div className="relative z-10 mx-auto mt-8 max-w-sm rounded-xl border border-white/20 bg-black/50 p-4 text-center backdrop-blur">
           <p className="text-sm leading-relaxed text-white/90">
             {t(
@@ -995,7 +1177,7 @@ export function ARTimeMachine({
       )}
 
       {/* 360° način: poudarjena plošča z navodilom (issue #12) */}
-      {p360 && (
+      {p360 && !pano && (
         <div className="relative z-10 mx-auto mt-4 max-w-md rounded-xl border border-primary/40 bg-black/55 p-3 text-center backdrop-blur">
           <p className="text-sm font-semibold text-white">
             <RotateCw className="mr-1.5 inline size-4" aria-hidden="true" />
@@ -1017,9 +1199,77 @@ export function ARTimeMachine({
         </div>
       )}
 
+      {/* ── VIRI 360° PANORAME (issue #13, §10): Himera plast — vsaka
+          vizualna trditev ima status + vir; uporabnik vidi, kaj je
+          DOKUMENTIRANO in kesa je INTERPRETACIJA/TO_COLLECT ── */}
+      {pano && panoClaimsOpen && (
+        <div className="absolute inset-x-4 bottom-44 z-20 sm:left-1/2 sm:right-auto sm:w-[440px] sm:-translate-x-1/2">
+          <div
+            className="max-h-[46vh] overflow-y-auto rounded-xl border border-white/20 bg-black/75 p-4 text-white backdrop-blur"
+            role="region"
+            aria-label={t("Viri panorame — evidence trditve", "Panorama sources — evidence claims")}
+          >
+            <div className="flex items-start justify-between gap-3">
+              <div className="min-w-0">
+                <p className="flex items-center gap-2 font-display text-sm font-semibold">
+                  <Sparkles className="size-4 text-amber-200" aria-hidden="true" />
+                  {t("Kaj je dokazano v tem prizoru?", "What is evidenced in this scene?")}
+                </p>
+                <p className="mt-1 text-[11px] text-white/60">
+                  {lang === "si" ? pano.evidenceSi : pano.evidenceEn}
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setPanoClaimsOpen(false)}
+                aria-label={t("Zapri vire", "Close sources")}
+                className="shrink-0 rounded-full border border-white/25 p-1.5 hover:bg-white/10"
+              >
+                <X className="size-4" aria-hidden="true" />
+              </button>
+            </div>
+            <ul className="mt-3 space-y-2.5">
+              {pano.claims.map((c, i) => (
+                <li key={i} className="text-[11px] leading-relaxed">
+                  <p className="flex flex-wrap items-center gap-1.5">
+                    <span
+                      className={`inline-flex shrink-0 items-center gap-1 rounded-full border px-2 py-0.5 font-semibold ${
+                        c.status === "DOCUMENTED"
+                          ? "border-emerald-300/40 bg-emerald-400/15 text-emerald-200"
+                          : c.status === "RECONSTRUCTED"
+                            ? "border-sky-300/40 bg-sky-400/15 text-sky-200"
+                            : c.status === "ESTIMATE"
+                              ? "border-amber-300/40 bg-amber-400/15 text-amber-200"
+                              : c.status === "TO_COLLECT"
+                                ? "border-white/25 bg-white/10 text-white/70"
+                                : "border-amber-300/40 bg-amber-400/15 text-amber-200"
+                      }`}
+                    >
+                      {c.status}
+                    </span>
+                    <span className="font-medium text-white/90">
+                      {lang === "si" ? c.whatSi : c.whatEn}
+                    </span>
+                  </p>
+                  <p className="mt-0.5 pl-1 text-white/60">
+                    {lang === "si" ? c.sourceSi : c.sourceEn}
+                  </p>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-3 border-t border-white/15 pt-2 text-[11px] leading-relaxed text-white/70">
+              {t(
+                "Izjava o poštenosti: visual realism ≠ historical certainty — lepa slika ni bolj resnična samo zato, ker izgleda realistično.",
+                "Honesty statement: visual realism ≠ historical certainty — a beautiful image is not more true just because it looks realistic.",
+              )}
+            </p>
+          </div>
+        </div>
+      )}
+
       {/* kartica AR TIME SPOTA (odklep / izbira / globa povezava) —
           omejena višina z notranjim drsenjem, da ne prekrije čipov točk */}
-      {spotCard && (
+      {spotCard && !pano && (
         <div className="absolute inset-x-4 bottom-44 z-20 sm:left-1/2 sm:right-auto sm:w-[440px] sm:-translate-x-1/2">
           <div
             className="max-h-[46vh] overflow-y-auto rounded-xl border border-white/20 bg-black/70 p-4 text-white backdrop-blur"
@@ -1113,6 +1363,23 @@ export function ARTimeMachine({
               {t("Vir: ", "Source: ")}
               {lang === "si" ? spotCard.evidenceSi : spotCard.evidenceEn}
             </p>
+
+            {/* DOŽIVI 360° (issue #13): hero TimeSpot odpre Historical Panorama —
+                imerzivni prizor na kompasu; jasno ločeno od 3D rekonstrukcije */}
+            {spotHasPanorama(spotCard.id) && (
+              <button
+                type="button"
+                onClick={() => enterPano(spotCard)}
+                className={`mt-2.5 inline-flex items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-xs font-semibold transition-colors ${
+                  pano
+                    ? "border-primary bg-primary text-primary-foreground"
+                    : "border-primary/60 bg-primary/25 text-white hover:bg-primary/35"
+                }`}
+              >
+                <Sparkles className="size-3.5" aria-hidden="true" />
+                {t("DOŽIVI 360° — zgodovinski pogled", "EXPERIENCE 360° — historical view")}
+              </button>
+            )}
 
             {/* TTS (issue #12): poslušaj zgodbo točke — MP3 ali speechSynthesis */}
             <button
@@ -1369,8 +1636,90 @@ export function ARTimeMachine({
         </div>
       )}
 
-      {/* spodnja plošča: časovni drsnik + zajem */}
+      {/* spodnja plošča: 360° panorama kontrole (issue #13) ALI časovni drsnik + zajem */}
       <div className="relative z-10 mt-auto space-y-3 p-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
+        {pano ? (
+          <>
+            {/* metodologija panorame — poštena opomba TimeLens pipeline */}
+            <p className="mx-auto max-w-lg text-center text-[11px] leading-relaxed text-white/70">
+              {lang === "si" ? pano.methodSi : pano.methodEn}
+            </p>
+
+            {/* 360° kontrole: Poslušaj · Viri · Primerjaj z danes · poravnava (issue #13, §14) */}
+            <div
+              className="mx-auto flex max-w-lg flex-wrap items-center justify-center gap-2"
+              role="group"
+              aria-label={t("Kontrole 360° pogleda", "360° view controls")}
+            >
+              <button
+                type="button"
+                onClick={() => panoSpot && void toggleSpotAudio(panoSpot)}
+                className={`inline-flex items-center gap-1.5 rounded-full border px-3.5 py-2 text-xs font-semibold backdrop-blur transition-colors ${
+                  playing
+                    ? "border-primary/60 bg-primary/25 text-white"
+                    : "border-white/25 bg-black/50 text-white/90 hover:bg-black/70"
+                }`}
+                aria-pressed={playing}
+              >
+                {playing ? (
+                  <Pause className="size-3.5" aria-hidden="true" />
+                ) : (
+                  <Volume2 className="size-3.5" aria-hidden="true" />
+                )}
+                {playing
+                  ? t("Ustavi pripoved", "Stop narration")
+                  : t("Poslušaj", "Listen")}
+              </button>
+              <button
+                type="button"
+                onClick={() => setPanoClaimsOpen((o) => !o)}
+                aria-pressed={panoClaimsOpen}
+                className={`inline-flex items-center gap-1.5 rounded-full border px-3.5 py-2 text-xs font-semibold backdrop-blur transition-colors ${
+                  panoClaimsOpen
+                    ? "border-primary/60 bg-primary/25 text-white"
+                    : "border-white/25 bg-black/50 text-white/90 hover:bg-black/70"
+                }`}
+              >
+                <Sparkles className="size-3.5" aria-hidden="true" />
+                {t("Viri — kaj je dokazano", "Sources — what is evidenced")}
+              </button>
+              {camera === "live" ? (
+                <button
+                  type="button"
+                  onClick={() => setTodayBlend((b) => !b)}
+                  aria-pressed={todayBlend}
+                  className={`inline-flex items-center gap-1.5 rounded-full border px-3.5 py-2 text-xs font-semibold backdrop-blur transition-colors ${
+                    todayBlend
+                      ? "border-primary bg-primary text-primary-foreground"
+                      : "border-white/25 bg-black/50 text-white/90 hover:bg-black/70"
+                  }`}
+                >
+                  <RotateCw className="size-3.5" aria-hidden="true" />
+                  {todayBlend
+                    ? t("danes — živa kamera · 1825 kot duh", "today — live camera · 1825 as a ghost")
+                    : t("Primerjaj z danes", "Compare with today")}
+                </button>
+              ) : (
+                <span
+                  className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-black/40 px-3.5 py-2 text-[11px] text-white/60 backdrop-blur"
+                  title={t("Kamera ni na voljo — primerjava z danes potrebuje živo kamero", "Camera unavailable — comparing with today needs the live camera")}
+                >
+                  <MapPin className="size-3.5" aria-hidden="true" />
+                  {t("danes: kamera ni na voljo", "today: camera unavailable")}
+                </span>
+              )}
+              <button
+                type="button"
+                onClick={() => panoSceneRef.current?.realign()}
+                className="inline-flex items-center gap-1.5 rounded-full border border-white/25 bg-black/50 px-3.5 py-2 text-xs font-semibold text-white/90 backdrop-blur transition-colors hover:bg-black/70"
+              >
+                <Crosshair className="size-3.5" aria-hidden="true" />
+                {t("Poravnaj pogled", "Realign view")}
+              </button>
+            </div>
+          </>
+        ) : (
+        <>
         {/* metodologija leta — v mini sceni (issue #12) lastna poštena opomba */}
         {mini ? (
           <p className="mx-auto max-w-lg text-center text-[11px] leading-relaxed text-white/70">
@@ -1390,7 +1739,7 @@ export function ARTimeMachine({
           </p>
         )}
 
-        {/* drsnik let */}
+        {/* drsnik let (skrit v 360° panorami — panorama JE svoje leto) */}
         <div
           role="radiogroup"
           aria-label={t("Letnica rekonstrukcije", "Reconstruction year")}
@@ -1416,8 +1765,10 @@ export function ARTimeMachine({
             </button>
           ))}
         </div>
+        </>
+        )}
 
-        {/* zajem + obvestilo */}
+        {/* zajem + obvestilo (skupno: 3D, mini scena in 360° panorama) */}
         <div className="flex items-center justify-center gap-4">
           <button
             type="button"

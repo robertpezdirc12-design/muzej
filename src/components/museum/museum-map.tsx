@@ -284,6 +284,21 @@ export function MuseumMap({
                   `VIEW IN AR — ${spotYearParam(activeSpot.year)}`,
                 )}
               </button>
+              {/* DOŽIVI 360° (issue #13): hero TimeSpot ima Historical
+                  Panorama — imerzivni zgodovinski pogled (magic window) */}
+              {activeSpot.panoramaId && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    openTM(activeSpot.year, activeSpot.id, false, true);
+                    setActiveSpot(null);
+                  }}
+                  className="inline-flex items-center gap-2 rounded-lg border border-primary/40 bg-primary/10 px-4 py-2.5 text-sm font-semibold text-primary transition-colors hover:bg-primary/20"
+                >
+                  <Sparkles className="size-4" aria-hidden="true" />
+                  {t("DOŽIVI 360°", "EXPERIENCE 360°")}
+                </button>
+              )}
               {/* 360° s cerkve (issue #12): virtualni pogled za doma/iOS brez GPS */}
               {activeSpot.id === "cerkev" && (
                 <button

@@ -1272,3 +1272,29 @@ Stage Summary:
 - Oddaljene točke so ZDAJ polni portali: QR tablica → globa povezava → lastna scena/kartica → GPS odklep → MVG zapis — ista dokazna veriga kot vaške točke (GeoTruth sidra + evidence + avdit)
 - Stanje muzeja: 113 zapisov, 13 zaprtih issuejev + #13 (P2 panorama) odprt, 18. deploy v produkciji
 - Naslednji korak: #13 (P2 VISUAL REALISM / HISTORICAL PANORAMA LAYER) — GEO-TRUTH temelj (sidra, heading, sceneReadiness, use-compass) + 360° mehanizem že obstajata
+
+---
+Task ID: 15 (issue #13 — P2 VISUAL REALISM / HISTORICAL PANORAMA LAYER)
+Agent: Z.ai Code (glavni agent)
+Task: Preberi GitLab issue #13 (edin odprt) in ga implementiraj: Historical Panorama plast (TimeLens-style imerzivne 360° rekonstrukcije) ČEZ obstoječi proceduralni 3D — brez podvajanja sistema.
+
+Work Log:
+- GitLab: nov žeton iz git remote (stari potekel); prebrani vsi issueji — #11/#12/#14 zaprti, #13 (P2 panorama) edini odprt; prebran cel opis (21 razdelkov)
+- Inventarizacija main (issue §20): ar-time-machine.tsx (1470 vrstic — p360, TTS toggleSpotAudio, capture, kartice), village-scene.ts (setFix/setCompassYaw/capture/nudgeLook), timespots.ts (9 točk, anchorId), time-machine-store (openTM+deep link), use-compass (glajenje+kalibracija), geotruth (sidra EŠD 2122), sw.js v5, atlas.ts API — vse izhodišče za reuse
+- src/data/atlas/panoramas.ts (NOV): HistoricalPanorama model (id, timeSpotId, year, imageUrl, previewUrl, headingDeg, status, claims[], methodSi/En, sources, audioSi/EnUrl) + PanoClaim (DOCUMENTED/RECONSTRUCTED/ESTIMATE/INTERPRETATION/TO_COLLECT — Himera plast); 3 hero scene: cerkev-1825 (h0=35), jedro-1825 (h0=267, cerkev na azimutu 220), kolpa-1825 (h0=71, vas na 305); POŠTENE trditve: ljudje/živali = TO_COLLECT (v prizoru jih NI), carinarnica = TO_COLLECT (NI v prizoru — zapis brez geometrije), smeri prvin v sliki = kompasno približne (dokumentirano)
+- Asset pipeline: scripts/gen-panoramas.ts (z-ai SDK 2048×1024 equirect, retry), regen skripti; VLM kontrola vsake slike (horizont, ljudje, moderni objekti) — jedro1 zavržen (beli avto!), kolpa1 zavržen (asfalt) → regenerirani s poševnejšimi instrukcijami
+- scripts/process-panoramas.py: horizontalni roll (šiv v monoton pas: cerkev δ=0,95 hiša cerkve s šiva, jedro δ=0,15, kolpa δ=0,25), navpična kalibracija horizonta (0,45/0,38/0,25 → 0,50), preklopni šiv 120 px, JPEG q80 progresivno + predogled 640×320 → public/panoramas/ (~330–350 KB + ~33 KB na sceno)
+- panorama-viewer.tsx (NOV): PanoramaScene razred — THREE obrnjena sfera (scale(-1,1,1), MeshBasicMaterial, SRGB), kamera v središču, yaw = 90 + h0 − kompas (+vlečenje manualYaw, realign), FOV adaptivno (82° pokončno / 62° pokrajinsko), lazy load (predogled → polna slika, onLoad stanja), setTodayBlend (sfera → duh nad živo kamero), capture z enako napisnico, dispose; react-hooks/refs + set-state-in-effect pravila zadovoljena
+- village-scene.ts: setHidden(h) — raf preskoči render med panoramo (GPU miruje), samodejni restart ob ponovnem priklicu (brez dvojne zanke)
+- ar-time-machine.tsx: pano stanje + enterPano/exitPano (3D skrita, p360/mini/kartica počiščeni), globa povezava ?spot=&pano=1 → direktno v 360°, banner »360° ZGODOVINSKI POGLED« + naslov + navodilo (kompas/vlečenje), gumb DOŽIVI 360° na kartici točke, kontrole Poslušaj (TTS reuse) / Viri (claims plošča s statusi) / Primerjaj z danes (samo z živo kamero — danes je realnost) / Poravnaj pogled, zajem panorame (shareOrDownload izvlečen skupen), statusni čip INTERPRETATION, metodologija TimeLens pipeline v nogi
+- time-machine-store: pano zastavica + openTM(…, pano); page.tsx: ?pano=1 parse
+- museum-map.tsx: [DOŽIVI 360°] gumb na kartici točke (samo panoId); atlas.ts: panoramas blok + panoramaId na timeSpots; sw.js v6 (/panoramas SWR — offline za odklenjene)
+- qa.ts: test 13 qa-panoramas (vez na točko, heading 0–360, ≥3 trditve s statusi + viri, metodologija, URL format, panoramaId konsistentnost) — node:fs vodil v klient bundle (museum-coverage importa qa) → URL validacija, fizikalni obstanek preverjen s curl
+- E2E (agent-browser, dev): globa ?spot=cerkev&pano=1 → panorama + banner + kontrole (VLM: vas, cerkev, brez ljudi/modernih objektov); vlečenje po platnu → obračanje pogleda (VLM potrdi spremembo); mock deviceorientation 90° → četrt obrata (vas→reka/sončece, u=0,65=bearing 89 ✓ kompasna matematika); Viri → claims plošča (DOCUMENTED/RECONSTRUCTED badgei); izhod → 3D rekonstrukcija nazaj + drsnik let; zajem → »shranjeno (PNG)«; jedro prek [DOŽIVI 360°] na zemljevidu → cerkev center-levo (u≈0,37 po rollu ✓); kolpa globa → reka; mobilni 390px brez preliva, drsnik skrit; 0 napak konzole; QA 13/13
+- Dev strežnik: pomrl ob zajedu — ponovno zagnan kot dvojni-fork daemon (python os.fork×2 + setsid)
+
+Stage Summary:
+- HISTORICAL PANORAMA plast ŽIVA: 3 hero scene (cerkev, jedro, kolpa — vse 1825) na GeoTruth temeljih; magic window na kompasu/žiroskopu, touch fallback, lazy (predogled 33 KB → polna 340 KB), WebXR NI obvezen
+- Zgodovinska verodostojnost: 18 trditev s statusi (visual asset → claim → vir → status); kar ni dokumentirano, v prizoru NI (ljudje, carinarnica); metodologija TimeLens pipeline javna na vsaki sceni; »primerjaj z danes« = živa kamera (danes se ne generira)
+- Obstoječi sistem NESPREMENJEN: proceduralna 3D vas ostane fallback (setHidden GPU pavza), GPS/kompas/odklep/zbirka/deep link/QR/TTS/zajem — vse reuse
+- Stanje: lint čist, QA 13/13, dev E2E zelen; sledita commit/push → Vercel 19. deploy → produkcijska verifikacija (https SW offline) → GitLab #13 odkljukan in zaprt

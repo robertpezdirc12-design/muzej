@@ -12,6 +12,7 @@ import {
   isDistantSpot,
   spotDistanceFromVillage,
 } from "@/data/atlas/timespots";
+import { PANORAMAS, panoramaDeepLink } from "@/data/atlas/panoramas";
 import {
   GEO_SOURCES,
   GEO_ANCHORS,
@@ -198,7 +199,30 @@ export function getAtlasModel(): AtlasModel {
       distant: isDistantSpot(s),
       distanceFromVillageM: Math.round(spotDistanceFromVillage(s)),
       events: s.events ?? null,
+      panoramaId: s.panoramaId ?? null,
       deepLink: `/?casovni=${spotYearParam(s.year)}&spot=${s.id}`,
+    })),
+    /* HISTORICAL PANORAMAS (issue #13, P2) — imerzivna 360° plast
+       TimeSpota: asset + evidence trditve + produkcija + deep link (&pano=1) */
+    panoramas: PANORAMAS.map((p) => ({
+      id: p.id,
+      timeSpotId: p.timeSpotId,
+      year: p.year,
+      imageUrl: p.imageUrl,
+      previewUrl: p.previewUrl,
+      headingDeg: p.headingDeg,
+      titleSi: p.titleSi,
+      titleEn: p.titleEn,
+      status: p.status,
+      claims: p.claims,
+      methodSi: p.methodSi,
+      methodEn: p.methodEn,
+      sources: p.sources,
+      evidenceSi: p.evidenceSi,
+      evidenceEn: p.evidenceEn,
+      audioSiUrl: p.audioSiUrl,
+      audioEnUrl: p.audioEnUrl,
+      deepLink: panoramaDeepLink(p),
     })),
     /* GEOTRUTH (issue #14, P0) — AR sidra, viri, dokazna pot, avdit konfliktov */
     geotruth: {

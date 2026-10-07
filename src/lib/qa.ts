@@ -10,6 +10,8 @@ import { computeCoverage } from "./coverage";
 import { buildReconciliation } from "./reconciliation";
 import { NEGATIVE_RESULTS } from "@/data/atlas/sources";
 import { parishStats } from "./atlas";
+import { PANORAMAS } from "@/data/atlas/panoramas";
+import { TIME_SPOTS } from "@/data/atlas/timespots";
 
 interface ExhibitRow {
   id: string;
@@ -210,6 +212,51 @@ export function runQA(): QAReport {
     "parish registers of Podzemelj: 22 units with links (issue #6)",
     parishBooksOk,
     `${parish.books} knjig (${parish.byType.baptism} krstnih, ${parish.byType.marriage} poročnih, ${parish.byType.death} mrliških), obdobje ${parish.period}; vpisi: ${parish.vitalRecords} za ${parish.housesWithVitals}/${parish.housesTotal} hiš`,
+  );
+
+  // 13. HISTORICAL PANORAMA (issue #13): vsaka panorama ima veljavno vez na
+  //     TimeSpot, heading, trditve s statusi, vire in FIZIČNI asset na disku
+  const spotIds = new Set(TIME_SPOTS.map((s) => s.id));
+  const claimStatuses = new Set([
+    "DOCUMENTED",
+    "RECONSTRUCTED",
+    "ESTIMATE",
+    "INTERPRETATION",
+    "TO_COLLECT",
+  ]);
+  const panoErrors: string[] = [];
+  for (const p of PANORAMAS) {
+    if (!spotIds.has(p.timeSpotId)) panoErrors.push(`${p.id}: neznan TimeSpot ${p.timeSpotId}`);
+    if (!(p.headingDeg >= 0 && p.headingDeg < 360)) panoErrors.push(`${p.id}: headingDeg izven 0–360`);
+    if (p.claims.length < 3) panoErrors.push(`${p.id}: premalo trditev (<3)`);
+    for (const c of p.claims) {
+      if (!claimStatuses.has(c.status)) panoErrors.push(`${p.id}: neznan status ${c.status}`);
+      if (!c.sourceSi || !c.sourceEn) panoErrors.push(`${p.id}: trditev brez vira`);
+    }
+    if (p.sources.length === 0) panoErrors.push(`${p.id}: brez virov`);
+    if (!p.methodSi || !p.methodEn) panoErrors.push(`${p.id}: brez metodologije`);
+    for (const url of [p.imageUrl, p.previewUrl].filter(Boolean) as string[]) {
+      /* asset na disku se preveri ob buildu/produkciji (curl) — tu format URL */
+      if (!/^\/panoramas\/[a-z0-9-]+\.jpg$/.test(url)) {
+        panoErrors.push(`${p.id}: sumljiv URL asseta ${url}`);
+      }
+    }
+  }
+  /* panoramaId na točki mora obstajati v PANORAMAS (ni pripravljenih kazalcev) */
+  const panoIds = new Set(PANORAMAS.map((p) => p.id));
+  for (const s of TIME_SPOTS) {
+    if (s.panoramaId && !panoIds.has(s.panoramaId)) {
+      panoErrors.push(`spot ${s.id}: panoramaId ${s.panoramaId} ne obstaja`);
+    }
+  }
+  push(
+    "qa-panoramas",
+    "historical panorame: vez na točko, evidence trditve, viri, asseti (issue #13)",
+    "historical panoramas: spot link, evidence claims, sources, assets (issue #13)",
+    panoErrors.length === 0,
+    panoErrors.length === 0
+      ? `${PANORAMAS.length} panorame (${PANORAMAS.map((p) => p.timeSpotId).join(", ")}); trditve: ${PANORAMAS.reduce((a, p) => a + p.claims.length, 0)}; asseti v /panoramas`
+      : panoErrors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;
