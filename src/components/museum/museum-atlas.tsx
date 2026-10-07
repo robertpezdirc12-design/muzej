@@ -38,6 +38,7 @@ import { ATLAS_HOUSES } from "@/data/atlas/houses";
 import { ATLAS_OWNERS, SHEET_GEOREFS } from "@/data/atlas/model";
 import { ATLAS_SOURCES, NEGATIVE_RESULTS, HERITAGE_UNITS } from "@/data/atlas/sources";
 import { PARISH, PARISH_BOOKS, HOUSE_VITALS, type HouseVital } from "@/data/atlas/parish";
+import { LANDUSE_ZONES, LANDUSE_ENTITIES, HAMLETS } from "@/data/atlas/landuse";
 import { getCoverage, parishStats, getHouseStory } from "@/lib/atlas";
 import type { GeoFix } from "@/lib/geo";
 
@@ -48,7 +49,7 @@ const Canvas = dynamic(() => import("./atlas-canvas").then((m) => m.AtlasCanvas)
   ),
 });
 
-type Tab = "map" | "houses" | "owners" | "parish" | "sources" | "coverage";
+type Tab = "map" | "houses" | "owners" | "parish" | "landuse" | "sources" | "coverage";
 
 const STATUS_STYLE: Record<string, string> = {
   VERIFIED: "bg-emerald-100 text-emerald-900 dark:bg-emerald-900/60 dark:text-emerald-100",
@@ -83,6 +84,7 @@ export function MuseumAtlas({
     a01: true,
     a02: true,
     buildings: true,
+    landuse: false,
     heritage: false,
     museum: false,
     vintage: false,
@@ -145,6 +147,23 @@ export function MuseumAtlas({
   const select = useCallback(
     (id: string, kind: string) => {
       const found = searchAtlas(id.replace(/[-–]/g, " "))[0] ?? null;
+      /* raba tal (issue #7): klik na cono → hišni pogled cone */
+      if (kind === "landuse") {
+        const zone = LANDUSE_ZONES.find((z) => z.id === id);
+        if (zone) {
+          setSelected({
+            type: "house",
+            id: zone.id,
+            titleSi: zone.labelSi,
+            titleEn: zone.labelEn,
+            detail: lang === "si" ? zone.noteSi : zone.noteEn,
+            status: zone.status,
+          });
+          const [[n, w], [s, e]] = zone.bounds;
+          setFocus({ lat: (n + s) / 2, lng: (w + e) / 2, zoom: 15 });
+          return;
+        }
+      }
       const obj =
         found ??
         (kind === "building"
@@ -162,7 +181,7 @@ export function MuseumAtlas({
         setFocus({ lat: (b[0][0] + b[1][0]) / 2, lng: (b[0][1] + b[1][1]) / 2, zoom: 15 });
       }
     },
-    [],
+    [lang],
   );
 
   const evidence = useMemo(
@@ -299,6 +318,7 @@ export function MuseumAtlas({
               ["houses", <Home key="i" className="h-4 w-4" />, "Register hiš", "House register"],
               ["owners", <Users key="i" className="h-4 w-4" />, "Lastniki", "Owners"],
               ["parish", <BookOpen key="i" className="h-4 w-4" />, "Matrike 1669–1947", "Parish registers"],
+              ["landuse", <Layers key="i" className="h-4 w-4" />, "Raba tal", "Land use"],
               ["sources", <Archive key="i" className="h-4 w-4" />, "Viri in dokazi", "Sources & evidence"],
               ["coverage", <Gauge key="i" className="h-4 w-4" />, "Pokritost", "Coverage"],
             ] as [Tab, React.ReactNode, string, string][]
@@ -341,6 +361,7 @@ export function MuseumAtlas({
                     ["a01", t("List A01", "Sheet A01")],
                     ["a02", t("List A02", "Sheet A02")],
                     ["buildings", t("Objekti ~1825", "Buildings ~1825")],
+                    ["landuse", t("Raba tal ~1825", "Land use ~1825")],
                     ["heritage", t("EŠD register", "EŠD register")],
                     ["vintage", t("Sepia (danes)", "Sepia (today)")],
                   ] as [keyof AtlasLayers, string][]
@@ -637,6 +658,9 @@ export function MuseumAtlas({
 
         {/* MATRIKE (issue #6) */}
         {tab === "parish" && <ParishTab />}
+
+        {/* RABA TAL (issue #7) */}
+        {tab === "landuse" && <LandUseTab />}
 
         {/* VIRI */}
         {tab === "sources" && (
@@ -961,6 +985,125 @@ function ParishTab() {
             "Source of all entries: Matricula Online, baptismal register 04105 (1886–1919) — Archdiocesan Archive of Ljubljana; transcribed in the sveti-vid record. Surnames in Kurrent script are uncertain (REVIEW) and await palaeographic review.",
           )}
         </p>
+      </div>
+    </div>
+  );
+}
+
+/* ——— RABA TAL 1825 (issue #7): cone, posebnosti, zaselki ——— */
+
+function LandUseTab() {
+  const { lang, t } = useLang();
+
+  return (
+    <div className="space-y-6">
+      {/* cone rabe tal */}
+      <div className="rounded-xl border bg-card/60 p-5">
+        <h3 className="flex items-center gap-2 font-serif text-lg font-semibold">
+          <Layers className="h-4 w-4 text-primary" aria-hidden />
+          {t("Raba tal ~1825 — kje so Gribeljci obdelovali", "Land use ~1825 — where the people of Griblje farmed")}
+        </h3>
+        <p className="mt-2 text-sm text-muted-foreground">
+          {t(
+            "Vzorci so razbrani iz katastrskih listov A01 in A02 (VLM analiza 2026-10-07) in georeference: reka Kolpa teče po vzhodnem robu, njivski mozaik s parcelnimi številkami obdaja vas, poplavne loke ležijo med jedrom vasi in reko, gozdni kompleks se pojavi na južnem robu lista A02. Vklopi plast »Raba tal ~1825« na zemljevidu za prikaz con.",
+            "Patterns were read from sheets A01 and A02 (VLM analysis 2026-10-07) and the georeference: the Kolpa flows along the eastern edge, a field mosaic with parcel numbers surrounds the village, flood meadows lie between the village core and the river, and a forest complex appears on the southern edge of sheet A02. Turn on the »Land use ~1825« layer on the map to show the zones.",
+          )}
+        </p>
+        <div className="mt-4 grid gap-3 sm:grid-cols-3">
+          {LANDUSE_ZONES.map((z) => (
+            <div key={z.id} className="rounded-lg border bg-background/60 p-3">
+              <div className="flex items-center gap-2">
+                <span
+                  className="inline-block h-3 w-3 shrink-0 rounded"
+                  style={{ background: z.fillColor, border: `1.5px solid ${z.color}` }}
+                  aria-hidden
+                />
+                <div className="font-medium leading-tight">{lang === "si" ? z.labelSi : z.labelEn}</div>
+              </div>
+              <p className="mt-2 text-xs text-muted-foreground">{lang === "si" ? z.noteSi : z.noteEn}</p>
+              <p className="mt-2 text-[11px] text-muted-foreground">
+                <span className="font-semibold">VLM:</span> {z.vlmHintSi}
+              </p>
+              <span className={`mt-2 inline-block rounded px-1.5 py-0.5 text-[10px] font-semibold ${STATUS_STYLE[z.status]}`}>
+                {z.status} (±100–150 m)
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* krajevne posebnosti */}
+      <div>
+        <h3 className="mb-3 flex items-center gap-2 font-serif text-lg font-semibold">
+          <MapPin className="h-4 w-4 text-primary" aria-hidden />
+          {t("Gozd, lokva, rudna peč, studenci", "Forest, pond, iron rock, springs")}
+        </h3>
+        <div className="grid gap-3 sm:grid-cols-2">
+          {LANDUSE_ENTITIES.map((e) => (
+            <div key={e.id} className="rounded-xl border bg-card/60 p-4">
+              <div className="flex items-start justify-between gap-2">
+                <div className="font-medium">{lang === "si" ? e.labelSi : e.labelEn}</div>
+                <span className={`shrink-0 rounded px-1.5 py-0.5 text-[10px] font-semibold ${STATUS_STYLE[e.status] ?? ""}`}>
+                  {e.status === "DOCUMENTED" ? t("dokumentirano", "documented") : "TO_COLLECT"}
+                </span>
+              </div>
+              <p className="mt-2 text-sm text-muted-foreground">{lang === "si" ? e.descriptionSi : e.descriptionEn}</p>
+              {e.museumRef && (
+                <div className="mt-2 text-xs text-primary">{e.museumRef}</div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* zaselki */}
+      <div>
+        <h3 className="mb-3 flex items-center gap-2 font-serif text-lg font-semibold">
+          <Flag className="h-4 w-4 text-primary" aria-hidden />
+          {t("Zaselki: kje so živeli", "Hamlets: where they lived")}
+        </h3>
+        <p className="mb-3 text-sm text-muted-foreground">
+          {t(
+            "Griblje se razprostirajo v štirih zaselkih (Wikipedija in uradna stran KS Griblje). Konskripcijske hišne številke (1825) so zapisane v eno zaporedje po obhodu davkarja — katere hiše spadajo k kateremu zaselku, ni znano; domači pregled je vabljen.",
+            "Griblje stretches across four hamlets (Wikipedia and the official KS Griblje page). The conscription house numbers (1825) were recorded in a single sequence following the tax collector's walk — which houses belong to which hamlet is unknown; local review is invited.",
+          )}
+        </p>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {HAMLETS.map((h) => (
+            <div key={h.id} className="rounded-xl border bg-card/60 p-4">
+              <div className="font-medium">{lang === "si" ? h.nameSi : h.nameEn}</div>
+              <p className="mt-2 text-xs text-muted-foreground">{lang === "si" ? h.noteSi : h.noteEn}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* primerjava danes */}
+      <div className="rounded-xl border bg-card/60 p-5">
+        <h3 className="flex items-center gap-2 font-serif text-lg font-semibold">
+          <Gauge className="h-4 w-4 text-primary" aria-hidden />
+          {t("Kmetijska krajina: 1825 ↔ danes", "Agricultural landscape: 1825 ↔ today")}
+        </h3>
+        <dl className="mt-3 grid gap-3 text-sm sm:grid-cols-2">
+          <div className="rounded-lg border bg-background/60 p-3">
+            <dt className="font-medium">1825</dt>
+            <dd className="mt-1 text-muted-foreground">
+              {t(
+                "Dolgotenhno kolonatsko njivsko gospodarstvo: ozki trakovi (Gewan) okoli vasi, poplavne loke ob Kolpi skupne vaške, travniki v jedru; gozd le na južnem robu; 80 hišnih parcel znotraj k.o.",
+                "Strip-field agriculture: narrow Gewan strips around the village, common flood meadows along the Kolpa, meadows in the core; forest only on the southern edge; 80 building parcels within the municipality.",
+              )}
+            </dd>
+          </div>
+          <div className="rounded-lg border bg-background/60 p-3">
+            <dt className="font-medium">{t("Danes", "Today")}</dt>
+            <dd className="mt-1 text-muted-foreground">
+              {t(
+                "Po komasaciji in agromelioracijah 20. stoletja so majhna polja združena v večje bloke; ob Kolpi kopališče in izletišče; ribnik zahodno od vasi (MVG-016); vas ima 329 prebivalcev in je najbolj suh kraj Bela krajine.",
+                "After 20th-century land consolidation and agro-melioration the small fields were merged into larger blocks; along the Kolpa there is now a bathing site; a pond lies west of the village (MVG-016); the village has 329 inhabitants and is the driest place in Bela krajina.",
+              )}
+            </dd>
+          </div>
+        </dl>
       </div>
     </div>
   );

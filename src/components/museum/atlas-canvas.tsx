@@ -6,6 +6,7 @@ import "leaflet/dist/leaflet.css";
 import { useLang } from "./language-context";
 import { SHEET_GEOREFS, VECTOR_BUILDINGS, ATLAS_LOCATIONS } from "@/data/atlas/model";
 import { HERITAGE_UNITS } from "@/data/atlas/sources";
+import { LANDUSE_ZONES } from "@/data/atlas/landuse";
 import type { GeoFix } from "@/lib/geo";
 
 /**
@@ -16,6 +17,7 @@ import type { GeoFix } from "@/lib/geo";
  *  · katastrska lista A01 / A02 — georeferencirana slikovna prekrivka
  *    (vir: SI AS 176/N/N83, Arhiv RS) z drsnikom prosojnosti;
  *  · objekti ~1825 — vektorizacija z arhivskega lista (RECONSTRUCTED);
+ *  · raba tal ~1825 — loke ob Kolpi, njivski mozaik, gozd (issue #7, RECONSTRUCTED);
  *  · cerkev sv. Vida (VERIFIED, EŠD 2122) in območje vasi (APPROXIMATE);
  *  · uradni register dediščine EŠD (GISKD) — ločen sodoben sloj;
  *  · muzejski zapis (točke zbirke).
@@ -26,6 +28,7 @@ export interface AtlasLayers {
   a01: boolean;
   a02: boolean;
   buildings: boolean;
+  landuse: boolean;
   heritage: boolean;
   museum: boolean;
   vintage: boolean;
@@ -50,6 +53,7 @@ export function AtlasCanvas({
   const a01Ref = useRef<L.ImageOverlay | null>(null);
   const a02Ref = useRef<L.ImageOverlay | null>(null);
   const buildingsRef = useRef<L.LayerGroup | null>(null);
+  const landuseRef = useRef<L.LayerGroup | null>(null);
   const heritageRef = useRef<L.LayerGroup | null>(null);
   const museumRef = useRef<L.LayerGroup | null>(null);
   const baseRef = useRef<L.TileLayer | null>(null);
@@ -117,6 +121,38 @@ export function AtlasCanvas({
       bl.addLayer(m);
     });
     buildingsRef.current = bl;
+
+    /* raba tal ~1825 (issue #7) — približne cone, RECONSTRUCTED */
+    const lu = L.layerGroup();
+    LANDUSE_ZONES.forEach((z) => {
+      const [[n, w], [s, e]] = z.bounds;
+      const rect = L.rectangle(
+        [
+          [n, w],
+          [s, e],
+        ],
+        {
+          color: z.color,
+          weight: 1.5,
+          dashArray: "4 5",
+          fillColor: z.fillColor,
+          fillOpacity: 0.28,
+          className: "mvg-atlas-landuse",
+        },
+      );
+      rect.bindTooltip(
+        lang === "si"
+          ? `${z.labelSi} — RECONSTRUCTED (±100–150 m)`
+          : `${z.labelEn} — RECONSTRUCTED (±100–150 m)`,
+        { className: "mvg-tooltip", direction: "top" },
+      );
+      rect.on("click", (ev) => {
+        L.DomEvent.stopPropagation(ev);
+        selectRef.current(z.id, "landuse");
+      });
+      lu.addLayer(rect);
+    });
+    landuseRef.current = lu;
 
     /* cerkev + vas (lokacijski sloj) */
     const hl = L.layerGroup();
@@ -190,6 +226,7 @@ export function AtlasCanvas({
     apply(a01Ref.current, layers.a01);
     apply(a02Ref.current, layers.a02);
     apply(buildingsRef.current, layers.buildings);
+    apply(landuseRef.current, layers.landuse);
     apply(heritageRef.current, layers.heritage || layers.buildings);
   }, [layers]);
 

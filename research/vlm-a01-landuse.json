@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Na podlagi analize katastrskega lista za vas Griblje (Grüble) iz leta 1824/1825 so vzorci rabe tal naslednji:\n\n**1) Travniki/Loke (Wiese/Anger)**\n*   **Položaj:** Približno **x: 65–80, y: 60–95**.\n*   **Opis:** To so **svetlozelena območja**, ki so na listu jasno ločena od okoliških površin. Nahajajo se neposredno v jedru vasi Grüble in v sosednjem delu naselja (označeno kot *Zohlaint* ali *na Kameniza*). Predstavljajo travnate površine, verjetno domače loka in vrtne zemljišče okoli hiš. Manjši kos svetlozelene površine je viden tudi višje proti severu (**x: 88–91, y: 15–20**), kar je verjetno otok ali breg v reki.\n\n**2) Gozdovi (Wald)**\n*   **Položaj:** Na tem konkretnem listu **ni vidnih velikih, temno šrafiranih gozdnih kompleksov**. Celotno prikazano območje je pretežno kmetijsko.\n*   **Opis:** Čeprav so na robu lista omenjena imena, ki kažejo na gozdove (npr. *Glogovrach*, *Malenski Vrch* – vrh), so ti na sami karti prikazani kot parcele z enako barvo kot njive (bež/rumenkasta), brez tipične gozdne šrafure ali temnejše barve. Morda so bili gozdni obrusi ali pa je šlo za njive na robu gozda.\n\n**3) Njive (Äcker/Felder)**\n*   **Položaj:** Prekrivajo **večino lista (približno x: 55–92, y: 5–98)**.\n*   **Opis:** To so **bež (rumenkaste) površine**, razdeljene na dolge, ozke parcele z rdečimi številkami (parcelne številke). Tvorijo mozaik polj, ki obdaja vas z vseh strani, razen rečne strani. Posebno gosto so razporejene na severu (*Maloška Pecina*) in zahodu (*na Lokaže*) od vasi.\n\n**4) Reka Kolpa**\n*   **Položaj:** Teče po **skrajni desni strani lista (x: 93–99, y: 0–100)**.\n*   **Opis:** Prikazana je kot **širok, svetlo moder pas** z rdečo mejo (državna meja) desno od nje. Ob reki je napisano *KROATIEN* (Hrvaška), kar potrdi, da gre za mejni tok Kolpe. Vas Grüble lezi neposredno ob njenem levem bregu.\n\n**Povzetek vzorcev:**\nVas Grüble je klasičen primer **rečne vasi**: jedro s hišami in travniki (svetlo zelena) stisnjeno ob breg reke Kolpe (desna stran), medtem ko se njive (rumenkasti mozaik) razprostirajo proti notranjosti (levo/zahodno) do meje katastra.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791380106,
+  "id": "202610072134001b2d590c3c0644de",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "202610072134001b2d590c3c0644de",
+  "usage": {
+    "completion_tokens": 858,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 5919,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 6777
+  }
+}

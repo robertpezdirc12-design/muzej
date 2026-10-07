@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "Na podlagi analize katastrskega lista (okvir 0–100) je porazdelitev tal in objektov naslednja:\n\n1.  **Travniki/loke (svetlozelena):** Razpršeni po celotnem območju, največji sklopi so v **sredini** (med St. Veithom in Gribljami), na **severu** (pri Na Dlogi) ter v **jugozahodnem** delu (Pod Schattingern). Predstavljajo približno 15–20 % površine.\n2.  **Gozdovi (šrafirano/temno z drevesnimi simboli):** Zgoščeni predvsem v **spodnjem (južnem)** delu karte, zlasti v območju Pod Schattinger in Robar, ter manjši sestavi na **zahodu**.\n3.  **Njive (bež/rumene):** Dominantna raba tal, pokriva večino površine (**približno 70–75 %**), posebno na **severovzhodu**, **vzhodu** in osrednjem delu med naselbinami.\n4.  **Reka Kolpa:** Teče po **zahodni robni strani** karte (označena z napisom KÖNIGREICH CROATIEN), od severa proti jugu (x: 0–10).\n5.  **Cerkev (St. Veith):** Stoji v **zgornjem-osrednjem** delu (približno **x: 65, y: 25**), severozahodno od jedra vasi Grüble (Griblje), označena z rdečim kvadratom in napisom *St Veith*.",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1791380120,
+  "id": "20261007213513544e944e36a74911",
+  "model": "glm-5v-turbo",
+  "object": "chat.completion",
+  "request_id": "20261007213513544e944e36a74911",
+  "usage": {
+    "completion_tokens": 441,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 6052,
+    "prompt_tokens_details": {
+      "cached_tokens": 2
+    },
+    "total_tokens": 6493
+  }
+}
