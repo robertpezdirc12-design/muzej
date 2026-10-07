@@ -304,3 +304,26 @@ Stage Summary:
 - Muzej-arhiv: markec-group/muzej-arhiv (ID 87313405, identična vsebina, za arhiviranje)
 - Push pot: PAT (do 2026-10-14; nato nov PAT ali sprostitev kvote za projektni žeton)
 - Sledi: push test → samodejni deploy → arhiviranje muzej-arhiv → verifikacija produkcije
+
+Nadaljevanje (pivot po testu):
+- Push 0ace88c na markec-group/muzej NI sprožil deploya (3 min opazovanja; GitLab testni
+  webhook 201, a brez deploymenta) → vzrok: Vercel v povezavi hrani tudi POT
+  (projectNamespace) in dogodkov po prenosu ne poveže več; poskus DELETE+POST link na
+  skupinsko pot je bil ZAVRNJEN: "repo_owned_by_org: The repository markec-group/muzej is
+  private and owned by a group. Upgrade to Pro to continue." — Vercel Hobby omejitev je
+  KONČNI VZROK obstoja dveh muzejev (Task 4)
+- Odločitev: edini zasebni namespace, ki ga Vercel Hobby sprejme, je OSEBNI → projekt
+  87313303 prenesen NAZAJ na robert.pezdirc12/muzej (EDINI muzej), skupinska kopija
+  (muzej-arhiv) ostane kot arhiv
+- Vercel povezava ponovno vzpostavljena prek API-ja (DELETE link → POST link na
+  robert.pezdirc12/muzej → 200); nov webhook 90928450 se je samodejno ustvaril
+- Projektni žeton: kvota GitLab je NAMESPACE-scoped — v osebnem namespaceu je bilo prostor
+  → ustvarjen nov projektni žeton muzej-push-remote (api+write_repository, Maintainer,
+  potek 2027-10-06) v remote URL; ls-remote OK (0ace88c)
+- VERCEL_TOKEN CI spremenljivka ostaja na projektu 87313303 (kopirana pred prenosom nazaj)
+
+Stage Summary (končna):
+- EN sam aktivni muzej: robert.pezdirc12/muzej (ID 87313303, Vercel-povezan, avtomatski deploy)
+- Arhiv: markec-group/muzej-arhiv (ID 87313405, identična vsebina, za arhiviranje)
+- Push pot: projektni žeton (do 2027-10-06); PAT v local-gitlab.pat za API (do 2026-10-14)
+- Sledi: push test → samodejni deploy → arhiviranje muzej-arhiv → verifikacija produkcije
