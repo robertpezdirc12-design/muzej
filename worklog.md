@@ -618,3 +618,26 @@ Stage Summary:
   globa povezava, GeoJSON/JSON izvoz, integritetni testi 9/9, mobilno + temno
 - E2E zahteva #37 izpolnjena: arhivski vir → hiša 73 → dokazi → MVG-010 →
   (3D/AR prek MVG-002 cerkve)
+
+---
+Task ID: 15-c
+Agent: Z.ai Code (glavni agent)
+Task: Issue #2 — produkcija, komentar in zaključek
+
+Work Log:
+- Push f7c056a → samodejni Vercel deploy (dpl_GP48uzRtRX, BUILDING → READY)
+- Produkcija https://griblje-museum.vercel.app: / 200 (443 KB, ATLAS 1825 v
+  SSR), /api/atlas 200 (49 KB), /api/atlas/geojson 200 (160 features),
+  /api/atlas/integrity 200 (9/9 OK), /atlas/n83-a01.jpg + n83-a02.jpg 200,
+  /sitemap.xml 200
+- Brskalniška verifikacija produkcije: #atlas odsek, 12 ploščic + 2 prekrivki +
+  156 objektov + cerkev, iskanje "73" → Hiša št. 73 — Peutinger Mihel, 0 napak
+- Komentar na issue #2 (note 3969731351) s preslikavo vseh zahtevk (#1–#52)
+  + tabelo 9 arhivskih enot + opombo o 2 listih (ne 5)
+- Issue #2 ZAPRT prek API (state: closed)
+
+Stage Summary:
+- 10. zaporedni uspešen samodejni deploy; lokalno = gitlab = f7c056a
+- GitLab issue #2 (ATLAS 1825) v celoti izveden, dokumentiran in zaključen
+- ATLAS 1825 zgrajen na PRAVIH arhivskih virih (SI AS 176/N/N83) z dokazno
+  verigo, pokritostjo in negativnimi rezultati — brez izmišljenih podatkov
