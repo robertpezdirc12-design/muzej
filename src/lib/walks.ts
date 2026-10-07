@@ -112,3 +112,60 @@ export const WALKS: WalkDef[] = (() => {
 export function walkLocatedCount(w: WalkDef): number {
   return w.stops.filter((s) => s.exhibit.lat && s.exhibit.lng).length;
 }
+
+// ——— MANJKAJOČE POSTAJE (issue #4) ——————————————————
+
+/**
+ * Eksplicitno dokumentirane vrzeli v zaporedju postaj.
+ * Postaja 32 sprehoda »Vas in njeni ljudje«: NOT_FOUND — v nobenem
+ * razpoložljivem viru (izvirni repo pred incidentom, VSEH 25 commitov,
+ * scrape izvirnega spletišča 2026-10-06) ni nikoli obstajala.
+ * Vsebine ne izmišljujemo — vrzel je vidna v UI in QA.
+ * Podrobnosti: NEGATIVE_RESULTS[.id = "neg-walk-station-32"].
+ */
+export interface WalkGap {
+  walkKey: string;
+  station: number;
+  status: "NOT_FOUND" | "TO_COLLECT";
+  reasonSi: string;
+  reasonEn: string;
+  negativeResultId: string;
+}
+
+export const WALK_GAPS: WalkGap[] = [
+  {
+    walkKey: "Vas in njeni ljudje",
+    station: 32,
+    status: "NOT_FOUND",
+    reasonSi:
+      "Vsebina postaje 32 ni ohranjena: v izvirnem spletišču (pred incidentom) zaporedje skače s 31 na 33. Vseh 25 zapisov zgodovine repozitorija in varnostna kopija potrjujeta, da te postaje nikoli ni bilo. Ne izmišljujemo je.",
+    reasonEn:
+      "The content of station 32 is not preserved: in the original (pre-incident) website the sequence jumps from 31 to 33. All 25 commits of the repository history and the backup bundle confirm it never existed. We do not invent it.",
+    negativeResultId: "neg-walk-station-32",
+  },
+];
+
+/** Vrzeli za dani sprehod, razvrščene po številki postaje. */
+export function walkGaps(w: WalkDef): WalkGap[] {
+  return WALK_GAPS.filter((g) => g.walkKey === w.key).sort((a, b) => a.station - b.station);
+}
+
+/**
+ * Postaje z vključenimi vrzeli — zaporedje 1..N BREZ skritih lukenj
+ * (issue #4: »prvi sprehod ima zaporedje 1–35 brez vrzeli« — vrzel je
+ * eksplicitna, ne izbrisana).
+ */
+export type WalkItem =
+  | { kind: "stop"; station: number; stop: WalkStop }
+  | { kind: "gap"; station: number; gap: WalkGap };
+
+export function walkItemsWithGaps(w: WalkDef): WalkItem[] {
+  const items: WalkItem[] = w.stops.map((stop) => ({ kind: "stop" as const, station: stop.station, stop }));
+  for (const g of walkGaps(w)) {
+    if (!items.some((i) => i.station === g.station)) {
+      items.push({ kind: "gap" as const, station: g.station, gap: g });
+    }
+  }
+  items.sort((a, b) => a.station - b.station);
+  return items;
+}

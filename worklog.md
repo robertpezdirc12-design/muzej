@@ -709,3 +709,58 @@ Stage Summary:
   "authentic" zavajuča) — treba zamenjati/pripisati vir
 - Gribeljska šolska kronika: obstaja in se uporablja kot vir (šola 1889/90, Peter Kambič);
   lokacija v Slovenskem šolskem muzeju NEPOTRJENA — najverjetneje pri PŠ Griblje/OŠ Loka
+
+---
+Task ID: 3-a/4-abcd/5-a
+Agent: Z.ai Code (glavni agent)
+Task: GitLab issueji #3, #4, #5 — implementacija (raziskave/provenienca frontend,
+postaja 32, 3D/AR, coverage, QA, reconciliation)
+
+Work Log:
+- Prebrani odprti issueji (#3 DOPOLNILO, #4 ZAKLJUČEK, #5 KONTROLA POPOLNOSTI)
+- ISSUE #3 (frontend nad obstoječim backendom 316633f):
+  - museum-research.tsx (novo, #raziskave): 6 zavihkov — provinienčni audit 113
+    (izračunan iz exhibits.json: viri/licence/lokacije/evidence + zastavice),
+    prepisi Kurrent (7 serij, progress), geodetski viri (8, pokritost ±),
+    šolski arhiv ZAL NME (4118864, 747512 + kronika REVIEW), posebne raziskave
+    (Gaspari TO_COLLECT, F0000212 veriga 6 korakov, 1812 vir+geopot, ustna
+    zgodovina model), negativni rezultati (7, nikoli izbrisani)
+  - navigacija: #raziskave + #coverage dodana v header (desktop + mobilni)
+- ISSUE #4:
+  - POSTAJA 32: preiskava VSEH virov — extra.json (1–31, 33–35), izvirni repo
+    pred incidentom (bundle, VSEH 25 commitov — nikoli ni obstajala), vir =
+    scrape izvirnega spletišča (2026-10-06); sklep NOT_FOUND → neg-walk-station-32
+    v NEGATIVE_RESULTS + WALK_GAPS v walks.ts + vidna vrzel-kartica v
+    guided-walk.tsx (zaporedje 1–35 brez SKRITIH lukenj)
+  - 3D/AR: src/lib/coverage.ts — compute3DPipeline() 4 vnosi
+    (ORIGINAL cerkev 5/5, RECONSTRUCTED 156 stavb A02, INFERRED hiše PT,
+    INFERRED kandidati zbirke) z dokaz/interpretacija ločeno, readiness 0–5
+  - coverage: computeCoverage() — 113 zapisov, GPS/slike/3D/viri/evidence/
+    obdobja/AR-ready, vse strojno izračunano
+  - QA: src/lib/qa.ts runQA() — 11 testov (stabilni id, duplikati, AR-GPS,
+    evidence lestvica, identiteta virov, 113 brez izgube, zaporedje sprehodov,
+    coverage ujema se, zero-loss, postaja 32 dokumentirana, walk reference)
+  - museum-coverage.tsx (novo, #coverage): števci + progress, obdobja, QA
+    (11/11 živ na strani), 3D tok, postaja 32 dokumentirana
+- ISSUE #5: src/lib/reconciliation.ts buildReconciliation() — 131 vrstic
+  (PT 101 hiš+parcel, PUA 21 lastnikov, 5 listov z derived štetjem, 4 serije
+  PENDING), zero-loss: lost=0, vse enote processed≥declared; Kurrent sled
+  sken→stran→prepis→entiteta + različica DATA_VERSION
+- API rute: /api/coverage, /api/qa (200/500), /api/atlas/reconciliation
+  (200/500 glede na zeroLoss)
+- Popravek checkIntegrity: 9→12 N83 enot (bil FAIL po 316633f)
+- Mobilni popravki: min-w-0 na grid kartice (tabela min-w-640), break-words
+  namesto truncate v licence/QA seznamih (nowrap min-content razpenjanje);
+  preverjeno 390px brez overflow, desktop 1280 OK, temni način OK
+- Brskalniška verifikacija: #raziskave 6 zavihkov deluje, negativni s postajo
+  32 ✓, coverage QA 11/11 + 4 pipeline + 32 ✓, sprehod klik do postaje 32 →
+  vrzel-kartica NOT_FOUND ✓, 0 napak konzole, VLM ocena obeh odsekov čista
+- lint čist; vsi API 200 (integrity 9/9, QA 11/11, recon zero-loss true,
+  opendata realen timestamp + razdeljena licenca)
+
+Stage Summary:
+- #3: raziskovalni/provienčni odsek v celoti viden uporabniku (issue #3
+  zahtevki #12/#13: poročilo + strojno berljivi statusi)
+- #4: postaja 32 dokumentirana NOT_FOUND (ne izmišljena), zaporedje 1–35
+  eksplicitno; 3D/AR pot združena z Atlasom; coverage + 11 QA testov
+- #5: reconciliation 131 vrstic, zero-loss dokazan, Kurrent sled z različico

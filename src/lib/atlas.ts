@@ -381,11 +381,11 @@ export function checkIntegrity(): IntegrityReport {
     detail: `${VECTOR_BUILDINGS.length} objektov; ${bBad.length} zunaj`,
   });
 
-  // 8. viri: vsak N83 vir ima VAČ povezavo
+  // 8. viri: vsak N83 vir ima VAČ povezavo (12 enot: 5 grafičnih listov + 7 spisovnih)
   const n83 = ATLAS_SOURCES.filter((s) => s.code.startsWith("N083"));
   checks.push({
     name: "viri N83 → VAČ (javne povezave)",
-    pass: n83.every((s) => !!s.vacUrl) && n83.length === 9,
+    pass: n83.every((s) => !!s.vacUrl) && n83.length === 12,
     detail: `${n83.length} enot N83 s povezavo`,
   });
 
