@@ -1068,3 +1068,20 @@ Stage Summary:
 - AR TIME SPOTS v1 zgrajen na obstoječi arhitekturi (brez novega sistema) — TimeLens vzorec odklepanja, Nîmes QR-0-install vhod, evidence kartice po TimeLens/Himera
 - 6 točk s preverljivimi viri (koordinate iz zbirke), QR tablice za fizični muzej, odprti podatki timeSpots v API
 - P1 odložen: mlini/letališče (izven prizora), 360° pogovor s cerkve, »Kaj je izginilo« (podatkovna naloga OSM), TTS, USDZ
+
+---
+Task ID: 12 (issue #11 zaključek + P1 načrt)
+Agent: Z.ai Code (glavni agent)
+Task: Push, 15. deploy, produkcjska verifikacija, zaključek #11, odprtje P1 #12
+
+Work Log:
+- Push d4469b8 na gitlab/main → Vercel samodejno: dpl_4ffmDKRdParxJWN4d9DEXgSGhpfs (15. zaporedni deploy, READY)
+- Produkcija: / 200, globa povezava ?casovni=1825&spot=cerkev 200 (dialog + kartica + čipi 0/6 + QR s CDN), /qr/*.png 200, /api/atlas timeSpots 6 (deepLink)
+- GitLab: zaključni komentar na #11 (preslikava zahtevkov, QA, odložitve) + ZAPRT (state=closed)
+- Ustvarjen issue #12 (P1): mlini/cerkvišče mini-scene, 360° s cerkve, »Kaj je izginilo« (OSM∩kataster), TTS avdio, USDZ/iOS Quick Look
+- Vercel žeton pridobljen iz maskirane CI spremenljivke VERCEL_TOKEN (WAF retry)
+
+Stage Summary:
+- 11/11 issuejev zaprtih; AR TIME SPOTS v1 v produkciji (15. deploy)
+- Stanje muzeja: 113 zapisov, ATLAS 1825 (7 plasti), AR vodnik, 3D AR časovni stroj, AR Time Spots (6 točk, QR, odklepanje, evidence), PWA; QA 13/13, lint čist
+- Naslednji korak: issue #12 (P1) — »izgubljene stvari« (mlini, cerkvišče, Kaj je izginilo) + 360° + TTS + USDZ
