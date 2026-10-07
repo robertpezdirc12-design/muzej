@@ -1227,3 +1227,25 @@ Stage Summary:
   zložljiv AR DEBUG (?debug=ar / localhost)
 - Stanje: 17. delovni zapis v pripravi (commit + push + Vercel + GitLab #14 sledita);
   #13 (P2 panorama) ima zdaj GEO-TRUTH temelj (sidro + heading + zaupanje + evidence)
+
+---
+Task ID: 14-dopolnilo (issue #14 — zaključek)
+Agent: Z.ai Code (glavni agent)
+Task: Push, deploy, produkcjska verifikacija, GitLab zaključek #14
+
+Work Log:
+- git push (WAF 403 ×3 → OK, žeton osvežen iz local-gitlab.pat) → commit 1f1ade8 na main
+- Vercel samodejni deploy #17: produkcija 200; /api/atlas → cerkev 45,56761/15,290311
+  (anchor-cerkev), geotruth 8 sidrov, avdit {REVIEW: 1, CONFLICT: 1}, izginilo 16/157
+- Produkcija (agent-browser): globa ?spot=cerkev → dialog + kartica z »Vir: EŠD 2122«,
+  pošten predogled, 0 napak; mobilni 390px čist
+- GitLab #14: 22/22 DoD odkljukano + zaključni komentar (dokazna pot 595 m konflikta,
+  translacija −147/+578 m, GeoTruth, kalibracija, QA matrika, povezave na #12/#13) + ZAPRT
+
+Stage Summary:
+- P0 GEO-TRUTH temelj postavljen in zaprt: uradna sidra, dokazna pot, avdit, kalibracija
+  naprave, zaupanje vidno v UI, debug orodje
+- Stanje muzeja: 113 zapisov, 13/13 zaprtih issuejev + #12/#13 odprta (P1 mini-scene, P2
+  panorama), 17. deploy v produkciji
+- Naslednji korak: #12 (mlini/cerkvišče mini-scene na GEO_ANCHORS_TO_COLLECT) ali #13
+  (Historical Panorama na GeoTruth + sceneReadiness + use-compass)
