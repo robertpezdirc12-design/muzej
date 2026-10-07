@@ -848,3 +848,41 @@ Stage Summary:
   signalom), bližnjice do registra/atlasa/AR vodnika
 - Obnova Muzeja vasi Griblje: 113 zapisov + ATLAS 1825 + raziskave + AR +
   PWA; vsi GitLab issueji zaprti; 12. deploy
+
+---
+Task ID: 9
+Agent: Z.ai Code (glavni agent)
+Task: Raziskava po spletu → GitLab issueji #6–#9 → implementacija (matrike, raba tal, 500-letnica, AR plast)
+
+Work Log:
+- RAZISKAVALNI KROG (web_search + page_reader, 2026-10-07): Matricula Online —
+  župnija Podzemelj (Griblje izrecno v matičnem območju, sv. Vid 3. podružnica,
+  22 digitaliziranih knjig 1669–1947); Wikipedija Griblje/cerkev sv. Vida
+  (1526 prva omemba, RKD 2122, 329 preb., zaselki, Brezov gozd, Goranja lokva,
+  Rudna peč, najbolj suh kraj); 500-letnica 2026 (Radio Odeon 23. 6., Slovenske
+  novice 13. 8.); slovenski portali (Sistory, DEDI, GISKD, ZAL, OPSI AS 176);
+  svetovni HGIS (MDPI WMS kataster, Europeana Time Machine)
+- Issueji #6–#9 ustvarjeni na GitLabu z preslikavo zahtevkov
+- #6 MATRIKE: src/data/atlas/parish.ts (PARISH + 22 knjig s povezavami +
+  HOUSE_VITALS: hiša 61, 1887/1897), ParishTab v Atlasu (filter vrst, 22 kartic
+  z Matricula linki, hišne zgodbe PT×PUA×matrike), searchAtlas razširjen,
+  /api/atlas izvozi parish, QA #12 (22=11+5+6), integrity #10-#11
+- #7 RABA TAL: VLM analiza listov A01/A02 (Kolpa vzhod, njive ~70-75 %, loke
+  ob reki, gozd na jugu A02); landuse.ts (3 cone RECONSTRUCTED ±100–150 m +
+  Brezov gozd/lokva/Rudna peč/studenci TO_COLLECT + 4 zaselki + primerjava
+  1825↔danes); Leaflet plast mvg-atlas-landuse s tooltipi; LandUseTab;
+  klik na cono → kartica z opombo
+- #8 500-LETNICA: events.json 9→11 (maša 23. 6. 2026, Butoraj+Griblje 13. 8.
+  2026, viri Radio Odeon/Slovenske novice), meta.counts.events 11
+- #9 AR ČASOVNA PLAST: TimeLayer1825 v AR vodniku — cona rabe tal pod nogami,
+  oddaljenost do cerkve/jedra Grüble, 3 najbližje stavbe ~1825 (vektorizacija),
+  hišne zgodbe, globe povezave ?atlas=&odsek=atlas
+- Restart dev strežnika (webpack cache events.json); QA 12/12, integrity 11,
+  lint čist; E2E: matrike filter (6 mrliških), raba tal 3 cone na zemljevidu,
+  iskanje 'matrika' (18 knjig), globa povezava hiša-61, dogodki 11, AR plast,
+  0 napak konzole
+
+Stage Summary:
+- Atlas razširjen z dvema novima zavihkoma (Matrike, Raba tal) + zemljevidsko
+  plastjo; AR vodnik ima časovno plast 1825; dogodki 11 z 500-letnico
+- 4 committi (3b97070, 5c23a76, 8852acd, 04a214c) pripravljeni za push
