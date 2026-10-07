@@ -1316,3 +1316,26 @@ Stage Summary:
 - P2 HISTORICAL PANORAMA zaključen in zaprt v produkciji: TimeLens-style magic window na 3 hero lokacijah
 - Celoten backlog (14 issuejev) zaprt: muzej ima 113 zapisov, 9 TimeSpotov, GeoTruth, 3 hero panorame, mini-scene, TTS, USDZ, PWA offline
 - Naslednji korak: odprt za nove issueje uporabnika (P3+ — npr. več panoram po istem pipeline-u, hišne zgodbe v AR, gamifikacija P2)
+
+---
+Task ID: 15
+Agent: Z.ai Code (glavni agent)
+Task: GitLab issue #15 — MUSEUM VISITOR EXPERIENCE v1 (od QR skena do zaključka obiska: dobrodošlica, voden ogled, napredek, zaključek, digitalni spomin, AR onboarding, osebe, AI guide podatkovni sloj, QA)
+
+Work Log:
+- Prebral issue #15 (uporabnik vsebino prilepil v pogovor; na GitLabu NI obstajala — ustvaril jo je prek API-ja kot issue #15, repo = source of truth); issue #11 checkboxi že 9/9 ✓
+- Analiza obstoječe arhitekture: page.tsx, timespots-store (zbirka), time-machine-store (AR vrata), museum-map (QR + kartice točk), guided-walk, ar-time-machine (unlock + TTS), geo/geotruth helperji — NIČ nove arhitekture, le obiskovniški sloj ČEZ obstoječe
+- Novo: src/data/atlas/guide.ts — AI MUSEUM GUIDE podatkovni sloj (18 preverjenih Q&A: question/answer/source/status/location/period, po 2 na vsak od 9 TimeSpotov; viri MVG/EŠD/kataster; statusi VERIFIED/DOCUMENTED/RECONSTRUCTED/INTERPRETATION)
+- /api/atlas: model razširjen z guide (getAtlasModel + AtlasModel interface) — AI kasneje odgovarja SAMO iz teh podatkov
+- Novo: src/lib/visitor-store.ts — okvir obiska (start/oseba/zaključek/spomin/onboarding/dock, localStorage mvg-visit); zbirka odkritij OSTANE v mvg-timespots (ni podvajanja); CORE_STATION_ORDER (cerkev→jedro→kolpa→ribnik→gornje→meja — vrstni red iz issueja); osebe: druzina(3)/sola(6+Q&A)/turist(6)/raziskovalec(9)
+- Novo: src/components/museum/visitor-experience.tsx — VisitorStart (dobrodošlica + 4 osebe + AR onboarding 3 koraki + predviden čas + Začni raziskovanje), VisitSection id=obisk (Postaja X/N, razdalja/status/AR pripravljen/Odpri→openTM, Navigiraj→OSM, Q&A vodnika, Moje raziskovanje ✓/○ + Progress, oddaljene točke, samodejni+ročni zaključek), CompletionCard (Čestitamo + 6/9, 3/3, 156, 18 + Shrani spomin), SouvenirCard (razglednica canvas PNG 1200×840 + Web Share/clipboard + povzetek), VisitDock (mobilni plavajoči dok: naslednja postaja + Odpri + napredek; skrit med AR; po zaključku opomnik na spomin), Začni nov obisk (reset obiska+zbirke)
+- page.tsx: VisitorExperience za hero; pb-24 odmik noge ob doku (useVisitDockActive); QR ?casovni&spot samodejno začne obisk (brez blokade AR); ?obisk=1 = vstopna tablica
+- museum-map.tsx: vstopni QR vstop.png med tablicami za natis; scripts/gen-qr-vstop.py ustvari kodo (?obisk=1)
+- sw.js: VERSION v6→v7 (nova lupina)
+- Lint čist; agent-browser QA celoten scenarij: dobrodošlica (SI/EN) → oseba Družina → Postaja 1/3 → AR predogled → zapri → 6 odklepov → Čestitamo + statistika (6/9, 3/3, 156, 18) → razglednica PNG (souvenirSavedAt ✓) → Začni nov obisk (reset ✓) → Q&A razkritje (156 stavb/RECONSTRUCTED/vir) → Postaja 2/6 → QR deep-link (samostart+AR brez ovire) → ?obisk=1 → dok na mobilnem odpre AR na pravi postaji → desktop (dock display:none, noga na dnu, gap 0); dev.log brez napak; odkrita in popravljena napaka: Nadaljuj raziskovanje ob vseh odklenjenih postajah se je takoj ponovno zaključilo → zdaj Začni nov obisk / Nadaljuj glede na allFound
+
+Stage Summary:
+- Obiskovniški sloj končan BREZ nove arhitekture: postaje = obstoječi TimeSpots, odkrivanja = obstoječa zbirka, AR = obstoječi openTM, razdalje/GPS = obstoječi geo+GeoTruth, Q&A = nov muzejsko preverjen podatkovni sloj (18 zgodb v /api/atlas)
+- Celotna pot obiskovalca dela v brskalniku: prihod→dobrodošlica→voden ogled→raziskovanje→zbiranje→zaključek→deljenje spomina
+- Vstopni QR (public/qr/vstop.png, ?obisk=1) za fizični vhod muzeja
+- Sledi: commit + push + Vercel + GitLab issue #15 (DoD checkboxi + zaprtje)

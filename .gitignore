@@ -61,3 +61,7 @@ server.log
 
 .env
 tool-results/
+
+# agent scratch (QA posnetki, issue payloadi)
+.tmp/
+tool-results/

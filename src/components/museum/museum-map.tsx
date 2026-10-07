@@ -354,6 +354,25 @@ export function MuseumMap({
             )}
           </summary>
           <div className="grid gap-4 border-t p-4 sm:grid-cols-2 lg:grid-cols-3">
+            {/* vstopni QR (issue #15) — prvi zaslon obiskovalca iz fizičnega vhoda */}
+            <div className="flex items-center gap-3 rounded-lg border border-primary/40 bg-primary/5 p-3">
+              <img
+                src="/qr/vstop.png"
+                alt={t("Vstopna QR koda muzeja", "The museum's entrance QR code")}
+                width={88}
+                height={88}
+                loading="lazy"
+                className="h-[88px] w-[88px] shrink-0 rounded-md border bg-[#F7F3EB]"
+              />
+              <div className="min-w-0">
+                <p className="text-sm font-semibold leading-tight">
+                  {t("VSTOP — dobrodošlica obiskovalca", "ENTRANCE — visitor welcome")}
+                </p>
+                <p className="mt-1 break-all font-mono text-[10px] leading-tight text-muted-foreground">
+                  https://griblje-museum.vercel.app/?obisk=1
+                </p>
+              </div>
+            </div>
             {TIME_SPOTS.map((s) => (
               <div key={s.id} className="flex items-center gap-3 rounded-lg border p-3">
                 <img

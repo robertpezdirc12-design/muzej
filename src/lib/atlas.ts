@@ -13,6 +13,7 @@ import {
   spotDistanceFromVillage,
 } from "@/data/atlas/timespots";
 import { PANORAMAS, panoramaDeepLink } from "@/data/atlas/panoramas";
+import { GUIDE_QA, GUIDE_TOTAL, type GuideQA } from "@/data/atlas/guide";
 import {
   GEO_SOURCES,
   GEO_ANCHORS,
@@ -51,6 +52,12 @@ export interface AtlasModel {
     books: ParishBook[];
     houseVitals: HouseVital[];
     stats: ReturnType<typeof parishStats>;
+  };
+  /** AI MUSEUM GUIDE (issue #15, točka 9) — muzejsko preverjena
+      vprašanja/odgovori: podatkovni sloj za bodočega AI vodnika */
+  guide: {
+    total: number;
+    entries: GuideQA[];
   };
 }
 
@@ -224,6 +231,13 @@ export function getAtlasModel(): AtlasModel {
       audioEnUrl: p.audioEnUrl,
       deepLink: panoramaDeepLink(p),
     })),
+    /* AI MUSEUM GUIDE (issue #15, točka 9) — preverjene zgodbe
+       (question/answer/source/status/location/period); AI kasneje
+       odgovarja SAMO iz teh podatkov — vir resnice ostane Atlas/evidence */
+    guide: {
+      total: GUIDE_TOTAL,
+      entries: GUIDE_QA,
+    },
     /* GEOTRUTH (issue #14, P0) — AR sidra, viri, dokazna pot, avdit konfliktov */
     geotruth: {
       sources: GEO_SOURCES,

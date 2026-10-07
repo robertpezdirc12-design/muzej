@@ -5,6 +5,7 @@ import { ThemeProvider } from "next-themes";
 import { LangProvider, useLang } from "@/components/museum/language-context";
 import { MuseumHeader } from "@/components/museum/museum-header";
 import { MuseumHero } from "@/components/museum/museum-hero";
+import { VisitorExperience, useVisitDockActive } from "@/components/museum/visitor-experience";
 import { MuseumRegister } from "@/components/museum/museum-register";
 import { MuseumTimeline } from "@/components/museum/museum-timeline";
 import { MuseumMap } from "@/components/museum/museum-map";
@@ -61,6 +62,9 @@ function MuseumApp() {
 
   /* GPS za zemljevid in AR vodnika — deljen med obema odsekom */
   const geo = useGeolocation();
+
+  /* plavajoča vodica obiska (mobilni) — odmik noge, da je dok ne prekrije */
+  const dockActive = useVisitDockActive();
 
   /* naslov zavihka sledi odprtemu zapisu (deljenje / zaznamki / zgodovina) */
   useEffect(() => {
@@ -119,7 +123,11 @@ function MuseumApp() {
   }, []);
 
   return (
-    <div className="flex min-h-screen flex-col">
+    <div
+      className={`flex min-h-screen flex-col ${
+        dockActive ? "pb-24 lg:pb-0" : ""
+      }`}
+    >
       <MuseumIntro done={introDone} />
       <a
         href="#vsebina"
@@ -130,6 +138,9 @@ function MuseumApp() {
       <MuseumHeader />
       <main id="vsebina" className="flex-1">
         <MuseumHero />
+        {/* MUSEUM VISITOR EXPERIENCE (issue #15): dobrodošlica → voden
+            ogled → napredek → zaključek → spomin; ČEZ obstoječe module */}
+        <VisitorExperience geo={geo} />
         <MuseumRegister onOpen={openExhibit} />
         <MuseumTimeline onOpen={openExhibit} />
         <MuseumMap userFix={geo.fix} onOpen={openExhibit} />
