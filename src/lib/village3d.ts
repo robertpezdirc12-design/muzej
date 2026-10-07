@@ -15,6 +15,7 @@
 
 import { VECTOR_BUILDINGS } from "@/data/atlas/model";
 import { LANDUSE_ZONES } from "@/data/atlas/landuse";
+import presentJson from "@/data/atlas/present.json";
 
 /** izhodišče lokalnega sistema — jedro vasi Grüble (VERIFIED) */
 export const ORIGIN = { lat: 45.5725, lng: 15.2926 };
@@ -146,6 +147,122 @@ export const GROWTH_1900: GrowthBuilding[] = (() => {
   return out;
 })();
 
+/* ── KAJ JE IZGINILO? (issue #12, P1) — 1825 ∩ današnji OSM ──
+   Današnje stavbe: OpenStreetMap posnetek 2026-10-07 (ODbL, api.openstreetmap.org
+   bbox 15.273–15.301 × 45.562–45.5785). Primerjava težišč katastrskih podlatn
+   z današnjimi stavbami → status po stavbi (OBSTOJA / NEGOTOVO / NI VEČ).
+   Odsotnost v OSM posnetku NI dokaz porušitve — status čaka terensko preverbo
+   (dokajeno ravnanje z negotovostjo po vzoru TimeLens/Himera). */
+
+/** status stavbe 1825 glede na današnji OSM posnetek */
+export type BuildingPresence = "exists" | "uncertain" | "gone";
+
+export interface PresentBuilding {
+  id: number;
+  x: number;
+  z: number;
+  w: number;
+  d: number;
+  area: number;
+  type: string;
+}
+
+interface PresentFile {
+  _meta: { osmSnapshot: string; methodSi: string; noteSi: string };
+  present: PresentBuilding[];
+  match: { status: BuildingPresence; d: number | null; osmId: number | null }[];
+}
+
+const PRESENT_FILE = presentJson as unknown as PresentFile;
+
+/** današnje stavbe iz OSM posnetka (lokalni metri, hiše + gospodarske) */
+export const PRESENT_BUILDINGS: PresentBuilding[] = PRESENT_FILE.present;
+
+/** status vsake od 156 stavb 1825 (indeksno usklajeno z BUILDINGS_1825) */
+export const BUILDING_STATUS: BuildingPresence[] = PRESENT_FILE.match.map(
+  (m) => m.status,
+);
+
+/** razdalja do najbližje današnje stavbe (m, null = >9000) */
+export const BUILDING_NEAREST_PRESENT: (number | null)[] =
+  PRESENT_FILE.match.map((m) => m.d);
+
+/** datum OSM posnetka */
+export const OSM_SNAPSHOT = PRESENT_FILE._meta.osmSnapshot;
+
+export const PRESENCE_META = {
+  osmSnapshot: PRESENT_FILE._meta.osmSnapshot,
+  methodSi: PRESENT_FILE._meta.methodSi,
+  sourceSi:
+    "Današnje stavbe: OpenStreetMap (posnetek " +
+    PRESENT_FILE._meta.osmSnapshot +
+    ", © avtorji OSM, ODbL) · kataster 1825: list A02 (SI AS 176)",
+  sourceEn:
+    "Present-day buildings: OpenStreetMap (snapshot " +
+    PRESENT_FILE._meta.osmSnapshot +
+    ", © OSM contributors, ODbL) · 1825 cadastre: sheet A02 (SI AS 176)",
+};
+
+export interface PresenceLegendItem {
+  status: BuildingPresence;
+  dotSi: string;
+  dotEn: string;
+  labelSi: string;
+  labelEn: string;
+  noteSi: string;
+  noteEn: string;
+}
+
+/** legenda statusov (🟢/🟡/🔴) — enako v AR kot v ATLAS 3D */
+export const PRESENCE_LEGEND: PresenceLegendItem[] = [
+  {
+    status: "exists",
+    dotSi: "🟢",
+    dotEn: "🟢",
+    labelSi: "obstaja",
+    labelEn: "still stands",
+    noteSi: "današnja stavba stoji na tlorisu 1825",
+    noteEn: "a present-day building stands on the 1825 footprint",
+  },
+  {
+    status: "uncertain",
+    dotSi: "🟡",
+    dotEn: "🟡",
+    labelSi: "negotovo",
+    labelEn: "uncertain",
+    noteSi: "stavba v 40 m — morda ista domačija, morda ne",
+    noteEn: "a building within 40 m — perhaps the same farmstead, perhaps not",
+  },
+  {
+    status: "gone",
+    dotSi: "🔴",
+    dotEn: "🔴",
+    labelSi: "ni je več",
+    labelEn: "gone",
+    noteSi: "brez stavbe v 40 m — verjetno porušena (terenska preverba čaka)",
+    noteEn: "no building within 40 m — likely demolished (field check pending)",
+  },
+];
+
+/** seštevek statusov 156 stavb + cerkev (obstaja) */
+export const IZGINILO_STATS = (() => {
+  const count = (s: BuildingPresence) =>
+    BUILDING_STATUS.filter((x) => x === s).length;
+  return {
+    exists: count("exists") + 1, /* + cerkev sv. Vida */
+    uncertain: count("uncertain"),
+    gone: count("gone"),
+    total1825: BUILDINGS_1825.length + 1, /* 156 + cerkev */
+    presentCount: PRESENT_BUILDINGS.length,
+    osmSnapshot: OSM_SNAPSHOT,
+  };
+})();
+
+/** status hiše (kataster + OSM); cerkev = poseben primer */
+export function presenceOf(index: number): BuildingPresence {
+  return BUILDING_STATUS[index] ?? "uncertain";
+}
+
 /* ── cone rabe tal na tleh (RECONSTRUCTED ±100–150 m) ── */
 
 export interface GroundZone {
@@ -226,9 +343,13 @@ export const PERIODS: PeriodInfo[] = [
     labelSi: "danes",
     labelEn: "today",
     noteSi:
-      "Duhovi 1825 (žični obris) na današnji pokrajini — primerjava z današnjim stanjem v kameri. Današnje stavbe se rišejo iz ločenega vira (OSM), tu samo obris.",
+      "Kaj je izginilo? Duhovi 1825 na današnji pokrajini, obarvani po stanju: 🟢 obstaja · 🟡 negotovo · 🔴 ni je več (primerjava s stavbami OpenStreetMap, posnetek " +
+      OSM_SNAPSHOT +
+      "). V AR se danes vidi skozi kamero — duhovi povedo, kje je stalo. Odsotnost v OSM posnetku ni dokaz porušitve.",
     noteEn:
-      "Ghosts of 1825 (wireframe) over today's landscape — compare with the present in your camera. Present-day buildings come from a separate source (OSM); only the outline is shown here.",
+      "What has vanished? Ghosts of 1825 over today's landscape, coloured by fate: 🟢 still stands · 🟡 uncertain · 🔴 gone (matched against OpenStreetMap buildings, snapshot " +
+      OSM_SNAPSHOT +
+      "). In AR the present shows through the camera — the ghosts mark where things stood. Absence from the OSM snapshot is not proof of demolition.",
     buildingCount: BUILDINGS_1825.length,
   },
 ];

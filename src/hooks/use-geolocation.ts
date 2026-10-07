@@ -66,6 +66,12 @@ export function useGeolocation(): UseGeolocation {
         });
       },
       (err) => {
+        /* sprosti sledilca, da gumb »Priklopi GPS« ostane uporaben za
+           ponovni poskus (napaka dovoljenja sicer zaklene hook za vedno) */
+        if (watchRef.current != null) {
+          navigator.geolocation.clearWatch(watchRef.current);
+          watchRef.current = null;
+        }
         if (err.code === err.PERMISSION_DENIED) setStatus("denied");
         else {
           setStatus("error");

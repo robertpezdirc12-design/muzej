@@ -5,13 +5,17 @@
  *
  * En prizor, dva načina:
  *  · "ar"     — kamera telefona v ozadju (video), prizor čez; kamera stoji
- *               na uporabnikovem GPS, kompas obrača pogled (kot ar-camera);
+ *               na uporabnikovem GPS (ali na 360° stališču pri cerkvi, issue #12),
+ *               kompas obrača pogled (kot ar-camera);
  *  · "orbit"  — prosto vrtenje/zoom (ATLAS 3D zavihek, namizje).
  *
  * Stavbe: InstancedMesh (sten BoxGeometry + dvokapnice prizma) iz 156 katastrskih
  * podlatn; ~1900 dodana zgostitev jedra (ločen instancovan, poudarjen); "danes"
- * = žični duhovi 1825. Cerkev sv. Vida: obstoječi muzejski GLB model na svoji
- * dokumentirani lokaciji. Tla: cone rabe tal + Kolpa (georef struga).
+ * = KAJ JE IZGINILO (issue #12): duhovi 1825 obarvani po statusu (🟢 obstaja,
+ * 🟡 negotovo, 🔴 ni je več — primerjava z OSM) + današnje OSM stavbe kot
+ * digitalni dvojček (samo orbit; v AR se danes vidi skozi kamero).
+ * Cerkev sv. Vida: obstoječi muzejski GLB model na svoji dokumentirani
+ * lokaciji. Tla: cone rabe tal + Kolpa (georef struga).
  */
 
 import * as THREE from "three";
@@ -23,19 +27,26 @@ import {
   GROUND_ZONES,
   KOLPA_LOCAL,
   CHURCH,
+  PRESENT_BUILDINGS,
+  BUILDING_STATUS,
   type PreparedBuilding,
+  type BuildingPresence,
 } from "@/lib/village3d";
 
 export type SceneMode = "ar" | "orbit";
 export type SceneYear = 1825 | 1900 | 2026;
 
 export interface PickResult {
-  kind: "1825" | "growth";
+  kind: "1825" | "growth" | "present";
   x: number;
   z: number;
   w: number;
   d: number;
   dist: number;
+  /** status stavbe 1825 v primerjavi z OSM (samo kind="1825") */
+  presence?: BuildingPresence;
+  /** indeks v BUILDINGS_1825 (kind="1825") ali PRESENT_BUILDINGS (kind="present") */
+  index?: number;
 }
 
 export interface CaptionSpec {
@@ -89,12 +100,22 @@ interface YearVisual {
   wallsWire: boolean;
   growthOpacity: number;
   showGrowth: boolean;
+  /** današnje OSM stavbe (samo orbit: digitalni dvojček) */
+  presentOpacity: number;
+  showPresent: boolean;
 }
 
 const YEAR_VISUALS: Record<SceneYear, YearVisual> = {
-  1825: { wallsOpacity: 1, roofsOpacity: 1, wallsWire: false, growthOpacity: 0, showGrowth: false },
-  1900: { wallsOpacity: 1, roofsOpacity: 1, wallsWire: false, growthOpacity: 0.96, showGrowth: true },
-  2026: { wallsOpacity: 0.3, roofsOpacity: 0.06, wallsWire: true, growthOpacity: 0, showGrowth: false },
+  1825: { wallsOpacity: 1, roofsOpacity: 1, wallsWire: false, growthOpacity: 0, showGrowth: false, presentOpacity: 0, showPresent: false },
+  1900: { wallsOpacity: 1, roofsOpacity: 1, wallsWire: false, growthOpacity: 0.96, showGrowth: true, presentOpacity: 0, showPresent: false },
+  2026: { wallsOpacity: 0.3, roofsOpacity: 0.06, wallsWire: true, growthOpacity: 0, showGrowth: false, presentOpacity: 0.85, showPresent: true },
+};
+
+/* barve statusov duhov 1825 v načinu »danes« (Kaj je izginilo?) */
+const PRESENCE_COLORS: Record<BuildingPresence, THREE.Color> = {
+  exists: new THREE.Color(0x35c287), /* smaragdna — stoji še danes */
+  uncertain: new THREE.Color(0xe0a63a), /* jantorna — negotovo */
+  gone: new THREE.Color(0xe06a5a), /* opečno rdeča — ni je več */
 };
 
 export class VillageScene {
@@ -110,10 +131,12 @@ export class VillageScene {
   private roofs1825: THREE.InstancedMesh;
   private wallsGrowth: THREE.InstancedMesh;
   private roofsGrowth: THREE.InstancedMesh;
+  private wallsPresent: THREE.InstancedMesh;
   private wallsMat: THREE.MeshLambertMaterial;
   private roofsMat: THREE.MeshLambertMaterial;
   private growthWallsMat: THREE.MeshLambertMaterial;
   private growthRoofsMat: THREE.MeshLambertMaterial;
+  private presentMat: THREE.MeshLambertMaterial;
   private groundPlane: THREE.Mesh;
   private churchRoot: THREE.Group | null = null;
 
@@ -123,6 +146,8 @@ export class VillageScene {
 
   /* AR pozicioniranje */
   private fix: { x: number; z: number } | null = null;
+  /** dvig oči nad tlemi (360° vzpon pri cerkvi) */
+  private fixElev = 0;
   private compassYaw: number | null = null;
   private manualYaw = 0;
   private manualPitch = 0;
@@ -247,6 +272,29 @@ export class VillageScene {
     const scl = new THREE.Vector3();
     const yAxis = new THREE.Vector3(0, 1, 0);
 
+    /* današnje stavbe (OSM posnetek) — digitalni dvojček, sivo-zelena masa,
+       višine ocenjene (enake za vse: OSM višin ne hrani) */
+    this.presentMat = new THREE.MeshLambertMaterial({
+      color: 0x6b7566,
+      transparent: true,
+      opacity: 0,
+    });
+    this.wallsPresent = new THREE.InstancedMesh(
+      box,
+      this.presentMat,
+      PRESENT_BUILDINGS.length,
+    );
+    PRESENT_BUILDINGS.forEach((b, i) => {
+      pos.set(b.x, 0, b.z);
+      scl.set(b.w, 2.8, b.d);
+      m4.compose(pos, q, scl);
+      this.wallsPresent.setMatrixAt(i, m4);
+    });
+    this.wallsPresent.instanceMatrix.needsUpdate = true;
+    this.wallsPresent.frustumCulled = false;
+    this.wallsPresent.visible = false;
+    this.scene.add(this.wallsPresent);
+
     const fill = (
       mesh: THREE.InstancedMesh,
       arr: { x: number; z: number; w: number; d: number; rotY: number; wallH: number; roofH: number }[],
@@ -270,6 +318,11 @@ export class VillageScene {
     this.wallsGrowth.visible = false;
     this.roofsGrowth.visible = false;
     this.scene.add(this.walls1825, this.roofs1825, this.wallsGrowth, this.roofsGrowth);
+
+    /* statusne barve duhov 1825 (Kaj je izginilo?) — instanceColor se
+       MNOŽI z barvo materiala, zato v režimu 1825/1900 vsem bela (brez spremembe)
+       in v režimu »danes« razmerje ciljna/materialna. */
+    this.applyPresenceColors(false);
 
     /* cerkev sv. Vida — muzejski GLB na dokumentirani lokaciji */
     new GLTFLoader().load(
@@ -330,12 +383,14 @@ export class VillageScene {
     }
   }
 
-  setFix(x: number | null, z: number | null) {
+  setFix(x: number | null, z: number | null, elev?: number) {
     if (x != null && z != null) {
       this.fix = { x, z };
+      this.fixElev = elev ?? 0;
       this.hasFixEver = true;
     } else {
       this.fix = null;
+      this.fixElev = 0;
     }
   }
 
@@ -425,6 +480,24 @@ export class VillageScene {
 
   /* ── notranje ── */
 
+  /** barve duhov 1825 po statusu (Kaj je izginilo?) — ghost=true v »danes« */
+  private applyPresenceColors(ghost: boolean) {
+    const base = new THREE.Color(0xd8cdb8);
+    const c = new THREE.Color();
+    for (let i = 0; i < BUILDINGS_1825.length; i++) {
+      if (ghost) {
+        const target = PRESENCE_COLORS[BUILDING_STATUS[i] ?? "uncertain"];
+        c.setRGB(target.r / base.r, target.g / base.g, target.b / base.b);
+      } else {
+        c.setRGB(1, 1, 1);
+      }
+      this.walls1825.setColorAt(i, c);
+    }
+    if (this.walls1825.instanceColor) {
+      this.walls1825.instanceColor.needsUpdate = true;
+    }
+  }
+
   private enableOrbit() {
     this.controls = new OrbitControls(this.camera, this.canvas);
     this.controls.enableDamping = true;
@@ -481,10 +554,25 @@ export class VillageScene {
     );
     const ray = new THREE.Raycaster();
     ray.setFromCamera(ndc, this.camera);
-    const targets = [this.walls1825, this.wallsGrowth].filter((m) => m.visible);
+    const targets = [this.wallsPresent, this.walls1825, this.wallsGrowth].filter(
+      (m) => m.visible,
+    );
     const hits = ray.intersectObjects(targets, false);
     const hit = hits[0];
     if (!hit || hit.instanceId == null) return null;
+    if (hit.object === this.wallsPresent) {
+      const src = PRESENT_BUILDINGS[hit.instanceId];
+      if (!src) return null;
+      return {
+        kind: "present",
+        index: hit.instanceId,
+        x: src.x,
+        z: src.z,
+        w: src.w,
+        d: src.d,
+        dist: Math.hypot(this.camera.position.x - src.x, this.camera.position.z - src.z),
+      };
+    }
     const isGrowth = hit.object === this.wallsGrowth;
     const src: PreparedBuilding | (typeof GROWTH_1900)[number] = isGrowth
       ? GROWTH_1900[hit.instanceId]
@@ -492,6 +580,8 @@ export class VillageScene {
     if (!src) return null;
     return {
       kind: isGrowth ? "growth" : "1825",
+      index: isGrowth ? undefined : hit.instanceId,
+      presence: isGrowth ? undefined : (BUILDING_STATUS[hit.instanceId] ?? "uncertain"),
       x: src.x,
       z: src.z,
       w: src.w,
@@ -521,19 +611,27 @@ export class VillageScene {
     this.vis.wallsOpacity += (tv.wallsOpacity - this.vis.wallsOpacity) * 0.09;
     this.vis.roofsOpacity += (tv.roofsOpacity - this.vis.roofsOpacity) * 0.09;
     this.vis.growthOpacity += (tv.growthOpacity - this.vis.growthOpacity) * 0.09;
+    /* današnje stavbe: digitalni dvojček samo v orbitu (AR kaže danes skozi kamero) */
+    const presentTarget =
+      tv.showPresent && this.mode === "orbit" ? tv.presentOpacity : 0;
+    this.vis.presentOpacity += (presentTarget - this.vis.presentOpacity) * 0.09;
     if (this.wallsMat.wireframe !== tv.wallsWire) {
       /* zamenjaj žični način, ko je prehod že blizu konca */
       if (Math.abs(this.vis.wallsOpacity - tv.wallsOpacity) < 0.35) {
         this.wallsMat.wireframe = tv.wallsWire;
+        /* ob preklopu v/a iz duhov prebarvaj stavbe po statusu */
+        this.applyPresenceColors(tv.wallsWire);
       }
     }
     this.wallsMat.opacity = this.vis.wallsOpacity;
     this.roofsMat.opacity = this.vis.roofsOpacity;
     this.growthWallsMat.opacity = this.vis.growthOpacity;
     this.growthRoofsMat.opacity = this.vis.growthOpacity;
+    this.presentMat.opacity = this.vis.presentOpacity;
     const showGrowth = this.vis.growthOpacity > 0.05;
     this.wallsGrowth.visible = showGrowth;
     this.roofsGrowth.visible = showGrowth;
+    this.wallsPresent.visible = this.vis.presentOpacity > 0.04;
 
     if (this.mode === "orbit") {
       this.controls?.update();
@@ -555,7 +653,7 @@ export class VillageScene {
       }
       this.curX += (px - this.curX) * 0.25;
       this.curZ += (pz - this.curZ) * 0.25;
-      this.camera.position.set(this.curX, EYE_H, this.curZ);
+      this.camera.position.set(this.curX, EYE_H + this.fixElev, this.curZ);
       this.camera.rotation.set(
         THREE.MathUtils.degToRad(this.curPitch),
         THREE.MathUtils.degToRad(-this.curYaw),

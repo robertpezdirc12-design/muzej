@@ -5,7 +5,7 @@ import { ATLAS_SOURCES, NEGATIVE_RESULTS, HERITAGE_UNITS, type AtlasSource } fro
 import { ATLAS_HOUSES, type AtlasHouse } from "@/data/atlas/houses";
 import { ATLAS_OWNERS, ATLAS_LOCATIONS, SHEET_GEOREFS, VECTOR_BUILDINGS } from "@/data/atlas/model";
 import { PARISH, PARISH_BOOKS, HOUSE_VITALS, type HouseVital, type ParishBook } from "@/data/atlas/parish";
-import { BUILDINGS_1825, GROWTH_1900, PERIODS } from "@/lib/village3d";
+import { BUILDINGS_1825, GROWTH_1900, PERIODS, IZGINILO_STATS, PRESENCE_META } from "@/lib/village3d";
 import { TIME_SPOTS, spotYearParam } from "@/data/atlas/timespots";
 
 export interface AtlasModel {
@@ -147,6 +147,22 @@ export function getAtlasModel(): AtlasModel {
       methodologyEn:
         "Procedural extrusion of cadastral footprints (LagunAR approach): footprints measured (sheet A02), heights/orientations interpreted; land use from VLM analysis; Kolpa georeferenced; church = museum GLB model.",
       deepLink: "/?casovni=1825",
+      /* Kaj je izginilo? (issue #12) — 1825 ∩ OSM po stavbi */
+      izginilo: {
+        exists: IZGINILO_STATS.exists,
+        uncertain: IZGINILO_STATS.uncertain,
+        gone: IZGINILO_STATS.gone,
+        total1825: IZGINILO_STATS.total1825,
+        presentCount: IZGINILO_STATS.presentCount,
+        osmSnapshot: IZGINILO_STATS.osmSnapshot,
+        status: "INTERPRETATION",
+        noteSi: PRESENCE_META.methodSi,
+        noteEn:
+          "Centroid matching of 156 cadastral footprints against present-day OSM buildings. exists: d≤8 m or (d≤20 m & overlap≥0.10); uncertain: building within 40 m or a small structure on the footprint; gone: none within 40 m. Absence from the OSM snapshot is NOT proof of demolition — field verification pending. St. Vitus' church: exists (1825 cadastre + standing building, 500th anniversary).",
+        sourceSi: PRESENCE_META.sourceSi,
+        sourceEn: PRESENCE_META.sourceEn,
+        deepLink: "/?casovni=danes",
+      },
     },
     /* AR TIME SPOTS (issue #11) — časovne točke s QR vhodi (Nîmes vzorec) */
     timeSpots: TIME_SPOTS.map((s) => ({

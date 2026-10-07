@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import dynamic from "next/dynamic";
-import { CheckCircle2, Hourglass, Map, QrCode, Sparkles, X } from "lucide-react";
+import { CheckCircle2, Hourglass, Map, QrCode, RotateCw, Sparkles, X } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { useLang } from "./language-context";
@@ -269,6 +269,20 @@ export function MuseumMap({
                   `VIEW IN AR — ${spotYearParam(activeSpot.year)}`,
                 )}
               </button>
+              {/* 360° s cerkve (issue #12): virtualni pogled za doma/iOS brez GPS */}
+              {activeSpot.id === "cerkev" && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    openTM(1825, "cerkev", true);
+                    setActiveSpot(null);
+                  }}
+                  className="inline-flex items-center gap-2 rounded-lg border border-primary/40 px-4 py-2.5 text-sm font-semibold text-primary transition-colors hover:bg-primary/10"
+                >
+                  <RotateCw className="size-4" aria-hidden="true" />
+                  {t("360° S CERKVE", "360° FROM THE CHURCH")}
+                </button>
+              )}
               <button
                 type="button"
                 onClick={() => {

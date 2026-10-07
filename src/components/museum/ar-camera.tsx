@@ -337,6 +337,8 @@ export function ARCameraView({
             <model-viewer
               ref={mvRef}
               src={exhibit.model3dUrl}
+              /* iOS nima WebXR — USDZ dvojnik odpre AR Quick Look (Nîmes vzorec) */
+              ios-src={exhibit.model3dUrl.replace(/\.glb$/, ".usdz")}
               alt={t(
                 `Interpretativni 3D-model: ${title}`,
                 `Interpretive 3D model: ${title}`,

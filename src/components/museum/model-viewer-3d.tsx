@@ -35,13 +35,15 @@ export function ModelViewer3D({
       </h2>
       <p className="mt-1 text-xs text-muted-foreground">
         {t(
-          "Zavrtite s prstom ali miško; približajte s koleščkom ali ščepom.",
-          "Drag to orbit; scroll or pinch to zoom.",
+          "Zavrtite s prstom ali miško; približajte s koleščkom ali ščepom. Na telefonu: Postavi v prostor — Android (WebXR) ali iPhone (AR Quick Look).",
+          "Drag to orbit; scroll or pinch to zoom. On your phone: place it in your space — Android (WebXR) or iPhone (AR Quick Look).",
         )}
       </p>
       <div className="mt-3 overflow-hidden rounded-xl border bg-secondary/40">
         <model-viewer
           src={src}
+          /* dual model (issue #12): Android/WebXR → GLB, iPhone → USDZ Quick Look */
+          ios-src={src.replace(/\.glb$/, ".usdz")}
           alt={t(
             "Interpretativni 3D-model: cerkev sv. Vida v Gribljah",
             "Interpretive 3D model: the church of St. Vid in Griblje",
@@ -55,6 +57,10 @@ export function ModelViewer3D({
           camera-orbit="-35deg 68deg auto"
           max-field-of-view="45deg"
           interaction-prompt="auto"
+          ar
+          ar-modes="webxr scene-viewer quick-look"
+          ar-placement="floor"
+          ar-scale="auto"
           className="block h-[340px] w-full sm:h-[400px] [&::part(default-progress-bar)]:hidden"
         >
           <div

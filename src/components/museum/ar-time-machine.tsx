@@ -14,6 +14,13 @@
  *  · AR TIME SPOTS (issue #11): ko obiskovalec stopi znotraj radija točke,
  *    se ta odklene (TimeLens vzorec) in pokaže kartico »kaj je tu nekoč
  *    stalo« z viri; brez senzorjev se točko izbere ročno (pošten predogled);
+ *  · KAJ JE IZGINILO? (issue #12): v letu »danes« so duhovi 1825 obarvani
+ *    po usodi (🟢 obstaja · 🟡 negotovo · 🔴 ni je več — 1825 ∩ OSM posnetek);
+ *  · 360° S CERKVE (issue #12): fiksno stališče pri cerkvi sv. Vida — obrat
+ *    pogleda na žiroskopu/kompasu (ali vlečenju), preklapljanje 1825 ⇄ danes
+ *    = pogovor preteklost ↔ sedanjost (Nîmes Tour Magne vzorec);
+ *  · TTS (issue #12): kartica točke se prebere naglas — statični MP3 ali
+ *    brskalnikov speechSynthesis kot zastonj fallback (brez plačljivih API);
  *  · brez senzorjev: pošten predogled (vlečenje obrača pogled).
  *
  * Kot pri ar-camera: nič se ne izmišljuje — kar manjka (kamera, kompas, GPS),
@@ -22,7 +29,6 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import {
-  Camera,
   CheckCircle2,
   Clock,
   Compass,
@@ -30,13 +36,26 @@ import {
   Home,
   Lock,
   MapPin,
+  Pause,
+  RotateCw,
   Share2,
   Sparkles,
+  Volume2,
   X,
 } from "lucide-react";
 import { useLang } from "./language-context";
 import { useTimeMachine, type TimeYear } from "@/lib/time-machine-store";
-import { PERIODS, toLocal, ORIGIN, CORE_R } from "@/lib/village3d";
+import {
+  PERIODS,
+  toLocal,
+  ORIGIN,
+  CORE_R,
+  CHURCH,
+  IZGINILO_STATS,
+  BUILDING_NEAREST_PRESENT,
+  PRESENCE_META,
+  type BuildingPresence,
+} from "@/lib/village3d";
 import { distanceM, formatDistance, type GeoFix } from "@/lib/geo";
 import type { UseGeolocation } from "@/hooks/use-geolocation";
 import type { PickResult } from "./village-scene";
@@ -55,13 +74,41 @@ interface DeviceOrientationEventIOS extends DeviceOrientationEvent {
 }
 
 interface BuildingCard {
-  kind: "1825" | "growth";
+  kind: "1825" | "growth" | "present";
   w: number;
   d: number;
   dist: number;
   nearChurch: boolean;
   core: boolean;
+  /** status stavbe 1825 (leto »danes« — Kaj je izginilo?) */
+  presence?: BuildingPresence;
+  /** razdalja do najbližje današnje stavbe (m) */
+  nearestPresent?: number | null;
 }
+
+/** 360° stališče: vzpon pri cerkvi sv. Vida (virtualni pogled +6 m) */
+const CHURCH_RISE = 6;
+
+const PRESENCE_CHIP: Record<
+  BuildingPresence,
+  { si: string; en: string; cls: string }
+> = {
+  exists: {
+    si: "🟢 OBSTOJA",
+    en: "🟢 STILL STANDS",
+    cls: "border-emerald-300/40 bg-emerald-400/15 text-emerald-200",
+  },
+  uncertain: {
+    si: "🟡 NEGOTOVO",
+    en: "🟡 UNCERTAIN",
+    cls: "border-amber-300/40 bg-amber-400/15 text-amber-200",
+  },
+  gone: {
+    si: "🔴 NI JE VEČ",
+    en: "🔴 GONE",
+    cls: "border-red-300/40 bg-red-400/15 text-red-200",
+  },
+};
 
 export function ARTimeMachine({
   geo,
@@ -71,7 +118,7 @@ export function ARTimeMachine({
   onOpenExhibit: (slug: string) => void;
 }) {
   const { t, lang } = useLang();
-  const { year, setYear, close, spot: storeSpot } = useTimeMachine();
+  const { year, setYear, close, spot: storeSpot, p360, setP360 } = useTimeMachine();
   const { unlock, isUnlocked, unlocked } = useTimespots();
   const { fix, status, start } = geo;
 
@@ -91,6 +138,10 @@ export function ARTimeMachine({
   const [spotCard, setSpotCard] = useState<TimeSpot | null>(null);
   const [spotJustUnlocked, setSpotJustUnlocked] = useState<TimeSpot | null>(null);
   const autoSpotRef = useRef<string | null>(null);
+
+  /* TTS (issue #12): statični MP3 → speechSynthesis fallback */
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [playing, setPlaying] = useState(false);
 
   const period = PERIODS.find((p) => p.year === year) ?? PERIODS[0];
 
@@ -120,13 +171,25 @@ export function ARTimeMachine({
             w: Math.round(p.w),
             d: Math.round(p.d),
             dist: p.dist,
-            nearChurch: Math.hypot(p.x - 0, p.z - 0) < 80,
+            nearChurch: Math.hypot(p.x - CHURCH.x, p.z - CHURCH.z) < 80,
             core: Math.hypot(p.x, p.z) <= CORE_R,
+            presence: p.presence,
+            nearestPresent:
+              p.kind === "1825" && p.index != null
+                ? BUILDING_NEAREST_PRESENT[p.index]
+                : undefined,
           });
           setHint(false);
         },
       });
       scene.setYear(yearRef.current);
+      /* začetno sidro: 360° stališče pri cerkvi ali GPS (ali predogled) */
+      if (useTimeMachine.getState().p360) {
+        scene.setFix(CHURCH.x, CHURCH.z, CHURCH_RISE);
+      } else if (fixRef.current) {
+        const { x, z } = toLocal(fixRef.current.lat, fixRef.current.lng);
+        scene.setFix(x, z);
+      }
       sceneRef.current = scene;
     });
     return () => {
@@ -198,13 +261,22 @@ export function ARTimeMachine({
     setCard(null);
   }, [year]);
 
-  /* ── GPS → sidro prizora ── */
+  /* ── GPS / 360° → sidro prizora ── */
+  const fixRef = useRef(fix);
+  fixRef.current = fix;
   useEffect(() => {
-    if (fix) {
+    const sc = sceneRef.current;
+    if (!sc) return;
+    if (p360) {
+      /* 360°: fiksno stališče pri cerkvi sv. Vida (virtualni vzpon +6 m) */
+      sc.setFix(CHURCH.x, CHURCH.z, CHURCH_RISE);
+    } else if (fix) {
       const { x, z } = toLocal(fix.lat, fix.lng);
-      sceneRef.current?.setFix(x, z);
+      sc.setFix(x, z);
+    } else {
+      sc.setFix(null, null);
     }
-  }, [fix]);
+  }, [fix, p360]);
 
   /* ── GPS → bližina TIME SPOTA: odklep ob prihodu (TimeLens vzorec) ── */
   useEffect(() => {
@@ -247,6 +319,76 @@ export function ARTimeMachine({
     setIosCompassBlocked(false);
   }, []);
 
+  /* ── TTS (issue #12): poslušaj zgodbo točke ──
+     Najprej statični MP3 (boljši glas), ob napaki/odsotnosti pa brskalnikov
+     speechSynthesis — sistem ostaja brez obvezne plačljive storitve. */
+  const stopAudio = useCallback(() => {
+    audioRef.current?.pause();
+    audioRef.current = null;
+    window.speechSynthesis?.cancel();
+    setPlaying(false);
+  }, []);
+
+  const speakFallback = useCallback(
+    (text: string) => {
+      const synth = window.speechSynthesis;
+      if (!synth) return;
+      synth.cancel();
+      const u = new SpeechSynthesisUtterance(text);
+      const want = lang === "si" ? "sl" : "en";
+      /* izberi glas ciljnega jezika, če ga naprava ima (nalaga se
+         asinhrono — ob prvem klicu je seznam lahko še prazen) */
+      const voices = synth.getVoices();
+      const v =
+        voices.find((x) => x.lang.toLowerCase().startsWith(want)) ??
+        voices.find((x) => x.lang.toLowerCase().startsWith("en"));
+      if (v) u.voice = v;
+      u.lang = lang === "si" ? "sl-SI" : "en-GB";
+      u.rate = 0.95;
+      u.onend = () => setPlaying(false);
+      u.onerror = () => setPlaying(false);
+      setPlaying(true);
+      synth.speak(u);
+    },
+    [lang],
+  );
+
+  const toggleSpotAudio = useCallback(
+    async (spot: TimeSpot) => {
+      if (playing) {
+        stopAudio();
+        return;
+      }
+      stopAudio();
+      const text = `${lang === "si" ? spot.titleSi : spot.titleEn}. ${
+        lang === "si" ? spot.descSi : spot.descEn
+      }`;
+      const url = `/audio/timespots/${spot.id}-${lang === "si" ? "si" : "en"}.mp3`;
+      try {
+        const res = await fetch(url, { method: "HEAD" });
+        if (res.ok) {
+          const a = new Audio(url);
+          audioRef.current = a;
+          a.onended = () => setPlaying(false);
+          a.onerror = () => speakFallback(text);
+          await a.play();
+          setPlaying(true);
+          return;
+        }
+      } catch {
+        /* datoteke ni → govor brskalnika */
+      }
+      speakFallback(text);
+    },
+    [lang, playing, speakFallback, stopAudio],
+  );
+
+  /* konec predvajanja ob zaprtju / zamenjavi kartice */
+  useEffect(() => stopAudio, [stopAudio]);
+  useEffect(() => {
+    if (!spotCard) stopAudio();
+  }, [spotCard, stopAudio]);
+
   /* razdalja uporabnika od jedra vasi (predogled/na lokaciji) */
   const coreDistance =
     fix && fix.lat != null && fix.lng != null
@@ -262,15 +404,21 @@ export function ARTimeMachine({
     if (!sc) return;
     const y = year === 2026 ? "danes" : year === 1900 ? "~1900" : "1825";
     const data = sc.capture(videoRef.current, {
-      title: t(
-        `Griblje ${y} — rekonstrukcija vasi`,
-        `Griblje ${y} — village reconstruction`,
-      ),
+      title:
+        year === 2026
+          ? t(`Griblje ${y} — kaj je izginilo?`, `Griblje ${y} — what has vanished?`)
+          : t(`Griblje ${y} — rekonstrukcija vasi`, `Griblje ${y} — village reconstruction`),
       sub: t(
         "Muzej vasi Griblje · 3D rekonstrukcija iz Franciscejskega katastra (list A02, SI AS 176)",
         "Museum of Griblje village · 3D reconstruction from the Franciscean cadastre (sheet A02, SI AS 176)",
       ),
-      credit: "griblje-museum.vercel.app · RECONSTRUCTED",
+      credit:
+        year === 2026
+          ? t(
+              `griblje-museum.vercel.app · 1825 ∩ OSM ${IZGINILO_STATS.osmSnapshot}`,
+              `griblje-museum.vercel.app · 1825 ∩ OSM ${IZGINILO_STATS.osmSnapshot}`,
+            )
+          : "griblje-museum.vercel.app · RECONSTRUCTED",
     });
     if (!data) {
       setSaved("error");
@@ -435,7 +583,52 @@ export function ARTimeMachine({
             {t("Omogoči kompas", "Enable compass")}
           </button>
         )}
+        {/* 360° s cerkve (issue #12): fiksno stališče, žiroskop/kompas obrača pogled */}
+        <button
+          type="button"
+          onClick={() => {
+            setP360(!p360);
+            setHint(false);
+          }}
+          aria-pressed={p360}
+          className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-medium backdrop-blur transition-colors ${
+            p360
+              ? "border-primary bg-primary text-primary-foreground"
+              : "border-white/25 bg-black/45 text-white hover:bg-black/60"
+          }`}
+        >
+          <RotateCw className="size-3.5" aria-hidden="true" />
+          {t("360° s cerkve", "360° from the church")}
+        </button>
       </div>
+
+      {/* ── KAJ JE IZGINILO? legenda (leto »danes«, issue #12) ── */}
+      {year === 2026 && (
+        <div
+          className="relative z-10 mt-2 flex flex-wrap items-center gap-2 px-4"
+          role="group"
+          aria-label={t("Kaj je izginilo — legenda statusov", "What has vanished — status legend")}
+        >
+          <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-white/25 bg-black/45 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur">
+            {t("Kaj je izginilo?", "What has vanished?")}
+          </span>
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-black/45 px-3 py-1.5 text-xs text-white/90 backdrop-blur">
+            🟢 {t("obstaja", "stands")} · {IZGINILO_STATS.exists}
+          </span>
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-black/45 px-3 py-1.5 text-xs text-white/90 backdrop-blur">
+            🟡 {t("negotovo", "uncertain")} · {IZGINILO_STATS.uncertain}
+          </span>
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-black/45 px-3 py-1.5 text-xs text-white/90 backdrop-blur">
+            🔴 {t("ni je več", "gone")} · {IZGINILO_STATS.gone}
+          </span>
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-black/45 px-3 py-1.5 text-[11px] text-white/70 backdrop-blur">
+            {t(
+              `OSM posnetek ${IZGINILO_STATS.osmSnapshot} · od ${IZGINILO_STATS.total1825} stavb 1825`,
+              `OSM snapshot ${IZGINILO_STATS.osmSnapshot} · of ${IZGINILO_STATS.total1825} buildings of 1825`,
+            )}
+          </span>
+        </div>
+      )}
 
       {/* ── AR TIME SPOTS: izbirnik točk (odklop GPS → ročna izbira, pošteno) ── */}
       <div
@@ -477,7 +670,7 @@ export function ARTimeMachine({
       </div>
 
       {/* prvi namig */}
-      {hint && !spotCard && (
+      {hint && !spotCard && !p360 && (
         <div className="relative z-10 mx-auto mt-8 max-w-sm rounded-xl border border-white/20 bg-black/50 p-4 text-center backdrop-blur">
           <p className="text-sm leading-relaxed text-white/90">
             {t(
@@ -491,6 +684,29 @@ export function ARTimeMachine({
             className="mt-2 text-xs font-medium text-white/70 underline underline-offset-2 hover:text-white"
           >
             {t("Razumem", "Got it")}
+          </button>
+        </div>
+      )}
+
+      {/* 360° način: poudarjena plošča z navodilom (issue #12) */}
+      {p360 && (
+        <div className="relative z-10 mx-auto mt-4 max-w-md rounded-xl border border-primary/40 bg-black/55 p-3 text-center backdrop-blur">
+          <p className="text-sm font-semibold text-white">
+            <RotateCw className="mr-1.5 inline size-4" aria-hidden="true" />
+            {t("360° s cerkve sv. Vida", "360° from St. Vitus' church")}
+          </p>
+          <p className="mt-1 text-xs leading-relaxed text-white/80">
+            {t(
+              "Obrni se okoli sebe (ali vleci po zaslonu) in preklapljaj leta — ista točka, dva svetova: 1825 ⇄ danes. Virtualno stališče: vzpon pri cerkvi, +6 m.",
+              "Turn around yourself (or drag the screen) and switch years — one spot, two worlds: 1825 ⇄ today. Virtual viewpoint: the rise by the church, +6 m.",
+            )}
+          </p>
+          <button
+            type="button"
+            onClick={() => setP360(false)}
+            className="mt-2 text-xs font-medium text-amber-200 underline underline-offset-2 hover:text-amber-100"
+          >
+            {t("nazaj na svoj GPS", "back to my own GPS")}
           </button>
         </div>
       )}
@@ -562,6 +778,30 @@ export function ARTimeMachine({
               {lang === "si" ? spotCard.evidenceSi : spotCard.evidenceEn}
             </p>
 
+            {/* TTS (issue #12): poslušaj zgodbo točke — MP3 ali speechSynthesis */}
+            <button
+              type="button"
+              onClick={() => void toggleSpotAudio(spotCard)}
+              className={`mt-2.5 inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-medium transition-colors ${
+                playing
+                  ? "border-primary/60 bg-primary/20 text-white"
+                  : "border-white/25 bg-white/10 text-white/90 hover:bg-white/20"
+              }`}
+              aria-pressed={playing}
+            >
+              {playing ? (
+                <>
+                  <Pause className="size-3.5" aria-hidden="true" />
+                  {t("Ustavi pripoved", "Stop narration")}
+                </>
+              ) : (
+                <>
+                  <Volume2 className="size-3.5" aria-hidden="true" />
+                  {t("Poslušaj — pripoved", "Listen — narration")}
+                </>
+              )}
+            </button>
+
             <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 border-t border-white/15 pt-2 text-xs">
               <button
                 type="button"
@@ -603,13 +843,27 @@ export function ARTimeMachine({
             <div className="flex items-start justify-between gap-3">
               <div className="min-w-0">
                 <p className="font-display text-sm font-semibold">
-                  {card.kind === "growth"
-                    ? t("Stavba ~1900 (ocena)", "Building ~1900 (estimate)")
-                    : t("Stavba ~1825 — kataster", "Building ~1825 — cadastre")}
+                  {card.kind === "present"
+                    ? t("Današnja stavba — OSM", "Present-day building — OSM")
+                    : card.kind === "growth"
+                      ? t("Stavba ~1900 (ocena)", "Building ~1900 (estimate)")
+                      : year === 2026
+                        ? t("Stavba 1825 — duh", "Building of 1825 — ghost")
+                        : t("Stavba ~1825 — kataster", "Building ~1825 — cadastre")}
                 </p>
                 {/* evidence čip po stavbi (TimeLens/Himera: domneve nikoli kot dejstva) */}
                 <p className="mt-1.5 flex flex-wrap items-center gap-2 text-[11px]">
-                  {card.kind === "growth" ? (
+                  {card.kind === "present" ? (
+                    <>
+                      <span className="inline-flex items-center gap-1.5 rounded-full border border-sky-300/40 bg-sky-400/15 px-2 py-0.5 font-semibold text-sky-200">
+                        <span className="size-1.5 rounded-full bg-sky-300" aria-hidden="true" />
+                        {t("DOKUMENTIRANO · OSM", "DOCUMENTED · OSM")}
+                      </span>
+                      <span className="text-white/70">
+                        {lang === "si" ? PRESENCE_META.sourceSi : PRESENCE_META.sourceEn}
+                      </span>
+                    </>
+                  ) : card.kind === "growth" ? (
                     <>
                       <span className="inline-flex items-center gap-1.5 rounded-full border border-amber-300/40 bg-amber-400/15 px-2 py-0.5 font-semibold text-amber-200">
                         <span className="size-1.5 rounded-full bg-amber-300" aria-hidden="true" />
@@ -620,6 +874,50 @@ export function ARTimeMachine({
                           "ocena zgoščevanja jedra ~1900 — ni v katastru 1825",
                           "core-densification estimate ~1900 — not in the 1825 cadastre",
                         )}
+                      </span>
+                    </>
+                  ) : year === 2026 && card.presence ? (
+                    <>
+                      <span
+                        className={`inline-flex items-center gap-1.5 rounded-full border px-2 py-0.5 font-semibold ${
+                          PRESENCE_CHIP[card.presence].cls
+                        }`}
+                      >
+                        {lang === "si"
+                          ? PRESENCE_CHIP[card.presence].si
+                          : PRESENCE_CHIP[card.presence].en}
+                      </span>
+                      <span className="text-white/70">
+                        {card.presence === "gone"
+                          ? t(
+                              `najbližja današnja stavba: ${
+                                card.nearestPresent != null
+                                  ? formatDistance(card.nearestPresent, lang)
+                                  : t("več kot 1 km", "more than 1 km")
+                              } · viri: kataster 1825 (A02) + OSM posnetek ${IZGINILO_STATS.osmSnapshot} — terenska preverba čaka`,
+                              `nearest present-day building: ${
+                                card.nearestPresent != null
+                                  ? formatDistance(card.nearestPresent, lang)
+                                  : t("more than 1 km", "more than 1 km")
+                              } · sources: 1825 cadastre (A02) + OSM snapshot ${IZGINILO_STATS.osmSnapshot} — field check pending`,
+                            )
+                          : card.presence === "uncertain"
+                            ? t(
+                                `današnja stavba v ${
+                                  card.nearestPresent != null
+                                    ? formatDistance(card.nearestPresent, lang)
+                                    : ""
+                                } — morda ista domačija · viri: kataster 1825 (A02) + OSM`,
+                                `a present-day building within ${
+                                  card.nearestPresent != null
+                                    ? formatDistance(card.nearestPresent, lang)
+                                    : ""
+                                } — perhaps the same farmstead · sources: 1825 cadastre (A02) + OSM`,
+                              )
+                            : t(
+                                "današnja stavba stoji na tlorisu 1825 · viri: kataster 1825 (A02) + OSM",
+                                "a present-day building stands on the 1825 footprint · sources: 1825 cadastre (A02) + OSM",
+                              )}
                       </span>
                     </>
                   ) : (
@@ -655,7 +953,14 @@ export function ARTimeMachine({
             </div>
 
             <div className="mt-3 space-y-2 text-xs leading-relaxed text-white/80">
-              {card.kind === "growth" ? (
+              {card.kind === "present" ? (
+                <p>
+                  {t(
+                    "Siva masa = digitalni dvojček današnjih stavb vasi (samo v 3D pregledu). Višine niso zabeležene v OSM — prikazane so ocena. V AR se današnje vidi skozi kamero, duhovi 1825 pa povedo, kje je kaj stalo.",
+                    "The grey mass = digital twin of today's village buildings (3D viewer only). Heights are not recorded in OSM — shown as an estimate. In AR the present shows through the camera, while the ghosts of 1825 mark what stood where.",
+                  )}
+                </p>
+              ) : card.kind === "growth" ? (
                 <p>
                   {t(
                     "OCENA ~1900: hlev/kašča, zgoščevanje jedra po delitvi domačij — ni v katastru 1825.",
@@ -673,6 +978,14 @@ export function ARTimeMachine({
                       )}
                     </span>
                   </p>
+                  {year === 2026 && (
+                    <p className="text-white/75">
+                      {t(
+                        `Kaj je izginilo: iz ${IZGINILO_STATS.total1825} stavb 1825 jih današnji posnetek pozna le ${IZGINILO_STATS.exists} · ${IZGINILO_STATS.uncertain} negotovih · ${IZGINILO_STATS.gone} jih ni več. Zaselki na zahodu so jih pogoltnili gozdovi.`,
+                        `What has vanished: of the ${IZGINILO_STATS.total1825} buildings of 1825, today's snapshot knows only ${IZGINILO_STATS.exists} · ${IZGINILO_STATS.uncertain} uncertain · ${IZGINILO_STATS.gone} are gone. The western hamlets were swallowed by forests.`,
+                      )}
+                    </p>
+                  )}
                   {card.core && (
                     <p>
                       {t(

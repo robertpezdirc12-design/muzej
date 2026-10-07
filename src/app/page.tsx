@@ -75,7 +75,8 @@ function MuseumApp() {
 
   /* uvodni zaslon — kot v izvirniku; nato odpremo globo povezavo ?exponat=slug,
      ?odsek=id (npr. iz PWA bližnjic), ?casovni=1825|1900|danes (3D) ter
-     ?spot=<id> AR Time Spota (QR tablice na lokaciji, issue #11) */
+     ?spot=<id> AR Time Spota (QR tablice na lokaciji, issue #11) in
+     &360=1 za virtualni 360° pogled s cerkve (issue #12) */
   useEffect(() => {
     const t1 = window.setTimeout(() => {
       setIntroDone(true);
@@ -87,7 +88,8 @@ function MuseumApp() {
         const spot = getSpotById(params.get("spot"));
         const casovni = parseYearParam(params.get("casovni")) ?? spot?.year ?? null;
         if (casovni) {
-          useTimeMachine.getState().openTM(casovni, spot?.id ?? null);
+          const p360 = params.get("360") === "1";
+          useTimeMachine.getState().openTM(casovni, spot?.id ?? null, p360);
         } else {
           const odsek = params.get("odsek");
           if (odsek) {

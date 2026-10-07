@@ -11,7 +11,7 @@ import { useEffect, useRef, useState } from "react";
 import { Camera, Info, Layers, RotateCcw } from "lucide-react";
 import { useLang } from "./language-context";
 import { useTimeMachine, type TimeYear } from "@/lib/time-machine-store";
-import { PERIODS } from "@/lib/village3d";
+import { PERIODS, PRESENCE_LEGEND, IZGINILO_STATS } from "@/lib/village3d";
 
 export function VillageViewer() {
   const { t, lang } = useLang();
@@ -133,14 +133,46 @@ export function VillageViewer() {
 
         <div className="space-y-1.5 rounded-lg border p-3 text-xs">
           <p className="font-medium">{t("Legenda", "Legend")}</p>
-          <p className="flex items-center gap-2">
-            <span className="inline-block size-3 rounded-[2px] bg-[#d8cdb8]" aria-hidden="true" />
-            {t("hiše ~1825 (apna/bela)", "houses ~1825 (whitewashed)")}
-          </p>
-          <p className="flex items-center gap-2">
-            <span className="inline-block size-3 rounded-[2px] bg-[#c2b08c]" aria-hidden="true" />
-            {t("zgostitev ~1900 (ocena)", "~1900 densification (estimate)")}
-          </p>
+          {year === 2026 ? (
+            <>
+              <p className="font-medium text-primary">
+                {t("Kaj je izginilo? — 1825 ∩ OSM", "What has vanished? — 1825 ∩ OSM")}
+              </p>
+              {PRESENCE_LEGEND.map((l) => (
+                <p key={l.status} className="flex items-center gap-2">
+                  <span aria-hidden="true">{l.dotSi}</span>
+                  <span>
+                    <span className="font-medium">{lang === "si" ? l.labelSi : l.labelEn}</span>{" "}
+                    ·{" "}
+                    {l.status === "exists"
+                      ? IZGINILO_STATS.exists
+                      : l.status === "uncertain"
+                        ? IZGINILO_STATS.uncertain
+                        : IZGINILO_STATS.gone}{" "}
+                    — {lang === "si" ? l.noteSi : l.noteEn}
+                  </span>
+                </p>
+              ))}
+              <p className="flex items-center gap-2">
+                <span className="inline-block size-3 rounded-[2px] bg-[#6b7566]" aria-hidden="true" />
+                {t(
+                  `današnje stavbe — OSM posnetek ${IZGINILO_STATS.osmSnapshot} (${IZGINILO_STATS.presentCount})`,
+                  `present-day buildings — OSM snapshot ${IZGINILO_STATS.osmSnapshot} (${IZGINILO_STATS.presentCount})`,
+                )}
+              </p>
+            </>
+          ) : (
+            <>
+              <p className="flex items-center gap-2">
+                <span className="inline-block size-3 rounded-[2px] bg-[#d8cdb8]" aria-hidden="true" />
+                {t("hiše ~1825 (apna/bela)", "houses ~1825 (whitewashed)")}
+              </p>
+              <p className="flex items-center gap-2">
+                <span className="inline-block size-3 rounded-[2px] bg-[#c2b08c]" aria-hidden="true" />
+                {t("zgostitev ~1900 (ocena)", "~1900 densification (estimate)")}
+              </p>
+            </>
+          )}
           <p className="flex items-center gap-2">
             <span className="inline-block size-3 rounded-[2px] bg-[#9ec497]" aria-hidden="true" />
             {t("loke ob Kolpi", "meadows by the Kolpa")}

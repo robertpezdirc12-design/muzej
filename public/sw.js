@@ -2,12 +2,12 @@
    Strategija:
    - navigacije: mreža najprej, ob napaki predpomnjen odbit (SPA lupina)
    - /_next/static, /icons, /qr: cache-first (nezvezno / različno zgoščeno)
-   - /images, /models, /atlas: stale-while-revalidate (osvežitev v ozadju)
+   - /images, /models, /atlas, /audio: stale-while-revalidate (osvežitev v ozadju)
    - /api/*: samo mreža (odprti podatki za zunanje uporabnike)
    - zunanji viri (OSM ploščice): pustimo brskalniku
    Dvigom različice VERSION se stare predpomnilnice očistijo samodejno. */
 
-const VERSION = "muzej-griblje-v2";
+const VERSION = "muzej-griblje-v3";
 const PAGE_CACHE = `${VERSION}-pages`;
 const STATIC_CACHE = `${VERSION}-static`;
 const ASSET_CACHE = `${VERSION}-assets`;
@@ -24,7 +24,7 @@ const PRECACHE = [
 const CACHE_FIRST =
   /^\/(_next\/static|icons|qr)\//;
 const SWR =
-  /^\/(images|models|atlas)\//;
+  /^\/(images|models|atlas|audio)\//;
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
