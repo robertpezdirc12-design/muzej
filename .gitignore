@@ -60,3 +60,4 @@ server.log
 /db/*.db-journal
 
 .env
+tool-results/
