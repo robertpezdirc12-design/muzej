@@ -223,3 +223,62 @@
 .leaflet-container.mvg-vintage {
   background: var(--secondary);
 }
+
+/* ── AR vodnik: uporabnikova točka na zemljevidu ── */
+
+.mvg-me {
+  background: none;
+  border: none;
+}
+.mvg-me-dot {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  background: var(--primary);
+  border: 3px solid var(--background);
+  box-shadow:
+    0 0 0 2px color-mix(in oklch, var(--primary) 45%, transparent),
+    0 0 0 8px color-mix(in oklch, var(--primary) 18%, transparent),
+    0 1px 4px color-mix(in oklch, var(--foreground) 30%, transparent);
+  animation: mvg-me-pulse 2.2s ease-out infinite;
+}
+@keyframes mvg-me-pulse {
+  0% {
+    box-shadow:
+      0 0 0 2px color-mix(in oklch, var(--primary) 45%, transparent),
+      0 0 0 6px color-mix(in oklch, var(--primary) 22%, transparent),
+      0 1px 4px color-mix(in oklch, var(--foreground) 30%, transparent);
+  }
+  70% {
+    box-shadow:
+      0 0 0 2px color-mix(in oklch, var(--primary) 45%, transparent),
+      0 0 0 16px color-mix(in oklch, var(--primary) 0%, transparent),
+      0 1px 4px color-mix(in oklch, var(--foreground) 30%, transparent);
+  }
+  100% {
+    box-shadow:
+      0 0 0 2px color-mix(in oklch, var(--primary) 45%, transparent),
+      0 0 0 16px color-mix(in oklch, var(--primary) 0%, transparent),
+      0 1px 4px color-mix(in oklch, var(--foreground) 30%, transparent);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mvg-me-dot {
+    animation: none;
+  }
+}
+
+/* ── AR kamera: temno arhivsko ozadje (nadomestek kamere) ── */
+
+.mvg-ar-backdrop {
+  background:
+    radial-gradient(
+      ellipse 130% 55% at 50% 120%,
+      color-mix(in oklch, #9a5b2e 26%, transparent),
+      transparent 60%
+    ),
+    radial-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    #26211c;
+  background-size: auto, 22px 22px;
+}

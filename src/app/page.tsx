@@ -8,11 +8,13 @@ import { MuseumHero } from "@/components/museum/museum-hero";
 import { MuseumRegister } from "@/components/museum/museum-register";
 import { MuseumTimeline } from "@/components/museum/museum-timeline";
 import { MuseumMap } from "@/components/museum/museum-map";
+import { MuseumARGuide } from "@/components/museum/museum-ar";
 import { MuseumStories, MuseumEvents } from "@/components/museum/museum-stories-events";
 import { MuseumAbout } from "@/components/museum/museum-about";
 import { MuseumFooter } from "@/components/museum/museum-footer";
 import { ExhibitDetail } from "@/components/museum/exhibit-detail";
 import { getExhibit } from "@/lib/museum";
+import { useGeolocation } from "@/hooks/use-geolocation";
 
 const DEFAULT_TITLE = "Muzej vasi Griblje — digitalni muzej vasi ob Kolpi";
 
@@ -45,6 +47,9 @@ function MuseumApp() {
   const [activeSlug, setActiveSlug] = useState<string | null>(null);
   const [introDone, setIntroDone] = useState(false);
   const { lang } = useLang();
+
+  /* GPS za zemljevid in AR vodnika — deljen med obema odsekom */
+  const geo = useGeolocation();
 
   /* naslov zavihka sledi odprtemu zapisu (deljenje / zaznamki / zgodovina) */
   useEffect(() => {
@@ -96,7 +101,8 @@ function MuseumApp() {
         <MuseumHero />
         <MuseumRegister onOpen={openExhibit} />
         <MuseumTimeline onOpen={openExhibit} />
-        <MuseumMap onOpen={openExhibit} />
+        <MuseumMap userFix={geo.fix} onOpen={openExhibit} />
+        <MuseumARGuide geo={geo} onOpen={openExhibit} />
         <MuseumStories />
         <MuseumEvents />
         <MuseumAbout />

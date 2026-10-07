@@ -466,3 +466,57 @@ Stage Summary:
   virih — če uporabnik priskrbi datoteke/skice, jih lahko vgradim kot
   pravi zgodovinski sloj (Leaflet imageOverlay/GeoJSON)
 - 8. zaporedni uspešen samodejni deploy; lokalno = gitlab = 8fd2b4d
+
+---
+Task ID: 14
+Agent: Z.ai Code (glavni agent)
+Task: GitLab issue #1 — GPS telefon + kamera AR + zgodovinska vas + AR pipeline + vodeni sprehod
+
+Work Log:
+- Prebral issue #1 na GitLabu (API z WAF retry vzorcem — poskus 2 = 200);
+  5 nalog + acceptance criteria: GPS, kamera AR z 3D na pravi lokaciji,
+  zgodovinska podoba območja (interpretacija jasno označena), podatkovni
+  pipeline brez podvajanja, vodeni sprehod, brez plačljivega AI
+- Analiza zbirke: MVG-002 sveti-vid edini z model3dUrl + koordinatami
+  (GLB bbox ~25×23×25 m — prava velikost!); 36 lociranih zapisov;
+  5 sprehodov v extra.json (walk: station/note), vsi zapisi imajo točno eno pot
+- Nova koda: src/lib/geo.ts (haversine, azimut, formatiranje, OSM URL-ji),
+  src/lib/walks.ts (WALKS izpeljan iz extra.json — pipeline), src/hooks/
+  use-geolocation.ts (ročen priklop watchPosition, statusi, čiščenje)
+- ar-camera.tsx: fullscreen kamera AR — getUserMedia (environment) → video
+  ozadje; brez kamere temno arhivsko ozadje z obzorjem (.mvg-ar-backdrop);
+  DeviceOrientation kompas (iOS requestPermission gumb) + GPS azimut →
+  model drsi po zaslonu (translateX ±45vw pri ±90°, izgine prek 100°);
+  puščica zasuka; čip »na lokaciji ≤300 m / predogled«; Zapis in viri gumb;
+  bralska sinteza (speechSynthesis, brezplačno); WebXR/Scene Viewer gumb
+  (canActivateAR); model-viewer: camera-orbit 48m, FOV 24°, senca pod modelom;
+  uvoz @google/model-viewer v komponenti (popravek: brez njega se element
+  ni registriral!)
+- museum-ar.tsx (#vodic): GPS kartica (status/fix/natančnost/smer, priklop),
+  Objekti v AR (AR_READY = model3dUrl+lat+lng — samodejni pipeline),
+  najbližje točke (razvrščene po razdalji, navigacija OSM peš), GuidedWalk
+- guided-walk.tsx: 5 poti, napredek, postaja (kuratorsko besedilo), Odpri
+  zapis / Preberi / Navigiraj (razdalja živa) / Odpri v AR; konec + Od začetka
+- Zemljevid: uporabnikova točka (utripajoča .mvg-me-dot + krog natančnosti,
+  enkratno centriranje), stikalo »Vas ~1825 (interpretacija)« — poligon jedra
+  + 4 črtkane poti (vsaka z navedbo virov MVG-001/049/028/040/009 in besedo
+  interpretacija v tooltipu), sepia + 12 zapisov obstoječih 1825; odkrit in
+  popravljen Leaflet z-index problem (tile-pane z=200 čez dialog z-50 →
+  isolate na zemljevidu)
+- Navigacija: nova povezava »AR vodnik«; page.tsx: deljen useGeolocation za
+  zemljevid + AR vodnik
+- E2E (agent-browser): GPS mock na cerkvi → »na lokaciji — 20 m«, 6 najbližjih
+  točk razvrščenih, uporabnik na zemljevidu; kompas mock → translateX 25.85vw,
+  zasuk 120° → skrit; AR → Zapis in viri → MVG-002 dialog + naslov zavihka;
+  sprehod Voda je življenje 13/13 postaj + Od začetka; zgodovinska plast
+  (12 klinčkov, 5 SVG, sepia, legenda); EN v celoti; mobilni 390px brez
+  preliva (VLM 9/10), zemljevid 1825 (VLM 9/10), AR kamera izboljšana po
+  VLM povratnih informacijah (model 48 m orbit, senca, obzorje); lint čist
+
+Stage Summary:
+- Issue #1 v celoti implementiran brez plačljivih AI: GPS + navigacija,
+  kamera AR cerkve sv. Vida na dokumentirani lokaciji (najsodobnejša izkušnja
+  na telefonu, pošten predogled povsod drugje), zgodovinska plast ~1825 z
+  jasno interpretacijo, pipeline (zapis z model3dUrl+lat/lng se sam prikaže),
+  5 vodenih sprehodov z govorom
+- Odsek #vodic med zemljevidom in zgodbami; navigacija posodobljena

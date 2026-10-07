@@ -7,6 +7,7 @@ import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { useLang } from "./language-context";
 import { exhibits as allExhibits } from "@/lib/museum";
+import type { GeoFix } from "@/lib/geo";
 
 const MapCanvas = dynamic(
   () => import("./museum-map-canvas").then((m) => m.MapCanvas),
@@ -20,28 +21,38 @@ const MapCanvas = dynamic(
 
 const MIN_YEAR = 1468;
 const MAX_YEAR = 2026;
+const HISTORIC_YEAR = 1825;
 
-export function MuseumMap({ onOpen }: { onOpen: (slug: string) => void }) {
+export function MuseumMap({
+  userFix,
+  onOpen,
+}: {
+  userFix: GeoFix | null;
+  onOpen: (slug: string) => void;
+}) {
   const { t, lang } = useLang();
   const [vintage, setVintage] = useState(false);
   const [timeTravel, setTimeTravel] = useState(false);
   const [year, setYear] = useState(MAX_YEAR);
+  const [historic, setHistoric] = useState(false);
 
   const located = useMemo(
     () => allExhibits.filter((e) => e.lat && e.lng),
     [],
   );
 
-  /* pri časovnem potovanju pokažemo zapise, ki so letnica obstajali;
-     neznane letnice (null) obravnavamo kot »obstaja v ves času« */
-  const visible = useMemo(() => {
-    if (!timeTravel) return located;
-    return located.filter(
-      (e) =>
-        (e.yearFrom ?? -Infinity) <= year &&
-        (e.yearTo ?? Infinity) >= year,
+  /* zapis obstaja v danem letu; neznane letnice = »obstaja ves čas«
+     (enaka logika kot časovno potovanje) */
+  const existsAt = (year: number) =>
+    located.filter(
+      (e) => (e.yearFrom ?? -Infinity) <= year && (e.yearTo ?? Infinity) >= year,
     );
-  }, [located, timeTravel, year]);
+
+  const visible = useMemo(() => {
+    if (historic) return existsAt(HISTORIC_YEAR);
+    if (!timeTravel) return located;
+    return existsAt(year);
+  }, [located, timeTravel, year, historic]);
 
   return (
     <section
@@ -78,10 +89,13 @@ export function MuseumMap({ onOpen }: { onOpen: (slug: string) => void }) {
               id="pogled-zemljevid"
               checked={vintage}
               onCheckedChange={setVintage}
+              disabled={historic}
             />
             <Label
               htmlFor="pogled-zemljevid"
-              className="cursor-pointer text-sm font-medium leading-tight"
+              className={`cursor-pointer text-sm font-medium leading-tight ${
+                historic ? "opacity-50" : ""
+              }`}
             >
               {t("Zgodovinski pogled", "Historical view")}
               <span className="block text-xs font-normal text-muted-foreground">
@@ -92,8 +106,29 @@ export function MuseumMap({ onOpen }: { onOpen: (slug: string) => void }) {
 
           <div className="flex items-center gap-3">
             <Switch
+              id="vas-1825"
+              checked={historic}
+              onCheckedChange={(v) => setHistoric(v)}
+            />
+            <Label
+              htmlFor="vas-1825"
+              className="cursor-pointer text-sm font-medium leading-tight"
+            >
+              {t("Vas ~1825 (interpretacija)", "Village ~1825 (interpretation)")}
+              <span className="block text-xs font-normal text-muted-foreground">
+                {t(
+                  "jedro vasi in poti — skica, ne kataster",
+                  "core and paths — a sketch, not a cadastre",
+                )}
+              </span>
+            </Label>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <Switch
               id="casovno-potovanje"
               checked={timeTravel}
+              disabled={historic}
               onCheckedChange={(v) => {
                 setTimeTravel(v);
                 if (v) setYear((y) => Math.min(Math.max(y, MIN_YEAR), MAX_YEAR));
@@ -101,7 +136,9 @@ export function MuseumMap({ onOpen }: { onOpen: (slug: string) => void }) {
             />
             <Label
               htmlFor="casovno-potovanje"
-              className="cursor-pointer text-sm font-medium leading-tight"
+              className={`cursor-pointer text-sm font-medium leading-tight ${
+                historic ? "opacity-50" : ""
+              }`}
             >
               {t("Časovno potovanje", "Time travel")}
               <span className="block text-xs font-normal text-muted-foreground">
@@ -112,14 +149,14 @@ export function MuseumMap({ onOpen }: { onOpen: (slug: string) => void }) {
 
           <div
             className={`flex min-w-56 flex-1 flex-col gap-1.5 transition-opacity ${
-              timeTravel ? "opacity-100" : "pointer-events-none opacity-40"
+              timeTravel && !historic ? "opacity-100" : "pointer-events-none opacity-40"
             }`}
-            aria-disabled={!timeTravel}
+            aria-disabled={!timeTravel || historic}
           >
             <div className="flex items-center justify-between text-xs text-muted-foreground">
               <span>{MIN_YEAR}</span>
               <span className="font-mono text-sm font-semibold text-primary">
-                {timeTravel ? year : "—"}
+                {timeTravel && !historic ? year : "—"}
               </span>
               <span>{MAX_YEAR}</span>
             </div>
@@ -140,21 +177,35 @@ export function MuseumMap({ onOpen }: { onOpen: (slug: string) => void }) {
               `Na zemljevidu: ${visible.length} od ${located.length} zapisov`,
               `On the map: ${visible.length} of ${located.length} records`,
             )}
+            {userFix && t(` · vi ste na karti`, ` · you are on the map`)}
           </p>
         </div>
 
         <div className="mt-4">
-          <MapCanvas exhibits={visible} vintage={vintage} onOpen={onOpen} />
+          <MapCanvas
+            exhibits={visible}
+            vintage={vintage || historic}
+            historic={historic}
+            userFix={userFix}
+            onOpen={onOpen}
+          />
         </div>
 
-        {timeTravel && (
+        {historic ? (
+          <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
+            {t(
+              "Poligon jedra vasi in črtkane poti so INTERPRETACIJA — izvirni terezijanski kataster ~1825 se ni ohranil, geometrija je skica, podprta z zapisi (MVG-001, MVG-049, MVG-028, MVG-040, MVG-009). Klinčki so zapisi, znani za leto 1825.",
+              "The village-core polygon and dashed paths are INTERPRETATION — the original Theresian cadastre of ~1825 has not survived; the geometry is a sketch supported by records (MVG-001, MVG-049, MVG-028, MVG-040, MVG-009). Pins mark records known to exist in 1825.",
+            )}
+          </p>
+        ) : timeTravel ? (
           <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
             {t(
               "Leto je vodilo po letnicah zapisov (»od – do«); zapisi brez znane letnice ostanejo na karti.",
               "The year follows record dates (“from – to”); records without a known year stay on the map.",
             )}
           </p>
-        )}
+        ) : null}
       </div>
     </section>
   );
