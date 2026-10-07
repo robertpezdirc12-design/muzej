@@ -520,3 +520,22 @@ Stage Summary:
   jasno interpretacijo, pipeline (zapis z model3dUrl+lat/lng se sam prikaže),
   5 vodenih sprehodov z govorom
 - Odsek #vodic med zemljevidom in zgodbami; navigacija posodobljena
+
+---
+Task ID: 14-doključek
+Agent: Z.ai Code (glavni agent)
+Task: Produkcija, komentar in zaključek GitLab issue #1
+
+Work Log:
+- Push 994cc35 → samodejni Vercel deploy (~60 s) → produkcija:
+  / 200, /api/exhibits 200, /sitemap.xml 200, /models/cerkev-sv-vida.glb 200;
+  SSR vsebuje AR vodnik po vasi / Objekti v AR / Priklopi GPS / Vodeni sprehod
+- Brskalniška verifikacija produkcije: #vodic prisoten, AR dialog se odpre,
+  model naložen (loaded: true), temno ozadje; 0 napak; VLM 8/10
+- Komentar na issue #1 (WAF retry: 6. poskus → 201, note 3969167144) s
+  popolnim preslikanjem nalog → acceptance criteria + opombo o pipeline pravilu
+- Issue #1 zaprt prek API-ja (state: closed)
+
+Stage Summary:
+- 9. zaporedni uspešen samodejni deploy; lokalno = gitlab = 994cc35
+- GitLab issue #1 (AR vizija) v celoti izveden, dokumentiran in zaključen
