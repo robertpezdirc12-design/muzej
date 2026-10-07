@@ -1085,3 +1085,56 @@ Stage Summary:
 - 11/11 issuejev zaprtih; AR TIME SPOTS v1 v produkciji (15. deploy)
 - Stanje muzeja: 113 zapisov, ATLAS 1825 (7 plasti), AR vodnik, 3D AR časovni stroj, AR Time Spots (6 točk, QR, odklepanje, evidence), PWA; QA 13/13, lint čist
 - Naslednji korak: issue #12 (P1) — »izgubljene stvari« (mlini, cerkvišče, Kaj je izginilo) + 360° + TTS + USDZ
+
+---
+Task ID: 13 (issue #12 — P1, prvi kos)
+Agent: Z.ai Code (glavni agent)
+Task: P1 #12 po uporabnikovem vrstnem redu — 1) Kaj je izginilo, 2) 360° s cerkve, 3) TTS, 4) USDZ (+ popravljene čipke #11)
+
+Work Log:
+- GitLab #11: task-list popravljen 0/9 → 9/9 (dokumentacijska doslednost, issue = source of truth) + komentar
+- Raziskava geopodatkov pred vpadanjem: Overpass nedosegljiv → api.openstreetmap.org/api/0.6/map
+  (3,2 MB XML, 369 stavb), Kolpa struga OSM 15,2984°E = muzejsko sidro (validacija E-Z);
+  križna korelacija 1825↔OSM (široka, ±800 m): najboljši odmik (0,0)±, hipoteza 570 m zavrnjena;
+  VLM izreza lista A02 (n83-a02.jpg) — cerkev (rdeča stavba s križem, »St Veith«) točno na
+  muzejskem sidru px(1993,578)→(45,5728,15,2922); OSM Sv. Vid (45,5677) = NAPAČEN v OSM;
+  px→geo afina residual ≤0,5 m; Commons geotag ribnika (45,5766,15,2864) ≠ MVG-016 (opomba v #12)
+- src/data/atlas/present.json: OSM posnetek 2026-10-07 (350 stavb) + vpadanje (9/30/117 + cerkev)
+- village3d.ts: BuildingPresence, PRESENT_BUILDINGS, BUILDING_STATUS, IZGINILO_STATS,
+  PRESENCE_LEGEND, PRESENCE_META; PERIODS 2026 preoblikovan v »Kaj je izginilo«
+- village-scene.ts: wallsPresent InstancedMesh (sivi dvojček, orbit-only), applyPresenceColors
+  (instanceColor = ciljna/material — množenje), pick vrne kind=1825+presence / kind=present,
+  setFix(x,z,elev)
+- ar-time-machine.tsx: legenda 2026 (🟢/🟡/🔴 + OSM posnetek), 360° način (gumb, banner,
+  stališče CHURCH+6 m, izhod), TTS (toggleSpotAudio: MP3 HEAD → speechSynthesis z izbiro
+  glasu), kartica duha po statusu + najbližja današnja, kartica OSM stavbe, capture napis
+- time-machine-store.ts: p360; page.tsx: ?360=1; museum-map.tsx: [360° S CERKVE] na kartici
+- atlas.ts: village3d.izginilo blok (števci, metodologija, viri, deepLink)
+- TTS odločitev po ASR roundtrip testu: slovenščina oblačnega TTS neuporabna (»fifteen
+  twenty six«) → primarno speechSynthesis; /audio/timespots/ drop-in arhitektura (README)
+- USDZ: scripts/export-usdz.ts (GLTFLoader.parse + USDZExporter, normale dodane) →
+  cerkev-sv-vida.usdz 62 KB (zip stored, .usda); model-viewer-3d.tsx + ar-camera.tsx:
+  ar + ar-modes + ios-src; d.ts razširjen
+- Bugfix use-geolocation: ob napaki dovoljenja clearWatch → gumb Priklopi GPS reusbilen
+- sw.js v3 + /audio SWR; lint čist
+- E2E (agent-browser, dev + produkcija): globa ?casovni&spot&360=1 → dialog+banner+TTS;
+  »danes« → legenda 10/30/117; VLM potrdi obarvane duhove (smeragdna/jantorna/rdeča) +
+  sivi dvojček v ATLAS orbitu; tap duha (po GPS mock v jedru, kartica točke zaprta) →
+  »🟡 NEGOTOVO · današnja stavba v 20 m · kataster 1825 + OSM«; GPS mock → 5 m do jedra +
+  samodejni odklep; zemljevid plamenjača cerkev → [360° S CERKVE]; zapis MVG-002 →
+  model-viewer src GLB + ios-src USDZ + ar; USDZ 200 (62 KB); mobilni 390px čist; 0 napak
+- Push e463fa0 (WAF 403×4 → OK) → 16. zaporedni Vercel deploy, produkcija: /api/atlas
+  izginilo, usdz 200, globa 360 deluje
+- GitLab #12: 4/6 DoD odkljukano + komentar (4317 znakov, WAF 503→201); issue ostaja
+  odprt za mline/cerkvišče/letališče mini-scene
+
+Stage Summary:
+- KAJ JE IZGINILO: 1825∩OSM po stavbi (10 obstaja · 30 negotovih · 117 ni jih več) —
+  obarvani duhovi v AR/ATLAS + digitalni dvojček + poštena metodologija; izginilo blok v
+  odprtem API
+- 360° s cerkve: fiksno stališče + žiroskop/kompas + 1825⇄danes; globa povezava &360=1
+- TTS: 6 točk SI+EN, speechSynthesis (zastonj) + MP3 drop-in za prihodnji posnet domačina
+- USDZ: cerkev dual-model (GLB Android / USDZ iPhone Quick Look)
+- Geodetska validacija: muzejsko georeferenciranje potrjeno na 3 neodvisne načine; OSM
+  cerkev napačna; ribnik MVG-016 za terensko preverbo
+- Stanje: 16. deploy v produkciji, #12 odprt (mini-scene mlini/cerkvišče + zaključek)
