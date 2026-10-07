@@ -812,3 +812,39 @@ Work Log:
 
 Stage Summary:
 - Poliranje objavljeno; celotno spletišče preverjeno end-to-end
+
+---
+Task ID: 8
+Agent: Z.ai Code (glavni agent)
+Task: PWA — namestljiva aplikacija muzeja (vsi GitLab issueji zaprti, končna izboljšava)
+
+Work Log:
+- Preverjeno stanje: vsi issueji #1–#5 zaprti, lokalno = gitlab = 514c96f, QA 11/11,
+  lint čist, produkcija 200 — ni odprtih zahtevkov
+- Generirane PWA ikone (PIL, DejaVu Serif Bold kot Georgia): 192/512 regular,
+  512 maskable (terakota full-bleed, smetana MV), apple-touch 180; skripta
+  scripts/gen-pwa-icons.py ponovljiva
+- Ustvarjen public/manifest.webmanifest: name/short_name SI, standalone,
+  background #F7F3EB, theme #9F4A2B, 3 ikone, 3 bližnjice (register, atlas, vodic)
+- Dodana globoka povezava odsekov ?odsek=id (scrollIntoView po uvodnem
+  zaslonu) v page.tsx — bližnjice PWA zdaj dejansko delujejo
+- layout.tsx: manifest, ikone (svg+png), appleWebApp (title Muzej Griblje),
+  viewport.themeColor svetla #F7F3EB / temna #0F1610 (pravilna OKLab
+  pretvorba — spojitev z glavo strani)
+- public/sw.js: navigacije network-first z odbitom "/", /_next/static + /icons
+  cache-first, /images + /models + /atlas stale-while-revalidate, /api samo
+  mreža, zunanji (OSM) izpuščeni; verzioniran predpomnilnik s samodejnim
+  čiščenjem; registracija samo prek https (sw-registrar.tsx)
+- Commit a0f9714, push; 12. zaporedni Vercel deploy (~1 min)
+- Verifikacija produkcije: manifest/sw/ikone 200; SW registriran + aktiven;
+  OFFLINE TEST: stran se naloži iz predpomnilnika, vsi odseki + MVG-001 +
+  ATLAS 1825 vidni, globa povezava ?exponat=kolpa-reka odpre MVG-006 z
+  dinamičnim naslovom; ?odsek=atlas/vodic scrolla na mesto; 0 napak konzole;
+  QA 11/11; / in /sitemap.xml 200
+
+Stage Summary:
+- Muzej je zdaj namestljiva aplikacija (PWA): ikona MV, lovorika na domačem
+  zaslonu, delovanje brez povezave (pomembno za AR sprehode ob Kolpi s šibkim
+  signalom), bližnjice do registra/atlasa/AR vodnika
+- Obnova Muzeja vasi Griblje: 113 zapisov + ATLAS 1825 + raziskave + AR +
+  PWA; vsi GitLab issueji zaprti; 12. deploy
