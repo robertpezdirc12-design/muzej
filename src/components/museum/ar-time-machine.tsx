@@ -79,6 +79,8 @@ import {
   findNearestSpot,
   getSpotById,
   spotYearParam,
+  isDistantSpot,
+  spotDistanceFromVillage,
   type TimeSpot,
 } from "@/data/atlas/timespots";
 import { useTimespots } from "@/lib/timespots-store";
@@ -164,6 +166,15 @@ export function ARTimeMachine({
   const [spotJustUnlocked, setSpotJustUnlocked] = useState<TimeSpot | null>(null);
   const autoSpotRef = useRef<string | null>(null);
 
+  /* mini-scena oddaljene točke (issue #12): mlini/cerkvišče — lastna
+     proceduralna vsebina namesto praznega pogleda na vas 2–10 km stran */
+  const [mini, setMini] = useState<"mlini" | "cerkvisce" | null>(null);
+  const miniRef = useRef<"mlini" | "cerkvisce" | null>(null);
+  miniRef.current = mini;
+  const miniSpot = mini
+    ? (TIME_SPOTS.find((s) => s.miniScene === mini) ?? null)
+    : null;
+
   /* kalibracija kompasa (issue #14, točka 7) — prostovoljna, enkrat na napravo */
   const [showCal, setShowCal] = useState(false);
   const calOfferedRef = useRef(false);
@@ -187,9 +198,18 @@ export function ARTimeMachine({
     const sp = getSpotById(storeSpot);
     if (sp) {
       setSpotCard(sp);
+      setMini(sp.miniScene ?? null);
       setHint(false);
     }
   }, [storeSpot]);
+
+  /* ── mini-scena → prizor (issue #12) ── */
+  useEffect(() => {
+    const sc = sceneRef.current;
+    if (!sc) return;
+    const sp = mini ? TIME_SPOTS.find((s) => s.miniScene === mini) : null;
+    sc.setMiniScene(mini, sp ? { lat: sp.lat, lng: sp.lng } : null);
+  }, [mini]);
 
   /* ── ponudba kalibracije ob prvem AR odpiranju (issue #14, točka 7) ──
      Prikazemo jo enkrat: kompas deluje, kalibracija še ni bila narejena niti
@@ -250,6 +270,15 @@ export function ARTimeMachine({
       } else if (fixRef.current) {
         const { x, z } = toLocal(fixRef.current.lat, fixRef.current.lng);
         scene.setFix(x, z);
+      }
+      /* mini-scena iz globo povezave (?spot=mlini) lahko čaka, odkar se
+         prizor ustvari — uporabi miniRef (izven odvisnosti učinka) */
+      if (miniRef.current) {
+        const sp = TIME_SPOTS.find((s) => s.miniScene === miniRef.current);
+        scene.setMiniScene(
+          miniRef.current,
+          sp ? { lat: sp.lat, lng: sp.lng } : null,
+        );
       }
       sceneRef.current = scene;
     });
@@ -328,6 +357,7 @@ export function ARTimeMachine({
     if (autoSpotRef.current === spot.id) return;
     autoSpotRef.current = spot.id;
     setSpotCard(spot);
+    setMini(spot.miniScene ?? null);
     setHint(false);
     if (!isUnlocked(spot.id)) {
       unlock(spot.id);
@@ -430,12 +460,17 @@ export function ARTimeMachine({
     if (!spotCard) stopAudio();
   }, [spotCard, stopAudio]);
 
-  /* razdalja uporabnika od jedra vasi (predogled/na lokaciji) */
+  /* razdalja uporabnika od jedra vasi (predogled/na lokaciji) —
+     v mini sceni (issue #12) referenčna točka = točka scene same */
+  const refLat = miniSpot ? miniSpot.lat : ORIGIN.lat;
+  const refLng = miniSpot ? miniSpot.lng : ORIGIN.lng;
   const coreDistance =
     fix && fix.lat != null && fix.lng != null
-      ? distanceM(fix, { lat: ORIGIN.lat, lng: ORIGIN.lng })
+      ? distanceM(fix, { lat: refLat, lng: refLng })
       : null;
-  const onSite = coreDistance != null && coreDistance <= 1500;
+  const onSite = miniSpot
+    ? coreDistance != null && coreDistance <= miniSpot.radius
+    : coreDistance != null && coreDistance <= 1500;
 
   /* pripravljenost scene (issue #14, točki 11–12): GPS kakovost × kompas */
   const readiness = sceneReadiness({ gps: quality, compass: compassStability });
@@ -449,16 +484,23 @@ export function ARTimeMachine({
     if (!sc) return;
     const y = year === 2026 ? "danes" : year === 1900 ? "~1900" : "1825";
     const data = sc.capture(videoRef.current, {
-      title:
-        year === 2026
+      title: miniSpot
+        ? `${miniSpot.titleSi} — ${y}${mini === "mlini" && year === 2026 ? " (duh)" : ""}`
+        : year === 2026
           ? t(`Griblje ${y} — kaj je izginilo?`, `Griblje ${y} — what has vanished?`)
           : t(`Griblje ${y} — rekonstrukcija vasi`, `Griblje ${y} — village reconstruction`),
-      sub: t(
-        "Muzej vasi Griblje · 3D rekonstrukcija iz Franciscejskega katastra (list A02, SI AS 176)",
-        "Museum of Griblje village · 3D reconstruction from the Franciscean cadastre (sheet A02, SI AS 176)",
-      ),
-      credit:
-        year === 2026
+      sub: miniSpot
+        ? t(
+            "Muzej vasi Griblje · proceduralna mini-scena (issue #12) · interpretacija, ne kataster",
+            "Museum of Griblje village · procedural mini-scene (issue #12) · interpretation, not cadastre",
+          )
+        : t(
+            "Muzej vasi Griblje · 3D rekonstrukcija iz Franciscejskega katastra (list A02, SI AS 176)",
+            "Museum of Griblje village · 3D reconstruction from the Franciscean cadastre (sheet A02, SI AS 176)",
+          ),
+      credit: miniSpot
+        ? `griblje-museum.vercel.app · ${miniSpot.id.toUpperCase()} · INTERPRETACIJA`
+        : year === 2026
           ? t(
               `griblje-museum.vercel.app · 1825 ∩ OSM ${IZGINILO_STATS.osmSnapshot}`,
               `griblje-museum.vercel.app · 1825 ∩ OSM ${IZGINILO_STATS.osmSnapshot}`,
@@ -470,7 +512,7 @@ export function ARTimeMachine({
       window.setTimeout(() => setSaved("none"), 2600);
       return;
     }
-    const fname = `griblje-${year === 2026 ? "danes" : year}.png`;
+    const fname = miniSpot ? `griblje-${miniSpot.id}.png` : `griblje-${year === 2026 ? "danes" : year}.png`;
     /* najprej deljenje (telefon), sicer prenos */
     try {
       const blob = await (await fetch(data)).blob();
@@ -492,11 +534,11 @@ export function ARTimeMachine({
     }
     const a = document.createElement("a");
     a.href = data;
-    a.download = fname;
+    a.download = miniSpot ? `griblje-${miniSpot.id}.png` : `griblje-${year === 2026 ? "danes" : year}.png`;
     a.click();
     setSaved("saved");
     window.setTimeout(() => setSaved("none"), 2600);
-  }, [year, t]);
+  }, [year, t, miniSpot, mini]);
 
   const yearButtons: [TimeYear, string, string][] = [
     [1825, "1825", "1825"],
@@ -573,29 +615,41 @@ export function ARTimeMachine({
             <>
               <CheckCircle2 className="size-3.5 shrink-0 text-emerald-300" aria-hidden="true" />
               <span>
-                {t(
-                  `na lokaciji vasi${coreDistance != null ? ` — ${formatDistance(coreDistance, lang)} do jedra` : ""}`,
-                  `on village site${coreDistance != null ? ` — ${formatDistance(coreDistance, lang)} to the core` : ""}`,
-                )}
+                {miniSpot
+                  ? t(
+                      `na lokaciji — ${lang === "si" ? miniSpot.titleSi : miniSpot.titleEn}`,
+                      `on site — ${lang === "si" ? miniSpot.titleSi : miniSpot.titleEn}`,
+                    )
+                  : t(
+                      `na lokaciji vasi${coreDistance != null ? ` — ${formatDistance(coreDistance, lang)} do jedra` : ""}`,
+                      `on village site${coreDistance != null ? ` — ${formatDistance(coreDistance, lang)} to the core` : ""}`,
+                    )}
               </span>
             </>
           ) : coreDistance != null ? (
             <>
               <MapPin className="size-3.5 shrink-0 text-amber-200" aria-hidden="true" />
               <span>
-                {t(
-                  `predogled — ${formatDistance(coreDistance, lang)} od vasi`,
-                  `preview — ${formatDistance(coreDistance, lang)} from the village`,
-                )}
+                {miniSpot
+                  ? t(
+                      `mini scena — predogled, ${formatDistance(coreDistance, lang)} do točke`,
+                      `mini scene — preview, ${formatDistance(coreDistance, lang)} to the spot`,
+                    )
+                  : t(
+                      `predogled — ${formatDistance(coreDistance, lang)} od vasi`,
+                      `preview — ${formatDistance(coreDistance, lang)} from the village`,
+                    )}
               </span>
             </>
           ) : (
             <>
               <MapPin className="size-3.5 shrink-0 text-white/80" aria-hidden="true" />
               <span>
-                {status === "watching"
-                  ? t("čakam na GPS …", "waiting for GPS …")
-                  : t("predogled — GPS ni priključen", "preview — GPS not connected")}
+                {miniSpot
+                  ? t("mini scena — predogled (GPS ni priključen)", "mini scene — preview (GPS not connected)")
+                  : status === "watching"
+                    ? t("čakam na GPS …", "waiting for GPS …")
+                    : t("predogled — GPS ni priključen", "preview — GPS not connected")}
               </span>
             </>
           )}
@@ -674,27 +728,31 @@ export function ARTimeMachine({
             {t("Omogoči kompas", "Enable compass")}
           </button>
         )}
-        {/* 360° s cerkve (issue #12): fiksno stališče, žiroskop/kompas obrača pogled */}
-        <button
-          type="button"
-          onClick={() => {
-            setP360(!p360);
-            setHint(false);
-          }}
-          aria-pressed={p360}
-          className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-medium backdrop-blur transition-colors ${
-            p360
-              ? "border-primary bg-primary text-primary-foreground"
-              : "border-white/25 bg-black/45 text-white hover:bg-black/60"
-          }`}
-        >
-          <RotateCw className="size-3.5" aria-hidden="true" />
-          {t("360° s cerkve", "360° from the church")}
-        </button>
+        {/* 360° s cerkve (issue #12): fiksno stališče, žiroskop/kompas obrača pogled
+            (v mini sceni skrito — mini ima svoje stališče) */}
+        {!mini && (
+          <button
+            type="button"
+            onClick={() => {
+              setP360(!p360);
+              setHint(false);
+            }}
+            aria-pressed={p360}
+            className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-medium backdrop-blur transition-colors ${
+              p360
+                ? "border-primary bg-primary text-primary-foreground"
+                : "border-white/25 bg-black/45 text-white hover:bg-black/60"
+            }`}
+          >
+            <RotateCw className="size-3.5" aria-hidden="true" />
+            {t("360° s cerkve", "360° from the church")}
+          </button>
+        )}
       </div>
 
-      {/* ── KAJ JE IZGINILO? legenda (leto »danes«, issue #12) ── */}
-      {year === 2026 && (
+      {/* ── KAJ JE IZGINILO? legenda (leto »danes«, issue #12; v mini sceni
+          ima duhov lasten pomen — cerkvišče/mlin) ── */}
+      {year === 2026 && !mini && (
         <div
           className="relative z-10 mt-2 flex flex-wrap items-center gap-2 px-4"
           role="group"
@@ -721,22 +779,39 @@ export function ARTimeMachine({
         </div>
       )}
 
-      {/* ── AR TIME SPOTS: izbirnik točk (odklop GPS → ročna izbira, pošteno) ── */}
+      {/* ── AR TIME SPOTS: izbirnik točk (odklop GPS → ročna izbira, pošteno) —
+          vaške točke + oddaljene (issue #12) z lastno vsebino ── */}
       <div
         className="relative z-10 mt-2 flex items-center gap-2 overflow-x-auto px-4 pb-1"
         role="group"
-        aria-label={t("Časovne točke po vasi", "Time spots around the village")}
+        aria-label={t("Časovne točke po vasi in okolici", "Time spots around the village and its surroundings")}
       >
         <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-white/25 bg-black/45 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur">
           <Clock className="size-3.5 shrink-0" aria-hidden="true" />
           {t(`točke ${unlocked.length}/${TIME_SPOTS.length}`, `spots ${unlocked.length}/${TIME_SPOTS.length}`)}
         </span>
-        {TIME_SPOTS.map((s) => (
+        {/* nazaj na vas, ko je aktivna mini scena (issue #12) */}
+        {mini && (
+          <button
+            type="button"
+            onClick={() => {
+              setMini(null);
+              setSpotCard(null);
+              setP360(false);
+            }}
+            className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-primary/60 bg-primary/20 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur transition-colors hover:bg-primary/30"
+          >
+            <Home className="size-3.5 shrink-0" aria-hidden="true" />
+            {t("← nazaj na vas", "← back to the village")}
+          </button>
+        )}
+        {TIME_SPOTS.filter((s) => !isDistantSpot(s)).map((s) => (
           <button
             key={s.id}
             type="button"
             onClick={() => {
               setSpotCard(s);
+              setMini(null);
               setCard(null);
               setHint(false);
             }}
@@ -755,6 +830,44 @@ export function ARTimeMachine({
             <span className="font-semibold">{spotYearParam(s.year)}</span>
             <span className="max-w-32 truncate">
               {lang === "si" ? s.titleSi : s.titleEn}
+            </span>
+          </button>
+        ))}
+        {/* oddaljene točke (issue #12) — ločena skupina z razdaljo od vasi */}
+        <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-primary/40 bg-primary/10 px-2.5 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-amber-200 backdrop-blur">
+          {t("oddaljene", "distant")}
+        </span>
+        {TIME_SPOTS.filter((s) => isDistantSpot(s)).map((s) => (
+          <button
+            key={s.id}
+            type="button"
+            onClick={() => {
+              setSpotCard(s);
+              setMini(s.miniScene ?? null);
+              setP360(false);
+              setCard(null);
+              setHint(false);
+            }}
+            aria-pressed={spotCard?.id === s.id}
+            className={`inline-flex shrink-0 items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs backdrop-blur transition-colors ${
+              spotCard?.id === s.id
+                ? "border-primary bg-primary text-primary-foreground"
+                : "border-white/25 bg-black/45 text-white/90 hover:bg-black/60"
+            }`}
+          >
+            {isUnlocked(s.id) ? (
+              <CheckCircle2 className="size-3.5 shrink-0" aria-hidden="true" />
+            ) : (
+              <Lock className="size-3.5 shrink-0 text-white/60" aria-hidden="true" />
+            )}
+            <span className="font-semibold">{spotYearParam(s.year)}</span>
+            <span className="max-w-32 truncate">
+              {lang === "si" ? s.titleSi : s.titleEn}
+            </span>
+            <span
+              className={spotCard?.id === s.id ? "text-primary-foreground/80" : "text-white/50"}
+            >
+              · {formatDistance(spotDistanceFromVillage(s), lang)}
             </span>
           </button>
         ))}
@@ -904,11 +1017,12 @@ export function ARTimeMachine({
         </div>
       )}
 
-      {/* kartica AR TIME SPOTA (odklep / izbira / globa povezava) */}
+      {/* kartica AR TIME SPOTA (odklep / izbira / globa povezava) —
+          omejena višina z notranjim drsenjem, da ne prekrije čipov točk */}
       {spotCard && (
         <div className="absolute inset-x-4 bottom-44 z-20 sm:left-1/2 sm:right-auto sm:w-[440px] sm:-translate-x-1/2">
           <div
-            className="rounded-xl border border-white/20 bg-black/70 p-4 text-white backdrop-blur"
+            className="max-h-[46vh] overflow-y-auto rounded-xl border border-white/20 bg-black/70 p-4 text-white backdrop-blur"
             role="region"
             aria-label={t("Kartica časovne točke", "Time spot card")}
           >
@@ -955,6 +1069,21 @@ export function ARTimeMachine({
                 <p className="mt-2 text-xs leading-relaxed text-white/85">
                   {lang === "si" ? spotCard.descSi : spotCard.descEn}
                 </p>
+                {/* dogodki (issue #12 — Otok story-only): mini časovnica na kartici */}
+                {spotCard.events && (
+                  <ol className="mt-2.5 space-y-1.5 border-l border-amber-300/40 pl-3">
+                    {spotCard.events.map((ev, i) => (
+                      <li key={i} className="text-[11px] leading-relaxed">
+                        <span className="font-semibold text-amber-200">
+                          {lang === "si" ? ev.whenSi : ev.whenEn}
+                        </span>{" "}
+                        <span className="text-white/80">
+                          {lang === "si" ? ev.textSi : ev.textEn}
+                        </span>
+                      </li>
+                    ))}
+                  </ol>
+                )}
                 {/* dinamični radij (issue #14, točka 10): odklep ≠ natančna poravnava */}
                 {fix && isUnlocked(spotCard.id) && (() => {
                   const d = distanceM(fix, { lat: spotCard.lat, lng: spotCard.lng });
@@ -1043,10 +1172,10 @@ export function ARTimeMachine({
         </div>
       )}
 
-      {/* kartica stavbe (tap) */}
+      {/* kartica stavbe (tap) — enaka omejitev višine */}
       {card && !spotCard && (
         <div className="absolute inset-x-4 bottom-44 z-20 sm:left-1/2 sm:right-auto sm:w-[440px] sm:-translate-x-1/2">
-          <div className="rounded-xl border border-white/20 bg-black/70 p-4 text-white backdrop-blur">
+          <div className="max-h-[46vh] overflow-y-auto rounded-xl border border-white/20 bg-black/70 p-4 text-white backdrop-blur">
             <div className="flex items-start justify-between gap-3">
               <div className="min-w-0">
                 <p className="font-display text-sm font-semibold">
@@ -1242,10 +1371,24 @@ export function ARTimeMachine({
 
       {/* spodnja plošča: časovni drsnik + zajem */}
       <div className="relative z-10 mt-auto space-y-3 p-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
-        {/* metodologija leta */}
-        <p className="mx-auto max-w-lg text-center text-[11px] leading-relaxed text-white/70">
-          {lang === "si" ? period.noteSi : period.noteEn}
-        </p>
+        {/* metodologija leta — v mini sceni (issue #12) lastna poštena opomba */}
+        {mini ? (
+          <p className="mx-auto max-w-lg text-center text-[11px] leading-relaxed text-white/70">
+            {mini === "mlini"
+              ? t(
+                  "Mini scena mlina je PROCEDURALNA INTERPRETACIJA vrste (žimaln — vodoravno kolo znotraj, vidno kolo je ikonografska) · ni rekonstrukcija konkretnega mlina · v letu »danes« mlin postane duh",
+                  "The mill mini scene is a PROCEDURAL INTERPRETATION of the type (žimaln — a horizontal wheel inside, the visible wheel is iconographic) · not a reconstruction of a particular mill · in the “today” year the mill becomes a ghost",
+                )
+              : t(
+                  "Postavitev treh cerkvic je INTERPRETACIJA (za dve domnevno znani legi, tretja neznana) · kapelica 1994 stoji na dokumentirani lokaciji · viri: MVG-040",
+                  "The three churches' placement is an INTERPRETATION (two positions believed known, the third unknown) · the 1994 chapel stands at its documented position · sources: MVG-040",
+                )}
+          </p>
+        ) : (
+          <p className="mx-auto max-w-lg text-center text-[11px] leading-relaxed text-white/70">
+            {lang === "si" ? period.noteSi : period.noteEn}
+          </p>
+        )}
 
         {/* drsnik let */}
         <div

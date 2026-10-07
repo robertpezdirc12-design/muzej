@@ -6,7 +6,12 @@ import { ATLAS_HOUSES, type AtlasHouse } from "@/data/atlas/houses";
 import { ATLAS_OWNERS, ATLAS_LOCATIONS, SHEET_GEOREFS, VECTOR_BUILDINGS } from "@/data/atlas/model";
 import { PARISH, PARISH_BOOKS, HOUSE_VITALS, type HouseVital, type ParishBook } from "@/data/atlas/parish";
 import { BUILDINGS_1825, GROWTH_1900, PERIODS, IZGINILO_STATS, PRESENCE_META } from "@/lib/village3d";
-import { TIME_SPOTS, spotYearParam } from "@/data/atlas/timespots";
+import {
+  TIME_SPOTS,
+  spotYearParam,
+  isDistantSpot,
+  spotDistanceFromVillage,
+} from "@/data/atlas/timespots";
 import {
   GEO_SOURCES,
   GEO_ANCHORS,
@@ -172,7 +177,8 @@ export function getAtlasModel(): AtlasModel {
         deepLink: "/?casovni=danes",
       },
     },
-    /* AR TIME SPOTS (issue #11) — časovne točke s QR vhodi (Nîmes vzorec) */
+    /* AR TIME SPOTS (issue #11 + #12 P1) — časovne točke s QR vhodi
+       (Nîmes vzorec); oddaljene točke imajo mini-sceno ali story dogodke */
     timeSpots: TIME_SPOTS.map((s) => ({
       id: s.id,
       year: s.year,
@@ -188,6 +194,10 @@ export function getAtlasModel(): AtlasModel {
       evidenceEn: s.evidenceEn,
       exhibitSlug: s.exhibitSlug,
       houseNo: s.houseNo ?? null,
+      miniScene: s.miniScene ?? null,
+      distant: isDistantSpot(s),
+      distanceFromVillageM: Math.round(spotDistanceFromVillage(s)),
+      events: s.events ?? null,
       deepLink: `/?casovni=${spotYearParam(s.year)}&spot=${s.id}`,
     })),
     /* GEOTRUTH (issue #14, P0) — AR sidra, viri, dokazna pot, avdit konfliktov */

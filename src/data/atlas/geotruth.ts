@@ -107,6 +107,13 @@ export const GEO_SOURCES: GeoSource[] = [
     nameEn: "Wikimedia Commons geotag of the village pond photo (45.5766 N 15.2864 E) — contradicting the MVG-016 record coordinate (~650 m apart)",
     retrievedAt: "2026-10-08",
   },
+  {
+    id: "src-mvg-record",
+    kind: "OWN_GEOREF",
+    nameSi: "Koordinate zapisov zbirke MVG (muzejska georeferenca, issue #12: mlini MVG-009, letališče Otok MVG-013) — reprezentativne/grobe točke, terenska preverba čaka",
+    nameEn: "MVG collection record coordinates (the museum's own georeference, issue #12: mills MVG-009, Otok airfield MVG-013) — representative/coarse points, field check pending",
+    retrievedAt: "2026-10-08",
+  },
 ];
 
 /* ── 2. GeoTruth sidra (issue #14, točka 3 + 5) ────────────────────────── */
@@ -238,9 +245,35 @@ export const GEO_ANCHORS: GeoAnchorTruth[] = [
     coordinateStatus: "CORROBORATED",
     accuracyM: 100,
     lastVerified: "2026-10-08",
-    noteSi: "OSM place node Cerkvišče — tri cerkvice, ki jih ni več (zgodovinski zapis).",
-    noteEn: "OSM place node Cerkvišče — three vanished churches (historical record).",
-    arReady: false,
+    noteSi: "OSM place node Cerkvišče — tri cerkvice, ki jih ni več (zgodovinski zapis). Mini-scena (issue #12): trije duhovi + kapelica 1994 — postavitev INTERPRETACIJA (lega tretje cerkvice neznana).",
+    noteEn: "OSM place node Cerkvišče — three vanished churches (historical record). Mini-scene (issue #12): three ghosts + the 1994 chapel — placement is an INTERPRETATION (the third church's position unknown).",
+    arReady: true,
+  },
+  {
+    id: "anchor-mlini",
+    museumRef: "MVG-009",
+    lat: 45.5315,
+    lng: 15.3119,
+    sourceIds: ["src-mvg-record"],
+    coordinateStatus: "APPROXIMATE",
+    accuracyM: 1500,
+    lastVerified: "2026-10-08",
+    noteSi: "Mlini ob Kolpi — reprezentativna točka mlinarskega območja (Dol, Radenci, Pobrežje, Krasinec), ne lega posameznega mlina. Proceduralna mini-scena (issue #12) prikazuje VRSTO mlina (žimaln). Terenska preverba čaka.",
+    noteEn: "Mills on the Kolpa — a representative point of the milling stretch (Dol, Radenci, Pobrežje, Krasinec), not a single mill's position. The procedural mini-scene (issue #12) shows the mill TYPE (žimaln). Field check pending.",
+    arReady: true,
+  },
+  {
+    id: "anchor-otok",
+    museumRef: "MVG-013",
+    lat: 45.665,
+    lng: 15.323,
+    sourceIds: ["src-mvg-record"],
+    coordinateStatus: "APPROXIMATE",
+    accuracyM: 1000,
+    lastVerified: "2026-10-08",
+    noteSi: "Partizansko letališče Otok (~10 km severno od Gribelj) — groba koordinata travnika; zapis je story-only (brez 3D, spomenik Dakota stoji fizično). Terenska preverba čaka.",
+    noteEn: "The Otok partisan airfield (~10 km north of Griblje) — a coarse meadow coordinate; the spot is story-only (no 3D, the Dakota monument stands in the physical world). Field check pending.",
+    arReady: true,
   },
   {
     id: "anchor-origin",
@@ -258,20 +291,10 @@ export const GEO_ANCHORS: GeoAnchorTruth[] = [
   },
 ];
 
-/** Načrt za sidra, ki jih še čakamo (issue #12: mlini, cerkvišče, letališče) */
-export const GEO_ANCHORS_TO_COLLECT: GeoAnchorTruth[] = [
-  {
-    id: "anchor-mlini",
-    museumRef: "MVG-009",
-    lat: 0,
-    lng: 0,
-    sourceIds: [],
-    coordinateStatus: "TO_COLLECT",
-    noteSi: "Mlini ob Kolpi — krajša koordinata iz zapisa še ni preverjena (P1, issue #12).",
-    noteEn: "Mills by the Kolpa — the record's coarse coordinate is not yet verified (P1, issue #12).",
-    arReady: false,
-  },
-];
+/** Sidra, ki jih še čakamo. P1 (issue #12) je vpisala mlini, otok in
+ *  cerkvišče kot APPROXIMATE/CORROBORATED — terenska preverba njihovih
+ *  leg ostaja odprta (zabeležena v note vsakega sidra). */
+export const GEO_ANCHORS_TO_COLLECT: GeoAnchorTruth[] = [];
 
 /* ── 3. Orientacija/skala 3D assetov (issue #14, točka 13) ────────────── */
 
@@ -314,6 +337,30 @@ export const ASSET_ORIENTATIONS: AssetOrientation[] = [
       "USDZ dvojnik GLB (iOS Quick Look) — ista pogodba o skali; usmerjenost odvisna od Quick Look postavitve (uporabnik postavi ročno).",
     orientationNoteEn:
       "USDZ twin of the GLB (iOS Quick Look) — same scale contract; orientation depends on Quick Look placement (the user places it manually).",
+    fieldVerified: false,
+  },
+  {
+    assetUrl: "procedural:mlini",
+    anchorId: "anchor-mlini",
+    scaleMode: "INTERPRETATIVE",
+    targetHeightM: 4,
+    rotationYDeg: 0,
+    orientationNoteSi:
+      "Proceduralna mini-scena vodnega mlina (issue #12, brez datoteke — < 1 MB): hiša ~4 m + kolo + jez + toča. INTERPRETACIJA vrste (žimaln — vodoravno kolo znotraj; vidno kolo je ikonografska interpretacija), merila po strokovni literaturi o slovenskih mlinih. Postavitev na reprezentativni točki mlinarskega območja — terenska preverba čaka.",
+    orientationNoteEn:
+      "Procedural water-mill mini-scene (issue #12, no file — < 1 MB): house ~4 m + wheel + weir + millstream. An INTERPRETATION of the type (žimaln — a horizontal wheel inside; the visible wheel is an iconographic interpretation), dimensions from the scholarly literature on Slovene mills. Placed at a representative point of the milling stretch — field check pending.",
+    fieldVerified: false,
+  },
+  {
+    assetUrl: "procedural:cerkvisce",
+    anchorId: "anchor-cerkvisce",
+    scaleMode: "INTERPRETATIVE",
+    targetHeightM: 5,
+    rotationYDeg: 0,
+    orientationNoteSi:
+      "Proceduralna mini-scena Cerkvišča (issue #12, brez datoteke): trije duhovi cerkvic (~5 m z zvonikom, rdeči žični — »ni jih več«) + bela kapelica 1994 (~2,2 m, trdna — edini ohranjeni kamen). Postavitev treh cerkvic je INTERPRETACIJA: za dve domnevno vaščani vesta, kje sta stali, za tretjo ne ve nihče. Lega sidra = OSM place node (CORROBORATED ~100 m).",
+    orientationNoteEn:
+      "Procedural Cerkvišče mini-scene (issue #12, no file): three church ghosts (~5 m with the tower, red wireframe — »no more«) + the white 1994 chapel (~2.2 m, solid — the only surviving stone). The three churches' placement is an INTERPRETATION: for two the villagers believe they know where they stood, of the third no one knows. Anchor = OSM place node (CORROBORATED ~100 m).",
     fieldVerified: false,
   },
 ];

@@ -9,7 +9,14 @@ import { useLang } from "./language-context";
 import { exhibits as allExhibits } from "@/lib/museum";
 import type { GeoFix } from "@/lib/geo";
 import { distanceM, formatDistance } from "@/lib/geo";
-import { TIME_SPOTS, spotDeepLink, spotYearParam, type TimeSpot } from "@/data/atlas/timespots";
+import {
+  TIME_SPOTS,
+  spotDeepLink,
+  spotYearParam,
+  isDistantSpot,
+  spotDistanceFromVillage,
+  type TimeSpot,
+} from "@/data/atlas/timespots";
 import { useTimeMachine } from "@/lib/time-machine-store";
 import { useTimespots } from "@/lib/timespots-store";
 
@@ -229,6 +236,14 @@ export function MuseumMap({
                     <span className="inline-flex items-center gap-1 rounded-full border border-emerald-600/30 bg-emerald-600/10 px-2 py-0.5 text-[11px] font-medium text-emerald-700 dark:text-emerald-300">
                       <CheckCircle2 className="size-3" aria-hidden="true" />
                       {t("odklenjeno", "unlocked")}
+                    </span>
+                  )}
+                  {isDistantSpot(activeSpot) && (
+                    <span className="inline-flex items-center gap-1 rounded-full border border-primary/40 bg-primary/10 px-2 py-0.5 text-[11px] font-semibold text-primary">
+                      {t(
+                        `oddaljena točka · ${formatDistance(spotDistanceFromVillage(activeSpot), lang)} od vasi — lastna mini vsebina`,
+                        `distant spot · ${formatDistance(spotDistanceFromVillage(activeSpot), lang)} from the village — own mini content`,
+                      )}
                     </span>
                   )}
                 </p>

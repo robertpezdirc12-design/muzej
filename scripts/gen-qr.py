@@ -33,6 +33,10 @@ SPOTS: list[tuple[str, str, str]] = [
     ("ribnik", "1900", "Vaški ribnik"),
     ("gornje", "1825", "Gornje Griblje — zaselki in spomenik"),
     ("meja", "danes", "Meja ob Kolpi — danes in duhovi"),
+    # issue #12 (P1) — oddaljene točke z lastno vsebino
+    ("mlini", "1825", "Mlini ob Kolpi"),
+    ("otok", "danes", "Partizansko letališče Otok 1944–45"),
+    ("cerkvisce", "danes", "Cerkvišče — tri cerkvice, ki jih ni več"),
 ]
 
 # barvna paleta muzeja (svetla podlaga #F7F3EB, črnilo skoraj-črno)

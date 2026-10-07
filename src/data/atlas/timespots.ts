@@ -11,8 +11,14 @@
  * časovnega stroja (1825 · ~1900 · danes), opisi pošteno ločujejo
  * REKONSTRUIRANO / OCENO / INTERPRETACIJO.
  *
- * Mlini (MVG-009) in letališče Otok (MVG-013) so IZVEN obsega 3D prizora
- * (~600 m okoli jedra) → prestavljeni v P1 (issue #11, komentar o izbiri).
+ * Mlini (MVG-009) in letališče Otok (MVG-013) sta bila v v1 IZVEN obsega
+ * 3D prizora → prestavljena v P1. P1 (issue #12) ju dodaja skupaj s
+ * Cerkviščem (MVG-040) kot ODDALJENE TOČKE z lastno vsebino (Knossos
+ * vzorec — segmentirano nalaganje: lastna lahka proceduralna scena ali
+ * story kartica, namesto praznega pogleda na vas 2–10 km stran):
+ *  · mlini      — proceduralna scena vodnega mlina (tip, ne konkretn mlin);
+ *  · otok       — story kartica z dogodki 1944–45 (brez 3D: spomenik je fizičen);
+ *  · cerkvišče  — tri cerkvice kot duhovi (1408) + kapelica 1994.
  */
 
 import type { GeoPoint } from "@/lib/geo";
@@ -46,7 +52,24 @@ export interface TimeSpot {
   exhibitSlug: string;
   /** hiša iz registra 1825 (opcijsko — hišna zgodba) */
   houseNo?: string;
+  /** lastna proceduralna mini-scena (issue #12 — oddaljene točke,
+      namesto praznega pogleda na oddaljeno vas) */
+  miniScene?: "mlini" | "cerkvisce";
+  /** dogodki za story kartico (issue #12 — Otok: story-only) */
+  events?: SpotEvent[];
 }
+
+/** dogodek na story kartici točke (issue #12 — Otok 1944–45) */
+export interface SpotEvent {
+  /** oznaka časa (leto ali datum) */
+  whenSi: string;
+  whenEn: string;
+  textSi: string;
+  textEn: string;
+}
+
+/** oddaljene točke (issue #12): ločene v UI, lastna vsebina */
+export const DISTANT_SPOT_IDS = ["mlini", "otok", "cerkvisce"] as const;
 
 export const TIME_SPOTS: TimeSpot[] = [
   {
@@ -156,6 +179,102 @@ export const TIME_SPOTS: TimeSpot[] = [
     evidenceEn: "MVG-015 (border 1991) · “today” = interpretation (1825 wireframe outline)",
     exhibitSlug: "meja-1991",
   },
+
+  /* ── P1 (issue #12): oddaljene točke z lastno vsebino ── */
+
+  {
+    id: "mlini",
+    lat: 45.5315,
+    lng: 15.3119,
+    radius: 60,
+    anchorId: "anchor-mlini",
+    year: 1825,
+    miniScene: "mlini",
+    titleSi: "Mlini ob Kolpi",
+    titleEn: "Mills on the Kolpa",
+    descSi:
+      "Ob Kolpi so mlini mleli žito bližnjih vasi stoletja — urbarji jih navajajo v Dolu, Radencih, Pobrežju in Krasincu. Pred tabo stoji proceduralna scena vodnega mlina: hiša, kolo, jez in toča. POŠTENO: to je rekonstrukcija VRSTE mlina (žimaln — vodoravno kolo znotraj), ne konkretnega mlina; koordinata zapisa je reprezentativna točka mlinarskega območja. Preklopi na »danes« — mlin postane duh: večina jih je propadla, Pobrežje je med ohranjenimi.",
+    descEn:
+      "Along the Kolpa mills ground the grain of nearby villages for centuries — the urbars list them at Dol, Radenci, Pobrežje and Krasinec. Before you stands a procedural water-mill scene: the house, the wheel, the weir and the millstream. HONESTLY: this is a reconstruction of the mill TYPE (žimaln — a horizontal wheel inside), not of a particular mill; the record coordinate is a representative point of the milling stretch. Switch to “today” — the mill turns into a ghost: most have decayed, Pobrežje among the preserved.",
+    evidenceSi:
+      "MVG-009 · Radio Odeon (urbarji) · Krajinski park Kolpa · scena = INTERPRETACIJA vrste (proceduralna) — terenska preverba čaka",
+    evidenceEn:
+      "MVG-009 · Radio Odeon (urbars) · Kolpa Landscape Park · the scene = an INTERPRETATION of the type (procedural) — field check pending",
+    exhibitSlug: "mlini-na-kolpi",
+  },
+  {
+    id: "otok",
+    lat: 45.665,
+    lng: 15.323,
+    radius: 90,
+    anchorId: "anchor-otok",
+    year: 2026,
+    titleSi: "Partizansko letališče Otok 1944–45",
+    titleEn: "The Otok partisan airfield 1944–45",
+    descSi:
+      "Na travniku ob vasi Otok pri Metliki (~10 km severno od Gribelj) so partizani spomladi 1944 uredili letališče za zavezniška letala. Letala so pristajala ob zatemnitvi, travnik so označili z lučmi. Do konca vojne so od tu odpeljali 1473 ranjencev v zavezniške bolnišnice v južni Italiji — danes dogodek varuje spominski Douglas C-47 Dakota. Točka je story-only: travnik je pred tabo, spomenik stoji fizično — 3D tu ničesar ne dodajamo.",
+    descEn:
+      "On a meadow by the village of Otok near Metlika (~10 km north of Griblje) the Partisans laid out an airfield for Allied aircraft in the spring of 1944. The planes landed at blackout, the meadow marked with lanterns. By the end of the war 1,473 wounded were flown from here to Allied hospitals in southern Italy — today a Douglas C-47 Dakota stands guard over the memory. This spot is story-only: the meadow lies before you, the monument stands in the physical world — we add no 3D here.",
+    evidenceSi:
+      "MVG-013 · RTV Slovenija · Wikipedija (Otok, Metlika) · Wikimedia Commons (dokumentarna fotografija 1944) · koordinata je groba — terenska preverba čaka",
+    evidenceEn:
+      "MVG-013 · RTV Slovenia · Wikipedia (Otok, Metlika) · Wikimedia Commons (documentary photo 1944) · the coordinate is coarse — field check pending",
+    exhibitSlug: "letalisce-otok-1944",
+    events: [
+      {
+        whenSi: "pomlad 1944",
+        whenEn: "spring 1944",
+        textSi:
+          "Partizani uredijo letališče na travniku ob Kolpi — v tajnosti, v velikosti za zavezniška transportna letala.",
+        textEn:
+          "The Partisans lay out the airfield on a meadow by the Kolpa — in secret, sized for Allied transport aircraft.",
+      },
+      {
+        whenSi: "17. september 1944",
+        whenEn: "17 September 1944",
+        textSi:
+          "Prvo zavezniško pristajanje — pet letali. Ranjenci iz gozdnih bolnišnic prvič letijo proti miru.",
+        textEn:
+          "The first Allied landing — five aircraft. The wounded of the forest hospitals fly towards peace for the first time.",
+      },
+      {
+        whenSi: "1944 → 1945",
+        whenEn: "1944 → 1945",
+        textSi:
+          "Zračni most: 1473 ranjencev prepeljanih v južno Italijo; rešenih tudi 87 britanskih letalcev, večinoma sestreljenih pilotov.",
+        textEn:
+          "The air bridge: 1,473 wounded carried to southern Italy; 87 British airmen rescued too, mostly downed pilots.",
+      },
+      {
+        whenSi: "danes",
+        whenEn: "today",
+        textSi:
+          "Spominski Douglas C-47 Dakota stoji pri Otoku; vsako leto vojaki prehodijo spominsko pot Vranov let (Ožbalt → Otok).",
+        textEn:
+          "The memorial Douglas C-47 Dakota stands at Otok; each year soldiers walk the Vranov let memorial trail (Ožbalt → Otok).",
+      },
+    ],
+  },
+  {
+    id: "cerkvisce",
+    lat: 45.5759667,
+    lng: 15.2643167,
+    radius: 55,
+    anchorId: "anchor-cerkvisce",
+    year: 2026,
+    miniScene: "cerkvisce",
+    titleSi: "Cerkvišče — tri cerkvice, ki jih ni več",
+    titleEn: "Cerkvišče — the three churches that are no more",
+    descSi:
+      "Ime vasi je arheologija sama: tu so stale tri cerkvice, Turki pa so jih ob vpadih (od ~1408) porušili in zažgali. Pred tabo utripajo trije rdeči duhovi — za dve domnevno vaščani še vedo, kje sta stali, za tretjo ne ve nihče; postavitev je INTERPRETACIJA. Ob njih stoji bela kapelica iz leta 1994 — edini kamen, ki danes nosi spomin. Zaselk pripada isti krajevni skupnosti kot Griblje.",
+    descEn:
+      "The village's name is an archaeology in itself: three churches stood here, and the Turks pulled them down and burned them during the incursions (from ~1408). Before you three red ghosts pulse — for two the villagers still believe they know where they stood, of the third no one knows; the placement is an INTERPRETATION. Beside them stands the white chapel of 1994 — the only stone that still carries the memory. The hamlet belongs to the same local community as Griblje.",
+    evidenceSi:
+      "MVG-040 · Wikipedija (Cerkvišče) · Občina Črnomelj (KS Griblje = obe naselji) · sidro OSM place node · duhovi = interpretacija (lega tretje neznana)",
+    evidenceEn:
+      "MVG-040 · Wikipedia (Cerkvišče) · Municipality of Črnomelj (the Griblje LC = both settlements) · OSM place-node anchor · the ghosts are an interpretation (the third position unknown)",
+    exhibitSlug: "cerkvisce",
+  },
 ];
 
 /** privzeti dinamični radiji, če točka ne določa svojih (issue #14, točka 10):
@@ -200,4 +319,14 @@ export function findNearestSpot(p: GeoPoint): { spot: TimeSpot; dist: number } {
     }
   }
   return { spot: best, dist: bestD };
+}
+
+/** Je točka oddaljena (izven vasi — lastna vsebina, issue #12)? */
+export function isDistantSpot(spot: TimeSpot): boolean {
+  return (DISTANT_SPOT_IDS as readonly string[]).includes(spot.id);
+}
+
+/** razdalja točke od jedra vasi (m) — za ločitev oddaljenih v UI */
+export function spotDistanceFromVillage(spot: TimeSpot): number {
+  return distanceM(spot, { lat: 45.5725, lng: 15.2926 });
 }

@@ -30,9 +30,11 @@ import {
   CORE_CENTER,
   PRESENT_BUILDINGS,
   BUILDING_STATUS,
+  toLocal,
   type PreparedBuilding,
   type BuildingPresence,
 } from "@/lib/village3d";
+import { buildMiniScene, type MiniSceneId } from "./mini-scenes";
 
 export type SceneMode = "ar" | "orbit";
 export type SceneYear = 1825 | 1900 | 2026;
@@ -139,7 +141,17 @@ export class VillageScene {
   private growthRoofsMat: THREE.MeshLambertMaterial;
   private presentMat: THREE.MeshLambertMaterial;
   private groundPlane: THREE.Mesh;
+  /** cone rabe tal + Kolpa — skupaj, da jih mini-scena skrije */
+  private envGroup = new THREE.Group();
   private churchRoot: THREE.Group | null = null;
+
+  /** mini-scena oddaljene točke (issue #12 — mlini/cerkvišče) */
+  private mini: {
+    id: MiniSceneId;
+    handle: import("./mini-scenes").MiniSceneHandle;
+    center: { x: number; z: number };
+  } | null = null;
+  private miniStart = performance.now();
 
   private mode: SceneMode;
   private year: SceneYear = 1825;
@@ -203,7 +215,7 @@ export class VillageScene {
     this.groundPlane.visible = opts.mode === "orbit";
     this.scene.add(this.groundPlane);
 
-    /* cone rabe tal (RECONSTRUCTED) */
+    /* cone rabe tal (RECONSTRUCTED) — v envGroup (mini-scena jih skrije) */
     for (const z of GROUND_ZONES) {
       const [x1, z1, x2, z2] = z.rect;
       const w = Math.max(2, x2 - x1);
@@ -220,10 +232,10 @@ export class VillageScene {
       );
       m.rotation.x = -Math.PI / 2;
       m.position.set((x1 + x2) / 2, 0.03, (z1 + z2) / 2);
-      this.scene.add(m);
+      this.envGroup.add(m);
     }
 
-    /* Kolpa — georeferencirana struga */
+    /* Kolpa — georeferencirana struga (tudi v envGroup) */
     const kolpa = new THREE.Mesh(
       ribbonGeometry(KOLPA_LOCAL, 22),
       new THREE.MeshBasicMaterial({
@@ -234,7 +246,8 @@ export class VillageScene {
         side: THREE.DoubleSide,
       }),
     );
-    this.scene.add(kolpa);
+    this.envGroup.add(kolpa);
+    this.scene.add(this.envGroup);
 
     /* stavbe — instancirane */
     const box = new THREE.BoxGeometry(1, 1, 1);
@@ -372,6 +385,49 @@ export class VillageScene {
 
   setYear(year: SceneYear) {
     this.year = year;
+    this.mini?.handle.setYear(year);
+  }
+
+  /** mini-scena oddaljene točke (issue #12): lastna proceduralna vsebina
+      namesto vasi, ki je tu 2–10 km stran. anchor = koordinata točke. */
+  setMiniScene(
+    id: MiniSceneId | null,
+    anchor?: { lat: number; lng: number } | null,
+  ) {
+    if (this.mini) {
+      this.scene.remove(this.mini.handle.group);
+      this.mini.handle.dispose();
+      this.mini = null;
+    }
+    if (!id || !anchor) {
+      /* nazaj na vas: vrni vse plasti (orbit/tla glede na način) */
+      this.walls1825.visible = true;
+      this.roofs1825.visible = true;
+      this.envGroup.visible = true;
+      this.groundPlane.visible = this.mode === "orbit";
+      if (this.churchRoot) this.churchRoot.visible = true;
+      /* growth/present vidnost v naslednjem frame povrne zanka */
+      this.wallsGrowth.visible = this.vis.growthOpacity > 0.05;
+      this.roofsGrowth.visible = this.vis.growthOpacity > 0.05;
+      this.wallsPresent.visible = this.vis.presentOpacity > 0.04;
+      return;
+    }
+    const handle = buildMiniScene(id);
+    const { x, z } = toLocal(anchor.lat, anchor.lng);
+    handle.group.position.set(x, 0, z);
+    handle.setYear(this.year);
+    this.scene.add(handle.group);
+    this.mini = { id, handle, center: { x, z } };
+    this.miniStart = performance.now();
+    /* skrij vas — predogled se usmeri na središče mini scene */
+    this.walls1825.visible = false;
+    this.roofs1825.visible = false;
+    this.wallsGrowth.visible = false;
+    this.roofsGrowth.visible = false;
+    this.wallsPresent.visible = false;
+    this.envGroup.visible = false;
+    this.groundPlane.visible = false;
+    if (this.churchRoot) this.churchRoot.visible = false;
   }
 
   /** orbit: vrnitev na začetni pogled */
@@ -470,6 +526,11 @@ export class VillageScene {
     this.ro.disconnect();
     this.controls?.dispose();
     this.removePointer();
+    if (this.mini) {
+      this.scene.remove(this.mini.handle.group);
+      this.mini.handle.dispose();
+      this.mini = null;
+    }
     this.scene.traverse((o) => {
       const any = o as unknown as {
         geometry?: THREE.BufferGeometry;
@@ -615,6 +676,40 @@ export class VillageScene {
   private loop = () => {
     if (this.disposed) return;
     this.raf = requestAnimationFrame(this.loop);
+
+    /* mini-scena (issue #12): lastna vsebina, vas skrita */
+    if (this.mini) {
+      this.mini.handle.tick((performance.now() - this.miniStart) / 1000);
+      if (this.mode === "ar") {
+        if (this.fix) {
+          /* na lokaciji: kamera na GPS, kompas obrača pogled */
+          const yawTarget = (this.compassYaw ?? 0) + this.manualYaw;
+          const pitchTarget = this.manualPitch;
+          this.curYaw += (yawTarget - this.curYaw) * 0.15;
+          this.curPitch += (pitchTarget - this.curPitch) * 0.15;
+          this.curX += (this.fix.x - this.curX) * 0.2;
+          this.curZ += (this.fix.z - this.curZ) * 0.2;
+          this.camera.position.set(this.curX, EYE_H, this.curZ);
+          this.camera.rotation.set(
+            THREE.MathUtils.degToRad(this.curPitch),
+            THREE.MathUtils.degToRad(-this.curYaw),
+            0,
+          );
+        } else if (!this.hasFixEver) {
+          /* predogled brez GPS: kamera počasi kroži okoli središča scene
+             in gleda vanj — prizor je VEDNO viden (vlečenje zamika krog) */
+          const t = (performance.now() - this.miniStart) / 1000;
+          const a = t * 0.12 + THREE.MathUtils.degToRad(this.manualYaw);
+          const R = 36;
+          this.curX = this.mini.center.x + Math.sin(a) * R;
+          this.curZ = this.mini.center.z + Math.cos(a) * R;
+          this.camera.position.set(this.curX, EYE_H + 2.5, this.curZ);
+          this.camera.lookAt(this.mini.center.x, 2.2, this.mini.center.z);
+        }
+      }
+      this.renderer.render(this.scene, this.camera);
+      return;
+    }
 
     /* preklop letnice: mehko bližanje ciljnim vrednostim */
     const tv = YEAR_VISUALS[this.year];
