@@ -32,6 +32,7 @@ import {
   CheckCircle2,
   Clock,
   Compass,
+  Crosshair,
   Download,
   Home,
   Lock,
@@ -49,15 +50,28 @@ import {
   PERIODS,
   toLocal,
   ORIGIN,
-  CORE_R,
+  inVillageCore,
   CHURCH,
   IZGINILO_STATS,
   BUILDING_NEAREST_PRESENT,
   PRESENCE_META,
   type BuildingPresence,
 } from "@/lib/village3d";
-import { distanceM, formatDistance, type GeoFix } from "@/lib/geo";
+import {
+  angleDelta,
+  bearingDeg,
+  distanceM,
+  formatDistance,
+  type GeoFix,
+} from "@/lib/geo";
 import type { UseGeolocation } from "@/hooks/use-geolocation";
+import { useCompass } from "@/hooks/use-compass";
+import { useCompassCal } from "@/lib/compass-cal";
+import {
+  GPS_QUALITY_LABEL,
+  sceneReadiness,
+  type CompassStability,
+} from "@/data/atlas/geotruth";
 import type { PickResult } from "./village-scene";
 import { HOUSE_VITALS } from "@/data/atlas/parish";
 import {
@@ -68,10 +82,6 @@ import {
   type TimeSpot,
 } from "@/data/atlas/timespots";
 import { useTimespots } from "@/lib/timespots-store";
-
-interface DeviceOrientationEventIOS extends DeviceOrientationEvent {
-  webkitCompassHeading?: number;
-}
 
 interface BuildingCard {
   kind: "1825" | "growth" | "present";
@@ -88,6 +98,13 @@ interface BuildingCard {
 
 /** 360° stališče: vzpon pri cerkvi sv. Vida (virtualni pogled +6 m) */
 const CHURCH_RISE = 6;
+
+const COMPASS_LABEL: Record<CompassStability, { si: string; en: string }> = {
+  unavailable: { si: "kompas ni na voljo", en: "compass unavailable" },
+  unstable: { si: "poravnava kompasa …", en: "compass aligning …" },
+  settling: { si: "kompas se umirja", en: "compass settling" },
+  stable: { si: "kompas stabilen", en: "compass stable" },
+};
 
 const PRESENCE_CHIP: Record<
   BuildingPresence,
@@ -120,7 +137,17 @@ export function ARTimeMachine({
   const { t, lang } = useLang();
   const { year, setYear, close, spot: storeSpot, p360, setP360 } = useTimeMachine();
   const { unlock, isUnlocked, unlocked } = useTimespots();
-  const { fix, status, start } = geo;
+  const { fix, status, start, quality } = geo;
+
+  /* kompas (issue #14): glajen + zavrnitev odstopnikov + stabilnost + kalibracija */
+  const {
+    heading,
+    rawHeading,
+    stability: compassStability,
+    needsPermission: iosCompassBlocked,
+    requestPermission: enableCompass,
+  } = useCompass();
+  const cal = useCompassCal();
 
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const streamRef = useRef<MediaStream | null>(null);
@@ -129,8 +156,6 @@ export function ARTimeMachine({
   const yearRef = useRef(year);
 
   const [camera, setCamera] = useState<"starting" | "live" | "unavailable">("starting");
-  const [heading, setHeading] = useState<number | null>(null);
-  const [iosCompassBlocked, setIosCompassBlocked] = useState(false);
   const [card, setCard] = useState<BuildingCard | null>(null);
   const [hint, setHint] = useState(true);
   const [flash, setFlash] = useState(false);
@@ -138,6 +163,18 @@ export function ARTimeMachine({
   const [spotCard, setSpotCard] = useState<TimeSpot | null>(null);
   const [spotJustUnlocked, setSpotJustUnlocked] = useState<TimeSpot | null>(null);
   const autoSpotRef = useRef<string | null>(null);
+
+  /* kalibracija kompasa (issue #14, točka 7) — prostovoljna, enkrat na napravo */
+  const [showCal, setShowCal] = useState(false);
+  const calOfferedRef = useRef(false);
+
+  /* diagnostika (issue #14, točka 15): samo ?debug=ar ali localhost */
+  const [debug] = useState(() => {
+    if (typeof window === "undefined") return false;
+    const p = new URLSearchParams(window.location.search).get("debug");
+    return p === "ar" || window.location.hostname === "localhost";
+  });
+  const [debugOpen, setDebugOpen] = useState(false);
 
   /* TTS (issue #12): statični MP3 → speechSynthesis fallback */
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -153,6 +190,30 @@ export function ARTimeMachine({
       setHint(false);
     }
   }, [storeSpot]);
+
+  /* ── ponudba kalibracije ob prvem AR odpiranju (issue #14, točka 7) ──
+     Prikazemo jo enkrat: kompas deluje, kalibracija še ni bila narejena niti
+     preskočena, GPS ima opravek (brez njega cilja ne moremo izračunati). */
+  useEffect(() => {
+    if (calOfferedRef.current) return;
+    if (heading == null || cal.offsetDeg != null || cal.dismissed) return;
+    if (!fix) return;
+    calOfferedRef.current = true;
+    setShowCal(true);
+    setHint(false);
+  }, [heading, fix, cal.offsetDeg, cal.dismissed]);
+
+  /* cilj kalibracije: najbližja točka, ki je vsaj 10 m stran (azimut na
+     lastnem stališču nima pomena — na bližini nič možno meriti) */
+  const calTarget = fix
+    ? (() => {
+        const sorted = TIME_SPOTS.map((s) => ({ s, d: distanceM(fix, s) })).sort(
+          (a, b) => a.d - b.d,
+        );
+        const far = sorted.find((x) => x.d >= 10);
+        return far ? { spot: far.s, dist: far.d } : null;
+      })()
+    : null;
 
   /* ── 3D prizor (three.js dinamično — izven glavnega snopa) ── */
   useEffect(() => {
@@ -172,7 +233,7 @@ export function ARTimeMachine({
             d: Math.round(p.d),
             dist: p.dist,
             nearChurch: Math.hypot(p.x - CHURCH.x, p.z - CHURCH.z) < 80,
-            core: Math.hypot(p.x, p.z) <= CORE_R,
+            core: inVillageCore(p.x, p.z),
             presence: p.presence,
             nearestPresent:
               p.kind === "1825" && p.index != null
@@ -227,29 +288,7 @@ export function ARTimeMachine({
     };
   }, []);
 
-  /* ── kompas ── */
-  useEffect(() => {
-    const onOrient = (e: DeviceOrientationEvent) => {
-      const ios = e as DeviceOrientationEventIOS;
-      if (typeof ios.webkitCompassHeading === "number") {
-        setHeading(ios.webkitCompassHeading);
-      } else if (e.alpha != null) {
-        setHeading((360 - e.alpha) % 360);
-      }
-    };
-    window.addEventListener("deviceorientation", onOrient, true);
-    const probe = window.setTimeout(() => {
-      const DOE = DeviceOrientationEvent as typeof DeviceOrientationEvent & {
-        requestPermission?: () => Promise<"granted" | "denied">;
-      };
-      if (typeof DOE.requestPermission === "function") setIosCompassBlocked(true);
-    }, 800);
-    return () => {
-      window.removeEventListener("deviceorientation", onOrient, true);
-      window.clearTimeout(probe);
-    };
-  }, []);
-
+  /* kompas: glajen heading iz use-compass → prizor (issue #14: brez sunkov) */
   useEffect(() => {
     sceneRef.current?.setCompassYaw(heading);
   }, [heading]);
@@ -304,20 +343,22 @@ export function ARTimeMachine({
     return () => window.removeEventListener("keydown", onKey);
   }, [close]);
 
-  const enableCompass = useCallback(async () => {
-    const DOE = DeviceOrientationEvent as typeof DeviceOrientationEvent & {
-      requestPermission?: () => Promise<"granted" | "denied">;
-    };
-    if (typeof DOE.requestPermission === "function") {
-      try {
-        const r = await DOE.requestPermission();
-        if (r !== "granted") return;
-      } catch {
-        return;
-      }
-    }
-    setIosCompassBlocked(false);
-  }, []);
+  /* ── potrditev kalibracije (issue #14, točka 7): odmik = azimut do cilja − heading ── */
+  const confirmCalibration = useCallback(() => {
+    if (!fix || !calTarget || rawHeading == null) return;
+    const targetBearing = bearingDeg(fix, {
+      lat: calTarget.spot.lat,
+      lng: calTarget.spot.lng,
+    });
+    const offset = angleDelta(rawHeading, targetBearing);
+    cal.setCalibration(offset, calTarget.spot.titleSi);
+    setShowCal(false);
+  }, [fix, calTarget, rawHeading, cal]);
+
+  const skipCalibration = useCallback(() => {
+    cal.dismiss();
+    setShowCal(false);
+  }, [cal]);
 
   /* ── TTS (issue #12): poslušaj zgodbo točke ──
      Najprej statični MP3 (boljši glas), ob napaki/odsotnosti pa brskalnikov
@@ -395,6 +436,10 @@ export function ARTimeMachine({
       ? distanceM(fix, { lat: ORIGIN.lat, lng: ORIGIN.lng })
       : null;
   const onSite = coreDistance != null && coreDistance <= 1500;
+
+  /* pripravljenost scene (issue #14, točki 11–12): GPS kakovost × kompas */
+  const readiness = sceneReadiness({ gps: quality, compass: compassStability });
+  const nearest = fix ? findNearestSpot(fix) : null;
 
   /* ── zajem fotografije ── */
   const capture = useCallback(async () => {
@@ -563,6 +608,52 @@ export function ARTimeMachine({
             {t("stavb", "buildings")}
           </span>
         </div>
+        {/* sidro scene (issue #14, točka 11): HIGH = poravnana, MEDIUM = poravnava …, LOW = približno */}
+        <div
+          className={`inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-xs backdrop-blur ${
+            readiness.anchor === "HIGH"
+              ? "border-emerald-300/40 bg-emerald-400/15 text-emerald-100"
+              : readiness.anchor === "MEDIUM"
+                ? "border-amber-300/40 bg-amber-400/15 text-amber-100"
+                : "border-white/20 bg-black/45 text-white/80"
+          }`}
+          role="status"
+        >
+          {readiness.anchor === "HIGH" ? (
+            <Crosshair className="size-3.5 shrink-0" aria-hidden="true" />
+          ) : (
+            <Compass
+              className={`size-3.5 shrink-0 ${readiness.anchor === "MEDIUM" ? "animate-pulse" : ""}`}
+              aria-hidden="true"
+            />
+          )}
+          <span className="font-medium">
+            {readiness.anchor === "HIGH"
+              ? t("SCENA PORAVNANA", "SCENE ALIGNED")
+              : readiness.anchor === "MEDIUM"
+                ? t("Poravnava scene …", "Scene aligning …")
+                : t("približno — raziskovanje", "approximate — exploring")}
+          </span>
+        </div>
+        {/* kompas/GPS kakovost (issue #14, točki 8–9) — le ko je podatka */}
+        {compassStability !== "unavailable" && compassStability !== "stable" && (
+          <div
+            className="inline-flex animate-pulse items-center gap-2 rounded-full border border-amber-300/40 bg-amber-400/15 px-3 py-1.5 text-xs text-amber-100 backdrop-blur"
+            role="status"
+          >
+            <Compass className="size-3.5 shrink-0" aria-hidden="true" />
+            <span>{t(COMPASS_LABEL[compassStability].si, COMPASS_LABEL[compassStability].en)}</span>
+          </div>
+        )}
+        {fix?.accuracy != null && (
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/45 px-3 py-1.5 text-xs text-white/80 backdrop-blur">
+            <MapPin className="size-3.5 shrink-0" aria-hidden="true" />
+            <span>
+              {t(`GPS ±${Math.round(fix.accuracy)} m`, `GPS ±${Math.round(fix.accuracy)} m`)} ·{" "}
+              {t(GPS_QUALITY_LABEL[quality].si, GPS_QUALITY_LABEL[quality].en)}
+            </span>
+          </div>
+        )}
         {status !== "watching" && (
           <button
             type="button"
@@ -669,6 +760,108 @@ export function ARTimeMachine({
         ))}
       </div>
 
+      {/* KALIBRACIJA POGLEDA (issue #14, točka 7) — enkrat na napravo, prostovoljna */}
+      {showCal && calTarget && (
+        <div className="absolute inset-x-4 bottom-44 z-20 sm:left-1/2 sm:right-auto sm:w-[440px] sm:-translate-x-1/2">
+          <div
+            className="rounded-xl border border-amber-300/40 bg-black/75 p-4 text-white backdrop-blur"
+            role="region"
+            aria-label={t("Kalibracija pogleda", "View calibration")}
+          >
+            <p className="flex items-center gap-2 font-display text-sm font-semibold">
+              <Crosshair className="size-4 text-amber-200" aria-hidden="true" />
+              {t("KALIBRACIJA POGLEDA", "VIEW CALIBRATION")}
+            </p>
+            <ol className="mt-2 list-decimal space-y-1 pl-5 text-xs leading-relaxed text-white/85">
+              <li>
+                {t(
+                  `Obrni telefon proti: ${calTarget.spot.titleSi}.`,
+                  `Point your phone at: ${calTarget.spot.titleEn}.`,
+                )}
+              </li>
+              <li>
+                {t(
+                  `Počakaj na stabilen kompas (${
+                    compassStability === "stable" ? "✓" : "…"
+                  }).`,
+                  `Wait for a stable compass (${
+                    compassStability === "stable" ? "✓" : "…"
+                  }).`,
+                )}
+              </li>
+              <li>{t("Potrdi — scena se zamakne v pravo smer.", "Confirm — the scene shifts to the right direction.")}</li>
+            </ol>
+            <div className="mt-3 flex items-center gap-2">
+              <button
+                type="button"
+                onClick={confirmCalibration}
+                disabled={compassStability !== "stable"}
+                className="inline-flex items-center gap-1.5 rounded-full border border-amber-300/50 bg-amber-400/20 px-3 py-1.5 text-xs font-semibold text-amber-100 transition-colors hover:bg-amber-400/30 disabled:opacity-40"
+              >
+                <CheckCircle2 className="size-3.5" aria-hidden="true" />
+                {t("Potrdi smer", "Confirm direction")}
+              </button>
+              <button
+                type="button"
+                onClick={skipCalibration}
+                className="rounded-full border border-white/25 px-3 py-1.5 text-xs text-white/70 transition-colors hover:bg-white/10"
+              >
+                {t("preskoči", "skip")}
+              </button>
+              <span className="ml-auto text-[10px] text-white/50">
+                {t("shranjeno samo na tej napravi", "stored on this device only")}
+              </span>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* AR DEBUG (issue #14, točka 15) — samo ?debug=ar / localhost, privzeto skrito.
+          Na majhnih zaslonih zložljiv, da ne pokriva statusnih čipov. */}
+      {debug && (
+        <div className="absolute left-2 top-24 z-30" role="status" aria-label="AR debug">
+          <button
+            type="button"
+            onClick={() => setDebugOpen((o) => !o)}
+            className="rounded-md border border-emerald-300/40 bg-black/80 px-2 py-1 font-mono text-[10px] font-bold tracking-widest text-emerald-300 backdrop-blur"
+          >
+            AR DEBUG {debugOpen ? "▾" : "▸"}
+          </button>
+          {debugOpen && (
+          <div
+            className="mt-1 max-w-[240px] rounded-lg border border-emerald-300/30 bg-black/80 p-2.5 font-mono text-[10px] leading-relaxed text-emerald-200 backdrop-blur"
+          >
+          <p>lat: {fix ? fix.lat.toFixed(5) : "—"}</p>
+          <p>lng: {fix ? fix.lng.toFixed(5) : "—"}</p>
+          <p>acc: {fix?.accuracy != null ? `±${Math.round(fix.accuracy)} m` : "—"}</p>
+          <p>gps: {quality}</p>
+          <p>heading: {heading != null ? `${Math.round(heading)}°` : "—"}</p>
+          <p>
+            raw: {rawHeading != null ? `${Math.round(rawHeading)}°` : "—"} · off:{" "}
+            {cal.offsetDeg != null ? `${Math.round(cal.offsetDeg)}°` : "—"}
+          </p>
+          <p>kompas: {compassStability}</p>
+          <p>
+            spot: {nearest ? `${nearest.spot.id} @ ${Math.round(nearest.dist)} m` : "—"}
+          </p>
+          <p>
+            sidro: {readiness.anchor} · scena: {readiness.sceneStatus}
+          </p>
+          <p>asset: {sceneRef.current ? "3D pripravljen" : "nalaga …"}</p>
+          {cal.calibratedAt != null && (
+            <button
+              type="button"
+              onClick={cal.reset}
+              className="mt-1 rounded border border-emerald-300/40 px-1.5 py-0.5 text-[9px] hover:bg-emerald-300/10"
+            >
+              reset kalibracije
+            </button>
+          )}
+          </div>
+          )}
+        </div>
+      )}
+
       {/* prvi namig */}
       {hint && !spotCard && !p360 && (
         <div className="relative z-10 mx-auto mt-8 max-w-sm rounded-xl border border-white/20 bg-black/50 p-4 text-center backdrop-blur">
@@ -762,6 +955,20 @@ export function ARTimeMachine({
                 <p className="mt-2 text-xs leading-relaxed text-white/85">
                   {lang === "si" ? spotCard.descSi : spotCard.descEn}
                 </p>
+                {/* dinamični radij (issue #14, točka 10): odklep ≠ natančna poravnava */}
+                {fix && isUnlocked(spotCard.id) && (() => {
+                  const d = distanceM(fix, { lat: spotCard.lat, lng: spotCard.lng });
+                  const rr = spotCard.renderReadyM ?? 25;
+                  return d > rr ? (
+                    <p className="mt-1.5 flex items-center gap-1.5 text-[11px] text-amber-200">
+                      <Crosshair className="size-3 shrink-0" aria-hidden="true" />
+                      {t(
+                        `portal odklenjen — približaj se na ${rr} m za natančno poravnavo scene`,
+                        `portal unlocked — come within ${rr} m for precise scene alignment`,
+                      )}
+                    </p>
+                  ) : null;
+                })()}
               </div>
               <button
                 type="button"
@@ -1105,7 +1312,7 @@ export function ARTimeMachine({
             )}
           </p>
         )}
-        {heading == null && !iosCompassBlocked && (
+        {compassStability === "unavailable" && !iosCompassBlocked && (
           <p className="text-center text-[11px] text-white/60">
             {t(
               "Kompas ni na voljo — vlecite po zaslonu za obrat pogleda.",

@@ -27,6 +27,7 @@ import {
   GROUND_ZONES,
   KOLPA_LOCAL,
   CHURCH,
+  CORE_CENTER,
   PRESENT_BUILDINGS,
   BUILDING_STATUS,
   type PreparedBuilding,
@@ -376,9 +377,13 @@ export class VillageScene {
   /** orbit: vrnitev na začetni pogled */
   resetView() {
     if (this.mode !== "orbit") return;
-    this.camera.position.set(430, 400, 560);
+    this.camera.position.set(
+      CORE_CENTER.x + 430,
+      400,
+      CORE_CENTER.z + 560,
+    );
     if (this.controls) {
-      this.controls.target.set(0, 8, 0);
+      this.controls.target.set(CORE_CENTER.x, 8, CORE_CENTER.z);
       this.controls.update();
     }
   }
@@ -502,11 +507,16 @@ export class VillageScene {
     this.controls = new OrbitControls(this.camera, this.canvas);
     this.controls.enableDamping = true;
     this.controls.dampingFactor = 0.08;
-    this.controls.target.set(0, 8, 0);
+    /* GEOTRUTH: tarča orbita = središče vasi 1825 (ne sodobnega izhodišča) */
+    this.controls.target.set(CORE_CENTER.x, 8, CORE_CENTER.z);
     this.controls.maxPolarAngle = Math.PI * 0.49;
     this.controls.minDistance = 40;
     this.controls.maxDistance = 2200;
-    this.camera.position.set(430, 400, 560);
+    this.camera.position.set(
+      CORE_CENTER.x + 430,
+      400,
+      CORE_CENTER.z + 560,
+    );
     this.camera.lookAt(this.controls.target);
   }
 
@@ -642,8 +652,9 @@ export class VillageScene {
       const pitchTarget = this.manualPitch;
       this.curYaw += (yawTarget - this.curYaw) * 0.15;
       this.curPitch += (pitchTarget - this.curPitch) * 0.15;
-      let px = 300;
-      let pz = 340;
+      /* predogled brez GPS: kroži nad jedrom vasi 1825 (GEOTRUTH center) */
+      let px = CORE_CENTER.x + 300;
+      let pz = CORE_CENTER.z + 340;
       if (this.fix) {
         px = this.fix.x;
         pz = this.fix.z;

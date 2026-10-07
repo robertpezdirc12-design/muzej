@@ -37,17 +37,23 @@ export const ATLAS_OWNERS: AtlasOwner[] = [
   { id: "lastnik-zollnerd", nameAsWritten: "Zollnerd A. M.", houseRefs: ["98"], status: "REVIEW" },
 ];
 
-// ——— GEOREFERENCA ——————————————————————————————
+// ——— GEOREFERENCA (GEOTRUTH, issue #14, 2026-10-08) ——————————————————
+// Listi A01/A02 so zasidrani na uradni EŠD 2122 (Register nepremične kulturne
+// dediščine, GisKD): cerkev sv. Vida na listu A02 (px 1995,577) ↔ uradni poligon
+// 45,567610 N 15,290311 E. Struga Kolpe na listu (desni krak, VLM x 2765–2890)
+// se pod to afino ujema s sodobno strugo 6–30 m — pod staro (krožno) afino je
+// odstopala 80–130 m. Vsi izpeljani podatki so bili translirani za
+// −0,005190 lat / −0,001889 lng (≈ −147 m E / +578 m J).
 
 export interface SheetGeoref {
   id: string;
   sheet: string;
   imageUrl: string;
-  /** [severni, zahodni], [južni, vzhodni] */
+  /** [severni, zahodni], [južni, vzhodni] — GEOTRUTH (EŠD 2122) afina */
   bounds: [[number, number], [number, number]];
   pixels: { width: number; height: number };
   scaleMPerPixel: number;
-  status: "REVIEW";
+  status: "CORROBORATED" | "RECONSTRUCTED" | "REVIEW";
   methodSi: string;
   methodEn: string;
   controlPoints: { fromSi: string; a01x?: number; a01y?: number; modernLat: number; modernLng: number; noteSi?: string }[];
@@ -61,47 +67,49 @@ export const SHEET_GEOREFS: SheetGeoref[] = [
     sheet: "A01",
     imageUrl: "/atlas/n83-a01.jpg",
     bounds: [
-      [45.5888, 15.2622],
-      [45.5666, 15.3016],
+      [45.58361, 15.26031],
+      [45.56141, 15.29971],
     ],
     pixels: { width: 2826, height: 2273 },
     scaleMPerPixel: 1.09,
-    status: "REVIEW",
+    status: "RECONSTRUCTED",
     methodSi:
-      "Afina transformacija brez rotacije (Web Mercator): sidrišči — jedro vasi Grüble (list ~74 % š / ~78 % v) ↔ moderni center vasi 45,5725 N 15,2926 E; severna skupina hiš ↔ 45,5754 N; reka Kolpa pri vasi (~91 % š) ↔ sodobna struga 15,2994 E. Iterativno izboljšanje s prekrivko na OSM (3 koraki) — vizualna ocena ujemanja: vas 8/10, reka 9/10.",
+      "GEOTRUTH afina (issue #14): staro sidro A01 »jedro vasi« (px 2091,1773) se po popravku izkaže za cerkev+ pokopališče (34 m od EŠD 2122), »severna skupina« (px 2063,1477) pa za severni rob vasi 1825. Translacija lista: −0,005190 lat / −0,001889 lng. Struga Kolpa ostaja neodvisen vir E–Z kontrole (OSM ploščice).",
     methodEn:
-      "Affine transform without rotation (Web Mercator): anchors — Grüble village core (~74 % w / ~78 % h) ↔ modern village centre 45.5725 N 15.2926 E; northern house cluster ↔ 45.5754 N; the Kolpa at the village latitude (~91 % w) ↔ modern channel 15.2994 E. Iteratively refined on an OSM overlay (3 steps) — visual match: village 8/10, river 9/10.",
+      "GEOTRUTH affine (issue #14): the old A01 anchor »village core« (px 2091,1773) re-identifies, after the correction, as the church + churchyard (34 m from EŠD 2122); the »northern cluster« (px 2063,1477) is the north end of the 1825 village. Sheet translation: −0.005190 lat / −0.001889 lng. The Kolpa channel remains an independent E–W control (OSM tiles).",
     controlPoints: [
-      { fromSi: "jedro vasi Grüble (A01 px 2091, 1773)", a01x: 2091, a01y: 1773, modernLat: 45.5725, modernLng: 15.2926, noteSi: "muzejska točka MVG-001" },
-      { fromSi: "severna skupina (A01 px 2063, 1477)", a01x: 2063, a01y: 1477, modernLat: 45.5754, modernLng: 15.2928 },
-      { fromSi: "reka Kolpa pri vasi (A01 px 2580, 1773)", a01x: 2580, a01y: 1773, modernLat: 45.5725, modernLng: 15.2994, noteSi: "izsledek struge iz OSM ploščic" },
+      { fromSi: "cerkev sv. Vida / »jedro« (A01 px 2091, 1773)", a01x: 2091, a01y: 1773, modernLat: 45.56761, modernLng: 15.290311, noteSi: "EŠD 2122 (uradni vir) — prej razlagano kot jedro vasi, krožna georeferenca" },
+      { fromSi: "severna skupina hiš (A01 px 2063, 1477)", a01x: 2063, a01y: 1477, modernLat: 45.57022, modernLng: 15.290913, noteSi: "severni rob vasi 1825 po GEOTRUTH afini" },
+      { fromSi: "reka Kolpa pri vasi (A01 px 2580, 1773)", a01x: 2580, a01y: 1773, modernLat: 45.56761, modernLng: 15.2994, noteSi: "izsledek struge iz OSM ploščic (neodvisen vir E–Z)" },
     ],
     accuracySi:
-      "Ocena natančnosti ±75–120 m (vizualno). List ni rotiran; razmerje stranic preslikave 1,246 ≈ razmerje slike 1,243 (konsistenčni test). Kotni odmik lokalne katastrske projekcije ni odstranjen.",
+      "Ocena natančnosti ±60–100 m na območju vasi (struga potrjena 6–30 m, translacija ena za oba lista). Kotni odmik lokalne katastrske projekcije ni odstranjen (ocena ≤ 2,5°).",
     accuracyEn:
-      "Estimated accuracy ±75–120 m (visual). The sheet is unrotated; transform aspect 1.246 ≈ image aspect 1.243 (consistency test). The angular offset of the local cadastral projection was not removed.",
+      "Estimated accuracy ±60–100 m over the village area (the river channel confirmed at 6–30 m, one shared translation for both sheets). The angular offset of the local cadastral projection was not removed (estimated ≤ 2.5°).",
   },
   {
     id: "georef-a02",
     sheet: "A02",
     imageUrl: "/atlas/n83-a02.jpg",
     bounds: [
-      [45.576998, 15.271679],
-      [45.561308, 15.302635],
+      [45.571808, 15.26979],
+      [45.556118, 15.300746],
     ],
     pixels: { width: 3010, height: 2158 },
     scaleMPerPixel: 0.79,
-    status: "REVIEW",
+    status: "CORROBORATED",
     methodSi:
-      "Afina transformacija: sidrišči — cerkev sv. Vida na listu (px 1995, 577; stavba z apsido, oznaka K, napis St. Veith) ↔ moderna cerkev MVG-002 (45,5728 N 15,2922 E) — ujemitev križa na piksel točno; reka Kolpa (med. stolpec 89,5 %) ↔ sodobna struga. Vizualna ocena 9/10.",
+      "GEOTRUTH afina (issue #14): cerkev sv. Vida na listu (px 1995,577 — apsida, križ, pokopališki obrobl) ↔ uradni poligon EŠD 2122 (45,567610 N 15,290311 E, GisKD MK_EVRD/3602, STANJE_POD 07-10-2026); stavba OSM 284847361 znotraj poligona (≤ 8 m). Struga Kolpe na listu (desni krak, VLM x 2765–2890 pri y 100–1400) se s sodobno strugo ujeme 6–30 m. Stara afina je bila KROŽNA — cerkev je bila lastna kontrolna točka s predpostavljeno koordinato 45,5728/15,2922.",
     methodEn:
-      "Affine transform: anchors — St. Vitus church on the sheet (px 1995, 577; apsidal building, mark K, label St. Veith) ↔ modern church MVG-002 (45.5728 N 15.2922 E) — crosshair match exact to the pixel; the Kolpa (median column 89.5 %) ↔ modern channel. Visual match 9/10.",
+      "GEOTRUTH affine (issue #14): St. Vitus' church on the sheet (px 1995,577 — apse, cross, churchyard) ↔ the official EŠD 2122 polygon (45.567610 N 15.290311 E, GisKD MK_EVRD/3602, status 07-10-2026); the OSM building 284847361 lies inside the polygon (≤ 8 m). The Kolpa channel on the sheet (right branch, VLM x 2765–2890 at y 100–1400) matches the modern channel at 6–30 m. The old affine was CIRCULAR — the church was its own control point with an assumed coordinate 45.5728/15.2922.",
     controlPoints: [
-      { fromSi: "cerkev sv. Vida (A02 px 1995, 577)", a01x: 1995, a01y: 577, modernLat: 45.5728, modernLng: 15.2922, noteSi: "MVG-002, EŠD 2122 — validirano tudi z vektorizacijo (izluščena stavba na 45,57287 N 15,29217 E)" },
-      { fromSi: "reka Kolpa ob cerkvi (A02 px 2695, 577)", a01x: 2695, a01y: 577, modernLat: 45.5728, modernLng: 15.2994 },
+      { fromSi: "cerkev sv. Vida (A02 px 1995, 577)", a01x: 1995, a01y: 577, modernLat: 45.56761, modernLng: 15.290311, noteSi: "EŠD 2122 — uradni register (GisKD) + OSM way 284847361 + pokopališče 284847363" },
+      { fromSi: "reka Kolpa ob cerkvi (A02 px 2695, 577 — desni krak x≈2827)", a01x: 2695, a01y: 577, modernLat: 45.56761, modernLng: 15.29866, noteSi: "sodobna struga pri latitudi cerkve (OSM); na listu narisana pri x≈2827, ujemanje 6–30 m" },
     ],
-    accuracySi: "Ocena natančnosti ±50–80 m. Skala lista ~0,79 m/px (višja ločljivost skena kot A01).",
-    accuracyEn: "Estimated accuracy ±50–80 m. Sheet scale ~0.79 m/px (higher scan resolution than A01).",
+    accuracySi:
+      "Ocena natančnosti ±40–80 m na območju vasi. Skala lista ~0,79 m/px. Prisotnost OSM stavb (15 obstoječih od 156 po novi shemi) dodatno podpira afino.",
+    accuracyEn:
+      "Estimated accuracy ±40–80 m over the village area. Sheet scale ~0.79 m/px. The OSM building presence (15 of 156 matching under the new scheme) further supports the affine.",
   },
 ];
 
@@ -126,24 +134,24 @@ export const ATLAS_LOCATIONS: AtlasLocation[] = [
     kind: "vas",
     titleSi: "Griblje (Grüble) — jedro vasi ~1825",
     titleEn: "Griblje (Grüble) — village core ~1825",
-    lat: 45.5725,
-    lng: 15.2926,
+    lat: 45.57092,
+    lng: 15.29435,
     status: "VERIFIED",
     sourceId: "src-a02",
     museumRef: "MVG-001",
-    noteSi: "Razpotegnjeno jedro z dvema sklopoma hiš na listu A02; 156 vektoriziranih objektov (status RECONSTRUCTED).",
+    noteSi: "Razpotegnjeno jedro z dvema sklopoma hiš na listu A02 (GEOTRUTH afina, issue #14); 156 vektoriziranih objektov (status RECONSTRUCTED). Današnje jedro (OSM place node 45,5725/15,2926) je ~370 m severno — vas je zrasla proti severu.",
   },
   {
     id: "loc-cerkev",
     kind: "cerkev",
     titleSi: "Cerkev sv. Vida (St. Veith) ~1825",
     titleEn: "St. Vitus church (St. Veith) ~1825",
-    lat: 45.5728,
-    lng: 15.2922,
+    lat: 45.56761,
+    lng: 15.290311,
     status: "VERIFIED",
     sourceId: "src-a02",
     museumRef: "MVG-002",
-    noteSi: "Stavba z apsido, oznaka K ob napisu St. Veith na listu A02; ista lokacija kot današnja cerkev (EŠD 2122). Pripravljena za 3D/AR (GLB model MVG-002).",
+    noteSi: "Stavba z apsido, križem in pokopališkim obroblom na listu A02 (px 1995,577). EŠD 2122: »na pokopališču, na gričku južno od vasi«. Uradni vir (GisKD) + OSM (way 284847361) — koordinata VERIFIED (issue #14, konflikt 595 m razrešen). Pripravljena za 3D/AR (GLB model MVG-002, realno merilo 13 m).",
   },
   {
     id: "loc-kolpa",

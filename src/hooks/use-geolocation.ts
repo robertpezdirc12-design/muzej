@@ -6,10 +6,19 @@
  * Zagon je VEDNO ročen (gumb »Priklopi GPS«): brskalniki zahtevajo
  * dejanje uporabnika za dovoljenje, implicitno spraševanje je slab bonton.
  * Na strežniku (SSR) hook mirno počiva — vse je za odjemalcem.
+ *
+ * GEOTRUTH (issue #14, točka 9): izpeljana kakovost GPS
+ * (NO_FIX → ACQUIRING → APPROXIMATE → GOOD → EXCELLENT) iz dejanske
+ * natančnosti, ki jo poda brskalnik. Pragi so prilagojeni merilu scene
+ * (vas, hiše ~15 m): EXCELLENT ≤ 8 m, GOOD ≤ 20 m.
  */
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { GeoFix } from "@/lib/geo";
+import {
+  gpsQualityFrom,
+  type GpsQuality,
+} from "@/data/atlas/geotruth";
 
 export type GeoStatus =
   | "idle" // še nismo zažegnali
@@ -23,6 +32,8 @@ export interface UseGeolocation {
   status: GeoStatus;
   /** kratek opis napake za prikaz (null, če je vse v redu) */
   error: string | null;
+  /** izpeljana kakovost za AR pripravljenost scene (issue #14) */
+  quality: GpsQuality;
   start: () => void;
   stop: () => void;
 }
@@ -32,6 +43,12 @@ export function useGeolocation(): UseGeolocation {
   const [status, setStatus] = useState<GeoStatus>("idle");
   const [error, setError] = useState<string | null>(null);
   const watchRef = useRef<number | null>(null);
+
+  const quality = gpsQualityFrom(
+    status === "watching",
+    fix != null,
+    fix?.accuracy ?? null,
+  );
 
   const stop = useCallback(() => {
     if (watchRef.current != null && typeof navigator !== "undefined") {
@@ -92,5 +109,5 @@ export function useGeolocation(): UseGeolocation {
     };
   }, []);
 
-  return { fix, status, error, start, stop };
+  return { fix, status, error, quality, start, stop };
 }

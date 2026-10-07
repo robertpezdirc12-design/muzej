@@ -1138,3 +1138,92 @@ Stage Summary:
 - Geodetska validacija: muzejsko georeferenciranje potrjeno na 3 neodvisne načine; OSM
   cerkev napačna; ribnik MVG-016 za terensko preverbo
 - Stanje: 16. deploy v produkciji, #12 odprt (mini-scene mlini/cerkvišče + zaključek)
+
+---
+Task ID: 14 (issue #14 — P0 AR GEO-TRUTH + DEVICE CALIBRATION)
+Agent: Z.ai Code (glavni agent)
+Task: Preberi novi GitLab issue #14 (P0) in ga implementiraj: GeoTruth model, razrešitev koordinatnega konflikta cerkve proti uradnim virom, avdit vseh AR sidrov, kalibracija kompasa, GPS kakovost, zaupanje sidra v UI, debug overlay.
+
+Work Log:
+- Prebrani issue #14 (P0 GEO-TRUTH) in #13 (P2 panorama) z GitLab API (WAF retry); #14 je predpogoj za #13
+- Uradni viri: GisKD MK_EVRD (geohub.gov.si) — EŠD 2122 "Griblje - Cerkev sv. Vida" (layer 3602,
+  poligon centroid 45,567610/15,290311, "na pokopališču, na gričku južno od vasi", STANJE_POD
+  07-10-2026); EŠD 19326 "Griblje - Spomenik NOB" (layer 3603, 45,571396/15,292355, "pred
+  osnovno šolo"); EŠD 10094 arheološko najdišče ob Kolpi (layer 3605)
+- KRITIČNA ugotovitev: repozitorij je cerkev imel na 45,5728/15,2922 (jedro vasi) — 595 m od
+  uradnega EŠD 2122! OSM potrdjuje uradni vir (stavba way 284847361 + pokopališče 284847363,
+  ≤ 8 m). Spomenik: 447 m od prejšnje 45,5754.
+- Dokazna pot, da je STARA afina A02 KROŽNA (cerkev = lastna kontrolna točka) in da je pravilna
+  cerkveno zasidrana afina: struga Kolpe na listu (VLM trace desnega kraka x 2765–2890 pri
+  y 100–1400) se s sodobno strugo ujema 6–30 m SAMO pod cerkveno afino (stara odstopa 80–130 m);
+  kontroli A01 se re-interpretirata (»jedro« px 2091,1773 = cerkev, 34 m; »severna skupina« =
+  severni rob vasi 1825); porazdelitve razdalj stavb od cerkve 1825:list = današnji:OSM
+  (p50 502:509 m)
+- scripts/geotruth-fix.py: translacija vseh A02-izpeljanih podatkov za dlat −0,005190 /
+  dlng −0,001889 (≈ −147 m E, +578 m J): buildings.json (156 stavb), landuse.ts (3 cone),
+  present.json (match preračunan: 15 obstaja · 26 negotovih · 115 ni jih več — prej 9/30/117,
+  izboljšanje dodatno podpira popravek), village3d CHURCH → uradna koordinata,
+  CORE_CENTER (15, 530) + inVillageCore(), model.ts SHEET_GEOREFS pošteno prepisana
+  (A02 CORROBORATED, A01 RECONSTRUCTED), ATLAS_LOCATIONS loc-cerkev/loc-griblje
+- src/data/atlas/geotruth.ts (nov, 696 vrstic): GeoSource hierarhija (OFFICIAL_GIS →
+  ARCHIVAL_PRIMARY → CORROBORATING → OWN_GEOREF → APPROX), 7 virov (GisKD ×3, OSM, list A02,
+  GEOTRUTH afina, Commons ribnik), GEO_ANCHORS (8 sidrov: cerkev VERIFIED ±15 m EŠD 2122,
+  spomenik VERIFIED ±12 m EŠD 19326, jedro-1825 RECONSTRUCTED ±80 m, kolpa CORROBORATED,
+  ribnik REVIEW 650 m konflikt, meja APPROXIMATE, cerkvišče, origin) + TO_COLLECT (mlini),
+  ASSET_ORIENTATIONS (GLB/USDZ REAL_WORLD 13 m, rotationY 0, TO_COLLECT field check),
+  A02_CORRECTION (dokumentirana dokazna pot, 6 korakov), auditGeoAnchors() samodejni
+  detektor konfliktov (pragi <5/5–30/30–300/>300 m; TimeSpot↔sidro, podvojeni museumRef,
+  VERIFIED brez vira, model3dUrl brez sidra/orientacije, headingOffset brez razloga),
+  GEO_AUDIT_REPORT (ob zagonu), gpsQualityFrom() (NO_FIX→ACQUIRING→APPROXIMATE→GOOD→EXCELLENT,
+  pragi 8/20 m prilagojeni merilu scene), sceneReadiness() (HIGH/MEDIUM/LOW pogodba),
+  SPOT_RADIUS_DEFAULTS (točka 10)
+- timespots.ts: cerkev → 45,56761/15,290311 (anchor-cerkev, EŠD 2122 v evidence), gornje →
+  45,571396/15,292355 (anchor-spomenik EŠD 19326, "pred osnovno šolo"), jedro → 45,57092/
+  15,29435 (anchor-jedro-1825 RECONSTRUCTED, "današnje jedro ~400 m severno"), renderReadyM/
+  precisionM + anchorId na vseh 6 točkah
+- exhibits.json: MVG-002/003 → uradna koordinata cerkve; MVG-029 → uradna koordinata spomenika;
+  sources.ts EŠD 2122 posodobljen (deltaSi dokumentira razrešitev); atlas.ts QA preverba
+  cerkve → uradna koordinata
+- src/hooks/use-compass.ts (nov): glajenje (low-pass α 0,3 prek krožne razlike), zavrnitev
+  odstopnikov (>25° posamični skok, nadaljevanje = resničen obrat), prag gibanja 0,4°,
+  stabilnost stddev (stable ≤2° / settling ≤6° / unstable), iOS dovoljenje, kalibracijski
+  odmik iz shrambe
+- src/lib/compass-cal.ts (nov): zustand persist localStorage mvg-compass-cal (offsetDeg,
+  calibratedAt, dismissed, targetSi) — kalibracija je prostovoljna, shranjena na napravo
+- use-geolocation: izpeljan quality (GpsQuality) iz dejanske accuracy
+- ar-time-machine.tsx: use-compass (namesto surovega handlerja), čip SCENA PORAVNANA /
+  Poravnava scene … / približno — raziskovanje (barvno kodirano), čipa kompas (Poravnava
+  kompasa …) in GPS ±X m + kakovost, KALIBRACIJA POGLEDA kartica (3 koraki, cilj = najbližja
+  točka ≥ 10 m stran, potrditev izračuna odmik azimut−heading, preskoči/reset), namig o
+  dinamičnem radiju na kartici točke (portal odklenjen ≠ natančna poravnava), AR DEBUG
+  overlay (zložljiv; ?debug=ar ali localhost: lat/lng/acc/heading/raw/offset/kompas/spot/
+  sidro/scena/asset + reset)
+- ar-camera.tsx: use-compass + čipa zaupanja sidra + GPS ±X m; museum-ar podaja quality
+- village-scene.ts: orbit kamera + AR predogled usmerjena na CORE_CENTER (vas 1825)
+- atlas.ts API: timeSpots z radiji/anchorId + geotruth blok (viri, sidra, orientacije,
+  popravek, avdit, števci); sw.js v4
+- E2E (agent-browser): globa ?spot=cerkev → dialog + kartica "Vir: EŠD 2122 (uradni vir)";
+  GPS mock (defineProperty) na uradni cerkvi → odklep 1/6 @ 0–1 m + "na lokaciji — 575 m do
+  jedra" (iskrena nova geometrija) + GPS ±8 m · odlično; kompas mock → stable, sidro HIGH,
+  scena READY; kalibracijska kartica → Potrdi smer (cilj: spomenik 490 m) → heading 170°→21°,
+  offset −149°, localStorage mvg-compass-cal, preživi reload; šumenje kompasa → kompas
+  unstable + MEDIUM; GPS ±42 m → "GPS približno" + Poravnava scene … (MEDIUM); 360° način
+  deluje (stališče = uradna cerkev); AR vodnik: najbližja točka Cerkev 0 m + POGLEJ V AR;
+  ATLAS 3D: vas 1825 viden s conami (sever prazen — zgodovinsko pravilno), reka na vzhodu;
+  mobilni 390px čist (debug zložen, VLM); 0 napak konzole; lint čist; /api/qa 12/12
+
+Stage Summary:
+- GEO-TRUTH KONFLIKT RAZREŠEN z dokazno potjo: cerkev na uradni EŠD 2122 (45,567610/15,290311),
+  spomenik na EŠD 19326; stara afina je bila krožna (595 m napaka) — struga Kolpe neodvisno
+  potrdjuje novo afino (6–30 m); vsi A02-izpeljani podatki translirani (−147 m E, +578 m J)
+- Vas 1825 dejansko stoji JŽ od sodobnega jedra (z 160–1500 m), jedro z dvema sklopoma ob
+  cerkvi; današnja vas je zrasla proti severu — v AR zdaj uporabnik pri PRAVI cerkvi vidi
+  cerkev + vas okoli sebe (prej bi bil 595 m zmotjen)
+- GeoTruth model (8 sidrov + viri + orientacije + popravek + avdit) v odprtem API;
+  avdit poroča samo 2 znana odprta vprašanja (spomenik single-source, ribnik REVIEW)
+- Device calibration: prostovoljna 3-korakna kalibracija pogleda (shranjena po napravi),
+  glajenje + zavrnitev odstopnikov + stabilnost kompasa, GPS kakovost, dinamični radiji
+  (unlock ≠ renderReady ≠ precision), čipi zaupanja (SCENA PORAVNANA / poravnava / približno),
+  zložljiv AR DEBUG (?debug=ar / localhost)
+- Stanje: 17. delovni zapis v pripravi (commit + push + Vercel + GitLab #14 sledita);
+  #13 (P2 panorama) ima zdaj GEO-TRUTH temelj (sidro + heading + zaupanje + evidence)

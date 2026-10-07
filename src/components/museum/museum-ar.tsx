@@ -62,7 +62,7 @@ export function MuseumARGuide({
 }) {
   const { t, lang } = useLang();
   const [arSlug, setArSlug] = useState<string | null>(null);
-  const { fix, status, error, start, stop } = geo;
+  const { fix, status, error, start, stop, quality } = geo;
 
   /* bližnje točke, razvrščene po oddaljenosti od uporabnika */
   const nearby = useMemo(() => {
@@ -326,6 +326,7 @@ export function MuseumARGuide({
         <ARCameraView
           exhibit={arExhibit}
           fix={fix}
+          geoQuality={quality}
           geoActive={status === "watching"}
           onStartGps={start}
           onClose={() => setArSlug(null)}

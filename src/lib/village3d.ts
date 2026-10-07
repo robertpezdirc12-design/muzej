@@ -5,19 +5,27 @@
  *  · 156 katastrskih podlatn (buildings.json, list A02, SI AS 176) → stavbe z
  *    dvokapnico, ekstrudirane iz izmerjenih w×h (metri) — RECONSTRUCTED;
  *  · raba tal ~1825 (VLM analiza listov) → barvne cone na tleh — RECONSTRUCTED ±;
- *  · Kolpa — georeferencirana struga (sidro 15,2994 E, ujemanje 9/10) — REVIEW;
+ *  · Kolpa — georeferencirana struga (OSM, sidro 15,2994 E) — KORREKTNA;
  *  · ~1900: gostota jedra (ocena) — zgoščevanje ob jedru, jasno označeno OCENA;
  *  · danes: »duhovi« (žični obris 1825) za primerjavo — interpretacija.
  *
- * Celotna enota: lokalni koordinatni sistem v metrih, izhodišče = jedro vasi
- * (45.5725 N 15.2926 E, VERIFIED). x = vzhod, z = jug (sever = −z), y = višina.
+ * GEOTRUTH (issue #14, 2026-10-08): listi A01/A02 so zasidrani na uradni EŠD 2122
+ * (cerkev sv. Vida, 45,567610 N 15,290311 E). Vsa izpeljana geometrija je bila
+ * translirana za −0,005190 lat / −0,001889 lng glede na staro (krožno) afino.
+ * Izhodišče lokalnega sistema ostaja sodobno jedro vasi (OSM place node) —
+ * vas 1825 leži južno od njega (z ≈ 160–1500 m), zrasla je proti severu.
+ *
+ * Celotna enota: lokalni koordinatni sistem v metrih, izhodišče = sodobno jedro
+ * vasi (45.5725 N 15.2926 E, CORROBORATED — OSM place node 468490150).
+ * x = vzhod, z = jug (sever = −z), y = višina.
  */
 
 import { VECTOR_BUILDINGS } from "@/data/atlas/model";
 import { LANDUSE_ZONES } from "@/data/atlas/landuse";
 import presentJson from "@/data/atlas/present.json";
 
-/** izhodišče lokalnega sistema — jedro vasi Grüble (VERIFIED) */
+/** izhodišče lokalnega sistema — SODOBNO jedro vasi (OSM place node, CORROBORATED).
+ *  Ni jedro 1825 — to je ~370 m JZ (glej GEOTRUTH anchor-jedro-1825). */
 export const ORIGIN = { lat: 45.5725, lng: 15.2926 };
 
 const M_PER_DEG_LAT = 111_320;
@@ -56,12 +64,22 @@ export interface GrowthBuilding {
   roofH: number;
 }
 
-/** polmer jedra vasi (m) — stavbe znotraj = vas Grüble ~1825 */
+/** središče jedra vasi 1825 (GEOTRUTH afina — pas z dvema sklopoma ob cerkvi) */
+export const CORE_CENTER = { x: 15, z: 530 };
+
+/** polmer jedra vasi 1825 (m) — stavbe znotraj = vas Grüble ~1825 */
 export const CORE_R = 350;
 
-/** cerkev sv. Vida (VERIFIED) — lokalne koordinate + višina stropa modela */
+/** je točka v jedru vasi 1825? (GEOTRUTH afina — center 2025-10-08) */
+export function inVillageCore(x: number, z: number): boolean {
+  return Math.hypot(x - CORE_CENTER.x, z - CORE_CENTER.z) <= CORE_R;
+}
+
+/** cerkev sv. Vida (EŠD 2122, VERIFIED — uradni register + OSM) — lokalne
+ *  koordinate + višina strehe modela. Lega na pokopališkem gričku JZ od
+ *  stare (krožne) predpostavke — glej GEOTRUTH A02_CORRECTION. */
 export const CHURCH = {
-  ...toLocal(45.5728, 15.2922),
+  ...toLocal(45.567610, 15.290311),
   targetH: 13,
 };
 
@@ -103,7 +121,7 @@ export const BUILDINGS_1825: PreparedBuilding[] = VECTOR_BUILDINGS.map(
       rotY: (r2 - 0.5) * 0.44, /* ±12° — orientacija ni zabeležena v vektorizaciji */
       wallH,
       roofH: wallH * 0.62,
-      core: Math.hypot(x, z) <= CORE_R,
+      core: inVillageCore(x, z),
     };
   },
 );
@@ -130,7 +148,7 @@ export const GROWTH_1900: GrowthBuilding[] = (() => {
     const dist = 9 + rnd() * 8;
     const x = b.x + Math.cos(ang) * dist;
     const z = b.z + Math.sin(ang) * dist;
-    if (Math.hypot(x, z) > CORE_R) continue;
+    if (!inVillageCore(x, z)) continue;
     if (taken.some((t) => Math.hypot(t.x - x, t.z - z) < 9.5)) continue;
     taken.push({ x, z });
     const wallH = 2.0 + rnd() * 0.5;

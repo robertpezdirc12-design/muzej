@@ -7,6 +7,14 @@ import { ATLAS_OWNERS, ATLAS_LOCATIONS, SHEET_GEOREFS, VECTOR_BUILDINGS } from "
 import { PARISH, PARISH_BOOKS, HOUSE_VITALS, type HouseVital, type ParishBook } from "@/data/atlas/parish";
 import { BUILDINGS_1825, GROWTH_1900, PERIODS, IZGINILO_STATS, PRESENCE_META } from "@/lib/village3d";
 import { TIME_SPOTS, spotYearParam } from "@/data/atlas/timespots";
+import {
+  GEO_SOURCES,
+  GEO_ANCHORS,
+  GEO_ANCHORS_TO_COLLECT,
+  ASSET_ORIENTATIONS,
+  A02_CORRECTION,
+  GEO_AUDIT_REPORT,
+} from "@/data/atlas/geotruth";
 
 export interface AtlasModel {
   meta: {
@@ -169,6 +177,9 @@ export function getAtlasModel(): AtlasModel {
       id: s.id,
       year: s.year,
       radius: s.radius,
+      renderReadyM: s.renderReadyM ?? null,
+      precisionM: s.precisionM ?? null,
+      anchorId: s.anchorId ?? null,
       lat: s.lat,
       lng: s.lng,
       titleSi: s.titleSi,
@@ -179,6 +190,19 @@ export function getAtlasModel(): AtlasModel {
       houseNo: s.houseNo ?? null,
       deepLink: `/?casovni=${spotYearParam(s.year)}&spot=${s.id}`,
     })),
+    /* GEOTRUTH (issue #14, P0) — AR sidra, viri, dokazna pot, avdit konfliktov */
+    geotruth: {
+      sources: GEO_SOURCES,
+      anchors: GEO_ANCHORS,
+      anchorsToCollect: GEO_ANCHORS_TO_COLLECT,
+      assetOrientations: ASSET_ORIENTATIONS,
+      correction: A02_CORRECTION,
+      audit: GEO_AUDIT_REPORT,
+      auditCounts: GEO_AUDIT_REPORT.reduce(
+        (acc, i) => ({ ...acc, [i.severity]: (acc[i.severity] ?? 0) + 1 }),
+        {} as Record<string, number>,
+      ),
+    },
   };
 }
 
@@ -465,12 +489,12 @@ export function checkIntegrity(): IntegrityReport {
     detail: `${SHEET_GEOREFS.length} lista (A01, A02)`,
   });
 
-  // 6. cerkev: lokacija se ujema z MVG-002
+  // 6. cerkev: lokacija se ujema z uradnim EŠD 2122 (GEOTRUTH, issue #14)
   const church = ATLAS_LOCATIONS.find((l) => l.id === "loc-cerkev");
   checks.push({
-    name: "cerkev sv. Vida ↔ MVG-002 ↔ EŠD 2122",
-    pass: !!church && church.museumRef === "MVG-002" && Math.abs(church.lat! - 45.5728) < 0.0005,
-    detail: church ? `${church.lat}, ${church.lng}` : "ni",
+    name: "cerkev sv. Vida ↔ MVG-002 ↔ EŠD 2122 (uradna koordinata)",
+    pass: !!church && church.museumRef === "MVG-002" && Math.abs(church.lat! - 45.56761) < 0.0005 && Math.abs(church.lng! - 15.290311) < 0.0005,
+    detail: church ? `${church.lat}, ${church.lng} (EŠD 2122: 45.567610, 15.290311)` : "ni",
   });
 
   // 7. stavbe: vse v velikostnem razponu k.o.

@@ -22,6 +22,7 @@ import {
   Camera,
   CheckCircle2,
   Compass,
+  Crosshair,
   Footprints,
   MapPin,
   Navigation,
@@ -40,6 +41,9 @@ import {
   osmDirectionsUrl,
   type GeoFix,
 } from "@/lib/geo";
+import { useCompass } from "@/hooks/use-compass";
+import type { UseGeolocation } from "@/hooks/use-geolocation";
+import { sceneReadiness } from "@/data/atlas/geotruth";
 
 /** prag »na lokaciji« v metrih (natančnost GPS na telefonu ± 5–20 m) */
 const ON_SITE_M = 300;
@@ -49,13 +53,10 @@ type ModelViewerElement = HTMLElement & {
   activateAR: () => void;
 };
 
-interface DeviceOrientationEventIOS extends DeviceOrientationEvent {
-  webkitCompassHeading?: number;
-}
-
 export function ARCameraView({
   exhibit,
   fix,
+  geoQuality,
   geoActive,
   onStartGps,
   onClose,
@@ -63,6 +64,7 @@ export function ARCameraView({
 }: {
   exhibit: Exhibit;
   fix: GeoFix | null;
+  geoQuality: UseGeolocation["quality"];
   geoActive: boolean;
   onStartGps: () => void;
   onClose: () => void;
@@ -76,10 +78,16 @@ export function ARCameraView({
   const [camera, setCamera] = useState<"starting" | "live" | "unavailable">(
     "starting",
   );
-  const [heading, setHeading] = useState<number | null>(null);
-  const [iosCompassBlocked, setIosCompassBlocked] = useState(false);
   const [speaking, setSpeaking] = useState(false);
   const [canNativeAR, setCanNativeAR] = useState(false);
+
+  /* kompas (issue #14): glajen + stabilnost + iOS dovoljenje */
+  const {
+    heading,
+    stability: compassStability,
+    needsPermission: iosCompassBlocked,
+    requestPermission: enableCompass,
+  } = useCompass();
 
   const lat = exhibit.lat;
   const lng = exhibit.lng;
@@ -122,44 +130,7 @@ export function ARCameraView({
     };
   }, []);
 
-  /* ── kompas: smer telefona (alpha; iOS potrebuje dovoljenje) ── */
-  useEffect(() => {
-    const onOrient = (e: DeviceOrientationEvent) => {
-      const ios = e as DeviceOrientationEventIOS;
-      if (typeof ios.webkitCompassHeading === "number") {
-        setHeading(ios.webkitCompassHeading);
-      } else if (e.alpha != null) {
-        setHeading((360 - e.alpha) % 360);
-      }
-    };
-    window.addEventListener("deviceorientation", onOrient, true);
-    const probe = window.setTimeout(() => {
-      // iOS: dogodek brez dovoljenja ne prihaja → ponudimo gumb
-      const DOE = DeviceOrientationEvent as typeof DeviceOrientationEvent & {
-        requestPermission?: () => Promise<"granted" | "denied">;
-      };
-      if (typeof DOE.requestPermission === "function") setIosCompassBlocked(true);
-    }, 800);
-    return () => {
-      window.removeEventListener("deviceorientation", onOrient, true);
-      window.clearTimeout(probe);
-    };
-  }, []);
-
-  const enableCompass = useCallback(async () => {
-    const DOE = DeviceOrientationEvent as typeof DeviceOrientationEvent & {
-      requestPermission?: () => Promise<"granted" | "denied">;
-    };
-    if (typeof DOE.requestPermission === "function") {
-      try {
-        const r = await DOE.requestPermission();
-        if (r !== "granted") return;
-      } catch {
-        return;
-      }
-    }
-    setIosCompassBlocked(false);
-  }, []);
+  /* ── kompas: iOS dovoljenje (dogodki sami prihajajo iz use-compass) ── */
 
   /* ── govorna sinteza (brezplačna, v brskalniku) ── */
   useEffect(() => {
@@ -273,8 +244,8 @@ export function ARCameraView({
         </div>
       </div>
 
-      {/* ── statusni čip lokacije ── */}
-      <div className="relative z-10 px-4">
+      {/* ── statusni čip lokacije + pripravljenost (issue #14, točka 11) ── */}
+      <div className="relative z-10 flex flex-wrap gap-2 px-4">
         <div className="inline-flex max-w-full items-center gap-2 rounded-full border border-white/20 bg-black/45 px-3 py-1.5 text-xs text-white backdrop-blur">
           {onSite ? (
             <>
@@ -308,6 +279,46 @@ export function ARCameraView({
             </>
           )}
         </div>
+        {/* pripravljenost scene (issue #14): HIGH/MEDIUM/LOW — vidna negotovost,
+            nikoli tiha napačna zasidranost modela */}
+        {(() => {
+          const r = sceneReadiness({ gps: geoQuality, compass: compassStability });
+          if (r.anchor === "HIGH" && !onSite) return null;
+          return (
+            <div
+              className={`inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-xs backdrop-blur ${
+                r.anchor === "HIGH"
+                  ? "border-emerald-300/40 bg-emerald-400/15 text-emerald-100"
+                  : r.anchor === "MEDIUM"
+                    ? "border-amber-300/40 bg-amber-400/15 text-amber-100"
+                    : "border-white/20 bg-black/45 text-white/80"
+              }`}
+              role="status"
+            >
+              {r.anchor === "HIGH" ? (
+                <Crosshair className="size-3.5 shrink-0" aria-hidden="true" />
+              ) : (
+                <Compass
+                  className={`size-3.5 shrink-0 ${r.anchor === "MEDIUM" ? "animate-pulse" : ""}`}
+                  aria-hidden="true"
+                />
+              )}
+              <span className="font-medium">
+                {r.anchor === "HIGH"
+                  ? t("SCENA PORAVNANA", "SCENE ALIGNED")
+                  : r.anchor === "MEDIUM"
+                    ? t("Poravnava scene …", "Scene aligning …")
+                    : t("približno — raziskovanje", "approximate — exploring")}
+              </span>
+            </div>
+          );
+        })()}
+        {fix?.accuracy != null && (
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/45 px-3 py-1.5 text-xs text-white/80 backdrop-blur">
+            <MapPin className="size-3.5 shrink-0" aria-hidden="true" />
+            <span>GPS ±{Math.round(fix.accuracy)} m</span>
+          </div>
+        )}
         {camera === "unavailable" && (
           <p className="mt-2 max-w-sm text-[11px] leading-relaxed text-white/60">
             {t(

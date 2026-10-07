@@ -7,7 +7,7 @@
    - zunanji viri (OSM ploščice): pustimo brskalniku
    Dvigom različice VERSION se stare predpomnilnice očistijo samodejno. */
 
-const VERSION = "muzej-griblje-v3";
+const VERSION = "muzej-griblje-v4";
 const PAGE_CACHE = `${VERSION}-pages`;
 const STATIC_CACHE = `${VERSION}-static`;
 const ASSET_CACHE = `${VERSION}-assets`;

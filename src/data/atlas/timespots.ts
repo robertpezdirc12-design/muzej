@@ -24,8 +24,14 @@ export interface TimeSpot {
   id: string;
   lat: number;
   lng: number;
-  /** radij odklepanja v metrih */
+  /** radij odklepanja v metrih (TimeLens vzorec — velik, odklep zgodaj) */
   radius: number;
+  /** bližina, na kateri je scena »poravnana« (issue #14 — dinamični radij) */
+  renderReadyM?: number;
+  /** bližina visoke natančnosti — kompas-kalibracija smiselna (issue #14) */
+  precisionM?: number;
+  /** GeoTruth povezava (issue #14 — avdit zahteva sidro) */
+  anchorId?: string;
   /** privzeta letnica časovnega stroja ob odklepu */
   year: TimeYear;
   titleSi: string;
@@ -45,34 +51,39 @@ export interface TimeSpot {
 export const TIME_SPOTS: TimeSpot[] = [
   {
     id: "cerkev",
-    lat: 45.5728,
-    lng: 15.2922,
+    lat: 45.56761,
+    lng: 15.290311,
     radius: 50,
+    renderReadyM: 25,
+    precisionM: 10,
+    anchorId: "anchor-cerkev",
     year: 1825,
     titleSi: "Cerkev sv. Vida",
     titleEn: "St. Vitus' church",
     descSi:
-      "Stojiš pred cerkvijo, prvič omenjeno 1526. V rekonstrukciji 1825 stoji njen 3D model na dokumentirani lokaciji — z zvonikom. Letos obeležujemo 500 let od prve omembe.",
+      "Stojiš pred cerkvijo na pokopališkem gričku južno od jedra, prvič omenjeno 1526. V rekonstrukciji 1825 stoji njen 3D model na uradni lokaciji EŠD 2122 — z zvonikom. Letos obeležujemo 500 let od prve omembe.",
     descEn:
-      "You stand before the church, first mentioned in 1526. In the 1825 reconstruction its 3D model stands at the documented location — with its bell tower. This year marks 500 years since the first mention.",
-    evidenceSi: "MVG-002 · MVG-003 (500-letnica 2026) · franciscejski kataster, list A02 (SI AS 176)",
-    evidenceEn: "MVG-002 · MVG-003 (500th anniversary 2026) · Franciscean cadastre, sheet A02 (SI AS 176)",
+      "You stand before the church on its cemetery hill south of the core, first mentioned in 1526. In the 1825 reconstruction its 3D model stands at the official EŠD 2122 location — with its bell tower. This year marks 500 years since the first mention.",
+    evidenceSi: "EŠD 2122 (Register nepremične kulturne dediščine, uradni vir) · MVG-002 · MVG-003 · kataster, list A02 (SI AS 176)",
+    evidenceEn: "EŠD 2122 (Register of Immovable Cultural Heritage, official source) · MVG-002 · MVG-003 · cadastre, sheet A02 (SI AS 176)",
     exhibitSlug: "sveti-vid",
   },
   {
     id: "jedro",
-    lat: 45.57246,
-    lng: 15.29257,
+    lat: 45.57092,
+    lng: 15.29435,
     radius: 60,
+    renderReadyM: 30,
+    anchorId: "anchor-jedro-1825",
     year: 1825,
-    titleSi: "Jedro vasi — Grüble",
-    titleEn: "Village core — Grüble",
+    titleSi: "Jedro vasi 1825 — Grüble",
+    titleEn: "Village core 1825 — Grüble",
     descSi:
-      "Sredi vasi: 156 stavb franciscejskega katastra stoji okoli tebe. Tapni hišo — pove ti tloris in postavi vprašanje, kdo je v njej živel: Register hiš 1825 ima 80 lastnikov, matične knjige pa 1669–1947.",
+      "Sredi vasi 1825: 156 katastrskih stavb stoji okoli tebe, jedro z dvema sklopoma ob cerkvi. Tapni hišo — pove ti tloris in postavi vprašanje, kdo je v njej živel: Register hiš 1825 ima 80 lastnikov, matične knjige pa 1669–1947. Današnje jedro je ~400 m severno — vas je zrasla proti severu.",
     descEn:
-      "In the middle of the village: 156 buildings of the Franciscean cadastre stand around you. Tap a house — it shows its footprint and asks who lived there: the 1825 house register holds 80 owners, the parish books span 1669–1947.",
-    evidenceSi: "MVG-001 · kataster list A02 (SI AS 176) · Register hiš 1825 · matrike Podzemelj",
-    evidenceEn: "MVG-001 · cadastre sheet A02 (SI AS 176) · 1825 house register · Podzemelj parish books",
+      "In the middle of the 1825 village: 156 cadastre buildings around you, the core in two clusters by the church. Tap a house — it shows its footprint and asks who lived there: the 1825 house register holds 80 owners, the parish books span 1669–1947. Today's core lies ~400 m north — the village grew northward.",
+    evidenceSi: "MVG-001 · kataster list A02 (SI AS 176, GEOTRUTH afina, issue #14) · Register hiš 1825 · matrike Podzemelj",
+    evidenceEn: "MVG-001 · cadastre sheet A02 (SI AS 176, GEOTRUTH affine, issue #14) · 1825 house register · Podzemelj parish books",
     exhibitSlug: "griblje-vas",
     houseNo: "61",
   },
@@ -81,6 +92,7 @@ export const TIME_SPOTS: TimeSpot[] = [
     lat: 45.5688,
     lng: 15.2988,
     radius: 60,
+    anchorId: "anchor-kolpa",
     year: 1825,
     titleSi: "Kolpa — življenje ob reki",
     titleEn: "Kolpa — life on the river",
@@ -97,6 +109,7 @@ export const TIME_SPOTS: TimeSpot[] = [
     lat: 45.5735,
     lng: 15.294,
     radius: 45,
+    anchorId: "anchor-ribnik",
     year: 1900,
     titleSi: "Vaški ribnik",
     titleEn: "The village pond",
@@ -110,18 +123,20 @@ export const TIME_SPOTS: TimeSpot[] = [
   },
   {
     id: "gornje",
-    lat: 45.5754,
-    lng: 15.2928,
+    lat: 45.571396,
+    lng: 15.292355,
     radius: 50,
+    renderReadyM: 25,
+    anchorId: "anchor-spomenik",
     year: 1825,
-    titleSi: "Gornje Griblje — zaselki in spomenik",
-    titleEn: "Gornje Griblje — hamlets and the memorial",
+    titleSi: "Zgornji konec vasi — spomenik in zaselki",
+    titleEn: "Upper end of the village — memorial and hamlets",
     descSi:
-      "Severni konec: zaselki Dolnje, Srednje in Gornje Griblje so zapisani že 1526. Danes tu stoji spomenik padlim vaščanom (1961) — preklopi na »danes« in primerjaj.",
+      "Severni rob vasi 1825 (vas je pozneje zrasla še severneje). Zaselki Dolnje, Srednje in Gornje Griblje so zapisani že 1526. Tu, pred osnovno šolo, stoji spomenik padlim vaščanom (1961) — uradna lokacija EŠD 19326. Preklopi na »danes« in primerjaj.",
     descEn:
-      "The north end: the hamlets of Dolnje, Srednje and Gornje Griblje are recorded as early as 1526. Today the memorial to the fallen villagers (1961) stands here — switch to “today” and compare.",
-    evidenceSi: "MVG-049 (zaselki 1526) · MVG-029 (spomenik, trinajst imen)",
-    evidenceEn: "MVG-049 (hamlets 1526) · MVG-029 (memorial, thirteen names)",
+      "The north end of the 1825 village (it later grew further north). The hamlets of Dolnje, Srednje and Gornje Griblje are recorded as early as 1526. Here, in front of the primary school, stands the memorial to the fallen villagers (1961) — the official EŠD 19326 location. Switch to “today” and compare.",
+    evidenceSi: "EŠD 19326 (spomenik pred osnovno šolo, uradni vir) · MVG-029 · MVG-049 (zaselki 1526)",
+    evidenceEn: "EŠD 19326 (memorial in front of the primary school, official source) · MVG-029 · MVG-049 (hamlets 1526)",
     exhibitSlug: "spomenik-padlim",
   },
   {
@@ -129,6 +144,7 @@ export const TIME_SPOTS: TimeSpot[] = [
     lat: 45.5675,
     lng: 15.2995,
     radius: 50,
+    anchorId: "anchor-meja",
     year: 2026,
     titleSi: "Meja ob Kolpi — danes in duhovi",
     titleEn: "Border on the Kolpa — today and ghosts",
@@ -142,10 +158,24 @@ export const TIME_SPOTS: TimeSpot[] = [
   },
 ];
 
+/** privzeti dinamični radiji, če točka ne določa svojih (issue #14, točka 10):
+ *  unlock = radij odklepa (TimeLens — odklep zgodaj), renderReady = bližina,
+ *  na kateri je scena »poravnana«, precision = visoka natančnost. */
+export const SPOT_RADIUS_DEFAULTS = {
+  unlock: 50,
+  renderReady: 25,
+  precision: 10,
+} as const;
+
 /** URL parameter letnice za globo povezavo/QR (skladen s parseYearParam). */
 export function spotYearParam(year: TimeYear): string {
   return year === 2026 ? "danes" : year === 1900 ? "1900" : "1825";
 }
+
+/** privzeti radij »scene poravnana«, če točka ne določa svojega */
+export const SPOT_RENDER_READY = SPOT_RADIUS_DEFAULTS.renderReady;
+/** privzeti radij visoke natančnosti */
+export const SPOT_PRECISION = SPOT_RADIUS_DEFAULTS.precision;
 
 /** Globa povezava točke — izhodišče QR kod. */
 export function spotDeepLink(spot: TimeSpot): string {

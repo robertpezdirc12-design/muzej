@@ -1,6 +1,7 @@
-// ATLAS 1825 — RABA TAL in ZASELKI (issue #7)
+// ATLAS 1825 — RABA TAL in ZASELKI (issue #7; cone zamaknjene po GEOTRUTH, issue #14)
 // Vzorci rabe tal so izpeljani iz VLM analize katastrskih listov A01/A02 (2026-10-07)
-// in georeference (model.ts): reka Kolpa na vzhodnem robu listov, njivski mozaik
+// in GEOTRUTH afini (issue #14): listi zasidrani na uradni EŠD 2122 — translacija
+// −0,005190 lat / −0,001889 lng glede na staro (krožno) georeferenco: reka Kolpa na vzhodnem robu listov, njivski mozaik
 // zahodno/severno od vasi, poplavne loke med vasjo in reko, gozdni kompleks na jugu A02.
 // Vse cone so približni pravokotniki — status RECONSTRUCTED, natančne meje parcel
 // niso vektorsko preslikane (TO_COLLECT).
@@ -30,10 +31,7 @@ export const LANDUSE_ZONES: LandUseZone[] = [
     kind: "meadow",
     labelSi: "Poplavne loke ob Kolpi",
     labelEn: "Flood meadows along the Kolpa",
-    bounds: [
-      [45.5888, 15.2928],
-      [45.5670, 15.2995],
-    ],
+    bounds: [[45.5836, 15.2909], [45.5618, 15.2976]],
     status: "RECONSTRUCTED",
     vlmHintSi: "A01: svetlozelene travnine v jedru vasi (x 65–80, y 60–95) in otok ob reki (x 88–91); Kolpa na x 93–99",
     color: "#7d9b76",
@@ -48,10 +46,7 @@ export const LANDUSE_ZONES: LandUseZone[] = [
     kind: "field",
     labelSi: "Njivski mozaik (Äcker)",
     labelEn: "Field mosaic (Äcker)",
-    bounds: [
-      [45.5888, 15.2700],
-      [45.5752, 15.2880],
-    ],
+    bounds: [[45.5836, 15.2681], [45.5700, 15.2861]],
     status: "RECONSTRUCTED",
     vlmHintSi: "A01: bež/rumenkasti mozaik dolgih ozkih parcel s parcelnimi št. (x 55–92, y 5–98), gost na severu (Maloška Pecina) in zahodu (na Lokaže)",
     color: "#c9a35a",
@@ -66,10 +61,7 @@ export const LANDUSE_ZONES: LandUseZone[] = [
     kind: "forest",
     labelSi: "Gozdni kompleks na jugu (A02)",
     labelEn: "Southern forest complex (A02)",
-    bounds: [
-      [45.5675, 15.2778],
-      [45.5613, 15.2965],
-    ],
+    bounds: [[45.5623, 15.2759], [45.5561, 15.2946]],
     status: "RECONSTRUCTED",
     vlmHintSi: "A02: šrafirana območja s simboli dreves v južnem delu (Pod Schattinger, Robar), manjši sestavi na zahodu",
     color: "#5d7a54",
