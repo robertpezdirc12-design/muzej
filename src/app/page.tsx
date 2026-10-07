@@ -18,6 +18,13 @@ import { MuseumFooter } from "@/components/museum/museum-footer";
 import { ExhibitDetail } from "@/components/museum/exhibit-detail";
 import { getExhibit } from "@/lib/museum";
 import { useGeolocation } from "@/hooks/use-geolocation";
+import { useTimeMachine, parseYearParam } from "@/lib/time-machine-store";
+import dynamic from "next/dynamic";
+
+const ARTimeMachine = dynamic(
+  () => import("@/components/museum/ar-time-machine").then((m) => m.ARTimeMachine),
+  { ssr: false },
+);
 
 const DEFAULT_TITLE = "Muzej vasi Griblje — digitalni muzej vasi ob Kolpi";
 
@@ -66,7 +73,7 @@ function MuseumApp() {
   }, [activeSlug, lang]);
 
   /* uvodni zaslon — kot v izvirniku; nato odpremo globo povezavo ?exponat=slug
-     ali ?odsek=id (npr. iz PWA bližnjic) */
+     ali ?odsek=id (npr. iz PWA bližnjic) ali ?casovni=1825|1900|danes (3D) */
   useEffect(() => {
     const t1 = window.setTimeout(() => {
       setIntroDone(true);
@@ -75,10 +82,15 @@ function MuseumApp() {
       if (slug) {
         setActiveSlug(slug);
       } else {
-        const odsek = params.get("odsek");
-        if (odsek) {
-          const el = document.getElementById(odsek);
-          if (el) el.scrollIntoView({ behavior: "auto", block: "start" });
+        const casovni = parseYearParam(params.get("casovni"));
+        if (casovni) {
+          useTimeMachine.getState().openTM(casovni);
+        } else {
+          const odsek = params.get("odsek");
+          if (odsek) {
+            const el = document.getElementById(odsek);
+            if (el) el.scrollIntoView({ behavior: "auto", block: "start" });
+          }
         }
       }
     }, 900);
@@ -124,6 +136,7 @@ function MuseumApp() {
       </main>
       <MuseumFooter />
       <ExhibitDetail slug={activeSlug} onClose={closeExhibit} onOpen={openExhibit} />
+      <ARTimeMachineGate geo={geo} onOpenExhibit={openExhibit} />
     </div>
   );
 }
@@ -136,4 +149,18 @@ export default function Home() {
       </LangProvider>
     </ThemeProvider>
   );
+}
+
+/* vratnica: AR časovni stroj se montira šele, ko je odprt (three.js izven
+   glavnega snopa, kamera/GPS senzorji samo po potrebi) */
+function ARTimeMachineGate({
+  geo,
+  onOpenExhibit,
+}: {
+  geo: ReturnType<typeof useGeolocation>;
+  onOpenExhibit: (slug: string) => void;
+}) {
+  const open = useTimeMachine((s) => s.open);
+  if (!open) return null;
+  return <ARTimeMachine geo={geo} onOpenExhibit={onOpenExhibit} />;
 }

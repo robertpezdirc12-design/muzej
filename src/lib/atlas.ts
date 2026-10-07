@@ -5,6 +5,7 @@ import { ATLAS_SOURCES, NEGATIVE_RESULTS, HERITAGE_UNITS, type AtlasSource } fro
 import { ATLAS_HOUSES, type AtlasHouse } from "@/data/atlas/houses";
 import { ATLAS_OWNERS, ATLAS_LOCATIONS, SHEET_GEOREFS, VECTOR_BUILDINGS } from "@/data/atlas/model";
 import { PARISH, PARISH_BOOKS, HOUSE_VITALS, type HouseVital, type ParishBook } from "@/data/atlas/parish";
+import { BUILDINGS_1825, GROWTH_1900, PERIODS } from "@/lib/village3d";
 
 export interface AtlasModel {
   meta: {
@@ -126,6 +127,25 @@ export function getAtlasModel(): AtlasModel {
       books: PARISH_BOOKS,
       houseVitals: HOUSE_VITALS,
       stats: parishStats(),
+    },
+    village3d: {
+      origin: { lat: 45.5725, lng: 15.2926, status: "VERIFIED" },
+      periods: PERIODS.map((p) => ({
+        year: p.year,
+        labelSi: p.labelSi,
+        labelEn: p.labelEn,
+        buildingCount: p.buildingCount,
+        status: p.year === 1825 ? "RECONSTRUCTED" : p.year === 1900 ? "ESTIMATE" : "INTERPRETATION",
+        noteSi: p.noteSi,
+        noteEn: p.noteEn,
+      })),
+      buildings1825: BUILDINGS_1825.length,
+      growth1900: GROWTH_1900.length,
+      methodologySi:
+        "Proceduralna ekstruzija katastrskih podlatn (LagunAR-pristop): tlorisi izmerjeni (list A02), višine/orientacije interpretacija; raba tal po VLM analizi; Kolpa georeferencirana; cerkev = muzejski GLB model.",
+      methodologyEn:
+        "Procedural extrusion of cadastral footprints (LagunAR approach): footprints measured (sheet A02), heights/orientations interpreted; land use from VLM analysis; Kolpa georeferenced; church = museum GLB model.",
+      deepLink: "/?casovni=1825",
     },
   };
 }

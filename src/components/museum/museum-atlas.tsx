@@ -20,6 +20,7 @@ import {
   Layers,
   Eye,
   EyeOff,
+  Boxes,
 } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
@@ -49,7 +50,7 @@ const Canvas = dynamic(() => import("./atlas-canvas").then((m) => m.AtlasCanvas)
   ),
 });
 
-type Tab = "map" | "houses" | "owners" | "parish" | "landuse" | "sources" | "coverage";
+type Tab = "map" | "3d" | "houses" | "owners" | "parish" | "landuse" | "sources" | "coverage";
 
 const STATUS_STYLE: Record<string, string> = {
   VERIFIED: "bg-emerald-100 text-emerald-900 dark:bg-emerald-900/60 dark:text-emerald-100",
@@ -65,6 +66,16 @@ const STATUS_STYLE: Record<string, string> = {
 const HOUSES = ATLAS_HOUSES.filter((h) => h.no !== "—");
 const PARCELS = ATLAS_HOUSES.filter((h) => h.no === "—");
 const COVERAGE = getCoverage();
+
+const VillageViewer = dynamic(
+  () => import("./village-viewer").then((m) => m.VillageViewer),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="h-[420px] w-full animate-pulse rounded-xl border bg-secondary/50 sm:h-[520px]" />
+    ),
+  },
+);
 
 export function MuseumAtlas({
   userFix,
@@ -315,6 +326,7 @@ export function MuseumAtlas({
           {(
             [
               ["map", <MapIcon key="i" className="h-4 w-4" />, "Zemljevid", "Map"],
+              ["3d", <Boxes key="i3d" className="h-4 w-4" />, "3D vas", "3D village"],
               ["houses", <Home key="i" className="h-4 w-4" />, "Register hiš", "House register"],
               ["owners", <Users key="i" className="h-4 w-4" />, "Lastniki", "Owners"],
               ["parish", <BookOpen key="i" className="h-4 w-4" />, "Matrike 1669–1947", "Parish registers"],
@@ -554,6 +566,23 @@ export function MuseumAtlas({
         )}
 
         {/* REGISTER HIŠ */}
+        {tab === "3d" && (
+          <div>
+            <h3 className="font-display text-lg font-semibold">
+              {t("3D rekonstrukcija vasi — iz katastra v prostor", "3D village reconstruction — from cadastre into space")}
+            </h3>
+            <p className="mt-1 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+              {t(
+                "156 stavb k.o. Grüble, vektorsko prepisanih z lista A02 Franciscejskega katastra, je izrisanih kot prostorske hiše z dvokapnico — na rabi tal ~1825 in ob Kolpi. Zavrtite, približajte, preklopite letnico — ali stopite vanjo z AR kamero na vašem stojišču (gumb spodaj desno).",
+                "156 buildings of c.m. Grüble, vectorised from sheet A02 of the Franciscean cadastre, are drawn as spatial houses with gable roofs — on the ~1825 land use and by the Kolpa. Rotate, zoom, switch the year — or step inside with the AR camera at your standing point (button below right).",
+              )}
+            </p>
+            <div className="mt-4">
+              <VillageViewer />
+            </div>
+          </div>
+        )}
+
         {tab === "houses" && (
           <div>
             <div className="mb-4 flex flex-wrap items-center gap-3">

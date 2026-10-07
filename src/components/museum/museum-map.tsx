@@ -2,12 +2,13 @@
 
 import { useMemo, useState } from "react";
 import dynamic from "next/dynamic";
-import { Map, Sparkles } from "lucide-react";
+import { Hourglass, Map, Sparkles } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { useLang } from "./language-context";
 import { exhibits as allExhibits } from "@/lib/museum";
 import type { GeoFix } from "@/lib/geo";
+import { useTimeMachine } from "@/lib/time-machine-store";
 
 const MapCanvas = dynamic(
   () => import("./museum-map-canvas").then((m) => m.MapCanvas),
@@ -31,6 +32,7 @@ export function MuseumMap({
   onOpen: (slug: string) => void;
 }) {
   const { t, lang } = useLang();
+  const { openTM } = useTimeMachine();
   const [vintage, setVintage] = useState(false);
   const [timeTravel, setTimeTravel] = useState(false);
   const [year, setYear] = useState(MAX_YEAR);
@@ -179,6 +181,16 @@ export function MuseumMap({
             )}
             {userFix && t(` · vi ste na karti`, ` · you are on the map`)}
           </p>
+
+          {/* 3D časovni stroj (issue #10) — celotna vas na podlatnah katastra */}
+          <button
+            type="button"
+            onClick={() => openTM(1825)}
+            className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90"
+          >
+            <Hourglass className="size-4" aria-hidden="true" />
+            {t("3D časovni stroj — 1825/1900/danes", "3D time machine — 1825/1900/today")}
+          </button>
         </div>
 
         <div className="mt-4">

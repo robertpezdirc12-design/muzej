@@ -907,3 +907,55 @@ Stage Summary:
 - Muzej vasi Griblje: 113 zapisov + ATLAS 1825 (zemljevid/hiše/lastniki/
   matrike/raba tal/viri/coverage) + AR (GPS/kamera/časovna plast/sprehodi)
   + PWA namestljiva aplikacija; QA 12/12, integrity 11, 13. deploy
+
+---
+Task ID: 11
+Agent: Z.ai Code (glavni agent)
+Task: Issue #10 — 3D AR rekonstrukcija vasi skozi čas (časovni stroj 1825/~1900/danes, zajem, hišne zgodbe)
+
+Work Log:
+- Raziskava (web_search + page_reader): LagunAR 2023 (MDPI — mestni AR iz zgodovinskih
+  načrtov, natanko naša metoda), Pompei AR, Verdun citadela, Smithsonian 3D, MuseumNext
+  (AR superimposed scenes) → metodologija v issue #10
+- GitLab issue #10 ustvarjen (WAF retry 403×2 → 201): koncept, primerjava svetovnih
+  projektov, tehnični načrt, kriteriji sprejema
+- bun add three + @types/three (0.186.1); three.js dinamično (izven glavnega snopa)
+- src/lib/time-machine-store.ts: zustand skupna trgovina (open, year 1825|1900|2026,
+  openTM/close/setYear) + parseYearParam (?casovni=)
+- src/lib/village3d.ts: ENU koordinate (izhodišče jedro vasi VERIFIED), 156 stavb 1825
+  (stene+dvokapnice, višine/orientacije RECONSTRUCTED), GROWTH_1900 deterministično
+  zgoščevanje jedra (35 stavb, OCENA), GROUND_ZONES iz rabe tal, Kolpa struga (6 točk),
+  PERIODS s statusi + metodologijo SI/EN
+- src/components/museum/village-scene.ts: VillageScene (three.js) — InstancedMesh
+  stene+strehe (2 draw calla na plast), GLB cerkev sv. Vida na dokumentirani lokaciji
+  (auto-scale 13 m), cone rabe tal, Kolpa trak, letni prehodi (mehka animacija,
+  žični duhovi za danes), AR/orbit način, GPS sidro + kompas izravnava, vlečenje
+  pogleda, raycast tap (instanceId), capture (kompozit video+3D+napisnica PNG),
+  resetView, dispose
+- src/components/museum/ar-time-machine.tsx: celozaslonski AR — kamera (getUserMedia),
+  kompas (iOS dovoljenje), GPS čipi (na lokaciji/predogled), drsnik let (radiogroup),
+  sprožilec zajema (PNG prenos + Web Share), kartica hiše ob tapu (tloris, kdo je
+  živel — TO_COLLECT pošteno, hiša 61 primer, cerkev, povezave Register/Matrike/
+  MVG-002), namig ob prvem odprtju, ESC
+- src/components/museum/village-viewer.tsx: orbit pregledovalnik za ATLAS zavihek
+  3D vas (leta, legenda, Ponastavi, gumb Odpri v AR)
+- Integracije: page.tsx (?casovni= globa povezava + ARTimeMachineGate dinamično),
+  museum-map.tsx (gumb 3D časovni stroj), museum-atlas.tsx (zavihek 3D vas z
+  VillageViewer dinamično), museum-ar.tsx (gumb Stopi v 3D vas 1825 v TimeLayer),
+  src/lib/atlas.ts (village3d blok v /api/atlas: periode, števci, metodologija,
+  deepLink)
+- Restart dev strežnika (force-static predpomnilnik /api/atlas; setsid vztrajnost)
+- E2E (agent-browser): dialog se odpre z vsemi vhodi (zemljevid/vodnik/globa
+  ?casovni=1900 → 191 stavb), preklop let 1825/~1900/danes (2 %/5 % slikovnih
+  sprememb), GLB cerkev HTTP 200 in vidna z zvonikom, GPS mock (defineProperty
+  glavni svet) → »na lokaciji vasi — 0 m« + prvoosebni pogled, tap na hišo →
+  kartica s tlorisom 32×22 m · 50 m + zgodba + 3 povezave, zajem → »shranjeno
+  (PNG)«, ATLAS 3D zavihek (kamera role=img, legenda, AR gumb — VLM potrditev),
+  /api/atlas village3d (156/35/191), 0 napak konzole, lint čist
+
+Stage Summary:
+- 3D AR časovni stroj: proceduralna vas 1825 (156 katastrskih podlatn) + ocena
+  ~1900 (191) + duhovi danes; AR kamera na GPS+kompas, zajem PNG, hišne zgodbe
+- Vhodovi: zemljevid muzeja, ATLAS 3D zavihek, AR vodnik, ?casovni= globa
+  povezava; API village3d blok za strojno uporabo
+- Pripravljeno za commit/push → 14. deploy + zaprtje issue #10

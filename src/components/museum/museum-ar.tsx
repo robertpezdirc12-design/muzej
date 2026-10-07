@@ -37,7 +37,8 @@ import {
   formatDistance,
   type GeoFix,
 } from "@/lib/geo";
-import { Clock, Landmark, Trees, Wheat } from "lucide-react";
+import { Clock, Landmark, Trees, Wheat, Hourglass } from "lucide-react";
+import { useTimeMachine } from "@/lib/time-machine-store";
 
 const ARCameraView = dynamic(
   () => import("./ar-camera").then((m) => m.ARCameraView),
@@ -345,6 +346,7 @@ function pointInZone(lat: number, lng: number, z: { bounds: [[number, number], [
 
 function TimeLayer1825({ fix }: { fix: GeoFix | null }) {
   const { t, lang } = useLang();
+  const { openTM } = useTimeMachine();
 
   /* stojite v coni rabe tal? + najbližje 1825 stavbe (vektorizacija A02) */
   const info = useMemo(() => {
@@ -373,9 +375,17 @@ function TimeLayer1825({ fix }: { fix: GeoFix | null }) {
 
   return (
     <div className="mt-6 rounded-xl border border-primary/30 bg-card p-4 sm:p-6">
-      <h3 className="flex items-center gap-2 font-display text-lg font-semibold">
+      <h3 className="flex flex-wrap items-center gap-2 font-display text-lg font-semibold">
         <Clock className="size-5 text-primary" aria-hidden="true" />
         {t("Časovna plast 1825 — kaj je tu stalo pred 200 leti", "Time layer 1825 — what stood here 200 years ago")}
+        <button
+          type="button"
+          onClick={() => openTM(1825)}
+          className="ml-auto inline-flex items-center gap-1.5 rounded-lg bg-primary px-3 py-1.5 text-xs font-semibold text-primary-foreground transition hover:bg-primary/90"
+        >
+          <Hourglass className="size-3.5" aria-hidden="true" />
+          {t("Stopi v 3D vas 1825 (AR)", "Step into the 3D village of 1825 (AR)")}
+        </button>
       </h3>
 
       {!fix ? (
