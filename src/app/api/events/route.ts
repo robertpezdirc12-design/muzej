@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import eventsData from "@/data/museum/events.json";
 
+/** 11 dogodkov vključno z 500-letnicami 2026 (issue #8) */
 export const dynamic = "force-static";
 
 export async function GET() {

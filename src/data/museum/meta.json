@@ -1,151 +1,151 @@
 {
- "museum": {
-  "id": "muzej-vasi-griblje",
-  "nameSi": "Muzej vasi Griblje",
-  "nameEn": "Griblje Village Museum",
-  "slug": "mvg",
-  "established": "2026",
-  "language": [
-   "sl",
-   "en"
+  "museum": {
+    "id": "muzej-vasi-griblje",
+    "nameSi": "Muzej vasi Griblje",
+    "nameEn": "Griblje Village Museum",
+    "slug": "mvg",
+    "established": "2026",
+    "language": [
+      "sl",
+      "en"
+    ],
+    "license": "CC BY-SA 4.0",
+    "homepage": "/"
+  },
+  "counts": {
+    "exhibits": 113,
+    "sources": 589,
+    "events": 11,
+    "stories": 6
+  },
+  "evidenceScale": [
+    {
+      "code": "DOCUMENTED",
+      "labelSi": "dokumentirano",
+      "labelEn": "documented"
+    },
+    {
+      "code": "CORROBORATED",
+      "labelSi": "preverjeno",
+      "labelEn": "corroborated"
+    },
+    {
+      "code": "TESTIMONY",
+      "labelSi": "pričevanje",
+      "labelEn": "testimony"
+    },
+    {
+      "code": "TRADITION",
+      "labelSi": "tradicija",
+      "labelEn": "tradition"
+    },
+    {
+      "code": "UNVERIFIED",
+      "labelSi": "nepreverjeno",
+      "labelEn": "unverified"
+    },
+    {
+      "code": "TO_COLLECT",
+      "labelSi": "v zbiranju",
+      "labelEn": "to collect"
+    }
   ],
-  "license": "CC BY-SA 4.0",
-  "homepage": "/"
- },
- "counts": {
-  "exhibits": 113,
-  "sources": 589,
-  "events": 9,
-  "stories": 6
- },
- "evidenceScale": [
-  {
-   "code": "DOCUMENTED",
-   "labelSi": "dokumentirano",
-   "labelEn": "documented"
-  },
-  {
-   "code": "CORROBORATED",
-   "labelSi": "preverjeno",
-   "labelEn": "corroborated"
-  },
-  {
-   "code": "TESTIMONY",
-   "labelSi": "pričevanje",
-   "labelEn": "testimony"
-  },
-  {
-   "code": "TRADITION",
-   "labelSi": "tradicija",
-   "labelEn": "tradition"
-  },
-  {
-   "code": "UNVERIFIED",
-   "labelSi": "nepreverjeno",
-   "labelEn": "unverified"
-  },
-  {
-   "code": "TO_COLLECT",
-   "labelSi": "v zbiranju",
-   "labelEn": "to collect"
-  }
- ],
- "stories": [
-  {
-   "kind": "ZGODBA",
-   "title": {
-    "sl": "Zadnji poleti marca 1945",
-    "en": "The last flights of March 1945"
-   },
-   "text": {
-    "sl": "Konec marca 1945 so se nad Kolpo prvič zaslišali težki motorji. Vas, vajena zvoka zvonov in vode, je dvignila glavo.\n\nNa poljani pri Gribljah so se zbirali ranjenci iz gozdnih in jamskih bolnišnic Bele krajine — moški, ki so meseci ležali na skritih operacijskih mizah pod smrekami. Nekateri so prišli na nosilih, nekateri pod roko tovarišev; nekateri so bili meseci prvič podnevi na prostem. Ko je prvo letalo pristalo, se je v mraku dvignil prah; ko se je dvignilo znova, je bilo v njem že ducat rešenih. Pot je bila dolga in tiha: iz bolnišnice na zbirno točko, z zbirne točke na travnik, z travnika v letalo — nekateri so na poti čakali cele dneve.\n\nZračni most ob Kolpi je deloval že od septembra 1944, ko so zavezniki prvič pristali na partizanskem letališču pri Otoku. Do konca vojne je v južno Italijo odpotovalo 1.473 ranjencev in 87 zavezniških letalcev, večinoma sestreljenih pilotov. Zadnji vzleti so se zgodili s Krasinca konec marca 1945 — v dveh dneh so letala ranjence in težje bolne prepeljala v zavezniško bazo v Bari. RTV Slovenija je ob osemdesetletnici dogodka zapisala, da je bila to ena največjih medvojnih evakuacij v tem delu Evrope. Zgodila se je v noči, nad travniki, ki so jih zjutraj spet košili.\n\nDva posnetka iz teh dni sta narejena prav pri Gribljah: ranjeni partizani, ki opazujejo pristajanje, in pogovor angleškega pilota s partizani. Snemalec prvega je Franjo Veselko (1905–1977); oba sta v javni domeni in med najdragocenejšimi predmeti te zbirke. Obrazi na njih so mladi — in večinoma brez imen. Kdor prepozna rojaka, brata ali soseda, naj se oglasi: ta muzej je zgrajen iz imen, ki jih še išče.\n\nDanes dogodek varuje spominski Douglas C-47 Dakota pri Otoku, spomin pa vsako pomlad obuja slovesnost Vranov let. Kdor stoji ob Kolpi, sliši samo reko. Kdor pa ve, kaj se je marca 1945 dvignilo z njenega brega, ve tudi, zakaj mir ni samoumeven.",
-    "en": "At the end of March 1945 heavy engines were heard above the Kolpa for the first time. A village used to the sound of bells and water raised its head.\n\nIn the field by Griblje the wounded of Bela krajina's forest and cave hospitals gathered — men who had spent months on hidden operating tables under the spruces. Some came on stretchers, some led by the arm of a comrade; some had not been out in daylight for months. When the first aircraft landed, dust rose in the dusk; when it rose again, a dozen of the saved were already aboard. The road was long and quiet: from the hospital to the assembly point, from the assembly point to the meadow, from the meadow into the aircraft — some waited whole days on the way.\n\nThe air bridge on the Kolpa had been running since September 1944, when the Allies first landed at the Partisan airfield by Otok. By the end of the war 1,473 wounded and 87 Allied airmen — mostly downed pilots — had flown to southern Italy. The last take-offs came from Krasinec at the end of March 1945: over two days the aircraft carried the wounded and the gravely ill to the Allied base at Bari. On the operation's eightieth anniversary RTV Slovenia described it as one of the largest wartime evacuations in this part of Europe. It happened at night, over meadows that were mown again the next morning.\n\nTwo photographs from those days were taken precisely at Griblje: wounded Partisans watching the aircraft come in, and an English pilot in conversation with Partisans. The author of the first is Franjo Veselko (1905–1977); both are in the public domain and among the most precious objects of this collection. The faces in them are young — and mostly without names. Whoever recognises a kinsman, a brother or a neighbour is invited to come forward: this museum is built out of the names it is still searching for.\n\nToday the event is guarded by the memorial Douglas C-47 Dakota at Otok, and the Vranov let ceremony returns every spring. Whoever stands by the Kolpa hears only the river. But whoever knows what rose from its bank in March 1945 also knows why peace is never to be taken for granted."
-   },
-   "attribution": {
-    "sl": "Obnovljeno po javnih virih: Wikimedia Commons (Franjo Veselko, marec 1945), RTV Slovenija, spominski park Otok",
-    "en": "Rebuilt from public sources: Wikimedia Commons (Franjo Veselko, March 1945), RTV Slovenia, the Otok memorial park"
-   },
-   "evidenceStatus": "DOCUMENTED"
-  },
-  {
-   "kind": "ZGODBA",
-   "title": {
-    "sl": "Reka, ki ločuje in spaja",
-    "en": "The river that divides and joins"
-   },
-   "text": {
-    "sl": "Kolpa ni nikoli bila samo črta na zemljevidu. Stoletja je ločevala deželo Kranjsko od hrvaških dežel — a isti mlin je mlel žito z obeh bregov, ob malenci so si vaščani delili jez, poroke so bile sklenjene čez reko in sorodstvo je raslo na obeh straneh. Ribiči z obeh bregov se poznajo po imenu; otroci obeh vasi se učijo plavati v isti vodi.\n\nJunija 1991 se je spremenila teža črte, ne pa tudi črta sama. Iz meje med dvema republikama je Kolpa preskočila v zunanjo mejo samostojne Slovenije — in čez noč v mejo Evropi. Mejni kamni so dobili državni pomen, ob reki so zrasli prehodi, vsakdan pa je prepredla carina in dokumenti. Vas ob reki se je novi črti navadila, a je nikoli ni spustila v vodo.\n\nLeta 2015 je na bregu pri Gribljah za nekaj mesecev stala žičnata ograja — bledo žico nad zeleno reko je objektiv dokumentiral, kmalu zatem so jo odstranili. Za ljudi ob reki je bila tuja novost: Kolpa v svoji zgodovini ni bila pregrada, ampak srečanje.\n\nPrvega januarja 2023, ko je Hrvaška stopila v schengenski prostor, so se prehodi zaprli in luči nad njimi ugasnile. Kar je ostalo, je najstarejša oblika meje na tem svetu: voda, ki teče čez črto in je ne nosi s seboj.\n\nObiskovalcu, ki danes sede na breg, reka pripoveduje svojo zgodbo brez besed. Isti tok je bil deželna, upravna, republiška in državna meja — in je vseeno ostajal kraj, kjer so se na obeh bregovih srečevali isti ljudje. Najstarejša meja tu ni kamen. Je voda.",
-    "en": "The Kolpa was never only a line on a map. For centuries it separated the land of Carniola from the Croatian lands — yet the same mill ground the grain of both banks, villagers shared the weir at the malenca, marriages were concluded across the river, and kin grew on both sides. Anglers on the two banks know each other by name; children of the two villages learn to swim in the same water.\n\nIn June 1991 the weight of the line changed — the line itself did not. From a border between two republics the Kolpa jumped to the external border of independent Slovenia — and overnight, a border of Europe. The boundary stones took on the meaning of statehood, crossings grew along the river, and everyday life was threaded through with customs and documents. The village on the river grew accustomed to the new line, but never let it into the water.\n\nIn 2015, for a few months, a wire fence stood on the bank at Griblje — pale wire above a green river, documented by a camera and soon removed. For the people of the river it was an alien novelty: through all its history the Kolpa had not been a barrier but a meeting.\n\nOn 1 January 2023, when Croatia stepped into the Schengen area, the crossings closed and the lights above them went dark. What remained is the oldest form of border in this world: water, flowing over the line and carrying it away.\n\nTo the visitor who sits on the bank today, the river tells its story without words. The same current has been a provincial, an administrative, a republican and a national border — and remained, throughout, a place where the same people met on both banks. The oldest border here is not a stone. It is water."
-   },
-   "attribution": {
-    "sl": "Obnovljeno po javnih virih: Wikimedia Commons (Hythlodot), Evropska komisija — schengensko območje",
-    "en": "Rebuilt from public sources: Wikimedia Commons (Hythlodot), European Commission — the Schengen area"
-   },
-   "evidenceStatus": "DOCUMENTED"
-  },
-  {
-   "kind": "NACELO",
-   "title": {
-    "sl": "Šest kuratorskih načel",
-    "en": "Six curatorial principles"
-   },
-   "text": {
-    "sl": "1. Vsak zapis ima izvor.\n2. Dokumentirano dejstvo ločujemo od pričevanja in spomina.\n3. Fotografija je predmet zbirke, ne samodejno dokaz vseh trditev o njej.\n4. Zbirka se gradi skupaj z ljudmi, ki poznajo vas.\n5. Osebne podatke objavljamo samo, kadar obstaja ustrezna podlaga in namen.\n6. Vsak zapis lahko kasneje dopolnimo, popravimo ali povežemo z novim virom.",
-    "en": "1. Every record has a source.\n2. We separate documented fact from testimony and memory.\n3. A photograph is an object of the collection, not automatic proof of every claim made about it.\n4. The collection is built together with the people who know the village.\n5. Personal data is published only where a proper basis and purpose exist.\n6. Every record can later be amended, corrected or linked to a new source."
-   },
-   "attribution": {
-    "sl": "Kuratorska načela Muzeja vasi Griblje (2026)",
-    "en": "Curatorial principles of the Griblje Village Museum (2026)"
-   },
-   "evidenceStatus": "DOCUMENTED"
-  },
-  {
-   "kind": "RAZPIS",
-   "title": {
-    "sl": "Prazna zbirka pričevanj — namenoma",
-    "en": "The empty testimony collection — on purpose"
-   },
-   "text": {
-    "sl": "V tem muzeju ne boste našli izmišljenih izjav domačinov. Zbirka ustne zgodovine je prazna, ker jo nismo hoteli napolniti s prirejenimi spomini.\n\nČe vaši starši, stari starši ali vi poznate Griblje pred letom 1960 — kaj je bilo v hiši, kdo je hodil k mlinu, kdaj so hodili jurji — nam pišite. Zapisali bomo vaše besede, vaše ime in vaš datum; objavili jih bomo z vašim soglasjem. Tako pride pričevanje v muzej: po spoštljivi poti, ne po poti izmišljotin.",
-    "en": "You will not find invented statements by villagers in this museum. The oral-history collection is empty because we refused to fill it with fabricated memories.\n\nIf your parents, grandparents or you knew Griblje before 1960 — what stood in the house, who went to the mill, when the jurji walked — write to us. We will record your words, your name and your date; we will publish them with your consent. That is how testimony enters a museum: by the respectful path, not the path of invention."
-   },
-   "attribution": {
-    "sl": "Odprti razpis Muzeja vasi Griblje — pričevanja zbiramo od 2026",
-    "en": "Open call of the Griblje Village Museum — collecting testimonies since 2026"
-   },
-   "evidenceStatus": "TO_COLLECT"
-  },
-  {
-   "kind": "ZGODBA",
-   "title": {
-    "sl": "Mlinščina — vaška borza in telefon",
-    "en": "Mlinščina — the village exchange and telephone"
-   },
-   "text": {
-    "sl": "Ob žetvi je pred mlinom stala vrsta vozov. Žito je čakalo, ljudje pa z njim — in počakali so tudi vse novice leta: od cen pšenice do zarok, od vremena do svatov. Mlin je bil vaška borza in vaški telefon v enem; vrsta pred njim je bila najbolj poštena kronika leta.\n\nMlinar je bil vaški mojster, njegova obrt pa branje vode. Njegov jez, toča in kamnita korita so žito spremenila v moko, po kateri je vsaka hiša spekla svoj kruh; slovenski vodni mlin je gnala žimaln — vodoravno kolo, ki je pretvarjalo tok reke v vrteči se kamen. Mlin je nosil dva kamna: spodnjega mirovnika in zgornjega tekača; med njiju je padalo zrno, iz njiju pa moka. Nastavitev kamnov je bila mlinarjeva skrivnost: preveč prostora in moka je groba, premalo in kamen se žge. Kdaj dvigniti zapornice, kdaj mleti, kdaj čakati na dež — to je vedel samo on.\n\nPlačevalo se je z mlinščino: odmerkom moke, ki si ga je mlinar pridržal za svoje delo. Tako se je v vsaki vreči žita meril tudi delež zaupane besede — mlinar je vedel, kdo ima dober klas in kdo slabo leto, in nič od tega ni povedal naprej. Zaupanje je bilo del mlinščine.\n\nOb Kolpi so mlini stali v Dolu, Radencih, Pobrežju in Krasincu — ohranjeni urbarji jih naštevajo med vaškimi prihodki. Sledi mlinarstva segajo globoko v srednji vek: v strugi Lahinje pri Flekovem mlinu v Črnomlju so arheologi odkrili ostanke mlina iz štirinajstega stoletja. Ob Kolpi pri Gribljah mlinarsko dediščino zapira malenca — mali jez, ki ima v tej zbirki svoj zapis.\n\nMuzej išče mlinarska pričevanja: kdaj je utihnil zadnji mlin v okolici Gribelj, kdo je hodil z žitom do Pobrežja in kaj je povedal mlinar, ko se je kamen ustavil. Mlinski kamni so molčali dovolj dolgo.",
-    "en": "At harvest a queue of carts stood before the mill. The grain waited, and the people with it — and they waited out all the year's news as well: from the price of wheat to engagements, from the weather to weddings. The mill was the village's exchange and the village's telephone in one; the queue before it was the most honest chronicle of the year.\n\nThe miller was the village's craftsman, and his trade was reading water. His weir, the drop and the stone troughs turned grain into the flour from which every household baked its bread; the Slovene water mill was driven by a žimaln — a horizontal wheel that turned the river's current into a turning stone. The mill carried two stones: the fixed bedstone below and the running stone above; between them the grain fell, and out of them came flour. Setting the stones was the miller's secret: too much gap and the flour is coarse, too little and the stone scorches. When to raise the sluices, when to grind, when to wait for rain — only he knew.\n\nPayment was the mlinščina: the measure of flour the miller kept back for his work. So every sack of grain also measured a share of entrusted words — the miller knew who had a good ear of wheat and who a bad year, and said none of it onward. Trust was part of the mlinščina.\n\nAlong the Kolpa the mills stood at Dol, Radenci, Pobrežje and Krasinec — the surviving urbars list them among the village's revenues. The traces of milling reach deep into the Middle Ages: in the bed of the Lahinja at Flekov mlin in Črnomelj, archaeologists uncovered the remains of a fourteenth-century mill. On the Kolpa at Griblje the milling heritage is closed by the malenca — the small weir that has its own record in this collection.\n\nThe museum is looking for the millers' testimonies: when the last mill around Griblje fell silent, who carried the grain to Pobrežje, and what the miller said when the stone stopped. The millstones have been silent long enough."
-   },
-   "attribution": {
-    "sl": "Obnovljeno po javnih virih: ohranjeni urbarji, Radio Odeon (2022), arheološke raziskave Lahinje",
-    "en": "Rebuilt from public sources: surviving urbars, Radio Odeon (2022), archaeological research on the Lahinja"
-   },
-   "evidenceStatus": "DOCUMENTED"
-  },
-  {
-   "kind": "ZGODBA",
-   "title": {
-    "sl": "Žensko leto — od lana do platna",
-    "en": "The women's year — from flax to linen"
-   },
-   "text": {
-    "sl": "Leto vasi Bele krajine je imelo dva koledarja: enega so pisala polja, drugega ženske roke.\n\nSpomladi so vasi sejale lan in konopljo; sredi poletja so stebla potegnili z roko iz zemlje — počasi in potrpežljivo, da se vlakna niso pretrgala. Potem se je začel pravi almanah: stebla so namočili v stoječi vodi, v ribniku, mlinščici ali lokvi, da je lubje zmehčalo; po suši so jih lomili, tlkli in česali, dokler ni ostal le sijoč vlaknati jed. To delo je bilo moško. Zima pa je takoj zatem gospodovala ženskam.\n\nOb večerni luči, s preslico v roki, so ženske predle vso zimo. Predenje je bilo delo in druženje ob enem: ob njem so se spletali pogovori, pesmi in zaroke. Spomladi je nastopila statva — lesen tkalski stroj v hiši ali v kamri; s slehernim gibom roke je tkalja predivo vpletala v platno, čolniček pa je prehajal med nitmi kot ritem. Iz platna so nastale rjuhe, srajce in nedrčki; iz konoplje vreče in vrvi. Oblečena in opremljena je bila cela vas.\n\nVsak dom je bil hkrati delavnica. Koliko platna je imela hiša v skrinjah, je bilo merilo gospodarnosti njene gazdarice; platno je bilo tudi denar — šlo je v doto, v dar in v plačilo dolgov. Prav zato sta predenje in tkalstvo del ženske zgodovine Bele krajine: gospodarstvo, ki ga je nosila roka, ne zemlja.\n\nKo se je domače platno umaknilo tovarniškemu, se zgodba ni končala: roke tkalj so našle delo v belokranjskih šiviljah, ženske plače pa so nosile cele hiše. Zgodba o platnu se je nadaljevala kot zgodba o konfekciji.\n\nPredenje — predstopnja tkalstva — je ohranjeno na fotografiji Frana Vesela iz leta 1920: pravi dokument časa, ne predstava. Muzej išče statve, ki so stale v Gribljah, in imena gazdaric, ki so jih imele. Vsaka fotografija vaške statve bo nov predmet zbirke.",
-    "en": "The year of a Bela krajina village kept two calendars: one was written by the fields, the other by women's hands.\n\nIn spring the villages sowed flax and hemp; in midsummer the stalks were pulled from the ground by hand — slowly and patiently, so the fibres would not tear. Then the true almanac began: the stalks were retted in standing water, in a pond, a millrace or a karst pool, until the bark softened; after drying they were broken, scutched and hackled until only the silky fibrous core remained. That work was men's. The winter that followed belonged to the women.\n\nBy the evening lamp, distaff in hand, the women spun all winter. Spinning was work and company at once: around it wove conversations, songs and engagements. In spring the loom took its turn — a wooden loom in the house or the chamber; with each movement of her hand the weaver interlaced the yarn into linen, and the shuttle passed between the threads like a rhythm. From the linen came sheets, shirts and chemises; from the hemp, sacks and ropes. The whole village was clothed and equipped by it.\n\nEvery household was at once a workshop. How much linen a house kept in its chests was the measure of its mistress's thrift; linen was also money — it went into dowries, into gifts and against debts. Precisely for that reason, spinning and weaving are part of the women's history of Bela krajina: an economy carried by the hand, not the land.\n\nWhen homespun gave way to factory cloth, the story did not end: the weavers' hands found work in the sewing shops of Bela krajina, and women's wages carried entire households. The story of linen continued as the story of ready-made clothing.\n\nSpinning — the step before weaving — survives on Fran Vesel's photograph from 1920: a true document of its time, not a reconstruction. The museum is looking for the looms that stood in Griblje, and for the names of the mistresses who kept them. A photograph of a village loom will be a new object of the collection."
-   },
-   "attribution": {
-    "sl": "Obnovljeno po etnografski literaturi in fotografiji Frana Vesela (1920, javna last)",
-    "en": "Rebuilt from ethnographic literature and Fran Vesel's photograph (1920, public domain)"
-   },
-   "evidenceStatus": "TRADITION"
-  }
- ]
+  "stories": [
+    {
+      "kind": "ZGODBA",
+      "title": {
+        "sl": "Zadnji poleti marca 1945",
+        "en": "The last flights of March 1945"
+      },
+      "text": {
+        "sl": "Konec marca 1945 so se nad Kolpo prvič zaslišali težki motorji. Vas, vajena zvoka zvonov in vode, je dvignila glavo.\n\nNa poljani pri Gribljah so se zbirali ranjenci iz gozdnih in jamskih bolnišnic Bele krajine — moški, ki so meseci ležali na skritih operacijskih mizah pod smrekami. Nekateri so prišli na nosilih, nekateri pod roko tovarišev; nekateri so bili meseci prvič podnevi na prostem. Ko je prvo letalo pristalo, se je v mraku dvignil prah; ko se je dvignilo znova, je bilo v njem že ducat rešenih. Pot je bila dolga in tiha: iz bolnišnice na zbirno točko, z zbirne točke na travnik, z travnika v letalo — nekateri so na poti čakali cele dneve.\n\nZračni most ob Kolpi je deloval že od septembra 1944, ko so zavezniki prvič pristali na partizanskem letališču pri Otoku. Do konca vojne je v južno Italijo odpotovalo 1.473 ranjencev in 87 zavezniških letalcev, večinoma sestreljenih pilotov. Zadnji vzleti so se zgodili s Krasinca konec marca 1945 — v dveh dneh so letala ranjence in težje bolne prepeljala v zavezniško bazo v Bari. RTV Slovenija je ob osemdesetletnici dogodka zapisala, da je bila to ena največjih medvojnih evakuacij v tem delu Evrope. Zgodila se je v noči, nad travniki, ki so jih zjutraj spet košili.\n\nDva posnetka iz teh dni sta narejena prav pri Gribljah: ranjeni partizani, ki opazujejo pristajanje, in pogovor angleškega pilota s partizani. Snemalec prvega je Franjo Veselko (1905–1977); oba sta v javni domeni in med najdragocenejšimi predmeti te zbirke. Obrazi na njih so mladi — in večinoma brez imen. Kdor prepozna rojaka, brata ali soseda, naj se oglasi: ta muzej je zgrajen iz imen, ki jih še išče.\n\nDanes dogodek varuje spominski Douglas C-47 Dakota pri Otoku, spomin pa vsako pomlad obuja slovesnost Vranov let. Kdor stoji ob Kolpi, sliši samo reko. Kdor pa ve, kaj se je marca 1945 dvignilo z njenega brega, ve tudi, zakaj mir ni samoumeven.",
+        "en": "At the end of March 1945 heavy engines were heard above the Kolpa for the first time. A village used to the sound of bells and water raised its head.\n\nIn the field by Griblje the wounded of Bela krajina's forest and cave hospitals gathered — men who had spent months on hidden operating tables under the spruces. Some came on stretchers, some led by the arm of a comrade; some had not been out in daylight for months. When the first aircraft landed, dust rose in the dusk; when it rose again, a dozen of the saved were already aboard. The road was long and quiet: from the hospital to the assembly point, from the assembly point to the meadow, from the meadow into the aircraft — some waited whole days on the way.\n\nThe air bridge on the Kolpa had been running since September 1944, when the Allies first landed at the Partisan airfield by Otok. By the end of the war 1,473 wounded and 87 Allied airmen — mostly downed pilots — had flown to southern Italy. The last take-offs came from Krasinec at the end of March 1945: over two days the aircraft carried the wounded and the gravely ill to the Allied base at Bari. On the operation's eightieth anniversary RTV Slovenia described it as one of the largest wartime evacuations in this part of Europe. It happened at night, over meadows that were mown again the next morning.\n\nTwo photographs from those days were taken precisely at Griblje: wounded Partisans watching the aircraft come in, and an English pilot in conversation with Partisans. The author of the first is Franjo Veselko (1905–1977); both are in the public domain and among the most precious objects of this collection. The faces in them are young — and mostly without names. Whoever recognises a kinsman, a brother or a neighbour is invited to come forward: this museum is built out of the names it is still searching for.\n\nToday the event is guarded by the memorial Douglas C-47 Dakota at Otok, and the Vranov let ceremony returns every spring. Whoever stands by the Kolpa hears only the river. But whoever knows what rose from its bank in March 1945 also knows why peace is never to be taken for granted."
+      },
+      "attribution": {
+        "sl": "Obnovljeno po javnih virih: Wikimedia Commons (Franjo Veselko, marec 1945), RTV Slovenija, spominski park Otok",
+        "en": "Rebuilt from public sources: Wikimedia Commons (Franjo Veselko, March 1945), RTV Slovenia, the Otok memorial park"
+      },
+      "evidenceStatus": "DOCUMENTED"
+    },
+    {
+      "kind": "ZGODBA",
+      "title": {
+        "sl": "Reka, ki ločuje in spaja",
+        "en": "The river that divides and joins"
+      },
+      "text": {
+        "sl": "Kolpa ni nikoli bila samo črta na zemljevidu. Stoletja je ločevala deželo Kranjsko od hrvaških dežel — a isti mlin je mlel žito z obeh bregov, ob malenci so si vaščani delili jez, poroke so bile sklenjene čez reko in sorodstvo je raslo na obeh straneh. Ribiči z obeh bregov se poznajo po imenu; otroci obeh vasi se učijo plavati v isti vodi.\n\nJunija 1991 se je spremenila teža črte, ne pa tudi črta sama. Iz meje med dvema republikama je Kolpa preskočila v zunanjo mejo samostojne Slovenije — in čez noč v mejo Evropi. Mejni kamni so dobili državni pomen, ob reki so zrasli prehodi, vsakdan pa je prepredla carina in dokumenti. Vas ob reki se je novi črti navadila, a je nikoli ni spustila v vodo.\n\nLeta 2015 je na bregu pri Gribljah za nekaj mesecev stala žičnata ograja — bledo žico nad zeleno reko je objektiv dokumentiral, kmalu zatem so jo odstranili. Za ljudi ob reki je bila tuja novost: Kolpa v svoji zgodovini ni bila pregrada, ampak srečanje.\n\nPrvega januarja 2023, ko je Hrvaška stopila v schengenski prostor, so se prehodi zaprli in luči nad njimi ugasnile. Kar je ostalo, je najstarejša oblika meje na tem svetu: voda, ki teče čez črto in je ne nosi s seboj.\n\nObiskovalcu, ki danes sede na breg, reka pripoveduje svojo zgodbo brez besed. Isti tok je bil deželna, upravna, republiška in državna meja — in je vseeno ostajal kraj, kjer so se na obeh bregovih srečevali isti ljudje. Najstarejša meja tu ni kamen. Je voda.",
+        "en": "The Kolpa was never only a line on a map. For centuries it separated the land of Carniola from the Croatian lands — yet the same mill ground the grain of both banks, villagers shared the weir at the malenca, marriages were concluded across the river, and kin grew on both sides. Anglers on the two banks know each other by name; children of the two villages learn to swim in the same water.\n\nIn June 1991 the weight of the line changed — the line itself did not. From a border between two republics the Kolpa jumped to the external border of independent Slovenia — and overnight, a border of Europe. The boundary stones took on the meaning of statehood, crossings grew along the river, and everyday life was threaded through with customs and documents. The village on the river grew accustomed to the new line, but never let it into the water.\n\nIn 2015, for a few months, a wire fence stood on the bank at Griblje — pale wire above a green river, documented by a camera and soon removed. For the people of the river it was an alien novelty: through all its history the Kolpa had not been a barrier but a meeting.\n\nOn 1 January 2023, when Croatia stepped into the Schengen area, the crossings closed and the lights above them went dark. What remained is the oldest form of border in this world: water, flowing over the line and carrying it away.\n\nTo the visitor who sits on the bank today, the river tells its story without words. The same current has been a provincial, an administrative, a republican and a national border — and remained, throughout, a place where the same people met on both banks. The oldest border here is not a stone. It is water."
+      },
+      "attribution": {
+        "sl": "Obnovljeno po javnih virih: Wikimedia Commons (Hythlodot), Evropska komisija — schengensko območje",
+        "en": "Rebuilt from public sources: Wikimedia Commons (Hythlodot), European Commission — the Schengen area"
+      },
+      "evidenceStatus": "DOCUMENTED"
+    },
+    {
+      "kind": "NACELO",
+      "title": {
+        "sl": "Šest kuratorskih načel",
+        "en": "Six curatorial principles"
+      },
+      "text": {
+        "sl": "1. Vsak zapis ima izvor.\n2. Dokumentirano dejstvo ločujemo od pričevanja in spomina.\n3. Fotografija je predmet zbirke, ne samodejno dokaz vseh trditev o njej.\n4. Zbirka se gradi skupaj z ljudmi, ki poznajo vas.\n5. Osebne podatke objavljamo samo, kadar obstaja ustrezna podlaga in namen.\n6. Vsak zapis lahko kasneje dopolnimo, popravimo ali povežemo z novim virom.",
+        "en": "1. Every record has a source.\n2. We separate documented fact from testimony and memory.\n3. A photograph is an object of the collection, not automatic proof of every claim made about it.\n4. The collection is built together with the people who know the village.\n5. Personal data is published only where a proper basis and purpose exist.\n6. Every record can later be amended, corrected or linked to a new source."
+      },
+      "attribution": {
+        "sl": "Kuratorska načela Muzeja vasi Griblje (2026)",
+        "en": "Curatorial principles of the Griblje Village Museum (2026)"
+      },
+      "evidenceStatus": "DOCUMENTED"
+    },
+    {
+      "kind": "RAZPIS",
+      "title": {
+        "sl": "Prazna zbirka pričevanj — namenoma",
+        "en": "The empty testimony collection — on purpose"
+      },
+      "text": {
+        "sl": "V tem muzeju ne boste našli izmišljenih izjav domačinov. Zbirka ustne zgodovine je prazna, ker jo nismo hoteli napolniti s prirejenimi spomini.\n\nČe vaši starši, stari starši ali vi poznate Griblje pred letom 1960 — kaj je bilo v hiši, kdo je hodil k mlinu, kdaj so hodili jurji — nam pišite. Zapisali bomo vaše besede, vaše ime in vaš datum; objavili jih bomo z vašim soglasjem. Tako pride pričevanje v muzej: po spoštljivi poti, ne po poti izmišljotin.",
+        "en": "You will not find invented statements by villagers in this museum. The oral-history collection is empty because we refused to fill it with fabricated memories.\n\nIf your parents, grandparents or you knew Griblje before 1960 — what stood in the house, who went to the mill, when the jurji walked — write to us. We will record your words, your name and your date; we will publish them with your consent. That is how testimony enters a museum: by the respectful path, not the path of invention."
+      },
+      "attribution": {
+        "sl": "Odprti razpis Muzeja vasi Griblje — pričevanja zbiramo od 2026",
+        "en": "Open call of the Griblje Village Museum — collecting testimonies since 2026"
+      },
+      "evidenceStatus": "TO_COLLECT"
+    },
+    {
+      "kind": "ZGODBA",
+      "title": {
+        "sl": "Mlinščina — vaška borza in telefon",
+        "en": "Mlinščina — the village exchange and telephone"
+      },
+      "text": {
+        "sl": "Ob žetvi je pred mlinom stala vrsta vozov. Žito je čakalo, ljudje pa z njim — in počakali so tudi vse novice leta: od cen pšenice do zarok, od vremena do svatov. Mlin je bil vaška borza in vaški telefon v enem; vrsta pred njim je bila najbolj poštena kronika leta.\n\nMlinar je bil vaški mojster, njegova obrt pa branje vode. Njegov jez, toča in kamnita korita so žito spremenila v moko, po kateri je vsaka hiša spekla svoj kruh; slovenski vodni mlin je gnala žimaln — vodoravno kolo, ki je pretvarjalo tok reke v vrteči se kamen. Mlin je nosil dva kamna: spodnjega mirovnika in zgornjega tekača; med njiju je padalo zrno, iz njiju pa moka. Nastavitev kamnov je bila mlinarjeva skrivnost: preveč prostora in moka je groba, premalo in kamen se žge. Kdaj dvigniti zapornice, kdaj mleti, kdaj čakati na dež — to je vedel samo on.\n\nPlačevalo se je z mlinščino: odmerkom moke, ki si ga je mlinar pridržal za svoje delo. Tako se je v vsaki vreči žita meril tudi delež zaupane besede — mlinar je vedel, kdo ima dober klas in kdo slabo leto, in nič od tega ni povedal naprej. Zaupanje je bilo del mlinščine.\n\nOb Kolpi so mlini stali v Dolu, Radencih, Pobrežju in Krasincu — ohranjeni urbarji jih naštevajo med vaškimi prihodki. Sledi mlinarstva segajo globoko v srednji vek: v strugi Lahinje pri Flekovem mlinu v Črnomlju so arheologi odkrili ostanke mlina iz štirinajstega stoletja. Ob Kolpi pri Gribljah mlinarsko dediščino zapira malenca — mali jez, ki ima v tej zbirki svoj zapis.\n\nMuzej išče mlinarska pričevanja: kdaj je utihnil zadnji mlin v okolici Gribelj, kdo je hodil z žitom do Pobrežja in kaj je povedal mlinar, ko se je kamen ustavil. Mlinski kamni so molčali dovolj dolgo.",
+        "en": "At harvest a queue of carts stood before the mill. The grain waited, and the people with it — and they waited out all the year's news as well: from the price of wheat to engagements, from the weather to weddings. The mill was the village's exchange and the village's telephone in one; the queue before it was the most honest chronicle of the year.\n\nThe miller was the village's craftsman, and his trade was reading water. His weir, the drop and the stone troughs turned grain into the flour from which every household baked its bread; the Slovene water mill was driven by a žimaln — a horizontal wheel that turned the river's current into a turning stone. The mill carried two stones: the fixed bedstone below and the running stone above; between them the grain fell, and out of them came flour. Setting the stones was the miller's secret: too much gap and the flour is coarse, too little and the stone scorches. When to raise the sluices, when to grind, when to wait for rain — only he knew.\n\nPayment was the mlinščina: the measure of flour the miller kept back for his work. So every sack of grain also measured a share of entrusted words — the miller knew who had a good ear of wheat and who a bad year, and said none of it onward. Trust was part of the mlinščina.\n\nAlong the Kolpa the mills stood at Dol, Radenci, Pobrežje and Krasinec — the surviving urbars list them among the village's revenues. The traces of milling reach deep into the Middle Ages: in the bed of the Lahinja at Flekov mlin in Črnomelj, archaeologists uncovered the remains of a fourteenth-century mill. On the Kolpa at Griblje the milling heritage is closed by the malenca — the small weir that has its own record in this collection.\n\nThe museum is looking for the millers' testimonies: when the last mill around Griblje fell silent, who carried the grain to Pobrežje, and what the miller said when the stone stopped. The millstones have been silent long enough."
+      },
+      "attribution": {
+        "sl": "Obnovljeno po javnih virih: ohranjeni urbarji, Radio Odeon (2022), arheološke raziskave Lahinje",
+        "en": "Rebuilt from public sources: surviving urbars, Radio Odeon (2022), archaeological research on the Lahinja"
+      },
+      "evidenceStatus": "DOCUMENTED"
+    },
+    {
+      "kind": "ZGODBA",
+      "title": {
+        "sl": "Žensko leto — od lana do platna",
+        "en": "The women's year — from flax to linen"
+      },
+      "text": {
+        "sl": "Leto vasi Bele krajine je imelo dva koledarja: enega so pisala polja, drugega ženske roke.\n\nSpomladi so vasi sejale lan in konopljo; sredi poletja so stebla potegnili z roko iz zemlje — počasi in potrpežljivo, da se vlakna niso pretrgala. Potem se je začel pravi almanah: stebla so namočili v stoječi vodi, v ribniku, mlinščici ali lokvi, da je lubje zmehčalo; po suši so jih lomili, tlkli in česali, dokler ni ostal le sijoč vlaknati jed. To delo je bilo moško. Zima pa je takoj zatem gospodovala ženskam.\n\nOb večerni luči, s preslico v roki, so ženske predle vso zimo. Predenje je bilo delo in druženje ob enem: ob njem so se spletali pogovori, pesmi in zaroke. Spomladi je nastopila statva — lesen tkalski stroj v hiši ali v kamri; s slehernim gibom roke je tkalja predivo vpletala v platno, čolniček pa je prehajal med nitmi kot ritem. Iz platna so nastale rjuhe, srajce in nedrčki; iz konoplje vreče in vrvi. Oblečena in opremljena je bila cela vas.\n\nVsak dom je bil hkrati delavnica. Koliko platna je imela hiša v skrinjah, je bilo merilo gospodarnosti njene gazdarice; platno je bilo tudi denar — šlo je v doto, v dar in v plačilo dolgov. Prav zato sta predenje in tkalstvo del ženske zgodovine Bele krajine: gospodarstvo, ki ga je nosila roka, ne zemlja.\n\nKo se je domače platno umaknilo tovarniškemu, se zgodba ni končala: roke tkalj so našle delo v belokranjskih šiviljah, ženske plače pa so nosile cele hiše. Zgodba o platnu se je nadaljevala kot zgodba o konfekciji.\n\nPredenje — predstopnja tkalstva — je ohranjeno na fotografiji Frana Vesela iz leta 1920: pravi dokument časa, ne predstava. Muzej išče statve, ki so stale v Gribljah, in imena gazdaric, ki so jih imele. Vsaka fotografija vaške statve bo nov predmet zbirke.",
+        "en": "The year of a Bela krajina village kept two calendars: one was written by the fields, the other by women's hands.\n\nIn spring the villages sowed flax and hemp; in midsummer the stalks were pulled from the ground by hand — slowly and patiently, so the fibres would not tear. Then the true almanac began: the stalks were retted in standing water, in a pond, a millrace or a karst pool, until the bark softened; after drying they were broken, scutched and hackled until only the silky fibrous core remained. That work was men's. The winter that followed belonged to the women.\n\nBy the evening lamp, distaff in hand, the women spun all winter. Spinning was work and company at once: around it wove conversations, songs and engagements. In spring the loom took its turn — a wooden loom in the house or the chamber; with each movement of her hand the weaver interlaced the yarn into linen, and the shuttle passed between the threads like a rhythm. From the linen came sheets, shirts and chemises; from the hemp, sacks and ropes. The whole village was clothed and equipped by it.\n\nEvery household was at once a workshop. How much linen a house kept in its chests was the measure of its mistress's thrift; linen was also money — it went into dowries, into gifts and against debts. Precisely for that reason, spinning and weaving are part of the women's history of Bela krajina: an economy carried by the hand, not the land.\n\nWhen homespun gave way to factory cloth, the story did not end: the weavers' hands found work in the sewing shops of Bela krajina, and women's wages carried entire households. The story of linen continued as the story of ready-made clothing.\n\nSpinning — the step before weaving — survives on Fran Vesel's photograph from 1920: a true document of its time, not a reconstruction. The museum is looking for the looms that stood in Griblje, and for the names of the mistresses who kept them. A photograph of a village loom will be a new object of the collection."
+      },
+      "attribution": {
+        "sl": "Obnovljeno po etnografski literaturi in fotografiji Frana Vesela (1920, javna last)",
+        "en": "Rebuilt from ethnographic literature and Fran Vesel's photograph (1920, public domain)"
+      },
+      "evidenceStatus": "TRADITION"
+    }
+  ]
 }
