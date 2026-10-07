@@ -224,3 +224,9 @@ Stage Summary:
 - Iskanje zdaj: diakritično-neobčutljivo (č/š/ž→c/s/z), čez nazive, povzetke, obdobja, POLNO
   kuratorsko besedilo, vire in letnice; indeks predizračunan (hitrejše od prejšnje logike)
 - Sledi: commit → push na obe repozitorija → samodejni deploy → verifikacija produkcije
+
+Verifikacija produkcije (samodejni deploy dpl_BMfux6ryMk6inbHBGrN9gUYb, READY):
+- SSR HTML vsebuje novi placeholder "šumniki niso obvezni" ✓
+- Vseh 113 kartic exponatov v strežniško izrisanem HTML (99× MVG-0XX + 14× MVG-1XX) ✓
+- /api/exhibits 200; velikost HTML nespremenjena (~389 KB) — indeks ne bremena paketa
+- Sklep: izboljšava iskanja živa na produkciji, cevovod (push → deploy) potrebno potrjen 4. zapored
