@@ -2,8 +2,12 @@ import { NextResponse } from "next/server";
 import exhibitsData from "@/data/museum/exhibits.json";
 import eventsData from "@/data/museum/events.json";
 import metaRaw from "@/data/museum/meta.json";
+import { DATA_VERSION } from "@/lib/provenance";
 
 export const dynamic = "force-static";
+
+/** ISSUE #3 #10 — dejanski čas generiranja (build/render čas, ne 1970) */
+const GENERATED_AT = new Date().toISOString();
 
 /**
  * Odprti podatki muzeja — po vzoru izvirniškega /api/opendata.
@@ -52,7 +56,8 @@ export async function GET() {
   return NextResponse.json(
     {
       museum: meta.museum,
-      generatedAt: new Date(0).toISOString(),
+      dataVersion: DATA_VERSION,
+      generatedAt: GENERATED_AT,
       counts: meta.counts,
       evidenceScale: meta.evidenceScale,
       data: {
@@ -60,7 +65,26 @@ export async function GET() {
         stories: meta.stories,
         events,
       },
-      license: "CC BY-SA 4.0",
+      /** ISSUE #3 #9 — licenca je razdeljena po plasteh, globalni CC BY-SA 4.0
+       * velja le za lastne metapodatke sklopa, ne za vse vključene vire. */
+      license: {
+        dataset: "CC BY-SA 4.0",
+        scopeSi:
+          "Licenca CC BY-SA 4.0 velja SAMO za lastne strukturne metapodatke tega podatkovnega sklopa (razvrstitev zapisa, povzetki, evidenceStatus, geopovezave). Za vsak posamezen vir, sliko in reprodukcijo veljajo lastne pravice — glej sources[].license in imageCredit vsakega zapisa.",
+        scopeEn:
+          "The CC BY-SA 4.0 license applies ONLY to the structural metadata of this dataset (record classification, summaries, evidenceStatus, geolinks). Each individual source, image and reproduction carries its own rights — see sources[].license and imageCredit of each record.",
+        perSource: "vsak vir ima svoj licenčni podatek v sources[].license",
+        perImage: "pravice fotografij so v imageCredit vsakega zapisa",
+        reproductionSi:
+          "Reprodukcija arhivskih in muzejskih predmetov (Arhiv RS/VAČ, SEM, zasebni arhivi) zahteva soglasje imetnika pravic; javno dostopni arhivski viri (VAČ) ne zahtevajo dovoljenja za vpogled in citiranje.",
+        reproductionEn:
+          "Reproduction of archival and museum objects (Arhiv RS/VAČ, SEM, private archives) requires the rights holder's consent; publicly accessible archival sources (VAČ) require no permission for consultation and citation.",
+        attributionSi:
+          "Obvezna atribucija: Muzej vasi Griblje (sklop podatkov) + izvorni vir posameznega zapisa.",
+        attributionEn:
+          "Required attribution: Muzej vasi Griblje (the dataset) + the original source of each record.",
+        provenanceApi: "/api/provenance",
+      },
     },
     {
       headers: {

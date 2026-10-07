@@ -641,3 +641,71 @@ Stage Summary:
 - GitLab issue #2 (ATLAS 1825) v celoti izveden, dokumentiran in zaključen
 - ATLAS 1825 zgrajen na PRAVIH arhivskih virih (SI AS 176/N/N83) z dokazno
   verigo, pokritostjo in negativnimi rezultati — brez izmišljenih podatkov
+
+---
+Task ID: 3-2
+Agent: general-purpose (research)
+Task: Issue #3 — VAČ/geodata research: SI AS 749, N83 A03–A05, šolski arhiv 4118864, javni geodetski viri, EŠD 10094, 1812 karta
+
+Work Log:
+- VAČ brskano prek agent-browser (curl 403/000); fieldSearch Signatura PE "SI AS 749" + Naslov "Griblje"
+- T1: VAČ id 4971617 = SI AS 749/3/8/12 "Izpisek zemljiških parcel iz katastrskih davčnih vpisnikov za
+  davčne občine Vinji Vrh, Kot, Griblje, Kaltersberg, Loka, Petrova vas in Krasinec v gospostvih Krupa
+  in Pobrežje za namene zemljiške odveze" (izv. naslov "Auszug der unterthänigen Grundparzellen...");
+  fond SI AS 749 Gospostva Krupa, Pobrežje in Pusti Gradac (1587–1901), serija 749/3/8 Zemljiška odveza
+  (1851–1853); 2 zvezka, nemška kurrenta, FIZIČNO (ni digitalizirano), javno dostopno
+- T2: naslednik-veriga A02→A03→A04→A05: VAČ id 227670/227671/227673 (SI AS 176/N/N83/g/A03–A05,
+  nivo Slika, vse digitalizirana); IIIF UUID: A03 8cb21d8c-8acf-340b-8c51-660e724b8175, A04
+  d81cf021-568b-3441-b728-4e79bacafc5c, A05 ffe74585-d86d-3113-b8ff-e58e96c6f51f (tify:
+  /vac/tify?uodid=<id>&docid=10&seq=1, network log 200); N83 = 5 grafičnih listov + 7 spisovnih
+  enot (PG–PZ 373413–373419) = 12 enot — ujema se s trditvijo issue #3
+- T3: VAČ id 4118864 = SI_ZAL_ČRN/0001/001/00012 "Šolski list s prilogami: Državna osnovna šola
+  Griblje" (1929–1941); Arhiv: ZAL, Enota Novo mesto; fond Okrajno glavarstvo Črnomelj (1861–1943),
+  podserija šolski listi; vsebina: opis kraja, poročilo; KOPIJE: digitalizirano; javno dostopno;
+  + bonus id 747512 SI_ZAL_NME/0234/003/096 "OŠ Črnomelj, podružnica Griblje" (1970–1982,
+  Zavod RS za šolstvo OE NM — pregledi pouka)
+- T3 kronika: OŠ Loka Črnomelj / PŠ Griblje stran (osloka.splet.arnes.si/podruznica-griblje/):
+  poslopje 1888, prvo leto 1889/90, učitelj Peter Kambič s Krasinca (umrl, pokopan na vaškem
+  pokopališču), 66 učiteljev v 100 letih, 120-letnica 2009, od 1989 PŠ OŠ Loka; DUPS navaja
+  "Šolska kronika podružnične šole Griblje" med viri; trditev MVG-026 "kronika v Slovenskem šolskem
+  muzeju" NI potrjena v javnih virih (muzej potrjeno hrani revijo "Šolska kronika", ne nujno
+  gribeljskega rokopisa)
+- T4: gis.arso.gov.si REST javno (brez prijave): Lidar_hillshade_D96TM WMTS (EPSG:3794, 0–16,
+  celotna SI) preverjeno 200; Lidar_fishnet_D96: blok b_16 (Griblje) NIMA datumov snemanja →
+  LiDAR 2014–2015 NE pokriva Gribelj (preverjeno: 16.198/21.979 ploščic = 74 %, bloki b_11–15,
+  b_21–26, b_31–37); Slovenija_DMR_D96TM ImageServer 1 m F32 vrne realne višine na Gribljah
+  (151,4/145,5/177,3 m); DOF cikli 1990–2024 (DOF_D96TM_2022_2023_2024, plast
+  DOF_25_2022_2023_2024); CLSS (nov ciklični lidar 2023+, GURS+Flycom): https://clss.si
+  preverjeno naloži ("Pregledovalnik 3D podatkov"), Slovenija v celoti lasersko posneta
+- T4 GURS: egp.gu.gov.si NE obstaja več (NXDOMAIN); portal e-prostor.gov.si + ipi.eprostor.gov.si
+  (/jv vpogled z 3D, /jgp brezplačni JGP prenos), kataster.eprostor.gov.si/kn; ortofoto kot OPSI
+  odprta zbirka (podatki.gov.si "Ortofoto – Zbirke"); konkretna WMS URL ni preverjena (delni
+  rezultat); "3DKD" kot poimenovan javni produkt NI najden — javni 3D viri so JV 3D + CLSS
+- T4 OSM: tile.openstreetmap.org preizkušeno HTTP 200 (z14), ODbL, navedba avtorstva obvezna
+- T5: eid.gov.si (MK-QR register) poizvedbe po EŠD: 10094 = "Griblje - Arheološko najdišče ob
+  Kolpi" (sinonimi Kohane, Požekov vrt, Krasinec - Vrh; neolitik→zgodnja rimska doba; Črnomelj;
+  ZVKD NM; status registrirana dediščina; povezava eheritage.si/apl/real.aspx?id=10094);
+  2122 = Griblje - Cerkev sv. Vida (stavbe, spomenik lokalnega pomena); 11118 = Podzemelj -
+  Arheološko najdišče Kučar (občina METLIKA!); 19324 = Cerkvišče - Spomenik NOB (1960,
+  J. Savinšek); 19326 = Griblje - Spomenik NOB (1961, 11 padlih + 2 žrtvi, registrirana);
+  geohub.gov.si/ghapp/giskd naloži (ArcGIS GisKD pregledovalnik)
+- T6: ilirske-province-1812.jpg (1920×1946) je BITNO ENAK raster Commons "File:Illyrian Provinces
+  (1812).svg" (diff 0,23, IoU črnila 0,995) — avtor TRAJAN 117, 2018, CC BY-SA 3.0,
+  AttributionRequired: true → ni zgodovinski original ampak moderen vektorski zemljevid z
+  obvezno navedbo avtorstva; javne domenjske alternative na Commons: "Provinces Illyriennes
+  Servie et Bosnie 1812.jpg" (1812) in "Carte des Provinces Illyriennes..." (IA scan); obdobje
+  ~1812 pokriva Kranjsko (z Gribljami) do Boke, pribl. okvir 42,4–46,7 N / 13,3–19,3 E, brez
+  georeference
+
+Stage Summary:
+- POZITIVNO (ključno za issue #3): SI AS 749/3/8/12 (VAČ id 4971617) obstaja (fizično, javno, NI digitaliziran);
+  N83 ima VSEH 5 listov — A03 (227670), A04 (227671), A05 (227673) so digitalizirani z IIIF UUID;
+  4118864 = ZAL NM / Okrajno glavarstvo Črnomelj šolski list 1929–1941 (digitalizirano) + nova
+  enota ZAL_NME/0234/003/096; EŠD 10094 = "Griblje - Arheološko najdišče ob Kolpi" (NE Kučar!)
+- LiDAR 2014–2015 NE pokriva Gribelj (blok b_16 brez snemanja); pokritje namesto tega: CLSS 2023+
+  (clss.si) + ARSO DMR 1 m ImageServer + DOF 2022–2024; GURS WMS URL nepotrjen, 3DKD ni javni
+  produkt
+- 1812 karta v repozitoriju = moderena Commons SVG (CC BY-SA 3.0, atribucija obvezna, oznaka
+  "authentic" zavajuča) — treba zamenjati/pripisati vir
+- Gribeljska šolska kronika: obstaja in se uporablja kot vir (šola 1889/90, Peter Kambič);
+  lokacija v Slovenskem šolskem muzeju NEPOTRJENA — najverjetneje pri PŠ Griblje/OŠ Loka

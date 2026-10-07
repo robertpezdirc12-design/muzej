@@ -18,6 +18,30 @@ export type SourceType =
   | "heritage-register"
   | "archival-mention";
 
+/** strojno berljiv status prenosa digitalne kopije (issue #3 #11) */
+export type TransferStatus =
+  | "TRANSFERRED" /** digitalna kopija v repozitoriju */
+  | "TO_COLLECT" /** enota je digitalizirana, kopija še ni prenesena */
+  | "NOT_DIGITIZED" /** enota obstaja, a ni digitalizirana */
+  | "NOT_APPLICABLE";
+
+/** strojno berljiv status georeference (issue #3 #11) */
+export type GeorefStatus =
+  | "GEOREFERENCED"
+  | "TO_COLLECT"
+  | "NOT_APPLICABLE";
+
+/** strojno berljivi statusi raziskave vsakega zgodovinskega podatka (issue #3 #13) */
+export type ResearchStatus =
+  | "VERIFIED"
+  | "DOCUMENTED"
+  | "REVIEW"
+  | "RECONSTRUCTED"
+  | "INFERRED"
+  | "TO_COLLECT"
+  | "NOT_FOUND"
+  | "NOT_PUBLIC";
+
 export interface AtlasSource {
   id: string;
   code: string;
@@ -40,6 +64,13 @@ export interface AtlasSource {
   thumb?: string;
   /** ali je list georeferenciran */
   georeferenced?: boolean;
+  /** strojno berljiva statusa (issue #3) */
+  transferStatus?: TransferStatus;
+  georefStatus?: GeorefStatus;
+  /** koliko vsebinskih zapisov enote je strukturiranih v Atlasu */
+  structuredEntries?: number;
+  /** datum zadnje preveritve vira (YYYY-MM-DD) */
+  lastVerified?: string;
   noteSi?: string;
   noteEn?: string;
 }
@@ -63,10 +94,14 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     licenceEn: "publicly accessible, no permission required (VAČ)",
     thumb: "/atlas/a01-thumb.jpg",
     georeferenced: true,
+    transferStatus: "TRANSFERRED",
+    georefStatus: "GEOREFERENCED",
+    structuredEntries: 0,
+    lastVerified: "2026-10-07",
     noteSi:
-      "Grafični list katastrske občine Griblje (Grüble). Reka Kolpa kot vzhodna meja, naselbina v jugovzhodnem delu. Sken 2826 × 2273 px.",
+      "Grafični list katastrske občine Griblje (Grüble). Reka Kolpa kot vzhodna meja, naselbina v jugovzhodnem delu. Sken 2826 × 2273 px. Digitalna kopija prenesena iz VAČ IIIF; meje parcel še niso vektorsko izrisane (TO_COLLECT).",
     noteEn:
-      "Graphical sheet of the Griblje (Grüble) cadastral municipality. The Kolpa river as eastern boundary, settlement in the south-east. Scan 2826 × 2273 px.",
+      "Graphical sheet of the Griblje (Grüble) cadastral municipality. The Kolpa river as eastern boundary, settlement in the south-east. Scan 2826 × 2273 px. Digital copy transferred from VAČ IIIF; parcel boundaries not yet vectorised (TO_COLLECT).",
   },
   {
     id: "src-a02",
@@ -86,10 +121,95 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     licenceEn: "publicly accessible, no permission required (VAČ)",
     thumb: "/atlas/a02-thumb.jpg",
     georeferenced: true,
+    transferStatus: "TRANSFERRED",
+    georefStatus: "GEOREFERENCED",
+    structuredEntries: 156,
+    lastVerified: "2026-10-07",
     noteSi:
-      "List z jedrom vasi in cerkvijo St. Veith (sv. Vid, oznaka K, stavba z apsido). Sken 3010 × 2158 px.",
+      "List z jedrom vasi in cerkvijo St. Veith (sv. Vid, oznaka K, stavba z apsido). Sken 3010 × 2158 px. Iz lista je vektoriziranih 156 stavbnih objektov (RECONSTRUCTED).",
     noteEn:
-      "Sheet with the village core and St. Veith church (marked K, apsidal building). Scan 3010 × 2158 px.",
+      "Sheet with the village core and St. Veith church (marked K, apsidal building). Scan 3010 × 2158 px. 156 building objects vectorised from the sheet (RECONSTRUCTED).",
+  },
+  {
+    id: "src-a03",
+    code: "N083A03",
+    type: "cadastral-map",
+    titleSi: "Katastrski list A03 — občina Grüble, vzhodni predeli z razpršenimi zaselki",
+    titleEn: "Cadastral sheet A03 — municipality of Grüble, eastern dispersed hamlets",
+    unit: "list A03",
+    vacId: "227670",
+    vacUrl: "https://vac.sjas.gov.si/vac/search/details?id=227670",
+    fileRef: "IIIF: /vac/iiif/raster (uodid 227670)",
+    yearFrom: 1824,
+    yearTo: 1825,
+    fund: "SI AS 176 Franciscejski kataster za Kranjsko (1823–1869)",
+    archive: "Arhiv Republike Slovenije",
+    licenceSi: "javno dostopno, dovoljenje ni potrebno (VAČ)",
+    licenceEn: "publicly accessible, no permission required (VAČ)",
+    thumb: "/atlas/n83-a03-thumb.jpg",
+    georeferenced: false,
+    transferStatus: "TRANSFERRED",
+    georefStatus: "TO_COLLECT",
+    structuredEntries: 0,
+    lastVerified: "2026-10-07",
+    noteSi:
+      "List z razpršeno poselitvijo na vzhodnem delu k.o. in z obmejnimi predeli sosednjih občin. Digitalna kopija prenesena iz VAČ IIIF (2645 × 2154 px); georeferenca še ni izračunana — enake metode kot za A01/A02 še čakajo kontrolne točke.",
+    noteEn:
+      "Sheet with dispersed settlement in the eastern part of the cadastral municipality and boundary areas with neighbouring municipalities. Digital copy transferred from VAČ IIIF (2645 × 2154 px); georeference not yet computed — the affine method used for A01/A02 awaits control points.",
+  },
+  {
+    id: "src-a04",
+    code: "N083A04",
+    type: "cadastral-map",
+    titleSi: "Katastrski list A04 — občina Grüble, dolina Kolpe ob Adlešičih",
+    titleEn: "Cadastral sheet A04 — municipality of Grüble, Kolpa valley by Adlešiči",
+    unit: "list A04",
+    vacId: "227671",
+    vacUrl: "https://vac.sjas.gov.si/vac/search/details?id=227671",
+    fileRef: "IIIF: /vac/iiif/raster (uodid 227671)",
+    yearFrom: 1824,
+    yearTo: 1825,
+    fund: "SI AS 176 Franciscejski kataster za Kranjsko (1823–1869)",
+    archive: "Arhiv Republike Slovenije",
+    licenceSi: "javno dostopno, dovoljenje ni potrebno (VAČ)",
+    licenceEn: "publicly accessible, no permission required (VAČ)",
+    thumb: "/atlas/n83-a04-thumb.jpg",
+    georeferenced: false,
+    transferStatus: "TRANSFERRED",
+    georefStatus: "TO_COLLECT",
+    structuredEntries: 0,
+    lastVerified: "2026-10-07",
+    noteSi:
+      "List z dolino Kolpe kot vzhodno mejo in napisom sosednje občine Adlešiči (Adleschitz). Digitalna kopija prenesena iz VAČ IIIF (2645 × 2158 px); georeferenca še ni izračunana.",
+    noteEn:
+      "Sheet with the Kolpa valley as eastern boundary and the label of the neighbouring municipality of Adlešiči (Adleschitz). Digital copy transferred from VAČ IIIF (2645 × 2158 px); georeference not yet computed.",
+  },
+  {
+    id: "src-a05",
+    code: "N083A05",
+    type: "cadastral-map",
+    titleSi: "Katastrski list A05 — občina Grüble, južni predeli s poselitvijo",
+    titleEn: "Cadastral sheet A05 — municipality of Grüble, southern settled outskirts",
+    unit: "list A05",
+    vacId: "227673",
+    vacUrl: "https://vac.sjas.gov.si/vac/search/details?id=227673",
+    fileRef: "IIIF: /vac/iiif/raster (uodid 227673)",
+    yearFrom: 1824,
+    yearTo: 1825,
+    fund: "SI AS 176 Franciscejski kataster za Kranjsko (1823–1869)",
+    archive: "Arhiv Republike Slovenije",
+    licenceSi: "javno dostopno, dovoljenje ni potrebno (VAČ)",
+    licenceEn: "publicly accessible, no permission required (VAČ)",
+    thumb: "/atlas/n83-a05-thumb.jpg",
+    georeferenced: false,
+    transferStatus: "TRANSFERRED",
+    georefStatus: "TO_COLLECT",
+    structuredEntries: 0,
+    lastVerified: "2026-10-07",
+    noteSi:
+      "List z gručasto poselitvijo (rdeči nalič stavb in dvorišč) na vzhodnem delu in obmejnimi napisi sosednjih občin. Digitalna kopija prenesena iz VAČ IIIF (2634 × 2165 px); georeferenca še ni izračunana.",
+    noteEn:
+      "Sheet with a clustered settlement (red tint of buildings and farmyards) in the eastern part and boundary labels of neighbouring municipalities. Digital copy transferred from VAČ IIIF (2634 × 2165 px); georeference not yet computed.",
   },
   {
     id: "src-pg",
@@ -109,6 +229,10 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     licenceSi: "javno dostopno (VAČ)",
     licenceEn: "publicly accessible (VAČ)",
     thumb: "/atlas/n83-pg-thumb.jpg",
+    transferStatus: "TRANSFERRED",
+    georefStatus: "NOT_APPLICABLE",
+    structuredEntries: 0,
+    lastVerified: "2026-10-07",
   },
   {
     id: "src-pr",
@@ -128,6 +252,12 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     licenceSi: "javno dostopno (VAČ)",
     licenceEn: "publicly accessible (VAČ)",
     thumb: "/atlas/n83-pr-thumb.jpg",
+    transferStatus: "TRANSFERRED",
+    georefStatus: "NOT_APPLICABLE",
+    structuredEntries: 0,
+    lastVerified: "2026-10-07",
+    noteSi: "Opis meje v nemščini (Kurrent) — prepis iz leta 1825 ni izdelan (TO_COLLECT).",
+    noteEn: "Boundary description in German (Kurrent script) — transcription not made yet (TO_COLLECT).",
   },
   {
     id: "src-ps",
@@ -147,6 +277,12 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     licenceSi: "javno dostopno (VAČ)",
     licenceEn: "publicly accessible (VAČ)",
     thumb: "/atlas/n83-ps-thumb.jpg",
+    transferStatus: "TRANSFERRED",
+    georefStatus: "NOT_APPLICABLE",
+    structuredEntries: 0,
+    lastVerified: "2026-10-07",
+    noteSi: "143 strani zemljiških parcel po sekcijah — prepis iz 1825 ni izdelan (TO_COLLECT). Parcelne vrstice iz dokumenta so v pripravljenem podatkovnem modelu (20 vrstic).",
+    noteEn: "143 pages of land parcels by sections — the 1825 transcription not made yet (TO_COLLECT). Parcel rows from the document sit in a prepared data model (20 rows).",
   },
   {
     id: "src-pt",
@@ -166,10 +302,14 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     licenceSi: "javno dostopno (VAČ)",
     licenceEn: "publicly accessible (VAČ)",
     thumb: "/atlas/n83-pt-thumb.jpg",
+    transferStatus: "TRANSFERRED",
+    georefStatus: "NOT_APPLICABLE",
+    structuredEntries: 80,
+    lastVerified: "2026-10-07",
     noteSi:
-      "Glavni vir hišnega registra ~1825: hišne številke 1–98 z lastniki in parcelnimi sklici. Prepis rokopisa (Kurrent) je DELNO dokončan — vsi vnosi imajo status REVIEW.",
+      "Glavni vir hišnega registra ~1825: hišne številke 1–98 z lastniki in parcelnimi sklici. Prepis rokopisa (Kurrent) je DELNO dokončan — vsi vnosi imajo status REVIEW: 80 stavbnih vrstic je strukturiranih, od tega 60 z lastniki.",
     noteEn:
-      "Primary source of the ~1825 house register: house numbers 1–98 with owners and parcel references. The Kurrent manuscript transcription is PARTIAL — all entries carry REVIEW status.",
+      "Primary source of the ~1825 house register: house numbers 1–98 with owners and parcel references. The Kurrent manuscript transcription is PARTIAL — all entries carry REVIEW status: 80 building rows structured, 60 of them with owners.",
   },
   {
     id: "src-pua",
@@ -189,10 +329,14 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     licenceSi: "javno dostopno (VAČ)",
     licenceEn: "publicly accessible (VAČ)",
     thumb: "/atlas/n83-pua-thumb.jpg",
+    transferStatus: "TRANSFERRED",
+    georefStatus: "NOT_APPLICABLE",
+    structuredEntries: 21,
+    lastVerified: "2026-10-07",
     noteSi:
-      "Lastniki po abecedi s hišnimi številkami in parcelami po sekcijah I–V. Uporabljeno za navzkrižno preverjanje imen iz protokola stavbnih parcel.",
+      "Lastniki po abecedi s hišnimi številkami in parcelami po sekcijah I–V. Prepisane strani A–B (navzkrižno preverjanje imen iz protokola stavbnih parcel): 21 lastnikov strukturiranih; strani C–Ž še niso prepisane.",
     noteEn:
-      "Owners alphabetically with house numbers and parcels by sections I–V. Used to cross-check owner names from the building-parcel protocol.",
+      "Owners alphabetically with house numbers and parcels by sections I–V. Transcribed pages A–B (cross-checking owner names from the building-parcel protocol): 21 owners structured; pages C–Ž not transcribed yet.",
   },
   {
     id: "src-pv",
@@ -212,6 +356,10 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     licenceSi: "javno dostopno (VAČ)",
     licenceEn: "publicly accessible (VAČ)",
     thumb: "/atlas/n83-pv-thumb.jpg",
+    transferStatus: "TRANSFERRED",
+    georefStatus: "NOT_APPLICABLE",
+    structuredEntries: 0,
+    lastVerified: "2026-10-07",
   },
   {
     id: "src-pz",
@@ -231,6 +379,12 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     licenceSi: "javno dostopno (VAČ)",
     licenceEn: "publicly accessible (VAČ)",
     thumb: "/atlas/n83-pz-thumb.jpg",
+    transferStatus: "TRANSFERRED",
+    georefStatus: "NOT_APPLICABLE",
+    structuredEntries: 0,
+    lastVerified: "2026-10-07",
+    noteSi: "Cenilni elaborat 71 strani — prepis ni izdelan (TO_COLLECT).",
+    noteEn: "Valuation elaborate, 71 pages — transcription not made yet (TO_COLLECT).",
   },
   // Zunanji registri in poznejši viri — jasno ločeni od N83
   {
@@ -238,21 +392,25 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     code: "SI AS 749/3/8/12",
     type: "archival-mention",
     titleSi:
-      "Izpisek parcel iz katastrskih davčnih vpisnikov za davčni občini Griblje in sosedne (19. st.)",
+      "Izpisek zemljiških parcel iz katastrskih davčnih vpisnikov za davčne občine Vinji Vrh, Kot, Griblje, Kaltersberg, Loka, Petrova vas in Krasinec v gospostvih Krupa in Pobrežje za namene zemljiške odveze",
     titleEn:
-      "Extract of parcels from cadastral tax registers for the tax municipalities of Griblje and neighbours (19th c.)",
-    vacId: "227666-",
-    vacUrl: "https://vac.sjas.gov.si/vac/search/fieldSearch",
+      "Extract of land parcels from the cadastral tax registers for the tax municipalities of Vinji Vrh, Kot, Griblje, Kaltersberg, Loka, Petrova vas and Krasinec in the lordships of Krupa and Pobrežje for the purposes of land release",
+    vacId: "4971617",
+    vacUrl: "https://vac.sjas.gov.si/vac/search/details?id=4971617",
     yearFrom: 1851,
     yearTo: 1853,
-    fund: "SI AS 749",
+    fund: "SI AS 749 Gospostva Krupa, Pobrežje in Pusti Gradac (1587–1901)",
     archive: "Arhiv Republike Slovenije",
-    licenceSi: "javno dostopno (VAČ)",
-    licenceEn: "publicly accessible (VAČ)",
+    licenceSi: "javno dostopno (konec nedostopnosti 31. 12. 1900)",
+    licenceEn: "publicly accessible (closure ended 31 Dec 1900)",
+    transferStatus: "NOT_DIGITIZED",
+    georefStatus: "NOT_APPLICABLE",
+    structuredEntries: 0,
+    lastVerified: "2026-10-07",
     noteSi:
-      "Kasnejši kataster za davčne občine Vinji Vrh, Kot, Griblje, Kaltersberg, Loka, Petrova vas, Krasinec. Sloj 1851–1853, pripravljen v modelu kot kasnejše obdobje.",
+      "Potrjena enota v VAČ (2 zvezka, nemški Kurrent, prejšnja signatura fasc. 58). Enota je javno dostopna, a NI digitalizirana — vpogled le v čitalnici Arhiva RS. Vir za kasnejšo plast 1851–1853 in povezavo parcel skozi čas; digitalizacija je predlagan naslednji korak (TO_COLLECT).",
     noteEn:
-      "Later cadastre for tax municipalities Vinji Vrh, Kot, Griblje, Kaltersberg, Loka, Petrova vas, Krasinec. An 1851–1853 layer, prepared in the model as a later period.",
+      "Confirmed unit in VAČ (2 volumes, German Kurrent, previous signature fasc. 58). Publicly accessible but NOT digitized — consultation in the Arhiv RS reading room only. Source for the later 1851–1853 layer and parcel links through time; digitisation is the proposed next step (TO_COLLECT).",
   },
   {
     id: "src-as1138",
@@ -267,10 +425,14 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     archive: "Arhiv Republike Slovenije",
     licenceSi: "javno dostopno (VAČ)",
     licenceEn: "publicly accessible (VAČ)",
+    transferStatus: "TO_COLLECT",
+    georefStatus: "NOT_APPLICABLE",
+    structuredEntries: 0,
+    lastVerified: "2026-10-07",
     noteSi:
-      "Povojni reambulirani katastrski načrt — pripravljen kot kasnejša plast za primerjavo 1825 → 1952 → danes.",
+      "Povojni reambulirani katastrski načrt — pripravljen kot kasnejša plast za primerjavo 1825 → 1952 → danes. Natančna VAČ enota še ni identificirana (iskanje fieldSearch, TO_COLLECT).",
     noteEn:
-      "Post-war reambulated cadastral plan — prepared as a later layer for the 1825 → 1952 → today comparison.",
+      "Post-war reambulated cadastral plan — prepared as a later layer for the 1825 → 1952 → today comparison. The exact VAČ unit is not identified yet (fieldSearch lookup, TO_COLLECT).",
   },
   {
     id: "src-esd",
@@ -283,46 +445,117 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     archive: "Ministrstvo za kulturo RS",
     licenceSi: "javni register",
     licenceEn: "public register",
+    transferStatus: "NOT_APPLICABLE",
+    georefStatus: "NOT_APPLICABLE",
+    structuredEntries: 5,
+    lastVerified: "2026-10-07",
     noteSi:
-      "Identificirane enote za območje Griblje: EŠD 2122 (cerkev sv. Vida), EŠD 19324 in 19326 (spominski obeležji), EŠD 11118 (arheološko območje Kučar). Ločen sodoben uraden sloj.",
+      "Identificirane enote za območje Griblje (uradno preverjene 2026-10-07 prek iskalnika EID): EŠD 2122 (Griblje — cerkev sv. Vida, spomenik lokalnega pomena), EŠD 19324 (Cerkvišče — spomenik NOB) in EŠD 19326 (Griblje — spomenik NOB, registrirana dediščina), EŠD 11118 (Podzemelj — arheološko najdišče Kučar, občina Metlika, spomenik lokalnega pomena) ter EŠD 10094 (Griblje — arheološko najdišče ob Kolpi, registrirana dediščina). Kučar (11118) in najdišče ob Kolpi (10094) sta dve ločeni enoti. Ločen sodoben uraden sloj.",
     noteEn:
-      "Units identified for the Griblje area: EŠD 2122 (St. Vitus church), EŠD 19324 & 19326 (memorials), EŠD 11118 (Kučar archaeological site). A separate modern official layer.",
+      "Units identified for the Griblje area (officially verified 2026-10-07 via the EID search): EŠD 2122 (Griblje — Church of St. Vitus, local heritage monument), EŠD 19324 (Cerkvišče — WWII memorial) and EŠD 19326 (Griblje — WWII memorial, registered heritage), EŠD 11118 (Podzemelj — Kučar archaeological site, Municipality of Metlika, local heritage monument) and EŠD 10094 (Griblje — archaeological site by the Kolpa, registered heritage). Kučar (11118) and the Kolpa site (10094) are two separate units. A separate modern official layer.",
   },
 ];
 
-/** EŠD enote — sodoben uradni register dediščine */
+/** EŠD enote — sodoben uradni register dediščine (issue #3 #8: ločene, uradno dokumentirane) */
 export interface HeritageUnit {
   esd: number;
   titleSi: string;
   titleEn: string;
+  /** uradni naziv iz registra (EID) */
+  officialNameSi?: string;
+  officialNameEn?: string;
+  /** vrsta enote npr. stavbe / arheološka najdišča / spominski objekti in kraji */
+  unitTypeSi?: string;
+  unitTypeEn?: string;
+  /** status varstva npr. spomenik lokalnega pomena / registrirana dediščina */
+  protectionSi?: string;
+  protectionEn?: string;
+  municipality?: string;
+  registerUrl?: string;
   lat?: number;
   lng?: number;
   museumRef?: string;
+  /** razlika med uradnim registrom in muzejevo interpretacijo */
+  deltaSi?: string;
+  deltaEn?: string;
+  lastVerified?: string;
 }
 
 export const HERITAGE_UNITS: HeritageUnit[] = [
   {
     esd: 2122,
-    titleSi: "Cerkev sv. Vida, Griblje",
-    titleEn: "Church of St. Vitus, Griblje",
+    titleSi: "Griblje — cerkev sv. Vida",
+    titleEn: "Griblje — Church of St. Vitus",
+    officialNameSi: "Griblje - Cerkev sv. Vida",
+    unitTypeSi: "stavbe (podružnična cerkev)",
+    unitTypeEn: "buildings (filial church)",
+    protectionSi: "spomenik lokalnega pomena",
+    protectionEn: "local heritage monument",
+    municipality: "Črnomelj",
+    registerUrl: "http://www.eheritage.si/apl/real.aspx?id=2122",
     lat: 45.5728,
     lng: 15.2922,
     museumRef: "MVG-002",
+    deltaSi: "registrar ne objavlja koordinat v besedilu; koordinata v Atlasu je iz MVG-002 (postavitev na OSM), razlik ni znanih.",
+    lastVerified: "2026-10-07",
   },
   {
-    esd: 19324,
-    titleSi: "Spominsko obeležje (Griblje)",
-    titleEn: "Memorial marker (Griblje)",
-  },
-  {
-    esd: 19326,
-    titleSi: "Spominsko obeležje (Griblje)",
-    titleEn: "Memorial marker (Griblje)",
+    esd: 10094,
+    titleSi: "Griblje — arheološko najdišče ob Kolpi",
+    titleEn: "Griblje — archaeological site by the Kolpa",
+    officialNameSi: "Griblje - Arheološko najdišče ob Kolpi",
+    unitTypeSi: "arheološka najdišča",
+    unitTypeEn: "archaeological sites",
+    protectionSi: "registrirana dediščina",
+    protectionEn: "registered heritage",
+    municipality: "Črnomelj",
+    registerUrl: "http://www.eheritage.si/apl/real.aspx?id=10094",
+    lastVerified: "2026-10-07",
+    deltaSi:
+      "Sinonimi registra: Kohane, Požekov vrt, Krasinec - Vrh. Datiranje: mlajši neolitik do zgodnje rimske doba (naselbine, gomila, ravno grobišče). Vodnik ZVKD Novo mesto, usmeritve 2008. Ni mešan z EŠD 11118 (Kučar, Podzemelj) — dve ločeni enoti. Register ne objavlja koordinat v besedilu; lokacija bo dodana, ko bo pridobljena geometrija iz GISKD (TO_COLLECT).",
   },
   {
     esd: 11118,
-    titleSi: "Arheološko območje Kučar",
-    titleEn: "Kučar archaeological site",
+    titleSi: "Podzemelj — arheološko najdišče Kučar",
+    titleEn: "Podzemelj — Kučar archaeological site",
+    officialNameSi: "Podzemelj - Arheološko najdišče Kučar",
+    unitTypeSi: "arheološka najdišča",
+    unitTypeEn: "archaeological sites",
+    protectionSi: "spomenik lokalnega pomena",
+    protectionEn: "local heritage monument",
+    municipality: "Metlika",
+    registerUrl: "http://www.eheritage.si/apl/real.aspx?id=11118",
+    lastVerified: "2026-10-07",
+    deltaSi:
+      "Občina je Metlika (ne Črnomelj). Železnodobno gradišče in zgodnjekrščansko središče z dvema cerkvama in krstilnico. Muzej v prejšnjih zapisih kraj ni navedel — popravek iz uradnega registra 2026-10-07.",
+  },
+  {
+    esd: 19324,
+    titleSi: "Cerkvišče — spomenik NOB",
+    titleEn: "Cerkvišče — WWII memorial",
+    officialNameSi: "Cerkvišče - Spomenik NOB",
+    unitTypeSi: "spominski objekti in kraji",
+    unitTypeEn: "memorial monuments and sites",
+    protectionSi: "spomenik lokalnega pomena",
+    protectionEn: "local heritage monument",
+    municipality: "Črnomelj",
+    registerUrl: "http://www.eheritage.si/apl/real.aspx?id=19324",
+    lastVerified: "2026-10-07",
+    deltaSi: "Postavljen 1960, avtor Janez Savinšek. Vsebina: štirje partizani, ki so septembra 1941 napadli italijansko patruljo. Register ne objavlja koordinat v besedilu (TO_COLLECT).",
+  },
+  {
+    esd: 19326,
+    titleSi: "Griblje — spomenik NOB",
+    titleEn: "Griblje — WWII memorial",
+    officialNameSi: "Griblje - Spomenik NOB",
+    unitTypeSi: "spominski objekti in kraji",
+    unitTypeEn: "memorial monuments and sites",
+    protectionSi: "registrirana dediščina",
+    protectionEn: "registered heritage",
+    municipality: "Črnomelj",
+    registerUrl: "http://www.eheritage.si/apl/real.aspx?id=19326",
+    lastVerified: "2026-10-07",
+    deltaSi: "Steber z imeni 11 padlih borcev in dveh žrtev 2. svetovne vojne, postavljen 1961. Register ne objavlja koordinat v besedilu (TO_COLLECT).",
   },
 ];
 
@@ -349,13 +582,13 @@ export const NEGATIVE_RESULTS: NegativeResult[] = [
   },
   {
     id: "neg-kurrent",
-    whatSi: "Popoln prepis Kurrent rokopisov (PT, PUA, PS, PZ)",
-    whatEn: "Complete transcription of the Kurrent manuscripts (PT, PUA, PS, PZ)",
+    whatSi: "Popoln prepis Kurrent rokopisov (vseh 7 spisovnih enot N83)",
+    whatEn: "Complete transcription of the Kurrent manuscripts (all 7 written units of N83)",
     status: "REVIEW",
     detailSi:
-      "Vsi prepisi v Atlasu so pomožni strojni očrti rokopisa in zahtevajo paleografsko potrditev. Vnosi iz PT (hiše 1–98) in PUA (lastniki A–B) so prebrani le delno; strani PS (143) in PZ (71) še niso prepisane.",
+      "Vsi prepisi v Atlasu so pomožni strojni očrti rokopisa in zahtevajo paleografsko potrditev. Stanje po serijah (podrobnosti v research.ts KURRENT_SERIES): PT 80/80 stavbnih vrstic (REVIEW), PUA strani A–B (21 lastnikov), PG/PR/PS/PV/PZ pa še niso prepisane. Prepisi hranijo izvorno obliko, normalizirano obliko in status.",
     detailEn:
-      "All transcriptions in the Atlas are machine-assisted readings requiring palaeographic confirmation. Entries from PT (houses 1–98) and PUA (owners A–B) are only partially read; pages of PS (143) and PZ (71) are not transcribed yet.",
+      "All transcriptions in the Atlas are machine-assisted readings requiring palaeographic confirmation. Status by series (detail in research.ts KURRENT_SERIES): PT 80/80 building rows (REVIEW), PUA pages A–B (21 owners), while PG/PR/PS/PV/PZ are not transcribed yet. Transcriptions keep the original form, a normalised form and a status.",
   },
   {
     id: "neg-1812",
@@ -363,9 +596,9 @@ export const NEGATIVE_RESULTS: NegativeResult[] = [
     whatEn: "Napoleonic map ~1812 for the Griblje area",
     status: "TO_COLLECT",
     detailSi:
-      "V fondeh SI AS 176–182 (VAČ) ni ločenega lista ~1812 za Griblje. Vir bi bil v drugem fondu (obdobje Ilirskih provinc) — pripravljena plasc v modelu je prazna in čaka vir.",
+      "Slika v zbirki (MVG-092) je sodoben vektorski zemljevid Ilirskih provinc (TRAJAN 117, Wikimedia Commons, 2018, CC BY-SA 3.0) — ne izvirnik iz 1812. Ugotovitev 2026-10-07: javnodostopni obdobjeni izvirniki obstajajo na Wikimedii (npr. 'Provinces Illyriennes Servie et Bosnie 1812', javna last) — pridobitev izvirnika in afina georeferenca sta pripravljena naslednja koraka (TO_COLLECT, metoda enaka A01/A02). Prostorski sloj za 1812 v Atlasu še ni vzpostavljen; obdobje zajeta z MVG-092.",
     detailEn:
-      "Within fonds SI AS 176–182 (VAČ) there is no separate ~1812 sheet for Griblje. The source would sit in a different fonds (Illyrian Provinces era) — the model layer is empty and awaits a source.",
+      "The collection image (MVG-092) is a modern vector map of the Illyrian Provinces (TRAJAN 117, Wikimedia Commons, 2018, CC BY-SA 3.0) — not an 1812 original. Finding of 2026-10-07: public-domain period originals exist on Wikimedia (e.g. 'Provinces Illyriennes Servie et Bosnie 1812') — acquiring the original and an affine georeference are prepared next steps (TO_COLLECT, method identical to A01/A02). No spatial 1812 layer in the Atlas yet; the period is covered by MVG-092.",
   },
   {
     id: "neg-georef-vector",
@@ -379,13 +612,13 @@ export const NEGATIVE_RESULTS: NegativeResult[] = [
   },
   {
     id: "neg-sem",
-    whatSi: "Fotografija SEM F0000212 (domnevna rojstna hiša, hiša št. 73)",
-    whatEn: "Photograph SEM F0000212 (presumed birth house, house no. 73)",
+    whatSi: "Digitalna kopija fotografije SEM F0000212 (domnevna rojstna hiša Nika Županiča)",
+    whatEn: "Digital copy of the SEM F0000212 photograph (presumed birth house of Niko Županič)",
     status: "NOT_FOUND",
     detailSi:
-      "Fotografija je omenjena v starih raziskavah, v muzejski zbirki (113 zapisov) pa je ni. Povezava hiša 73 ↔ Niko Županič (MVG-010) ostaja REVIEW/TO_COLLECT, dokler arhivski vir ni priskrbljen.",
+      "Fotografija je dokumentirana v zbirki SEM (opis: enonadstropna hiša na pero, rojstna hiša dr. Nika Županiča), a digitalna kopija ni v muzejski zbirki (113 zapisov). Provenienca je vzpostavljena v research.ts (F0000212_PROVENANCE): vir SEM digitalne zbirke, pravice 'navedi vir', fotograf/datum ni znan (TO_COLLECT). Povezava hiša 73 / parcela 942/4 ↔ MVG-010 ostaja REVIEW, dokler primarni vir ne potrdi.",
     detailEn:
-      "The photograph is referenced in the old research but is not in the museum collection (113 records). The link house 73 ↔ Niko Županič (MVG-010) stays REVIEW/TO_COLLECT until an archival source is supplied.",
+      "The photograph is documented in the SEM collection (description: one-storey house with a gallery, birth house of Dr. Niko Županič) but a digital copy is not in the museum collection (113 records). Provenance is established in research.ts (F0000212_PROVENANCE): source SEM digital collections, rights 'cite the source', photographer/date unknown (TO_COLLECT). The link house 73 / parcel 942/4 ↔ MVG-010 stays REVIEW until a primary source confirms it.",
   },
   {
     id: "neg-houses-geo",
