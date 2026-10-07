@@ -150,3 +150,40 @@ Stage Summary:
   oba repozitorija sinhronizirana (488fc7f), produkcija živa in zdrava (113 zapisov, 9 dogodkov)
 - Za prihodnje seje: strežnik vedno zaganjaj z `( setsid bash -c 'exec bun run dev' & )` vzorcem
 - Sistem pripravljen na naslednja navodila uporabnika
+
+---
+Task ID: 7
+Agent: Z.ai Code (glavni agent)
+Task: Nadaljevana obnova — rotacija vseh izpostavljenih žetonov (varnostna higiena po koncu obnove)
+
+Work Log:
+- Ocena stanja: dev strežnik teče (sirotiški vzorec preživel), lokalno = gitlab = deploy = ce255a6,
+  produkcija zdrava (/, /api/exhibits 113, /sitemap.xml, /og-card.jpg vse 200); novi deployment
+  dpl_HkGPcYTrN8FX5aNY6gpP7J3N (sprožil zadnji worklog commit ce255a6 iz prejšnje seje) — doslej
+  nezabeležen v worklogu, zdaj potrjen
+- Izvirni (prej-obnovitveni) deployment ni več dostopen (404) — ni problema: vsi izvirni podatki
+  so v src/data/museum/ (113 exponatov, 9 dogodkov, extra, meta)
+- Varnostni pregled: git grep (HEAD + delovno drevo) — NOBEN žeton ni v sledenih datotekah;
+  filemode hrup (644→755) odstranjen z git config core.fileMode false
+- Rotacija žetonov GitLab (3 PAT so bili prilepljeni v klepet):
+  - preklicana neuporabljena PAT: 'sf' (id 28156470), 'esf' (id 28156646) — oba 204
+  - rotacija aktivnega PAT 'ydfgv': POST /personal_access_tokens/28156740/rotate
+    (self_rotate končna točka = 404 na gitlab.com 18.x; :id/rotate deluje) → stara vrednost
+    (iz klepeta) takoj preklicana, nova vrednost NIKOLI izpisana (pipe → remotes + local-gitlab.pat)
+  - nova poteklost rotiranega PAT: 2026-10-14 (7 dni — rotacija skrajša)
+- Projektni dostopovni žetoni (daljša življenjska doba za push):
+  - robert.pezdirc12/muzej: id 28167787, Maintainer, expires 2027-10-06, scopes api+write_repository
+  - markec-group/muzej: id 28167788, Maintainer, expires 2027-10-06, scopes api+write_repository
+  - remote URL-je preklopljeni na projektna žetona (tiho, brez izpisa vrednosti)
+- Preverjanje nove verige: ls-remote oba OK, push --dry-run oba OK (WAF retry)
+- Končno stanje PAT: sf/ESF/ydfgv-stari vsi revoked; aktiven samo rotirani ydfgv (nepoškodovan v
+  transcriptu), shranjen v local-gitlab.pat (git-ignored, vzorec local-*)
+
+Stage Summary:
+- Vsi trije iz klepeta izpostavljeni GitLab PAT so mrtvi; push/API delujejo prek:
+  (1) projektnih žetonov v remote URL-jih (veljavnost do 2027-10-06) in
+  (2) rotiranega PAT v local-gitlab.pat (veljavnost do 2026-10-14, za računski API)
+- Za prihodnje seje: po 2026-10-14 računski API odpade (push ostane do 2027) — uporabnik morebit
+  izda nov PAT in ga tiho vpiše; Vercel žeton ostaja prilepljen v klepetu → uporabnik naj ga
+  rotira na dashboardu (navodila v zaključnem poročilu) in posodobi CI spremenljivko VERCEL_TOKEN
+- Repozitoriji čisti (noben žeton v sledenih datotekah)
