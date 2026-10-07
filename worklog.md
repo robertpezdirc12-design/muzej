@@ -419,3 +419,50 @@ Stage Summary:
 - Naslov zavihka sledi zapisu (114 globokih povezav zdaj z smiselnimi naslovi
   pri deljenju in v zgodovini brskalnika)
 - 7. zaporedni uspešen samodejni deploy; lokalno = gitlab = 57bc6b5
+
+---
+Task ID: 13
+Agent: Z.ai Code (glavni agent)
+Task: Obnova uporabnikove »AR zgodovine« — zemljevid vasi s časovnim drsnikom (~1825, terezijansko/franciškanska vizija)
+
+Work Log:
+- Uporabnikov kontekst: imel je AR zgodovino / zemljevid ~1825 z naseljem,
+  starimi parcelnimi številkami in lastniki hiš (Marija Terezija, kataster) —
+  delo je ostalo na hackiranem GitHub računu, Vercel deployment teh podatkov
+  NI vseboval → parcel/lastniških podatkov ni mogoče obnoviti iz virov
+- Avtentična sidra v zbirki: MVG-077 »Stari zemljevidi — kako je vas prišla
+  na papir« (1468 Griblach → Homann 1714 → Freyer 1843), MVG-030 Freyerjev
+  izrez; 36 zapisov s pravimi koordinatami, 30 z letnicami od–do
+- Zgrajena poštena spletna različica (brez izmišljanja podatkov):
+  nov razdelek »Vas na zemljevidu / The village on the map«
+- museum-map-canvas.tsx: Leaflet 1.9.4 (bun add leaflet + @types), dinamičen
+  uvoz prek next/dynamic ssr:false, OSM ploščice s pripisom, center vasi
+  45.5725/15.2926 zoom 13, scrollWheelZoom šele po kliku (ne pobega scrolla),
+  terakota divIcon klinčki s tooltipom (številka + naslov), klik → odpiranje
+  zapisa (enaka interakcija kot kartice); popolna čiščenja ob unmount
+- museum-map.tsx: kontrole — stikalo »Zgodovinski pogled« (sepia filter nad
+  ploščicami: sepia/saturate/contrast/hue-rotate), stikalo »Časovno
+  potovanje« + drsnik leta 1468–2026 (zapis viden, če yearFrom ≤ leto ≤
+  yearTo; neznane letnice = vedno vidne), števec z aria-live, povezava na
+  MVG-077, nalagalni skeleton
+- globals.css: .mvg-pin/-dot (fokus, hover scale), .mvg-tooltip (tematski
+  list), pripis/zoom v barvah teme, .mvg-vintage filter
+- Navigacija: nova povezava »Zemljevid« (#zemljevid) za namizno in mobilno
+  glavo; razdelek med časovnico in zgodbami
+- Popravek lint react-hooks/refs (openRef.current v useEffect, ne med izrisom)
+- E2E brskalnik (dev): 36 klinčkov + 18 ploščic, klik klinčka → dialog
+  MVG-001 (naslov zavihka potrditev), sepia razred aktiviran, leto 1500 → 10
+  zapisov, leto 1900 → 16, mobilni 390 px zemljevid 358×360 brez preliva,
+  0 konzolnih napak; VLM: koherenten arhivski videz, klinčki vidni, brez napak
+- Commit 8fd2b4d → push → samodejni deploy → produkcija živa (~60 s):
+  odsek + zemljevid + 36 klinčkov + ploščice + navigacija potrjena v
+  brskalniku na produkciji, 0 napak
+
+Stage Summary:
+- »Zgodovina na zemljevidu« obnovljena v spletni obliki: danes / zgodovinski
+  (sepia ~1825) pogled + časovno potovanje 1468–2026 nad PRAVIMI lokacijami
+  36 zapisov — hčerina izgubljene AR funkcije, brez izmišljenih podatkov
+- Izgubljeni katastrski podatki (parcele, lastniki ~1825): niso v obnovljivih
+  virih — če uporabnik priskrbi datoteke/skice, jih lahko vgradim kot
+  pravi zgodovinski sloj (Leaflet imageOverlay/GeoJSON)
+- 8. zaporedni uspešen samodejni deploy; lokalno = gitlab = 8fd2b4d
