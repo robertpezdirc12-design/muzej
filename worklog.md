@@ -1395,3 +1395,22 @@ Stage Summary:
 - Revizija je trajno dokumentirana v repu (matrika + metoda + SHA + verdikt), vidna v Raziskavah in strojno berljiva prek /api/provenance; QA 14/14
 - Statusi Kurrent serij nespremenjeni (pravilni: PT 8/8 REVIEW, PUA 2 strani REVIEW, PS/PR/PZ/PG/PV TO_COLLECT)
 - Sledi: commit + push → Vercel 21. deploy → produkcijska verifikacija → GitLab #16 zaključek z matriko
+
+---
+Task ID: 16-zaključek (issue #16 — produkcija + GitLab)
+Agent: Z.ai Code (glavni agent)
+Task: Push, Vercel deploy, produkcijska verifikacija, GitLab zaključek issue #16.
+
+Work Log:
+- Commit 075f754 (7 datotek: research.ts +186, museum-research.tsx zavihek arhiv, qa.ts test 14, provenance route, provenance.ts opomba, sw.js v8, worklog) → push gitlab/main (WAF 1× retry)
+- Vercel 21. samodejni deploy (~45 s): /api/qa 14/14 PASS (qa-archive-transfer: "10 področij primerjanih; 0 prenosov (novi repo = striktni nadnabor); 2 namerno nepreneseno; arhiv markec-group/muzej-arhiv @ f519bd9 (archived, 27 commitov)")
+- Produkcija: /api/provenance → research.archiveTransfer {rows: 10, nonTransfers: 2, total: 0, archived: True}; SSR HTML vsebuje "Prenos iz arhiva"
+- Browser E2E produkcija: ?odsek=raziskave → zavihek → verdikt ✓ matrika ✓ Kurrent PT ✓ namerno NE preneseno ✓ chip f519bd9 ✓ preneseno vnosov: 0 ✓; 0 napak; screenshot; brskalnik zaprt
+- GitLab #16: zaključni komentar (matrika, metoda, 0 prenosov, 2 namerno nepreneseni, odprte razlike, implementacija, produkcija) → issue ZAPRT
+- Stanje: 16/16 issuejev zaprtih (0 odprtih); dev strežnik zdrav
+
+Stage Summary:
+- ISSUE #16 POPOLNOMA ZAKLJUČEN: revizija prenosa arhiva je v repu (matrika + metoda + verdikt), vidna v Raziskavah, strojno berljiva (/api/provenance), QA-varovana (14/14), produkcijsko verificirana
+- Repo je ostal EN sam vir resnice brez podvajanj: 0 vsebin prenesenih (novi repo = striktni nadnabor), 0 statusov spremenjenih, 0 funkcij zlomljenih
+- Arhiv markec-group/muzej-arhiv ostaja arhiviran (GitLab ID 87313405) kot zgodovinska kopija — njegova vsebina je 1:1 pokrita z novim repom (razen 2 dokumentiranih infrastrukturnih izjem)
+- Naslednji korak: odprt za nove issueje uporabnika (P3+)
