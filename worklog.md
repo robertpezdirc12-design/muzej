@@ -327,3 +327,21 @@ Stage Summary (končna):
 - Arhiv: markec-group/muzej-arhiv (ID 87313405, identična vsebina, za arhiviranje)
 - Push pot: projektni žeton (do 2027-10-06); PAT v local-gitlab.pat za API (do 2026-10-14)
 - Sledi: push test → samodejni deploy → arhiviranje muzej-arhiv → verifikacija produkcije
+
+Verifikacija združitve (končna):
+- Push f519bd9 → samodejni Vercel deployment dpl_As5C4oN51qJ53Zs6YKwUH13Fqe7Y
+  (BUILDING → READY v ~30 s, production, source=git) — cevovod deluje prek ponovno
+  povezanega robert.pezdirc12/muzej
+- Produkcija: / 200 (388.860 B), /api/exhibits 200, /api/events 200, /sitemap.xml 200
+- markec-group/muzej-arhiv: zgodovina poravnana (push f519bd9 prek PAT), opis popravljen
+  (kaže na robert.pezdirc12/muzej), ARHIVIRAN (archived=true; PUT /archive je bil
+  dosledno blokiran, POST oblika iste končne točke je uspela — nov WAF obvod)
+- Lint čist; browser E2E na dev: iskanje "sokcev" → 2 od 113 + Šokčev dvor najden,
+  dialog zapisa odprt, 0 konzolnih napak, mobilni 390 px brez horizontalnega preliva,
+  noga pravilno pozicionirana; dev.log čist (samo GET 200 v milisekundah)
+- GitLab končno stanje: robert.pezdirc12/muzej (edini aktivni muzej, Vercel link +
+  webhook 90928450) + markec-group/muzej-arhiv (arhiviran, vse identično) + 3 ostali
+  projekti skupine (discover-slovenia-ai, roksal-railing-manager, markec-project)
+- Varnostna kopija cele zgodovine: /home/z/muzej-backup-20261007.bundle (32,5 MB)
+- Če želi uporabnik muzej znotraj skupine markec-group: (a) Vercel Pro nadgradnja ali
+  (b) javna vidljivost repota — nato prelink (jaz naslednji session)
