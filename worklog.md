@@ -386,3 +386,36 @@ Stage Summary:
 - 6. zaporedni uspešen samodejni deploy skozi pipo (push → Vercel → produkcija)
 - Obnova je popolna: zbirka, iskanje, 3D, lokacije, SEO, repozitoriji, varnost,
   objava — sistem pripravljen na naslednja navodila uporabnika
+
+---
+Task ID: 12
+Agent: Z.ai Code (glavni agent)
+Task: Nadaljevanje obnove — svežina dogodkov (pretekli/prihajajoči) + dinamični naslov zavihka za zapise
+
+Work Log:
+- Preveril stanje: sinhronizacija 7f4ab10, dev zdrav, produkcija 200
+- Analiza dogodkov: 9 dogodkov, 1 pretekel (Dan odprtih vrat, 4. 10. 2026),
+  8 prihajajočih — UI ga je prikazal enako kot prihajajoče (brez oznake)
+- Analiza naslovov: globoke povezave ?exponat= (114 v sitemapu) so vse delile
+  statični naslov strani — slabša izkušnja deljenja/zaznamkov
+- MuseumEvents (museum-stories-events.tsx): razdelitev upcoming (naraščajoče) /
+  past (padajoče, najnovejši prej); pretekli za ločnico »Pretekli dogodki /
+  Past events« (črtni naslov), znacka »pretekli«, opacity-70, aria-label;
+  prazen stanje pri nič prihajajočih (dashed okvir + besedilo)
+- page.tsx MuseumApp: useEffect za document.title — ob odprtem zapisu
+  »MVG-006 — Kolpa — življenje ob reki · Muzej vasi Griblje« (SI) /
+  »… — The Kolpa — life on the river …« (EN, živa reaktivnost na jezik),
+  ob zaprtju povrnjen privzet naslov; deluje tudi za globo povezave po
+  uvodnem zaslonu
+- Lint čist; E2E brskalnik (dev): 9 kartic, prva prihajajoča (Delavnica 18. 10.),
+  zadnja pretekla z znacko; naslov zavihka ob odprtju/zaprtju SI + EN + globa
+  povezava vse deluje; mobilni 390 px brez preliva; 0 konzolnih napak
+- Commit 57bc6b5 → push → samodejni deploy → produkcija živa (~60 s):
+  ločnica »Pretekli dogodki« v SSR HTML, /, /api/*, /sitemap.xml, globo
+  povezave 200; naslov na produkciji preverjen v brskalniku (MVG-006 naslov)
+
+Stage Summary:
+- Dogodki časovno pošteni: pretekli ločeni in označeni, prihajajoči poudarjeni
+- Naslov zavihka sledi zapisu (114 globokih povezav zdaj z smiselnimi naslovi
+  pri deljenju in v zgodovini brskalnika)
+- 7. zaporedni uspešen samodejni deploy; lokalno = gitlab = 57bc6b5
