@@ -265,3 +265,9 @@ Stage Summary:
   nenadomestljiva — vsi viri izbrisani; transparentno dokumentirano)
 - Nova zmožnost spletišča: interaktivni 3D prikaz zapisa + lokacije zapisov na OSM
 - Sledi: commit → push → samodejni deploy → verifikacija produkcije
+
+Verifikacija produkcije (samodejni deploy dpl_48Zo6cZGwfMJk2VkceQr, READY):
+- /models/cerkev-sv-vida.glb 200 (24.208 B), /?exponat=sveti-vid 200, / in /api/exhibits 200
+- Brskalnik na produkciji: model-viewer obstaja, registriran (chunk se naloži), loaded=true,
+  canvas v shadow DOM se izriseva, OSM povezava prisotna, 0 konzolnih napak
+- 5. zaporedni uspešen samodejni deploy skozi pip; zapis MVG-002 ima spet prostornino
