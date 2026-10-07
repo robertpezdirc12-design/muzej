@@ -345,3 +345,44 @@ Verifikacija združitve (končna):
 - Varnostna kopija cele zgodovine: /home/z/muzej-backup-20261007.bundle (32,5 MB)
 - Če želi uporabnik muzej znotraj skupine markec-group: (a) Vercel Pro nadgradnja ali
   (b) javna vidljivost repota — nato prelink (jaz naslednji session)
+
+---
+Task ID: 11
+Agent: Z.ai Code (glavni agent)
+Task: Nadaljevanje obnove — revizija pokritosti + arhivski list za zapise brez fotografije
+
+Work Log:
+- Revizija sinhronizacije: lokalno = gitlab = b615daf (API preverba z brskalniškim UA),
+  dev strežnik teče (sirotiški vzorec preživel), produkcija živa (vse 200)
+- Revizijski pregled podatkov: 113 zapisov, 101/108 slik na disku, 36 koordinat,
+  vsi viri, unikatni slugi, 100 % pokritost extra.json — UGOTOVLJENA VRZEL:
+  7 najnovejših zapisov (MVG-106, 107, 108, 109, 110, 111, 113; dodani 2026-09-22)
+  NIMA fotografij — izvirnik jih prav tako ni imel (prenos Task 1: 101 slik),
+  UI pa je za njih kazal golo številko na sekundarni barvi
+- Odločitev po muzejski praksi: zapisi so objavljeni pred fotografiranjem →
+  "arhivski list" (index card) namesto praznega mesta
+- Nova komponenta src/components/museum/archival-placeholder.tsx:
+  ArchivalCardImage (kartica registra) + ArchivalHeaderBand (glava dialoga);
+  vodrtli papir (repeating-linear-gradient + color-mix oklch, sledi svetli/temni
+  temi), robna črta arhivnega lista, ikona kategorije (isti zemljevid kot
+  CATEGORY_LABELS), oznaka »Fotografija v pripravi« / »Photograph pending«,
+  vodni žig z invencijsko številko (text-8xl, primary/10) v glavi dialoga
+- exhibit-card.tsx: fallback zamenjan z ArchivalCardImage
+- exhibit-detail.tsx: glava zdaj vedno vizualna — fotografija ALI arhivski pas
+  (isti višini h-56/sm:h-64, kompozicija ohranjena)
+- Lint čist; E2E brskalnik: iskanje "turski" → 5 zadetkov, arhivski kartici
+  MVG-110/111 (DOM potrditev + besedilo), dialog MVG-110 z vodnim žigom,
+  EN jezik ("Photograph pending"), temni način (vzorec se izriseva), mobilni
+  390 px pas 389×224 brez horizontalnega preliva, 0 konzolnih napak
+- VLM ocena: namizni dialog 9/10, mobilni 9/10 — brez napak, vodni žig subtilen
+- Commit 0613d11 → push na robert.pezdirc12/muzej → samodejni Vercel deploy →
+  produkcija preverjena: / 200 (401.738 B), "Fotografija v pripravi" v SSR HTML,
+  globoke povezave ?exponat=turski-vpadi-1524 in ?exponat=grybl-cevljar 200,
+  /api/exhibits, /sitemap.xml, /og-card.jpg, /models/cerkev-sv-vida.glb vse 200
+
+Stage Summary:
+- Zadnja vsebinska vrzel obnove zaprta: vsi 113 zapisov zdaj vizualno dovršeni
+  (106 s fotografijami + 7 z arhivskim listom, pošteno dokumentirano)
+- 6. zaporedni uspešen samodejni deploy skozi pipo (push → Vercel → produkcija)
+- Obnova je popolna: zbirka, iskanje, 3D, lokacije, SEO, repozitoriji, varnost,
+  objava — sistem pripravljen na naslednja navodila uporabnika
