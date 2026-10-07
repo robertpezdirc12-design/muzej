@@ -788,5 +788,5 @@ Work Log:
 Stage Summary:
 - GitLab: 0 odprtih issuejev — obnova Muzeja vasi Griblje DOKONČANA
   (#1 AR, #2 ATLAS 1825, #3 raziskave/provenienca, #4 zaključek, #5 kontrola)
-- Produkcija https://griblje-museum.vercel.app: 113 zaposov + ATLAS 1825 +
+- Produkcija https://griblje-museum.vercel.app: 113 zapisov + ATLAS 1825 +
   raziskave/provienca + coverage/QA + AR + sprehodi z eksplicitno vrzeljo 32
