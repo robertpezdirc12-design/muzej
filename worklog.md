@@ -1339,3 +1339,28 @@ Stage Summary:
 - Celotna pot obiskovalca dela v brskalniku: prihod→dobrodošlica→voden ogled→raziskovanje→zbiranje→zaključek→deljenje spomina
 - Vstopni QR (public/qr/vstop.png, ?obisk=1) za fizični vhod muzeja
 - Sledi: commit + push + Vercel + GitLab issue #15 (DoD checkboxi + zaprtje)
+
+---
+Task ID: 15-zaključek (issue #15 — produkcija + verifikacija)
+Agent: Z.ai Code (glavni agent)
+Task: Preveri stanje po prejšnji seji (commit 1a12284) in zaključi issue #15: push, GitLab zaprtje, produkcjska E2E verifikacija z agent-browser.
+
+Work Log:
+- Stanje po prejšnji seji: commit 1a12284 ŽE pushan na gitlab/main; GitLab issue #15 ŽE zaprt z 11/11 odkljukanimi DoD polji (WAF retry 4. poskus); manjkala je le produkcjska E2E verifikacija + ta vnos
+- Produkcija (https://griblje-museum.vercel.app, 20. Vercel deploy): / 200; /api/atlas → guide 18 Q&A (po 2 na vsak od 9 TimeSpotov; statusi VERIFIED/DOCUMENTED/RECONSTRUCTED/INTERPRETATION; viri MVG/EŠD/kataster), timeSpots 9, panorame 3; sw.js v7
+- E2E produkcija (agent-browser + PIL analiza posnetkov):
+  * ?obisk=1 (vstopni QR) → dobrodošlica "Dobrodošli v Muzej Griblje" + 4 osebe (Družina/Šola/Turist/Raziskovalec) + Začni raziskovanje + Brskaj brez ogleda
+  * oseba Družina → Začni raziskovanje → sekcija Muzejski obisk: Postaja 1/3 Cerkev sv. Vida, Odpri (predogled), Doživi 360°, Navigiraj, Vklopi GPS, Zaključi obisk (disabled do odkritij), Moje raziskovanje, Vprašajte vodnika (2 Q&A + povezava na vseh 18)
+  * Odpri (predogled) → AR časovni stroj odprt (Zapri časovni stroj/kartico); scena se riše (PIL: 890 unikatnih barv, zemeljski toni 3D vasi)
+  * simulacija 3 odklenjenih postaj (localStorage mvg-timespots) → SAMODEJNI zaključek: Čestitamo! + ODKRILI STE 3/9 portalov · 3/3 panorame · 156 stavb 1825 · 18 zgodb + DIGITALNI SPOMIN 1526–2026 (datum, ✓ odkrite / ○ ostale lokacije, 18 zgodb, vir fotografije Andrejj CC BY-SA 3.0)
+  * Shrani spomin → souvenirSavedAt zapisan v mvg-visit (localStorage ✓); 0 napak konzole/d strani
+  * mobilni 390×844: plavajoči dok (OBISK · POSTAJA 2/3, naslednja postaja, napredek, Odpri) viden na dnu (PIL: 84 % svetlih pik v spodnjih 160 px); po zaključku+spominu dok upravičeno skrit; desktop lg:hidden pravilno
+  * QR globa povezava ?casovni=1825&spot=cerkev → obisk samodejno začet + AR časovni stroj samodejno odprt (~2 s; 900 ms intro + dinamični uvoz three.js); dialog "Časovni stroj — Griblje · 1825 · 156 stavb"; 0 napak
+  * Pomoč za AR → inline ArOnboarding plošča: "Za najboljši AR (3 koraki)" — 1. Dovoli lokacijo (živa GPS kakovost: brez GPS), 2. Obrni telefon počasi, 3. Počakaj na poravnavo scene + GeoTruth razlaga
+- Brskalnik počistil (localStorage clear), zaprl; lint čist; dev strežnik zdrav (GET / 200)
+
+Stage Summary:
+- ISSUE #15 POPOLNoma ZAKLJUČEN: implementacija (commit 1a12284 na main) + push + GitLab 11/11 DoD + ZAPRT + produkcija E2E zelena
+- Obiskovalčeva pot v produkciji: QR (vstop/lokacija) → dobrodošlica → oseba → postaja za postajo (razdalja, status, AR, 360°, navigacija, Q&A) → samodejni zaključek s statistiko → digitalni spomin (razglednica PNG, deljenje) — BREZ nove arhitekture (reuse TimeSpot/GeoTruth/zbirka/openTM)
+- Stanje muzeja: 113 zapisov, 15/15 issuejev zaprtih (cel backlog), 20. deploy v produkciji, AI Guide podatkovni sloj (18 preverjenih Q&A) pripravljen za bodočega AI vodnika
+- Naslednji korak: odprt za nove issueje uporabnika (P3+ — npr. zagon AI vodnika na guide podatkih, več panoram, gamifikacija)
