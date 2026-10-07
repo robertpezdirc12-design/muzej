@@ -1,0 +1,141 @@
+{
+  "verifiedAt": "2026-10-07",
+  "verificationAgent": "17-d (web raziskovalec: arhivi in primarni viri)",
+  "results": [
+    {
+      "target": "SEM F0000212",
+      "status": "VERIFIED",
+      "url": "https://www.etno-muzej.si/sl/digitalne-zbirke/zbirka-starih-fotografij/f0000212",
+      "findings": {
+        "photographer": "NI OBJAVLJEN (polje 'Avtor' na zapisu je prazno)",
+        "date": "NI OBJAVLJENA (polje 'Datum' na zapisu je prazno)",
+        "location": "Griblje",
+        "rights": "Splošna objava SEM: upoštevati Zakon o avtorskih in sorodnih pravicah; za pogoje uporabe dokumentarnega gradiva kontakt miha.spicek@etno-muzej.si (filmsko: nadja.valentincic@etno-muzej.si)",
+        "title": "F0000212 — 'Enonadstropna hiša na pero, rojstna hiša dr. Nika Županiča.'",
+        "collection": "Zbirka starih fotografij (SEM)",
+        "category": "Hiša",
+        "imageUrl": "https://www.etno-muzej.si/files/oc/f0000212.jpg (HTTP 200, JPEG, 264 KB, javno dostopna)"
+      },
+      "searchedQueries": ["F0000212 SEM", "evd.si F0000212", "Slovenski etnografski muzej F0000212 Županič Griblje", "\"hiša na pero\" Griblje Županič etnografski muzej", "SEM digitalne zbirke etno-muzej.si Županičeva rojstna hiša"],
+      "note": "Javni zapis OBSTOJA in je dosegljiv (HTTP 200; metode: web_search + curl fetch zapisu + keyword stran /sl/digitalne-zbirke/kljucne-besede/etnologi). evd.si NI baza SEM — domena naprodaj pri Dynadot (redirect na forsale.dynadot.com/evd.si); etno.net je nedoločena stran. Avtor in datum NISTA objavljena na zapisu — za navedbo avtorstva/datuma pisati na SEM (dokumentarno gradivo: miha.spicek@etno-muzej.si)."
+    },
+    {
+      "target": "Gaspari (Maksim Gaspari, 1883–1980) — primarni muzejski predmet za Griblje/Belo krajino",
+      "status": "DOCUMENTED",
+      "url": "https://www.rtvslo.si (članek 24. 10. 2024: 'Belokranjska ohcet, 1924, olje, platno, iz zbirk SEM'); razstava SEM 2024 'Maksim Gaspari: Ustvarjene podobe naroda' (etno-muzej.si); članki radio-odeon.com / preloka.si (1.–4. del, okt.–nov. 2025)",
+      "findings": {
+        "candidatePrimaryObject": "'Belokranjska ohcet' (Traditional wedding in Bela krajina), 1924, olje na platnu — HRANI SEM (naslikal za Kraljevi etnografski muzej v Ljubljani, predhodnika SEM, po obisku Preloke; motiv svatovskega sprevoda iz preloške cerkve)",
+        "inventoryNumber": "NI javno objavljen — v spletnih digitalnih zbirkah SEM ga ni (kljucne-besede/maksim-gaspari = 404)",
+        "gribljeSpecific": "NE — noben Gasparijev predmet za Griblje specifično ni bil najden"
+      },
+      "searchedQueries": ["Gaspari Griblje", "Maksim Gaspari Bela krajina etnografski muzej zbirka", "site:etno-muzej.si Gaspari", "Maksim Gaspari Belokranjska ohcet muzej inventarna številka", "\"Belokranjska ohcet\" Gaspari muzej zbirka", "\"Preloka in slikar Maksim Gaspari\" \"Belokranjska ohcet\" oljna slika"],
+      "note": "Primarni predmet za Belo krajino obstaja v zbirkah SEM ('Belokranjska ohcet', 1924; viri: RTV SLO, Dnevnik, Družina (foto Blaž Verbič/SEM), radio-odeon.com/preloka.si, razstava in publikacija SEM 2024/25), vendar javne inventarne številke NI in ni digitaliziran v spletnih zbirkah SEM. Za Griblje: NIČ. Status: DOCUMENTED (sekundarni tisk dokumentira lastništvo SEM); inventarna št. javno NOT_FOUND."
+    },
+    {
+      "target": "SI AS 749 (Gospostva Krupa, Pobrežje in Pusti Gradac; VAČ 4971617)",
+      "status": "VERIFIED",
+      "url": "https://vac.sjas.gov.si/vac/search/details?id=4971617",
+      "findings": {
+        "signature": "SI AS 749/3/8/12",
+        "title": "Izpisek zemljiških parcel iz katastrskih davčnih vpisnikov za davčne občine Vinji Vrh, Kot, Griblje, Kaltersberg, Loka, Petrova vas in Krasinec v gospostvih Krupa in Pobrežje za namene zemljiške odveze, 19. st.",
+        "originalTitle": "Auszug der unterthänigen Grundparzellen aus dem Catastrall Steuergemeinden Parzellprotokhollen zum Behufe der Grundentlassung fűr die Herrschaften Krupp und Freythurn",
+        "previousSignature": "fasc. 58",
+        "fondTectonics": "800 ZASEBNO GRADIVO → 810 Zemljiška posestva → SI AS 749 Gospostva Krupa, Pobrežje in Pusti Gradac (1587–1901) [VAČ id 24687] → /3 Dominicalia (1587–1901) → /3/8 Zemljiška odveza (1851–1853) [id 4602842; 17 enot]",
+        "quantity": "2 zvezka (1 srajčka)",
+        "language": "nemški; pisava nemška kurenta/gotica (rokopis)",
+        "access": "javno dostopno; dovoljenje ni potrebno; konec nedostopnosti 31.12.1900",
+        "otherGribljeUnitsInFond": "NE — edina enota z Gribljem je /3/8/12; sosednja /3/8/11 (davčni urad Črnomelj) pokriva Vinica, Bojanci, Obrh, Zuniče, Učakovce, Bedelj (brez Gribelj); ostalih 15 enot serije Griblje ne omenja",
+        "digitization": "NI digitaliziran — na VAČ zapisu ni polja 'Digitalni posnetek'/'Predogled slike'; e-Ars (www.e-ars.si) ne obstaja več (DNS ne razreši)"
+      },
+      "searchedQueries": ["vac.sjas.gov.si Griblje", "\"SI AS 749\" Griblje arhiv Slovenije", "\"AS 749\" \"Pusti Gradac\" OR \"Pobrežje\" Krupa fond arhiv", "e-Ars Arhiv Republike Slovenije digitalizirano gradivo portal"],
+      "note": "VAČ zapis dosegljiv (HTTP 200; strežnik vac.sjas.gov.si ima neveljaven SSL certifikat — curl -k). Datiranje 1851–1853 iz naloge ustreza seriji SI AS 749/3/8 Zemljiška odveza (1851–1853); sam zapis /3/8/12 je datiran '19. st.' in poleg Gribelj obsega 7 davčnih občin. Javna potrditev fonda tudi: gov.si (Zbirka urbarjev — AS 749), EHRI portal, strokovni članki. Metoda: curl -k fetch + VAČ AJAX tektonika."
+    },
+    {
+      "target": "EŠD 2122, EŠD 11118, EŠD 10094",
+      "status": "VERIFIED",
+      "url": "https://geohub.gov.si/ghapp/giskd/?&find=2122&locale=sl (GisKD pregledovalnik); https://javnipodatki.si/kulturna-dediscina/obcina/crnomelj (zrcalni prikaz registra, 282 enot)",
+      "findings": {
+        "ESD2122": "Griblje - Cerkev sv. Vida (SPOMENIK LOKALNEGA POMENA; druga četrtina 16. stol., 1526, 18. stol., zadnja četrtina 19. stol.; cerkev na pokopališču na gričku južno od vasi). GisKD: zvrst stavbe, tip sakralna stavbna dediščina, obseg objekt, gesla podružnična cerkev sv. Vid — 'enotno zasnovana baročna cerkev iz 18. stol.'",
+        "ESD10094": "Griblje - Arheološko najdišče ob Kolpi (REGISTRIRANA DEDIŠČINA; mlajši neolitik, bakrena doba, pozna bronasta doba, starejša železna doba, zgodnja rimska doba; obkolpska ravnina med Krasincem in južnim delom vasi Griblje) — potrjeno v COBISS, eheritage.si, Metlika OPN",
+        "ESD11118": "PODZEMELJ - Arheološko najdišče Kučar (občina METLIKA — NE Griblje!) — viri: situla.gov.si, zvkds.si, arheologija.si, Metlika OPN",
+        "additionalGribljeUnits": "EŠD 11081 = Griblje - Arheološko najdišče Požekov vrt (dokumentarno varstvo/ostalo; pozna bronasta doba; območje OŠ in sosednjih vrtov, severno od cerkve sv. Vida); EŠD 19326 = Griblje - Spomenik NOB (registrirana; 1961; pred OŠ Griblje)"
+      },
+      "searchedQueries": ["\"EŠD 2122\" Griblje", "\"EŠD 10094\" Griblje Kolpa arheološko najdišče", "\"EŠD 11118\" dediščina", "EŠD 11118 kulturna dediščina register", "\"11118\" EŠD kulturna dediščina register", "register nepremične kulturne dediščine Griblje"],
+      "note": "Register je javen: GisKD (geohub.gov.si, ArcGIS aplikacija; iskalni indeks potrjuje vsebino EŠD 2122), javnipodatki.si (HTTP 200; izluščene vse Griblje-kartice), OPSI odprti podatki (podatki.gov.si). KOREKCIJI glede na nalogo: (1) EŠD 2122 = cerkev sv. Vida v Gribljah, NE 'vas'; (2) EŠD 11118 NI Griblje — Podzemelj (Metlika): v muzejski vsebini ne sme biti prikazan kot Griblje."
+    },
+    {
+      "target": "Šolski arhiv (VAČ 4118864 + 747512)",
+      "status": "VERIFIED",
+      "url": "https://vac.sjas.gov.si/vac/search/details?id=4118864 ; https://vac.sjas.gov.si/vac/search/details?id=747512",
+      "findings": {
+        "vac4118864": {
+          "signature": "SI_ZAL_ČRN/0001/001/00012",
+          "title": "Šolski list s prilogami: Državna osnovna šola Griblje",
+          "years": "1929–1941 (POTRJENO)",
+          "fond": "SI_ZAL_ČRN/0001 Okrajno glavarstvo Črnomelj (1861–1943), serija /001 šolski listi; Zgodovinski arhiv Ljubljana — enota za Dolenjsko in Belo krajino Novo mesto",
+          "content": "Šolski list s prilogo: opis kraja, poročilo; TE 4, ovoj 12; slovenski + srbohrvaški; latinica + cirilica (tipkopis)",
+          "digitization": "DIGITALIZIRANO ('Kopije (obstoj, lokacija): digitalizirano'); javno dostopno (dovoljenje ni potrebno; konec nedostopnosti 31.12.1941)"
+        },
+        "vac747512": {
+          "signature": "SI_ZAL_NME/0234/003/096",
+          "title": "Osnovna šola Črnomelj, podružnica Griblje",
+          "years": "1970–1982 (POTRJENO)",
+          "fond": "SI_ZAL_NME/0234 Zavod Republike Slovenije za šolstvo, Območna enota Novo mesto (1961–1997), serija /003 Pregledi in nadzori pedagoškega dela (1965–1995)",
+          "content": "Poročila o pregledu pouka in šole 1970–1972; hospitacijska poročila 1974–1975; poročilo o pedagoškem nadzoru učiteljev 1982; 1 ovoj",
+          "digitization": "NI digitalizirano; javno dostopno, dovoljenje ni potrebno"
+        },
+        "schoolChronicle": "Javnega dokaza o hrambi (zgodovinske) šolske kronike Griblje NI. Aktivna šola: OŠ Loka Črnomelj, PŠ Griblje (osloka.splet.arnes.si, os-loka-crnomelj.si). OŠ Mirana Jarca Črnomelj objavlja svojo kroniko kot PDF (osmjc.si) — ne Griblje. V VAČ je šolski list 1929–1941 (digitaliziran), ne 'kronika'."
+      },
+      "searchedQueries": ["šolska kronika Griblje", "OŠ Loka Črnomelj kronika Griblje podružnica"],
+      "note": "Obe VAČ detail strani pridobljeni (curl -k, HTTP 200); naslovi/signature/leta SO kot dokumentirano v nalogi. Dodatna vrednost: enota 4118864 je DIGITALIZIRANA — najlažje dostopni primarni šolski vir za muzej."
+    },
+    {
+      "target": "1812 period map originals (Wikimedia Commons + dlib.si URN:NBN:SI:doc-F4NO0ZFV)",
+      "status": "VERIFIED",
+      "url": "https://commons.wikimedia.org/wiki/File:Provinces_Illyriennes_Servie_et_Bosnie_1812.jpg ; dlib: https://www.dlib.si/?URN=URN:NBN:SI:doc-F4NO0ZFV (COBISS: http://www.dlib.si/details/URN:NBN:SI:doc-F4NO0ZFV)",
+      "findings": {
+        "wikimedia": "OBSTOJA (HTTP 200): 'Provinces Illyriennes Servie et Bosnie', datum 1812, avtor Giraldon, vir: Digitalna knjižnica Slovenije ref. 6EZTJ9C0, licenca Public domain; original 8297×6080 px, 5,91 MB JPEG; neposredna slika: https://upload.wikimedia.org/wikipedia/commons/4/4a/Provinces_Illyriennes_Servie_et_Bosnie_1812.jpg (ob preverjanju HTTP 429 rate-limit; datoteka obstaja)",
+        "dlib": "URN:NBN:SI:doc-F4NO0ZFV = 'Zemljevid Ilirskih provinc iz leta 1812' (Gašperič, Primož; Orožen Adamič, Milan; Šumrada, Janez — ZRC SAZU, 2012, 114 str., 37 cm, francoski+slovenski). dlib.si iz peskovnika NI dosegljiv (connection timeout — omrežna omejitev, ne odsotnost zapisa); obstoj potrjen iz več neodvisnih virov: indeksiran dlib PDF stream URL (dlib.si/stream/URN:NBN:SI:DOC-F4NO0ZFV/4930f721-6a03-4840-b693-b45653a19c92/PDF), COBISS/NUK, WorldCat, ResearchGate, založba ZRC SAZU: https://giam.zrc-sazu.si/en/publikacije/zemljevid-ilirskih-provinc-iz-leta-1812-1 (HTTP 200)"
+      },
+      "searchedQueries": ["F4NO0ZFV dlib Zemljevid Ilirskih provinc 1812"],
+      "note": "(a) Wikimedia Commons: VERIFIED z direktnim fetchem strani datoteke. (b) dlib.si: VERIFIED posredno (direct fetch network-blocked). Wikimedia datoteka izvira prav iz dlib.si (ref. 6EZTJ9C0) — isti original."
+    },
+    {
+      "target": "matice.si",
+      "status": "NOT_FOUND",
+      "url": "",
+      "findings": {
+        "dns": "matice.si in www.matice.si NE RAZREŠITA (Could not resolve host) — domena ne obstaja/ni javno dostopna",
+        "search": "Poizvedbe 'matice.si Črnomelj', 'matice.si Griblje', 'matice.si kataster', '\"matice.si\"' ne vrnejo NOBENEGA relevantnega rezultata (skeni/georeferenciran franciscejski kataster)"
+      },
+      "searchedQueries": ["matice.si Črnomelj kataster", "matice.si Griblje OR georeferenciran franciscejski kataster Bela krajina", "\"matice.si\""],
+      "note": "Koncept 'matice.si' kot vira katastrskih skenov za okraj Črnomelj/k.o. Griblje NI potrditi. Za skene katastra uporabiti VAČ (SI AS 176) in eZKN (glej cilja 8/9)."
+    },
+    {
+      "target": "GeoZgodovina / ARS zgodovinski geoportal kataster",
+      "status": "DOCUMENTED",
+      "url": "https://geohub.gov.si/ghapp/ezkn/ (eZKN — Pregledovalnik arhivskih zemljiškokatastrskih načrtov, ver. 1.0, 2018, GURS+ARS)",
+      "findings": {
+        "geoZgodovina": "Portal z imenom 'GeoZgodovina' NI najden (iscanja vračajo izključno nerelevantne zadetke)",
+        "ezkn": "DELA (HTTP 200): uradni opis — 'omogoča pregledovanje digitalnih slik zemljiško katastrskih načrtov (ZKN), ki jih hrani Geodetska uprava RS IN INDIKACIJSKIH KATASTRSKIH MAP FRANCISCEJSKEGA IN REAMBULANČNEGA KATASTRA, KI JIH HRANI ARHIV RS' (ARS podatki v JPG nižje ločljivosti; kvalitetnejše na ARS). Zemljevidni (georeferenciran) pregledovalnik → indikacijska skica k.o. Griblje N83 (serija PG) naj bi bila tam vidna; Griblje-specifični vpogled ni bil izvedljiv (ArcGIS JS aplikacija). Stari URL gis.gov.si/ezkn/ ne deluje več.",
+        "vacScans": "VAČ vsebuje VSE skene N83 (grafični A01–A05 + spisovni PG/PR/PS/PT/PUA/PV/PZ), vendar niso georeferencirani (ogledne kopije)"
+      },
+      "searchedQueries": ["GeoZgodovina Arhiv RS zgodovinski kataster geoportal", "\"GeoZgodovina\"", "povsod arhivski katastrski načrti Griblje georeferenciran", "mapire.eu cadastral Krain Griblje OR Črnomelj historic maps"],
+      "note": "'GeoZgodovina' kot ARS portal NE OBSTOJA (NOT_FOUND po imenu); georeferenciran dostop do indikacijskih katastrskih map franciscejskega katastra (ARS) obstaja prek eZKN na geohub.gov.si. MAPIRE/Arcanum za Kranjsko ni potrjen."
+    },
+    {
+      "target": "e-ARS (www.e-ars.si) — SI AS 176 digitalizirane enote",
+      "status": "NOT_PUBLIC",
+      "url": "https://vac.sjas.gov.si/vac/search/archivePlanSearch?path=1000001,1,653381,653535,653582,23253 (SI AS 176 v VAČ); primer zapisa z digitalnim posnetkom: https://vac.sjas.gov.si/vac/search/details?id=227666",
+      "findings": {
+        "eArsDomain": "www.e-ars.si in e-ars.si: DNS NE RAZREŠI — portal ni več dosegljiv (nadomeščen z VAČ)",
+        "as176Digitized": "DA, vendar prek VAČ: OPSI zbirka 'Digitalizirano arhivsko gradivo starih katastrov, SI AS 176–182' (https://podatki.gov.si/dataset/digitalizirano-arhivsko-gradivo-starih-katastrov-si-as-176-si-as-177-si-as-178-si-as-179-si-as-180-s) z navodili za dostop do digitalizatov prek VAČ",
+        "gribljeN83": "VAČ tektonika preverjena vozlišče po vozlišče (archivePlanSearchAjax): SI AS 176 → N Novomeška kresija [226589] → N83 Griblje, k.o. [227663] → grafični: N083A01–A05 [227666–227673; vsak zapis raven 'Slika' z 'Digitalni posnetek' + 'Predogled slike', javno dostopno] + spisovni [373412]: N083PG Skica, N083PR Opis meje, N083PS Seznam zemljiških parcel, N083PT Seznam stavbnih parcel, N083PUA Abecedni seznam lastnikov zemljišč, N083PV Izkaz rabe zemljišč, N083PZ Katastrski cenilni elaborat [373413–373419]",
+        "resolutionNote": "OPSI: 'Spletni dostop ima le ogledno kopijo; za zahtevnejšo uporabo se pridobi kopijo z večjo resolucijo v čitalnici Arhiva RS'"
+      },
+      "searchedQueries": ["e-Ars Arhiv Republike Slovenije digitalizirano gradivo portal", "\"SI AS 176\" franciscejski kataster Kranjsko e-ars", "podatki.gov.si digitalizirano arhivsko gradivo starih katastrov SI AS 176", "\"e-ars.si\" OR \"eArs\" Arhiv Republike Slovenije"],
+      "note": "KLJUČNA ugotovitev: celoten 1825-franciscejski kataster za k.o. Griblje N83 (t. i. 'N083 skeni', ki jih ekipa 17-a/b/c bere) JE javno dostopen v VAČ — 5 grafičnih listov + 7 spisovnih enot, vse 'javno dostopno', 'dovoljenje ni potrebno'. Status NOT_PUBLIC se nanaša SAMO na www.e-ars.si (nedosegljiv); material je javen, a dostopen prek VAČ."
+    }
+  ],
+  "methodSummary": "Metode: (1) z-ai web_search (~37 poizvedb, /tmp/kurrent/out/search-*.json); (2) direktni curl fetch z ekstrakcijo polj (SEM zapis + keyword stran, VAČ detail strani 4971617/4118864/747512/227666/4971616, VAČ AJAX tektonika archivePlanSearchAjax — ARS→AS 749 in AS 176/N83 drevo, javnipodatki Griblje-kartice, Wikimedia Commons, ZRC SAZU, eZKN); (3) DNS/status preverbe mrtveh domen (evd.si, matice.si, e-ars.si, gis.gov.si/ezkn). Omejitve: vac.sjas.gov.si zahteva curl -k (neveljaven SSL certifikat); dlib.si in preloka.si (Cloudflare) nista dosegljiva iz peskovnika — dlib zapis potrjen posredno; GisKD/eZKN sta ArcGIS JS aplikaciji (vsebina preverjena prek iskalnih indeksov in uradnih opisov aplikacij)."
+}

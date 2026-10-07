@@ -1,0 +1,58 @@
+{
+  "series": "PS",
+  "titleAsWritten": "Protocoll / Der Grund-Parcellen / der / Gemeinde / \"GRÜBLE\" (PS-001, naslovnica). Stran 2 glasi: \"Grundparzellen Protocoll der Gemeinde Grüble\" (zasnova tabel + 'Rubric:' spodaj levo).",
+  "columns": [
+    "Nro. des Blattes (številka katastralskega lista/karte — v glavah strani 'II. N.', 'III. N.')",
+    "Benennung des Blattes [~]",
+    "Nro. der Parzelle (številka parcele)",
+    "Gesetzliche Eigenschaft des Grundstücks: Dominical | Rustical",
+    "Haus Nro. (hišna številka)",
+    "Des Eigenthümers — Vor und Zuname (lastnik: ime in priimek)",
+    "Stand (stan/poklic, npr. Bauer)",
+    "Wohnort (bivališče; narekovaji » ponavljajo prejšnjo vrednost)",
+    "Des Grundstückes — Kulturs Gattung (raba: Acker, Wiese, ...)",
+    "Flächen Inhalt: N:o Joch | Quadrat-Klafter",
+    "Classe (cenilni razred)",
+    "Reiner jährl. Ertrag in Metall Münze: fl. | kr.",
+    "Capital Werth nach p:Ct.: fl. | kr.",
+    "Anmerkung"
+  ],
+  "sectionsSeen": [
+    {"page": 1, "section": "naslovnica", "note": "Protocoll Der Grund-Parcellen der Gemeinde GRÜBLE"},
+    {"page": 2, "section": "zasnova tabel", "note": "samo glave stolpcev (Kultur/Fläche/Classe/Ertrag/Capital/Anmerkung) + pisan ornament; 'Rubric:' spodaj levo — tabelarična stran brez podatkov"},
+    {"page": 3, "section": "Blatt II", "note": "dvodelna razpredelnica: levo lastnik (Haus Nro., Vor- und Zuname, Stand, Wohnort), desno parcela; parcele 1–20 [~]"},
+    {"page": 4, "section": "Blatt III", "note": "isti sistem; parcele 21–40; med lastniki tudi 'Gemeinde Grüble' [~] (občinska zemlja)"},
+    {"page": 140, "section": "Recapitulation (po hišah)", "note": "glava 'Des Eigenthümers'/'Des Grundstückes'; vrstične številke = HAUS Nro. 121½–135 [~] z Joch/Klafter/fl/kr; desno 'Abschluß der Gemeinde' [~]"},
+    {"page": 141, "section": "Recapitulation — nadaljevanje", "note": "hiše ~136–141 [~] + vrstice s količinami (190 Joch, 133, 132, 206, 286, 268, 198; Summa ~1216 Joch [~]) — dva bralna poskusa se razlikujeta (po hišah ALI po kulturah), zato vse [~]; spodaj overovitev, datum 1826 [~], žig [~]"},
+    {"page": 142, "section": "Recapitulation/Bauplätze seznam", "note": "številke 41–72 z lastniškimi imeni (Kurrent, npr. [~]Pöllig, [~]Cevalla — branje negotovo); vrstna številka verjetno Bauplatz/hiša"},
+    {"page": 143, "section": "končna Summa", "note": "rdeči tuš: 'Summa der Bauplätze 102 / » » Grundparzellen 2505 / Zusammen 2607'"}
+  ],
+  "sampleRows": [
+    {"page": 3, "parcelNo": "2", "ownerAsWritten": "Lorenz Grübl [~]", "houseNo": "14", "culture": "Acker", "areaJochKlafter": "0 Joch 116 Quadrat-Klafter [~]", "confidence": "nizka-srednja"},
+    {"page": 3, "parcelNo": "3", "ownerAsWritten": "Krizman Gregor [~]", "houseNo": "62", "culture": "Acker", "areaJochKlafter": "325 Quadrat-Klafter [~]", "confidence": "srednja"},
+    {"page": 3, "parcelNo": "4", "ownerAsWritten": "Krizman Mihael [~]", "houseNo": "62", "culture": "Acker", "areaJochKlafter": "162 Quadrat-Klafter [~]", "confidence": "srednja"},
+    {"page": 3, "parcelNo": "6", "ownerAsWritten": "Krizman Greg. [~]", "houseNo": "62", "culture": "Wiesen [~]", "areaJochKlafter": "307 Quadrat-Klafter [~]", "confidence": "nizka-srednja"},
+    {"page": 3, "parcelNo": "8", "ownerAsWritten": "Stillek Miho [~]", "houseNo": "61", "culture": "Schupf [?]", "areaJochKlafter": "203 Quadrat-Klafter [~]", "confidence": "nizka"},
+    {"page": 4, "parcelNo": "21", "ownerAsWritten": "Gemeinde Grüble [~] (občinska zemlja)", "houseNo": "—", "culture": "Acker", "areaJochKlafter": "76 Quadrat-Klafter [~]", "confidence": "nizka-srednja"},
+    {"page": 4, "parcelNo": "23", "ownerAsWritten": "Kneišhar/Grög [~] (verjetno Križnar Gregor?)", "houseNo": "66", "culture": "Acker", "areaJochKlafter": "1204 Quadrat-Klafter [~]", "confidence": "nizka"},
+    {"page": 4, "parcelNo": "24", "ownerAsWritten": "Popper Miho [~]", "houseNo": "64", "culture": "Wiese", "areaJochKlafter": "442 Quadrat-Klafter [~]", "confidence": "nizka-srednja"},
+    {"page": 4, "parcelNo": "25", "ownerAsWritten": "Perdih Ivan [~]", "houseNo": "53", "culture": "Acker", "areaJochKlafter": "394 Quadrat-Klafter [~]", "confidence": "srednja"},
+    {"page": 4, "parcelNo": "26", "ownerAsWritten": "Skimer Mihovil [~]", "houseNo": "49", "culture": "Acker", "areaJochKlafter": "451 Quadrat-Klafter [~] (izplačilo 845 [~])", "confidence": "nizka"},
+    {"page": 4, "parcelNo": "27", "ownerAsWritten": "Urevč Peter [~]", "houseNo": "51", "culture": "Acker", "areaJochKlafter": "835 Quadrat-Klafter [~]", "confidence": "srednja"},
+    {"page": 4, "parcelNo": "28", "ownerAsWritten": "Urbas [~]uignad [~]", "houseNo": "64", "culture": "[?]", "areaJochKlafter": "[?]", "confidence": "nizka"}
+  ],
+  "recapitulation": {
+    "found": true,
+    "page": 143,
+    "rows": [
+      {"label": "Summa der Bauplätze", "value": "102"},
+      {"label": "Summa der Grundparzellen", "value": "2505"},
+      {"label": "Zusammen", "value": "2607"},
+      {"label": "(PS-140/141 recapitulacija po hišah: Haus Nro 121½–141 [~], stolpci Joch/Klafter/fl/kr; Summa ~1216 Joch [~])", "value": "[~] branje negotovo — dva VLM branja se razhajata"},
+      {"label": "(PS-140 spodaj: 'Abschluß der Gemeinde' [~])", "value": ""}
+    ],
+    "rawTranscription": "PSE-143 (rdeči tuč): 'e Summa der Bauplätze 102 / » » Grundparzellen 2505 / Zusammen 2607'. PSE-140: heading 'Recapitulation' + 'Abschluß der Gemeinde' [~], hiše 121½–135 [~]. PSE-141: 'Recapitulation' [~ vrstice: 190/1168, 133/1196, 132/1466, 206/836, 286/8931(?), 268/1341, 198/11957(?), Summa 1216(?) Joch] + overovitev 'den ... 1826' [~] s podpisom k.k. komisarja [~] in žigom [~]."
+  },
+  "mostUsefulForHouseParcelOwner": "Veriga hiša→parcela→lastnik je v PS prisotna V VSAKI podatkovni vrstici glavnega registra (str. ~3–~130): vsaka vrstica nosi Nro. der Parzelle + Haus Nro. + Vor und Zuname + Stand + Wohnort + raba + površina + razred + izplačilo. Vrstice NISO grupirane po lastniku/hiši, temveč tečejo po katastralskem listu (Nro. des Blattes, v glavah 'II. N.', 'III. N.') in zaporedni številki parcele — torej za določeno hišo iščemo po stolpcu Haus Nro. NAJBOLJ KORISTNI DELI: (1) Recapitulation na koncu (str. ~131–143): po hišah zloženi skupki (Haus Nro → lastnik → skupni Joch/Klafter → skupni fl/kr) = hiter ekonomski profil hiše brez seštevanja parcel — najcenejši vstop v celotno serijo; (2) zadnja stran 143 s kontrolnimi vsotami (102 Bauplätze / 2505 Grundparzellen / 2607) = nadzorna vsota za katerokoli prihodnjo transkripcijo; (3) prve strani vsakega Blatta za vzorce lastniških imen. PRIPOROČILO: NE transkribirati vseh 143 strani naenkrat — najprej Recapitulation (~13 str.), nato ciljno po hišah/Blattih; vsota 2607 parcel (~18–20 vrstic/stran) se uporabi kot checksum.",
+  "qualityNoteSi": "VLM dobro prebere STOLPCE, hišne številke, številke parcel, rabe (Acker/Wiese) in večino števk; SLOVENSKA PRIIMKA v Kurrentu so glavna šibkost (Krizman/Stillek/Popper/Skimer/Urevč so [~] — primerece bo treba preveriti s paleografsko strokovnjakinjo ali s primerjavo PUA/PR serij). Končna Summa na str. 143 je zanesljiva. Str. 140–141: branje po hišah vs. po kulturah se med poskusi razhaja — obe varianti zabeleženi, vse [~]. Datum overovitve na str. 141: '10. Juny 1826' [~] oziroma '18. Jänner 1826' [~]. Explicirnih naslovov 'Section I–V' na vzorčenih straneh NI bilo — razdelitev teče po Blattih (listih karte) + končna Recapitulation."
+}

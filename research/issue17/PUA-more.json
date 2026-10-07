@@ -1,0 +1,353 @@
+{
+ "series": "PUA",
+ "source": "Arhiv RS, SI AS 176, k.o. Griblje (N83), N083PUA.pdf, strani 3–10 (nadaljevanje po A–B)",
+ "status": "REVIEW",
+ "reader": "VLM (glm-5v-turbo), Task 17-b1 (rešeno iz delnega izpisa), 2026-10-08; strojni prepisi so po definiciji REVIEW",
+ "noteSi": "Strani 3–10 pokrivajo vrstice 1–17: hišna-imenske družine (Dragosche/Hölloschitsch), Bring, Brulla, Commenda, Decklitsch, Dragosch, Fillah + institucionalni vnosi (Baron Abfalterer, Commenda). Register ni strogo abeceden po sodobnih črkah — vsebuje hišna imena in patronimike. PREKINAL agencija 17-b1 pred sestavo JSON — podatki rešeni iz surovih klicev (b1-puaNN-names.json, pua-NN-raw.json).",
+ "pagesRead": [
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "lettersCovered": "A (Dragosche/Hölloschitsch, Abfalterer), B (Bring, Brulla), C (Commenda), D (Decklitsch, Dragosch), F (Fillah) — po hišnih imenih, ne strogo abecedno",
+ "owners": [
+  {
+   "page": 3,
+   "row": 1,
+   "letter": "A",
+   "nameAsWritten": "Hölloschitsch Wufa Luina hau Dragosche [~] (alternativa: Adlolschitz Wulff Ludwig von)",
+   "houseNos": [
+    "1"
+   ],
+   "sections": "II: 821, 944, 849, 872, 970, 916, 951, 1084, 109…; IV: 2198, 2247, 1850, 2074, 2281, 2384, 2406, 2410",
+   "confidence": "~"
+  },
+  {
+   "page": 3,
+   "row": 2,
+   "letter": "A/B",
+   "nameAsWritten": "Bringz Wufa Luina hau Grüble [~]",
+   "houseNos": [
+    "20 ali 23 (dva bralni)"
+   ],
+   "sections": "I: 18, 481, 492, 496, 520, 857, 858, 564, 565, 692, 686, 694, 703, 781, 677; II: 1025, 1026, 1076; III: 1872–1997; IV: 2026, 2114; V: 2808, D P. 37, 38, 40 (opomba B. K. 35)",
+   "confidence": "~"
+  },
+  {
+   "page": 3,
+   "row": 0,
+   "letter": "—",
+   "nameAsWritten": "Baron Abfalterer [~] (institucija/vlastnik brez hiše)",
+   "houseNos": [],
+   "sections": "I: 72",
+   "confidence": "~"
+  },
+  {
+   "page": 4,
+   "row": 3,
+   "letter": "B",
+   "nameAsWritten": "Bring Migan/Michael Bauern hiesig Grübln [~]",
+   "houseNos": [
+    "24"
+   ],
+   "sections": "I: 479–751 (20+); II: 1166–1644; III–IV: 1948; III: 1892–1950; IV: 2022, 2160, 2168 (opomba B. A. 25)",
+   "confidence": "~"
+  },
+  {
+   "page": 4,
+   "row": 4,
+   "letter": "B",
+   "nameAsWritten": "Bring Miß/Martin/Matthäus Bauern hiesig Grübln [~]",
+   "houseNos": [
+    "25"
+   ],
+   "sections": "I: 478–800; III: 1807–1951; IV: 2168, 2161 (opomba B. P. 29)",
+   "confidence": "~"
+  },
+  {
+   "page": 5,
+   "row": 5,
+   "letter": "B",
+   "nameAsWritten": "Bring Johann Bräun [~] houlg.",
+   "houseNos": [
+    "26"
+   ],
+   "sections": "",
+   "confidence": "~"
+  },
+  {
+   "page": 5,
+   "row": 6,
+   "letter": "B",
+   "nameAsWritten": "Bring Mäda/Manda [~] (Magdalena) Brünn [~] houlg.",
+   "houseNos": [
+    "28"
+   ],
+   "sections": "",
+   "confidence": "~"
+  },
+  {
+   "page": 6,
+   "row": 7,
+   "letter": "B",
+   "nameAsWritten": "Brulla Mako/Matho Bünnhaußgübl [~] (alternative: Brinig, Brinc)",
+   "houseNos": [
+    "43"
+   ],
+   "sections": "I: 78, 151, 152, 171, 176, 179, 192, 215, 216, 232, 243, 162, …",
+   "confidence": "~"
+  },
+  {
+   "page": 6,
+   "row": 8,
+   "letter": "B",
+   "nameAsWritten": "Bring Manda Brinahug [~]",
+   "houseNos": [
+    "63"
+   ],
+   "sections": "",
+   "confidence": "~"
+  },
+  {
+   "page": 6,
+   "row": 9,
+   "letter": "C",
+   "nameAsWritten": "Commenda Vachernebel [~] (institucija — komenda)",
+   "houseNos": [
+    "0"
+   ],
+   "sections": "",
+   "confidence": "~"
+  },
+  {
+   "page": 7,
+   "row": 10,
+   "letter": "D",
+   "nameAsWritten": "Decklitsch Matthäus Bürger hiesig [~]",
+   "houseNos": [
+    "33"
+   ],
+   "sections": "",
+   "confidence": "~"
+  },
+  {
+   "page": 7,
+   "row": 11,
+   "letter": "D",
+   "nameAsWritten": "Dragosch Johann Bürger hiesig, Gemeinde Deschitz [~]",
+   "houseNos": [
+    "3"
+   ],
+   "sections": "",
+   "confidence": "~"
+  },
+  {
+   "page": 8,
+   "row": 12,
+   "letter": "D",
+   "nameAsWritten": "Dragosch Mavroslawitsch hiesig Dragosche Gemeinde Molestitch [~]",
+   "houseNos": [
+    "4"
+   ],
+   "sections": "",
+   "confidence": "~"
+  },
+  {
+   "page": 8,
+   "row": 13,
+   "letter": "D",
+   "nameAsWritten": "Dragosch Georglawitsch zu Dragosche, Gemeinde Molestitch [~]",
+   "houseNos": [
+    "5"
+   ],
+   "sections": "",
+   "confidence": "~"
+  },
+  {
+   "page": 9,
+   "row": 14,
+   "letter": "F",
+   "nameAsWritten": "Fillah Michael Mühldörfler haußgübl [~] (alternativa: Brauhaus Haulg)",
+   "houseNos": [
+    "16"
+   ],
+   "sections": "",
+   "confidence": "~"
+  },
+  {
+   "page": 9,
+   "row": 15,
+   "letter": "F",
+   "nameAsWritten": "Fillah Maria [~] (M? — Maria/Theresia)",
+   "houseNos": [
+    "34"
+   ],
+   "sections": "",
+   "confidence": "~"
+  },
+  {
+   "page": 10,
+   "row": 16,
+   "letter": "F",
+   "nameAsWritten": "Fillah Jetter [~] b[~]urkhof [~]",
+   "houseNos": [
+    "36"
+   ],
+   "sections": "",
+   "confidence": "~"
+  },
+  {
+   "page": 10,
+   "row": 17,
+   "letter": "F",
+   "nameAsWritten": "Fillah Miho bau[er]sh[of]g[es]s[e]ben [~]",
+   "houseNos": [
+    "61"
+   ],
+   "sections": "I: 8, 9, 52, 75, 76, 110, 203, 220; III: 745, 959, 966, 972, 978, 986, 1237, 1238; II: 814, 815, 874, 879, 986, 992, 1096, 1097, 1271, 1278, 1274, 1281, 1468, 1498, 1499, 1512, 1520, 1539, 1560, 1580; II/IV: 1861, …",
+   "confidence": "~"
+  }
+ ],
+ "priorityVerification": [
+  {
+   "surname": "Bring",
+   "found": true,
+   "writtenForm": "Bring (Michael/Migan, Miß/Martin, Johann, Mäda, Manda) [~]",
+   "houseNos": [
+    "24",
+    "25",
+    "26",
+    "28",
+    "63"
+   ],
+   "page": "4–6",
+   "confidence": "~ — UJEMA se s PT: hiša 24 in 25 sta v model.ts houseRefs lastnika Bring"
+  },
+  {
+   "surname": "Filak",
+   "found": true,
+   "writtenForm": "Fillah (Michael, Maria, Jetter, Miho) [~]",
+   "houseNos": [
+    "16",
+    "34",
+    "36",
+    "61"
+   ],
+   "page": "9–10",
+   "confidence": "~ — PT bere Filak v hišah 69–71; hišne št. DIVERGENTNE [~], priimek ista družina [~]"
+  },
+  {
+   "surname": "Dragosch/Dragoši (zaselek)",
+   "found": true,
+   "writtenForm": "Dragosch (Johann, Mavroslawitsch, Georglawitsch) [~]",
+   "houseNos": [
+    "3",
+    "4",
+    "5"
+   ],
+   "page": "7–8",
+   "confidence": "~ — PT bere hiše 3–5 kot Šimec/Šimec/Knavc; divergentno [~]"
+  },
+  {
+   "surname": "Brulla/Brinig",
+   "found": true,
+   "writtenForm": "Brulla Mako/Matho [~] (alternative Brinig/Brinc)",
+   "houseNos": [
+    "43"
+   ],
+   "page": "6",
+   "confidence": "~"
+  },
+  {
+   "surname": "Decklitsch",
+   "found": true,
+   "writtenForm": "Decklitsch Matthäus Bürger hiesig [~]",
+   "houseNos": [
+    "33"
+   ],
+   "page": "7",
+   "confidence": "~"
+  },
+  {
+   "surname": "Adlolschitz/Hölloschitsch",
+   "found": true,
+   "writtenForm": "Hölloschitsch Wufa Luina hau Dragosche [~] (prejšnje branje: Adlolschitz Wulff Ludwig von)",
+   "houseNos": [
+    "1"
+   ],
+   "page": "3",
+   "confidence": "~ — dva bralna istega vnosa"
+  },
+  {
+   "surname": "Abfalterer (baron)",
+   "found": true,
+   "writtenForm": "Baron Abfalterer [~]",
+   "houseNos": [],
+   "page": "3",
+   "confidence": "~ — institucija, parcela I/72"
+  },
+  {
+   "surname": "Commenda",
+   "found": true,
+   "writtenForm": "Commenda Vachernebel [~]",
+   "houseNos": [
+    "0"
+   ],
+   "page": "6",
+   "confidence": "~ — institucija"
+  },
+  {
+   "surname": "Schimek/Šimec",
+   "found": false,
+   "writtenForm": "—",
+   "houseNos": [],
+   "page": "3–10",
+   "confidence": "ni zadetka v branih straneh (pričakovano v kasnejših črkah S/Š)"
+  },
+  {
+   "surname": "Leskovec",
+   "found": false,
+   "writtenForm": "—",
+   "houseNos": [],
+   "page": "3–10",
+   "confidence": "ni zadetka (pričakovano pri L)"
+  },
+  {
+   "surname": "Hrovat",
+   "found": false,
+   "writtenForm": "—",
+   "houseNos": [],
+   "page": "3–10",
+   "confidence": "ni zadetka (pričakovano pri H)"
+  },
+  {
+   "surname": "Glan/Greg/Grög",
+   "found": false,
+   "writtenForm": "—",
+   "houseNos": [],
+   "page": "3–10",
+   "confidence": "ni zadetka (pričakovano pri G) — PS vzorec bere Krizman/Gregor v hišah 62/64/66"
+  },
+  {
+   "surname": "Peutinger/Drulak/Stenopfs/Groy/Heurisch/Kuncelj/Schmerz/Ludvig/Zollnerd/Krišan/Milleg/Dikobutar",
+   "found": false,
+   "writtenForm": "—",
+   "houseNos": [],
+   "page": "3–10",
+   "confidence": "ni zadetka v branih straneh (številke hiš teh lastnikov so >61; pričakovana črka P/S/Z/K/M/H je onkraj strani 10)"
+  }
+ ],
+ "divergenceFindings": [
+  "PUA hiša 24 = Bring Michael [~] UJEMA se s model.ts lastnik-bring-weygandt houseRefs [24, 31, 32, 36, 38, 39, 41] — potrditev hiše 24",
+  "PUA hiša 25 = Bring Miß/Martin [~] UJEMA se s model.ts lastnik-bring-math houseRefs [25] — potrditev",
+  "PUA hiše 3–5 = Dragosch [~], PT pa bere Šimec/Šimec/Knavc — razhajanje strojnih branj [~]; obe strani zahtevata paleografski pregled",
+  "PUA Fillah v hišah 16/34/36/61, PT pa Filak v hišah 69–71 — isti priimek [~], razhajajoče hišne št.",
+  "Institucionalni lastniki (Baron Abfalterer, Commenda Vachernebel) nimajo hišnih št. — nov tip lastnika, ki ga PT register ne zajame"
+ ],
+ "qualityNoteSi": "Kakovost: imena velikih družin (Bring, Fillah, Dragosch) stabilna med ponovljenimi klici; hišne št. in patronimiki negotovi [~]. Strani 11–49 (črke do Ž) ostajajo TO_COLLECT."
+}

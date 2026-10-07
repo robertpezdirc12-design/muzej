@@ -1,0 +1,908 @@
+{
+  "series": "PT",
+  "pagesReviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "pageFindings": [
+    {
+      "page": 1,
+      "rows": [],
+      "note": "Naslovnica: 'Protocoll / Der Bau Parcellen / der / Gemeinde / GRÜBLE' — VLM prepis enak repu opombi. Brez vrstic (repo za str. 1 nima vrstic OK)."
+    },
+    {
+      "page": 2,
+      "rows": [],
+      "note": "PRAZEN OBRAZEC (tabela) 'Bau-Parzellen Protocoll' z natisnjenimi glavami: Haus Nro. / Kulturs Gattung+Classe / Jährlicher Haus Zins (fl, kr) / Areal+Zins Jahres-Ertrag / Capitals Werth / Anmerkung — struktura protokola potrjena. NI podatkovnih vrstic. (Repo glava 'strani 2–7' je netočna za str. 2 — vrstice so dejansko na str. 3–7.)"
+    },
+    {
+      "page": 3,
+      "rows": [
+        {
+          "houseNo": "1",
+          "vlmReading": "St. Veith / H. Veith [~] (2 neodvisni branji) · Stand/Wohnort 'Lam. Grüble' [~] · Areal 77",
+          "repoOwner": "Peth (H.)",
+          "verdict": "CORRECTION",
+          "confidence": "medium",
+          "note": "VLM 2× prebere priimek 'Veith' (isti priimek kot hiša 2 v repu) — kurzivna zamenjava P/V; repo opomba 'Lauri Gavella' se v VLM branjih ne potrdi (VLM: 'Lam. Grüble'[~]). Paleografska preverba priporočena."
+        },
+        {
+          "houseNo": "2",
+          "vlmReading": "H. Veith [~] · Areal 63",
+          "repoOwner": "Veith (H.)",
+          "verdict": "CONFIRMED",
+          "confidence": "high",
+          "note": "Soglasje z repom (Veith)."
+        },
+        {
+          "houseNo": "3",
+          "vlmReading": "Thimey Johann / Thumer Jakob [~] · Nº 18 · Areal 71",
+          "repoOwner": "Šimec Jakob",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Ime Jakob potrjeno v povečavi; priimek VLM 2× Th- (Thimey/Thumer), repo Šimec (Schimek) — začetnica dvoumna, potreben pregled."
+        },
+        {
+          "houseNo": "4",
+          "vlmReading": "Thimey Marfa / Thumer Martin [~] · Nº 19 · Areal 99",
+          "repoOwner": "Šimec Matija",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Ista družina kot hiša 3; ime Marfa/Martin[~] vs Matija — dvoumno."
+        },
+        {
+          "houseNo": "5",
+          "vlmReading": "Kneel Hanne / Kraß Hamer [~] · Nº 17 · Areal 112",
+          "repoOwner": "Knavc Janez",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "K-priimek (Knavc/Kneel/Kraß[~]) približno ✓; ime Janez/Hanne/Hamer[~] nestabilno."
+        },
+        {
+          "houseNo": "6",
+          "vlmReading": "Tillel Mäus / Wid. Maaß [~] · Nº 16 · Areal 79",
+          "repoOwner": "Tilel Miho",
+          "verdict": "CONFIRMED",
+          "confidence": "medium",
+          "note": "Priimek Tillel≈Tilel (1. branje) ✓; 2. branje 'Wid. Maaß'[~] odstopa; ime Miho/Mäus dvoumno."
+        },
+        {
+          "houseNo": "7",
+          "vlmReading": "Lebring Mäfa / Leudig Martin [~] · Nº 14 · Areal 84",
+          "repoOwner": "— (vrstice ni v repu)",
+          "verdict": "ADDITIONAL_ROW",
+          "confidence": "medium",
+          "note": "Hiša s št. 7 (brez ½) manjka v repu — 2 neodvisni branji (Lebring Mäfa / Leudig Martin[~]). Repo ima samo 7½; rokopis ima 7 IN 7½ (vrstni red: 6, 7½, 7, 8½, 8)."
+        },
+        {
+          "houseNo": "7½",
+          "vlmReading": "Lebring mäusg / Bödig mündl. [~] · Nº 14 · Areal 70",
+          "repoOwner": "Podlesy Marija",
+          "verdict": "ILLEGIBLE",
+          "confidence": "low",
+          "note": "Trije strojni popisi se izključujejo (Podlesy Marija / Lebring mäusg / Bödig mündl.[~]) — lastnika ni mogoče preveriti; hišna št. 7½ in vrstica obstajata."
+        },
+        {
+          "houseNo": "8",
+          "vlmReading": "Lebring Mäfa / Leudig Martin [~] · Nº 14 · Areal 28",
+          "repoOwner": "Leskovec Matija",
+          "verdict": "ILLEGIBLE",
+          "confidence": "low",
+          "note": "Repo 'Leskovec' vs VLM 'Lebring/Leudig' — neskladje, a se VLM branji medsebojno razhajata → paleografski pregled."
+        },
+        {
+          "houseNo": "8½",
+          "vlmReading": "[?] mäusg / Bödig mündl. [~] · Nº 14 · Areal 30",
+          "repoOwner": "Leskovec Matija",
+          "verdict": "ILLEGIBLE",
+          "confidence": "low",
+          "note": "Trije popisi (Leskovec Matija / [?] mäusg / Bödig mündl.[~]) se izključujejo."
+        },
+        {
+          "houseNo": "9",
+          "vlmReading": "Taufstütel Mäus [~] · Nº 12 · Areal 74; povečava: 'Zu Naßhütten' + ime [~]",
+          "repoOwner": "Stalhutstetisch Miho",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Vrsta potrjena (št. 9); lastnik pri obeh strojnih očrtih različno razbit (Stalhutstetisch / Taufstütel) — povečava kaže 'zu Naßhütten'[~] kot hišno ime/lokacijo: repov priimek 'Stalhutstetisch' je najbrž napačen očrt. 'neprepisljivo' v repu se ne potrdi (preberljivo [~])."
+        },
+        {
+          "houseNo": "10",
+          "vlmReading": "Taufstütel Mäus [~] · Nº 18 · Areal 214",
+          "repoOwner": "Stalhutstetisch Miho",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Enako kot hiša 9."
+        },
+        {
+          "houseNo": "11",
+          "vlmReading": "Taufstütel Marko / Zu Naßhütten Marlo [~] · Nº 8 · Areal 91",
+          "repoOwner": "Stalhutstetisch Marko",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Ime Marko/Marlo[~] ✓; repo opomba 'Nr. 108 Peter' se v VLM branjih ne pojavi."
+        },
+        {
+          "houseNo": "12",
+          "vlmReading": "Taufstütel Mäusko / Zu Naßhütten Maslo [~] · Nº 8 · Areal 144",
+          "repoOwner": "Stalhutstetisch Marko",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Ime Mäusko/Maslo[~] vs repo Marko — dvoumno; vrsta (št. 12) potrjena."
+        },
+        {
+          "houseNo": "13",
+          "vlmReading": "Taufstütel Runko / Zu Naßhütten Bunko [~] · Nº 8 · Areal 76",
+          "repoOwner": "Stalhutstetisch Ruard",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Ime Runko/Bunko[~] vs repo 'Ruard' — dvoumno; vrsta potrjena."
+        },
+        {
+          "houseNo": "14",
+          "vlmReading": "Taufstütel Schau / Zu Naßhütten Jhan · Nº 6 · Areal 61",
+          "repoOwner": "Stalhutstetisch Jhan (Ivan)",
+          "verdict": "CONFIRMED",
+          "confidence": "medium",
+          "note": "Ime Jhan ✓ (povečava); 'Schau' 1. branja je najbrž očrt 'Jhan' (Jh/Sch v kurzivi)."
+        },
+        {
+          "houseNo": "15",
+          "vlmReading": "[~]tützel Schau / [prečrtano?] Jhan · Nº 6 · Areal 10",
+          "repoOwner": "Stalhutstetisch Jhan (Hrovatic Jhan)",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Ime Jhan ✓; povečava kaže prečrtano vrstico."
+        },
+        {
+          "houseNo": "16",
+          "vlmReading": "Hautzel Schau / Smutzel Jhan [~] · Nº 5 · Areal 104",
+          "repoOwner": "Stautschel Jhan",
+          "verdict": "CONFIRMED",
+          "confidence": "medium",
+          "note": "Ime Jhan ✓; priimki Stautschel/Smutzel/Hautzel[~] — skupen očrt."
+        },
+        {
+          "houseNo": "17",
+          "vlmReading": "Laubentisch Marko / Lahentisch Marlo [~] · Nº 7 · Areal 13",
+          "repoOwner": "Stalhutsch Marko",
+          "verdict": "CONFIRMED",
+          "confidence": "medium",
+          "note": "Ime Marko/Marlo ✓; priimek La[hu]bentisch[~] vs 'Stalhutsch' — očrt iste besede."
+        },
+        {
+          "houseNo": "18",
+          "vlmReading": "Hautzel Schau / Hrutzl Jhan [~] · Nº 5 · Areal 46",
+          "repoOwner": "Hrovat Jhan",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Ime Jhan ✓; priimek Hrovat vs Hrutzl/Hautzel[~] — skupen H-očrt, nizka zaupanja."
+        },
+        {
+          "houseNo": "19",
+          "vlmReading": "Kruišter Mäfa / Krauher Muffn [~] · Nº 9 · Areal 31",
+          "repoOwner": "Krudelen Matija",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Kr-priimek ✓ (Krudelen/Krauher/Kruišter[~]); ime Matija/Mäfa/Muffn[~] dvoumno."
+        },
+        {
+          "houseNo": "20",
+          "vlmReading": "Kruišter Mäfa / Christan Muffn [~] · Nº 9 · Areal 92",
+          "repoOwner": "Vičak Matija",
+          "verdict": "ILLEGIBLE",
+          "confidence": "low",
+          "note": "Repo 'Vičak Matija' se v nobenem od 2 VLM popisov ne potrdi (Kruišter/Christan[~]), a se VLM branji medsebojno razhajata → lastnik ni preverljiv; vrstica (št. 20) obstaja. Paleografski pregled."
+        }
+      ],
+      "note": "22 vrstic (št. 1–20 vključno s 7, 7½, 8½); repo ima 21 (manjka št. 7). Lastniški stolpec nizke zanesljivosti — 3 strojni popisi (repo + 2 VLM) se pri ~8 imenih izključujejo. Ključni novi podatek: hišno ime/lokacija 'zu Naßhütten'[~] pri št. ~9–15."
+    },
+    {
+      "page": 4,
+      "rows": [
+        {
+          "houseNo": "21",
+          "vlmReading": "Šture Mufur [~] · W.10 · Schißing 102",
+          "repoOwner": "Šture Majzel",
+          "verdict": "CONFIRMED",
+          "confidence": "medium",
+          "note": "Priimek Šture ✓, parcele W.10 + Schißing 102 ✓ točno; ime Majzel vs Mufur[~] dvoumno."
+        },
+        {
+          "houseNo": "22",
+          "vlmReading": "Šture Mufur [~] · W.10 · Apnind 19",
+          "repoOwner": "Šture Majzel",
+          "verdict": "CONFIRMED",
+          "confidence": "medium",
+          "note": "Parcele W.10 + Apnind 19 ✓ točno."
+        },
+        {
+          "houseNo": "23",
+          "vlmReading": "Ludvik grozg [~] · W.11 · Schißing 101",
+          "repoOwner": "Ludvig Gregor",
+          "verdict": "CONFIRMED",
+          "confidence": "high",
+          "note": "Ludwig Gregor ✓; W.11 + Schißing 101 ✓."
+        },
+        {
+          "houseNo": "24",
+          "vlmReading": "Štumidat Malga [~] · W.1 · Apnind 28",
+          "repoOwner": "Štunidat Mufa",
+          "verdict": "CONFIRMED",
+          "confidence": "medium",
+          "note": "Parcele W.1 + Apnind 28 ✓ točno; priimek Št[u]nidat ✓; ime Mufa/Malga[~] dvoumno."
+        },
+        {
+          "houseNo": "25",
+          "vlmReading": "Štumidat Malgn [~] · W.1 · Schißing 89",
+          "repoOwner": "Štunidat Mufa",
+          "verdict": "CONFIRMED",
+          "confidence": "medium",
+          "note": "Parcele W.1 + Schißing 89 ✓ točno."
+        },
+        {
+          "houseNo": "26",
+          "vlmReading": "Hlebetz Jhan · W.2 · Schißing 243½ [~]",
+          "repoOwner": "Hlebetz Jan",
+          "verdict": "CONFIRMED",
+          "confidence": "high",
+          "note": "Hlebetz ✓; parcela 245 (repo) vs 243½[~] (VLM) — drobno odstopanje."
+        },
+        {
+          "houseNo": "27",
+          "vlmReading": "Jožeg Miho [~] · W.21 · Schißing 85; opomba: nova gradnja [~ 'neue bau']",
+          "repoOwner": "Jožef Miko",
+          "verdict": "CONFIRMED",
+          "confidence": "medium",
+          "note": "Jožef/Jožeg ✓, Miko/Miho ✓, W.21 ✓; Schißing 88 vs 85[~]; VLM vidi opombo o novi gradnji, ki je ni v repu."
+        },
+        {
+          "houseNo": "28",
+          "vlmReading": "Jožeg Miho [~] · W.31 · Apnind 93 [~: 23]",
+          "repoOwner": "Jožef Miko",
+          "verdict": "CONFIRMED",
+          "confidence": "medium",
+          "note": "W.31 ✓; Apnind 23 (repo) vs 93 (VLM) — zamenjava 2/9 v kurzivi."
+        },
+        {
+          "houseNo": "29",
+          "vlmReading": "Krištofan grozg [~] · W.66 · Apnind 15",
+          "repoOwner": "Krišan Gregor",
+          "verdict": "CONFIRMED",
+          "confidence": "medium",
+          "note": "W.66 + Apnind 15 ✓ točno; priimek Krišan/Krištofan[~], Gregor/grozg ✓."
+        },
+        {
+          "houseNo": "30",
+          "vlmReading": "Krištofan grozg [~] · W.66 · Schißing 68",
+          "repoOwner": "Krišan Gregor",
+          "verdict": "CONFIRMED",
+          "confidence": "medium",
+          "note": "Parcele ✓ točno."
+        },
+        {
+          "houseNo": "31",
+          "vlmReading": "Brinig Marko · W.65 · Walle 15",
+          "repoOwner": "Bring Marko",
+          "verdict": "CONFIRMED",
+          "confidence": "high",
+          "note": "Bring/Brinig ✓, Marko ✓, Walle 15 ✓; W.66 (repo) vs W.65 (VLM)."
+        },
+        {
+          "houseNo": "32",
+          "vlmReading": "Brinig Miho [~] · W.65 · Schißing 30 [~: 90]",
+          "repoOwner": "Bring Marko",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "W.65 ✓; Schißing 90 (repo) vs 30 (VLM, 9/3); ime Marko (repo) vs Miho[~] (VLM) — dvoumno."
+        },
+        {
+          "houseNo": "33",
+          "vlmReading": "Veršitek/Verbitzer Malga/Hulda [~] · W.64 · Schißing 64 [~: 67]",
+          "repoOwner": "Varbutek Mufa",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "W.64 ✓; priimek Varbutek/Veršitek/Verbitzer[~] — očrt iste besede; Schißing 67 vs 64[~]."
+        },
+        {
+          "houseNo": "34",
+          "vlmReading": "Milleg/Milley Hanne [~] · W.29/39 · Schißing 46",
+          "repoOwner": "Milleg Stane",
+          "verdict": "CONFIRMED",
+          "confidence": "medium",
+          "note": "Schißing 46 ✓, W.29 ✓, priimek Milleg ✓; ime Stane (repo) vs Hanne[~] (VLM) — dvoumno."
+        },
+        {
+          "houseNo": "35",
+          "vlmReading": "Milley Hanne [~] · W.29 · (Apnind/Wiesen) 8",
+          "repoOwner": "Milleg Stane",
+          "verdict": "CONFIRMED",
+          "confidence": "medium",
+          "note": "Vsebina ✓ (W.29 + 8); v rokopisu je številka te vrstice sprva napisana 34 in PREČRTANA (številka 34 dvakrat, druga prečrtana — 2 povečani branji) — repova št. 35 ustreza ponovni oštevilčitvi."
+        },
+        {
+          "houseNo": "36",
+          "vlmReading": "Brinig Migurl/Mufur [~] · W.24 · Schißing 54 [~: 64]",
+          "repoOwner": "Bring Majzel",
+          "verdict": "CORRECTION",
+          "confidence": "high",
+          "note": "ŠTEVILKA: repo 36 → v rokopisu 35 (povečava števčnega stolpca: …34, 34-prečrtano, 35, 36, 37, 38, 39, 40; stran se konča s 40). Vsebina potrjena: W.24 + Schißing 5x + Bring ✓; ime Majzel vs Mufur/Migurl[~] dvoumno."
+        },
+        {
+          "houseNo": "37",
+          "vlmReading": "Milleg/Milley Han [~] · W.22/32 · Schißing 164 + Walle 140/416/710 [~]",
+          "repoOwner": "Milleg Jan",
+          "verdict": "CORRECTION",
+          "confidence": "high",
+          "note": "ŠTEVILKA: repo 37 → v rokopisu 36. Vsebina ✓ (Schißing 164); Milleg Jan ✓; W.27 (repo) vs 22/32[~]."
+        },
+        {
+          "houseNo": "38",
+          "vlmReading": "Brinig Malga [~] · W.22/29 · Schißing 58",
+          "repoOwner": "Bring Mufa",
+          "verdict": "CORRECTION",
+          "confidence": "high",
+          "note": "ŠTEVILKA: repo 38 → v rokopisu 37. Schißing 58 ✓; Bring ✓; W.23 (repo) vs 22/29[~]."
+        },
+        {
+          "houseNo": "39",
+          "vlmReading": "Brinig Malga [~] · W.20/22 · Wiesen/Apnind 21",
+          "repoOwner": "Bring Mufa",
+          "verdict": "CORRECTION",
+          "confidence": "high",
+          "note": "ŠTEVILKA: repo 39 → v rokopisu 38. Apnind/Wiesen 21 ✓; Bring ✓."
+        },
+        {
+          "houseNo": "40",
+          "vlmReading": "Brinig Misko/Milo [~] · W.25 · Schißing 39",
+          "repoOwner": "Tonig Miko",
+          "verdict": "CORRECTION",
+          "confidence": "high",
+          "note": "ŠTEVILKA: repo 40 → v rokopisu 39. LASTNIK: VLM 3× 'Brinig/Bring' (Misko/Milo[~]) — repo priimek 'Tonig' ne ustreza; parcele W.25 + Schißing 39 ✓ točno."
+        },
+        {
+          "houseNo": "41",
+          "vlmReading": "Brinig Malga/[~Hulfa] · W.23/29 · Wiese 6 (+ Fürtrag 108½ [~])",
+          "repoOwner": "Bring Mufa",
+          "verdict": "CORRECTION",
+          "confidence": "high",
+          "note": "ŠTEVILKA: repo 41 → v rokopisu 40. STRAN 4 SE KONČA S ŠT. 40 — 3 neodvisna potrjena branja (celotna stran, spodnja polovica, povečava števčnega stolpca); str. 5 začenja s 41, zato zaporedje ne more vsebovati dveh 41. Vsebina ✓ (W.23 + Wiese/Walle 6 + Bring). Vzrok: repo je prečrtano dvojno 34 štel kot vrstico 35 in vse nadaljnje številke zamaknil za +1."
+        }
+      ],
+      "note": "21 vrstic (št. 21–40 + prečrtana dvojna 34). Parcele pri št. 21–35 se z repom ujemajo skorajda znak za znak (Schißing 102, Apnind 19, Schißing 101, Apnind 28, Schißing 89, Walle 15 …). NAJDBA: repova številčenja 36–41 so za +1 zamaknjena (rokopis: 35–40). Repo '41' ne obstaja."
+    },
+    {
+      "page": 5,
+      "rows": [
+        {
+          "houseNo": "41",
+          "vlmReading": "Georg Groy [~] (2. branje povečave: 'Fafey Groß'[~]) · W.64 · Areal 109 [~]",
+          "repoOwner": "Jörg Georg",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Vrsta/št. 41 + W.64 ✓; LASTNIK: obraten vrstni red besed + priimek Groy/Groß[~] vs repo 'Jörg Georg' — trije popisi se razhajajo → paleografski pregled. Površina: repo 'Weingart 469/51' vs VLM Areal 109[~]."
+        },
+        {
+          "houseNo": "42",
+          "vlmReading": "Lorenz Glan [~] · W.26 · Areal 64",
+          "repoOwner": "Glan Georg",
+          "verdict": "CONFIRMED",
+          "confidence": "medium",
+          "note": "Št. 42 + W.26 + Areal 64 (repo 'Weingart 64') ✓; priimek Glan ✓; ime Georg vs Lorenz[~] dvoumno."
+        },
+        {
+          "houseNo": "43",
+          "vlmReading": "Melchior Glan [~] · W.27 · Areal 109",
+          "repoOwner": "Glan Matthäus",
+          "verdict": "CONFIRMED",
+          "confidence": "medium",
+          "note": "Št. 43 + W.27 + Areal 109 ✓; Glan ✓; ime Matthäus vs Melchior[~] dvoumno."
+        },
+        {
+          "houseNo": "44",
+          "vlmReading": "Andreas Mule [~] · W.30/20 · Areal 108",
+          "repoOwner": "Malfs Mathäus",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Št. 44 + Areal 108 ✓; priimek Malfs/Mule[~], ime Mathäus vs Andreas[~]; W.20 (repo) vs W.30 (VLM)."
+        },
+        {
+          "houseNo": "45",
+          "vlmReading": "Lorenz Mule [~] · W.28 · Areal 80",
+          "repoOwner": "Mals Georg",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Št. 45 + W.28 + 80 ✓; Mals/Mule[~]; Georg vs Lorenz[~]."
+        },
+        {
+          "houseNo": "46",
+          "vlmReading": "Michael Groy/Grög [~] · W.63 · Areal 214",
+          "repoOwner": "Grög Michael",
+          "verdict": "CONFIRMED",
+          "confidence": "medium",
+          "note": "Št. 46 + W.63 + 214 ✓; priimek Groy/Grög[~]; ime Michael ✓."
+        },
+        {
+          "houseNo": "47",
+          "vlmReading": "Michael Groy [~] · W.62/63 · Areal 4",
+          "repoOwner": "Greg Michael",
+          "verdict": "CONFIRMED",
+          "confidence": "medium",
+          "note": "Št. 47 + Areal 4 ✓; W.63 (repo) vs W.62 (VLM)."
+        },
+        {
+          "houseNo": "48",
+          "vlmReading": "Michael Groy [~] · W.62/63 · Areal 14",
+          "repoOwner": "Greg Michael",
+          "verdict": "CONFIRMED",
+          "confidence": "medium",
+          "note": "Št. 48 + Areal 14 ✓."
+        },
+        {
+          "houseNo": "49",
+          "vlmReading": "Michael Mule [~] · W.61 · Areal 16",
+          "repoOwner": "Malt Simon",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Št. 49 + W.61 + 16 ✓; priimek Malt/Mule[~]; ime Simon vs Michael[~]."
+        },
+        {
+          "houseNo": "50",
+          "vlmReading": "Schelko Jopich [~] · W.60 · Areal 9",
+          "repoOwner": "Joger Schello",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Št. 50 + W.60 + 9 ✓; lastnik v obratnem vrstnem redu: repo 'Joger Schello' vs VLM 'Schelko Jopich'[~] — očrt istih besed; paleografski pregled."
+        },
+        {
+          "houseNo": "51",
+          "vlmReading": "Schelko Jopich [~] · W.60 · Areal 90",
+          "repoOwner": "Joger Schello",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Št. 51 + W.60 + 90 ✓."
+        },
+        {
+          "houseNo": "52",
+          "vlmReading": "Michael Mule [~] · W.62 · Areal 84 [~: 87]",
+          "repoOwner": "Meßle Michael",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Št. 52 + W.62 ✓; priimek Meßle/Mule[~]; Areal 87 (repo) vs 84[~]."
+        },
+        {
+          "houseNo": "52 (2. vnos)",
+          "vlmReading": "Michael Mule [~] · W.61 · Areal 45 [~: 46]",
+          "repoOwner": "Malt Simon D.",
+          "verdict": "CONFIRMED",
+          "confidence": "medium",
+          "note": "MANUSKRIPT: številka 52 zapisana DVAKRAT zapored, druga PREČRTANA (povečava števčnega stolpca: 41–52, 52-prečrtano, 53 … 60; stran se konča s 60) — repova struktura '52b' je PRAVILNA, a bi morala opozoriti na prečrtanje. Vsebina ✓ (W.61 + 4x)."
+        },
+        {
+          "houseNo": "53",
+          "vlmReading": "Michael Mule [~] · W.31 · Areal 124 [~: 184]",
+          "repoOwner": "Marlo Michael",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Št. 53 + W.31 ✓; priimek Marlo/Mule[~]; Areal 184 (repo) vs 124[~]."
+        },
+        {
+          "houseNo": "54",
+          "vlmReading": "Michl Groy [~] · W.32 · Areal 60",
+          "repoOwner": "Greg Ulrich",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Št. 54 + W.32 + 60 (repo 'Weingart 60') ✓; priimek Greg/Groy[~]; ime Ulrich vs Michl[~]."
+        },
+        {
+          "houseNo": "55",
+          "vlmReading": "Schelko Jopich [~] · W.60 · Areal 45 [~: 43]",
+          "repoOwner": "Joger Schello",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Št. 55 + W.60 ✓; 'Weide 43' (repo) vs 45[~]."
+        },
+        {
+          "houseNo": "56",
+          "vlmReading": "Michl Mule / Urich Niko [~] · W.68 · Areal 196",
+          "repoOwner": "Malt Ulrich",
+          "verdict": "CONFIRMED",
+          "confidence": "medium",
+          "note": "Št. 56 + W.68 + 196 ✓; 'Ulrich' prisoten v obeh popisih (kot 2. oziroma 1. beseda) ✓; ostalo dvoumno."
+        },
+        {
+          "houseNo": "57",
+          "vlmReading": "Michl Groy / Urich B[~]b[~]ng [~] · W.32 · Areal 232 [~: 25]",
+          "repoOwner": "Piberig Ulrich",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Št. 57 + W.32 ✓; priimek Piberig vs Groy/B[~]b[~]ng[~] — trije popisi se razhajajo; Areal 25 (repo) vs 232[~] — preveriti."
+        },
+        {
+          "houseNo": "58",
+          "vlmReading": "Michl Groy / Urich Groong [~] · W.32 · Areal 13 [~: 15]",
+          "repoOwner": "Greg Ulrich",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Št. 58 + W.32 ✓; Areal 15 vs 13[~]."
+        },
+        {
+          "houseNo": "59",
+          "vlmReading": "Schimez Glan / Schinner Anna [~] · W.36 · Areal 10",
+          "repoOwner": "Leder Simon",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Št. 59 + W.36 + Areal 10 ✓ (vsi popisi se strinjajo o št./W/površini); LASTNIK: trije popisi se popolnoma izključujejo (Leder Simon / Schimez Glan / Schinner Anna[~]) → paleografski pregled nujen."
+        },
+        {
+          "houseNo": "60",
+          "vlmReading": "Schimez Glan / Schinner Johan [~] · W.35/55/65 [~] · Areal 12",
+          "repoOwner": "Glan Simonz",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Št. 60 + Areal 12 ✓; LASTNIK: popisi se izključujejo (Glan Simonz / Schimez Glan / Schinner Johan[~]); W.65 (repo) vs 35/55[~] (zamenjave 3/5/6). OPOMBA: stran se konča s št. 60 — 1. VLM branje 'parcele do 61' je bila napaka (preverjeno s povečavo)."
+        }
+      ],
+      "note": "21 vrstic: parcele 41–60 + drugi (prečrtani) zapis 52 — številčenje 41–60 POTRJENO s povečavo števčnega stolpca (1. branje cele strani je napačno prebralo 53–61). W-ref + površine se z repom ujemajo pri večini (214, 4, 14, 16, 9, 90, 196, 60, 10, 12 …). Lastniški stolpec: nizka zanesljivost (obraten vrstni red besed + medsebojno izključujoči se popisi). Zadnja neštevilčena vrstica (W.3[~], 1 20/962) = Fürtrag/vsota, ne gradbena vrstica."
+    },
+    {
+      "page": 6,
+      "rows": [
+        {
+          "houseNo": "61",
+          "vlmReading": "Paulig Jhan [~] · W.53 · Areal 9",
+          "repoOwner": "Peutinger Jhan",
+          "verdict": "CONFIRMED",
+          "confidence": "medium",
+          "note": "Št. 61 + W.53 (repo 'parc. 59', 9/3) + Areal 9 ('Apein 9') ✓; priimek Peutinger/Paulig[~] — očrt istega imena. Repo 'Leim grüben' se ne potrdi (VLM Gattung: [~fzwind] = Abfogjung[~])."
+        },
+        {
+          "houseNo": "62",
+          "vlmReading": "Loparz Mihlo [~] · W.54 · Areal 9",
+          "repoOwner": "Lappanig Miho",
+          "verdict": "CONFIRMED",
+          "confidence": "high",
+          "note": "Št. 62 + W.54 + 9 ✓; Lappanig/Loparz[~] ✓."
+        },
+        {
+          "houseNo": "63",
+          "vlmReading": "Shimetz [~]ifanel [~] · W.49 · Areal 19",
+          "repoOwner": "Šimec Ripane",
+          "verdict": "CONFIRMED",
+          "confidence": "medium",
+          "note": "Št. 63 + W.49 + 19 ('Agneid 19') ✓; Šimec/Shimetz ✓; ime Ripane/[~]ifanel[~] — podoben očrt, dvoumno."
+        },
+        {
+          "houseNo": "64",
+          "vlmReading": "Shimetz Jhan [~] · W.55 · Areal 20",
+          "repoOwner": "Šimec Jhan",
+          "verdict": "CONFIRMED",
+          "confidence": "high",
+          "note": "Št. 64 + W.55 + 20 ('Agneind 20') ✓; Shimetz Jhan ✓."
+        },
+        {
+          "houseNo": "65",
+          "vlmReading": "Paulig Jhan [~] · W.53 · Areal 34",
+          "repoOwner": "Peutinger Jhan",
+          "verdict": "CONFIRMED",
+          "confidence": "high",
+          "note": "Št. 65 + W.53 + 34 ('Abfogjung 34') ✓."
+        },
+        {
+          "houseNo": "66",
+          "vlmReading": "Shimetz Jhan [~] · W.55 · Areal 13",
+          "repoOwner": "Šimec Jhan",
+          "verdict": "CONFIRMED",
+          "confidence": "high",
+          "note": "Št. 66 + W.55 + 13 ('Abfagjung 13') ✓."
+        },
+        {
+          "houseNo": "67",
+          "vlmReading": "Loparz Mihlo [~] · W.54 · Areal 84",
+          "repoOwner": "Lappanig Miho",
+          "verdict": "CONFIRMED",
+          "confidence": "high",
+          "note": "Št. 67 + W.54 + 84 ('Abfogjung 84') ✓."
+        },
+        {
+          "houseNo": "68",
+          "vlmReading": "Diebltalar [~Rud]ga / [~]ichlutar [~]ulfa [~] · W.53/33 · Areal 192",
+          "repoOwner": "Dikobutar Rupre",
+          "verdict": "CONFIRMED",
+          "confidence": "medium",
+          "note": "Št. 68 + Areal 192 ✓; priimek Dikobutar/Diebltalar/Cholatschar[~] — isti očrt; ime Rupre/[~Rud]ga[~] približno ✓."
+        },
+        {
+          "houseNo": "69",
+          "vlmReading": "[Stilla]/Filleß [~Johann] / [~]ilah [~]uhan [~] · W.55/35 · Areal 15",
+          "repoOwner": "Filak Peter",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Št. 69 + Areal 15 ('Apfein 15') ✓; priimek Filak/Filleß/[Stilla][~] — F-očrt; ime Peter vs Johann[~] dvoumno."
+        },
+        {
+          "houseNo": "70",
+          "vlmReading": "Filleß Marfa / [Stilla] [~Johan]n [~] · W.56/35 · Areal 36 [~: 86]",
+          "repoOwner": "Filak Peter",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Št. 70 ✓; Areal 86 (repo 'Abfogjung 86') vs 36[~] (3/8); 'parc. 95' (repo) vs W.56[~]; ime Peter vs Marfa/Johan[~]."
+        },
+        {
+          "houseNo": "71",
+          "vlmReading": "[Stilla] Mar[ga]r[etha] / Filleß Marfa [~] · W.34 · Areal 202",
+          "repoOwner": "Filak Mihel",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Št. 71 + Areal 202 ('Abfogjung 202') ✓; W.94 (repo 'parc. 94') vs 34[~] (9/3); ime Mihel vs Margaretha/Marfa[~] — dvoumno."
+        },
+        {
+          "houseNo": "72",
+          "vlmReading": "Schabatschar/Cholatschar Marco [~] · W.41 · Areal 85 [~: 187] (vrstica prečrtana rdeče)",
+          "repoOwner": "Dikobutar Mihelo",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Št. 72 (prečrtana rdeče) + družina Dikobutar≈Schabatschar/Cholatschar[~] ✓; W.47 (repo) vs 41[~]; Areal 187 (repo) vs 85[~] — 1. branje je za to vrstico videlo '187/85' skupaj; možna zamenjava s prečrtano 71½ → paleografski pregled."
+        },
+        {
+          "houseNo": "73",
+          "vlmReading": "Paulig/Feurig [Marfa / ~i~fa] [~] · W.50/60 · Areal 210",
+          "repoOwner": "Peutinger Mihel",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Št. 73 + Areal 210 ✓; W.60 (repo) vs 50[~]; priimek Peutinger/Paulig/Feurig[~] in ime Mihel/Marfa[~] dvoumno — povezava MVG-010 naj se preveri pri človeškem pregledu."
+        },
+        {
+          "houseNo": "74",
+          "vlmReading": "Drisch/Urlich Johan [~] (prečrtana rdeče) · W.51 · Areal 313/279/370 [~]",
+          "repoOwner": "Drulak Jhan",
+          "verdict": "CONFIRMED",
+          "confidence": "medium",
+          "note": "Št. 74 (prečrtana rdeče) + W.51 ✓; Drulak/Drisch[~] + Jhan/Johan ✓; Areal 318 (repo) vs 313/279/370[~] — 3× blizu."
+        },
+        {
+          "houseNo": "75",
+          "vlmReading": "Drisch Jakob [~] (prečrtana rdeče) · W.51 · Areal 63",
+          "repoOwner": "Drulak Peter",
+          "verdict": "CONFIRMED",
+          "confidence": "medium",
+          "note": "Št. 75 (prečrtana rdeče) + W.51 + 63 ('Agneid 63') ✓; ime Peter (repo) vs Jakob[~] (VLM) — nasprotovanje, preveriti."
+        },
+        {
+          "houseNo": "76",
+          "vlmReading": "Strauß Georg [~] ([~]traufz [~]ronj) · W.45 · Wiese · Areal 20",
+          "repoOwner": "Stenopfs Georg",
+          "verdict": "CORRECTION",
+          "confidence": "medium",
+          "note": "Št. 76 + W.45 + Areal 20 ('Milen 20') ✓; PRIIMEK: VLM 3× 'Strauß[~] Georg' (ista družina kot str. 7 hiše 81–84, ki jih repo imenuje 'Groy') vs repo 'Stenopfs' — priimek se pri obeh strojnih očrtih razlikuje; paleografski pregled priporočen."
+        },
+        {
+          "houseNo": "77",
+          "vlmReading": "Cholatschar Marko [~] · W.47 · Areal 174",
+          "repoOwner": "Dikobutar Mihlo",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Št. 77 ✓ (družina ✓, W.47 ✓); Areal 174[~] vs repo 14 — POZOR: prečrtana vrstica 76½ (W.47, Areal 14, Cholatschar Markus/Michel[~]) po vsebini natančno ustreza repovi hiši 77 (Mihlo, 14) → možen zamik za eno vrstico; paleografski pregled."
+        },
+        {
+          "houseNo": "78",
+          "vlmReading": "Cholatschar Marko [~] (prečrtana rdeče) · W.47 · Areal 86",
+          "repoOwner": "Dikobutar Marko",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Št. 78 (prečrtana rdeče) + družina + W.47 ✓ + ime Marko ✓; Areal 176 (repo) vs 86[~] (3× VLM) — preveriti; možna zamenjava z vrstico 77 (174)."
+        },
+        {
+          "houseNo": "79",
+          "vlmReading": "Strauß Georg [~] (prečrtana rdeče) · W.45 · Areal 100",
+          "repoOwner": "Stenopfs Georg",
+          "verdict": "CORRECTION",
+          "confidence": "medium",
+          "note": "Št. 79 (prečrtana rdeče) + W.45 + Areal 100 ('Agneid 100') ✓; priimek kot pri hiši 76 (Strauß[~] vs Stenopfs)."
+        },
+        {
+          "houseNo": "80",
+          "vlmReading": "Cholatschar Markus/Marco [~] (prečrtana rdeče) · W.47 · Areal 21",
+          "repoOwner": "Dikobutar Marko",
+          "verdict": "CONFIRMED",
+          "confidence": "high",
+          "note": "Št. 80 (prečrtana rdeče) + W.47 + 21 ('Agneid 21') + Marko ✓ — vsebina kljub prečrtanju enaka repu."
+        },
+        {
+          "houseNo": "71½ (dod.)",
+          "vlmReading": "PREČRTANA vrstica (rdeče): Filleß Marfa / [Stilla] [~An]na / [~]ichlutar [~]ulle [~] · W.3x/5x [~] · Areal 87/187 [~]",
+          "repoOwner": "— (ni v repu)",
+          "verdict": "ADDITIONAL_ROW",
+          "confidence": "medium",
+          "note": "Med hišama 71 in 72 stoji vrstica z oznako 71½, v rokopisu PREČRTANA (rdeče) — 2 neodvisni branji (celotna stran + povečava). Repo je nima; lastnik se v 3 branjih razhaja → zabeležiti kot prečrtano vrstico."
+        },
+        {
+          "houseNo": "76½ (dod.)",
+          "vlmReading": "PREČRTANA vrstica (rdeče): 'Hufschmied' (prečrtano) / Cholatschar Markus [~] · W.47 · Areal 14",
+          "repoOwner": "— (ni v repu)",
+          "verdict": "ADDITIONAL_ROW",
+          "confidence": "high",
+          "note": "Med hišama 76 in 77 stoji vrstica 76½ (rdeče prečrtana številka; lastnik s prečrtanim poklicem 'Hufschmied'[~]) — 3 potrjena branja. Repo je nima; vsebina (W.47 + 14 + Michel/Markus) se prekriva z repovo hišo 77."
+        }
+      ],
+      "note": "22 vrstic (61–80 + 71½ + 76½, obe prečrtani rdeče; tudi 72, 74, 75, 78, 79, 80 so rdeče prečrtane — kasnejši evidencijski popravek, vsebinsko vrstice ostajajo). Repo ima 20 vrstic (61–80). Parcele (W + površine) se z repom odlično ujemajo (9, 9, 19, 20, 34, 13, 84, 192, 15, 202, 210, 63, 20, 100, 21 …). Priimek 'Dikobutar' VLM bere kot Cholatschar/Schabatschar/Diebltalar[~]; 'Stenopfs' kot Strauß[~]."
+    },
+    {
+      "page": 7,
+      "rows": [
+        {
+          "houseNo": "81",
+          "vlmReading": "Strauß Georg [~] · W.45 · [~Bauern/Hütten] · Areal 15/14 · 'Hof Gültfällig, hujus 1804' [~]",
+          "repoOwner": "Groy Hanž",
+          "verdict": "CORRECTION",
+          "confidence": "medium",
+          "note": "Št. 81 + W.45 (repo 'Grüble 45') ✓; LASTNIK: VLM 2× (4 vrstice 81–84) 'Strauß Georg[~]' vs repo 'Groy Hanž' — priimek IN ime se razlikujeta; ista družina kot str. 6 (repo 'Stenopfs'). Paleografski pregled nujen."
+        },
+        {
+          "houseNo": "82",
+          "vlmReading": "Strauß Georg [~] · W.45 · Abgerissen [~] · Areal 92/52",
+          "repoOwner": "Groy Hanž",
+          "verdict": "CORRECTION",
+          "confidence": "medium",
+          "note": "Št. 82 + W.45 + Abgerissen (porušeno) ✓; lastnik kot hiša 81 (Strauß Georg[~] vs Groy Hanž)."
+        },
+        {
+          "houseNo": "83",
+          "vlmReading": "Strauß Georg [~] · W.45 [~: 46] · Schopfhütte und Hof [~] · Areal 202",
+          "repoOwner": "Groy Hanž",
+          "verdict": "CORRECTION",
+          "confidence": "medium",
+          "note": "Št. 83 + Schupfaden/Schopfhütte/Hof ✓; W.46 (repo) vs 45[~]; lastnik kot 81."
+        },
+        {
+          "houseNo": "84",
+          "vlmReading": "Strauß Georg [~] · W.45 [~: 46] · Abgund/Abgerissen [~] · Areal 21",
+          "repoOwner": "Groy Hanž",
+          "verdict": "CORRECTION",
+          "confidence": "medium",
+          "note": "Št. 84 ✓; lastnik kot 81; raba 'Abgerissen' (repo) vs 'Abgund'[~] (VLM) — podoben očrt."
+        },
+        {
+          "houseNo": "85",
+          "vlmReading": "Krischan Fisch/Jakob [~] · W.39 [~: 37] · Schopfhütte/Hüttengrund/Hof [~] · Areal 176",
+          "repoOwner": "Peta Krištof (Krischan)",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Št. 85 + Schopfhütte/Hof ✓; priimek Krischan ✓ (Krištof); ime Peta vs Fisch/Jakob[~] — 3 popisi, dvoumno; W.37 (repo) vs 39[~]."
+        },
+        {
+          "houseNo": "86",
+          "vlmReading": "Krischan Muffl/Malfi [~] · W.36 · Abgund/Abgerissen [~] · Areal 23/26",
+          "repoOwner": "Matja Krištof",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Št. 86 + W.36 ✓; Krischan ✓; ime Matja vs Muffl/Malfi[~] dvoumno."
+        },
+        {
+          "houseNo": "87",
+          "vlmReading": "Hüntert/Huisseth Manlo/Murad [~] · W.44 · Abgund [~] · Areal 28",
+          "repoOwner": "Heurisch Marko",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Št. 87 + W.44 + Areal 28 ✓; priimek Heurisch vs Hüntert/Huisseth[~] — H-očrt, 3 različni popisi → nizka zaupanja; ime Marko/Manlo približno ✓."
+        },
+        {
+          "houseNo": "88",
+          "vlmReading": "Krischan Muffl/Malfi [~] · W.36 · Schopfhütte/Hüttengrund/Hof [~] · Areal 91",
+          "repoOwner": "Matja Krištof",
+          "verdict": "CONFIRMED",
+          "confidence": "medium",
+          "note": "Št. 88 + W.36 + Schopfhütte/Hof + Areal 91 ✓; Krischan ✓."
+        },
+        {
+          "houseNo": "89",
+          "vlmReading": "Hüntert Matelo/Haustatt Marlo [~] · W.44 · Abgund/Abgerissen [~] · Areal 192/172",
+          "repoOwner": "Heurisch Marko",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Št. 89 + W.44 ✓; priimek Heurisch vs Hüntert/Haustatt[~] — nestabilno; ime Marko/Marlo približno ✓."
+        },
+        {
+          "houseNo": "90",
+          "vlmReading": "Kavalar [~Milo] / Bumiller Marlo [~] · W.43 [~: 40] · Schopfhütte [~] · Areal 88/89",
+          "repoOwner": "Kuncelj Miha",
+          "verdict": "ILLEGIBLE",
+          "confidence": "low",
+          "note": "Št. 90 + Schopfhütte + Areal ~88 ✓; LASTNIK: 3 popisi se popolnoma izključujejo (Kuncelj Miha / Kavalar[~] / Bumiller[~]) — ni preverljiv; W.40 (repo) vs 43[~]."
+        },
+        {
+          "houseNo": "91",
+          "vlmReading": "Hüntert Manlo/Haustatt Marlo [~] · W.44 · Schopfhütte [~] · Areal 168/163",
+          "repoOwner": "Heurisch Marko",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Št. 91 + W.44 ✓; priimek nestabilen (Heurisch/Hüntert/Haustatt[~]); ime Marko/Marlo približno ✓."
+        },
+        {
+          "houseNo": "92",
+          "vlmReading": "Feudig Georg [~] · W.41 · Schopfhütte [~] · Areal 239/209 · 'dito'",
+          "repoOwner": "Groy Feidig",
+          "verdict": "CONFIRMED",
+          "confidence": "medium",
+          "note": "Št. 92 + W.41 + Schopfhütte ✓; Feidig/Feudig ✓ — priimek ustreza; repo predpona 'Groy' se ne potrdi; ime Georg[~] vs Feidig."
+        },
+        {
+          "houseNo": "93",
+          "vlmReading": "Feudig Mufa/Malfi [~] · W.40 · Abgund/Abgerissen [~] · Areal 18/12 · 'dito'",
+          "repoOwner": "Matja Feidig",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Št. 93 + W.40 + Abgerissen ✓; Feudig ✓; ime Matja vs Mufa/Malfi[~]."
+        },
+        {
+          "houseNo": "94",
+          "vlmReading": "Feudig Mufn/Malfi [~] · W.40 · Schopfhütte [~] · Areal 181/121 · 'dito'",
+          "repoOwner": "Matja Feidig",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Št. 94 + W.40 + Schopfhütte ✓; Feudig ✓."
+        },
+        {
+          "houseNo": "95",
+          "vlmReading": "Shimerz [~Stanko] / Ihmeyer Marlo [~] · W.39 · Schopfhütte [~] · Areal 91/97 · 'dito'",
+          "repoOwner": "Schmerz Marko",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Št. 95 + W.39 ✓; priimek Schmerz/Shimerz[~] (1. branje) vs Ihmeyer[~] (2. branje) — nestabilno; ime Marko/Marlo približno ✓."
+        },
+        {
+          "houseNo": "96",
+          "vlmReading": "Shimerz/Ihmeyer Georg [~] · W.38 · Schopfhütte [~] · Areal 90 · 'dito'",
+          "repoOwner": "Groy Khunz",
+          "verdict": "CORRECTION",
+          "confidence": "medium",
+          "note": "Št. 96 + W.38 + Areal 90 ✓; LASTNIK: 2 popisa se strinjata pri imenu 'Georg' in priimku Sh-…[~] — repov 'Groy Khunz' se ne poda; preveriti (morda ista družina kot 95/97 Schmerz)."
+        },
+        {
+          "houseNo": "97",
+          "vlmReading": "Shimerz/Ihmeyer Marlo [~] · W.39 · Abgund/Abgerissen [~] · Areal 8 · 'dito'",
+          "repoOwner": "Schmerz Marko",
+          "verdict": "CONFIRMED",
+          "confidence": "low",
+          "note": "Št. 97 + W.39 + Abgerissen ✓; Schmerz/Shimerz[~]; Marko/Marlo približno ✓."
+        },
+        {
+          "houseNo": "98",
+          "vlmReading": "A. P./A. A. Zollmant/Zollamt [~] · Stand: 'Araial/ärarial' [~] · W.40 · Schopfhütte [~] · Areal 102 · 'verzahlt zum Hauptmagazin v[on] 1826' [~]",
+          "repoOwner": "Zollnerd A. M.",
+          "verdict": "CORRECTION",
+          "confidence": "medium",
+          "note": "Št. 98 + W.40 + Areal 102 ✓; LASTNIK: 2 popisa kažeta INSTITUCIJO ('Zollamt'[~ carinarnica] + 'ärarial'[~ državna blagajna]) in ne osebo 'Zollnerd A. M.'; opomba v repu ('gekaufte vom Grundbuchleger 1860') se ne potrdi — VLM bere 'verzahlt zum Hauptmagazin von 1826'[~]; leto 1860 v viru iz 1825 je sumljivo. Preveriti."
+        },
+        {
+          "houseNo": "99 (dod.)",
+          "vlmReading": "Vrstica s št. 99, lastniški stolpec PRAZEN · Gattung [~Tintweig] · Areal '1 77/609' [~]",
+          "repoOwner": "— (ni v repu)",
+          "verdict": "ADDITIONAL_ROW",
+          "confidence": "medium",
+          "note": "Za hišo 98 stoji oštevilčena vrstica 99 s praznim lastnikom (2 potrjeni branji) — najbrž zaključna/vrstica vsote strani; repo je nima. Paleografski pregled."
+        }
+      ],
+      "note": "19 vrstic (81–98 + prazna 99). Lastniški stolpec pri 81–84 in 96: repo 'Groy' se pri 2 VLM popisih ne potrdi (Strauß Georg[~] oziroma Sh-… Georg[~]); pri 92–94 'Feidig/Feudig' ✓; 98 najbrž institucija (Zollamt/ärarial[~]). Vsota strani (rdeče) '1 77/609'."
+    },
+    {
+      "page": 8,
+      "rows": [],
+      "note": "Brez hišnih številk in lastnikov — sklepni del: opombe ('Wiederhällung der Schmiede'[~], 'Zum und zum Anstiftung'[~], 'Baustelle in ob. [~]nann 885', 'Hüllungsrecht', 'Nr. 18. Güt'[~], 'Fürtrag') + vsote 1147/7740, 960/7688, 1114, 962/440, 6299/177, 3/544/14/889. KLJUČNA NAVKRIŽNA POTRDITEV: številka 889 (kv. klafter) se NATANČNO ujema s PV Nutzungs-Ausweis ('Bau Parzellen 4 J 889 Kl') → PT-register kot celota je verodostojen."
+    }
+  ],
+  "summary": {
+    "confirmed": 81,
+    "corrections": 15,
+    "additionalRows": 4,
+    "repoOnly": 0,
+    "illegible": 5,
+    "notesSi": "Pregledano 8 strani PT (1 klic/stran + 9 žariščnih povečav; 1 klic zavrnjen s content-filtrom, retry uspel). Register ima 101 vrstico (21+21+21+20+18) na str. 3–7. STRUKTURA (številčenje, W-parcele, površine) je DOBRA: str. 3 = št. 1–20 (z 7½, 8½), str. 4 = 21–40, str. 5 = parcele 41–60 (+ prečrtani drugi 52), str. 6 = 61–80 (+ prečrtani 71½, 76½), str. 7 = 81–98 (+ prazna 99), str. 8 = vsote/opombe. 15 POPRAVKOV: (1) str. 4: repo št. 36–41 so v rokopisu 35–40 (stran se konča s 40; vzrok: prečrtana dvojna št. 34, ki jo je strojni očrt štel kot vrstico 35 — 3× potrjeno s povečavo; posledica: repova hiša '41' ne obstaja, zadnja je 40); (2) str. 4 št. 39 (repo 40): lastnik 'Tonig Miko' → VLM 3× 'Brinig/Bring Misko[~]'; (3) str. 6 št. 76/79: 'Stenopfs Georg' → VLM 3× 'Strauß[~] Georg'; (4) str. 7 št. 81–84: 'Groy Hanž' → VLM 2× 'Strauß Georg[~]' (ime Georg, ne Hanž); (5) str. 7 št. 96: 'Groy Khunz' → VLM 2× 'Sh-…[~] Georg'; (6) str. 7 št. 98: 'Zollnerd A. M.' → najbrž INSTITUCIJA 'Zollamt/ärarial[~]' + opomba '…Hauptmagazin…1826[~]' (ne 1860); (7) str. 3 št. 1: 'Peth (H.)' → VLM 2× 'Veith[~]'. 4 DODATNE VRSTICE (manjkajo v repu): str. 3 št. 7 (Lebring/Leudig Martin[~]); str. 6 št. 71½ (prečrtana) in 76½ (prečrtana, 'Hufschmied'[~]); str. 7 št. 99 (prazen lastnik — zaključna vrstica). 5 NEPREBERLJIVIH lastnikov (popisi se medsebojno izključujejo): str. 3 št. 7½, 8, 8½, 20; str. 7 št. 90. SPLOŠNO: priimki 'Dikobutar'/'Stenopfs'/'Groy' se v VLM očrtih glasijo 'Cholatschar/Schabatschar[~]', 'Strauß[~]' — te družine potrebujejo paleografski pregled; lastniški stolpec str. 5 je nizke zanesljivosti (obraten vrstni red besed). 0 REPO_ONLY — vseh 101 vrstic repa ima podlago v rokopisu. KVALITETA: vsota 889 kv. kl na str. 8 se natančno ujema s PV ('Bau Parzellen 4 J 889 Kl') — močna navzkrižna potrditev. Priporočilo: popraviti številčenje str. 4 (36–41 → 35–40) in lastnike pri 15 označenih vrsticah po človeški paleografski preverbi; dodati 4 manjkajoče vrstice (7, 71½, 76½, 99) z oznako prečrtanja; status REVIEW zadržati."
+  }
+}

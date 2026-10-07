@@ -1,0 +1,103 @@
+{
+  "series": "PG",
+  "source": "Arhiv RS, SI AS 176, katastralna občina Griblje (N83), N083PG.pdf, 1 stran (Indikationsskizze)",
+  "titleAsWritten": "Gemeinde Grüble.  [~z veliko številko 83 zgoraj levo]",
+  "status": "REVIEW",
+  "reader": "VLM (glm-5v-turbo), Task 17-a, 2026-10-08; strojni opis/odčki so po definiciji REVIEW",
+  "kind": "ročno risana skica (Indikationsskizze) v črnilu, meja kot debel mnogokotnik; reka po vzhodnem robu modrikasta",
+  "pages": [
+    {
+      "page": 1,
+      "kind": "map-sketch",
+      "vmCalls": [
+        "pg1-descr.json",
+        "pg1-labels.json"
+      ],
+      "rawTranscription": "ODPIS/OPIS (2 klica):\n\n--- KLIC 1 (opis vidnega) ---\nBased on the provided image, here is a precise description of the 1825 cadastral sketch (Indikationsskizze) for the municipality of **Grüble**:\n\n### (1) Overall Description\n*   **Type:** It is a hand-drawn ink sketch map on paper, characteristic of the *Indikationsskizze* series.\n*   **Orientation:** The map includes a compass rose in the upper-left quadrant. The arrow labeled **\"N\"** points towards the top-right corner, indicating that North is oriented roughly to the Northeast on this page.\n*   **Scale & Quality:** The drawing is executed in black and colored ink (blue/green). A scale bar at the bottom left indicates **\"1 W. Zoll = 1000 Klafter\"** (1 Viennese inch = 1000 fathoms). The line work is neat but clearly hand-drawn. The paper shows some aging/staining (notably a brownish spot near the bottom right).\n\n### (2) Visible Features\n*   **Municipal Boundary:** The main feature is a thick, irregular closed polygon defining the boundary of *Gemeinde Grüble*. It is drawn with a double line or a thick shaded line.\n*   **Rivers/Watercourses:**\n    *   A prominent river runs along the entire **eastern (right)** edge of the municipality. It is colored blue with internal hatching/texture.\n    *   Text along this river reads **\"Königreich Croatien\"** (Kingdom of Croatia), indicating it forms the border.\n*   **Neighboring Municipalities:** Labels outside the main boundary indicate adjacent territories:\n    *   **West/Northwest:** \"Gemeinde H[?]\" (likely *Hrib* or similar, text is \"H as in [?]\").\n    *   **Southwest:** \"Gemeinde Pridbor[?]\" (text looks like \"Pridborsch\" or \"Pridboch\").\n    *   **South:** \"Gemeinde Weidend[?]\" (text looks like \"Weidendorf\").\n    *   **East/Southeast (inside the boundary or along the river):** \"Gemeinde Maller[?]\" (text looks like \"Mallertschitach\" or \"Mallerschitach\").\n*   **Settlement/Houses:** There are **no** distinct house symbols or building clusters visible within the interior of the mapped area. It appears to be a largely uninhabited or forested/meadow area, or the settlement is not detailed on this specific sketch.\n*   **Land Use:**\n    *   There is no distinct hatching for forests or meadows inside the boundary; the interior is mostly blank/white space.\n    *   Small cross-marks (**+**) appear along the boundary lines, likely indicating boundary stones or survey points.\n*   **Numbered Points:**\n    *   Small red numbers are placed at the vertices/corners of the municipal boundary.\n\n### (3) Numbers\n*   **Boundary Numbers:** There is a sequence of red numbers marking the boundary corners. They appear to run sequentially. Legible numbers include: **1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15**. (The count is approximately 15-20 visible numbers).\n*   **Header Number:** Large number **\"83\"** in the top left corner.\n*   **Scale Number:** **\"1000\"** in the scale bar at the bottom left.\n\n### (4) Text and Labels (Transcription)\nHere is every piece of legible text found on the document:\n\n*   **Top Left:**\n    *   **\"83\"** (Large numeral)\n    *   **\"Gemeinde Grüble.\"** (Title, underlined)\n*   **Compass Rose (Upper Left):**\n    *   **\"N\"** (North arrow)\n    *   **\"W\"** (West)\n    *   **\"O\"** (East - German *Ost*)\n    *   An unlabelled arrow pointing South (or slightly offset).\n*   **Interior/Central Label:**\n    *   **\"H as in [?]\"** (Cursive script, likely referring to the western neighbor). The last letter looks like an 'f' or long 's'.\n*   **Boundary Labels (Outside):**\n    *   **Left side:** **\"Gemeinde\"** (written vertically/curved).\n    *   **Lower Left:** **\"Gem. Pridborsch\"** (or *Pridboch*).\n    *   **Bottom:** **\"Gemeinde Weidendorf\"** (or *Weidend...*).\n    *   **Right side (Interior/Along River):** **\"Gemeinde Mallertschitach\"** (or *Mallerschtach* - handwriting is difficult, starts with M).\n    *   **Far Right (Vertical):** **\"Königreich Croatien.\"**\n*   **Bottom Left (Scale):**\n    *   **\"1 W. Zoll = 1000 Klafter\"**\n*   **Bottom Right (Signature):**\n    *   **\"Urkundlich\"** (meaning \"Authenticated by/In witness whereof\")\n    *   **Signature:** Illegible cursive signature below the word *Urkundlich*.\n\n--- KLIC 2 (odčitek napisov/številk) ---\nBased on a close examination of the 1825 *Indikationsskizze* for **Gemeinde Grüble** (Katastralgemeinde No. 83), here is the precise transcription of all text and numbers:\n\n### (1) Title Area (Top Left)\n*   **Number:** `83` (large, underlined)\n*   **Main Title:** `Gemeinde Grüble.` (in cursive script, underlined)\n\n### (2) Labels Outside the Boundary Polygon (Neighboring Municipalities)\n*   **North/Northwest:** `Gemeinde` (followed by what appears to be) `H[~]as in [?]` (the second word is difficult; could be *Has in [?]* or *Haus in [?]*).\n*   **West:** `Gem. Trütbach.` (abbreviation for *Gemeinde*)\n*   **Southwest/South:** `Gemeinde Waidendorf`\n*   **Southeast:** `Gemeinde Mallertschitsch` (or possibly *Mallerschtisch* / *Mallerschitsch*; the 't' and 'sch' ligatures are stylized).\n\n### (3) The River (East Edge)\n*   **River Name/Label:** Written vertically along the blue river line: `Königreich Croatien` (Kingdom of Croatia). \n    *   *Note:* There is no explicit river name (like \"Kulpa\") written along the watercourse itself on this specific sketch, only the political designation of the territory across the river.\n\n### (4) Compass Rose\n*   **Orientation:** The arrow points towards the top-left (North-West on the page, but designated as North).\n*   **Letters:**\n    *   Top (along arrow): `Nº` (or `N`)\n    *   Right: `O` (for *Osten*/East)\n    *   Bottom: `S`\n    *   Left: `W` (for *Westen*/West)\n\n### (5) Scale Text (Bottom Left)\n*   **Text:** `1 W. Zoll = 1000 Klafter`\n*   **Breakdown:** \n    *   `1 W. Zoll` (1 Viennese Inch)\n    *   `=` (equals sign)\n    *   `1000 Klafter`\n\n### (6) Numbers Along the Boundary\n*   **Sequence:** The numbers are sequential, starting from the northern tip and proceeding clockwise.\n*   **Range:** They run from **1** to **19**.\n*   **Ink Color:** Red (or reddish-brown).\n*   **Locations:** \n    *   1–5: Northern and Northeastern boundary.\n    *   6–10: Eastern boundary (before the river section).\n    *   11–13: Southeastern corner.\n    *   14–16: Southern boundary.\n    *   17–19: Western boundary (ending at the junction with *Trütbach*).\n\n### (7) Signature (Bottom Right)\n*   **Text:** A cursive signature that reads approximately as:\n    *   Line 1: `Urkundlich` (or similar official term, slightly unclear)\n    *   Line 2: `[Signature]` (appears to be a name like *Lindtner*, *Lindenmayer*, or similar, followed by a flourish).\n\n### (8) Stamps\n*   **Result:** No stamps are visible on this document.",
+      "extracted": {
+        "title": {
+          "numberAsWritten": "83",
+          "numberConfidence": "visoka (2/2 klica) — sovpada s katastralno številko občine N83 (zunanja potrditev)",
+          "titleAsWritten": "Gemeinde Grüble.",
+          "titleConfidence": "visoka (2/2 klica)"
+        },
+        "orientation": {
+          "compass": "roža kompasa; puščica sever kaže približno proti zgornjemu robu (klic 1: zgoraj desno, klic 2: zgoraj levo) — natančna smer negotova",
+          "letters": [
+            "N [~N°?]",
+            "O",
+            "S",
+            "W"
+          ],
+          "confidence": "srednja za črke, nizka za točno smer puščice"
+        },
+        "scale": {
+          "asWritten": "1 W. Zoll = 1000 Klafter [~]",
+          "confidence": "srednja — oba klica prebereta '1000' (kar pomeni 1:72000); možna zamenjava s števko 100; zapis zahteva človeško potrditev"
+        },
+        "boundaryPolygon": {
+          "description": "zaprt mnogokotnik občinske meje, debel/dvojni potez; ob mejni črti majhni križci (verjetno mejne točke/kamni)",
+          "numberedPoints": "rdeče (rdeče-rjave) številke ob mejnih ogliščih, zaporedno; klic 1: '1–15 (približno 15–20)', klic 2: '1–19'",
+          "numberedPointsConfidence": "srednja — štetje se razhaja (15 vs 19); SOGLASNO je, da gre za zaporedno številčenje mejnih točk v rdeči barvi, kar ustreza Grenz-Punkten iz serije PR"
+        },
+        "river": {
+          "nameAsWritten": null,
+          "nameReadings": "ob reki NI razlovljivega imena (Kulp/Kulpa/Colpa) — negativen rezultat v obeh klicih; namesto imena je ob njej napis 'Königreich Croatien' [~]",
+          "position": "vzhodni rob skice, modrikasta črta z teksturo — geografsko ustreza Kolpi, ki je dejansko vzhodna/jv meja Griblja",
+          "confidence": "srednja-ja za lego in vlogo; ime reke na tej strani NI prebrano"
+        },
+        "neighbors": [
+          {
+            "nameAsWritten": "[~]Weidendorf",
+            "readings": [
+              "Weidendorf",
+              "Waidendorf",
+              "Weidend[?]"
+            ],
+            "side": "jug/jugozahod (spodnji del skice)",
+            "confidence": "srednja — ponovljeno v obeh klicih PG + v PR (3+ klicev skupaj)"
+          },
+          {
+            "nameAsWritten": "[~]Mallertschitsch",
+            "readings": [
+              "Mallertschitsch/Mallerschtisch/Mallerschitsch",
+              "Mallertschitach/Maller[?]"
+            ],
+            "side": "vzhod/jugovzhod (ob reki)",
+            "confidence": "nizka-srednja — oblika se ponovi, črke negotove"
+          },
+          {
+            "nameAsWritten": "[~]Trütbach / Pridborsch",
+            "readings": [
+              "Trütbach",
+              "Pridborsch/Pridbor[?]"
+            ],
+            "side": "zahod/jugozahod",
+            "confidence": "nizka — klica se razideta"
+          },
+          {
+            "nameAsWritten": "Gemeinde + [?]",
+            "readings": [
+              "H[~]as in [?]",
+              "Hrib [?] (možno, ne potrjeno)"
+            ],
+            "side": "sever/severozahod",
+            "confidence": "nebraljivo — zapišemo le, da tam stoji beseda 'Gemeinde' + neberljivo ime"
+          }
+        ],
+        "settlement": "V NOTRANJOSTI skice NI razločnih hišnih simbolov (2 klica) — naselbina na tej skici ni izrisana ali ni razločljiva; negativen rezultat je veljaven",
+        "landUse": "ni razločnega šrafiranja gozdov/travnikov v notranjosti; notranjost pretežno prazna belina",
+        "stamps": "ni žigov (2/2 klica)",
+        "signature": {
+          "present": "da, desno spodaj",
+          "readings": [
+            "[~]Urkundlich [?]",
+            "[~]Lindtner/Lindenmayer [?] — kandidati črk, ne dejstvo"
+          ],
+          "confidence": "nebraljivo"
+        }
+      }
+    }
+  ],
+  "qualityNoteSi": "Skico PG-1 je VLM dobro razumel kot zemljevid (Indikationsskizze) in zanesljivo prebral naslov 'Gemeinde Grüble' s številko 83 — slednja se točno sklada s signaturo N83 arhiva, kar je močna zunanja potrditev. Struktura (zaprt mejni mnogokotnik, reka po vzhodnem robu z napisom 'Königreich Croatien' na drugi strani, sosednje občine izpisane zunaj meje, zaporedne rdeče številke mejnih točk, kompas, merilo) se v obeh klicih ujema. Slabše je z natančnostmi: ime občine Weidendorf je edino sosednje ime, ki ga potrjujeta PG in PR; 'Mallertschitsch' je brano z različicami; zahodni sosed (Trütbach/Pridborsch) je med klici protisloven; severni sosed je neberljiv. Merilo '1 W. Zoll = 1000 Klafter' [~] je nenavadno in zahteva človeško potrditev; hiš v notranjosti ni videti; podpis neberljiv. Vroča točka za prihodnje delo: prešteti rdeče številke mejnih točk (15–19) in jih poravnati s točkami iz PR — to je vez med skico in besedilom meje."
+}

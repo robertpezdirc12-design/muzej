@@ -1,0 +1,232 @@
+{
+  "series": "PV",
+  "source": "Arhiv RS, SI AS 176, katastralna občina Griblje (N83), N083PV.pdf, 1 stran (Nutzungs-Ausweis / Ausweis über die Benützungsart des Bodens)",
+  "titleAsWritten": "AUSWEIS über die Benützungsart des Bodens, für die Gemeinde [~Grüble] — Provinz Illyrien, [~Kreis Neustadtl]",
+  "status": "REVIEW",
+  "reader": "VLM (glm-5v-turbo), Task 17-a, 2026-10-08; 1 klic prepisa + 6 verifikacijskih klicev; strojni prepisi so po definiciji REVIEW",
+  "formStructureSi": "Tiskan obrazec z ročno vnesenimi številkami; kulture tal vsaka s parom stolpcev 'Joch.' / 'Klft:' (Klft = kvadratni klafter, 1 Joch = 1600 kvadratnih klafterjev); dva sklopa (vrtovi/travniki/pašniki/njive + 'Ganze Area der Gemeinde'; nato strnjena zemljišča/vode/poti/zgradbe + 'Area der ganzen Gemeinde'). Strojni bralnik kulture opisuje kot 'vrstice' — dejanska postavitev (stolpci/vrstice) na obrazcu je za stroj dvoumna, preslikava ime→številka pa je med klici stabilna.",
+  "pages": [
+    {
+      "page": 1,
+      "kind": "table",
+      "vmCalls": [
+        "pv1-table.json",
+        "pv1-verify.json",
+        "pv1-left.json",
+        "pv1-bot.json",
+        "pv1-mid.json",
+        "pv1-head.json",
+        "pv1-date.json"
+      ],
+      "rawTranscription": "ODPIS TABELE (klic 1, celotna stran):\n**Page Header:**\n*   **Provinz:** Illyrien\n*   **Kreis:** Neustadtl\n*   **District:** [?]\n*   **Title:** AUSWEIS über die Benützungsart des Bodens für die Gemeinde. **Grüble**\n*   **Product/Page Number:** III 0.\n*   **Handwritten Number (top center):** 93\n*   **Handwritten Number (next to municipality):** 4\n\n---\n\n**Table Header:**\nAuf dem Flächenraume befinden sich:\n\n| Culture / Land-Use | Joch | Klf: | Joch | Klf: | Joch | Klf: | Joch | Klf: | Joch | Klf: | Joch | Klf: | Joch | Klf: | Joch | Klf: | Joch | Klf: | Joch | Klf: | Joch | Klf: | Joch | Klf: | Joch | Klf: |\n| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n| **Gemüse Gärten.** | | | **Obst Gärten.** | | | **Zier Gärten.** | | | **Wein Gärten.** | | | **Hopfen Gärten.** | | | **Wiesen.** | | | **Wiesen mit Obstbäumen.** | | | **Weiden.** | | | **Sümpfe.** | | | **Sümpfe mit Rohrwuchs.** | | |\n| **Aecker.** | | | **Aecker mit Obstbäume.** | | | **Aecker mit Oelbäumen.** | | | **Aecker mit Weinreben.** | | | **Aecker mit Bäume und Weinreben.** | | | **Ganze Area der Gemeinde.** | | |\n\n---\n\n**Table Data (Row by Row):**\n\n1.  **Gemüse Gärten.**\n    *   Joch: **2**\n    *   Klf: **123**\n\n2.  **Obst Gärten.**\n    *   Joch: **.**\n    *   Klf: **.**\n\n3.  **Zier Gärten.**\n    *   Joch: **.**\n    *   Klf: **.**\n\n4.  **Wein Gärten.**\n    *   Joch: **7**\n    *   Klf: **665**\n\n5.  **Hopfen Gärten.**\n    *   Joch: **.**\n    *   Klf: **.**\n\n6.  **Wiesen.**\n    *   Joch: **76**\n    *   Klf: **1480**\n\n7.  **Wiesen mit Obstbäumen.**\n    *   Joch: **12**\n    *   Klf: **328**\n\n8.  **Weiden.**\n    *   Joch: **636**\n    *   Klf: **263**\n\n9.  **Sümpfe.**\n    *   Joch: **-**\n    *   Klf: **.**\n\n10. **Sümpfe mit Rohrwuchs.**\n    *   Joch: **-**\n    *   Klf: **.**\n\n11. **Aecker.**\n    *   Joch: **413**\n    *   Klf: **870**\n\n12. **Aecker mit Obstbäume.**\n    *   Joch: **-**\n    *   Klf: **.**\n\n13. **Aecker mit Oelbäumen.**\n    *   Joch: **.**\n    *   Klf: **.**\n\n14. **Aecker mit Weinreben.**\n    *   Joch: **-**\n    *   Klf: **.**\n\n15. **Aecker mit Bäume und Weinreben.**\n    *   Joch: **-**\n    *   Klf: **.**\n\n16. **Ganze Area der Gemeinde.** (Partial Sum)\n    *   Joch: **1148**\n    *   Klf: **539**\n\n*(Second Section of Table)*\n\n17. **Reisfelder.**\n    *   Joch: **.**\n    *   Klf: **.**\n\n18. **Gelfriipe.** (or Geltripe)\n    *   Joch: **.**\n    *   Klf: **.**\n\n19. **Walder.**\n    *   Joch: **.**\n    *   Klf: **.**\n\n20. **Schotter und Sandgruben**\n    *   Joch: **.**\n    *   Klf: **.**\n\n21. **Lehmgruben**\n    *   Joch: **.**\n    *   Klf: **.**\n\n22. **Steinbrüche**\n    *   Joch: **.**\n    *   Klf: **.**\n\n23. **Torfstiche.**\n    *   Joch: **.**\n    *   Klf: **.**\n\n24. **Nakte Felsen.**\n    *   Joch: **.**\n    *   Klf: **.**\n\n25. **Oedungen.**\n    *   Joch: **1**\n    *   Klf: **476**\n\n26. **Flüsse oder Bäche.**\n    *   Joch: **21**\n    *   Klf: **142**\n\n27. **Seen oder Teiche.**\n    *   Joch: **.**\n    *   Klf: **.**\n\n28. **Meer Salinen.**\n    *   Joch: **.**\n    *   Klf: **.**\n\n29. **Weß Parzellen.**\n    *   Joch: **46**\n    *   Klf: **1127**\n\n30. **Bau Parzellen.**\n    *   Joch: **4**\n    *   Klf: **889**\n\n31. **Ganze Area der Gemeinde.** (Final Total)\n    *   Joch: **73**\n    *   Klf: **1024**\n\n32. **Area der ganzen Gemeinde...** (Grand Total at bottom right)\n    *   Joch: **1221**\n    *   Klf: **1513**\n\n---\n\n**Footer Signatures and Date:**\n*   **Date:** den 10 Jenner 1825\n*   **Signatures:**\n    *   [Signature, likely] O[?] Gründl (or similar) von 10 Januar 1825\n    *   [Text:] gezgen :\n    *   [Signature:] [?] Hülssenwirth (or Hülsewirth)\n    *   [Signature in circle:] [?] Mühlguth (or Müllengut/Müllengüth) [title unclear, possibly \"Vorstehend\" or \"Bezirksbeamter\"]\n\n--- VERIFIKACIJSKI KLICI ---\n(klic 2, desna zgornja polovica):\nBased on the provided image, here is the digit-by-digit reading of the handwritten numbers, row by row:\n\n**Column Headers (Printed):**\n*   **Joch.** | **Klft:** (repeated for each land-use category)\n*   **Ganze Area der Gemeinde.** (Total column): **Joch.** | **Klft:**\n\n**Row-by-Row Data:**\n\n1.  **Sümpfe mit Rohrwuchs** (Marshes with reeds):\n    *   Joch: **empty**\n    *   Klft: **empty**\n\n2.  **Aecker** (Arable fields):\n    *   Joch: **4** [~] **1** [~] **3** *(Note: The first digit looks like a '4' with a flat top, possibly a stylized '4' or '4/13'. Given the context of the total, this is likely **413**)*\n    *   Klft: **8** **7** **0**\n\n3.  **Aecker mit Obstbäume** (Arable fields with fruit trees):\n    *   Joch: **empty** (or **.**)\n    *   Klft: **empty** (or **.**)\n\n4.  **Aecker mit Oelbäumen** (Arable fields with olive trees):\n    *   Joch: **empty** (or **.**)\n    *   Klft: **empty** (or **.**)\n\n5.  **Aecker mit Weinreben** (Arable fields with vines):\n    *   Joch: **empty** (or **-** / **.**)\n    *   Klft: **empty** (or **.**)\n\n6.  **Aecker mit Bäume und Weinreben** (Arable fields with trees and vines):\n    *   Joch: **empty** (or **-** / **.**)\n    *   Klft: **empty** (or **.**)\n\n7.  **Ganze Area der Gemeinde** (Total area of the municipality):\n    *   Joch: **1** **1** **4** **8**\n    *   Klft: **5** **3** **9**\n\n---\n\n### Confirmation and Corrections to your initial reading:\n\n*   **Gemüse Gärten / Wein Gärten / Wiesen / Wiesen mit Obstbäumen / Weiden**: These rows are **NOT VISIBLE** in this specific crop. This image shows the **right-hand side** of the table, which contains the \"Aecker\" (fields) categories and the total.\n*   **Aecker**: Your reading of **413/870** is **CONFIRMED** (though the first digit is slightly stylized, it fits the total perfectly).\n*   **Subtotal 'Ganze Area der Gemeinde'**: Your reading of **1148/539** is **CONFIRMED**.\n\n### Answers to specific questions:\n\n*   **Is there a row 'Weiden' AND a row 'Wälder/Walder'?**\n    No, neither \"Weiden\" (Pastures) nor \"Wälder\" (Forests) are visible in this crop. The visible rows are limited to marshes, arable fields, and the total.\n*   **Which rows have empty cells?**\n    All rows except **Aecker** and the final **Total** have empty cells in this section of the table.\n*   **What are the exact column header words?**\n    The headers for the data columns are **\"Joch.\"** and **\"Klft:\"** (abbreviation for *Klafter*). The header for the final column is **\"Ganze Area der Gemeinde.\"**, subdivided into **\"Joch.\"** and **\"Klft:\"**.\n\n(klic 3, leva zgornja polovica):\nBased on the visual evidence in the provided image, here is the digit-by-digit reading of the handwritten numbers for each row:\n\n*   **Gemüse Gärten:** 2 Joch, 1 2 3 Klft\n*   **Obst Gärten:** empty\n*   **Zier Gärten:** empty\n*   **Wein Gärten:** 7 Joch, 6 6 5 Klft\n*   **Hopfen Gärten:** empty (dashes are present)\n*   **Wiesen:** 7 6 Joch, 1 4 8 0 Klft\n*   **Wiesen mit Obstbäumen:** 1 2 Joch, 3 2 8 Klft\n*   **Weiden:** 6 3 6 Joch, 2 6 3 Klft\n*   **Sümpfe:** empty (dash is present)\n*   **Sümpfe mit Rohrwuchs:** empty (dashes are present)\n\n**Confirmation and Corrections:**\n*   **Gemüse Gärten:** Confirmed as **2 / 123**.\n*   **Wein Gärten:** Confirmed as **7 / 665**.\n*   **Wiesen:** Confirmed as **76 / 1480**.\n*   **Wiesen mit Obstbäumen:** Confirmed as **12 / 328**.\n*   **Weiden:** Confirmed as **636 / 263**. The digits are clearly a '6', followed by a '3', and another '6' for the Joch column, and '2', '6', '3' for the Klft column.\n*   **Row Label Check:** The printed label is definitely **\"Weiden\"**, not \"Wälder\".\n*   **Empty Rows:** **Obst Gärten**, **Zier Gärten**, and **Hopfen Gärten** are indeed empty (or contain only dashes indicating zero/no entry).\n\n(klic 4, desna spodnja polovica):\nBased on the provided image, here is the digit-by-digit reading of the handwritten numbers in the second table section (bottom right), confirming or correcting the suggested values:\n\n**Row Labels (Printed):**\n*   **Flüsse oder Bäche.** (Rivers or Streams)\n*   **Seen oder Teiche.** (Lakes or Ponds)\n*   **Meer Salinen.** (Sea Saltworks)\n*   **Weg Parzellen.** (Path Plots)\n*   **Bau Parzellen.** (Building Plots)\n\n**Handwritten Data (Row by Row):**\n\n*   **Walder / Wälder:** **empty** (The cell is blank; no numbers are visible in this row section).\n*   **Schotter und Sandgruben:** **empty**\n*   **Lehmgruben:** **empty**\n*   **Steinbrüche:** **empty**\n*   **Torfstiche:** **empty**\n*   **Nakte Felsen:** **empty**\n*   **Oedungen:** **empty** (Note: The suggested value \"1 J 476 Kl\" likely belongs to a row above the visible crop, possibly \"Weiden\" or similar, as this row appears empty here).\n*   **Flüsse oder Bäche:**\n    *   Joch: **2 1**\n    *   Klft: **1 4 2**\n    *   *Confirmation:* **21 J 142 Kl** (Correct)\n*   **Seen oder Teiche:** **empty** (Dots `.` present, but no digits).\n*   **Meer Salinen:** **empty** (Dots `.` present, but no digits).\n*   **Weg-Parzellen:**\n    *   Joch: **4 6**\n    *   Klft: **1 1 2 7**\n    *   *Confirmation:* **46 J 1127 Kl** (Correct)\n*   **Bau-Parzellen:**\n    *   Joch: **4**\n    *   Klft: **8 8 9**\n    *   *Correction:* The suggested reading was **4 J 889 Kl**, which matches the visible digits (**4** and **8 8 9**). However, looking at the grand total calculation ($1221 - 1148 = 73$), the sum of this column should be **73**. With $21 + 46 + 4 = 71$, there is a discrepancy of **2 Joch**. The digit is clearly written as **4**, not 6.\n\n**Totals:**\n\n*   **Subtotal (Sum of this section):**\n    *   Joch: **7 3**\n    *   Klft: **1 0 2 4**\n    *   *Reading:* **73 J 1024 Kl** (Matches suggestion).\n*   **Grand Total Label:** **Area der ganzen Gemeinde :..** (Area of the entire municipality)\n*   **Grand Total:**\n    *   Joch: **1 2 2 1** (or **1 2 2 5** — the last digit has a flat top like a '1' but could be a '5' given the math $1148 + 73 = 1221$). Let's stick to visual: **1 2 2 [~]**\n    *   Klft: **1 5 1 3**\n    *   *Suggestion Check:* **1221 J 1513 Kl**. Visually consistent with **1221/1225**.\n\n(klic 5, srednji pas):\nBased on a careful, digit-by-digit examination of the **MIDDLE BAND** (the transition section) of the 1825 land-use table for Gemeinde **GRÜBLE**, here are the readings:\n\n### **Printed Row Labels (as they appear left-to-right):**\n`Reisfelder.` · `Geltripe.` · `Wälder.` · `Schotter und Sandgruben` · `Lehmgruben` · `Steinbrüche` · `Torfstiche.` · `Nakte Felsen.` · `Oedungen.` · `Flüsse oder Bäche.` · `Seen oder Teiche.` · `Meer Salinen.` · `Weg Parzellen.` · `Bau Parzellen.`\n\n---\n\n### **Handwritten Numbers (Joch / Klft):**\n\n| Row Label | Joch | Klft |\n| :--- | :--- | :--- |\n| **Reisfelder.** | empty | empty |\n| **Geltripe.** | empty | empty |\n| **Wälder.** | **empty** | **empty** |\n| **Schotter und Sandgruben** | empty | empty |\n| **Lehmgruben** | empty | empty |\n| **Steinbrüche** | empty | empty |\n| **Torfstiche.** | empty | empty |\n| **Nakte Felsen.** | empty | empty |\n| **Oedungen.** | **1** | **478** |\n| **Flüsse oder Bäche.** | empty | empty |\n| **Seen oder Teiche.** | empty | empty |\n| **Meer Salinen.** | empty | empty |\n| **Weg Parzellen.** | empty | empty |\n| **Bau Parzellen.** | empty | empty |\n\n---\n\n### **ANSWERS to KEY QUESTIONS:**\n\n**(1) the Walder row — truly empty or does it have a number?**\n→ **TRULY EMPTY.** The cells for `Wälder.` (both Joch and Klft columns) are completely blank; there is no handwritten number.\n\n**(2) the Oedungen row — CONFIRM or CORRECT digit by digit:**\n→ **CONFIRMED as `1` Joch and `478` Klafter.**\n*   **Joch digit:** It is clearly a **`1`** (not a 2). It is written with a single upward stroke and a small top hook/flag, which is distinct from the looped or angled base of a '2' seen elsewhere in the document (e.g., the '2' in \"2. 132\" at the far left).\n*   **Klafter digits:** They read **`4` - `7` - `8`**.\n    *   The first digit is an open-top **`4`**.\n    *   The second digit has a clear horizontal cross-bar, making it a **`7`**.\n    *   The third digit is a closed-loop **`8`** (it does not have the flat top of a '6' or the angular shape of other numbers).\n\n**(3) any other rows with numbers in this band?**\n→ **NO.** Apart from the **Oedungen.** row, every other row in this middle band (`Reisfelder.` through `Bau Parzellen.`) is **empty**.\n\n(klic 6, glava strani):\nProvinz Illyrien\n[?]\nAUSWEIS\nüber die Benützungsart des Bodens, für die Gemeinde. [?]\n9 3\nF\nT\nAuf dem Flächenraume befinden sich:\n\n(klic 7, spodnji pas z datumom):\nBased on the image provided, here is the transcription of the bottom strip of the 1825 land-use form for Gemeinde GRÜBLE:\n\n**(1) Date:**\n**den 10 Jenner 1825**\n*   **Day:** 10\n*   **Month:** **Jenner** (written clearly with a capital 'J' and a distinctive 'J' at the start of the word, followed by 'enner'. It is *not* 'Jänner' or 'Januar').\n*   **Year:** 1825\n\n**(2) Signatures and Titles:**\nThere are **3 signatures** present.\n\n*   **Signature 1 (Left, large cursive):**\n    *   **Reading:** **Ott Gruber** [~] (or possibly **Ott Grauer** [~])\n    *   **Details:** This is a very flourished signature. The first name looks like \"Ott\" (or \"Otto\" with the final 'o' merged). The surname starts with a clear capital 'G', followed by what looks like 'r-u-b-e-r' or 'r-a-u-e-r'. Given the context of Austrian/German names of that era, **Gruber** is a strong candidate, though the 'b' is written in a way that could be mistaken for other letters. I am marking it as uncertain [~].\n\n*   **Signature 2 (Bottom Left, below Signature 1):**\n    *   **Title/Text before signature:** **gezeichnet :** (meaning \"signed by:\")\n    *   **Reading:** **[?] Hilmayer [?]st[?]** (or **Hilmeier**, **Hillmayer**, etc.)\n    *   **Details:** The first part is extremely difficult to read due to the cursive style and fading. It might be a first name or an abbreviation. The surname appears to start with 'H', followed by 'i-l-m-a-y-e-r' or similar. The ending is cut off or abbreviated. This is largely illegible [?].\n\n*   **Signature 3 (Right, inside an oval stamp/border):**\n    *   **Reading:** **Nedungguth** [~] (or **Nedunguth**, **Nedunggut**)\n    *   **Title below signature:** **n[ach]gesehn** (meaning \"reviewed\" or \"countersigned\")\n    *   **Details:** The first letter is a capital 'N'. The rest is a complex cursive: 'e-d-u-n-g-g-u-t-h' seems to be the most likely reading, but it could also be 'Niederguth' or similar. The 'gg' or 'dg' part is particularly unclear. Marked as uncertain [~]. The word below it is clearly \"nachgesehn\" with the 'a' and 'ch' slightly abbreviated/faded but readable.\n\n**(3) Other Text:**\n*   To the right of the date, there is printed text: **Area der ganzen Gemeinde :...** (Area of the whole community: ...)\n*   In the table above the signatures, there are numbers: **1476 21 142 ... 46 1127 4 889 ... 73 1024 ... 1225 1513** (these appear to be area calculations in some units, likely Joch or similar).\n\n**Summary of findings:**\n*   **Date:** den 10 Jenner 1825\n*   **Signatures:** 3 total.\n    1.  Ott Gruber [~]\n    2.  [?] Hilmayer [?]st[?]\n    3.  Nedungguth [~] (with \"nachgesehn\" underneath)",
+      "extracted": {
+        "header": {
+          "provinceAsWritten": "Provinz Illyrien",
+          "provinceConfidence": "srednje-visoka (2/2 klica)",
+          "kreisAsWritten": "[~]Kreis Neustadtl",
+          "kreisConfidence": "nizka-srednja (1 klic prebere 'Neustadtl', drugi klic [?])",
+          "titleAsWritten": "AUSWEIS über die Benützungsart des Bodens, für die Gemeinde [~Grüble]",
+          "titleConfidence": "srednje-visoka",
+          "handwrittenNumbers": "93 [~] (pri naslovu, 2 klica), 4 [?] (ob imenu občine, 1 klic), 'III 0' [?] (1 klic) — pomen nejasen (verjetno št. proda/strani)",
+          "firstTableLine": "Auf dem Flächenraume befinden sich:"
+        },
+        "cultures": [
+          {
+            "cultureAsWritten": "Gemüse Gärten.",
+            "joch": 2,
+            "klafter": 123,
+            "confirmations": "2/2 klica",
+            "confidence": "visoka"
+          },
+          {
+            "cultureAsWritten": "Obst Gärten.",
+            "joch": null,
+            "klafter": null,
+            "confirmations": "prazno (2/2)",
+            "confidence": "visoka (prazna vrstica)"
+          },
+          {
+            "cultureAsWritten": "Zier Gärten.",
+            "joch": null,
+            "klafter": null,
+            "confirmations": "prazno (2/2)",
+            "confidence": "visoka (prazna vrstica)"
+          },
+          {
+            "cultureAsWritten": "Wein Gärten.",
+            "joch": 7,
+            "klafter": 665,
+            "confirmations": "2/2 klica",
+            "confidence": "visoka"
+          },
+          {
+            "cultureAsWritten": "Hopfen Gärten.",
+            "joch": null,
+            "klafter": null,
+            "confirmations": "prazno (2/2)",
+            "confidence": "visoka (prazna vrstica)"
+          },
+          {
+            "cultureAsWritten": "Wiesen.",
+            "joch": 76,
+            "klafter": 1480,
+            "confirmations": "2/2 klica",
+            "confidence": "visoka"
+          },
+          {
+            "cultureAsWritten": "Wiesen mit Obstbäumen.",
+            "joch": 12,
+            "klafter": 328,
+            "confirmations": "2/2 klica",
+            "confidence": "visoka"
+          },
+          {
+            "cultureAsWritten": "Weiden.",
+            "joch": 636,
+            "klafter": 263,
+            "confirmations": "2/2 klica + eksplicitna preverba oznake ('Weiden', NE 'Wälder')",
+            "confidence": "visoka"
+          },
+          {
+            "cultureAsWritten": "Sümpfe.",
+            "joch": null,
+            "klafter": null,
+            "confirmations": "prazno (2/2)",
+            "confidence": "visoka (prazna vrstica)"
+          },
+          {
+            "cultureAsWritten": "Sümpfe mit Rohrwuchs.",
+            "joch": null,
+            "klafter": null,
+            "confirmations": "prazno (2/2)",
+            "confidence": "visoka (prazna vrstica)"
+          },
+          {
+            "cultureAsWritten": "Aecker.",
+            "joch": 413,
+            "klafter": 870,
+            "confirmations": "2/2 klica",
+            "confidence": "visoka"
+          },
+          {
+            "cultureAsWritten": "Aecker mit Obstbäume. / Aecker mit Oelbäume. / Aecker mit Weinreben. / Aecker mit Bäume und Weinreben.",
+            "joch": null,
+            "klafter": null,
+            "confirmations": "prazno (2/2)",
+            "confidence": "visoka (prazne vrstice)"
+          },
+          {
+            "cultureAsWritten": "Reisfelder. / Geltripe.",
+            "joch": null,
+            "klafter": null,
+            "confirmations": "prazno (2/2)",
+            "confidence": "visoka (prazne vrstice)"
+          },
+          {
+            "cultureAsWritten": "Wälder.",
+            "joch": null,
+            "klafter": null,
+            "confirmations": "PRAZNO — 3/3 klici potrdijo, da vrstica 'Wälder.' NI izpolnjena",
+            "confidence": "visoka za samo praznost — VOSEK ZA ČLOVEŠKO PREVERBO: presenetljiv podatek (gozd v izkazu 1825 ni izkazan; večina 'gozdnate' površine je najbrž v 636 jochih 'Weiden')"
+          },
+          {
+            "cultureAsWritten": "Schotter und Sandgruben / Lehmgruben / Steinbrüche / Torfstiche / Nakte Felsen.",
+            "joch": null,
+            "klafter": null,
+            "confirmations": "prazno (2/2)",
+            "confidence": "visoka (prazne vrstice)"
+          },
+          {
+            "cultureAsWritten": "Oedungen.",
+            "joch": 1,
+            "klafter": "476 [~alternativa 478]",
+            "confirmations": "476: 2 klica; 478: 1 klic (z utemeljitvijo črk) — ena števka negotova",
+            "confidence": "srednja"
+          },
+          {
+            "cultureAsWritten": "Flüsse oder Bäche.",
+            "joch": 21,
+            "klafter": 142,
+            "confirmations": "2/2 klica",
+            "confidence": "visoka"
+          },
+          {
+            "cultureAsWritten": "Seen oder Teiche. / Meer Salinen.",
+            "joch": null,
+            "klafter": null,
+            "confirmations": "prazno (2/2)",
+            "confidence": "visoka (prazni vrstici)"
+          },
+          {
+            "cultureAsWritten": "Weg Parzellen.",
+            "joch": 46,
+            "klafter": 1127,
+            "confirmations": "2/2 klica",
+            "confidence": "visoka"
+          },
+          {
+            "cultureAsWritten": "Bau Parzellen.",
+            "joch": 4,
+            "klafter": 889,
+            "confirmations": "2/2 klica",
+            "confidence": "visoka"
+          }
+        ],
+        "totals": {
+          "subtotal1AsWritten": {
+            "labelAsWritten": "Ganze Area der Gemeinde.",
+            "joch": 1148,
+            "klafter": 539,
+            "confidence": "srednje-visoka (2/2 klica prebereta 539)"
+          },
+          "subtotal1Computed": {
+            "joch": 1148,
+            "klafter": 529,
+            "note": "vsota strojno prebranih vrstic 1. sklopa; PRIPOMBA: zapis na obrazcu (539) se od vsote vrstic (529) razlikuje za 10 kvadratnih klafterjev — bodisi je ena števka narobe prebrana (2×), bodisi je pisar 1825 seštel z napako 10 Kl; človeška preverba zaželena"
+          },
+          "subtotal2AsWritten": {
+            "labelAsWritten": "[~] (vsota 2. sklopa)",
+            "joch": 73,
+            "klafter": 1024,
+            "confidence": "srednje-visoka (2/2 klica prebereta 1024)"
+          },
+          "subtotal2Computed": {
+            "joch": 72,
+            "klafter": 1036,
+            "note": "vsota vrstic 2. sklopa (z Oedungen 1/476: 72 J 1036 Kl; z 1/478: 72 J 1038 Kl); zapis (73/1024) odstopa za ~1 Joch in ~12 Kl — bodisi manjka ~1 Joch v prebranih vrsticah (npr. Oedungen 2/...?), bodisi je napaka v zapisu/pisarju; človeška preverba zaželena"
+          },
+          "grandTotalAsWritten": {
+            "labelAsWritten": "Area der ganzen Gemeinde.",
+            "joch": "1221 [~alternativa 1225]",
+            "klafter": "1513 [~alternativa 1563]",
+            "confidence": "srednja — '1221' v 2 klicih + aritmetika subtotalov (1148+73=1221) podpira 1221; zadnja števka 1/5 negotova; '1513' v 3 klicih, ARAITMETIKA pa kaže 1563 (539+1024)"
+          },
+          "grandTotalComputed": {
+            "joch": 1221,
+            "klafter": 1563,
+            "note": "vsota zapisanih subtotalov = 1221 J 1563 Kl; ujema se z '1221' + kaže, da je '1513' morebiti napačno prebran '1563'"
+          },
+          "crossChecksWithOtherSeries": [
+            "PR-2 razsežnosti: 1028 × 1884 klafterjev = 1.936.752 kv. klafterjev = 1210,5 joch → od PV skupne površine (1221,95 joch po aritmetiki; 1221,95 [~1513/1600]) odstopa <1 % — MOČAN indikator pravilnosti obeh branj",
+            "Sodobna katastralna občina Griblje meri približno 7,0 km² ≈ 703 ha ≈ 1222 joch — odlična ujemanje s 1221/1225 joch"
+          ]
+        },
+        "date": {
+          "asWritten": "den 10 Jenner 1825",
+          "confidence": "visoka (2/2 neodvisna klica prebereta isto; 'Jenner' je takratna oblika za Jänner)"
+        },
+        "signatures": {
+          "count": "3 podpisi (1 klic) / 2-3 (drugi klic) — parafi",
+          "readings": [
+            "[~]Ott Gruber / Grauer [?]",
+            "'gezeichnet:' + [~]Hilmayer/Hilmeier/Hillmayer [?]",
+            "[~]Nedungguth/Niederguth [?] z napisom 'n[ach]gesehn'"
+          ],
+          "confidence": "NEBRALJIVO — vsi vnosi zgolj kandidati črk"
+        },
+        "stamps": "ni razločnih žigov"
+      }
+    }
+  ],
+  "qualityNoteSi": "PV-1 je bila med tremi serijami daleč najbolj berljiva: obrazec je tiskan, ročno vpisane številke pa so v 2-3 neodvisnih klicih prebrane enako za VSE izpolnjene vrstice (Gemüse Gärten 2 J 123 Kl; Wein Gärten 7 J 665 Kl; Wiesen 76 J 1480 Kl; Wiesen mit Obstbäumen 12 J 328 Kl; Weiden 636 J 263 Kl; Aecker 413 J 870 Kl; Flüsse oder Bäche 21 J 142 Kl; Weg Parzellen 46 J 1127 Kl; Bau Parzellen 4 J 889 Kl; Oedungen 1 J 476/478 Kl) — te vrednosti štejemo za zanesljive. Datum 'den 10 Jenner 1825' je potrjen dvakrat. Ostaja pet odprtih točk, ki zahtevajo človeški pogled: (1) klafter-ostanki subtotalov se ne seštejejo TOČNO — 1. sklop: vrstice sešteje 1148 J 529 Kl, zapis pravi 539; 2. sklop: vrstice ~72 J 1036 Kl, zapis 73/1024; glavna vsota zapisana 1221 [~1225] J 1513 [~1563 po aritmetiki] Kl — odstopanja 10–50 kvadratnih klafterjev so bodisi enojne napačno prebrane števke bodisi pisarske napake iz leta 1825; (2) vrstica 'Wälder.' je PRAZNA (3/3 klici) — gozd v izkazu ni izkazan, kar je presenetljivo in morebiti pomembno zgodovinsko dejstvo (vse 'gozdnate' površine so morda zajete v 636 jochih pašnikov 'Weiden'); (3) Kreis 'Neustadtl' je prebran le v enem klicu; (4) ročne številke 93/4/III 0 pri glavi so nejasnega pomena; (5) trije podpisi so nebraljivi parafi (kandidati: Gruber?, Hilmayer?, Nedungguth?). Najmočnejša zunanja potrditev: aritmetični križ s serijo PR — 1028 × 1884 klafterjev = 1210,5 joch je od PV skupne površine oddaljen <1 %, sodobna k.o. Griblje (~7,0 km² ≈ 1222 joch) pa se ujema praktično točno."
+}

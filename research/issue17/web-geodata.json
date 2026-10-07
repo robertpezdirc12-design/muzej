@@ -1,0 +1,165 @@
+{
+  "verifiedAt": "2026-10-07",
+  "osm": {
+    "buildingsTotal": 449,
+    "buildingsTotalNote": "Vsi building ways v bbox k.o. Griblje (45.555–45.582, 15.275–15.305); vključuje obrezane sosednje naselje/zaselke (Dragoši, Mošanci, Ertić, obrobje Dolenjci/Sračak). Za jedro naselja Griblje: ~301 stavba (atribucija najbližji poimenovani cesti 'Griblje' ali addr:street=Griblje).",
+    "withHouseNumbers": 55,
+    "withHouseNumbersNote": "49 x addr:street=Griblje (37 različnih hišnih št., obseg 23–85) + 6 x Dragoši (1–5, 4A). Hišne številke delno iz GURS import (ref:gurs:hs_mid, source:date 1995–2015). Pokritost št.: delna (~1/3 pričakovanih).",
+    "streets": ["Griblje", "Dragoši"],
+    "highwayWays": {"Griblje": 21, "Dragoši": 1, "Sračak": 1, "Dolenjci": 1},
+    "church": {
+      "name": "Sv. Vid",
+      "lat": 45.5676768,
+      "lng": 15.2903882,
+      "osmWay": 284847361,
+      "tags": {"amenity": "place_of_worship", "building": "church", "religion": "christian"},
+      "esd2122Match": "OSM pozicija 45.56768/15.29039 vs EŠD 2122 približek 45.5676/15.2903 → Δ ≈ 12 m — odlično sidro za muzejski CHURCH."
+    },
+    "chapel": {"name": "Sv. Marija škapulirska", "lat": 45.5664956, "lng": 15.2950637, "osmWay": 1311578105, "building": "chapel"},
+    "school": {
+      "present": false,
+      "note": "V OSM bbox k.o. Griblje NI objekta amenity=school/kindergarten (ne node ne way)."
+    },
+    "villageNode": {
+      "osmId": 468490150,
+      "lat": 45.5724588,
+      "lng": 15.2925651,
+      "tags": {
+        "name": "Griblje", "name:de": "Grüble", "name:sl": "Griblje", "name:ru": "Грибле",
+        "place": "village", "population": "356", "addr:postcode": "8332",
+        "wikidata": "Q2531566", "wikipedia": "sl:Griblje"
+      },
+      "wikidataCrosscheck": "Q2531566: prebivalstvo 334 (stanje 2020-01-01, Wikidata P1082); občina Črnomelj (Q3482211)."
+    },
+    "buildingsWithinChurchRadius": {"500m": 189, "800m": 305, "1200m": 361, "2000m": 449},
+    "dataFreshness": "Tagi way: 2011-09-11 → 2026-01-31 (aktivno vzdrževanje); viri: GURS importi (hišne št./geometrije 1995–2015), RABA-KGZ 2017 (raba tal).",
+    "comparison": {
+      "osm2026": 301,
+      "osm2026bboxAll": 449,
+      "kataster1825Bauplatze": 102,
+      "houseRegister1825": 80,
+      "museumUi": 156,
+      "note": "Trije številski redi: 1825 kataster = 102 Bauplätze (PSE-143, vsota 102+2505=2607) + hišni register 80 hiš (št. 1–98); muzejska UI = 156 vektoriziranih stavbnih objektov z lista A02 (status RECONSTRUCTED — objektna geometrija, ne katastrske parcele); OSM 2026 = ~301 stavba v jedru naselja (449 v celem k.o. bboxu z železnimi sosedi). Razmerja: 1825→OSM ≈ 3,0×; 156 (vekt. objekti A02) vs 102 (Bauplätze) = +54, najbrž drobnejša segmentacija poslopij (gospodarska poslopja, dvojni objekti na parceli). OSM je vir za 'danes', ne za 1825."
+    }
+  },
+  "sources": [
+    {
+      "id": "osm",
+      "name": "OpenStreetMap (api.openstreetmap.org/api/0.6/map)",
+      "status": "VERIFIED",
+      "url": "https://api.openstreetmap.org/api/0.6/map?bbox=15.275,45.555,15.305,45.582",
+      "coverage": "yes — cel k.o. Griblje (3,9 MB XML: 16.765 nodes, 1.001 way, 68 relations)",
+      "resolution": "stavbne geometrije (449 way zgradb v bbox; 49 hišnih št. Griblje); ceste Griblje 21 way",
+      "freshness": "zadnji edit 2026-01-31; GURS-importi 1995–2015",
+      "licence": "ODbL",
+      "usability": "Neposredno uporaben za Atlas kot plast 'danes' (stavbe, ceste, cerkev Sv. Vid kot sidro); hišne številke delne, zato 1825↔danes povezavo graditi po geometriji."
+    },
+    {
+      "id": "overpass",
+      "name": "Overpass API (overpass-api.de / kumi / private.coffee / mail.ru)",
+      "status": "UNREACHABLE-FROM-SANDBOX",
+      "url": "https://overpass-api.de/api/interpreter",
+      "coverage": "n/a iz tega peskovnika: TCP povezava zavrnjena (443); kumi/private.coffee → HTTP 500; maps.mail.ru → 504; overpass.osm.ch odgovori, a vsebuje le Švico (0 elementov)",
+      "resolution": "n/a",
+      "licence": "ODbL (ko deluje)",
+      "usability": "Za produkcijski klic iz Vercela bo Overpass verjetno deloval (omejitev je sandbox), a za enkratne poizvedbe je api.openstreetmap.org/api/0.6/map dokazana nadomestka."
+    },
+    {
+      "id": "clss",
+      "name": "CLSS — Pregledovalnik podatkov cikličnega laserskega skeniranja Slovenije (GURS)",
+      "status": "VERIFIED",
+      "url": "https://clss.si",
+      "coverage": "yes — celotna Slovenija (tudi Griblje); tekoči cikel CLSS 2023–2025 (km mreža)",
+      "resolution": "2D+3D pregledovalnik; sloji: popolni ortofoto, analitično senčenje (PAS), oblak točk; prenos produktov po kvadrantih: GKOT (.laz), DMR (.laz), DMP (.laz), nDMP (.tif), PAS (.tif)",
+      "freshness": "cikel 2023–2025 (predhodna 2014–15, 2017–19)",
+      "licence": "javno brezplačen dostop brez prijave (GURS); navedba vira",
+      "usability": "Zelo uporaben: uradna 'Funkcija za razvijalce' podpira deep-link https://clss.si/?center=X||Y&srid=3794&scale=2000&pitch=45&z=1200 — za Griblje center=522667||47571 (cerkev) → gumb '3D danes' v Atlasu."
+    },
+    {
+      "id": "gurs-ipi-jv",
+      "name": "GURS Javni vpogled v podatke o nepremičninah (ipi.eprostor.gov.si/jv)",
+      "status": "VERIFIED",
+      "url": "https://ipi.eprostor.gov.si/jv/",
+      "coverage": "yes — kataster zemljiških parcel (ZKN), stavbe, hišne številke za Griblje",
+      "resolution": "parcelna natančnost (kataster)",
+      "freshness": "tekli ZKN",
+      "licence": "javni vpogled brezplačen; vir GURS",
+      "usability": "Uporaben za ročno preverjanje parcel/hišnih št. Griblje, ne za programsko vlečenje (ni odprtega API-ja)."
+    },
+    {
+      "id": "gurs-geoprostor",
+      "name": "geoprostor.net (GURS/PISO portal za WMS/WFS)",
+      "status": "PARTIAL",
+      "url": "https://geoprostor.net/",
+      "coverage": "portal dosegljiv (HTTP 200, SPA), a testirane poti /ows/*, /ows2/*, /arcgis/rest/* → 302 na PisoPortal 'stran ni najdena'; dejanski WMS/WFS endpointi niso javno potrjeni",
+      "licence": "GURS",
+      "usability": "Ne zanašati se na programski WMS iz geoprostor.net; raje ARSO DOF/DMR ali OSM za podlago."
+    },
+    {
+      "id": "gurs-ipkp-prostor3-egp",
+      "name": "ipkp.eprostor.gov.si / prostor3.gov.si / egp.gu.gov.si / store.mkgp.gov.si",
+      "status": "DEAD-OR-UNREACHABLE",
+      "url": "https://prostor3.gov.si/",
+      "coverage": "ipkp + egp + store.mkgp: DNS NE razreši (odstranjene domene); prostor3.gov.si: HTTP 200, a TLS veriga v peskovniku nepopolna (cert opozorilo)",
+      "licence": "GURS",
+      "usability": "Stari katastrski pregledovalniki (ipkp/egp) so ugasnjeni — v muzeju raje navesti ipi.eprostor.gov.si/jv in clss.si."
+    },
+    {
+      "id": "arso-dof",
+      "name": "ARSO ortofoto DOF_D96TM_2022_2023_2024 (MapServer)",
+      "status": "VERIFIED",
+      "url": "https://gis.arso.gov.si/arcgis/rest/services/DOF_D96TM_2022_2023_2024/MapServer",
+      "coverage": "yes — celotna RS, EPSG:3794 (D96/TM); dokazano na Griblju: export 300×300 m na cerkvi vrnil 32 KB PNG",
+      "resolution": "DOF_25 — 25 cm/piksel, 17 LOD, maxScale 1:1000, 256 px ploščice, cached",
+      "freshness": "cikel 2022–2024",
+      "licence": "Odprti podatki ARSO (Licenca ARSO, navedba vira)",
+      "usability": "Najboljša javna rasterska podlaga 'danes' za primerjavo z listom A02 1825 (isti koordinatni sistem D96TM/EPSG:3794)."
+    },
+    {
+      "id": "arso-dmr",
+      "name": "ARSO DMR Slovenija_DMR_D96TM (ImageServer)",
+      "status": "VERIFIED",
+      "url": "https://gis.arso.gov.si/arcgis/rest/services/Slovenija_DMR_D96TM/ImageServer",
+      "coverage": "yes — celotna RS (extent x 374–626 k, y 31–195 k, EPSG:3794); dokazano: exportImage 240×240 m na cerkvi (45.56768/15.29039) vrnil sliko",
+      "resolution": "1 m/piksel (pixelSizeX=1), F32, 1 kanal",
+      "freshness": "iz LiDAR/CLSS",
+      "licence": "Odprti podatki ARSO",
+      "usability": "Uporaben za teren pod 3D-sceno; CLSS nudi novejše/gostejše izdelke po kvadrantih."
+    },
+    {
+      "id": "giskd",
+      "name": "GisKD pregledovalnik — Register nepremične kulturne dediščine (geohub.gov.si)",
+      "status": "VERIFIED",
+      "url": "https://geohub.gov.si/ghapp/giskd/?find=2122&locale=sl",
+      "coverage": "yes — EŠD 2122 (podružnična cerkev sv. Vid, Griblje; sakralna stavbna dediščina, 'enotno zasnovana baročna cerkev iz 18. stol.') je javno vpogledna v pregledovalniku; tudi eVRD (pravni režimi)",
+      "resolution": "objektna natančnost registra (EŠD enote)",
+      "freshness": "tekli register (Ministrstvo za kulturo)",
+      "licence": "javni vpogled brezplačen (vir: Ministrstvo za kulturo / ZVKDS)",
+      "usability": "Direktna javna povezava na EŠD 2122 obstaja (find=2122) — primeren 'uradni vir' gumb muzeja za dediščino."
+    },
+    {
+      "id": "podatki-gov-si-er",
+      "name": "podatki.gov.si — Register nepremične kulturne dediščine (CKAN)",
+      "status": "VERIFIED",
+      "url": "https://podatki.gov.si/data/register-nepremicne-kulturne-dediscine",
+      "coverage": "yes — nacionalni nabor (10 virov) + 'Izbor iz registra' (CSV/ZIP, Ministrstvo za kulturo, zadnja sprememba 2023-05-04); stari naslovi er.gov.si in rkd.situla.org ne delujejo več",
+      "licence": "odprti podatki",
+      "usability": "Strojno berljiv izvoz registra (CSV) za EŠD 2122/10094/19324/19326 vsebine muzeja."
+    },
+    {
+      "id": "gov-si-teme",
+      "name": "gov.si — tema Register kulturne dediščine",
+      "status": "VERIFIED",
+      "url": "https://www.gov.si/teme/register-kulturne-dediscine/",
+      "coverage": "yes — uradna stran s povezavami na geohub GisKD/ISKD",
+      "licence": "javna informacija",
+      "usability": "Kanonična citacijska povezava muzeja za register."
+    }
+  ],
+  "notes": [
+    "Nominatim iz peskovnika: HTTP 403 (politika avtomatiziranih poizvedb) — v produkciji uporabljati skladno s pogoji.",
+    "OSM place node Griblje 45.57246/15.29257 je ~550 m severno od cerkve — skladno z muzejsko ugotovitvijo, da je jedro zraslo proti severu; residential poligoni: 45.5652/15.2939, 45.5679/15.2918, 45.5725/15.2929.",
+    "Sosednja naselja znotraj bboxa k.o. (ločena po hišnih št.): Dragoši (8341 Adlešiči), Mošanci, Ertić, Sračak, Dolenjci — za 'Griblje-only' štetje uporabiti atribucijo street/najbližja cesta (~301).",
+    "Prebivalstvo: OSM node 356 (brez datuma) vs Wikidata Q2531566: 334 (2020-01-01)."
+  ]
+}

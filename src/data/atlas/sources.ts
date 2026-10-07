@@ -231,7 +231,7 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     thumb: "/atlas/n83-pg-thumb.jpg",
     transferStatus: "TRANSFERRED",
     georefStatus: "NOT_APPLICABLE",
-    structuredEntries: 0,
+    structuredEntries: 1,
     lastVerified: "2026-10-07",
   },
   {
@@ -254,7 +254,7 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     thumb: "/atlas/n83-pr-thumb.jpg",
     transferStatus: "TRANSFERRED",
     georefStatus: "NOT_APPLICABLE",
-    structuredEntries: 0,
+    structuredEntries: 10,
     lastVerified: "2026-10-07",
     noteSi: "Opis meje v nemščini (Kurrent) — prepis iz leta 1825 ni izdelan (TO_COLLECT).",
     noteEn: "Boundary description in German (Kurrent script) — transcription not made yet (TO_COLLECT).",
@@ -279,7 +279,7 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     thumb: "/atlas/n83-ps-thumb.jpg",
     transferStatus: "TRANSFERRED",
     georefStatus: "NOT_APPLICABLE",
-    structuredEntries: 0,
+    structuredEntries: 12,
     lastVerified: "2026-10-07",
     noteSi: "143 strani zemljiških parcel po sekcijah — prepis iz 1825 ni izdelan (TO_COLLECT). Parcelne vrstice iz dokumenta so v pripravljenem podatkovnem modelu (20 vrstic).",
     noteEn: "143 pages of land parcels by sections — the 1825 transcription not made yet (TO_COLLECT). Parcel rows from the document sit in a prepared data model (20 rows).",
@@ -331,7 +331,7 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     thumb: "/atlas/n83-pua-thumb.jpg",
     transferStatus: "TRANSFERRED",
     georefStatus: "NOT_APPLICABLE",
-    structuredEntries: 21,
+    structuredEntries: 39,
     lastVerified: "2026-10-07",
     noteSi:
       "Lastniki po abecedi s hišnimi številkami in parcelami po sekcijah I–V. Prepisane strani A–B (navzkrižno preverjanje imen iz protokola stavbnih parcel): 21 lastnikov strukturiranih; strani C–Ž še niso prepisane.",
@@ -358,7 +358,7 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     thumb: "/atlas/n83-pv-thumb.jpg",
     transferStatus: "TRANSFERRED",
     georefStatus: "NOT_APPLICABLE",
-    structuredEntries: 0,
+    structuredEntries: 10,
     lastVerified: "2026-10-07",
   },
   {
@@ -381,7 +381,7 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     thumb: "/atlas/n83-pz-thumb.jpg",
     transferStatus: "TRANSFERRED",
     georefStatus: "NOT_APPLICABLE",
-    structuredEntries: 0,
+    structuredEntries: 10,
     lastVerified: "2026-10-07",
     noteSi: "Cenilni elaborat 71 strani — prepis ni izdelan (TO_COLLECT).",
     noteEn: "Valuation elaborate, 71 pages — transcription not made yet (TO_COLLECT).",
@@ -586,9 +586,9 @@ export const NEGATIVE_RESULTS: NegativeResult[] = [
     whatEn: "Complete transcription of the Kurrent manuscripts (all 7 written units of N83)",
     status: "REVIEW",
     detailSi:
-      "Vsi prepisi v Atlasu so pomožni strojni očrti rokopisa in zahtevajo paleografsko potrditev. Stanje po serijah (podrobnosti v research.ts KURRENT_SERIES): PT 80/80 stavbnih vrstic (REVIEW), PUA strani A–B (21 lastnikov), PG/PR/PS/PV/PZ pa še niso prepisane. Prepisi hranijo izvorno obliko, normalizirano obliko in status.",
+      "Vsi prepisi v Atlasu so pomožni strojni očrti rokopisa in zahtevajo paleografsko potrditev. Stanje po issue #17 (2026-10-08, podrobnosti v research.ts KURRENT_SERIES): PR 4/4 strani, PG 1/1, PV 1/1 (12 kultur), PS 9 strani vzorčeno + rekapitulacija, PUA 10/49 strani (38 vrstic), PZ 10 strani vzorčeno, PT 8/8 pregledan. Poln prepis PS/PUA/PZ ostaja TO_COLLECT; vsi statusi REVIEW.",
     detailEn:
-      "All transcriptions in the Atlas are machine-assisted readings requiring palaeographic confirmation. Status by series (detail in research.ts KURRENT_SERIES): PT 80/80 building rows (REVIEW), PUA pages A–B (21 owners), while PG/PR/PS/PV/PZ are not transcribed yet. Transcriptions keep the original form, a normalised form and a status.",
+      "All transcriptions in the Atlas are machine-assisted readings requiring palaeographic confirmation. Status after issue #17 (2026-10-08, detail in research.ts KURRENT_SERIES): PR 4/4 pages, PG 1/1, PV 1/1 (12 cultures), PS 9 pages sampled + recapitulation, PUA 10/49 pages (38 rows), PZ 10 pages sampled, PT 8/8 reviewed. The full PS/PUA/PZ transcription remains TO_COLLECT; all statuses REVIEW.",
   },
   {
     id: "neg-1812",
@@ -639,5 +639,45 @@ export const NEGATIVE_RESULTS: NegativeResult[] = [
       "Preiskani VSI razpoložljivi viri (2026-10-07): (1) trenutni extra.json — postaje 1–31, 33–35; (2) izvirni repo pred incidentom (git bundle muzej-backup-20261007, VSEH 25 commitov od 2d9ac9b do 4896f35) — postaja 32 v nobeni različici ni nikoli obstajala; (3) vir podatkov = scrape izvirnega spletišča (zadnji delujoči Vercel deployment 2026-10-06 11:32) — vrzel izhaja že iz izvirnika; (4) surove scrape datoteke (download/) niso ohranjene. Sklep: postaja 32 v izvirniku ni bila objavljena ali je bila izpuščena pred objavo. Po pravilu issueja #4 vsebine NE izmišljujemo — vrzel je vidno označena v sprehodu (mesto 32) in v QA (zaporedje 1–35 z eksplicitnim NOT_FOUND).",
     detailEn:
       "All available sources searched (2026-10-07): (1) current extra.json — stations 1–31, 33–35; (2) the pre-incident original repo (git bundle muzej-backup-20261007, ALL 25 commits from 2d9ac9b to 4896f35) — station 32 never existed in any version; (3) the data source = a scrape of the original website (last working Vercel deployment 2026-10-06 11:32) — the gap originates in the original itself; (4) raw scrape files (download/) are not preserved. Conclusion: station 32 was never published in the original, or was dropped before publication. Per issue #4 no content is invented — the gap is visibly marked in the walk (slot 32) and in QA (sequence 1–35 with an explicit NOT_FOUND).",
+  },
+  {
+    id: "neg-matice",
+    whatSi: "matice.si — domnevni portal katastrskih skenov",
+    whatEn: "matice.si — an assumed portal of cadastral scans",
+    status: "NOT_FOUND",
+    detailSi:
+      "Iskano 2026-10-08 (issue #17): DNS domene matice.si se ne razreši; spletni iskalniki takega vira ne poznajo (poizvedbe 'matice.si Črnomelj', 'matice.si kataster Griblje'). SKLEP: vir ne obstaja (ali je ugasnjen). Skeni franciscejskega katastra za Griblje ostajajo na VAČ (N083, javno) — to je potrjena pot.",
+    detailEn:
+      "Searched 2026-10-08 (issue #17): the matice.si DNS does not resolve; search engines do not know such a source (queries 'matice.si Črnomelj', 'matice.si kataster Griblje'). CONCLUSION: the source does not exist (or is defunct). The Griblje Franciscean cadastre scans remain on VAČ (N083, public) — that is the confirmed path.",
+  },
+  {
+    id: "neg-e-ars",
+    whatSi: "www.e-ars.si — domnevni portal digitaliziranih enot Arhiva RS",
+    whatEn: "www.e-ars.si — an assumed portal of digitised Arhiv RS units",
+    status: "NOT_FOUND",
+    detailSi:
+      "Iskano 2026-10-08 (issue #17): DNS www.e-ars.si je mrtev. Celoten SI AS 176/N83 Griblje pa JE javno dostopen v VAČ (OPSI zbirka 'Digitalizirano arhivsko gradivo starih katastrov') — digitalizacija ARS torej obstaja, dostopna je prek VAČ, ne prek ločenega portala e-ars.si.",
+    detailEn:
+      "Searched 2026-10-08 (issue #17): the www.e-ars.si DNS is dead. The whole SI AS 176/N83 Griblje IS however publicly accessible via VAČ (the OPSI collection 'Digitalised archival material of the old cadastres') — the ARS digitisation exists, reachable through VAČ, not through a separate e-ars.si portal.",
+  },
+  {
+    id: "neg-pz-recap",
+    whatSi: "PZ — Rekapitulacija kultur/razredov na koncu elaborata",
+    whatEn: "PZ — a recapitulation of cultures/classes at the end of the elaborate",
+    status: "NOT_FOUND",
+    detailSi:
+      "Iskano 2026-10-08 (issue #17): vzorčene končne strani PZ 68–71 vsebujejo IZKLJUČNO administrativne protokole (Vorlage, Geprüft, Nachtrag s 'hus Zins' seznamom, zaključek 'Gemacht den 28ten Juli 1825') — kulturna rekapitulacija NI tam. Cenilne tabele po kulturah in razredih so v sredini (str. ~4–67; vzorčene str. 20/30/40/50/60). Naslednji korak: ciljano branje str. 4–67.",
+    detailEn:
+      "Searched 2026-10-08 (issue #17): the sampled end pages PZ 68–71 contain ONLY administrative protocols (Vorlage, Geprüft, a Nachtrag with the 'hus Zins' list, the closing 'Gemacht den 28ten Juli 1825') — no culture recapitulation is there. The valuation tables by culture and class sit in the middle (pp. ~4–67; sampled pp. 20/30/40/50/60). Next step: a targeted read of pp. 4–67.",
+  },
+  {
+    id: "neg-oral-interviews",
+    whatSi: "Posneti intervjuji ustne zgodovine",
+    whatEn: "Recorded oral-history interviews",
+    status: "TO_COLLECT",
+    detailSi:
+      "Iskano 2026-10-08 (issue #17): javno dostopnih posnetih pričevanj domačinov Gribelj NI (teme obstajajo: Pasuljada, tamburaši, dogodki, šola). Pripravljen je raziskovalni protokol v1.0 (research.ts ORAL_HISTORY_PROTOCOL: 4 faze, soglasje, pravice, 5 pravil). ORAL_INTERVIEWS ostane prazen — ne izmišljujemo intervjujev; prvi snemalni korak je na živi strani.",
+    detailEn:
+      "Searched 2026-10-08 (issue #17): no publicly accessible recorded testimonies of Griblje villagers exist (the topics do: the bean feast, tamburica players, events, school). A research protocol v1.0 is prepared (research.ts ORAL_HISTORY_PROTOCOL: 4 stages, consent, rights, 5 rules). ORAL_INTERVIEWS stays empty — no interviews are invented; the first recording step is on the live side.",
   },
 ];

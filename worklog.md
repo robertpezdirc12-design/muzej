@@ -1414,3 +1414,173 @@ Stage Summary:
 - Repo je ostal EN sam vir resnice brez podvajanj: 0 vsebin prenesenih (novi repo = striktni nadnabor), 0 statusov spremenjenih, 0 funkcij zlomljenih
 - Arhiv markec-group/muzej-arhiv ostaja arhiviran (GitLab ID 87313405) kot zgodovinska kopija — njegova vsebina je 1:1 pokrita z novim repom (razen 2 dokumentiranih infrastrukturnih izjem)
 - Naslednji korak: odprt za nove issueje uporabnika (P3+)
+
+---
+Task ID: 17-c
+Agent: VLM raziskovalec (PS/PZ)
+Task: Struktura PS (143 str. — vzorčne strani) in PZ (71 str. — cenilni profil).
+
+Work Log:
+- PS-001 (naslovnica): "Protocoll Der Grund-Parcellen der Gemeinde GRÜBLE"
+- PS-002: stranski naslov "Grundparzellen Protocoll" + same glave stolpcev (Kultur/Fläche/Classe/Ertrag/Capital/Anmerkung), 'Rubric:' — zasnova tabel, brez podatkov
+- PS-003/004: dvodelna tabela (levo Des Eigenthümers: Nro. des Blattes/Parzelle/Dominical-Rustical/Haus Nro./Vor und Zuname/Stand/Wohnort; desno Des Grundstückes: Kultur Gattung/Joch+Quadrat-Klafter/Classe/Ertrag fl-kr/Capital/Anmerkung); liste II./III., parcele 1–20/21–40; 12 vzorčnih vrstic s hišnimi št. (14, 62, 61, 66, 64, 53, 49, 51 …) in priimki [~] (Krizman, Perdih, Urevč, Popper …) — vsaka vrstica = parcela + hiša + lastnik
+- PSE-140/141: Recapitulation po hišah (Haus Nro. 121½–141 [~], Joch/Klafter/fl/kr; 'Abschluß der Gemeinde' [~]; ~1216 Joch [~]; overovitev 1826 [~]) — dve VLM branji se razhajata (hiše vs. kulture), vse [~]
+- PSE-142: seznam 41–72 z imeni [~] (recap/Bauplätze); PSE-143 (rdeči tuš): "Summa der Bauplätze 102 / Grundparzellen 2505 / Zusammen 2607" — ZANESLJIVO (3 skladna branja)
+- PZ-01: "Catastral-Schätzungs-Elaborat der Gemeinde Grüble / Land Krain, Kreis Neustadtl, Steuerbezirk Krupge [~], S.G. 11.12.16.17.18.20.22.23.24"
+- PZ-02: §2 Gränzen (sosedje: Krasing, Kuhpaß [~], Heilschütz [~], Weidendörfl, Stibusche [~]) + §3 Bevölkerung: 441 preb. (222 m/219 ž), 72 hiš [~], 102 družin [~], prehrana moka/mleko, skromna živina [~]
+- PZ-03: §1 Einleitung/Topographie — Areal 2294 Joch 516 Klafter [~], reka [~'Sava' — verjetneje Kolpa], meja s Hrvaško
+- PZE-68/69/70/71: konec PZ = ADMINISTRATIVEN, ne rekapitulacija: Vorlage (razredi Acker), 'Geprüft …' [~], 'Nachtrag zu dem Grundsteuer-Urbariums-Entwurf' (številčen 'hus Zins' seznam, 2. 7. 1824 [~]), zaključek 'Gemacht den 28ten Juli 1825' + k.k. Dist. Comr [~] → cenilne tabele (kulture × razredi × fl/kr) morajo biti v SREDINI zvoka (~str. 4–67) — naslednji vzorec: str. 20–60
+- Izpis: /tmp/kurrent/out/PS-structure.json + PZ-profile.json (z [~]/[?] zaupnostnimi oznakami)
+
+Stage Summary:
+- PS: hiša→parcela→lastnik je V VSAKI vrstici glavnega registra (Haus Nro. + Vor und Zuname + kultura + površina + razred + izplačilo), vrstice tečejo po Blattih (II, III …), NE po lastnikih → za hišo iščemo po stolpcu Haus Nro. Najbolj uporabno: (1) končna Recapitulation po hišah (str. ~131–143; Haus Nro → skupni Joch/Klafter/fl/kr), (2) kontrolna vsota str. 143 (102+2505=2607) kot checksum, (3) glave Blattov za vzorce imen. Priporočilo: NE transkribirati vseh 143 strani naenkrat — najprej Recapitulation, nato ciljno po hišah.
+- PZ: elaborat je narrativno-administrativen; iz vzorcev TRDO: 441 prebivalcev (222/219), Areal 2294 Joch 516 Klafter [~], zaključek 28. 7. 1825; ekonomija: majhna samozadostna kmetijstva (inferenca: ~5,2 Jocha/preb., večdružinska gospodinjstva, pretežno Acker+Wiese iz PS-vzorca); cenilni razredi/vrednosti NISO na koncu — čakajo v sredini zvoka (~str. 20–60, naslednja seja).
+
+---
+Task ID: 17-a
+Agent: VLM raziskovalec (PR/PG/PV)
+Task: Branje Kurrent serij PR (4 strani), PG (1), PV (1) iz N083 skenov z VLM.
+
+Work Log:
+- PR-1 (naslovnica): 2 VLM klica → zanesljivo "Prod N° 218" (ročno, vijolični črnil, zgoraj desno) + "Grenz-Beschreibung / der Gemeinde / " GRÜBLE" (GRÜBLE tiskan, ostalo ročno); brez žigov/datuma/podpisa (negativen rezultat 2×)
+- PR-2 (meja, besedilo): 5 klicev (prepis + ekstrakcija + 3 fokusirana povečava glave) → razsežnosti 1028 Klafter VZ (stabilno 5/5) × 1884 [~1834] Klafter SJ (3/5); sosedi: "Königreich Croaten" (jug, čez reko; 3×), "Weidendorf" (edino ime, ki se ponovi čez PR+PG), ostala imena brana z različicami (Krasincz/Kremsig, Sribitsche, Pervang/Travnik, Adlerschütz/Alloschütz) = nizka zaupanja; točke No 1–10 (imena nizka, dolžine 60,6?/838/240?/823? se delno ponovijo)
+- PR-3: 2 klica → slovanski mikronimi (Losa, Schimotschi Drani, Vetalachki, Skaize Hardanove, Na Dragi Poleg Vetalachkeg, Hali Grami, Studeni Potok...) + dolžine 326/370/274/170/87/185/86/46,8/185/41 Kl; številčenje točk se med klici RAZHODI (5,6,7… vs 1–10) → točna številka negotova
+- PR-4: 3 klici → konec zanke (meja se zapre), datum "am 8ten April 1825" (2/3 klica isto), 2–3 nebraljiva podpisa-parafa (kandidati črk le), morebitna skupna številka 424,4/424½ [?]
+- PG-1 (Indikationsskizze): 2 klica → "Gemeinde Grüble." + velika številka 83 (2/2; sovpada z N83 — močna zunanja potrditev); zaprt mejni mnogokotnik, reka po vzhodnem robu (modra, ustreza Kolpi) z napisom "Königreich Croatien" na drugi strani (ime reke samo NI prebrano); rdeče zaporedne številke mejnih točk (~1–15 oziroma 1–19 — štetje negotovo); sosedi Weidendorf (jug), Mallertschitsch (vzhod), Trütbach/Pridborsch (zahod, protislovno), sever neberljiv; merilo "1 W. Zoll = 1000 Klafter" [~nenavadno, preveriti]; hiš v notranjosti NI razločnih; podpis neberljiv
+- PV-1 (Nutzungs-Ausweis): 1 klic prepisa + 6 verifikacijskih klicev (povečave leve/desne/sredine/glave/dna) → VSE izpolnjene vrstice potrjene 2–3×: Gemüse Gärten 2 J 123 Kl; Wein Gärten 7 J 665 Kl; Wiesen 76 J 1480 Kl; Wiesen mit Obstbäumen 12 J 328 Kl; Weiden 636 J 263 Kl; Aecker 413 J 870 Kl; Oedungen 1 J 476[~478] Kl; Flüsse oder Bäche 21 J 142 Kl; Weg Parzellen 46 J 1127 Kl; Bau Parzellen 4 J 889 Kl; subtotala 1148 J 539 Kl in 73 J 1024 Kl; glavna vsota "Area der ganzen Gemeinde" 1221[~1225] J 1513[~1563] Kl; "Wälder." PRAZNA vrstica (3/3); glava: Provinz Illyrien (2/2), [~Kreis Neustadtl], ročno 93[?]; datum "den 10 Jenner 1825" (2/2)
+- Aritmetične preverbe (python): vrstice 1. sklopa → 1148 J 529 Kl (zapis 539, Δ10 Kl); 2. sklop → ~72 J 1036 Kl (zapis 73/1024, Δ1 J + 12 Kl); glavna → 1221 J 1563 Kl (zapis 1513, Δ50 Kl) → odstopanja so morebitne enojne napačno prebrane števke ALI pisarske napake 1825 — vse zabeleženo v PV.json
+- Skupno 21 VLM klicev (PR 12, PG 2, PV 7), 429 rate-limit 3× (vzporedni agenti 17-b/c v isti mapi /tmp/kurrent/out) → retry s spanjem je uspel
+- Izpis: /tmp/kurrent/out/PR.json, PG.json, PV.json (raw transkripti vključeni kot provenance; vsi vnosi status REVIEW z oznakami [~]/[?])
+
+Stage Summary:
+- PR: 10 mejnih točk na PR-2 z imeni nizke zaupanja (Hohenstie/Holensthe Busch, Liebstöhe, Halb Dell, Heusch, Krofing, Rudini Pöltsch/Gastei Scheibe, Na öhering...), nadaljevanje na PR-3/4 s slovanskimi mikronimi; skupno število točk NEZNANO TOČNO (ocena 10–20; PG kaže 15–19); sosedi: Königreich Croaten (jug čez Kolpo), Weidendorf (edino stabilno ime), ostala brana nestabilno; razsežnosti 1028 × 1884 [~1834] Kl; meja se zapre; zaključeno 8. 4. 1825
+- KRIŽNA PREVERBA PR×PV: 1028 × 1884 = 1.936.752 kv. kl = 1210,5 joch <1 % od PV skupne površine — obe številki najbrž pravilno prebrani
+- PG: potrjena skica meje z napisom "Gemeinde Grüble" + št. 83; Kolpa kot vzhodna meja s "Königreich Croatien"; rdeče oštevilčene mejne točke za poravnavo s PR
+- PV (najbolj zanesljiva serija): površine 1825 — njive 413 J, pašniki 636 J, travniki 76+12 J, vinogradi 7 J, vrtovi 2 J, odcetje 1 J, vode 21 J, poti 46 J, stavbna zemljišča 4 J, GOZD 0 J (prazna vrstica!); skupaj 1221 [~] joch ≈ 703 ha ≈ sodobni k.o. Griblje (7,0 km²) — odlična ujemanja; datum 10. 1. 1825
+- Vse tri serije: status REVIEW, odprte točke za človeško paleografsko preverbo zabeležene v qualityNoteSi posameznega JSON-a
+
+---
+Task ID: 17-c2
+Agent: VLM raziskovalec (PZ cenilne tabele)
+Task: Vzorčenje srednjih strani PZ (20–60) za cenilne razrede in vrednosti.
+
+Work Log:
+- PZM20 (str. 20): §. 6. Größere gemüß-Gärten — narativni opis + povzetková tabela: skupaj 23 fl 44 kr [~], ~4 Joch [~]; v narativu omenjene vrednosti 105/100 fl [?~] → MEŠANA stran (opis + tabela fl/kr)
+- PZM30 (str. 30): TISKANA oblika »Resultate der benützten Behelfe« — primerjava Ausschuss-angaba vs Commissions-Anspruch; Ackerland razr. I/II s PRIDELKI v n.ö. Metzen (pšenica 12/9, rž 12/9, oves 26[~]/18[~]); Wiesen I/II Heu 14/8 Centner, Grumet 6; Weingärten Most 12 Eimer [~] → pridelek, ne fl
+- PZM40 (str. 40): overovitev + seznam ocenjevalne komisije, »Gemt Grüble den 9ten August 1826« [~]; imena [~] (Laurig Robač, Grony Poppay [~↔PS 'Popper'], Janez Mallygitsch, Grony Pimpfen, Mittl Geiner, Grony Almug, Murnko Pavlicinig, Mitz Jurkobigisch; Bezirkskommissär [~Laurenc Jereompfisch]); opomba »60 fl. Münze« [~]; podpisa [~Oskar Plenckmayr], [~J.J. Pflügzung]
+- PZM50 (str. 50): GLAVNA najdba — »Veranschlagung des Cultur-Aufwandes und Darstellung des Rein-Ertrages«, §. 1. Ackerland, tabela: Classe | Rob-Ertrag pr. Joch | Cultur-Aufwand | Tarif-Berechnung | Anschlag im Gelde | Rein-Ertrag; 3 odčitki se RAZHAJAJO (Rob 20/25 fl 44 kr; Anschlag 8 fl 10½ / 10 fl 30½ / 10 fl 41½; Rein 12/13/15 fl 5 kr) → števke NIZKA zaupanja, struktura 3× stabilna
+- PZM60 (str. 60): §. 8. Bau-Area, ista tabela — Roh-Ertrag 16 fl 50½ kr; Aufwand 9 fl 33¾ kr; Tarif 55 %; Anschlag 9 fl 15½ kr; Rein-Ertrag 7 fl 35 kr → ARITMETIKA SE UJEMA (55 % bruto = 9 fl 15.8 ≈ 9 fl 15½; 1010.5−555.5 = 455 kr = 7 fl 35 kr) ✓; noga »[~Martall] den 18ten Jänner 1834« [~sumljivo] + rdeča opomba »revaluirt« [~]
+- Skupno 7 VLM klicev (5 strani + 2 verifikacijski na str. 50), 0 napak/429
+- Izpis: /tmp/kurrent/out/PZ-valuation.json (valuationRows, classValues, structureConclusion, economicProfileSi, qualityNoteSi)
+
+Stage Summary:
+- OCENJEVALNI PRISTOP PZ = ČISTI DOHODEK (Rein-Ertrag) na ravni KULTURA × RAZRED, ne po parcelah/lastnikih: bruto donos/Joch (pridelki × cene) − tarifirani stroški obdelave (p. 60: 55 % bruto) = neto/Joch; parcelni prenos živi v PS
+- Sredina (pp. 4–67) = MEŠANA: (a) §§ odseki po kulturah z opisom + povzetkom fl/kr (p. 20 § 6), (b) primerjalne pridelkovne tabele Metzen/Centner/Eimer po razredih (p. 30), (c) delo Rein-Ertrag §§ 1–~10 (p. 50 § 1 Ackerland, p. 60 § 8 Bau-Area), (d) overovitve (p. 40, 1826 [~]); 4/5 vzorčenih strani vsebuje tabelo, 0 po lastnikih
+- Zanesljive vrednosti: Bau-Area Rein-Ertrag 7 fl 35 kr/Joch (55 % tarif) ✓arit.; Wiesen Heu 14/8 Centner (I/II) [~]; Acker pridelki 12/9 Metzen (I/II) [~]; Gärten 23 fl 44 kr za ~4 Joch [~]; Acker Cl. I fl-vrednosti NEZANESLJIVE (3 razhajajoča branja)
+- Ekonomski profil 1825 (branja + inferenca ločeno v JSON): živinorejsko-poljedelska struktura (PV: pašniki 636 J > njive 413 J, travniki 88 J, vinogradi 7 J, gozd 0); srednja/skromna rodovitnost (pšenica 9–12 Metzen, 2+ razreda); neto donos ≈ 45 % bruto; vinogradništvo in vrtovi simbolični
+- Naslednji korak: ciljno človeško/paleografsko branje str. ~45–67 (edini vir neto donosov/Joch za vse kulture) + preverba datuma na str. 60 ('1834' [~] ali rdeča revizija)
+
+---
+Task ID: 17-e
+Agent: Geodata raziskovalec
+Task: Dejanska preveritev OSM/CLSS/GURS/ARSO geopodatkov za območje Gribelj.
+
+Work Log:
+- Overpass NEdosegljiv iz peskovnika (overpass-api.de TCP zavrnjen; kumi/private.coffee 500; mail.ru 504; osm.ch = samo Švica) → nadomestek: api.openstreetmap.org/api/0.6/map?bbox=15.275,45.555,15.305,45.582 (3,9 MB XML, 200 OK) + pyproj analiza
+- OSM: 449 stavbnih way v bboxu k.o. (~301 v jedru naselja Griblje po atribuciji ceste); 55 s hišno št. (49 Griblje: 37 št. 23–85 + 6 Dragoši); ceste: Griblje 21 way + Dragoši/Sračak/Dolenjci; Nominatim 403 (politika)
+- Cerkev: OSM way 284847361 "Sv. Vid" 45.56768/15.29039 (Δ≈12 m od EŠD 2122 45.5676/15.2903); kapela Sv. Marija škapulirska 45.56650/15.29506; ŠOLA v OSM: NI je; village node 468490150: 45.57246/15.29257, pop 356, wikidata Q2531566 (WQ: 334 @2020), name:de Grüble
+- Statusi: clss.si 200 (naslov: "Portal CLSS: Pregledovalnik podatkov cikličnega laserskega skeniranja Slovenije"); ipi.eprostor.gov.si/jv 200 ("Javni vpogled v podatke o nepremičninah"); geoprostor.net 200 (WMS poti /ows* → 302 na 404 — PARTIAL); ipkp/egp/store.mkgp DNS mrtev; prostor3.gov.si 200 (TLS veriga v peskovniku)
+- ARSO: DOF_D96TM_2022_2023_2024/MapServer 200 (DOF_25, 25 cm, 17 LOD, EPSG:3794) + export 300 m na cerkvi = 32 KB PNG (dokaz pokritosti); Slovenija_DMR_D96TM/ImageServer 200 (1 m F32) + exportImage na cerkvi OK (D96TM: x=522667, y=47571)
+- CLSS navodila (PDF, assets.flycom.si): produkti po kvadrantih GKOT/DMR/DMP (.laz), nDMP/PAS (.tif), cikel 2023–2025; FUNKCIJA ZA RAZVIJALCE: deep-link https://clss.si/?center=X||Y&srid=3794&scale=2000&pitch&z&rotation → za Griblje center=522667||47571
+- e-ER: GisKD pregledovalnik geohub.gov.si/ghapp/giskd?find=2122 200 (snippet potrjuje EŠD 2122 = podružnična cerkev sv. Vid, Griblje, baročna, 18. stol.); gov.si/teme/register-kulturne-dediscine 200; CKAN podatki.gov.si: "Register nepremične kulturne dediščine" + "Izbor iz registra" (CSV/ZIP, MK, 2023-05-04); rkd.situla.org in er.gov.si NE delujejo več
+- Izpis: /tmp/kurrent/out/web-geodata.json (12 virov, VERIFIED/PARTIAL/DEAD)
+
+Stage Summary:
+- OSM za Griblje je DEJANSKO uporaben: 449 stavb (k.o. bbox) / ~301 (jedro) / 49 hišnih št.; cerkev Sv. Vid 45.56768/15.29039 ≈ EŠD 2122 (~12 m); šole ni; node vasi 550 m N od cerkve (rast vasi na sever potrjena)
+- Primerjava štetja: 1825 = 102 Bauplätze (+80 hiš 1–98, register); muzej UI = 156 vektoriziranih objektov lista A02 (RECONSTRUCTED); OSM 2026 = ~301/449 → trije redi so različne enote (parcelska mesta vs objektna geometrija vs sedanje stavbe) — v Atlasu vedno navesti definicijo števca
+- Delujoči javni viri: OSM (ODbL), ARSO DOF 25 cm 2022–2024 + DMR 1 m (odprti), CLSS 3D pregledovalnik z deep-link API (Griblje: center=522667||47571&srid=3794), GisKD geohub (EŠD 2122 find param), podatki.gov.si CKAN; NE delujejo: ipkp/egp/rkd.situla/er.gov.si; geoprostor.net samo portal
+- Naslednji korak (implementacija): gumb '3D danes' (CLSS deep-link), plast OSM 'danas' in ARSO DOF podlaga v Atlasu; OSM hišne št. NE uporabiti kot zanesljiv ključ za 1825 hiše
+
+---
+Task ID: 17-d
+Agent: Web raziskovalec (arhivi)
+Task: Verifikacija javne dostopnosti virov (SEM F0000212, Gaspari, AS 749, EŠD, šola, 1812, matice, GeoZgodovina, e-ARS).
+
+Work Log:
+- SEM F0000212: web_search + curl fetch etno-muzej.si → javni zapis OBSTOJA (VERIFIED): /sl/digitalne-zbirke/zbirka-starih-fotografij/f0000212 (HTTP 200), 'Enonadstropna hiša na pero, rojstna hiša dr. Nika Županiča', kategorija Hiša, lokacija Griblje, slika javna (/files/oc/f0000212.jpg, 264 KB); avtor in datum na zapisu PRAZNA (kontakt za dokumentarno gradivo: miha.spicek@etno-muzej.si); evd.si = domena naprodaj (NI baza SEM)
+- Gaspari: 'Gaspari Griblje' in sorodne poizvedbe + preverba SEM digitalnih zbirk → za Griblje NIČ; primarni predmet za Belo krajino = 'Belokranjska ohcet' (1924, olje/platno, HRANI SEM — RTV/Dnevnik/Družina, foto Blaž Verbič/SEM, razstava SEM 2024, radio-odeon/preloka.si), javne inventarne št. NI (SEM kljucne-besede/maksim-gaspari = 404) → DOCUMENTED
+- SI AS 749: curl -k (VAČ ima neveljaven SSL cert) → VAČ 4971617 VERIFIED: SI AS 749/3/8/12, 'Izpisek zemljiških parcel ... davčne občine Vinji Vrh, Kot, Griblje, Kaltersberg, Loka, Petrova vas in Krasinec ... za namene zemljiške odveze, 19. st.' (serija /3/8 Zemljiška odveza 1851–1853, 17 enot; fasc. 58; 2 zvezka; javno dostopno, dovoljenje ni potrebno); prek VAČ AJAX tektonike pregledana celotna serija in fond (AS 749, 1587–1901, id 24687) → edina Griblje-enota je /3/8/12 (sosednja /3/8/11 = davčni urad Črnomelj za Vinico/Bojance/Obrh/Zuniče/Učakovce/Bedelj); NI digitalizirana
+- EŠD: web_search + parse javnipodatki.si/kulturna-dediscina/obcina/crnomelj (282 enot) + GisKD → EŠD 2122 = Griblje-Cerkev sv. Vida (spomenik lokalnega pomena, 1526/18. stol.), EŠD 10094 = Griblje-Arheološko najdišče ob Kolpi (registrirana, neolitik–rima), EŠD 11118 = PODZEMELJ-Kučar (Metlika!) — KOREKCIJA: 11118 NI Griblje; dodatno: EŠD 11081 = Požekov vrt (dokumentarno), EŠD 19326 = Spomenik NOB (1961)
+- Šolski arhiv: VAČ 4118864 VERIFIED (SI_ZAL_ČRN/0001/001/00012, Okrajno glavarstvo Črnomelj — šolski listi, 'Državna osnovna šola Griblje' 1929–1941, slo+srh, lat+cir, DIGITALIZIRANO, javno dostopno) in VAČ 747512 VERIFIED (SI_ZAL_NME/0234/003/096, Zavod RS za šolstvo OE Novo mesto — 'OŠ Črnomelj, podružnica Griblje' 1970–1982, poročila/hospitacije, javno dostopno, ni digitalizirano); 'šolska kronika Griblje' javno NI najdena (OŠ Loka Črnomelj PŠ Griblje aktivna; osmjc.si kronika = Črnomelj)
+- 1812: Wikimedia Commons File:Provinces_Illyriennes_Servie_et_Bosnie_1812.jpg VERIFIED (HTTP 200, 1812, Giraldon, public domain, 8297×6080 px; vir = dlib ref. 6EZTJ9C0); dlib URN:NBN:SI:doc-F4NO0ZFV = 'Zemljevid Ilirskih provinc iz leta 1812' (Gašperič/Orožen Adamič/Šumrada, ZRC SAZU 2012, 114 str.) — dlib.si iz peskovnika timeout, zapis potrjen prek COBISS/WorldCat/indeksiranega stream URL/giam.zrc-sazu.si (HTTP 200)
+- matice.si: DNS NE RAZREŠI; nič relevantnega v iskalnikih → NOT_FOUND (vir ne obstaja javno)
+- GeoZgodovina: pod tem imenom NI najden; namesto tega eZKN (geohub.gov.si/ghapp/ezkn/, HTTP 200, ver 1.0 2018): uraden pregledovalnik ZKN GURS + INDIKACIJSKIH KATASTRSKIH MAP FRANCISCEJSKEGA/REAMBULANČNEGA KATASTRA ARS (georeferenciran ogled; stari gis.gov.si/ezkn mrtev) → DOCUMENTED
+- e-ARS: www.e-ars.si DNS ne razreši (portal ukinjen) → NOT_PUBLIC; vendar SI AS 176 digitaliziran in JAVEN prek VAČ: OPSI zbirka 'Digitalizirano arhivsko gradivo starih katastrov' + lastna verifikacija tektonike VAČ (archivePlanSearchAjax): AS 176 → N Novomeška kresija → N83 Griblje, k.o. → grafični N083A01–A05 (vsak 'Slika' z digitalnim posnetkom) + spisovni N083PG/PR/PS/PT/PUA/PV/PZ — torej so 'N083 skeni', ki jih 17-a/b/c bere, JAVNO dostopni v VAČ (ogledne kopije; večja resolucija v čitalnici)
+- Izpis: /tmp/kurrent/out/web-archives.json (9 ciljev, statusi, URL-ji, poizvedbe; ~37 search + ~30 curl/AJAX preverb)
+
+Stage Summary:
+- Statusi: SEM F0000212 VERIFIED (https://www.etno-muzej.si/sl/digitalne-zbirke/zbirka-starih-fotografij/f0000212; avtor/datum neobjavljena) | Gaspari DOCUMENTED ('Belokranjska ohcet' 1924 pri SEM, brez javne inv. št.; za Griblje nič) | SI AS 749 VERIFIED (VAČ 4971617, javno dostopno, NI digitalizirano; edina Griblje-enota /3/8/12) | EŠD VERIFIED s KOREKCIJO (2122=cerkev sv. Vida, 10094=najdišče ob Kolpi, 11118=Podzemelj-Metlika NE Griblje; +11081 Požekov vrt, +19326 Spomenik NOB) | Šola VERIFIED (4118864 celo digitaliziran; 747512 javen; kronika javno ne najdena) | 1812 VERIFIED (Commons + dlib posredno) | matice.si NOT_FOUND | GeoZgodovina NOT_FOUND po imenu, eZKN DOCUMENTED (georeferenciran ogled indikacijskih kart AS) | e-ARS NOT_PUBLIC (domena mrtva), AS 176/N83 pa JAVEN v VAČ
+- Mrtve domene: evd.si (naprodaj), matice.si (DNS), www.e-ars.si (DNS), gis.gov.si/ezkn (redirect 404) — vse nadomeščene (etno-muzej.si, VAČ, geohub)
+- Tehnične opombe: VAČ zahteva curl -k (SSL); dlib.si/preloka.si (Cloudflare) nedosegljivi iz peskovnika — preverjanje posredno
+
+---
+Task ID: 17-b2
+Agent: VLM raziskovalec (PT pregled)
+Task: Strokovni pregled obstoječih 80 PT vrstic proti originalnim skenom.
+
+Work Log:
+- 8 strani PT prebranih z VLM (1 klic/stran, kalibriran prompt) + 9 žariščnih povečav za sporne vrstice (povečave števčnega stolpca, zgornja/spodnja polovica strani); 1 klic zavrnjen (content-filter), retry uspel; skupno 18 uspešnih klicev
+- PT-1: naslovnica »Protocoll Der Bau Parcellen der Gemeinde GRÜBLE« ✓; PT-2: PRAZEN obrazec (stolpci Haus Nro./Kultur/Classe/Haus-Zins fl-kr/Capital/Anmerkung) — ni vrstic (repo opomba »strani 2–7« je za str. 2 napačna, vrstice so na 3–7); PT-8: sklepne opombe + vsote, brez hiš
+- str. 3 (št. 1–20): 22 vrstic — repo ima 21, MANJKA hiša 7 (VLM 2×: Lebring Mäfa/Leudig Martin[~]); lastniški stolpec nizke zanesljivosti (3 popisi se pri 7½, 8, 8½, 20 izključujejo); nova ugotovitev: hišno ime/lokacija »zu Naßhütten«[~] pri št. ~9–15 (repo »Stalhutstetisch« je najbrž napačen očrt le-tega)
+- str. 4 (št. 21–40): parcele pri 21–35 se z repom ujemajo znak za znak; NAJVEČJA NAPAKA REPA: številčenje 36–41 je za +1 zamaknjeno — rokopis ima PREČRTANO dvojno št. 34, pages se končajo s št. 40 (3× potrjeno s povečavo števčnega stolpca; str. 5 začne s 41, zato dvojna 41 nemogoča) → repova hiša »41« ne obstaja; hiša 40 (repo): lastnik »Tonig Miko« → VLM 3× »Brinig/Bring Misko[~]«
+- str. 5 (parcele 41–60): številčenje POTRJENO s povečavo (41–52, 52-prečrtano, 53–60; konec 60, ne 61) — repova »52b« struktura je pravilna (manjka le opomba o prečrtanju); površine + W-sestavi večinoma ✓; lastniški stolpec nizke zanesljivosti (obraten vrstni red besed: »Jörg Georg«/»Georg Groy[~]«, »Joger Schello«/»Schelko Jopich[~]« …)
+- str. 6 (št. 61–80): parcele (W + površine 9, 19, 20, 34, 13, 84, 192, 15, 202, 210, 63, 100, 21 …) ✓; MANJKATA 2 PREČRTANI vrstici: 71½ in 76½ (rdeče; 76½ z poklicem »Hufschmied«[~], W.47, 14 — vsebina se prekriva z repovo hišo 77 → možen zamik 77/78); rdeče prečrtane tudi 72, 74, 75, 78–80; priimek »Dikobutar« VLM bere kot Cholatschar/Schabatschar[~], »Stenopfs« kot Strauß[~] (3×)
+- str. 7 (št. 81–98 + 99): hiše 81–84 lastnik »Groy Hanž« → VLM 2× »Strauß Georg[~]« (ime Georg, ne Hanž; ista družina kot Stenopfs na str. 6); 92–94 Feidig/Feudig ✓; 96 »Groy Khunz« → »Georg« (Sh-…[~]); 98 najbrž INSTITUCIJA »Zollamt + ärarial[~]«, ne oseba »Zollnerd A. M.« (opomba: »verzahlt zum Hauptmagazin von 1826«[~], ne 1860); za 98 še oštevilčena PRAZNA vrstica 99 (ni v repu)
+- PT-8 NAVKRIŽNA POTRDITEV: vsota »… 14/889« se natančno ujema s PV Nutzungs-Ausweis (»Bau Parzellen 4 J 889 Kl«) → register PT je vsebinsko verodostojen
+- Izpis: /tmp/kurrent/out/PT-review.json (struktura po nalogi; 101 vrstica repa, verdikt + confidence + opomba za vsako; [~]/[?] oznake povsod)
+
+Stage Summary:
+- ŠTETJE: 81 CONFIRMED · 15 CORRECTIONS · 4 ADDITIONAL_ROWS (hiša 7; 71½ prečrtana; 76½ prečrtana; 99 prazna) · 0 REPO_ONLY · 5 ILLEGIBLE (lastniki 7½, 8, 8½, 20, 90) — vseh 101 vrstic repa ima podlago v rokopisu
+- NAJDBA #1 (strukturna, visoka zaupanja): str. 4 št. 36–41 v repu so v rokopisu 35–40 (prečrtana dvojna 34) → repova zadnja hiša na str. 4 je 40, »41« ne obstaja; enako številčenje nadaljevanja str. 5 = 41 potrditev
+- NAJDBA #2 (lastniške popravke): 81–84 »Groy Hanž«→»Strauß Georg[~]«; 76/79 »Stenopfs«→»Strauß[~]«; 40(repo) »Tonig Miko«→»Brinig Misko[~]«; 96 »Groy Khunz«→»Georg«; 98 »Zollnerd A. M.«→»Zollamt/ärarial[~]« (institucija); 1 »Peth«→»Veith[~]«
+- KVALITETA: skupne površine + parcele se odlično ujemajo (889 kl = PV) — repova VSEBINA je dobra, šibki točki sta številčenje repa in lastniški očrti
+- Priporočilo za 17-z: (1) renumerirati str. 4 (36→35 … 41→40), (2) 15 lastniških popravkov po paleografski preverbi, (3) dodati 4 vrstice z oznako prečrtanja/praznosti, (4) status REVIEW zadržati; brez drugega registra (issue #17 izpolnjen)
+
+---
+Task ID: 17-b1-rešitev
+Agent: Z.ai Code (glavni agent)
+Task: Rešitev naloge 17-b1 (PUA strani 3–10) — podagent dvakrat presegel deadline; surove izpise (b1-puaNN-names.json, pua-NN-raw.json, ~50 VLM klicev) je glavni agent rešil in sestavil PUA-more.json.
+
+Work Log:
+- Podagent 17-b1 je prebral vseh 8 strani PUA s ~50 VLM klici (imena, hišne št., sekcije, institucije) pred timeoutom
+- Sestavljen /tmp/kurrent/out/PUA-more.json: 18 vnosov (vrstice 1–17 + Baron Abfalterer brez št.), strani 3–10, črke A/B/C/D/F
+- Priority verification: Bring hiše 24/25/26/28/63 (24 in 25 UJEMATA se s PT!), Fillah 16/34/36/61 (divergentno s PT Filak 69–71), Dragosch hiše 3–5 (divergentno s PT Šimec/Knavc), instituciji Commenda + Baron Abfalterer (nov tip lastnika)
+- PUA-more.json arhiviran v research/issue17/ (trajna provenienca skupaj z ostalimi 9 JSON-i)
+
+Stage Summary:
+- PUA 3–10: 18 strukturiranih vnosov REVIEW [~]; navzkrižne potrditve Bring 24/25; divergencije PT↔PUA dokumentirane (strojni bralniki se razhajajo → vse ostaja REVIEW)
+
+---
+Task ID: 17 (issue #17 — RESEARCH GAP CLOSURE v2)
+Agent: Z.ai Code (glavni agent)
+Task: Izvedba issue #17 — dejansko branje Kurrent rokopisov (PR/PG/PV/PS/PZ/PUA/PT), web verifikacije virov, ustno-zgodovinski protokol, brez podvajanja.
+
+Work Log:
+- odkritje: PDF-ji VSEH Kurrent serij že na disku (download/atlas-1825/n83/, javno dostopni prek VAČ) → rokopise sem DEJANSKO prebral z VLM
+- 5 vzporednih raziskovalnih podagentov + 1 rešena naloga: 17-a (PR/PG/PV, 21 klicev), 17-b1 (PUA 3–10, rešitev), 17-b2 (PT pregled 8 strani), 17-c (PS/PZ struktura, 13), 17-c2 (PZ cenilne tabele, 7), 17-d (web arhivi), 17-e (geodata) — skupaj 145 VLM klicev + ~50 web preverjanj
+- KURRENT_SERIES posodobljen: PR 4/4 (mere 1028×1884 kl, točke 1–10, 8. 4. 1825), PG 1/1 (skica, meja, Kolpa, brez hiš — negativno), PV 1/1 v celoti (10 izpolnjenih kultur, 1221 j ≈ 703 ha, GOZD PRAZEN — anomalija), PS 9 strani + rekapitulacija (102+2505=2607, kolone, najbolj uporabne sekcije), PUA 10/49 (38→39 vnosov), PZ 10 strani (441 prebivalcev, 2294 joch, cenilna veriga Bau-Area 7 fl 35 kr/joch, 28. 7. 1825), PT pregled (81/105 potrjenih, 15 popravkov, 4 prečrtane, strukturni zamik 36–41; register NESPREMENJEN)
+- NAVKRIŽNE KONTROLE: PR mere × PV površina <1 % odstopanja; PT vsota 889 kl = PV Bau Parzellen 889 kl (točno); PZ 441 = 222+219
+- research.ts: nov razdelek 9 — PV_LAND_USE_1825 (20 vrstic), PR_BOUNDARY_1825, PS_RECAP_1826, PZ_ECONOMY_1825, PUA_CONTINUATION (18), PT_REVIEW_2026, ORAL_HISTORY_PROTOCOL v1.0 (4 faze, 11 polj, 5 pravil, intervjuji PRAZNI), WEB_VERIFICATIONS (12), ISSUE17_MATRIX (15), ISSUE17_AUDIT; F0000212 publicRecord VERIFIED (etno-muzej.si URL), GASPARI Belokranjska ohcet DOCUMENTED, MAP_1812 izvirniki VERIFIED, GEODATA_SOURCES +eZKN
+- sources.ts: structuredEntries posodobljeni (PG 1, PR 10, PS 12, PUA 39, PV 10, PZ 10); neg-kurrent posodobljen; 4 novi negativni rezultati (matice.si, e-ars.si, PZ-rekap, oral-interviews)
+- model.ts: 3 puaRef potrditve (Bring 24, Bring 25, Fillah) — register nespremenjen
+- reconciliation.ts: PUA_CONTINUATION vrstice v poročilu (149 obdelanih, zero-loss ohranjen); PG/PR/PV/PZ enote štejejo strukturirane vnose
+- qa.ts: test 15 qa-issue17-gap-closure (PV seštevanje, PR×PV kontrola, PS 2607, PZ 441, PUA 18, PT verdikti, protokol+0 intervjujev, 12 verifikacij, matrika ≥15, Kurrent 7/7 REVIEW)
+- provenance.ts DATA_VERSION 2026-10-08; /api/provenance +issue17; museum-research.tsx nov zavihek »Zapolnjevanje vrzeli #17« (PV tabela, PR/PS/PZ kartice, PUA seznam, PT pregled, protokol, verifikacije, matrika, odprto); sw.js v9
+- surovi izpisi arhivirani: research/issue17/ (10 JSON-ov, 188 KB)
+- QA: lint čist; /api/qa 15/15 PASS; E2E: ?odsek=raziskave → zavihek vseh 11 razdelkov ✓ povezave (etno-muzez/giskd/ezkn/clss) ✓ mobilni 390px brez preliva ✓ 0 napak ✓ regresija Kurrent zavihka ✓
+
+Stage Summary:
+- Issue #17 implementiran pošteno: 145 VLM klicev dejanskega branja rokopisov + 12 web verifikacij; 7/7 Kurrent serij delno ali v celoti prebranih (vse REVIEW — strojno branje, AI ni dokazni vir); nova struktura: 1825 raba tal (PV, prvič), meja (PR), rekapitulacija PS (2607), demografija+cenitev PZ (441), 18 novih PUA lastnikov, PT pregled z 15 popravki (register čaka paleografijo)
+- SEM F0000212 VERIFIED (javni zapis + slika), eZKN (georef. kataster ARS) nov ključni vir, CLSS 2023–25 globoki link, EŠD potrjeni (11118 = Podzemelj, podatek v repu že pravilen)
+- Ustna zgodovina: protokol v1.0, 0 intervjujev (ne izmišljujemo)
+- Sledi: commit + push → Vercel 22. deploy → GitLab #17 zaključek

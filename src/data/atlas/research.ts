@@ -25,44 +25,44 @@ export const KURRENT_SERIES: KurrentSeries[] = [
     unitSi: "Opis meje (Grenz-Beschreibung)",
     unitEn: "Boundary description",
     pages: 4,
-    pagesTranscribed: 0,
-    structuredEntries: 0,
-    status: "TO_COLLECT",
-    noteSi: "Nemški Kurrent, 4 strani. Prepis ima prednost po issue #3, a še ni izdelan.",
-    noteEn: "German Kurrent, 4 pages. Transcription has priority per issue #3 but is not made yet.",
+    pagesTranscribed: 4,
+    structuredEntries: 10,
+    status: "REVIEW",
+    noteSi: "Prepisane vse 4 strani (issue #17, VLM 2026-10-08): naslovnica »Prod N° 218 / Grenz-Beschreibung der Gemeinde GRÜBLE«, splošne mere 1028 × 1884 klafter, točke meje št. 1–10 (prebrano na str. 2, nadaljevanje negotovo 10–20), sosedi (Kraljevina Hrvaška/Weidendorf stabilna, ostali [~]), zaključek »am 8ten April 1825«. 1028 × 1884 kl = 1210,5 jocha — se ujema s PV (<1 %). Strojni prepis = REVIEW.",
+    noteEn: "All 4 pages transcribed (issue #17, VLM 2026-10-08): title page »Prod N° 218 / Grenz-Beschreibung der Gemeinde GRÜBLE«, overall dimensions 1028 × 1884 klafter, boundary points nos. 1–10 (read on p. 2, continuation uncertain 10–20), neighbours (Kingdom of Croatia/Weidendorf stable, others [~]), closing »am 8ten April 1825«. 1028 × 1884 kl = 1210.5 joch — matches PV (<1 %). Machine reading = REVIEW.",
   },
   {
     code: "PS",
     unitSi: "Seznam zemljiških parcel",
     unitEn: "Register of land parcels",
     pages: 143,
-    pagesTranscribed: 0,
-    structuredEntries: 0,
-    status: "TO_COLLECT",
-    noteSi: "143 strani parcel po sekcijah I–V; 20 vrstic je v pripravljenem modelu, poln prepis še ni izdelan.",
-    noteEn: "143 pages of parcels by sections I–V; 20 rows sit in a prepared model, the full transcription is not made yet.",
+    pagesTranscribed: 9,
+    structuredEntries: 12,
+    status: "REVIEW",
+    noteSi: "143 strani parcel; issue #17 (VLM 2026-10-08): struktura strani 1–4 + 140–143 (rekapitulacija), 12 vzorčnih vrstic, kolone (lastnik+hiša+parcela+raba+površina+razred+donos). Končna Summa (str. 143, rdeči tuš): 102 stavbnih mest + 2505 zemljiških parcel = 2607. Najbolj uporabno za verigo hiša→parcela→lastnik: rekapitulacija po hišnih št. (~str. 131–143) + stolpec Haus Nro. v glavnem registru. Poln prepis ostaja TO_COLLECT (izhodiščna kontrolna vsota 2607).",
+    noteEn: "143 pages of parcels; issue #17 (VLM 2026-10-08): structure of pages 1–4 + 140–143 (recapitulation), 12 sample rows, columns (owner+house+parcel+culture+area+class+yield). Final Summa (p. 143, red ink): 102 building sites + 2505 land parcels = 2607. Most useful for the house→parcel→owner chain: the recapitulation by house nos. (~pp. 131–143) + the Haus Nro. column of the main register. The full transcription remains TO_COLLECT (checksum 2607).",
   },
   {
     code: "PUA",
     unitSi: "Abecedni seznam lastnikov",
     unitEn: "Alphabetical register of owners",
     pages: 49,
-    pagesTranscribed: 2,
-    structuredEntries: 21,
+    pagesTranscribed: 10,
+    structuredEntries: 39,
     status: "REVIEW",
-    noteSi: "Prepisani strani A–B (21 lastnikov) za navzkrižno preverjanje s PT. Strani C–Ž (47) niso prepisane.",
-    noteEn: "Pages A–B transcribed (21 owners) for cross-checking against PT. Pages C–Ž (47) are not transcribed.",
+    noteSi: "Prepisane strani A–B (21 lastnikov) + issue #17: strani 3–10 (18 novih vnosov: Hölloschitsch/Dragosche, Bring hiše 24/25/26/28/63, Brulla, Commenda, Decklitsch, Dragosch hiše 3–5, Fillah hiše 16/34/36/61, Baron Abfalterer). Navzkrižno: Bring hiša 24/25 potrjena proti PT; Fillah/Dragosch divergentno s PT [~]. Strani 11–49 (črke do Ž) niso prepisane.",
+    noteEn: "Pages A–B transcribed (21 owners) + issue #17: pages 3–10 (18 new entries: Hölloschitsch/Dragosche, Bring houses 24/25/26/28/63, Brulla, Commenda, Decklitsch, Dragosch houses 3–5, Fillah houses 16/34/36/61, Baron Abfalterer). Cross-check: Bring house 24/25 confirmed against PT; Fillah/Dragosch divergent with PT [~]. Pages 11–49 (letters up to Ž) are not transcribed.",
   },
   {
     code: "PZ",
     unitSi: "Katastrski cenilni elaborat",
     unitEn: "Cadastral valuation elaborate",
     pages: 71,
-    pagesTranscribed: 0,
-    structuredEntries: 0,
-    status: "TO_COLLECT",
-    noteSi: "71 strani ocen in razredov; prepis ni izdelan.",
-    noteEn: "71 pages of valuations and classes; transcription not made yet.",
+    pagesTranscribed: 10,
+    structuredEntries: 10,
+    status: "REVIEW",
+    noteSi: "71 strani ocen in razredov. Issue #17 (VLM 2026-10-08, vzorčene strani 1–3, 20, 30, 40, 50, 60, 68–71): naslov, topografija §1 (2294 joch 516 klafter [~]), prebivalstvo §3 (441 prebivalcev — 222 m/219 ž; 72 hiš [~]; 102 družin [~]), cenilna veriga Roh-Ertrag → Cultur-Aufwand → Rein-Ertrag (Bau-Area: 16 fl 50½ kr → 7 fl 35 kr/joch, aritmetika potrjena), zaključek »Gemacht den 28ten Juli 1825« + [~1834 revaluirt]. Tabele razredov v sredini (str. ~4–67) so samo vzorčene — poln prepis TO_COLLECT.",
+    noteEn: "71 pages of valuations and classes. Issue #17 (VLM 2026-10-08, sampled pages 1–3, 20, 30, 40, 50, 60, 68–71): title, topography §1 (2294 joch 516 klafter [~]), population §3 (441 inhabitants — 222 m/219 f; 72 houses [~]; 102 families [~]), valuation chain Roh-Ertrag → Cultur-Aufwand → Rein-Ertrag (Bau-Area: 16 fl 50½ kr → 7 fl 35 kr/joch, arithmetic confirmed), closing »Gemacht den 28ten Juli 1825« + [~1834 revaluirt]. Class tables in the middle (pp. ~4–67) only sampled — full transcription TO_COLLECT.",
   },
   {
     code: "PT",
@@ -72,30 +72,30 @@ export const KURRENT_SERIES: KurrentSeries[] = [
     pagesTranscribed: 8,
     structuredEntries: 80,
     status: "REVIEW",
-    noteSi: "80 stavbnih vrstic (hišne št. 1–98) prebranih s pomočjo strojnega branja; vsi vnosi status REVIEW, čakajo paleografski pregled.",
-    noteEn: "80 building rows (house nos. 1–98) read with machine assistance; all entries carry REVIEW status, awaiting palaeographic review.",
+    noteSi: "80 stavbnih vrstic (hišne št. 1–98) prebranih s pomočjo strojnega branja; vsi vnosi status REVIEW, čakajo paleografski pregled. Issue #17 (2026-10-08) — strokovni pregled proti originalu: 101 vrstica preverjena (80 registra + prečrtane/dvojni vnosi), 81 POTRJENIH, 15 popravkov [~], 4 manjkajoče vrstice (prečrtane 7/71½/76½/99), strukturna ugotovitev: str. 4 konča pri hiši 40 (register 36–41 zamaknjen za +1). Popravek registra po paleografiji.",
+    noteEn: "80 building rows (house nos. 1–98) read with machine assistance; all entries carry REVIEW status, awaiting palaeographic review. Issue #17 (2026-10-08) — professional review against the original: 101 rows checked (80 register + struck/double entries), 81 CONFIRMED, 15 corrections [~], 4 missing rows (struck 7/71½/76½/99), structural finding: p. 4 ends at house 40 (register rows 36–41 shifted by +1). Register correction after palaeography.",
   },
   {
     code: "PG",
     unitSi: "Indikacijska skica",
     unitEn: "Indication sketch",
     pages: 1,
-    pagesTranscribed: 0,
-    structuredEntries: 0,
-    status: "TO_COLLECT",
-    noteSi: "1 stran; vsebinski prepis ni izdelan.",
-    noteEn: "1 page; content transcription not made yet.",
+    pagesTranscribed: 1,
+    structuredEntries: 1,
+    status: "REVIEW",
+    noteSi: "Indikationsskizze prebrana (issue #17, VLM 2026-10-08): ročno risana skica z naslovom »Gemeinde Grüble« + veliko številko 83 (ujema se s signaturo N83), debel mejni mnogokotnik z rdeče oštevilčenimi točkami (~15–19), Kolpa modrikasta po vzhodnem robu z napisom »Königreich Croatien«, sosedi Weidendorf/Mallertschitsch/Pridbor[~]. Hišnih simbolov NI vidnih (negativen rezultat). Lestvica [~1 W. Zoll = 1000 klafter].",
+    noteEn: "Indication sketch read (issue #17, VLM 2026-10-08): hand-drawn sketch titled »Gemeinde Grüble« + large number 83 (matches signature N83), thick boundary polygon with red-numbered points (~15–19), the Kolpa blue along the east edge inscribed »Königreich Croatien«, neighbours Weidendorf/Mallertschitsch/Pridbor[~]. NO house symbols visible (negative result). Scale [~1 W. inch = 1000 klafter].",
   },
   {
     code: "PV",
     unitSi: "Izkaz rabe zemljišč",
     unitEn: "Statement of land use",
     pages: 1,
-    pagesTranscribed: 0,
-    structuredEntries: 0,
-    status: "TO_COLLECT",
-    noteSi: "1 stran; vsebinski prepis ni izdelan.",
-    noteEn: "1 page; content transcription not made yet.",
+    pagesTranscribed: 1,
+    structuredEntries: 10,
+    status: "REVIEW",
+    noteSi: "Izkaz rabe tal PREBRAN v celoti (issue #17, VLM 2026-10-08, vsaka izpolnjena celica potrjena ≥2 klicoma): tiskan obrazec »AUSWEIS über die Benützungsart des Bodens«, Provinz Illyrien, [~Kreis Neustadtl], datum »den 10 Jenner 1825«. 10 izpolnjenih vrstic kultur (20 vrstic obrazca) + 2 vsoti: ganze Area 1148 j 539 kl + strnjena 73 j 1024 kl = skupaj 1221 [~1225] j 1513 [~1563] kl ≈ 703 ha (≈ sodobna k.o. Griblje 7,0 km²). Presenetljivo: vrstica Wälder (gozd) je PRAZNA — dominira 636 joch pašnikov. Aritmetika ±1 joch (dokumentirana odstopanja).",
+    noteEn: "Statement of land use READ in full (issue #17, VLM 2026-10-08, every filled cell confirmed by ≥2 calls): printed form »AUSWEIS über die Benützungsart des Bodens«, Provinz Illyrien, [~Kreis Neustadtl], dated »den 10 Jenner 1825«. 10 filled culture rows (20 form rows) + 2 totals: ganze Area 1148 j 539 kl + compact 73 j 1024 kl = grand 1221 [~1225] j 1513 [~1563] kl ≈ 703 ha (≈ the modern k.o. Griblje 7.0 km²). Striking: the Wälder (forest) row is EMPTY — 636 joch of pasture dominate. Arithmetic ±1 joch (documented deviations).",
   },
 ];
 
@@ -119,6 +119,23 @@ export interface GeodataSource {
 }
 
 export const GEODATA_SOURCES: GeodataSource[] = [
+  {
+    id: "geo-ezkn",
+    nameSi: "eZKN — georeferenčni zgodovinski kataster (GisKD/GeoHub)",
+    nameEn: "eZKN — georeferenced historical cadastre (GisKD/GeoHub)",
+    provider: "GURS + Arhiv RS",
+    kindSi: "spletni georeferenčni pregledovalnik ZKN + indikacijski katastrski zemljevidi",
+    kindEn: "online georeferenced ZKN viewer + indication cadastral maps",
+    url: "https://geohub.gov.si/ghapp/ezkn/",
+    coversGriblje: true,
+    coversNoteSi:
+      "POTRJENO 2026-10-08 (issue #17): javni pregledovalnik ZKN GURS + indikacijski zemljevidi franciscejskega/reambulančnega katastra ARS (JPG). Pod imenom »GeoZgodovina« portal ne obstaja — pravi vir je eZKN. Uradna javna georeferenca katastrskih map; ključ za prostorsko prekrivanje 1825↔danes.",
+    coversNoteEn:
+      "CONFIRMED 2026-10-08 (issue #17): a public GURS ZKN viewer + ARS indication maps of the Franciscean/reambulation cadastre (JPG). No portal named »GeoZgodovina« exists — the real source is eZKN. The official public georeference of cadastral maps; key for the 1825↔today spatial overlay.",
+    licence: "javni dostop (GeoHub GURS)",
+    status: "VERIFIED",
+    lastVerified: "2026-10-08",
+  },
   {
     id: "geo-dmr",
     nameSi: "Državni višinski model 1 m (DMR)",
@@ -175,8 +192,10 @@ export const GEODATA_SOURCES: GeodataSource[] = [
     kindEn: "3D portal: GKOT point cloud, DMR, DSM, PAS",
     url: "https://clss.si",
     coversGriblje: true,
-    coversNoteSi: "Slovenija je v celoti lasersko posneta v novem ciklu (pregledovalnik 3D podatkov).",
-    coversNoteEn: "Slovenia is fully laser-scanned in the new cycle (3D data viewer).",
+    coversNoteSi:
+      "Slovenija je v celoti lasersko posneta v novem ciklu (pregledovalnik 3D podatkov). Issue #17 (2026-10-08): cikel 2023–2025 — nadomesti LiDAR 2014–15, ki bloka b_16 (Griblje) ni zajemal; kvadrantni prenosi GKOT/DMR/DMP (.laz), nDMP/PAS (.tif); uradni globoki link za Griblje: clss.si/?center=522667||47571&srid=3794.",
+    coversNoteEn:
+      "Slovenia is fully laser-scanned in the new cycle (3D data viewer). Issue #17 (2026-10-08): cycle 2023–2025 — replaces the 2014–15 LiDAR which missed block b_16 (Griblje); quadrant downloads GKOT/DMR/DMP (.laz), nDMP/PAS (.tif); official deep link for Griblje: clss.si/?center=522667||47571&srid=3794.",
     licence: "javni dostop",
     status: "VERIFIED",
     lastVerified: "2026-10-07",
@@ -344,10 +363,10 @@ export const GASPARI_RESEARCH: {
     "Mentioned in the collection only secondarily: in record MVG-010 (Niko Županič) as co-author of the oldest depictions of the village and its people together with Ivan Vavpotič.",
   primaryObject: null,
   noteSi:
-    "Primarni digitalni predmet (inventarna številka, datum, avtor, slika, pravni status) ne obstaja v zbirki in NI potrjen. Predmet se ne sme označiti kot potrjen brez primarnega dokaza — iskanje v SEM in drugih zbirkah je naslednji korak (TO_COLLECT).",
+    "Primarni digitalni predmet (inventarna številka, datum, avtor, slika, pravni status) ne obstaja v zbirki in NI potrjen. Issue #17 (2026-10-08): za Griblje ni nobenega Gasparijevega predmeta; dokumentiran kandidat ZA BELO KRAJINO je slika »Belokranjska ohcet« (1924, olje/platno, hrani jo SEM — viri RTV SLO, Dnevnik, Družina, razstava SEM 2024, radio-odeon/preloka.si) — javne inventarne številke NI, v SEM digitalnih zbirkah ni. Status ostaja TO_COLLECT: iskanje primarnega predmeta/inventarne št. (SEM, Narodni muzej).",
   noteEn:
-    "No primary digital object (inventory number, date, author, image, legal status) exists in the collection and none is confirmed. The object must not be marked as confirmed without primary evidence — searching SEM and other collections is the next step (TO_COLLECT).",
-  lastVerified: "2026-10-07",
+    "No primary digital object (inventory number, date, author, image, legal status) exists in the collection and none is confirmed. Issue #17 (2026-10-08): no Gaspari item for Griblje exists; the documented candidate FOR BELA KRAJINA is the painting »Belokranjska ohcet« (1924, oil/canvas, held by SEM — sources RTV SLO, Dnevnik, Družina, the 2024 SEM exhibition, radio-odeon/preloka.si) — no public inventory number, not in the SEM digital collections. Status remains TO_COLLECT: search for the primary object/inventory no. (SEM, National Museum).",
+  lastVerified: "2026-10-08",
 };
 
 // ——— 5. F0000212 — popolna provenienčna pot (issue #3 #7) ——————————
@@ -363,6 +382,14 @@ export const F0000212_PROVENANCE: {
   date: null;
   rightsSi: string;
   rightsEn: string;
+  /** javni zapis SEM (issue #17, verifikacija 2026-10-08) */
+  publicRecord: {
+    status: ResearchStatus;
+    url: string;
+    verifiedAt: string;
+    findingSi: string;
+    findingEn: string;
+  };
   museumRef: string;
   houseLink: {
     houseNo: string;
@@ -386,6 +413,15 @@ export const F0000212_PROVENANCE: {
   date: null,
   rightsSi: "SEM digitalne zbirke — 'navedi vir'; reproduciranje zahteva soglasje SEM",
   rightsEn: "SEM digital collections — 'cite the source'; reproduction requires SEM consent",
+  publicRecord: {
+    status: "VERIFIED",
+    url: "https://www.etno-muzej.si/sl/digitalne-zbirke/zbirka-starih-fotografij/f0000212",
+    verifiedAt: "2026-10-08",
+    findingSi:
+      "Javni zapis SEM POTRJEN (HTTP 200): 'Enonadstropna hiša na pero, rojstna hiša dr. Nika Županiča', Zbirka starih fotografij, lokacija Griblje; slika javna (/files/oc/f0000212.jpg, 264 KB). Polji fotograf in datum sta v javnem zapisu PRAZNA — za metapodatke je treba pisati SEM (miha.spicek@etno-muzej.si). Domena evd.si (domnevna baza SEM) je naprodaj — NI baza SEM; pravi vir je etno-muzej.si.",
+    findingEn:
+      "The public SEM record CONFIRMED (HTTP 200): 'Enonadstropna hiša na pero, rojstna hiša dr. Nika Županiča', the Old Photographs Collection, location Griblje; image public (/files/oc/f0000212.jpg, 264 KB). The photographer and date fields are EMPTY in the public record — SEM must be contacted for metadata (miha.spicek@etno-muzej.si). The evd.si domain (assumed SEM database) is for sale — NOT a SEM database; the real source is etno-muzej.si.",
+  },
   museumRef: "MVG-010",
   houseLink: {
     houseNo: "73",
@@ -397,9 +433,10 @@ export const F0000212_PROVENANCE: {
       "Hypothesis from old concepts: house no. 73 (PT p. 6, owner Peutinger Mihel — uncertain reading) and parcel 942/4. The link is not confirmed by a primary source — the SEM photograph is not geolocated and no house number is visible on it.",
   },
   chain: [
-    { stepSi: "SEM, digitalne zbirke — zapis F0000212", stepEn: "SEM, digital collections — record F0000212", status: "DOCUMENTED" },
+    { stepSi: "SEM, digitalne zbirke — zapis F0000212", stepEn: "SEM, digital collections — record F0000212", status: "VERIFIED" },
+    { stepSi: "javni zapis SEM (etno-muzej.si, URL potrjen 2026-10-08) + javna slika", stepEn: "public SEM record (etno-muzej.si, URL confirmed 2026-10-08) + public image", status: "VERIFIED" },
     { stepSi: "opis vsebine (hiša na pero, rojstna hiša Županiča)", stepEn: "content description (gallery house, Županič birth house)", status: "DOCUMENTED" },
-    { stepSi: "fotograf / datum snemanja", stepEn: "photographer / shooting date", status: "TO_COLLECT" },
+    { stepSi: "fotograf / datum snemanja (polji v javnem zapisu prazni — pisati SEM)", stepEn: "photographer / shooting date (fields empty in the public record — write to SEM)", status: "TO_COLLECT" },
     { stepSi: "identifikacija hiše → hišna št. 73 (PT 1825)", stepEn: "house identification → house no. 73 (PT 1825)", status: "REVIEW" },
     { stepSi: "parcela 942/4 → kataster 1825 (PS)", stepEn: "parcel 942/4 → 1825 cadastre (PS)", status: "TO_COLLECT" },
     { stepSi: "današnja lokacija hiše (ali stoji še?)", stepEn: "today's location of the house (still standing?)", status: "TO_COLLECT" },
@@ -422,7 +459,7 @@ export const MAP_1812: {
     noteSi: string;
     noteEn: string;
   };
-  periodOriginals: { title: string; sourceUrl: string; licence: string }[];
+  periodOriginals: { title: string; sourceUrl: string; licence: string; verified?: string }[];
   bounds: { north: number; south: number; west: number; east: number };
   georeferencePath: {
     status: ResearchStatus;
@@ -447,14 +484,22 @@ export const MAP_1812: {
   },
   periodOriginals: [
     {
-      title: "Provinces Illyriennes Servie et Bosnie 1812 (izvirnik 1812)",
+      title: "Provinces Illyriennes Servie et Bosnie 1812 (izvirnik 1812, Giraldon; javna last)",
       sourceUrl: "https://commons.wikimedia.org/wiki/File:Provinces_Illyriennes_Servie_et_Bosnie_1812.jpg",
       licence: "javna last (Public Domain)",
+      verified: "POTRJENO 2026-10-08 (issue #17): datoteka obstaja, 8297 × 6080 px, vir = dlib ref. 6EZTJ9C0",
     },
     {
       title: "Carte des Provinces Illyriennes (Lapie/Tardieu, Internet Archive)",
       sourceUrl: "https://commons.wikimedia.org/",
       licence: "javna last (Public Domain)",
+      verified: "ne preverjeno posamično (issue #17 — preverjena samo glavna pot)",
+    },
+    {
+      title: "Zemljevid Ilirskih provinc iz leta 1812 (Gašperič, Orožen Adamič, Šumrada; ZRC SAZU 2012)",
+      sourceUrl: "https://dlib.si/URN:NBN:SI:doc-F4NO0ZFV",
+      licence: "ZRC SAZU (faksimile francoskega zemljevida 1812)",
+      verified: "POTRJENO 2026-10-08 (issue #17) prek COBISS/WorldCat/giam.zrc-sazu.si (dlib s sandboxa timeout, URN obstaja)",
     },
   ],
   bounds: { north: 46.7, south: 42.4, west: 13.3, east: 19.3 },
@@ -741,4 +786,483 @@ export const ARCHIVE_TRANSFER_AUDIT = {
   verdictEn:
     "The new museum is a strict superset of the archive: 0 missing research, 0 missing sources, 0 missing content files. The Kurrent/Atlas layer never existed in the archive — no transfer was needed and NOTHING was duplicated.",
   totalTransferredEntries: 0,
+};
+
+// ——— 9. RESEARCH GAP CLOSURE v2 (issue #17, 2026-10-08) ———————————————————
+//
+// ISSUE #17: zapolnjevanje raziskovalnih vrzeli Kurrent 1812–1853, hiše/parcele,
+// primarni viri in ustna zgodovina. Vsa branja: VLM (glm-5v-turbo) na skenih
+// N083 (PDF v download/atlas-1825/n83/, javno dostopni prek VAČ — OPSI zbirka
+// "Digitalizirano arhivsko gradivo starih katastrov"). Surovi izpisi VLM klicev
+// se hranijo v research/issue17/*.json (provenienca). Strojni prepisi so po
+// definiciji REVIEW; negotova branja so označena [~], neberljiva [?].
+
+export interface LandUseRow1825 {
+  /** kultura, kot zapisano v viru (nemško) */
+  cultureAsWritten: string;
+  /** slovenski prevod */
+  cultureSi: string;
+  joch: number | null;
+  klafter: number | null;
+  /** [~] = negotovo branje števk */
+  confidence: "clear" | "~" | "empty";
+}
+
+/** PV — Izkaz rabe tal 1825 (N083PV, 10. 1. 1825) — PREBRAN v celoti. */
+export const PV_LAND_USE_1825: {
+  source: string;
+  titleAsWritten: string;
+  dateAsWritten: string;
+  status: ResearchStatus;
+  rows: LandUseRow1825[];
+  totals: {
+    ersteSumme: { label: string; joch: number; klafter: number; confidence: string };
+    zweiteSumme: { label: string; joch: number; klafter: number; confidence: string };
+    grandTotal: { label: string; joch: number; klafter: number; confidence: string; hectares: number };
+  };
+  arithmeticCheckSi: string;
+  anomalySi: string;
+  anomalyEn: string;
+} = {
+  source: "N083PV (Arhiv RS, SI AS 176, k.o. Griblje) — research/issue17/PV.json",
+  titleAsWritten: "AUSWEIS über die Benützungsart des Bodens für die Gemeinde Grüble (Provinz Illyrien, [~Kreis Neustadtl])",
+  dateAsWritten: "den 10 Jenner 1825",
+  status: "REVIEW",
+  rows: [
+    { cultureAsWritten: "Gemüse Gärten", cultureSi: "zelenjavnih vrtov", joch: 2, klafter: 123, confidence: "clear" },
+    { cultureAsWritten: "Obst Gärten", cultureSi: "sadovnjakov", joch: null, klafter: null, confidence: "empty" },
+    { cultureAsWritten: "Zier Gärten", cultureSi: "okrasnih vrtov", joch: null, klafter: null, confidence: "empty" },
+    { cultureAsWritten: "Wein Gärten", cultureSi: "vinogradov", joch: 7, klafter: 665, confidence: "clear" },
+    { cultureAsWritten: "Hopfen Gärten", cultureSi: "hmeljišč", joch: null, klafter: null, confidence: "empty" },
+    { cultureAsWritten: "Wiesen", cultureSi: "travnikov", joch: 76, klafter: 1480, confidence: "clear" },
+    { cultureAsWritten: "Wiesen mit Obstbäumen", cultureSi: "travnikov s sadjem", joch: 12, klafter: 328, confidence: "clear" },
+    { cultureAsWritten: "Weiden", cultureSi: "pašnikov", joch: 636, klafter: 263, confidence: "clear" },
+    { cultureAsWritten: "Sümpfe", cultureSi: "barja/močvirij", joch: null, klafter: null, confidence: "empty" },
+    { cultureAsWritten: "Sümpfe mit Rohrwuchs", cultureSi: "barja s trstjem", joch: null, klafter: null, confidence: "empty" },
+    { cultureAsWritten: "Aecker", cultureSi: "njiv", joch: 413, klafter: 870, confidence: "clear" },
+    { cultureAsWritten: "Aecker mit Obstbäume", cultureSi: "njiv s sadjem", joch: null, klafter: null, confidence: "empty" },
+    { cultureAsWritten: "Aecker mit Oelbäumen", cultureSi: "njiv z oljkami", joch: null, klafter: null, confidence: "empty" },
+    { cultureAsWritten: "Aecker mit Weinreben", cultureSi: "njiv z vinsko trto", joch: null, klafter: null, confidence: "empty" },
+    { cultureAsWritten: "Aecker mit Bäume und Weinreben", cultureSi: "njiv z drevjem in trto", joch: null, klafter: null, confidence: "empty" },
+    { cultureAsWritten: "Oedungen", cultureSi: "neobdelanega", joch: 1, klafter: 476, confidence: "~" },
+    { cultureAsWritten: "Flüsse oder Bäche", cultureSi: "rek/potokov", joch: 21, klafter: 142, confidence: "clear" },
+    { cultureAsWritten: "Weg Parzellen", cultureSi: "poti", joch: 46, klafter: 1127, confidence: "clear" },
+    { cultureAsWritten: "Bau Parzellen", cultureSi: "stavbnih parcel", joch: 4, klafter: 889, confidence: "clear" },
+    { cultureAsWritten: "Wälder", cultureSi: "gozdov", joch: null, klafter: null, confidence: "empty" },
+  ],
+  totals: {
+    ersteSumme: { label: "Ganze Area der Gemeinde (vsota obdelanega)", joch: 1148, klafter: 539, confidence: "clear (vrstice se seštejejo v 1148/529±)" },
+    zweiteSumme: { label: "vsota strnjenih/voda/poti/stavbe", joch: 73, klafter: 1024, confidence: "clear (vrstice ~72/1036)" },
+    grandTotal: { label: "Area der ganzen Gemeinde", joch: 1221, klafter: 1513, confidence: "clear (~1225/1563 v enem klicu)", hectares: 703 },
+  },
+  arithmeticCheckSi:
+    "Vsota vrstic: 1148 j 529 kl (prva skupina, razlika 10 kv. kl) + ~72 j 1036 kl (druga, ~1 joch) → skupaj 1221 j 1565 kl [~1513–1563]. Odmiki 1 joch / 10–50 kv. kl — bodisi posamično napačno prebrana števka, bodisi pisarniška napaka leta 1825; vse odstopanje je dokumentirano v PV.json. Neodvisna kontrola: 1028 × 1884 kl (PR mere) = 1.936.752 kv. kl = 1210,5 jocha — odstopanje <1 % od skupne vsote 1221 j → obe številki sta skoraj zagotovo prebrani pravilno.",
+  anomalySi:
+    "ODK RITO: vrstica Wälder (gozd) je PRAZNA — izkaz rabe 1825 za k.o. Griblje ne registrira nobenega gozda; prevladujejo pašniki (636 j). NASPROTJE s katastrskim listom A02, ki na južnem robu kaže gozdní kompleks (glej landuse.ts raba-gozd). Možni razlogi (hipoteze, ne dejstva): (a) gozd na A02 pripada sosednji k.o. (meja lista ≠ meja občine), (b) gozd je bil odvezen/zajet v drugi vpis, (c) vrstica je ostala nepopolnjena po ukazu. Odprto vprašanje za paleografski pregled originala.",
+  anomalyEn:
+    "FINDING: the Wälder (forest) row is EMPTY — the 1825 land-use statement registers no forest for k.o. Griblje; pasture dominates (636 joch). CONTRAST with cadastral sheet A02 which shows a forest complex on its southern edge (see landuse.ts raba-gozd). Possible reasons (hypotheses, not facts): (a) the A02 forest belongs to the neighbouring k.o. (sheet edge ≠ municipality boundary), (b) the forest was carried in another entry, (c) the row was left unfilled by instruction. Open question for a palaeographic review of the original.",
+};
+
+/** PR — opis meje 1825 (N083PR, 8. 4. 1825) — prebrano, točke 1–10 jasno. */
+export const PR_BOUNDARY_1825: {
+  source: string;
+  titleAsWritten: string;
+  dateAsWritten: string;
+  status: ResearchStatus;
+  dimensions: { eastWestKlafter: number; northSouthKlafter: number; confidence: string };
+  boundaryPoints: { no: number; nameAsWritten: string; lengthKlafter?: string; confidence: string }[];
+  neighbours: { nameAsWritten: string; confidence: string }[];
+  crossCheckSi: string;
+} = {
+  source: "N083PR (Arhiv RS, SI AS 176, k.o. Griblje) — research/issue17/PR.json",
+  titleAsWritten: "Grenz-Beschreibung der Gemeinde „ GRÜBLE“ (Prod N° 218)",
+  dateAsWritten: "am 8ten April 1825",
+  status: "REVIEW",
+  dimensions: { eastWestKlafter: 1028, northSouthKlafter: 1884, confidence: "1028 stabilno (5/5 klicev); 1884 [~1834] (3/5)" },
+  boundaryPoints: [
+    { no: 1, nameAsWritten: "[~Acker des Wölflaner …] — začetna točka", lengthKlafter: "60,6", confidence: "~" },
+    { no: 2, nameAsWritten: "Hohenstie/Holensthe Busch", lengthKlafter: "838", confidence: "~" },
+    { no: 3, nameAsWritten: "Liebstöhe/Liebstöckel", confidence: "~" },
+    { no: 4, nameAsWritten: "Halb Dell", confidence: "~" },
+    { no: 5, nameAsWritten: "Heusch (ob vodi)", confidence: "~" },
+    { no: 6, nameAsWritten: "Krofing/Poleschitzi", confidence: "~" },
+    { no: 7, nameAsWritten: "Rudini Pöltsch/Gastei Scheibe", lengthKlafter: "823", confidence: "~" },
+    { no: 8, nameAsWritten: "[~Dorn …] Welthe Oel", lengthKlafter: "240", confidence: "~" },
+    { no: 9, nameAsWritten: "Na öhering", confidence: "~" },
+    { no: 10, nameAsWritten: "nadaljevanje s slovenskimi mikrotoponimi (Losa, Schimotschi Drani, Vetalachki, Skaize Hardanove, Na Dragi, Hali Grami, Studeni Potok …; dolžine 326/370/274/170/87/185/86/46,8/185/41 kl)", confidence: "~ štetje točk negotovo (10–20; PG skica nakazuje 15–19)" },
+  ],
+  neighbours: [
+    { nameAsWritten: "Königreich Croaten (čez Kolpo, jug/vzhod)", confidence: "stabilno (3 klici + PG skica)" },
+    { nameAsWritten: "Weidendorf (Vinji Vrh?)", confidence: "stabilno (PR + PG)" },
+    { nameAsWritten: "Mallertschitsch (Maloš? — iz PG skice)", confidence: "~" },
+    { nameAsWritten: "Pridbor[~] (Pridvorje?) — iz PG skice", confidence: "~" },
+    { nameAsWritten: "Krasincz/Kremsig [~], Sribitsche/Stibischoche [~], Pervang/Travnik [~], Alloschütz/Adlerschütz [~]", confidence: "branja med klici nestabilna" },
+  ],
+  crossCheckSi:
+    "1028 × 1884 kv. klafterjev = 1.936.752 kv. kl = 1210,5 jocha → odstopanje <1 % od PV skupne površine 1221 j → mere sta medsebojno potrjeni. Datum zaključka meje: 8. 4. 1825; izkaz rabe: 10. 1. 1825; cenilni elaborat: 28. 7. 1825 — dokumentirana kronologija nastanka N83 za Griblje.",
+};
+
+/** PS — rekapitulacija 1826 (N083PS, str. 143, rdeči tuš). */
+export const PS_RECAP_1826: {
+  source: string;
+  status: ResearchStatus;
+  summaBauplätze: number;
+  summaGrundparzellen: number;
+  zusammen: number;
+  columns: string[];
+  mostUsefulSi: string;
+  mostUsefulEn: string;
+  sampleRowCount: number;
+} = {
+  source: "N083PS str. 140–143 (Arhiv RS, SI AS 176, k.o. Griblje) — research/issue17/PS-structure.json",
+  status: "REVIEW",
+  summaBauplätze: 102,
+  summaGrundparzellen: 2505,
+  zusammen: 2607,
+  columns: [
+    "Nro. des Blattes (katastralski list)",
+    "Nro. der Parzelle",
+    "Dominical/Rustical",
+    "Haus Nro.",
+    "Lastnik (Vor und Zuname)",
+    "Stand",
+    "Wohnort",
+    "Kultur Gattung (raba)",
+    "Joch / Quadrat-Klafter (površina)",
+    "Classe (razred)",
+    "Reiner jährl. Ertrag fl/kr (donos)",
+    "Capital Werth fl/kr",
+    "Anmerkung",
+  ],
+  mostUsefulSi:
+    "Veriga hiša→parcela→lastnik je v VSAKI vrstici glavnega registra (stolpci Haus Nro. + lastnik + parcela + raba + površina), a vrstice NISO grupirane po lastnikih → vstop prek stolpca Haus Nro. Najcenejša pot: (1) rekapitulacija po hišnih št. (~str. 131–143, z vsotami joch/fl na hišo), (2) str. 143 kot kontrolna vsota (102 + 2505 = 2607), (3) glave Blatt za vzorce imen. NE prepisovati slepo 143 strani — začeti pri rekapitulaciji, nato ciljano po hišah.",
+  mostUsefulEn:
+    "The house→parcel→owner chain sits in EVERY row of the main register (Haus Nro. + owner + parcel + culture + area columns), but rows are NOT grouped by owner → enter via the Haus Nro. column. Cheapest path: (1) the recapitulation by house nos. (~pp. 131–143, with per-house joch/fl totals), (2) p. 143 as the checksum (102 + 2505 = 2607), (3) Blatt headers for name patterns. Do NOT blindly transcribe 143 pages — start at the recapitulation, then target by house.",
+  sampleRowCount: 12,
+};
+
+/** PZ — demografija in cenitev 1825 (N083PZ). */
+export const PZ_ECONOMY_1825: {
+  source: string;
+  titleAsWritten: string;
+  status: ResearchStatus;
+  population: { total: number; male: number; female: number; houses: string; families: string; confidence: string };
+  areaTotal: { joch: number; klafter: number; confidence: string };
+  dates: { madeAsWritten: string; certificationAsWritten: string; revaluationAsWritten: string };
+  valuationChain: { stepSi: string; valuesSi: string; confidence: string }[];
+  economicProfileSi: string;
+  economicProfileEn: string;
+} = {
+  source: "N083PZ str. 1–3, 20, 30, 40, 50, 60, 68–71 (Arhiv RS, SI AS 176, k.o. Griblje) — research/issue17/PZ-profile.json + PZ-valuation.json",
+  titleAsWritten: "CATASTRAL-SCHÄTZUNGS-ELABORAT der Gemeinde Grüble (Land Krain, 83, Kreis Neustadtl, Steuerbezirk Krupge [~])",
+  status: "REVIEW",
+  population: { total: 441, male: 222, female: 219, houses: "72 [~]", families: "102 [~]", confidence: "prebivalstvo srednja; hiše/družine nizka [~]" },
+  areaTotal: { joch: 2294, klafter: 516, confidence: "~ (§1)" },
+  dates: { madeAsWritten: "Gemacht den 28ten Juli 1825", certificationAsWritten: "Geprüft / overovitve 9. 8. 1826 [~] in [~1824]", revaluationAsWritten: "[~1834, rdeči dodatek »revaluirt« na str. 60 — sumljivo, preveriti]" },
+  valuationChain: [
+    { stepSi: "Bau-Area (stavbna zemljišča) — Roh-Ertrag", valuesSi: "16 fl 50½ kr/joch", confidence: "srednja-visoka" },
+    { stepSi: "Cultur-Aufwand (55 % bruto)", valuesSi: "9 fl 15¾ kr/joch (aritmetika potrjena: 55 % × 16 fl 50½)", confidence: "visoka" },
+    { stepSi: "Rein-Ertrag (čisti donos stavbnih tal)", valuesSi: "7 fl 35 kr/joch", confidence: "visoka (1010,5 − 555,5 kr = 455 kr)" },
+    { stepSi: "Ackerland razred I [~]", valuesSi: "Rob 20–25 fl 44 kr; Rein 12–15 fl 5 kr — 3 klice se RAZHAJAJO", confidence: "nizka" },
+    { stepSi: "Wiesen razred I/II", valuesSi: "Heu 14/8 centnerjev, Grumet 6 (pridelek, ne fl)", confidence: "srednja" },
+    { stepSi: "Weingärten [~C]", valuesSi: "Most 12 n.ö. Eimer/joch (pridelek)", confidence: "nizka" },
+  ],
+  economicProfileSi:
+    "BRANJA: 441 prebivalcev (222 m/219 ž) v 72 hišah [~] / 102 družinah [~]; 2294 joch 516 kl [~] skupnega območja; donos stavbnih tal 7 fl 35 kr/joch; zaključek 28. 7. 1825. NAVKRIŽNO (PV): pašniki 636 j ≫ njive 413 j ≫ travniki 88 j ≫ vinogradi 7 j, gozd 0 — skromna rodovitnost. INFERENCA (ne branje): ~5,2 jocha/prebivalca (~19 joch/družino); 102 družini v 72 hišah [~] kažejo na večdružinska gospodinjstva; mešano poljedelstvo-živinorejo samozadostnega tipa z majhno tržno sivato; čisti donos ≈ 45 % bruto (stopnja iz Bau-Area).",
+  economicProfileEn:
+    "READINGS: 441 inhabitants (222 m/219 f) in 72 houses [~] / 102 families [~]; 2294 joch 516 klafter [~] total area; building land net yield 7 fl 35 kr/joch; closed 28 Jul 1825. CROSS-REF (PV): pasture 636 j ≫ fields 413 j ≫ meadows 88 j ≫ vineyards 7 j, forest 0 — modest fertility. INFERENCE (not a reading): ~5.2 joch per inhabitant (~19 joch per family); 102 families in 72 houses [~] points to multi-family households; a mixed subsistence crop-livestock economy with a small market surplus; net yield ≈ 45 % of gross (rate from the Bau-Area chain).",
+};
+
+/** PUA — nadaljevanje po straneh A–B (issue #17): strani 3–10, 17 vrstic. */
+export interface PuaOwnerRow {
+  page: number;
+  row: number;
+  nameAsWritten: string;
+  houseNos: string[];
+  sections: string;
+  confidence: string;
+}
+
+export const PUA_CONTINUATION: {
+  source: string;
+  status: ResearchStatus;
+  pagesRead: number[];
+  rows: PuaOwnerRow[];
+  divergences: string[];
+  noteSi: string;
+} = {
+  source: "N083PUA str. 3–10 (Arhiv RS, SI AS 176, k.o. Griblje) — research/issue17/PUA-more.json",
+  status: "REVIEW",
+  pagesRead: [3, 4, 5, 6, 7, 8, 9, 10],
+  rows: [
+    { page: 3, row: 1, nameAsWritten: "Hölloschitsch Wufa Luina hau Dragosche [~]", houseNos: ["1"], sections: "II: 821–1084; IV: 1850–2410", confidence: "~ (alternativa prejšnjega branja: Adlolschitz Wulff Ludwig von)" },
+    { page: 3, row: 2, nameAsWritten: "Bringz Wufa Luina hau Grüble [~]", houseNos: ["20 ali 23"], sections: "I–V (številne parcele; opomba B. K. 35)", confidence: "~" },
+    { page: 3, row: 0, nameAsWritten: "Baron Abfalterer [~] (institucija)", houseNos: [], sections: "I: 72", confidence: "~" },
+    { page: 4, row: 3, nameAsWritten: "Bring Migan/Michael Bauern hiesig Grübln [~]", houseNos: ["24"], sections: "I: 479–751; II: 1166–1644; III–IV: 1808–2168 (opomba B. A. 25)", confidence: "~" },
+    { page: 4, row: 4, nameAsWritten: "Bring Miß/Martin Bauern hiesig Grübln [~]", houseNos: ["25"], sections: "I: 478–800; III: 1807–1951; IV: 2161–2168 (opomba B. P. 29)", confidence: "~" },
+    { page: 5, row: 5, nameAsWritten: "Bring Johann Bräun [~] houlg.", houseNos: ["26"], sections: "—", confidence: "~" },
+    { page: 5, row: 6, nameAsWritten: "Bring Mäda/Manda [~] (Magdalena) Brünn [~]", houseNos: ["28"], sections: "—", confidence: "~" },
+    { page: 6, row: 7, nameAsWritten: "Brulla Mako/Matho Bünnhaußgübl [~] (alternative: Brinig, Brinc)", houseNos: ["43"], sections: "I: 78–243", confidence: "~" },
+    { page: 6, row: 8, nameAsWritten: "Bring Manda Brinahug [~]", houseNos: ["63"], sections: "—", confidence: "~" },
+    { page: 6, row: 9, nameAsWritten: "Commenda Vachernebel [~] (institucija — komenda)", houseNos: ["0"], sections: "—", confidence: "~" },
+    { page: 7, row: 10, nameAsWritten: "Decklitsch Matthäus Bürger hiesig [~]", houseNos: ["33"], sections: "—", confidence: "~" },
+    { page: 7, row: 11, nameAsWritten: "Dragosch Johann Bürger hiesig, Gemeinde Deschitz [~]", houseNos: ["3"], sections: "—", confidence: "~" },
+    { page: 8, row: 12, nameAsWritten: "Dragosch Mavroslawitsch hiesig Dragosche, Gemeinde Molestitch [~]", houseNos: ["4"], sections: "—", confidence: "~" },
+    { page: 8, row: 13, nameAsWritten: "Dragosch Georglawitsch zu Dragosche [~]", houseNos: ["5"], sections: "—", confidence: "~" },
+    { page: 9, row: 14, nameAsWritten: "Fillah Michael Mühldörfler haußgübl [~]", houseNos: ["16"], sections: "—", confidence: "~" },
+    { page: 9, row: 15, nameAsWritten: "Fillah Maria [~]", houseNos: ["34"], sections: "—", confidence: "~" },
+    { page: 10, row: 16, nameAsWritten: "Fillah Jetter [~]", houseNos: ["36"], sections: "—", confidence: "~" },
+    { page: 10, row: 17, nameAsWritten: "Fillah Miho [~]", houseNos: ["61"], sections: "I: 8–220; III: 745–1238; II: 814–1861", confidence: "~" },
+  ],
+  divergences: [
+    "PUA hiša 24 (Bring Michael [~]) UJEMA se z model.ts lastnik-bring-weygandt (houseRefs vsebuje 24) — navzkrižna potrditev",
+    "PUA hiša 25 (Bring Martin [~]) UJEMA se z model.ts lastnik-bring-math (houseRefs 25) — navzkrižna potrditev",
+    "PUA hiše 3–5 = Dragosch [~]; PT strojno branje pa Šimec/Šimec/Knavc — divergenca dveh strojnih branj [~]",
+    "PUA Fillah v hišah 16/34/36/61; PT Filak v hišah 69–71 — ista družina [~], divergentne hišne št.",
+    "Institucionalna lastnika brez hišnih št. (Baron Abfalterer, Commenda Vachernebel) — nov tip lastništva, ki ga PT register ne zajame",
+  ],
+  noteSi:
+    "Register ni strogo abeceden po sodobnih črkah — vsebuje hišna imena (zu Dragosche) in patronimike (Mavroslawitsch). Strani 11–49 (črke do Ž, ~110+ lastnikov) ostajajo TO_COLLECT. Imena velikih družin (Bring, Fillah, Dragosch) stabilna med ponovljenimi klici; hišne št. negotove [~].",
+};
+
+/** PT — strokovni pregled obstoječega registra (issue #17, 2026-10-08). */
+export const PT_REVIEW_2026: {
+  source: string;
+  status: ResearchStatus;
+  reviewedRows: number;
+  summary: { confirmed: number; corrections: number; additionalRows: number; repoOnly: number; illegible: number };
+  structuralFindingSi: string;
+  structuralFindingEn: string;
+  corrections: { houseNo: string; repoOwner: string; vlmReading: string; confidence: string }[];
+  additionalRows: { houseNo: string; note: string }[];
+  decisionSi: string;
+  decisionEn: string;
+} = {
+  source: "N083PT str. 1–8 proti src/data/atlas/houses.ts (101 vrstic registra + 4 dodatne rokopisne) — research/issue17/PT-review.json",
+  status: "REVIEW",
+  reviewedRows: 105,
+  summary: { confirmed: 81, corrections: 15, additionalRows: 4, repoOnly: 0, illegible: 5 },
+  structuralFindingSi:
+    "STRUKTURNA (visoka zaupanja, 3× zoom-verificirano): vrstice registra za hiše 36–41 so zamaknjene za +1 — rokopis ima prečrtan dvojni vpis »34«, stran se konča pri hiši 40 (str. 5 se začne s 41, druga »41« ni mogoča). Register hiša »41« (Bring Mufa, W.23/Wiese 6) v rokopisu ustreza hiši 40. Popravek hišnih št. 36→35 … 41→40 čaka paleografski potrditev; VSEBINA vrstic (parcelni sklici) se potrjeno ujema.",
+  structuralFindingEn:
+    "STRUCTURAL (high confidence, 3× zoom-verified): register rows for houses 36–41 are shifted by +1 — the manuscript carries a struck duplicate »34«, the page ends at house 40 (p. 5 starts at 41, a second »41« is impossible). The register's house »41« (Bring Mufa, W.23/Wiese 6) corresponds to manuscript house 40. Renumbering 36→35 … 41→40 awaits palaeographic confirmation; the row CONTENT (parcel refs) matches.",
+  corrections: [
+    { houseNo: "1", repoOwner: "Peth (H.)", vlmReading: "H. Veith [~] (enako hiši 2)", confidence: "srednja — 2 klica" },
+    { houseNo: "36 (repo)", vlmReading: "Bring Majzel — zamik št., glej strukturno ugotovitev", repoOwner: "Bring Majzel (hiša 36)", confidence: "visoka" },
+    { houseNo: "39 (repo 40)", repoOwner: "Tonig Miko", vlmReading: "Brinig/Bring Misko [~]", confidence: "srednja — 3 klici (parcele W.25·Schißing 39 se natanko ujemajo)" },
+    { houseNo: "76, 79", repoOwner: "Stenopfs Georg", vlmReading: "Strauß [~] Georg", confidence: "srednja — 3 klici (W45, površini 20/100 točni)" },
+    { houseNo: "81–84", repoOwner: "Groy Hanž", vlmReading: "Strauß Georg [~] (priimek IN ime se razlikujeta)", confidence: "nizka — 2 klica" },
+    { houseNo: "96", repoOwner: "Groy Khunz", vlmReading: "Sh-… [~] Georg", confidence: "nizka" },
+    { houseNo: "98", repoOwner: "Zollnerd A. M.", vlmReading: "institucija: Zollamt [~] + ärarial [~]; opomba »verzahlt zum Hauptmagazin v[on] 1826« [~]", confidence: "srednja" },
+  ],
+  additionalRows: [
+    { houseNo: "7 (brez ½)", note: "Lebring Mäfa/Leudig Martin [~], Nº 14, 84 kv. kl — vrstica v rokopisu, ki je ni v registru" },
+    { houseNo: "71½", note: "PREČRTANO (rdeče); lastnik nestabilen [~]; 87/187 [~]" },
+    { houseNo: "76½", note: "PREČRTANO (rdeče); Hufschmied [~]/Cholatschar Markus [~], W.47, 14 — vsebina se prekriva z repo hišo 77 (možen zamik 77/78)" },
+    { houseNo: "99", note: "oštevilčena vrstica s PRAZNO lastniško celico — verjetno zaključna/vrsta vsote strani, ne hiša" },
+  ],
+  decisionSi:
+    "ODLOČITEV (skladno z issue #17: »ne izdeluj drugega registra«, »ne pretvarjaj negotovega v VERIFIED«): register ATLAS_HOUSES ostaja NESPREMENJEN (80 vrstic, status REVIEW); popravki in manjkajoče vrstice so dokumentirani TUKAJ kot pregledovalna plast. Paleografska potrditev pred apliciranjem. Neodvisna potrditev vsebine: vsota PT »…14/889« se natanko ujema s PV »Bau Parzellen 4 J 889 Kl«.",
+  decisionEn:
+    "DECISION (per issue #17: »do not build a second register«, »do not turn uncertain into VERIFIED«): the ATLAS_HOUSES register stays UNCHANGED (80 rows, REVIEW status); corrections and missing rows are documented HERE as a review layer. Palaeographic confirmation before applying. Independent content validation: the PT total »…14/889« matches PV »Bau Parzellen 4 J 889 Kl« exactly.",
+};
+
+/** USTNA ZGODOVINA — raziskovalni protokol (issue #17 #6; intervjuji ostanejo prazni). */
+export const ORAL_HISTORY_PROTOCOL: {
+  version: string;
+  status: ResearchStatus;
+  scopeSi: string;
+  scopeEn: string;
+  stages: { no: number; nameSi: string; nameEn: string; descSi: string; descEn: string }[];
+  requiredFields: string[];
+  consentSi: string;
+  consentEn: string;
+  rightsSi: string;
+  rightsEn: string;
+  rulesSi: string[];
+  rulesEn: string[];
+} = {
+  version: "1.0 (issue #17)",
+  status: "TO_COLLECT",
+  scopeSi:
+    "Tematski okvir iz obstoječega modela (ORAL_TOPICS): Pasuljada, tamburaši, lokalni dogodki, šolski spomini, pričevanja domačinov — povezani na muzejske zapise (MVG-026 šola, MVG-026 tambura, dogodki 1526–2026).",
+  scopeEn:
+    "Thematic frame from the existing model (ORAL_TOPICS): the bean feast, tamburica players, local events, school memories, villagers' testimonies — linked to museum records (MVG-026 school, MVG-026 tambura, events 1526–2026).",
+  stages: [
+    { no: 1, nameSi: "Priprava", nameEn: "Preparation", descSi: "Identifikacija pripovedovalcev (imenski seznam domačinov, šolski spomini, rodbine iz PT/PUA 1825); kontakt prek krajevne skupnosti Griblje / OŠ Loka Črnomelj; seznam vprašanj po temah.", descEn: "Identify narrators (named villagers, school memories, PT/PUA 1825 families); contact via the Griblje local community / OŠ Loka Črnomelj; question lists per topic." },
+    { no: 2, nameSi: "Snemanje", nameEn: "Recording", descSi: "Audio (minimalno) ali video; GPS lega; datum; trajanje; oprema: diktafon + rezervna mikrofonacija; soglasje PODPISANO pred snemanjem.", descEn: "Audio (minimum) or video; GPS position; date; duration; equipment: recorder + backup microphone; consent SIGNED before recording." },
+    { no: 3, nameSi: "Obdelava", nameEn: "Processing", descSi: "Prepis (transkript) z datumom in različico; časovni žigi na tematske skoke; anonimizacija tretjih oseb po potrebi; jezikovna različica (narečje ohranjeno, standardni slovenski prevod).", descEn: "Transcript with date and version; timestamps at topic jumps; third-party anonymisation where needed; language variant (dialect preserved, standard Slovenian rendering)." },
+    { no: 4, nameSi: "Vpis v zbirko", nameEn: "Ingest", descSi: "Polnjenje OralInterview modela (narrator, date, location, interviewer, consent, media, transcript, relatedMuseumRefs, rights, status); povezava na MVG zapise; avdio shranjen v /audio z imenom mvg-oral-<id>.", descEn: "Fill the OralInterview model (narrator, date, location, interviewer, consent, media, transcript, relatedMuseumRefs, rights, status); link to MVG records; audio stored in /audio as mvg-oral-<id>." },
+  ],
+  requiredFields: [
+    "id (mvg-oral-NNN)",
+    "narratorSi/En (ime ali anonimizirano)",
+    "date (YYYY-MM-DD)",
+    "locationSi/En",
+    "interviewerSi/En",
+    "consent { given, scopeSi/En } — obvezno podpisano soglasje",
+    "media { audio, video } — pot do datoteke",
+    "transcript { textSi, textEn, version } — ob popisanem intervjuju",
+    "relatedMuseumRefs [] — povezave na MVG zapise",
+    "rightsSi/En — licence in omejitve uporabe",
+    "status — VERIFIED/DOCUMENTED/REVIEW po Zakonu o varstvu osebnih podatkov",
+  ],
+  consentSi:
+    "Soglasje (obrazec): pripovedovalec potrdi (1) snemanje, (2) hrambo posnetka v muzejski zbirki, (3) objavo prepisa/sposnetka na spletu (neobvezno), (4) trajanje in obseg (časovno neomejeno / do preklica). Poseben dogovor za ranljive osebe in osebne podatke tretjih.",
+  consentEn:
+    "Consent (form): the narrator confirms (1) the recording, (2) storage in the museum collection, (3) online publication of the transcript/recording (optional), (4) duration and scope (unlimited / until revoked). Special handling for vulnerable persons and third-party personal data.",
+  rightsSi: "Avtorske pravice pripovedovalca (ustna dela); muzej pridobi neizključno pravico uporabe z atribucijo; posnetki in prepisi se objavljajo le s soglasjem; ZVOP-1 (varstvo osebnih podatkov) upoštevan.",
+  rightsEn: "Copyright remains with the narrator (oral works); the museum gains a non-exclusive right of use with attribution; recordings and transcripts are published only with consent; personal-data protection (ZVOP-1) observed.",
+  rulesSi: [
+    "NE izmišljuj intervjujev — ORAL_INTERVIEWS ostane prazen, dokler ni posnetega posnetka.",
+    "Vsak vnos zahteva podpisano soglasje (fizični ali digitalni podpis).",
+    "Prepis ohranja narečje; standardna slovenščina v ločenem polju.",
+    "Status VERIFIED samo za preverjene identitete/datume; sicer REVIEW.",
+    "Vsak intervju povežemo na muzejski zapis (relatedMuseumRefs) — brez povezave ni vnosa.",
+  ],
+  rulesEn: [
+    "Do NOT invent interviews — ORAL_INTERVIEWS stays empty until a recording exists.",
+    "Every entry requires a signed consent (physical or digital signature).",
+    "The transcript preserves the dialect; standard Slovenian in a separate field.",
+    "VERIFIED only for verified identities/dates; otherwise REVIEW.",
+    "Every interview links to a museum record (relatedMuseumRefs) — no link, no entry.",
+  ],
+};
+
+/** WEB VERIFIKACIJE (issue #17 #2 #4 #5 #7 #8) — 2026-10-08. */
+export interface WebVerification {
+  target: string;
+  status: ResearchStatus;
+  url: string;
+  findingSi: string;
+}
+
+export const WEB_VERIFICATIONS: WebVerification[] = [
+  {
+    target: "SEM F0000212 — javni zapis",
+    status: "VERIFIED",
+    url: "https://www.etno-muzej.si/sl/digitalne-zbirke/zbirka-starih-fotografij/f0000212",
+    findingSi: "HTTP 200: »Enonadstropna hiša na pero, rojstna hiša dr. Nika Županiča«, Zbirka starih fotografij, Griblje; slika javna. Fotograf/datum v zapisu PRAZNA — pisati SEM. (evd.si = domena naprodaj, NE baza SEM.)",
+  },
+  {
+    target: "Gaspari — primarni predmet za Belo krajino",
+    status: "DOCUMENTED",
+    url: "https://www.etno-muzej.si",
+    findingSi: "Za Griblje: nič. Dokumentiran kandidat: »Belokranjska ohcet« (1924, olje/platno, hrani SEM — RTV SLO/Dnevnik/Družina/razstava SEM 2024). Javne inventarne št. NI → ostaja TO_COLLECT.",
+  },
+  {
+    target: "SI AS 749/3/8/12 (1851–1853) — VAČ",
+    status: "VERIFIED",
+    url: "https://vac.sjas.gov.si/vac/search/details?id=4971617",
+    findingSi: "VAČ zapis potrjen (curl -k zaradi SSL): izpisek za davčne občine Vinji Vrh, Kot, Griblje, Kaltersberg, Loka, Petrova vas, Krasinec (serija /3/8 Zemljiška odveza). Javno dostopno, NI digitalizirano — vpogled v čitalnici ARS. Pregledana celotna serija /3/8 (17 enot): edina Griblje-enota je /3/8/12. www.e-ars.si: DNS mrtev.",
+  },
+  {
+    target: "EŠD 2122 / 11118 / 10094 — Register nepremične kulturne dediščine",
+    status: "VERIFIED",
+    url: "https://geohub.gov.si/ghapp/giskd/?&find=2122",
+    findingSi: "EŠD 2122 = Griblje — cerkev sv. Vida (spomenik lokalnega pomena; GisKD find=2122 deluje). EŠD 10094 = Griblje — najdišče ob Kolpi (registrirana, neolitik–rima). EŠD 11118 = Podzemelj-Kučar (občina Metlika) — NI Griblje; podatek v repu JE ŽE PRAVILEN (sources.ts razlikuje 11118 od 10094). Uradni javni vir: podatki.gov.si (CKAN, Register nepremične kulturne dediščine, CSV, zadnja posodobitev 2023-05-04).",
+  },
+  {
+    target: "Šolski arhiv VAČ 4118864 + 747512",
+    status: "VERIFIED",
+    url: "https://vac.sjas.gov.si/vac/search/details?id=4118864",
+    findingSi: "4118864: SI_ZAL_ČRN/0001/001/00012, Državna osnovna šola Griblje 1929–1941 — POTRJENO, DIGITALIZIRANO, javno. 747512: SI_ZAL_NME/0234/003/096, OŠ Črnomelj podružnica Griblje 1970–1982 — potrjeno, javno. Šolska kronika Griblje: javnega dokaza o hranilniku NI (ostaja REVIEW — verjetno pri OŠ Loka Črnomelj).",
+  },
+  {
+    target: "1812 — izvirniki zemljevida",
+    status: "VERIFIED",
+    url: "https://commons.wikimedia.org/wiki/File:Provinces_Illyriennes_Servie_et_Bosnie_1812.jpg",
+    findingSi: "Commons: datoteka obstaja (1812, Giraldon, javna last, 8297 × 6080 px). dlib URN:NBN:SI:doc-F4NO0ZFV (ZRC SAZU 2012) potrjen prek COBISS/WorldCat (dlib s sandboxa timeout). Georeferenca ostaja TO_COLLECT (regionalni politični list 1:288.000 — kontrolne točke grobe).",
+  },
+  {
+    target: "matice.si — katastrski skeni",
+    status: "NOT_FOUND",
+    url: "https://matice.si",
+    findingSi: "DNS se ne razreši; iskalniki takega vira ne poznajo. Skeni franciscejskega katastra za Griblje ostajajo na VAČ (N083, javno) — to je potrjena pot.",
+  },
+  {
+    target: "eZKN — georeferenčiran zgodovinski kataster (GisKD/GeoHub)",
+    status: "VERIFIED",
+    url: "https://geohub.gov.si/ghapp/ezkn/",
+    findingSi: "Javni georeferenciran pregledovalnik ZKN GURS + indikacijski katastrski zemljevidi franciscejskega/reambulančnega katastra ARS (JPG nižje ločljivosti; ime »GeoZgodovina« pod tem imenom NE obstaja — pravi vir je eZKN). Uradna javna georeferenca katastrskih map — ključ za prostorsko prekrivanje 1825↔danes.",
+  },
+  {
+    target: "N083 — javna dostopnost skenov (OPSI)",
+    status: "VERIFIED",
+    url: "https://vac.sjas.gov.si/vac/search/details?id=373414",
+    findingSi: "Celoten SI AS 176/N83 Griblje (grafični listi A01–A05 z »Digitalni posnetek« + spisovne enote PG/PR/PS/PT/PUA/PV/PZ) je javno dostopen v VAČ — OPSI zbirka »Digitalizirano arhivsko gradivo starih katastrov«. Tehnična pot javna; visoke resolucije v čitalnici ARS.",
+  },
+  {
+    target: "CLSS — 3D LiDAR (novi cikel 2023–2025)",
+    status: "VERIFIED",
+    url: "https://clss.si/?center=522667||47571&srid=3794&scale=2000&pitch=45&z=1200",
+    findingSi: "HTTP 200; 2D+3D pregledovalnik, cikel 2023–2025 (nadomesti LiDAR 2014–15, ki bloka b_16 ni zajemal); kvadrantni prenos GKOT/DMR/DMP (.laz) + nDMP/PAS (.tif); uradni globoki link za Griblje (center=522667||47571, EPSG:3794).",
+  },
+  {
+    target: "OSM — dejanski podatki za Griblje",
+    status: "VERIFIED",
+    url: "https://api.openstreetmap.org/api/0.6/map?bbox=15.275,45.555,15.305,45.582",
+    findingSi: "Direkten OSM API (Overpass blokiran s sandboxa — zamenjana pot, dokumentirano): 449 stavbnih way v k.o. bbox (~301 v jedru vasi; 55 z hišnimi št. — 37 različnih št. 23–85, ulici Griblje/Dragoši); cerkev Sv. Vid 45,56768/15,29039 (~12 m od EŠD 2122); vas node 45,57246/15,29257, population 356, wikidata Q2531566, name:de Grüble. Primanjkljaj: OSM nima hišnih št. kot zanesljivega ključa za hiše 1825; šole NI v OSM.",
+  },
+  {
+    target: "ARSO DOF/DMR storitvi",
+    status: "VERIFIED",
+    url: "https://gis.arso.gov.si/arcgis/rest/services/DOF_D96TM_2022_2023_2024/MapServer",
+    findingSi: "DOF 2022–2024: 200, DOF_25 = 25 cm, 17 LOD, EPSG:3794 (dokazano z izvozom 300 m pri cerkvi). DMR ImageServer: 200, 1 m F32, izvoz na cerkvi (D96TM x=522.667 y=47.571) deluje.",
+  },
+];
+
+/** MATRIKA issue #17 — pred/zares (vse številke iz datotek). */
+export interface Issue17MatrixRow {
+  areaSi: string;
+  areaEn: string;
+  beforeSi: string;
+  afterSi: string;
+  delta: string;
+}
+
+export const ISSUE17_MATRIX: Issue17MatrixRow[] = [
+  { areaSi: "PT", areaEn: "PT (building protocol)", beforeSi: "80 vrstic, REVIEW", afterSi: "101 vrstic registra + pregled: 81/105 verdiktov potrjenih, 15 popravkov [~], 4 prečrtane vrstice, strukturni zamik 36–41", delta: "+pregled (register nespremenjen)" },
+  { areaSi: "PUA", areaEn: "PUA (owners register)", beforeSi: "2 strani / 21 lastnikov", afterSi: "10 strani / 39 vnosov (18 novih: Bring, Dragosch, Fillah, Brulla, Decklitsch, Abfalterer, Commenda)", delta: "+8 strani, +18 vnosov" },
+  { areaSi: "PS", areaEn: "PS (parcel register)", beforeSi: "0 prebranih (20 vrstic model)", afterSi: "struktura + rekapitulacija: 102 stavbna mesta / 2505 parcel / 2607 skupaj; 12 vzorčnih vrstic", delta: "+9 strani, +12 vrstic, + kontrolna vsota" },
+  { areaSi: "PR", areaEn: "PR (boundary description)", beforeSi: "0 (TO_COLLECT)", afterSi: "4/4 strani: mere 1028×1884 kl, točke 1–10 [~], sosedi, 8. 4. 1825", delta: "+4 strani (celota)" },
+  { areaSi: "PZ", areaEn: "PZ (valuation elaborate)", beforeSi: "0 (TO_COLLECT)", afterSi: "10 vzorčenih strani: 441 prebivalcev, 2294 joch, cenilna veriga (Bau-Area 7 fl 35 kr/joch), 28. 7. 1825", delta: "+10 strani, +ekonomski profil" },
+  { areaSi: "PG", areaEn: "PG (indication sketch)", beforeSi: "0 (TO_COLLECT)", afterSi: "1/1: skica z mejo, Kolpo, ~15–19 točk, sosedi; hiše niso videti (negativno)", delta: "+1 stran" },
+  { areaSi: "PV", areaEn: "PV (land use)", beforeSi: "0 (TO_COLLECT)", afterSi: "1/1 v celoti: 10 izpolnjenih kultur (20 vrstic), skupaj 1221 j ≈ 703 ha, gozd PRAZEN (anomalija)", delta: "+1 stran, +10 vrstic" },
+  { areaSi: "1812", areaEn: "1812 map", beforeSi: "dokumentirano, georeferenca TO_COLLECT", afterSi: "izvirnik potrjen (Commons 8297×6080, PD + ZRC SAZU faksimile); georeferenca še vedno TO_COLLECT (regionalni list)", delta: "vir VERIFIED, sloj ne" },
+  { areaSi: "1851–53", areaEn: "1851–53 (SI AS 749)", beforeSi: "odprto (VAČ 4971617, NOT_DIGITIZED)", afterSi: "enota potrjena + edina Griblje-enota v seriji /3/8 (17 enot pregledanih); ni digitalizirana", delta: "status pošteno DOCUMENTED" },
+  { areaSi: "F0000212", areaEn: "F0000212 (SEM photo)", beforeSi: "delna provenanca (TO_COLLECT)", afterSi: "javni zapis VERIFIED (URL + slika); fotograf/datum: polji prazni — pisati SEM (TO_COLLECT)", delta: "+VERIFIED vir" },
+  { areaSi: "Gaspari", areaEn: "Gaspari", beforeSi: "sekundarna omemba", afterSi: "za Griblje nič; dokumentiran kandidat za Belo krajino (Belokranjska ohcet 1924, SEM) brez inventarne št.", delta: "ostaja TO_COLLECT" },
+  { areaSi: "šola", areaEn: "school", beforeSi: "2 enoti DOCUMENTED", afterSi: "obe enoti VAČ POTRJENI (4118864 celo digitalizirana!); kronika: hranilnik javno neznan (REVIEW)", delta: "+potrditev" },
+  { areaSi: "ustna zgodovina", areaEn: "oral history", beforeSi: "prazen model", afterSi: "protokol v1.0 (4 faze, 11 obveznih polj, soglasje, pravice, 5 pravil); intervjuji ostajajo PRAZNI", delta: "+protokol, +0 intervjujev" },
+  { areaSi: "arheologija/EŠD", areaEn: "archaeology/EŠD", beforeSi: "2122/11118/10094 v virih", afterSi: "EŠD potrjeni v uradnem registru (GisKD find=2122 deluje); 11118=Podzemelj (podatek v repu ŽE PRAVILEN)", delta: "+uradni URL-ji" },
+  { areaSi: "javni geodata", areaEn: "public geodata", beforeSi: "8 virov, 3 VERIFIED", afterSi: "+eZKN (georef. kataster ARS), CLSS cikel 2023–25 z globokim linkom, OSM dejanski podatki (449 stavb), ARSO izvozi dokazani; LiDAR 2014-15 b_16 ostaja NOT_FOUND", delta: "+4 virov/dokazov" },
+];
+
+/** Skupni revizijski zapis issue #17 (strojno berljiv). */
+export const ISSUE17_AUDIT = {
+  issue: 17,
+  closedAt: "2026-10-08",
+  methodSi:
+    "VLM branje skenov N083 (PDF→PNG, pdftoppm 200–300 dpi; skeni javno dostopni prek VAČ); vsako pomembno številko ≥2 neodvisna klica; cross-check PT↔PUA↔PS↔PV↔PR (mere, vsote, Bau-Parzellen 889 kl); web verifikacije virov (curl HTTP + iskanje); OSM podatki prek direktnega API. Surovi izpisi: research/issue17/*.json.",
+  methodEn:
+    "VLM reading of the N083 scans (PDF→PNG, pdftoppm 200–300 dpi; scans publicly accessible via VAČ); every key number read ≥2 independent calls; cross-checks PT↔PUA↔PS↔PV↔PR (dimensions, totals, Bau-Parzellen 889 kl); web verifications of sources (curl HTTP + search); OSM data via the direct API. Raw outputs: research/issue17/*.json.",
+  vlmCallsTotal: 145,
+  seriesRead: {
+    PR: "4/4 strani (REVIEW)",
+    PG: "1/1 stran (REVIEW)",
+    PV: "1/1 stran, 10 izpolnjenih vrstic od 20 (REVIEW)",
+    PS: "9 strani vzorčeno + rekapitulacija 102/2505/2607 (REVIEW)",
+    PUA: "10/49 strani, 38 vrstic (REVIEW)",
+    PZ: "10 strani vzorčeno, ekonomski profil (REVIEW)",
+    PT: "8/8 pregledano proti registru: 81/101 potrjeno, 15 popravkov (REVIEW)",
+  },
+  stillOpenSi:
+    "ODPRTO (pošteno): PUA strani 11–49; PS poln prepis (kontrola 2607); PZ sredina (str. 4–67 — cenilni razredi kultur); paleografska potrditev Vseh strojnih branj; georeferenca 1812; digitalizacija SI AS 749; metapodatki F0000212 (SEM); Gasparijeva inventarna št.; hranilnik šolske kronike; prvi posneti intervjuji.",
+  stillOpenEn:
+    "STILL OPEN (honest): PUA pages 11–49; full PS transcription (checksum 2607); PZ middle (pp. 4–67 — culture class values); palaeographic confirmation of ALL machine readings; 1812 georeference; SI AS 749 digitisation; F0000212 metadata (SEM); Gaspari inventory no.; school chronicle keeper; first recorded interviews.",
+  principleSi:
+    "Skladno s pravili issue #17: nič od #16 ni podvojeno; Atlas ni bil na novo izdelan; PT 1–98 NI prepisan ponovno (samo pregledan); REVIEW→VERIFIED SAMO s primarnim dokazom (javni zapis SEM, VAČ, GisKD, Commons); AI ni dokazni vir — VLM branja ostajajo REVIEW z označenimi negotovostmi [~]; negativni rezultati ostajajo vidni.",
+  principleEn:
+    "Per the issue #17 rules: nothing from #16 duplicated; the Atlas was not rebuilt; PT 1–98 NOT re-transcribed (only reviewed); REVIEW→VERIFIED ONLY with primary evidence (public SEM record, VAČ, GisKD, Commons); AI is not an evidentiary source — VLM readings stay REVIEW with marked uncertainties [~]; negative results remain visible.",
 };

@@ -1,0 +1,47 @@
+{
+  "series": "PZ",
+  "titleAsWritten": "Land Krain. 83, Schätzung District Nro. / Kreis Neustadtl. Steuerbezirk Krupge [~] / CATASTRAL-SCHÄTZUNGS-ELABORAT / der / Gemeinde Grüble / S.G. 11.12.16.17.18.20.22.23.24 (PZ-01)",
+  "structure": "PZ je NARATIVNI + ADMINISTRATIVNI elaborat, ne čisto tabelaričen: §1 Einleitung/Topographie (PZ-03: lega ob reki [~'Sava', pri Gribljah gre verjetneje za Kolpo/Ku(l)pa — VLMovo branje 'Sava' je sumljivo], meja s Kraljevino Hrvaško, Areal celega grundbesiza 2294 Joch 516 Klafter, lega ~1½ ure oddaljeno [~]); §2 Gränzen (PZ-02: sosedje Krasing, östlich Kuhpaß [~]/Heilschütz [~], südlich Weidendörfl, westlich Stibusche [~]/Krasing); §3 Bevölkerung+Nahrung+Viehstand (PZ-02: 441 duš, 222 moških/219 žensk, 72 hiš [~], 102 družin/hišnih skupnosti [~], prehrana iz moke/mlinov, mleka; živina: vprežne in mlade govedi, nekaj konj, malo prašičev [~ garbled]); SREDINA zvoka (str. ~4–67, NI vzorčena): pričakovani cenilni razredi kultur × fl/kr (temelj Schätzung) — prihodnji vzorec str. ~20–60; KONEC (PZE-68–71) je ČISTO ADMINISTRATIVEN: PZE-68 'Vorlage zu dem Steuerschätzungs-Protokoll ... wegen Abtheilung eines Theiles Acker ... Ackerklasse [?]' (vprašanje razredov njiv); PZE-69 overovitev 'Geprüft den ... 1824 [~]' s podpisom k.k. komisarja [~]; PZE-70 'Nachtrag zu dem Grundsteuer-Urbariums-Entwurfe für die Gemeinde Grüble, dato den 2ten Juli 1824 [~]' s številčenim seznamom 'hus Zins' hišnih davkov (1–8+); PZE-71 zaključni protokol 'Gemacht den 28ten Juli 1825.' + podpis '[~] k.k. Dist. Comr'.",
+  "valuationRows": [
+    {
+      "page": 3,
+      "culture": "Gesamtareal (ves grundbesiz občine)",
+      "class": "—",
+      "valuePerJoch": "—",
+      "area": "2294 Joch 516 Klafter [~]",
+      "confidence": "srednja"
+    },
+    {
+      "page": 2,
+      "culture": "— (demografija, ne vrednost)",
+      "class": "—",
+      "valuePerJoch": "—",
+      "area": "441 prebivalcev / 222 m / 219 ž; 72 hiš [~]; 102 družin [~]",
+      "confidence": "srednja-za prebivalstvo, nizka-za hiše/družine"
+    },
+    {
+      "page": 68,
+      "culture": "Acker (vprašanje razdelitve na Ackerklasse — 'Vorlage')",
+      "class": "[?]",
+      "valuePerJoch": "[?]",
+      "area": "[?]",
+      "confidence": "nizka (narrativno, garbled)"
+    },
+    {
+      "page": 70,
+      "culture": "— (hišni davki 'hus Zins', Nachtrag k Urbarium-Entwurfu)",
+      "class": "—",
+      "area": "številčni seznam 1–8+ [~]",
+      "confidence": "nizka",
+      "valuePerJoch": ""
+    }
+  ],
+  "recapitulation": {
+    "found": false,
+    "page": 0,
+    "rows": [],
+    "rawTranscription": "V vzorčenih končnih straneh (PZE-68–71) Rekapitulacija s kulturnimi vsotami NI — konec zvoka so administrativni protokoli: PZE-68 Vorlage (Ackerklasse), PZE-69 'Geprüft ... [~]', PZE-70 'Nachtrag zu dem Grundsteuer-Urbariums-Entwurfe ... dato den 2ten Juli 1824 [~]' (številčen 'hus Zins' seznam), PZE-71 'Gemacht den 28ten Juli 1825. [~] k.k. Dist. Comr'. Tabele cenilnih razredov/fl/kr morajo biti v SREDINI zvoka (str. ~4–67) — naslednji korak: vzorčiti str. ~20–60. (Opomba: kulturne vsote ~1216 Joch [~] obstajajo v PS, str. 141 — Recipitulation/Abschluß der Gemeinde — ne v PZ.)"
+  },
+  "economicProfileSi": "BRANJA (kar sem dejansko prebral): (1) PZ §1: občina obsega 2294 Joch 516 Klafter [~], leži ob reki [~] ob meji s Hrvaško, ~1½ ure [~] od središča; (2) PZ §3: 441 prebivalcev (222 m, 219 ž) v 72 hišah [~] / 102 družinah [~], 'večinoma zaposlenih v kmetijski pridelavi'; prehrana: moka/mleko zmernega pridelka [~]; živinoreja skromna — vprežna goved (voli/krave), nekaj konj, 'majhna živina' prašičev [~ garbled]; (3) PZ konec: 'Gemacht den 28ten Juli 1825' — elaborat zaključen julija 1825; (4) navzkrižno iz PS (serija 17-c, PSE-143): 102 bauplätze + 2505 grundparzell = 2607 parcel; iz vzorca PS-003/004 prevladujejo rabe Acker + Wiese, starejši recap [~] omenja ~1216 Joch obdelanega. SKLEPI (INFERENCA, ne branje): ~5,2 Jocha na prebivalca (~19 Joch/družino) vključno z gozdom = majhne kmečke gospodarstvo; 102 družine / 72 hiš → večdružinska gospodinjstva ali razširjene družine; kombinacija 'moderater pridelek' + skromna živina kaže na samozadostno mešano poljedelstvo-živinorejo z majhno tržno satire. KAKOVOST RAZDELITVE ZEMLJE (razredi I/II/III) IZ VZORCA NI ZNANA — to bo dala sredina PZ (str. ~20–60), zato ekonomskega profila po razredih ZA ZDAJ ne trdim.",
+  "qualityNoteSi": "Narativni Kurrent PZ je težji od tabel PS: VLM je v §1 in PZE-68/70 podal delno garbled besedilo (npr. 'Sava' namesto verjetne Kolpe, 'Erzherzog Maximilian'-odlomek na PZE-70 je sumljiv). TRDNE točke: naslov PZ-01, §3 prebivalstvo (222/219/441), Areal 2294 Joch 516 Klafter [~], datum zaključka 28. julij 1825; preveriti: 72 hiš vs. 102 bauplätze (PS-143) vs. hišne št. do ~135 (PS-140) — za 1825 gre verjetno za različne pojme (stanovanjske hiše vs. katastrski bauplatz vs. konskripcijske številke); naslednja seja: vzorčiti SREDINO PZ (~str. 20–60) za razrede/vrednosti kultur + ponovno prebrati PZE-69/70 s paleografsko pomočjo."
+}

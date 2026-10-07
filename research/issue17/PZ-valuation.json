@@ -1,0 +1,124 @@
+{
+  "series": "PZ",
+  "docTitle": "Catastral-Schätzungs-Elaborat der Gemeinde Grüble (1825)",
+  "pagesSampled": [
+    20,
+    30,
+    40,
+    50,
+    60
+  ],
+  "pageKind": {
+    "20": "narrative+table (§. 6. Größere gemüß-Gärten — opis + povzetková tabela fl/kr)",
+    "30": "table (tiskana primerjalna oblika: Ertrag Behelfe — Ausschuss vs Kommission, pridelki po razredih)",
+    "40": "narrative/certification (overovitev + seznam komisije, 9. 8. 1826 [~])",
+    "50": "narrative+table (§. 1. Ackerland — Veranschlagung des Cultur-Aufwandes / Rein-Ertrag tabela)",
+    "60": "narrative+table (§. 8. Bau-Area — ista Rein-Ertrag tabela + utemeljitve)"
+  },
+  "valuationRows": [
+    {
+      "page": 20,
+      "culture": "Größere gemüß-Gärten",
+      "class": "einige Classe [~]",
+      "valuePerJoch": "skupaj 23 fl 44 kr [~]; v narativu omenjene vrednosti 105 fl / 100 fl [?~]",
+      "area": "~4 Joch [~]",
+      "ownerOrParcel": "— (na ravni kulture, ne lastnika)",
+      "confidence": "low-medium"
+    },
+    {
+      "page": 30,
+      "culture": "Ackerland",
+      "class": "I",
+      "valuePerJoch": "pridelki pr. Joch v n.ö. Metzen: Weizen 12, Roggen 12, Gerste [—], Hafer 26 [~], ostalo 15/10/80/50 [~] — Brez fl-vrednosti",
+      "area": "—",
+      "ownerOrParcel": "—",
+      "confidence": "low-medium"
+    },
+    {
+      "page": 30,
+      "culture": "Ackerland",
+      "class": "II",
+      "valuePerJoch": "Metzen: 9, 9, [—], [—], 18, 10, 7, 65, 90 [~]",
+      "area": "—",
+      "ownerOrParcel": "—",
+      "confidence": "low"
+    },
+    {
+      "page": 30,
+      "culture": "Wiesen",
+      "class": "I",
+      "valuePerJoch": "Heu 14, Grumet 6 Centner pr. Joch [~] (süsses; saures/gemisch. prazno)",
+      "area": "—",
+      "ownerOrParcel": "—",
+      "confidence": "medium"
+    },
+    {
+      "page": 30,
+      "culture": "Wiesen",
+      "class": "II",
+      "valuePerJoch": "Heu 8 Centner [~]",
+      "area": "—",
+      "ownerOrParcel": "—",
+      "confidence": "low-medium"
+    },
+    {
+      "page": 30,
+      "culture": "Weingärten",
+      "class": "[~ C]",
+      "valuePerJoch": "Most 12 n.ö. Eimer [~]",
+      "area": "—",
+      "ownerOrParcel": "—",
+      "confidence": "low"
+    },
+    {
+      "page": 40,
+      "culture": "—",
+      "class": "—",
+      "valuePerJoch": "opomba '60 fl. Münze' [~] ob seznamu komisije",
+      "area": "—",
+      "ownerOrParcel": "člani ocenjevalne komisije: [~Laurig Robač], [~Grony Poppay], [~Janez Mallygitsch], [~Grony Pimpfen], [~Mittl Geiner], [~Grony Almug], [~Murnko Pavlicinig], [~Mitz Jurkobigisch]; Bezirkskommissär [~Laurenc Jereompfisch]; podpisa [~Oskar Plenckmayr], [~J.J. Pflügzung]",
+      "confidence": "low (imena)"
+    }
+  ],
+  "classValues": [
+    {
+      "culture": "Ackerland",
+      "class": "I",
+      "valueFlKr": "Rob-Ertrag 20[~25] fl 44 kr [~]; Cultur-Aufwand 10 fl 18¾ kr [~]; Tarif 4/5 [~]; Anschlag 8[~10] fl 10½[~30½/41½] kr; Rein-Ertrag 12–15 fl 5 kr [~]",
+      "confidence": "low — 3 VLM branja se RAZHAJAJO; aritmetika se ne sklada"
+    },
+    {
+      "culture": "Wiesen",
+      "class": "I",
+      "valueFlKr": "Heu 14 Centner, Grumet 6 Centner pr. Joch [~] (pridelek, ne fl)",
+      "confidence": "medium"
+    },
+    {
+      "culture": "Wiesen",
+      "class": "II",
+      "valueFlKr": "Heu 8 Centner pr. Joch [~]",
+      "confidence": "low-medium"
+    },
+    {
+      "culture": "Weingärten",
+      "class": "[~]",
+      "valueFlKr": "Most 12 Eimer pr. Joch [~] (pridelek, ne fl)",
+      "confidence": "low"
+    },
+    {
+      "culture": "Größere gemüß-Gärten (§. 6)",
+      "class": "einige [~]",
+      "valueFlKr": "skupaj 23 fl 44 kr za ~4 Joch → [~5 fl 19 kr/Joch — izračun, INFERENCA]",
+      "confidence": "low-medium"
+    },
+    {
+      "culture": "Bau-Area (§. 8)",
+      "class": "— (ena vrstica)",
+      "valueFlKr": "Roh-Ertrag 16 fl 50½ kr; Cultur-Aufwand 9 fl 33¾ kr; Tarif 55 %; Anschlag 9 fl 15½ kr; Rein-Ertrag 7 fl 35 kr pr. Joch",
+      "confidence": "medium-high — aritmetika SE UJEMA (55 % × 16 fl 50½ = 9 fl 15.8 kr ≈ 9 fl 15½; 1010.5−555.5 = 455 kr = 7 fl 35 kr)"
+    }
+  ],
+  "structureConclusion": "Sredina PZ (pp. 4–67) NI ena sama dolga tabela in NI po lastnikih/parcelah: sestavljena je iz (a) §§ odsekov po kulturah z narativnim opisom + majhno povzetkovno tabelo v fl/kr (p. 20 = §. 6 Größere gemüß-Gärten), (b) tiskane primerjalne oblike 'Resultate der benützten Behelfe' (Ausschuss-angaba vs Commissions-Anspruch) s PRIDELKI po razredih v Metzen/Centner/Eimer (p. 30), (c) dela 'Veranschlagung des Cultur-Aufwandes und Darstellung des Rein-Ertrages' s §§ ponovno od 1 (p. 50 = §. 1 Ackerland; p. 60 = §. 8 Bau-Area) in standardno tabelo Roh-Ertrag → tarifirani Cultur-Aufwand → Rein-Ertrag pr. Joch, ter (d) overovitveno stranjo s seznamom komisije (p. 40, 9. 8. 1826 [~]). Vzorčenje 20/30/40/50/60: 4/5 strani vsebuje tabelo (vse mešano z narativom), 1/5 čista overovitev. OCENJEVALNI PRISTOP = ČISTI DOHODEK (Rein-Ertrag) na ravni KULTURA × RAZRED: bruto donos pr. Joch (iz pridelkov × cen) minus tarifirani stroški obdelave (p. 60: 55 % bruto) = neto donos pr. Joch, ki se nato prenaša na parcele v PS. Vrstic PO LASTNIKU ali PO HIŠI v vzorcu NI —Parcellevel podatki živijo v PS (Grundparzellen-Protocoll).",
+  "economicProfileSi": "BRANJA (kar dejansko piše): PZ v sredini vsebuje ocenjevalne odseke za vsaj Ackerland (razreda I in II), Wiesen (I in II), Weingärten (Most ~12 Eimer), Gärten (§. 6 Größere gemüß-Gärten: ~4 Joch, skupaj 23 fl 44 kr) in Bau-Area (§. 8: Rein-Ertrag 7 fl 35 kr na Joch). Razredi so eksplicitni (I/II; 'einige Classe' za vrtove). Pridelek pšenice ~12 Metzen/Joch (razr. I) in ~9 (razr. II), rž enako, oves ~26 [~]/18 [~]; sena ~14 Centner (I) oziroma ~8 (II). Za Bau-Area je zanesljivo prebrana celotna cenilna veriga: bruto 16 fl 50½ kr, stroški 55 % = 9 fl 15½ kr, neto 7 fl 35 kr na Joch. KJE INFERENCA (ločeno od branj): (1) Spekter kultur v PZ-odsekih (Acker, Wiese, Weingarten, Garten, Bau-Area) se sklada s PV Nutzungs-Ausweis z dne 10. 1. 1825 (njive 413 J, pašniki 636 J, travniki 76+12 J, vinogradi 7 J, vrtovi 2 J, stavbna zemljišča 4 J) → gospodarstvo je bilo živinorejsko-poljedelsko s PRETEŽNO pašniki+njivami, travniki sekundarno, vinogradništvo simbolično (~7 J); gozd v PV 0 J, zato § za Wald v PZ najverjetneje manjka ali je prazen. (2) Nizek delež razreda I njiv glede na II [~] in skromni pridelki (pšenica ~9–12 Metzen) nakazujejo srednjo do skromno rodovitnost na 45 % neto donosa (Bau-Area tarif 55 % stroškov). (3) Ocena '60 fl. Münze' [~] ob komisiji je najverjetneje nagrada/skupni znesek, NE pa vrednost zemlje. (4) Vrednosti na Joch za Acker (Rein-Ertrag ~12–15 fl [~], nizka zaupanja) se lahko končno preveri šele s ponovnim človeškim branjem strani 50.",
+  "qualityNoteSi": "Skupaj 7 VLM klicev (5 strani + 2 verifikacijski na str. 50). Str. 20, 30, 40: eno branje na stran → vse števke [~] (Kurrent + rdeči robovi). Str. 50: TRIje odčitki se RAZHAJAJO (Rob-Ertrag 20 ali 25 fl 44 kr; Anschlag 8 fl 10½ / 10 fl 30½ / 10 fl 41½; Rein-Ertrag 12/13/15 fl 5 kr) in NOBENA kombinacija ni aritmetično konsistentna → vsi fl-števke za Acker razr. I so NIZKA zaupanja; struktura stolpcev pa je zanesljiva (3× enaka). Str. 60: aritmetika se ujema (55 % bruto − → neto 7 fl 35 kr) → srednja-visoka zaupanja, ALE datum v nogi 'Martall den 18ten Jänner 1834' [~] je sumljiv (verjetno napačno branje 1825 ali poznejša 'revaluirt'-opomba v rdečem tušu). Str. 40: imena komisije so VLM ugibanja (Grony/Laurig/Mallygitsch …) — priimek 'Poppay' [~] bi lahko ustrezal 'Popper' iz PS-003, vse zahteva paleografsko preverbo. Priporočeno za nadaljnje delo: ciljno človeško branje strani ~45–67 (Rein-Ertrag §§ 1–10) — to je edini vir neto donosov na Joch za vse kulture; str. 30 tabela daje pridelke, str. 20/50 vrednosti z okvarjenimi odčitki."
+}

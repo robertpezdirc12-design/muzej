@@ -47,9 +47,20 @@ import {
   F0000212_PROVENANCE,
   MAP_1812,
   ORAL_TOPICS,
+  ORAL_INTERVIEWS,
   ARCHIVE_TRANSFER_ROWS,
   ARCHIVE_NON_TRANSFERS,
   ARCHIVE_TRANSFER_AUDIT,
+  PV_LAND_USE_1825,
+  PR_BOUNDARY_1825,
+  PS_RECAP_1826,
+  PZ_ECONOMY_1825,
+  PUA_CONTINUATION,
+  PT_REVIEW_2026,
+  ORAL_HISTORY_PROTOCOL,
+  WEB_VERIFICATIONS,
+  ISSUE17_MATRIX,
+  ISSUE17_AUDIT,
 } from "@/data/atlas/research";
 import { ATLAS_SOURCES, NEGATIVE_RESULTS } from "@/data/atlas/sources";
 
@@ -81,7 +92,7 @@ function StatusBadge({ status }: { status: string }) {
   );
 }
 
-type Tab = "audit" | "kurrent" | "geodata" | "sola" | "posebno" | "negativni" | "arhiv";
+type Tab = "audit" | "kurrent" | "geodata" | "sola" | "posebno" | "negativni" | "arhiv" | "vrzeli";
 
 const TABS: { id: Tab; si: string; en: string; icon: React.ComponentType<{ className?: string }> }[] = [
   { id: "audit", si: "Provinienca 113", en: "Provenance 113", icon: Microscope },
@@ -91,6 +102,7 @@ const TABS: { id: Tab; si: string; en: string; icon: React.ComponentType<{ class
   { id: "posebno", si: "Posebne raziskave", en: "Special research", icon: Users },
   { id: "negativni", si: "Negativni rezultati", en: "Negative results", icon: FileX2 },
   { id: "arhiv", si: "Prenos iz arhiva", en: "Archive transfer", icon: Archive },
+  { id: "vrzeli", si: "Zapolnjevanje vrzeli #17", en: "Gap closure #17", icon: Search },
 ];
 
 export function MuseumResearch() {
@@ -670,6 +682,315 @@ export function MuseumResearch() {
                   </li>
                 ))}
               </ul>
+            </div>
+          </motion.div>
+        )}
+        {/* ——— 8. ZAPOLNJEVANJE VRZELI (issue #17) ——— */}
+        {tab === "vrzeli" && (
+          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mt-6 grid gap-4">
+            {/* glava: verdikt */}
+            <div className="rounded-xl border bg-card p-6 shadow-sm">
+              <h3 className="flex items-center gap-2 font-display text-lg font-semibold">
+                <Search className="size-4 text-primary" aria-hidden="true" />
+                {t(
+                  `Research gap closure v2 — Kurrent, 1812–1853, hiše/parcele, viri (issue #17)`,
+                  `Research gap closure v2 — Kurrent, 1812–1853, houses/parcels, sources (issue #17)`,
+                )}
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                {lang === "si" ? ISSUE17_AUDIT.principleSi : ISSUE17_AUDIT.principleEn}
+              </p>
+              <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+                <strong className="text-foreground">{t("Metoda:", "Method:")}</strong>{" "}
+                {lang === "si" ? ISSUE17_AUDIT.methodSi : ISSUE17_AUDIT.methodEn}
+              </p>
+              <div className="mt-3 flex flex-wrap gap-2 text-[10px] font-mono text-muted-foreground">
+                <span className="rounded-full bg-secondary px-2 py-0.5">
+                  {t(`VLM klicev: ${ISSUE17_AUDIT.vlmCallsTotal}`, `VLM calls: ${ISSUE17_AUDIT.vlmCallsTotal}`)}
+                </span>
+                <span className="rounded-full bg-secondary px-2 py-0.5">
+                  {t(`serij delno prebranih: 7/7 (REVIEW)`, `series partially read: 7/7 (REVIEW)`)}
+                </span>
+                <span className="rounded-full bg-secondary px-2 py-0.5">research/issue17/ · surovi izpisi</span>
+                <span className="rounded-full bg-secondary px-2 py-0.5">{ISSUE17_AUDIT.closedAt}</span>
+              </div>
+            </div>
+
+            {/* PV — raba tal 1825 */}
+            <div className="overflow-hidden rounded-xl border bg-card shadow-sm">
+              <div className="border-b bg-secondary/40 px-6 py-4">
+                <h4 className="font-display text-base font-semibold">
+                  {t(
+                    `PV — Izkaz rabe tal 1825 (10. 1. 1825): 10 izpolnjenih kultur, skupaj 1221 joch ≈ 703 ha`,
+                    `PV — statement of land use 1825 (10 Jan 1825): 10 filled cultures, total 1221 joch ≈ 703 ha`,
+                  )}
+                </h4>
+                <p className="mt-1 text-xs text-muted-foreground">
+                  {t(
+                    "Vsaka izpolnjena celica potrjena z vsaj dvema neodvisnima branjema; vrstica Wälder (gozd) je PRAZNA — dokumentirana anomalija.",
+                    "Every filled cell confirmed by at least two independent readings; the Wälder (forest) row is EMPTY — a documented anomaly.",
+                  )}
+                </p>
+              </div>
+              <div className="max-h-96 overflow-y-auto">
+                <table className="w-full text-sm">
+                  <thead className="sticky top-0 bg-secondary/60 text-left text-[10px] font-mono uppercase tracking-wide text-muted-foreground">
+                    <tr>
+                      <th className="px-6 py-2">{t("Kultura (kot zapisano)", "Culture (as written)")}</th>
+                      <th className="px-3 py-2">{t("Joch", "Joch")}</th>
+                      <th className="px-3 py-2">{t("Klafter", "Klafter")}</th>
+                      <th className="px-6 py-2">{t("Zanesljivost", "Confidence")}</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y">
+                    {PV_LAND_USE_1825.rows.map((r) => (
+                      <tr key={r.cultureAsWritten} className={r.joch === null ? "text-muted-foreground/60" : ""}>
+                        <td className="px-6 py-2 font-medium">{r.cultureAsWritten}</td>
+                        <td className="px-3 py-2 font-mono">{r.joch ?? "—"}</td>
+                        <td className="px-3 py-2 font-mono">{r.klafter ?? "—"}</td>
+                        <td className="px-6 py-2 font-mono text-[10px]">{r.confidence}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                  <tfoot className="border-t bg-secondary/30 font-mono text-xs">
+                    <tr>
+                      <td className="px-6 py-2">{PV_LAND_USE_1825.totals.ersteSumme.label}</td>
+                      <td className="px-3 py-2">{PV_LAND_USE_1825.totals.ersteSumme.joch}</td>
+                      <td className="px-3 py-2">{PV_LAND_USE_1825.totals.ersteSumme.klafter}</td>
+                      <td className="px-6 py-2 text-[10px]">clear</td>
+                    </tr>
+                    <tr>
+                      <td className="px-6 py-2">{PV_LAND_USE_1825.totals.zweiteSumme.label}</td>
+                      <td className="px-3 py-2">{PV_LAND_USE_1825.totals.zweiteSumme.joch}</td>
+                      <td className="px-3 py-2">{PV_LAND_USE_1825.totals.zweiteSumme.klafter}</td>
+                      <td className="px-6 py-2 text-[10px]">clear</td>
+                    </tr>
+                    <tr className="font-semibold">
+                      <td className="px-6 py-2">{PV_LAND_USE_1825.totals.grandTotal.label}</td>
+                      <td className="px-3 py-2">{PV_LAND_USE_1825.totals.grandTotal.joch}</td>
+                      <td className="px-3 py-2">{PV_LAND_USE_1825.totals.grandTotal.klafter}</td>
+                      <td className="px-6 py-2 text-[10px]">≈ {PV_LAND_USE_1825.totals.grandTotal.hectares} ha</td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+              <p className="border-t bg-orange-50 px-6 py-3 text-xs leading-relaxed text-orange-900 dark:bg-orange-950/40 dark:text-orange-200">
+                ⚠ {lang === "si" ? PV_LAND_USE_1825.anomalySi : PV_LAND_USE_1825.anomalyEn}
+              </p>
+            </div>
+
+            {/* PR + PS + PZ grid */}
+            <div className="grid gap-4 lg:grid-cols-3">
+              <div className="rounded-xl border bg-card p-6 shadow-sm">
+                <h4 className="font-display text-base font-semibold">{t("PR — opis meje (8. 4. 1825)", "PR — boundary description (8 Apr 1825)")}</h4>
+                <dl className="mt-3 space-y-2 text-xs">
+                  <div className="flex justify-between gap-2">
+                    <dt className="text-muted-foreground">{t("mere (V×S)", "dimensions (E×W)")}</dt>
+                    <dd className="font-mono">{PR_BOUNDARY_1825.dimensions.eastWestKlafter} × {PR_BOUNDARY_1825.dimensions.northSouthKlafter} kl</dd>
+                  </div>
+                  <div className="flex justify-between gap-2">
+                    <dt className="text-muted-foreground">{t("točk meje (prebranih)", "boundary points (read)")}</dt>
+                    <dd className="font-mono">{PR_BOUNDARY_1825.boundaryPoints.length} [~]</dd>
+                  </div>
+                  <div className="flex justify-between gap-2">
+                    <dt className="text-muted-foreground">{t("navzkrižna kontrola", "cross-check")}</dt>
+                    <dd className="font-mono">{t("<1 % od PV", "<1 % of PV")}</dd>
+                  </div>
+                </dl>
+                <ul className="mt-3 max-h-40 space-y-1 overflow-y-auto pr-2 text-[11px] text-muted-foreground">
+                  {PR_BOUNDARY_1825.neighbours.map((n) => (
+                    <li key={n.nameAsWritten} className="flex items-center justify-between gap-2">
+                      <span>{n.nameAsWritten}</span>
+                      <span className="font-mono text-[9px]">{n.confidence.slice(0, 24)}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="rounded-xl border bg-card p-6 shadow-sm">
+                <h4 className="font-display text-base font-semibold">{t("PS — rekapitulacija (str. 143)", "PS — recapitulation (p. 143)")}</h4>
+                <div className="mt-3 grid grid-cols-3 gap-2 text-center">
+                  <div className="rounded-lg bg-secondary/40 p-2">
+                    <p className="font-display text-xl font-semibold">{PS_RECAP_1826.summaBauplätze}</p>
+                    <p className="text-[10px] leading-tight text-muted-foreground">{t("stavbnih mest", "building sites")}</p>
+                  </div>
+                  <div className="rounded-lg bg-secondary/40 p-2">
+                    <p className="font-display text-xl font-semibold">{PS_RECAP_1826.summaGrundparzellen}</p>
+                    <p className="text-[10px] leading-tight text-muted-foreground">{t("zemljiških parcel", "land parcels")}</p>
+                  </div>
+                  <div className="rounded-lg bg-primary/10 p-2">
+                    <p className="font-display text-xl font-semibold text-primary">{PS_RECAP_1826.zusammen}</p>
+                    <p className="text-[10px] leading-tight text-muted-foreground">{t("skupaj", "total")}</p>
+                  </div>
+                </div>
+                <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
+                  {lang === "si" ? PS_RECAP_1826.mostUsefulSi.slice(0, 260) + "…" : PS_RECAP_1826.mostUsefulEn.slice(0, 260) + "…"}
+                </p>
+              </div>
+              <div className="rounded-xl border bg-card p-6 shadow-sm">
+                <h4 className="font-display text-base font-semibold">{t("PZ — cenilni elaborat (28. 7. 1825)", "PZ — valuation elaborate (28 Jul 1825)")}</h4>
+                <div className="mt-3 grid grid-cols-3 gap-2 text-center">
+                  <div className="rounded-lg bg-secondary/40 p-2">
+                    <p className="font-display text-xl font-semibold">{PZ_ECONOMY_1825.population.total}</p>
+                    <p className="text-[10px] leading-tight text-muted-foreground">{t("prebivalcev", "inhabitants")}</p>
+                  </div>
+                  <div className="rounded-lg bg-secondary/40 p-2">
+                    <p className="font-display text-xl font-semibold">{PZ_ECONOMY_1825.population.houses}</p>
+                    <p className="text-[10px] leading-tight text-muted-foreground">{t("hiš [~]", "houses [~]")}</p>
+                  </div>
+                  <div className="rounded-lg bg-secondary/40 p-2">
+                    <p className="font-display text-xl font-semibold">{PZ_ECONOMY_1825.areaTotal.joch}</p>
+                    <p className="text-[10px] leading-tight text-muted-foreground">{t("joch [~]", "joch [~]")}</p>
+                  </div>
+                </div>
+                <ul className="mt-3 space-y-1 text-[11px] text-muted-foreground">
+                  {PZ_ECONOMY_1825.valuationChain.slice(0, 3).map((v) => (
+                    <li key={v.stepSi}>
+                      <span className="text-foreground">{v.stepSi}:</span> {v.valuesSi}
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-2 text-[11px] leading-relaxed text-muted-foreground">
+                  {lang === "si" ? PZ_ECONOMY_1825.economicProfileSi.slice(0, 200) + "…" : PZ_ECONOMY_1825.economicProfileEn.slice(0, 200) + "…"}
+                </p>
+              </div>
+            </div>
+
+            {/* PUA nadaljevanje */}
+            <div className="overflow-hidden rounded-xl border bg-card shadow-sm">
+              <div className="border-b bg-secondary/40 px-6 py-4">
+                <h4 className="font-display text-base font-semibold">
+                  {t(
+                    `PUA — nadaljevanje po A–B: strani 3–10, ${PUA_CONTINUATION.rows.length} vnosov (REVIEW)`,
+                    `PUA — continuation after A–B: pages 3–10, ${PUA_CONTINUATION.rows.length} entries (REVIEW)`,
+                  )}
+                </h4>
+              </div>
+              <div className="max-h-72 divide-y overflow-y-auto">
+                {PUA_CONTINUATION.rows.map((r) => (
+                  <div key={`pua-${r.page}-${r.row}`} className="grid gap-1 px-6 py-2.5 sm:grid-cols-[80px_1fr_120px_60px]">
+                    <p className="font-mono text-[10px] text-muted-foreground">str. {r.page} · v. {r.row}</p>
+                    <p className="text-sm text-foreground">{r.nameAsWritten}</p>
+                    <p className="font-mono text-xs text-muted-foreground">{r.houseNos.join(", ") || "—"}</p>
+                    <p className="font-mono text-[10px] text-muted-foreground">{r.confidence.slice(0, 12)}</p>
+                  </div>
+                ))}
+              </div>
+              <ul className="border-t bg-secondary/20 px-6 py-3 space-y-1 text-[11px] leading-relaxed text-muted-foreground">
+                {PUA_CONTINUATION.divergences.map((d) => (
+                  <li key={d}>• {d}</li>
+                ))}
+              </ul>
+            </div>
+
+            {/* PT pregled */}
+            <div className="rounded-xl border bg-card p-6 shadow-sm">
+              <h4 className="font-display text-base font-semibold">
+                {t(
+                  `PT — strokovni pregled registra (81/105 potrjenih, register nespremenjen)`,
+                  `PT — professional review of the register (81/105 confirmed, register unchanged)`,
+                )}
+              </h4>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {[
+                  { label: t("potrjenih", "confirmed"), value: PT_REVIEW_2026.summary.confirmed, cls: "bg-emerald-100 text-emerald-900 dark:bg-emerald-900/60 dark:text-emerald-100" },
+                  { label: t("popravkov [~]", "corrections [~]"), value: PT_REVIEW_2026.summary.corrections, cls: "bg-orange-100 text-orange-900 dark:bg-orange-900/60 dark:text-orange-100" },
+                  { label: t("dodatnih vrstic", "additional rows"), value: PT_REVIEW_2026.summary.additionalRows, cls: "bg-amber-100 text-amber-900 dark:bg-amber-900/60 dark:text-amber-100" },
+                  { label: t("nepreberljivih", "illegible"), value: PT_REVIEW_2026.summary.illegible, cls: "bg-secondary text-muted-foreground" },
+                ].map((s) => (
+                  <span key={s.label} className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 font-mono text-xs font-semibold ${s.cls}`}>
+                    {s.value} {s.label}
+                  </span>
+                ))}
+              </div>
+              <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
+                <strong className="text-foreground">{t("Strukturna ugotovitev:", "Structural finding:")}</strong>{" "}
+                {lang === "si" ? PT_REVIEW_2026.structuralFindingSi : PT_REVIEW_2026.structuralFindingEn}
+              </p>
+              <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+                {lang === "si" ? PT_REVIEW_2026.decisionSi : PT_REVIEW_2026.decisionEn}
+              </p>
+            </div>
+
+            {/* ustna zgodovina protokol */}
+            <div className="rounded-xl border bg-card p-6 shadow-sm">
+              <h4 className="flex items-center gap-2 font-display text-base font-semibold">
+                <MessageSquareQuote className="size-4 text-primary" aria-hidden="true" />
+                {t(
+                  `Ustna zgodovina — protokol v${ORAL_HISTORY_PROTOCOL.version} (${ORAL_HISTORY_PROTOCOL.stages.length} faze, intervjujev: ${ORAL_INTERVIEWS.length})`,
+                  `Oral history — protocol v${ORAL_HISTORY_PROTOCOL.version} (${ORAL_HISTORY_PROTOCOL.stages.length} stages, interviews: ${ORAL_INTERVIEWS.length})`,
+                )}
+              </h4>
+              <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                {ORAL_HISTORY_PROTOCOL.stages.map((s) => (
+                  <div key={s.no} className="rounded-lg bg-secondary/30 p-3">
+                    <p className="font-mono text-[10px] text-muted-foreground">{t("faza", "stage")} {s.no}</p>
+                    <p className="text-sm font-semibold text-foreground">{lang === "si" ? s.nameSi : s.nameEn}</p>
+                    <p className="mt-1 text-[11px] leading-tight text-muted-foreground">
+                      {(lang === "si" ? s.descSi : s.descEn).slice(0, 140)}…
+                    </p>
+                  </div>
+                ))}
+              </div>
+              <ul className="mt-3 space-y-1 text-[11px] leading-relaxed text-muted-foreground">
+                {ORAL_HISTORY_PROTOCOL.rulesSi.slice(0, 3).map((r, i) => (
+                  <li key={r}>• {lang === "si" ? r : ORAL_HISTORY_PROTOCOL.rulesEn[i]}</li>
+                ))}
+              </ul>
+            </div>
+
+            {/* web verifikacije */}
+            <div className="overflow-hidden rounded-xl border bg-card shadow-sm">
+              <div className="border-b bg-secondary/40 px-6 py-4">
+                <h4 className="font-display text-base font-semibold">
+                  {t(
+                    `Verifikacija virov na spletu (${WEB_VERIFICATIONS.length} ciljev, 2026-10-08)`,
+                    `Web verification of sources (${WEB_VERIFICATIONS.length} targets, 2026-10-08)`,
+                  )}
+                </h4>
+              </div>
+              <div className="max-h-96 divide-y overflow-y-auto">
+                {WEB_VERIFICATIONS.map((w) => (
+                  <div key={w.target} className="flex flex-wrap items-center justify-between gap-2 px-6 py-3">
+                    <div className="min-w-0 flex-1">
+                      <p className="text-sm font-semibold text-foreground">{w.target}</p>
+                      <p className="mt-0.5 text-[11px] leading-relaxed text-muted-foreground">{w.findingSi.slice(0, 220)}{w.findingSi.length > 220 ? "…" : ""}</p>
+                      <a href={w.url} target="_blank" rel="noopener noreferrer" className="mt-0.5 inline-flex items-center gap-1 font-mono text-[10px] text-primary hover:underline">
+                        <ExternalLink className="size-3" aria-hidden="true" /> {w.url.slice(0, 72)}
+                      </a>
+                    </div>
+                    <StatusBadge status={w.status} />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* matrika pred/zares */}
+            <div className="overflow-hidden rounded-xl border bg-card shadow-sm">
+              <div className="border-b bg-secondary/40 px-6 py-4">
+                <h4 className="font-display text-base font-semibold">
+                  {t("Matrika pred → po (številke iz datotek)", "Matrix before → after (numbers from files)")}
+                </h4>
+              </div>
+              <div className="divide-y">
+                {ISSUE17_MATRIX.map((r) => (
+                  <div key={r.areaSi} className="grid gap-2 px-6 py-3 md:grid-cols-[120px_1fr_1.3fr_110px]">
+                    <p className="text-sm font-semibold text-foreground">{r.areaSi}</p>
+                    <p className="text-xs text-muted-foreground">{r.beforeSi}</p>
+                    <p className="text-xs text-foreground/90">{r.afterSi}</p>
+                    <p className="font-mono text-[10px] text-primary">{r.delta}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* ostaja odprto */}
+            <div className="rounded-xl border border-orange-200 bg-orange-50 p-6 shadow-sm dark:border-orange-900/60 dark:bg-orange-950/30">
+              <h4 className="font-display text-base font-semibold text-orange-900 dark:text-orange-200">
+                {t("Kaj ostaja odprto (pošteno)", "What remains open (honest)")}
+              </h4>
+              <p className="mt-2 text-xs leading-relaxed text-orange-900 dark:text-orange-200">
+                {lang === "si" ? ISSUE17_AUDIT.stillOpenSi : ISSUE17_AUDIT.stillOpenEn}
+              </p>
             </div>
           </motion.div>
         )}

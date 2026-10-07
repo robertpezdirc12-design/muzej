@@ -1,0 +1,420 @@
+{
+  "series": "PR",
+  "source": "Arhiv RS, SI AS 176, katastralna občina Griblje (N83), N083PR.pdf, 4 strani",
+  "titleAsWritten": "Grenz-Beschreibung der Gemeinde \" GRÜBLE  [z ročno dodanim: Prod N° 218]",
+  "status": "REVIEW",
+  "reader": "VLM (glm-5v-turbo), Task 17-a, 2026-10-08; vsi strojni prepisi so po definiciji REVIEW",
+  "pages": [
+    {
+      "page": 1,
+      "kind": "title",
+      "vmCalls": [
+        "pr1-transcr.json",
+        "pr1-extract.json"
+      ],
+      "rawTranscription": "[Top right, handwritten in violet ink:]\nProd. N° 218\n\nGrenz-Beschreibung\nder\nGemeinde\n„\nGRÜBLE",
+      "extracted": {
+        "productNumberAsWritten": "Prod N° 218",
+        "titleLines": [
+          "Grenz-Beschreibung",
+          "der Gemeinde",
+          "\" GRÜBLE"
+        ],
+        "titleConfidence": "visoka (2/2 klica isto branje); GRÜBLE tiskan z narekovaji in umlautom, naslovni del ročno v Kurrentu",
+        "stamps": "ni vidnega arhivskega žiga (2 klica se strinjata); ročna številka 'Prod N° 218' v vijoličnem črnilu zgoraj desno",
+        "layout": "dvojni tiskani okvir; GRÜBLE tiskan, 'Grenz-Beschreibung' + 'der Gemeinde' ročno; brez datuma in podpisa na tej strani",
+        "notes": "ni dodatnih vrstic (Kreis, leto, podpis) — negativen rezultat je veljaven"
+      }
+    },
+    {
+      "page": 2,
+      "kind": "boundary-text",
+      "vmCalls": [
+        "pr2-transcr.json",
+        "pr2-extract.json",
+        "pr2-top.json",
+        "pr2-neigh.json",
+        "pr2-neigh2.json",
+        "(predhodna kalibracija: test-pr2.json)"
+      ],
+      "rawTranscription": "Definitive Grenz-Beschreibung der Gemeinde Grüble.\n\nDie Gemarkung Gemeinde Grüble hat den Acker gegen Morgen 1028 Klafter\nLänge, und gegen Mittag gegen Dürren 1834 Klafter zugen.\n[~mit] muthlich [~von] der Gemeinde Kremsig, mit dem Dörflinthe Croaten\n[~und] Pflug von der Gemeinde Pervang und Sribische, püntlich von dem Grund\nWiedendorf, und [~ist] hier von der Gemeinde Alloschütz mit dem [~eigen] Perg\n[~mit] Croatisen mittelst 2 [~?] als [~lieg]fley das begrentzt.\nIn Gränze liegen die Gemeinde begründet bei einem [~?] Acker von Dürrpfelden\ngegen den Gränz-Punct No. 1. [~loch] gennant, und nimmt eine pünctliche\nRichtung, bis auf [~?] genannten Richtung 60,6 Klafter weit, nimmt pünctlich\nbis und geht mitten durch nitzgenannten Wäldl her 90° gegen 838 Klafter\n[~da], hernach nach [~?] mitten durch nitzgenannten Wäldl ein pünctliche\nRichtung [~der] Gränz-Punct No 2. [~Holen]the Busch genannt. [~Hier] wendet\nsich [~die] Gränze pünctlich und lennet mitten durch einen [~Kluven] Damm,\nzum bis zum Gränz-Punct No 3. [~Licht]thehe genannt. Dann [~durch]\nGränz-Punct nimmt [~sie] eine pünctliche Richtung und lennt [~?]\nfür [~?] genannten Richtung bis zum Gränz-Punct No 4. [~Halle] Dell [~her]\n[~wo] [~?] für [~?] [~hunige] Richtung abfällt, und zum Gränz-Punct No 5\n[~Heasch] in [~darff]innen einem [~Läng]zogen anreicht, [~hen] [~?] mündet\nein Gränze eine pünctliche Richtung und lennt gezißen zum [~begränzten]\nGränzen von der Gemeinde Grüble ins [~Kraßig] in [~verfaß]en [~Damm]\n[~Perr]mungen bis zum [~Darm] [~Neb] Bei [~Budini] Potek gennant, und fort\nzu [~dem] [~Gefunden] des [~Potek] Wägl her Grüble [~nitz]gejßt [~?], [~Grün]\n[~ab]fällt [~den] Gränze [~?] [~hanige] Richtung, und [~neigt] sich [~nach]\n[~namen] [~Damm] [~Perr]mungen in den [~Süd]richtung her [~?]Dürrpfelden [~hin]\nGränz-Punct No 7. [~Castel] [~Reubize] gennant, in [~den] [~findem] [~?]\nRichtung [~den] [~fora] lennt [~den] Gränze in [~ebnen] [~Läng]zogen\n[~grüßend] von [~Grund]ben [~?] der Gemeinde Grüble und [~Verlaß]\nbis zum [~Darm] No 8. [~wird]en [~hen] [~den] [~begränzten] Dürrpfelden [~aufwand]\n[~?]; nun [~folgenden] [~fort]; [~Grund] nebst [~des] Gränze und [~?]\nGemeinde [~Praßig] und [~pünct] genau [~vom] Gemeinde [~Schibetehem]\nDann [~von] [~diefen] Gränz-punct No 2. [~Welche] [~Ost] gennant, [~wendet]\nvor Gränze und pünctliche Richtung und lennt zu [~den] [~fußen],\n[~ming] [~den] 240. [~Dürr]klafter ins [~verfaß]en [~Damm] [~Läng]zogen\nbis zum [~Darm] No 1. Na [~offenung] gennant, [~welche] [~find] [~?]",
+      "headerPassageFocusedReads": [
+        "Positive Grenz-Beschreibung der Gemeinde Grüble.\n\nDas Gbl. der Gemeinde Grüble hat von Osten gegen Westen 1028 Klafter\nLänge, und von Norden gegen Süden 1884 Klafter [~]umg[?].\n\nGrenzt nun von Osten gegen Westen, mit dem Gemeinde Croaten,\nvon N[?]en gegen Südwest, mit den Gemeinde Pernauz und Sribitache, grenzt dann von gemein-\nWeidenw[ort?], und südlich hier zur Gemeinde Otoščit, und dann [~]einig\n[...] Croaten [...] in die Colo [Kolpa/Colpa?] [...]",
+        "Based on the Kurrent script and the context of an 1825 Austrian cadastral survey, here is the exact transcription:\n\n**Line 1:**\n`... Gs[~]litz der Gemeinde Grübl hat im ganzen 1028 Klafter`\n\n**Line 2:**\n`Länge, und ihrer Weite g[~]nau 1884. Klafter Länge.`\n\n**Line 3:**\n`Grenzt gegen Süden über die Gemeinde [?~]rasin[g~]z und dem Königreich Croaten,`\n*(Note: The community name is heavily abbreviated and uncertain; it likely refers to **Krasincz / Krasnice / Kranicz**)*\n\n**Line 4:**\n`gegen Osten von der [?]...`\n\n---\n\n### Summary of Key Data:\n\n**Dimensions (Klafter):**\n*   **Length/Total:** `1028` (or possibly `1078` / `1628`)\n*   **Width:** `1884` (or possibly `1384` / `1984`)\n\n**Proper Names Identified:**\n*   **Gemeinde:** `Grübl` (also appears as `Gs[~]litz` in the first word)\n*   **Neighboring Community:** `[?~]rasin[g~]z` → Candidates: **Krasincz / Krasnice / Kranicz** (likely modern *Krašnja* or similar in Lower Carniola)\n*   **Kingdom:** `Königreich Croaten` (Kingdom of Croatia/Croats)"
+      ],
+      "extracted": {
+        "overallDimensions": {
+          "eastWestKlafter": 1028,
+          "northSouthKlafter": 1884,
+          "alternativeReadings": [
+            "1884 (3 od 5 klicev) / 1834 (2 od 5) / 1984 (1) za drugo številko; 1028 stabilno v 5/5"
+          ],
+          "sentenceAsWritten": "[~] Das G[~]blatt der Gemeinde Grübl[~e] hat von Osten gegen Westen 1028 Klafter Länge, und von Norden gegen Süden 1884 [~] Klafter [~Länge]",
+          "confidence": "1028: srednje-visoka; 1884: srednja (alternativa 1834); smeri 'von Osten gegen Westen'/'von Norden gegen Süden': nizka-srednja"
+        },
+        "neighbors": [
+          {
+            "nameAsWritten": "Königreich Croaten",
+            "readings": [
+              "Königreich Croaten (3×)",
+              "mit dem Königreiche Croaten",
+              "mit den Croaten"
+            ],
+            "side": "jug/jugovzhod (čez reko; geografsko = Kolpa/meja s Hrvaško)",
+            "confidence": "srednja — pojavlja se v 3 od 4 klicev in je geografsko smiseln"
+          },
+          {
+            "nameAsWritten": "[~]Weidendorf",
+            "readings": [
+              "Weidendorf (PR-2 1×, PR-3 2×)",
+              "Waidendorf (PG-1 2×)",
+              "Weidenw[ort?]"
+            ],
+            "side": "sever/severovzhod (proti točki 1, kjer se meja začne)",
+            "confidence": "srednja — edino sosednje ime, ki se ponovi ČEZ seriji PR in PG"
+          },
+          {
+            "nameAsWritten": "[~]Krasincz",
+            "readings": [
+              "Krasincz",
+              "Krasnice/Kranicz",
+              "Kremsig (1 starejši klic)"
+            ],
+            "side": "neznan položaj",
+            "confidence": "nizka — 3 klice, 3 različni različici"
+          },
+          {
+            "nameAsWritten": "[~]Sribitsche",
+            "readings": [
+              "Sribitsche",
+              "Sribitische/Sribitsche",
+              "Stibischoche",
+              "Sribische"
+            ],
+            "side": "neznan položaj",
+            "confidence": "nizka — 4 klice, različice"
+          },
+          {
+            "nameAsWritten": "[~]Travnik",
+            "readings": [
+              "Travnik",
+              "Pernauz/Preving/Pervang"
+            ],
+            "side": "neznan položaj",
+            "confidence": "nizka — branje nestabilno (Preving/Pernauz/Travnik)"
+          },
+          {
+            "nameAsWritten": "[~]Adlerschütz / Alloschütz / [?]",
+            "readings": [
+              "Adlerschütz",
+              "Alloschütz",
+              "Otoščit"
+            ],
+            "side": "neznan položaj",
+            "confidence": "nizka do nebraljivo — ista beseda je bila prebrana 3 različno"
+          }
+        ],
+        "boundaryPoints": [
+          {
+            "no": 1,
+            "nameAsWritten": "[~]Loha",
+            "readings": [
+              "Loha",
+              "Loch [?]",
+              "[?]"
+            ],
+            "detailAsWritten": "začetna točka meje pri [~]Acker (sosednja občina Weidendorf); [~]60,6 [?] Klafter",
+            "confidence": "nizka"
+          },
+          {
+            "no": 2,
+            "nameAsWritten": "[~]Hohenstie Busch / Holensthe Busch",
+            "readings": [
+              "Hohenstie Busch",
+              "Holensthe Busch",
+              "Holen[~] Busch"
+            ],
+            "detailAsWritten": "mitten durch [~]Wäldl ... 838 [~]Klafter (različica: '90° [~] 838 Klafter')",
+            "confidence": "nizka-srednja (številka 838 se ponovi v 2 klicih)"
+          },
+          {
+            "no": 3,
+            "nameAsWritten": "[~]Liebstöhe / Liebstöckel / Licht[~]thehe",
+            "readings": [
+              "Liebstöhe",
+              "Liebstöckel",
+              "Lichtthehe"
+            ],
+            "detailAsWritten": "[~]mitten durch einen [~]Damm",
+            "confidence": "nizka"
+          },
+          {
+            "no": 4,
+            "nameAsWritten": "[~]Halb Dell / Halben Dell / Halle Dell",
+            "readings": [
+              "Halb Dell",
+              "Halben Dell",
+              "Halle Dell"
+            ],
+            "detailAsWritten": "[~]",
+            "confidence": "nizka"
+          },
+          {
+            "no": 5,
+            "nameAsWritten": "[~]Heusch / Heuschi",
+            "readings": [
+              "Heusch",
+              "Heuschi"
+            ],
+            "detailAsWritten": "in [~]den fließenden [~]Langzugen [?]",
+            "confidence": "nizka"
+          },
+          {
+            "no": 6,
+            "nameAsWritten": "[~]Krofing / Poleschitzi",
+            "readings": [
+              "(PR-2 prva polovica manj jasna)",
+              "Krofing",
+              "Poleschitzi (PR-3 klic)"
+            ],
+            "detailAsWritten": "im sogenannten [~]Langgraben; Studeni Potok [~](pri eni različici 'Bei Studeni Potok')",
+            "confidence": "nizka"
+          },
+          {
+            "no": 7,
+            "nameAsWritten": "[~]Rudini Pöltsch / Gastl Oheize / Castl Reubize",
+            "readings": [
+              "Rudini Pöltsch",
+              "Gastl Oheize",
+              "Castl Reubize",
+              "Rudini Potok [?]"
+            ],
+            "detailAsWritten": "Tiefen-Abgrund [~]",
+            "confidence": "nizka"
+          },
+          {
+            "no": 8,
+            "nameAsWritten": "[?] (ime nebraljivo)",
+            "readings": [
+              "—",
+              "im [~]Schöpfltern",
+              "Longzugen"
+            ],
+            "detailAsWritten": "[~]823 [?] Klafter (en klic); vsebinsko mesto negotovo",
+            "confidence": "nebraljivo"
+          },
+          {
+            "no": 9,
+            "nameAsWritten": "[~]Gastei Scheibe / Welthe Oel / Welche Oel",
+            "readings": [
+              "Gastei Scheibe",
+              "Welthe Oel",
+              "Welche Oel"
+            ],
+            "detailAsWritten": "240 [~]Klafter (en klic); [~]Wölflaner [?]",
+            "confidence": "nizka"
+          },
+          {
+            "no": 10,
+            "nameAsWritten": "[~]Na öhering / Na [?]erung",
+            "readings": [
+              "Na öhering",
+              "Na offenung [?]",
+              "Na [~]eumg"
+            ],
+            "detailAsWritten": "zadnja jasna točka na strani; [~]Wölflaner/Dürr[~]klafter",
+            "confidence": "nizka"
+          }
+        ],
+        "watercourses": [
+          {
+            "nameAsWritten": "Kolpa/Kulp",
+            "readings": [
+              "Colo [Kolpa/Colpa?]",
+              "Kaupa (PR-4)",
+              "Kulpa fluß (PR-4)",
+              "Cholp [?]"
+            ],
+            "role": "reka na (jugovzhodni) meji s 'Königreich Croaten' (geografsko potrjeno lega Griblja na Kolpi); izrazita vloga meje",
+            "confidence": "srednja za vlogo meje, nizka za zapis imena na PR-2"
+          }
+        ],
+        "pageNrFolio": "ni vidne številke strani (negativen rezultat)"
+      }
+    },
+    {
+      "page": 3,
+      "kind": "boundary-text",
+      "vmCalls": [
+        "pr3-transcr.json",
+        "pr3-extract.json"
+      ],
+      "rawTranscription": "Man zwingt sich, ferner zu hinabigen Richtung gränzt von Grundstück,\ndes Grüble ins Stäbuche Landt nach Gmünd in den Kuhstallung über\n326 Klaftern zum 5ten Gmündchen oder 5 na Stubchem Berge\ngenannt, allwo die Längzung mit dem Gmündchen Stäbuche, und\nfängt, nun jenes das Gmündchen Weidendorf anfangt.\nNun gegen 6ten Gmündchen mündet, des Gmündes an dieß\nGrenzung und kommt zu den Forstmanns Damen Gmündungen in das Feld\nfremdung von 370 Klaftern zum Damen oder 6 na Losa; für abgeht, das\nGmünde ist dann richtung und geht gränzt vom Gmünden mit\nunfernen Damen Längzungen in nach Forstmanng Kuhstallklaufern\nzum Damen oder 7. Schimotschi Drani, nun so muß es in pünftlichen Richtung\nmit 274 Klaftern Forstrang in Damen Gmündungen zum Gmünd\nDann also nisch Schimotschi Drani genennet zu manigfalt, nun beziehlen\nGmündgemeld liegt das Gmünde an dieß und kommt zu unfernen\nLängzungen und Forstrang hundertKlaftern zum Damen oder 9.\nVetalochki genannt, fernerab nun ferner kommt zur Gmünde\nnaus - eine Kliegn Grenzung zum kommt zu ficht gmunden\nRichtung hun 170 Klaftern Forstrang zum 8ten Gmünd. Gmünd\ngemeld oder 8 na Vetalachki Schloß gemeldet. Dann nünt die\nLengzungen mit dem Gmündchen Weidendorf und brygnet zum\nmit dem Gmündchen Vetalchki. Nun gegen 9ten Gmünd\ngemeld geht hier Gmünde mit dem unfernen Damen oder\nhier nun auch Forstmanns fernen Gmündungen zu unfernen\nDamen Gmündungen und im Forstrang hun 87 Klaftern\nbis zum Main Abo 1. Schaize Hardanove furd, nun bezieht\nAbzüge mündlich mit 185 Klaftern an bis zum Damen oder\nNa Draga Polog Vetalachmeg genannt. Gmünd nennet\ndas Gmünde und mündliche Richtung zum lauft zu Damen\nLengzungen in das Forstrang hun 86 Klaftern bis zum\nDamen Abo 3. Sechaing zum Dragi. Thaler nun nennen\ngenennt Michel hun 81 Gmunden geht das Gmünde zu münd-\nlichen Richtungen 46,8 Klaftern bis zum Damen oder 4 na Hali\nGrami kun!, namentlich auf und zu nun unfernen Damen\nkumgo Gmünden an dieß und nennet nur das Forstrang\nhun 185 Klaftern zum Damen Abo 3. necoz genennet\nhun nu uno pio mündlich 41 Klaftern fenchliefst, fers ziehet",
+      "extracted": {
+        "overallDimensions": null,
+        "neighbors": [
+          {
+            "nameAsWritten": "Weidendorf",
+            "readings": [
+              "Weidendorf (2 klica)",
+              "Waidendorf (PG-1)"
+            ],
+            "side": "meja s to občino je omenjena večkrat (začetek/konec zanke)",
+            "confidence": "srednja"
+          }
+        ],
+        "boundaryPoints": [
+          {
+            "no": "[~]5",
+            "nameAsWritten": "[~]Stubchem Berge / na Stubchem Berge",
+            "readings": [
+              "Stubchem Berge",
+              "Stäbuche Landt/Stubchem Berge"
+            ],
+            "detailAsWritten": "326 [~]Klafter",
+            "confidence": "nizka-srednja (326 se ponovi)"
+          },
+          {
+            "no": "[~]6",
+            "nameAsWritten": "[~]Ha Losa / na Losa",
+            "readings": [
+              "Ha Losa",
+              "na Losa",
+              "Losa"
+            ],
+            "detailAsWritten": "370 [~]Klafter",
+            "confidence": "nizka-srednja (370 se ponovi v 2 klicih)"
+          },
+          {
+            "no": "[~]7",
+            "nameAsWritten": "[~]Schimotschi Drani / Schimotli Dravi",
+            "readings": [
+              "Schimotschi Drani",
+              "Schimotli Dravi"
+            ],
+            "detailAsWritten": "274 [~]Klafter; [~]im Langgraben/Damen",
+            "confidence": "nizka-srednja (274 se ponovi)"
+          },
+          {
+            "no": "[~]8/9",
+            "nameAsWritten": "[~]Vetalochki / Vetalachki (+ 'Schloß'?)",
+            "readings": [
+              "Vetalochki",
+              "Vetalachki",
+              "Na Vetalachki Stolob"
+            ],
+            "detailAsWritten": "170 [~]Klafter; točkovna številka negotova (klica različno 8 ali 9)",
+            "confidence": "nizka-srednja (170 se ponovi)"
+          },
+          {
+            "no": "[~]1 (novo zaporedje?)",
+            "nameAsWritten": "[~]Schaize Hardanove furd / Skaize Hardianove",
+            "readings": [
+              "Schaize Hardanove furd",
+              "Skaize Hardianove/Hardjanove"
+            ],
+            "detailAsWritten": "87 [~]Klafter; sumljivo PONOVNO štetje z 'No 1' — možna sekundarna serija točk",
+            "confidence": "nizka"
+          },
+          {
+            "no": "[~]2",
+            "nameAsWritten": "[~]Na Draga Polog Vetalachmeg",
+            "readings": [
+              "Na Draga Polog Vetalachmeg",
+              "Na Dragi Poleg Vetalachkeg"
+            ],
+            "detailAsWritten": "185 [~]Klafter",
+            "confidence": "nizka (185 se ponovi)"
+          },
+          {
+            "no": "[~]3",
+            "nameAsWritten": "[~]Sechaing zum Dragi Thaler / Seslanig poro Dragi",
+            "readings": [
+              "Sechaing zum Dragi Thaler",
+              "Seslanig/Seskunig poro Dragi"
+            ],
+            "detailAsWritten": "86 [~]Klafter (en klic pravi 46,8 — verjetno 86)",
+            "confidence": "nizka"
+          },
+          {
+            "no": "[~]4",
+            "nameAsWritten": "[~]Hali Grami / [?]",
+            "readings": [
+              "Hali Grami kun!"
+            ],
+            "detailAsWritten": "46,8 [~]Klafter (desetna vejica vidna)",
+            "confidence": "nizka"
+          },
+          {
+            "no": "[~]?",
+            "nameAsWritten": "[~]necoz",
+            "readings": [
+              "necoz genennet"
+            ],
+            "detailAsWritten": "185 [~]Klafter, nato 41 [~]Klafter proti koncu strani",
+            "confidence": "nizka do nebraljivo"
+          }
+        ],
+        "notes": "Številčenje točk na tej strani je NEPOUZDANO: klic (a) kaže zaporedje 5,6,7,8/9..., klic (b) pa 1-10 s povsem drugačnimi imeni za ista mesta. Varno je le: imena (Losa, Schimotschi Drani, Vetalachki, Skaize Hardanove, Na Dragi Poleg..., Dragi, Hali Grami, necoz) + dolžine (326, 370, 274, 170, 87, 185, 86, 46,8, 185, 41 Klafter), ki se v obeh klicih večinoma pokrivajo.",
+        "pageNrFolio": "ni vidne številke strani"
+      }
+    },
+    {
+      "page": 4,
+      "kind": "boundary-text-final",
+      "vmCalls": [
+        "pr4-transcr.json",
+        "pr4-extract.json",
+        "pr4-bottom.json"
+      ],
+      "rawTranscription": "106. Gpunct. bis zum Damm A° 9. Gpunct. zusammen. Alsdann\nvom selben Damm hinfort gegen 1. Gpunct. in mäßigen\nWidmungen in mäßigen Clammern Geminigung längs vom Gpunct.\ngegen Grüble 424,4 Pflaster fort, wovon pifz anfänglich im bont\nmittler anwies morgengemäßen Damm [?] hinfortmung kürzer\npunct in mäßigen Clammern Geminigung mit von feldern\nhinny hin bei Pflastern bis zum Damm A° 1. doshiggen\n[?] mäßigen forts zum Dulgschloß in mäßgult [?]\nmit von 3. Gpunct. Gmingpunkt behalb; Gpunct. gennugt\nnachr Gnamuch und von Dürrny anfu Leutaten\nhinß von Kaupa plos, und huppen Dürrn von\nGpunct. mäßlig minvon zum Damm A° 1. dahin\nDamm, hin zur und pfloda untbgagynen.\n\nDEm Düll am 8ten April 1825.\n\n[Signature: Kullingsgütl / ostlgegründet]\n\nGegnet!\n\n[Signature: v Hellsengütl]",
+      "extracted": {
+        "overallDimensions": null,
+        "neighbors": [],
+        "boundaryPoints": [
+          {
+            "no": "[~]9",
+            "nameAsWritten": "[?]",
+            "readings": [
+              "Damm A° 9. [?]",
+              "106. Gpunct [?izmišljeno]"
+            ],
+            "detailAsWritten": "[~]bis zum Damm/Punkt A° 9; 424,4 [~] Klafter (en klic: 424½ [~Pflöcke]) — vrednost negotova",
+            "confidence": "nizka"
+          },
+          {
+            "no": "[~]1",
+            "nameAsWritten": "[~]doschiggen [?]",
+            "readings": [
+              "doshiggen [?]",
+              "Pläften/Pläster [?]"
+            ],
+            "detailAsWritten": "konec zanke — vrnitev na izhodišče (točko 1)",
+            "confidence": "nebraljivo ime, srednja za vsebino (zanka se zapre)"
+          }
+        ],
+        "closure": {
+          "closesLoop": true,
+          "asWritten": "[~]wodurch diese Gränze wieder an demselben Punkt ... [~] vollendet [?] — meja se vrne na izhodiščno točko (2 klica se strinjata)",
+          "confidence": "srednja"
+        },
+        "dateAsWritten": "am 8ten April 1825 (2 od 3 klicev isto: 'den [~] am 8ten April 1825')",
+        "dateConfidence": "srednje-visoka — dan/mesec/leto se pokrovata v dveh neodvisnih klicih",
+        "signatures": {
+          "count": "2-3 podpisov/paraf (štetje se razlikuje med klici)",
+          "readings": [
+            "[~]v. Hillomey[er/yst]en",
+            "[~]v. Hellsengütl/v. Hellenrath",
+            "[~]Kullingsgütl [?]",
+            "[~]Jäger",
+            "[~]Czirwill [?]"
+          ],
+          "confidence": "NEBRALJIVO — parafirani podpisi; vsi vnosi so zgolj kandidati črk, nobenega ne smemo šteti za dejstvo"
+        },
+        "totalLength": "424,4 [~] Klafter [?] — en klic '424½ Pflöcke'; vrednost negotova, morebiti dolžina zadnjega odseka ali skupni obseg"
+      }
+    }
+  ],
+  "boundaryPointCount": "NEZNANO TOČNO: PR-2 kaže točke No 1–10 (jasno številčenje); PR-3 nadaljuje/ponuja drugo zaporedje (klica se razhajajo); PG-1 skica kaže rdeče številke meje ~1–15 (klic a) oziroma 1–19 (klic b). Poštena oceta: 10–20 točk; najverjetneje ~15–19.",
+  "qualityNoteSi": "Naslovna stran (PR-1) je zanesljivo prebrana (Prod N° 218, Grenz-Beschreibung der Gemeinde \" GRÜBLE; brez žigov, datumov in podpisov). Pri besedilu meje (PR-2 do PR-4) je Kurrent zelo težaven: iste vrstice so v ponovljenih klicih dale različne replike istih besed (npr. sosednja občina je bila prebrana kot Pervang/Preving/Pernauz/Travnik; Weidendorf/Waidendorf pa je edino ime, ki se stabilno ponavlja čez PR in PG). Zanesljivi strukturalni podatki: razsežnosti 1028 Klafter (VZ) × 1884 [~1834] Klafter (SJ) na PR-2 (1028 stabilno v vseh 5 klicih; 1884 v 3 od 5), Kolpa/Königreich Croaten kot južna meja (geografsko smiselno), datum zaključka '8. april 1825' na PR-4 (2 neodvisna klica) in dejstvo, da se mejna zanka zapre. Imena posameznih mejnih točk so večinoma nizke zaupnosti — slovanski mikronimi (Hohenstie/Holensthe Busch, Losa, Schimotschi Drani, Vetalachki, Skaize Hardanove, Na Dragi Poleg Vetalachkeg, Studeni Potok...) so bili prebrani z različicami; dolžine v klafterjih (60,6?, 838, 326, 370, 274, 170, 87, 185, 86, 46,8, 185, 41, 424,4?) se pogosto ponovijo med klici in so uporabnejše od imen. Podpisi na PR-4 so nebraljivi parafi. Križni račun: 1028 × 1884 = 1.936.752 kvadratnih klafterjev = 1210,5 joch, kar se od PV skupne površine (1221 J 1513 Kl) razlikuje za <1 % — močan indikator, da sta obe številki pravilno prebrani."
+}

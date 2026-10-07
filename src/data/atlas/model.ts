@@ -14,8 +14,8 @@ export interface AtlasOwner {
 }
 
 export const ATLAS_OWNERS: AtlasOwner[] = [
-  { id: "lastnik-bring-weygandt", nameAsWritten: "Bring. Weygandt Bauern von Grüblen", modernGuess: "Bring", houseRefs: ["24", "31", "32", "36", "38", "39", "41"], puaRef: "PUA str. 4, črka B", status: "REVIEW" },
-  { id: "lastnik-bring-math", nameAsWritten: "Bring. Math. Bauern von Grüblen", modernGuess: "Bring", houseRefs: ["25"], puaRef: "PUA str. 4, črka B", status: "REVIEW" },
+  { id: "lastnik-bring-weygandt", nameAsWritten: "Bring. Weygandt Bauern von Grüblen", modernGuess: "Bring", houseRefs: ["24", "31", "32", "36", "38", "39", "41"], puaRef: "PUA str. 4, črka B; issue #17: PUA str. 4 vrstica 3 = Bring Michael/Migan Bauern hiesig, Haus 24 [~] — navzkrižna potrditev hiše 24", status: "REVIEW" },
+  { id: "lastnik-bring-math", nameAsWritten: "Bring. Math. Bauern von Grüblen", modernGuess: "Bring", houseRefs: ["25"], puaRef: "PUA str. 4, črka B; issue #17: PUA str. 4 vrstica 4 = Bring Miß/Martin Bauern hiesig, Haus 25 [~] — navzkrižna potrditev", status: "REVIEW" },
   { id: "lastnik-simec", nameAsWritten: "Schimek / Šimec", modernGuess: "Šimec", houseRefs: ["3", "4", "63", "64", "66"], status: "REVIEW" },
   { id: "lastnik-leskovec", nameAsWritten: "Leskovec Matija", houseRefs: ["8", "8½"], status: "REVIEW" },
   { id: "lastnik-hrovat", nameAsWritten: "Hrovat Jhan", modernGuess: "Hrvat", houseRefs: ["18", "15"], status: "REVIEW" },
@@ -23,7 +23,7 @@ export const ATLAS_OWNERS: AtlasOwner[] = [
   { id: "lastnik-milleg", nameAsWritten: "Milleg", houseRefs: ["34", "35", "37"], status: "REVIEW" },
   { id: "lastnik-glan", nameAsWritten: "Glan (Georg, Matthäus, Simonz)", houseRefs: ["—"], puaRef: "PUA str. 4–5", status: "REVIEW" },
   { id: "lastnik-greg", nameAsWritten: "Greg/Grög (Michael, Ulrich)", houseRefs: ["—"], status: "REVIEW" },
-  { id: "lastnik-filak", nameAsWritten: "Filak (Peter, Mihel)", houseRefs: ["69", "70", "71"], status: "REVIEW" },
+  { id: "lastnik-filak", nameAsWritten: "Filak (Peter, Mihel)", houseRefs: ["69", "70", "71"], puaRef: "PUA str. 9–10, črka F — Fillah (Michael, Maria, Jetter, Miho) v hišah 16/34/36/61 [~]: ista družina, hišne št. divergentne s PT [~]", status: "REVIEW" },
   { id: "lastnik-dikobutar", nameAsWritten: "Dikobutar (Rupre, Mihelo, Mihlo, Marko)", houseRefs: ["68", "72", "77", "78", "80"], status: "REVIEW" },
   { id: "lastnik-peutinger", nameAsWritten: "Peutinger (Jhan, Mihel)", houseRefs: ["61", "65", "73"], status: "REVIEW" },
   { id: "lastnik-drulak", nameAsWritten: "Drulak (Jhan, Peter)", houseRefs: ["74", "75"], status: "REVIEW" },

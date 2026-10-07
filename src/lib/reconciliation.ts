@@ -11,7 +11,7 @@
 import { ATLAS_SOURCES } from "@/data/atlas/sources";
 import { ATLAS_HOUSES } from "@/data/atlas/houses";
 import { ATLAS_OWNERS, VECTOR_BUILDINGS } from "@/data/atlas/model";
-import { KURRENT_SERIES } from "@/data/atlas/research";
+import { KURRENT_SERIES, PUA_CONTINUATION } from "@/data/atlas/research";
 import { DATA_VERSION } from "./provenance";
 
 export type ReconState =
@@ -165,6 +165,25 @@ export function buildReconciliation(): ReconciliationReport {
     });
   }
 
+  // ——— PUA nadaljevanje (issue #17: strani 3–10, 18 vnosov, REVIEW) ———
+  for (const r of PUA_CONTINUATION.rows) {
+    rows.push({
+      unit: "N083PUA",
+      locatorSi: `stran ${r.page}, vrstica ${r.row}`,
+      locatorEn: `page ${r.page}, row ${r.row}`,
+      rowId: `pua-p${r.page}-r${r.row}`,
+      entitySi: `Lastnik (PUA 3–10): ${r.nameAsWritten} — hiše: ${r.houseNos.join(", ") || "—"}`,
+      entityEn: `Owner (PUA 3–10): ${r.nameAsWritten} — houses: ${r.houseNos.join(", ") || "—"}`,
+      entityId: `pua-p${r.page}-r${r.row}`,
+      state: "STRUCTURED_UNRESOLVED",
+      evidenceStatus: PUA_CONTINUATION.status,
+      geometry: null,
+      derivedCount: 1,
+      openSi: `strojni očrt (REVIEW, ${r.confidence}); del hišnih št. divergenten s PT — povezava čaka paleografijo`,
+      openEn: `machine reading (REVIEW, ${r.confidence}); part of the house numbers diverge with PT — linking awaits palaeography`,
+    });
+  }
+
   // ——— grafični listi: pokritost + vektorizirane entitete ———
   const sheetUnits = ATLAS_SOURCES.filter((s) => s.type === "cadastral-map" && s.code.startsWith("N083"));
   for (const s of sheetUnits) {
@@ -190,24 +209,36 @@ export function buildReconciliation(): ReconciliationReport {
     });
   }
 
-  // ——— spisovne enote brez prepisa (PG, PR, PV, PZ) ———
+  // ——— spisovne enote PG/PR/PV/PZ (issue #17: delno ali v celoti prebrane) ———
   for (const k of KURRENT_SERIES) {
     if (k.code === "PT" || k.code === "PUA" || k.code === "PS") continue;
     const unitCode = `N083${k.code}`;
+    const fullyRead = k.pagesTranscribed >= k.pages;
+    const structured = k.structuredEntries;
     rows.push({
       unit: unitCode,
-      locatorSi: `${k.pages} ${k.pages === 1 ? "stran" : "strani"}`,
-      locatorEn: `${k.pages} ${k.pages === 1 ? "page" : "pages"}`,
+      locatorSi: `${k.pagesTranscribed}/${k.pages} ${k.pages === 1 ? "strani" : "strani"}`,
+      locatorEn: `${k.pagesTranscribed}/${k.pages} ${k.pages === 1 ? "page" : "pages"}`,
       rowId: unitCode,
-      entitySi: `${k.unitSi} — enota je digitalizirana, vsebinskih zapisov ni strukturiranih`,
-      entityEn: `${k.unitEn} — unit digitised, no content rows structured`,
+      entitySi:
+        structured > 0
+          ? `${k.unitSi} — ${structured} strukturiranih zapisov (REVIEW, strojni očrt${fullyRead ? "; vse strani prebrane" : ""})`
+          : `${k.unitSi} — enota je digitalizirana, vsebinskih zapisov ni strukturiranih`,
+      entityEn:
+        structured > 0
+          ? `${k.unitEn} — ${structured} structured entries (REVIEW, machine-assisted${fullyRead ? "; all pages read" : ""})`
+          : `${k.unitEn} — unit digitised, no content rows structured`,
       entityId: null,
-      state: "PENDING_TRANSCRIPTION",
+      state: structured > 0 ? "STRUCTURED_LINKED" : "PENDING_TRANSCRIPTION",
       evidenceStatus: k.status,
       geometry: null,
-      derivedCount: 1,
-      openSi: `prepis ${k.pages} strani Kurrent rokopisa ni izdelan (${k.status}) — nič ni izgubljeno, enota čaka`,
-      openEn: `transcription of ${k.pages} pages of Kurrent manuscript not made (${k.status}) — nothing lost, the unit awaits`,
+      derivedCount: Math.max(1, structured),
+      openSi: fullyRead
+        ? `prepis je strojni (REVIEW) — paleografska potrditev čaka; nič ni izgubljeno`
+        : `prepis ni zaključen (${k.pagesTranscribed}/${k.pages} strani, ${k.status}) — nič ni izgubljeno, enota čaka`,
+      openEn: fullyRead
+        ? `the transcription is machine-assisted (REVIEW) — palaeographic confirmation pending; nothing lost`
+        : `transcription not finished (${k.pagesTranscribed}/${k.pages} pages, ${k.status}) — nothing lost, the unit awaits`,
     });
   }
 

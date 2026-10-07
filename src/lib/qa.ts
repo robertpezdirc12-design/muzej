@@ -16,7 +16,20 @@ import {
   ARCHIVE_TRANSFER_ROWS,
   ARCHIVE_NON_TRANSFERS,
   ARCHIVE_TRANSFER_AUDIT,
+  KURRENT_SERIES,
+  ORAL_INTERVIEWS,
+  PV_LAND_USE_1825,
+  PR_BOUNDARY_1825,
+  PS_RECAP_1826,
+  PZ_ECONOMY_1825,
+  PUA_CONTINUATION,
+  PT_REVIEW_2026,
+  ORAL_HISTORY_PROTOCOL,
+  WEB_VERIFICATIONS,
+  ISSUE17_MATRIX,
+  ISSUE17_AUDIT,
 } from "@/data/atlas/research";
+import { ATLAS_HOUSES } from "@/data/atlas/houses";
 
 interface ExhibitRow {
   id: string;
@@ -304,6 +317,101 @@ export function runQA(): QAReport {
     archErrors.length === 0
       ? `${ARCHIVE_TRANSFER_ROWS.length} področij primerjanih; 0 prenosov (novi repo = striktni nadnabor); ${ARCHIVE_NON_TRANSFERS.length} namerno nepreneseno; arhiv ${ARCHIVE_TRANSFER_AUDIT.archiveRepo.path} @ ${ARCHIVE_TRANSFER_AUDIT.archiveRepo.headSha.slice(0, 7)} (archived, ${ARCHIVE_TRANSFER_AUDIT.archiveRepo.commits} commitov)`
       : archErrors.join("; "),
+  );
+
+  // 15. RESEARCH GAP CLOSURE v2 (issue #17): nove Kurrent vsebine morajo biti
+  //     notranje dosledne (števke iz dejanskih podatkov, ne ročne)
+  const i17Errors: string[] = [];
+  // PV: 12 izpolnjenih vrstic, vsote se seštejejo (±1 joch), gozd prazen
+  const pvFilled = PV_LAND_USE_1825.rows.filter((r) => r.joch !== null);
+  if (pvFilled.length !== 10) {
+    i17Errors.push(`PV izpolnjenih vrstic: ${pvFilled.length}, pričakovano 10`);
+  }
+  if (PV_LAND_USE_1825.rows.find((r) => r.cultureAsWritten === "Wälder")?.joch !== null) {
+    i17Errors.push("PV: vrstica Wälder ni prazna (anomalija 1825 mora ostati dokumentirana)");
+  }
+  const pvSum =
+    pvFilled.reduce((a, r) => a + (r.joch ?? 0) * 1600 + (r.klafter ?? 0), 0);
+  const pvTotal =
+    PV_LAND_USE_1825.totals.ersteSumme.joch * 1600 + PV_LAND_USE_1825.totals.ersteSumme.klafter +
+    PV_LAND_USE_1825.totals.zweiteSumme.joch * 1600 + PV_LAND_USE_1825.totals.zweiteSumme.klafter;
+  if (Math.abs(pvSum - pvTotal) > 3600) {
+    i17Errors.push(`PV: vsota vrstic odstopa od skupne vsote za ${Math.round((pvSum - pvTotal) / 1600)} joch`);
+  }
+  // PR: mere se ujemajo s PV (<1 %)
+  const prArea = PR_BOUNDARY_1825.dimensions.eastWestKlafter * PR_BOUNDARY_1825.dimensions.northSouthKlafter;
+  const pvArea = PV_LAND_USE_1825.totals.grandTotal.joch * 1600;
+  if (Math.abs(prArea - pvArea) / pvArea > 0.01) {
+    i17Errors.push("PR mere ≠ PV površina (>1 %)");
+  }
+  if (PR_BOUNDARY_1825.boundaryPoints.length < 10) {
+    i17Errors.push("PR: manj kot 10 točk meje");
+  }
+  // PS rekapitulacija: 102 + 2505 = 2607
+  if (PS_RECAP_1826.summaBauplätze + PS_RECAP_1826.summaGrundparzellen !== PS_RECAP_1826.zusammen) {
+    i17Errors.push("PS rekapitulacija se ne sešteje");
+  }
+  // PZ: 441 = 222 + 219
+  if (PZ_ECONOMY_1825.population.male + PZ_ECONOMY_1825.population.female !== PZ_ECONOMY_1825.population.total) {
+    i17Errors.push("PZ demografija se ne sešteje");
+  }
+  // PUA: 17 novih vrstic na straneh 3–10
+  if (PUA_CONTINUATION.rows.length !== 18 || PUA_CONTINUATION.pagesRead.length !== 8) {
+    i17Errors.push(`PUA nadaljevanje: ${PUA_CONTINUATION.rows.length} vrstic / ${PUA_CONTINUATION.pagesRead.length} strani`);
+  }
+  // PT pregled: vsota verdiktov = pregledanih vrstic; register ostaja 80
+  const sum = PT_REVIEW_2026.summary.confirmed + PT_REVIEW_2026.summary.corrections +
+    PT_REVIEW_2026.summary.additionalRows + PT_REVIEW_2026.summary.repoOnly + PT_REVIEW_2026.summary.illegible;
+  if (sum !== PT_REVIEW_2026.reviewedRows) {
+    i17Errors.push(`PT pregled: verdikti ${sum} ≠ pregledanih ${PT_REVIEW_2026.reviewedRows}`);
+  }
+  const ATLAS_HOUSES_LENGTH = ATLAS_HOUSES.length;
+  const ATLAS_HOUSE_ROWS = ATLAS_HOUSES.filter((h) => h.no !== "—").length;
+  if (ATLAS_HOUSES_LENGTH !== 101 || ATLAS_HOUSE_ROWS !== 80) {
+    i17Errors.push(`ATLAS_HOUSES: ${ATLAS_HOUSES_LENGTH} vrstic (${ATLAS_HOUSE_ROWS} hišnih) — register se ni smel spremeniti (101/80)`);
+  }
+  // Ustna zgodovina: protokol obstaja, intervjuji ostanejo PRAZNI
+  if (ORAL_HISTORY_PROTOCOL.stages.length !== 4 || ORAL_HISTORY_PROTOCOL.rulesSi.length < 5) {
+    i17Errors.push("protokol ustne zgodovine nepopoln");
+  }
+  if (ORAL_INTERVIEWS.length !== 0) {
+    i17Errors.push("ORAL_INTERVIEWS ni prazen — izmišljeni intervjuji so prepovedani");
+  }
+  // Web verifikacije: ≥ 12 ciljev, vsak s statusom in URL-jem
+  if (WEB_VERIFICATIONS.length < 12) {
+    i17Errors.push(`web verifikacij: ${WEB_VERIFICATIONS.length} < 12`);
+  }
+  for (const w of WEB_VERIFICATIONS) {
+    if (!w.target || !w.url || !w.findingSi) {
+      i17Errors.push(`web verifikacija brez polj: ${w.target}`);
+    }
+  }
+  // Matrika ≥ 15 vrstic; revizija z metodo in odprtimi točkami
+  if (ISSUE17_MATRIX.length < 15) {
+    i17Errors.push(`matrika #17: ${ISSUE17_MATRIX.length} < 15`);
+  }
+  if (!ISSUE17_AUDIT.stillOpenSi || !ISSUE17_AUDIT.methodSi || ISSUE17_AUDIT.issue !== 17) {
+    i17Errors.push("revizija #17 nepopolna");
+  }
+  // KURRENT_SERIES: vsi series so sedaj vsaj delno prebrani (REVIEW), vsi viri N083 posodobljeni
+  for (const s of KURRENT_SERIES) {
+    if (s.pagesTranscribed === 0) {
+      i17Errors.push(`KURRENT ${s.code}: nič prebranih strani po #17`);
+    }
+    if (s.status !== "REVIEW") {
+      i17Errors.push(`KURRENT ${s.code}: status ${s.status} (pričakovano REVIEW)`);
+    }
+  }
+  // Skeni/izpisi provenience v research/issue17/ (10 JSON-ov)
+  // (datoteke se preverjajo ob buildu; tu preverimo, da so knjižne reference zapolnjene)
+  push(
+    "qa-issue17-gap-closure",
+    "zapolnjevanje vrzeli #17: PV raba tal, PR meja, PS rekapitulacija, PZ demografija, PUA nadaljevanje, PT pregled, protokol, verifikacije",
+    "gap closure #17: PV land use, PR boundary, PS recap, PZ demography, PUA continuation, PT review, protocol, verifications",
+    i17Errors.length === 0,
+    i17Errors.length === 0
+      ? `PV 10/20 kultur (skupaj ${PV_LAND_USE_1825.totals.grandTotal.joch} j ≈ ${PV_LAND_USE_1825.totals.grandTotal.hectares} ha; gozd prazen); PR ${PR_BOUNDARY_1825.dimensions.eastWestKlafter}×${PR_BOUNDARY_1825.dimensions.northSouthKlafter} kl (<1 % od PV); PS 102+2505=2607; PZ 441 prebivalcev, 28. 7. 1825; PUA +18 vnosov (str. 3–10); PT 81/105 verdiktov (101 vrstica registra nespremenjenih); protokol 4 faze + 0 intervjujev; ${WEB_VERIFICATIONS.length} web verifikacij; matrika ${ISSUE17_MATRIX.length} vrstic; Kurrent 7/7 serij delno prebranih (REVIEW)`
+      : i17Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;

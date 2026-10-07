@@ -6,10 +6,8 @@ import exhibitsRaw from "@/data/museum/exhibits.json";
 import { ATLAS_SOURCES, NEGATIVE_RESULTS, HERITAGE_UNITS } from "@/data/atlas/sources";
 import { KURRENT_SERIES, GEODATA_SOURCES, SCHOOL_ARCHIVE, ORAL_INTERVIEWS, ORAL_TOPICS } from "@/data/atlas/research";
 
-/** ISSUE #16 — revizija prenosa iz arhiva (0 prenosov, nadnabor) je
-    vstopila v raziskovalni model; različica podatkov ostaja enaka, ker se
-    vsebinski podatki niso spremenili (dodana je le revizija sama). */
-export const DATA_VERSION = "2026-10-07";
+/** ISSUE #17 (2026-10-08) — research gap closure v2: nove Kurrent vsebine (PR/PG/PV/PS/PZ/PUA/PT pregled), ustna-zgodovinski protokol, web verifikacije virov (SEM/VAČ/GisKD/OSM) — različica podatkov se dviga. */
+export const DATA_VERSION = "2026-10-08";
 
 interface ExhibitSource {
   sourceType?: string | null;
