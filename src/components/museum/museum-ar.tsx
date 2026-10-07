@@ -26,6 +26,9 @@ import { Button } from "@/components/ui/button";
 import { useLang } from "./language-context";
 import { exhibits } from "@/lib/museum";
 import { GuidedWalk } from "./guided-walk";
+import { VECTOR_BUILDINGS, ATLAS_LOCATIONS } from "@/data/atlas/model";
+import { LANDUSE_ZONES } from "@/data/atlas/landuse";
+import { HOUSE_VITALS } from "@/data/atlas/parish";
 import type { UseGeolocation } from "@/hooks/use-geolocation";
 import {
   bearingDeg,
@@ -34,6 +37,7 @@ import {
   formatDistance,
   type GeoFix,
 } from "@/lib/geo";
+import { Clock, Landmark, Trees, Wheat } from "lucide-react";
 
 const ARCameraView = dynamic(
   () => import("./ar-camera").then((m) => m.ARCameraView),
@@ -251,6 +255,9 @@ export function MuseumARGuide({
           </div>
         </div>
 
+        {/* ── časovna plast 1825 (issue #9) ── */}
+        <TimeLayer1825 fix={fix} />
+
         {/* ── bližnje točke ── */}
         {nearby.length > 0 && (
           <div className="mt-6 rounded-xl border bg-card p-4 sm:p-6">
@@ -326,5 +333,135 @@ export function MuseumARGuide({
         />
       )}
     </section>
+  );
+}
+
+/* ——— ČASOVNA PLAST 1825 (issue #9): kje stojite na katastru ~1825 ——— */
+
+function pointInZone(lat: number, lng: number, z: { bounds: [[number, number], [number, number]] }) {
+  const [[n, w], [s, e]] = z.bounds;
+  return lat <= n && lat >= s && lng >= w && lng <= e;
+}
+
+function TimeLayer1825({ fix }: { fix: GeoFix | null }) {
+  const { t, lang } = useLang();
+
+  /* stojite v coni rabe tal? + najbližje 1825 stavbe (vektorizacija A02) */
+  const info = useMemo(() => {
+    if (!fix) return null;
+    const zone = LANDUSE_ZONES.find((z) => pointInZone(fix.lat, fix.lng, z));
+    const nearestBuildings = VECTOR_BUILDINGS.map((b) => ({
+      b,
+      d: distanceM(fix, { lat: b.lat, lng: b.lng }),
+    }))
+      .sort((a, c) => a.d - c.d)
+      .slice(0, 3);
+    const church = ATLAS_LOCATIONS.find((l) => l.id === "loc-cerkev");
+    const village = ATLAS_LOCATIONS.find((l) => l.id === "loc-griblje");
+    return {
+      zone,
+      nearestBuildings,
+      church: church && church.lat && church.lng ? { d: distanceM(fix, { lat: church.lat, lng: church.lng }) } : null,
+      village: village && village.lat && village.lng ? { d: distanceM(fix, { lat: village.lat, lng: village.lng }) } : null,
+    };
+  }, [fix]);
+
+  const zoneIcon = (kind: string) =>
+    kind === "meadow" ? <Trees className="size-4" aria-hidden /> :
+    kind === "forest" ? <Trees className="size-4" aria-hidden /> :
+    <Wheat className="size-4" aria-hidden />;
+
+  return (
+    <div className="mt-6 rounded-xl border border-primary/30 bg-card p-4 sm:p-6">
+      <h3 className="flex items-center gap-2 font-display text-lg font-semibold">
+        <Clock className="size-5 text-primary" aria-hidden="true" />
+        {t("Časovna plast 1825 — kaj je tu stalo pred 200 leti", "Time layer 1825 — what stood here 200 years ago")}
+      </h3>
+
+      {!fix ? (
+        <p className="mt-2 text-sm text-muted-foreground">
+          {t(
+            "Priklopite GPS in časovna plast pokaže, na kateri rabi tal katastra ~1825 stojite, ter najbližje tedanje stavbe (vektorizacija lista A02), hišne zgodbe in povezavo do Atlasa.",
+            "Connect GPS and the time layer will show which ~1825 cadastral land use you are standing on, the nearest buildings of that era (vectorised from sheet A02), house stories and a link to the Atlas.",
+          )}
+        </p>
+      ) : (
+        <div className="mt-3 space-y-3">
+          {/* raba tal pod nogami */}
+          <div className="rounded-lg border bg-secondary/40 p-3">
+            <div className="flex items-center gap-2 text-sm font-medium">
+              <Landmark className="size-4 text-primary" aria-hidden />
+              {info?.zone ? (
+                <>
+                  {zoneIcon(info.zone.kind)}
+                  {t("Stojite na:", "You are standing on:")}
+                  <span className="font-semibold">{lang === "si" ? info.zone.labelSi : info.zone.labelEn}</span>
+                  <span className="rounded bg-rose-100 px-1.5 py-0.5 text-[10px] font-semibold text-rose-900 dark:bg-rose-900/60 dark:text-rose-100">
+                    RECONSTRUCTED
+                  </span>
+                </>
+              ) : (
+                <>{t("Stojite izven vrisanih con rabe tal ~1825 (katastrska občina Griblje).", "You are standing outside the drawn ~1825 land-use zones (cadastral municipality of Griblje).")}</>
+              )}
+            </div>
+            {info?.zone && (
+              <p className="mt-1 text-xs text-muted-foreground">
+                {lang === "si" ? info.zone.noteSi : info.zone.noteEn}{" "}
+                <a
+                  href={`/?atlas=${info.zone.id}&odsek=atlas`}
+                  className="font-medium text-primary underline decoration-border underline-offset-2 hover:decoration-primary"
+                >
+                  {t("Odpri v Atlasu", "Open in the Atlas")}
+                </a>
+              </p>
+            )}
+            {info?.church && info?.village && (
+              <p className="mt-1 text-xs text-muted-foreground">
+                {t(
+                  `Do cerkve sv. Vida ~1825 (VERIFIED): ${formatDistance(info.church.d, lang)} · do jedra vasi Grüble: ${formatDistance(info.village.d, lang)}.`,
+                  `To St. Vitus' church ~1825 (VERIFIED): ${formatDistance(info.church.d, lang)} · to the core of Grüble village: ${formatDistance(info.village.d, lang)}.`,
+                )}
+              </p>
+            )}
+          </div>
+
+          {/* najbližje stavbe 1825 */}
+          <div className="grid gap-2 sm:grid-cols-3">
+            {info?.nearestBuildings.map(({ b, d }, i) => (
+              <div key={i} className="rounded-lg border bg-background/60 p-3 text-xs">
+                <div className="font-medium">
+                  {t(`Stavba ~1825 · ${i + 1}. najbližja`, `Building ~1825 · ${i + 1}. nearest`)}
+                </div>
+                <div className="mt-1 text-muted-foreground">
+                  {t("vektorizacija A02", "vectorised from A02")} · {formatDistance(d, lang)}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* hišne zgodbe (matrike) */}
+          <div className="rounded-lg border bg-background/60 p-3 text-xs">
+            <span className="font-medium">{t("Hišne zgodbe (matrike × register 1825):", "House stories (parish registers × 1825 register):")}</span>{" "}
+            {t(
+              `${HOUSE_VITALS.length} vpisa za hišo 61 (1887 Katarina, 1897 Anton) — več v zavihku Matrike Atlasa. Lastniki vseh 80 hiš: zavihek Register hiš.`,
+              `${HOUSE_VITALS.length} entries for house no. 61 (1887 Katarina, 1897 Anton) — more in the Atlas »Parish registers« tab. Owners of all 80 houses: the »House register« tab.`,
+            )}{" "}
+            <a
+              href="/?odsek=atlas"
+              className="font-medium text-primary underline decoration-border underline-offset-2 hover:decoration-primary"
+            >
+              {t("Odpri Atlas", "Open the Atlas")}
+            </a>
+          </div>
+
+          <p className="text-[11px] leading-relaxed text-muted-foreground">
+            {t(
+              "Vsak podatek ima vir: lastniki (N083PT, REVIEW), raba tal (VLM analiza listov, RECONSTRUCTED ±100–150 m), matrike (Matricula Online, župnija Podzemelj). Kjer podatka ni, je to izrecno — nič ni izmišljeno.",
+              "Every datum has a source: owners (N083PT, REVIEW), land use (VLM sheet analysis, RECONSTRUCTED ±100–150 m), parish registers (Matricula Online, Podzemelj parish). Where a datum is missing, this is stated — nothing is invented.",
+            )}
+          </p>
+        </div>
+      )}
+    </div>
   );
 }
