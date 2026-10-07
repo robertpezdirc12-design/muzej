@@ -764,3 +764,29 @@ Stage Summary:
 - #4: postaja 32 dokumentirana NOT_FOUND (ne izmišljena), zaporedje 1–35
   eksplicitno; 3D/AR pot združena z Atlasom; coverage + 11 QA testov
 - #5: reconciliation 131 vrstic, zero-loss dokazan, Kurrent sled z različico
+
+---
+Task ID: 6
+Agent: Z.ai Code (glavni agent)
+Task: Push, deploy, produkcijska verifikacija, GitLab komentarji + zaprtje #3/#4/#5
+
+Work Log:
+- Merge z novim remote commitom 64ea47f (CI dvosmerna sinhronizacija GitHub,
+  avtor sync-setup) → eb41e1c, push na gitlab/main
+- 11. zaporedni uspešen samodejni Vercel deploy; produkcija:
+  / 200 (585 KB, obe novi sekciji v SSR), /api/qa 200 (11/11),
+  /api/coverage 200, /api/atlas/reconciliation 200 (zero-loss, 131 vrstic),
+  /api/provenance 200, /api/atlas/integrity 200 (9/9, popravljenih 12 enot),
+  /api/opendata 200 (realen timestamp, razdeljena licenca), /sitemap.xml 200
+- Brskalniška verifikacija produkcije: 6 zavihkov raziskav, postaja 32 v
+  negativnih, QA 11/11 živ, sprehod → vrzel-kartica postaje 32 NOT_FOUND,
+  0 napak v konzoli
+- Komentarji na issueje #3 (3970366565), #4 (3970369302), #5 (3970376775)
+  s preslikavo vseh zahtevkov; vsi trije issueji ZAPRTI (WAF retry)
+- Lokalno = gitlab = eb41e1c; dev strežnik čist
+
+Stage Summary:
+- GitLab: 0 odprtih issuejev — obnova Muzeja vasi Griblje DOKONČANA
+  (#1 AR, #2 ATLAS 1825, #3 raziskave/provenienca, #4 zaključek, #5 kontrola)
+- Produkcija https://griblje-museum.vercel.app: 113 zaposov + ATLAS 1825 +
+  raziskave/provienca + coverage/QA + AR + sprehodi z eksplicitno vrzeljo 32
