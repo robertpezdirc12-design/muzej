@@ -1249,3 +1249,26 @@ Stage Summary:
   panorama), 17. deploy v produkciji
 - Naslednji korak: #12 (mlini/cerkvišče mini-scene na GEO_ANCHORS_TO_COLLECT) ali #13
   (Historical Panorama na GeoTruth + sceneReadiness + use-compass)
+
+---
+Task ID: 12-zaključek (issue #12 — AR TIME SPOTS P1)
+Agent: Z.ai Code (glavni agent)
+Task: Zadnji dve DoD točki issue #12: 2+ oddaljeni točki z lastno vsebino (mini-scene) + QA/lint/deploy/verifikacija. Začetek: prejšnja seja je naredila 4/6 DoD (Kaj je izginilo, 360°, TTS, USDZ); #14 P0 GEO-TRUTH je bil med tem zaprt.
+
+Work Log:
+- timespots.ts: +3 oddaljene točke (mlini 45.5315/15.3119 r60 mini-scena; otok 45.665/15.323 r90 story-only z 4 dogodki; cerkvisce 45.5759667/15.2643167 r55 mini-scena) + SpotEvent/DISTANT_SPOT_IDS/isDistantSpot/spotDistanceFromVillage; opisi SI/EN pošteno ločijo INTERPRETACIJO vrste (žimaln) od konkretnega mlina, lega tretje cerkvice neznana
+- geotruth.ts: vir src-mvg-record (OWN_GEOREF); anchor-mlini + anchor-otok (APPROX, terenska preverba čaka), anchor-cerkvisce arReady, TO_COLLECT spraznjen; ASSET_ORIENTATIONS + procedural:mlini/procedural:cerkvisce (INTERPRETATIVE, dokumentirane meje)
+- mini-scenes.ts (nov, proceduralen, ~0 MB): MLINI — hiša z dvokapnico, kolesnica (torus x2 + hub + 4 žice + 12 lopatic, vrti se 0,7 rad/s), jez, toča, Kolpa (trak, utripa), 8 dreves, okno z emisivno toplo lučjo; setYear(2026) → jantorna ŽICA + kolo miruje + luč ugasnjena; CERKVIŠČE — trije duhovi (ladja+zvonik+piramida+križ, rdeča žica 0xe06a5a, pulz 0,3±0,13) + trdna bela kapelica 1994 (križ, streha skodelica) + 2 drevesi
+- village-scene.ts: setMiniScene(id, anchor) — zamenjava prizora (vas skrita prek envGroup/refov), scena na toLocal(točke), setYear posredovan; zanka: mini veja z ORBIT predogledom (brez GPS kamera kroži R=36 m okoli središča in gleda vanj — prizor vedno viden, vlečenje = manualYaw zamik; z GPS kompas kot prej); dispose očiisti mini
+- ar-time-machine.tsx: mini stanje + miniRef (globo povezava pred ustvarjanjem scene), chips onClick → setMini, GPS odklep oddaljene → setMini, skupina »ODDALJENE« z razdaljami (formatDistance), »← nazaj na vas«, kartica z dogodki (ol časovnica), mini opomba metodologije namesto vaške, statusni čip na lokaciji/mini predogled, zajem z naslovom točke, 360°/legenda skrita v mini, kartica max-h-46vh overflow (popravek prekrivanja čipov — hrošč iz E2E)
+- museum-map.tsx: »oddaljena točka · X od vasi — lastna mini vsebina« badge; gen-qr.py + 3 nove PNG → 9 QR tablic; atlas.ts timeSpots + miniScene/distant/distanceFromVillageM/events; sw.js v5
+- E2E (agent-browser): globo ?spot=mlini → kartica + scena (VLM: hiša+kolo+jez+reka+drevesa ✓); orbit po popravku → VLM potrdi vse objekte; cerkvisce → VLM: »3 red wireframe ghosts + white chapel ✓«; leto danes → VLM: mlin amber wireframe ghost ✓; otok kartica z 4 dogodki ✓; nazaj na vas → duhovi vasi (pixli: 1367 rdečih) ✓; mock GPS @ mlini → samodejni odklep + kartica »odklenjeno« + mini ✓; mobilni 390px ✓; 0 napak konzole
+- NADGRADNJA med E2E: orbit predogled namesto vrtenja na mestu (prvi poskus — prazen pogled odvisen od kota) + kapelica premaknjena s predogledne pozicije kamere (2,8 m → 34 m) + kartica max-višina
+- Push (WAF retry) → commit ec1d803; Vercel 18. deploy: produkcija 9 točk / 10 sider / avdit {REVIEW 1, CONFLICT 1}; lint čist; QA 12/12
+- GitLab #12: zadnji 2 DoD odkljukani + zaključni komentar (2948 znakov) + ZAPRT
+
+Stage Summary:
+- P1 #12 POPOLN (6/6 DoD): vse štiri stvari issueja izvedene — mini-scene mlini/cerkvišče (proceduralne, poštene), 360° s cerkve, Kaj je izginilo (1825∩OSM), TTS pripoved, iOS Quick Look USDZ
+- Oddaljene točke so ZDAJ polni portali: QR tablica → globa povezava → lastna scena/kartica → GPS odklep → MVG zapis — ista dokazna veriga kot vaške točke (GeoTruth sidra + evidence + avdit)
+- Stanje muzeja: 113 zapisov, 13 zaprtih issuejev + #13 (P2 panorama) odprt, 18. deploy v produkciji
+- Naslednji korak: #13 (P2 VISUAL REALISM / HISTORICAL PANORAMA LAYER) — GEO-TRUTH temelj (sidra, heading, sceneReadiness, use-compass) + 360° mehanizem že obstajata
