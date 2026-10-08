@@ -1873,3 +1873,19 @@ Stage Summary:
 - Veljavna sekundarna identifikacija k.o. sosedov na listih (Weidendorf=Bedenj, Tributsch=Tribuče, Adleschitz) — samoskladnost fita potrjena neodvisno
 - 3/5 grafičnih listov zdaj georeferenciranih (A01/A02 GEOTRUTH, A04 P9); A03/A05 dokumentirana TO_COLLECT (potreben 1 točkovni sidro na list)
 - Muzej stabilen: DEV QA 22/22, sw v17; raziskovalna pot v research/georef-n83/ (P9 razdelek + artefakti + zavrnjene sledi)
+
+---
+Task ID: P9-verifikacija
+Agent: Z.ai Code (glavni agent)
+Task: Zaključna verifikacija P9 (drugi commit: pokritost 3/5 + intro) v produkciji
+
+Work Log:
+- Commit 20a213d (P9 glavni) + 77fde4d (P9 dopolnitev: COVERAGE.sheetsTotal 5 / sheetsGeoreferenced 3, intro Atlasa "trije georeferencirani listi (A01/A02 GEOTRUTH, A04 prek ovina Kolpe — P9)") pushana (WAF 1× retry na prvem).
+- PROD QA 22/22 (oba deploya); lint 0 napak.
+- PROD E2E (agent-browser): ?odsek=atlas → zavihek Viri in dokazi → kartica vira A04 z badge "georef" + polna P9 opomba; kartica "Georeferenca listov": List A04 · 2645×2158 px · ~0,55 m/px s celotno metodo (ovin, rot +30,9°, kontrole), natančnostjo in 4 kontrolnimi točkami; intro "trije georeferencirani listi"; QA seznam vsebuje P9 vrstico.
+- Konzola: 0 napak/ opozoril (desktop 1280 + mobilni 390); scrollW=clientW (1280/390 — brez preliva); footer po scrollu na dno = konec dokumenta (33472=33472) — lepljenje OK.
+- Overlay past (div.fixed.inset-0) pri kliku zavihkov zaobidena s eval hide — znana lastnost, ne vpliva na uporabnike (navadni klik deluje po odstranitvi helo bannerja).
+
+Stage Summary:
+- P9 v celoti v produkciji: A04 RECONSTRUCTED [~] (ovin Kolpe), 3/5 listov georeferenciranih, QA 22/22, E2E čist (desktop + mobilni), delovni dnevnik + README dokumentirana
+- Projekt: GitLab 0 odprtih issuejev (#1–17 zaprti), P5-b + P9 dokončana — naslednji naravni korak: nova raziskovalna vprašanja uporabnika
