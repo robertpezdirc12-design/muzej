@@ -1754,3 +1754,30 @@ Stage Summary:
 - Avtomatizacija v ozadju v tem sandboxu NI mogoča (reaper ubija vse sirote ≤5 min, 3 metode preizkušene); zanesljiva metoda ostaja ročno foreground okno ob dvigu kvote (dokumentirana v research/p5/README.md + mini-servis za 10-min zagon)
 - Muzej stabilen: dev 19/19, produkcija 19/19, brez napak v dnevniku; nobena produktivna koda spremenjena (samo orodja/dokumentacija)
 - Naslednji korak (ob dvigu kvote, jutri zjutraj ali prej): bun scripts/pua-probe-read.mjs → parse → gen → obe analizi → integracija research.ts + preverba napovedi h32/h64/h65/h68 → qa-p5-b test → sw v14 → commit/push → produkcija E2E
+
+---
+Task ID: P6 (nadaljevanje po P5-b-nadzoru — naročilo: »nadaljuj sproti glej ce se quota ispustili ta cas delaj drugo«)
+Agent: Z.ai Code (glavni agent)
+Task: Georeferenca zemljevida 1812 (issue #17 točka 2) — delo brez SDK med blokado kvote (429)
+
+Work Log:
+- Kvota sonde »sproti«: 14:31, 14:39, 14:55, 15:05 — VSE 429 (vztraja 08:12→15:05, > 6,8 h; potirjeno tudi na tekstovnem LLM + web-search)
+- IZBIRA NALOGE: edina večja odprtina issue #17 izvedljiva BREZ SDK = georeferenca 1812 (matrix: »georeferenca še vedno TO_COLLECT«; dokumentirana metoda: afina transformacija na kontrolne točke)
+- Prenos obdobjenega izvirnika: Commons Special:FilePath → research/georef-1812/orig-1812.jpg (8297×6080 px, 6,2 MB, PD; Giraldon 1812, dlib 6EZTJ9C0)
+- OCR 1. prehod: tesseract PSM 11 na celotnem listu (39 s) → 423 besed; izluščene kontrolne točke: Pest, Leoben, Ancona, WIDDIN, Seml, Zworn, Prist + »Meridien« (naslov zg. rob) + BAVIERE
+- Preliminarna afina (8 točk): residuali 5–10 km; pokritje lista ~11,3–24,4°E / 41,4–48,2°N (ŠIRŠE od navedenih meja research.ts!)
+- Ciljani OCR 3× (14 regij pričakovanih mest) → Trst, Beograd, Sarajevo, Ragusa, BanyaLuka + fragmenti (DBACH=LAIBACH, ime=FIUME, Agra=AGRAM, Tre:=TRIESTE)
+- Natančni OCR 6× (8 ozkih izrezov) → CELE besede: FIUME (2030,2426), AGRAM (3052,2051), RAGUSE (4173,4941), Sariayey=SARAJEVO (4363,4010), Janyaluk=BANYALUKA (3505,2956)
+- »Doboj?« izločen (residual 20,6 km, negotova ID); semlinska zmeda razrešena (Semlin+Belgrad sosednja napisna → obe točki veljavni)
+- KONČNA PRIMERJAVA: afina (mediana 12,0 km) vs kvadratna 2. reda (mediana 10,1 km, max 25,0 — Laibach oznaka vzhodno od mesta); Griblje: afina px (2497,2284) in kvadratna (2498,2282) — SOGLASJE ± 2 px (izbira modela ni kritična)
+- Merilo: 126×124 m/px, razmerje 1,024 (izotropno — lista ni raztegnjena); rotacija ~0° (sever gor)
+- GRIBLJE (45,568 N 15,290 E) → px (2499, 2286) ± ~10 km (~±81 px); geometrijska smiselnost preverjena (Karlovac/Zagreb/Reka v pravih relacijah)
+- Artefakti: research/georef-1812/ (izvirnik, ocr-full.tsv, 3 primerjalne affine JSON, fit-georef.py — REPRODUCIBILEN skript, georef-1812.json, izrez čist + označen, 23 OCR izrezov) + public/images/authentic/griblje-okolis-1812-{900,600}.jpg
+- Integracija: research.ts MAP_1812 (status TO_COLLECT→REVIEW, nova dejanska pokritost, georef objekt s številkami, metoda SI/EN z omejitvami [~]); ISSUE17_MATRIX vrstica 1812; MVG-092 (slika→izrez z rdečo oznako+oranžnim krogom negotovosti, kredit Giraldon+[~], nov vir Commons); museum-research.tsx kartica (naslov, slika, rezultati); qa.ts qa-1812-georef (status, 15 točk, residuali ≤15/30, anizotropija 0,9–1,1, Griblje px v listu, MVG-092 slika/kredit/vir); sw.js v14
+- VERIFIKACIJA: lint 0 napak 0 opozoril; dev QA 20/20 (nov test PASS); dev E2E (kartica v zavihku Posebne raziskave, slika 900×900, zapis MVG-092 s kreditom, 0 napak konzole); push (WAF 3× → uspel); PROD QA 20/20; PROD E2E: MVG-092 slika+kredit ✓, kartica ✓, slika HTTP 200 (196966 B) + direktna nalazitev ✓, mobilni 390px scrollW=clientW=390 (brez preliva) ✓, 0 napak ✓
+
+Stage Summary:
+- PRVA IZVEDENA GEOREFERENCA 1812 [~] REVIEW: 15 OCR kontrolnih točk, afina+kvadratna (soglasje ±2 px), Griblje px (2499,2286) ± 10 km, merilo 126 m/px, pokritje ~11–24°E/41–48°N
+- Muzej obogaten: MVG-092 zdaj kaže DEJANSKI izrez izvirnika 1812 z označeno lego Gribelj (namesto sodobnega vektorskega pregleda); kartica v Raziskavah s sliko; QA 19→20
+- Vsa metoda deterministična (tesseract + LSQ) — 0 SDK klicev; omejitve pošteno dokumentirane ([~]: centri napisov ne pik, mreža neberljiva, Parisov meridian nepotrjen, končna potrditev = človek/QGIS)
+- Kvota 429 med delom sonde 4× (ves čas blokirana, > 6,8 h); commit 70356cd pushan; PROD 20/20
