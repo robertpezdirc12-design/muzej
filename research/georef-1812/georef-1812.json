@@ -1,0 +1,264 @@
+{
+ "map": "Provinces Illyriennes Servie et Bosnie 1812 (Giraldon; Commons 8297x6080; PD; dlib 6EZTJ9C0)",
+ "method": "OCR mestnih oznak (tesseract eng, PSM 11/12/6/7/8, 3-6x upscale) → LSQ afina + kvadratna preslikava px→WGS84",
+ "points": [
+  {
+   "name": "Pest",
+   "px": [
+    4927,
+    598
+   ],
+   "geo": [
+    47.497,
+    19.041
+   ],
+   "label": "Pest (cela beseda)",
+   "residualKm": 5.6
+  },
+  {
+   "name": "Leoben",
+   "px": [
+    2369,
+    659
+   ],
+   "geo": [
+    47.383,
+    15.094
+   ],
+   "label": "Leoben (cela beseda)",
+   "residualKm": 16.7
+  },
+  {
+   "name": "Ancona",
+   "px": [
+    1243,
+    4029
+   ],
+   "geo": [
+    43.622,
+    13.508
+   ],
+   "label": "Ancone (cela beseda)",
+   "residualKm": 1.9
+  },
+  {
+   "name": "Vidin",
+   "px": [
+    7162,
+    3667
+   ],
+   "geo": [
+    43.993,
+    22.868
+   ],
+   "label": "WIDDIN (cela beseda)",
+   "residualKm": 1.7
+  },
+  {
+   "name": "Semlin",
+   "px": [
+    5603,
+    2938
+   ],
+   "geo": [
+    44.843,
+    20.4
+   ],
+   "label": "Semlin (2× OCR)",
+   "residualKm": 4.6
+  },
+  {
+   "name": "Zvornik",
+   "px": [
+    4829,
+    3358
+   ],
+   "geo": [
+    44.387,
+    19.093
+   ],
+   "label": "Zworn (del)",
+   "residualKm": 3.2
+  },
+  {
+   "name": "Pristina",
+   "px": [
+    6152,
+    4882
+   ],
+   "geo": [
+    42.664,
+    21.166
+   ],
+   "label": "Prist (del)",
+   "residualKm": 6.4
+  },
+  {
+   "name": "Belgrade",
+   "px": [
+    5602,
+    3029
+   ],
+   "geo": [
+    44.817,
+    20.457
+   ],
+   "label": "Bel (del, conf 95)",
+   "residualKm": 10.1
+  },
+  {
+   "name": "Sarajevo",
+   "px": [
+    4363,
+    4010
+   ],
+   "geo": [
+    43.857,
+    18.413
+   ],
+   "label": "Sariayey/Saray",
+   "residualKm": 17.6
+  },
+  {
+   "name": "Ragusa",
+   "px": [
+    4173,
+    4941
+   ],
+   "geo": [
+    42.651,
+    18.091
+   ],
+   "label": "Raguse (6×, cela)",
+   "residualKm": 4.2
+  },
+  {
+   "name": "Agram",
+   "px": [
+    3052,
+    2051
+   ],
+   "geo": [
+    45.815,
+    15.982
+   ],
+   "label": "Agram (6×, cela)",
+   "residualKm": 14.3
+  },
+  {
+   "name": "Fiume",
+   "px": [
+    2030,
+    2426
+   ],
+   "geo": [
+    45.328,
+    14.448
+   ],
+   "label": "Frumeé = FIUME (6×, cela)",
+   "residualKm": 11.0
+  },
+  {
+   "name": "Laibach",
+   "px": [
+    2235,
+    1865
+   ],
+   "geo": [
+    46.056,
+    14.508
+   ],
+   "label": "LAIBACH (fragmenti ACH/DA)",
+   "residualKm": 25.0
+  },
+  {
+   "name": "Trieste",
+   "px": [
+    1460,
+    2180
+   ],
+   "geo": [
+    45.65,
+    13.77
+   ],
+   "label": "Tre:/Sine (fragmenti)",
+   "residualKm": 12.2
+  },
+  {
+   "name": "BanyaLuka",
+   "px": [
+    3505,
+    2956
+   ],
+   "geo": [
+    44.772,
+    17.191
+   ],
+   "label": "Janyaluk (6×, cela)",
+   "residualKm": 20.0
+  }
+ ],
+ "residualsKm": {
+  "affineMedian": 12.0,
+  "quadMedian": 10.1,
+  "quadMax": 25.0
+ },
+ "scaleMPerPx": {
+  "x": 126.1,
+  "y": 123.6,
+  "ratio": 1.021
+ },
+ "griblje": {
+  "geo": [
+   45.568,
+   15.29
+  ],
+  "pxAffine": [
+   2497,
+   2284
+  ],
+  "pxQuad": [
+   2498,
+   2282
+  ],
+  "modelSpreadPx": 2,
+  "uncertaintyKm": 10.0
+ },
+ "coverage": {
+  "NW": [
+   47.917,
+   10.902
+  ],
+  "NE": [
+   48.116,
+   24.801
+  ],
+  "SW": [
+   41.374,
+   11.785
+  ],
+  "SE": [
+   41.235,
+   24.569
+  ]
+ },
+ "affineCoeffs": {
+  "lat": [
+   7.516451e-06,
+   -0.00110893495,
+   48.082074154209
+  ],
+  "lng": [
+   0.001602534567,
+   6.6759722e-05,
+   11.136214581725
+  ]
+ },
+ "status": "REVIEW [~] — strojna OCR georeferenca regionalnega lista; centri NAPISOV ne mestnih pik; potrditev: človeška paleografija / QGIS",
+ "notes": [
+  "meridian label \"Meridien\" OCR-an na vrhu (px 4212,375) — mrežne stopinje niso bile strojno berljive",
+  "parismeridian: nepotrjeno; konstantni člen afine absorbira morebitni zamik",
+  "Doboj izločen v preliminarni fazi (residual 20,6 km, negotova identifikacija \"Dobos/Ditbor\")",
+  "razmerje meril 1,024 — lista ni raztegnjena; projekcija na tem obsegu blizu afine"
+ ]
+}

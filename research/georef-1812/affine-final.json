@@ -1,0 +1,225 @@
+{
+ "method": "OCR (tesseract eng, PSM 11/12/6, 3-4× upscale) mestne oznake → najmanjša kvadratna afina px→(lat,lng)",
+ "affine": {
+  "lat": [
+   6.452810863316466e-06,
+   -0.0011075371918796376,
+   48.084118054259086
+  ],
+  "lng": [
+   0.0016060012681986078,
+   7.363435169291258e-05,
+   11.10832382465314
+  ]
+ },
+ "points": [
+  {
+   "name": "Pest",
+   "px": [
+    4927,
+    598
+   ],
+   "geo": [
+    47.497,
+    19.041
+   ],
+   "note": "cela beseda",
+   "residualKm": 5.2
+  },
+  {
+   "name": "Leoben",
+   "px": [
+    2369,
+    659
+   ],
+   "geo": [
+    47.383,
+    15.094
+   ],
+   "note": "cela beseda",
+   "residualKm": 10.1
+  },
+  {
+   "name": "Ancona",
+   "px": [
+    1243,
+    4029
+   ],
+   "geo": [
+    43.622,
+    13.508
+   ],
+   "note": "cela beseda",
+   "residualKm": 8.6
+  },
+  {
+   "name": "Vidin",
+   "px": [
+    7162,
+    3667
+   ],
+   "geo": [
+    43.993,
+    22.868
+   ],
+   "note": "cela beseda (WIDDIN)",
+   "residualKm": 8.5
+  },
+  {
+   "name": "Semlin",
+   "px": [
+    5603,
+    2938
+   ],
+   "geo": [
+    44.843,
+    20.4
+   ],
+   "note": "celi besedi (2 prehoda OCR)",
+   "residualKm": 6.6
+  },
+  {
+   "name": "Zvornik",
+   "px": [
+    4829,
+    3358
+   ],
+   "geo": [
+    44.387,
+    19.093
+   ],
+   "note": "del (Zworn)",
+   "residualKm": 1.8
+  },
+  {
+   "name": "Pristina",
+   "px": [
+    6152,
+    4882
+   ],
+   "geo": [
+    42.664,
+    21.166
+   ],
+   "note": "del (Prist)",
+   "residualKm": 16.0
+  },
+  {
+   "name": "Belgrade",
+   "px": [
+    5602,
+    3029
+   ],
+   "geo": [
+    44.817,
+    20.457
+   ],
+   "note": "del (Bel, conf 95)",
+   "residualKm": 11.7
+  },
+  {
+   "name": "Sarajevo",
+   "px": [
+    4325,
+    4016
+   ],
+   "geo": [
+    43.857,
+    18.413
+   ],
+   "note": "Sara/Saray",
+   "residualKm": 22.1
+  },
+  {
+   "name": "Ragusa",
+   "px": [
+    4141,
+    4948
+   ],
+   "geo": [
+    42.651,
+    18.091
+   ],
+   "note": "Raga/hag",
+   "residualKm": 3.5
+  },
+  {
+   "name": "Agram",
+   "px": [
+    3048,
+    2047
+   ],
+   "geo": [
+    45.815,
+    15.982
+   ],
+   "note": "Agra (conf 91)",
+   "residualKm": 13.6
+  },
+  {
+   "name": "Fiume",
+   "px": [
+    2020,
+    2435
+   ],
+   "geo": [
+    45.328,
+    14.448
+   ],
+   "note": "ime→FIUME center est.",
+   "residualKm": 10.4
+  },
+  {
+   "name": "Laibach",
+   "px": [
+    2205,
+    1862
+   ],
+   "geo": [
+    46.056,
+    14.508
+   ],
+   "note": "DBACH→LAIBACH center est.",
+   "residualKm": 21.6
+  },
+  {
+   "name": "Trieste",
+   "px": [
+    1543,
+    2187
+   ],
+   "geo": [
+    45.65,
+    13.77
+   ],
+   "note": "Tre:→TRIESTE center est.",
+   "residualKm": 3.0
+  },
+  {
+   "name": "BanyaLuka",
+   "px": [
+    3482,
+    2960
+   ],
+   "geo": [
+    44.772,
+    17.191
+   ],
+   "note": "Banyalu (conf 41)",
+   "residualKm": 22.4
+  }
+ ],
+ "gribljePx": [
+  2499,
+  2286
+ ],
+ "residualsKm": {
+  "median": 10.1,
+  "max": 22.4
+ },
+ "scaleMPerPx": {
+  "x": 178.8,
+  "y": 123.6
+ },
+ "rotationDeg": 89.837
+}

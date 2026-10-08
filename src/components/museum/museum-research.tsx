@@ -504,12 +504,31 @@ export function MuseumResearch() {
             <div className="rounded-xl border bg-card p-6 shadow-sm">
               <h3 className="flex items-center gap-2 font-display text-lg font-semibold">
                 <MapIcon className="size-4 text-primary" aria-hidden="true" />
-                {t("Zemljevid 1812 — dokumentiran vir + pot do georeference", "Map 1812 — documented source + path to georeference")}
+                {t("Zemljevid 1812 — georeferenca [~] izvedena", "Map 1812 — georeference [~] executed")}
               </h3>
+              <div className="mt-3 overflow-hidden rounded-lg border">
+                <img
+                  src="/images/authentic/griblje-okolis-1812-900.jpg"
+                  alt={t(
+                    "Izrez zemljevida Ilirskih provinc 1812 (Giraldon, javna last) ± 63 km okoli Gribelj z rdečo oznako izračunane lege [~] in oranžnim krogom negotovosti ± 10 km",
+                    "Crop of the 1812 Illyrian Provinces map (Giraldon, public domain) ± 63 km around Griblje with a red marker of the computed position [~] and an orange uncertainty circle ± 10 km",
+                  )}
+                  className="h-auto w-full"
+                  width={900}
+                  height={900}
+                  loading="lazy"
+                />
+              </div>
+              <p className="mt-2 text-[11px] leading-relaxed text-muted-foreground">
+                {t(
+                  "Izrez obdobjenega izvirnika (Giraldon 1812, javna last) ± 63 km okoli izračunane lege Gribelj; rdeča oznaka + oranžni krog = strojna georeferenca [~]. Slika v zbirki MVG-092.",
+                  "Crop of the period original (Giraldon 1812, public domain) ± 63 km around Griblje's computed position; red marker + orange circle = machine georeference [~]. Collection image MVG-092.",
+                )}
+              </p>
               <p className="mt-2 text-xs leading-relaxed text-foreground/80">
                 {t(
-                  `Slika v zbirki (${MAP_1812.museumRef}) je sodoben vektorski zemljevid: ${MAP_1812.actualSource.author}, ${MAP_1812.actualSource.year}, ${MAP_1812.actualSource.licence}.`,
-                  `The collection image (${MAP_1812.museumRef}) is a modern vector map: ${MAP_1812.actualSource.author}, ${MAP_1812.actualSource.year}, ${MAP_1812.actualSource.licence}.`,
+                  `Georeferenca: ${MAP_1812.georef?.controlPoints ?? 15} OCR kontrolnih točk, merilo ${MAP_1812.georef?.scaleMPerPx.x ?? 126} × ${MAP_1812.georef?.scaleMPerPx.y ?? 124} m/px, residuali (mediana) ± ${MAP_1812.georef?.residualsKm.median ?? 10} km; Griblje px (${MAP_1812.georef?.gribljePx.x ?? 2499}, ${MAP_1812.georef?.gribljePx.y ?? 2286}) ± ${MAP_1812.georef?.uncertaintyKm ?? 10} km. Pokritje lista: ~11–24° E, 41–48° N (širše od meja Ilirskih provinc).`,
+                  `Georeference: ${MAP_1812.georef?.controlPoints ?? 15} OCR control points, scale ${MAP_1812.georef?.scaleMPerPx.x ?? 126} × ${MAP_1812.georef?.scaleMPerPx.y ?? 124} m/px, residuals (median) ± ${MAP_1812.georef?.residualsKm.median ?? 10} km; Griblje px (${MAP_1812.georef?.gribljePx.x ?? 2499}, ${MAP_1812.georef?.gribljePx.y ?? 2286}) ± ${MAP_1812.georef?.uncertaintyKm ?? 10} km. Sheet coverage: ~11–24° E, 41–48° N (wider than the Illyrian Provinces).`,
                 )}
               </p>
               <ul className="mt-2 space-y-1 text-xs">

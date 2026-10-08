@@ -466,6 +466,17 @@ export const MAP_1812: {
     methodSi: string;
     methodEn: string;
   };
+  /** Izvedena strojna georeferenca izvirnika 1812 (OCR → LSQ preslikava) — issue #17, P6 */
+  georef?: {
+    executedAt: string;
+    method: string;
+    controlPoints: number;
+    residualsKm: { median: number; max: number };
+    scaleMPerPx: { x: number; y: number };
+    gribljePx: { x: number; y: number };
+    uncertaintyKm: number;
+    artifacts: string[];
+  };
   lastVerified: string;
 } = {
   imageRef: "/images/authentic/ilirske-province-1812.jpg",
@@ -502,15 +513,32 @@ export const MAP_1812: {
       verified: "POTRJENO 2026-10-08 (issue #17) prek COBISS/WorldCat/giam.zrc-sazu.si (dlib s sandboxa timeout, URN obstaja)",
     },
   ],
-  bounds: { north: 46.7, south: 42.4, west: 13.3, east: 19.3 },
+  bounds: { north: 48.1, south: 41.4, west: 11.1, east: 24.4 },
   georeferencePath: {
-    status: "TO_COLLECT",
+    status: "REVIEW",
     methodSi:
-      "Pot do georeferenciranega sloja: (1) pridobi obdobjeni izvirnik z Wikimedie (javna last); (2) afina transformacija na kontrolne točke (enaka metoda kot N83 A01/A02 — Dunaj/Trst/Zagreb/rečne meje); (3) seznam sloj v Atlasu za obdobje 1809–1813. Današnji vir je politični pregled brez projekcije in zato za georeferenco neuporaben.",
+      "Izvedeno 2026-10-08 (P6, brez AI-branja vsebine): obdobjeni izvirnik Giraldon 1812 (Commons 8297×6080 px, javna last) prenešen → OCR mestnih oznak (tesseract, 3–6× povečave izrezov) → 15 kontrolnih točk (Pest, Leoben, Ancona, Vidin, Semlin, Zvornik, Priština, Beograd, Sarajevo, Ragusa, Agram, Fiume, Laibach, Trst, Banya Luka) → najmanjša kvadratna preslikava px→WGS84 (afina IN kvadratna 2. reda; za Griblje se ujemata na ±2 px). Merilo ≈ 126×124 m/px (razmerje 1,024 — lista ni raztegnjena); residuali: mediana ≈ 10 km, max ≈ 25 km (Laibach — oznaka vzhodno od mesta). Griblje (45,568 N 15,290 E) → px (2499, 2286) ± ~10 km; dokazni izrez z označeno lego v zbirki (MVG-092). OMEJITVE [~]: kontrolne točke so centri OCR-anih NAPISOV, ne mestnih pik; mrežne stopinje niso bile strojno berljive (Parisov meridian nepotrjen); končna potrditev zahteva človeško paleografijo ali QGIS georeferenco. Polni strojno berljivi rezultat: research/georef-1812/georef-1812.json + reproducibilen skript fit-georef.py.",
     methodEn:
-      "Path to a georeferenced layer: (1) acquire a period original from Wikimedia (public domain); (2) an affine transformation on control points (same method as N83 A01/A02 — Vienna/Trieste/Zagreb/river boundaries); (3) add the layer to the Atlas for the 1809–1813 period. The current source is a political overview without projection and is therefore unusable for georeferencing.",
+      "Executed 2026-10-08 (P6, no AI content reading): the period original Giraldon 1812 (Commons 8297×6080 px, public domain) downloaded → OCR of city labels (tesseract, 3–6× upscaled crops) → 15 control points (Pest, Leoben, Ancona, Vidin, Semlin, Zvornik, Pristina, Belgrade, Sarajevo, Ragusa, Agram, Fiume, Laibach, Trieste, Banya Luka) → least-squares px→WGS84 mapping (affine AND 2nd-order quadratic; they agree on Griblje to ±2 px). Scale ≈ 126×124 m/px (ratio 1.024 — the sheet is not stretched); residuals: median ≈ 10 km, max ≈ 25 km (Laibach — label east of the city). Griblje (45.568 N 15.290 E) → px (2499, 2286) ± ~10 km; evidence crop with the marked position in the collection (MVG-092). LIMITS [~]: control points are centres of OCR-read LABELS, not city dots; graticule degrees were not machine-readable (Paris meridian unconfirmed); final confirmation needs human paleography or QGIS georeferencing. Full machine-readable result: research/georef-1812/georef-1812.json + reproducible script fit-georef.py.",
   },
-  lastVerified: "2026-10-07",
+  georef: {
+    executedAt: "2026-10-08",
+    method: "OCR (tesseract eng) mestnih oznak → LSQ afina + kvadratna preslikava px→WGS84; primerjava modelov",
+    controlPoints: 15,
+    residualsKm: { median: 10.1, max: 25.0 },
+    scaleMPerPx: { x: 126, y: 124 },
+    gribljePx: { x: 2499, y: 2286 },
+    uncertaintyKm: 10,
+    artifacts: [
+      "research/georef-1812/georef-1812.json",
+      "research/georef-1812/fit-georef.py",
+      "research/georef-1812/orig-1812.jpg",
+      "research/georef-1812/griblje-okolis-1812-oznacen.jpg",
+      "public/images/authentic/griblje-okolis-1812-900.jpg",
+      "public/images/authentic/griblje-okolis-1812-600.jpg",
+    ],
+  },
+  lastVerified: "2026-10-08",
 };
 
 // ——— 7. NESNOVNA DEDIŠČINA / USTNA ZGODOVINA (issue #3 #14) ——————————
@@ -1468,7 +1496,7 @@ export const ISSUE17_MATRIX: Issue17MatrixRow[] = [
   { areaSi: "PZ", areaEn: "PZ (valuation elaborate)", beforeSi: "0 (TO_COLLECT)", afterSi: "10 vzorčenih strani: 441 prebivalcev, 2294 joch, cenilna veriga (Bau-Area 7 fl 35 kr/joch), 28. 7. 1825", delta: "+10 strani, +ekonomski profil" },
   { areaSi: "PG", areaEn: "PG (indication sketch)", beforeSi: "0 (TO_COLLECT)", afterSi: "1/1: skica z mejo, Kolpo, ~15–19 točk, sosedi; hiše niso videti (negativno)", delta: "+1 stran" },
   { areaSi: "PV", areaEn: "PV (land use)", beforeSi: "0 (TO_COLLECT)", afterSi: "1/1 v celoti: 10 izpolnjenih kultur (20 vrstic), skupaj 1221 j ≈ 703 ha, gozd PRAZEN (anomalija)", delta: "+1 stran, +10 vrstic" },
-  { areaSi: "1812", areaEn: "1812 map", beforeSi: "dokumentirano, georeferenca TO_COLLECT", afterSi: "izvirnik potrjen (Commons 8297×6080, PD + ZRC SAZU faksimile); georeferenca še vedno TO_COLLECT (regionalni list)", delta: "vir VERIFIED, sloj ne" },
+  { areaSi: "1812", areaEn: "1812 map", beforeSi: "dokumentirano, georeferenca TO_COLLECT", afterSi: "izvedena strojna georeferenca [~] REVIEW: 15 OCR kontrolnih točk, afina+kvadratna (soglasje ±2 px), merilo 126×124 m/px, Griblje px (2499,2286) ± 10 km; izrez v zbirki MVG-092", delta: "georeferenca izvedena [~]" },
   { areaSi: "1851–53", areaEn: "1851–53 (SI AS 749)", beforeSi: "odprto (VAČ 4971617, NOT_DIGITIZED)", afterSi: "enota potrjena + edina Griblje-enota v seriji /3/8 (17 enot pregledanih); ni digitalizirana", delta: "status pošteno DOCUMENTED" },
   { areaSi: "F0000212", areaEn: "F0000212 (SEM photo)", beforeSi: "delna provenanca (TO_COLLECT)", afterSi: "javni zapis VERIFIED (URL + slika); fotograf/datum: polji prazni — pisati SEM (TO_COLLECT)", delta: "+VERIFIED vir" },
   { areaSi: "Gaspari", areaEn: "Gaspari", beforeSi: "sekundarna omemba", afterSi: "za Griblje nič; dokumentiran kandidat za Belo krajino (Belokranjska ohcet 1924, SEM) brez inventarne št.", delta: "ostaja TO_COLLECT" },

@@ -25,6 +25,7 @@ import {
   PUA_CONTINUATION,
   PUA_PT_CROSS,
   PUA_PT_WBRIDGE,
+  MAP_1812,
   PT_REVIEW_2026,
   PT_PALEOGRAPHY_P3,
   ORAL_HISTORY_PROTOCOL,
@@ -672,6 +673,46 @@ export function runQA(): QAReport {
     p5wErrors.length === 0
       ? `Deterministično (scripts/pua-pt-wbridge.py, brez AI): most med različnima številčenjema iz P5-a — hipoteza [~] W.<n> = PUA hišna št. lastnika; najmočnejša ujemanja: W.2 Hlebetz↔Hlebety 0,86, W.24/25 Brinig↔Bring 0,83, W.1 Mufa↔Wufa 0,75 (M↔W Kurrent); 4 W št. brez PUA (32/64/65/68) = napovedi za ne prebrane strani 35–49; omejitve: strojna branjla [~], prečrtana W.47, dvojni vpis W.62`
       : p5wErrors.join("; "),
+  );
+
+  // P6: georeferenca zemljevida 1812 (OCR → afina/kvadratna)
+  const g1812 = MAP_1812.georef;
+  const g1812Errors: string[] = [];
+  if (MAP_1812.georeferencePath.status !== "REVIEW") {
+    g1812Errors.push(`1812 status: ${MAP_1812.georeferencePath.status} (pričakovano REVIEW)`);
+  }
+  if (!g1812) {
+    g1812Errors.push("1812 georef: manjka objekt z rezultati");
+  } else {
+    if (g1812.controlPoints !== 15) g1812Errors.push(`1812 kontrolnih točk: ${g1812.controlPoints} (pričakovano 15)`);
+    if (g1812.residualsKm.median > 15 || g1812.residualsKm.max > 30) g1812Errors.push(`1812 residuali preveliki: ${g1812.residualsKm.median}/${g1812.residualsKm.max} km`);
+    const ratio = g1812.scaleMPerPx.x / g1812.scaleMPerPx.y;
+    if (ratio < 0.9 || ratio > 1.1) g1812Errors.push(`1812 anizotropija: razmerje ${ratio.toFixed(3)} (pričakovano ~1)`);
+    const { x, y } = g1812.gribljePx;
+    if (x < 0 || x > 8297 || y < 0 || y > 6080) g1812Errors.push(`1812 Griblje px izven lista: (${x}, ${y})`);
+    if (g1812.uncertaintyKm > 15) g1812Errors.push(`1812 negotovost: ± ${g1812.uncertaintyKm} km (pričakovano ≤ 15)`);
+    if (g1812.artifacts.length < 5) g1812Errors.push(`1812 artefaktov: ${g1812.artifacts.length} (pričakovano ≥ 5)`);
+  }
+  const mvg092 = (exhibitsRaw as { exhibits: Array<{ museumNo?: string; image?: string; imageCredit?: string; sources?: { sourceKey?: string }[] }> })
+    .exhibits.find((e) => e.museumNo === "MVG-092");
+  if (!mvg092 || mvg092.image !== "/images/authentic/griblje-okolis-1812-900.jpg") {
+    g1812Errors.push("MVG-092: slika ni izrez 1812 z oznako");
+  }
+  if (!mvg092?.imageCredit?.includes("Giraldon") || !mvg092?.imageCredit?.includes("[~]")) {
+    g1812Errors.push("MVG-092: kredit mora navesti Giraldon 1812 in oznako negotovosti [~]");
+  }
+  if (!mvg092?.sources?.some((s) => (s.sourceKey ?? "").includes("Provinces_Illyriennes_Servie_et_Bosnie_1812"))) {
+    g1812Errors.push("MVG-092: manjka vir obdobjeni izvirnik (Commons)");
+  }
+
+  push(
+    "qa-1812-georef",
+    "Zemljevid 1812: georeferenca [~] izvedena — 15 OCR točk, merilo ~126 m/px, Griblje px (2499, 2286) ± 10 km, izrez v MVG-092",
+    "1812 map: georeference [~] executed — 15 OCR points, scale ~126 m/px, Griblje px (2499, 2286) ± 10 km, crop in MVG-092",
+    g1812Errors.length === 0,
+    g1812Errors.length === 0
+      ? `Deterministično (tesseract OCR + LSQ afina/kvadratna, brez AI-branja vsebine; research/georef-1812/fit-georef.py): kontrolne točke so centri OCR-anih NAPISOV [~]; afina in kvadratna preslikava se za Griblje ujemata na ± 2 px; pokritje lista ~11–24°E, 41–48°N; omejitve: brez mrežnih stopinj, Parisov meridian nepotrjen, končna potrditev = človeška paleografija/QGIS`
+      : g1812Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;

@@ -1,0 +1,221 @@
+{
+ "method": "OCR (tesseract eng, 3/4/6× upscale) celih mestnih oznak → afina + kvadratna (2. reda) najmanjša kvadratna preslikava px→(lat,lng)",
+ "quad": {
+  "lat": null,
+  "lng": null,
+  "note": "koeficienti v skriptu research/georef-1812/fit-georef.py"
+ },
+ "points": [
+  {
+   "name": "Pest",
+   "px": [
+    4927,
+    598
+   ],
+   "geo": [
+    47.497,
+    19.041
+   ],
+   "residualKmAffine": 5.172470155571948,
+   "residualKmQuad": 5.564295768992457
+  },
+  {
+   "name": "Leoben",
+   "px": [
+    2369,
+    659
+   ],
+   "geo": [
+    47.383,
+    15.094
+   ],
+   "residualKmAffine": 9.368885200268378,
+   "residualKmQuad": 16.74855693059731
+  },
+  {
+   "name": "Ancona",
+   "px": [
+    1243,
+    4029
+   ],
+   "geo": [
+    43.622,
+    13.508
+   ],
+   "residualKmAffine": 8.727997895101264,
+   "residualKmQuad": 1.9292105621546884
+  },
+  {
+   "name": "Vidin",
+   "px": [
+    7162,
+    3667
+   ],
+   "geo": [
+    43.993,
+    22.868
+   ],
+   "residualKmAffine": 8.543240544639492,
+   "residualKmQuad": 1.7217681413128854
+  },
+  {
+   "name": "Semlin",
+   "px": [
+    5603,
+    2938
+   ],
+   "geo": [
+    44.843,
+    20.4
+   ],
+   "residualKmAffine": 7.43785845589537,
+   "residualKmQuad": 4.649118940229489
+  },
+  {
+   "name": "Zvornik",
+   "px": [
+    4829,
+    3358
+   ],
+   "geo": [
+    44.387,
+    19.093
+   ],
+   "residualKmAffine": 0.9670562022178737,
+   "residualKmQuad": 3.238427833972774
+  },
+  {
+   "name": "Pristina",
+   "px": [
+    6152,
+    4882
+   ],
+   "geo": [
+    42.664,
+    21.166
+   ],
+   "residualKmAffine": 13.428307723664782,
+   "residualKmQuad": 6.392759248784275
+  },
+  {
+   "name": "Belgrade",
+   "px": [
+    5602,
+    3029
+   ],
+   "geo": [
+    44.817,
+    20.457
+   ],
+   "residualKmAffine": 12.51850207231541,
+   "residualKmQuad": 10.067043968075872
+  },
+  {
+   "name": "Sarajevo",
+   "px": [
+    4363,
+    4010
+   ],
+   "geo": [
+    43.857,
+    18.413
+   ],
+   "residualKmAffine": 21.078737976459582,
+   "residualKmQuad": 17.60236130931085
+  },
+  {
+   "name": "Ragusa",
+   "px": [
+    4173,
+    4941
+   ],
+   "geo": [
+    42.651,
+    18.091
+   ],
+   "residualKmAffine": 5.259862120649201,
+   "residualKmQuad": 4.226962835590857
+  },
+  {
+   "name": "Agram",
+   "px": [
+    3052,
+    2051
+   ],
+   "geo": [
+    45.815,
+    15.982
+   ],
+   "residualKmAffine": 14.436676117196809,
+   "residualKmQuad": 14.320619047090876
+  },
+  {
+   "name": "Fiume",
+   "px": [
+    2030,
+    2426
+   ],
+   "geo": [
+    45.328,
+    14.448
+   ],
+   "residualKmAffine": 11.982965457199423,
+   "residualKmQuad": 11.01544463921983
+  },
+  {
+   "name": "Laibach",
+   "px": [
+    2235,
+    1865
+   ],
+   "geo": [
+    46.056,
+    14.508
+   ],
+   "residualKmAffine": 26.47138795597478,
+   "residualKmQuad": 25.038939943950357
+  },
+  {
+   "name": "Trieste",
+   "px": [
+    1460,
+    2180
+   ],
+   "geo": [
+    45.65,
+    13.77
+   ],
+   "residualKmAffine": 12.034505743556277,
+   "residualKmQuad": 12.189942874915056
+  },
+  {
+   "name": "BanyaLuka",
+   "px": [
+    3505,
+    2956
+   ],
+   "geo": [
+    44.772,
+    17.191
+   ],
+   "residualKmAffine": 20.020898175803474,
+   "residualKmQuad": 20.004686768500143
+  }
+ ],
+ "gribljePx": {
+  "affine": [
+   2497,
+   2284
+  ],
+  "quadratic": [
+   2498,
+   2282
+  ],
+  "modelSpreadPx": 2
+ },
+ "residualsKm": {
+  "affineMedian": 12.0,
+  "quadMedian": 10.1,
+  "quadMax": 25.0
+ }
+}
