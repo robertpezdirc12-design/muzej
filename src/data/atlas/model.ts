@@ -116,6 +116,33 @@ export const SHEET_GEOREFS: SheetGeoref[] = [
     accuracyEn:
       "Estimated accuracy ±40–80 m over the village area. Sheet scale ~0.79 m/px. The OSM building presence (15 of 156 matching under the new scheme) further supports the affine.",
   },
+  {
+    id: "georef-a04",
+    sheet: "A04",
+    imageUrl: "/atlas/n83-a04.jpg",
+    // ovojnica rotiranega lista (+30,9°) — ne osno poravnana!
+    bounds: [
+      [45.53774, 15.2942],
+      [45.52188, 15.318],
+    ],
+    pixels: { width: 2645, height: 2158 },
+    scaleMPerPixel: 0.55,
+    status: "RECONSTRUCTED",
+    methodSi:
+      "P9 (2026-10-08, ob dvigu VLM kvote): list A04 vsebuje OVIN Kolpe pri Adlešičih — odsek, ki je P8 (ravna struga pri Gribljah) ni mogel zasidrati. 10 točk struge (VLM vodenje po ploščicah + konsenz) → podobnostna prileganja (rotacija, merilo, translacija) proti validirani moderni centerline Kolpe (OTM; GEOTRUTH #14): rotacija +30,9°, merilo 0,55 m/px, mediana odmika 10 m. NEODVISNE kontrole: točka izven fita (23 m), napis ADLESCHITZ pade v k.o. Adlešiči (1,2 km N od vasi — površinski napis ozemlja), WEIDENDORF na meji k.o. Bedenj (Wikipedija: Bedenj = Weidendorf), TRIBUTSCH na sosednjem listu A03 = Tribuče. Merilo: oblika ovinka optimalna pri 0,55; širina narisane struge (120–165 px) proti realni Kolpi (50–90 m; OTM z16) s kalibracijo pretiravanja iz A02 (pas 125 px × 0,79 = 99 m) → s ≈ 0,45–0,65 [~]. List je ZASIDRAN le vzdolž reke; vogali odvisni od merila (±250–470 m).",
+    methodEn:
+      "P9 (2026-10-08, after the VLM quota was lifted): sheet A04 contains the Kolpa BEND by Adlešiči — the very stretch P8 (the straight channel at Griblje) could not anchor. 10 channel points (VLM tile-guided consensus) → similarity fitting (rotation, scale, translation) against the validated modern Kolpa centerline (OTM; GEOTRUTH #14): rotation +30.9°, scale 0.55 m/px, median offset 10 m. INDEPENDENT checks: one out-of-fit point (23 m); the ADLESCHITZ label falls inside c.m. Adlešiči (1.2 km N of the village — an area label); WEIDENDORF at the c.m. Bedenj border (Wikipedia: Bedenj = Weidendorf); TRIBUTSCH on the neighbouring sheet A03 = Tribuče. Scale: bend-shape optimum 0.55; drawn-channel width (120–165 px) vs the real Kolpa (50–90 m; OTM z16) with the A02 exaggeration calibration (band 125 px × 0.79 = 99 m) → s ≈ 0.45–0.65 [~]. The sheet is anchored ALONG the river only; the corners depend on scale (±250–470 m).",
+    controlPoints: [
+      { fromSi: "ovin Kolpe pri Adlešičih (A04 px ≈ 2456,743 → 1537,1947; 10 točk struge)", a01x: 2456, a01y: 743, modernLat: 45.53127, modernLng: 15.31417, noteSi: "VLM-konsenz + fit na moderno centerline; mediana 10 m, s=0,55, rot +30,9°" },
+      { fromSi: "točka struge izven fita (A04 px 1983,1077)", a01x: 1983, a01y: 1077, modernLat: 45.53149, modernLng: 15.3101, noteSi: "neodvisna kontrola: 23 m od moderne Kolpe" },
+      { fromSi: "napis ADLESCHITZ (A04 px ≈ 2116,1403)", a01x: 2116, a01y: 1403, modernLat: 45.5332, modernLng: 15.30972, noteSi: "površinski napis ozemlja k.o. Adlešiči — 1,2 km N od vasi Adlešiči (45,5224/15,3110)" },
+      { fromSi: "napis WEIDENDORF = Bedenj (A04 px ≈ 608,1964)", a01x: 608, a01y: 1964, modernLat: 45.53175, modernLng: 15.29857, noteSi: "območni napis sosednje k.o. Bedenj (vas 45,5374/15,2769 — 1,75 km SZ) [~]" },
+    ],
+    accuracySi:
+      "Ocena ±100–150 m vzdolž reke (sidro); ±250–470 m na vogalih (dvoumnost merila 0,45–0,74; rotacija stabilna +21…+31°). List je v ovojnici rotiran za +31° — slika NI osno poravnana z bounds. Ploščice 0,3–0,5 km med listi A01/A02 in A04 pokriva A03/A05 (še ne georeferencirana).",
+    accuracyEn:
+      "Estimated ±100–150 m along the river (anchor); ±250–470 m at the corners (scale ambiguity 0.45–0.74; rotation stable at +21…+31°). The sheet is rotated +31° inside the bounds envelope — the image is NOT axis-aligned with the bounds. The 0.3–0.5 km gap between sheets A01/A02 and A04 is covered by A03/A05 (not yet georeferenced).",
+  },
 ];
 
 // ——— LOKACIJSKE entitete (LOCATION sloj) ——————————

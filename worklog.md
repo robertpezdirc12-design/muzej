@@ -1848,3 +1848,28 @@ Stage Summary:
 - ISSUE #17 (RESEARCH GAP CLOSURE v2) zdaj VSI deli dokončani (P3/P4/P5-a/P5-b/P5-c + PT_REVIEW + P6/P7/P8 kot bonus) — po E2E verifikaciji produkcije je projekt brez odprtih raziskovalnih lukenj
 - Dopolnilo (commit 9a490b2): muzejski prikaz napovedi W-most dobi barvne verdikt-badge (POTRJENO smaragdno / DELNO V PRID jantarno / NEREŠENO sivo / ZAVRNJENO roza), naslov »RAZREŠENE po P5-b«, badge wNoPua preimenovan v »brez PUA protistrani« (vrednost 1).
 - VERIFIKACIJA: lint 0 napak; DEV QA 21/21; commit 7ca369e + 9a490b2 pushana (deploy 2×, WAF 1× retry); PROD QA 21/21; PROD E2E (agent-browser): ?odsek=raziskave → zavihek Zapolnjevanje vrzeli #17 → PUA kartica »strani 3–49, 101 vnosov« + seznam 101 vrstic (zadnja »str. 49 · v. 100 J. Lipovšek«) + P5-b divergence; W-most kartica: 4 badge verdikti (POTRJENO/ZAVRNJENO/NEREŠENO/DELNO V PRID), bestMatches W.68/W.60, naslov RAZREŠENE; 390 px scrollW=clientW (brez preliva); footer nadaljuje main natanko (30694=30694); 0 konzolnih napak (2 obiska).
+
+---
+Task ID: P9
+Agent: Z.ai Code (glavni agent)
+Task: Georeferenca listov A03/A04/A05 — izkoriščen dvig VLM kvote (P9): toponimsko sidro + ovin Kolpe; rezultat: A04 GEOREFERENCIRAN (RECONSTRUCTED [~]), A03/A05 obogatena dokumentacija, ostajata TO_COLLECT
+
+Work Log:
+- Sonda ob 17:13: KVOTA SPROŠČENA (LLM OK; VLM createVision OK 4s) — P5-b je bil v prejšnjem delu seje že dokončan (38 strani PUA, commit 7ca369e/9a490b2, PROD 21/21); delovno drevo čisto, GitLab 0 odprtih issuejev.
+- P9 priložnost (iz P8 README "kaj bi zadoščalo"): VLM toponimi kot točkovna sidra na listih A03/A04/A05.
+- VLM ploščični skener (scripts/georef-tiles.mjs; 5×4 + 12 % prekrivanja, 1,6×): A02 (validacija — "St. Veith" px(1921,501) vs cerkev px(1995,577) = ~106 px/84 m → metoda uporabna [~]), A04, A05, A03 (4. ploščica ponovno po 429-burstu).
+- Identifikacije (web-search + Wikipedia API): Bedenj = WEIDENDORF (uradno nemško ime!), Tribuče 45.54515/15.24304, Adlešiči 45.5224/15.3110, Bedenj 45.53742/15.27694; A03 "E H C S T U B I R T" = TRIBUTSCH (Tribuče, sosed Bednja); A04 glava: seznam sosedov Grüble/Adleschitz/Zaplje; A05 glava "V" (5. list; A03 = "III"); Griblje = zaselki Dolnje/Srednje/Gornje Griblje + Brinsko selo.
+- A04 = edini list z reko: ploščično sledenje (20 klicev) → 10-točkovni konsenz struge (2456,743)→(1537,1947); ekstrakcija "najširjega pasu" in DP zavrnjeni (lažna svetla polja).
+- Similarity fit (soft-L1, multi-start, KD-drevo zgoščena centerline): rot +30,9°, s 0,55 m/px, mediana 10 m; neodvisna točka (1983,1077) = 23 m; spodnja vrstica ploščic = 332–625 m od Kolpe (niso reka).
+- Analiza dvoumnosti merila (P9b): oblika 0,48–0,55 optimum; širina pasu 120–165 px vs realna Kolpa 50–90 m (OTM z16 izmera) + kalibracija pretiravanja A02 (125 px × 0,79 = 99 m) → s ≈ 0,45–0,65 [~]; simboli hiš enaki A02 (±30 % metoda) → objavljeno 0,55, pošteno 0,45–0,74; vogali ±250–470 m.
+- Vogali A04: NW 45.52188/15.30202, NE 45.52860/15.31800, SW 45.53102/15.29420, SE 45.53774/15.31018; bounds (ovojnica rotiranega lista!) [[45.53774, 15.2942], [45.52188, 15.318]].
+- A03/A05 brez reke: A03 veriga ~41 stavb NAVPIČNO ob vzhodnem robu = verjetno nadaljevanje pasu vasi (Dolnje Griblje?) [~], sever-gor (nasprotje A04 +31°); A05 sklop ~45 stavb (75 %, 28 %) z hišnimi št. + "A D L E S C…" = k.o. Adlešiči; brez točkovnega sidra ostajata TO_COLLECT.
+- Zavrnjene sledi: "Bresnik" ≠ Brinsko selo (4 km od fita); Overpass API blokiran (ConnectionRefused); OTM kartni napisi prek VLM deloma halucinirani.
+- Integracija: SHEET_GEOREFS +georef-a04 (RECONSTRUCTED, 4 kontrolne točke, dokumentirana metoda/natančnost); src-a04 GEOREFERENCED (noteSi/En P9); src-a03/src-a05 obogatene opombe + lastVerified 2026-10-08; research/georef-n83/README.md odsek P9; sw.js v16→v17; QA +qa-p9-a04-georef (21→22).
+- VERIFIKACIJA: lint 0 napak; DEV QA 22/22.
+
+Stage Summary:
+- A04 GEOREFERENCIRAN prek OVINA Kolpe pri Adlešičih — točno tisti odsek, ki ga P8 ni mogel zasidrati (ravna struga pri Gribljah); rotacija +30,9°, merilo 0,55 [0,45–0,74], mediana struge 10 m; status RECONSTRUCTED [~] (zasidran vzdolž reke ±100–150 m; vogali ±250–470 m; slika rotirana v bounds ovojnici)
+- Veljavna sekundarna identifikacija k.o. sosedov na listih (Weidendorf=Bedenj, Tributsch=Tribuče, Adleschitz) — samoskladnost fita potrjena neodvisno
+- 3/5 grafičnih listov zdaj georeferenciranih (A01/A02 GEOTRUTH, A04 P9); A03/A05 dokumentirana TO_COLLECT (potreben 1 točkovni sidro na list)
+- Muzej stabilen: DEV QA 22/22, sw v17; raziskovalna pot v research/georef-n83/ (P9 razdelek + artefakti + zavrnjene sledi)

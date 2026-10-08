@@ -34,7 +34,8 @@ import {
   ISSUE17_AUDIT,
 } from "@/data/atlas/research";
 import { ATLAS_HOUSES } from "@/data/atlas/houses";
-import { ATLAS_OWNERS } from "@/data/atlas/model";
+import { ATLAS_OWNERS, SHEET_GEOREFS } from "@/data/atlas/model";
+import { ATLAS_SOURCES } from "@/data/atlas/sources";
 
 interface ExhibitRow {
   id: string;
@@ -787,6 +788,63 @@ export function runQA(): QAReport {
     g1812Errors.length === 0
       ? `Deterministično (tesseract OCR + LSQ afina/kvadratna, brez AI-branja vsebine; research/georef-1812/fit-georef.py): kontrolne točke so centri OCR-anih NAPISOV [~]; afina in kvadratna preslikava se za Griblje ujemata na ± 2 px; pokritje lista ~11–24°E, 41–48°N; koroboracija P7: ORB+RANSAC registracija sken1↔sken2 (4030 inlierjev, RMS 3,9 px) + neodvisen 12-točkovni OCR model 2. skena (mediana residualov 9,7 km, celih besed 6,2 km) — obe poti za Griblje se ujemata na 37 px = 5,6 km, znotraj ± 10 km; omejitve: brez mrežnih stopinj, Parisov meridian nepotrjen, končna potrditev = človeška paleografija/QGIS`
       : g1812Errors.join("; "),
+  );
+
+  // ——— P9: GEOREFERENCA LISTA A04 (ovin Kolpe pri Adlešičih) ————————————
+  const p9Errors: string[] = [];
+  const georefA04 = SHEET_GEOREFS.find((g) => g.id === "georef-a04");
+  if (SHEET_GEOREFS.length !== 3) {
+    p9Errors.push(`SHEET_GEOREFS: ${SHEET_GEOREFS.length} vnosov (pričakovano 3: A01/A02/A04)`);
+  }
+  if (!georefA04) {
+    p9Errors.push("georef-a04 manjka v SHEET_GEOREFS");
+  } else {
+    const b = georefA04.bounds;
+    if (georefA04.status !== "RECONSTRUCTED") p9Errors.push(`A04 status: ${georefA04.status} (pričakovano RECONSTRUCTED)`);
+    if (georefA04.scaleMPerPixel !== 0.55) p9Errors.push(`A04 merilo: ${georefA04.scaleMPerPixel} (pričakovano 0,55)`);
+    if (Math.abs(b[0][0] - 45.53774) > 0.001 || Math.abs(b[0][1] - 15.2942) > 0.001)
+      p9Errors.push(`A04 bounds N/Z: ${b[0]} (pričakovano [45.53774, 15.2942])`);
+    if (Math.abs(b[1][0] - 45.52188) > 0.001 || Math.abs(b[1][1] - 15.318) > 0.001)
+      p9Errors.push(`A04 bounds J/V: ${b[1]} (pričakovano [45.52188, 15.318])`);
+    if (georefA04.pixels.width !== 2645 || georefA04.pixels.height !== 2158)
+      p9Errors.push(`A04 px: ${georefA04.pixels.width}×${georefA04.pixels.height}`);
+    if (georefA04.controlPoints.length < 4) p9Errors.push(`A04 kontrolne točke: ${georefA04.controlPoints.length} (pričakovano ≥ 4)`);
+    const cpSi = georefA04.controlPoints.map((c) => c.fromSi).join(" |");
+    for (const must of ["ovin Kolpe", "izven fita", "ADLESCHITZ", "WEIDENDORF"]) {
+      if (!cpSi.includes(must)) p9Errors.push(`A04 kontrolna točka manjka: ${must}`);
+    }
+    if (!georefA04.methodSi.includes("[~]") || !georefA04.methodSi.includes("30,9°"))
+      p9Errors.push("A04 metoda mora navesti rotacijo +30,9° in [~]");
+    if (!georefA04.accuracySi.includes("0,45–0,74") && !georefA04.accuracySi.includes("0,45-0,74"))
+      p9Errors.push("A04 natančnost mora navesti dvoumnost merila 0,45–0,74");
+  }
+  const srcA04 = ATLAS_SOURCES.find((s) => s.id === "src-a04");
+  if (!srcA04 || srcA04.georefStatus !== "GEOREFERENCED" || srcA04.georeferenced !== true) {
+    p9Errors.push("src-a04 ni GEOREFERENCED");
+  } else {
+    if (!srcA04.noteSi.includes("P9") || !srcA04.noteSi.toLowerCase().includes("ovinom")) p9Errors.push("src-a04 opomba brez P9/ovina");
+    if (srcA04.lastVerified !== "2026-10-08") p9Errors.push(`src-a04 lastVerified: ${srcA04.lastVerified}`);
+  }
+  const srcA03 = ATLAS_SOURCES.find((s) => s.id === "src-a03");
+  const srcA05 = ATLAS_SOURCES.find((s) => s.id === "src-a05");
+  if (!srcA03 || srcA03.georefStatus !== "TO_COLLECT") p9Errors.push("src-a03 mora ostati TO_COLLECT");
+  else if (!srcA03.noteSi.includes("TRIBUTSCH") || !srcA03.noteSi.includes("NI reke"))
+    p9Errors.push("src-a03 opomba brez P9 ugotovitev (TRIBUTSCH / NI reke)");
+  if (!srcA05 || srcA05.georefStatus !== "TO_COLLECT") p9Errors.push("src-a05 mora ostati TO_COLLECT");
+  else if (!srcA05.noteSi.includes("45 stavb") || !srcA05.noteSi.includes("A D L E S C"))
+    p9Errors.push("src-a05 opomba brez P9 ugotovitev (45 stavb / A D L E S C)");
+  // georeferencirani listi: 3 od 5 grafičnih
+  const graphicSheets = ATLAS_SOURCES.filter((s) => s.type === "cadastral-map");
+  const geoCount = graphicSheets.filter((s) => s.georefStatus === "GEOREFERENCED").length;
+  if (geoCount !== 3) p9Errors.push(`georeferencirani grafični listi: ${geoCount} (pričakovano 3 — A01/A02/A04)`);
+  push(
+    "qa-p9-a04-georef",
+    "P9: list A04 georeferenciran prek OVINA Kolpe pri Adlešičih (rot +30,9°, s 0,55 m/px, mediana 10 m) — RECONSTRUCTED [~]; A03/A05 ostajata TO_COLLECT z dokumentiranimi ugotovitvami",
+    "P9: sheet A04 georeferenced via the Kolpa BEND by Adlešiči (rot +30.9°, s 0.55 m/px, median 10 m) — RECONSTRUCTED [~]; A03/A05 remain TO_COLLECT with documented findings",
+    p9Errors.length === 0,
+    p9Errors.length === 0
+      ? "VLM ploščično vodenje (10 točk struge, konsenz) → podobnostni fit proti validirani moderni centerline (GEOTRUTH #14, OTM); neodvisna kontrola 23 m; napisi k.o. sosedov (ADLESCHITZ 1,2 km N od vasi Adlešiči; WEIDENDORF = Bedenj; TRIBUTSCH = Tribuče) skladni; merilo: optimum oblike ovinka 0,55, pas struge 120–165 px proti realni Kolpi 50–90 m + kalibracija pretiravanja A02 → s ≈ 0,45–0,65 [~] — vogali ±250–470 m; list rotiran +31° v ovojnici bounds (slika ni osno poravnana); A03: veriga ~41 stavb navpično ob vzhodnem robu = verjetno nadaljevanje pasu vasi [~]; A05: sklop ~45 stavb z hišnimi št. + glava »V«; 3/5 grafičnih listov georeferenciranih"
+      : p9Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;

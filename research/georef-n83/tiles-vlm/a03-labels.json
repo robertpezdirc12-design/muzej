@@ -1,0 +1,766 @@
+{
+ "sheet": "a03",
+ "scanned": "2026-10-08T17:25:53.637Z",
+ "labels": [
+  {
+   "text": "III",
+   "conf": "high",
+   "kind": "other",
+   "tile": "0,0",
+   "px": [
+    47,
+    72
+   ]
+  },
+  {
+   "text": "Welti Osa",
+   "conf": "med",
+   "kind": "flurname",
+   "tile": "3,0",
+   "px": [
+    1878,
+    157
+   ]
+  },
+  {
+   "text": "E H C S",
+   "conf": "high",
+   "kind": "other",
+   "tile": "3,0",
+   "px": [
+    1812,
+    338
+   ]
+  },
+  {
+   "text": "O.IX24dɡ",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,0",
+   "px": [
+    2361,
+    36
+   ]
+  },
+  {
+   "text": "~Grüble~",
+   "conf": "low",
+   "kind": "flurname",
+   "tile": "4,0",
+   "px": [
+    2337,
+    133
+   ]
+  },
+  {
+   "text": "Griblje",
+   "conf": "high",
+   "kind": "settlement",
+   "tile": "1,1",
+   "px": [
+    885,
+    1082
+   ]
+  },
+  {
+   "text": "IBUTS",
+   "conf": "high",
+   "kind": "settlement",
+   "tile": "3,1",
+   "px": [
+    1865,
+    808
+   ]
+  },
+  {
+   "text": "Na Störmez",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "3,1",
+   "px": [
+    1950,
+    761
+   ]
+  },
+  {
+   "text": "475",
+   "conf": "high",
+   "kind": "other",
+   "tile": "3,1",
+   "px": [
+    2055,
+    755
+   ]
+  },
+  {
+   "text": "1841",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2248,
+    514
+   ]
+  },
+  {
+   "text": "1850",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2313,
+    507
+   ]
+  },
+  {
+   "text": "1860",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2142,
+    547
+   ]
+  },
+  {
+   "text": "1818",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2201,
+    547
+   ]
+  },
+  {
+   "text": "1814",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2083,
+    614
+   ]
+  },
+  {
+   "text": "1850",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2313,
+    581
+   ]
+  },
+  {
+   "text": "1858",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2420,
+    541
+   ]
+  },
+  {
+   "text": "1879",
+   "conf": "med",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2337,
+    608
+   ]
+  },
+  {
+   "text": "1963",
+   "conf": "med",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2367,
+    601
+   ]
+  },
+  {
+   "text": "1852",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2331,
+    641
+   ]
+  },
+  {
+   "text": "1961",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2426,
+    688
+   ]
+  },
+  {
+   "text": "1824",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2313,
+    721
+   ]
+  },
+  {
+   "text": "1845",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2094,
+    755
+   ]
+  },
+  {
+   "text": "1847",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2219,
+    788
+   ]
+  },
+  {
+   "text": "1846",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2142,
+    821
+   ]
+  },
+  {
+   "text": "1830",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2313,
+    781
+   ]
+  },
+  {
+   "text": "1857",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2402,
+    801
+   ]
+  },
+  {
+   "text": "1850",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2361,
+    841
+   ]
+  },
+  {
+   "text": "1842",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2189,
+    861
+   ]
+  },
+  {
+   "text": "1860",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2130,
+    895
+   ]
+  },
+  {
+   "text": "1828",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2189,
+    888
+   ]
+  },
+  {
+   "text": "1879",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2225,
+    888
+   ]
+  },
+  {
+   "text": "1864",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2284,
+    908
+   ]
+  },
+  {
+   "text": "1804",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2337,
+    902
+   ]
+  },
+  {
+   "text": "1960",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2432,
+    962
+   ]
+  },
+  {
+   "text": "1864",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2160,
+    982
+   ]
+  },
+  {
+   "text": "1867",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2195,
+    975
+   ]
+  },
+  {
+   "text": "1875",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2124,
+    1028
+   ]
+  },
+  {
+   "text": "1840",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2183,
+    1022
+   ]
+  },
+  {
+   "text": "1871",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2254,
+    1102
+   ]
+  },
+  {
+   "text": "1877",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2100,
+    1109
+   ]
+  },
+  {
+   "text": "1874",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2136,
+    1115
+   ]
+  },
+  {
+   "text": "1879",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2177,
+    1122
+   ]
+  },
+  {
+   "text": "1870",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2361,
+    1129
+   ]
+  },
+  {
+   "text": "1869",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2402,
+    1048
+   ]
+  },
+  {
+   "text": "1955",
+   "conf": "med",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2467,
+    1015
+   ]
+  },
+  {
+   "text": "1928",
+   "conf": "low",
+   "kind": "other",
+   "tile": "4,1",
+   "px": [
+    2450,
+    1135
+   ]
+  },
+  {
+   "text": "Grüble",
+   "conf": "high",
+   "kind": "settlement",
+   "tile": "1,2",
+   "px": [
+    885,
+    1065
+   ]
+  },
+  {
+   "text": "Na[?]",
+   "conf": "low",
+   "kind": "other",
+   "tile": "2,2",
+   "px": [
+    1611,
+    1560
+   ]
+  },
+  {
+   "text": "TRI",
+   "conf": "high",
+   "kind": "settlement",
+   "tile": "3,2",
+   "px": [
+    1753,
+    1266
+   ]
+  },
+  {
+   "text": "Lubigo",
+   "conf": "med",
+   "kind": "settlement",
+   "tile": "3,2",
+   "px": [
+    1721,
+    1460
+   ]
+  },
+  {
+   "text": "Na Lubetschen Grenze",
+   "conf": "med",
+   "kind": "boundary",
+   "tile": "3,2",
+   "px": [
+    1714,
+    1560
+   ]
+  },
+  {
+   "text": "na Born",
+   "conf": "low",
+   "kind": "flurname",
+   "tile": "3,2",
+   "px": [
+    2068,
+    1159
+   ]
+  },
+  {
+   "text": "Berdi",
+   "conf": "high",
+   "kind": "settlement",
+   "tile": "4,2",
+   "px": [
+    2136,
+    1159
+   ]
+  },
+  {
+   "text": "Revidirt durch den Hauptmann Inspector",
+   "conf": "high",
+   "kind": "other",
+   "tile": "0,3",
+   "px": [
+    296,
+    2106
+   ]
+  },
+  {
+   "text": "Inspektor von Hillmayr",
+   "conf": "high",
+   "kind": "other",
+   "tile": "1,3",
+   "px": [
+    636,
+    2100
+   ]
+  },
+  {
+   "text": "Griblje",
+   "conf": "high",
+   "kind": "settlement",
+   "tile": "2,3",
+   "px": [
+    1617,
+    1581
+   ]
+  },
+  {
+   "text": "1598",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,3",
+   "px": [
+    2136,
+    1581
+   ]
+  },
+  {
+   "text": "1807",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,3",
+   "px": [
+    2207,
+    1569
+   ]
+  },
+  {
+   "text": "1808",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,3",
+   "px": [
+    2278,
+    1563
+   ]
+  },
+  {
+   "text": "1809",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,3",
+   "px": [
+    2319,
+    1617
+   ]
+  },
+  {
+   "text": "1830",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,3",
+   "px": [
+    2385,
+    1647
+   ]
+  },
+  {
+   "text": "1852",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,3",
+   "px": [
+    2467,
+    1629
+   ]
+  },
+  {
+   "text": "1875",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,3",
+   "px": [
+    2456,
+    1678
+   ]
+  },
+  {
+   "text": "1895",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,3",
+   "px": [
+    2313,
+    1684
+   ]
+  },
+  {
+   "text": "1923",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,3",
+   "px": [
+    2260,
+    1684
+   ]
+  },
+  {
+   "text": "1946",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,3",
+   "px": [
+    2154,
+    1684
+   ]
+  },
+  {
+   "text": "1960",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,3",
+   "px": [
+    2450,
+    1768
+   ]
+  },
+  {
+   "text": "1984",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,3",
+   "px": [
+    2456,
+    1774
+   ]
+  },
+  {
+   "text": "1901",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,3",
+   "px": [
+    2444,
+    1853
+   ]
+  },
+  {
+   "text": "1916",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,3",
+   "px": [
+    2461,
+    1846
+   ]
+  },
+  {
+   "text": "1932",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,3",
+   "px": [
+    2456,
+    1889
+   ]
+  },
+  {
+   "text": "1955",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,3",
+   "px": [
+    2456,
+    1919
+   ]
+  },
+  {
+   "text": "1978",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,3",
+   "px": [
+    2456,
+    1943
+   ]
+  },
+  {
+   "text": "1990",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,3",
+   "px": [
+    2456,
+    1973
+   ]
+  },
+  {
+   "text": "1014",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,3",
+   "px": [
+    2456,
+    1985
+   ]
+  },
+  {
+   "text": "berechnet durch Kuttanjgisch",
+   "conf": "med",
+   "kind": "other",
+   "tile": "4,3",
+   "px": [
+    2231,
+    2094
+   ]
+  }
+ ]
+}

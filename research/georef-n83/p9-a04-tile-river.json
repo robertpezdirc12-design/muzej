@@ -1,0 +1,194 @@
+[
+ {
+  "tile": "0,0",
+  "hasRiver": true,
+  "pts": [
+   {
+    "gx": 231,
+    "gy": 91
+   },
+   {
+    "gx": 184,
+    "gy": 242
+   }
+  ]
+ },
+ {
+  "tile": "1,0",
+  "hasRiver": false,
+  "pts": []
+ },
+ {
+  "tile": "2,0",
+  "hasRiver": false,
+  "pts": []
+ },
+ {
+  "tile": "3,0",
+  "hasRiver": false,
+  "pts": []
+ },
+ {
+  "tile": "4,0",
+  "hasRiver": false,
+  "pts": []
+ },
+ {
+  "tile": "0,1",
+  "hasRiver": false,
+  "pts": []
+ },
+ {
+  "tile": "1,1",
+  "hasRiver": false,
+  "pts": []
+ },
+ {
+  "tile": "2,1",
+  "hasRiver": false,
+  "pts": []
+ },
+ {
+  "tile": "3,1",
+  "hasRiver": true,
+  "pts": [
+   {
+    "gx": 1983,
+    "gy": 1077
+   }
+  ]
+ },
+ {
+  "tile": "4,1",
+  "hasRiver": true,
+  "pts": [
+   {
+    "gx": 2456,
+    "gy": 743
+   },
+   {
+    "gx": 2361,
+    "gy": 910
+   },
+   {
+    "gx": 2319,
+    "gy": 1077
+   }
+  ]
+ },
+ {
+  "tile": "0,2",
+  "hasRiver": false,
+  "pts": []
+ },
+ {
+  "tile": "1,2",
+  "hasRiver": false,
+  "pts": []
+ },
+ {
+  "tile": "2,2",
+  "hasRiver": false,
+  "pts": []
+ },
+ {
+  "tile": "3,2",
+  "hasRiver": true,
+  "pts": [
+   {
+    "gx": 1950,
+    "gy": 1114
+   },
+   {
+    "gx": 1884,
+    "gy": 1282
+   },
+   {
+    "gx": 1819,
+    "gy": 1449
+   },
+   {
+    "gx": 1753,
+    "gy": 1616
+   }
+  ]
+ },
+ {
+  "tile": "4,2",
+  "hasRiver": false,
+  "pts": []
+ },
+ {
+  "tile": "0,3",
+  "hasRiver": true,
+  "pts": [
+   {
+    "gx": 503,
+    "gy": 1796
+   },
+   {
+    "gx": 426,
+    "gy": 1947
+   },
+   {
+    "gx": 326,
+    "gy": 2098
+   }
+  ]
+ },
+ {
+  "tile": "1,3",
+  "hasRiver": true,
+  "pts": [
+   {
+    "gx": 663,
+    "gy": 1796
+   },
+   {
+    "gx": 761,
+    "gy": 1947
+   },
+   {
+    "gx": 859,
+    "gy": 2098
+   }
+  ]
+ },
+ {
+  "tile": "2,3",
+  "hasRiver": true,
+  "pts": [
+   {
+    "gx": 1224,
+    "gy": 2098
+   }
+  ]
+ },
+ {
+  "tile": "3,3",
+  "hasRiver": true,
+  "pts": [
+   {
+    "gx": 1557,
+    "gy": 1645
+   },
+   {
+    "gx": 1544,
+    "gy": 1796
+   },
+   {
+    "gx": 1537,
+    "gy": 1947
+   },
+   {
+    "gx": 1557,
+    "gy": 2098
+   }
+  ]
+ },
+ {
+  "tile": "4,3",
+  "hasRiver": false,
+  "pts": []
+ }
+]

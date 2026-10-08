@@ -1,0 +1,74 @@
+{
+ "river": {
+  "present": false
+ },
+ "settlements": [
+  {
+   "xPct": 75,
+   "yPct": 28,
+   "approxCount": 45,
+   "label": null
+  }
+ ],
+ "bigLabels": [
+  {
+   "text": "MIDDLE SCHLITZENDORF",
+   "xPct": 68,
+   "yPct": 25
+  },
+  {
+   "text": "Pri Jančeviče",
+   "xPct": 65,
+   "yPct": 21
+  },
+  {
+   "text": "Schumsko Travniko",
+   "xPct": 45,
+   "yPct": 27
+  },
+  {
+   "text": "Na Prago Poljé",
+   "xPct": 88,
+   "yPct": 15
+  },
+  {
+   "text": "Štize Vardianove",
+   "xPct": 90,
+   "yPct": 32
+  },
+  {
+   "text": "N°8 Na Svetoschki Schloß",
+   "xPct": 86,
+   "yPct": 40
+  }
+ ],
+ "frame": {
+  "hasFrame": true,
+  "marginTexts": [
+   {
+    "text": "StA5-176",
+    "location": "top_left"
+   },
+   {
+    "text": "V",
+    "location": "top_left"
+   },
+   {
+    "text": "Siche die Beamtenuntirungs Beimappe",
+    "location": "top_center"
+   },
+   {
+    "text": "OIX24ch",
+    "location": "top_right"
+   },
+   {
+    "text": "Provedirt durch den Hauptmannen Inspector von Bilimeyer",
+    "location": "bottom_left"
+   },
+   {
+    "text": "Aufgenommen und berechnet durch Kukuljević",
+    "location": "bottom_right"
+   }
+  ]
+ }
+}

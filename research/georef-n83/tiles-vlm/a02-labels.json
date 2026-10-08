@@ -1,0 +1,566 @@
+{
+ "sheet": "a02",
+ "scanned": "2026-10-08T17:17:35.804Z",
+ "labels": [
+  {
+   "text": "II",
+   "conf": "high",
+   "kind": "other",
+   "tile": "0,0",
+   "px": [
+    276,
+    85
+   ]
+  },
+  {
+   "text": "Siehe die Rear[~]",
+   "conf": "high",
+   "kind": "other",
+   "tile": "0,0",
+   "px": [
+    539,
+    72
+   ]
+  },
+  {
+   "text": "Z",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "0,0",
+   "px": [
+    398,
+    217
+   ]
+  },
+  {
+   "text": "Z",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "0,0",
+   "px": [
+    364,
+    411
+   ]
+  },
+  {
+   "text": "die Reambullirungs Beimappe",
+   "conf": "high",
+   "kind": "other",
+   "tile": "1,0",
+   "px": [
+    813,
+    72
+   ]
+  },
+  {
+   "text": "St. Veith West",
+   "conf": "high",
+   "kind": "boundary",
+   "tile": "2,0",
+   "px": [
+    1766,
+    60
+   ]
+  },
+  {
+   "text": "Dollye",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "2,0",
+   "px": [
+    1311,
+    175
+   ]
+  },
+  {
+   "text": "st",
+   "conf": "med",
+   "kind": "settlement",
+   "tile": "2,0",
+   "px": [
+    1833,
+    495
+   ]
+  },
+  {
+   "text": "Veith ist keine Ortschaft",
+   "conf": "high",
+   "kind": "other",
+   "tile": "3,0",
+   "px": [
+    1898,
+    60
+   ]
+  },
+  {
+   "text": "Na Drugi",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "3,0",
+   "px": [
+    2219,
+    157
+   ]
+  },
+  {
+   "text": "St Veith",
+   "conf": "high",
+   "kind": "settlement",
+   "tile": "3,0",
+   "px": [
+    1921,
+    501
+   ]
+  },
+  {
+   "text": "Bese[~]",
+   "conf": "med",
+   "kind": "settlement",
+   "tile": "3,0",
+   "px": [
+    2428,
+    513
+   ]
+  },
+  {
+   "text": "O.IX24cƒ",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,0",
+   "px": [
+    2599,
+    79
+   ]
+  },
+  {
+   "text": "Beschinsthie",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "4,0",
+   "px": [
+    2505,
+    513
+   ]
+  },
+  {
+   "text": "KÖNIGGR",
+   "conf": "high",
+   "kind": "boundary",
+   "tile": "4,0",
+   "px": [
+    2943,
+    362
+   ]
+  },
+  {
+   "text": "I",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "0,1",
+   "px": [
+    398,
+    595
+   ]
+  },
+  {
+   "text": "S",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "0,1",
+   "px": [
+    452,
+    756
+   ]
+  },
+  {
+   "text": "Dri Rüdini Welsch",
+   "conf": "med",
+   "kind": "flurname",
+   "tile": "0,1",
+   "px": [
+    506,
+    850
+   ]
+  },
+  {
+   "text": "S",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "0,1",
+   "px": [
+    431,
+    930
+   ]
+  },
+  {
+   "text": "A",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "0,1",
+   "px": [
+    357,
+    1104
+   ]
+  },
+  {
+   "text": "Malo Ettich",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "1,1",
+   "px": [
+    1045,
+    609
+   ]
+  },
+  {
+   "text": "Pitsch",
+   "conf": "med",
+   "kind": "flurname",
+   "tile": "1,1",
+   "px": [
+    590,
+    863
+   ]
+  },
+  {
+   "text": "St[~]",
+   "conf": "med",
+   "kind": "settlement",
+   "tile": "2,1",
+   "px": [
+    1841,
+    495
+   ]
+  },
+  {
+   "text": "St Veith",
+   "conf": "high",
+   "kind": "settlement",
+   "tile": "3,1",
+   "px": [
+    1921,
+    495
+   ]
+  },
+  {
+   "text": "Bes~",
+   "conf": "med",
+   "kind": "settlement",
+   "tile": "3,1",
+   "px": [
+    2428,
+    508
+   ]
+  },
+  {
+   "text": "Grüble",
+   "conf": "high",
+   "kind": "settlement",
+   "tile": "3,1",
+   "px": [
+    2092,
+    856
+   ]
+  },
+  {
+   "text": "Boschinisch",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "4,1",
+   "px": [
+    2505,
+    508
+   ]
+  },
+  {
+   "text": "KREICHCR",
+   "conf": "high",
+   "kind": "boundary",
+   "tile": "4,1",
+   "px": [
+    2909,
+    810
+   ]
+  },
+  {
+   "text": "V",
+   "conf": "high",
+   "kind": "other",
+   "tile": "0,2",
+   "px": [
+    364,
+    1108
+   ]
+  },
+  {
+   "text": "R",
+   "conf": "high",
+   "kind": "other",
+   "tile": "0,2",
+   "px": [
+    270,
+    1262
+   ]
+  },
+  {
+   "text": "k",
+   "conf": "high",
+   "kind": "other",
+   "tile": "0,2",
+   "px": [
+    189,
+    1409
+   ]
+  },
+  {
+   "text": "Gostinjiblize od[?]",
+   "conf": "med",
+   "kind": "flurname",
+   "tile": "0,2",
+   "px": [
+    229,
+    1629
+   ]
+  },
+  {
+   "text": "Pod Schutinsch",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "1,2",
+   "px": [
+    828,
+    1349
+   ]
+  },
+  {
+   "text": "Stuparich",
+   "conf": "med",
+   "kind": "flurname",
+   "tile": "1,2",
+   "px": [
+    1194,
+    1603
+   ]
+  },
+  {
+   "text": "Stuparitsch",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "2,2",
+   "px": [
+    1192,
+    1609
+   ]
+  },
+  {
+   "text": "W",
+   "conf": "high",
+   "kind": "other",
+   "tile": "2,2",
+   "px": [
+    1460,
+    1248
+   ]
+  },
+  {
+   "text": "W",
+   "conf": "high",
+   "kind": "other",
+   "tile": "2,2",
+   "px": [
+    1856,
+    1262
+   ]
+  },
+  {
+   "text": "W",
+   "conf": "high",
+   "kind": "other",
+   "tile": "2,2",
+   "px": [
+    1856,
+    1522
+   ]
+  },
+  {
+   "text": "W",
+   "conf": "high",
+   "kind": "other",
+   "tile": "2,2",
+   "px": [
+    1826,
+    1576
+   ]
+  },
+  {
+   "text": "Grüble",
+   "conf": "high",
+   "kind": "settlement",
+   "tile": "3,2",
+   "px": [
+    2294,
+    1047
+   ]
+  },
+  {
+   "text": "Kolpa",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "3,2",
+   "px": [
+    2405,
+    1516
+   ]
+  },
+  {
+   "text": "Adleschitz",
+   "conf": "med",
+   "kind": "settlement",
+   "tile": "3,2",
+   "px": [
+    2144,
+    1181
+   ]
+  },
+  {
+   "text": "Zaplje",
+   "conf": "med",
+   "kind": "flurname",
+   "tile": "3,2",
+   "px": [
+    2368,
+    1248
+   ]
+  },
+  {
+   "text": "CROATIEN",
+   "conf": "high",
+   "kind": "boundary",
+   "tile": "4,2",
+   "px": [
+    2909,
+    1315
+   ]
+  },
+  {
+   "text": "Leschiza",
+   "conf": "med",
+   "kind": "flurname",
+   "tile": "4,2",
+   "px": [
+    2895,
+    1629
+   ]
+  },
+  {
+   "text": "Gostwirthause",
+   "conf": "high",
+   "kind": "settlement",
+   "tile": "0,3",
+   "px": [
+    229,
+    1626
+   ]
+  },
+  {
+   "text": "Prüvidirt durch den Hauptmann",
+   "conf": "high",
+   "kind": "other",
+   "tile": "0,3",
+   "px": [
+    452,
+    2092
+   ]
+  },
+  {
+   "text": "Studenc",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "1,3",
+   "px": [
+    1194,
+    1602
+   ]
+  },
+  {
+   "text": "Hauptmann Inspector von Wilmsogt",
+   "conf": "high",
+   "kind": "other",
+   "tile": "1,3",
+   "px": [
+    776,
+    2098
+   ]
+  },
+  {
+   "text": "Studenc",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "2,3",
+   "px": [
+    1199,
+    1602
+   ]
+  },
+  {
+   "text": "Kolpa [~]",
+   "conf": "med",
+   "kind": "boundary",
+   "tile": "2,3",
+   "px": [
+    1505,
+    2146
+   ]
+  },
+  {
+   "text": "Robar",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "3,3",
+   "px": [
+    2152,
+    1699
+   ]
+  },
+  {
+   "text": "Aufgenommen und berichtnet durch",
+   "conf": "med",
+   "kind": "other",
+   "tile": "3,3",
+   "px": [
+    2204,
+    2104
+   ]
+  },
+  {
+   "text": "Leschuza",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "4,3",
+   "px": [
+    2895,
+    1626
+   ]
+  },
+  {
+   "text": "durch Muttengüßl",
+   "conf": "med",
+   "kind": "flurname",
+   "tile": "4,3",
+   "px": [
+    2484,
+    2104
+   ]
+  },
+  {
+   "text": "[~]erhard",
+   "conf": "low",
+   "kind": "other",
+   "tile": "4,3",
+   "px": [
+    2606,
+    2140
+   ]
+  }
+ ]
+}

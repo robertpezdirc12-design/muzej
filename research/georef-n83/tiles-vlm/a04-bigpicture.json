@@ -1,0 +1,75 @@
+{
+ "river": {
+  "present": true,
+  "xPctRange": [
+   30,
+   97
+  ],
+  "yPctRange": [
+   40,
+   95
+  ]
+ },
+ "settlements": [
+  {
+   "xPct": 10,
+   "yPct": 24,
+   "approxCount": 8,
+   "label": "Schlatonig"
+  },
+  {
+   "xPct": 39,
+   "yPct": 71,
+   "approxCount": 12,
+   "label": "Bresnik"
+  },
+  {
+   "xPct": 52,
+   "yPct": 65,
+   "approxCount": 5,
+   "label": "Simboh"
+  },
+  {
+   "xPct": 56,
+   "yPct": 13,
+   "approxCount": 3,
+   "label": "Pevan"
+  }
+ ],
+ "bigLabels": [
+  {
+   "text": "ADLESCHITZ",
+   "xPct": 80,
+   "yPct": 65
+  },
+  {
+   "text": "WEIDENDORF",
+   "xPct": 23,
+   "yPct": 91
+  },
+  {
+   "text": "na Rebar",
+   "xPct": 77,
+   "yPct": 11
+  },
+  {
+   "text": "na Blište",
+   "xPct": 59,
+   "yPct": 43
+  }
+ ],
+ "frame": {
+  "marginTexts": [
+   "N",
+   "QIX24c9",
+   "Sitze der Raumbullirungs Buimappe",
+   "Golona",
+   "Šerovig",
+   "Mali grani",
+   "Na Brezje",
+   "Na Lože",
+   "Slovenske Doline",
+   "Zeschenig pri Crnagu"
+  ]
+ }
+}

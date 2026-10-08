@@ -1,0 +1,576 @@
+{
+ "sheet": "a04",
+ "scanned": "2026-10-08T17:21:29.518Z",
+ "labels": [
+  {
+   "text": "IV",
+   "conf": "high",
+   "kind": "other",
+   "tile": "0,0",
+   "px": [
+    124,
+    72
+   ]
+  },
+  {
+   "text": "Siche die Reambu[~]",
+   "conf": "high",
+   "kind": "other",
+   "tile": "0,0",
+   "px": [
+    426,
+    60
+   ]
+  },
+  {
+   "text": "Schuhoviz",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "0,0",
+   "px": [
+    278,
+    525
+   ]
+  },
+  {
+   "text": "Reambulirungs Beimappe",
+   "conf": "high",
+   "kind": "other",
+   "tile": "1,0",
+   "px": [
+    708,
+    60
+   ]
+  },
+  {
+   "text": "im Plan",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "2,0",
+   "px": [
+    1486,
+    260
+   ]
+  },
+  {
+   "text": "IV",
+   "conf": "high",
+   "kind": "other",
+   "tile": "2,0",
+   "px": [
+    1637,
+    411
+   ]
+  },
+  {
+   "text": "na Bebar",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "3,0",
+   "px": [
+    2015,
+    254
+   ]
+  },
+  {
+   "text": "W",
+   "conf": "high",
+   "kind": "other",
+   "tile": "3,0",
+   "px": [
+    1740,
+    133
+   ]
+  },
+  {
+   "text": "W",
+   "conf": "high",
+   "kind": "other",
+   "tile": "3,0",
+   "px": [
+    1838,
+    139
+   ]
+  },
+  {
+   "text": "W",
+   "conf": "high",
+   "kind": "other",
+   "tile": "3,0",
+   "px": [
+    1983,
+    145
+   ]
+  },
+  {
+   "text": "W",
+   "conf": "high",
+   "kind": "other",
+   "tile": "3,0",
+   "px": [
+    2114,
+    151
+   ]
+  },
+  {
+   "text": "W",
+   "conf": "high",
+   "kind": "other",
+   "tile": "3,0",
+   "px": [
+    1786,
+    199
+   ]
+  },
+  {
+   "text": "W",
+   "conf": "high",
+   "kind": "other",
+   "tile": "3,0",
+   "px": [
+    1832,
+    211
+   ]
+  },
+  {
+   "text": "W",
+   "conf": "high",
+   "kind": "other",
+   "tile": "3,0",
+   "px": [
+    1629,
+    411
+   ]
+  },
+  {
+   "text": "W",
+   "conf": "high",
+   "kind": "other",
+   "tile": "3,0",
+   "px": [
+    1884,
+    513
+   ]
+  },
+  {
+   "text": "W",
+   "conf": "high",
+   "kind": "other",
+   "tile": "3,0",
+   "px": [
+    2172,
+    362
+   ]
+  },
+  {
+   "text": "OIX24cg",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,0",
+   "px": [
+    2438,
+    60
+   ]
+  },
+  {
+   "text": "bar",
+   "conf": "med",
+   "kind": "flurname",
+   "tile": "4,0",
+   "px": [
+    2083,
+    248
+   ]
+  },
+  {
+   "text": "Schlachoniz",
+   "conf": "high",
+   "kind": "settlement",
+   "tile": "0,1",
+   "px": [
+    278,
+    522
+   ]
+  },
+  {
+   "text": "Grüble",
+   "conf": "high",
+   "kind": "settlement",
+   "tile": "1,1",
+   "px": [
+    545,
+    508
+   ]
+  },
+  {
+   "text": "Adleschitz",
+   "conf": "high",
+   "kind": "settlement",
+   "tile": "1,1",
+   "px": [
+    545,
+    555
+   ]
+  },
+  {
+   "text": "Zaplje",
+   "conf": "med",
+   "kind": "settlement",
+   "tile": "1,1",
+   "px": [
+    545,
+    609
+   ]
+  },
+  {
+   "text": "Kolpa",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "1,1",
+   "px": [
+    1023,
+    810
+   ]
+  },
+  {
+   "text": "Katastralgemeinde Griblje",
+   "conf": "med",
+   "kind": "boundary",
+   "tile": "1,1",
+   "px": [
+    794,
+    1131
+   ]
+  },
+  {
+   "text": "Brëstie",
+   "conf": "high",
+   "kind": "settlement",
+   "tile": "3,1",
+   "px": [
+    1590,
+    917
+   ]
+  },
+  {
+   "text": "St. Matti grani",
+   "conf": "med",
+   "kind": "boundary",
+   "tile": "3,1",
+   "px": [
+    1904,
+    930
+   ]
+  },
+  {
+   "text": "I",
+   "conf": "high",
+   "kind": "other",
+   "tile": "3,1",
+   "px": [
+    2100,
+    997
+   ]
+  },
+  {
+   "text": "H",
+   "conf": "high",
+   "kind": "other",
+   "tile": "3,1",
+   "px": [
+    1983,
+    1070
+   ]
+  },
+  {
+   "text": "Godina",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "4,1",
+   "px": [
+    2568,
+    669
+   ]
+  },
+  {
+   "text": "Zermouz",
+   "conf": "med",
+   "kind": "flurname",
+   "tile": "4,1",
+   "px": [
+    2337,
+    836
+   ]
+  },
+  {
+   "text": "Br'snik",
+   "conf": "high",
+   "kind": "settlement",
+   "tile": "1,2",
+   "px": [
+    1023,
+    1522
+   ]
+  },
+  {
+   "text": "Kolpa",
+   "conf": "med",
+   "kind": "flurname",
+   "tile": "1,2",
+   "px": [
+    1108,
+    1502
+   ]
+  },
+  {
+   "text": "Brosnik",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "2,2",
+   "px": [
+    1362,
+    1395
+   ]
+  },
+  {
+   "text": "Brosnik",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "2,2",
+   "px": [
+    1074,
+    1522
+   ]
+  },
+  {
+   "text": "L E S C H",
+   "conf": "high",
+   "kind": "settlement",
+   "tile": "3,2",
+   "px": [
+    1891,
+    1349
+   ]
+  },
+  {
+   "text": "5362",
+   "conf": "high",
+   "kind": "other",
+   "tile": "3,2",
+   "px": [
+    1668,
+    1081
+   ]
+  },
+  {
+   "text": "5363",
+   "conf": "high",
+   "kind": "other",
+   "tile": "3,2",
+   "px": [
+    1668,
+    1650
+   ]
+  },
+  {
+   "text": "5364",
+   "conf": "high",
+   "kind": "other",
+   "tile": "3,2",
+   "px": [
+    1576,
+    1616
+   ]
+  },
+  {
+   "text": "5365",
+   "conf": "med",
+   "kind": "other",
+   "tile": "3,2",
+   "px": [
+    1570,
+    1670
+   ]
+  },
+  {
+   "text": "5380",
+   "conf": "high",
+   "kind": "other",
+   "tile": "3,2",
+   "px": [
+    1681,
+    1228
+   ]
+  },
+  {
+   "text": "5394",
+   "conf": "high",
+   "kind": "other",
+   "tile": "3,2",
+   "px": [
+    1590,
+    1335
+   ]
+  },
+  {
+   "text": "5400",
+   "conf": "high",
+   "kind": "other",
+   "tile": "3,2",
+   "px": [
+    1563,
+    1462
+   ]
+  },
+  {
+   "text": "5401",
+   "conf": "high",
+   "kind": "other",
+   "tile": "3,2",
+   "px": [
+    1635,
+    1469
+   ]
+  },
+  {
+   "text": "Na Brezju",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "4,2",
+   "px": [
+    2343,
+    1583
+   ]
+  },
+  {
+   "text": "WEIDI",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "0,3",
+   "px": [
+    480,
+    1953
+   ]
+  },
+  {
+   "text": "N°6 Sa Lose.",
+   "conf": "high",
+   "kind": "other",
+   "tile": "0,3",
+   "px": [
+    284,
+    1965
+   ]
+  },
+  {
+   "text": "Revidirt durch den Hauptmann Inspe[ctor]",
+   "conf": "med",
+   "kind": "other",
+   "tile": "0,3",
+   "px": [
+    326,
+    2104
+   ]
+  },
+  {
+   "text": "EIDENDORF",
+   "conf": "high",
+   "kind": "settlement",
+   "tile": "1,3",
+   "px": [
+    669,
+    1965
+   ]
+  },
+  {
+   "text": "Schumski Diav[~]",
+   "conf": "med",
+   "kind": "flurname",
+   "tile": "1,3",
+   "px": [
+    1010,
+    1922
+   ]
+  },
+  {
+   "text": "[?]nn Inspector von Hiltersege",
+   "conf": "low",
+   "kind": "other",
+   "tile": "1,3",
+   "px": [
+    663,
+    2110
+   ]
+  },
+  {
+   "text": "uschi Diavu",
+   "conf": "med",
+   "kind": "flurname",
+   "tile": "2,3",
+   "px": [
+    1061,
+    1928
+   ]
+  },
+  {
+   "text": "N°5 Loscheinig p[arzelle]",
+   "conf": "high",
+   "kind": "other",
+   "tile": "2,3",
+   "px": [
+    1532,
+    2001
+   ]
+  },
+  {
+   "text": "ADL",
+   "conf": "high",
+   "kind": "settlement",
+   "tile": "3,3",
+   "px": [
+    1747,
+    1765
+   ]
+  },
+  {
+   "text": "Scheiniſg pri Ziaſi.",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "3,3",
+   "px": [
+    1648,
+    2001
+   ]
+  },
+  {
+   "text": "Aufgenommen und berichti[gt]",
+   "conf": "med",
+   "kind": "other",
+   "tile": "3,3",
+   "px": [
+    2015,
+    2110
+   ]
+  },
+  {
+   "text": "Na Beesie",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "4,3",
+   "px": [
+    2343,
+    1572
+   ]
+  },
+  {
+   "text": "und beschränkt durch Kultungjüfel",
+   "conf": "med",
+   "kind": "boundary",
+   "tile": "4,3",
+   "px": [
+    2242,
+    2110
+   ]
+  }
+ ]
+}

@@ -1,0 +1,64 @@
+{
+ "river": {
+  "present": false
+ },
+ "settlements": [
+  {
+   "xPct": 89,
+   "yPct": 7,
+   "approxCount": 12,
+   "label": ""
+  },
+  {
+   "xPct": 91,
+   "yPct": 15,
+   "approxCount": 8,
+   "label": ""
+  },
+  {
+   "xPct": 87,
+   "yPct": 27,
+   "approxCount": 5,
+   "label": ""
+  },
+  {
+   "xPct": 90,
+   "yPct": 39,
+   "approxCount": 6,
+   "label": ""
+  },
+  {
+   "xPct": 88,
+   "yPct": 52,
+   "approxCount": 10,
+   "label": ""
+  }
+ ],
+ "bigLabels": [
+  {
+   "text": "E H C S T U B I R T",
+   "xPct": 68,
+   "yPct": 35
+  },
+  {
+   "text": "WEIDENDORF",
+   "xPct": 71,
+   "yPct": 86
+  }
+ ],
+ "frame": {
+  "marginTexts": [
+   "III",
+   "OIX24d6",
+   "S1 AS 176",
+   "Weidt Gr. 582",
+   "Na Stermaz",
+   "Griblje",
+   "na Borli",
+   "Lubige",
+   "Na Subotschen Brode 55.16",
+   "Revidirt durch den Hauptmann Inspector von Hilterzag",
+   "Aufgenommen und berechnet durch Kultenagier"
+  ]
+ }
+}

@@ -1,0 +1,64 @@
+{
+ "trace": [
+  {
+   "y": 100,
+   "x": null
+  },
+  {
+   "y": 300,
+   "x": null
+  },
+  {
+   "y": 500,
+   "x": null
+  },
+  {
+   "y": 700,
+   "x": null
+  },
+  {
+   "y": 900,
+   "x": null
+  },
+  {
+   "y": 1100,
+   "x": 675
+  },
+  {
+   "y": 1300,
+   "x": 665
+  },
+  {
+   "y": 1500,
+   "x": 655
+  },
+  {
+   "y": 1700,
+   "x": 640
+  },
+  {
+   "y": 1900,
+   "x": 600
+  },
+  {
+   "y": 2050,
+   "x": 540
+  }
+ ],
+ "entry": {
+  "edge": "right",
+  "x": 682,
+  "y": 1055
+ },
+ "exit": {
+  "edge": "bottom",
+  "x": 435,
+  "y": 2158
+ },
+ "bend": {
+  "x": 580,
+  "y": 1950,
+  "description": "iz SV (severovzhod) proti JZ (jugozahod), nato ostri zavoj proti J (jugu) pri izstopu"
+ },
+ "widthPx": 180
+}

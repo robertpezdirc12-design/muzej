@@ -1,0 +1,206 @@
+{
+ "sheet": "a05",
+ "scanned": "2026-10-08T17:31:45.477Z",
+ "labels": [
+  {
+   "text": "Schimstl Drauvisch",
+   "conf": "high",
+   "kind": "settlement",
+   "tile": "2,0",
+   "px": [
+    1186,
+    594
+   ]
+  },
+  {
+   "text": "Pri",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "2,0",
+   "px": [
+    1585,
+    455
+   ]
+  },
+  {
+   "text": "ADL",
+   "conf": "high",
+   "kind": "settlement",
+   "tile": "3,0",
+   "px": [
+    1941,
+    170
+   ]
+  },
+  {
+   "text": "Pri Jankovichti",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "3,0",
+   "px": [
+    1713,
+    455
+   ]
+  },
+  {
+   "text": "Katastalgemeinde: 9",
+   "conf": "med",
+   "kind": "boundary",
+   "tile": "3,0",
+   "px": [
+    1693,
+    558
+   ]
+  },
+  {
+   "text": "O.IX24ch",
+   "conf": "high",
+   "kind": "other",
+   "tile": "4,0",
+   "px": [
+    2433,
+    48
+   ]
+  },
+  {
+   "text": "L E S C H",
+   "conf": "high",
+   "kind": "settlement",
+   "tile": "4,0",
+   "px": [
+    2245,
+    351
+   ]
+  },
+  {
+   "text": "Na Dragi Doleg",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "4,0",
+   "px": [
+    2315,
+    333
+   ]
+  },
+  {
+   "text": "Sch[~]",
+   "conf": "med",
+   "kind": "settlement",
+   "tile": "1,1",
+   "px": [
+    1084,
+    590
+   ]
+  },
+  {
+   "text": "Schimstl Graben",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "2,1",
+   "px": [
+    1180,
+    597
+   ]
+  },
+  {
+   "text": "D U E N D",
+   "conf": "high",
+   "kind": "boundary",
+   "tile": "2,1",
+   "px": [
+    1350,
+    758
+   ]
+  },
+  {
+   "text": "Vedalschitz",
+   "conf": "high",
+   "kind": "settlement",
+   "tile": "3,1",
+   "px": [
+    1680,
+    550
+   ]
+  },
+  {
+   "text": "DORF",
+   "conf": "high",
+   "kind": "other",
+   "tile": "3,1",
+   "px": [
+    1791,
+    892
+   ]
+  },
+  {
+   "text": "Stüze Wardianove",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "4,1",
+   "px": [
+    2392,
+    704
+   ]
+  },
+  {
+   "text": "S's Na Verlatschki Schleh.",
+   "conf": "high",
+   "kind": "flurname",
+   "tile": "4,1",
+   "px": [
+    2274,
+    865
+   ]
+  },
+  {
+   "text": "Providirt durch den Hauptmann Insp[~]",
+   "conf": "high",
+   "kind": "other",
+   "tile": "0,3",
+   "px": [
+    342,
+    2117
+   ]
+  },
+  {
+   "text": "unn Inspector von Hillmayr",
+   "conf": "high",
+   "kind": "other",
+   "tile": "1,3",
+   "px": [
+    660,
+    2110
+   ]
+  },
+  {
+   "text": "Aufgenommen und besc[~]",
+   "conf": "med",
+   "kind": "other",
+   "tile": "3,3",
+   "px": [
+    2007,
+    2110
+   ]
+  },
+  {
+   "text": "und berechnet durch Kaltuniggitsch",
+   "conf": "med",
+   "kind": "other",
+   "tile": "4,3",
+   "px": [
+    2251,
+    2117
+   ]
+  },
+  {
+   "text": "[~]gano[?]",
+   "conf": "low",
+   "kind": "other",
+   "tile": "4,3",
+   "px": [
+    2386,
+    2141
+   ]
+  }
+ ]
+}

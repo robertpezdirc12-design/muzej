@@ -151,11 +151,11 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     transferStatus: "TRANSFERRED",
     georefStatus: "TO_COLLECT",
     structuredEntries: 0,
-    lastVerified: "2026-10-07",
+    lastVerified: "2026-10-08",
     noteSi:
-      "List z razpršeno poselitvijo na vzhodnem delu k.o. in z obmejnimi predeli sosednjih občin. Digitalna kopija prenesena iz VAČ IIIF (2645 × 2154 px); georeferenca še ni izračunana — poskus P8 (2026-10-08, deterministično): zasidranje na reko Kolpo (ekstrakcija pasu med bregovnimi črtami + primerjava z moderno strugo iz OpenTopoMap) je na validaciji A02 izkazalo NEDELOVITNOST — Kolpa je tu premalo vijugasta za določitev smeri sever–jug in merila (napaka cerkve 0,9–1,6 km); raziskovalna pot v research/georef-n83/ (dokumentirana negativna ugotovitev; potreben VAČ metapodatek ali točkovno sidro).",
+      "List z razpršeno poselitvijo na vzhodnem delu k.o. in z obmejnimi predeli sosednjih občin. Digitalna kopija prenesena iz VAČ IIIF (2645 × 2154 px); georeferenca še ni izračunana — poskus P8 (2026-10-08, deterministično): zasidranje na reko Kolpo (ekstrakcija pasu med bregovnimi črtami + primerjava z moderno strugo iz OpenTopoMap) je na validaciji A02 izkazalo NEDELOVITNOST — Kolpa je tu premalo vijugasta za določitev smeri sever–jug in merila (napaka cerkve 0,9–1,6 km); raziskovalna pot v research/georef-n83/ (dokumentirana negativna ugotovitev; potreben VAČ metapodatek ali točkovno sidro). P9 (2026-10-08, VLM ploščični sken): na listu NI reke; naselbinska veriga (~41 stavb) poteka NAVPIČNO ob vzhodnem robu (x ≈ 87–91 %) — skladno z nadaljevanjem vzdolžnega pasu vasi Griblje (Dolnje Griblje?) proti jugu na zemljepisni dolžini vasi [~]; razpršen napis TRIBUTSCH = ozemlje k.o. Tribuče (45,545/15,243); WEIDENDORF (Bedenj) v spodnjem delu. List je približno sever-gor (veriga teče S–J) — nasprotje A04 (+31°) [~]. Manjka eno točkovno sidro z znano lego — ostaja TO_COLLECT.",
     noteEn:
-      "Sheet with dispersed settlement in the eastern part of the cadastral municipality and boundary areas with neighbouring municipalities. Digital copy transferred from VAČ IIIF (2645 × 2154 px); georeference not yet computed — the P8 attempt (2026-10-08, deterministic): anchoring on the Kolpa river (bank-to-bank band extraction + comparison with the modern channel from OpenTopoMap) proved UNWORKABLE in A02 validation — the Kolpa meanders too weakly here to pin the north–south direction and scale (church error 0.9–1.6 km); research path in research/georef-n83/ (a documented negative finding; VAČ metadata or a point anchor needed).",
+      "Sheet with dispersed settlement in the eastern part of the cadastral municipality and boundary areas with neighbouring municipalities. Digital copy transferred from VAČ IIIF (2645 × 2154 px); georeference not yet computed — the P8 attempt (2026-10-08, deterministic): anchoring on the Kolpa river (bank-to-bank band extraction + comparison with the modern channel from OpenTopoMap) proved UNWORKABLE in A02 validation — the Kolpa meanders too weakly here to pin the north–south direction and scale (church error 0.9–1.6 km); research path in research/georef-n83/ (a documented negative finding; VAČ metadata or a point anchor needed). P9 (2026-10-08, VLM tile scan): NO river on the sheet; the settlement chain (~41 buildings) runs VERTICALLY along the east edge (x ≈ 87–91 %) — consistent with the southern continuation of the elongated Griblje village ribbon (Dolnje Griblje?) at the village's longitude [~]; the spread label TRIBUTSCH = the territory of c.m. Tribuče (45.545/15.243); WEIDENDORF (Bedenj) in the lower part. The sheet is roughly north-up (the chain runs N–S) — in contrast to A04 (+31°) [~]. A point anchor with a known position is still missing — remains TO_COLLECT.",
   },
   {
     id: "src-a04",
@@ -174,15 +174,15 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     licenceSi: "javno dostopno, dovoljenje ni potrebno (VAČ)",
     licenceEn: "publicly accessible, no permission required (VAČ)",
     thumb: "/atlas/n83-a04-thumb.jpg",
-    georeferenced: false,
+    georeferenced: true,
     transferStatus: "TRANSFERRED",
-    georefStatus: "TO_COLLECT",
+    georefStatus: "GEOREFERENCED",
     structuredEntries: 0,
-    lastVerified: "2026-10-07",
+    lastVerified: "2026-10-08",
     noteSi:
-      "List z dolino Kolpe kot vzhodno mejo in napisom sosednje občine Adlešiči (Adleschitz). Digitalna kopija prenesena iz VAČ IIIF (2645 × 2158 px); georeferenca še ni izračunana — poskus P8 (2026-10-08) prek reke Kolpe: negativna ugotovitev (see research/georef-n83/); možna prihodnja pot: napis Adleschitz kot točkovno sidro + reka [~] ob VLM dostopu.",
+      "List z dolino Kolpe in OVINOM reke pri Adlešičih — edini list serije s komaj zasidrljivim odsekom struge. Digitalna kopija prenesena iz VAČ IIIF (2645 × 2158 px). GEOREFERENCA (P9, 2026-10-08, ob dvigu VLM kvote): 10 točk struge (VLM vodenje po ploščicah) → podobnostni fit proti validirani moderni centerline Kolpe: rotacija +30,9°, merilo 0,55 m/px, mediana 10 m; neodvisna kontrola 23 m; napisi ADLESCHITZ/WEIDENDORF (Bedenj)/TRIBUTSCH (Tribuče) skladni s k.o. sosedi. Status RECONSTRUCTED [~]: zasidran vzdolž reke (±100–150 m), vogali odvisni od dvoumnosti merila 0,45–0,74 (±250–470 m); list rotiran +31° v ovojnici bounds (raziskava: research/georef-n83/). Prejšnji poskus P8 (ravna struga pri Gribljah) negativen — ovin pri Adlešičih je razrešil zadrego.",
     noteEn:
-      "Sheet with the Kolpa valley as eastern boundary and the label of the neighbouring municipality of Adlešiči (Adleschitz). Digital copy transferred from VAČ IIIF (2645 × 2158 px); georeference not yet computed — the P8 river-anchoring attempt (2026-10-08) had a negative outcome (see research/georef-n83/); a possible future path: the Adleschitz label as a point anchor + the river [~] once VLM access returns.",
+      "Sheet with the Kolpa valley and the river BEND by Adlešiči — the only sheet of the series with an anchorable channel stretch. Digital copy transferred from VAČ IIIF (2645 × 2158 px). GEOREFERENCE (P9, 2026-10-08, after the VLM quota was lifted): 10 channel points (VLM tile-guided) → similarity fit against the validated modern Kolpa centerline: rotation +30.9°, scale 0.55 m/px, median 10 m; independent check 23 m; the ADLESCHITZ/WEIDENDORF (Bedenj)/TRIBUTSCH (Tribuče) labels consistent with the neighbouring municipalities. Status RECONSTRUCTED [~]: anchored along the river (±100–150 m), the corners depend on the scale ambiguity 0.45–0.74 (±250–470 m); the sheet is rotated +31° inside the bounds envelope (research: research/georef-n83/). The earlier P8 attempt (straight channel at Griblje) was negative — the Adlešiči bend resolved the impasse.",
   },
   {
     id: "src-a05",
@@ -205,11 +205,11 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     transferStatus: "TRANSFERRED",
     georefStatus: "TO_COLLECT",
     structuredEntries: 0,
-    lastVerified: "2026-10-07",
+    lastVerified: "2026-10-08",
     noteSi:
-      "List z gručasto poselitvijo (rdeči nalič stavb in dvorišč) na vzhodnem delu in obmejnimi napisi sosednjih občin. Digitalna kopija prenesena iz VAČ IIIF (2634 × 2165 px); georeferenca še ni izračunana — poskus P8 (2026-10-08) prek reke Kolpe: negativna ugotovitev (see research/georef-n83/); reka na listu morda ni vidna (južna meja k.o. ni ob Kolpi).",
+      "List z gručasto poselitvijo (rdeči nalič stavb in dvorišč) na vzhodnem delu in obmejnimi napisi sosednjih občin. Digitalna kopija prenesena iz VAČ IIIF (2634 × 2165 px); georeferenca še ni izračunana — poskus P8 (2026-10-08) prek reke Kolpe: negativna ugotovitev (see research/georef-n83/); reka na listu morda ni vidna (južna meja k.o. ni ob Kolpi). P9 (2026-10-08, VLM ploščični sken): potrjeno — reke NI; en velik naselbinski sklop (~45 stavb) pri (75 %, 28 %) s hišnimi številkami (npr. N°9) in vrstnimi imeni (Pri Janhovičih, Na Dvagi Žoleg, Šiže Vardianove [~]) — verjetno južni konec vzdolžnega pasu vasi Griblje (zaselki: Dolnje Griblje / Brinsko selo?) [~]; razpršene črke A D L E S C… zgoraj desno in napis [Vedalschitz ~] = ozemlje sosednje k.o. Adlešiči; glava lista nosi »V« (5. list serije, skladen z A03 = »III«). Simboli stavb nakazujejo merilo ~0,66 m/px [~] (primerjava z A02). Brez točkovnega sidra z znano lego — ostaja TO_COLLECT.",
     noteEn:
-      "Sheet with a clustered settlement (red tint of buildings and farmyards) in the eastern part and boundary labels of neighbouring municipalities. Digital copy transferred from VAČ IIIF (2634 × 2165 px); georeference not yet computed — the P8 river-anchoring attempt (2026-10-08) had a negative outcome (see research/georef-n83/); the river may not appear on this sheet at all (the southern k.o. boundary is not on the Kolpa).",
+      "Sheet with a clustered settlement (red tint of buildings and farmyards) in the eastern part and boundary labels of neighbouring municipalities. Digital copy transferred from VAČ IIIF (2634 × 2165 px); georeference not yet computed — the P8 river-anchoring attempt (2026-10-08) had a negative outcome (see research/georef-n83/); the river may not appear on this sheet at all (the southern k.o. boundary is not on the Kolpa). P9 (2026-10-08, VLM tile scan): confirmed — NO river; one large settlement cluster (~45 buildings) at (75 %, 28 %) with house numbers (e.g. N°9) and field names (Pri Janhovičih, Na Dvagi Žoleg, Šiže Vardianove [~]) — probably the southern end of the elongated Griblje village ribbon (hamlets: Dolnje Griblje / Brinsko selo?) [~]; the spread letters A D L E S C… at the top right and the label [Vedalschitz ~] = the territory of the neighbouring c.m. Adlešiči; the sheet header carries »V« (5th sheet of the series, consistent with A03 = »III«). The building symbols suggest a scale of ~0.66 m/px [~] (comparison with A02). Without a point anchor of known position — remains TO_COLLECT.",
   },
   {
     id: "src-pg",

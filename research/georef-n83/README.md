@@ -64,3 +64,77 @@ Tudi medlistna ORB/SIFT registracija (P7 metoda) NE DELA za te liste:
 
 Status: **A03/A04/A05 georefStatus ostaja TO_COLLECT** — pošteno negativen izid
 z dokazano diagnozo; A01/A02 (issue #14) nedotaknjena.
+
+## P9 (2026-10-08, po dvigu VLM kvote) — A04 GEOREFERENCIRAN prek OVINA Kolpe ⭢
+
+P8 je padel na A02, ker je Kolpa pri Gribljah preveč ravna. A04 pa vsebuje
+**OVIN pri Adlešičih** (SSE→ESE, moderno (45.534, 15.304)→(45.529, 15.314)) —
+odsek, ki razloči tudi smer in (delno) merilo.
+
+### Metoda
+
+1. **VLM ploščični sken** (`scripts/georef-tiles.mjs`, 5×4 mreža + 12 % prekrivanja,
+   1,6× povečava): vsi napisi listov A02/A03/A04/A05 z relativnimi pozicijami.
+   **Validacija metode na A02** (znana resnica): napis "St. Veith" px(1921,501)
+   proti cerkvi px(1995,577) → odmik ~106 px (~84 m) — ploščične pozicije so
+   uporabne za groba sidra [~].
+2. **Identifikacija k.o. sosedov** (web): Bedenj = **Weidendorf** (Wikipedija),
+   Tribuče (45.54515/15.24304), Adlešiči (45.5224/15.3110), Bedenj
+   (45.53742/15.27694). Na A04: WEIDENDORF (spodaj levo), ADLESCHITZ
+   (površinski, desno), seznam sosedov Grüble/Adleschitz/Zaplje v glavi.
+   Na A03: razpršeni napis E-H-C-S-T-U-B-I-R-T = **TRIBUTSCH** (Tribuče).
+3. **Sledenje reke na A04** (ploščično, 20 VLM klicev): desna stran + diagonala
+   SW + dno → 10-točkovni konsenz (2456,743) → (1537,1947).
+4. **Similarity fit** (rotacija/merilo/translacija; soft-L1, multi-start)
+   proti **validirani moderni centerline** (KD-drevo, zgoščena na 3 m):
+
+   | parameter | vrednost |
+   |---|---|
+   | rotacija | **+30,9°** (stabilna +21…+31° v vseh režimih) |
+   | merilo | **0,55 m/px** (optimum) |
+   | mediana odmika struge | **10 m** (fit), **23 m** (neodvisna točka) |
+   | vogali lista | NW 45.52188/15.30202 · NE 45.52860/15.31800 · SW 45.53102/15.29420 · SE 45.53774/15.31018 |
+
+5. **Merilo — analiza dvoumnosti** (P9b): oblika ovinka optimalna pri 0,48–0,55;
+   prisiljena območja: s 0,60–0,80 → mediana 19–25 m (rotacija kompenzira).
+   Neodvisni določevali: (a) širina narisane struge 120–165 px proti realni
+   Kolpi 50–90 m (OTM z16, 1,67 m/px) → s 0,36–0,75; (b) kalibracija
+   pretiravanja iz A02 (pas 125 px × 0,79 = 99 m narisano; realno ~60 m →
+   faktor ~1,65) → s ≈ 0,45–0,65 [~]; (c) simboli hiš A04 = simboli A02
+   (9×13 px) → s ≈ 0,79 [~] (metoda ±30 %, A01 kontrola odpovedala).
+   **Sklep: s = 0,55 (objavljeno), poštena negotovost 0,45–0,74** → vogali
+   ±250–470 m; vzdolž reke ±100–150 m (sidro).
+
+### Napačne sledi (zavrnjene)
+
+- "widest light band" ekstrakcija po vrsticah: zajame svetla polja med gozdnimi
+  pasovi (DP sled skakalna) — zavrnjeno;
+- spodnja vrstica ploščic (x 326–1224 pri y 1796–2098): pod fitom 332–625 m od
+  Kolpe → ceste/dolina, ne reka;
+- zgornji levi kot A04 (231,91): 1047 m od Kolpe → ne reka;
+- "Bresnik" ≠ Brinsko selo (zaselek Griblj) — 4 km od fita; identiteta
+  odprta [~];
+- Overpass API iz sandboxa: ConnectionRefused (dokumentirano).
+
+### A03/A05 (ostajata TO_COLLECT)
+
+- **A03** (~sever-gor): brez reke; naselbinska veriga ~41 stavb NAVPIČNO ob
+  vzhodnem robu (x ≈ 87–91 %) — skladno z nadaljevanjem vzdolžnega pasu vasi
+  Griblje (Dolnje Griblje?) [~]; TRIBUTSCH = k.o. Tribuče; parc. št. 1800–1845
+  ob vzhodnem robu. Ima glavo "III".
+- **A05**: brez reke; sklop ~45 stavb (75 %, 28 %) z hišnimi št. (N°9) +
+  vrstnimi imeni (Pri Janhovičih, Na Dvagi Žoleg, Šiže Vardianove [~]) —
+  verjetno južni konec pasu vasi [~]; razpršene črke A D L E S C… zgoraj desno
+  + [Vedalschitz ~] = k.o. Adlešiči; glava "V" (5. list). Simboli nakazujejo
+  s ~0,66 m/px [~].
+- Manjka eno točkovno sidro z znano modernim lego na vsakem listu.
+
+### Artefakti
+
+- `tiles-vlm/` — a02/a03/a04/a05-labels.json (ploščični skeni),
+  a04-tile-river.json, a04-rivertrace.json
+- `p9-fit-a04.py`, `p9b-refine.py`, `p9-dp-trace.py` — skripte
+- `p9-a04-fit.json`, `p9-a04-fit2.json`, `p9b-a04-refined.json` — fiti
+- `scripts/georef-tiles.mjs` — ploščični skener (ponovljiv)
+- Muzej: `SHEET_GEOREFS[2]` = georef-a04 (RECONSTRUCTED), src-a04
+  GEOREFERENCED, QA test `qa-p9-a04-georef` (21→22)
