@@ -9,7 +9,7 @@ import { WALKS, walkItemsWithGaps, WALK_GAPS } from "./walks";
 import { computeCoverage } from "./coverage";
 import { buildReconciliation } from "./reconciliation";
 import { NEGATIVE_RESULTS } from "@/data/atlas/sources";
-import { parishStats } from "./atlas";
+import { parishStats, getCoverage } from "./atlas";
 import { PANORAMAS } from "@/data/atlas/panoramas";
 import { TIME_SPOTS } from "@/data/atlas/timespots";
 import {
@@ -790,61 +790,102 @@ export function runQA(): QAReport {
       : g1812Errors.join("; "),
   );
 
-  // ——— P9: GEOREFERENCA LISTA A04 (ovin Kolpe pri Adlešičih) ————————————
-  const p9Errors: string[] = [];
-  const georefA04 = SHEET_GEOREFS.find((g) => g.id === "georef-a04");
-  if (SHEET_GEOREFS.length !== 3) {
-    p9Errors.push(`SHEET_GEOREFS: ${SHEET_GEOREFS.length} vnosov (pričakovano 3: A01/A02/A04)`);
+  // ——— P10: SEKCIJSKA MREŽA eZKN — A03/A05 GEOREFERENCIRANA, A04 POPRAVLJENA ———
+  const p10Errors: string[] = [];
+  if (SHEET_GEOREFS.length !== 5) {
+    p10Errors.push(`SHEET_GEOREFS: ${SHEET_GEOREFS.length} vnosov (pričakovano 5: A01–A05)`);
   }
+  const georefA03 = SHEET_GEOREFS.find((g) => g.id === "georef-a03");
+  const georefA04 = SHEET_GEOREFS.find((g) => g.id === "georef-a04");
+  const georefA05 = SHEET_GEOREFS.find((g) => g.id === "georef-a05");
+
+  // A03 = celica dg
+  if (!georefA03) {
+    p10Errors.push("georef-a03 manjka v SHEET_GEOREFS");
+  } else {
+    const b = georefA03.bounds;
+    if (georefA03.status !== "REVIEW") p10Errors.push(`A03 status: ${georefA03.status} (pričakovano REVIEW)`);
+    if (Math.abs(b[0][0] - 45.5575) > 0.0005 || Math.abs(b[0][1] - 15.2485) > 0.0005)
+      p10Errors.push(`A03 bounds S/Z: ${b[0]} (pričakovano [45.5575, 15.2485] = celica VKIX24dg)`);
+    if (Math.abs(b[1][0] - 45.5437) > 0.0005 || Math.abs(b[1][1] - 15.273) > 0.0005)
+      p10Errors.push(`A03 bounds J/V: ${b[1]} (pričakovano [45.5437, 15.2730])`);
+    if (georefA03.pixels.width !== 2645 || georefA03.pixels.height !== 2154)
+      p10Errors.push(`A03 px: ${georefA03.pixels.width}×${georefA03.pixels.height}`);
+    const cpSi = georefA03.controlPoints.map((c) => c.fromSi).join(" |");
+    for (const must of ["VKIX24dg", "TRIBUTSCH", "WEIDENDORF"]) {
+      if (!cpSi.includes(must)) p10Errors.push(`A03 kontrolna točka manjka: ${must}`);
+    }
+    if (!georefA03.methodSi.includes("O.IX24dg")) p10Errors.push("A03 metoda mora navesti oznako »O.IX24dg«");
+  }
+
+  // A04 = POPRAVLJENA celica cg (P9 umaknjena)
   if (!georefA04) {
-    p9Errors.push("georef-a04 manjka v SHEET_GEOREFS");
+    p10Errors.push("georef-a04 manjka v SHEET_GEOREFS");
   } else {
     const b = georefA04.bounds;
-    if (georefA04.status !== "RECONSTRUCTED") p9Errors.push(`A04 status: ${georefA04.status} (pričakovano RECONSTRUCTED)`);
-    if (georefA04.scaleMPerPixel !== 0.55) p9Errors.push(`A04 merilo: ${georefA04.scaleMPerPixel} (pričakovano 0,55)`);
-    if (Math.abs(b[0][0] - 45.53774) > 0.001 || Math.abs(b[0][1] - 15.2942) > 0.001)
-      p9Errors.push(`A04 bounds N/Z: ${b[0]} (pričakovano [45.53774, 15.2942])`);
-    if (Math.abs(b[1][0] - 45.52188) > 0.001 || Math.abs(b[1][1] - 15.318) > 0.001)
-      p9Errors.push(`A04 bounds J/V: ${b[1]} (pričakovano [45.52188, 15.318])`);
-    if (georefA04.pixels.width !== 2645 || georefA04.pixels.height !== 2158)
-      p9Errors.push(`A04 px: ${georefA04.pixels.width}×${georefA04.pixels.height}`);
-    if (georefA04.controlPoints.length < 4) p9Errors.push(`A04 kontrolne točke: ${georefA04.controlPoints.length} (pričakovano ≥ 4)`);
-    const cpSi = georefA04.controlPoints.map((c) => c.fromSi).join(" |");
-    for (const must of ["ovin Kolpe", "izven fita", "ADLESCHITZ", "WEIDENDORF"]) {
-      if (!cpSi.includes(must)) p9Errors.push(`A04 kontrolna točka manjka: ${must}`);
-    }
-    if (!georefA04.methodSi.includes("[~]") || !georefA04.methodSi.includes("30,9°"))
-      p9Errors.push("A04 metoda mora navesti rotacijo +30,9° in [~]");
-    if (!georefA04.accuracySi.includes("0,45–0,74") && !georefA04.accuracySi.includes("0,45-0,74"))
-      p9Errors.push("A04 natančnost mora navesti dvoumnost merila 0,45–0,74");
+    if (georefA04.status !== "REVIEW") p10Errors.push(`A04 status: ${georefA04.status} (pričakovano REVIEW — popravek P9)`);
+    if (Math.abs(b[0][0] - 45.5574) > 0.0005 || Math.abs(b[0][1] - 15.2728) > 0.0005)
+      p10Errors.push(`A04 bounds S/Z: ${b[0]} (pričakovano [45.5574, 15.2728] = celica VKIX24cg)`);
+    if (Math.abs(b[1][0] - 45.5436) > 0.0005 || Math.abs(b[1][1] - 15.2973) > 0.0005)
+      p10Errors.push(`A04 bounds J/V: ${b[1]} (pričakovano [45.5436, 15.2973])`);
+    if (georefA04.scaleMPerPixel !== 0.72) p10Errors.push(`A04 merilo: ${georefA04.scaleMPerPixel} (pričakovano 0,72)`);
+    if (!georefA04.methodSi.includes("POPRAVEK")) p10Errors.push("A04 metoda mora biti označena kot POPRAVEK");
+    if (!georefA04.methodSi.includes("O.IX24cg")) p10Errors.push("A04 metoda mora navesti oznako »O.IX24cg«");
+    if (!georefA04.methodSi.includes("636 m")) p10Errors.push("A04 metoda mora navesti zavrnitev P9 (mediana 636 m)");
+    if (georefA04.controlPoints.length < 3) p10Errors.push(`A04 kontrolne točke: ${georefA04.controlPoints.length} (pričakovano ≥ 3)`);
   }
-  const srcA04 = ATLAS_SOURCES.find((s) => s.id === "src-a04");
-  if (!srcA04 || srcA04.georefStatus !== "GEOREFERENCED" || srcA04.georeferenced !== true) {
-    p9Errors.push("src-a04 ni GEOREFERENCED");
+
+  // A05 = celica ch
+  if (!georefA05) {
+    p10Errors.push("georef-a05 manjka v SHEET_GEOREFS");
   } else {
-    if (!srcA04.noteSi.includes("P9") || !srcA04.noteSi.toLowerCase().includes("ovinom")) p9Errors.push("src-a04 opomba brez P9/ovina");
-    if (srcA04.lastVerified !== "2026-10-08") p9Errors.push(`src-a04 lastVerified: ${srcA04.lastVerified}`);
+    const b = georefA05.bounds;
+    if (georefA05.status !== "REVIEW") p10Errors.push(`A05 status: ${georefA05.status} (pričakovano REVIEW)`);
+    if (Math.abs(b[0][0] - 45.5437) > 0.0005 || Math.abs(b[0][1] - 15.2726) > 0.0005)
+      p10Errors.push(`A05 bounds S/Z: ${b[0]} (pričakovano [45.5437, 15.2726] = celica VKIX24ch)`);
+    if (Math.abs(b[1][0] - 45.5299) > 0.0005 || Math.abs(b[1][1] - 15.2971) > 0.0005)
+      p10Errors.push(`A05 bounds J/V: ${b[1]} (pričakovano [45.5299, 15.2971])`);
+    if (georefA05.pixels.width !== 2634 || georefA05.pixels.height !== 2165)
+      p10Errors.push(`A05 px: ${georefA05.pixels.width}×${georefA05.pixels.height}`);
+    const cpSi = georefA05.controlPoints.map((c) => c.fromSi).join(" |");
+    for (const must of ["VKIX24ch", "Jankovichti"]) {
+      if (!cpSi.includes(must)) p10Errors.push(`A05 kontrolna točka manjka: ${must}`);
+    }
+    if (!georefA05.methodSi.includes("O.IX24ch")) p10Errors.push("A05 metoda mora navesti oznako »O.IX24ch«");
   }
-  const srcA03 = ATLAS_SOURCES.find((s) => s.id === "src-a03");
-  const srcA05 = ATLAS_SOURCES.find((s) => s.id === "src-a05");
-  if (!srcA03 || srcA03.georefStatus !== "TO_COLLECT") p9Errors.push("src-a03 mora ostati TO_COLLECT");
-  else if (!srcA03.noteSi.includes("TRIBUTSCH") || !srcA03.noteSi.includes("NI reke"))
-    p9Errors.push("src-a03 opomba brez P9 ugotovitev (TRIBUTSCH / NI reke)");
-  if (!srcA05 || srcA05.georefStatus !== "TO_COLLECT") p9Errors.push("src-a05 mora ostati TO_COLLECT");
-  else if (!srcA05.noteSi.includes("45 stavb") || !srcA05.noteSi.includes("A D L E S C"))
-    p9Errors.push("src-a05 opomba brez P9 ugotovitev (45 stavb / A D L E S C)");
-  // georeferencirani listi: 3 od 5 grafičnih
+
+  // viri: vsi grafični listi GEOREFERENCED + 3 novi viri
   const graphicSheets = ATLAS_SOURCES.filter((s) => s.type === "cadastral-map");
   const geoCount = graphicSheets.filter((s) => s.georefStatus === "GEOREFERENCED").length;
-  if (geoCount !== 3) p9Errors.push(`georeferencirani grafični listi: ${geoCount} (pričakovano 3 — A01/A02/A04)`);
+  if (geoCount !== 5) p10Errors.push(`georeferencirani grafični listi: ${geoCount} (pričakovano 5 — VSI!)`);
+  const srcA03 = ATLAS_SOURCES.find((s) => s.id === "src-a03");
+  const srcA04 = ATLAS_SOURCES.find((s) => s.id === "src-a04");
+  const srcA05 = ATLAS_SOURCES.find((s) => s.id === "src-a05");
+  if (!srcA03 || srcA03.georefStatus !== "GEOREFERENCED" || srcA03.georeferenced !== true)
+    p10Errors.push("src-a03 ni GEOREFERENCED");
+  if (!srcA04 || srcA04.georefStatus !== "GEOREFERENCED" || srcA04.georeferenced !== true)
+    p10Errors.push("src-a04 ni GEOREFERENCED");
+  else if (!srcA04.noteSi.includes("POPRAVEK P10")) p10Errors.push("src-a04 opomba brez POPRAVKa P10");
+  if (!srcA05 || srcA05.georefStatus !== "GEOREFERENCED" || srcA05.georeferenced !== true)
+    p10Errors.push("src-a05 ni GEOREFERENCED");
+  for (const sid of ["src-vac-n83", "src-gurs-wfs", "src-ezkn"]) {
+    if (!ATLAS_SOURCES.find((s) => s.id === sid)) p10Errors.push(`nov vir ${sid} manjka`);
+  }
+  const srcEzkn = ATLAS_SOURCES.find((s) => s.id === "src-ezkn");
+  if (srcEzkn && !srcEzkn.noteSi.includes("O.IX24c"))
+    p10Errors.push("src-ezkn opomba brez kod celic (O.IX24c…)");
+  // pokritost
+  if (getCoverage().sheetsGeoreferenced !== 5)
+    p10Errors.push(`COVERAGE.sheetsGeoreferenced: ${getCoverage().sheetsGeoreferenced} (pričakovano 5)`);
+
   push(
-    "qa-p9-a04-georef",
-    "P9: list A04 georeferenciran prek OVINA Kolpe pri Adlešičih (rot +30,9°, s 0,55 m/px, mediana 10 m) — RECONSTRUCTED [~]; A03/A05 ostajata TO_COLLECT z dokumentiranimi ugotovitvami",
-    "P9: sheet A04 georeferenced via the Kolpa BEND by Adlešiči (rot +30.9°, s 0.55 m/px, median 10 m) — RECONSTRUCTED [~]; A03/A05 remain TO_COLLECT with documented findings",
-    p9Errors.length === 0,
-    p9Errors.length === 0
-      ? "VLM ploščično vodenje (10 točk struge, konsenz) → podobnostni fit proti validirani moderni centerline (GEOTRUTH #14, OTM); neodvisna kontrola 23 m; napisi k.o. sosedov (ADLESCHITZ 1,2 km N od vasi Adlešiči; WEIDENDORF = Bedenj; TRIBUTSCH = Tribuče) skladni; merilo: optimum oblike ovinka 0,55, pas struge 120–165 px proti realni Kolpi 50–90 m + kalibracija pretiravanja A02 → s ≈ 0,45–0,65 [~] — vogali ±250–470 m; list rotiran +31° v ovojnici bounds (slika ni osno poravnana); A03: veriga ~41 stavb navpično ob vzhodnem robu = verjetno nadaljevanje pasu vasi [~]; A05: sklop ~45 stavb z hišnimi št. + glava »V«; 3/5 grafičnih listov georeferenciranih"
-      : p9Errors.join("; "),
+    "qa-p10-ezkn-grid",
+    "P10: sekcija mreža eZKN razrešila VSE liste — A03=celica dg, A04=celica cg (POPRAVEK P9: ovin Adlešiči zavrnjen), A05=celica ch; 5/5 grafičnih listov georeferenciranih; +3 uradni viri (VAČ N83, GURS WFS, eZKN)",
+    "P10: the eZKN section grid resolved ALL sheets — A03=cell dg, A04=cell cg (P9 CORRECTED: the Adlešiči bend retracted), A05=cell ch; 5/5 graphic sheets georeferenced; +3 official sources (VAČ N83, GURS WFS, eZKN)",
+    p10Errors.length === 0,
+    p10Errors.length === 0
+      ? "Okvirjene oznake listov so KODI SEKCIJSKE MREŽE 1:2880 (eZKN/GURS, uradna geometrija D96/TM): A02=»O.IX24cƒ«→celica cf — središče vsebine A02 se NATANČNO ujema s središčem celice (princip list≈celica!) — torej A03=»O.IX24dg«→celica dg (45,5437–45,5575 N, 15,2485–15,273 E; vsebina = le vzhodni pas = zahodni rob k.o. Griblje; TRIBUTSCH→k.o. Tribuče ✓, WEIDENDORF→k.o. Bedenj ✓), A04=»O.IX24cg«→celica cg (45,5436–45,5574, 15,2728–15,2973 — DIREKTNO južno od A02; POPRAVEK P9: prejšnja lega na ovinku Kolpe pri Adlešičih zavrnjena — stavbna validacija 636 m mediane, kontrole P9 nedisukriminativne, »reka« = verjetno dolina; Kolpa teče IZVEN lista A04), A05=»O.IX24ch«→celica ch (45,5299–45,5437, 15,2726–15,2971 = skrajni jug 1825 k.o. Griblje — ozemlje pozneje odvzeto; sklop 45 stavb → Fučkovci/Dragoši [~], Pri Jankovichti → naselje Jankoviči ✓). Vsa stanja REVIEW (±200–400 m); identiteta listov neodvisno potrjena prek VAČ (5 listov N083A01–A05, križne korelacije predogledov); novi viri: GURS WFS (k.o. 1544 poligon + 2117 parcel + naselja), eZKN (mreža + ZKN skeni); prekritost 5/5"
+      : p10Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;

@@ -138,3 +138,71 @@ odsek, ki razloči tudi smer in (delno) merilo.
 - `scripts/georef-tiles.mjs` — ploščični skener (ponovljiv)
 - Muzej: `SHEET_GEOREFS[2]` = georef-a04 (RECONSTRUCTED), src-a04
   GEOREFERENCED, QA test `qa-p9-a04-georef` (21→22)
+
+## P10 (2026-10-08, zvečer) — SEKCIJSKA MREŽA eZKN RAZREŠILA VSE LISTE ⭢
+
+Ključna razkritje: **okvirne oznake listov so kode sekcija mreže 1:2880** (eZKN
+pregledovalnik arhivskih načrtov GURS, sloj `GURS/EZKN_LISTI/MapServer/8000`,
+uradna geometrija D96/TM). Celice ~1,9 × 1,5 km, kodirane `IX24` + 2 črki
+(stolpci a–d po poldnevniku, vrstice e–i po vzporedniku).
+
+### Preslikava listov → celice
+
+| list | okvirna oznaka | celica | uradna geometrija (N, E) |
+|---|---|---|---|
+| A02 | `O.IX24cƒ` | **VKIX24cf** | 45,5572–45,5710; 15,2730–15,2975 |
+| A03 | `O.IX24dɡ` | **VKIX24dg** | 45,5437–45,5575; 15,2485–15,2730 |
+| A04 | `O.IX24cg` | **VKIX24cg** | 45,5436–45,5574; 15,2728–15,2973 |
+| A05 | `O.IX24ch` | **VKIX24ch** | 45,5299–45,5437; 15,2726–15,2971 |
+
+**VALIDACIJA principa list≈celica:** središče risane vsebine A02 (GEOTRUTH)
+se NATANČNO ujema s središčem celice cf (~10 m). Vsebina listov = le k.o.
+Griblje: A03 samo vzhodni pas (zahodni rob k.o. ob Tribučah/Bednju), A05
+zgornja desna polovica (skrajni jug k.o.), A04 cela celica cg.
+
+### POPRAVEK P9 (umaknjena georeferenca A04)
+
+P9 je list A04 zasidral na ovinu Kolpe pri Adlešičih (rot +30,9°, s 0,55,
+mediana 10 m). P10 ugotavlja, da je bila lega **NAPAČNA (~2,5 km)**:
+
+1. **Oznaka lista `O.IX24cg`** (brana 3×: P9 nepomaknjeno + 2× ciljno) = celica
+   cg = območje DIREKTNO JUŽNO od A02 — ne odsek Adlešiči;
+2. **Stavbna validacija** (222 zaznanih simbolov A04 vs sodobne stavbne
+   parcele GURS): P9-lega mediana **636 m** (statistična izključitev),
+   celica cg 72 m;
+3. **P9 kontrole so bile nedisukriminativne** — ADLESCHITZ in WEIDENDORF
+   padejo v k.o. Adlešiči/Bedenj pri OBEH legah (k.o. sta veliki);
+4. **P9 sled »reke«** (10 točk, širina 180 px ≈ 130 m pri 0,72 m/px) je
+   najverjetneje dolina/cesta — Kolpa teče ~1,2 km vzhodno od vzhodnega roba
+   celice cg, IZVEN lista A04. Prileganje oblike ovinka = zavedljiv lokalni
+   optimal proste podobnostne preslikave (4 prosti parametri, 10 točk).
+
+### Nove uradne poti (vir 2026-10-08)
+
+- **VAČ** (vac.sjas.gov.si): enota `SI AS 176/N/N83` — k.o. Griblje št. 83,
+  prejšnja signatura N083A, zgodovinsko ime **Grüble**, NATANČNO 5 listov
+  (N083A01–A05) + spisovno; javno dostopno. Identiteta listov potrjena
+  neodvisno (križne korelacije VAČ-predogledov ↔ naši skeni: diagonala).
+  JPG tok (fileStream) zahteva prijavo — predogledi javni (520×418).
+- **GURS WFS** (ipi.eprostor.gov.si): `wfs-si-gurs-kn` (KATASTRSKE_OBCINE,
+  PARCELE…) + `wfs-si-gurs-rpe` (NASELJA…). Preneseno: k.o. GRIBLJE poligon
+  (SIFKO 1544), 2117 parcel, 2432 parcel k.o. Adlešiči, 8 naselij.
+- **eZKN** (geohub.gov.si/ghapp/ezkn): zapis **N83-1544** (»Stanje 20 —
+  Franciscejski kataster ARS«) s povezavo do VAČ; javni DjVu skeni ZKN
+  listov (GRIBLJE 1/2/4/K 2–3; dekodirani z libdjvulibre, 300 dpi).
+- Zavrnjeno: Mapire/Arcanum (403 s sandboxa), VAC fileStream brez prijave.
+
+### Zgodovinska ugotovitev
+
+1825 k.o. Griblje je segala ~2,4 km DLJE na jug (do ~45,530 — območje
+Fučkovcev/Dragošev/Jankovičev) kot današnja k.o. (do 45,5442) — ozemlje je
+bilo pozneje priključeno k.o. Adlešiči. A05 dokumentira skrajni jug tedanje
+k.o. (Flurnamen: Pri Jankovichti = današnje naselje Jankoviči ✓).
+
+### Artefakti P10
+
+- `gurs/` — k.o. poligoni, parcele (1544/1552), naselja, seznam k.o.
+- `ezkn/` — DjVu datoteke (1544_2880_0001–0008, 1552_2880_0015)
+- `p10-targeted.json` (tiles-vlm/) — ciljani VLM skeni A03/A05
+- `vac-preview-*.jpg` — VAČ predogledi listov (korelacijska matrika)
+- skripte: `scripts/tmp/p10-*.mjs|py` (skeni, fiti, validacije)

@@ -1,0 +1,1140 @@
+{
+ "a03-e1": {
+  "reka": {
+   "vidna": true,
+   "opis": "Zelena vijugasta črta z modrim pasom (reka Kolpa ali pritok)",
+   "pozicija": "Zgoraj levo, približno od x=0% do x=35%, y=7% do y=17%"
+  },
+  "meja": {
+   "vidna": true,
+   "opis": "Debela rdeča/mešana črta katastrske občine",
+   "pozicija": "Levi rob, poteka navpično od sredine (y≈48%) do spodnjega roba (y=100%), pri x≈8%"
+  },
+  "cerkev": {
+   "vidna": false,
+   "opis": "Na izrezku ni vidnega simbola cerkve (s križem) niti pokopališča"
+  },
+  "stDB": 0,
+  "hisaSt": [],
+  "napisi": [
+   {
+    "text": "O.IX24dʓ",
+    "xPct": 55,
+    "yPct": 5
+   },
+   {
+    "text": "1806",
+    "xPct": 52,
+    "yPct": 20
+   },
+   {
+    "text": "1814",
+    "xPct": 58,
+    "yPct": 19
+   },
+   {
+    "text": "1820",
+    "xPct": 64,
+    "yPct": 19
+   },
+   {
+    "text": "1812",
+    "xPct": 69,
+    "yPct": 20
+   },
+   {
+    "text": "1809",
+    "xPct": 49,
+    "yPct": 23
+   },
+   {
+    "text": "1811",
+    "xPct": 121,
+    "yPct": 23
+   },
+   {
+    "text": "1813",
+    "xPct": 166,
+    "yPct": 26
+   },
+   {
+    "text": "1817",
+    "xPct": 218,
+    "yPct": 28
+   },
+   {
+    "text": "1841",
+    "xPct": 278,
+    "yPct": 27
+   },
+   {
+    "text": "1834",
+    "xPct": 692,
+    "yPct": 29
+   },
+   {
+    "text": "1853",
+    "xPct": 37,
+    "yPct": 33
+   },
+   {
+    "text": "1837",
+    "xPct": 86,
+    "yPct": 36
+   },
+   {
+    "text": "1832",
+    "xPct": 115,
+    "yPct": 38
+   },
+   {
+    "text": "1833",
+    "xPct": 164,
+    "yPct": 37
+   },
+   {
+    "text": "1860",
+    "xPct": 474,
+    "yPct": 34
+   },
+   {
+    "text": "1830",
+    "xPct": 668,
+    "yPct": 32
+   },
+   {
+    "text": "1828",
+    "xPct": 642,
+    "yPct": 35
+   },
+   {
+    "text": "1834",
+    "xPct": 592,
+    "yPct": 38
+   },
+   {
+    "text": "1950",
+    "xPct": 671,
+    "yPct": 41
+   },
+   {
+    "text": "1745",
+    "xPct": 726,
+    "yPct": 41
+   },
+   {
+    "text": "1962",
+    "xPct": 698,
+    "yPct": 45
+   },
+   {
+    "text": "1857",
+    "xPct": 82,
+    "yPct": 46
+   },
+   {
+    "text": "1859",
+    "xPct": 298,
+    "yPct": 42
+   },
+   {
+    "text": "1852",
+    "xPct": 245,
+    "yPct": 45
+   },
+   {
+    "text": "1853",
+    "xPct": 442,
+    "yPct": 41
+   },
+   {
+    "text": "1844",
+    "xPct": 420,
+    "yPct": 47
+   },
+   {
+    "text": "1832",
+    "xPct": 546,
+    "yPct": 46
+   },
+   {
+    "text": "1865",
+    "xPct": 462,
+    "yPct": 53
+   },
+   {
+    "text": "1836",
+    "xPct": 578,
+    "yPct": 58
+   },
+   {
+    "text": "1887",
+    "xPct": 650,
+    "yPct": 56
+   },
+   {
+    "text": "1864",
+    "xPct": 450,
+    "yPct": 64
+   },
+   {
+    "text": "1890",
+    "xPct": 474,
+    "yPct": 66
+   },
+   {
+    "text": "1900",
+    "xPct": 474,
+    "yPct": 75
+   },
+   {
+    "text": "1879",
+    "xPct": 514,
+    "yPct": 78
+   },
+   {
+    "text": "1859",
+    "xPct": 506,
+    "yPct": 80
+   },
+   {
+    "text": "1964",
+    "xPct": 562,
+    "yPct": 78
+   },
+   {
+    "text": "1863",
+    "xPct": 205,
+    "yPct": 71
+   },
+   {
+    "text": "1873",
+    "xPct": 306,
+    "yPct": 71
+   },
+   {
+    "text": "1864",
+    "xPct": 106,
+    "yPct": 79
+   },
+   {
+    "text": "1845",
+    "xPct": 130,
+    "yPct": 95
+   },
+   {
+    "text": "1858",
+    "xPct": 642,
+    "yPct": 71
+   },
+   {
+    "text": "1964",
+    "xPct": 650,
+    "yPct": 88
+   },
+   {
+    "text": "1061",
+    "xPct": 734,
+    "yPct": 83
+   },
+   {
+    "text": "987/70",
+    "xPct": 754,
+    "yPct": 94
+   },
+   {
+    "text": "9630",
+    "xPct": 746,
+    "yPct": 90
+   },
+   {
+    "text": "1863",
+    "xPct": 474,
+    "yPct": 92
+   },
+   {
+    "text": "1832",
+    "xPct": 478,
+    "yPct": 99
+   },
+   {
+    "text": "1897",
+    "xPct": 674,
+    "yPct": 99
+   }
+  ]
+ },
+ "a03-e2": {
+  "reka": "Ne, na izrezku ni vidne reke (ni vijugaste svetle/temne črte s pasom).",
+  "meja": "Da, vidna je debela rdečkasta mejna črta (meja katastrske občine), ki poteka navpično (približno od zgoraj navzdol) v skrajnem levem delu izrezka (okoli x=5-8%).",
+  "cerkev": "Ne, na izrezku ni vidne cerkve (simbola s križem in apsido) niti pokopališča (obroča z križi).",
+  "stDB": 0,
+  "hisaSt": [],
+  "napisi": [
+   {
+    "text": "von Beruli",
+    "xPct": 16,
+    "yPct": 58
+   },
+   {
+    "text": "1844",
+    "xPct": 14,
+    "yPct": 7
+   },
+   {
+    "text": "1846",
+    "xPct": 22,
+    "yPct": 15
+   },
+   {
+    "text": "1847",
+    "xPct": 34,
+    "yPct": 12
+   },
+   {
+    "text": "1848",
+    "xPct": 19,
+    "yPct": 26
+   },
+   {
+    "text": "1850",
+    "xPct": 12,
+    "yPct": 37
+   },
+   {
+    "text": "1852",
+    "xPct": 28,
+    "yPct": 24
+   },
+   {
+    "text": "1853",
+    "xPct": 35,
+    "yPct": 21
+   },
+   {
+    "text": "1855",
+    "xPct": 45,
+    "yPct": 19
+   },
+   {
+    "text": "1859",
+    "xPct": 62,
+    "yPct": 13
+   },
+   {
+    "text": "1860",
+    "xPct": 56,
+    "yPct": 17
+   },
+   {
+    "text": "1861",
+    "xPct": 72,
+    "yPct": 10
+   },
+   {
+    "text": "1862",
+    "xPct": 72,
+    "yPct": 15
+   },
+   {
+    "text": "1864",
+    "xPct": 43,
+    "yPct": 27
+   },
+   {
+    "text": "1865",
+    "xPct": 30,
+    "yPct": 40
+   },
+   {
+    "text": "1866",
+    "xPct": 25,
+    "yPct": 36
+   },
+   {
+    "text": "1867",
+    "xPct": 39,
+    "yPct": 52
+   },
+   {
+    "text": "1870",
+    "xPct": 27,
+    "yPct": 55
+   },
+   {
+    "text": "1875",
+    "xPct": 8,
+    "yPct": 56
+   },
+   {
+    "text": "1876",
+    "xPct": 20,
+    "yPct": 57
+   },
+   {
+    "text": "1877",
+    "xPct": 14,
+    "yPct": 54
+   },
+   {
+    "text": "1880",
+    "xPct": 38,
+    "yPct": 63
+   },
+   {
+    "text": "1881",
+    "xPct": 37,
+    "yPct": 67
+   },
+   {
+    "text": "1890",
+    "xPct": 36,
+    "yPct": 73
+   },
+   {
+    "text": "1900",
+    "xPct": 10,
+    "yPct": 74
+   },
+   {
+    "text": "1901",
+    "xPct": 21,
+    "yPct": 73
+   },
+   {
+    "text": "1902",
+    "xPct": 38,
+    "yPct": 71
+   },
+   {
+    "text": "1904",
+    "xPct": 18,
+    "yPct": 82
+   },
+   {
+    "text": "1905",
+    "xPct": 8,
+    "yPct": 83
+   },
+   {
+    "text": "1908",
+    "xPct": 32,
+    "yPct": 82
+   },
+   {
+    "text": "1909",
+    "xPct": 25,
+    "yPct": 90
+   },
+   {
+    "text": "1911",
+    "xPct": 15,
+    "yPct": 89
+   },
+   {
+    "text": "1920",
+    "xPct": 41,
+    "yPct": 94
+   },
+   {
+    "text": "1922",
+    "xPct": 42,
+    "yPct": 93
+   },
+   {
+    "text": "1935",
+    "xPct": 6,
+    "yPct": 92
+   },
+   {
+    "text": "1950",
+    "xPct": 56,
+    "yPct": 78
+   },
+   {
+    "text": "1960",
+    "xPct": 59,
+    "yPct": 75
+   },
+   {
+    "text": "1970",
+    "xPct": 60,
+    "yPct": 68
+   },
+   {
+    "text": "1980",
+    "xPct": 57,
+    "yPct": 70
+   },
+   {
+    "text": "1990",
+    "xPct": 70,
+    "yPct": 80
+   },
+   {
+    "text": "2000",
+    "xPct": 69,
+    "yPct": 76
+   },
+   {
+    "text": "2010",
+    "xPct": 69,
+    "yPct": 71
+   },
+   {
+    "text": "2020",
+    "xPct": 69,
+    "yPct": 66
+   },
+   {
+    "text": "2030",
+    "xPct": 68,
+    "yPct": 61
+   },
+   {
+    "text": "2040",
+    "xPct": 53,
+    "yPct": 65
+   },
+   {
+    "text": "2050",
+    "xPct": 54,
+    "yPct": 55
+   },
+   {
+    "text": "2060",
+    "xPct": 61,
+    "yPct": 46
+   },
+   {
+    "text": "2070",
+    "xPct": 67,
+    "yPct": 34
+   },
+   {
+    "text": "2080",
+    "xPct": 67,
+    "yPct": 33
+   },
+   {
+    "text": "2090",
+    "xPct": 72,
+    "yPct": 40
+   },
+   {
+    "text": "2100",
+    "xPct": 72,
+    "yPct": 22
+   },
+   {
+    "text": "2110",
+    "xPct": 77,
+    "yPct": 6
+   },
+   {
+    "text": "2120",
+    "xPct": 68,
+    "yPct": 3
+   },
+   {
+    "text": "2130",
+    "xPct": 47,
+    "yPct": 4
+   },
+   {
+    "text": "2140",
+    "xPct": 48,
+    "yPct": 11
+   },
+   {
+    "text": "2150",
+    "xPct": 51,
+    "yPct": 27
+   },
+   {
+    "text": "2160",
+    "xPct": 29,
+    "yPct": 49
+   },
+   {
+    "text": "2170",
+    "xPct": 23,
+    "yPct": 43
+   },
+   {
+    "text": "2180",
+    "xPct": 14,
+    "yPct": 44
+   },
+   {
+    "text": "2190",
+    "xPct": 6,
+    "yPct": 47
+   },
+   {
+    "text": "2200",
+    "xPct": 3,
+    "yPct": 50
+   },
+   {
+    "text": "2210",
+    "xPct": 26,
+    "yPct": 31
+   },
+   {
+    "text": "2220",
+    "xPct": 18,
+    "yPct": 37
+   },
+   {
+    "text": "2230",
+    "xPct": 13,
+    "yPct": 41
+   },
+   {
+    "text": "2240",
+    "xPct": 8,
+    "yPct": 37
+   },
+   {
+    "text": "2250",
+    "xPct": 9,
+    "yPct": 25
+   },
+   {
+    "text": "2260",
+    "xPct": 6,
+    "yPct": 8
+   },
+   {
+    "text": "N°",
+    "xPct": 7,
+    "yPct": 8
+   }
+  ]
+ },
+ "a03-e3": {
+  "reka": "Da, na spodnjem robu izrezka (približno od x=10% do x=75%, y=70% do y=82%) je vidna vijugasta, temnejša črta z pasom, ki predstavlja reko (verjetno Kolpo).",
+  "meja": "Da, debela rjavkasta mejna črta (meja katastrske občine) poteka diagonalno čez sredino izrezka — od približno (x=5%, y=25%) proti (x=55%, y=72%) — ter nadaljuje navzdol desno ob reki.",
+  "cerkev": "Ne, na izrezku ni vidnega simbola za cerkev (z križem/apsido) niti pokopališča (obroč s križi).",
+  "stDB": 0,
+  "hisaSt": [],
+  "napisi": [
+   {
+    "text": "1011",
+    "xPct": 14,
+    "yPct": 3
+   },
+   {
+    "text": "1800",
+    "xPct": 24,
+    "yPct": 4
+   },
+   {
+    "text": "1893",
+    "xPct": 58,
+    "yPct": 3
+   },
+   {
+    "text": "1602",
+    "xPct": 71,
+    "yPct": 3
+   },
+   {
+    "text": "1918",
+    "xPct": 7,
+    "yPct": 7
+   },
+   {
+    "text": "1492",
+    "xPct": 41,
+    "yPct": 9
+   },
+   {
+    "text": "1609",
+    "xPct": 71,
+    "yPct": 8
+   },
+   {
+    "text": "1012",
+    "xPct": 10,
+    "yPct": 18
+   },
+   {
+    "text": "1698",
+    "xPct": 21,
+    "yPct": 26
+   },
+   {
+    "text": "1806",
+    "xPct": 37,
+    "yPct": 24
+   },
+   {
+    "text": "1504",
+    "xPct": 52,
+    "yPct": 21
+   },
+   {
+    "text": "1908",
+    "xPct": 63,
+    "yPct": 18
+   },
+   {
+    "text": "1911",
+    "xPct": 6,
+    "yPct": 27
+   },
+   {
+    "text": "1807",
+    "xPct": 30,
+    "yPct": 28
+   },
+   {
+    "text": "1596",
+    "xPct": 44,
+    "yPct": 24
+   },
+   {
+    "text": "1586",
+    "xPct": 11,
+    "yPct": 37
+   },
+   {
+    "text": "1603",
+    "xPct": 49,
+    "yPct": 31
+   },
+   {
+    "text": "1590",
+    "xPct": 58,
+    "yPct": 35
+   },
+   {
+    "text": "1096",
+    "xPct": 5,
+    "yPct": 41
+   },
+   {
+    "text": "1596",
+    "xPct": 23,
+    "yPct": 40
+   },
+   {
+    "text": "1582",
+    "xPct": 31,
+    "yPct": 40
+   },
+   {
+    "text": "1628",
+    "xPct": 39,
+    "yPct": 40
+   },
+   {
+    "text": "1601",
+    "xPct": 13,
+    "yPct": 50
+   },
+   {
+    "text": "1404",
+    "xPct": 26,
+    "yPct": 49
+   },
+   {
+    "text": "1460",
+    "xPct": 36,
+    "yPct": 50
+   },
+   {
+    "text": "1605",
+    "xPct": 47,
+    "yPct": 52
+   },
+   {
+    "text": "1640",
+    "xPct": 59,
+    "yPct": 51
+   },
+   {
+    "text": "1002",
+    "xPct": 22,
+    "yPct": 56
+   },
+   {
+    "text": "1604",
+    "xPct": 30,
+    "yPct": 59
+   },
+   {
+    "text": "1486",
+    "xPct": 43,
+    "yPct": 63
+   },
+   {
+    "text": "1564",
+    "xPct": 70,
+    "yPct": 52
+   },
+   {
+    "text": "1616",
+    "xPct": 71,
+    "yPct": 62
+   },
+   {
+    "text": "1604",
+    "xPct": 60,
+    "yPct": 65
+   },
+   {
+    "text": "1607",
+    "xPct": 70,
+    "yPct": 67
+   },
+   {
+    "text": "1606",
+    "xPct": 70,
+    "yPct": 73
+   },
+   {
+    "text": "1642",
+    "xPct": 61,
+    "yPct": 74
+   },
+   {
+    "text": "1646",
+    "xPct": 69,
+    "yPct": 76
+   },
+   {
+    "text": "1011",
+    "xPct": 70,
+    "yPct": 78
+   },
+   {
+    "text": "RE",
+    "xPct": 5,
+    "yPct": 80
+   },
+   {
+    "text": "od berechnet durch",
+    "xPct": 15,
+    "yPct": 92
+   },
+   {
+    "text": "Kuttanjekh",
+    "xPct": 50,
+    "yPct": 92
+   }
+  ]
+ },
+ "a05-c1": {
+  "reka": {
+   "vidna": true,
+   "opis": "Vijugasta svetla (bela) črta, ki predstavlja rečni breg ali strugo, poteka po spodnjem desnem delu izrezka.",
+   "pozicija": {
+    "xPct": "55-100%",
+    "yPct": "65-100%",
+    "smer": "od sredine desne proti spodnjemu desnemu kotu"
+   }
+  },
+  "meja": {
+   "vidna": true,
+   "opis": "Debelo rdeče-rjavo obarvana katastrska meja, ki ločuje občino/območje.",
+   "pozicija": {
+    "xPct": "40-100%",
+    "yPct": "0-20%",
+    "smer": "poteka vodoravno (zahod-vzhod) po zgornjem desnem delu izrezka"
+   }
+  },
+  "cerkev": {
+   "vidna": false,
+   "opis": "Na izrezku ni vidnega simbola cerkve (z križem in apsido) niti pokopališča (obrobljenih zapos). Vidni so le posamezni drevesni simboli."
+  },
+  "stDB": 0,
+  "hisaSt": [],
+  "napisi": [
+   {
+    "text": "Pri Jankovichi",
+    "xPct": 32,
+    "yPct": 38
+   },
+   {
+    "text": "Vedatschitsch g.",
+    "xPct": 31,
+    "yPct": 60
+   },
+   {
+    "text": "W",
+    "xPct": 15,
+    "yPct": 5
+   },
+   {
+    "text": "W",
+    "xPct": 48,
+    "yPct": 17
+   },
+   {
+    "text": "W",
+    "xPct": 15,
+    "yPct": 26
+   },
+   {
+    "text": "W",
+    "xPct": 47,
+    "yPct": 36
+   },
+   {
+    "text": "W",
+    "xPct": 61,
+    "yPct": 30
+   },
+   {
+    "text": "W",
+    "xPct": 57,
+    "yPct": 46
+   },
+   {
+    "text": "W",
+    "xPct": 98,
+    "yPct": 35
+   }
+  ]
+ },
+ "a05-c2": {
+  "reka": "Ne, na izrezku ni vidne reke (ni vijugaste svetle/temne črte s pasom).",
+  "meja": "Da, debela rdečkasta mejna črta (meja katastrske občine) poteka po zunanjem robu prikazanega območja: od zgoraj levo (približno 5%, 15%), navzdol po levem robu (0%, 50%), čez spodnji del (50%, 95%) in nazaj navzgor po desnem robu (68%, 50%) do začetka.",
+  "cerkev": "Ne, na izrezku ni vidne cerkve (simbola z križem in apsido) niti pokopališča (obroča z križi).",
+  "stDB": 3,
+  "hisaSt": [
+   {
+    "xPct": 38.5,
+    "yPct": 38.5,
+    "st": ""
+   },
+   {
+    "xPct": 31.2,
+    "yPct": 42.5,
+    "st": ""
+   },
+   {
+    "xPct": 58,
+    "yPct": 80,
+    "st": ""
+   }
+  ],
+  "napisi": [
+   {
+    "text": "Na Dragi Doleg",
+    "xPct": 72,
+    "yPct": 10
+   },
+   {
+    "text": "Stoze Wardianov",
+    "xPct": 81.5,
+    "yPct": 92
+   },
+   {
+    "text": "C",
+    "xPct": 90,
+    "yPct": 26
+   },
+   {
+    "text": "H",
+    "xPct": 94,
+    "yPct": 53
+   },
+   {
+    "text": "I",
+    "xPct": 94,
+    "yPct": 86
+   }
+  ]
+ },
+ "a05-c3": {
+  "reka": {
+   "vidna": true,
+   "opis": "Velika vodna površina (reka) zaseda večino izrezka, omejena s črto zgoraj in desno.",
+   "pozicija": "Sredina in spodnji del (0-100% x, 10-100% y)"
+  },
+  "meja": {
+   "vidna": true,
+   "opis": "Debela črta, ki ločuje katastrsko občino/parcelacijo od reke, poteka po diagonali od zgoraj levo proti desno spodaj.",
+   "pozicija": "Zgoraj (0-100% x, 0-50% y) in desno (50-100% x, 0-50% y)"
+  },
+  "cerkev": {
+   "vidna": false,
+   "opis": "Na izrezku ni vidne cerkve niti pokopališča."
+  },
+  "stDB": 4,
+  "hisaSt": [
+   {
+    "xPct": 92,
+    "yPct": 25,
+    "st": "N° 124"
+   },
+   {
+    "xPct": 97,
+    "yPct": 13,
+    "st": "N° 123"
+   },
+   {
+    "xPct": 98,
+    "yPct": 5,
+    "st": "N° 122"
+   },
+   {
+    "xPct": 99,
+    "yPct": 25,
+    "st": "N° 125"
+   }
+  ],
+  "napisi": [
+   {
+    "text": "D",
+    "xPct": 6,
+    "yPct": 42
+   },
+   {
+    "text": "O",
+    "xPct": 37,
+    "yPct": 46
+   },
+   {
+    "text": "R",
+    "xPct": 68,
+    "yPct": 58
+   },
+   {
+    "text": "F",
+    "xPct": 94,
+    "yPct": 76
+   }
+  ]
+ },
+ "a05-c4": {
+  "reka": {
+   "vidna": true,
+   "opis": "Svetla, neobarvana površina (verjetno rečni breg ali poplavna ravnica) z vijugasto mejo na desnem robu izrezka",
+   "pozicija": "Desna stran (x: 45-100%, y: 0-65%), meja poteka od zgoraj desno (približno x=67%, y=0%) do spodaj (x=37%, y=58%)"
+  },
+  "meja": {
+   "vidna": true,
+   "opis": "Debela rdeče-rjava katastrska mejna črta (občinska meja) ki ločuje obarvane parcele od svetle površine desno",
+   "potek": "Od zgoraj (desni zgornji kot, približno x=67%, y=0%) diagonalno navzdol levo do konca izrezka parcel (približno x=37%, y=58%), nato kratka črta navzdol"
+  },
+  "cerkev": {
+   "vidna": false,
+   "opis": "Na izrezku ni vidnega simbola cerkve (s križem/apso) ali pokopališča (obrobljenih zaposov)"
+  },
+  "stDB": 12,
+  "hisaSt": [
+   {
+    "xPct": 20,
+    "yPct": 5,
+    "st": "305"
+   },
+   {
+    "xPct": 28,
+    "yPct": 10,
+    "st": "306"
+   },
+   {
+    "xPct": 25,
+    "yPct": 13,
+    "st": "307"
+   },
+   {
+    "xPct": 30,
+    "yPct": 18,
+    "st": "308"
+   },
+   {
+    "xPct": 27,
+    "yPct": 22,
+    "st": "309"
+   },
+   {
+    "xPct": 26,
+    "yPct": 26,
+    "st": "310"
+   },
+   {
+    "xPct": 20,
+    "yPct": 25,
+    "st": "311"
+   },
+   {
+    "xPct": 21,
+    "yPct": 29,
+    "st": "312"
+   },
+   {
+    "xPct": 20,
+    "yPct": 34,
+    "st": "313"
+   },
+   {
+    "xPct": 26,
+    "yPct": 36,
+    "st": "314"
+   },
+   {
+    "xPct": 28,
+    "yPct": 41,
+    "st": "315"
+   },
+   {
+    "xPct": 31,
+    "yPct": 47,
+    "st": "316"
+   }
+  ],
+  "napisi": [
+   {
+    "text": "Stürze Wardianow",
+    "xPct": 81,
+    "yPct": 21
+   },
+   {
+    "text": "Nº 8 Na Verwaltschäft Schleb.",
+    "xPct": 64,
+    "yPct": 55
+   },
+   {
+    "text": "W",
+    "xPct": 44,
+    "yPct": 2
+   },
+   {
+    "text": "W",
+    "xPct": 59,
+    "yPct": 19
+   },
+   {
+    "text": "W",
+    "xPct": 50,
+    "yPct": 28
+   },
+   {
+    "text": "I",
+    "xPct": 93,
+    "yPct": 15
+   },
+   {
+    "text": "L",
+    "xPct": 82,
+    "yPct": 44
+   },
+   {
+    "text": "Z",
+    "xPct": 63,
+    "yPct": 73
+   },
+   {
+    "text": "F",
+    "xPct": 24,
+    "yPct": 76
+   }
+  ]
+ }
+}

@@ -1,0 +1,100 @@
+{
+ "displayFieldName": "SEKCIJA1",
+ "fieldAliases": {
+  "OBJECTID": "OBJECTID",
+  "ID": "ID",
+  "SEKCIJA1": "SEKCIJA1",
+  "SEKCIJA2": "SEKCIJA2",
+  "SEKCIJA_I": "SEKCIJA_I",
+  "LIST": "LIST",
+  "SPL_OZN": "SPL_OZN",
+  "MERILO": "MERILO",
+  "COORD_SYS": "COORD_SYS",
+  "REL_LNK": "REL_LNK",
+  "SE_ANNO_CAD_DATA": "SE_ANNO_CAD_DATA",
+  "SHAPE.AREA": "SHAPE.AREA",
+  "SHAPE.LEN": "SHAPE.LEN"
+ },
+ "geometryType": "esriGeometryPolygon",
+ "spatialReference": {
+  "wkid": 4326,
+  "latestWkid": 4326
+ },
+ "fields": [
+  {
+   "name": "OBJECTID",
+   "type": "esriFieldTypeOID",
+   "alias": "OBJECTID"
+  },
+  {
+   "name": "ID",
+   "type": "esriFieldTypeDouble",
+   "alias": "ID"
+  },
+  {
+   "name": "SEKCIJA1",
+   "type": "esriFieldTypeString",
+   "alias": "SEKCIJA1",
+   "length": 13
+  },
+  {
+   "name": "SEKCIJA2",
+   "type": "esriFieldTypeString",
+   "alias": "SEKCIJA2",
+   "length": 8
+  },
+  {
+   "name": "SEKCIJA_I",
+   "type": "esriFieldTypeString",
+   "alias": "SEKCIJA_I",
+   "length": 20
+  },
+  {
+   "name": "LIST",
+   "type": "esriFieldTypeString",
+   "alias": "LIST",
+   "length": 6
+  },
+  {
+   "name": "SPL_OZN",
+   "type": "esriFieldTypeString",
+   "alias": "SPL_OZN",
+   "length": 13
+  },
+  {
+   "name": "MERILO",
+   "type": "esriFieldTypeDouble",
+   "alias": "MERILO"
+  },
+  {
+   "name": "COORD_SYS",
+   "type": "esriFieldTypeString",
+   "alias": "COORD_SYS",
+   "length": 255
+  },
+  {
+   "name": "REL_LNK",
+   "type": "esriFieldTypeString",
+   "alias": "REL_LNK",
+   "length": 255
+  },
+  {
+   "name": "SE_ANNO_CAD_DATA",
+   "type": "esriFieldTypeBlob",
+   "alias": "SE_ANNO_CAD_DATA"
+  },
+  {
+   "name": "SHAPE.AREA",
+   "type": "esriFieldTypeDouble",
+   "alias": "SHAPE.AREA"
+  },
+  {
+   "name": "SHAPE.LEN",
+   "type": "esriFieldTypeDouble",
+   "alias": "SHAPE.LEN"
+  }
+ ],
+ "features": [
+  
+ ]
+}

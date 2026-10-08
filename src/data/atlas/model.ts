@@ -117,31 +117,79 @@ export const SHEET_GEOREFS: SheetGeoref[] = [
       "Estimated accuracy ±40–80 m over the village area. Sheet scale ~0.79 m/px. The OSM building presence (15 of 156 matching under the new scheme) further supports the affine.",
   },
   {
+    id: "georef-a03",
+    sheet: "A03",
+    imageUrl: "/atlas/n83-a03.jpg",
+    bounds: [
+      [45.5575, 15.2485],
+      [45.5437, 15.273],
+    ],
+    pixels: { width: 2645, height: 2154 },
+    scaleMPerPixel: 0.72,
+    status: "REVIEW",
+    methodSi:
+      "P10 (2026-10-08): arhivska oznaka v okvirju lista »O.IX24dg« (Kurrent, nepomaknjeno VLM branje iz P9) = SEKCIJA katastrske mreže eZKN (GURS): celica VKIX24dg z URADNO geometrijo (45,5437–45,5575 N, 15,2485–15,2730 E; D96/TM). List ≈ celica + robovi (princip potrjen na A02: središče vsebine A02 = središče celice VKIX24cf NATANČNO). Risana vsebina A03 = le vzhodni pas (x 83–100 %) = zahodni rob k.o. Griblje ob meji s k.o. Tribuče/Bedenj — ostalo lista je prazno (ozemlje sosednjih k.o., narisano na njihovih listih). VALIDACIJE: razpršeni napis E-H-C-S-T-U-B-I-R-T = TRIBUTSCH (68 %, 35 %) pade v k.o. Tribuče ✓; WEIDENDORF (71 %, 86 %) pade v k.o. Bedenj ✓ (Bedenj = Weidendorf, Wikipedija); napis »Borli«/»Berli« ≈ istoimensko območje na ZKN »GRIBLJE 4« (eZKN) ✓. P5-b hiše na pasu ≈ kmetije zahodnega roba (porabe: 1825→2026 se vzorec spremeni).",
+    methodEn:
+      "P10 (2026-10-08): the archive code in the sheet frame »O.IX24dg« (Kurrent, unprompted VLM read from P9) = the SECTION of the eZKN cadastral grid (GURS): cell VKIX24dg with OFFICIAL geometry (45.5437–45.5575 N, 15.2485–15.2730 E; D96/TM). Sheet ≈ cell + margins (the principle validated on A02: the centre of A02's content = the centre of cell VKIX24cf EXACTLY). The drawn content of A03 = only the eastern strip (x 83–100 %) = the western edge of c.m. Griblje along the Tribuče/Bedenj border — the rest of the sheet is blank (the neighbours' territory, drawn on their own sheets). VALIDATIONS: the scattered letters E-H-C-S-T-U-B-I-R-T = TRIBUTSCH (68 %, 35 %) falls inside c.m. Tribuče ✓; WEIDENDORF (71 %, 86 %) falls inside c.m. Bedenj ✓ (Bedenj = Weidendorf, Wikipedia); the label »Borli«/»Berli« ≈ the same-named area on the ZKN sheet »GRIBLJE 4« (eZKN) ✓.",
+    controlPoints: [
+      { fromSi: "celica VKIX24dg (eZKN/GURS, uradna geometrija mreže 1:2880)", a01x: 1322, a01y: 1077, modernLat: 45.5506, modernLng: 15.2608, noteSi: "središče celice ≈ središče lista; k.o. Griblje zaseda le vzhodni pas (15,269–15,273)" },
+      { fromSi: "razpršeni napis TRIBUTSCH (A03 px ≈ 68 %, 35 %)", a01x: 1799, a01y: 754, modernLat: 45.5527, modernLng: 15.2652, noteSi: "ime k.o. Tribuče, pisano po njenem ozemlju — pod celico pade v k.o. Tribuče ✓" },
+      { fromSi: "napis WEIDENDORF (A03 px ≈ 71 %, 86 %)", a01x: 1878, a01y: 1852, modernLat: 45.5456, modernLng: 15.2659, noteSi: "ime k.o. Bedenj (Weidendorf) — pade v k.o. Bedenj ✓" },
+    ],
+    accuracySi:
+      "Ocena ±200–400 m (preslikava list↔celica po principu iz A02; stavbna validacija šibka — 200 let sprememb). K.o. Griblje na listu = le vzhodni pas; zahodni del lista = ozemlje k.o. Tribuče in Bedenj (prazno). Merilo ~0,72 m/px (isti papirni format 1:2880 kot A02).",
+    accuracyEn:
+      "Estimated ±200–400 m (the sheet↔cell mapping by the principle validated on A02; the building validation is weak — 200 years of change). C.m. Griblje on the sheet = the eastern strip only; the western part of the sheet = the territory of c.m. Tribuče and Bedenj (blank). Scale ~0.72 m/px (the same 1:2880 paper format as A02).",
+  },
+  {
     id: "georef-a04",
     sheet: "A04",
     imageUrl: "/atlas/n83-a04.jpg",
-    // ovojnica rotiranega lista (+30,9°) — ne osno poravnana!
     bounds: [
-      [45.53774, 15.2942],
-      [45.52188, 15.318],
+      [45.5574, 15.2728],
+      [45.5436, 15.2973],
     ],
     pixels: { width: 2645, height: 2158 },
-    scaleMPerPixel: 0.55,
-    status: "RECONSTRUCTED",
+    scaleMPerPixel: 0.72,
+    status: "REVIEW",
     methodSi:
-      "P9 (2026-10-08, ob dvigu VLM kvote): list A04 vsebuje OVIN Kolpe pri Adlešičih — odsek, ki je P8 (ravna struga pri Gribljah) ni mogel zasidrati. 10 točk struge (VLM vodenje po ploščicah + konsenz) → podobnostna prileganja (rotacija, merilo, translacija) proti validirani moderni centerline Kolpe (OTM; GEOTRUTH #14): rotacija +30,9°, merilo 0,55 m/px, mediana odmika 10 m. NEODVISNE kontrole: točka izven fita (23 m), napis ADLESCHITZ pade v k.o. Adlešiči (1,2 km N od vasi — površinski napis ozemlja), WEIDENDORF na meji k.o. Bedenj (Wikipedija: Bedenj = Weidendorf), TRIBUTSCH na sosednjem listu A03 = Tribuče. Merilo: oblika ovinka optimalna pri 0,55; širina narisane struge (120–165 px) proti realni Kolpi (50–90 m; OTM z16) s kalibracijo pretiravanja iz A02 (pas 125 px × 0,79 = 99 m) → s ≈ 0,45–0,65 [~]. List je ZASIDRAN le vzdolž reke; vogali odvisni od merila (±250–470 m).",
+      "P10 POPRAVEK (2026-10-08): arhivska oznaka v okvirju lista »O.IX24cg« (trikratno VLM branje: P9 nepomaknjeno + 2× ciljno) = SEKCIJA eZKN mreže: celica VKIX24cg (45,5436–45,5574 N, 15,2728–15,2973 E) — območje DIREKTNO JUŽNO od A02/celice cf, NE ovin Kolpe pri Adlešiči! P9-georeferenca (rot +30,9°, s 0,55, ovin 45,522–45,538) je bila ZAVRŽENA: (1) stavbna validacija — 222 zaznanih simbolov A04 na P9-legi ima mediano odmik 636 m od sodobnih stavb (celica cg: 72 m) — P9 lega statistično izključena; (2) P9 »neodvisne« kontrole (ADLESCHITZ v k.o. Adlešiči, WEIDENDORF ob k.o. Bedenj) so NEDISKRIMINATIVNE — obe območji ležita v istih k.o.; (3) P9 sled »reke« (10 točk, širina 180 px ≈ 130 m pri 0,72) je najverjetneje dolina/cesta, ne Kolpa (Kolpa je ~1,2 km vzhodno od vzhodnega roba celice cg, IZVEN lista); P9 prileganje oblike ovinka = zavedljiv lokalni optimum proste podobnostne preslikave. SEDAJ: list A04 = celica cg + robovi (sever-gor, kot A02 — razmerje stranic lista 1,23 ≈ celice 1,25 ✓); vsebina = južni del k.o. Griblje + meje s.k. Tribuče (Z), Bedenj (JZ), Adlešiči (V). VALIDACIJE: WEIDENDORF (spodaj levo) = k.o. Bedenj ✓; ADLESCHITZ (desno) = k.o. Adlešiči ✓; razporeditev se ujema z ZKN listom »GRIBLJE 4« (eZKN, isto območje: Tribuče sredina-levo, Bednji spodaj-levo) ✓; Bresnik (1032,1532) → (45,5476; 15,2824) ≈ območje Brinskega sela [~].",
     methodEn:
-      "P9 (2026-10-08, after the VLM quota was lifted): sheet A04 contains the Kolpa BEND by Adlešiči — the very stretch P8 (the straight channel at Griblje) could not anchor. 10 channel points (VLM tile-guided consensus) → similarity fitting (rotation, scale, translation) against the validated modern Kolpa centerline (OTM; GEOTRUTH #14): rotation +30.9°, scale 0.55 m/px, median offset 10 m. INDEPENDENT checks: one out-of-fit point (23 m); the ADLESCHITZ label falls inside c.m. Adlešiči (1.2 km N of the village — an area label); WEIDENDORF at the c.m. Bedenj border (Wikipedia: Bedenj = Weidendorf); TRIBUTSCH on the neighbouring sheet A03 = Tribuče. Scale: bend-shape optimum 0.55; drawn-channel width (120–165 px) vs the real Kolpa (50–90 m; OTM z16) with the A02 exaggeration calibration (band 125 px × 0.79 = 99 m) → s ≈ 0.45–0.65 [~]. The sheet is anchored ALONG the river only; the corners depend on scale (±250–470 m).",
+      "P10 CORRECTION (2026-10-08): the archive code in the sheet frame »O.IX24cg« (three VLM reads: P9 unprompted + 2 targeted) = the eZKN grid SECTION: cell VKIX24cg (45.5436–45.5574 N, 15.2728–15.2973 E) — the area DIRECTLY SOUTH of A02/cell cf, NOT the Kolpa bend by Adlešiči! The P9 georeference (rot +30.9°, s 0.55, the bend at 45.522–45.538) was RETRACTED: (1) building validation — 222 detected A04 symbols at the P9 position have a median offset of 636 m from modern buildings (cell cg: 72 m) — the P9 position is statistically excluded; (2) P9's »independent« checks (ADLESCHITZ inside c.m. Adlešiči, WEIDENDORF at c.m. Bedenj) are NON-DISCRIMINATING — both candidate areas lie in the same c.m.s; (3) P9's »river« trace (10 points, width 180 px ≈ 130 m at 0.72) is most likely a valley/road, not the Kolpa (the Kolpa lies ~1.2 km east of cell cg's eastern edge, OUTSIDE the sheet); P9's bend-shape fit = a seductive local optimum of the free similarity transform. NOW: sheet A04 = cell cg + margins (north-up, like A02 — the sheet aspect 1.23 ≈ the cell's 1.25 ✓); the content = the southern part of c.m. Griblje + the borders with c.m. Tribuče (W), Bedenj (SW), Adlešiči (E). VALIDATIONS: WEIDENDORF (bottom left) = c.m. Bedenj ✓; ADLESCHITZ (right) = c.m. Adlešiči ✓; the layout matches the ZKN sheet »GRIBLJE 4« (eZKN, the same area: Tribuče middle-left, Bednji bottom-left) ✓.",
     controlPoints: [
-      { fromSi: "ovin Kolpe pri Adlešičih (A04 px ≈ 2456,743 → 1537,1947; 10 točk struge)", a01x: 2456, a01y: 743, modernLat: 45.53127, modernLng: 15.31417, noteSi: "VLM-konsenz + fit na moderno centerline; mediana 10 m, s=0,55, rot +30,9°" },
-      { fromSi: "točka struge izven fita (A04 px 1983,1077)", a01x: 1983, a01y: 1077, modernLat: 45.53149, modernLng: 15.3101, noteSi: "neodvisna kontrola: 23 m od moderne Kolpe" },
-      { fromSi: "napis ADLESCHITZ (A04 px ≈ 2116,1403)", a01x: 2116, a01y: 1403, modernLat: 45.5332, modernLng: 15.30972, noteSi: "površinski napis ozemlja k.o. Adlešiči — 1,2 km N od vasi Adlešiči (45,5224/15,3110)" },
-      { fromSi: "napis WEIDENDORF = Bedenj (A04 px ≈ 608,1964)", a01x: 608, a01y: 1964, modernLat: 45.53175, modernLng: 15.29857, noteSi: "območni napis sosednje k.o. Bedenj (vas 45,5374/15,2769 — 1,75 km SZ) [~]" },
+      { fromSi: "celica VKIX24cg (eZKN/GURS, uradna geometrija mreže 1:2880)", a01x: 1322, a01y: 1079, modernLat: 45.5505, modernLng: 15.2851, noteSi: "središče celice = središče lista (princip A02↔cf)" },
+      { fromSi: "napis WEIDENDORF = Bedenj (A04 px ≈ 608,1964 → spodaj levo)", a01x: 608, a01y: 1964, modernLat: 45.5457, modernLng: 15.2784, noteSi: "k.o. Bedenj (Weidendorf) — jugozahodni sosed celice ✓" },
+      { fromSi: "napis ADLESCHITZ (A04 px ≈ 2116,1403 → desno)", a01x: 2116, a01y: 1403, modernLat: 45.5485, modernLng: 15.2924, noteSi: "k.o. Adlešiči — vzhodni sosed celice ✓" },
     ],
     accuracySi:
-      "Ocena ±100–150 m vzdolž reke (sidro); ±250–470 m na vogalih (dvoumnost merila 0,45–0,74; rotacija stabilna +21…+31°). List je v ovojnici rotiran za +31° — slika NI osno poravnana z bounds. Ploščice 0,3–0,5 km med listi A01/A02 in A04 pokriva A03/A05 (še ne georeferencirana).",
+      "Ocena ±200–400 m (preslikava list↔celica; dvoumnost robov lista). Popravek P9: prejšnja objavljena lega (ovin Kolpe, ±100 m vzdolž reke) je NAPAČNA za ~2,5 km — razlogi dokumentirani v methodSi. Kolpa NI na listu A04 (teče ~120 m vzhodno od vzhodnega roba celice cg).",
     accuracyEn:
-      "Estimated ±100–150 m along the river (anchor); ±250–470 m at the corners (scale ambiguity 0.45–0.74; rotation stable at +21…+31°). The sheet is rotated +31° inside the bounds envelope — the image is NOT axis-aligned with the bounds. The 0.3–0.5 km gap between sheets A01/A02 and A04 is covered by A03/A05 (not yet georeferenced).",
+      "Estimated ±200–400 m (the sheet↔cell mapping; the sheet-margin ambiguity). P9 correction: the previously published position (the Kolpa bend, ±100 m along the river) is WRONG by ~2.5 km — the reasons documented in methodSi. The Kolpa is NOT on sheet A04 (it flows ~120 m east of cell cg's eastern edge).",
+  },
+  {
+    id: "georef-a05",
+    sheet: "A05",
+    imageUrl: "/atlas/n83-a05.jpg",
+    bounds: [
+      [45.5437, 15.2726],
+      [45.5299, 15.2971],
+    ],
+    pixels: { width: 2634, height: 2165 },
+    scaleMPerPixel: 0.73,
+    status: "REVIEW",
+    methodSi:
+      "P10 (2026-10-08): arhivska oznaka v okvirju lista »O.IX24ch« (nepomaknjeno VLM branje iz P9) = SEKCIJA eZKN mreže: celica VKIX24ch (45,5299–45,5437 N, 15,2726–15,2971 E) — skrajni JUG 1825 k.o. Griblje (današnja k.o. Adlešiči; ozemlje je bilo pozneje odvzeto k.o. Griblje!). Risana vsebina = sklop ~45 stavb s hišnimi št. v ZGORNJI DESNI polovici (75 %, 28 %) → (45,5398; 15,291) = območje Fučkovcev/severnega roba Dragošev [~]; ostalo lista = prazno (k.o. Adlešiči). VALIDACIJE: razpršene črke A-D-L-E-S-C + [Vedalschitz ~] = k.o. Adlešiči ✓ (ime pisano po njenem ozemlju); vrstno ime »Pri Jankovichti« (65 %, 21 %) → (45,5408; 15,2885) = današnje naselje Jankoviči ✓ (45,523–45,545; 15,273–15,293); »Na Prago Poljé«, »Štize Vardianove«, »N°8 Na Svetoschki Schloß« = Flurnamen istega območja; neodvisen multivalentni fit sklopa (A05 px → sodobne stavbne parcele GURS) je izbral Fučkovce kot najboljšega kandidata med 6-imi (score 0,914, vendar nediskriminativen — nič-test 0,84).",
+    methodEn:
+      "P10 (2026-10-08): the archive code in the sheet frame »O.IX24ch« (unprompted VLM read from P9) = the eZKN grid SECTION: cell VKIX24ch (45.5299–45.5437 N, 15.2726–15.2971 E) — the far SOUTH of the 1825 c.m. Griblje (today's c.m. Adlešiči; the territory was later detached from c.m. Griblje!). The drawn content = a cluster of ~45 buildings with house numbers in the UPPER RIGHT half (75 %, 28 %) → (45.5398; 15.291) = the Fučkovci / north-Dragoši area [~]; the rest of the sheet is blank (c.m. Adlešiči). VALIDATIONS: the scattered letters A-D-L-E-S-C + [Vedalschitz ~] = c.m. Adlešiči ✓ (the name written across its own territory); the field name »Pri Jankovichti« (65 %, 21 %) → (45.5408; 15.2885) = today's settlement of Jankoviči ✓ (45.523–45.545; 15.273–15.293); »Na Prago Poljé«, »Štize Vardianove«, »N°8 Na Svetoschki Schloß« = field names of the same area; an independent multi-candidate fit of the cluster (A05 px → modern GURS building parcels) selected Fučkovci as the best of 6 candidates (score 0.914, but non-discriminating — the null test 0.84).",
+    controlPoints: [
+      { fromSi: "celica VKIX24ch (eZKN/GURS, uradna geometrija mreže 1:2880)", a01x: 1317, a01y: 1082, modernLat: 45.5368, modernLng: 15.2849, noteSi: "središče celice = središče lista; k.o. Griblje zaseda le zgornjo desno polovico" },
+      { fromSi: "sklop ~45 stavb s hišnimi št. (A05 px ≈ 75 %, 28 %)", a01x: 1975, a01y: 606, modernLat: 45.5398, modernLng: 15.291, noteSi: "Fučkovci / severni rob Dragošev [~] — k.o. Griblje 1825 sega do sem!" },
+      { fromSi: "vrstno ime »Pri Jankovichti« (A05 px ≈ 65 %, 21 %)", a01x: 1712, a01y: 455, modernLat: 45.5408, modernLng: 15.2885, noteSi: "današnje naselje Jankoviči ✓" },
+    ],
+    accuracySi:
+      "Ocena ±200–400 m. List pokriva skrajni jug 1825 k.o. Griblje (45,530–45,5437) — ozemlje, ki ga današnja k.o. Griblje (do 45,5442) NE vsebuje več: meji k.o. sta se pozneje premaknili. Hišne št. na listu (npr. N°8) so številke znotraj tedanje k.o. Griblje.",
+    accuracyEn:
+      "Estimated ±200–400 m. The sheet covers the far south of the 1825 c.m. Griblje (45.530–45.5437) — territory that today's c.m. Griblje (down to 45.5442) no longer contains: the c.m. boundaries were later redrawn. The house numbers on the sheet (e.g. N°8) are numbers within the then c.m. Griblje.",
   },
 ];
 

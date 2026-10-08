@@ -1,0 +1,1174 @@
+{
+ "displayFieldName": "SEKCIJA1",
+ "fieldAliases": {
+  "OBJECTID": "OBJECTID",
+  "ID": "ID",
+  "SEKCIJA1": "SEKCIJA1",
+  "SEKCIJA2": "SEKCIJA2",
+  "SEKCIJA_I": "SEKCIJA_I",
+  "LIST": "LIST",
+  "SPL_OZN": "SPL_OZN",
+  "MERILO": "MERILO",
+  "COORD_SYS": "COORD_SYS",
+  "REL_LNK": "REL_LNK",
+  "SE_ANNO_CAD_DATA": "SE_ANNO_CAD_DATA",
+  "SHAPE.AREA": "SHAPE.AREA",
+  "SHAPE.LEN": "SHAPE.LEN"
+ },
+ "geometryType": "esriGeometryPolygon",
+ "spatialReference": {
+  "wkid": 4326,
+  "latestWkid": 4326
+ },
+ "fields": [
+  {
+   "name": "OBJECTID",
+   "type": "esriFieldTypeOID",
+   "alias": "OBJECTID"
+  },
+  {
+   "name": "ID",
+   "type": "esriFieldTypeDouble",
+   "alias": "ID"
+  },
+  {
+   "name": "SEKCIJA1",
+   "type": "esriFieldTypeString",
+   "alias": "SEKCIJA1",
+   "length": 13
+  },
+  {
+   "name": "SEKCIJA2",
+   "type": "esriFieldTypeString",
+   "alias": "SEKCIJA2",
+   "length": 8
+  },
+  {
+   "name": "SEKCIJA_I",
+   "type": "esriFieldTypeString",
+   "alias": "SEKCIJA_I",
+   "length": 20
+  },
+  {
+   "name": "LIST",
+   "type": "esriFieldTypeString",
+   "alias": "LIST",
+   "length": 6
+  },
+  {
+   "name": "SPL_OZN",
+   "type": "esriFieldTypeString",
+   "alias": "SPL_OZN",
+   "length": 13
+  },
+  {
+   "name": "MERILO",
+   "type": "esriFieldTypeDouble",
+   "alias": "MERILO"
+  },
+  {
+   "name": "COORD_SYS",
+   "type": "esriFieldTypeString",
+   "alias": "COORD_SYS",
+   "length": 255
+  },
+  {
+   "name": "REL_LNK",
+   "type": "esriFieldTypeString",
+   "alias": "REL_LNK",
+   "length": 255
+  },
+  {
+   "name": "SE_ANNO_CAD_DATA",
+   "type": "esriFieldTypeBlob",
+   "alias": "SE_ANNO_CAD_DATA"
+  },
+  {
+   "name": "SHAPE.AREA",
+   "type": "esriFieldTypeDouble",
+   "alias": "SHAPE.AREA"
+  },
+  {
+   "name": "SHAPE.LEN",
+   "type": "esriFieldTypeDouble",
+   "alias": "SHAPE.LEN"
+  }
+ ],
+ "features": [
+  {
+   "attributes": {
+    "OBJECTID": 12914,
+    "ID": 28800006992.0,
+    "SEKCIJA1": "VKIX24",
+    "SEKCIJA2": " ",
+    "SEKCIJA_I": " ",
+    "LIST": "dg",
+    "SPL_OZN": "VKIX24dg",
+    "MERILO": 2880.0,
+    "COORD_SYS": "M2880K",
+    "REL_LNK": "VKIX24dg_M2880K",
+    "SE_ANNO_CAD_DATA": null,
+    "SHAPE.AREA": 0,
+    "SHAPE.LEN": 0
+   },
+   "geometry": {
+    "rings": [
+     [
+      [
+       15.27301101334176,
+       45.55736982855089
+      ],
+      [
+       15.272826199302957,
+       45.543722231830621
+      ],
+      [
+       15.248538340284801,
+       45.543884597989482
+      ],
+      [
+       15.248717221030661,
+       45.557532201978375
+      ],
+      [
+       15.27301101334176,
+       45.55736982855089
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "attributes": {
+    "OBJECTID": 13192,
+    "ID": 28800006933.0,
+    "SEKCIJA1": "VKIX24",
+    "SEKCIJA2": " ",
+    "SEKCIJA_I": " ",
+    "LIST": "cf",
+    "SPL_OZN": "VKIX24cf",
+    "MERILO": 2880.0,
+    "COORD_SYS": "M2880K",
+    "REL_LNK": "VKIX24cf_M2880K",
+    "SE_ANNO_CAD_DATA": null,
+    "SHAPE.AREA": 0,
+    "SHAPE.LEN": 0
+   },
+   "geometry": {
+    "rings": [
+     [
+      [
+       15.29749523312652,
+       45.570849605875885
+      ],
+      [
+       15.297304446638099,
+       45.557202179740614
+      ],
+      [
+       15.27301101334176,
+       45.55736982855089
+      ],
+      [
+       15.273195991069008,
+       45.571017353220874
+      ],
+      [
+       15.29749523312652,
+       45.570849605875885
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "attributes": {
+    "OBJECTID": 13193,
+    "ID": 28800006934.0,
+    "SEKCIJA1": "VKIX24",
+    "SEKCIJA2": " ",
+    "SEKCIJA_I": " ",
+    "LIST": "df",
+    "SPL_OZN": "VKIX24df",
+    "MERILO": 2880.0,
+    "COORD_SYS": "M2880K",
+    "REL_LNK": "VKIX24df_M2880K",
+    "SE_ANNO_CAD_DATA": null,
+    "SHAPE.AREA": 0,
+    "SHAPE.LEN": 0
+   },
+   "geometry": {
+    "rings": [
+     [
+      [
+       15.273195991069008,
+       45.571017353220874
+      ],
+      [
+       15.27301101334176,
+       45.55736982855089
+      ],
+      [
+       15.248717221030661,
+       45.557532201978375
+      ],
+      [
+       15.248896261624553,
+       45.571179822149134
+      ],
+      [
+       15.273195991069008,
+       45.571017353220874
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "attributes": {
+    "OBJECTID": 13667,
+    "ID": 28800007051.0,
+    "SEKCIJA1": "ZKIX24",
+    "SEKCIJA2": " ",
+    "SEKCIJA_I": " ",
+    "LIST": "ag",
+    "SPL_OZN": "ZKIX24ag",
+    "MERILO": 2880.0,
+    "COORD_SYS": "M2880K",
+    "REL_LNK": "ZKIX24ag_M2880K",
+    "SE_ANNO_CAD_DATA": null,
+    "SHAPE.AREA": 0,
+    "SHAPE.LEN": 0
+   },
+   "geometry": {
+    "rings": [
+     [
+      [
+       13.693922577363287,
+       45.543480563986307
+      ],
+      [
+       13.669633590610102,
+       45.543305815277165
+      ],
+      [
+       13.669434854514202,
+       45.55695482519458
+      ],
+      [
+       13.69372964800017,
+       45.557129634826339
+      ],
+      [
+       13.693922577363287,
+       45.543480563986307
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "attributes": {
+    "OBJECTID": 13668,
+    "ID": 28800007052.0,
+    "SEKCIJA1": "ZKIX24",
+    "SEKCIJA2": " ",
+    "SEKCIJA_I": " ",
+    "LIST": "bg",
+    "SPL_OZN": "ZKIX24bg",
+    "MERILO": 2880.0,
+    "COORD_SYS": "M2880K",
+    "REL_LNK": "ZKIX24bg_M2880K",
+    "SE_ANNO_CAD_DATA": null,
+    "SHAPE.AREA": 0,
+    "SHAPE.LEN": 0
+   },
+   "geometry": {
+    "rings": [
+     [
+      [
+       13.669633590610102,
+       45.543305815277165
+      ],
+      [
+       13.645344685741517,
+       45.543125700539576
+      ],
+      [
+       13.645140145232528,
+       45.556774556262184
+      ],
+      [
+       13.669434854514202,
+       45.55695482519458
+      ],
+      [
+       13.669633590610102,
+       45.543305815277165
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "attributes": {
+    "OBJECTID": 13669,
+    "ID": 28800007053.0,
+    "SEKCIJA1": "ZKIX24",
+    "SEKCIJA2": " ",
+    "SEKCIJA_I": " ",
+    "LIST": "dg",
+    "SPL_OZN": "ZKIX24dg",
+    "MERILO": 2880.0,
+    "COORD_SYS": "M2880K",
+    "REL_LNK": "ZKIX24dg_M2880K",
+    "SE_ANNO_CAD_DATA": null,
+    "SHAPE.AREA": 0,
+    "SHAPE.LEN": 0
+   },
+   "geometry": {
+    "rings": [
+     [
+      [
+       13.621055996758532,
+       45.542940309522621
+      ],
+      [
+       13.596767655220042,
+       45.542749823841454
+      ],
+      [
+       13.596551502144928,
+       45.556398545650509
+      ],
+      [
+       13.620845648942961,
+       45.556589189468113
+      ],
+      [
+       13.621055996758532,
+       45.542940309522621
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "attributes": {
+    "OBJECTID": 13670,
+    "ID": 28800007054.0,
+    "SEKCIJA1": "VKIX24",
+    "SEKCIJA2": " ",
+    "SEKCIJA_I": " ",
+    "LIST": "bh",
+    "SPL_OZN": "VKIX24bh",
+    "MERILO": 2880.0,
+    "COORD_SYS": "M2880K",
+    "REL_LNK": "VKIX24bh_M2880K",
+    "SE_ANNO_CAD_DATA": null,
+    "SHAPE.AREA": 0,
+    "SHAPE.LEN": 0
+   },
+   "geometry": {
+    "rings": [
+     [
+      [
+       15.321401349610012,
+       45.543382034974258
+      ],
+      [
+       15.321205484803256,
+       45.529734741668619
+      ],
+      [
+       15.296923763359446,
+       45.529907286534865
+      ],
+      [
+       15.297113828004775,
+       45.54355468150542
+      ],
+      [
+       15.321401349610012,
+       45.543382034974258
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "attributes": {
+    "OBJECTID": 13671,
+    "ID": 28800007055.0,
+    "SEKCIJA1": "VKIX24",
+    "SEKCIJA2": " ",
+    "SEKCIJA_I": " ",
+    "LIST": "ch",
+    "SPL_OZN": "VKIX24ch",
+    "MERILO": 2880.0,
+    "COORD_SYS": "M2880K",
+    "REL_LNK": "VKIX24ch_M2880K",
+    "SE_ANNO_CAD_DATA": null,
+    "SHAPE.AREA": 0,
+    "SHAPE.LEN": 0
+   },
+   "geometry": {
+    "rings": [
+     [
+      [
+       15.297113828004775,
+       45.54355468150542
+      ],
+      [
+       15.296923763359446,
+       45.529907286534865
+      ],
+      [
+       15.272641933739303,
+       45.530074739409692
+      ],
+      [
+       15.272826199302957,
+       45.543722231830621
+      ],
+      [
+       15.297113828004775,
+       45.54355468150542
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "attributes": {
+    "OBJECTID": 13672,
+    "ID": 28800007056.0,
+    "SEKCIJA1": "VKIX24",
+    "SEKCIJA2": " ",
+    "SEKCIJA_I": " ",
+    "LIST": "dh",
+    "SPL_OZN": "VKIX24dh",
+    "MERILO": 2880.0,
+    "COORD_SYS": "M2880K",
+    "REL_LNK": "VKIX24dh_M2880K",
+    "SE_ANNO_CAD_DATA": null,
+    "SHAPE.AREA": 0,
+    "SHAPE.LEN": 0
+   },
+   "geometry": {
+    "rings": [
+     [
+      [
+       15.272826199302957,
+       45.543722231830621
+      ],
+      [
+       15.272641933739303,
+       45.530074739409692
+      ],
+      [
+       15.248359745993133,
+       45.530237010807404
+      ],
+      [
+       15.248538340284801,
+       45.543884597989482
+      ],
+      [
+       15.272826199302957,
+       45.543722231830621
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "attributes": {
+    "OBJECTID": 12487,
+    "ID": 28800007114.0,
+    "SEKCIJA1": "ZKIX24",
+    "SEKCIJA2": " ",
+    "SEKCIJA_I": " ",
+    "LIST": "ah",
+    "SPL_OZN": "ZKIX24ah",
+    "MERILO": 2880.0,
+    "COORD_SYS": "M2880K",
+    "REL_LNK": "ZKIX24ah_M2880K",
+    "SE_ANNO_CAD_DATA": null,
+    "SHAPE.AREA": 0,
+    "SHAPE.LEN": 0
+   },
+   "geometry": {
+    "rings": [
+     [
+      [
+       13.69411539722109,
+       45.529831510935225
+      ],
+      [
+       13.669832085824567,
+       45.529656732556759
+      ],
+      [
+       13.669633590610102,
+       45.543305815277165
+      ],
+      [
+       13.693922577363287,
+       45.543480563986307
+      ],
+      [
+       13.69411539722109,
+       45.529831510935225
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "attributes": {
+    "OBJECTID": 12488,
+    "ID": 28800007115.0,
+    "SEKCIJA1": "ZKIX24",
+    "SEKCIJA2": " ",
+    "SEKCIJA_I": " ",
+    "LIST": "bh",
+    "SPL_OZN": "ZKIX24bh",
+    "MERILO": 2880.0,
+    "COORD_SYS": "M2880K",
+    "REL_LNK": "ZKIX24bh_M2880K",
+    "SE_ANNO_CAD_DATA": null,
+    "SHAPE.AREA": 0,
+    "SHAPE.LEN": 0
+   },
+   "geometry": {
+    "rings": [
+     [
+      [
+       13.669832085824567,
+       45.529656732556759
+      ],
+      [
+       13.6455491105202,
+       45.529476771694092
+      ],
+      [
+       13.645344685741517,
+       45.543125700539576
+      ],
+      [
+       13.669633590610102,
+       45.543305815277165
+      ],
+      [
+       13.669832085824567,
+       45.529656732556759
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "attributes": {
+    "OBJECTID": 12489,
+    "ID": 28800007116.0,
+    "SEKCIJA1": "ZKIX24",
+    "SEKCIJA2": " ",
+    "SEKCIJA_I": " ",
+    "LIST": "ch",
+    "SPL_OZN": "ZKIX24ch",
+    "MERILO": 2880.0,
+    "COORD_SYS": "M2880K",
+    "REL_LNK": "ZKIX24ch_M2880K",
+    "SE_ANNO_CAD_DATA": null,
+    "SHAPE.AREA": 0,
+    "SHAPE.LEN": 0
+   },
+   "geometry": {
+    "rings": [
+     [
+      [
+       13.6455491105202,
+       45.529476771694092
+      ],
+      [
+       13.621266349548012,
+       45.529291537902097
+      ],
+      [
+       13.621055996758532,
+       45.542940309522621
+      ],
+      [
+       13.645344685741517,
+       45.543125700539576
+      ],
+      [
+       13.6455491105202,
+       45.529476771694092
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "attributes": {
+    "OBJECTID": 12490,
+    "ID": 28800007117.0,
+    "SEKCIJA1": "ZKIX24",
+    "SEKCIJA2": " ",
+    "SEKCIJA_I": " ",
+    "LIST": "dh",
+    "SPL_OZN": "ZKIX24dh",
+    "MERILO": 2880.0,
+    "COORD_SYS": "M2880K",
+    "REL_LNK": "ZKIX24dh_M2880K",
+    "SE_ANNO_CAD_DATA": null,
+    "SHAPE.AREA": 0,
+    "SHAPE.LEN": 0
+   },
+   "geometry": {
+    "rings": [
+     [
+      [
+       13.621266349548012,
+       45.529291537902097
+      ],
+      [
+       13.59698380996198,
+       45.529101121281386
+      ],
+      [
+       13.596767655220042,
+       45.542749823841454
+      ],
+      [
+       13.621055996758532,
+       45.542940309522621
+      ],
+      [
+       13.621266349548012,
+       45.529291537902097
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "attributes": {
+    "OBJECTID": 12493,
+    "ID": 28800007120.0,
+    "SEKCIJA1": "VKIX24",
+    "SEKCIJA2": " ",
+    "SEKCIJA_I": " ",
+    "LIST": "ai",
+    "SPL_OZN": "VKIX24ai",
+    "MERILO": 2880.0,
+    "COORD_SYS": "M2880K",
+    "REL_LNK": "VKIX24ai_M2880K",
+    "SE_ANNO_CAD_DATA": null,
+    "SHAPE.AREA": 0,
+    "SHAPE.LEN": 0
+   },
+   "geometry": {
+    "rings": [
+     [
+      [
+       15.345486836806201,
+       45.529557105644315
+      ],
+      [
+       15.345285348311345,
+       45.515909930598674
+      ],
+      [
+       15.321009792024823,
+       45.516087464398495
+      ],
+      [
+       15.321205484803256,
+       45.529734741668619
+      ],
+      [
+       15.345486836806201,
+       45.529557105644315
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "attributes": {
+    "OBJECTID": 12494,
+    "ID": 28800007121.0,
+    "SEKCIJA1": "VKIX24",
+    "SEKCIJA2": " ",
+    "SEKCIJA_I": " ",
+    "LIST": "bi",
+    "SPL_OZN": "VKIX24bi",
+    "MERILO": 2880.0,
+    "COORD_SYS": "M2880K",
+    "REL_LNK": "VKIX24bi_M2880K",
+    "SE_ANNO_CAD_DATA": null,
+    "SHAPE.AREA": 0,
+    "SHAPE.LEN": 0
+   },
+   "geometry": {
+    "rings": [
+     [
+      [
+       15.321205484803256,
+       45.529734741668619
+      ],
+      [
+       15.321009792024823,
+       45.516087464398495
+      ],
+      [
+       15.296733865270321,
+       45.516259908553742
+      ],
+      [
+       15.296923763359446,
+       45.529907286534865
+      ],
+      [
+       15.321205484803256,
+       45.529734741668619
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "attributes": {
+    "OBJECTID": 12495,
+    "ID": 28800007122.0,
+    "SEKCIJA1": "VKIX24",
+    "SEKCIJA2": " ",
+    "SEKCIJA_I": " ",
+    "LIST": "ci",
+    "SPL_OZN": "VKIX24ci",
+    "MERILO": 2880.0,
+    "COORD_SYS": "M2880K",
+    "REL_LNK": "VKIX24ci_M2880K",
+    "SE_ANNO_CAD_DATA": null,
+    "SHAPE.AREA": 0,
+    "SHAPE.LEN": 0
+   },
+   "geometry": {
+    "rings": [
+     [
+      [
+       15.296923763359446,
+       45.529907286534865
+      ],
+      [
+       15.296733865270321,
+       45.516259908553742
+      ],
+      [
+       15.272457831810474,
+       45.516427263124619
+      ],
+      [
+       15.272641933739303,
+       45.530074739409692
+      ],
+      [
+       15.296923763359446,
+       45.529907286534865
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "attributes": {
+    "OBJECTID": 12496,
+    "ID": 28800007123.0,
+    "SEKCIJA1": "VKIX24",
+    "SEKCIJA2": " ",
+    "SEKCIJA_I": " ",
+    "LIST": "di",
+    "SPL_OZN": "VKIX24di",
+    "MERILO": 2880.0,
+    "COORD_SYS": "M2880K",
+    "REL_LNK": "VKIX24di_M2880K",
+    "SE_ANNO_CAD_DATA": null,
+    "SHAPE.AREA": 0,
+    "SHAPE.LEN": 0
+   },
+   "geometry": {
+    "rings": [
+     [
+      [
+       15.272641933739303,
+       45.530074739409692
+      ],
+      [
+       15.272457831810474,
+       45.516427263124619
+      ],
+      [
+       15.24818143800972,
+       45.516589169581337
+      ],
+      [
+       15.248359745993133,
+       45.530237010807404
+      ],
+      [
+       15.272641933739303,
+       45.530074739409692
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "attributes": {
+    "OBJECTID": 14647,
+    "ID": 28800007180.0,
+    "SEKCIJA1": "ZKIX24",
+    "SEKCIJA2": " ",
+    "SEKCIJA_I": " ",
+    "LIST": "ai",
+    "SPL_OZN": "ZKIX24ai",
+    "MERILO": 2880.0,
+    "COORD_SYS": "M2880K",
+    "REL_LNK": "ZKIX24ai_M2880K",
+    "SE_ANNO_CAD_DATA": null,
+    "SHAPE.AREA": 0,
+    "SHAPE.LEN": 0
+   },
+   "geometry": {
+    "rings": [
+     [
+      [
+       13.694307978884915,
+       45.516182565085266
+      ],
+      [
+       13.670030593789965,
+       45.516007848139587
+      ],
+      [
+       13.669832085824567,
+       45.529656732556759
+      ],
+      [
+       13.69411539722109,
+       45.529831510935225
+      ],
+      [
+       13.694307978884915,
+       45.516182565085266
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "attributes": {
+    "OBJECTID": 14648,
+    "ID": 28800007181.0,
+    "SEKCIJA1": "ZKIX24",
+    "SEKCIJA2": " ",
+    "SEKCIJA_I": " ",
+    "LIST": "bi",
+    "SPL_OZN": "ZKIX24bi",
+    "MERILO": 2880.0,
+    "COORD_SYS": "M2880K",
+    "REL_LNK": "ZKIX24bi_M2880K",
+    "SE_ANNO_CAD_DATA": null,
+    "SHAPE.AREA": 0,
+    "SHAPE.LEN": 0
+   },
+   "geometry": {
+    "rings": [
+     [
+      [
+       13.670030593789965,
+       45.516007848139587
+      ],
+      [
+       13.645753417465988,
+       45.515827861483224
+      ],
+      [
+       13.6455491105202,
+       45.529476771694092
+      ],
+      [
+       13.669832085824567,
+       45.529656732556759
+      ],
+      [
+       13.670030593789965,
+       45.516007848139587
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "attributes": {
+    "OBJECTID": 14649,
+    "ID": 28800007182.0,
+    "SEKCIJA1": "ZKIX24",
+    "SEKCIJA2": " ",
+    "SEKCIJA_I": " ",
+    "LIST": "ci",
+    "SPL_OZN": "ZKIX24ci",
+    "MERILO": 2880.0,
+    "COORD_SYS": "M2880K",
+    "REL_LNK": "ZKIX24ci_M2880K",
+    "SE_ANNO_CAD_DATA": null,
+    "SHAPE.AREA": 0,
+    "SHAPE.LEN": 0
+   },
+   "geometry": {
+    "rings": [
+     [
+      [
+       13.645753417465988,
+       45.515827861483224
+      ],
+      [
+       13.62147658026665,
+       45.515642783987168
+      ],
+      [
+       13.621266349548012,
+       45.529291537902097
+      ],
+      [
+       13.6455491105202,
+       45.529476771694092
+      ],
+      [
+       13.645753417465988,
+       45.515827861483224
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "attributes": {
+    "OBJECTID": 14650,
+    "ID": 28800007183.0,
+    "SEKCIJA1": "ZKIX24",
+    "SEKCIJA2": " ",
+    "SEKCIJA_I": " ",
+    "LIST": "di",
+    "SPL_OZN": "ZKIX24di",
+    "MERILO": 2880.0,
+    "COORD_SYS": "M2880K",
+    "REL_LNK": "ZKIX24di_M2880K",
+    "SE_ANNO_CAD_DATA": null,
+    "SHAPE.AREA": 0,
+    "SHAPE.LEN": 0
+   },
+   "geometry": {
+    "rings": [
+     [
+      [
+       13.62147658026665,
+       45.515642783987168
+      ],
+      [
+       13.597199838455348,
+       45.515452435497458
+      ],
+      [
+       13.59698380996198,
+       45.529101121281386
+      ],
+      [
+       13.621266349548012,
+       45.529291537902097
+      ],
+      [
+       13.62147658026665,
+       45.515642783987168
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "attributes": {
+    "OBJECTID": 14258,
+    "ID": 28800006873.0,
+    "SEKCIJA1": "VKIX24",
+    "SEKCIJA2": " ",
+    "SEKCIJA_I": " ",
+    "LIST": "be",
+    "SPL_OZN": "VKIX24be",
+    "MERILO": 2880.0,
+    "COORD_SYS": "M2880K",
+    "REL_LNK": "VKIX24be_M2880K",
+    "SE_ANNO_CAD_DATA": null,
+    "SHAPE.AREA": 0,
+    "SHAPE.LEN": 0
+   },
+   "geometry": {
+    "rings": [
+     [
+      [
+       15.321990881985295,
+       45.584324372078328
+      ],
+      [
+       15.321794241392677,
+       45.570676849636527
+      ],
+      [
+       15.29749523312652,
+       45.570849605875885
+      ],
+      [
+       15.297686190318439,
+       45.584497228053479
+      ],
+      [
+       15.321990881985295,
+       45.584324372078328
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "attributes": {
+    "OBJECTID": 14259,
+    "ID": 28800006874.0,
+    "SEKCIJA1": "VKIX24",
+    "SEKCIJA2": " ",
+    "SEKCIJA_I": " ",
+    "LIST": "ce",
+    "SPL_OZN": "VKIX24ce",
+    "MERILO": 2880.0,
+    "COORD_SYS": "M2880K",
+    "REL_LNK": "VKIX24ce_M2880K",
+    "SE_ANNO_CAD_DATA": null,
+    "SHAPE.AREA": 0,
+    "SHAPE.LEN": 0
+   },
+   "geometry": {
+    "rings": [
+     [
+      [
+       15.297686190318439,
+       45.584497228053479
+      ],
+      [
+       15.29749523312652,
+       45.570849605875885
+      ],
+      [
+       15.273195991069008,
+       45.571017353220874
+      ],
+      [
+       15.273381133058745,
+       45.584664894022723
+      ],
+      [
+       15.297686190318439,
+       45.584497228053479
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "attributes": {
+    "OBJECTID": 14260,
+    "ID": 28800006875.0,
+    "SEKCIJA1": "VKIX24",
+    "SEKCIJA2": " ",
+    "SEKCIJA_I": " ",
+    "LIST": "de",
+    "SPL_OZN": "VKIX24de",
+    "MERILO": 2880.0,
+    "COORD_SYS": "M2880K",
+    "REL_LNK": "VKIX24de_M2880K",
+    "SE_ANNO_CAD_DATA": null,
+    "SHAPE.AREA": 0,
+    "SHAPE.LEN": 0
+   },
+   "geometry": {
+    "rings": [
+     [
+      [
+       15.273381133058745,
+       45.584664894022723
+      ],
+      [
+       15.273195991069008,
+       45.571017353220874
+      ],
+      [
+       15.248896261624553,
+       45.571179822149134
+      ],
+      [
+       15.249075462218153,
+       45.584827460300595
+      ],
+      [
+       15.273381133058745,
+       45.584664894022723
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "attributes": {
+    "OBJECTID": 12913,
+    "ID": 28800006991.0,
+    "SEKCIJA1": "VKIX24",
+    "SEKCIJA2": " ",
+    "SEKCIJA_I": " ",
+    "LIST": "cg",
+    "SPL_OZN": "VKIX24cg",
+    "MERILO": 2880.0,
+    "COORD_SYS": "M2880K",
+    "REL_LNK": "VKIX24cg_M2880K",
+    "SE_ANNO_CAD_DATA": null,
+    "SHAPE.AREA": 0,
+    "SHAPE.LEN": 0
+   },
+   "geometry": {
+    "rings": [
+     [
+      [
+       15.297304446638099,
+       45.557202179740614
+      ],
+      [
+       15.297113828004775,
+       45.54355468150542
+      ],
+      [
+       15.272826199302957,
+       45.543722231830621
+      ],
+      [
+       15.27301101334176,
+       45.55736982855089
+      ],
+      [
+       15.297304446638099,
+       45.557202179740614
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

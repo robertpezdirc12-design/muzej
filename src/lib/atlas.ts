@@ -99,7 +99,7 @@ export function getCoverage(): Coverage {
     ownersCrossChecked: ATLAS_OWNERS.filter((o) => o.puaRef).length,
     parcelsReferenced: ATLAS_HOUSES.filter((h) => h.parcelRefs).length,
     sheetsTotal: 5,
-    sheetsGeoreferenced: 3,
+    sheetsGeoreferenced: 5,
     archivalUnits: 9,
     archivalPages: 143 + 71 + 49 + 8 + 4 + 1 + 1 + 2,
     buildingsVectorized: VECTOR_BUILDINGS.length,
