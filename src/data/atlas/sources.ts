@@ -153,9 +153,9 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     structuredEntries: 0,
     lastVerified: "2026-10-07",
     noteSi:
-      "List z razpršeno poselitvijo na vzhodnem delu k.o. in z obmejnimi predeli sosednjih občin. Digitalna kopija prenesena iz VAČ IIIF (2645 × 2154 px); georeferenca še ni izračunana — enake metode kot za A01/A02 še čakajo kontrolne točke.",
+      "List z razpršeno poselitvijo na vzhodnem delu k.o. in z obmejnimi predeli sosednjih občin. Digitalna kopija prenesena iz VAČ IIIF (2645 × 2154 px); georeferenca še ni izračunana — poskus P8 (2026-10-08, deterministično): zasidranje na reko Kolpo (ekstrakcija pasu med bregovnimi črtami + primerjava z moderno strugo iz OpenTopoMap) je na validaciji A02 izkazalo NEDELOVITNOST — Kolpa je tu premalo vijugasta za določitev smeri sever–jug in merila (napaka cerkve 0,9–1,6 km); raziskovalna pot v research/georef-n83/ (dokumentirana negativna ugotovitev; potreben VAČ metapodatek ali točkovno sidro).",
     noteEn:
-      "Sheet with dispersed settlement in the eastern part of the cadastral municipality and boundary areas with neighbouring municipalities. Digital copy transferred from VAČ IIIF (2645 × 2154 px); georeference not yet computed — the affine method used for A01/A02 awaits control points.",
+      "Sheet with dispersed settlement in the eastern part of the cadastral municipality and boundary areas with neighbouring municipalities. Digital copy transferred from VAČ IIIF (2645 × 2154 px); georeference not yet computed — the P8 attempt (2026-10-08, deterministic): anchoring on the Kolpa river (bank-to-bank band extraction + comparison with the modern channel from OpenTopoMap) proved UNWORKABLE in A02 validation — the Kolpa meanders too weakly here to pin the north–south direction and scale (church error 0.9–1.6 km); research path in research/georef-n83/ (a documented negative finding; VAČ metadata or a point anchor needed).",
   },
   {
     id: "src-a04",
@@ -180,9 +180,9 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     structuredEntries: 0,
     lastVerified: "2026-10-07",
     noteSi:
-      "List z dolino Kolpe kot vzhodno mejo in napisom sosednje občine Adlešiči (Adleschitz). Digitalna kopija prenesena iz VAČ IIIF (2645 × 2158 px); georeferenca še ni izračunana.",
+      "List z dolino Kolpe kot vzhodno mejo in napisom sosednje občine Adlešiči (Adleschitz). Digitalna kopija prenesena iz VAČ IIIF (2645 × 2158 px); georeferenca še ni izračunana — poskus P8 (2026-10-08) prek reke Kolpe: negativna ugotovitev (see research/georef-n83/); možna prihodnja pot: napis Adleschitz kot točkovno sidro + reka [~] ob VLM dostopu.",
     noteEn:
-      "Sheet with the Kolpa valley as eastern boundary and the label of the neighbouring municipality of Adlešiči (Adleschitz). Digital copy transferred from VAČ IIIF (2645 × 2158 px); georeference not yet computed.",
+      "Sheet with the Kolpa valley as eastern boundary and the label of the neighbouring municipality of Adlešiči (Adleschitz). Digital copy transferred from VAČ IIIF (2645 × 2158 px); georeference not yet computed — the P8 river-anchoring attempt (2026-10-08) had a negative outcome (see research/georef-n83/); a possible future path: the Adleschitz label as a point anchor + the river [~] once VLM access returns.",
   },
   {
     id: "src-a05",
@@ -207,9 +207,9 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     structuredEntries: 0,
     lastVerified: "2026-10-07",
     noteSi:
-      "List z gručasto poselitvijo (rdeči nalič stavb in dvorišč) na vzhodnem delu in obmejnimi napisi sosednjih občin. Digitalna kopija prenesena iz VAČ IIIF (2634 × 2165 px); georeferenca še ni izračunana.",
+      "List z gručasto poselitvijo (rdeči nalič stavb in dvorišč) na vzhodnem delu in obmejnimi napisi sosednjih občin. Digitalna kopija prenesena iz VAČ IIIF (2634 × 2165 px); georeferenca še ni izračunana — poskus P8 (2026-10-08) prek reke Kolpe: negativna ugotovitev (see research/georef-n83/); reka na listu morda ni vidna (južna meja k.o. ni ob Kolpi).",
     noteEn:
-      "Sheet with a clustered settlement (red tint of buildings and farmyards) in the eastern part and boundary labels of neighbouring municipalities. Digital copy transferred from VAČ IIIF (2634 × 2165 px); georeference not yet computed.",
+      "Sheet with a clustered settlement (red tint of buildings and farmyards) in the eastern part and boundary labels of neighbouring municipalities. Digital copy transferred from VAČ IIIF (2634 × 2165 px); georeference not yet computed — the P8 river-anchoring attempt (2026-10-08) had a negative outcome (see research/georef-n83/); the river may not appear on this sheet at all (the southern k.o. boundary is not on the Kolpa).",
   },
   {
     id: "src-pg",
