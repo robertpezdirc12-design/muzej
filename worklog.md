@@ -1889,3 +1889,29 @@ Work Log:
 Stage Summary:
 - P9 v celoti v produkciji: A04 RECONSTRUCTED [~] (ovin Kolpe), 3/5 listov georeferenciranih, QA 22/22, E2E čist (desktop + mobilni), delovni dnevnik + README dokumentirana
 - Projekt: GitLab 0 odprtih issuejev (#1–17 zaprti), P5-b + P9 dokončana — naslednji naravni korak: nova raziskovalna vprašanja uporabnika
+
+---
+Task ID: P10
+Agent: Z.ai Code (glavni agent)
+Task: nadaljevanje "nadaljuj" — izkoriščen dvig VLM kvote za raziskavo listov A03/A05; razplet presegel pričakovanja: SEKCIJSKA MREŽA eZKN razrešila VSE liste + POPRAVEK P9
+
+Work Log:
+- Sonda: VLM/LLM kvota SPROŠČENA (~18:30). GitLab 0 odprtih issuejev. Commit 2ee9ea1 (bfcbb9b worklog preimenovan) pushan na deploy.
+- Zavrnjeno hitro: Arcanum/Mapire (403 s sandboxa — mrežni blok), tile.openstreetmap.org (placeholderji).
+- VAČ (vac.sjas.gov.si, -k SSL): fieldSearch → enota "Griblje, k.o." = SI AS 176/N/N83 (ID 227663): k.o. št. 83, prejšnja signatura N083A, zgodovinsko ime Grüble, Novomeška kresija; podrejena "grafični" (ID 227665) → NATANČNO 5 listov N083A01–A05 (ID-ji 227666/68/70/71/73). Predogledi (base64 → screenshot crop): KRIŽNE KORELACIJE z našimi skeni — ČISTA DIAGONALA (A03 0,53; A04 0,44; A05 0,51) → identiteta/številčenje potrjeni. fileStream JPG = le predogled (120×97) brez prijave.
+- GURS WFS odkritje (ipi.eprostor.gov.si, EPSG:3794, y−5M): wfs-si-gurs-kn (KATASTRSKE_OBCINE/PARCELE/…), wfs-si-gurs-rpe (NASELJA/…). Prenos: k.o. GRIBLJE poligon (SIFKO 1544; 15,2665–15,3009 E, 45,5442–45,5859 N — A02 vsebina natanko znotraj!), 2117 parcel k.o. 1544 (661 stavbnih <800 m²), 2432 parcel k.o. Adlešiči (1552), poligoni 8 naselij + 10 k.o. regije. (Past: outputFormat=application/json tipka; BBOX&cql_filter izključujoča.)
+- eZKN (geohub.gov.si/ghapp/ezkn): sloj GURS/EZKN_LISTI MapServer 8000 = SEKCIJSKA MREŽA 1:2880 z uradno geometrijo (celice ~1,9×1,5 km, kode IX24+črki); 8001 = OPIS (POVEZAVADJVU/JPG). Zapis N83-1544 (Stanje 20 = Franciscejski kataster ARS; POVEZAVAJPG = VAČ fileStream uodid 227663 docid 9; IME = SI AS 176/N/N83; koord. sistem Schockell/Gellert/Krim). JAVNI DjVu ZKN listi (1544_2880_0001–0008, 1552_2880_0015; /gurs/ezknpodatki/) preneseni in DEKODIRANI (libdjvulibre: lasten C konverter /tmp/djvu2ppm; GRIBLJE 2 = 9599×7559 px 300 dpi ~1989, GRIBLJE 4 = 3425×8153 ~1970). App interakcija (agent-browser): klik celice → tabela Stanj (0/1/2/10-12 ZKN, 20 Franciscejski ARS, 21 Reambulančni ARS).
+- RAZKRITJE: okvirne oznake naših listov = KODE CELIC (P9 nepomaknjena VLM branja + 2× ciljno potrditev za A04): A02=O.IX24cf, A03=O.IX24dg, A04=O.IX24cg, A05=O.IX24ch. VALIDACIJA principa list≈celica: središče vsebine A02 = središče celice cf NATANČNO (~10 m). Vsebina: A03 vzhodni pas (zahodni rob k.o.), A05 zgornja desna (skrajni jug k.o.), A04 cela celica.
+- POPRAVEK P9: A04 ≠ ovin Kolpe pri Adlešičih! Stavbna validacija (222 simbolov A04 ↔ sodobne GURS stavbe): P9-lega mediana 636 m (izključitev), celica cg 72 m. P9 kontrole (ADLESCHITZ/WEIDENDORF) nedisukriminativne (k.o. obsegata obe območji); P9 sled "reke" (širina 180 px ≈ 130 m) = verjetno dolina/cesta — Kolpa IZVEN lista A04 (~1,2 km V od celice cg).
+- Validacije A03/A05 ( oznake → k.o. ): TRIBUTSCH→k.o. Tribuče ✓, WEIDENDORF→k.o. Bedenj ✓, Borli/Berli ≈ ZKN GRIBLJE 4 ✓; ADLESC/Vedalschitz→k.o. Adlešiči ✓, Pri Jankovichti→naselje Jankoviči ✓, sklop 45 stavb → Fučkovci/Dragoši (multivalentni fit: Fučkovci 0,914 a nediskriminativno — nič 0,84).
+- Ugotovljene pasti lastnih metod: scipy cKDTree razdalje v stopinjah pri poizvedbah lat/lng (metrske pragove → nasičeni score-i 1,0; popravljeno v lokalne metre); RANSAC A02↔A03/A04 = 0 ujemanj (listi se NE prekrivajo — tesnilo celic, stavbe pripadajo svoji celici); detektor stavb ~6× šum (A02: 951 blotov/156 stvarnih).
+- ZGODOVINSKA UGOTOVITEV: 1825 k.o. Griblje segala do ~45,530 (~2,4 km dlje na jug — Fučkovci/Dragoši/Jankoviči) — pozneje odvzeto k.o. Adlešiči (današnja k.o. do 45,5442).
+- Integracija: model.ts SHEET_GEOREFS (A03/REVIEW/dg, A04 POPRAVLJEN/cg/REVIEW, A05/REVIEW/ch — polne metode/validacije/kontrolne točke), sources.ts (A03/A05 GEOREFERENCED + P10 opombe; A04 naslov+POPRAVEK; +3 viri src-vac-n83/src-gurs-wfs/src-ezkn), atlas.ts COVERAGE 5/5, qa.ts (P9 test → qa-p10-ezkn-grid), museum-atlas.tsx intro (VSEH 5 + popravek), sw v17→v18, README P10 razdelek, artefakti (gurs/, ezkn/, p10-*, vac-preview).
+- VERIFIKACIJA: lint 0 napak; DEV QA 22/22 (qa-p10-ezkn-grid PASS); commit fede57f pushan (deploy, 1×); PROD 200; PROD E2E (agent-browser): intro "VSEH 5 listov georeferenciranih…P10; lega A04 popravljena" ✓; A04 kartica "južni del občine (celica cg)" + "POPRAVEK P10…ZAVRŽENA" ✓; A03/A05 kartice "georef + GEOREFERENCA (P10" ✓; List A03 · ~0,72 m/px / List A05 · ~0,73 m/px kartici ✓; QA vrstica P10 ✓; viri VAČ/GURS/eZKN ✓; 0 konzolnih napak; desktop 1280 + mobilni 390 brez preliva; footer na dnu ✓.
+- Canonical repo (markec-group): stari žeton glpat-QcFeV… EXPIRIRAL (401); deploy žeton le bralno (push 403) — sinhronizacija kanoničnega repozitorija NEMOGOČA do novega žetona (priporočil uporabniku rotacijo).
+
+Stage Summary:
+- VSAH 5 GRAFIČNIH LISTOV GEOREFERENCIRANIH (3→5): A01/A02 GEOTRUTH, A03=celica dg, A04=celica cg (POPRAVLJEN — P9 zavrnjen z dokazi), A05=celica ch; statusi REVIEW ±200–400 m
+- POPRAVEK P9 dokumentiran v muzeju (kartica A04 nosi popravek + razloge) — znanstvena poštenost: zavrnitev objavljene lege z merjenimi dokazi (mediana 636 m)
+- 3 NOVI URADNI VIRI (VAČ N83 identiteta, GURS WFS geometrije, eZKN mreža) + zgodovinska ugotovitev o meji 1825 k.o. (segala do Fučkovcev)
+- Projekt: 0 odprtih issuejev; QA 22/22; PROD E2E čist; 22 QA testov; preklicana zahteva za nov žeton GitLab (kanonični repo)
