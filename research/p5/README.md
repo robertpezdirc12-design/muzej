@@ -71,3 +71,30 @@ python3 scripts/pua-gen-ts.py
 python3 scripts/pua-pt-cross.py           # P5-a ponovno
 python3 scripts/pua-pt-wbridge.py         # P5-c ponovno + preverba napovedi
 ```
+
+## Nadaljevalni zapis 2026-10-08 14:20 (seja »nadaljuj«)
+
+**Mini-servis `pua-reader` (port 3031)** — poskus trajnega nadzora:
+`mini-services/pua-reader/index.ts` sonde VLM kvoto vsakih 5 min, ob dvigu
+samodejno prebere 35–49 (vsaka stran takoj shranjena) in požene celo
+deterministično pipeline (parse → gen → cross → wbridge); status API
+`GET /status` (faza, kvota, prebrane strani, pipeline, dnevnik). Deluje v
+foregroundu (preizkušeno 12:02), a **v ozadju NE preživi**: umrl je v ≤5 min
+tudi z `nohup … & disown` in z `setsid` (lastna seja) — sandbox reaper ubija
+vsičene procese neodvisno od metode; 3. potvrjena izkušnja (P4 skripte,
+auto-resume, mini-servis). Servis ostaja v repu kot orodje za foreground
+zagon: `cd mini-services/pua-reader && bun run dev` (10-min okno na klic).
+
+**Delegacija na podagenta (Task tool)**: klic se končal s »context deadline
+exceeded«, podagent je pognal 1 okno sonde (12:32–12:41, vsi 429) in nato
+zastal — najverjetneje tudi njegov LLM možgani padejo na isti računski 429
+(kvota je RAČUNSKA: potrjeno 429 na VLM + tekstovnem LLM + web-search istočasno).
+
+**Lasten nadzor v foregroundu**: 12 zaporednih 9,3-minutnih oken sonde
+(12:32–14:19, vsota ~84 sond + 33 prejšnjih = ~117 vseh 429 od 09:56):
+kvota vztraja 08:12 → 14:19 (6,1 h) — 6-urno drseče okno ovrženo (dvig
+ bi bil ~14:12); sklep ostaja dnevna/24 h kvota, pričakovan dvig jutri zjutri.
+
+**Stanje ob zaključku seje**: dev + produkcija QA 19/19; 23/38 strani PUA
+prebranih (12–34), manjka 35–49; /tmp/pua-pages PNG-ji še prisotni (49);
+metoda za zaključek P5-b popolnoma dokumentirana zgoraj.

@@ -1,0 +1,13 @@
+{
+  "name": "pua-reader",
+  "version": "1.0.0",
+  "private": true,
+  "description": "P5-b watcher: sondira VLM kvoto (429) in ob dvigu samodejno prebere PUA str. 35–49 ter požene deterministično analizo (parse → gen → cross → wbridge). Status na portu 3031.",
+  "scripts": {
+    "dev": "bun --hot index.ts",
+    "start": "bun index.ts"
+  },
+  "dependencies": {
+    "z-ai-web-dev-sdk": "*"
+  }
+}

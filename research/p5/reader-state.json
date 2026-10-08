@@ -1,0 +1,15 @@
+{
+ "startedAt": "2026-10-08T12:34:20.548Z",
+ "phase": "probing",
+ "quota": "429",
+ "lastProbeAt": "2026-10-08T12:34:20.581Z",
+ "lastOkAt": null,
+ "probesTotal": 1,
+ "pagesRead": [],
+ "pipeline": [],
+ "lastError": null,
+ "log": [
+  "12:34:20 pua-reader zagnan (port 3031); manjka 15 strani; interval sonde 300s",
+  "12:34:20 sonda 429 (29ms, skupno 1)"
+ ]
+}

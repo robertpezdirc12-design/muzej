@@ -1,2 +1,9 @@
 === 2026-10-08T11:46:33Z zagon samodejnega nadaljevanja P5-b ===
 === 2026-10-08T11:47:04Z zagon samodejnega nadaljevanja P5-b ===
+2026-10-08T12:02:19.883Z pua-reader: pua-reader zagnan (port 3031); manjka 15 strani; interval sonde 300s
+2026-10-08T12:02:19.913Z pua-reader: sonda 429 (29ms, skupno 1)
+2026-10-08T12:02:31.846Z pua-reader: SIGTERM — ugašam
+2026-10-08T12:02:36.776Z pua-reader: pua-reader zagnan (port 3031); manjka 15 strani; interval sonde 300s
+2026-10-08T12:02:36.809Z pua-reader: sonda 429 (33ms, skupno 1)
+2026-10-08T12:34:20.552Z pua-reader: pua-reader zagnan (port 3031); manjka 15 strani; interval sonde 300s
+2026-10-08T12:34:20.582Z pua-reader: sonda 429 (29ms, skupno 1)

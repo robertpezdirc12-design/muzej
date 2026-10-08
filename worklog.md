@@ -1733,3 +1733,24 @@ Stage Summary:
 - P5-b (PUA 35–49): samodejni nadaljevalni cikel aktiven; ročna integracija research.ts + preverba napovedi sledita ob uspehu
 - VLM 429: vztraja > 3,5 h (3 h sonde + 2 novi); tekstovni LLM isti limit
 - Dopolnitev (12:00): samodejni cikel pua-auto-resume.sh 2× zagnan (PID 8350, 8430) — OBA umrla v ~4 min (sandbox čisti detached procese, enako kot v P4/P5); sonda v foregroundu 3× 429 (11:51–11:55, skupno 8 sond tej seji). P5-b ostaja blokiran na kvoti; ročna metoda popolnoma dokumentirana v research/p5/README.md (probe-read → parse → gen → obe analizi → integracija + preverba napovedi h32/h64/h65/h68)
+
+---
+Task ID: P5-b-nadzor
+Agent: Z.ai Code (glavni agent)
+Task: Seja »nadaljuj« — poskus zaključka P5-b (PUA strani 35–49) ob vztrajajoči VLM 429 kvoti
+
+Work Log:
+- Prebrano stanje: vsi GitLab issueji #1–17 zaprti; P3/P4/P5-a/P5-c zaključeni in v produkciji; edini odprti del P5-b (PUA 35–49, priimki P–Ž), blokiran na računski kvoti 429 (od ~08:12)
+- Preverjeni viri: /tmp/pua-pages PNG-ji vsi prisotni (49); prebranih 23 strani (12–34) v research/p3/pua-raw; dev + produkcija QA 19/19
+- ZGRAJEN mini-servis mini-services/pua-reader (port 3031): zanka sonde VLM vsakih 5 min → ob dvigu kvote samodejno branje 35–49 (vsaka stran takoj shranjena) → samodejni zagon determinističnega pipeline (parse → gen-ts → pt-cross → pt-wbridge); status API GET /status + POST /probe; stanje v research/p5/reader-state.json, dnevnik v auto-log.txt; SDK se uspešno resolva iz starševskega node_modules
+- REAPER TEST: servis deluje v foregroundu, a v ozadju umre v ≤5 min NEODVISNO od metode (nohup+disown 12:02, setsid 12:34 — oba umrla brez SIGTERM znaka = SIGKILL); 3. potrdjena izkušnja sandboxa (P4, auto-resume, mini-servis); servis ostaja v repu kot foreground orodje
+- Task tool delegacija: »context deadline exceeded«; podagent je pognal 1 okno sonde (12:32–12:41, vsi 429) in zastal — sklep: njegov LLM pade na isti računski 429 (potrjeno: 429 istočasno na VLM + tekstovnem LLM + web-search)
+- LASTEN NADZOR: 12 zaporednih foreground 9,3-minutnih oken bun scripts/pua-probe-read.mjs (12:32–14:19) — vsi ~84 sond 429; kvota vztraja 08:12→14:19 (6,1 h); 6-urno drseče okno OVRŽENO (dvig bi bil ~14:12); sklep: dnevna/24 h kvota, pričakovan dvig jutri zjutri (~08:12)
+- Dokumentacija: research/p5/README.md nov razdelek »Nadaljevalni zapis 14:20« (mini-servis, reaper, podagent, zgodovina sond)
+- Commit + push: mini-servis + README + worklog + reader-state.json/auto-log.txt (slednji kot dokaz poskusa)
+
+Stage Summary:
+- P5-b (PUA 35–49) ostaja edini odprti del issue #17 — 23/38 strani prebranih, 15 manjka; NI tehnične ovire, samo računska kvota VLM/LLM/web-search (429 vztraja 6,1 h)
+- Avtomatizacija v ozadju v tem sandboxu NI mogoča (reaper ubija vse sirote ≤5 min, 3 metode preizkušene); zanesljiva metoda ostaja ročno foreground okno ob dvigu kvote (dokumentirana v research/p5/README.md + mini-servis za 10-min zagon)
+- Muzej stabilen: dev 19/19, produkcija 19/19, brez napak v dnevniku; nobena produktivna koda spremenjena (samo orodja/dokumentacija)
+- Naslednji korak (ob dvigu kvote, jutri zjutraj ali prej): bun scripts/pua-probe-read.mjs → parse → gen → obe analizi → integracija research.ts + preverba napovedi h32/h64/h65/h68 → qa-p5-b test → sw v14 → commit/push → produkcija E2E
