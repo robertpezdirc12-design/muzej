@@ -1584,3 +1584,46 @@ Stage Summary:
 - SEM F0000212 VERIFIED (javni zapis + slika), eZKN (georef. kataster ARS) nov ključni vir, CLSS 2023–25 globoki link, EŠD potrjeni (11118 = Podzemelj, podatek v repu že pravilen)
 - Ustna zgodovina: protokol v1.0, 0 intervjujev (ne izmišljujemo)
 - Sledi: commit + push → Vercel 22. deploy → GitLab #17 zaključek
+
+---
+Task ID: 17-zaključek (issue #17 — produkcija + GitLab)
+Agent: Z.ai Code (glavni agent)
+Task: Push, Vercel deploy, produkcijska verifikacija, GitLab zaključek issue #17.
+
+Work Log:
+- Commit 03caff3 pushan na gitlab/main; Vercel 22. samodejni deploy (~45 s)
+- Produkcija: /api/qa 15/15 PASS z qa-issue17-gap-closure; /api/provenance → research.issue17; SSR vsebuje »Zapolnjevanje vrzeli«; sw.js mvg-v9
+- Browser E2E produkcija: ?odsek=raziskave → vsi razdelki ✓ vrednosti (Weiden 636, 2607, 441, Baron Abfalterer, VLM 145) ✓ povezave ✓ mobilni 390px ✓ 0 napak ✓
+- GitLab #17: zaključni komentar (matrika 15, metoda 145 VLM + navzkrižne kontrole, 10 strogih pravil) → issue ZAPRT
+- Stanje: 17/17 issuejev zaprtih (0 odprtih)
+
+Stage Summary:
+- ISSUE #17 POPOLNOMA ZAKLJUČEN: prvič DEJANSKO prebrani Kurrent rokopisi (145 VLM klicev) — PR/PG/PV v celoti, PS/PZ struktura+rekapitulacija, PUA 3–10, PT pregled
+- Naslednji korak: P3+ (paleografija PT, poln prepis PUA, prvi intervjuji)
+
+---
+Task ID: P3 (nadaljevanje po #17 — brez novega issueja; naročilo: »odlicno nadaljuj«)
+Agent: Z.ai Code (glavni agent)
+Task: P3 faza po priporočilih 17-z: paleografska preverba PT (2. krog), apliciranje popravkov registra, PUA nadaljevanje.
+
+Work Log:
+- Preveril GitLab: 0 odprtih issuejev (17/17 zaprtih) → nadaljevanje po P3+ načrtu iz zaključka #17
+- INCIPEIDENT SANDBOX RESET (sredi seje): /tmp počiščen, delovno drevo resetirano na stari snapshot (18 commitov) — obnovljeno: git fetch → reset --hard na novi/main (03caff3, 71+ commitov); node_modules dopolnjen (three/@google/model-viewer/leaflet); dev strežnik zdrav
+- PDF-i VSEH 7 Kurrent serij ponovno preneseni z VAČ (nepopolna TLS veriga → curl -sk; odkrita ponovljiva metoda: details → IIIF pdf-manifest → tifyPdfDownload; docId-ji zapisani v research/p3/README.md)
+- PT PALEOGRAFIJA 2. KROG: 9 VLM klicev, sveži izrezi (pasovi 1,4× + zoom 1,8×, drugačen okvir), vloga paleografa, prompti črka-za-črko:
+  * str. 3: št. 1 = Veith (H.) 3× (V ne P); 7 = Lebing/Lebring Mädl. (DODANA vrstica); 7½/8½ = Bödig mündl. 2×; 8 = Lebing Mädl.; 20 = K-priimek (Kraihan/Krištan Mäfa, ne Vičak)
+  * str. 4: RENUMERACIJA 4× potrjena (33→34→34-prečrtana-dvojnica→35…40; stran se konča s 40; hiša 41 NE obstaja; str. 5 se začne s parcelo 41); lastniki: Brinig Magnus (35), Milleg Hans (36, Jan=Hans), Brinig Malfa (37, 38, 40), Brinig Miklo (39, prej Tonig Miko)
+  * str. 6: 71½ = Stettner (prečrtana, DODANA); 76 = Strauß Georg (prej Stenopfs); 76½ = Hufschmied v RDEČEM čnilu (prečrtana, DODANA); 79 = Strauß Georg (rdeče prečrtana)
+  * str. 7: 81–84 = Strauß Georg [Groy] (ime Georg, ne Hanž; Abgerissen/Hof gültfällig); 90 = Ihmeyer Georg (divergentno s Kavalar/Bumiller → OSTAJA ILLEGIBLE); 96 = Ihmeyer Manko (prej Groy Khunz); 98 = A. A. Zollamt + ärarial + Hauptmagazin 1826 (institucija!); 99 = prazna vrstica (DODANA)
+- PUA STRAN 11 (črka H, 1 VLM klic): vnosi 18–21 — Hlebety Johann (Haus 2, divergentno s PT Hlebetz 26), Huditsch Musto (Häusler, Haus 14), Husitsch Baron von Gradatz (plemiška lastnina), Hutweiz Johann zu Waldendorf (Haus 8, sosednja vas)
+- PUA 12–20: pretvorjene slike, branje PREKINJENO — VLM gateway vrne 401 »missing X-Token« po resetu peskovnika (token konfiguracije izgubljen; /etc/.z-ai-config brez žetona) — pošteno dokumentirano
+- IMPLEMENTACIJA: houses.ts — 15 popravkov + renumeracija + 4 nove vrstice (105 vrstic: 84 hišnih + 21 parcelnih; polje paleo z dokazi); model.ts — ATLAS_OWNERS 26 vnosov (Veith, Lebing, Bödig, Strauß×2, Ihmeyer, Zollamt, Stettner, Hufschmied novi; Bring/Milleg/Groy/Kuncelj/Zollnerd posodobljeni; Leskovec nadomeščen); research.ts — PT_PALEOGRAPHY_P3 (18 vrstic 2. kroga, metoda, integriteta) + PUA_CONTINUATION 22 vrstic + KURRENT_SERIES (PT 84 vnosov, PUA 11/49); sources.ts PT/PUA posodobljena; qa.ts — test 16 qa-p3-paleografija + #17 test posodobljen (105/84); provenance route +p3; museum-research.tsx — kartica P3 (tabela 18 vrstic, metoda, aplicirano); museum-atlas.tsx — P3 badge z orodnim namigom na vrsticah registra; sw.js v10
+- Arhiv: research/p3/ (paleografija-pt.json, pua-stran-11.json, README.md z VAČ metodo)
+- QA: lint 0 napak; /api/qa 16/16 PASS; /api/atlas 105 hiš (Brinig 31/35/37/38/39/40, hiša 41 odsotna); /api/provenance p3.pass2Rows=18; /api/atlas/reconciliation zeroLoss (lost: 0)
+- E2E lokalno: ?odsek=raziskave → zavihek vrzeli → kartica P3 (18 vrstic, Veith/Strauß/Brinig/Zollamt/Hufschmied/Stettner/Ihmeyer/Bödig/Lebing/Hlebety/Gradatz) ✓; Atlas → Register hiš → filter Strauß/Brinig ✓ P3 badge-ov s tooltipom 6 ✓; mobilni 390px brez preliva ✓; konzola čista ✓
+- Commit fcb1339 → push gitlab/main (03caff3..fcb1339)
+
+Stage Summary:
+- P3 paleografska preverba PT zaključena: register hiš popravljen po 2-krožni konvergenenci (renumeracija str. 4, 15 popravkov, 4 vrstice; 105 vrstic, nič-zguba); PUA str. 11 dodana (22 vrstic, 11/49 strani)
+- Pošteno: hiša 90 ostaja ILLEGIBLE (3 divergentna branja); PUA 12–20 blokirane (VLM 401 po resetu); surovi izpisi 2. kroga izgubljeni z /tmp — strukturirani zapisi v research/p3/ + research.ts; statusi ostajajo REVIEW
+- Odprto za naslednjo fazo: PUA 12–49 ob povrnitvi VLM dostopa, človeška paleografija za dokončno potrditev
