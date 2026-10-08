@@ -57,6 +57,7 @@ import {
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
+  PUA_PT_WBRIDGE,
   PT_REVIEW_2026,
   PT_PALEOGRAPHY_P3,
   ORAL_HISTORY_PROTOCOL,
@@ -948,6 +949,81 @@ export function MuseumResearch() {
               <p className="mt-2 text-[11px] leading-relaxed text-muted-foreground">
                 <strong className="text-foreground">{t("Naslednji koraki:", "Next steps:")}</strong>{" "}
                 {lang === "si" ? PUA_PT_CROSS.nextStepSi : PUA_PT_CROSS.nextStepEn}
+              </p>
+            </div>
+
+            {/* P5-c W-most PT ↔ PUA */}
+            <div className="rounded-xl border-2 border-primary/30 bg-card p-6 shadow-sm">
+              <h4 className="flex items-center gap-2 font-display text-base font-semibold">
+                <span className="inline-flex items-center gap-1 rounded-full bg-primary px-2.5 py-0.5 font-mono text-[10px] font-bold text-primary-foreground">P5-c</span>
+                {t(
+                  `W-most PT ↔ PUA — ${PUA_PT_WBRIDGE.date}, deterministična (brez AI)`,
+                  `W-bridge PT ↔ PUA — ${PUA_PT_WBRIDGE.date}, deterministic (no AI)`,
+                )}
+              </h4>
+              <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{PUA_PT_WBRIDGE.method}</p>
+              <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+                <strong className="text-foreground">{t("Hipoteza:", "Hypothesis:")}</strong>{" "}
+                {lang === "si" ? PUA_PT_WBRIDGE.hypothesisSi : PUA_PT_WBRIDGE.hypothesisEn}
+              </p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {[
+                  { label: t("PT vrstic z W", "PT rows with W"), value: PUA_PT_WBRIDGE.counts.ptRowsWithW, cls: "bg-secondary text-muted-foreground" },
+                  { label: t("različnih W", "distinct W"), value: PUA_PT_WBRIDGE.counts.wDistinct, cls: "bg-secondary text-muted-foreground" },
+                  { label: t("z PUA protistrani", "with PUA side"), value: PUA_PT_WBRIDGE.counts.wWithPua, cls: "bg-secondary text-muted-foreground" },
+                  { label: t("MATCH ≥ 0,72", "MATCH ≥ 0.72"), value: PUA_PT_WBRIDGE.counts.match, cls: "bg-emerald-100 text-emerald-900 dark:bg-emerald-900/60 dark:text-emerald-100" },
+                  { label: t("PARTIAL ≥ 0,50", "PARTIAL ≥ 0.50"), value: PUA_PT_WBRIDGE.counts.partial, cls: "bg-amber-100 text-amber-900 dark:bg-amber-900/60 dark:text-amber-100" },
+                  { label: t("MISMATCH", "MISMATCH"), value: PUA_PT_WBRIDGE.counts.mismatch, cls: "bg-rose-100 text-rose-900 dark:bg-rose-900/60 dark:text-rose-100" },
+                  { label: t("napovedi za 35–49", "predictions for pp. 35–49"), value: PUA_PT_WBRIDGE.counts.wNoPua, cls: "bg-orange-100 text-orange-900 dark:bg-orange-900/60 dark:text-orange-100" },
+                ].map((s) => (
+                  <span key={s.label} className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 font-mono text-xs font-semibold ${s.cls}`}>
+                    {s.value} {s.label}
+                  </span>
+                ))}
+              </div>
+              <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
+                <strong className="text-foreground">{t("Ugotovitev:", "Finding:")}</strong>{" "}
+                {lang === "si" ? PUA_PT_WBRIDGE.findingSi : PUA_PT_WBRIDGE.findingEn}
+              </p>
+              <div className="mt-3 overflow-hidden rounded-lg border">
+                <div className="max-h-60 overflow-y-auto overflow-x-auto">
+                  <table className="w-full min-w-[560px] text-left text-[11px]">
+                    <thead className="sticky top-0 bg-secondary/60 backdrop-blur">
+                      <tr className="font-mono text-[10px] uppercase tracking-wide text-muted-foreground">
+                        <th className="px-3 py-2">W</th>
+                        <th className="px-3 py-2">{t("podobnost", "sim")}</th>
+                        <th className="px-3 py-2">{t("par (normaliziran)", "pair (normalised)")}</th>
+                        <th className="px-3 py-2">PT</th>
+                        <th className="px-3 py-2">PUA</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y">
+                      {PUA_PT_WBRIDGE.bestMatches.map((r) => (
+                        <tr key={r.w} className="align-top">
+                          <td className="whitespace-nowrap px-3 py-2 font-mono font-semibold text-foreground">{r.w}</td>
+                          <td className="whitespace-nowrap px-3 py-2 font-mono text-muted-foreground">{r.sim}</td>
+                          <td className="whitespace-nowrap px-3 py-2 font-mono text-muted-foreground">{r.pair}</td>
+                          <td className="px-3 py-2 text-muted-foreground">{r.ptOwners}</td>
+                          <td className="px-3 py-2 text-muted-foreground">{r.puaNames}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div className="mt-3 rounded-lg border border-orange-300/60 bg-orange-50 p-3 text-[11px] leading-relaxed dark:border-orange-800/60 dark:bg-orange-950/30">
+                <strong className="text-foreground">{t("Napovedi za strani 35–49 (P5-b, preverljivo):", "Predictions for pages 35–49 (P5-b, testable):")}</strong>
+                <ul className="mt-1 space-y-1 text-muted-foreground">
+                  {PUA_PT_WBRIDGE.predictions.map((p) => (
+                    <li key={p.house}>
+                      <span className="font-mono font-semibold text-foreground">{p.house}</span>: {p.expectedOwners}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <p className="mt-3 rounded-lg bg-amber-50 p-3 text-[11px] leading-relaxed text-muted-foreground dark:bg-amber-950/30">
+                <strong className="text-foreground">{t("Omejitve:", "Caveats:")}</strong>{" "}
+                {lang === "si" ? PUA_PT_WBRIDGE.caveatsSi : PUA_PT_WBRIDGE.caveatsEn}
               </p>
             </div>
 

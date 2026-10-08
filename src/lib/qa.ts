@@ -24,6 +24,7 @@ import {
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
+  PUA_PT_WBRIDGE,
   PT_REVIEW_2026,
   PT_PALEOGRAPHY_P3,
   ORAL_HISTORY_PROTOCOL,
@@ -621,6 +622,56 @@ export function runQA(): QAReport {
     p5Errors.length === 0
       ? `Deterministično (Levenshtein ≥ 0,72/0,50, scripts/pua-pt-cross.py, brez AI): 69 vnosov PUA (str. 3–34) ↔ 84 hišnih vrstic PT; 38 PT št. pokritih, 12 PUA št. brez PT vpisa (11 v bloku 41–60); ugotovitev [~]: PUA = indeks lastnikov parcel z lastno hišno referenco; omejitve: obe vira strojna branjla [~]; naslednji koraki: strani 35–49, človeška paleografija, arhivsko vprašanje ARS`
       : p5Errors.join("; "),
+  );
+
+  // P5-c: W-most PT ↔ PUA
+  const p5w = PUA_PT_WBRIDGE.counts;
+  const p5wErrors: string[] = [];
+  if (p5w.ptRowsWithW !== 43 || p5w.wRefsTotal !== 45 || p5w.wDistinct !== 26) {
+    p5wErrors.push(`P5-c W-obseg: ${p5w.ptRowsWithW}/${p5w.wRefsTotal}/${p5w.wDistinct} (pričakovano 43/45/26)`);
+  }
+  if (p5w.wWithPua !== 22 || p5w.wNoPua !== 4) {
+    p5wErrors.push(`P5-c W-protistrani: ${p5w.wWithPua}+${p5w.wNoPua} (pričakovano 22+4 = 26)`);
+  }
+  if (p5w.match + p5w.partial + p5w.mismatch !== p5w.wWithPua) {
+    p5wErrors.push(`P5-c verdikti: ${p5w.match}+${p5w.partial}+${p5w.mismatch} ≠ ${p5w.wWithPua}`);
+  }
+  if (p5w.match !== 6 || p5w.partial !== 9 || p5w.mismatch !== 7) {
+    p5wErrors.push(`P5-c razdelitev: ${p5w.match}/${p5w.partial}/${p5w.mismatch} (pričakovano 6/9/7)`);
+  }
+  if (PUA_PT_WBRIDGE.status !== "REVIEW") {
+    p5wErrors.push(`P5-c status: ${PUA_PT_WBRIDGE.status} (pričakovano REVIEW)`);
+  }
+  if (!PUA_PT_WBRIDGE.hypothesisSi.includes("[~]") || !PUA_PT_WBRIDGE.findingSi.includes("68 %")) {
+    p5wErrors.push("P5-c hipoteza/ugotovitev mora vsebovati [~] in 68 %");
+  }
+  if (PUA_PT_WBRIDGE.bestMatches.length !== 6) {
+    p5wErrors.push(`P5-c najboljših ujemanj: ${PUA_PT_WBRIDGE.bestMatches.length} (pričakovano 6)`);
+  }
+  if (PUA_PT_WBRIDGE.predictions.length !== 4) {
+    p5wErrors.push(`P5-c napovedi: ${PUA_PT_WBRIDGE.predictions.length} (pričakovano 4: h32/h64/h65/h68)`);
+  } else {
+    for (const h of ["h32", "h64", "h65", "h68"]) {
+      if (!PUA_PT_WBRIDGE.predictions.some((p) => p.house.includes(h))) {
+        p5wErrors.push(`P5-c manjka napoved ${h}`);
+      }
+    }
+  }
+  if (!PUA_PT_WBRIDGE.caveatsSi.includes("ponovljiva") || !PUA_PT_WBRIDGE.findingSi.includes("0/64")) {
+    p5wErrors.push("P5-c mora navesti ponovljivost in izhodišče P5-a (0/64)");
+  }
+  if (!PUA_PT_WBRIDGE.findingSi.includes("W.62") || !PUA_PT_WBRIDGE.caveatsSi.includes("W.47")) {
+    p5wErrors.push("P5-c mora dokumentirati šumenje (W.62 dvojni vpis, W.47 prečrtana)");
+  }
+
+  push(
+    "qa-p5-pua-pt-wbridge",
+    "P5-c W-most: 43 vrstic PT s 45 W-sklici (26 različnih), 22 z PUA protistrani, 15/22 ujemanj ≥ 0,50 (6 MATCH), 4 napovedi za strani 35–49",
+    "P5-c W-bridge: 43 PT rows with 45 W-references (26 distinct), 22 with a PUA counterpart, 15/22 matches ≥ 0.50 (6 MATCH), 4 predictions for pages 35–49",
+    p5wErrors.length === 0,
+    p5wErrors.length === 0
+      ? `Deterministično (scripts/pua-pt-wbridge.py, brez AI): most med različnima številčenjema iz P5-a — hipoteza [~] W.<n> = PUA hišna št. lastnika; najmočnejša ujemanja: W.2 Hlebetz↔Hlebety 0,86, W.24/25 Brinig↔Bring 0,83, W.1 Mufa↔Wufa 0,75 (M↔W Kurrent); 4 W št. brez PUA (32/64/65/68) = napovedi za ne prebrane strani 35–49; omejitve: strojna branjla [~], prečrtana W.47, dvojni vpis W.62`
+      : p5wErrors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;

@@ -1,4 +1,4 @@
-# P5 — Navzkrižna analiza PUA ↔ PT + PUA zaključek (2026-10-08)
+# P5 — Navzkrižna analiza PUA ↔ PT + W-most + PUA zaključek (2026-10-08)
 
 Nadaljevanje po P4 (isti dan), po naročilu uporabnika (»odlicno nadaljuj«).
 Odprtih ostaja PUA strani 35–49 (priimki P–Ž), blokiranih na VLM 429 rate-limit
@@ -25,16 +25,35 @@ imenih, ne po številkah. Oba vira sta strojna branjla [~] — 0/64 je lahko tud
 sistemska napaka VLM pri stolpcu hišnih št.; končna presoja: človeška paleografija
 + arhivsko vprašanje ARS (konskripcijska št. vs. Steuerhausnummer).
 
+## Kaj je narejeno (P5-c: W-most PT ↔ PUA, isti dan)
+
+**`scripts/pua-pt-wbridge.py`** — nadaljevanje P5-a: odkritje, da 43 vrstic PT
+(hiše 21–40 str. 4, vinogradniške parcele 41–60 str. 5, hiša 76½) nosi
+**45 sklicev »W.<štev>«** — hipoteza [~]: W = hišna št. lastnika v PUA
+številčenju → MOST med obema sistemoma številčenja.
+
+- 26 različnih W; 22 ima PUA protistrani, 4 (32, 64, 65, 68) jo še nimajo
+- **15/22 (68 %) ujemanj ≥ 0,50** po križno-žetonjski podobnosti vseh imenskih
+  žetonov (proti izhodišču P5-a: 0/64): 6 MATCH (W.2 Hlebetz↔Hlebety 0,86;
+  W.24/W.25 Brinig↔Bring 0,83; W.29 Milleg↔Millej 0,83; W.21 Jožef↔Jožeg 0,80;
+  W.1 Mufa↔Wufa 0,75 — M↔W zamenjava značilna za Kurrent), 9 PARTIAL, 7 MISMATCH
+- Šumenje pošteno dokumentirano: W.47 = prečrtana PT vrstica, W.62 = dvojni PUA
+  vpis (Kosirhan Mäda + Georg Juttner), PT str. 6+ W-stolpca ne nosi
+- **4 preverljive napovedi za strani 35–49** (P5-b): PUA h32 (Greg/Piberig
+  Ulrich), h64 (Varbutek Mufa / Jörg Georg), h65 (Bring Marko / Glan Simonz),
+  h68 (Malt Ulrich) — če se ob branju potrdijo, se zaupanje v most dvigne
+
 ## Artefakti
 - `pua-pt-cross.json` — polni izpis (obsodbe po vnosih, pokritosti, priimki)
-- `src/data/atlas/research.ts` — PUA_PT_CROSS (sklep, omejitve, naslednji koraki)
-- `museum-research.tsx` — kartica P5 (zavihek vrzeli)
-- `qa.ts` — test `qa-p5-pua-pt-cross`
-- `/api/provenance` → `research.p5.puaPtCross`
+- `pua-pt-wbridge.json` — polni W-most (join po številkah, verdikti, napovedi)
+- `src/data/atlas/research.ts` — PUA_PT_CROSS + PUA_PT_WBRIDGE
+- `museum-research.tsx` — kartici P5 in P5-c (zavihek vrzeli)
+- `qa.ts` — testa `qa-p5-pua-pt-cross` + `qa-p5-pua-pt-wbridge`
+- `/api/provenance` → `research.p5.puaPtCross` + `research.p5.puaPtWbridge`
 
 ## Kaj čaka (P5-b)
 - PUA strani 35–49: `bun scripts/pua-probe-read.mjs` (sonda čaka na dvig limita,
   nato prebere manjkajoče strani) → `python3 scripts/pua-parse.py` →
-  `python3 scripts/pua-gen-ts.py` → integracija + ponovni zagon analize
-- VLM 429 rate-limit: aktiven > 3 h (testirano 09:56–10:18, 18 sond, vse 429;
-  tekstovni LLM prav tako 429 — isti limit)
+  `python3 scripts/pua-gen-ts.py` → integracija + ponovni zagon OBEH analize
+  (P5-a in P5-c) + preverba napovedi h32/h64/h65/h68
+- VLM 429 rate-limit: vztraja še ob 11:30 (2 novi sondi); tekstovni LLM prav tako

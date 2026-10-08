@@ -7,7 +7,7 @@
    - zunanji viri (OSM ploščice): pustimo brskalniku
    Dvigom različice VERSION se stare predpomnilnice očistijo samodejno. */
 
-const VERSION = "mvg-v12";
+const VERSION = "mvg-v13";
 const PAGE_CACHE = `${VERSION}-pages`;
 const STATIC_CACHE = `${VERSION}-static`;
 const ASSET_CACHE = `${VERSION}-assets`;

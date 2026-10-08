@@ -19,6 +19,7 @@ import {
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
+  PUA_PT_WBRIDGE,
   PT_REVIEW_2026,
   PT_PALEOGRAPHY_P3,
   ORAL_HISTORY_PROTOCOL,
@@ -92,6 +93,7 @@ export async function GET() {
         },
         p5: {
           puaPtCross: PUA_PT_CROSS,
+          puaPtWbridge: PUA_PT_WBRIDGE,
         },
         issue17: {
           audit: ISSUE17_AUDIT,

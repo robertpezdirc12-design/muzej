@@ -1,0 +1,860 @@
+{
+  "meta": {
+    "title": "P5-c: W-most PUA ↔ PT",
+    "generated": "2026-10-08",
+    "method": "deterministično (brez AI): W.<n> sklici iz houses.ts (PT, str. 4–5, hiše 21–40 + parcele 41–60 + hiša 76½) ⟷ PUA hišne št. iz PUA_CONTINUATION (research.ts, 69 vnosov, str. 3–34); priimki po Levenshtein podobnosti, prag 0.72 (MATCH) / 0.50 (PARTIAL) — enako kot P5-a",
+    "hypothesis": "[~] Sklic W.<n> v PT kaže na hišno številko v PUA številčenju (W = črka v viru; protistrani priimki se ujemajo nad naključjem kljub Kurrent bralnim zmotam).",
+    "caveats": "Vsa branja so strojna (VLM) s statusom REVIEW; »MISMATCH« je lahko bralna zmota in ne dokaz protislovja; PUA vnosov s hišno št. ni nujno enolično preslikati (VLM negotovost »20 ali 23«)."
+  },
+  "stats": {
+    "ptRowsWithW": 43,
+    "wRefsTotal": 45,
+    "wDistinct": 26,
+    "wWithPua": 22,
+    "wNoPua": 4,
+    "match": 6,
+    "partial": 9,
+    "mismatch": 7,
+    "puaNumsNoW": 28,
+    "puaRows": 69
+  },
+  "join": [
+    {
+      "W": 1,
+      "pt": [
+        {
+          "id": "hiša-25",
+          "no": "24",
+          "owner": "Štunidat Mufa",
+          "isParcel": false
+        },
+        {
+          "id": "hiša-26",
+          "no": "25",
+          "owner": "Štunidat Mufa",
+          "isParcel": false
+        }
+      ],
+      "pua": [
+        {
+          "page": 3,
+          "row": 1,
+          "name": "Hölloschitsch Wufa Luina hau Dragosche [~]",
+          "ambiguous": false
+        }
+      ],
+      "bestTokenSim": 0.75,
+      "bestPair": [
+        "mufa",
+        "wufa"
+      ],
+      "verdict": "MATCH"
+    },
+    {
+      "W": 2,
+      "pt": [
+        {
+          "id": "hiša-27",
+          "no": "26",
+          "owner": "Hlebetz Jan",
+          "isParcel": false
+        }
+      ],
+      "pua": [
+        {
+          "page": 11,
+          "row": 18,
+          "name": "Hlebety Johann, Bauer hiesig zu Grüble [~]",
+          "ambiguous": false
+        },
+        {
+          "page": 23,
+          "row": 46,
+          "name": "Kleppetz Georg büuerl hiesig Gemeinde: Hie Leusthal [~]",
+          "ambiguous": false
+        }
+      ],
+      "bestTokenSim": 0.857,
+      "bestPair": [
+        "hlebetz",
+        "hlebety"
+      ],
+      "verdict": "MATCH"
+    },
+    {
+      "W": 10,
+      "pt": [
+        {
+          "id": "hiša-22",
+          "no": "21",
+          "owner": "Šture Majzel",
+          "isParcel": false
+        },
+        {
+          "id": "hiša-23",
+          "no": "22",
+          "owner": "Šture Majzel",
+          "isParcel": false
+        }
+      ],
+      "pua": [
+        {
+          "page": 16,
+          "row": 31,
+          "name": "Lure Mäusel buaß hulgäßl [~]",
+          "ambiguous": false
+        }
+      ],
+      "bestTokenSim": 0.667,
+      "bestPair": [
+        "majzel",
+        "mausel"
+      ],
+      "verdict": "PARTIAL"
+    },
+    {
+      "W": 11,
+      "pt": [
+        {
+          "id": "hiša-24",
+          "no": "23",
+          "owner": "Ludvig Gregor",
+          "isParcel": false
+        }
+      ],
+      "pua": [
+        {
+          "page": 27,
+          "row": 54,
+          "name": "Georg Grangl bauer zu Griblje [~]",
+          "ambiguous": false
+        }
+      ],
+      "bestTokenSim": 0.5,
+      "bestPair": [
+        "gregor",
+        "georg"
+      ],
+      "verdict": "PARTIAL"
+    },
+    {
+      "W": 20,
+      "pt": [
+        {
+          "id": "hiša-40",
+          "no": "38",
+          "owner": "Brinig Malfa [~]",
+          "isParcel": false
+        },
+        {
+          "id": "parcela-44",
+          "no": "—",
+          "owner": "Malfs Mathäus",
+          "isParcel": true
+        }
+      ],
+      "pua": [
+        {
+          "page": 3,
+          "row": 2,
+          "name": "Bringz Wufa Luina hau Grüble [~]",
+          "ambiguous": true
+        },
+        {
+          "page": 28,
+          "row": 56,
+          "name": "Polcig Michael buͤrſn/zu/gribla [~]",
+          "ambiguous": false
+        }
+      ],
+      "bestTokenSim": 0.667,
+      "bestPair": [
+        "brinig",
+        "bringz"
+      ],
+      "verdict": "PARTIAL?"
+    },
+    {
+      "W": 21,
+      "pt": [
+        {
+          "id": "hiša-28",
+          "no": "27",
+          "owner": "Jožef Miko",
+          "isParcel": false
+        }
+      ],
+      "pua": [
+        {
+          "page": 15,
+          "row": 28,
+          "name": "Janko vitnik [~]",
+          "ambiguous": false
+        },
+        {
+          "page": 29,
+          "row": 57,
+          "name": "Jožeg Muhč Bauer houlgübl [~]",
+          "ambiguous": false
+        }
+      ],
+      "bestTokenSim": 0.8,
+      "bestPair": [
+        "jozef",
+        "jozeg"
+      ],
+      "verdict": "MATCH"
+    },
+    {
+      "W": 22,
+      "pt": [
+        {
+          "id": "hiša-39",
+          "no": "37",
+          "owner": "Brinig Malfa [~]",
+          "isParcel": false
+        },
+        {
+          "id": "hiša-40",
+          "no": "38",
+          "owner": "Brinig Malfa [~]",
+          "isParcel": false
+        }
+      ],
+      "pua": [
+        {
+          "page": 25,
+          "row": 50,
+          "name": "Millea Johann bau Gsöbln [~]",
+          "ambiguous": false
+        }
+      ],
+      "bestTokenSim": 0.5,
+      "bestPair": [
+        "malfa",
+        "millea"
+      ],
+      "verdict": "PARTIAL"
+    },
+    {
+      "W": 23,
+      "pt": [
+        {
+          "id": "hiša-39",
+          "no": "37",
+          "owner": "Brinig Malfa [~]",
+          "isParcel": false
+        },
+        {
+          "id": "hiša-42",
+          "no": "40",
+          "owner": "Brinig Malfa [~]",
+          "isParcel": false
+        }
+      ],
+      "pua": [
+        {
+          "page": 3,
+          "row": 2,
+          "name": "Bringz Wufa Luina hau Grüble [~]",
+          "ambiguous": true
+        }
+      ],
+      "bestTokenSim": 0.667,
+      "bestPair": [
+        "brinig",
+        "bringz"
+      ],
+      "verdict": "PARTIAL?"
+    },
+    {
+      "W": 24,
+      "pt": [
+        {
+          "id": "hiša-37",
+          "no": "35",
+          "owner": "Brinig Magnus [~]",
+          "isParcel": false
+        }
+      ],
+      "pua": [
+        {
+          "page": 4,
+          "row": 3,
+          "name": "Bring Migan/Michael Bauern hiesig Grübln [~]",
+          "ambiguous": false
+        }
+      ],
+      "bestTokenSim": 0.833,
+      "bestPair": [
+        "brinig",
+        "bring"
+      ],
+      "verdict": "MATCH"
+    },
+    {
+      "W": 25,
+      "pt": [
+        {
+          "id": "hiša-41",
+          "no": "39",
+          "owner": "Brinig Miklo [~]",
+          "isParcel": false
+        }
+      ],
+      "pua": [
+        {
+          "page": 4,
+          "row": 4,
+          "name": "Bring Miß/Martin Bauern hiesig Grübln [~]",
+          "ambiguous": false
+        }
+      ],
+      "bestTokenSim": 0.833,
+      "bestPair": [
+        "brinig",
+        "bring"
+      ],
+      "verdict": "MATCH"
+    },
+    {
+      "W": 26,
+      "pt": [
+        {
+          "id": "parcela-42",
+          "no": "—",
+          "owner": "Glan Georg",
+          "isParcel": true
+        }
+      ],
+      "pua": [
+        {
+          "page": 5,
+          "row": 5,
+          "name": "Bring Johann Bräun [~] houlg.",
+          "ambiguous": false
+        },
+        {
+          "page": 14,
+          "row": 27,
+          "name": "Jankowitsche Juran bauernhow Zerguische [~]",
+          "ambiguous": false
+        }
+      ],
+      "bestTokenSim": 0.4,
+      "bestPair": [
+        "glan",
+        "braun"
+      ],
+      "verdict": "MISMATCH"
+    },
+    {
+      "W": 27,
+      "pt": [
+        {
+          "id": "hiša-38",
+          "no": "36",
+          "owner": "Milleg Hans [~]",
+          "isParcel": false
+        },
+        {
+          "id": "parcela-43",
+          "no": "—",
+          "owner": "Glan Matthäus",
+          "isParcel": true
+        }
+      ],
+      "pua": [
+        {
+          "page": 26,
+          "row": 51,
+          "name": "Mallestitak [~]",
+          "ambiguous": false
+        }
+      ],
+      "bestTokenSim": 0.364,
+      "bestPair": [
+        "milleg",
+        "mallestitak"
+      ],
+      "verdict": "MISMATCH"
+    },
+    {
+      "W": 28,
+      "pt": [
+        {
+          "id": "parcela-45",
+          "no": "—",
+          "owner": "Mals Georg",
+          "isParcel": true
+        }
+      ],
+      "pua": [
+        {
+          "page": 5,
+          "row": 6,
+          "name": "Bring Mäda/Manda [~] (Magdalena) Brünn [~]",
+          "ambiguous": false
+        }
+      ],
+      "bestTokenSim": 0.5,
+      "bestPair": [
+        "mals",
+        "mada"
+      ],
+      "verdict": "PARTIAL"
+    },
+    {
+      "W": 29,
+      "pt": [
+        {
+          "id": "hiša-35",
+          "no": "34",
+          "owner": "Milleg Hans [~]",
+          "isParcel": false
+        },
+        {
+          "id": "hiša-36",
+          "no": "34 (prečrtana dvojnica)",
+          "owner": "Milleg Hans [~]",
+          "isParcel": false
+        }
+      ],
+      "pua": [
+        {
+          "page": 26,
+          "row": 52,
+          "name": "Millej [~]",
+          "ambiguous": false
+        }
+      ],
+      "bestTokenSim": 0.833,
+      "bestPair": [
+        "milleg",
+        "millej"
+      ],
+      "verdict": "MATCH"
+    },
+    {
+      "W": 31,
+      "pt": [
+        {
+          "id": "hiša-29",
+          "no": "28",
+          "owner": "Jožef Miko",
+          "isParcel": false
+        },
+        {
+          "id": "parcela-53",
+          "no": "—",
+          "owner": "Marlo Michael",
+          "isParcel": true
+        }
+      ],
+      "pua": [
+        {
+          "page": 18,
+          "row": 34,
+          "name": "Krischan Mandschurischka / Griblje [~]",
+          "ambiguous": false
+        }
+      ],
+      "bestTokenSim": 0.375,
+      "bestPair": [
+        "michael",
+        "krischan"
+      ],
+      "verdict": "MISMATCH"
+    },
+    {
+      "W": 32,
+      "pt": [
+        {
+          "id": "parcela-54",
+          "no": "—",
+          "owner": "Greg Ulrich",
+          "isParcel": true
+        },
+        {
+          "id": "parcela-57",
+          "no": "—",
+          "owner": "Piberig Ulrich",
+          "isParcel": true
+        },
+        {
+          "id": "parcela-58",
+          "no": "—",
+          "owner": "Greg Ulrich",
+          "isParcel": true
+        }
+      ],
+      "pua": [],
+      "verdict": "NO_PUA (napoved za str. 35–49)",
+      "expectedOwner": [
+        "Greg Ulrich",
+        "Piberig Ulrich",
+        "Greg Ulrich"
+      ]
+    },
+    {
+      "W": 36,
+      "pt": [
+        {
+          "id": "parcela-59",
+          "no": "—",
+          "owner": "Leder Simon",
+          "isParcel": true
+        }
+      ],
+      "pua": [
+        {
+          "page": 10,
+          "row": 16,
+          "name": "Fillah Jetter [~]",
+          "ambiguous": false
+        },
+        {
+          "page": 18,
+          "row": 35,
+          "name": "Krischan Malfs Leurschkau / Griblje [~]",
+          "ambiguous": false
+        }
+      ],
+      "bestTokenSim": 0.5,
+      "bestPair": [
+        "leder",
+        "jetter"
+      ],
+      "verdict": "PARTIAL"
+    },
+    {
+      "W": 47,
+      "pt": [
+        {
+          "id": "hiša-78b",
+          "no": "76½",
+          "owner": "Hufschmied [~] (rdeči vpis, prečrtana)",
+          "isParcel": false
+        }
+      ],
+      "pua": [
+        {
+          "page": 22,
+          "row": 42,
+          "name": "Matthäus Wundsch [~]",
+          "ambiguous": false
+        }
+      ],
+      "bestTokenSim": 0.3,
+      "bestPair": [
+        "hufschmied",
+        "wundsch"
+      ],
+      "verdict": "MISMATCH?"
+    },
+    {
+      "W": 60,
+      "pt": [
+        {
+          "id": "parcela-50",
+          "no": "—",
+          "owner": "Joger Schello",
+          "isParcel": true
+        },
+        {
+          "id": "parcela-51",
+          "no": "—",
+          "owner": "Joger Schello",
+          "isParcel": true
+        },
+        {
+          "id": "parcela-55",
+          "no": "—",
+          "owner": "Joger Schello",
+          "isParcel": true
+        }
+      ],
+      "pua": [
+        {
+          "page": 31,
+          "row": 61,
+          "name": "Georg Rußa Bauer zu Griblje [~]",
+          "ambiguous": false
+        }
+      ],
+      "bestTokenSim": 0.2,
+      "bestPair": [
+        "joger",
+        "georg"
+      ],
+      "verdict": "MISMATCH"
+    },
+    {
+      "W": 61,
+      "pt": [
+        {
+          "id": "parcela-49",
+          "no": "—",
+          "owner": "Malt Simon",
+          "isParcel": true
+        },
+        {
+          "id": "parcela-52b",
+          "no": "—",
+          "owner": "Malt Simon D.",
+          "isParcel": true
+        }
+      ],
+      "pua": [
+        {
+          "page": 10,
+          "row": 17,
+          "name": "Fillah Miho [~]",
+          "ambiguous": false
+        }
+      ],
+      "bestTokenSim": 0.4,
+      "bestPair": [
+        "simon",
+        "miho"
+      ],
+      "verdict": "MISMATCH"
+    },
+    {
+      "W": 62,
+      "pt": [
+        {
+          "id": "parcela-52",
+          "no": "—",
+          "owner": "Meßle Michael",
+          "isParcel": true
+        }
+      ],
+      "pua": [
+        {
+          "page": 20,
+          "row": 38,
+          "name": "Kosirhan Mäda Bauer zu Griblje [~]",
+          "ambiguous": false
+        },
+        {
+          "page": 31,
+          "row": 62,
+          "name": "Georg Juttner Bauer zu Griblje [~]",
+          "ambiguous": false
+        }
+      ],
+      "bestTokenSim": 0.286,
+      "bestPair": [
+        "michael",
+        "mada"
+      ],
+      "verdict": "MISMATCH"
+    },
+    {
+      "W": 63,
+      "pt": [
+        {
+          "id": "parcela-46",
+          "no": "—",
+          "owner": "Grög Michael",
+          "isParcel": true
+        },
+        {
+          "id": "parcela-47",
+          "no": "—",
+          "owner": "Greg Michael",
+          "isParcel": true
+        },
+        {
+          "id": "parcela-48",
+          "no": "—",
+          "owner": "Greg Michael",
+          "isParcel": true
+        }
+      ],
+      "pua": [
+        {
+          "page": 6,
+          "row": 8,
+          "name": "Bring Manda Brinahug [~]",
+          "ambiguous": false
+        },
+        {
+          "page": 21,
+          "row": 40,
+          "name": "Nikolaus Grönig bauer und Gailb. [~]",
+          "ambiguous": false
+        }
+      ],
+      "bestTokenSim": 0.667,
+      "bestPair": [
+        "grog",
+        "gronig"
+      ],
+      "verdict": "PARTIAL"
+    },
+    {
+      "W": 64,
+      "pt": [
+        {
+          "id": "hiša-34",
+          "no": "33",
+          "owner": "Varbutek Mufa",
+          "isParcel": false
+        },
+        {
+          "id": "parcela-41",
+          "no": "—",
+          "owner": "Jörg Georg",
+          "isParcel": true
+        }
+      ],
+      "pua": [],
+      "verdict": "NO_PUA (napoved za str. 35–49)",
+      "expectedOwner": [
+        "Varbutek Mufa",
+        "Jörg Georg"
+      ]
+    },
+    {
+      "W": 65,
+      "pt": [
+        {
+          "id": "hiša-33",
+          "no": "32",
+          "owner": "Bring Marko",
+          "isParcel": false
+        },
+        {
+          "id": "parcela-60",
+          "no": "—",
+          "owner": "Glan Simonz",
+          "isParcel": true
+        }
+      ],
+      "pua": [],
+      "verdict": "NO_PUA (napoved za str. 35–49)",
+      "expectedOwner": [
+        "Bring Marko",
+        "Glan Simonz"
+      ]
+    },
+    {
+      "W": 66,
+      "pt": [
+        {
+          "id": "hiša-30",
+          "no": "29",
+          "owner": "Krišan Gregor",
+          "isParcel": false
+        },
+        {
+          "id": "hiša-31",
+          "no": "30",
+          "owner": "Krišan Gregor",
+          "isParcel": false
+        },
+        {
+          "id": "hiša-32",
+          "no": "31",
+          "owner": "Bring Marko",
+          "isParcel": false
+        }
+      ],
+      "pua": [
+        {
+          "page": 21,
+          "row": 41,
+          "name": "Nikolaus Grönig bauer und Gailb. [~]",
+          "ambiguous": false
+        }
+      ],
+      "bestTokenSim": 0.5,
+      "bestPair": [
+        "bring",
+        "gronig"
+      ],
+      "verdict": "PARTIAL"
+    },
+    {
+      "W": 68,
+      "pt": [
+        {
+          "id": "parcela-56",
+          "no": "—",
+          "owner": "Malt Ulrich",
+          "isParcel": true
+        }
+      ],
+      "pua": [],
+      "verdict": "NO_PUA (napoved za str. 35–49)",
+      "expectedOwner": [
+        "Malt Ulrich"
+      ]
+    }
+  ],
+  "puaNumsWithoutW": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    33,
+    34,
+    37,
+    40,
+    41,
+    42,
+    43,
+    46,
+    48,
+    53,
+    54,
+    57,
+    59,
+    67,
+    69
+  ],
+  "predictions": {
+    "note": "W številke brez PUA protistrani — pričakovani lastniki po PT; preverljivo ob branju strani 35–49 (P5-b).",
+    "items": [
+      {
+        "W": 32,
+        "expectedOwners": [
+          "Greg Ulrich",
+          "Piberig Ulrich",
+          "Greg Ulrich"
+        ]
+      },
+      {
+        "W": 64,
+        "expectedOwners": [
+          "Varbutek Mufa",
+          "Jörg Georg"
+        ]
+      },
+      {
+        "W": 65,
+        "expectedOwners": [
+          "Bring Marko",
+          "Glan Simonz"
+        ]
+      },
+      {
+        "W": 68,
+        "expectedOwners": [
+          "Malt Ulrich"
+        ]
+      }
+    ]
+  }
+}

@@ -1149,6 +1149,76 @@ export const PUA_PT_CROSS: {
     "Next steps: (1) read PUA pages 35–49 (surnames P–Ž) and re-run the analysis; (2) human palaeographic verification of the house-number column on a sample of 10 entries; (3) archival question for ARS: does the PUA »Haus« mean the conscription house number or the tax-nest number (Steuerhausnummer)?",
 };
 
+/** P5-c: W-MOST — sklici »W.<štev>« v PT ⟷ PUA hišno številčenje (deterministično, 2026-10-08). */
+export const PUA_PT_WBRIDGE: {
+  date: string;
+  method: string;
+  status: ResearchStatus;
+  artifact: string;
+  counts: {
+    ptRowsWithW: number;
+    wRefsTotal: number;
+    wDistinct: number;
+    wWithPua: number;
+    wNoPua: number;
+    match: number;
+    partial: number;
+    mismatch: number;
+    puaNumsNoW: number;
+  };
+  hypothesisSi: string;
+  hypothesisEn: string;
+  findingSi: string;
+  findingEn: string;
+  bestMatches: { w: string; sim: string; pair: string; ptOwners: string; puaNames: string }[];
+  predictions: { house: string; expectedOwners: string }[];
+  caveatsSi: string;
+  caveatsEn: string;
+} = {
+  date: "2026-10-08",
+  method:
+    "Deterministični W-most (skript scripts/pua-pt-wbridge.py, brez AI klicev): 43 vrstic PT (hiše 21–40 str. 4, parcele 41–60 str. 5, hiša 76½) nosi 45 sklicev »W.<štev>« (različnih 26) — zjoinanih s PUA hišnimi št. (PUA_CONTINUATION, 69 vnosov); primerjava VSIH imenskih žetonov (križno-žetonjsko, Levenshtein 0,72/0,50 — enaka pragova kot P5-a, ß→ss normalizacija). Izhod: research/p5/pua-pt-wbridge.json.",
+  status: "REVIEW",
+  artifact: "research/p5/pua-pt-wbridge.json",
+  counts: {
+    ptRowsWithW: 43,
+    wRefsTotal: 45,
+    wDistinct: 26,
+    wWithPua: 22,
+    wNoPua: 4,
+    match: 6,
+    partial: 9,
+    mismatch: 7,
+    puaNumsNoW: 28,
+  },
+  hypothesisSi:
+    "HIPOTEZA [~]: sklic »W.<štev>« v PT (Protokoll stavbnih parcel — tudi pri vinogradniških parcelah 41–60 na str. 5) je hišna številka lastnika v PUA številčenju (Grundsteuerkataster), torej MOST med obema različnima številčenjema iz ugotovitve P5-a.",
+  hypothesisEn:
+    "HYPOTHESIS [~]: the »W.<n>« reference in PT (the building-parcel protocol — also on vineyard parcels 41–60 on p. 5) is the owner's house number in the PUA (cadastre) numbering — i.e. the BRIDGE between the two differing numbering systems found by P5-a.",
+  findingSi:
+    "UGOTOVITEV: pri 22 W-sklicih z PUA protistrani se 15 (68 %) ujema z žetonsko podobnostjo ≥ 0,50 (6 MATCH ≥ 0,72: W.2 Hlebetz↔Hlebety 0,86; W.24/W.25 Brinig↔Bring 0,83; W.29 Milleg↔Millej 0,83; W.21 Jožef↔Jožeg 0,80; W.1 Mufa↔Wufa 0,75 — zamenjava M/W značilna za Kurrent) — proti P5-a izhodišču 0/64 po istih številkah. Most je podprt, a šumosten: 7 MISMATCH (W.26, 27, 31, 47, 60, 61, 62) vključuje prečrtano PT vrstico (W.47 Hufschmied), dvojni PUA vpis za isto št. (W.62: Kosirhan Mäda IN Georg Juttner — notranja nestabilnost PUA številčenja) in verjetne VLM bralne zmote. KOMPONENTA PT str. 6+ (hiše 61–80) sklicev W ne nosi — W-stolpec je berljiv le na str. 4–5. Štiri W št. (32, 64, 65, 68) v PUA (str. 3–34) še nimajo protistrani → preverljive napovedi za strani 35–49 (P5-b).",
+  findingEn:
+    "FINDING: of 22 W-references with a PUA counterpart, 15 (68 %) agree at token similarity ≥ 0.50 (6 MATCH ≥ 0.72: W.2 Hlebetz↔Hlebety 0.86; W.24/W.25 Brinig↔Bring 0.83; W.29 Milleg↔Millej 0.83; W.21 Jožef↔Jožeg 0.80; W.1 Mufa↔Wufa 0.75 — an M/W swap typical of Kurrent script) — against the P5-a baseline of 0/64 at the same numbers. The bridge is supported but noisy: 7 MISMATCHes (W.26, 27, 31, 47, 60, 61, 62) include a struck-through PT row (W.47 Hufschmied), a double PUA entry for the same number (W.62: Kosirhan Mäda AND Georg Juttner — internal instability of PUA numbering) and likely VLM misreads. The PT component on p. 6+ (houses 61–80) carries no W references — the W column is legible only on pp. 4–5. Four W numbers (32, 64, 65, 68) have no PUA counterpart in pp. 3–34 yet → testable predictions for pages 35–49 (P5-b).",
+  bestMatches: [
+    { w: "W.2", sim: "0,86", pair: "hlebetz ↔ hlebety", ptOwners: "Hlebetz Jan (hiša 26, W.2 · Schißing 245)", puaNames: "Hlebety Johann, Bauer hiesig zu Grüble (p11 v18, h2)" },
+    { w: "W.24", sim: "0,83", pair: "brinig ↔ bring", ptOwners: "Brinig Magnus (hiša 35, W.24 · Schißing 54/64)", puaNames: "Bring Migan/Michael Bauern hiesig Grübln (p4 v3, h24)" },
+    { w: "W.25", sim: "0,83", pair: "brinig ↔ bring", ptOwners: "Brinig Miklo (hiša 39, W.25 · Schißing 39)", puaNames: "Bring Miß/Martin Bauern hiesig Grübln (p4 v4, h25)" },
+    { w: "W.29", sim: "0,83", pair: "milleg ↔ millej", ptOwners: "Milleg Hans (hiša 34, W.29 · Schißing 46 / Walle 8)", puaNames: "Millej (p26 v52, h29)" },
+    { w: "W.21", sim: "0,80", pair: "jozef ↔ jozeg", ptOwners: "Jožef Miko (hiša 27, W.21 · Schißing 88)", puaNames: "Jožeg Muhč Bauer houlgübl (p29 v57, h21)" },
+    { w: "W.1", sim: "0,75", pair: "mufa ↔ wufa", ptOwners: "Štunidat Mufa (hiši 24/25, W.1 · Apnind 28 / Schißing 89)", puaNames: "Hölloschitsch Wufa Luina hau Dragosche (p3 v1, h1) — ista oseba, dve strojni brani (M↔W)" },
+  ],
+  predictions: [
+    { house: "PUA h32", expectedOwners: "Greg Ulrich / Piberig Ulrich (PT: parc. 54, 57, 58 — W.32)" },
+    { house: "PUA h64", expectedOwners: "Varbutek Mufa (hiša 33, W.64 · Schißing 67) / Jörg Georg (parc. 41, W.64)" },
+    { house: "PUA h65", expectedOwners: "Bring Marko (hiša 32, W.65 · Schißing 90) / Glan Simonz (parc. 60, W.65)" },
+    { house: "PUA h68", expectedOwners: "Malt Ulrich (parc. 56, W.68)" },
+  ],
+  caveatsSi:
+    "Vsa vhodna branja so strojna (VLM, status REVIEW) — W.47 je prečrtana PT vrstica (primerjava brez pomena), W.62 ima dva različna PUA lastnika (branje št. ali časovni zamik), križno-žetonjska primerjava lahko ujame tudi ime↔ime (ne priimek↔priimek), kar navidezno poveča podobnost. Analiza je deterministična in ponovljiva (python3 scripts/pua-pt-wbridge.py). Hipoteza W = PUA številčenje ostaja [~] do paleografske potrditve; če se strani 35–49 preberejo in napovedi (h32/64/65/68) se potrdijo, se zaupanje v most bistveno dvigne.",
+  caveatsEn:
+    "All input readings are machine-based (VLM, status REVIEW) — W.47 is a struck-through PT row (comparison meaningless), W.62 has two different PUA owners (number misread or temporal shift), and the cross-token comparison may match given-name↔given-name (not surname↔surname), inflating similarity. The analysis is deterministic and reproducible (python3 scripts/pua-pt-wbridge.py). The W = PUA-numbering hypothesis remains [~] until palaeographic confirmation; if pages 35–49 are read and the predictions (h32/64/65/68) hold, confidence in the bridge rises substantially.",
+};
+
 /** PT — strokovni pregled obstoječega registra (issue #17, 2026-10-08). */
 export const PT_REVIEW_2026: {
   source: string;
