@@ -57,3 +57,17 @@ sistemska napaka VLM pri stolpcu hišnih št.; končna presoja: človeška paleo
   `python3 scripts/pua-gen-ts.py` → integracija + ponovni zagon OBEH analize
   (P5-a in P5-c) + preverba napovedi h32/h64/h65/h68
 - VLM 429 rate-limit: vztraja še ob 11:30 (2 novi sondi); tekstovni LLM prav tako
+
+## Stanje samodejnega nadaljevanja (2026-10-08 12:00)
+`scripts/pua-auto-resume.sh` (sonda vsakih 5 min, 24 h; ob dvigu kvote samodejno
+prebere 35–49 + parse + gen + obe analizi + commit/push) je bil 2× zagnan v
+ozadju — oba procesa je sandbox počistil v ~4 min (znana omeitev detached
+procesov, enako kot v P4/P5-a). Zato velja ROČNA metoda ob dvigu kvote:
+
+```
+bun scripts/pua-probe-read.mjs            # ali: bun scripts/pua-read.mjs 35..49
+python3 scripts/pua-parse.py
+python3 scripts/pua-gen-ts.py
+python3 scripts/pua-pt-cross.py           # P5-a ponovno
+python3 scripts/pua-pt-wbridge.py         # P5-c ponovno + preverba napovedi
+```

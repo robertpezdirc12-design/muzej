@@ -1732,3 +1732,4 @@ Stage Summary:
 - P5-c DOKONČAN in v produkciji: W-most [~] med obema številčenjema (68 % ujemanj ≥ 0,50), QA 19/19, kartica + napovedi javno vidne
 - P5-b (PUA 35–49): samodejni nadaljevalni cikel aktiven; ročna integracija research.ts + preverba napovedi sledita ob uspehu
 - VLM 429: vztraja > 3,5 h (3 h sonde + 2 novi); tekstovni LLM isti limit
+- Dopolnitev (12:00): samodejni cikel pua-auto-resume.sh 2× zagnan (PID 8350, 8430) — OBA umrla v ~4 min (sandbox čisti detached procese, enako kot v P4/P5); sonda v foregroundu 3× 429 (11:51–11:55, skupno 8 sond tej seji). P5-b ostaja blokiran na kvoti; ročna metoda popolnoma dokumentirana v research/p5/README.md (probe-read → parse → gen → obe analizi → integracija + preverba napovedi h32/h64/h65/h68)
