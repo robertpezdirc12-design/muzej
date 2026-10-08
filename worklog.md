@@ -1656,3 +1656,20 @@ Stage Summary:
 - 3 nove raziskovalne ugotovitve [~] (cerkev sv. Vida, različno številčenje PT/PUA, hišne št. 41–60)
 - Statusi ostajajo REVIEW; strani 35–49 (priimki P–Ž) TO_COLLECT — zanka v ozadju nadaljuje, ob uspehu sledi P5
 - Naslednji korak: commit + push + produkcija; potem (če se limit dvigne) strani 35–49
+
+---
+Task ID: P4-zaključek
+Agent: Z.ai Code (glavni agent)
+Task: P4 zaključek — produkcija, verifikacija, končni status strani 35–49
+
+Work Log:
+- Commit e595014 → push na kanonični repo robert.pezdirc12/muzej (prejšnji oddaljeni "novi" je bil odstranjen; "deploy" remote preusmerjen na svež žeton; oddaljeni je bil že na 623102a → P3 je bil uspešno potisnjen prej)
+- Vercel deploy: /api/qa 17/17 PASS (nov test qa-p4-pua-nadaljevanje); /api/provenance 69 vrstic/32 strani; vse rute 200
+- E2E produkcija (agent-browser): ?odsek=raziskave → zavihek vrzeli → PUA kartica (header strani 3–34, 69 vnosov; P4 opomba; Kirche/Höflehner/Pfister vrstice) ✓; konzola brez napak ✓
+- Poskusi branja strani 35–49: VLM gateway 429 (rate-limit cel račun, vztraja >85 min od ~08:12); zanka v ozadju 2× umrla (sandbox periodično počišti detached procese) — pošteno dokumentirano
+- Nezavezni preizkusi: tekstovni LLM prav tako 429 (isti limit); prejšnja 401 X-Token napaka REŠENA (createVision + base64)
+
+Stage Summary:
+- P4 DOKONČAN: PUA 34/49 strani (69 %), 69 vnosov (zap. št. 1–68 + institucija v. 0); surovi izpisi v repo; produkcija zelena
+- Strani 35–49 (priimki P–Ž, ~15 strani) ostajajo TO_COLLECT — vzrok: VLM 429 rate-limit (ne 401); metoda popolnoma ponovljiva: `bun scripts/pua-read.mjs 35..49` → `python3 scripts/pua-parse.py` → `python3 scripts/pua-gen-ts.py`
+- Vsa P4 vsebina ostaja REVIEW (strojno branje ni dokazni vir); hiša 90 še vedno ILLEGIBLE
