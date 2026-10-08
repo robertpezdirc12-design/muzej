@@ -1781,3 +1781,27 @@ Stage Summary:
 - Muzej obogaten: MVG-092 zdaj kaže DEJANSKI izrez izvirnika 1812 z označeno lego Gribelj (namesto sodobnega vektorskega pregleda); kartica v Raziskavah s sliko; QA 19→20
 - Vsa metoda deterministična (tesseract + LSQ) — 0 SDK klicev; omejitve pošteno dokumentirane ([~]: centri napisov ne pik, mreža neberljiva, Parisov meridian nepotrjen, končna potrditev = človek/QGIS)
 - Kvota 429 med delom sonde 4× (ves čas blokirana, > 6,8 h); commit 70356cd pushan; PROD 20/20
+
+---
+Task ID: P7
+Agent: Z.ai Code (glavni agent)
+Task: Koroboracija georeference 1812 na drugem (neodvisnem) skenu istega lista — delo brez SDK med blokado kvote (429), naročilo: »nadaljuj« / »glej ce se quota ispustila ta cas delaj drugo«
+
+Work Log:
+- Kvota sonde: 15:02, 15:04, 15:28 — VSE 429 (blokada traja 08:12→15:28, > 7 h; VLM + tekstovni LLM + web-search isti računski limit). GitLab: 0 odprtih issuejev.
+- VNOS NALOGE: 5f279e1 je (samo prek Commons API metapodatkov) potrdil DRUGI sken istega lista (IA 7636×5936, Lapie/Malte-Brun/Chamouin/Giraldon, javna last) — naravna neodvisna koroboracija P6 georeference BREZ SDK.
+- Prenos: orig-1812-second.jpg (Commons Special:FilePath, 8,8 MB, 7636×5936 — DRUGAČNE dimenzije od 1. skena 8297×6080 = res drugačen sken).
+- REGISTRACIJA SLIKE (cv2 4.13): ORB 30k značilk/sken (2400 px delovne razlčice) + BFMatcher ratio 0,75 + RANSAC afina sken1→sken2: 4030/4670 inlierjev (86 %), RMS 1,23 px delovno = 3,91 px full-scale; merilo 0,8187/0,8148, rotacija ~0,3°, strig zanemarljiv → ista lista, skoraj-similariteta.
+- VALIDACIJA REGISTRACIJE z OCR: neodvisno najdene oznake 2. skena se ujemajo z napovedmi iz registracije: Pest (4509,635) d=(0,0), Bel (5056,2618) d=(0,0), Pristt (5497,4134) d=(+5,+5), Ragus® (3905,4220) d~50, Leobeng (2433,678) d~18 — prejšnje »naive« skalirne napovedi so bile napačne (različni robovi/pregibi), registracija je natančna.
+- OCR 2. SKENA: ozki izrezi na napovedanih legah (3–8×, CLAHE/OTSU/erode, PSM 11/12/7): 12 oznak prebranih — 5 CELIH besed (Pest c96, Nissa c89, WIDDIN c86, Raguse c86, Semlin c48) + 7 fragmentov (Bel c97, Prist c83, Agr c76, icone c85, eobern c63, aye c81, wor c57; Bel/Prist isti fragmenti kot v 1. skenu). Nissa (Niš) = NOVA točka (ni je v modelu 1. skena). Laibach/Fiume/Trieste/BanyaLuka NEberljivi (pregibi knjižnega zvezka — ovrednoteno, ne ugibanje). crops5/ = 12 končnih izrezov (800 MB vmesnih izrezov crops3–6 počiščenih).
+- NEODVISEN GEO-MODEL 2. SKENA (fit-georef-second.py): LSQ afina+kvadratna na 12 točkah → residuali mediana 9,7 km (afina 10,2; max 22,2; SAMO CELE BESEDE 6,2 km — inherentna točnost metode »center napisa«); merilo 151×152 m/px (razmerje 0,998 — skoraj izotropno).
+- KLJUČNI REZULTAT — sporazumenje o legi Gribelj med skenoma: POT A (geo → model1⁻¹ → (2499,2286) → registracija) = (2513,2003); POT B (geo → model2⁻¹, lastni OCR) = (2489,2032); |A−B| = 37 px = 5,6 km — ZNOTRAJ ± 10 km negotovosti P6 → georeferenca P6 NI artefakt skeniranja.
+- Integracija: research.ts (georef.corroboration objekt s tipi; methodSi/En dopolnjen; WEB_VERIFICATIONS 1812 vrstica popravljena — prej še »georeferenca TO_COLLECT«, matrix delta »+ koroborirana«); museum-research.tsx (naslov kartice + smaragdova KOROBORACIJA blokada s podatki); qa.ts qa-1812-georef razširjen (10 novih preverb: točke ≥10, inlierji ≥1000, RMS ≤10, anizotropija, poti A/B znotraj 2. skena, sporazumenje ≤ negotovost); sw.js v14→v15.
+- Čiščenje: crops3/crops4/crops6 (800 MB vmesnih) izbrisani; scan2-labels-part1.json/sheet-to-sheet.npy odstranjena; README.md za celo mapo napisan (P6+P7 dokazna pot).
+- VERIFIKACIJA: lint 0 napak; dev QA 20/20; commit c523af5; push 1× WAF 403 → uspel; PROD QA 20/20; PROD E2E: ?odsek=raziskave → zavihek Posebne raziskave → kartica z naslovom »+ koroborirana«, smaragdov KOROBORACIJA blok, obe periodOriginals povezavi, metoda s P7 stavkom; slika 1812 HTTP 200 (196966 B); 390px scrollW=clientW=390 (brez preliva); 0 napak konzole (prvi obisk po deployu je ulovil prehodno »Application error« med izgradnjo — ponovni obisk čist, sistematično preverjeno).
+
+Stage Summary:
+- P7 DOKONČAN v produkciji: georeferenca 1812 zdaj KOROBORIRANA na neodvisnem skenu (sporazumenje 5,6 km « ± 10 km); P6 rezultat potrjen kot lastnost LISTA, ne skena
+- Znanstveni dodatek: 2. sken ima 12-točkovni neodvisni model (z novo točko Niš); inherentna točnost metode center-napisa izmerjena na celih besedah: 6,2 km
+- Dokumentirano pošteno [~]: 7/12 fragmentov, 4 napisi neberljivi (pregibi), status ostaja REVIEW (končna potrditev = človek/QGIS)
+- Kvota VLM/LLM ostaja blokirana (429, 08:12→15:28); P5-b (PUA 35–49) še vedno edini odprti del #17 — čaka dvig kvote; sonda se nadaljuje
