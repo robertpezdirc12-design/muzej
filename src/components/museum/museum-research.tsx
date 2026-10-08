@@ -1001,7 +1001,7 @@ export function MuseumResearch() {
                   { label: t("MATCH ≥ 0,72", "MATCH ≥ 0.72"), value: PUA_PT_WBRIDGE.counts.match, cls: "bg-emerald-100 text-emerald-900 dark:bg-emerald-900/60 dark:text-emerald-100" },
                   { label: t("PARTIAL ≥ 0,50", "PARTIAL ≥ 0.50"), value: PUA_PT_WBRIDGE.counts.partial, cls: "bg-amber-100 text-amber-900 dark:bg-amber-900/60 dark:text-amber-100" },
                   { label: t("MISMATCH", "MISMATCH"), value: PUA_PT_WBRIDGE.counts.mismatch, cls: "bg-rose-100 text-rose-900 dark:bg-rose-900/60 dark:text-rose-100" },
-                  { label: t("napovedi za 35–49", "predictions for pp. 35–49"), value: PUA_PT_WBRIDGE.counts.wNoPua, cls: "bg-orange-100 text-orange-900 dark:bg-orange-900/60 dark:text-orange-100" },
+                  { label: t("brez PUA protistrani", "without PUA side"), value: PUA_PT_WBRIDGE.counts.wNoPua, cls: "bg-orange-100 text-orange-900 dark:bg-orange-900/60 dark:text-orange-100" },
                 ].map((s) => (
                   <span key={s.label} className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 font-mono text-xs font-semibold ${s.cls}`}>
                     {s.value} {s.label}
@@ -1039,11 +1039,25 @@ export function MuseumResearch() {
                 </div>
               </div>
               <div className="mt-3 rounded-lg border border-orange-300/60 bg-orange-50 p-3 text-[11px] leading-relaxed dark:border-orange-800/60 dark:bg-orange-950/30">
-                <strong className="text-foreground">{t("Napovedi za strani 35–49 (P5-b, preverljivo):", "Predictions for pages 35–49 (P5-b, testable):")}</strong>
+                <strong className="text-foreground">{t("Napovedi za strani 35–49 — RAZREŠENE po P5-b:", "Predictions for pages 35–49 — RESOLVED after P5-b:")}</strong>
                 <ul className="mt-1 space-y-1 text-muted-foreground">
                   {PUA_PT_WBRIDGE.predictions.map((p) => (
-                    <li key={p.house}>
-                      <span className="font-mono font-semibold text-foreground">{p.house}</span>: {p.expectedOwners}
+                    <li key={p.house} className="flex flex-wrap items-baseline gap-x-1.5">
+                      <span className="font-mono font-semibold text-foreground">{p.house}</span>
+                      <span
+                        className={`inline-flex items-center rounded-full px-1.5 py-0.5 font-mono text-[10px] font-bold ${
+                          p.resolved === "POTRJENO"
+                            ? "bg-emerald-100 text-emerald-900 dark:bg-emerald-900/60 dark:text-emerald-100"
+                            : p.resolved === "DELNO V PRID"
+                              ? "bg-amber-100 text-amber-900 dark:bg-amber-900/60 dark:text-amber-100"
+                              : p.resolved === "NEREŠENO"
+                                ? "bg-secondary text-muted-foreground"
+                                : "bg-rose-100 text-rose-900 dark:bg-rose-900/60 dark:text-rose-100"
+                        }`}
+                      >
+                        {p.resolved}
+                      </span>
+                      <span>: {p.expectedOwners}</span>
                     </li>
                   ))}
                 </ul>
