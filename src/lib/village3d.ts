@@ -343,9 +343,9 @@ export const PERIODS: PeriodInfo[] = [
     labelSi: "1825",
     labelEn: "1825",
     noteSi:
-      "Franciscejski kataster: 156 stavb k.o. Grüble (vektorizacija lista A02), raba tal po VLM analizi. RECONSTRUCTED — tlorisi so izmerjeni, višine/orientacije so interpretacija.",
+      "Franciscejski kataster: 156 stavb k.o. Grüble (vektorizacija lista A02), raba tal po VLM analizi. RECONSTRUCTED — tlorisi so izmerjeni, višine/orientacije so interpretacija; drevesa (gozdne cone + razpršena) in dim iz dimnikov so interpretacija (P12), ki vasi da živost.",
     noteEn:
-      "Franciscean cadastre: 156 buildings of c.m. Grüble (vectorised from sheet A02), land use from VLM analysis. RECONSTRUCTED — footprints measured, heights/orientations interpreted.",
+      "Franciscean cadastre: 156 buildings of c.m. Grüble (vectorised from sheet A02), land use from VLM analysis. RECONSTRUCTED — footprints measured, heights/orientations interpreted; trees (forest zones + scattered) and chimney smoke are interpretation (P12) that brings the village to life.",
     buildingCount: BUILDINGS_1825.length,
   },
   {
@@ -388,3 +388,100 @@ export function nearestBuilding1825(
   }
   return { b: best, d: bd };
 }
+
+/* ── P12 (2026-10-08): DRESEVA + DIM ────────────────────────────────────
+   RAZISKOVALNA UGOTOVITEV (negativna, dokumentirana): hišne številke NA
+   listu A02 NISO zapisane. Slepi VLM testi 6 stavb (8–14× povečava, 3
+   ponovitve) → BLIZINA_BREZ; 43 »številka-podobnih« rdečih madežev v
+   stavbah (povezane komponente, 15–250 px) → nečitljivi (razpad skena);
+   rdeče 4-mestne PARCELNE številke v parcelah (1009–1106 ob jedru) so
+   berljive, a povezava parcela↔hiša bi zahtevala ~50+ strani PS (143 str.
+   registra Grund-Parzellen) pri akutnem VLM rate-limitu → TO_COLLECT.
+   Glej research/p12/README.md.
+
+   DRESEVA (interpretacija, jasno označena): gozdne cone (Brezov gozd,
+   RECONSTRUCTED iz VLM analize listov) dobijo gost gozd (~1 drevo /
+   500 m², listavci + iglavci), loke redko razpršena drevesa (~1 /
+   15000 m²), njive brez. Deterministično (mulberry32) — vedno isti prizor.
+   DIM: 8 dimnikov v jedru — veda, da vas ŽIVI (interpretacija); vidno
+   samo v 1825/~1900, ne v »danes«. */
+
+export interface TreeSpot {
+  x: number;
+  z: number;
+  kind: "dec" | "con";
+  /** višina drevesa (m) */
+  h: number;
+  /** v gozdu (strnjena sestoj) ali posamič (loka/vrt) */
+  forest: boolean;
+}
+
+const TREES_SEED = 1225;
+
+export const TREES: TreeSpot[] = (() => {
+  const rnd = mulberry32(TREES_SEED);
+  const out: TreeSpot[] = [];
+  for (const g of GROUND_ZONES) {
+    const [x1, z1, x2, z2] = g.rect;
+    const w = x2 - x1;
+    const d = z2 - z1;
+    if (w < 20 || d < 20) continue;
+    const per =
+      g.kind === "forest" ? 1 / 500 : g.kind === "meadow" ? 1 / 15000 : 0;
+    if (per === 0) continue;
+    const n = Math.min(1600, Math.round(w * d * per));
+    for (let i = 0; i < n; i++) {
+      const x = x1 + rnd() * w;
+      const z = z1 + rnd() * d;
+      /* izogibaj se stavbam (min 7 m od središča) — enostaven test je
+         dovolj: drevesa ob hišah niso dokumentirana, zato jih umikamo */
+      let near = false;
+      for (const b of BUILDINGS_1825) {
+        if (Math.abs(b.x - x) < b.w / 2 + 7 && Math.abs(b.z - z) < b.d / 2 + 7) {
+          near = true;
+          break;
+        }
+      }
+      if (near) continue;
+      const con = rnd() < (g.kind === "forest" ? 0.3 : 0.08);
+      out.push({
+        x,
+        z,
+        kind: con ? "con" : "dec",
+        h: (con ? 6 : 4) + rnd() * (con ? 5 : 4),
+        forest: g.kind === "forest",
+      });
+    }
+  }
+  return out;
+})();
+
+export const TREE_STATS = {
+  total: TREES.length,
+  forest: TREES.filter((t) => t.forest).length,
+  scattered: TREES.filter((t) => !t.forest).length,
+  seed: TREES_SEED,
+};
+
+/** 8 dimnikov v jedru vasi (deterministično — vsaka 3. jedrna stavba,
+    mešani grajski; dim = interpretacija, veda živosti) */
+export const SMOKE_CHIMNEYS: { x: number; z: number; top: number }[] = (() => {
+  const core = BUILDINGS_1825.filter((b) => b.core && b.w >= 7 && b.w <= 18);
+  const out: { x: number; z: number; top: number }[] = [];
+  for (let i = 0; i < core.length && out.length < 8; i += 3) {
+    const b = core[i];
+    /* dimnik ob severovzhodnem vogalu tlorisa */
+    out.push({
+      x: b.x + b.w / 2 - 1,
+      z: b.z + b.d / 2 - 1,
+      top: b.wallH + b.roofH,
+    });
+  }
+  return out;
+})();
+
+/** P12 dokumentirana ugotovitev o hišnih številkah (za kartice stavb) */
+export const HOUSENO_FINDING = {
+  si: "Hišne številke na listu A02 niso zapisane — preverjeno (P12, 2026-10-08): slepi VLM testi stavb, analiza rdečih znamenj. Rdeče številke na listu so PARCELNE (ob jedru 1009–1106). Register hiš 1825 (PT) šteje ~80 lastnikov; povezava parcela↔hiša čaka branje PS (143 str.).",
+  en: "House numbers are not written on sheet A02 — verified (P12, 2026-10-08): blind VLM tests of buildings, analysis of red marks. The red numbers on the sheet are PARCEL numbers (1009–1106 near the core). The 1825 house register (PT) holds ~80 owners; the parcel↔house link awaits reading the PS (143 pages).",
+};

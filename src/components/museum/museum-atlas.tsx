@@ -573,8 +573,8 @@ export function MuseumAtlas({
             </h3>
             <p className="mt-1 max-w-2xl text-sm leading-relaxed text-muted-foreground">
               {t(
-                "156 stavb k.o. Grüble, vektorsko prepisanih z lista A02 Franciscejskega katastra, je izrisanih kot prostorske hiše z dvokapnico — na rabi tal ~1825 in ob Kolpi. Zavrtite, približajte, preklopite letnico — ali stopite vanjo z AR kamero na vašem stojišču (gumb spodaj desno).",
-                "156 buildings of c.m. Grüble, vectorised from sheet A02 of the Franciscean cadastre, are drawn as spatial houses with gable roofs — on the ~1825 land use and by the Kolpa. Rotate, zoom, switch the year — or step inside with the AR camera at your standing point (button below right).",
+                "156 stavb k.o. Grüble, vektorsko prepisanih z lista A02 Franciscejskega katastra, je izrisanih kot prostorske hiše z dvokapnico — na rabi tal ~1825 in ob Kolpi. P12: prizor je oživel z drevesi (gozdne cone + razpršena) in dimom iz dimnikov (interpretacija, jasno označena). Zavrtite, približajte, preklopite letnico — ali stopite vanjo z AR kamero na vašem stojišču (gumb spodaj desno).",
+                "156 buildings of c.m. Grüble, vectorised from sheet A02 of the Franciscean cadastre, are drawn as spatial houses with gable roofs — on the ~1825 land use and by the Kolpa. P12: the scene now lives — trees (forest zones + scattered) and chimney smoke (interpretation, clearly labelled). Rotate, zoom, switch the year — or step inside with the AR camera at your standing point (button below right).",
               )}
             </p>
             <div className="mt-4">

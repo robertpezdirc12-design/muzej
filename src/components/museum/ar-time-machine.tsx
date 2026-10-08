@@ -60,6 +60,7 @@ import {
   IZGINILO_STATS,
   BUILDING_NEAREST_PRESENT,
   PRESENCE_META,
+  HOUSENO_FINDING,
   type BuildingPresence,
 } from "@/lib/village3d";
 import {
@@ -1576,8 +1577,8 @@ export function ARTimeMachine({
                     <Home className="mt-0.5 size-3.5 shrink-0 text-amber-200" aria-hidden="true" />
                     <span>
                       {t(
-                        "Kdo je tu živel? Hišna številka na listu A02 še ni prebrana (TO_COLLECT) — v Registru hiš 1825 je 80 lastnikov, matične knjige (1669–1947) pa dokumentirajo rojstva/poroke/smrti po hišah.",
-                        "Who lived here? The house number on sheet A02 has not been read yet (TO_COLLECT) — the 1825 house register holds 80 owners, and the parish registers (1669–1947) document births/marriages/deaths by house.",
+                        `Kdo je tu živel? ${HOUSENO_FINDING.si}`,
+                        `Who lived here? ${HOUSENO_FINDING.en}`,
                       )}
                     </span>
                   </p>

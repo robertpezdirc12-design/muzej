@@ -31,6 +31,8 @@ import {
   PRESENT_BUILDINGS,
   BUILDING_STATUS,
   toLocal,
+  TREES,
+  SMOKE_CHIMNEYS,
   type PreparedBuilding,
   type BuildingPresence,
 } from "@/lib/village3d";
@@ -141,9 +143,19 @@ export class VillageScene {
   private growthRoofsMat: THREE.MeshLambertMaterial;
   private presentMat: THREE.MeshLambertMaterial;
   private groundPlane: THREE.Mesh;
-  /** cone rabe tal + Kolpa — skupaj, da jih mini-scena skrije */
+  /** cone rabe tal + Kolpa + DREVESA — skupaj, da jih mini-scena skrije */
   private envGroup = new THREE.Group();
   private churchRoot: THREE.Group | null = null;
+
+  /* P12: drevesa (instancirana debla + listave/iglavci kroni) */
+  private treeTrunks: THREE.InstancedMesh;
+  private treeCrownsDec: THREE.InstancedMesh;
+  private treeCrownsCon: THREE.InstancedMesh;
+
+  /* P12: dim iz dimnikov (sprajti — interpretacija, vas živi) */
+  private smokeGroup = new THREE.Group();
+  private smokeTex: THREE.CanvasTexture | null = null;
+  private smokeSprites: { spr: THREE.Sprite; phase: number; x: number; z: number; top: number }[] = [];
 
   /** mini-scena oddaljene točke (issue #12 — mlini/cerkvišče) */
   private mini: {
@@ -186,6 +198,10 @@ export class VillageScene {
     this.canvas = canvas;
     this.mode = opts.mode;
     this.onPick = opts.onPick;
+    /* razhroščevanje P12 (namensko testno vezje) */
+    if (typeof window !== "undefined") {
+      (window as unknown as { __vscene?: VillageScene }).__vscene = this;
+    }
 
     this.renderer = new THREE.WebGLRenderer({
       canvas,
@@ -248,6 +264,108 @@ export class VillageScene {
     );
     this.envGroup.add(kolpa);
     this.scene.add(this.envGroup);
+
+    /* ── P12: DREVESA — gozdne cone gosto, loke razpršeno (interpretacija;
+       enota v envGroup, da mini-scena skrije) ── */
+    {
+      const trunkGeo = new THREE.CylinderGeometry(0.16, 0.26, 1, 5);
+      trunkGeo.translate(0, 0.5, 0);
+      const crownDecGeo = new THREE.IcosahedronGeometry(1, 0);
+      const crownConGeo = new THREE.ConeGeometry(1, 1.9, 6);
+      crownConGeo.translate(0, 0.85, 0);
+      const decCount = TREES.filter((t) => t.kind === "dec").length;
+      const conCount = TREES.filter((t) => t.kind === "con").length;
+      const trunkMat = new THREE.MeshLambertMaterial({ color: 0x6d5233 });
+      const crownDecMat = new THREE.MeshLambertMaterial({ color: 0x4d6b3f });
+      const crownConMat = new THREE.MeshLambertMaterial({ color: 0x3a5a3a });
+      this.treeTrunks = new THREE.InstancedMesh(trunkGeo, trunkMat, TREES.length);
+      this.treeCrownsDec = new THREE.InstancedMesh(crownDecGeo, crownDecMat, Math.max(1, decCount));
+      this.treeCrownsCon = new THREE.InstancedMesh(crownConGeo, crownConMat, Math.max(1, conCount));
+
+      const m4 = new THREE.Matrix4();
+      const q = new THREE.Quaternion();
+      const yAxis = new THREE.Vector3(0, 1, 0);
+      const pos = new THREE.Vector3();
+      const scl = new THREE.Vector3();
+      const crownCol = new THREE.Color();
+      let iDec = 0;
+      let iCon = 0;
+      TREES.forEach((t, i) => {
+        q.setFromAxisAngle(yAxis, (i * 2.399) % (Math.PI * 2)); /* zlati kot */
+        /* deblo: do višine 55 % drevesa */
+        pos.set(t.x, 0, t.z);
+        scl.set(1, t.h * 0.55, 1);
+        m4.compose(pos, q, scl);
+        this.treeTrunks.setMatrixAt(i, m4);
+        /* krošnja: nad deblom */
+        if (t.kind === "dec") {
+          pos.set(t.x, t.h * 0.55, t.z);
+          const r = t.h * 0.32;
+          scl.set(r, r * 0.9, r);
+          m4.compose(pos, q, scl);
+          this.treeCrownsDec.setMatrixAt(iDec, m4);
+          /* rahlo raznolike barve listja */
+          crownCol.setHSL(0.28 + ((i * 0.618) % 0.05), 0.42, 0.3 + ((i * 0.37) % 0.09));
+          this.treeCrownsDec.setColorAt(iDec, crownCol);
+          iDec++;
+        } else {
+          pos.set(t.x, t.h * 0.5, t.z);
+          const r = t.h * 0.2;
+          scl.set(r, t.h * 0.55, r);
+          m4.compose(pos, q, scl);
+          this.treeCrownsCon.setMatrixAt(iCon, m4);
+          iCon++;
+        }
+      });
+      this.treeTrunks.instanceMatrix.needsUpdate = true;
+      this.treeCrownsDec.instanceMatrix.needsUpdate = true;
+      this.treeCrownsCon.instanceMatrix.needsUpdate = true;
+      if (this.treeCrownsDec.instanceColor) this.treeCrownsDec.instanceColor.needsUpdate = true;
+      this.treeTrunks.frustumCulled = false;
+      this.treeCrownsDec.frustumCulled = false;
+      this.treeCrownsCon.frustumCulled = false;
+      this.envGroup.add(this.treeTrunks, this.treeCrownsDec, this.treeCrownsCon);
+    }
+
+    /* ── P12: DIM iz dimnikov — 8 jedrnih domačij, sprajti z mehkim
+       prehodom; vidno v 1825/~1900 (ne »danes«, ne mini-scena) ── */
+    {
+      const cv = document.createElement("canvas");
+      cv.width = 64;
+      cv.height = 64;
+      const ctx = cv.getContext("2d");
+      if (ctx) {
+        const gr = ctx.createRadialGradient(32, 32, 2, 32, 32, 30);
+        gr.addColorStop(0, "rgba(240,238,232,0.55)");
+        gr.addColorStop(0.55, "rgba(232,228,220,0.22)");
+        gr.addColorStop(1, "rgba(232,228,220,0)");
+        ctx.fillStyle = gr;
+        ctx.fillRect(0, 0, 64, 64);
+      }
+      this.smokeTex = new THREE.CanvasTexture(cv);
+      const smokeMat = new THREE.SpriteMaterial({
+        map: this.smokeTex,
+        transparent: true,
+        depthWrite: false,
+        opacity: 0.5,
+      });
+      SMOKE_CHIMNEYS.forEach((c, ci) => {
+        for (let k = 0; k < 6; k++) {
+          const spr = new THREE.Sprite(smokeMat.clone());
+          spr.userData.chimney = ci;
+          spr.userData.slot = k;
+          this.smokeGroup.add(spr);
+          this.smokeSprites.push({
+            spr,
+            phase: ci * 1.3 + k * 1.1,
+            x: c.x,
+            z: c.z,
+            top: c.top,
+          });
+        }
+      });
+      this.scene.add(this.smokeGroup);
+    }
 
     /* stavbe — instancirane */
     const box = new THREE.BoxGeometry(1, 1, 1);
@@ -405,6 +523,7 @@ export class VillageScene {
       this.roofs1825.visible = true;
       this.envGroup.visible = true;
       this.groundPlane.visible = this.mode === "orbit";
+      this.smokeGroup.visible = this.year !== 2026;
       if (this.churchRoot) this.churchRoot.visible = true;
       /* growth/present vidnost v naslednjem frame povrne zanka */
       this.wallsGrowth.visible = this.vis.growthOpacity > 0.05;
@@ -427,16 +546,18 @@ export class VillageScene {
     this.wallsPresent.visible = false;
     this.envGroup.visible = false;
     this.groundPlane.visible = false;
+    this.smokeGroup.visible = false;
     if (this.churchRoot) this.churchRoot.visible = false;
   }
 
   /** orbit: vrnitev na začetni pogled */
   resetView() {
     if (this.mode !== "orbit") return;
+    /* P12: pogled s severa — vas v ospredju, Kolpa desno, Brezov gozd za njim */
     this.camera.position.set(
-      CORE_CENTER.x + 430,
-      400,
-      CORE_CENTER.z + 560,
+      CORE_CENTER.x + 85,
+      330,
+      CORE_CENTER.z - 880,
     );
     if (this.controls) {
       this.controls.target.set(CORE_CENTER.x, 8, CORE_CENTER.z);
@@ -545,6 +666,10 @@ export class VillageScene {
       this.mini.handle.dispose();
       this.mini = null;
     }
+    this.smokeTex?.dispose();
+    for (const s of this.smokeSprites) {
+      (s.spr.material as THREE.SpriteMaterial).dispose();
+    }
     this.scene.traverse((o) => {
       const any = o as unknown as {
         geometry?: THREE.BufferGeometry;
@@ -587,10 +712,11 @@ export class VillageScene {
     this.controls.maxPolarAngle = Math.PI * 0.49;
     this.controls.minDistance = 40;
     this.controls.maxDistance = 2200;
+    /* P12: pogled s severa — vas v ospredju, Kolpa desno, Brezov gozd za njim */
     this.camera.position.set(
-      CORE_CENTER.x + 430,
-      400,
-      CORE_CENTER.z + 560,
+      CORE_CENTER.x + 85,
+      330,
+      CORE_CENTER.z - 880,
     );
     this.camera.lookAt(this.controls.target);
   }
@@ -751,6 +877,23 @@ export class VillageScene {
     this.wallsGrowth.visible = showGrowth;
     this.roofsGrowth.visible = showGrowth;
     this.wallsPresent.visible = this.vis.presentOpacity > 0.04;
+
+    /* ── P12: dim iz dimnikov — veda živosti vasi (1825/~1900) ── */
+    this.smokeGroup.visible = this.year !== 2026;
+    if (this.smokeGroup.visible) {
+      const now = performance.now() / 1000;
+      for (const s of this.smokeSprites) {
+        const cyc = 6.5; /* sekund na oblak */
+        const t = (now + s.phase) % cyc / cyc; /* 0→1 */
+        const rise = 7 + t * 6; /* dvig nad dimnik */
+        const sway = Math.sin(t * 5 + s.phase) * (0.4 + t * 1.6);
+        const sc = 1.2 + t * 4.2;
+        s.spr.position.set(s.x + sway, s.top + rise, s.z + sway * 0.6);
+        s.spr.scale.set(sc, sc, 1);
+        const fade = Math.sin(Math.PI * t); /* mehak vstop/izstop */
+        (s.spr.material as THREE.SpriteMaterial).opacity = 0.42 * fade;
+      }
+    }
 
     if (this.mode === "orbit") {
       this.controls?.update();

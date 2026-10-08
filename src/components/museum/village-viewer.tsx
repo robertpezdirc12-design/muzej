@@ -8,10 +8,32 @@
  */
 
 import { useEffect, useRef, useState } from "react";
-import { Camera, Info, Layers, RotateCcw } from "lucide-react";
+import { Camera, Info, Layers, RotateCcw, X, Home, MapPin } from "lucide-react";
 import { useLang } from "./language-context";
 import { useTimeMachine, type TimeYear } from "@/lib/time-machine-store";
-import { PERIODS, PRESENCE_LEGEND, IZGINILO_STATS } from "@/lib/village3d";
+import {
+  PERIODS,
+  PRESENCE_LEGEND,
+  IZGINILO_STATS,
+  TREE_STATS,
+  HOUSENO_FINDING,
+  CHURCH,
+  inVillageCore,
+  BUILDING_NEAREST_PRESENT,
+  type BuildingPresence,
+} from "@/lib/village3d";
+import type { PickResult } from "./village-scene";
+
+interface OrbitCard {
+  kind: PickResult["kind"];
+  w: number;
+  d: number;
+  dist: number;
+  presence?: BuildingPresence;
+  core: boolean;
+  nearChurch: boolean;
+  nearestPresent?: number | null;
+}
 
 export function VillageViewer() {
   const { t, lang } = useLang();
@@ -21,6 +43,7 @@ export function VillageViewer() {
   const yearRef = useRef(year);
   const [ready, setReady] = useState(false);
   const [failed, setFailed] = useState(false);
+  const [card, setCard] = useState<OrbitCard | null>(null);
 
   const period = PERIODS.find((p) => p.year === year) ?? PERIODS[0];
 
@@ -30,7 +53,25 @@ export function VillageViewer() {
     import("./village-scene")
       .then(({ VillageScene }) => {
         if (cancelled || !canvasRef.current) return;
-        scene = new VillageScene(canvasRef.current, { mode: "orbit" });
+        scene = new VillageScene(canvasRef.current, {
+          mode: "orbit",
+          onPick: (p: PickResult | null) => {
+            if (!p) return;
+            setCard({
+              kind: p.kind,
+              w: Math.round(p.w),
+              d: Math.round(p.d),
+              dist: p.dist,
+              presence: p.presence,
+              core: inVillageCore(p.x, p.z),
+              nearChurch: Math.hypot(p.x - CHURCH.x, p.z - CHURCH.z) < 80,
+              nearestPresent:
+                p.kind === "1825" && p.index != null
+                  ? BUILDING_NEAREST_PRESENT[p.index]
+                  : undefined,
+            });
+          },
+        });
         scene.setYear(yearRef.current);
         sceneRef.current = scene;
         setReady(true);
@@ -47,6 +88,7 @@ export function VillageViewer() {
   useEffect(() => {
     yearRef.current = year;
     sceneRef.current?.setYear(year);
+    setCard(null);
   }, [year]);
 
   const yearButtons: [TimeYear, string, string][] = [
@@ -70,7 +112,7 @@ export function VillageViewer() {
         />
         {!ready && !failed && (
           <p className="absolute inset-x-0 bottom-3 text-center text-xs text-muted-foreground">
-            {t("gradim vas iz 156 katastrskih podlatn …", "building the village from 156 cadastral footprints …")}
+            {t("gradim vas — 156 podlatn, drevesa, Kolpa …", "building the village — 156 footprints, trees, the Kolpa …")}
           </p>
         )}
         {failed && (
@@ -88,6 +130,72 @@ export function VillageViewer() {
             " rotate · zoom with wheel/pinch · tap a house",
           )}
         </div>
+
+        {/* P12: kartica izbrane stavbe (tap) — enaka vsebina kot v AR */}
+        {card && (
+          <div className="absolute inset-x-3 bottom-3 z-20 sm:left-auto sm:right-3 sm:w-[340px]">
+            <div className="max-h-[40vh] overflow-y-auto rounded-xl border border-border bg-background/95 p-4 shadow-lg backdrop-blur">
+              <div className="flex items-start justify-between gap-3">
+                <div className="min-w-0">
+                  <p className="font-display text-sm font-semibold">
+                    {card.kind === "present"
+                      ? t("Današnja stavba — OSM", "Present-day building — OSM")
+                      : card.kind === "growth"
+                        ? t("Stavba ~1900 (ocena)", "Building ~1900 (estimate)")
+                        : year === 2026
+                          ? t("Stavba 1825 — duh", "Building of 1825 — ghost")
+                          : t("Stavba ~1825 — kataster", "Building ~1825 — cadastre")}
+                  </p>
+                  <p className="mt-1 text-xs text-muted-foreground">
+                    {t(
+                      `tloris ≈ ${card.w} × ${card.d} m · ${Math.round(card.dist)} m od pogleda`,
+                      `footprint ≈ ${card.w} × ${card.d} m · ${Math.round(card.dist)} m from view`,
+                    )}
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setCard(null)}
+                  aria-label={t("Zapri kartico stavbe", "Close building card")}
+                  className="shrink-0 rounded-full border border-border p-1.5 hover:bg-accent"
+                >
+                  <X className="size-4" aria-hidden="true" />
+                </button>
+              </div>
+              <div className="mt-2 space-y-1.5 text-[11px] leading-relaxed text-muted-foreground">
+                {card.kind === "1825" && year === 2026 && card.presence && (
+                  <p className="font-medium">
+                    {PRESENCE_LEGEND.find((l) => l.status === card.presence)?.dotSi}{" "}
+                    {lang === "si"
+                      ? PRESENCE_LEGEND.find((l) => l.status === card.presence)?.labelSi
+                      : PRESENCE_LEGEND.find((l) => l.status === card.presence)?.labelEn}
+                    {card.nearestPresent != null &&
+                      ` · ${t("najbližja danes", "nearest today")}: ${Math.round(card.nearestPresent)} m`}
+                  </p>
+                )}
+                {card.core && (
+                  <p>{t("V jedru vasi 1825 (Grüble).", "In the 1825 village core (Grüble).")}</p>
+                )}
+                {card.nearChurch && (
+                  <p>{t("Ob cerkvi sv. Vida — njen 3D model je v prizoru.", "By St. Vitus' church — its 3D model is in the scene.")}</p>
+                )}
+                {card.kind !== "present" && (
+                  <p className="flex items-start gap-1.5">
+                    <Home className="mt-0.5 size-3 shrink-0 text-primary" aria-hidden="true" />
+                    <span>{lang === "si" ? HOUSENO_FINDING.si : HOUSENO_FINDING.en}</span>
+                  </p>
+                )}
+                <a
+                  href={`/?odsek=atlas`}
+                  className="inline-flex items-center gap-1 pt-1 font-medium text-primary underline decoration-border underline-offset-2 hover:decoration-primary"
+                >
+                  <MapPin className="size-3" aria-hidden="true" />
+                  {t("Atlas 1825 — viri in dokazi", "Atlas 1825 — sources and evidence")}
+                </a>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* plošča */}
@@ -181,6 +289,22 @@ export function VillageViewer() {
             <span className="inline-block size-3 rounded-[2px] bg-[#d9c27a]" aria-hidden="true" />
             {t("njive/ornina", "fields/arable")}
           </p>
+          <p className="flex items-center gap-2">
+            <span className="inline-block size-3 rounded-full bg-[#4d6b3f]" aria-hidden="true" />
+            {t(
+              `drevesa — gozd + razpršena (${TREE_STATS.total}; interpretacija iz con rabe tal)`,
+              `trees — forest + scattered (${TREE_STATS.total}; interpretation from land-use zones)`,
+            )}
+          </p>
+          {year !== 2026 && (
+            <p className="flex items-center gap-2">
+              <span className="text-sm" aria-hidden="true">💨</span>
+              {t(
+                "dim iz dimnikov — vasa živi (interpretacija)",
+                "chimney smoke — the village lives (interpretation)",
+              )}
+            </p>
+          )}
           <p className="flex items-center gap-2">
             <span className="inline-block size-3 rounded-[2px] bg-[#5d7355]" aria-hidden="true" />
             {t("gozd (Brezov gozd)", "forest (Brezov gozd)")}

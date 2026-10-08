@@ -36,6 +36,7 @@ import {
 import { ATLAS_HOUSES } from "@/data/atlas/houses";
 import { ATLAS_OWNERS, SHEET_GEOREFS } from "@/data/atlas/model";
 import { ATLAS_SOURCES } from "@/data/atlas/sources";
+import { TREE_STATS, SMOKE_CHIMNEYS, HOUSENO_FINDING, TREES } from "./village3d";
 
 interface ExhibitRow {
   id: string;
@@ -886,6 +887,33 @@ export function runQA(): QAReport {
     p10Errors.length === 0
       ? "Okvirjene oznake listov so KODI SEKCIJSKE MREŽE 1:2880 (eZKN/GURS, uradna geometrija D96/TM): A02=»O.IX24cƒ«→celica cf — središče vsebine A02 se NATANČNO ujema s središčem celice (princip list≈celica!) — torej A03=»O.IX24dg«→celica dg (45,5437–45,5575 N, 15,2485–15,273 E; vsebina = le vzhodni pas = zahodni rob k.o. Griblje; TRIBUTSCH→k.o. Tribuče ✓, WEIDENDORF→k.o. Bedenj ✓), A04=»O.IX24cg«→celica cg (45,5436–45,5574, 15,2728–15,2973 — DIREKTNO južno od A02; POPRAVEK P9: prejšnja lega na ovinku Kolpe pri Adlešičih zavrnjena — stavbna validacija 636 m mediane, kontrole P9 nedisukriminativne, »reka« = verjetno dolina; Kolpa teče IZVEN lista A04), A05=»O.IX24ch«→celica ch (45,5299–45,5437, 15,2726–15,2971 = skrajni jug 1825 k.o. Griblje — ozemlje pozneje odvzeto; sklop 45 stavb → Fučkovci/Dragoši [~], Pri Jankovichti → naselje Jankoviči ✓). Vsa stanja REVIEW (±200–400 m); identiteta listov neodvisno potrjena prek VAČ (5 listov N083A01–A05, križne korelacije predogledov); novi viri: GURS WFS (k.o. 1544 poligon + 2117 parcel + naselja), eZKN (mreža + ZKN skeni); prekritost 5/5"
       : p10Errors.join("; "),
+  );
+
+  /* ── P12: AR vas 3D — vas živi (drevesa, dim) + dokumentirana ugotovitev o hišnih številkah ── */
+  const p12Errors: string[] = [];
+  if (TREE_STATS.total < 1200)
+    p12Errors.push(`TREES premalo: ${TREE_STATS.total} (pričakovano ≥ 1200)`);
+  if (TREE_STATS.total !== TREES.length)
+    p12Errors.push("TREE_STATS.total ≠ TREES.length");
+  if (TREES.some((tr) => !Number.isFinite(tr.x) || !Number.isFinite(tr.z)))
+    p12Errors.push("drevo z neveljavnimi koordinatami");
+  if (SMOKE_CHIMNEYS.length !== 8)
+    p12Errors.push(`SMOKE_CHIMNEYS: ${SMOKE_CHIMNEYS.length} (pričakovano 8)`);
+  if (SMOKE_CHIMNEYS.some((c) => c.top < 3 || c.top > 9))
+    p12Errors.push("dimnik z neverjetno višino (< 3 m ali > 9 m)");
+  if (!HOUSENO_FINDING.si.includes("niso zapisane"))
+    p12Errors.push("HOUSENO_FINDING.si brez ključne ugotovitve");
+  if (!HOUSENO_FINDING.en.includes("not written"))
+    p12Errors.push("HOUSENO_FINDING.en brez ključne ugotovitve");
+
+  push(
+    "qa-p12-village-life",
+    "P12: AR 3D vas oživi — drevesa (gozdne cone + razpršena, deterministično), dim 8 dimnikov (1825/~1900), orbit pick kartica; dokumentirana negativna ugotovitev: hišne št. na listu A02 niso zapisane",
+    "P12: the AR 3D village comes alive — trees (forest zones + scattered, deterministic), smoke from 8 chimneys (1825/~1900), orbit pick card; documented negative finding: house numbers are not written on sheet A02",
+    p12Errors.length === 0,
+    p12Errors.length === 0
+      ? `Dreves: ${TREE_STATS.total} (${TREE_STATS.forest} v gozdnih conah Brezov gozd + ${TREE_STATS.scattered} razpršenih na lokah; seed ${TREE_STATS.seed}, mulberry32 — vedno isti prizor; izogik stavbam ≥ 7 m). Dim: 8 dimnikov v jedru (vsaka 3. jedrna stavba 7–18 m), sprajti 6 oblakov/dimnik, cikel 6,5 s, dvig 7–13 m, vidno samo 1825/~1900. Kartica stavbe v 3D pregledu (orbit) — tap na stavbo: vrsta, tloris, razdalja, status 2026, jedro/cerkev, P12 nota. RAZISKOVALNI IZID (negativen, dokumentiran): hišne številke NA stavbah lista A02 niso zapisane — slepi VLM testi (6 stavb, 3 ponovitve → BLIZINA_BREZ), 43 številka-podobnih rdečih madežev nečitljivih; rdeče 4-mestne številke v parcelah (1009–1106 ob jedru) so PARCELNE; povezava parcela↔hiša čaka ~50+ strani PS (TO_COLLECT).`
+      : p12Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;

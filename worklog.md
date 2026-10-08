@@ -1935,3 +1935,24 @@ Stage Summary:
 - Nič NI izgubljeno: en sam aktivni muzej 87313303 (robert.pezdirc12/muzej, Vercel-povezan) z vsemi commiti + 17 zaprtimi issueji; arhiv 87313405 nedotaknjen.
 - P10 "sinhronizacija kanoničnega" = napačna diagnoza (isti projekt prek preusmeritve; 403 = WAF). Novi žeton kljub temu koristen — stari deploy žeton poteče 2026-10-14.
 - Oba remote-a kažeta na isti projekt z delujočimi žetoni; PROD 22/22; delovno drevo čisto.
+
+---
+Task ID: P12
+Agent: Z.ai Code (glavni agent)
+Task: Nadaljevanje razvoja AR 3D vasi (naročilo: "nadaljuj z razvojem ar vasi 3d") — raziskava hišnih številk na listu A02 (izid: negativen, dokumentiran) + prizor oživi (drevesa, dim, orbit kartica)
+
+Work Log:
+- VLM/LLM kvota SPROŠČENA (LLM 229 ms; VLM 689 ms na testni sliki).
+- RAZISKOVALNA NALOGA: kartica AR stavbe je do P12 obljubljala "hišna št. na listu A02 TO_COLLECT" — poskušal prebrati hišne št. ob 156 stavbah.
+- Metode: (1) vzorčni izrezi 6× → "št. 1–11" = HALUCINACIJA (vprašanje vodil model); (2) SLEPI test 8–14×, 3 ponovitve, 6 stavb → 5/6 NO_CHARS, 1/6 "1935" (madež); (3) barvna analiza: rdeče črnilo 0,95 %, 95–97 stavb z rdečim > 0,25 ≈ št. PT hiš — a VLM preverba posameznih stavb divergira (RDECE_POLNILO/NI_RDECE/RDECI_PIKI pri istih vrednostih) → klasifikacija ni uporabljena (poštenost); (4) povezane komponente rdečega: 43 številka-podobnih madežev v stavbah, 12 prebranih pri 14× → NEČITLJIVI (razpad skena); (5) rdeče 4-mestne št. v parcelah SO berljive (ob jedru 1009–1106, sekvenca 1044–1054) = PARCELNE (VLM: "nobena ni znotraj stavbnih obrisov"); (6) PT struktura razjasnjena (VLM na str. 4 N083PT.pdf): "W." = Wohnort = mostiček P5-c, "Schißing/Apnind X" = kultura + AREAL (ne parcels!); (7) PS register (143 str., 59 MB, VAČ) prenesen — struktura Nro. der Parzelle + Haus Nro. = ZANESLJIV most parcela↔hiša, a zahteva ~50+ strani Kurrent pri akutnem 429 rate-limitu → TO_COLLECT.
+- SKLEP RAZISKAVE: hišne št. NA stavbah lista A02 niso zapisane (dokumentirano, ne več TO_COLLECT); rdeče št. so parcelne; most čaka branje PS.
+- INTEGRACIJA (vas oživi): village3d.ts +TREES (1666: 1586 gozd + 80 razpršena; mulberry32 seed 1225; izogib ≥ 7 m od stavb) +TREE_STATS +SMOKE_CHIMNEYS (8) +HOUSENO_FINDING (si+en) +PERIODS[1825] nota; village-scene.ts +drevesa (3 InstancedMesh: debla/listavci z barvnimi razlikami/iglavci) +dim (8×6 Sprite, canvas gradient, cikel 6,5 s, dvig 7–13 m; samo 1825/1900) +novo privzeti orbit pogled S SEVERA (prejšnji z JV je puščal Brezov gozd ZA kamero — 0,05 % zelenih pik; nov: gozd za vasjo, Kolpa desno) +window.__vscene E2E vez; village-viewer.tsx +KARTICA STAVBE v orbitu (tap: vrsta, tloris, razdalja, status 2026, jedro/cerkev, P12 nota, link Atlas) +legenda (drevesa, dim) +loading text; ar-time-machine.tsx kartica "Kdo je tu živel?" → dokumentirana P12 ugotovitev; museum-atlas.tsx intro 3D zavihka +P12 stavek; qa.ts +qa-p12-village-life (22→23: drevesa ≥ 1200, veljavne koordinate, 8 dimnikov, HOUSENO_FINDING si+en); sw.js v18→v19; research/p12/README.md (celotna dokazna pot).
+- PASTI E2E: canvas pod zgibom (top: 716 > 577) → scrollIntoView; overlay div.fixed.inset-0 pri kliku zavihka → eval hide (znana); "danes" gumb — radio [role=radio] je pravi (drugi "danes" gumb ne preklopi); agent-browser miška ne sproži pick dogodkov vedno → direkten PointerEvent dispatch; hiše v privzetem pogledu majhne → iskanje zadetka z mrežo screenPick.
+- VERIFIKACIJA (dev, agent-browser): drevesa POTRJENA po zoomu (277.227 zelenih pik = 43 % okvirja); dim = časovna diferenca 1,6 s → 164 spremenjenih pik VSE znotraj canvasa nad jedrom; smokeGroup.visible 1825/1900=true, 2026=false; wireframe duhovi 2026; tap na hišo (65 %/40 %, stavba 24 m) → kartica s tlorisom + P12 noto; radiji letnic delujejo; 0 konzolnih napak.
+- Lint 0 napak; DEV QA 23/23 PASS (nov qa-p12-village-life).
+
+Stage Summary:
+- RAZISKOVALNI IZID (pošten, negativen): hišne številke na listu A02 NISO zapisane na stavbah — slepi testi + analiza 43 rdečih madežev (nečitljivi); rdeče 4-mestne št. so PARCELNE (berljive, 1009–1106 ob jedru); zanesljiv most parcela↔hiša = PS register (143 str.) — TO_COLLECT ob višji kvoti (ocena 1–2 h VLM).
+- AR 3D VAS OŽIVI: 1666 dreves (gozd Brezov gozd gosto + loke razpršeno, deterministično), dim 8 dimnikov (animiran, le 1825/~1900), nov severni pogled (gozd v ozadju), KARTICA STAVBE v 3D pregledu (orbit) — pariteta z AR.
+- Vsi dodatki so jasno označeni kot interpretacija (TimeLens/Himera poštenost); kartice AR+orbit nosijo dokumentirano ugotovitev o hišnih št.
+- QA 23/23; lint čist; E2E preverjen v dev (piksli + časovna diferenca + kartica + letnice).
