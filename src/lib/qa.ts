@@ -360,9 +360,9 @@ export function runQA(): QAReport {
   if (PZ_ECONOMY_1825.population.male + PZ_ECONOMY_1825.population.female !== PZ_ECONOMY_1825.population.total) {
     i17Errors.push("PZ demografija se ne sešteje");
   }
-  // PUA: 18 vrstic str. 3–10 + 4 vrstice P3 str. 11 + 47 vrstic P4 str. 12–34 = 69
-  if (PUA_CONTINUATION.rows.length !== 69 || PUA_CONTINUATION.pagesRead.length !== 32) {
-    i17Errors.push(`PUA nadaljevanje: ${PUA_CONTINUATION.rows.length} vrstic / ${PUA_CONTINUATION.pagesRead.length} strani (pričakovano 69/32 po P4)`);
+  // PUA: 18 vrstic str. 3–10 + 4 vrstice P3 str. 11 + 47 vrstic P4 str. 12–34 + 32 vrstic P5-b str. 35–49 = 101
+  if (PUA_CONTINUATION.rows.length !== 101 || PUA_CONTINUATION.pagesRead.length !== 47) {
+    i17Errors.push(`PUA nadaljevanje: ${PUA_CONTINUATION.rows.length} vrstic / ${PUA_CONTINUATION.pagesRead.length} strani (pričakovano 101/47 po P5-b — register CEL)`);
   }
   // PT pregled: vsota verdiktov = pregledanih vrstic
   const sum = PT_REVIEW_2026.summary.confirmed + PT_REVIEW_2026.summary.corrections +
@@ -501,11 +501,11 @@ export function runQA(): QAReport {
       p3Errors.push(`PUA str. 11: vnos ${nm} manjka`);
     }
   }
-  // KURRENT_SERIES posodobljen (PT 84, PUA 34 strani po P4)
+  // KURRENT_SERIES posodobljen (PT 84, PUA 49 strani / 101 vnosov po P5-b — register CEL)
   const ptSeries = KURRENT_SERIES.find((s) => s.code === "PT");
   const puaSeries = KURRENT_SERIES.find((s) => s.code === "PUA");
-  if (ptSeries?.structuredEntries !== 84 || puaSeries?.pagesTranscribed !== 34 || puaSeries?.structuredEntries !== 90) {
-    p3Errors.push("KURRENT_SERIES PT/PUA nista posodobljena po P3/P4");
+  if (ptSeries?.structuredEntries !== 84 || puaSeries?.pagesTranscribed !== 49 || puaSeries?.structuredEntries !== 101) {
+    p3Errors.push("KURRENT_SERIES PT/PUA nista posodobljena po P3/P4/P5-b (pričakovano PT 84, PUA 49 strani/101 vnosov)");
   }
   push(
     "qa-p3-paleografija",
@@ -517,9 +517,9 @@ export function runQA(): QAReport {
       : p3Errors.join("; "),
   );
 
-  // 17. P4 — PUA nadaljevanje (str. 12–34): struktura, ključni priimki, križanje s PT
+  // 17. P4 — PUA nadaljevanje (str. 12–34): struktura, ključni priimki, križanje s PT (P5-b dopolni 35–49 — ločen test)
   const p4Errors: string[] = [];
-  const p4All = PUA_CONTINUATION.rows.filter((r) => r.page >= 12);
+  const p4All = PUA_CONTINUATION.rows.filter((r) => r.page >= 12 && r.page <= 34);
   if (p4All.length !== 47) {
     p4Errors.push(`P4 vrstic: ${p4All.length} ≠ 47`);
   }
@@ -566,34 +566,37 @@ export function runQA(): QAReport {
   if (!withHouse.every((r) => r.confidence.includes("PT"))) {
     p4Errors.push("P4: kakšen vnos s hišno št. nima PT reference v confidence");
   }
-  // PUA strani 35–49 morajo ostati TO_COLLECT v opombi
-  if (!PUA_CONTINUATION.noteSi.includes("35–49") || !PUA_CONTINUATION.noteSi.includes("TO_COLLECT")) {
-    p4Errors.push("P4: opomba mora dokumentirati strani 35–49 kot TO_COLLECT");
+  // PUA strani 35–49: po P5-b prebrane — opomba mora dokumentirati CEL register (ne več TO_COLLECT)
+  if (!PUA_CONTINUATION.noteSi.includes("35–49") || !PUA_CONTINUATION.noteSi.includes("CEL")) {
+    p4Errors.push("P4: opomba mora dokumentirati strani 35–49 kot prebrane (P5-b — register CEL)");
+  }
+  if (PUA_CONTINUATION.noteSi.includes("TO_COLLECT")) {
+    p4Errors.push("P4: opomba ne sme več navajati TO_COLLECT za PUA (P5-b zaključen)");
   }
   push(
     "qa-p4-pua-nadaljevanje",
-    "P4 PUA nadaljevanje: strani 12–34 (47 vnosov, zap. št. 22–68), Kirche H. Veith, križanje s PT, strani 35–49 ostajajo TO_COLLECT",
-    "P4 PUA continuation: pages 12–34 (47 entries, rows 22–68), Kirche H. Veith, PT cross-check, pages 35–49 remain TO_COLLECT",
+    "P4 PUA nadaljevanje: strani 12–34 (47 vnosov, zap. št. 22–68), Kirche H. Veith, križanje s PT; strani 35–49 prebrane v P5-b — register CEL",
+    "P4 PUA continuation: pages 12–34 (47 entries, rows 22–68), Kirche H. Veith, PT cross-check; pages 35–49 read in P5-b — register complete",
     p4Errors.length === 0,
     p4Errors.length === 0
-      ? `23 strani (12–34) po 1 VLM klic; 47 vnosov: Höflehner, Jakobstitzsch, Jankovitsche, Krischan, Loral, Kosirhan, Grönig, Wundsch, Bučar, Kirche H. Veith (cerkev sv. Vida [~]), Hlobutschar, Lukentitz, Rappar, Millea, Mallestitak, Mandl, Grangl, Polcig, Muhč, Leiner, Rußa, Juttner, Jhan, Gnoy, Pasticz, Prodoritche, Pfister; ključna ugotovitev: PUA ≠ PT številčenje hiš [~]; statusi REVIEW`
+      ? `23 strani (12–34) po 1 VLM klic; 47 vnosov: Höflehner, Jakobstitzsch, Jankovitsche, Krischan, Loral, Kosirhan, Grönig, Wundsch, Bučar, Kirche H. Veith (cerkev sv. Vida [~]), Hlobutschar, Lukentitz, Rappar, Millea, Mallestitak, Mandl, Grangl, Polcig, Muhč, Leiner, Rußa, Juttner, Jhan, Gnoy, Pasticz, Prodoritche, Pfister; ključna ugotovitev: PUA ≠ PT številčenje hiš [~]; P5-b dopolni register (32 vnosov 69–100 — glej qa-p5-b); statusi REVIEW`
       : p4Errors.join("; "),
   );
 
-  // 18. P5 — navzkrižna analiza PUA ↔ PT (deterministična): števci, ugotovitev, omejitve
+  // 18. P5 — navzkrižna analiza PUA ↔ PT (deterministična): števci, ugotovitev, omejitve (posodobljeno po P5-b)
   const p5Errors: string[] = [];
   const p5c = PUA_PT_CROSS.counts;
-  if (p5c.puaEntries !== 69 || p5c.ptHouseRows !== 84 || p5c.ptParcelRows !== 21) {
-    p5Errors.push(`P5 števci vhodov: ${p5c.puaEntries}/${p5c.ptHouseRows}/${p5c.ptParcelRows} (pričakovano 69/84/21)`);
+  if (p5c.puaEntries !== 101 || p5c.ptHouseRows !== 84 || p5c.ptParcelRows !== 21) {
+    p5Errors.push(`P5 števci vhodov: ${p5c.puaEntries}/${p5c.ptHouseRows}/${p5c.ptParcelRows} (pričakovano 101/84/21 po P5-b)`);
   }
-  if (p5c.withReadableHouseNo !== 64 || p5c.directSurnameMatch !== 0) {
-    p5Errors.push(`P5 ujemanja: ${p5c.withReadableHouseNo} z št., ${p5c.directSurnameMatch} ujemanj (pričakovano 64/0)`);
+  if (p5c.withReadableHouseNo !== 91 || p5c.directSurnameMatch !== 0) {
+    p5Errors.push(`P5 ujemanja: ${p5c.withReadableHouseNo} z št., ${p5c.directSurnameMatch} ujemanj (pričakovano 91/0)`);
   }
-  if (p5c.divergent !== 51 || p5c.weakMatch !== 2) {
-    p5Errors.push(`P5 divergence: ${p5c.divergent}/${p5c.weakMatch} (pričakovano 51/2)`);
+  if (p5c.divergent !== 72 || p5c.weakMatch !== 3) {
+    p5Errors.push(`P5 divergence: ${p5c.divergent}/${p5c.weakMatch} (pričakovano 72/3)`);
   }
-  if (p5c.surnamesInBothRegisters !== 8) {
-    p5Errors.push(`P5 priimki v obeh: ${p5c.surnamesInBothRegisters} (pričakovano 8)`);
+  if (p5c.surnamesInBothRegisters !== 11) {
+    p5Errors.push(`P5 priimki v obeh: ${p5c.surnamesInBothRegisters} (pričakovano 11)`);
   }
   // 84 hišnih vrstic = 83 edinstvenih št. (34 = prečrtana dvojnica: 2 vrstici, 1 št.)
   if (p5c.ptNumbersCovered + p5c.ptNumbersWithoutPua !== 83) {
@@ -602,14 +605,14 @@ export function runQA(): QAReport {
   if (PUA_PT_CROSS.status !== "REVIEW") {
     p5Errors.push(`P5 status: ${PUA_PT_CROSS.status} (pričakovano REVIEW)`);
   }
-  if (!PUA_PT_CROSS.findingSi.includes("0/64") || !PUA_PT_CROSS.findingSi.includes("[~]")) {
-    p5Errors.push("P5 ugotovitev mora vsebovati 0/64 in oznako negotovosti [~]");
+  if (!PUA_PT_CROSS.findingSi.includes("0/91") || !PUA_PT_CROSS.findingSi.includes("[~]")) {
+    p5Errors.push("P5 ugotovitev mora vsebovati 0/91 in oznako negotovosti [~]");
   }
-  if (!PUA_PT_CROSS.caveatsSi.includes("paleografijo") || !PUA_PT_CROSS.nextStepSi.includes("35–49")) {
-    p5Errors.push("P5 mora dokumentirati omejitve (paleografija) in naslednje korake (strani 35–49)");
+  if (!PUA_PT_CROSS.caveatsSi.includes("paleografijo") || !PUA_PT_CROSS.nextStepSi.includes("35–49") || !PUA_PT_CROSS.nextStepSi.includes("OPRAVLJENO")) {
+    p5Errors.push("P5 mora dokumentirati omejitve (paleografija) in OPRAVLJEN korak P5-b (strani 35–49)");
   }
-  if (PUA_PT_CROSS.surnameOverlaps.length < 4) {
-    p5Errors.push(`P5 priimki-sovpadanja: ${PUA_PT_CROSS.surnameOverlaps.length} vrstic (pričakovano ≥ 4)`);
+  if (PUA_PT_CROSS.surnameOverlaps.length < 6) {
+    p5Errors.push(`P5 priimki-sovpadanja: ${PUA_PT_CROSS.surnameOverlaps.length} vrstic (pričakovano ≥ 6 po P5-b)`);
   }
   // usklajenost s PUA_CONTINUATION: analiza mora pokrivati vse vnose, ki jih je prebrala P4
   if (p5c.puaEntries !== PUA_CONTINUATION.rows.length) {
@@ -617,37 +620,90 @@ export function runQA(): QAReport {
   }
   push(
     "qa-p5-pua-pt-cross",
-    "P5 navzkrižna analiza PUA ↔ PT: 0/64 neposrednih ujemanj po hišnih št., 8 priimkov v obeh registrih na različnih št., sklep [~] = primerjava po imenih",
-    "P5 cross-analysis PUA ↔ PT: 0/64 direct matches by house no., 8 surnames in both registers at different numbers, conclusion [~] = compare by names",
+    "P5 navzkrižna analiza PUA ↔ PT (register CEL po P5-b): 0/91 neposrednih ujemanj po hišnih št., 11 priimkov v obeh registrih na različnih št., sklep [~] = primerjava po imenih",
+    "P5 cross-analysis PUA ↔ PT (register complete after P5-b): 0/91 direct matches by house no., 11 surnames in both registers at different numbers, conclusion [~] = compare by names",
     p5Errors.length === 0,
     p5Errors.length === 0
-      ? `Deterministično (Levenshtein ≥ 0,72/0,50, scripts/pua-pt-cross.py, brez AI): 69 vnosov PUA (str. 3–34) ↔ 84 hišnih vrstic PT; 38 PT št. pokritih, 12 PUA št. brez PT vpisa (11 v bloku 41–60); ugotovitev [~]: PUA = indeks lastnikov parcel z lastno hišno referenco; omejitve: obe vira strojna branjla [~]; naslednji koraki: strani 35–49, človeška paleografija, arhivsko vprašanje ARS`
+      ? `Deterministično (Levenshtein ≥ 0,72/0,50, scripts/pua-pt-cross.py, brez AI): 101 vnosov PUA (str. 3–49, register CEL po P5-b) ↔ 84 hišnih vrstic PT; 48 PT št. pokritih, 16 PUA št. brez PT vpisa (blok 41–60); ugotovitev [~]: PUA = indeks lastnikov parcel z lastno hišno referenco; omejitve: obe vira strojna branjla [~]; naslednji koraki: OPRAVLJENO strani 35–49, človeška paleografija, arhivsko vprašanje ARS`
       : p5Errors.join("; "),
   );
 
-  // P5-c: W-most PT ↔ PUA
+  // 18b. P5-b — preostale strani PUA 35–49 (priimki P–Ž): obseg, vsebinske kontrole, razrešene napovedi
+  const p5bErrors: string[] = [];
+  const puaRows = PUA_CONTINUATION.rows;
+  const puaNew = puaRows.filter((r) => r.page >= 35);
+  if (puaNew.length !== 32) {
+    p5bErrors.push(`P5-b novih vnosov: ${puaNew.length} (pričakovano 32, zap. št. 69–100)`);
+  }
+  const puaNewRows = puaNew.map((r) => r.row);
+  if (Math.min(...puaNewRows) !== 69 || Math.max(...puaNewRows) !== 100) {
+    p5bErrors.push(`P5-b zap. št. obseg: ${Math.min(...puaNewRows)}–${Math.max(...puaNewRows)} (pričakovano 69–100)`);
+  }
+  for (const pg of [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]) {
+    if (!puaNew.some((r) => r.page === pg)) {
+      p5bErrors.push(`P5-b manjka stran ${pg}`);
+    }
+  }
+  const puaNames = puaNew.map((r) => r.nameAsWritten).join(" |");
+  for (const must of ["Urlich Georg", "Ulrich Mida", "Verbitzcher", "Schello Georg", "Lipovšek", "Strauß", "Zollamt"]) {
+    if (!puaNames.includes(must)) {
+      p5bErrors.push(`P5-b manjka ključno ime: ${must}`);
+    }
+  }
+  // skupinski/skrajni vnosi konec registra
+  if (!puaNames.includes("Gemeinde Malfz") || !puaNames.includes("Uebersprungene")) {
+    p5bErrors.push("P5-b manjkajo skupinski vnosi (Gemeinde Malfz / Uebersprungene Parzellen-Numern)");
+  }
+  // razrešene napovedi W-most: h32 DELNO V PRID, h64 ZAVRNJENO, h65 NEREŠENO, h68 POTRJENO
+  const preds = PUA_PT_WBRIDGE.predictions;
+  const resolvedCounts = ["POTRJENO", "ZAVRNJENO", "NEREŠENO", "DELNO V PRID"];
+  for (const rv of resolvedCounts) {
+    if (!preds.some((p) => p.resolved === rv)) {
+      p5bErrors.push(`P5-b razrešitev napovedi manjka verdikt ${rv}`);
+    }
+  }
+  const h68 = preds.find((p) => p.house.includes("h68"));
+  if (!h68 || !h68.expectedOwners.includes("Ulrich Mida") || h68.resolved !== "POTRJENO") {
+    p5bErrors.push("P5-b napoved h68 ni potrjena (pričakovano: Ulrich Mida, MATCH 1,0)");
+  }
+  push(
+    "qa-p5-b-pua-35-49",
+    "P5-b: PUA strani 35–49 prebrane (32 vnosov, zap. št. 69–100) — register CEL (101 vnosov); napovedi W-most razrešene: h68 POTRJENA, h32 delno v prid, h64 zavrnjena, h65 nerešena [~]",
+    "P5-b: PUA pages 35–49 read (32 entries, no. 69–100) — register COMPLETE (101 entries); W-bridge predictions resolved: h68 CONFIRMED, h32 partially supported, h64 rejected, h65 unresolved [~]",
+    p5bErrors.length === 0,
+    p5bErrors.length === 0
+      ? `VLM (1 klic/stran, ~92 % JPEG): 15 strani (35–49, priimki P–Ž: Schim-, Stübler, Strauß, Stepanitsch, Schello, Urlich/Ulrich, Verbitzcher, Wardian, Wentschitsch, Zollamt, Waisenkinder, Lipovšek + skupinski vnosi Gemeinde/Uebersprungene); register 1825 zdaj CEL — vse ostaja REVIEW (strojno branje ni dokazni vir); napovedi: h68 »Ulrich Mida« MATCH 1,0; h32 »Urlich Georg« PARTIAL 0,67 (komponenti Georg+Ulrich, vrstni red zamenjan [~]); h64 »Verbitzcher Mathä« MISMATCH 0,46 (fonetska bližina [~]); h65 brez protistrani (vrzel [~]); 2/4 v prid — zaupanje v W-most se je dvignilo`
+      : p5bErrors.join("; "),
+  );
+
+  // P5-c: W-most PT ↔ PUA (posodobljeno po P5-b)
   const p5w = PUA_PT_WBRIDGE.counts;
   const p5wErrors: string[] = [];
   if (p5w.ptRowsWithW !== 43 || p5w.wRefsTotal !== 45 || p5w.wDistinct !== 26) {
     p5wErrors.push(`P5-c W-obseg: ${p5w.ptRowsWithW}/${p5w.wRefsTotal}/${p5w.wDistinct} (pričakovano 43/45/26)`);
   }
-  if (p5w.wWithPua !== 22 || p5w.wNoPua !== 4) {
-    p5wErrors.push(`P5-c W-protistrani: ${p5w.wWithPua}+${p5w.wNoPua} (pričakovano 22+4 = 26)`);
+  if (p5w.wWithPua !== 25 || p5w.wNoPua !== 1) {
+    p5wErrors.push(`P5-c W-protistrani: ${p5w.wWithPua}+${p5w.wNoPua} (pričakovano 25+1 = 26 po P5-b)`);
   }
   if (p5w.match + p5w.partial + p5w.mismatch !== p5w.wWithPua) {
     p5wErrors.push(`P5-c verdikti: ${p5w.match}+${p5w.partial}+${p5w.mismatch} ≠ ${p5w.wWithPua}`);
   }
-  if (p5w.match !== 6 || p5w.partial !== 9 || p5w.mismatch !== 7) {
-    p5wErrors.push(`P5-c razdelitev: ${p5w.match}/${p5w.partial}/${p5w.mismatch} (pričakovano 6/9/7)`);
+  if (p5w.match !== 8 || p5w.partial !== 10 || p5w.mismatch !== 7) {
+    p5wErrors.push(`P5-c razdelitev: ${p5w.match}/${p5w.partial}/${p5w.mismatch} (pričakovano 8/10/7 po P5-b)`);
   }
   if (PUA_PT_WBRIDGE.status !== "REVIEW") {
     p5wErrors.push(`P5-c status: ${PUA_PT_WBRIDGE.status} (pričakovano REVIEW)`);
   }
-  if (!PUA_PT_WBRIDGE.hypothesisSi.includes("[~]") || !PUA_PT_WBRIDGE.findingSi.includes("68 %")) {
-    p5wErrors.push("P5-c hipoteza/ugotovitev mora vsebovati [~] in 68 %");
+  if (!PUA_PT_WBRIDGE.hypothesisSi.includes("[~]") || !PUA_PT_WBRIDGE.findingSi.includes("72 %")) {
+    p5wErrors.push("P5-c hipoteza/ugotovitev mora vsebovati [~] in 72 % (posodobljeno po P5-b)");
   }
-  if (PUA_PT_WBRIDGE.bestMatches.length !== 6) {
-    p5wErrors.push(`P5-c najboljših ujemanj: ${PUA_PT_WBRIDGE.bestMatches.length} (pričakovano 6)`);
+  if (PUA_PT_WBRIDGE.bestMatches.length !== 8) {
+    p5wErrors.push(`P5-c najboljših ujemanj: ${PUA_PT_WBRIDGE.bestMatches.length} (pričakovano 8 po P5-b — vključno W.60/W.68)`);
+  } else {
+    const w60 = PUA_PT_WBRIDGE.bestMatches.find((m) => m.w === "W.60");
+    const w68 = PUA_PT_WBRIDGE.bestMatches.find((m) => m.w === "W.68");
+    if (!w60 || !w60.puaNames.includes("Schello Georg")) p5wErrors.push("P5-c W.60 manjka/napačen (Schello Georg p42 v85)");
+    if (!w68 || !w68.puaNames.includes("Ulrich Mida")) p5wErrors.push("P5-c W.68 manjka/napačen (Ulrich Mida p44 v90)");
   }
   if (PUA_PT_WBRIDGE.predictions.length !== 4) {
     p5wErrors.push(`P5-c napovedi: ${PUA_PT_WBRIDGE.predictions.length} (pričakovano 4: h32/h64/h65/h68)`);
@@ -658,8 +714,8 @@ export function runQA(): QAReport {
       }
     }
   }
-  if (!PUA_PT_WBRIDGE.caveatsSi.includes("ponovljiva") || !PUA_PT_WBRIDGE.findingSi.includes("0/64")) {
-    p5wErrors.push("P5-c mora navesti ponovljivost in izhodišče P5-a (0/64)");
+  if (!PUA_PT_WBRIDGE.caveatsSi.includes("ponovljiva") || !PUA_PT_WBRIDGE.findingSi.includes("0/91")) {
+    p5wErrors.push("P5-c mora navesti ponovljivost in izhodišče P5-a (0/91)");
   }
   if (!PUA_PT_WBRIDGE.findingSi.includes("W.62") || !PUA_PT_WBRIDGE.caveatsSi.includes("W.47")) {
     p5wErrors.push("P5-c mora dokumentirati šumenje (W.62 dvojni vpis, W.47 prečrtana)");
@@ -667,11 +723,11 @@ export function runQA(): QAReport {
 
   push(
     "qa-p5-pua-pt-wbridge",
-    "P5-c W-most: 43 vrstic PT s 45 W-sklici (26 različnih), 22 z PUA protistrani, 15/22 ujemanj ≥ 0,50 (6 MATCH), 4 napovedi za strani 35–49",
-    "P5-c W-bridge: 43 PT rows with 45 W-references (26 distinct), 22 with a PUA counterpart, 15/22 matches ≥ 0.50 (6 MATCH), 4 predictions for pages 35–49",
+    "P5-c W-most (posodobljen po P5-b): 43 vrstic PT s 45 W-sklici (26 različnih), 25 z PUA protistrani, 18/25 ujemanj ≥ 0,50 (8 MATCH — novi W.60/W.68), 4 napovedi RAZREŠENE",
+    "P5-c W-bridge (updated after P5-b): 43 PT rows with 45 W-references (26 distinct), 25 with a PUA counterpart, 18/25 matches ≥ 0.50 (8 MATCH — new W.60/W.68), 4 predictions RESOLVED",
     p5wErrors.length === 0,
     p5wErrors.length === 0
-      ? `Deterministično (scripts/pua-pt-wbridge.py, brez AI): most med različnima številčenjema iz P5-a — hipoteza [~] W.<n> = PUA hišna št. lastnika; najmočnejša ujemanja: W.2 Hlebetz↔Hlebety 0,86, W.24/25 Brinig↔Bring 0,83, W.1 Mufa↔Wufa 0,75 (M↔W Kurrent); 4 W št. brez PUA (32/64/65/68) = napovedi za ne prebrane strani 35–49; omejitve: strojna branjla [~], prečrtana W.47, dvojni vpis W.62`
+      ? `Deterministično (scripts/pua-pt-wbridge.py, brez AI): most med različnima številčenjema iz P5-a — hipoteza [~] W.<n> = PUA hišna št. lastnika; najmočnejša ujemanja: W.68 Ulrich↔Ulrich 1,0 (napoved POTRJENA), W.60 Schello↔Schello 1,0, W.2 Hlebetz↔Hlebety 0,86, W.24/25 Brinig↔Bring 0,83, W.1 Mufa↔Wufa 0,75 (M↔W Kurrent); po P5-b: 25 W s protistrani (ostane samo W.65 brez — vrzel [~]); napovedi razrešene: h68 POTRJENA, h32 DELNO V PRID (0,67), h64 ZAVRNJENA (0,46 [~]), h65 NEREŠENA; omejitve: strojna branjla [~], prečrtana W.47, dvojni vpis W.62`
       : p5wErrors.join("; "),
   );
 

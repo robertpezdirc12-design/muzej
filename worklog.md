@@ -1826,3 +1826,23 @@ Stage Summary:
 - UPORABNI OSTATKI: natančna moderna centerline Kolpe (validirana na #14 sidra) + delujoča ekstrakcija struge ~1825 s listov + dokaz, da medlistna ORB/SIFT registracija za te liste ne deluje (marginalije pasti, ±44° orientacije)
 - A03/A04/A05 ostajajo TO_COLLECT s poštenimi opombami; muzej stabilen (dev + PROD 20/20)
 - Kvota 429 še vedno (08:12→15:53); P5-b (PUA 35–49) ostaja edini odprti del #17 — čaka dvig kvote; nadaljnje sonde
+
+---
+Task ID: P5-b
+Agent: Z.ai Code (glavni agent)
+Task: Zaključek P5-b — transkripcija PUA strani 35–49 (priimki P–Ž), razrešitev napovedi W-most, integracija v muzej; zadnji odprti del GitLab issue #17
+
+Work Log:
+- Sonda ob 16:27: KVOTA SPROŠČENA (LLM probe OK; blokada 08:12→~16:10, >8 h) — prejšnja seja je ob 16:10 uspela prebrati vseh 15 strani (35–49, scripts/pua-read-remaining.mjs, ~1 VLM klic/stran) tik pred izgubo konteksta; commit 106670f (pushan) je vseboval raw JSON-e, parsed, research.ts vrstice 69–100 in oba analitična JSON-a, a je imel UUID-sporočilo in STARE povzetke (counts 69/22/4/6, 4 nerešene napovedi).
+- Preverjena celovitost: 38/38 strani transkribiranih (12–34 stari + 35–49 novi), parse 79 vnosov str. 12–49 brez napak, PUA_CONTINUATION v research.ts 101 vnosov (str. 3–49, vrstice 0–100).
+- Napovedi W-most razrešene iz wbridge JSON (zjoinano s 101 vnosi): h68 POTRJENO (»Ulrich Mida« p44 v90, ulrich↔ulrich 1,0 MATCH); h32 DELNO V PRID (»Urlich Georg« p43 v88, 0,67 — komponenti Georg+Ulrich, vrstni red zamenjan [~]); h64 ZAVRNJENO (»Verbitzcher Mathä« p45 v93, 0,46, fonetska bližina [~]); h65 NEREŠENO (noben vnos s hišno št. 65 — vrzel v registru [~]). Novi MATCH: W.60 Schello↔Schello 1,0 (»Joger«≈»Georg« isti mož [~]).
+- research.ts posodobljen: PUA_PT_CROSS (puaEntries 69→101, withReadableHouseNo 64→91, divergent 51→72, weakMatch 2→3, surnamesInBothRegisters 8→11, ptNumbersCovered 38→48, ptNumbersWithoutPua 45→35, puaHouseNosWithoutPt 12→16; method/finding 0/64→0/91; nextStep (1) OPRAVLJENO; surnameOverlaps +Strauß +Schimetz/Schumetz); PUA_PT_WBRIDGE (wWithPua 22→25, wNoPua 4→1, match 6→8, partial 9→10, puaNumsNoW 28→39; method 69→101 vnosov; finding 15/22 68 %→18/25 72 %, novi MATCH W.60/W.68, razrešitev vseh 4 napovedi; bestMatches 6→8 vrstic z W.68/W.60 na vrhu; predictions dobijo polje resolved {POTRJENO/ZAVRNJENO/NEREŠENO/DELNO V PRID}; caveats posodobljen); PUA divergences +3 P5-b vrstice.
+- qa.ts posodobljen: i17 test 69/32→101/47 strani; qa-p5-pua-pt-cross nove vrednosti (101/91/72/3/11, 0/91, OPRAVLJENO, overlaps ≥6); NOV test qa-p5-b-pua-35-49 (32 vnosov, vrstice 69–100, vseh 15 strani prisotnih, ključna imena Urlich Georg/Ulrich Mida/Verbitzcher/Schello Georg/Lipovšek/Strauß/Zollamt/Gemeinde Malfz/Uebersprungene, razrešitve napovedi s 4 verdikti, h68 = Ulrich Mida POTRJENO); qa-p5-pua-pt-wbridge posodobljen (25+1, 8/10/7, 72 %, bestMatches 8 z W.60/W.68 vsebinsko preverjenimi, 0/91).
+- museum-research.tsx: podnaslov kartice PUA — »strani 35–49 ostajajo TO_COLLECT« → »P5-b: strani 35–49 prebrane (32 vnosov, zap. št. 69–100) — register CEL (101 vnosov); napovedi W-most: h68 POTRJENA (Ulrich Mida), h32 delno v prid, h64/h65 [~]« (si+en).
+- sw.js v15→v16; research/p5/README.md nov odsek »P5-b ZAKLJUČEN« (transkripcija, tabela razrešitev napovedi, posodobljene analize, integracija).
+
+Stage Summary:
+- P5-b DOKONČAN: register PUA 1825 (k.o. Griblje) zdaj strojno prebran v CELI celoti — 38 strani, 101 vnosov (str. 3–49, vrstice 0–100); vse ostaja REVIEW (strojno branje ni dokazni vir)
+- Napovedi W-most razrešene 2/4 v prid (h68 MATCH 1,0 »Ulrich Mida«; h32 0,67 »Urlich Georg« [~]) — zaupanje v most dvignjeno, hipoteza ostaja [~]; h64 zavrnjena (Verbitzcher 0,46 [~]), h65 = vrzel brez protistrani
+- Analizi P5-a/P5-c posodobljeni na cel register (0/91; 18/25 = 72 %, 8 MATCH); QA 20→21 testov; muzejska kartica PUA kaže CEL register
+- ISSUE #17 (RESEARCH GAP CLOSURE v2) zdaj VSI deli dokončani (P3/P4/P5-a/P5-b/P5-c + PT_REVIEW + P6/P7/P8 kot bonus) — po E2E verifikaciji produkcije je projekt brez odprtih raziskovalnih lukenj

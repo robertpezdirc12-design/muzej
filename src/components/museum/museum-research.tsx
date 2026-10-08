@@ -896,8 +896,8 @@ export function MuseumResearch() {
                 </h4>
                 <p className="mt-1 text-[11px] text-muted-foreground">
                   {t(
-                    `P4: strani 12–34 (47 vnosov, zap. št. 22–68) · vključno Kirche H. Veith — cerkev sv. Vida [~] · PUA številči hiše drugače kot PT [~] · strani 35–49 ostajajo TO_COLLECT`,
-                    `P4: pages 12–34 (47 entries, rows 22–68) · incl. Kirche H. Veith — the church of St. Vitus [~] · PUA numbers houses differently from PT [~] · pages 35–49 remain TO_COLLECT`,
+                    `P4: strani 12–34 (47 vnosov, zap. št. 22–68) · vključno Kirche H. Veith — cerkev sv. Vida [~] · PUA številči hiše drugače kot PT [~] · P5-b: strani 35–49 prebrane (32 vnosov, zap. št. 69–100) — register CEL (101 vnosov); napovedi W-most: h68 POTRJENA (Ulrich Mida), h32 delno v prid, h64/h65 [~]`,
+                    `P4: pages 12–34 (47 entries, rows 22–68) · incl. Kirche H. Veith — the church of St. Vitus [~] · PUA numbers houses differently from PT [~] · P5-b: pages 35–49 read (32 entries, rows 69–100) — register COMPLETE (101 entries); W-bridge predictions: h68 CONFIRMED (Ulrich Mida), h32 partially supported, h64/h65 [~]`,
                   )}
                 </p>
               </div>

@@ -586,9 +586,9 @@ export const NEGATIVE_RESULTS: NegativeResult[] = [
     whatEn: "Complete transcription of the Kurrent manuscripts (all 7 written units of N83)",
     status: "REVIEW",
     detailSi:
-      "Vsi prepisi v Atlasu so pomožni strojni očrti rokopisa in zahtevajo paleografsko potrditev. Stanje po issue #17 (2026-10-08, podrobnosti v research.ts KURRENT_SERIES): PR 4/4 strani, PG 1/1, PV 1/1 (12 kultur), PS 9 strani vzorčeno + rekapitulacija, PUA 10/49 strani (38 vrstic), PZ 10 strani vzorčeno, PT 8/8 pregledan. Poln prepis PS/PUA/PZ ostaja TO_COLLECT; vsi statusi REVIEW.",
+      "Vsi prepisi v Atlasu so pomožni strojni očrti rokopisa in zahtevajo paleografsko potrditev. Stanje po issue #17 + P5-b (2026-10-08, podrobnosti v research.ts KURRENT_SERIES): PR 4/4 strani, PG 1/1, PV 1/1 (12 kultur), PS 9 strani vzorčeno + rekapitulacija, PUA 49/49 strani (101 vnosov — CEL register po P5-b), PZ 10 strani vzorčeno, PT 8/8 pregledan. Poln prepis PS/PZ ostaja TO_COLLECT; vsi statusi REVIEW.",
     detailEn:
-      "All transcriptions in the Atlas are machine-assisted readings requiring palaeographic confirmation. Status after issue #17 (2026-10-08, detail in research.ts KURRENT_SERIES): PR 4/4 pages, PG 1/1, PV 1/1 (12 cultures), PS 9 pages sampled + recapitulation, PUA 10/49 pages (38 rows), PZ 10 pages sampled, PT 8/8 reviewed. The full PS/PUA/PZ transcription remains TO_COLLECT; all statuses REVIEW.",
+      "All transcriptions in the Atlas are machine-assisted readings requiring palaeographic confirmation. Status after issue #17 + P5-b (2026-10-08, detail in research.ts KURRENT_SERIES): PR 4/4 pages, PG 1/1, PV 1/1 (12 cultures), PS 9 pages sampled + recapitulation, PUA 49/49 pages (101 entries — the COMPLETE register after P5-b), PZ 10 pages sampled, PT 8/8 reviewed. The full PS/PZ transcription remains TO_COLLECT; all statuses REVIEW.",
   },
   {
     id: "neg-1812",

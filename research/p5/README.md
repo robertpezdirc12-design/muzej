@@ -98,3 +98,45 @@ kvota vztraja 08:12 → 14:19 (6,1 h) — 6-urno drseče okno ovrženo (dvig
 **Stanje ob zaključku seje**: dev + produkcija QA 19/19; 23/38 strani PUA
 prebranih (12–34), manjka 35–49; /tmp/pua-pages PNG-ji še prisotni (49);
 metoda za zaključek P5-b popolnoma dokumentirana zgoraj.
+
+---
+
+## P5-b ZAKLJUČEN (2026-10-08, ~16:10–16:30) — register PUA 1825 CEL
+
+**Dvig kvote**: VLM/LLM kvota (429 od 08:12) se je sprostila med ~15:53 in
+16:27; stran so bile prebrane ob 16:10 (15 strani 35–49, ~1 klic/stran —
+skript `scripts/pua-read-remaining.mjs`, PNG ~92 % JPEG v /tmp/pua-pages/).
+
+**Transkripcija (VLM, 1 klic/stran)**: 32 novih vnosov, zap. št. 69–100.
+Priimki P–Ž: Gemeinde Malfz (Brandhofgässl #69, Smibuche #70), Starašinutsh,
+Strutz, Hansitsch, Schimcz ×2, Stübler, Schimer, Schimey, Strauß ×3 (45/71/72),
+Schimetz ×2, Schumetz, Stepanitsch, Schello (h60), Urlich Georg (h32),
+Ulrich Pitter, Ulrich Mida (h68), Uebersprungene Parzellen-Numern #91,
+Waisenkinder von Weixelbaum, Verbitzcher (h64), Wardian, Waschitzste,
+Wentschitsch, Zollamt (h70), Wge mit der Gemeinde #98, vrstica #99 brez imena
+(I: 2652–2687), J. Lipovšek #100 (b.P. 2700 + ročni zapisi o prevzemih
+1. 10. 1825 — konec registra).
+
+**Napovedi W-most razrešene** (test iz P5-c):
+| napoved | pričakovano (PT) | najdeno v PUA 35–49 | verdikt |
+|---|---|---|---|
+| h32 | Greg/Piberig Ulrich | »Urlich Georg« (p43 v88, h32) | DELNO V PRID (0,67; komponenti Georg+Ulrich, vrstni red zamenjan [~]) |
+| h64 | Varbutek Mufa / Jörg Georg | »Verbitzcher Mathä« (p45 v93, h64) | ZAVRNJENO (0,46; fonetska bližina [~]) |
+| h65 | Bring Marko / Glan Simonz | NOBEN vnos s h65 | NEREŠENO (vrzel v registru [~]) |
+| h68 | Malt Ulrich | »Ulrich Mida« (p44 v90, h68) | **POTRJENO (MATCH 1,0)** |
+
+Sklep: 2/4 v prid — zaupanje v most W = PUA-številčenje se je dvignilo
+(novo še W.60 Schello↔Schello 1,0: PT »Joger« ≈ PUA »Georg« [~]), a hipoteza
+ostaja [~] do paleografske potrditve.
+
+**Posodobljene analize** (ponovni zagon na 101 vnosih): P5-a križna 0/91
+(prej 0/64), 11 priimkov v obeh registrih (novi: Strauß, Schimetz/Schumetz
+[~]); P5-c W-most 25 s protistrani (prej 22), 18/25 ≥ 0,50 = 72 %, 8 MATCH
+(novi W.60, W.68). Artefakta: `research/p5/pua-pt-cross.json`,
+`research/p5/pua-pt-wbridge.json` + `research/p3/pua-12plus-parsed.json`.
+
+**Integracija v muzej**: PUA_CONTINUATION 101 vnosov (strani 3–49 — CEL),
+divergence dopolnjene (3 P5-b), PUA_PT_CROSS/PUA_PT_WBRIDGE povzetki
+posodobljeni (napovedi z `resolved` verdikti), museum-research.tsx podnaslov
+(35–49 prebrane, register CEL), sw.js v15→v16, QA: nov test qa-p5-b-pua-35-49
++ posodobljena i17/P5-a/P5-c pričakovanja (20 → 21 testov).
