@@ -1,0 +1,223 @@
+{
+ "map": "Provinces Illyriennes Servie et Bosnie 1812 — DRUGI SKEN (Lapie/Malte-Brun/Chamouin/Giraldon; Internet Archive 7636x5936; PD)",
+ "method": "ORB+RANSAC registracija sken1→sken2 (4030 inlierjev, RMS 3,9 px) → OCR 12 oznak 2. skena (3-8× izrezi) → LSQ afina+kvadratna px→WGS84; koroboracija: POT A (model1+registracija) vs POT B (model2)",
+ "points": [
+  {
+   "name": "Pest",
+   "px": [
+    4510,
+    636
+   ],
+   "geo": [
+    47.497,
+    19.041
+   ],
+   "word": "Pest",
+   "full": true,
+   "residualKm": 6.0
+  },
+  {
+   "name": "Leoben",
+   "px": [
+    2441,
+    677
+   ],
+   "geo": [
+    47.383,
+    15.094
+   ],
+   "word": "eobern",
+   "full": false,
+   "residualKm": 9.7
+  },
+  {
+   "name": "Ancona",
+   "px": [
+    1499,
+    3429
+   ],
+   "geo": [
+    43.622,
+    13.508
+   ],
+   "word": "icone",
+   "full": false,
+   "residualKm": 0.2
+  },
+  {
+   "name": "Vidin",
+   "px": [
+    6332,
+    3147
+   ],
+   "geo": [
+    43.993,
+    22.868
+   ],
+   "word": "WIDDIN",
+   "full": true,
+   "residualKm": 11.3
+  },
+  {
+   "name": "Semlin",
+   "px": [
+    5063,
+    2550
+   ],
+   "geo": [
+    44.843,
+    20.4
+   ],
+   "word": "Semlin",
+   "full": true,
+   "residualKm": 6.1
+  },
+  {
+   "name": "Zvornik",
+   "px": [
+    4411,
+    2891
+   ],
+   "geo": [
+    44.387,
+    19.093
+   ],
+   "word": "wor",
+   "full": false,
+   "residualKm": 5.3
+  },
+  {
+   "name": "Pristina",
+   "px": [
+    5496,
+    4136
+   ],
+   "geo": [
+    42.664,
+    21.166
+   ],
+   "word": "Prist",
+   "full": false,
+   "residualKm": 4.5
+  },
+  {
+   "name": "Belgrade",
+   "px": [
+    5051,
+    2619
+   ],
+   "geo": [
+    44.817,
+    20.457
+   ],
+   "word": "Bel",
+   "full": false,
+   "residualKm": 11.5
+  },
+  {
+   "name": "Sarajevo",
+   "px": [
+    4054,
+    3428
+   ],
+   "geo": [
+    43.857,
+    18.413
+   ],
+   "word": "aye",
+   "full": false,
+   "residualKm": 16.3
+  },
+  {
+   "name": "Ragusa",
+   "px": [
+    3863,
+    4174
+   ],
+   "geo": [
+    42.651,
+    18.091
+   ],
+   "word": "Raguse",
+   "full": true,
+   "residualKm": 6.2
+  },
+  {
+   "name": "Agram",
+   "px": [
+    2938,
+    1803
+   ],
+   "geo": [
+    45.815,
+    15.982
+   ],
+   "word": "Agr",
+   "full": false,
+   "residualKm": 15.6
+  },
+  {
+   "name": "Nissa",
+   "px": [
+    6050,
+    3598
+   ],
+   "geo": [
+    43.32,
+    21.903
+   ],
+   "word": "Nissa",
+   "full": true,
+   "residualKm": 22.2
+  }
+ ],
+ "residualsKm": {
+  "affineMedian": 10.2,
+  "quadMedian": 9.7,
+  "quadMedianFullWords": 6.2,
+  "quadMax": 22.2
+ },
+ "scaleMPerPx": {
+  "x": 151.3,
+  "y": 151.6,
+  "ratio": 0.998
+ },
+ "registration": {
+  "inliers": 4030,
+  "matches": 4670,
+  "rmsFullPx": 3.9,
+  "scaleXY": [
+   0.8187,
+   0.81478
+  ],
+  "rotDeg": 0.24
+ },
+ "griblje": {
+  "geo": [
+   45.568,
+   15.29
+  ],
+  "pxPathA_registration": [
+   2513,
+   2003
+  ],
+  "pxPathB_affine": [
+   2489,
+   2032
+  ],
+  "pxPathB_quad": [
+   2486,
+   2019
+  ],
+  "modelSpreadPx": 13,
+  "agreementPx": 37,
+  "agreementKm": 5.6
+ },
+ "status": "REVIEW [~] — koroboracija na drugem skenu istega lista; 7/12 točk so fragmenti oznak (bias centra ±1–3 km); Laibach/Fiume/Trieste/BanyaLuka v 2. skenu neberljivi (pregibi)",
+ "notes": [
+  "sken 2 je knjižni sken zloženega priloga — nekateri napisi na pregibih neberljivi",
+  "Nissa (Niš) je nova kontrolna točka, ki je NI v modelu 1. skena — model 2. skena je neodvisno 12-točkovni",
+  "POT A uporablja izključno model 1. skena + slikovno registracijo; POT B izključno OCR 2. skena — merjeni sporazumenje |A−B| je čista koroboracija",
+  "isti fragmenti (Bel, Prist) kot v skenu 1 — primerljive meritve centrov"
+ ]
+}

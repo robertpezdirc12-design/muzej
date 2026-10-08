@@ -693,6 +693,24 @@ export function runQA(): QAReport {
     if (g1812.uncertaintyKm > 15) g1812Errors.push(`1812 negotovost: ± ${g1812.uncertaintyKm} km (pričakovano ≤ 15)`);
     if (g1812.artifacts.length < 5) g1812Errors.push(`1812 artefaktov: ${g1812.artifacts.length} (pričakovano ≥ 5)`);
   }
+  // P7: koroboracija na drugem skenu istega lista
+  const corr = MAP_1812.georef?.corroboration;
+  if (!corr) {
+    g1812Errors.push("1812 koroboracija: manjka objekt (P7)");
+  } else {
+    if (corr.controlPoints < 10) g1812Errors.push(`1812 koroboracija točk: ${corr.controlPoints} (pričakovano ≥ 10)`);
+    if (corr.registration.inliers < 1000) g1812Errors.push(`1812 registracija inlierjev: ${corr.registration.inliers} (pričakovano ≥ 1000)`);
+    if (corr.registration.rmsPx > 10) g1812Errors.push(`1812 registracija RMS: ${corr.registration.rmsPx} px (pričakovano ≤ 10)`);
+    const cratio = corr.scaleMPerPx.x / corr.scaleMPerPx.y;
+    if (cratio < 0.9 || cratio > 1.1) g1812Errors.push(`1812 2. sken anizotropija: ${cratio.toFixed(3)}`);
+    if (corr.residualsKm.median > 15) g1812Errors.push(`1812 2. sken residuali: ${corr.residualsKm.median} km (pričakovano ≤ 15)`);
+    const { x: ax, y: ay } = corr.gribljePathA;
+    if (ax < 0 || ax > 7636 || ay < 0 || ay > 5936) g1812Errors.push(`1812 pot A izven 2. skena: (${ax}, ${ay})`);
+    const { x: bx, y: by } = corr.gribljePathB;
+    if (bx < 0 || bx > 7636 || by < 0 || by > 5936) g1812Errors.push(`1812 pot B izven 2. skena: (${bx}, ${by})`);
+    if (corr.agreementKm > (MAP_1812.georef?.uncertaintyKm ?? 10)) g1812Errors.push(`1812 sporazumenje: ${corr.agreementKm} km (pričakovano ≤ negotovosti ± ${MAP_1812.georef?.uncertaintyKm ?? 10} km)`);
+    if (corr.artifacts.length < 4) g1812Errors.push(`1812 koroboracija artefaktov: ${corr.artifacts.length} (pričakovano ≥ 4)`);
+  }
   const mvg092 = (exhibitsRaw as { exhibits: Array<{ museumNo?: string; image?: string; imageCredit?: string; sources?: { sourceKey?: string }[] }> })
     .exhibits.find((e) => e.museumNo === "MVG-092");
   if (!mvg092 || mvg092.image !== "/images/authentic/griblje-okolis-1812-900.jpg") {
@@ -707,11 +725,11 @@ export function runQA(): QAReport {
 
   push(
     "qa-1812-georef",
-    "Zemljevid 1812: georeferenca [~] izvedena — 15 OCR točk, merilo ~126 m/px, Griblje px (2499, 2286) ± 10 km, izrez v MVG-092",
-    "1812 map: georeference [~] executed — 15 OCR points, scale ~126 m/px, Griblje px (2499, 2286) ± 10 km, crop in MVG-092",
+    "Zemljevid 1812: georeferenca [~] izvedena + koroborirana — 15 OCR točk, merilo ~126 m/px, Griblje px (2499, 2286) ± 10 km; P7: 2. sken (IA) — sporazumenje 5,6 km",
+    "1812 map: georeference [~] executed + corroborated — 15 OCR points, scale ~126 m/px, Griblje px (2499, 2286) ± 10 km; P7: 2nd scan (IA) — agreement 5.6 km",
     g1812Errors.length === 0,
     g1812Errors.length === 0
-      ? `Deterministično (tesseract OCR + LSQ afina/kvadratna, brez AI-branja vsebine; research/georef-1812/fit-georef.py): kontrolne točke so centri OCR-anih NAPISOV [~]; afina in kvadratna preslikava se za Griblje ujemata na ± 2 px; pokritje lista ~11–24°E, 41–48°N; omejitve: brez mrežnih stopinj, Parisov meridian nepotrjen, končna potrditev = človeška paleografija/QGIS`
+      ? `Deterministično (tesseract OCR + LSQ afina/kvadratna, brez AI-branja vsebine; research/georef-1812/fit-georef.py): kontrolne točke so centri OCR-anih NAPISOV [~]; afina in kvadratna preslikava se za Griblje ujemata na ± 2 px; pokritje lista ~11–24°E, 41–48°N; koroboracija P7: ORB+RANSAC registracija sken1↔sken2 (4030 inlierjev, RMS 3,9 px) + neodvisen 12-točkovni OCR model 2. skena (mediana residualov 9,7 km, celih besed 6,2 km) — obe poti za Griblje se ujemata na 37 px = 5,6 km, znotraj ± 10 km; omejitve: brez mrežnih stopinj, Parisov meridian nepotrjen, končna potrditev = človeška paleografija/QGIS`
       : g1812Errors.join("; "),
   );
 

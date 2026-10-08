@@ -1,0 +1,110 @@
+{
+ "Pest": {
+  "text": "Pest",
+  "px": [
+   4510,
+   636
+  ],
+  "conf": 96.20388,
+  "src": "otsu4psm11"
+ },
+ "Belgrade": {
+  "text": "Bel",
+  "px": [
+   5051,
+   2619
+  ],
+  "conf": 96.738464,
+  "src": "clahe6psm11"
+ },
+ "Semlin": {
+  "text": "Semlin",
+  "px": [
+   5063,
+   2550
+  ],
+  "conf": 48.061493,
+  "src": "raw6psm11"
+ },
+ "Pristina": {
+  "text": "Prist",
+  "px": [
+   5496,
+   4136
+  ],
+  "conf": 83.1185,
+  "src": "clahe6psm11"
+ },
+ "Agram": {
+  "text": "Agr",
+  "px": [
+   2938,
+   1803
+  ],
+  "conf": 75.900955,
+  "src": "clahe6psm11"
+ },
+ "Nissa": {
+  "text": "Nissa",
+  "px": [
+   6050,
+   3598
+  ],
+  "conf": 88.855118,
+  "src": "raw6psm11"
+ },
+ "Vidin": {
+  "text": "WIDDIN",
+  "px": [
+   6332,
+   3147
+  ],
+  "conf": 85.876953,
+  "src": "dil5psm12"
+ },
+ "Sarajevo": {
+  "text": "aye",
+  "px": [
+   4054,
+   3428
+  ],
+  "conf": 80.54435,
+  "src": "dil8psm12"
+ },
+ "Ancona": {
+  "text": "icone",
+  "px": [
+   1499,
+   3429
+  ],
+  "conf": 84.607536,
+  "src": "clahe3psm12"
+ },
+ "Leoben": {
+  "text": "eobern",
+  "px": [
+   2441,
+   677
+  ],
+  "conf": 63.02401,
+  "src": "dil3psm12"
+ },
+ "Ragusa": {
+  "text": "Raguse",
+  "px": [
+   3863,
+   4174
+  ],
+  "conf": 86.344452,
+  "src": "raw8psm12"
+ },
+ "Zvornik": {
+  "text": "wor",
+  "px": [
+   4411,
+   2891
+  ],
+  "conf": 57.140736,
+  "src": "raw3psm12"
+ }
+}

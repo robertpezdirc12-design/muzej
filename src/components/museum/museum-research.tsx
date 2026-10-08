@@ -504,7 +504,7 @@ export function MuseumResearch() {
             <div className="rounded-xl border bg-card p-6 shadow-sm">
               <h3 className="flex items-center gap-2 font-display text-lg font-semibold">
                 <MapIcon className="size-4 text-primary" aria-hidden="true" />
-                {t("Zemljevid 1812 — georeferenca [~] izvedena", "Map 1812 — georeference [~] executed")}
+                {t("Zemljevid 1812 — georeferenca [~] izvedena + koroborirana", "Map 1812 — georeference [~] executed + corroborated")}
               </h3>
               <div className="mt-3 overflow-hidden rounded-lg border">
                 <img
@@ -531,6 +531,14 @@ export function MuseumResearch() {
                   `Georeference: ${MAP_1812.georef?.controlPoints ?? 15} OCR control points, scale ${MAP_1812.georef?.scaleMPerPx.x ?? 126} × ${MAP_1812.georef?.scaleMPerPx.y ?? 124} m/px, residuals (median) ± ${MAP_1812.georef?.residualsKm.median ?? 10} km; Griblje px (${MAP_1812.georef?.gribljePx.x ?? 2499}, ${MAP_1812.georef?.gribljePx.y ?? 2286}) ± ${MAP_1812.georef?.uncertaintyKm ?? 10} km. Sheet coverage: ~11–24° E, 41–48° N (wider than the Illyrian Provinces).`,
                 )}
               </p>
+              {MAP_1812.georef?.corroboration && (
+                <p className="mt-2 rounded-lg border border-emerald-200 bg-emerald-50/60 p-3 text-xs leading-relaxed text-emerald-800 dark:border-emerald-900 dark:bg-emerald-950/40 dark:text-emerald-200">
+                  {t(
+                    `KOROBORACIJA (P7, neodvisen drugi sken istega lista — Internet Archive): ORB+RANSAC registracija obeh skenov (${MAP_1812.georef.corroboration.registration.inliers} inlierjev, RMS ${MAP_1812.georef.corroboration.registration.rmsPx} px) + neodvisen ${MAP_1812.georef.corroboration.controlPoints}-točkovni OCR geo-model drugega skena (merilo ${MAP_1812.georef.corroboration.scaleMPerPx.x}×${MAP_1812.georef.corroboration.scaleMPerPx.y} m/px, residuali mediana ${MAP_1812.georef.corroboration.residualsKm.median} km, celih besed ${MAP_1812.georef.corroboration.residualsKm.medianFullWords} km). Obe poti za lego Gribelj se ujemata na ${MAP_1812.georef.corroboration.agreementPx} px = ${MAP_1812.georef.corroboration.agreementKm} km — znotraj ± ${MAP_1812.georef.uncertaintyKm} km negotovosti. Rezultat georeference NI artefakt skeniranja. [~] 7/12 točk drugega skena so fragmenti oznak; napisi na pregibih knjižnega skena (Laibach, Fiume, Trst, Banya Luka) neberljivi.`,
+                    `CORROBORATION (P7, an independent second scan of the same sheet — Internet Archive): ORB+RANSAC registration of both scans (${MAP_1812.georef.corroboration.registration.inliers} inliers, RMS ${MAP_1812.georef.corroboration.registration.rmsPx} px) + an independent ${MAP_1812.georef.corroboration.controlPoints}-point OCR geo-model of the second scan (scale ${MAP_1812.georef.corroboration.scaleMPerPx.x}×${MAP_1812.georef.corroboration.scaleMPerPx.y} m/px, residuals median ${MAP_1812.georef.corroboration.residualsKm.median} km, full words ${MAP_1812.georef.corroboration.residualsKm.medianFullWords} km). Both paths for Griblje's position agree to ${MAP_1812.georef.corroboration.agreementPx} px = ${MAP_1812.georef.corroboration.agreementKm} km — within the ± ${MAP_1812.georef.uncertaintyKm} km uncertainty. The georeference result is NOT a scanning artifact. [~] 7/12 points of the second scan are label fragments; labels on the book scan's fold creases (Laibach, Fiume, Trieste, Banya Luka) unreadable.`,
+                  )}
+                </p>
+              )}
               <ul className="mt-2 space-y-1 text-xs">
                 {MAP_1812.periodOriginals.map((p) => (
                   <li key={p.title}>
