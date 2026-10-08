@@ -18,6 +18,7 @@ import {
   PS_RECAP_1826,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
+  PUA_PT_CROSS,
   PT_REVIEW_2026,
   PT_PALEOGRAPHY_P3,
   ORAL_HISTORY_PROTOCOL,
@@ -88,6 +89,9 @@ export async function GET() {
         },
         p3: {
           ptPalaeographyP3: PT_PALEOGRAPHY_P3,
+        },
+        p5: {
+          puaPtCross: PUA_PT_CROSS,
         },
         issue17: {
           audit: ISSUE17_AUDIT,

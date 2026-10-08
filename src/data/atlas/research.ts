@@ -1084,6 +1084,71 @@ export const PUA_CONTINUATION: {
     "Register ni strogo abeceden po sodobnih črkah — vsebuje hišna imena (zu Dragosche) in patronimike (Mavroslawitsch). P4 (2026-10-08): strani 12–34 prebrane (23 strani, 47 vnosov, 1 VLM klic/stran, zap. št. 22–68) — vse ostaja REVIEW, strojno branje ni dokazni vir. PUA in PT očitno številčita hiše različno (zgodovinska ugotovitev [~]). Strani 35–49 (~15 strani, priimki P–Ž + morebitni dodatek) ostajajo TO_COLLECT. Imena velikih družin stabilna med ponovljenimi klici; hišne št. negotove [~]. Surovi VLM izpisi: research/p3/pua-raw/.",
 };
 
+/** P5 — navzkrižna analiza PUA ↔ PT (deterministična, brez AI; 2026-10-08). */
+export const PUA_PT_CROSS: {
+  date: string;
+  method: string;
+  status: ResearchStatus;
+  artifact: string;
+  counts: {
+    puaEntries: number;
+    ptHouseRows: number;
+    ptParcelRows: number;
+    withReadableHouseNo: number;
+    directSurnameMatch: number;
+    divergent: number;
+    weakMatch: number;
+    ptNumbersCovered: number;
+    ptNumbersWithoutPua: number;
+    puaHouseNosWithoutPt: number;
+    surnamesInBothRegisters: number;
+  };
+  surnameOverlaps: { puaSurname: string; ptSurname: string; puaHouses: string; noteSi: string }[];
+  findingSi: string;
+  findingEn: string;
+  caveatsSi: string;
+  caveatsEn: string;
+  nextStepSi: string;
+  nextStepEn: string;
+} = {
+  date: "2026-10-08",
+  method: "Deterministična navzkrižna primerjava (skript scripts/pua-pt-cross.py, Levenshtein podobnost normaliziranih priimkov, prag ujemanja 0,72 / verjetno 0,50) — brez AI klicev; opomba: 84 hišnih vrstic PT = 83 edinstvenih št. (št. 34 je prečrtana dvojnica — 2 vrstici, 1 številka)",
+  status: "REVIEW",
+  artifact: "research/p5/pua-pt-cross.json",
+  counts: {
+    puaEntries: 69,
+    ptHouseRows: 84,
+    ptParcelRows: 21,
+    withReadableHouseNo: 64,
+    directSurnameMatch: 0,
+    divergent: 51,
+    weakMatch: 2,
+    ptNumbersCovered: 38,
+    ptNumbersWithoutPua: 45,
+    puaHouseNosWithoutPt: 12,
+    surnamesInBothRegisters: 8,
+  },
+  surnameOverlaps: [
+    { puaSurname: "Bring / Bringz", ptSurname: "Bring/Brinig", puaHouses: "24, 25, 26, 28, 63, (20/23)", noteSi: "v PT na 31, 32, 35, 37, 38, 40 — ista družina, RAZLIČNE hišne št." },
+    { puaSurname: "Hlebety", ptSurname: "Hlebetz", puaHouses: "2", noteSi: "v PT na 26 — ista družina, različna št." },
+    { puaSurname: "Kristan / Krischan", ptSurname: "Krišan/Krištan", puaHouses: "3, 31, 36, 37, 57, 69", noteSi: "v PT na 29, 30 (Gregor) — vzporedna branja istih vrstic [~]" },
+    { puaSurname: "Millea / Millej", ptSurname: "Milleg", puaHouses: "22, 29", noteSi: "v PT na 34, 36 — ista družina, različne št." },
+    { puaSurname: "Jožeg (ime)", ptSurname: "Jožef Miko (ime)", puaHouses: "21", noteSi: "ujemanje imen, ne priimkov — šum, ne štejemo kot družino" },
+  ],
+  findingSi:
+    "KVANTIFICIRANA UGOTOVITEV: pri 64 vnosih PUA z berljivo hišno št. NI NOGA neposrednega ujemanja priimka z lastnikom iste hišne št. v PT (0/64; 51 divergenc s podobnostjo < 0,50). Priimki, ki obstajajo v obeh registrih (Bring, Hlebety, Kriš(t)an, Milleg — skupaj 8), nastopajo na RAZLIČNIH hišnih številkah. PUA vsebuje tudi lastnike iz sosednjih vasi (Deschitz, Dragosche, Waldendorf, Leusthal) in institucije (cerkev sv. Vida, komenda, baron Gradatz), ki jih PT register hiš ne zajame; PUA hišne št. se končajo pri ~69, PT pa pri 98. Sklep (hipoteza, [~]): PUA je abecedni indeks lastnikov PARCEL z lastno hišno referenco, ki ni enaka konskripcijski številčenju hiš v PT — primerjava med serijama je možna le po imenih, ne po številkah.",
+  findingEn:
+    "QUANTIFIED FINDING: across 64 PUA entries with a readable house number there is NOT A SINGLE direct surname match with the owner of the same house number in PT (0/64; 51 divergences below 0.50 similarity). Surnames present in both registers (Bring, Hlebety, Kriš(t)an, Milleg — 8 in total) occur at DIFFERENT house numbers. PUA also lists owners from neighbouring villages (Deschitz, Dragosche, Waldendorf, Leusthal) and institutions (the church of St. Vitus, a commandery, Baron Gradatz) that the PT house register does not capture; PUA house numbers end at ~69, PT at 98. Conclusion (hypothesis, [~]): PUA is an alphabetical index of PARCEL owners with its own house reference that does not equal the PT conscription numbering — the two series can only be compared by names, not by numbers.",
+  caveatsSi:
+    "OBA vira sta strojna (VLM) branja z [~] negotovostjo — priimki in hišne št. so lahko napačno prebrani (npr. VLM je hišne št. že večkrat normaliziral po zaporedju). Analiza je deterministična (ponovljiva: python3 scripts/pua-pt-cross.py), a njene vhodne podatke je treba pred končno presojo potrditi s človeško paleografijo. Ujemanje 0/64 je lahko tudi posledica sistemske napake VLM pri stolpcu hišnih št.",
+  caveatsEn:
+    "BOTH sources are machine (VLM) readings with [~] uncertainty — surnames and house numbers may be misread (the VLM has already had to normalise house numbers by sequence several times). The analysis itself is deterministic (reproducible: python3 scripts/pua-pt-cross.py), but its inputs must be confirmed by human palaeography before a final verdict. The 0/64 result could also stem from a systematic VLM error in the house-number column.",
+  nextStepSi:
+    "Naslednji koraki: (1) prebrati PUA strani 35–49 (priimki P–Ž) in ponovno zagnati analizo; (2) človeška paleografska preverba stolpca hišnih št. na vzorcu 10 vnosov; (3) arhivsko vprašanje za ARS: ali PUA »Haus« pomeni konskripcijsko št. hiše ali št. davčnega gnezda (Steuerhausnummer)?",
+  nextStepEn:
+    "Next steps: (1) read PUA pages 35–49 (surnames P–Ž) and re-run the analysis; (2) human palaeographic verification of the house-number column on a sample of 10 entries; (3) archival question for ARS: does the PUA »Haus« mean the conscription house number or the tax-nest number (Steuerhausnummer)?",
+};
+
 /** PT — strokovni pregled obstoječega registra (issue #17, 2026-10-08). */
 export const PT_REVIEW_2026: {
   source: string;

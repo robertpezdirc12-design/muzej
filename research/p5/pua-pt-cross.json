@@ -1,0 +1,1019 @@
+{
+ "generatedAt": "2026-10-08",
+ "method": "Deterministična navzkrižna analiza (Levenshtein podobnost priimkov, prag 0.72/0.50) — brez AI; PUA str. 3–34 (69 vnosov) ↔ PT register (84 hišnih vrstic)",
+ "puaEntries": 69,
+ "ptHouseRows": 84,
+ "ptParcelRows": 21,
+ "verdictCounts": {
+  "DIVERGENCA": 51,
+  "NEBERLJIVA_ST": 1,
+  "BREZ_HISNE_ST": 2,
+  "PT_PODATKA_NI_NI_St5_PARCELE": 11,
+  "INSTITUCIJA": 2,
+  "VERJETNO_UJEMANJE": 2
+ },
+ "results": [
+  {
+   "page": 3,
+   "row": 1,
+   "name": "Hölloschitsch Wufa Luina hau Dragosche [~]",
+   "houses": [
+    "1"
+   ],
+   "house": "1",
+   "ptOwner": "Veith (H.) [~]",
+   "ptId": "hiša-1",
+   "similarity": 0.23,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 3,
+   "row": 2,
+   "name": "Bringz Wufa Luina hau Grüble [~]",
+   "houses": [
+    "20 ali 23"
+   ],
+   "house": "20 ali 23",
+   "verdict": "NEBERLJIVA_ST"
+  },
+  {
+   "page": 3,
+   "row": 0,
+   "name": "Baron Abfalterer [~] (institucija)",
+   "houses": [],
+   "verdict": "BREZ_HISNE_ST"
+  },
+  {
+   "page": 4,
+   "row": 3,
+   "name": "Bring Migan/Michael Bauern hiesig Grübln [~]",
+   "houses": [
+    "24"
+   ],
+   "house": "24",
+   "ptOwner": "Štunidat Mufa",
+   "ptId": "hiša-25",
+   "similarity": 0.12,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 4,
+   "row": 4,
+   "name": "Bring Miß/Martin Bauern hiesig Grübln [~]",
+   "houses": [
+    "25"
+   ],
+   "house": "25",
+   "ptOwner": "Štunidat Mufa",
+   "ptId": "hiša-26",
+   "similarity": 0.12,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 5,
+   "row": 5,
+   "name": "Bring Johann Bräun [~] houlg.",
+   "houses": [
+    "26"
+   ],
+   "house": "26",
+   "ptOwner": "Hlebetz Jan",
+   "ptId": "hiša-27",
+   "similarity": 0.0,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 5,
+   "row": 6,
+   "name": "Bring Mäda/Manda [~] (Magdalena) Brünn [~]",
+   "houses": [
+    "28"
+   ],
+   "house": "28",
+   "ptOwner": "Jožef Miko",
+   "ptId": "hiša-29",
+   "similarity": 0.0,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 6,
+   "row": 7,
+   "name": "Brulla Mako/Matho Bünnhaußgübl [~] (alternative: Brinig, Brinc)",
+   "houses": [
+    "43"
+   ],
+   "house": "43",
+   "verdict": "PT_PODATKA_NI_NI_St5_PARCELE"
+  },
+  {
+   "page": 6,
+   "row": 8,
+   "name": "Bring Manda Brinahug [~]",
+   "houses": [
+    "63"
+   ],
+   "house": "63",
+   "ptOwner": "Šimec Ripane",
+   "ptId": "hiša-65",
+   "similarity": 0.0,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 6,
+   "row": 9,
+   "name": "Commenda Vachernebel [~] (institucija — komenda)",
+   "houses": [
+    "0"
+   ],
+   "house": "0",
+   "verdict": "INSTITUCIJA"
+  },
+  {
+   "page": 7,
+   "row": 10,
+   "name": "Decklitsch Matthäus Bürger hiesig [~]",
+   "houses": [
+    "33"
+   ],
+   "house": "33",
+   "ptOwner": "Varbutek Mufa",
+   "ptId": "hiša-34",
+   "similarity": 0.1,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 7,
+   "row": 11,
+   "name": "Dragosch Johann Bürger hiesig, Gemeinde Deschitz [~]",
+   "houses": [
+    "3"
+   ],
+   "house": "3",
+   "ptOwner": "Šimec Jakob",
+   "ptId": "hiša-3",
+   "similarity": 0.12,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 8,
+   "row": 12,
+   "name": "Dragosch Mavroslawitsch hiesig Dragosche, Gemeinde Molestitch [~]",
+   "houses": [
+    "4"
+   ],
+   "house": "4",
+   "ptOwner": "Šimec Matija",
+   "ptId": "hiša-4",
+   "similarity": 0.12,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 8,
+   "row": 13,
+   "name": "Dragosch Georglawitsch zu Dragosche [~]",
+   "houses": [
+    "5"
+   ],
+   "house": "5",
+   "ptOwner": "Knavc Janez",
+   "ptId": "hiša-5",
+   "similarity": 0.25,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 9,
+   "row": 14,
+   "name": "Fillah Michael Mühldörfler haußgübl [~]",
+   "houses": [
+    "16"
+   ],
+   "house": "16",
+   "ptOwner": "Stautschel Jhan",
+   "ptId": "hiša-17",
+   "similarity": 0.1,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 9,
+   "row": 15,
+   "name": "Fillah Maria [~]",
+   "houses": [
+    "34"
+   ],
+   "house": "34",
+   "ptOwner": "Milleg Hans [~]",
+   "ptId": "hiša-36",
+   "similarity": 0.5,
+   "verdict": "VERJETNO_UJEMANJE"
+  },
+  {
+   "page": 10,
+   "row": 16,
+   "name": "Fillah Jetter [~]",
+   "houses": [
+    "36"
+   ],
+   "house": "36",
+   "ptOwner": "Milleg Hans [~]",
+   "ptId": "hiša-38",
+   "similarity": 0.5,
+   "verdict": "VERJETNO_UJEMANJE"
+  },
+  {
+   "page": 10,
+   "row": 17,
+   "name": "Fillah Miho [~]",
+   "houses": [
+    "61"
+   ],
+   "house": "61",
+   "ptOwner": "Peutinger Jhan",
+   "ptId": "hiša-63",
+   "similarity": 0.11,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 11,
+   "row": 18,
+   "name": "Hlebety Johann, Bauer hiesig zu Grüble [~]",
+   "houses": [
+    "2"
+   ],
+   "house": "2",
+   "ptOwner": "Veith (St.?) [~]",
+   "ptId": "hiša-2",
+   "similarity": 0.29,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 11,
+   "row": 19,
+   "name": "Huditsch Musto, Häusler hiesig [~]",
+   "houses": [
+    "14"
+   ],
+   "house": "14",
+   "ptOwner": "Stalhutstetisch Jhan (Ivan)",
+   "ptId": "hiša-15",
+   "similarity": 0.4,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 11,
+   "row": 20,
+   "name": "Husitsch Baron von Gradatz [~] (plemiška/institucionalna lastnina)",
+   "houses": [],
+   "verdict": "BREZ_HISNE_ST"
+  },
+  {
+   "page": 11,
+   "row": 21,
+   "name": "Hutweiz Johann, Bauer zu Waldendorf [~] (lastnik iz sosednje vasi)",
+   "houses": [
+    "8"
+   ],
+   "house": "8",
+   "ptOwner": "Lebing/Lebring Mädl. [~]",
+   "ptId": "hiša-8",
+   "similarity": 0.0,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 12,
+   "row": 22,
+   "name": "Höflehner Johann [~]",
+   "houses": [
+    "6"
+   ],
+   "house": "6",
+   "ptOwner": "Tilel Miho",
+   "ptId": "hiša-6",
+   "similarity": 0.22,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 12,
+   "row": 23,
+   "name": "Höflehner Mathäus [~]",
+   "houses": [
+    "8"
+   ],
+   "house": "8",
+   "ptOwner": "Lebing/Lebring Mädl. [~]",
+   "ptId": "hiša-8",
+   "similarity": 0.22,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 13,
+   "row": 24,
+   "name": "Jakobstitzsch Johann [~]",
+   "houses": [
+    "9"
+   ],
+   "house": "9",
+   "ptOwner": "Stalhutstetisch Miho",
+   "ptId": "hiša-10",
+   "similarity": 0.47,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 13,
+   "row": 25,
+   "name": "Jakobstitzsch Nicolauß [~]",
+   "houses": [
+    "13"
+   ],
+   "house": "13",
+   "ptOwner": "Stalhutstetisch Ruard",
+   "ptId": "hiša-14",
+   "similarity": 0.47,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 14,
+   "row": 26,
+   "name": "Jankovitsche Muffl bauernhow Zerguische [~]",
+   "houses": [
+    "7"
+   ],
+   "house": "7",
+   "ptOwner": "Lebing/Lebring Mädl. [~]",
+   "ptId": "hiša-6b",
+   "similarity": 0.08,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 14,
+   "row": 27,
+   "name": "Jankowitsche Juran bauernhow Zerguische [~]",
+   "houses": [
+    "26"
+   ],
+   "house": "26",
+   "ptOwner": "Hlebetz Jan",
+   "ptId": "hiša-27",
+   "similarity": 0.08,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 15,
+   "row": 28,
+   "name": "Janko vitnik [~]",
+   "houses": [
+    "21"
+   ],
+   "house": "21",
+   "ptOwner": "Šture Majzel",
+   "ptId": "hiša-22",
+   "similarity": 0.0,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 15,
+   "row": 29,
+   "name": "Janko vity [~]",
+   "houses": [
+    "3"
+   ],
+   "house": "3",
+   "ptOwner": "Šimec Jakob",
+   "ptId": "hiša-3",
+   "similarity": 0.0,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 16,
+   "row": 30,
+   "name": "Kristan Mäusel buaß hulgäßl [~]",
+   "houses": [
+    "3"
+   ],
+   "house": "3",
+   "ptOwner": "Šimec Jakob",
+   "ptId": "hiša-3",
+   "similarity": 0.14,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 16,
+   "row": 31,
+   "name": "Lure Mäusel buaß hulgäßl [~]",
+   "houses": [
+    "10"
+   ],
+   "house": "10",
+   "ptOwner": "Stalhutstetisch Miho",
+   "ptId": "hiša-11",
+   "similarity": 0.2,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 17,
+   "row": 32,
+   "name": "Loral Miko bauers hof Gsübln [~]",
+   "houses": [
+    "15"
+   ],
+   "house": "15",
+   "ptOwner": "Stalhutstetisch Jhan (Hrovatic Jhan)",
+   "ptId": "hiša-16",
+   "similarity": 0.07,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 17,
+   "row": 33,
+   "name": "Loral Thoma bauers hof Gsübln [~]",
+   "houses": [
+    "17"
+   ],
+   "house": "17",
+   "ptOwner": "Stalhutsch Marko",
+   "ptId": "hiša-18",
+   "similarity": 0.1,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 18,
+   "row": 34,
+   "name": "Krischan Mandschurischka / Griblje [~]",
+   "houses": [
+    "31"
+   ],
+   "house": "31",
+   "ptOwner": "Bring Marko",
+   "ptId": "hiša-32",
+   "similarity": 0.25,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 18,
+   "row": 35,
+   "name": "Krischan Malfs Leurschkau / Griblje [~]",
+   "houses": [
+    "36"
+   ],
+   "house": "36",
+   "ptOwner": "Milleg Hans [~]",
+   "ptId": "hiša-38",
+   "similarity": 0.12,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 19,
+   "row": 36,
+   "name": "Krischan Patta Buirshofgäubla [~]",
+   "houses": [
+    "37"
+   ],
+   "house": "37",
+   "ptOwner": "Brinig Malfa [~]",
+   "ptId": "hiša-39",
+   "similarity": 0.25,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 19,
+   "row": 37,
+   "name": "Krischan Halfa Buirshofgäubla [~]",
+   "houses": [
+    "57"
+   ],
+   "house": "57",
+   "verdict": "PT_PODATKA_NI_NI_St5_PARCELE"
+  },
+  {
+   "page": 20,
+   "row": 38,
+   "name": "Kosirhan Mäda Bauer zu Griblje [~]",
+   "houses": [
+    "62"
+   ],
+   "house": "62",
+   "ptOwner": "Lappanig Miho",
+   "ptId": "hiša-64",
+   "similarity": 0.0,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 20,
+   "row": 39,
+   "name": "Schloßthaler Jätten Bauer zu Gribljen [~]",
+   "houses": [
+    "46"
+   ],
+   "house": "46",
+   "verdict": "PT_PODATKA_NI_NI_St5_PARCELE"
+  },
+  {
+   "page": 21,
+   "row": 40,
+   "name": "Nikolaus Grönig bauer und Gailb. [~]",
+   "houses": [
+    "63"
+   ],
+   "house": "63",
+   "ptOwner": "Šimec Ripane",
+   "ptId": "hiša-65",
+   "similarity": 0.12,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 21,
+   "row": 41,
+   "name": "Nikolaus Grönig bauer und Gailb. [~]",
+   "houses": [
+    "66"
+   ],
+   "house": "66",
+   "ptOwner": "Šimec Jhan",
+   "ptId": "hiša-68",
+   "similarity": 0.12,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 22,
+   "row": 42,
+   "name": "Matthäus Wundsch [~]",
+   "houses": [
+    "47"
+   ],
+   "house": "47",
+   "verdict": "PT_PODATKA_NI_NI_St5_PARCELE"
+  },
+  {
+   "page": 22,
+   "row": 43,
+   "name": "Kristan Matjaž Bučar [~]",
+   "houses": [
+    "69"
+   ],
+   "house": "69",
+   "ptOwner": "Filak Peter",
+   "ptId": "hiša-71",
+   "similarity": 0.29,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 22,
+   "row": 44,
+   "name": "Kirche H. Veith [~]",
+   "houses": [
+    "0"
+   ],
+   "house": "0",
+   "verdict": "INSTITUCIJA"
+  },
+  {
+   "page": 23,
+   "row": 45,
+   "name": "Hlobutschar Georg baur hiesig geb. [~]",
+   "houses": [
+    "48"
+   ],
+   "house": "48",
+   "verdict": "PT_PODATKA_NI_NI_St5_PARCELE"
+  },
+  {
+   "page": 23,
+   "row": 46,
+   "name": "Kleppetz Georg büuerl hiesig Gemeinde: Hie Leusthal [~]",
+   "houses": [
+    "2"
+   ],
+   "house": "2",
+   "ptOwner": "Veith (St.?) [~]",
+   "ptId": "hiša-2",
+   "similarity": 0.25,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 24,
+   "row": 47,
+   "name": "Lukentitz Matho [~]",
+   "houses": [
+    "7"
+   ],
+   "house": "7",
+   "ptOwner": "Lebing/Lebring Mädl. [~]",
+   "ptId": "hiša-6b",
+   "similarity": 0.33,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 24,
+   "row": 48,
+   "name": "Lukentitz Wolf [~]",
+   "houses": [
+    "12"
+   ],
+   "house": "12",
+   "ptOwner": "Stalhutstetisch Marko",
+   "ptId": "hiša-13",
+   "similarity": 0.27,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 25,
+   "row": 49,
+   "name": "Rappar Nicolaus bau Gsöbln [~]",
+   "houses": [
+    "54"
+   ],
+   "house": "54",
+   "verdict": "PT_PODATKA_NI_NI_St5_PARCELE"
+  },
+  {
+   "page": 25,
+   "row": 50,
+   "name": "Millea Johann bau Gsöbln [~]",
+   "houses": [
+    "22"
+   ],
+   "house": "22",
+   "ptOwner": "Šture Majzel",
+   "ptId": "hiša-23",
+   "similarity": 0.17,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 26,
+   "row": 51,
+   "name": "Mallestitak [~]",
+   "houses": [
+    "27"
+   ],
+   "house": "27",
+   "ptOwner": "Jožef Miko",
+   "ptId": "hiša-28",
+   "similarity": 0.09,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 26,
+   "row": 52,
+   "name": "Millej [~]",
+   "houses": [
+    "29"
+   ],
+   "house": "29",
+   "ptOwner": "Krišan Gregor",
+   "ptId": "hiša-30",
+   "similarity": 0.0,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 27,
+   "row": 53,
+   "name": "Noah Mandl bauer zu Griblje [~]",
+   "houses": [
+    "4"
+   ],
+   "house": "4",
+   "ptOwner": "Šimec Matija",
+   "ptId": "hiša-4",
+   "similarity": 0.0,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 27,
+   "row": 54,
+   "name": "Georg Grangl bauer zu Griblje [~]",
+   "houses": [
+    "11"
+   ],
+   "house": "11",
+   "ptOwner": "Stalhutstetisch Marko",
+   "ptId": "hiša-12",
+   "similarity": 0.07,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 28,
+   "row": 55,
+   "name": "Poldiŕg Mufa/buͤrſn/zu Gribla [~]",
+   "houses": [
+    "14"
+   ],
+   "house": "14",
+   "ptOwner": "Stalhutstetisch Jhan (Ivan)",
+   "ptId": "hiša-15",
+   "similarity": 0.13,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 28,
+   "row": 56,
+   "name": "Polcig Michael buͤrſn/zu/gribla [~]",
+   "houses": [
+    "20"
+   ],
+   "house": "20",
+   "ptOwner": "Krištan/Kraihan Mäfa [~]",
+   "ptId": "hiša-21",
+   "similarity": 0.0,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 29,
+   "row": 57,
+   "name": "Jožeg Muhč Bauer houlgübl [~]",
+   "houses": [
+    "21"
+   ],
+   "house": "21",
+   "ptOwner": "Šture Majzel",
+   "ptId": "hiša-22",
+   "similarity": 0.0,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 29,
+   "row": 58,
+   "name": "Peterig Muhč Bauer houlgäble [~]",
+   "houses": [
+    "40"
+   ],
+   "house": "40",
+   "ptOwner": "Brinig Malfa [~]",
+   "ptId": "hiša-42",
+   "similarity": 0.29,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 30,
+   "row": 59,
+   "name": "Georg Leiner [~]",
+   "houses": [
+    "41"
+   ],
+   "house": "41",
+   "verdict": "PT_PODATKA_NI_NI_St5_PARCELE"
+  },
+  {
+   "page": 30,
+   "row": 60,
+   "name": "Matthäus Leiner [~]",
+   "houses": [
+    "42"
+   ],
+   "house": "42",
+   "verdict": "PT_PODATKA_NI_NI_St5_PARCELE"
+  },
+  {
+   "page": 31,
+   "row": 61,
+   "name": "Georg Rußa Bauer zu Griblje [~]",
+   "houses": [
+    "60"
+   ],
+   "house": "60",
+   "verdict": "PT_PODATKA_NI_NI_St5_PARCELE"
+  },
+  {
+   "page": 31,
+   "row": 62,
+   "name": "Georg Juttner Bauer zu Griblje [~]",
+   "houses": [
+    "62"
+   ],
+   "house": "62",
+   "ptOwner": "Lappanig Miho",
+   "ptId": "hiša-64",
+   "similarity": 0.12,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 32,
+   "row": 63,
+   "name": "Peter Jhan Buidl / Buidlgübln [~]",
+   "houses": [
+    "53"
+   ],
+   "house": "53",
+   "verdict": "PT_PODATKA_NI_NI_St5_PARCELE"
+  },
+  {
+   "page": 32,
+   "row": 64,
+   "name": "Joseph Gnoy Buida / Buidlgübln [~]",
+   "houses": [
+    "67"
+   ],
+   "house": "67",
+   "ptOwner": "Lappanig Miho",
+   "ptId": "hiša-69",
+   "similarity": 0.0,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 33,
+   "row": 65,
+   "name": "Pasticz Georg Bauernholds gemuth [~]",
+   "houses": [
+    "4"
+   ],
+   "house": "4",
+   "ptOwner": "Šimec Matija",
+   "ptId": "hiša-4",
+   "similarity": 0.14,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 33,
+   "row": 66,
+   "name": "Pacharistche Michl bauernholds gemüth [~]",
+   "houses": [
+    "6"
+   ],
+   "house": "6",
+   "ptOwner": "Tilel Miho",
+   "ptId": "hiša-6",
+   "similarity": 0.08,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 34,
+   "row": 67,
+   "name": "Prodoritche Miho Bauernholds Gremium [~]",
+   "houses": [
+    "7"
+   ],
+   "house": "7",
+   "ptOwner": "Lebing/Lebring Mädl. [~]",
+   "ptId": "hiša-6b",
+   "similarity": 0.09,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 34,
+   "row": 68,
+   "name": "Pfister Blaž Bauernholds Güble [~]",
+   "houses": [
+    "59"
+   ],
+   "house": "59",
+   "verdict": "PT_PODATKA_NI_NI_St5_PARCELE"
+  }
+ ],
+ "ptCoveredByPua": [
+  1.0,
+  2.0,
+  3.0,
+  4.0,
+  5.0,
+  6.0,
+  7.0,
+  8.0,
+  9.0,
+  10.0,
+  11.0,
+  12.0,
+  13.0,
+  14.0,
+  15.0,
+  16.0,
+  17.0,
+  20.0,
+  21.0,
+  22.0,
+  24.0,
+  25.0,
+  26.0,
+  27.0,
+  28.0,
+  29.0,
+  31.0,
+  33.0,
+  34.0,
+  36.0,
+  37.0,
+  40.0,
+  61.0,
+  62.0,
+  63.0,
+  66.0,
+  67.0,
+  69.0
+ ],
+ "ptMissingInPua": [
+  7.5,
+  8.5,
+  18.0,
+  19.0,
+  23.0,
+  30.0,
+  32.0,
+  35.0,
+  38.0,
+  39.0,
+  64.0,
+  65.0,
+  68.0,
+  70.0,
+  71.0,
+  71.5,
+  72.0,
+  73.0,
+  74.0,
+  75.0,
+  76.0,
+  76.5,
+  77.0,
+  78.0,
+  79.0,
+  80.0,
+  81.0,
+  82.0,
+  83.0,
+  84.0,
+  85.0,
+  86.0,
+  87.0,
+  88.0,
+  89.0,
+  90.0,
+  91.0,
+  92.0,
+  93.0,
+  94.0,
+  95.0,
+  96.0,
+  97.0,
+  98.0,
+  99.0
+ ],
+ "puaExtraHouseNos": [
+  0.0,
+  41.0,
+  42.0,
+  43.0,
+  46.0,
+  47.0,
+  48.0,
+  53.0,
+  54.0,
+  57.0,
+  59.0,
+  60.0
+ ],
+ "puaSurnamesAlsoInPt": {
+  "bringz": {
+   "bestMatch": "bring",
+   "puaHouses": [
+    "20 ali 23"
+   ]
+  },
+  "bring": {
+   "bestMatch": "bring",
+   "puaHouses": [
+    "24",
+    "25",
+    "26",
+    "28",
+    "63"
+   ]
+  },
+  "hlebety": {
+   "bestMatch": "hlebetz",
+   "puaHouses": [
+    "2"
+   ]
+  },
+  "kristan": {
+   "bestMatch": "kristan",
+   "puaHouses": [
+    "3",
+    "69"
+   ]
+  },
+  "krischan": {
+   "bestMatch": "kristan",
+   "puaHouses": [
+    "31",
+    "36",
+    "37",
+    "57"
+   ]
+  },
+  "millea": {
+   "bestMatch": "milleg",
+   "puaHouses": [
+    "22"
+   ]
+  },
+  "millej": {
+   "bestMatch": "milleg",
+   "puaHouses": [
+    "29"
+   ]
+  },
+  "jozeg": {
+   "bestMatch": "jozef",
+   "puaHouses": [
+    "21"
+   ]
+  }
+ }
+}

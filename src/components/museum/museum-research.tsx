@@ -56,6 +56,7 @@ import {
   PS_RECAP_1826,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
+  PUA_PT_CROSS,
   PT_REVIEW_2026,
   PT_PALEOGRAPHY_P3,
   ORAL_HISTORY_PROTOCOL,
@@ -887,6 +888,67 @@ export function MuseumResearch() {
                   <li key={d}>• {d}</li>
                 ))}
               </ul>
+            </div>
+
+            {/* P5 navzkrižna analiza PUA ↔ PT */}
+            <div className="rounded-xl border-2 border-primary/30 bg-card p-6 shadow-sm">
+              <h4 className="flex items-center gap-2 font-display text-base font-semibold">
+                <span className="inline-flex items-center gap-1 rounded-full bg-primary px-2.5 py-0.5 font-mono text-[10px] font-bold text-primary-foreground">P5</span>
+                {t(
+                  `Navzkrižna analiza PUA ↔ PT — ${PUA_PT_CROSS.date}, deterministična (brez AI)`,
+                  `Cross-analysis PUA ↔ PT — ${PUA_PT_CROSS.date}, deterministic (no AI)`,
+                )}
+              </h4>
+              <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{PUA_PT_CROSS.method}</p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {[
+                  { label: t("PUA vnosov", "PUA entries"), value: PUA_PT_CROSS.counts.puaEntries, cls: "bg-secondary text-muted-foreground" },
+                  { label: t("z berljivo hišno št.", "with house no."), value: PUA_PT_CROSS.counts.withReadableHouseNo, cls: "bg-secondary text-muted-foreground" },
+                  { label: t("neposrednih ujemanj", "direct matches"), value: PUA_PT_CROSS.counts.directSurnameMatch, cls: "bg-rose-100 text-rose-900 dark:bg-rose-900/60 dark:text-rose-100" },
+                  { label: t("divergenc", "divergences"), value: PUA_PT_CROSS.counts.divergent, cls: "bg-orange-100 text-orange-900 dark:bg-orange-900/60 dark:text-orange-100" },
+                  { label: t("priimkov v obeh registrih", "surnames in both"), value: PUA_PT_CROSS.counts.surnamesInBothRegisters, cls: "bg-amber-100 text-amber-900 dark:bg-amber-900/60 dark:text-amber-100" },
+                ].map((s) => (
+                  <span key={s.label} className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 font-mono text-xs font-semibold ${s.cls}`}>
+                    {s.value} {s.label}
+                  </span>
+                ))}
+              </div>
+              <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
+                <strong className="text-foreground">{t("Ugotovitev:", "Finding:")}</strong>{" "}
+                {lang === "si" ? PUA_PT_CROSS.findingSi : PUA_PT_CROSS.findingEn}
+              </p>
+              <div className="mt-3 overflow-hidden rounded-lg border">
+                <div className="max-h-60 overflow-y-auto">
+                  <table className="w-full text-left text-[11px]">
+                    <thead className="sticky top-0 bg-secondary/60 backdrop-blur">
+                      <tr className="font-mono text-[10px] uppercase tracking-wide text-muted-foreground">
+                        <th className="px-3 py-2">{t("PUA priimek", "PUA surname")}</th>
+                        <th className="px-3 py-2">{t("PT priimek", "PT surname")}</th>
+                        <th className="px-3 py-2">{t("PUA hiše", "PUA houses")}</th>
+                        <th className="px-3 py-2">{t("opomba", "note")}</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y">
+                      {PUA_PT_CROSS.surnameOverlaps.map((r) => (
+                        <tr key={r.puaSurname} className="align-top">
+                          <td className="px-3 py-2 font-mono font-semibold text-foreground">{r.puaSurname}</td>
+                          <td className="px-3 py-2 text-muted-foreground">{r.ptSurname}</td>
+                          <td className="whitespace-nowrap px-3 py-2 font-mono text-muted-foreground">{r.puaHouses}</td>
+                          <td className="px-3 py-2 text-muted-foreground">{r.noteSi}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <p className="mt-3 rounded-lg bg-amber-50 p-3 text-[11px] leading-relaxed text-muted-foreground dark:bg-amber-950/30">
+                <strong className="text-foreground">{t("Omejitve:", "Caveats:")}</strong>{" "}
+                {lang === "si" ? PUA_PT_CROSS.caveatsSi : PUA_PT_CROSS.caveatsEn}
+              </p>
+              <p className="mt-2 text-[11px] leading-relaxed text-muted-foreground">
+                <strong className="text-foreground">{t("Naslednji koraki:", "Next steps:")}</strong>{" "}
+                {lang === "si" ? PUA_PT_CROSS.nextStepSi : PUA_PT_CROSS.nextStepEn}
+              </p>
             </div>
 
             {/* PT pregled */}

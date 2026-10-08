@@ -23,6 +23,7 @@ import {
   PS_RECAP_1826,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
+  PUA_PT_CROSS,
   PT_REVIEW_2026,
   PT_PALEOGRAPHY_P3,
   ORAL_HISTORY_PROTOCOL,
@@ -575,6 +576,51 @@ export function runQA(): QAReport {
     p4Errors.length === 0
       ? `23 strani (12–34) po 1 VLM klic; 47 vnosov: Höflehner, Jakobstitzsch, Jankovitsche, Krischan, Loral, Kosirhan, Grönig, Wundsch, Bučar, Kirche H. Veith (cerkev sv. Vida [~]), Hlobutschar, Lukentitz, Rappar, Millea, Mallestitak, Mandl, Grangl, Polcig, Muhč, Leiner, Rußa, Juttner, Jhan, Gnoy, Pasticz, Prodoritche, Pfister; ključna ugotovitev: PUA ≠ PT številčenje hiš [~]; statusi REVIEW`
       : p4Errors.join("; "),
+  );
+
+  // 18. P5 — navzkrižna analiza PUA ↔ PT (deterministična): števci, ugotovitev, omejitve
+  const p5Errors: string[] = [];
+  const p5c = PUA_PT_CROSS.counts;
+  if (p5c.puaEntries !== 69 || p5c.ptHouseRows !== 84 || p5c.ptParcelRows !== 21) {
+    p5Errors.push(`P5 števci vhodov: ${p5c.puaEntries}/${p5c.ptHouseRows}/${p5c.ptParcelRows} (pričakovano 69/84/21)`);
+  }
+  if (p5c.withReadableHouseNo !== 64 || p5c.directSurnameMatch !== 0) {
+    p5Errors.push(`P5 ujemanja: ${p5c.withReadableHouseNo} z št., ${p5c.directSurnameMatch} ujemanj (pričakovano 64/0)`);
+  }
+  if (p5c.divergent !== 51 || p5c.weakMatch !== 2) {
+    p5Errors.push(`P5 divergence: ${p5c.divergent}/${p5c.weakMatch} (pričakovano 51/2)`);
+  }
+  if (p5c.surnamesInBothRegisters !== 8) {
+    p5Errors.push(`P5 priimki v obeh: ${p5c.surnamesInBothRegisters} (pričakovano 8)`);
+  }
+  // 84 hišnih vrstic = 83 edinstvenih št. (34 = prečrtana dvojnica: 2 vrstici, 1 št.)
+  if (p5c.ptNumbersCovered + p5c.ptNumbersWithoutPua !== 83) {
+    p5Errors.push(`P5 pokritost PT: ${p5c.ptNumbersCovered}+${p5c.ptNumbersWithoutPua} ≠ 83 (84 vrstic − 1 dvojnica 34)`);
+  }
+  if (PUA_PT_CROSS.status !== "REVIEW") {
+    p5Errors.push(`P5 status: ${PUA_PT_CROSS.status} (pričakovano REVIEW)`);
+  }
+  if (!PUA_PT_CROSS.findingSi.includes("0/64") || !PUA_PT_CROSS.findingSi.includes("[~]")) {
+    p5Errors.push("P5 ugotovitev mora vsebovati 0/64 in oznako negotovosti [~]");
+  }
+  if (!PUA_PT_CROSS.caveatsSi.includes("paleografijo") || !PUA_PT_CROSS.nextStepSi.includes("35–49")) {
+    p5Errors.push("P5 mora dokumentirati omejitve (paleografija) in naslednje korake (strani 35–49)");
+  }
+  if (PUA_PT_CROSS.surnameOverlaps.length < 4) {
+    p5Errors.push(`P5 priimki-sovpadanja: ${PUA_PT_CROSS.surnameOverlaps.length} vrstic (pričakovano ≥ 4)`);
+  }
+  // usklajenost s PUA_CONTINUATION: analiza mora pokrivati vse vnose, ki jih je prebrala P4
+  if (p5c.puaEntries !== PUA_CONTINUATION.rows.length) {
+    p5Errors.push(`P5/P4 neskladje: PUA_PT_CROSS ${p5c.puaEntries} ≠ PUA_CONTINUATION ${PUA_CONTINUATION.rows.length}`);
+  }
+  push(
+    "qa-p5-pua-pt-cross",
+    "P5 navzkrižna analiza PUA ↔ PT: 0/64 neposrednih ujemanj po hišnih št., 8 priimkov v obeh registrih na različnih št., sklep [~] = primerjava po imenih",
+    "P5 cross-analysis PUA ↔ PT: 0/64 direct matches by house no., 8 surnames in both registers at different numbers, conclusion [~] = compare by names",
+    p5Errors.length === 0,
+    p5Errors.length === 0
+      ? `Deterministično (Levenshtein ≥ 0,72/0,50, scripts/pua-pt-cross.py, brez AI): 69 vnosov PUA (str. 3–34) ↔ 84 hišnih vrstic PT; 38 PT št. pokritih, 12 PUA št. brez PT vpisa (11 v bloku 41–60); ugotovitev [~]: PUA = indeks lastnikov parcel z lastno hišno referenco; omejitve: obe vira strojna branjla [~]; naslednji koraki: strani 35–49, človeška paleografija, arhivsko vprašanje ARS`
+      : p5Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;
