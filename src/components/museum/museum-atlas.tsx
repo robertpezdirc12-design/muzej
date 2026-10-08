@@ -622,6 +622,14 @@ export function MuseumAtlas({
                         {h.ownerModernGuess && (
                           <span className="ml-1 text-xs text-muted-foreground">({h.ownerModernGuess})</span>
                         )}
+                        {h.paleo && (
+                          <span
+                            title={h.paleo}
+                            className="ml-1.5 cursor-help rounded bg-primary/15 px-1 py-0.5 align-middle font-mono text-[9px] font-bold text-primary"
+                          >
+                            P3
+                          </span>
+                        )}
                       </td>
                       <td className="hidden px-3 py-2 text-xs text-muted-foreground sm:table-cell">{h.parcelRefs ?? "—"}</td>
                       <td className="hidden px-3 py-2 text-xs text-muted-foreground md:table-cell">N083PT str. {h.sourcePage}</td>

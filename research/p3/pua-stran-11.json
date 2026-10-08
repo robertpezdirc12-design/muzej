@@ -1,0 +1,50 @@
+{
+ "page": 11,
+ "letter": "H",
+ "entries": [
+  {
+   "row": 18,
+   "name": "Hlebety Johann [~]",
+   "status": "Bauer hiesig zu Grüble",
+   "house": 2,
+   "sections": {
+    "II": "886–1789 (33 parcel)",
+    "IV": "2089–2408"
+   },
+   "bP": "26",
+   "note": "PT: Hlebetz Jan hiša 26 — divergentna hišna št."
+  },
+  {
+   "row": 19,
+   "name": "Huditsch Musto [~]",
+   "status": "Häusler hiesig",
+   "house": 14,
+   "sections": {
+    "I": "104–430 (18)",
+    "II": "1150–2130 (10)",
+    "V": "2476–2579"
+   },
+   "bP": "87, 89, 91"
+  },
+  {
+   "row": 20,
+   "name": "Husitsch Baron von Gradatz [~]",
+   "status": "plemiška/institucionalna lastnina",
+   "house": null,
+   "sections": {
+    "III": "746, 777"
+   }
+  },
+  {
+   "row": 21,
+   "name": "Hutweiz Johann [~]",
+   "status": "Bauer zu Waldendorf (sosednja vas)",
+   "house": 8,
+   "sections": {
+    "IV": "2178"
+   }
+  }
+ ],
+ "vlmCalls": 1,
+ "raw": "izgubljen ob resetu peskovnika; strukturirani zapis konsistenten z izpisom v sejni beležko"
+}

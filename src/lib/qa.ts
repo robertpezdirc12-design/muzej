@@ -24,12 +24,14 @@ import {
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PT_REVIEW_2026,
+  PT_PALEOGRAPHY_P3,
   ORAL_HISTORY_PROTOCOL,
   WEB_VERIFICATIONS,
   ISSUE17_MATRIX,
   ISSUE17_AUDIT,
 } from "@/data/atlas/research";
 import { ATLAS_HOUSES } from "@/data/atlas/houses";
+import { ATLAS_OWNERS } from "@/data/atlas/model";
 
 interface ExhibitRow {
   id: string;
@@ -355,9 +357,9 @@ export function runQA(): QAReport {
   if (PZ_ECONOMY_1825.population.male + PZ_ECONOMY_1825.population.female !== PZ_ECONOMY_1825.population.total) {
     i17Errors.push("PZ demografija se ne sešteje");
   }
-  // PUA: 17 novih vrstic na straneh 3–10
-  if (PUA_CONTINUATION.rows.length !== 18 || PUA_CONTINUATION.pagesRead.length !== 8) {
-    i17Errors.push(`PUA nadaljevanje: ${PUA_CONTINUATION.rows.length} vrstic / ${PUA_CONTINUATION.pagesRead.length} strani`);
+  // PUA: 18 vrstic str. 3–10 + 4 vrstice P3 str. 11 = 22
+  if (PUA_CONTINUATION.rows.length !== 22 || PUA_CONTINUATION.pagesRead.length !== 9) {
+    i17Errors.push(`PUA nadaljevanje: ${PUA_CONTINUATION.rows.length} vrstic / ${PUA_CONTINUATION.pagesRead.length} strani (pričakovano 22/9 po P3)`);
   }
   // PT pregled: vsota verdiktov = pregledanih vrstic; register ostaja 80
   const sum = PT_REVIEW_2026.summary.confirmed + PT_REVIEW_2026.summary.corrections +
@@ -367,8 +369,8 @@ export function runQA(): QAReport {
   }
   const ATLAS_HOUSES_LENGTH = ATLAS_HOUSES.length;
   const ATLAS_HOUSE_ROWS = ATLAS_HOUSES.filter((h) => h.no !== "—").length;
-  if (ATLAS_HOUSES_LENGTH !== 101 || ATLAS_HOUSE_ROWS !== 80) {
-    i17Errors.push(`ATLAS_HOUSES: ${ATLAS_HOUSES_LENGTH} vrstic (${ATLAS_HOUSE_ROWS} hišnih) — register se ni smel spremeniti (101/80)`);
+  if (ATLAS_HOUSES_LENGTH !== 105 || ATLAS_HOUSE_ROWS !== 84) {
+    i17Errors.push(`ATLAS_HOUSES: ${ATLAS_HOUSES_LENGTH} vrstic (${ATLAS_HOUSE_ROWS} hišnih) — pričakovano 105/84 po P3 paleografiji (101 + 4 dodane vrstice)`);
   }
   // Ustna zgodovina: protokol obstaja, intervjuji ostanejo PRAZNI
   if (ORAL_HISTORY_PROTOCOL.stages.length !== 4 || ORAL_HISTORY_PROTOCOL.rulesSi.length < 5) {
@@ -410,8 +412,106 @@ export function runQA(): QAReport {
     "gap closure #17: PV land use, PR boundary, PS recap, PZ demography, PUA continuation, PT review, protocol, verifications",
     i17Errors.length === 0,
     i17Errors.length === 0
-      ? `PV 10/20 kultur (skupaj ${PV_LAND_USE_1825.totals.grandTotal.joch} j ≈ ${PV_LAND_USE_1825.totals.grandTotal.hectares} ha; gozd prazen); PR ${PR_BOUNDARY_1825.dimensions.eastWestKlafter}×${PR_BOUNDARY_1825.dimensions.northSouthKlafter} kl (<1 % od PV); PS 102+2505=2607; PZ 441 prebivalcev, 28. 7. 1825; PUA +18 vnosov (str. 3–10); PT 81/105 verdiktov (101 vrstica registra nespremenjenih); protokol 4 faze + 0 intervjujev; ${WEB_VERIFICATIONS.length} web verifikacij; matrika ${ISSUE17_MATRIX.length} vrstic; Kurrent 7/7 serij delno prebranih (REVIEW)`
+      ? `PV 10/20 kultur (skupaj ${PV_LAND_USE_1825.totals.grandTotal.joch} j ≈ ${PV_LAND_USE_1825.totals.grandTotal.hectares} ha; gozd prazen); PR ${PR_BOUNDARY_1825.dimensions.eastWestKlafter}×${PR_BOUNDARY_1825.dimensions.northSouthKlafter} kl (<1 % od PV); PS 102+2505=2607; PZ 441 prebivalcev, 28. 7. 1825; PUA +18 vnosov (str. 3–10) + P3 str. 11 (+4, črka H); PT 81/105 verdiktov; register 105 vrstic po P3 paleografiji; protokol 4 faze + 0 intervjujev; ${WEB_VERIFICATIONS.length} web verifikacij; matrika ${ISSUE17_MATRIX.length} vrstic; Kurrent 7/7 serij delno prebranih (REVIEW)`
       : i17Errors.join("; "),
+  );
+
+  // ——— P3 PALEOGRAFSKA PREVERBA (2. krog) ————————————————————————
+  const p3Errors: string[] = [];
+  // Register: 105 vrstic, hiša 41 ne obstaja, 34-dvojnica obstaja
+  if (ATLAS_HOUSES.some((h) => h.no === "41")) {
+    p3Errors.push("hiša 41 še obstaja — renumeracija str. 4 ni aplicirana");
+  }
+  if (!ATLAS_HOUSES.some((h) => h.no === "34 (prečrtana dvojnica)")) {
+    p3Errors.push("prečrtana dvojnica 34 manjka (nič-zguba)");
+  }
+  for (const no of ["35", "36", "37", "38", "39", "40"]) {
+    const row = ATLAS_HOUSES.find((h) => h.no === no);
+    if (!row || !row.paleo || !row.owner.includes("Brinig") && !row.owner.includes("Milleg")) {
+      p3Errors.push(`str. 4 hiša ${no}: renumerirana vrstica s paleo opombo manjka`);
+    }
+  }
+  // 15 popravkov: ključne vrednosti
+  const expectOwner: [string, string][] = [
+    ["1", "Veith"],
+    ["7", "Lebing"],
+    ["7½", "Bödig"],
+    ["8", "Lebing"],
+    ["8½", "Bödig"],
+    ["20", "Krištan"],
+    ["39", "Brinig Miklo"],
+    ["71½", "Stettner"],
+    ["76", "Strauß"],
+    ["76½", "Hufschmied"],
+    ["79", "Strauß"],
+    ["81", "Strauß"],
+    ["96", "Ihmeyer"],
+    ["98", "Zollamt"],
+    ["99", "prazna"],
+  ];
+  for (const [no, kw] of expectOwner) {
+    const row = ATLAS_HOUSES.find((h) => h.no === no);
+    if (!row || !row.owner.includes(kw)) {
+      p3Errors.push(`hiša ${no}: lastnik ne vsebuje »${kw}« (${row?.owner ?? "VRSTICA MANJKA"})`);
+    }
+  }
+  // Hiša 90 ostaja divergentna (brez popravka)
+  const h90 = ATLAS_HOUSES.find((h) => h.no === "90");
+  if (!h90 || !h90.owner.includes("divergirajo")) {
+    p3Errors.push("hiša 90: divergentna branja morajo ostati vidna");
+  }
+  // Vsi novi vnosi imajo paleo opombo; statusi ostajajo REVIEW
+  const newRows = ["hiša-6b", "hiša-73b", "hiša-78b", "hiša-101"];
+  for (const id of newRows) {
+    const row = ATLAS_HOUSES.find((h) => h.id === id);
+    if (!row || !row.paleo) {
+      p3Errors.push(`nova vrstica ${id} brez paleo opombe`);
+    }
+  }
+  if (ATLAS_HOUSES.some((h) => h.status !== "REVIEW")) {
+    p3Errors.push("status hiše ni REVIEW — pretvarjanje v VERIFIED je prepovedano");
+  }
+  // PT_PALEOGRAPHY_P3: 18 vrstic 2. kroga, metoda, aplikacija
+  if (PT_PALEOGRAPHY_P3.pass2Rows.length !== 18) {
+    p3Errors.push(`P3 vrstic 2. kroga: ${PT_PALEOGRAPHY_P3.pass2Rows.length} ≠ 18`);
+  }
+  if (!PT_PALEOGRAPHY_P3.appliedSi || !PT_PALEOGRAPHY_P3.methodSi || PT_PALEOGRAPHY_P3.vlmCalls !== 9) {
+    p3Errors.push("P3 revizija (metoda/aplicirano/VLM klici) nepopolna");
+  }
+  // model.ts: lastniki usklajeni z registrom (Strauß, Ihmeyer, Zollamt, Stettner, Hufschmied, Veith, Lebing, Bödig)
+  const ownerKws = ["Strauß Georg", "Ihmeyer", "Zollamt", "Stettner", "Hufschmied", "Veith", "Lebing", "Bödig", "Brinig"];
+  for (const kw of ownerKws) {
+    if (!ATLAS_OWNERS.some((o) => o.nameAsWritten.includes(kw))) {
+      p3Errors.push(`model.ts: lastnik z »${kw}« manjka`);
+    }
+  }
+  if (ATLAS_OWNERS.some((o) => o.id === "lastnik-leskovec")) {
+    p3Errors.push("lastnik-leskovec — nadomeščen z Lebing/Bödig (P3)");
+  }
+  // PUA str. 11: 4 vnosi (Hlebety, Huditsch, Husitsch, Hutweiz)
+  const pua11 = PUA_CONTINUATION.rows.filter((r) => r.page === 11);
+  if (pua11.length !== 4) {
+    p3Errors.push(`PUA str. 11: ${pua11.length} vnosov ≠ 4`);
+  }
+  for (const nm of ["Hlebety", "Huditsch", "Husitsch", "Hutweiz"]) {
+    if (!pua11.some((r) => r.nameAsWritten.includes(nm))) {
+      p3Errors.push(`PUA str. 11: vnos ${nm} manjka`);
+    }
+  }
+  // KURRENT_SERIES posodobljen (PT 84, PUA 11 strani)
+  const ptSeries = KURRENT_SERIES.find((s) => s.code === "PT");
+  const puaSeries = KURRENT_SERIES.find((s) => s.code === "PUA");
+  if (ptSeries?.structuredEntries !== 84 || puaSeries?.pagesTranscribed !== 11) {
+    p3Errors.push("KURRENT_SERIES PT/PUA nista posodobljena po P3");
+  }
+  push(
+    "qa-p3-paleografija",
+    "P3 paleografska preverba: renumeracija str. 4, 15 lastniških popravkov (2-krožna konvergenca), 4 dodane vrstice, PUA str. 11",
+    "P3 palaeographic verification: the p. 4 renumbering, 15 owner corrections (2-pass convergence), 4 added rows, PUA p. 11",
+    p3Errors.length === 0,
+    p3Errors.length === 0
+      ? `Register 105 vrstic (hiša 41 odstranjena, dvojnica 34 dokumentirana); 15 popravkov + 4 vrstice aplicirane ob 2-krožni konvergenci (Veith 1, Lebing 7/8, Bödig 7½/8½, Brinig 35–40, Strauß 76/79/81–84, Ihmeyer 96, Zollamt 98, K-priimek 20); hiša 90 ostaja divergentna; PUA str. 11 +4 vnosi (Hlebety/Huditsch/Husitsch/Hutweiz); statusi REVIEW`
+      : p3Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;

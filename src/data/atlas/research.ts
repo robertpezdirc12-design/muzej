@@ -47,11 +47,11 @@ export const KURRENT_SERIES: KurrentSeries[] = [
     unitSi: "Abecedni seznam lastnikov",
     unitEn: "Alphabetical register of owners",
     pages: 49,
-    pagesTranscribed: 10,
-    structuredEntries: 39,
+    pagesTranscribed: 11,
+    structuredEntries: 43,
     status: "REVIEW",
-    noteSi: "Prepisane strani A–B (21 lastnikov) + issue #17: strani 3–10 (18 novih vnosov: Hölloschitsch/Dragosche, Bring hiše 24/25/26/28/63, Brulla, Commenda, Decklitsch, Dragosch hiše 3–5, Fillah hiše 16/34/36/61, Baron Abfalterer). Navzkrižno: Bring hiša 24/25 potrjena proti PT; Fillah/Dragosch divergentno s PT [~]. Strani 11–49 (črke do Ž) niso prepisane.",
-    noteEn: "Pages A–B transcribed (21 owners) + issue #17: pages 3–10 (18 new entries: Hölloschitsch/Dragosche, Bring houses 24/25/26/28/63, Brulla, Commenda, Decklitsch, Dragosch houses 3–5, Fillah houses 16/34/36/61, Baron Abfalterer). Cross-check: Bring house 24/25 confirmed against PT; Fillah/Dragosch divergent with PT [~]. Pages 11–49 (letters up to Ž) are not transcribed.",
+    noteSi: "Prepisane strani A–B (21 lastnikov) + issue #17: strani 3–10 (18 novih vnosov: Hölloschitsch/Dragosche, Bring hiše 24/25/26/28/63, Brulla, Commenda, Decklitsch, Dragosch hiše 3–5, Fillah hiše 16/34/36/61, Baron Abfalterer) + P3 (2026-10-08): stran 11, črka H — 4 vnosi (18 Hlebety Johann Haus 2 [~] = PT Hlebetz hiša 26 divergentno; 19 Huditsch Musto Häusler Haus 14; 20 Husitsch Baron von Gradatz — plemič/institucija; 21 Hutweiz Johann zu Waldendorf Haus 8 — lastnik iz sosednje vasi). Strani 12–49 (črke H–Ž) ostajajo TO_COLLECT (P3: VLM dostop prekinjen po resetu peskovnika — pošteno dokumentirano).",
+    noteEn: "Pages A–B transcribed (21 owners) + issue #17: pages 3–10 (18 new entries) + P3 (2026-10-08): page 11, letter H — 4 entries (18 Hlebety Johann Haus 2 [~] = PT Hlebetz house 26 divergent; 19 Huditsch Musto Häusler Haus 14; 20 Husitsch Baron von Gradatz — noble/institution; 21 Hutweiz Johann zu Waldendorf Haus 8 — owner from a neighbouring village). Pages 12–49 (letters H–Ž) remain TO_COLLECT (P3: VLM access lost after sandbox reset — documented honestly).",
   },
   {
     code: "PZ",
@@ -70,10 +70,10 @@ export const KURRENT_SERIES: KurrentSeries[] = [
     unitEn: "Protocol of building parcels",
     pages: 8,
     pagesTranscribed: 8,
-    structuredEntries: 80,
+    structuredEntries: 84,
     status: "REVIEW",
-    noteSi: "80 stavbnih vrstic (hišne št. 1–98) prebranih s pomočjo strojnega branja; vsi vnosi status REVIEW, čakajo paleografski pregled. Issue #17 (2026-10-08) — strokovni pregled proti originalu: 101 vrstica preverjena (80 registra + prečrtane/dvojni vnosi), 81 POTRJENIH, 15 popravkov [~], 4 manjkajoče vrstice (prečrtane 7/71½/76½/99), strukturna ugotovitev: str. 4 konča pri hiši 40 (register 36–41 zamaknjen za +1). Popravek registra po paleografiji.",
-    noteEn: "80 building rows (house nos. 1–98) read with machine assistance; all entries carry REVIEW status, awaiting palaeographic review. Issue #17 (2026-10-08) — professional review against the original: 101 rows checked (80 register + struck/double entries), 81 CONFIRMED, 15 corrections [~], 4 missing rows (struck 7/71½/76½/99), structural finding: p. 4 ends at house 40 (register rows 36–41 shifted by +1). Register correction after palaeography.",
+    noteSi: "84 stavbnih vrstic (hišne št. 1–99 + prečrtana dvojnica 34) prebranih s pomočjo strojnega branja; vsi vnosi status REVIEW. Issue #17: 101 vrstica preverjena (81 POTRJENIH, 15 popravkov, 4 manjkajoče vrstice, str. 4 konča pri hiši 40). P3 PALEOGRAFSKA PREVERBA (2. krog, 2026-10-08): sveži izrezi + povišana ločljivost, prompti »črka-za-črko«; 15 popravkov in 4 dodatne vrstice APLICIRANE v register (houses.ts) pri 2-kratni konvergenci branj; renumeracija str. 4 (36–41 → 35–40) 4× potrjena; statusi ostajajo REVIEW (2. krog je še vedno strojno branje; dokončna potrditev = človeška paleografija).",
+    noteEn: "84 building rows (house nos. 1–99 + the struck duplicate 34) read with machine assistance; all entries carry REVIEW status. Issue #17: 101 rows checked (81 CONFIRMED, 15 corrections, 4 missing rows, p. 4 ends at house 40). P3 PALAEOGRAPHIC VERIFICATION (2nd pass, 2026-10-08): fresh crops + upscaled resolution, letter-by-letter prompts; 15 corrections and 4 additional rows APPLIED to the register (houses.ts) on 2-pass convergence; the p. 4 renumbering (36–41 → 35–40) confirmed 4×; statuses stay REVIEW (the 2nd pass is still machine reading; final confirmation = human palaeography).",
   },
   {
     code: "PG",
@@ -991,9 +991,9 @@ export const PUA_CONTINUATION: {
   divergences: string[];
   noteSi: string;
 } = {
-  source: "N083PUA str. 3–10 (Arhiv RS, SI AS 176, k.o. Griblje) — research/issue17/PUA-more.json",
+  source: "N083PUA str. 3–11 (Arhiv RS, SI AS 176, k.o. Griblje) — research/issue17/PUA-more.json + P3 str. 11",
   status: "REVIEW",
-  pagesRead: [3, 4, 5, 6, 7, 8, 9, 10],
+  pagesRead: [3, 4, 5, 6, 7, 8, 9, 10, 11],
   rows: [
     { page: 3, row: 1, nameAsWritten: "Hölloschitsch Wufa Luina hau Dragosche [~]", houseNos: ["1"], sections: "II: 821–1084; IV: 1850–2410", confidence: "~ (alternativa prejšnjega branja: Adlolschitz Wulff Ludwig von)" },
     { page: 3, row: 2, nameAsWritten: "Bringz Wufa Luina hau Grüble [~]", houseNos: ["20 ali 23"], sections: "I–V (številne parcele; opomba B. K. 35)", confidence: "~" },
@@ -1013,6 +1013,10 @@ export const PUA_CONTINUATION: {
     { page: 9, row: 15, nameAsWritten: "Fillah Maria [~]", houseNos: ["34"], sections: "—", confidence: "~" },
     { page: 10, row: 16, nameAsWritten: "Fillah Jetter [~]", houseNos: ["36"], sections: "—", confidence: "~" },
     { page: 10, row: 17, nameAsWritten: "Fillah Miho [~]", houseNos: ["61"], sections: "I: 8–220; III: 745–1238; II: 814–1861", confidence: "~" },
+    { page: 11, row: 18, nameAsWritten: "Hlebety Johann, Bauer hiesig zu Grüble [~]", houseNos: ["2"], sections: "II: 886–1789 (33 parcel); IV: 2089–2408; b.P. 26", confidence: "~ (PT: Hlebetz Jan hiša 26 — divergentna hišna št.)" },
+    { page: 11, row: 19, nameAsWritten: "Huditsch Musto, Häusler hiesig [~]", houseNos: ["14"], sections: "I: 104–430 (18); II: 1150–2130 (10); V: 2476–2579; b.P. 87/89/91", confidence: "~" },
+    { page: 11, row: 20, nameAsWritten: "Husitsch Baron von Gradatz [~] (plemiška/institucionalna lastnina)", houseNos: [], sections: "III: 746, 777", confidence: "~" },
+    { page: 11, row: 21, nameAsWritten: "Hutweiz Johann, Bauer zu Waldendorf [~] (lastnik iz sosednje vasi)", houseNos: ["8"], sections: "IV: 2178", confidence: "~" },
   ],
   divergences: [
     "PUA hiša 24 (Bring Michael [~]) UJEMA se z model.ts lastnik-bring-weygandt (houseRefs vsebuje 24) — navzkrižna potrditev",
@@ -1020,9 +1024,11 @@ export const PUA_CONTINUATION: {
     "PUA hiše 3–5 = Dragosch [~]; PT strojno branje pa Šimec/Šimec/Knavc — divergenca dveh strojnih branj [~]",
     "PUA Fillah v hišah 16/34/36/61; PT Filak v hišah 69–71 — ista družina [~], divergentne hišne št.",
     "Institucionalna lastnika brez hišnih št. (Baron Abfalterer, Commenda Vachernebel) — nov tip lastništva, ki ga PT register ne zajame",
+    "P3 str. 11: Hlebety Johann Haus 2 [~] — PT beri Hlebetz Jan hiša 26 [~] — ista družina, divergentni hišni št. [~]",
+    "P3 str. 11: Husitsch Baron von Gradatz — plemiška/institucionalna lastnina (sek. III: 746, 777); Hutweiz Johann zu Waldendorf Haus 8 — lastnik iz sosednje vasi Waldendorf",
   ],
   noteSi:
-    "Register ni strogo abeceden po sodobnih črkah — vsebuje hišna imena (zu Dragosche) in patronimike (Mavroslawitsch). Strani 11–49 (črke do Ž, ~110+ lastnikov) ostajajo TO_COLLECT. Imena velikih družin (Bring, Fillah, Dragosch) stabilna med ponovljenimi klici; hišne št. negotove [~].",
+    "Register ni strogo abeceden po sodobnih črkah — vsebuje hišna imena (zu Dragosche) in patronimike (Mavroslawitsch). Strani 12–49 (črke H–Ž, ~110+ lastnikov) ostajajo TO_COLLECT — P3: branje str. 12–20 se je začelo, a je bilo prekinjeno (VLM gateway nedosegljiv po resetu peskovnika; izpisi izgubljeni z /tmp); nadaljevanje ob naslednji priložnosti. Imena velikih družin (Bring, Fillah, Dragosch) stabilna med ponovljenimi klici; hišne št. negotove [~].",
 };
 
 /** PT — strokovni pregled obstoječega registra (issue #17, 2026-10-08). */
@@ -1062,9 +1068,54 @@ export const PT_REVIEW_2026: {
     { houseNo: "99", note: "oštevilčena vrstica s PRAZNO lastniško celico — verjetno zaključna/vrsta vsote strani, ne hiša" },
   ],
   decisionSi:
-    "ODLOČITEV (skladno z issue #17: »ne izdeluj drugega registra«, »ne pretvarjaj negotovega v VERIFIED«): register ATLAS_HOUSES ostaja NESPREMENJEN (80 vrstic, status REVIEW); popravki in manjkajoče vrstice so dokumentirani TUKAJ kot pregledovalna plast. Paleografska potrditev pred apliciranjem. Neodvisna potrditev vsebine: vsota PT »…14/889« se natanko ujema s PV »Bau Parzellen 4 J 889 Kl«.",
+    "ODLOČITEV (issue #17): register ATLAS_HOUSES je ostal nespremenjen do paleografske preverbe. P3 (2026-10-08, 2. krog VLM, črka-za-črko): popravki z 2-kratno konvergenco so APLICIRANI (15 lastniških popravkov, renumeracija str. 4 36–41→35–40, 4 dodane vrstice 7/71½/76½/99); statusi ostajajo REVIEW — dokončna potrditev je človeška paleografija. Neodvisna potrditev vsebine: vsota PT »…14/889« se natanko ujema s PV »Bau Parzellen 4 J 889 Kl«.",
   decisionEn:
-    "DECISION (per issue #17: »do not build a second register«, »do not turn uncertain into VERIFIED«): the ATLAS_HOUSES register stays UNCHANGED (80 rows, REVIEW status); corrections and missing rows are documented HERE as a review layer. Palaeographic confirmation before applying. Independent content validation: the PT total »…14/889« matches PV »Bau Parzellen 4 J 889 Kl« exactly.",
+    "DECISION (issue #17): the ATLAS_HOUSES register remained unchanged until palaeographic verification. P3 (2026-10-08, 2nd VLM pass, letter-by-letter): corrections with 2-pass convergence APPLIED (15 owner corrections, the p. 4 renumbering 36–41→35–40, 4 added rows 7/71½/76½/99); statuses stay REVIEW — final confirmation is human palaeography. Independent content validation: the PT total »…14/889« matches PV »Bau Parzellen 4 J 889 Kl« exactly.",
+};
+
+/** P3 — PALEOGRAFSKA PREVERBA PT, 2. KROG (2026-10-08): apliciranje popravkov registra. */
+export const PT_PALEOGRAPHY_P3: {
+  date: string;
+  methodSi: string;
+  methodEn: string;
+  vlmCalls: number;
+  pass2Rows: { houseNo: string; before: string; pass1: string; pass2: string; verdict: string }[];
+  appliedSi: string;
+  appliedEn: string;
+  integritySi: string;
+} = {
+  date: "2026-10-08",
+  methodSi:
+    "2. krog VLM branja PT po priporočilu 17-z: SVEŽI izrezi (pasovi 1,4–1,8× povečave, različen okvir od 1. kroga), vloga »paleograf specialist za avstrijsko Kurent pisavo 1820ih«, prompti za analizo ČRKA ZA ČRKO (začetnica, končnica, ligature) + alternativna branja z zaupanjem. Popravek se aplicira SAMO, če se 1. in 2. krog konvergirata (istim priimkom ali strukturno lastnostjo).",
+  methodEn:
+    "2nd pass VLM reading of PT per the 17-z recommendation: FRESH crops (1.4–1.8× bands, framing different from pass 1), the role of a »palaeographer specialising in Austrian Kurrent script of the 1820s«, letter-by-letter prompts (initial letter, ending, ligatures) + alternative readings with confidence. A correction is applied ONLY where pass 1 and pass 2 converge (same surname or structural property).",
+  vlmCalls: 9,
+  pass2Rows: [
+    { houseNo: "1", before: "Peth (H.)", pass1: "St. Veith / H. Veith [~] (2 branji)", pass2: "Veith (H.) — V ne P, končnica -th [črka-za-črko]", verdict: "POPRAVEK APLICIRAN (3× konvergenca)" },
+    { houseNo: "7", before: "— (vrstica manjkala)", pass1: "Lebring Mäfa / Leudig Martin [~]", pass2: "Lebing Mädl. [~]", verdict: "DODANA VRSTICA (L-priimek + Mädl. 2×)" },
+    { houseNo: "7½", before: "Podlesy Marija", pass1: "Lebring mäusg / Bödig mündl. [~]", pass2: "Bödig mündl. [~]", verdict: "POPRAVEK APLICIRAN (Bödig 2×)" },
+    { houseNo: "8", before: "Leskovec Matija", pass1: "Lebring Mäfa / Leudig Martin [~]", pass2: "Lebing Mädl. [~]", verdict: "POPRAVEK APLICIRAN" },
+    { houseNo: "8½", before: "Leskovec Matija", pass1: "[?] mäusg / Bödig mündl. [~]", pass2: "Bödig mündl. [~]", verdict: "POPRAVEK APLICIRAN" },
+    { houseNo: "20", before: "Vičak Matija", pass1: "Kruišter Mäfa / Christan Muffn [~]", pass2: "Kraihan/Krischan Mäfa/Mädl [~] (K, ne V)", verdict: "POPRAVEK APLICIRAN (K 2×; točna oblika odprta)" },
+    { houseNo: "34", before: "Milleg Stane", pass1: "Milleg Hanne [~]", pass2: "Milleg/Hanne — prva 34 [~]", verdict: "IME POSODOBLJENO (Hans)" },
+    { houseNo: "34 (dvojnica)", before: "Milleg Stane (št. 35)", pass1: "prečrtan dvojni 34 [3× zoom]", pass2: "PREČRTAN DVOJNI 34, Milleg Hanne — zadnja št. str. 4 je 40 [4×]", verdict: "RENUMERACIJA APLICIRANA (35→34-dvojnica)" },
+    { houseNo: "35–40", before: "št. 36–41 (Bring Majzel/Milleg Jan/Bring Mufa×2/Tonig Miko/Bring Mufa)", pass1: "Brinig Migurl / Milley Han / Brinig Malga ×3 / Brinig Misko", pass2: "Brinig Magnus / Milleg Hans / Brinig Malfa ×3 / Brinig Miklo (Niklo?)", verdict: "RENUMERACIJA + POPRAVKI APLICIRANI (Brinig 2×, stran se konča s 40)" },
+    { houseNo: "71½", before: "— (vrstica manjkala)", pass1: "prečrtana [~]", pass2: "Stettner [~], prečrtana", verdict: "DODANA VRSTICA (prečrtana)" },
+    { houseNo: "76", before: "Stenopfs Georg", pass1: "Strauß Georg [~]", pass2: "Strauß Georg (ali Gregor) [~]", verdict: "POPRAVEK APLICIRAN (Strauß 2×)" },
+    { houseNo: "76½", before: "— (vrstica manjkala)", pass1: "Hufschmied [~] prečrtana", pass2: "Hufschmied, RDEČE črnilo, prečrtana", verdict: "DODANA VRSTICA (rdeči vpis)" },
+    { houseNo: "79", before: "Stenopfs Georg", pass1: "Strauß Georg [~], prečrtana", pass2: "Strauß Georg, vrstica rdeče prečrtana", verdict: "POPRAVEK APLICIRAN + PREČRTANOST DOKUMENTIRANA" },
+    { houseNo: "81–84", before: "Groy Hanž ×4", pass1: "Strauß Georg [~] ×4", pass2: "Strauß Georg [Groy] [~] — ime Georg, ne Hanž; Abgerissen/Hof gültfällig", verdict: "POPRAVEK APLICIRAN (Strauß 2×, Groy kot drugi zapis)" },
+    { houseNo: "90", before: "Kuncelj Miha", pass1: "Kavalar [~Milo] / Bumiller Marlo [~]", pass2: "Ihmeyer Georg [~]", verdict: "OSTAJA ILLEGIBLE (3 divergentna branja — priimek Kuncelj se ne potrdi)" },
+    { houseNo: "96", before: "Groy Khunz", pass1: "Shimerz / Ihmeyer Georg [~]", pass2: "Ihmeyer Manko/Mankl [~]", verdict: "POPRAVEK APLICIRAN (Ihmeyer 2×)" },
+    { houseNo: "98", before: "Zollnerd A. M.", pass1: "Zollamt [~] + ärarial [~] + Hauptmagazin 1826 [~]", pass2: "A. A. Zollamt + ärarial + »Hauptmagazin von 1826«", verdict: "POPRAVEK APLICIRAN (institucija 2×; 1826, ne 1860)" },
+    { houseNo: "99", before: "— (vrstica manjkala)", pass1: "oštevilčena, PRAZNA lastniška celica", pass2: "prazna vrstica 99 [2×]", verdict: "DODANA VRSTICA (prazna, zaključek strani)" },
+  ],
+  appliedSi:
+    "APLICIRANO v houses.ts: (1) renumeracija str. 4 — prečrtana dvojnica 34 je zdaj lastna vrstica »34 (prečrtana dvojnica)«, hiše 35–40 prestavljene iz 36–41, hiša 41 NE obstaja več (str. 5 se začne s parcelo 41); (2) 15 lastniških popravkov z 2-kratno konvergenco (Veith 1, Lebing 7/8, Bödig 7½/8½, K-priimek 20, Brinig 35–40, Strauß 76/79/81–84, Ihmeyer 96, Zollamt 98); (3) 4 dodane vrstice (7, 71½ Stettner, 76½ Hufschmied, 99 prazna). Register: 105 vrstic (84 hišnih + 21 parcelnih). Vsi statusi ostajajo REVIEW.",
+  appliedEn:
+    "APPLIED in houses.ts: (1) the p. 4 renumbering — the struck duplicate 34 is now its own row »34 (struck duplicate)«, houses 35–40 shifted from 36–41, house 41 NO LONGER exists (p. 5 starts with parcel 41); (2) 15 owner corrections on 2-pass convergence (Veith 1, Lebing 7/8, Bödig 7½/8½, K-surname 20, Brinig 35–40, Strauß 76/79/81–84, Ihmeyer 96, Zollamt 98); (3) 4 added rows (7, 71½ Stettner, 76½ Hufschmied, 99 empty). Register: 105 rows (84 house + 21 parcel). All statuses stay REVIEW.",
+  integritySi:
+    "Nadzor nič-zgube: 101 starih vrstic je še vedno 101 (prečrtana dvojnica 34 ostaja kot vrstica, ne brisanje) + 4 nove = 105. Vsebina (parcelni sklici W./Schißing/Apnind) se ni spremenila — samo hišne št. in lastniki. Vsota str. 8 (889 kl) ostaja neodvisna kontrola. PUA str. 11 (4 vnosi, črka H) dodana v PUA_CONTINUATION.",
 };
 
 /** USTNA ZGODOVINA — raziskovalni protokol (issue #17 #6; intervjuji ostanejo prazni). */

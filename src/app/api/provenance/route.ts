@@ -19,6 +19,7 @@ import {
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PT_REVIEW_2026,
+  PT_PALEOGRAPHY_P3,
   ORAL_HISTORY_PROTOCOL,
   WEB_VERIFICATIONS,
   ISSUE17_MATRIX,
@@ -84,6 +85,9 @@ export async function GET() {
           audit: ARCHIVE_TRANSFER_AUDIT,
           rows: ARCHIVE_TRANSFER_ROWS,
           nonTransfers: ARCHIVE_NON_TRANSFERS,
+        },
+        p3: {
+          ptPalaeographyP3: PT_PALEOGRAPHY_P3,
         },
         issue17: {
           audit: ISSUE17_AUDIT,

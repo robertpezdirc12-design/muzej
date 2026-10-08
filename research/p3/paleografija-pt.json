@@ -1,0 +1,175 @@
+{
+ "task": "P3 — paleografska preverba PT (2. krog) + PUA stran 11",
+ "date": "2026-10-08",
+ "context": "Nadaljevanje po zaključku issue #17 (priporočilo 17-z): renumeracija str. 4, 15 lastniških popravkov po paleografski preverbi, 4 dodatne vrstice.",
+ "method": {
+  "si": "Sveži izrezi strani PT-3/4/6/7 (pasovni izrezi 1,4× in stolpčni zoom 1,8× — drugačen okvir kot 1. krog); vloga: paleograf specialist za avstrijsko Kurent pisavo 1820ih; prompt: branje ČRKA ZA ČRKO + alternativna branja z zaupanjem; 9 VLM klicev; popravek apliciran SAMO ob konvergenci 1. in 2. kroga.",
+  "vlmCalls": 9,
+  "tools": "z-ai vision CLI (VLM) nad izrezi PNG (pdftoppm 150 dpi + PIL LANCZOS upscale)"
+ },
+ "results": [
+  {
+   "houseNo": "1",
+   "before": "Peth (H.)",
+   "pass1": "St. Veith / H. Veith [~] ×2",
+   "pass2": "Veith (H.) — V ne P, končnica -th",
+   "verdict": "CORRECTED (3×)"
+  },
+  {
+   "houseNo": "7",
+   "before": "— (manjkala)",
+   "pass1": "Lebring Mäfa / Leudig Martin [~]",
+   "pass2": "Lebing Mädl. [~]",
+   "verdict": "ADDED"
+  },
+  {
+   "houseNo": "7½",
+   "before": "Podlesy Marija",
+   "pass1": "Lebring mäusg / Bödig mündl. [~]",
+   "pass2": "Bödig mündl. [~]",
+   "verdict": "CORRECTED"
+  },
+  {
+   "houseNo": "8",
+   "before": "Leskovec Matija",
+   "pass1": "Lebring Mäfa / Leudig Martin [~]",
+   "pass2": "Lebing Mädl. [~]",
+   "verdict": "CORRECTED"
+  },
+  {
+   "houseNo": "8½",
+   "before": "Leskovec Matija",
+   "pass1": "[?] mäusg / Bödig mündl. [~]",
+   "pass2": "Bödig mündl. [~]",
+   "verdict": "CORRECTED"
+  },
+  {
+   "houseNo": "20",
+   "before": "Vičak Matija",
+   "pass1": "Kruišter Mäfa / Christan Muffn [~]",
+   "pass2": "Kraihan/Krischan Mäfa/Mädl [~] (K, ne V)",
+   "verdict": "CORRECTED (K 2×; oblika odprta)"
+  },
+  {
+   "houseNo": "34",
+   "before": "Milleg Stane",
+   "pass1": "Milleg Hanne [~]",
+   "pass2": "Milleg Hanne/Hans [~]",
+   "verdict": "NAME UPDATED (Hans)"
+  },
+  {
+   "houseNo": "34-dub",
+   "before": "Milleg Stane (št. 35)",
+   "pass1": "prečrtan dvojni 34 [3× zoom]",
+   "pass2": "PREČRTAN DVOJNI 34 Milleg Hanne; zadnja št. str. 4 = 40",
+   "verdict": "RENUMBERED (4× potrditev)"
+  },
+  {
+   "houseNo": "35 (prej 36)",
+   "before": "Bring Majzel",
+   "pass1": "Brinig Migurl/Mufur [~]",
+   "pass2": "Brinig Magnus [~]",
+   "verdict": "CORRECTED+RENUMBERED"
+  },
+  {
+   "houseNo": "36 (prej 37)",
+   "before": "Milleg Jan",
+   "pass1": "Milleg/Milley Han [~]",
+   "pass2": "Milleg Hans [~] (Jan=Hans)",
+   "verdict": "RENUMBERED"
+  },
+  {
+   "houseNo": "37 (prej 38)",
+   "before": "Bring Mufa",
+   "pass1": "Brinig Malga [~]",
+   "pass2": "Brinig Malfa [~]",
+   "verdict": "CORRECTED+RENUMBERED"
+  },
+  {
+   "houseNo": "38 (prej 39)",
+   "before": "Bring Mufa",
+   "pass1": "Brinig Malga [~]",
+   "pass2": "Brinig Malfa [~]",
+   "verdict": "CORRECTED+RENUMBERED"
+  },
+  {
+   "houseNo": "39 (prej 40)",
+   "before": "Tonig Miko",
+   "pass1": "Brinig Misko/Milo [~]",
+   "pass2": "Brinig Miklo/Niklo [~]",
+   "verdict": "CORRECTED+RENUMBERED"
+  },
+  {
+   "houseNo": "40 (prej 41)",
+   "before": "Bring Mufa",
+   "pass1": "Brinig Malga/Hulfa [~]",
+   "pass2": "Brinig Malfa [~] — ZADNJA vrstica str. 4",
+   "verdict": "CORRECTED+RENUMBERED (hiša 41 ne obstaja)"
+  },
+  {
+   "houseNo": "71½",
+   "before": "— (manjkala)",
+   "pass1": "prečrtana [~]",
+   "pass2": "Stettner [~], prečrtana",
+   "verdict": "ADDED (prečrtana)"
+  },
+  {
+   "houseNo": "76",
+   "before": "Stenopfs Georg",
+   "pass1": "Strauß Georg [~]",
+   "pass2": "Strauß Georg (ali Gregor) [~]",
+   "verdict": "CORRECTED"
+  },
+  {
+   "houseNo": "76½",
+   "before": "— (manjkala)",
+   "pass1": "Hufschmied [~] prečrtana",
+   "pass2": "Hufschmied, RDEČE črnilo, prečrtana",
+   "verdict": "ADDED (rdeči vpis)"
+  },
+  {
+   "houseNo": "79",
+   "before": "Stenopfs Georg",
+   "pass1": "Strauß Georg [~] prečrtana",
+   "pass2": "Strauß Georg, vrstica rdeče prečrtana",
+   "verdict": "CORRECTED+STRIKE DOCUMENTED"
+  },
+  {
+   "houseNo": "81-84",
+   "before": "Groy Hanž ×4",
+   "pass1": "Strauß Georg [~] ×4",
+   "pass2": "Strauß Georg [Groy] [~]; Abgerissen/Hof gültfällig",
+   "verdict": "CORRECTED (ime Georg, ne Hanž)"
+  },
+  {
+   "houseNo": "90",
+   "before": "Kuncelj Miha",
+   "pass1": "Kavalar [~] / Bumiller Marlo [~]",
+   "pass2": "Ihmeyer Georg [~]",
+   "verdict": "STAYS ILLEGIBLE (3 divergentna branja)"
+  },
+  {
+   "houseNo": "96",
+   "before": "Groy Khunz",
+   "pass1": "Shimerz / Ihmeyer Georg [~]",
+   "pass2": "Ihmeyer Manko/Mankl [~]",
+   "verdict": "CORRECTED"
+  },
+  {
+   "houseNo": "98",
+   "before": "Zollnerd A. M.",
+   "pass1": "Zollamt [~] + ärarial [~] + Hauptmagazin 1826 [~]",
+   "pass2": "A. A. Zollamt + ärarial + Hauptmagazin von 1826",
+   "verdict": "CORRECTED (institucija 2×)"
+  },
+  {
+   "houseNo": "99",
+   "before": "— (manjkala)",
+   "pass1": "oštevilčena, PRAZNA celica",
+   "pass2": "prazna vrstica 99 [2×]",
+   "verdict": "ADDED (prazna)"
+  }
+ ],
+ "applied": "houses.ts (105 vrstic), model.ts (ATLAS_OWNERS), research.ts (PT_PALEOGRAPHY_P3), sources.ts, qa.ts (qa-p3-paleografija), provenance route, museum-research.tsx, museum-atlas.tsx (P3 badge), sw.js v10",
+ "honesty": "Surovi izpisi VLM 2. kroga so bili izgubljeni ob resetu peskovnika (/tmp počiščen); strukturirani zapis branj je ohranjen TUKAJ in v research.ts PT_PALEOGRAPHY_P3.pass2Rows. Statusi ostajajo REVIEW — strojno branje ni dokazni vir."
+}

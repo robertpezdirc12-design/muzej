@@ -304,12 +304,12 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     thumb: "/atlas/n83-pt-thumb.jpg",
     transferStatus: "TRANSFERRED",
     georefStatus: "NOT_APPLICABLE",
-    structuredEntries: 80,
-    lastVerified: "2026-10-07",
+    structuredEntries: 84,
+    lastVerified: "2026-10-08",
     noteSi:
-      "Glavni vir hišnega registra ~1825: hišne številke 1–98 z lastniki in parcelnimi sklici. Prepis rokopisa (Kurrent) je DELNO dokončan — vsi vnosi imajo status REVIEW: 80 stavbnih vrstic je strukturiranih, od tega 60 z lastniki.",
+      "Glavni vir hišnega registra ~1825: hišne številke 1–99 z lastniki in parcelnimi sklici. Issue #17: pregled 101 vrstice (81 potrjenih, 15 popravkov, 4 manjkajoče). P3 paleografska preverba (2. krog, 2026-10-08): popravki APLICIRANI — 84 stavbnih vrstic (renumeracija str. 4: hiše 35–40, prečrtana dvojnica 34, hiša 41 ne obstaja; lastniki Veith/Lebing/Bödig/Brinig/Strauß/Ihmeyer/Zollamt; dodane vrstice 7/71½/76½/99). Statusi ostajajo REVIEW (strojno branje; dokončna potrditev = človeška paleografija).",
     noteEn:
-      "Primary source of the ~1825 house register: house numbers 1–98 with owners and parcel references. The Kurrent manuscript transcription is PARTIAL — all entries carry REVIEW status: 80 building rows structured, 60 of them with owners.",
+      "Primary source of the ~1825 house register: house numbers 1–99 with owners and parcel references. Issue #17: review of 101 rows (81 confirmed, 15 corrections, 4 missing). P3 palaeographic verification (2nd pass, 2026-10-08): corrections APPLIED — 84 building rows (the p. 4 renumbering: houses 35–40, the struck duplicate 34, house 41 does not exist; owners Veith/Lebing/Bödig/Brinig/Strauß/Ihmeyer/Zollamt; added rows 7/71½/76½/99). Statuses stay REVIEW (machine reading; final confirmation = human palaeography).",
   },
   {
     id: "src-pua",
@@ -331,12 +331,12 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     thumb: "/atlas/n83-pua-thumb.jpg",
     transferStatus: "TRANSFERRED",
     georefStatus: "NOT_APPLICABLE",
-    structuredEntries: 39,
-    lastVerified: "2026-10-07",
+    structuredEntries: 43,
+    lastVerified: "2026-10-08",
     noteSi:
-      "Lastniki po abecedi s hišnimi številkami in parcelami po sekcijah I–V. Prepisane strani A–B (navzkrižno preverjanje imen iz protokola stavbnih parcel): 21 lastnikov strukturiranih; strani C–Ž še niso prepisane.",
+      "Lastniki po abecedi s hišnimi številkami in parcelami po sekcijah I–V. Prepisane strani A–B (21 lastnikov, navzkrižno preverjanje s PT) + issue #17: strani 3–10 (18 vnosov) + P3 (2026-10-08): stran 11, črka H — 4 vnosi (Hlebety/Huditsch/Husitsch Baron von Gradatz/Hutweiz zu Waldendorf). Skupaj 43 strukturiranih vnosov na 11/49 strani; strani 12–49 (H–Ž) ostajajo TO_COLLECT — P3: branje 12–20 prekinjeno (VLM gateway nedosegljiv po resetu peskovnika).",
     noteEn:
-      "Owners alphabetically with house numbers and parcels by sections I–V. Transcribed pages A–B (cross-checking owner names from the building-parcel protocol): 21 owners structured; pages C–Ž not transcribed yet.",
+      "Owners alphabetically with house numbers and parcels by sections I–V. Transcribed pages A–B (21 owners, cross-checked with PT) + issue #17: pages 3–10 (18 entries) + P3 (2026-10-08): page 11, letter H — 4 entries (Hlebety/Huditsch/Husitsch Baron von Gradatz/Hutweiz zu Waldendorf). 43 structured entries over 11/49 pages; pages 12–49 (H–Ž) remain TO_COLLECT — P3: reading 12–20 interrupted (VLM gateway unreachable after the sandbox reset).",
   },
   {
     id: "src-pv",

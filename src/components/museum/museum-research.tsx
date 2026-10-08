@@ -57,6 +57,7 @@ import {
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PT_REVIEW_2026,
+  PT_PALEOGRAPHY_P3,
   ORAL_HISTORY_PROTOCOL,
   WEB_VERIFICATIONS,
   ISSUE17_MATRIX,
@@ -860,8 +861,8 @@ export function MuseumResearch() {
               <div className="border-b bg-secondary/40 px-6 py-4">
                 <h4 className="font-display text-base font-semibold">
                   {t(
-                    `PUA — nadaljevanje po A–B: strani 3–10, ${PUA_CONTINUATION.rows.length} vnosov (REVIEW)`,
-                    `PUA — continuation after A–B: pages 3–10, ${PUA_CONTINUATION.rows.length} entries (REVIEW)`,
+                    `PUA — nadaljevanje po A–B: strani 3–11, ${PUA_CONTINUATION.rows.length} vnosov (REVIEW)`,
+                    `PUA — continuation after A–B: pages 3–11, ${PUA_CONTINUATION.rows.length} entries (REVIEW)`,
                   )}
                 </h4>
               </div>
@@ -886,8 +887,8 @@ export function MuseumResearch() {
             <div className="rounded-xl border bg-card p-6 shadow-sm">
               <h4 className="font-display text-base font-semibold">
                 {t(
-                  `PT — strokovni pregled registra (81/105 potrjenih, register nespremenjen)`,
-                  `PT — professional review of the register (81/105 confirmed, register unchanged)`,
+                  `PT — strokovni pregled registra (81/105 potrjenih; popravki aplicirani v P3)`,
+                  `PT — professional review of the register (81/105 confirmed; corrections applied in P3)`,
                 )}
               </h4>
               <div className="mt-3 flex flex-wrap gap-2">
@@ -908,6 +909,50 @@ export function MuseumResearch() {
               </p>
               <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
                 {lang === "si" ? PT_REVIEW_2026.decisionSi : PT_REVIEW_2026.decisionEn}
+              </p>
+            </div>
+
+            {/* P3 paleografska preverba — 2. krog */}
+            <div className="rounded-xl border-2 border-primary/30 bg-card p-6 shadow-sm">
+              <h4 className="flex items-center gap-2 font-display text-base font-semibold">
+                <span className="inline-flex items-center gap-1 rounded-full bg-primary px-2.5 py-0.5 font-mono text-[10px] font-bold text-primary-foreground">P3</span>
+                {t(
+                  `Paleografska preverba PT — 2. krog (${PT_PALEOGRAPHY_P3.date}, ${PT_PALEOGRAPHY_P3.vlmCalls} VLM klicev, črka-za-črko)`,
+                  `Palaeographic verification of PT — 2nd pass (${PT_PALEOGRAPHY_P3.date}, ${PT_PALEOGRAPHY_P3.vlmCalls} VLM calls, letter-by-letter)`,
+                )}
+              </h4>
+              <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+                {lang === "si" ? PT_PALEOGRAPHY_P3.methodSi : PT_PALEOGRAPHY_P3.methodEn}
+              </p>
+              <div className="mt-3 overflow-hidden rounded-lg border">
+                <div className="max-h-96 overflow-y-auto">
+                  <table className="w-full text-left text-[11px]">
+                    <thead className="sticky top-0 bg-secondary/60 backdrop-blur">
+                      <tr className="font-mono text-[10px] uppercase tracking-wide text-muted-foreground">
+                        <th className="px-3 py-2">{t("hiša", "house")}</th>
+                        <th className="px-3 py-2">{t("prej", "before")}</th>
+                        <th className="px-3 py-2">{t("2. krog", "2nd pass")}</th>
+                        <th className="px-3 py-2">{t("verdikt", "verdict")}</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y">
+                      {PT_PALEOGRAPHY_P3.pass2Rows.map((r) => (
+                        <tr key={r.houseNo} className="align-top">
+                          <td className="whitespace-nowrap px-3 py-2 font-mono font-semibold text-foreground">{r.houseNo}</td>
+                          <td className="px-3 py-2 text-muted-foreground">{r.before}</td>
+                          <td className="px-3 py-2 text-foreground">{r.pass2}</td>
+                          <td className={`px-3 py-2 font-medium ${r.verdict.includes("OSTAJA") ? "text-orange-700 dark:text-orange-300" : "text-emerald-700 dark:text-emerald-300"}`}>{r.verdict}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <p className="mt-3 rounded-lg bg-secondary/40 p-3 text-xs leading-relaxed text-muted-foreground">
+                {lang === "si" ? PT_PALEOGRAPHY_P3.appliedSi : PT_PALEOGRAPHY_P3.appliedEn}
+              </p>
+              <p className="mt-2 text-[11px] leading-relaxed text-muted-foreground">
+                {lang === "si" ? PT_PALEOGRAPHY_P3.integritySi : PT_PALEOGRAPHY_P3.integrityEn}
               </p>
             </div>
 
