@@ -1956,3 +1956,11 @@ Stage Summary:
 - AR 3D VAS OŽIVI: 1666 dreves (gozd Brezov gozd gosto + loke razpršeno, deterministično), dim 8 dimnikov (animiran, le 1825/~1900), nov severni pogled (gozd v ozadju), KARTICA STAVBE v 3D pregledu (orbit) — pariteta z AR.
 - Vsi dodatki so jasno označeni kot interpretacija (TimeLens/Himera poštenost); kartice AR+orbit nosijo dokumentirano ugotovitev o hišnih št.
 - QA 23/23; lint čist; E2E preverjen v dev (piksli + časovna diferenca + kartica + letnice).
+
+NADALJEVANJE (konec seje) — KRITIČNO:
+- Push P12 na GitLab JE BIL BLOKIRAN: oba žetona (novi "dsyy" + stari "ydfgv") → HTTP 403 "Your account has been blocked." — CEL RAČUN robert.pezdirc12 JE BLOKIRAN (GitLab samodejna zaznava; projekt 873133043 dosegljiv le 404 za javnost). Do blokade je prišlo med 20:15 (uspešen push db7bf52) in ~21:10.
+- POSLEDICE: Git hosting nedosegljiv; nadaljnji Vercel deployi (webhook) prek GitLab ne delujejo → P12 commit 1aee451 JE SAMO LOKALNO.
+- VARNO: polna varnostna kopija celotne zgodovine vključno s P12 → /home/z/muzej-backup-P12-20261008.bundle (120,5 MB, --all). Obstajata tudi starejša: muzej-backup-20261007.bundle (32,5 MB, Task 10).
+- PRODUKCIJA: https://griblje-museum.vercel.app ZDRAVA in NEODVISNA od GitLab (22/22 QA — stanje brez P12; Vercel hosta zgradbo, webhook le sproži nove).
+- NASVET UPORABNIKU: kontaktirati GitLab podporo (unblock zahtevek za račun robert.pezdirc12) — blokada je najverjetneje samodejna (vzroki: vzorec klicev WAF, hitro ustvarjanje žetonov, ali prijava z več IP sandboxa). Po odblokadi: push (žetona sta v lokalnem git config + local-gitlab.pat) → samodejni deploy → preverba /api/qa 23/23.
+- DEPLOY ALTERNATIVA (če odblokava traja): VERCEL_TOKEN je shranjen SAMO kot maskirana GitLab CI spremenljivka (sedaj nedosegljiva) — ročni CLI deploy mogoč šele po pridobitvi žetona z Vercel dashboarda (rotacija + `vercel --prod`); nov GitLab (drug račun) + ponovna povezava projekta na Vercel je prav tako možna pot.
