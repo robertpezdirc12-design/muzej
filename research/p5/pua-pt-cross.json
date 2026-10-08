@@ -1,16 +1,16 @@
 {
  "generatedAt": "2026-10-08",
  "method": "Deterministična navzkrižna analiza (Levenshtein podobnost priimkov, prag 0.72/0.50) — brez AI; PUA str. 3–34 (69 vnosov) ↔ PT register (84 hišnih vrstic)",
- "puaEntries": 69,
+ "puaEntries": 101,
  "ptHouseRows": 84,
  "ptParcelRows": 21,
  "verdictCounts": {
-  "DIVERGENCA": 51,
+  "DIVERGENCA": 72,
   "NEBERLJIVA_ST": 1,
-  "BREZ_HISNE_ST": 2,
-  "PT_PODATKA_NI_NI_St5_PARCELE": 11,
+  "BREZ_HISNE_ST": 7,
+  "PT_PODATKA_NI_NI_St5_PARCELE": 16,
   "INSTITUCIJA": 2,
-  "VERJETNO_UJEMANJE": 2
+  "VERJETNO_UJEMANJE": 3
  },
  "results": [
   {
@@ -855,6 +855,377 @@
    ],
    "house": "59",
    "verdict": "PT_PODATKA_NI_NI_St5_PARCELE"
+  },
+  {
+   "page": 35,
+   "row": 69,
+   "name": "Gemeinde Malfz Brandhofgässl [~]",
+   "houses": [
+    "1"
+   ],
+   "house": "1",
+   "ptOwner": "Veith (H.) [~]",
+   "ptId": "hiša-1",
+   "similarity": 0.25,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 35,
+   "row": 70,
+   "name": "Gemeinde Malfz Brandhof Smibuche [~]",
+   "houses": [
+    "31"
+   ],
+   "house": "31",
+   "ptOwner": "Bring Marko",
+   "ptId": "hiša-32",
+   "similarity": 0.25,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 36,
+   "row": 71,
+   "name": "Starašinutsh Gura Leurakau Zgorsche [~]",
+   "houses": [
+    "17"
+   ],
+   "house": "17",
+   "ptOwner": "Stalhutsch Marko",
+   "ptId": "hiša-18",
+   "similarity": 0.5,
+   "verdict": "VERJETNO_UJEMANJE"
+  },
+  {
+   "page": 36,
+   "row": 72,
+   "name": "Strutz Jh. Bauernhof Grüble [~]",
+   "houses": [
+    "3"
+   ],
+   "house": "3",
+   "ptOwner": "Šimec Jakob",
+   "ptId": "hiša-3",
+   "similarity": 0.17,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 36,
+   "row": 73,
+   "name": "Hansitsch Jürgen Bäurin von Wiedendorf [~]",
+   "houses": [
+    "3"
+   ],
+   "house": "3",
+   "ptOwner": "Šimec Jakob",
+   "ptId": "hiša-3",
+   "similarity": 0.33,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 37,
+   "row": 74,
+   "name": "Schimcz [~] Gutta Bauernhofgütl",
+   "houses": [
+    "18"
+   ],
+   "house": "18",
+   "ptOwner": "Hrovat Jhan",
+   "ptId": "hiša-19",
+   "similarity": 0.0,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 37,
+   "row": 75,
+   "name": "Schimcz Maffa Bauernhofgütl [~]",
+   "houses": [
+    "19"
+   ],
+   "house": "19",
+   "ptOwner": "Krudelen Matija",
+   "ptId": "hiša-20",
+   "similarity": 0.0,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 38,
+   "row": 76,
+   "name": "Stübler Muffl Bauer zu Griblje [~]",
+   "houses": [
+    "30"
+   ],
+   "house": "30",
+   "ptOwner": "Krišan Gregor",
+   "ptId": "hiša-31",
+   "similarity": 0.0,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 38,
+   "row": 77,
+   "name": "Schimer Georg Bauer zu Griblje [~]",
+   "houses": [
+    "38"
+   ],
+   "house": "38",
+   "ptOwner": "Brinig Malfa [~]",
+   "ptId": "hiša-40",
+   "similarity": 0.14,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 39,
+   "row": 78,
+   "name": "Schimey Maro baua haußgäbla [~]",
+   "houses": [
+    "29"
+   ],
+   "house": "29",
+   "ptOwner": "Krišan Gregor",
+   "ptId": "hiša-30",
+   "similarity": 0.14,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 39,
+   "row": 79,
+   "name": "Strauß Georg baua haußgübla [~]",
+   "houses": [
+    "45"
+   ],
+   "house": "45",
+   "verdict": "PT_PODATKA_NI_NI_St5_PARCELE"
+  },
+  {
+   "page": 40,
+   "row": 80,
+   "name": "Schimetz Michael Baunthofgäbln [~]",
+   "houses": [],
+   "verdict": "BREZ_HISNE_ST"
+  },
+  {
+   "page": 40,
+   "row": 81,
+   "name": "Schimetz Hanß Baunthofgübln [~]",
+   "houses": [
+    "55"
+   ],
+   "house": "55",
+   "verdict": "PT_PODATKA_NI_NI_St5_PARCELE"
+  },
+  {
+   "page": 41,
+   "row": 82,
+   "name": "Schumetz Juttan [~]",
+   "houses": [
+    "56"
+   ],
+   "house": "56",
+   "verdict": "PT_PODATKA_NI_NI_St5_PARCELE"
+  },
+  {
+   "page": 41,
+   "row": 83,
+   "name": "Stepanitsch Jakob Laurentzhow Gütte [~]",
+   "houses": [
+    "58"
+   ],
+   "house": "58",
+   "verdict": "PT_PODATKA_NI_NI_St5_PARCELE"
+  },
+  {
+   "page": 41,
+   "row": 84,
+   "name": "Schimey Stoffe Lorenz how Gribatsche [~]",
+   "houses": [
+    "31"
+   ],
+   "house": "31",
+   "ptOwner": "Bring Marko",
+   "ptId": "hiša-32",
+   "similarity": 0.14,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 42,
+   "row": 85,
+   "name": "Schello Georg Bauer/b zu Gribla [~]",
+   "houses": [
+    "60"
+   ],
+   "house": "60",
+   "verdict": "PT_PODATKA_NI_NI_St5_PARCELE"
+  },
+  {
+   "page": 42,
+   "row": 86,
+   "name": "Strauß Niklo Bauer/b zu Gribla [~]",
+   "houses": [
+    "71"
+   ],
+   "house": "71",
+   "ptOwner": "Filak Mihel",
+   "ptId": "hiša-73",
+   "similarity": 0.2,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 43,
+   "row": 87,
+   "name": "Strauß Mariz' baur/kaufgäbl [~]",
+   "houses": [
+    "72"
+   ],
+   "house": "72",
+   "ptOwner": "Dikobutar Mihelo",
+   "ptId": "hiša-74",
+   "similarity": 0.11,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 43,
+   "row": 88,
+   "name": "Urlich Georg baur/kauf/gübln [~]",
+   "houses": [
+    "32"
+   ],
+   "house": "32",
+   "ptOwner": "Bring Marko",
+   "ptId": "hiša-33",
+   "similarity": 0.33,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 44,
+   "row": 89,
+   "name": "Ulrich Pitter Bauer zu Gribla [~]",
+   "houses": [
+    "31"
+   ],
+   "house": "31",
+   "ptOwner": "Bring Marko",
+   "ptId": "hiša-32",
+   "similarity": 0.33,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 44,
+   "row": 90,
+   "name": "Ulrich Mida Bauer zu Gribla [~]",
+   "houses": [
+    "68"
+   ],
+   "house": "68",
+   "ptOwner": "Dikobutar Rupre",
+   "ptId": "hiša-70",
+   "similarity": 0.0,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 44,
+   "row": 91,
+   "name": "Uebersprungene Parzellen=Numern. [~]",
+   "houses": [],
+   "verdict": "BREZ_HISNE_ST"
+  },
+  {
+   "page": 44,
+   "row": 92,
+   "name": "Waisenkinder [~] von Weixelbaum",
+   "houses": [
+    "6"
+   ],
+   "house": "6",
+   "ptOwner": "Tilel Miho",
+   "ptId": "hiša-6",
+   "similarity": 0.17,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 45,
+   "row": 93,
+   "name": "Verbitzcher Mathä bau[er]haußgütl [~]",
+   "houses": [
+    "64"
+   ],
+   "house": "64",
+   "ptOwner": "Šimec Jhan",
+   "ptId": "hiša-66",
+   "similarity": 0.18,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 45,
+   "row": 94,
+   "name": "Wardian Mathä bau[er]haußgütlein [~]",
+   "houses": [
+    "1"
+   ],
+   "house": "1",
+   "ptOwner": "Veith (H.) [~]",
+   "ptId": "hiša-1",
+   "similarity": 0.14,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 46,
+   "row": 95,
+   "name": "Waschitzste M. mit Braut von Weidendorf [~]",
+   "houses": [
+    "6"
+   ],
+   "house": "6",
+   "ptOwner": "Tilel Miho",
+   "ptId": "hiša-6",
+   "similarity": 0.09,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 46,
+   "row": 96,
+   "name": "Wentschitsch M. Pfgl. Baur. b. Weidendorf [~]",
+   "houses": [
+    "7"
+   ],
+   "house": "7",
+   "ptOwner": "Lebing/Lebring Mädl. [~]",
+   "ptId": "hiša-6b",
+   "similarity": 0.17,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 47,
+   "row": 97,
+   "name": "Zollamt S. L. Aversarial in Gribla [~]",
+   "houses": [
+    "70"
+   ],
+   "house": "70",
+   "ptOwner": "Filak Peter",
+   "ptId": "hiša-72",
+   "similarity": 0.29,
+   "verdict": "DIVERGENCA"
+  },
+  {
+   "page": 48,
+   "row": 98,
+   "name": "Wge mit der Gemeinde Gribla [~]",
+   "houses": [],
+   "verdict": "BREZ_HISNE_ST"
+  },
+  {
+   "page": 48,
+   "row": 99,
+   "name": " [~]",
+   "houses": [],
+   "verdict": "BREZ_HISNE_ST"
+  },
+  {
+   "page": 49,
+   "row": 100,
+   "name": "J. Lipovšek zu Griblje [~]",
+   "houses": [],
+   "verdict": "BREZ_HISNE_ST"
   }
  ],
  "ptCoveredByPua": [
@@ -875,6 +1246,8 @@
   15.0,
   16.0,
   17.0,
+  18.0,
+  19.0,
   20.0,
   21.0,
   22.0,
@@ -884,37 +1257,35 @@
   27.0,
   28.0,
   29.0,
+  30.0,
   31.0,
+  32.0,
   33.0,
   34.0,
   36.0,
   37.0,
+  38.0,
   40.0,
   61.0,
   62.0,
   63.0,
+  64.0,
   66.0,
   67.0,
-  69.0
+  68.0,
+  69.0,
+  70.0,
+  71.0,
+  72.0
  ],
  "ptMissingInPua": [
   7.5,
   8.5,
-  18.0,
-  19.0,
   23.0,
-  30.0,
-  32.0,
   35.0,
-  38.0,
   39.0,
-  64.0,
   65.0,
-  68.0,
-  70.0,
-  71.0,
   71.5,
-  72.0,
   73.0,
   74.0,
   75.0,
@@ -949,12 +1320,16 @@
   41.0,
   42.0,
   43.0,
+  45.0,
   46.0,
   47.0,
   48.0,
   53.0,
   54.0,
+  55.0,
+  56.0,
   57.0,
+  58.0,
   59.0,
   60.0
  ],
@@ -1013,6 +1388,26 @@
    "bestMatch": "jozef",
    "puaHouses": [
     "21"
+   ]
+  },
+  "strau": {
+   "bestMatch": "strau",
+   "puaHouses": [
+    "45",
+    "71",
+    "72"
+   ]
+  },
+  "schimetz": {
+   "bestMatch": "schmerz",
+   "puaHouses": [
+    "55"
+   ]
+  },
+  "schumetz": {
+   "bestMatch": "schmerz",
+   "puaHouses": [
+    "56"
    ]
   }
  }

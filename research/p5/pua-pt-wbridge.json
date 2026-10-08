@@ -10,13 +10,13 @@
     "ptRowsWithW": 43,
     "wRefsTotal": 45,
     "wDistinct": 26,
-    "wWithPua": 22,
-    "wNoPua": 4,
-    "match": 6,
-    "partial": 9,
+    "wWithPua": 25,
+    "wNoPua": 1,
+    "match": 8,
+    "partial": 10,
     "mismatch": 7,
-    "puaNumsNoW": 28,
-    "puaRows": 69
+    "puaNumsNoW": 39,
+    "puaRows": 101
   },
   "join": [
     {
@@ -40,6 +40,18 @@
           "page": 3,
           "row": 1,
           "name": "Hölloschitsch Wufa Luina hau Dragosche [~]",
+          "ambiguous": false
+        },
+        {
+          "page": 35,
+          "row": 69,
+          "name": "Gemeinde Malfz Brandhofgässl [~]",
+          "ambiguous": false
+        },
+        {
+          "page": 45,
+          "row": 94,
+          "name": "Wardian Mathä bau[er]haußgütlein [~]",
           "ambiguous": false
         }
       ],
@@ -426,6 +438,12 @@
           "row": 52,
           "name": "Millej [~]",
           "ambiguous": false
+        },
+        {
+          "page": 39,
+          "row": 78,
+          "name": "Schimey Maro baua haußgäbla [~]",
+          "ambiguous": false
         }
       ],
       "bestTokenSim": 0.833,
@@ -457,12 +475,30 @@
           "row": 34,
           "name": "Krischan Mandschurischka / Griblje [~]",
           "ambiguous": false
+        },
+        {
+          "page": 35,
+          "row": 70,
+          "name": "Gemeinde Malfz Brandhof Smibuche [~]",
+          "ambiguous": false
+        },
+        {
+          "page": 41,
+          "row": 84,
+          "name": "Schimey Stoffe Lorenz how Gribatsche [~]",
+          "ambiguous": false
+        },
+        {
+          "page": 44,
+          "row": 89,
+          "name": "Ulrich Pitter Bauer zu Gribla [~]",
+          "ambiguous": false
         }
       ],
-      "bestTokenSim": 0.375,
+      "bestTokenSim": 0.4,
       "bestPair": [
-        "michael",
-        "krischan"
+        "marlo",
+        "malfz"
       ],
       "verdict": "MISMATCH"
     },
@@ -488,13 +524,20 @@
           "isParcel": true
         }
       ],
-      "pua": [],
-      "verdict": "NO_PUA (napoved za str. 35–49)",
-      "expectedOwner": [
-        "Greg Ulrich",
-        "Piberig Ulrich",
-        "Greg Ulrich"
-      ]
+      "pua": [
+        {
+          "page": 43,
+          "row": 88,
+          "name": "Urlich Georg baur/kauf/gübln [~]",
+          "ambiguous": false
+        }
+      ],
+      "bestTokenSim": 0.667,
+      "bestPair": [
+        "ulrich",
+        "urlich"
+      ],
+      "verdict": "PARTIAL"
     },
     {
       "W": 36,
@@ -580,14 +623,20 @@
           "row": 61,
           "name": "Georg Rußa Bauer zu Griblje [~]",
           "ambiguous": false
+        },
+        {
+          "page": 42,
+          "row": 85,
+          "name": "Schello Georg Bauer/b zu Gribla [~]",
+          "ambiguous": false
         }
       ],
-      "bestTokenSim": 0.2,
+      "bestTokenSim": 1.0,
       "bestPair": [
-        "joger",
-        "georg"
+        "schello",
+        "schello"
       ],
-      "verdict": "MISMATCH"
+      "verdict": "MATCH"
     },
     {
       "W": 61,
@@ -710,12 +759,20 @@
           "isParcel": true
         }
       ],
-      "pua": [],
-      "verdict": "NO_PUA (napoved za str. 35–49)",
-      "expectedOwner": [
-        "Varbutek Mufa",
-        "Jörg Georg"
-      ]
+      "pua": [
+        {
+          "page": 45,
+          "row": 93,
+          "name": "Verbitzcher Mathä bau[er]haußgütl [~]",
+          "ambiguous": false
+        }
+      ],
+      "bestTokenSim": 0.455,
+      "bestPair": [
+        "varbutek",
+        "verbitzcher"
+      ],
+      "verdict": "MISMATCH"
     },
     {
       "W": 65,
@@ -787,11 +844,20 @@
           "isParcel": true
         }
       ],
-      "pua": [],
-      "verdict": "NO_PUA (napoved za str. 35–49)",
-      "expectedOwner": [
-        "Malt Ulrich"
-      ]
+      "pua": [
+        {
+          "page": 44,
+          "row": 90,
+          "name": "Ulrich Mida Bauer zu Gribla [~]",
+          "ambiguous": false
+        }
+      ],
+      "bestTokenSim": 1.0,
+      "bestPair": [
+        "ulrich",
+        "ulrich"
+      ],
+      "verdict": "MATCH"
     }
   ],
   "puaNumsWithoutW": [
@@ -808,51 +874,41 @@
     15,
     16,
     17,
+    18,
+    19,
+    30,
     33,
     34,
     37,
+    38,
     40,
     41,
     42,
     43,
+    45,
     46,
     48,
     53,
     54,
+    55,
+    56,
     57,
+    58,
     59,
     67,
-    69
+    69,
+    70,
+    71,
+    72
   ],
   "predictions": {
     "note": "W številke brez PUA protistrani — pričakovani lastniki po PT; preverljivo ob branju strani 35–49 (P5-b).",
     "items": [
       {
-        "W": 32,
-        "expectedOwners": [
-          "Greg Ulrich",
-          "Piberig Ulrich",
-          "Greg Ulrich"
-        ]
-      },
-      {
-        "W": 64,
-        "expectedOwners": [
-          "Varbutek Mufa",
-          "Jörg Georg"
-        ]
-      },
-      {
         "W": 65,
         "expectedOwners": [
           "Bring Marko",
           "Glan Simonz"
-        ]
-      },
-      {
-        "W": 68,
-        "expectedOwners": [
-          "Malt Ulrich"
         ]
       }
     ]
