@@ -1915,3 +1915,23 @@ Stage Summary:
 - POPRAVEK P9 dokumentiran v muzeju (kartica A04 nosi popravek + razloge) — znanstvena poštenost: zavrnitev objavljene lege z merjenimi dokazi (mediana 636 m)
 - 3 NOVI URADNI VIRI (VAČ N83 identiteta, GURS WFS geometrije, eZKN mreža) + zgodovinska ugotovitev o meji 1825 k.o. (segala do Fučkovcev)
 - Projekt: 0 odprtih issuejev; QA 22/22; PROD E2E čist; 22 QA testov; preklicana zahteva za nov žeton GitLab (kanonični repo)
+
+---
+Task ID: P11
+Agent: Z.ai Code (glavni agent)
+Task: Revizija "premikanja" repozitorija — uporabnik pravi, da ni nič premaknil ("nisem jaz nic premescal preveri kaj se zgodilo samo ti delas z njim ali si se pomotoma naredil kaj preglej in nadaljuj") + nov GitLab žeton; popolna preiskava in razjasnitev
+
+Work Log:
+- Uporabnik poslal nov PAT (glpat-c47P7…, ime "dsyy", lastnik robert.pezdirc12, scope api+write_repository, aktiviran 2026-10-08, poteče 2026-11-07) + "nadaljuj"; nato vprašal, kaj se je zgodilo s "premikanjem".
+- UGOTOVITEV #1 (preiskava API): markec-group/muzej → 301 preusmeritev → projekt 87313303, ki zdaj stoji na robert.pezdirc12/muzej (ISTI projekt kot deploy remote!). Zadnji commit na oddaljenem: 0b31a96 = lokalni HEAD.
+- UGOTOVITEV #2 (korene v worklogu, vrstice 283–346, Task 10): prestavitev NI danesšnja niti včerajšnja — izvedena 2026-10-07 PO UPORABNIKOVEM IZRECNEM NAROČILU ("mora bit samo eden, nic ne zbrisi, logicno zdruzi"): (1) stari markec-group/muzej (87313405) preimenovan v markec-group/muzej-arhiv, (2) robert.pezdirc12/muzej (87313303) prenesen V skupino markec-group, (3) Vercel Hobby ZAVRNIL zasebni skupinski repo (repo_owned_by_org) → projekt prenesen NAZAJ v osebni namespace. Preusmeritev markec-group/muzej → robert.pezdirc12/muzej je OSTANEK teh premikov (GitLab samodejno vzdržuje preusmeritve po prenosih).
+- UGOTOVITEV #3 (danesšnja seja = NIČ ni bilo "pomotoma" narejenega): VSAI klici danes so bili BRALNI (GET personal_access_tokens, GET user, GET projects, GET issues, git ls-remote) — 0 mutacij. Prvi push sprožil šele PO preiskavi, kot no-op test.
+- UGOTOVITEV #4 (P10 napačna diagnoza razjasnjena): P10 trditev "kanonični repozitorij ni sinhroniziran, nemogoč do novega žetona" je bila NAPAČNA — markec-group/muzej se preusmerja NA ISTI projekt 87313303, kamor so vsi commiti že šli. 401 = potekel star PAT (glpat-QcFeV, resnično potekel); 403 = GitLab WAF blok (HTML "Blocked - GitLab" — dokazan tudi danes na bralnem klicu GET /repository/branches!). Sinhronizacija nikoli ni bila potrebna.
+- VERIFICIRANO STANJE: oddaljeni HEAD = lokalni HEAD = 0b31a96; 17/17 issuejev zaprtih na 87313303; muzej-arhiv (87313405) ŠE OBSTOJA (archived=true, opis kaže na edini repozitorij, vsebina identična); skupina markec-group ima 5 projektov (stariguthubmuzej, discover-slovenia-ai, roksal-railing-manager, muzej-arhiv [A], markec-project); PROD /api/qa → {"ok":true,"passed":22,"failed":0} (prvi lastni parser je lažno sprožil alarm — iskal je status:"PASS", odgovor uporablja pass:true; surova preverba potrdila 22/22).
+- Akcije: remote "gitlab" posodobljen — URL markec-group/muzej.git (preusmerjen, potekel žeton) → https://oauth2:<novi žeton>@gitlab.com/robert.pezdirc12/muzej.git; novi žeton shranjen v local-gitlab.pat (chmod 600, preverjeno gitignored); push test gitlab remote → "Everything up-to-date" (1× WAF 403 retry); push test deploy remote → "Everything up-to-date" (1× WAF 403 retry); deploy žeton (ime "ydfgv", poteče 2026-10-14 — čez 6 dni!) ostaja primarna pot, novi žeton (2026-11-07) pa rezerva/kontinuiteta.
+
+Stage Summary:
+- SKLED: uporabnik ima prav — NI on premaknil. Prestavitev je izvedel agent 2026-10-7 (Task 10) po uporabnikovem naročilu združitve dveh muzejev; preusmeritev je dokumentiran ostanek. Današnja seja: 0 mutacij pred testom, ničesar "pomotoma".
+- Nič NI izgubljeno: en sam aktivni muzej 87313303 (robert.pezdirc12/muzej, Vercel-povezan) z vsemi commiti + 17 zaprtimi issueji; arhiv 87313405 nedotaknjen.
+- P10 "sinhronizacija kanoničnega" = napačna diagnoza (isti projekt prek preusmeritve; 403 = WAF). Novi žeton kljub temu koristen — stari deploy žeton poteče 2026-10-14.
+- Oba remote-a kažeta na isti projekt z delujočimi žetoni; PROD 22/22; delovno drevo čisto.
