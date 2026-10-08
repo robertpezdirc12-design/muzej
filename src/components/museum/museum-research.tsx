@@ -167,7 +167,7 @@ export function MuseumResearch() {
 
         {/* ——— 1. PROVIENENČNI AUDIT 113 ZAPISOV ——— */}
         {tab === "audit" && (
-          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mt-6 grid gap-4">
+          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mt-6 grid grid-cols-1 gap-4">
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
               {[
                 { label: t("zapisov skupaj", "records total"), value: audit.totalRecords },
@@ -186,7 +186,7 @@ export function MuseumResearch() {
               ))}
             </div>
 
-            <div className="grid gap-4 lg:grid-cols-2">
+            <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
               <div className="rounded-xl border bg-card p-6 shadow-sm">
                 <h3 className="flex items-center gap-2 font-display text-lg font-semibold">
                   <CheckCircle2 className="size-4 text-primary" aria-hidden="true" />
@@ -265,7 +265,7 @@ export function MuseumResearch() {
 
         {/* ——— 2. PREPISI KURRENT ——— */}
         {tab === "kurrent" && (
-          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mt-6 grid gap-4">
+          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mt-6 grid grid-cols-1 gap-4">
             <div className="min-w-0 rounded-xl border bg-card p-6 shadow-sm">
               <h3 className="flex items-center gap-2 font-display text-lg font-semibold">
                 <ScrollText className="size-4 text-primary" aria-hidden="true" />
@@ -358,7 +358,7 @@ export function MuseumResearch() {
 
         {/* ——— 3. GEODETSKI VIRI ——— */}
         {tab === "geodata" && (
-          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mt-6 grid gap-4">
+          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mt-6 grid grid-cols-1 gap-4">
             <div className="rounded-xl border bg-card p-6 shadow-sm">
               <h3 className="flex items-center gap-2 font-display text-lg font-semibold">
                 <MapIcon className="size-4 text-primary" aria-hidden="true" />
@@ -405,7 +405,7 @@ export function MuseumResearch() {
 
         {/* ——— 4. ŠOLSKI ARHIV ——— */}
         {tab === "sola" && (
-          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mt-6 grid gap-4">
+          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mt-6 grid grid-cols-1 gap-4">
             <div className="rounded-xl border bg-card p-6 shadow-sm">
               <h3 className="flex items-center gap-2 font-display text-lg font-semibold">
                 <GraduationCap className="size-4 text-primary" aria-hidden="true" />
@@ -453,7 +453,7 @@ export function MuseumResearch() {
 
         {/* ——— 5. POSEBNE RAZISKAVE ——— */}
         {tab === "posebno" && (
-          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mt-6 grid gap-4 lg:grid-cols-2">
+          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mt-6 grid grid-cols-1 gap-4 lg:grid-cols-2">
             {/* Gaspari */}
             <div className="rounded-xl border bg-card p-6 shadow-sm">
               <h3 className="flex items-center gap-2 font-display text-lg font-semibold">
@@ -554,7 +554,7 @@ export function MuseumResearch() {
 
         {/* ——— 6. NEGATIVNI REZULTATI ——— */}
         {tab === "negativni" && (
-          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mt-6 grid gap-4">
+          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mt-6 grid grid-cols-1 gap-4">
             <div className="rounded-xl border bg-card p-6 shadow-sm">
               <h3 className="flex items-center gap-2 font-display text-lg font-semibold">
                 <FileX2 className="size-4 text-primary" aria-hidden="true" />
@@ -591,7 +591,7 @@ export function MuseumResearch() {
 
         {/* ——— 7. PRENOS IZ ARHIVA (issue #16) ——— */}
         {tab === "arhiv" && (
-          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mt-6 grid gap-4">
+          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mt-6 grid grid-cols-1 gap-4">
             <div className="rounded-xl border bg-card p-6 shadow-sm">
               <h3 className="flex items-center gap-2 font-display text-lg font-semibold">
                 <Archive className="size-4 text-primary" aria-hidden="true" />
@@ -689,7 +689,7 @@ export function MuseumResearch() {
         )}
         {/* ——— 8. ZAPOLNJEVANJE VRZELI (issue #17) ——— */}
         {tab === "vrzeli" && (
-          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mt-6 grid gap-4">
+          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mt-6 grid grid-cols-1 gap-4">
             {/* glava: verdikt */}
             <div className="rounded-xl border bg-card p-6 shadow-sm">
               <h3 className="flex items-center gap-2 font-display text-lg font-semibold">
@@ -734,8 +734,8 @@ export function MuseumResearch() {
                   )}
                 </p>
               </div>
-              <div className="max-h-96 overflow-y-auto">
-                <table className="w-full text-sm">
+              <div className="max-h-96 overflow-y-auto overflow-x-auto">
+                <table className="w-full min-w-[480px] text-sm">
                   <thead className="sticky top-0 bg-secondary/60 text-left text-[10px] font-mono uppercase tracking-wide text-muted-foreground">
                     <tr>
                       <th className="px-6 py-2">{t("Kultura (kot zapisano)", "Culture (as written)")}</th>
@@ -782,7 +782,7 @@ export function MuseumResearch() {
             </div>
 
             {/* PR + PS + PZ grid */}
-            <div className="grid gap-4 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
               <div className="rounded-xl border bg-card p-6 shadow-sm">
                 <h4 className="font-display text-base font-semibold">{t("PR — opis meje (8. 4. 1825)", "PR — boundary description (8 Apr 1825)")}</h4>
                 <dl className="mt-3 space-y-2 text-xs">
@@ -918,8 +918,8 @@ export function MuseumResearch() {
                 {lang === "si" ? PUA_PT_CROSS.findingSi : PUA_PT_CROSS.findingEn}
               </p>
               <div className="mt-3 overflow-hidden rounded-lg border">
-                <div className="max-h-60 overflow-y-auto">
-                  <table className="w-full text-left text-[11px]">
+                <div className="max-h-60 overflow-y-auto overflow-x-auto">
+                  <table className="w-full min-w-[420px] text-left text-[11px]">
                     <thead className="sticky top-0 bg-secondary/60 backdrop-blur">
                       <tr className="font-mono text-[10px] uppercase tracking-wide text-muted-foreground">
                         <th className="px-3 py-2">{t("PUA priimek", "PUA surname")}</th>
@@ -993,8 +993,8 @@ export function MuseumResearch() {
                 {lang === "si" ? PT_PALEOGRAPHY_P3.methodSi : PT_PALEOGRAPHY_P3.methodEn}
               </p>
               <div className="mt-3 overflow-hidden rounded-lg border">
-                <div className="max-h-96 overflow-y-auto">
-                  <table className="w-full text-left text-[11px]">
+                <div className="max-h-96 overflow-y-auto overflow-x-auto">
+                  <table className="w-full min-w-[420px] text-left text-[11px]">
                     <thead className="sticky top-0 bg-secondary/60 backdrop-blur">
                       <tr className="font-mono text-[10px] uppercase tracking-wide text-muted-foreground">
                         <th className="px-3 py-2">{t("hiša", "house")}</th>
