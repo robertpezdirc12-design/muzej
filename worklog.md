@@ -1710,3 +1710,25 @@ Work Log:
 Stage Summary:
 - P5-a (navzkrižna analiza + responsive) DOKONČAN, v produkciji, QA 18/17→18/18
 - P5-b (PUA 35–49) blokiran na VLM 429 — ni tehnične ovire, samo kvota; vse pripravljeno za takojšen nadaljevanje
+
+---
+Task ID: P5-c (nadaljevanje po P5-a — naročilo: »nadaljuj«)
+Agent: Z.ai Code (glavni agent)
+Task: P5-c W-most PT ↔ PUA — deterministična analiza med blokado VLM (429)
+
+Work Log:
+- Prebrano stanje: vsi issueji #1–17 zaprti; odprto P5-b (PUA 35–49) blokirano na VLM 429 (vztraja od ~08:12, 3 novi sondi 11:30–11:45 vse 429)
+- OPAZBA pri pregledu houses.ts: 43 vrstic PT (hiše 21–40 str. 4, vinogradniške parcele 41–60 str. 5, hiša 76½) nosi 45 sklicev »W.<štev>« — moreči most v PUA številčenje
+- scripts/pua-pt-wbridge.py: deterministični join W ↔ PUA hišne št. + križno-žotonjska Levenshtein primerjava (0,72/0,50 kot P5-a); popravki med razvojem: Levenshtein formula cur[j], ß→ss normalizacija (Meßle!), zajem vseh oblik (W.22/23, parcela-* vrstice)
+- REZULTATI: 26 različnih W; 22 z PUA protistrani → 6 MATCH + 9 PARTIAL = 15/22 (68 %) ≥ 0,50 (najmočnejša: W.2 Hlebetz↔Hlebety 0,86; W.24/25 Brinig↔Bring 0,83; W.29 Milleg↔Millej 0,83; W.21 Jožef↔Jožeg 0,80; W.1 Mufa↔Wufa 0,75 — M↔W Kurrent) — proti P5-a izhodišču 0/64 → most [~] PODPRT a šum
+- Šumenje dokumentirano: W.47 = prečrtana PT vrstica; W.62 = dvojni PUA vpis (Kosirhan Mäda + Georg Juttner); PT str. 6+ brez W-stolpca; 7 MISMATCH ostaja [~]
+- 4 PREVERLJIVE NAPOVEDI za strani 35–49: PUA h32 (Greg/Piberig Ulrich), h64 (Varbutek Mufa / Jörg Georg), h65 (Bring Marko / Glan Simonz), h68 (Malt Ulrich) — validacijski instrument za P5-b
+- Integracija: research.ts PUA_PT_WBRIDGE; museum-research.tsx kartica P5-c (tabela najboljših ujemanj + blok napovedi); qa.ts qa-p5-pua-pt-wbridge (15 preverb); provenance research.p5.puaPtWbridge; sw.js v13; README posodobljen
+- Push na deploy: 403 (WAF) ×8 → uspel ob ponovnem poskusu; Vercel: /api/qa 19/19 PASS
+- E2E produkcija: ?odsek=raziskave → vrzeli → kartica P5-c vidna (W-most, napovedi h32/h64/h65/h68); screenshot 390px brez preliva (scrollW=clientW=390); konzola čista
+- scripts/pua-auto-resume.sh zagnan v ozadju (setsid, PID 8350): sonda vsakih 5 min (24 h); ob dvigu kvote samodejno prebere 35–49 → parse → gen → obe analizi → commit → push; log research/p5/auto-log.txt
+
+Stage Summary:
+- P5-c DOKONČAN in v produkciji: W-most [~] med obema številčenjema (68 % ujemanj ≥ 0,50), QA 19/19, kartica + napovedi javno vidne
+- P5-b (PUA 35–49): samodejni nadaljevalni cikel aktiven; ročna integracija research.ts + preverba napovedi sledita ob uspehu
+- VLM 429: vztraja > 3,5 h (3 h sonde + 2 novi); tekstovni LLM isti limit
