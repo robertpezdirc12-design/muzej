@@ -238,8 +238,8 @@ export function MuseumAtlas({
             </div>
             <p className="mt-3 max-w-2xl text-muted-foreground">
               {t(
-                "Zgodovinska katastrska slika vasi Griblje (Grüble) iz franciscejskega katastra: dva georeferencirana list, register hiš 1–98 (80 prebranih zapisov) z lastniki, arhivski viri z dokazno verigo in primerjava 1825 ↔ danes.",
-                "The historical cadastral picture of the village of Griblje (Grüble) from the Franciscan cadastre: two georeferenced sheets, a register of houses 1–98 (80 transcribed entries) with owners, archival sources with an evidence chain, and an 1825 ↔ today comparison.",
+                "Zgodovinska katastrska slika vasi Griblje (Grüble) iz franciscejskega katastra: trije georeferencirani listi (A01/A02 GEOTRUTH, A04 prek ovina Kolpe — P9), register hiš 1–98 (80 prebranih zapisov) z lastniki, arhivski viri z dokazno verigo in primerjava 1825 ↔ danes.",
+                "The historical cadastral picture of the village of Griblje (Grüble) from the Franciscan cadastre: three georeferenced sheets (A01/A02 GEOTRUTH, A04 via the Kolpa bend — P9), a register of houses 1–98 (80 transcribed entries) with owners, archival sources with an evidence chain, and an 1825 ↔ today comparison.",
               )}
             </p>
           </div>
