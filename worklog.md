@@ -1673,3 +1673,40 @@ Stage Summary:
 - P4 DOKONČAN: PUA 34/49 strani (69 %), 69 vnosov (zap. št. 1–68 + institucija v. 0); surovi izpisi v repo; produkcija zelena
 - Strani 35–49 (priimki P–Ž, ~15 strani) ostajajo TO_COLLECT — vzrok: VLM 429 rate-limit (ne 401); metoda popolnoma ponovljiva: `bun scripts/pua-read.mjs 35..49` → `python3 scripts/pua-parse.py` → `python3 scripts/pua-gen-ts.py`
 - Vsa P4 vsebina ostaja REVIEW (strojno branje ni dokazni vir); hiša 90 še vedno ILLEGIBLE
+
+---
+Task ID: P5-a (nadaljevanje po P4 — naročilo: »odlicno nadaljuj«)
+Agent: Z.ai Code (glavni agent)
+Task: PUA 35–49 (blokirano na VLM 429) → medtem deterministična navzkrižna analiza PUA ↔ PT + responsive popravek
+
+Work Log:
+- Stanje ob začetku: vsi issueji #1–17 zaprti; zadnji commit b5124b2 (P4-zaključek, produkcija 17/17); odprto: PUA strani 35–49 (VLM 429 rate-limit od ~08:12, limit na ravni računa)
+- GitLab preverjen (WAF retry): #16 in #17 sta ŽE ZAKLJUČENA iz prejšnje seje (delo v sledeh commitov 075f754/55ddbd7/03caff3/fcb1339/623102a/e595014/b5124b2) — #16: 0 prenosov (novi repo = nabor arhiva), #17: VLM branje vseh serij; ni novih issuejev
+- VLM dostop: 429 vztraja (18+ sond 09:56–10:45; tekstovni LLM prav tako 429 — isti limit); ozadnja zanka setsid umrla (sandbox ubija detached procese — znan problem) → nadomeščena s.setForeground sondo scripts/pua-probe-read.mjs (čaka 60 s × 7, nato bere)
+- P5-a DETERMINISTIČNA ANALIZA (brez AI): scripts/pua-pt-cross.py — Levenshtein podobnost priimkov (0,72/0,50), PUA 69 vnosov ↔ PT 84 hišnih vrstic
+  * UGOTOVITEV: 0/64 neposrednih ujemanj priimka pri isti hišni št.; 51 divergenc; 8 priimkov v obeh registrih (Bring, Hlebety, Kriš(t)an, Milleg) na RAZLIČNIH št.; PUA št. do ~69, PT do 98; PUA = širši nabor (nesosedi + institucije)
+  * sklep [~]: PUA = indeks lastnikov parcel z lastno hišno referenco ≠ konskripcijska številčenje PT; omejitve pošteno dokumentirane (strojna branjla, sistemska napaka VLM možna)
+  * artefakt: research/p5/pua-pt-cross.json + README.md
+- Integracija: research.ts PUA_PT_CROSS (counts, sklep, omejitve, naslednji koraki); museum-research.tsx kartica P5 (badge-i, tabela priimkov, omejitve); qa.ts qa-p5-pua-pt-cross (18/18); /api/provenance research.p5; sw.js v12
+- RESPONSIVE POPERAVEK (najden pri mobilnem testu): vrzeli grid z implicitnim auto trackom se raztegal po vsebini (531px @390px preliv) — grid-cols-1 (minmax(0,1fr)) na vseh 9 gridah museum-research.tsx; tabele PV/P5/P3 overflow-x-auto + min-w; mobilni 390px zdaj točno 390; tabele drsijo interno
+- Commit 5bff53c (P5-a) + 8a5bad1 (responsive) → push deploy → produkcija 18/18; E2E produkcija: kartica P5 v zavihku vrzeli ✓; mobilni 390px brez preliva ✓; konzola čista ✓
+
+Stage Summary:
+- P5-a DOKONČAN in v produkciji: kvantificirana navzkrižna analiza PUA↔PT (0/64, sklep [~]), QA 18/18, responsive popravek sekcije Raziskave
+- PUA 35–49: še vedno blokirano (VLM 429 > 3,5 h); sonda pripravljena, metoda popolnoma ponovljiva
+- Naslednji korak: sonda v zanki; ob dvigu limita branje 35–49 → parse → gen → integracija → ponoven zagon analize
+
+---
+Task ID: P5-a-zaključek
+Agent: Z.ai Code (glavni agent)
+Task: Zaključek P5-a — status sondiranja VLM in končna verifikacija
+
+Work Log:
+- Sondiranih skupno 33 VLM klicev (09:56–11:08, vsi 429) + tekstovni LLM 429 + web-search 429 — limit na ravni SDK računa vztraja > 5 h (od ~08:12); sklep: dolgo okno (dnevna/24 h kvota), pričakovan dvig najprezneje proti jutri zjutraj
+- PUA strani 35–49: metoda pripravljena in dokumentirana (research/p5/README.md): bun scripts/pua-probe-read.mjs (sam počaka na dvig limita in prebere) → python3 scripts/pua-parse.py → python3 scripts/pua-gen-ts.py → integracija + ponoven zagon pua-pt-cross.py
+- Produkcija: /api/qa 18/18; kartica P5 vidna; mobilni 390px brez preliva (po responsive popravku)
+- Sprotni commiti: 5bff53c (P5-a analiza) + 8a5bad1 (responsive) — oba push-ana na deploy remote (robert.pezdirc12/muzej)
+
+Stage Summary:
+- P5-a (navzkrižna analiza + responsive) DOKONČAN, v produkciji, QA 18/17→18/18
+- P5-b (PUA 35–49) blokiran na VLM 429 — ni tehnične ovire, samo kvota; vse pripravljeno za takojšen nadaljevanje
