@@ -1,0 +1,5 @@
+{
+ "page": 28,
+ "raw": "```json\n[\n  {\n    \"row\": 56,\n    \"name\": \"Poldiŕg Mufa/buͤrſn/zu Gribla\",\n    \"status\": \"\",\n    \"house\": 14,\n    \"sections\": {\n      \"I\": \"24.42.124.123.\",\n      \"II\": \"996.1092.1093.1062.1063.1064.1821.1839.1840.1854.1889.\",\n      \"IV\": \"2034.2055.2056.2087.2096.2208.2281.2286.\"\n    },\n    \"bP\": \"b.P.7.8.\",\n    \"note\": \"\"\n  },\n  {\n    \"row\": 57,\n    \"name\": \"Polcig Michael buͤrſn/zu/gribla\",\n    \"status\": \"\",\n    \"house\": 20,\n    \"sections\": {\n      \"I\": \"735:\",\n      \"II\": \"1115.1117.1118.1121.1123.1126.1128.1131.1136.1139.1142.1157.1164.1166.1181.1183.1187.\",\n      \"IV\": \"1998.2010.\"\n    },\n    \"bP\": \"\",\n    \"note\": \"\"\n  }\n]\n```\n**pageNote:** Stran je dobro ohranjena in berljiva, pisava je jasna nemška Kurrent. Vrstica 57 v stolpcu II se nadaljuje pod črto (prepisano kot en niz). Številke parcel so ločene s pikami ali dvopičji (kot izvorno zapisano).",
+ "ms": 12065
+}

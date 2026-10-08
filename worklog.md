@@ -1627,3 +1627,32 @@ Stage Summary:
 - P3 paleografska preverba PT zaključena: register hiš popravljen po 2-krožni konvergenenci (renumeracija str. 4, 15 popravkov, 4 vrstice; 105 vrstic, nič-zguba); PUA str. 11 dodana (22 vrstic, 11/49 strani)
 - Pošteno: hiša 90 ostaja ILLEGIBLE (3 divergentna branja); PUA 12–20 blokirane (VLM 401 po resetu); surovi izpisi 2. kroga izgubljeni z /tmp — strukturirani zapisi v research/p3/ + research.ts; statusi ostajajo REVIEW
 - Odprto za naslednjo fazo: PUA 12–49 ob povrnitvi VLM dostopa, človeška paleografija za dokončno potrditev
+
+---
+Task ID: P4 (nadaljevanje po #17/P3 — brez novega issueja; naročilo: »odlicno nadaljuj«)
+Agent: Z.ai Code (glavni agent)
+Task: PUA 12–49 — nadaljevanje branja lastniškega registra (P3 je blokiral VLM 401 po resetu peskovnika)
+
+Work Log:
+- Preveril stanje: vsi issueji #1–17 zaprti; worklog kaže P3 zaključek (fcb1339) z odprto fazo PUA 12–49 (blokirano na VLM 401)
+- VLM dostop TESTIRAN in OBNOVLJEN (createVision + base64 deluje; prejšnja napaka 401 → zdaj 429 rate-limit po ~35 klicih)
+- PUA PDF ponovno prenesen po VAČ metodi (uodid=373417, docid=41782; 49 strani, 6.9 MB) → download/atlas-1825/n83/PUA.pdf
+- Vseh 49 strani pretvorjenih v PNG 2.5× zoom (1626×2573) → /tmp/pua-pages/
+- scripts/pua-read.mjs: VLM branje stran-za-stranjo (1 klic/stran, Kurrent prompt, [~]/[?] oznake, 429 retry)
+- Prebrane strani 12–34 (23 strani, ~15 s/klic) → research/p3/pua-raw/pua-12..34.json (surovi izpisi, git)
+- scripts/pua-parse.py: robust parser (popravek control znakov v str. 23) → 47 strukturiranih vnosov, zap. št. 22–68 (VLM zmote št. 90/91/98/99/33-34 normalizirane po zaporedju in dokumentirane)
+- scripts/pua-gen-ts.py: generacija TS vrstic s križanjem s PT registrom (vsak vnos s hišno št. dobi PT referenco)
+- research.ts: PUA_CONTINUATION +47 vrstic (69 total, strani 3–34), 8 novih divergenc, noteSi posodobljen; KURRENT_SERIES PUA: 34 strani, 90 vnosov
+- KLJUČNE UGOTOVITVE: (1) Kirche H. Veith (str. 22, v. 44) — cerkev sv. Vida kot institucionalna lastnica [~], indikacija za PT hiši 1–2 »Veith«; (2) PUA in PT očitno številčita hiše RAZLIČNO [~]; (3) PUA ohranja hišne št. 41–60, kjer jih PT nima
+- museum-research.tsx: dinamičen header PUA kartice + P4 opomba; max-h-96 scroll za 69 vrstic
+- qa.ts: posodobljen i17 test (69/32), nov test qa-p4-pua-nadaljevanje (21 priimkov, Kirche, PT reference, TO_COLLECT 35–49); popravek strukture (p3/p4/i17 ločeni, obnovljen PT sum check)
+- sw.js v11; research/p3/README.md posodobljen (P4 blok, blokirano→rešeno)
+- QA: lint 0 napak; /api/qa 17/17 PASS; /api/provenance pua rows 69/32 strani; /api/atlas 105 hiš
+- E2E lokalno: ?odsek=raziskave → zavihek vrzeli → PUA kartica (strani 3–34, 69 vnosov, P4 opomba, Kirche/Höflehner/Leiner/Pfister vrstice) ✓; kartica brez preliva ✓; konzola čista ✓
+- Zanka v ozadju (setsid) še poskuša brati 35–49 (429 rate-limit vztraja)
+
+Stage Summary:
+- PUA: 11 → 34 strani (69 % registra), 22 → 69 vnosov (zap. št. 1–68 + institucija v. 0); surovi VLM izpisi shranjeni v repo (research/p3/pua-raw/)
+- 3 nove raziskovalne ugotovitve [~] (cerkev sv. Vida, različno številčenje PT/PUA, hišne št. 41–60)
+- Statusi ostajajo REVIEW; strani 35–49 (priimki P–Ž) TO_COLLECT — zanka v ozadju nadaljuje, ob uspehu sledi P5
+- Naslednji korak: commit + push + produkcija; potem (če se limit dvigne) strani 35–49

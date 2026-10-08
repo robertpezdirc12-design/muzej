@@ -357,11 +357,11 @@ export function runQA(): QAReport {
   if (PZ_ECONOMY_1825.population.male + PZ_ECONOMY_1825.population.female !== PZ_ECONOMY_1825.population.total) {
     i17Errors.push("PZ demografija se ne sešteje");
   }
-  // PUA: 18 vrstic str. 3–10 + 4 vrstice P3 str. 11 = 22
-  if (PUA_CONTINUATION.rows.length !== 22 || PUA_CONTINUATION.pagesRead.length !== 9) {
-    i17Errors.push(`PUA nadaljevanje: ${PUA_CONTINUATION.rows.length} vrstic / ${PUA_CONTINUATION.pagesRead.length} strani (pričakovano 22/9 po P3)`);
+  // PUA: 18 vrstic str. 3–10 + 4 vrstice P3 str. 11 + 47 vrstic P4 str. 12–34 = 69
+  if (PUA_CONTINUATION.rows.length !== 69 || PUA_CONTINUATION.pagesRead.length !== 32) {
+    i17Errors.push(`PUA nadaljevanje: ${PUA_CONTINUATION.rows.length} vrstic / ${PUA_CONTINUATION.pagesRead.length} strani (pričakovano 69/32 po P4)`);
   }
-  // PT pregled: vsota verdiktov = pregledanih vrstic; register ostaja 80
+  // PT pregled: vsota verdiktov = pregledanih vrstic
   const sum = PT_REVIEW_2026.summary.confirmed + PT_REVIEW_2026.summary.corrections +
     PT_REVIEW_2026.summary.additionalRows + PT_REVIEW_2026.summary.repoOnly + PT_REVIEW_2026.summary.illegible;
   if (sum !== PT_REVIEW_2026.reviewedRows) {
@@ -498,11 +498,11 @@ export function runQA(): QAReport {
       p3Errors.push(`PUA str. 11: vnos ${nm} manjka`);
     }
   }
-  // KURRENT_SERIES posodobljen (PT 84, PUA 11 strani)
+  // KURRENT_SERIES posodobljen (PT 84, PUA 34 strani po P4)
   const ptSeries = KURRENT_SERIES.find((s) => s.code === "PT");
   const puaSeries = KURRENT_SERIES.find((s) => s.code === "PUA");
-  if (ptSeries?.structuredEntries !== 84 || puaSeries?.pagesTranscribed !== 11) {
-    p3Errors.push("KURRENT_SERIES PT/PUA nista posodobljena po P3");
+  if (ptSeries?.structuredEntries !== 84 || puaSeries?.pagesTranscribed !== 34 || puaSeries?.structuredEntries !== 90) {
+    p3Errors.push("KURRENT_SERIES PT/PUA nista posodobljena po P3/P4");
   }
   push(
     "qa-p3-paleografija",
@@ -512,6 +512,69 @@ export function runQA(): QAReport {
     p3Errors.length === 0
       ? `Register 105 vrstic (hiša 41 odstranjena, dvojnica 34 dokumentirana); 15 popravkov + 4 vrstice aplicirane ob 2-krožni konvergenci (Veith 1, Lebing 7/8, Bödig 7½/8½, Brinig 35–40, Strauß 76/79/81–84, Ihmeyer 96, Zollamt 98, K-priimek 20); hiša 90 ostaja divergentna; PUA str. 11 +4 vnosi (Hlebety/Huditsch/Husitsch/Hutweiz); statusi REVIEW`
       : p3Errors.join("; "),
+  );
+
+  // 17. P4 — PUA nadaljevanje (str. 12–34): struktura, ključni priimki, križanje s PT
+  const p4Errors: string[] = [];
+  const p4All = PUA_CONTINUATION.rows.filter((r) => r.page >= 12);
+  if (p4All.length !== 47) {
+    p4Errors.push(`P4 vrstic: ${p4All.length} ≠ 47`);
+  }
+  const p4RowsNum = p4All.map((r) => r.row);
+  if (p4RowsNum.length === 47 && (p4RowsNum[0] !== 22 || p4RowsNum[46] !== 68)) {
+    p4Errors.push(`P4 zap. št.: ${p4RowsNum[0]}–${p4RowsNum[46]} (pričakovano 22–68)`);
+  }
+  // ključni priimki P4 (vsak iz druge strani)
+  const p4Surnames: [number, string][] = [
+    [12, "Höflehner"],
+    [13, "Jakobstitzsch"],
+    [14, "Jankovitsche"],
+    [16, "Mäusel"],
+    [17, "Loral"],
+    [18, "Krischan"],
+    [20, "Kosirhan"],
+    [21, "Grönig"],
+    [22, "Wundsch"],
+    [23, "Hlobutschar"],
+    [24, "Lukentitz"],
+    [25, "Rappar"],
+    [26, "Mallestitak"],
+    [27, "Mandl"],
+    [28, "Polcig"],
+    [29, "Muhč"],
+    [30, "Leiner"],
+    [31, "Rußa"],
+    [32, "Gnoy"],
+    [33, "Pasticz"],
+    [34, "Pfister"],
+  ];
+  for (const [pg, nm] of p4Surnames) {
+    if (!PUA_CONTINUATION.rows.some((r) => r.page === pg && r.nameAsWritten.includes(nm))) {
+      p4Errors.push(`P4 str. ${pg}: priimek ${nm} manjka`);
+    }
+  }
+  // cerkev sv. Vida — institucija (hišna št. 0 = konvencija za institucije)
+  const kirche = PUA_CONTINUATION.rows.find((r) => r.nameAsWritten.includes("Kirche"));
+  if (!kirche || kirche.page !== 22 || kirche.row !== 44 || (kirche.houseNos.length !== 0 && kirche.houseNos[0] !== "0")) {
+    p4Errors.push("P4: Kirche H. Veith (str. 22, v. 44, institucija) manjka ali pokvarjen");
+  }
+  // križanje s PT: vsak vnos s hišno št. mora imeti PT referenco v confidence
+  const withHouse = PUA_CONTINUATION.rows.filter((r) => r.page >= 12 && r.houseNos.length > 0 && r.houseNos[0] !== "0");
+  if (!withHouse.every((r) => r.confidence.includes("PT"))) {
+    p4Errors.push("P4: kakšen vnos s hišno št. nima PT reference v confidence");
+  }
+  // PUA strani 35–49 morajo ostati TO_COLLECT v opombi
+  if (!PUA_CONTINUATION.noteSi.includes("35–49") || !PUA_CONTINUATION.noteSi.includes("TO_COLLECT")) {
+    p4Errors.push("P4: opomba mora dokumentirati strani 35–49 kot TO_COLLECT");
+  }
+  push(
+    "qa-p4-pua-nadaljevanje",
+    "P4 PUA nadaljevanje: strani 12–34 (47 vnosov, zap. št. 22–68), Kirche H. Veith, križanje s PT, strani 35–49 ostajajo TO_COLLECT",
+    "P4 PUA continuation: pages 12–34 (47 entries, rows 22–68), Kirche H. Veith, PT cross-check, pages 35–49 remain TO_COLLECT",
+    p4Errors.length === 0,
+    p4Errors.length === 0
+      ? `23 strani (12–34) po 1 VLM klic; 47 vnosov: Höflehner, Jakobstitzsch, Jankovitsche, Krischan, Loral, Kosirhan, Grönig, Wundsch, Bučar, Kirche H. Veith (cerkev sv. Vida [~]), Hlobutschar, Lukentitz, Rappar, Millea, Mallestitak, Mandl, Grangl, Polcig, Muhč, Leiner, Rußa, Juttner, Jhan, Gnoy, Pasticz, Prodoritche, Pfister; ključna ugotovitev: PUA ≠ PT številčenje hiš [~]; statusi REVIEW`
+      : p4Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;

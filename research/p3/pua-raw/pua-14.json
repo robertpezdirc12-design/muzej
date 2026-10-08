@@ -1,0 +1,5 @@
+{
+ "page": 14,
+ "raw": "```json\n[\n  {\n    \"row\": 26,\n    \"name\": \"Jankovitsche Muffl bauernhow Zerguische\",\n    \"status\": \"\",\n    \"house\": 7,\n    \"sections\": {\n      \"I\": \"\",\n      \"II\": \"\",\n      \"III\": \"\",\n      \"IV\": \"\",\n      \"V\": \"2810, 2811\"\n    },\n    \"bP\": \"\",\n    \"note\": \"\"\n  },\n  {\n    \"row\": 27,\n    \"name\": \"Jankowitsche Juran bauernhow Zerguische\",\n    \"status\": \"\",\n    \"house\": 26,\n    \"sections\": {\n      \"I\": \"\",\n      \"II\": \"\",\n      \"III\": \"\",\n      \"IV\": \"\",\n      \"V\": \"2873, 2874, 2878, 2879\"\n    },\n    \"bP\": \"\",\n    \"note\": \"\"\n  }\n]\n```\n\n**pageNote**: Stran vsebuje le dva vnosa (št. 26 in 27). Pisava je čitljiva kurrentna kurziva, imena so zapisana v slovenizirani nemščini (npr. \"Jankovitsche\", \"bauernhow\" za kmetijo). Številke parcel so jasno zapisane. V stolpcu za status/stand ni posebnega vnosa (morda je vključeno v ime kot \"bauernhow\"). Stolpec za opombe (Anmerkung) je prazen.",
+ "ms": 10871
+}

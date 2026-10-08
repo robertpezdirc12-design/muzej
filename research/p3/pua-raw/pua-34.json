@@ -1,0 +1,5 @@
+{
+ "page": 34,
+ "raw": "```json\n[\n  {\n    \"row\": 67,\n    \"name\": \"Prodoritche Miho Bauernholds Gremium\",\n    \"status\": \"Bauernholds Gremium\",\n    \"house\": 7,\n    \"sections\": {\n      \"I\": \"\",\n      \"II\": \"\",\n      \"III\": \"\",\n      \"IV\": \"\",\n      \"V\": \"2569. 2570. 2565. 2556.\"\n    },\n    \"bP\": \"\",\n    \"note\": \"\"\n  },\n  {\n    \"row\": 68,\n    \"name\": \"Pfister Blaž Bauernholds Güble\",\n    \"status\": \"Bauernholds Güble\",\n    \"house\": 59,\n    \"sections\": {\n      \"I\": \"\",\n      \"II\": \"\",\n      \"III\": \"\",\n      \"IV\": \"\",\n      \"V\": \"\"\n    },\n    \"bP\": \"\",\n    \"note\": \"\"\n  }\n]\n```\n\n**pageNote**: Stran je deloma prazna (samo dva vnosa, št. 67 in 68). Pisava je kurrentna, berljiva. Pri imenih so prisotne slovenizacije v nemškem kontekstu (npr. \"Miho\", \"Blaž\"). Vrstica 67 vsebuje parcelne številke samo v sekciji V. Vrstica 68 nima navedenih parcel, le hišno številko 59 in podpis/oznak \"O\" spodaj.",
+ "ms": 6109
+}

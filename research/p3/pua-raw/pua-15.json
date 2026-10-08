@@ -1,0 +1,5 @@
+{
+ "page": 15,
+ "raw": "```json\n[\n  {\n    \"row\": 28,\n    \"name\": \"Janko vitnik\",\n    \"status\": \"Häusler\",\n    \"house\": 21,\n    \"sections\": {\n      \"I\": \"\",\n      \"II\": \"\",\n      \"III\": \"\",\n      \"IV\": \"\",\n      \"V\": \"221, 2518\"\n    },\n    \"bP\": \"\",\n    \"note\": \"\"\n  },\n  {\n    \"row\": 29,\n    \"name\": \"Janko vity\",\n    \"status\": \"Bauer\",\n    \"house\": 3,\n    \"sections\": {\n      \"I\": \"\",\n      \"II\": \"\",\n      \"III\": \"\",\n      \"IV\": \"2440, 2459, 2460\",\n      \"V\": \"\"\n    },\n    \"bP\": \"\",\n    \"note\": \"\"\n  }\n]\n```\n\n**pageNote**: Stran je dobro ohranjena in berljiva. Pisanje je v nemški Kurrent pisavi. Vrstica 28: ime se bere kot \"Janko vitnik\" (morda \"Vitnik\" ali \"Witnik\"), status \"Häusler\", hišna št. 21, parcela V/221 in V/2518. Vrstica 29: ime \"Janko vity\" (ali \"Vity\"), status \"Bauer\", hišna št. 3, parcele IV/2440, IV/2459, IV/2460. Zaporedni številki sta 28 in 29 (v Kurrentu izgledata kot \"28\" in \"29\").",
+ "ms": 10239
+}

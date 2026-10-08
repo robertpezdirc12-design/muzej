@@ -1,0 +1,5 @@
+{
+ "page": 19,
+ "raw": "```json\n[\n  {\n    \"row\": \"36\",\n    \"name\": \"Krischan Patta Buirshofgäubla\",\n    \"status\": \"\",\n    \"house\": \"37\",\n    \"sections\": {\n      \"I\": \"126.156.157.158.174½.205.268.276.285.286.287.288.293.304.306.309.314.318.322.324.328.332.335.336.338.340.347.351.355.431.\",\n      \"II\": \"1153.1195.1321.1460.\",\n      \"III\": \"\",\n      \"IV\": \"1968.1978.\",\n      \"V\": \"2192.2473.2479.3824.\"\n    },\n    \"bP\": \"85.\",\n    \"note\": \"\"\n  },\n  {\n    \"row\": \"37\",\n    \"name\": \"Krischan Halfa Buirshofgäubla\",\n    \"status\": \"\",\n    \"house\": \"57\",\n    \"sections\": {\n      \"I\": \"225.\",\n      \"II\": \"\",\n      \"III\": \"\",\n      \"IV\": \"\",\n      \"V\": \"\"\n    },\n    \"bP\": \"\",\n    \"note\": \"\"\n  }\n]\n```\n\n**pageNote:** Stran je dobro ohranjena in berljiva, pisava je jasna kurrentna kurzivka. Pri številkah parcel (npr. 174½) uporablja polovično črto. Vrstica 37 vsebuje samo eno parcelo v sekciji I, preostali stolpci so prazni.",
+ "ms": 16178
+}

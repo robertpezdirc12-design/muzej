@@ -861,12 +861,18 @@ export function MuseumResearch() {
               <div className="border-b bg-secondary/40 px-6 py-4">
                 <h4 className="font-display text-base font-semibold">
                   {t(
-                    `PUA — nadaljevanje po A–B: strani 3–11, ${PUA_CONTINUATION.rows.length} vnosov (REVIEW)`,
-                    `PUA — continuation after A–B: pages 3–11, ${PUA_CONTINUATION.rows.length} entries (REVIEW)`,
+                    `PUA — nadaljevanje po A–B: strani ${PUA_CONTINUATION.pagesRead[0]}–${PUA_CONTINUATION.pagesRead[PUA_CONTINUATION.pagesRead.length - 1]}, ${PUA_CONTINUATION.rows.length} vnosov (REVIEW)`,
+                    `PUA — continuation after A–B: pages ${PUA_CONTINUATION.pagesRead[0]}–${PUA_CONTINUATION.pagesRead[PUA_CONTINUATION.pagesRead.length - 1]}, ${PUA_CONTINUATION.rows.length} entries (REVIEW)`,
                   )}
                 </h4>
+                <p className="mt-1 text-[11px] text-muted-foreground">
+                  {t(
+                    `P4: strani 12–34 (47 vnosov, zap. št. 22–68) · vključno Kirche H. Veith — cerkev sv. Vida [~] · PUA številči hiše drugače kot PT [~] · strani 35–49 ostajajo TO_COLLECT`,
+                    `P4: pages 12–34 (47 entries, rows 22–68) · incl. Kirche H. Veith — the church of St. Vitus [~] · PUA numbers houses differently from PT [~] · pages 35–49 remain TO_COLLECT`,
+                  )}
+                </p>
               </div>
-              <div className="max-h-72 divide-y overflow-y-auto">
+              <div className="max-h-96 divide-y overflow-y-auto">
                 {PUA_CONTINUATION.rows.map((r) => (
                   <div key={`pua-${r.page}-${r.row}`} className="grid gap-1 px-6 py-2.5 sm:grid-cols-[80px_1fr_120px_60px]">
                     <p className="font-mono text-[10px] text-muted-foreground">str. {r.page} · v. {r.row}</p>

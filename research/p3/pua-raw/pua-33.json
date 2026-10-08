@@ -1,0 +1,5 @@
+{
+ "page": 33,
+ "raw": "```json\n[\n  {\n    \"row\": 65,\n    \"name\": \"Pasticz Georg Bauernholds gemuth\",\n    \"status\": \"Häusler\",\n    \"house\": \"4\",\n    \"sections\": {\n      \"I\": \"\",\n      \"II\": \"\",\n      \"III\": \"\",\n      \"IV\": \"\",\n      \"V\": \"206. 810.\"\n    },\n    \"bP\": \"\",\n    \"note\": \"\"\n  },\n  {\n    \"row\": 66,\n    \"name\": \"Pacharistche Michl bauernholds gemüth\",\n    \"status\": \"Häusler\",\n    \"house\": \"6\",\n    \"sections\": {\n      \"I\": \"\",\n      \"II\": \"\",\n      \"III\": \"\",\n      \"IV\": \"\",\n      \"V\": \"292.\"\n    },\n    \"bP\": \"\",\n    \"note\": \"\"\n  }\n]\n```\n**pageNote**: Stran je dobro ohranjena in berljiva, pisava je jasna kurrent pisava. Vrsti 65 in 66 vsebujeta vnose za hišni številki 4 in 6 s parcelami v sekciji V (kmetijska zemljišča). Status obeh lastnikov je *Häusler* (hišnik brez zemlje ali z malo zemlje), pri čemer sta oba opisana kot *Bauernholds gemüth* (kmečka duša/razpolaganje).",
+ "ms": 8983
+}
