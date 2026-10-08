@@ -501,10 +501,10 @@ export const MAP_1812: {
       verified: "POTRJENO 2026-10-08 (issue #17): datoteka obstaja, 8297 × 6080 px, vir = dlib ref. 6EZTJ9C0",
     },
     {
-      title: "Carte des Provinces Illyriennes (Lapie/Tardieu, Internet Archive)",
-      sourceUrl: "https://commons.wikimedia.org/",
+      title: "Provinces Illyriennes, Servie et Bosnie (Lapie/Malte-Brun/Chamouin/Giraldon; drugi sken istega lista, Internet Archive)",
+      sourceUrl: "https://commons.wikimedia.org/wiki/File:Provinces_Illyriennes,_Servie_et_Bosnie._(IA_dr_provinces-illyriennes-servie-et-bosnie-2631039).jpg",
       licence: "javna last (Public Domain)",
-      verified: "ne preverjeno posamično (issue #17 — preverjena samo glavna pot)",
+      verified: "POTRJENO 2026-10-08 (P6, Commons API): 7636 × 5936 px, umetniki Malte-Brun/Lapie/Chamouin/Giraldon — NEODVISEN drugi sken istega graverja kot glavni vir; koroboracija izvirnika",
     },
     {
       title: "Zemljevid Ilirskih provinc iz leta 1812 (Gašperič, Orožen Adamič, Šumrada; ZRC SAZU 2012)",
