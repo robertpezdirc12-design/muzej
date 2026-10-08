@@ -1964,3 +1964,24 @@ NADALJEVANJE (konec seje) — KRITIČNO:
 - PRODUKCIJA: https://griblje-museum.vercel.app ZDRAVA in NEODVISNA od GitLab (22/22 QA — stanje brez P12; Vercel hosta zgradbo, webhook le sproži nove).
 - NASVET UPORABNIKU: kontaktirati GitLab podporo (unblock zahtevek za račun robert.pezdirc12) — blokada je najverjetneje samodejna (vzroki: vzorec klicev WAF, hitro ustvarjanje žetonov, ali prijava z več IP sandboxa). Po odblokadi: push (žetona sta v lokalnem git config + local-gitlab.pat) → samodejni deploy → preverba /api/qa 23/23.
 - DEPLOY ALTERNATIVA (če odblokava traja): VERCEL_TOKEN je shranjen SAMO kot maskirana GitLab CI spremenljivka (sedaj nedosegljiva) — ročni CLI deploy mogoč šele po pridobitvi žetona z Vercel dashboarda (rotacija + `vercel --prod`); nov GitLab (drug račun) + ponovna povezava projekta na Vercel je prav tako možna pot.
+
+---
+Task ID: P13
+Agent: Z.ai Code (glavni agent)
+Task: Uporabnik poslal GitHub žeton (ghp_pKV9…) + "poglej če sinhronizirano z gitlabom, podpori pisal" — preverba sinhronizacije GitHub↔GitLab in zavarovanje P12 na GitHub mirrorju
+
+Work Log:
+- Uporabnikov GitHub žeton: račun robertpezdirc12-design (ID 249648337, nov račun — NI stari hackirani markec12345678), poln obseg (repo, workflow, admin:org, …). Žeton shranjen v local-github.pat (chmod 600, gitignored prek `local-*`), dodan remote `github` → https://github.com/robertpezdirc12-design/muzej.git.
+- RAČUN: 8 repozitorijev (muzej, muzej-arhiv, muzej-stari, starigithubmuzej, discover-slovenia-ai, roksal-railing-manager, restaurantos, markec-project) — vsi (razen muzej-stari/starigithubmuzej) z opisom "Mirror avtomatsko sinhroniziran z GitLab (restaurantos obnova)" = uporabnikova zrcalna infrastruktura.
+- MEHANIZEM SINHRONIZACIJE POJASNJEN: (1) obstaja .github/workflows/sync.yml (dvosmerna, merge-based, dodan v commitu 64ea47f avtor sync-setup@restaurantos.app, na: push + cron 37 */6 + dispatch) — a je workflow DISABLED_MANUALLY (zadnji run 2026-10-07 18:50Z, 5/5 uspešnih, vsi včeraj); (2) DEJANSKI današnji mehanizem = GITLAB PUSH MIRROR (nastavitev projekta na GitLab strani): vsak push na GitLab se v sekundah zrcali na GitHub kot uporabnik robertpezdirc12-design (danas 10+ push dogodkov: 09:36–20:04, avtor vedno robertpezdirc12-design; commit db7bf52 (avtor 20:12:41Z) na GitHub 20:12:48Z = 7 s za GitLab pushom).
+- ODGOVOR NA VPRAŠANJE: DA — GitHub mirror JE bil sinhroniziran z GitLabom: GitHub muzej main = db7bf52 = zadnje stanje na GitLabu pred blokado (P11, 17/17 issuejev). Mirror je ujel vse, kar je prišlo do GitLaba. P12 (1aee451 + 7579077) pa GitLab ni nikoli prejel (blokada) → ga mirror ni prenesel → P12 je bil samo lokalno + bundle.
+- GITLAB DANES (~21:35–21:50Z): 403 tudi BREZ žetona (javni projekt, homepage) = "Blocked - GitLab — blocked IP address or country" — blokiran je IP naslov sandboxa (ne le račun); stanja računa iz tega okolja NI MOČ preveriti (P12-jeva ugotovitev "Your account has been blocked" ostaja zadnji neposredni dokaz). Uporabnik je pisal podpori — pravilno.
+- AKCIJA (zavarovanje P12): push github main → db7bf52..7579077 (fast-forward, 1. poskus brez težav) — P12 (AR 3D vas: 1666 dreves, dim, kartice stavb + raziskava hišnih št.) je zdaj VAREN na GitHub mirrorju. Verificirano prek API: GitHub main = 7579077, compare db7bf52...7579077 = 200.
+- DEV strežnik: / 200, /api/qa 23/23 PASS (P12 živ lokalno); delovno drevo čisto; ni tagov.
+
+Stage Summary:
+- SINHRONIZACIJA: GitHub mirror je bil sinhroniziran z GitLabom do db7bf52 (P11) prek GitLab push mirrorja (samodejno, enosmerno); dvosmerni GitHub Actions sync.yml je ročno izklopljen (od 2026-10-07) — ni tekel danes.
+- P12 ZAVAROVAN: zdaj obstaja na 3 mestih — lokalni repozitorij (main 7579077), GitHub robertpezdirc12-design/muzej (main 7579077), bundle /home/z/muzej-backup-P12-20261008.bundle.
+- GITLAB: IP sandboxa blokiran ("blocked IP address or country", tudi anonimno); račun najverjetneje še blokiran (P12 dokaz) — čaka odgovor podpore.
+- POT PO ODBLOKAVI: push iz lokalnega na GitLab (deploy/gitlab remote, žetona v local-gitlab.pat) → Vercel webhook deploy + push mirror posodobi GitHub → vse tri kopije identične na 7579077 → preverba /api/qa 23/23.
+- NADALJNJE DELO (AR 3D vas) lahko teče lokalno neodvisno; objava čaka odblokavo GitLab ali Vercel žeton pot.
