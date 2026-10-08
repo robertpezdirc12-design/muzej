@@ -1805,3 +1805,24 @@ Stage Summary:
 - Znanstveni dodatek: 2. sken ima 12-točkovni neodvisni model (z novo točko Niš); inherentna točnost metode center-napisa izmerjena na celih besedah: 6,2 km
 - Dokumentirano pošteno [~]: 7/12 fragmentov, 4 napisi neberljivi (pregibi), status ostaja REVIEW (končna potrditev = človek/QGIS)
 - Kvota VLM/LLM ostaja blokirana (429, 08:12→15:28); P5-b (PUA 35–49) še vedno edini odprti del #17 — čaka dvig kvote; sonda se nadaljuje
+
+---
+Task ID: P8
+Agent: Z.ai Code (glavni agent)
+Task: Georeferenca N83 listov A03/A04/A05 — poskus deterministične metode prek reke Kolpe (delo brez SDK med blokado kvote); rezultat: NEGATIVEN, dokumentiran
+
+Work Log:
+- Kvota sonde: 15:28, 15:53 — 429 (blokada 08:12→15:53, > 7,5 h). GitLab: 0 odprtih issuejev.
+- IZHODIŠČE: A01/A02 georeferencirani (issue #14, GEOTRUTH), A03/A04/A05 georefStatus TO_COLLECT, vsi skeni prisotni (public/atlas/n83-a0*.jpg).
+- POSKUS 1 — medlistna registracija (P7 metoda): ORB + SIFT po vseh parih: NI resničnih ujemanj vsebine. »a02→a04« 41 inlierjev = LAŽNO (vsi na robu lista y≈0,03 — marginalije; RMS 57 px). Edina povezava a03↔a04 (55–88 inlierjev, rotacija ±44° — vsak list ima svojo orientacijo snemanja), a sta oba lista nezasidrana. Metoda zavrnjena.
+- POSKUS 2 — sidro na reki Kolpi: (a) MODERNA struga iz OpenTopoMap z15 ploščic (tile.openstreetmap.org s sandboxa vrača VSE ploščice enake — placeholder!; OTM deluje): 91 ploščic, vodna maska, centerline 2034 točk; VALIDIRANA proti GEOTRUTH sidrom — pri lat cerkve 45,5676 → lng 15,29866 = NATANČNO kontrolna točka A02 (#14), pri 45,5578 → 15,29941 ≈ sidro A01 (≤ ~8 m). (b) EKSTRAKCIJA ~1825 struge s listov: pas prazne vode med bregovnima črtama (temnost stolpcev, prag 150, poteči ≥ 40 px med bregovi) — na A02 da 61 točk, center x 2780–2900 pri y 100–1400, SKLADNO z znanim (pas 2765–2890, desni krak 2827). (c) PRILEGANJE podobnosti (rot/merilo/translacija, robustno soft-L1, multi-start) → moderni centerline.
+- VALIDACIJA NA A02 (znana resnica — cerkev EŠD 2122): NEDELOVNO. Brez mej: s → 0,4 m/px, cerkev 1,6 km napačno (reka sama 11 m!). Z realnimi mejami (s 0,70–1,15): s → 0,70, cerkev 916 m (dN −909 m). Fiksirani s ∈ 0,70–1,00: inlier-mean 30,5 (s=0,84) « 31,5 (s=0,79 resnica) — merilo NI razločno. DIAGNOZA: Kolpa na odseku Griblje vijuga prešibko (± 400 m na 6 km), S–J smer in merilo sta degenerirana; V–Z kontrola sicer močna (dE −9…−33 m), a premalo. Debug popravki: [E,N] osi MODERN_M, offset-parametrizacija translacije (1e6 m problem), meje namesto clip.
+- INTEGRACIJA (poštena, negativna): sources.ts opombe A03/A04/A05 dopolnjene (poskus P8 + diagnoza + možna prihodnja pot: VAČ metapodatki ali točkovno sidro — npr. napis Adleschitz na A04 [~] ob VLM dostopu); statusi ostajajo TO_COLLECT. Artefakti: research/georef-n83/ (README z dokazno potjo, fit-river-georef.py reproducibilno, kolpa-modern-centerline.json, otm-water-mask.png, 60 placeholder OSM ploščic kot dokaz blokade).
+- Dev server umrl med delom (~15:50) → ponovno zagnan, QA 20/20. Lint 0 napak.
+- Commit + push (1× WAF, 2. poskus); PROD QA 20/20; prod /?odsek=raziskave 200.
+
+Stage Summary:
+- P8 DOKUMENTIRAN NEGATIVEN IZID: reka Kolpa sama NE zadošča za georeferenco A03/A05 (merjeno na znani resnici A02 — cerkev 0,9–1,6 km napačno pri odlični prileganosti same reke); vzrok: premalo vijugasta struga
+- UPORABNI OSTATKI: natančna moderna centerline Kolpe (validirana na #14 sidra) + delujoča ekstrakcija struge ~1825 s listov + dokaz, da medlistna ORB/SIFT registracija za te liste ne deluje (marginalije pasti, ±44° orientacije)
+- A03/A04/A05 ostajajo TO_COLLECT s poštenimi opombami; muzej stabilen (dev + PROD 20/20)
+- Kvota 429 še vedno (08:12→15:53); P5-b (PUA 35–49) ostaja edini odprti del #17 — čaka dvig kvote; nadaljnje sonde
