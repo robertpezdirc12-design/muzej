@@ -12,6 +12,11 @@ export interface KurrentSeries {
   unitEn: string;
   pages: number;
   pagesTranscribed: number;
+  /** dokazano prebrane strani (issue #4) — izpis iz surovih raziskav,
+   *  ne pavšalni števec; dolžina == pagesTranscribed */
+  pagesReadList?: number[];
+  /** vzorčene strani znotraj nepresranih odsekov (PZ) — niso polne prepise */
+  pagesSampledList?: number[];
   structuredEntries: number;
   status: ResearchStatus;
   noteSi: string;
@@ -26,6 +31,7 @@ export const KURRENT_SERIES: KurrentSeries[] = [
     unitEn: "Boundary description",
     pages: 4,
     pagesTranscribed: 4,
+    pagesReadList: [1, 2, 3, 4],
     structuredEntries: 10,
     status: "REVIEW",
     noteSi: "Prepisane vse 4 strani (issue #17, VLM 2026-10-08): naslovnica »Prod N° 218 / Grenz-Beschreibung der Gemeinde GRÜBLE«, splošne mere 1028 × 1884 klafter, točke meje št. 1–10 (prebrano na str. 2, nadaljevanje negotovo 10–20), sosedi (Kraljevina Hrvaška/Weidendorf stabilna, ostali [~]), zaključek »am 8ten April 1825«. 1028 × 1884 kl = 1210,5 jocha — se ujema s PV (<1 %). Strojni prepis = REVIEW.",
@@ -36,11 +42,12 @@ export const KURRENT_SERIES: KurrentSeries[] = [
     unitSi: "Seznam zemljiških parcel",
     unitEn: "Register of land parcels",
     pages: 143,
-    pagesTranscribed: 9,
+    pagesTranscribed: 8,
+    pagesReadList: [1, 2, 3, 4, 140, 141, 142, 143],
     structuredEntries: 12,
     status: "REVIEW",
-    noteSi: "143 strani parcel; issue #17 (VLM 2026-10-08): struktura strani 1–4 + 140–143 (rekapitulacija), 12 vzorčnih vrstic, kolone (lastnik+hiša+parcela+raba+površina+razred+donos). Končna Summa (str. 143, rdeči tuš): 102 stavbnih mest + 2505 zemljiških parcel = 2607. Najbolj uporabno za verigo hiša→parcela→lastnik: rekapitulacija po hišnih št. (~str. 131–143) + stolpec Haus Nro. v glavnem registru. Poln prepis ostaja TO_COLLECT (izhodiščna kontrolna vsota 2607).",
-    noteEn: "143 pages of parcels; issue #17 (VLM 2026-10-08): structure of pages 1–4 + 140–143 (recapitulation), 12 sample rows, columns (owner+house+parcel+culture+area+class+yield). Final Summa (p. 143, red ink): 102 building sites + 2505 land parcels = 2607. Most useful for the house→parcel→owner chain: the recapitulation by house nos. (~pp. 131–143) + the Haus Nro. column of the main register. The full transcription remains TO_COLLECT (checksum 2607).",
+    noteSi: "143 strani parcel; issue #17 (VLM 2026-10-08): struktura strani 1–4 + 140–143 (rekapitulacija) — 8 strani (issue #4, 2026-10-10: prejšnji števec 9 ni imel podlage v datotekah; dokaz PS-structure.json sectionsSeen + sampleRows + rekapitulacija str. 143), 12 vzorčnih vrstic, kolone (lastnik+hiša+parcela+raba+površina+razred+donos). Končna Summa (str. 143, rdeči tuš): 102 stavbnih mest + 2505 zemljiških parcel = 2607. Najbolj uporabno za verigo hiša→parcela→lastnik: rekapitulacija po hišnih št. (~str. 131–143) + stolpec Haus Nro. v glavnem registru. Poln prepis 135 strani (5–139) ostaja TO_COLLECT (izhodiščna kontrolna vsota 2607).",
+    noteEn: "143 pages of parcels; issue #17 (VLM 2026-10-08): structure of pages 1–4 + 140–143 (recapitulation) — 8 pages (issue #4, 2026-10-10: the previous count of 9 had no basis in the files; evidence PS-structure.json sectionsSeen + sampleRows + the p. 143 recapitulation), 12 sample rows, columns (owner+house+parcel+culture+area+class+yield). Final Summa (p. 143, red ink): 102 building sites + 2505 land parcels = 2607. Most useful for the house→parcel→owner chain: the recapitulation by house nos. (~pp. 131–143) + the Haus Nro. column of the main register. The full transcription of 135 pages (5–139) remains TO_COLLECT (checksum 2607).",
   },
   {
     code: "PUA",
@@ -48,21 +55,23 @@ export const KURRENT_SERIES: KurrentSeries[] = [
     unitEn: "Alphabetical register of owners",
     pages: 49,
     pagesTranscribed: 49,
+    pagesReadList: Array.from({ length: 49 }, (_, i) => i + 1),
     structuredEntries: 101,
     status: "REVIEW",
-    noteSi: "Prepisane strani A–B (21 lastnikov) + issue #17: strani 3–10 (18 novih vnosov) + P3 (2026-10-08): stran 11, črka H (4 vnosi) + P4 (2026-10-08, obnovljen VLM dostop): strani 12–34 — 23 strani, 47 vnosov (zap. št. 22–68, priimki H–P: Höflehner, Jakobstitzsch, Jankovitsche, Krischan, Loral, Kosirhan, Schloßthaler, Grönig, Wundsch, Bučar, Kirche H. Veith — cerkev sv. Vida!, Hlobutschar, Kleppetz, Lukentitz, Rappar, Millea, Mallestitak, Noah Mandl, Grangl, Poldiŕg, Polcig, Muhč, Leiner, Rußa, Juttner, Jhan, Gnoy, Pasticz, Pacharistche, Prodoritche, Pfister) + P5-b (2026-10-08, ob dvigu kvote): strani 35–49 — CEL register (15 strani, 32 vnosov, zap. št. 69–100: Schimcz/Schimer/Schimey/Schimetz/Schumetz [~] — družina Schim-, Stübler, Strauß (45/71/72), Stepanitsch, Schello, Urlich/Ulrich (32/31/68), Verbitzcher, Wardian, Wentschitsch, Zollamt, Waisenkinder von Weixelbaum, Lipovšek + skupinski vnosi »Gemeinde Malfz Brandhof...« in »Uebersprungene Parzellen-Numern« + zadnja vrstica brez imena s sekcijo I: 2652–2687). KLJUČNA UGOTOVITEV P4: PUA in PT očitno uporabljata RAZLIČNO številčenje hiš [~] (PUA hiša 6 = Höflehner, PT hiša 6 = Tilel Miho); PUA ohranja št. v območju 41–60, kjer jih PT nima. Register je zdaj prebran v CELI celoti — vse ostaja REVIEW (strojno branje ni dokazni vir); surovi izpisi v research/p3/pua-raw/ (38 strani).",
-    noteEn: "Pages A–B transcribed (21 owners) + issue #17: pages 3–10 (18 new entries) + P3 (2026-10-08): page 11, letter H (4 entries) + P4 (2026-10-08, VLM access restored): pages 12–34 — 23 pages, 47 entries (rows 22–68, surnames H–P: Höflehner, Jakobstitzsch, Jankovitsche, Krischan, Loral, Kosirhan, Schloßthaler, Grönig, Wundsch, Bučar, Kirche H. Veith — the church of St. Vitus!, Hlobutschar, Kleppetz, Lukentitz, Rappar, Millea, Mallestitak, Noah Mandl, Grangl, Poldiŕg, Polcig, Muhč, Leiner, Rußa, Juttner, Jhan, Gnoy, Pasticz, Pacharistche, Prodoritche, Pfister) + P5-b (2026-10-08, quota lifted): pages 35–49 — the ENTIRE register (15 pages, 32 entries, rows 69–100: Schimcz/Schimer/Schimey/Schimetz/Schumetz [~] — the Schim- family, Stübler, Strauß (45/71/72), Stepanitsch, Schello, Urlich/Ulrich (32/31/68), Verbitzcher, Wardian, Wentschitsch, Zollamt, Waisenkinder von Weixelbaum, Lipovšek + group entries »Gemeinde Malfz Brandhof...« and »Uebersprungene Parzellen-Numern« + a final unnamed row with section I: 2652–2687). KEY P4 FINDING: PUA and PT evidently use DIFFERENT house numbering [~] (PUA house 6 = Höflehner, PT house 6 = Tilel Miho); PUA keeps nos. in the 41–60 range where PT has none. The register is now read in FULL — everything stays REVIEW (machine reading is not evidentiary); raw outputs in research/p3/pua-raw/ (38 pages).",
+    noteSi: "Register prebran V CELIOTI — 49/49 strani, a v DVAH modelih (issue #4 pojasnilo, 2026-10-10): strani 1–2 (A–B, 21 lastnikov) iz prve gradnje so v lastniškem modelu ATLAS_OWNERS prek PT navzkrižij; strani 3–49 (101 vrstic) v PUA_CONTINUATION (issue #17: strani 3–10, 18 vnosov; P3: stran 11, 4 vnosi; P4: strani 12–34, 47 vnosov — priimki H–P vključno s Kirche H. Veith = cerkev sv. Vida; P5-b: strani 35–49, 32 vnosov, zap. št. 69–100 vključno s skupinskimi vnosi »Gemeinde Malfz Brandhof…« in »Uebersprungene Parzellen-Numern«). structuredEntries 101 = SAMO PUA_CONTINUATION (strani 3–49); strani A–B niso v PUA_CONTINUATION. KLJUČNA UGOTOVITEV P4: PUA in PT očitno uporabljata RAZLIČNO številčenje hiš [~] (PUA hiša 6 = Höflehner, PT hiša 6 = Tilel Miho); PUA ohranja št. v območju 41–60, kjer jih PT nima. Vse ostaja REVIEW (strojno branje ni dokazni vir); surovi izpisi v research/p3/pua-raw/ (38 strani) + research/issue17/PUA-more.json.",
+    noteEn: "The register read IN FULL — 49/49 pages, but in TWO models (issue #4 clarification, 2026-10-10): pages 1–2 (A–B, 21 owners) from the first build live in the ATLAS_OWNERS owners model via PT cross-checks; pages 3–49 (101 rows) in PUA_CONTINUATION (issue #17: pp. 3–10, 18 entries; P3: p. 11, 4 entries; P4: pp. 12–34, 47 entries — surnames H–P including Kirche H. Veith = St. Vitus' church; P5-b: pp. 35–49, 32 entries, rows 69–100 including the group entries »Gemeinde Malfz Brandhof…« and »Uebersprungene Parzellen-Numern«). structuredEntries 101 = PUA_CONTINUATION ONLY (pp. 3–49); the A–B pages are not in PUA_CONTINUATION. KEY P4 FINDING: PUA and PT evidently use DIFFERENT house numbering [~] (PUA house 6 = Höflehner, PT house 6 = Tilel Miho); PUA keeps nos. in the 41–60 range where PT has none. Everything stays REVIEW (machine reading is not evidentiary); raw outputs in research/p3/pua-raw/ (38 pages) + research/issue17/PUA-more.json.",
   },
   {
     code: "PZ",
     unitSi: "Katastrski cenilni elaborat",
     unitEn: "Cadastral valuation elaborate",
     pages: 71,
-    pagesTranscribed: 10,
+    pagesTranscribed: 12,
+    pagesReadList: [1, 2, 3, 20, 30, 40, 50, 60, 68, 69, 70, 71],
     structuredEntries: 10,
     status: "REVIEW",
-    noteSi: "71 strani ocen in razredov. Issue #17 (VLM 2026-10-08, vzorčene strani 1–3, 20, 30, 40, 50, 60, 68–71): naslov, topografija §1 (2294 joch 516 klafter [~]), prebivalstvo §3 (441 prebivalcev — 222 m/219 ž; 72 hiš [~]; 102 družin [~]), cenilna veriga Roh-Ertrag → Cultur-Aufwand → Rein-Ertrag (Bau-Area: 16 fl 50½ kr → 7 fl 35 kr/joch, aritmetika potrjena), zaključek »Gemacht den 28ten Juli 1825« + [~1834 revaluirt]. Tabele razredov v sredini (str. ~4–67) so samo vzorčene — poln prepis TO_COLLECT.",
-    noteEn: "71 pages of valuations and classes. Issue #17 (VLM 2026-10-08, sampled pages 1–3, 20, 30, 40, 50, 60, 68–71): title, topography §1 (2294 joch 516 klafter [~]), population §3 (441 inhabitants — 222 m/219 f; 72 houses [~]; 102 families [~]), valuation chain Roh-Ertrag → Cultur-Aufwand → Rein-Ertrag (Bau-Area: 16 fl 50½ kr → 7 fl 35 kr/joch, arithmetic confirmed), closing »Gemacht den 28ten Juli 1825« + [~1834 revaluirt]. Class tables in the middle (pp. ~4–67) only sampled — full transcription TO_COLLECT.",
+    noteSi: "71 strani ocen in razredov. Vzorčeno 12 strani (issue #4, 2026-10-10, dokaz: research/issue17/PZ-profile.json + PZ-valuation.json pagesSampled=[20,30,40,50,60]): 1–3 (naslov, §§ topografija/meje/prebivalstvo), 20/30/40/50/60 (cenilni razredi kultur, nizka gotovost — 3 VLM branja se razhajajo), 68–71 (zaključni protokoli: Vorlage, Geprüft, Nachtrag hus Zins, »Gemacht den 28ten Juli 1825«). POPRAVEK issue #4: prejšnji števec 10 se ni ujemal z lastno opombo (12 strani) — dokazano stanje je 12. Vsebina: topografija §1 (2294 joch 516 klafter [~]), prebivalstvo §3 (441 prebivalcev — 222 m/219 ž; 72 hiš [~]; 102 družin [~]), cenilna veriga Roh-Ertrag → Cultur-Aufwand → Rein-Ertrag (Bau-Area: 16 fl 50½ kr → 7 fl 35 kr/joch, aritmetika potrjena). Tabele razredov v sredini (str. 4–67, razen vzorčenih) so NEPRESRANE — poln prepis 59 strani TO_COLLECT.",
+    noteEn: "71 pages of valuations and classes. 12 pages sampled (issue #4, 2026-10-10, evidence: research/issue17/PZ-profile.json + PZ-valuation.json pagesSampled=[20,30,40,50,60]): 1–3 (title, §§ topography/boundaries/population), 20/30/40/50/60 (culture valuation classes, low confidence — 3 VLM readings disagree), 68–71 (closing protocols: Vorlage, Geprüft, Nachtrag hus Zins, »Gemacht den 28ten Juli 1825«). issue #4 CORRECTION: the previous count of 10 contradicted its own note (12 pages) — the evidenced state is 12. Content: topography §1 (2294 joch 516 klafter [~]), population §3 (441 inhabitants — 222 m/219 f; 72 houses [~]; 102 families [~]), the valuation chain Roh-Ertrag → Cultur-Aufwand → Rein-Ertrag (Bau-Area: 16 fl 50½ kr → 7 fl 35 kr/joch, arithmetic confirmed). The class tables in the middle (pp. 4–67, apart from the sampled ones) remain UNTRANSCRIBED — the full 59-page transcription TO_COLLECT.",
   },
   {
     code: "PT",
@@ -70,6 +79,7 @@ export const KURRENT_SERIES: KurrentSeries[] = [
     unitEn: "Protocol of building parcels",
     pages: 8,
     pagesTranscribed: 8,
+    pagesReadList: [1, 2, 3, 4, 5, 6, 7, 8],
     structuredEntries: 84,
     status: "REVIEW",
     noteSi: "84 stavbnih vrstic (hišne št. 1–99 + prečrtana dvojnica 34) prebranih s pomočjo strojnega branja; vsi vnosi status REVIEW. Issue #17: 101 vrstica preverjena (81 POTRJENIH, 15 popravkov, 4 manjkajoče vrstice, str. 4 konča pri hiši 40). P3 PALEOGRAFSKA PREVERBA (2. krog, 2026-10-08): sveži izrezi + povišana ločljivost, prompti »črka-za-črko«; 15 popravkov in 4 dodatne vrstice APLICIRANE v register (houses.ts) pri 2-kratni konvergenci branj; renumeracija str. 4 (36–41 → 35–40) 4× potrjena; statusi ostajajo REVIEW (2. krog je še vedno strojno branje; dokončna potrditev = človeška paleografija).",
@@ -81,6 +91,7 @@ export const KURRENT_SERIES: KurrentSeries[] = [
     unitEn: "Indication sketch",
     pages: 1,
     pagesTranscribed: 1,
+    pagesReadList: [1],
     structuredEntries: 1,
     status: "REVIEW",
     noteSi: "Indikationsskizze prebrana (issue #17, VLM 2026-10-08): ročno risana skica z naslovom »Gemeinde Grüble« + veliko številko 83 (ujema se s signaturo N83), debel mejni mnogokotnik z rdeče oštevilčenimi točkami (~15–19), Kolpa modrikasta po vzhodnem robu z napisom »Königreich Croatien«, sosedi Weidendorf/Mallertschitsch/Pridbor[~]. Hišnih simbolov NI vidnih (negativen rezultat). Lestvica [~1 W. Zoll = 1000 klafter].",
@@ -92,6 +103,7 @@ export const KURRENT_SERIES: KurrentSeries[] = [
     unitEn: "Statement of land use",
     pages: 1,
     pagesTranscribed: 1,
+    pagesReadList: [1],
     structuredEntries: 10,
     status: "REVIEW",
     noteSi: "Izkaz rabe tal PREBRAN v celoti (issue #17, VLM 2026-10-08, vsaka izpolnjena celica potrjena ≥2 klicoma): tiskan obrazec »AUSWEIS über die Benützungsart des Bodens«, Provinz Illyrien, [~Kreis Neustadtl], datum »den 10 Jenner 1825«. 10 izpolnjenih vrstic kultur (20 vrstic obrazca) + 2 vsoti: ganze Area 1148 j 539 kl + strnjena 73 j 1024 kl = skupaj 1221 [~1225] j 1513 [~1563] kl ≈ 703 ha (≈ sodobna k.o. Griblje 7,0 km²). Presenetljivo: vrstica Wälder (gozd) je PRAZNA — dominira 636 joch pašnikov. Aritmetika ±1 joch (dokumentirana odstopanja).",

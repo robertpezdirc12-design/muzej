@@ -12,6 +12,7 @@ import { ATLAS_SOURCES } from "@/data/atlas/sources";
 import { ATLAS_HOUSES } from "@/data/atlas/houses";
 import { ATLAS_OWNERS, VECTOR_BUILDINGS } from "@/data/atlas/model";
 import { KURRENT_SERIES, PUA_CONTINUATION } from "@/data/atlas/research";
+import { getArchiveInventory } from "./atlas";
 import { DATA_VERSION } from "./provenance";
 
 export type ReconState =
@@ -62,6 +63,15 @@ export interface UnitRecon {
   structured: number;
   linked: number;
   unresolved: number;
+  /** ISSUE #4: kontrola obsega po INVENTARJU — deklarirane strani == dokazano
+   *  prebrane + izrecno odprte (strani), ne samo statusev ustvarjenih vrstic */
+  scopeCheck: {
+    pagesDeclared: number | null;
+    pagesRead: number | null;
+    pagesOpen: number | null;
+    pagesOpenRangesSi: string | null;
+    accounted: boolean;
+  };
   zeroLoss: boolean;
 }
 
@@ -81,6 +91,10 @@ export interface ReconciliationReport {
     sheetsTransferred: number;
   };
   zeroLoss: boolean;
+  /** ISSUE #4: kaj zeroLoss POTRDIUJE in česa NE — poštena opredelitev,
+   *  da števec ne more prikriti manjkajočih izvornih vrstic */
+  zeroLossMeaningSi: string;
+  zeroLossMeaningEn: string;
   kurrentTrail: {
     code: string;
     scan: string;
@@ -104,14 +118,16 @@ export function buildReconciliation(): ReconciliationReport {
   const puaSource = ATLAS_SOURCES.find((s) => s.id === "src-pua");
   const ptScan = ptSource?.fileRef ?? "IIIF";
 
-  // ——— PT: protokol stavbnih parcel (hiše + parc. vrstice PS modela) ———
+  // ——— PT: protokol stavbnih parcel (hišne vrstice str. 3–4 + parcelni del str. 5–7) ———
   for (const h of ATLAS_HOUSES) {
     const owner = ATLAS_OWNERS.find((o) => o.houseRefs.some((r) => r === h.no));
     const isParcel = h.no === "—";
     rows.push({
       unit: "N083PT",
-      locatorSi: `stran ${h.sourcePage}${isParcel ? " (register parcel PS)" : ""}`,
-      locatorEn: `page ${h.sourcePage}${isParcel ? " (PS parcel register)" : ""}`,
+      /* issue #4: parcelne vrstice (str. 5–7) so DEL PROTOKOLA PT (»str. 5 = parcele 41–60«
+         po PT-review), ne register PS — prejšnja oznaka je bila zavajajoča */
+      locatorSi: `stran ${h.sourcePage}${isParcel ? " (parcelni del protokola PT)" : ""}`,
+      locatorEn: `page ${h.sourcePage}${isParcel ? " (the parcel part of protocol PT)" : ""}`,
       rowId: isParcel ? h.parcelRefs?.split("·")[0]?.trim() ?? h.id : `hiša št. ${h.no}`,
       entitySi: isParcel
         ? `Parcelna vrstica: ${h.owner} — ${h.parcelRefs}`
@@ -142,8 +158,8 @@ export function buildReconciliation(): ReconciliationReport {
     const houseMatch = o.houseRefs.some((r) => ATLAS_HOUSES.some((h) => h.no === r));
     rows.push({
       unit: "N083PUA",
-      locatorSi: o.puaRef ?? "strani C–Ž (niso prepisane)",
-      locatorEn: o.puaRef ?? "pages C–Ž (not transcribed)",
+      locatorSi: o.puaRef ?? "lastniški model (strani A–B) — brez PUA potrditve",
+      locatorEn: o.puaRef ?? "owners model (pages A–B) — without PUA confirmation",
       rowId: o.id,
       entitySi: `Lastnik: ${o.nameAsWritten}`,
       entityEn: `Owner: ${o.nameAsWritten}`,
@@ -156,31 +172,68 @@ export function buildReconciliation(): ReconciliationReport {
         ? houseMatch
           ? null
           : "hišne številke iz PUA se ne ujemajo s PT (razrez vrstic)"
-        : "vpis brez PUA potrditvve — ime iz PT (REVIEW)",
+        : "ime iz PT (REVIEW); v PUA branju (49/49 strani) potrditev s to hišno št. ni bila najdena — številčenje PUA↔PT je dokazano deloma divergentno",
       openEn: o.puaRef
         ? houseMatch
           ? null
           : "house numbers from PUA do not match PT (row split)"
-        : "entry without PUA confirmation — name from PT (REVIEW)",
+        : "name from PT (REVIEW); no confirmation with this house number found in the PUA reading (49/49 pages) — the PUA↔PT numbering is partly divergent (evidenced)",
     });
   }
 
-  // ——— PUA nadaljevanje (issue #17: strani 3–10, 18 vnosov, REVIEW) ———
+  // ——— PUA nadaljevanje (strani 3–49, 101 vrstic, REVIEW — issue #4 popravljena oznaka) ———
   for (const r of PUA_CONTINUATION.rows) {
     rows.push({
       unit: "N083PUA",
       locatorSi: `stran ${r.page}, vrstica ${r.row}`,
       locatorEn: `page ${r.page}, row ${r.row}`,
       rowId: `pua-p${r.page}-r${r.row}`,
-      entitySi: `Lastnik (PUA 3–10): ${r.nameAsWritten} — hiše: ${r.houseNos.join(", ") || "—"}`,
-      entityEn: `Owner (PUA 3–10): ${r.nameAsWritten} — houses: ${r.houseNos.join(", ") || "—"}`,
+      entitySi: `Lastnik (PUA str. ${r.page}): ${r.nameAsWritten} — hiše: ${r.houseNos.join(", ") || "—"}`,
+      entityEn: `Owner (PUA p. ${r.page}): ${r.nameAsWritten} — houses: ${r.houseNos.join(", ") || "—"}`,
       entityId: `pua-p${r.page}-r${r.row}`,
       state: "STRUCTURED_UNRESOLVED",
       evidenceStatus: PUA_CONTINUATION.status,
       geometry: null,
       derivedCount: 1,
-      openSi: `strojni očrt (REVIEW, ${r.confidence}); del hišnih št. divergenten s PT — povezava čaka paleografijo`,
-      openEn: `machine reading (REVIEW, ${r.confidence}); part of the house numbers diverge with PT — linking awaits palaeography`,
+      openSi: `strojni očrt (REVIEW, ${r.confidence}); del hišnih št. divergenten s PT (dokazano različno številčenje) — povezava čaka paleografijo`,
+      openEn: `machine reading (REVIEW, ${r.confidence}); part of the house numbers diverge with PT (different numbering evidenced) — linking awaits palaeography`,
+    });
+  }
+
+  // ——— PS: seznam zemljiških parcel (issue #4: prej preskočen — enota v poročilu NI smela manjkati) ———
+  const psSeries = KURRENT_SERIES.find((k) => k.code === "PS");
+  if (psSeries) {
+    const psOpenRanges = psSeries.pagesReadList
+      ? (() => {
+          const readSet = new Set(psSeries.pagesReadList!);
+          const missing: [number, number][] = [];
+          let start: number | null = null;
+          for (let p = 1; p <= psSeries.pages; p++) {
+            if (!readSet.has(p)) {
+              if (start == null) start = p;
+            } else if (start != null) {
+              missing.push([start, p - 1]);
+              start = null;
+            }
+          }
+          if (start != null) missing.push([start, psSeries.pages]);
+          return missing.map(([a, b]) => (a === b ? `${a}` : `${a}–${b}`)).join(", ");
+        })()
+      : "";
+    rows.push({
+      unit: "N083PS",
+      locatorSi: `strani 1–4 + 140–143 (struktura + rekapitulacija); odprto: ${psOpenRanges}`,
+      locatorEn: `pages 1–4 + 140–143 (structure + recapitulation); open: ${psOpenRanges}`,
+      rowId: "N083PS",
+      entitySi: `Seznam zemljiških parcel — ${psSeries.structuredEntries} vzorčnih vrstic strukturiranih; kontrolna vsota 102+2505=2607 (str. 143)`,
+      entityEn: `Register of land parcels — ${psSeries.structuredEntries} sample rows structured; the checksum 102+2505=2607 (p. 143)`,
+      entityId: null,
+      state: "PENDING_TRANSCRIPTION",
+      evidenceStatus: psSeries.status,
+      geometry: null,
+      derivedCount: psSeries.structuredEntries,
+      openSi: `poln prepis 135 strani (5–139) TO_COLLECT — izrecno odprto, ne izgubljeno; izhodiščna kontrolna vsota 2607`,
+      openEn: `the full transcription of 135 pages (5–139) TO_COLLECT — explicitly open, not lost; the baseline checksum 2607`,
     });
   }
 
@@ -242,7 +295,8 @@ export function buildReconciliation(): ReconciliationReport {
     });
   }
 
-  // ——— povzetki po enotah ———
+  // ——— povzetki po enotah (issue #4: + scopeCheck iz inventarja) ———
+  const inventory = getArchiveInventory();
   const unitCodes = [...new Set(rows.map((r) => r.unit))];
   const units: UnitRecon[] = unitCodes.map((code) => {
     const src = ATLAS_SOURCES.find((s) => s.code === code);
@@ -253,6 +307,12 @@ export function buildReconciliation(): ReconciliationReport {
     const declared = src?.structuredEntries ?? 0;
     /** št. obdelanih zapisov vključuje izpeljane entitete (npr. 156 stavb z lista) */
     const processed = uRows.reduce((a, r) => a + r.derivedCount, 0);
+    /* ISSUE #4: kontrola obsega izračunana iz INVENTARJA — dokazano prebrane
+       strani + izrecno odprte strani morajo vsoti v deklarirane strani vira.
+       To NI samoizpolnjujoče: declaredScope (structuredEntries) šteje vrstice,
+       scopeCheck pa strani fonda — ločeni metriki, obe morata stati. */
+    const inv = inventory.units.find((u) => u.code === code);
+    const scopeAccounted = inv ? inv.scopeAccounted : true;
     return {
       code,
       titleSi: src?.titleSi ?? code,
@@ -267,8 +327,17 @@ export function buildReconciliation(): ReconciliationReport {
       structured,
       linked,
       unresolved,
-      /** zero-loss: št. obdelanih ≥ strukturiranih po evidenci VIRA */
-      zeroLoss: processed >= declared,
+      scopeCheck: {
+        pagesDeclared: inv?.pagesDeclared ?? null,
+        pagesRead: inv?.pagesRead ?? null,
+        pagesOpen: inv?.pagesOpen ?? null,
+        pagesOpenRangesSi: inv?.pagesOpenRangesSi ?? null,
+        accounted: scopeAccounted,
+      },
+      /** zeroLoss (issue #4, dvojna kontrola): (1) obseg — VSE strani vira so
+       *  dokazano prebrane ali izrecno zabeležene kot odprte (inventar);
+       *  (2) vrstice — vsaka vrstica poročila ima status in razlog (lost = 0). */
+      zeroLoss: scopeAccounted && processed >= declared,
     };
   });
 
@@ -310,6 +379,10 @@ export function buildReconciliation(): ReconciliationReport {
       sheetsTransferred: sheetUnits.length,
     },
     zeroLoss: lost === 0 && units.every((u) => u.zeroLoss),
+    zeroLossMeaningSi:
+      "zeroLoss = true potrjuje: (1) za VSAKO spisovno enoto N83 so vse deklarirane strani vira bodisi dokazano prebrane (pagesReadList iz surovih raziskav) bodisi izrecno zabeležene kot odprte z razlogom (scopeCheck) — brez tihih lukenj; (2) vsaka vrstica poročila ima status in razlog (lost = 0). zeroLoss NE potrjuje: da je poln prepis zaključen (PS 135 strani in PZ 59 strani so izrecno odprte), da so strojna branja dokaz (vse REVIEW), ali da obstajajo povezave hiša↔stavba (156 geometrij nima dokazanih hišnih št.).",
+    zeroLossMeaningEn:
+      "zeroLoss = true certifies: (1) for EVERY written N83 unit, all declared source pages are either evidenced as read (pagesReadList from the raw research) or explicitly recorded as open with a reason (scopeCheck) — no silent gaps; (2) every report row carries a state and a reason (lost = 0). zeroLoss does NOT certify: that the full transcription is complete (PS 135 pages and PZ 59 pages are explicitly open), that machine readings are evidence (all REVIEW), or that house↔building links exist (the 156 geometries carry no proven house numbers).",
     kurrentTrail,
   };
 }

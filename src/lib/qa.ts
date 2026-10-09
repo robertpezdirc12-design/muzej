@@ -10,7 +10,7 @@ import { WALKS, walkItemsWithGaps, WALK_GAPS } from "./walks";
 import { computeCoverage } from "./coverage";
 import { buildReconciliation } from "./reconciliation";
 import { NEGATIVE_RESULTS } from "@/data/atlas/sources";
-import { parishStats, getCoverage } from "./atlas";
+import { parishStats, getCoverage, getArchiveInventory } from "./atlas";
 import { PANORAMAS } from "@/data/atlas/panoramas";
 import { TIME_SPOTS } from "@/data/atlas/timespots";
 import {
@@ -35,7 +35,7 @@ import {
   ISSUE17_AUDIT,
 } from "@/data/atlas/research";
 import { ATLAS_HOUSES } from "@/data/atlas/houses";
-import { ATLAS_OWNERS, SHEET_GEOREFS } from "@/data/atlas/model";
+import { ATLAS_OWNERS, SHEET_GEOREFS, VECTOR_BUILDINGS } from "@/data/atlas/model";
 import { ATLAS_SOURCES } from "@/data/atlas/sources";
 import { TREE_STATS, SMOKE_CHIMNEYS, HOUSENO_FINDING, TREES } from "./village3d";
 import { SOURCE_TYPE_LABELS } from "./museum";
@@ -897,34 +897,43 @@ export function runQA(opts: QAOptions = {}): QAReport {
     if (!georefA05.methodSi.includes("O.IX24ch")) p10Errors.push("A05 metoda mora navesti oznako »O.IX24ch«");
   }
 
-  // viri: vsi grafični listi GEOREFERENCED + 3 novi viri
+  // viri: 2 lista VALIDIRANA (A01/A02) + 3 listi GRID_APPROX (A03–A05, issue #4 ločitev natančnosti)
   const graphicSheets = ATLAS_SOURCES.filter((s) => s.type === "cadastral-map");
   const geoCount = graphicSheets.filter((s) => s.georefStatus === "GEOREFERENCED").length;
-  if (geoCount !== 5) p10Errors.push(`georeferencirani grafični listi: ${geoCount} (pričakovano 5 — VSI!)`);
+  const gridCount = graphicSheets.filter((s) => s.georefStatus === "GRID_APPROX").length;
+  if (geoCount !== 2) p10Errors.push(`validirano georeferencirani grafični listi: ${geoCount} (pričakovano 2 — A01/A02)`);
+  if (gridCount !== 3) p10Errors.push(`listi z okvirno umestitvijo (GRID_APPROX): ${gridCount} (pričakovano 3 — A03/A04/A05)`);
+  const srcA01 = ATLAS_SOURCES.find((s) => s.id === "src-a01");
+  const srcA02 = ATLAS_SOURCES.find((s) => s.id === "src-a02");
   const srcA03 = ATLAS_SOURCES.find((s) => s.id === "src-a03");
   const srcA04 = ATLAS_SOURCES.find((s) => s.id === "src-a04");
   const srcA05 = ATLAS_SOURCES.find((s) => s.id === "src-a05");
-  if (!srcA03 || srcA03.georefStatus !== "GEOREFERENCED" || srcA03.georeferenced !== true)
-    p10Errors.push("src-a03 ni GEOREFERENCED");
-  if (!srcA04 || srcA04.georefStatus !== "GEOREFERENCED" || srcA04.georeferenced !== true)
-    p10Errors.push("src-a04 ni GEOREFERENCED");
-  else if (!srcA04.noteSi?.includes("POPRAVEK P10")) p10Errors.push("src-a04 opomba brez POPRAVKa P10");
-  if (!srcA05 || srcA05.georefStatus !== "GEOREFERENCED" || srcA05.georeferenced !== true)
-    p10Errors.push("src-a05 ni GEOREFERENCED");
+  for (const [src, id] of [[srcA01, "src-a01"], [srcA02, "src-a02"]] as const) {
+    if (!src || src.georefStatus !== "GEOREFERENCED" || src.georeferenced !== true || src.placement?.precision !== "VALIDATED_GEOREF")
+      p10Errors.push(`${id} ni GEOREFERENCED z VALIDATED_GEOREF placement`);
+  }
+  for (const [src, id, cell] of [[srcA03, "src-a03", "dg"], [srcA04, "src-a04", "cg"], [srcA05, "src-a05", "ch"]] as const) {
+    if (!src || src.georefStatus !== "GRID_APPROX" || src.georeferenced !== false || src.placement?.precision !== "GRID_APPROX")
+      p10Errors.push(`${id} ni GRID_APPROX z ustreznim placement`);
+    else if (src.placement && !src.placement.methodSi.includes(cell))
+      p10Errors.push(`${id} placement brez celice ${cell}`);
+  }
+  if (!srcA04 || !srcA04.noteSi?.includes("POPRAVEK P10")) p10Errors.push("src-a04 opomba brez POPRAVKa P10");
   for (const sid of ["src-vac-n83", "src-gurs-wfs", "src-ezkn"]) {
     if (!ATLAS_SOURCES.find((s) => s.id === sid)) p10Errors.push(`nov vir ${sid} manjka`);
   }
   const srcEzkn = ATLAS_SOURCES.find((s) => s.id === "src-ezkn");
   if (srcEzkn && !srcEzkn.noteSi?.includes("O.IX24c"))
     p10Errors.push("src-ezkn opomba brez kod celic (O.IX24c…)");
-  // pokritost
-  if (getCoverage().sheetsGeoreferenced !== 5)
-    p10Errors.push(`COVERAGE.sheetsGeoreferenced: ${getCoverage().sheetsGeoreferenced} (pričakovano 5)`);
+  // pokritost (issue #4: ločeno validirana 2 + približna 3)
+  const covP10 = getCoverage();
+  if (covP10.sheetsGeoreferenced !== 2 || covP10.sheetsGridApprox !== 3 || covP10.sheetsTotal !== 5)
+    p10Errors.push(`COVERAGE listi: validirani ${covP10.sheetsGeoreferenced} / približni ${covP10.sheetsGridApprox} / skupaj ${covP10.sheetsTotal} (pričakovano 2/3/5)`);
 
   push(
     "qa-p10-ezkn-grid",
-    "P10: sekcija mreža eZKN razrešila VSE liste — A03=celica dg, A04=celica cg (POPRAVEK P9: ovin Adlešiči zavrnjen), A05=celica ch; 5/5 grafičnih listov georeferenciranih; +3 uradni viri (VAČ N83, GURS WFS, eZKN)",
-    "P10: the eZKN section grid resolved ALL sheets — A03=cell dg, A04=cell cg (P9 CORRECTED: the Adlešiči bend retracted), A05=cell ch; 5/5 graphic sheets georeferenced; +3 official sources (VAČ N83, GURS WFS, eZKN)",
+    "P10: sekcija mreža eZKN razrešila vse liste — A03=celica dg, A04=celica cg (POPRAVEK P9), A05=celica ch; issue #4: 2 lista validirano georeferencirana (A01/A02), 3 listi okvirno umesčeni po mreži (GRID_APPROX ±200–400 m)",
+    "P10: the eZKN section grid resolved ALL sheets — A03=cell dg, A04=cell cg (P9 CORRECTION), A05=cell ch; issue #4: 2 sheets validated georeference (A01/A02), 3 sheets approximately placed by the grid (GRID_APPROX ±200–400 m)",
     p10Errors.length === 0,
     p10Errors.length === 0
       ? "Okvirjene oznake listov so KODI SEKCIJSKE MREŽE 1:2880 (eZKN/GURS, uradna geometrija D96/TM): A02=»O.IX24cƒ«→celica cf — središče vsebine A02 se NATANČNO ujema s središčem celice (princip list≈celica!) — torej A03=»O.IX24dg«→celica dg (45,5437–45,5575 N, 15,2485–15,273 E; vsebina = le vzhodni pas = zahodni rob k.o. Griblje; TRIBUTSCH→k.o. Tribuče ✓, WEIDENDORF→k.o. Bedenj ✓), A04=»O.IX24cg«→celica cg (45,5436–45,5574, 15,2728–15,2973 — DIREKTNO južno od A02; POPRAVEK P9: prejšnja lega na ovinku Kolpe pri Adlešičih zavrnjena — stavbna validacija 636 m mediane, kontrole P9 nedisukriminativne, »reka« = verjetno dolina; Kolpa teče IZVEN lista A04), A05=»O.IX24ch«→celica ch (45,5299–45,5437, 15,2726–15,2971 = skrajni jug 1825 k.o. Griblje — ozemlje pozneje odvzeto; sklop 45 stavb → Fučkovci/Dragoši [~], Pri Jankovichti → naselje Jankoviči ✓). Vsa stanja REVIEW (±200–400 m); identiteta listov neodvisno potrjena prek VAČ (5 listov N083A01–A05, križne korelacije predogledov); novi viri: GURS WFS (k.o. 1544 poligon + 2117 parcel + naselja), eZKN (mreža + ZKN skeni); prekritost 5/5"
@@ -1133,6 +1142,125 @@ export function runQA(opts: QAOptions = {}): QAReport {
     "P19: the village's first mention is always 1468 (St. Vitus' church: 1526; MVG-001)",
     firstMentionViolations.length === 0 && mvg001Ok,
     `${firstMentionViolations.length} stavkov brez zasidranja na 1468${firstMentionViolations.length ? `: ${firstMentionViolations.slice(0, 3).join(" | ")}` : ""}; MVG-001 yearFrom: ${villageRecord?.yearFrom}`,
+  );
+
+  /* ── P20 (issue #4): inventar N83 — usklajenost števcev z podatkovnim modeljem ── */
+  const p20invErrors: string[] = [];
+  const inv = getArchiveInventory();
+  if (inv.totals.units !== 12) p20invErrors.push(`enot: ${inv.totals.units} (pričakovano 12 = 5 grafičnih + 7 spisovnih)`);
+  if (inv.totals.graphicSheets !== 5) p20invErrors.push(`grafičnih listov: ${inv.totals.graphicSheets}`);
+  if (inv.totals.writtenSeries !== 7) p20invErrors.push(`spisovnih enot: ${inv.totals.writtenSeries}`);
+  // structuredEntities == dejansko stanje modelov (catches stale structuredEntries v sources.ts)
+  const ptInv = inv.units.find((u) => u.code === "N083PT");
+  const puaInv = inv.units.find((u) => u.code === "N083PUA");
+  const psInv = inv.units.find((u) => u.code === "N083PS");
+  const pzInv = inv.units.find((u) => u.code === "N083PZ");
+  const a02Inv = inv.units.find((u) => u.code === "N083A02");
+  if (ptInv && ptInv.structuredEntities !== ATLAS_HOUSES.length)
+    p20invErrors.push(`PT structured ${ptInv.structuredEntities} != houses.ts ${ATLAS_HOUSES.length}`);
+  const srcPua = ATLAS_SOURCES.find((s) => s.id === "src-pua");
+  if (puaInv && srcPua && (puaInv.structuredEntities !== PUA_CONTINUATION.rows.length || srcPua.structuredEntries !== PUA_CONTINUATION.rows.length))
+    p20invErrors.push(`PUA structured ${puaInv.structuredEntities}/src ${srcPua.structuredEntries} != PUA_CONTINUATION ${PUA_CONTINUATION.rows.length} (43→101 napaka se ne sme ponoviti)`);
+  if (psInv && psInv.structuredEntities !== 12) p20invErrors.push(`PS structured: ${psInv.structuredEntities}`);
+  if (pzInv && pzInv.structuredEntities !== 10) p20invErrors.push(`PZ structured: ${pzInv.structuredEntities}`);
+  if (a02Inv && a02Inv.structuredEntities !== VECTOR_BUILDINGS.length)
+    p20invErrors.push(`A02 structured: ${a02Inv.structuredEntities} != ${VECTOR_BUILDINGS.length}`);
+  if (inv.totals.spatiallyLinked !== 0 || inv.units.some((u) => u.spatiallyLinked !== 0))
+    p20invErrors.push("spatiallyLinked mora biti 0 — povezava hiša↔stavba zahteva dokaz (ne ista številka)");
+  if (inv.totals.palaeoConfirmed !== 0) p20invErrors.push("palaeoConfirmed mora biti 0 — človeška paleografija še ni izvedena");
+  if (inv.psChecksum.total !== 2607 || inv.psChecksum.buildingSites !== 102 || inv.psChecksum.landParcels !== 2505)
+    p20invErrors.push(`PS checksum: ${inv.psChecksum.buildingSites}+${inv.psChecksum.landParcels}=${inv.psChecksum.total} (pričakovano 102+2505=2607)`);
+  push(
+    "qa-p20-inventory",
+    "P20: inventar N83 izračunan iz modelov — 12 enot, structuredEntities == dejansko stanje (PUA 101, PT 105, PS 12, PZ 10, A02 156), 0 prostorsko povezanih, 0 paleografsko potrjenih, PS vsota 2607",
+    "P20: N83 inventory computed from the models — 12 units, structuredEntities == actual state (PUA 101, PT 105, PS 12, PZ 10, A02 156), 0 spatially linked, 0 palaeographically confirmed, PS checksum 2607",
+    p20invErrors.length === 0,
+    p20invErrors.length === 0
+      ? `12 enot (5 grafičnih + 7 spisovnih); strani: ${inv.totals.pagesRead} prebranih + ${inv.totals.pagesOpen} odprtih = ${inv.totals.pagesDeclared} deklariranih; PS ${inv.psChecksum.structured}/${inv.psChecksum.total}`
+      : p20invErrors.join("; "),
+  );
+
+  /* ── P20 (issue #4): dokazno prebrane strani == pagesTranscribed; brez tihih lukenj ── */
+  const p20pagesErrors: string[] = [];
+  for (const k of KURRENT_SERIES) {
+    const list = k.pagesReadList ?? [];
+    if (list.length !== k.pagesTranscribed)
+      p20pagesErrors.push(`${k.code}: pagesReadList dolžina ${list.length} != pagesTranscribed ${k.pagesTranscribed}`);
+    if (list.length !== new Set(list).size) p20pagesErrors.push(`${k.code}: pagesReadList vsebuje podvojene strani`);
+    const bad = list.filter((p) => p < 1 || p > k.pages);
+    if (bad.length) p20pagesErrors.push(`${k.code}: strani izven obsega: ${bad.join(",")}`);
+    if (k.pagesTranscribed + (k.pages - k.pagesTranscribed) !== k.pages)
+      p20pagesErrors.push(`${k.code}: prebrane + odprte != deklarirane`);
+  }
+  // dokazane vrednosti iz surovih raziskav (issue #4 resolucije: PS 8, PZ 12)
+  const expectedRead: Record<string, number> = { PR: 4, PS: 8, PUA: 49, PZ: 12, PT: 8, PG: 1, PV: 1 };
+  for (const [code, n] of Object.entries(expectedRead)) {
+    const k = KURRENT_SERIES.find((x) => x.code === code);
+    if (k && k.pagesTranscribed !== n)
+      p20pagesErrors.push(`${code}: pagesTranscribed ${k.pagesTranscribed} != dokazano ${n} (PS-structure/PZ-valuation.json)`);
+  }
+  const invScope = getArchiveInventory();
+  if (!invScope.totals.scopeAccounted) p20pagesErrors.push("inventar: scopeAccounted ni true za vse enote");
+  push(
+    "qa-p20-series-pages",
+    "P20: dokazano prebrane strani po serijah (PR 4, PS 8, PUA 49, PZ 12, PT 8, PG 1, PV 1) — pagesReadList == pagesTranscribed, brez lukenj; PS 8 in PZ 12 usklajena z research/issue17 datotekami",
+    "P20: evidenced read pages per series (PR 4, PS 8, PUA 49, PZ 12, PT 8, PG 1, PV 1) — pagesReadList == pagesTranscribed, no gaps; PS 8 and PZ 12 reconciled with the research/issue17 files",
+    p20pagesErrors.length === 0,
+    p20pagesErrors.length === 0
+      ? `skupaj ${invScope.totals.pagesRead}/${invScope.totals.pagesDeclared} prebranih; odprtih ${invScope.totals.pagesOpen} (PS 5–139, PZ 4–67 razen vzorcev) — vse izrecno, 0 tihih`
+      : p20pagesErrors.join("; "),
+  );
+
+  /* ── P20 (issue #4): ločitev validirana georeferenca vs okvirna umestitev ── */
+  const p20geoErrors: string[] = [];
+  const sheetsGeo = ATLAS_SOURCES.filter((s) => s.type === "cadastral-map");
+  for (const s of sheetsGeo) {
+    if (s.georefStatus === "GRID_APPROX" && s.georeferenced !== false)
+      p20geoErrors.push(`${s.id}: GRID_APPROX a georeferenced !== false`);
+    if (s.georefStatus === "GEOREFERENCED" && !s.placement)
+      p20geoErrors.push(`${s.id}: GEOREFERENCED brez placement podatkov (natančnost/stran)`);
+    if (s.placement && !s.placement.lastChecked) p20geoErrors.push(`${s.id}: placement brez datuma preveritve`);
+  }
+  const covGeo = getCoverage();
+  if (covGeo.sheetsGeoreferenced !== 2 || covGeo.sheetsGridApprox !== 3)
+    p20geoErrors.push(`pokritost: ${covGeo.sheetsGeoreferenced}+${covGeo.sheetsGridApprox} (pričakovano 2+3)`);
+  if (covGeo.archivalUnits !== 12) p20geoErrors.push(`archivalUnits: ${covGeo.archivalUnits} (pričakovano 12)`);
+  if (covGeo.archivalPages !== 277) p20geoErrors.push(`archivalPages: ${covGeo.archivalPages} (pričakovano 277 = 143+71+49+8+4+1+1)`);
+  if (covGeo.housesWithGeometry !== 0)
+    p20geoErrors.push(`housesWithGeometry: ${covGeo.housesWithGeometry} — hiša↔stavba povezava zahteva dokaz (156 geometrij nima hišnih št.)`);
+  push(
+    "qa-p20-georef-precision",
+    "P20: natančnost prostorske umestitve ločena — A01/A02 VALIDIRANA georeferenca (±40–100 m), A03–A05 GRID_APPROX (±200–400 m, sekcijska mreža); 12 enot, 277 strani fonda, 0 hiš z dokazano geometrijo",
+    "P20: spatial placement precision separated — A01/A02 VALIDATED georeference (±40–100 m), A03–A05 GRID_APPROX (±200–400 m, section grid); 12 units, 277 fond pages, 0 houses with proven geometry",
+    p20geoErrors.length === 0,
+    p20geoErrors.length === 0
+      ? "listi: 2 validirana + 3 približno umesčene (vsak s placement: method/controlPoints/accuracy/lastChecked); pokritost 2+3=5"
+      : p20geoErrors.join("; "),
+  );
+
+  /* ── P20 (issue #4): reconciliation preverja inventuro obsega, ne samo statuse ── */
+  const p20recErrors: string[] = [];
+  const rec = buildReconciliation();
+  for (const u of rec.units) {
+    if (u.pages != null && !u.scopeCheck.accounted)
+      p20recErrors.push(`${u.code}: scopeCheck ni usklajen (${u.scopeCheck.pagesRead}+${u.scopeCheck.pagesOpen} != ${u.scopeCheck.pagesDeclared})`);
+  }
+  if (!rec.zeroLossMeaningSi || !rec.zeroLossMeaningEn)
+    p20recErrors.push("zeroLossMeaning manjka — poštena opredelitev, kaj zeroLoss potrjuje in česa ne");
+  if (rec.zeroLossMeaningSi && !rec.zeroLossMeaningSi.includes("NE potrjuje"))
+    p20recErrors.push("zeroLossMeaning mora izrecno navesti, česa zeroLoss NE potrjuje");
+  if (!rec.zeroLoss) p20recErrors.push("zeroLoss = false — izgubljeni zapis ali neusklajen obseg");
+  const puaRecRows = rec.rows.filter((r) => r.unit === "N083PUA");
+  const stalePua = puaRecRows.filter((r) => r.locatorSi?.includes("C–Ž"));
+  if (stalePua.length) p20recErrors.push(`${stalePua.length} PUA vrstic s zastarelim locatom »strani C–Ž (niso prepisane)« — register je prebran v celoti`);
+  push(
+    "qa-p20-recon-scope",
+    "P20: reconciliation preverja INVENTURO obsega (prebrane + odprte strani == deklarirane) ne samo statuse; zeroLoss z opredelitvijo, kaj potrjuje in česa NE; 0 zastarelih PUA lokatorjev",
+    "P20: reconciliation checks the scope INVENTORY (read + open pages == declared), not just statuses; zeroLoss with a statement of what it certifies and does NOT; 0 stale PUA locators",
+    p20recErrors.length === 0,
+    p20recErrors.length === 0
+      ? `enote: ${rec.units.length}; vse scopeCheck.accounted; zeroLoss=${rec.zeroLoss}; pomen dokumentiran (PS 135 + PZ 59 strani izrecno odprtih, ne prikrito)`
+      : p20recErrors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;
