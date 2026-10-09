@@ -382,7 +382,11 @@ export function ExhibitDetail({
                 )}
               </p>
               <ul className="mt-4 grid gap-3 sm:grid-cols-2">
-                {extra.related.map((r) => (
+                {/* prikaži samo povezave na dejansko obstoječe zapise
+                    (npr. MVG-114 je rezerviran, a še ni v zbirki) */}
+                {extra.related
+                  .filter((r) => getExhibit(r.slug))
+                  .map((r) => (
                   <li key={r.slug}>
                     <button
                       type="button"

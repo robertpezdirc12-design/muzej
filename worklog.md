@@ -1985,3 +1985,20 @@ Stage Summary:
 - GITLAB: IP sandboxa blokiran ("blocked IP address or country", tudi anonimno); račun najverjetneje še blokiran (P12 dokaz) — čaka odgovor podpore.
 - POT PO ODBLOKAVI: push iz lokalnega na GitLab (deploy/gitlab remote, žetona v local-gitlab.pat) → Vercel webhook deploy + push mirror posodobi GitHub → vse tri kopije identične na 7579077 → preverba /api/qa 23/23.
 - NADALJNJE DELO (AR 3D vas) lahko teče lokalno neodvisno; objava čaka odblokavo GitLab ali Vercel žeton pot.
+
+---
+
+## P14 — P0 AUDIT (GitHub issue #1): revizija + popravki (2026-10-10)
+
+- ISSUE #1 izveden v celoti; poročilo v docs/MUSEUM-AUDIT.md (matrika DONE/PARTIAL/DEMO/MISSING/BLOCKED, 20 postavk).
+- INTEGRITETA (deterministični skript): 113 zapisov MVG-001→MVG-113 unikatno, 113/113 dvojezično, 106/106 slik z krediti, 0 podvojenih; 36/113 GPS; 590 navedb virov (470 unikatnih), 0 brez licence; lestvica 4 stopenj veljavna pri vseh.
+- NAJDENE IN POPRAVLJENE NAPAKE (brez izgube vsebine, +33/−13 v 7 datotekah):
+  1) časovnica: 4 prazgodovinski zapisi (MVG-060/-083/-095/-113, leta −4500…−800) nevidni — dodan zavihek »Prazgodovina« (−5000…1400), privzeti zavihek ostaja 1468–1790;
+  2) negativna leta sedaj izpisana kot »4500 pr. n. št.«/»4500 BC« (prej »−4500«);
+  3) obešeni »sorodni« gumbi na neobstoječi MVG-114 (panjska-koncnica, kresovanje) — filter na obstoječe cilje (samo-povratek, ko se MVG-114 doda);
+  4) štetje virov 589→590 povsod (meta.json, layout ×4, research-label zdaj dinamična iz totalSourceRows, README);
+  5) README obseg MVG-001→MVG-113 (MVG-114 še ne obstaja; rezerviran v extra.json related);
+  6) taksonomija virov: Kmečki glas (MVG-022, tisk, brez URL) spletni-vir→objava; arhivski-vir (MVG-092)→arhiv.
+- PREVERJENO DEJANSKO STANJE (dokazi v MUSEUM-AUDIT.md): georef-1812 resnično povezan z UI (L.imageOverlay A01/A02 z GEOTRUTH mejami, izrez 1812 kot slika zapisa + raziskovalna kartica); QR 1+9 z globokimi povezavami; AR brez očal resnična (getUserMedia + model-viewer webxr/scene-viewer/quick-look, kompas+GPS sidro) in brez runtime AI (ELEVENLABS/OPENROUTER neuporabljena); avdio = speechSynthesis z MP3 fallbackom (datoteke še manjkajo, README pošten); licence plastovito CC BY-SA 4.0 + OSM atribucija; 12 API poti force-static, 0 XSS površin; telefon NEPREVERJEN (izrecno označeno).
+- TESTI: ESLint 0; tsc 30 (predhodne, prikrite z ignoreBuildErrors; moje spremembe 0 novih, −1); build 16/16; /api/qa 23/23; /api/atlas/integrity 11/11; provenance 590/0; opendata 113/590/11/6.
+- DEPLOY: commit + push na GitHub main; produkcijski deploy prek Vercel CLI (GitLab še blokiran) — glej P14 deploy zapis.

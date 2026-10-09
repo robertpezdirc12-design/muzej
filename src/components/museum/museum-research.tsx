@@ -213,7 +213,10 @@ export function MuseumResearch() {
               <div className="rounded-xl border bg-card p-6 shadow-sm">
                 <h3 className="flex items-center gap-2 font-display text-lg font-semibold">
                   <Database className="size-4 text-primary" aria-hidden="true" />
-                  {t("Licence virov (589 vrstic)", "Source licenses (589 rows)")}
+                  {t(
+                    `Licence virov (${audit.sources.totalSourceRows} navedb)`,
+                    `Source licenses (${audit.sources.totalSourceRows} citations)`,
+                  )}
                 </h3>
                 <ul className="mt-4 max-h-48 space-y-2 overflow-y-auto pr-2 text-sm">
                   {Object.entries(audit.sources.licenseDistribution)

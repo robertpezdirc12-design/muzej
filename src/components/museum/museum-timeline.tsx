@@ -16,6 +16,13 @@ interface Era {
 
 const ERAS: Era[] = [
   {
+    label: "Prazgodovina",
+    from: -5000,
+    to: 1400,
+    noteSi: "Arheološka najdišča in najdbe, starejše od prvih pisnih omemb (pred 1400)",
+    noteEn: "Archaeological sites and finds older than the first written records (before 1400)",
+  },
+  {
     label: "1468–1790",
     from: 1400,
     to: 1790,
@@ -54,17 +61,17 @@ const ERAS: Era[] = [
 
 export function MuseumTimeline({ onOpen }: { onOpen: (slug: string) => void }) {
   const { t, lang } = useLang();
-  const [eraIdx, setEraIdx] = useState(0);
+  const [eraIdx, setEraIdx] = useState(1); // privzeto obdobje »1468–1790« (Prazgodovina je zavihek 0)
   const era = ERAS[eraIdx];
 
   const items = useMemo(() => {
     return exhibitsByMuseumNo()
-      .filter((e) => {
+      .filter((e): e is Exhibit & { yearFrom: number } => {
         const y = e.yearFrom;
         if (y == null) return false;
         return y >= era.from && y < era.to;
       })
-      .sort((a, b) => (a.yearFrom ?? 0) - (b.yearFrom ?? 0));
+      .sort((a, b) => a.yearFrom - b.yearFrom);
   }, [era]);
 
   return (
@@ -112,7 +119,7 @@ export function MuseumTimeline({ onOpen }: { onOpen: (slug: string) => void }) {
         </p>
 
         <ol className="relative mt-6 space-y-3 before:absolute before:bottom-2 before:left-[15px] before:top-2 before:w-px before:bg-border">
-          {items.map((e: Exhibit, i) => {
+          {items.map((e, i) => {
             const ev = EVIDENCE_LABELS[e.evidenceStatus];
             return (
               <motion.li
@@ -126,14 +133,20 @@ export function MuseumTimeline({ onOpen }: { onOpen: (slug: string) => void }) {
                   className="absolute left-0 top-1.5 flex size-8 items-center justify-center rounded-full border border-primary/40 bg-background font-mono text-[10px] font-semibold text-primary"
                   aria-hidden="true"
                 >
-                  {String(e.yearFrom).slice(-2)}
+                  {e.yearFrom < 0
+                    ? String(Math.abs(e.yearFrom))
+                    : String(e.yearFrom).slice(-2)}
                 </span>
                 <button
                   type="button"
                   onClick={() => onOpen(e.slug)}
                   className="group flex w-full flex-wrap items-baseline gap-x-3 gap-y-1 rounded-lg border bg-card px-4 py-3 text-left transition-colors hover:border-primary/40"
                 >
-                  <span className="font-mono text-xs font-semibold text-primary">{e.yearFrom}</span>
+                  <span className="font-mono text-xs font-semibold text-primary">
+                    {e.yearFrom < 0
+                      ? t(`${Math.abs(e.yearFrom)} pr. n. št.`, `${Math.abs(e.yearFrom)} BC`)
+                      : e.yearFrom}
+                  </span>
                   <span className="text-sm font-medium text-foreground group-hover:text-primary">
                     {lang === "si" ? e.titleSi : e.titleEn}
                   </span>
