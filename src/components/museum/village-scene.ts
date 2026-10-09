@@ -918,6 +918,15 @@ export class VillageScene {
     for (const s of this.smokeSprites) {
       (s.spr.material as THREE.SpriteMaterial).dispose();
     }
+    const disposedTextures = new Set<THREE.Texture>();
+    const disposeMaterial = (material: THREE.Material) => {
+      const map = (material as THREE.Material & { map?: THREE.Texture }).map;
+      if (map && !disposedTextures.has(map)) {
+        map.dispose();
+        disposedTextures.add(map);
+      }
+      material.dispose();
+    };
     this.scene.traverse((o) => {
       const any = o as unknown as {
         geometry?: THREE.BufferGeometry;
@@ -925,8 +934,8 @@ export class VillageScene {
       };
       any.geometry?.dispose?.();
       const m = any.material;
-      if (Array.isArray(m)) m.forEach((x) => x.dispose());
-      else m?.dispose?.();
+      if (Array.isArray(m)) m.forEach(disposeMaterial);
+      else if (m) disposeMaterial(m);
     });
     this.renderer.dispose();
   }
@@ -935,7 +944,8 @@ export class VillageScene {
 
   /** barve duhov 1825 po statusu (Kaj je izginilo?) — ghost=true v »danes« */
   private applyPresenceColors(ghost: boolean) {
-    const base = new THREE.Color(0xd8cdb8);
+    /* material color is white now because the plaster tint comes from its texture. */
+    const base = new THREE.Color(0xffffff);
     const c = new THREE.Color();
     for (let i = 0; i < BUILDINGS_1825.length; i++) {
       if (ghost) {
