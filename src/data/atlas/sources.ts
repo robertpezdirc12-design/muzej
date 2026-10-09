@@ -25,11 +25,30 @@ export type TransferStatus =
   | "NOT_DIGITIZED" /** enota obstaja, a ni digitalizirana */
   | "NOT_APPLICABLE";
 
-/** strojno berljiv status georeference (issue #3 #11) */
+/** strojno berljiv status georeference (issue #3 #11; issue #4: ločitev natančnosti)
+ *  GEOREFERENCED = validirana georeferenca s kontrolnimi točkami in znano negotovostjo;
+ *  GRID_APPROX   = okvirna umestitev po sekcijski mreži 1:2880 (eZKN) — NI validirana
+ *                  georeferenca (brez točkovnega sidra; ±200–400 m). */
 export type GeorefStatus =
   | "GEOREFERENCED"
+  | "GRID_APPROX"
   | "TO_COLLECT"
   | "NOT_APPLICABLE";
+
+/** Prostorska umestitev grafičnega lista (issue #4) — ločuje dokazano stanje od
+ *  približka. Podatek izhaja iz SHEET_GEOREFS (model.ts): A01/A02 imata afino
+ *  s kontrolnimi točkami; A03–A05 so umesčene prek kode celice mreže. */
+export interface SpatialPlacement {
+  precision: "VALIDATED_GEOREF" | "GRID_APPROX";
+  methodSi: string;
+  methodEn: string;
+  /** št. kontrolnih točk / preveritev, ki podpirajo umestitev */
+  controlPoints: number;
+  accuracySi: string;
+  accuracyEn: string;
+  /** datum zadnje preveritve (YYYY-MM-DD) */
+  lastChecked: string;
+}
 
 /** strojno berljivi statusi raziskave vsakega zgodovinskega podatka (issue #3 #13) */
 export type ResearchStatus =
@@ -62,11 +81,13 @@ export interface AtlasSource {
   licenceSi: string;
   licenceEn: string;
   thumb?: string;
-  /** ali je list georeferenciran */
+  /** ali je list georeferenciran (validirana afina — issue #4 loči od okvirne umestitve) */
   georeferenced?: boolean;
   /** strojno berljiva statusa (issue #3) */
   transferStatus?: TransferStatus;
   georefStatus?: GeorefStatus;
+  /** prostorska umestitev z natančnostjo (issue #4) */
+  placement?: SpatialPlacement;
   /** koliko vsebinskih zapisov enote je strukturiranih v Atlasu */
   structuredEntries?: number;
   /** datum zadnje preveritve vira (YYYY-MM-DD) */
@@ -96,6 +117,15 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     georeferenced: true,
     transferStatus: "TRANSFERRED",
     georefStatus: "GEOREFERENCED",
+    placement: {
+      precision: "VALIDATED_GEOREF",
+      methodSi: "GEOTRUTH afina (issue #14): sidri »jedro vasi« (cerkev+ pokopališče, 34 m od EŠD 2122) in severna skupina hiš; struga Kolpe kot neodvisna E–Z kontrola.",
+      methodEn: "GEOTRUTH affine (issue #14): the anchors »village core« (church + churchyard, 34 m from EŠD 2122) and the northern house cluster; the Kolpa channel as an independent E–W control.",
+      controlPoints: 3,
+      accuracySi: "±60–100 m na območju vasi (struga potrjena 6–30 m)",
+      accuracyEn: "±60–100 m over the village area (the channel confirmed at 6–30 m)",
+      lastChecked: "2026-10-08",
+    },
     structuredEntries: 0,
     lastVerified: "2026-10-07",
     noteSi:
@@ -123,12 +153,21 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     georeferenced: true,
     transferStatus: "TRANSFERRED",
     georefStatus: "GEOREFERENCED",
+    placement: {
+      precision: "VALIDATED_GEOREF",
+      methodSi: "GEOTRUTH afina (issue #14), CORROBORATED: cerkev sv. Vida na listu ↔ uradni poligon EŠD 2122 (GisKD) + stavba OSM 284847361 (≤ 8 m); struga Kolpe se ujema 6–30 m. Iz tega lista je vektoriziranih 156 stavbnih tlorisov — izvor 3D vasi.",
+      methodEn: "GEOTRUTH affine (issue #14), CORROBORATED: St. Vitus' church on the sheet ↔ the official EŠD 2122 polygon (GisKD) + OSM building 284847361 (≤ 8 m); the Kolpa channel matches at 6–30 m. The 156 building footprints were vectorised from THIS sheet — the origin of the 3D village.",
+      controlPoints: 2,
+      accuracySi: "±40–80 m na območju vasi (najbolje zasidran list serije)",
+      accuracyEn: "±40–80 m over the village area (the best-anchored sheet of the series)",
+      lastChecked: "2026-10-08",
+    },
     structuredEntries: 156,
     lastVerified: "2026-10-07",
     noteSi:
-      "List z jedrom vasi in cerkvijo St. Veith (sv. Vid, oznaka K, stavba z apsido). Sken 3010 × 2158 px. Iz lista je vektoriziranih 156 stavbnih objektov (RECONSTRUCTED).",
+      "List z jedrom vasi in cerkvijo St. Veith (sv. Vid, oznaka K, stavba z apsido). Sken 3010 × 2158 px. Iz lista je vektoriziranih 156 stavbnih objektov (RECONSTRUCTED). OPOMBA (issue #4): vektorizacija zajema GEOMETRIJO stavb, ne pa dokazanih povezav s hišnimi številkami — lista ne nosi berljivih hišnih št. ob vseh objektih; te izhajajo iz PT/PUA registrov (156 geometrij ≥ 84 hiš = ni 1:1 povezave).",
     noteEn:
-      "Sheet with the village core and St. Veith church (marked K, apsidal building). Scan 3010 × 2158 px. 156 building objects vectorised from the sheet (RECONSTRUCTED).",
+      "Sheet with the village core and St. Veith church (marked K, apsidal building). Scan 3010 × 2158 px. 156 building objects vectorised from the sheet (RECONSTRUCTED). NOTE (issue #4): the vectorisation captures the buildings' GEOMETRY, not proven links to house numbers — the sheet does not carry readable house numbers by every object; those come from the PT/PUA registers (156 geometries ≥ 84 houses = no 1:1 link).",
   },
   {
     id: "src-a03",
@@ -147,9 +186,18 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     licenceSi: "javno dostopno, dovoljenje ni potrebno (VAČ)",
     licenceEn: "publicly accessible, no permission required (VAČ)",
     thumb: "/atlas/n83-a03-thumb.jpg",
-    georeferenced: true,
+    georeferenced: false,
     transferStatus: "TRANSFERRED",
-    georefStatus: "GEOREFERENCED",
+    georefStatus: "GRID_APPROX",
+    placement: {
+      precision: "GRID_APPROX",
+      methodSi: "P10 (2026-10-08): okvirna oznaka lista »O.IX24dg« = celica sekcijske mreže 1:2880 eZKN (GURS) VKIX24dg z uradno geometrijo; validacije napisov TRIBUTSCH→k.o. Tribuče, WEIDENDORF→k.o. Bedenj. Brez točkovnega sidra — ni afina.",
+      methodEn: "P10 (2026-10-08): the sheet's frame code »O.IX24dg« = the cell of the 1:2880 eZKN section grid (GURS) VKIX24dg with official geometry; label validations TRIBUTSCH→c.m. Tribuče, WEIDENDORF→c.m. Bedenj. No point anchor — not an affine.",
+      controlPoints: 3,
+      accuracySi: "±200–400 m (preslikava list↔celica po principu iz A02; stavbna validacija šibka — 200 let sprememb)",
+      accuracyEn: "±200–400 m (the sheet↔cell mapping by the principle validated on A02; the building validation is weak — 200 years of change)",
+      lastChecked: "2026-10-08",
+    },
     structuredEntries: 0,
     lastVerified: "2026-10-08",
     noteSi:
@@ -174,9 +222,18 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     licenceSi: "javno dostopno, dovoljenje ni potrebno (VAČ)",
     licenceEn: "publicly accessible, no permission required (VAČ)",
     thumb: "/atlas/n83-a04-thumb.jpg",
-    georeferenced: true,
+    georeferenced: false,
     transferStatus: "TRANSFERRED",
-    georefStatus: "GEOREFERENCED",
+    georefStatus: "GRID_APPROX",
+    placement: {
+      precision: "GRID_APPROX",
+      methodSi: "P10 POPRAVEK (2026-10-08): oznaka »O.IX24cg« (trikratno branje) = celica eZKN VKIX24cg — območje DIREKTNO južno od A02; P9 georeferenca (ovin Kolpe, rot +31°) ZAVRŽENA (mediana odmika 636 m). Validacije WEIDENDORF→k.o. Bedenj, ADLESCHITZ→k.o. Adlešiči. Brez točkovnega sidra — ni afina.",
+      methodEn: "P10 CORRECTION (2026-10-08): the code »O.IX24cg« (three reads) = the eZKN cell VKIX24cg — the area DIRECTLY south of A02; the P9 georeference (the Kolpa bend, rot +31°) RETRACTED (median offset 636 m). Validations WEIDENDORF→c.m. Bedenj, ADLESCHITZ→c.m. Adlešiči. No point anchor — not an affine.",
+      controlPoints: 3,
+      accuracySi: "±200–400 m (preslikava list↔celica; dvoumnost robov lista)",
+      accuracyEn: "±200–400 m (the sheet↔cell mapping; the sheet-margin ambiguity)",
+      lastChecked: "2026-10-08",
+    },
     structuredEntries: 0,
     lastVerified: "2026-10-08",
     noteSi:
@@ -201,9 +258,18 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     licenceSi: "javno dostopno, dovoljenje ni potrebno (VAČ)",
     licenceEn: "publicly accessible, no permission required (VAČ)",
     thumb: "/atlas/n83-a05-thumb.jpg",
-    georeferenced: true,
+    georeferenced: false,
     transferStatus: "TRANSFERRED",
-    georefStatus: "GEOREFERENCED",
+    georefStatus: "GRID_APPROX",
+    placement: {
+      precision: "GRID_APPROX",
+      methodSi: "P10 (2026-10-08): oznaka »O.IX24ch« = celica eZKN VKIX24ch — skrajni jug 1825 k.o. Griblje (današnja k.o. Adlešiči); validaciji ADLESC/Vedalschitz→k.o. Adlešiči, »Pri Jankovichti«→naselje Jankoviči. Multivalentni fit sklopa stavb je nedisukriminativen (score 0,914, nič-test 0,84). Brez točkovnega sidra — ni afina.",
+      methodEn: "P10 (2026-10-08): the code »O.IX24ch« = the eZKN cell VKIX24ch — the far south of the 1825 c.m. Griblje (today's c.m. Adlešiči); validations ADLESC/Vedalschitz→c.m. Adlešiči, »Pri Jankovichti«→the settlement of Jankoviči. The multi-candidate fit of the building cluster is non-discriminating (score 0.914, null test 0.84). No point anchor — not an affine.",
+      controlPoints: 3,
+      accuracySi: "±200–400 m (preslikava list↔celica; hišne št. na listu so znotraj tedanje k.o. Griblje)",
+      accuracyEn: "±200–400 m (the sheet↔cell mapping; the house numbers on the sheet are within the then c.m. Griblje)",
+      lastChecked: "2026-10-08",
+    },
     structuredEntries: 0,
     lastVerified: "2026-10-08",
     noteSi:
@@ -233,6 +299,10 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     georefStatus: "NOT_APPLICABLE",
     structuredEntries: 1,
     lastVerified: "2026-10-07",
+    noteSi:
+      "Indikacijska skica prebrana (issue #17, VLM 2026-10-08, strojno branje = REVIEW): ročno risana skica z naslovom »Gemeinde Grüble« + veliko številko 83 (ujema se s signaturo N83), debel mejni mnogokotnik z rdeče oštevilčenimi točkami (~15–19), Kolpa modrikasta po vzhodnem robu z napisom »Königreich Croatien«, sosedi Weidendorf/Mallertschitsch/Pridbor [~]. NEGATIVEN REZULTAT: hišnih simbolov NI vidnih — skica za hišno-parcelno verigo ni uporabna. Lestvica [~1 W. Zoll = 1000 klafter].",
+    noteEn:
+      "Indication sketch read (issue #17, VLM 2026-10-08, machine reading = REVIEW): hand-drawn sketch titled »Gemeinde Grüble« + the large number 83 (matching the N83 signature), a thick boundary polygon with red-numbered points (~15–19), the Kolpa blue along the east edge inscribed »Königreich Croatien«, neighbours Weidendorf/Mallertschitsch/Pridbor [~]. NEGATIVE RESULT: NO house symbols visible — the sketch is not usable for the house–parcel chain. Scale [~1 W. inch = 1000 klafter].",
   },
   {
     id: "src-pr",
@@ -255,9 +325,11 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     transferStatus: "TRANSFERRED",
     georefStatus: "NOT_APPLICABLE",
     structuredEntries: 10,
-    lastVerified: "2026-10-07",
-    noteSi: "Opis meje v nemščini (Kurrent) — prepis iz leta 1825 ni izdelan (TO_COLLECT).",
-    noteEn: "Boundary description in German (Kurrent script) — transcription not made yet (TO_COLLECT).",
+    lastVerified: "2026-10-08",
+    noteSi:
+      "Opis meje v nemščini (Kurrent) — prebrane VSE 4 strani (issue #17, VLM 2026-10-08, strojno branje = REVIEW; surovi izpis research/issue17/PR.json): naslovnica »Prod N° 218 / Grenz-Beschreibung der Gemeinde GRÜBLE«, splošne mere 1028 × 1884 klafter, točke meje št. 1–10 (prebrano na str. 2, nadaljevanje negotovo 10–20), sosedi (Kraljevina Hrvaška/Weidendorf stabilna, ostali [~]), zaključek »am 8ten April 1825«. 1028 × 1884 kl = 1210,5 jocha — se ujema s PV (<1 %).",
+    noteEn:
+      "Boundary description in German (Kurrent) — all 4 pages read (issue #17, VLM 2026-10-08, machine reading = REVIEW; raw output research/issue17/PR.json): title page »Prod N° 218 / Grenz-Beschreibung der Gemeinde GRÜBLE«, overall dimensions 1028 × 1884 klafter, boundary points nos. 1–10 (read on p. 2, continuation uncertain 10–20), neighbours (Kingdom of Croatia/Weidendorf stable, others [~]), closing »am 8ten April 1825«. 1028 × 1884 kl = 1210.5 joch — matches PV (<1 %).",
   },
   {
     id: "src-ps",
@@ -280,9 +352,11 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     transferStatus: "TRANSFERRED",
     georefStatus: "NOT_APPLICABLE",
     structuredEntries: 12,
-    lastVerified: "2026-10-07",
-    noteSi: "143 strani zemljiških parcel po sekcijah — prepis iz 1825 ni izdelan (TO_COLLECT). Parcelne vrstice iz dokumenta so v pripravljenem podatkovnem modelu (20 vrstic).",
-    noteEn: "143 pages of land parcels by sections — the 1825 transcription not made yet (TO_COLLECT). Parcel rows from the document sit in a prepared data model (20 rows).",
+    lastVerified: "2026-10-08",
+    noteSi:
+      "143 strani zemljiških parcel po sekcijah. DEJANSKO STANJE (issue #4, 2026-10-10, dokaz: research/issue17/PS-structure.json): struktura prebranih strani 1–4 (naslovnica, zasnova tabel, Blatt II–III) + rekapitulacija 140–143 — skupaj 8 strani; 12 strukturiranih vzorčnih vrstic (str. 3–4); kolone (lastnik+hiša+parcela+raba+površina+razred+donos). Končna Summa (str. 143, rdeči tuš): 102 stavbnih mest + 2505 zemljiških parcel = 2607 — kontrolna vsota CELONEGA prepisa. Poln prepis 135 strani (5–139) ostaja TO_COLLECT; rekapitulacija po hišnih št. (~str. 131–143) + stolpec Haus Nro. sta najbolj uporabna izhodišča za verigo hiša→parcela→lastnik. NAPAKA POPRAVLJENA (issue #4): prejšnja opomba je navajala »20 vrstic« in »prepis ni izdelan« — obe zastareli.",
+    noteEn:
+      "143 pages of land parcels by sections. ACTUAL STATE (issue #4, 2026-10-10, evidence: research/issue17/PS-structure.json): structure read on pages 1–4 (title, table design, Blatt II–III) + the recapitulation 140–143 — 8 pages altogether; 12 structured sample rows (pp. 3–4); columns (owner+house+parcel+culture+area+class+yield). The final Summa (p. 143, red ink): 102 building sites + 2505 land parcels = 2607 — the checksum of the FULL transcription. The full transcription of 135 pages (5–139) remains TO_COLLECT; the recapitulation by house nos. (~pp. 131–143) + the Haus Nro. column are the most useful starting points for the house→parcel→owner chain. CORRECTED (issue #4): the previous note claimed »20 rows« and »transcription not made« — both stale.",
   },
   {
     id: "src-pt",
@@ -331,12 +405,12 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     thumb: "/atlas/n83-pua-thumb.jpg",
     transferStatus: "TRANSFERRED",
     georefStatus: "NOT_APPLICABLE",
-    structuredEntries: 43,
+    structuredEntries: 101,
     lastVerified: "2026-10-08",
     noteSi:
-      "Lastniki po abecedi s hišnimi številkami in parcelami po sekcijah I–V. Prepisane strani A–B (21 lastnikov, navzkrižno preverjanje s PT) + issue #17: strani 3–10 (18 vnosov) + P3 (2026-10-08): stran 11, črka H — 4 vnosi (Hlebety/Huditsch/Husitsch Baron von Gradatz/Hutweiz zu Waldendorf). Skupaj 43 strukturiranih vnosov na 11/49 strani; strani 12–49 (H–Ž) ostajajo TO_COLLECT — P3: branje 12–20 prekinjeno (VLM gateway nedosegljiv po resetu peskovnika).",
+      "Lastniki po abecedi s hišnimi številkami in parcelami po sekcijah I–V. DEJANSKO STANJE (issue #4, 2026-10-10): register prebran V CELIOTI — 49/49 strani. Strani A–B (21 lastnikov) iz prve gradnje so v lastniškem modelu (ATLAS_OWNERS prek PT navzkrižij); strani 3–49 (101 vrstic) v PUA_CONTINUATION (research/issue17/PUA-more.json + P3 str. 11 + P4 str. 12–34 + P5-b str. 35–49; surovi izpisi research/p3/pua-raw/, 38 datotek). KLJUČNA UGOTOVITEV P4: PUA in PT uporabljata RAZLIČNO številčenje hiš [~] (PUA hiša 6 = Höflehner, PT hiša 6 = Tilel Miho) — povezave po sami hišni št. NISO dovoljene. NAPAKA POPRAVLJENA (issue #4): prejšnja opomba je navajala »43 vnosov na 11/49 strani, strani 12–49 TO_COLLECT« — stanje po P3, pred branjem P4/P5-b. Vsi statusi REVIEW (strojno branje ni dokazni vir).",
     noteEn:
-      "Owners alphabetically with house numbers and parcels by sections I–V. Transcribed pages A–B (21 owners, cross-checked with PT) + issue #17: pages 3–10 (18 entries) + P3 (2026-10-08): page 11, letter H — 4 entries (Hlebety/Huditsch/Husitsch Baron von Gradatz/Hutweiz zu Waldendorf). 43 structured entries over 11/49 pages; pages 12–49 (H–Ž) remain TO_COLLECT — P3: reading 12–20 interrupted (VLM gateway unreachable after the sandbox reset).",
+      "Owners alphabetically with house numbers and parcels by sections I–V. ACTUAL STATE (issue #4, 2026-10-10): the register read IN FULL — 49/49 pages. Pages A–B (21 owners) from the first build live in the owners model (ATLAS_OWNERS via PT cross-checks); pages 3–49 (101 rows) in PUA_CONTINUATION (research/issue17/PUA-more.json + P3 p. 11 + P4 pp. 12–34 + P5-b pp. 35–49; raw outputs research/p3/pua-raw/, 38 files). KEY P4 FINDING: PUA and PT use DIFFERENT house numbering [~] (PUA house 6 = Höflehner, PT house 6 = Tilel Miho) — links by house number alone are NOT allowed. CORRECTED (issue #4): the previous note claimed »43 entries over 11/49 pages, pages 12–49 TO_COLLECT« — the state after P3, before the P4/P5-b reading. All statuses REVIEW (machine reading is not evidentiary).",
   },
   {
     id: "src-pv",
@@ -359,7 +433,11 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     transferStatus: "TRANSFERRED",
     georefStatus: "NOT_APPLICABLE",
     structuredEntries: 10,
-    lastVerified: "2026-10-07",
+    lastVerified: "2026-10-08",
+    noteSi:
+      "Izkaz rabe tal PREBRAN v celoti (issue #17, VLM 2026-10-08, vsaka izpolnjena celica potrjena ≥2 klicoma; surovi izpis research/issue17/PV.json): tiskan obrazec »AUSWEIS über die Benützungsart des Bodens«, Provinz Illyrien, [~Kreis Neustadtl], datum »den 10 Jenner 1825«. 10 izpolnjenih vrstic kultur (20 vrstic obrazca) + 2 vsoti: ganze Area 1148 j 539 kl + strnjena 73 j 1024 kl = skupaj 1221 [~1225] j 1513 [~1563] kl ≈ 703 ha (≈ sodobna k.o. Griblje 7,0 km²). Presenetljivo: vrstica Wälder (gozd) je PRAZNA — dominira 636 joch pašnikov. Aritmetika ±1 joch (dokumentirana odstopanja). OPOMBA (issue #4): 71-stranski cenilni elaborat pripada PZ, ne tej enoti (prejšnja zmeda opomb odpravljena).",
+    noteEn:
+      "Statement of land use READ in full (issue #17, VLM 2026-10-08, every filled cell confirmed by ≥2 calls; raw output research/issue17/PV.json): printed form »AUSWEIS über die Benützungsart des Bodens«, Provinz Illyrien, [~Kreis Neustadtl], dated »den 10 Jenner 1825«. 10 filled culture rows (20 form rows) + 2 totals: ganze Area 1148 j 539 kl + compact 73 j 1024 kl = grand 1221 [~1225] j 1513 [~1563] kl ≈ 703 ha (≈ the modern k.o. Griblje 7.0 km²). Striking: the Wälder (forest) row is EMPTY — 636 joch of pasture dominate. Arithmetic ±1 joch (documented deviations). NOTE (issue #4): the 71-page valuation elaborate belongs to PZ, not to this unit (the earlier note mix-up resolved).",
   },
   {
     id: "src-pz",
@@ -382,9 +460,11 @@ export const ATLAS_SOURCES: AtlasSource[] = [
     transferStatus: "TRANSFERRED",
     georefStatus: "NOT_APPLICABLE",
     structuredEntries: 10,
-    lastVerified: "2026-10-07",
-    noteSi: "Cenilni elaborat 71 strani — prepis ni izdelan (TO_COLLECT).",
-    noteEn: "Valuation elaborate, 71 pages — transcription not made yet (TO_COLLECT).",
+    lastVerified: "2026-10-08",
+    noteSi:
+      "Cenilni elaborat 71 strani. DEJANSKO STANJE (issue #4, 2026-10-10, dokaz: research/issue17/PZ-profile.json + PZ-valuation.json pagesSampled=[20,30,40,50,60]): vzorčeno 12 strani — 1–3 (naslov, §§ topografija/meje/prebivalstvo), 20/30/40/50/60 (cenilni razredi kultur, nizka gotovost — 3 VLM branja se razhajajo), 68–71 (zaključni protokoli: Vorlage, Geprüft, Nachtrag hus Zins, »Gemacht den 28ten Juli 1825«). Strukturiranih zapisov: 10 (naslov, mere, prebivalstvo 441/222/219, 72 hiš [~], 102 družin [~], cenilna veriga, datum). Tabele razredov na straneh 4–67 ostajajo NEPRESRANE (59 strani izrecno odprtih). POPRAVEK (issue #4): prejšnja opomba »prepis ni izdelan« in števec »10 strani« sta bila napačna — vzorčenje je obsegalo 12 strani.",
+    noteEn:
+      "Valuation elaborate, 71 pages. ACTUAL STATE (issue #4, 2026-10-10, evidence: research/issue17/PZ-profile.json + PZ-valuation.json pagesSampled=[20,30,40,50,60]): 12 pages sampled — 1–3 (title, §§ topography/boundaries/population), 20/30/40/50/60 (culture valuation classes, low confidence — 3 VLM readings disagree), 68–71 (closing protocols: Vorlage, Geprüft, Nachtrag hus Zins, »Gemacht den 28ten Juli 1825«). Structured entries: 10 (title, dimensions, population 441/222/219, 72 houses [~], 102 families [~], the valuation chain, the date). The class tables on pp. 4–67 remain UNTRANSCRIBED (59 pages explicitly open). CORRECTED (issue #4): the previous note »transcription not made« and the count »10 pages« were both wrong — the sampling covered 12 pages.",
   },
   // Zunanji registri in poznejši viri — jasno ločeni od N83
   {
@@ -648,9 +728,9 @@ export const NEGATIVE_RESULTS: NegativeResult[] = [
     whatEn: "Complete transcription of the Kurrent manuscripts (all 7 written units of N83)",
     status: "REVIEW",
     detailSi:
-      "Vsi prepisi v Atlasu so pomožni strojni očrti rokopisa in zahtevajo paleografsko potrditev. Stanje po issue #17 + P5-b (2026-10-08, podrobnosti v research.ts KURRENT_SERIES): PR 4/4 strani, PG 1/1, PV 1/1 (12 kultur), PS 9 strani vzorčeno + rekapitulacija, PUA 49/49 strani (101 vnosov — CEL register po P5-b), PZ 10 strani vzorčeno, PT 8/8 pregledan. Poln prepis PS/PZ ostaja TO_COLLECT; vsi statusi REVIEW.",
+      "Vsi prepisi v Atlasu so pomožni strojni očrti rokopisa in zahtevajo paleografsko potrditev. Stanje po issue #17 + P5-b, usklajeno z issue #4 (2026-10-10, podrobnosti v research.ts KURRENT_SERIES + inventar /api/atlas): PR 4/4 strani, PG 1/1, PV 1/1 (10 kultur), PS 8 strani (struktura 1–4 + rekapitulacija 140–143) + kontrolna vsota 102+2505=2607, PUA 49/49 strani (strani A–B v lastniškem modelu + 101 vrstic strani 3–49 v PUA_CONTINUATION — CEL register), PZ 12 strani vzorčeno (1–3, 20/30/40/50/60, 68–71; dokaz PZ-valuation.json pagesSampled), PT 8/8 pregledan (101 izvornih vrstic: 81 potrjenih + 15 popravkov + 5 neberljivih; +4 dodane vrstice P3). Poln prepis PS (135 strani 5–139) in PZ (59 strani 4–67) ostaja TO_COLLECT; vsi statusi REVIEW.",
     detailEn:
-      "All transcriptions in the Atlas are machine-assisted readings requiring palaeographic confirmation. Status after issue #17 + P5-b (2026-10-08, detail in research.ts KURRENT_SERIES): PR 4/4 pages, PG 1/1, PV 1/1 (12 cultures), PS 9 pages sampled + recapitulation, PUA 49/49 pages (101 entries — the COMPLETE register after P5-b), PZ 10 pages sampled, PT 8/8 reviewed. The full PS/PZ transcription remains TO_COLLECT; all statuses REVIEW.",
+      "All transcriptions in the Atlas are machine-assisted readings requiring palaeographic confirmation. Status after issue #17 + P5-b, reconciled by issue #4 (2026-10-10, detail in research.ts KURRENT_SERIES + the /api/atlas inventory): PR 4/4 pages, PG 1/1, PV 1/1 (10 cultures), PS 8 pages (structure 1–4 + recapitulation 140–143) + the checksum 102+2505=2607, PUA 49/49 pages (pages A–B in the owners model + 101 rows of pages 3–49 in PUA_CONTINUATION — the COMPLETE register), PZ 12 pages sampled (1–3, 20/30/40/50/60, 68–71; evidence PZ-valuation.json pagesSampled), PT 8/8 reviewed (101 source rows: 81 confirmed + 15 corrections + 5 illegible; +4 rows added by P3). The full PS (135 pages 5–139) and PZ (59 pages 4–67) transcription remains TO_COLLECT; all statuses REVIEW.",
   },
   {
     id: "neg-1812",

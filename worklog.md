@@ -2108,3 +2108,17 @@ Stage Summary:
 - 2) museum-about.tsx: "testi kakovosti (11)" (zastarelo od P1) → izpeljano iz runQA().tests.length; "zbirka 113" → iz STATS.exhibits. Oba števca sedaj izhajata iz podatkovnega modela (issue #3: "Števci morajo izhajati iz ustreznega podatkovnega modela") — runQA je sinhrona in varna za odjemalca (fs je bil umaknjen v P19).
 - 3) MUSEUM-AUDIT.md §1: "25 testov" → 30; zastarela vrstica "povezan z GitLabom" → dejansko stanje (GitHub Actions deploy).
 - TESTI: ESLint 0; tsc 0; build 16/16; lokalno QA 30/30; HTML: MVG-001–113 ×2, "testi kakovosti (30)", "zbirka 113" (SSR potrjen).
+
+---
+
+## P20 — ISSUE #4 (P1): ATLAS 1825 — inventar N83, uskladitve, ločitev natančnosti (2026-10-10)
+
+- ZAHTVA (GitHub issue #4): enoten preverljiv inventar arhivskih enot N83, razrešitev nasprotij (PUA 43/11 proti 101/49), popravki napačno pripisanih opomb, ločitev okvirne umestitve od validirane georeference, reconciliation naj preverja inventuro izvornih enot; spremembe v PR.
+- RAZREŠITVE (dokazno): PUA src-pua 43/11 → 101/49 (strani A–B v ATLAS_OWNERS, 3–49 v PUA_CONTINUATION; research/issue17 + research/p3/pua-raw); PS 9 → 8 strani (PS-structure.json: 1–4 + 140–143); PZ 10 → 12 strani (PZ-valuation.json pagesSampled=[20,30,40,50,60] + 1–3 + 68–71); src-pr/src-ps/src-pz/src-pg/src-pv opombe po dejanskem stanju (PG: negativen rezultat hišnih simbolov; PV: opomba, da 71-stranski elaborat pripada PZ); getCoverage 9 enot/279 strani → 12/277.
+- NATANČNOST: nov GeorefStatus GRID_APPROX + placement{precision,method,controlPoints,accuracy,lastChecked}; A01/A02 GEOREFERENCED/VALIDATED_GEOREF (±40–100 m), A03–A05 GRID_APPROX (±200–400 m, sekcijska mreža, georeferenced: false); getCoverage sheetsGeoreferenced(2) + sheetsGridApprox(3); UI: uvod, števci, pokritost, oznake kartic; housesWithGeometry 0 z razlago.
+- INVENTAR: getArchiveInventory() IZRAČUNAN iz modelov (12 enot; pagesDeclared/pagesRead+pagesReadList/pagesOpen+obsegi/structuredEntities/crossChecked/spatiallyLinked=0/palaeoConfirmed=0/razlog); scopeAccounted 12/12; PS checksum 102+2505=2607; izvoz /api/atlas → inventory; pokritostni zavihek: tabela inventarja.
+- RECONCILIATION: scopeCheck na enoti (strani vira, ne statusev); zeroLoss = scopeAccounted && lost=0; zeroLossMeaningSi/En (kaj potrjuje in česa NE); PS enota dodana (prej preskočena!); PUA lokator »strani C–Ž« popravljen (register je prebran); parcelne vrstice = PT str. 5–7 (ne PS).
+- QA 30 → 34: qa-p20-inventory (structuredEntities == modeli; PUA 101 == PUA_CONTINUATION), qa-p20-series-pages (pagesReadList == pagesTranscribed; dokazane vrednosti), qa-p20-georef-precision (2+3, 12 enot, 277 strani), qa-p20-recon-scope (scopeCheck, zeroLossMeaning, 0 zastarelih lokatorjev — test je ujel 10 vrstic z zastarelim lokatorjem + manjkajočo PS, obe odpravljeni); qa-p10-ezkn-grid posodobljen (2 validirana + 3 GRID_APPROX).
+- DOKUMENTACIJA: MUSEUM-AUDIT.md §12 (preglednica razrešitev, 4 vprašanja zaključnega poročila, omejitve); README 9 → 12 enot + GRID_APPROX opomba.
+- TESTI: ESLint 0; tsc 0; build 16/16; /api/qa 34/34; integrity 11/11; reconciliation zeroLoss=true, 12 enot, vse scopeCheck.accounted.
+- VEJA: feature/atlas-1825-inventory → PR (issue #4 zahteva pregledljiv PR).

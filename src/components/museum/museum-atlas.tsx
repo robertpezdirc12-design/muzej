@@ -40,7 +40,7 @@ import { ATLAS_OWNERS, SHEET_GEOREFS } from "@/data/atlas/model";
 import { ATLAS_SOURCES, NEGATIVE_RESULTS, HERITAGE_UNITS } from "@/data/atlas/sources";
 import { PARISH, PARISH_BOOKS, HOUSE_VITALS, type HouseVital } from "@/data/atlas/parish";
 import { LANDUSE_ZONES, LANDUSE_ENTITIES, HAMLETS } from "@/data/atlas/landuse";
-import { getCoverage, parishStats, getHouseStory } from "@/lib/atlas";
+import { getCoverage, getArchiveInventory, parishStats, getHouseStory } from "@/lib/atlas";
 import type { GeoFix } from "@/lib/geo";
 
 const Canvas = dynamic(() => import("./atlas-canvas").then((m) => m.AtlasCanvas), {
@@ -66,6 +66,8 @@ const STATUS_STYLE: Record<string, string> = {
 const HOUSES = ATLAS_HOUSES.filter((h) => h.no !== "—");
 const PARCELS = ATLAS_HOUSES.filter((h) => h.no === "—");
 const COVERAGE = getCoverage();
+/* issue #4: inventar 12 enot N83 — izračunan, ne ročno napisan */
+const INVENTORY = getArchiveInventory();
 
 const VillageViewer = dynamic(
   () => import("./village-viewer").then((m) => m.VillageViewer),
@@ -238,8 +240,8 @@ export function MuseumAtlas({
             </div>
             <p className="mt-3 max-w-2xl text-muted-foreground">
               {t(
-                "Zgodovinska katastrska slika vasi Griblje (Grüble) iz franciscejskega katastra: VSEH 5 listov georeferenciranih (A01/A02 GEOTRUTH na cerkvi EŠD 2122; A03/A04/A05 prek sekcije mreže eZKN/GURS — P10; lega A04 popravljena), register hiš 1–98 (80 prebranih zapisov) z lastniki, arhivski viri z dokazno verigo in primerjava 1825 ↔ danes.",
-                "The historical cadastral picture of the village of Griblje (Grüble) from the Franciscan cadastre: ALL 5 sheets georeferenced (A01/A02 GEOTRUTH on the EŠD 2122 church; A03/A04/A05 via the eZKN/GURS section grid — P10; A04 corrected), a register of houses 1–98 (80 transcribed entries) with owners, archival sources with an evidence chain, and an 1825 ↔ today comparison.",
+                "Zgodovinska katastrska slika vasi Griblje (Grüble) iz franciscejskega katastra: 2 lista z VALIDIRANO georeferenco (A01/A02, GEOTRUTH na cerkvi EŠD 2122, ±40–100 m) + 3 listi z OKVIRNO umestitvijo po sekcijski mreži eZKN/GURS (A03/A04/A05, ±200–400 m — točkovno sidro še manjka; lega A04 popravljena v P10), register hiš 1–98 z lastniki, arhivski viri z dokazno verigo in primerjava 1825 ↔ danes.",
+                "The historical cadastral picture of the village of Griblje (Grüble) from the Franciscan cadastre: 2 sheets with a VALIDATED georeference (A01/A02, GEOTRUTH on the EŠD 2122 church, ±40–100 m) + 3 sheets APPROXIMATELY placed by the eZKN/GURS section grid (A03/A04/A05, ±200–400 m — a point anchor still missing; the A04 position corrected in P10), a register of houses 1–98 with owners, archival sources with an evidence chain, and an 1825 ↔ today comparison.",
               )}
             </p>
           </div>
@@ -257,7 +259,7 @@ export function MuseumAtlas({
             { v: COVERAGE.ownersTotal, si: "lastnikov", en: "owners" },
             { v: COVERAGE.archivalUnits, si: "arhivskih enot", en: "archival units" },
             { v: COVERAGE.archivalPages, si: "strani fonda", en: "pages in fond" },
-            { v: COVERAGE.sheetsGeoreferenced, si: "listi georeferencirana", en: "sheets georeferenced" },
+            { v: `${COVERAGE.sheetsGeoreferenced}+${COVERAGE.sheetsGridApprox}`, si: "listi georef. / približno", en: "sheets georef. / approx." },
             { v: COVERAGE.buildingsVectorized, si: "objektov vektoriziranih", en: "objects vectorised" },
           ].map((s, i) => (
             <div key={i} className="rounded-lg border bg-card/60 p-3 text-center">
@@ -744,11 +746,11 @@ export function MuseumAtlas({
                 {[
                   [t("Identificirane hiše ~1825", "Identified houses ~1825"), `${COVERAGE.housesTotal}`],
                   [t("… z lastnikom", "… with an owner"), `${COVERAGE.housesWithOwner}`],
-                  [t("… z natančno geometrijo", "… with precise geometry"), `${COVERAGE.housesWithGeometry} (${COVERAGE.housesGeometryStatus})`],
+                  [t("… z natančno geometrijo", "… with precise geometry"), `${COVERAGE.housesWithGeometry} (${t("156 stavb ima geometrijo, a brez dokazane hišne št.", "156 buildings have geometry, without proven house numbers")})`],
                   [t("Lastniki (različni)", "Distinct owners"), `${COVERAGE.ownersTotal}`],
                   [t("… navzkrižno potrjeni (PT+PUA)", "… cross-checked (PT+PUA)"), `${COVERAGE.ownersCrossChecked}`],
                   [t("Vrstic s parcelnimi sklici", "Rows with parcel references"), `${COVERAGE.parcelsReferenced}`],
-                  [t("Katastrski listi / georeferencirani", "Cadastral sheets / georeferenced"), `${COVERAGE.sheetsGeoreferenced} / ${COVERAGE.sheetsTotal}`],
+                  [t("Katastrski listi: validirana georeferenca / okvirna umestitev", "Cadastral sheets: validated georeference / approximate placement"), `${COVERAGE.sheetsGeoreferenced} / ${COVERAGE.sheetsGridApprox} (od ${COVERAGE.sheetsTotal})`],
                   [t("Vektoriziranih objektov", "Vectorised objects"), `${COVERAGE.buildingsVectorized} (RECONSTRUCTED)`],
                 ].map(([k, v], i) => (
                   <div key={i} className="flex items-center justify-between border-b pb-2 last:border-0">
@@ -767,6 +769,66 @@ export function MuseumAtlas({
                   ))}
                 </div>
               </div>
+            </div>
+            <div className="rounded-xl border bg-card/60 p-5 lg:col-span-2">
+              <h3 className="mb-1 flex items-center gap-2 font-serif text-lg font-semibold">
+                <Archive className="h-4 w-4 text-primary" aria-hidden />
+                {t("Inventar arhivskih enot N83 (issue #4)", "Inventory of the N83 archival units (issue #4)")}
+              </h3>
+              <p className="mb-4 max-w-3xl text-xs leading-relaxed text-muted-foreground">
+                {t(INVENTORY.noteSi, INVENTORY.noteEn)}
+              </p>
+              <div className="overflow-x-auto">
+                <table className="w-full min-w-[720px] text-left text-xs">
+                  <thead>
+                    <tr className="border-b text-muted-foreground">
+                      <th className="py-2 pr-3 font-medium">{t("Enota", "Unit")}</th>
+                      <th className="py-2 pr-3 font-medium">{t("Strani (vir)", "Pages (source)")}</th>
+                      <th className="py-2 pr-3 font-medium">{t("Prebrane", "Read")}</th>
+                      <th className="py-2 pr-3 font-medium">{t("Odprte", "Open")}</th>
+                      <th className="py-2 pr-3 font-medium">{t("Strukturirane entitete", "Structured entities")}</th>
+                      <th className="py-2 pr-3 font-medium">{t("Navzkrižno", "Cross-chk")}</th>
+                      <th className="py-2 pr-3 font-medium">{t("Prostorsko", "Spatial")}</th>
+                      <th className="py-2 font-medium">{t("Odprto — razlog", "Open — reason")}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {INVENTORY.units.map((u) => (
+                      <tr key={u.code} className="border-b last:border-0 align-top">
+                        <td className="py-2 pr-3">
+                          <span className="font-mono text-primary">{u.code}</span>
+                          <div className="text-[10px] text-muted-foreground">
+                            {u.kind === "graphic-sheet" ? t("grafični list", "graphic sheet") : t("spisovna enota", "written series")}
+                            {u.georefStatus === "GRID_APPROX" ? " · " + t("umesčen približno", "placed approximately") : ""}
+                          </div>
+                        </td>
+                        <td className="py-2 pr-3 tabular-nums">{u.pagesDeclared ?? "—"}</td>
+                        <td className="py-2 pr-3 tabular-nums">{u.pagesRead ?? "—"}</td>
+                        <td className="py-2 pr-3 tabular-nums">
+                          {u.pagesOpen != null && u.pagesOpen > 0 ? (
+                            <span title={u.pagesOpenRangesSi ?? ""}>{u.pagesOpen}</span>
+                          ) : (
+                            <span className="text-emerald-700 dark:text-emerald-400">0</span>
+                          )}
+                        </td>
+                        <td className="py-2 pr-3">
+                          <span className="tabular-nums font-semibold">{u.structuredEntities}</span>
+                          <div className="text-[10px] text-muted-foreground">{lang === "si" ? u.structuredModelSi : u.structuredModelEn}</div>
+                        </td>
+                        <td className="py-2 pr-3 tabular-nums">{u.crossChecked}</td>
+                        <td className="py-2 pr-3 tabular-nums">{u.spatiallyLinked}</td>
+                        <td className="py-2 text-muted-foreground">{lang === "si" ? u.openSi : u.openEn}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="mt-3 text-xs text-muted-foreground">
+                {t(
+                  `Skupaj: ${INVENTORY.totals.units} enot (${INVENTORY.totals.graphicSheets} grafičnih + ${INVENTORY.totals.writtenSeries} spisovnih), ${INVENTORY.totals.pagesRead}/${INVENTORY.totals.pagesDeclared} strani prebranih, ${INVENTORY.totals.pagesOpen} izrecno odprtih. PS kontrolna vsota: ${INVENTORY.psChecksum.buildingSites} stavbnih mest + ${INVENTORY.psChecksum.landParcels} parcel = ${INVENTORY.psChecksum.total}. Prostorsko povezanih entitet: ${INVENTORY.totals.spatiallyLinked} — povezava hiša↔stavba zahteva dokaz, ne ista številka.`,
+                  `Totals: ${INVENTORY.totals.units} units (${INVENTORY.totals.graphicSheets} graphic + ${INVENTORY.totals.writtenSeries} written), ${INVENTORY.totals.pagesRead}/${INVENTORY.totals.pagesDeclared} pages read, ${INVENTORY.totals.pagesOpen} explicitly open. PS checksum: ${INVENTORY.psChecksum.buildingSites} building sites + ${INVENTORY.psChecksum.landParcels} parcels = ${INVENTORY.psChecksum.total}. Spatially linked entities: ${INVENTORY.totals.spatiallyLinked} — a house↔building link requires evidence, not a shared number.`,
+                )}
+              </p>
             </div>
             <div className="rounded-xl border bg-card/60 p-5">
               <h3 className="mb-4 flex items-center gap-2 font-serif text-lg font-semibold">
@@ -818,9 +880,14 @@ function SourceCard({
           <span className="text-xs font-mono text-primary">{source.code}</span>
           <div>{lang === "si" ? source.titleSi : source.titleEn}</div>
         </div>
-        {source.georeferenced && (
-          <span className="shrink-0 rounded bg-emerald-100 px-1.5 py-0.5 text-[10px] font-semibold text-emerald-900 dark:bg-emerald-900/60 dark:text-emerald-100">
-            georef
+        {source.georefStatus === "GEOREFERENCED" && (
+          <span className="shrink-0 rounded bg-emerald-100 px-1.5 py-0.5 text-[10px] font-semibold text-emerald-900 dark:bg-emerald-900/60 dark:text-emerald-100" title={t("validirana georeferenca (kontrolne točke)", "validated georeference (control points)")}>
+            georef ±
+          </span>
+        )}
+        {source.georefStatus === "GRID_APPROX" && (
+          <span className="shrink-0 rounded bg-amber-100 px-1.5 py-0.5 text-[10px] font-semibold text-amber-900 dark:bg-amber-900/60 dark:text-amber-100" title={t("okvirna umestitev po sekcijski mreži (±200–400 m), ni afina", "approximate placement by the section grid (±200–400 m), not an affine")}>
+            približno ±
           </span>
         )}
       </div>

@@ -261,3 +261,127 @@ Revizija je zahtevala kontrole, ki same odkrijejo neskladja pri novih podatkih
    oznake, geotruth pripravljenost scene) — velja vzdrževati.
 - Glej §9 za prednostni vrstni red naslednjih korakov (Faze 2–4 revizije:
   zemljevid 1812 + GPS, preizkus na telefonu, kakovostne 3D rekonstrukcije).
+
+## 12. P20 — ISSUE #4 (GitHub): ATLAS 1825 — inventar, uskladitve, natančnost (2026-10-10)
+
+Zunanja revizija (GitHub issue #4, P1) je zahtevala: enoten preverljiv inventar
+arhivskih enot N83, razrešitev nasprotij v obsegu (PUA 43/11 proti 101/49),
+popravke napačno pripisanih opomb, ločitev okvirne umestitve od validirane
+georeference in reconciliation, ki preverja inventuro izvornih enot — ne samo
+statuse ustvarjenih vrstic. Vse spremembe so v PR (veja
+`feature/atlas-1825-inventory`), ne neposredno na main.
+
+### Razrešitve nasprotij (dokazno podlaga v oklepajih)
+
+| Neskladje | Prej | Zdaj | Dokaz |
+|---|---|---|---|
+| PUA obseg (sources proti research) | src-pua 43 vnosov / 11/49 strani »12–49 TO_COLLECT« | 101 vnosov / 49/49 — strani A–B (21 lastnikov) v ATLAS_OWNERS, strani 3–49 (101 vrstic) v PUA_CONTINUATION | PUA_CONTINUATION.pagesRead [3–49], rows 101; research/issue17/PUA-more.json + research/p3/pua-raw/ (38 datotek); opomba razloži, da structuredEntries 101 = SAMO strani 3–49 |
+| PS prebrane strani | 9 (brez podlage) | 8 (1–4 + 140–143) | PS-structure.json sectionsSeen (str. 1, 2, 3, 4) + sampleRows (str. 3–4) + rekapitulacija (str. 140–143) |
+| PZ vzorčene strani | 10 (nasprotuje lastni opombi: 12) | 12 (1–3, 20, 30, 40, 50, 60, 68–71) | PZ-valuation.json pagesSampled=[20,30,40,50,60] + PZ-profile.json (1–3, PZE-68–71) |
+| src-pr opomba | »prepis ni izdelan (TO_COLLECT)« | 4/4 strani prebrane (REVIEW) | KURRENT_SERIES PR + research/issue17/PR.json |
+| src-ps opomba | »20 vrstic … prepis ni izdelan« | 12 vzorčnih vrstic, 8 strani strukture, kontrolna vsota 2607 | PS-structure.json |
+| src-pz opomba | »prepis ni izdelan« | 12 vzorčenih strani, 10 strukturiranih zapisov, 59 strani izrecno odprtih | PZ-valuation.json + PZ-profile.json |
+| src-pg / src-pv opombe | manjkale | dodane (skica: negativen rezultat hišnih simbolov; PV: 10 kultur, vsote ≈1221 j; opomba, da 71-stranski elaborat pripada PZ) | KURRENT_SERIES + research/issue17/PG.json / PV.json |
+| getCoverage enote/strani | 9 enot / 279 strani | 12 enot / 277 strani (143+71+49+8+4+1+1) | ATLAS_SOURCES (5 grafičnih + 7 spisovnih); prejšnja številka je ostala iz prve pridobitve (le A01+A02) |
+| Reconciliation PUA lokator | »strani C–Ž (niso prepisane)« | »lastniški model (strani A–B) — brez PUA potrditve« + razlog (divergentno številčenje, 49/49 prebranih) | register je prebran v celoti |
+| Reconciliation PS enota | manjkala (preskočena) | lastna vrstica: 8/143 prebranih, 135 izrecno odprtih, kontrolna vsota 102+2505=2607 | KURRENT_SERIES PS |
+
+### Ločitev natančnosti prostorske umestitve (issue #4 #1)
+
+- Nov poljubni `GeorefStatus` GRID_APPROX + `placement` (precision, method,
+  controlPoints, accuracy, lastChecked) na vsakem grafičnem listu.
+- A01, A02: GEOREFERENCED / VALIDATED_GEOREF (±40–100 m, kontrolne točke
+  EŠD 2122 + Kolpa) — A02 CORROBORATED, izvor 156 tlorisov.
+- A03, A04, A05: GRID_APPROX (±200–400 m, sekcijska celica eZKN + preveritve
+  napisov; brez točkovnega sidra — ni afina). `georeferenced: false`.
+- getCoverage: `sheetsGeoreferenced` (2) ločeno od `sheetsGridApprox` (3);
+  UI: uvod, števci, pokritostni zavihek in oznake na karticah virov
+  (»georef ±« proti »približno ±«); housesWithGeometry ostaja 0 z
+  razlago (156 geometrij ≥ 84 hiš — ni 1:1; cerkev na A02 je kontrolna
+  točka georeference, ne hišna entiteta registra).
+
+### Izračunani inventar (getArchiveInventory, /api/atlas → inventory)
+
+12 enot; za vsako: pagesDeclared (vir) / pagesRead + pagesReadList (dokazano,
+iz surovih raziskav) / pagesOpen + obsegi (npr. PS »5–139«, PZ »4–19, 21–29,
+31–39, 41–49, 51–59, 61–67«) / structuredEntities (dejansko stanje modelov:
+PT 105 = 84 hišnih + 21 parcelnih vrstic; PUA 101; PS 12; PZ 10; A02 156) /
+crossChecked / spatiallyLinked (0) / palaeoConfirmed (0) / razlog odprtega
+stanja. scopeAccounted: prebrane + odprte strani == deklarirane (12/12 true).
+PS checksum 102 + 2505 = 2607 iz PS_RECAP_1826. Števci so IZRAČUNANI —
+ne morejo tiho zastareti (to je točno tisto, kar se je zgodilo s 43/11).
+
+### Reconciliation (issue #4 #4)
+
+- `scopeCheck` na vsaki enoti: pagesDeclared == pagesRead + pagesOpen
+  (inventar, ne statusev ustvarjenih vrstic); zeroLoss zdaj zahteva
+  scopeAccounted IN lost = 0.
+- `zeroLossMeaningSi/En`: izrecna opredelitev, kaj zeroLoss potrjuje in
+  česa NE (PS 135 strani in PZ 59 strani izrecno odprtih; vsa strojna
+  branja REVIEW; 156 geometrij brez dokazanih hišnih št.).
+- PUA↔PT povezave po hišni št. same ostajajo PREPOVEDANE (dokazano
+  različno številčenje: PUA hiša 6 = Höflehner, PT hiša 6 = Tilel Miho);
+  vsak lastnik brez PUA potrditve ima razlog, ne tihe luknje.
+- Parcelne vrstice houses.ts so DEL PROTOKOLA PT (str. 5–7), ne register
+  PS — zavajajoči lokator popravljen.
+
+### Nove avtomatske kontrole (QA 30 → 34)
+
+1. `qa-p20-inventory` — inventar izračunan iz modelov; structuredEntities
+   == dejansko stanje (PUA 101 == PUA_CONTINUATION.rows — 43→101 se ne
+   sme ponoviti); 0 spatiallyLinked; 0 palaeoConfirmed; PS vsota 2607;
+2. `qa-p20-series-pages` — pagesReadList dolžina == pagesTranscribed,
+   brez podvajanj/izven obsega; dokazane vrednosti PR 4, PS 8, PUA 49,
+   PZ 12, PT 8, PG 1, PV 1; scopeAccounted true;
+3. `qa-p20-georef-precision` — A01/A02 GEOREFERENCED + VALIDATED_GEOREF
+   placement; A03–A05 GRID_APPROX + georeferenced false + celica v
+   metodi; pokritost 2+3=5; 12 enot; 277 strani; housesWithGeometry 0;
+4. `qa-p20-recon-scope` — vse enote scopeCheck.accounted;
+   zeroLossMeaning prisoten z »NE potrjuje«; zeroLoss true; 0 zastarelih
+   lokatorjev »C–Ž«. (Test je pri razvoju ujel 10 vrstic z zastarelim
+   lokatorjem in manjkajočo PS enoto — obe odpravljeni.)
+- Posodobljen `qa-p10-ezkn-grid`: 2 validirana + 3 GRID_APPROX (prej
+  »5/5 georeferenciranih« — zdaj pošteno ločeno).
+
+### Zaključno poročilo (4 vprašanja issue #4)
+
+1. **Kaj je v celoti prepisano, kaj vzorčeno, kaj neobdelano?** V celoti
+   prebrani (strojno, REVIEW): PR 4/4, PG 1/1, PV 1/1, PUA 49/49, PT 8/8
+   (101 vrstic pregledanih). Vzorčeno: PS 8/143 (struktura 1–4 +
+   rekapitulacija 140–143; 12 vrstic), PZ 12/71 (1–3, 20–60, 68–71). Neobdelano
+   in izrecno odprto: PS strani 5–139 (135), PZ strani 4–67 razen vzorcev (59).
+2. **Koliko hiš, parcel, lastnikov je strukturiranih, navzkrižno povezanih,
+   dokazno potrjenih?** Strukturirano: 84 hišnih vrstic + 21 parcelnih (PT),
+   101 vrstic PUA (str. 3–49) + 26 lastnikov modela (16 s PUA potrditvijo;
+   strani A–B so v modelu), 12 vzorčnih vrstic PS, 10 zapisov PZ, 1 PG,
+   10 PV/PR. Navzkrižno PT×PUA: 15 lastnikov (puaRef + ujemajoča hiša).
+   Dokazno (človeško paleografsko) potrjenih: 0 — vsa branja so strojna
+   (REVIEW); konvergenca dveh branj P3 ni paleografska potrditev.
+3. **Koliko stavb ima samo geometrijo in koliko dokazno povezavo?** 156
+   stavb ima geometrijo (RECONSTRUCTED, list A02); 0 ima dokazano povezavo
+   s hišno številko/parcelo/lastnikom — listi ne nosijo berljivih hišnih št.
+   ob objektih, številčenje PUA↔PT je divergentno, meje parcel niso
+   vektorizirane. Edina stavba z dokumentirano identiteto je cerkev sv. Vida
+   (EŠD 2122 ↔ A02 px) — a je to kontrolna točka georeference, ne vrstica
+   registra.
+4. **Kaj je odprto in kateri dokaz manjka?** (a) PS: poln prepis 135 strani —
+   dokaz = vrstice registra (kontrolna vsota 2607); (b) PZ: 59 strani tabel
+   razredov — dokaz = vrednosti razredov po kulturah; (c) točkovno sidro
+   za A03–A05 (VAČ metapodatek ali točka z znano lego) za afino; (d)
+   vektorizacija parcelnih meja z A01/A02; (e) človeška paleografska
+   potrditev vseh strojnih branj (zlasti 5 neberljivih vrstic PT);
+   (f) povezava hiša↔stavba: potreben dokaz, ki povezuje hišno št. s
+   konkretnim tlorisom (npr. zapisi poznejših katastrov, pričevanja);
+   (g) digitalizacija SI AS 749 (1851–53 plast).
+
+### Omejitve in načela
+
+- Nič ni nadgrajeno v močnejšo stopnjo gotovosti: vsi novi števci so
+  izračunani; strojna branja ostajajo REVIEW; negativni rezultati ostajajo
+  vidni (PG brez hišnih simbolov; kolpa-ne-deluje iz P8 itd.).
+- Brez AI modelov ob delovanju; brez plačljivih storitev; surovi izpisi
+  raziskav (research/) so nespremenjeni.
+- 1812 zemljevid je ločena raziskava (issue #4 Omejitve) — ni del tega PR.
+- Preizkušeno: ESLint 0; tsc 0; build 16/16 s tipi; /api/qa 34/34;
+  /api/atlas/integrity 11/11; /api/atlas/reconciliation zeroLoss=true,
+  12 enot, vse scopeCheck.accounted.

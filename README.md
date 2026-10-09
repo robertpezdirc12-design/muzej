@@ -88,11 +88,13 @@ npx --yes vercel@latest deploy --prod --yes \
 
 Zgodovinska katastrska slika vasi (franciscejski kataster, k.o. Griblje št. 83 / Grüble):
 
-- **arhivski viri** — Arhiv RS, fond SI AS 176/N/N83, 9 enot javno dostopnih prek
-  [VAČ](https://vac.sjas.gov.si) (listi A01/A02, skica, opis meje, seznami parcel,
-  stavbni protokol 1825, abecedni lastniki, raba, cenilni elaborat);
+- **arhivski viri** — Arhiv RS, fond SI AS 176/N/N83, 12 enot javno dostopnih prek
+  [VAČ](https://vac.sjas.gov.si) (listi A01–A05, skica, opis meje, seznam parcel,
+  stavbni protokol 1825, abecedni lastniki, raba, cenilni elaborat) — izračunani
+  inventar stanja: `/api/atlas` → `inventory` (issue #4);
 - **georeferencirana lista** A01 in A02 kot slikovni prekrivki nad OSM (Leaflet),
   prosojnost 0–100 %, cerkev sv. Vida kot kontrolna točka (VERIFIED);
+  A03–A05 so umesčene približno po sekcijski mreži eZKN (GRID_APPROX, ±200–400 m);
 - **register hiš 1–98** (80 prebranih zapisov, status REVIEW — Kurrent rokopis),
   lastniki (navzkrižno PT × PUA), parcelni sklici;
 - **vektorizacija** 156 objektov ~1825 iz lista A02 (RECONSTRUCTED);

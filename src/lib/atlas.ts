@@ -4,6 +4,7 @@
 import { ATLAS_SOURCES, NEGATIVE_RESULTS, HERITAGE_UNITS, type AtlasSource } from "@/data/atlas/sources";
 import { ATLAS_HOUSES, type AtlasHouse } from "@/data/atlas/houses";
 import { ATLAS_OWNERS, ATLAS_LOCATIONS, SHEET_GEOREFS, VECTOR_BUILDINGS } from "@/data/atlas/model";
+import { KURRENT_SERIES, PUA_CONTINUATION, PS_RECAP_1826 } from "@/data/atlas/research";
 import { PARISH, PARISH_BOOKS, HOUSE_VITALS, type HouseVital, type ParishBook } from "@/data/atlas/parish";
 import { BUILDINGS_1825, GROWTH_1900, PERIODS, IZGINILO_STATS, PRESENCE_META } from "@/lib/village3d";
 import {
@@ -38,8 +39,12 @@ export interface Coverage {
   ownersCrossChecked: number;
   parcelsReferenced: number;
   sheetsTotal: number;
+  /** listi z VALIDIRANO georeferenco (kontrolne točke, znana negotovost) — A01, A02 */
   sheetsGeoreferenced: number;
+  /** listi samo z OKVIRNO umestitvijo po sekcijski mreži (±200–400 m) — A03–A05 */
+  sheetsGridApprox: number;
   archivalUnits: number;
+  /** strani spisovnih enot N83 (brez grafičnih listov) */
   archivalPages: number;
   buildingsVectorized: number;
   statusesSi: Record<string, string>;
@@ -58,6 +63,12 @@ export function getOwnersWithRefs() {
 export function getCoverage(): Coverage {
   const housesWithOwner = ATLAS_HOUSES.filter((h) => h.owner && h.owner !== "—").length;
   const houses = ATLAS_HOUSES.filter((h) => h.no !== "—");
+  const graphic = ATLAS_SOURCES.filter((s) => s.type === "cadastral-map");
+  const validated = graphic.filter((s) => s.georefStatus === "GEOREFERENCED").length;
+  const gridApprox = graphic.filter((s) => s.georefStatus === "GRID_APPROX").length;
+  const written = ATLAS_SOURCES.filter(
+    (s) => s.code.startsWith("N083") && s.pages != null && s.type !== "cadastral-map",
+  );
   return {
     housesTotal: houses.length,
     housesWithOwner,
@@ -66,21 +77,287 @@ export function getCoverage(): Coverage {
     ownersTotal: ATLAS_OWNERS.length,
     ownersCrossChecked: ATLAS_OWNERS.filter((o) => o.puaRef).length,
     parcelsReferenced: ATLAS_HOUSES.filter((h) => h.parcelRefs).length,
-    sheetsTotal: 5,
-    sheetsGeoreferenced: 5,
-    archivalUnits: 9,
-    archivalPages: 143 + 71 + 49 + 8 + 4 + 1 + 1 + 2,
+    sheetsTotal: graphic.length,
+    sheetsGeoreferenced: validated,
+    sheetsGridApprox: gridApprox,
+    /* 12 enot N83 = 5 grafičnih listov + 7 spisovnih (issue #4: prej 9 — zastarelo
+       število prve pridobitve, ko sta bila prenesena še le A01+A02) */
+    archivalUnits: graphic.length + written.length,
+    archivalPages: written.reduce((a, s) => a + (s.pages ?? 0), 0),
     buildingsVectorized: VECTOR_BUILDINGS.length,
     statusesSi: {
       VERIFIED: "preverjeno (sodobni vir + zgodovinski vir)",
       DOCUMENTED: "dokumentirano v arhivskem viru",
       REVIEW: "prepis Kurrent rokopisa — čaka paleografski pregled",
       RECONSTRUCTED: "vektorizacija iz georeferenciranega lista",
+      GRID_APPROX: "okvirna umestitev po sekcijski mreži (±200–400 m)",
       APPROXIMATE: "približna lokacija (območje vasi)",
       TO_COLLECT: "podatek še ni zbran",
       NOT_FOUND: "iskano, ni najdeno",
       NOT_PUBLIC: "ni javno dostopno",
     },
+  };
+}
+
+/* ————————————————————————————————————————————————————————————————
+ * INVENTAR ARHIVSKIH ENOT N83 (issue #4) — IZRAČUNAN iz podatkovnega
+ * modela, ne ročno napisan. Za vsako enoto: deklarirane strani (vir),
+ * dokazano prebrane strani (KURRENT_SERIES.pagesReadList), strukturirane
+ * entitete (dejansko stanje v modelih), kontrola obsega (prebrane +
+ * izrecno odprte strani == deklarirane) in razlog odprtega stanja.
+ * ———————————————————————————————————————————————————————————————— */
+
+export interface ArchiveUnitInventory {
+  code: string;
+  titleSi: string;
+  titleEn: string;
+  vacUrl: string | null;
+  kind: "graphic-sheet" | "written-series";
+  transferStatus: string | null;
+  /** prostorska umestitev (samo grafični listi) */
+  georefStatus: string | null;
+  /** strani po evidenci vira (spisovne enote) */
+  pagesDeclared: number | null;
+  /** dokazano prebrane strani (izpis iz surovih raziskav) */
+  pagesRead: number | null;
+  pagesReadList: number[] | null;
+  /** strani, izrecno zabeležene kot odprte (nepresrane) */
+  pagesOpen: number | null;
+  pagesOpenRangesSi: string | null;
+  /** kontrola: prebrane + odprte == deklarirane (ni tihih lukenj) */
+  scopeAccounted: boolean;
+  /** strukturirane entitete — dejansko stanje v podatkovnem modelu */
+  structuredEntities: number;
+  structuredModelSi: string;
+  structuredModelEn: string;
+  /** navzkrižno preverjeno (PUA↔PT) */
+  crossChecked: number;
+  /** s prostorsko geometrijo DOKAZANO povezane entitete */
+  spatiallyLinked: number;
+  /** paleografsko (človeško) potrjene entitete */
+  palaeoConfirmed: number;
+  status: string;
+  openSi: string;
+  openEn: string;
+}
+
+export interface ArchiveInventory {
+  units: ArchiveUnitInventory[];
+  totals: {
+    units: number;
+    graphicSheets: number;
+    writtenSeries: number;
+    pagesDeclared: number;
+    pagesRead: number;
+    pagesOpen: number;
+    /** vse enote: prebrane + odprte strani == deklarirane */
+    scopeAccounted: boolean;
+    structuredEntities: number;
+    spatiallyLinked: number;
+    palaeoConfirmed: number;
+  };
+  /** PS kontrolna vsota (str. 143): 102 stavbna mesta + 2505 parcel = 2607 */
+  psChecksum: {
+    buildingSites: number;
+    landParcels: number;
+    total: number;
+    structured: number;
+    statusSi: string;
+    statusEn: string;
+  };
+  noteSi: string;
+  noteEn: string;
+}
+
+/** obsegi odprtih strani kot berljivi intervali (npr. „5–139“) */
+function rangesOfOpenPages(total: number, read: number[]): string {
+  const readSet = new Set(read);
+  const missing: [number, number][] = [];
+  let start: number | null = null;
+  for (let p = 1; p <= total; p++) {
+    if (!readSet.has(p)) {
+      if (start == null) start = p;
+    } else if (start != null) {
+      missing.push([start, p - 1]);
+      start = null;
+    }
+  }
+  if (start != null) missing.push([start, total]);
+  return missing.map(([a, b]) => (a === b ? `${a}` : `${a}–${b}`)).join(", ");
+}
+
+export function getArchiveInventory(): ArchiveInventory {
+  const puaCross = ATLAS_OWNERS.filter(
+    (o) => o.puaRef && o.houseRefs.some((r) => ATLAS_HOUSES.some((h) => h.no === r)),
+  );
+
+  const units: ArchiveUnitInventory[] = [];
+
+  /* ——— grafični listi A01–A05 ——— */
+  for (const s of ATLAS_SOURCES.filter((x) => x.type === "cadastral-map" && x.code.startsWith("N083"))) {
+    const vectorised = s.code === "N083A02" ? VECTOR_BUILDINGS.length : 0;
+    const validated = s.georefStatus === "GEOREFERENCED";
+    units.push({
+      code: s.code,
+      titleSi: s.titleSi,
+      titleEn: s.titleEn,
+      vacUrl: s.vacUrl ?? null,
+      kind: "graphic-sheet",
+      transferStatus: s.transferStatus ?? null,
+      georefStatus: s.georefStatus ?? null,
+      pagesDeclared: null,
+      pagesRead: null,
+      pagesReadList: null,
+      pagesOpen: null,
+      pagesOpenRangesSi: null,
+      scopeAccounted: true,
+      structuredEntities: vectorised,
+      structuredModelSi: vectorised
+        ? `${vectorised} stavbnih tlorisov (buildings.json, RECONSTRUCTED)`
+        : "parcelne meje niso vektorizirane",
+      structuredModelEn: vectorised
+        ? `${vectorised} building footprints (buildings.json, RECONSTRUCTED)`
+        : "parcel boundaries not vectorised",
+      crossChecked: 0,
+      /* dokazane povezave stavba↔hiša: 0 — listi ne nosijo berljivih hišnih št.;
+         cerkev sv. Vida na A02 (apsida/križ ↔ EŠD 2122) je kontrolna točka
+         georeference, ne hišna entiteta registra (hiša = vrstica PT/PUA) */
+      spatiallyLinked: 0,
+      palaeoConfirmed: 0,
+      status: validated ? "RECONSTRUCTED/CORROBORATED" : "GRID_APPROX",
+      openSi: validated
+        ? vectorised
+          ? "geometrija stavb da; parcelne meje in povezave s hišnimi št. TO_COLLECT"
+          : "vektorizacija parcel TO_COLLECT"
+        : "okvirna umestitev po sekcijski mreži (±200–400 m); točkovno sidro in afina TO_COLLECT",
+      openEn: validated
+        ? vectorised
+          ? "building geometry yes; parcel boundaries and house-number links TO_COLLECT"
+          : "parcel vectorisation TO_COLLECT"
+        : "approximate placement by the section grid (±200–400 m); a point anchor and an affine TO_COLLECT",
+    });
+  }
+
+  /* ——— spisovne enote PG, PR, PS, PT, PUA, PV, PZ ——— */
+  for (const k of KURRENT_SERIES) {
+    const src = ATLAS_SOURCES.find((s) => s.code === `N083${k.code}`);
+    const pagesDeclared = k.pages;
+    const read = k.pagesReadList ?? [];
+    const pagesRead = k.pagesTranscribed;
+    const pagesOpen = pagesDeclared - pagesRead;
+    const scopeAccounted = read.length === pagesRead && pagesRead + pagesOpen === pagesDeclared;
+
+    let structured = k.structuredEntries;
+    let modelSi = "";
+    let modelEn = "";
+    let crossChecked = 0;
+    let openSi = "";
+    let openEn = "";
+
+    switch (k.code) {
+      case "PT":
+        structured = ATLAS_HOUSES.length;
+        modelSi = `${ATLAS_HOUSES.filter((h) => h.no !== "—").length} hišnih vrstic + ${ATLAS_HOUSES.filter((h) => h.no === "—").length} parcelnih vrstic (houses.ts)`;
+        modelEn = `${ATLAS_HOUSES.filter((h) => h.no !== "—").length} house rows + ${ATLAS_HOUSES.filter((h) => h.no === "—").length} parcel rows (houses.ts)`;
+        crossChecked = puaCross.length;
+        openSi =
+          "izvornih 101 vrstic (81 potrj. + 15 popravkov + 5 neberljivih) + 4 dodane P3; vse REVIEW — paleografska potrditev čaka";
+        openEn =
+          "101 source rows (81 confirmed + 15 corrected + 5 illegible) + 4 added by P3; all REVIEW — palaeographic confirmation pending";
+        break;
+      case "PUA":
+        structured = PUA_CONTINUATION.rows.length;
+        modelSi = `${PUA_CONTINUATION.rows.length} vrstic strani 3–49 (PUA_CONTINUATION) + strani A–B v ATLAS_OWNERS (${ATLAS_OWNERS.length} lastnikov, ${ATLAS_OWNERS.filter((o) => o.puaRef).length} s PUA potrditvijo)`;
+        modelEn = `${PUA_CONTINUATION.rows.length} rows of pages 3–49 (PUA_CONTINUATION) + pages A–B in ATLAS_OWNERS (${ATLAS_OWNERS.length} owners, ${ATLAS_OWNERS.filter((o) => o.puaRef).length} with PUA confirmation)`;
+        crossChecked = puaCross.length;
+        openSi =
+          "povezave PUA↔PT po hišni št. same niso dovoljene (dokazano različno številčenje: PUA hiša 6 = Höflehner, PT hiša 6 = Tilel Miho); vse REVIEW";
+        openEn =
+          "PUA↔PT links by house number alone are not allowed (different numbering evidenced: PUA house 6 = Höflehner, PT house 6 = Tilel Miho); all REVIEW";
+        break;
+      case "PS":
+        modelSi = "12 vzorčnih vrstic (research.ts PS_RECAP struktura) — polni register ni prepisan";
+        modelEn = "12 sample rows (research.ts PS_RECAP structure) — the full register not transcribed";
+        openSi = `poln prepis ${pagesOpen} strani (${rangesOfOpenPages(pagesDeclared, read)}) TO_COLLECT; kontrolna vsota 102+2505=2607 (str. 143) je izhodišče`;
+        openEn = `the full transcription of ${pagesOpen} pages (${rangesOfOpenPages(pagesDeclared, read)}) TO_COLLECT; the checksum 102+2505=2607 (p. 143) is the baseline`;
+        break;
+      case "PZ":
+        modelSi = "10 strukturiranih zapisov (naslov, mere, prebivalstvo, cenilna veriga, datum)";
+        modelEn = "10 structured entries (title, dimensions, population, the valuation chain, the date)";
+        openSi = `tabele razredov na ${pagesOpen} straneh (${rangesOfOpenPages(pagesDeclared, read)}) NEPRESRANE — vzorčene strani 20–60 imajo nizko gotovost`;
+        openEn = `the class tables on ${pagesOpen} pages (${rangesOfOpenPages(pagesDeclared, read)}) UNTRANSCRIBED — the sampled pages 20–60 carry low confidence`;
+        break;
+      default:
+        modelSi =
+          k.code === "PG"
+            ? "1 zapis (opis skice; hišni simboli NI — negativen rezultat)"
+            : `${k.structuredEntries} strukturiranih zapisov (research.ts)`;
+        modelEn =
+          k.code === "PG"
+            ? "1 entry (sketch description; house symbols NOT visible — negative result)"
+            : `${k.structuredEntries} structured entries (research.ts)`;
+        openSi = "prepis je strojni (REVIEW) — paleografska potrditev čaka";
+        openEn = "the transcription is machine-assisted (REVIEW) — palaeographic confirmation pending";
+        break;
+    }
+
+    units.push({
+      code: `N083${k.code}`,
+      titleSi: src?.titleSi ?? k.unitSi,
+      titleEn: src?.titleEn ?? k.unitEn,
+      vacUrl: src?.vacUrl ?? null,
+      kind: "written-series",
+      transferStatus: src?.transferStatus ?? null,
+      georefStatus: src?.georefStatus ?? null,
+      pagesDeclared,
+      pagesRead,
+      pagesReadList: read.length ? read : null,
+      pagesOpen,
+      pagesOpenRangesSi: rangesOfOpenPages(pagesDeclared, read) || null,
+      scopeAccounted,
+      structuredEntities: structured,
+      structuredModelSi: modelSi,
+      structuredModelEn: modelEn,
+      crossChecked,
+      spatiallyLinked: 0,
+      palaeoConfirmed: 0,
+      status: k.status,
+      openSi,
+      openEn,
+    });
+  }
+
+  const pagesDeclaredSum = units.reduce((a, u) => a + (u.pagesDeclared ?? 0), 0);
+  const pagesReadSum = units.reduce((a, u) => a + (u.pagesRead ?? 0), 0);
+  const pagesOpenSum = units.reduce((a, u) => a + (u.pagesOpen ?? 0), 0);
+  const graphic = units.filter((u) => u.kind === "graphic-sheet");
+
+  return {
+    units,
+    totals: {
+      units: units.length,
+      graphicSheets: graphic.length,
+      writtenSeries: units.length - graphic.length,
+      pagesDeclared: pagesDeclaredSum,
+      pagesRead: pagesReadSum,
+      pagesOpen: pagesOpenSum,
+      scopeAccounted: units.every((u) => u.scopeAccounted),
+      structuredEntities: units.reduce((a, u) => a + u.structuredEntities, 0),
+      spatiallyLinked: 0,
+      palaeoConfirmed: 0,
+    },
+    psChecksum: {
+      buildingSites: PS_RECAP_1826.summaBauplätze,
+      landParcels: PS_RECAP_1826.summaGrundparzellen,
+      total: PS_RECAP_1826.zusammen,
+      structured: KURRENT_SERIES.find((x) => x.code === "PS")?.structuredEntries ?? 0,
+      statusSi: "kontrolna vsota CELONEGA prepisa PS (str. 143, rdeči tuš) — trenutno 12/2607 strukturiranih vrstic",
+      statusEn: "the checksum of the FULL PS transcription (p. 143, red ink) — currently 12/2607 structured rows",
+    },
+    noteSi:
+      "Inventar je IZRAČUNAN iz podatkovnega modela (ATLAS_SOURCES, KURRENT_SERIES, ATLAS_HOUSES, ATLAS_OWNERS, PUA_CONTINUATION, VECTOR_BUILDINGS) — števci ne morejo tiho zastareti. Ločene vrednosti: strani vira, dokazano prebrane strani, strukturirane entitete, navzkrižno preverjene, prostorsko povezane, paleografsko potrjene. Nič ni nadgrajeno v močnejšo stopnjo gotovosti brez dokaza.",
+    noteEn:
+      "The inventory is COMPUTED from the data model (ATLAS_SOURCES, KURRENT_SERIES, ATLAS_HOUSES, ATLAS_OWNERS, PUA_CONTINUATION, VECTOR_BUILDINGS) — the counters cannot silently drift. Separate values: source pages, evidenced read pages, structured entities, cross-checked, spatially linked, palaeographically confirmed. Nothing is upgraded to a stronger certainty without evidence.",
   };
 }
 
@@ -112,6 +389,9 @@ export function getAtlasModel() {
     heritage: HERITAGE_UNITS,
     negativeResults: NEGATIVE_RESULTS,
     coverage: getCoverage(),
+    /* issue #4: inventar vseh 12 enot N83 — izračunan, z ločenimi vrednostmi
+       (strani vira / dokazano prebrane / strukturirane / navzkrižne / prostorske) */
+    inventory: getArchiveInventory(),
     parish: {
       info: PARISH,
       books: PARISH_BOOKS,
@@ -347,7 +627,7 @@ export function searchAtlas(q: string): AtlasSearchHit[] {
         id: s.id,
         titleSi: `Vir: ${s.code} — ${s.titleSi}`,
         titleEn: `Source: ${s.code} — ${s.titleEn}`,
-        detail: `${s.archive} · ${s.pages ? s.pages + " str." : "list"}${s.georeferenced ? " · georeferenciran" : ""}`,
+        detail: `${s.archive} · ${s.pages ? s.pages + " str." : "list"}${s.georefStatus === "GEOREFERENCED" ? " · georeferenciran (validirano)" : s.georefStatus === "GRID_APPROX" ? " · umesčen približno (sekcijska mreža)" : ""}`,
       });
     }
   }
