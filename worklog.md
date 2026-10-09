@@ -2098,3 +2098,13 @@ Stage Summary:
 - POČIŠČENO: oba BLOCKED deploymenta izbrisana; README opozorilo o identiteti pred commiti.
 - PRODUKCIJA POTRJENA: /api/qa 30/30 (vseh 5 P19 testov zelenih: 113/590/11/6; 106 citiranj/101 datotek; 0 zastarelih povezav; 375 postaj = 338 z virom + 37 v raziskovanju; 0 kršitev 1468); atlas/integrity 200; dogodki, oznake in 1468 potrjeni v HTML.
 - ZA PRIHODNJE SEJE: VEDNO najprej git config user.name/email (glej README → Povezava GitHub → Vercel).
+
+---
+
+## P20 — P0 ostanki (issue #3): števci v JSON-LD in O muzeju (2026-10-10)
+
+- KONTEKST: issue #3 (P0) je po P19 ostal z dvema nedoseženima točkama — obe sta ravno vrsti "ročno podvojene številke", ki jih issue prepoveduje.
+- 1) layout.tsx JSON-LD: "Zbirka Muzeja vasi Griblje (MVG-001–114)" → MVG-001–113 (zapis MVG-114 ne obstaja; rezervirana številka izbrisana iz related v P19, ostala je samo v JSON-LD imenu Dataset).
+- 2) museum-about.tsx: "testi kakovosti (11)" (zastarelo od P1) → izpeljano iz runQA().tests.length; "zbirka 113" → iz STATS.exhibits. Oba števca sedaj izhajata iz podatkovnega modela (issue #3: "Števci morajo izhajati iz ustreznega podatkovnega modela") — runQA je sinhrona in varna za odjemalca (fs je bil umaknjen v P19).
+- 3) MUSEUM-AUDIT.md §1: "25 testov" → 30; zastarela vrstica "povezan z GitLabom" → dejansko stanje (GitHub Actions deploy).
+- TESTI: ESLint 0; tsc 0; build 16/16; lokalno QA 30/30; HTML: MVG-001–113 ×2, "testi kakovosti (30)", "zbirka 113" (SSR potrjen).

@@ -108,7 +108,7 @@ const jsonLd = {
     },
     {
       "@type": "Dataset",
-      name: "Zbirka Muzeja vasi Griblje (MVG-001–114)",
+      name: "Zbirka Muzeja vasi Griblje (MVG-001–113)",
       description:
         "Odprti podatki digitalnega muzeja: 113 zapisov o vasi Griblje z dokazljivimi viri, lestvico zanesljivosti, časovnico, zemljevidom, Atlasom 1825 in provenienčnim poročilom.",
       url: `${SITE_URL}/api/opendata`,
