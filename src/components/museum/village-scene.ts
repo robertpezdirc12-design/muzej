@@ -76,6 +76,18 @@ function gableGeometry(): THREE.BufferGeometry {
   tris.forEach((v, i) => pos.set(v as number[], i * 3));
   const g = new THREE.BufferGeometry();
   g.setAttribute("position", new THREE.BufferAttribute(pos, 3));
+  /* UV map: roof slopes tile from ridge to eaves; gable ends map separately. */
+  g.setAttribute(
+    "uv",
+    new THREE.Float32BufferAttribute([
+      0, 0, 0.5, 1, 1, 0,
+      0, 0, 1, 0, 0.5, 1,
+      0, 1, 0, 0, 1, 0,
+      0, 1, 1, 0, 1, 1,
+      0, 1, 1, 1, 1, 0,
+      0, 1, 1, 0, 0, 0,
+    ], 2),
+  );
   g.computeVertexNormals();
   return g;
 }
@@ -97,6 +109,111 @@ function ribbonGeometry(pts: { x: number; z: number }[], w: number): THREE.Buffe
   g.setAttribute("position", new THREE.Float32BufferAttribute(verts, 3));
   g.computeVertexNormals();
   return g;
+}
+
+/**
+ * Proceduralni, deterministični materiali za prikaz — niso nadomestilo za
+ * izmerjene teksture konkretnih stavb. Namenjeni so boljši svetlobi in
+ * materialnosti medtem, ko zbiramo preverjene terenske fotografije.
+ */
+function makePlasterTexture(): THREE.CanvasTexture {
+  const canvas = document.createElement("canvas");
+  canvas.width = canvas.height = 256;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return new THREE.CanvasTexture(canvas);
+  const image = ctx.createImageData(256, 256);
+  for (let y = 0; y < 256; y++) {
+    for (let x = 0; x < 256; x++) {
+      let n = (Math.imul(x + 17, 374761393) ^ Math.imul(y + 31, 668265263)) >>> 0;
+      n = Math.imul(n ^ (n >>> 13), 1274126177) >>> 0;
+      const grain = (n % 31) - 15;
+      const grime = Math.max(0, (y - 196) / 60) * 8;
+      const wash = Math.sin(y * 0.065 + Math.sin(x * 0.035) * 2.2) * 3.5;
+      const i = (y * 256 + x) * 4;
+      image.data[i] = THREE.MathUtils.clamp(216 + grain + wash - grime, 0, 255);
+      image.data[i + 1] = THREE.MathUtils.clamp(204 + grain + wash - grime, 0, 255);
+      image.data[i + 2] = THREE.MathUtils.clamp(183 + grain + wash - grime, 0, 255);
+      image.data[i + 3] = 255;
+    }
+  }
+  ctx.putImageData(image, 0, 0);
+  /* nežni razpokani sledovi ometa; umetni material, ne dokumentiran vzorec */
+  ctx.strokeStyle = "rgba(108,91,69,0.18)";
+  ctx.lineWidth = 0.7;
+  for (let i = 0; i < 20; i++) {
+    const x = (i * 47 + 19) % 256;
+    const y = (i * 73 + 31) % 220;
+    ctx.beginPath();
+    ctx.moveTo(x, y);
+    ctx.lineTo(x + ((i % 3) - 1) * 2.5, y + 9 + (i % 8) * 2);
+    ctx.stroke();
+  }
+  const texture = new THREE.CanvasTexture(canvas);
+  texture.colorSpace = THREE.SRGBColorSpace;
+  texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+  texture.anisotropy = 4;
+  return texture;
+}
+
+function makeRoofTexture(): THREE.CanvasTexture {
+  const canvas = document.createElement("canvas");
+  canvas.width = canvas.height = 512;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return new THREE.CanvasTexture(canvas);
+  ctx.fillStyle = "#66513c";
+  ctx.fillRect(0, 0, 512, 512);
+  /* ploščice so namenoma generična interpretacija, ne trditev o vseh strehah 1825 */
+  for (let row = 0; row < 23; row++) {
+    const y = row * 23;
+    const offset = row % 2 ? -13 : 0;
+    for (let col = -1; col < 18; col++) {
+      const seed = (Math.imul(row + 5, 73856093) ^ Math.imul(col + 9, 19349663)) >>> 0;
+      const tone = seed % 32;
+      const r = 116 + tone;
+      const g = 72 + Math.floor(tone * 0.57);
+      const b = 43 + Math.floor(tone * 0.3);
+      const x = col * 31 + offset;
+      ctx.fillStyle = `rgb(${r},${g},${b})`;
+      ctx.fillRect(x + 1, y + 1, 29, 21);
+      ctx.strokeStyle = "rgba(40,29,21,0.48)";
+      ctx.lineWidth = 1;
+      ctx.strokeRect(x + 1.5, y + 1.5, 28, 20);
+      ctx.strokeStyle = "rgba(235,190,138,0.14)";
+      ctx.beginPath();
+      ctx.moveTo(x + 3, y + 3);
+      ctx.lineTo(x + 27, y + 3);
+      ctx.stroke();
+    }
+  }
+  const texture = new THREE.CanvasTexture(canvas);
+  texture.colorSpace = THREE.SRGBColorSpace;
+  texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+  texture.anisotropy = 4;
+  return texture;
+}
+
+function makeGroundTexture(): THREE.CanvasTexture {
+  const canvas = document.createElement("canvas");
+  canvas.width = canvas.height = 256;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return new THREE.CanvasTexture(canvas);
+  ctx.fillStyle = "#718562";
+  ctx.fillRect(0, 0, 256, 256);
+  for (let i = 0; i < 1300; i++) {
+    const seed = (Math.imul(i + 7, 2246822519) ^ Math.imul(i + 13, 3266489917)) >>> 0;
+    const x = seed % 256;
+    const y = (seed >>> 8) % 256;
+    const size = 1 + (seed % 5);
+    const tones = ["rgba(34,67,37,0.20)", "rgba(195,174,114,0.17)", "rgba(222,216,164,0.09)", "rgba(36,52,31,0.13)"];
+    ctx.fillStyle = tones[seed % tones.length];
+    ctx.fillRect(x, y, size, size * ((seed % 3) + 1));
+  }
+  const texture = new THREE.CanvasTexture(canvas);
+  texture.colorSpace = THREE.SRGBColorSpace;
+  texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+  texture.repeat.set(64, 64);
+  texture.anisotropy = 4;
+  return texture;
 }
 
 interface YearVisual {
@@ -145,6 +262,9 @@ export class VillageScene {
   private groundPlane: THREE.Mesh;
   /** cone rabe tal + Kolpa + DREVESA — skupaj, da jih mini-scena skrije */
   private envGroup = new THREE.Group();
+  /** Hišna vrata, okenski okvirji, podzidki in strešni robovi — isti model za orbit in AR. */
+  private facadeGroup = new THREE.Group();
+  private facadeMaterials: THREE.Material[] = [];
   private churchRoot: THREE.Group | null = null;
 
   /* P12: drevesa (instancirana debla + listave/iglavci kroni) */
@@ -210,6 +330,9 @@ export class VillageScene {
     });
     this.renderer.setClearColor(0x000000, 0);
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    this.renderer.outputColorSpace = THREE.SRGBColorSpace;
+    this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    this.renderer.toneMappingExposure = 1.08;
 
     this.camera = new THREE.PerspectiveCamera(62, 1, 0.4, 4000);
     this.camera.rotation.order = "YXZ";
@@ -222,9 +345,14 @@ export class VillageScene {
     this.scene.add(sun);
 
     /* tla — v AR prosojna (video se vidi), v orbitu polna */
+    const groundTexture = makeGroundTexture();
     this.groundPlane = new THREE.Mesh(
       new THREE.PlaneGeometry(3200, 3200),
-      new THREE.MeshLambertMaterial({ color: 0xb3a787 }),
+      new THREE.MeshStandardMaterial({
+        color: 0xc4c3a0,
+        map: groundTexture,
+        roughness: 1,
+      }),
     );
     this.groundPlane.rotation.x = -Math.PI / 2;
     this.groundPlane.position.y = -0.06;
@@ -372,23 +500,33 @@ export class VillageScene {
     box.translate(0, 0.5, 0);
     const gable = gableGeometry();
 
-    this.wallsMat = new THREE.MeshLambertMaterial({
-      color: 0xd8cdb8,
+    const plasterTexture = makePlasterTexture();
+    const roofTexture = makeRoofTexture();
+    this.wallsMat = new THREE.MeshStandardMaterial({
+      color: 0xffffff,
+      map: plasterTexture,
+      roughness: 0.96,
       transparent: true,
       opacity: 1,
     });
-    this.roofsMat = new THREE.MeshLambertMaterial({
-      color: 0x8a7040,
+    this.roofsMat = new THREE.MeshStandardMaterial({
+      color: 0xffffff,
+      map: roofTexture,
+      roughness: 0.94,
       transparent: true,
       opacity: 1,
     });
-    this.growthWallsMat = new THREE.MeshLambertMaterial({
-      color: 0xc2b08c,
+    this.growthWallsMat = new THREE.MeshStandardMaterial({
+      color: 0xd0c1a2,
+      map: plasterTexture,
+      roughness: 1,
       transparent: true,
       opacity: 0,
     });
-    this.growthRoofsMat = new THREE.MeshLambertMaterial({
-      color: 0x9a7a4a,
+    this.growthRoofsMat = new THREE.MeshStandardMaterial({
+      color: 0xd0b18c,
+      map: roofTexture,
+      roughness: 1,
       transparent: true,
       opacity: 0,
     });
@@ -449,7 +587,115 @@ export class VillageScene {
     fill(this.roofsGrowth, GROWTH_1900, true);
     this.wallsGrowth.visible = false;
     this.roofsGrowth.visible = false;
-    this.scene.add(this.walls1825, this.roofs1825, this.wallsGrowth, this.roofsGrowth);
+
+    /*
+     * Arhitekturna plast (vse dimenzije so interpretativne, tlorisi pa merjeni):
+     * podzidek, opaž/eaves, vrata in okna v instancah; ostane dovolj lahka za telefon.
+     * Ne prikaže se v »duhovih« 2026, da podrobnosti ne lažno predstavljajo
+     * dokumentirano podobo stavb, kjer je le tloris kataster.
+     */
+    type DetailPose = { x: number; y: number; z: number; rotY: number; w: number; h: number; d: number };
+    const poses = {
+      plinth: [] as DetailPose[],
+      eaves: [] as DetailPose[],
+      ridge: [] as DetailPose[],
+      door: [] as DetailPose[],
+      doorJamb: [] as DetailPose[],
+      doorLintel: [] as DetailPose[],
+      windowFrame: [] as DetailPose[],
+      windowGlass: [] as DetailPose[],
+      windowMullion: [] as DetailPose[],
+    };
+    const addPose = (
+      list: DetailPose[],
+      b: { x: number; z: number; w: number; d: number; rotY: number },
+      lx: number, y: number, lz: number, w: number, h: number, d: number,
+    ) => {
+      const c = Math.cos(b.rotY);
+      const s = Math.sin(b.rotY);
+      list.push({
+        x: b.x + lx * c + lz * s,
+        y,
+        z: b.z - lx * s + lz * c,
+        rotY: b.rotY,
+        w, h, d,
+      });
+    };
+    for (const b of BUILDINGS_1825) {
+      /* kamnit podzidek, rahlo izven tlorisa */
+      addPose(poses.plinth, b, 0, 0.13, 0, b.w + 0.34, 0.26, b.d + 0.34);
+      /* leseni kapni robovi in slemenska letev — geometrija je orientacijska */
+      for (const side of [-1, 1]) {
+        addPose(poses.eaves, b, side * (b.w / 2), b.wallH + 0.02, 0, 0.13, 0.13, b.d + 0.18);
+      }
+      addPose(poses.ridge, b, 0, b.wallH + b.roofH - 0.035, 0, 0.09, 0.09, b.d + 0.14);
+
+      if (b.w < 4.8 || b.d < 3.2) continue;
+      const isBarn = b.w > 18;
+      const doorW = Math.min(isBarn ? 2.1 : 1.02, b.w * (isBarn ? 0.19 : 0.17));
+      const doorH = Math.min(isBarn ? 2.35 : 2.02, b.wallH * 0.78);
+      const doorX = b.w > 9 ? -b.w * 0.18 : 0;
+      /* glavna vrata na južni/čelni strani; lokacija in oblika sta tipološka ocena */
+      addPose(poses.door, b, doorX, doorH / 2, -b.d / 2 - 0.075, doorW, doorH, 0.075);
+      addPose(poses.doorJamb, b, doorX - doorW / 2 - 0.055, doorH / 2, -b.d / 2 - 0.105, 0.11, doorH + 0.12, 0.12);
+      addPose(poses.doorJamb, b, doorX + doorW / 2 + 0.055, doorH / 2, -b.d / 2 - 0.105, 0.11, doorH + 0.12, 0.12);
+      addPose(poses.doorLintel, b, doorX, doorH + 0.06, -b.d / 2 - 0.105, doorW + 0.22, 0.12, 0.12);
+
+      /* okna dodamo samo bolj verjetnim stanovanjskim objektom v jedru;
+         ne trdimo, da so ti posamezni odprtini zgodovinsko dokazani. */
+      if (b.core && b.w >= 6 && b.w <= 18 && b.d >= 4) {
+        const positions = b.w > 10
+          ? [-b.w * 0.23, b.w * 0.23]
+          : [doorX < 0 ? b.w * 0.23 : -b.w * 0.23];
+        for (const face of [-1, 1]) {
+          for (const wx of positions) {
+            const ww = Math.min(0.72, b.w * 0.11);
+            const wh = 0.72;
+            const wy = Math.min(1.7, b.wallH * 0.64);
+            const surface = face * (b.d / 2);
+            addPose(poses.windowFrame, b, wx, wy, surface + face * 0.062, ww + 0.16, wh + 0.16, 0.09);
+            addPose(poses.windowGlass, b, wx, wy, surface + face * 0.12, ww, wh, 0.055);
+            addPose(poses.windowMullion, b, wx, wy, surface + face * 0.155, 0.045, wh, 0.035);
+            addPose(poses.windowMullion, b, wx, wy, surface + face * 0.156, ww, 0.045, 0.035);
+          }
+        }
+      }
+    }
+
+    const detailBox = new THREE.BoxGeometry(1, 1, 1);
+    const makeDetailMesh = (items: DetailPose[], material: THREE.Material) => {
+      if (!items.length) return;
+      const mesh = new THREE.InstancedMesh(detailBox, material, items.length);
+      items.forEach((b, i) => {
+        const qDetail = new THREE.Quaternion().setFromAxisAngle(yAxis, b.rotY);
+        const pDetail = new THREE.Vector3(b.x, b.y, b.z);
+        const sDetail = new THREE.Vector3(b.w, b.h, b.d);
+        mesh.setMatrixAt(i, new THREE.Matrix4().compose(pDetail, qDetail, sDetail));
+      });
+      mesh.instanceMatrix.needsUpdate = true;
+      mesh.frustumCulled = false;
+      this.facadeGroup.add(mesh);
+      this.facadeMaterials.push(material);
+    };
+    const detailMaterial = (color: number) => new THREE.MeshStandardMaterial({
+      color,
+      roughness: 0.9,
+      transparent: true,
+      opacity: 1,
+      depthWrite: false,
+    });
+    makeDetailMesh(poses.plinth, detailMaterial(0x746858));
+    makeDetailMesh(poses.eaves, detailMaterial(0x5e462e));
+    makeDetailMesh(poses.ridge, detailMaterial(0x735638));
+    makeDetailMesh(poses.door, detailMaterial(0x65452d));
+    makeDetailMesh(poses.doorJamb, detailMaterial(0xb39b73));
+    makeDetailMesh(poses.doorLintel, detailMaterial(0x9b8058));
+    makeDetailMesh(poses.windowFrame, detailMaterial(0xb39b73));
+    makeDetailMesh(poses.windowGlass, detailMaterial(0x35443f));
+    makeDetailMesh(poses.windowMullion, detailMaterial(0x60472f));
+    this.facadeGroup.visible = true;
+
+    this.scene.add(this.walls1825, this.roofs1825, this.wallsGrowth, this.roofsGrowth, this.facadeGroup);
 
     /* statusne barve duhov 1825 (Kaj je izginilo?) — instanceColor se
        MNOŽI z barvo materiala, zato v režimu 1825/1900 vsem bela (brez spremembe)
@@ -521,6 +767,7 @@ export class VillageScene {
       /* nazaj na vas: vrni vse plasti (orbit/tla glede na način) */
       this.walls1825.visible = true;
       this.roofs1825.visible = true;
+      this.facadeGroup.visible = true;
       this.envGroup.visible = true;
       this.groundPlane.visible = this.mode === "orbit";
       this.smokeGroup.visible = this.year !== 2026;
@@ -541,6 +788,7 @@ export class VillageScene {
     /* skrij vas — predogled se usmeri na središče mini scene */
     this.walls1825.visible = false;
     this.roofs1825.visible = false;
+    this.facadeGroup.visible = false;
     this.wallsGrowth.visible = false;
     this.roofsGrowth.visible = false;
     this.wallsPresent.visible = false;
@@ -873,6 +1121,11 @@ export class VillageScene {
     this.growthWallsMat.opacity = this.vis.growthOpacity;
     this.growthRoofsMat.opacity = this.vis.growthOpacity;
     this.presentMat.opacity = this.vis.presentOpacity;
+    const detailOpacity = this.wallsMat.wireframe ? 0 : this.vis.wallsOpacity;
+    for (const material of this.facadeMaterials) {
+      (material as THREE.Material & { opacity: number }).opacity = detailOpacity;
+    }
+    this.facadeGroup.visible = detailOpacity > 0.015;
     const showGrowth = this.vis.growthOpacity > 0.05;
     this.wallsGrowth.visible = showGrowth;
     this.roofsGrowth.visible = showGrowth;
