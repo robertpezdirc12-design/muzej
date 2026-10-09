@@ -2088,3 +2088,13 @@ Stage Summary:
 - DOKUMENTACIJA: MUSEUM-AUDIT.md §11 (P19 preglednica 5 popravkov + 5 kontrol), §8.3 in §2.1 opombe o odstranitvi MVG-114, §9.5 posodobljen.
 - TESTI: ESLint 0; tsc 0; build 16/16 s tipi; /api/qa 30/30 (p19 vse zeleni: 113/590/11/6, 106/101, 0, 375=338+37, 0+1468); /api/atlas/integrity 11/11; HTML: dogodek cerkev sv. Vida, hero »prva omemba vasi 1468«, »v raziskovanju« badge v SSR; odjemalski paketi vsebujejo nove nize.
 - Podatkovna pravila: 113 zapisov, 590 virov, 36 GPS nespremenjenih; spremenjeni: 2 dogodka, 1 yearFrom, 26 postaj (23 virov + 3 letnice/opisi), 37 evidence oznak, 2 related odstranjeni.
+
+### P19 — deploy incident in rešitev (2026-10-10, zvečer)
+
+- SIMPTOM: po pushu P19 (54d393f) deploy GitHub Actions preklican po 15 min; ponovni zagon (6bb36db) prav tako.
+- DIAGNOZA 1: workflow timeout-minutes: 15 — dvignjeno na 30 (a to ni bil pravi vzrok).
+- DIAGNOZA 2 (pravi vzrok): Vercel deployment BLOCKED z readyStateReason »the commit author doesn't have permission to create deployments for this project« + seatBlock TEAM_ACCESS_REQUIRED, buildSkipped: true. Avtor obeh novih commitov je bil peskovniški Z User <z@container> (nova seja ni podedovala git identitete); uspešni P16–P18 je avtoriziral Robert Pezdirc <robert.pezdirc12@gmail.com> = lastnik ekipe. Uradna dokumentacija: na HOBBY + zaseben repozitorij MORA biti avtor commita lastnik ekipe — nastavitve za izklop NI (gitForkProtection=false ne pomaga pri CLI deployih; preizkušeno).
+- REŠITEV: git identiteta povrnjena lokalno; prazni commit 06eb4d4 z avtorjem-lastnikom na vrhu main → nov deployment BUILDING → READY; run 38001372767 SUCCESS.
+- POČIŠČENO: oba BLOCKED deploymenta izbrisana; README opozorilo o identiteti pred commiti.
+- PRODUKCIJA POTRJENA: /api/qa 30/30 (vseh 5 P19 testov zelenih: 113/590/11/6; 106 citiranj/101 datotek; 0 zastarelih povezav; 375 postaj = 338 z virom + 37 v raziskovanju; 0 kršitev 1468); atlas/integrity 200; dogodki, oznake in 1468 potrjeni v HTML.
+- ZA PRIHODNJE SEJE: VEDNO najprej git config user.name/email (glej README → Povezava GitHub → Vercel).

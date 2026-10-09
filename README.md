@@ -65,6 +65,13 @@ Produkcija teče na Vercelu: **https://griblje-museum.vercel.app**
 | Skrivnosti | `VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID` shranjene kot šifrirane GitHub Actions skrivnosti |
 | Žeton | velja do 14. 10. 2026 — obnovitev: `scripts/renew_vercel_token.py` (libsodium) |
 
+> **⚠️ Past pri commitih (Hobby + zaseben repo):** Vercel na Hobby načrtu za
+> zasebne repozitorije zahteva, da je **avtor deployanega commita lastnik ekipe**
+> (dokumentacija: *troubleshoot-project-collaboration*). Peskovniški
+> `Z User <z@container>` povzroči `BLOCKED (TEAM_ACCESS_REQUIRED)`.
+> Pred vsakim commitom v novi seji:
+> `git config user.name "Robert Pezdirc" && git config user.email "robert.pezdirc12@gmail.com"`
+
 ### Ročni deployment (iz klona repozitorija, rezerva)
 
 ```bash
