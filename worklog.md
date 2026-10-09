@@ -2057,3 +2057,18 @@ Stage Summary:
 - DATABASE_URL/DIRECT_URL na Vercelu NISTA izbrisani (neuporabljeni, a sta lahko edini zapis povezave do zbirke — odločitev za lastnika).
 - TESTI: ESLint 0; tsc --noEmit 0; build 16/16 S tipi; /api/qa 23/23; /api/atlas/integrity 11/11; exhibits 113, hiše 105, timeSpots 9, panorame 3, opendata 200.
 - MUSEUM-AUDIT.md posodobljen (vrstici 17 in 19: DONE).
+
+---
+
+## P18 — ZADNJI DVE REVIZIJSKI POSTAVKI: oznake vrst virov + prazgodovina v časovnem potovanju (2026-10-10)
+
+- ZAHTVA (uporabnik): "nadaljuj" — izpeljava zadnjih dveh odprtih postavk revizije (docs/MUSEUM-AUDIT.md, §9, vrstici 18 in 20), ki sta po P17 ostali PARTIAL.
+- POSTAVKA 18 (surove kode vrst virov obiskovalcu): v src/lib/museum.ts dodan slovar SOURCE_TYPE_LABELS (6 vrst: objava/publication, spletni-vir/web source, fotografija/photograph, arhiv/arhivski vir + archival source, zemljevid/map, pricevanje/intervju + interview) in pomočnik sourceTypeLabel() z varnim padcem za neznane kode (vezaji → presledki); exhibit-detail.tsx izpisuje oznako v jeziku obiskovalca, surova koda ostane kot tooltip (sklic na /api/opendata, kjer so kode identifikatorji); 590 navedb pokritih.
+- POSTAVKA 20 (pika MVG-095 v časovnem potovanju): drsnik na museum-map.tsx je bil zvezen 1468–2026, zato je bila bronasta igla MVG-095 (−1000…−700) v načinu časovnega potovanja NEDOSEGLJIVA. Preurejeno v diskretne postanke:
+  1) nova datoteka src/lib/timeline-stops.ts — YEAR_STOPS (35 postankov = VSA mejna leta letnic od–do zapisov z GPS na karti; množica pik se med sosednjima mejama ne spreminja, zato so množice v vsakem postanku enake zveznemu drsniku, 0 izgube natančnosti), MAX_YEAR, formatStopYear() (−1000 → "1000 pr. n. št." / "1000 BC", oblika časovnice);
+  2) museum-map.tsx: drsnik po indeksih postankov, izpis formatiranih letnic, obrambna rezerva pri preklopu načina; prva trije postanki (−1000, −800, −700) odkrivajo prazgodovino — MVG-095 (−1000/−700) in Kučar MVG-060 (od −800);
+  3) uvodno besedilo karte omenja bronasto iglo pred tremi tisočletji.
+- NOVA QA TESTA (23 → 25): qa-p18-source-labels (vsaka koda vrste vira v zbirki ima oznako SL/EN — prihodnje dodane kode brez oznake padejo) in qa-p18-timeline-stops (postanki pokrivajo vsa mejna leta zapisov na karti, urejeni naraščajoče, prvi je prazgodovina, zadnji = 2026; pri dodatku zapisa z novim letom test pozove k posodobitvi postankov).
+- DOKUMENTACIJA: MUSEUM-AUDIT.md vrstici 18/20 → DONE (P18), števci testov 23 → 25 na treh mestih.
+- TESTI: ESLint 0; tsc --noEmit 0; build 16/16 s tipi; /api/qa 25/25 PASS (p18 oba zelena: 6 vrst virov brez manjkajočih oznak; 35 postankov, 35 mejnih let, 0 manjkajočih); /api/atlas/integrity 11/11; podatki nespremenjeni (113 razstav, 590 navedb virov, 36 GPS na karti); oznake in postanki potrjeni v odjemalskem paketu.
+- NIČ AI: vse spremembe so deterministični slovarji/izračuni postankov iz obstoječih podatkov.

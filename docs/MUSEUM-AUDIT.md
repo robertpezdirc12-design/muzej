@@ -16,7 +16,7 @@
 | Podatki | statični JSON/TS pod `src/data/museum/` in `src/data/atlas/` — brez baze med delovanjem |
 | Zgradba ob reviziji | `bun run build` uspešna: 16/16 strani, 12 API poti (vse `force-static`) |
 | Produkcija | `griblje-museum.vercel.app` (Vercel, povezan z GitLabom; sinhroniziran z repozitorijem 9. 10. 2026 prek CLI deploya) |
-| Obstoječi testi | lastna QA zbirka (`src/lib/qa.ts`, 23 testov), atlas integrity (11 preverb), ESLint, tsc |
+| Obstoječi testi | lastna QA zbirka (`src/lib/qa.ts`, 25 testov), atlas integrity (11 preverb), ESLint, tsc |
 | Odprti issueji | #1 (ta revizija) — edini |
 
 ## 2. Inventar podatkov (točka 2)
@@ -135,11 +135,11 @@ kartice virov; overlay na karti je namenoma le A01/A02 (GEOTRUTH afina).
 | `bun run lint` (ESLint) | **0 napak, 0 opozoril** |
 | `bunx tsc --noEmit` | **0 napak** (P17: vseh 34 prikritih napak odpravljenih, `ignoreBuildErrors` odstranjen; tsconfig zožen na aplikacijo) |
 | `bun run build` | **uspešno** — 16/16 strani, 12 statičnih API poti (~16 s) |
-| `/api/qa` (lokalno, produkcijska zgradba) | **ok: true, 23/23 PASS** (vključno `qa-p12-village-life`) |
+| `/api/qa` (lokalno, produkcijska zgradba) | **ok: true, 25/25 PASS** (vključno `qa-p12-village-life`; P18: `qa-p18-source-labels`, `qa-p18-timeline-stops`) |
 | `/api/atlas/integrity` | **11/11 PASS** (hiše, viri, E2E veriga hiša 73→MVG-010, georeferenca, EŠD 2122, vektorizacija, matrike …) |
 | `/api/provenance` | 590 navedb; 113/113 z virom; 0 brez licence |
 | `/api/opendata` | števci 113/590/11/6; licenca CC BY-SA 4.0 |
-| Produkcija (`griblje-museum.vercel.app`) | 200; QA 23/23 po deployu te revizije (glej §10) |
+| Produkcija (`griblje-museum.vercel.app`) | 200; QA 25/25 po deployu te revizije (glej §10; P18 dodal 2 testa) |
 
 ## 8. Popravki, izvedeni v tej reviziji (brez izgube vsebine)
 
@@ -189,9 +189,9 @@ DEMO/NAČRTOVANO = mehanizem obstaja, vsebina čaka · MISSING = manjka · BLOCK
 | 15 | GPS koordinate 77/113 zapisov | **MISSING** (znana vrzel; ne izmišljujemo — zbirajo se iz virov) |
 | 16 | Zapis MVG-114 »Kresna pesem (1888)« | **NAČRTOVANO** (rezerviran v `extra.json` related; ni v zbirki) |
 | 17 | Popravljanje 34 prikritih TS napak (`ignoreBuildErrors`) | **DONE (P17)** — 0 napak, zastavica odstranjena |
-| 18 | Surove kode vrst virov vidne obiskovalcu (npr. »objava«) | **PARTIAL** — kozmetika; predlog: slovar oznak SL/EN |
+| 18 | Surove kode vrst virov vidne obiskovalcu (npr. »objava«) | **DONE (P18)** — slovar oznak `SOURCE_TYPE_LABELS` (SL/EN) v `src/lib/museum.ts`; izpis v exhibit-detail prek `sourceTypeLabel()` (surova koda ostane kot tooltip za sklicevanje na odprte podatke); celovitost varuje `qa-p18-source-labels` |
 | 19 | Neuporabljene env spremenljivke na Vercelu + Prisma ostanki | **DONE (P15+P17)** — AI ključa (OPENROUTER, ELEVENLABS) odstranjena s Vercela in `z-ai-web-dev-sdk` iz package.json (P15); Prisma odstranjen v celoti (P17: `prisma/`, `src/lib/db.ts`, obe odvisnosti, db:* skripti, 17 neuporabljenih paketov). `DATABASE_URL`/`DIRECT_URL` sta ostali na Vercelu (neškodljivi, neuporabljeni — potencialno edini zapis povezave do zbirke, zato ju ne brišemo brez lastnika) |
-| 20 | Pin MVG-095 v načinu časovnega potovanja na karti | **PARTIAL** — obdobje (−1000…−700) je pred najmanjšim letom drsnika (1468); privzeti pogled piko prikaže, časovno potovanje jo skrije (semantična odločitev, dokumentirano) |
+| 20 | Pin MVG-095 v načinu časovnega potovanja na karti | **DONE (P18)** — drsnik preurejen v diskretne postanke (`src/lib/timeline-stops.ts`): postanki = vsa mejna leta zapisov na karti, od −1000 (prazgodovina) do 2026, zato so množice pik enake zveznemu drsniku, pika MVG-095 (−1000…−700) pa dosegljiva; letnice se izpisujejo kot »1000 pr. n. št.«; doslednost s podatki varuje `qa-p18-timeline-stops` |
 
 ### Naslednji konkretni koraki (po prednostni)
 

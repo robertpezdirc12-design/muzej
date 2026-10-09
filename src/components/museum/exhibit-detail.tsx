@@ -29,6 +29,7 @@ import {
   getExtra,
   EVIDENCE_LABELS,
   CATEGORY_LABELS,
+  sourceTypeLabel,
   type Exhibit,
 } from "@/lib/museum";
 
@@ -248,8 +249,11 @@ export function ExhibitDetail({
                           </span>
                         </span>
                         {s.sourceType && (
-                          <span className="shrink-0 text-[10px] uppercase tracking-wider text-muted-foreground">
-                            {s.sourceType}
+                          <span
+                            className="shrink-0 text-[10px] uppercase tracking-wider text-muted-foreground"
+                            title={s.sourceType}
+                          >
+                            {sourceTypeLabel(s.sourceType, lang)}
                           </span>
                         )}
                       </div>

@@ -19,6 +19,7 @@ import {
 } from "@/data/atlas/timespots";
 import { useTimeMachine } from "@/lib/time-machine-store";
 import { useTimespots } from "@/lib/timespots-store";
+import { YEAR_STOPS, MAX_YEAR, formatStopYear } from "@/lib/timeline-stops";
 
 const MapCanvas = dynamic(
   () => import("./museum-map-canvas").then((m) => m.MapCanvas),
@@ -30,8 +31,6 @@ const MapCanvas = dynamic(
   },
 );
 
-const MIN_YEAR = 1468;
-const MAX_YEAR = 2026;
 const HISTORIC_YEAR = 1825;
 
 export function MuseumMap({
@@ -84,8 +83,8 @@ export function MuseumMap({
         </h2>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
           {t(
-            "Od Griblacha leta 1468 do današnjih hiš — zapisi zbirke na karti kraja. Kliknite klinček in zapis se odpre.",
-            "From Griblach in 1468 to the houses of today — collection records on the map of the place. Click a pin to open a record.",
+            "Od bronaste igle pred tremi tisočletji in Griblacha leta 1468 do današnjih hiš — zapisi zbirke na karti kraja. Kliknite klinček in zapis se odpre.",
+            "From a bronze pin three millennia back and Griblach in 1468 to the houses of today — collection records on the map of the place. Click a pin to open a record.",
           )}{" "}
           <button
             type="button"
@@ -145,7 +144,13 @@ export function MuseumMap({
               disabled={historic}
               onCheckedChange={(v) => {
                 setTimeTravel(v);
-                if (v) setYear((y) => Math.min(Math.max(y, MIN_YEAR), MAX_YEAR));
+                /* obrambno: leto mora vedno biti eden od postankov drsnika */
+                if (v)
+                  setYear((y) =>
+                    (YEAR_STOPS as readonly number[]).includes(y)
+                      ? y
+                      : MAX_YEAR,
+                  );
               }}
             />
             <Label
@@ -168,19 +173,22 @@ export function MuseumMap({
             aria-disabled={!timeTravel || historic}
           >
             <div className="flex items-center justify-between text-xs text-muted-foreground">
-              <span>{MIN_YEAR}</span>
+              <span>{formatStopYear(YEAR_STOPS[0], lang)}</span>
               <span className="font-mono text-sm font-semibold text-primary">
-                {timeTravel && !historic ? year : "—"}
+                {timeTravel && !historic ? formatStopYear(year, lang) : "—"}
               </span>
               <span>{MAX_YEAR}</span>
             </div>
+            {/* Diskretni drsnik po postankih = vsa mejna leta zapisov na karti
+                (enake množice pik kot zvezni drsnik, vključno s prazgodovino
+                za piko MVG-095 — P18, dokumentirano v src/lib/timeline-stops.ts) */}
             <input
               type="range"
-              min={MIN_YEAR}
-              max={MAX_YEAR}
+              min={0}
+              max={YEAR_STOPS.length - 1}
               step={1}
-              value={year}
-              onChange={(e) => setYear(Number(e.target.value))}
+              value={Math.max(0, (YEAR_STOPS as readonly number[]).indexOf(year))}
+              onChange={(e) => setYear(YEAR_STOPS[Number(e.target.value)])}
               aria-label={t("Leto prikaza", "Year to display")}
               className="h-2 w-full cursor-pointer accent-[color-mix(in_oklch,var(--primary)_80%,black)]"
             />

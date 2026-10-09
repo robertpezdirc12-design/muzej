@@ -37,6 +37,8 @@ import { ATLAS_HOUSES } from "@/data/atlas/houses";
 import { ATLAS_OWNERS, SHEET_GEOREFS } from "@/data/atlas/model";
 import { ATLAS_SOURCES } from "@/data/atlas/sources";
 import { TREE_STATS, SMOKE_CHIMNEYS, HOUSENO_FINDING, TREES } from "./village3d";
+import { SOURCE_TYPE_LABELS } from "./museum";
+import { YEAR_STOPS, MAX_YEAR, formatStopYear } from "./timeline-stops";
 
 interface ExhibitRow {
   id: string;
@@ -46,7 +48,16 @@ interface ExhibitRow {
   model3dUrl: string | null;
   lat: number | null;
   lng: number | null;
-  sources: { nameSi?: string | null; nameEn?: string | null; url?: string | null }[] | null;
+  yearFrom: number | null;
+  yearTo: number | null;
+  sources:
+    | {
+        nameSi?: string | null;
+        nameEn?: string | null;
+        url?: string | null;
+        sourceType?: string | null;
+      }[]
+    | null;
 }
 
 const EXHIBITS = (exhibitsRaw as { exhibits: ExhibitRow[] }).exhibits;
@@ -914,6 +925,48 @@ export function runQA(): QAReport {
     p12Errors.length === 0
       ? `Dreves: ${TREE_STATS.total} (${TREE_STATS.forest} v gozdnih conah Brezov gozd + ${TREE_STATS.scattered} razpršenih na lokah; seed ${TREE_STATS.seed}, mulberry32 — vedno isti prizor; izogik stavbam ≥ 7 m). Dim: 8 dimnikov v jedru (vsaka 3. jedrna stavba 7–18 m), sprajti 6 oblakov/dimnik, cikel 6,5 s, dvig 7–13 m, vidno samo 1825/~1900. Kartica stavbe v 3D pregledu (orbit) — tap na stavbo: vrsta, tloris, razdalja, status 2026, jedro/cerkev, P12 nota. RAZISKOVALNI IZID (negativen, dokumentiran): hišne številke NA stavbah lista A02 niso zapisane — slepi VLM testi (6 stavb, 3 ponovitve → BLIZINA_BREZ), 43 številka-podobnih rdečih madežev nečitljivih; rdeče 4-mestne številke v parcelah (1009–1106 ob jedru) so PARCELNE; povezava parcela↔hiša čaka ~50+ strani PS (TO_COLLECT).`
       : p12Errors.join("; "),
+  );
+
+  // P18-1 (revizija, postavka 18): surove kode vrst virov nikoli obiskovalcu —
+  // vsaka koda, ki se pojavi v zbirki, ima človeško oznako SL/EN (slovar
+  // SOURCE_TYPE_LABELS v src/lib/museum.ts; izpis v exhibit-detail)
+  const stCodes = new Set<string>();
+  for (const e of EXHIBITS)
+    for (const s of e.sources ?? []) if (s.sourceType) stCodes.add(s.sourceType);
+  const unlabeled = [...stCodes].filter((c) => !SOURCE_TYPE_LABELS[c]);
+  push(
+    "qa-p18-source-labels",
+    "P18: vsaka vrsta vira ima oznako SL/EN (obiskovalcu nikoli surova koda)",
+    "P18: every source type has an SL/EN label (visitors never see a raw code)",
+    unlabeled.length === 0,
+    `${stCodes.size} vrst virov: ${[...stCodes].join(", ")}; brez oznake: ${unlabeled.join(", ") || "0"}`,
+  );
+
+  // P18-2 (revizija, postavka 20): drsnik časovnega potovanja obsega prazgodovino.
+  // Postanki (src/lib/timeline-stops.ts) morajo pokrivati VSA mejna leta
+  // (od–do) zapisov z GPS na karti — takrat množice pik v vsakem postanku
+  // sovpadejo z zveznim drsnikom po letih, pika MVG-095 (−1000…−700) pa
+  // postane dosegljiva (prej je bila skrita za MIN_YEAR 1468).
+  const yearBounds = new Set<number>();
+  for (const e of EXHIBITS) {
+    if (!e.lat || !e.lng) continue;
+    if (e.yearFrom != null) yearBounds.add(e.yearFrom);
+    if (e.yearTo != null) yearBounds.add(e.yearTo);
+  }
+  const stopsNum = YEAR_STOPS as readonly number[];
+  const missingStops = [...yearBounds].filter((y) => !stopsNum.includes(y));
+  const stopsSorted = stopsNum.every((y, i) => i === 0 || stopsNum[i - 1] < y);
+  const stopsOk =
+    missingStops.length === 0 &&
+    stopsSorted &&
+    stopsNum[0] < 0 &&
+    stopsNum[stopsNum.length - 1] === MAX_YEAR;
+  push(
+    "qa-p18-timeline-stops",
+    "P18: postanki časovnega drsnika = vsa mejna leta zapisov na karti (od prazgodovine −1000; pika MVG-095 dosegljiva)",
+    "P18: time-slider stops = every boundary year of mapped records (from prehistory −1000; MVG-095 pin reachable)",
+    stopsOk,
+    `${stopsNum.length} postankov ${formatStopYear(stopsNum[0], "si")} → ${String(stopsNum[stopsNum.length - 1])}; mejnih let zapisov na karti ${yearBounds.size}; manjkajoči postanki: ${missingStops.join(", ") || "0"}${stopsSorted ? "" : "; NISO urejeni naraščajoče"}`,
   );
 
   const passed = tests.filter((t) => t.pass).length;

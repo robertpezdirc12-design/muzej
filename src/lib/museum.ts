@@ -217,6 +217,31 @@ export const EVIDENCE_LABELS: Record<EvidenceCode, { si: string; en: string; des
   },
 };
 
+/* ───────────────────  OZNAKE VRST VIROV (P18)  ─────────────────── */
+
+/**
+ * Surove kode vrst virov (»objava«, »spletni-vir« …) so identifikatorji
+ * zbirke; obiskovalcu na razstavi izpišemo človeško oznako v njegovem
+ * jeziku (revizijska postavka 18 — prej se je izpisala surova koda).
+ * Celovitost varuje test qa-p18-source-labels (src/lib/qa.ts).
+ */
+export const SOURCE_TYPE_LABELS: Record<string, { si: string; en: string }> = {
+  objava: { si: "objava", en: "publication" },
+  "spletni-vir": { si: "spletni vir", en: "web source" },
+  fotografija: { si: "fotografija", en: "photograph" },
+  arhiv: { si: "arhivski vir", en: "archival source" },
+  zemljevid: { si: "zemljevid", en: "map" },
+  pricevanje: { si: "intervju", en: "interview" },
+};
+
+/** Oznaka vrste vira za izpis; neznana koda pade nazaj na berljivo obliko. */
+export function sourceTypeLabel(code: string | null, lang: "si" | "en"): string | null {
+  if (!code) return null;
+  const label = SOURCE_TYPE_LABELS[code];
+  if (label) return label[lang];
+  return code.replace(/-/g, " ");
+}
+
 export function storyText(story: StoryRecord, lang: "si" | "en"): string {
   if (typeof story.text === "string") return story.text;
   return story.text[lang] ?? story.text.sl ?? "";
