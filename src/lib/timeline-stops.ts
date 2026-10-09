@@ -19,7 +19,8 @@
 /** Urejeno naraščajoče; prvi element je prazgodovina, zadnji je "danes". */
 export const YEAR_STOPS = [
   -1000, -800, -700, // prazgodovina: bronasta igla MVG-095, Kučar MVG-060
-  1408, 1468, 1524, 1526, 1556, 1587, 1612, // srednji vek — Cerkvišče, Griblach, zaselki
+  1408, 1468, 1524, 1556, 1587, 1612, // srednji vek — Cerkvišče, Griblach (vas 1468), turški vpadi, čevljar
+  // (1526 = prva omemba CERKVE sv. Vida, ne mejno leto zapisa — glej MVG-001/002/003)
   1750, 1809, 1813, 1854, 1875, 1876, 1879, 1898, // 19. stoletje
   1914, 1927, 1933, 1937, 1941, 1943, 1944, 1945, // vojna doba
   1951, 1961, 1991, 2011, 2017, 2023, 2024, 2025, 2026, // druga polovica — danes

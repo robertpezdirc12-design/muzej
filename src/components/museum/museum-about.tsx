@@ -4,9 +4,13 @@ import { motion } from "framer-motion";
 import { Database, ShieldCheck, Landmark, FileJson, Scale, Accessibility } from "lucide-react";
 import { useLang } from "./language-context";
 import { evidenceScale, EVIDENCE_LABELS, STATS, type EvidenceCode } from "@/lib/museum";
+import { runQA } from "@/lib/qa";
 
 export function MuseumAbout() {
   const { t } = useLang();
+  // Števci izhajajo iz podatkovnega modela (issue #3): št. testov iz runQA(),
+  // št. zapisov iz STATS — ne ročno podvojene številke v besedilu.
+  const qaCount = runQA().tests.length;
 
   return (
     <section id="o-muzeju" className="scroll-mt-20 border-t border-border/60" aria-labelledby="o-muzeju-naslov">
@@ -75,13 +79,13 @@ export function MuseumAbout() {
             </p>
             <ul className="mt-4 grid gap-2 sm:grid-cols-2">
               {[
-                { href: "/api/exhibits", label: "/api/exhibits", si: "zbirka 113", en: "collection 113" },
+                { href: "/api/exhibits", label: "/api/exhibits", si: `zbirka ${STATS.exhibits}`, en: `collection ${STATS.exhibits}` },
                 { href: "/api/events", label: "/api/events", si: "dogodki", en: "events" },
                 { href: "/api/opendata", label: "/api/opendata", si: "odprti podatki + licence", en: "open data + licenses" },
                 { href: "/api/atlas", label: "/api/atlas", si: "ATLAS 1825 (hiše, lastniki)", en: "ATLAS 1825 (houses, owners)" },
                 { href: "/api/provenance", label: "/api/provenance", si: "provinienčni audit", en: "provenance audit" },
                 { href: "/api/coverage", label: "/api/coverage", si: "coverage + 3D/AR", en: "coverage + 3D/AR" },
-                { href: "/api/qa", label: "/api/qa", si: "testi kakovosti (11)", en: "quality tests (11)" },
+                { href: "/api/qa", label: "/api/qa", si: `testi kakovosti (${qaCount})`, en: `quality tests (${qaCount})` },
                 { href: "/api/atlas/reconciliation", label: "/api/atlas/reconciliation", si: "zero-loss uskladitev", en: "zero-loss reconciliation" },
               ].map((l) => (
                 <li key={l.href}>

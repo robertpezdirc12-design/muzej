@@ -2072,3 +2072,39 @@ Stage Summary:
 - DOKUMENTACIJA: MUSEUM-AUDIT.md vrstici 18/20 → DONE (P18), števci testov 23 → 25 na treh mestih.
 - TESTI: ESLint 0; tsc --noEmit 0; build 16/16 s tipi; /api/qa 25/25 PASS (p18 oba zelena: 6 vrst virov brez manjkajočih oznak; 35 postankov, 35 mejnih let, 0 manjkajočih); /api/atlas/integrity 11/11; podatki nespremenjeni (113 razstav, 590 navedb virov, 36 GPS na karti); oznake in postanki potrjeni v odjemalskem paketu.
 - NIČ AI: vse spremembe so deterministični slovarji/izračuni postankov iz obstoječih podatkov.
+
+---
+
+## P19 — FAZA 1 REVIZIJE: PODATKOVNA PRAVILNOST (2026-10-10)
+
+- ZAHTVA (uporabnik): zunanja revizija je našla 5 konkretnih neskladij; popraviti pred dodajanjem novih funkcij + dodati avtomatske kontrole. Trajno načelo: brez AI modelov.
+- 1) DOGODKA 500-letnic: jubilej 2026 je CERKVENI — 1526 = prva pisna omemba CERKVE sv. Vida (potrjeno: Moja Dolenjska v celoti prebrana »Griblje so v nedeljo obeležili 500-letnico prve pisne omembe cerkve sv. Vida«, + 7 virov MVG-003), VAS = 1468 Griblach (EN Wikipedija + Snoj prek MVG-001; SL Wikipedija infopolje »omemba 1526« je napačno za naselje — izvor vse napake). Oba dogodka preimenovana/prepisana z izrecno pojasnitvijo 1468.
+- Korenine napake odpravljene povsod: življenjski postaji griblje-vas (1526→1468, opis po EN Wikipediji) in zaselki-griblje (1526→1468 z izrecnim »ločene omembe zaselkov še iščemo«), MVG-049 yearFrom 1526→1468, mrtvi postanek 1526 odstranjen s YEAR_STOPS (36→35... 35→34: odstranjen 1526, ostalo 34+... dejansko 34 postankov), tooltip zemljevida 1825 popravljen, spominska razglednica nosi »500 let cerkve sv. Vida · 1526–2026« (SL/EN).
+- 2) README usklajen: 11 dogodkov; slike natančno (103 datoteke: 101 citira 106 zapisov, 5 si deli dveh zapisov, 2 uporablja Atlas 1812 prek research.ts imageRef); zastarela sekcija GitLab↔Vercel zamenjana z dejanskim stanjem GitHub Actions (repo robertpezdirc12-design/muzej, deploy.yml, žeton do 14. 10. 2026).
+- 3) 60 POSTAJ BREZ VIRA: 23 dolozceni KONKRETEN vir (izključno iz virov matičnih zapisov: Barle 1893, Mason 2001, Šimec 2001, Snoj 2009, Dular 1978/1986, Volčjak 2019, SEM kozmopolit, RTV 2025, Vaš kanal žična ograja, DOPPS, Wikipedia bela štorklja/Zeleni Jurij/črni močeril/Podzemelj, Radio Odeon 500-letnica/Matija Totter, Slovenska biografija Barle, Gašperič 2012, WorldCat žbul, Svet24 šola, eHeritage...); preostalih 37 jasno označenih »v raziskovanju« (evidence badge, viden v UI). Skupaj: 338 z virom + 37 v raziskovanju = 375, 0 tihih.
+- UI: exhibit-detail izpisuje tudi tiskane vire brez URL-ja (span namesto povezave) — bibliografije (Barle, Šimec, Snoj, Dular, Mason, Gašperič) so sedaj vidne.
+- 4) MVG-114: obe zastareli related povezavi odstranjeni iz extra.json (zapis se doda skupaj z viri in povezavami); QA varuje.
+- 5) AVTOMATSKE KONTROLE (QA 25 → 30, src/lib/qa.ts): qa-p19-counts (meta/events števci == dejansko; popravljena stara tiha rezerva META.count→counts), qa-p19-images (fs obstoj vsake slike zapisa — strežniško prek QAOptions.fileExists, odjemalec preveri obliko poti; fs iz qa.ts izven, ker ga museum-coverage poganja v brskalniku), qa-p19-related-refs (0 zastarelih), qa-p19-station-sources (0 tihih postaj), qa-p19-first-mention (regresija 1468: dvostopenjska logika — fraze »prva omemba vasi« vedno + vzorec prvi*+omemba/izpriča/zapiše+vas izven cerkvenega konteksta; letnica postaje šteje kot zasidranje; prototip v scripts/p19_probe_firstmention.py najdel 0 kršitev po uglaševanju).
+- DOKUMENTACIJA: MUSEUM-AUDIT.md §11 (P19 preglednica 5 popravkov + 5 kontrol), §8.3 in §2.1 opombe o odstranitvi MVG-114, §9.5 posodobljen.
+- TESTI: ESLint 0; tsc 0; build 16/16 s tipi; /api/qa 30/30 (p19 vse zeleni: 113/590/11/6, 106/101, 0, 375=338+37, 0+1468); /api/atlas/integrity 11/11; HTML: dogodek cerkev sv. Vida, hero »prva omemba vasi 1468«, »v raziskovanju« badge v SSR; odjemalski paketi vsebujejo nove nize.
+- Podatkovna pravila: 113 zapisov, 590 virov, 36 GPS nespremenjenih; spremenjeni: 2 dogodka, 1 yearFrom, 26 postaj (23 virov + 3 letnice/opisi), 37 evidence oznak, 2 related odstranjeni.
+
+### P19 — deploy incident in rešitev (2026-10-10, zvečer)
+
+- SIMPTOM: po pushu P19 (54d393f) deploy GitHub Actions preklican po 15 min; ponovni zagon (6bb36db) prav tako.
+- DIAGNOZA 1: workflow timeout-minutes: 15 — dvignjeno na 30 (a to ni bil pravi vzrok).
+- DIAGNOZA 2 (pravi vzrok): Vercel deployment BLOCKED z readyStateReason »the commit author doesn't have permission to create deployments for this project« + seatBlock TEAM_ACCESS_REQUIRED, buildSkipped: true. Avtor obeh novih commitov je bil peskovniški Z User <z@container> (nova seja ni podedovala git identitete); uspešni P16–P18 je avtoriziral Robert Pezdirc <robert.pezdirc12@gmail.com> = lastnik ekipe. Uradna dokumentacija: na HOBBY + zaseben repozitorij MORA biti avtor commita lastnik ekipe — nastavitve za izklop NI (gitForkProtection=false ne pomaga pri CLI deployih; preizkušeno).
+- REŠITEV: git identiteta povrnjena lokalno; prazni commit 06eb4d4 z avtorjem-lastnikom na vrhu main → nov deployment BUILDING → READY; run 38001372767 SUCCESS.
+- POČIŠČENO: oba BLOCKED deploymenta izbrisana; README opozorilo o identiteti pred commiti.
+- PRODUKCIJA POTRJENA: /api/qa 30/30 (vseh 5 P19 testov zelenih: 113/590/11/6; 106 citiranj/101 datotek; 0 zastarelih povezav; 375 postaj = 338 z virom + 37 v raziskovanju; 0 kršitev 1468); atlas/integrity 200; dogodki, oznake in 1468 potrjeni v HTML.
+- ZA PRIHODNJE SEJE: VEDNO najprej git config user.name/email (glej README → Povezava GitHub → Vercel).
+
+---
+
+## P20 — P0 ostanki (issue #3): števci v JSON-LD in O muzeju (2026-10-10)
+
+- KONTEKST: issue #3 (P0) je po P19 ostal z dvema nedoseženima točkama — obe sta ravno vrsti "ročno podvojene številke", ki jih issue prepoveduje.
+- 1) layout.tsx JSON-LD: "Zbirka Muzeja vasi Griblje (MVG-001–114)" → MVG-001–113 (zapis MVG-114 ne obstaja; rezervirana številka izbrisana iz related v P19, ostala je samo v JSON-LD imenu Dataset).
+- 2) museum-about.tsx: "testi kakovosti (11)" (zastarelo od P1) → izpeljano iz runQA().tests.length; "zbirka 113" → iz STATS.exhibits. Oba števca sedaj izhajata iz podatkovnega modela (issue #3: "Števci morajo izhajati iz ustreznega podatkovnega modela") — runQA je sinhrona in varna za odjemalca (fs je bil umaknjen v P19).
+- 3) MUSEUM-AUDIT.md §1: "25 testov" → 30; zastarela vrstica "povezan z GitLabom" → dejansko stanje (GitHub Actions deploy).
+- TESTI: ESLint 0; tsc 0; build 16/16; lokalno QA 30/30; HTML: MVG-001–113 ×2, "testi kakovosti (30)", "zbirka 113" (SSR potrjen).

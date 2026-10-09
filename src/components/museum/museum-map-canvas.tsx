@@ -281,8 +281,8 @@ export function MapCanvas({
     })
       .bindTooltip(
         lang === "si"
-          ? '<strong class="mvg-tooltip-no">interpretacija</strong> jedro vasi ~1825 — poligon je skica po omembi vasi 1468 in zaselkih 1526 (MVG-001, MVG-049); izvirni kataster ni ohranjen.'
-          : '<strong class="mvg-tooltip-no">interpretation</strong> village core ~1825 — the polygon is a sketch following the 1468 mention and the 1526 hamlets (MVG-001, MVG-049); no original cadastre survives.',
+          ? '<strong class="mvg-tooltip-no">interpretacija</strong> jedro vasi ~1825 — poligon je skica po prvi omembi vasi 1468 in njenih zaselkih (MVG-001, MVG-049); izvirni kataster ni ohranjen.'
+          : '<strong class="mvg-tooltip-no">interpretation</strong> village core ~1825 — the polygon is a sketch following the 1468 first mention of the village and its hamlets (MVG-001, MVG-049); no original cadastre survives.',
         { sticky: true, className: "mvg-tooltip" },
       )
       .addTo(layer);

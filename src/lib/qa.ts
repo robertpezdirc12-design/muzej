@@ -3,6 +3,7 @@
 // Testi se poganjajo prek /api/qa (HTTP 200 = vsi testi zeleni, 500 = napaka).
 
 import exhibitsRaw from "@/data/museum/exhibits.json";
+import eventsRaw from "@/data/museum/events.json";
 import metaRaw from "@/data/museum/meta.json";
 import extraRaw from "@/data/museum/extra.json";
 import { WALKS, walkItemsWithGaps, WALK_GAPS } from "./walks";
@@ -50,6 +51,9 @@ interface ExhibitRow {
   lng: number | null;
   yearFrom: number | null;
   yearTo: number | null;
+  image?: string | null;
+  summarySi?: string | null;
+  summaryEn?: string | null;
   sources:
     | {
         nameSi?: string | null;
@@ -60,9 +64,29 @@ interface ExhibitRow {
     | null;
 }
 
+interface StationRow {
+  year?: string | null;
+  stage?: string | null;
+  description?: string | null;
+  evidence?: string | null;
+  sourceUrl?: string | null;
+  sourceName?: string | null;
+}
+
+interface ExtraRow {
+  walk?: { name?: string; station?: number } | null;
+  lifeStations?: StationRow[] | null;
+  related?: { slug?: string; museumNo?: string; title?: string }[] | null;
+}
+
 const EXHIBITS = (exhibitsRaw as { exhibits: ExhibitRow[] }).exhibits;
-const META = metaRaw as { count?: { exhibits?: number } };
-const EXTRA = extraRaw as Record<string, { walk?: { name?: string; station?: number } | null }>;
+const EVENTS = eventsRaw as { count?: number; events: { id: string; titleSi?: string; titleEn?: string; descriptionSi?: string; descriptionEn?: string }[] };
+const META = metaRaw as {
+  count?: { exhibits?: number };
+  counts?: { exhibits?: number; sources?: number; events?: number; stories?: number };
+  stories?: unknown[];
+};
+const EXTRA = extraRaw as Record<string, ExtraRow>;
 
 const KNOWN_EVIDENCE = new Set(["DOCUMENTED", "CORROBORATED", "TRADITION", "TESTIMONY"]);
 
@@ -82,7 +106,14 @@ export interface QAReport {
   computedAt: string;
 }
 
-export function runQA(): QAReport {
+export interface QAOptions {
+  /** Preverjanje obstoja datotek na disku — vbrizga ga strežnik
+   *  (route /api/qa, fs.existsSync); odjemalski klic (museum-coverage)
+   *  poti preveri po obliki, obstoj na disku pa izrecno prepusti /api/qa. */
+  fileExists?: (relativePath: string) => boolean;
+}
+
+export function runQA(opts: QAOptions = {}): QAReport {
   const tests: QATest[] = [];
   const push = (id: string, nameSi: string, nameEn: string, pass: boolean, detail: string) =>
     tests.push({ id, nameSi, nameEn, pass, detail });
@@ -153,7 +184,7 @@ export function runQA(): QAReport {
   );
 
   // 6. noben obstoječi muzejski zapis ni izgubljen (113)
-  const metaCount = META.count?.exhibits ?? EXHIBITS.length;
+  const metaCount = META.counts?.exhibits ?? META.count?.exhibits ?? EXHIBITS.length;
   push(
     "qa-no-loss",
     "noben muzejski zapis ni izgubljen (113)",
@@ -967,6 +998,141 @@ export function runQA(): QAReport {
     "P18: time-slider stops = every boundary year of mapped records (from prehistory −1000; MVG-095 pin reachable)",
     stopsOk,
     `${stopsNum.length} postankov ${formatStopYear(stopsNum[0], "si")} → ${String(stopsNum[stopsNum.length - 1])}; mejnih let zapisov na karti ${yearBounds.size}; manjkajoči postanki: ${missingStops.join(", ") || "0"}${stopsSorted ? "" : "; NISO urejeni naraščajoče"}`,
+  );
+
+  // ── P19 (revizija podatkovne pravilnosti, 2026-10-10): avtomatske kontrole,
+  //    ki ob novih podatkih same odkrijejo neskladja iz revizijskega pregleda ──
+
+  // P19-1: števci (meta.json counts, events.json count) == dejanski podatki.
+  // (Prej je bil ključ napačno bran kot META.count — tiha rezerva; zdaj strogo.)
+  const totalSources = EXHIBITS.reduce((a, e) => a + (e.sources ?? []).length, 0);
+  const c = META.counts ?? {};
+  const countMismatches: string[] = [];
+  if (EVENTS.count !== EVENTS.events.length) countMismatches.push(`events.count=${EVENTS.count} ≠ ${EVENTS.events.length}`);
+  if (c.exhibits !== EXHIBITS.length) countMismatches.push(`meta.exhibits=${c.exhibits} ≠ ${EXHIBITS.length}`);
+  if (c.sources !== totalSources) countMismatches.push(`meta.sources=${c.sources} ≠ ${totalSources}`);
+  if (c.events !== EVENTS.events.length) countMismatches.push(`meta.events=${c.events} ≠ ${EVENTS.events.length}`);
+  if (c.stories !== (META.stories ?? []).length) countMismatches.push(`meta.stories=${c.stories} ≠ ${(META.stories ?? []).length}`);
+  push(
+    "qa-p19-counts",
+    "P19: števci (zbirka/viri/dogodki/zgodbe) usklajeni z dejanskimi podatki",
+    "P19: counters (collection/sources/events/stories) match the actual data",
+    countMismatches.length === 0,
+    `${EXHIBITS.length} zapisov · ${totalSources} virov · ${EVENTS.events.length} dogodkov · ${(META.stories ?? []).length} zgodb; neskladja: ${countMismatches.join("; ") || "0"}`,
+  );
+
+  // P19-2: vsaka slika zapisa obstaja na disku (106 citiranj / 103 datotek).
+  // Obstoj preverja samo strežniški klic (fs); odjemalski izris preveri obliko
+  // poti in izrecno pove, kje teče popolna kontrola.
+  const citedImages = EXHIBITS.map((e) => e.image).filter((p): p is string => Boolean(p));
+  const uniqueImages = [...new Set(citedImages)];
+  let imagesOk = false;
+  let imageDetail = "";
+  if (opts.fileExists) {
+    const missing = uniqueImages.filter(
+      (p) => !p.startsWith("/") || !opts.fileExists!(`public${p}`),
+    );
+    imagesOk = missing.length === 0;
+    imageDetail = `${citedImages.length} citiranj / ${uniqueImages.length} datotek; manjka: ${missing.join(", ") || "0"}`;
+  } else {
+    const malformed = uniqueImages.filter((p) => !p.startsWith("/images/"));
+    imagesOk = malformed.length === 0;
+    imageDetail = `${citedImages.length} citiranj / ${uniqueImages.length} datotek (oblika poti); obstoj na disku preverja /api/qa`;
+  }
+  push(
+    "qa-p19-images",
+    "P19: vsaka fotografija zapisa obstaja na disku",
+    "P19: every record photograph exists on disk",
+    imagesOk,
+    imageDetail,
+  );
+
+  // P19-3: sorodni zapisi kažejo samo na zapise, ki dejansko obstajajo
+  // (ulovili bi npr. zastarelo MVG-114, ki je rezervirana, a ni v zbirki)
+  const existingNos = new Set(EXHIBITS.map((e) => e.museumNo));
+  const staleRefs: string[] = [];
+  for (const [slug, story] of Object.entries(EXTRA))
+    for (const r of story.related ?? [])
+      if (r.museumNo && !existingNos.has(r.museumNo)) staleRefs.push(`${slug} → ${r.museumNo}`);
+  push(
+    "qa-p19-related-refs",
+    "P19: sorodni zapisi kažejo samo na obstoječe zapise (brez rezerviranih številk)",
+    "P19: related records point only to existing records (no reserved numbers)",
+    staleRefs.length === 0,
+    `${staleRefs.length} zastarelih povezav${staleRefs.length ? `: ${staleRefs.slice(0, 5).join(", ")}` : ""}`,
+  );
+
+  // P19-4: vsaka postaja življenja ima LASTEN vir ali jasno oznako 'v raziskovanju'
+  // (revizija: 60 od 375 postaj ni imelo lastne navedbe — tiho nedokumentirano)
+  const unanchored: string[] = [];
+  let stationsTotal = 0;
+  let stationsSourced = 0;
+  let stationsResearch = 0;
+  for (const [slug, story] of Object.entries(EXTRA))
+    for (const st of story.lifeStations ?? []) {
+      stationsTotal++;
+      const hasSource = Boolean(st.sourceUrl || st.sourceName);
+      const marked = st.evidence === "v raziskovanju";
+      if (hasSource) stationsSourced++;
+      else if (marked) stationsResearch++;
+      else unanchored.push(`${slug}/${st.year ?? "?"}`);
+    }
+  push(
+    "qa-p19-station-sources",
+    "P19: vsaka postaja življenja ima vir ali oznako 'v raziskovanju'",
+    "P19: every life station has a source or the 'in research' mark",
+    unanchored.length === 0,
+    `${stationsTotal} postaj: ${stationsSourced} z virom, ${stationsResearch} v raziskovanju; brez obojega: ${unanchored.slice(0, 5).join(", ") || "0"}`,
+  );
+
+  // P19-5: prva omemba VASI je vedno 1468 (cerkev sv. Vida 1526).
+  // Regresija na napako iz revizije: dogodek/extra sta 1526 imenovala 'prvo
+  // omembo vasi' (infopolje SL Wikipedije); viri (EN Wikipedija + Snoj) in
+  // MVG-001 določajo 1468, jubilej 2026 pa je cerkveni.
+  const FIRST_PHRASES = [
+    "prva omemba vasi", "prva pisna omemba vasi",
+    "prva omemba gribelj", "prva pisna omemba gribelj",
+    "first mention of the village", "first written mention of griblje",
+    "first mention of griblje",
+  ];
+  const MENTION_RE =
+    /\bprv[ai]\w*\b[^.]{0,150}\b(?:omemb\w*|izpri\w*|zapi[sš]e\b|zapisala\b|zapisan\w*|attest\w*|mention\w*|record\w*)\b[^.]{0,150}\b(?:vasi\b|vas\b|griblje\b|griblach\b|village\b)/i;
+  const MENTION_RE_R =
+    /\b(?:vasi\b|vas\b|griblje\b|griblach\b|village\b)[^.]{0,150}\bprv[ai]\w*\b[^.]{0,150}\b(?:omemb\w*|izpri\w*|zapi[sš]e\b|zapisala\b|zapisan\w*|attest\w*|mention\w*|record\w*)\b/i;
+  const CHURCH_RE =
+    /(?:cerkev\b|cerkve\b|cerkvi\b|church\b|sv\.?\s?vid|st\.?\s?vitus|sv\.?\s?mark|st\.?\s?mark)/i;
+  /** stavek trdi prvo omembo vasi → v njem (ali letnici postaje) mora biti 1468 */
+  const firstMentionViolations: string[] = [];
+  const checkFirstMention = (text: string | null | undefined, where: string, year = "") => {
+    for (const s of (text ?? "").split(/(?<=[.!?])\s+|\n/)) {
+      const low = s.toLowerCase();
+      const phraseHit = FIRST_PHRASES.some((p) => low.includes(p));
+      const patternHit = !CHURCH_RE.test(s) && (MENTION_RE.test(s) || MENTION_RE_R.test(s));
+      if ((phraseHit || patternHit) && !`${s} ${year}`.includes("1468"))
+        firstMentionViolations.push(`${where}: ${s.trim().slice(0, 90)}…`);
+    }
+  };
+  for (const e of EVENTS.events) {
+    checkFirstMention(e.titleSi, `dogodek ${e.id.slice(0, 8)}`);
+    checkFirstMention(e.titleEn, `dogodek ${e.id.slice(0, 8)}`);
+    checkFirstMention(e.descriptionSi, `dogodek ${e.id.slice(0, 8)}`);
+    checkFirstMention(e.descriptionEn, `dogodek ${e.id.slice(0, 8)}`);
+  }
+  for (const e of EXHIBITS) {
+    checkFirstMention(e.summarySi, e.museumNo);
+    checkFirstMention(e.summaryEn, e.museumNo);
+  }
+  for (const [slug, story] of Object.entries(EXTRA))
+    for (const st of story.lifeStations ?? [])
+      checkFirstMention(st.description, `postaja ${slug}`, st.year ?? "");
+  const villageRecord = EXHIBITS.find((e) => e.museumNo === "MVG-001");
+  const mvg001Ok = villageRecord?.yearFrom === 1468;
+  push(
+    "qa-p19-first-mention",
+    "P19: prva omemba vasi je vedno 1468 (cerkev sv. Vida: 1526; MVG-001)",
+    "P19: the village's first mention is always 1468 (St. Vitus' church: 1526; MVG-001)",
+    firstMentionViolations.length === 0 && mvg001Ok,
+    `${firstMentionViolations.length} stavkov brez zasidranja na 1468${firstMentionViolations.length ? `: ${firstMentionViolations.slice(0, 3).join(" | ")}` : ""}; MVG-001 yearFrom: ${villageRecord?.yearFrom}`,
   );
 
   const passed = tests.filter((t) => t.pass).length;
