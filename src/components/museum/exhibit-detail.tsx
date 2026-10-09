@@ -47,7 +47,7 @@ export function ExhibitDetail({
 
   if (!exhibit) {
     return (
-      <Sheet open={false} openChange={(o) => !o && onClose()}>
+      <Sheet open={false} onOpenChange={(o) => !o && onClose()}>
         <SheetContent />
       </Sheet>
     );

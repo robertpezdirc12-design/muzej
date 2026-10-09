@@ -866,14 +866,14 @@ export function runQA(): QAReport {
     p10Errors.push("src-a03 ni GEOREFERENCED");
   if (!srcA04 || srcA04.georefStatus !== "GEOREFERENCED" || srcA04.georeferenced !== true)
     p10Errors.push("src-a04 ni GEOREFERENCED");
-  else if (!srcA04.noteSi.includes("POPRAVEK P10")) p10Errors.push("src-a04 opomba brez POPRAVKa P10");
+  else if (!srcA04.noteSi?.includes("POPRAVEK P10")) p10Errors.push("src-a04 opomba brez POPRAVKa P10");
   if (!srcA05 || srcA05.georefStatus !== "GEOREFERENCED" || srcA05.georeferenced !== true)
     p10Errors.push("src-a05 ni GEOREFERENCED");
   for (const sid of ["src-vac-n83", "src-gurs-wfs", "src-ezkn"]) {
     if (!ATLAS_SOURCES.find((s) => s.id === sid)) p10Errors.push(`nov vir ${sid} manjka`);
   }
   const srcEzkn = ATLAS_SOURCES.find((s) => s.id === "src-ezkn");
-  if (srcEzkn && !srcEzkn.noteSi.includes("O.IX24c"))
+  if (srcEzkn && !srcEzkn.noteSi?.includes("O.IX24c"))
     p10Errors.push("src-ezkn opomba brez kod celic (O.IX24c…)");
   // pokritost
   if (getCoverage().sheetsGeoreferenced !== 5)

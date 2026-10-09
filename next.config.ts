@@ -2,10 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "standalone",
-  /* config options here */
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+  /* tipovne napake se NE prikrivajo več — tsc je čist od P17
+     (prej: ignoreBuildErrors: true je prikrival 34 napak) */
   reactStrictMode: false,
 };
 

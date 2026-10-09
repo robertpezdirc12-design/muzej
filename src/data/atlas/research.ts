@@ -1375,6 +1375,7 @@ export const PT_PALEOGRAPHY_P3: {
   appliedSi: string;
   appliedEn: string;
   integritySi: string;
+  integrityEn: string;
 } = {
   date: "2026-10-08",
   methodSi:
@@ -1408,6 +1409,8 @@ export const PT_PALEOGRAPHY_P3: {
     "APPLIED in houses.ts: (1) the p. 4 renumbering — the struck duplicate 34 is now its own row »34 (struck duplicate)«, houses 35–40 shifted from 36–41, house 41 NO LONGER exists (p. 5 starts with parcel 41); (2) 15 owner corrections on 2-pass convergence (Veith 1, Lebing 7/8, Bödig 7½/8½, K-surname 20, Brinig 35–40, Strauß 76/79/81–84, Ihmeyer 96, Zollamt 98); (3) 4 added rows (7, 71½ Stettner, 76½ Hufschmied, 99 empty). Register: 105 rows (84 house + 21 parcel). All statuses stay REVIEW.",
   integritySi:
     "Nadzor nič-zgube: 101 starih vrstic je še vedno 101 (prečrtana dvojnica 34 ostaja kot vrstica, ne brisanje) + 4 nove = 105. Vsebina (parcelni sklici W./Schißing/Apnind) se ni spremenila — samo hišne št. in lastniki. Vsota str. 8 (889 kl) ostaja neodvisna kontrola. PUA str. 11 (4 vnosi, črka H) dodana v PUA_CONTINUATION.",
+  integrityEn:
+    "Zero-loss control: the 101 original rows remain 101 (the struck duplicate 34 stays as a row, not a deletion) + 4 new = 105. The content (parcel references W./Schißing/Apnind) is unchanged — only house numbers and owners. The p. 8 total (889 kl) remains an independent check. PUA p. 11 (4 entries, letter H) added in PUA_CONTINUATION.",
 };
 
 /** USTNA ZGODOVINA — raziskovalni protokol (issue #17 #6; intervjuji ostanejo prazni). */

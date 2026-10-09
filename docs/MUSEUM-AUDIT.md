@@ -133,7 +133,7 @@ kartice virov; overlay na karti je namenoma le A01/A02 (GEOTRUTH afina).
 | Test | Rezultat |
 |---|---|
 | `bun run lint` (ESLint) | **0 napak, 0 opozoril** |
-| `bunx tsc --noEmit` | **30 napak** (predhodne, prikrite z `typescript.ignoreBuildErrors: true` v `next.config.ts` — spremembe te revizije dodajo 0 in odpravijo 1) |
+| `bunx tsc --noEmit` | **0 napak** (P17: vseh 34 prikritih napak odpravljenih, `ignoreBuildErrors` odstranjen; tsconfig zožen na aplikacijo) |
 | `bun run build` | **uspešno** — 16/16 strani, 12 statičnih API poti (~16 s) |
 | `/api/qa` (lokalno, produkcijska zgradba) | **ok: true, 23/23 PASS** (vključno `qa-p12-village-life`) |
 | `/api/atlas/integrity` | **11/11 PASS** (hiše, viri, E2E veriga hiša 73→MVG-010, georeferenca, EŠD 2122, vektorizacija, matrike …) |
@@ -188,9 +188,9 @@ DEMO/NAČRTOVANO = mehanizem obstaja, vsebina čaka · MISSING = manjka · BLOCK
 | 14 | Testni nabor (lint/build/QA/integrity) | **DONE** (rezultati v §7.2) |
 | 15 | GPS koordinate 77/113 zapisov | **MISSING** (znana vrzel; ne izmišljujemo — zbirajo se iz virov) |
 | 16 | Zapis MVG-114 »Kresna pesem (1888)« | **NAČRTOVANO** (rezerviran v `extra.json` related; ni v zbirki) |
-| 17 | Popravljanje 30 prikritih TS napak (`ignoreBuildErrors`) | **PARTIAL/BLOCKED** — zahteva ločeno posvetno serijo (priporočam odstranitev zastavice po sklopih) |
+| 17 | Popravljanje 34 prikritih TS napak (`ignoreBuildErrors`) | **DONE (P17)** — 0 napak, zastavica odstranjena |
 | 18 | Surove kode vrst virov vidne obiskovalcu (npr. »objava«) | **PARTIAL** — kozmetika; predlog: slovar oznak SL/EN |
-| 19 | Neuporabljene env spremenljivke na Vercelu + Prisma ostanki | **PARTIAL** — AI ključa (OPENROUTER, ELEVENLABS) odstranjena s Vercela in `z-ai-web-dev-sdk` iz package.json (P15); ostajata `DATABASE_URL`/`DIRECT_URL` + Prisma ostanki (ne-AI, neškodljivi) |
+| 19 | Neuporabljene env spremenljivke na Vercelu + Prisma ostanki | **DONE (P15+P17)** — AI ključa (OPENROUTER, ELEVENLABS) odstranjena s Vercela in `z-ai-web-dev-sdk` iz package.json (P15); Prisma odstranjen v celoti (P17: `prisma/`, `src/lib/db.ts`, obe odvisnosti, db:* skripti, 17 neuporabljenih paketov). `DATABASE_URL`/`DIRECT_URL` sta ostali na Vercelu (neškodljivi, neuporabljeni — potencialno edini zapis povezave do zbirke, zato ju ne brišemo brez lastnika) |
 | 20 | Pin MVG-095 v načinu časovnega potovanja na karti | **PARTIAL** — obdobje (−1000…−700) je pred najmanjšim letom drsnika (1468); privzeti pogled piko prikaže, časovno potovanje jo skrije (semantična odločitev, dokumentirano) |
 
 ### Naslednji konkretni koraki (po prednostni)

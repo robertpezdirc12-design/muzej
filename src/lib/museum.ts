@@ -123,7 +123,8 @@ interface StoryRecord {
   kind: string;
   title: { sl?: string; en?: string } | string;
   text: { sl?: string; en?: string } | string;
-  attribution: string | null;
+  /** meta.json: attribution je dvojezični objekt { sl, en } */
+  attribution: { sl?: string; en?: string } | string | null;
   evidenceStatus: string;
 }
 

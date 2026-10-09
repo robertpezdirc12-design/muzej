@@ -1,7 +1,13 @@
-import type { DOMAttributes } from "react";
+import type { CSSProperties, DOMAttributes, Ref } from "react";
+import type { ModelViewerElement } from "@google/model-viewer";
 
 /** JSX tipi za <model-viewer> (Google, @google/model-viewer) — React 19 podpira custom elemente. */
 export type ModelViewerAttributes = DOMAttributes<HTMLElement> & {
+  /** referenca na element (npr. za klice activateAR / toSphericalCoordinates) */
+  ref?: Ref<ModelViewerElement | null>;
+  className?: string;
+  style?: CSSProperties;
+  id?: string;
   src?: string;
   /** USDZ dvojnik — iOS AR Quick Look (iPhone nima WebXR; vzorec Nîmes GLB+USDZ) */
   "ios-src"?: string;

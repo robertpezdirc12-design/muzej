@@ -123,7 +123,7 @@ export function MuseumAtlas({
       const house = id.startsWith("hiša-") ? ATLAS_HOUSES.find((h) => h.id === id) : undefined;
       const hit =
         all.find((h) => h.id === id) ??
-        house
+        (house
           ? {
               type: "house" as const,
               id,
@@ -140,7 +140,7 @@ export function MuseumAtlas({
                 titleEn: `House no. ${id.replace("hiša-", "")}`,
                 status: "REVIEW",
               }
-            : all[0];
+            : all[0]);
       if (hit) {
         setSelected(hit);
         setTab((prev) => (prev === "map" ? prev : "map"));

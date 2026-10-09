@@ -435,7 +435,7 @@ function VisitSection({ geo }: { geo: VisitorGeo }) {
         </div>
 
         {completed ? (
-          <CompletionCard geo={geo} stations={stations} />
+          <CompletionCard stations={stations} />
         ) : (
           <StationGuide geo={geo} stations={stations} />
         )}

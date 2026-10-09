@@ -23,44 +23,11 @@ import {
   GEO_AUDIT_REPORT,
 } from "@/data/atlas/geotruth";
 
-export interface AtlasModel {
-  meta: {
-    title: string;
-    period: string;
-    municipality: {
-      no: number;
-      nameSi: string;
-      nameHistorical: string;
-      previousSignatura: string;
-    };
-    fund: string;
-    archive: string;
-    generatedAt: string;
-  };
-  sources: AtlasSource[];
-  houses: AtlasHouse[];
-  owners: ReturnType<typeof getOwnersWithRefs>;
-  locations: typeof ATLAS_LOCATIONS;
-  sheets: typeof SHEET_GEOREFS;
-  buildings: { count: number; status: "RECONSTRUCTED"; list: typeof VECTOR_BUILDINGS };
-  heritage: typeof HERITAGE_UNITS;
-  negativeResults: typeof NEGATIVE_RESULTS;
-  coverage: Coverage;
-  /** matrične knjige župnije Podzemelj + vpisi hiš (issue #6) */
-  parish: {
-    info: typeof PARISH;
-    books: ParishBook[];
-    houseVitals: HouseVital[];
-    stats: ReturnType<typeof parishStats>;
-  };
-  /** VODNIK MUZEJA (issue #15, točka 9) — muzejsko preverjena
-      vprašanja/odgovori: deterministični podatkovni sloj vodnika
-      (iskanje po zgodbah — brez AI modelov) */
-  guide: {
-    total: number;
-    entries: GuideQA[];
-  };
-}
+/** Tip modela atlasa je ODVOD dejanske vrnjene vrednosti getAtlasModel() —
+    tako je vedno sinhron z implementacijo (meta, sources, houses, owners,
+    locations, sheets, buildings, heritage, negativeResults, coverage,
+    parish, village3d, timeSpots, panoramas, guide, geotruth). */
+export type AtlasModel = ReturnType<typeof getAtlasModel>;
 
 export interface Coverage {
   housesTotal: number;
@@ -117,7 +84,7 @@ export function getCoverage(): Coverage {
   };
 }
 
-export function getAtlasModel(): AtlasModel {
+export function getAtlasModel() {
   return {
     meta: {
       title: "ATLAS 1825 — Griblje",

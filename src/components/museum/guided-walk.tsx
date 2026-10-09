@@ -230,7 +230,7 @@ export function GuidedWalk({
             )}
           </div>
         </div>
-      ) : (
+      ) : item.kind === "gap" ? (
         /* eksplicitna vrzel v zaporedju (issue #4 — postaja 32) */
         <div className="mt-4 rounded-lg border border-dashed border-border bg-secondary/20 p-4">
           <p className="flex items-center gap-2 font-mono text-[11px] font-semibold text-muted-foreground">
@@ -252,6 +252,18 @@ export function GuidedWalk({
               {item.gap.negativeResultId}
             </a>
           </p>
+        </div>
+      ) : (
+        /* postaja brez razrešljivega zapisa — varna rezerva
+           (prej se je tu lahko zrunilo: item.gap na "stop" postaji) */
+        <div className="mt-4 rounded-lg border border-dashed border-border bg-secondary/20 p-4">
+          <p className="flex items-center gap-2 font-mono text-[11px] font-semibold text-muted-foreground">
+            <FileQuestion className="size-4" aria-hidden="true" />
+            {t("postaja", "stop")} {item.station}
+          </p>
+          <h4 className="mt-1 font-display text-base font-semibold text-muted-foreground">
+            {t("Zapis te postaje trenutno ni na voljo.", "The record for this stop is currently unavailable.")}
+          </h4>
         </div>
       )}
 

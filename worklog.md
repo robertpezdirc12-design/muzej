@@ -2036,3 +2036,24 @@ Stage Summary:
 - .vercelignore: research/ trajno izključen (92 MB neobdelanih virov, noben modul src/ ga ne uvozi; prej je moral biti za vsak CLI deploy ročno dodan in povrnjen).
 - NAMIG ZA PRIHODNOST: po namestitvi Vercel GitHub App na račun robertpezdirc12-design je možna tudi direktna vezava (POST /v9/projects/{id}/link) — ta delovni tok lahko ostane kot rezerva.
 - POZOR: žeton VERCEL_TOKEN v skrivnosti poteče 2026-10-14 — obnoviti na vercel.com/tokens in posodobiti skrivnost; sync.yml (GitLab mirror) ostaja disabled_manually.
+
+---
+
+## P17 — HIGIENA PROJEKTA: 0 TS napak, Prisma ven, -17 odvisnosti (2026-10-10)
+
+- ZAHTVA (uporabnik): nadaljevanje P2/P3 priporočil revizije — odprava prikritih tipovnih napak, čiščenje odvisnosti in Prisma ostankov.
+- TS NAPAKE (34 → 0): vse prikrite napake odpravljene PO VSEBINI (ne prikrito):
+  1) exhibit-detail.tsx: `openChange` → `onOpenChange` (PRAVI HROŠČ — zapiralni handler lista ni bil nikoli povezan);
+  2) guided-walk.tsx: ternarij `kind === "stop" && ex && stop` ni zožil unije — `item.gap` na "stop" postaji bi se ZRUNIL; dodana varna rezervna veja "zapis ni na voljo";
+  3) museum-atlas.tsx: globoka povezava ?atlas= — `a ?? b ? x : y` je ob iskalnem zadetku, ki ni hiša, bral `house.no` iz undefined (zrušitev); oklepaji prestavljajo semantiko na iskanje ?? hiša ?? rezerva;
+  4) model-viewer tipi (src/types/model-viewer.d.ts): dodani ref/className/style/id; ar-camera.tsx lokalni minimalni tip zamenjan z uradnim uvozom;
+  5) StoryRecord (museum.ts): attribution je v meta.json dvojezični OBJEKT, ne string — tip popravljen;
+  6) research.ts: dodan integrityEn (prevod nadzora nič-zgube);
+  7) qa.ts: noteSi?.includes (neobvezna veriga) ×2;
+  8) AtlasModel (atlas.ts): vmesnik je zaostajal za implementacijo (manjkali village3d/timeSpots/panoramas/geotruth) — zamenjan z odvodom ReturnType<typeof getAtlasModel> (vedno sinhron).
+- ignoreBuildErrors ODSTRANJEN iz next.config.ts — build zdaj prvič preverja tipe; tsconfig include zožen na aplikacijo (src/ + konfigi; prej **/*.ts je tipkal tudi sandbox ostanke).
+- IZBRISANO: examples/websocket (scaffold demo, socket.io nikoli v package.json), mini-services/pua-reader (AI bralec — proti načelu "brez AI modelov"), scripts/{gen-panoramas,regen-panoramas,regen-kolpa}.ts (mrtvi z-ai skripti — SDK odstranjen že v P15), scripts/tmp/qa-check.ts (pokvarjen tmp), prisma/ + src/lib/db.ts (mrtva koda: noben uvoz, privzeta User/Post shema, aplikacija je statična).
+- ODVISNOSTI: 68 → 51 (bun remove 17: @dnd-kit ×3, @hookform/resolvers, @mdxeditor/editor, @prisma/client + prisma, @reactuses/core, @tanstack/react-query + react-table, date-fns, next-auth, next-intl, react-markdown, react-syntax-highlighter, uuid, zod — preverjeno: 0 uvozov v src/, react-dom in @tailwindcss/postcss sta ostala, ker ju uporabljata Next.js/postcss.config); db:* skripti iz package.json.
+- DATABASE_URL/DIRECT_URL na Vercelu NISTA izbrisani (neuporabljeni, a sta lahko edini zapis povezave do zbirke — odločitev za lastnika).
+- TESTI: ESLint 0; tsc --noEmit 0; build 16/16 S tipi; /api/qa 23/23; /api/atlas/integrity 11/11; exhibits 113, hiše 105, timeSpots 9, panorame 3, opendata 200.
+- MUSEUM-AUDIT.md posodobljen (vrstici 17 in 19: DONE).

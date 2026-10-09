@@ -34,6 +34,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { useLang } from "./language-context";
 import type { Exhibit } from "@/lib/museum";
+import type { ModelViewerElement } from "@google/model-viewer";
 import {
   angleDelta,
   bearingDeg,
@@ -49,11 +50,6 @@ import { narrationSupported, speakScript, stopNarration } from "@/lib/narrator";
 
 /** prag »na lokaciji« v metrih (natančnost GPS na telefonu ± 5–20 m) */
 const ON_SITE_M = 300;
-
-type ModelViewerElement = HTMLElement & {
-  canActivateAR: boolean | null;
-  activateAR: () => void;
-};
 
 export function ARCameraView({
   exhibit,
