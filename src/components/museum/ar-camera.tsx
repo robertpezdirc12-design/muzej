@@ -9,7 +9,8 @@
  *  · kompas (DeviceOrientation) + GPS azimut → model zasidran v smeri objekta:
  *    premikate telefon, model drsi po zaslonu, kot da stoji na svetu
  *  · GPS razdalja do prave lokacije; blizu → »na lokaciji«, daleč → predogled
- *  · tap na napis → muzejski zapis z viri; gumb → bralska sinteza (govor)
+ *  · tap na napis → muzejski zapis z viri; gumb → govor (deterministična
+ *    skripta prek skupnega narratorja — brezplačno, lokalno, brez AI)
  *  · naprave z WebXR/Scene Viewer: gumb »Postavi v prostor« (activateAR)
  *
  * Vse je postopno: brez kamere → arhivsko ozadje; brez kompasa → fiksni model;
@@ -44,6 +45,7 @@ import {
 import { useCompass } from "@/hooks/use-compass";
 import type { UseGeolocation } from "@/hooks/use-geolocation";
 import { sceneReadiness } from "@/data/atlas/geotruth";
+import { narrationSupported, speakScript, stopNarration } from "@/lib/narrator";
 
 /** prag »na lokaciji« v metrih (natančnost GPS na telefonu ± 5–20 m) */
 const ON_SITE_M = 300;
@@ -132,24 +134,21 @@ export function ARCameraView({
 
   /* ── kompas: iOS dovoljenje (dogodki sami prihajajo iz use-compass) ── */
 
-  /* ── govorna sinteza (brezplačna, v brskalniku) ── */
-  useEffect(() => {
-    return () => speechSynthesis?.cancel();
-  }, []);
+  /* ── GLAS (P15): govorna skripta (naslov + povzetek zapisa) prek
+     skupnega determinističnega narratorja — brezplačno, lokalno, brez AI ── */
+  useEffect(() => stopNarration, []);
   const toggleSpeech = useCallback(() => {
-    if (typeof speechSynthesis === "undefined") return;
+    if (!narrationSupported()) return;
     if (speaking) {
-      speechSynthesis.cancel();
+      stopNarration();
       setSpeaking(false);
       return;
     }
     const summary = lang === "si" ? exhibit.summarySi : exhibit.summaryEn;
-    const u = new SpeechSynthesisUtterance(`${title}. ${summary}`);
-    u.lang = lang === "si" ? "sl-SI" : "en-GB";
-    u.onend = () => setSpeaking(false);
-    u.onerror = () => setSpeaking(false);
-    speechSynthesis.speak(u);
-    setSpeaking(true);
+    const started = speakScript(`${title}. ${summary}`, lang, () =>
+      setSpeaking(false),
+    );
+    setSpeaking(started);
   }, [lang, speaking, exhibit.summarySi, exhibit.summaryEn, title]);
 
   /* ── naravni AR (WebXR / Scene Viewer), če ga naprava ponuja ── */

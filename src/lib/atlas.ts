@@ -53,8 +53,9 @@ export interface AtlasModel {
     houseVitals: HouseVital[];
     stats: ReturnType<typeof parishStats>;
   };
-  /** AI MUSEUM GUIDE (issue #15, točka 9) — muzejsko preverjena
-      vprašanja/odgovori: podatkovni sloj za bodočega AI vodnika */
+  /** VODNIK MUZEJA (issue #15, točka 9) — muzejsko preverjena
+      vprašanja/odgovori: deterministični podatkovni sloj vodnika
+      (iskanje po zgodbah — brez AI modelov) */
   guide: {
     total: number;
     entries: GuideQA[];
@@ -227,13 +228,12 @@ export function getAtlasModel(): AtlasModel {
       sources: p.sources,
       evidenceSi: p.evidenceSi,
       evidenceEn: p.evidenceEn,
-      audioSiUrl: p.audioSiUrl,
-      audioEnUrl: p.audioEnUrl,
       deepLink: panoramaDeepLink(p),
     })),
-    /* AI MUSEUM GUIDE (issue #15, točka 9) — preverjene zgodbe
-       (question/answer/source/status/location/period); AI kasneje
-       odgovarja SAMO iz teh podatkov — vir resnice ostane Atlas/evidence */
+    /* VODNIK MUZEJA (issue #15, točka 9) — preverjene zgodbe
+       (question/answer/source/status/location/period); vodnik je
+       DETERMINISTIČEN (iskanje po teh podatkih, brez AI modelov) —
+       vir resnice ostaja Atlas/evidence */
     guide: {
       total: GUIDE_TOTAL,
       entries: GUIDE_QA,

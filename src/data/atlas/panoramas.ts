@@ -64,9 +64,6 @@ export interface HistoricalPanorama {
   methodEn: string;
   /** viri (GeoTruth sourceId + MVG zapisi) */
   sources: string[];
-  /** pripoved: statični MP3 obstaja v isti drop-in lokaciji kot TTS #12 */
-  audioSiUrl: string;
-  audioEnUrl: string;
 }
 
 export const PANORAMAS: HistoricalPanorama[] = [
@@ -135,8 +132,6 @@ export const PANORAMAS: HistoricalPanorama[] = [
     methodEn:
       "TimeLens pipeline: historical sources (EŠD 2122, cadastre A02, Kolpa channel) → evidence record → scene brief (positions ARE documented) → equirectangular 360° visualisation → post-processing (horizontal roll — seam in a uniform strip, vertical horizon calibration 0.45→0.50, 120 px cross-fade seam, JPEG) → asset + metadata. HONESTLY: the image is an INTERPRETATION of the layout, not a photograph; positions are documented, appearance is a type-reconstruction, individual feature directions in the image are compass-approximate.",
     sources: ["src-esd2122", "src-a02-sheet", "src-geotruth-fix", "MVG-001", "MVG-002", "MVG-003"],
-    audioSiUrl: "/audio/timespots/cerkev-si.mp3",
-    audioEnUrl: "/audio/timespots/cerkev-en.mp3",
   },
   {
     id: "pano-jedro-1825",
@@ -203,8 +198,6 @@ export const PANORAMAS: HistoricalPanorama[] = [
     methodEn:
       "TimeLens pipeline: cadastre (positions) → evidence → scene brief → 360° visualisation → post-processing (roll 0.15 — seam in a uniform strip, horizon calibration 0.38→0.50, cross-fade seam, JPEG). The church in the scene stands at its documented direction (bearing 220°); the core density is reconstructed; building appearance is a type interpretation.",
     sources: ["src-a02-sheet", "src-geotruth-fix", "src-esd2122", "MVG-001", "MVG-002"],
-    audioSiUrl: "/audio/timespots/jedro-si.mp3",
-    audioEnUrl: "/audio/timespots/jedro-en.mp3",
   },
   {
     id: "pano-kolpa-1825",
@@ -271,8 +264,6 @@ export const PANORAMAS: HistoricalPanorama[] = [
     methodEn:
       "TimeLens pipeline: channel (documented) → evidence → scene brief → 360° visualisation → post-processing (roll 0.25 — seam in open meadow, horizon calibration 0.25→0.50, cross-fade seam, JPEG). HONESTLY: the customs post is NOT in the scene, because the record (MVG-092) carries neither geometry nor appearance — the gap stays visible, not filled with an invented facade.",
     sources: ["src-osm", "src-esd10094", "src-a02-sheet", "MVG-006", "MVG-092", "MVG-009"],
-    audioSiUrl: "/audio/timespots/kolpa-si.mp3",
-    audioEnUrl: "/audio/timespots/kolpa-en.mp3",
   },
 ];
 

@@ -24,8 +24,10 @@
  *    kompas/žiroskop (magic window, ne WebXR); proceduralna 3D vas ostane
  *    kot pošteno označen fallback; »primerjaj z danes« = živa kamera (danes
  *    je realnost, ne generirana slika); zajem/TTS/viri se ponovno uporabijo;
- *  · TTS (issue #12): kartica točke se prebere naglas — statični MP3 ali
- *    brskalnikov speechSynthesis kot zastonj fallback (brez plačljivih API);
+ *  · GLAS (P15): kartica točke se prebere naglas — deterministične govorne
+ *    skripte (narrations.ts) prek skupnega narratorja in brskalnikove
+ *    speechSynthesis (zastonj, lokalno, brez AI modelov); med predvajanjem
+ *    se pokaže transkript skripte;
  *  · brez senzorjev: pošten predogled (vlečenje obrača pogled).
  *
  * Kot pri ar-camera: nič se ne izmišljuje — kar manjka (kamera, kompas, GPS),
@@ -90,6 +92,8 @@ import {
   type TimeSpot,
 } from "@/data/atlas/timespots";
 import { useTimespots } from "@/lib/timespots-store";
+import { narrationText } from "@/data/atlas/narrations";
+import { speakScript, stopNarration } from "@/lib/narrator";
 import {
   getPanoramaForSpot,
   spotHasPanorama,
@@ -264,8 +268,7 @@ export function ARTimeMachine({
   });
   const [debugOpen, setDebugOpen] = useState(false);
 
-  /* TTS (issue #12): statični MP3 → speechSynthesis fallback */
-  const audioRef = useRef<HTMLAudioElement | null>(null);
+  /* GLAS (P15): govorna skripta točke prek determinističnega narratorja */
   const [playing, setPlaying] = useState(false);
 
   const period = PERIODS.find((p) => p.year === year) ?? PERIODS[0];
@@ -464,68 +467,28 @@ export function ARTimeMachine({
     setShowCal(false);
   }, [cal]);
 
-  /* ── TTS (issue #12): poslušaj zgodbo točke ──
-     Najprej statični MP3 (boljši glas), ob napaki/odsotnosti pa brskalnikov
-     speechSynthesis — sistem ostaja brez obvezne plačljive storitve. */
+  /* ── GLAS (P15): poslušaj zgodbo točke ──
+     Deterministična govorna skripta (narrations.ts) prek skupnega
+     narratorja (src/lib/narrator.ts) — brskalnikova speechSynthesis:
+     zastonj, lokalno, brez AI modelov in brez omrežnih klicev. */
   const stopAudio = useCallback(() => {
-    audioRef.current?.pause();
-    audioRef.current = null;
-    window.speechSynthesis?.cancel();
+    stopNarration();
     setPlaying(false);
   }, []);
 
-  const speakFallback = useCallback(
-    (text: string) => {
-      const synth = window.speechSynthesis;
-      if (!synth) return;
-      synth.cancel();
-      const u = new SpeechSynthesisUtterance(text);
-      const want = lang === "si" ? "sl" : "en";
-      /* izberi glas ciljnega jezika, če ga naprava ima (nalaga se
-         asinhrono — ob prvem klicu je seznam lahko še prazen) */
-      const voices = synth.getVoices();
-      const v =
-        voices.find((x) => x.lang.toLowerCase().startsWith(want)) ??
-        voices.find((x) => x.lang.toLowerCase().startsWith("en"));
-      if (v) u.voice = v;
-      u.lang = lang === "si" ? "sl-SI" : "en-GB";
-      u.rate = 0.95;
-      u.onend = () => setPlaying(false);
-      u.onerror = () => setPlaying(false);
-      setPlaying(true);
-      synth.speak(u);
-    },
-    [lang],
-  );
-
   const toggleSpotAudio = useCallback(
-    async (spot: TimeSpot) => {
+    (spot: TimeSpot) => {
       if (playing) {
         stopAudio();
         return;
       }
       stopAudio();
-      const text = `${lang === "si" ? spot.titleSi : spot.titleEn}. ${
-        lang === "si" ? spot.descSi : spot.descEn
-      }`;
-      const url = `/audio/timespots/${spot.id}-${lang === "si" ? "si" : "en"}.mp3`;
-      try {
-        const res = await fetch(url, { method: "HEAD" });
-        if (res.ok) {
-          const a = new Audio(url);
-          audioRef.current = a;
-          a.onended = () => setPlaying(false);
-          a.onerror = () => speakFallback(text);
-          await a.play();
-          setPlaying(true);
-          return;
-        }
-      } catch {
-        /* datoteke ni → govor brskalnika */
-      }
-      speakFallback(text);
+      const started = speakScript(narrationText(spot, lang), lang, () =>
+        setPlaying(false),
+      );
+      setPlaying(started);
     },
-    [lang, playing, speakFallback, stopAudio],
+    [lang, playing, stopAudio],
   );
 
   /* konec predvajanja ob zaprtju / zamenjavi kartice */
@@ -1382,10 +1345,10 @@ export function ARTimeMachine({
               </button>
             )}
 
-            {/* TTS (issue #12): poslušaj zgodbo točke — MP3 ali speechSynthesis */}
+            {/* GLAS (P15): poslušaj zgodbo točke — govorna skripta + transkript */}
             <button
               type="button"
-              onClick={() => void toggleSpotAudio(spotCard)}
+              onClick={() => toggleSpotAudio(spotCard)}
               className={`mt-2.5 inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-medium transition-colors ${
                 playing
                   ? "border-primary/60 bg-primary/20 text-white"
@@ -1405,6 +1368,21 @@ export function ARTimeMachine({
                 </>
               )}
             </button>
+
+            {/* transkript skripte — viden med predvajanjem (dostopnost) */}
+            {playing && (
+              <div
+                className="mt-2.5 max-h-44 overflow-y-auto rounded-lg border border-white/20 bg-black/40 p-3 text-xs leading-relaxed text-white/85"
+                aria-live="polite"
+              >
+                <p className="mb-1.5 font-mono text-[10px] font-semibold uppercase tracking-wider text-amber-200">
+                  {t("Govorna skripta", "Narration script")}
+                </p>
+                <p className="whitespace-pre-line">
+                  {narrationText(spotCard, lang)}
+                </p>
+              </div>
+            )}
 
             <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 border-t border-white/15 pt-2 text-xs">
               <button

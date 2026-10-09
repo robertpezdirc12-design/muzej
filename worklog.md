@@ -2002,3 +2002,25 @@ Stage Summary:
 - PREVERJENO DEJANSKO STANJE (dokazi v MUSEUM-AUDIT.md): georef-1812 resnično povezan z UI (L.imageOverlay A01/A02 z GEOTRUTH mejami, izrez 1812 kot slika zapisa + raziskovalna kartica); QR 1+9 z globokimi povezavami; AR brez očal resnična (getUserMedia + model-viewer webxr/scene-viewer/quick-look, kompas+GPS sidro) in brez runtime AI (ELEVENLABS/OPENROUTER neuporabljena); avdio = speechSynthesis z MP3 fallbackom (datoteke še manjkajo, README pošten); licence plastovito CC BY-SA 4.0 + OSM atribucija; 12 API poti force-static, 0 XSS površin; telefon NEPREVERJEN (izrecno označeno).
 - TESTI: ESLint 0; tsc 30 (predhodne, prikrite z ignoreBuildErrors; moje spremembe 0 novih, −1); build 16/16; /api/qa 23/23; /api/atlas/integrity 11/11; provenance 590/0; opendata 113/590/11/6.
 - DEPLOY: commit + push na GitHub main; produkcijski deploy prek Vercel CLI (GitLab še blokiran) — glej P14 deploy zapis.
+
+---
+
+## P15 — GLAS MUZEJA SO SKRIPTE + projekt brez AI modelov (2026-10-10)
+
+- ZAHTEVA (uporabnik): glas in cel projekt so skripte — nadaljuj brez AI modelov.
+- NAČELO UVEDENO: glas muzeja so SKRIPTE — deterministična, kuratorsko pripravljena besedila; edini predvajalnik je brskalniška speechSynthesis (zastonj, lokalno, brez AI modelov, brez omrežnih klicev).
+- NOVE DATOTEKE:
+  1) src/data/atlas/narrations.ts — govorne skripte za VSEH 9 časovnih točk (si+en), napisane ZA GLAS, izpeljane izključno iz obstoječih podatkov timespots.ts (naslov/opis/dokaz) — nobeno dejstvo ni dodano ali izmišljeno; vključen fallback na naslov+opis;
+  2) src/lib/narrator.ts — skupni deterministični narrator (speakScript/stopNarration/narrationSupported): izbira glasu za jezik (sl→en fallback), hitrost 0,95, enkraten onDone; uporabljajo ga vsi trije glasovi muzeja.
+- PREUREDITEV GLASOV (3 komponente na en mehanizem):
+  · ar-time-machine.tsx: odstranjena mrtva MP3 veja (HEAD fetch na neobstoječe datoteke + new Audio → vsak klik je povzročal 404) — zdaj govorna skripta + TRANSKRIPT skripte viden med predvajanjem (aria-live, dostopnost);
+  · guided-walk.tsx: postaja se bere prek narratorja (prej lastna implementacija brez izbire glasu);
+  · ar-camera.tsx: zapis se bere prek narratorja (prej lastna implementacija).
+- ODSTRANJENE MRTVE MP3 OB LJUUBE: panoramas.ts (audioSiUrl/audioEnUrl — 6 referenc na neobstoječe datoteke, nikoli uporabljene v UI) + atlas.ts passthrough; public/audio/timespots/README.md pre pisan — zdaj dokumentira skriptni sistem in postopek za morebitne prihodnje človeške posnetke (človeški posnetek ni AI model).
+- PROJEKT BREZ AI MODELOV:
+  · package.json: z-ai-web-dev-sdk ODSTRANJEN (bil neuporabljen v src/);
+  · Vercel env: OPENROUTER_API_KEY in ELEVENLABS_API_KEY IZBRISANA s projekta (ostajajo samo DIRECT_URL, DATABASE_URL, NEXT_PUBLIC_SITE_URL — ne-AI);
+  · komentarji »AI vodnik kasneje« (guide.ts, atlas.ts) popravljene v DETERMINISTIČNO obliko — vodnik ostaja iskanje po preverjenih zgodbah, brez chatbota;
+  · docs/MUSEUM-AUDIT.md posodovljen: avdio vodnik DELNO→DELUJE, AI runtime vrstica dopolnjena, postavka 19 (env čiščenje) posodovljena.
+- TESTI: ESLint 0; tsc 34 predhodnih (prikritih z ignoreBuildErrors), 0 novih (preverjeno: git stash primerjava 34=34); build 16/16; /api/qa 23/23; /api/atlas/integrity 11/11.
+- DEPLOY: commit na GitHub main; produkcijski deploy prek Vercel CLI; AI ključi odstranjeni tudi s produkcijske projekta (env velja vnaprej).

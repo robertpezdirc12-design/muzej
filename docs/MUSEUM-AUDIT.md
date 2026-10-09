@@ -88,7 +88,7 @@ kartice virov; overlay na karti je namenoma le A01/A02 (GEOTRUTH afina).
 | GPS | DELUJE (v kodi) | `use-geolocation.ts` (`watchPosition`), blizu/daleč logika v `ar-camera.tsx` |
 | Lokacijske postaje | DELUJE | 9 časovnih točk v `timespots.ts`; koordinate IZKLJUČNO iz zapisov zbirke (lat/lng), vsaka z verigo virov (EŠD, MVG-xxx, kataster) |
 | Zemljevid in pot | DELUJE | Leaflet + OSM ploščice + katastrski overlay (§3) |
-| Avdio vodnik | DELNO/NAČRTOVANO | mehanizem: najprej MP3 `/audio/timespots/<id>-<lang>.mp3` (datoteke še NI — 404), nato samodejni povratek na brskalniški `speechSynthesis` (brezplačno, brez AI v oblaku). Pošteno dokumentirano v `public/audio/timespots/README.md` s postopkom za dodajanje človeških posnetkov |
+| Avdio vodnik | DELUJE | GLAS MUZEJA SO SKRIPTE (P15): 9 časovnih točk ima napisane govorne skripte (si+en, `src/data/atlas/narrations.ts`, izpeljane izključno iz naslova/opisa/dokaza točke); predvaja jih skupni deterministicni narrator (`src/lib/narrator.ts`) prek brskalniške `speechSynthesis` — brezplačno, lokalno, brez AI modelov; transkript skripte se med predvajanjem pokaže na kartici; isti mehanizem za vodeni sprehod in AR kamero |
 | Besedilni vodnik | DELUJE | `guide.ts`: Q&A na postajo (GUIDE_QA), vključen v `visitor-experience.tsx` |
 | Jeziki | DELUJE | SL/EN preklopnik (`language-context`), 113/113 zapisov dvojezično |
 | Delovanje brez signala | DELUJE (v kodi) | service worker `sw.js` v19: precache `/`, manifest, ikone; cache-first za statiko; strani stale-while-revalidate |
@@ -100,7 +100,7 @@ kartice virov; overlay na karti je namenoma le A01/A02 (GEOTRUTH afina).
 | AR kamere (brez očal) | DELUJE (v kodi) | `ar-camera.tsx`: `<video>` zadnje kamere (`getUserMedia`, `facingMode: environment`) + `<model-viewer>` z GLB modelom, lebdi nad sliko kamere; kompas (`DeviceOrientation`) + GPS azimut zasidrata model v smeri objekta |
 | Postavitev v prostor | DELUJE | `model-viewer-3d.tsx`: `ar`, `ar-modes="webxr scene-viewer quick-look"`, `ar-placement="floor"` — Android WebXR/Scene Viewer, iOS Quick Look (USDZ obstaja) |
 | Postopno poslabšanje | DELUJE | brez kamere → arhivsko ozadje; brez kompasa → fiksni model; brez GPS → pošten predogled (»komponenta ne izmišljuje«) |
-| AI v času delovanja | NI GA | edina `fetch()` klica sta HEAD na lokalni MP3 in blob za sintezo govora; `OPENROUTER_API_KEY`/`ELEVENLABS_API_KEY` nista uporabljeni nikjer v `src/` (ostanka predloge v env spremenljivkah Vercela — glej §9) |
+| AI v času delovanja | NI GA | edini `fetch()` klic je blob za sintezo govora (zajem PNG); govor = deterministicne skripte + brskalniška `speechSynthesis` (P15); `OPENROUTER_API_KEY`/`ELEVENLABS_API_KEY` nista uporabljeni nikjer v `src/` in sta ODSTRANJENI z Vercela (P15, 2026-10-10); `z-ai-web-dev-sdk` odstranjen iz `package.json` |
 | Fizična preverba na telefonu | NEPREVERJENO | zahteva napravo z senzorji; priporočam preizkus lastnika (korak §9) |
 
 ## 6. Licence in dostopnost (točka 7)
@@ -190,13 +190,14 @@ DEMO/NAČRTOVANO = mehanizem obstaja, vsebina čaka · MISSING = manjka · BLOCK
 | 16 | Zapis MVG-114 »Kresna pesem (1888)« | **NAČRTOVANO** (rezerviran v `extra.json` related; ni v zbirki) |
 | 17 | Popravljanje 30 prikritih TS napak (`ignoreBuildErrors`) | **PARTIAL/BLOCKED** — zahteva ločeno posvetno serijo (priporočam odstranitev zastavice po sklopih) |
 | 18 | Surove kode vrst virov vidne obiskovalcu (npr. »objava«) | **PARTIAL** — kozmetika; predlog: slovar oznak SL/EN |
-| 19 | Neuporabljene env spremenljivke na Vercelu (OPENROUTER, ELEVENLABS, DATABASE_URL, DIRECT_URL) + Prisma ostanki | **PARTIAL** — čiščenje priporočeno (nič od tega aplikacija ne uporablja) |
+| 19 | Neuporabljene env spremenljivke na Vercelu + Prisma ostanki | **PARTIAL** — AI ključa (OPENROUTER, ELEVENLABS) odstranjena s Vercela in `z-ai-web-dev-sdk` iz package.json (P15); ostajata `DATABASE_URL`/`DIRECT_URL` + Prisma ostanki (ne-AI, neškodljivi) |
 | 20 | Pin MVG-095 v načinu časovnega potovanja na karti | **PARTIAL** — obdobje (−1000…−700) je pred najmanjšim letom drsnika (1468); privzeti pogled piko prikaže, časovno potovanje jo skrije (semantična odločitev, dokumentirano) |
 
 ### Naslednji konkretni koraki (po prednostni)
 
-1. **Posneti človeški glas za 6 časovnih točk** (12 MP3: 6× si + 6× en po shemi iz
-   `public/audio/timespots/README.md`) — brez spremembe kode.
+1. **Posneti človeški glas** (domačin) po obstoječih skriptah iz
+   `src/data/atlas/narrations.ts` (neobvezno izboljšanje; postopek v
+   `public/audio/timespots/README.md`) — človeški posnetek ni AI model.
 2. **Preizkus obiskovalnega toka na telefonu** (QR vhod, GPS, AR kamera, offline) — lastnik z
    napravo; po potrebi popravki.
 3. **Dopolnjevanje GPS koordinat** iz verodostojnih virov (77 zapisov) — postopoma, z viri.

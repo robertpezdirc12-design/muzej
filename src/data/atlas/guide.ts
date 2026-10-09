@@ -1,11 +1,11 @@
 /**
- * AI MUSEUM GUIDE — podatkovni sloj (issue #15, točka 9).
+ * VODNIK MUZEJA — podatkovni sloj (issue #15, točka 9).
  *
- * NI chatbot. To je muzejsko preverjeni nabor vprašanj/odgovorov
- * (»zgodb«), ki ga bodoči AI vodnik lahko uporablja kot VIR RESNICE:
- * vsak odgovor ima vir, status, lokacijo (TimeSpot) in periodo.
- * AI kasneje odgovarja SAMO iz teh podatkov — Atlas, evidence in
- * provenance ostanejo edini vir resnice.
+ * NI chatbot in ne bo: vodnik muzeja ostaja DETERMINISTIČEN —
+ * iskanje po muzejsko preverjenem naboru vprašanj/odgovorov
+ * (»zgodb«), brez AI modelov. Vsak odgovor ima vir, status,
+ * lokacijo (TimeSpot) in periodo; Atlas, evidence in provenance
+ * ostanejo edini vir resnice.
  *
  * Vsebina je povzeta IZKLJUČNO iz obstoječih podatkov muzeja
  * (timespots.ts, village3d.ts, atlas, exhibits MVG) — nič izmišljenega.

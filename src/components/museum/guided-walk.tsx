@@ -5,7 +5,9 @@
  *
  * Vsaka postaja je PRAVI muzejski zapis (vir: extra.json → walk):
  * kuratorsko besedilo, gumb za zapis, navigacija do lokacije (OSM),
- * govor (bralska sinteza brskalnika — brezplačna), AR če zapis ima model.
+ * govor (deterministične skripte prek skupnega narratorja in
+ * brskalnikove speechSynthesis — brezplačno, lokalno, brez AI modelov),
+ * AR če zapis ima model.
  * Zadnja postaja začne od začetka — pot deluje od začetka do konca.
  *
  * Manjkajoče postaje (npr. 32 v »Vas in njeni ljudje«) so EKSPlicitno
@@ -28,6 +30,7 @@ import { Button } from "@/components/ui/button";
 import { useLang } from "./language-context";
 import { WALKS, walkItemsWithGaps, walkLocatedCount, walkGaps, type WalkDef } from "@/lib/walks";
 import { distanceM, formatDistance, osmDirectionsUrl, type GeoFix } from "@/lib/geo";
+import { narrationSupported, speakScript, stopNarration } from "@/lib/narrator";
 
 export function GuidedWalk({
   fix,
@@ -58,22 +61,25 @@ export function GuidedWalk({
   const done = idx === items.length - 1;
 
   const pick = (w: WalkDef) => {
-    speechSynthesis?.cancel();
+    stopNarration();
     setSpeaking(false);
     setWalk(w);
     setIdx(0);
   };
 
   const go = (next: number) => {
-    speechSynthesis?.cancel();
+    stopNarration();
     setSpeaking(false);
     setIdx(Math.max(0, Math.min(items.length - 1, next)));
   };
 
+  /* GLAS (P15): postaja se prebere naglas — govorna skripta (naslov +
+     kuratorsko besedilo) prek determinističnega narratorja; enako
+     besedilo je na kartici (transkript je torej vedno viden). */
   const toggleSpeech = () => {
-    if (typeof speechSynthesis === "undefined" || !ex || !stop) return;
+    if (!narrationSupported() || !ex || !stop) return;
     if (speaking) {
-      speechSynthesis.cancel();
+      stopNarration();
       setSpeaking(false);
       return;
     }
@@ -81,15 +87,13 @@ export function GuidedWalk({
     const note =
       stop.note ??
       (lang === "si" ? ex.summarySi : ex.summaryEn);
-    const u = new SpeechSynthesisUtterance(
+    const started = speakScript(
       t(`Postaja ${stop.station}. ${title}.`, `Stop ${stop.station}. ${title}. `) +
         note,
+      lang,
+      () => setSpeaking(false),
     );
-    u.lang = lang === "si" ? "sl-SI" : "en-GB";
-    u.onend = () => setSpeaking(false);
-    u.onerror = () => setSpeaking(false);
-    speechSynthesis.speak(u);
-    setSpeaking(true);
+    setSpeaking(started);
   };
 
   return (

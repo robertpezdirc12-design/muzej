@@ -1,23 +1,35 @@
-# TTS pripovedi časovnih točk (issue #12)
+# Glas muzeja — govorne skripte (P15)
 
-Komponenta `ar-time-machine.tsx` ob pritisku »Poslušaj« najprej poskusi
-naložiti statično datoteko po shemi:
+Glas muzeja so SKRIPTE. Vsaka časovna točka ima napisano govorno
+skripto (slovenščina + angleščina) v `src/data/atlas/narrations.ts`,
+izpeljano izključno iz muzejskih podatkov (naslov, opis, dokaz) —
+nobeno zgodovinsko dejstvo ni dodano ali izmišljeno.
 
-    /audio/timespots/<id točke>-si.mp3   (slovenščina)
-    /audio/timespots/<id točke>-en.mp3   (angleščina)
+Predvajalnik je DETERMINISTIČEN in BREZ AI modelov:
 
-ID-ji: `cerkev`, `jedro`, `kolpa`, `ribnik`, `gornje`, `meja`.
-Besedilo = naslov + opis točke (`src/data/atlas/timespots.ts`).
+  · brskalnikova vgrajena speechSynthesis (zastonj, lokalno),
+  · nobenih omrežnih klicev ob predvajanju,
+  · nobenih plačljivih TTS storitev v oblaku, nobenih API ključev.
 
-Če datoteke ni (404), se samodejno uporabi brskalnikov
-`speechSynthesis` (zastonj, brez odvisnosti od plačljivih storitev) —
-to je trenutni primarni mehanizem, ker razpoložljivi oblačni TTS
-glasovi ne izgovarjajo slovenščine muzejsko kvalitetno.
+Enak mehanizem poganja vse tri glasove muzeja (AR časovni stroj,
+vodeni sprehod, AR kamera) prek skupnega modula `src/lib/narrator.ts`.
+Med predvajanjem se na kartici pokaže tudi transkript skripte
+(dostopnost za gluhe in naglušne obiskovalce).
 
-## Kako dodati posnetke (priporočeno naslednji korak)
+Kvaliteta glasu je odvisna od glasov, ki jih ima naprava obiskovalca
+ nameščenih — to je cena brezplačnega, zasebnega in determinističnega
+ pristopa, ki ga muzej sprejema zavestno.
 
-1. Posnemi človeški glas (domačin!) po besedilu iz timespots.ts.
-2. Shrani MP3 (~96–128 kbps, mono) pod zgoraj imenovanimi imeni.
-3. Brez spremembe kode — prvi poskus HEAD bo uspel in predvajal datoteko.
+## Kdaj bi radi človeški posnetek?
 
-Service worker jih ob obisku predpomni (stale-while-revalidate).
+Ta mapa ostaja pripravljena za morebitne posnetke DOMAČEGA GLASU
+ (človeški posnetek ni AI model — načelo »brez AI« ostaja):
+
+1. Posnemi človeški glas po besedilu skripte iz `narrations.ts`.
+2. Shrani MP3 (~96–128 kbps, mono) kot `<id točke>-si.mp3` oz. `-en.mp3`.
+3. V `ar-time-machine.tsx` ponovno dodaj vejo predvajanja datoteke
+   (vzorec: HEAD preverba + `new Audio(url)`; gl. git zgodovino P14).
+
+Prej tu obljubljena samodejna MP3 veja (HEAD 404 → fallback TTS) je
+bila odstranjena: datoteke nikoli niso obstajale, vsak klik pa je
+nalagal naporečen 404. Zdaj je skripta edini vir resnice govora.
