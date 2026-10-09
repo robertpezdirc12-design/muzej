@@ -13,6 +13,11 @@ tests
 Caddyfile
 worklog.md
 
+# raziskovalni viri (92 MB neobdelanih JSON/PDF — dostopni v repozitoriju,
+# v aplikacijo jih ne uvozuje noben modul src/; brez tega vsak CLI/Actions
+# deploy nalozi 92 MB odvec)
+research
+
 # gradbeni ostanki (vedno izključeno, a načrtovito)
 .next
 node_modules

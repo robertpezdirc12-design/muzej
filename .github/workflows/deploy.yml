@@ -1,0 +1,44 @@
+# Samodejni produkcijski deploy na Vercel ob vsakem pushu na main.
+#
+# Zakaj GitHub Actions in ne Vercel GitHub App?
+# Vercel projekt je bil prvotno vezan na GitLab (robert.pezdirc12/muzej),
+# ki je blokiral; direktna povezava GitHub->Vercel zahteva namestitev
+# Vercel GitHub App na racun lastnika repozitorija (spletni tok, ki ga
+# ni bilo mogoce izvesti prek API-ja). Dokler ta ni namestena, ta delovni
+# tok zagotavlja enak rezultat: push na main -> produkcija.
+#
+# Skrivnosti (Actions Secrets): VERCEL_TOKEN, VERCEL_ORG_ID, VERCEL_PROJECT_ID
+# Namig: po izteku zetona VERCEL_TOKEN (Hobby zetoni potecejo) ga obnovi
+# na vercel.com/tokens in posodobi skrivnost v repozitoriju.
+name: Deploy na Vercel (produkcija)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vercel-production
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Pridobi kodo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Namesti Vercel CLI
+        run: npm install -g vercel@63
+
+      - name: Deploy v produkcijo
+        run: vercel deploy --prod --yes --token=${{ secrets.VERCEL_TOKEN }}
+        env:
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}

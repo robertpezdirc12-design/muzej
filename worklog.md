@@ -2024,3 +2024,15 @@ Stage Summary:
   · docs/MUSEUM-AUDIT.md posodovljen: avdio vodnik DELNO→DELUJE, AI runtime vrstica dopolnjena, postavka 19 (env čiščenje) posodovljena.
 - TESTI: ESLint 0; tsc 34 predhodnih (prikritih z ignoreBuildErrors), 0 novih (preverjeno: git stash primerjava 34=34); build 16/16; /api/qa 23/23; /api/atlas/integrity 11/11.
 - DEPLOY: commit na GitHub main; produkcijski deploy prek Vercel CLI; AI ključi odstranjeni tudi s produkcijske projekta (env velja vnaprej).
+
+---
+
+## P16 — SAMODEJNI DEPLOY GitHub -> Vercel (2026-10-10)
+
+- TEŽAVA: produkcija je po GitLab blokadi ostala ročna (CLI deploy iz sandboxa); Vercel žeton poteče 2026-10-14, brez avtomatizacije bi vsaka sprememba zahtevala nov žeton/namestitev.
+- POSKUS DIREKTNE VEZAVE GitHub->Vercel: GitLab povezava prekinjena (DELETE /v9/projects/{id}/link), povezava GitHub zavrnjena z repo_not_found — Vercel GitHub App ni nameščena na računu lastnika repozitorija (robertpezdirc12-design), namestitev zahteva spletni OAuth tok, ki ni izvedljiv prek API-ja; projekt ostane brez git veze (CLI/Actions deployi delujejo neodvisno od nje).
+- REŠITEV: GitHub Actions delovni tok .github/workflows/deploy.yml — ob vsakem pushu na main (ali ročno) checkout + Vercel CLI 63 + `vercel deploy --prod --yes`; concurrency group prekliče zastareli deploy; timeout 15 min.
+- SKRIVNOSTI (Actions Secrets, libsodium šifrirane): VERCEL_TOKEN, VERCEL_ORG_ID, VERCEL_PROJECT_ID — nastavljene prek GitHub API.
+- .vercelignore: research/ trajno izključen (92 MB neobdelanih virov, noben modul src/ ga ne uvozi; prej je moral biti za vsak CLI deploy ročno dodan in povrnjen).
+- NAMIG ZA PRIHODNOST: po namestitvi Vercel GitHub App na račun robertpezdirc12-design je možna tudi direktna vezava (POST /v9/projects/{id}/link) — ta delovni tok lahko ostane kot rezerva.
+- POZOR: žeton VERCEL_TOKEN v skrivnosti poteče 2026-10-14 — obnoviti na vercel.com/tokens in posodobiti skrivnost; sync.yml (GitLab mirror) ostaja disabled_manually.
