@@ -254,10 +254,10 @@ export class VillageScene {
   private wallsGrowth: THREE.InstancedMesh;
   private roofsGrowth: THREE.InstancedMesh;
   private wallsPresent: THREE.InstancedMesh;
-  private wallsMat: THREE.MeshLambertMaterial;
-  private roofsMat: THREE.MeshLambertMaterial;
-  private growthWallsMat: THREE.MeshLambertMaterial;
-  private growthRoofsMat: THREE.MeshLambertMaterial;
+  private wallsMat: THREE.MeshStandardMaterial;
+  private roofsMat: THREE.MeshStandardMaterial;
+  private growthWallsMat: THREE.MeshStandardMaterial;
+  private growthRoofsMat: THREE.MeshStandardMaterial;
   private presentMat: THREE.MeshLambertMaterial;
   private groundPlane: THREE.Mesh;
   /** cone rabe tal + Kolpa + DREVESA — skupaj, da jih mini-scena skrije */
