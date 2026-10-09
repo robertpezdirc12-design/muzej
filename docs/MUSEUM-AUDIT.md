@@ -42,7 +42,7 @@ Viri: `src/data/museum/exhibits.json`, `events.json`, `extra.json`, `meta.json`;
 | Kategorije | 6 veljavnih: kraj 50, sege 20, gospodarstvo 13, vojna 13, narava 12, kolpa 5 | ✓ |
 | Podvojitve naslovov | 0 | ✓ |
 | Dogodki | 11; naslovi SL/EN, datumi, zunanje povezave vse veljavne | ✓ |
-| Extra (galerije, citati, sorodni) | 113 vnosov po slugu | ⚠️ 2 obešeni povezavi »sorodni« na neobstoječi MVG-114 — **popravljeno** (glej §8) |
+| Extra (galerije, citati, sorodni) | 113 vnosov po slugu | ⚠️ 2 obešeni povezavi »sorodni« na neobstoječi MVG-114 — **popravljeno** (§8 filter; P19: odstranjeni iz podatkov, §11) |
 
 ### 2.2 Viri in dokazljivost (točka 3)
 
@@ -155,6 +155,8 @@ ni bil odstranjen ali prepisan (diff: 7 datotek aplikacije + ta dokument).
    (»panjska-koncnica«, »kresovanje«) sta kazala na načrtovani MVG-114 »Kresna pesem (1888)«,
    ki ga v zbirki ni; gumb je bil mrtev. Zdaj se prikažejo samo dejansko obstoječi cilji —
    ko bo MVG-114 dodan, se povezavi samodejno vrneta.
+   *(Posodobitev P19: obe zastareli povezavi sta zdaj ODSTRANJENI tudi iz podatkov —
+   glej §11; nove se dodajo skupaj z zapisom, varuje qa-p19-related-refs.)*
 4. **Štetje virov 589 → 590** (`meta.json`, `layout.tsx` ×4, `museum-research.tsx` (zdaj
    dinamično iz `totalSourceRows`), `README.md`) — dejansko število navedb je 590; razlika
    je nastala, ker je bil dodan vir brez posodobitve števcev.
@@ -203,7 +205,7 @@ DEMO/NAČRTOVANO = mehanizem obstaja, vsebina čaka · MISSING = manjka · BLOCK
 3. **Dopolnjevanje GPS koordinat** iz verodostojnih virov (77 zapisov) — postopoma, z viri.
 4. **Odstraniti `ignoreBuildErrors`** in odpraviti 30 TS napak po sklopih (začetek:
    `museum-research.tsx` integrityEn → integritySi, `exhibit-detail.tsx` Sheet props).
-5. **Dodati MVG-114** (Kresna pesem 1888), ko so viri zbrani — povezavi se samodejno prikažeta.
+5. **Dodati MVG-114** (Kresna pesem 1888), ko so viri zbrani — zastareli povezavi sta P19 odstranjeni; nove se dodajo skupaj z zapisom (varuje qa-p19-related-refs).
 6. **Počistiti neuporabljene env spremenljivke in Prismo** (manjša površina, hitrejši build).
 
 ## 10. Definition of Done — stanje
@@ -213,3 +215,49 @@ DEMO/NAČRTOVANO = mehanizem obstaja, vsebina čaka · MISSING = manjka · BLOCK
 - [x] Zemljevidi 1812 in AR/GPS so označeni po dejanskem stanju (§3, §5, matrika §9)
 - [x] Kritične napake so popravljene brez izgube vsebine (§8: nevidni prazgodovinski zapisi, mrtvi gumbi MVG-114, napačno štetje)
 - [x] Poročilo vsebuje teste, vire in naslednje konkretne korake (§7.2, §2–§6, §9)
+
+## 11. P19 — revizija podatkovne pravilnosti (zunanji pregled, 2026-10-10)
+
+Zunanja revizija je našla pet konkretnih neskladij; vsa so odpravljena na
+podlagi virov, ne po presoji. Vrh revizije: *»ne manjka ti osnovne kode,
+manjka dokončana, medsebojno povezana in v praksi preverjena muzejska
+izkušnja«* — zato P19 ne dodaja novih modulov, ampak povezuje podatke.
+
+### Preglednica popravkov
+
+| # | Ugotovitev revizije | Popravek (P19) | Vir podlage |
+|---|---|---|---|
+| 1 | Dogodek 2026 je 1526 imenoval »prvo omembo vasi« | Oba dogodka 500-letnic preoblikovana: jubilej je **cerkveni** (cerkev sv. Vida prvič v listinah 1526); izrecna pojasnitev, da je vas starejša (1468, MVG-001). Odpravljena tudi ista napaka v 3 življenjskih postajah (griblje-vas, zaselki-griblje) in `yearFrom` MVG-049 (1526 → 1468); odstranjen mrtvi postanek 1526 s časovnega drsnika | MVG-003 (7 virov: Radio Odeon, Moja Dolenjska, Občina Črnomelj, Slovenske novice, Dolenjski list, Wikipedija); EN Wikipedija + Snoj 2009 prek MVG-001; SL Wikipedija v infopolju napačno navaja 1526 za naselje |
+| 2 | README navaja 9 dogodkov, dejansko je 11 | README usklajen (11) | events.json |
+| 3 | README navaja 101 fotografijo | Natančno: 103 datoteke — 101 citira 106 zapisov (5 si deli dveh zapisov), 2 uporablja Atlas 1812 | exhibits.json + disk |
+| 4 | 60 od 375 postaj življenjske zgodbe brez lastnega vira | 23 postajam dodan KONKRETEN vir (izključno iz virov matičnih zapisov: Barle 1893, Mason 2001, Šimec 2001, Snoj 2009, Dular 1978/1986, Volčjak 2019, SEM, RTV, DOPPS …); preostalih 37 ima zdaj jasno oznako **»v raziskovanju«**; 0 postaj je tiho nedokumentiranih. UI izpisuje tudi tiskane vire brez URL-ja | viri matičnih zapisov (nič novih navedb iz glave) |
+| 5 | Dve povezavi kažeta na neobstoječi MVG-114 | Odstranjeni (zapis bo dodan šele po zbranih dokazih, skupaj s povezavami) | načelo nič-zgube |
+
+### Nove avtomatske kontrole (QA 25 → 30)
+
+Revizija je zahtevala kontrole, ki same odkrijejo neskladja pri novih podatkih
+(`src/lib/qa.ts`, javno na `/api/qa`, vsak build jih preverja):
+
+1. `qa-p19-counts` — števci (zbirka/viri/dogodki/zgodbe) v meta.json in
+   events.json morajo biti enaki dejanskim podatkom (prej je bil ključ napačno
+   brano — tiha rezerva, zdaj strogo);
+2. `qa-p19-images` — vsaka slika zapisa obstaja na disku (strežniški klic z
+   fs; odjemalski izris preveri obliko poti);
+3. `qa-p19-related-refs` — sorodni zapisi kažejo samo na obstoječe zapise
+   (ulovi vsak novi MVG-114 primer);
+4. `qa-p19-station-sources` — vsaka postaja življenja ima vir ali oznako
+   »v raziskovanju« (tiho nedokumentirana trditev postane nemogoča);
+5. `qa-p19-first-mention` — vsak stavek, ki trdi prvo omembo vasi, mora biti
+   zasidran na 1468 (regresija na napako iz tega kroga; cerkveni stavki so
+   izrecno izvzeti — cerkev 1526 je pravilna).
+
+### Ostalo iz revizije (ni podatkovna napaka — zabeleženo)
+
+- Muzejski vodnik (18 vprašanj/odgovorov) je dober deterministični vodnik,
+  ne pa celovit — nadaljnja vsebinska rast po vrstnem redu dokazov.
+- Sprehod/GPS/AR/offline na terenu: **ni potrjeno** — potreben preizkus z
+  telefonom na kraju (§9, točka 2).
+- 3D časovni stroj ločuje RECONSTRUCTED od dokazanega (village3d.ts
+   oznake, geotruth pripravljenost scene) — velja vzdrževati.
+- Glej §9 za prednostni vrstni red naslednjih korakov (Faze 2–4 revizije:
+  zemljevid 1812 + GPS, preizkus na telefonu, kakovostne 3D rekonstrukcije).

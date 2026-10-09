@@ -1036,7 +1036,7 @@ function SouvenirCard() {
       {/* zgornji trak razglednice */}
       <div className="bg-primary px-5 py-4 text-primary-foreground">
         <p className="text-[11px] font-semibold uppercase tracking-widest opacity-90">
-          {t("Digitalni spomin", "Digital souvenir")} · 1526–2026
+          {t("Digitalni spomin", "Digital souvenir")} · {t("500 let cerkve sv. Vida", "500 years of St. Vitus' church")} · 1526–2026
         </p>
         <h3 className="mt-1 font-display text-2xl font-semibold">
           {t("Moj obisk Muzeja Griblje", "My visit to the Griblje Museum")}
@@ -1282,7 +1282,7 @@ async function drawPostcard(lang: "si" | "en", startAt: string | null): Promise<
   ctx.fillText("MUZEJ VASI GRIBLJE", 48, 72);
   ctx.textAlign = "right";
   ctx.font = "600 22px Georgia, serif";
-  ctx.fillText("500 let · 1526–2026", W - 48, 72);
+  ctx.fillText(lang === "si" ? "500 let cerkve · 1526–2026" : "500 years of the church · 1526–2026", W - 48, 72);
   ctx.textAlign = "left";
 
   /* naslov + datum */

@@ -37,10 +37,10 @@ bun run dev        # http://localhost:3000
 | Datoteka | Vsebina |
 |---|---|
 | `src/data/museum/exhibits.json` | 113 zapisov (naslovi, povzetki, zgodbe, viri, koordinate) |
-| `src/data/museum/events.json` | 9 dogodkov |
+| `src/data/museum/events.json` | 11 dogodkov |
 | `src/data/museum/meta.json` | metapodatki muzeja, lestvica zanesljivosti, 6 zgodb |
 | `src/data/museum/extra.json` | postaje življenja, trditve, sorodni zapisi, postaje sprehoda |
-| `public/images/authentic/` | 101 fotografija z navedbami avtorjev |
+| `public/images/authentic/` | 103 fotografije z navedbami avtorjev: 101 citira 106 zapisov zbirke (5 si deli dveh zapisov), 2 uporablja Atlas 1812 |
 
 ## Licenca
 
@@ -54,35 +54,21 @@ Spletišje je bilo obnovljeno iz zadnjega delujočega produkcjskega deploymenta
 (2026-10-06 11:32 UTC) po incidentu z neavtoriziranim dostopom do GitHub računa.
 Vsa vsebina, besedila, viri in slike izhajajo iz izvirne zbirke.
 
-## Povezava GitLab ↔ Vercel
+## Povezava GitHub → Vercel
 
 Produkcija teče na Vercelu: **https://griblje-museum.vercel.app**
 
 | Plast | Stanje |
 |---|---|
-| Kanonični repozitorij | `markec-group/muzej` (veja `main`) — vsebina identična produkciji |
-| Deploy sprožilec | `robert.pezdirc12/muzej` (osebni, zasebni) — nanj je povezan Vercel |
-| Samodejni deploy | ✅ AKTIVEN — vsak push na `main` deploy repozitorija zgradi in objavi Vercel |
-| Skrivnost | `VERCEL_TOKEN` shranjen kot maskirana CI/CD spremenljivka projekta |
+| Repozitorij | `robertpezdirc12-design/muzej` (zasebni, veja `main`) — vsebina identična produkciji |
+| Samodejni deploy | ✅ AKTIVEN — `.github/workflows/deploy.yml`: vsak push na `main` sproži `vercel deploy --prod --yes` (GitHub Actions) |
+| Skrivnosti | `VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID` shranjene kot šifrirane GitHub Actions skrivnosti |
+| Žeton | velja do 14. 10. 2026 — obnovitev: `scripts/renew_vercel_token.py` (libsodium) |
 
-### Zakaj dva repozitorija?
-
-Brezplačni (Hobby) Vercel načrt ne povezuje **zasebnih repozitorijev v lasti skupin**
-(zahteva Pro) — zato je Vercel povezan na zasebni osebni repozitorij
-`robert.pezdirc12/muzej`, ki služi kot *deploy sprožilec*. Skupinski repozitorij
-`markec-group/muzej` ostaja kanonična kopija z enako vsebino in zgodovino.
-
-**Pri vsaki spremembi potisni na OBE repozitorija:**
+### Ročni deployment (iz klona repozitorija, rezerva)
 
 ```bash
-git push gitlab main   # kanonična kopija (markec-group/muzej)
-git push deploy main   # sprožilec samodejnega deploya (robert.pezdirc12/muzej)
-```
-
-### Ročni deployment (iz klona repozitorija)
-
-```bash
-git clone https://gitlab.com/markec-group/muzej.git
+git clone https://github.com/robertpezdirc12-design/muzej.git
 cd muzej
 npx --yes vercel@latest deploy --prod --yes \
   --token="$VERCEL_TOKEN" \
@@ -116,6 +102,6 @@ API (statični, brez runtime AI):
 
 ## Varnost
 
-Žeton `VERCEL_TOKEN` je v GitLabu shranjen izključno kot **maskirana CI/CD
-spremenljivka** in ni v repozitoriju. Datoteki `.gitignore` in `.vercelignore`
+Žeton `VERCEL_TOKEN` je shranjen izključno kot šifrirana GitHub Actions
+skrivnost in ni v repozitoriju. Datoteki `.gitignore` in `.vercelignore`
 preprečujeta prenos `.env*` in lokalnih datotek pri deployu.

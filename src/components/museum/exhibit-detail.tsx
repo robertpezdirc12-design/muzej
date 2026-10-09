@@ -209,7 +209,7 @@ export function ExhibitDetail({
                                 {st.evidence}
                               </span>
                             )}
-                            {st.sourceUrl && (
+                            {st.sourceUrl ? (
                               <a
                                 href={st.sourceUrl}
                                 target="_blank"
@@ -219,7 +219,12 @@ export function ExhibitDetail({
                                 {t("vir", "source")}: {st.sourceName}
                                 <ExternalLink className="size-3 shrink-0" aria-hidden="true" />
                               </a>
-                            )}
+                            ) : st.sourceName ? (
+                              /* tiskani viri (bibliografija) nimajo URL-ja — navedba vseeno pride na dan */
+                              <span className="max-w-full text-xs text-muted-foreground">
+                                {t("vir", "source")}: {st.sourceName}
+                              </span>
+                            ) : null}
                           </div>
                         </li>
                       ))}
@@ -387,7 +392,7 @@ export function ExhibitDetail({
               </p>
               <ul className="mt-4 grid gap-3 sm:grid-cols-2">
                 {/* prikaži samo povezave na dejansko obstoječe zapise
-                    (npr. MVG-114 je rezerviran, a še ni v zbirki) */}
+                    (rezervirane številke, ki jih še ni v zbirki, se ne izrišejo) */}
                 {extra.related
                   .filter((r) => getExhibit(r.slug))
                   .map((r) => (
