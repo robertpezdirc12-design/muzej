@@ -2157,3 +2157,18 @@ Stage Summary:
 - DOKUMENTACIJA: MUSEUM-AUDIT.md §2.5 36/113 → 48/113, 77 → 65 brez; §9 postavka 15 MISSING → PARTIAL (z razlago virov in zavrnitev); §9.3 77 → 65 + P22 opomba; zastareli vrstici #4/#6 (odpravljeni že v P15/P17) s seznama naslednjih korakov — ostajata v matriki kot DONE.
 - METODA: Wikimedia API blokiral IP peskovnika (403/429) → stranitve citiranih virov prek bralnika (P1259 strukturni podatki + infopolja); GBIF API direktno; koordinate Wikipedije iz že obstoječega research/wiki-griblje.json (sneženje 2026-10-06). Skripta: scripts/ (peskovnik) p22_add_gps.py + coord_harvest.py — deterministično, brez AI.
 - TESTI: QA 34/34 (timeline: »45 postankov … mejnih let 45; manjkajoči: 0«); ESLint 0; tsc --noEmit 0; build 16/16. Podatki: 113 zapisov, 590 virov, 0 drugačnih sprememb kot 12×(lat,lng,coordsApprox).
+
+---
+
+## P23 — GITLAB SINHRONIZACIJA VZPOSTAVLJENA NA NOVEM RAČUNU (2026-10-10)
+
+- ZAHTVA (uporabnik): posredovan novi GitLab PAT (račun robertpezdirc8) — nadaljevanje P21 (sinhronizacija od takrat blokirana, zadnja uspešna 2026-10-07 18:50 UTC).
+- DIAGNOZA ŽETONA: PAT »dfgdf« (polni scope-i: api, read/write_repository …; velja do 2026-11-09), račun robertpezdirc8 (ustvarjen 2026-10-07, aktiven, state ≠ locked). Edini dostopni projekt: markec-group1/markec-project = RESTAURANTOS (121 commitov, 473 testov, Neon/Prisma) — DRUG projekt, z muzejem nima nobenega skupnega prednika (0 ancestorjev, preverjeno z merge-base).
+- STARA POT NEDOSTOPNA: robert.pezdirc12/muzej živi na blokiranem računu (blokada od P12); novi žeton nima članstva tam. Obnova na stari lokaciji ni mogoča.
+- REŠITEV — NOVI MUZEJSKI REPO: ustvarjen markec-group1/muzej (zaseben, ID 87462760, POST /projects v skupino markec-group1 kjer je uporabnik Owner, dostop 50) z opisom »Muzej Griblje — virtualni zgodovinski muzej vasi Griblje (zrcalo GitHub)«. RESTAURANTOS (markec-project) NI bil dotaknjen.
+- VARNOSTNA PREVERBA PRED SEJANJEM: staro zrcalo je dohitevalo le do db7bf52 (prednik trenutnega maina) → na GitLabu ni bilo unikatnih muzejskih podatkov; nov prazen repo pomeni nič izgubljenega.
+- SEKRETI (PUT prek API, šifrirano PyNaCl sealed box): GITLAB_TOKEN → novi PAT; GITLAB_PROJECT_PATH → markec-group1/muzej. Oba potrjena (updated_at 2026-10-10T11:27:25Z).
+- ZAGON: dispatch sync.yml → run 38048485891 SUCCESS (~30 s): overitev ls-remote OK (P21 varovalka ni sprožila) → fetch OK → »main: samo na GitHub -> push na GitLab« → »main: uspesno sinhroniziran«. PREVERBA PO ZAGONU: GitLab main = 5a74f4e02b3a = GitHub main.
+- OD TU NAPREJ: sync.yml teče ob vsakem pushu + cron (37 */6 * * *) — dvosmerno, cilj markec-group1/muzej; spremembe z GitLaba se stekajo nazaj na GitHub (merge-logika, divergentne veje se spojijo, konflikti javijo ::warning::).
+- OPOMBA ZA LASTNIKA: VERCEL_TOKEN poteče 2026-10-14 (4 dni) — nov žeton na vercel.com/tokens in zamenjava skrivnosti (rotacija prek API ni mogoča). Do takrat samodejni deploy deluje.
+- NIČ AI: sprememba je samo dokumentacija (ta worklog) — aplikacija, podatki in konfiguracija nespremenjeni.
