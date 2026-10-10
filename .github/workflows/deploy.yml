@@ -1,20 +1,21 @@
-# Samodejni produkcijski deploy na Vercel ob vsakem pushu na main.
+# ROCNI REZERVNI deploy na Vercel (samo workflow_dispatch).
 #
-# Zakaj GitHub Actions in ne Vercel GitHub App?
-# Vercel projekt je bil prvotno vezan na GitLab (robert.pezdirc12/muzej),
-# ki je blokiral; direktna povezava GitHub->Vercel zahteva namestitev
-# Vercel GitHub App na racun lastnika repozitorija (spletni tok, ki ga
-# ni bilo mogoce izvesti prek API-ja). Dokler ta ni namestena, ta delovni
-# tok zagotavlja enak rezultat: push na main -> produkcija.
+# ARHITEKTURA (P35, 2026-10-11): Vercel projekt je zdaj povezan z GitHub App
+# (Settings -> Git -> robertpezdirc12-design/muzej, productionBranch=main),
+# zato se ob vsakem pushu na main produkcija samodejno gradi na strani Vercel
+# (brez žetona VERCEL_TOKEN v tej poti — neodvisno od poteka žetona).
+# Ta delovni tok NE sme več teči ob pushu, ker bi povzročil DVOJEN deploy
+# (na Hobby načrtu 1 sočasna gradnja -> čakanje v vrsti, glej P19).
+#
+# Namen zdaj: rocni backup-deploy (Actions zavihek -> Run workflow), ce bi
+# git integracija odpovedala, in testni deploy ob rotaciji žetona.
 #
 # Skrivnosti (Actions Secrets): VERCEL_TOKEN, VERCEL_ORG_ID, VERCEL_PROJECT_ID
 # Namig: po izteku zetona VERCEL_TOKEN (Hobby zetoni potecejo) ga obnovi
 # na vercel.com/tokens in posodobi skrivnost v repozitoriju.
-name: Deploy na Vercel (produkcija)
+name: Deploy na Vercel (rocni rezervni)
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
