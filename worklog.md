@@ -2333,3 +2333,27 @@ zgodbo (Pezdirc).
 - HIGIENA (issue #19): izbrisana odpadna datoteka 3111 (izpis dev strežnika, commit P20); ta dnevnik
   dopolnjen z manjkajočimi fazami P28–P34.
 - TESTI: ESLint 0; tsc 0; build 16/16; lokalno QA 36/36 (nov test zelen); produkcija po deployu 36/36.
+
+## P35 — Vercel GitHub App: povezava, prvi integracijski deploy, sanacija identitete commitov (2026-10-11)
+
+- LASTNIK je v Vercel UI (Settings → Git) povezal GitHub App → `link` ni več null:
+  github / robertpezdirc12-design / muzej, productionBranch=main, repoId 1408702950.
+- DEPLOY.YLL preurejen: push-sprožilec ODSTRANJEN (samo še workflow_dispatch) — samodejni
+  deploy ob pushu zdaj poteka na strani Vercel BREZ žetona VERCEL_TOKEN (izven poti izteka
+  žetona!); workflow ostaja kot ročna rezerva (preizkus žetona, padec integracije).
+  Dvojni deploy (integracija + CLI ob vsakem pushu) bi na Hobby (1 sočasna gradnja) pomenil
+  čakanje v vrsti (glej P19).
+- PRVI integracijski deployment (dpl_3r4DBvP…, sha 396a709) ZAGLAVLJEN v BLOCKED z
+  buildSkipped:true — vzrok dokumentiran (Vercel: troubleshoot-project-collaboration →
+  account configuration): na Hobby ekipi z ZASEBIM repozitorijem mora biti AVTOR commita
+  lastnik ekipe (preverba Login Connections); committi od ponastavitve peskovnika (P28+)
+  so nastali s sandbox identiteto »Z User <z@container>« → neupoštevana. CLI deployi te
+  preverbe ne delajo, zato P28–P34 niso bili prizadeti.
+- SANACIJA: git identiteta v peskovniku preklopljena na lastnikovo
+  (Robert Pezdirc <robert.pezdirc12@gmail.com>; 88 zgodnejših commitov že nosi to
+  identiteto). POZOR ZA PRIHODNJE FAZE: po vsaki ponastavitvi peskovnika nastaviti
+  `git config user.name/user.email` PRED prvim commitom — sicer integracijski deployji
+  znova zaglavijo v BLOCKED.
+- ZOMBIE deploymenti: dva BLOCKED iz obdobja P14 (oba sha 3add3d1, duplikat GH Actions
+  sočasnosti) izbrisana prek DELETE /v13/deployments/{id} (24 h+ zaglavljeni, nikoli
+  zgrajena; cancel API 404 — izbris je deloval).
