@@ -29,31 +29,31 @@ Viri: `src/data/museum/exhibits.json`, `events.json`, `extra.json`, `meta.json`;
 
 | Predmet | Rezultat | Ocena |
 |---|---|---|
-| Število zapisov | 113 | ✓ ujema se z README in meta.json |
-| Muzejske številke | MVG-001 → MVG-113, vse unikatne, oblika `MVG-\d{3}` | ⚠️ README je trdil »MVG-001 → MVG-114« — **popravljeno** (glej §8) |
-| ID-ji in slugi | 113 unikatnih ID-jev, 113 unikatnih slugov, oblika veljavna | ✓ |
-| Naslovi SL/EN | 113/113 obojezično | ✓ |
-| Povzetki in zgodbe | 113/113 s povzetki, 113/113 s poljema `storySi`/`storyEn` | ✓ |
-| Slike | 106/113 s sliko; vseh 106 datotek obstaja v `public/`; 106/106 z `imageCredit` | ✓ 7 zapisov brez slike (namerno: npr. dogodki, izseljenstvo) |
+| Število zapisov | 114 | ✓ ujema se z README in meta.json (P24: +MVG-114) |
+| Muzejske številke | MVG-001 → MVG-114, vse unikatne, oblika `MVG-\d{3}` | ✓ (zgodovina: README je nekoč prezgodaj trdil 114 — glej §8; P24 je zapis dejansko dodal) |
+| ID-ji in slugi | 114 unikatnih ID-jev, 114 unikatnih slugov, oblika veljavna | ✓ |
+| Naslovi SL/EN | 114/114 obojezično | ✓ |
+| Povzetki in zgodbe | 114/114 s povzetki, 114/114 s poljema `storySi`/`storyEn` | ✓ |
+| Slike | 107/114 s sliko; vseh 102 različnih citiranih datotek obstaja v `public/` (5 si deli dveh zapisov; +2 datoteki za Atlas 1812 = 104 na disku); 107/107 z `imageCredit` | ✓ 7 zapisov brez slike (namerno: npr. dogodki, izseljenstvo) |
 | 3D model | 1 (cerkev sv. Vida, GLB + USDZ, obe datoteki obstajata, kredit navdan) | ✓ |
-| Koordinate | 48/113 s GPS znotraj Bele krajine (45,30–45,90 N, 14,60–15,80 E); vse z zastavico `coordsApprox`, kjer je približek | ⚠️ 65 zapisov brez GPS — znana vrzel (P22: +12 točk izključno iz citiranih virov), glej §9 |
-| Datumi | 100 zapisov z `yearFrom`; 13 z `null` (tematski zapisi z besedilnim `periodSi`, npr. »verska dediščina«) | ⚠️ 4 prazgodovinski zapisi so bili nevidni na časovnici — **popravljeno** (glej §8) |
+| Koordinate | 48/114 s GPS znotraj Bele krajine (45,30–45,90 N, 14,60–15,80 E); vse z zastavico `coordsApprox`, kjer je približek | ⚠️ 66 zapisov brez GPS — znana vrzel (P22: +12 točk izključno iz citiranih virov; P24: MVG-114 je pesem brez lokacije — namerno brez GPS, kot MVG-065), glej §9 |
+| Datumi | 101 zapisov z `yearFrom`; 13 z `null` (tematski zapisi z besedilnim `periodSi`, npr. »verska dediščina«) | ⚠️ 4 prazgodovinski zapisi so bili nevidni na časovnici — **popravljeno** (glej §8) |
 | Negativna leta | 4 zapisi (MVG-060 −800, MVG-083 −4500…200, MVG-095 −1000…−700, MVG-113 −1200…−800) — prazgodovinska najdišča, `periodSi` jih pravilno poimenuje (»pribl. 4500 pr. n. št.«) | ⚠️ prikaz »−4500« namesto »4500 pr. n. št.« — **popravljeno** (glej §8) |
-| Kategorije | 6 veljavnih: kraj 50, sege 20, gospodarstvo 13, vojna 13, narava 12, kolpa 5 | ✓ |
+| Kategorije | 6 veljavnih: kraj 50, sege 21, gospodarstvo 13, vojna 13, narava 12, kolpa 5 | ✓ |
 | Podvojitve naslovov | 0 | ✓ |
 | Dogodki | 11; naslovi SL/EN, datumi, zunanje povezave vse veljavne | ✓ |
-| Extra (galerije, citati, sorodni) | 113 vnosov po slugu | ⚠️ 2 obešeni povezavi »sorodni« na neobstoječi MVG-114 — **popravljeno** (§8 filter; P19: odstranjeni iz podatkov, §11) |
+| Extra (galerije, citati, sorodni) | 114 vnosov po slugu | ✓ (zgodovina: 2 obešeni povezavi na MVG-114 sta bili P19 odstranjeni; P24 ju je povrnil, ker zapis zdaj obstaja) |
 
 ### 2.2 Viri in dokazljivost (točka 3)
 
 | Predmet | Rezultat |
 |---|---|
-| Skupno navedb virov | **590** (470 unikatnih `sourceKey`; povprečno 5,2 na zapis; min 1, max 26) |
+| Skupno navedb virov | **594** (473 unikatnih `sourceKey`; povprečno 5,2 na zapis; min 1, max 26; P24: +4 za MVG-114) |
 | ⚠️ Razlika s README/meta | README in meta.json sta trdila 589 — **popravljeno na 590** (glej §8) |
-| Zapisi brez vsaj enega vira | 0/113 |
-| Viri brez podatka o licenci | 0/590 |
-| Vrste virov | objava 259, spletni-vir 202, fotografija 106, arhiv 16, zemljevid 5, pričevanje 2 |
-| Lestvica zanesljivosti | 4-stopenska, vsak zapis ima veljaven `evidenceStatus`: DOCUMENTED 88, CORROBORATED 15, TRADITION 8, TESTIMONY 2 |
+| Zapisi brez vsaj enega vira | 0/114 |
+| Viri brez podatka o licenci | 0/594 |
+| Vrste virov | objava 263, spletni-vir 202, fotografija 106, arhiv 16, zemljevid 5, pričevanje 2 |
+| Lestvica zanesljivosti | 4-stopenska, vsak zapis ima veljaven `evidenceStatus`: DOCUMENTED 88, CORROBORATED 16, TRADITION 8, TESTIMONY 2 |
 | Ločevanje stopenj gotovosti | ✓ arhivski dokaz (arhiv/objava/zemljevid), ustno pričevanje (pricevanje/TESTIMONY), interpretacija in domneva so ločene tako v lestvici kot v `noteSi` posameznih virov; negativni izidi raziskav so izrecno dokumentirani (`NEGATIVE_RESULTS`, 11 zapisov) |
 
 ## 3. Zemljevid 1812 in georeferenca (točka 4)
@@ -108,8 +108,8 @@ kartice virov; overlay na karti je namenoma le A01/A02 (GEOTRUTH afina).
 | Predmet | Stanje |
 |---|---|
 | Lastni metapodatki sklopa | CC BY-SA 4.0 (`meta.json`, `/api/opendata.license`) — z jasno opombo, da velja SAMO za lastne strukturne metapodatke |
-| Posamezni viri | 590/590 z licenco v `sources[].license` (razporeditev po 125 vrstah licenc v `/api/provenance`) |
-| Slike | 106/106 z `imageCredit` |
+| Posamezni viri | 594/594 z licenco v `sources[].license` (razporeditev po 127 vrstah licenc v `/api/provenance`) |
+| Slike | 107/107 z `imageCredit` |
 | Zemljevidi (OSM) | atribucija na obeh Leaflet kartah: © OpenStreetMap + »katastrski listi: Arhiv RS (SI AS 176/N/N83)« |
 | Reprodukcije arhivskih predmetov | pravila navedena v `/api/opendata.license.reproduction*` (Arhiv RS/VAČ, SEM, zasebni arhivi) |
 | Odprti podatki | `/api/opendata` izpostavlja celotno zbirko z viri, krediti in plastovito licenco |
@@ -137,8 +137,8 @@ kartice virov; overlay na karti je namenoma le A01/A02 (GEOTRUTH afina).
 | `bun run build` | **uspešno** — 16/16 strani, 12 statičnih API poti (~16 s) |
 | `/api/qa` (lokalno, produkcijska zgradba) | **ok: true, 25/25 PASS** (vključno `qa-p12-village-life`; P18: `qa-p18-source-labels`, `qa-p18-timeline-stops`) |
 | `/api/atlas/integrity` | **11/11 PASS** (hiše, viri, E2E veriga hiša 73→MVG-010, georeferenca, EŠD 2122, vektorizacija, matrike …) |
-| `/api/provenance` | 590 navedb; 113/113 z virom; 0 brez licence |
-| `/api/opendata` | števci 113/590/11/6; licenca CC BY-SA 4.0 |
+| `/api/provenance` | 594 navedb; 114/114 z virom; 0 brez licence |
+| `/api/opendata` | števci 114/594/11/6; licenca CC BY-SA 4.0 |
 | Produkcija (`griblje-museum.vercel.app`) | 200; QA 25/25 po deployu te revizije (glej §10; P18 dodal 2 testa) |
 
 ## 8. Popravki, izvedeni v tej reviziji (brez izgube vsebine)
@@ -174,7 +174,7 @@ DEMO/NAČRTOVANO = mehanizem obstaja, vsebina čaka · MISSING = manjka · BLOCK
 
 | # | Predmet | Stanje |
 |---|---|---|
-| 1 | Integriteta 113 zapisov (ID, naslovi, jeziki, slike, kategorije) | **DONE** |
+| 1 | Integriteta 114 zapisov (ID, naslovi, jeziki, slike, kategorije) | **DONE** |
 | 2 | Viri: sledljivost + 4-stopenska lestvica gotovosti | **DONE** |
 | 3 | Zemljevid 1812 povezan z UI (izrez, viri) | **DONE** |
 | 4 | Kataster N83 kot Leaflet overlay z GEOTRUTH mejami (A01/A02) | **DONE** |
@@ -185,11 +185,11 @@ DEMO/NAČRTOVANO = mehanizem obstaja, vsebina čaka · MISSING = manjka · BLOCK
 | 9 | Brez signala (service worker v19) | **DONE** (koda) |
 | 10 | AR kamere brez očal (model-viewer + kompas/GPS sidro) | **DONE** (koda) — telefon NEPREVERJEN |
 | 11 | AR brez AI v času delovanja | **DONE** |
-| 12 | Licence (CC BY-SA 4.0 plastovito, OSM, 106/106 kreditov) | **DONE** |
+| 12 | Licence (CC BY-SA 4.0 plastovito, OSM, 107/107 kreditov) | **DONE** |
 | 13 | API-ji statični, brez vnosa, escaping | **DONE** |
 | 14 | Testni nabor (lint/build/QA/integrity) | **DONE** (rezultati v §7.2) |
-| 15 | GPS koordinate 65/113 zapisov | **PARTIAL** (P22: 36 → 48 točk — 12 novih sidrnih točk IZKLJUČNO iz virov, ki jih zapisi že citirajo: sl.wiki Griblje ×8, sl.wiki Kanižarica, Commons GPS fotografiji (ribnik Griblje, Dakota pri Otoku), iNaturalist URL, cerkveno sidro EŠD 2122 za zvon; zavrnjena fotografia Valley of Kolpa (~19 km stran); preostalih 65 brez vira koordinate — ne izmišljujemo) |
-| 16 | Zapis MVG-114 »Kresna pesem (1888)« | **NAČRTOVANO** (rezerviran v `extra.json` related; ni v zbirki) |
+| 15 | GPS koordinate 66/114 zapisov | **PARTIAL** (P22: 36 → 48 točk — 12 novih sidrnih točk IZKLJUČNO iz virov, ki jih zapisi že citirajo: sl.wiki Griblje ×8, sl.wiki Kanižarica, Commons GPS fotografiji (ribnik Griblje, Dakota pri Otoku), iNaturalist URL, cerkveno sidro EŠD 2122 za zvon; zavrnjena fotografia Valley of Kolpa (~19 km stran); preostalih 66 brez vira koordinate (P24: MVG-114 je pesem — namerno brez GPS, kot MVG-065) — ne izmišljujemo) |
+| 16 | Zapis MVG-114 »Kresna pesem« | **DONE (P24)** — dodan kot »Kresna pesem (1895) — natisnjeni sled pesmi ob Kolpi« (4 viri: dLib.si Dom in svet 8/14 1895, Dom in svet 7/22 1894, Radio Odeon 2025 s celotnim živečim besedilom, Radio Odeon Totter). Letnica prvotnega načrta (1888) se v virih ni potrdila — dokumentiran natis kresnih pesmi je 1895 (razlaga v §13); povezavi iz kresovanje/panjska-koncnica povrnjeni |
 | 17 | Popravljanje 34 prikritih TS napak (`ignoreBuildErrors`) | **DONE (P17)** — 0 napak, zastavica odstranjena |
 | 18 | Surove kode vrst virov vidne obiskovalcu (npr. »objava«) | **DONE (P18)** — slovar oznak `SOURCE_TYPE_LABELS` (SL/EN) v `src/lib/museum.ts`; izpis v exhibit-detail prek `sourceTypeLabel()` (surova koda ostane kot tooltip za sklicevanje na odprte podatke); celovitost varuje `qa-p18-source-labels` |
 | 19 | Neuporabljene env spremenljivke na Vercelu + Prisma ostanki | **DONE (P15+P17)** — AI ključa (OPENROUTER, ELEVENLABS) odstranjena s Vercela in `z-ai-web-dev-sdk` iz package.json (P15); Prisma odstranjen v celoti (P17: `prisma/`, `src/lib/db.ts`, obe odvisnosti, db:* skripti, 17 neuporabljenih paketov). `DATABASE_URL`/`DIRECT_URL` sta ostali na Vercelu (neškodljivi, neuporabljeni — potencialno edini zapis povezave do zbirke, zato ju ne brišemo brez lastnika) |
@@ -202,10 +202,9 @@ DEMO/NAČRTOVANO = mehanizem obstaja, vsebina čaka · MISSING = manjka · BLOCK
    `public/audio/timespots/README.md`) — človeški posnetek ni AI model.
 2. **Preizkus obiskovalnega toka na telefonu** (QR vhod, GPS, AR kamera, offline) — lastnik z
    napravo; po potrebi popravki.
-3. **Dopolnjevanje GPS koordinat** iz verodostojnih virov (preostalih 65 zapisov; P22 je dodal 12 iz citiranih virov — sl.wiki, Commons GPS, GBIF/iNaturalist, EŠD) — postopoma, z viri.
-4. **Dodati MVG-114** (Kresna pesem 1888), ko so viri zbrani — zastareli povezavi sta P19 odstranjeni; nove se dodajo skupaj z zapisom (varuje qa-p19-related-refs).
+3. **Dopolnjevanje GPS koordinat** iz verodostojnih virov (preostalih 66 zapisov; P22 je dodal 12 iz citiranih virov — sl.wiki, Commons GPS, GBIF/iNaturalist, EŠD; P24: MVG-114 je pesem — namerno brez GPS) — postopoma, z viri.
 
-(Nekdanji točki 4/6 — odstranitev `ignoreBuildErrors` in čiščenje env/Prisme — sta že odpravljeni v P17 oziroma P15+P17; matrika §9 #17 in #19. P23: zastareli vrstici dejansko odstranjeni s seznama, kot je P22 že zapisal v worklog.)
+(P24 je dodal MVG-114 — glej §13. Nekdanji točki 4/6 — odstranitev `ignoreBuildErrors` in čiščenje env/Prisme — sta že odpravljeni v P17 oziroma P15+P17; matrika §9 #17 in #19. P23: zastareli vrstici dejansko odstranjeni s seznama, kot je P22 že zapisal v worklog.)
 
 ## 10. Definition of Done — stanje
 
@@ -384,3 +383,68 @@ ne morejo tiho zastareti (to je točno tisto, kar se je zgodilo s 43/11).
 - Preizkušeno: ESLint 0; tsc 0; build 16/16 s tipi; /api/qa 34/34;
   /api/atlas/integrity 11/11; /api/atlas/reconciliation zeroLoss=true,
   12 enot, vse scopeCheck.accounted.
+
+## 13. P24 — MVG-114 »KRESNA PESEM (1895)«: dodan zapis (2026-10-10)
+
+Zapis je bil rezerviran od obnove zbirke (načrtovani naslov »Kresna pesem (1888)
+— najstarejši natisnjeni sled pesmi, pevane v Gribljah«; obešeni povezavi sta
+P19 odstranil, ker zapis ni obstajal). P24 je zbral vire in zapis dodal — z
+dvema poštenima popravkoma načrta, obema dokumentiranima spodaj.
+
+### Raziskava virov (2026-10-10)
+
+- **Natis (primarni):** J. Barle, »Kresne ali ivanjske pesmi belokranjskih
+  kresnic«, *Dom in svet* (Ljubljana), letnik 8, številka 14 (1895) —
+  digitalizirano v dLib.si (URN:NBN:SI:DOC-DUADCBST). Prvi natis, izrecno
+  posvečen kresnim pesmim Bele krajine. Predhodni spisek: »Belokranjske
+  narodne pesmi; zapisal v podzemlju J. Barle«, *Dom in svet* 7, št. 22
+  (1894). Oba bibliografska zapisa potrjena iz kataloga dLib.si (dostop s
+  peskovnika blokira WAF/IP; overjeno prek strežniškega bralnika in dveh
+  neodvisnih kataložnih navedb).
+- **Gribeljska nit:** Radio Odeon — Ljudje ob Kolpi: Matija Totter (že v
+  zbirki pri MVG-065/057): Matija Totter — Jandreč Matiček — je na Barleovo
+  navodilo popisal običaj kresovanja in besedilo kresne pesmi pozemeljske
+  fare (vanjo so spadale tudi Griblje).
+- **Živeče besedilo:** Radio Odeon — »Kresovanje: Daj nam Bože dobro leto …«
+  (Boris Grabrijan, 22. 6. 2025): celotno besedilo pesmi, kakor jo v
+  Adlešičih pojejo še danes (»Bog daj, bog daj dober večer! … Daj nam Bože
+  dobro leto …«), opis šege kresnic (pretekanje glasov, piščalist, kolo iz
+  ivanjih rož, košara z darovi), Šašljevi zapisi 1905/1909 in vpis
+  adlešiškega kresovanja v Register nesnovne kulturne dediščine RS 2025
+  (nosilec: KUD Božo Račič Adlešiči, pevska skupina Kresnice).
+
+### Popravka načrta (dokumentirana, ne tiho)
+
+1. **Letnica 1888 → 1895.** Niti en najdeni vir ne podpira letnice 1888:
+   Barleovi natisi kresnih pesmi so 1894 (Dom in svet 7/22) in 1895
+   (Dom in svet 8/14); Ženitovanjski običaji Belih Kranjcev so 1889;
+   revija Dom in svet sicer izhaja od 1888 (najverjetnejši izvor zmede).
+   Zapis nosi letnico prvega izrecnega natisa kresnih pesmi: 1895.
+2. **Trditev »pesmi, pevane v Gribljah« → »pesmi ob Kolpi / pozemeljske
+   fare«.** Dokumentirano je, da je besedilo zapisal gribeljski Matiček za
+   pozemeljsko faro (vanjo so spadale tudi Griblje); ni pa mogoče
+   preveriti, da je ravno gribeljska različica tista v natisu 1895
+   (celotnega besedila članka peskovnik ni mogel prebrati — dLib.si
+   dinamični dostop). Zgodba zato obe trditvi loči in »Muzej išče«
+   izrecno navaja: izvod Doma in sveta 8/14 s celotnim besedilom in
+   Matičkov rokopis.
+
+### Izvedene spremembe
+
+- `exhibits.json`: MVG-114 (kresna-pesem-1895; kategorija sege;
+  CORROBORATED; 4 viri; yearFrom 1895; brez GPS — pesem ni točka na karti,
+  enako kot MVG-065; sortOrder 113; slika kresnica.jpg — svetleča samica
+  Lampyris noctiluca, po kateri se pevke imenujejo; Commons/Emphyrio1983,
+  CC BY-SA 4.0, ilustrativna, pošteno označena).
+- `extra.json`: vnos s 5 postajami življenja (Matičkov zapis → natis 1894 →
+  natis 1895 → Šašelj 1905/1909 → register 2025), related na MVG-065/062/
+  057/058; povrnjeni related v kazalah kresovanje + panjska-koncnica
+  (obljuba iz P19 izpolnjena); postaja sprehoda 36 »Vas in njeni ljudje«
+  (zaporedje brez lukenj; walk.total usklajeno 35 → 36 pri vseh 34 zapisih).
+- Števci povsod: 114 zapisov / 594 vrstic virov (meta.json, layout.tsx ×5,
+  README, JSON-LD MVG-001–114, qa-no-loss, kategorije sege 21, evidence
+  CORROBORATED 16, vrste virov objava 263, licence 127 vrst).
+- Testi: QA 34/34 (walk: 36 mest, 1 eksplicitna vrzel; counts 114/594;
+  related-refs 0 zastarelih); ESLint 0; tsc --noEmit 0; build uspešen.
+- Brez AI modelov: gre za podatkovni zapis iz tiskanih in spletnih virov;
+  vsebine ni ustvaril jezikovni model — vsak stavek ima vir, ki ga citira.

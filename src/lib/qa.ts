@@ -183,13 +183,13 @@ export function runQA(opts: QAOptions = {}): QAReport {
     `${EXHIBITS.reduce((a, e) => a + (e.sources ?? []).length, 0)} vrstic virov; ${srcBad.length} brez identitete`,
   );
 
-  // 6. noben obstoječi muzejski zapis ni izgubljen (113)
+  // 6. noben obstoječi muzejski zapis ni izgubljen (114; P24 je dodal MVG-114)
   const metaCount = META.counts?.exhibits ?? META.count?.exhibits ?? EXHIBITS.length;
   push(
     "qa-no-loss",
-    "noben muzejski zapis ni izgubljen (113)",
-    "no museum record is lost (113)",
-    EXHIBITS.length === 113 && metaCount === EXHIBITS.length,
+    "noben muzejski zapis ni izgubljen (114)",
+    "no museum record is lost (114)",
+    EXHIBITS.length === 114 && metaCount === EXHIBITS.length,
     `exhibits: ${EXHIBITS.length}, meta.count: ${metaCount}`,
   );
 
@@ -207,7 +207,8 @@ export function runQA(opts: QAOptions = {}): QAReport {
     "qa-walk-sequence",
     "sprehodi imajo neprekinjeno zaporedje postaj (vrzeli so eksplicitne)",
     "walks have an uninterrupted station sequence (gaps are explicit)",
-    walkOk && !!firstWalk && firstWalk.explicitGaps === 1 && firstWalk.total === 35,
+    // P24: MVG-114 (kresna pesem) je postaja 36 — skupno mest 35 → 36
+    walkOk && !!firstWalk && firstWalk.explicitGaps === 1 && firstWalk.total === 36,
     walkReports
       .map((w) => `${w.key}: 1–${w.last} (${w.total} mest, ${w.explicitGaps} eksplicitnih vrzeli)`)
       .join("; "),

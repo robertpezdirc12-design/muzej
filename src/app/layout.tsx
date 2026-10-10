@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Muzej vasi Griblje — digitalni muzej vasi ob Kolpi",
   description:
-    "Muzej vasi Griblje je večjezični digitalni muzej resnične vasi v Beli krajini: 113 zapisov, 590 dokazljivih virov, ATLAS 1825 (franciscejski kataster, georeferencirana lista, register hiš), raziskave in provenienca, AR vodnik, odprti podatki in časovnica od leta 1468.",
+    "Muzej vasi Griblje je večjezični digitalni muzej resnične vasi v Beli krajini: 114 zapisov, 594 dokazljivih virov, ATLAS 1825 (franciscejski kataster, georeferencirana lista, register hiš), raziskave in provenienca, AR vodnik, odprti podatki in časovnica od leta 1468.",
   keywords: [
     "Griblje",
     "Muzej",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Muzej vasi Griblje — digitalni muzej vasi ob Kolpi",
     description:
-      "Digitalni muzej resnične vasi v Beli krajini: 113 zapisov, 590 dokazljivih virov, lestvica zanesljivosti, odprti podatki.",
+      "Digitalni muzej resnične vasi v Beli krajini: 114 zapisov, 594 dokazljivih virov, lestvica zanesljivosti, odprti podatki.",
     url: SITE_URL,
     siteName: "Muzej vasi Griblje",
     locale: "sl_SI",
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Muzej vasi Griblje — digitalni muzej vasi ob Kolpi",
     description:
-      "Digitalni muzej resnične vasi v Beli krajini: 113 zapisov, 590 dokazljivih virov, odprti podatki.",
+      "Digitalni muzej resnične vasi v Beli krajini: 114 zapisov, 594 dokazljivih virov, odprti podatki.",
     images: ["/og-card.jpg"],
   },
 };
@@ -99,7 +99,7 @@ const jsonLd = {
       alternateName: "Griblje Village Museum",
       url: SITE_URL,
       description:
-        "Večjezični digitalni muzej resnične vasi v Beli krajini (občina Črnomelj, Slovenija): 113 zapisov s trajnimi muzejskimi številkami, 590 dokazljivih virov, lestvica zanesljivosti in odprti podatki.",
+        "Večjezični digitalni muzej resnične vasi v Beli krajini (občina Črnomelj, Slovenija): 114 zapisov s trajnimi muzejskimi številkami, 594 dokazljivih virov, lestvica zanesljivosti in odprti podatki.",
       foundingDate: "2026",
       inLanguage: ["sl", "en"],
       logo: `${SITE_URL}/logo.svg`,
@@ -108,9 +108,9 @@ const jsonLd = {
     },
     {
       "@type": "Dataset",
-      name: "Zbirka Muzeja vasi Griblje (MVG-001–113)",
+      name: "Zbirka Muzeja vasi Griblje (MVG-001–114)",
       description:
-        "Odprti podatki digitalnega muzeja: 113 zapisov o vasi Griblje z dokazljivimi viri, lestvico zanesljivosti, časovnico, zemljevidom, Atlasom 1825 in provenienčnim poročilom.",
+        "Odprti podatki digitalnega muzeja: 114 zapisov o vasi Griblje z dokazljivimi viri, lestvico zanesljivosti, časovnico, zemljevidom, Atlasom 1825 in provenienčnim poročilom.",
       url: `${SITE_URL}/api/opendata`,
       creator: { "@id": `${SITE_URL}/#museum` },
       license: "https://creativecommons.org/licenses/by-sa/4.0/",
