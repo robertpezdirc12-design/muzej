@@ -2139,3 +2139,21 @@ Stage Summary:
 - POTREBNO OD UPORABNIKA: nov GitLab PAT (gitlab.com → User Settings → Access Tokens; scope write_repository; rok veljavnosti po želji) → posodobitev skrivnosti GITLAB_TOKEN; nato dispatch sync.yml in GitLab je dohiten (main d20723e + ostale veje + tagi).
 - OPOMBA: VERCEL_TOKEN v skrivnostih poteče 2026-10-14 — obnoviti na vercel.com/tokens (samodejski deploy deluje do tedaj).
 - NIČ AI: sprememba je samo CI/workflow logika (bash varovalke), aplikacija in podatki nespremenjeni.
+
+---
+
+## P22 — GPS KOORDINATE IZ CITIRANIH VIROV: 36 → 48 točk (2026-10-10)
+
+- ZAHTVA (uporabnik): »nadaljuj« — revizijska §9 točka 3 (najvišja samostojno izvedljiva prioriteta; #1 posnetek glasu in #2 terenski preizkus zahtevata lastnika, #4/#6 sta že odpravljena v P15/P17 a sta ostala na seznamu — seznam osvežen).
+- NAČELO: koordinate IZKLJUČNO iz virov, ki jih zapisi že citirajo (P19: ne izmišljujemo). Vsako dodano točko nosi vir; zavrnjena je bila citirana fotografija Valley of Kolpa river (GPS 45.484341, 15.087940 — ~19 km zahodno od vasi, napačen odsek reke — zavrnitev je prav toliko pomembna kot dodajanje).
+- ŽETEV (12 zapisov, vse coordsApprox=true — vaška/površinska sidra, ne geodetske točke):
+  * sl.wiki Griblje infopolje (45.5754472, 15.2927611 — že sidro MVG-049) → MVG-022 Filak, MVG-037 matične knjige, MVG-038 poročna knjiga, MVG-057 Matiček, MVG-067 loke/studenci, MVG-068 Gribljati, MVG-077 stari zemljevidi (7 zapisov citira ta članek kot prostorski vir)
+  * sl.wiki Kanižarica infopolje (45.5607639, 15.1672750) → MVG-080 rudnik
+  * Commons GPS metapodatki fotografij (P1259): Pond Griblje.jpg (45.576598, 15.286432) → MVG-050 Goranja lokva; Otok Douglas DC-3 Dakota (45.618836, 15.290722) → MVG-054 Dakota pri Otoku
+  * iNaturalist API URL v virih MVG-105 (lat=45.576&lng=15.283 — središče iskanja) → MVG-105 biodiverzitetne baze (velja tudi GBIF occurrence 5277910285 / 6498192135 ob straneh središča)
+  * cerkveno sidro zbirke (MVG-002/003, EŠD 2122: 45.56761, 15.290311) → MVG-048 zvon 2008 (zvon visi v cerkvi; precedens deljenja sidra MVG-002/003)
+- ZAVRNJENO (dokumentirano): Malenca (MVG-007 — foto brez GPS), Madroničev mlin (MVG-045 — foto brez GPS), Kopališče (MVG-053 — citirana foto je Damelj, druga vas) — ostanejo brez GPS, dokler vir ne ponudi koordinate.
+- ODVISNOSTI: qa-p18-timeline-stops zahteva postanke na VSEH mejnih letih zapisov z GPS → YEAR_STOPS razširjen 34 → 45 (nova leta: 1669, 1679, 1843, 1848, 1857, 1873, 1947, 1950, 1953, 1997, 2008; MVG-054/068/105 so mejna leta že imela); preverjeno pravilo XOR (3D model izključuje GPS — noben od 12 nima modela).
+- DOKUMENTACIJA: MUSEUM-AUDIT.md §2.5 36/113 → 48/113, 77 → 65 brez; §9 postavka 15 MISSING → PARTIAL (z razlago virov in zavrnitev); §9.3 77 → 65 + P22 opomba; zastareli vrstici #4/#6 (odpravljeni že v P15/P17) s seznama naslednjih korakov — ostajata v matriki kot DONE.
+- METODA: Wikimedia API blokiral IP peskovnika (403/429) → stranitve citiranih virov prek bralnika (P1259 strukturni podatki + infopolja); GBIF API direktno; koordinate Wikipedije iz že obstoječega research/wiki-griblje.json (sneženje 2026-10-06). Skripta: scripts/ (peskovnik) p22_add_gps.py + coord_harvest.py — deterministično, brez AI.
+- TESTI: QA 34/34 (timeline: »45 postankov … mejnih let 45; manjkajoči: 0«); ESLint 0; tsc --noEmit 0; build 16/16. Podatki: 113 zapisov, 590 virov, 0 drugačnih sprememb kot 12×(lat,lng,coordsApprox).

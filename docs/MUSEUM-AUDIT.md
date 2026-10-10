@@ -36,7 +36,7 @@ Viri: `src/data/museum/exhibits.json`, `events.json`, `extra.json`, `meta.json`;
 | Povzetki in zgodbe | 113/113 s povzetki, 113/113 s poljema `storySi`/`storyEn` | ✓ |
 | Slike | 106/113 s sliko; vseh 106 datotek obstaja v `public/`; 106/106 z `imageCredit` | ✓ 7 zapisov brez slike (namerno: npr. dogodki, izseljenstvo) |
 | 3D model | 1 (cerkev sv. Vida, GLB + USDZ, obe datoteki obstajata, kredit navdan) | ✓ |
-| Koordinate | 36/113 s GPS znotraj Bele krajine (45,30–45,90 N, 14,60–15,80 E); vse z zastavico `coordsApprox`, kjer je približek | ⚠️ 77 zapisov brez GPS — znana vrzel, glej §9 |
+| Koordinate | 48/113 s GPS znotraj Bele krajine (45,30–45,90 N, 14,60–15,80 E); vse z zastavico `coordsApprox`, kjer je približek | ⚠️ 65 zapisov brez GPS — znana vrzel (P22: +12 točk izključno iz citiranih virov), glej §9 |
 | Datumi | 100 zapisov z `yearFrom`; 13 z `null` (tematski zapisi z besedilnim `periodSi`, npr. »verska dediščina«) | ⚠️ 4 prazgodovinski zapisi so bili nevidni na časovnici — **popravljeno** (glej §8) |
 | Negativna leta | 4 zapisi (MVG-060 −800, MVG-083 −4500…200, MVG-095 −1000…−700, MVG-113 −1200…−800) — prazgodovinska najdišča, `periodSi` jih pravilno poimenuje (»pribl. 4500 pr. n. št.«) | ⚠️ prikaz »−4500« namesto »4500 pr. n. št.« — **popravljeno** (glej §8) |
 | Kategorije | 6 veljavnih: kraj 50, sege 20, gospodarstvo 13, vojna 13, narava 12, kolpa 5 | ✓ |
@@ -188,7 +188,7 @@ DEMO/NAČRTOVANO = mehanizem obstaja, vsebina čaka · MISSING = manjka · BLOCK
 | 12 | Licence (CC BY-SA 4.0 plastovito, OSM, 106/106 kreditov) | **DONE** |
 | 13 | API-ji statični, brez vnosa, escaping | **DONE** |
 | 14 | Testni nabor (lint/build/QA/integrity) | **DONE** (rezultati v §7.2) |
-| 15 | GPS koordinate 77/113 zapisov | **MISSING** (znana vrzel; ne izmišljujemo — zbirajo se iz virov) |
+| 15 | GPS koordinate 65/113 zapisov | **PARTIAL** (P22: 36 → 48 točk — 12 novih sidrnih točk IZKLJUČNO iz virov, ki jih zapisi že citirajo: sl.wiki Griblje ×8, sl.wiki Kanižarica, Commons GPS fotografiji (ribnik Griblje, Dakota pri Otoku), iNaturalist URL, cerkveno sidro EŠD 2122 za zvon; zavrnjena fotografia Valley of Kolpa (~19 km stran); preostalih 65 brez vira koordinate — ne izmišljujemo) |
 | 16 | Zapis MVG-114 »Kresna pesem (1888)« | **NAČRTOVANO** (rezerviran v `extra.json` related; ni v zbirki) |
 | 17 | Popravljanje 34 prikritih TS napak (`ignoreBuildErrors`) | **DONE (P17)** — 0 napak, zastavica odstranjena |
 | 18 | Surove kode vrst virov vidne obiskovalcu (npr. »objava«) | **DONE (P18)** — slovar oznak `SOURCE_TYPE_LABELS` (SL/EN) v `src/lib/museum.ts`; izpis v exhibit-detail prek `sourceTypeLabel()` (surova koda ostane kot tooltip za sklicevanje na odprte podatke); celovitost varuje `qa-p18-source-labels` |
@@ -202,7 +202,7 @@ DEMO/NAČRTOVANO = mehanizem obstaja, vsebina čaka · MISSING = manjka · BLOCK
    `public/audio/timespots/README.md`) — človeški posnetek ni AI model.
 2. **Preizkus obiskovalnega toka na telefonu** (QR vhod, GPS, AR kamera, offline) — lastnik z
    napravo; po potrebi popravki.
-3. **Dopolnjevanje GPS koordinat** iz verodostojnih virov (77 zapisov) — postopoma, z viri.
+3. **Dopolnjevanje GPS koordinat** iz verodostojnih virov (preostalih 65 zapisov; P22 je dodal 12 iz citiranih virov — sl.wiki, Commons GPS, GBIF/iNaturalist, EŠD) — postopoma, z viri.
 4. **Odstraniti `ignoreBuildErrors`** in odpraviti 30 TS napak po sklopih (začetek:
    `museum-research.tsx` integrityEn → integritySi, `exhibit-detail.tsx` Sheet props).
 5. **Dodati MVG-114** (Kresna pesem 1888), ko so viri zbrani — zastareli povezavi sta P19 odstranjeni; nove se dodajo skupaj z zapisom (varuje qa-p19-related-refs).
