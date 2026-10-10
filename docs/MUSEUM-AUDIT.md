@@ -36,7 +36,7 @@ Viri: `src/data/museum/exhibits.json`, `events.json`, `extra.json`, `meta.json`;
 | Povzetki in zgodbe | 114/114 s povzetki, 114/114 s poljema `storySi`/`storyEn` | ✓ |
 | Slike | 107/114 s sliko; vseh 102 različnih citiranih datotek obstaja v `public/` (5 si deli dveh zapisov; +2 datoteki za Atlas 1812 = 104 na disku); 107/107 z `imageCredit` | ✓ 7 zapisov brez slike (namerno: npr. dogodki, izseljenstvo) |
 | 3D model | 1 (cerkev sv. Vida, GLB + USDZ, obe datoteki obstajata, kredit navdan) | ✓ |
-| Koordinate | 94/114 s GPS znotraj Bele krajine (45,30–45,90 N, 14,60–15,80 E); zastavica `coordsApprox` pri vseh razen natančne točke ZooKeys (MVG-103) | ⚠️ 20 zapisov brez GPS — zavestne odločitve, ne vrzel (pesem/šega brez fiksne točke, regionalni zapisi, tradicija z odprtim iskanjem, najdišči brez javnih koordinat — utemeljitve v §14), glej §9 |
+| Koordinate | 95/114 s GPS znotraj Bele krajine (45,30–45,90 N, 14,60–15,80 E); zastavica `coordsApprox` pri vseh razen 7 natančnih točk (P22/P25: MVG-001/004/006/009/032/103; P34: MVG-083 RNPD uradna register-točka) | ⚠️ 19 zapisov brez GPS — zavestne odločitve, ne vrzel (pesem/šega brez fiksne točke, regionalni zapisi, tradicija z odprtim iskanjem, najdišče Srednje njive brez javne koordinate — utemeljitve v §14, razrešitev MVG-083 v §16), glej §9 |
 | Datumi | 101 zapisov z `yearFrom`; 13 z `null` (tematski zapisi z besedilnim `periodSi`, npr. »verska dediščina«) | ⚠️ 4 prazgodovinski zapisi so bili nevidni na časovnici — **popravljeno** (glej §8) |
 | Negativna leta | 4 zapisi (MVG-060 −800, MVG-083 −4500…200, MVG-095 −1000…−700, MVG-113 −1200…−800) — prazgodovinska najdišča, `periodSi` jih pravilno poimenuje (»pribl. 4500 pr. n. št.«) | ⚠️ prikaz »−4500« namesto »4500 pr. n. št.« — **popravljeno** (glej §8) |
 | Kategorije | 6 veljavnih: kraj 50, sege 21, gospodarstvo 13, vojna 13, narava 12, kolpa 5 | ✓ |
@@ -48,11 +48,11 @@ Viri: `src/data/museum/exhibits.json`, `events.json`, `extra.json`, `meta.json`;
 
 | Predmet | Rezultat |
 |---|---|
-| Skupno navedb virov | **594** (473 unikatnih `sourceKey`; povprečno 5,2 na zapis; min 1, max 26; P24: +4 za MVG-114) |
+| Skupno navedb virov | **601** (478 unikatnih `sourceKey`; povprečno 5,3 na zapis; min 1, max 26; P24: +4 za MVG-114; P27: +2; P34: +5 za RNPD) |
 | ⚠️ Razlika s README/meta | README in meta.json sta trdila 589 — **popravljeno na 590** (glej §8) |
 | Zapisi brez vsaj enega vira | 0/114 |
-| Viri brez podatka o licenci | 0/596 |
-| Vrste virov | objava 265, spletni-vir 202, fotografija 106, arhiv 16, zemljevid 5, pričevanje 2 |
+| Viri brez podatka o licenci | 0/601 |
+| Vrste virov | objava 265, spletni-vir 207 (P34: +5 RNPD/odlok), fotografija 106, arhiv 16, zemljevid 5, pričevanje 2 |
 | Lestvica zanesljivosti | 4-stopenska, vsak zapis ima veljaven `evidenceStatus`: DOCUMENTED 88, CORROBORATED 16, TRADITION 8, TESTIMONY 2 |
 | Ločevanje stopenj gotovosti | ✓ arhivski dokaz (arhiv/objava/zemljevid), ustno pričevanje (pricevanje/TESTIMONY), interpretacija in domneva so ločene tako v lestvici kot v `noteSi` posameznih virov; negativni izidi raziskav so izrecno dokumentirani (`NEGATIVE_RESULTS`, 11 zapisov) |
 
@@ -108,7 +108,7 @@ kartice virov; overlay na karti je namenoma le A01/A02 (GEOTRUTH afina).
 | Predmet | Stanje |
 |---|---|
 | Lastni metapodatki sklopa | CC BY-SA 4.0 (`meta.json`, `/api/opendata.license`) — z jasno opombo, da velja SAMO za lastne strukturne metapodatke |
-| Posamezni viri | 596/596 z licenco v `sources[].license` (razporeditev po 128 vrstah licenc v `/api/provenance`) |
+| Posamezni viri | 601/601 z licenco v `sources[].license` (razporeditev po 129 vrstah licenc v `/api/provenance`; P34: nova vrsta CC BY 4.0 — odprta zbirka RNPD) |
 | Slike | 107/107 z `imageCredit` |
 | Zemljevidi (OSM) | atribucija na obeh Leaflet kartah: © OpenStreetMap + »katastrski listi: Arhiv RS (SI AS 176/N/N83)« |
 | Reprodukcije arhivskih predmetov | pravila navedena v `/api/opendata.license.reproduction*` (Arhiv RS/VAČ, SEM, zasebni arhivi) |
@@ -137,8 +137,8 @@ kartice virov; overlay na karti je namenoma le A01/A02 (GEOTRUTH afina).
 | `bun run build` | **uspešno** — 16/16 strani, 12 statičnih API poti (~16 s) |
 | `/api/qa` (lokalno, produkcijska zgradba) | **ok: true, 25/25 PASS** (vključno `qa-p12-village-life`; P18: `qa-p18-source-labels`, `qa-p18-timeline-stops`) |
 | `/api/atlas/integrity` | **11/11 PASS** (hiše, viri, E2E veriga hiša 73→MVG-010, georeferenca, EŠD 2122, vektorizacija, matrike …) |
-| `/api/provenance` | 596 navedb; 114/114 z virom; 0 brez licence |
-| `/api/opendata` | števci 114/596/11/6; licenca CC BY-SA 4.0 |
+| `/api/provenance` | 601 navedb; 114/114 z virom; 0 brez licence |
+| `/api/opendata` | števci 114/601/11/6; licenca CC BY-SA 4.0 |
 | Produkcija (`griblje-museum.vercel.app`) | 200; QA 25/25 po deployu te revizije (glej §10; P18 dodal 2 testa) |
 
 ## 8. Popravki, izvedeni v tej reviziji (brez izgube vsebine)
@@ -514,21 +514,23 @@ koordinat — za muzejski material 1985/1994 pričakovano).
   Kostanjšek R.« — pretvorba: 45 + 34,56/60 = 45.576; 15 + 17,01/60 =
   15.2835. Edina natančna (±20 m) zbirateljska koordinata v zbirki.
 
-### Zavestne izločitve (20 zapisov brez GPS — utemeljitve)
+### Zavestne izločitve (19 zapisov brez GPS — utemeljitve)
 
 1. **Pesem/šega brez fiksne točke (precedens P24):** MVG-065 kresovanje
    (kresi na gričih pozemeljske fare — ni ene točke; P24 ga je navedel kot
    vzor za MVG-114), MVG-114 kresna pesem (1895; pesem ni točka na karti).
-2. **Najdišči brez javnih koordinat:** MVG-113 Srednje njive (Arheološki
+2. **Najdišče brez javne koordinate:** MVG-113 Srednje njive (Arheološki
    vestnik 71.14, celoten PDF prebran — 1 omemba, 0 koordinat; P27: poročilo o
    intenzivnem pregledu Kohane — VS, poročila 39–41, str. 54–55 — prav tako
-   brez koordinat in brez imena Srednje njive; Mason 2001, str. 10, ostaja
+   brez koordinat in brez imena Srednje njive; P34: RNPD ime ne vsebuje, uradna
+   točka EŠD 10094 pa je točka celotnega najdišča, ne lega Srednjih njiv —
+   negativni izid dokumentiran v viru zapisa; Mason 2001, str. 10, ostaja
    TO_COLLECT — med digitaliziranimi številkami ZVKDS revija 39 ni na spletu,
-   saj niz preskoči 37–40), MVG-083 arheološko najdišče ob Kolpi (EŠD 10094 —
-   register namerno ne objavlja koordinat najdišč; P27: poročilo št. 86 lege
-   opisuje samo z ledinskimi imeni Kohane, Kamenice, Gomilca, Mrzla draga in
-   območji pregleda I–XII; njive Kohane, Požekov vrt in Krasinec–Vrh so
-   mikrotoponimi brez javnih koordinat).
+   saj niz preskoči 37–40). MVG-083 arheološko najdišče ob Kolpi (EŠD 10094) je
+   bilo v tej skupini do P34 — **REŠENO**: odprta zbirka RNPD objavlja uradno
+   središčno točko vpisa (15.294803, 45.57951), zapis ima GPS s
+   `coordsApprox=false`, ločeno pa je citiran še Požekov vrt (EŠD 11081,
+   15.291905, 45.571689) — glej §16.
 3. **Regionalni zapisi, ne gribeljska točka:** MVG-019 jurjevanje in
    pustovanje, MVG-079 belokranjska noša, MVG-064 pisanice, MVG-020
    belokranjska kuhinja, MVG-024 bele breze, MVG-018 vinogradništvo in
@@ -627,3 +629,58 @@ Gribljah** (telo zvezka je urejeno abecedno po krajih; najdeno na str. 54–56).
   TO_COLLECT ostaja.
 - Domneva iz prvega branja registra, da bi bilo »A 65 = Griblje«, se ni
   potrdila — poročilo št. 65 je Duplje, občina Vipava (preverjeno, str. 44).
+
+## 16. P34 — URADEN VIR: RNPD ODPRTA ZBIRKA (CC BY 4.0), issue #20 (2026-10-11)
+
+Odkritje raziskave #8: **Register nepremične kulturne dediščine (RNPD)** je
+kot odprta zbirka na OPSI/podatki.gov.si (zbirka
+`register-nepremicne-kulturne-dediscine`; izdajatelj Ministrstvo za kulturo;
+**licenca CC BY 4.0 »Priznanje avtorstva«**; stanje zbirke 2026-10-10, prenos
+24 MB CSV in branje 2026-10-11). Za območje Gribelj vsebuje **5 zapisov z
+uradnimi koordinatami**: EŠD 10094 Arheološko najdišče ob Kolpi (15.294803,
+45.57951), EŠD 11081 Arheološko najdišče Požekov vrt (15.291905, 45.571689),
+EŠD 2122 Cerkev sv. Vida (15.290308, 45.567662), EŠD 19326 Spomenik NOB
+(15.292339, 45.571409) in EŠD 10091 Fučkovci — Hiša Fučkovci 15 (15.299614,
+45.542344). Vsi QR-id.gov.si `https://eid.gov.si/S/{EŠD}` preverjeni (HTTP 200,
+2026-10-11); enako URL zbirke na OPSI in URL Odloka v Uradnem listu RS.
+
+### Spremembe v muzeju
+
+- **MVG-083 (EŠD 10094):** uradni koordinati (15.294803, 45.57951) z
+  `coordsApprox=false` — P25-utemeljitev izločitve (»najdišča brez javnih
+  koordinat«) odpravljena; 2 nova vira (RNPD odprta zbirka s CC BY 4.0 +
+  ločen register-vnos Požekov vrt EŠD 11081 z razmerjem do 10094); obstoječi
+  vir `url:eid.gov.si` nadgrajen z direktno QR-povezavo `eid.gov.si/S/10094`;
+  vir poročila št. 87 dopolnjen z usodo EŠD 11082; zgodba (SL/EN) dopolnjena —
+  register-točka je uradna središčna točka najdišča, ne izkopna točka.
+- **MVG-113 (Srednje njive):** nov vir RNPD z **dokumentiranim negativnim
+  izidom** — ime Srednje njive v nobenem zapisu RNPD; uradna točka EŠD 10094
+  je točka celotnega najdišča, NE lega Srednjih njiv; zapis zavestno ostaja
+  brez GPS (veza za kustodovo razrešitev).
+- **MVG-002 (Cerkev sv. Vida):** pravna podlaga statusa — Odlok o razglasitvi
+  nepremičnih kulturnih spomenikov lokalnega pomena na območju občine
+  Črnomelj, Uradni list RS 63-3040/2018 (27. 9. 2018), str. 9449; vir RNPD
+  EŠD 2122 kot **križna potrditev GEOTRUTH sidra** — razlika med uradno
+  RNPD-točko (15.290308, 45.567662) in muzejskim sidrom (centroid poligona
+  EŠD 2122 iz GisKD MK_EVRD/3602; 45.56761, 15.290311) znaša **~5,8 m**
+  (Δširina 0,000052°, Δdolžina 0,000003°) — sidro potrjeno znotraj zaokroženja
+  register-točke.
+- **Letno časovno potovanje:** YEAR_STOPS 78 → 80 postankov (+ mejni leti
+  novo lociranega zapisa MVG-083: −4500 in 200) — odvisnost `qa-p18-timeline-stops`.
+- **Števci:** navedb virov 596 → **601** (+5 spletni-vir: 207), unikatnih
+  `sourceKey` 478, vrst licenc 129 (nova: CC BY 4.0), zapisi s GPS 94 → **95**,
+  natančnih točk 6 → **7**; brez GPS 19.
+- **QA 35 → 36:** nov test `qa-p34-rnpd-official` (uradni koordinati
+  coordsApprox=false, viri na vseh treh zapisih, negativni izid MVG-113,
+  usoda EŠD 11082, odlok + križna potrditev z izračunano razliko).
+
+### Negativni izidi (dokumentirani, ne ugibani)
+
+- **EŠD 11082** (»Griblje — arheološko območje«, poročilo št. 87, Varstvo
+  spomenikov 39–41 (2006), str. 55–56) **v RNPD ne obstaja** — edini zadetki
+  številke so naključne števke v koordinatah treh tujih zapisov (Prelasko
+  4605, Bistrica pri Mokronogu 1360, Podboršt pri Komendi 15147). Ali je bil
+  vpis preštevilčen, izbrisan ali združen, register ne razkriva; razrešitev
+  ostaja pri ZVKD Novo mesto. Trditev poročila 2006 ostaja neokrnjena.
+- **Ime Srednje njive** ni v nobenem zapisu RNPD — lokacija imena ostaja
+  odprta (MVG-113 brez GPS, kustodova razrešitev).

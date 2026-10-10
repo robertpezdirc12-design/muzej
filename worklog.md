@@ -2256,3 +2256,80 @@ prvega branja registra OVRŽENA (poročilo 65 = Duplje, Vipava).
 TESTI: ESLint 0; tsc 0; build 16/16; lokalno QA 35/35 PASS (nov test zelen), integrity 11/11;
 API: MVG-083 17 virov (Kohane z uradnim URL), MVG-113 3 viri; odjemalski paket vsebuje novo
 zgodbo (Pezdirc).
+
+## P28 — VERCEL ŽETON: dvojna preverba token-health, zavrnjen žeton ozkega obsega (2026-10-10)
+
+- ZAHTVA (uporabnik): obnova VERCEL_TOKEN (rok 2026-10-14, issue #6). Prilepljeni žeton vcp_0Iw9… se
+  avtenticira, a NIMA obsega ekipe (403 na /v9/projects?teamId) — ujeto pred zlomom deploya (vzorec:
+  deploy prek CLI pade, čeprav je žeton »veljaven«).
+- Skrivnost VERCEL_TOKEN povrnjena na prejšnjo vrednost s polnim obsegom (veljavnost do 2026-10-14).
+- token-health.yml nadgrajen: dvojna preverba — avtentikacija (/v2/user) IN obseg ekipe
+  (/v9/projects?teamId=VERCEL_ORG_ID); 403 na drugem klicu = »žeton brez Full Account obsega«.
+- Commit becb1dd (ta žeton v skrivnosti je 10. 10. zjutji še delal; podrobnosti v #6).
+
+## P29 — VERCEL ŽETON OBNOVLJEN (asdasd, Full Account), testni deploy READY, #6 ZAPRT (2026-10-10)
+
+- Lastnik je ustvaril nov žeton 'asdasd' (vcp_7wKQ…2g8y0R, Full Account, brez roka): preverba POLNI
+  obseg (46 projektov ekipe), zapis v skrivnost, živ test prek workflow_dispatch → deployment
+  griblje-museum-6gq3vf75s READY; QA 35/35; GitLab = becb1dd; issue #6 zaprt (utemeljitev: obe
+  polovici žetona rešeni — VERCEL do 2027 s tem žetonom, GITLAB do 2027-01-08 s P26 rotacijo).
+
+## P30 — VERCEL RAČUN OMEJEN (limited:true): deployji padajo, produkcija varna, issue #9 (2026-10-10)
+
+- Med hišnim delom (izbris starih septembrskih žetonov) API 403 — vzrok NI žeton: profil /v2/user
+  poroča limited:true (omejen račun, od ~17:15 UTC). Testni deploy run 38071811447 FAILURE
+  (»Could not retrieve Project Settings«) tudi z GitHub runnerja — prekinitev cevovoda.
+- Produkcija NI prizadeta (zadnji deployment becb1dd streže; QA 35/35). Vercel statuspage izključen.
+- Ustvarjen issue #9 (časovnica, dokazi, 5 korakov za lastnika: dashboard/billing/usage).
+
+## P31 — REVIZIJA #7 (AUDIT) + RAZISKAVA #8 (RESEARCH): vrzela #10–#19, odkritje RNPD, #20 (2026-10-11)
+
+- #7 AUDIT ONLY: vseh 9 začetnih ugotovitev MUSEUM-AUDIT.md potrjenih z dokazi + 3 nove vrzeli
+  (matrika samo hiša 61; datoteka 3111 iz P20; worklog brez P28+) → 10 issue-jev #10–#19 z merili
+  dokončanja, prioritetami in navzkrižnimi povezami (P1: #10 #12 #13 #17).
+- #8 RESEARCH ONLY: 8 digitalnih muzejev primerjanih; RNPD odprta zbirka (OPSI, CC BY 4.0,
+  posod. 2026-10-10): 5 zapisov Gribelj S KOORDINATAMI (EŠD 10094/11081/2122/19326 + Fučkovci 10091);
+  EŠD 11082 (2006) v registru NE obstaja; negativni izidi dokumentirani → issue #20 (RNPD koordinate,
+  Požekov vrt, razrešitev 11082). Poročili na #7 in #8.
+
+## P32 — OBNOVA PO OMEJITVI: nov žeton, hišno delo B, cevovod obnovljen (2026-10-11)
+
+- Lastnik je odpravil omejitev in prilepil nov žeton vcp_5B7X… (pravi račun, ožji obseg — vidi samo
+  griblje-museum, /v2/user 404: osebna ekipa, ne Full Account; za deploy zadošča).
+- HIŠNO DELO B: izbrisani DATABASE_URL in DIRECT_URL s projekta griblje-museum (ostaja samo
+  NEXT_PUBLIC_SITE_URL) — pisemske pravice žetona dokazane.
+- Skrivnost zamenjana; testni deploy run 38078748179 SUCCESS; dpl_4dwK3xK… READY; QA 35/35.
+- Ugotovitev: projekt nima GitHub integracije (link:null) — vsi deployji potekajo prek Vercel CLI
+  v GitHub Actions. Ugotovitev o žetonih: API za upravljanje uporabniških žetonov z ekipnim žetonom
+  ni dostopen (403); ekipni končni točki za žetone ne obstajata — izbris starih žetonov ostane ročno.
+
+## P33 — URADNI ŽETON vcp_7X9D…, #9 ZAPRT (2026-10-11)
+
+- Lastnikov drugi žeton (»račun«; enak profil obsega kot prvi) zamenjan v skrivnost; testni deploy
+  run 38079570691 SUCCESS; dpl_2HdYqw… READY; QA 35/35; rezerva scripts/set_github_secrets.py posodobljena.
+- #9 zaprt (state_reason: completed) z dokazi; preostalo za lastnika: ročni izbris starih žetonov na
+  vercel.com/account/settings/tokens (septembrski + odvečni današnji).
+
+## P34 — RNPD URADNE KOORDINATE (#20) + HIGIENA REPOZITORIJA (#19) (2026-10-11)
+
+- ZETON: tretji lastnikov žeton vcp_5KV4… uradno v skrivnosti (testni deploy run 38080350097 SUCCESS,
+  dpl_8jGcYh… READY, QA 35/35); predhodna dva (vcp_5B7X…, vcp_7X9D…) ostajata za ročni izbris lastnika.
+- VIR (issue #20, raziskava #8): RNPD odprta zbirka OPSI/podatki.gov.si (CC BY 4.0, stanje 2026-10-10,
+  prenos+branje 2026-10-11) — 5 zapisov Gribelj z uradnimi koordinatami; vsi QR eid.gov.si/S/{EŠD}
+  preverjeni HTTP 200; URL Odloka v Uradnem listu RS preverjen.
+- MVG-083 (EŠD 10094): uradni koordinati 15.294803/45.57951, coordsApprox=false (P25 izločitev
+  odpravljena); +2 vira (RNPD zbirka CC BY 4.0; ločen vnos Požekov vrt EŠD 11081 z razmerjem do 10094);
+  obstoječi vir eid.gov.si nadgrajen z direktno QR povezavo; vir poročila št. 87 dopolnjen z usodo
+  EŠD 11082 (v RNPD ne obstaja — naključne števke v koordinatah 3 tujih zapisov; rešitev: ZVKD NM);
+  zgodba SL/EN dopolnjena (register-točka ≠ izkopna točka).
+- MVG-113: vir RNPD z dokumentiranim negativnim izidom (ime Srednje njive ni vpisano; točka EŠD 10094
+  je točka celotnega najdišča, ne lega Srednjih njiv) — zapis zavestno ostaja brez GPS.
+- MVG-002: pravna podlaga (Odlok, Uradni list RS 63-3040/2018, str. 9449) + vir RNPD EŠD 2122 kot
+  križna potrditev GEOTRUTH sidra — razlika RNPD-točka : muzejsko sidro (centroid GisKD poligona)
+  = ~5,8 m, sidro potrjeno.
+- LETNICNIK: YEAR_STOPS 78 → 80 (nova mejni leti MVG-083: −4500, 200) — qa-p18-timeline-stops.
+- ŠTEVCI: viri 596 → 601 (spletni-vir 207, unikatnih ključev 478, licenc 129 — nova CC BY 4.0);
+  GPS 94 → 95; natančnih 6 → 7; brez GPS 19. QA 35 → 36 (qa-p34-rnpd-official).
+- HIGIENA (issue #19): izbrisana odpadna datoteka 3111 (izpis dev strežnika, commit P20); ta dnevnik
+  dopolnjen z manjkajočimi fazami P28–P34.
+- TESTI: ESLint 0; tsc 0; build 16/16; lokalno QA 36/36 (nov test zelen); produkcija po deployu 36/36.

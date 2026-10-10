@@ -49,6 +49,7 @@ interface ExhibitRow {
   model3dUrl: string | null;
   lat: number | null;
   lng: number | null;
+  coordsApprox?: boolean | null;
   yearFrom: number | null;
   yearTo: number | null;
   image?: string | null;
@@ -1294,6 +1295,63 @@ export function runQA(opts: QAOptions = {}): QAReport {
     p27Errors.length === 0
       ? "2 zapisa · poročili št. 86 + 87 · negativni izid (koordinate) dokumentiran v notah"
       : p27Errors.join("; "),
+  );
+
+  /* ── P34 (issue #20): RNPD odprta zbirka — uradni vir in koordinate ── */
+  const RNPD_URL = "https://podatki.gov.si/dataset/register-nepremicne-kulturne-dediscine";
+  type P34Source = { sourceKey?: string | null; url?: string | null; license?: string | null; noteSi?: string | null };
+  const p34Errors: string[] = [];
+  // MVG-083: uradni koordinati EŠD 10094, coordsApprox=false
+  const ex83 = EXHIBITS.find((e) => e.museumNo === "MVG-083");
+  if (!ex83) p34Errors.push("MVG-083 manjka");
+  else {
+    if (ex83.lat !== 45.57951 || ex83.lng !== 15.294803)
+      p34Errors.push("MVG-083: koordinati nista uradni RNPD točki EŠD 10094 (15.294803, 45.57951)");
+    if (ex83.coordsApprox !== false)
+      p34Errors.push("MVG-083: coordsApprox mora biti false (uraden vir)");
+    const srcs83 = (ex83.sources ?? []) as P34Source[];
+    const rnpd83 = srcs83.find((s) => s.url === RNPD_URL);
+    if (!rnpd83) p34Errors.push("MVG-083: manjka vir RNPD (odprta zbirka podatki.gov.si)");
+    else if (rnpd83.license !== "CC BY 4.0") p34Errors.push("MVG-083: vir RNPD brez licence CC BY 4.0");
+    if (!srcs83.some((s) => s.url === "https://eid.gov.si/S/10094"))
+      p34Errors.push("MVG-083: vir registra brez direktne QR povezave eid.gov.si/S/10094");
+    if (!srcs83.some((s) => s.url === "https://eid.gov.si/S/11081"))
+      p34Errors.push("MVG-083: manjka vir EŠD 11081 Požekov vrt (ločen register-vnos)");
+    const s87 = srcs83.find((s) => (s.sourceKey ?? "").includes("Grahek"));
+    if (!(s87?.noteSi ?? "").includes("11082"))
+      p34Errors.push("MVG-083: nota poročila št. 87 ne dokumentira usode EŠD 11082");
+  }
+  // MVG-113: negativni izid (brez GPS) + RNPD vir + usoda 11082
+  const ex113b = EXHIBITS.find((e) => e.museumNo === "MVG-113");
+  if (!ex113b) p34Errors.push("MVG-113 manjka");
+  else {
+    if (ex113b.lat != null || ex113b.lng != null)
+      p34Errors.push("MVG-113: Srednje njive OSTAJA brez GPS (RNPD ne razrešuje lege)");
+    const rnpd113 = ((ex113b.sources ?? []) as P34Source[]).find((s) => s.url === RNPD_URL);
+    if (!rnpd113) p34Errors.push("MVG-113: manjka vir RNPD (negativni izid)");
+    else if (!(rnpd113.noteSi ?? "").includes("Srednje njive") || !(rnpd113.noteSi ?? "").includes("11082"))
+      p34Errors.push("MVG-113: nota RNPD ne dokumentira negativnega izida (Srednje njive, EŠD 11082)");
+  }
+  // MVG-002: pravna podlaga + križna potrditev RNPD
+  const ex002 = EXHIBITS.find((e) => e.museumNo === "MVG-002");
+  if (!ex002) p34Errors.push("MVG-002 manjka");
+  else {
+    const srcs002 = (ex002.sources ?? []) as P34Source[];
+    if (!srcs002.some((s) => (s.url ?? "").includes("uradni-list.si") && (s.url ?? "").includes("63-3040")))
+      p34Errors.push("MVG-002: manjka pravna podlaga (Odlok, Uradni list RS 63-3040/2018)");
+    const rnpd2122 = srcs002.find((s) => s.url === "https://eid.gov.si/S/2122");
+    if (!rnpd2122) p34Errors.push("MVG-002: manjka vir RNPD EŠD 2122 (križna potrditev)");
+    else if (!(rnpd2122.noteSi ?? "").includes("5,8 m"))
+      p34Errors.push("MVG-002: nota RNPD ne navaja izračunane razlike sidra (~5,8 m)");
+  }
+  push(
+    "qa-p34-rnpd-official",
+    "P34: RNPD odprta zbirka (CC BY 4.0): uradni koordinati MVG-083 (EŠD 10094, coordsApprox=false) + Požekov vrt (EŠD 11081) kot vir; MVG-113 negativni izid (brez GPS) in usoda EŠD 11082 dokumentirana; MVG-002 odlok 63-3040/2018 + križna potrditev sidra (~5,8 m)",
+    "P34: RNPD open dataset (CC BY 4.0): MVG-083 official coordinates (EŠD 10094, coordsApprox=false) + Požekov vrt (EŠD 11081) as a source; MVG-113 negative result (no GPS) and the fate of EŠD 11082 documented; MVG-002 decree 63-3040/2018 + anchor cross-confirmation (~5.8 m)",
+    p34Errors.length === 0,
+    p34Errors.length === 0
+      ? "3 zapisi · 5 novih virov · 1 uradna točka · 1 negativni izid · 1 križna potrditev"
+      : p34Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;

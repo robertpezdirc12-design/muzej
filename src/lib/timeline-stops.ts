@@ -6,10 +6,10 @@
  * zapisa z GPS lokacijo). Ker se množica pik na karti (existsAt) spremeni
  * samo na mejnem letu, diskretni drsnik s postanki na VSEH mejnih letih
  * prikaže natanko enake množice kot prejšnji zvezni drsnik po letih —
- * ničesar ne izgubi, pridobi pa prazgodovino: prva tri postanka
- * (−1000, −800, −700) omogočajo pot do bronaste igle MVG-095 (−1000…−700),
- * ki je bila prej nedosegljiva (zvezni drsnik je šel šele od 1468, prve
- * pisne omembe vasi).
+ * ničesar ne izgubi, pridobi pa prazgodovino: postanki −4500 (EŠD 10094
+ * ob Kolpi, MVG-083 — RNPD uradna točka, P34) ter −1000, −800 in −700
+ * omogočajo pot do bronaste igle MVG-095 (−1000…−700), ki je bila prej
+ * nedosegljiva (zvezni drsnik je šel šele od 1468, prve pisne omembe vasi).
  *
  * Doslednost s podatki varuje test qa-p18-timeline-stops (src/lib/qa.ts):
  * če zbirki dodate zapis z novim mejnim letom, test pozove, da leto dodate
@@ -18,7 +18,9 @@
 
 /** Urejeno naraščajoče; prvi element je prazgodovina, zadnji je "danes". */
 export const YEAR_STOPS = [
+  -4500, // najgloblja prazgodovina: EŠD 10094 ob Kolpi, MVG-083 (P34: RNPD uradna točka)
   -1000, -800, -700, // prazgodovina: bronasta igla MVG-095, Kučar MVG-060
+  200, // zgornja meja MVG-083 (zgodnja rimska doba; P34)
   1408, 1468, 1524, 1556, 1587, 1612, // srednji vek — Cerkvišče, Griblach (vas 1468), turški vpadi, čevljar
   // (1526 = prva omemba CERKVE sv. Vida, ne mejno leto zapisa — glej MVG-001/002/003)
   1669, 1679, // P22: matične knjige podzemeljske župnije (MVG-037/038) — arhiv rodbin na karti
