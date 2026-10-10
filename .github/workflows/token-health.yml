@@ -1,0 +1,111 @@
+# Dnevni pregled zdravja žetonov (VERCEL_TOKEN + GITLAB_TOKEN).
+#
+# Namen (issue #6): noben žeton ne sme potekti tiho.
+#   - VERCEL_TOKEN: Vercel API ne omogoča ustvarjanja žetonov, zato ga lahko
+#     samo spremljamo — ob izteku (401/403) job pade, na issue #6 pade
+#     komentar z navodili, lastnik dobi e-poštno obvestilo o padlem jobu.
+#     Produkcija ob tem nemoteno teče (deploymenti so trajni), pavzirajo
+#     samo novi samodejni deployi.
+#   - GITLAB_TOKEN: žeton z obsegom self_rotate se lahko podaljša prek
+#     API-ja (POST /personal_access_tokens/self/rotate z expires_at) —
+#     tako je bil 2026-10-10 podaljšan na 2027-01-08. Ta pregled opozori
+#     7 dni pred iztekom (::warning) in javno pade ob izteku/preklicu.
+#
+# Poganja se vsak dan ob 06:12 UTC (08:12 po srednjeevropskem poletnem
+# času) in ročno (workflow_dispatch). Zeleno izvajanje = vse v redu.
+name: Zdravje žetonov (Vercel/GitLab)
+
+on:
+  schedule:
+    - cron: '12 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  issues: write   # komentar/odpiranje issue #6 ob odkriti napaki
+  actions: read   # preverba prejšnjega izvajanja (de-dup opozoril)
+
+jobs:
+  preveri:
+    runs-on: ubuntu-latest
+    steps:
+      - name: VERCEL_TOKEN
+        id: vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          code=$(curl -s -o /tmp/vercel.json -w '%{http_code}' --max-time 30 \
+            -H "Authorization: Bearer $VERCEL_TOKEN" https://api.vercel.com/v2/user)
+          if [ "$code" != "200" ] && [ "$code" != "401" ] && [ "$code" != "403" ]; then
+            # prehodna napaka (omrežje/omejitev) — en poizkus po 15 s
+            sleep 15
+            code=$(curl -s -o /tmp/vercel.json -w '%{http_code}' --max-time 30 \
+              -H "Authorization: Bearer $VERCEL_TOKEN" https://api.vercel.com/v2/user)
+          fi
+          if [ "$code" = "200" ]; then
+            echo "::notice::VERCEL_TOKEN deluje (HTTP 200)"
+            echo "dead=false" >> "$GITHUB_OUTPUT"
+          elif [ "$code" = "401" ] || [ "$code" = "403" ]; then
+            echo "::error::VERCEL_TOKEN NE DELUJE (HTTP $code) — samodejni deploy je ustavljen (produkcija še teče). Obnova: vercel.com/account/tokens, glej issue #6."
+            echo "dead=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::warning::VERCEL_TOKEN ni bilo mogoče preveriti (HTTP $code) — prehodna napaka, ponovno ob naslednjem izvajanju."
+            echo "dead=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: GITLAB_TOKEN
+        id: gitlab
+        env:
+          GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
+        run: |
+          code=$(curl -s -o /tmp/gitlab.json -w '%{http_code}' --max-time 30 \
+            -H "PRIVATE-TOKEN: $GITLAB_TOKEN" https://gitlab.com/api/v4/personal_access_tokens/self)
+          if [ "$code" != "200" ] && [ "$code" != "401" ]; then
+            sleep 15
+            code=$(curl -s -o /tmp/gitlab.json -w '%{http_code}' --max-time 30 \
+              -H "PRIVATE-TOKEN: $GITLAB_TOKEN" https://gitlab.com/api/v4/personal_access_tokens/self)
+          fi
+          if [ "$code" != "200" ]; then
+            echo "::error::GITLAB_TOKEN NE DELUJE (HTTP $code) — sinhronizacija z GitLabom je ustavljena. Obnova: rotacija (self_rotate) ali nov PAT, glej issue #6."
+            echo "dead=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "dead=false" >> "$GITHUB_OUTPUT"
+            days=$(python3 -c "import json; from datetime import date; e=json.load(open('/tmp/gitlab.json')).get('expires_at'); print((date.fromisoformat(e)-date.today()).days if e else 9999)")
+            exp=$(python3 -c "import json; print(json.load(open('/tmp/gitlab.json')).get('expires_at') or 'brez roka')")
+            echo "days=$days" >> "$GITHUB_OUTPUT"
+            echo "Rok GitLab žetona: $exp (še $days dni)"
+            if [ "$days" -le 0 ]; then
+              echo "::error::GITLAB_TOKEN je POTEKEL ($exp) — rotacija (self_rotate) ali nov PAT, glej issue #6."
+              echo "dead=true" >> "$GITHUB_OUTPUT"
+            elif [ "$days" -le 7 ]; then
+              echo "::warning::GitLab žeton poteče čez $days dni ($exp) — rotacija (self_rotate) ali nov PAT, glej issue #6."
+            fi
+          fi
+
+      - name: Opozorilo na issue #6 (ob odkriti napaki)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERCEL_DEAD: ${{ steps.vercel.outputs.dead }}
+          GITLAB_DEAD: ${{ steps.gitlab.outputs.dead }}
+        if: ${{ steps.vercel.outputs.dead == 'true' || steps.gitlab.outputs.dead == 'true' }}
+        run: |
+          {
+            echo "Samodejni dnevni pregled žetonov je odkril napako:"
+            echo ""
+            [ "$VERCEL_DEAD" = "true" ] && echo "- **VERCEL_TOKEN** ne deluje več — samodejni deploy je ustavljen (produkcija nemoteno teče). Obnova: [vercel.com/account/tokens](https://vercel.com/account/tokens) → nov žeton (Full Account) → izroži pomočniku, vnos v skrivnost je pripravljen."
+            [ "$GITLAB_DEAD" = "true" ] && echo "- **GITLAB_TOKEN** ne deluje več — sinhronizacija z GitLabom je ustavljena. Rešitev: podaljšanje prek rotacije (self_rotate) ali nov PAT na GitLabu."
+            echo ""
+            echo "Navodila za obnovo: prvi prispevek tega issue-ja."
+          } > /tmp/comment.md
+          # komentar samo ob prehodu iz zelenega v rdeče (vsakodnevno
+          # ponavljanje bi zasipalo issue; e-poštno opozorilo o padlem
+          # jobu že samo po sebi opominja vsak dan)
+          prev=$(gh run list --workflow token-health.yml --limit 5 \
+            --json conclusion --jq '[.[] | select(.conclusion != null)] | (.[0].conclusion // "unknown")' \
+            2>/dev/null || echo unknown)
+          if [ "$prev" = "failure" ]; then
+            echo "Prejšnje izvajanje je že padlo — komentar na #6 že obstaja, brez novega."
+          else
+            gh issue reopen 6 >/dev/null 2>&1 || true
+            gh issue comment 6 --body-file /tmp/comment.md
+          fi
+          exit 1
