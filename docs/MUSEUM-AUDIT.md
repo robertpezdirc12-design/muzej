@@ -36,7 +36,7 @@ Viri: `src/data/museum/exhibits.json`, `events.json`, `extra.json`, `meta.json`;
 | Povzetki in zgodbe | 114/114 s povzetki, 114/114 s poljema `storySi`/`storyEn` | ✓ |
 | Slike | 107/114 s sliko; vseh 102 različnih citiranih datotek obstaja v `public/` (5 si deli dveh zapisov; +2 datoteki za Atlas 1812 = 104 na disku); 107/107 z `imageCredit` | ✓ 7 zapisov brez slike (namerno: npr. dogodki, izseljenstvo) |
 | 3D model | 1 (cerkev sv. Vida, GLB + USDZ, obe datoteki obstajata, kredit navdan) | ✓ |
-| Koordinate | 48/114 s GPS znotraj Bele krajine (45,30–45,90 N, 14,60–15,80 E); vse z zastavico `coordsApprox`, kjer je približek | ⚠️ 66 zapisov brez GPS — znana vrzel (P22: +12 točk izključno iz citiranih virov; P24: MVG-114 je pesem brez lokacije — namerno brez GPS, kot MVG-065), glej §9 |
+| Koordinate | 94/114 s GPS znotraj Bele krajine (45,30–45,90 N, 14,60–15,80 E); zastavica `coordsApprox` pri vseh razen natančne točke ZooKeys (MVG-103) | ⚠️ 20 zapisov brez GPS — zavestne odločitve, ne vrzel (pesem/šega brez fiksne točke, regionalni zapisi, tradicija z odprtim iskanjem, najdišči brez javnih koordinat — utemeljitve v §14), glej §9 |
 | Datumi | 101 zapisov z `yearFrom`; 13 z `null` (tematski zapisi z besedilnim `periodSi`, npr. »verska dediščina«) | ⚠️ 4 prazgodovinski zapisi so bili nevidni na časovnici — **popravljeno** (glej §8) |
 | Negativna leta | 4 zapisi (MVG-060 −800, MVG-083 −4500…200, MVG-095 −1000…−700, MVG-113 −1200…−800) — prazgodovinska najdišča, `periodSi` jih pravilno poimenuje (»pribl. 4500 pr. n. št.«) | ⚠️ prikaz »−4500« namesto »4500 pr. n. št.« — **popravljeno** (glej §8) |
 | Kategorije | 6 veljavnih: kraj 50, sege 21, gospodarstvo 13, vojna 13, narava 12, kolpa 5 | ✓ |
@@ -188,7 +188,7 @@ DEMO/NAČRTOVANO = mehanizem obstaja, vsebina čaka · MISSING = manjka · BLOCK
 | 12 | Licence (CC BY-SA 4.0 plastovito, OSM, 107/107 kreditov) | **DONE** |
 | 13 | API-ji statični, brez vnosa, escaping | **DONE** |
 | 14 | Testni nabor (lint/build/QA/integrity) | **DONE** (rezultati v §7.2) |
-| 15 | GPS koordinate 66/114 zapisov | **PARTIAL** (P22: 36 → 48 točk — 12 novih sidrnih točk IZKLJUČNO iz virov, ki jih zapisi že citirajo: sl.wiki Griblje ×8, sl.wiki Kanižarica, Commons GPS fotografiji (ribnik Griblje, Dakota pri Otoku), iNaturalist URL, cerkveno sidro EŠD 2122 za zvon; zavrnjena fotografia Valley of Kolpa (~19 km stran); preostalih 66 brez vira koordinate (P24: MVG-114 je pesem — namerno brez GPS, kot MVG-065) — ne izmišljujemo) |
+| 15 | GPS koordinate 20/114 zapisov | **DONE (P25)** (P22: 36 → 48; P25: 48 → 94 — 41 vaških sidr sl.wiki Griblje za predmete V vasi [osebe, dogodki, šege, ustanove, gospodarstvo, narava] + 5 posebnih: sl.wiki Krasinec [letališče 1945, MVG-056], sl.wiki Jelševnik [črni močeril, MVG-025], sl.wiki Podzemelj [Barlova mladost, MVG-058], sl.wiki Adlešiči [pečnica, MVG-076], ZooKeys 474 natančna točka ribnika [MVG-103, coordsApprox=false]; YEAR_STOPS 45 → 78; preostalih 20 = zavestne odločitve, popoln seznam z utemeljitvami v §14) |
 | 16 | Zapis MVG-114 »Kresna pesem« | **DONE (P24)** — dodan kot »Kresna pesem (1895) — natisnjeni sled pesmi ob Kolpi« (4 viri: dLib.si Dom in svet 8/14 1895, Dom in svet 7/22 1894, Radio Odeon 2025 s celotnim živečim besedilom, Radio Odeon Totter). Letnica prvotnega načrta (1888) se v virih ni potrdila — dokumentiran natis kresnih pesmi je 1895 (razlaga v §13); povezavi iz kresovanje/panjska-koncnica povrnjeni |
 | 17 | Popravljanje 34 prikritih TS napak (`ignoreBuildErrors`) | **DONE (P17)** — 0 napak, zastavica odstranjena |
 | 18 | Surove kode vrst virov vidne obiskovalcu (npr. »objava«) | **DONE (P18)** — slovar oznak `SOURCE_TYPE_LABELS` (SL/EN) v `src/lib/museum.ts`; izpis v exhibit-detail prek `sourceTypeLabel()` (surova koda ostane kot tooltip za sklicevanje na odprte podatke); celovitost varuje `qa-p18-source-labels` |
@@ -202,7 +202,7 @@ DEMO/NAČRTOVANO = mehanizem obstaja, vsebina čaka · MISSING = manjka · BLOCK
    `public/audio/timespots/README.md`) — človeški posnetek ni AI model.
 2. **Preizkus obiskovalnega toka na telefonu** (QR vhod, GPS, AR kamera, offline) — lastnik z
    napravo; po potrebi popravki.
-3. **Dopolnjevanje GPS koordinat** iz verodostojnih virov (preostalih 66 zapisov; P22 je dodal 12 iz citiranih virov — sl.wiki, Commons GPS, GBIF/iNaturalist, EŠD; P24: MVG-114 je pesem — namerno brez GPS) — postopoma, z viri.
+3. ~~**Dopolnjevanje GPS koordinat**~~ — **P25 ZAKLJUČENO** (48 → 94 od 114; preostalih 20 zavestno brez GPS — pesem/šega brez fiksne točke, regionalni zapisi, tradicija z odprtim iskanjem, najdišči brez javnih koordinat; popoln seznam z utemeljitvami v §14).
 
 (P24 je dodal MVG-114 — glej §13. Nekdanji točki 4/6 — odstranitev `ignoreBuildErrors` in čiščenje env/Prisme — sta že odpravljeni v P17 oziroma P15+P17; matrika §9 #17 in #19. P23: zastareli vrstici dejansko odstranjeni s seznama, kot je P22 že zapisal v worklog.)
 
@@ -448,3 +448,111 @@ dvema poštenima popravkoma načrta, obema dokumentiranima spodaj.
   related-refs 0 zastarelih); ESLint 0; tsc --noEmit 0; build uspešen.
 - Brez AI modelov: gre za podatkovni zapis iz tiskanih in spletnih virov;
   vsebine ni ustvaril jezikovni model — vsak stavek ima vir, ki ga citira.
+## 14. P25 — GPS KOORDINATE 48 → 94 (2026-10-10)
+
+Drugi val dopolnjevanja koordinat po P22 (enaka disciplina: nobena koordinata
+ni izmišljena; vsaka izhaja iz javnega, preverljivega vira). Žetev izvedena
+2026-10-10: sl.wikipedia API `prop=coordinates` (dostop iz peskovnika tokrat
+deluje, brez 403/429 blokad iz P22; koordinate Griblje so potrdile P22
+vrednost), Commons API `extmetadata` (preverjene 4 fotografije — vse brez
+GPS), NCBI eFetch (GenBank FJ495099: `geo_loc_name="Slovenia"` — brez
+koordinate), pdftotext celotnega PDF-ja Arheološkega vestnika 71 (1 omemba
+»Srednje njive pri Gribljah«, 0 vzorcev koordinat), rtvslo 743207 (potrditev:
+»s partizanskega letališča Krasinec v Beli krajini«, »na široki obkolpski
+ravnici v neposredni bližini mejne reke Kolpe dve letališči«), EJT 777 prek
+strežniškega bralnika (gribeljski primerka sta v zgodbi MVG-112 citirana brez
+koordinat — za muzejski material 1985/1994 pričakovano).
+
+### Nova sidra (46)
+
+- **Vaško sidro sl.wiki Griblje (45.575447, 15.292761; `coordsApprox`) ×41**
+  za zapise, katerih predmet je fizično v vasi — enak vzorec kot P22
+  (MVG-022/037/038/057/067/068/077). Obseg: osebe z Gribelj (MVG-033 Audrey
+  Totter [Gornje Griblje], MVG-100 J. R. Totter [rod Matičkov], MVG-034
+  Nikolaj Dragoš [Hajdeč grunt], MVG-043 Katarina Zupanič [Grizin], MVG-101
+  Valentina Štrucelj, MVG-042 dr. Franc Brinc, MVG-085 Mate Zupanič-Švarski
+  [hiša Švarskih], MVG-035 Peter Kambič [učitelj], MVG-099 Dragojila Milek
+  [očetova domovija], MVG-090 Anton Brodarič, MVG-072 Ciril Totter, MVG-044
+  Toni Gašperič, MVG-055 Franjo Veselko [»ob polju pri Gribljah« 1945]);
+  dogodki v vasi (MVG-014 evakuacija marec 1945 — fotografiji naslovljeni
+  »Griblje pri Črnomlju«; MVG-041 pasuljada, MVG-047 kavbojski žur, MVG-073
+  praznik KS, MVG-070 gribeljci po svetu 2019, MVG-104 tranzit 2025, MVG-084
+  jurjevo, MVG-071 ko se ptički ženijo, MVG-087 križevo, MVG-106 poljsko
+  lokostrelstvo); ustanove vasi (MVG-026 vaška šola, MVG-046 muzejska
+  učilnica, MVG-078 ŠD, MVG-069 TD, MVG-089 DKŽ, MVG-052 tamburaši Danica);
+  gospodarstvo vasi (MVG-082 žbul, MVG-086 tobak, MVG-107 komasacija
+  Griblje–Cerkvišče, MVG-051 kmetija Štrucelj, MVG-011 izseljenstvo,
+  MVG-108 odkupne cene COVID, MVG-017 belokranjska hiša [dokumentirani
+  gribeljski primeri SEM F0000182/F0001407], MVG-088 razglednica 1903
+  [naslov »v Griblje«]); narava vasi (MVG-102 TULV — voluharica ujeta
+  v Gribljah, GenBlock potrjeno; MVG-112 Nemastoma b. gruberi — primerka
+  »Griblje−Desinec« 1985 in »Dragoši, Griblje« 1994); MVG-039 španska gripa
+  (podzemeljska matična knjiga — enako vaško sidro kot MVG-037/038 v P22).
+- **sl.wiki Krasinec (45.58835, 15.279114)** — MVG-056 zračni most:
+  partizansko letališče Krasinec, marec 1945 (naselje občine Metlika ob
+  Kolpi, ~1,5 km od Gribelj; sl.wiki članek o vasi ob Kolpi; ločeno od MVG-014,
+  ki sidra na Griblje — fotografiji Veselka sta naslovljeni »Griblje pri
+  Črnomlju«; dva zapisa, dve plasti iste operacije).
+- **sl.wiki Jelševnik (45.571142, 15.146808)** — MVG-025 črni močeril:
+  izvir Jelševniščice v Jelševniku je edino najdišče na svetu, kjer je
+  podvrsto mogoče videti v naravnem okolju (odkritje 1986 na izviru
+  Dobličice; Jelševnik leži zahodno od Črnomlja — zapis ne trdi, da močeril
+  živi v Gribljah, zato ni vaškega sidra).
+- **sl.wiki Podzemelj (45.6087, 15.273447)** — MVG-058 Janko Barle: družina
+  se je 1872 preselila v Podzemelj, tu je končal ljudsko šolo (»tu je Bela
+  krajina vtisnila v njega spomin«). Sidro mladostnega kraja, ne rojstnega
+  (Budanje, Vipavska dolina).
+- **sl.wiki Adlešiči (45.522397, 15.311044)** — MVG-076 pečnica za sušenje
+  sadja: fotografija Franceta Vesela 1928 je »posneta v Adlešičih« (naslov
+  citirane Commons datoteke + zgodba zapisa); Commons GPS metapodatka ni,
+  sidro je torej vas, ne točka. Zapis ostaja iskreno označen kot tradicija
+  (muzej išče gribeljski primer).
+- **ZooKeys 474, DOI 10.3897/zookeys.474.8474 (45.576, 15.2835;
+  `coordsApprox=false`)** — MVG-103 Cryptachaea riparia: v zgodbi zapisa
+  dobesedno citiran zbiralni podatek »Pond Ribnik NW of village Griblje;
+  45°34,56′ N, 15°17,01′ E, 150 m n. m.; 29. 7. 2001; leg. & det.
+  Kostanjšek R.« — pretvorba: 45 + 34,56/60 = 45.576; 15 + 17,01/60 =
+  15.2835. Edina natančna (±20 m) zbirateljska koordinata v zbirki.
+
+### Zavestne izločitve (20 zapisov brez GPS — utemeljitve)
+
+1. **Pesem/šega brez fiksne točke (precedens P24):** MVG-065 kresovanje
+   (kresi na gričih pozemeljske fare — ni ene točke; P24 ga je navedel kot
+   vzor za MVG-114), MVG-114 kresna pesem (1895; pesem ni točka na karti).
+2. **Najdišči brez javnih koordinat:** MVG-113 Srednje njive (Arheološki
+   vestnik 71.14, celoten PDF prebran — 1 omemba, 0 koordinat; Mason 2001
+   ostaja TO_COLLECT), MVG-083 arheološko najdišče ob Kolpi (EŠD 10094 —
+   register namerno ne objavlja koordinat najdišč; njive Kohane, Požekov vrt
+   in Krasinec–Vrh so mikrotoponimi brez javnih koordinat).
+3. **Regionalni zapisi, ne gribeljska točka:** MVG-019 jurjevanje in
+   pustovanje, MVG-079 belokranjska noša, MVG-064 pisanice, MVG-020
+   belokranjska kuhinja, MVG-024 bele breze, MVG-018 vinogradništvo in
+   metliška črnina (vinska ruta Bele krajine; Griblje le na njenem robu),
+   MVG-023 štorklje (regionalna vrsta), MVG-075 Valvasor 1689 (knjiga o
+   deželi), MVG-063 Jože Dular (rojen Vavta vas, delo Metlika — častni
+   seznam varuhov dediščine, ne gribeljska točka).
+4. **Tradicija z odprtim iskanjem (muzej išče gribeljski primer):** MVG-066
+   kuhanje žganja (išče gribeljsko kuharijo), MVG-021 tkalstvo (išče statve,
+   ki so stale v Gribljah).
+5. **Ni prostorska točka:** MVG-074 Ljudje ob Kolpi (radijska rubrika).
+6. **Pojav brez ene točke:** MVG-008 reka ekstremov (merilna postaja Metlika
+   12 km dolvodno; suše in poplave so pojav celotne reke; september 2025 iz
+   Prelesja in postaje Petrina).
+7. **P22 zavrnitve, nespremenjene (točkovni objekti brez vira koordinate):**
+   MVG-053 kopališče Griblje, MVG-007 malenca na Kolpi, MVG-045 Madroničev
+   mlin (Prelesje).
+
+### Izvedene spremembe
+
+- `exhibits.json`: 46 × lat/lng/coordsApprox (noben vir in nobeno drugo polje
+  ni spremenjeno — števci ostajajo 114 zapisov / 594 vrstic virov).
+- `src/lib/timeline-stops.ts`: YEAR_STOPS 45 → 78 postankov (+33 mejnih let
+  novih lociranih zapisov: 1800, 1850, 1869, 1880, 1885, 1890, 1891, 1894,
+  1899, 1903, 1907, 1908, 1917, 1918, 1920, 1928, 1929, 1985, 1986, 1989,
+  1996, 2000, 2001, 2004, 2010, 2013, 2015, 2016, 2018, 2019, 2020, 2021,
+  2022) — odvisnost qa-p18-timeline-stops.
+- `docs/MUSEUM-AUDIT.md`: §2, matrika §9 #15 (PARTIAL → DONE), §9 točka 3,
+  nov §14 (ta razdelek).
+- Brez AI modelov: gre za podatkovni zapis iz javnih virov (Wikipedia API,
+  ZooKeys, GenBank, rtvslo, PDF Arheološkega vestnika); nobena koordinata ni
+  izmišljena ali interpolirana.
