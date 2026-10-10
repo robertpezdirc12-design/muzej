@@ -2201,3 +2201,10 @@ Stage Summary:
 - MUSEUM-AUDIT: §2 (94/114), matrika §9 #15 PARTIAL → DONE (P25), §9 točka 3 prečrtana (ZAKLJUČENO), novi §14 s celotno žetvijo in utemeljitvami izločitev.
 - TESTI: QA 34/34 (timeline: 78 postankov, 0 manjkajočih); ESLint 0; tsc --noEmit 0; build 16/16.
 - NIČ AI: koordinate so iz Wikipedije (API), ZooKeys, GenBank, rtvslo in PDF Arheološkega vestnika; podatkovni zapis, ne generiranje.
+
+## P25 — potrditev v produkciji (2026-10-10)
+
+- DEPLOY: Actions run 38054234322 (Deploy na Vercel) na 51c3854 — SUCCESS; sinhronizacijski run 38054234203 — SUCCESS. GitLab main = GitHub main = 51c3854.
+- PRODUKCIJA: /api/qa ok:true 34/34 (qa-p18-timeline-stops: 78 postankov, 0 manjkajočih); /api/exhibits 114 zapisov, 94 z GPS (88 coordsApprox + 6 natančnih, med njimi MVG-103 ZooKeys ribnik); /api/opendata counts 114/594/11, dataVersion 2026-10-08; vseh 7 API končnih točk HTTP 200 (qa, exhibits, atlas, coverage, events, opendata, provenance); sitemap in domača stran 200. Nič odprtih issue-jev.
+- ORODJA: skripta scripts/renew_vercel_token.py (peskovnik) po ponastavitvi peskovnika popravljena — GH_TOKEN obnovljen iz git remote URL-ja (pot prek besedila ukaza ga je filter prireil), veljavnost žetona potrjena proti API-ju.
+- OPOMNIK: VERCEL_TOKEN poteče 2026-10-14 (4 dni) — ustvarjen GitHub issue z navodili; GitLab PAT (robertpezdirc8) poteče 2026-11-09.
