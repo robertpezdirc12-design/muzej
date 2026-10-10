@@ -1,7 +1,7 @@
 # Muzej vasi Griblje — digitalni muzej vasi ob Kolpi
 
 Večjezični digitalni muzej resnične vasi v Beli krajini (občina Črnomelj, Slovenija).
-Zbirka: **114 zapisov** s trajnimi muzejskimi številkami (MVG-001 → MVG-114), **594 dokazljivih virov**,
+Zbirka: **114 zapisov** s trajnimi muzejskimi številkami (MVG-001 → MVG-114), **596 dokazljivih virov**,
 lestvica zanesljivosti, odprti podatki in časovnica od prve omembe vasi leta **1468**.
 
 ## Značilnosti

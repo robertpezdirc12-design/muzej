@@ -51,8 +51,8 @@ Viri: `src/data/museum/exhibits.json`, `events.json`, `extra.json`, `meta.json`;
 | Skupno navedb virov | **594** (473 unikatnih `sourceKey`; povprečno 5,2 na zapis; min 1, max 26; P24: +4 za MVG-114) |
 | ⚠️ Razlika s README/meta | README in meta.json sta trdila 589 — **popravljeno na 590** (glej §8) |
 | Zapisi brez vsaj enega vira | 0/114 |
-| Viri brez podatka o licenci | 0/594 |
-| Vrste virov | objava 263, spletni-vir 202, fotografija 106, arhiv 16, zemljevid 5, pričevanje 2 |
+| Viri brez podatka o licenci | 0/596 |
+| Vrste virov | objava 265, spletni-vir 202, fotografija 106, arhiv 16, zemljevid 5, pričevanje 2 |
 | Lestvica zanesljivosti | 4-stopenska, vsak zapis ima veljaven `evidenceStatus`: DOCUMENTED 88, CORROBORATED 16, TRADITION 8, TESTIMONY 2 |
 | Ločevanje stopenj gotovosti | ✓ arhivski dokaz (arhiv/objava/zemljevid), ustno pričevanje (pricevanje/TESTIMONY), interpretacija in domneva so ločene tako v lestvici kot v `noteSi` posameznih virov; negativni izidi raziskav so izrecno dokumentirani (`NEGATIVE_RESULTS`, 11 zapisov) |
 
@@ -108,7 +108,7 @@ kartice virov; overlay na karti je namenoma le A01/A02 (GEOTRUTH afina).
 | Predmet | Stanje |
 |---|---|
 | Lastni metapodatki sklopa | CC BY-SA 4.0 (`meta.json`, `/api/opendata.license`) — z jasno opombo, da velja SAMO za lastne strukturne metapodatke |
-| Posamezni viri | 594/594 z licenco v `sources[].license` (razporeditev po 127 vrstah licenc v `/api/provenance`) |
+| Posamezni viri | 596/596 z licenco v `sources[].license` (razporeditev po 128 vrstah licenc v `/api/provenance`) |
 | Slike | 107/107 z `imageCredit` |
 | Zemljevidi (OSM) | atribucija na obeh Leaflet kartah: © OpenStreetMap + »katastrski listi: Arhiv RS (SI AS 176/N/N83)« |
 | Reprodukcije arhivskih predmetov | pravila navedena v `/api/opendata.license.reproduction*` (Arhiv RS/VAČ, SEM, zasebni arhivi) |
@@ -137,8 +137,8 @@ kartice virov; overlay na karti je namenoma le A01/A02 (GEOTRUTH afina).
 | `bun run build` | **uspešno** — 16/16 strani, 12 statičnih API poti (~16 s) |
 | `/api/qa` (lokalno, produkcijska zgradba) | **ok: true, 25/25 PASS** (vključno `qa-p12-village-life`; P18: `qa-p18-source-labels`, `qa-p18-timeline-stops`) |
 | `/api/atlas/integrity` | **11/11 PASS** (hiše, viri, E2E veriga hiša 73→MVG-010, georeferenca, EŠD 2122, vektorizacija, matrike …) |
-| `/api/provenance` | 594 navedb; 114/114 z virom; 0 brez licence |
-| `/api/opendata` | števci 114/594/11/6; licenca CC BY-SA 4.0 |
+| `/api/provenance` | 596 navedb; 114/114 z virom; 0 brez licence |
+| `/api/opendata` | števci 114/596/11/6; licenca CC BY-SA 4.0 |
 | Produkcija (`griblje-museum.vercel.app`) | 200; QA 25/25 po deployu te revizije (glej §10; P18 dodal 2 testa) |
 
 ## 8. Popravki, izvedeni v tej reviziji (brez izgube vsebine)
@@ -520,10 +520,15 @@ koordinat — za muzejski material 1985/1994 pričakovano).
    (kresi na gričih pozemeljske fare — ni ene točke; P24 ga je navedel kot
    vzor za MVG-114), MVG-114 kresna pesem (1895; pesem ni točka na karti).
 2. **Najdišči brez javnih koordinat:** MVG-113 Srednje njive (Arheološki
-   vestnik 71.14, celoten PDF prebran — 1 omemba, 0 koordinat; Mason 2001
-   ostaja TO_COLLECT), MVG-083 arheološko najdišče ob Kolpi (EŠD 10094 —
-   register namerno ne objavlja koordinat najdišč; njive Kohane, Požekov vrt
-   in Krasinec–Vrh so mikrotoponimi brez javnih koordinat).
+   vestnik 71.14, celoten PDF prebran — 1 omemba, 0 koordinat; P27: poročilo o
+   intenzivnem pregledu Kohane — VS, poročila 39–41, str. 54–55 — prav tako
+   brez koordinat in brez imena Srednje njive; Mason 2001, str. 10, ostaja
+   TO_COLLECT — med digitaliziranimi številkami ZVKDS revija 39 ni na spletu,
+   saj niz preskoči 37–40), MVG-083 arheološko najdišče ob Kolpi (EŠD 10094 —
+   register namerno ne objavlja koordinat najdišč; P27: poročilo št. 86 lege
+   opisuje samo z ledinskimi imeni Kohane, Kamenice, Gomilca, Mrzla draga in
+   območji pregleda I–XII; njive Kohane, Požekov vrt in Krasinec–Vrh so
+   mikrotoponimi brez javnih koordinat).
 3. **Regionalni zapisi, ne gribeljska točka:** MVG-019 jurjevanje in
    pustovanje, MVG-079 belokranjska noša, MVG-064 pisanice, MVG-020
    belokranjska kuhinja, MVG-024 bele breze, MVG-018 vinogradništvo in
@@ -556,3 +561,69 @@ koordinat — za muzejski material 1985/1994 pričakovano).
 - Brez AI modelov: gre za podatkovni zapis iz javnih virov (Wikipedia API,
   ZooKeys, GenBank, rtvslo, PDF Arheološkega vestnika); nobena koordinata ni
   izmišljena ali interpolirana.
+
+## 15. P27 — VIR: VARSTVO SPOMENIKOV, POROČILA 39–41 (uradni PDF ZVKDS, prebrano) (2026-10-10)
+
+ZVKDS je poročilni zvezek *Varstvo spomenikov, poročila 39–41* (2006) objavil
+kot uradni PDF (2024); muzej ga je prebral v polnem besedilu — po registru
+spomenikov na koncu zvezka (str. 256–269) so v njem **dve poročili o
+Gribljah** (telo zvezka je urejeno abecedno po krajih; najdeno na str. 54–56).
+
+### Poročili (preverjeno po straneh, visoka ločljivost)
+
+- **Poročilo št. 86 — Griblje – arheološko najdišče Kohane (EŠD 10094),
+  str. 54–55, podpisal Philip Mason.** Intenzivni arheološki terenski pregled
+  v mreži (16. 3.–21. 4. in 13. 10.–3. 11. 1999 ter 22. 2.–1. 3. 2000;
+  75 testnih jarkov 1 × 1 m; 20,6 ha novo, 39,6 ha skupaj pregledane
+  površine) in študentska terenska praksa Oddelka za arheologijo FF
+  (13.–24. 3. 2001: 21 študentov; 25. 3.–7. 4. 2001: 18 študentov; obdelava
+  najdb v gasilskem domu; predstavitev v Domu krajanov za vsaj 60 domačinov).
+  Sprožilna javitev domačina **Ivana Pezdirca** (1997): razorani rimskodobni
+  grobovi na ledini Kamenice. Lega: ledinska imena Kohane, Kamenice, Gomilca,
+  Mrzla draga; območja pregleda I–XII; naselbinsko območje ~700 m pas ob robu
+  prve terase Kolpe; poznobronastodobno naselje na območjih IV, VII–X (ločeno
+  od neolitsko-eneolitskega jedra po vrsti keramike); poznobronastodobno
+  grobišče Požekov vrt omenjeno kot znana lokacija.
+- **Poročilo št. 87 — Griblje – arheološko območje (EŠD 11082), str. 55–56,
+  podpisali Mason, Grahek, Bricelj, Pintér, Čaval.** Pregled trase
+  kanalizacije (2003, 0,6 km, vodila S. Čaval), arheološko vrednotenje trase
+  fekalne kanalizacije (6.–14. 12. 2004, 648 m, 14 testnih jarkov, vodila
+  M. Bricelj; stratigrafija: zahodna terasa / vzhodna poplavna ravan s
+  paleokanalom Kolpe, aktiven vsaj do rimske dobe) in pregled trase
+  daljnovoda Krasinec–Adlešiči (9.–14. 5. 2002, 4,5 km, vodila L. Grahek):
+  **prazgodovinska metalurška dejavnost v zahodnem delu Gribelj** (ožgana
+  glina, odbitek kremena, 3 kosi žlindre in 31 kosov železove rude; parc.
+  št. 922–937 k.o. Griblje), prazgodovinske in rimskodobne najdbe v
+  Dragoviču, prazgodovinska keramika pri Fučkovcih.
+
+### Spremembe v muzeju
+
+- `exhibits.json` MVG-083: **nov vir** (poročilo št. 86 z uradnim URL-jem in
+  preverjeno vsebino v noti) + obstoječi vir (poročilo št. 87, str. 55–56)
+  nadgrajen z uradnim URL-jem in preverjeno vsebino (kanalizacija, vrednotenje,
+  daljnovod, metalurgija); `storySi`/`storyEn` nov odstavek — raziskovalna
+  zgodba 1997 (domačin Ivan Pezdirc) → 1999–2000 (pregled v mreži, 75 jarkov)
+  → 2001 (študentska praksa, gasilski dom, predstavitev za vsaj 60 domačinov).
+- `exhibits.json` MVG-113: **nov vir** (isti zvezek; nota izrecno: ime Srednje
+  njive se v poročilu NE pojavlja, 0 koordinat); `storySi`/`storyEn`
+  dopolnjena dokazna veriga (naselje po območjih IV, VII–X v isti ravnini) +
+  posodobljen razdelek »Muzej išče« (revija 39 med digitaliziranimi številkami
+  ZVKDS ni — niz preskoči 37–40).
+- Števci: 594 → **596** vrstic virov (meta.json, layout.tsx ×4, README);
+  vrsta vira objava 263 → **265**; licenc 127 → **128** vrst (nova:
+  prosti spletni dostop (ZVKDS), 3 pripisi).
+- QA: nov test **`qa-p27-kohane-report`** (vir na obeh zapisih, uraden URL,
+  str. 54–55 v naslovu, negativni izid v noti, poročilo št. 87 z URL-jem) —
+  QA 34 → **35**.
+
+### Negativni izidi (dokumentirani, ne prikrito)
+
+- Poročilo št. 86 **ne objavi koordinat** — lege so opisane samo z
+  ledinskimi imeni in reliefom; MVG-083 in MVG-113 zato ostajata brez GPS
+  (karta ju ne more postaviti na točko brez kustodske potrditve).
+- Ime **Srednje njive** se v poročilih ne pojavi — izvor imena ostaja
+  str. 10 Masonovega članka v reviji Varstvo spomenikov 39 (2001), ki med
+  digitaliziranimi številkami ZVKDS (niz preskoči 37–40) še ni na spletu;
+  TO_COLLECT ostaja.
+- Domneva iz prvega branja registra, da bi bilo »A 65 = Griblje«, se ni
+  potrdila — poročilo št. 65 je Duplje, občina Vipava (preverjeno, str. 44).

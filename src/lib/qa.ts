@@ -1264,6 +1264,38 @@ export function runQA(opts: QAOptions = {}): QAReport {
       : p20recErrors.join("; "),
   );
 
+  /* ── P27: poročilo o intenzivnem pregledu Kohane (VS, poročila 39–41, uradni PDF ZVKDS) ── */
+  const KOHANE_KEY = "url:zvkds.si/vs-porocila-39-41-kohane";
+  const KOHANE_URL = "https://www.zvkds.si/wp-content/uploads/2024/03/039-41_2006_varstvo_spomenikov_porocila-1.pdf";
+  type P27Source = { sourceKey?: string | null; url?: string | null; nameSi?: string | null; noteSi?: string | null };
+  const p27Errors: string[] = [];
+  for (const no of ["MVG-083", "MVG-113"]) {
+    const ex27 = EXHIBITS.find((e) => e.museumNo === no);
+    const src = ((ex27?.sources ?? []) as P27Source[]).find((s) => s.sourceKey === KOHANE_KEY);
+    if (!ex27 || !src) p27Errors.push(`${no}: manjka vir Kohane (poročilo št. 86, str. 54–55)`);
+    else {
+      if (src.url !== KOHANE_URL) p27Errors.push(`${no}: URL vira Kohane ni uradni PDF ZVKDS`);
+      if (!(src.nameSi ?? "").includes("str. 54–55")) p27Errors.push(`${no}: naslov vira ne navaja str. 54–55`);
+      if (!(src.noteSi ?? "").includes("koordinat")) p27Errors.push(`${no}: nota ne dokumentira negativnega izida (koordinate)`);
+    }
+  }
+  const ex083 = EXHIBITS.find((e) => e.museumNo === "MVG-083");
+  const rep87 = ((ex083?.sources ?? []) as P27Source[]).find((s) => (s.sourceKey ?? "").includes("Grahek"));
+  if (!rep87?.url) p27Errors.push("MVG-083: vir Mason et al. (2006), str. 55–56 (poročilo št. 87) brez uradnega URL-ja");
+  const ex113 = EXHIBITS.find((e) => e.museumNo === "MVG-113");
+  const src113note = ((ex113?.sources ?? []) as P27Source[]).find((s) => s.sourceKey === KOHANE_KEY);
+  if (src113note && !(src113note.noteSi ?? "").includes("NE pojavlja"))
+    p27Errors.push("MVG-113: nota vira Kohane mora izrecno navesti, da se ime Srednje njive NE pojavlja");
+  push(
+    "qa-p27-kohane-report",
+    "P27: poročilo o intenzivnem pregledu Kohane (VS, poročila 39–41, str. 54–55, uradni PDF ZVKDS) je vir na MVG-083 in MVG-113 z dokumentiranim negativnim izidom (0 koordinat); poročilo št. 87 z URL-jem",
+    "P27: the Kohane intensive-survey report (VS, reports 39–41, pp. 54–55, official ZVKDS PDF) is a source on MVG-083 and MVG-113 with the negative result documented (0 coordinates); report no. 87 with URL",
+    p27Errors.length === 0,
+    p27Errors.length === 0
+      ? "2 zapisa · poročili št. 86 + 87 · negativni izid (koordinate) dokumentiran v notah"
+      : p27Errors.join("; "),
+  );
+
   const passed = tests.filter((t) => t.pass).length;
   return {
     ok: tests.every((t) => t.pass),

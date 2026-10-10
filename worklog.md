@@ -2219,3 +2219,40 @@ Stage Summary:
 - NOV WORKFLOW .github/workflows/token-health.yml (dnevno ob 06:12 UTC + ročno): VERCEL_TOKEN (GET /v2/user; 401/403 = mrtev, prehodne napake dobijo drugi poskus) in GITLAB_TOKEN (GET /personal_access_tokens/self; 401 = mrtev; opozorilo ::warning 7 dni pred iztekom); ob odkriti mrtev žeton job pade + komentar z navodili na issue #6 (samo ob prehodu zeleno→rdeče, de-dup prek gh run list; issue se po potrebi ponovno odpre). Zakaj: VERCEL žetona ni mogoče ustvariti prek API — edina možnost je takojšnje odkrivanje in opozorilo; produkcija ob izteku nemoteno teče, pavzirajo samo novi deployi.
 - VERCEL_TOKEN: ostaja edini lastnikov korak — rok 2026-10-14 (4 dni), postopek v issue #6, vnos pripravljen (scripts/renew_vercel_token.py).
 - TESTI: YAML potek preverjen (parser), izračun dni preizkušen (2027-01-08 → 90; 2026-10-13 → 3).
+
+## P27 — VIR: VARSTVO SPOMENIKOV, POROČILA 39–41 (uradni PDF ZVKDS, prebrano v polnem besedilu)
+
+ZVKDS je poročilni zvezek Varstvo spomenikov, poročila 39–41 (2006) objavil kot uradni
+PDF (2024); muzej ga je prebral v celoti (60,9 MB sken, 272 str., brez besedilne plasti —
+branje po straneh z VLM po registru spomenikov na koncu zvezka). V zvezku DVE poročili o
+Gribljah (telo je abecedno po krajih; Griblje na str. 54–56):
+
+- POROČILO ŠT. 86 — Griblje – arheološko najdišče Kohane (EŠD 10094), str. 54–55, podpisal
+  Philip Mason: intenzivni pregled v mreži 1999–2000 (75 testnih jarkov 1×1 m; 20,6 ha novo,
+  39,6 ha skupaj), študentska terenska praksa OAFS Ljubljana 2001 (21 + 18 študentov; obdelava
+  v gasilskem domu; predstavitev za vsaj 60 domačinov); sprožilna javitev domačina IVANA
+  PEZDIRCA 1997 (razorani rimskodobni grobovi, ledina Kamenice); lege: ledinska imena Kohane,
+  Kamenice, Gomilca, Mrzla draga + območja I–XII; naselbinsko območje ~700 m pas ob prvi
+  terasi Kolpe; poznobronastodobno naselje na območjih IV, VII–X; Požekov vrt kot znana lokacija.
+- POROČILO ŠT. 87 — Griblje – arheološko območje (EŠD 11082), str. 55–56, podpisali Mason,
+  Grahek, Bricelj, Pintér, Čaval: kanalizacija 2003 (0,6 km) + vrednotenje 2004 (648 m,
+  14 jarkov; paleokanal Kolpe aktiven vsaj do rimske dobe) + daljnovod Krasinec–Adlešiči 2002
+  (4,5 km): PRAZGODOVINSKA METALURŠKA DEJAVNOST v zahodnem delu Gribelj (žlindra, železova
+  ruda; parc. 922–937 k.o. Griblje), najdbe v Dragoviču in pri Fučkovcih.
+
+SPREMEMBE: MVG-083 nov vir (86) + nadgradnja obstoječega (87: URL + preverjena vsebina) +
+nov odstavek zgodbe (1997 → 1999–2000 → 2001; Pezdirc, 60 domačinov); MVG-113 nov vir (86;
+nota: ime Srednje njive se NE pojavlja) + dopolnjena dokazna veriga + posodobljen »Muzej
+išče«; števci 594 → 596 vrstic virov (objava 265, licenc 128 vrst — nova: prosti spletni
+dostop (ZVKDS)); QA 34 → 35 (qa-p27-kohane-report: vir na obeh zapisih, uraden URL, str.
+54–55, negativni izid v noti, poročilo 87 z URL-jem).
+
+NEGATIVNI IZIDI (dokumentirani v MUSEUM-AUDIT §15): poročilo 86 NE objavi koordinat (MVG-083
+in MVG-113 ostajata brez GPS — lege so opisane samo z ledinskimi imeni); ime Srednje njive se
+v poročilih NE pojavi (izvor ostaja str. 10 Masona 2001 — revija 39 med digitaliziranimi
+številkami ZVKDS NI, saj niz preskoči 37–40; TO_COLLECT ostaja); domneva A 65 = Griblje iz
+prvega branja registra OVRŽENA (poročilo 65 = Duplje, Vipava).
+
+TESTI: ESLint 0; tsc 0; build 16/16; lokalno QA 35/35 PASS (nov test zelen), integrity 11/11;
+API: MVG-083 17 virov (Kohane z uradnim URL), MVG-113 3 viri; odjemalski paket vsebuje novo
+zgodbo (Pezdirc).
