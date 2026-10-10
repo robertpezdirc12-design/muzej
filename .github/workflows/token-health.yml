@@ -5,7 +5,10 @@
 #     samo spremljamo — ob izteku (401/403) job pade, na issue #6 pade
 #     komentar z navodili, lastnik dobi e-poštno obvestilo o padlem jobu.
 #     Produkcija ob tem nemoteno teče (deploymenti so trajni), pavzirajo
-#     samo novi samodejni deployi.
+#     samo novi samodejni deployi. Preverja se DVE stvari: avtentikacijo
+#     (/v2/user) in obseg ekipe (/v9/projects?teamId) — žeton, ustvarjen
+#     brez obsega Full Account, se avtenticira, a deploy pade s 403 (P28:
+#     točno to se je zgodilo 2026-10-10, ujeto pred zlomom cevovoda).
 #   - GITLAB_TOKEN: žeton z obsegom self_rotate se lahko podaljša prek
 #     API-ja (POST /personal_access_tokens/self/rotate z expires_at) —
 #     tako je bil 2026-10-10 podaljšan na 2027-01-08. Ta pregled opozori
@@ -32,6 +35,7 @@ jobs:
         id: vercel
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
         run: |
           code=$(curl -s -o /tmp/vercel.json -w '%{http_code}' --max-time 30 \
             -H "Authorization: Bearer $VERCEL_TOKEN" https://api.vercel.com/v2/user)
@@ -41,14 +45,29 @@ jobs:
             code=$(curl -s -o /tmp/vercel.json -w '%{http_code}' --max-time 30 \
               -H "Authorization: Bearer $VERCEL_TOKEN" https://api.vercel.com/v2/user)
           fi
-          if [ "$code" = "200" ]; then
-            echo "::notice::VERCEL_TOKEN deluje (HTTP 200)"
+          # Drugi, enako pomemben pregled: obseg ekipe (VERCEL_ORG_ID), ki ga
+          # `vercel deploy --token=…` dejansko potrebuje. Žeton z omejenim
+          # obsegom da na /v2/user odgovor 200, deploy pa pade s 403.
+          pcode=$(curl -s -o /dev/null -w '%{http_code}' --max-time 30 \
+            -H "Authorization: Bearer $VERCEL_TOKEN" \
+            "https://api.vercel.com/v9/projects?teamId=$VERCEL_ORG_ID&limit=1")
+          if [ "$pcode" != "200" ] && [ "$pcode" != "401" ] && [ "$pcode" != "403" ]; then
+            sleep 15
+            pcode=$(curl -s -o /dev/null -w '%{http_code}' --max-time 30 \
+              -H "Authorization: Bearer $VERCEL_TOKEN" \
+              "https://api.vercel.com/v9/projects?teamId=$VERCEL_ORG_ID&limit=1")
+          fi
+          if [ "$code" = "200" ] && [ "$pcode" = "200" ]; then
+            echo "::notice::VERCEL_TOKEN deluje (HTTP 200, obseg ekipe dostopen)"
             echo "dead=false" >> "$GITHUB_OUTPUT"
+          elif [ "$code" = "200" ] && { [ "$pcode" = "401" ] || [ "$pcode" = "403" ]; }; then
+            echo "::error::VERCEL_TOKEN je veljaven, a NIMA dostopa do obsega ekipe (HTTP $pcode na /v9/projects) — samodejni deploy bi padel. Ustvari nov žeton z obsegom Full Account na vercel.com/account/tokens, glej issue #6."
+            echo "dead=true" >> "$GITHUB_OUTPUT"
           elif [ "$code" = "401" ] || [ "$code" = "403" ]; then
             echo "::error::VERCEL_TOKEN NE DELUJE (HTTP $code) — samodejni deploy je ustavljen (produkcija še teče). Obnova: vercel.com/account/tokens, glej issue #6."
             echo "dead=true" >> "$GITHUB_OUTPUT"
           else
-            echo "::warning::VERCEL_TOKEN ni bilo mogoče preveriti (HTTP $code) — prehodna napaka, ponovno ob naslednjem izvajanju."
+            echo "::warning::VERCEL_TOKEN ni bilo mogoče preveriti (HTTP $code/$pcode) — prehodna napaka, ponovno ob naslednjem izvajanju."
             echo "dead=false" >> "$GITHUB_OUTPUT"
           fi
 
@@ -91,7 +110,7 @@ jobs:
           {
             echo "Samodejni dnevni pregled žetonov je odkril napako:"
             echo ""
-            [ "$VERCEL_DEAD" = "true" ] && echo "- **VERCEL_TOKEN** ne deluje več — samodejni deploy je ustavljen (produkcija nemoteno teče). Obnova: [vercel.com/account/tokens](https://vercel.com/account/tokens) → nov žeton (Full Account) → izroži pomočniku, vnos v skrivnost je pripravljen."
+            [ "$VERCEL_DEAD" = "true" ] && echo "- **VERCEL_TOKEN** ne more nameščati (neveljaven ali brez obsega Full Account) — samodejni deploy je ustavljen (produkcija nemoteno teče). Obnova: [vercel.com/account/tokens](https://vercel.com/account/tokens) → ustvari žeton z obsegom **Full Account** (ne le računa) → izroči pomočniku, vnos v skrivnost je pripravljen."
             [ "$GITLAB_DEAD" = "true" ] && echo "- **GITLAB_TOKEN** ne deluje več — sinhronizacija z GitLabom je ustavljena. Rešitev: podaljšanje prek rotacije (self_rotate) ali nov PAT na GitLabu."
             echo ""
             echo "Navodila za obnovo: prvi prispevek tega issue-ja."
