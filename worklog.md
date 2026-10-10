@@ -2122,3 +2122,20 @@ Stage Summary:
 - DOKUMENTACIJA: MUSEUM-AUDIT.md §12 (preglednica razrešitev, 4 vprašanja zaključnega poročila, omejitve); README 9 → 12 enot + GRID_APPROX opomba.
 - TESTI: ESLint 0; tsc 0; build 16/16; /api/qa 34/34; integrity 11/11; reconciliation zeroLoss=true, 12 enot, vse scopeCheck.accounted.
 - VEJA: feature/atlas-1825-inventory → PR (issue #4 zahteva pregledljiv PR).
+
+---
+
+## P21 — SINHRONIZACIJA GITLAB: diagnoza in obramba pred tiho napako (2026-10-10)
+
+- ZAHTVA (uporabnik): »preveri ce sinhronizirano z gitlab in nadaljuj«.
+- PREVERITEV Faze 1 (revizija P19): vsi že izvedeni in varovani — QA 34/34 lokalno (bun run), /api/qa na produkciji ujame isto; 1468/1526, števci 11 dogodkov/103 fotografij/101→106 citatov, 375 postaj = 338 z virom + 37 »v raziskovanju«, 0 zastarelih MVG-114 povezav.
+- DIAGNOZA SINHRONIZACIJE: GitHub main = d20723e (zadnji uspešni deploy run 38006700077). Zadnja uspešna sinhronizacija z GitLabom 2026-10-07 18:50 UTC; za tem 15+ commitov (P19 faza 1, deploy incident, P20 issue #3/#4, PR #2/#5) SAMO na GitHubu — GitLab zaostaja.
+- VZROK 1: dvosmerni sync.yml je bil disabled_manually od 2026-10-07 (tedaj aktivni mehanizem = GitLab push mirror, a ta zrcali SAMO GitLab→GitHub; neposredni GitHub commiti ne tečejo nazaj).
+- VZROK 2 (dejanski blokator): skrivnost GITLAB_TOKEN je NEVELJAVNA (pretekla/preklicana). Ročni zagon ponovno omogočenega sync.yml (run 38026621813): fetch gitlab 3× »HTTP Basic: Access denied … incorrect, expired, or improperly scoped«, push main na GitLab 3× neuspešen — VSEENO izpis »success«. TIHA NAPAKA: retry zanki pogoltneta napako, korak konča z exit 0.
+- POPRAVEK (sync.yml, obramba pred ponovitvijo):
+  1) korak »Pridobi vsebino«: `git ls-remote --heads gitlab` overitev PREJ vsemu — ob napaki ::error:: z navodilom za obnovo žetona + exit 1; fetch zanka dobi FETCH_OK varovalko (3 neuspešni poskusi ⇒ exit 1);
+  2) korak »Zdruzi in poslji«: PUSH_OK varovalka na branch — 3 neuspešni pushi ⇒ ::error:: + SYNC_FAILED=1 + končni exit 1. Sinhronizacija sedaj NE MORE »uspeti«, če GitLab ni bil posodobljen.
+- Workflow sync.yml znova AKTIVEN (enable prek API). Naslednji zagon (push/cron) bo VIDNO rdeč, dokler ne bo obnovljen GITLAB_TOKEN — po zasnovi, da stanje ni več tiho.
+- POTREBNO OD UPORABNIKA: nov GitLab PAT (gitlab.com → User Settings → Access Tokens; scope write_repository; rok veljavnosti po želji) → posodobitev skrivnosti GITLAB_TOKEN; nato dispatch sync.yml in GitLab je dohiten (main d20723e + ostale veje + tagi).
+- OPOMBA: VERCEL_TOKEN v skrivnostih poteče 2026-10-14 — obnoviti na vercel.com/tokens (samodejski deploy deluje do tedaj).
+- NIČ AI: sprememba je samo CI/workflow logika (bash varovalke), aplikacija in podatki nespremenjeni.
