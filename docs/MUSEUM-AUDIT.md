@@ -203,10 +203,9 @@ DEMO/NAČRTOVANO = mehanizem obstaja, vsebina čaka · MISSING = manjka · BLOCK
 2. **Preizkus obiskovalnega toka na telefonu** (QR vhod, GPS, AR kamera, offline) — lastnik z
    napravo; po potrebi popravki.
 3. **Dopolnjevanje GPS koordinat** iz verodostojnih virov (preostalih 65 zapisov; P22 je dodal 12 iz citiranih virov — sl.wiki, Commons GPS, GBIF/iNaturalist, EŠD) — postopoma, z viri.
-4. **Odstraniti `ignoreBuildErrors`** in odpraviti 30 TS napak po sklopih (začetek:
-   `museum-research.tsx` integrityEn → integritySi, `exhibit-detail.tsx` Sheet props).
-5. **Dodati MVG-114** (Kresna pesem 1888), ko so viri zbrani — zastareli povezavi sta P19 odstranjeni; nove se dodajo skupaj z zapisom (varuje qa-p19-related-refs).
-6. **Počistiti neuporabljene env spremenljivke in Prismo** (manjša površina, hitrejši build).
+4. **Dodati MVG-114** (Kresna pesem 1888), ko so viri zbrani — zastareli povezavi sta P19 odstranjeni; nove se dodajo skupaj z zapisom (varuje qa-p19-related-refs).
+
+(Nekdanji točki 4/6 — odstranitev `ignoreBuildErrors` in čiščenje env/Prisme — sta že odpravljeni v P17 oziroma P15+P17; matrika §9 #17 in #19. P23: zastareli vrstici dejansko odstranjeni s seznama, kot je P22 že zapisal v worklog.)
 
 ## 10. Definition of Done — stanje
 
