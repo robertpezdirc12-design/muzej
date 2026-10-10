@@ -1163,7 +1163,8 @@ export function runQA(opts: QAOptions = {}): QAReport {
   const srcPua = ATLAS_SOURCES.find((s) => s.id === "src-pua");
   if (puaInv && srcPua && (puaInv.structuredEntities !== PUA_CONTINUATION.rows.length || srcPua.structuredEntries !== PUA_CONTINUATION.rows.length))
     p20invErrors.push(`PUA structured ${puaInv.structuredEntities}/src ${srcPua.structuredEntries} != PUA_CONTINUATION ${PUA_CONTINUATION.rows.length} (43→101 napaka se ne sme ponoviti)`);
-  if (psInv && psInv.structuredEntities !== 12) p20invErrors.push(`PS structured: ${psInv.structuredEntities}`);
+  if (psInv && psInv.structuredEntities !== 2743)
+    p20invErrors.push(`PS structured: ${psInv.structuredEntities} != 2743 (P36 kampanja, dokaz ps-raw/PS-full.json)`);
   if (pzInv && pzInv.structuredEntities !== 10) p20invErrors.push(`PZ structured: ${pzInv.structuredEntities}`);
   if (a02Inv && a02Inv.structuredEntities !== VECTOR_BUILDINGS.length)
     p20invErrors.push(`A02 structured: ${a02Inv.structuredEntities} != ${VECTOR_BUILDINGS.length}`);
@@ -1195,7 +1196,8 @@ export function runQA(opts: QAOptions = {}): QAReport {
       p20pagesErrors.push(`${k.code}: prebrane + odprte != deklarirane`);
   }
   // dokazane vrednosti iz surovih raziskav (issue #4 resolucije: PS 8, PZ 12)
-  const expectedRead: Record<string, number> = { PR: 4, PS: 8, PUA: 49, PZ: 12, PT: 8, PG: 1, PV: 1 };
+  // P36 (2026-10-11): PS 143 — vse strani strojno prebrane (pass-1 celota + pass-2 78 strani; dokaz research/issue17/ps-raw/)
+  const expectedRead: Record<string, number> = { PR: 4, PS: 143, PUA: 49, PZ: 12, PT: 8, PG: 1, PV: 1 };
   for (const [code, n] of Object.entries(expectedRead)) {
     const k = KURRENT_SERIES.find((x) => x.code === code);
     if (k && k.pagesTranscribed !== n)
@@ -1205,11 +1207,11 @@ export function runQA(opts: QAOptions = {}): QAReport {
   if (!invScope.totals.scopeAccounted) p20pagesErrors.push("inventar: scopeAccounted ni true za vse enote");
   push(
     "qa-p20-series-pages",
-    "P20: dokazano prebrane strani po serijah (PR 4, PS 8, PUA 49, PZ 12, PT 8, PG 1, PV 1) — pagesReadList == pagesTranscribed, brez lukenj; PS 8 in PZ 12 usklajena z research/issue17 datotekami",
-    "P20: evidenced read pages per series (PR 4, PS 8, PUA 49, PZ 12, PT 8, PG 1, PV 1) — pagesReadList == pagesTranscribed, no gaps; PS 8 and PZ 12 reconciled with the research/issue17 files",
+    "P20: dokazano prebrane strani po serijah (PR 4, PS 143 — P36 strojno, PUA 49, PZ 12, PT 8, PG 1, PV 1) — pagesReadList == pagesTranscribed, brez lukenj; PS in PZ usklajena z research/issue17 datotekami (ps-raw + PS-full.json)",
+    "P20: evidenced read pages per series (PR 4, PS 143 — P36 machine-read, PUA 49, PZ 12, PT 8, PG 1, PV 1) — pagesReadList == pagesTranscribed, no gaps; PS and PZ reconciled with the research/issue17 files (ps-raw + PS-full.json)",
     p20pagesErrors.length === 0,
     p20pagesErrors.length === 0
-      ? `skupaj ${invScope.totals.pagesRead}/${invScope.totals.pagesDeclared} prebranih; odprtih ${invScope.totals.pagesOpen} (PS 5–139, PZ 4–67 razen vzorcev) — vse izrecno, 0 tihih`
+      ? `skupaj ${invScope.totals.pagesRead}/${invScope.totals.pagesDeclared} prebranih; odprtih strani ${invScope.totals.pagesOpen} (PZ 4–67 razen vzorcev; PS strani strojno prebrane, a sprava s 2607 izrecno odprta) — 0 tihih`
       : p20pagesErrors.join("; "),
   );
 
@@ -1352,6 +1354,38 @@ export function runQA(opts: QAOptions = {}): QAReport {
     p34Errors.length === 0
       ? "3 zapisi · 5 novih virov · 1 uradna točka · 1 negativni izid · 1 križna potrditev"
       : p34Errors.join("; "),
+  );
+
+  /* ── P36 (issue #10): PS — strojni prepis vseh strani 5–139 ── */
+  const p36Errors: string[] = [];
+  const psSrc = ATLAS_SOURCES.find((s) => s.code === "N083PS");
+  if (!psSrc) p36Errors.push("vir N083PS manjka");
+  else {
+    if (psSrc.structuredEntries !== 2743)
+      p36Errors.push(`N083PS: structuredEntries=${psSrc.structuredEntries}, pričakovano 2743 (P36 strojni prepis 135 strani)`);
+    if (psSrc.lastVerified !== "2026-10-11")
+      p36Errors.push("N083PS: lastVerified ni 2026-10-11 (dan P36 kampanje)");
+    if (!(psSrc.noteSi ?? "").includes("ps-raw"))
+      p36Errors.push("N083PS: nota SL ne kaže na dokaz research/issue17/ps-raw/");
+    if (!(psSrc.noteSi ?? "").includes("REVIEW"))
+      p36Errors.push("N083PS: nota SL brez oznake REVIEW (strojno branje ni dokazni vir)");
+    if (!(psSrc.noteEn ?? "").includes("PS-full.json"))
+      p36Errors.push("N083PS: nota EN brez kazalca na spravno poročilo PS-full.json");
+    if (!(psSrc.noteSi ?? "").includes("Waldung") || !(psSrc.noteSi ?? "").includes("2607"))
+      p36Errors.push("N083PS: nota SL ne dokumentira strukturnih ugotovitev (sekcije, kontrolna vsota)");
+  }
+  if (PS_RECAP_1826.sampleRowCount !== 2743)
+    p36Errors.push(`PS_RECAP_1826.sampleRowCount=${PS_RECAP_1826.sampleRowCount}, pričakovano 2743`);
+  if (!(PS_RECAP_1826.mostUsefulSi ?? "").includes("P36"))
+    p36Errors.push("PS_RECAP_1826: priporočilo SL ne odraža P36 kampanje (zastarelo »NE prepisovati«)");
+  push(
+    "qa-p36-ps-machineread",
+    "P36: N083PS — strojni prepis VSEH 135 strani (5–139) dokumentiran v viru (2743 vrstic, dvoprehodno, dokaz ps-raw + PS-full.json); strukturne ugotovitve (pomešan zvezek, sekcije Waldung/Schmiegärten/Blatt X, kontrolna vsota 2607 kot vsota kategorij) vidne v notah; sprava s 2607 ostaja TO_COLLECT",
+    "P36: N083PS — machine transcription of ALL 135 pages (5–139) documented at the source (2,743 rows, two passes, evidence ps-raw + PS-full.json); structural findings (shuffled volume, Waldung/Schmiegärten/Blatt X sections, the 2,607 checksum as a category sum) visible in the notes; the reconciliation remains TO_COLLECT",
+    p36Errors.length === 0,
+    p36Errors.length === 0
+      ? "135 strani · 2743 vrstic · 213 VLM branj (135 + 78) · 4 sekcije odkrite"
+      : p36Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;

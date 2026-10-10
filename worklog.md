@@ -2357,3 +2357,21 @@ zgodbo (Pezdirc).
 - ZOMBIE deploymenti: dva BLOCKED iz obdobja P14 (oba sha 3add3d1, duplikat GH Actions
   sočasnosti) izbrisana prek DELETE /v13/deployments/{id} (24 h+ zaglavljeni, nikoli
   zgrajena; cancel API 404 — izbris je deloval).
+
+## P36 — PS: strojni prepis vseh strani 5–139 (issue #10, delna izvedba) + P35 integracija (2026-10-11)
+
+- P35 ZAKLJUČEK: prvi integracijski deploy (6f26a4d, pravi avtor) READY z aliasom; QA 36/36; komentar na #9.
+- PONOVNI PRENOS N083PS.pdf (prvi prenos okvarjen — prekinjen na 43 MB; ponovni: 58,97 MB, 143 strani celih) +
+  vseh 7 serij N83 na download/atlas-1825/n83/ (VAČ metoda iz research/p3/README.md).
+- KAMPANJA VLM: pass-1 vseh 135 strani (5–139) = 2743 strukturiranih vrstic; JSONL format + odpreno parsanje
+  (prva različica prompta je padala na narekovajih ditto — 40 % BADJSON, rešeno z JSONL).
+- PASS-2 (neodvisno, brez vbrizganih pričakovanih vrednosti — dokazna neodvisnost): 78 strani z okvarjeno
+  soslednostjo; skupno 213 VLM branj.
+- STRUKTURA RAZVOZLANA: zvezek pomešan (strani niso v redu parcel); več števčnih nizov (glavni + Waldung skupna
+  gozdna + Schmiegärten vrtovi + Blatt X lastno številčenje); glavni niz čez 2840 → kontrolna vsota 2607 šteje
+  kategorije; večkulturne vrstice (ista parcela več vrstic).
+- SPREMEMBE V REPU: sources.ts N083PS (structuredEntries 12→2743, nota kampanje SL+EN); research.ts PS_RECAP_1826
+  (priporočilo, sampleRowCount); QA 36→37 (qa-p36-ps-machineread); MUSEUM-AUDIT §2.2 uskladitve + nov §17;
+  dokazi research/issue17/ps-raw/ (213 datotek) + PS-full.json.
+- ISSUE #10 OSTAJA ODPRT: preostane 3. prehod ~15 dvoumnih strani, klasifikacija sekcij, razdvojitev večkulturnih
+  vrstic, uskladitev s 2607 — poročilo o napredku komentirano na issue.

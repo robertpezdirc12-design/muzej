@@ -42,12 +42,12 @@ export const KURRENT_SERIES: KurrentSeries[] = [
     unitSi: "Seznam zemljiških parcel",
     unitEn: "Register of land parcels",
     pages: 143,
-    pagesTranscribed: 8,
-    pagesReadList: [1, 2, 3, 4, 140, 141, 142, 143],
-    structuredEntries: 12,
+    pagesTranscribed: 143,
+    pagesReadList: Array.from({ length: 143 }, (_, i) => i + 1),
+    structuredEntries: 2743,
     status: "REVIEW",
-    noteSi: "143 strani parcel; issue #17 (VLM 2026-10-08): struktura strani 1–4 + 140–143 (rekapitulacija) — 8 strani (issue #4, 2026-10-10: prejšnji števec 9 ni imel podlage v datotekah; dokaz PS-structure.json sectionsSeen + sampleRows + rekapitulacija str. 143), 12 vzorčnih vrstic, kolone (lastnik+hiša+parcela+raba+površina+razred+donos). Končna Summa (str. 143, rdeči tuš): 102 stavbnih mest + 2505 zemljiških parcel = 2607. Najbolj uporabno za verigo hiša→parcela→lastnik: rekapitulacija po hišnih št. (~str. 131–143) + stolpec Haus Nro. v glavnem registru. Poln prepis 135 strani (5–139) ostaja TO_COLLECT (izhodiščna kontrolna vsota 2607).",
-    noteEn: "143 pages of parcels; issue #17 (VLM 2026-10-08): structure of pages 1–4 + 140–143 (recapitulation) — 8 pages (issue #4, 2026-10-10: the previous count of 9 had no basis in the files; evidence PS-structure.json sectionsSeen + sampleRows + the p. 143 recapitulation), 12 sample rows, columns (owner+house+parcel+culture+area+class+yield). Final Summa (p. 143, red ink): 102 building sites + 2505 land parcels = 2607. Most useful for the house→parcel→owner chain: the recapitulation by house nos. (~pp. 131–143) + the Haus Nro. column of the main register. The full transcription of 135 pages (5–139) remains TO_COLLECT (checksum 2607).",
+    noteSi: "143 strani parcel; P36 (2026-10-11, issue #10): VSE strani strojno prebrane — 1–4 in 140–143 (struktura + rekapitulacija, issue #17/P5-b) + 5–139 (P36 kampanja: 2743 strukturiranih vrstic, pass-1 vseh strani + pass-2 78 strani z okvarjeno soslednostjo; dokaz research/issue17/ps-raw/ + PS-full.json). STRUKTURA: zvezek pomešan (strani niso v redu parcel — npr. str. 80–82 = parcele 1644–1700); več števčnih nizov — glavne parcele, Waldung (skupna gozdna, brez lastnikov), Schmiegärten (vrtovi), Blatt X (lastno številčenje 1–40); glavni niz sega čez 2840. Končna Summa (str. 143, rdeči tuš): 102 + 2505 = 2607 šteje KATEGORIJE, ne maksimum. PREOSTANE: 3. prehod ~15 dvoumnih strani, klasifikacija sekcij, razdvojitev večkulturnih vrstic (ista parcela več vrstic po kulturah), uskladitev s 2607 — issue #10 odprt. Vsi statusi REVIEW (strojno branje ni dokazni vir).",
+    noteEn: "143 pages of parcels; P36 (2026-10-11, issue #10): ALL pages machine-read — 1–4 and 140–143 (structure + recapitulation, issue #17/P5-b) + 5–139 (the P36 campaign: 2,743 structured rows, pass-1 on all pages + pass-2 on 78 pages with broken continuity; evidence research/issue17/ps-raw/ + PS-full.json). STRUCTURE: the volume is shuffled (pages not in parcel order — e.g. pp. 80–82 = parcels 1644–1700); several numbering series — main parcels, Waldung (communal forest, ownerless), Schmiegärten (gardens), Blatt X (own 1–40 numbering); the main series runs past 2840. The final Summa (p. 143, red ink): 102 + 2,505 = 2,607 counts CATEGORIES, not a maximum. REMAINS: a 3rd pass over ~15 ambiguous pages, section classification, splitting multi-culture rows (the same parcel has several rows by culture), matching against 2,607 — issue #10 open. All statuses REVIEW (machine reading is not evidentiary).",
   },
   {
     code: "PUA",
@@ -991,7 +991,7 @@ export const PS_RECAP_1826: {
   mostUsefulEn: string;
   sampleRowCount: number;
 } = {
-  source: "N083PS str. 140–143 (Arhiv RS, SI AS 176, k.o. Griblje) — research/issue17/PS-structure.json",
+  source: "N083PS str. 140–143 (Arhiv RS, SI AS 176, k.o. Griblje) — research/issue17/PS-structure.json; P36: str. 5–139 prebrane strojno (research/issue17/ps-raw/, PS-full.json)",
   status: "REVIEW",
   summaBauplätze: 102,
   summaGrundparzellen: 2505,
@@ -1012,10 +1012,10 @@ export const PS_RECAP_1826: {
     "Anmerkung",
   ],
   mostUsefulSi:
-    "Veriga hiša→parcela→lastnik je v VSAKI vrstici glavnega registra (stolpci Haus Nro. + lastnik + parcela + raba + površina), a vrstice NISO grupirane po lastnikih → vstop prek stolpca Haus Nro. Najcenejša pot: (1) rekapitulacija po hišnih št. (~str. 131–143, z vsotami joch/fl na hišo), (2) str. 143 kot kontrolna vsota (102 + 2505 = 2607), (3) glave Blatt za vzorce imen. NE prepisovati slepo 143 strani — začeti pri rekapitulaciji, nato ciljano po hišah.",
+    "Veriga hiša→parcela→lastnik je v VSAKI vrstici glavnega registra (stolpci Haus Nro. + lastnik + parcela + raba + površina), a vrstice NISO grupirane po lastnikih → vstop prek stolpca Haus Nro. P36 (2026-10-11): strojni prepis vseh 135 strani (5–139, 2743 vrstic, dvoprehodno na 78 straneh) ŽE IZVEDEN — naslednji koraki: sprava sekcij (zvezek pomešan; Waldung/Schmiegärten/Blatt X ločeni nizi), razdvojitev večkulturnih vrstic, uskladitev s kontrolno vsoto 102 + 2505 = 2607 (šteje kategorije, ne maksimum — glavni niz sega čez 2840), nato ciljano po hišah prek Haus Nro. in rekapitulacije (~str. 140–143).",
   mostUsefulEn:
-    "The house→parcel→owner chain sits in EVERY row of the main register (Haus Nro. + owner + parcel + culture + area columns), but rows are NOT grouped by owner → enter via the Haus Nro. column. Cheapest path: (1) the recapitulation by house nos. (~pp. 131–143, with per-house joch/fl totals), (2) p. 143 as the checksum (102 + 2505 = 2607), (3) Blatt headers for name patterns. Do NOT blindly transcribe 143 pages — start at the recapitulation, then target by house.",
-  sampleRowCount: 12,
+    "The house→parcel→owner chain sits in EVERY row of the main register (Haus Nro. + owner + parcel + culture + area columns), but rows are NOT grouped by owner → enter via the Haus Nro. column. P36 (2026-10-11): the machine transcription of all 135 pages (5–139, 2,743 rows, two passes on 78 pages) is DONE — next steps: section reconciliation (the volume is shuffled; Waldung/Schmiegärten/Blatt X are separate series), splitting multi-culture rows, matching against the checksum 102 + 2505 = 2607 (it counts categories, not a maximum — the main series runs past 2840), then targeting by house via Haus Nro. and the recapitulation (~pp. 140–143).",
+  sampleRowCount: 2743,
 };
 
 /** PZ — demografija in cenitev 1825 (N083PZ). */

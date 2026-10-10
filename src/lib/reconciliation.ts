@@ -222,18 +222,18 @@ export function buildReconciliation(): ReconciliationReport {
       : "";
     rows.push({
       unit: "N083PS",
-      locatorSi: `strani 1–4 + 140–143 (struktura + rekapitulacija); odprto: ${psOpenRanges}`,
-      locatorEn: `pages 1–4 + 140–143 (structure + recapitulation); open: ${psOpenRanges}`,
+      locatorSi: `strani 1–143 (P36: strojni prepis vseh strani — kampanja 5–139 + struktura/rekapitulacija 1–4, 140–143); odprto: ${psOpenRanges}`,
+      locatorEn: `pages 1–143 (P36: machine transcription of all pages — the 5–139 campaign + structure/recapitulation 1–4, 140–143); open: ${psOpenRanges}`,
       rowId: "N083PS",
-      entitySi: `Seznam zemljiških parcel — ${psSeries.structuredEntries} vzorčnih vrstic strukturiranih; kontrolna vsota 102+2505=2607 (str. 143)`,
-      entityEn: `Register of land parcels — ${psSeries.structuredEntries} sample rows structured; the checksum 102+2505=2607 (p. 143)`,
+      entitySi: `Seznam zemljiških parcel — ${psSeries.structuredEntries} vrstic strojno prebranih (P36, dvoprehodno); kontrolna vsota 102+2505=2607 (str. 143)`,
+      entityEn: `Register of land parcels — ${psSeries.structuredEntries} rows machine-read (P36, two passes); the checksum 102+2505=2607 (p. 143)`,
       entityId: null,
-      state: "PENDING_TRANSCRIPTION",
+      state: "STRUCTURED_UNRESOLVED",
       evidenceStatus: psSeries.status,
       geometry: null,
       derivedCount: psSeries.structuredEntries,
-      openSi: `poln prepis 135 strani (5–139) TO_COLLECT — izrecno odprto, ne izgubljeno; izhodiščna kontrolna vsota 2607`,
-      openEn: `the full transcription of 135 pages (5–139) TO_COLLECT — explicitly open, not lost; the baseline checksum 2607`,
+      openSi: `sprava s kontrolno vsoto 2607 (pomešan zvezek, sekcije Waldung/Schmiegärten/Blatt X, večkulturne vrstice, ~15 dvoumnih strani za 3. prehod) — izrecno odprto, ne izgubljeno; paleografska potrditev čaka`,
+      openEn: `the reconciliation against the checksum 2607 (shuffled volume, Waldung/Schmiegärten/Blatt X sections, multi-culture rows, ~15 ambiguous pages for a 3rd pass) — explicitly open, not lost; palaeographic confirmation pending`,
     });
   }
 
@@ -380,9 +380,9 @@ export function buildReconciliation(): ReconciliationReport {
     },
     zeroLoss: lost === 0 && units.every((u) => u.zeroLoss),
     zeroLossMeaningSi:
-      "zeroLoss = true potrjuje: (1) za VSAKO spisovno enoto N83 so vse deklarirane strani vira bodisi dokazano prebrane (pagesReadList iz surovih raziskav) bodisi izrecno zabeležene kot odprte z razlogom (scopeCheck) — brez tihih lukenj; (2) vsaka vrstica poročila ima status in razlog (lost = 0). zeroLoss NE potrjuje: da je poln prepis zaključen (PS 135 strani in PZ 59 strani so izrecno odprte), da so strojna branja dokaz (vse REVIEW), ali da obstajajo povezave hiša↔stavba (156 geometrij nima dokazanih hišnih št.).",
+      "zeroLoss = true potrjuje: (1) za VSAKO spisovno enoto N83 so vse deklarirane strani vira bodisi dokazano prebrane (pagesReadList iz surovih raziskav) bodisi izrecno zabeležene kot odprte z razlogom (scopeCheck) — brez tihih lukenj; (2) vsaka vrstica poročila ima status in razlog (lost = 0). zeroLoss NE potrjuje: da je prepis spravljen s kontrolno vsoto (P36: PS strani so strojno prebrane — 2743 vrstic dvoprehodno, a sprava s 2607 (pomešan zvezek, sekcije, večkulturne vrstice) je izrecno odprta; PZ 59 strani odprtih), da so strojna branja dokaz (vse REVIEW), ali da obstajajo povezave hiša↔stavba (156 geometrij nima dokazanih hišnih št.).",
     zeroLossMeaningEn:
-      "zeroLoss = true certifies: (1) for EVERY written N83 unit, all declared source pages are either evidenced as read (pagesReadList from the raw research) or explicitly recorded as open with a reason (scopeCheck) — no silent gaps; (2) every report row carries a state and a reason (lost = 0). zeroLoss does NOT certify: that the full transcription is complete (PS 135 pages and PZ 59 pages are explicitly open), that machine readings are evidence (all REVIEW), or that house↔building links exist (the 156 geometries carry no proven house numbers).",
+      "zeroLoss = true certifies: (1) for EVERY written N83 unit, all declared source pages are either evidenced as read (pagesReadList from the raw research) or explicitly recorded as open with a reason (scopeCheck) — no silent gaps; (2) every report row carries a state and a reason (lost = 0). zeroLoss does NOT certify: that the transcription is reconciled with the checksum (P36: the PS pages are machine-read — 2,743 rows in two passes, but the reconciliation against 2,607 (shuffled volume, sections, multi-culture rows) is explicitly open; PZ 59 pages open), that machine readings are evidence (all REVIEW), or that house↔building links exist (the 156 geometries carry no proven house numbers).",
     kurrentTrail,
   };
 }

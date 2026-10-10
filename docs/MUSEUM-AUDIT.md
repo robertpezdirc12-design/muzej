@@ -315,8 +315,9 @@ ne morejo tiho zastareti (to je točno tisto, kar se je zgodilo s 43/11).
   (inventar, ne statusev ustvarjenih vrstic); zeroLoss zdaj zahteva
   scopeAccounted IN lost = 0.
 - `zeroLossMeaningSi/En`: izrecna opredelitev, kaj zeroLoss potrjuje in
-  česa NE (PS 135 strani in PZ 59 strani izrecno odprtih; vsa strojna
-  branja REVIEW; 156 geometrij brez dokazanih hišnih št.).
+  česa NE (P36: PS strani 5–139 strojno prebrane — 2743 vrstic dvoprehodno,
+  a sprava s kontrolno vsoto 2607 še odprta; PZ 59 strani izrecno odprtih;
+  vsa strojna branja REVIEW; 156 geometrij brez dokazanih hišnih št.).
 - PUA↔PT povezave po hišni št. same ostajajo PREPOVEDANE (dokazano
   različno številčenje: PUA hiša 6 = Höflehner, PT hiša 6 = Tilel Miho);
   vsak lastnik brez PUA potrditve ima razlog, ne tihe luknje.
@@ -362,8 +363,10 @@ ne morejo tiho zastareti (to je točno tisto, kar se je zgodilo s 43/11).
    vektorizirane. Edina stavba z dokumentirano identiteto je cerkev sv. Vida
    (EŠD 2122 ↔ A02 px) — a je to kontrolna točka georeference, ne vrstica
    registra.
-4. **Kaj je odprto in kateri dokaz manjka?** (a) PS: poln prepis 135 strani —
-   dokaz = vrstice registra (kontrolna vsota 2607); (b) PZ: 59 strani tabel
+4. **Kaj je odprto in kateri dokaz manjka?** (a) PS: strojni prepis 135 strani
+   IZVEDEN (P36, 2743 vrstic, §17) — odkrite strukturne zagatve (pomešan
+   zvezek, več števčnih nizov, večkulturne vrstice) sprava s kontrolno vsoto
+   2607 še odprta; (b) PZ: 59 strani tabel
    razredov — dokaz = vrednosti razredov po kulturah; (c) točkovno sidro
    za A03–A05 (VAČ metapodatek ali točka z znano lego) za afino; (d)
    vektorizacija parcelnih meja z A01/A02; (e) človeška paleografska
@@ -684,3 +687,41 @@ EŠD 2122 Cerkev sv. Vida (15.290308, 45.567662), EŠD 19326 Spomenik NOB
   ostaja pri ZVKD Novo mesto. Trditev poročila 2006 ostaja neokrnjena.
 - **Ime Srednje njive** ni v nobenem zapisu RNPD — lokacija imena ostaja
   odprta (MVG-113 brez GPS, kustodova razrešitev).
+
+## 17. P36 — PS: STROJNI PREPIS VSEH STRANI 5–139, issue #10 (2026-10-11)
+
+**Obseg:** 135 strani rokopisnega `Protocoll Der Grund-Parcellen der Gemeinde
+Grüble` (N083PS, nemška kurziva) prebranih z VLM v **dveh neodvisnih prehodih**
+(pass-1: vseh 135; pass-2: 78 strani z okvarjeno soslednostjo) — skupaj
+**213 branj, 2743 strukturiranih vrstic** (status REVIEW po §2.2). Dokazi:
+`research/issue17/ps-raw/` (213 datotek z neodvisnimi izpisi) +
+`PS-full.json` (spravno poročilo z verdikti po straneh).
+
+**Strukturne ugotovitve (ključne za vse nadaljnje sprave):**
+
+1. **Zvezek NI v logičnem redu strani** — sosledje parcel se lomi med strani
+   (npr. str. 80–82 nosijo parcele 1644–1700, str. 118 pa 2001–2020). Veriga
+   "prejšnja stran + 20" NE obstaja; edina sprejemljiva sprava je po množici.
+2. **Več števčnih nizov** — glavne zasebne parcele; skupna gozdna zemlja
+   (»Waldung«, brez lastnikov in hišnih št., str. ~133–137, št. 2601–2700+);
+   majhni vrtovi (»Schmiegärten«, str. ~128–130, s hišnimi št.); odsek
+   »Blatt X« z lastnim številčenjem 1–40 (str. 138).
+3. **Glavni niz sega čez 2840** — torej kontrolna vsota 102 + 2505 = 2607
+   (rdeči tuš, str. 143) šteje KATEGORIJE (Bauplätze + Grundparzellen), NI
+   pa maksimalna številka parcele. Prejšnja predpostavka (neprekinjen niz
+   1–2607) je OVRŽENA.
+4. **Večkulturne vrstice** — ista parcela ima več vrstic (po kulturah), zato
+   je število VRSTIC (2743) > število PARCEL; razdvojitev je pogoj za uskladitev.
+5. **Sistematične napake strojnega branja** — izguba vodilne števke
+   (161→61), zamenjave 3↔1, 8↔5; drugeiterativna branja jih večinoma
+   razrešijo (78 strani ima dve priči).
+
+**Kaj ostaja odprto (issue #10 ostaja odprt):** 3. prehod ~15 dvoumnih strani
+(npr. 84: 22 vrstic za 8 parcel; 138: 20 ali 40 vrstic), klasifikacija vsake
+strani v sekcijo, razdvojitev večkulturnih vrstic, končna uskladitev s
+kontrolno vsoto 2607. Vrsta po hišah (za #13) postane mogoča po spravi.
+
+**Spremljajoče spremembe:** `sources.ts` N083PS structuredEntries 12 → 2743 z
+noto kampanje; `research.ts` PS_RECAP_1826 priporočilo posodobljeno (zastarelo
+»NE prepisovati slepo« umik); QA 36 → **37** (`qa-p36-ps-machineread`: 8
+trditev o dokumentiranosti kampanje).
