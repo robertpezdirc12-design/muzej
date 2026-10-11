@@ -2375,3 +2375,38 @@ zgodbo (Pezdirc).
   dokazi research/issue17/ps-raw/ (213 datotek) + PS-full.json.
 - ISSUE #10 OSTAJA ODPRT: preostane 3. prehod ~15 dvoumnih strani, klasifikacija sekcij, razdvojitev večkulturnih
   vrstic, uskladitev s 2607 — poročilo o napredku komentirano na issue.
+
+## P37 — issue #21: sanacija P35 (Vercel failure, README, dokaz produkcije) (2026-10-11)
+
+- VZROK FAILURE raziskan iz primarnih dokazov: commit 396a709 (P35, avtor sandboxa
+  »Z User <z@container>«) → GitHub status context=Vercel state=failure,
+  desc=»Deployment was blocked«, target=dpl_3r4DBvPta97jnoxmzufbqTjNzNxM; deployment
+  objekt je Vercel medtem odstranil (API 404), dokaz pa ostaja v GitHub Status API.
+  Vzrok (ne sklep): preverba avtorja commita na Hobby+zasebni repo (avtor ni lastnik
+  ekipe) — POTRJENO s kontrastnim poskusom: že naslednji commit 6f26a4d (lastnikova
+  identiteta) ima status success (dpl_GBa1qCEnVsugahoFBiqNsnXSEn9b, READY 20:30:28 UTC).
+  IZKLJUČENO: omejitev računa (#9 rešen 10. 10.), napaka gradnje (buildSkipped, gradnja
+  se ni niti začela), težava GitHub App (link potrjen: org/repo/productionBranch),
+  env spremenljivke, napaka workflowa (deploy.yml pri tem commitu ni tekel — pot je
+  integracija). Anomalija: eab0def (prvi deploy po povezavi) nima poročanega statusa
+  (pending brez kontekstov) — statusno poročanje se je očitno vzpostavilo šele od 396a709.
+- README USKLAJEN: števec 596→601 (danes 601 navedb virov; MUSEUM-AUDIT §2.1 že veljaven);
+  »Samodejni deploy — vsak push sproži GitHub Actions« ZAMENJANO z dejansko arhitekturo:
+  primarna pot = Vercel GitHub App (povezana 10. 10. 2026, brez VERCEL_TOKEN), rezervna
+  pot = deploy.yml samo workflow_dispatch (push-sprožilec namenoma odstranjen v P35);
+  vrstica o žetonu »velja do 14. 10.« odstranjena (zastarelo — žeton obnovljen 10. 10.,
+  natančen rok prek API ni berljiv; stanje spremlja token-health.yml); dodana navodila
+  za preverjanje uspešne objave (GitHub status Vercel / api/qa); past avtorstva dopolnjena
+  z dokazanim incidentom (396a709/dpl_3r4DBvP…).
+- LAYOUT.TSX: 4× zastareli SEO števec »596 dokazljivih virov« → 601 (meta description +
+  3 OG/Twitter opisi — odprto razhajanje, ki ga revizija ni zajela, ker šteje le README).
+- MUSEUM-AUDIT.md §1 vrstica Produkcija usklajena z novo arhitekturo objavljanja.
+- NOVA QA KONTROLA qa-p37-doc-counters (38. test): runQA dobi novo opcijo readFile
+  (vbrizg strežniške poti /api/qa, enak vzorec degradacije kot fileExists pri
+  qa-p19-images); preveri README (»**N zapisov**«, »N dokazljivih virov«, »N dogodkov«)
+  in layout.tsx (»N dokazljivih virov«) proti meta.json/dejanskim podatkom.
+  Negativni dokaz: simulirano 596 v README oz. layout.tsx → test pade z natančnim
+  sporočilom o neskladju; pravo stanje → zelen (neskladja: 0).
+- REGRESIJA: bun install --frozen-lockfile 508 paketov; ESLint 0; tsc 0; build 16/16
+  strani + 12 API poti; lokalni produkcijski strežnik: /api/qa HTTP 200, QA 38/38
+  (prej 37/37 — dodan 1 test, nič odstranjenih).

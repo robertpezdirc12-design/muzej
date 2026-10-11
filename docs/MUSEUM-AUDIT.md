@@ -15,7 +15,7 @@
 | Framework | Next.js 16 (App Router) + React 19 + TypeScript 5 + Tailwind; Bun kot upravitelj paketov |
 | Podatki | statični JSON/TS pod `src/data/museum/` in `src/data/atlas/` — brez baze med delovanjem |
 | Zgradba ob reviziji | `bun run build` uspešna: 16/16 strani, 12 API poti (vse `force-static`) |
-| Produkcija | `griblje-museum.vercel.app` (Vercel; sinhroniziran z repozitorijem — GitHub Actions deploy, žeton do 14. 10. 2026) |
+| Produkcija | `griblje-museum.vercel.app` (Vercel; sinhroniziran z repozitorijem — primarni deploy prek Vercel GitHub App ob pushu na `main`, ročna rezerva `.github/workflows/deploy.yml`/`workflow_dispatch`; žeton `VERCEL_TOKEN` je samo še v rezervni poti, njegovo zdravje dnevno preverja `token-health.yml`) |
 | Obstoječi testi | lastna QA zbirka (`src/lib/qa.ts`, 30 testov), atlas integrity (11 preverb), ESLint, tsc |
 | Odprti issueji | #1 (ta revizija) — edini |
 

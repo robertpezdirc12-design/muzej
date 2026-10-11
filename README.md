@@ -1,7 +1,7 @@
 # Muzej vasi Griblje — digitalni muzej vasi ob Kolpi
 
 Večjezični digitalni muzej resnične vasi v Beli krajini (občina Črnomelj, Slovenija).
-Zbirka: **114 zapisov** s trajnimi muzejskimi številkami (MVG-001 → MVG-114), **596 dokazljivih virov**,
+Zbirka: **114 zapisov** s trajnimi muzejskimi številkami (MVG-001 → MVG-114), **601 dokazljivih virov**,
 lestvica zanesljivosti, odprti podatki in časovnica od prve omembe vasi leta **1468**.
 
 ## Značilnosti
@@ -61,15 +61,24 @@ Produkcija teče na Vercelu: **https://griblje-museum.vercel.app**
 | Plast | Stanje |
 |---|---|
 | Repozitorij | `robertpezdirc12-design/muzej` (zasebni, veja `main`) — vsebina identična produkciji |
-| Samodejni deploy | ✅ AKTIVEN — `.github/workflows/deploy.yml`: vsak push na `main` sproži `vercel deploy --prod --yes` (GitHub Actions) |
-| Skrivnosti | `VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID` shranjene kot šifrirane GitHub Actions skrivnosti |
-| Žeton | velja do 14. 10. 2026 — obnovitev: `scripts/renew_vercel_token.py` (libsodium) |
+| Primarni deploy | ✅ **Vercel GitHub App** (povezana 10. 10. 2026 prek Settings → Git; `productionBranch=main`) — vsak push na `main` samodejno zgradi produkcijo na strani Vercel, **brez žetona `VERCEL_TOKEN`** |
+| Rezervni deploy | `.github/workflows/deploy.yml` — samo ročni (`workflow_dispatch`, zavihek Actions → *Deploy na Vercel (rocni rezervni)* → Run workflow). Namen: padec git integracije, preizkus žetona ob rotaciji. Push-sprožilec je namenoma odstranjen (dvojni deploy bi na Hobby čakal v vrsti) |
+| Skrivnosti (samo za rezervo) | `VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID` kot šifrirane GitHub Actions skrivnosti; obnovitev žetona: `scripts/renew_vercel_token.py` (libsodium) |
+| Zdravje žetona | `token-health.yml` preverja žeton dnevno (06:12 UTC): avtentikacija + obseg ekipe; ob napaki komentira na issue #6 |
+
+**Kako preveriti uspešno objavo:** GitHub status commita (kontekst *Vercel*) mora po pushu
+preiti v `success` (*Deployment has completed*). Kadar vidite `failure`
+(*Deployment was blocked*), gre za zavrnjeno gradnjo — najpogostejši vzrok je past
+avtorstva spodaj. Neodvisna kontrola: `GET /api/qa` na produkciji
+(HTTP 200 = vsi testi zeleni) in Vercel dashboard.
 
 > **⚠️ Past pri commitih (Hobby + zaseben repo):** Vercel na Hobby načrtu za
 > zasebne repozitorije zahteva, da je **avtor deployanega commita lastnik ekipe**
 > (dokumentacija: *troubleshoot-project-collaboration*). Peskovniški
-> `Z User <z@container>` povzroči `BLOCKED (TEAM_ACCESS_REQUIRED)`.
-> Pred vsakim commitom v novi seji:
+> `Z User <z@container>` povzroči `BLOCKED (TEAM_ACCESS_REQUIRED)` —
+> **potrjeno z incidentom 10. 10. 2026** (commit `396a709`, deploy `dpl_3r4DBvP…`:
+> GitHub status *failure — Deployment was blocked*; naslednji commit z lastnikovo
+> identiteto se je uspešno uveljavil). Pred vsakim commitom v novi seji:
 > `git config user.name "Robert Pezdirc" && git config user.email "robert.pezdirc12@gmail.com"`
 
 ### Ročni deployment (iz klona repozitorija, rezerva)

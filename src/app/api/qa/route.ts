@@ -16,6 +16,13 @@ export const dynamic = "force-static";
 export async function GET() {
   const report = runQA({
     fileExists: (relativePath) => fs.existsSync(path.join(process.cwd(), relativePath)),
+    readFile: (relativePath) => {
+      try {
+        return fs.readFileSync(path.join(process.cwd(), relativePath), "utf8");
+      } catch {
+        return null;
+      }
+    },
   });
   return NextResponse.json(report, {
     status: report.ok ? 200 : 500,

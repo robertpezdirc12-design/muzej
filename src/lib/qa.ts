@@ -112,6 +112,10 @@ export interface QAOptions {
    *  (route /api/qa, fs.existsSync); odjemalski klic (museum-coverage)
    *  poti preveri po obliki, obstoj na disku pa izrecno prepusti /api/qa. */
   fileExists?: (relativePath: string) => boolean;
+  /** Branje besedilnih datotek (README, layout) — prav tako vbrizga strežnik;
+   *  brez njega odjemalski klic kontrolo dokumentacijskih števcev preskoči
+   *  (celovita kontrola teče na /api/qa). Vrača null, kadar datoteke ni. */
+  readFile?: (relativePath: string) => string | null;
 }
 
 export function runQA(opts: QAOptions = {}): QAReport {
@@ -1030,6 +1034,45 @@ export function runQA(opts: QAOptions = {}): QAReport {
     "P19: counters (collection/sources/events/stories) match the actual data",
     countMismatches.length === 0,
     `${EXHIBITS.length} zapisov · ${totalSources} virov · ${EVENTS.events.length} dogodkov · ${(META.stories ?? []).length} zgodb; neskladja: ${countMismatches.join("; ") || "0"}`,
+  );
+
+  // P37 (issue #21): števci v dokumentaciji (README.md) in meta oznakah
+  // (src/app/layout.tsx) usklajeni z meta.json — odkrije, da se ob novih virih
+  // pozabi uskladiti README/SEO opis (P34: 596 → 601 se ni preneslo).
+  // Strežniški klic vbrizga readFile; odjemalski izris kontrolo preskoči
+  // (enak vzorec degradacije kot pri qa-p19-images).
+  let docCountersOk = true;
+  let docCountersDetail = "dokumentacija ni preverjena (fs ni na voljo) — celovita kontrola teče na /api/qa";
+  if (opts.readFile) {
+    const docMismatches: string[] = [];
+    const readme = opts.readFile("README.md");
+    const layout = opts.readFile("src/app/layout.tsx");
+    if (readme !== null) {
+      const boldRecords = [...readme.matchAll(/\*\*(\d+) zapisov\*\*/g)].map((m) => Number(m[1]));
+      const provableSources = [...readme.matchAll(/(\d+) dokazljivih virov/g)].map((m) => Number(m[1]));
+      const eventsRow = [...readme.matchAll(/(\d+) dogodkov/g)].map((m) => Number(m[1]));
+      for (const n of boldRecords) if (n !== EXHIBITS.length) docMismatches.push(`README "zapisov": ${n} ≠ ${EXHIBITS.length}`);
+      for (const n of provableSources) if (n !== totalSources) docMismatches.push(`README "dokazljivih virov": ${n} ≠ ${totalSources}`);
+      for (const n of eventsRow) if (n !== EVENTS.events.length) docMismatches.push(`README "dogodkov": ${n} ≠ ${EVENTS.events.length}`);
+    } else {
+      docMismatches.push("README.md ni berljiv");
+    }
+    if (layout !== null) {
+      const seoSources = [...layout.matchAll(/(\d+) dokazljivih virov/g)].map((m) => Number(m[1]));
+      if (seoSources.length === 0) docMismatches.push("layout.tsx: števec virov ni najden");
+      for (const n of seoSources) if (n !== totalSources) docMismatches.push(`layout.tsx "dokazljivih virov": ${n} ≠ ${totalSources}`);
+    } else {
+      docMismatches.push("src/app/layout.tsx ni berljiv");
+    }
+    docCountersOk = docMismatches.length === 0;
+    docCountersDetail = `README + layout.tsx proti meta.json (zapisov ${EXHIBITS.length}, virov ${totalSources}, dogodkov ${EVENTS.events.length}); neskladja: ${docMismatches.join("; ") || "0"}`;
+  }
+  push(
+    "qa-p37-doc-counters",
+    "P37: števci v README in SEO meta opisu usklajeni z metapodatki zbirke (issue #21)",
+    "P37: README and SEO meta description counters match collection metadata (issue #21)",
+    docCountersOk,
+    docCountersDetail,
   );
 
   // P19-2: vsaka slika zapisa obstaja na disku (106 citiranj / 103 datotek).
