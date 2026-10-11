@@ -2652,3 +2652,8 @@ Stage Summary:
 - Zavrnjeni fitovi z dokazi (nafizikalni parametri / kršitve oznak) — P9-past izrecno dokumentirana v README
 - token-health.yml: VERCEL 404/200 = uspeh (ne več dnevna lažna »prehodna napaka«); #6 čaka le še GitLab PAT od lastnika (Vercel žeton deluje, brez roka)
 - Produkcija: push v naslednjem koraku + dimnični test + zaključek #14
+- PRODUKCIJA (nadaljevanje Work Log): push 1e60c93 → samodejni deploy Vercel GitHub App; PROD /api/qa **43/43 zelenih** (qa-p45-sheet-anchors PASS, computedAt 20:50 UTC); dimnični test čist: / 200 (631 KB) lang=sl · ?odsek=atlas 200 · ?exponat= 200×3 · /api/atlas 200 · /api/provenance 200 · /nenajden 404 pravilno.
+- #14 ZAPRT (issuecomment + PATCH): vsa 3 merila izpolnjena (vidna negotovost + geotruth.ts SHEET_TRUTH + poštena nadomestna pot namesto odsotnih točkovnih sidrov); preostanek izrecno na #12/#13.
+- #6 komentar stanja: VERCEL_TOKEN deluje brez roka (404/200 = omejen obseg vcp_, deployu zadostuje — nič za narediti); GITLAB_TOKEN mrtev — potreben nov PAT od lastnika (navodila v komentarju); ogledalo ~9 commitov zaostanka, samodejno nadoknadilo.
+- token-health VERIFICIRAN E2E (ročni dispatch, run 38174097430 @ 1e60c93): ##[notice] VERCEL_TOKEN deluje (/v2/user=404, /v9/projects=200 — nova veja P45 deluje); ##[error] GITLAB_TOKEN 401 (edini rdeči — po zasnovi); opozorilo na #6 de-dup (botovo opozorilo < 7 dni).
+- STANJE ODPRTEH ISSUEJEV po P45: #6 (GitLab PAT — lastnik), #12 (paleografija — človek), #13 (vektorizacija — čaka #12), #15 (arhiv SI AS 749/1138), #16 (posnetki — lastnik), #17 (teren — lastnik), #18 (matrike — delno arhiv).
