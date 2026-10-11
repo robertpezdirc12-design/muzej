@@ -2494,3 +2494,34 @@ zgodbo (Pezdirc).
   prepisanimi registri — deterministično, brez novih VLM klicev.
 - Ostanek za DoD #13: 29 nerešenih PUA hiš + 84 PT hiš (→ #12), vektorizacija meja A01/A02
   (GeoJSON), integrity test razširitev (po vektorizaciji). Issue ostaja odprt (P1).
+
+## P42 — sanacija tihe izgube opozoril token-health + retro-dokumentacija P39/P41 (2026-10-11)
+
+- IZHODIŠČE: dnevni pregled žetonov (run 38140520764, 11. 10. 12:46 UTC) je padel — VERCEL_DEAD=false
+  (žeton zdrav: uradni, brez roka, polni obseg — prej neveljavna vrednost v kontekstu pomočnika je bila
+  okrajšana, ne mrtva), GITLAB_DEAD=true (HTTP 401). A opozorilo na #6 NI prispelo: korak Opozorilo
+  je tiho padel — gh CLI brez GH_REPO in brez checkouta → »not a git repository« → gh issue comment
+  spodleti, issue #6 ostane ZAPRT brez komentarja. Run-based de-dup (prev=failure → »komentar že
+  obstaja«) bi opozorilo izgubil za vedno.
+- KRONOLOGIJA smrti GITLAB_TOKEN: rotacija na 2027-01-08 (10. 10. 14:40) je veljala — synci zeleni
+  do 11. 10. 06:23 UTC; prvi rdeči 07:09 (P38 push); torej umrl med 06:23 in 07:09 kljub roku
+  2027-01-08 → preklican na strani GitLaba (ne iztek); self_rotate z 401 ni mogoč → potreben nov PAT.
+- POPRAVEK token-health.yml: (1) GH_REPO env na koraku Opozorilo; (2) de-dup po VSEBINI #6 —
+  zadnje bot-opozorilo mlajše od 7 dni → brez novega, sicer objavi + reopen (samozdravilno, ne
+  izgubi opozorila če korak kdaj pade); (3) besedilo 401: self_rotate nemogoč, potreben nov PAT
+  (api + write_repository); (4) odstranjeno actions:read (gh run list ne potrebuje več).
+- E2E DOKAZ (run 38159267589, ročni dispatch po popravku): VERCEL success → GITLAB 401 →
+  opozorilo objavljeno prek github-actions[bot] (issuecomment-6111643095, 17:21:20 UTC) + #6
+  ponovno odprt + job exit 1 po zasnovi (rdeči job = dnevno e-poštno opominjanje lastnika).
+- DIAGNOZA na #6 (issuecomment-6111653749): kronologija, vzrok tihe izgube, sanacija, E2E dokaz,
+  stanje ogledala (za 4-5 commiti), prošnja za nov PAT (edina odvisnost od lastnika).
+- RETRO-DOKUMENTACIJA: vnos P39 (struktorna rekonstrukcija PS + zaprtje #10) in P41 (veriga
+  PUA→PS, #13 del 1) rekonstruirana iz sporočil commitov + issue-komentarjev — ponastavitve
+  peskovnika so jih izrinile pred zapisom; P40 = številka brez faze (enak vzorec izgube).
+- GIT IDENTITETA: peskovnik ponastavljen → user.name/email so bili »Z User« (past iz P35!);
+  nastavljeno na lastnikovo PRED commitom (Robert Pezdirc <robert.pezdirc12@gmail.com>).
+- SINHRONIZACIJA: sync.yml pada po zasnovi (varovalki FETCH_OK/PUSH_OK iz P21 javno poročata
+  401); obnovi se samodejno, ko nov PAT pride v skrivnost GITLAB_TOKEN (zaostanek 4-5 commitov
+  se nadoknadi v enem ciklu).
+- PRODUKCIJA: neprizadeta (4f0ae9d deploy zelen prek Vercel GitHub App; spremembe se dotikajo
+  samo .github/ + worklog.md, brez vpliva na gradnjo).
