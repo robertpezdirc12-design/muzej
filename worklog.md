@@ -2440,3 +2440,57 @@ zgodbo (Pezdirc).
   (dokaz pass3 datotek + PS-full-v2.json prek fs injekcije; 39. test). QA 38→39, vse zeleno.
 - ISSUE #10 OSTAJA ODPRT: per-blatt rekonstrukcija (branja lista so šumna ~50 %), 7 nerešenih strani (#12),
   razdvojitev večkulturnih vrstic, končna uskladitev s 2607.
+
+## P39 — issue #10: strukturna rekonstrukcija PS + ZAPRTJE (retro-dokumentacija; commit 670d8ca, 2026-10-11 08:10 UTC)
+
+> Vnos rekonstruiran v P42 — faza P39 je stekla v peskovniku, ki se je ponastavil pred zapisom
+> v ta dnevnik; viri: sporočilo commita 670d8ca + komentar na #10 (08:13 UTC) + zapisi QA.
+
+- SEGMENTACIJA po fizičnem vrstnem redu strani z lastniškim testom → 33 segmentov (listov).
+- VSEBINSKI DOKAZ per-list številčenja: vseh 29/29 parov strani z enakim obsegom številk ima za
+  iste številke RAZLIČNE lastnike (0 ujemanj) — npr. št. 421 = Krautisch (Blatt I, str. 24)
+  vs Hölzl (Blatt II, str. 83). P36 hipoteza »napačno prebrane številke« je S tem OVRŽENA;
+  P38 odkritje o listih (Blatt I–X, lastno številčenje) je potrjeno z vsebino, ne le stolpcem blatt.
+- 2724 unikatnih (segment, številka) parov: 50 večkulturnih dodatnih vrstic, 200 neberljivih št.
+- Kontrolna vsota 102 + 2505 = 2607 znotraj meje [2221, 2725] — KONSISTENTNO; eksaktna
+  potrditev izrecno preložena v #12 (7 nerešenih strani 69, 85, 86, 88, 93, 128, 138 +
+  morebitni fantomski obsegi).
+- Nov dokaz research/issue17/PS-reconstruction.json; sources/research noti + P39; MUSEUM-AUDIT §18.
+- QA 39→40 (qa-p39-ps-structure); ESLint 0, tsc 0, build 16/16, lokalno 40/40; deploy dpl_2xo2eDfG… READY.
+- ISSUE #10 ZAPRT (completed) z zaključnim komentarjem 08:13 UTC; obseg človeškega pregleda
+  razširjen na #12 (komentar 08:13:37 UTC).
+
+## P40 — številka brez faze (prazna)
+
+> V P42 ugotovljeno: med P39 (08:10 UTC) in P41 (13:35 UTC) 11. 10. 2026 ni ne commita ne
+> issue-komentarja ne dokaza, ki bi nosil oznako P40. Najverjetneje je bila številka rezervirana
+> v peskovniku, ki se je ponastavil pred izvedbo (enak vzorec kot izguba worklog-vnosov P39/P41).
+> Da se številjenje ne bi podvajalo, se nadaljuje s P42.
+
+## P41 — issue #13 (del 1): analiza številčenja hiš + veriga PUA→PS (retro-dokumentacija; commit 81da6f4, 2026-10-11 13:35 UTC)
+
+> Vnos rekonstruiran v P42 — enak vzrok kot pri P39 (ponastavitev peskovnika pred zapisom);
+> viri: sporočilo commita 81da6f4 + komentar na #13 (13:35:45 UTC).
+
+- TRI številska sistemi hiš (ne dva, kot je zapisano v raziskovalnem vprašanju P4):
+  PT (stavbne parcele) = lastno številčenje — 0/70 natančnih ujemanj s PS pri istih št.;
+  PUA (lastniški register) ≈ PS — megleno record-linkage 25:0 v prid PUA;
+  PS (parcelni protokol) sledi PUA (z VLM šumom).
+  Primeri: Hlebety (PUA h2) → PS 2 (13/48 vrstic); Noah (h4) → PS 4 (11/37);
+  Dragosch (h3/4/5) → PS 3(9), 5(5); Fillah Miho (h61, II:814–1861) → PS 5/5 Fillak (100 %);
+  Krischan (h31/36/37) → 60–76 %.
+- VRZEL PT↔PUA/PS je STRUKTURNA (PT hiša 6 = Tilel Miho vs PUA/PS hiša 6 = Höflehner/Comenda):
+  veriga stavba→parcela ni mogoča brez človeške paleografije (#12) ali vektorizacije A01/A02
+  z omestitvijo hiš po geometriji.
+- PUA »sections« so KAZALNIKI razpršenih parcel (isti razpon pri več lastnikih), ne izključne
+  posesti: trojna omejitev (razpon ∩ hišna št.) na 114 nizov → 13 močnih, 11 srednjih,
+  17 šibkih, 73 brez ujemanja.
+- VERIGA PUA hiša → PS parcela (od 65 PUA hiš): 7 DOKAZANA + 9 VERJETNA + 20 MOGOČA +
+  29 NEREŠENA; vsaka povezava nosi vir (stran/vrstica PS, segment/Blatt, št. parcele) ali
+  izrecno oznako negotovosti (merilo 3 izpolnjeno).
+- Dokazi: research/issue13/numbering-analysis.json (konsolidirano poročilo + veriga + vrzeli +
+  naslednji koraki) in research/issue13/chain-pua-ps.json (vseh 65 hiš s parcelami).
+  Metoda: megleno ujemanje priimkov (Levenshtein ≤ 2, B/P in Š variacije Kurrenta) nad že
+  prepisanimi registri — deterministično, brez novih VLM klicev.
+- Ostanek za DoD #13: 29 nerešenih PUA hiš + 84 PT hiš (→ #12), vektorizacija meja A01/A02
+  (GeoJSON), integrity test razširitev (po vektorizaciji). Issue ostaja odprt (P1).
