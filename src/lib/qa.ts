@@ -1206,8 +1206,8 @@ export function runQA(opts: QAOptions = {}): QAReport {
   const srcPua = ATLAS_SOURCES.find((s) => s.id === "src-pua");
   if (puaInv && srcPua && (puaInv.structuredEntities !== PUA_CONTINUATION.rows.length || srcPua.structuredEntries !== PUA_CONTINUATION.rows.length))
     p20invErrors.push(`PUA structured ${puaInv.structuredEntities}/src ${srcPua.structuredEntries} != PUA_CONTINUATION ${PUA_CONTINUATION.rows.length} (43→101 napaka se ne sme ponoviti)`);
-  if (psInv && psInv.structuredEntities !== 2743)
-    p20invErrors.push(`PS structured: ${psInv.structuredEntities} != 2743 (P36 kampanja, dokaz ps-raw/PS-full.json)`);
+  if (psInv && psInv.structuredEntities !== 2974)
+    p20invErrors.push(`PS structured: ${psInv.structuredEntities} != 2974 (P36 2743 + P38 3. prehod, dokaz ps-raw/PS-full-v2.json)`);
   if (pzInv && pzInv.structuredEntities !== 10) p20invErrors.push(`PZ structured: ${pzInv.structuredEntities}`);
   if (a02Inv && a02Inv.structuredEntities !== VECTOR_BUILDINGS.length)
     p20invErrors.push(`A02 structured: ${a02Inv.structuredEntities} != ${VECTOR_BUILDINGS.length}`);
@@ -1404,8 +1404,8 @@ export function runQA(opts: QAOptions = {}): QAReport {
   const psSrc = ATLAS_SOURCES.find((s) => s.code === "N083PS");
   if (!psSrc) p36Errors.push("vir N083PS manjka");
   else {
-    if (psSrc.structuredEntries !== 2743)
-      p36Errors.push(`N083PS: structuredEntries=${psSrc.structuredEntries}, pričakovano 2743 (P36 strojni prepis 135 strani)`);
+    if (psSrc.structuredEntries !== 2974)
+      p36Errors.push(`N083PS: structuredEntries=${psSrc.structuredEntries}, pričakovano 2974 (P36 2743 + P38 3. prehod 20 strani)`);
     if (psSrc.lastVerified !== "2026-10-11")
       p36Errors.push("N083PS: lastVerified ni 2026-10-11 (dan P36 kampanje)");
     if (!(psSrc.noteSi ?? "").includes("ps-raw"))
@@ -1417,8 +1417,8 @@ export function runQA(opts: QAOptions = {}): QAReport {
     if (!(psSrc.noteSi ?? "").includes("Waldung") || !(psSrc.noteSi ?? "").includes("2607"))
       p36Errors.push("N083PS: nota SL ne dokumentira strukturnih ugotovitev (sekcije, kontrolna vsota)");
   }
-  if (PS_RECAP_1826.sampleRowCount !== 2743)
-    p36Errors.push(`PS_RECAP_1826.sampleRowCount=${PS_RECAP_1826.sampleRowCount}, pričakovano 2743`);
+  if (PS_RECAP_1826.sampleRowCount !== 2974)
+    p36Errors.push(`PS_RECAP_1826.sampleRowCount=${PS_RECAP_1826.sampleRowCount}, pričakovano 2974 (P38)`);
   if (!(PS_RECAP_1826.mostUsefulSi ?? "").includes("P36"))
     p36Errors.push("PS_RECAP_1826: priporočilo SL ne odraža P36 kampanje (zastarelo »NE prepisovati«)");
   push(
@@ -1427,8 +1427,42 @@ export function runQA(opts: QAOptions = {}): QAReport {
     "P36: N083PS — machine transcription of ALL 135 pages (5–139) documented at the source (2,743 rows, two passes, evidence ps-raw + PS-full.json); structural findings (shuffled volume, Waldung/Schmiegärten/Blatt X sections, the 2,607 checksum as a category sum) visible in the notes; the reconciliation remains TO_COLLECT",
     p36Errors.length === 0,
     p36Errors.length === 0
-      ? "135 strani · 2743 vrstic · 213 VLM branj (135 + 78) · 4 sekcije odkrite"
+      ? "135 strani · 2743 vrstic P36 (2974 po P38) · 213+20 VLM branj · 4 sekcije odkrite"
       : p36Errors.join("; "),
+  );
+
+  // P38 (issue #10): 3. prehod PS — strukturno odkritje listov (Blatt) + adjudikacija.
+  const p38Errors: string[] = [];
+  {
+    const ps = ATLAS_SOURCES.find((s) => s.code === "N083PS");
+    if (!ps) p38Errors.push("vir N083PS manjka");
+    else {
+      if (!(ps.noteSi ?? "").includes("P38")) p38Errors.push("N083PS: nota SL ne dokumentira P38 (3. prehod)");
+      if (!(ps.noteSi ?? "").includes("Blatt I")) p38Errors.push("N083PS: nota SL brez strukturnega odkritja listov (Blatt)");
+      if (!(ps.noteSi ?? "").includes("PS-full-v2.json")) p38Errors.push("N083PS: nota SL brez kazalca na PS-full-v2.json");
+      if (!(ps.noteSi ?? "").includes("69, 85, 86, 88, 93, 128, 138"))
+        p38Errors.push("N083PS: nota SL brez seznama nerešenih strani za #12");
+      if (!(ps.noteEn ?? "").includes("per-sheet")) p38Errors.push("N083PS: nota EN brez per-sheet rekonstrukcije v naslednjih korakih");
+    }
+    if (PS_RECAP_1826.sampleRowCount !== 2974) p38Errors.push("PS_RECAP: števec vrstic ni 2974");
+    if (!(PS_RECAP_1826.mostUsefulSi ?? "").includes("P38")) p38Errors.push("PS_RECAP: priporočilo SL ne odraža P38");
+    // strežniška kontrola dokazov: 20 datotek pass-3 + PS-full-v2.json (odjemalski izris preskoči)
+    if (opts.fileExists) {
+      const fileExists = opts.fileExists;
+      const targets = [24, 37, 69, 79, 83, 84, 85, 86, 87, 88, 92, 93, 94, 99, 121, 125, 128, 135, 138, 139];
+      const missing = targets.filter((t) => !fileExists(`research/issue17/ps-raw/ps-${String(t).padStart(3, "0")}-pass3.json`));
+      if (missing.length) p38Errors.push(`ps-raw: manjka pass3 za strani ${missing.join(", ")}`);
+      if (!fileExists("research/issue17/PS-full-v2.json")) p38Errors.push("manjka PS-full-v2.json");
+    }
+  }
+  push(
+    "qa-p38-ps-blatt",
+    "P38: N083PS — 3. prehod 20 ciljnih strani (233 VLM branj) + odkritje organizacije po listih (Blatt I–X, lastno številčenje); identiteta parcele = (list, številka); kontrolna vsota 2607 je vsota čez vse liste; 7 nerešenih strani izrecno za človeški pregled (#12)",
+    "P38: N083PS — 3rd pass over 20 target pages (233 VLM reads) + discovery of sheet organization (Blatt I–X, own numbering); parcel identity = (sheet, number); the 2,607 checksum sums across all sheets; 7 unresolved pages explicitly deferred to human review (#12)",
+    p38Errors.length === 0,
+    p38Errors.length === 0
+      ? "20 strani pass-3 · 2974 izbranih vrstic · str. 24 potrjena 421-440 · nerešene: 69, 85, 86, 88, 93, 128, 138"
+      : p38Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;

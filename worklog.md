@@ -2410,3 +2410,33 @@ zgodbo (Pezdirc).
 - REGRESIJA: bun install --frozen-lockfile 508 paketov; ESLint 0; tsc 0; build 16/16
   strani + 12 API poti; lokalni produkcijski strežnik: /api/qa HTTP 200, QA 38/38
   (prej 37/37 — dodan 1 test, nič odstranjenih).
+
+## P38 — issue #10: PS 3. prehod (20 ciljnih strani) + odkritje organizacije po listih (2026-10-11)
+
+- ELIMINACIJSKA ANALIZA obstoječih 213 branj (P36): parser popravki (format ```json + "vrstice" ovijalec,
+  frakcije 76½, robustni obseg z odstranjevanjem osamelcev); prekrivanja istih obsegov z RAZLIČNO vsebino
+  (0/20 enakih parov lastnik/kultura/površina) dokazujejo NAPAČNO PREBRANE številke, ne podvojene folije;
+  fizična sosledja (sosednje strani se verižijo, npr. 5→6→7 = 41-60→61-80→81-100) omogočajo adjudikacijo.
+- 20 CIJNIH STRANI določenih programsko (prekrivanje s sosledno podprto stranjo / sporno brez podpore);
+  strani 6 in 131 diagnosed kot parser-fail (drugačen format vsebine), ne manjkajoči.
+- 3. PREHOD: 20 strani prebranih z VLM (glm-5v-turbo) z izboljšanim pozivom (neprekinjeno zaporedje
+  številk kot kontrola, pozornost na kurzivne zamenjave 1/4/7, 5/6, ditto) — dokaz
+  research/issue17/ps-raw/ps-NNN-pass3.json (20 datotek, skupaj 233 VLM branj). Slike strani pridobljene
+  prek VAČ pdfPageImage API (PDF prenos se je izkazal za prepočasen — 56 MB v 4 min, strežnik podpira
+  samo cele datoteke).
+- STRUKTURNO ODKRITJE: stolpec Blatt razkriva organizacijo po LISTIH (I, II, IIb, III, IV, V, VII, IX, X)
+  — vsak list ima LASTNO številčenje parcel; isto številka na različnih listih je DRUGA parcela
+  (razlaga 'nemogočih' prekrivanj iz P36); kontrolna vsota 102 + 2505 = 2607 je vsota (list, številka)
+  parov čez vse liste, ne maksimum enega niza. Popravek P36 modela 'glavnega niza 1-2840'.
+- PRIMER: str. 24 strukturno potrjena kot 421-440 (pass3 zapolni vrzel; p1/p2 sta SKUPAJ napačno brala
+  401-420 — sistematna zamenjava 2↔4 v stoticah; dokaz korelacije napak med prehodoma → večina 2/3 NI
+  zanesljiv protokol, uporabljena pass3-prednost s strukturnimi varovalkami).
+- ADJUDIKACIJA: 135/135 strani izbranih branj, 2974 vrstic (PS-full-v2.json z obsegi, izbori in
+  utemeljitvami po strani); 7 NERESENIH strani (69, 85, 86, 88, 93, 128, 138 — tri medsebojno različna
+  branja) izrecno prepuščene človeškemu pregledu (issue #12).
+- REPO SPREMEMBE: sources.ts N083PS (structuredEntries 2743→2974, note P38 z odkritjem listov);
+  research.ts KURRENT_SERIES PS + PS_RECAP_1826 (sampleRowCount 2974, priporočila per-blatt);
+  qa.ts: p36/p20 pričakovane vrednosti usklajene (2743→2974), NOV TEST qa-p38-ps-blatt
+  (dokaz pass3 datotek + PS-full-v2.json prek fs injekcije; 39. test). QA 38→39, vse zeleno.
+- ISSUE #10 OSTAJA ODPRT: per-blatt rekonstrukcija (branja lista so šumna ~50 %), 7 nerešenih strani (#12),
+  razdvojitev večkulturnih vrstic, končna uskladitev s 2607.

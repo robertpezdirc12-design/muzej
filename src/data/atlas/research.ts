@@ -44,9 +44,9 @@ export const KURRENT_SERIES: KurrentSeries[] = [
     pages: 143,
     pagesTranscribed: 143,
     pagesReadList: Array.from({ length: 143 }, (_, i) => i + 1),
-    structuredEntries: 2743,
+    structuredEntries: 2974,
     status: "REVIEW",
-    noteSi: "143 strani parcel; P36 (2026-10-11, issue #10): VSE strani strojno prebrane — 1–4 in 140–143 (struktura + rekapitulacija, issue #17/P5-b) + 5–139 (P36 kampanja: 2743 strukturiranih vrstic, pass-1 vseh strani + pass-2 78 strani z okvarjeno soslednostjo; dokaz research/issue17/ps-raw/ + PS-full.json). STRUKTURA: zvezek pomešan (strani niso v redu parcel — npr. str. 80–82 = parcele 1644–1700); več števčnih nizov — glavne parcele, Waldung (skupna gozdna, brez lastnikov), Schmiegärten (vrtovi), Blatt X (lastno številčenje 1–40); glavni niz sega čez 2840. Končna Summa (str. 143, rdeči tuš): 102 + 2505 = 2607 šteje KATEGORIJE, ne maksimum. PREOSTANE: 3. prehod ~15 dvoumnih strani, klasifikacija sekcij, razdvojitev večkulturnih vrstic (ista parcela več vrstic po kulturah), uskladitev s 2607 — issue #10 odprt. Vsi statusi REVIEW (strojno branje ni dokazni vir).",
+    noteSi: "143 strani parcel; P36 (2026-10-11, issue #10): VSE strani strojno prebrane — 1–4 in 140–143 (struktura + rekapitulacija, issue #17/P5-b) + 5–139 (P36 kampanja: 2743 strukturiranih vrstic, pass-1 vseh strani + pass-2 78 strani z okvarjeno soslednostjo; dokaz research/issue17/ps-raw/ + PS-full.json). P38 (2026-10-11, issue #10): 3. prehod 20 ciljnih strani (233 VLM branj skupaj; dokaz ps-raw/*-pass3.json + PS-full-v2.json; 2974 izbranih vrstic po adjudikaciji pass3-prednost) + ODKRITJE: zvezek je organiziran po LISTIH (Blatt I–X), vsak list ima LASTNO številčenje parcel — identiteta parcele = (list, številka); isto številka na različnih listih je druga parcela (razlaga prekrivanj iz P36); kontrolna vsota 102 + 2505 = 2607 je vsota čez vse liste. Nerešene strani za človeški pregled (issue #12): 69, 85, 86, 88, 93, 128, 138. PREOSTANE: per-blatt rekonstrukcija, razdvojitev večkulturnih vrstic, uskladitev s 2607 — issue #10 odprt. Vsi statusi REVIEW (strojno branje ni dokazni vir).",
     noteEn: "143 pages of parcels; P36 (2026-10-11, issue #10): ALL pages machine-read — 1–4 and 140–143 (structure + recapitulation, issue #17/P5-b) + 5–139 (the P36 campaign: 2,743 structured rows, pass-1 on all pages + pass-2 on 78 pages with broken continuity; evidence research/issue17/ps-raw/ + PS-full.json). STRUCTURE: the volume is shuffled (pages not in parcel order — e.g. pp. 80–82 = parcels 1644–1700); several numbering series — main parcels, Waldung (communal forest, ownerless), Schmiegärten (gardens), Blatt X (own 1–40 numbering); the main series runs past 2840. The final Summa (p. 143, red ink): 102 + 2,505 = 2,607 counts CATEGORIES, not a maximum. REMAINS: a 3rd pass over ~15 ambiguous pages, section classification, splitting multi-culture rows (the same parcel has several rows by culture), matching against 2,607 — issue #10 open. All statuses REVIEW (machine reading is not evidentiary).",
   },
   {
@@ -991,7 +991,7 @@ export const PS_RECAP_1826: {
   mostUsefulEn: string;
   sampleRowCount: number;
 } = {
-  source: "N083PS str. 140–143 (Arhiv RS, SI AS 176, k.o. Griblje) — research/issue17/PS-structure.json; P36: str. 5–139 prebrane strojno (research/issue17/ps-raw/, PS-full.json)",
+  source: "N083PS str. 140–143 (Arhiv RS, SI AS 176, k.o. Griblje) — research/issue17/PS-structure.json; P36: strojni prepis str. 5–139 (ps-raw/, PS-full.json); P38: 3. prehod 20 ciljnih strani (PS-full-v2.json)",
   status: "REVIEW",
   summaBauplätze: 102,
   summaGrundparzellen: 2505,
@@ -1012,10 +1012,10 @@ export const PS_RECAP_1826: {
     "Anmerkung",
   ],
   mostUsefulSi:
-    "Veriga hiša→parcela→lastnik je v VSAKI vrstici glavnega registra (stolpci Haus Nro. + lastnik + parcela + raba + površina), a vrstice NISO grupirane po lastnikih → vstop prek stolpca Haus Nro. P36 (2026-10-11): strojni prepis vseh 135 strani (5–139, 2743 vrstic, dvoprehodno na 78 straneh) ŽE IZVEDEN — naslednji koraki: sprava sekcij (zvezek pomešan; Waldung/Schmiegärten/Blatt X ločeni nizi), razdvojitev večkulturnih vrstic, uskladitev s kontrolno vsoto 102 + 2505 = 2607 (šteje kategorije, ne maksimum — glavni niz sega čez 2840), nato ciljano po hišah prek Haus Nro. in rekapitulacije (~str. 140–143).",
+    "Veriga hiša→parcela→lastnik je v VSAKI vrstici glavnega registra (stolpci Haus Nro. + lastnik + parcela + raba + površina), a vrstice NISO grupirane po lastnikih → vstop prek stolpca Haus Nro. P36 (2026-10-11): strojni prepis vseh 135 strani že izveden. P38 (2026-10-11): 3. prehod na 20 ciljnih straneh (233 VLM branj skupaj, 2974 izbranih vrstic) + ODKRITJE: zvezek je organiziran po listih (Blatt I–X), vsak list ima LASTNO številčenje — identiteta parcele je (list, številka); kontrolna vsota 2607 je vsota čez vse liste; 7 nerešenih strani za človeški pregled (69, 85, 86, 88, 93, 128, 138 — issue #12). Naslednji koraki: per-blatt rekonstrukcija, razdvojitev večkulturnih vrstic, nato ciljano po hišah prek Haus Nro. in rekapitulacije (~str. 140–143).",
   mostUsefulEn:
-    "The house→parcel→owner chain sits in EVERY row of the main register (Haus Nro. + owner + parcel + culture + area columns), but rows are NOT grouped by owner → enter via the Haus Nro. column. P36 (2026-10-11): the machine transcription of all 135 pages (5–139, 2,743 rows, two passes on 78 pages) is DONE — next steps: section reconciliation (the volume is shuffled; Waldung/Schmiegärten/Blatt X are separate series), splitting multi-culture rows, matching against the checksum 102 + 2505 = 2607 (it counts categories, not a maximum — the main series runs past 2840), then targeting by house via Haus Nro. and the recapitulation (~pp. 140–143).",
-  sampleRowCount: 2743,
+    "The house→parcel→owner chain sits in EVERY row of the main register (Haus Nro. + owner + parcel + culture + area columns), but rows are NOT grouped by owner → enter via the Haus Nro. column. P36 (2026-10-11): machine transcription of all 135 pages done. P38 (2026-10-11): 3rd pass over 20 target pages (233 VLM reads total, 2,974 chosen rows) + DISCOVERY: the volume is organized by sheets (Blatt I–X), each with its OWN numbering — parcel identity is (sheet, number); the checksum 2,607 sums across all sheets; 7 unresolved pages for human review (69, 85, 86, 88, 93, 128, 138 — issue #12). Next steps: per-sheet reconstruction, splitting multi-culture rows, then targeting by house via Haus Nro. and the recapitulation (~pp. 140–143).",
+  sampleRowCount: 2974,
 };
 
 /** PZ — demografija in cenitev 1825 (N083PZ). */
