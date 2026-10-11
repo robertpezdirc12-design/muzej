@@ -2563,3 +2563,62 @@ zgodbo (Pezdirc).
   /api/qa HTTP 200, QA 40→41, 41/41 zelenih (qa-p43-chain-full ZELEN).
 - #13 OSTAJA ODPRT: geometrija (156 stavb ↔ hišne št.) še vedno čaka vektorizacijo A01/A02
   + #12; 29 nerešenih PUA hiš iz P41 ostaja; poročilo o napredku gre v komentar na #13.
+
+## P44 — issue #11: PZ tabele cenilnih razredov PREPISANE (str. 4–67, 71/71 strani fonda) (2026-10-12)
+
+- ZAGON: nadaljevanje po P43 (2acfc34); repo kloniran z novim GitHub PAT (ghp_QSn0…, preverjen
+  GET /user 200); VLM sonda OK (588 ms); PZ PDF ponovno prenesen z VAČ (vacId 373419, docId
+  41784, 13 MB, 71 strani); strani 4–67 izluščene pri 200 DPI (64 strani, ~1900×3123 px).
+- 1. KROG (scripts/p44-read-pz.mjs, 64 VLM klicev): enotni strukturirani prompt (kulture, razredi,
+  površine Joch/Klafter, vrednosti fl/kr, pridelki, vsote); surovi izpisi research/issue11/pz-raw/
+  (pz-NN.json); resume + 429/502 backoff (60/120/240/480 s). Ugotovitev okolja: ozadjski procesi
+  NE preživijo med klici bash orodja — batch izvajanje v ospredju (3 serije po ~9 min).
+- SANACIJA IZPISOV (scripts/p44-repair-raw.py, brez novih klicev): 7 strani neparsiranih — vzroki:
+  ```json fences, NEUBEŽNI notranji narekovaji v rawText (VLM prepisuje narekovaje dokumenta),
+  manjkajoči narekovaj ključa, 2 odrezana izpisa na 4000 znakov (rekonstrukcija do zadnjega
+  celovnega elementa + kontrolna ponovna branja).
+- 2. KROG (8 ciljnih branj): str. 25 (Ablösungs-Contract, rdeči popravki 388/387 j), 63 (Pacht
+  parcelna tabela — 16 vrstic, VZOREC za zneske/joch, ne polne površine), 65 (Hutweide gattunge —
+  10 imenovanih pašnikov + NADZORNA OPOMBA »Weiden gesamt: 636 j 263 kl« = PV NATANČNO!),
+  67 (rekapitulacija), 12/13/15 (sanacija), 50 (zgodovinska divergenca).
+- p67 PETERENJE (6 branj skupaj): 5 neodvisnih branj + verifikacija s PV kontekstom (12 kontrol)
+  + ODLOČILNI IZREZ vrstic 1–4 pri 1,6× (PIL crop + LANCZOS). REKAPITULACIJA: 10 razredov
+  (Acker I/II, Wiesen I/II, Kleine/Größere Gärten, Weingärten, Hutweiden, Weiden mit Holznutzung,
+  Bauarea) + Summa 1152 j 495 kl; Brutto 8872 fl 5¾ kr; Rein 4492 fl 51 kr; podpisa overiteljev.
+- ADJUDIKACIJA Acker II: 3 polna branja = 234, izrez 1,6× = 334 [~ Kurrent oblika »3«]; ODLOČITEV
+  334 — trije neodvisni dokazi: (a) aritmetika vrstic s 334 = 1145 ≈ Summa 1152 (s 234 = 1045,
+  Δ 107 nesmiselno), (b) PV Aecker 413 → Acker I+II = 80+334 = 414 (±1), (c) povečan izrez.
+  Končna potrditev = človeška paleografija (#12).
+- KORROBORACIJE: Acker I 80 j potrjen čez strani 12 (»Flächenraum von 80 Joch 974 Klafter« +
+  224 parcel); Weingärten 7 j = PV natančno; p6 povzetek »Total 1220 j 1493 kl« [~] ≈ PV grand
+  total 1221 j 1513 kl; PR 1028×1884 kl = 1210,5 j ≈ PV (−0,9 %) — štirje neodvisni sevi.
+- USKLDITEV s PV (research/issue11/pz-classes-full.json): Summa 1152 j 495 kl ≈ PV erste Summe
+  1148 j 539 kl → Δ +4 j ≈ 0,3 % ✓; po kulturah: Acker +1, Wiesen −44 / Weiden +40 (klasifikacijska
+  kompenzacija travnik↔pašnik), Gärten +1 [~], Bauarea −3 [~]; kontrola str. 65 (636 j 263 kl)
+  = PV natančno → PZ in PV sta ista presnova. INFERENCE (označeno): Rein ≈ 10,2 fl/prebivalca/leto,
+  neto 50,6 % bruto, pašniki 59 % klasificirane površine.
+- DIVERGENCE (6 registriranih): D2 str. 50 RAZREŠENA (prečrtani 20 fl 44 nadomešča 25 fl 44;
+  25 fl 44 − 10 fl 40½ = 15 fl 3½ ≈ zapisani 15 fl 5 — prejšnji 3 branj pojasnjena); D1 Acker II
+  ADJUDICIRANO 334 [~]; D3 Wiesen II 29/39 → 29 [~]; D4 Δ 7 j (vsota vrstic 1145 vs Summa 1152)
+  ODEPRTO; D5 Weingärten klaftri 42/665 ODEPRTO; D6 vrstični Rein zneski ODEPRTO → vse na #12.
+- STRUKTURA ZVEZKA (dokazirana, prvič): pp. 4–29 narativni §§ (Viehstand §4, tla, klasifikacija,
+  kulture z izročki), p. 30 tiskana primerjalna oblika, pp. 31–49 protokoli/overovitve +
+  klasifikacijske tabele, pp. 50–61 Veranschlagung/Rein-Ertrag §§ po kulturah, pp. 62–67
+  Zusammenstellung + Pacht tabele + REKAPITULACIJA.
+- INTEGRACIJA: sources.ts N083PZ (structuredEntries 10→11, note P44, lastVerified 2026-10-12);
+  research.ts PZ series (71/71, 11 zapisov, note) + NOV IZVOZ PZ_CLASS_TABLE_1825 (10 vrstic +
+  Summa + uskladitev SL/EN + divergence + inferenca) + PZ_ECONOMY_1825 veriga Acker I posodobljena
+  (divergenca razrešena, confidence nizka→srednja); atlas.ts inventar PZ (model/open besedila);
+  qa.ts P20 kontrole (structured 11, expectedRead 71, naslovi popravljene) + NOV TEST
+  qa-p44-pz-classes (42. test; preverja tabelo/summo/vsoto/adjudikacijo/uskladitev/verigo/dokaz
+  na disku z enako logiko preskoka produkcije kot p38/p39/p43); provenance pzClassTable1825.
+- TESTI: ESLint 0; tsc 0; build 16/16 strani + 12 API poti; lokalni produkcijski strežnik:
+  /api/qa 200, QA 41→42, 42/42 zelenih; provenance pzClassTable1825 prisoten.
+- PRODUKCIJA: push 6b92b35 (P44) + 1a04492 (popravek zastarelih naslovov P20 testov) — oba
+  deployana prek Vercel GitHub App; produkcijski QA 42/42 zelenih (computedAt 19:36 UTC);
+  dimnični test: / 200 (630 KB) lang=sl, ?exponat= 200×3, /api/* 200, 404 pravilno.
+- #11 ZAPRT (issuecomment-6112904134): vsa 4 merila dokončanja izpolnjena (prepis + uskladitev +
+  divergence + QA test); 4 odprte točke izrecno preložene na #12.
+- STANJE ODPRTEH ISSUEJEV: #6 (GitLab PAT — lastnik), #12 (paleografija — človek), #13 (geometrija
+  — vektorizacija + #12), #14 (A03–A05 sidra), #15 (arhiv SI AS 749), #16 (posnetki — lastnik),
+  #17 (teren — lastnik), #18 (matrike — delno arhiv).
