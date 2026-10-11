@@ -1446,13 +1446,19 @@ export function runQA(opts: QAOptions = {}): QAReport {
     }
     if (PS_RECAP_1826.sampleRowCount !== 2974) p38Errors.push("PS_RECAP: števec vrstic ni 2974");
     if (!(PS_RECAP_1826.mostUsefulSi ?? "").includes("P38")) p38Errors.push("PS_RECAP: priporočilo SL ne odraža P38");
-    // strežniška kontrola dokazov: 20 datotek pass-3 + PS-full-v2.json (odjemalski izris preskoči)
+    // strežniška kontrola dokazov (odjemalski izris preskoči):
+    // - v repozitoriju/CI (research/ prisoten po .gitignore-pravilih) → STROGO:
+    //   vseh 20 datotek pass-3 + PS-full-v2.json mora obstajati;
+    // - v produkcijskem deploymentu research/ NAMENOMA ni (.vercelignore, 92 MB)
+    //   → kontrola se preskoči, dokazi ostanejo v repozitoriju.
     if (opts.fileExists) {
       const fileExists = opts.fileExists;
-      const targets = [24, 37, 69, 79, 83, 84, 85, 86, 87, 88, 92, 93, 94, 99, 121, 125, 128, 135, 138, 139];
-      const missing = targets.filter((t) => !fileExists(`research/issue17/ps-raw/ps-${String(t).padStart(3, "0")}-pass3.json`));
-      if (missing.length) p38Errors.push(`ps-raw: manjka pass3 za strani ${missing.join(", ")}`);
-      if (!fileExists("research/issue17/PS-full-v2.json")) p38Errors.push("manjka PS-full-v2.json");
+      if (fileExists("research/issue17/ps-raw/ps-005.json")) {
+        const targets = [24, 37, 69, 79, 83, 84, 85, 86, 87, 88, 92, 93, 94, 99, 121, 125, 128, 135, 138, 139];
+        const missing = targets.filter((t) => !fileExists(`research/issue17/ps-raw/ps-${String(t).padStart(3, "0")}-pass3.json`));
+        if (missing.length) p38Errors.push(`ps-raw: manjka pass3 za strani ${missing.join(", ")}`);
+        if (!fileExists("research/issue17/PS-full-v2.json")) p38Errors.push("manjka PS-full-v2.json");
+      }
     }
   }
   push(
