@@ -1,0 +1,51 @@
+{
+ "page": 67,
+ "phase": "p44-pass2d-band1",
+ "readAt": "2026-10-11T19:15:05.532Z",
+ "parseOk": true,
+ "structured": {
+  "rows": [
+   {
+    "culture": "Acker",
+    "class": "I",
+    "joch": "80",
+    "klafter": "842",
+    "digitNotes": "",
+    "confidence": "clear"
+   },
+   {
+    "culture": "Acker",
+    "class": "II",
+    "joch": "334",
+    "klafter": "120",
+    "digitNotes": "Joch: prva števka je v Kurrentu napisana kot '3' (zgoraj raven črt, spodaj zavoj), lahko bi bila zamenjana z '2', vendar oblika bolj ustreza '3'.",
+    "confidence": "~"
+   },
+   {
+    "culture": "Wiesen",
+    "class": "I",
+    "joch": "18",
+    "klafter": "1596",
+    "digitNotes": "Klafter: tretja števka (9) ima dolg rep, značilen za '9' ali '4' v Kurrentu; glede na kontekst in višino je najverjetneje '9'.",
+    "confidence": "clear"
+   },
+   {
+    "culture": "Wiesen",
+    "class": "II",
+    "joch": "29",
+    "klafter": "818",
+    "digitNotes": "Joch: prva števka (2) ima raven vrh, kar je tipično za '2', vendar je v Kurrentu pogosto zamenljiva s '3'; druga števka (9) ima izrazit rep.",
+    "confidence": "~"
+   },
+   {
+    "culture": "Kleine Gärten",
+    "class": "C",
+    "joch": "3",
+    "klafter": "615",
+    "digitNotes": "",
+    "confidence": "clear"
+   }
+  ],
+  "note": "Podatki prebrani iz leve polovice rekapitulacijske tabele (Stališča), stolpca Classe (I/II/C) in Fläche Maße (Joch/Klafter)."
+ }
+}

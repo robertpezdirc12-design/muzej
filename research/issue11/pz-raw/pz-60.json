@@ -1,0 +1,29 @@
+{
+ "page": 60,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:58:05.945Z",
+ "parseOk": true,
+ "structured": {
+  "page": 60,
+  "pageKind": "narrative+table",
+  "sections": [
+   {
+    "culture": "Bau-Area",
+    "par": null,
+    "narrativeBrief": "Ein einziges Liegenschafts-Objekt ist zur Gülle-Bemessung in Rücksicht auf seine günstige Lage zum 16 fl 50½ kr angesetzt.",
+    "rows": [
+     {
+      "label": "I",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "Rob-Ertrag: 16 fl 50¼ kr; Cultur-Aufwand: 9 fl 31 kr; Tarif: 55%; Anschlag: 9 fl 13 kr; Rein-Ertrag: 7 fl 35 kr",
+      "yields": null,
+      "rawText": "I | | 16 50¼ | 9 31 | 55 | 9 13 | 7 35",
+      "confidence": "clear"
+     }
+    ]
+   }
+  ],
+  "pageNote": "Stran vsebuje narativni opis za Bau-Area (gradbena zemljišča) z enim razredom I, sledi povzetna tabela 'Darstellung des Rein-Ertrages' z rdečimi vnosni vrednostmi. Na dnu je podpis in datum 20. Jänner 1834 ter rdeči zapis 'revaluirt' s podpisom."
+ }
+}

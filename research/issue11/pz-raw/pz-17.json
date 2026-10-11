@@ -1,0 +1,47 @@
+{
+ "page": 17,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:39:37.309Z",
+ "parseOk": true,
+ "structured": {
+  "page": 17,
+  "pageKind": "narrative+table",
+  "sections": [
+   {
+    "culture": "Wiesen",
+    "par": "§. 4",
+    "narrativeBrief": "Erste Classe: In diese Classe fällt ein Flächenraum von 15 Joch 819 Klafter, welche in 49 Parzellen vertheilt vorkommen, und für welche als Mustergrund die Parzelle H° 738 mit — Joch 849 Klaf- ter aufgestellt wurde.",
+    "rows": [
+     {
+      "label": "Füsses Heu",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "14 Centner; Preis-tariff 20 kr; Geld-Ertrag 7 fl",
+      "rawText": "Füsses Heu - - - - - | 14 | - | 20 | 7 -",
+      "confidence": "clear"
+     },
+     {
+      "label": "grünes Futter/Raufutter",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "6 Centner; Preis-tariff 24 kr; Geld-Ertrag 2 fl 24 kr",
+      "rawText": "grünes Futter Raufutter - - - . | 6 . | _ | 24 | 2 24",
+      "confidence": "~"
+     },
+     {
+      "label": "Summe des möglichen Ertrages",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "9 fl 24 kr",
+      "yields": null,
+      "rawText": "Summe des möglichen Ertrages! | - . - | - . - | - | 9 24",
+      "confidence": "clear"
+     }
+    ]
+   }
+  ],
+  "pageNote": "Stran vsebuje rdeče rubrikirane naslove (Wiesen, Erste Classe, Producte) in ročno napisano tabelo pridelkov za travnike (Wiesen). Površina in vrednosti so zapisane v narativnem delu, tabela prikazuje samo količine in denarni vrednost pridelka."
+ }
+}

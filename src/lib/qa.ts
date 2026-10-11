@@ -23,6 +23,7 @@ import {
   PR_BOUNDARY_1825,
   PS_RECAP_1826,
   PZ_ECONOMY_1825,
+  PZ_CLASS_TABLE_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
   PUA_PT_WBRIDGE,
@@ -1208,7 +1209,8 @@ export function runQA(opts: QAOptions = {}): QAReport {
     p20invErrors.push(`PUA structured ${puaInv.structuredEntities}/src ${srcPua.structuredEntries} != PUA_CONTINUATION ${PUA_CONTINUATION.rows.length} (43→101 napaka se ne sme ponoviti)`);
   if (psInv && psInv.structuredEntities !== 2974)
     p20invErrors.push(`PS structured: ${psInv.structuredEntities} != 2974 (P36 2743 + P38 3. prehod, dokaz ps-raw/PS-full-v2.json)`);
-  if (pzInv && pzInv.structuredEntities !== 10) p20invErrors.push(`PZ structured: ${pzInv.structuredEntities}`);
+  if (pzInv && pzInv.structuredEntities !== 11)
+    p20invErrors.push(`PZ structured: ${pzInv.structuredEntities} != 11 (P44 PZ_CLASS_TABLE_1825: 10 razredov + Summa)`);
   if (a02Inv && a02Inv.structuredEntities !== VECTOR_BUILDINGS.length)
     p20invErrors.push(`A02 structured: ${a02Inv.structuredEntities} != ${VECTOR_BUILDINGS.length}`);
   if (inv.totals.spatiallyLinked !== 0 || inv.units.some((u) => u.spatiallyLinked !== 0))
@@ -1218,11 +1220,11 @@ export function runQA(opts: QAOptions = {}): QAReport {
     p20invErrors.push(`PS checksum: ${inv.psChecksum.buildingSites}+${inv.psChecksum.landParcels}=${inv.psChecksum.total} (pričakovano 102+2505=2607)`);
   push(
     "qa-p20-inventory",
-    "P20: inventar N83 izračunan iz modelov — 12 enot, structuredEntities == dejansko stanje (PUA 101, PT 105, PS 12, PZ 10, A02 156), 0 prostorsko povezanih, 0 paleografsko potrjenih, PS vsota 2607",
-    "P20: N83 inventory computed from the models — 12 units, structuredEntities == actual state (PUA 101, PT 105, PS 12, PZ 10, A02 156), 0 spatially linked, 0 palaeographically confirmed, PS checksum 2607",
+    "P20: inventar N83 izračunan iz modelov — 12 enot, structuredEntities == dejansko stanje (PUA 101, PT 105, PS 12, PZ 11, A02 156), 0 prostorsko povezanih, 0 paleografsko potrjenih, PS vsota 2607",
+    "P20: N83 inventory computed from the models — 12 units, structuredEntities == actual state (PUA 101, PT 105, PS 12, PZ 11, A02 156), 0 spatially linked, 0 palaeographically confirmed, PS checksum 2607",
     p20invErrors.length === 0,
     p20invErrors.length === 0
-      ? `12 enot (5 grafičnih + 7 spisovnih); strani: ${inv.totals.pagesRead} prebranih + ${inv.totals.pagesOpen} odprtih = ${inv.totals.pagesDeclared} deklariranih; PS ${inv.psChecksum.structured}/${inv.psChecksum.total}`
+      ? `12 enot (5 grafičnih + 7 spisovnih); strani: ${inv.totals.pagesRead} prebranih + ${inv.totals.pagesOpen} odprtih = ${inv.totals.pagesDeclared} deklariranih; PS ${inv.psChecksum.structured}/${inv.psChecksum.total}; PZ 71/71 (P44)`
       : p20invErrors.join("; "),
   );
 
@@ -1238,9 +1240,9 @@ export function runQA(opts: QAOptions = {}): QAReport {
     if (k.pagesTranscribed + (k.pages - k.pagesTranscribed) !== k.pages)
       p20pagesErrors.push(`${k.code}: prebrane + odprte != deklarirane`);
   }
-  // dokazane vrednosti iz surovih raziskav (issue #4 resolucije: PS 8, PZ 12)
-  // P36 (2026-10-11): PS 143 — vse strani strojno prebrane (pass-1 celota + pass-2 78 strani; dokaz research/issue17/ps-raw/)
-  const expectedRead: Record<string, number> = { PR: 4, PS: 143, PUA: 49, PZ: 12, PT: 8, PG: 1, PV: 1 };
+  // dokazane vrednosti iz surovih raziskav (issue #4 resolucije: PS 8, PZ 12 → P44: PZ 71)
+  // P36 (2026-10-11): PS 143 — vse strani strojno prebrane; P44 (2026-10-12): PZ 71 — str. 4–67 (dokaz research/issue11/pz-raw/)
+  const expectedRead: Record<string, number> = { PR: 4, PS: 143, PUA: 49, PZ: 71, PT: 8, PG: 1, PV: 1 };
   for (const [code, n] of Object.entries(expectedRead)) {
     const k = KURRENT_SERIES.find((x) => x.code === code);
     if (k && k.pagesTranscribed !== n)
@@ -1592,6 +1594,86 @@ export function runQA(opts: QAOptions = {}): QAReport {
     p43Errors.length === 0
       ? "105 vrstic · 2/5/4 hiše · 6 korroboriranih · korpus 65/65 · 65-ji univerzum"
       : p43Errors.join("; "),
+  );
+
+  /* ── P44 (issue #11): PZ tabele cenilnih razredov — popolnost in uskladitev ── */
+  const p44Errors: string[] = [];
+  // 1. tabela: 10 vrstic razredov + Summa
+  if (PZ_CLASS_TABLE_1825.rows.length !== 10)
+    p44Errors.push(`classTable: ${PZ_CLASS_TABLE_1825.rows.length} vrstic != 10`);
+  if (PZ_CLASS_TABLE_1825.summa.joch !== 1152 || PZ_CLASS_TABLE_1825.summa.klafter !== 495)
+    p44Errors.push(`Summa: ${PZ_CLASS_TABLE_1825.summa.joch}/${PZ_CLASS_TABLE_1825.summa.klafter} != 1152/495`);
+  if (PZ_CLASS_TABLE_1825.summa.reinTotal !== "4492 fl 51 kr")
+    p44Errors.push(`Rein total: ${PZ_CLASS_TABLE_1825.summa.reinTotal}`);
+  if (PZ_CLASS_TABLE_1825.summa.bruttoTotal !== "8872 fl 5¾ kr")
+    p44Errors.push(`Brutto total: ${PZ_CLASS_TABLE_1825.summa.bruttoTotal}`);
+  // 2. vsota vrstic = 1145 (adjudicirano) in razlika do Summe dokumentirana
+  const p44RowSum = PZ_CLASS_TABLE_1825.rows.reduce((a, r) => a + r.joch, 0);
+  if (p44RowSum !== PZ_CLASS_TABLE_1825.rowSumJoch)
+    p44Errors.push(`vsota vrstic ${p44RowSum} != rowSumJoch ${PZ_CLASS_TABLE_1825.rowSumJoch}`);
+  if (Math.abs(PZ_CLASS_TABLE_1825.summa.joch - p44RowSum) !== 7)
+    p44Errors.push(`Δ(Summa − vsota vrstic) != 7 (dokumentirana odprta točka D4)`);
+  // 3. adjudikacija Acker II = 334 [~] + Acker I korroboracija
+  const acker = PZ_CLASS_TABLE_1825.rows.filter((r) => r.culture === "Acker");
+  if (acker.length !== 2) p44Errors.push(`Acker vrstic: ${acker.length} != 2 (razredov I in II, III/IV ni)`);
+  if (acker[0]?.joch !== 80) p44Errors.push(`Acker I: ${acker[0]?.joch} != 80 (korroboracija str. 12)`);
+  if (acker[1]?.joch !== 334 || acker[1]?.confidence !== "~")
+    p44Errors.push(`Acker II: ${acker[1]?.joch}/${acker[1]?.confidence} != 334/~ (adjudicirano, D1)`);
+  if (acker[0].joch + acker[1].joch - 413 > 1 || 413 - (acker[0].joch + acker[1].joch) > 1)
+    p44Errors.push(`Acker I+II = ${acker[0].joch + acker[1].joch} ≫ PV Aecker 413 (±1)`);
+  // 4. Weingärten = PV 7 j; Weiden kontrola 636/263 v uskladitvi
+  const weing = PZ_CLASS_TABLE_1825.rows.find((r) => r.culture === "Weingärten");
+  if (!weing || weing.joch !== 7) p44Errors.push("Weingärten != 7 joch (= PV)");
+  if (!PZ_CLASS_TABLE_1825.reconciliationSi.includes("636 j 263 kl"))
+    p44Errors.push("uskladitev ne navaja kontrole str. 65 (Weiden gesamt 636 j 263 kl = PV)");
+  // 5. PZ_ECONOMY veriga — divergenca str. 50 razrešena
+  const ackerChain = PZ_ECONOMY_1825.valuationChain.find((s) => s.stepSi.startsWith("Ackerland razred I"));
+  if (!ackerChain || !ackerChain.valuesSi.includes("25 fl 44"))
+    p44Errors.push("PZ_ECONOMY Acker I veriga ne nosi razrešene vrednosti 25 fl 44 (D2)");
+  if (ackerChain && ackerChain.confidence === "nizka")
+    p44Errors.push("PZ_ECONOMY Acker I ostaja 'nizka' — P44 je divergenco razrešil");
+  // 6. stanja: KURRENT_SERIES PZ 71/71 + vir N083PZ strukturno 11
+  const pzSeries = KURRENT_SERIES.find((k) => k.code === "PZ");
+  if (!pzSeries || pzSeries.pagesTranscribed !== 71) p44Errors.push("KURRENT_SERIES PZ ni 71/71");
+  const pzSrc = ATLAS_SOURCES.find((s) => s.code === "N083PZ");
+  if (!pzSrc || pzSrc.structuredEntries !== 11) p44Errors.push("sources.ts N083PZ structuredEntries != 11");
+  // 7. dokaz v repozitoriju (enaka logika preskoka kot p38/p39/p43: v produkciji
+  // research/ namenoma ni v sliki — .vercelignore)
+  if (opts.readFile) {
+    const raw = opts.readFile("research/issue11/pz-classes-full.json");
+    if (raw) {
+      try {
+        const proof = JSON.parse(raw) as {
+          classTable?: unknown[];
+          divergences?: unknown[];
+          stats?: { vlmCallsP44?: number; pagesReadP44?: number; pagesReadTotal?: number };
+        };
+        if ((proof.classTable ?? []).length !== 10)
+          p44Errors.push(`dokaz: classTable=${(proof.classTable ?? []).length}, pričakovano 10`);
+        if ((proof.divergences ?? []).length !== 6)
+          p44Errors.push(`dokaz: divergences=${(proof.divergences ?? []).length}, pričakovano 6`);
+        if (proof.stats?.vlmCallsP44 !== 76)
+          p44Errors.push(`dokaz: vlmCallsP44=${proof.stats?.vlmCallsP44}, pričakovano 76`);
+        if (proof.stats?.pagesReadP44 !== 64)
+          p44Errors.push(`dokaz: pagesReadP44=${proof.stats?.pagesReadP44}, pričakovano 64`);
+        if (proof.stats?.pagesReadTotal !== 71)
+          p44Errors.push(`dokaz: pagesReadTotal=${proof.stats?.pagesReadTotal}, pričakovano 71`);
+      } catch {
+        p44Errors.push("dokaz: pz-classes-full.json ni veljaven JSON");
+      }
+    } else if (opts.fileExists?.("research/issue17/PZ-valuation.json")) {
+      // repozitorij ima research/ (issue #4 dokaz obstaja), a P44 dokaz manjka
+      p44Errors.push("manjka research/issue11/pz-classes-full.json (dokaz P44)");
+    }
+  }
+  push(
+    "qa-p44-pz-classes",
+    "P44: N083PZ — prepis tabel cenilnih razredov (issue #11): 71/71 strani (76 VLM klicev); rekapitulacija str. 67: 10 razredov + Summa 1152 j 495 kl, Brutto 8872 fl 5¾ kr, Rein 4492 fl 51 kr; uskladitev s PV (Δ +4 j ≈ 0,3 %; kontrola str. 65 = 636 j 263 kl natančno); divergenca str. 50 RAZREŠENA; Acker II adjudicirano 334 [~]; 4 odprte točke registrirane za #12",
+    "P44: N083PZ — the valuation class tables transcribed (issue #11): 71/71 pages (76 VLM calls); the p. 67 recapitulation: 10 classes + Summa 1152 j 495 kl, gross 8872 fl 5¾ kr, net 4492 fl 51 kr; reconciliation with PV (Δ +4 j ≈ 0.3 %; the p. 65 control = 636 j 263 kl exactly); the p. 50 divergence RESOLVED; Acker II adjudicated to 334 [~]; 4 open points registered for #12",
+    p44Errors.length === 0,
+    p44Errors.length === 0
+      ? "10 razredov · Summa 1152/495 · vsota vrstic 1145 (Δ 7 dokumentirana) · Acker 80+334≈PV 413 · Weiden kontrola = PV"
+      : p44Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;

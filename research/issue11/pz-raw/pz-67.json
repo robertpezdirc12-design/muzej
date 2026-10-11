@@ -1,0 +1,175 @@
+{
+ "page": 67,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T19:01:19.584Z",
+ "parseOk": true,
+ "structured": {
+  "page": 67,
+  "pageKind": "table",
+  "sections": [
+   {
+    "culture": "Acker",
+    "par": null,
+    "narrativeBrief": null,
+    "rows": [
+     {
+      "label": "I",
+      "areaJoch": "80",
+      "areaKlafter": "842",
+      "values": "Bruto Ertrag: 22 fl 44 kr; im Ganzen: 1911 fl 92 kr; Compensation: 10 fl 102½ kr; Rein Ertrag: 13 fl 5 kr; der Classe: 7033 fl 30½ kr",
+      "yields": null,
+      "rawText": "I | 80 | 842 | 22 | 44 | 1911 | 92 | 10 | 102½ | 13 | 5 | 7033 | 30½",
+      "confidence": "clear"
+     },
+     {
+      "label": "II",
+      "areaJoch": "234",
+      "areaKlafter": "120",
+      "values": "Bruto Ertrag: 16 fl 50 kr; im Ganzen: 3824 fl 50 kr; Compensation: 9 fl 162½ kr; Rein Ertrag: 7 fl 35 kr; der Classe: 2533 fl 24½ kr; der CultursGattung: 3586 fl 67½ kr",
+      "yields": null,
+      "rawText": "II | 234 | 120 | 16 | 50 | 3824 | 50 | 9 | 162½ | 7 | 35 | 2533 | 24½ | 3586 | 67½",
+      "confidence": "clear"
+     }
+    ]
+   },
+   {
+    "culture": "Wiesen",
+    "par": null,
+    "narrativeBrief": null,
+    "rows": [
+     {
+      "label": "I",
+      "areaJoch": "15",
+      "areaKlafter": "1594",
+      "values": "Bruto Ertrag: 9 fl 24 kr; im Ganzen: 150 fl 21 kr; Compensation: 1 fl 582½ kr; Rein Ertrag: 7 fl 20 kr; der Classe: 119 fl 58½ kr",
+      "yields": null,
+      "rawText": "I | 15 | 1594 | 9 | 24 | 150 | 21 | 1 | 582½ | 7 | 20 | 119 | 58½",
+      "confidence": "clear"
+     },
+     {
+      "label": "II",
+      "areaJoch": "29",
+      "areaKlafter": "818",
+      "values": "Bruto Ertrag: 4 fl [?]; im Ganzen: 118 fl 2¾ kr; Compensation: 1 fl 25 kr; Rein Ertrag: 3 fl [?]; der Classe: 88 fl 32 kr; der CultursGattung: 208 fl 30¼ kr",
+      "yields": null,
+      "rawText": "II | 29 | 818 | 4 | [?] | 118 | 2¾ | 1 | 25 | 3 | . | 88 | 32 | 208 | 30¼",
+      "confidence": "~"
+     }
+    ]
+   },
+   {
+    "culture": "Kleine Gärten",
+    "par": null,
+    "narrativeBrief": null,
+    "rows": [
+     {
+      "label": "C",
+      "areaJoch": "0",
+      "areaKlafter": "612",
+      "values": "Bruto Ertrag: 20 fl 44 kr; im Ganzen: 80 fl 19¾ kr; Compensation: 10 fl 109¼ kr; Rein Ertrag: 10 fl 5 kr; der Classe: 111 fl 16½ kr; der CultursGattung: 111 fl 16½ kr",
+      "yields": null,
+      "rawText": "C | 0 | 612 | 20 | 44 | 80 | 19¾ | 10 | 109¼ | 10 | 5 | 111 | 16½ | 111 | 16½",
+      "confidence": "clear"
+     }
+    ]
+   },
+   {
+    "culture": "Größere Gärten",
+    "par": null,
+    "narrativeBrief": null,
+    "rows": [
+     {
+      "label": "C",
+      "areaJoch": "0",
+      "areaKlafter": "105",
+      "values": "Bruto Ertrag: 20 fl 44 kr; im Ganzen: 6 fl ¾ kr; Compensation: 10 fl 109¼ kr; Rein Ertrag: 10 fl 5 kr; der Classe: 3 fl 18½ kr; der CultursGattung: 3 fl 18½ kr",
+      "yields": null,
+      "rawText": "C | 0 | 105 | 20 | 44 | 6 | ¾ | 10 | 109¼ | 10 | 5 | 3 | 18½ | 3 | 18½",
+      "confidence": "clear"
+     }
+    ]
+   },
+   {
+    "culture": "Weingärten",
+    "par": null,
+    "narrativeBrief": null,
+    "rows": [
+     {
+      "label": "C",
+      "areaJoch": "7",
+      "areaKlafter": "42",
+      "values": "Bruto Ertrag: 21 fl [?]; im Ganzen: 165 fl 27¾ kr; Compensation: 16 fl 48½ kr; Rein Ertrag: 7 fl 10 kr; der Classe: 50 fl 20¾ kr; der CultursGattung: 50 fl 20¾ kr",
+      "yields": null,
+      "rawText": "C | 7 | 42 | 21 | [?] | 165 | 27¾ | 16 | 48½ | 7 | 10 | 50 | 20¾ | 50 | 20¾",
+      "confidence": "~"
+     }
+    ]
+   },
+   {
+    "culture": "Hutweiden",
+    "par": null,
+    "narrativeBrief": null,
+    "rows": [
+     {
+      "label": "C",
+      "areaJoch": "113",
+      "areaKlafter": "702",
+      "values": "Bruto Ertrag: 1 fl [?]; im Ganzen: 118 fl 26¾ kr; Compensation: -15 fl 25 kr; Rein Ertrag: -13 fl [?]; der Classe: 88 fl 49¾ kr; der CultursGattung: 88 fl 49¾ kr",
+      "yields": null,
+      "rawText": "C | 113 | 702 | 1 | [?] | 118 | 26¾ | -15 | 25 | -13 | [?] | 88 | 49¾ | 88 | 49¾",
+      "confidence": "~"
+     }
+    ]
+   },
+   {
+    "culture": "Weiden mit Holzquätzen",
+    "par": null,
+    "narrativeBrief": null,
+    "rows": [
+     {
+      "label": "C",
+      "areaJoch": "558",
+      "areaKlafter": "558",
+      "values": "Bruto Ertrag: 1 fl 6 kr; im Ganzen: 614 fl 11 kr; Compensation: -15 fl 25 kr; Rein Ertrag: -51 kr; der Classe: 1174 fl #½ kr; der CultursGattung: 1174 fl #½ kr",
+      "yields": null,
+      "rawText": "C | 558 | 558 | 1 | 6 | 614 | 11 | -15 | 25 | -51 | | 1174 | #½ | 1174 | #½",
+      "confidence": "~"
+     }
+    ]
+   },
+   {
+    "culture": "Bauarea",
+    "par": null,
+    "narrativeBrief": null,
+    "rows": [
+     {
+      "label": "-",
+      "areaJoch": "1",
+      "areaKlafter": "1199",
+      "values": "Bruto Ertrag: 16 fl 50 kr; im Ganzen: 79 fl #½ kr; Compensation: 9 fl 162½ kr; Rein Ertrag: 7 fl 35 kr; der Classe: 36 fl # kr; der CultursGattung: 36 fl #½ kr",
+      "yields": null,
+      "rawText": "- | 1 | 1199 | 16 | 50 | 79 | #½ | 9 | 162½ | 7 | 35 | 36 | # | 36 | #½",
+      "confidence": "~"
+     }
+    ]
+   },
+   {
+    "culture": "Summa",
+    "par": null,
+    "narrativeBrief": null,
+    "rows": [
+     {
+      "label": "Summa",
+      "areaJoch": "1152",
+      "areaKlafter": "495",
+      "values": "Bruto Ertrag: 8872 fl 5¾ kr; Rein Ertrag (der Classe): 4492 fl 51 kr; Rein Ertrag (der CultursGattung): 4492 fl 51 kr; Anschlag: 4492 fl 51 kr",
+      "yields": null,
+      "rawText": "Summa | 1152 | 495 | | | 8872 | 5¾ | | | | | 4492 | 51 | 4492 | 51 | 4492 | 51",
+      "confidence": "clear"
+     }
+    ]
+   }
+  ],
+  "pageNote": "Stran vsebuje povzetkovno tabelo 'Veranschlagung des Cultur-Aufwandes und Darstellung des Rein-Ertrages' za vse kulture. Rdeči ročni vpisi v stolpcu 'Anmerkungen' omenjajo 'Bewässerungs-Kosten' in 'Assemblee'. Pod tabelo sta podpisa (verjetno cenilca) in datum. Nekatere številke so prečrtane ali popravljene, nekateri znaki (kot ½, ¾) so zapisani kot nadpisana števila."
+ }
+}

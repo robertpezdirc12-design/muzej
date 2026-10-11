@@ -1,0 +1,31 @@
+{
+ "page": 34,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:44:05.263Z",
+ "parseOk": true,
+ "structured": {
+  "page": 34,
+  "pageKind": "narrative",
+  "sections": [
+   {
+    "culture": null,
+    "par": "§. 9",
+    "narrativeBrief": "Po predložitvi zemljiškega klasifikacijskega elaborata za občino Griblje so bili prebivalci pozvani, naj se v roku 14 dni izjasnijo o ustreznosti ocene in morebitnih pripombah, vendar nihče ni odgovoril.",
+    "rows": []
+   },
+   {
+    "culture": null,
+    "par": "§. 10",
+    "narrativeBrief": "Na skupnem zasedanju občine Griblje so prisotni lastniki (Ernst Robas, Georg Pößnig, Lorenz Malleischitz, Georg Krieschan, Niklas Schusser, Georg Ehrlich, Marcio Oveling, Matija Lahovčič) soglasno potrdili, da je ocena njihove zemlje ustrezna in da nimajo pripomb.",
+    "rows": []
+   },
+   {
+    "culture": null,
+    "par": "§. 11",
+    "narrativeBrief": "Ker ni bilo ugovorov in ker so vsi lastniki soglasno potrdili pravilnost ocene, je bila klasifikacija dokončno sprejeta; primerjava s tiskanimi obrazci kaže, da so donosi v razredih I do IV ustrezni, pri čemer so bile upoštevane lokalne razmere in kmetijska praksa.",
+    "rows": []
+   }
+  ],
+  "pageNote": "Stran 34 je čisto besedilna (protokol o javni razgrnitvi in soglasju lastnikov), brez numeričnih tabel. Pisano v nemški Kurrent pisavi z rdečimi rubrikami (Kreis Neustadt, Gemeinde Grüble, Bez.-Obr.-Vorsung, Protocol). Številka 9 v §9 je prečrtana in nadomeščena z 14. Zadnja vrstica je nepopolna (odrezana)."
+ }
+}

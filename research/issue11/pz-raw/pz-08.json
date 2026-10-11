@@ -1,0 +1,19 @@
+{
+ "page": 8,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:35:41.166Z",
+ "parseOk": true,
+ "structured": {
+  "page": 8,
+  "pageKind": "narrative",
+  "sections": [
+   {
+    "culture": "Ackerland (Cultur des Bodens)",
+    "par": "§. 10.",
+    "narrativeBrief": "Ein Acker, und 9 tin unbedeutende Ackerstücke werden in diesem Gemarkungstheile ganz gut cultivirt.",
+    "rows": []
+   }
+  ],
+  "pageNote": "Stran vsebuje samo narativni tekst v nemški Kurrent pisavi brez tabel ali številskih podatkov. Zapisano je pod naslovom 'Cultur des Bodens' in odsek §. 10, ki opisuje kmetijsko zemljišče (Ackerland) z opisi kulture, lastnosti tal, pridelkov in ocene. Besedilo je čitljivo, napisano s črnilom na bež papir."
+ }
+}

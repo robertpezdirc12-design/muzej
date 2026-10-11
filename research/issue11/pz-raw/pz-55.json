@@ -1,0 +1,35 @@
+{
+ "page": 55,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:56:26.604Z",
+ "parseOk": true,
+ "structured": {
+  "page": 55,
+  "pageKind": "narrative+table",
+  "sections": [
+   {
+    "culture": "Gärten",
+    "par": "§. 3.",
+    "narrativeBrief": "Opisuje, da so vse kmetijske površine namenjene vrtom in da je bila določena pridelka za vrtove.",
+    "rows": []
+   },
+   {
+    "culture": "Gärten",
+    "par": null,
+    "narrativeBrief": null,
+    "rows": [
+     {
+      "label": "Izige",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "Rob-Ertrag: 25 fl 44 kr; Cultur-Aufwand: 10 fl 18½ kr; Tarif-Percent: 45; Anschlag: 10 fl 40½ kr; Rein-Ertrag: 15 fl 5 kr",
+      "yields": null,
+      "rawText": "Izige . 25 44 . 10 18½ . 45 . 10 40½ . 15 5",
+      "confidence": "clear"
+     }
+    ]
+   }
+  ],
+  "pageNote": "Stran vsebuje rokopisni opis vrtov (§. 3. Kleine Gärten) in tabelo 'Darstellung des Rein-Ertrages' z enim razredom (Izige). Ob robu so rdeči zapisi o preverjanju. Spodaj sledi 'Begründung des ausgewiesenen Rein-Ertrages' s pripombo o ustreznosti ocene."
+ }
+}

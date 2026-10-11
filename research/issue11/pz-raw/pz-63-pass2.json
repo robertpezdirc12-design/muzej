@@ -1,0 +1,180 @@
+{
+ "page": 63,
+ "phase": "p44-pass2",
+ "why": "velika tabela parcel s Pacht (Acker I/II, Wiesen, Weingärten) — razjasni stolpce",
+ "readAt": "2026-10-11T19:07:12.331Z",
+ "parseOk": true,
+ "structured": {
+  "page": 63,
+  "tables": [
+   {
+    "title": "Namen / Des Grundstückes / Nach den ausgefundenen Pachtungen",
+    "columns": "Pakete Nro; Steuerbezirk; Gemeinde; Katastral-Parzelle Nro; Gesetzl. Eigentum domizil; rustikal Haus; ländlich; Culturs Gattung; Flächen Inhalt Joch; Flächen Inhalt Klafter; Klasse; Pacht fl; Pacht kr; Gleichheit fl; Gleichheit kr; Summe Etrag fl; Summe Etrag kr; Daher auf Ein M. Joch fl; Daher auf Ein M. Joch kr; Anmerkungen",
+    "rows": [
+     {
+      "no": 1,
+      "label": "Acker detto",
+      "areaJoch": null,
+      "areaKlafter": 457,
+      "pacht": "-/22",
+      "other": "I; -/23; -/24½; 1/23½",
+      "raw": "1 | - | - | 115 | 1 | - | Acker detto | - | 457 | I | - | 22 | - | 23 | - | 24½ | 1 | 23½",
+      "confidence": "clear"
+     },
+     {
+      "no": 2,
+      "label": "Acker detto",
+      "areaJoch": null,
+      "areaKlafter": 759,
+      "pacht": "1/21",
+      "other": "-/10; 1/41; 3/31½",
+      "raw": "2 | - | - | 292 | 1 | - | Acker detto | - | 759 | I | 1 | 21 | - | 10 | 1 | 41 | 3 | 31½",
+      "confidence": "clear"
+     },
+     {
+      "no": 3,
+      "label": "Acker detto",
+      "areaJoch": null,
+      "areaKlafter": 727,
+      "pacht": "1/22",
+      "other": "-/9; 1/31; 3/21¼",
+      "raw": "3 | - | - | 293 | 1 | - | Acker detto | - | 727 | I | 1 | 22 | - | 9 | 1 | 31 | 3 | 21¼",
+      "confidence": "clear"
+     },
+     {
+      "no": 4,
+      "label": "Acker detto",
+      "areaJoch": null,
+      "areaKlafter": 443,
+      "pacht": "1/19",
+      "other": "-/8; 1/21; 4/52½",
+      "raw": "4 | - | - | 786 | 1 | - | Acker detto | - | 443 | I | 1 | 19 | - | 8 | 1 | 21 | 4 | 52½",
+      "confidence": "clear"
+     },
+     {
+      "no": 5,
+      "label": "Acker detto",
+      "areaJoch": null,
+      "areaKlafter": 252,
+      "pacht": "1/20",
+      "other": "-/9; 1/32; 6/58½",
+      "raw": "5 | - | - | 299 | 1 | - | Acker detto | - | 252 | I | 1 | 20 | - | 9 | 1 | 32 | 6 | 58½",
+      "confidence": "clear"
+     },
+     {
+      "no": null,
+      "label": "Summe Acker I",
+      "areaJoch": 1,
+      "areaKlafter": 1128,
+      "pacht": "-/-",
+      "other": "-/-; 6/29½; 20/114¼",
+      "raw": "Summe | - | - | - | - | - | - | 1 | 1128 | - | - | - | - | - | 6 | 29½ | 20 | 114¼",
+      "confidence": "~"
+     },
+     {
+      "no": 6,
+      "label": "Acker detto",
+      "areaJoch": null,
+      "areaKlafter": 68,
+      "pacht": "1/-",
+      "other": "-/-; 1/6¾; 28/46 4/10½",
+      "raw": "6 | Grüble | - | 1031 | 1 | - | Acker detto | - | 68 | II | 1 | - | - | 6¾ | 1 | 6¾ | 28 | 46 4/10½",
+      "confidence": "clear"
+     },
+     {
+      "no": 7,
+      "label": "Acker detto",
+      "areaJoch": null,
+      "areaKlafter": 969,
+      "pacht": "2/20",
+      "other": "-/18½; 2/35½; 4/16½",
+      "raw": "7 | - | - | 1037 | 1 | - | Acker detto | - | 969 | II | 2 | 20 | - | 18½ | 2 | 35½ | 4 | 16½",
+      "confidence": "clear"
+     },
+     {
+      "no": 8,
+      "label": "Acker detto",
+      "areaJoch": null,
+      "areaKlafter": 289,
+      "pacht": "-/45",
+      "other": "-/5; -/30; 4/49½",
+      "raw": "8 | - | - | 1040 | 1 | - | Acker detto | - | 289 | II | - | 45 | - | 5 | - | 30 | 4 | 49½",
+      "confidence": "clear"
+     },
+     {
+      "no": 9,
+      "label": "Acker detto",
+      "areaJoch": null,
+      "areaKlafter": 400,
+      "pacht": "-/30",
+      "other": "-/23; -/29½; 2/15¾",
+      "raw": "9 | - | - | 779 | 1 | - | Acker detto | - | 400 | II | - | 30 | - | 23 | - | 29½ | 2 | 15¾",
+      "confidence": "clear"
+     },
+     {
+      "no": 10,
+      "label": "Acker detto",
+      "areaJoch": null,
+      "areaKlafter": 923,
+      "pacht": "2/20",
+      "other": "-/16½; 2/46½; 4/49½",
+      "raw": "10 | - | - | 1205 | 1 | - | Acker detto | - | 923 | II | 2 | 20 | - | 16½ | 2 | 46½ | 4 | 49½",
+      "confidence": "clear"
+     },
+     {
+      "no": 11,
+      "label": "Acker detto",
+      "areaJoch": null,
+      "areaKlafter": 295,
+      "pacht": "-/22",
+      "other": "-/23; -/36½; 2/55",
+      "raw": "11 | - | - | 792 | 1 | - | Acker detto | - | 295 | II | - | 22 | - | 23 | - | 36½ | 2 | 55",
+      "confidence": "clear"
+     },
+     {
+      "no": 12,
+      "label": "Acker detto",
+      "areaJoch": null,
+      "areaKlafter": 275,
+      "pacht": "-/20",
+      "other": "-/23; -/37½; 2/14",
+      "raw": "12 | - | - | 794 | 1 | - | Acker detto | - | 275 | II | - | 20 | - | 23 | - | 37½ | 2 | 14",
+      "confidence": "clear"
+     },
+     {
+      "no": null,
+      "label": "Summe Acker II",
+      "areaJoch": 2,
+      "areaKlafter": 53,
+      "pacht": "-/-",
+      "other": "-/-; 9/2¼; 4/26½",
+      "raw": "Summe | - | - | - | - | - | - | 2 | 53 | - | - | - | - | - | 9 | 2¼ | 4 | 26½",
+      "confidence": "~"
+     },
+     {
+      "no": 13,
+      "label": "Wiesen",
+      "areaJoch": null,
+      "areaKlafter": 209,
+      "pacht": "1/12",
+      "other": "-/-; 1/12; 9/15½",
+      "raw": "13 | - | - | 417 | 1 | - | Wiesen | - | 209 | II | 1 | 12 | - | - | 1 | 12 | 9 | 15½",
+      "confidence": "clear"
+     },
+     {
+      "no": 14,
+      "label": "Wiesen und Äcker",
+      "areaJoch": null,
+      "areaKlafter": 594,
+      "pacht": "1/-",
+      "other": "-/-; 7/-; 8/19½",
+      "raw": "14 | - | - | 1020 | 1 | - | Wiesen und Äcker | - | 594 | I*? | 1 | - | - | - | 7 | - | 8 | 19½",
+      "confidence": "?"
+     }
+    ],
+    "summe": "Več delnih vsot: Acker I (1 J 1128 K), Acker II (2 J 53 K), skupaj z Wiesen"
+   }
+  ],
+  "pageNote": "Stran prikazuje katastarski pregled za občino Grüble, okraj Tripp. Vsebuje tri sekcije: Acker I. Klasse (vrstice 1-5), Acker II. Klasse (6-12) ter Wiesen/Wiesen+Äcker (13-14). Kontrolne številke (457, 759 itd.) predstavljajo površine v Klafterjih. Prikazane so tudi izračunane vrednosti 'Gleichheit' in 'Daher auf Ein M. Joch'. Zapis je ročen, rdeče številke so verjetno kasnejše popravke."
+ }
+}

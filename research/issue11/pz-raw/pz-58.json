@@ -1,0 +1,47 @@
+{
+ "page": 58,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:57:28.475Z",
+ "parseOk": true,
+ "structured": {
+  "page": 58,
+  "pageKind": "narrative+table",
+  "sections": [
+   {
+    "culture": "Weiden",
+    "par": "§. 6.",
+    "narrativeBrief": "Opisuje, da so travniki in pašniki razdeljeni na dva dela: prvi del je namenjen košnji in drugi del paši.",
+    "rows": []
+   },
+   {
+    "culture": "Weiden",
+    "par": null,
+    "narrativeBrief": "Nadaljevanje opisa o tem, da se za oceno upoštevajo le tisti deli, ki so primerni za košnjo ali pašo, medtem ko se ostalo zanemari.",
+    "rows": []
+   },
+   {
+    "culture": "Weiden",
+    "par": null,
+    "narrativeBrief": "Podatki o površini (22 21/100 Joch) in številu koscev (25) ter ocena, da je površina premajhna za dobičkonosno izkoriščanje.",
+    "rows": []
+   },
+   {
+    "culture": "Weiden",
+    "par": null,
+    "narrativeBrief": "Prikaz čistega prihodka (Rein-Ertrag) s tabelo, ki vsebuje razred I, roben prideg, kulturni stroški, tarifni odstotek in končno vrednost.",
+    "rows": [
+     {
+      "label": "I",
+      "areaJoch": "1",
+      "areaKlafter": null,
+      "values": "Rob-Ertrag 1 fl; Cultur-Aufwand 15½ kr; Tarif 25%; Anschlag 15 kr; Rein-Ertrag 45 kr",
+      "yields": null,
+      "rawText": "I | 1 | — | — | 15½ | 25 | — | 15 | — | 45",
+      "confidence": "clear"
+     }
+    ]
+   }
+  ],
+  "pageNote": "Stran vsebuje rokopisni tekst v nemškem jeziku (Kurrent pisava) z rdečimi rubrikami (§. 6., Weiden). Tabela 'Darstellung des Rein-Ertrages' je natisnjena/zarisana s stolpci za razred, roben prideg, kulturni stroški, tarifni odstotek, anslag in čisti prideg. Številke so jasno zapisane, aritmetika ni popravljena."
+ }
+}

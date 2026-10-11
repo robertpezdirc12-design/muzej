@@ -1,0 +1,37 @@
+{
+ "page": 26,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:41:50.241Z",
+ "parseOk": true,
+ "structured": {
+  "page": 26,
+  "pageKind": "narrative",
+  "sections": [
+   {
+    "culture": "Hutweide",
+    "par": null,
+    "narrativeBrief": "Opisuje se območje z imenom Danglau, ki je bivša gozdnata zemljišča, zdaj pa so to travniki in pašniki, razdeljeni na tri dele.",
+    "rows": []
+   },
+   {
+    "culture": "Waldungen",
+    "par": null,
+    "narrativeBrief": "Omenjajo se gozdovi, ki so večinoma mešani, z nekaj smrekovimi sadeži in posebnim omenjanjem dela gozda z oznako 27, 28, 29.",
+    "rows": []
+   },
+   {
+    "culture": "Bauarea",
+    "par": null,
+    "narrativeBrief": "Navaja se, da so v kraju Griblje/Grüble tri hiše, od katerih sta dve stalni, ena pa je delno opuščena.",
+    "rows": []
+   },
+   {
+    "culture": "Unmuthigen",
+    "par": null,
+    "narrativeBrief": "Zabeleženo je, da ni nobene neproduktivne (unmuthigen) zemlje v tem katastrskem območju.",
+    "rows": []
+   }
+  ],
+  "pageNote": "Stran 26 vsebuje izključno narativni besedilo v nemški Kurrent pisavi brez numeričnih tabel. Besedilo opisuje Hutweide (pašnike), Waldungen (gozdove), Bauarea (stavbna zemljišča) in Unmuthigen (neproduktivna zemljišča). Pisanje je jasno berljivo, rdeče rubrikacije na tej strani niso vidne."
+ }
+}

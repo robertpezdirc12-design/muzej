@@ -1,0 +1,110 @@
+{
+ "page": 66,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T19:00:26.267Z",
+ "parseOk": true,
+ "structured": {
+  "page": 66,
+  "pageKind": "other",
+  "sections": [
+   {
+    "culture": "Naslovnica / Titelblatt",
+    "par": null,
+    "narrativeBrief": "Naslovna stran (Titelblatt) 'Specifischer Ausweis der nach der Catastral-Ertragserhebung entfallenden Endresultate in der Gemeinde Grüble' za XI. Schätzungsbezirk, Kreis Neustadtl, z ročnim vpisom številke strani '66' na dnu.",
+    "rows": [
+     {
+      "label": "Header Zeile 1",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "Land Krain. XIter Schätzungsbezirk",
+      "confidence": "clear"
+     },
+     {
+      "label": "Header Zeile 2",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "Kreis Neustadl.",
+      "confidence": "clear"
+     },
+     {
+      "label": "Haupttitel",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "Specifischer Ausweis",
+      "confidence": "clear"
+     },
+     {
+      "label": "Untertitel 1",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "der",
+      "confidence": "clear"
+     },
+     {
+      "label": "Untertitel 2",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "nach der Catastral Ertragserhebung",
+      "confidence": "clear"
+     },
+     {
+      "label": "Untertitel 3",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "entfallenden",
+      "confidence": "clear"
+     },
+     {
+      "label": "Untertitel 4",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "Endresultate",
+      "confidence": "clear"
+     },
+     {
+      "label": "Präposition",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "in",
+      "confidence": "clear"
+     },
+     {
+      "label": "Gemeinde",
+      "areaJoch": null,
+      "areaKlafter:": null,
+      "values": null,
+      "yields": null,
+      "rawText": "der Gemeinde Grüble.",
+      "confidence": "clear"
+     },
+     {
+      "label": "Seitennummer",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "66.",
+      "confidence": "clear"
+     }
+    ]
+   }
+  ],
+  "pageNote": "Stran je naslovna stran (Titelblatt) tiskanega obrazca 'Specifischer Ausweis der Endresultate'. Vsebuje tiskane glave in ročno napisano ime občine 'Grüble' ter številko strani '66'. Ni tabel s podatki o kulturah, površinah ali vrednostih."
+ }
+}

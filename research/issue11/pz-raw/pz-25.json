@@ -1,0 +1,101 @@
+{
+ "page": 25,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:41:35.418Z",
+ "parseOk": true,
+ "structured": {
+  "page": 25,
+  "pageKind": "narrative",
+  "sections": [
+   {
+    "culture": null,
+    "par": null,
+    "narrativeBrief": "Stran vsebuje naslov 'Ausschätzungs-Elaborat der Oeinde = Grüble, Gemeinde mit Zugehörigen Bezirk Lippa' in opis zemljišč z rdečimi popravki površin.",
+    "rows": [
+     {
+      "label": "Naslov",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "Ausschätzungs-Elaborat / der / Oeinde = Grüble. / Gemeinde mit Zugehörigen / Bezirk Lippa.",
+      "confidence": "clear"
+     },
+     {
+      "label": "Površina (rdeč popravljeno)",
+      "areaJoch": "388",
+      "areaKlafter": "946",
+      "values": null,
+      "yields": null,
+      "rawText": "[~] 388 Juch 946 Klafter. (rdeče: 357 iz 388; 1978 iz 946)",
+      "confidence": "~"
+     },
+     {
+      "label": "Skupna površina (rdeč popravljeno)",
+      "areaJoch": null,
+      "areaKlafter": "1980",
+      "values": null,
+      "yields": null,
+      "rawText": "Zusamt [sic] 1980. (rdeče: 996/11 prečrtano in popravljeno)",
+      "confidence": "~"
+     },
+     {
+      "label": "§ naracija - lega",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "Dieses ausserordentliche, von allen gegen Norden geneigten Ziegelboden zum Ackerbau weniger Gegendtheils sehr geeignet.",
+      "confidence": "clear"
+     },
+     {
+      "label": "§ naracija - lastnosti",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "Ziegelboden, Gegenstand des Bodens, welches sie durchschnitten im 8. Theil zum Brachfelde neunfünft.",
+      "confidence": "~"
+     },
+     {
+      "label": "§ naracija - pridelava",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "Die übrigen gewöhnlichen Baufrüchte davon fruchtbar, besonders Hülsenfrüchte, wovon zu Weichseln hier diese Grundstück den Halbzehnten trägt.",
+      "confidence": "~"
+     },
+     {
+      "label": "§ naracija - vrednost",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "Wovon dem Besitzer nach einer dieser geringen Ertragsfähigkeit etwas besseren Anschlage werth hält.",
+      "confidence": "~"
+     },
+     {
+      "label": "§ naracija - poti",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "Wornach Fälse von oban angegebenen Ländgut und diesem Gefäß, 80 Juchen dieser Grundbesitzern haply gehört.",
+      "confidence": "?"
+     },
+     {
+      "label": "§ naracija - zaključek",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "Womit sichs zum Kataster-Landesgrundbuch bringt, die zu gründen den Maltigatzen hinzupflegt.",
+      "confidence": "?"
+     }
+    ]
+   }
+  ],
+  "pageNote": "Stran 25 je čisto narativna brez tabel. Vsebuje naslov elaborata za Grüble/Griblje, rdeče rubricirane in prečrtane popravke površin (Joch/Klafter) ter dolg opisni tekst o kakovosti tal (Ziegelboden), pridelavi in razmerjih do desetine. Leva stran ima delni seznam kultur (Eichbaum 3, Lingallgut itd.). Pisanje je v težji Kurrent pisavi, nekateri besedni zvezi so negotovi."
+ }
+}

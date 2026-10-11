@@ -66,12 +66,12 @@ export const KURRENT_SERIES: KurrentSeries[] = [
     unitSi: "Katastrski cenilni elaborat",
     unitEn: "Cadastral valuation elaborate",
     pages: 71,
-    pagesTranscribed: 12,
-    pagesReadList: [1, 2, 3, 20, 30, 40, 50, 60, 68, 69, 70, 71],
-    structuredEntries: 10,
+    pagesTranscribed: 71,
+    pagesReadList: Array.from({ length: 71 }, (_, i) => i + 1),
+    structuredEntries: 11,
     status: "REVIEW",
-    noteSi: "71 strani ocen in razredov. Vzorčeno 12 strani (issue #4, 2026-10-10, dokaz: research/issue17/PZ-profile.json + PZ-valuation.json pagesSampled=[20,30,40,50,60]): 1–3 (naslov, §§ topografija/meje/prebivalstvo), 20/30/40/50/60 (cenilni razredi kultur, nizka gotovost — 3 VLM branja se razhajajo), 68–71 (zaključni protokoli: Vorlage, Geprüft, Nachtrag hus Zins, »Gemacht den 28ten Juli 1825«). POPRAVEK issue #4: prejšnji števec 10 se ni ujemal z lastno opombo (12 strani) — dokazano stanje je 12. Vsebina: topografija §1 (2294 joch 516 klafter [~]), prebivalstvo §3 (441 prebivalcev — 222 m/219 ž; 72 hiš [~]; 102 družin [~]), cenilna veriga Roh-Ertrag → Cultur-Aufwand → Rein-Ertrag (Bau-Area: 16 fl 50½ kr → 7 fl 35 kr/joch, aritmetika potrjena). Tabele razredov v sredini (str. 4–67, razen vzorčenih) so NEPRESRANE — poln prepis 59 strani TO_COLLECT.",
-    noteEn: "71 pages of valuations and classes. 12 pages sampled (issue #4, 2026-10-10, evidence: research/issue17/PZ-profile.json + PZ-valuation.json pagesSampled=[20,30,40,50,60]): 1–3 (title, §§ topography/boundaries/population), 20/30/40/50/60 (culture valuation classes, low confidence — 3 VLM readings disagree), 68–71 (closing protocols: Vorlage, Geprüft, Nachtrag hus Zins, »Gemacht den 28ten Juli 1825«). issue #4 CORRECTION: the previous count of 10 contradicted its own note (12 pages) — the evidenced state is 12. Content: topography §1 (2294 joch 516 klafter [~]), population §3 (441 inhabitants — 222 m/219 f; 72 houses [~]; 102 families [~]), the valuation chain Roh-Ertrag → Cultur-Aufwand → Rein-Ertrag (Bau-Area: 16 fl 50½ kr → 7 fl 35 kr/joch, arithmetic confirmed). The class tables in the middle (pp. 4–67, apart from the sampled ones) remain UNTRANSCRIBED — the full 59-page transcription TO_COLLECT.",
+    noteSi: "71 strani ocen in razredov — PREBRAN V CELIOTI. Issue #4 (2026-10-10): vzorčenih 12 strani (1–3 topografija, 20/30/40/50/60 razredi, 68–71 protokoli; dokaz PZ-profile.json + PZ-valuation.json). P44 (2026-10-12, issue #11, dokaz research/issue11/pz-classes-full.json + pz-raw/, 76 VLM klicev): 1. krog str. 4–67 (64 strani, enotni prompt) + 12 ciljnih ponovnih branj (str. 25, 63, 65, 67 + sanacija odrezanih 12/13/15 + divergentna 50) + p67 polovični branj, verifikacija s PV kontekstom in odločilni izrez 1,6×. REKAPITULACIJA str. 67: 10 razredov + Summa 1152 j 495 kl, Brutto 8872 fl 5¾ kr, Rein 4492 fl 51 kr; Acker I 80 j 842 kl (korroborirano s str. 12) + II 334 j 120 kl [~] (adjudicirano iz 234: Kurrent oblika »3«, aritmetika 1145 ≈ 1152, PV Acker 413); Wiesen 15+29 j; Weingärten 7 j; Hutweiden 118 + Weiden mit Holznutzung 558 j (negativen Rein/joch); Bauarea 1 j. USKLDITEV s PV: Summa ≈ PV erste Summe 1148 j (+4 ≈ 0,3 %); kontrola str. 65 »Weiden gesamt 636 j 263 kl« = PV natančno; divergenca str. 50 RAZREŠENA (25 fl 44 − 10 fl 40½ = 15 fl 3½ ≈ 15 fl 5). Odprto za #12: Δ 7 j (vsota vrstic vs Summa), Weingärten klafter 42/665, Bauarea 1/4 j. Vsi statusi REVIEW (strojno branje ni dokazni vir).",
+    noteEn: "71 pages of valuations and classes — READ IN FULL. Issue #4 (2026-10-10): 12 pages sampled (1–3 topography, 20/30/40/50/60 classes, 68–71 protocols; evidence PZ-profile.json + PZ-valuation.json). P44 (2026-10-12, issue #11, evidence research/issue11/pz-classes-full.json + pz-raw/, 76 VLM calls): pass 1 over pp. 4–67 (64 pages, a uniform prompt) + 12 targeted re-reads (pp. 25, 63, 65, 67 + repairing the truncated 12/13/15 + the divergent 50) + p67 half-reads, a verification pass with PV context and a decisive 1.6× crop. RECAPITULATION p. 67: 10 classes + Summa 1152 j 495 kl, gross 8872 fl 5¾ kr, net 4492 fl 51 kr; Acker I 80 j 842 kl (corroborated by p. 12) + II 334 j 120 kl [~] (adjudicated from 234: the Kurrent »3« shape, the arithmetic 1145 ≈ 1152, PV Acker 413); Wiesen 15+29 j; Weingärten 7 j; Hutweiden 118 + Weiden mit Holznutzung 558 j (negative net/joch); Bauarea 1 j. RECONCILIATION with PV: Summa ≈ PV erste Summe 1148 j (+4 ≈ 0.3 %); the p. 65 control »Weiden gesamt 636 j 263 kl« = PV exactly; the p. 50 divergence RESOLVED (25 fl 44 − 10 fl 40½ = 15 fl 3½ ≈ 15 fl 5). Open for #12: Δ 7 j (row sum vs Summa), Weingärten klafter 42/665, Bauarea 1/4 j. All statuses REVIEW (machine reading is not evidentiary).",
   },
   {
     code: "PT",
@@ -1030,7 +1030,7 @@ export const PZ_ECONOMY_1825: {
   economicProfileSi: string;
   economicProfileEn: string;
 } = {
-  source: "N083PZ str. 1–3, 20, 30, 40, 50, 60, 68–71 (Arhiv RS, SI AS 176, k.o. Griblje) — research/issue17/PZ-profile.json + PZ-valuation.json",
+  source: "N083PZ str. 1–3, 20, 30, 40, 50, 60, 68–71 (Arhiv RS, SI AS 176, k.o. Griblje) — research/issue17/PZ-profile.json + PZ-valuation.json; P44 (str. 4–67 v celoti): research/issue11/pz-classes-full.json",
   titleAsWritten: "CATASTRAL-SCHÄTZUNGS-ELABORAT der Gemeinde Grüble (Land Krain, 83, Kreis Neustadtl, Steuerbezirk Krupge [~])",
   status: "REVIEW",
   population: { total: 441, male: 222, female: 219, houses: "72 [~]", families: "102 [~]", confidence: "prebivalstvo srednja; hiše/družine nizka [~]" },
@@ -1040,7 +1040,7 @@ export const PZ_ECONOMY_1825: {
     { stepSi: "Bau-Area (stavbna zemljišča) — Roh-Ertrag", valuesSi: "16 fl 50½ kr/joch", confidence: "srednja-visoka" },
     { stepSi: "Cultur-Aufwand (55 % bruto)", valuesSi: "9 fl 15¾ kr/joch (aritmetika potrjena: 55 % × 16 fl 50½)", confidence: "visoka" },
     { stepSi: "Rein-Ertrag (čisti donos stavbnih tal)", valuesSi: "7 fl 35 kr/joch", confidence: "visoka (1010,5 − 555,5 kr = 455 kr)" },
-    { stepSi: "Ackerland razred I [~]", valuesSi: "Rob 20–25 fl 44 kr; Rein 12–15 fl 5 kr — 3 klice se RAZHAJAJO", confidence: "nizka" },
+    { stepSi: "Ackerland razred I", valuesSi: "Rob 25 fl 44 kr (prečrtani 20 fl 44 je nadomeščen) − Anschlag 10 fl 40½ kr = Rein 15 fl 3½ ≈ zapisani 15 fl 5 kr — P44 RAZREŠILO prejšnjo divergenco treh branj (dokaz pz-classes-full.json D2)", confidence: "srednja" },
     { stepSi: "Wiesen razred I/II", valuesSi: "Heu 14/8 centnerjev, Grumet 6 (pridelek, ne fl)", confidence: "srednja" },
     { stepSi: "Weingärten [~C]", valuesSi: "Most 12 n.ö. Eimer/joch (pridelek)", confidence: "nizka" },
   ],
@@ -1048,6 +1048,60 @@ export const PZ_ECONOMY_1825: {
     "BRANJA: 441 prebivalcev (222 m/219 ž) v 72 hišah [~] / 102 družinah [~]; 2294 joch 516 kl [~] skupnega območja; donos stavbnih tal 7 fl 35 kr/joch; zaključek 28. 7. 1825. NAVKRIŽNO (PV): pašniki 636 j ≫ njive 413 j ≫ travniki 88 j ≫ vinogradi 7 j, gozd 0 — skromna rodovitnost. INFERENCA (ne branje): ~5,2 jocha/prebivalca (~19 joch/družino); 102 družini v 72 hišah [~] kažejo na večdružinska gospodinjstva; mešano poljedelstvo-živinorejo samozadostnega tipa z majhno tržno sivato; čisti donos ≈ 45 % bruto (stopnja iz Bau-Area).",
   economicProfileEn:
     "READINGS: 441 inhabitants (222 m/219 f) in 72 houses [~] / 102 families [~]; 2294 joch 516 klafter [~] total area; building land net yield 7 fl 35 kr/joch; closed 28 Jul 1825. CROSS-REF (PV): pasture 636 j ≫ fields 413 j ≫ meadows 88 j ≫ vineyards 7 j, forest 0 — modest fertility. INFERENCE (not a reading): ~5.2 joch per inhabitant (~19 joch per family); 102 families in 72 houses [~] points to multi-family households; a mixed subsistence crop-livestock economy with a small market surplus; net yield ≈ 45 % of gross (rate from the Bau-Area chain).",
+};
+
+/** P44 (issue #11): PZ — adjudicirana tabela cenilnih razredov (rekapitulacija str. 67).
+ *  Vrednosti KOT PREBRANE; [~] = negotovo. 5 neodvisnih branj str. 67 + izrez 1,6×;
+ *  dokaz research/issue11/pz-classes-full.json (readings, divergence register, podporna gradiva). */
+export interface PzClassRow1825 {
+  culture: string;
+  classLabel: string;
+  joch: number;
+  klafter: number;
+  /** ~ = med branjmi variira; clear = stabilna */
+  confidence: "clear" | "~";
+  bruttoPerJoch: string;
+  reinPerJoch: string;
+  noteSi: string;
+}
+
+export const PZ_CLASS_TABLE_1825: {
+  source: string;
+  page: number;
+  status: ResearchStatus;
+  rows: PzClassRow1825[];
+  summa: { joch: number; klafter: number; bruttoTotal: string; reinTotal: string; confidence: string };
+  rowSumJoch: number;
+  reconciliationSi: string;
+  reconciliationEn: string;
+  divergencesSi: string;
+  inferencesSi: string;
+} = {
+  source: "N083PZ str. 67 (Specifischer Ausweis der Endresultate) — research/issue11/pz-classes-full.json",
+  page: 67,
+  status: "REVIEW",
+  rows: [
+    { culture: "Acker", classLabel: "I", joch: 80, klafter: 842, confidence: "clear", bruttoPerJoch: "22 fl 44 kr", reinPerJoch: "13 fl 5 kr [~ 13/15]", noteSi: "korroborirano s str. 12 (§3: 80 Joch 974 Klafter [~], 224 parcel)" },
+    { culture: "Acker", classLabel: "II", joch: 334, klafter: 120, confidence: "~", bruttoPerJoch: "16 fl 50 kr [~]", reinPerJoch: "7 fl 35 kr", noteSi: "adjudicirano iz 234: izrez 1,6× prepozna Kurrent »3«; aritmetika vrstic in PV Acker 413 podpirata 334; razreda III/IV ni (4 branj)" },
+    { culture: "Wiesen", classLabel: "I", joch: 15, klafter: 1594, confidence: "clear", bruttoPerJoch: "9 fl 24 kr", reinPerJoch: "7 fl 20 kr", noteSi: "" },
+    { culture: "Wiesen", classLabel: "II", joch: 29, klafter: 818, confidence: "~", bruttoPerJoch: "4 fl [?] kr", reinPerJoch: "3 fl [?] kr", noteSi: "1× prebrano 39; razreda III ni" },
+    { culture: "Kleine Gärten", classLabel: "C", joch: 3, klafter: 612, confidence: "~", bruttoPerJoch: "20–22 fl 44 kr [~]", reinPerJoch: "10–13 fl 5 kr [~]", noteSi: "klafter 612/615/619 [~]" },
+    { culture: "Größere Gärten", classLabel: "C", joch: 0, klafter: 105, confidence: "~", bruttoPerJoch: "20–23 fl 44 kr [~]", reinPerJoch: "10–13 fl 5 kr [~]", noteSi: "joch prazen ali neberljiv" },
+    { culture: "Weingärten", classLabel: "C", joch: 7, klafter: 42, confidence: "clear", bruttoPerJoch: "21–24 fl [~]", reinPerJoch: "7 fl 10 kr", noteSi: "joch = PV natančno; klafter 42 ≠ PV 665 [~] — odprto" },
+    { culture: "Hutweiden", classLabel: "C", joch: 118, klafter: 702, confidence: "~", bruttoPerJoch: "1 fl [?] kr", reinPerJoch: "−15 do −45 kr [~ negativen]", noteSi: "negativen čisti donos/joch — pašniki po stroških ne dajejo donosa [~]" },
+    { culture: "Weiden mit Holznutzung", classLabel: "C", joch: 558, klafter: 846, confidence: "~", bruttoPerJoch: "1 fl 6 kr", reinPerJoch: "−51 kr [~ negativen]", noteSi: "klafter 558/846/858 [~]" },
+    { culture: "Bauarea", classLabel: "—", joch: 1, klafter: 1199, confidence: "~", bruttoPerJoch: "16 fl 50 kr", reinPerJoch: "7 fl 35 kr", noteSi: "PV Bau 4 j 889 kl — razlika [~] odprta" },
+  ],
+  summa: { joch: 1152, klafter: 495, bruttoTotal: "8872 fl 5¾ kr", reinTotal: "4492 fl 51 kr", confidence: "clear (4/5 branj)" },
+  rowSumJoch: 1145,
+  reconciliationSi:
+    "Summa 1152 j 495 kl ≈ PV erste Summe 1148 j 539 kl (Δ +4 j ≈ 0,3 %) — klasificirane kulture se na ravni vsote skladijo. Po kulturah: Acker 414 ≈ PV 413 (+1); Wiesen 44 proti PV 88 (−44) in Weiden 676 proti PV 636 (+40) — PZ ožje klasificira travnike, širje pašnike (skupna kompenzacija ≈ −4); Weingärten 7 = PV 7; Gärten 3 ≈ PV 2 [~]; Bauarea 1 proti PV 4 [~]. NEODVISNA KONTROLA: str. 65 nadzorna opomba »Weiden gesamt: 636 j 263 kl« = PV natančno — PZ in PV sta ista presnova. PR: 1028 × 1884 kl = 1210,5 j ≈ PV grand total 1221 (−0,9 %).",
+  reconciliationEn:
+    "The Summa 1152 j 495 kl ≈ the PV erste Summe 1148 j 539 kl (Δ +4 j ≈ 0.3 %) — the classified cultures agree at the total level. By culture: Acker 414 ≈ PV 413 (+1); Wiesen 44 vs PV 88 (−44) and Weiden 676 vs PV 636 (+40) — PZ classifies meadows more narrowly and pastures more broadly (the compensation nets to ≈ −4); Weingärten 7 = PV 7; Gärten 3 ≈ PV 2 [~]; Bauarea 1 vs PV 4 [~]. INDEPENDENT CONTROL: the p. 65 note »Weiden gesamt: 636 j 263 kl« = PV exactly — PZ and PV share one survey. PR: 1028 × 1884 kl = 1210.5 j ≈ the PV grand total 1221 (−0.9 %).",
+  divergencesSi:
+    "6 registriranih divergenc (dokaz pz-classes-full.json): D1 Acker II 234/334 — ADJUDICIRANO na 334 [~] (3 dokazi, končna potrditev #12); D2 str. 50 Acker I veriga — RAZREŠENO (prečrtani 20 fl 44 nadomešča 25 fl 44; 25 fl 44 − 10 fl 40½ = 15 fl 3½ ≈ zapisani 15 fl 5); D3 Wiesen II 29/39 — večinsko 29 [~]; D4 vsota vrstic 1145 vs Summa 1152 (Δ 7 j) — ODEPRTO (5 branj ni našla manjkajočih vrstic); D5 Weingärten klafter 42/665 — ODEPRTO; D6 vrstični Rein zneski Acker I — ODEPRTO. Vse odprte točke gredo na človeško paleografijo (#12).",
+  inferencesSi:
+    "INFERENCA (ne branje): Rein 4492 fl 51 kr / 441 prebivalcev ≈ 10,2 fl na prebivalca letno; / 102 družine [~] ≈ 44 fl na družino; Rein/Brutto = 4492/8872 ≈ 50,6 % (skladno z Bau-Area stopnjo 45 %); pašniki 676 j = 59 % klasificirane površine (skladno PV).",
 };
 
 /** PUA — nadaljevanje po straneh A–B (issue #17): strani 3–10, 17 vrstic. */

@@ -1,0 +1,19 @@
+{
+ "page": 33,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:43:43.833Z",
+ "parseOk": true,
+ "structured": {
+  "page": 33,
+  "pageKind": "certification",
+  "sections": [
+   {
+    "culture": "certification",
+    "par": null,
+    "narrativeBrief": "Stran vsebuje končno potrditev in podpis katastrskega cenilnega elaborata za občino Grüble/Griblje z datumom 10. avgust 1822.",
+    "rows": []
+   }
+  ],
+  "pageNote": "Stran je večinoma prazna (blanko), vsebuje samo zaključni potrdilni tekst (certificat) v nemški Kurrent pisavi, rdeče rubriko 'Mayburg' na vrhu, dva podpisa spodaj ter datum 10. avgusta 1822. Ni tabel, številskih podatkov ali razredov kultur."
+ }
+}

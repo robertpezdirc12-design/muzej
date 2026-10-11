@@ -1,0 +1,50 @@
+{
+ "page": 18,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:39:55.497Z",
+ "parseOk": true,
+ "structured": {
+  "page": 18,
+  "pageKind": "narrative+table",
+  "sections": [
+   {
+    "culture": "Hutweide/Weiden",
+    "par": "§. 4",
+    "narrativeBrief": "V IV. razredu je površina 29 Joch 848 Klafter, razdeljena na 49 parcel, za katere kot vzorec služi parcela št. 2151 z 0 Joch 1515 Klafter.",
+    "rows": [],
+    "confidence": "clear"
+   },
+   {
+    "culture": "Hutweide/Weiden",
+    "par": null,
+    "narrativeBrief": "Zaradi pomanjkanja vode in plodnosti zemlje so pridelki zelo nizki, s samo nekaj slame in malo sena ter še manj kmetijskimi proizvodi.",
+    "rows": [],
+    "confidence": "~"
+   },
+   {
+    "culture": "Hutweide/Weiden - Produkte",
+    "par": null,
+    "narrativeBrief": null,
+    "rows": [
+     {
+      "label": "Fisses Heu und Strohützung",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "Quantität: 8 Centner; Preis-tarife per Centner: 20 fl; Geld-Ertrag: 4 fl",
+      "yields": "8 Centner (Heu und Stroh)",
+      "rawText": "Fisses Heu und Strohützung ___ 8 __ _ 20 4 _",
+      "confidence": "clear"
+     }
+    ]
+   },
+   {
+    "culture": "Nebenbenützung",
+    "par": null,
+    "narrativeBrief": "Poleg tega se na dveh Jochih in 29 Klafterjih zemlje uporablja skromna paša, ki prinaša le malo dobička.",
+    "rows": [],
+    "confidence": "~"
+   }
+  ],
+  "pageNote": "Stran vsebuje rokopisni nemški tekst v Kurrent pisavi z rdečim rubričiranim naslovom '4te Classe' in tabelo 'Producte' z enim vnosom. Številke so večinoma jasne, nekatera imena so negotova zaradi pisave."
+ }
+}

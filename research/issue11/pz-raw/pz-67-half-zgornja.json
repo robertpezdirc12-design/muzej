@@ -1,0 +1,131 @@
+{
+ "page": 67,
+ "phase": "p44-pass2b-half",
+ "part": "zgornja",
+ "readAt": "2026-10-11T19:11:30.325Z",
+ "parseOk": true,
+ "structured": {
+  "part": "ZGORNJA",
+  "rows": [
+   {
+    "culture": "Acker",
+    "class": "I",
+    "areaJoch": 80,
+    "areaKlafter": 842,
+    "bruttoPerJoch": "22 44",
+    "bruttoTotal": "1911 90½",
+    "compensation": "10 10½ 4/5",
+    "reinPerJoch": "13 5",
+    "reinClasse": "1050 30½",
+    "reinGattung": null,
+    "confidence": "clear"
+   },
+   {
+    "culture": "Acker",
+    "class": "II",
+    "areaJoch": 234,
+    "areaKlafter": 120,
+    "bruttoPerJoch": "16 50",
+    "bruttoTotal": "3824 30½",
+    "compensation": "9 15½ 5/5",
+    "reinPerJoch": "7 35",
+    "reinClasse": "2530 24½",
+    "reinGattung": "3586 55½",
+    "confidence": "clear"
+   },
+   {
+    "culture": "Wiesen",
+    "class": "I",
+    "areaJoch": 15,
+    "areaKlafter": 1594,
+    "bruttoPerJoch": "9 24",
+    "bruttoTotal": "150 21½",
+    "compensation": "1 32¼ 20",
+    "reinPerJoch": "7 20",
+    "reinClasse": "119 58½",
+    "reinGattung": null,
+    "confidence": "clear"
+   },
+   {
+    "culture": "Wiesen",
+    "class": "II",
+    "areaJoch": 39,
+    "areaKlafter": 818,
+    "bruttoPerJoch": "3 .",
+    "bruttoTotal": "118 2¾",
+    "compensation": "1 . 25",
+    "reinPerJoch": "3 .",
+    "reinClasse": "88 32",
+    "reinGattung": "208 30½",
+    "confidence": "clear"
+   },
+   {
+    "culture": "Kleine Gärten",
+    "class": "C",
+    "areaJoch": 3,
+    "areaKlafter": 619,
+    "bruttoPerJoch": "22 44",
+    "bruttoTotal": "80 19½",
+    "compensation": "10 10¾ 4/5",
+    "reinPerJoch": "13 5",
+    "reinClasse": "41 16½",
+    "reinGattung": null,
+    "confidence": "clear"
+   },
+   {
+    "culture": "Größere Gärten",
+    "class": "C",
+    "areaJoch": null,
+    "areaKlafter": 405,
+    "bruttoPerJoch": "22 44",
+    "bruttoTotal": "6 . ¾",
+    "compensation": "10 40¾ 4/5",
+    "reinPerJoch": "13 5",
+    "reinClasse": "3 18¾",
+    "reinGattung": "[~]",
+    "confidence": "~"
+   },
+   {
+    "culture": "Weingärten",
+    "class": "C",
+    "areaJoch": 7,
+    "areaKlafter": 42,
+    "bruttoPerJoch": "2 4 .",
+    "bruttoTotal": "168 2½",
+    "compensation": "16 48 40",
+    "reinPerJoch": "7 10",
+    "reinClasse": "50 20½",
+    "reinGattung": "50 20½",
+    "confidence": "clear"
+   },
+   {
+    "culture": "Hutweiden",
+    "class": "C",
+    "areaJoch": 118,
+    "areaKlafter": 702,
+    "bruttoPerJoch": "1 .",
+    "bruttoTotal": "118 26½",
+    "compensation": "- 13 25",
+    "reinPerJoch": "- 45",
+    "reinClasse": "88 49½",
+    "reinGattung": "88 49½",
+    "confidence": "clear"
+   },
+   {
+    "culture": "Weiden mit Holznutzung",
+    "class": "C",
+    "areaJoch": 558,
+    "areaKlafter": 858,
+    "bruttoPerJoch": "1 6",
+    "bruttoTotal": "614 17",
+    "compensation": "- 15 25",
+    "reinPerJoch": "- 31",
+    "reinClasse": "1174 ##",
+    "reinGattung": "1174 ##",
+    "confidence": "clear"
+   }
+  ],
+  "visibleRowCount": 9,
+  "pageNote": "Zgornja stran rekapitulacijske tabele za občino Grüble z vidnimi vrsticami od Acker I do Weiden mit Holznutzung."
+ }
+}

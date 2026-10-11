@@ -1,0 +1,142 @@
+{
+ "page": 6,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:18:43.190Z",
+ "parseOk": true,
+ "structured": {
+  "page": 6,
+  "pageKind": "narrative+table",
+  "sections": [
+   {
+    "culture": "Cultivirte unbenützte unbenuitz-bare Grund-Stücke",
+    "par": "§. 8.",
+    "narrativeBrief": "Den Cultivirten Gmündpüchen im hohen Gmündlich find: 29 unbenützbare Grundstücke.",
+    "rows": [
+     {
+      "label": "Hecken",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "Einzel 444 Joch 962 fl; Zusammen 419 Joch 1382 fl",
+      "yields": null,
+      "rawText": "Hecken — — — — — — — 444 962 419 1382",
+      "confidence": "clear"
+     },
+     {
+      "label": "Wiesen",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "Einzel 45 Joch 812 fl; Zusammen 41 Joch 167 fl",
+      "yields": null,
+      "rawText": "Wiesen . . . . . . . . . 45 812 41 167",
+      "confidence": "~"
+     },
+     {
+      "label": "kleine Gärten",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "Einzel 5 Joch 615 fl; Zusammen 2 Joch 1166 fl",
+      "yields": null,
+      "rawText": "kleine Gärten . . . . . . 5 615 2 1166",
+      "confidence": "clear"
+     },
+     {
+      "label": "größere cluſt",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "Einzel [?] Joch 705 fl; Zusammen [?] Joch 1760 fl",
+      "yields": null,
+      "rawText": "größere cluſt . . . . . . [?] 705 - 1760",
+      "confidence": "?"
+     },
+     {
+      "label": "Weingärten",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "Einzel 7 Joch 42 fl; Zusammen 6 Joch 1089 fl",
+      "yields": null,
+      "rawText": "Weingärten . . . . . . . 7 42 6 1089",
+      "confidence": "clear"
+     },
+     {
+      "label": "Huthweiden",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "Einzel 118 Joch 702 fl; Zusammen 121 Joch 1190 fl",
+      "yields": null,
+      "rawText": "Huthweiden . . . . . . . 118 702 121 1190",
+      "confidence": "clear"
+     },
+     {
+      "label": "Huthweiden mit Holznutzen",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "Einzel 538 Joch 559 fl; Zusammen 357 Joch 1258 fl",
+      "yields": null,
+      "rawText": "Huthweiden mit Holznutzen 538 559 357 1258",
+      "confidence": "clear"
+     }
+    ]
+   },
+   {
+    "culture": "Unbenützten und Bauarea / Total Fläche der Gemeinde",
+    "par": null,
+    "narrativeBrief": "Die Unbenützten zufäll die Bauarea ... Als Unbenüzt bär naygminnin fin: Flüßn, dißne Cullü, Ohyn.",
+    "rows": [
+     {
+      "label": "Summe (Unbenützten/Bauarea)",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "[?] Joch [?] fl; [?] Joch [?] fl",
+      "yields": null,
+      "rawText": "[?] [?] [?] [?]",
+      "confidence": "?"
+     },
+     {
+      "label": "Total Fläche der Gemeinde",
+      "areaJoch": "1220",
+      "areaKlafter": "1493",
+      "values": "1220 Joch 1493 fl",
+      "yields": null,
+      "rawText": "Total Fläche der Gemeinde . . 1220 1493",
+      "confidence": "clear"
+     }
+    ]
+   },
+   {
+    "culture": "Bauarea (rdeči vpisi)",
+    "par": null,
+    "narrativeBrief": "die Area des gmeinfl. Guts ausfüllend auf diese: Zu den Unmäßigen Gliefe zu den Unmäßigen ... Zu den Unmäßigenbum ... Zu den Unmäßigen zu den Unmaßigenbussen.",
+    "rows": [
+     {
+      "label": "Zu den Unmäßigen Gliefe",
+      "areaJoch": "1000",
+      "areaKlafter": "2",
+      "values": "1000 Joch 2 fl; 4 Joch 942 fl",
+      "yields": null,
+      "rawText": "Zu den Unmäßigen Gliefe zu den Unmäßigen -- 1000 yz 4 942",
+      "confidence": "~"
+     },
+     {
+      "label": "Zu den Unmaßigenbum",
+      "areaJoch": "1000",
+      "areaKlafter": null,
+      "values": "1000 fl; 60 Joch 84 fl",
+      "yields": null,
+      "rawText": "Zu den Unmaßigenbum -- -- -- -- 1000 , 60 84",
+      "confidence": "clear"
+     },
+     {
+      "label": "Zu den Unmäßigen zu den Unmaßigenbussen",
+      "areaJoch": "1000",
+      "areaKlafter": "19800",
+      "values": "1000 Joch 19800 fl; [?] Joch 4 fl",
+      "yields": null,
+      "rawText": "Zu den Unmäßigen zu den Unmaßigenbussen -- 1000 , 19800 4",
+      "confidence": "clear"
+     }
+    ]
+   }
+  ],
+  "pageNote": "Stran vsebuje §8 s tabelo kultiviranih in neuporabnih zemljišč ter povzetek skupne površine občine. Rdeče rubrike vsebujejo številke in dodatne vnose za Bauarea na dnu strani. Nekateri vnosi so prečrtani ali popravljeni."
+ }
+}

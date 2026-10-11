@@ -1,0 +1,29 @@
+{
+ "page": 19,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:40:06.928Z",
+ "parseOk": true,
+ "structured": {
+  "page": 19,
+  "pageKind": "narrative+table",
+  "sections": [
+   {
+    "culture": "Kleine Gärten",
+    "par": "§. 5.",
+    "narrativeBrief": "Einige einzelne kleine Gärten befinden sich bei den Häusern und sind mit Pflaumen, Äpfeln, Birnen und andern Früchten bepflanzt.",
+    "rows": [
+     {
+      "label": "Kleine Gärten",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "23 fl 44 kr",
+      "yields": null,
+      "rawText": "Kleine Gärten ............... | 23 | 44",
+      "confidence": "clear"
+     }
+    ]
+   }
+  ],
+  "pageNote": "Stran vsebuje naslov §. 5 za 'Kleine Gärten', več vrstic rokopisnega besedila v nemški Kurrent pisavi in eno povzeto tabelo z vrednostjo 23 fl 44 kr. Na desni strani tabele so rdeči rubrični zapisi (verjetno 'Erläuterung', 'Allgemein', 'Abänderung'). Številke so jasno berljive."
+ }
+}

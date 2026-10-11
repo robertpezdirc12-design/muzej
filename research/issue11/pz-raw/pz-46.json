@@ -1,0 +1,86 @@
+{
+ "page": 46,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:53:46.513Z",
+ "parseOk": true,
+ "structured": {
+  "page": 46,
+  "pageKind": "narrative+table",
+  "sections": [
+   {
+    "culture": "Wiesen",
+    "par": null,
+    "narrativeBrief": "Wiesen mit 2 Classen (I. und II. Klasse) mit Beschreibung der Lage, Bodenbeschaffenheit und Ertragsfähigkeit.",
+    "rows": [
+     {
+      "label": "I. Classe",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "14 fl 36 kr",
+      "yields": null,
+      "rawText": "I. Classe - Diese containirt meistens fruchtbarern und tiefern Grund und Boden, liegen a 3/4 Stunden vom Orte entfernt - 14 fl 36 kr",
+      "confidence": "clear"
+     },
+     {
+      "label": "II. Classe",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "8 fl 30 kr",
+      "yields": null,
+      "rawText": "II. Classe - Diese liegen von dem Orte entfernt, sind geringeren Ertrags, liegen tiefer und feuchter - 8 fl 30 kr",
+      "confidence": "~"
+     }
+    ]
+   },
+   {
+    "culture": "Kleine Gärten",
+    "par": null,
+    "narrativeBrief": "9 große Gemüsegarten, welche durch ihre günstigen Lage und guten Boden sehr produktiv sind.",
+    "rows": [
+     {
+      "label": "Einige Classe",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "9",
+      "yields": null,
+      "rawText": "Kleine Gärten Einige Classe - 9 große Gemüse-Gärten. Diese machen 400 qf. aus, liegen sehr günstig, sind fruchtbar und geben reichen Ertrag an Gemüse und Früchten - 9",
+      "confidence": "clear"
+     }
+    ]
+   },
+   {
+    "culture": "Weingärten",
+    "par": null,
+    "narrativeBrief": "Weingärten in einer Klasse, die mit Pflanzreben bestockt sind und guten Wein liefern.",
+    "rows": [
+     {
+      "label": "Einige Classe",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "12",
+      "yields": null,
+      "rawText": "Weingärten Einige Classe - Diese liegen mit Pflanzreben besetzt und geben guten Most und Wein - 12",
+      "confidence": "~"
+     }
+    ]
+   },
+   {
+    "culture": "Hutweiden",
+    "par": null,
+    "narrativeBrief": "Hutweiden in einer Klasse, die zur Weide für das Vieh dienen und teilweise bewaldet sind.",
+    "rows": [
+     {
+      "label": "Einige Classe",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "2 fl 30 kr",
+      "yields": null,
+      "rawText": "Hutweiden Einige Classe - Diese enthalten Flächen von 2 Joch, liegen theils steil, theils flach, sind mit Büschen und Bäumen bewachsen, dienen zur Weide und geben wenig Heu - 2 fl 30 kr",
+      "confidence": "~"
+     }
+    ]
+   }
+  ],
+  "pageNote": "Stran je pisana v nemški Kurrent pisavi z rdečimi rubrikami za naslove kultur. Vsebuje narativne opise in številske vrednosti v fl/kr za različne kulture (Wiesen, Gärten, Weingärten, Hutweiden). Nekateri deli so manj berljivi zaradi pisave."
+ }
+}

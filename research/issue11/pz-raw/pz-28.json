@@ -1,0 +1,29 @@
+{
+ "page": 28,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:42:35.039Z",
+ "parseOk": true,
+ "structured": {
+  "page": 28,
+  "pageKind": "narrative+table",
+  "sections": [
+   {
+    "culture": "Bau-Area",
+    "par": "§. 16. 11.",
+    "narrativeBrief": "Razdelek obravnava uporabne zemljiške površine, ki so podvržene določilom o izključitvi dohodka, zlasti stavbne površine z najnižjim ocenjenim vrednostnim razredom.",
+    "rows": [
+     {
+      "label": "Bau-Area ... 9 Pfundminuten",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "16 fl 50½ kr",
+      "yields": null,
+      "rawText": "Bau-Area ... 9 Pfundminuten ___________________ | 16 | 50½",
+      "confidence": "clear"
+     }
+    ]
+   }
+  ],
+  "pageNote": "Stran vsebuje ročno napisano poglavje §. 16. 11. o izločenih zemljiških površinah (Bau-Area), majhno tabelo z vrednostjo 16 fl 50½ kr, datumsko in podpisno certifikacijo (12. junij 1825) ter rdeče rubrične pripombe (npr. 'Einrichtung', 'Wohnung', 'Zahlamt') ob strani."
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "page": 49,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:54:27.643Z",
+ "parseOk": true,
+ "structured": {
+  "page": 49,
+  "pageKind": "narrative",
+  "sections": [
+   {
+    "culture": null,
+    "par": null,
+    "narrativeBrief": "Stran vsebuje zgolj zapisano besedilo (narativen opis) brez tabel ali številskih podatkov; govori o komunalnih pravicah, potrebah po izboljšavah in predlogih za določene parcele.",
+    "rows": []
+   }
+  ],
+  "pageNote": "Stran je čisto narativna, napisana v nemški Kurrent pisavi, brez rdečih rubrikacij, tabel, številskih vrednosti (fl/kr) ali površinskih mer (Joch/Klafter). Na dnu strani so podpisi overiteljev."
+ }
+}

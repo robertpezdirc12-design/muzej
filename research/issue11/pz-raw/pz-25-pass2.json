@@ -1,0 +1,27 @@
+{
+ "page": 25,
+ "phase": "p44-pass2",
+ "why": "rdeče popravljene vsote (388 j 946 kl / 1980 kl) — kontekst",
+ "readAt": "2026-10-11T19:07:53.489Z",
+ "parseOk": true,
+ "structured": {
+  "page": 25,
+  "sections": [
+   {
+    "title": "§.9. Ablösungs-Contract der Gemeinde = Grüble.",
+    "rows": [
+     {
+      "label": "1. Krog (rdeče popravljeno)",
+      "areaJoch": 388,
+      "areaKlafter": 946,
+      "values": "~1980 Klafter",
+      "raw": "388 Joch 946 Klafter; ~1980 Klafter (rdeči vpisi: 387, 1938, 996/11)",
+      "confidence": "clear"
+     }
+    ]
+   }
+  ],
+  "redInk": "Rdeči vpisi popravljajo površinsko vsoto prvega kroga: namesto 388 Joch je zapisano 387, namesto 946 Klafter je 1938, in Klafter del je popravljen na 996/11.",
+  "pageNote": "Stran vsebuje opisne podatke o zemljiščih, njihovi legi in lastništvu, brez dodatnih številskih vnosov površin ali denarnih zneskov."
+ }
+}

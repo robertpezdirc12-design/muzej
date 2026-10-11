@@ -1,0 +1,84 @@
+{
+ "page": 59,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:57:53.372Z",
+ "parseOk": true,
+ "structured": {
+  "page": 59,
+  "pageKind": "narrative+table",
+  "sections": [
+   {
+    "culture": "Weiden mit Holznutzung",
+    "par": "§. 4",
+    "narrativeBrief": "Na eni strani ležijo neizkoriščeni in zelo goli bregovi, ki se uporabljajo samo za pašo goveda brez lesa.",
+    "rows": [
+     {
+      "label": "I",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "{ - fl 6 kr}",
+      "confidence": "clear"
+     },
+     {
+      "label": "II",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "{ = fl 1320 kr}",
+      "confidence": "~"
+     }
+    ]
+   },
+   {
+    "culture": "Hutweide/Weiden (nizka kultura)",
+    "par": null,
+    "narrativeBrief": "Druga stran je namenjena izključno gozdnemu gospodarstvu in se ne more uporabljati za kmetijstvo, razen za zbiranje listja.",
+    "rows": []
+   },
+   {
+    "culture": "Hutweide/Weiden (povzetek)",
+    "par": null,
+    "narrativeBrief": "Skupaj je 22½ Jocha; primerna in neprimerna zemljišča sta v razmerju 25:1, pri čemer so slednja v celoti pokrita z gozdom.",
+    "rows": []
+   },
+   {
+    "culture": "Hutweide/Weiden",
+    "par": null,
+    "narrativeBrief": null,
+    "rows": [
+     {
+      "label": "nizga { Weide",
+      "areaJoch": "1",
+      "areaKlafter": null,
+      "values": "Rob-Ertrag: — ; Cultur-Aufwand: 19½ fl ; Tarif: 25% ; Anschlag: 15 fl ; Rein-Ertrag: 4½ fl",
+      "yields": null,
+      "rawText": "nizga { Weide | 1 | . | . | 19½ | 25 | — | 15 | — | 4½",
+      "confidence": "clear"
+     },
+     {
+      "label": "Holznutzung",
+      "areaJoch": null,
+      "areaKlafter": "6",
+      "values": "Rein-Ertrag: 6 kr",
+      "yields": null,
+      "rawText": "Holznutzung | _ | 6 | . | . | . | . | . | _ | 6",
+      "confidence": "clear"
+     },
+     {
+      "label": "Summe / Total",
+      "areaJoch": "1",
+      "areaKlafter": "6",
+      "values": "Rein-Ertrag: 5¼ fl [?]",
+      "yields": null,
+      "rawText": "| 1 | 6 | | | | | | _ | 5¼ [?]",
+      "confidence": "~"
+     }
+    ]
+   }
+  ],
+  "pageNote": "Stran 59 vsebuje rokopisni tekst v nemški Kurrent pisavi, rdeče rubrike za naslove razredov in tiskano tabelo 'Darstellung des Rein-Ertrages'. Prikazana je stran s §4 (Weiden mit Holznutzung), povzetkom površin in tabelo neto donosa za razred 'nizga'. Številke so večinoma jasne, nekateri znaki (kot 5¼ ali 1320) so negotovi."
+ }
+}

@@ -1,0 +1,119 @@
+{
+ "page": 12,
+ "phase": "p44-pass2",
+ "why": "odrezan izpis 1. kroga — celostno ponovno branje",
+ "readAt": "2026-10-11T19:08:16.434Z",
+ "parseOk": true,
+ "structured": {
+  "page": 12,
+  "pageKind": "narrative+table",
+  "sections": [
+   {
+    "culture": "Ackerland",
+    "par": "§ 3",
+    "rows": [
+     {
+      "label": "Erste Classe",
+      "areaJoch": 80,
+      "areaKlafter": 974,
+      "values": "fl/kr",
+      "yields": null,
+      "raw": "In diese Classe fällt in Flächenraum von 80 Joch 974 Klafter, welche in 224 Parzellen vertheilt vorkommen, und für welche als Mustergrund die Parzelle H°. 307 mit 1 Joch 1082 Klafter aufgestellt wurde.",
+      "confidence": "clear"
+     },
+     {
+      "label": "1",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "fl/kr",
+      "yields": "7 Jähr Mais in 2? Gung",
+      "raw": "Aus der Bauart, welche die Mehrzahl der Grundbesitzer beobachtet, ergab sich die nachstehende Fruchtfolge in einem 9 jährigen Wirtschaftskurse, während welchem ? mal gedüngt wird.",
+      "confidence": "~"
+     },
+     {
+      "label": "2",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "fl/kr",
+      "yields": "Weizen mit ? flm",
+      "raw": "",
+      "confidence": "~"
+     },
+     {
+      "label": "3",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "fl/kr",
+      "yields": "Klee",
+      "raw": "",
+      "confidence": "clear"
+     },
+     {
+      "label": "4",
+      "areaJoch": null,
+      "areaKlafter:": null,
+      "values": "fl/kr",
+      "yields": "Weizen in einig. Nogelfrühem Rüffing",
+      "raw": "",
+      "confidence": "~"
+     },
+     {
+      "label": "5",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "fl/kr",
+      "yields": "Horn, Grün und Hafergut",
+      "raw": "",
+      "confidence": "~"
+     },
+     {
+      "label": "6",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "fl/kr",
+      "yields": "Hirse",
+      "raw": "",
+      "confidence": "clear"
+     },
+     {
+      "label": "7",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "fl/kr",
+      "yields": "Erdäpfel in einig",
+      "raw": "",
+      "confidence": "~"
+     },
+     {
+      "label": "8",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "fl/kr",
+      "yields": "Horn, Grün und Hafergut",
+      "raw": "",
+      "confidence": "~"
+     },
+     {
+      "label": "9",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "fl/kr",
+      "yields": "Hirse",
+      "raw": "",
+      "confidence": "clear"
+     },
+     {
+      "label": "Anmerkung",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "fl/kr",
+      "yields": null,
+      "raw": "Einigen Andern fehlt gewißhußlich mehr oder weniger geringere Lage mit minder hügsamhügem Lehmum. Düngbedarf, weniger oder viel geringer Umdrehung. Die Uferhöhe ist sehr geringfügig. Die Längsfläche ist ? hoch und Dämmergütigung ist gewöhnlich dagegen im geringen gewißlichen Zustandsheit, und bei stetemendig ist gewöhnlich üblichern Felder mit Stipfennung sind gewöhnlich Leyhumd aufgeschüttet, folglich eine Milderhaltung ausgepflegt.",
+      "confidence": "?"
+     }
+    ]
+   }
+  ],
+  "pageNote": "Stran vsebuje opis prvega razreda zemljišča (Ackerland) s podrobnostmi o vrst redu (Fruchtfolge) in opombe o kakovosti tal."
+ }
+}

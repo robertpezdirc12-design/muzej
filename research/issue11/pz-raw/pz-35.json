@@ -1,0 +1,25 @@
+{
+ "page": 35,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:44:16.224Z",
+ "parseOk": true,
+ "structured": {
+  "page": 35,
+  "pageKind": "narrative",
+  "sections": [
+   {
+    "culture": null,
+    "par": null,
+    "narrativeBrief": "Beschreibung der Grundstücke im Gemeindebezirk Pölling/Poljane, deren Wert nach den Bestimmungen vom Jahr 1830 ermittelt wurde.",
+    "rows": []
+   },
+   {
+    "culture": null,
+    "par": "I Acker",
+    "narrativeBrief": "Die Einöde (Einzelhof) Gromitz/Gromice liegt in Pöllinger Ried, wo der Boden lehmig, teils steinig und für Getreideanbau geeignet ist.",
+    "rows": []
+   }
+  ],
+  "pageNote": "Stran vsebuje samo narativni opis (Kurrent pisava) brez tabel. Vsebina opisuje zemljišče 'Gromitz' in njegove kmetijske lastnosti, podpisano leta 1832."
+ }
+}

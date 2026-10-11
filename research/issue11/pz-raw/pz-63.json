@@ -1,0 +1,185 @@
+{
+ "page": 63,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:59:17.984Z",
+ "parseOk": true,
+ "structured": {
+  "page": 63,
+  "pageKind": "table",
+  "sections": [
+   {
+    "culture": "Acker (I. Klasse)",
+    "par": null,
+    "narrativeBrief": null,
+    "rows": [
+     {
+      "label": "1",
+      "areaJoch": null,
+      "areaKlafter": "457",
+      "values": "Pacht: - fl 22 kr; Gleichheit: - fl 23 kr; Summe Pacht: - fl 24½ kr; Daher auf Ein Joch: 1 J 23½",
+      "yields": null,
+      "rawText": "1 | i13 | 1 | . | Acker | . | 457 | I | - | 22 | - | 23 | - | 24½ | 1 | 23½",
+      "confidence": "clear"
+     },
+     {
+      "label": "2",
+      "areaJoch": null,
+      "areaKlafter": "759",
+      "values": "Pacht: 1 fl 21 kr; Gleichheit: - fl 10 kr; Summe Pacht: 1 fl 41 kr; Daher auf Ein Joch: 2 J 31½",
+      "yields": null,
+      "rawText": "2 | 292 | 1 | . | detto | . | 759 | I | 1 | 21 | - | 10 | 1 | 41 | 2 | 31½",
+      "confidence": "clear"
+     },
+     {
+      "label": "3",
+      "areaJoch": null,
+      "areaKlafter": "727",
+      "values": "Pacht: 1 fl 22 kr; Gleichheit: - fl 9 kr; Summe Pacht: 1 fl 31 kr; Daher auf Ein Joch: 3 J 21¼",
+      "yields": null,
+      "rawText": "3 | 293 | 1 | . | detto | . | 727 | I | 1 | 22 | - | 9 | 1 | 31 | 3 | 21¼",
+      "confidence": "clear"
+     },
+     {
+      "label": "4",
+      "areaJoch": null,
+      "areaKlafter": "443",
+      "values": "Pacht: 1 fl 19 kr; Gleichheit: - fl 8 kr; Summe Pacht: 1 fl 21 kr; Daher auf Ein Joch: 4 J 52½",
+      "yields": null,
+      "rawText": "4 | 786 | 1 | . | detto | . | 443 | I | 1 | 19 | - | 8 | 1 | 21 | 4 | 52½",
+      "confidence": "clear"
+     },
+     {
+      "label": "5",
+      "areaJoch": null,
+      "areaKlafter": "252",
+      "values": "Pacht: 1 fl 20 kr; Gleichheit: - fl 9 kr; Summe Pacht: 1 fl 32 kr; Daher auf Ein Joch: [?] J 58½",
+      "yields": null,
+      "rawText": "5 | 299 | 1 | . | detto | . | 252 | I | 1 | 20 | - | 9 | 1 | 32 | [?] | 58½",
+      "confidence": "~"
+     },
+     {
+      "label": "Summe",
+      "areaJoch": "1",
+      "areaKlafter": "1128",
+      "values": "Summe Pacht: 6 fl 29½ kr; Daher auf Ein Joch: 20 J 11¼ / 5 J 48",
+      "yields": null,
+      "rawText": "Summe | | | | | 1 | 1128 | - | - | - | - | - | 6 | 29½ | 20 | 11¼ / 5 | 48",
+      "confidence": "clear"
+     }
+    ]
+   },
+   {
+    "culture": "Acker (II. Klasse)",
+    "par": null,
+    "narrativeBrief": null,
+    "rows": [
+     {
+      "label": "6",
+      "areaJoch": null,
+      "areaKlafter": "68",
+      "values": "Pacht: 1 fl - kr; Gleichheit: - fl 6¾ kr; Summe Pacht: 1 fl 6¾ kr; Daher auf Ein Joch: 28 J 47 / 46 10½",
+      "yields": null,
+      "rawText": "6 | 1031 | 1 | . | Acker | . | 68 | II | 1 | - | - | 6¾ | 1 | 6¾ | 28 | 47 / 46 | 10½",
+      "confidence": "clear"
+     },
+     {
+      "label": "7",
+      "areaJoch": null,
+      "areaKlafter": "969",
+      "values": "Pacht: 2 fl 20 kr; Gleichheit: - fl 15½ kr; Summe Pacht: 2 fl 95½ kr; Daher auf Ein Joch: 4 J 16½",
+      "yields": null,
+      "rawText": "7 | 1037 | 1 | . | detto | . | 969 | II | 2 | 20 | - | 15½ | 2 | 95½ | 4 | 16½",
+      "confidence": "clear"
+     },
+     {
+      "label": "8",
+      "areaJoch": null,
+      "areaKlafter": "289",
+      "values": "Pacht: - fl 45 kr; Gleichheit: - fl 5 kr; Summe Pacht: - fl 50 kr; Daher auf Ein Joch: 4 J 49½",
+      "yields": null,
+      "rawText": "8 | 1040 | 1 | . | detto | . | 289 | II | - | 45 | - | 5 | - | 50 | 4 | 49½",
+      "confidence": "clear"
+     },
+     {
+      "label": "9",
+      "areaJoch": null,
+      "areaKlafter": "400",
+      "values": "Pacht: - fl 30 kr; Gleichheit: - fl 2½ kr; Summe Pacht: - fl 29½ kr; Daher auf Ein Joch: 2 J 15¾",
+      "yields": null,
+      "rawText": "9 | 779 | 1 | . | detto | . | 400 | II | - | 30 | - | 2½ | - | 29½ | 2 | 15¾",
+      "confidence": "clear"
+     },
+     {
+      "label": "10",
+      "areaJoch": null,
+      "areaKlafter": "923",
+      "values": "Pacht: 2 fl 20 kr; Gleichheit: - fl 16½ kr; Summe Pacht: 2 fl 46½ kr; Daher auf Ein Joch: 4 J 49½",
+      "yields": null,
+      "rawText": "10 | 1205 | 1 | . | detto | . | 923 | II | 2 | 20 | - | 16½ | 2 | 46½ | 4 | 49½",
+      "confidence": "clear"
+     },
+     {
+      "label": "11",
+      "areaJoch": null,
+      "areaKlafter": "225",
+      "values": "Pacht: - fl 22 kr; Gleichheit: - fl 2½ kr; Summe Pacht: - fl 36½ kr; Daher auf Ein Joch: 2 J 55",
+      "yields": null,
+      "rawText": "11 | 792 | 1 | . | detto | . | 225 | II | - | 22 | - | 2½ | - | 36½ | 2 | 55",
+      "confidence": "clear"
+     },
+     {
+      "label": "12",
+      "areaJoch": null,
+      "areaKlafter": "275",
+      "values": "Pacht: - fl 20 kr; Gleichheit: - fl 2½ kr; Summe Pacht: - fl 37½ kr; Daher auf Ein Joch: 2 J 14",
+      "yields": null,
+      "rawText": "12 | 794 | 1 | . | detto | . | 275 | II | - | 20 | - | 2½ | - | 37½ | 2 | 14",
+      "confidence": "clear"
+     },
+     {
+      "label": "Summe",
+      "areaJoch": "2",
+      "areaKlafter": "52",
+      "values": "Summe Pacht: 9 fl 2¼ kr; Daher auf Ein Joch: 4 J 26½",
+      "yields": null,
+      "rawText": "Summe | | | | | 2 | 52 | - | - | - | - | - | 9 | 2¼ | 4 | 26½",
+      "confidence": "clear"
+     }
+    ]
+   },
+   {
+    "culture": "Wiesen",
+    "par": null,
+    "narrativeBrief": null,
+    "rows": [
+     {
+      "label": "13",
+      "areaJoch": null,
+      "areaKlafter": "209",
+      "values": "Pacht: 1 fl 12 kr; Summe Pacht: 1 fl 12 kr; Daher auf Ein Joch: 9 J 18½",
+      "yields": null,
+      "rawText": "13 | 417 | 1 | . | Wiesen | . | 209 | II | 1 | 12 | - | - | 1 | 12 | 9 | 18½",
+      "confidence": "clear"
+     }
+    ]
+   },
+   {
+    "culture": "Weingärten und Gärten",
+    "par": null,
+    "narrativeBrief": null,
+    "rows": [
+     {
+      "label": "14",
+      "areaJoch": null,
+      "areaKlafter": "594",
+      "values": "Pacht: 1 fl - kr; Summe Pacht: 7 fl - kr; Daher auf Ein Joch: 2 J 74½",
+      "yields": null,
+      "rawText": "14 | 1020 | 1 | - | Weingärten und Gärten | - | 594 | I* | 1 | - | - | - | 7 | - | 2 | 74½",
+      "confidence": "clear"
+     }
+    ]
+   }
+  ],
+  "pageNote": "Stran vsebuje veliko tabelo s parcelami za občino Grüble/Griblje, razdeljeno po kulturah (Acker I., Acker II., Wiesen, Weingärten und Gärten). Vsebina je zapisana v nemški Kurrent pisavi z rdečimi rubrikami (številke razredov in nekatere vrednosti). Na desnem robu so ročni pripisi 'Anmerkungen' (opombe) o določenih parcelah."
+ }
+}

@@ -1,0 +1,56 @@
+{
+ "page": 27,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:42:09.261Z",
+ "parseOk": true,
+ "structured": {
+  "page": 27,
+  "pageKind": "narrative+table",
+  "sections": [
+   {
+    "culture": "Hutweide",
+    "par": null,
+    "narrativeBrief": "Beschämte Ausländer von Joch, Ueinebällung von nichtzugehörigen Gültenmuthungen als Gülten.",
+    "rows": [
+     {
+      "label": "Gütergattung / Kopf",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "Gütergattung | Hauptmuthungs-Besitzerl. Gültenmuthung 30\" Jaugen, zumis zum Äpfeln zum Dämpfen Juch. | zum Juch",
+      "confidence": "clear"
+     },
+     {
+      "label": "Leibrenten",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "fl 25 kr 6",
+      "yields": null,
+      "rawText": "Leibrenten . . . | . . 27 | . . 25 | . . 6",
+      "confidence": "~"
+     },
+     {
+      "label": "Dienste der zinspflichten",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "Dienste der zinspflichten",
+      "confidence": "~"
+     },
+     {
+      "label": "Gült und Gültenmuthungen",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "fl [?] kr 6",
+      "yields": null,
+      "rawText": "Gült und Gültenmuthungen . . 27 | . . [?] | . . 6",
+      "confidence": "?"
+     }
+    ]
+   }
+  ],
+  "pageNote": "Stran vsebuje tabelo za kulturo Hutweide (pašniki) z vpisi o dajatvah (Leibrenten, Gült) in pripadajočim narativnim besedilom ter podpisom. Pisanje je v Kurrent pisavi, nekatere števke (zlasti v stolpcu fl pri Gült) so manj jasne. Spodnji del strani je prazen."
+ }
+}

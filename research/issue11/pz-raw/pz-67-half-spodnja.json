@@ -1,0 +1,66 @@
+{
+ "page": 67,
+ "phase": "p44-pass2b-half",
+ "part": "spodnja",
+ "readAt": "2026-10-11T19:11:45.463Z",
+ "parseOk": true,
+ "structured": {
+  "part": "SPODNJA",
+  "rows": [
+   {
+    "culture": "Hutweiden",
+    "class": "C",
+    "areaJoch": 118,
+    "areaKlafter": 26,
+    "bruttoPerJoch": "1 - 15 25",
+    "bruttoTotal": "[~]",
+    "compensation": "- 15 25",
+    "reinPerJoch": "88 49½",
+    "reinClasse": "88 49½",
+    "reinGattung": "88 49½",
+    "confidence": "clear"
+   },
+   {
+    "culture": "Weiden mit Holznutzung",
+    "class": "C",
+    "areaJoch": 558,
+    "areaKlafter": 46,
+    "bruttoPerJoch": "1 6 [~]",
+    "bruttoTotal": "614 11",
+    "compensation": "- 51",
+    "reinPerJoch": "[~] 552 [~]",
+    "reinClasse": "[~] 552 [~]",
+    "reinGattung": null,
+    "confidence": "?"
+   },
+   {
+    "culture": "Bauarea",
+    "class": "[~]",
+    "areaJoch": 199,
+    "areaKlafter": null,
+    "bruttoPerJoch": "16 50½",
+    "bruttoTotal": "58 [~]",
+    "compensation": "9 15 55",
+    "reinPerJoch": "36 1 [~]",
+    "reinClasse": "36 1 [~]",
+    "reinGattung": null,
+    "confidence": "~"
+   },
+   {
+    "culture": "Summa",
+    "class": "[~]",
+    "areaJoch": 7152,
+    "areaKlafter": 495,
+    "bruttoPerJoch": "[~]",
+    "bruttoTotal": "8870 5¾",
+    "compensation": "[~]",
+    "reinPerJoch": "[~]",
+    "reinClasse": "4492 51",
+    "reinGattung": "4492 51",
+    "confidence": "clear"
+   }
+  ],
+  "visibleRowCount": 4,
+  "pageNote": "Spodnja stran tabele prikazuje zadnje štiri vrstice (Hutweiden, Weiden mit Holznutzung, Bauarea, Summa) s skupnim čistim dohodkom in podpisom."
+ }
+}

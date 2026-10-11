@@ -1,0 +1,47 @@
+{
+ "page": 53,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:55:41.806Z",
+ "parseOk": true,
+ "structured": {
+  "page": 53,
+  "pageKind": "narrative+table",
+  "sections": [
+   {
+    "culture": "Wiesen",
+    "par": "§. 2.",
+    "narrativeBrief": "En sin einfſn Lüffe unſygmühltlch inſuſſi gynle bnuuſfim in Reſundnyg knmugt auf eime einſſiſligym flubwotbn ſur Juſf und Juſa.",
+    "rows": []
+   },
+   {
+    "culture": "Wiesen",
+    "par": null,
+    "narrativeBrief": "Kruſf imn aut A bngzgiſflſfmm fgygiſfſm Lnmufinmg, mygl fiſf imſſi gmnminmg (ind obyne Reſunbnygn) mſſanmiſgn nims giſſign Lüblimiſfmumt mit.",
+    "rows": []
+   },
+   {
+    "culture": "Wiesen",
+    "par": null,
+    "narrativeBrief": "Was finſ 20 23/100 Pammuth (eino Reſunbung). Ann Difizüngo-Lomiffen finſent im Dimn eno Juffinitün 20 Pammuth (eno-Reſunbnygs als Hlſzigo-Lpirh myjmommen, wmnueſf, wnmn eimſ mit mſſfent wemine, (als ansgiſflſmmt) Bypiſllnt auſfiillt.",
+    "rows": []
+   },
+   {
+    "culture": "Wiesen",
+    "par": null,
+    "narrativeBrief": null,
+    "rows": [
+     {
+      "label": "Ite",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "Rob-Ertrag: 9 fl 24 kr; Summarischer Cultur-Aufwand: 1 fl 57½ kr; Tarifs-Procent: 20; Anschlag: 1 fl 52¾ kr; Rein-Ertrag: 7 fl 30 kr",
+      "yields": null,
+      "rawText": "Ite. | 9 | 24 | 1 | 57½ | 20 | 1 | 52¾ | 7 | 30",
+      "confidence": "clear"
+     }
+    ]
+   }
+  ],
+  "pageNote": "Stran vsebuje ročno pisani narativni del o travnikih (Wiesen, §2) z rdečimi številkami in manjšo tiskano tabelo 'Darstellung des Rein-Ertrages' za razred Ite s črkovnimi glavami stolpcev. Spodaj sledi daljši odstavek 'Begründung des ausgewiesenen Rein-Ertrages'. Pisanje je v nemški Kurrent pisavi, berljivost je pretežno dobra."
+ }
+}

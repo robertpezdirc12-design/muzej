@@ -1,0 +1,53 @@
+{
+ "page": 24,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:41:03.535Z",
+ "parseOk": true,
+ "structured": {
+  "page": 24,
+  "pageKind": "narrative+table",
+  "sections": [
+   {
+    "culture": "Weide mit Holznutzen",
+    "par": "§9.",
+    "narrativeBrief": "V tej razredni skupini je površina 558 Joch 848 Klafter, razdeljena na 476 parcel, pri čemer je bila za kmetijsko zemljišče določena parcela št. 1980 z 3 Joch 1229 7/16 Klafter.",
+    "rows": []
+   },
+   {
+    "culture": "Weide mit Holznutzen",
+    "par": null,
+    "narrativeBrief": null,
+    "rows": [
+     {
+      "label": "Schuhgläser (3-9 Stk)",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "fl —; kr 20",
+      "yields": "2",
+      "rawText": "Schuhgläser 3-9 Stk | 2 | | | 20 | 1 | .",
+      "confidence": "clear"
+     },
+     {
+      "label": "½ Held",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "fl —; kr —",
+      "yields": null,
+      "rawText": "½ Held _ _ _ _ _ _ _ _ _ 6.",
+      "confidence": "~"
+     },
+     {
+      "label": "Summe (vsota)",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "fl 1; kr 6",
+      "yields": null,
+      "rawText": "Summe [des jährlichen Geldwerths] _ _ | _ _ | _ | _ | 1 | 6.",
+      "confidence": "clear"
+     }
+    ]
+   }
+  ],
+  "pageNote": "Stran vsebuje §9 o pašnikih z gozdnim izkoriščanjem, z obširnim opisom kvalitete tal in pridelkov. Na dnu strani je ročno narisana tabela pridelkov (Produkte) s stolpci Količina, Cena in Vrednost. Rdeči vpisi so vidni nad besedilom (številke 964, 1238). Pisanje je v nemški Kurrent pisavi, berljivo."
+ }
+}

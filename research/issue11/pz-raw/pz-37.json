@@ -1,0 +1,43 @@
+{
+ "page": 37,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:45:07.379Z",
+ "parseOk": true,
+ "structured": {
+  "page": 37,
+  "pageKind": "narrative",
+  "sections": [
+   {
+    "culture": "Wiesen",
+    "par": "§. 11",
+    "narrativeBrief": "Die unmittelbaren Wiesen, die sich bei dem Gründl- und Griblje, Griblje liegen zum Theile,",
+    "rows": []
+   },
+   {
+    "culture": "Wiesen",
+    "par": null,
+    "narrativeBrief": "Einigen Plaß.",
+    "rows": []
+   },
+   {
+    "culture": "Wiesen",
+    "par": null,
+    "narrativeBrief": "Ein Wiesen diesen Plaß sind theils thonig-sandig zum Theil, und erbalten nie mehr als eine mäßige Bewässerung, sie tragen meistens nur ein mittelmäßiges, und selten ein gutes Futter, mit einigen Ausnahmen. Als Wiesen wurden im Jahre 1818 und auf Grund des Mirko-Besitzes mit Wilderfutter gänzlich zerstört.",
+    "rows": []
+   },
+   {
+    "culture": "Wiesen",
+    "par": null,
+    "narrativeBrief": "Gewöhnliche Plaße.",
+    "rows": []
+   },
+   {
+    "culture": "Wiesen",
+    "par": null,
+    "narrativeBrief": "Ein Wiesen diesen Plaß sind sehr nassen und lehmigen Bodens, der theils mit Gras und Dung stark bewachsen ist, theils gar nichts trägt, und daher den Einwohnern nur zu dürftige Weide gewähren, die aber dennoch wegen Mangels an besseren Weideplätzen nothwendig angenommen werden müssen. Ein Theil von 3 bis 4 Joch liegt auch mit einem schlechten Raps ausgesäet, wovon jedoch Wiesen kaum etwas einträgt. Ein anderer Theil wird zur Weide benützt, und überdies ist diesem Grundstücke noch zugeeignet. Die Pongratz-wurden im Jahre 1818 auf Grund des –auf 1815 Abflusses vom Mirko-Plaß und Grüble 1817 gänzlich zerstört.",
+    "rows": []
+   }
+  ],
+  "pageNote": "Stran vsebuje samo narativni opis (Wiesen/Travniki) v nemški Kurrent pisavi brez tabel ali številskih vrednosti. Naslov 'II Wiesen' je na vrhu strani."
+ }
+}

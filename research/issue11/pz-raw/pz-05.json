@@ -1,0 +1,37 @@
+{
+ "page": 5,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:18:02.959Z",
+ "parseOk": true,
+ "structured": {
+  "page": 5,
+  "pageKind": "narrative",
+  "sections": [
+   {
+    "culture": null,
+    "par": null,
+    "narrativeBrief": "Gebäude sind ungemütlich, und die höchste Feuerversicherung beträgt nur die Hälfte des Werts; der Boden ist tief und fruchtbar, mit gutem Weingarten- und Ackerland.",
+    "rows": []
+   },
+   {
+    "culture": null,
+    "par": "§. 5.",
+    "narrativeBrief": "Die Lage ist günstig mit viel Wald, aber die Distanz zu den Äckern ist groß; die Wege sind schlecht und der Boden schwer bearbeitbar.",
+    "rows": []
+   },
+   {
+    "culture": null,
+    "par": "§. 6.",
+    "narrativeBrief": "Die Lage ist günstig mit wenig Steilhang, aber die Ernte ist durch Krüppelwald behindert; der Boden ist mittelmäßig und die Wege schlecht.",
+    "rows": []
+   },
+   {
+    "culture": null,
+    "par": "§. 7.",
+    "narrativeBrief": "Der Standort ist ungünstig an einem Abhang, mit steilem Zugang und schlechtem Weg; das Wetter ist jedoch günstig.",
+    "rows": []
+   }
+  ],
+  "pageNote": "Stran vsebuje samo narativni besedilo (opisi lokacij in tal) v nemški Kurrent pisavi brez tabel ali številskih podatkov. Besedilo je jasno berljivo."
+ }
+}

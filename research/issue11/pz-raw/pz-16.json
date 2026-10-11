@@ -1,0 +1,58 @@
+{
+ "page": 16,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:39:12.119Z",
+ "parseOk": true,
+ "structured": {
+  "page": 16,
+  "pageKind": "arrative+table",
+  "sections": [
+   {
+    "culture": "ckerland (domnevno, glede na kontekst pridelkov)",
+    "par": ". 9",
+    "narrativeBrief": "ri tem zemljišču je bilo upoštevano skupaj z vsemi §. 9 za določitev povprečnih pridelkov, zato je bilo skupaj z drugimi razredi dodeljenih več enot, natančneje so bile dodeljene naslednje količine:",
+    "rows": [
+     {
+      "label": "orn/Metzen",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "0 Metzen",
+      "rawText": "n Korn - - - - 80 Metzen.",
+      "confidence": "lear"
+     },
+     {
+      "label": "erste/Metzen",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "0 Metzen",
+      "rawText": " Gerste - - - - 70 .",
+      "confidence": "lear"
+     },
+     {
+      "label": "ülsenfrüchte/Metzen",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": " Metzen",
+      "rawText": " Hülsenfrüchte - - - - 8 .",
+      "confidence": ""
+     },
+     {
+      "label": "ohnen/Metzen",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": " (ali 6)",
+      "rawText": " Bohnen - - - - 0 [~6?].",
+      "confidence": ""
+     }
+    ]
+   }
+  ],
+  "pageNote": "tran vsebuje narativni opis v §9 s tabelo pridelkov (Metzen) in nadaljnja navodila o določitvi čistega donosa ter opombo o tretjem razredu. Rdeči rubrikirani tekst na dnu strani navaja podatke o tretjem razredu (100 Joch 386 Klafter = 234 Jangollen) in napotuje na prilogo št. 20."
+ },
+ "raw": "```json\n{\n  \"page\": 16,\n  \"pageKind\": \"narrative+table\",\n  \"sections\": [\n    {\n      \"culture\": \"Ackerland (domnevno, glede na kontekst pridelkov)\",\n      \"par\": \"§. 9\",\n      \"narrativeBrief\": \"Pri tem zemljišču je bilo upoštevano skupaj z vsemi §. 9 za določitev povprečnih pridelkov, zato je bilo skupaj z drugimi razredi dodeljenih več enot, natančneje so bile dodeljene naslednje količine:\",\n      \"rows\": [\n        {\n          \"label\": \"Korn/Metzen\",\n          \"areaJoch\": null,\n          \"areaKlafter\": null,\n          \"values\": null,\n          \"yields\": \"80 Metzen\",\n          \"rawText\": \"an Korn - - - - 80 Metzen.\",\n          \"confidence\": \"clear\"\n        },\n        {\n          \"label\": \"Gerste/Metzen\",\n          \"areaJoch\": null,\n          \"areaKlafter\": null,\n          \"values\": null,\n          \"yields\": \"70 Metzen\",\n          \"rawText\": \"\" Gerste - - - - 70 .\",\n          \"confidence\": \"clear\"\n        },\n        {\n          \"label\": \"Hülsenfrüchte/Metzen\",\n          \"areaJoch\": null,\n          \"areaKlafter\": null,\n          \"values\": null,\n          \"yields\": \"8 Metzen\",\n          \"rawText\": \"\" Hülsenfrüchte - - - - 8 .\",\n          \"confidence\": \"~\"\n        },\n        {\n          \"label\": \"Bohnen/Metzen\",\n          \"areaJoch\": null,\n          \"areaKlafter\": null,\n          \"values\": null,\n          \"yields\": \"0 (ali 6)\",\n          \"rawText\": \"\" Bohnen - - - - 0 [~6?].\",\n          \"confidence\": \"~\"\n        }\n      ]\n    }\n  ],\n  \"pageNote\": \"Stran vsebuje narativni opis v §9 s tabelo pridelkov (Metzen) in nadaljnja navodila o določitvi čistega donosa ter opombo o tretjem razredu. Rdeči rubrikirani tekst na dnu strani navaja podatke o tretjem razredu (100 Joch 386 Klafter = 234 Jangollen) in napotuje na prilogo št. 20.\"\n}\n```",
+ "repairNote": "lokalno popravljeno (ubežni narekovaji, fences)"
+}

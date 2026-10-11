@@ -1,0 +1,62 @@
+{
+ "page": 51,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:54:57.378Z",
+ "parseOk": true,
+ "structured": {
+  "page": 51,
+  "pageKind": "narrative+table",
+  "sections": [
+   {
+    "culture": null,
+    "par": "§. 11",
+    "narrativeBrief": "Bemerkungen wegen Hüttenfeld, Acker und Wiesen in dieser Gemeinde; deren Benützung ist Endbesichtigung und ausgemittelter Abnutzungs-Aufwand auf die myßte Ackerschaft übertragen und gemeine Ansprache, die in den Local-Verhältnissen und Einwirkungen nicht völlig analog zu finden war, wurde sogleich hier vermerkt.",
+    "rows": []
+   },
+   {
+    "culture": "Hutweide",
+    "par": null,
+    "narrativeBrief": null,
+    "rows": [
+     {
+      "label": "I",
+      "areaJoch": "[?]",
+      "areaKlafter": "[?]",
+      "values": null,
+      "yields": null,
+      "rawText": "I. [?] J [?] Klf.",
+      "confidence": "?"
+     },
+     {
+      "label": "II",
+      "areaJoch": "[?]",
+      "areaKlafter": "[?]",
+      "values": null,
+      "yields": null,
+      "rawText": "II. [?] J [?] Klf.",
+      "confidence": "?"
+     },
+     {
+      "label": "III",
+      "areaJoch": "[?]",
+      "areaKlafter": "[?]",
+      "values": null,
+      "yields": null,
+      "rawText": "III. [?] J [?] Klf.",
+      "confidence": "?"
+     },
+     {
+      "label": "Summe",
+      "areaJoch": "[?]",
+      "areaKlafter": "[?]",
+      "values": null,
+      "yields": null,
+      "rawText": "Summe [?] J [?] Klf.",
+      "confidence": "?"
+     }
+    ]
+   }
+  ],
+  "pageNote": "Stran vsebuje dolg narativni odstavek v § 11 (Kurrent pisava) in na dnu tiskano tabelo za Hutweide, ki je večinoma prazna ali neberljiva zaradi bledega tiska in črte, ki prečka tabelo. Zadnji del strani vsebuje še nekatere zapiske."
+ }
+}

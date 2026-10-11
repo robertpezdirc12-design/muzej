@@ -1,0 +1,206 @@
+{
+ "page": 15,
+ "phase": "p44-pass2",
+ "why": "odrezan izpis 1. kroga — celostno ponovno branje",
+ "readAt": "2026-10-11T19:09:23.340Z",
+ "parseOk": true,
+ "structured": {
+  "page": 15,
+  "pageKind": "narrative+table",
+  "sections": [
+   {
+    "culture": "Natural-Ertrag",
+    "par": null,
+    "rows": [
+     {
+      "label": "1. Mais",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "18 Metz / 18 Metz",
+      "raw": "1. Mais - - - - 18 - 18 -",
+      "confidence": "clear"
+     },
+     {
+      "label": "2. Weitzen",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "9 Metz / 9 Metz",
+      "raw": "2. Weitzen - - - - 9 - 9 -",
+      "confidence": "clear"
+     },
+     {
+      "label": "3. Klee in Wüsten",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "20ßl / 30ßl",
+      "raw": "3. Klee in Wüsten - - 20ßl - 30ßl",
+      "confidence": "~"
+     },
+     {
+      "label": "4. Weitzen",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "9 Metz / 9 Metz",
+      "raw": "4. Weitzen - - - - 9 - 9 -",
+      "confidence": "clear"
+     },
+     {
+      "label": "5. Moggelmühlem",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "7 / 7",
+      "raw": "5. Moggelmühlem - - - 7 - 7 -",
+      "confidence": "~"
+     },
+     {
+      "label": "6. Horn",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "9 / 9",
+      "raw": "6. Horn - - - - 9 - 9 .",
+      "confidence": "clear"
+     },
+     {
+      "label": "7. Grünem Waßfuhgl",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "7 / 7",
+      "raw": "7. Grünem Waßfuhgl - - 7 - 7 -",
+      "confidence": "~"
+     },
+     {
+      "label": "8. Hirse",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "10 / 10",
+      "raw": "8. Hirse - - - - 10 - 10 -",
+      "confidence": "clear"
+     },
+     {
+      "label": "9. Erdapfel",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "65 / 65",
+      "raw": "9. Erdapfel - - - 65 - 65 -",
+      "confidence": "clear"
+     },
+     {
+      "label": "10. Horn",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "9 / 9",
+      "raw": "10. Horn - - - - 9. - 9 -",
+      "confidence": "clear"
+     },
+     {
+      "label": "11. Grünem Waßfuhgl",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "7 / 7",
+      "raw": "11. Grünem Waßfuhgl - - 7 - 7 -",
+      "confidence": "~"
+     },
+     {
+      "label": "12. Hirse",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "10 / 10",
+      "raw": "12. Hirse - - - - 10 - 10 -",
+      "confidence": "clear"
+     }
+    ]
+   },
+   {
+    "culture": "Zweite Classe (Geld Ertrag)",
+    "par": null,
+    "rows": [
+     {
+      "label": "2/9 Lnhügem",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "2 fl 5 kr / 4 fl 10 kr",
+      "yields": "2 Metz",
+      "raw": "2/9 Lnhügem - - - - 2 - - 2 5 - 4 10",
+      "confidence": "~"
+     },
+     {
+      "label": "2/9 Zumi",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "1 fl 10 kr / 2 fl 20 kr",
+      "yields": "2 Metz",
+      "raw": "2/9 Zumi - - - - 2 - - 1 10 - 2 20",
+      "confidence": "~"
+     },
+     {
+      "label": "2/9 Muis",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "1 fl 10 kr / 2 fl 20 kr",
+      "yields": "2 Metz",
+      "raw": "2/9 Muis - - - - 2 - - 1 10 - 2 20",
+      "confidence": "~"
+     },
+     {
+      "label": "2/9 Gipun",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "1 fl 6 kr / 2 fl 26 3/4 kr",
+      "yields": "2 Metz 14 Ctr",
+      "raw": "2/9 Gipun - - - - 2 14 - 1 6 - 2 26 3/4",
+      "confidence": "~"
+     },
+     {
+      "label": "2/9 Grünme",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "- 57 kr / 2 fl 12 3/4 kr",
+      "yields": "2 Metz 21 Ctr",
+      "raw": "2/9 Grünme - - - - 2 21 - - 57 - 2 12 3/4",
+      "confidence": "~"
+     },
+     {
+      "label": "1/9 Finküchel",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "- 14 kr / 1 fl 41 kr",
+      "yields": "7 Metz 14 Ctr",
+      "raw": "1/9 Finküchel - - - - 7 14 - - 14 - 1 41",
+      "confidence": "~"
+     },
+     {
+      "label": "1/9 Elan",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "- 90 kr / 1 fl 40 kr",
+      "yields": "- / 2 22/100 Eimer",
+      "raw": "1/9 Elan - - - - - 2 22/100 - 90 - 1 40",
+      "confidence": "~"
+     },
+     {
+      "label": "Summe im niederstern Spülbaug",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "- - / 16 fl 50 1/4 kr",
+      "yields": null,
+      "raw": "Summe im niederstern Spülbaug - - - - - - - - 16 50 1/4",
+      "confidence": "~"
+     }
+    ]
+   }
+  ],
+  "pageNote": "Stran vsebuje tabelo naravnih pridelkov in drugo razredno tabelo denarnih dohodkov z opombo o nižjem razredu."
+ }
+}

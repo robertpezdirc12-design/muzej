@@ -1,0 +1,98 @@
+{
+ "page": 50,
+ "phase": "p44-pass2",
+ "why": "zgodovinsko divergentna stran (Acker razred I: 3 branja se razhajajo)",
+ "readAt": "2026-10-11T19:09:47.043Z",
+ "parseOk": true,
+ "structured": {
+  "page": 50,
+  "rows": [
+   {
+    "label": "Naslov razdelka",
+    "fl": null,
+    "kr": null,
+    "raw": "Veranschlagung des Cultur-Aufwandes und Darstellung des Rein-Ertrages. § 1.",
+    "confidence": "clear"
+   },
+   {
+    "label": "Kategorija zemljišča",
+    "fl": null,
+    "kr": null,
+    "raw": "Ackerland (prva vrstica: Ein einziges Landstück...)",
+    "confidence": "clear"
+   },
+   {
+    "label": "Rob-Ertrag pro Joch",
+    "fl": 25,
+    "kr": "44",
+    "raw": "25 fl 44 kr",
+    "confidence": "~"
+   },
+   {
+    "label": "Cultur-Aufwand - delo (1. vrstica)",
+    "fl": 10,
+    "kr": "19½",
+    "raw": "10 fl 19½ kr",
+    "confidence": "?"
+   },
+   {
+    "label": "Anschlag (skupni) pro Joch",
+    "fl": 10,
+    "kr": "40½",
+    "raw": "10 fl 40½ kr",
+    "confidence": "~"
+   },
+   {
+    "label": "Rein-Ertrag pro Joch",
+    "fl": 15,
+    "kr": "5",
+    "raw": "15 fl 5 kr (ali 13/12?)",
+    "confidence": "?"
+   },
+   {
+    "label": "Razpredelnica - Razred",
+    "fl": null,
+    "kr": null,
+    "raw": "I.",
+    "confidence": "clear"
+   },
+   {
+    "label": "Razpredelnica - Rob-Ertrag pr Joch",
+    "fl": 20,
+    "kr": "44",
+    "raw": "20 fl 44 kr (prečrtano) / 25 fl 44 kr (nadpisano?)",
+    "confidence": "~"
+   },
+   {
+    "label": "Razpredelnica - Summarischer Cultur-Aufwand",
+    "fl": 10,
+    "kr": "18½",
+    "raw": "10 fl 18½ kr",
+    "confidence": "~"
+   },
+   {
+    "label": "Razpredelnica - Tarif-Percent",
+    "fl": 45,
+    "kr": null,
+    "raw": "45%",
+    "confidence": "clear"
+   },
+   {
+    "label": "Razpredelnica - Anschlag deselben im Gelde fl",
+    "fl": 10,
+    "kr": "40½",
+    "raw": "10 fl 40½ kr",
+    "confidence": "~"
+   },
+   {
+    "label": "Razpredelnica - Rein-Ertrag fl",
+    "fl": 15,
+    "kr": "5",
+    "raw": "15 fl 5 kr (ali 13? 10?)",
+    "confidence": "?"
+   }
+  ],
+  "arithmetic": "Rob-Ertrag (25 fl 44 kr) − Anschlag (10 fl 40½ kr) = 15 fl 3½ kr (napaka: zapisano 15 fl 5 kr). Alternativno: če je Rob-Ertrag 20 fl 44 kr in Anslag 8 fl 39 kr = 12 fl 5 kr; ali Rob-Ertrag 25 fl − Anslag 10 fl 30½ = 14 fl 29½ kr. Nobena od zapisanih kombinacij (20/25, 8.10.5/10.30.5/10.41.5, 12/13/15.5) ni aritmetično točna.",
+  "pageNote": "Stran prikazuje oceno kulturnih stroškov in čistega donosa za prvi razred orne zemlje v občini Grüblé. V besedilu in tabeli so vidne popravke in nejasnosti pri številkah, kar kaže na zapleten postopek določanja davčnih osnov."
+ }
+}

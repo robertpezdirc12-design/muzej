@@ -1,0 +1,91 @@
+{
+ "page": 11,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:36:32.723Z",
+ "parseOk": true,
+ "structured": {
+  "page": 11,
+  "pageKind": "arrative",
+  "sections": [
+   {
+    "culture": null,
+    "par": ". 1",
+    "narrativeBrief": "er in landwirthschaftlicher Cultur und Benützung stehende Boden dieser Gemeinde zerfällt nach den anrehenden Protokollen über die Bestimmung der Culturgattungen und über die Clasification in nachstehende Culturen und Clafsen.",
+    "rows": [
+     {
+      "label": "ecker",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "ecker ----1 ---- ? Clafsen",
+      "confidence": "lear"
+     },
+     {
+      "label": "iesen",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "iesen --------- 2",
+      "confidence": "lear"
+     },
+     {
+      "label": "leire Gärten",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "leire Gärten -- miggja .",
+      "confidence": ""
+     },
+     {
+      "label": "rößere dito",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "rößere dito - - - miggi .",
+      "confidence": ""
+     },
+     {
+      "label": "eingärten",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "eingärten ------- miggi .",
+      "confidence": ""
+     },
+     {
+      "label": "utweiden",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "utweiden - - - - miggi *",
+      "confidence": ""
+     },
+     {
+      "label": "utweiden mit Höhümern",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "utweiden mit Höhümern - miggi :",
+      "confidence": ""
+     }
+    ]
+   },
+   {
+    "culture": null,
+    "par": ". 2",
+    "narrativeBrief": "ur Ermittlung des sogenannten Natural-Ertrages fand in dieser Gemeinde niher im einzelnen absondern: Aufnahmen, und im zumeist mittigem Durchschnitt sind gemächlich [?] durch ihren fortdigen Erfolg vorgefunden werden.",
+    "rows": []
+   }
+  ],
+  "pageNote": "tran je čisto narativna brez številskih tabel; vsebuje samo seznam kultur s številom razredov (Aecker 2, Wiesen 2) in opis postopka (§2). Pri Aecker je število razredov morda 2 (nejasno). Številke za druge kulture so napisane kot 'miggja' ali podobno, kar je verjetno okrajšava za 'mögliche' (možni) ali pa gre za nečitljivo ročno pisavo."
+ },
+ "raw": "{\n  \"page\": 11,\n  \"pageKind\": \"narrative\",\n  \"sections\": [\n    {\n      \"culture\": null,\n      \"par\": \"§. 1\",\n      \"narrativeBrief\": \"Der in landwirthschaftlicher Cultur und Benützung stehende Boden dieser Gemeinde zerfällt nach den anrehenden Protokollen über die Bestimmung der Culturgattungen und über die Clasification in nachstehende Culturen und Clafsen.\",\n      \"rows\": [\n        {\n          \"label\": \"Aecker\",\n          \"areaJoch\": null,\n          \"areaKlafter\": null,\n          \"values\": null,\n          \"yields\": null,\n          \"rawText\": \"Aecker ----1 ---- ? Clafsen\",\n          \"confidence\": \"clear\"\n        },\n        {\n          \"label\": \"Wiesen\",\n          \"areaJoch\": null,\n          \"areaKlafter\": null,\n          \"values\": null,\n          \"yields\": null,\n          \"rawText\": \"Wiesen --------- 2\",\n          \"confidence\": \"clear\"\n        },\n        {\n          \"label\": \"Kleire Gärten\",\n          \"areaJoch\": null,\n          \"areaKlafter\": null,\n          \"values\": null,\n          \"yields\": null,\n          \"rawText\": \"Kleire Gärten -- miggja .\",\n          \"confidence\": \"~\"\n        },\n        {\n          \"label\": \"größere dito\",\n          \"areaJoch\": null,\n          \"areaKlafter\": null,\n          \"values\": null,\n          \"yields\": null,\n          \"rawText\": \"größere dito - - - miggi .\",\n          \"confidence\": \"~\"\n        },\n        {\n          \"label\": \"Weingärten\",\n          \"areaJoch\": null,\n          \"areaKlafter\": null,\n          \"values\": null,\n          \"yields\": null,\n          \"rawText\": \"Weingärten ------- miggi .\",\n          \"confidence\": \"~\"\n        },\n        {\n          \"label\": \"Hutweiden\",\n          \"areaJoch\": null,\n          \"areaKlafter\": null,\n          \"values\": null,\n          \"yields\": null,\n          \"rawText\": \"Hutweiden - - - - miggi *\",\n          \"confidence\": \"~\"\n        },\n        {\n          \"label\": \"Hutweiden mit Höhümern\",\n          \"areaJoch\": null,\n          \"areaKlafter: null,\n          \"values\": null,\n          \"yields\": null,\n          \"rawText\": \"Hutweiden mit Höhümern - miggi :\",\n          \"confidence\": \"~\"\n        }\n      ]\n    },\n    {\n      \"culture\": null,\n      \"par\": \"§. 2\",\n      \"narrativeBrief\": \"Zur Ermittlung des sogenannten Natural-Ertrages fand in dieser Gemeinde niher im einzelnen absondern: Aufnahmen, und im zumeist mittigem Durchschnitt sind gemächlich [?] durch ihren fortdigen Erfolg vorgefunden werden.\",\n      \"rows\": []\n    }\n  ],\n  \"pageNote\": \"Stran je čisto narativna brez številskih tabel; vsebuje samo seznam kultur s številom razredov (Aecker 2, Wiesen 2) in opis postopka (§2). Pri Aecker je število razredov morda 2 (nejasno). Številke za druge kulture so napisane kot 'miggja' ali podobno, kar je verjetno okrajšava za 'mögliche' (možni) ali pa gre za nečitljivo ročno pisavo.\"\n}",
+ "repairNote": "lokalno popravljeno (ubežni narekovaji, fences)"
+}

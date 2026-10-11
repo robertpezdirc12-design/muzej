@@ -1,0 +1,67 @@
+{
+ "page": 4,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:17:47.832Z",
+ "parseOk": true,
+ "structured": {
+  "page": 4,
+  "pageKind": "arrative+table",
+  "sections": [
+   {
+    "culture": "ieh Stand",
+    "par": ". 4.",
+    "narrativeBrief": "ei verhältnißmäßiger Eintheilung, und unzweideutiger Abstufung besteht die Viehstand-Classe, und zählt sie",
+    "rows": [
+     {
+      "label": "ieh Abzüge",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "24",
+      "yields": null,
+      "rawText": "24 Vieh Abzüge",
+      "confidence": "lear"
+     },
+     {
+      "label": "inder",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "0",
+      "yields": null,
+      "rawText": "0 \" Rinder",
+      "confidence": "lear"
+     },
+     {
+      "label": "ungvieh",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "0",
+      "yields": null,
+      "rawText": "0 . Jungvieh",
+      "confidence": "lear"
+     },
+     {
+      "label": "chafe zusammen",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "50",
+      "yields": null,
+      "rawText": "50 \" Schafe zusammen",
+      "confidence": "lear"
+     },
+     {
+      "label": "chweine",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "0",
+      "yields": null,
+      "rawText": "0 . Schweine",
+      "confidence": "lear"
+     }
+    ]
+   }
+  ],
+  "pageNote": "tran vsebuje narativni opis (§2 in §3 na vrhu, §4 v teku) ter tabelo za kulturo 'Vieh Stand' pod §4. Rdeče rubrike niso vidne na tej strani. Pisanje je jasno berljivo v Kurrent pisavi."
+ },
+ "raw": "```json\n{\n  \"page\": 4,\n  \"pageKind\": \"narrative+table\",\n  \"sections\": [\n    {\n      \"culture\": \"Vieh Stand\",\n      \"par\": \"§. 4.\",\n      \"narrativeBrief\": \"Bei verhältnißmäßiger Eintheilung, und unzweideutiger Abstufung besteht die Viehstand-Classe, und zählt sie\",\n      \"rows\": [\n        {\n          \"label\": \"Vieh Abzüge\",\n          \"areaJoch\": null,\n          \"areaKlafter\": null,\n          \"values\": \"124\",\n          \"yields\": null,\n          \"rawText\": \"124 Vieh Abzüge\",\n          \"confidence\": \"clear\"\n        },\n        {\n          \"label\": \"Rinder\",\n          \"areaJoch\": null,\n          \"areaKlafter\": null,\n          \"values\": \"20\",\n          \"yields\": null,\n          \"rawText\": \"20 \" Rinder\",\n          \"confidence\": \"clear\"\n        },\n        {\n          \"label\": \"Jungvieh\",\n          \"areaJoch\": null,\n          \"areaKlafter\": null,\n          \"values\": \"30\",\n          \"yields\": null,\n          \"rawText\": \"30 . Jungvieh\",\n          \"confidence\": \"clear\"\n        },\n        {\n          \"label\": \"Schafe zusammen\",\n          \"areaJoch\": null,\n          \"areaKlafter\": null,\n          \"values\": \"150\",\n          \"yields\": null,\n          \"rawText\": \"150 \" Schafe zusammen\",\n          \"confidence\": \"clear\"\n        },\n        {\n          \"label\": \"Schweine\",\n          \"areaJoch\": null,\n          \"areaKlafter\": null,\n          \"values\": \"30\",\n          \"yields\": null,\n          \"rawText\": \"30 . Schweine\",\n          \"confidence\": \"clear\"\n        }\n      ]\n    }\n  ],\n  \"pageNote\": \"Stran vsebuje narativni opis (§2 in §3 na vrhu, §4 v teku) ter tabelo za kulturo 'Vieh Stand' pod §4. Rdeče rubrike niso vidne na tej strani. Pisanje je jasno berljivo v Kurrent pisavi.\"\n}\n```",
+ "repairNote": "lokalno popravljeno (ubežni narekovaji, fences)"
+}

@@ -1,0 +1,83 @@
+{
+ "page": 54,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:56:13.146Z",
+ "parseOk": true,
+ "structured": {
+  "page": 54,
+  "pageKind": "narrative+table",
+  "sections": [
+   {
+    "culture": "Gärten",
+    "par": null,
+    "narrativeBrief": "Ein einf. Luff-entzügl. u. gül-brauner in Raufruhg. kühnigt nur eine blosfällige Hübenm. zu 4 Joch, die Jufe 4 fl — kr.",
+    "rows": [
+     {
+      "label": "4 J",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "4 fl — kr",
+      "yields": null,
+      "rawText": "4 J. 4 fl. — kr.",
+      "confidence": "clear"
+     }
+    ]
+   },
+   {
+    "culture": "Hutweide/Weiden",
+    "par": null,
+    "narrativeBrief": "Die aus 4 bezüglichen gegenständen Lämmerung, angibt sich zum Genuß (d.h. obigen Rauftruhg.) mitfremdigen nur zisigen Lämmernißw. mit — fl. 55 kr.",
+    "rows": [
+     {
+      "label": "55 kr",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "— fl. 55 kr",
+      "yields": null,
+      "rawText": "— fl. 55 kr.",
+      "confidence": "clear"
+     }
+    ]
+   },
+   {
+    "culture": "Bau-Area",
+    "par": null,
+    "narrativeBrief": "Aus find 22 9/100 Promta. (d) Rauftruhg., Ein Aushilfs-Locumiffen findet Dazuge im Dann Ein Jufstätten 25' Promta. (d) Rauftruhgs als Abgangs-Spuren ungenommlen; manuer, minus Einfe mit + fl. — kr. abgn. manfind reumliche, das ureffentlich Befülldt. aufstellt.",
+    "rows": [
+     {
+      "label": "22 9/100 / 25'",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "+ fl. — kr. abgn.",
+      "yields": null,
+      "rawText": "Aus find 22 9/100 Promta. (d) Rauftruhg., Ein Aushilfs-Locumiffen findet Dazuge im Dann Ein Jufstätten 25' Promta. (d) Rauftruhgs als Abgangs-Spuren ungenommlen; manuer, minus Einfe mit + fl. — kr. abgn. manfind reumliche, das ureffentlich Befülldt. aufstellt.",
+      "confidence": "~"
+     }
+    ]
+   },
+   {
+    "culture": "Darstellung des Rein-Ertrages",
+    "par": null,
+    "narrativeBrief": null,
+    "rows": [
+     {
+      "label": "IIte",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "Rob-Ertrag: 4 fl.; Cultur-Aufwand: — 33 kr; Tarifs-Procent: 25'; Anschlag: 1'; Rein-Ertrag: 3 fl.",
+      "yields": null,
+      "rawText": "IIte | 4 | — | 33 | 25' | 1' | 3 |",
+      "confidence": "clear"
+     }
+    ]
+   },
+   {
+    "culture": "Begründung des ausgewiesenen Rein-Ertrages",
+    "par": null,
+    "narrativeBrief": "Zur Ausführung liegt demnachend und zu Landanlagen B. nun jährlich Pachtunfte zu fag. und 9/. 18i de punkt. Und fügen als hervorbrung Anrechnung ausgenisen. Die therefore Einfu forderlich anfaffung befchren und Mängel aus Schadensersatz, und in dem ersten zugeführten alhier; deshalb lage borgschaffte karglichen wegen den Grundstückigkeit und Flächen ums Ländlichkeit beurtheilt. Und Aufwendige bewußten dapfen für ein und mehr Wiesenflyß ausgeführte Begrenzung auf frei — Anmerkung.",
+    "rows": []
+   }
+  ],
+  "pageNote": "Stran vsebuje ročno pisano besedilo v Kurrent pisavi in eno tiskano tabelo pod naslovom 'Darstellung des Rein-Ertrages'. Zgornji del strani nadaljuje opis kultur (Gärten, Hutweide, Bau-Area), spodnji del pa vsebuje 'Begründung' (utemeljitev) čistega donosa. Tabela ima rdeče in črne vnose, nekatera števila so prečrtana ali nekoliko nejasna."
+ }
+}
