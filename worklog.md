@@ -2525,3 +2525,41 @@ zgodbo (Pezdirc).
   se nadoknadi v enem ciklu).
 - PRODUKCIJA: neprizadeta (4f0ae9d deploy zelen prek Vercel GitHub App; spremembe se dotikajo
   samo .github/ + worklog.md, brez vpliva na gradnjo).
+
+## P43 — issue #13: PRVA CELOTNA VERIGA PT → PUA → PS (deterministično, nadaljevanje P41 nextStep 3) (2026-10-11)
+
+- ZDružITEV KOMPONENT: P5-c W-most (PT→PUA, 26 spojev, verdikti MATCH/PARTIAL/MISMATCH po
+  Levenshtein 0.72/0.50) + P41 veriga (PUA→PS, 65 hiš) — NOBEJ fazi jih še nista sestavili
+  v celoto; P43 = prva celotna veriga, točno naslov #13 (stavba→hišna št.→parcela→lastnik).
+- SKRIPT scripts/chain-full-pt-ps.py (deterministično, brez AI klicev): kompozicija obeh
+  komponent po načelu ZAUPOANJE VERIGE = NAJŠIBKEJŠA ČLENICA; hiše brez W. sklica → imenski
+  kandidati po VODILNEM ŽETONU (večinoma priimek; krstna imena ubita z zahtevo dolžine ≥ 4,
+  npr. lažni pozitiv »Jan«) — imenske povezave nikoli nad MOGOČA (isti lastnik več hiš);
+  nič-zguba: VSAKA od 105 PT vrstic (84 hiš + 21 parcelnih vrstic) ima vnos z rangom,
+  utemeljitvijo in viri.
+- REZULTATI (hiše): 2 DOKAZANA (Milleg Hans W.29 → PUA h29 MOČNA) + 5 VERJETNIH (Štunidat
+  Mufa W.1, Hlebetz Jan W.2, Brinig Magnus W.24, Brinig Miklo W.25) + 4 MOGOČE + 73 NEREŠENIH;
+  parcelne vrstice: 4+4+2+11; 6 hiš s priimkovno KORROBORACIJO čez W (W.2/21/24/25/29 —
+  dvojni dokaz: številka + priimek).
+- ODKRITJE (kontaminacija ujeta pred objavo): ATLAS_OWNERS houseRefs so MEŠANE narave —
+  prva gradnja pred odkritjem P4 je mešala PUA in PT številčenje (dokazan primer:
+  lastnik-milleg [34, 36] = PT hiši 35/36, ne PUA). Prva različica skripta je razširila
+  univerzum po njih → lažni kandidati (Hlebetz 1.0 pri hišah 34/36 prek žetona »Jan«).
+  SANACIJA: univerzum = IZKLJUČNO P41 veriga (continuation, cel register 49/49); 23 sklicov
+  A–B izven verige dokumentiranih kot mešano številčenje; uporaba strani A–B za verigo
+  izrecno preložena na #12 (človeška potrditev številk).
+- KRIŽNA POTRDITEV KORPUSA: rekonstrukcija izbranih (adjudiciranih) PS branj po PS-full-v2
+  (pass1/2/3 izbiri) — število vrstic po hišah se s P41 ujema 65/65 Točno → kompozicija
+  stoji na istem korpusu kot P41.
+- DOKAZ: research/issue13/chain-full-pt-ps.json (91,5 KB; meta + statistika + 105 vnosov;
+  vsak rang nosi razlog + vire: W verdikt + sim, PUA lastniki, PUA→PS rang, parcele PS s
+  stranjo/vrstico/blatt/številko).
+- INTEGRACIJA: sources.ts N083PT (nota SL+EN P43 + lastVerified 2026-10-11);
+  research.ts KURRENT_SERIES PT nota P43; NOVA QA kontrola qa-p43-chain-full (41. test;
+  preverja noto, kazalca na dokaz, range 2/5/4, korroboracijo 6, univerzum 65, križno
+  potrditev 65/65, strogo readFile preverjanje dokaza v repozitoriju/CI, preskok v
+  produkciji kjer research/ namenoma ni).
+- TESTI: ESLint 0; tsc 0; build 16/16 strani + 12 API poti; lokalni produkcijski strežnik:
+  /api/qa HTTP 200, QA 40→41, 41/41 zelenih (qa-p43-chain-full ZELEN).
+- #13 OSTAJA ODPRT: geometrija (156 stavb ↔ hišne št.) še vedno čaka vektorizacijo A01/A02
+  + #12; 29 nerešenih PUA hiš iz P41 ostaja; poročilo o napredku gre v komentar na #13.

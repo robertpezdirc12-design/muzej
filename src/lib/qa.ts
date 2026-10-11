@@ -1513,6 +1513,87 @@ export function runQA(opts: QAOptions = {}): QAReport {
       : p39Errors.join("; "),
   );
 
+  // P43 (issue #13): PRVA CELOTNA VERIGA PT → PUA → PS — kompozicija W-mostu
+  // P5-c in verige P41; nič-zguba 105 vrstic; konservativno rangiranje
+  // (zaupanje = najšibkejša členica); ATLAS_OWNERS houseRefs mešane narave
+  // izrecno izven verige.
+  const p43Errors: string[] = [];
+  {
+    const pt = ATLAS_SOURCES.find((s) => s.code === "N083PT");
+    if (!pt) p43Errors.push("vir N083PT manjka");
+    else {
+      if (pt.lastVerified !== "2026-10-11")
+        p43Errors.push(`N083PT: lastVerified=${pt.lastVerified}, pričakovano 2026-10-11 (dan P43)`);
+      if (!(pt.noteSi ?? "").includes("P43"))
+        p43Errors.push("N083PT: nota SL ne dokumentira P43 (celotna veriga)");
+      if (!(pt.noteSi ?? "").includes("chain-full-pt-ps.json"))
+        p43Errors.push("N083PT: nota SL brez kazalca na dokaz chain-full-pt-ps.json");
+      if (!(pt.noteSi ?? "").includes("2 DOKAZANI"))
+        p43Errors.push("N083PT: nota SL brez rangov verige (2 DOKAZANI + 5 VERJETNIH + 4 MOGOČE)");
+      if (!(pt.noteSi ?? "").includes("65/65"))
+        p43Errors.push("N083PT: nota SL brez križne potrditve korpusa (65/65)");
+      if (!(pt.noteSi ?? "").includes("mešano številčenje"))
+        p43Errors.push("N083PT: nota SL brez opozorila o mešanem številčenju ATLAS_OWNERS");
+      if (!(pt.noteEn ?? "").includes("FIRST FULL CHAIN"))
+        p43Errors.push("N083PT: nota EN brez FIRST FULL CHAIN (P43)");
+      if (pt.structuredEntries !== 84)
+        p43Errors.push("N083PT: structuredEntries spremenjen (P43 je analiza, ne nov prepis)");
+    }
+    const ptSeries = KURRENT_SERIES.find((s) => s.code === "PT");
+    if (!ptSeries) p43Errors.push("KURRENT_SERIES: PT manjka");
+    else if (!(ptSeries.noteSi ?? "").includes("P43"))
+      p43Errors.push("KURRENT_SERIES PT: nota SL ne odraža P43");
+    // strežniška kontrola dokaza (enaka logika preskoka kot p38/p39: v
+    // produkciji research/ namenoma ni — .vercelignore, 92 MB)
+    if (opts.readFile) {
+      const raw = opts.readFile("research/issue13/chain-full-pt-ps.json");
+      if (raw) {
+        try {
+          const proof = JSON.parse(raw) as {
+            stats?: {
+              ptRows?: number;
+              ptHouses?: number;
+              houseTiers?: Record<string, number>;
+              housesCorroborated?: number;
+              puaUniverse?: number;
+            };
+            meta?: { crossValidation?: { exact?: number; housesChecked?: number } };
+          };
+          if (proof.stats?.ptRows !== 105)
+            p43Errors.push(`dokaz: stats.ptRows=${proof.stats?.ptRows}, pričakovano 105 (84 hiš + 21 parcelnih vrstic)`);
+          if (proof.stats?.ptHouses !== 84)
+            p43Errors.push(`dokaz: stats.ptHouses=${proof.stats?.ptHouses}, pričakovano 84`);
+          const ht = proof.stats?.houseTiers ?? {};
+          if (ht["DOKAZANA"] !== 2 || ht["VERJETNA"] !== 5 || ht["MOGOČA"] !== 4 || ht["NEREŠENA"] !== 73)
+            p43Errors.push(
+              `dokaz: houseTiers=${JSON.stringify(ht)}, pričakovano {DOKAZANA:2, VERJETNA:5, MOGOČA:4, NEREŠENA:73}`,
+            );
+          if (proof.stats?.housesCorroborated !== 6)
+            p43Errors.push(`dokaz: housesCorroborated=${proof.stats?.housesCorroborated}, pričakovano 6`);
+          if (proof.stats?.puaUniverse !== 65)
+            p43Errors.push(`dokaz: puaUniverse=${proof.stats?.puaUniverse}, pričakovano 65 (samo P41 veriga)`);
+          const xv = proof.meta?.crossValidation;
+          if (xv?.exact !== 65 || xv?.housesChecked !== 65)
+            p43Errors.push(`dokaz: križna potrditev korpusa=${xv?.exact}/${xv?.housesChecked}, pričakovano 65/65`);
+        } catch {
+          p43Errors.push("dokaz: chain-full-pt-ps.json ni veljaven JSON");
+        }
+      } else if (opts.fileExists?.("research/issue13/chain-pua-ps.json")) {
+        // repozitorij ima research/ (P41 dokaz obstaja), a P43 dokaz manjka
+        p43Errors.push("manjka research/issue13/chain-full-pt-ps.json (dokaz P43)");
+      }
+    }
+  }
+  push(
+    "qa-p43-chain-full",
+    "P43: N083PT — PRVA CELOTNA VERIGA PT→PUA→PS (kompozicija W-mostu P5-c + verige P41; 105 vrstic nič-zgube): 2 DOKAZANI + 5 VERJETNIH + 4 MOGOČE hiše segajo do parcel PS, 6 s priimkovno korroboracijo čez W; križna potrditev korpusa s P41 65/65 Točno; ATLAS_OWNERS houseRefs (mešano številčenje prve gradnje) izrecno izven verige; dokončna potrditev = #12",
+    "P43: N083PT — FIRST FULL CHAIN PT→PUA→PS (composition of the P5-c W-bridge + the P41 chain; 105 zero-loss rows): 2 PROVEN + 5 LIKELY + 4 POSSIBLE houses reach the PS parcels, 6 with surname corroboration across W; corpus cross-check against P41 65/65 EXACT; ATLAS_OWNERS houseRefs (first-build mixed numbering) explicitly excluded; final confirmation = #12",
+    p43Errors.length === 0,
+    p43Errors.length === 0
+      ? "105 vrstic · 2/5/4 hiše · 6 korroboriranih · korpus 65/65 · 65-ji univerzum"
+      : p43Errors.join("; "),
+  );
+
   const passed = tests.filter((t) => t.pass).length;
   return {
     ok: tests.every((t) => t.pass),
