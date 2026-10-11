@@ -725,3 +725,58 @@ kontrolno vsoto 2607. Vrsta po hišah (za #13) postane mogoča po spravi.
 noto kampanje; `research.ts` PS_RECAP_1826 priporočilo posodobljeno (zastarelo
 »NE prepisovati slepo« umik); QA 36 → **37** (`qa-p36-ps-machineread`: 8
 trditev o dokumentiranosti kampanje).
+
+## 18. P39 — PS: STRUKTURNA REKONSTRUKCIJA, VSEBINSKI DOKAZ PER-LIST ŠTEVILČENJA, issue #10 (2026-10-11)
+
+Nadgradnja §17 (P36) po P38 (3. prehod, 233 VLM branj, odkritje listov
+Blatt I–X). P39 je ČISTA ANALITIČNA faza nad obstoječimi dokazi (2974
+izbranih vrstic iz PS-full-v2.json + 233 neodvisnih branj v ps-raw/) — brez
+novih branj; dokaz `research/issue17/PS-reconstruction.json`.
+
+### Vsebinski dokaz per-list številčenja (odločilen)
+
+Vseh **29/29** parov strani z enakim obsegom številk (prekrivanje ≥ 15) ima za
+iste številke **RAZLIČNE lastnike** — 0 ujemanj (npr. št. 421: str. 24
+Blatt I = »Krautisch Gregor«, str. 83 Blatt II = »Hölzl Johann«; št. 161:
+str. 11 III = »Poidir Matjaš«, str. 61 IX = »Pestdiz Pattrl Lorenz«, str. 86
+= »LahNitschek Waisen«). Ista številka na različnih straneh je DOKAZANO druga
+parcela — P36 hipoteza »napačno prebrane številke« je OVRŽENA; P38 odkritje
+o listih je s Content dokazom potrjeno neodvisno od šumnega stolpca blatt.
+
+### Strukturna rekonstrukcija (segmentacija)
+
+- **Metoda:** segment = maksimalno zaporedje fizičnih strani z zveznim
+  številčenjem; prelom ob padcu/skoku številčenja ALI ob lastniškem konfliktu
+  (iste številke, različni lastniki = drug list); spojitve dotikajočih se
+  segmentov brez konflikta z usklajenimi blatt glasovi.
+- **Rezultat: 33 segmentov** (npr. seg 1 = str. 5–11, 41–183, Blatt III;
+  seg 3 = str. 12–38 + 86, 160–723, Blatt I; seg 2 = str. 138, 1–40, Blatt X;
+  Waldung 2601–2700 v seg 28/32). Zvezek je pomešan po listih — seznami
+  različnih listov so v vezavi prepleteni.
+- **Unikatnih (segment, številka) parov: 2724** (od 2974 vrstic: 50
+  večkulturnih dodatnih vrstic + 200 vrstic z neberljivo številko ≈ 6,7 %
+  šuma Kurrent).
+
+### Uskladitev s kontrolno vsoto 102 + 2505 = 2607
+
+| Metoda | Unikatni pari | Vloga |
+|---|---|---|
+| veriženje po dotiku (p39e) | 2221 | SPODNJA meja (preveč združi) |
+| fizična segmentacija (p39g) | 2725 | ZGORNJA meja (razcep isti list) |
+| refinirana (p39h, spojitve) | **2724** | najboljša ocena |
+
+Cilj **2505 parcel je znotraj meje [2221, 2725] — KONSISTENTNO**. Ostanek
++219 glede na 2505 pripisujem: 7 nerešenih strani (69, 85, 86, 88, 93, 128,
+138 — tri medsebojno različna branja, možni fantomski obsegi), 200 vrstic z
+neberljivo številko in morebitnim prekrivanjem segmentov istega lista brez
+lastniškega pričevanja (Waldung brez lastnikov). **Eksaktna potrditev
+štetja 2607 zahteva človeški paleografski pregled — izrecno preloženo v
+issue #12.**
+
+### Spremljajoče spremembe
+
+`sources.ts` N083PS nota + P39; `research.ts` KURRENT_SERIES PS nota +
+PS_RECAP_1826 priporočilo (P39); nov dokaz
+`research/issue17/PS-reconstruction.json`; QA 39 → **40**
+(`qa-p39-ps-structure`: 12 trditev o dokumentiranosti rekonstrukcije,
+mejah in dokazu). Strogo lokalno/CI: 40/40.

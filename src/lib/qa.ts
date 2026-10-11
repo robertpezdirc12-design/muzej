@@ -1471,6 +1471,48 @@ export function runQA(opts: QAOptions = {}): QAReport {
       : p38Errors.join("; "),
   );
 
+  // P39 (issue #10): PS — strukturna rekonstrukcija: segmentacija z lastniškim
+  // testom, vsebinski dokaz per-list številčenja, uskladitev s 2607 znotraj meja.
+  const p39Errors: string[] = [];
+  {
+    const ps = ATLAS_SOURCES.find((s) => s.code === "N083PS");
+    if (!ps) p39Errors.push("vir N083PS manjka");
+    else {
+      if (!(ps.noteSi ?? "").includes("P39")) p39Errors.push("N083PS: nota SL ne dokumentira P39 (strukturna rekonstrukcija)");
+      if (!(ps.noteSi ?? "").includes("PS-reconstruction.json")) p39Errors.push("N083PS: nota SL brez kazalca na dokaz PS-reconstruction.json");
+      if (!(ps.noteSi ?? "").includes("29/29")) p39Errors.push("N083PS: nota SL brez vsebinskega dokaza (29/29 parov z različnimi lastniki)");
+      if (!(ps.noteSi ?? "").includes("2724")) p39Errors.push("N083PS: nota SL brez števca 2724 unikatnih (segment, številka) parov");
+      if (!(ps.noteSi ?? "").includes("[2221, 2725]")) p39Errors.push("N083PS: nota SL brez meje [2221, 2725]");
+      if (!(ps.noteSi ?? "").includes("KONSISTENTNO")) p39Errors.push("N083PS: nota SL brez sklepa o konsistentnosti s kontrolno vsoto");
+      if (!(ps.noteEn ?? "").includes("P39")) p39Errors.push("N083PS: nota EN ne dokumentira P39");
+      if (!(ps.noteEn ?? "").includes("REFUTED")) p39Errors.push("N083PS: nota EN brez REFUTED (ovrnitev P36 hipoteze)");
+      if (ps.structuredEntries !== 2974) p39Errors.push("N083PS: structuredEntries spremenjen (P39 je analiza, ne nov prepis)");
+    }
+    const psSeries = KURRENT_SERIES.find((s) => s.code === "PS");
+    if (!psSeries) p39Errors.push("KURRENT_SERIES: PS manjka");
+    else if (!(psSeries.noteSi ?? "").includes("P39")) p39Errors.push("KURRENT_SERIES PS: nota SL ne odraža P39");
+    if (!(PS_RECAP_1826.mostUsefulSi ?? "").includes("P39")) p39Errors.push("PS_RECAP: priporočilo SL ne odraža P39");
+    if (!(PS_RECAP_1826.mostUsefulEn ?? "").includes("P39")) p39Errors.push("PS_RECAP: priporočilo EN ne odraža P39");
+    if (PS_RECAP_1826.sampleRowCount !== 2974) p39Errors.push("PS_RECAP: sampleRowCount ni 2974");
+    // strežniška kontrola dokaza (enaka logika preskoka kot p38: v produkciji
+    // research/ namenoma ni — .vercelignore)
+    if (opts.fileExists) {
+      if (opts.fileExists("research/issue17/ps-raw/ps-005.json")) {
+        if (!opts.fileExists("research/issue17/PS-reconstruction.json"))
+          p39Errors.push("manjka PS-reconstruction.json (dokaz P39)");
+      }
+    }
+  }
+  push(
+    "qa-p39-ps-structure",
+    "P39: N083PS — strukturna rekonstrukcija: 33 segmentov (fizična segmentacija + lastniški test); VSEBINSKI DOKAZ per-list številčenja (29/29 prekrivajočih parov z različnimi lastniki — P36 hipoteza o napačno prebranih številkah OVRŽENA); 2724 unikatnih (segment, številka) parov (50 večkulturnih dodatnih vrstic, 200 neberljivih številk); kontrolna vsota 102+2505=2607 znotraj meje [2221, 2725] — KONSISTENTNO; eksaktna potrditev za issue #12",
+    "P39: N083PS — structural reconstruction: 33 segments (physical segmentation + owner test); CONTENT EVIDENCE of per-sheet numbering (29/29 overlapping pairs with different owners — the P36 misread hypothesis REFUTED); 2,724 unique (segment, number) pairs (50 multi-culture extra rows, 200 unreadable numbers); the checksum 102+2,505=2,607 lies within the bounds [2,221, 2,725] — CONSISTENT; exact confirmation deferred to issue #12",
+    p39Errors.length === 0,
+    p39Errors.length === 0
+      ? "33 segmentov · 29/29 vsebinski dokaz · 2724 parov · 2607 znotraj [2221, 2725]"
+      : p39Errors.join("; "),
+  );
+
   const passed = tests.filter((t) => t.pass).length;
   return {
     ok: tests.every((t) => t.pass),

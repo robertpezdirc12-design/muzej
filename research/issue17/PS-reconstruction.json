@@ -1,0 +1,855 @@
+{
+ "series": "PS",
+ "campaign": "P39 (2026-10-11): strukturna rekonstrukcija — segmentacija po fizičnem vrstnem redu z lastniškim testom",
+ "source": "PS-full-v2.json (P38 adjudikacija, 2974 vrstic, 233 VLM branj) + ps-raw/ (neodvisna branja)",
+ "method": "Segment = maksimalno zaporedje fizičnih strani z zveznim številčenjem; prelom ob padcu/skoku številčenja ALI ob lastniškem konfliktu (iste številke z različnimi lastniki = drug list). Spojitve: dotikajoči se segmenti brez konflikta z usklajenimi blatt glasovi.",
+ "contentEvidence": {
+  "claim": "Ista številka na različnih straneh = DRUGA parcela (lastniški dokaz, ne le blatt glasovi)",
+  "pairsTested": 29,
+  "pairsDifferentOwners": 29,
+  "pairsSameOwners": 0,
+  "ownerMatchesTotal": 0,
+  "note": "Vsi prekrivajoči pari (obseg ≥15) imajo med seboj RAZLIČNE lastnike — 0 ujemanj; P36 hipoteza 'napačno prebrane številke' je zaročena v korist per-list številčenja (listi I-X vsak z lastnim nizom).",
+  "pairs": [
+   {
+    "pages": [
+     7,
+     139
+    ],
+    "overlap": 20.0,
+    "owners": "diff"
+   },
+   {
+    "pages": [
+     11,
+     61
+    ],
+    "overlap": 20.0,
+    "owners": "diff"
+   },
+   {
+    "pages": [
+     11,
+     86
+    ],
+    "overlap": 20.0,
+    "owners": "diff"
+   },
+   {
+    "pages": [
+     12,
+     62
+    ],
+    "overlap": 20.0,
+    "owners": "diff"
+   },
+   {
+    "pages": [
+     24,
+     83
+    ],
+    "overlap": 20.0,
+    "owners": "diff"
+   },
+   {
+    "pages": [
+     26,
+     84
+    ],
+    "overlap": 20.0,
+    "owners": "diff"
+   },
+   {
+    "pages": [
+     35,
+     85
+    ],
+    "overlap": 20.0,
+    "owners": "diff"
+   },
+   {
+    "pages": [
+     36,
+     87
+    ],
+    "overlap": 20.0,
+    "owners": "diff"
+   },
+   {
+    "pages": [
+     37,
+     39
+    ],
+    "overlap": 20.0,
+    "owners": "diff"
+   },
+   {
+    "pages": [
+     40,
+     88
+    ],
+    "overlap": 20.0,
+    "owners": "diff"
+   },
+   {
+    "pages": [
+     49,
+     94
+    ],
+    "overlap": 20.0,
+    "owners": "diff"
+   },
+   {
+    "pages": [
+     49,
+     99
+    ],
+    "overlap": 20.0,
+    "owners": "diff"
+   },
+   {
+    "pages": [
+     51,
+     91
+    ],
+    "overlap": 20.0,
+    "owners": "diff"
+   },
+   {
+    "pages": [
+     58,
+     73
+    ],
+    "overlap": 19.0,
+    "owners": "diff"
+   },
+   {
+    "pages": [
+     59,
+     74
+    ],
+    "overlap": 20.0,
+    "owners": "diff"
+   },
+   {
+    "pages": [
+     61,
+     86
+    ],
+    "overlap": 20.0,
+    "owners": "diff"
+   },
+   {
+    "pages": [
+     64,
+     79
+    ],
+    "overlap": 20.0,
+    "owners": "diff"
+   },
+   {
+    "pages": [
+     65,
+     70
+    ],
+    "overlap": 20.0,
+    "owners": "diff"
+   },
+   {
+    "pages": [
+     66,
+     71
+    ],
+    "overlap": 21.0,
+    "owners": "diff"
+   },
+   {
+    "pages": [
+     67,
+     72
+    ],
+    "overlap": 20.0,
+    "owners": "diff"
+   },
+   {
+    "pages": [
+     78,
+     93
+    ],
+    "overlap": 20.0,
+    "owners": "diff"
+   },
+   {
+    "pages": [
+     90,
+     95
+    ],
+    "overlap": 20.0,
+    "owners": "diff"
+   },
+   {
+    "pages": [
+     90,
+     100
+    ],
+    "overlap": 20.0,
+    "owners": "diff"
+   },
+   {
+    "pages": [
+     94,
+     99
+    ],
+    "overlap": 20.0,
+    "owners": "diff"
+   },
+   {
+    "pages": [
+     95,
+     100
+    ],
+    "overlap": 20.0,
+    "owners": "diff"
+   },
+   {
+    "pages": [
+     96,
+     101
+    ],
+    "overlap": 20.0,
+    "owners": "diff"
+   },
+   {
+    "pages": [
+     103,
+     118
+    ],
+    "overlap": 20.0,
+    "owners": "diff"
+   },
+   {
+    "pages": [
+     104,
+     119
+    ],
+    "overlap": 20.0,
+    "owners": "diff"
+   },
+   {
+    "pages": [
+     125,
+     126
+    ],
+    "overlap": 20.0,
+    "owners": "diff"
+   }
+  ]
+ },
+ "segments": [
+  {
+   "segment": 1,
+   "pages": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+   ],
+   "range": [
+    41,
+    183
+   ],
+   "uniqueParcels": 144,
+   "rows": 155,
+   "internalGaps": 0,
+   "blattVotesDominant": "III:45/II:20"
+  },
+  {
+   "segment": 2,
+   "pages": [
+    138
+   ],
+   "range": [
+    1,
+    40
+   ],
+   "uniqueParcels": 40,
+   "rows": 42,
+   "internalGaps": 0,
+   "blattVotesDominant": "X:40"
+  },
+  {
+   "segment": 3,
+   "pages": [
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    86
+   ],
+   "range": [
+    160,
+    723
+   ],
+   "uniqueParcels": 561,
+   "rows": 606,
+   "internalGaps": 3,
+   "blattVotesDominant": "I:157/III:62"
+  },
+  {
+   "segment": 4,
+   "pages": [
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56
+   ],
+   "range": [
+    701,
+    1086
+   ],
+   "uniqueParcels": 362,
+   "rows": 388,
+   "internalGaps": 25,
+   "blattVotesDominant": "II:70/III:25"
+  },
+  {
+   "segment": 5,
+   "pages": [
+    57,
+    58,
+    59,
+    60,
+    65,
+    66,
+    67,
+    68,
+    76,
+    77
+   ],
+   "range": [
+    1081,
+    1300
+   ],
+   "uniqueParcels": 202,
+   "rows": 223,
+   "internalGaps": 18,
+   "blattVotesDominant": "II:165/III:22"
+  },
+  {
+   "segment": 6,
+   "pages": [
+    61,
+    62
+   ],
+   "range": [
+    161,
+    200
+   ],
+   "uniqueParcels": 40,
+   "rows": 44,
+   "internalGaps": 0,
+   "blattVotesDominant": "IX:20/II:2"
+  },
+  {
+   "segment": 7,
+   "pages": [
+    63,
+    64
+   ],
+   "range": [
+    1801,
+    1840
+   ],
+   "uniqueParcels": 40,
+   "rows": 43,
+   "internalGaps": 0,
+   "blattVotesDominant": "II:21"
+  },
+  {
+   "segment": 8,
+   "pages": [
+    69
+   ],
+   "range": [
+    1327,
+    1346
+   ],
+   "uniqueParcels": 20,
+   "rows": 22,
+   "internalGaps": 0,
+   "blattVotesDominant": "II:20"
+  },
+  {
+   "segment": 9,
+   "pages": [
+    70,
+    71,
+    72
+   ],
+   "range": [
+    1241,
+    1300
+   ],
+   "uniqueParcels": 60,
+   "rows": 66,
+   "internalGaps": 0,
+   "blattVotesDominant": "II:21/III:20"
+  },
+  {
+   "segment": 10,
+   "pages": [
+    73,
+    74
+   ],
+   "range": [
+    1101,
+    1140
+   ],
+   "uniqueParcels": 40,
+   "rows": 43,
+   "internalGaps": 0,
+   "blattVotesDominant": "IIB:20/II:1"
+  },
+  {
+   "segment": 11,
+   "pages": [
+    75
+   ],
+   "range": [
+    1441,
+    1460
+   ],
+   "uniqueParcels": 20,
+   "rows": 22,
+   "internalGaps": 0,
+   "blattVotesDominant": "III:20"
+  },
+  {
+   "segment": 12,
+   "pages": [
+    78
+   ],
+   "range": [
+    1601,
+    1620
+   ],
+   "uniqueParcels": 20,
+   "rows": 22,
+   "internalGaps": 0,
+   "blattVotesDominant": "II:20"
+  },
+  {
+   "segment": 13,
+   "pages": [
+    79
+   ],
+   "range": [
+    1821,
+    1840
+   ],
+   "uniqueParcels": 20,
+   "rows": 24,
+   "internalGaps": 0,
+   "blattVotesDominant": "II:22"
+  },
+  {
+   "segment": 14,
+   "pages": [
+    80,
+    81,
+    82
+   ],
+   "range": [
+    1644,
+    1700
+   ],
+   "uniqueParcels": 57,
+   "rows": 66,
+   "internalGaps": 0,
+   "blattVotesDominant": "IV:40/II:20"
+  },
+  {
+   "segment": 15,
+   "pages": [
+    83,
+    84
+   ],
+   "range": [
+    421,
+    482
+   ],
+   "uniqueParcels": 43,
+   "rows": 47,
+   "internalGaps": 19,
+   "blattVotesDominant": "II:43"
+  },
+  {
+   "segment": 16,
+   "pages": [
+    85,
+    87,
+    88
+   ],
+   "range": [
+    641,
+    740
+   ],
+   "uniqueParcels": 60,
+   "rows": 66,
+   "internalGaps": 40,
+   "blattVotesDominant": "III:40/II:20"
+  },
+  {
+   "segment": 17,
+   "pages": [
+    89,
+    90,
+    97,
+    98
+   ],
+   "range": [
+    1881,
+    1960
+   ],
+   "uniqueParcels": 78,
+   "rows": 87,
+   "internalGaps": 2,
+   "blattVotesDominant": "II:41/III:2"
+  },
+  {
+   "segment": 18,
+   "pages": [
+    91,
+    92
+   ],
+   "range": [
+    961,
+    1008
+   ],
+   "uniqueParcels": 39,
+   "rows": 43,
+   "internalGaps": 9,
+   "blattVotesDominant": "II:2/V:1"
+  },
+  {
+   "segment": 19,
+   "pages": [
+    93
+   ],
+   "range": [
+    1601,
+    1620
+   ],
+   "uniqueParcels": 20,
+   "rows": 22,
+   "internalGaps": 0,
+   "blattVotesDominant": "IX:18"
+  },
+  {
+   "segment": 20,
+   "pages": [
+    94
+   ],
+   "range": [
+    921,
+    940
+   ],
+   "uniqueParcels": 20,
+   "rows": 22,
+   "internalGaps": 0,
+   "blattVotesDominant": "III:20"
+  },
+  {
+   "segment": 21,
+   "pages": [
+    95,
+    96
+   ],
+   "range": [
+    1941,
+    1980
+   ],
+   "uniqueParcels": 40,
+   "rows": 44,
+   "internalGaps": 0,
+   "blattVotesDominant": "III:40"
+  },
+  {
+   "segment": 22,
+   "pages": [
+    99
+   ],
+   "range": [
+    921,
+    940
+   ],
+   "uniqueParcels": 20,
+   "rows": 22,
+   "internalGaps": 0,
+   "blattVotesDominant": "III:20"
+  },
+  {
+   "segment": 23,
+   "pages": [
+    100,
+    101,
+    102,
+    103,
+    104,
+    105
+   ],
+   "range": [
+    1940,
+    2064
+   ],
+   "uniqueParcels": 123,
+   "rows": 138,
+   "internalGaps": 3,
+   "blattVotesDominant": "IV:86/III:23"
+  },
+  {
+   "segment": 24,
+   "pages": [
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113
+   ],
+   "range": [
+    2060,
+    2220
+   ],
+   "uniqueParcels": 161,
+   "rows": 170,
+   "internalGaps": 0,
+   "blattVotesDominant": "IV:24/VII:21"
+  },
+  {
+   "segment": 25,
+   "pages": [
+    114,
+    115,
+    116,
+    117
+   ],
+   "range": [
+    2217,
+    2310
+   ],
+   "uniqueParcels": 81,
+   "rows": 90,
+   "internalGaps": 13,
+   "blattVotesDominant": "IV:41/VII:22"
+  },
+  {
+   "segment": 26,
+   "pages": [
+    118,
+    119
+   ],
+   "range": [
+    2001,
+    2040
+   ],
+   "uniqueParcels": 40,
+   "rows": 44,
+   "internalGaps": 0,
+   "blattVotesDominant": "IV:21/II:2"
+  },
+  {
+   "segment": 27,
+   "pages": [
+    120
+   ],
+   "range": [
+    2341,
+    2360
+   ],
+   "uniqueParcels": 20,
+   "rows": 22,
+   "internalGaps": 0,
+   "blattVotesDominant": "II:20"
+  },
+  {
+   "segment": 28,
+   "pages": [
+    121,
+    130,
+    131,
+    132,
+    133,
+    134
+   ],
+   "range": [
+    2541,
+    2660
+   ],
+   "uniqueParcels": 120,
+   "rows": 128,
+   "internalGaps": 0,
+   "blattVotesDominant": "II:21/V:3"
+  },
+  {
+   "segment": 29,
+   "pages": [
+    122,
+    123,
+    124,
+    125
+   ],
+   "range": [
+    2383,
+    2480
+   ],
+   "uniqueParcels": 78,
+   "rows": 87,
+   "internalGaps": 20,
+   "blattVotesDominant": "II:20/III:20"
+  },
+  {
+   "segment": 30,
+   "pages": [
+    126,
+    127,
+    128
+   ],
+   "range": [
+    2461,
+    2526
+   ],
+   "uniqueParcels": 60,
+   "rows": 67,
+   "internalGaps": 6,
+   "blattVotesDominant": "V:61"
+  },
+  {
+   "segment": 31,
+   "pages": [
+    129
+   ],
+   "range": [
+    2826,
+    2840
+   ],
+   "uniqueParcels": 15,
+   "rows": 22,
+   "internalGaps": 0,
+   "blattVotesDominant": "V:20"
+  },
+  {
+   "segment": 32,
+   "pages": [
+    135,
+    136,
+    137
+   ],
+   "range": [
+    2611,
+    2700
+   ],
+   "uniqueParcels": 60,
+   "rows": 65,
+   "internalGaps": 30,
+   "blattVotesDominant": "II:23/IV:1"
+  },
+  {
+   "segment": 33,
+   "pages": [
+    139
+   ],
+   "range": [
+    81,
+    100
+   ],
+   "uniqueParcels": 20,
+   "rows": 22,
+   "internalGaps": 0,
+   "blattVotesDominant": "IX:20"
+  }
+ ],
+ "totals": {
+  "rowsTotal": 2974,
+  "rowsWithReadableNumber": 2774,
+  "rowsUnreadableNumber": 200,
+  "segments": 33,
+  "uniquePairs_refined": 2724,
+  "uniquePairs_lowerBound_chainStitch": 2221,
+  "uniquePairs_upperBound_rawSegments": 2725,
+  "checksumTargetParcels": 2505,
+  "checksumTargetBauplatz": 102,
+  "checksumTargetTotal": 2607,
+  "refinedVsTarget": 219,
+  "multiCultureExtraRows": 50
+ },
+ "reconciliation": {
+  "verdict": "KONSISTENTNO ZNOTRAJ MEJ",
+  "bounds": "[2221, 2725] — cilj 2505 znotraj; refinirana ocena po spojitvah istih listov",
+  "residual": "+219 glede na 2505 — odsekave: nerešene strani (69, 85, 86, 88, 93, 128, 138), šumni stolpec blatt, morebitni napačno prebrani obsegi; eksaktna potrditev zahteva človeški pregled (issue #12)",
+  "blattLabelsSeen": [
+   "I",
+   "II",
+   "IIb",
+   "III",
+   "III.N.",
+   "IV",
+   "V",
+   "VII",
+   "IX",
+   "X"
+  ]
+ },
+ "unresolvedPages": [
+  69,
+  85,
+  86,
+  88,
+  93,
+  128,
+  138
+ ],
+ "statuses": "REVIEW (strojna rekonstrukcija; ni dokazni vir)"
+}
