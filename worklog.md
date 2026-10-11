@@ -2622,3 +2622,33 @@ zgodbo (Pezdirc).
 - STANJE ODPRTEH ISSUEJEV: #6 (GitLab PAT — lastnik), #12 (paleografija — človek), #13 (geometrija
   — vektorizacija + #12), #14 (A03–A05 sidra), #15 (arhiv SI AS 749), #16 (posnetki — lastnik),
   #17 (teren — lastnik), #18 (matrike — delno arhiv).
+
+---
+
+Task ID: P45
+Agent: Z.ai Code (glavni agent)
+Task: "odlicno nadaljuj" — issue #14 (A03–A05 brez točkovnega sidra): validacija porazdelitve stavb + sanacija lažnega opozorila token-health + stanje #6
+
+Work Log:
+- ZAGON: repo na disku usklajen z origin (fetch OK, PAT ghp_QSn0… preverjen GET /user 200); ugotovitev — povzetek seje je bil ZASTAREL: delo je segalo do P44 (2026-10-12), issue #11 že zaprt; neodsledena datoteka scripts/p44-vlm-probe.mjs (sonda VLM iz P44 — dodana v repozitorij).
+- PREGLED ODPRTEH ISSUEJEV: #6 (žetoni), #12 (paleografija — človek), #13 (vektorizacija), #14 (A03–A05 sidra), #15 (SI AS 749/1138 — arhiv), #16–#18 (posnetki/teren/matrike — lastnik/delno). Za samostojno delo izbran #14 (P2, eksplicitno namenjen pomočniku).
+- #6 DIAGNOZA: token-health pade od 2026-10-11 — GITLAB_TOKEN mrtev (401, preklican na GitLabu kljub roku 2027-01-08; sinhronizacija zastala, ogledalo zaostaja ~9 commitov, samodejno se nadoknadi ob novem PAT — lastniška naloga); VERCEL_TOKEN 404 na /v2/user + 200 na /v9/projects = žeton z omejenim obsegom DELUJE za deploy (glavna pot od P35 = GitHub App, žeton potreben le za ročni rezervni deploy).
+- SANACIJA token-health.yml: novao veja elif [ "$pcode" = "200" ] → notice »žeton deluje, omejen obseg, deployu zadostuje« (prej: napačno »prehodna napaka« dnevno); komentar v YAML pojasnjuje zakaj (P45, 2026-10-12).
+- #45 METODA (scripts/p45-sheet-anchors.py + scripts/p45-verify.py, brez AI — čista deterministika):
+  1. KALIBRACIJA na A02 (156 stavb buildings.json = GEOTRUTH): resnična podobnost z y-zrcaljenjem — merilo 0,805 m/px, rotacija +0,02°, mediana ostanka 2,4 m; celično izračunano merilo (0,80) se ujema < 1 % → zanesljiv prior za A03–A05; izbira detektorja po F1 na resnici: RDEČE STEBLO (R−G>28 ∧ R−B>28) F1 0,56 / recall@50 0,94 — temne lise P10 le F1 0,35.
+  2. POPRAVKI SVOJE KODE med potjo (iskren popis): dvojno zrcaljenje y (geo_to_local Y obratno) → enoten okvir X-vzhod/Y-sever; lstsq poravnava yv (zaporedno namesto prepleteno) → napačna skala 0,18; centriranje sim_geo na vhodnem polju (ena točka → težišče!) → center_px参数; translacijska mreža okoli CELIČNO POVZETE težiščne lege (±500 m), ne absolutno okoli 0 (A03 veriga pri +722 m sprva IZVEN mreže!).
+  3. FIT per list: celična preslikava (okvir ≈ celica) vs prosti fit (4 parametri) vs OMEJENI fit (merilo = celično ±5 %, rotacija = prior ±3°) — vse z nič-testi (zasuki 90/180/270° + 30 naključnih zamikov ±350 m) in nasičeno-popoljenim točkovalnikom clip(1−(d−15)/85).
+- #45 REZULTATI (dokaz research/georef-n83/p45-sheet-fits.json):
+  - A03 (celica dg): veriga 30 simbolov (x 86–93 %, y 13–86 %) → sodobna veriga 51 stavb, CELIČNA mediana 89 m — POTRJENO; prosti fit le z nafizikalnimi rot +12°/s 0,60 (zavrnjen), omejeni slabši (153 m) → celica ostaja.
+  - A04 (celica cg): 170 simbolov po celem listu → mediana 69,7 m — POPRAVEK P10 kvantitativno POTRJEN (P9-lega: 636 m); omejeni fit 55 m zavrnjen — premaknil bi WEIDENDORF iz k.o. Bedenj (križna preverba > 15 m izboljšava); merilo fita 0,722 ≈ celično 0,717.
+  - A05 (celica ch): sklop 30 simbolov → mediana 27 m, 60 % znotraj 30 m — NAJMOČNEJŠA potrditev; omejeni fit neodvisno potrdi lego (Δ 64 m, mediana 23 m) — dva vira se strinjata; sklop (45,5404/15,2908) = Fučkovci/Jankoviči; ADLESC → naselje Fučkovci ✓; ODPRTA DVOUMNOST: prosta translacija → VZ rob (score 0,915, brez naselja, zunaj celice) — zavrnjena na okvirni kodi (3× brana), dokumentirana.
+  - Vsi prosti fitovi padejo v P9-past (pretreniranje 4 parametrov na 30 točkah) — tokrat PREPOZNANA in izognjena.
+- INTEGRACIJA: geotruth.ts NOV razdelek SHEET_TRUTH (3 zapisi: celica, kvantificirana validacija, status REVIEW, opombe SL/EN — tretje merilo dokončanja #14); model.ts SHEET_GEOREFS accuracy A03 ±150–250 m / A04 ±100–200 m / A05 ±100 m pri sklopu (poprej ±200–400 m) s P45 dokazi; sources.ts placement + noteSi/En vseh treh listov (A04 tudi methodSi/En — odstranjeno zastarelo »Brez točkovnega sidra — ni afine«); qa.ts NOV TEST qa-p45-sheet-anchors (42. → 43.; preverja SHEET_TRUTH vrednosti, P45 omembe v model+sources, odsotnost TO_COLLECT koncovk, dokaz na disku z enako logiko preskoka produkcije kot p38/p39/p43/p44); research/georef-n83/README.md nov P45 razdelek (metoda, rezultati, integracija).
+- TESTI: ESLint 0; tsc 0; build 16 strani + 12 API poti brez napak; lokalni produkcijski strežnik: /api/qa 43/43 zelenih (novi test PASS), /api/provenance 200.
+
+Stage Summary:
+- ISSUE #14 IZVEDEN v celoti (merila: vidna opomba o negotovosti v podatkih in UI — podvojena s kvantificiranimi ocenami; geotruth.ts posodobljen — SHEET_TRUTH; točkovnih sidrov cerkev/most ni na ruralnih listih — kvantificirana validacija porazdelitve je poštena nadomestna pot, statusi ostanejo REVIEW z dokumentirano negotovostjo)
+- Kalibracija na A02 (0,805 m/px, +0,02°, 2,4 m) dokazuje zanesljivost celičnega pristopa; rdeči detektor (F1 0,56) nadomesti šumne temne lise P10
+- Zavrnjeni fitovi z dokazi (nafizikalni parametri / kršitve oznak) — P9-past izrecno dokumentirana v README
+- token-health.yml: VERCEL 404/200 = uspeh (ne več dnevna lažna »prehodna napaka«); #6 čaka le še GitLab PAT od lastnika (Vercel žeton deluje, brez roka)
+- Produkcija: push v naslednjem koraku + dimnični test + zaključek #14

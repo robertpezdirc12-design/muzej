@@ -296,6 +296,112 @@ export const GEO_ANCHORS: GeoAnchorTruth[] = [
  *  leg ostaja odprta (zabeležena v note vsakega sidra). */
 export const GEO_ANCHORS_TO_COLLECT: GeoAnchorTruth[] = [];
 
+/* ── 2b. Resnica na ravni LISTOV katastra (issue #14, P45) ────────────────
+ *
+ * Listi A03/A04/A05 nimajo točkovnih sidrov vrste cerkev/most/sotočje
+ * (ruralni listi brez takih objektov). P45 (2026-10-12) je namesto tega
+ * izvedla VALIDACIJO PORAZDELITVE STAVB: rdeči stavbni simboli 1825
+ * (detektor kalibriran na A02: F1 0,56, recall@50 0,94) proti sodobnim
+ * stavbnim parcelam GURS (k.o. 1544 + 1552, < 800 m², 1.500 točk) pod
+ * celično preslikavo eZKN. Kalibracija metode na A02 (156 stavb, GEOTRUTH):
+ * merilo 0,805 m/px (celično 0,80 — soglasje < 1 %), rotacija +0,02°,
+ * ostanek 2,4 m — celično izračunano merilo je zanesljiv prior.
+ *
+ * Rezultat: VSE TRI celične umestitve so kvantitativno potrjene (mediane
+ * 89/70/27 m). Prosti fitovi so nestabilni (nafizikalna merila/rotacije)
+ * ali premaknejo oznake s k.o.-validiranih mest → objavljena ostaja
+ * CELIČNA preslikava s pošteno oceno napake. Dokaz: research/georef-n83/
+ * p45-sheet-fits.json + scripts/p45-sheet-anchors.py + scripts/p45-verify.py. */
+
+export interface SheetGeorefTruth {
+  sheet: string;
+  /** eZKN sekcijska celica (okvirna oznaka lista = koda celice, GURS uradna geometrija) */
+  cellCode: string;
+  /** [sever, zahod], [jug, vzhod] celice */
+  cellBounds: [[number, number], [number, number]];
+  scaleMPerPixel: number;
+  /** validacija porazdelitve stavb (P45) */
+  validation: {
+    detectedSymbols: number;
+    modernBuildings: number;
+    medianDistanceM: number;
+    inlier30: number;
+    constrainedFitMedianM: number;
+    constrainedFitDeltaM: number;
+    discrimination: number;
+    lastVerified: string;
+  };
+  status: CoordinateStatus;
+  noteSi: string;
+  noteEn: string;
+}
+
+export const SHEET_TRUTH: SheetGeorefTruth[] = [
+  {
+    sheet: "A03",
+    cellCode: "VKIX24dg",
+    cellBounds: [[45.5575, 15.2485], [45.5437, 15.273]],
+    scaleMPerPixel: 0.72,
+    validation: {
+      detectedSymbols: 30,
+      modernBuildings: 51,
+      medianDistanceM: 89,
+      inlier30: 0.067,
+      constrainedFitMedianM: 153.3,
+      constrainedFitDeltaM: 278,
+      discrimination: 0.103,
+      lastVerified: "2026-10-12",
+    },
+    status: "REVIEW",
+    noteSi:
+      "P45: veriga ~30 stavbnih simbolov ob vzhodnem robu (x 86–93 %, y 13–86 %) pod celično preslikavo pade na sodobno verigo 51 stavb z mediano 89 m — nadaljevanje vasi proti jugu potrjeno. Prosti fit izboljša mediano le z nafizikalnimi parametri (rotacija +12°, merilo 0,60 m/px — zavrnjeno); omejeni fit (merilo = celično ±5 %, rotacija ±3°) je SLABŠI od celice (153 m) — celična preslikava ostaja najboljša objavljena. Oznaki TRIBUTSCH/WEIDENDORF pod celico padata v k.o. Tribuče/Bedenj (P10 ✓). Iskanje dodatnega sidra čaka na #12 (paleografija) / #13 (vektorizacija).",
+    noteEn:
+      "P45: a chain of ~30 building symbols along the eastern edge (x 86–93 %, y 13–86 %) under the cell mapping lands on the modern chain of 51 buildings at a median of 89 m — the village's southern continuation confirmed. The free fit improves the median only with non-physical parameters (rotation +12°, scale 0.60 m/px — rejected); the constrained fit (scale = cell ±5 %, rotation ±3°) is WORSE than the cell (153 m) — the cell mapping remains the best published. The TRIBUTSCH/WEIDENDORF labels under the cell fall in c.m. Tribuče/Bedenj (P10 ✓). The search for an additional anchor awaits #12 (palaeography) / #13 (vectorisation).",
+  },
+  {
+    sheet: "A04",
+    cellCode: "VKIX24cg",
+    cellBounds: [[45.5574, 15.2728], [45.5436, 15.2973]],
+    scaleMPerPixel: 0.72,
+    validation: {
+      detectedSymbols: 170,
+      modernBuildings: 440,
+      medianDistanceM: 69.7,
+      inlier30: 0.118,
+      constrainedFitMedianM: 55.1,
+      constrainedFitDeltaM: 310,
+      discrimination: 0.15,
+      lastVerified: "2026-10-12",
+    },
+    status: "REVIEW",
+    noteSi:
+      "P45: 170 zaznanih simbolov po celem listu pod celično preslikavo doseže mediano 69,7 m do sodobnih stavb — celična umestitev POPRAVEK P10 kvantitativno potrjena (P9-lega je imela 636 m). Omejeni fit izboljša mediano na 55 m, a premakne težišče za 310 m in odnese oznako WEIDENDORF iz k.o. Bedenj (v k.o. Adlešiči) → zavrnjen v prid celice (križna preverba oznak zmaga nad 15 m izboljšave). Merilo fita 0,722 ≈ celično 0,717 (soglasje 0,6 %). Kolpa NI na listu (struga ~1,2 km V) — potrjeno tudi s P45.",
+    noteEn:
+      "P45: 170 detected symbols across the whole sheet under the cell mapping reach a median of 69.7 m to modern buildings — the P10 cell placement (the P10 CORRECTION) quantitatively confirmed (the P9 position had 636 m). The constrained fit improves the median to 55 m but shifts the centroid by 310 m and carries the WEIDENDORF label out of c.m. Bedenj (into c.m. Adlešiči) → rejected in favour of the cell (label cross-validation wins over a 15 m improvement). The fit's scale 0.722 ≈ the cell's 0.717 (0.6 % agreement). The Kolpa is NOT on the sheet (channel ~1.2 km E) — confirmed by P45 as well.",
+  },
+  {
+    sheet: "A05",
+    cellCode: "VKIX24ch",
+    cellBounds: [[45.5437, 15.2726], [45.5299, 15.2971]],
+    scaleMPerPixel: 0.73,
+    validation: {
+      detectedSymbols: 30,
+      modernBuildings: 535,
+      medianDistanceM: 27,
+      inlier30: 0.6,
+      constrainedFitMedianM: 23.2,
+      constrainedFitDeltaM: 64,
+      discrimination: 0.288,
+      lastVerified: "2026-10-12",
+    },
+    status: "REVIEW",
+    noteSi:
+      "P45: sklop ~30 simbolov (x 52–86 %, y 14–34 %) pod celično preslikavo pade na sodobne stavbe z mediano 27 m (60 % znotraj 30 m!) — sklop pri (45,5404 N, 15,2908 E) = območje Fučkovci/Jankoviči. OMEJENI fit (merilo 0,692, rotacija −2,0°) neodvisno potrdi celično lego z odmikom le 64 m — dva neodvisna vira (eZKN celica + GURS stavbe) se strinjata. Oznaka ADLESC → naselje Fučkovci (k.o. Adlešiči ✓). ODPRTA DVOUMNOST: prosta translacija v coni najde višje ocene na VZ robu celice (score 0,915 pri 45,5328/15,2974 — brez naselja, zunaj celice) — gostota sodobnih stavb metrike ne loči popolnoma; zavrnjeno na dokazu okvirne kode (3× prebrana), dokumentirano za #12/#13.",
+    noteEn:
+      "P45: a cluster of ~30 symbols (x 52–86 %, y 14–34 %) under the cell mapping lands on modern buildings with a median of 27 m (60 % within 30 m!) — the cluster at (45.5404 N, 15.2908 E) = the Fučkovci/Jankoviči area. The CONSTRAINED fit (scale 0.692, rotation −2.0°) independently confirms the cell position with an offset of only 64 m — two independent sources (the eZKN cell + GURS buildings) agree. The ADLESC label → the settlement of Fučkovci (c.m. Adlešiči ✓). OPEN AMBIGUITY: a free translation within the zone finds higher scores at the cell's E-SE edge (score 0.915 at 45.5328/15.2974 — no settlement, outside the cell) — the density of modern buildings prevents full discrimination; rejected on the frame-code evidence (read 3×), documented for #12/#13.",
+  },
+];
+
 /* ── 3. Orientacija/skala 3D assetov (issue #14, točka 13) ────────────── */
 
 export type ScaleMode = "REAL_WORLD" | "FIT" | "INTERPRETATIVE";

@@ -59,6 +59,14 @@ jobs:
           if [ "$code" = "200" ] && [ "$pcode" = "200" ]; then
             echo "::notice::VERCEL_TOKEN deluje (HTTP 200, obseg ekipe dostopen)"
             echo "dead=false" >> "$GITHUB_OUTPUT"
+          elif [ "$pcode" = "200" ]; then
+            # P45 (2026-10-12): /v2/user lahko vrne 404 za žetone z omejenim
+            # obsegom (vcp_) — kar pa za deploy ni odločilno; edino, kar
+            # `vercel deploy --token=…` potrebuje, je obseg ekipe (/v9/projects),
+            # in ta DELUJE (200). Prej je ta kombinacija napačno padla v
+            # »prehodno napako« (dnevno opozorilo brez razloga).
+            echo "::notice::VERCEL_TOKEN deluje (obseg ekipe dostopen, HTTP 200 na /v9/projects; /v2/user = $code — žeton z omejenim obsegom, deployu zadostuje)"
+            echo "dead=false" >> "$GITHUB_OUTPUT"
           elif [ "$code" = "200" ] && { [ "$pcode" = "401" ] || [ "$pcode" = "403" ]; }; then
             echo "::error::VERCEL_TOKEN je veljaven, a NIMA dostopa do obsega ekipe (HTTP $pcode na /v9/projects) — samodejni deploy bi padel. Ustvari nov žeton z obsegom Full Account na vercel.com/account/tokens, glej issue #6."
             echo "dead=true" >> "$GITHUB_OUTPUT"

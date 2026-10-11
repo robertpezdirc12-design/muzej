@@ -38,6 +38,7 @@ import {
 import { ATLAS_HOUSES } from "@/data/atlas/houses";
 import { ATLAS_OWNERS, SHEET_GEOREFS, VECTOR_BUILDINGS } from "@/data/atlas/model";
 import { ATLAS_SOURCES } from "@/data/atlas/sources";
+import { SHEET_TRUTH } from "@/data/atlas/geotruth";
 import { TREE_STATS, SMOKE_CHIMNEYS, HOUSENO_FINDING, TREES } from "./village3d";
 import { SOURCE_TYPE_LABELS } from "./museum";
 import { YEAR_STOPS, MAX_YEAR, formatStopYear } from "./timeline-stops";
@@ -1674,6 +1675,90 @@ export function runQA(opts: QAOptions = {}): QAReport {
     p44Errors.length === 0
       ? "10 razredov · Summa 1152/495 · vsota vrstic 1145 (Δ 7 dokumentirana) · Acker 80+334≈PV 413 · Weiden kontrola = PV"
       : p44Errors.join("; "),
+  );
+
+  // ——— P45 (issue #14): točkovna sidra / validacija listov A03–A05 ———————
+  const p45Errors: string[] = [];
+  // 1. SHEET_TRUTH vsebuje vse tri liste s celicami in kvantificirano validacijo
+  if (SHEET_TRUTH.length !== 3) p45Errors.push(`SHEET_TRUTH=${SHEET_TRUTH.length}, pri\u010dakovano 3`);
+  const p45Expect: Record<string, { cell: string; med: number; in30: number }> = {
+    A03: { cell: "VKIX24dg", med: 89, in30: 0.067 },
+    A04: { cell: "VKIX24cg", med: 69.7, in30: 0.118 },
+    A05: { cell: "VKIX24ch", med: 27, in30: 0.6 },
+  };
+  for (const st of SHEET_TRUTH) {
+    const exp = p45Expect[st.sheet];
+    if (!exp) {
+      p45Errors.push(`SHEET_TRUTH nepri\u010dakovan list ${st.sheet}`);
+      continue;
+    }
+    if (st.cellCode !== exp.cell) p45Errors.push(`${st.sheet}: celica ${st.cellCode} != ${exp.cell}`);
+    if (st.validation.medianDistanceM !== exp.med)
+      p45Errors.push(`${st.sheet}: mediana ${st.validation.medianDistanceM} != ${exp.med}`);
+    if (st.validation.inlier30 !== exp.in30)
+      p45Errors.push(`${st.sheet}: inlier30 ${st.validation.inlier30} != ${exp.in30}`);
+    if (st.validation.lastVerified !== "2026-10-12")
+      p45Errors.push(`${st.sheet}: lastVerified ${st.validation.lastVerified}`);
+    if (st.status !== "REVIEW") p45Errors.push(`${st.sheet}: status ${st.status} != REVIEW`);
+  }
+  // 2. SHEET_GEOREFS natan\u010dnosti nosijo P45 validacijo; statusi ostajajo REVIEW
+  for (const sheet of ["A03", "A04", "A05"]) {
+    const g = SHEET_GEOREFS.find((s) => s.sheet === sheet);
+    if (!g) {
+      p45Errors.push(`SHEET_GEOREFS manjka ${sheet}`);
+      continue;
+    }
+    if (!g.accuracySi.includes("P45")) p45Errors.push(`${sheet}: accuracySi brez P45`);
+    if (!g.accuracyEn.includes("P45")) p45Errors.push(`${sheet}: accuracyEn brez P45`);
+    if (g.status !== "REVIEW") p45Errors.push(`${sheet}: status ${g.status} != REVIEW (celi\u010dna preslikava ostaja objavljena)`);
+  }
+  // 3. sources.ts opombe: P45 omembe, ne pa starih TO_COLLECT koncovk
+  for (const code of ["N083A03", "N083A04", "N083A05"]) {
+    const src = ATLAS_SOURCES.find((s) => s.code === code);
+    if (!src) {
+      p45Errors.push(`sources.ts manjka ${code}`);
+      continue;
+    }
+    if (!src.noteSi?.includes("P45")) p45Errors.push(`${code}: noteSi brez P45`);
+    if (!src.noteEn?.includes("P45")) p45Errors.push(`${code}: noteEn brez P45`);
+    if (src.noteSi?.includes("ostaja TO_COLLECT")) p45Errors.push(`${code}: noteSi \u0161e vedno TO_COLLECT`);
+  }
+  // 4. dokaz v repozitoriju (enaka logika preskoka produkcije kot p38/p39/p43/p44)
+  if (opts.readFile) {
+    const raw = opts.readFile("research/georef-n83/p45-sheet-fits.json");
+    if (raw) {
+      try {
+        const proof = JSON.parse(raw) as {
+          a02Truth?: { scaleMPerPx?: number; rotDeg?: number };
+          a03?: { cell?: { stats?: { medianM?: number } } };
+          a04?: { cell?: { stats?: { medianM?: number } } };
+          a05?: { cell?: { stats?: { medianM?: number } }; alternatives?: unknown[] };
+        };
+        if (proof.a02Truth?.scaleMPerPx === undefined || Math.abs(proof.a02Truth.scaleMPerPx - 0.8046) > 0.001)
+          p45Errors.push(`dokaz: a02Truth.scaleMPerPx=${proof.a02Truth?.scaleMPerPx}`);
+        if (Math.abs((proof.a03?.cell?.stats?.medianM ?? -1) - 89) > 0.5)
+          p45Errors.push(`dokaz: a03 mediana=${proof.a03?.cell?.stats?.medianM}`);
+        if (Math.abs((proof.a04?.cell?.stats?.medianM ?? -1) - 69.7) > 0.5)
+          p45Errors.push(`dokaz: a04 mediana=${proof.a04?.cell?.stats?.medianM}`);
+        if (Math.abs((proof.a05?.cell?.stats?.medianM ?? -1) - 27) > 0.5)
+          p45Errors.push(`dokaz: a05 mediana=${proof.a05?.cell?.stats?.medianM}`);
+        if ((proof.a05?.alternatives ?? []).length < 4)
+          p45Errors.push("dokaz: a05.alternatives < 4 (dvoumnost mora biti dokumentirana)");
+      } catch {
+        p45Errors.push("dokaz: p45-sheet-fits.json ni veljaven JSON");
+      }
+    } else if (opts.fileExists?.("research/georef-n83/kolpa-modern-centerline.json")) {
+      p45Errors.push("manjka research/georef-n83/p45-sheet-fits.json (dokaz P45)");
+    }
+  }
+  push(
+    "qa-p45-sheet-anchors",
+    "P45: A03\u2013A05 \u2014 validacija porazdelitve stavb (issue #14): celi\u010dne umestitve eZKN kvantitativno potrjene proti sodobnim stavbnim parcelam GURS (A03 veriga 30 simbolov \u2192 mediana 89 m; A04 170 simbolov \u2192 69,7 m; A05 sklop 30 \u2192 27 m, 60 % znotraj 30 m); kalibracija na A02 (156 stavb: 0,805 m/px, +0,02\u00b0, ostanek 2,4 m); prosti fitovi zavrnjeni (nestabilni); SHEET_TRUTH registriran; odprta dvoumnost A05 dokumentirana za #12/#13",
+    "P45: A03\u2013A05 \u2014 building-distribution validation (issue #14): the eZKN cell placements quantitatively confirmed against modern GURS building parcels (A03 chain of 30 symbols \u2192 a median of 89 m; A04 170 symbols \u2192 69.7 m; A05 cluster of 30 \u2192 27 m, 60 % within 30 m); the A02 calibration (156 buildings: 0.805 m/px, +0.02\u00b0, residual 2.4 m); the free fits rejected (unstable); SHEET_TRUTH registered; A05's open ambiguity documented for #12/#13",
+    p45Errors.length === 0,
+    p45Errors.length === 0
+      ? "A03 89 m \u00b7 A04 69,7 m \u00b7 A05 27 m (60 % @30) \u00b7 kalibracija A02 0,805 m/px \u00b7 3 lista REVIEW s po\u0161tenimi ocenami"
+      : p45Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;

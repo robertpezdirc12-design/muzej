@@ -137,9 +137,9 @@ export const SHEET_GEOREFS: SheetGeoref[] = [
       { fromSi: "napis WEIDENDORF (A03 px ≈ 71 %, 86 %)", a01x: 1878, a01y: 1852, modernLat: 45.5456, modernLng: 15.2659, noteSi: "ime k.o. Bedenj (Weidendorf) — pade v k.o. Bedenj ✓" },
     ],
     accuracySi:
-      "Ocena ±200–400 m (preslikava list↔celica po principu iz A02; stavbna validacija šibka — 200 let sprememb). K.o. Griblje na listu = le vzhodni pas; zahodni del lista = ozemlje k.o. Tribuče in Bedenj (prazno). Merilo ~0,72 m/px (isti papirni format 1:2880 kot A02).",
+      "P45 (2026-10-12, validacija porazdelitve stavb): veriga ~30 simbolov 1825 ob vzhodnem robu pod celično preslikavo pade na sodobno verigo 51 stavb z mediano 89 m — celična umestitev kvantitativno potrjena; poštena ocena ±150–250 m. Prosti/omejeni fitovi ne izboljšajo stabilno (zavrnjeni) — dokaz research/georef-n83/p45-sheet-fits.json. Merilo ~0,72 m/px (isti papirni format 1:2880 kot A02). K.o. Griblje na listu = le vzhodni pas; zahodni del lista = ozemlje k.o. Tribuče in Bedenj (prazno).",
     accuracyEn:
-      "Estimated ±200–400 m (the sheet↔cell mapping by the principle validated on A02; the building validation is weak — 200 years of change). C.m. Griblje on the sheet = the eastern strip only; the western part of the sheet = the territory of c.m. Tribuče and Bedenj (blank). Scale ~0.72 m/px (the same 1:2880 paper format as A02).",
+      "P45 (2026-10-12, building-distribution validation): the chain of ~30 symbols of 1825 along the eastern edge under the cell mapping lands on the modern chain of 51 buildings at a median of 89 m — the cell placement quantitatively confirmed; honest accuracy ±150–250 m. The free/constrained fits do not improve it stably (rejected) — evidence research/georef-n83/p45-sheet-fits.json. Scale ~0.72 m/px (the same 1:2880 paper format as A02). C.m. Griblje on the sheet = the eastern strip only; the western part of the sheet = the territory of c.m. Tribuče and Bedenj (blank).",
   },
   {
     id: "georef-a04",
@@ -162,9 +162,9 @@ export const SHEET_GEOREFS: SheetGeoref[] = [
       { fromSi: "napis ADLESCHITZ (A04 px ≈ 2116,1403 → desno)", a01x: 2116, a01y: 1403, modernLat: 45.5485, modernLng: 15.2924, noteSi: "k.o. Adlešiči — vzhodni sosed celice ✓" },
     ],
     accuracySi:
-      "Ocena ±200–400 m (preslikava list↔celica; dvoumnost robov lista). Popravek P9: prejšnja objavljena lega (ovin Kolpe, ±100 m vzdolž reke) je NAPAČNA za ~2,5 km — razlogi dokumentirani v methodSi. Kolpa NI na listu A04 (teče ~120 m vzhodno od vzhodnega roba celice cg).",
+      "P45 (2026-10-12, validacija porazdelitve stavb): 170 simbolov po celem listu doseže mediano 69,7 m do sodobnih stavb — celična umestitev (POPRAVEK P10) kvantitativno potrjena; poštena ocena ±100–200 m. Omejeni fit (55 m, merilo 0,722 ≈ celično 0,717) zavrnjen — premaknil bi oznake s k.o.-validiranih mest; dokaz research/georef-n83/p45-sheet-fits.json. Popravek P9: prejšnja objavljena lega (ovin Kolpe, ±100 m vzdolž reke) je NAPAČNA za ~2,5 km — razlogi dokumentirani v methodSi. Kolpa NI na listu A04 (teče ~1,2 km vzhodno od vzhodnega roba celice cg).",
     accuracyEn:
-      "Estimated ±200–400 m (the sheet↔cell mapping; the sheet-margin ambiguity). P9 correction: the previously published position (the Kolpa bend, ±100 m along the river) is WRONG by ~2.5 km — the reasons documented in methodSi. The Kolpa is NOT on sheet A04 (it flows ~120 m east of cell cg's eastern edge).",
+      "P45 (2026-10-12, building-distribution validation): 170 symbols across the whole sheet reach a median of 69.7 m to modern buildings — the cell placement (the P10 CORRECTION) quantitatively confirmed; honest accuracy ±100–200 m. The constrained fit (55 m, scale 0.722 ≈ the cell's 0.717) rejected — it would move the labels off their c.m.-validated positions; evidence research/georef-n83/p45-sheet-fits.json. P9 correction: the previously published position (the Kolpa bend, ±100 m along the river) is WRONG by ~2.5 km — the reasons documented in methodSi. The Kolpa is NOT on sheet A04 (it flows ~1.2 km east of cell cg's eastern edge).",
   },
   {
     id: "georef-a05",
@@ -187,9 +187,9 @@ export const SHEET_GEOREFS: SheetGeoref[] = [
       { fromSi: "vrstno ime »Pri Jankovichti« (A05 px ≈ 65 %, 21 %)", a01x: 1712, a01y: 455, modernLat: 45.5408, modernLng: 15.2885, noteSi: "današnje naselje Jankoviči ✓" },
     ],
     accuracySi:
-      "Ocena ±200–400 m. List pokriva skrajni jug 1825 k.o. Griblje (45,530–45,5437) — ozemlje, ki ga današnja k.o. Griblje (do 45,5442) NE vsebuje več: meji k.o. sta se pozneje premaknili. Hišne št. na listu (npr. N°8) so številke znotraj tedanje k.o. Griblje.",
+      "P45 (2026-10-12, validacija porazdelitve stavb): sklop ~30 simbolov pade na sodobne stavbe z mediano 27 m (60 % znotraj 30 m) — najsibkejša potrditev od treh listov; omejeni fit neodvisno potrdi celično lego (odmik 64 m, mediana 23 m). Sklop pri (45,5404 N, 15,2908 E) = območje Fučkovci/Jankoviči. Poštena ocena: ±100 m pri sklopu, ±200 m na ravni lista. Odprta dvoumnost (prosta translacija → VZ rob celice, višji score a brez naselja) dokumentirana v geotruth.ts — razrešitev čaka #12/#13. List pokriva skrajni jug 1825 k.o. Griblje (45,530–45,5437) — ozemlje, ki ga današnja k.o. Griblje (do 45,5442) NE vsebuje več: meji k.o. sta se pozneje premaknili. Hišne št. na listu (npr. N°8) so številke znotraj tedanje k.o. Griblje.",
     accuracyEn:
-      "Estimated ±200–400 m. The sheet covers the far south of the 1825 c.m. Griblje (45.530–45.5437) — territory that today's c.m. Griblje (down to 45.5442) no longer contains: the c.m. boundaries were later redrawn. The house numbers on the sheet (e.g. N°8) are numbers within the then c.m. Griblje.",
+      "P45 (2026-10-12, building-distribution validation): the cluster of ~30 symbols lands on modern buildings with a median of 27 m (60 % within 30 m) — the strongest confirmation of the three sheets; the constrained fit independently confirms the cell position (offset 64 m, median 23 m). The cluster at (45.5404 N, 15.2908 E) = the Fučkovci/Jankoviči area. Honest accuracy: ±100 m at the cluster, ±200 m at sheet level. An open ambiguity (free translation → the cell's E-SE edge, higher score but no settlement) is documented in geotruth.ts — resolution awaits #12/#13. The sheet covers the far south of the 1825 c.m. Griblje (45.530–45.5437) — territory that today's c.m. Griblje (down to 45.5442) no longer contains: the c.m. boundaries were later redrawn. The house numbers on the sheet (e.g. N°8) are numbers within the then c.m. Griblje.",
   },
 ];
 
