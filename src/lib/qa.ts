@@ -1252,11 +1252,11 @@ export function runQA(opts: QAOptions = {}): QAReport {
   if (!invScope.totals.scopeAccounted) p20pagesErrors.push("inventar: scopeAccounted ni true za vse enote");
   push(
     "qa-p20-series-pages",
-    "P20: dokazano prebrane strani po serijah (PR 4, PS 143 — P36 strojno, PUA 49, PZ 12, PT 8, PG 1, PV 1) — pagesReadList == pagesTranscribed, brez lukenj; PS in PZ usklajena z research/issue17 datotekami (ps-raw + PS-full.json)",
-    "P20: evidenced read pages per series (PR 4, PS 143 — P36 machine-read, PUA 49, PZ 12, PT 8, PG 1, PV 1) — pagesReadList == pagesTranscribed, no gaps; PS and PZ reconciled with the research/issue17 files (ps-raw + PS-full.json)",
+    "P20: dokazano prebrane strani po serijah (PR 4, PS 143 — P36 strojno, PUA 49, PZ 71 — P44, PT 8, PG 1, PV 1) — pagesReadList == pagesTranscribed, brez lukenj; PS in PZ usklajena z research/ datotekami (issue17 ps-raw + issue11 pz-raw)",
+    "P20: evidenced read pages per series (PR 4, PS 143 — P36 machine-read, PUA 49, PZ 71 — P44, PT 8, PG 1, PV 1) — pagesReadList == pagesTranscribed, no gaps; PS and PZ reconciled with the research/ files (issue17 ps-raw + issue11 pz-raw)",
     p20pagesErrors.length === 0,
     p20pagesErrors.length === 0
-      ? `skupaj ${invScope.totals.pagesRead}/${invScope.totals.pagesDeclared} prebranih; odprtih strani ${invScope.totals.pagesOpen} (PZ 4–67 razen vzorcev; PS strani strojno prebrane, a sprava s 2607 izrecno odprta) — 0 tihih`
+      ? `skupaj ${invScope.totals.pagesRead}/${invScope.totals.pagesDeclared} prebranih; odprtih strani ${invScope.totals.pagesOpen} (vseh 7 serij Kurrent prebranih v celoti — PZ 71/71 od P44; sprava PS s 2607 izrecno odprta) — 0 tihih`
       : p20pagesErrors.join("; "),
   );
 
@@ -1308,7 +1308,7 @@ export function runQA(opts: QAOptions = {}): QAReport {
     "P20: reconciliation checks the scope INVENTORY (read + open pages == declared), not just statuses; zeroLoss with a statement of what it certifies and does NOT; 0 stale PUA locators",
     p20recErrors.length === 0,
     p20recErrors.length === 0
-      ? `enote: ${rec.units.length}; vse scopeCheck.accounted; zeroLoss=${rec.zeroLoss}; pomen dokumentiran (PS 135 + PZ 59 strani izrecno odprtih, ne prikrito)`
+      ? `enote: ${rec.units.length}; vse scopeCheck.accounted; zeroLoss=${rec.zeroLoss}; pomen dokumentiran (vseh 277 strani sedaj prebranih — PZ 71/71 od P44; sprava PS 2607 izrecno odprta, ne prikrito)`
       : p20recErrors.join("; "),
   );
 
