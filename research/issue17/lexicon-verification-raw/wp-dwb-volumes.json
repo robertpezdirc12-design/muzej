@@ -1,0 +1,175 @@
+{
+ "generatedAt": "2026-10-12T21:03:16Z",
+ "source": "de.wikipedia: Deutsches Wörterbuch (API, revisions content)",
+ "url": "https://de.wikipedia.org/wiki/Deutsches_W%C3%B6rterbuch",
+ "method": "curl GET api.php prop=revisions (User-Agent muzej-griblje-verification/1.0)",
+ "volumeMap": [
+  {
+   "band": 1,
+   "letters": "a–biermolke",
+   "years": "1852–1854"
+  },
+  {
+   "band": 2,
+   "letters": "biermörder–d",
+   "years": "1854–1860"
+  },
+  {
+   "band": 3,
+   "letters": "e–forsche",
+   "years": "1859–1862"
+  },
+  {
+   "band": 4,
+   "letters": "forschel–gefolgsmann",
+   "years": "1863–1878"
+  },
+  {
+   "band": 5,
+   "letters": "gefoppe–getreibs",
+   "years": "1879–1897"
+  },
+  {
+   "band": 6,
+   "letters": "getreide–gewöhniglich",
+   "years": "1898–1911"
+  },
+  {
+   "band": 7,
+   "letters": "gewöhnlich–gleve",
+   "years": "1912–1949"
+  },
+  {
+   "band": 8,
+   "letters": "glibber–gräzist",
+   "years": "1936–1958"
+  },
+  {
+   "band": 9,
+   "letters": "greander–gymnastic",
+   "years": "1914–1935"
+  },
+  {
+   "band": 10,
+   "letters": "h, i, j",
+   "years": "1868–1877"
+  },
+  {
+   "band": 11,
+   "letters": "k",
+   "years": "1864–1873"
+  },
+  {
+   "band": 12,
+   "letters": "l, m",
+   "years": "1877–1885"
+  },
+  {
+   "band": 13,
+   "letters": "n, o, p, q",
+   "years": "1881–1889"
+  },
+  {
+   "band": 14,
+   "letters": "r–schiefe",
+   "years": "1886–1893"
+  },
+  {
+   "band": 15,
+   "letters": "schiefeln–seele",
+   "years": "1894–1899"
+  },
+  {
+   "band": 16,
+   "letters": "seeleben–sprechen",
+   "years": "1899–1905"
+  },
+  {
+   "band": 17,
+   "letters": "sprecher–stehuhr",
+   "years": "1905–1919"
+  },
+  {
+   "band": 18,
+   "letters": "stehung–stitzig",
+   "years": "1919–1941"
+  },
+  {
+   "band": 19,
+   "letters": "stob–strolle",
+   "years": "1914–1957"
+  },
+  {
+   "band": 20,
+   "letters": "strom–szische",
+   "years": "1931–1942"
+  },
+  {
+   "band": 21,
+   "letters": "t–treftig",
+   "years": "1890–1935"
+  },
+  {
+   "band": 22,
+   "letters": "treib–tz",
+   "years": "1932–1952"
+  },
+  {
+   "band": 23,
+   "letters": "u–umzwingen",
+   "years": "1913–1936"
+  },
+  {
+   "band": 24,
+   "letters": "un–uzvogel",
+   "years": "1912–1936"
+  },
+  {
+   "band": 25,
+   "letters": "v–verzwunzen",
+   "years": "1886–1956"
+  },
+  {
+   "band": 26,
+   "letters": "vesche–vulkanisch",
+   "years": "1913–1951"
+  },
+  {
+   "band": 27,
+   "letters": "w–weg-zwitschern(-zwiesel)",
+   "years": "1901–1922"
+  },
+  {
+   "band": 28,
+   "letters": "weh–wendunmut",
+   "years": "1911–1955"
+  },
+  {
+   "band": 29,
+   "letters": "wenig–wiking",
+   "years": "1958–1960"
+  },
+  {
+   "band": 30,
+   "letters": "wilb–ysop",
+   "years": "1913–1960"
+  },
+  {
+   "band": 31,
+   "letters": "z–zmasche",
+   "years": "1913–1956"
+  },
+  {
+   "band": 32,
+   "letters": "zobel–zypressenzweig",
+   "years": "1914–1954"
+  },
+  {
+   "band": 33,
+   "letters": "Quellenband",
+   "years": "1971"
+  }
+ ],
+ "note": "16-volčna glavna serija (1854–1960) po dtv izdaji; mapo črk po zvezkih v celoti izpiše wikitext članka 'Deutsches Wörterbuch' (de.wikipedia, API prop=revisions, dostop 12. 10. 2026) — izsek verbatim v repovem git history te datoteke (prva različica vsebuje tudi regex izpis)",
+ "firstEditionFullListVerbatim": "Bd. 1 dtv), a–biermolke, Leipzig 1852–1854 ... (celoten seznam v wikitekstu); Bd. 10 dtv), h, i, j; Bd. 12 dtv), l, m; Bd. 13 dtv), n, o, p, q; Bd. 14 dtv), r–schiefe"
+}

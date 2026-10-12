@@ -1,0 +1,53 @@
+{
+ "target": "sskj-lopata",
+ "source": "fran.si",
+ "queries": {
+  "lopata": {
+   "counts": {},
+   "links": {
+    "133": [
+     {
+      "path": "/133/sskj2-slovar-slovenskega-knjiznega-jezika-2/4491875/lopata",
+      "id": "4491875"
+     }
+    ],
+    "136": [
+     {
+      "path": "/136/maks-pletersnik-slovensko-nemski-slovar/4019044/lopata",
+      "id": "4019044"
+     }
+    ],
+    "137": [
+     {
+      "path": "/137/slovar-stare-knjizne-prekmurscine/4096348/lopata",
+      "id": "4096348"
+     }
+    ],
+    "138": [
+     {
+      "path": "/138/katelec-vorenc-slovensko-latinski-slovar/4111499/lopata",
+      "id": "4111499"
+     }
+    ]
+   },
+   "entries": [
+    {
+     "url": "https://fran.si/133/sskj2-slovar-slovenskega-knjiznega-jezika-2/4491875/lopata?View=1&Query=lopata",
+     "excerpt": "lopáta -e ž ( á ) 1. orodje s širokim listom in dolgim držajem za zajemanje, premetavanje sipkega materiala: dati lopato na ramo ; metati pesek z lopato / nasaditi lopato ; zasaditi lopato v zemljo ; njegove roke so kot lopate velike, široke / lopata za kidanje gnoja ; list, uho lopate / lopata peska // pog. kolikor se zajame z lopato: vrzi še nekaj lopat k drevescu 2. rabi se samostojno ali s prilastkom lopati podoben del orodja, naprave, stroja: voda se zaganja v lopate in kolesa se vrtijo ; lopata mlina na veter ; lopata vesla odriva vodo ; parnik je gnalo kolo z lopatami / mlinsko kolo na lopate ● publ. lopata arheologov je odkrila ostanke mesta arheologi so jih odkrili z odkopavanjem ; ekspr. vi imate drobne roke, jaz pa take lopate velike, široke roke, dlani ; zasaditi lopato publ. to društvo je prvo zasadilo lopato je prvo začelo delovati ; publ. za novi vrtec je zasadil prvo lopa"
+    },
+    {
+     "url": "https://fran.si/136/maks-pletersnik-slovensko-nemski-slovar/4019044/lopata?View=1&Query=lopata",
+     "excerpt": "lopáta , f. 1) die Schaufel, der Spaten ; lesena, železna l.; — eine schaufelartige Patsche, die Britsche , Cig. ; — die Ruderschaufel , Mur. ; — 2) die Wasserradschaufel , Cig. , Jan. , Dol. ; kolo na lopate, ein unterschlächtiges Wasserrad , Cig. ; — 3) = cokla, der Radschuh , C. , Z. ; — 4) das Schulterblatt , V.-Cig. , Jan. ; — der vordere Schweinsfuß , Goriš. - C. PLETERŠNIK, Maks, Slovensko-nemški slovar , www.fran.si, dostop 12. 10. 2026. Maks Pleteršnik: Slovensko-nemški slovar Deli geslo Kopiraj sestavek Predlagajte popravek ali dopolnitev sestavka × Predlagajte popravek ali dopolnitev Predlagam: popravek napake dopolnitev drugo Vsebina: Predlagajte Prekliči × Predlagajte popravek ali dopolnitev Ali želite oddati predlog za popravek ali dopolnitev gesla lopáta ? Prijavite ali registirajte se ali\" Prijavite se s Facebookom Zapri × , hvala za vaš predlog. Vse popravke in dopolnitv"
+    },
+    {
+     "url": "https://fran.si/137/slovar-stare-knjizne-prekmurscine/4096348/lopata?View=1&Query=lopata",
+     "excerpt": "lopàta -e ž lopata: Prednje nogé so práve lopate za kopanje [krtove] AI 1878, 10 NOVAK, Vilko, Slovar stare knjižne prekmurščine , www.fran.si, dostop 12. 10. 2026. Slovar stare knjižne prekmurščine Deli geslo Kopiraj sestavek Predlagajte popravek ali dopolnitev sestavka × Predlagajte popravek ali dopolnitev Predlagam: popravek napake dopolnitev drugo Vsebina: Predlagajte Prekliči × Predlagajte popravek ali dopolnitev Ali želite oddati predlog za popravek ali dopolnitev gesla lopàta ? Prijavite ali registirajte se ali\" Prijavite se s Facebookom Zapri × , hvala za vaš predlog. Vse popravke in dopolnitve bomo natančno pregledali in jih upoštevali pri novih različicah slovarja. Zapri × Tipkovnica č ć đ ə š ž Č Ć Đ Š Ž á à é è ê í ì ó ò ô ŕ ú ù u̯ Á À É È Ê Í Ì Ó Ò Ô Ŕ Ú Ù ß ſ ṡ document.addEventListener('DOMContentLoaded', () => { window.isAuthenticated = (document.getElementById('IsAuthent"
+    },
+    {
+     "url": "https://fran.si/138/katelec-vorenc-slovensko-latinski-slovar/4111499/lopata?View=1&Query=lopata",
+     "excerpt": "lopata ž , F 5 , ama, amae , lopata, ſerp, ſerpíza, ena pogrèbna lopata ; batillum, -li , lopata, veſliza, burkle, ẛa ogîn lopatiza, ogrébelza; infurnibulum, vel infurnium , lopár, pèzhna lopata ; pala, -ae , lopata, lopár STABEJ, Jože, Slovensko-latinski slovar po: Matija Kastelec - Gregor Vorenc, Dictionarium Latino-Carniolicum (1608–1710) , www.fran.si, dostop 12. 10. 2026. Matija Kastelec in Gregor Vorenc: Slovensko-latinski slovar Deli geslo Kopiraj sestavek Predlagajte popravek ali dopolnitev sestavka × Predlagajte popravek ali dopolnitev Predlagam: popravek napake dopolnitev drugo Vsebina: Predlagajte Prekliči × Predlagajte popravek ali dopolnitev Ali želite oddati predlog za popravek ali dopolnitev gesla lopata ? Prijavite ali registirajte se ali\" Prijavite se s Facebookom Zapri × , hvala za vaš predlog. Vse popravke in dopolnitve bomo natančno pregledali in jih upoštevali pri no"
+    }
+   ]
+  }
+ }
+}

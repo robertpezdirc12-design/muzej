@@ -1,0 +1,26 @@
+{
+ "target": "sskj-horga",
+ "source": "fran.si",
+ "queries": {
+  "horga": {
+   "counts": {},
+   "links": {},
+   "entries": []
+  },
+  "hurga": {
+   "counts": {},
+   "links": {},
+   "entries": []
+  },
+  "hurgati": {
+   "counts": {},
+   "links": {},
+   "entries": []
+  },
+  "hurkati": {
+   "counts": {},
+   "links": {},
+   "entries": []
+  }
+ }
+}

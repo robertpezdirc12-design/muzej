@@ -1,0 +1,16 @@
+{
+ "target": "sskj-poggi",
+ "source": "fran.si",
+ "queries": {
+  "poggi": {
+   "counts": {},
+   "links": {},
+   "entries": []
+  },
+  "pog": {
+   "counts": {},
+   "links": {},
+   "entries": []
+  }
+ }
+}

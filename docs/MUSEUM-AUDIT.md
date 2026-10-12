@@ -1346,3 +1346,109 @@ in vseh strojnih branj; 3. prehod ~15 dvoumnih strani; semantika 7 par
 referenc str. 141 (UNRESOLVED); p141 spodnji vsotni blok (ŠIBKO), p142 skupna
 dolžina (UNRESOLVED); človeška paleografija 16 družin + kitic; verifikacija
 leksikografskih virov. Statusi REVIEW.
+
+## §25 — P45: verifikacija leksikografskih virov P43 leksikona (issue #10)
+
+### Izhodišče
+
+P43 je podal 70 leksikografskih hipotez (16 družin, 216 parov) z viri, ki jih
+navaja stroj, izrecno označenimi NEPREVERJENI (audit §23). P45 (ta revizija)
+izvede verifikacijsko kampanjo nad **49 tarčami** in presodi opornost citatov;
+kandidati/glose/viri P43 ostanejo bajtno identični (invarianta I2), raba ni
+prirejena (vse ostaja NEKLASIFICIRANO).
+
+### Metode (peskovniška mreža, dnevnik dostopnosti v dokazih)
+
+- **fran.si, direktni geslarski izseki** (18 tarč): SSKJ², Pleteršnik, Novak
+  SSP — verbatim definicije (skript `scripts/p45_fran_fetch.py`);
+- **Wikipedia API** (14 tarč): zvezčna mapa DWB (33 zvezkov), Schmellerjeve
+  izdaje (1. Cotta 1827–1837; 2. Frommann 1872–1877), seznami del, bibliografija;
+- **deterministična** (1 tarča): `grep 'Gypf'` nad committed `PV.json`;
+- **nedosegljivo** (16 tarč): DWB/Schmeller polni teksti (woerterbuchnetz SPA
+  404 na znanih API poteh; zeno.org/archive.org timeout; bavarikon 403);
+  kanonični URL vsake tarče v dokazih (BAdW register, MDZ digitalizati);
+- web-search API (z-ai): kvota izčrpana (429) po začetnem oblaju — kampanja
+  preusmerjena na direktno fetchanje primarnih virov.
+
+### Izid: 0/70 hipotez POTRJENIH v celoti
+
+| Verdict | Hipoteze | Pomen |
+|---|---|---|
+| POTRJENO | **0** | — |
+| DELNO | 7 | vir delno podpira ali bibliografske natančnosti odstopajo |
+| NEPOTRJENO | **33** | geslo manjka / pomen drugačen / citat ne stoji |
+| NEVERIFIKATORNO | 17 | vir v peskovniku nedosegljiv (URL v dokazih) |
+| BREZ-VIRA | 13 | hipoteza brez dokumentiranega vira |
+
+### Ključne ugotovitve [~]
+
+1. **DWB zvezčne natančnosti** (struktura 16-volčne serije, de.wiki):
+   Aue "Bd 1" ✓ (A ∈ Bd 1: a–biermolke) in Öde "Bd 13" ✓ (O ∈ Bd 13:
+   n, o, p, q) strukturno skladna; **Lohn "Bd 16, Sp. 844" ✗** (L ∈ Bd 12:
+   l, m), **Höfling "Bd 13, Sp. 742" ✗** (H ∈ Bd 10: h, i, j), **Efeu
+   "Bd 6, Sp. 102" ✗** (E ∈ Bd 3: e–forsche) — trije citati zvezkov napačni.
+2. **SSKJ refutacije z verbatim definicijami**: log = "(močviren) travnik ob
+   vodi, navadno deloma porasel z drevesi" (NE dolina/grapa/splav); líza =
+   "kdor rad liže" (Lecker); lúti = "hud, jezen"; gesla **jedar, ving, orga,
+   horga/hurga, ajna, einhart, guten, poggi, šlifa** v SSKJ/Pleteršniku NE
+   obstajajo (Pleteršnik celoten dostopen na fran.si).
+3. **Atribucijske refutacije**: "Kärntner Wörterbuch (Schulz, 1972)" ni
+   potrjeno (de.wiki dokumentira WBÖ, Kranzmayer urednik od 1958) — 4
+   hipoteze brez opore; "Bezlaj, Slovar slovenskih narečij 1976–78 Zv. 1–4"
+   in "Bezlaj, Slovenski narečni atlas" ne stojita (v Bezlajevem seznamu del
+   ni; SSN izhaja od 1979, SLA je sodobni ZRC projekt); Schmeller 1. izdaja
+   = Cotta (ne "C.H. Beck").
+4. **PV-Gypf**: okrajšava "Gypf." NI v committed PV.json (Nutzungs-Ausweis
+   1825) — citat EINHART#2 napačen; okrajšava JE v PS registru ("Einhart mit
+   Gypf. &c.") z NOVO obliko **"Schüttwiese, Gypfang"**.
+5. **Najmočnejša delna opora**: SSKJ²/Pleteršnik golica = "strmina, na
+   kateri je bil posekan gozd" (EINSCHLAG-GUELZE#1); šindel = "skodla"
+   dokumentiran (Novak SSP; pomen ✓, citat "SSKJ" delno).
+6. **Schmeller strukturno**: "Raut Bd 2, Sp. 476" skladen LE z 2. izdajo
+   (Frommann 1877: Bd 2 = R,S,W,Z), v 1. izdaji je R v Bd 3; ISTI citat
+   "Bd 2, Sp. 476" naveden tudi za Gfüttergütl (G ∈ 1. izd. Bd 2 / 2. izd.
+   Bd 1) — verjetno prepisan citat.
+
+### Agregacija po hipotezah (deterministična, brez AI ob delovanju)
+
+`scripts/p45_lex_verify.py` (FAIL ob padu invariants I1–I6): NEPOTRJENO
+dominira; sicer POTRJENO; sicer DELNO; sicer NEVERIFIKATORNO; brez tarč =
+BREZ-VIRA. **I1** 16 družin/70 hipotez identičnih vhodu; **I2** kandidat/
+glosa/vir/zaupanje bajtno identični ps-lexicon.json; **I3** verdicti v enumu,
+vsaka tarča z URL; **I4** preslikava hipotez→tarč totalna (49 tarč, sondirne
+tarče štejo kot uporabljene); **I5** kanonski izpis == runtime kopija;
+**I6** agregacija rekomputirana.
+
+### Izpisi in objava
+
+- `research/issue17/ps-lexicon-verified.json` — kanonski dokazni izpis;
+- `research/issue17/lexicon-verification-adjudication.json` — 49 tarč
+  (presoja, citati, URL-ji);
+- `research/issue17/lexicon-verification-raw/` — raw dokazi (18 fran.si
+  izsekov, 5 Wikipedia izpisov, dnevnik dostopnosti, načrt tarč);
+- `src/data/atlas/ps-lexicon-verified.json` — identična kopija (QA kontrola);
+- `GET /api/atlas/ps-lexicon-verified` — strojno berljiv izpis (force-static);
+- `PS_LEXICON_VERIFIED_P45` (`src/data/atlas/research.ts`) + kartica
+  »PS 1825 — verifikacija leksikografskih virov (P45)« v Raziskavah
+  (zavihek Prepisi Kurrent).
+
+### Preverba
+
+ESLint **0**; tsc **0**; QA **45 → 46** (`qa-p45-ps-lexicon-verified`:
+49 tarč, vsota verdictov 70, vsota parov 216, pinane refutacije Lohn→Bd 12 /
+Höfling→Bd 10 / Efeu→Bd 3 / Aue Bd 1 / Öde Bd 13 / liza "liže" / Kärntner WB
+/ PV-Gypf, invarianta I2 nad P43 kandidati, navzkrižna kontrola obeh izpisov
+prek vbrizganega readFile — vzorec qa-p37..p44).
+
+### Ostaja odprto (issue #10 ostaja odprt)
+
+- **Človeška preverba DWB/Schmeller gesel** (17 NEVERIFIKATORNO tarč) prek
+  BAdW registra (publikationen.badw.de/de/schmeller/index) in MDZ
+  digitalizatov: Raut, Luch, Schupfe, Loh/Lohe, Einschlag, Gülze, Luge,
+  Wingart, Ding, Gut, Einhard, Gipfel, Acker, Efeu(?) — statusi ostajajo
+  NEVERIFIKATORNO dokler geselna vsebina ni potrjena;
+- nove hipoteze iz verifikacije (Wing ~ Wingart/Weingarten; log "močviren
+  travnik"; golica "posekana strmina") — za človeško paleografijo;
+- človeška paleografija 16 družin + 66 kitic (3. prehod ~15 dvoumnih strani,
+  ko VAČ dosegljiv); semantika 7 par referenc str. 141 (UNRESOLVED); p141
+  spodnji vsotni blok (ŠIBKO); p142 skupna dolžina (UNRESOLVED). Statusi REVIEW.

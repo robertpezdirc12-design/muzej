@@ -1,0 +1,28 @@
+{
+ "target": "sskj-guten",
+ "source": "fran.si",
+ "queries": {
+  "guten": {
+   "counts": {},
+   "links": {},
+   "entries": []
+  },
+  "guta": {
+   "counts": {},
+   "links": {
+    "136": [
+     {
+      "path": "/136/maks-pletersnik-slovensko-nemski-slovar/4003915/guta",
+      "id": "4003915"
+     }
+    ]
+   },
+   "entries": [
+    {
+     "url": "https://fran.si/136/maks-pletersnik-slovensko-nemski-slovar/4003915/guta?View=1&Query=guta",
+     "excerpt": "gūta , f. die Apoplexie , kajk. - Valj. (Rad) ; — prim. lat. gutta, it. gotta, Mik. (Et.) . PLETERŠNIK, Maks, Slovensko-nemški slovar , www.fran.si, dostop 12. 10. 2026. Maks Pleteršnik: Slovensko-nemški slovar Deli geslo Kopiraj sestavek Predlagajte popravek ali dopolnitev sestavka × Predlagajte popravek ali dopolnitev Predlagam: popravek napake dopolnitev drugo Vsebina: Predlagajte Prekliči × Predlagajte popravek ali dopolnitev Ali želite oddati predlog za popravek ali dopolnitev gesla gūta ? Prijavite ali registirajte se ali\" Prijavite se s Facebookom Zapri × , hvala za vaš predlog. Vse popravke in dopolnitve bomo natančno pregledali in jih upoštevali pri novih različicah slovarja. Zapri × Tipkovnica č ć đ ə š ž Č Ć Đ Š Ž á à é è ê í ì ó ò ô ŕ ú ù u̯ Á À É È Ê Í Ì Ó Ò Ô Ŕ Ú Ù ß ſ ṡ document.addEventListener('DOMContentLoaded', () => { window.isAuthenticated = (document.getElementById("
+    }
+   ]
+  }
+ }
+}

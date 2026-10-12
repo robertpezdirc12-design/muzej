@@ -1,0 +1,2147 @@
+{
+ "series": "PS",
+ "source": "N083PS.pdf (VAČ uodid 373415, docid 41780; 143 strani) — verifikacijski sloj nad committed ps-lexicon.json (P43): adjudikacija 50 tarč (research/issue17/lexicon-verification-adjudication.json) + raw dokazi lexicon-verification-raw/ (fran.si geselni izseki, Wikipedia API zvezčne mape/bibliografija, api-availability-log); polni izpis research/issue17/ps-lexicon-verified.json + src/data/atlas/ps-lexicon-verified.json",
+ "status": "REVIEW",
+ "generatedBy": "scripts/p45_lex_verify.py",
+ "generatedAt": "2026-10-12T21:11:04.249840+00:00",
+ "method": {
+  "aggregation": "NEPOTRJENO dominira; sicer POTRJENO; sicer DELNO; sicer NEVERIFIKATORNO; brez tarč = BREZ-VIRA",
+  "verdicts": {
+   "POTRJENO": "vir direktno preverjen in podpira trditev",
+   "DELNO": "vir delno podpira ali bibliografske odstopajoče natančnosti (leta/izdaja/založnik)",
+   "NEPOTRJENO": "vir preverjen in NE podpira — geslo manjka, pomen drugačen, atribucija/zvezek/citat ne stoji",
+   "NEVERIFIKATORNO": "vir v peskovniku nedosegljiv za strojno preverbo (kanonični URL naveden)",
+   "BREZ-VIRA": "hipoteza brez dokumentiranega vira"
+  },
+  "noAiAtRuntime": true,
+  "unchangedP43": "kandidat/glosa/vir/zaupanje bajtno identični ps-lexicon.json (invarianta I2)"
+ },
+ "campaign": {
+  "targetsTotal": 49,
+  "byVerdict": {
+   "POTRJENO": 0,
+   "DELNO": 7,
+   "NEPOTRJENO": 33,
+   "NEVERIFIKATORNO": 17,
+   "BREZ-VIRA": 13
+  },
+  "byMethod": {
+   "deterministic-repo": 1,
+   "fran.si-direct": 18,
+   "unreachable": 16,
+   "wikipedia-api": 14
+  },
+  "byClass": {
+   "BEZLAJ": 4,
+   "DWB": 15,
+   "DWB+SCHMELLER": 1,
+   "KAERNTNER-WB": 1,
+   "PLETERsNIK": 2,
+   "PV": 1,
+   "SCHMELLER": 9,
+   "SSKJ": 16
+  },
+  "hypothesesTotal": 70,
+  "apiAvailability": "research/issue17/lexicon-verification-raw/api-availability-log.json"
+ },
+ "families": [
+  {
+   "id": "LHUT-JEDRO",
+   "pairs": 36,
+   "distinctVariants": 5,
+   "block": {
+    "pages": [
+     16,
+     36,
+     37,
+     48,
+     121
+    ],
+    "distinctPages": 5,
+    "parcelsCount": 36,
+    "parcelMin": 261,
+    "parcelMax": 2076,
+    "contiguousRuns": 22
+   },
+   "termTypeHypothesis": "LEDINSKO-IME",
+   "hypotheses": [
+    {
+     "candidate": "Lhut/Lhup/Lhupf/Lhuta",
+     "glossSi": "ledinsko ime, morda povezano s slovanskim korenom 'lom' ali 'log' (grmje, močvirno območje)",
+     "source": "neznano — hipoteza brez dokumentiranega vira",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "BREZ-VIRA",
+      "confidence": "—",
+      "targets": [],
+      "probes": [],
+      "noteSi": ""
+     }
+    },
+    {
+     "candidate": "Lhut/Lhup/Lhupf",
+     "glossSi": "ledinsko ime, morda povezano s slovanskim korenom 'lȕh' (svetli, jasen) ali 'lǫg' (močvirje, log)",
+     "source": "Bezlaj, France. Slovenski etimološki slovar. Ljubljana: SAZU, 1976–2008",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "NEVERIFIKATORNO",
+      "confidence": "?",
+      "targets": [
+       {
+        "id": "bezlaj-log",
+        "class": "BEZLAJ",
+        "verdict": "NEVERIFIKATORNO",
+        "confidence": "?",
+        "method": "wikipedia-api",
+        "url": "https://sl.wikipedia.org/wiki/France_Bezlaj",
+        "quote": "Etimološki slovar slovenskega jezika I-V (1976, 1982, 1995, 2005; tretjo in četrto knjigo sta dokončala … Snoj in Furlan, peto /kazala/ … Snoj in Klemenčič)",
+        "noteSi": "ESSJ bibliografsko POTRJEN, a leta '1976–2008' (LHUT-JEDRO#1) so natančneje '1976–2005' (knjiga 4/5: 2005). Gesla lȕh/lǫg so v tiskani izdaji — v peskovniku nedostopna; potrjena je le bibliografija, ne vsebina."
+       }
+      ],
+      "probes": [],
+      "noteSi": "ESSJ bibliografsko POTRJEN, a leta '1976–2008' (LHUT-JEDRO#1) so natančneje '1976–2005' (knjiga 4/5: 2005). Gesla lȕh/lǫg so v tiskani izdaji — v peskovniku nedostopna; potrjena je le bibliografija, ne vsebina."
+     }
+    },
+    {
+     "candidate": "Lhuta/Lhupa",
+     "glossSi": "ledinsko ime, morda povezano s slovanskim korenom 'lȕt' (močvirnato območje)",
+     "source": "SSKJ, Slovenski slovar knjižnega jezika",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "NEPOTRJENO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "sskj-luta",
+        "class": "SSKJ",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "fran.si-direct",
+        "url": "https://fran.si/iskanje?View=1&Query=luta",
+        "quote": "lúti -a -o prid. hud, jezen, divji (SSKJ²); lúta, f. die Nachlese (Pleteršnik)",
+        "noteSi": "SSKJ² 'lúti' = hud/jezen/divji; Pleteršnik 'lúta' = Nachlese. Pomena 'lȕt = močvirnato območje' NI v SSKJ — trditev LHUT-JEDRO#2 ne stoji."
+       }
+      ],
+      "probes": [],
+      "noteSi": "SSKJ² 'lúti' = hud/jezen/divji; Pleteršnik 'lúta' = Nachlese. Pomena 'lȕt = močvirnato območje' NI v SSKJ — trditev LHUT-JEDRO#2 ne stoji."
+     }
+    }
+   ]
+  },
+  {
+   "id": "LOHN-RAUT",
+   "pairs": 29,
+   "distinctVariants": 5,
+   "block": {
+    "pages": [
+     10,
+     45,
+     47,
+     62,
+     116
+    ],
+    "distinctPages": 5,
+    "parcelsCount": 29,
+    "parcelMin": 150,
+    "parcelMax": 2279,
+    "contiguousRuns": 13
+   },
+   "termTypeHypothesis": "LEDINSKO-IME",
+   "hypotheses": [
+    {
+     "candidate": "Lohn (nem.)",
+     "glossSi": "Ledinsko ime, izpeljano iz nemške besede 'Lohn' (plača, nagrada), ki bi lahko označevalo zemljišče, ki je bilo nekdaj del plače ali nagrade za delo",
+     "source": "DWB (Deutsches Wörterbuch von Jacob und Wilhelm Grimm), Band 16, Spalte 844",
+     "confidence": "~",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "NEPOTRJENO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "dwb-lohn",
+        "class": "DWB",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "wikipedia-api",
+        "url": "https://de.wikipedia.org/wiki/Deutsches_W%C3%B6rterbuch",
+        "quote": "Bd. 12 dtv), l, m, Leipzig 1877–1885; Bd. 16 dtv), seeleben–sprechen, Leipzig 1899–1905",
+        "noteSi": "STRUKTURNA preverba citata: 'Band 16, Spalte 844' NE more vsebovati gesla Lohn (L je v Bd 12: l, m; Bd 16 pokriva seeleben–sprechen). Citat zvezka je napačen; vsebina gesla (Sp. 844) v peskovniku nepreverjena."
+       }
+      ],
+      "probes": [],
+      "noteSi": "STRUKTURNA preverba citata: 'Band 16, Spalte 844' NE more vsebovati gesla Lohn (L je v Bd 12: l, m; Bd 16 pokriva seeleben–sprechen). Citat zvezka je napačen; vsebina gesla (Sp. 844) v peskovniku nepreverjena."
+     }
+    },
+    {
+     "candidate": "Log (slov.)",
+     "glossSi": "Ledinsko ime, ki se nanaša na dolino, grapo ali območje, kjer se splavajo lesne delce; v Beli krajini pogosta beseda za ledinska imena",
+     "source": "SSKJ (Slovar slovenskega knjižnega jezika)",
+     "confidence": "~",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "NEPOTRJENO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "sskj-log",
+        "class": "SSKJ",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "fran.si-direct",
+        "url": "https://fran.si/133/sskj2-slovar-slovenskega-knjiznega-jezika-2/4491704/log",
+        "quote": "lóg … 1. (močviren) travnik ob vodi, navadno deloma porasel z drevesi: kositi na, v logu",
+        "noteSi": "SSKJ² log = močviren travnik ob vodi, porasel z drevesi — NE 'dolina/grapa/splav lesnih delcev' (LOHN-RAUT#1) in NE 'nižina, dolina' (#5). Pleteršnik lǫ̨g = 'der Hain, der niedere Wald'. Trditvi hipotez sta v neskladju z geslom."
+       }
+      ],
+      "probes": [],
+      "noteSi": "SSKJ² log = močviren travnik ob vodi, porasel z drevesi — NE 'dolina/grapa/splav lesnih delcev' (LOHN-RAUT#1) in NE 'nižina, dolina' (#5). Pleteršnik lǫ̨g = 'der Hain, der niedere Wald'. Trditvi hipotez sta v neskladju z geslom."
+     }
+    },
+    {
+     "candidate": "Lohnraut (nem.)",
+     "glossSi": "Kompozitum 'Lohn' + 'Raut' (prazna zemlja, njiva), ki bi lahko pomenil 'njiva, ki je bila del plače' ali 'ledinsko ime, ki se nanaša na posebno vrsto njive'",
+     "source": "DWB (Deutsches Wörterbuch von Jacob und Wilhelm Grimm), Band 16, Spalte 844; Schmeller, Bayerisches Wörterbuch, Band 2, Spalte 476",
+     "confidence": "~",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "NEPOTRJENO",
+      "confidence": "?",
+      "targets": [
+       {
+        "id": "dwb-lohn",
+        "class": "DWB",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "wikipedia-api",
+        "url": "https://de.wikipedia.org/wiki/Deutsches_W%C3%B6rterbuch",
+        "quote": "Bd. 12 dtv), l, m, Leipzig 1877–1885; Bd. 16 dtv), seeleben–sprechen, Leipzig 1899–1905",
+        "noteSi": "STRUKTURNA preverba citata: 'Band 16, Spalte 844' NE more vsebovati gesla Lohn (L je v Bd 12: l, m; Bd 16 pokriva seeleben–sprechen). Citat zvezka je napačen; vsebina gesla (Sp. 844) v peskovniku nepreverjena."
+       },
+       {
+        "id": "dwb-raut",
+        "class": "DWB",
+        "verdict": "NEVERIFIKATORNO",
+        "confidence": "?",
+        "method": "unreachable",
+        "url": "https://www.woerterbuchnetz.de/DWB?lemma=Raut",
+        "quote": null,
+        "noteSi": "DWB tekst v peskovniku nedosegljiv (woerterbuchnetz SPA/API 404; zeno.org/archive.org timeout; dwb.bbaw.de → lasten webarchive). Strukturna opomba: R ∈ DWB Bd 14 (r–schiefe) — zvezek citata ni podan, leme ne preverjena. Za človeško preverbo."
+       },
+       {
+        "id": "schmeller-raut",
+        "class": "SCHMELLER",
+        "verdict": "DELNO",
+        "confidence": "?",
+        "method": "wikipedia-api",
+        "url": "https://de.wikipedia.org/wiki/Johann_Andreas_Schmeller",
+        "quote": "Band 3: R und S (1836); 2. Auflage … Band 2: (enthaltend Band 3 und 4 der ersten Auflage) 1877",
+        "noteSi": "STRUKTURNO dvoumno: v 1. izdaji je R v Bd 3 (NE Bd 2); v 2. izdaji (Frommann 1877) je Bd 2 = 1. izd. Bd 3+4 → Raut v Bd 2 ✓. Citat 'Band 2, Sp. 476' je skladen LE z 2. izdajo; izdaja v hipotezi ni navedena; vsebina nepreverjena."
+       }
+      ],
+      "probes": [],
+      "noteSi": "STRUKTURNA preverba citata: 'Band 16, Spalte 844' NE more vsebovati gesla Lohn (L je v Bd 12: l, m; Bd 16 pokriva seeleben–sprechen). Citat zvezka je napačen; vsebina gesla (Sp. 844) v peskovniku nepreverjena. · DWB tekst v peskovniku nedosegljiv (woerterbuchnetz SPA/API 404; zeno.org/archive.org timeout; dwb.bbaw.de → lasten webarchive). Strukturna opomba: R ∈ DWB Bd 14 (r–schiefe) — zvezek citata ni podan, leme ne preverjena. Za človeško preverbo. · STRUKTURNO dvoumno: v 1. izdaji je R v Bd 3 (NE Bd 2); v 2. izdaji (Frommann 1877) je Bd 2 = 1. izd. Bd 3+4 → Raut v Bd 2 ✓. Citat 'Band 2, Sp. 476' je skladen LE z 2. izdajo; izdaja v hipotezi ni navedena; vsebina nepreverjena."
+     }
+    },
+    {
+     "candidate": "Lohn (slov. narečno)",
+     "glossSi": "Narečni izraz za 'log' ali 'dolino', ki bi lahko bil povezan s slovenskim besednim osnovom 'loh-' (povezano z 'log')",
+     "source": "Kärntner Wörterbuch, Band 4, Seite 312",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "NEPOTRJENO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "kaerntner-wb-schulz",
+        "class": "KAERNTNER-WB",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "wikipedia-api",
+        "url": "https://de.wikipedia.org/wiki/Eberhard_Kranzmayer",
+        "quote": "Ab 1958 leitete Kranzmayer … die Wiener Wörterbuchkanzlei, die die Vorarbeiten zum Wörterbuch der bairischen Mundarten in Österreich (WBÖ) leistete.",
+        "noteSi": "'Kärntner Wörterbuch (Schulz, 1972)' NI potrjeno: de.wiki (Kranzmayer) navaja WBÖ (Kranzmayer urednik od 1958), samostojnega 'Kärntner Wörterbuch avtorja Schulz' ni dokumentirano. Citat 'Band 4, Seite 312' (LOHN-RAUT#3) ostaja brez opore; 4 hipoteze na tej atribuciji so NEPOTRJENE."
+       }
+      ],
+      "probes": [],
+      "noteSi": "'Kärntner Wörterbuch (Schulz, 1972)' NI potrjeno: de.wiki (Kranzmayer) navaja WBÖ (Kranzmayer urednik od 1958), samostojnega 'Kärntner Wörterbuch avtorja Schulz' ni dokumentirano. Citat 'Band 4, Seite 312' (LOHN-RAUT#3) ostaja brez opore; 4 hipoteze na tej atribuciji so NEPOTRJENE."
+     }
+    },
+    {
+     "candidate": "Gfüttergütl (nem. dialektalno)",
+     "glossSi": "Ledinsko ime, sestavljeno iz 'Gfütter' (hranjenje, paša) in 'Gütl' (majhno posestvo), ki bi lahko označevalo majhno posestvo za pašo živine",
+     "source": "Schmeller, Bayerisches Wörterbuch, Band 2, Spalte 476",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "DELNO",
+      "confidence": "?",
+      "targets": [
+       {
+        "id": "schmeller-guetl",
+        "class": "SCHMELLER",
+        "verdict": "DELNO",
+        "confidence": "?",
+        "method": "wikipedia-api",
+        "url": "https://de.wikipedia.org/wiki/Johann_Andreas_Schmeller",
+        "quote": "Band 2: G, H, J (Cons.), K, Q, L, M, N (1828); 2. Auflage Band 1: (enthaltend Band 1 und 2 der ersten Auflage) 1872",
+        "noteSi": "G je v 1. izdaji v Bd 2 ✓ (skladno z 'Band 2, Sp. 476'), v 2. izdaji pa v Bd 1 — citat skladen LE z 1. izdajo. POZOR: isti citat 'Band 2, Spalte 476' je naveden TUDI za Raut (ki zahteva 2. izdajo) — verjetno prepisan citat; obe vsebini nepreverjeni."
+       }
+      ],
+      "probes": [],
+      "noteSi": "G je v 1. izdaji v Bd 2 ✓ (skladno z 'Band 2, Sp. 476'), v 2. izdaji pa v Bd 1 — citat skladen LE z 1. izdajo. POZOR: isti citat 'Band 2, Spalte 476' je naveden TUDI za Raut (ki zahteva 2. izdajo) — verjetno prepisan citat; obe vsebini nepreverjeni."
+     }
+    },
+    {
+     "candidate": "Lohn",
+     "glossSi": "Ledinsko ime, verjetno izpeljano iz slovnične oblike 'log' (nižina, dolina), ki se pojavlja v ledinskih imenih v Beli krajini",
+     "source": "SSKJ (Slovar slovenskega knjižnega jezika)",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "NEPOTRJENO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "sskj-log",
+        "class": "SSKJ",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "fran.si-direct",
+        "url": "https://fran.si/133/sskj2-slovar-slovenskega-knjiznega-jezika-2/4491704/log",
+        "quote": "lóg … 1. (močviren) travnik ob vodi, navadno deloma porasel z drevesi: kositi na, v logu",
+        "noteSi": "SSKJ² log = močviren travnik ob vodi, porasel z drevesi — NE 'dolina/grapa/splav lesnih delcev' (LOHN-RAUT#1) in NE 'nižina, dolina' (#5). Pleteršnik lǫ̨g = 'der Hain, der niedere Wald'. Trditvi hipotez sta v neskladju z geslom."
+       }
+      ],
+      "probes": [],
+      "noteSi": "SSKJ² log = močviren travnik ob vodi, porasel z drevesi — NE 'dolina/grapa/splav lesnih delcev' (LOHN-RAUT#1) in NE 'nižina, dolina' (#5). Pleteršnik lǫ̨g = 'der Hain, der niedere Wald'. Trditvi hipotez sta v neskladju z geslom."
+     }
+    }
+   ]
+  },
+  {
+   "id": "LHOPI-LOHIFA",
+   "pairs": 23,
+   "distinctVariants": 4,
+   "block": {
+    "pages": [
+     39,
+     96,
+     127,
+     128,
+     129
+    ],
+    "distinctPages": 5,
+    "parcelsCount": 23,
+    "parcelMin": 708,
+    "parcelMax": 2839,
+    "contiguousRuns": 16
+   },
+   "termTypeHypothesis": "LEDINSKO-IME",
+   "hypotheses": [
+    {
+     "candidate": "Lhopi/Luppa",
+     "glossSi": "Ledinsko ime, verjetno povezano s slovnično obliko 'log' (dolina, dolina z vodo) ali 'lopata' (kot, kotina), kar se ujema z reliefom Belokejanske pokrajine",
+     "source": "SSKJ",
+     "confidence": "~",
+     "inBothPasses": true,
+     "verification": {
+      "verdict": "NEPOTRJENO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "sskj-log",
+        "class": "SSKJ",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "fran.si-direct",
+        "url": "https://fran.si/133/sskj2-slovar-slovenskega-knjiznega-jezika-2/4491704/log",
+        "quote": "lóg … 1. (močviren) travnik ob vodi, navadno deloma porasel z drevesi: kositi na, v logu",
+        "noteSi": "SSKJ² log = močviren travnik ob vodi, porasel z drevesi — NE 'dolina/grapa/splav lesnih delcev' (LOHN-RAUT#1) in NE 'nižina, dolina' (#5). Pleteršnik lǫ̨g = 'der Hain, der niedere Wald'. Trditvi hipotez sta v neskladju z geslom."
+       },
+       {
+        "id": "sskj-lopata",
+        "class": "SSKJ",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "fran.si-direct",
+        "url": "https://fran.si/iskanje?View=1&Query=lopata",
+        "quote": "lopáta … 1. orodje s širokim listom in dolgim držajem za zajemanje, premetavanje sipkega materiala; Pleteršnik: die Schaufel, der Spaten",
+        "noteSi": "SSKJ/Pleteršnik poznata le orodje. Pomena 'lopata (kot, kotina)' ni — trditev LHOPI-LOHIFA#0 ne stoji."
+       }
+      ],
+      "probes": [],
+      "noteSi": "SSKJ² log = močviren travnik ob vodi, porasel z drevesi — NE 'dolina/grapa/splav lesnih delcev' (LOHN-RAUT#1) in NE 'nižina, dolina' (#5). Pleteršnik lǫ̨g = 'der Hain, der niedere Wald'. Trditvi hipotez sta v neskladju z geslom. · SSKJ/Pleteršnik poznata le orodje. Pomena 'lopata (kot, kotina)' ni — trditev LHOPI-LOHIFA#0 ne stoji."
+     }
+    },
+    {
+     "candidate": "Shüfa",
+     "glossSi": "Narečna oblika nemškega 'Schlucht' (soteska, grape) ali 'Schluff' (mulj, ilovica), ki bi lahko označevala lokalno značilnost terena",
+     "source": "Schmeller, Bayerisches Wörterbuch",
+     "confidence": "?",
+     "inBothPasses": true,
+     "verification": {
+      "verdict": "NEVERIFIKATORNO",
+      "confidence": "?",
+      "targets": [
+       {
+        "id": "schmeller-schlucht",
+        "class": "SCHMELLER",
+        "verdict": "NEVERIFIKATORNO",
+        "confidence": "?",
+        "method": "unreachable",
+        "url": "https://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb00005026-2",
+        "quote": null,
+        "noteSi": "Schmeller nedosegljiv; trditev 'Shüfa ← Schlucht' ne preverjena."
+       }
+      ],
+      "probes": [],
+      "noteSi": "Schmeller nedosegljiv; trditev 'Shüfa ← Schlucht' ne preverjena."
+     }
+    },
+    {
+     "candidate": "Lohifa",
+     "glossSi": "Kompozitum nemškega 'Lohe' (mladi gozd, gaj) in slovenskega 'hifa' (hifa, drevesna snov), kar bi lahko označevalo mladi gozd z drevjem",
+     "source": "DWB (Grimm)",
+     "confidence": "?",
+     "inBothPasses": true,
+     "verification": {
+      "verdict": "NEVERIFIKATORNO",
+      "confidence": "?",
+      "targets": [
+       {
+        "id": "dwb-loh",
+        "class": "DWB",
+        "verdict": "NEVERIFIKATORNO",
+        "confidence": "?",
+        "method": "unreachable",
+        "url": "https://www.woerterbuchnetz.de/DWB?lemma=Loh",
+        "quote": null,
+        "noteSi": "DWB nedosegljiv; trditve o 'Lohe = mladi gozd, gaj' (LHOPI-LOHIFA#2) in 'Loh = mokro močvirnato' (LOHGARN#0) ne preverjeni. Za človeško preverbo."
+       }
+      ],
+      "probes": [],
+      "noteSi": "DWB nedosegljiv; trditve o 'Lohe = mladi gozd, gaj' (LHOPI-LOHIFA#2) in 'Loh = mokro močvirnato' (LOHGARN#0) ne preverjeni. Za človeško preverbo."
+     }
+    },
+    {
+     "candidate": "Luppa",
+     "glossSi": "Dialektna oblika nemškega 'Loppe' (kot, kotina) ali 'Luppe' (majhna dolina), ki bi lahko označevala lokalni reliefni element",
+     "source": "Kärntner Wörterbuch",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "NEPOTRJENO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "kaerntner-wb-schulz",
+        "class": "KAERNTNER-WB",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "wikipedia-api",
+        "url": "https://de.wikipedia.org/wiki/Eberhard_Kranzmayer",
+        "quote": "Ab 1958 leitete Kranzmayer … die Wiener Wörterbuchkanzlei, die die Vorarbeiten zum Wörterbuch der bairischen Mundarten in Österreich (WBÖ) leistete.",
+        "noteSi": "'Kärntner Wörterbuch (Schulz, 1972)' NI potrjeno: de.wiki (Kranzmayer) navaja WBÖ (Kranzmayer urednik od 1958), samostojnega 'Kärntner Wörterbuch avtorja Schulz' ni dokumentirano. Citat 'Band 4, Seite 312' (LOHN-RAUT#3) ostaja brez opore; 4 hipoteze na tej atribuciji so NEPOTRJENE."
+       }
+      ],
+      "probes": [],
+      "noteSi": "'Kärntner Wörterbuch (Schulz, 1972)' NI potrjeno: de.wiki (Kranzmayer) navaja WBÖ (Kranzmayer urednik od 1958), samostojnega 'Kärntner Wörterbuch avtorja Schulz' ni dokumentirano. Citat 'Band 4, Seite 312' (LOHN-RAUT#3) ostaja brez opore; 4 hipoteze na tej atribuciji so NEPOTRJENE."
+     }
+    },
+    {
+     "candidate": "Schliffa",
+     "glossSi": "Okrajšava nemškega 'Schlif' (brus, brusilni kamen) ali 'Schluff' (muljna tla), ki bi lahko označevala posebno vrsto tal",
+     "source": "Pleteršnik",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "NEPOTRJENO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "pletersnik-slifa",
+        "class": "PLETERsNIK",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "fran.si-direct",
+        "url": "https://fran.si/iskanje?View=1&Query=šlifa",
+        "quote": "(brez zadetkov za šlifa/šlif/šljif)",
+        "noteSi": "Pleteršnik ne pozna 'šlifa' — LHOPI-LOHIFA#4 (Schlif = brus) nima opore v navedenem viru."
+       },
+       {
+        "id": "pletersnik-slifa2",
+        "class": "PLETERsNIK",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "fran.si-direct",
+        "url": "https://fran.si/136/maks-pletersnik-slovensko-nemski-slovar",
+        "quote": "(Pleteršnik na fran.si: brez zadetka za šlifa)",
+        "noteSi": "Razširitev tarče pletersnik-slifa: Pleteršnik celoten dostopen na fran.si (dict 136) — 'šlifa' ni v njem."
+       }
+      ],
+      "probes": [],
+      "noteSi": "Pleteršnik ne pozna 'šlifa' — LHOPI-LOHIFA#4 (Schlif = brus) nima opore v navedenem viru. · Razširitev tarče pletersnik-slifa: Pleteršnik celoten dostopen na fran.si (dict 136) — 'šlifa' ni v njem."
+     }
+    },
+    {
+     "candidate": "Shüfa",
+     "glossSi": "Verjetno narečna oblika nemškega 'Schupfe' (manjša parcela, posest) ali 'Schöpfung' (ustvaritev, posest). Pogosta Kurrent zamenjava š/sch.",
+     "source": "Schmeller, Bayerisches Wörterbuch",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "NEVERIFIKATORNO",
+      "confidence": "?",
+      "targets": [
+       {
+        "id": "schmeller-schupfe",
+        "class": "SCHMELLER",
+        "verdict": "NEVERIFIKATORNO",
+        "confidence": "?",
+        "method": "unreachable",
+        "url": "https://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb11351207-5",
+        "quote": null,
+        "noteSi": "Schmeller tekst nedosegljiv (digitalizati: 1. izd. Bd 2 bsb10378237; 2. izd. Bd 1 bsb00005026, Bd 2 bsb11351207; register publikationen.badw.de/de/schmeller/index). Trditev Schupfe = manjša parcela ne preverjena."
+       }
+      ],
+      "probes": [],
+      "noteSi": "Schmeller tekst nedosegljiv (digitalizati: 1. izd. Bd 2 bsb10378237; 2. izd. Bd 1 bsb00005026, Bd 2 bsb11351207; register publikationen.badw.de/de/schmeller/index). Trditev Schupfe = manjša parcela ne preverjena."
+     }
+    }
+   ]
+  },
+  {
+   "id": "EINSCHLAG-GUELZE",
+   "pairs": 20,
+   "distinctVariants": 5,
+   "block": {
+    "pages": [
+     76,
+     114
+    ],
+    "distinctPages": 2,
+    "parcelsCount": 20,
+    "parcelMin": 1162,
+    "parcelMax": 2228,
+    "contiguousRuns": 10
+   },
+   "termTypeHypothesis": "LEDINSKO-IME",
+   "hypotheses": [
+    {
+     "candidate": "Gülze",
+     "glossSi": "ledinsko ime za travnike ali pašnike, verjetno v bližini gozda (Einschlag = posek)",
+     "source": "neznano — hipoteza brez dokumentiranega vira",
+     "confidence": "~",
+     "inBothPasses": true,
+     "verification": {
+      "verdict": "BREZ-VIRA",
+      "confidence": "—",
+      "targets": [],
+      "probes": [
+       {
+        "id": "dwb-guelze",
+        "verdict": "NEVERIFIKATORNO",
+        "url": "https://www.woerterbuchnetz.de/DWB?lemma=G%C3%BClze"
+       }
+      ],
+      "noteSi": "DWB nedosegljiv; geslo 'Gülze' (EINSCHLAG-GUELZE) ne preverjeno. Sondirna tarča."
+     }
+    },
+    {
+     "candidate": "Gülze",
+     "glossSi": "ledinsko ime, morda povezano z ledinskim imenom 'Golica' ali 'Golec', ki se pojavlja v Beli krajini in bi lahko označevalo posebno vrsto zemljišča ali njive",
+     "source": "SSKJ",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "DELNO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "sskj-golica",
+        "class": "SSKJ",
+        "verdict": "DELNO",
+        "confidence": "~",
+        "method": "fran.si-direct",
+        "url": "https://fran.si/iskanje?View=1&Query=golica",
+        "quote": "golíca … 1. strm, s travo porasel svet, navadno nad gozdno mejo // strmina, na kateri je bil posekan gozd (SSKJ²); golica je gola strmina, kjer so gozd posekali (Pleteršnik)",
+        "noteSi": "Gesla obstajata: golica = posekana strmina nad gozdno mejo, golec = gol hrib — splošna povezava EINSCHLAG-GUELZE#1 z 'Golica/Golec' je delno opora (posek/gola strmina), izrecni pomen 'njiva' pa ni dokumentiran."
+       }
+      ],
+      "probes": [],
+      "noteSi": "Gesla obstajata: golica = posekana strmina nad gozdno mejo, golec = gol hrib — splošna povezava EINSCHLAG-GUELZE#1 z 'Golica/Golec' je delno opora (posek/gola strmina), izrecni pomen 'njiva' pa ni dokumentiran."
+     }
+    },
+    {
+     "candidate": "Einschlag",
+     "glossSi": "nemški izraz za 'sekundarna goščava' ali 'mlada goščava', ki bi lahko označeval posebno vrsto gozdnega zemljišča",
+     "source": "DWB (Grimm)",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "NEVERIFIKATORNO",
+      "confidence": "?",
+      "targets": [
+       {
+        "id": "dwb-einschlag",
+        "class": "DWB",
+        "verdict": "NEVERIFIKATORNO",
+        "confidence": "?",
+        "method": "unreachable",
+        "url": "https://www.woerterbuchnetz.de/DWB?lemma=Einschlag",
+        "quote": null,
+        "noteSi": "DWB nedosegljiv; trditev 'Einschlag = sekundarna/mlada goščava' (EINSCHLAG-GUELZE#2) ne preverjena. Za človeško preverbo."
+       }
+      ],
+      "probes": [],
+      "noteSi": "DWB nedosegljiv; trditev 'Einschlag = sekundarna/mlada goščava' (EINSCHLAG-GUELZE#2) ne preverjena. Za človeško preverbo."
+     }
+    },
+    {
+     "candidate": "Gfretzgen",
+     "glossSi": "narečni izraz, morda povezan z nemškim 'Frucht' (plod) ali 'Brache' (neobdelavljivo zemljišče)",
+     "source": "Schmeller, Bayerisches Wörterbuch",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "NEVERIFIKATORNO",
+      "confidence": "?",
+      "targets": [
+       {
+        "id": "schmeller-gfretz",
+        "class": "SCHMELLER",
+        "verdict": "NEVERIFIKATORNO",
+        "confidence": "?",
+        "method": "unreachable",
+        "url": "https://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb11351207-5",
+        "quote": null,
+        "noteSi": "Schmeller nedosegljiv; 'Gfretzgen' (~ Frucht/Brache) ne preverjeno."
+       }
+      ],
+      "probes": [],
+      "noteSi": "Schmeller nedosegljiv; 'Gfretzgen' (~ Frucht/Brache) ne preverjeno."
+     }
+    },
+    {
+     "candidate": "Poggi",
+     "glossSi": "ledinsko ime, morda povezano s topografskim imenom 'hrib' ali 'višji del zemljišča'",
+     "source": "SSKJ",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "NEPOTRJENO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "sskj-poggi",
+        "class": "SSKJ",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "fran.si-direct",
+        "url": "https://fran.si/iskanje?View=1&Query=poggi",
+        "quote": "(brez zadetkov)",
+        "noteSi": "'Poggi' (italski izraz za hribe) v SSKJ ne obstaja — EINSCHLAG-GUELZE#4 ne stoji."
+       }
+      ],
+      "probes": [],
+      "noteSi": "'Poggi' (italski izraz za hribe) v SSKJ ne obstaja — EINSCHLAG-GUELZE#4 ne stoji."
+     }
+    }
+   ]
+  },
+  {
+   "id": "EINHART",
+   "pairs": 15,
+   "distinctVariants": 2,
+   "block": {
+    "pages": [
+     80
+    ],
+    "distinctPages": 1,
+    "parcelsCount": 15,
+    "parcelMin": 1644,
+    "parcelMax": 1658,
+    "contiguousRuns": 1
+   },
+   "termTypeHypothesis": "LEDINSKO-IME",
+   "hypotheses": [
+    {
+     "candidate": "Einhart",
+     "glossSi": "Ledinsko ime, verjetno pridevniškega izvora, ki označuje parcelo z značilnostjo 'ena' ali 'edina', ali pa je prevzem nemške besede 'Einhart' (ena hrastovina)",
+     "source": "SSKJ, Bezlaj, Toporišič",
+     "confidence": "~",
+     "inBothPasses": true,
+     "verification": {
+      "verdict": "NEPOTRJENO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "sskj-einhart",
+        "class": "SSKJ",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "fran.si-direct",
+        "url": "https://fran.si/iskanje?View=1&Query=einhart",
+        "quote": "(brez zadetkov)",
+        "noteSi": "'Einhart' v SSKJ ne obstaja; 'ena hrastovina' je neodprta ad hoc etimologija — EINHART#0/#4 ne stojita v navedenih virih."
+       }
+      ],
+      "probes": [],
+      "noteSi": "'Einhart' v SSKJ ne obstaja; 'ena hrastovina' je neodprta ad hoc etimologija — EINHART#0/#4 ne stojita v navedenih virih."
+     }
+    },
+    {
+     "candidate": "Gypfel",
+     "glossSi": "Narečna oblika nemške besede 'Gipfel' (vrh, vrhica), ki se pojavlja kot del kompozitnega ledinskega imena 'Einhart mit Gypfel' (ena hrastovina z vrhom)",
+     "source": "DWB (Grimm), Schmeller, Bayerisches Wörterbuch",
+     "confidence": "~",
+     "inBothPasses": true,
+     "verification": {
+      "verdict": "NEVERIFIKATORNO",
+      "confidence": "?",
+      "targets": [
+       {
+        "id": "gipfel",
+        "class": "DWB+SCHMELLER",
+        "verdict": "NEVERIFIKATORNO",
+        "confidence": "?",
+        "method": "unreachable",
+        "url": "https://www.woerterbuchnetz.de/DWB?lemma=Gipfel",
+        "quote": null,
+        "noteSi": "DWB/Schmeller nedosegljiva; Gipfel = vrh je trivno, a citirana vira nista preverjena."
+       }
+      ],
+      "probes": [],
+      "noteSi": "DWB/Schmeller nedosegljiva; Gipfel = vrh je trivno, a citirana vira nista preverjena."
+     }
+    },
+    {
+     "candidate": "Gypf.",
+     "glossSi": "Okrajšava za 'Gypfel' (vrh), dokumentirana v uradnih dokumentih franciscejskega katastra kot skrajšana obrazna oblika",
+     "source": "AUSWEIS über die Benützungsart des Bodens (PV, 10. 1. 1825)",
+     "confidence": "~",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "NEPOTRJENO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "pv-gypf",
+        "class": "PV",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "deterministic-repo",
+        "url": "research/issue17/PV.json",
+        "quote": "grep 'Gypf' nad PV.json: 0 zadetkov; PS register: 'Einhart mit Gypfel &c.', 'Einhart mit Gypf. &c.', 'Schüttwiese, Gypfang' (ps-landuse-v2.json)",
+        "noteSi": "EINHART#2 trdi, da je okrajšava 'Gypf.' dokumentirana v PV (Nutzungs-Ausweis 1825) — PV.json je ne vsebuje. Okrajšava JE v PS registru samem (tudi 'Gypfang' — dodatna oblika!). Citat vira napačen; dejstvo premaknjeno na pravo mesto (PS)."
+       }
+      ],
+      "probes": [],
+      "noteSi": "EINHART#2 trdi, da je okrajšava 'Gypf.' dokumentirana v PV (Nutzungs-Ausweis 1825) — PV.json je ne vsebuje. Okrajšava JE v PS registru samem (tudi 'Gypfang' — dodatna oblika!). Citat vira napačen; dejstvo premaknjeno na pravo mesto (PS)."
+     }
+    },
+    {
+     "candidate": "mit",
+     "glossSi": "Nemška predloga 'mit' (s, z), ki v kompozitnem imenu povezuje glavno ledinsko ime z dodatnim opisom (vrh), kar je značilno za ledinska imena v tem obdobju",
+     "source": "Schmeller, Bayerisches Wörterbuch",
+     "confidence": "~",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "NEPOTRJENO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "schmeller-mit",
+        "class": "SCHMELLER",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "wikipedia-api",
+        "url": "https://de.wikipedia.org/wiki/Johann_Andreas_Schmeller",
+        "quote": "Digitalizati: bavarikon bav:BSB-CMS-0000000000004050; mdz-nbn-resolving bsb00005026 (2. izd. Bd 1), bsb11351207 (Bd 2); register: publikationen.badw.de/de/schmeller/index",
+        "noteSi": "EINHART#3 ('predloga mit povezuje kompozitno ledinsko ime') NI leksikografska geselna trditev — Schmeller ni slovar predlog; citirani vir trditve ne podpira. Digitalizati Schmellerja so sicer bibliografsko potrjeni (bavarikon/MDZ/BAdW register)."
+       }
+      ],
+      "probes": [],
+      "noteSi": "EINHART#3 ('predloga mit povezuje kompozitno ledinsko ime') NI leksikografska geselna trditev — Schmeller ni slovar predlog; citirani vir trditve ne podpira. Digitalizati Schmellerja so sicer bibliografsko potrjeni (bavarikon/MDZ/BAdW register)."
+     }
+    },
+    {
+     "candidate": "Einhart mit Gypfel",
+     "glossSi": "Kompozitno ledinsko ime, ki združuje glavno ime (ena hrastovina) z opisom (z vrhom), kar je tipično za belokranjsko ledinsko poimenovanje",
+     "source": "Bezlaj, Toporišič, SSKJ",
+     "confidence": "~",
+     "inBothPasses": true,
+     "verification": {
+      "verdict": "NEPOTRJENO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "sskj-einhart",
+        "class": "SSKJ",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "fran.si-direct",
+        "url": "https://fran.si/iskanje?View=1&Query=einhart",
+        "quote": "(brez zadetkov)",
+        "noteSi": "'Einhart' v SSKJ ne obstaja; 'ena hrastovina' je neodprta ad hoc etimologija — EINHART#0/#4 ne stojita v navedenih virih."
+       }
+      ],
+      "probes": [],
+      "noteSi": "'Einhart' v SSKJ ne obstaja; 'ena hrastovina' je neodprta ad hoc etimologija — EINHART#0/#4 ne stojita v navedenih virih."
+     }
+    },
+    {
+     "candidate": "Einhard",
+     "glossSi": "Nemško osebno ime (starofrankovski virilni plemič), ki bi lahko bilo tudi ledinsko ime, če je parcela imenovana po nekdanjem lastniku ali zgodovinski osebi.",
+     "source": "DWB (Deutsches Wörterbuch von Jacob und Wilhelm Grimm)",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "NEVERIFIKATORNO",
+      "confidence": "?",
+      "targets": [
+       {
+        "id": "dwb-einhard",
+        "class": "DWB",
+        "verdict": "NEVERIFIKATORNO",
+        "confidence": "?",
+        "method": "unreachable",
+        "url": "https://www.woerterbuchnetz.de/DWB?lemma=Einhard",
+        "quote": null,
+        "noteSi": "DWB nedosegljiv; Einhard (zgodovinska osebnost) je znan podatek, a DWB-referenca nepreverjena."
+       }
+      ],
+      "probes": [],
+      "noteSi": "DWB nedosegljiv; Einhard (zgodovinska osebnost) je znan podatek, a DWB-referenca nepreverjena."
+     }
+    }
+   ]
+  },
+  {
+   "id": "AHN",
+   "pairs": 13,
+   "distinctVariants": 1,
+   "block": {
+    "pages": [
+     48
+    ],
+    "distinctPages": 1,
+    "parcelsCount": 13,
+    "parcelMin": 906,
+    "parcelMax": 920,
+    "contiguousRuns": 2
+   },
+   "termTypeHypothesis": "LEDINSKO-IME",
+   "hypotheses": [
+    {
+     "candidate": "Ahn",
+     "glossSi": "Ledinsko ime za polje ali travnik, verjetno povezano z zeliščem 'ajna' (Allium) ali s terenom ob reki 'ah' (voda)",
+     "source": "SSKJ",
+     "confidence": "~",
+     "inBothPasses": true,
+     "verification": {
+      "verdict": "NEPOTRJENO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "sskj-ajna",
+        "class": "SSKJ",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "fran.si-direct",
+        "url": "https://fran.si/iskanje?View=1&Query=ajna",
+        "quote": "ájda -e ž (ȃ) kulturna rastlina … (SSKJ²); ȃjda, f. der Buchweizen (Pleteršnik)",
+        "noteSi": "SSKJ ne pozna 'ajna'; najbližje je 'ajda' (Buchweizen). Povezava Ahn↔'ajna (Allium)' ni dokumentirana."
+       }
+      ],
+      "probes": [],
+      "noteSi": "SSKJ ne pozna 'ajna'; najbližje je 'ajda' (Buchweizen). Povezava Ahn↔'ajna (Allium)' ni dokumentirana."
+     }
+    }
+   ]
+  },
+  {
+   "id": "AEFLING",
+   "pairs": 13,
+   "distinctVariants": 1,
+   "block": {
+    "pages": [
+     64
+    ],
+    "distinctPages": 1,
+    "parcelsCount": 13,
+    "parcelMin": 1821,
+    "parcelMax": 1840,
+    "contiguousRuns": 4
+   },
+   "termTypeHypothesis": "LEDINSKO-IME",
+   "hypotheses": [
+    {
+     "candidate": "Äfling",
+     "glossSi": "ledinsko ime, verjetno nemškega izvora, ki se nanaša na parcelo ali območje v občini Griblje",
+     "source": "neznano — hipoteza brez dokumentiranega vira",
+     "confidence": "~",
+     "inBothPasses": true,
+     "verification": {
+      "verdict": "BREZ-VIRA",
+      "confidence": "—",
+      "targets": [],
+      "probes": [],
+      "noteSi": ""
+     }
+    },
+    {
+     "candidate": "Öfling",
+     "glossSi": "ledinsko ime, morda povezano z nemško besedo 'Öde' (neporaščen, opuščen) in pomeni 'puščava' ali 'neporaščeno območje'",
+     "source": "DWB (Grimm), Band 13, Spalte 1505",
+     "confidence": "~",
+     "inBothPasses": true,
+     "verification": {
+      "verdict": "DELNO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "dwb-oede",
+        "class": "DWB",
+        "verdict": "DELNO",
+        "confidence": "~",
+        "method": "wikipedia-api",
+        "url": "https://de.wikipedia.org/wiki/Deutsches_W%C3%B6rterbuch",
+        "quote": "Bd. 13 dtv), n, o, p, q, Leipzig 1881–1889",
+        "noteSi": "STRUKTURNO skladno: O res je v DWB Bd 13 — 'Band 13, Spalte 1505' (AEFLING#1) je zvezčno možen; vsebina gesla (Öde) v peskovniku nepreverjena."
+       }
+      ],
+      "probes": [],
+      "noteSi": "STRUKTURNO skladno: O res je v DWB Bd 13 — 'Band 13, Spalte 1505' (AEFLING#1) je zvezčno možen; vsebina gesla (Öde) v peskovniku nepreverjena."
+     }
+    },
+    {
+     "candidate": "Afling",
+     "glossSi": "ledinsko ime, morda povezano z nemško besedo 'Aue' (rečna naplavna ravan) in pomeni 'poplavno območje'",
+     "source": "DWB (Grimm), Band 1, Spalte 748",
+     "confidence": "?",
+     "inBothPasses": true,
+     "verification": {
+      "verdict": "DELNO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "dwb-aue",
+        "class": "DWB",
+        "verdict": "DELNO",
+        "confidence": "~",
+        "method": "wikipedia-api",
+        "url": "https://de.wikipedia.org/wiki/Deutsches_W%C3%B6rterbuch",
+        "quote": "Bd. 1 dtv), a–biermolke, Leipzig 1852–1854",
+        "noteSi": "STRUKTURNO skladno: A je v DWB Bd 1 — 'Band 1, Spalte 748' (AEFLING#2, Aue) je zvezčno možen; vsebina nepreverjena."
+       }
+      ],
+      "probes": [],
+      "noteSi": "STRUKTURNO skladno: A je v DWB Bd 1 — 'Band 1, Spalte 748' (AEFLING#2, Aue) je zvezčno možen; vsebina nepreverjena."
+     }
+    },
+    {
+     "candidate": "Hofling",
+     "glossSi": "ledinsko ime, povezano z nemško besedo 'Hof' (kmetija, dvorec) in pomeni 'območje pri kmetiji'",
+     "source": "DWB (Grimm), Band 13, Spalte 742",
+     "confidence": "?",
+     "inBothPasses": true,
+     "verification": {
+      "verdict": "NEPOTRJENO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "dwb-hofling",
+        "class": "DWB",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "wikipedia-api",
+        "url": "https://de.wikipedia.org/wiki/Deutsches_W%C3%B6rterbuch",
+        "quote": "Bd. 10 dtv), h, i, j, Leipzig 1868–1877; Bd. 13 dtv), n, o, p, q",
+        "noteSi": "STRUKTURNA preverba: 'Band 13, Spalte 742' NE more vsebovati gesla Höfling (H je v Bd 10: h, i, j; Bd 13 = n, o, p, q). Citat zvezka napačen."
+       }
+      ],
+      "probes": [],
+      "noteSi": "STRUKTURNA preverba: 'Band 13, Spalte 742' NE more vsebovati gesla Höfling (H je v Bd 10: h, i, j; Bd 13 = n, o, p, q). Citat zvezka napačen."
+     }
+    },
+    {
+     "candidate": "Efling",
+     "glossSi": "ledinsko ime, morda povezano z nemško besedo 'Efeu' (bršlen) in pomeni 'območje, poraslo z bršlenom'",
+     "source": "DWB (Grimm), Band 6, Spalte 102",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "NEPOTRJENO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "dwb-efeu",
+        "class": "DWB",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "wikipedia-api",
+        "url": "https://de.wikipedia.org/wiki/Deutsches_W%C3%B6rterbuch",
+        "quote": "Bd. 3 dtv), e–forsche, Leipzig 1859–1862; Bd. 6 dtv), getreide–gewöhniglich",
+        "noteSi": "STRUKTURNA preverba: 'Band 6, Spalte 102' NE more vsebovati gesla Efeu (E je v Bd 3: e–forsche; Bd 6 = getreide–gewöhniglich). Citat zvezka napačen."
+       }
+      ],
+      "probes": [],
+      "noteSi": "STRUKTURNA preverba: 'Band 6, Spalte 102' NE more vsebovati gesla Efeu (E je v Bd 3: e–forsche; Bd 6 = getreide–gewöhniglich). Citat zvezka napačen."
+     }
+    },
+    {
+     "candidate": "Öfling",
+     "glossSi": "ledinsko ime, verjetno nemškega izvora, povezano z 'Ödung' (ogrodena zemlja) ali 'Auflehen' (obdelava zemlje)",
+     "source": "DWB (Grimm)",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "DELNO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "dwb-oede",
+        "class": "DWB",
+        "verdict": "DELNO",
+        "confidence": "~",
+        "method": "wikipedia-api",
+        "url": "https://de.wikipedia.org/wiki/Deutsches_W%C3%B6rterbuch",
+        "quote": "Bd. 13 dtv), n, o, p, q, Leipzig 1881–1889",
+        "noteSi": "STRUKTURNO skladno: O res je v DWB Bd 13 — 'Band 13, Spalte 1505' (AEFLING#1) je zvezčno možen; vsebina gesla (Öde) v peskovniku nepreverjena."
+       }
+      ],
+      "probes": [],
+      "noteSi": "STRUKTURNO skladno: O res je v DWB Bd 13 — 'Band 13, Spalte 1505' (AEFLING#1) je zvezčno možen; vsebina gesla (Öde) v peskovniku nepreverjena."
+     }
+    }
+   ]
+  },
+  {
+   "id": "GUETEN",
+   "pairs": 12,
+   "distinctVariants": 2,
+   "block": {
+    "pages": [
+     17,
+     48
+    ],
+    "distinctPages": 2,
+    "parcelsCount": 12,
+    "parcelMin": 283,
+    "parcelMax": 908,
+    "contiguousRuns": 6
+   },
+   "termTypeHypothesis": "LEDINSKO-IME",
+   "hypotheses": [
+    {
+     "candidate": "Güten/Gütung",
+     "glossSi": "Ledinsko ime, morda povezano s slovanskim korenom 'gut' (dobro) ali nemškim 'gut' (dobrih, dobrega)",
+     "source": "SSKJ",
+     "confidence": "?",
+     "inBothPasses": true,
+     "verification": {
+      "verdict": "NEPOTRJENO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "sskj-guten",
+        "class": "SSKJ",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "fran.si-direct",
+        "url": "https://fran.si/iskanje?View=1&Query=guten",
+        "quote": "gūta, f. die Apoplexie (Pleteršnik); SSKJ² brez 'guten'",
+        "noteSi": "SSKJ ne pozna 'guten' — GUETEN#0 ('slovanski koren gut (dobro)') se na SSKJ ne more opreti."
+       }
+      ],
+      "probes": [],
+      "noteSi": "SSKJ ne pozna 'guten' — GUETEN#0 ('slovanski koren gut (dobro)') se na SSKJ ne more opreti."
+     }
+    },
+    {
+     "candidate": "Güten",
+     "glossSi": "Ledinsko ime, verjetno izpeljano iz nemške besede 'Gut' (posest, kmetija), ki v tem kontekstu označuje posestvo ali zemljišče v lasti kmetije.",
+     "source": "DWB (Deutsches Wörterbuch, Grimm), 'Gut'",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "NEVERIFIKATORNO",
+      "confidence": "?",
+      "targets": [
+       {
+        "id": "dwb-gut",
+        "class": "DWB",
+        "verdict": "NEVERIFIKATORNO",
+        "confidence": "?",
+        "method": "unreachable",
+        "url": "https://www.woerterbuchnetz.de/DWB?lemma=Gut",
+        "quote": null,
+        "noteSi": "DWB nedosegljiv; Gut = posest/kmetija je splošno znano, a v navedenem viru nepreverjeno."
+       }
+      ],
+      "probes": [],
+      "noteSi": "DWB nedosegljiv; Gut = posest/kmetija je splošno znano, a v navedenem viru nepreverjeno."
+     }
+    },
+    {
+     "candidate": "Gütung",
+     "glossSi": "Pomanjševalna ali narečna oblika 'Güten', ki bi lahko pomenila 'majhno posestvo' ali 'del kmetije' v belokranjskem narečnem okolju.",
+     "source": "Kärntner Wörterbuch (Schulz, 1972)",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "NEPOTRJENO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "kaerntner-wb-schulz",
+        "class": "KAERNTNER-WB",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "wikipedia-api",
+        "url": "https://de.wikipedia.org/wiki/Eberhard_Kranzmayer",
+        "quote": "Ab 1958 leitete Kranzmayer … die Wiener Wörterbuchkanzlei, die die Vorarbeiten zum Wörterbuch der bairischen Mundarten in Österreich (WBÖ) leistete.",
+        "noteSi": "'Kärntner Wörterbuch (Schulz, 1972)' NI potrjeno: de.wiki (Kranzmayer) navaja WBÖ (Kranzmayer urednik od 1958), samostojnega 'Kärntner Wörterbuch avtorja Schulz' ni dokumentirano. Citat 'Band 4, Seite 312' (LOHN-RAUT#3) ostaja brez opore; 4 hipoteze na tej atribuciji so NEPOTRJENE."
+       }
+      ],
+      "probes": [],
+      "noteSi": "'Kärntner Wörterbuch (Schulz, 1972)' NI potrjeno: de.wiki (Kranzmayer) navaja WBÖ (Kranzmayer urednik od 1958), samostojnega 'Kärntner Wörterbuch avtorja Schulz' ni dokumentirano. Citat 'Band 4, Seite 312' (LOHN-RAUT#3) ostaja brez opore; 4 hipoteze na tej atribuciji so NEPOTRJENE."
+     }
+    },
+    {
+     "candidate": "Güten/Gütung",
+     "glossSi": "Slovenska narečna beseda, ki bi lahko pomenila 'kraj s travo' ali 'travnik', izpeljana iz slovenske besede 'trava' preko nemškega vpliva.",
+     "source": "SSKJ (Slovenski slovar knjižnega jezika)",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "NEPOTRJENO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "sskj-trava",
+        "class": "SSKJ",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "fran.si-direct",
+        "url": "https://fran.si/iskanje?View=1&Query=trava",
+        "quote": "tráva -e ž (á) 1. rastlina z dolgimi ozkimi listi … (SSKJ²)",
+        "noteSi": "Geslo 'trava' obstaja, a veriga GUETEN#3 ('Güten ← trava preko nemškega vpliva') ni dokumentirana nikjer — obstoj gesla ne podpira trditve."
+       }
+      ],
+      "probes": [],
+      "noteSi": "Geslo 'trava' obstaja, a veriga GUETEN#3 ('Güten ← trava preko nemškega vpliva') ni dokumentirana nikjer — obstoj gesla ne podpira trditve."
+     }
+    }
+   ]
+  },
+  {
+   "id": "ERDAR",
+   "pairs": 10,
+   "distinctVariants": 4,
+   "block": {
+    "pages": [
+     23,
+     83
+    ],
+    "distinctPages": 2,
+    "parcelsCount": 10,
+    "parcelMin": 168,
+    "parcelMax": 420,
+    "contiguousRuns": 6
+   },
+   "termTypeHypothesis": "LEDINSKO-IME",
+   "hypotheses": [
+    {
+     "candidate": "Achm/Achat",
+     "glossSi": "ledinsko ime za njivo, ki je dokumentirano v Beli krajini; morebita krajšava ali dialektna oblika besede 'Acker' (njiva)",
+     "source": "SSKJ",
+     "confidence": "~",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "NEPOTRJENO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "sskj-jedar",
+        "class": "SSKJ",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "fran.si-direct",
+        "url": "https://fran.si/iskanje?View=1&Query=jedar",
+        "quote": "(brez zadetkov)",
+        "noteSi": "'jedar' v SSKJ/Pleteršniku NE obstaja — ERDAR#0/#1 se ne more opreti na SSKJ."
+       }
+      ],
+      "probes": [],
+      "noteSi": "'jedar' v SSKJ/Pleteršniku NE obstaja — ERDAR#0/#1 se ne more opreti na SSKJ."
+     }
+    },
+    {
+     "candidate": "Eidar/Erdar",
+     "glossSi": "ledinsko ime za njivo, verjetno dialektna oblika slovenske besede 'jedar' (njiva, posest) ali 'erdar' (zemlja, posest)",
+     "source": "SSKJ",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "NEPOTRJENO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "sskj-jedar",
+        "class": "SSKJ",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "fran.si-direct",
+        "url": "https://fran.si/iskanje?View=1&Query=jedar",
+        "quote": "(brez zadetkov)",
+        "noteSi": "'jedar' v SSKJ/Pleteršniku NE obstaja — ERDAR#0/#1 se ne more opreti na SSKJ."
+       }
+      ],
+      "probes": [],
+      "noteSi": "'jedar' v SSKJ/Pleteršniku NE obstaja — ERDAR#0/#1 se ne more opreti na SSKJ."
+     }
+    },
+    {
+     "candidate": "Achm/Eidar/Erdar",
+     "glossSi": "Ledinsko ime polja v Beli krajini, zapisano v nemški Kurrent pisavi. Pojavlja se v stolpcu rabe kot specifična oznaka za parcelo, ki ni uradna kategorija.",
+     "source": "Bezlaj, France. 1976-1978. Slovar slovenskih narečij. Zv. 1-4. Ljubljana: SAZU.",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "NEPOTRJENO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "bezlaj-sss",
+        "class": "BEZLAJ",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "wikipedia-api",
+        "url": "https://sl.wikipedia.org/wiki/France_Bezlaj",
+        "quote": "Najpomembnejša dela: Oris slovenskega knjižnega izgovora (1939); Slovenska vodna imena I-II (1956–61); Eseji o slovenskem jeziku (1967); Etimološki slovar slovenskega jezika I-V (1976, 1982, 1995, 2005 …); Zbrani jezikoslovni spisi I-II (2003)",
+        "noteSi": "Atribucije 'Bezlaj, Slovar slovenskih narečij 1976–1978 Zv. 1–4' (ERDAR#2), 'Bezlaj, Slovenski narečni atlas' (WING#1) in 'Bezlaj … narečni atlas, 1. knjiga' (SCHINDEL#2) NE stojijo: v Bezlajevem seznamu del (sl.wiki) SSN in SLA NISTA; SSN izhaja od 1979 (uredniki Logar/Ramovš nasledstvo), SLA pa je sodobni ZRC projekt — obe trditvi napačno pripisujeta delo."
+       }
+      ],
+      "probes": [],
+      "noteSi": "Atribucije 'Bezlaj, Slovar slovenskih narečij 1976–1978 Zv. 1–4' (ERDAR#2), 'Bezlaj, Slovenski narečni atlas' (WING#1) in 'Bezlaj … narečni atlas, 1. knjiga' (SCHINDEL#2) NE stojijo: v Bezlajevem seznamu del (sl.wiki) SSN in SLA NISTA; SSN izhaja od 1979 (uredniki Logar/Ramovš nasledstvo), SLA pa je sodobni ZRC projekt — obe trditvi napačno pripisujeta delo."
+     }
+    },
+    {
+     "candidate": "Achat",
+     "glossSi": "Okrajšava ali narečna oblika za 'Acker' (njiva), vendar je nejasno, zakaj se pojavi poleg drugih variant iste družine.",
+     "source": "DWB (Grimm, Jacob und Wilhelm). Deutsches Wörterbuch. 16 Bde. in 32 Teilbänden. Leipzig: S. Hirzel, 1854–1961.",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "NEVERIFIKATORNO",
+      "confidence": "?",
+      "targets": [
+       {
+        "id": "dwb-acker",
+        "class": "DWB",
+        "verdict": "NEVERIFIKATORNO",
+        "confidence": "?",
+        "method": "unreachable",
+        "url": "https://www.woerterbuchnetz.de/DWB?lemma=Acker",
+        "quote": null,
+        "noteSi": "DWB nedosegljiv; trditev 'Achat = okrajšava za Acker' (ERDAR#3) je neobičajna in ne preverjena."
+       }
+      ],
+      "probes": [],
+      "noteSi": "DWB nedosegljiv; trditev 'Achat = okrajšava za Acker' (ERDAR#3) je neobičajna in ne preverjena."
+     }
+    },
+    {
+     "candidate": "Erdar",
+     "glossSi": "Morda prevzem nemške besede 'Erde' (zemlja) v lokalnem kontekstu, vendar je vsebinsko nejasno.",
+     "source": "neznano — hipoteza brez dokumentiranega vira",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "BREZ-VIRA",
+      "confidence": "—",
+      "targets": [],
+      "probes": [],
+      "noteSi": ""
+     }
+    },
+    {
+     "candidate": "Achm",
+     "glossSi": "Morda narečna oblika za 'Acker' (njiva) z vplivom lokalnega izgovora, kjer je 'r' zamenjan z 'l' zaradi Kurrent zamenjav.",
+     "source": "Schmeller, Johann Andreas. 1827. Bayerisches Wörterbuch. München: J.G. Cotta'sche Buchhandlung.",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "NEVERIFIKATORNO",
+      "confidence": "?",
+      "targets": [
+       {
+        "id": "schmeller-acker",
+        "class": "SCHMELLER",
+        "verdict": "NEVERIFIKATORNO",
+        "confidence": "?",
+        "method": "unreachable",
+        "url": "https://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb11351207-5",
+        "quote": null,
+        "noteSi": "Schmeller nedosegljiv; 'Achm = narečna oblika Acker' ne preverjeno."
+       }
+      ],
+      "probes": [],
+      "noteSi": "Schmeller nedosegljiv; 'Achm = narečna oblika Acker' ne preverjeno."
+     }
+    }
+   ]
+  },
+  {
+   "id": "DINGF",
+   "pairs": 10,
+   "distinctVariants": 1,
+   "block": {
+    "pages": [
+     83
+    ],
+    "distinctPages": 1,
+    "parcelsCount": 10,
+    "parcelMin": 161,
+    "parcelMax": 177,
+    "contiguousRuns": 5
+   },
+   "termTypeHypothesis": "LEDINSKO-IME",
+   "hypotheses": [
+    {
+     "candidate": "Dingf",
+     "glossSi": "Ledinsko ime, ki najverjetneje označuje posebno parcelo ali območje. Pojavlja se v stolpcu rabe, kar kaže, da gre za ime zemljiščne enote ali posebnega dela zemljišča, ne pa za splošno kulturo.",
+     "source": "neznano — hipoteza brez dokumentiranega vira",
+     "confidence": "?",
+     "inBothPasses": true,
+     "verification": {
+      "verdict": "BREZ-VIRA",
+      "confidence": "—",
+      "targets": [],
+      "probes": [],
+      "noteSi": ""
+     }
+    },
+    {
+     "candidate": "Tingf",
+     "glossSi": "Mogoče povezano z nemško besedo 'Ding' (stvar, predmet) ali 'Ting' (zbor, sodišče), vendar to ni dokumentirano v kontekstu zemljiščnih imen.",
+     "source": "neznano — hipoteza brez dokumentiranega vira",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "BREZ-VIRA",
+      "confidence": "—",
+      "targets": [],
+      "probes": [],
+      "noteSi": ""
+     }
+    },
+    {
+     "candidate": "Ding",
+     "glossSi": "Nemška beseda 'Ding' pomeni 'stvar' ali 'predmet', vendar ni dokumentirano v kontekstu zemljiščnih imen ali rabe zemljišč.",
+     "source": "DWB (Grimm)",
+     "confidence": "~",
+     "inBothPasses": true,
+     "verification": {
+      "verdict": "NEVERIFIKATORNO",
+      "confidence": "?",
+      "targets": [
+       {
+        "id": "dwb-ding",
+        "class": "DWB",
+        "verdict": "NEVERIFIKATORNO",
+        "confidence": "?",
+        "method": "unreachable",
+        "url": "https://www.woerterbuchnetz.de/DWB?lemma=Ding",
+        "quote": null,
+        "noteSi": "DWB nedosegljiv; Ding = stvar/zbor/sodišče je splošno znano, a v navedenem viru nepreverjeno."
+       }
+      ],
+      "probes": [],
+      "noteSi": "DWB nedosegljiv; Ding = stvar/zbor/sodišče je splošno znano, a v navedenem viru nepreverjeno."
+     }
+    },
+    {
+     "candidate": "Dingl",
+     "glossSi": "Mogoče narečna oblika nemške besede 'Dingel' ali 'Dingelmann', kar bi lahko označovalo majhno posest ali del zemljišča.",
+     "source": "neznano — hipoteza brez dokumentiranega vira",
+     "confidence": "~",
+     "inBothPasses": true,
+     "verification": {
+      "verdict": "BREZ-VIRA",
+      "confidence": "—",
+      "targets": [],
+      "probes": [],
+      "noteSi": ""
+     }
+    },
+    {
+     "candidate": "Dingel",
+     "glossSi": "Nemška beseda 'Dingel' lahko pomeni majhen del ali kos zemljišča, vendar ni dokumentirano v kontekstu rabe zemljišč.",
+     "source": "neznano — hipoteza brez dokumentiranega vira",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "BREZ-VIRA",
+      "confidence": "—",
+      "targets": [],
+      "probes": [],
+      "noteSi": ""
+     }
+    },
+    {
+     "candidate": "Dingb",
+     "glossSi": "mogoče narečna oblika za 'Dingel' ali 'Dingelbach",
+     "source": "Kärntner Wörterbuch",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "NEPOTRJENO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "kaerntner-wb-schulz",
+        "class": "KAERNTNER-WB",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "wikipedia-api",
+        "url": "https://de.wikipedia.org/wiki/Eberhard_Kranzmayer",
+        "quote": "Ab 1958 leitete Kranzmayer … die Wiener Wörterbuchkanzlei, die die Vorarbeiten zum Wörterbuch der bairischen Mundarten in Österreich (WBÖ) leistete.",
+        "noteSi": "'Kärntner Wörterbuch (Schulz, 1972)' NI potrjeno: de.wiki (Kranzmayer) navaja WBÖ (Kranzmayer urednik od 1958), samostojnega 'Kärntner Wörterbuch avtorja Schulz' ni dokumentirano. Citat 'Band 4, Seite 312' (LOHN-RAUT#3) ostaja brez opore; 4 hipoteze na tej atribuciji so NEPOTRJENE."
+       }
+      ],
+      "probes": [],
+      "noteSi": "'Kärntner Wörterbuch (Schulz, 1972)' NI potrjeno: de.wiki (Kranzmayer) navaja WBÖ (Kranzmayer urednik od 1958), samostojnega 'Kärntner Wörterbuch avtorja Schulz' ni dokumentirano. Citat 'Band 4, Seite 312' (LOHN-RAUT#3) ostaja brez opore; 4 hipoteze na tej atribuciji so NEPOTRJENE."
+     }
+    }
+   ]
+  },
+  {
+   "id": "LUKIG",
+   "pairs": 10,
+   "distinctVariants": 1,
+   "block": {
+    "pages": [
+     59
+    ],
+    "distinctPages": 1,
+    "parcelsCount": 10,
+    "parcelMin": 1121,
+    "parcelMax": 1141,
+    "contiguousRuns": 7
+   },
+   "termTypeHypothesis": "LEDINSKO-IME",
+   "hypotheses": [
+    {
+     "candidate": "Lukig",
+     "glossSi": "Ledinsko ime za polje ali travnik v Beli krajini, verjetno povezano z osebnim imenom Luka ali podobno",
+     "source": "SSKJ (Slovenski slovar knjižnega in književnega jezika)",
+     "confidence": "~",
+     "inBothPasses": true,
+     "verification": {
+      "verdict": "NEPOTRJENO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "sskj-luka",
+        "class": "SSKJ",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "fran.si-direct",
+        "url": "https://fran.si/iskanje?View=1&Query=luka",
+        "quote": "lúka -e ž (ú) kraj, prostor ob obali, urejen za pristajanje ladij (SSKJ²)",
+        "noteSi": "SSKJ lúka = pristanišče; osebna imena SSKJ (splošni slovar) ne ureja. Trditev LUKIG#0 (osebno ime Luka) ni dokumentirana v navedenem viru."
+       }
+      ],
+      "probes": [],
+      "noteSi": "SSKJ lúka = pristanišče; osebna imena SSKJ (splošni slovar) ne ureja. Trditev LUKIG#0 (osebno ime Luka) ni dokumentirana v navedenem viru."
+     }
+    },
+    {
+     "candidate": "Luckig",
+     "glossSi": "Narečna oblika nemške besede 'Luch' (močvirje, barje), ki je v Beli krajini pogost izposojenica",
+     "source": "Schmeller, Johann Andreas. Bayerisches Wörterbuch. München: C.H. Beck, 1827–1837",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "NEPOTRJENO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "schmeller-luch",
+        "class": "SCHMELLER",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "wikipedia-api",
+        "url": "https://de.wikipedia.org/wiki/Johann_Andreas_Schmeller",
+        "quote": "1. Auflage: Cotta, Stuttgart und Tübingen (1827–1837)",
+        "noteSi": "Bibliografska preverba atribucije LUKIG#1: 'München: C.H. Beck, 1827–1837' NE stoji — 1. izdaja je izšla pri Cotta (Stuttgart/Tübingen), ne pri C.H. Beck. Geslo 'Luch' v peskovniku nepreverjeno."
+       }
+      ],
+      "probes": [],
+      "noteSi": "Bibliografska preverba atribucije LUKIG#1: 'München: C.H. Beck, 1827–1837' NE stoji — 1. izdaja je izšla pri Cotta (Stuttgart/Tübingen), ne pri C.H. Beck. Geslo 'Luch' v peskovniku nepreverjeno."
+     }
+    }
+   ]
+  },
+  {
+   "id": "LHIZ",
+   "pairs": 9,
+   "distinctVariants": 2,
+   "block": {
+    "pages": [
+     58
+    ],
+    "distinctPages": 1,
+    "parcelsCount": 9,
+    "parcelMin": 1103,
+    "parcelMax": 1120,
+    "contiguousRuns": 6
+   },
+   "termTypeHypothesis": "LEDINSKO-IME",
+   "hypotheses": [
+    {
+     "candidate": "Lhize/Lhizl",
+     "glossSi": "Ledinsko ime, verjetno povezano s slovnično obliko 'liza' (majhen travnik, njiva v gozdu ali ob njem)",
+     "source": "SSKJ",
+     "confidence": "~",
+     "inBothPasses": true,
+     "verification": {
+      "verdict": "NEPOTRJENO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "sskj-liza",
+        "class": "SSKJ",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "fran.si-direct",
+        "url": "https://fran.si/iskanje?View=1&Query=liza",
+        "quote": "líza, f. kdor rad liže, der Lecker, Valj. (Rad); — der Schmeichler (Pleteršnik)",
+        "noteSi": "SSKJ/Pleteršnik líza = 'kdor rad liže' (Lecker/Schmeichler) — NI 'majhen travnik/njiva v gozdu'. Trditev LHIZ#0 ne stoji v navedenem viru (LHIZ se sicer 9/9 vrača iz padca Wiese — kontekst travniški, a SSKJ 'liza' tega ne dokumentira)."
+       }
+      ],
+      "probes": [],
+      "noteSi": "SSKJ/Pleteršnik líza = 'kdor rad liže' (Lecker/Schmeichler) — NI 'majhen travnik/njiva v gozdu'. Trditev LHIZ#0 ne stoji v navedenem viru (LHIZ se sicer 9/9 vrača iz padca Wiese — kontekst travniški, a SSKJ 'liza' tega ne dokumentira)."
+     }
+    }
+   ]
+  },
+  {
+   "id": "LOHGARN",
+   "pairs": 7,
+   "distinctVariants": 1,
+   "block": {
+    "pages": [
+     29
+    ],
+    "distinctPages": 1,
+    "parcelsCount": 7,
+    "parcelMin": 527,
+    "parcelMax": 539,
+    "contiguousRuns": 3
+   },
+   "termTypeHypothesis": "LEDINSKO-IME",
+   "hypotheses": [
+    {
+     "candidate": "Lohgarn",
+     "glossSi": "ledinsko ime za parcelo, verjetno sestavljeno iz nemškega 'Loh' (mokro, močvirnato območje) in 'Garn' (morda pridevnik 'kolen', 'kolenast', ali pa gre za krajevni pridevnik)",
+     "source": "neznano — hipoteza brez dokumentiranega vira",
+     "confidence": "~",
+     "inBothPasses": true,
+     "verification": {
+      "verdict": "BREZ-VIRA",
+      "confidence": "—",
+      "targets": [],
+      "probes": [],
+      "noteSi": ""
+     }
+    },
+    {
+     "candidate": "Logarn",
+     "glossSi": "ledinsko ime, izpeljano iz slovanskega 'log' (dolina, gozdna dolina), s pripono '-arn', ki je v slovenščini pogosta za označevanje krajev",
+     "source": "SSKJ",
+     "confidence": "?",
+     "inBothPasses": true,
+     "verification": {
+      "verdict": "NEPOTRJENO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "sskj-log",
+        "class": "SSKJ",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "fran.si-direct",
+        "url": "https://fran.si/133/sskj2-slovar-slovenskega-knjiznega-jezika-2/4491704/log",
+        "quote": "lóg … 1. (močviren) travnik ob vodi, navadno deloma porasel z drevesi: kositi na, v logu",
+        "noteSi": "SSKJ² log = močviren travnik ob vodi, porasel z drevesi — NE 'dolina/grapa/splav lesnih delcev' (LOHN-RAUT#1) in NE 'nižina, dolina' (#5). Pleteršnik lǫ̨g = 'der Hain, der niedere Wald'. Trditvi hipotez sta v neskladju z geslom."
+       }
+      ],
+      "probes": [],
+      "noteSi": "SSKJ² log = močviren travnik ob vodi, porasel z drevesi — NE 'dolina/grapa/splav lesnih delcev' (LOHN-RAUT#1) in NE 'nižina, dolina' (#5). Pleteršnik lǫ̨g = 'der Hain, der niedere Wald'. Trditvi hipotez sta v neskladju z geslom."
+     }
+    },
+    {
+     "candidate": "Lochgarn",
+     "glossSi": "ledinsko ime, nemškega izvora, kjer 'Loch' pomeni 'luknja' ali 'odprtina', kar bi lahko označevalo obliko zemljišča",
+     "source": "DWB (Grimm)",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "NEVERIFIKATORNO",
+      "confidence": "?",
+      "targets": [
+       {
+        "id": "dwb-loch",
+        "class": "DWB",
+        "verdict": "NEVERIFIKATORNO",
+        "confidence": "?",
+        "method": "unreachable",
+        "url": "https://www.woerterbuchnetz.de/DWB?lemma=Loch",
+        "quote": null,
+        "noteSi": "DWB nedosegljiv; trditev Loch = luknja/odprtina je trivna, a v navedenem viru nepreverjena."
+       }
+      ],
+      "probes": [],
+      "noteSi": "DWB nedosegljiv; trditev Loch = luknja/odprtina je trivna, a v navedenem viru nepreverjena."
+     }
+    },
+    {
+     "candidate": "Ložgarn",
+     "glossSi": "Mogoče narečna oblika, povezana s 'loža' (suha dolina, brezvodno mesto) in '-garn' (kraj, površina). V kurrentnem pisanju je 'ž' pogosto zapisan kot 'sch', kar bi lahko pojasnilo zapis.",
+     "source": "Bezlaj",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "NEVERIFIKATORNO",
+      "confidence": "?",
+      "targets": [
+       {
+        "id": "bezlaj-log",
+        "class": "BEZLAJ",
+        "verdict": "NEVERIFIKATORNO",
+        "confidence": "?",
+        "method": "wikipedia-api",
+        "url": "https://sl.wikipedia.org/wiki/France_Bezlaj",
+        "quote": "Etimološki slovar slovenskega jezika I-V (1976, 1982, 1995, 2005; tretjo in četrto knjigo sta dokončala … Snoj in Furlan, peto /kazala/ … Snoj in Klemenčič)",
+        "noteSi": "ESSJ bibliografsko POTRJEN, a leta '1976–2008' (LHUT-JEDRO#1) so natančneje '1976–2005' (knjiga 4/5: 2005). Gesla lȕh/lǫg so v tiskani izdaji — v peskovniku nedostopna; potrjena je le bibliografija, ne vsebina."
+       }
+      ],
+      "probes": [],
+      "noteSi": "ESSJ bibliografsko POTRJEN, a leta '1976–2008' (LHUT-JEDRO#1) so natančneje '1976–2005' (knjiga 4/5: 2005). Gesla lȕh/lǫg so v tiskani izdaji — v peskovniku nedostopna; potrjena je le bibliografija, ne vsebina."
+     }
+    },
+    {
+     "candidate": "Lugarn",
+     "glossSi": "Povezava z nemškim 'Luge' (mokro, močvirnato mesto) in '-garn' (kraj). V kurrentnem pisanju je 'u' in 'n' pogosto zamenjano, kar bi lahko pojasnilo različice zapisa.",
+     "source": "DWB (Grimm)",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "NEVERIFIKATORNO",
+      "confidence": "?",
+      "targets": [
+       {
+        "id": "dwb-luge",
+        "class": "DWB",
+        "verdict": "NEVERIFIKATORNO",
+        "confidence": "?",
+        "method": "unreachable",
+        "url": "https://www.woerterbuchnetz.de/DWB?lemma=Luge",
+        "quote": null,
+        "noteSi": "DWB nedosegljiv; geslo 'Luge' in pomen 'mokro, močvirnato mesto' ne preverjena."
+       }
+      ],
+      "probes": [],
+      "noteSi": "DWB nedosegljiv; geslo 'Luge' in pomen 'mokro, močvirnato mesto' ne preverjena."
+     }
+    }
+   ]
+  },
+  {
+   "id": "HURGI",
+   "pairs": 5,
+   "distinctVariants": 1,
+   "block": {
+    "pages": [
+     46
+    ],
+    "distinctPages": 1,
+    "parcelsCount": 5,
+    "parcelMin": 866,
+    "parcelMax": 879,
+    "contiguousRuns": 3
+   },
+   "termTypeHypothesis": "LEDINSKO-IME",
+   "hypotheses": [
+    {
+     "candidate": "Hurgi",
+     "glossSi": "Ledinsko ime, morda povezano z zemljiščem, ki je bilo last družine Hurgi ali ima podobno ime",
+     "source": "neznano — hipoteza brez dokumentiranega vira",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "BREZ-VIRA",
+      "confidence": "—",
+      "targets": [],
+      "probes": [],
+      "noteSi": ""
+     }
+    },
+    {
+     "candidate": "Horgi",
+     "glossSi": "Narečna oblika, morda povezana z besedo 'horga' (mladina, poganek) ali 'horgati' (delati, delati po domače)",
+     "source": "SSKJ",
+     "confidence": "~",
+     "inBothPasses": true,
+     "verification": {
+      "verdict": "NEPOTRJENO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "sskj-horga",
+        "class": "SSKJ",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "fran.si-direct",
+        "url": "https://fran.si/iskanje?View=1&Query=horga",
+        "quote": "(brez zadetkov za horga/hurga/hurgati/hurkati)",
+        "noteSi": "SSKJ ne pozna horga/hurga/hurgati/hurkati — trditvi HURGI#1/#2 se na SSKJ ne moreta opreti."
+       }
+      ],
+      "probes": [],
+      "noteSi": "SSKJ ne pozna horga/hurga/hurgati/hurkati — trditvi HURGI#1/#2 se na SSKJ ne moreta opreti."
+     }
+    },
+    {
+     "candidate": "Hurki",
+     "glossSi": "Morda pomanjševalnica ali narečna oblika, povezana z besedo 'hurkati' (delati hitro, brez premišljevanja)",
+     "source": "Bezlaj",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "NEVERIFIKATORNO",
+      "confidence": "?",
+      "targets": [
+       {
+        "id": "bezlaj-hurkati",
+        "class": "BEZLAJ",
+        "verdict": "NEVERIFIKATORNO",
+        "confidence": "?",
+        "method": "wikipedia-api",
+        "url": "https://sl.wikipedia.org/wiki/France_Bezlaj",
+        "quote": null,
+        "noteSi": "ESSJ obstaja (tisk), geslo 'hurkati' nedostopno v peskovniku."
+       }
+      ],
+      "probes": [],
+      "noteSi": "ESSJ obstaja (tisk), geslo 'hurkati' nedostopno v peskovniku."
+     }
+    },
+    {
+     "candidate": "Hurg",
+     "glossSi": "Okrajšana obleda besede, morda skrajšana verzija polnega ledinskega imena",
+     "source": "neznano — hipoteza brez dokumentiranega vira",
+     "confidence": "?",
+     "inBothPasses": true,
+     "verification": {
+      "verdict": "BREZ-VIRA",
+      "confidence": "—",
+      "targets": [],
+      "probes": [],
+      "noteSi": ""
+     }
+    },
+    {
+     "candidate": "Huri",
+     "glossSi": "Morda narečna oblika besede 'hura' (radost, navdušenje) ali povezana z ledinskim imenom",
+     "source": "neznano — hipoteza brez dokumentiranega vira",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "BREZ-VIRA",
+      "confidence": "—",
+      "targets": [],
+      "probes": [],
+      "noteSi": ""
+     }
+    },
+    {
+     "candidate": "Orgi",
+     "glossSi": "morda narečna oblika slovenske besede 'orga' (kmečko vozilo), kar bi lahko kazalo na ledinsko ime povezano z vozmi ali potjo",
+     "source": "SSKJ",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "NEPOTRJENO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "sskj-orga",
+        "class": "SSKJ",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "fran.si-direct",
+        "url": "https://fran.si/iskanje?View=1&Query=orga",
+        "quote": "(brez zadetkov)",
+        "noteSi": "'orga' v pomenu 'kmečko vozilo' ni v SSKJ — HURGI#5 ne stoji."
+       }
+      ],
+      "probes": [],
+      "noteSi": "'orga' v pomenu 'kmečko vozilo' ni v SSKJ — HURGI#5 ne stoji."
+     }
+    }
+   ]
+  },
+  {
+   "id": "WING",
+   "pairs": 3,
+   "distinctVariants": 1,
+   "block": {
+    "pages": [
+     60
+    ],
+    "distinctPages": 1,
+    "parcelsCount": 3,
+    "parcelMin": 1147,
+    "parcelMax": 1149,
+    "contiguousRuns": 1
+   },
+   "termTypeHypothesis": "LEDINSKO-IME",
+   "hypotheses": [
+    {
+     "candidate": "Wing",
+     "glossSi": "Ledinsko ime za travnik ali pašnik, verjetno v obliki 'Ving' ali 'Vinga', ki bi lahko predstavljal krajevni toponim",
+     "source": "SSKJ",
+     "confidence": "~",
+     "inBothPasses": true,
+     "verification": {
+      "verdict": "NEPOTRJENO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "sskj-ving",
+        "class": "SSKJ",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "fran.si-direct",
+        "url": "https://fran.si/iskanje?View=1&Query=ving",
+        "quote": "(brez zadetkov)",
+        "noteSi": "'ving/Vinga' v SSKJ ne obstaja — WING#0 se na SSKJ ne more opreti."
+       }
+      ],
+      "probes": [
+       {
+        "id": "schmeller-wingart",
+        "verdict": "NEVERIFIKATORNO",
+        "url": "https://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb11351207-5"
+       }
+      ],
+      "noteSi": "'ving/Vinga' v SSKJ ne obstaja — WING#0 se na SSKJ ne more opreti."
+     }
+    },
+    {
+     "candidate": "Grieng",
+     "glossSi": "Zapisano kot 'Grieng' v nasprotnem branju, kar bi lahko predstavljalo narečno obliko 'Gring' ali 'Grinja' za travnato območje",
+     "source": "Bezlaj, Slovenski narečni atlas",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "NEPOTRJENO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "bezlaj-sss",
+        "class": "BEZLAJ",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "wikipedia-api",
+        "url": "https://sl.wikipedia.org/wiki/France_Bezlaj",
+        "quote": "Najpomembnejša dela: Oris slovenskega knjižnega izgovora (1939); Slovenska vodna imena I-II (1956–61); Eseji o slovenskem jeziku (1967); Etimološki slovar slovenskega jezika I-V (1976, 1982, 1995, 2005 …); Zbrani jezikoslovni spisi I-II (2003)",
+        "noteSi": "Atribucije 'Bezlaj, Slovar slovenskih narečij 1976–1978 Zv. 1–4' (ERDAR#2), 'Bezlaj, Slovenski narečni atlas' (WING#1) in 'Bezlaj … narečni atlas, 1. knjiga' (SCHINDEL#2) NE stojijo: v Bezlajevem seznamu del (sl.wiki) SSN in SLA NISTA; SSN izhaja od 1979 (uredniki Logar/Ramovš nasledstvo), SLA pa je sodobni ZRC projekt — obe trditvi napačno pripisujeta delo."
+       }
+      ],
+      "probes": [],
+      "noteSi": "Atribucije 'Bezlaj, Slovar slovenskih narečij 1976–1978 Zv. 1–4' (ERDAR#2), 'Bezlaj, Slovenski narečni atlas' (WING#1) in 'Bezlaj … narečni atlas, 1. knjiga' (SCHINDEL#2) NE stojijo: v Bezlajevem seznamu del (sl.wiki) SSN in SLA NISTA; SSN izhaja od 1979 (uredniki Logar/Ramovš nasledstvo), SLA pa je sodobni ZRC projekt — obe trditvi napačno pripisujeta delo."
+     }
+    }
+   ]
+  },
+  {
+   "id": "SCHINDEL",
+   "pairs": 1,
+   "distinctVariants": 1,
+   "block": {
+    "pages": [
+     120
+    ],
+    "distinctPages": 1,
+    "parcelsCount": 1,
+    "parcelMin": 2350,
+    "parcelMax": 2350,
+    "contiguousRuns": 1
+   },
+   "termTypeHypothesis": "LEDINSKO-IME",
+   "hypotheses": [
+    {
+     "candidate": "Schindel",
+     "glossSi": "Ledinsko ime, ki se nanaša na območje pokrito s šindri (lesena kritina), kar je pogosto v Beli krajini, kjer so bile hiše pokrite s šindrami",
+     "source": "SSKJ - Slovenski slovar knjižnega jezika",
+     "confidence": "~",
+     "inBothPasses": true,
+     "verification": {
+      "verdict": "DELNO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "sskj-sindel",
+        "class": "SSKJ",
+        "verdict": "DELNO",
+        "confidence": "~",
+        "method": "fran.si-direct",
+        "url": "https://fran.si/iskanje?View=1&Query=šindel",
+        "quote": "šìndel -a m skodla: … sindel KOJ 1833, 184 (NOVAK, Slovar stare knjižne prekmurščina, na fran.si)",
+        "noteSi": "'šindel = skodla (lesena kritina)' je dokumentirano na fran.si (Novak SSP), a izsek prihaja iz prekmurskega slovarja, ne iz SSKJ² samim — pomen ✓, bibliografska natančnost trditve (citat 'SSKJ') delno."
+       }
+      ],
+      "probes": [],
+      "noteSi": "'šindel = skodla (lesena kritina)' je dokumentirano na fran.si (Novak SSP), a izsek prihaja iz prekmurskega slovarja, ne iz SSKJ² samim — pomen ✓, bibliografska natančnost trditve (citat 'SSKJ') delno."
+     }
+    },
+    {
+     "candidate": "Šindel",
+     "glossSi": "Slovenska beseda za šindro (leseno kritino), ki bi lahko bila zapisana nemško kot 'Schindel' v nemških dokumentih, vendar je v tem kontekstu verjetno ledinsko ime",
+     "source": "SSKJ - Slovenski slovar knjižnega jezika",
+     "confidence": "~",
+     "inBothPasses": true,
+     "verification": {
+      "verdict": "DELNO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "sskj-sindel",
+        "class": "SSKJ",
+        "verdict": "DELNO",
+        "confidence": "~",
+        "method": "fran.si-direct",
+        "url": "https://fran.si/iskanje?View=1&Query=šindel",
+        "quote": "šìndel -a m skodla: … sindel KOJ 1833, 184 (NOVAK, Slovar stare knjižne prekmurščina, na fran.si)",
+        "noteSi": "'šindel = skodla (lesena kritina)' je dokumentirano na fran.si (Novak SSP), a izsek prihaja iz prekmurskega slovarja, ne iz SSKJ² samim — pomen ✓, bibliografska natančnost trditve (citat 'SSKJ') delno."
+       }
+      ],
+      "probes": [],
+      "noteSi": "'šindel = skodla (lesena kritina)' je dokumentirano na fran.si (Novak SSP), a izsek prihaja iz prekmurskega slovarja, ne iz SSKJ² samim — pomen ✓, bibliografska natančnost trditve (citat 'SSKJ') delno."
+     }
+    },
+    {
+     "candidate": "Sindel",
+     "glossSi": "Narečna varianta besede 'šindel', ki bi lahko obstajala v belokranjskem narečju, zapisana v nemški obliki",
+     "source": "Bezlaj, France: Slovenski narečni atlas, 1. knjiga",
+     "confidence": "?",
+     "inBothPasses": true,
+     "verification": {
+      "verdict": "NEPOTRJENO",
+      "confidence": "~",
+      "targets": [
+       {
+        "id": "bezlaj-sss",
+        "class": "BEZLAJ",
+        "verdict": "NEPOTRJENO",
+        "confidence": "~",
+        "method": "wikipedia-api",
+        "url": "https://sl.wikipedia.org/wiki/France_Bezlaj",
+        "quote": "Najpomembnejša dela: Oris slovenskega knjižnega izgovora (1939); Slovenska vodna imena I-II (1956–61); Eseji o slovenskem jeziku (1967); Etimološki slovar slovenskega jezika I-V (1976, 1982, 1995, 2005 …); Zbrani jezikoslovni spisi I-II (2003)",
+        "noteSi": "Atribucije 'Bezlaj, Slovar slovenskih narečij 1976–1978 Zv. 1–4' (ERDAR#2), 'Bezlaj, Slovenski narečni atlas' (WING#1) in 'Bezlaj … narečni atlas, 1. knjiga' (SCHINDEL#2) NE stojijo: v Bezlajevem seznamu del (sl.wiki) SSN in SLA NISTA; SSN izhaja od 1979 (uredniki Logar/Ramovš nasledstvo), SLA pa je sodobni ZRC projekt — obe trditvi napačno pripisujeta delo."
+       }
+      ],
+      "probes": [],
+      "noteSi": "Atribucije 'Bezlaj, Slovar slovenskih narečij 1976–1978 Zv. 1–4' (ERDAR#2), 'Bezlaj, Slovenski narečni atlas' (WING#1) in 'Bezlaj … narečni atlas, 1. knjiga' (SCHINDEL#2) NE stojijo: v Bezlajevem seznamu del (sl.wiki) SSN in SLA NISTA; SSN izhaja od 1979 (uredniki Logar/Ramovš nasledstvo), SLA pa je sodobni ZRC projekt — obe trditvi napačno pripisujeta delo."
+     }
+    },
+    {
+     "candidate": "Šindlov graben",
+     "glossSi": "soteska, kjer so nabirali šindel; kot ledinsko ime se pojavlja v različnih oblikah, tudi kot 'Schindel'",
+     "source": "Bezlaj, Slovenski narodnoprazniški leksikon",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "NEVERIFIKATORNO",
+      "confidence": "?",
+      "targets": [
+       {
+        "id": "bezlaj-narodnoprazniski",
+        "class": "BEZLAJ",
+        "verdict": "NEVERIFIKATORNO",
+        "confidence": "?",
+        "method": "wikipedia-api",
+        "url": "https://sl.wikipedia.org/wiki/France_Bezlaj",
+        "quote": "(seznam del ne navaja 'Slovenski narodnoprazniški leksikon')",
+        "noteSi": "sl.wiki seznam Bezlajevih del NE navaja narodnoprazniškega leksikona; delo je znano kot posthumna publikacija (2001), a v fetchanih virih ni potrjeno — SCHINDEL#3 ostaja nepreverjena."
+       }
+      ],
+      "probes": [],
+      "noteSi": "sl.wiki seznam Bezlajevih del NE navaja narodnoprazniškega leksikona; delo je znano kot posthumna publikacija (2001), a v fetchanih virih ni potrjeno — SCHINDEL#3 ostaja nepreverjena."
+     }
+    },
+    {
+     "candidate": "Šindlova njiva",
+     "glossSi": "njiva, ki je pripadala družini Šindel; kot lastniško ime je prevzelo tudi ime parcele",
+     "source": "neznano — hipoteza brez dokumentiranega vira",
+     "confidence": "?",
+     "inBothPasses": false,
+     "verification": {
+      "verdict": "BREZ-VIRA",
+      "confidence": "—",
+      "targets": [],
+      "probes": [],
+      "noteSi": ""
+     }
+    }
+   ]
+  }
+ ],
+ "familyVerdictCounts": {
+  "LHUT-JEDRO": {
+   "POTRJENO": 0,
+   "DELNO": 0,
+   "NEPOTRJENO": 1,
+   "NEVERIFIKATORNO": 1,
+   "BREZ-VIRA": 1
+  },
+  "LOHN-RAUT": {
+   "POTRJENO": 0,
+   "DELNO": 1,
+   "NEPOTRJENO": 5,
+   "NEVERIFIKATORNO": 0,
+   "BREZ-VIRA": 0
+  },
+  "LHOPI-LOHIFA": {
+   "POTRJENO": 0,
+   "DELNO": 0,
+   "NEPOTRJENO": 3,
+   "NEVERIFIKATORNO": 3,
+   "BREZ-VIRA": 0
+  },
+  "EINSCHLAG-GUELZE": {
+   "POTRJENO": 0,
+   "DELNO": 1,
+   "NEPOTRJENO": 1,
+   "NEVERIFIKATORNO": 2,
+   "BREZ-VIRA": 1
+  },
+  "EINHART": {
+   "POTRJENO": 0,
+   "DELNO": 0,
+   "NEPOTRJENO": 4,
+   "NEVERIFIKATORNO": 2,
+   "BREZ-VIRA": 0
+  },
+  "AHN": {
+   "POTRJENO": 0,
+   "DELNO": 0,
+   "NEPOTRJENO": 1,
+   "NEVERIFIKATORNO": 0,
+   "BREZ-VIRA": 0
+  },
+  "AEFLING": {
+   "POTRJENO": 0,
+   "DELNO": 3,
+   "NEPOTRJENO": 2,
+   "NEVERIFIKATORNO": 0,
+   "BREZ-VIRA": 1
+  },
+  "GUETEN": {
+   "POTRJENO": 0,
+   "DELNO": 0,
+   "NEPOTRJENO": 3,
+   "NEVERIFIKATORNO": 1,
+   "BREZ-VIRA": 0
+  },
+  "ERDAR": {
+   "POTRJENO": 0,
+   "DELNO": 0,
+   "NEPOTRJENO": 3,
+   "NEVERIFIKATORNO": 2,
+   "BREZ-VIRA": 1
+  },
+  "DINGF": {
+   "POTRJENO": 0,
+   "DELNO": 0,
+   "NEPOTRJENO": 1,
+   "NEVERIFIKATORNO": 1,
+   "BREZ-VIRA": 4
+  },
+  "LUKIG": {
+   "POTRJENO": 0,
+   "DELNO": 0,
+   "NEPOTRJENO": 2,
+   "NEVERIFIKATORNO": 0,
+   "BREZ-VIRA": 0
+  },
+  "LHIZ": {
+   "POTRJENO": 0,
+   "DELNO": 0,
+   "NEPOTRJENO": 1,
+   "NEVERIFIKATORNO": 0,
+   "BREZ-VIRA": 0
+  },
+  "LOHGARN": {
+   "POTRJENO": 0,
+   "DELNO": 0,
+   "NEPOTRJENO": 1,
+   "NEVERIFIKATORNO": 3,
+   "BREZ-VIRA": 1
+  },
+  "HURGI": {
+   "POTRJENO": 0,
+   "DELNO": 0,
+   "NEPOTRJENO": 2,
+   "NEVERIFIKATORNO": 1,
+   "BREZ-VIRA": 3
+  },
+  "WING": {
+   "POTRJENO": 0,
+   "DELNO": 0,
+   "NEPOTRJENO": 2,
+   "NEVERIFIKATORNO": 0,
+   "BREZ-VIRA": 0
+  },
+  "SCHINDEL": {
+   "POTRJENO": 0,
+   "DELNO": 2,
+   "NEPOTRJENO": 1,
+   "NEVERIFIKATORNO": 1,
+   "BREZ-VIRA": 1
+  }
+ },
+ "singles": {
+  "pairs": 66,
+  "distinctRaw": 42,
+  "noteSi": "kitice (66 parov / 42 različnih) so IZVEN verifikacijske kampanje P45 — nimajo leksikografskih hipotez (P43); verifikacija sledi po humani paleografiji"
+ },
+ "keyFindingsSi": [
+  "0/70 hipotez je POTRJENIH v celoti: 33 NEPOTRJENIH (citat/atribucija ne stoji), 7 DELNO, 17 NEVERIFIKATORNO (tisk/digitalizati v peskovniku nedostopni), 13 BREZ-VIRA — opozorilo P43 'viri navaja stroj, NEPREVERJENI' se popolnoma potrdi [~]",
+  "DWB zvezčne natančnosti (struktura 16-volčne serije, de.wiki): Aue 'Bd 1' ✓ (A∈Bd 1: a–biermolke) in Öde 'Bd 13' ✓ (O∈Bd 13: n,o,p,q) strukturno skladna; Lohn 'Bd 16, Sp. 844' ✗ (L∈Bd 12: l,m), Höfling 'Bd 13, Sp. 742' ✗ (H∈Bd 10: h,i,j), Efeu 'Bd 6, Sp. 102' ✗ (E∈Bd 3: e–forsche) — trije citati zvezkov NAPAČNI [~]",
+  "SSKJ refutacije z verbatim (fran.si, direktni geslarski izseki): log = '(močviren) travnik ob vodi, navadno deloma porasel z drevesi' (NE dolina/splav); líza = 'kdor rad liže' (Lecker); lúti = 'hud, jezen'; gesla jedar, ving, orga, horga/hurga, ajna, einhart, guten, poggi, šlifa v SSKJ/Pleteršniku NE obstajajo [~]",
+  "Atribucijske refutacije: 'Kärntner Wörterbuch (Schulz, 1972)' ni potrjeno (de.wiki dokumentira WBÖ, Kranzmayer urednik od 1958) — 4 hipoteze brez opore; 'Bezlaj, Slovar slovenskih narečij 1976–78 Zv. 1–4' in 'Bezlaj, Slovenski narečni atlas' ne stojita (v Bezlajevem seznamu del ni; SSN izhaja od 1979); Schmeller 1. izdaja = Cotta (ne 'C.H. Beck') [~]",
+  "PV-Gypf: okrajšava 'Gypf.' NI v committed PV.json (Nutzungs-Ausweis 1825) — citat EINHART#2 napačen; okrajšava JE v PS registru (Einhart mit Gypf. &c. + NOVA oblika 'Schüttwiese, Gypfang') [~]",
+  "Najmočnejša delna opora: SSKJ²/Pleteršnik golica = 'strmina, na kateri je bil posekan gozd' (EINSCHLAG-GUELZE#1); šindel = 'skodla' dokumentiran (Novak SSP, fran.si; pomen ✓, citat 'SSKJ' delno)",
+  "Infrastruktura kampanje: web-search API kvota izčrpana (429) → preusmerjeno na direktno fetchanje primarnih virov: fran.si 18 tarč (verbatim izseki), Wikipedia API 15 tarč (zvezčne mape DWB 33 zvezkov, Schmellerjeve izdaje 1./2. (Cotta 1827–37 / Frommann 1872–77), bibliografija), deterministična 1 tarča (PV.json); DWB/Schmeller polni teksti ostajajo nedosegljivi (woerterbuchnetz SPA 404, zeno.org/archive.org timeout; kanonični URL v dokazih) → 17 tarč NEVERIFIKATORNO za človeško preverbo"
+ ],
+ "verdictSi": "Verifikacija virov P43 leksikona (50 tarč): 0/70 hipotez potrjenih v celoti; 32 NEPOTRJENIH (geslo manjka/pomen drugačen/citat zvezka ali atribucija ne stoji), 8 DELNO, 17 NEVERIFIKATORNO (DWB/Schmeller teksti v peskovniku nedosegljivi — kanonični URL v dokazih), 13 BREZ-VIRA. Trije DWB citati zvezkov izrecno napačni (Lohn Bd 16→12, Höfling Bd 13→10, Efeu Bd 6→3), dva strukturno skladna (Aue Bd 1, Öde Bd 13). SSKJ refutacije z verbatim definicijami. Nič ne spreminja P43 hipotez ali rabe (vse ostaja NEKLASIFICIRANO) — sloj verifikacije zvezan bajtno na vhod.",
+ "verdictEn": "Source verification of the P43 lexicon (50 targets): 0/70 hypotheses fully confirmed; 32 REFUTED (headword missing / different meaning / wrong volume or attribution), 8 PARTIAL, 17 UNVERIFIABLE (DWB/Schmeller full texts unreachable from the sandbox — canonical URLs in evidence), 13 NO-SOURCE. Three DWB volume citations explicitly wrong (Lohn Bd 16→12, Höfling Bd 13→10, Efeu Bd 6→3), two structurally consistent (Aue Bd 1, Öde Bd 13). SSKJ refutations with verbatim definitions. Nothing changes the P43 hypotheses or the land-use classification (all remain UNCLASSIFIED) — the verification layer is byte-bound to the input.",
+ "next": [
+  "človeška preverba DWB/Schmeller gesel prek BAdW registra (publikationen.badw.de/de/schmeller/index) in MDZ digitalizatov: Raut, Luch, Schupfe, Loh/Lohe, Einschlag, Gülze, Luge, Wingart (17 NEVERIFIKATORNO tarč)",
+  "človeška paleografija 16 družin + 66 kitic (3. prehod ~15 dvoumnih strani, ko VAČ dosegljiv)",
+  "nove hipoteze iz verifikacije: Wing ~ Wingart/Weingarten (Weinberg, Schmeller Bd 4/2. izd.); log (SSKJ 'močviren travnik porasel z drevesi') za LOHN-RAUT/LHOPI/LOHGARN; golica 'posekana strmina' za Gülze-family kontekst",
+  "semantika 7 par referenc str. 141; p141 šibki blok; p142 dolžina (issue #10)"
+ ]
+}

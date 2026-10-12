@@ -1,0 +1,68 @@
+{
+ "generatedAt": "2026-10-12T21:03:16Z",
+ "source": "de.wikipedia: Johann Andreas Schmeller (API, revisions content)",
+ "url": "https://de.wikipedia.org/wiki/Johann_Andreas_Schmeller",
+ "method": "curl GET api.php prop=revisions",
+ "firstEdition": [
+  {
+   "band": 1,
+   "letters": "A, E, I, O, U, B, P, D, T, F, V",
+   "year": 1827,
+   "publisher": "Cotta, Stuttgart und Tübingen"
+  },
+  {
+   "band": 2,
+   "letters": "G, H, J (Cons.), K, Q, L, M, N",
+   "year": 1828,
+   "publisher": "Cotta, Stuttgart und Tübingen"
+  },
+  {
+   "band": 3,
+   "letters": "R und S",
+   "year": 1836,
+   "publisher": "Cotta, Stuttgart und Tübingen"
+  },
+  {
+   "band": 4,
+   "letters": "W und Z",
+   "year": 1837,
+   "publisher": "Cotta, Stuttgart und Tübingen"
+  }
+ ],
+ "secondEdition": [
+  {
+   "band": 1,
+   "contains": "1st-ed vols 1+2",
+   "year": 1872,
+   "editor": "G. Karl Frommann",
+   "publisher": "Oldenbourg, München",
+   "digitalisat": [
+    "https://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb00005026-2",
+    "https://publikationen.badw.de/de/022964277"
+   ]
+  },
+  {
+   "band": 2,
+   "contains": "1st-ed vols 3+4 (R,S,W,Z)",
+   "year": 1877,
+   "editor": "G. Karl Frommann",
+   "publisher": "Oldenbourg, München",
+   "digitalisat": [
+    "https://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb11351207-5"
+   ]
+  }
+ ],
+ "register": "https://publikationen.badw.de/de/schmeller/index (Digitales Wörterbuchregister, dostopno; portal schmeller.badw.de/digitales-woerterbuchregister.html)",
+ "extractedFromWikitext": [
+  [
+   "1",
+   "A, E, I, O, U, B, P, D, T, F, V",
+   "1827"
+  ],
+  [
+   "2",
+   "G, H, J (Cons.), K, Q, L, M, N",
+   "1828"
+  ]
+ ]
+}

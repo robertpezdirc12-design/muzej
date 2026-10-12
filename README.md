@@ -110,7 +110,7 @@ Zgodovinska katastrska slika vasi (franciscejski kataster, k.o. Griblje št. 83 
 - **dokazni vmesnik**: vir → trditev → dokaz → povezave (N083PT str. + VAČ povezave);
 - **pokritost + negativni rezultati** — raziskovalna provenienca vključno s statusi
   VERIFIED/DOCUMENTED/REVIEW/RECONSTRUCTED/APPROXIMATE/TO_COLLECT/NOT_FOUND;
-- **strojni prepis PS + sprava (P36–P44)** — 135 strani, 2743 vrstic; deterministična
+- **strojni prepis PS + sprava (P36–P45)** — 135 strani, 2743 vrstic; deterministična
   sprava: glavni niz 1889/2505 (75,4 %), Waldung 81, nadaljevalni niz 95 (do 2840),
   Blatt X 60 = register stavbnih mest; razdvojitev v model parcela×raba: 2134 vnosov,
   2632 parov, 430 parcel z več rabami, 7 sirot, klasifikacija rab (pravilnik v2,
@@ -131,7 +131,13 @@ Zgodovinska katastrska slika vasi (franciscejski kataster, k.o. Griblje št. 83 
   + `scripts/p43_ps_lexicon.py` + `scripts/p44_ps_k1k2.py`; razcep K1/K2 (P44)
   RAZREŠEN [~]: paralelnost "nach Anlage" (desna vrstica 4 == leva 132; Joch 831 == 831)
   → K1 = 702, K2 = 2090 − 702 = 1388 == direktno branje pass2 — celoten Abschluß
-  zaprt (831|702 + 383|1388 = 1215|490; + 5|1003 = 1220|1493);
+  zaprt (831|702 + 383|1388 = 1215|490; + 5|1003 = 1220|1493); verifikacija
+  leksikografskih virov (P45): 49 tarč, 0/70 hipotez potrjenih v celoti (33
+  NEPOTRJENIH, 7 DELNO, 17 NEVERIFIKATORNO, 13 BREZ-VIRA) — trije DWB citati
+  zvezkov napačni (Lohn Bd 16→12, Höfling Bd 13→10, Efeu Bd 6→3), SSKJ
+  refutacije z verbatim definicijami, atribucije (Kärntner WB "Schulz 1972",
+  Bezlaj SSN/SLA) zavrnjene; dokaz `research/issue17/ps-lexicon-verified.json`
+  + `scripts/p45_lex_verify.py`;
 - **globa povezava** `?atlas=hiša-75` (hiša št. 73 — demonstracijska veriga do MVG-010).
 
 API (statični, brez runtime AI):
@@ -148,7 +154,10 @@ API (statični, brez runtime AI):
   padci Wiese/Acker→specifično), PV območna sprava (Weiden-gap 576,24 J; Area ≈ P41),
   leksikografske hipoteze z nepreverjenimi viri (P43);
 - `GET /api/atlas/ps-k1k2` — razcep K1/K2 v Abschlußu RAZREŠEN [~]: paralelnost
-  "nach Anlage" → K1 = 702, K2 = 1388 == branje pass2; Abschluß popolnoma zaprt (P44).
+  "nach Anlage" → K1 = 702, K2 = 1388 == branje pass2; Abschluß popolnoma zaprt (P44);
+- `GET /api/atlas/ps-lexicon-verified` — verifikacija leksikografskih virov P43:
+  49 tarč, 0/70 potrjenih (33 NEPOTRJENO, 7 DELNO, 17 NEVERIFIKATORNO, 13 BREZ-VIRA);
+  DWB zvezčne natančnosti, SSKJ verbatim refutacije, atribucijske zavrnitve (P45).
 
 ## Varnost
 

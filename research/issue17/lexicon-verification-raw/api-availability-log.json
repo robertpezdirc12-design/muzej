@@ -1,0 +1,45 @@
+{
+ "generatedAt": "2026-10-12T21:03:16Z",
+ "probes": [
+  {
+   "host": "z-ai web_search API",
+   "result": "429 Too Many Requests — kvota izčrpana po začetnem oblaju (prvih 4 iskanja 20:04–20:13); ostanek kampanje preusmerjen na direktne fetch-e"
+  },
+  {
+   "host": "woerterbuchnetz.de/api.woerterbuchnetz.de",
+   "result": "SPA/API ni izkrpan (404 na vseh znanih potah; config.js: APIdomain=api.woerterbuchnetz.de:10001)"
+  },
+  {
+   "host": "zeno.org",
+   "result": "timeout — nedosegljivo"
+  },
+  {
+   "host": "archive.org / web.archive.org",
+   "result": "000 — nedosegljivo"
+  },
+  {
+   "host": "germazope.uni-trier.de",
+   "result": "000 — nedosegljivo"
+  },
+  {
+   "host": "bayerische-landesbibliothek-online.de",
+   "result": "403"
+  },
+  {
+   "host": "bos.zrc-sazu.si",
+   "result": "000 — nedosegljivo (SSKJ prek fran.si)"
+  },
+  {
+   "host": "de.wikipedia.org / sl.wikipedia.org",
+   "result": "200 (API) — uporabljeno za bibliografijo in zvezčne mape"
+  },
+  {
+   "host": "fran.si",
+   "result": "200 — primarni vir za SSKJ²/Pleteršnik/Novak SSP izseke (17 tarč)"
+  },
+  {
+   "host": "digitale-sammlungen.de (MDZ)",
+   "result": "200, a iskanje SPA — API ni izkrpan; Schmeller digitalizati ostajajo na zgoraj navedenih canonical URL"
+  }
+ ]
+}

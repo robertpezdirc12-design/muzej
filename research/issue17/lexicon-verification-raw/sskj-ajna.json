@@ -1,0 +1,53 @@
+{
+ "target": "sskj-ajna",
+ "source": "fran.si",
+ "queries": {
+  "ajna": {
+   "counts": {},
+   "links": {},
+   "entries": []
+  },
+  "ajn": {
+   "counts": {},
+   "links": {},
+   "entries": []
+  },
+  "ajda": {
+   "counts": {},
+   "links": {
+    "133": [
+     {
+      "path": "/133/sskj2-slovar-slovenskega-knjiznega-jezika-2/4457765/ajda",
+      "id": "4457765"
+     }
+    ],
+    "136": [
+     {
+      "path": "/136/maks-pletersnik-slovensko-nemski-slovar/3988989/jda",
+      "id": "3988989"
+     }
+    ],
+    "138": [
+     {
+      "path": "/138/katelec-vorenc-slovensko-latinski-slovar/4106962/ajda",
+      "id": "4106962"
+     }
+    ]
+   },
+   "entries": [
+    {
+     "url": "https://fran.si/133/sskj2-slovar-slovenskega-knjiznega-jezika-2/4457765/ajda?View=1&Query=ajda",
+     "excerpt": "ájda -e ž ( ȃ ) kulturna rastlina z gostimi rdečkastimi ali belimi cveti v gostem socvetju ali njeno seme: ajda diši, medi, zori / črna s črnim , siva ajda s sivim semenom ♦ bot. tatarska ali zelena ajda njivski plevel med ajdo, Fagopyrum tataricum Slovar slovenskega knjižnega jezika, druga, dopolnjena in deloma prenovljena izdaja , www.fran.si, dostop 12. 10. 2026. Slovar slovenskega knjižnega jezika² Deli geslo Kopiraj sestavek Predlagajte popravek ali dopolnitev sestavka × Predlagajte popravek ali dopolnitev Predlagam: popravek napake dopolnitev drugo Vsebina: Predlagajte Prekliči × Predlagajte popravek ali dopolnitev Ali želite oddati predlog za popravek ali dopolnitev gesla ájda ? Prijavite ali registirajte se ali\" Prijavite se s Facebookom Zapri × , hvala za vaš predlog. Vse popravke in dopolnitve bomo natančno pregledali in jih upoštevali pri novih različicah slovarja. Zapri × Tip"
+    },
+    {
+     "url": "https://fran.si/136/maks-pletersnik-slovensko-nemski-slovar/3988989/jda?View=1&Query=ajda",
+     "excerpt": "ȃjda , f. der Buchweizen (polygonum fagopyrum); čebele pošiljati v ajdo, t. j. na ajdovo pašo, Por. ; nora a., das tatarische Heidekorn (p. tataricum), Z. ; — prim. nem. der Heiden . PLETERŠNIK, Maks, Slovensko-nemški slovar , www.fran.si, dostop 12. 10. 2026. Maks Pleteršnik: Slovensko-nemški slovar Deli geslo Kopiraj sestavek Predlagajte popravek ali dopolnitev sestavka × Predlagajte popravek ali dopolnitev Predlagam: popravek napake dopolnitev drugo Vsebina: Predlagajte Prekliči × Predlagajte popravek ali dopolnitev Ali želite oddati predlog za popravek ali dopolnitev gesla ȃjda ? Prijavite ali registirajte se ali\" Prijavite se s Facebookom Zapri × , hvala za vaš predlog. Vse popravke in dopolnitve bomo natančno pregledali in jih upoštevali pri novih različicah slovarja. Zapri × Tipkovnica č ć đ ə š ž Č Ć Đ Š Ž á à é è ê í ì ó ò ô ŕ ú ù u̯ Á À É È Ê Í Ì Ó Ò Ô Ŕ Ú Ù ß ſ ṡ document.addE"
+    },
+    {
+     "url": "https://fran.si/138/katelec-vorenc-slovensko-latinski-slovar/4106962/ajda?View=1&Query=ajda",
+     "excerpt": "ajda ž , panicum, -ci , aida: en nagel ſtráh pres urṡhoha STABEJ, Jože, Slovensko-latinski slovar po: Matija Kastelec - Gregor Vorenc, Dictionarium Latino-Carniolicum (1608–1710) , www.fran.si, dostop 12. 10. 2026. Matija Kastelec in Gregor Vorenc: Slovensko-latinski slovar Deli geslo Kopiraj sestavek Predlagajte popravek ali dopolnitev sestavka × Predlagajte popravek ali dopolnitev Predlagam: popravek napake dopolnitev drugo Vsebina: Predlagajte Prekliči × Predlagajte popravek ali dopolnitev Ali želite oddati predlog za popravek ali dopolnitev gesla ajda ? Prijavite ali registirajte se ali\" Prijavite se s Facebookom Zapri × , hvala za vaš predlog. Vse popravke in dopolnitve bomo natančno pregledali in jih upoštevali pri novih različicah slovarja. Zapri × Tipkovnica č ć đ ə š ž Č Ć Đ Š Ž á à é è ê í ì ó ò ô ŕ ú ù u̯ Á À É È Ê Í Ì Ó Ò Ô Ŕ Ú Ù ß ſ ṡ document.addEventListener('DOMContentLoa"
+    }
+   ]
+  }
+ }
+}

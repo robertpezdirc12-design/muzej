@@ -1,0 +1,11 @@
+{
+ "target": "sskj-orga",
+ "source": "fran.si",
+ "queries": {
+  "orga": {
+   "counts": {},
+   "links": {},
+   "entries": []
+  }
+ }
+}

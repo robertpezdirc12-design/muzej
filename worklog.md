@@ -2677,3 +2677,75 @@ Stage Summary:
   7 par referenc, p141 šibki blok, p142 dolžina, 16 družin + kitic, viri.
 - Nove datoteke: scripts/p44_ps_k1k2.py, research/issue17/ps-k1k2.json,
   src/data/atlas/ps-k1k2.json, src/app/api/atlas/ps-k1k2/route.ts.
+
+## P45 — verifikacija leksikografskih virov P43 leksikona (2026-10-12, issue #10)
+
+- Izhodišče: P43 je podal 70 hipotez (16 družin, 216 parov) z viri stroja
+  (NEPREVERJENI, audit §23); P45 je izvedel verifikacijsko kampanjo nad 49
+  tarčami — brez spreminjanja P43 (kandidati/glose/viri bajtno identični,
+  invarianta I2), raba ostaja NEKLASIFICIRANA.
+- Infrastruktura: web-search API kvota izčrpana (429) → preusmerjeno na
+  direktno fetchanje primarnih virov. fran.si (18 tarč — verbatim geslarski
+  izseki SSKJ²/Pleteršnik/Novak SSP, scripts/p45_fran_fetch.py), Wikipedia
+  API (14 tarč — zvezčna mapa DWB 33 zvezkov, Schmeller Cotta 1827–37 /
+  Frommann 1872–77, bibliografija, seznami del), deterministična 1 (grep
+  'Gypf' nad committed PV.json), 16 tarč z viri v peskovniku nedosegljivimi
+  (DWB/Schmeller polni teksti: woerterbuchnetz SPA 404, zeno.org/archive.org
+  timeout, bavarikon 403 — kanonični URL vsake tarče v dokazih; BAdW
+  register + MDZ digitalizati kot človeška sled).
+- IZID: 0/70 POTRJENO v celoti; 33 NEPOTRJENO, 7 DELNO, 17 NEVERIFIKATORNO,
+  13 BREZ-VIRA. Agregacija: NEPOTRJENO dominira > POTRJENO > DELNO >
+  NEVERIFIKATORNO; brez tarč = BREZ-VIRA.
+- Ključne refutacije [~]: (1) DWB zvezčni citati — Lohn "Bd 16" ✗ (L∈Bd 12:
+  l,m), Höfling "Bd 13" ✗ (H∈Bd 10: h,i,j), Efeu "Bd 6" ✗ (E∈Bd 3:
+  e–forsche); Aue "Bd 1" ✓ in Öde "Bd 13" ✓ strukturno skladna. (2) SSKJ
+  verbatim: log = "(močviren) travnik ob vodi, navadno deloma porasel z
+  drevesi"; líza = "kdor rad liže" (Lecker); lúti = "hud, jezen"; gesla
+  jedar, ving, orga, horga/hurga, ajna, einhart, guten, poggi, šlifa NE
+  obstajajo. (3) Atribucije: "Kärntner Wörterbuch (Schulz, 1972)" ni
+  potrjeno (WBÖ/Kranzmayer 1958–); "Bezlaj, SSN 1976–78 Zv. 1–4" in
+  "Bezlaj, SLA" ne stojita (v Bezlajevem seznamu del ni; SSN od 1979);
+  Schmeller 1. izdaja = Cotta (ne "C.H. Beck"); Bezlaj ESSJ leta 1976–2005
+  (ne "1976–2008"). (4) PV-Gypf: okrajšava NI v PV.json — JE v PS registru
+  ("Einhart mit Gypf. &c." + NOVA oblika "Schüttwiese, Gypfang") — citat
+  EINHART#2 premaknjen na pravo mesto. (5) Najmočnejša delna opora: golica
+  = "strmina, na kateri je bil posekan gozd" (SSKJ² + Pleteršnik); šindel =
+  "skodla" (Novak SSP). (6) Schmeller strukturno: "Raut Bd 2, Sp. 476"
+  skladen LE z 2. izdajo; ISTI citat tudi za Gfüttergütl (G ∈ 1. izd. Bd 2)
+  — verjetno prepisan citat.
+- Skript scripts/p45_lex_verify.py (determinističen, brez AI ob delovanju,
+  FAIL ob padu invariant I1–I6: 16/70 identičnost, bajtna vezanost, enum+URL,
+  totalna preslikava 49 tarč s sondami, identičnost izpisov, agregacija);
+  izpisi ps-lexicon-verified.json (research/issue17/ + identična runtime
+  kopija src/data/atlas/) + API GET /api/atlas/ps-lexicon-verified
+  (force-static); TS PS_LEXICON_VERIFIED_P45 (families blok programska
+  generacija iz kanonskega JSON-a — scripts/p45_regen_ts.py, idempotentna);
+  kartica "PS 1825 — verifikacija leksikografskih virov (P45)" v
+  Raziskavah/kurrent (za P44); sources.ts N083PS nota (P45, Si+En) +
+  posodobljen PREOSTANE/REMAINS; audit §25; README P36–P45 + API seznam +
+  novi dokazi/skripti; repov worklog P45.
+- QA 45→46 (qa-p45-ps-lexicon-verified: 49 tarč, vsote 70/216, pinane
+  refutacije Lohn→Bd 12 / Höfling→Bd 10 / Efeu→Bd 3 / Aue Bd 1 / Öde Bd 13 /
+  liza "liže" / Kärntner WB / PV-Gypf na prikaznem ALI evidence nivoju,
+  invarianta I2 nad P43 kandidati prek readFile, navzkrižna kontrola obeh
+  izpisov — vzorec qa-p37..p44); tsc 0; ESLint 0; build 23/23 (nov route
+  prerenderiran); standalone strežnik port 3010 (static copy v standalone!):
+  /api/qa 46/46, /api/atlas/ps-lexicon-verified 200, / 200.
+- Brskalniška E2E (agent-browser): uvod (profili) → Prepisi Kurrent →
+  kartica P45 popolna (čipi 0/7/33/17/13 + metode, ključne ugotovitve,
+  verifikacija po družinah, Nepristranskost, API); hidratacija ✓ (po
+  kopiji .next/static v .next/standalone/.next/static — brez tega 404 na
+  chunkih); konzola 0 napak/0 opozorjenj; mobilni 390×844 ✓ (footer naravno
+  pomaknjen, brez plavajoče vrzeli); screenshoti /home/z/tmp/p45-card.png +
+  p45-mobile.png.
+- Ostaja odprto (issue #10): človeška preverba DWB/Schmeller gesel (17
+  NEVERIFIKATORNO tarč prek BAdW registra publikationen.badw.de/de/schmeller/
+  index in MDZ digitalizatov); človeška paleografija 16 družin + 66 kitic
+  (3. prehod, ko VAČ dosegljiv); semantika 7 par referenc str. 141;
+  p141 šibki blok; p142 dolžina. Statusi REVIEW.
+- Nove datoteke: scripts/p45_lex_verify.py, scripts/p45_fran_fetch.py,
+  scripts/p45_regen_ts.py, research/issue17/ps-lexicon-verified.json,
+  research/issue17/lexicon-verification-adjudication.json,
+  research/issue17/lexicon-verification-raw/ (26 datotek: 18 fran.si, 5 wiki,
+  api-log, targets-plan, +2), src/data/atlas/ps-lexicon-verified.json,
+  src/app/api/atlas/ps-lexicon-verified/route.ts.

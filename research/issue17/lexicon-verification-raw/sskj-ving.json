@@ -1,0 +1,16 @@
+{
+ "target": "sskj-ving",
+ "source": "fran.si",
+ "queries": {
+  "ving": {
+   "counts": {},
+   "links": {},
+   "entries": []
+  },
+  "vinga": {
+   "counts": {},
+   "links": {},
+   "entries": []
+  }
+ }
+}

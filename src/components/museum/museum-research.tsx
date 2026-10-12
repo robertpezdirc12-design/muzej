@@ -61,6 +61,7 @@ import {
   PS_LANDUSE_V2_P42,
   PS_LEXICON_P43,
   PS_K1K2_P44,
+  PS_LEXICON_VERIFIED_P45,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -869,6 +870,98 @@ export function MuseumResearch() {
                   {t(
                     "desna vrstica 1 (831|702) == leva 'Summa der Grundparzellen'. Struktura občine: rustikalne hiše po Anlagi 831|702 (hiše 124–130) + 'Ziffer 1041' (Gütl/gingl. kategorija) 383|1388 = 1215|490. Strojno berljivo: /api/atlas/ps-k1k2.",
                     "right row 1 (831|702) == the left 'Summa der Grundparzellen'. Gemeinde structure: rustical houses per the Anlage 831|702 (houses 124–130) + 'Ziffer 1041' (Gütl/gingl. category) 383|1388 = 1215|490. Machine-readable: /api/atlas/ps-k1k2.",
+                  )}
+                </p>
+              </div>
+            </div>
+
+            {/* PS 1825 — verifikacija leksikografskih virov P43 (P45, issue #10) */}
+            <div className="min-w-0 rounded-xl border bg-card p-6 shadow-sm">
+              <h3 className="flex items-center gap-2 font-display text-lg font-semibold">
+                <BookOpen className="size-4 text-primary" aria-hidden="true" />
+                {t("PS 1825 — verifikacija leksikografskih virov (P45)", "PS 1825 — verification of the lexicographic sources (P45)")}
+                <StatusBadge status={PS_LEXICON_VERIFIED_P45.status} />
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                {t(
+                  "49 tarč nad 70 hipotezami P43: direktni geslarski izseki (fran.si: SSKJ², Pleteršnik, Novak SSP), Wikipedia API (zvezčne mape DWB/Schmeller, bibliografija), deterministična preverba PV.json. 0/70 hipotez potrjenih v celoti — opozorilo P43 'viri navaja stroj, NEPREVERJENI' se potrdi. Nič ne spreminja hipotez ali rabe.",
+                  "49 targets over the 70 P43 hypotheses: direct dictionary excerpts (fran.si: SSKJ², Pleteršnik, Novak SSP), Wikipedia API (DWB/Schmeller volume maps, bibliography), a deterministic check of PV.json. 0/70 hypotheses fully confirmed — the P43 warning 'machine-attributed, UNVERIFIED sources' is borne out. Nothing changes the hypotheses or the classification.",
+                )}
+              </p>
+
+              {/* P45: pokritost */}
+              <div className="mt-4 rounded-lg border bg-secondary/30 p-3">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-sm font-semibold">
+                    {t("P45 — izid kampanje", "P45 — campaign outcome")}
+                  </span>
+                  <span className="font-mono text-[11px] text-muted-foreground">
+                    {PS_LEXICON_VERIFIED_P45.campaign.targetsTotal} {t("tarč", "targets")} · {PS_LEXICON_VERIFIED_P45.campaign.hypothesesTotal} {t("hipotez", "hypotheses")}
+                  </span>
+                </div>
+                <div className="mt-2 flex flex-wrap gap-1.5 font-mono text-[10px]">
+                  <span className="rounded-full border bg-background px-2 py-0.5">POTRJENO {PS_LEXICON_VERIFIED_P45.campaign.byVerdict.POTRJENO}</span>
+                  <span className="rounded-full border bg-background px-2 py-0.5">DELNO {PS_LEXICON_VERIFIED_P45.campaign.byVerdict.DELNO}</span>
+                  <span className="rounded-full border bg-amber-100 px-2 py-0.5 dark:bg-amber-950/40">NEPOTRJENO {PS_LEXICON_VERIFIED_P45.campaign.byVerdict.NEPOTRJENO}</span>
+                  <span className="rounded-full border bg-background px-2 py-0.5">NEVERIFIKATORNO {PS_LEXICON_VERIFIED_P45.campaign.byVerdict.NEVERIFIKATORNO}</span>
+                  <span className="rounded-full border bg-background px-2 py-0.5">BREZ-VIRA {PS_LEXICON_VERIFIED_P45.campaign.byVerdict["BREZ-VIRA"]}</span>
+                  <span className="rounded-full border bg-background px-2 py-0.5">{t("fran.si", "fran.si")} {PS_LEXICON_VERIFIED_P45.campaign.byMethod["fran.si-direct"]} · wiki {PS_LEXICON_VERIFIED_P45.campaign.byMethod["wikipedia-api"]} · repo {PS_LEXICON_VERIFIED_P45.campaign.byMethod["deterministic-repo"]} · {t("nedosegljivo", "unreachable")} {PS_LEXICON_VERIFIED_P45.campaign.byMethod["unreachable"]}</span>
+                </div>
+              </div>
+
+              {/* P45: ključne ugotovitve */}
+              <div className="mt-3 rounded-lg border bg-secondary/30 p-3">
+                <span className="text-sm font-semibold">
+                  {t("P45 — ključne ugotovitve", "P45 — key findings")}
+                </span>
+                <div className="mt-2 max-h-64 space-y-1 overflow-y-auto pr-1">
+                  {PS_LEXICON_VERIFIED_P45.keyFindingsSi.map((f, i) => (
+                    <p key={i} className="rounded border bg-background px-2 py-1 text-[10px] leading-snug text-muted-foreground/90">
+                      {f}
+                    </p>
+                  ))}
+                </div>
+              </div>
+
+              {/* P45: verifikacija po družinah */}
+              <div className="mt-3 rounded-lg border bg-secondary/30 p-3">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-sm font-semibold">
+                    {t("P45 — verifikacija po družinah", "P45 — verification by family")}
+                  </span>
+                  <span className="font-mono text-[11px] text-muted-foreground">
+                    {PS_LEXICON_VERIFIED_P45.families.length}/16
+                  </span>
+                </div>
+                <div className="mt-2 max-h-72 space-y-1 overflow-y-auto pr-1">
+                  {PS_LEXICON_VERIFIED_P45.families.map((f) => (
+                    <div key={f.id} className="rounded border bg-background px-2 py-1 text-[10px]">
+                      <div className="flex flex-wrap items-center justify-between gap-2 font-mono">
+                        <span className="font-semibold">{f.id}</span>
+                        <span className="text-muted-foreground">
+                          {f.pairs} {t("parov", "pairs")} · ✗{f.verdictCounts.NEPOTRJENO} ~{f.verdictCounts.DELNO} ?{f.verdictCounts.NEVERIFIKATORNO} —{f.verdictCounts["BREZ-VIRA"]}
+                        </span>
+                      </div>
+                      <div className="mt-1 space-y-0.5">
+                        {f.topHypotheses.map((h, hi) => (
+                          <p key={hi} className="leading-snug text-muted-foreground/80">
+                            <span className="font-mono">{h.verdict === "NEPOTRJENO" ? "✗" : h.verdict === "DELNO" ? "~" : "?"}</span>{" "}
+                            <span className="font-medium">{h.candidate}</span> — {h.source}: {h.noteSi}
+                          </p>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* P45: nepristranskost */}
+              <div className="mt-3 rounded-lg border border-emerald-200 bg-emerald-50/60 p-3 dark:border-emerald-900/50 dark:bg-emerald-950/30">
+                <p className="text-[11px] leading-relaxed text-foreground/80">
+                  <span className="font-semibold">{t("Nepristranskost: ", "Fairness: ")}</span>
+                  {t(
+                    "kandidati/glose/viri P43 ostajajo bajtno identični (invarianta I2) — verifikacija samo presoji opornost citatov; rabe ni prirejena (282 parov NEKLASIFICIRANO). Kanonični URL za 16 nedosegljivih tarč v dokazih; strojno berljivo: /api/atlas/ps-lexicon-verified.",
+                    "the P43 candidates/glosses/sources remain byte-identical (invariant I2) — verification only assesses the citations; no use reassigned (282 pairs UNCLASSIFIED). Canonical URLs for the 16 unreachable targets are in the evidence; machine-readable: /api/atlas/ps-lexicon-verified.",
                   )}
                 </p>
               </div>

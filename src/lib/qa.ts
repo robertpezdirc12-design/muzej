@@ -29,6 +29,7 @@ import {
   PS_LANDUSE_V2_P42,
   PS_LEXICON_P43,
   PS_K1K2_P44,
+  PS_LEXICON_VERIFIED_P45,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -2091,6 +2092,107 @@ export function runQA(opts: QAOptions = {}): QAReport {
     p44Errors.length === 0
       ? `K1=702, K2=1388 · omejitev 2090 · H1 edina sprejeta (H2–H5 zavrnjene) · Abschluß zaprt · ${p44FileDetail}`
       : p44Errors.join("; "),
+  );
+
+  // ——— P45: N083PS — verifikacija leksikografskih virov P43 ———
+  const p45Errors: string[] = [];
+  const p45LV = PS_LEXICON_VERIFIED_P45;
+  if (p45LV.campaign.targetsTotal !== 49) p45Errors.push("tarč ni 49");
+  if (p45LV.campaign.hypothesesTotal !== 70) p45Errors.push("hipotez ni 70");
+  const p45Bv = p45LV.campaign.byVerdict;
+  if (p45Bv.POTRJENO !== 0 || p45Bv.DELNO !== 7 || p45Bv.NEPOTRJENO !== 33 || p45Bv.NEVERIFIKATORNO !== 17 || p45Bv["BREZ-VIRA"] !== 13)
+    p45Errors.push("verdicti niso (0, 7, 33, 17, 13)");
+  if (p45Bv.POTRJENO + p45Bv.DELNO + p45Bv.NEPOTRJENO + p45Bv.NEVERIFIKATORNO + p45Bv["BREZ-VIRA"] !== 70)
+    p45Errors.push("vsota verdictov ≠ 70");
+  const p45Bm = p45LV.campaign.byMethod;
+  if (p45Bm["fran.si-direct"] + p45Bm["wikipedia-api"] + p45Bm["deterministic-repo"] + p45Bm["unreachable"] !== 49)
+    p45Errors.push("vsota metod ≠ 49");
+  if (p45LV.families.length !== 16) p45Errors.push("družin ni 16");
+  // vsota verdictov po družinah == 70; vsota parov == 216
+  let p45FamVerdictSum = 0;
+  let p45FamPairsSum = 0;
+  for (const f of p45LV.families) {
+    const s = (f.verdictCounts.POTRJENO ?? 0) + (f.verdictCounts.DELNO ?? 0) + (f.verdictCounts.NEPOTRJENO ?? 0) + (f.verdictCounts.NEVERIFIKATORNO ?? 0) + (f.verdictCounts["BREZ-VIRA"] ?? 0);
+    p45FamVerdictSum += s;
+    p45FamPairsSum += f.pairs;
+  }
+  if (p45FamVerdictSum !== 70) p45Errors.push("vsota verdictov po družinah ≠ 70");
+  if (p45FamPairsSum !== 216) p45Errors.push("vsota parov po družinah ≠ 216");
+  // pinane refutacije (DWB zvezčna struktura + SSKJ verbatim + atribucije)
+  const p45FLV = (id: string) => p45LV.families.find((f) => f.id === id);
+  const p45Lohn = p45FLV("LOHN-RAUT")?.topHypotheses.find((h) => h.candidate === "Lohn (nem.)");
+  if (!p45Lohn || p45Lohn.verdict !== "NEPOTRJENO" || !p45Lohn.noteSi.includes("Bd 12"))
+    p45Errors.push("Lohn Bd 16→12 (NEPOTRJENO) ni pinan");
+  const p45Aef = p45FLV("AEFLING")?.topHypotheses;
+  if (p45FLV("AEFLING")?.verdictCounts.DELNO !== 3)
+    p45Errors.push("AEFLING DELNO ni 3 (Aue Bd 1 / Öde Bd 13 strukturno)");
+  if (!p45Aef?.some((h) => h.candidate === "Hofling" && h.verdict === "NEPOTRJENO" && h.noteSi.includes("Bd 10")))
+    p45Errors.push("Höfling Bd 13→10 ni pinan");
+  if (!p45Aef?.some((h) => h.candidate === "Efling" && h.verdict === "NEPOTRJENO" && h.noteSi.includes("Bd 3")))
+    p45Errors.push("Efeu Bd 6→3 ni pinan");
+  const p45Lhiz = p45FLV("LHIZ")?.topHypotheses.find((h) => h.candidate === "Lhize/Lhizl");
+  if (!p45Lhiz || p45Lhiz.verdict !== "NEPOTRJENO" || !p45Lhiz.noteSi.includes("liže"))
+    p45Errors.push("LHIZ liza = 'kdor rad liže' ni pinan");
+  const p45Kwb = p45FLV("GUETEN")?.topHypotheses.find((h) => h.candidate === "Gütung");
+  if (!p45Kwb || p45Kwb.verdict !== "NEPOTRJENO" || !p45Kwb.noteSi.includes("Kranzmayer"))
+    p45Errors.push("Kärntner WB (Schulz, 1972) NEPOTRJENO ni pinan");
+  const p45Einhart = p45FLV("EINHART")?.topHypotheses.find((h) => h.candidate === "Gypf.");
+  if (!p45Einhart || p45Einhart.verdict !== "NEPOTRJENO" || !p45Einhart.noteSi.includes("PV.json"))
+    p45Errors.push("PV-Gypf NEPOTRJENO ni pinan");
+  if (!p45LV.method.unchangedP43.includes("invarianta I2")) p45Errors.push("metoda ne deklarira invariantne I2");
+  // dokazni datoteki (strežniški klic; vzorec qa-p37..p44)
+  let p45FileDetail = "dokazni datoteki nista preverjeni (readFile ni na voljo) — celovita kontrola teče na /api/qa";
+  if (opts.readFile) {
+    const rawEv = opts.readFile("research/issue17/ps-lexicon-verified.json");
+    const rawRt = opts.readFile("src/data/atlas/ps-lexicon-verified.json");
+    const rawP43 = opts.readFile("research/issue17/ps-lexicon.json");
+    if (rawEv === null) p45Errors.push("research/issue17/ps-lexicon-verified.json ni berljiv (izpis scripts/p45_lex_verify.py)");
+    if (rawRt === null) p45Errors.push("src/data/atlas/ps-lexicon-verified.json ni berljiv (runtime kopija)");
+    if (rawEv !== null && rawRt !== null && rawEv !== rawRt)
+      p45Errors.push("dokazni in runtime izpis ps-lexicon-verified.json nista identična (skript mora izpisati oba enako)");
+    if (rawEv !== null) {
+      try {
+        const j = JSON.parse(rawEv) as {
+          campaign: { targetsTotal: number; byVerdict: Record<string, number> };
+          families: { id: string; hypotheses: { candidate: string; verification: { verdict: string; targets: { id: string; noteSi?: string }[] } }[] }[];
+        };
+        if (j.campaign.targetsTotal !== 49) p45Errors.push("JSON tarč ni 49");
+        if (j.campaign.byVerdict.NEPOTRJENO !== 33) p45Errors.push("JSON NEPOTRJENO ni 33");
+        const p45AefJson = j.families.find((f) => f.id === "AEFLING")?.hypotheses.find((h) => h.candidate === "Afling");
+        if (!p45AefJson || p45AefJson.verification.verdict !== "DELNO"
+          || !p45AefJson.verification.targets.some((t: { noteSi?: string }) => (t.noteSi ?? "").includes("Bd 1")))
+          p45Errors.push("JSON Aue Bd 1 DELNO ni pinan (evidence nivo)");
+        let hyps = 0;
+        for (const f of j.families) hyps += f.hypotheses.length;
+        if (hyps !== 70) p45Errors.push("JSON hipotez ni 70");
+        // invarianta I2: kandidati P43 bajtno identični — primerjaj z ps-lexicon.json
+        if (rawP43 !== null) {
+          try {
+            const p43 = JSON.parse(rawP43) as { families: { id: string; lexicon: { hypotheses: { candidate: string }[] } }[] };
+            const cIn = p43.families.flatMap((f) => f.lexicon.hypotheses.map((h) => `${f.id}\u0000${h.candidate}`));
+            const cOut = j.families.flatMap((f) => f.hypotheses.map((h) => `${f.id}\u0000${h.candidate}`));
+            if (cIn.join("\u0001") !== cOut.join("\u0001"))
+              p45Errors.push("invarianta I2: kandidati P43 niso bajtno identični v izpisu verifikacije");
+          } catch {
+            p45Errors.push("research/issue17/ps-lexicon.json (P43) ni veljaven JSON (potrebna za I2)");
+          }
+        } else {
+          p45Errors.push("research/issue17/ps-lexicon.json (P43) ni berljiv za I2");
+        }
+        p45FileDetail = `dokazni datoteki preverjeni in identični (49 tarč, ${hyps} hipotez, NEPOTRJENO ${j.campaign.byVerdict.NEPOTRJENO}, I2 potrjena)`;
+      } catch {
+        p45Errors.push("research/issue17/ps-lexicon-verified.json ni veljaven JSON");
+      }
+    }
+  }
+  push(
+    "qa-p45-ps-lexicon-verified",
+    "P45: N083PS — VERIFIKACIJA LEKSIKOGRAFSKIH VIROV P43 (49 tarč, 70 hipotez): 0/70 POTRJENO v celoti — 33 NEPOTRJENO (geslo manjka/pomen drugačen/citat zvezka ali atribucija ne stoji), 7 DELNO, 17 NEVERIFIKATORNO (DWB/Schmeller teksti v peskovniku nedosegljivi — kanonični URL v dokazih), 13 BREZ-VIRA; metode: fran.si direktni geslarski izseki 18 (SSKJ²/Pleteršnik/Novak SSP), Wikipedia API 14 (zvezčne mape DWB 33 zvezkov, Schmeller Cotta 1827–37 / Frommann 1872–77, bibliografija), deterministična 1 (PV.json), nedosegljivo 16; DWB citati zvezkov: Aue Bd 1 ✓ in Öde Bd 13 ✓ strukturno skladna, Lohn Bd 16 ✗ (L∈Bd 12), Höfling Bd 13 ✗ (H∈Bd 10), Efeu Bd 6 ✗ (E∈Bd 3) — trije NAPAČNI; SSKJ verbatim refutacije: log = '(močviren) travnik ob vodi', líza = 'kdor rad liže', lúti = 'hud, jezen'; neobstoječa gesla: jedar, ving, orga, horga, ajna, p45Einhart, guten, poggi, šlifa; atribucije ne stojijo: 'Kärntner Wörterbuch (Schulz, 1972)', 'Bezlaj SSN/SLA', Schmeller 'C.H. Beck' (pravilno Cotta); PV-Gypf: NI v PV.json, JE v PS registru (+ 'Schüttwiese, Gypfang'); invarianta I2: P43 kandidati/glose/viri bajtno identični, rabe ni prirejena; status REVIEW",
+    "P45: N083PS — SOURCE VERIFICATION OF THE P43 LEXICON (49 targets, 70 hypotheses): 0/70 fully CONFIRMED — 33 REFUTED (headword missing/meaning different/volume citation or attribution wrong), 7 PARTIAL, 17 UNVERIFIABLE (DWB/Schmeller texts unreachable — canonical URLs in evidence), 13 NO-SOURCE; methods: fran.si direct entry excerpts 18 (SSKJ²/Pleteršnik/Novak SSP), Wikipedia API 14 (DWB 33-volume map, Schmeller Cotta 1827–37 / Frommann 1872–77, bibliography), deterministic 1 (PV.json), unreachable 16; DWB volume citations: Aue Bd 1 ✓ and Öde Bd 13 ✓ structurally consistent, Lohn Bd 16 ✗ (L∈Bd 12), Höfling Bd 13 ✗ (H∈Bd 10), Efeu Bd 6 ✗ (E∈Bd 3) — three WRONG; SSKJ verbatim refutations: log = '(wet) meadow by the water', líza = 'one who likes to lick', lúti = 'fierce, angry'; non-existent headwords: jedar, ving, orga, horga, ajna, p45Einhart, guten, poggi, šlifa; attributions fail: 'Kärntner Wörterbuch (Schulz, 1972)', 'Bezlaj SSN/SLA', Schmeller 'C.H. Beck' (correctly Cotta); PV-Gypf: NOT in PV.json, IS in the PS register (+ 'Schüttwiese, Gypfang'); invariant I2: P43 candidates/glosses/sources byte-identical, no use reassigned; status REVIEW",
+    p45Errors.length === 0,
+    p45Errors.length === 0
+      ? `0/70 potrjeno · 33/7/17/13 · fran.si 18 + wiki 14 + repo 1 + unreachable 16 · Lohn→Bd 12, Höfling→Bd 10, Efeu→Bd 3, Aue Bd 1 ✓, Öde Bd 13 ✓ · ${p45FileDetail}`
+      : p45Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;

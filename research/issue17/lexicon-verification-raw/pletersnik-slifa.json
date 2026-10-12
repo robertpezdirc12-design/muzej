@@ -1,0 +1,21 @@
+{
+ "target": "pletersnik-slifa",
+ "source": "fran.si",
+ "queries": {
+  "šlifa": {
+   "counts": {},
+   "links": {},
+   "entries": []
+  },
+  "šlif": {
+   "counts": {},
+   "links": {},
+   "entries": []
+  },
+  "šljif": {
+   "counts": {},
+   "links": {},
+   "entries": []
+  }
+ }
+}
