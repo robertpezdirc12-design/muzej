@@ -1,0 +1,8 @@
+{
+ "family": "HURGI",
+ "pass": 2,
+ "model": "glm-5v-turbo (besedilni)",
+ "created": 1791830337,
+ "raw": "{\n \"termTypeHypothesis\": \"LEDINSKO-IME\",\n \"hypotheses\": [\n   {\n     \"candidate\": \"Horgi\",\n     \"glossSi\": \"ledinsko ime, verjetno povezano z ledinskim imenom Horga ali Horgi, ki se pojavlja v Beli krajini in na Krasu\",\n     \"source\": \"SSKJ\",\n     \"confidence\": \"~\"\n   },\n   {\n     \"candidate\": \"Hurg\",\n     \"glossSi\": \"narečna oblika nemške besede 'Hurge' ali 'Hürge', ki bi lahko pomenila 'malo dolina' ali 'vznožje hriba'\",\n     \"source\": \"DWB (Grimm)\",\n     \"confidence\": \"?\"\n   },\n   {\n     \"candidate\": \"Orgi\",\n     \"glossSi\": \"morda narečna oblika slovenske besede 'orga' (kmečko vozilo), kar bi lahko kazalo na ledinsko ime povezano z vozmi ali potjo\",\n     \"source\": \"SSKJ\",\n     \"confidence\": \"?\"\n   }\n ],\n \"sources\": [\"SSKJ\", \"DWB (Grimm)\"],\n \"noteSi\": \"Vse pojavitve so enotne ('Hurgi') na isti strani dokumenta, kar kaže na ledinsko ime. Kurrent zamenjave so manj verjetne, saj so zapisi konsistentni. V kontekstu Bela krajine, kjer so pogasta slovenska ledinska imena, je najverjetneje gre za ledinsko ime, ki se nanaša na posebno parcelo ali območje.\"\n}",
+ "ms": 3460
+}

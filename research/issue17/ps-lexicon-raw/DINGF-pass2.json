@@ -1,0 +1,8 @@
+{
+ "family": "DINGF",
+ "pass": 2,
+ "model": "glm-5v-turbo (besedilni)",
+ "created": 1791830091,
+ "raw": "{\n \"termTypeHypothesis\": \"LEDINSKO-IME\",\n \"hypotheses\": [\n   {\n     \"candidate\": \"Dingf\",\n     \"glossSi\": \"ledinsko ime, verjetno za kraj ali posest v občini Griblje\",\n     \"source\": \"neznano — hipoteza brez dokumentiranega vira\",\n     \"confidence\": \"?\"\n   },\n   {\n     \"candidate\": \"Ding\",\n     \"glossSi\": \"mogoče krajinska oznoba, povezana s topografsko značilnostjo\",\n     \"source\": \"Bezlaj, Slovenski narodnopisni slovar\",\n     \"confidence\": \"~\"\n   },\n   {\n     \"candidate\": \"Dingl\",\n     \"glossSi\": \"narečna oblika za 'Dingel', majhno dolino ali grapo\",\n     \"source\": \"SSKJ\",\n     \"confidence\": \"~\"\n   },\n   {\n     \"candidate\": \"Dingf\",\n     \"glossSi\": \"okrajšava za 'Dingfeld', polje ali posest\",\n     \"source\": \"DWB (Grimm)\",\n     \"confidence\": \"?\"\n   },\n   {\n     \"candidate\": \"Dingb\",\n     \"glossSi\": \"mogoče narečna oblika za 'Dingel' ali 'Dingelbach\",\n     \"source\": \"Kärntner Wörterbuch\",\n     \"confidence\": \"?\"\n   }\n ],\n \"sources\": [\"Bezlaj, Slovenski narodnopisni slovar\", \"SSKJ\", \"DWB (Grimm)\", \"Kärntner Wörterbuch\"],\n \"noteSi\": \"Vsi OCR prehovi enotno preberejo 'Dingf', kar kaže na obstoj te oznake v originalnem dokumentu. Kurrentna pisava lahko pojasni črno 'f' kot končnico ali okrajšavo. Ker se pojavlja v stolpcu rabe, gre verjetno za ledinsko ime, saj je večina podobnih oznak v tem delu katastra ledinska imena. Kvantitativni kontekst (10 ponovitev na isti strani) podpira domnevo o lokalnem posebnem imenu, ne pa splošnega narečnega izraza.\"\n}",
+ "ms": 5957
+}

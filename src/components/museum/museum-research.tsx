@@ -59,6 +59,7 @@ import {
   PS_RECAP_P40,
   PS_RECAP_PALEO_P41,
   PS_LANDUSE_V2_P42,
+  PS_LEXICON_P43,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -673,6 +674,99 @@ export function MuseumResearch() {
                   {t(
                     "Vse neznane družine ostajajo izrecno NEKLASIFICIRANE (ni ugibanj); so-odvisnost = primarne rabe na istih parcelah. TOPONIM = ležajna imena (Löwisch Thal, Leite …) — niso raba; ARTIFAKT vključuje številke 82–100 v stolpcu rabe na Blatt X — dodatni dokaz, da je Blatt X register stavbnih mest. Strojno berljivo: /api/atlas/ps-landuse-v2.",
                     "All unknown families remain explicitly UNCLASSIFIED (no guessing); co-occurrence = primary classes on the same parcels. TOPONYM = place names (Löwisch Thal, Leite …) — not a land use; ARTIFACT includes numbers 82–100 in the culture column on Blatt X — further evidence that Blatt X is the building-plot register. Machine-readable: /api/atlas/ps-landuse-v2.",
+                  )}
+                </p>
+              </div>
+            </div>
+
+            {/* PS 1825 — neznane družine: prečni prehodi + PV sprava + leksikon (P43, issue #10) */}
+            <div className="min-w-0 rounded-xl border bg-card p-6 shadow-sm">
+              <h3 className="flex flex-wrap items-center gap-2 font-display text-lg font-semibold">
+                <Microscope className="size-4 text-primary" aria-hidden="true" />
+                {t("PS 1825 — neznane družine: prečni prehodi, PV sprava, leksikon (P43)", "PS 1825 — unknown families: cross-passes, PV reconciliation, lexicon (P43)")}
+                <StatusBadge status={PS_LEXICON_P43.status} />
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                {t(
+                  "Prečni prehodi SAMO znotraj iste fotografije (sken vsebuje ponovne posnetke); rabe se NE prireja — vse ostaja NEKLASIFICIRANO; leksikografske hipoteze so izrecno HIPOTEZE z viri, ki jih navaja stroj (NEPREVERJENI).",
+                  "Cross-passes ONLY within the same photo (the scan contains re-shoots); no use is reassigned — everything remains UNCLASSIFIED; lexicographic hypotheses are explicitly HYPOTHESES with machine-attributed (UNVERIFIED) sources.",
+                )}
+              </p>
+
+              {/* P43: prečni prehodi */}
+              <div className="mt-4 rounded-lg border bg-secondary/30 p-3">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-sm font-semibold">
+                    {t("P43 — prečni prehodi po družinah", "P43 — cross-passes by family")}
+                  </span>
+                  <span className="font-mono text-[11px] text-muted-foreground">
+                    {PS_LEXICON_P43.families.reduce((a, f) => a + f.pairs, 0)} + {PS_LEXICON_P43.singles.pairs} = 282 {t("parov NEKLASIFICIRANO", "pairs UNCLASSIFIED")}
+                  </span>
+                </div>
+                <div className="mt-2 max-h-64 space-y-1 overflow-y-auto pr-1">
+                  {PS_LEXICON_P43.families.map((f) => (
+                    <div key={f.id} className="rounded border bg-background px-2 py-1 text-[10px]">
+                      <div className="flex flex-wrap items-center justify-between gap-2 font-mono">
+                        <span className="font-semibold">{f.id}</span>
+                        <span className="text-muted-foreground">
+                          {f.pairs} {t("parov", "pairs")} · {f.block.distinctPages === 1 ? t("1 fotografija", "1 photo") : `${f.block.distinctPages} ${t("fotografij", "photos")}`} · {t("teki", "runs")} {f.block.contiguousRuns}
+                          {f.stablePairs > 0 ? ` · ${t("stabilnih", "stable")} ${f.stablePairs}` : ""}
+                          {f.fallbackPairs > 0 ? ` · ${t("padcek", "fallback")} ${f.fallbackPairs}` : ""}
+                        </span>
+                      </div>
+                      <p className="mt-0.5 leading-snug text-muted-foreground/80">
+                        {Object.entries(f.variants).map(([k, v]) => `${k} ×${v}`).join(", ")}
+                      </p>
+                      {f.topHypotheses.length > 0 && (
+                        <p className="mt-0.5 leading-snug text-muted-foreground/70">
+                          {t("hipoteze", "hypotheses")}: {f.topHypotheses.map((h) => `${h.candidate} [${h.confidence}]`).join(" · ")}
+                        </p>
+                      )}
+                    </div>
+                  ))}
+                  <div className="rounded border bg-background px-2 py-1 text-[10px]">
+                    <div className="flex flex-wrap items-center justify-between gap-2 font-mono">
+                      <span className="font-semibold">{t("KITICE", "STRAYS")}</span>
+                      <span className="text-muted-foreground">{PS_LEXICON_P43.singles.pairs} {t("parov", "pairs")} · {PS_LEXICON_P43.singles.distinctRaw} {t("različnih", "distinct")} · {t("padcev", "fallbacks")} {PS_LEXICON_P43.singles.fallbackPairs}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* P43: PV sprava */}
+              <div className="mt-3 rounded-lg border bg-secondary/30 p-3">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-sm font-semibold">
+                    {t("P43 — območna sprava s PV (Nutzungs-Ausweis 10. 1. 1825)", "P43 — area reconciliation with the PV (Nutzungs-Ausweis 10 Jan 1825)")}
+                  </span>
+                  <span className="font-mono text-[11px] text-muted-foreground">
+                    PV {PS_LEXICON_P43.pvReconciliation.pvTotalJ} J · {t("model", "model")} {PS_LEXICON_P43.pvReconciliation.rowsModelTotalJ} J
+                  </span>
+                </div>
+                <div className="mt-2 flex flex-wrap gap-1.5 font-mono text-[10px]">
+                  <span className="rounded-full border bg-background px-2 py-0.5">
+                    {t(`PV Area ≈ P41 Area (Δ 0,05 %)`, `PV Area ≈ P41 Area (Δ 0.05%)`)}
+                  </span>
+                  <span className="rounded-full border bg-background px-2 py-0.5">
+                    {t(`VINOGRAD Δ ${PS_LEXICON_P43.pvReconciliation.vinogradVsWeinDeltaJ} J ✓`, `VINEYARD Δ ${PS_LEXICON_P43.pvReconciliation.vinogradVsWeinDeltaJ} J ✓`)}
+                  </span>
+                  <span className="rounded-full border bg-orange-600/10 px-2 py-0.5 text-orange-700 dark:text-orange-400">
+                    {t(`WEIDEN-GAP ${PS_LEXICON_P43.pvReconciliation.weidenGapJ} J`, `PASTURE-GAP ${PS_LEXICON_P43.pvReconciliation.weidenGapJ} J`)}
+                  </span>
+                  <span className="rounded-full border bg-background px-2 py-0.5">
+                    {t(`NJIVA +${PS_LEXICON_P43.pvReconciliation.njivaVsAeckerDeltaJ} J`, `FIELD +${PS_LEXICON_P43.pvReconciliation.njivaVsAeckerDeltaJ} J`)}
+                  </span>
+                  <span className="rounded-full border bg-background px-2 py-0.5">
+                    {t(`TRAVNIK +${PS_LEXICON_P43.pvReconciliation.travnikVsWiesenDeltaJ} J`, `MEADOW +${PS_LEXICON_P43.pvReconciliation.travnikVsWiesenDeltaJ} J`)}
+                  </span>
+                  <span className="rounded-full border bg-background px-2 py-0.5">
+                    {t(`model − Area = ${PS_LEXICON_P43.pvReconciliation.rowsModelVsPvTotalJ} J ≈ Blatt X + NAD + WALDUNG [~]`, `model − Area = ${PS_LEXICON_P43.pvReconciliation.rowsModelVsPvTotalJ} J ≈ Blatt X + NAD + WOODS [~]`)}
+                  </span>
+                </div>
+                <p className="mt-2 text-[11px] leading-relaxed text-muted-foreground">
+                  {t(
+                    `Uradni izkaz navaja 636,16 J pašnikov (Weiden — belokranjske dubrave), izrecne Weide/Alm vrstice registra pa le ${PS_LEXICON_P43.pvReconciliation.psPastVisceAlmJ} J; neznane družine pokrijejo le ${PS_LEXICON_P43.pvReconciliation.unknownFamiliesAreaJ} J (17 %) vrzeli — preostanek leži v presežkih NJIVA/TRAVNIK nad uradnima kategorijama. PV »Walder« vrstica v transkripciji PRAZNA [?] — gozd uradni izkaz ne navaja, PS pa ima 76,79 J GOZD.`,
+                    `The official return lists 636.16 J of pastures (Weiden — the White Carniolan oak woods), while the register's explicit Weide/Alm rows carry only ${PS_LEXICON_P43.pvReconciliation.psPastVisceAlmJ} J; unknown families cover only ${PS_LEXICON_P43.pvReconciliation.unknownFamiliesAreaJ} J (17%) of the gap — the remainder sits in the FIELD/MEADOW surpluses over the official categories. The PV »Walder« row is EMPTY in the transcription [?] — the official return lists no forest, while the PS has 76.79 J of FOREST.`,
                   )}
                 </p>
               </div>

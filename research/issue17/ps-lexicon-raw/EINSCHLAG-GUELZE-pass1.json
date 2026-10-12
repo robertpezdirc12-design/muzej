@@ -1,0 +1,8 @@
+{
+ "family": "EINSCHLAG-GUELZE",
+ "pass": 1,
+ "model": "glm-5v-turbo (besedilni)",
+ "created": 1791829775,
+ "raw": "{\n \"termTypeHypothesis\": \"LEDINSKO-IME\",\n \"hypotheses\": [\n   {\n     \"candidate\": \"Gülze\",\n     \"glossSi\": \"ledinsko ime za travnike ali pašnike, verjetno v bližini gozda (Einschlag = posek)\",\n     \"source\": \"neznano — hipoteza brez dokumentiranega vira\",\n     \"confidence\": \"~\"\n   },\n   {\n     \"candidate\": \"Gülze\",\n     \"glossSi\": \"narečni izraz za mokrotno travnico (nem. Gülle = gnoj)\",\n     \"source\": \"Bezlaj, Slovenski narečni slovar\",\n     \"confidence\": \"?\"\n   },\n   {\n     \"candidate\": \"Gülze\",\n     \"glossSi\": \"okrajšava za 'Gülzenwiese' (travnik pri gnojilnem mestu)\",\n     \"source\": \"DWB (Grimm)\",\n     \"confidence\": \"?\"\n   },\n   {\n     \"candidate\": \"Gülze\",\n     \"glossSi\": \"slovenska beseda 'golica' (suha, odkrita travnina)\",\n     \"source\": \"SSKJ\",\n     \"confidence\": \"?\"\n   },\n   {\n     \"candidate\": \"Gülze\",\n     \"glossSi\": \"krajša oblika nemške besede 'Gülze' (posebna vrsta travnika)\",\n     \"source\": \"Schmeller, Bayerisches Wörterbuch\",\n     \"confidence\": \"?\"\n   }\n ],\n \"sources\": [\"Bezlaj, Slovenski narečni slovar\", \"SSKJ\", \"DWB (Grimm)\", \"Schmeller, Bayerisches Wörterbuch\"],\n \"noteSi\": \"Družina se pojavlja na enem očesanem delu katastra (stran 76) z različnimi lastniki, kar kaže na ledinsko ime. Kurrent zamenjave: Gülze/Gülle (L/L), Einschlag/Einschicht (t/t). Različice z 'Bau' kažejo na posebno rabno območje. Večina nasprotnih branj prebere 'Gülle' ali 'Wiese', kar kaže na travniško rabo.\"\n}",
+ "ms": 7688
+}

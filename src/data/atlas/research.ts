@@ -1667,6 +1667,142 @@ export const PS_LANDUSE_V2_P42: {
 };
 
 /** PZ — demografija in cenitev 1825 (N083PZ). */
+
+/**
+ * P43 (issue #10) — PS 1825: neznane družine — prečni prehodi, PV območna
+ * sprava in ledinsko-imenska struktura. Vrednosti generirane iz
+ * research/issue17/ps-lexicon.json (scripts/p43_ps_lexicon.py) — QA jih
+ * preverja prek vbrizganega readFile (vzorec qa-p37..p42).
+ */
+export const PS_LEXICON_P43: {
+  series: "PS";
+  source: string;
+  status: ResearchStatus;
+  generatedBy: string;
+  readingRule: string;
+  countScope: string;
+  families: {
+    id: string;
+    pairs: number;
+    variants: Record<string, number>;
+    distinctVariants: number;
+    stablePairs: number;
+    fallbackPairs: number;
+    variantPairs: number;
+    noCounterpart: number;
+    block: { pages: number[]; distinctPages: number; contiguousRuns: number; parcelRange: [number | null, number | null] };
+    termTypeHypothesis: string;
+    topHypotheses: { candidate: string; glossSi: string; source: string; confidence: string }[];
+  }[];
+  singles: { pairs: number; distinctRaw: number; fallbackPairs: number; noteSi: string };
+  pvReconciliation: {
+    pvOfficial: Record<string, { joch: number; klafter: number; jochF: number }>;
+    psClassAreasJ: Record<string, number>;
+    weidenGapJ: number;
+    psPastVisceAlmJ: number;
+    unknownFamiliesAreaJ: number;
+    njivaVsAeckerDeltaJ: number;
+    travnikVsWiesenDeltaJ: number;
+    vrtVsGemueseDeltaJ: number;
+    vinogradVsWeinDeltaJ: number;
+    rowsModelTotalJ: number;
+    pvTotalJ: number;
+    rowsModelVsPvTotalJ: number;
+  };
+  verdictSi: string;
+  verdictEn: string;
+  next: string[];
+} = {
+  series: "PS",
+  source:
+    "N083PS.pdf (VAČ uodid 373415, docid 41780; 143 strani) — prečni prehodi nad P39 modelom + committed PV.json transkripcija + 2 neodvisna LLM leksikografska prehoda (ps-lexicon-raw/, viri NEPREVERJENI); polni izpis research/issue17/ps-lexicon.json + src/data/atlas/ps-lexicon.json",
+  status: "REVIEW",
+  generatedBy: "scripts/p43_ps_lexicon.py",
+  readingRule:
+    "pass2wins (P38/P39); prečni prehodi SAMO znotraj iste fotografije (sken vsebuje ponovne posnetke — razponi 61↔83↔84↔86 [161,180] …), med-fotografske primerjave nezanesljive",
+  countScope: "štetje po PARIH parcela×raba (podvojene rabe znotraj parcele enkrat) — kot P39/P42",
+  families: [
+      { id: "LHUT-JEDRO", pairs: 36, variants: {"Lhut": 17, "Lhup": 8, "Lhupf": 7, "Lhupa": 3, "Lhuta": 1}, distinctVariants: 5, stablePairs: 0, fallbackPairs: 0, variantPairs: 14, noCounterpart: 22, block: { pages: [16, 36, 37, 48, 121], distinctPages: 5, contiguousRuns: 22, parcelRange: [261, 2076] }, termTypeHypothesis: "LEDINSKO-IME", topHypotheses: [{ candidate: "Lhut/Lhup/Lhupf/Lhuta", glossSi: "ledinsko ime, morda povezano s slovanskim korenom 'lom' ali 'log' (grmje, močvirno območje)", source: "neznano — hipoteza brez dokumentiranega vira", confidence: "?" }, { candidate: "Lhut/Lhup/Lhupf", glossSi: "ledinsko ime, morda povezano s slovanskim korenom 'lȕh' (svetli, jasen) ali 'lǫg' (močvirje, log)", source: "Bezlaj, France. Slovenski etimološki slovar. Ljubljana: SAZU, 1976–2008", confidence: "?" }, { candidate: "Lhuta/Lhupa", glossSi: "ledinsko ime, morda povezano s slovanskim korenom 'lȕt' (močvirnato območje)", source: "SSKJ, Slovenski slovar knjižnega jezika", confidence: "?" }] },
+      { id: "LOHN-RAUT", pairs: 29, variants: {"Lohn": 13, "Lohng": 2, "Lohnraut Gfüttergütl": 9, "Lohnraut Lönnean": 1, "Lohnraut Bäurean": 4}, distinctVariants: 5, stablePairs: 0, fallbackPairs: 2, variantPairs: 1, noCounterpart: 26, block: { pages: [10, 45, 47, 62, 116], distinctPages: 5, contiguousRuns: 13, parcelRange: [150, 2279] }, termTypeHypothesis: "LEDINSKO-IME", topHypotheses: [{ candidate: "Lohn (nem.)", glossSi: "Ledinsko ime, izpeljano iz nemške besede 'Lohn' (plača, nagrada), ki bi lahko označevalo zemljišče, ki je bilo nekdaj del plače ali nagrade za delo", source: "DWB (Deutsches Wörterbuch von Jacob und Wilhelm Grimm), Band 16, Spalte 844", confidence: "~" }, { candidate: "Log (slov.)", glossSi: "Ledinsko ime, ki se nanaša na dolino, grapo ali območje, kjer se splavajo lesne delce; v Beli krajini pogosta beseda za ledinska imena", source: "SSKJ (Slovar slovenskega knjižnega jezika)", confidence: "~" }, { candidate: "Lohnraut (nem.)", glossSi: "Kompozitum 'Lohn' + 'Raut' (prazna zemlja, njiva), ki bi lahko pomenil 'njiva, ki je bila del plače' ali 'ledinsko ime, ki se nanaša na posebno vrsto njive'", source: "DWB (Deutsches Wörterbuch von Jacob und Wilhelm Grimm), Band 16, Spalte 844; Schmeller, Bayerisches Wörterbuch, Band 2, Spalte 476", confidence: "~" }] },
+      { id: "LHOPI-LOHIFA", pairs: 23, variants: {"Lhopi": 7, "Luppa": 3, "Shüfa": 4, "Lohifa": 9}, distinctVariants: 4, stablePairs: 0, fallbackPairs: 0, variantPairs: 6, noCounterpart: 17, block: { pages: [39, 96, 127, 128, 129], distinctPages: 5, contiguousRuns: 16, parcelRange: [708, 2839] }, termTypeHypothesis: "LEDINSKO-IME", topHypotheses: [{ candidate: "Lhopi/Luppa", glossSi: "Ledinsko ime, verjetno povezano s slovnično obliko 'log' (dolina, dolina z vodo) ali 'lopata' (kot, kotina), kar se ujema z reliefom Belokejanske pokrajine", source: "SSKJ", confidence: "~" }, { candidate: "Shüfa", glossSi: "Narečna oblika nemškega 'Schlucht' (soteska, grape) ali 'Schluff' (mulj, ilovica), ki bi lahko označevala lokalno značilnost terena", source: "Schmeller, Bayerisches Wörterbuch", confidence: "?" }, { candidate: "Lohifa", glossSi: "Kompozitum nemškega 'Lohe' (mladi gozd, gaj) in slovenskega 'hifa' (hifa, drevesna snov), kar bi lahko označevalo mladi gozd z drevjem", source: "DWB (Grimm)", confidence: "?" }] },
+      { id: "EINSCHLAG-GUELZE", pairs: 20, variants: {"Einschlag mit Gülze": 7, "Gülze": 6, "Gülze mit Gülze": 1, "Einschicht mit Gfretzgen bau": 3, "Einschicht mit Poggi u. Bau": 3}, distinctVariants: 5, stablePairs: 0, fallbackPairs: 2, variantPairs: 18, noCounterpart: 0, block: { pages: [76, 114], distinctPages: 2, contiguousRuns: 10, parcelRange: [1162, 2228] }, termTypeHypothesis: "LEDINSKO-IME", topHypotheses: [{ candidate: "Gülze", glossSi: "ledinsko ime za travnike ali pašnike, verjetno v bližini gozda (Einschlag = posek)", source: "neznano — hipoteza brez dokumentiranega vira", confidence: "~" }, { candidate: "Gülze", glossSi: "ledinsko ime, morda povezano z ledinskim imenom 'Golica' ali 'Golec', ki se pojavlja v Beli krajini in bi lahko označevalo posebno vrsto zemljišča ali njive", source: "SSKJ", confidence: "?" }, { candidate: "Einschlag", glossSi: "nemški izraz za 'sekundarna goščava' ali 'mlada goščava', ki bi lahko označeval posebno vrsto gozdnega zemljišča", source: "DWB (Grimm)", confidence: "?" }] },
+      { id: "EINHART", pairs: 15, variants: {"Einhart mit Gypfel &c.": 14, "Einhart mit Gypf. &c.": 1}, distinctVariants: 2, stablePairs: 0, fallbackPairs: 0, variantPairs: 0, noCounterpart: 15, block: { pages: [80], distinctPages: 1, contiguousRuns: 1, parcelRange: [1644, 1658] }, termTypeHypothesis: "LEDINSKO-IME", topHypotheses: [{ candidate: "Einhart", glossSi: "Ledinsko ime, verjetno pridevniškega izvora, ki označuje parcelo z značilnostjo 'ena' ali 'edina', ali pa je prevzem nemške besede 'Einhart' (ena hrastovina)", source: "SSKJ, Bezlaj, Toporišič", confidence: "~" }, { candidate: "Gypfel", glossSi: "Narečna oblika nemške besede 'Gipfel' (vrh, vrhica), ki se pojavlja kot del kompozitnega ledinskega imena 'Einhart mit Gypfel' (ena hrastovina z vrhom)", source: "DWB (Grimm), Schmeller, Bayerisches Wörterbuch", confidence: "~" }, { candidate: "Gypf.", glossSi: "Okrajšava za 'Gypfel' (vrh), dokumentirana v uradnih dokumentih franciscejskega katastra kot skrajšana obrazna oblika", source: "AUSWEIS über die Benützungsart des Bodens (PV, 10. 1. 1825)", confidence: "~" }] },
+      { id: "AHN", pairs: 13, variants: {"Ahn": 13}, distinctVariants: 1, stablePairs: 0, fallbackPairs: 0, variantPairs: 0, noCounterpart: 13, block: { pages: [48], distinctPages: 1, contiguousRuns: 2, parcelRange: [906, 920] }, termTypeHypothesis: "LEDINSKO-IME", topHypotheses: [{ candidate: "Ahn", glossSi: "Ledinsko ime za polje ali travnik, verjetno povezano z zeliščem 'ajna' (Allium) ali s terenom ob reki 'ah' (voda)", source: "SSKJ", confidence: "~" }] },
+      { id: "AEFLING", pairs: 13, variants: {"Äfling": 13}, distinctVariants: 1, stablePairs: 0, fallbackPairs: 0, variantPairs: 0, noCounterpart: 13, block: { pages: [64], distinctPages: 1, contiguousRuns: 4, parcelRange: [1821, 1840] }, termTypeHypothesis: "LEDINSKO-IME", topHypotheses: [{ candidate: "Äfling", glossSi: "ledinsko ime, verjetno nemškega izvora, ki se nanaša na parcelo ali območje v občini Griblje", source: "neznano — hipoteza brez dokumentiranega vira", confidence: "~" }, { candidate: "Öfling", glossSi: "ledinsko ime, morda povezano z nemško besedo 'Öde' (neporaščen, opuščen) in pomeni 'puščava' ali 'neporaščeno območje'", source: "DWB (Grimm), Band 13, Spalte 1505", confidence: "~" }, { candidate: "Afling", glossSi: "ledinsko ime, morda povezano z nemško besedo 'Aue' (rečna naplavna ravan) in pomeni 'poplavno območje'", source: "DWB (Grimm), Band 1, Spalte 748", confidence: "?" }] },
+      { id: "GUETEN", pairs: 12, variants: {"Güten": 11, "Gütung": 1}, distinctVariants: 2, stablePairs: 0, fallbackPairs: 0, variantPairs: 0, noCounterpart: 12, block: { pages: [17, 48], distinctPages: 2, contiguousRuns: 6, parcelRange: [283, 908] }, termTypeHypothesis: "LEDINSKO-IME", topHypotheses: [{ candidate: "Güten/Gütung", glossSi: "Ledinsko ime, morda povezano s slovanskim korenom 'gut' (dobro) ali nemškim 'gut' (dobrih, dobrega)", source: "SSKJ", confidence: "?" }, { candidate: "Güten", glossSi: "Ledinsko ime, verjetno izpeljano iz nemške besede 'Gut' (posest, kmetija), ki v tem kontekstu označuje posestvo ali zemljišče v lasti kmetije.", source: "DWB (Deutsches Wörterbuch, Grimm), 'Gut'", confidence: "?" }, { candidate: "Gütung", glossSi: "Pomanjševalna ali narečna oblika 'Güten', ki bi lahko pomenila 'majhno posestvo' ali 'del kmetije' v belokranjskem narečnem okolju.", source: "Kärntner Wörterbuch (Schulz, 1972)", confidence: "?" }] },
+      { id: "ERDAR", pairs: 10, variants: {"Achm": 4, "Achat": 1, "Eidar": 1, "Erdar": 4}, distinctVariants: 4, stablePairs: 0, fallbackPairs: 5, variantPairs: 0, noCounterpart: 5, block: { pages: [23, 83], distinctPages: 2, contiguousRuns: 6, parcelRange: [168, 420] }, termTypeHypothesis: "LEDINSKO-IME", topHypotheses: [{ candidate: "Achm/Achat", glossSi: "ledinsko ime za njivo, ki je dokumentirano v Beli krajini; morebita krajšava ali dialektna oblika besede 'Acker' (njiva)", source: "SSKJ", confidence: "~" }, { candidate: "Eidar/Erdar", glossSi: "ledinsko ime za njivo, verjetno dialektna oblika slovenske besede 'jedar' (njiva, posest) ali 'erdar' (zemlja, posest)", source: "SSKJ", confidence: "?" }, { candidate: "Achm/Eidar/Erdar", glossSi: "Ledinsko ime polja v Beli krajini, zapisano v nemški Kurrent pisavi. Pojavlja se v stolpcu rabe kot specifična oznaka za parcelo, ki ni uradna kategorija.", source: "Bezlaj, France. 1976-1978. Slovar slovenskih narečij. Zv. 1-4. Ljubljana: SAZU.", confidence: "?" }] },
+      { id: "DINGF", pairs: 10, variants: {"Dingf": 10}, distinctVariants: 1, stablePairs: 10, fallbackPairs: 0, variantPairs: 0, noCounterpart: 0, block: { pages: [83], distinctPages: 1, contiguousRuns: 5, parcelRange: [161, 177] }, termTypeHypothesis: "LEDINSKO-IME", topHypotheses: [{ candidate: "Dingf", glossSi: "Ledinsko ime, ki najverjetneje označuje posebno parcelo ali območje. Pojavlja se v stolpcu rabe, kar kaže, da gre za ime zemljiščne enote ali posebnega dela zemljišča, ne pa za splošno kulturo.", source: "neznano — hipoteza brez dokumentiranega vira", confidence: "?" }, { candidate: "Tingf", glossSi: "Mogoče povezano z nemško besedo 'Ding' (stvar, predmet) ali 'Ting' (zbor, sodišče), vendar to ni dokumentirano v kontekstu zemljiščnih imen.", source: "neznano — hipoteza brez dokumentiranega vira", confidence: "?" }, { candidate: "Ding", glossSi: "Nemška beseda 'Ding' pomeni 'stvar' ali 'predmet', vendar ni dokumentirano v kontekstu zemljiščnih imen ali rabe zemljišč.", source: "DWB (Grimm)", confidence: "~" }] },
+      { id: "LUKIG", pairs: 10, variants: {"Lukig": 10}, distinctVariants: 1, stablePairs: 0, fallbackPairs: 0, variantPairs: 0, noCounterpart: 10, block: { pages: [59], distinctPages: 1, contiguousRuns: 7, parcelRange: [1121, 1141] }, termTypeHypothesis: "LEDINSKO-IME", topHypotheses: [{ candidate: "Lukig", glossSi: "Ledinsko ime za polje ali travnik v Beli krajini, verjetno povezano z osebnim imenom Luka ali podobno", source: "SSKJ (Slovenski slovar knjižnega in književnega jezika)", confidence: "~" }, { candidate: "Luckig", glossSi: "Narečna oblika nemške besede 'Luch' (močvirje, barje), ki je v Beli krajini pogost izposojenica", source: "Schmeller, Johann Andreas. Bayerisches Wörterbuch. München: C.H. Beck, 1827–1837", confidence: "?" }] },
+      { id: "LHIZ", pairs: 9, variants: {"Lhize": 7, "Lhizl": 2}, distinctVariants: 2, stablePairs: 0, fallbackPairs: 9, variantPairs: 0, noCounterpart: 0, block: { pages: [58], distinctPages: 1, contiguousRuns: 6, parcelRange: [1103, 1120] }, termTypeHypothesis: "LEDINSKO-IME", topHypotheses: [{ candidate: "Lhize/Lhizl", glossSi: "Ledinsko ime, verjetno povezano s slovnično obliko 'liza' (majhen travnik, njiva v gozdu ali ob njem)", source: "SSKJ", confidence: "~" }] },
+      { id: "LOHGARN", pairs: 7, variants: {"Lohgarn": 7}, distinctVariants: 1, stablePairs: 0, fallbackPairs: 0, variantPairs: 0, noCounterpart: 7, block: { pages: [29], distinctPages: 1, contiguousRuns: 3, parcelRange: [527, 539] }, termTypeHypothesis: "LEDINSKO-IME", topHypotheses: [{ candidate: "Lohgarn", glossSi: "ledinsko ime za parcelo, verjetno sestavljeno iz nemškega 'Loh' (mokro, močvirnato območje) in 'Garn' (morda pridevnik 'kolen', 'kolenast', ali pa gre za krajevni pridevnik)", source: "neznano — hipoteza brez dokumentiranega vira", confidence: "~" }, { candidate: "Logarn", glossSi: "ledinsko ime, izpeljano iz slovanskega 'log' (dolina, gozdna dolina), s pripono '-arn', ki je v slovenščini pogosta za označevanje krajev", source: "SSKJ", confidence: "?" }, { candidate: "Lochgarn", glossSi: "ledinsko ime, nemškega izvora, kjer 'Loch' pomeni 'luknja' ali 'odprtina', kar bi lahko označevalo obliko zemljišča", source: "DWB (Grimm)", confidence: "?" }] },
+      { id: "HURGI", pairs: 5, variants: {"Hurgi": 5}, distinctVariants: 1, stablePairs: 0, fallbackPairs: 0, variantPairs: 0, noCounterpart: 5, block: { pages: [46], distinctPages: 1, contiguousRuns: 3, parcelRange: [866, 879] }, termTypeHypothesis: "LEDINSKO-IME", topHypotheses: [{ candidate: "Hurgi", glossSi: "Ledinsko ime, morda povezano z zemljiščem, ki je bilo last družine Hurgi ali ima podobno ime", source: "neznano — hipoteza brez dokumentiranega vira", confidence: "?" }, { candidate: "Horgi", glossSi: "Narečna oblika, morda povezana z besedo 'horga' (mladina, poganek) ali 'horgati' (delati, delati po domače)", source: "SSKJ", confidence: "~" }, { candidate: "Hurki", glossSi: "Morda pomanjševalnica ali narečna oblika, povezana z besedo 'hurkati' (delati hitro, brez premišljevanja)", source: "Bezlaj", confidence: "?" }] },
+      { id: "WING", pairs: 3, variants: {"Wing": 3}, distinctVariants: 1, stablePairs: 0, fallbackPairs: 0, variantPairs: 3, noCounterpart: 0, block: { pages: [60], distinctPages: 1, contiguousRuns: 1, parcelRange: [1147, 1149] }, termTypeHypothesis: "LEDINSKO-IME", topHypotheses: [{ candidate: "Wing", glossSi: "Ledinsko ime za travnik ali pašnik, verjetno v obliki 'Ving' ali 'Vinga', ki bi lahko predstavljal krajevni toponim", source: "SSKJ", confidence: "~" }, { candidate: "Grieng", glossSi: "Zapisano kot 'Grieng' v nasprotnem branju, kar bi lahko predstavljalo narečno obliko 'Gring' ali 'Grinja' za travnato območje", source: "Bezlaj, Slovenski narečni atlas", confidence: "?" }] },
+      { id: "SCHINDEL", pairs: 1, variants: {"Schindel": 1}, distinctVariants: 1, stablePairs: 0, fallbackPairs: 1, variantPairs: 0, noCounterpart: 0, block: { pages: [120], distinctPages: 1, contiguousRuns: 1, parcelRange: [2350, 2350] }, termTypeHypothesis: "LEDINSKO-IME", topHypotheses: [{ candidate: "Schindel", glossSi: "Ledinsko ime, ki se nanaša na območje pokrito s šindri (lesena kritina), kar je pogosto v Beli krajini, kjer so bile hiše pokrite s šindrami", source: "SSKJ - Slovenski slovar knjižnega jezika", confidence: "~" }, { candidate: "Šindel", glossSi: "Slovenska beseda za šindro (leseno kritino), ki bi lahko bila zapisana nemško kot 'Schindel' v nemških dokumentih, vendar je v tem kontekstu verjetno ledinsko ime", source: "SSKJ - Slovenski slovar knjižnega jezika", confidence: "~" }, { candidate: "Sindel", glossSi: "Narečna varianta besede 'šindel', ki bi lahko obstajala v belokranjskem narečju, zapisana v nemški obliki", source: "Bezlaj, France: Slovenski narečni atlas, 1. knjiga", confidence: "?" }] },
+
+  ],
+  singles: {
+    pairs: 66,
+    distinctRaw: 42,
+    fallbackPairs: 10,
+    noteSi:
+      "kitice (posamezne neznane vrednosti, 42 različnih) — 10 padcev (pass1 generik namesto specifične besede); večina verjetno okrni ali odmašinet prebrani obliki znanih terminov (Einfach≈Einschlag?, Eibn, Abm …)",
+  },
+  pvReconciliation: {
+    pvOfficial: {
+      Gemuese_Gaerten: { joch: 2, klafter: 123, jochF: 2.08 },
+      Wein_Gaerten: { joch: 7, klafter: 665, jochF: 7.42 },
+      Wiesen: { joch: 76, klafter: 1480, jochF: 76.93 },
+      Wiesen_mit_Obstbaeumen: { joch: 12, klafter: 328, jochF: 12.21 },
+      Weiden: { joch: 636, klafter: 263, jochF: 636.16 },
+      Aecker: { joch: 413, klafter: 870, jochF: 413.54 },
+      Oedungen: { joch: 1, klafter: 476, jochF: 1.3 },
+      Fluesse_oder_Baeche: { joch: 21, klafter: 142, jochF: 21.09 },
+      Weg_Parzellen: { joch: 46, klafter: 1127, jochF: 46.7 },
+      Bau_Parzellen: { joch: 4, klafter: 889, jochF: 4.56 },
+      Partial_Sum: { joch: 1148, klafter: 539, jochF: 1148.34 },
+      Second_Section_Sum: { joch: 73, klafter: 1024, jochF: 73.64 },
+      Grand_Total: { joch: 1221, klafter: 1513, jochF: 1221.95 },
+    },
+    psClassAreasJ: {
+      NJIVA: 615.83,
+      TRAVNIK: 271.25,
+      TOPONIM: 81.23,
+      GOZD: 76.79,
+      NEKLASIFICIRANO: 96.68,
+      ARTIFAKT: 256.49,
+      NEROD: 30.28,
+      STAVBNO: 29.25,
+      ALM: 24.68,
+      VRT: 20.62,
+      OBCINA: 19.38,
+      PASTVISCE: 35.25,
+      VINOGRAD: 6.95,
+      VODA: 0.09,
+      CESTA: 0.02,
+    },
+    weidenGapJ: 576.24,
+    psPastVisceAlmJ: 59.92,
+    unknownFamiliesAreaJ: 96.68,
+    njivaVsAeckerDeltaJ: 202.29,
+    travnikVsWiesenDeltaJ: 182.12,
+    vrtVsGemueseDeltaJ: 18.54,
+    vinogradVsWeinDeltaJ: -0.46,
+    rowsModelTotalJ: 1564.78,
+    pvTotalJ: 1221.95,
+    rowsModelVsPvTotalJ: 342.84,
+  },
+  verdictSi:
+    "16 neznanih družin (216 parov) + 66 kitic: 13/16 družin vezanih na ENO fotografijo s teki sosednjih parcel → hipoteza LEDINSKO IME; DINGF edina 100 % stabilna beseda (10/10); generični padcek (pass1 Wiese/Acker, pass2 specifično): LHIZ 9/9, ERDAR 5/5, SCHINDEL 1/1 — specifične besede so v viru; PV Area 1221|1513 ≈ P41 1220|1493 (Δ 0,05 %) in VINOGRAD Δ −0,46 J; WEIDEN-GAP 576,24 J neznane družine pokrijejo le v 17 % — preostanek v presežkih NJIVA/TRAVNIK; rabe NI prirejena — vse ostaja NEKLASIFICIRANO (hipoteze za človeško paleografijo, viri stroja NEPREVERJENI)",
+  verdictEn:
+    "16 unknown families (216 pairs) + 66 strays: 13/16 families bound to ONE photo with contiguous parcel runs → FIELD-NAME hypothesis; DINGF the only 100% stable word (10/10); generic fallback (pass1 Wiese/Acker, pass2 specific): LHIZ 9/9, ERDAR 5/5, SCHINDEL 1/1 — the specific words ARE in the source; PV Area 1,221|1,513 ≈ P41 1,220|1,493 (Δ 0.05%) and VINEYARD Δ −0.46 J; the WEIDEN-GAP of 576.24 J is covered by unknown families in only 17% — the remainder sits in NJIVA/TRAVNIK surpluses; no use was reassigned — everything remains UNCLASSIFIED (hypotheses for human palaeography, machine-attributed sources UNVERIFIED)",
+  next: [
+    "človeška paleografija 16 družin + kitic (3. prehod dvoumnih strani, ko VAČ dosegljiv)",
+    "verifikacija leksikografskih virov (Schmeller/DWB/SSKJ/Bezlaj) — viri navaja stroj",
+    "PV razlage presežkov NJIVA/TRAVNIK (ali kulturni stolpec meša rabo z ledinskimi imeni?)",
+    "razcep K1/K2 (§21) + semantika 7 par referenc — še UNRESOLVED",
+  ],
+};
+
 export const PZ_ECONOMY_1825: {
   source: string;
   titleAsWritten: string;

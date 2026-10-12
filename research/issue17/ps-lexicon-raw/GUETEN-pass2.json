@@ -1,0 +1,8 @@
+{
+ "family": "GUETEN",
+ "pass": 2,
+ "model": "glm-5v-turbo (besedilni)",
+ "created": 1791830070,
+ "raw": "{\n \"termTypeHypothesis\": \"LEDINSKO-IME\",\n \"hypotheses\": [\n   {\n     \"candidate\": \"Güten\",\n     \"glossSi\": \"Ledinsko ime, verjetno izpeljano iz nemške besede 'Gut' (posest, kmetija), ki v tem kontekstu označuje posestvo ali zemljišče v lasti kmetije.\",\n     \"source\": \"DWB (Deutsches Wörterbuch, Grimm), 'Gut'\",\n     \"confidence\": \"~\"\n   },\n   {\n     \"candidate\": \"Gütung\",\n     \"glossSi\": \"Pomanjševalna ali narečna oblika 'Güten', ki bi lahko pomenila 'majhno posestvo' ali 'del kmetije' v belokranjskem narečnem okolju.\",\n     \"source\": \"Kärntner Wörterbuch (Schulz, 1972)\",\n     \"confidence\": \"?\"\n   },\n   {\n     \"candidate\": \"Güten/Gütung\",\n     \"glossSi\": \"Slovenska narečna beseda, ki bi lahko pomenila 'kraj s travo' ali 'travnik', izpeljana iz slovenske besede 'trava' preko nemškega vpliva.\",\n     \"source\": \"SSKJ (Slovenski slovar knjižnega jezika)\",\n     \"confidence\": \"?\"\n   }\n ],\n \"sources\": [\"DWB (Deutsches Wörterbuch, Grimm)\", \"Kärntner Wörterbuch (Schulz, 1972)\", \"SSKJ (Slovenski slovar knjižnega jezika)\"],\n \"noteSi\": \"Vsi zapisi (Güten/Gütung) so vezani na eno fotografijo in več lastnikov, kar kaže na ledinsko ime. Kurrent zamenjave niso pomembne, saj sta obliki že precej različni. Ena pojavitev (Gütung) kaži na možno narečno variacijo. Glede na velikost in lokacijo v Beli krajini je verjetnejša nemško-slovenska mešanica kot čist slovenska beseda.\"\n}",
+ "ms": 6316
+}

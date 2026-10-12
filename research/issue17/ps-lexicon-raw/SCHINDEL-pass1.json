@@ -1,0 +1,8 @@
+{
+ "family": "SCHINDEL",
+ "pass": 1,
+ "model": "glm-5v-turbo (besedilni)",
+ "created": 1791830451,
+ "raw": "{\n \"termTypeHypothesis\": \"LEDINSKO-IME\",\n \"hypotheses\": [\n   {\n     \"candidate\": \"Schindel\",\n     \"glossSi\": \"Ledinsko ime, ki se nanaša na območje pokrito s šindri (lesena kritina), kar je pogosto v Beli krajini, kjer so bile hiše pokrite s šindrami\",\n     \"source\": \"SSKJ - Slovenski slovar knjižnega jezika\",\n     \"confidence\": \"~\"\n   },\n   {\n     \"candidate\": \"Šindel\",\n     \"glossSi\": \"Slovenska beseda za šindro (leseno kritino), ki bi lahko bila zapisana nemško kot 'Schindel' v nemških dokumentih, vendar je v tem kontekstu verjetno ledinsko ime\",\n     \"source\": \"SSKJ - Slovenski slovar knjižnega jezika\",\n     \"confidence\": \"~\"\n   },\n   {\n     \"candidate\": \"Sindel\",\n     \"glossSi\": \"Narečna varianta besede 'šindel', ki bi lahko obstajala v belokranjskem narečju, zapisana v nemški obliki\",\n     \"source\": \"Bezlaj, France: Slovenski narečni atlas, 1. knjiga\",\n     \"confidence\": \"?\"\n   }\n ],\n \"sources\": [\"SSKJ - Slovenski slovar knjižnega jezika\", \"Bezlaj, France: Slovenski narečni atlas, 1. knjiga\"],\n \"noteSi\": \"Zapis 'Schindel' je verjetno ledinsko ime, saj se pojavi le na eni parceli in je povezan z eno fotografijo. V Beli krajini so bile hiše pogosto pokrite s šindri, kar pojasnjuje nastanek ledinskega imena. Kurrent zapis ne kaže na pomembne zamenjave, razen možnosti 'sch' namesto 'š'. Enako branje obeh OCR prehodov kaže na stabilen zapis.\"\n}",
+ "ms": 4318
+}

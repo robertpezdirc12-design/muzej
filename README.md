@@ -110,7 +110,7 @@ Zgodovinska katastrska slika vasi (franciscejski kataster, k.o. Griblje št. 83 
 - **dokazni vmesnik**: vir → trditev → dokaz → povezave (N083PT str. + VAČ povezave);
 - **pokritost + negativni rezultati** — raziskovalna provenienca vključno s statusi
   VERIFIED/DOCUMENTED/REVIEW/RECONSTRUCTED/APPROXIMATE/TO_COLLECT/NOT_FOUND;
-- **strojni prepis PS + sprava (P36–P42)** — 135 strani, 2743 vrstic; deterministična
+- **strojni prepis PS + sprava (P36–P43)** — 135 strani, 2743 vrstic; deterministična
   sprava: glavni niz 1889/2505 (75,4 %), Waldung 81, nadaljevalni niz 95 (do 2840),
   Blatt X 60 = register stavbnih mest; razdvojitev v model parcela×raba: 2134 vnosov,
   2632 parov, 430 parcel z več rabami, 7 sirot, klasifikacija rab (pravilnik v2,
@@ -138,7 +138,10 @@ API (statični, brez runtime AI):
 - `GET /api/atlas/ps-recap` — rekapitulacija str. 140–143 vs spravni model (P40);
 - `GET /api/atlas/ps-recap-paleo` — paleografija str. 140–143: Abschluß der Gemeinde (P41);
 - `GET /api/atlas/ps-landuse-v2` — pravilnik rab v2: 83,5 % parov, TOPONIM/ARTIFAKT ločitev,
-  16 neznanih družin z dokazi (P42).
+  16 neznanih družin z dokazi (P42);
+- `GET /api/atlas/ps-lexicon` — neznane družine: prečni prehodi (DINGF 10/10 stabilna,
+  padci Wiese/Acker→specifično), PV območna sprava (Weiden-gap 576,24 J; Area ≈ P41),
+  leksikografske hipoteze z nepreverjenimi viri (P43).
 
 ## Varnost
 

@@ -1,0 +1,8 @@
+{
+ "family": "LUKIG",
+ "pass": 1,
+ "model": "glm-5v-turbo (besedilni)",
+ "created": 1791830271,
+ "raw": "{\n \"termTypeHypothesis\": \"LEDINSKO-IME\",\n \"hypotheses\": [\n   {\n     \"candidate\": \"Lukig\",\n     \"glossSi\": \"Ledinsko ime za polje ali travnik v Beli krajini, verjetno povezano z osebnim imenom Luka ali podobno\",\n     \"source\": \"SSKJ (Slovenski slovar knjižnega in književnega jezika)\",\n     \"confidence\": \"~\"\n   },\n   {\n     \"candidate\": \"Lukig\",\n     \"glossSi\": \"Dialektna oblika nemškega 'Luch' (mokro, močvirnato travnik) s Kurrent zamenjavo 'ch' v 'g'\",\n     \"source\": \"DWB (Deutsches Wörterbuch von Jacob und Wilhelm Grimm)\",\n     \"confidence\": \"?\"\n   },\n   {\n     \"candidate\": \"Lukig\",\n     \"glossSi\": \"Okrajšava za 'Lustig' (vrt, nasad), ki bi se lahko pojavila v uradnem dokumentu\",\n     \"source\": \"neznano — hipoteza brez dokumentiranega vira\",\n     \"confidence\": \"?\"\n   },\n   {\n     \"candidate\": \"Lukig\",\n     \"glossSi\": \"Prevedeno slovensko ledinsko ime 'Log' (mesto ob vodi, mokrotno območje) z nemškim sufiksom '-ig'\",\n     \"source\": \"Bezlaj, Slovenski etimološki slovar\",\n     \"confidence\": \"?\"\n   }\n ],\n \"sources\": [\"SSKJ\", \"DWB (Grimm)\", \"Bezlaj, Slovenski etimološki slovar\"],\n \"noteSi\": \"Vse pojavitve so enotne in se nanašajo na različne parcele z različnimi lastniki, kar kaže na ledinsko ime. V Beli krajini so pogosta ledinska imena, ki so preživela v uradnih dokumentih. Kurrent zamenjave (npr. ch/g) so mogoče, vendar ni jasnih dokazov za to. Enotnost zapisa po vseh parcelah kaže na stabilno ledinsko ime, ne na narečni izraz za rabo.\"\n}",
+ "ms": 5854
+}

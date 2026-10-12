@@ -1148,3 +1148,109 @@ konzola brez napak.
 - 3. prehod ~15 dvoumnih strani (potrebuje VAČ posnetke);
 - človeška potrditev vseh strojnih branj; razcepi rekapitulacije (K1/K2, semantika
   par referenc) — UNRESOLVED (§21).
+
+## §23 — P43: neznane družine — prečni prehodi, PV območna sprava, ledinsko-imenska struktura (issue #10)
+
+**Datum:** 2026-10-12 · **Status:** REVIEW · **Skript:** `scripts/p43_ps_lexicon.py` ·
+**Dokazi:** `research/issue17/ps-lexicon.json` + identična runtime kopija
+`src/data/atlas/ps-lexicon.json` + `research/issue17/ps-lexicon-raw/` (34 datotek:
+2 neodvisna LLM prehoda × 17 sklopov) · **API:** `GET /api/atlas/ps-lexicon` (force-static)
+
+### 1. Prečni prehodi (pass1 ↔ pass2, samo znotraj iste fotografije)
+
+Ključna metodološka omejitev: sken N083PS vsebuje **ponovne posnetke** (razponi
+parcel se ponavljajo čez fotografije — 61↔83↔84↔86 vse nosijo [161,180] z
+različnimi lastniki/površinami!), zato so med-fotografske primerjave po številki
+parcele **nezanesljive**. P38/P39 to že spravita s pass2wins; P43 primerja samo
+isto-fotografski nasprotni prehod (če pass2 vrstica obstaja, je par iz pass2 in
+nasprotni prehod je pass1; sicer obratno).
+
+- **DINGF je edina 100 % stabilna neznana beseda**: 10/10 parov z enakim branjem
+  do ločila (pass1 "Dingf." ↔ pass2 "Dingf") — močno branje, termin ostaja neznan.
+- **GENERIČNI PADCEK** (en prehod prebere generik, drugi specifično — specifična
+  beseda je V VIRU): LHIZ 9/9 (pass1 "Wiese" → pass2 "Lhize/Lhizl"), ERDAR-p83 5/5
+  (pass1 "Acker" → pass2 "Achm/Achat" — hipoteza ~Acker-varianta), SCHINDEL 1/1
+  (pass1 "Acker" → pass2 "Schindel", parz. 2350), LOHN-RAUT 2, EINSCHLAG 2,
+  kitice 10 (skupaj 29 padcev).
+- **Variante istega tvora**: LHUT-JEDRO 5 variant (Lhut 17, Lhup 8, Lhupf 7,
+  Lhupa 3, Lhuta 1) brez enega stabilnega para — tvor je paleografsko težaven;
+  LHOPI-LOHIFA 4 varianti (Lhopi/Luppa/Shüfa/Lohifa) s pass1 "Schlif(f)a/Stifta".
+
+### 2. Blokovska koncentracija → hipoteza LEDINSKO IME
+
+13/16 družin je vezanih na **ENO fotografijo** s teki sosednjih parcel:
+AHN 906–920 (13 parov, 2 teka), AEFLING 1821–1840 (13, 4 teki), EINHART 1644–1658
+(15, "Einhart mit Gypfel &c." + anm. "bey Guggenfeldigen"), DINGF 161–177,
+LUKIG 1121–1141, LOHGARN 527–539, HURGI 866–879, WING 1147–1149, LHIZ 1103–1120,
+SCHINDEL 2350 … Več lastnikov enega imena na sosednjih parcelah = ime poljskega
+bloka, ne splošni termin. **termType hipoteza: LEDINSKO-IME** (15/16 družin;
+EINSCHLAG-GUELZE "LEDINSKO-IME | KULTURA-DIALEKT"). Rabe se NE prireja — vseh
+282 parov (216 v družinah + 66 kitic) ostaja izrecno NEKLASIFICIRANO.
+
+### 3. PV območna sprava (uradni Nutzungs-Ausweis, 10. 1. 1825)
+
+Iz committed transkripcije PV.json z regexom izvlečenih 13 kategorij (FAIL ob
+manjkajoči); usklajeno s pričakovanimi vrednostmi (invarianta I2).
+
+| Vrsta (PV) | PV J | PS (v2 razred) J | Δ J |
+|---|---|---|---|
+| Aecker | 413,54 | NJIVA 615,83 | +202,29 |
+| Wiesen + Obst | 89,13 | TRAVNIK 271,25 | +182,12 |
+| Weiden | 636,16 | PASTVISCE+ALM 59,92 | **−576,24** |
+| Wein Gärten | 7,42 | VINOGRAD 6,95 | **−0,46 ✓** |
+| Gemüse Gärten | 2,08 | VRT 20,62 | +18,54 |
+| Walder | PRAZNO [?] | GOZD 76,79 | +76,79 |
+| **Area skupaj** | **1221,95** | **model 1564,78** | +342,84 |
+
+- **PV Area 1221|1513 ≈ P41 Area der Gemeinde 1220|1493 (Δ 0,05 %)** — uradni
+  izkaz in dokumentna rekapitulacija se ujemata ✓.
+- **VINOGRAD usklajen (Δ −0,46 J)** — kvantitativna potrditev P42 popravka "Wein".
+- **WEIDEN-GAP 576,24 J**: uradno 636,16 J pašnikov (belokranjske dubrave =
+  gozdni pašniki/Hutweide) vs 59,92 J izrecnih Weide/Alm vrstic. Neznane družine
+  (96,68 J) pokrijejo le **17 % vrzeli**; preostanek leži v presežkih
+  NJIVA (+202,29) in TRAVNIK (+182,12) nad uradnima kategorijama → hipoteza [~]:
+  kulturni stolpec meša rabo z ledinskimi imeni/opombami, PV pa šteje parcelo
+  enkrat po kategoriji.
+- **RAZKORAK model−Area 342,84 J ≈ Blatt X 280,73 + NADALJEVANJE 13,46 +
+  WALDUNG 37,63** → kvantitativni argument, da so te sekcije zunaj "Area der
+  Gemeinde" rekapitulacije (P40 "Blatt X podvajanje nedokazljivo" dopolnjeno z
+  območnim argumentom) [~].
+- PV "Walder" vrstica v transkripciji PRAZNA [?] — ali izkaz res ne navaja gozda
+  (gambit dubrav pod Weiden) ali je branje spododelo — odprto.
+
+### 4. Leksikografske hipoteze (izrecno NE dokazi)
+
+2 neodvisna besedilna LLM prehoda × 17 sklopov (16 družin + kitice), committed
+kot dokazni raw. Združevanje: kandidati obeh prehodov = presek z zaupanjem
+prehoda-1; sicer unija z [?]; viri jih navaja stroj in so **NEPREVERJENI**
+(izpis vsebuje izrecno opombo). Skript kopira hipoteze v izpis; rabe ni prirejena.
+Naslovi kandidatov: Lohn/Log (SSKJ/DWB), Lhut~log/lȕh [?], Lhize~liza [~],
+Lukig~Luka/Luch [~/?], Wing~Weng [?], Hurgi~horga [?], Schindel~šindel [~] …
+
+### Deterministična preverba (brez AI ob delovanju)
+
+`scripts/p43_ps_lexicon.py` (FAIL ob padu katere koli invariante):
+- **I1** v2 rekonstrukcija == 2632 parov (v1+appended+TOPONIM+ARTIFAKT+numeriki);
+- **I2** PV izvlek == committed transkripcija (13 kategorij);
+- **I3** sekcije == P40 konstante (±0,02 J): 1232,96/13,46/37,63/280,73;
+- **I4** 16 družin = 216 parov + kitice 66 = **282** (v2 NEKLASIFICIRANO);
+- **I5** vsi kandidati z viri in zaupanjem [~]/[?]; termType v dovoljenih vrednostih.
+
+### Izpisi in integracija
+
+- `research/issue17/ps-lexicon.json` (kanonski dokaz) + identična runtime kopija
+  `src/data/atlas/ps-lexicon.json`; API `GET /api/atlas/ps-lexicon` (force-static).
+- TS `PS_LEXICON_P43` (research.ts); kartica "PS 1825 — neznane družine: prečni
+  prehodi, PV sprava, leksikon (P43)" v Raziskavah/kurrent (za P42); sources.ts
+  N083PS nota (P43); README P36–P43 + API seznam.
+- **QA 43→44** (`qa-p43-ps-lexicon`): identiteta 216+66=282, DINGF 10/10,
+  padci 9+5+1, blokovska koncentracija 13/16, PV identitete (1221,95/1564,78/
+  576,24/202,29/182,12/−0,46/342,84), leksikon kandidati ≤ 6 z viri, navzkrižna
+  kontrola obeh izpisov prek vbrizganega readFile (vzorec qa-p37..p42).
+
+### Ostaja odprto (issue #10)
+
+Človeška paleografija 16 družin + kitic (3. prehod dvoumnih strani, ko VAČ
+dosegljiv); verifikacija leksikografskih virov; PV razlage presežkov NJIVA/
+TRAVNIK; razcep K1/K2 (§21) + semantika 7 par referenc; potrditev vseh strojnih
+branj. Vsi statusi REVIEW.

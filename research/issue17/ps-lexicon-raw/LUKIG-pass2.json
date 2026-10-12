@@ -1,0 +1,8 @@
+{
+ "family": "LUKIG",
+ "pass": 2,
+ "model": "glm-5v-turbo (besedilni)",
+ "created": 1791830282,
+ "raw": "{\n \"termTypeHypothesis\": \"LEDINSKO-IME\",\n \"hypotheses\": [\n   {\n     \"candidate\": \"Lukig\",\n     \"glossSi\": \"Ledinsko ime, verjetno povezano z ledinsko značilnostjo (npr. luknjava, luknjava tla, majhni gomolji)\",\n     \"source\": \"Bezlaj, France. Slovenski narodnopisni leksikon. Ljubljana: SAZU, 1984–1995\",\n     \"confidence\": \"~\"\n   },\n   {\n     \"candidate\": \"Lukig\",\n     \"glossSi\": \"Okrajšava ali narečna oblika za 'Luge' (slovensko 'luge' = mokro, močvirnato tla)\",\n     \"source\": \"SSKJ, Slovar slovenskega knjižnega jezika\",\n     \"confidence\": \"~\"\n   },\n   {\n     \"candidate\": \"Luckig\",\n     \"glossSi\": \"Narečna oblika nemške besede 'Luch' (močvirje, barje), ki je v Beli krajini pogost izposojenica\",\n     \"source\": \"Schmeller, Johann Andreas. Bayerisches Wörterbuch. München: C.H. Beck, 1827–1837\",\n     \"confidence\": \"?\"\n   }\n ],\n \"sources\": [\"Bezlaj, France. Slovenski narodnopisni leksikon. Ljubljana: SAZU, 1984–1995\", \"SSKJ, Slovar slovenskega knjižnega jezika\", \"Schmeller, Johann Andreas. Bayerisches Wörterbuch. München: C.H. Beck, 1827–1837\"],\n \"noteSi\": \"Vsi zapisi so enotni 'Lukig' brez različic. Ker se pojavlja na 10 različnih parcelah s skupno površino 5,4 J in 9,4 K, je najverjetneje ledinsko ime. Kurrent zamenjave (L/R, u/n) so manj verjetne, saj je zapis konsistenten. V kontekstu Bela krajina je možna povezava z lokalnimi značilnostmi tal (npr. luknjava, vlažnost).\"\n}",
+ "ms": 6726
+}

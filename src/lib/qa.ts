@@ -27,6 +27,7 @@ import {
   PS_RECAP_P40,
   PS_RECAP_PALEO_P41,
   PS_LANDUSE_V2_P42,
+  PS_LEXICON_P43,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -1922,6 +1923,101 @@ export function runQA(opts: QAOptions = {}): QAReport {
     p42Errors.length === 0
       ? `2199/2632 (83,5 %) · +303 parov (13 pravil) · TOPONIM 122 · ARTIFAKT 29 · NEKLASIFICIRANO 282 (16 družin) · pojasnjeno 89,3 % · ${p42FileDetail}`
       : p42Errors.join("; "),
+  );
+
+
+  // ——— P43: N083PS — neznane družine: prečni prehodi + PV sprava + leksikon ———
+  const p43Errors: string[] = [];
+  const L3 = PS_LEXICON_P43;
+  const famPairs43 = L3.families.reduce((a, f) => a + f.pairs, 0);
+  if (famPairs43 !== 216) p43Errors.push(`vsota 16 družin je ${famPairs43}, morala bi biti 216`);
+  if (L3.singles.pairs !== 66) p43Errors.push("kitice niso 66 parov");
+  if (famPairs43 + L3.singles.pairs !== 282) p43Errors.push("216 + kitice ≠ 282 (v2 NEKLASIFICIRANO)");
+  if (L3.families.length !== 16) p43Errors.push("družin ni 16");
+  const famPin43: Record<string, number> = {
+    "LHUT-JEDRO": 36, "LOHN-RAUT": 29, "LHOPI-LOHIFA": 23, "EINSCHLAG-GUELZE": 20,
+    "EINHART": 15, "AHN": 13, "AEFLING": 13, "GUETEN": 12, "ERDAR": 10, "DINGF": 10,
+    "LUKIG": 10, "LHIZ": 9, "LOHGARN": 7, "HURGI": 5, "WING": 3, "SCHINDEL": 1,
+  };
+  for (const f of L3.families) {
+    if (famPin43[f.id] !== f.pairs) p43Errors.push(`družina ${f.id}: ${f.pairs} ≠ pinano ${famPin43[f.id]}`);
+    if (!f.termTypeHypothesis) p43Errors.push(`družina ${f.id} brez termType hipoteze`);
+    for (const h of f.topHypotheses) {
+      if (!["~", "?"].includes(h.confidence)) p43Errors.push(`družina ${f.id}: zaupanje '${h.confidence}' ni [~]/[?]`);
+      if (!h.source) p43Errors.push(`družina ${f.id}: kandidat '${h.candidate}' brez vira`);
+      if (f.topHypotheses.length > 3) p43Errors.push(`družina ${f.id}: več kot 3 kandidati v TS`);
+    }
+  }
+  const dingf = L3.families.find((f) => f.id === "DINGF");
+  if (!dingf || dingf.stablePairs !== 10) p43Errors.push("DINGF ni 10/10 stabilnih (edina stabilna neznana beseda)");
+  const lhiz = L3.families.find((f) => f.id === "LHIZ");
+  if (!lhiz || lhiz.fallbackPairs !== 9) p43Errors.push("LHIZ ni 9/9 padcev (Wiese→Lhize)");
+  const erdar = L3.families.find((f) => f.id === "ERDAR");
+  if (!erdar || erdar.fallbackPairs !== 5) p43Errors.push("ERDAR ni 5 padcev (Acker→Achm)");
+  const blockOne = L3.families.filter((f) => f.block.distinctPages === 1).length;
+  if (blockOne !== 10) p43Errors.push(`blokovska koncentracija na 1 fotografijo: ${blockOne}, pričakovano 10`);
+  const PV = L3.pvReconciliation;
+  if (PV.pvTotalJ !== 1221.95) p43Errors.push("PV total ni 1221,95 J (1221|1513)");
+  if (PV.rowsModelTotalJ !== 1564.78) p43Errors.push("model total ni 1564,78 J (P40 konstanta)");
+  if (PV.weidenGapJ !== 576.24) p43Errors.push("Weiden-gap ni 576,24 J");
+  if (PV.psPastVisceAlmJ !== 59.92) p43Errors.push("PASTVISCE+ALM ni 59,92 J");
+  if (PV.unknownFamiliesAreaJ !== 96.68) p43Errors.push("površina neznanih družin ni 96,68 J");
+  if (PV.njivaVsAeckerDeltaJ !== 202.29) p43Errors.push("NJIVA Δ ni +202,29 J");
+  if (PV.travnikVsWiesenDeltaJ !== 182.12) p43Errors.push("TRAVNIK Δ ni +182,12 J");
+  if (PV.vinogradVsWeinDeltaJ !== -0.46) p43Errors.push("VINOGRAD Δ ni −0,46 J");
+  if (PV.rowsModelVsPvTotalJ !== 342.84) p43Errors.push("model−Area ni 342,84 J");
+  const pvOfficialWeiden = PV.pvOfficial.Weiden;
+  if (!pvOfficialWeiden || pvOfficialWeiden.joch !== 636 || pvOfficialWeiden.klafter !== 263)
+    p43Errors.push("PV Weiden ni 636|263");
+  if (PV.pvOfficial.Grand_Total?.joch !== 1221 || PV.pvOfficial.Grand_Total?.klafter !== 1513)
+    p43Errors.push("PV Grand_Total ni 1221|1513");
+  // 6. dokazni datoteki (strežniški klic; vzorec qa-p37..p42)
+  let p43FileDetail = "dokazni datoteki nista preverjeni (readFile ni na voljo) — celovita kontrola teče na /api/qa";
+  if (opts.readFile) {
+    const rawEv = opts.readFile("research/issue17/ps-lexicon.json");
+    const rawRt = opts.readFile("src/data/atlas/ps-lexicon.json");
+    if (rawEv === null) p43Errors.push("research/issue17/ps-lexicon.json ni berljiv (izpis scripts/p43_ps_lexicon.py)");
+    if (rawRt === null) p43Errors.push("src/data/atlas/ps-lexicon.json ni berljiv (runtime kopija)");
+    if (rawEv !== null && rawRt !== null && rawEv !== rawRt)
+      p43Errors.push("dokazni in runtime izpis ps-lexicon.json nista identična (skript mora izpisati oba enako)");
+    if (rawEv !== null) {
+      try {
+        const j = JSON.parse(rawEv) as {
+          families: { id: string; pairs: number; stablePairs: number; fallbackPairs: number; block: { distinctPages: number }; lexicon: { termTypeHypothesis: string; hypotheses: { candidate: string; source: string; confidence: string }[]; sources: string[] } }[];
+          singles: { pairs: number; distinctRaw: number };
+          pvReconciliation: { weidenGapJ: number; rowsModelTotalJ: number; pvTotalJ: number };
+        };
+        const jFam = j.families.reduce((a, f) => a + f.pairs, 0);
+        if (jFam + j.singles.pairs !== 282) p43Errors.push("JSON 216+66 ≠ 282");
+        const jd = j.families.find((f) => f.id === "DINGF");
+        if (!jd || jd.stablePairs !== 10) p43Errors.push("JSON DINGF ni 10/10");
+        const jl = j.families.find((f) => f.id === "LHIZ");
+        if (!jl || jl.fallbackPairs !== 9) p43Errors.push("JSON LHIZ ni 9 padcev");
+        const noLex = j.families.filter((f) => !f.lexicon || f.lexicon.hypotheses.length === 0);
+        if (noLex.length > 1) p43Errors.push(`JSON ${noLex.length} družin brez leksikografskih kandidatov (največ 1)`);
+        for (const f of j.families) {
+          for (const h of f.lexicon.hypotheses) {
+            if (!h.source) p43Errors.push(`JSON ${f.id}/${h.candidate}: brez vira`);
+            if (!["~", "?"].includes(h.confidence)) p43Errors.push(`JSON ${f.id}/${h.candidate}: zaupanje '${h.confidence}'`);
+          }
+          if (f.lexicon.hypotheses.length > 6) p43Errors.push(`JSON ${f.id}: več kot 6 kandidatov`);
+        }
+        if (j.pvReconciliation.weidenGapJ !== 576.24 || j.pvReconciliation.rowsModelTotalJ !== 1564.78 || j.pvReconciliation.pvTotalJ !== 1221.95)
+          p43Errors.push("JSON PV sprava ≠ TS");
+        p43FileDetail = `dokazni datoteki preverjeni in identični (216+66=282 parov, DINGF 10/10, PV ${j.pvReconciliation.pvTotalJ} J)`;
+      } catch {
+        p43Errors.push("research/issue17/ps-lexicon.json ni veljaven JSON");
+      }
+    }
+  }
+  push(
+    "qa-p43-ps-lexicon",
+    "P43: N083PS — neznane družine: prečni prehodi + PV območna sprava + ledinsko-imenska struktura + leksikon: 16 družin (216 parov) + 66 kitic = 282 izrecno NEKLASIFICIRANO; prečni prehodi SAMO znotraj iste fotografije (sken vsebuje ponovne posnetke); DINGF edina 100 % stabilna beseda (10/10 do ločila); GENERIČNI PADCEK (pass1 generik → pass2 specifično, specifična beseda V VIRU): LHIZ 9/9 (Wiese→Lhize), ERDAR 5/5 (Acker→Achm), SCHINDEL 1/1, skupaj 29; blokovska koncentracija: 10/16 družin na ENI fotografiji (AHN 906–920, AEFLING 1821–1840, EINHART 1644–1658 …) → hipoteza LEDINSKO-IME; PV sprava: Area 1221,95 ≈ P41 1220,93 (Δ 0,05 %), VINOGRAD Δ −0,46 J, WEIDEN-GAP 576,24 J (uradno 636,16 J dubrav vs 59,92 J izrecnih vrstic; neznane družine pokrijejo 17 %), NJIVA +202,29 / TRAVNIK +182,12, model−Area 342,84 ≈ Blatt X + NAD + WALDUNG; leksikografske hipoteze (2 neodvisna LLM prehoda × 17 sklopov, committed raw) z viri, ki jih navaja stroj (NEPREVERJENI) — rabe NI prirejena; status REVIEW",
+    "P43: N083PS — unknown families: cross-passes + PV area reconciliation + field-name structure + lexicon: 16 families (216 pairs) + 66 strays = 282 explicitly UNCLASSIFIED; cross-passes ONLY within the same photo (the scan contains re-shoots); DINGF the only 100% stable word (10/10 up to punctuation); GENERIC FALLBACK (pass1 generic → pass2 specific, the specific word IS in the source): LHIZ 9/9 (Wiese→Lhize), ERDAR 5/5 (Acker→Achm), SCHINDEL 1/1, 29 in all; block concentration: 10/16 families on ONE photo (AHN 906–920, AEFLING 1821–1840, EINHART 1644–1658 …) → FIELD-NAME hypothesis; PV reconciliation: Area 1,221.95 ≈ P41 1,220.93 (Δ 0.05%), VINEYARD Δ −0.46 J, PASTURE-GAP 576.24 J (official 636.16 J of oak-woods vs 59.92 J explicit rows; unknown families cover 17%), FIELD +202.29 / MEADOW +182.12, model−Area 342.84 ≈ Blatt X + NAD + WOODS; lexicographic hypotheses (2 independent LLM passes × 17 bundles, committed raw) with machine-attributed (UNVERIFIED) sources — no use reassigned; status REVIEW",
+    p43Errors.length === 0,
+    p43Errors.length === 0
+      ? `216+66=282 parov · DINGF 10/10 · padci 9/5/1 · blokov 10/16 · PV 1221,95/1564,78/576,24 · ${p43FileDetail}`
+      : p43Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;

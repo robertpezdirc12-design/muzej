@@ -1,0 +1,8 @@
+{
+ "family": "LHOPI-LOHIFA",
+ "pass": 2,
+ "model": "glm-5v-turbo (besedilni)",
+ "created": 1791829764,
+ "raw": "{\n \"termTypeHypothesis\": \"LEDINSKO-IME\",\n \"hypotheses\": [\n   {\n     \"candidate\": \"Lhopi/Luppa\",\n     \"glossSi\": \"Ledinsko ime, verjetno povezano z ledinskim imenom 'Lhopa' (polje, njiva), ki se pojavlja v Beli krajini. Kurrent zamenjava R/L je pogosta.\",\n     \"source\": \"SSKJ\",\n     \"confidence\": \"~\"\n   },\n   {\n     \"candidate\": \"Lohifa\",\n     \"glossSi\": \"Morda narečna oblika nemškega 'Hof' (kmetija) ali 'Lohe' (mladi gozd, gozdnik). V kontekstu Bela krajine (kjer so velike skupne pašnike) je bolj verjetno ledinsko ime.\",\n     \"source\": \"DWB (Grimm)\",\n     \"confidence\": \"?\"\n   },\n   {\n     \"candidate\": \"Shüfa\",\n     \"glossSi\": \"Verjetno narečna oblika nemškega 'Schupfe' (manjša parcela, posest) ali 'Schöpfung' (ustvaritev, posest). Pogosta Kurrent zamenjava š/sch.\",\n     \"source\": \"Schmeller, Bayerisches Wörterbuch\",\n     \"confidence\": \"?\"\n   }\n ],\n \"sources\": [\"SSKJ\", \"DWB (Grimm)\", \"Schmeller, Bayerisches Wörterbuch\"],\n \"noteSi\": \"Kvantitativni kontekst (23 pojavitve na različnih straneh in parcelah) kaže na ledinsko ime. Kurrent zamenjave (R/L, š/sch) pojasnjuje variantnosti. 'Lohifa' bi lahko tudi pomenil 'Schliffa' (nasprotno branje), kar kaže na nemško besedo 'Schliff' (naklon, strmina).\"\n}",
+ "ms": 5219
+}

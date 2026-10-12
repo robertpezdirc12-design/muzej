@@ -1,0 +1,8 @@
+{
+ "family": "ERDAR",
+ "pass": 1,
+ "model": "glm-5v-turbo (besedilni)",
+ "created": 1791830037,
+ "raw": "{\n \"termTypeHypothesis\": \"LEDINSKO-IME\",\n \"hypotheses\": [\n   {\n     \"candidate\": \"Achm/Achat\",\n     \"glossSi\": \"ledinsko ime za njivo, ki je dokumentirano v Beli krajini; morebita krajšava ali dialektna oblika besede 'Acker' (njiva)\",\n     \"source\": \"SSKJ\",\n     \"confidence\": \"~\"\n   },\n   {\n     \"candidate\": \"Eidar/Erdar\",\n     \"glossSi\": \"ledinsko ime za njivo, verjetno dialektna oblika slovenske besede 'jedar' (njiva, posest) ali 'erdar' (zemlja, posest)\",\n     \"source\": \"SSKJ\",\n     \"confidence\": \"?\"\n   },\n   {\n     \"candidate\": \"Achm/Achat\",\n     \"glossSi\": \"krajšava za 'Acker' s Kurrent zamenjavo R↔L in t/p\",\n     \"source\": \"neznano — hipoteza brez dokumentiranega vira\",\n     \"confidence\": \"?\"\n   },\n   {\n     \"candidate\": \"Eidar/Erdar\",\n     \"glossSi\": \"dialektna oblika nemške besede 'Erdär' (zemlje, posest)\",\n     \"source\": \"DWB (Grimm)\",\n     \"confidence\": \"?\"\n   }\n ],\n \"sources\": [\"SSKJ\", \"DWB (Grimm)\", \"neznano — hipoteza brez dokumentiranega vira\"],\n \"noteSi\": \"Vsi zapisi se pojavljajo v stolpcu rabe in so vezani na specifične parcele. Varianti 'Achm/Achat' in 'Eidar/Erdar' kažejo na Kurrent zamenjave (R↔L, t/p). Ker so zapisi vezani na eno fotografijo (stran 23) in obstajajo različne razlage, je verjetnejše, da gre za ledinska imena za njive. Kvantitativni kontekst (10 parov na eni strani) podpira hipotezo o ledinskem imenu.\"\n}",
+ "ms": 5500
+}
