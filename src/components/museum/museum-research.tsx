@@ -56,6 +56,7 @@ import {
   PS_RECAP_1826,
   PS_RECONCILIATION_P38,
   PS_LANDUSE_P39,
+  PS_RECAP_P40,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -439,6 +440,78 @@ export function MuseumResearch() {
                   {t(
                     "Novosti nasproti P38: 7 sirot (parcela brez nobene rabe) izrecno v modelu, pravih parov parcela×raba 2632 (P38 »2118 parov« so v resnici vnosi po parcelah), 49 podvojenih rab ohranjenih. Strojno berljivo: /api/atlas/ps-landuse.",
                     "New against P38: 7 orphans (a parcel with no culture at all) are explicit in the model, the true parcel×culture pair count is 2,632 (P38's »2,118 pairs« are in fact parcel entries), 49 duplicate cultures preserved. Machine-readable: /api/atlas/ps-landuse.",
+                  )}
+                </p>
+              </div>
+            </div>
+
+            {/* PS 1825 — rekapitulacija str. 140–143 (P40, issue #10) */}
+            <div className="min-w-0 rounded-xl border bg-card p-6 shadow-sm">
+              <h3 className="flex flex-wrap items-center gap-2 font-display text-lg font-semibold">
+                <Microscope className="size-4 text-primary" aria-hidden="true" />
+                {t("PS 1825 — rekapitulacija str. 140–143 (P40)", "PS 1825 — recapitulation pp. 140–143 (P40)")}
+                <StatusBadge status={PS_RECAP_P40.status} />
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                {t(
+                  "Kontrolne vsote str. 143 (rdeči tuš) so deterministično spravljene s spravnim modelom (P38 + P39) — brez AI ob delovanju; dvoumna branja ostanejo izrecno UNRESOLVED.",
+                  "The page-143 control sums (red chalk) are deterministically reconciled with the land model (P38 + P39) — no AI at runtime; ambiguous readings stay explicitly UNRESOLVED.",
+                )}
+              </p>
+
+              {/* P40: kontrolne vsote str. 143 */}
+              <div className="mt-4 rounded-lg border bg-secondary/30 p-3">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-sm font-semibold">
+                    {t("P40 — kontrolna vsota str. 143", "P40 — page-143 control sum")}
+                  </span>
+                  <span className="font-mono text-[11px] text-muted-foreground">
+                    {PS_RECAP_P40.recapitulation.summaBauplatze} + {PS_RECAP_P40.recapitulation.summaGrundparzellen} = {PS_RECAP_P40.recapitulation.zusammen}
+                  </span>
+                </div>
+                <div className="mt-2 flex flex-wrap gap-1.5 font-mono text-[10px]">
+                  <span className="rounded-full border bg-background px-2 py-0.5">
+                    {t("== P38 kontrolna vsota", "== P38 control sum")}
+                  </span>
+                  <span className="rounded-full border bg-background px-2 py-0.5">
+                    {t("== 1889 + 616 (osnovna črta)", "== 1,889 + 616 (baseline)")}
+                  </span>
+                  <span className="rounded-full border bg-background px-2 py-0.5">
+                    {t(`Blatt X ${PS_RECAP_P40.crossCheck.bauplatzeRegister.blattXRows}/102 (vrzel ${PS_RECAP_P40.crossCheck.bauplatzeRegister.gap})`, `Blatt X ${PS_RECAP_P40.crossCheck.bauplatzeRegister.blattXRows}/102 (gap ${PS_RECAP_P40.crossCheck.bauplatzeRegister.gap})`)}
+                  </span>
+                </div>
+                <p className="mt-2 text-[11px] leading-relaxed text-muted-foreground">
+                  {t(
+                    "Rekapitulacija (rdeči tuš, str. 143) je natanko tista kontrolna vsota, ki jo sprava uporablja od P38. Blatt X (str. 138) pokrije 60/102 stavbnih mest — 42 je zunaj registra.",
+                    "The recapitulation (red chalk, p. 143) is exactly the control sum the reconciliation has used since P38. Blatt X (p. 138) covers 60/102 building plots — 42 are outside the register.",
+                  )}
+                </p>
+              </div>
+
+              {/* P40: površine po sekcijah + kandidati */}
+              <div className="mt-3 rounded-lg border bg-secondary/30 p-3">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-sm font-semibold">
+                    {t("P40 — površine po sekcijah modela", "P40 — areas by model section")}
+                  </span>
+                  <span className="font-mono text-[11px] text-muted-foreground">
+                    {PS_RECAP_P40.areaDecomposition.rowsWithArea}+{PS_RECAP_P40.areaDecomposition.rowsWithoutArea} = 2632 vrstic
+                  </span>
+                </div>
+                <div className="mt-2 space-y-1">
+                  {Object.entries(PS_RECAP_P40.areaDecomposition.bySection).map(([sec, a]) => (
+                    <div key={sec} className="flex flex-wrap items-center justify-between gap-2 font-mono text-[10px]">
+                      <span className="rounded-full border bg-background px-2 py-0.5">{sec}</span>
+                      <span className="text-muted-foreground">
+                        {a.joch} Joch + {a.klafter.toLocaleString("de-DE")} Klafter = {a.jochEquivalent.toFixed(2)} Joch
+                      </span>
+                    </div>
+                  ))}
+                </div>
+                <p className="mt-2 text-[11px] leading-relaxed text-muted-foreground">
+                  {t(
+                    `Summa ${PS_RECAP_P40.recapAreaAttribution.recapReading}(?) Joch (str. 141, branje izrecno negotovo) se najbolj sklada z GRUND-only: 1232,96 Joch (Δ +1,39 %). Podvajanje Blatt X površin ni dokazljivo (prekrivanje parov ${PS_RECAP_P40.blattXOverlap.pairsOverlap}/${PS_RECAP_P40.blattXOverlap.pairsBlattX}) — celotna vsota je samo zgornja meja. ${PS_RECAP_P40.fragmentRows140_141.count} per-house vrstic ostaja UNRESOLVED; številčni eho OVRGAN (2840 ≠ 2607). Strojno berljivo: /api/atlas/ps-recap.`,
+                    `The ${PS_RECAP_P40.recapAreaAttribution.recapReading}(?) Joch total (p. 141, explicitly uncertain reading) best matches GRUND-only: 1,232.96 Joch (Δ +1.39%). Blatt X area duplication is unproven (pair overlap ${PS_RECAP_P40.blattXOverlap.pairsOverlap}/${PS_RECAP_P40.blattXOverlap.pairsBlattX}) — the whole-register sum is only an upper bound. ${PS_RECAP_P40.fragmentRows140_141.count} per-house rows remain UNRESOLVED; the numeric echo is REFUTED (2,840 ≠ 2,607). Machine-readable: /api/atlas/ps-recap.`,
                   )}
                 </p>
               </div>

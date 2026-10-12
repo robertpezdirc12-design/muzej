@@ -24,6 +24,7 @@ import {
   PS_RECAP_1826,
   PS_RECONCILIATION_P38,
   PS_LANDUSE_P39,
+  PS_RECAP_P40,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -1611,6 +1612,106 @@ export function runQA(opts: QAOptions = {}): QAReport {
     p39Errors.length === 0
       ? `2134 vnosov · 2632 parov · 430× več rab · 72,0 % klasificirano · ${p39FileDetail}`
       : p39Errors.join("; "),
+  );
+
+  // ——— P40: rekapitulacija str. 140–143 — deterministična primerjava s spravnim modelom (issue #10, P5-b) ———
+  const p40Errors: string[] = [];
+  const RC = PS_RECAP_P40;
+  // 1. rekapitulacijska aritmetika (str. 143, rdeči tuš)
+  if (RC.recapitulation.summaGrundparzellen + RC.recapitulation.summaBauplatze !== RC.recapitulation.zusammen)
+    p40Errors.push("rekapitulacijska aritmetika 2505 + 102 ≠ Zusammen");
+  if (RC.recapitulation.zusammen !== 2607 || RC.recapitulation.summaGrundparzellen !== 2505 || RC.recapitulation.summaBauplatze !== 102)
+    p40Errors.push("rekapitulacijske vsote niso 2505/102/2607 (regresija str. 143)");
+  if (!RC.crossCheck.checksumIdentity.pass || !RC.crossCheck.baselineIdentity.pass || !RC.crossCheck.p38ControlSum.pass)
+    p40Errors.push("navzkrižne identitete (aritmetika/osnovna črta/P38 kontrola) morajo biti PASS");
+  if (RC.crossCheck.baselineIdentity.grundSeen + RC.crossCheck.baselineIdentity.grundMissing !== RC.crossCheck.baselineIdentity.recapGrundparzellen)
+    p40Errors.push("osnovna črta 1889 + 616 ≠ recap Grundparzellen");
+  // 2. registrska vrzel stavbnih mest
+  const BR = RC.crossCheck.bauplatzeRegister;
+  if (BR.blattXRows !== 60 || BR.recap !== 102 || BR.gap !== 42)
+    p40Errors.push("Blatt X register ni 60/102 z vrzeljo 42 (regresija P36/P38)");
+  if (Math.abs(BR.coveragePct - (100 * BR.blattXRows) / BR.recap) > 0.05)
+    p40Errors.push("pokritost registra se ne ujema z razmerjem 60/102");
+  // 3. dekompozicija površin — aritmetika in regresije sekcij
+  const A = RC.areaDecomposition;
+  const secSum = Object.values(A.bySection).reduce(
+    (acc, s) => ({ rowsWithArea: acc.rowsWithArea + s.rowsWithArea, rowsWithoutArea: acc.rowsWithoutArea + s.rowsWithoutArea, joch: acc.joch + s.joch, klafter: acc.klafter + s.klafter }),
+    { rowsWithArea: 0, rowsWithoutArea: 0, joch: 0, klafter: 0 } as { rowsWithArea: number; rowsWithoutArea: number; joch: number; klafter: number },
+  );
+  if (secSum.rowsWithArea !== A.rowsWithArea || secSum.rowsWithoutArea !== A.rowsWithoutArea)
+    p40Errors.push("vsota sekcij rowsWithArea/rowsWithoutArea ≠ skupni");
+  if (secSum.joch !== 675 || secSum.klafter !== 1423653)
+    p40Errors.push("skupna površina ni 675 Joch + 1.423.653 Klafter (regresija modela P39)");
+  if (secSum.rowsWithArea + secSum.rowsWithoutArea !== 2632)
+    p40Errors.push("vrstice s površino + brez ≠ 2632 parov parcela×raba (P39 regresija)");
+  const G = A.bySection.GRUND_1_2505;
+  if (!G || G.joch !== 404 || G.klafter !== 1326343 || G.rowsWithoutArea !== 7)
+    p40Errors.push("GRUND_1_2505 ni 404 Joch + 1.326.343 Klafter z 7 vrsticami brez površine (regresija)");
+  if (Math.abs(G.jochEquivalent - (G.joch + G.klafter / A.klafterPerJoch)) > 0.0001)
+    p40Errors.push("jochEquivalent GRUND ni joch + klafter/1600");
+  // 4. kandidati atribucije — aritmetika odmikov in monotonost
+  const cand = RC.recapAreaAttribution.candidates;
+  if (cand.length !== 3) p40Errors.push("kandidatov atribucije mora biti 3");
+  const recapReading = RC.recapAreaAttribution.recapReading;
+  if (recapReading !== 1216) p40Errors.push("recap branje ni 1216(?) (regresija)");
+  for (const c of cand) {
+    const d = c.jochEquivalent - recapReading;
+    if (Math.abs(c.deltaJoch - d) > 0.001) p40Errors.push(`deltaJoch kandidata »${c.scope.slice(0, 20)}…« ni jochEquivalent − 1216`);
+    if (Math.abs(c.deltaPct - (100 * c.deltaJoch) / recapReading) > 0.01) p40Errors.push(`deltaPct kandidata »${c.scope.slice(0, 20)}…« se ne ujema`);
+  }
+  if (!(cand[0].deltaJoch < cand[1].deltaJoch && cand[1].deltaJoch < cand[2].deltaJoch))
+    p40Errors.push("odmiki kandidatov niso naraščajoči (GRUND-only < brez Blatt X < celoten)");
+  if (!RC.recapAreaAttribution.closest.startsWith("GRUND_1_2505"))
+    p40Errors.push("najbližji kandidat ni GRUND-only");
+  // 5. Blatt X prekrivanje (podvajanje nedokazljivo) + fragmenti (UNRESOLVED)
+  const X = RC.blattXOverlap;
+  if (X.pairsOverlap !== 1 || X.pairsBlattX !== 59 || X.ownersBlattX !== 22 || X.ownersOverlap !== 1)
+    p40Errors.push("Blatt X prekrivanje ni 1/59 parov in 1/22 lastnikov (regresija)");
+  const F = RC.fragmentRows140_141;
+  if (F.count !== 7 || F.verbatim.length !== 7 || F.naiveJochSum !== 1413)
+    p40Errors.push("fragmenti 140–141 niso 7 doslovnih vrstic z naivno vsoto 1413");
+  if (!F.resolution.includes("UNRESOLVED"))
+    p40Errors.push("fragmenti morajo ostati izrecno UNRESOLVED (brez tihega tolmačenja)");
+  // 6. številčni eho — ovrgan (negativen izid, izrecno dokumentiran)
+  if (!RC.numericEcho.refuted || RC.numericEcho.maxParcelNadaljevanje !== 2840)
+    p40Errors.push("številčni eho mora biti OVRGAN z max parcelo 2840 (negativen izid)");
+  // 7. dokazni datoteki (strežniški klic; vzorec qa-p37/qa-p38/qa-p39)
+  let p40FileDetail = "dokazni datoteki nista preverjeni (readFile ni na voljo) — celovita kontrola teče na /api/qa";
+  if (opts.readFile) {
+    const rawEv = opts.readFile("research/issue17/ps-recap.json");
+    const rawRt = opts.readFile("src/data/atlas/ps-recap.json");
+    if (rawEv === null) p40Errors.push("research/issue17/ps-recap.json ni berljiv (izpis scripts/p40_ps_recap.py)");
+    if (rawRt === null) p40Errors.push("src/data/atlas/ps-recap.json ni berljiv (runtime kopija)");
+    if (rawEv !== null && rawRt !== null && rawEv !== rawRt)
+      p40Errors.push("dokazni in runtime izpis ps-recap.json nista identična (skript mora izpisati oba enako)");
+    if (rawEv !== null) {
+      try {
+        const j = JSON.parse(rawEv) as {
+          recapitulation: { summaGrundparzellen: number; summaBauplatze: number; zusammen: number };
+          areaDecomposition: { rowsWithArea: number; rowsWithoutArea: number; bySection: Record<string, { joch: number; klafter: number }> };
+          numericEcho: { refuted: boolean; maxParcelNadaljevanje: number };
+        };
+        if (j.recapitulation.zusammen !== RC.recapitulation.zusammen) p40Errors.push("JSON zusammen ≠ TS");
+        if (j.recapitulation.summaGrundparzellen !== RC.recapitulation.summaGrundparzellen) p40Errors.push("JSON summaGrundparzellen ≠ TS");
+        if (j.recapitulation.summaBauplatze !== RC.recapitulation.summaBauplatze) p40Errors.push("JSON summaBauplatze ≠ TS");
+        if (j.areaDecomposition.rowsWithArea !== A.rowsWithArea) p40Errors.push("JSON rowsWithArea ≠ TS");
+        if (j.areaDecomposition.rowsWithoutArea !== A.rowsWithoutArea) p40Errors.push("JSON rowsWithoutArea ≠ TS");
+        if (j.areaDecomposition.bySection.GRUND_1_2505?.joch !== G.joch) p40Errors.push("JSON GRUND joch ≠ TS");
+        if (!j.numericEcho.refuted || j.numericEcho.maxParcelNadaljevanje !== 2840) p40Errors.push("JSON numericEcho ni ovrgan z 2840");
+        p40FileDetail = `dokazni datoteki preverjeni in identični (recap ${j.recapitulation.zusammen}, površine ${j.areaDecomposition.rowsWithArea}+${j.areaDecomposition.rowsWithoutArea} vrstic)`;
+      } catch {
+        p40Errors.push("research/issue17/ps-recap.json ni veljaven JSON");
+      }
+    }
+  }
+  push(
+    "qa-p40-ps-recap",
+    "P40: N083PS — rekapitulacija str. 140–143 deterministično spravljena s spravnim modelom (scripts/p40_ps_recap.py): 102 + 2505 = 2607 (rdeči tuš) == P38 kontrolna vsota == P36/P38 osnovna črta (1889+616); Blatt X register 60/102 (vrzel 42); površine po sekcijah (GRUND 1232,96 Joch najbližje Summi 1216(?) Joch, Δ +1,39 %); Blatt X ↔ GRUND podvajanje nedokazljivo (1/59 parov); fragmenti 140–141 UNRESOLVED; številčni eho OVRGAN (2840 ≠ 2607); status REVIEW",
+    "P40: N083PS — pages 140–143 recapitulation deterministically reconciled with the land model (scripts/p40_ps_recap.py): 102 + 2,505 = 2,607 (red chalk) == P38 control sum == P36/P38 baseline (1,889+616); Blatt X register 60/102 (gap 42); areas by section (GRUND 1,232.96 Joch closest to the 1,216(?) Joch total, Δ +1.39%); Blatt X ↔ GRUND duplication unproven (1/59 pairs); fragments 140–141 UNRESOLVED; numeric echo REFUTED (2,840 ≠ 2,607); status REVIEW",
+    p40Errors.length === 0,
+    p40Errors.length === 0
+      ? `2607 = 2505 + 102 · Blatt X 60/102 · GRUND 1232,96 Joch (Δ +1,39 %) · ${p40FileDetail}`
+      : p40Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;

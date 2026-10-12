@@ -1250,9 +1250,145 @@ export const PS_LANDUSE_P39: {
     "MODEL BUILT: 2,760 rows → 2,134 entries (2,125 parcels + 9 NEBEREŽNA), zero-loss row accounting 2,681 + 70 + 9 = 2,760; 2,632 parcel×culture pairs, 430 multi-culture parcels, 49 duplicate cultures preserved; the culture rulebook (v1, no AI) classifies 72.0% of pairs (1,896/2,632: arable 1,049 ≫ meadow 487 ≫ forest 134 …), the remaining 736 pairs (230 raw values) are explicitly UNCLASSIFIED. New against P38: 7 orphan parcels + 2,632 true pairs + 49 duplicate cultures. Raw values untouched, status REVIEW.",
   next: [
     "3. prehod ~15 dvoumnih strani (audit §17) — tudi za 7 sirot in 9 NEBEREŽNA vrstic",
-    "primerjava posameznih parcel z rekapitulacijo str. 140–143 (P5-b)",
     "razširitev pravilnika rab v2 (lokalni termini: Lhut, Lohn, Ahn, Äfling …) ob paleografski potrditvi",
     "povezava modela z GEOTRUTH raba-tal conami (landuse.ts) — le kot kontekst, ne samodejna preslikava",
+  ],
+};
+
+/** P40 (issue #10) — PS 1825: rekapitulacija str. 140–143 vs spravni model (P5-b). */
+export const PS_RECAP_P40: {
+  series: "PS";
+  source: string;
+  status: ResearchStatus;
+  generatedBy: string;
+  recapitulation: {
+    page: number;
+    summaBauplatze: number;
+    summaGrundparzellen: number;
+    zusammen: number;
+    areaReadingPage141: { value: number; verbatim: string; uncertain: boolean };
+  };
+  crossCheck: {
+    checksumIdentity: { pass: boolean };
+    baselineIdentity: { grundSeen: number; grundMissing: number; recapGrundparzellen: number; pass: boolean };
+    p38ControlSum: { value: number; recapZusammen: number; pass: boolean };
+    bauplatzeRegister: { recap: number; blattXRows: number; gap: number; coveragePct: number };
+  };
+  areaDecomposition: {
+    klafterPerJoch: number;
+    bySection: Record<string, { rowsWithArea: number; rowsWithoutArea: number; joch: number; klafter: number; jochEquivalent: number }>;
+    rowsWithArea: number;
+    rowsWithoutArea: number;
+  };
+  recapAreaAttribution: {
+    recapReading: number;
+    candidates: { scope: string; jochEquivalent: number; deltaJoch: number; deltaPct: number; assessment: string }[];
+    closest: string;
+    resolution: string;
+  };
+  blattXOverlap: {
+    pairsGrund: number;
+    pairsBlattX: number;
+    pairsOverlap: number;
+    ownersGrund: number;
+    ownersBlattX: number;
+    ownersOverlap: number;
+    distinctHausNrBlattX: number;
+  };
+  fragmentRows140_141: { page: number; verbatim: string[]; count: number; naiveJochSum: number; resolution: string };
+  numericEcho: { hypothesis: string; maxParcelNadaljevanje: number; recapZusammen: number; refuted: boolean; verdict: string };
+  verdictSi: string;
+  verdictEn: string;
+  next: string[];
+} = {
+  series: "PS",
+  source:
+    "N083PS.pdf (VAČ uodid 373415, docid 41780; 143 strani) — rekapitulacija str. 140–143 nad committed dokazi: PS-structure.json (P9), ps-reconciliation.json (P38), ps-landuse.json (P39); polni izpis research/issue17/ps-recap.json + src/data/atlas/ps-recap.json",
+  status: "REVIEW",
+  generatedBy: "scripts/p40_ps_recap.py",
+  recapitulation: {
+    page: 143,
+    summaBauplatze: 102,
+    summaGrundparzellen: 2505,
+    zusammen: 2607,
+    areaReadingPage141: { value: 1216, verbatim: "Summa 1216(?) Joch", uncertain: true },
+  },
+  crossCheck: {
+    checksumIdentity: { pass: true },
+    baselineIdentity: { grundSeen: 1889, grundMissing: 616, recapGrundparzellen: 2505, pass: true },
+    p38ControlSum: { value: 2607, recapZusammen: 2607, pass: true },
+    bauplatzeRegister: { recap: 102, blattXRows: 60, gap: 42, coveragePct: 58.8 },
+  },
+  areaDecomposition: {
+    klafterPerJoch: 1600,
+    bySection: {
+      BLATT_X: { rowsWithArea: 40, rowsWithoutArea: 20, joch: 262, klafter: 29966, jochEquivalent: 280.7287 },
+      GRUND_1_2505: { rowsWithArea: 2378, rowsWithoutArea: 7, joch: 404, klafter: 1326343, jochEquivalent: 1232.9644 },
+      NADALJEVANJE_2506: { rowsWithArea: 96, rowsWithoutArea: 0, joch: 1, klafter: 19932, jochEquivalent: 13.4575 },
+      WALDUNG: { rowsWithArea: 86, rowsWithoutArea: 5, joch: 8, klafter: 47412, jochEquivalent: 37.6325 },
+    },
+    rowsWithArea: 2600,
+    rowsWithoutArea: 32,
+  },
+  recapAreaAttribution: {
+    recapReading: 1216,
+    candidates: [
+      {
+        scope: "GRUND_1_2505 samo (zemljiške parcele; stavbna mesta se štejejo po kosih)",
+        jochEquivalent: 1232.9644,
+        deltaJoch: 16.9644,
+        deltaPct: 1.4,
+        assessment: "NAJBOLJ SKLADEN — odmik 1,39 % je v redu negotovosti branja »1216(?)« + 32 vrstic brez površine; odločitev paleografska",
+      },
+      {
+        scope: "GRUND + NADALJEVANJE + WALDUNG (brez Blatt X)",
+        jochEquivalent: 1284.0544,
+        deltaJoch: 68.0544,
+        deltaPct: 5.6,
+        assessment: "možen, če rekapitulacija šteje tudi nadaljevalne in gozdne parcele — odmik 5,6 %",
+      },
+      {
+        scope: "celoten register z Blatt X (zgornja meja)",
+        jochEquivalent: 1564.7831,
+        deltaJoch: 348.7831,
+        deltaPct: 28.68,
+        assessment: "neskladen — zahteval bi podvajanje Blatt X površin, ki ga prekrivanje parov ne dokazuje; zavrnjen",
+      },
+    ],
+    closest: "GRUND_1_2505 samo (Δ +16.96 Joch ≈ +1.39 %)",
+    resolution: "OTVORENO — paleografska potrditev branj str. 140–143 (dvomljivo »1216(?)«)",
+  },
+  blattXOverlap: {
+    pairsGrund: 2969,
+    pairsBlattX: 59,
+    pairsOverlap: 1,
+    ownersGrund: 1083,
+    ownersBlattX: 22,
+    ownersOverlap: 1,
+    distinctHausNrBlattX: 59,
+  },
+  fragmentRows140_141: {
+    page: 141,
+    verbatim: ["190/1168", "133/1196", "132/1466", "206/836", "286/8931(?)", "268/1341", "198/11957(?)"],
+    count: 7,
+    naiveJochSum: 1413,
+    resolution: "UNRESOLVED — potrebna človeška paleografija (dva VLM branja se razhajata)",
+  },
+  numericEcho: {
+    hypothesis: "max parcela NADALJEVANJE (2506+) == Zusammen rekapitulacije (2607)",
+    maxParcelNadaljevanje: 2840,
+    recapZusammen: 2607,
+    refuted: true,
+    verdict: "OVRGAN — max parcela v NADALJEVANJE je 2840, ne 2607; številčni eho ne obstaja (negativen izid, izrecno dokumentiran)",
+  },
+  verdictSi:
+    "Rekapitulacija str. 143 (102 + 2505 = 2607, rdeči tuš) je natanko tista kontrolna vsota, ki jo sprava (P38) uporablja od začetka, in se ujema z osnovno črto P36/P38 (1889 + 616 = 2505). Površinsko se najbolj sklada z GRUND-only (1232,96 Joch; Δ +1,39 %). Blatt X nosi površine brez dokazanega podvajanja — celotna vsota registra je samo zgornja meja. Per-house vrstice 140–141 ostajajo UNRESOLVED.",
+  verdictEn:
+    "The page-143 recap (102 + 2,505 = 2,607, red chalk) is exactly the control sum the reconciliation (P38) has used all along and matches the P36/P38 baseline (1,889 + 616 = 2,505). Area-wise it best matches GRUND-only (1,232.96 Joch; Δ +1.39%). Blatt X carries areas with unproven duplication — the whole-register sum is only an upper bound. The per-house rows 140–141 remain UNRESOLVED.",
+  next: [
+    "človeška paleografska potrditev str. 140–143 (Summa 1216(?) Joch + 7 per-house vrstic)",
+    "3. prehod ~15 dvoumnih strani (tudi za 7 sirot in 9 NEBEREŽNA vrstic)",
+    "razširitev pravilnika rab v2 (Lhut, Lohn, Ahn, Äfling …) ob paleografski potrditvi",
   ],
 };
 

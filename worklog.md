@@ -2456,3 +2456,48 @@ zgodbo (Pezdirc).
 - Preverba: ESLint 0, tsc 0, QA 39→40 (qa-p39-ps-landuse: računsko-knjigovodske invariante,
   pinane regresije, sekcije == P38, klasifikacija po parih, identičnost obeh JSON izpisov prek
   readFile). Issue #10 OSTAJA ODPRT.
+
+## P40 — issue #10: N083PS rekapitulacija str. 140–143 — deterministična primerjava s spravnim modelom (2026-10-12)
+
+- P5-b točka iz P38/P39 je izvedena: rekapitulacija (uradne samo-kontrolne vsote
+  dokumenta) je deterministično spravljena s spravo in modelom nad committed dokazi
+  (PS-structure.json P9 + P38 + P39) — brez novih branj, brez AI ob delovanju.
+- Kontrolne vsote str. 143 (rdeči tuš): 102 stavbnih mest + 2505 zemljiških parcel
+  = 2607 — NATANKO P38 kontrolna vsota in P36/P38 osnovna črta (1889 + 616 = 2505);
+  obe identiteti PASS v skriptu (FAIL ob padu, konsistentno s P38/P39).
+- Registrska vrzel: Blatt X (str. 138) 60/102 stavbnih mest (58,8 %; 42 zunaj registra).
+- NOVA FORMALIZACIJA POVRSIN (model P39, 1 Joch = 1600 Quadrat-Klafter): GRUND_1_2505
+  1232,96 Joch (404 + 1.326.343 K; 7 vrstic brez površine) · BLATT_X 280,73 · WALDUNG
+  37,63 · NADALJEVANJE_2506 13,46 · skupaj 1564,78 Joch; 2600 vrstic s površino +
+  32 brez = 2632 parov (P39 regresija ✓).
+- Atribucija "Summa 1216(?) Joch" (str. 141, branje izrecno negotovo — dva VLM branja
+  se razhajata): najbolj skladen kandidat GRUND-only Δ +16,96 Joch ≈ +1,39 %; brez
+  Blatt X Δ +5,6 %; celoten register Δ +28,68 % (zavrnjen). Deterministično neodločljivo
+  — paleografska potrditev ostane odprta.
+- Blatt X ↔ GRUND podvajanje: prekrivanje parov (lastnik, hiša) 1/59, lastnikov 1/22
+  → podvajanje NI dokazljivo (razlike v črkovanju imen?), tudi NI izključeno →
+  celotna vsota registra je samo zgornja meja; Blatt X površin ne smemo samodejno
+  prištevati. Blatt X je "Zusammenstellung der Grundstücke" po hišah.
+- Per-house fragmenti str. 141: 7 vrstic doslovno (190/1168 … 198/11957(?)); naivna
+  vsota kot Joch 1413 nasprotuje sami Summi 1216(?) → UNRESOLVED (brez tihega tolmačenja).
+- NEGATIVEN IZID: številčni eho (max parcela NADALJEVANJE == Zusammen 2607) OVRGAN —
+  max je 2840; izrecno dokumentiran.
+- Izpisi: research/issue17/ps-recap.json (kanonski dokaz) + identična runtime kopija
+  src/data/atlas/ps-recap.json + API GET /api/atlas/ps-recap (force-static).
+- Integracija: TS konstanta PS_RECAP_P40 (research.ts) + kartica »PS 1825 —
+  rekapitulacija str. 140–143 (P40)« v Raziskavah (zavihek Prepisi Kurrent);
+  P39 next seznam dopolnjen (rekapitulacija item odstranjen — izvedena v P40);
+  audit §20; README ATLAS bullet (P36–P40) + API seznam.
+- Preverba: tsc 0, ESLint 0, QA 40→41 (qa-p40-ps-recap: aritmetika, identitete,
+  vrzel 42, vsota sekcij, kandidati + monotonost, prekrivanje 1/59, fragmenti
+  UNRESOLVED, eho ovrgan 2840, identičnost obeh JSON izpisov prek readFile),
+  next build 18/18 (nov route prerenderiran), produkcijski strežnik port 3010:
+  /api/qa 41/41, /api/atlas/ps-recap 200, /api/atlas/ps-landuse 200, / 200.
+- Issue #10 OSTAJA ODPRT: človeška paleografska potrditev str. 140–143 + vseh
+  strojnih branj; 3. prehod ~15 dvoumnih strani; pravilnik rab v2 (Lhut, Lohn,
+  Ahn, Äfling).
+- Kontekst divergenc (glej Task 3 zunanji worklog): GitLab main (ta linija)
+  ostaja razvejana od GitHub primarnega (P38'–P45', QA 43/43 v produkciji);
+  sync.yml bo ob ciklu poskušal merge, ob konfliktu javno spodleti (P21 načelo,
+  brez izgube podatkov). P40 je namenoma sestavljen iz NOVIH datotek (skript,
+  2× JSON, API route) + appendov, da je prihodnji merge čim lažji.

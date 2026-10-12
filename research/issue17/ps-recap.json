@@ -1,0 +1,174 @@
+{
+ "series": "PS",
+ "source": "N083PS.pdf (VAČ uodid 373415, docid 41780; 143 strani) — rekapitulacija str. 140–143 nad committed dokazi: PS-structure.json (P9 struktura + rekapitulacija), ps-reconciliation.json (P38), ps-landuse.json (P39); polni izpis research/issue17/ps-recap.json + src/data/atlas/ps-recap.json",
+ "method": "deterministično iz committed dokazov; brez AI ob delovanju; surove vrednosti nedotaknjene",
+ "status": "REVIEW",
+ "rulebook": "v1",
+ "recapitulation": {
+  "page": 143,
+  "writtenAs": {
+   "medium": "rdeči tuš (nachträgliche Kontrolsummen)"
+  },
+  "summaBauplatze": 102,
+  "summaGrundparzellen": 2505,
+  "zusammen": 2607,
+  "areaReadingPage141": {
+   "value": 1216,
+   "verbatim": "Summa 1216(?) Joch",
+   "uncertain": true,
+   "note": "dva VLM branja se razhajata — izrecno negotovo"
+  }
+ },
+ "crossCheck": {
+  "checksumIdentity": {
+   "grund + bauplatze": "2505 + 102 = 2607",
+   "zusammen": 2607,
+   "pass": true
+  },
+  "baselineIdentity": {
+   "grundSeen": 1889,
+   "grundMissing": 616,
+   "sum": 2505,
+   "recapGrundparzellen": 2505,
+   "pass": true
+  },
+  "p38ControlSum": {
+   "value": 2607,
+   "recapZusammen": 2607,
+   "meaning": "P38 kontrolna vsota je uradna rekapitulacija dokumenta (str. 143, rdeči tuš)",
+   "pass": true
+  },
+  "bauplatzeRegister": {
+   "recap": 102,
+   "blattXRows": 60,
+   "gap": 42,
+   "coveragePct": 58.8,
+   "meaning": "Blatt X (str. 138) pokrije 60/102 stavbnih mest — 42 je zunaj registra (registrska vrzel)"
+  }
+ },
+ "areaDecomposition": {
+  "klafterPerJoch": 1600,
+  "bySection": {
+   "BLATT_X": {
+    "rowsWithArea": 40,
+    "rowsWithoutArea": 20,
+    "joch": 262,
+    "klafter": 29966,
+    "jochEquivalent": 280.7287
+   },
+   "GRUND_1_2505": {
+    "rowsWithArea": 2378,
+    "rowsWithoutArea": 7,
+    "joch": 404,
+    "klafter": 1326343,
+    "jochEquivalent": 1232.9644
+   },
+   "NADALJEVANJE_2506": {
+    "rowsWithArea": 96,
+    "rowsWithoutArea": 0,
+    "joch": 1,
+    "klafter": 19932,
+    "jochEquivalent": 13.4575
+   },
+   "WALDUNG": {
+    "rowsWithArea": 86,
+    "rowsWithoutArea": 5,
+    "joch": 8,
+    "klafter": 47412,
+    "jochEquivalent": 37.6325
+   }
+  },
+  "total": {
+   "rowsWithArea": 2600,
+   "rowsWithoutArea": 32,
+   "joch": 675,
+   "klafter": 1423653,
+   "jochEquivalent": 1564.7831
+  },
+  "rowsWithArea": 2600,
+  "rowsWithoutArea": 32
+ },
+ "recapAreaAttribution": {
+  "recapReading": 1216,
+  "candidates": [
+   {
+    "scope": "GRUND_1_2505 samo (zemljiške parcele; stavbna mesta se štejejo po kosih)",
+    "jochEquivalent": 1232.9644,
+    "deltaJoch": 16.9644,
+    "deltaPct": 1.4,
+    "assessment": "NAJBOLJ SKLADEN — odmik 1,39 % je v redu negotovosti branja »1216(?)« + 32 vrstic brez površine; odločitev paleografska"
+   },
+   {
+    "scope": "GRUND + NADALJEVANJE + WALDUNG (brez Blatt X)",
+    "jochEquivalent": 1284.0544,
+    "deltaJoch": 68.0544,
+    "deltaPct": 5.6,
+    "assessment": "možen, če rekapitulacija šteje tudi nadaljevalne in gozdne parcele — odmik 5,6 %"
+   },
+   {
+    "scope": "celoten register z Blatt X (zgornja meja)",
+    "jochEquivalent": 1564.7831,
+    "deltaJoch": 348.7831,
+    "deltaPct": 28.68,
+    "assessment": "neskladen — zahteval bi podvajanje Blatt X površin, ki ga prekrivanje parov ne dokazuje; zavrnjen"
+   }
+  ],
+  "closest": "GRUND_1_2505 samo (Δ +16.96 Joch ≈ +1.39 %)",
+  "missingAreaUpperBound": "32 vrstic brez razčlenjene površine + posamične napačne števkine (P38: 8↔5, 3↔1 nedokazljive) lahko odmik ~17 Joch pojasnijo; deterministično NE odločljivo",
+  "resolution": "OTVORENO — paleografska potrditev branj str. 140–143 (dvomljivo »1216(?)«)"
+ },
+ "blattXOverlap": {
+  "pairsGrund": 2969,
+  "pairsBlattX": 59,
+  "pairsOverlap": 1,
+  "ownersGrund": 1395,
+  "ownersBlattX": 22,
+  "ownersOverlap": 1,
+  "distinctHausNrBlattX": 59,
+  "verdict": "podvajanje NI dokazljivo (prekrivanje parov 1/59, lastnikov 1/22 — razlike v črkovanju imen?), tudi NI izključeno; Blatt X površin ne smemo samodejno prištevati"
+ },
+ "fragmentRows140_141": {
+  "page": 141,
+  "verbatim": [
+   "190/1168",
+   "133/1196",
+   "132/1466",
+   "206/836",
+   "286/8931(?)",
+   "268/1341",
+   "198/11957(?)"
+  ],
+  "count": 7,
+  "naiveJochSum": 1413,
+  "naiveSumVsRecap": "naivna vsota 1413 Joch nasprotuje sami Summi 1216(?) — branja nista usklajena; vrstice ostajajo doslovne, UNRESOLVED",
+  "resolution": "UNRESOLVED — potrebna človeška paleografija (dva VLM branja se razhajata)"
+ },
+ "numericEcho": {
+  "hypothesis": "max parcela NADALJEVANJE (2506+) == Zusammen rekapitulacije (2607)",
+  "maxParcelNadaljevanje": 2840,
+  "recapZusammen": 2607,
+  "refuted": true,
+  "verdict": "OVRGAN — max parcela v NADALJEVANJE je 2840, ne 2607; številčni eho ne obstaja (negativen izid, izrecno dokumentiran)"
+ },
+ "regressions": {
+  "p39": {
+   "rowsBefore": 2760,
+   "modelEntries": 2134,
+   "parcelCulturePairs": 2632
+  },
+  "p38": {
+   "grundDistinct": 1889,
+   "blattXDistinct": 60,
+   "controlSum": 2607
+  }
+ },
+ "verdictSi": "Rekapitulacija str. 143 (102 + 2505 = 2607, rdeči tuš) je natanko tista kontrolna vsota, ki jo sprava (P38) uporablja od začetka, in se ujema z osnovno črto P36/P38 (1889 + 616 = 2505). Površinsko se najbolj sklada z GRUND-only (1232,96 Joch; Δ +1,39 %). Blatt X nosi površine brez dokazanega podvajanja — celotna vsota registra je samo zgornja meja. Per-house vrstice 140–141 ostajajo UNRESOLVED.",
+ "verdictEn": "The page-143 recap (102 + 2,505 = 2,607, red chalk) is exactly the control sum the reconciliation (P38) has used all along and matches the P36/P38 baseline (1,889 + 616 = 2,505). Area-wise it best matches GRUND-only (1,232.96 Joch; Δ +1.39%). Blatt X carries areas with unproven duplication — the whole-register sum is only an upper bound. The per-house rows 140–141 remain UNRESOLVED.",
+ "next": [
+  "človeška paleografska potrditev str. 140–143 (Summa 1216(?) Joch + 7 per-house vrstic)",
+  "3. prehod ~15 dvoumnih strani (tudi za 7 sirot in 9 NEBEREŽNA vrstic)",
+  "razširitev pravilnika rab v2 (Lhut, Lohn, Ahn, Äfling …) ob paleografski potrditvi"
+ ],
+ "generatedBy": "scripts/p40_ps_recap.py",
+ "generatedAt": "2026-10-12T10:36:23.632565Z"
+}

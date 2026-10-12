@@ -882,3 +882,78 @@ duplicateCultureRows = cultureRows − pairs, sekcije == P38, klasifikacija po
 parih 1896+736 = 2632, pinane regresije 1049/487/134, sirote izrecno naštete,
 navzkrižna kontrola obeh JSON izpisov (identičnost!) ↔ TS prek vbrizganega
 readFile — vzorec qa-p37/qa-p38).
+
+## 20. P40 — issue #10: N083PS REKAPITULACIJA STR. 140–143 — DETERMINISTIČNA PRIMERJAVA S SPRAVNIM MODELOM (2026-10-12)
+
+P38 je spravil sekcije, P39 zgradil model parcela×raba; odprta je ostala
+**primerjava z rekapitulacijo str. 140–143 (P5-b)** — uradnimi
+samo-kontrolnimi vsotami dokumenta (str. 143 v rdečem tušu). P40 jo izvede
+deterministično nad committed dokazi (PS-structure.json P9 + P38 + P39) —
+brez novih branj, brez AI ob delovanju.
+
+### Metoda (scripts/p40_ps_recap.py, committed)
+
+- Rekapitulacijske vrstice str. 143 razčlenjene iz committed strukture
+  (PS-structure.json `recapitulation`); vsota "Summa 1216(?) Joch" (str. 141)
+  razčlenjena iz doslovnega rawTranscription (regex; branje izrecno
+  negotovo — dva VLM branja se razhajata).
+- Navzkrižne identitete proti spravi (P38) in modelu (P39); površinska
+  dekompozicija po sekcijah (1 Joch = 1600 Quadrat-Klafter); kandidati
+  atribucije; prekrivanje Blatt X ↔ GRUND po parih (lastnik, hiša);
+  per-house fragmenti 140–141 doslovno; skript FAIL ob padu katere od
+  ključnih identitet (konsistentno s P38/P39).
+
+### Rezultati
+
+| Merilo | Vrednost |
+|---|---|
+| kontrolne vsote str. 143 (rdeči tuš) | **102** stavbnih mest + **2505** zemljiških parcel = **2607** |
+| identiteta s spravo | 2607 == P38 kontrolna vsota; 1889 + 616 = 2505 == P36/P38 osnovna črta — **obe PASS** |
+| registrska vrzel stavbnih mest | Blatt X (str. 138) **60/102** (pokritost 58,8 %; **42** zunaj registra) |
+| površine po sekcijah (model P39) | GRUND **1232,96** Joch (404 + 1.326.343 K; 7 brez površine) · BLATT_X 280,73 · WALDUNG 37,63 · NADALJEVANJE 13,46 · **skupaj 1564,78 Joch** (2600 vrstic s površino + **32** brez = 2632 parov ✓) |
+| atribucija "Summa 1216(?) Joch" | najbolj skladen kandidat **GRUND-only: Δ +16,96 Joch ≈ +1,39 %** (brez Blatt X Δ +5,6 %; celoten register Δ +28,68 % — zavrnjen) |
+| Blatt X ↔ GRUND podvajanje | prekrivanje parov (lastnik, hiša) **1/59**, lastnikov **1/22** → podvajanje NI dokazljivo, tudi NI izključeno → celotna vsota registra je samo **zgornja meja** |
+| per-house fragmenti str. 141 | 7 vrstic doslovno (190/1168 … 198/11957(?)); naivna vsota kot Joch = **1413 nasprotuje sami Summi 1216(?)** → UNRESOLVED |
+| številčni eho | **OVRGAN** — max parcela NADALJEVANJE je **2840**, ne 2607 (negativen izid, izrecno dokumentiran) |
+
+### Pomen
+
+1. Kontrolna vsota, ki jo sprava uporablja od P38, je **uradna rekapitulacija
+   dokumenta** (rdeči tuš str. 143) — aritmetika 102 + 2505 = 2607 in
+   osnovna črta P36/P38 se ujemata natanko.
+2. Površinsko se rekapitulacija najbolj sklada z **GRUND-only** — stavbna
+   mesta se štejejo po kosih (102), ne po površini; odmik ~17 Joch je v redu
+   negotovosti branja + 32 vrstic brez razčlenjene površine (deterministično
+   neodločljivo, ostaja paleografsko).
+3. Blatt X (str. 138) je *Zusammenstellung der Grundstücke* po hišah — nosi
+   rabe in površine; zaradi nedokazljivega podvajanja njegovih 280,73 Joch
+   **ne smemo samodejno prištevati** k vsotam registrskih površin.
+
+### Izpisi in objava
+
+- `research/issue17/ps-recap.json` — kanonski dokazni izpis;
+- `src/data/atlas/ps-recap.json` — identična kopija za runtime (kontrola
+  identičnosti je del QA);
+- `GET /api/atlas/ps-recap` — strojno berljiv izpis (force-static);
+- `PS_RECAP_P40` (`src/data/atlas/research.ts`) + kartica »PS 1825 —
+  rekapitulacija str. 140–143 (P40)« v Raziskavah (zavihek Prepisi Kurrent).
+
+### Ostaja odprto (issue #10 ostaja odprt)
+
+- človeška paleografska potrditev str. 140–143 (Summa 1216(?) Joch + 7
+  per-house vrstic) in vseh strojnih branj;
+- 3. prehod ~15 dvoumnih strani (tudi za 7 sirot in 9 NEBEREŽNA vrstic);
+- razširitev pravilnika rab v2 za lokalne termine (Lhut, Lohn, Ahn, Äfling …)
+  ob paleografski potrditvi.
+
+### Preverba
+
+ESLint **0**; tsc **0**; QA **40 → 41** (`qa-p40-ps-recap`: rekapitulacijska
+aritmetika 2505 + 102 = 2607, navzkrižne identitete PASS, registrska vrzel
+42, vsota sekcij = 675 Joch + 1.423.653 K, vrstice 2600 + 32 = 2632 parov,
+aritmetika odmikov kandidatov + monotonost, Blatt X prekrivanje 1/59,
+fragmenti UNRESOLVED, številčni eho ovrgan z 2840, navzkrižna kontrola obeh
+JSON izpisov (identičnost!) ↔ TS prek vbrizganega readFile — vzorec
+qa-p37/qa-p38/qa-p39); `next build` 18/18 (nov route prerenderiran);
+produkcijski strežnik (port 3010): `/api/qa` 41/41, `/api/atlas/ps-recap`
+200, `/api/atlas/ps-landuse` 200 (regresija), `/` 200.
