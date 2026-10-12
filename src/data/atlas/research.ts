@@ -1799,7 +1799,168 @@ export const PS_LEXICON_P43: {
     "človeška paleografija 16 družin + kitic (3. prehod dvoumnih strani, ko VAČ dosegljiv)",
     "verifikacija leksikografskih virov (Schmeller/DWB/SSKJ/Bezlaj) — viri navaja stroj",
     "PV razlage presežkov NJIVA/TRAVNIK (ali kulturni stolpec meša rabo z ledinskimi imeni?)",
-    "razcep K1/K2 (§21) + semantika 7 par referenc — še UNRESOLVED",
+    "semantika 7 par referenc (razcep K1/K2 razrešen v P44)",
+  ],
+};
+
+/** P44 (issue #10) — razcep K1/K2 v "Abschluß der Gemeinde" — RAZREŠEN [~]. */
+export const PS_K1K2_P44: {
+  series: "PS";
+  source: string;
+  status: ResearchStatus;
+  generatedBy: string;
+  constraint: { derivation: string; value: number };
+  readingInventory: {
+    k1Cell: { passes: Record<string, number>; visual: string; consensusTail: string; note: string };
+    k2Cell: { passes: Record<string, number>; visual: string; consensusTail: string; note: string };
+  };
+  resolution: {
+    state: string;
+    confidence: string;
+    k1: number;
+    k2: number;
+    row1: string;
+    row2: string;
+    basis: string[];
+    humanConfirmation: string;
+  };
+  hypotheses: { id: string; pair: number[]; accepted: boolean; reasons: string[]; rejection: string | null }[];
+  identities: Record<string, { pass: boolean; detail: string }>;
+  impact: {
+    abschlussNowFullyClosed: boolean;
+    newIdentity: string;
+    gemeindeStructure: string;
+    replacesP41Note: string;
+  };
+  verdictSi: string;
+  verdictEn: string;
+  next: string[];
+} = {
+  series: "PS",
+  source:
+    "N083PS.pdf (VAČ uodid 373415, docid 41780) — str. 140 desno 'Abschluß der Gemeinde' (rdeči tuš); committed dokazi ps-recap-paleo.json + ps-recap-paleo-raw/pass{1,2,3}-page140.json; polni izpis research/issue17/ps-k1k2.json + src/data/atlas/ps-k1k2.json",
+  status: "REVIEW",
+  generatedBy: "scripts/p44_ps_k1k2.py",
+  constraint: {
+    derivation:
+      "Summe der Grundparzellen 1215|490 − (Grund 831 J + Zinsb 383 J) = 1214 J + 490 K → K1+K2 = 1600 + 490 = 2090 K",
+    value: 2090,
+  },
+  readingInventory: {
+    k1Cell: {
+      passes: { pass1: 968, pass2: 468, "pass3-shifted": 468 },
+      visual: "9?8 → kandidati 968/998/908",
+      consensusTail: "68 (0→6, 2→8)",
+      note:
+        "prava vrednost 702 NI bila nikoli direktno prebrana — pride iz strukturnega sidra; pričakovana sistematična napačna branja (7→9|4, 0→6, 2→8) se ujemajo z opaženimi [~]",
+    },
+    k2Cell: {
+      passes: { pass1: 1288, pass2: 1388, pass3: 1288 },
+      visual: "kandidati 1122/1092/1182",
+      consensusTail: "88",
+      note: "prava vrednost 1388 == branje pass2; p1/p3 se razlikujeta le v 2. števki",
+    },
+  },
+  resolution: {
+    state: "RESOLVED-ARITMETIČNO",
+    confidence: "~",
+    k1: 702,
+    k2: 1388,
+    row1: "831|702 (== leva 'Summa der Grundparzellen')",
+    row2: "383|1388",
+    basis: [
+      "omejitev K1 + K2 = 2090 K (iz 831+383+1 = 1215 J in 490 K)",
+      "paralelnost 'nach Anlage': desna vrstica 4 (3|312) == leva vrstica 132 (3|312) — P41 identiteta d_abschlussBaup PASS; po istem vzorcu vrstica 1 == leva vsota 831|702 (Joch 831 == 831)",
+      "K2 = 1388 je direktno VLM branje pass2; p1/p3 branja 1288 se razlikujejo le v eni števki",
+      "podmnožinski argument: 831|968 (H2) bi presegel vsoto Anlage 831|702 pri istem Joch — nemogoče",
+    ],
+    humanConfirmation:
+      "ostaja odprta — rešitev je aritmetično vsiljena, paleografska potrditev celice K1 (ali '702' ali '9?8') je še vedno zaželena",
+  },
+  hypotheses: [
+    {
+      id: "H1",
+      pair: [702, 1388],
+      accepted: true,
+      reasons: [
+        "strukturno sidro: 'nach Anlage' rekapitulira levo vsoto — desna vrstica 4 (Baup 3|312) == leva vrstica 132 (3|312) [P41 PASS]; po istem vzorcu vrstica 1 (Grund 831|K1) == leva 'Summa der Grundparzellen' 831|702; Joch 831 == 831",
+        "K2 = 2090 − 702 = 1388 je DIREKTNO VLM branje K2 celice (pass2); p1/p3 bereta 1288 — razlika le v 2. števki (3↔2)",
+        "omejitev K1+K2 = 2090 izpolnjena natanko",
+        "konsenz repa K2 celice je '1?88' — 1388 se ujema, alternativni vizualni kandidati (1122/1092/1182) ne",
+        "celoten Abschluß se aritmetično zapre: 831|702 + 383|1388 = 1215|490; + 5|1003 = 1220|1493",
+      ],
+      rejection: null,
+    },
+    {
+      id: "H2",
+      pair: [968, 1122],
+      accepted: false,
+      reasons: [
+        "K1 = 968 je branje pass1; K2 = 1122 je le vizualni kandidat (noben prehod ni prebral 1122)",
+        "KRŠI paralelnost nach Anlage: 831|968 > 831|702 pri istem Joch — rekapitulacija Anlage ne sme presegati vsote Anlage (podmnožina > nadmnožina, nemogoče)",
+      ],
+      rejection: "kršitev strukturne paralelnosti (podmnožina ne more presegati nadmnožine) + K2 brez prehodnega branja",
+    },
+    {
+      id: "H3",
+      pair: [998, 1092],
+      accepted: false,
+      reasons: [
+        "oba kandidata sta le vizualni razširitvi (998 iz '9?8', 1092 iz vizualnega branja K2)",
+        "noben prehod ni prebral niti 998 niti 1092; brez strukturnega sidra",
+      ],
+      rejection: "brez prehodnih branj in brez strukturnega sidra",
+    },
+    {
+      id: "H4",
+      pair: [908, 1182],
+      accepted: false,
+      reasons: [
+        "oba kandidata sta le vizualni razširitvi (908 iz '9?8', 1182 iz vizualnega branja K2)",
+        "noben prehod ni prebral niti 908 niti 1182; brez strukturnega sidra",
+      ],
+      rejection: "brez prehodnih branj in brez strukturnega sidra",
+    },
+    {
+      id: "H5",
+      pair: [468, 1622],
+      accepted: false,
+      reasons: [
+        "K1 = 468 je branje pass2 (pass3 zamaknjeno)",
+        "K2 = 1622 > 1600 K — anomalija za stolpec Klafter; brez opore v prehodih",
+      ],
+      rejection: "K2 > 1600 K je anomalija + brez opore v prehodih",
+    },
+  ],
+  identities: {
+    I1_lageRowSum: { pass: true, detail: "7 vrstic == 831|702 (rekonstruirano)" },
+    I2_leftClosure: { pass: true, detail: "831|702 + 3|312 == 834|1014" },
+    I3_constraint: { pass: true, detail: "K1+K2 = 2090 K" },
+    I4_nachAnlageParallel: { pass: true, detail: "desna 4 (3|312) == leva 132 (3|312); Joch 831 == 831" },
+    I5_solution: { pass: true, detail: "K1=702==Klafter leve vsote; K2=1388==branje pass2; oba < 1600" },
+    I6_fullClosure: {
+      pass: true,
+      detail: "831|702 + 383|1388 == 1215|490; + 5|1003 == 1220|1493; 3|312 + 2|691 == 5|1003",
+    },
+    I7_uniqueness: { pass: true, detail: "natanko ena sprejeta hipoteza (H1); H2–H5 zavrnjene z izrecnimi razlogi" },
+  },
+  impact: {
+    abschlussNowFullyClosed: true,
+    newIdentity:
+      "desna vrstica 1 (831|702) == leva 'Summa der Grundparzellen' — NOVA identiteta (poleg P41 d_abschlussBaup)",
+    gemeindeStructure:
+      "Grundparzellen občine 1215|490 = rustikalne hiše po Anlagi 831|702 (hiše 124–130) + 'Ziffer 1041' (Gütl/gingl. kategorija) 383|1388",
+    replacesP41Note:
+      "P41 vrstici 831|968[~] in 383|1288[~] se nadomestita z 831|702 in 383|1388 [~]",
+  },
+  verdictSi:
+    "RAZCEP K1/K2 RAZREŠEN [~]: K1 = 702 (strukturna paralelnost 'nach Anlage' — desna vrstica 4 == leva vrstica 132; Joch 831 == 831; hipoteza 968 pade, ker rekapitulacija Anlage ne sme presegati vsote Anlage), K2 = 2090 − 702 = 1388 (direktno branje pass2; p1/p3 1288 — razlika ena števka). Celoten Abschluß se aritmetično zapre: 831|702 + 383|1388 = 1215|490; + 5|1003 = 1220|1493. NOVA identiteta: desna vrstica 1 == leva 'Summa der Grundparzellen'. Struktura občine: rustikalne hiše 831|702 + 'Ziffer 1041' (Gütl/gingl.) 383|1388. Človeška paleografska potrditev ostaja odprta.",
+  verdictEn:
+    "K1/K2 SPLIT RESOLVED [~]: K1 = 702 (structural 'nach Anlage' parallelism — right row 4 == left row 132; Joch 831 == 831; the 968 hypothesis falls because a recapitulation of the Anlage cannot exceed the Anlage's own sum), K2 = 2090 − 702 = 1388 (a direct pass2 reading; p1/p3 read 1288 — one digit apart). The entire Abschluß closes arithmetically: 831|702 + 383|1388 = 1215|490; + 5|1003 = 1220|1493. NEW identity: right row 1 == left 'Summa der Grundparzellen'. Gemeinde structure: rustical houses 831|702 + 'Ziffer 1041' (Gütl/gingl.) 383|1388. Human palaeographic confirmation remains open.",
+  next: [
+    "človeška paleografska potrditev celic K1/K2 (3. prehod, ko VAČ dosegljiv)",
+    "semantika 7 par referenc str. 141 — še UNRESOLVED",
+    "p141 spodnji vsotni blok (ŠIBKO), p142 skupna dolžina (UNRESOLVED)",
   ],
 };
 

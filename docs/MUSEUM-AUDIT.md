@@ -1252,5 +1252,97 @@ Lukig~Luka/Luch [~/?], Wing~Weng [?], Hurgi~horga [?], Schindel~šindel [~] …
 
 Človeška paleografija 16 družin + kitic (3. prehod dvoumnih strani, ko VAČ
 dosegljiv); verifikacija leksikografskih virov; PV razlage presežkov NJIVA/
-TRAVNIK; razcep K1/K2 (§21) + semantika 7 par referenc; potrditev vseh strojnih
-branj. Vsi statusi REVIEW.
+TRAVNIK; razcep K1/K2 (razrešen v §24) + semantika 7 par referenc; potrditev
+vseh strojnih branj. Vsi statusi REVIEW.
+
+## §24 — P44: razcep K1/K2 v Abschlußu RAZREŠEN [~] (issue #10)
+
+**Datum:** 2026-10-12 · **Status:** REVIEW · **Skript:** `scripts/p44_ps_k1k2.py` ·
+**Dokazi:** `research/issue17/ps-k1k2.json` + identična runtime kopija
+`src/data/atlas/ps-k1k2.json` + committed raw prehodi
+`ps-recap-paleo-raw/pass{1,2,3}-page140.json` · **API:** `GET /api/atlas/ps-k1k2`
+(force-static)
+
+### Problem (P41 §21, UNRESOLVED)
+
+Vrstici Abschlußa (str. 140 desno, rdeči tuš) — Grundparzellen (nach Anlage)
+**831|K1** in Zinsb./Ziffer 1041 **383|K2** — se seštejeta v Summe der
+Grundparzellen **1215|490**. Ker je 831+383 = 1214 Joch, mora veljati
+**K1 + K2 = 1600 + 490 = 2090 K**. VLM branja (K1: 968 p1 / 468 p2 / vizualno
+"9?8"; K2: 1288 p1+p3 / 1388 p2) niso zadostila omejitve — noben par branj ni
+vsota 2090.
+
+### Rešitev (deterministična, brez AI ob delovanju)
+
+1. **Strukturna paralelnost "nach Anlage":** desna vrstica 4 "Summa der
+   Bauparzellen nach Anlage" **3|312** je identična levi vrstici 132 (**3|312**)
+   — P41 identiteta d_abschlussBaup PASS. Po istem vzorcu mora desna vrstica 1
+   "Grundparzellen nach Anlage" rekapitulirati levo "Summa der Grundparzellen"
+   **831|702** (Joch **831 == 831**) → **K1 = 702**.
+2. **Podmnožinski argument** pada hipotezo (968, 1122): 831|968 bi presegla
+   vsoto Anlage 831|702 pri istem Joch — rekapitulacija Anlage ne sme presegati
+   vsote Anlage (podmnožina > nadmnožina, nemogoče).
+3. **Omejitev:** K2 = 2090 − 702 = **1388** — kar je **direktno VLM branje
+   pass2**; p1/p3 bereta 1288 (razlika le v 2. števki, 3↔2). Konsenz repa
+   celice je "1?88" — 1388 se ujema, vizualni kandidati (1122/1092/1182) ne.
+4. **Celoten Abschluß se zapre:** 831|702 + 383|1388 = 1215|490 ✓;
+   1215|490 + 5|1003 = **1220|1493** (Area der Gemeinde) ✓; 3|312 + 2|691 =
+   5|1003 ✓. **NOVA identiteta:** desna vrstica 1 == leva "Summa der
+   Grundparzellen".
+
+### Hipoteze (enumeracija, vse izpolnjujejo omejitev)
+
+| Hipoteza | Par | Odločitev |
+|---|---|---|
+| **H1** | **(702, 1388)** | **SPREJETA** — strukturno sidro + direktno branje K2 (pass2) + konsenz repa "1?88" |
+| H2 | (968, 1122) | ZAVRNJENA — krši paralelnost (831|968 > 831|702 pri istem Joch); K2 = 1122 brez prehodnega branja |
+| H3 | (998, 1092) | ZAVRNJENA — obe vrednosti le vizualni razširitvi, brez prehodnih branj |
+| H4 | (908, 1182) | ZAVRNJENA — obe vrednosti le vizualni razširitvi, brez prehodnih branj |
+| H5 | (468, 1622) | ZAVRNJENA — K2 = 1622 > 1600 K anomalija za stolpec Klafter |
+
+### Vzorec napačnih branj (paleografska nota [~])
+
+- **K1 celica:** prava vrednost **702** NI bila nikoli direktno prebrana —
+  pride iz strukturnega sidra. Opažena branja 968/468/9?8 so sistematično
+  napačna branja: 7→9|4 (zaključena zanka / oster kot), 0→6 (vstopni potez),
+  2→8 (zaključena spodnja zanka) — vse znane kurrentske zamenjave; rep "68"
+  = 0→6, 2→8 konzistentno pri obeh prehodih.
+- **K2 celica:** prava vrednost **1388** == branje pass2; p1/p3 1288 (razlika
+  3↔2, standardna zamenjava).
+
+### Pomen
+
+- P41 vrstici **831|968[~]** in **383|1288[~]** se nadomestita z
+  **831|702** in **383|1388 [~]**.
+- **Struktura občine:** Grundparzellen 1215|490 = rustikalne hiše po Anlagi
+  831|702 (hiše 124–130) + "Ziffer 1041" (Gütl/gingl. kategorija) 383|1388.
+- Razcep K1/K2 je odstranjen iz seznama UNRESOLVED (issue #10); ostaja
+  človeška paleografska potrditev celic (3. prehod, ko VAČ dosegljiv).
+
+### Deterministična preverba (brez AI ob delovanju)
+
+`scripts/p44_ps_k1k2.py` (FAIL ob padu katerekoli invariante):
+- **I1** vsota 7 vrstic leve strani == 831|702 (rekonstrukcija);
+- **I2** 831|702 + 3|312 == 834|1014;
+- **I3** omejitev K1+K2 == 2090;
+- **I4** paralelnost: desna 4 (3|312) == leva 132 (3|312); Joch 831 == 831;
+- **I5** K1 = 702 == Klafter leve vsote; K2 = 1388 == branje pass2; oba < 1600;
+- **I6** popolna zaprtost (tri identitete);
+- **I7** natanko ena sprejeta hipoteza (H1); H2–H5 zavrnjene z izrecnimi
+  razlogi.
+
+### Izpisi in objava
+
+- `research/issue17/ps-k1k2.json` — kanonski dokazni izpis;
+- `src/data/atlas/ps-k1k2.json` — identična kopija (QA kontrola identičnosti);
+- `GET /api/atlas/ps-k1k2` — strojno berljiv izpis (force-static);
+- `PS_K1K2_P44` (`src/data/atlas/research.ts`) + kartica »PS 1825 — razcep
+  K1/K2: Abschluß der Gemeinde (P44)« v Raziskavah (zavihek Prepisi Kurrent).
+
+### Ostaja odprto (issue #10)
+
+Človeška paleografska potrditev celic K1/K2 ("702" vs "9?8"; "1388" vs "1288")
+in vseh strojnih branj; 3. prehod ~15 dvoumnih strani; semantika 7 par
+referenc str. 141 (UNRESOLVED); p141 spodnji vsotni blok (ŠIBKO), p142 skupna
+dolžina (UNRESOLVED); človeška paleografija 16 družin + kitic; verifikacija
+leksikografskih virov. Statusi REVIEW.

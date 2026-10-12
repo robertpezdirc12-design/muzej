@@ -2631,3 +2631,49 @@ Stage Summary:
 - Nove datoteke: scripts/p43_ps_lexicon.py, scripts/p43_lex_read.mjs, research/issue17/ps-lexicon.json, research/issue17/ps-lexicon-raw/ (34), src/data/atlas/ps-lexicon.json, src/app/api/atlas/ps-lexicon/route.ts.
 - Push recept (neznansko spomin): git -c http.version=HTTP/1.1 -c http.postBuffer=524288000 -c http.extraHeader="Authorization: Basic $(printf 'oauth2:PAT' | base64 -w0)" push origin main — žeton v /home/z/my-project/download/gl_api.py (62 znakov, vključno z _.-; poteče 2026-11-08).
 - Divergenca GitLab (P38–P43, QA 44) ↔ GitHub (P38'–P45', QA 43) ostaja — P43 v novih datotekah za enostaven prihodnji merge; za aktivni merge potreben GitHub PAT.
+
+---
+P44 (2026-10-12, issue #10) — RAZCEP K1/K2 V "ABSCHLUSS DER GEMEINDE" RAZREŠEN [~]
+
+Kaj je bilo:
+- P41 §21 UNRESOLVED: vrstici Abschlußa 831|K1 + 383|K2 = 1215|490, omejitev
+  K1+K2 = 2090 K; VLM branja (K1 968/468/9?8; K2 1288/1388) niso zadostila.
+
+Metoda (scripts/p44_ps_k1k2.py, deterministično, brez AI ob delovanju):
+- Rekonstrukcija leve vsote 7 vrstic → 831|702 (I1) + zaprtje leve strani (I2).
+- NOVA STRUKTURNA PARALELNOST "nach Anlage": desna vrstica 4 (Baup 3|312) ==
+  leva vrstica 132 (3|312, P41 PASS) → po istem vzorcu desna vrstica 1 (Grund
+  831|K1) == leva "Summa der Grundparzellen" 831|702 (Joch 831 == 831) → K1 = 702.
+- Podmnožinski argument pada hipotezo (968, 1122): 831|968 bi presegel vsoto
+  Anlage pri istem Joch — podmnožina ne more presegati nadmnožine.
+- K2 = 2090 − 702 = 1388 == DIREKTNO VLM branje pass2 (p1/p3 1288 — razlika
+  ena številka); konsenz repa celice "1?88" podpre 1388, vizualne kandidate ne.
+- Celoten Abschluß zaprt: 831|702 + 383|1388 = 1215|490; + 5|1003 = 1220|1493;
+  3|312 + 2|691 = 5|1003. NOVA identiteta: desna vrstica 1 == leva vsota.
+- Hipoteze H1–H5 z izrecnimi zavrnitvami (I7: natanko ena sprejeta).
+- Vzorec napačnih branj: 702→968/468 (7→9|4, 0→6, 2→8 — kurrentske zamenjave [~]).
+
+Rezultati:
+- K1 = 702, K2 = 1388, status RESOLVED-ARITMETIČNO [~] (človeška potrditev ostaja).
+- P41 vrstici 831|968[~] / 383|1288[~] nadomeščeni z 831|702 / 383|1388 [~].
+- Struktura občine: Grundparzellen 1215|490 = rustikalne hiše (Anlage) 831|702
+  + "Ziffer 1041" (Gütl/gingl.) 383|1388.
+
+Izpisi in integracija:
+- research/issue17/ps-k1k2.json + identična runtime kopija src/data/atlas/ps-k1k2.json;
+- API GET /api/atlas/ps-k1k2 (force-static); TS PS_K1K2_P44 (research.ts);
+- kartica "PS 1825 — razcep K1/K2: Abschluß der Gemeinde (P44)" v Raziskavah/kurrent;
+- sources.ts N083PS nota (P44); audit §24; README P36–P44 + API seznam.
+
+QA 44→45: qa-p44-ps-k1k2 (omejitev 2090, rešitev (702,1388), direktna korelacija
+pass2==1388, branja p1/p2/p3 pinana, H1 edina sprejeta, H2–H5 z razlogi,
+identitete I4/I7, zaprtost Abschlußa, navzkrižna kontrola obeh izpisov prek
+readFile — vzorec qa-p37..p43).
+
+Stage Summary:
+- P44: razcep K1/K2 RAZREŠEN [~] — ena izrecnih UNRESOLVED točk issue #10
+  odstranjena; Abschluß der Gemeinde popolnoma aritmetično zaprt.
+- Ostaja: človeška potrditev celic (3. prehod, ko VAČ dosegljiv), semantika
+  7 par referenc, p141 šibki blok, p142 dolžina, 16 družin + kitic, viri.
+- Nove datoteke: scripts/p44_ps_k1k2.py, research/issue17/ps-k1k2.json,
+  src/data/atlas/ps-k1k2.json, src/app/api/atlas/ps-k1k2/route.ts.

@@ -60,6 +60,7 @@ import {
   PS_RECAP_PALEO_P41,
   PS_LANDUSE_V2_P42,
   PS_LEXICON_P43,
+  PS_K1K2_P44,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -767,6 +768,107 @@ export function MuseumResearch() {
                   {t(
                     `Uradni izkaz navaja 636,16 J pašnikov (Weiden — belokranjske dubrave), izrecne Weide/Alm vrstice registra pa le ${PS_LEXICON_P43.pvReconciliation.psPastVisceAlmJ} J; neznane družine pokrijejo le ${PS_LEXICON_P43.pvReconciliation.unknownFamiliesAreaJ} J (17 %) vrzeli — preostanek leži v presežkih NJIVA/TRAVNIK nad uradnima kategorijama. PV »Walder« vrstica v transkripciji PRAZNA [?] — gozd uradni izkaz ne navaja, PS pa ima 76,79 J GOZD.`,
                     `The official return lists 636.16 J of pastures (Weiden — the White Carniolan oak woods), while the register's explicit Weide/Alm rows carry only ${PS_LEXICON_P43.pvReconciliation.psPastVisceAlmJ} J; unknown families cover only ${PS_LEXICON_P43.pvReconciliation.unknownFamiliesAreaJ} J (17%) of the gap — the remainder sits in the FIELD/MEADOW surpluses over the official categories. The PV »Walder« row is EMPTY in the transcription [?] — the official return lists no forest, while the PS has 76.79 J of FOREST.`,
+                  )}
+                </p>
+              </div>
+            </div>
+
+            {/* PS 1825 — razcep K1/K2 (P44, issue #10) */}
+            <div className="min-w-0 rounded-xl border bg-card p-6 shadow-sm">
+              <h3 className="flex flex-wrap items-center gap-2 font-display text-lg font-semibold">
+                <Microscope className="size-4 text-primary" aria-hidden="true" />
+                {t("PS 1825 — razcep K1/K2: Abschluß der Gemeinde (P44)", "PS 1825 — the K1/K2 split: Abschluß der Gemeinde (P44)")}
+                <StatusBadge status={PS_K1K2_P44.status} />
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                {t(
+                  "Razcep iz P41 §21 je aritmetično razrešen [~]: K1 = 702, K2 = 1388 — celoten Abschluß se zapre. Rešitev je vsiljena z dvema neodvisnima korelacijama; človeška paleografska potrditev ostaja odprta.",
+                  "The P41 §21 split is resolved arithmetically [~]: K1 = 702, K2 = 1388 — the entire Abschluß closes. The solution is forced by two independent corroborations; human palaeographic confirmation remains open.",
+                )}
+              </p>
+
+              {/* P44: rešitev */}
+              <div className="mt-4 rounded-lg border bg-secondary/30 p-3">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-sm font-semibold">
+                    {t("P44 — rešitev razcepa", "P44 — the split solution")}
+                  </span>
+                  <span className="font-mono text-[11px] text-muted-foreground">
+                    {t(`omejitev K1+K2 = ${PS_K1K2_P44.constraint.value} K`, `constraint K1+K2 = ${PS_K1K2_P44.constraint.value} K`)}
+                  </span>
+                </div>
+                <div className="mt-2 flex flex-wrap gap-1.5 font-mono text-[10px]">
+                  <span className="rounded-full border bg-background px-2 py-0.5">
+                    K1 = {PS_K1K2_P44.resolution.k1} {t("(831|702 == leva vsota)", "(831|702 == the left sum)")}
+                  </span>
+                  <span className="rounded-full border bg-background px-2 py-0.5">
+                    K2 = {PS_K1K2_P44.resolution.k2} {t("(383|1388; branje pass2)", "(383|1388; pass2 reading)")}
+                  </span>
+                  <span className="rounded-full border bg-background px-2 py-0.5">
+                    831|702 + 383|1388 = 1215|490 ✓
+                  </span>
+                  <span className="rounded-full border bg-background px-2 py-0.5">
+                    1215|490 + 5|1003 = 1220|1493 ✓
+                  </span>
+                </div>
+                <p className="mt-2 text-[11px] leading-relaxed text-muted-foreground">
+                  {t(
+                    "Paralelnost 'nach Anlage': desna vrstica 4 (Baup 3|312) == leva vrstica 132 (3|312) — po istem vzorcu mora desna vrstica 1 (Grund 831|K1) rekapitulirati levo 'Summa der Grundparzellen' 831|702 (Joch 831 == 831). Hipoteza (968, 1122) pade: 831|968 bi presegla vsoto Anlage pri istem Joch — podmnožina ne more presegati nadmnožine.",
+                    "The 'nach Anlage' parallelism: right row 4 (Baup 3|312) == left row 132 (3|312) — by the same pattern, right row 1 (Grund 831|K1) must recapitulate the left 'Summa der Grundparzellen' 831|702 (Joch 831 == 831). The (968, 1122) hypothesis falls: 831|968 would exceed the Anlage's own sum at the same Joch — a subset cannot exceed its superset.",
+                  )}
+                </p>
+              </div>
+
+              {/* P44: branja + hipoteze */}
+              <div className="mt-3 rounded-lg border bg-secondary/30 p-3">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-sm font-semibold">
+                    {t("P44 — inventar branj in hipoteze", "P44 — reading inventory and hypotheses")}
+                  </span>
+                  <span className="font-mono text-[11px] text-muted-foreground">
+                    H1 ✓ · H2–H5 ✗
+                  </span>
+                </div>
+                <div className="mt-2 max-h-64 space-y-1 overflow-y-auto pr-1">
+                  <div className="rounded border bg-background px-2 py-1 text-[10px]">
+                    <div className="flex flex-wrap items-center justify-between gap-2 font-mono">
+                      <span className="font-semibold">K1</span>
+                      <span className="text-muted-foreground">
+                        {Object.entries(PS_K1K2_P44.readingInventory.k1Cell.passes).map(([k, v]) => `${k}: ${v}`).join(" · ")} · {PS_K1K2_P44.readingInventory.k1Cell.visual}
+                      </span>
+                    </div>
+                    <p className="mt-0.5 leading-snug text-muted-foreground/80">{PS_K1K2_P44.readingInventory.k1Cell.note}</p>
+                  </div>
+                  <div className="rounded border bg-background px-2 py-1 text-[10px]">
+                    <div className="flex flex-wrap items-center justify-between gap-2 font-mono">
+                      <span className="font-semibold">K2</span>
+                      <span className="text-muted-foreground">
+                        {Object.entries(PS_K1K2_P44.readingInventory.k2Cell.passes).map(([k, v]) => `${k}: ${v}`).join(" · ")} · {PS_K1K2_P44.readingInventory.k2Cell.visual}
+                      </span>
+                    </div>
+                    <p className="mt-0.5 leading-snug text-muted-foreground/80">{PS_K1K2_P44.readingInventory.k2Cell.note}</p>
+                  </div>
+                  {PS_K1K2_P44.hypotheses.map((h) => (
+                    <div key={h.id} className="rounded border bg-background px-2 py-1 text-[10px]">
+                      <div className="flex flex-wrap items-center justify-between gap-2 font-mono">
+                        <span className="font-semibold">{h.id}: K1={h.pair[0]}, K2={h.pair[1]} {h.accepted ? "✓" : "✗"}</span>
+                        <span className="text-muted-foreground">{h.accepted ? t("sprejeta", "accepted") : t("zavrnjena", "rejected")}</span>
+                      </div>
+                      <p className="mt-0.5 leading-snug text-muted-foreground/70">
+                        {h.accepted ? h.reasons[1] : h.rejection}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* P44: struktura občine */}
+              <div className="mt-3 rounded-lg border border-emerald-200 bg-emerald-50/60 p-3 dark:border-emerald-900/50 dark:bg-emerald-950/30">
+                <p className="text-[11px] leading-relaxed text-foreground/80">
+                  <span className="font-semibold">{t("NOVA identiteta: ", "NEW identity: ")}</span>
+                  {t(
+                    "desna vrstica 1 (831|702) == leva 'Summa der Grundparzellen'. Struktura občine: rustikalne hiše po Anlagi 831|702 (hiše 124–130) + 'Ziffer 1041' (Gütl/gingl. kategorija) 383|1388 = 1215|490. Strojno berljivo: /api/atlas/ps-k1k2.",
+                    "right row 1 (831|702) == the left 'Summa der Grundparzellen'. Gemeinde structure: rustical houses per the Anlage 831|702 (houses 124–130) + 'Ziffer 1041' (Gütl/gingl. category) 383|1388 = 1215|490. Machine-readable: /api/atlas/ps-k1k2.",
                   )}
                 </p>
               </div>

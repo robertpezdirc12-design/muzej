@@ -28,6 +28,7 @@ import {
   PS_RECAP_PALEO_P41,
   PS_LANDUSE_V2_P42,
   PS_LEXICON_P43,
+  PS_K1K2_P44,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -2018,6 +2019,78 @@ export function runQA(opts: QAOptions = {}): QAReport {
     p43Errors.length === 0
       ? `216+66=282 parov · DINGF 10/10 · padci 9/5/1 · blokov 10/16 · PV 1221,95/1564,78/576,24 · ${p43FileDetail}`
       : p43Errors.join("; "),
+  );
+
+  // ——— P44: N083PS — razcep K1/K2 (Abschluß der Gemeinde) ———
+  const p44Errors: string[] = [];
+  const KK = PS_K1K2_P44;
+  if (KK.constraint.value !== 2090) p44Errors.push("omejitev ni 2090 K");
+  if (KK.resolution.k1 !== 702 || KK.resolution.k2 !== 1388)
+    p44Errors.push("rešitev ni (702, 1388)");
+  if (KK.resolution.confidence !== "~") p44Errors.push("zaupanje ni [~]");
+  if (!KK.resolution.state.startsWith("RESOLVED")) p44Errors.push("stanje ni RESOLVED");
+  if (702 + 1388 !== KK.constraint.value) p44Errors.push("702 + 1388 ≠ omejitev");
+  if (831 * 1600 + 702 + (383 * 1600 + 1388) !== 1215 * 1600 + 490)
+    p44Errors.push("831|702 + 383|1388 ≠ 1215|490");
+  if (1215 * 1600 + 490 + (5 * 1600 + 1003) !== 1220 * 1600 + 1493)
+    p44Errors.push("1215|490 + 5|1003 ≠ 1220|1493");
+  if (3 * 1600 + 312 + (2 * 1600 + 691) !== 5 * 1600 + 1003)
+    p44Errors.push("3|312 + 2|691 ≠ 5|1003");
+  if (KK.readingInventory.k2Cell.passes.pass2 !== 1388)
+    p44Errors.push("K2 branje pass2 ni 1388 (direktna korelacija)");
+  if (KK.readingInventory.k2Cell.passes.pass1 !== 1288 || KK.readingInventory.k2Cell.passes.pass3 !== 1288)
+    p44Errors.push("K2 branji p1/p3 nista 1288");
+  if (KK.readingInventory.k1Cell.passes.pass1 !== 968 || KK.readingInventory.k1Cell.passes.pass2 !== 468)
+    p44Errors.push("K1 branji p1/p2 nista 968/468");
+  if (KK.hypotheses.filter((h) => h.accepted).length !== 1) p44Errors.push("sprejetih hipotez ni natanko 1");
+  const h1 = KK.hypotheses.find((h) => h.id === "H1");
+  if (!h1 || !h1.accepted || h1.pair[0] !== 702 || h1.pair[1] !== 1388)
+    p44Errors.push("H1 ni sprejeta (702, 1388)");
+  const h2 = KK.hypotheses.find((h) => h.id === "H2");
+  if (!h2 || h2.accepted || !h2.rejection) p44Errors.push("H2 (968, 1122) ni izrecno zavrnjena z razlogom");
+  if (!KK.impact.abschlussNowFullyClosed) p44Errors.push("Abschluß ni zaprt");
+  if (!KK.identities.I4_nachAnlageParallel.pass) p44Errors.push("paralelnost nach Anlage ni PASS");
+  if (!KK.identities.I7_uniqueness.pass) p44Errors.push("enoličnost ni PASS");
+  // dokazni datoteki (strežniški klic; vzorec qa-p37..p43)
+  let p44FileDetail = "dokazni datoteki nista preverjeni (readFile ni na voljo) — celovita kontrola teče na /api/qa";
+  if (opts.readFile) {
+    const rawEv = opts.readFile("research/issue17/ps-k1k2.json");
+    const rawRt = opts.readFile("src/data/atlas/ps-k1k2.json");
+    if (rawEv === null) p44Errors.push("research/issue17/ps-k1k2.json ni berljiv (izpis scripts/p44_ps_k1k2.py)");
+    if (rawRt === null) p44Errors.push("src/data/atlas/ps-k1k2.json ni berljiv (runtime kopija)");
+    if (rawEv !== null && rawRt !== null && rawEv !== rawRt)
+      p44Errors.push("dokazni in runtime izpis ps-k1k2.json nista identična (skript mora izpisati oba enako)");
+    if (rawEv !== null) {
+      try {
+        const j = JSON.parse(rawEv) as {
+          constraint: { value: number };
+          resolution: { state: string; k1: number; k2: number; confidence: string };
+          hypotheses: { id: string; pair: number[]; accepted: boolean; rejection: string | null }[];
+          identities: Record<string, { pass: boolean }>;
+        };
+        if (j.constraint.value !== 2090) p44Errors.push("JSON omejitev ni 2090");
+        if (j.resolution.k1 !== 702 || j.resolution.k2 !== 1388) p44Errors.push("JSON rešitev ni (702, 1388)");
+        if (j.resolution.state !== "RESOLVED-ARITMETIČNO") p44Errors.push("JSON stanje ni RESOLVED-ARITMETIČNO");
+        if (j.hypotheses.filter((h) => h.accepted).length !== 1) p44Errors.push("JSON sprejetih hipotez ni 1");
+        const jH2 = j.hypotheses.find((h) => h.id === "H2");
+        if (!jH2 || jH2.accepted || !jH2.rejection) p44Errors.push("JSON H2 ni zavrnjena z razlogom");
+        for (const [k, v] of Object.entries(j.identities)) {
+          if (!v.pass) p44Errors.push(`JSON identiteta ${k} ni PASS`);
+        }
+        p44FileDetail = `dokazni datoteki preverjeni in identični (K1=${j.resolution.k1}, K2=${j.resolution.k2}, omejitev ${j.constraint.value} K, H1 edina sprejeta)`;
+      } catch {
+        p44Errors.push("research/issue17/ps-k1k2.json ni veljaven JSON");
+      }
+    }
+  }
+  push(
+    "qa-p44-ps-k1k2",
+    "P44: N083PS — razcep K1/K2 v 'Abschluß der Gemeinde' RAZREŠEN [~]: omejitev K1+K2 = 2090 K (iz 1215|490 − 831 J − 383 J); strukturna paralelnost 'nach Anlage' (desna vrstica 4 Baup 3|312 == leva vrstica 132, P41 PASS; Joch 831 == 831) → K1 = 702 == Klafter leve vsote 831|702; podmnožinski argument pada hipotezo (968, 1122) — rekapitulacija Anlage ne sme presegati vsote Anlage; K2 = 2090 − 702 = 1388 == direktno VLM branje pass2 (p1/p3 1288, razlika ena številka); celoten Abschluß se zapre: 831|702 + 383|1388 = 1215|490; + 5|1003 = 1220|1493; 3|312 + 2|691 = 5|1003; NOVA identiteta: desna vrstica 1 == leva 'Summa der Grundparzellen'; struktura občine: rustikalne hiše 831|702 + 'Ziffer 1041' (Gütl/gingl.) 383|1388; hipoteze H1–H5 z izrecnimi zavrnitvami; vzorec napačnih branj: 702→968/468 (7→9|4, 0→6, 2→8 — kurrentske zamenjave [~]); status REVIEW — človeška potrditev ostaja odprta",
+    "P44: N083PS — the K1/K2 split in 'Abschluß der Gemeinde' RESOLVED [~]: constraint K1+K2 = 2090 K (from 1215|490 − 831 J − 383 J); structural 'nach Anlage' parallelism (right row 4 Baup 3|312 == left row 132, P41 PASS; Joch 831 == 831) → K1 = 702 == the Klafter of the left sum 831|702; the subset argument defeats the (968, 1122) hypothesis — a recapitulation of the Anlage cannot exceed the Anlage's own sum; K2 = 2090 − 702 = 1388 == a direct pass2 VLM reading (p1/p3 1288, one digit apart); the entire Abschluß closes: 831|702 + 383|1388 = 1215|490; + 5|1003 = 1220|1493; 3|312 + 2|691 = 5|1003; NEW identity: right row 1 == the left 'Summa der Grundparzellen'; Gemeinde structure: rustical houses 831|702 + 'Ziffer 1041' (Gütl/gingl.) 383|1388; hypotheses H1–H5 with explicit rejections; misread pattern: 702→968/468 (7→9|4, 0→6, 2→8 — Kurrent confusions [~]); status REVIEW — human confirmation remains open",
+    p44Errors.length === 0,
+    p44Errors.length === 0
+      ? `K1=702, K2=1388 · omejitev 2090 · H1 edina sprejeta (H2–H5 zavrnjene) · Abschluß zaprt · ${p44FileDetail}`
+      : p44Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;

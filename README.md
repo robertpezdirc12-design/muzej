@@ -110,7 +110,7 @@ Zgodovinska katastrska slika vasi (franciscejski kataster, k.o. Griblje št. 83 
 - **dokazni vmesnik**: vir → trditev → dokaz → povezave (N083PT str. + VAČ povezave);
 - **pokritost + negativni rezultati** — raziskovalna provenienca vključno s statusi
   VERIFIED/DOCUMENTED/REVIEW/RECONSTRUCTED/APPROXIMATE/TO_COLLECT/NOT_FOUND;
-- **strojni prepis PS + sprava (P36–P43)** — 135 strani, 2743 vrstic; deterministična
+- **strojni prepis PS + sprava (P36–P44)** — 135 strani, 2743 vrstic; deterministična
   sprava: glavni niz 1889/2505 (75,4 %), Waldung 81, nadaljevalni niz 95 (do 2840),
   Blatt X 60 = register stavbnih mest; razdvojitev v model parcela×raba: 2134 vnosov,
   2632 parov, 430 parcel z več rabami, 7 sirot, klasifikacija rab (pravilnik v2,
@@ -125,8 +125,13 @@ Zgodovinska katastrska slika vasi (franciscejski kataster, k.o. Griblje št. 83 
   dokaz `research/issue17/ps-reconciliation.json`
   + `research/issue17/ps-landuse.json` + `research/issue17/ps-recap.json`
   + `research/issue17/ps-recap-paleo.json` + `research/issue17/ps-landuse-v2.json`
+  + `research/issue17/ps-lexicon.json` + `research/issue17/ps-k1k2.json`
   + `scripts/p38_ps_reconcile.py` + `scripts/p39_ps_landuse.py` + `scripts/p40_ps_recap.py`
-  + `scripts/p41_ps_recap_paleo.py` + `scripts/p42_ps_rulebook_v2.py`;
+  + `scripts/p41_ps_recap_paleo.py` + `scripts/p42_ps_rulebook_v2.py`
+  + `scripts/p43_ps_lexicon.py` + `scripts/p44_ps_k1k2.py`; razcep K1/K2 (P44)
+  RAZREŠEN [~]: paralelnost "nach Anlage" (desna vrstica 4 == leva 132; Joch 831 == 831)
+  → K1 = 702, K2 = 2090 − 702 = 1388 == direktno branje pass2 — celoten Abschluß
+  zaprt (831|702 + 383|1388 = 1215|490; + 5|1003 = 1220|1493);
 - **globa povezava** `?atlas=hiša-75` (hiša št. 73 — demonstracijska veriga do MVG-010).
 
 API (statični, brez runtime AI):
@@ -141,7 +146,9 @@ API (statični, brez runtime AI):
   16 neznanih družin z dokazi (P42);
 - `GET /api/atlas/ps-lexicon` — neznane družine: prečni prehodi (DINGF 10/10 stabilna,
   padci Wiese/Acker→specifično), PV območna sprava (Weiden-gap 576,24 J; Area ≈ P41),
-  leksikografske hipoteze z nepreverjenimi viri (P43).
+  leksikografske hipoteze z nepreverjenimi viri (P43);
+- `GET /api/atlas/ps-k1k2` — razcep K1/K2 v Abschlußu RAZREŠEN [~]: paralelnost
+  "nach Anlage" → K1 = 702, K2 = 1388 == branje pass2; Abschluß popolnoma zaprt (P44).
 
 ## Varnost
 
