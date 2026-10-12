@@ -22,6 +22,7 @@ import {
   PV_LAND_USE_1825,
   PR_BOUNDARY_1825,
   PS_RECAP_1826,
+  PS_RECONCILIATION_P38,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -1429,6 +1430,97 @@ export function runQA(opts: QAOptions = {}): QAReport {
     p36Errors.length === 0
       ? "135 strani · 2743 vrstic · 213 VLM branj (135 + 78) · 4 sekcije odkrite"
       : p36Errors.join("; "),
+  );
+
+  /* ── P38 (issue #10): PS — deterministična sprava (sekcije, razdvojitev, 2607) ── */
+  const p38Errors: string[] = [];
+  const R = PS_RECONCILIATION_P38;
+  const secRows = Object.values(R.sections).reduce((a, s) => a + s.rows, 0);
+  const parseRanges = (s: string): number[] =>
+    s
+      .split(",")
+      .map((part) => part.trim())
+      .flatMap((part) => {
+        const m = part.match(/^(\d+)[–-](\d+)$/);
+        if (m) {
+          const a = Number(m[1]);
+          const b = Number(m[2]);
+          return Array.from({ length: b - a + 1 }, (_, i) => a + i);
+        }
+        return /^\d+$/.test(part) ? [Number(part)] : [];
+      });
+  if (R.status !== "REVIEW") p38Errors.push(`status=${R.status}, pričakovano REVIEW (strojno branje ni dokazni vir)`);
+  if (R.readingRule !== "pass2wins") p38Errors.push(`readingRule=${R.readingRule}, pričakovano pass2wins`);
+  if (R.coverage.grundDistinct + R.coverage.grundMissing !== 2505)
+    p38Errors.push(`grundDistinct ${R.coverage.grundDistinct} + grundMissing ${R.coverage.grundMissing} ≠ 2505`);
+  if (R.coverage.grundDistinct !== 1889 || R.coverage.grundMissing !== 616)
+    p38Errors.push("osnovna pokritost ni 1889/616 (P36 osnovna črta pod pass2wins)");
+  if (R.coverage.nad2506Distinct + R.coverage.waldungDistinct !== 176)
+    p38Errors.push(`nad2506 (${R.coverage.nad2506Distinct}) + waldung (${R.coverage.waldungDistinct}) ≠ 176 (P36 over2505)`);
+  if (R.coverage.blattXDistinct !== 60)
+    p38Errors.push(`blattXDistinct=${R.coverage.blattXDistinct}, pričakovano 60 (= bauplatzeSeen P36)`);
+  if (secRows !== R.splitting.rowsBefore)
+    p38Errors.push(`vsota vrstic sekcij ${secRows} ≠ rowsBefore ${R.splitting.rowsBefore}`);
+  if (R.splitting.rowsAfter !== R.splitting.parcelCulturePairs + (R.sections["NEBEREŽNA"]?.rows ?? 0))
+    p38Errors.push("rowsAfter ≠ parcelCulturePairs + NEBEREŽNA vrstice");
+  if (R.splitting.extraRowsFromMultiCulture !== R.splitting.rowsBefore - R.splitting.parcelCulturePairs - (R.sections["NEBEREŽNA"]?.rows ?? 0))
+    p38Errors.push("extraRowsFromMultiCulture se ne ujema z razliko (rowsBefore − pairs − NEBEREŽNA)");
+  if (R.splitting.parcelCulturePairs !== 2118 || R.splitting.parcelsWithMultipleCultures !== 430)
+    p38Errors.push("števca razdvojitve nista 2118 parov / 430 parcel (regresija pravil)");
+  const missingFromRanges = parseRanges(R.coverage.grundMissingRanges);
+  if (missingFromRanges.length !== R.coverage.grundMissing)
+    p38Errors.push(`razpon manjkajočih (${missingFromRanges.length}) ≠ grundMissing (${R.coverage.grundMissing})`);
+  if (new Set(missingFromRanges).size !== missingFromRanges.length)
+    p38Errors.push("razpon manjkajočih vsebuje podvajanja");
+  if (!R.p36Baseline.reproducedUnderPass2wins)
+    p38Errors.push("P36 osnovna črta NI reproducirana (reproducedUnderPass2wins=false)");
+  if (R.ocrLeadingDigitCandidates.count !== 0)
+    p38Errors.push(`OCR kandidati=${R.ocrLeadingDigitCandidates.count}, pričakovano 0 (regresija pravila)`);
+  const sens = R.sensitivity;
+  if (
+    sens.union.grundDistinct < sens["pass2wins"].grundDistinct ||
+    sens["pass2wins"].grundDistinct < sens.pass1.grundDistinct ||
+    sens.pass1.grundMissing < sens["pass2wins"].grundMissing ||
+    sens["pass2wins"].grundMissing < sens.union.grundMissing
+  )
+    p38Errors.push("občutljivost krši monotonost (union ⊇ pass2wins ⊇ pass1)");
+  if (R.negativeResults.length < 3) p38Errors.push("negativeResults < 3 (negativni izidi morajo ostati vidni)");
+  if (R.next.length < 3) p38Errors.push("next < 3 (odprti koraki sprave morajo biti izrecni)");
+  // dokazna datoteka (strežniški klic; odjemalski izris izpusti — vzorec qa-p37)
+  let p38FileDetail = "dokazna datoteka ni preverjena (readFile ni na voljo) — celovita kontrola teče na /api/qa";
+  if (opts.readFile) {
+    const raw = opts.readFile("research/issue17/ps-reconciliation.json");
+    if (raw === null) {
+      p38Errors.push("research/issue17/ps-reconciliation.json ni berljiv (izpis scripts/p38_ps_reconcile.py)");
+    } else {
+      try {
+        const j = JSON.parse(raw) as {
+          coverage: { grundDistinct: number; grundMissing: number };
+          splitting: { parcelCulturePairs: number };
+          p36Baseline: { reproducedUnderPass2wins: boolean };
+        };
+        if (j.coverage.grundDistinct !== R.coverage.grundDistinct)
+          p38Errors.push(`JSON grundDistinct=${j.coverage.grundDistinct} ≠ TS ${R.coverage.grundDistinct}`);
+        if (j.coverage.grundMissing !== R.coverage.grundMissing)
+          p38Errors.push(`JSON grundMissing=${j.coverage.grundMissing} ≠ TS ${R.coverage.grundMissing}`);
+        if (j.splitting.parcelCulturePairs !== R.splitting.parcelCulturePairs)
+          p38Errors.push(`JSON parcelCulturePairs=${j.splitting.parcelCulturePairs} ≠ TS ${R.splitting.parcelCulturePairs}`);
+        if (j.p36Baseline.reproducedUnderPass2wins !== true)
+          p38Errors.push("JSON: P36 osnovna črta ni reproducirana");
+        p38FileDetail = `dokazna datoteka preverjena (grundDistinct=${j.coverage.grundDistinct}, pairs=${j.splitting.parcelCulturePairs})`;
+      } catch {
+        p38Errors.push("research/issue17/ps-reconciliation.json ni veljaven JSON");
+      }
+    }
+  }
+  push(
+    "qa-p38-ps-reconciliation",
+    "P38: N083PS — deterministična sprava (scripts/p38_ps_reconcile.py): sekcije GRUND 1889/2505 (75,4 %) + NADALJEVANJE 95 + WALDUNG 81 + BLATT_X 60 = bauplatzeSeen P36; razdvojitev 430 parcel z več rabami (+633 vrstic); P36 osnovna črta reproducirana pod pass2wins; manjkajoči razponi izračunani; status ostaja REVIEW",
+    "P38: N083PS — deterministic reconciliation (scripts/p38_ps_reconcile.py): sections GRUND 1,889/2,505 (75.4%) + CONTINUATION 95 + WALDUNG 81 + BLATT_X 60 = P36's bauplatzeSeen; splitting 430 multi-culture parcels (+633 rows); P36 baseline reproduced under pass2wins; missing ranges computed; status remains REVIEW",
+    p38Errors.length === 0,
+    p38Errors.length === 0
+      ? `1889/2505 (75,4 %) · 4 sekcije · 2118 parov parcela×raba · ${p38FileDetail}`
+      : p38Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;

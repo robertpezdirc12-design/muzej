@@ -725,3 +725,87 @@ kontrolno vsoto 2607. Vrsta po hišah (za #13) postane mogoča po spravi.
 noto kampanje; `research.ts` PS_RECAP_1826 priporočilo posodobljeno (zastarelo
 »NE prepisovati slepo« umik); QA 36 → **37** (`qa-p36-ps-machineread`: 8
 trditev o dokumentiranosti kampanje).
+
+## 18. P38 — issue #10: N083PS DETERMINISTIČNA SPRAVA (2026-10-11)
+
+P36 je strojno prebral vseh 135 strani PS (2743 vrstic), odprto pa je ostalo
+štirje koraki sprave. P38 izvede tiste, ki jih je mogoče izvesti
+**deterministično nad committed dokazi** — brez novih VLM branj, brez AI ob
+delovanju, brez urejanja surovih podatkov (vse izhodi ostajajo REVIEW).
+
+### Metoda (rulebook v1, committed)
+
+- **Skript:** `scripts/p38_ps_reconcile.py` — en sam vir pravil; izpis
+  `research/issue17/ps-reconciliation.json` (7,5 KB) + TS konstanta
+  `PS_RECONCILIATION_P38` (`src/data/atlas/research.ts`), ki jo varuje
+  `qa-p38-ps-reconciliation`.
+- **Pravilo branja:** *pass2wins* — stran s pass-2 zapisom uporabi pass-2
+  (78 strani z okvarjeno soslednostjo), sicer pass-1. Občutljivost izračunana
+  za vsa tri pravila (pass1 / pass2wins / union).
+- **Sekcije (per row, eksplicitni pogoji):** `BLATT_X` (str. 138–139, lastno
+  številčenje) → `WALDUNG` (parcela ≥ 2601 brez hišne št., str. 133–137) →
+  `NADALJEVANJE_2506` (parcela ≥ 2506 s hišno št.) → `GRUND_1_2505` →
+  `NEBEREŽNA` (brez številčne parcele, izrecno šteta).
+
+### Rezultati (pass2wins)
+
+| Sekcija | Vrstice | Distinct parcel | Strani | Obseg |
+|---|---|---|---|---|
+| GRUND_1_2505 | 2490 | **1889/2505 (75,4 %)** | 5–127 | 41–2500 |
+| NADALJEVANJE_2506 | 100 | 95 | 128–132 | 2507–2840 |
+| WALDUNG | 101 | 81 | 133–137 | 2601–2700 |
+| BLATT_X | 60 | 60 | 138–139 | 1–100 |
+| NEBEREŽNA | 9 | — | — | — |
+
+- **Razdvojitev večkulturnih vrstic:** 2760 vrstic (pass2wins) → **2118 parov
+  parcela×raba**; **430 parcel** z več rabami (+633 vrstic); 9 vrstic brez
+  številčne parcele. Štetja so pripravljena za razdvojitev v spravni model
+  (sama razdvojitev v model še NI izvedena — negativni izid spodaj).
+- **OCR kandidati za izgubo vodilne števke (161→61):** konservativno pravilo
+  (parcela < 100 zunaj Blatt X na strani, kjer so vse ostale parcele ≥ 100,
+  ≥ 3 drugih; kandidat mora obstajati znotraj ENE bralne seje) je označilo
+  **0 kandidatov v obeh sejah** — P36 primer se v committed podatkih ni
+  ohranil kot preostanek ali ga pass-2 že razrešil.
+- **Stran 129 (2831–2850)** dokazuje, da nadaljevalni niz sega čez 2840 —
+  neodvisna potrditev P36 ugotovitve o kontrolni vsoti kot vsoti kategorij.
+
+### Razrešitve nasprotij (P36 osnovna črta REPRODUCIRANA)
+
+| P36 (PS-full.json) | P38 pravilo | Rezultat |
+|---|---|---|
+| grundSeen 1889 | distinct GRUND_1_2505 pod pass2wins | **1889 ✓ natanko** |
+| grundMissing 616 | 2505 − grundDistinct | **616 ✓ natanko** |
+| over2505 176 | NADALJEVANJE_2506 (95) + WALDUNG (81) | **176 ✓ natanko** |
+| bauplatzeSeen 60 | distinct BLATT_X | **60 ✓ natanko — poreklo RAZREŠENO** |
+
+P36 torej ni bil „nepravilen“, temveč je tiho uporabljal pass2wins + izločitev
+Blatt X; P38 pravilo izrecno committed. **Blatt X je register stavbnih mest**
+(Bauplätze, cilj 102) — 60/102 viden v strojnem branju.
+
+### Negativni izidi (izrecno, ne prikrito)
+
+1. Zamenjave števk 3↔1 in 8↔5 (audit §17) **niso deterministično zaznavne**
+   brez lažnih pozitivov — nima pravila, ostajajo človeški nalogi.
+2. Parcela 680 (str. 5) je očitno okvarjena (hišna št. namesto parcele), a
+   pravilo je ne ujame — ostaja REVIEW brez samodejnega popravka.
+3. Večkulturne vrstice še niso razdvojene v aplikacijski model (samo štetja).
+4. P36 `pagesRead=8/143` v inventarju označuje STRUKTURNO branje (P20) —
+   semantika scopeCheck ni spreminjana; strojni prepis 135 strani je
+   dokumentiran ločeno (nota vira + ta razdelek).
+
+### Ostaja odprto (issue #10 ostaja odprt)
+
+- 3. prehod ~15 dvoumnih strani (npr. str. 84: 22 vrstic za 8 parcel; str. 138);
+- razdvojitev večkulturnih vrstic v spravni model;
+- primerjava posameznih parcel z rekapitulacijo str. 140–143 (P5-b);
+- človeška paleografska potrditev vseh strojnih branj (vključno s 5
+  neberljivimi vrsticami PT).
+
+### Preverba
+
+ESLint **0**; tsc **0**; QA **38 → 39**
+(`qa-p38-ps-reconciliation`: aritmetične invariante — vsota sekcij = rowsBefore,
+rowsAfter = pairs + NEBEREŽNA, razponi manjkajočih razčlenjeni in brez
+podvajanj = 616, monotonost občutljivosti union ⊇ pass2wins ⊇ pass1,
+reprodukcija P36, navzkrižna kontrola TS ↔ JSON prek vbrizganega readFile —
+vzorec qa-p37).

@@ -110,6 +110,10 @@ Zgodovinska katastrska slika vasi (franciscejski kataster, k.o. Griblje št. 83 
 - **dokazni vmesnik**: vir → trditev → dokaz → povezave (N083PT str. + VAČ povezave);
 - **pokritost + negativni rezultati** — raziskovalna provenienca vključno s statusi
   VERIFIED/DOCUMENTED/REVIEW/RECONSTRUCTED/APPROXIMATE/TO_COLLECT/NOT_FOUND;
+- **strojni prepis PS + sprava (P36–P38)** — 135 strani, 2743 vrstic; deterministična
+  sprava: glavni niz 1889/2505 (75,4 %), Waldung 81, nadaljevalni niz 95 (do 2840),
+  Blatt X 60 = register stavbnih mest; 430 parcel z več rabami; dokaz
+  `research/issue17/ps-reconciliation.json` + `scripts/p38_ps_reconcile.py`;
 - **globa povezava** `?atlas=hiša-75` (hiša št. 73 — demonstracijska veriga do MVG-010).
 
 API (statični, brez runtime AI):

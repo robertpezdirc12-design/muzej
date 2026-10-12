@@ -1,0 +1,338 @@
+{
+ "series": "PS",
+ "source": "N083PS.pdf (VAČ uodid 373415, docid 41780; 143 strani)",
+ "method": "P38 deterministična sprava (ta skript, committed) nad committed dokazi research/issue17/ps-raw/ (213 VLM branj, P36); brez AI ob delovanju, brez urejanja surovih podatkov; vsi statusi ostajajo REVIEW",
+ "rulebook": {
+  "readingPreference": "pass2wins (stran s pass-2 zapisom uporabi pass-2, sicer pass-1); občutljivost za pass1 in union spodaj",
+  "sections": [
+   "BLATT_X: stran 138 ali 139 (lastno številčenje; PS-structure.json str. 3/4, audit §17)",
+   "WALDUNG: parcela ≥ 2601 brez hišne št. (str. 133–137, skupna gozdna zemlja)",
+   "NADALJEVANJE_2506: parcela ≥ 2506 s hišno št. (nadaljevalni niz prek 2505, vključno s Schmiegärten)",
+   "GRUND_1_2505: parcela 1–2505 (glavni niz do kontrolne vsote)",
+   "NEBEREŽNA: vrstica brez številčne parcele (izrecno šteta, izločena iz prostorskih štetij)"
+  ],
+  "checksum": "102 Bauplätze + 2505 Grundparzellen = 2607 KATEGORIJ (str. 143, rdeči tuš; P36) — ni maksimum številke",
+  "blattXExclusion": "Blatt X se izloči iz primerjave s 2607 (lastno številčenje, ni del Grundparzellen niza)"
+ },
+ "p36Baseline": {
+  "psFullTotals": {
+   "grundSeen": 1889,
+   "grundMissing": 616,
+   "over2505Count": 176,
+   "bauplatzeSeen": 60
+  },
+  "reproducedUnderPass2wins": true,
+  "note": "P36 štetja se pod pravilom pass2wins + izločitvijo Blatt X REPRODUCIRAJO natanko: grundSeen 1889 = distinct GRUND_1_2505; over2505 176 = NADALJEVANJE_2506 (95) + WALDUNG (81); grundMissing 616 = 2505 − 1889; bauplatzeSeen 60 = distinct BLATT_X — P38 torej razreši tudi poreklo bauplatzeSeen: to je stevec lastno številčenega odseka Blatt X (str. 138–139), ki po strukturi protokola nosi stavbna mesta (cilj 102)"
+ },
+ "readingRule": "pass2wins",
+ "pass1RowsTotal": 2743,
+ "sections": {
+  "GRUND_1_2505": {
+   "rows": 2490,
+   "distinctParcels": 1889,
+   "pages": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127
+   ],
+   "range": [
+    41,
+    2500
+   ]
+  },
+  "NADALJEVANJE_2506": {
+   "rows": 100,
+   "distinctParcels": 95,
+   "pages": [
+    128,
+    129,
+    130,
+    131,
+    132
+   ],
+   "range": [
+    2507,
+    2840
+   ]
+  },
+  "WALDUNG": {
+   "rows": 101,
+   "distinctParcels": 81,
+   "pages": [
+    133,
+    134,
+    135,
+    136,
+    137
+   ],
+   "range": [
+    2601,
+    2700
+   ]
+  },
+  "BLATT_X": {
+   "rows": 60,
+   "distinctParcels": 60,
+   "pages": [
+    138,
+    139
+   ],
+   "range": [
+    1,
+    100
+   ]
+  },
+  "NEBEREŽNA": {
+   "rows": 9,
+   "distinctParcels": 0,
+   "pages": [],
+   "range": null
+  }
+ },
+ "splitting": {
+  "rowsBefore": 2760,
+  "parcelCulturePairs": 2118,
+  "rowsAfter": 2127,
+  "parcelsWithMultipleCultures": 430,
+  "extraRowsFromMultiCulture": 633,
+  "examples": {
+   "GRUND_1_2505#1000": [
+    "Abtränig Spötlg.",
+    "Acker"
+   ],
+   "GRUND_1_2505#1001": [
+    "Ehingartl",
+    "Wiese"
+   ],
+   "GRUND_1_2505#1002": [
+    "Acker",
+    "Wiesen und Leumuth"
+   ],
+   "GRUND_1_2505#1003": [
+    "Abtränig Spötlg. Leumuth",
+    "Acker",
+    "Wiesen und Leumuth"
+   ],
+   "GRUND_1_2505#1004": [
+    "Abtränig Spötlg. Leumuth",
+    "Acker"
+   ],
+   "GRUND_1_2505#1005": [
+    "Abtränig Spötlg. Leumuth",
+    "Acker"
+   ],
+   "GRUND_1_2505#1006": [
+    "Abtränig Spötlg. Leumuth",
+    "Acker"
+   ],
+   "GRUND_1_2505#1007": [
+    "Abtränig Spötlg. Leumuth",
+    "Acker"
+   ],
+   "GRUND_1_2505#1008": [
+    "Abtränig Spötlg. Leumuth",
+    "Acker"
+   ],
+   "GRUND_1_2505#102": [
+    "Gruning Gartl",
+    "Schupfn"
+   ]
+  },
+  "rowsWithoutParcel": 0,
+  "rowsWithNonNumericParcel": 9
+ },
+ "coverage": {
+  "grundDistinct": 1889,
+  "grundMissing": 616,
+  "grundCoveragePct": 75.4,
+  "grundMissingRanges": "1–40, 421–440, 561–563, 781–800, 1065, 1067, 1071–1072, 1075, 1181–1200, 1222–1233, 1301–1326, 1347–1440, 1461–1480, 1501–1600, 1621–1643, 1701–1800, 1841–1880, 1904, 1906, 2000, 2237, 2239–2240, 2281–2290, 2311–2340, 2361–2382, 2441–2460, 2501–2505",
+  "nad2506Distinct": 95,
+  "nad2506Range": [
+   2507,
+   2840
+  ],
+  "waldungDistinct": 81,
+  "waldungRange": [
+   2601,
+   2700
+  ],
+  "blattXDistinct": 60,
+  "blattXRange": [
+   1,
+   100
+  ]
+ },
+ "ocrLeadingDigitCandidates": {
+  "count": 0,
+  "note": "konzervativno pravilo: parcela < 100 zunaj Blatt X na strani, kjer so vse ostale parcele ≥ 100 (≥ 3) → domnevna izguba vodilne števke; NE popravi podatkov, status ostaja REVIEW",
+  "list": []
+ },
+ "checksumReconciliation": {
+  "target": {
+   "bauplatze": 102,
+   "grundparzellen": 2505,
+   "skupaj": 2607
+  },
+  "grundSeenVsTarget": 1889,
+  "grundMissingVsTarget": 616,
+  "verdictSi": "DELNO USKLAJENO: glavni niz 1–2505 pokrit 1889/2505 (75.4 %); preostalih 616 parcel = strojno neodčitane/okvarjene vrstice, kandidati napak OCR in vloge Blatt X še niso spravljene; povprečje kontrolne vsote (102+2505=2607 kategorij) zahteva 3. prehod dvoumnih strani in primerjavo z rekapitulacijo 140–143",
+  "status": "REVIEW",
+  "next": [
+   "3. prehod ~15 dvoumnih strani (audit §17, npr. str. 84, 138)",
+   "razdvojitev večkulturnih vrstic v spravni model (podatki pripravljeni)",
+   "primerjava posameznih parcel z rekapitulacijo str. 140–143 (P5-b)",
+   "človeška paleografska potrditev kandidatov za napake OCR"
+  ]
+ },
+ "sensitivity": {
+  "pass1": {
+   "grundDistinct": 1820,
+   "grundMissing": 685,
+   "nad2506Distinct": 100,
+   "waldungDistinct": 81,
+   "ocrCandidates": 0
+  },
+  "pass2wins": {
+   "grundDistinct": 1889,
+   "grundMissing": 616,
+   "nad2506Distinct": 95,
+   "waldungDistinct": 81,
+   "ocrCandidates": 0
+  },
+  "union": {
+   "grundDistinct": 2018,
+   "grundMissing": 487,
+   "nad2506Distinct": 116,
+   "waldungDistinct": 81,
+   "ocrCandidates": 0
+  }
+ },
+ "negativeResults": [
+  "večkulturne vrstice pri razdvojitvi NISO šle v aplikacijski model (samo štetja) — strukturna zagata str. 84 (22 vrstic za 8 parcel) ostaja za 3. prehod",
+  "zamenjave števk 3↔1 in 8↔5 (audit §17) NISO deterministično zaznavne brez lažnih pozitivov — samo izguba vodilne števke ima kandidatsko pravilo",
+  "parcela 680 (str. 5) je očitno okvarjena (hišna št. namesto parcele), a ne ustreza pravilu <100 — ostaja REVIEW brez samodejnega popravka",
+  "P36 podatek pagesRead=8/143 v inventarju (qa-p20) označuje STRUKTURNO branje (P20); strojni prepis 135 strani (P36) je dokumentiran ločeno — semantika scopeCheck ni spreminjana"
+ ],
+ "generatedBy": "scripts/p38_ps_reconcile.py",
+ "generatedAt": "2026-10-12T09:15:50.117612Z"
+}

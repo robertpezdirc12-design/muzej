@@ -1018,6 +1018,125 @@ export const PS_RECAP_1826: {
   sampleRowCount: 2743,
 };
 
+/**
+ * P38 (issue #10) — N083PS: deterministična sprava strojno prebranega protokola.
+ * Izračunano s committed skriptom scripts/p38_ps_reconcile.py iz committed dokazov
+ * research/issue17/ps-raw/ (213 VLM branj); polno poročilo: research/issue17/
+ * ps-reconciliation.json. Vsi statusi ostajajo REVIEW (strojno branje ni dokazni vir).
+ */
+export const PS_RECONCILIATION_P38: {
+  series: "PS";
+  source: string;
+  status: ResearchStatus;
+  generatedBy: string;
+  readingRule: "pass1" | "pass2wins" | "union";
+  sections: Record<
+    string,
+    { rows: number; distinctParcels: number; pages: number[] | null; range: [number, number] | null }
+  >;
+  splitting: {
+    rowsBefore: number;
+    rowsAfter: number;
+    pass1RowsTotal: number;
+    parcelCulturePairs: number;
+    parcelsWithMultipleCultures: number;
+    extraRowsFromMultiCulture: number;
+  };
+  coverage: {
+    grundDistinct: number;
+    grundMissing: number;
+    grundCoveragePct: number;
+    grundMissingRanges: string;
+    nad2506Distinct: number;
+    nad2506Range: [number, number] | null;
+    waldungDistinct: number;
+    waldungRange: [number, number] | null;
+    blattXDistinct: number;
+    blattXRange: [number, number] | null;
+  };
+  ocrLeadingDigitCandidates: { count: number; note: string };
+  p36Baseline: { reproducedUnderPass2wins: boolean; note: string };
+  sensitivity: Record<
+    "pass1" | "pass2wins" | "union",
+    { grundDistinct: number; grundMissing: number; nad2506Distinct: number; waldungDistinct: number; ocrCandidates: number }
+  >;
+  verdictSi: string;
+  verdictEn: string;
+  next: string[];
+  negativeResults: string[];
+} = {
+  series: "PS",
+  source:
+    "N083PS.pdf (VAČ uodid 373415, docid 41780; 143 strani) — sprava nad committed dokazi research/issue17/ps-raw/ (213 VLM branj, P36); polno poročilo research/issue17/ps-reconciliation.json",
+  status: "REVIEW",
+  generatedBy: "scripts/p38_ps_reconcile.py",
+  readingRule: "pass2wins",
+  sections: {
+    GRUND_1_2505: {
+      rows: 2490,
+      distinctParcels: 1889,
+      pages: Array.from({ length: 123 }, (_, i) => i + 5),
+      range: [41, 2500],
+    },
+    NADALJEVANJE_2506: { rows: 100, distinctParcels: 95, pages: [128, 129, 130, 131, 132], range: [2507, 2840] },
+    WALDUNG: { rows: 101, distinctParcels: 81, pages: [133, 134, 135, 136, 137], range: [2601, 2700] },
+    BLATT_X: { rows: 60, distinctParcels: 60, pages: [138, 139], range: [1, 100] },
+    NEBEREŽNA: { rows: 9, distinctParcels: 0, pages: null, range: null },
+  },
+  splitting: {
+    rowsBefore: 2760,
+    rowsAfter: 2127,
+    pass1RowsTotal: 2743,
+    parcelCulturePairs: 2118,
+    parcelsWithMultipleCultures: 430,
+    extraRowsFromMultiCulture: 633,
+  },
+  coverage: {
+    grundDistinct: 1889,
+    grundMissing: 616,
+    grundCoveragePct: 75.4,
+    grundMissingRanges:
+      "1–40, 421–440, 561–563, 781–800, 1065, 1067, 1071–1072, 1075, 1181–1200, 1222–1233, 1301–1326, 1347–1440, 1461–1480, 1501–1600, 1621–1643, 1701–1800, 1841–1880, 1904, 1906, 2000, 2237, 2239–2240, 2281–2290, 2311–2340, 2361–2382, 2441–2460, 2501–2505",
+    nad2506Distinct: 95,
+    nad2506Range: [2507, 2840],
+    waldungDistinct: 81,
+    waldungRange: [2601, 2700],
+    blattXDistinct: 60,
+    blattXRange: [1, 100],
+  },
+  ocrLeadingDigitCandidates: {
+    count: 0,
+    note:
+      "konzervativno pravilo (parcela < 100 zunaj Blatt X na strani, kjer so vse ostale parcele ≥ 100, ≥ 3 drugih) ni označilo NIČNEGA kandidata v nobeni od obeh neodvisnih bralnih sej — primer 161→61 iz P36 se v committed podatkih ni ohranil kot preostanek ali ga prehod 2 že razrešil",
+  },
+  p36Baseline: {
+    reproducedUnderPass2wins: true,
+    note:
+      "P36 štetja se pod pravilom pass2wins + izločitvijo Blatt X REPRODUCIRAJO natanko: grundSeen 1889 = distinct GRUND_1_2505; over2505 176 = NADALJEVANJE_2506 (95) + WALDUNG (81); grundMissing 616 = 2505 − 1889; bauplatzeSeen 60 = distinct BLATT_X — razrešeno poreklo: Blatt X (str. 138–139, lastno številčenje 1–100) nosi register stavbnih mest (cilj 102)",
+  },
+  sensitivity: {
+    pass1: { grundDistinct: 1820, grundMissing: 685, nad2506Distinct: 100, waldungDistinct: 81, ocrCandidates: 0 },
+    pass2wins: { grundDistinct: 1889, grundMissing: 616, nad2506Distinct: 95, waldungDistinct: 81, ocrCandidates: 0 },
+    union: { grundDistinct: 2018, grundMissing: 487, nad2506Distinct: 116, waldungDistinct: 81, ocrCandidates: 0 },
+  },
+  verdictSi:
+    "DELNO USKLAJENO: glavni niz 1–2505 pokrit 1889/2505 (75,4 %); preostalih 616 parcel = strojno neodčitane/okvarjene vrstice in vloge Blatt X še niso spravljene; kontrolna vsota (102 + 2505 = 2607 kategorij) zahteva 3. prehod dvoumnih strani in primerjavo z rekapitulacijo 140–143. Blatt X (60/102 stavbnih mest) je zdaj razpoznan kot Bauplätze register.",
+  verdictEn:
+    "PARTIALLY RECONCILED: the main 1–2505 series is 75.4% covered (1,889/2,505); the remaining 616 parcels stem from unread/damaged rows and the Blatt X role is not yet reconciled; the checksum (102 + 2,505 = 2,607 categories) requires a third pass over ambiguous pages and comparison with the 140–143 recapitulation. Blatt X (60/102 building plots) is now recognised as the Bauplätze register.",
+  next: [
+    "3. prehod ~15 dvoumnih strani (audit §17, npr. str. 84, 138)",
+    "razdvojitev večkulturnih vrstic v spravni model (štetja pripravljena; 430 parcel z več rabami)",
+    "primerjava posameznih parcel z rekapitulacijo str. 140–143 (P5-b)",
+    "človeška paleografska potrditev vseh strojnih branj",
+  ],
+  negativeResults: [
+    "OCR kandidati za izgubo vodilne števke: 0 v obeh sejah — konzervativno pravilo ni označilo ničesar; zamenjave števk 3↔1 in 8↔5 ostajajo nedokazljive deterministično (lažni pozitivi)",
+    "parcela 680 (str. 5) očitno okvarjena (hišna št. namesto parcele), pravilo je ne ujame — ostaja REVIEW brez samodejnega popravka",
+    "večkulturne vrstice (430 parcel, +633 vrstic) še NISO razdvojene v aplikacijski model — samo štetja",
+    "stran 129 (2831–2850) dokazuje, da nadaljevalni niz sega čez 2840 — skladno s P36 ugotovitvijo, da 2607 šteje kategorije, ne maksimum",
+  ],
+};
+
 /** PZ — demografija in cenitev 1825 (N083PZ). */
 export const PZ_ECONOMY_1825: {
   source: string;
