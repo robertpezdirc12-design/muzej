@@ -26,6 +26,7 @@ import {
   PS_LANDUSE_P39,
   PS_RECAP_P40,
   PS_RECAP_PALEO_P41,
+  PS_LANDUSE_V2_P42,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -1794,6 +1795,133 @@ export function runQA(opts: QAOptions = {}): QAReport {
     p41Errors.length === 0
       ? `Area der Gemeinde 1220|1493 (= 1220,933 J) · 7 Lager == 831|702 · str. 143: 2607 · Δ GRUND +0,99 % · ${p41FileDetail}`
       : p41Errors.join("; "),
+  );
+
+  /* ── P42 (issue #10): PS — pravilnik rab v2 ── */
+  const p42Errors: string[] = [];
+  const V2 = PS_LANDUSE_V2_P42;
+  const S2 = V2.stats;
+  if (V2.status !== "REVIEW") p42Errors.push(`status=${V2.status}, pričakovano REVIEW (klasifikacija je za statistiko)`);
+  // 1. osnovna identiteta termType (po PARIH — kot P39)
+  if (S2.v2ClassifiedPairs + S2.toponymPairs + S2.artifaktPairs + S2.unresolvedPairs !== S2.pairsTotal)
+    p42Errors.push("KULTURA + TOPONIM + ARTIFAKT + NEKLASIFICIRANO ≠ pairsTotal (2632)");
+  if (S2.pairsTotal !== PS_LANDUSE_P39.totals.parcelCulturePairs)
+    p42Errors.push("pairsTotal ≠ P39 parcelCulturePairs (2632)");
+  if (S2.v1ClassifiedPairs !== PS_LANDUSE_P39.cultureClasses.classifiedPairs)
+    p42Errors.push("v1ClassifiedPairs ≠ P39 classifiedPairs (1896)");
+  // 2. v2 ⊇ v1: novi pari = 303, noben v1 razred ne upade
+  const newPairsSum = Object.values(S2.newPairsByClassV2).reduce((a, n) => a + n, 0);
+  if (newPairsSum !== S2.v2ClassifiedPairs - S2.v1ClassifiedPairs)
+    p42Errors.push(`vsota newPairsByClassV2 (${newPairsSum}) ≠ v2 − v1 (${S2.v2ClassifiedPairs - S2.v1ClassifiedPairs})`);
+  const V1C = PS_LANDUSE_P39.cultureClasses.primaryCounts;
+  for (const [cls, v1n] of Object.entries(V1C)) {
+    const v2n = S2.primaryCountsV2[cls] ?? 0;
+    const gain = S2.newPairsByClassV2[cls] ?? 0;
+    if (v2n < v1n) p42Errors.push(`razred ${cls}: v2 (${v2n}) < v1 (${v1n}) — v2 ⊉ v1`);
+    if (v2n !== v1n + gain) p42Errors.push(`razred ${cls}: v2 (${v2n}) ≠ v1 (${v1n}) + novi (${gain})`);
+  }
+  // 3. pinane vrednosti (regresija pravilnika v2)
+  if (S2.v2ClassifiedPairs !== 2199 || S2.classifiedPctV2 !== 83.5)
+    p42Errors.push("v2 klasificirani pari niso 2199 (83,5 %) — regresija pravilnika v2");
+  if (S2.toponymPairs !== 122 || S2.artifaktPairs !== 29 || S2.unresolvedPairs !== 282)
+    p42Errors.push("TOPONIM/ARTIFAKT/NEKLASIFICIRANO niso 122/29/282 (regresija)");
+  // pojasnjeni pari = 2632 − 282 (izrecno; 89,3 % je zaokroženo)
+  if (S2.pairsTotal - S2.unresolvedPairs !== 2350) p42Errors.push("pojasnjeni pari niso 2350 (2632 − 282)");
+  if (S2.classifiedPctV2 !== Math.round((1000 * S2.v2ClassifiedPairs) / S2.pairsTotal) / 10)
+    p42Errors.push("classifiedPctV2 se ne ujema z aritmetiko");
+  if (S2.primaryCountsV2.NJIVA !== 1095 || S2.primaryCountsV2.TRAVNIK !== 527 || S2.primaryCountsV2.GOZD !== 166)
+    p42Errors.push("primarni razredi v2 NJIVA/TRAVNIK/GOZD niso 1095/527/166 (regresija)");
+  if (S2.primaryCountsV2.VINOGRAD !== 19)
+    p42Errors.push("VINOGRAD v2 ni 19 (8 v1 + 11 novih — v1 vrzel 'Wein' zaprta)");
+  // 4. pravilnik: 12 v1 nespremenjenih + 13 priloženih, vsota dodelitev = novi pari
+  if (V2.rulebook.version !== "v2" || V2.rulebook.v1RulesCount !== 12)
+    p42Errors.push("pravilnik ni v2 z 12 v1 pravili");
+  if (V2.rulebook.appendedRules.length !== 13) p42Errors.push("priloženih pravil ni 13");
+  const rulePairsSum = V2.rulebook.appendedRules.reduce((a, r) => a + r.pairs, 0);
+  if (rulePairsSum !== newPairsSum) p42Errors.push(`vsota dodelitev priloženih pravil (${rulePairsSum}) ≠ novi pari (${newPairsSum})`);
+  const ruleNos = V2.rulebook.appendedRules.map((r) => r.no);
+  if (ruleNos.join(",") !== "13,14,15,16,17,18,19,20,21,22,23,24,25")
+    p42Errors.push("številke priloženih pravil niso 13–25");
+  if (!V2.rulebook.appendedRules.every((r) => r.confidence === "~" || r.confidence === "?"))
+    p42Errors.push("zaupanje priloženih pravil ni [~]/[?]");
+  // 5. TOPONIM/ARTIFAKT + družine (izrecno NEKLASIFICIRANE — pinano)
+  if (V2.toponym.distinct !== 39 || V2.toponym.top.length < 5)
+    p42Errors.push("TOPONIM ni 39 različnih z dokumentiranimi primeri");
+  if (V2.toponym.top[0]?.raw !== "Löwisch Thal" || V2.toponym.top[0]?.pairs !== 15)
+    p42Errors.push("TOPONIM ni na čelu z 'Löwisch Thal' 15 (regresija)");
+  if (V2.artifakt.numericRawCount !== 19)
+    p42Errors.push("ARTIFAKT numeričnih vrednosti ni 19 (Blatt X register 82–100)");
+  if (V2.families.length !== 16) p42Errors.push("neznanih družin ni 16");
+  const famPairsSum = V2.families.reduce((a, f) => a + f.pairs, 0);
+  if (famPairsSum > S2.unresolvedPairs) p42Errors.push("vsota družin > NEKLASIFICIRANO");
+  const famPin: Record<string, number> = {
+    "LHUT-JEDRO": 36, "LHIZ": 9, "LHOPI-LOHIFA": 23, "LOHN-RAUT": 29, "AHN": 13,
+    "AEFLING": 13, "ERDAR": 10, "GUETEN": 12, "EINHART": 15, "DINGF": 10,
+    "LUKIG": 10, "LOHGARN": 7, "HURGI": 5, "WING": 3, "EINSCHLAG-GUELZE": 20, "SCHINDEL": 1,
+  };
+  for (const f of V2.families) {
+    if (famPin[f.id] !== f.pairs) p42Errors.push(`družina ${f.id}: ${f.pairs} ≠ pinano ${famPin[f.id]}`);
+    if (!f.verdict.includes("NEKLASIFICIRANO")) p42Errors.push(`družina ${f.id} ni izrecno NEKLASIFICIRANA`);
+    if (!f.hypothesisSi) p42Errors.push(`družina ${f.id} brez hipoteze/opombe`);
+  }
+  const aef = V2.families.find((f) => f.id === "AEFLING");
+  if (!aef || aef.coParcel.TRAVNIK !== 12) p42Errors.push("AEFLING so-odvisnost TRAVNIK ni 12/13 (dokaz mora ostati dokumentiran)");
+  // 6. dokazni datoteki (strežniški klic; vzorec qa-p37..p41)
+  let p42FileDetail = "dokazni datoteki nista preverjeni (readFile ni na voljo) — celovita kontrola teče na /api/qa";
+  if (opts.readFile) {
+    const rawEv = opts.readFile("research/issue17/ps-landuse-v2.json");
+    const rawRt = opts.readFile("src/data/atlas/ps-landuse-v2.json");
+    if (rawEv === null) p42Errors.push("research/issue17/ps-landuse-v2.json ni berljiv (izpis scripts/p42_ps_rulebook_v2.py)");
+    if (rawRt === null) p42Errors.push("src/data/atlas/ps-landuse-v2.json ni berljiv (runtime kopija)");
+    if (rawEv !== null && rawRt !== null && rawEv !== rawRt)
+      p42Errors.push("dokazni in runtime izpis ps-landuse-v2.json nista identična (skript mora izpisati oba enako)");
+    if (rawEv !== null) {
+      try {
+        const j = JSON.parse(rawEv) as {
+          stats: { pairsTotal: number; v2ClassifiedPairs: number; toponymPairs: number; artifaktPairs: number; unresolvedPairs: number; classifiedPctV2: number };
+          rulebook: { version: string; v1Rules: { no: number }[]; appendedRules: { no: number; pairs: number; claimedRaw: Record<string, { pairs: number }> }[] };
+          termTypes: { TOPONIM: { pairs: number }; ARTIFAKT: { pairs: number }; NEKLASIFICIRANO: { pairs: number; families: { id: string; pairs: number }[] } };
+          values: unknown[];
+          v1Regression: { checkedPairs: number; mismatches: number };
+        };
+        if (j.stats.v2ClassifiedPairs !== S2.v2ClassifiedPairs) p42Errors.push("JSON v2ClassifiedPairs ≠ TS");
+        if (j.stats.classifiedPctV2 !== S2.classifiedPctV2) p42Errors.push("JSON classifiedPctV2 ≠ TS");
+        if (j.stats.toponymPairs !== S2.toponymPairs || j.stats.artifaktPairs !== S2.artifaktPairs || j.stats.unresolvedPairs !== S2.unresolvedPairs)
+          p42Errors.push("JSON TOPONIM/ARTIFAKT/NEKLASIFICIRANO ≠ TS");
+        if (j.rulebook.version !== "v2" || j.rulebook.v1Rules.length !== 12 || j.rulebook.appendedRules.length !== 13)
+          p42Errors.push("JSON pravilnik ni v2 (12 v1 + 13 priloženih)");
+        const jRulePairs = j.rulebook.appendedRules.reduce((a, r) => a + r.pairs, 0);
+        if (jRulePairs !== rulePairsSum) p42Errors.push("JSON vsota dodelitev pravil ≠ TS");
+        for (const r of j.rulebook.appendedRules) {
+          const claimed = Object.values(r.claimedRaw).reduce((a, m) => a + m.pairs, 0);
+          if (claimed !== r.pairs) p42Errors.push(`JSON pravilo ${r.no}: claimedRaw ≠ pairs`);
+        }
+        if (j.termTypes.TOPONIM.pairs !== 122 || j.termTypes.ARTIFAKT.pairs !== 29)
+          p42Errors.push("JSON termTypes TOPONIM/ARTIFAKT nista 122/29");
+        if (j.termTypes.NEKLASIFICIRANO.families.length !== 16) p42Errors.push("JSON družin ni 16");
+        if (j.v1Regression.checkedPairs !== 2632 || j.v1Regression.mismatches !== 0)
+          p42Errors.push("JSON v1 regresija ni čista (2632/0)");
+        // values = tabela VSEH različnih surovih vrednosti — vsota parov mora biti 2632
+        if (!Array.isArray(j.values)) {
+          p42Errors.push("JSON values ni tabela");
+        } else {
+          const jPairs = (j.values as { pairs: number }[]).reduce((a, v) => a + v.pairs, 0);
+          if (jPairs !== 2632) p42Errors.push(`JSON values parov (${jPairs}) ≠ 2632`);
+        }
+        p42FileDetail = `dokazni datoteki preverjeni in identični (pari ${j.stats.v2ClassifiedPairs}/${j.stats.pairsTotal} = ${j.stats.classifiedPctV2} %, 13 pravil, 16 družin)`;
+      } catch {
+        p42Errors.push("research/issue17/ps-landuse-v2.json ni veljaven JSON");
+      }
+    }
+  }
+  push(
+    "qa-p42-ps-rulebook-v2",
+    "P42: N083PS — pravilnik rab v2 (12 nespremenjenih v1 pravil + 13 priloženih, prvi zadetek = primarni razred): pokritost 2199/2632 parov (83,5 %; v1 72,0 %), +303 parov — umlaut Gärten, sredbesedni -wald/-weid (Schlagwald, Schafweide), schupf. / schupfen, sami 'Wein' (11 vinogradov), Öd/Wüst (Eidn/Ehda/Wiste 73 NEROD), Maid = Mahd (16), Gemainde Gmde/Gimand (12 OBCINA), Rüben/Schlagfeld/Stopp (46 NJIVA), Schupfe/Staidl/Grube/Gütl/Hof/Haus/Boden (45 STAVBNO); izrecna ločitev termType: TOPONIM 122 (ležajna imena — Löwisch Thal, Leite … NI raba), ARTIFAKT 29 (številke 82–100 na Blatt X — register stavbnih mest!, Summa, Zahl, opombe prihodkov); 282 parov izrecno NEKLASIFICIRANO v 16 družinah z so-odvisnostnimi dokazi (Lhut-jedro 36, Lohn/Raut 29, Lhopi/Lohifa 23, Äfling 13 z 12/13 TRAVNIK …); v2 ⊇ v1 regresijsko (v1 2632/0 neskladij); status REVIEW",
+    "P42: N083PS — land-use rulebook v2 (12 unchanged v1 rules + 13 appended, first match = primary class): coverage 2,199/2,632 pairs (83.5%; v1 72.0%), +303 pairs — umlaut Gärten, mid-word -wald/-weid (Schlagwald, Schafweide), schupf./schupfen, bare 'Wein' (11 vineyards), Öd/Wüst (Eidn/Ehda/Wiste 73 WASTE), Maid = Mahd (16), Gemainde Gmde/Gimand (12 COMMON), Rüben/Schlagfeld/Stopp (46 FIELD), Schupfe/Staidl/Grube/Gütl/Hof/Haus/Boden (45 BUILDING); explicit termType distinction: TOPONYM 122 (place names — Löwisch Thal, Leite … NOT a use), ARTIFACT 29 (numbers 82–100 on Blatt X — the building-plot register!, Summa, Zahl, yield notes); 282 pairs explicitly UNCLASSIFIED in 16 families with co-occurrence evidence (Lhut-core 36, Lohn/Raut 29, Lhopi/Lohifa 23, Äfling 13 with 12/13 MEADOW …); v2 ⊇ v1 regression-checked (v1 2,632/0 mismatches); status REVIEW",
+    p42Errors.length === 0,
+    p42Errors.length === 0
+      ? `2199/2632 (83,5 %) · +303 parov (13 pravil) · TOPONIM 122 · ARTIFAKT 29 · NEKLASIFICIRANO 282 (16 družin) · pojasnjeno 89,3 % · ${p42FileDetail}`
+      : p42Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;

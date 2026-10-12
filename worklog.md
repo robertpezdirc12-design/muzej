@@ -2556,3 +2556,52 @@ zgodbo (Pezdirc).
 - Kontekst divergenc (zunanji worklog Task 3/4): GitLab main (ta linija)
   ostaja razvejana od GitHub primarnega (P38'–P45', QA 43/43); P41 sledi
   P40 strategiji — NOVE datoteke + appendi za čim lažji prihodnji merge.
+
+## P42 (2026-10-12) — issue #10: PRAVILNIK RAB v2 — 83,5 % PAROV, TOPONIM/ARTIFAKT LOČITEV, 16 DRUŽIN Z DOKAZI
+
+- **Kaj**: P39 pravilnik v1 je pokril 72,0 % parov parcela×raba (1896/2632); ostalo
+  736 parov (230 surovih vrednosti) NEKLASIFICIRANO. P42 priloži 13 pravil (13–25)
+  brez spreminjanja v1 (v2 ⊇ v1, regresijsko preverjeno) in uvede izrecno ločilo
+  `termType` za vrednosti, ki NISO raba.
+- **Zaprte vrzeli v1** (+303 parov → 2199/2632 = 83,5 %): umlaut Gärten (`gart` ne
+  ujame gaerten), sredbesedni -wald (Schlagwald) in -weid (Schafweide), schupfn ne
+  ujame schupf./schupfen, sami »Wein« (11 vinogradov — v1 vrzel!), Öd/Wüst dialektne
+  oblike (Eidn/Eidau/Ehda/Ainöd/Wiste → 73 NEROD), Maid = Mahd (Haitenmaid, 16),
+  Gemainde Gmde/Gmand/Gimand (12 OBCINA), Rüben/Schlagfeld/Stopp/Achl/Frucht (46
+  NJIVA), Gras/Heu/Rasen (23), Obst/Himbeeren/Gmias (15), Schupfe/Staidl/Grube/
+  Gütl/Ed-hop/-hauß/Boden (45 STAVBNO; Schüttboden 100 % so-odvisen STAVBNO),
+  Lache(n) (2 VODA), Malde = Mahd [?] (1).
+- **NOVO ločilo termType**: TOPONIM 122 parov/39 vrednosti (ležajna imena — Löwisch
+  Thal 15, Leite 11, Schüttgrund 10, Eingemaut Gfrörer und Laimauer 12 … — NI raba);
+  ARTIFAKT 29 parov/29 vrednosti (številke 82–100 v stolpcu rabe na Blatt X —
+  NEODVISNI DODATNI DOKAZ, da je Blatt X register stavbnih mest; 81. flur, Summa,
+  Zahl, 5k Einträg, 29 Bäumen, opombe prihodkov Futter/Fürtrg. [?]). Pojasnjeno
+  89,3 % parov (2350/2632).
+- **16 neznanih družin** (282 parov) izrecno NEKLASIFICIRANO s so-odvisnostnimi
+  dokazi (po parceli + po lastniku): LHUT-JEDRO 36 (Lhut/Lhup/Lhupf/Lhupa/Lhuta;
+  hipotezi L+Hut/Rhut), LOHN-RAUT 29 (Raut = Rodung), LHOPI-LOHIFA 23, EINHART 15,
+  AEFLING 13 (**so-odvisnost TRAVNIK 12/13** — kontekst znan, termin ne), AHN 13,
+  GUETEN 12, DINGF 10 (mešana so-odvisnost — brez signala), LUKIG 10, ERDAR 10
+  (4/4 GOZD), LOHGARN 7, HURGI 5, WING 3, EINSCHLAG-GUELZE 20, SCHINDEL 1, LHIZ 9
+  (+ samostojne). Ni ugibanj — dokazi za paleografijo.
+- **Skript** `scripts/p42_ps_rulebook_v2.py` (determinističen, brez AI ob delovanju,
+  FAIL ob padu invariant): v1 rekonstrukcija == P39 (2632/0), v2 ⊇ v1, seznami ⊥
+  pravila ⊥ med seboj, vsota dodelitev pravil 303 == novi pari, so-odvisnostna
+  karta. Izpisi: `research/issue17/ps-landuse-v2.json` + identična runtime kopija
+  `src/data/atlas/ps-landuse-v2.json`; API `GET /api/atlas/ps-landuse-v2`
+  (force-static, prerenderiran).
+- **Integracija**: TS `PS_LANDUSE_V2_P42` (research.ts), kartica »PS 1825 — pravilnik
+  rab v2 (P42)« v Raziskavah/kurrent (za P41; pokritost + 13 pravil + 16 družin),
+  sources.ts N083PS nota (P42), audit §22, README P36–P42 + API seznam.
+- **QA 42 → 43** (`qa-p42-ps-rulebook-v2`): identiteta 2199+122+29+282 = 2632,
+  v2 ⊇ v1 po razredih (VINOGRAD 8→19!), pinane 2199/83,5 % · 122/29/282 · 13 pravil
+  13–25 · vsota 303 · 16 družin pinano · TOPONIM čelo Löwisch Thal 15 · ARTIFAKT 19
+  numeričnih · navzkrižna kontrola obeh JSON izpisov (identičnost!) ↔ TS prek
+  vbrizganega readFile (vzorec qa-p37..p41).
+- **Validacija**: tsc 0, ESLint 0, run-qa 43/43, `next build` 20/20 (nov route),
+  produkcijski strežnik (port 3010): `/api/qa` 43/43, `/api/atlas/ps-landuse-v2`
+  200, `/` 200; brskalniška E2E (agent-browser): Prepisi Kurrent → kartica P42
+  popolna, konzola brez napak.
+- **Issue #10 ostaja odprt**: 16 neznanih družin + 3. prehod ~15 dvoumnih strani
+  (VAČ trenutno nedostopen iz peskovniške mreže) + človeška potrditev branj;
+  razcepi rekapitulacije §21 UNRESOLVED.

@@ -1,0 +1,7597 @@
+{
+  "series": "PS",
+  "source": "N083PS.pdf (VAČ uodid 373415, docid 41780; 143 strani)",
+  "method": "P42 pravilnik rab v2 — deterministično nad P39 modelom (committed dokaz), brez AI ob delovanju; v1 pravila nespremenjena + 13 priloženih pravil; izrecna ločitev KULTURA / TOPONIM / ARTIFAKT / NEKLASIFICIRANO; surove vrednosti nedotaknjene; vsi statusi ostajajo REVIEW",
+  "basis": {
+    "json": "src/data/atlas/ps-landuse.json",
+    "phase": "P39",
+    "generatedBy": "scripts/p39_ps_landuse.py",
+    "generatedAt": "2026-10-12T10:00:42.965917Z"
+  },
+  "readingRule": "pass2wins",
+  "countScope": "štetje po PARIH parcela×raba (podvojene rabe znotraj parcele enkrat) — kot P39",
+  "rulebook": {
+    "version": "v2",
+    "noteSi": "prvi zadetek v skupnem vrstnem redu (v1 1–12 → priložena 13–25) = primarni razred; termType izrecno ločuje: KULTURA (razred), TOPONIM (ležajno ime, ni raba), ARTIFAKT (številka/registrična opomba), NEKLASIFICIRANO (neznan termin — ni ugibanj); vsi novi vzorci imajo zaupanje [~] ali [?]",
+    "noteEn": "first match in combined rule order (v1 1–12 → appended 13–25) = primary class; termType distinguishes KULTURA / TOPONIM / ARTIFAKT / NEKLASIFICIRANO; no guessing for unknown terms",
+    "v1Rules": [
+      {
+        "no": 1,
+        "class": "VINOGRAD",
+        "pattern": "weingarten|weinberg"
+      },
+      {
+        "no": 2,
+        "class": "NJIVA",
+        "pattern": "\\backer\\w*|\\baecke\\w*"
+      },
+      {
+        "no": 3,
+        "class": "TRAVNIK",
+        "pattern": "wies|\\bwey\\b"
+      },
+      {
+        "no": 4,
+        "class": "GOZD",
+        "pattern": "\\bwald\\w*"
+      },
+      {
+        "no": 5,
+        "class": "PASTVISCE",
+        "pattern": "\\bweid\\w*|\\bhut\\w*|\\btrift\\w*"
+      },
+      {
+        "no": 6,
+        "class": "ALM",
+        "pattern": "\\balm\\w*|\\balp\\w*"
+      },
+      {
+        "no": 7,
+        "class": "VRT",
+        "pattern": "gart"
+      },
+      {
+        "no": 8,
+        "class": "NEROD",
+        "pattern": "\\boed\\w*"
+      },
+      {
+        "no": 9,
+        "class": "STAVBNO",
+        "pattern": "bauplatz|hof\\w*|stadel|stadl|schupfn|purgstall|muehl|muhl|\\bhaus\\w*|anger\\w*"
+      },
+      {
+        "no": 10,
+        "class": "VODA",
+        "pattern": "\\bteich\\w*|\\bfluss\\w*|\\bbach\\w*|lokva"
+      },
+      {
+        "no": 11,
+        "class": "OBCINA",
+        "pattern": "gemeinde"
+      },
+      {
+        "no": 12,
+        "class": "CESTA",
+        "pattern": "\\bweg\\w*|steig\\w*"
+      }
+    ],
+    "appendedRules": [
+      {
+        "no": 13,
+        "class": "OBCINA",
+        "labelSi": "občinska skupna",
+        "pattern": "gmde\\b|gmand\\b|gimand|gemaind",
+        "confidence": "~",
+        "noteSi": "dialektne okrajšave Gemainde (Gmde/Gmand/Gimand) = občinska skupna zemlja; Gumig Gmde, Lohgimand NNN (= Lohgemainde, skupna lohišča)",
+        "claimedRaw": {
+          "Gumig Gmde": {
+            "pairs": 3,
+            "rows": 3
+          },
+          "Gumig Gmand": {
+            "pairs": 2,
+            "rows": 2
+          },
+          "Lohgimand": {
+            "pairs": 2,
+            "rows": 2
+          },
+          "Lohgimand 647": {
+            "pairs": 1,
+            "rows": 1
+          },
+          "Lohgimand 658": {
+            "pairs": 1,
+            "rows": 1
+          },
+          "Lohgimand 667": {
+            "pairs": 1,
+            "rows": 1
+          },
+          "Lohgimand 684": {
+            "pairs": 1,
+            "rows": 1
+          },
+          "Lohgimand 697": {
+            "pairs": 1,
+            "rows": 1
+          }
+        },
+        "pairs": 12,
+        "rows": 12
+      },
+      {
+        "no": 14,
+        "class": "TRAVNIK",
+        "labelSi": "travnik (Wiese)",
+        "pattern": "maid\\b",
+        "confidence": "~",
+        "noteSi": "Maid = Mahd = Mähwiese (kärntensko); družina Haitenmaid (Leinwand/Gründung/Balazig)",
+        "claimedRaw": {
+          "Haitenmaid Leinwand": {
+            "pairs": 10,
+            "rows": 10
+          },
+          "Haitenmaid Gründung": {
+            "pairs": 3,
+            "rows": 3
+          },
+          "Haitenmaid": {
+            "pairs": 1,
+            "rows": 1
+          },
+          "Haitenmaid Balazig": {
+            "pairs": 1,
+            "rows": 1
+          },
+          "Haitenmaid Gründung 1835": {
+            "pairs": 1,
+            "rows": 1
+          }
+        },
+        "pairs": 16,
+        "rows": 16
+      },
+      {
+        "no": 15,
+        "class": "TRAVNIK",
+        "labelSi": "travnik (Wiese)",
+        "pattern": "gras\\b|heu\\b|wisen\\b|rasen\\b",
+        "confidence": "~",
+        "noteSi": "Gras/Heu = travniški pridelek (einheimisches Gras/Heu); wisen = Wiesen; Rasen = travišče",
+        "claimedRaw": {
+          "Einhemisches Gras": {
+            "pairs": 14,
+            "rows": 14
+          },
+          "Einhemisches Heu": {
+            "pairs": 6,
+            "rows": 6
+          },
+          "Rasen": {
+            "pairs": 2,
+            "rows": 2
+          },
+          "Eggwisen": {
+            "pairs": 1,
+            "rows": 1
+          }
+        },
+        "pairs": 23,
+        "rows": 23
+      },
+      {
+        "no": 16,
+        "class": "VINOGRAD",
+        "labelSi": "vinograd",
+        "pattern": "wein",
+        "confidence": "~",
+        "noteSi": "sami 'Wein'/'Weing' = okrajšava za Weingarten (v1 je zahteval weingarten|weinberg — vrzel: 10 parov vinogradov je bilo nevidnih)",
+        "claimedRaw": {
+          "Wein": {
+            "pairs": 10,
+            "rows": 10
+          },
+          "Weing": {
+            "pairs": 1,
+            "rows": 1
+          }
+        },
+        "pairs": 11,
+        "rows": 11
+      },
+      {
+        "no": 17,
+        "class": "VRT",
+        "labelSi": "vrt (Garten)",
+        "pattern": "gae?rt",
+        "confidence": "~",
+        "noteSi": "umlaut Gärten (→ gaerten) — v1 'gart' jih ni ujel; Findling/Himbeeren/Gebüsch/Einhait und Gärten",
+        "claimedRaw": {
+          "Einhait und Gärten und Gärten und Gärten und Laubm.": {
+            "pairs": 3,
+            "rows": 3
+          },
+          "Findling und Gärten": {
+            "pairs": 3,
+            "rows": 3
+          },
+          "Himbeeren und Gärten": {
+            "pairs": 3,
+            "rows": 3
+          },
+          "Gebüsch Gärten": {
+            "pairs": 2,
+            "rows": 2
+          },
+          "Einhait und Gärten und Laubm.": {
+            "pairs": 1,
+            "rows": 1
+          },
+          "Gärten": {
+            "pairs": 1,
+            "rows": 1
+          }
+        },
+        "pairs": 13,
+        "rows": 13
+      },
+      {
+        "no": 18,
+        "class": "VRT",
+        "labelSi": "vrt (Garten)",
+        "pattern": "obst|himbeer|gmias",
+        "confidence": "~",
+        "noteSi": "Obst = sadovnjak, Himbeeren = malinje, Gmias = Gemüse (zelenjava)",
+        "claimedRaw": {
+          "Himbeeren und Lorbeer": {
+            "pairs": 5,
+            "rows": 5
+          },
+          "Obst": {
+            "pairs": 5,
+            "rows": 5
+          },
+          "Himbeeren": {
+            "pairs": 3,
+            "rows": 3
+          },
+          "Gehölz Obst": {
+            "pairs": 1,
+            "rows": 1
+          },
+          "Gmias": {
+            "pairs": 1,
+            "rows": 1
+          }
+        },
+        "pairs": 15,
+        "rows": 15
+      },
+      {
+        "no": 19,
+        "class": "NJIVA",
+        "labelSi": "njiva (Acker)",
+        "pattern": "rueben|schlagfeld|stopp\\b|achl\\b|frucht",
+        "confidence": "~",
+        "noteSi": "Rüben = poljska kultura; Schlagfeld = izsekano polje (Feld); Stopp = Stoppeln (ozimje); Achl = kärntensko za Acker (deminutiv); Frucht = žito",
+        "claimedRaw": {
+          "Schlagfeld G'floggsb.": {
+            "pairs": 12,
+            "rows": 12
+          },
+          "Schlagfeld": {
+            "pairs": 10,
+            "rows": 10
+          },
+          "Rüben": {
+            "pairs": 9,
+            "rows": 9
+          },
+          "Stopp": {
+            "pairs": 6,
+            "rows": 6
+          },
+          "Einschlag mit Frucht und Gülze": {
+            "pairs": 3,
+            "rows": 3
+          },
+          "Schlagfeld Brachmnd": {
+            "pairs": 3,
+            "rows": 3
+          },
+          "Schlagfeld Baumg.": {
+            "pairs": 1,
+            "rows": 1
+          },
+          "Schlagfeld Gorginib.": {
+            "pairs": 1,
+            "rows": 1
+          },
+          "Schustern Achl": {
+            "pairs": 1,
+            "rows": 1
+          }
+        },
+        "pairs": 46,
+        "rows": 46
+      },
+      {
+        "no": 20,
+        "class": "GOZD",
+        "labelSi": "gozd (Wald)",
+        "pattern": "wald|gebuesch|straeuch|eichhol|laub\\b|laubm|lorbeer|baum",
+        "confidence": "~",
+        "noteSi": "sredbesedni -wald (Schlagwald, Lohwald — v1 \\\\bwald jih je zgrešil); Gebüsch/Gesträuch; Eichhol = hrastov les; Laub/Laubm. = listavec; Lorbeer (sami = drevesa); baum = drevesna opomba (Schindel baum, baumart)",
+        "claimedRaw": {
+          "Schlagwald": {
+            "pairs": 8,
+            "rows": 8
+          },
+          "Schindel baum": {
+            "pairs": 5,
+            "rows": 5
+          },
+          "Findling und Lorbeer": {
+            "pairs": 4,
+            "rows": 4
+          },
+          "Lohgründt baumart.": {
+            "pairs": 3,
+            "rows": 3
+          },
+          "Gebüsch": {
+            "pairs": 2,
+            "rows": 2
+          },
+          "Laub": {
+            "pairs": 2,
+            "rows": 2
+          },
+          "Lohgründt Gesträuch": {
+            "pairs": 2,
+            "rows": 2
+          },
+          "Eichhol": {
+            "pairs": 1,
+            "rows": 1
+          },
+          "Einhait und Laubm.": {
+            "pairs": 1,
+            "rows": 1
+          },
+          "Lohwald": {
+            "pairs": 1,
+            "rows": 1
+          },
+          "Lorbeer": {
+            "pairs": 1,
+            "rows": 1
+          },
+          "Sträuch mit Gipfeng": {
+            "pairs": 1,
+            "rows": 1
+          },
+          "Stüwd und baumw": {
+            "pairs": 1,
+            "rows": 1
+          }
+        },
+        "pairs": 32,
+        "rows": 32
+      },
+      {
+        "no": 21,
+        "class": "PASTVISCE",
+        "labelSi": "pašnik (Weide/Hutweide/Trift)",
+        "pattern": "shut\\b|johut\\b|weid",
+        "confidence": "~",
+        "noteSi": "-shut (Schingutshut = pašnik k meta farmi Schingut), Johut (= Jochhut?), weid BREZ \\\\b (Schafweide — v1 \\\\bweid je zgrešil sredbesedno); IZRECNO NE zajame Lhut (družina ostaja neznana)",
+        "claimedRaw": {
+          "Schingutshut": {
+            "pairs": 12,
+            "rows": 12
+          },
+          "Johut": {
+            "pairs": 1,
+            "rows": 1
+          },
+          "Lipfmaß, Schafweide": {
+            "pairs": 1,
+            "rows": 1
+          }
+        },
+        "pairs": 14,
+        "rows": 14
+      },
+      {
+        "no": 22,
+        "class": "NEROD",
+        "labelSi": "nerodovoljna (Ödung)",
+        "pattern": "aehnl?\\b|eidn\\b|eidau|ehda\\b|inoed|aeinod|wist|brache\\b",
+        "confidence": "~",
+        "noteSi": "Öhnl/Aehn = osuto; Eidn/Eidau/Ehda = Öden/Ödau (dialektne zapiske ö→ei/e); Ainöd/Aeinod = Einöde; Wist* = wüst (opustošeno); Brache = osuto",
+        "claimedRaw": {
+          "Eidn": {
+            "pairs": 11,
+            "rows": 11
+          },
+          "Wistmad": {
+            "pairs": 11,
+            "rows": 11
+          },
+          "Eidau": {
+            "pairs": 10,
+            "rows": 10
+          },
+          "Ehda": {
+            "pairs": 9,
+            "rows": 9
+          },
+          "Wiste": {
+            "pairs": 7,
+            "rows": 7
+          },
+          "Ähnl": {
+            "pairs": 7,
+            "rows": 7
+          },
+          "Ainöd": {
+            "pairs": 6,
+            "rows": 6
+          },
+          "Wistand": {
+            "pairs": 5,
+            "rows": 6
+          },
+          "Aehn": {
+            "pairs": 4,
+            "rows": 4
+          },
+          "Aeinod": {
+            "pairs": 1,
+            "rows": 1
+          },
+          "Brache": {
+            "pairs": 1,
+            "rows": 1
+          },
+          "Wistn": {
+            "pairs": 1,
+            "rows": 1
+          }
+        },
+        "pairs": 73,
+        "rows": 74
+      },
+      {
+        "no": 23,
+        "class": "TRAVNIK",
+        "labelSi": "travnik (Wiese)",
+        "pattern": "malde\\b",
+        "confidence": "?",
+        "noteSi": "Malde = Mahd (kärntensko, Schatz: Wörterbuch); samo 'Ehmalde' 1 par — spekulativno",
+        "claimedRaw": {
+          "Ehmalde": {
+            "pairs": 1,
+            "rows": 1
+          }
+        },
+        "pairs": 1,
+        "rows": 1
+      },
+      {
+        "no": 24,
+        "class": "STAVBNO",
+        "labelSi": "stavbna/gospodarska",
+        "pattern": "schupf|staidl|grube\\b|gutl\\b|edl?hop|edhup|hau(ss)?\\b|boden\\b",
+        "confidence": "~",
+        "noteSi": "Schupfe (v1 schupfn ni ujel schupf./schupfen!); Staidl = Stadel; Grube (Lohgrube = strojna jama, Steingrube = kamnolom); -gutl = Gütl (kmetija); Ed-/Edl-hop = Öd-/Edelhof; -hauß/-haus; Boden (Schüttboden = pod — 100 % so-odvisnost s STAVBNO)",
+        "claimedRaw": {
+          "Lohgrube": {
+            "pairs": 11,
+            "rows": 11
+          },
+          "Schüttboden": {
+            "pairs": 9,
+            "rows": 9
+          },
+          "Schupf.": {
+            "pairs": 5,
+            "rows": 5
+          },
+          "Schupfen u. Gst.": {
+            "pairs": 4,
+            "rows": 4
+          },
+          "Edhop": {
+            "pairs": 3,
+            "rows": 3
+          },
+          "Schupfend O.B.": {
+            "pairs": 3,
+            "rows": 3
+          },
+          "Lhizgutl [?]": {
+            "pairs": 2,
+            "rows": 2
+          },
+          "Boden": {
+            "pairs": 1,
+            "rows": 1
+          },
+          "Edhup": {
+            "pairs": 1,
+            "rows": 1
+          },
+          "Edlhop": {
+            "pairs": 1,
+            "rows": 1
+          },
+          "Einhauß": {
+            "pairs": 1,
+            "rows": 1
+          },
+          "Eshauß": {
+            "pairs": 1,
+            "rows": 1
+          },
+          "Schupfen": {
+            "pairs": 1,
+            "rows": 1
+          },
+          "Staidl": {
+            "pairs": 1,
+            "rows": 1
+          },
+          "Steingrube": {
+            "pairs": 1,
+            "rows": 1
+          }
+        },
+        "pairs": 45,
+        "rows": 45
+      },
+      {
+        "no": 25,
+        "class": "VODA",
+        "labelSi": "voda",
+        "pattern": "lachen?\\b",
+        "confidence": "~",
+        "noteSi": "Lache(n) = lokva/mlaka",
+        "claimedRaw": {
+          "Lache": {
+            "pairs": 1,
+            "rows": 1
+          },
+          "Lachen": {
+            "pairs": 1,
+            "rows": 1
+          }
+        },
+        "pairs": 2,
+        "rows": 2
+      }
+    ]
+  },
+  "stats": {
+    "pairsTotal": 2632,
+    "v1ClassifiedPairs": 1896,
+    "v2ClassifiedPairs": 2199,
+    "toponymPairs": 122,
+    "artifaktPairs": 29,
+    "unresolvedPairs": 282,
+    "classifiedPctV1": 72.0,
+    "classifiedPctV2": 83.5,
+    "explainedPctV2": 89.3,
+    "rowsTotalCulture": 2681,
+    "unresolvedRows": 282,
+    "primaryCountsV2": {
+      "NJIVA": 1095,
+      "TRAVNIK": 527,
+      "GOZD": 166,
+      "STAVBNO": 97,
+      "NEROD": 95,
+      "VRT": 79,
+      "PASTVISCE": 68,
+      "OBCINA": 27,
+      "ALM": 23,
+      "VINOGRAD": 19,
+      "VODA": 2,
+      "CESTA": 1
+    },
+    "newPairsByClassV2": {
+      "NEROD": 73,
+      "NJIVA": 46,
+      "STAVBNO": 45,
+      "TRAVNIK": 40,
+      "GOZD": 32,
+      "VRT": 28,
+      "PASTVISCE": 14,
+      "OBCINA": 12,
+      "VINOGRAD": 11,
+      "VODA": 2
+    }
+  },
+  "termTypes": {
+    "KULTURA": {
+      "pairs": 2199
+    },
+    "TOPONIM": {
+      "pairs": 122,
+      "rows": 123,
+      "distinct": 37,
+      "values": [
+        {
+          "raw": "Löwisch Thal",
+          "formant": "thal",
+          "confidence": "~",
+          "noteSi": "Löwenthal — dolinsko ime",
+          "pairs": 14,
+          "rows": 15
+        },
+        {
+          "raw": "Leite",
+          "formant": "leite",
+          "confidence": "~",
+          "noteSi": "Leite = požleb/naklon — mikrolokalna oznaka",
+          "pairs": 11,
+          "rows": 11
+        },
+        {
+          "raw": "Schüttgrund",
+          "formant": "grund",
+          "confidence": "~",
+          "noteSi": "'Schütt-Grund' — zemljiško ime (Grund = parcela/tla)",
+          "pairs": 10,
+          "rows": 10
+        },
+        {
+          "raw": "Winkel",
+          "formant": "winkel",
+          "confidence": "~",
+          "noteSi": "kot/ogljek — ležajno ime",
+          "pairs": 2,
+          "rows": 2
+        },
+        {
+          "raw": "Zehorn",
+          "formant": "horn",
+          "confidence": "~",
+          "noteSi": "horn = gorski vrh — ležajno ime",
+          "pairs": 2,
+          "rows": 2
+        },
+        {
+          "raw": "Abhang",
+          "formant": "hang",
+          "confidence": "~",
+          "noteSi": "naklon — terenski opis",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Ablay",
+          "formant": "lay",
+          "confidence": "~",
+          "noteSi": "lay = skala/plaz (kärntensko) — ležajno ime",
+          "pairs": 2,
+          "rows": 2
+        },
+        {
+          "raw": "Ebneist",
+          "formant": "eben",
+          "confidence": "~",
+          "noteSi": "eben = ravnina — terensko ime",
+          "pairs": 6,
+          "rows": 6
+        },
+        {
+          "raw": "Ebnerd",
+          "formant": "eben",
+          "confidence": "~",
+          "noteSi": "eben + Erd — 'ravna zemlja'",
+          "pairs": 5,
+          "rows": 5
+        },
+        {
+          "raw": "Lbney",
+          "formant": "eben",
+          "confidence": "?",
+          "noteSi": "verjetno Eben(e) — okrnjen zapis",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Ebene ?",
+          "formant": "eben",
+          "confidence": "~",
+          "noteSi": "izrecno dvomljiv zapis (?), terenski opis",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Ebnisgutland",
+          "formant": "eben",
+          "confidence": "~",
+          "noteSi": "sestavljeno terensko ime (Eben…-gut-land)",
+          "pairs": 6,
+          "rows": 6
+        },
+        {
+          "raw": "Schmieggrat",
+          "formant": "grat",
+          "confidence": "~",
+          "noteSi": "grat = greben — ležajno ime",
+          "pairs": 6,
+          "rows": 6
+        },
+        {
+          "raw": "Lipfmaß, Hang in Böschung",
+          "formant": "hang",
+          "confidence": "~",
+          "noteSi": "terenski opis naklona/bočaske",
+          "pairs": 3,
+          "rows": 3
+        },
+        {
+          "raw": "Grien",
+          "formant": "grien",
+          "confidence": "~",
+          "noteSi": "Grien = prod/nahaj (kärntensko) — opis tal",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Lehmo",
+          "formant": "lehm",
+          "confidence": "~",
+          "noteSi": "Lehm = glina — opis tal",
+          "pairs": 2,
+          "rows": 2
+        },
+        {
+          "raw": "Lehmg.",
+          "formant": "lehm",
+          "confidence": "~",
+          "noteSi": "Lehm(g) — okrajšan opis tal",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Lehga",
+          "formant": "lehm",
+          "confidence": "?",
+          "noteSi": "morda Lehm-ga… — okrnjeno",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Lhga",
+          "formant": "lehm",
+          "confidence": "?",
+          "noteSi": "morda Lehm-ga… — okrnjeno",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Indrunt Laimen",
+          "formant": "lehm",
+          "confidence": "~",
+          "noteSi": "'in der Grund' + Laimen = glinena tla",
+          "pairs": 5,
+          "rows": 5
+        },
+        {
+          "raw": "Indrund Laimen",
+          "formant": "lehm",
+          "confidence": "~",
+          "noteSi": "varianta zapisa",
+          "pairs": 4,
+          "rows": 4
+        },
+        {
+          "raw": "Indrult Laimen",
+          "formant": "lehm",
+          "confidence": "~",
+          "noteSi": "varianta zapisa",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Indrunt Leimen",
+          "formant": "lehm",
+          "confidence": "~",
+          "noteSi": "Leimen = glina",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Eingemaut Gfrörer und Laimauer",
+          "formant": "laim/au",
+          "confidence": "~",
+          "noteSi": "opis lege: 'eingemauerte Gfrörer- und Laimau' (zmrzovalna kotanja in glinena au)",
+          "pairs": 12,
+          "rows": 12
+        },
+        {
+          "raw": "Eingemaut Laimauer",
+          "formant": "laim/au",
+          "confidence": "~",
+          "noteSi": "okrajšana varianta",
+          "pairs": 3,
+          "rows": 3
+        },
+        {
+          "raw": "Eingemaut Gfrörer und Lorenz",
+          "formant": "laim/au",
+          "confidence": "~",
+          "noteSi": "varianta (Lorenz/Laimen?)",
+          "pairs": 2,
+          "rows": 2
+        },
+        {
+          "raw": "Eingemaut Lorenz",
+          "formant": "laim/au",
+          "confidence": "~",
+          "noteSi": "okrajšana varianta",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Abtränig Spötlg. Leumuth",
+          "formant": "leum/au",
+          "confidence": "~",
+          "noteSi": "opis lege (Abtränig = odcepek? + Leumaue)",
+          "pairs": 6,
+          "rows": 6
+        },
+        {
+          "raw": "Abtränig Leumuth",
+          "formant": "leum/au",
+          "confidence": "~",
+          "noteSi": "okrajšana varianta",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Abtränig Spötlg.",
+          "formant": "abtränig",
+          "confidence": "~",
+          "noteSi": "okrajšana varianta",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Gübel",
+          "formant": "gübel",
+          "confidence": "~",
+          "noteSi": "Gübel/Gupf = gričevnat vrh (kärntensko)",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Gebürg",
+          "formant": "gebürg",
+          "confidence": "~",
+          "noteSi": "Gebürg = Gebirge — terenska oznaka",
+          "pairs": 2,
+          "rows": 2
+        },
+        {
+          "raw": "Gruning Grunau",
+          "formant": "au",
+          "confidence": "~",
+          "noteSi": "Grünau — ležajno ime",
+          "pairs": 2,
+          "rows": 2
+        },
+        {
+          "raw": "Ehing",
+          "formant": "ing",
+          "confidence": "~",
+          "noteSi": "-ing = prazgodovinsko-srednjeveški naselbinski formant",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Ehinga",
+          "formant": "ing",
+          "confidence": "~",
+          "noteSi": "varianta zapisa",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Ebingach",
+          "formant": "ach",
+          "confidence": "~",
+          "noteSi": "-ach/-aach = vodni formant v imenu",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "o. Ried",
+          "formant": "ried",
+          "confidence": "~",
+          "noteSi": "Ried = ledinsko ime (kärntensko)",
+          "pairs": 1,
+          "rows": 1
+        }
+      ],
+      "noteSi": "ležajna/terenska imena brez kulturnega termina — NI raba; za statistiko uporabe se NE štejejo kot kultura"
+    },
+    "ARTIFAKT": {
+      "pairs": 29,
+      "rows": 29,
+      "distinct": 29,
+      "values": [
+        {
+          "raw": "81. flur",
+          "reason": "številka + flur (poljna regija) — lokacijska oznaka namesto rabe",
+          "confidence": "~",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "100 Futter",
+          "reason": "opomba o prihodkih (Futter = krma/krmna enota)",
+          "confidence": "?",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "65 Fürtrg.",
+          "reason": "opomba o prihodkih (Fürtrg. ≈ Fütterung/Futtertrag)",
+          "confidence": "?",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "87 Furtreg.",
+          "reason": "opomba o prihodkih (Furtreg. ≈ Futtertrag)",
+          "confidence": "?",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Furtrage",
+          "reason": "opomba o prihodkih (Furtrage ≈ Futterträge)",
+          "confidence": "?",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "[?] Fürstg.",
+          "reason": "neberljiva okrajšava s [?]; morda Fürtrg.",
+          "confidence": "?",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Summa",
+          "reason": "registrična beseda (vsota) — prišla v stolpec rabe",
+          "confidence": "~",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Zahl",
+          "reason": "registrična beseda (številka)",
+          "confidence": "~",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "5k Einträg",
+          "reason": "opomba (Einträge = vnosi/pridelki)",
+          "confidence": "?",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "29 Bäumen",
+          "reason": "opomba številu dreves",
+          "confidence": "~",
+          "pairs": 1,
+          "rows": 1
+        }
+      ],
+      "numericRaw": [
+        "82",
+        "83",
+        "84",
+        "85",
+        "86",
+        "87",
+        "88",
+        "89",
+        "90",
+        "91",
+        "92",
+        "93",
+        "94",
+        "95",
+        "96",
+        "97",
+        "98",
+        "99",
+        "100"
+      ],
+      "noteSi": "številke (Blatt X register/lokacije), registrične besede (Summa, Zahl) in opombe o prihodkih (Futter…) — ne rabe"
+    },
+    "NEKLASIFICIRANO": {
+      "pairs": 282,
+      "rows": 282,
+      "distinct": 79,
+      "families": [
+        {
+          "id": "LHUT-JEDRO",
+          "values": [
+            "Lhut",
+            "Lhup",
+            "Lhupf",
+            "Lhupa",
+            "Lhuta"
+          ],
+          "pairs": 36,
+          "hypothesisSi": "morda L+Hut (pašnik) ali Lehen-Hut; tudi Rhut (Rodung) ob zamenjavi R/L v Kurrentu — NE dokazano",
+          "confidence": "?",
+          "verdict": "NEKLASIFICIRANO (čaka paleografijo)",
+          "coParcel": {
+            "NJIVA": 10
+          },
+          "coOwner": {
+            "NJIVA": 65,
+            "GOZD": 6,
+            "PASTVISCE": 3,
+            "TRAVNIK": 2
+          }
+        },
+        {
+          "id": "LHIZ",
+          "values": [
+            "Lhize",
+            "Lhizl"
+          ],
+          "pairs": 9,
+          "hypothesisSi": "ista neznana družina kot Lhut-jedro (Lhizgutl [?] pa v2 STAVBNO prek formanta -gutl = Gütl)",
+          "confidence": "?",
+          "verdict": "NEKLASIFICIRANO (čaka paleografijo)",
+          "coParcel": {
+            "TRAVNIK": 1
+          },
+          "coOwner": {
+            "NJIVA": 8,
+            "TRAVNIK": 1
+          }
+        },
+        {
+          "id": "LHOPI-LOHIFA",
+          "values": [
+            "Lhopi",
+            "Lohifa",
+            "Luppa",
+            "Shüfa"
+          ],
+          "pairs": 23,
+          "hypothesisSi": "morda ista korenina kot Lhut (t/p/f obrati OCR) — NE dokazano",
+          "confidence": "?",
+          "verdict": "NEKLASIFICIRANO (čaka paleografijo)",
+          "coParcel": {
+            "NJIVA": 3,
+            "VRT": 1
+          },
+          "coOwner": {
+            "NJIVA": 32,
+            "GOZD": 7,
+            "TRAVNIK": 6,
+            "VRT": 4,
+            "PASTVISCE": 3
+          }
+        },
+        {
+          "id": "LOHN-RAUT",
+          "values": [
+            "Lohn",
+            "Lohng",
+            "Lohnraut Gfüttergütl",
+            "Lohnraut Bäurean",
+            "Lohnraut Lönnean"
+          ],
+          "pairs": 29,
+          "hypothesisSi": "Lohn/Loh = izsek (Waldschlag) ALBO Loh = strojnica; Raut = Rodung (izsek) — smer GOZD?/NJIVA? — NE dokazano",
+          "confidence": "?",
+          "verdict": "NEKLASIFICIRANO (čaka paleografijo)",
+          "coParcel": {
+            "NJIVA": 2
+          },
+          "coOwner": {
+            "NJIVA": 16,
+            "TRAVNIK": 12,
+            "GOZD": 6,
+            "ALM": 2,
+            "VRT": 2,
+            "NEROD": 1
+          }
+        },
+        {
+          "id": "AHN",
+          "values": [
+            "Ahn"
+          ],
+          "pairs": 13,
+          "hypothesisSi": "morda Ahorn (javor) ali Acker-dialekt — NE dokazano",
+          "confidence": "?",
+          "verdict": "NEKLASIFICIRANO (čaka paleografijo)",
+          "coParcel": {},
+          "coOwner": {
+            "NJIVA": 5
+          }
+        },
+        {
+          "id": "AEFLING",
+          "values": [
+            "Äfling"
+          ],
+          "pairs": 13,
+          "hypothesisSi": "neznano; so-odvisnost: 12/13 parov na parcelah s TRAVNIK → travniški kontekst, termin ostaja neznan",
+          "confidence": "?",
+          "verdict": "NEKLASIFICIRANO (čaka paleografijo)",
+          "coParcel": {
+            "TRAVNIK": 12
+          },
+          "coOwner": {
+            "TRAVNIK": 47,
+            "NJIVA": 10,
+            "VRT": 2
+          }
+        },
+        {
+          "id": "ERDAR",
+          "values": [
+            "Erdar",
+            "Eidar",
+            "Achat",
+            "Achm"
+          ],
+          "pairs": 10,
+          "hypothesisSi": "morda Erd-/Eid- (Öd?) ali Achm = Acker-Mad — NE dokazano; Erdar 4/4 so-odvisnost GOZD",
+          "confidence": "?",
+          "verdict": "NEKLASIFICIRANO (čaka paleografijo)",
+          "coParcel": {
+            "GOZD": 7,
+            "NJIVA": 3,
+            "TRAVNIK": 2,
+            "ALM": 1
+          },
+          "coOwner": {
+            "TRAVNIK": 62,
+            "NJIVA": 40,
+            "GOZD": 36,
+            "ALM": 20,
+            "VRT": 4,
+            "PASTVISCE": 3
+          }
+        },
+        {
+          "id": "GUETEN",
+          "values": [
+            "Güten",
+            "Gütung"
+          ],
+          "pairs": 12,
+          "hypothesisSi": "morda 'die Güten' (rodovitna tla) ali Güter (kmetije) — NE dokazano (v1 umlaut gueten zgreši vzorec gut)",
+          "confidence": "?",
+          "verdict": "NEKLASIFICIRANO (čaka paleografijo)",
+          "coParcel": {},
+          "coOwner": {
+            "NJIVA": 16
+          }
+        },
+        {
+          "id": "EINHART",
+          "values": [
+            "Einhart mit Gypfel &c.",
+            "Einhart mit Gypf. &c."
+          ],
+          "pairs": 15,
+          "hypothesisSi": "morda Einöd-Hart (Hart = gozd/pašnik na trdem terenu) + Gipfel — NE dokazano",
+          "confidence": "?",
+          "verdict": "NEKLASIFICIRANO (čaka paleografijo)",
+          "coParcel": {},
+          "coOwner": {
+            "TRAVNIK": 1
+          }
+        },
+        {
+          "id": "DINGF",
+          "values": [
+            "Dingf"
+          ],
+          "pairs": 10,
+          "hypothesisSi": "morda Dingfeld? — mešana so-odvisnost (TRAVNIK 9/NJIVA 4/ALM 4) — NE dokazano",
+          "confidence": "?",
+          "verdict": "NEKLASIFICIRANO (čaka paleografijo)",
+          "coParcel": {
+            "TRAVNIK": 9,
+            "NJIVA": 4,
+            "ALM": 4,
+            "GOZD": 3
+          },
+          "coOwner": {
+            "TRAVNIK": 71,
+            "NJIVA": 46,
+            "GOZD": 40,
+            "ALM": 34,
+            "PASTVISCE": 6
+          }
+        },
+        {
+          "id": "LUKIG",
+          "values": [
+            "Lukig"
+          ],
+          "pairs": 10,
+          "hypothesisSi": "morda Luch/Lukig = mokrišče (Loch) — NE dokazano",
+          "confidence": "?",
+          "verdict": "NEKLASIFICIRANO (čaka paleografijo)",
+          "coParcel": {
+            "TRAVNIK": 1
+          },
+          "coOwner": {
+            "NJIVA": 73,
+            "TRAVNIK": 6,
+            "NEROD": 1,
+            "GOZD": 1
+          }
+        },
+        {
+          "id": "LOHGARN",
+          "values": [
+            "Lohgarn"
+          ],
+          "pairs": 7,
+          "hypothesisSi": "Loh + garn? — NE dokazano",
+          "confidence": "?",
+          "verdict": "NEKLASIFICIRANO (čaka paleografijo)",
+          "coParcel": {},
+          "coOwner": {
+            "NJIVA": 13,
+            "TRAVNIK": 2,
+            "STAVBNO": 1
+          }
+        },
+        {
+          "id": "HURGI",
+          "values": [
+            "Hurgi"
+          ],
+          "pairs": 5,
+          "hypothesisSi": "neznano",
+          "confidence": "?",
+          "verdict": "NEKLASIFICIRANO (čaka paleografijo)",
+          "coParcel": {},
+          "coOwner": {
+            "NJIVA": 6,
+            "TRAVNIK": 2
+          }
+        },
+        {
+          "id": "WING",
+          "values": [
+            "Wing"
+          ],
+          "pairs": 3,
+          "hypothesisSi": "morda Wingert (vinograd, zahodnoavstrijsko) — v Kärntenu netipično — NE dokazano",
+          "confidence": "?",
+          "verdict": "NEKLASIFICIRANO (čaka paleografijo)",
+          "coParcel": {},
+          "coOwner": {}
+        },
+        {
+          "id": "EINSCHLAG-GUELZE",
+          "values": [
+            "Einschlag mit Gülze",
+            "Einschicht mit Poggi u. Bau",
+            "Einschicht mit Gfretzgen bau",
+            "Gülze",
+            "Gülze mit Gülze"
+          ],
+          "pairs": 20,
+          "hypothesisSi": "Einschlag = ograda/obor?; Gülze = Gülte?/krma?; 'Einschlag mit Frucht und Gülze' (3 pari) → v2 NJIVA prek formanta Frucht, zato NI v tej družini; ostalo NE dokazano; Einschlag~Einschicht = verjetno isti termin (OCR)",
+          "confidence": "?",
+          "verdict": "NEKLASIFICIRANO (čaka paleografijo)",
+          "coParcel": {
+            "NJIVA": 1
+          },
+          "coOwner": {
+            "TRAVNIK": 8,
+            "NJIVA": 5
+          }
+        },
+        {
+          "id": "SCHINDEL",
+          "values": [
+            "Schindel"
+          ],
+          "pairs": 1,
+          "hypothesisSi": "'Schindel baum' (5 parov) → v2 GOZD prek formanta baum; samostojna 'Schindel' ostaja neznan (skodla/les?)",
+          "confidence": "?",
+          "verdict": "NEKLASIFICIRANO (čaka paleografijo)",
+          "coParcel": {},
+          "coOwner": {
+            "PASTVISCE": 1
+          }
+        }
+      ],
+      "singles": [
+        {
+          "raw": "Eibn",
+          "pairs": 6,
+          "rows": 6
+        },
+        {
+          "raw": "Einfach",
+          "pairs": 5,
+          "rows": 5
+        },
+        {
+          "raw": "Abm",
+          "pairs": 4,
+          "rows": 4
+        },
+        {
+          "raw": "Eing",
+          "pairs": 4,
+          "rows": 4
+        },
+        {
+          "raw": "Haita und Leinwand",
+          "pairs": 4,
+          "rows": 4
+        },
+        {
+          "raw": "Aein",
+          "pairs": 2,
+          "rows": 2
+        },
+        {
+          "raw": "Eidhaus",
+          "pairs": 2,
+          "rows": 2
+        },
+        {
+          "raw": "Einhemdtl.",
+          "pairs": 2,
+          "rows": 2
+        },
+        {
+          "raw": "Epind",
+          "pairs": 2,
+          "rows": 2
+        },
+        {
+          "raw": "Schlag",
+          "pairs": 2,
+          "rows": 2
+        },
+        {
+          "raw": "Schutt",
+          "pairs": 2,
+          "rows": 2
+        },
+        {
+          "raw": "68 Füßreg",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Abtragsbuh",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Allh[?]",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Ehuta",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Eibes",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Eldms",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Epistl",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Eulmn",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Gmös",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Harden",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Ladigl",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Ladstr.",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Lahar",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Licht",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Lichtw.",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Liegut",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Praygadn",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Rohrifa",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Schlagmhd. G'floggsb.",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Schlagmhd. Smigb.",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Schlagäder",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Schüttläger",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Steing",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Steinwurt",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Strohr",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Stumpf",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Stumpo",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Sulmi",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Zwetschpach Öhl",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "a Düng",
+          "pairs": 1,
+          "rows": 1
+        },
+        {
+          "raw": "Äschny",
+          "pairs": 1,
+          "rows": 1
+        }
+      ]
+    }
+  },
+  "values": [
+    {
+      "raw": "Acker",
+      "norm": "acker",
+      "pairs": 864,
+      "rows": 880,
+      "sections": {
+        "GRUND_1_2505": 823,
+        "BLATT_X": 37,
+        "NADALJEVANJE_2506": 4
+      },
+      "v1Classes": [
+        "NJIVA"
+      ],
+      "v2Classes": [
+        "NJIVA"
+      ],
+      "v2Primary": "NJIVA",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Ödung",
+      "norm": "oedung",
+      "pairs": 15,
+      "rows": 15,
+      "sections": {
+        "GRUND_1_2505": 15
+      },
+      "v1Classes": [
+        "NEROD"
+      ],
+      "v2Classes": [
+        "NEROD"
+      ],
+      "v2Primary": "NEROD",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Wiese",
+      "norm": "wiese",
+      "pairs": 235,
+      "rows": 249,
+      "sections": {
+        "GRUND_1_2505": 169,
+        "WALDUNG": 49,
+        "NADALJEVANJE_2506": 14,
+        "BLATT_X": 3
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Weingart 88/7",
+      "norm": "weingart 88/7",
+      "pairs": 4,
+      "rows": 4,
+      "sections": {
+        "GRUND_1_2505": 4
+      },
+      "v1Classes": [
+        "VRT"
+      ],
+      "v2Classes": [
+        "VRT"
+      ],
+      "v2Primary": "VRT",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Gemüse Garten",
+      "norm": "gemuese garten",
+      "pairs": 6,
+      "rows": 6,
+      "sections": {
+        "GRUND_1_2505": 6
+      },
+      "v1Classes": [
+        "VRT"
+      ],
+      "v2Classes": [
+        "VRT"
+      ],
+      "v2Primary": "VRT",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Schupfnud",
+      "norm": "schupfnud",
+      "pairs": 9,
+      "rows": 9,
+      "sections": {
+        "GRUND_1_2505": 9
+      },
+      "v1Classes": [
+        "STAVBNO"
+      ],
+      "v2Classes": [
+        "STAVBNO"
+      ],
+      "v2Primary": "STAVBNO",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Grund Gartten",
+      "norm": "grund gartten",
+      "pairs": 2,
+      "rows": 2,
+      "sections": {
+        "GRUND_1_2505": 2
+      },
+      "v1Classes": [
+        "VRT"
+      ],
+      "v2Classes": [
+        "VRT"
+      ],
+      "v2Primary": "VRT",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Schupfn",
+      "norm": "schupfn",
+      "pairs": 5,
+      "rows": 5,
+      "sections": {
+        "GRUND_1_2505": 5
+      },
+      "v1Classes": [
+        "STAVBNO"
+      ],
+      "v2Classes": [
+        "STAVBNO"
+      ],
+      "v2Primary": "STAVBNO",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Gruning Gartl",
+      "norm": "gruning gartl",
+      "pairs": 2,
+      "rows": 2,
+      "sections": {
+        "GRUND_1_2505": 2
+      },
+      "v1Classes": [
+        "VRT"
+      ],
+      "v2Classes": [
+        "VRT"
+      ],
+      "v2Primary": "VRT",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Gruning Garten",
+      "norm": "gruning garten",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "VRT"
+      ],
+      "v2Classes": [
+        "VRT"
+      ],
+      "v2Primary": "VRT",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Schustern Achl",
+      "norm": "schustern achl",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "NJIVA"
+      ],
+      "v2Primary": "NJIVA",
+      "v2RuleNo": 19,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Zwetschpach Öhl",
+      "norm": "zwetschpach oehl",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Gruning Grunau",
+      "norm": "gruning grunau",
+      "pairs": 2,
+      "rows": 2,
+      "sections": {
+        "GRUND_1_2505": 2
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "~",
+      "noteSi": "Grünau — ležajno ime"
+    },
+    {
+      "raw": "Eichhol",
+      "norm": "eichhol",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "GOZD"
+      ],
+      "v2Primary": "GOZD",
+      "v2RuleNo": 20,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Ähnl",
+      "norm": "aehnl",
+      "pairs": 7,
+      "rows": 7,
+      "sections": {
+        "GRUND_1_2505": 7
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "NEROD"
+      ],
+      "v2Primary": "NEROD",
+      "v2RuleNo": 22,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Rüben",
+      "norm": "rueben",
+      "pairs": 9,
+      "rows": 9,
+      "sections": {
+        "GRUND_1_2505": 9
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "NJIVA"
+      ],
+      "v2Primary": "NJIVA",
+      "v2RuleNo": 19,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Wald",
+      "norm": "wald",
+      "pairs": 119,
+      "rows": 126,
+      "sections": {
+        "GRUND_1_2505": 89,
+        "WALDUNG": 21,
+        "NADALJEVANJE_2506": 9
+      },
+      "v1Classes": [
+        "GOZD"
+      ],
+      "v2Classes": [
+        "GOZD"
+      ],
+      "v2Primary": "GOZD",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Lohn",
+      "norm": "lohn",
+      "pairs": 13,
+      "rows": 13,
+      "sections": {
+        "GRUND_1_2505": 13
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Schupfend O.B.",
+      "norm": "schupfend o.b.",
+      "pairs": 3,
+      "rows": 3,
+      "sections": {
+        "GRUND_1_2505": 3
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "STAVBNO"
+      ],
+      "v2Primary": "STAVBNO",
+      "v2RuleNo": 24,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Zahl",
+      "norm": "zahl",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "ARTIFAKT",
+      "confidence": "~",
+      "noteSi": "registrična beseda (številka)"
+    },
+    {
+      "raw": "Einhait und Gärten und Laubm.",
+      "norm": "einhait und gaerten und laubm.",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "VRT"
+      ],
+      "v2Primary": "VRT",
+      "v2RuleNo": 17,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Lohgimand",
+      "norm": "lohgimand",
+      "pairs": 2,
+      "rows": 2,
+      "sections": {
+        "GRUND_1_2505": 2
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "OBCINA"
+      ],
+      "v2Primary": "OBCINA",
+      "v2RuleNo": 13,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Dingf",
+      "norm": "dingf",
+      "pairs": 10,
+      "rows": 10,
+      "sections": {
+        "GRUND_1_2505": 10
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Einhait und Laubm.",
+      "norm": "einhait und laubm.",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "GOZD"
+      ],
+      "v2Primary": "GOZD",
+      "v2RuleNo": 20,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Abtragsbuh",
+      "norm": "abtragsbuh",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Alm",
+      "norm": "alm",
+      "pairs": 21,
+      "rows": 25,
+      "sections": {
+        "GRUND_1_2505": 21
+      },
+      "v1Classes": [
+        "ALM"
+      ],
+      "v2Classes": [
+        "ALM"
+      ],
+      "v2Primary": "ALM",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Eidau",
+      "norm": "eidau",
+      "pairs": 10,
+      "rows": 10,
+      "sections": {
+        "GRUND_1_2505": 10
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "NEROD"
+      ],
+      "v2Primary": "NEROD",
+      "v2RuleNo": 22,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Praygadn",
+      "norm": "praygadn",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Weide",
+      "norm": "weide",
+      "pairs": 13,
+      "rows": 13,
+      "sections": {
+        "GRUND_1_2505": 13
+      },
+      "v1Classes": [
+        "PASTVISCE"
+      ],
+      "v2Classes": [
+        "PASTVISCE"
+      ],
+      "v2Primary": "PASTVISCE",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Aehn",
+      "norm": "aehn",
+      "pairs": 4,
+      "rows": 4,
+      "sections": {
+        "GRUND_1_2505": 4
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "NEROD"
+      ],
+      "v2Primary": "NEROD",
+      "v2RuleNo": 22,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Rohrifa",
+      "norm": "rohrifa",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Lohgimand 667",
+      "norm": "lohgimand 667",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "OBCINA"
+      ],
+      "v2Primary": "OBCINA",
+      "v2RuleNo": 13,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Lohgimand 647",
+      "norm": "lohgimand 647",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "OBCINA"
+      ],
+      "v2Primary": "OBCINA",
+      "v2RuleNo": 13,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Lohgimand 684",
+      "norm": "lohgimand 684",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "OBCINA"
+      ],
+      "v2Primary": "OBCINA",
+      "v2RuleNo": 13,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "alm",
+      "norm": "alm",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "ALM"
+      ],
+      "v2Classes": [
+        "ALM"
+      ],
+      "v2Primary": "ALM",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Lohgimand 697",
+      "norm": "lohgimand 697",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "OBCINA"
+      ],
+      "v2Primary": "OBCINA",
+      "v2RuleNo": 13,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Achm",
+      "norm": "achm",
+      "pairs": 4,
+      "rows": 4,
+      "sections": {
+        "GRUND_1_2505": 4
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Furtrage",
+      "norm": "furtrage",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "ARTIFAKT",
+      "confidence": "?",
+      "noteSi": "opomba o prihodkih (Furtrage ≈ Futterträge)"
+    },
+    {
+      "raw": "Lohgimand 658",
+      "norm": "lohgimand 658",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "OBCINA"
+      ],
+      "v2Primary": "OBCINA",
+      "v2RuleNo": 13,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Wies",
+      "norm": "wies",
+      "pairs": 11,
+      "rows": 11,
+      "sections": {
+        "GRUND_1_2505": 11
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Gumig Gmand",
+      "norm": "gumig gmand",
+      "pairs": 2,
+      "rows": 2,
+      "sections": {
+        "GRUND_1_2505": 2
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "OBCINA"
+      ],
+      "v2Primary": "OBCINA",
+      "v2RuleNo": 13,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Achat",
+      "norm": "achat",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Einhait und Gärten und Gärten und Gärten und Laubm.",
+      "norm": "einhait und gaerten und gaerten und gaerten und laubm.",
+      "pairs": 3,
+      "rows": 3,
+      "sections": {
+        "GRUND_1_2505": 3
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "VRT"
+      ],
+      "v2Primary": "VRT",
+      "v2RuleNo": 17,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Gumig Gmde",
+      "norm": "gumig gmde",
+      "pairs": 3,
+      "rows": 3,
+      "sections": {
+        "GRUND_1_2505": 3
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "OBCINA"
+      ],
+      "v2Primary": "OBCINA",
+      "v2RuleNo": 13,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Sträuch mit Gipfeng",
+      "norm": "straeuch mit gipfeng",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "GOZD"
+      ],
+      "v2Primary": "GOZD",
+      "v2RuleNo": 20,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Gmias",
+      "norm": "gmias",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "VRT"
+      ],
+      "v2Primary": "VRT",
+      "v2RuleNo": 18,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Wiesen",
+      "norm": "wiesen",
+      "pairs": 46,
+      "rows": 46,
+      "sections": {
+        "GRUND_1_2505": 46
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Summa",
+      "norm": "summa",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "ARTIFAKT",
+      "confidence": "~",
+      "noteSi": "registrična beseda (vsota) — prišla v stolpec rabe"
+    },
+    {
+      "raw": "Lohng",
+      "norm": "lohng",
+      "pairs": 2,
+      "rows": 2,
+      "sections": {
+        "GRUND_1_2505": 2
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Ackerland",
+      "norm": "ackerland",
+      "pairs": 39,
+      "rows": 39,
+      "sections": {
+        "GRUND_1_2505": 39
+      },
+      "v1Classes": [
+        "NJIVA"
+      ],
+      "v2Classes": [
+        "NJIVA"
+      ],
+      "v2Primary": "NJIVA",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Eibes",
+      "norm": "eibes",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Almland",
+      "norm": "almland",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "ALM"
+      ],
+      "v2Classes": [
+        "ALM"
+      ],
+      "v2Primary": "ALM",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Garten",
+      "norm": "garten",
+      "pairs": 10,
+      "rows": 10,
+      "sections": {
+        "GRUND_1_2505": 10
+      },
+      "v1Classes": [
+        "VRT"
+      ],
+      "v2Classes": [
+        "VRT"
+      ],
+      "v2Primary": "VRT",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Laub",
+      "norm": "laub",
+      "pairs": 2,
+      "rows": 2,
+      "sections": {
+        "GRUND_1_2505": 2
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "GOZD"
+      ],
+      "v2Primary": "GOZD",
+      "v2RuleNo": 20,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Hutweide",
+      "norm": "hutweide",
+      "pairs": 4,
+      "rows": 4,
+      "sections": {
+        "GRUND_1_2505": 4
+      },
+      "v1Classes": [
+        "PASTVISCE"
+      ],
+      "v2Classes": [
+        "PASTVISCE"
+      ],
+      "v2Primary": "PASTVISCE",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Eidhaus",
+      "norm": "eidhaus",
+      "pairs": 2,
+      "rows": 2,
+      "sections": {
+        "GRUND_1_2505": 2
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Licht",
+      "norm": "licht",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Lhut",
+      "norm": "lhut",
+      "pairs": 17,
+      "rows": 17,
+      "sections": {
+        "GRUND_1_2505": 17
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Ehda",
+      "norm": "ehda",
+      "pairs": 9,
+      "rows": 9,
+      "sections": {
+        "GRUND_1_2505": 9
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "NEROD"
+      ],
+      "v2Primary": "NEROD",
+      "v2RuleNo": 22,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Lhga",
+      "norm": "lhga",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "?",
+      "noteSi": "morda Lehm-ga… — okrnjeno"
+    },
+    {
+      "raw": "Güten",
+      "norm": "gueten",
+      "pairs": 11,
+      "rows": 11,
+      "sections": {
+        "GRUND_1_2505": 11
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Liegut",
+      "norm": "liegut",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Lehmg.",
+      "norm": "lehmg.",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "~",
+      "noteSi": "Lehm(g) — okrajšan opis tal"
+    },
+    {
+      "raw": "Gartl.",
+      "norm": "gartl.",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "VRT"
+      ],
+      "v2Classes": [
+        "VRT"
+      ],
+      "v2Primary": "VRT",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Eidar",
+      "norm": "eidar",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Erdar",
+      "norm": "erdar",
+      "pairs": 4,
+      "rows": 4,
+      "sections": {
+        "GRUND_1_2505": 4
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Weingart",
+      "norm": "weingart",
+      "pairs": 4,
+      "rows": 4,
+      "sections": {
+        "GRUND_1_2505": 3,
+        "NADALJEVANJE_2506": 1
+      },
+      "v1Classes": [
+        "VRT"
+      ],
+      "v2Classes": [
+        "VRT"
+      ],
+      "v2Primary": "VRT",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Gübel",
+      "norm": "guebel",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "~",
+      "noteSi": "Gübel/Gupf = gričevnat vrh (kärntensko)"
+    },
+    {
+      "raw": "Lohgründt baumart.",
+      "norm": "lohgruendt baumart.",
+      "pairs": 3,
+      "rows": 3,
+      "sections": {
+        "GRUND_1_2505": 3
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "GOZD"
+      ],
+      "v2Primary": "GOZD",
+      "v2RuleNo": 20,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Lohgründt Gesträuch",
+      "norm": "lohgruendt gestraeuch",
+      "pairs": 2,
+      "rows": 2,
+      "sections": {
+        "GRUND_1_2505": 2
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "GOZD"
+      ],
+      "v2Primary": "GOZD",
+      "v2RuleNo": 20,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Lohwies",
+      "norm": "lohwies",
+      "pairs": 6,
+      "rows": 6,
+      "sections": {
+        "GRUND_1_2505": 6
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Lohwies gschmiedes",
+      "norm": "lohwies gschmiedes",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Lohgarn",
+      "norm": "lohgarn",
+      "pairs": 7,
+      "rows": 7,
+      "sections": {
+        "GRUND_1_2505": 7
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Lohgrube",
+      "norm": "lohgrube",
+      "pairs": 11,
+      "rows": 11,
+      "sections": {
+        "GRUND_1_2505": 11
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "STAVBNO"
+      ],
+      "v2Primary": "STAVBNO",
+      "v2RuleNo": 24,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Brache",
+      "norm": "brache",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "NEROD"
+      ],
+      "v2Primary": "NEROD",
+      "v2RuleNo": 22,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Ladigl",
+      "norm": "ladigl",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Gebürg",
+      "norm": "gebuerg",
+      "pairs": 2,
+      "rows": 2,
+      "sections": {
+        "GRUND_1_2505": 2
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "~",
+      "noteSi": "Gebürg = Gebirge — terenska oznaka"
+    },
+    {
+      "raw": "Schupfen",
+      "norm": "schupfen",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "STAVBNO"
+      ],
+      "v2Primary": "STAVBNO",
+      "v2RuleNo": 24,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Wiese und Gfrett",
+      "norm": "wiese und gfrett",
+      "pairs": 14,
+      "rows": 14,
+      "sections": {
+        "GRUND_1_2505": 14
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Schlagwald",
+      "norm": "schlagwald",
+      "pairs": 8,
+      "rows": 8,
+      "sections": {
+        "GRUND_1_2505": 8
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "GOZD"
+      ],
+      "v2Primary": "GOZD",
+      "v2RuleNo": 20,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Wiese und Gfrett Wiesen",
+      "norm": "wiese und gfrett wiesen",
+      "pairs": 4,
+      "rows": 4,
+      "sections": {
+        "GRUND_1_2505": 4
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Wiese und Gfrett Gfrett",
+      "norm": "wiese und gfrett gfrett",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Wiese und Gf. Pöllern",
+      "norm": "wiese und gf. poellern",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Lache",
+      "norm": "lache",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "VODA"
+      ],
+      "v2Primary": "VODA",
+      "v2RuleNo": 25,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Lhup",
+      "norm": "lhup",
+      "pairs": 8,
+      "rows": 8,
+      "sections": {
+        "GRUND_1_2505": 8
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Eidn",
+      "norm": "eidn",
+      "pairs": 11,
+      "rows": 11,
+      "sections": {
+        "GRUND_1_2505": 11
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "NEROD"
+      ],
+      "v2Primary": "NEROD",
+      "v2RuleNo": 22,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Lhupf",
+      "norm": "lhupf",
+      "pairs": 7,
+      "rows": 7,
+      "sections": {
+        "GRUND_1_2505": 7
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Lhopi",
+      "norm": "lhopi",
+      "pairs": 7,
+      "rows": 7,
+      "sections": {
+        "GRUND_1_2505": 7
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Eibn",
+      "norm": "eibn",
+      "pairs": 6,
+      "rows": 6,
+      "sections": {
+        "GRUND_1_2505": 6
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Wiesg",
+      "norm": "wiesg",
+      "pairs": 6,
+      "rows": 6,
+      "sections": {
+        "GRUND_1_2505": 6
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Schupfen u. Gst.",
+      "norm": "schupfen u. gst.",
+      "pairs": 4,
+      "rows": 4,
+      "sections": {
+        "GRUND_1_2505": 4
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "STAVBNO"
+      ],
+      "v2Primary": "STAVBNO",
+      "v2RuleNo": 24,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Wiesen Futterg.",
+      "norm": "wiesen futterg.",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Gartn.",
+      "norm": "gartn.",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "VRT"
+      ],
+      "v2Classes": [
+        "VRT"
+      ],
+      "v2Primary": "VRT",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Lohwald",
+      "norm": "lohwald",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "GOZD"
+      ],
+      "v2Primary": "GOZD",
+      "v2RuleNo": 20,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Schlag",
+      "norm": "schlag",
+      "pairs": 2,
+      "rows": 2,
+      "sections": {
+        "GRUND_1_2505": 2
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Boden",
+      "norm": "boden",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "STAVBNO"
+      ],
+      "v2Primary": "STAVBNO",
+      "v2RuleNo": 24,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Hurgi",
+      "norm": "hurgi",
+      "pairs": 5,
+      "rows": 5,
+      "sections": {
+        "GRUND_1_2505": 5
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "a Düng",
+      "norm": "a dueng",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Allh[?]",
+      "norm": "allh[?]",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Weg",
+      "norm": "weg",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "CESTA"
+      ],
+      "v2Classes": [
+        "CESTA"
+      ],
+      "v2Primary": "CESTA",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Lhupa",
+      "norm": "lhupa",
+      "pairs": 3,
+      "rows": 3,
+      "sections": {
+        "GRUND_1_2505": 3
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Stüwd und baumw",
+      "norm": "stuewd und baumw",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "GOZD"
+      ],
+      "v2Primary": "GOZD",
+      "v2RuleNo": 20,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Ahn",
+      "norm": "ahn",
+      "pairs": 13,
+      "rows": 13,
+      "sections": {
+        "GRUND_1_2505": 13
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Gütung",
+      "norm": "guetung",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Zehorn",
+      "norm": "zehorn",
+      "pairs": 2,
+      "rows": 2,
+      "sections": {
+        "GRUND_1_2505": 2
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "~",
+      "noteSi": "horn = gorski vrh — ležajno ime"
+    },
+    {
+      "raw": "Weingarten",
+      "norm": "weingarten",
+      "pairs": 7,
+      "rows": 7,
+      "sections": {
+        "GRUND_1_2505": 4,
+        "NADALJEVANJE_2506": 3
+      },
+      "v1Classes": [
+        "VINOGRAD",
+        "VRT"
+      ],
+      "v2Classes": [
+        "VINOGRAD",
+        "VRT"
+      ],
+      "v2Primary": "VINOGRAD",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Edlhop",
+      "norm": "edlhop",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "STAVBNO"
+      ],
+      "v2Primary": "STAVBNO",
+      "v2RuleNo": 24,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Edhop",
+      "norm": "edhop",
+      "pairs": 3,
+      "rows": 3,
+      "sections": {
+        "GRUND_1_2505": 3
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "STAVBNO"
+      ],
+      "v2Primary": "STAVBNO",
+      "v2RuleNo": 24,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Stumpf",
+      "norm": "stumpf",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Edhup",
+      "norm": "edhup",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "STAVBNO"
+      ],
+      "v2Primary": "STAVBNO",
+      "v2RuleNo": 24,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Wiesen-Äcker",
+      "norm": "wiesen-aecker",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "NJIVA",
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "NJIVA",
+        "TRAVNIK"
+      ],
+      "v2Primary": "NJIVA",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Schupfisch Äcker",
+      "norm": "schupfisch aecker",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "NJIVA"
+      ],
+      "v2Classes": [
+        "NJIVA"
+      ],
+      "v2Primary": "NJIVA",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Schupf.",
+      "norm": "schupf.",
+      "pairs": 5,
+      "rows": 5,
+      "sections": {
+        "GRUND_1_2505": 5
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "STAVBNO"
+      ],
+      "v2Primary": "STAVBNO",
+      "v2RuleNo": 24,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Wein",
+      "norm": "wein",
+      "pairs": 10,
+      "rows": 10,
+      "sections": {
+        "GRUND_1_2505": 10
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "VINOGRAD"
+      ],
+      "v2Primary": "VINOGRAD",
+      "v2RuleNo": 16,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Ebenhard Äcker",
+      "norm": "ebenhard aecker",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "NJIVA"
+      ],
+      "v2Classes": [
+        "NJIVA"
+      ],
+      "v2Primary": "NJIVA",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "o. Ried",
+      "norm": "o. ried",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "~",
+      "noteSi": "Ried = ledinsko ime (kärntensko)"
+    },
+    {
+      "raw": "Ebingach",
+      "norm": "ebingach",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "~",
+      "noteSi": "-ach/-aach = vodni formant v imenu"
+    },
+    {
+      "raw": "Weingarten 66[?]",
+      "norm": "weingarten 66[?]",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "VINOGRAD",
+        "VRT"
+      ],
+      "v2Classes": [
+        "VINOGRAD",
+        "VRT"
+      ],
+      "v2Primary": "VINOGRAD",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Abtränig Leumuth",
+      "norm": "abtraenig leumuth",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "~",
+      "noteSi": "okrajšana varianta"
+    },
+    {
+      "raw": "Abtränig Spötlg.",
+      "norm": "abtraenig spoetlg.",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "~",
+      "noteSi": "okrajšana varianta"
+    },
+    {
+      "raw": "Ehingartl",
+      "norm": "ehingartl",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "VRT"
+      ],
+      "v2Classes": [
+        "VRT"
+      ],
+      "v2Primary": "VRT",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Wiesen und Leumuth",
+      "norm": "wiesen und leumuth",
+      "pairs": 2,
+      "rows": 2,
+      "sections": {
+        "GRUND_1_2505": 2
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Abtränig Spötlg. Leumuth",
+      "norm": "abtraenig spoetlg. leumuth",
+      "pairs": 6,
+      "rows": 6,
+      "sections": {
+        "GRUND_1_2505": 6
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "~",
+      "noteSi": "opis lege (Abtränig = odcepek? + Leumaue)"
+    },
+    {
+      "raw": "Ehing",
+      "norm": "ehing",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "~",
+      "noteSi": "-ing = prazgodovinsko-srednjeveški naselbinski formant"
+    },
+    {
+      "raw": "Gebüsch",
+      "norm": "gebuesch",
+      "pairs": 2,
+      "rows": 2,
+      "sections": {
+        "GRUND_1_2505": 2
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "GOZD"
+      ],
+      "v2Primary": "GOZD",
+      "v2RuleNo": 20,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Ehinga",
+      "norm": "ehinga",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "~",
+      "noteSi": "varianta zapisa"
+    },
+    {
+      "raw": "Gebüsch Gärten",
+      "norm": "gebuesch gaerten",
+      "pairs": 2,
+      "rows": 2,
+      "sections": {
+        "GRUND_1_2505": 2
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "VRT"
+      ],
+      "v2Primary": "VRT",
+      "v2RuleNo": 17,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Lehga",
+      "norm": "lehga",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "?",
+      "noteSi": "morda Lehm-ga… — okrnjeno"
+    },
+    {
+      "raw": "Gehölz Obst",
+      "norm": "gehoelz obst",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "VRT"
+      ],
+      "v2Primary": "VRT",
+      "v2RuleNo": 18,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Schutt",
+      "norm": "schutt",
+      "pairs": 2,
+      "rows": 2,
+      "sections": {
+        "GRUND_1_2505": 2
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Ebene ?",
+      "norm": "ebene ?",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "~",
+      "noteSi": "izrecno dvomljiv zapis (?), terenski opis"
+    },
+    {
+      "raw": "Wiese unfruchtbar",
+      "norm": "wiese unfruchtbar",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Steingrube",
+      "norm": "steingrube",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "STAVBNO"
+      ],
+      "v2Primary": "STAVBNO",
+      "v2RuleNo": 24,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Abhang",
+      "norm": "abhang",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "~",
+      "noteSi": "naklon — terenski opis"
+    },
+    {
+      "raw": "Weidegarte",
+      "norm": "weidegarte",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "PASTVISCE",
+        "VRT"
+      ],
+      "v2Classes": [
+        "PASTVISCE",
+        "VRT"
+      ],
+      "v2Primary": "PASTVISCE",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Wiesenrain",
+      "norm": "wiesenrain",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Schlagäder",
+      "norm": "schlagaeder",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Weingart 6/7",
+      "norm": "weingart 6/7",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "VRT"
+      ],
+      "v2Classes": [
+        "VRT"
+      ],
+      "v2Primary": "VRT",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Leite",
+      "norm": "leite",
+      "pairs": 11,
+      "rows": 11,
+      "sections": {
+        "GRUND_1_2505": 11
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "~",
+      "noteSi": "Leite = požleb/naklon — mikrolokalna oznaka"
+    },
+    {
+      "raw": "Stopp",
+      "norm": "stopp",
+      "pairs": 6,
+      "rows": 6,
+      "sections": {
+        "GRUND_1_2505": 6
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "NJIVA"
+      ],
+      "v2Primary": "NJIVA",
+      "v2RuleNo": 19,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "5k Einträg",
+      "norm": "5k eintraeg",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "ARTIFAKT",
+      "confidence": "?",
+      "noteSi": "opomba (Einträge = vnosi/pridelki)"
+    },
+    {
+      "raw": "Eingemaut Gfrörer und Laimauer",
+      "norm": "eingemaut gfroerer und laimauer",
+      "pairs": 12,
+      "rows": 12,
+      "sections": {
+        "GRUND_1_2505": 12
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "~",
+      "noteSi": "opis lege: 'eingemauerte Gfrörer- und Laimau' (zmrzovalna kotanja in glinena au)"
+    },
+    {
+      "raw": "Lhize",
+      "norm": "lhize",
+      "pairs": 7,
+      "rows": 7,
+      "sections": {
+        "GRUND_1_2505": 7
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Eingemaut Laimauer",
+      "norm": "eingemaut laimauer",
+      "pairs": 3,
+      "rows": 3,
+      "sections": {
+        "GRUND_1_2505": 3
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "~",
+      "noteSi": "okrajšana varianta"
+    },
+    {
+      "raw": "Eingemaut Lorenz",
+      "norm": "eingemaut lorenz",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "~",
+      "noteSi": "okrajšana varianta"
+    },
+    {
+      "raw": "Lhizl",
+      "norm": "lhizl",
+      "pairs": 2,
+      "rows": 2,
+      "sections": {
+        "GRUND_1_2505": 2
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Lhizgutl [?]",
+      "norm": "lhizgutl [?]",
+      "pairs": 2,
+      "rows": 2,
+      "sections": {
+        "GRUND_1_2505": 2
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "STAVBNO"
+      ],
+      "v2Primary": "STAVBNO",
+      "v2RuleNo": 24,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Eingemaut Gfrörer und Lorenz",
+      "norm": "eingemaut gfroerer und lorenz",
+      "pairs": 2,
+      "rows": 2,
+      "sections": {
+        "GRUND_1_2505": 2
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "~",
+      "noteSi": "varianta (Lorenz/Laimen?)"
+    },
+    {
+      "raw": "Lukig",
+      "norm": "lukig",
+      "pairs": 10,
+      "rows": 10,
+      "sections": {
+        "GRUND_1_2505": 10
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Schlagfeld Brachmnd",
+      "norm": "schlagfeld brachmnd",
+      "pairs": 3,
+      "rows": 3,
+      "sections": {
+        "GRUND_1_2505": 3
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "NJIVA"
+      ],
+      "v2Primary": "NJIVA",
+      "v2RuleNo": 19,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Schlagfeld Baumg.",
+      "norm": "schlagfeld baumg.",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "NJIVA"
+      ],
+      "v2Primary": "NJIVA",
+      "v2RuleNo": 19,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Schlagfeld G'floggsb.",
+      "norm": "schlagfeld g'floggsb.",
+      "pairs": 12,
+      "rows": 12,
+      "sections": {
+        "GRUND_1_2505": 12
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "NJIVA"
+      ],
+      "v2Primary": "NJIVA",
+      "v2RuleNo": 19,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Schlagfeld Paggwiesb.",
+      "norm": "schlagfeld paggwiesb.",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Schlagmhd. Smigb.",
+      "norm": "schlagmhd. smigb.",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Schlagmhd. G'floggsb.",
+      "norm": "schlagmhd. g'floggsb.",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Schlagfeld Gorginib.",
+      "norm": "schlagfeld gorginib.",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "NJIVA"
+      ],
+      "v2Primary": "NJIVA",
+      "v2RuleNo": 19,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Ebnerd",
+      "norm": "ebnerd",
+      "pairs": 5,
+      "rows": 5,
+      "sections": {
+        "GRUND_1_2505": 5
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "~",
+      "noteSi": "eben + Erd — 'ravna zemlja'"
+    },
+    {
+      "raw": "Oedn",
+      "norm": "oedn",
+      "pairs": 7,
+      "rows": 7,
+      "sections": {
+        "GRUND_1_2505": 7
+      },
+      "v1Classes": [
+        "NEROD"
+      ],
+      "v2Classes": [
+        "NEROD"
+      ],
+      "v2Primary": "NEROD",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Grien",
+      "norm": "grien",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "~",
+      "noteSi": "Grien = prod/nahaj (kärntensko) — opis tal"
+    },
+    {
+      "raw": "Wing",
+      "norm": "wing",
+      "pairs": 3,
+      "rows": 3,
+      "sections": {
+        "GRUND_1_2505": 3
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Waldp",
+      "norm": "waldp",
+      "pairs": 4,
+      "rows": 4,
+      "sections": {
+        "GRUND_1_2505": 4
+      },
+      "v1Classes": [
+        "GOZD"
+      ],
+      "v2Classes": [
+        "GOZD"
+      ],
+      "v2Primary": "GOZD",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Einschlag mit Frucht und Gülze",
+      "norm": "einschlag mit frucht und guelze",
+      "pairs": 3,
+      "rows": 3,
+      "sections": {
+        "GRUND_1_2505": 3
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "NJIVA"
+      ],
+      "v2Primary": "NJIVA",
+      "v2RuleNo": 19,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Einschlag mit Gülze",
+      "norm": "einschlag mit guelze",
+      "pairs": 7,
+      "rows": 7,
+      "sections": {
+        "GRUND_1_2505": 7
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Wiese mit Gras & Gülze",
+      "norm": "wiese mit gras & guelze",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Gülze",
+      "norm": "guelze",
+      "pairs": 6,
+      "rows": 6,
+      "sections": {
+        "GRUND_1_2505": 6
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Gülze mit Gülze",
+      "norm": "guelze mit guelze",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Garteng",
+      "norm": "garteng",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "VRT"
+      ],
+      "v2Classes": [
+        "VRT"
+      ],
+      "v2Primary": "VRT",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Weidewies",
+      "norm": "weidewies",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "TRAVNIK",
+        "PASTVISCE"
+      ],
+      "v2Classes": [
+        "TRAVNIK",
+        "PASTVISCE"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Gärten und Weiden",
+      "norm": "gaerten und weiden",
+      "pairs": 7,
+      "rows": 7,
+      "sections": {
+        "GRUND_1_2505": 7
+      },
+      "v1Classes": [
+        "PASTVISCE"
+      ],
+      "v2Classes": [
+        "PASTVISCE"
+      ],
+      "v2Primary": "PASTVISCE",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Gmös",
+      "norm": "gmoes",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "65 Fürtrg.",
+      "norm": "65 fuertrg.",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "ARTIFAKT",
+      "confidence": "?",
+      "noteSi": "opomba o prihodkih (Fürtrg. ≈ Fütterung/Futtertrag)"
+    },
+    {
+      "raw": "68 Füßreg",
+      "norm": "68 fuessreg",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Eing",
+      "norm": "eing",
+      "pairs": 4,
+      "rows": 4,
+      "sections": {
+        "GRUND_1_2505": 4
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Himbeeren",
+      "norm": "himbeeren",
+      "pairs": 3,
+      "rows": 3,
+      "sections": {
+        "GRUND_1_2505": 3
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "VRT"
+      ],
+      "v2Primary": "VRT",
+      "v2RuleNo": 18,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Wiese und Lorbeer",
+      "norm": "wiese und lorbeer",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Findling und Lorbeer",
+      "norm": "findling und lorbeer",
+      "pairs": 4,
+      "rows": 4,
+      "sections": {
+        "GRUND_1_2505": 4
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "GOZD"
+      ],
+      "v2Primary": "GOZD",
+      "v2RuleNo": 20,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Himbeeren und Lorbeer",
+      "norm": "himbeeren und lorbeer",
+      "pairs": 5,
+      "rows": 5,
+      "sections": {
+        "GRUND_1_2505": 5
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "VRT"
+      ],
+      "v2Primary": "VRT",
+      "v2RuleNo": 18,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Findling und Gärten",
+      "norm": "findling und gaerten",
+      "pairs": 3,
+      "rows": 3,
+      "sections": {
+        "GRUND_1_2505": 3
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "VRT"
+      ],
+      "v2Primary": "VRT",
+      "v2RuleNo": 17,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Himbeergarten",
+      "norm": "himbeergarten",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "VRT"
+      ],
+      "v2Classes": [
+        "VRT"
+      ],
+      "v2Primary": "VRT",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Himbeeren und Gärten",
+      "norm": "himbeeren und gaerten",
+      "pairs": 3,
+      "rows": 3,
+      "sections": {
+        "GRUND_1_2505": 3
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "VRT"
+      ],
+      "v2Primary": "VRT",
+      "v2RuleNo": 17,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Lorbeer",
+      "norm": "lorbeer",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "GOZD"
+      ],
+      "v2Primary": "GOZD",
+      "v2RuleNo": 20,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Acker mit Wiesen",
+      "norm": "acker mit wiesen",
+      "pairs": 5,
+      "rows": 5,
+      "sections": {
+        "GRUND_1_2505": 5
+      },
+      "v1Classes": [
+        "NJIVA",
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "NJIVA",
+        "TRAVNIK"
+      ],
+      "v2Primary": "NJIVA",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Acker mit Wiesen 1",
+      "norm": "acker mit wiesen 1",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "NJIVA",
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "NJIVA",
+        "TRAVNIK"
+      ],
+      "v2Primary": "NJIVA",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Acker mit Gärten",
+      "norm": "acker mit gaerten",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "NJIVA"
+      ],
+      "v2Classes": [
+        "NJIVA"
+      ],
+      "v2Primary": "NJIVA",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Wiesenr.",
+      "norm": "wiesenr.",
+      "pairs": 2,
+      "rows": 2,
+      "sections": {
+        "GRUND_1_2505": 2
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Wiesen mit Gärten",
+      "norm": "wiesen mit gaerten",
+      "pairs": 2,
+      "rows": 2,
+      "sections": {
+        "GRUND_1_2505": 2
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Wiesen mit Wiesen",
+      "norm": "wiesen mit wiesen",
+      "pairs": 4,
+      "rows": 4,
+      "sections": {
+        "GRUND_1_2505": 4
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Einfach mit Gesträuch et Wiesen",
+      "norm": "einfach mit gestraeuch et wiesen",
+      "pairs": 14,
+      "rows": 14,
+      "sections": {
+        "GRUND_1_2505": 14
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Einfach",
+      "norm": "einfach",
+      "pairs": 5,
+      "rows": 5,
+      "sections": {
+        "GRUND_1_2505": 5
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Äschny",
+      "norm": "aeschny",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Epind",
+      "norm": "epind",
+      "pairs": 2,
+      "rows": 2,
+      "sections": {
+        "GRUND_1_2505": 2
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Weide und Gfällgut, Laubm.",
+      "norm": "weide und gfaellgut, laubm.",
+      "pairs": 19,
+      "rows": 19,
+      "sections": {
+        "GRUND_1_2505": 19
+      },
+      "v1Classes": [
+        "PASTVISCE"
+      ],
+      "v2Classes": [
+        "PASTVISCE"
+      ],
+      "v2Primary": "PASTVISCE",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Gemeinde Grätzig",
+      "norm": "gemeinde graetzig",
+      "pairs": 15,
+      "rows": 15,
+      "sections": {
+        "GRUND_1_2505": 15
+      },
+      "v1Classes": [
+        "OBCINA"
+      ],
+      "v2Classes": [
+        "OBCINA"
+      ],
+      "v2Primary": "OBCINA",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Einhart mit Gypfel &c.",
+      "norm": "einhart mit gypfel &c.",
+      "pairs": 14,
+      "rows": 14,
+      "sections": {
+        "GRUND_1_2505": 14
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Einhart mit Gypf. &c.",
+      "norm": "einhart mit gypf. &c.",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Lehmo",
+      "norm": "lehmo",
+      "pairs": 2,
+      "rows": 2,
+      "sections": {
+        "GRUND_1_2505": 2
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "~",
+      "noteSi": "Lehm = glina — opis tal"
+    },
+    {
+      "raw": "Sulmi",
+      "norm": "sulmi",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Stumpo",
+      "norm": "stumpo",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Strohr",
+      "norm": "strohr",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Schmugarten",
+      "norm": "schmugarten",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "VRT"
+      ],
+      "v2Classes": [
+        "VRT"
+      ],
+      "v2Primary": "VRT",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Steinwurt",
+      "norm": "steinwurt",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Wiese und Acker",
+      "norm": "wiese und acker",
+      "pairs": 20,
+      "rows": 20,
+      "sections": {
+        "GRUND_1_2505": 20
+      },
+      "v1Classes": [
+        "NJIVA",
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "NJIVA",
+        "TRAVNIK"
+      ],
+      "v2Primary": "NJIVA",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Lachen",
+      "norm": "lachen",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "VODA"
+      ],
+      "v2Primary": "VODA",
+      "v2RuleNo": 25,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Wiesen und Acker",
+      "norm": "wiesen und acker",
+      "pairs": 3,
+      "rows": 3,
+      "sections": {
+        "GRUND_1_2505": 3
+      },
+      "v1Classes": [
+        "NJIVA",
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "NJIVA",
+        "TRAVNIK"
+      ],
+      "v2Primary": "NJIVA",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Brungarten",
+      "norm": "brungarten",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "VRT"
+      ],
+      "v2Classes": [
+        "VRT"
+      ],
+      "v2Primary": "VRT",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Obst",
+      "norm": "obst",
+      "pairs": 5,
+      "rows": 5,
+      "sections": {
+        "GRUND_1_2505": 5
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "VRT"
+      ],
+      "v2Primary": "VRT",
+      "v2RuleNo": 18,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Weing",
+      "norm": "weing",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "VINOGRAD"
+      ],
+      "v2Primary": "VINOGRAD",
+      "v2RuleNo": 16,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Gärten",
+      "norm": "gaerten",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "VRT"
+      ],
+      "v2Primary": "VRT",
+      "v2RuleNo": 17,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Waldm",
+      "norm": "waldm",
+      "pairs": 6,
+      "rows": 6,
+      "sections": {
+        "GRUND_1_2505": 6
+      },
+      "v1Classes": [
+        "GOZD"
+      ],
+      "v2Classes": [
+        "GOZD"
+      ],
+      "v2Primary": "GOZD",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Ladstr.",
+      "norm": "ladstr.",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Eulmn",
+      "norm": "eulmn",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Eldms",
+      "norm": "eldms",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Äfling",
+      "norm": "aefling",
+      "pairs": 13,
+      "rows": 13,
+      "sections": {
+        "GRUND_1_2505": 13
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Einöd Wiese Geyersättä",
+      "norm": "einoed wiese geyersaettae",
+      "pairs": 12,
+      "rows": 12,
+      "sections": {
+        "GRUND_1_2505": 12
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Einöd Wiese Gey. sätä",
+      "norm": "einoed wiese gey. saetae",
+      "pairs": 6,
+      "rows": 6,
+      "sections": {
+        "GRUND_1_2505": 6
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Einhauß",
+      "norm": "einhauss",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "STAVBNO"
+      ],
+      "v2Primary": "STAVBNO",
+      "v2RuleNo": 24,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Gärten Gartlitzg",
+      "norm": "gaerten gartlitzg",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "VRT"
+      ],
+      "v2Classes": [
+        "VRT"
+      ],
+      "v2Primary": "VRT",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Eshauß",
+      "norm": "eshauss",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "STAVBNO"
+      ],
+      "v2Primary": "STAVBNO",
+      "v2RuleNo": 24,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Wiesenland",
+      "norm": "wiesenland",
+      "pairs": 4,
+      "rows": 4,
+      "sections": {
+        "GRUND_1_2505": 4
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "29 Bäumen",
+      "norm": "29 baeumen",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "ARTIFAKT",
+      "confidence": "~",
+      "noteSi": "opomba številu dreves"
+    },
+    {
+      "raw": "Acker und Wiese",
+      "norm": "acker und wiese",
+      "pairs": 43,
+      "rows": 45,
+      "sections": {
+        "GRUND_1_2505": 43
+      },
+      "v1Classes": [
+        "NJIVA",
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "NJIVA",
+        "TRAVNIK"
+      ],
+      "v2Primary": "NJIVA",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Wiese und Weide",
+      "norm": "wiese und weide",
+      "pairs": 2,
+      "rows": 2,
+      "sections": {
+        "GRUND_1_2505": 2
+      },
+      "v1Classes": [
+        "TRAVNIK",
+        "PASTVISCE"
+      ],
+      "v2Classes": [
+        "TRAVNIK",
+        "PASTVISCE"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Ainöd",
+      "norm": "ainoed",
+      "pairs": 6,
+      "rows": 6,
+      "sections": {
+        "GRUND_1_2505": 6
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "NEROD"
+      ],
+      "v2Primary": "NEROD",
+      "v2RuleNo": 22,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Wiesen und Äcker",
+      "norm": "wiesen und aecker",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "NJIVA",
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "NJIVA",
+        "TRAVNIK"
+      ],
+      "v2Primary": "NJIVA",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Ainöd und Wiesen",
+      "norm": "ainoed und wiesen",
+      "pairs": 3,
+      "rows": 3,
+      "sections": {
+        "GRUND_1_2505": 3
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Wiesen und Wiesen",
+      "norm": "wiesen und wiesen",
+      "pairs": 2,
+      "rows": 2,
+      "sections": {
+        "GRUND_1_2505": 2
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Buchholz und Wiesen",
+      "norm": "buchholz und wiesen",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Aein",
+      "norm": "aein",
+      "pairs": 2,
+      "rows": 2,
+      "sections": {
+        "GRUND_1_2505": 2
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Aeinod",
+      "norm": "aeinod",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "NEROD"
+      ],
+      "v2Primary": "NEROD",
+      "v2RuleNo": 22,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Winkel",
+      "norm": "winkel",
+      "pairs": 2,
+      "rows": 2,
+      "sections": {
+        "GRUND_1_2505": 2
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "~",
+      "noteSi": "kot/ogljek — ležajno ime"
+    },
+    {
+      "raw": "Harden",
+      "norm": "harden",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Schüttwiese, Gypfang",
+      "norm": "schuettwiese, gypfang",
+      "pairs": 6,
+      "rows": 6,
+      "sections": {
+        "GRUND_1_2505": 6
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "87 Furtreg.",
+      "norm": "87 furtreg.",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "ARTIFAKT",
+      "confidence": "?",
+      "noteSi": "opomba o prihodkih (Furtreg. ≈ Futtertrag)"
+    },
+    {
+      "raw": "Äcker und Wiesen",
+      "norm": "aecker und wiesen",
+      "pairs": 19,
+      "rows": 19,
+      "sections": {
+        "GRUND_1_2505": 19
+      },
+      "v1Classes": [
+        "NJIVA",
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "NJIVA",
+        "TRAVNIK"
+      ],
+      "v2Primary": "NJIVA",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Schüttwiese, Gypfang, Laume",
+      "norm": "schuettwiese, gypfang, laume",
+      "pairs": 14,
+      "rows": 14,
+      "sections": {
+        "GRUND_1_2505": 14
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Wiesen und Laubm",
+      "norm": "wiesen und laubm",
+      "pairs": 5,
+      "rows": 5,
+      "sections": {
+        "GRUND_1_2505": 5
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Schlagfeld",
+      "norm": "schlagfeld",
+      "pairs": 10,
+      "rows": 10,
+      "sections": {
+        "GRUND_1_2505": 10
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "NJIVA"
+      ],
+      "v2Primary": "NJIVA",
+      "v2RuleNo": 19,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Luppa",
+      "norm": "luppa",
+      "pairs": 3,
+      "rows": 3,
+      "sections": {
+        "GRUND_1_2505": 3
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Wald und Gesträuch",
+      "norm": "wald und gestraeuch",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "GOZD"
+      ],
+      "v2Classes": [
+        "GOZD"
+      ],
+      "v2Primary": "GOZD",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Wiesen und Hügeln und Raine",
+      "norm": "wiesen und huegeln und raine",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Wiese und Gesträuch und Raine",
+      "norm": "wiese und gestraeuch und raine",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Wald und Gesträuch und Raine",
+      "norm": "wald und gestraeuch und raine",
+      "pairs": 4,
+      "rows": 4,
+      "sections": {
+        "GRUND_1_2505": 4
+      },
+      "v1Classes": [
+        "GOZD"
+      ],
+      "v2Classes": [
+        "GOZD"
+      ],
+      "v2Primary": "GOZD",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Acker und Wiesen",
+      "norm": "acker und wiesen",
+      "pairs": 39,
+      "rows": 39,
+      "sections": {
+        "GRUND_1_2505": 39
+      },
+      "v1Classes": [
+        "NJIVA",
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "NJIVA",
+        "TRAVNIK"
+      ],
+      "v2Primary": "NJIVA",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Wiesen und Wälder",
+      "norm": "wiesen und waelder",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Wistmad",
+      "norm": "wistmad",
+      "pairs": 11,
+      "rows": 11,
+      "sections": {
+        "GRUND_1_2505": 11
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "NEROD"
+      ],
+      "v2Primary": "NEROD",
+      "v2RuleNo": 22,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Wiste",
+      "norm": "wiste",
+      "pairs": 7,
+      "rows": 7,
+      "sections": {
+        "GRUND_1_2505": 7
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "NEROD"
+      ],
+      "v2Primary": "NEROD",
+      "v2RuleNo": 22,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Wistn",
+      "norm": "wistn",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "NEROD"
+      ],
+      "v2Primary": "NEROD",
+      "v2RuleNo": 22,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Eggwisen",
+      "norm": "eggwisen",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": 15,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Schüttgrund",
+      "norm": "schuettgrund",
+      "pairs": 10,
+      "rows": 10,
+      "sections": {
+        "GRUND_1_2505": 10
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "~",
+      "noteSi": "'Schütt-Grund' — zemljiško ime (Grund = parcela/tla)"
+    },
+    {
+      "raw": "Schüttläger",
+      "norm": "schuettlaeger",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Johut",
+      "norm": "johut",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "PASTVISCE"
+      ],
+      "v2Primary": "PASTVISCE",
+      "v2RuleNo": 21,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Indrult Laimen",
+      "norm": "indrult laimen",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "~",
+      "noteSi": "varianta zapisa"
+    },
+    {
+      "raw": "Indrunt Laimen",
+      "norm": "indrunt laimen",
+      "pairs": 5,
+      "rows": 5,
+      "sections": {
+        "GRUND_1_2505": 5
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "~",
+      "noteSi": "'in der Grund' + Laimen = glinena tla"
+    },
+    {
+      "raw": "Indrund Laimen",
+      "norm": "indrund laimen",
+      "pairs": 4,
+      "rows": 4,
+      "sections": {
+        "GRUND_1_2505": 4
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "~",
+      "noteSi": "varianta zapisa"
+    },
+    {
+      "raw": "Lhuta",
+      "norm": "lhuta",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Ehuta",
+      "norm": "ehuta",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "100 Futter",
+      "norm": "100 futter",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "ARTIFAKT",
+      "confidence": "?",
+      "noteSi": "opomba o prihodkih (Futter = krma/krmna enota)"
+    },
+    {
+      "raw": "Indrunt Leimen",
+      "norm": "indrunt leimen",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "~",
+      "noteSi": "Leimen = glina"
+    },
+    {
+      "raw": "Einhemdtl. Purgstall",
+      "norm": "einhemdtl. purgstall",
+      "pairs": 18,
+      "rows": 18,
+      "sections": {
+        "GRUND_1_2505": 18
+      },
+      "v1Classes": [
+        "STAVBNO"
+      ],
+      "v2Classes": [
+        "STAVBNO"
+      ],
+      "v2Primary": "STAVBNO",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Schüttboden",
+      "norm": "schuettboden",
+      "pairs": 9,
+      "rows": 9,
+      "sections": {
+        "GRUND_1_2505": 9
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "STAVBNO"
+      ],
+      "v2Primary": "STAVBNO",
+      "v2RuleNo": 24,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Einhemdtl.",
+      "norm": "einhemdtl.",
+      "pairs": 2,
+      "rows": 2,
+      "sections": {
+        "GRUND_1_2505": 2
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Wiesenwiese",
+      "norm": "wiesenwiese",
+      "pairs": 18,
+      "rows": 18,
+      "sections": {
+        "GRUND_1_2505": 18
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Weidengarten",
+      "norm": "weidengarten",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "PASTVISCE",
+        "VRT"
+      ],
+      "v2Classes": [
+        "PASTVISCE",
+        "VRT"
+      ],
+      "v2Primary": "PASTVISCE",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Gartengut",
+      "norm": "gartengut",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "VRT"
+      ],
+      "v2Classes": [
+        "VRT"
+      ],
+      "v2Primary": "VRT",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Schüttmühle",
+      "norm": "schuettmuehle",
+      "pairs": 20,
+      "rows": 20,
+      "sections": {
+        "GRUND_1_2505": 20
+      },
+      "v1Classes": [
+        "STAVBNO"
+      ],
+      "v2Classes": [
+        "STAVBNO"
+      ],
+      "v2Primary": "STAVBNO",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Einhemisches Gras",
+      "norm": "einhemisches gras",
+      "pairs": 14,
+      "rows": 14,
+      "sections": {
+        "GRUND_1_2505": 14
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": 15,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Einhemisches Heu",
+      "norm": "einhemisches heu",
+      "pairs": 6,
+      "rows": 6,
+      "sections": {
+        "GRUND_1_2505": 6
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": 15,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Einschicht mit Gfretzgen bau",
+      "norm": "einschicht mit gfretzgen bau",
+      "pairs": 3,
+      "rows": 3,
+      "sections": {
+        "GRUND_1_2505": 3
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Einschichtl. Wiese mit Poggi u. Bau",
+      "norm": "einschichtl. wiese mit poggi u. bau",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Einschicht mit Poggi u. Bau",
+      "norm": "einschicht mit poggi u. bau",
+      "pairs": 3,
+      "rows": 3,
+      "sections": {
+        "GRUND_1_2505": 3
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Einschichtl. Wiese, Poggibau",
+      "norm": "einschichtl. wiese, poggibau",
+      "pairs": 3,
+      "rows": 3,
+      "sections": {
+        "GRUND_1_2505": 3
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Einschichtl. Wiese, Poggi u. Bau",
+      "norm": "einschichtl. wiese, poggi u. bau",
+      "pairs": 10,
+      "rows": 10,
+      "sections": {
+        "GRUND_1_2505": 10
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "[?] Fürstg.",
+      "norm": "[?] fuerstg.",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "ARTIFAKT",
+      "confidence": "?",
+      "noteSi": "neberljiva okrajšava s [?]; morda Fürtrg."
+    },
+    {
+      "raw": "Lohnraut Gfüttergütl",
+      "norm": "lohnraut gfuetterguetl",
+      "pairs": 9,
+      "rows": 9,
+      "sections": {
+        "GRUND_1_2505": 9
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Lohnraut Wiesgütl Baür",
+      "norm": "lohnraut wiesguetl bauer",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Lohnraut Lönnean",
+      "norm": "lohnraut loennean",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Lohnraut Bäurean",
+      "norm": "lohnraut baeurean",
+      "pairs": 4,
+      "rows": 4,
+      "sections": {
+        "GRUND_1_2505": 4
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Lohnraut Wiesgütl Bäurean",
+      "norm": "lohnraut wiesguetl baeurean",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Wistand",
+      "norm": "wistand",
+      "pairs": 5,
+      "rows": 6,
+      "sections": {
+        "GRUND_1_2505": 5
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "NEROD"
+      ],
+      "v2Primary": "NEROD",
+      "v2RuleNo": 22,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Löwisch Thal",
+      "norm": "loewisch thal",
+      "pairs": 14,
+      "rows": 15,
+      "sections": {
+        "GRUND_1_2505": 14
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "~",
+      "noteSi": "Löwenthal — dolinsko ime"
+    },
+    {
+      "raw": "Lahar",
+      "norm": "lahar",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Schindel baum",
+      "norm": "schindel baum",
+      "pairs": 5,
+      "rows": 5,
+      "sections": {
+        "GRUND_1_2505": 5
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "GOZD"
+      ],
+      "v2Primary": "GOZD",
+      "v2RuleNo": 20,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Huta",
+      "norm": "huta",
+      "pairs": 5,
+      "rows": 5,
+      "sections": {
+        "GRUND_1_2505": 5
+      },
+      "v1Classes": [
+        "PASTVISCE"
+      ],
+      "v2Classes": [
+        "PASTVISCE"
+      ],
+      "v2Primary": "PASTVISCE",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Schindel",
+      "norm": "schindel",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Staidl",
+      "norm": "staidl",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "STAVBNO"
+      ],
+      "v2Primary": "STAVBNO",
+      "v2RuleNo": 24,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Acker und Wiese, Hang in Böschung",
+      "norm": "acker und wiese, hang in boeschung",
+      "pairs": 10,
+      "rows": 10,
+      "sections": {
+        "GRUND_1_2505": 10
+      },
+      "v1Classes": [
+        "NJIVA",
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "NJIVA",
+        "TRAVNIK"
+      ],
+      "v2Primary": "NJIVA",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Lipfmaß, Hang in Böschung",
+      "norm": "lipfmass, hang in boeschung",
+      "pairs": 3,
+      "rows": 3,
+      "sections": {
+        "GRUND_1_2505": 3
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "~",
+      "noteSi": "terenski opis naklona/bočaske"
+    },
+    {
+      "raw": "Schüttwies, Hang in Böschung",
+      "norm": "schuettwies, hang in boeschung",
+      "pairs": 3,
+      "rows": 3,
+      "sections": {
+        "GRUND_1_2505": 3
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Brachwiese",
+      "norm": "brachwiese",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Schüttwies, Tannen",
+      "norm": "schuettwies, tannen",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Lipfmaß, Schafweide",
+      "norm": "lipfmass, schafweide",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "PASTVISCE"
+      ],
+      "v2Primary": "PASTVISCE",
+      "v2RuleNo": 21,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Acker und Wiese, Laumen",
+      "norm": "acker und wiese, laumen",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [
+        "NJIVA",
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "NJIVA",
+        "TRAVNIK"
+      ],
+      "v2Primary": "NJIVA",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Haita und Leinwand",
+      "norm": "haita und leinwand",
+      "pairs": 4,
+      "rows": 4,
+      "sections": {
+        "GRUND_1_2505": 4
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Haitenmaid",
+      "norm": "haitenmaid",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": 14,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Haitenmaid Leinwand",
+      "norm": "haitenmaid leinwand",
+      "pairs": 10,
+      "rows": 10,
+      "sections": {
+        "GRUND_1_2505": 10
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": 14,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Haitenmaid Gründung 1835",
+      "norm": "haitenmaid gruendung 1835",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": 14,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Haitenmaid Gründung",
+      "norm": "haitenmaid gruendung",
+      "pairs": 3,
+      "rows": 3,
+      "sections": {
+        "GRUND_1_2505": 3
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": 14,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Haitenmaid Balazig",
+      "norm": "haitenmaid balazig",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "GRUND_1_2505": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": 14,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Abtragsw. Weide",
+      "norm": "abtragsw. weide",
+      "pairs": 4,
+      "rows": 4,
+      "sections": {
+        "GRUND_1_2505": 4
+      },
+      "v1Classes": [
+        "PASTVISCE"
+      ],
+      "v2Classes": [
+        "PASTVISCE"
+      ],
+      "v2Primary": "PASTVISCE",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Schingutshut",
+      "norm": "schingutshut",
+      "pairs": 12,
+      "rows": 12,
+      "sections": {
+        "GRUND_1_2505": 12
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "PASTVISCE"
+      ],
+      "v2Primary": "PASTVISCE",
+      "v2RuleNo": 21,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Shüfa",
+      "norm": "shuefa",
+      "pairs": 4,
+      "rows": 4,
+      "sections": {
+        "GRUND_1_2505": 4
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Schmiegwiesen",
+      "norm": "schmiegwiesen",
+      "pairs": 14,
+      "rows": 14,
+      "sections": {
+        "NADALJEVANJE_2506": 14
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Lohifa",
+      "norm": "lohifa",
+      "pairs": 9,
+      "rows": 9,
+      "sections": {
+        "NADALJEVANJE_2506": 9
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Schmieggrat",
+      "norm": "schmieggrat",
+      "pairs": 6,
+      "rows": 6,
+      "sections": {
+        "NADALJEVANJE_2506": 6
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "~",
+      "noteSi": "grat = greben — ležajno ime"
+    },
+    {
+      "raw": "Rasen",
+      "norm": "rasen",
+      "pairs": 2,
+      "rows": 2,
+      "sections": {
+        "NADALJEVANJE_2506": 2
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": 15,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Lichtw.",
+      "norm": "lichtw.",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "NADALJEVANJE_2506": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Ebneist",
+      "norm": "ebneist",
+      "pairs": 6,
+      "rows": 6,
+      "sections": {
+        "NADALJEVANJE_2506": 6
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "~",
+      "noteSi": "eben = ravnina — terensko ime"
+    },
+    {
+      "raw": "Abm",
+      "norm": "abm",
+      "pairs": 4,
+      "rows": 4,
+      "sections": {
+        "NADALJEVANJE_2506": 4
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Ebnisgutland",
+      "norm": "ebnisgutland",
+      "pairs": 6,
+      "rows": 6,
+      "sections": {
+        "NADALJEVANJE_2506": 6
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "~",
+      "noteSi": "sestavljeno terensko ime (Eben…-gut-land)"
+    },
+    {
+      "raw": "Epistl",
+      "norm": "epistl",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "NADALJEVANJE_2506": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "Ablay",
+      "norm": "ablay",
+      "pairs": 2,
+      "rows": 2,
+      "sections": {
+        "NADALJEVANJE_2506": 2
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "~",
+      "noteSi": "lay = skala/plaz (kärntensko) — ležajno ime"
+    },
+    {
+      "raw": "Lbney",
+      "norm": "lbney",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "NADALJEVANJE_2506": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "TOPONIM",
+      "confidence": "?",
+      "noteSi": "verjetno Eben(e) — okrnjen zapis"
+    },
+    {
+      "raw": "Schmiegarten",
+      "norm": "schmiegarten",
+      "pairs": 11,
+      "rows": 15,
+      "sections": {
+        "NADALJEVANJE_2506": 11
+      },
+      "v1Classes": [
+        "VRT"
+      ],
+      "v2Classes": [
+        "VRT"
+      ],
+      "v2Primary": "VRT",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Luigarten",
+      "norm": "luigarten",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "NADALJEVANJE_2506": 1
+      },
+      "v1Classes": [
+        "VRT"
+      ],
+      "v2Classes": [
+        "VRT"
+      ],
+      "v2Primary": "VRT",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Ehmalde",
+      "norm": "ehmalde",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "NADALJEVANJE_2506": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": 23,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Wey",
+      "norm": "wey",
+      "pairs": 20,
+      "rows": 20,
+      "sections": {
+        "WALDUNG": 20
+      },
+      "v1Classes": [
+        "TRAVNIK"
+      ],
+      "v2Classes": [
+        "TRAVNIK"
+      ],
+      "v2Primary": "TRAVNIK",
+      "v2RuleNo": null,
+      "termType": "KULTURA",
+      "confidence": "~",
+      "noteSi": null
+    },
+    {
+      "raw": "Steing",
+      "norm": "steing",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "WALDUNG": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "NEKLASIFICIRANO",
+      "confidence": null,
+      "noteSi": null
+    },
+    {
+      "raw": "81. flur",
+      "norm": "81. flur",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "BLATT_X": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "ARTIFAKT",
+      "confidence": "~",
+      "noteSi": "številka + flur (poljna regija) — lokacijska oznaka namesto rabe"
+    },
+    {
+      "raw": "82",
+      "norm": "82",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "BLATT_X": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "ARTIFAKT",
+      "confidence": "~",
+      "noteSi": "številka namesto rabe (Blatt X register / lokacijska št.)"
+    },
+    {
+      "raw": "83",
+      "norm": "83",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "BLATT_X": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "ARTIFAKT",
+      "confidence": "~",
+      "noteSi": "številka namesto rabe (Blatt X register / lokacijska št.)"
+    },
+    {
+      "raw": "84",
+      "norm": "84",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "BLATT_X": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "ARTIFAKT",
+      "confidence": "~",
+      "noteSi": "številka namesto rabe (Blatt X register / lokacijska št.)"
+    },
+    {
+      "raw": "85",
+      "norm": "85",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "BLATT_X": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "ARTIFAKT",
+      "confidence": "~",
+      "noteSi": "številka namesto rabe (Blatt X register / lokacijska št.)"
+    },
+    {
+      "raw": "86",
+      "norm": "86",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "BLATT_X": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "ARTIFAKT",
+      "confidence": "~",
+      "noteSi": "številka namesto rabe (Blatt X register / lokacijska št.)"
+    },
+    {
+      "raw": "87",
+      "norm": "87",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "BLATT_X": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "ARTIFAKT",
+      "confidence": "~",
+      "noteSi": "številka namesto rabe (Blatt X register / lokacijska št.)"
+    },
+    {
+      "raw": "88",
+      "norm": "88",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "BLATT_X": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "ARTIFAKT",
+      "confidence": "~",
+      "noteSi": "številka namesto rabe (Blatt X register / lokacijska št.)"
+    },
+    {
+      "raw": "89",
+      "norm": "89",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "BLATT_X": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "ARTIFAKT",
+      "confidence": "~",
+      "noteSi": "številka namesto rabe (Blatt X register / lokacijska št.)"
+    },
+    {
+      "raw": "90",
+      "norm": "90",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "BLATT_X": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "ARTIFAKT",
+      "confidence": "~",
+      "noteSi": "številka namesto rabe (Blatt X register / lokacijska št.)"
+    },
+    {
+      "raw": "91",
+      "norm": "91",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "BLATT_X": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "ARTIFAKT",
+      "confidence": "~",
+      "noteSi": "številka namesto rabe (Blatt X register / lokacijska št.)"
+    },
+    {
+      "raw": "92",
+      "norm": "92",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "BLATT_X": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "ARTIFAKT",
+      "confidence": "~",
+      "noteSi": "številka namesto rabe (Blatt X register / lokacijska št.)"
+    },
+    {
+      "raw": "93",
+      "norm": "93",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "BLATT_X": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "ARTIFAKT",
+      "confidence": "~",
+      "noteSi": "številka namesto rabe (Blatt X register / lokacijska št.)"
+    },
+    {
+      "raw": "94",
+      "norm": "94",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "BLATT_X": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "ARTIFAKT",
+      "confidence": "~",
+      "noteSi": "številka namesto rabe (Blatt X register / lokacijska št.)"
+    },
+    {
+      "raw": "95",
+      "norm": "95",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "BLATT_X": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "ARTIFAKT",
+      "confidence": "~",
+      "noteSi": "številka namesto rabe (Blatt X register / lokacijska št.)"
+    },
+    {
+      "raw": "96",
+      "norm": "96",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "BLATT_X": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "ARTIFAKT",
+      "confidence": "~",
+      "noteSi": "številka namesto rabe (Blatt X register / lokacijska št.)"
+    },
+    {
+      "raw": "97",
+      "norm": "97",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "BLATT_X": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "ARTIFAKT",
+      "confidence": "~",
+      "noteSi": "številka namesto rabe (Blatt X register / lokacijska št.)"
+    },
+    {
+      "raw": "98",
+      "norm": "98",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "BLATT_X": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "ARTIFAKT",
+      "confidence": "~",
+      "noteSi": "številka namesto rabe (Blatt X register / lokacijska št.)"
+    },
+    {
+      "raw": "99",
+      "norm": "99",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "BLATT_X": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "ARTIFAKT",
+      "confidence": "~",
+      "noteSi": "številka namesto rabe (Blatt X register / lokacijska št.)"
+    },
+    {
+      "raw": "100",
+      "norm": "100",
+      "pairs": 1,
+      "rows": 1,
+      "sections": {
+        "BLATT_X": 1
+      },
+      "v1Classes": [],
+      "v2Classes": [],
+      "v2Primary": null,
+      "v2RuleNo": null,
+      "termType": "ARTIFAKT",
+      "confidence": "~",
+      "noteSi": "številka namesto rabe (Blatt X register / lokacijska št.)"
+    }
+  ],
+  "v1Regression": {
+    "checkedPairs": 2632,
+    "mismatches": 0,
+    "primaryCounts": {
+      "NJIVA": 1049,
+      "TRAVNIK": 487,
+      "GOZD": 134,
+      "PASTVISCE": 54,
+      "STAVBNO": 52,
+      "VRT": 51,
+      "ALM": 23,
+      "NEROD": 22,
+      "OBCINA": 15,
+      "VINOGRAD": 8,
+      "CESTA": 1
+    }
+  },
+  "generatedBy": "scripts/p42_ps_rulebook_v2.py",
+  "generatedAt": "2026-10-12T17:02:19.715885+00:00"
+}

@@ -1049,3 +1049,102 @@ route prerenderiran); produkcijski strežnik (port 3010): `/api/qa` 42/42,
 `/api/atlas/ps-recap-paleo` 200 (Area 1220|1493, Δ +0,99 %); brskalniška
 E2E preverba (agent-browser): zavihek Prepisi Kurrent, kartica P41 popolna
 (Area, 7 Lager, razrešitve), konzola brez napak.
+
+## §22 — P42: pravilnik rab v2 — deterministična razširitev klasifikacije (issue #10)
+
+### Izhodišče
+
+P39 je z pravilnikom v1 (12 pravil, regex nad normalizirano vrednostjo: male črke,
+ä→ae, ö→oe, ü→ue, ß→ss) klasificiral 72,0 % parov parcela×raba (1896/2632); ostalo
+736 parov (230 različnih surovih vrednosti) je bilo izrecno NEKLASIFICIRANO.
+P42 (ta revizija) ne spreminja nobenega v1 pravila — namesto tega priloži 13 novih
+pravil (13–25) in uvede izrecno ločilo `termType` za vrednosti, ki NISO kultura.
+
+### Zaprte vrzeli pravilnika v1 (dokazano z 2199−1896 = 303 novimi pari)
+
+| Vrzel | Primer | Pravilo v2 | Novi pari |
+|---|---|---|---|
+| umlaut: `gart` ne ujame *Gärten* (→ gaerten) | Findling/Himbeeren/Gebüsch und Gärten | `gae?rt` (17) | 13 |
+| sredbesedni `-wald` | Schlagwald, Lohwald | `wald` (20) | 32 (z ostalimi gozdnimi formanti) |
+| `schupfn` ne ujame *schupf./schupfen* | Schupf., Schupfen u. Gst. | `schupf` (24) | 45 (z ostalimi stavbnimi formanti) |
+| sami **Wein** (v1 je zahteval weingarten/weinberg) | Wein ×10, Weing | `wein` (16) | 11 |
+| Öd/Wüst dialektne oblike (ö→ei/e) | Eidn, Eidau, Ehda, Ainöd, Wiste/Wistand/Wistmad | `aehnl?\|eidn\|eidau\|ehda\|inoed\|wist\|brache` (22) | 73 |
+| Maid = Mahd (kärntensko) | Haitenmaid Leinwand/Gründung … | `maid\b` (14) | 16 |
+| Gemainde (dialekt Gmde/Gmand/Gimand) | Gumig Gmde, Lohgimand 647… | `gmde\|gmand\|gimand` (13) | 12 |
+| poljski termini brez Acker | Rüben, Schlagfeld, Stopp, Achl, Frucht | (19) | 46 |
+| travniški pridelki | einheimisches Gras/Heu, Rasen, Eggwisen | `gras\|heu\|wisen\|rasen` (15) | 23 |
+| sadje/zelenjava | Obst, Himbeeren, Gmias (= Gemüse) | (18) | 15 |
+| pašniške oblike brez `\bweid` | Schafweide (v Lipfmaß), Schingutshut, Johut | `shut\|johut\|weid` (21) | 14 |
+| gospodarske stavbe | Lohgrube, Steingrube, Staidl, Ed-/Edl-hop, -hauß, Schüttboden (100 % so-odvisen STAVBNO), -gutl (Gütl) | (24) | — (skupaj z zgoraj) |
+| voda | Lache(n) = lokva | `lachen?\b` (25) | 2 |
+| Malde = Mahd [?] | Ehmalde (1 par) | `malde\b` (23) | 1 |
+
+### Nova izrecna ločitev termType (vrednosti, ki NISO raba)
+
+- **TOPONIM 122 parov / 39 vrednosti** — ležajna in terenska imena: Löwisch Thal (15),
+  Leite (11), Schüttgrund (10), Eingemaut Gfrörer und Laimauer (12), Schmieggrat (6),
+  Ebneist (6), Indrunt Laimen (5, Lehm = glina), Zehorn, Winkel, Ablay, Gübel,
+  Ehing/-ing … vsaka vrednost s formantom in zaupanjem [~]/[?]. Za statistiko rabe
+  se NE štejejo kot kultura.
+- **ARTIFAKT 29 parov / 29 vrednosti** — številke namesto rabe: **82–100 (19 vrednosti,
+  Blatt X — dodatni NEODVISNI dokaz, da je Blatt X register stavbnih mest, kjer
+  "kultura" stolpec vsebuje zaporedne številke!), 81. flur, Summa, Zahl, 5k Einträg,
+  29 Bäumen** ter opombe o prihodkih (100 Futter, 65 Fürtrg., 87 Furtreg., Furtrage,
+  [?] Fürstg. — [?]).
+- **NEKLASIFICIRANO 282 parov** — 16 dokumentiranih družin + samostojne vrednosti,
+  vse z izrecnim verdiktom "čaka paleografijo" (ni ugibanj).
+
+### Družine za paleografijo (so-odvisnostni dokazi, vse NEKLASIFICIRANE)
+
+| Družina | Vrednosti | Pari | Najmočnejši dokaz |
+|---|---|---|---|
+| LHUT-JEDRO | Lhut, Lhup, Lhupf, Lhupa, Lhuta | 36 | so-odvisnost NJIVA 10; hipotezi L+Hut (pašnik) / Rhut (Rodung, zamenjava R/L v Kurrentu) — neodločeno |
+| LOHN-RAUT | Lohn, Lohng, Lohnraut … | 29 | Raut = Rodung; Loh = izsek/strojnica — neodločeno |
+| LHOPI-LOHIFA | Lhopi, Lohifa, Luppa, Shüfa | 23 | morda ista korenina kot Lhut (t/p/f OCR) |
+| EINHART | Einhart mit Gypfel &c. | 15 | morda Einöd-Hart + Gipfel |
+| AEFLING | Äfling | 13 | **so-odvisnost TRAVNIK 12/13** — travniški kontekst, termin neznan |
+| AHN | Ahn | 13 | morda Ahorn/Acker-dialekt |
+| GUETEN | Güten, Gütung | 12 | morda "die Güten"/Güter (umlaut zavaruje pred `gut`) |
+| DINGF | Dingf | 10 | mešana so-odvisnost (TRAVNIK 9/NJIVA 4/ALM 4) — brez signala |
+| LUKIG | Lukig | 10 | morda Luch = mokrišče |
+| ERDAR | Erdar, Eidar, Achat, Achm | 10 | Erdar 4/4 GOZD |
+| LHOPI ostalo, LOHGARN, HURGI, WING, EINSCHLAG-GUELZE, SCHINDEL | … | 45 | posamezne opombe v izpisu |
+
+### Deterministična preverba (brez AI ob delovanju)
+
+Skript `scripts/p42_ps_rulebook_v2.py` (FAIL ob padu katere koli invariante):
+- v1 rekonstrukcija iz surovih vrednosti == P39 shranjeno (2632 parov, 0 neskladij);
+- **v2 ⊇ v1**: vsak pari z v1 primarno jo ohrani (struktura "priloži za v1" +
+  izrecna preverba);
+- TOPONIM/ARTIFAKT/družinski seznami ⊥ vsa pravila (regex) in ⊥ med seboj, vse
+  vrednosti obstajajo (zaščita pred tipkarskimi napakami);
+- vsota dodelitev priloženih pravil (303) == novi pari == vsota newPairsByClassV2;
+- so-odvisnost izračunana po parceli (primarne rabe na parcelah z vrednostjo) in
+  po lastniku (druge parcele skupnih lastnikov) — kot dokaz, ne kot klasifikacija.
+
+### Izpisi in integracija
+
+- `research/issue17/ps-landuse-v2.json` (kanonski dokaz) + identična runtime kopija
+  `src/data/atlas/ps-landuse-v2.json`; API `GET /api/atlas/ps-landuse-v2` (force-static).
+- TS `PS_LANDUSE_V2_P42` (research.ts); kartica "PS 1825 — pravilnik rab v2 (P42)"
+  v Raziskavah/kurrent (za P41); sources.ts N083PS nota (P42); README P36–P42 + API seznam.
+
+### Preverba
+
+ESLint **0**; tsc **0**; QA **42 → 43** (`qa-p42-ps-rulebook-v2`: identiteta
+termType 2199+122+29+282 = 2632, v2 ⊇ v1 po razredih, pinane vrednosti 2199/83,5 %,
+122/29/282, 13 pravil 13–25 z vsoto 303, 16 družin pinano (Lhut-jedro 36,
+Lohn/Raut 29, Äfling 13 z TRAVNIK 12), TOPONIM čelo "Löwisch Thal" 15, ARTIFAKT
+19 numeričnih, navzkrižna kontrola obeh JSON izpisov (identičnost!) ↔ TS prek
+vbrizganega readFile — vzorec qa-p37..p41); `next build` 20/20 (nov route
+prerenderiran); produkcijski strežnik (port 3010): `/api/qa` 43/43,
+`/api/atlas/ps-landuse-v2` 200; brskalniška E2E preverba (agent-browser):
+zavihek Prepisi Kurrent, kartica P42 popolna (pokritost, pravila, družine),
+konzola brez napak.
+
+### Ostaja odprto (issue #10 ostaja odprt)
+
+- 16 neznanih družin (Lhut-jedro 36, Lohn/Raut 29 …) — človeška paleografija;
+- 3. prehod ~15 dvoumnih strani (potrebuje VAČ posnetke);
+- človeška potrditev vseh strojnih branj; razcepi rekapitulacije (K1/K2, semantika
+  par referenc) — UNRESOLVED (§21).

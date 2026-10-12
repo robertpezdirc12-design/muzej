@@ -1516,6 +1516,156 @@ export const PS_RECAP_PALEO_P41: {
     "Palaeography of pp. 140–143 (12 VLM passes + zoomed crops) captured the MUNICIPAL TOTAL AREA for the first time: 'Area der Gemeinde' 1,220 Joch 1,493 Klafter (red chalk), arithmetically bound (1,215|490 + 5|1,003 = 1,220|1,493). The 7 'Grundstückslagen' rows (houses 124–130) sum to 831|702 = 'Summa der Grundparzellen' — P40's 'naive sum 1,413' resolved as a P9 reading error. The GRUND model (1,232.96 J) deviates only +0.99% from the Area — the most consistent attribution yet. Splits (K1/K2, pair-reference semantics) remain explicitly UNRESOLVED.",
 };
 
+/**
+ * ISSUE #10 (P42) — PS 1825: pravilnik rab v2 — deterministična razširitev
+ * klasifikacije rab nad P39 model. 12 v1 pravil NESPREMENJENIH + 13 priloženih
+ * pravil (13–25; prvi zadetek = primarni razred). Izrecna ločitev termType:
+ * KULTURA / TOPONIM / ARTIFAKT / NEKLASIFICIRANO. V2 ⊇ V1 (noben v1 primarni
+ * razred ni spremenjen — regresijsko preverjeno nad vsemi 2632 pari).
+ * Polni izpis: research/issue17/ps-landuse-v2.json + src/data/atlas/ps-landuse-v2.json
+ * (identična kopija; API GET /api/atlas/ps-landuse-v2).
+ */
+export const PS_LANDUSE_V2_P42: {
+  series: "PS";
+  source: string;
+  status: ResearchStatus;
+  generatedBy: string;
+  countScope: string;
+  rulebook: {
+    version: string;
+    v1RulesCount: number;
+    appendedRules: { no: number; class: string; labelSi: string; pattern: string; confidence: string; noteSi: string; pairs: number }[];
+  };
+  stats: {
+    pairsTotal: number;
+    v1ClassifiedPairs: number;
+    v2ClassifiedPairs: number;
+    toponymPairs: number;
+    artifaktPairs: number;
+    unresolvedPairs: number;
+    classifiedPctV1: number;
+    classifiedPctV2: number;
+    explainedPctV2: number;
+    unresolvedRows: number;
+    primaryCountsV2: Record<string, number>;
+    newPairsByClassV2: Record<string, number>;
+  };
+  toponym: { pairs: number; distinct: number; top: { raw: string; pairs: number }[] };
+  artifakt: { pairs: number; distinct: number; numericRawCount: number };
+  families: { id: string; values: string[]; pairs: number; hypothesisSi: string; confidence: string; verdict: string; coParcel: Record<string, number> }[];
+  verdictSi: string;
+  verdictEn: string;
+  next: string[];
+} = {
+  series: "PS",
+  source:
+    "N083PS.pdf (VAČ uodid 373415, docid 41780; 143 strani) — pravilnik v2 deterministično nad P39 modelom (committed dokaz ps-landuse.json); polni izpis research/issue17/ps-landuse-v2.json + src/data/atlas/ps-landuse-v2.json",
+  status: "REVIEW",
+  generatedBy: "scripts/p42_ps_rulebook_v2.py",
+  countScope: "štetje po PARIH parcela×raba (podvojene rabe znotraj parcele enkrat) — kot P39",
+  rulebook: {
+    version: "v2",
+    v1RulesCount: 12,
+    appendedRules: [
+      { no: 13, class: "OBCINA", labelSi: "občinska skupna", pattern: "gmde\\b|gmand\\b|gimand|gemaind", confidence: "~", noteSi: "dialektne okrajšave Gemainde (Gmde/Gmand/Gimand) = občinska skupna zemlja; Gumig Gmde, Lohgimand NNN (= Lohgemainde)", pairs: 12 },
+      { no: 14, class: "TRAVNIK", labelSi: "travnik (Wiese)", pattern: "maid\\b", confidence: "~", noteSi: "Maid = Mahd = Mähwiese (kärntensko); družina Haitenmaid", pairs: 16 },
+      { no: 15, class: "TRAVNIK", labelSi: "travnik (Wiese)", pattern: "gras\\b|heu\\b|wisen\\b|rasen\\b", confidence: "~", noteSi: "Gras/Heu = travniški pridelek (einheimisches Gras/Heu); wisen = Wiesen; Rasen", pairs: 23 },
+      { no: 16, class: "VINOGRAD", labelSi: "vinograd", pattern: "wein", confidence: "~", noteSi: "sami 'Wein'/'Weing' = okrajšava za Weingarten (v1 vrzel: 10 parov vinogradov nevidnih)", pairs: 11 },
+      { no: 17, class: "VRT", labelSi: "vrt (Garten)", pattern: "gae?rt", confidence: "~", noteSi: "umlaut Gärten (→ gaerten) — v1 'gart' jih ni ujel", pairs: 13 },
+      { no: 18, class: "VRT", labelSi: "vrt (Garten)", pattern: "obst|himbeer|gmias", confidence: "~", noteSi: "Obst = sadovnjak, Himbeeren = malinje, Gmias = Gemüse", pairs: 15 },
+      { no: 19, class: "NJIVA", labelSi: "njiva (Acker)", pattern: "rueben|schlagfeld|stopp\\b|achl\\b|frucht", confidence: "~", noteSi: "Rüben = poljska kultura; Schlagfeld = izsekano polje; Stopp = Stoppeln; Achl = kärntensko Acker; Frucht = žito", pairs: 46 },
+      { no: 20, class: "GOZD", labelSi: "gozd (Wald)", pattern: "wald|gebuesch|straeuch|eichhol|laub\\b|laubm|lorbeer|baum", confidence: "~", noteSi: "sredbesedni -wald (Schlagwald, Lohwald); Gebüsch/Gesträuch; Eichhol; Laub; Lorbeer; baum = drevesna opomba", pairs: 32 },
+      { no: 21, class: "PASTVISCE", labelSi: "pašnik (Weide/Hutweide/Trift)", pattern: "shut\\b|johut\\b|weid", confidence: "~", noteSi: "-shut (Schingutshut), Johut; weid BREZ \\b (Schafweide); izrecno NE zajame Lhut", pairs: 14 },
+      { no: 22, class: "NEROD", labelSi: "nerodovoljna (Ödung)", pattern: "aehnl?\\b|eidn\\b|eidau|ehda\\b|inoed|aeinod|wist|brache\\b", confidence: "~", noteSi: "Öhnl/Aehn = osuto; Eidn/Eidau/Ehda = Öden/Ödau; Ainöd = Einöde; Wist* = wüst; Brache", pairs: 73 },
+      { no: 23, class: "TRAVNIK", labelSi: "travnik (Wiese)", pattern: "malde\\b", confidence: "?", noteSi: "Malde = Mahd (kärntensko, Schatz); samo 'Ehmalde' 1 par — spekulativno", pairs: 1 },
+      { no: 24, class: "STAVBNO", labelSi: "stavbna/gospodarska", pattern: "schupf|staidl|grube\\b|gutl\\b|edl?hop|edhup|hau(ss)?\\b|boden\\b", confidence: "~", noteSi: "Schupfe (v1 schupfn zgrešil schupf./schupfen!); Staidl = Stadel; Grube (Lohgrube, Steingrube); -gutl = Gütl; Ed-/Edl-hop; -hauß; Boden (Schüttboden 100 % so-odvisen STAVBNO)", pairs: 45 },
+      { no: 25, class: "VODA", labelSi: "voda", pattern: "lachen?\\b", confidence: "~", noteSi: "Lache(n) = lokva/mlaka", pairs: 2 },
+    ],
+  },
+  stats: {
+    pairsTotal: 2632,
+    v1ClassifiedPairs: 1896,
+    v2ClassifiedPairs: 2199,
+    toponymPairs: 122,
+    artifaktPairs: 29,
+    unresolvedPairs: 282,
+    classifiedPctV1: 72.0,
+    classifiedPctV2: 83.5,
+    explainedPctV2: 89.3,
+    unresolvedRows: 282,
+    primaryCountsV2: {
+      NJIVA: 1095,
+      TRAVNIK: 527,
+      GOZD: 166,
+      STAVBNO: 97,
+      NEROD: 95,
+      VRT: 79,
+      PASTVISCE: 68,
+      OBCINA: 27,
+      ALM: 23,
+      VINOGRAD: 19,
+      VODA: 2,
+      CESTA: 1,
+    },
+    newPairsByClassV2: {
+      NEROD: 73,
+      NJIVA: 46,
+      STAVBNO: 45,
+      TRAVNIK: 40,
+      GOZD: 32,
+      VRT: 28,
+      PASTVISCE: 14,
+      OBCINA: 12,
+      VINOGRAD: 11,
+      VODA: 2,
+    },
+  },
+  toponym: {
+    pairs: 122,
+    distinct: 39,
+    top: [
+      { raw: "Löwisch Thal", pairs: 15 },
+      { raw: "Leite", pairs: 11 },
+      { raw: "Schüttgrund", pairs: 10 },
+      { raw: "Ebneist", pairs: 6 },
+      { raw: "Schmieggrat", pairs: 6 },
+      { raw: "Eingemaut Gfrörer und Laimauer", pairs: 12 },
+      { raw: "Abtränig Spötlg. Leumuth", pairs: 6 },
+      { raw: "Ebnerd", pairs: 5 },
+      { raw: "Indrunt Laimen", pairs: 5 },
+    ],
+  },
+  artifakt: { pairs: 29, distinct: 29, numericRawCount: 19 },
+  families: [
+    { id: "LHUT-JEDRO", values: ["Lhut", "Lhup", "Lhupf", "Lhupa", "Lhuta"], pairs: 36, hypothesisSi: "morda L+Hut (pašnik) ali Lehen-Hut; tudi Rhut (Rodung) ob zamenjavi R/L v Kurrentu — NE dokazano", confidence: "?", verdict: "NEKLASIFICIRANO (čaka paleografijo)", coParcel: { NJIVA: 10 } },
+    { id: "LHIZ", values: ["Lhize", "Lhizl"], pairs: 9, hypothesisSi: "ista neznana družina kot Lhut-jedro (Lhizgutl [?] pa v2 STAVBNO prek formanta -gutl = Gütl)", confidence: "?", verdict: "NEKLASIFICIRANO (čaka paleografijo)", coParcel: { TRAVNIK: 1 } },
+    { id: "LHOPI-LOHIFA", values: ["Lhopi", "Lohifa", "Luppa", "Shüfa"], pairs: 23, hypothesisSi: "morda ista korenina kot Lhut (t/p/f obrati OCR) — NE dokazano", confidence: "?", verdict: "NEKLASIFICIRANO (čaka paleografijo)", coParcel: { NJIVA: 3, VRT: 1 } },
+    { id: "LOHN-RAUT", values: ["Lohn", "Lohng", "Lohnraut Gfüttergütl", "Lohnraut Bäurean", "Lohnraut Lönnean"], pairs: 29, hypothesisSi: "Lohn/Loh = izsek (Waldschlag) ALI Loh = strojnica; Raut = Rodung (izsek) — smer GOZD?/NJIVA? — NE dokazano", confidence: "?", verdict: "NEKLASIFICIRANO (čaka paleografijo)", coParcel: { NJIVA: 2 } },
+    { id: "AHN", values: ["Ahn"], pairs: 13, hypothesisSi: "morda Ahorn (javor) ali Acker-dialekt — NE dokazano", confidence: "?", verdict: "NEKLASIFICIRANO (čaka paleografijo)", coParcel: {} },
+    { id: "AEFLING", values: ["Äfling"], pairs: 13, hypothesisSi: "neznano; so-odvisnost: 12/13 parov na parcelah s TRAVNIK → travniški kontekst, termin ostaja neznan", confidence: "?", verdict: "NEKLASIFICIRANO (čaka paleografijo)", coParcel: { TRAVNIK: 12 } },
+    { id: "ERDAR", values: ["Erdar", "Eidar", "Achat", "Achm"], pairs: 10, hypothesisSi: "morda Erd-/Eid- (Öd?) ali Achm = Acker-Mad — NE dokazano; Erdar 4/4 so-odvisnost GOZD", confidence: "?", verdict: "NEKLASIFICIRANO (čaka paleografijo)", coParcel: { GOZD: 7, NJIVA: 3, TRAVNIK: 2 } },
+    { id: "GUETEN", values: ["Güten", "Gütung"], pairs: 12, hypothesisSi: "morda 'die Güten' (rodovitna tla) ali Güter (kmetije) — NE dokazano", confidence: "?", verdict: "NEKLASIFICIRANO (čaka paleografijo)", coParcel: {} },
+    { id: "EINHART", values: ["Einhart mit Gypfel &c.", "Einhart mit Gypf. &c."], pairs: 15, hypothesisSi: "morda Einöd-Hart (Hart = gozd/pašnik na trdem terenu) + Gipfel — NE dokazano", confidence: "?", verdict: "NEKLASIFICIRANO (čaka paleografijo)", coParcel: {} },
+    { id: "DINGF", values: ["Dingf"], pairs: 10, hypothesisSi: "morda Dingfeld? — mešana so-odvisnost (TRAVNIK 9/NJIVA 4/ALM 4) — NE dokazano", confidence: "?", verdict: "NEKLASIFICIRANO (čaka paleografijo)", coParcel: { TRAVNIK: 9, NJIVA: 4, ALM: 4 } },
+    { id: "LUKIG", values: ["Lukig"], pairs: 10, hypothesisSi: "morda Luch/Lukig = mokrišče (Loch) — NE dokazano", confidence: "?", verdict: "NEKLASIFICIRANO (čaka paleografijo)", coParcel: { TRAVNIK: 1 } },
+    { id: "LOHGARN", values: ["Lohgarn"], pairs: 7, hypothesisSi: "Loh + garn? — NE dokazano", confidence: "?", verdict: "NEKLASIFICIRANO (čaka paleografijo)", coParcel: {} },
+    { id: "HURGI", values: ["Hurgi"], pairs: 5, hypothesisSi: "neznano", confidence: "?", verdict: "NEKLASIFICIRANO (čaka paleografijo)", coParcel: {} },
+    { id: "WING", values: ["Wing"], pairs: 3, hypothesisSi: "morda Wingert (vinograd, zahodnoavstrijsko) — v Kärntenu netipično — NE dokazano", confidence: "?", verdict: "NEKLASIFICIRANO (čaka paleografijo)", coParcel: {} },
+    { id: "EINSCHLAG-GUELZE", values: ["Einschlag mit Gülze", "Einschicht mit Poggi u. Bau", "Einschicht mit Gfretzgen bau", "Gülze", "Gülze mit Gülze"], pairs: 20, hypothesisSi: "Einschlag = ograda/obor?; Gülze = Gülte?/krma?; 'Einschlag mit Frucht und Gülze' (3 pari) → v2 NJIVA prek formanta Frucht; Einschlag~Einschicht = verjetno isti termin (OCR)", confidence: "?", verdict: "NEKLASIFICIRANO (čaka paleografijo)", coParcel: { NJIVA: 1 } },
+    { id: "SCHINDEL", values: ["Schindel"], pairs: 1, hypothesisSi: "'Schindel baum' (5 parov) → v2 GOZD prek formanta baum; samostojna 'Schindel' ostaja neznan (skodla/les?)", confidence: "?", verdict: "NEKLASIFICIRANO (čaka paleografijo)", coParcel: {} },
+  ],
+  verdictSi:
+    "Pravilnik rab v2 (12 nespremenjenih v1 pravil + 13 priloženih) dviga pokritost klasifikacije z 72,0 % na 83,5 % parov (2199/2632), brez enega samega spremenjenega v1 razreda (v2 ⊇ v1). Vrzeli v1, ki jih v2 zapira: umlaut Gärten (gart ne ujame gaerten), sredbesedni -wald (Schlagwald) in -weid (Schafweide), schupfn ne ujame schupf./schupfen, sami 'Wein' (10 parov vinogradov nevidnih!), Öd/Wüst dialektni zapisi (Eidn/Ehda/Wiste), Maid = Mahd, Gemainde (Gmde/Gimand), Rüben/Schlagfeld/Stopp. Izrecno NOVO ločilo termType: TOPONIM 122 parov (ležajna imena — Löwisch Thal, Leite, Schüttgrund … NI raba!) in ARTIFAKT 29 parov (številke 82–100 v stolpcu rabe na Blatt X — register stavbnih mest!, Summa, Zahl, opombe o prihodkih). Ostaja 282 parov (16 družin + samostojni) izrecno NEKLASIFICIRANO z dokumentiranimi so-odvisnostnimi dokazi za paleografijo (Lhut-jedro 36, Lohn/Raut 29, Lhopi/Lohifa 23, Einhart 15, Äfling 13 z 12/13 travniškim kontekstom …). Pojasnjeno 89,3 % parov.",
+  verdictEn:
+    "Land-use rulebook v2 (12 unchanged v1 rules + 13 appended) raises classification coverage from 72.0% to 83.5% of pairs (2,199/2,632) without changing a single v1 class (v2 ⊇ v1). v1 gaps closed by v2: umlaut Gärten, mid-word -wald (Schlagwald) and -weid (Schafweide), schupfn missing schupf./schupfen, bare 'Wein' (10 invisible vineyard pairs!), Öd/Wüst dialect spellings (Eidn/Ehda/Wiste), Maid = Mahd, Gemainde (Gmde/Gimand), Rüben/Schlagfeld/Stopp. NEW explicit termType distinction: TOPONIM 122 pairs (place names — Löwisch Thal, Leite, Schüttgrund … NOT a land use!) and ARTIFAKT 29 pairs (numbers 82–100 in the culture column on Blatt X — the building-plot register!, Summa, Zahl, yield notes). 282 pairs (16 families + singles) remain explicitly UNCLASSIFIED with documented co-occurrence evidence for palaeography (Lhut-core 36, Lohn/Raut 29, Lhopi/Lohifa 23, Einhart 15, Äfling 13 with 12/13 meadow context …). 89.3% of pairs explained.",
+  next: [
+    "3. prehod ~15 dvoumnih strani (potrebuje VAČ posnetke — peskovniška mreža trenutno onemogoča dostop)",
+    "16 neznanih družin (Lhut, Lohn/Raut, Äfling …) — človeška paleografija na izrezih",
+    "rekapitulacija: razcep K1/K2 (omejitev K1+K2 = 2090) + semantika 7 par referenc — UNRESOLVED",
+    "puščanje klasifikacije v PZ ekonomski profil (navzkrižna kontrola rab)",
+  ],
+};
+
 /** PZ — demografija in cenitev 1825 (N083PZ). */
 export const PZ_ECONOMY_1825: {
   source: string;

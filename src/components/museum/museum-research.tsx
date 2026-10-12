@@ -58,6 +58,7 @@ import {
   PS_LANDUSE_P39,
   PS_RECAP_P40,
   PS_RECAP_PALEO_P41,
+  PS_LANDUSE_V2_P42,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -574,6 +575,104 @@ export function MuseumResearch() {
                   {t(
                     "Vsota 7 vrstic je natanko 'Summa der Grundparzellen' (831|702) — P40 'naivna vsota 1413' razrešena kot P9 napaka branja (190/1168→830|1188, 286/8931→286|921, 198/11957→138|1457). Razcepi ostajajo izrecno UNRESOLVED: razcep K1/K2 v Abschlußu (K1+K2 = 2090), semantika par referenc (hipotezi OVRŽENI), spodnji vsotni blok str. 141 (šibko). Strojno berljivo: /api/atlas/ps-recap-paleo.",
                     "The 7-row sum is exactly the 'Summa der Grundparzellen' (831|702) — P40's 'naive sum 1,413' resolved as a P9 reading error (190/1168→830|1188, 286/8931→286|921, 198/11957→138|1457). Splits stay explicitly UNRESOLVED: the K1/K2 split in the Abschluß (K1+K2 = 2,090), pair-reference semantics (both hypotheses refuted), the p. 141 lower sum block (weak). Machine-readable: /api/atlas/ps-recap-paleo.",
+                  )}
+                </p>
+              </div>
+            </div>
+
+            {/* PS 1825 — pravilnik rab v2 (P42, issue #10) */}
+            <div className="min-w-0 rounded-xl border bg-card p-6 shadow-sm">
+              <h3 className="flex flex-wrap items-center gap-2 font-display text-lg font-semibold">
+                <Microscope className="size-4 text-primary" aria-hidden="true" />
+                {t("PS 1825 — pravilnik rab v2 (P42)", "PS 1825 — land-use rulebook v2 (P42)")}
+                <StatusBadge status={PS_LANDUSE_V2_P42.status} />
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                {t(
+                  "12 nespremenjenih v1 pravil + 13 priloženih (prvi zadetek = primarni razred); deterministično nad P39 modelom, brez AI ob delovanju. V2 ⊇ V1 — noben v1 razred ni spremenjen.",
+                  "12 unchanged v1 rules + 13 appended (first match = primary class); deterministic over the P39 model, no AI at runtime. V2 ⊇ V1 — not a single v1 class changed.",
+                )}
+              </p>
+
+              {/* P42: pokritost */}
+              <div className="mt-4 rounded-lg border bg-secondary/30 p-3">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-sm font-semibold">
+                    {t("P42 — pokritost klasifikacije po parih", "P42 — pair classification coverage")}
+                  </span>
+                  <span className="font-mono text-[11px] text-muted-foreground">
+                    {PS_LANDUSE_V2_P42.stats.v2ClassifiedPairs}/{PS_LANDUSE_V2_P42.stats.pairsTotal} {t("parov", "pairs")} = {PS_LANDUSE_V2_P42.stats.classifiedPctV2} % ({t("v1", "v1")} {PS_LANDUSE_V2_P42.stats.classifiedPctV1} %)
+                  </span>
+                </div>
+                <div className="mt-2 flex flex-wrap gap-1.5 font-mono text-[10px]">
+                  <span className="rounded-full border bg-background px-2 py-0.5">
+                    {t(`+${PS_LANDUSE_V2_P42.stats.v2ClassifiedPairs - PS_LANDUSE_V2_P42.stats.v1ClassifiedPairs} novih parov (13 pravil)`, `+${PS_LANDUSE_V2_P42.stats.v2ClassifiedPairs - PS_LANDUSE_V2_P42.stats.v1ClassifiedPairs} new pairs (13 rules)`)}
+                  </span>
+                  <span className="rounded-full border bg-background px-2 py-0.5">
+                    {t(`TOPONIM ${PS_LANDUSE_V2_P42.toponym.pairs} (ni raba)`, `TOPONYM ${PS_LANDUSE_V2_P42.toponym.pairs} (not a use)`)}
+                  </span>
+                  <span className="rounded-full border bg-background px-2 py-0.5">
+                    {t(`ARTIFAKT ${PS_LANDUSE_V2_P42.artifakt.pairs} (številke/opombe)`, `ARTIFACT ${PS_LANDUSE_V2_P42.artifakt.pairs} (numbers/notes)`)}
+                  </span>
+                  <span className="rounded-full border bg-background px-2 py-0.5">
+                    {t(`NEKLASIFICIRANO ${PS_LANDUSE_V2_P42.stats.unresolvedPairs}`, `UNCLASSIFIED ${PS_LANDUSE_V2_P42.stats.unresolvedPairs}`)}
+                  </span>
+                  <span className="rounded-full border bg-background px-2 py-0.5">
+                    {t(`pojasnjeno ${PS_LANDUSE_V2_P42.stats.explainedPctV2} %`, `explained ${PS_LANDUSE_V2_P42.stats.explainedPctV2}%`)}
+                  </span>
+                </div>
+                <div className="mt-2 space-y-1">
+                  {Object.entries(PS_LANDUSE_V2_P42.stats.primaryCountsV2).map(([cls, n]) => (
+                    <div key={cls} className="flex items-center justify-between gap-2 font-mono text-[10px]">
+                      <span className="rounded-full border bg-background px-2 py-0.5">{cls}</span>
+                      <span className="text-muted-foreground">{n}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* P42: zaprte vrzeli v1 */}
+              <div className="mt-3 rounded-lg border bg-secondary/30 p-3">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-sm font-semibold">
+                    {t("P42 — vrzeli v1, ki jih v2 zapira", "P42 — v1 gaps closed by v2")}
+                  </span>
+                  <span className="font-mono text-[11px] text-muted-foreground">v1 12 + {PS_LANDUSE_V2_P42.rulebook.appendedRules.length} = 25 pravil</span>
+                </div>
+                <div className="mt-2 max-h-56 space-y-1 overflow-y-auto pr-1">
+                  {PS_LANDUSE_V2_P42.rulebook.appendedRules.map((r) => (
+                    <div key={r.no} className="flex flex-wrap items-center justify-between gap-2 rounded border bg-background px-2 py-1 font-mono text-[10px]">
+                      <span className="text-muted-foreground">{r.no}. {r.class} [{r.confidence}]</span>
+                      <span className="text-muted-foreground">+{r.pairs}</span>
+                      <span className="basis-full text-[10px] leading-snug text-muted-foreground/80">{r.noteSi}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* P42: družine za paleografijo */}
+              <div className="mt-3 rounded-lg border bg-secondary/30 p-3">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-sm font-semibold">
+                    {t(`P42 — ${PS_LANDUSE_V2_P42.families.length} neznanih družin (dokazi za paleografijo)`, `P42 — ${PS_LANDUSE_V2_P42.families.length} unknown families (evidence for palaeography)`)}
+                  </span>
+                  <span className="font-mono text-[11px] text-muted-foreground">{PS_LANDUSE_V2_P42.stats.unresolvedPairs} {t("parov", "pairs")}</span>
+                </div>
+                <div className="mt-2 max-h-56 space-y-1 overflow-y-auto pr-1">
+                  {PS_LANDUSE_V2_P42.families.map((f) => (
+                    <div key={f.id} className="rounded border bg-background px-2 py-1 text-[10px]">
+                      <div className="flex flex-wrap items-center justify-between gap-2 font-mono">
+                        <span className="font-semibold">{f.id}</span>
+                        <span className="text-muted-foreground">{f.pairs} {t("parov", "pairs")} · so-odvisnost: {Object.keys(f.coParcel).length ? Object.entries(f.coParcel).map(([k, v]) => `${k} ${v}`).join(", ") : "—"}</span>
+                      </div>
+                      <p className="mt-0.5 leading-snug text-muted-foreground">{f.hypothesisSi}</p>
+                    </div>
+                  ))}
+                </div>
+                <p className="mt-2 text-[11px] leading-relaxed text-muted-foreground">
+                  {t(
+                    "Vse neznane družine ostajajo izrecno NEKLASIFICIRANE (ni ugibanj); so-odvisnost = primarne rabe na istih parcelah. TOPONIM = ležajna imena (Löwisch Thal, Leite …) — niso raba; ARTIFAKT vključuje številke 82–100 v stolpcu rabe na Blatt X — dodatni dokaz, da je Blatt X register stavbnih mest. Strojno berljivo: /api/atlas/ps-landuse-v2.",
+                    "All unknown families remain explicitly UNCLASSIFIED (no guessing); co-occurrence = primary classes on the same parcels. TOPONYM = place names (Löwisch Thal, Leite …) — not a land use; ARTIFACT includes numbers 82–100 in the culture column on Blatt X — further evidence that Blatt X is the building-plot register. Machine-readable: /api/atlas/ps-landuse-v2.",
                   )}
                 </p>
               </div>
