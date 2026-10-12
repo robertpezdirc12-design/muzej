@@ -110,17 +110,20 @@ Zgodovinska katastrska slika vasi (franciscejski kataster, k.o. Griblje št. 83 
 - **dokazni vmesnik**: vir → trditev → dokaz → povezave (N083PT str. + VAČ povezave);
 - **pokritost + negativni rezultati** — raziskovalna provenienca vključno s statusi
   VERIFIED/DOCUMENTED/REVIEW/RECONSTRUCTED/APPROXIMATE/TO_COLLECT/NOT_FOUND;
-- **strojni prepis PS + sprava (P36–P38)** — 135 strani, 2743 vrstic; deterministična
+- **strojni prepis PS + sprava (P36–P39)** — 135 strani, 2743 vrstic; deterministična
   sprava: glavni niz 1889/2505 (75,4 %), Waldung 81, nadaljevalni niz 95 (do 2840),
-  Blatt X 60 = register stavbnih mest; 430 parcel z več rabami; dokaz
-  `research/issue17/ps-reconciliation.json` + `scripts/p38_ps_reconcile.py`;
+  Blatt X 60 = register stavbnih mest; razdvojitev v model parcela×raba: 2134 vnosov,
+  2632 parov, 430 parcel z več rabami, 7 sirot, klasifikacija rab (pravilnik v1,
+  72,0 % parov); dokaz `research/issue17/ps-reconciliation.json` + `research/issue17/ps-landuse.json`
+  + `scripts/p38_ps_reconcile.py` + `scripts/p39_ps_landuse.py`;
 - **globa povezava** `?atlas=hiša-75` (hiša št. 73 — demonstracijska veriga do MVG-010).
 
 API (statični, brez runtime AI):
 
 - `GET /api/atlas` — celoten podatkovni model (JSON, provenienca vključena);
 - `GET /api/atlas/geojson` — prostorski sloji (GeoJSON, CRS84);
-- `GET /api/atlas/integrity` — test povezav hiša ↔ parcela ↔ lastnik ↔ vir (9 preverjanj).
+- `GET /api/atlas/integrity` — test povezav hiša ↔ parcela ↔ lastnik ↔ vir (9 preverjanj);
+- `GET /api/atlas/ps-landuse` — spravni model rabe tal PS 1825 (parcela×raba, P39).
 
 ## Varnost
 

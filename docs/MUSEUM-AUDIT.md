@@ -809,3 +809,76 @@ rowsAfter = pairs + NEBEREŽNA, razponi manjkajočih razčlenjeni in brez
 podvajanj = 616, monotonost občutljivosti union ⊇ pass2wins ⊇ pass1,
 reprodukcija P36, navzkrižna kontrola TS ↔ JSON prek vbrizganega readFile —
 vzorec qa-p37).
+
+## 19. P39 — issue #10: N083PS RAZDVOJITEV V SPRAVNI MODEL parcela×raba (2026-10-12)
+
+P38 je spravil sekcije in pripravil štetja razdvojitve; sama razdvojitev
+večkulturnih vrstic **v spravni model** pa še ni bila izvedena (negativni izid
+§18.3). P39 jo izvede deterministično nad istimi committed dokazi — brez novih
+branj, brez AI ob delovanju, surove vrednosti nedotaknjene (REVIEW).
+
+### Metoda (scripts/p39_ps_landuse.py, committed)
+
+- Enak rulebook branja kot P38 (*pass2wins*, identična klasifikacija sekcij —
+  navzkrižno preverjeno: sekcije 1889/95/81/60 in 2118 = P38 `parcelCulturePairs`).
+- **Model po parcelah:** vsak (sekcija, parcela) = en vnos z rabami (per kultura:
+  surova vrednost, razredi, št. vrstic, strani, površina joch/klafter), hišnimi
+  št., lastniki, Blattom in opombo. Nobena vrstica ni izgubljena — zero-loss
+  pokritost 2681 + 70 + 9 = 2760 je invarianta.
+- **NEBEREŽNA vrstice ostanejo v modelu doslovno** (frakcijske parcele »76½«,
+  »579 1/2« ×2, »739½«, »2025½«, »2037 1/2«, »[?]« ×3) — nič tihega izločanja.
+- **Klasifikacija rab — pravilnik v1 (za STATISTIKO):** eksplicitni besedni
+  vzorci (Acker/Wiese/Wald/Weide/Alm/Garten/Ödung/Bauplatz/Hof/Stadel/Mühle/
+  Gemeinde/Weg …) nad normalizirano vrednostjo; prvi zadetek = primarni razred;
+  neujemajoče izrecno NEKLASIFICIRANO. Surove vrednosti v modelu ostanejo.
+
+### Rezultati
+
+| Merilo | Vrednost |
+|---|---|
+| vrstice pred (pass2wins) | 2760 |
+| vnosi po parcelah | **2125** (2118 z rabo + **7 sirot**) |
+| model skupaj | **2134** (2125 parcel + 9 NEBEREŽNA) |
+| vrstice rab → parov parcela×raba | 2681 → **2632** (49 podvojenih rab ohranjenih) |
+| parcel z več rabami | 430 |
+| vrstice brez kulture | 70 (63 na parcelah z rabo, 7 na sirotah) |
+| klasifikacija (po parih) | **1896/2632 (72,0 %)**; mešanih 156; neklasificiranih 736 (230 surovih vrednosti) |
+| primarni razredi | njiva 1049 ≫ travnik 487 ≫ gozd 134 ≫ pašnik 54 ≫ stavbna 52 ≫ vrt 51 ≫ planina 23 ≫ nerod 22 ≫ občinska 15 ≫ vinograd 8 ≫ pot 1 |
+
+### Izboljšave štetja nasproti P38 (nove ugotovitve, P38 konstante ostanejo)
+
+1. P38 »parcelCulturePairs« 2118 so v resnici **vnosi po parcelah z vsaj eno
+   rabo**; skupaj s 7 sirotami je pravih vnosov 2125, model 2134 (ne 2127).
+2. Pravih različnih **parov parcela×raba je 2632**; 49 vrstic ponovi rabo
+   znotraj svoje parcele — v modelu ohranjene (rows > 1), ne spletene.
+3. 70 vrstic je numeričnih **brez kulture**: 63 jih nosi parcela, ki ima tudi
+   rabo (prevzete v model), 7 parcel je popolnoma brez rabe (**sirote**:
+   115, 122, 483, 484, 488, 580, 2262 — izrecni vnosi).
+4. P38 številke ostajajo nespremenjene (qa-p38 regresija zelen) — P39 pojasni
+   semantiko in dopolni model; `p38CrossCheck` v izpisu dokumentira povezavo.
+
+### Izpisi in objava
+
+- `research/issue17/ps-landuse.json` — kanonski dokazni izpis (polni model);
+- `src/data/atlas/ps-landuse.json` — identična kopija za runtime (kontrola
+  identičnosti je del QA);
+- `GET /api/atlas/ps-landuse` — strojno berljiv polni model (force-static);
+- `PS_LANDUSE_P39` (`src/data/atlas/research.ts`) + kartica »PS 1825 — sprava
+  in model rabe tal (P38 + P39)« v Raziskavah (zavihek Prepisi Kurrent).
+
+### Ostaja odprto (issue #10 ostaja odprt)
+
+- 3. prehod ~15 dvoumnih strani (tudi za 7 sirot in 9 NEBEREŽNA vrstic);
+- primerjava posameznih parcel z rekapitulacijo str. 140–143 (P5-b);
+- razširitev pravilnika rab v2 za lokalne termine (Lhut, Lohn, Ahn, Äfling …)
+  ob paleografski potrditvi;
+- človeška paleografska potrditev vseh strojnih branj.
+
+### Preverba
+
+ESLint **0**; tsc **0**; QA **39 → 40** (`qa-p39-ps-landuse`: računsko-knjigovodske
+invariante — modelEntries = parcelEntries + NEBEREŽNA, zero-loss 2681+70+9=2760,
+duplicateCultureRows = cultureRows − pairs, sekcije == P38, klasifikacija po
+parih 1896+736 = 2632, pinane regresije 1049/487/134, sirote izrecno naštete,
+navzkrižna kontrola obeh JSON izpisov (identičnost!) ↔ TS prek vbrizganega
+readFile — vzorec qa-p37/qa-p38).

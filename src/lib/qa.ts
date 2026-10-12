@@ -23,6 +23,7 @@ import {
   PR_BOUNDARY_1825,
   PS_RECAP_1826,
   PS_RECONCILIATION_P38,
+  PS_LANDUSE_P39,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -1521,6 +1522,95 @@ export function runQA(opts: QAOptions = {}): QAReport {
     p38Errors.length === 0
       ? `1889/2505 (75,4 %) · 4 sekcije · 2118 parov parcela×raba · ${p38FileDetail}`
       : p38Errors.join("; "),
+  );
+
+  /* ── P39 (issue #10): PS — razdvojitev večkulturnih vrstic v spravni model ── */
+  const p39Errors: string[] = [];
+  const L = PS_LANDUSE_P39;
+  const T = L.totals;
+  if (L.status !== "REVIEW") p39Errors.push(`status=${L.status}, pričakovano REVIEW (strojno branje ni dokazni vir)`);
+  if (L.readingRule !== "pass2wins") p39Errors.push(`readingRule=${L.readingRule}, pričakovano pass2wins (identično P38)`);
+  // računsko-knjigovodske invariante (zero-loss)
+  if (T.parcelEntriesWithCulture + T.parcelEntriesEmptyCulture !== T.parcelEntries)
+    p39Errors.push("parcelEntriesWithCulture + parcelEntriesEmptyCulture ≠ parcelEntries");
+  if (T.parcelEntries + T.nebereznaRows !== T.modelEntries)
+    p39Errors.push("parcelEntries + nebereznaRows ≠ modelEntries");
+  if (T.cultureRows + T.emptyCultureRows + T.nebereznaRows !== T.rowsBefore)
+    p39Errors.push(`cultureRows (${T.cultureRows}) + emptyCultureRows (${T.emptyCultureRows}) + nebereznaRows (${T.nebereznaRows}) ≠ rowsBefore (${T.rowsBefore})`);
+  if (T.duplicateCultureRows !== T.cultureRows - T.parcelCulturePairs)
+    p39Errors.push("duplicateCultureRows ≠ cultureRows − parcelCulturePairs");
+  // pinane vrednosti (regresija pravil skripta)
+  if (T.rowsBefore !== 2760) p39Errors.push(`rowsBefore=${T.rowsBefore}, pričakovano 2760 (P36/P38)`);
+  if (T.parcelEntries !== 2125 || T.parcelEntriesWithCulture !== 2118 || T.parcelEntriesEmptyCulture !== 7)
+    p39Errors.push("vnosi po parcelah niso 2125/2118/7 (regresija P39 modela)");
+  if (T.parcelCulturePairs !== 2632 || T.parcelsWithMultipleCultures !== 430 || T.duplicateCultureRows !== 49)
+    p39Errors.push("razdvojitev ni 2632 parov / 430 parcel z več rabami / 49 podvojenih rab (regresija)");
+  if (T.modelEntries !== 2134 || T.nebereznaRows !== 9 || T.emptyCultureRows !== 70)
+    p39Errors.push("model ni 2134 vnosov / 9 NEBEREŽNA / 70 vrstic brez kulture (regresija)");
+  // sekcije: skladnost s P38 (vključno s sirotami — P38 distinctParcels jih šteje)
+  const S38 = PS_RECONCILIATION_P38.sections;
+  const p39Sections = [
+    ["GRUND_1_2505", S38["GRUND_1_2505"]?.distinctParcels],
+    ["NADALJEVANJE_2506", S38["NADALJEVANJE_2506"]?.distinctParcels],
+    ["WALDUNG", S38["WALDUNG"]?.distinctParcels],
+    ["BLATT_X", S38["BLATT_X"]?.distinctParcels],
+  ] as const;
+  for (const [sec, expected] of p39Sections) {
+    const got = L.sections[sec]?.parcelEntries;
+    if (got == null || got !== expected) p39Errors.push(`sekcija ${sec}: ${got ?? "manjka"} ≠ P38 ${expected ?? "?"}`);
+  }
+  if (T.parcelEntriesWithCulture !== PS_RECONCILIATION_P38.splitting.parcelCulturePairs)
+    p39Errors.push("parcelEntriesWithCulture ≠ P38 parcelCulturePairs (semantična povezava 2118 prekinjena)");
+  // klasifikacija rab: zaprt sklop + računsko skladje (po PARIH parcela×raba)
+  const C = L.cultureClasses;
+  const clsSum = Object.values(C.primaryCounts).reduce((a, n) => a + n, 0);
+  if (clsSum + C.unclassified.count !== T.parcelCulturePairs)
+    p39Errors.push(`klasificirane (${clsSum}) + neklasificirane (${C.unclassified.count}) ≠ parcelCulturePairs (${T.parcelCulturePairs})`);
+  if (C.classifiedPairs !== clsSum) p39Errors.push("classifiedPairs ≠ vsota primaryCounts");
+  if (C.primaryCounts.NJIVA !== 1049 || C.primaryCounts.TRAVNIK !== 487 || C.primaryCounts.GOZD !== 134)
+    p39Errors.push("primarni razredi NJIVA/TRAVNIK/GOZD niso 1049/487/134 (regresija pravilnika v1)");
+  if (C.rulebookVersion !== "v1") p39Errors.push("pravilnik rab ni v1");
+  if (L.orphanParcelKeys.length !== T.parcelEntriesEmptyCulture)
+    p39Errors.push("orphanParcelKeys ≠ parcelEntriesEmptyCulture (sirote morajo biti izrecno naštete)");
+  if (L.topCulturesRaw[0]?.raw !== "Acker" || L.topCulturesRaw[0]?.count !== 880)
+    p39Errors.push("topCulturesRaw ni na čelu z Acker 880 (regresija)");
+  // dokazni datoteki (strežniški klic; vzorec qa-p37/qa-p38)
+  let p39FileDetail = "dokazni datoteki nista preverjeni (readFile ni na voljo) — celovita kontrola teče na /api/qa";
+  if (opts.readFile) {
+    const rawEv = opts.readFile("research/issue17/ps-landuse.json");
+    const rawRt = opts.readFile("src/data/atlas/ps-landuse.json");
+    if (rawEv === null) p39Errors.push("research/issue17/ps-landuse.json ni berljiv (izpis scripts/p39_ps_landuse.py)");
+    if (rawRt === null) p39Errors.push("src/data/atlas/ps-landuse.json ni berljiv (runtime kopija)");
+    if (rawEv !== null && rawRt !== null && rawEv !== rawRt)
+      p39Errors.push("dokazni in runtime izpis ps-landuse.json nista identična (skript mora izpisati oba enako)");
+    if (rawEv !== null) {
+      try {
+        const j = JSON.parse(rawEv) as {
+          totals: { modelEntries: number; parcelCulturePairs: number; parcelEntries: number };
+          cultureClasses: { classifiedPairs: number; unclassified: { count: number } };
+          parcels: unknown[];
+          neberezna: unknown[];
+        };
+        if (j.totals.modelEntries !== T.modelEntries) p39Errors.push(`JSON modelEntries=${j.totals.modelEntries} ≠ TS ${T.modelEntries}`);
+        if (j.totals.parcelCulturePairs !== T.parcelCulturePairs) p39Errors.push(`JSON parcelCulturePairs=${j.totals.parcelCulturePairs} ≠ TS ${T.parcelCulturePairs}`);
+        if (j.cultureClasses.classifiedPairs !== C.classifiedPairs) p39Errors.push("JSON classifiedPairs ≠ TS");
+        if (j.cultureClasses.unclassified.count !== C.unclassified.count) p39Errors.push("JSON unclassified.count ≠ TS");
+        if (j.parcels.length !== T.parcelEntries) p39Errors.push(`JSON parcels.length=${j.parcels.length} ≠ parcelEntries ${T.parcelEntries}`);
+        if (j.neberezna.length !== T.nebereznaRows) p39Errors.push(`JSON neberezna.length=${j.neberezna.length} ≠ nebereznaRows ${T.nebereznaRows}`);
+        p39FileDetail = `dokazni datoteki preverjeni in identični (vnosov ${j.parcels.length}+${j.neberezna.length}, parov ${j.totals.parcelCulturePairs})`;
+      } catch {
+        p39Errors.push("research/issue17/ps-landuse.json ni veljaven JSON");
+      }
+    }
+  }
+  push(
+    "qa-p39-ps-landuse",
+    "P39: N083PS — razdvojitev večkulturnih vrstic v spravni model (scripts/p39_ps_landuse.py): 2760 vrstic → 2134 vnosi (2125 parcel + 9 NEBEREŽNA), 2632 parov parcela×raba, 430 parcel z več rabami, 49 podvojenih rab ohranjenih, 7 sirot izrecnih; klasifikacija rab pravilnik v1 (brez AI) 72,0 % parov, ostalo izrecno NEKLASIFICIRANO; navzkrižna skladnost s P38 (1889/95/81/60); status REVIEW",
+    "P39: N083PS — multi-culture rows split into the reconciliation model (scripts/p39_ps_landuse.py): 2,760 rows → 2,134 entries (2,125 parcels + 9 NEBEREŽNA), 2,632 parcel×culture pairs, 430 multi-culture parcels, 49 duplicate cultures preserved, 7 orphans explicit; culture rulebook v1 (no AI) 72.0% of pairs classified, the rest explicitly UNCLASSIFIED; cross-consistent with P38 (1,889/95/81/60); status REVIEW",
+    p39Errors.length === 0,
+    p39Errors.length === 0
+      ? `2134 vnosov · 2632 parov · 430× več rab · 72,0 % klasificirano · ${p39FileDetail}`
+      : p39Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;

@@ -1012,9 +1012,9 @@ export const PS_RECAP_1826: {
     "Anmerkung",
   ],
   mostUsefulSi:
-    "Veriga hiša→parcela→lastnik je v VSAKI vrstici glavnega registra (stolpci Haus Nro. + lastnik + parcela + raba + površina), a vrstice NISO grupirane po lastnikih → vstop prek stolpca Haus Nro. P36 (2026-10-11): strojni prepis vseh 135 strani (5–139, 2743 vrstic, dvoprehodno na 78 straneh) ŽE IZVEDEN — naslednji koraki: sprava sekcij (zvezek pomešan; Waldung/Schmiegärten/Blatt X ločeni nizi), razdvojitev večkulturnih vrstic, uskladitev s kontrolno vsoto 102 + 2505 = 2607 (šteje kategorije, ne maksimum — glavni niz sega čez 2840), nato ciljano po hišah prek Haus Nro. in rekapitulacije (~str. 140–143).",
+    "Veriga hiša→parcela→lastnik je v VSAKI vrstici glavnega registra (stolpci Haus Nro. + lastnik + parcela + raba + površina), a vrstice NISO grupirane po lastnikih → vstop prek stolpca Haus Nro. P36 (2026-10-11): strojni prepis vseh 135 strani (5–139, 2743 vrstic, dvoprehodno na 78 straneh) IZVEDEN; P38 (2026-10-12): sekcije spravljene (GRUND 1889/2505, NADALJEVANJE 95, WALDUNG 81, Blatt X 60), P39 (2026-10-12): razdvojitev v model parcela×raba (2134 vnosov, 2632 parov, /api/atlas/ps-landuse) — preostane: 3. prehod dvoumnih strani, uskladitev s kontrolno vsoto 102 + 2505 = 2607 (šteje kategorije — glavni niz sega čez 2840), primerjava z rekapitulacijo (~str. 140–143) in nato ciljano po hišah prek Haus Nro.",
   mostUsefulEn:
-    "The house→parcel→owner chain sits in EVERY row of the main register (Haus Nro. + owner + parcel + culture + area columns), but rows are NOT grouped by owner → enter via the Haus Nro. column. P36 (2026-10-11): the machine transcription of all 135 pages (5–139, 2,743 rows, two passes on 78 pages) is DONE — next steps: section reconciliation (the volume is shuffled; Waldung/Schmiegärten/Blatt X are separate series), splitting multi-culture rows, matching against the checksum 102 + 2505 = 2607 (it counts categories, not a maximum — the main series runs past 2840), then targeting by house via Haus Nro. and the recapitulation (~pp. 140–143).",
+    "The house→parcel→owner chain sits in EVERY row of the main register (Haus Nro. + owner + parcel + culture + area columns), but rows are NOT grouped by owner → enter via the Haus Nro. column. P36 (2026-10-11): the machine transcription of all 135 pages (5–139, 2,743 rows, two passes on 78 pages) is DONE; P38 (2026-10-12): sections reconciled (GRUND 1,889/2,505, CONTINUATION 95, WALDUNG 81, Blatt X 60); P39 (2026-10-12): split into the parcel×culture model (2,134 entries, 2,632 pairs, /api/atlas/ps-landuse) — remaining: a 3rd pass over ambiguous pages, matching against the checksum 102 + 2505 = 2,607 (it counts categories — the main series runs past 2840), comparison with the recapitulation (~pp. 140–143), then targeting by house via Haus Nro.",
   sampleRowCount: 2743,
 };
 
@@ -1134,6 +1134,125 @@ export const PS_RECONCILIATION_P38: {
     "parcela 680 (str. 5) očitno okvarjena (hišna št. namesto parcele), pravilo je ne ujame — ostaja REVIEW brez samodejnega popravka",
     "večkulturne vrstice (430 parcel, +633 vrstic) še NISO razdvojene v aplikacijski model — samo štetja",
     "stran 129 (2831–2850) dokazuje, da nadaljevalni niz sega čez 2840 — skladno s P36 ugotovitvijo, da 2607 šteje kategorije, ne maksimum",
+  ],
+};
+
+/**
+ * P39 (issue #10) — N083PS: razdvojitev večkulturnih vrstic V SPRAVNI MODEL
+ * (parcela × raba) + deterministična klasifikacija rab (pravilnik v1, brez AI).
+ * Izračunano s committed skriptom scripts/p39_ps_landuse.py iz committed dokazov
+ * research/issue17/ps-raw/ (213 VLM branj, P36) s P38 pravili; POLNI model
+ * (2125 parcel + 9 NEBEREŽNA): research/issue17/ps-landuse.json (kanonski dokaz)
+ * in identično kopijo src/data/atlas/ps-landuse.json za runtime; strojno berljivo
+ * prek /api/atlas/ps-landuse. Vsi statusi ostajajo REVIEW.
+ *
+ * IZBOLJŠAVE ŠTETJA NASPROTI P38 (nove ugotovitve, P38 konstante ostanejo):
+ *  - P38 »parcelCulturePairs« 2118 = vnosi po parcelah Z vsaj eno rabo; pravih
+ *    vnosov po parcelah je 2125 (7 sirot brez rabe, 70 vrstic), model 2134.
+ *  - pravih različnih parov parcela×raba je 2632; 49 vrstic ponovi rabo
+ *    znotraj svoje parcele (ohranjene kot rows > 1, ne spletene).
+ */
+export const PS_LANDUSE_P39: {
+  series: "PS";
+  source: string;
+  status: ResearchStatus;
+  generatedBy: string;
+  readingRule: "pass1" | "pass2wins" | "union";
+  totals: {
+    rowsBefore: number;
+    parcelEntries: number;
+    parcelEntriesWithCulture: number;
+    parcelEntriesEmptyCulture: number;
+    emptyCultureRows: number;
+    cultureRows: number;
+    duplicateCultureRows: number;
+    parcelCulturePairs: number;
+    parcelsWithMultipleCultures: number;
+    nebereznaRows: number;
+    modelEntries: number;
+  };
+  sections: Record<string, { parcelEntries: number }>;
+  cultureClasses: {
+    rulebookVersion: string;
+    classifiedPairs: number;
+    classifiedPct: number;
+    primaryCounts: Record<string, number>;
+    multiClassPairs: number;
+    unclassified: { count: number; distinctRaw: number };
+  };
+  topCulturesRaw: { raw: string; count: number }[];
+  orphanParcelKeys: string[];
+  verdictSi: string;
+  verdictEn: string;
+  next: string[];
+} = {
+  series: "PS",
+  source:
+    "N083PS.pdf (VAČ uodid 373415, docid 41780; 143 strani) — model nad committed dokazi research/issue17/ps-raw/ (213 VLM branj, P36); polni izpis research/issue17/ps-landuse.json + src/data/atlas/ps-landuse.json",
+  status: "REVIEW",
+  generatedBy: "scripts/p39_ps_landuse.py",
+  readingRule: "pass2wins",
+  totals: {
+    rowsBefore: 2760,
+    parcelEntries: 2125,
+    parcelEntriesWithCulture: 2118,
+    parcelEntriesEmptyCulture: 7,
+    emptyCultureRows: 70,
+    cultureRows: 2681,
+    duplicateCultureRows: 49,
+    parcelCulturePairs: 2632,
+    parcelsWithMultipleCultures: 430,
+    nebereznaRows: 9,
+    modelEntries: 2134,
+  },
+  sections: {
+    GRUND_1_2505: { parcelEntries: 1889 },
+    NADALJEVANJE_2506: { parcelEntries: 95 },
+    WALDUNG: { parcelEntries: 81 },
+    BLATT_X: { parcelEntries: 60 },
+  },
+  cultureClasses: {
+    rulebookVersion: "v1",
+    classifiedPairs: 1896,
+    classifiedPct: 72.0,
+    primaryCounts: {
+      NJIVA: 1049,
+      TRAVNIK: 487,
+      GOZD: 134,
+      PASTVISCE: 54,
+      STAVBNO: 52,
+      VRT: 51,
+      ALM: 23,
+      NEROD: 22,
+      OBCINA: 15,
+      VINOGRAD: 8,
+      CESTA: 1,
+    },
+    multiClassPairs: 156,
+    unclassified: { count: 736, distinctRaw: 230 },
+  },
+  topCulturesRaw: [
+    { raw: "Acker", count: 880 },
+    { raw: "Wiese", count: 249 },
+    { raw: "Wald", count: 126 },
+    { raw: "Wiesen", count: 46 },
+    { raw: "Acker und Wiese", count: 45 },
+    { raw: "Ackerland", count: 39 },
+    { raw: "Acker und Wiesen", count: 39 },
+    { raw: "Alm", count: 25 },
+    { raw: "Wiese und Acker", count: 20 },
+    { raw: "Schüttmühle", count: 20 },
+  ],
+  orphanParcelKeys: ["GRUND_1_2505#115", "GRUND_1_2505#122", "GRUND_1_2505#483", "GRUND_1_2505#484", "GRUND_1_2505#488", "GRUND_1_2505#580", "GRUND_1_2505#2262"],
+  verdictSi:
+    "MODEL ZGRADJEN: 2760 vrstic → 2134 vnosi (2125 parcel + 9 NEBEREŽNA), zero-loss pokritost vrstic 2681 + 70 + 9 = 2760; 2632 parov parcela×raba, 430 parcel z več rabami, 49 podvojenih rab ohranjenih; klasifikacija rab (pravilnik v1, brez AI) pokrije 72,0 % parov (1896/2632: njiva 1049 ≫ travnik 487 ≫ gozd 134 …), preostalih 736 parov (230 surovih vrednosti) izrecno NEKLASIFICIRANO. Novosti nasproti P38: 7 sirot (parcela brez rabe) + 2632 pravih parov + 49 podvojenih rab. Surove vrednosti nedotaknjene, status REVIEW.",
+  verdictEn:
+    "MODEL BUILT: 2,760 rows → 2,134 entries (2,125 parcels + 9 NEBEREŽNA), zero-loss row accounting 2,681 + 70 + 9 = 2,760; 2,632 parcel×culture pairs, 430 multi-culture parcels, 49 duplicate cultures preserved; the culture rulebook (v1, no AI) classifies 72.0% of pairs (1,896/2,632: arable 1,049 ≫ meadow 487 ≫ forest 134 …), the remaining 736 pairs (230 raw values) are explicitly UNCLASSIFIED. New against P38: 7 orphan parcels + 2,632 true pairs + 49 duplicate cultures. Raw values untouched, status REVIEW.",
+  next: [
+    "3. prehod ~15 dvoumnih strani (audit §17) — tudi za 7 sirot in 9 NEBEREŽNA vrstic",
+    "primerjava posameznih parcel z rekapitulacijo str. 140–143 (P5-b)",
+    "razširitev pravilnika rab v2 (lokalni termini: Lhut, Lohn, Ahn, Äfling …) ob paleografski potrditvi",
+    "povezava modela z GEOTRUTH raba-tal conami (landuse.ts) — le kot kontekst, ne samodejna preslikava",
   ],
 };
 

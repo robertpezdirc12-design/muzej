@@ -2410,3 +2410,49 @@ zgodbo (Pezdirc).
 - REGRESIJA: bun install --frozen-lockfile 508 paketov; ESLint 0; tsc 0; build 16/16
   strani + 12 API poti; lokalni produkcijski strežnik: /api/qa HTTP 200, QA 38/38
   (prej 37/37 — dodan 1 test, nič odstranjenih).
+
+## P38 — issue #10: N083PS deterministična sprava (2026-10-11)
+
+- Skript scripts/p38_ps_reconcile.py (rulebook v1): pravilo branja pass2wins REPRODUCIRA P36
+  osnovno črto NATANKO (grundSeen 1889 ✓, grundMissing 616 ✓, over2505 176 = NAD 95 + WALD 81 ✓,
+  bauplatzeSeen 60 = distinct BLATT_X ✓) — poreklo RAZREŠENO: Blatt X (str. 138–139) = register
+  stavbnih mest (Bauplätze, cilj 102), 60/102 viden v strojnem branju.
+- Sekcije po eksplicitnih pravilih: GRUND_1_2505 2490 vrstic / 1889 parcel (75,4 %),
+  NADALJEVANJE_2506 100/95 (do 2840 — str. 129 dokazuje niz čez 2840), WALDUNG 101/81, BLATT_X 60/60,
+  NEBEREŽNA 9. Razdvojitev večkulturnih vrstic (štetja): 2760 → 2118, 430 parcel z več rabami (+633).
+- OCR kandidati vodilne števke: 0 v obeh sejah (konservativno pravilo, brez lažnih pozitivov).
+- Izpis research/issue17/ps-reconciliation.json; TS konstanta PS_RECONCILIATION_P38 (research.ts);
+  QA 38→39 (qa-p38-ps-reconciliation: invariante + občutljivost + TS↔JSON readFile kontrola).
+- P38-e: docs/PHONE-FIELD-TEST.md — protokol terenskega preizkusa na telefonu (26 točk: QR, GPS,
+  AR, avdio, offline, jeziki) iz MUSEUM-AUDIT §9 točke 2. Audit §18 + README ATLAS bullet.
+- Dokaz: commit fc36e33 (GitLab main; identiteta lastnika Robert Pezdirc).
+
+## P39 — issue #10: N083PS razdvojitev večkulturnih vrstic v spravni model (2026-10-12)
+
+- Skript scripts/p39_ps_landuse.py (isti rulebook branja kot P38, navzkrižno preverjeno:
+  sekcije 1889/95/81/60, 2118 = P38 parcelCulturePairs): raven vrstic → MODEL PO PARCELAH,
+  vsak (sekcija, parcela) = vnos z rabami (surova vrednost, razredi, vrstice, strani, površina),
+  hišnimi št., lastniki, Blattom, opombo; NEBEREŽNA vrstice (9) ostanejo doslovno (frakcijske
+  parcele 76½, 579 1/2 ×2, 739½, 2025½, 2037 1/2, [?] ×3).
+- IZBOLJŠAVE ŠTETJA nasproti P38 (nove ugotovitve, P38 konstante nespremenjene):
+  (1) P38 »2118 parov« so v resnici VNOSI po parcelah z vsaj eno rabo; pravih vnosov 2125
+  (7 sirot brez rabe: 115, 122, 483, 484, 488, 580, 2262 — 70 vrstic brez kulture, pri P38
+  pod »extra«); (2) model skupaj 2134 (2125 + 9), ne 2127; (3) pravih parov parcela×raba 2632,
+  49 vrstic ponovi rabo znotraj parcele (ohranjene kot rows > 1, ne spletene).
+- Klasifikacija rab — pravilnik v1 (za statistiko, brez AI; surove vrednosti nedotaknjene):
+  1896/2632 parov (72,0 %) — njiva 1049 ≫ travnik 487 ≫ gozd 134 ≫ pašnik 54 ≫ stavbna 52 ≫
+  vrt 51 ≫ planina 23 ≫ nerod 22 ≫ občinska 15 ≫ vinograd 8 ≫ pot 1; 156 mešanih parov;
+  736 parov (230 surovih vrednosti) izrecno NEKLASIFICIRANO (lokalni termini: Lhut, Lohn,
+  Ahn, Äfling … za v2 ob paleografiji).
+- Zero-loss invarianta: 2681 (vrstice rab) + 70 (brez kulture) + 9 (NEBEREŽNA) = 2760 ✓.
+- Izpisi: research/issue17/ps-landuse.json (kanonski dokaz, 1,07 MB polni model) + identična
+  runtime kopija src/data/atlas/ps-landuse.json; API GET /api/atlas/ps-landuse (force-static);
+  TS konstanta PS_LANDUSE_P39 (research.ts); kartica »PS 1825 — sprava in model rabe tal
+  (P38 + P39)« v Raziskavah (zavihek Prepisi Kurrent) — P38 sprava je s tem PRVIČ vidna v UI.
+- Usklajena besedila: reconciliation.ts (openSi/openEn N083PS + zeroLossMeaning), sources.ts
+  N083PS noteSi/noteEn (PREOSTANE → SPRAVA P38 + P39, ostane 3. prehod + rekapitulacija 140–143
+  + paleografija), PS_RECAP_1826.mostUsefulSi/En.
+- Dokumentacija: MUSEUM-AUDIT §19; README ATLAS bullet (P36–P39) + API seznam /api/atlas/ps-landuse.
+- Preverba: ESLint 0, tsc 0, QA 39→40 (qa-p39-ps-landuse: računsko-knjigovodske invariante,
+  pinane regresije, sekcije == P38, klasifikacija po parih, identičnost obeh JSON izpisov prek
+  readFile). Issue #10 OSTAJA ODPRT.

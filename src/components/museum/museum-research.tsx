@@ -54,6 +54,8 @@ import {
   PV_LAND_USE_1825,
   PR_BOUNDARY_1825,
   PS_RECAP_1826,
+  PS_RECONCILIATION_P38,
+  PS_LANDUSE_P39,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -304,6 +306,142 @@ export function MuseumResearch() {
                   </li>
                 ))}
               </ul>
+            </div>
+
+            {/* PS 1825 — sprava in model rabe tal (P38 + P39, issue #10) */}
+            <div className="min-w-0 rounded-xl border bg-card p-6 shadow-sm">
+              <h3 className="flex flex-wrap items-center gap-2 font-display text-lg font-semibold">
+                <Microscope className="size-4 text-primary" aria-hidden="true" />
+                {t("PS 1825 — sprava in model rabe tal (P38 + P39)", "PS 1825 — reconciliation & land-use model (P38 + P39)")}
+                <StatusBadge status={PS_LANDUSE_P39.status} />
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                {t(
+                  "Strojni prepis 135 strani (P36, 2743 vrstic) je spravljen po sekcijah (P38) in razdvojen v model po parcelah (P39) — deterministično, brez AI ob delovanju; surove rabe ostanejo nedotaknjene.",
+                  "The machine transcription of 135 pages (P36, 2,743 rows) is reconciled by sections (P38) and split into a parcel-level model (P39) — deterministically, no AI at runtime; raw cultures stay untouched.",
+                )}
+              </p>
+
+              {/* P38: pokritost glavnega niza */}
+              <div className="mt-4 rounded-lg border bg-secondary/30 p-3">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-sm font-semibold">
+                    {t("P38 — glavni niz 1–2505 (GRUND)", "P38 — main series 1–2505 (GRUND)")}
+                  </span>
+                  <span className="font-mono text-[11px] text-muted-foreground">
+                    {PS_RECONCILIATION_P38.coverage.grundDistinct}/2505 · {PS_RECONCILIATION_P38.coverage.grundCoveragePct} %
+                  </span>
+                </div>
+                <Progress
+                  value={PS_RECONCILIATION_P38.coverage.grundCoveragePct}
+                  className="mt-2 h-1.5"
+                  aria-label="GRUND pokritost"
+                />
+                <p className="mt-2 text-[11px] leading-relaxed text-muted-foreground">
+                  {t(
+                    `Sekcije: NADALJEVANJE_2506 ${PS_RECONCILIATION_P38.sections.NADALJEVANJE_2506?.distinctParcels ?? "—"} · WALDUNG ${PS_RECONCILIATION_P38.sections.WALDUNG?.distinctParcels ?? "—"} · Blatt X ${PS_RECONCILIATION_P38.sections.BLATT_X?.distinctParcels ?? "—"} (stavbna mesta, P36 cilj 102). P36 osnovna črta pod pravilom pass2wins reproducirana natanko.`,
+                    `Sections: CONTINUATION_2506 ${PS_RECONCILIATION_P38.sections.NADALJEVANJE_2506?.distinctParcels ?? "—"} · WALDUNG ${PS_RECONCILIATION_P38.sections.WALDUNG?.distinctParcels ?? "—"} · Blatt X ${PS_RECONCILIATION_P38.sections.BLATT_X?.distinctParcels ?? "—"} (building plots, P36 target 102). The P36 baseline is reproduced exactly under the pass2wins rule.`,
+                  )}
+                </p>
+              </div>
+
+              {/* P39: model po parcelah */}
+              <div className="mt-3 rounded-lg border bg-secondary/30 p-3">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-sm font-semibold">
+                    {t("P39 — model parcela × raba", "P39 — parcel × culture model")}
+                  </span>
+                  <span className="font-mono text-[11px] text-muted-foreground">
+                    {PS_LANDUSE_P39.totals.rowsBefore} {t("vrstic", "rows")} → {PS_LANDUSE_P39.totals.modelEntries} {t("vnosov", "entries")}
+                  </span>
+                </div>
+                <div className="mt-2 flex flex-wrap gap-1.5 font-mono text-[10px]">
+                  <span className="rounded-full border bg-background px-2 py-0.5">
+                    {t(`${PS_LANDUSE_P39.totals.parcelEntries} parcel`, `${PS_LANDUSE_P39.totals.parcelEntries} parcels`)}
+                  </span>
+                  <span className="rounded-full border bg-background px-2 py-0.5">
+                    {t(`${PS_LANDUSE_P39.totals.parcelCulturePairs} parov`, `${PS_LANDUSE_P39.totals.parcelCulturePairs} pairs`)}
+                  </span>
+                  <span className="rounded-full border bg-background px-2 py-0.5">
+                    {t(`${PS_LANDUSE_P39.totals.parcelsWithMultipleCultures} × več rab`, `${PS_LANDUSE_P39.totals.parcelsWithMultipleCultures} multi-culture`)}
+                  </span>
+                  <span className="rounded-full border bg-background px-2 py-0.5">
+                    {t(`${PS_LANDUSE_P39.totals.duplicateCultureRows} podvojenih rab`, `${PS_LANDUSE_P39.totals.duplicateCultureRows} duplicate cultures`)}
+                  </span>
+                  <span className="rounded-full border bg-background px-2 py-0.5">
+                    {t(`${PS_LANDUSE_P39.totals.parcelEntriesEmptyCulture} sirot (brez rabe)`, `${PS_LANDUSE_P39.totals.parcelEntriesEmptyCulture} orphans (no culture)`)}
+                  </span>
+                  <span className="rounded-full border bg-background px-2 py-0.5">
+                    {t(`${PS_LANDUSE_P39.totals.nebereznaRows} NEBEREŽNA`, `${PS_LANDUSE_P39.totals.nebereznaRows} UNREADABLE`)}
+                  </span>
+                </div>
+
+                {/* klasifikacija rab — pravilnik v1 */}
+                {(() => {
+                  const C = PS_LANDUSE_P39.cultureClasses;
+                  const clsLabels: Record<string, [string, string]> = {
+                    NJIVA: ["njiva (Acker)", "arable (Acker)"],
+                    TRAVNIK: ["travnik (Wiese)", "meadow (Wiese)"],
+                    GOZD: ["gozd (Wald)", "forest (Wald)"],
+                    PASTVISCE: ["pašnik (Weide)", "pasture (Weide)"],
+                    STAVBNO: ["stavbna/gospodarska", "building/farm"],
+                    VRT: ["vrt (Garten)", "garden (Garten)"],
+                    ALM: ["planina (Alm)", "alpine pasture (Alm)"],
+                    NEROD: ["nerodovoljna (Ödung)", "waste land (Ödung)"],
+                    OBCINA: ["občinska (Gemeinde)", "communal (Gemeinde)"],
+                    VINOGRAD: ["vinograd", "vineyard"],
+                    CESTA: ["pot/cesta (Weg)", "path/road (Weg)"],
+                  };
+                  const clsColors: Record<string, string> = {
+                    NJIVA: "#c9a35a",
+                    TRAVNIK: "#9ec497",
+                    GOZD: "#5a7a52",
+                    PASTVISCE: "#b5c99a",
+                    STAVBNO: "#a89c8a",
+                    VRT: "#8fb573",
+                    ALM: "#c4b39a",
+                    NEROD: "#b3a28e",
+                    OBCINA: "#93a8a0",
+                    VINOGRAD: "#8e5a68",
+                    CESTA: "#9b9485",
+                  };
+                  const rows = Object.entries(C.primaryCounts);
+                  const max = rows.length ? rows[0][1] : 1;
+                  return (
+                    <div className="mt-3">
+                      <p className="text-[11px] font-medium">
+                        {t(
+                          `Klasifikacija rab — pravilnik ${C.rulebookVersion} (brez AI): ${C.classifiedPairs} parov (${C.classifiedPct} %), preostalih ${C.unclassified.count} izrecno NEKLASIFICIRANO (${C.unclassified.distinctRaw} surovih vrednosti)`,
+                          `Culture classification — rulebook ${C.rulebookVersion} (no AI): ${C.classifiedPairs} pairs (${C.classifiedPct} %), the remaining ${C.unclassified.count} explicitly UNCLASSIFIED (${C.unclassified.distinctRaw} raw values)`,
+                        )}
+                      </p>
+                      <ul className="mt-2 space-y-1">
+                        {rows.map(([cls, n]) => (
+                          <li key={cls} className="flex items-center gap-2 text-[11px]">
+                            <span className="w-40 shrink-0 truncate text-muted-foreground">
+                              {(clsLabels[cls] ?? [cls, cls])[lang === "si" ? 0 : 1]}
+                            </span>
+                            <span className="h-2 min-w-0 flex-1 overflow-hidden rounded-full bg-muted">
+                              <span
+                                className="block h-full rounded-full"
+                                style={{ width: `${(n / max) * 100}%`, backgroundColor: clsColors[cls] ?? "#a8a29e" }}
+                              />
+                            </span>
+                            <span className="w-12 shrink-0 text-right font-mono text-muted-foreground">{n}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  );
+                })()}
+
+                <p className="mt-3 text-[11px] leading-relaxed text-muted-foreground">
+                  {t(
+                    "Novosti nasproti P38: 7 sirot (parcela brez nobene rabe) izrecno v modelu, pravih parov parcela×raba 2632 (P38 »2118 parov« so v resnici vnosi po parcelah), 49 podvojenih rab ohranjenih. Strojno berljivo: /api/atlas/ps-landuse.",
+                    "New against P38: 7 orphans (a parcel with no culture at all) are explicit in the model, the true parcel×culture pair count is 2,632 (P38's »2,118 pairs« are in fact parcel entries), 49 duplicate cultures preserved. Machine-readable: /api/atlas/ps-landuse.",
+                  )}
+                </p>
+              </div>
             </div>
 
             {/* N83 katalog 12 enot + reconciliation */}
