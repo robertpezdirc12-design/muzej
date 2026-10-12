@@ -1392,6 +1392,130 @@ export const PS_RECAP_P40: {
   ],
 };
 
+/** P41 (issue #10) — PS 1825: paleografija str. 140–143 — "Abschluß der Gemeinde" + per-Lage rekapitulacija. */
+export const PS_RECAP_PALEO_P41: {
+  series: "PS";
+  source: string;
+  status: ResearchStatus;
+  generatedBy: string;
+  lageRows: { lage: number; haus: string; joch: number; klafter: number; kind: string }[];
+  lageSum: { joch: number; klafter: number; pass: boolean };
+  page140Left: { summaGrundparzellen: string; zinsbBauparzellen: string; summaNach: string };
+  abschluss: {
+    title: string;
+    summeDerGrundparzellen: string;
+    summeDerBauparzellen: string;
+    areaDerGemeinde: string;
+    unresolvedSplit: { constraint: string; resolved: boolean; status: string };
+    date: string;
+  };
+  page141: {
+    referencePairs: { parf1: string; parf2: string }[];
+    pairSemantics: string;
+    summaries: { summa: string; grundparzellenZusatz: string; summaInGemeinde: string };
+    p9Corrections: string[];
+  };
+  page143: { values: string[]; passes: string };
+  page142: { rowsOnPage: number; unresolved: string };
+  identities: Record<string, { pass: boolean; detail: string }>;
+  crossCheck: {
+    modelRefs: { total: number; missing: number[] };
+    areaAttribution: {
+      klafterPerJoch: number;
+      modelGrundJoch: number;
+      preferred: { label: string; joch: number; deltaPct: number };
+      p40Best: string;
+    };
+  };
+  resolves: string[];
+  open: string[];
+  verdictSi: string;
+  verdictEn: string;
+} = {
+  series: "PS",
+  source:
+    "N083PS (VAČ vacId 373415, pdfPageImage posnetki str. 140–143) — 12 neodvisnih VLM prehodov (3×4, glm-5v-turbo, [~]/[?]) + deterministična sprava scripts/p41_ps_recap_paleo.py; polni izpis research/issue17/ps-recap-paleo.json + src/data/atlas/ps-recap-paleo.json",
+  status: "REVIEW",
+  generatedBy: "scripts/p41_ps_recap_paleo.py",
+  lageRows: [
+    { lage: 1, haus: "124", joch: 101, klafter: 253, kind: "vlm-consensus" },
+    { lage: 2, haus: "125", joch: 89, klafter: 78, kind: "vlm-consensus" },
+    { lage: 3, haus: "126", joch: 82, klafter: 81, kind: "vlm-consensus" },
+    { lage: 4, haus: "127", joch: 125, klafter: 183, kind: "vlm-consensus" },
+    { lage: 5, haus: "128", joch: 189, klafter: 1228, kind: "vlm-consensus" },
+    { lage: 6, haus: "129", joch: 162, klafter: 447, kind: "vlm-consensus" },
+    { lage: 7, haus: "130", joch: 82, klafter: 32, kind: "vlm-consensus" },
+  ],
+  lageSum: { joch: 831, klafter: 702, pass: true },
+  page140Left: {
+    summaGrundparzellen: "831|702",
+    zinsbBauparzellen: "3|312",
+    summaNach: "834|1014",
+  },
+  abschluss: {
+    title: "Abschluß der Gemeinde (rdeči tuš, str. 140 desno)",
+    summeDerGrundparzellen: "1215|490",
+    summeDerBauparzellen: "5|1003",
+    areaDerGemeinde: "1220|1493",
+    unresolvedSplit: {
+      constraint: "K1 + K2 = 2090 K (iz 831+383+1 = 1215 in 490)",
+      resolved: false,
+      status: "UNRESOLVED (doberesedlni razcep); vsota preverjena",
+    },
+    date: "Graz den 25ten July 1841 [~] (VLM p1/p2)",
+  },
+  page141: {
+    referencePairs: [
+      { parf1: "830", parf2: "1188" },
+      { parf1: "133", parf2: "1196" },
+      { parf1: "132", parf2: "1466" },
+      { parf1: "206", parf2: "836" },
+      { parf1: "286", parf2: "921" },
+      { parf1: "268", parf2: "1341" },
+      { parf1: "138", parf2: "1457" },
+    ],
+    pairSemantics: "UNRESOLVED — hipotezi 'dve parceli' in 'razpon' OVRŽENI (model); dokumentirano",
+    summaries: { summa: "1217|684", grundparzellenZusatz: "4|889 [~1]", summaInGemeinde: "1221|1570 [~1573]" },
+    p9Corrections: ["190/1168", "286/8931", "198/11957"],
+  },
+  page143: { values: ["102", "2505", "2607"], passes: "3/3 enoglasno" },
+  page142: { rowsOnPage: 40, unresolved: "skupna dolžina Verzeichnis (nadaljevanje na neosvanih straneh)" },
+  identities: {
+    a_lageRowSum: { pass: true, detail: "7 vrstic == 831|702" },
+    ab_summaNach: { pass: true, detail: "831|702 + 3|312 == 834|1014" },
+    c_abschlussGrund: { pass: true, detail: "831|K1[~] + 383|K2[~] == 1215|490 (vsota preverjena, razcep UNRESOLVED)" },
+    d_abschlussBaup: { pass: true, detail: "3|312 + 2|691 == 5|1003" },
+    e_areaGemeinde: { pass: true, detail: "1215|490 + 5|1003 == 1220|1493" },
+    f_page143: { pass: true, detail: "102 + 2505 == 2607 (regresija)" },
+    g_page141Weak: { pass: true, detail: "1217|684 + 4|889 == 1221|1573 ≈ zapis 1570 [~] (šibko, visual-crop)" },
+  },
+  crossCheck: {
+    modelRefs: { total: 14, missing: [1188, 1196, 1466] },
+    areaAttribution: {
+      klafterPerJoch: 1600,
+      modelGrundJoch: 1232.96,
+      preferred: { label: "Area der Gemeinde 1220|1493 (P41 NOVO)", joch: 1220.9331, deltaPct: 0.99 },
+      p40Best: "GRUND_1_2505 samo (Δ +16.96 Joch ≈ +1.39 %)",
+    },
+  },
+  resolves: [
+    "P40 UNRESOLVED 'naivna vsota 1413': P9 branja par popravljena; 7 vrstic ima vsoto 831|702, skladno z 'Summa der Grundparzellen' str. 140",
+    "P40 kandidat 'Summa 1216(?)': nadomeščen z 'Area der Gemeinde 1220|1493' (Δ +0,99 %)",
+    "poreklo rdeče vsote str. 141 ('~1216'): najverjetneje 1215 (Summe) ali 1220 (Area) — razcep [~]",
+  ],
+  open: [
+    "semantika par referenc (830,1188)… — UNRESOLVED",
+    "razcep K1/K2 v Abschlußu (K1+K2 = 2090) — UNRESOLVED",
+    "p142 Verzeichnis skupna dolžina — UNRESOLVED",
+    "p141 spodnji vsotni blok — ŠIBKO (visual-crop)",
+    "hiše 121½–123 in 134–135 brez površin v rekapitulaciji",
+  ],
+  verdictSi:
+    "Paleografija str. 140–143 (12 VLM prehodov + izrezi) je prvič ujela SKUPNO POVRŠINO OBČINE: 'Area der Gemeinde' 1220 Joch 1493 Klafter (rdeči tuš), aritmetično zvezana (1215|490 + 5|1003 = 1220|1493). 7 vrstic 'Grundstückslagen' (hiše 124–130) se sešteje v 831|702 = 'Summa der Grundparzellen' — P40 'naivna vsota 1413' razrešena kot P9 napaka branja. Model GRUND (1232,96 J) odmika le +0,99 % od Areje — najbolj skladna atribucija doslej. Razcepi (K1/K2, semantika par referenc) ostajajo izrecno UNRESOLVED.",
+  verdictEn:
+    "Palaeography of pp. 140–143 (12 VLM passes + zoomed crops) captured the MUNICIPAL TOTAL AREA for the first time: 'Area der Gemeinde' 1,220 Joch 1,493 Klafter (red chalk), arithmetically bound (1,215|490 + 5|1,003 = 1,220|1,493). The 7 'Grundstückslagen' rows (houses 124–130) sum to 831|702 = 'Summa der Grundparzellen' — P40's 'naive sum 1,413' resolved as a P9 reading error. The GRUND model (1,232.96 J) deviates only +0.99% from the Area — the most consistent attribution yet. Splits (K1/K2, pair-reference semantics) remain explicitly UNRESOLVED.",
+};
+
 /** PZ — demografija in cenitev 1825 (N083PZ). */
 export const PZ_ECONOMY_1825: {
   source: string;

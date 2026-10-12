@@ -957,3 +957,95 @@ JSON izpisov (identičnost!) ↔ TS prek vbrizganega readFile — vzorec
 qa-p37/qa-p38/qa-p39); `next build` 18/18 (nov route prerenderiran);
 produkcijski strežnik (port 3010): `/api/qa` 41/41, `/api/atlas/ps-recap`
 200, `/api/atlas/ps-landuse` 200 (regresija), `/` 200.
+
+---
+
+## §21 — P41: paleografija str. 140–143 — "Abschluß der Gemeinde" (issue #10)
+
+**Datum:** 2026-10-12 · **Status:** REVIEW (strojno branje ni dokazni vir) ·
+**Skript:** `scripts/p41_ps_recap_paleo.py` · **Dokaz:**
+`research/issue17/ps-recap-paleo.json` (+ identična runtime kopija
+`src/data/atlas/ps-recap-paleo.json`)
+
+### Metoda
+
+- **Vir posnetkov:** VAČ `pdfPageImage` (uodid 373415, docid 41780) — posamezne
+  strani 140–143 (~1200×1020 px; polni PDF je na VAČ prekinjivo prenašan in
+  ostaja okrnjen, zato per-page pot); 2× Lanczos upscale + JPEG q92 za branje.
+- **VLM kampanja:** 12 neodvisnih prehodov (3 × 4 strani, model glm-5v-turbo,
+  protokol [~]/[?]) — `research/issue17/ps-recap-paleo-raw/` (12 datotek,
+  committed kot dokaz).
+- **Paleografska arbitracija:** povečani izrezi (3–6×) ključnih regij; vsaka
+  konsenzualna vrednost nosi dokazno karto (kateri prehodi vsebujejo vrednost),
+  vrednosti brez VLM dokaza so izrecno `visual-crop` + [~].
+- **Deterministična sprava:** skript brez AI ob delovanju; FAIL ob padu
+  katererekoli identitete (vzorec P38–P40).
+
+### Rezultati
+
+1. **"Area der Gemeinde" 1220 Joch 1493 Klafter** (str. 140 desno, rdeči tuš) —
+   **PRVIČ UJETA SKUPNA POVRŠINA OBČINE** v N083PS; aritmetično zvezana:
+   `Summe der Grundparzellen 1215|490 + Summe der Bauparzellen 5|1003 =
+   1220|1493` (vse tri vrstice prebrane; identiteta PASS). = 1220,933 Joch.
+2. **7 vrstic "Grundstückslagen" (hiše 124–130)** se sešteje v **831 J 702 K**
+   == "Summa der Grundparzellen" (str. 140 levo) — **P40 §20 UNRESOLVED
+   "naivna vsota 1413" RAZREŠENO** kot P9 napaka branja par referenc
+   (190/1168 → 830|1188, 286/8931 → 286|921, 198/11957 → 138|1457);
+   nadaljnja identiteta `831|702 + zinsb. 3|312 = 834|1014` PASS.
+3. **"Abschluß der Gemeinde"** (str. 140 desno, 7 vrstic + datum + podpis):
+   vsote Grundparzellen 831|K1[~] + Zinsb. 383|K2[~] = **1215|490** (razcep
+   K1/K2 UNRESOLVED z omejitvijo K1+K2 = 2090 K; VLM variante 968/468 ×
+   1288/1388), `3|312 + 2|691 = 5|1003` PASS; datum branja "Graz den 25ten
+   July 1841" [~] — sklenitveni zapis po koncu kampanje 1825/1826; svinčni
+   zaznamek "1220 1493" (kasnejša preizkusna vsota) je dokaz uporabe.
+4. **Str. 141 (rdeča tabela):** 7 par referenc (830,1188)…(138,1457) —
+   semantika UNRESOLVED (hipotezi "dve parceli" in "razpon" OVRŽENI proti
+   modelu P39; 11/14 referenc obstaja v modelu, 1188/1196/1466 manjkajo —
+   združljivo z P38 grundMissing 616); spodnji vsotni blok **1217|684 +
+   4|889 = 1221|1573** (zapis "1221|1570", Δ 3 K) — ŠIBKO (visual-crop).
+5. **Str. 142:** "Verzeichnis" — abecedni seznam lastnikov, 40 vrstic (št.
+   1–40) na strani, 3/3 prehoda enoglasno; skupna dolžina UNRESOLVED.
+6. **Str. 143 regresija:** 102 + 2505 = 2607 — **3/3 prehoda enoglasno**.
+
+### Atribucija površin (nadomešča P40 §20)
+
+| Kandidat | Joch | Δ model GRUND (1232,96 J) |
+|---|---|---|
+| **Area der Gemeinde 1220\|1493 (P41 NOVO)** | 1220,9331 | **+12,03 J (+0,99 %) — NAJBOLJ SKLADEN** |
+| Summa str. 141 1217\|684 | 1217,4275 | +15,53 J (+1,28 %) |
+| Summe der Grundparzellen 1215\|490 | 1215,3063 | +17,66 J (+1,45 %) |
+| Summa 1216(?) (P9/P40) | 1216 | +16,96 J (+1,39 %) — NADOMEŠČENO |
+
+Poreklo rdeče vsote str. 141 ("~1216"): najverjetneje "Summe der
+Grundparzellen 1215" ali "Area der Gemeinde 1220" — dobesedni razcep [~].
+
+### Izpisi in objava
+
+- `research/issue17/ps-recap-paleo.json` — kanonski dokazni izpis;
+- `src/data/atlas/ps-recap-paleo.json` — identična kopija (QA kontrola
+  identičnosti);
+- `GET /api/atlas/ps-recap-paleo` — strojno berljiv izpis (force-static);
+- `PS_RECAP_PALEO_P41` (`src/data/atlas/research.ts`) + kartica »PS 1825 —
+  paleografija str. 140–143: Abschluß der Gemeinde (P41)« v Raziskavah
+  (zavihek Prepisi Kurrent).
+
+### Ostaja odprto (issue #10 ostaja odprt)
+
+- semantika par referenc (830,1188)… — UNRESOLVED (obe hipotezi OVRŽENI);
+- razcep K1/K2 v Abschlußu (K1+K2 = 2090) — UNRESOLVED;
+- p141 spodnji vsotni blok — ŠIBKO (visual-crop); p142 skupna dolžina — UNRESOLVED;
+- človeška paleografska potrditev vseh branj; 3. prehod ~15 dvoumnih strani;
+- pravilnik rab v2 (Lhut, Lohn, Ahn, Äfling …).
+
+### Preverba
+
+ESLint **0**; tsc **0**; QA **41 → 42** (`qa-p41-ps-recap-paleo`: vse
+identitete PASS, aritmetika iz konsenzualnih vrednosti z 1 J = 1600 K,
+vsota 7 Lager == 831|702, regresija str. 143 3/3, atribucija Δ < 1,39 %,
+model refs 14 z manjkajočimi 1188/1196/1466, razrešitve ≥ 3, odprta
+vprašanja ≥ 5, navzkrižna kontrola obeh JSON izpisov (identičnost!) ↔ TS
+prek vbrizganega readFile — vzorec qa-p37..p40); `next build` 19/19 (nov
+route prerenderiran); produkcijski strežnik (port 3010): `/api/qa` 42/42,
+`/api/atlas/ps-recap-paleo` 200 (Area 1220|1493, Δ +0,99 %); brskalniška
+E2E preverba (agent-browser): zavihek Prepisi Kurrent, kartica P41 popolna
+(Area, 7 Lager, razrešitve), konzola brez napak.

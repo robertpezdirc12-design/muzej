@@ -2501,3 +2501,58 @@ zgodbo (Pezdirc).
   sync.yml bo ob ciklu poskušal merge, ob konfliktu javno spodleti (P21 načelo,
   brez izgube podatkov). P40 je namenoma sestavljen iz NOVIH datotek (skript,
   2× JSON, API route) + appendov, da je prihodnji merge čim lažji.
+
+## P41 (2026-10-12) — issue #10: PALEOGRAFIJA STR. 140–143 — "ABSCHLUSS DER GEMEINDE" + PER-LAGE REKAPITULACIJA
+
+- Vir posnetkov ponovno pridobljen (peskovnik resetiran): VAČ per-page
+  `pdfPageImage` (uodid 373415, docid 41780) str. 139–143 (~1200×1020 px);
+  polni `tifyPdfDownload` je prekinjivo prenašan (6,8/56,2 MB, xref okvarjen)
+  → per-page pot; 2× Lanczos upscale + JPEG q92; povečani izrezi (3–6×)
+  ključnih regij za paleografsko arbitracijo.
+- VLM kampanja: 12 neodvisnih prehodov (3 × 4 strani 140–143, glm-5v-turbo,
+  [~]/[?]) — `research/issue17/ps-recap-paleo-raw/` (12 committed datotek);
+  prehodi se strinjajo o vseh ključnih vsotah (str. 143 enoglasno 3/3).
+- NOVO ODKRITJE: **"Area der Gemeinde" 1220 Joch 1493 Klafter** (str. 140
+  desno, rdeči tuš) — prvič ujeta SKUPNA POVRŠINA OBČINE; aritmetično
+  zvezana: 1215|490 (Summe der Grundparzellen) + 5|1003 (Summe der
+  Bauparzellen) = 1220|1493 (PASS); svinčni zaznamek "1220 1493" na strani
+  = dokaz kasnejše preizkusne vsote; datum sklepa "Graz den 25ten July
+  1841" [~] — sklenitev po kampanji 1825/1826.
+- 7 vrstic "Grundstückslagen" (hiše 124–130: 101|253, 89|78, 82|81,
+  125|183, 189|1228, 162|447, 82|32) vsota **831|702** == "Summa der
+  Grundparzellen" (PASS) — **P40 §20 "naivna vsota 1413" RAZREŠENO** kot
+  P9 napaka branja par referenc (190/1168→830|1188, 286/8931→286|921,
+  198/11957→138|1457); identiteta 831|702 + 3|312 (zinsb.) = 834|1014 PASS.
+- Atribucija površin: model GRUND 1232,96 J Δ **+0,99 %** od Areje —
+  nadomešča P40 kandidata "Summa 1216(?)" (Δ +1,39 %); primerjava še
+  z 1217|684 (str. 141, +1,28 %) in 1215|490 (+1,45 %).
+- UNRESOLVED (izrecno): razcep K1/K2 v Abschlußu (omejitev K1+K2 = 2090 K;
+  VLM 968/468 × 1288/1388), semantika 7 par referenc (830,1188)…(138,1457)
+  — hipotezi "dve parceli" in "razpon" OVRŽENI proti modelu (11/14 referenc
+  obstaja; 1188/1196/1466 manjkajo — skladno s P38 grundMissing 616),
+  p141 spodnji blok 1217|684 + 4|889 = 1221|1573≈1570 (ŠIBKO, visual-crop),
+  p142 Verzeichnis 40 vrstic na strani (skupna dolžina neznanа).
+- Skript `scripts/p41_ps_recap_paleo.py` (determinističen, brez AI,
+  FAIL ob padu identitet; dokazna karta: vsaka vrednost nosi prehode, v
+  katerih se pojavi; `visual-crop` označene vrednosti izrecne): izpisi
+  `research/issue17/ps-recap-paleo.json` (kanonski dokaz) + identična
+  runtime kopija `src/data/atlas/ps-recap-paleo.json`; API
+  `GET /api/atlas/ps-recap-paleo` (force-static, prerenderiran).
+- Integracija: TS `PS_RECAP_PALEO_P41` (research.ts); kartica »PS 1825 —
+  paleografija str. 140–143: Abschluß der Gemeinde (P41)« v Raziskavah
+  (zavihek Prepisi Kurrent, za P40); sources.ts N083PS nota (P41 +
+  PREOSTANE posodobljeno); audit §21; README ATLAS bullet (P36–P41) +
+  API seznam; repov worklog (ta vnos).
+- QA: `qa-p41-ps-recap-paleo` (QA 41→42) — vse identitete PASS, aritmetika
+  iz konsenzualnih vrednosti (1 J = 1600 K), vsota 7 Lager == 831|702,
+  regresija str. 143 3/3 enoglasno, atribucija Δ < 1,39 %, model refs
+  (14, manjkajo 1188/1196/1466), razrešitve ≥ 3, odprta ≥ 5, identičnost
+  obeh JSON izpisov prek vbrizganego readFile (vzorec qa-p37..p40).
+- Validacija: tsc 0, ESLint 0, run-qa 42/42, `next build` 19/19 (nov
+  route), produkcijski strežnik port 3010: `/api/qa` 42/42,
+  `/api/atlas/ps-recap-paleo` 200 (Area 1220|1493, Δ +0,99 %), `/` 200;
+  brskalniška E2E (agent-browser): Prepisi Kurrent → kartica P41 popolna
+  (Area, 7 Lager, razrešitve), konzola brez napak.
+- Kontekst divergenc (zunanji worklog Task 3/4): GitLab main (ta linija)
+  ostaja razvejana od GitHub primarnega (P38'–P45', QA 43/43); P41 sledi
+  P40 strategiji — NOVE datoteke + appendi za čim lažji prihodnji merge.

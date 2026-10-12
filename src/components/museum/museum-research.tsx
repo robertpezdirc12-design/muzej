@@ -57,6 +57,7 @@ import {
   PS_RECONCILIATION_P38,
   PS_LANDUSE_P39,
   PS_RECAP_P40,
+  PS_RECAP_PALEO_P41,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -512,6 +513,67 @@ export function MuseumResearch() {
                   {t(
                     `Summa ${PS_RECAP_P40.recapAreaAttribution.recapReading}(?) Joch (str. 141, branje izrecno negotovo) se najbolj sklada z GRUND-only: 1232,96 Joch (Δ +1,39 %). Podvajanje Blatt X površin ni dokazljivo (prekrivanje parov ${PS_RECAP_P40.blattXOverlap.pairsOverlap}/${PS_RECAP_P40.blattXOverlap.pairsBlattX}) — celotna vsota je samo zgornja meja. ${PS_RECAP_P40.fragmentRows140_141.count} per-house vrstic ostaja UNRESOLVED; številčni eho OVRGAN (2840 ≠ 2607). Strojno berljivo: /api/atlas/ps-recap.`,
                     `The ${PS_RECAP_P40.recapAreaAttribution.recapReading}(?) Joch total (p. 141, explicitly uncertain reading) best matches GRUND-only: 1,232.96 Joch (Δ +1.39%). Blatt X area duplication is unproven (pair overlap ${PS_RECAP_P40.blattXOverlap.pairsOverlap}/${PS_RECAP_P40.blattXOverlap.pairsBlattX}) — the whole-register sum is only an upper bound. ${PS_RECAP_P40.fragmentRows140_141.count} per-house rows remain UNRESOLVED; the numeric echo is REFUTED (2,840 ≠ 2,607). Machine-readable: /api/atlas/ps-recap.`,
+                  )}
+                </p>
+              </div>
+            </div>
+
+            {/* PS 1825 — paleografija str. 140–143: Abschluß der Gemeinde (P41, issue #10) */}
+            <div className="min-w-0 rounded-xl border bg-card p-6 shadow-sm">
+              <h3 className="flex flex-wrap items-center gap-2 font-display text-lg font-semibold">
+                <Microscope className="size-4 text-primary" aria-hidden="true" />
+                {t("PS 1825 — paleografija str. 140–143: Abschluß der Gemeinde (P41)", "PS 1825 — palaeography pp. 140–143: Abschluß der Gemeinde (P41)")}
+                <StatusBadge status={PS_RECAP_PALEO_P41.status} />
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                {t(
+                  "12 neodvisnih VLM prehodov (3×4 strani) + paleografska arbitracija iz povečanih izrezov; deterministična sprava brez AI ob delovanju. PRVIČ ujeta SKUPNA POVRŠINA OBČINE.",
+                  "12 independent VLM passes (3×4 pages) + palaeographic arbitration from zoomed crops; deterministic reconciliation with no AI at runtime. The MUNICIPAL TOTAL AREA is captured for the first time.",
+                )}
+              </p>
+
+              {/* P41: Area der Gemeinde */}
+              <div className="mt-4 rounded-lg border bg-secondary/30 p-3">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-sm font-semibold">
+                    {t("P41 — Area der Gemeinde (rdeči tuš, str. 140)", "P41 — Area der Gemeinde (red chalk, p. 140)")}
+                  </span>
+                  <span className="font-mono text-[11px] text-muted-foreground">
+                    {PS_RECAP_PALEO_P41.abschluss.areaDerGemeinde} = {(1220 + 1493 / 1600).toFixed(4)} Joch
+                  </span>
+                </div>
+                <div className="mt-2 flex flex-wrap gap-1.5 font-mono text-[10px]">
+                  <span className="rounded-full border bg-background px-2 py-0.5">
+                    {t("1215|490 + 5|1003 = 1220|1493 ✓", "1,215|490 + 5|1,003 = 1,220|1,493 ✓")}
+                  </span>
+                  <span className="rounded-full border bg-background px-2 py-0.5">
+                    {t(`model GRUND Δ +${(PS_RECAP_PALEO_P41.crossCheck.areaAttribution.preferred.deltaPct).toFixed(2)} %`, `GRUND model Δ +${(PS_RECAP_PALEO_P41.crossCheck.areaAttribution.preferred.deltaPct).toFixed(2)}%`)}
+                  </span>
+                  <span className="rounded-full border bg-background px-2 py-0.5">{t("nadomešča P40 »Summa 1216(?)« (+1,39 %)", "supersedes P40 »Summa 1216(?)« (+1.39%)")}</span>
+                </div>
+              </div>
+
+              {/* P41: 7 Grundstückslagen */}
+              <div className="mt-3 rounded-lg border bg-secondary/30 p-3">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-sm font-semibold">
+                    {t("P41 — 7 Grundstückslagen (hiše 124–130)", "P41 — 7 Grundstückslagen (houses 124–130)")}
+                  </span>
+                  <span className="font-mono text-[11px] text-muted-foreground">
+                    = {PS_RECAP_PALEO_P41.lageSum.joch}|{PS_RECAP_PALEO_P41.lageSum.klafter} {t("(Summa der Grundparzellen)", "(Summa der Grundparzellen)")}
+                  </span>
+                </div>
+                <div className="mt-2 grid grid-cols-2 gap-1.5 font-mono text-[10px] sm:grid-cols-4">
+                  {PS_RECAP_PALEO_P41.lageRows.map((r) => (
+                    <span key={r.lage} className="rounded-full border bg-background px-2 py-0.5">
+                      {r.lage}. {r.haus}: {r.joch}|{r.klafter}
+                    </span>
+                  ))}
+                </div>
+                <p className="mt-2 text-[11px] leading-relaxed text-muted-foreground">
+                  {t(
+                    "Vsota 7 vrstic je natanko 'Summa der Grundparzellen' (831|702) — P40 'naivna vsota 1413' razrešena kot P9 napaka branja (190/1168→830|1188, 286/8931→286|921, 198/11957→138|1457). Razcepi ostajajo izrecno UNRESOLVED: razcep K1/K2 v Abschlußu (K1+K2 = 2090), semantika par referenc (hipotezi OVRŽENI), spodnji vsotni blok str. 141 (šibko). Strojno berljivo: /api/atlas/ps-recap-paleo.",
+                    "The 7-row sum is exactly the 'Summa der Grundparzellen' (831|702) — P40's 'naive sum 1,413' resolved as a P9 reading error (190/1168→830|1188, 286/8931→286|921, 198/11957→138|1457). Splits stay explicitly UNRESOLVED: the K1/K2 split in the Abschluß (K1+K2 = 2,090), pair-reference semantics (both hypotheses refuted), the p. 141 lower sum block (weak). Machine-readable: /api/atlas/ps-recap-paleo.",
                   )}
                 </p>
               </div>

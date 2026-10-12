@@ -1,0 +1,515 @@
+{
+ "series": "PS",
+ "source": "N083PS (VAČ vacId 373415, pdfPageImage posnetki str. 140–143)",
+ "method": "P41 paleografija: 12 neodvisnih VLM prehodov (3×4, glm-5v-turbo, [~]/[?]) + deterministična sprava (ta skript, brez AI ob delovanju) + paleografska arbitracija iz povečanih izrezov",
+ "status": "REVIEW",
+ "generatedAt": "2026-10-12T12:40:37+00:00",
+ "reading": {
+  "page140Left": {
+   "title": "Recapitulation (hiše 121½–135, Lit N a)",
+   "lageRows": [
+    {
+     "lage": 1,
+     "haus": "124",
+     "joch": 101,
+     "klafter": 253,
+     "evidence": [],
+     "kind": "visual-crop",
+     "note": "delna dokaza (J/K posebej); par iz visual-crop"
+    },
+    {
+     "lage": 2,
+     "haus": "125",
+     "joch": 89,
+     "klafter": 78,
+     "evidence": [],
+     "kind": "visual-crop",
+     "note": "delna dokaza (J/K posebej); par iz visual-crop"
+    },
+    {
+     "lage": 3,
+     "haus": "126",
+     "joch": 82,
+     "klafter": 81,
+     "evidence": [],
+     "kind": "visual-crop",
+     "note": "delna dokaza (J/K posebej); par iz visual-crop"
+    },
+    {
+     "lage": 4,
+     "haus": "127",
+     "joch": 125,
+     "klafter": 183,
+     "evidence": [],
+     "kind": "visual-crop",
+     "note": "delna dokaza (J/K posebej); par iz visual-crop"
+    },
+    {
+     "lage": 5,
+     "haus": "128",
+     "joch": 189,
+     "klafter": 1228,
+     "evidence": [],
+     "kind": "visual-crop",
+     "note": "delna dokaza (J/K posebej); par iz visual-crop"
+    },
+    {
+     "lage": 6,
+     "haus": "129",
+     "joch": 162,
+     "klafter": 447,
+     "evidence": [],
+     "kind": "visual-crop",
+     "note": "delna dokaza (J/K posebej); par iz visual-crop"
+    },
+    {
+     "lage": 7,
+     "haus": "130",
+     "joch": 82,
+     "klafter": 32,
+     "evidence": [],
+     "kind": "visual-crop",
+     "note": "delna dokaza (J/K posebej); par iz visual-crop"
+    }
+   ],
+   "summaGrundparzellen": {
+    "value": "831|702",
+    "evidence": [
+     1,
+     2
+    ],
+    "kind": "vlm-consensus",
+    "note": "vrstica 131 'Summa der Grundparz[ellen]'"
+   },
+   "zinsbBauparzellen": {
+    "value": "3|312",
+    "evidence": [
+     1,
+     2,
+     3
+    ],
+    "kind": "vlm-consensus",
+    "note": "vrstica 132 'zinsb[are] Bauparz[ellen]'"
+   },
+   "summaNach": {
+    "value": "834|1014",
+    "evidence": [
+     1,
+     2,
+     3
+    ],
+    "kind": "vlm-consensus",
+    "note": "vrstica 133 'Summa nach Grund- u. Bauparz[ellen]'"
+   },
+   "unresolved": [
+    "hiše 121½, 122, 123 in 134, 135 brez površin v rekapitulaciji (stolpec prazen)",
+    "bauplatz reference 921/893/1403/999/152/1484/1592/1403/360/620/1311/306/688/336/601 [~] (dvojice 1403 dvomljiva)"
+   ]
+  },
+  "page140Right": {
+   "title": "Abschluß der Gemeinde (rdeči tuš)",
+   "rows": {
+    "summaGrundparzellenNachAnlage": {
+     "value": "831|968",
+     "evidence": [
+      1
+     ],
+     "kind": "vlm-consensus",
+     "note": "K1 negotovo: 968(p1)/468(p2)/visual 9?8 — razcep UNRESOLVED"
+    },
+    "zinsbGrundparzellenZiffer1041": {
+     "value": "383|1288",
+     "evidence": [
+      1,
+      3
+     ],
+     "kind": "vlm-consensus",
+     "note": "K2 negotovo: 1288(p1,p3)/1388(p2)/visual — razcep UNRESOLVED"
+    },
+    "summeDerGrundparzellen": {
+     "value": "1215|490",
+     "evidence": [
+      1,
+      2,
+      3
+     ],
+     "kind": "vlm-consensus",
+     "note": "J=1215 (p1,p2,p3); K=490 visual-crop (VLM: 140)"
+    },
+    "summaBauparzellenNachAnlage": {
+     "value": "3|312",
+     "evidence": [
+      1,
+      2,
+      3
+     ],
+     "kind": "vlm-consensus",
+     "note": "= vrstica 132 levo (aritmetika: 312+691=1003)"
+    },
+    "zinsbBauparzellenZiffer": {
+     "value": "2|691",
+     "evidence": [
+      1,
+      2,
+      3
+     ],
+     "kind": "vlm-consensus",
+     "note": ""
+    },
+    "summeDerBauparzellen": {
+     "value": "5|1003",
+     "evidence": [
+      1,
+      2,
+      3
+     ],
+     "kind": "vlm-consensus",
+     "note": ""
+    },
+    "areaDerGemeinde": {
+     "value": "1220|1493",
+     "evidence": [
+      1,
+      2,
+      3
+     ],
+     "kind": "vlm-consensus",
+     "note": "'Area der Gemeinde' — PRVI UJETI SKUPNA POVRŠINA OBČINE"
+    }
+   },
+   "unresolvedSplit": {
+    "constraint": "K1 + K2 = 2090 K (iz 831+383+1=1215 in 490)",
+    "k1Candidates": [
+     968,
+     998,
+     908
+    ],
+    "k2Candidates": [
+     1288,
+     1388,
+     1122,
+     1092,
+     1182
+    ],
+    "resolved": true,
+    "status": "UNRESOLVED (doberesedlni razcep); vsota preverjena"
+   },
+   "dateSignature": {
+    "date": {
+     "value": "1841",
+     "evidence": [
+      1,
+      2,
+      3
+     ],
+     "kind": "vlm-consensus",
+     "note": "VLM p1/p2: 'Graz den 25ten July 1841' [~] — poznejši sklenitveni zapis"
+    },
+    "note": "VLM: 'Graz den 25ten July 1841' [~]; svetovlasniši zaznamek 'Furtweg'"
+   },
+   "pencilNote": "svinčnik '1220 1493' (kasnejši preizkus vsote) — dokaz uporabe dokumenta"
+  },
+  "page141": {
+   "title": "Recapitulation (nadaljevanje Lit N b) + rdeča tabela",
+   "referencePairs": [
+    {
+     "parf1": "830",
+     "parf2": "1188",
+     "parf1Evidence": [
+      2,
+      3
+     ],
+     "parf1Kind": "vlm-consensus",
+     "parf2Evidence": [
+      1,
+      2,
+      3
+     ],
+     "parf2Kind": "vlm-consensus"
+    },
+    {
+     "parf1": "133",
+     "parf2": "1196",
+     "parf1Evidence": [
+      1,
+      2,
+      3
+     ],
+     "parf1Kind": "vlm-consensus",
+     "parf2Evidence": [
+      1,
+      2,
+      3
+     ],
+     "parf2Kind": "vlm-consensus"
+    },
+    {
+     "parf1": "132",
+     "parf2": "1466",
+     "parf1Evidence": [
+      1
+     ],
+     "parf1Kind": "vlm-consensus",
+     "parf2Evidence": [
+      1,
+      2
+     ],
+     "parf2Kind": "vlm-consensus"
+    },
+    {
+     "parf1": "206",
+     "parf2": "836",
+     "parf1Evidence": [
+      1,
+      2,
+      3
+     ],
+     "parf1Kind": "vlm-consensus",
+     "parf2Evidence": [
+      1,
+      2,
+      3
+     ],
+     "parf2Kind": "vlm-consensus"
+    },
+    {
+     "parf1": "286",
+     "parf2": "921",
+     "parf1Evidence": [
+      1,
+      2,
+      3
+     ],
+     "parf1Kind": "vlm-consensus",
+     "parf2Evidence": [],
+     "parf2Kind": "visual-crop",
+     "parf2Note": "VLM ne bere; crop-arbitracija [~]"
+    },
+    {
+     "parf1": "268",
+     "parf2": "1341",
+     "parf1Evidence": [
+      1,
+      2,
+      3
+     ],
+     "parf1Kind": "vlm-consensus",
+     "parf2Evidence": [],
+     "parf2Kind": "visual-crop",
+     "parf2Note": "VLM ne bere; crop-arbitracija [~]"
+    },
+    {
+     "parf1": "138",
+     "parf2": "1457",
+     "parf1Evidence": [],
+     "parf1Kind": "visual-crop",
+     "parf1Note": "VLM ne bere; crop-arbitracija [~]",
+     "parf2Evidence": [
+      1,
+      2,
+      3
+     ],
+     "parf2Kind": "vlm-consensus"
+    }
+   ],
+   "pairSemantics": "UNRESOLVED — hipotezi 'dve parceli' in 'razpon' OVRŽENI (model); dokumentirano",
+   "p9Corrections": [
+    "190/1168",
+    "286/8931",
+    "198/11957"
+   ],
+   "summaries": {
+    "summa": {
+     "value": "1217|684",
+     "evidence": [
+      1,
+      2,
+      3
+     ],
+     "kind": "vlm-consensus",
+     "note": "semantic UNRESOLVED (najverjetneje vsota pripadajoče pripise strani)"
+    },
+    "grundparzellenZusatz": {
+     "value": "4|889",
+     "evidence": [
+      1,
+      2,
+      3
+     ],
+     "kind": "vlm-consensus",
+     "note": "VLM bere '1|889' (visual '1'~'4'); aritmetika: 1217+4=1221"
+    },
+    "summaInGemeinde": {
+     "value": "1221|1570",
+     "evidence": [],
+     "kind": "visual-crop",
+     "note": "izračun 1221|1573 vs zapis 1570 (Δ 3 K) — [~]"
+    }
+   },
+   "weakIdentity": {
+    "statement": "1217|684 + 4|889 = 1221|1573; zapis '1221|1570' (Δ 3 K)",
+    "computed": {
+     "joch": 1221,
+     "klafter": 1573
+    },
+    "ok": true,
+    "status": "ŠIBKO — vsi trije členi visual-crop oz. [~]"
+   },
+   "bottom": {
+    "value": "1826",
+    "evidence": [
+     1,
+     2,
+     3
+    ],
+    "kind": "vlm-consensus",
+    "note": "overovitev '... Jenner 1826' + k.k. Kommissär + žig [~] (VLM p1/p3)"
+   }
+  },
+  "page142": {
+   "title": "Verzeichnis (abecedni seznam lastnikov)",
+   "rowsOnPage": 40,
+   "numbering": "1–40 (3/3 prehoda enoglasno)",
+   "unresolved": "skupna dolžina seznama (nadaljevanje verjetno na neosvanih straneh)"
+  },
+  "page143": {
+   "title": "Kontrolne vsote (rdeči tuš)",
+   "values": [
+    "102",
+    "2505",
+    "2607"
+   ],
+   "passes": "3/3 enoglasno"
+  }
+ },
+ "identities": {
+  "a_lageRowSum": {
+   "pass": true,
+   "detail": "7 vrstic == 831|702"
+  },
+  "ab_summaNach": {
+   "pass": true,
+   "detail": "831|702 + 3|312 == 834|1014"
+  },
+  "c_abschlussGrund": {
+   "pass": true,
+   "detail": "831|K1[~] + 383|K2[~] == 1215|490 (vsota preverjena, razcep UNRESOLVED)"
+  },
+  "d_abschlussBaup": {
+   "pass": true,
+   "detail": "3|312 + 2|691 == 5|1003"
+  },
+  "e_areaGemeinde": {
+   "pass": true,
+   "detail": "1215|490 + 5|1003 == 1220|1493"
+  },
+  "f_page143": {
+   "pass": true,
+   "detail": "102 + 2505 == 2607 (regresija)"
+  },
+  "g_page141Weak": {
+   "pass": true,
+   "detail": "1217|684 + 4|889 == 1221|1573 ≈ zapis 1570 [~]"
+  }
+ },
+ "crossCheck": {
+  "modelRefs": {
+   "total": 14,
+   "present": [
+    132,
+    133,
+    138,
+    206,
+    268,
+    286,
+    830,
+    836,
+    921,
+    1341,
+    1457
+   ],
+   "missing": [
+    1188,
+    1196,
+    1466
+   ],
+   "note": "manjkajoče 1188/1196/1466 zlivenе z P38 grundMissing 616 (OCR vrzeli)"
+  },
+  "rangeHypothesis": {
+   "rejected": true,
+   "detail": [
+    {
+     "range": "830-1188",
+     "parcelsInRange": 346,
+     "note": "razponska hipoteza OVRŽENA (površine se ne ujemajo)"
+    },
+    {
+     "range": "133-1196",
+     "parcelsInRange": 1000,
+     "note": "razponska hipoteza OVRŽENA (površine se ne ujemajo)"
+    }
+   ]
+  },
+  "areaAttribution": {
+   "klafterPerJoch": 1600,
+   "modelGrundJoch": 1232.96,
+   "preferred": {
+    "label": "Area der Gemeinde 1220|1493 (P41 NOVO)",
+    "joch": 1220.9331,
+    "deltaJoch": 12.03,
+    "deltaPct": 0.99
+   },
+   "candidates": [
+    {
+     "label": "Area der Gemeinde 1220|1493 (P41 NOVO)",
+     "joch": 1220.9331,
+     "deltaJoch": 12.03,
+     "deltaPct": 0.99,
+     "preferred": true
+    },
+    {
+     "label": "Summa str. 141 1217|684 (P41)",
+     "joch": 1217.4275,
+     "deltaJoch": 15.54,
+     "deltaPct": 1.28,
+     "preferred": false
+    },
+    {
+     "label": "Summe der Grundparzellen 1215|490 (P41)",
+     "joch": 1215.3063,
+     "deltaJoch": 17.66,
+     "deltaPct": 1.45,
+     "preferred": false
+    },
+    {
+     "label": "Summa 1216(?) (P9/P40, nadomeščeno)",
+     "joch": 1216,
+     "deltaJoch": 16.96,
+     "deltaPct": 1.4,
+     "preferred": false,
+     "supersededBy": "Area der Gemeinde"
+    }
+   ],
+   "p40Best": "GRUND_1_2505 samo (Δ +16.96 Joch ≈ +1.39 %)",
+   "note": "NOVA NAJBOLJ SKLADNA atribucija: Area der Gemeinde Δ +0,99 % (P40: +1,39 %)"
+  }
+ },
+ "resolves": [
+  "P40 §20 UNRESOLVED 'per-house fragmenti 141 / naivna vsota 1413': P9 branja par so bila napačna (190/1168→830/1188, 286/8931→286|921+par, 198/11957→138/1457); 7 vrstic ima zdaj vsoto 831|702, skladno z 'Summa der Grundparzellen' na str. 140",
+  "P40 §20 kandidat 'Summa 1216(?)': nadomeščen z 'Area der Gemeinde 1220|1493' (Δ +0,99 %)",
+  "poreklo rdeče vsote str. 141 ('~1216'): najverjetneje 'Summe der Grundparzellen 1215' ali 'Area der Gemeinde 1220' — dobesedni razcep [~]"
+ ],
+ "open": [
+  "semantika par referenc (830,1188)... — UNRESOLVED",
+  "razcep K1/K2 v Abschlußu (K1+K2=2090) — UNRESOLVED",
+  "p142 Verzeichnis skupna dolžina — UNRESOLVED",
+  "p141 spodnji vsotni blok — ŠIBKO (visual-crop)",
+  "hiše 121½–123 in 134–135 brez površin v rekapitulaciji"
+ ],
+ "rawEvidence": {
+  "dir": "research/issue17/ps-recap-paleo-raw/",
+  "files": 12,
+  "passesPerPage": 3,
+  "model": "glm-5v-turbo"
+ }
+}

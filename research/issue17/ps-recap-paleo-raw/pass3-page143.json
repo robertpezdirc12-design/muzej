@@ -1,0 +1,8 @@
+{
+ "page": 143,
+ "pass": 3,
+ "model": "glm-5v-turbo",
+ "created": 1791807230,
+ "raw": "{\"rows\": [{\"label\": \"Summa der Bauplätze\", \"value\": \"102\", \"red\": true, \"note\": \"\"}, {\"label\": \"» der Grundparzellen\", \"value\": \"2505\", \"red\": true, \"note\": \"\"}, {\"label\": \"Zusammen\", \"value\": \"2607\", \"red\": true, \"note\": \"\"}], \"pageNote\": \"Stran je dobro ohranjena, rdeči zapis je jasen in berljiv.\"}",
+ "ms": 4084
+}

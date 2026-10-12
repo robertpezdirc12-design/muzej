@@ -25,6 +25,7 @@ import {
   PS_RECONCILIATION_P38,
   PS_LANDUSE_P39,
   PS_RECAP_P40,
+  PS_RECAP_PALEO_P41,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -1409,8 +1410,8 @@ export function runQA(opts: QAOptions = {}): QAReport {
   else {
     if (psSrc.structuredEntries !== 2743)
       p36Errors.push(`N083PS: structuredEntries=${psSrc.structuredEntries}, pričakovano 2743 (P36 strojni prepis 135 strani)`);
-    if (psSrc.lastVerified !== "2026-10-11")
-      p36Errors.push("N083PS: lastVerified ni 2026-10-11 (dan P36 kampanje)");
+    if (psSrc.lastVerified !== "2026-10-12")
+      p36Errors.push("N083PS: lastVerified ni 2026-10-12 (P36 kampanja, P41 ponovna preverba)");
     if (!(psSrc.noteSi ?? "").includes("ps-raw"))
       p36Errors.push("N083PS: nota SL ne kaže na dokaz research/issue17/ps-raw/");
     if (!(psSrc.noteSi ?? "").includes("REVIEW"))
@@ -1712,6 +1713,87 @@ export function runQA(opts: QAOptions = {}): QAReport {
     p40Errors.length === 0
       ? `2607 = 2505 + 102 · Blatt X 60/102 · GRUND 1232,96 Joch (Δ +1,39 %) · ${p40FileDetail}`
       : p40Errors.join("; "),
+  );
+
+  // ——— P41: paleografija str. 140–143 — "Abschluß der Gemeinde" (issue #10) ———
+  const p41Errors: string[] = [];
+  const P41 = PS_RECAP_PALEO_P41;
+  const p41jk = (s: string) => {
+    const [j, k] = s.split("|").map(Number);
+    return j * 1600 + k;
+  };
+  // 1. vse identitete morajo biti PASS in opisane
+  for (const [k, v] of Object.entries(P41.identities)) {
+    if (!v.pass) p41Errors.push(`identiteta ${k} ni PASS`);
+    if (!v.detail) p41Errors.push(`identiteta ${k} brez opisa`);
+  }
+  // 2. aritmetika iz konsenzualnih vrednosti (1 Joch = 1600 K)
+  if (p41jk(P41.page140Left.summaGrundparzellen) + p41jk(P41.page140Left.zinsbBauparzellen) !== p41jk(P41.page140Left.summaNach))
+    p41Errors.push("831|702 + 3|312 ≠ 834|1014");
+  if (p41jk(P41.abschluss.summeDerGrundparzellen) + p41jk(P41.abschluss.summeDerBauparzellen) !== p41jk(P41.abschluss.areaDerGemeinde))
+    p41Errors.push("1215|490 + 5|1003 ≠ Area der Gemeinde 1220|1493");
+  if (p41jk(P41.abschluss.areaDerGemeinde) !== 1220 * 1600 + 1493)
+    p41Errors.push("Area dergemeinde ni 1220 Joch + 1493 Klafter");
+  // 3. vsota 7 Grundstückslagen == Summa der Grundparzellen (razrešitev P40 'naivna 1413')
+  const p41LageJ = P41.lageRows.reduce((a, r) => a + r.joch, 0);
+  const p41LageK = P41.lageRows.reduce((a, r) => a + r.klafter, 0);
+  if (P41.lageRows.length !== 7) p41Errors.push("število Grundstückslagen ni 7");
+  if (p41LageJ + Math.floor(p41LageK / 1600) !== P41.lageSum.joch || p41LageK % 1600 !== P41.lageSum.klafter || P41.lageSum.joch !== 831 || P41.lageSum.klafter !== 702)
+    p41Errors.push("vsota 7 Grundstückslagen ni 831|702 (razrešitev P40 'naivna vsota 1413')");
+  // 4. regresija str. 143 (3/3 enoglasno) + P9 popravke
+  if (P41.page143.values.join(",") !== "102,2505,2607") p41Errors.push("str. 143 ni 102/2505/2607 (regresija P36/P38/P40)");
+  if (P41.page141.referencePairs.length !== 7) p41Errors.push("p141 par referenc ni 7");
+  if (P41.page141.p9Corrections.length !== 3) p41Errors.push("P9 popravke niso 3 (190/1168, 286/8931, 198/11957)");
+  if (!P41.abschluss.unresolvedSplit.resolved === false && !P41.abschluss.unresolvedSplit.status.includes("UNRESOLVED"))
+    p41Errors.push("razcep K1/K2 mora ostati izrecno UNRESOLVED");
+  // 5. atribucija: Area der Gemeinde preferirana, Δ < P40 (+1,39 %)
+  const AT41 = P41.crossCheck.areaAttribution;
+  if (!AT41.preferred.label.includes("Area der Gemeinde")) p41Errors.push("preferirani kandidat ni 'Area der Gemeinde'");
+  if (Math.abs(AT41.preferred.joch - p41jk("1220|1493") / 1600) > 0.0001)
+    p41Errors.push("preferirani kandidat joch ≠ 1220|1493/1600");
+  const p41Delta = (100 * (AT41.modelGrundJoch - AT41.preferred.joch)) / AT41.preferred.joch;
+  if (Math.abs(AT41.preferred.deltaPct - p41Delta) > 0.02) p41Errors.push("deltaPct atribucije se ne ujema z aritmetiko");
+  if (AT41.preferred.deltaPct >= 1.39) p41Errors.push("Area der Gemeinde ne izboljšuje P40 (+1,39 %)");
+  if (!AT41.p40Best.startsWith("GRUND_1_2505")) p41Errors.push("P40 najboljši kandidat ni dokumentiran (regresija)");
+  // 6. model refs + razrešitve + odprta vprašanja
+  if (P41.crossCheck.modelRefs.total !== 14 || P41.crossCheck.modelRefs.missing.join(",") !== "1188,1196,1466")
+    p41Errors.push("model refs niso 14 z manjkajočimi 1188/1196/1466");
+  if (P41.resolves.length < 3) p41Errors.push("razrešitve (P40 '1413', '1216(?)', poreklo '~1216') niso dokumentirane");
+  if (P41.open.length < 5) p41Errors.push("odprta vprašanja niso izrecna (≥5)");
+  // 7. dokazni datoteki (strežniški klic; vzorec qa-p37..p40)
+  let p41FileDetail = "dokazni datoteki nista preverjeni (readFile ni na voljo) — celovita kontrola teče na /api/qa";
+  if (opts.readFile) {
+    const rawEv = opts.readFile("research/issue17/ps-recap-paleo.json");
+    const rawRt = opts.readFile("src/data/atlas/ps-recap-paleo.json");
+    if (rawEv === null) p41Errors.push("research/issue17/ps-recap-paleo.json ni berljiv (izpis scripts/p41_ps_recap_paleo.py)");
+    if (rawRt === null) p41Errors.push("src/data/atlas/ps-recap-paleo.json ni berljiv (runtime kopija)");
+    if (rawEv !== null && rawRt !== null && rawEv !== rawRt)
+      p41Errors.push("dokazni in runtime izpis ps-recap-paleo.json nista identična (skript mora izpisati oba enako)");
+    if (rawEv !== null) {
+      try {
+        const j = JSON.parse(rawEv) as {
+          reading: { page140Right: { rows: { areaDerGemeinde: { value: string } } }; page143: { values: string[] } };
+          identities: Record<string, { pass: boolean }>;
+          crossCheck: { areaAttribution: { preferred: { deltaPct: number } } };
+        };
+        if (j.reading.page140Right.rows.areaDerGemeinde.value !== P41.abschluss.areaDerGemeinde) p41Errors.push("JSON areaDerGemeinde ≠ TS");
+        if (j.reading.page143.values.join(",") !== P41.page143.values.join(",")) p41Errors.push("JSON page143 ≠ TS");
+        if (!j.identities.e_areaGemeinde?.pass) p41Errors.push("JSON identiteta e_areaGemeinde ni PASS");
+        if (Math.abs(j.crossCheck.areaAttribution.preferred.deltaPct - AT41.preferred.deltaPct) > 0.001) p41Errors.push("JSON deltaPct ≠ TS");
+        p41FileDetail = `dokazni datoteki preverjeni in identični (Area ${j.reading.page140Right.rows.areaDerGemeinde.value}, str. 143: ${j.reading.page143.values.join("/")})`;
+      } catch {
+        p41Errors.push("research/issue17/ps-recap-paleo.json ni veljaven JSON");
+      }
+    }
+  }
+  push(
+    "qa-p41-ps-recap-paleo",
+    "P41: N083PS — paleografija str. 140–143 (12 VLM prehodov 3×4 + izrezi): 'Area der Gemeinde' 1220 J 1493 K (rdeči tuš) = 1215|490 + 5|1003 — PRVIČ SKUPNA POVRŠINA OBČINE; 7 Grundstückslagen (hiše 124–130) vsota 831|702 == 'Summa der Grundparzellen' (P40 'naivna vsota 1413' razrešena kot P9 napaka: 190/1168→830|1188, 286/8931→286|921, 198/11957→138|1457); str. 143 regresija 102+2505=2607 (3/3 enoglasno); atribucija: model GRUND 1232,96 J Δ +0,99 % (izboljšava P40 +1,39 %); razcepi (K1/K2 = 2090, semantika par referenc — hipotezi OVRŽENI, p141 šibki blok) izrecno UNRESOLVED; status REVIEW",
+    "P41: N083PS — palaeography of pp. 140–143 (12 VLM passes 3×4 + crops): 'Area der Gemeinde' 1,220 J 1,493 K (red chalk) = 1,215|490 + 5|1,003 — the MUNICIPAL TOTAL AREA captured for the first time; 7 Grundstückslagen rows (houses 124–130) sum to 831|702 == 'Summa der Grundparzellen' (P40's 'naive sum 1,413' resolved as a P9 reading error: 190/1168→830|1188, 286/8931→286|921, 198/11957→138|1457); p. 143 regression 102+2,505=2,607 (3/3 unanimous); attribution: GRUND model 1,232.96 J Δ +0.99% (improving P40's +1.39%); splits (K1/K2 = 2,090, pair-reference semantics — both hypotheses refuted, p141 weak block) explicitly UNRESOLVED; status REVIEW",
+    p41Errors.length === 0,
+    p41Errors.length === 0
+      ? `Area der Gemeinde 1220|1493 (= 1220,933 J) · 7 Lager == 831|702 · str. 143: 2607 · Δ GRUND +0,99 % · ${p41FileDetail}`
+      : p41Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;
