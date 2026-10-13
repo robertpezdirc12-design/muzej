@@ -165,35 +165,44 @@ export const GROWTH_1900: GrowthBuilding[] = (() => {
   return out;
 })();
 
-/* ── KAJ JE IZGINILO? (issue #12, P1) — 1825 ∩ današnji OSM ──
-   Današnje stavbe: OpenStreetMap posnetek 2026-10-07 (ODbL, api.openstreetmap.org
-   bbox 15.273–15.301 × 45.562–45.5785). Primerjava težišč katastrskih podlatn
-   z današnjimi stavbami → status po stavbi (OBSTOJA / NEGOTOVO / NI VEČ).
-   Odsotnost v OSM posnetku NI dokaz porušitve — status čaka terensko preverbo
-   (dokajeno ravnanje z negotovostjo po vzoru TimeLens/Himera). */
+/* ── KAJ JE IZGINILO? (issue #12, P1; P54 GURS nadgradnja) — 1825 ∩ uradni GURS eZKN ──
+   Današnje stavbe: uradni GURS eZKN obrisi (WFS SI.GURS.KN:STAVBE, posnetek
+   2026-10-13, recept scripts/p48_fetch_stavbe.sh; P54 — prej OSM posnetek
+   2026-10-07, arhiviran v research/issue17/present-osm-p16.json). Primerjava
+   težišč katastrskih podlatn z uradnimi obrisi → status po stavbi
+   (OBSTOJA / NEGOTOVO / NI VEČ). Odsotnost stavbe NI dokaz porušitve —
+   status čaka terensko preverbo (dokajeno ravnanje z negotovostjo po vzoru
+   TimeLens/Himera). */
 
-/** status stavbe 1825 glede na današnji OSM posnetek */
+/** status stavbe 1825 glede na današnje uradne GURS obrise */
 export type BuildingPresence = "exists" | "uncertain" | "gone";
 
 export interface PresentBuilding {
-  id: number;
+  /** uradni GURS EID_STAVBA (niz — 18 mest, varno čez JS Number preciznost) */
+  id: string;
   x: number;
   z: number;
   w: number;
   d: number;
   area: number;
+  /** uradni GURS razred (TIPI_STAVB_NAZIV_SL, dobesedno) */
   type: string;
 }
 
 interface PresentFile {
-  _meta: { osmSnapshot: string; methodSi: string; noteSi: string };
+  _meta: {
+    gursSnapshot: string;
+    methodSi: string;
+    noteSi: string;
+    osmSuperseded?: { snapshot: string; counts: { exists: number; uncertain: number; gone: number } };
+  };
   present: PresentBuilding[];
-  match: { status: BuildingPresence; d: number | null; osmId: number | null }[];
+  match: { status: BuildingPresence; d: number | null; gursId: string | null }[];
 }
 
 const PRESENT_FILE = presentJson as unknown as PresentFile;
 
-/** današnje stavbe iz OSM posnetka (lokalni metri, hiše + gospodarske) */
+/** današnje stavbe iz uradnih GURS eZKN obrisov (lokalni metri; P54 — prej OSM posnetek) */
 export const PRESENT_BUILDINGS: PresentBuilding[] = PRESENT_FILE.present;
 
 /** status vsake od 156 stavb 1825 (indeksno usklajeno z BUILDINGS_1825) */
@@ -201,24 +210,24 @@ export const BUILDING_STATUS: BuildingPresence[] = PRESENT_FILE.match.map(
   (m) => m.status,
 );
 
-/** razdalja do najbližje današnje stavbe (m, null = >9000) */
+/** razdalja do najbližje današnje stavbe (m; od P54 zapisana za VSE tlorise) */
 export const BUILDING_NEAREST_PRESENT: (number | null)[] =
   PRESENT_FILE.match.map((m) => m.d);
 
-/** datum OSM posnetka */
-export const OSM_SNAPSHOT = PRESENT_FILE._meta.osmSnapshot;
+/** datum posnetka uradnega vira (GURS eZKN, P54) */
+export const GURS_SNAPSHOT = PRESENT_FILE._meta.gursSnapshot;
 
 export const PRESENCE_META = {
-  osmSnapshot: PRESENT_FILE._meta.osmSnapshot,
+  gursSnapshot: PRESENT_FILE._meta.gursSnapshot,
   methodSi: PRESENT_FILE._meta.methodSi,
   sourceSi:
-    "Današnje stavbe: OpenStreetMap (posnetek " +
-    PRESENT_FILE._meta.osmSnapshot +
-    ", © avtorji OSM, ODbL) · kataster 1825: list A02 (SI AS 176)",
+    "Današnje stavbe: uradni GURS eZKN obrisi (WFS SI.GURS.KN:STAVBE, posnetek " +
+    PRESENT_FILE._meta.gursSnapshot +
+    ", recept scripts/p48_fetch_stavbe.sh) · kataster 1825: list A02 (SI AS 176) · nadgradnja P16 OSM posnetka (P54)",
   sourceEn:
-    "Present-day buildings: OpenStreetMap (snapshot " +
-    PRESENT_FILE._meta.osmSnapshot +
-    ", © OSM contributors, ODbL) · 1825 cadastre: sheet A02 (SI AS 176)",
+    "Present-day buildings: official GURS eZKN footprints (WFS SI.GURS.KN:STAVBE, snapshot " +
+    PRESENT_FILE._meta.gursSnapshot +
+    ", receipt scripts/p48_fetch_stavbe.sh) · 1825 cadastre: sheet A02 (SI AS 176) · an upgrade of the P16 OSM snapshot (P54)",
 };
 
 export interface PresenceLegendItem {
@@ -272,11 +281,11 @@ export const IZGINILO_STATS = (() => {
     gone: count("gone"),
     total1825: BUILDINGS_1825.length + 1, /* 156 + cerkev */
     presentCount: PRESENT_BUILDINGS.length,
-    osmSnapshot: OSM_SNAPSHOT,
+    sourceSnapshot: GURS_SNAPSHOT,
   };
 })();
 
-/** status hiše (kataster + OSM); cerkev = poseben primer */
+/** status hiše (kataster + uradni GURS obrisi); cerkev = poseben primer */
 export function presenceOf(index: number): BuildingPresence {
   return BUILDING_STATUS[index] ?? "uncertain";
 }
@@ -361,13 +370,13 @@ export const PERIODS: PeriodInfo[] = [
     labelSi: "danes",
     labelEn: "today",
     noteSi:
-      "Kaj je izginilo? Duhovi 1825 na današnji pokrajini, obarvani po stanju: 🟢 obstaja · 🟡 negotovo · 🔴 ni je več (primerjava s stavbami OpenStreetMap, posnetek " +
-      OSM_SNAPSHOT +
-      "). V AR se danes vidi skozi kamero — duhovi povedo, kje je stalo. Odsotnost v OSM posnetku ni dokaz porušitve.",
+      "Kaj je izginilo? Duhovi 1825 na današnji pokrajini, obarvani po stanju: 🟢 obstaja · 🟡 negotovo · 🔴 ni je več (primerjava z uradnimi GURS eZKN obrisi, posnetek " +
+      GURS_SNAPSHOT +
+      "). V AR se danes vidi skozi kamero — duhovi povedo, kje je stalo. Odsotnost stavbe ni dokaz porušitve.",
     noteEn:
-      "What has vanished? Ghosts of 1825 over today's landscape, coloured by fate: 🟢 still stands · 🟡 uncertain · 🔴 gone (matched against OpenStreetMap buildings, snapshot " +
-      OSM_SNAPSHOT +
-      "). In AR the present shows through the camera — the ghosts mark where things stood. Absence from the OSM snapshot is not proof of demolition.",
+      "What has vanished? Ghosts of 1825 over today's landscape, coloured by fate: 🟢 still stands · 🟡 uncertain · 🔴 gone (matched against official GURS eZKN footprints, snapshot " +
+      GURS_SNAPSHOT +
+      "). In AR the present shows through the camera — the ghosts mark where things stood. Absence of a building is not proof of demolition.",
     buildingCount: BUILDINGS_1825.length,
   },
 ];

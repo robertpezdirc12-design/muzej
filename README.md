@@ -256,6 +256,17 @@ API (statični, brez runtime AI):
   odmiki osne postavitve ≤ 20 m (dva vogala točna — Leaflet brez rotacij),
   skew ≤ 0,5708°, PIL dims + sha256 slik; UI stikala privzeto izklopljena;
   status UI-ACTIVATED-DETERMINISTIC.
+- **present.json na uradnih GURS obriseh (P54, issue #12 nadgradnja)** — P16
+  »Kaj je izginilo?« nadgrajeno z OSM posnetka (15/26/115, pokrival le jedro
+  vasi) na **uradne GURS eZKN obrise** (380 stavb v oknu A02 + sodobna vas,
+  vse KO 1544 — popolna pokritost z zahodnimi pobočji razpršene zidanice);
+  pravila P16 nespremenjena, **kalibrirana z replajo na starih podatkih
+  (156/156)**; rezultat **18 obstaja · 21 negotovih · 117 ni jih več**
+  (7 tlorisov spremenilo status); d zapisana za vseh 156 (do 1541.2 m);
+  P48 navzkrižje: cf 154 == modernEvaluated, pari ≤ 25 px 37 == pairs;
+  arhiv P16 `research/issue17/present-osm-p16.json`; dokaz
+  `research/issue17/present-gurs.json` + `scripts/p54_present_gurs.py`;
+  QA 57 → **58**; SHEET_GEOREFS in dokazi P40–P53 nespremenjeni.
 
 ## Varnost
 

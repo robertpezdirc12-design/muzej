@@ -1897,3 +1897,66 @@ P50 NEATLINE_* supersesijo) = **57 testov**; faze P38–P45 obeh linij se v
 pripovedi ločijo z oznako »b« za GitHub-linijske (P39b/P43b/P45b), ker so
 številke faz kolidirale.
 
+
+## §34 — P54: present.json na uradnih GURS obriseh — nadgradnja P16 »Kaj je izginilo?« (2026-10-14)
+
+**Naloga:** audit §28 (P48) je postavil točko »Nadgradja P16 `present.json` (OSM podlaga:
+15 obstaja · 26 negotovih · 115 ni jih več) z uradnimi GURS obrisi.«; enako P49 next 3.
+P54 jo izvede: vir današnjih stavb se nadgradi iz prostovoljnega OSM posnetka 2026-10-07
+na **uradni GURS eZKN** (WFS SI.GURS.KN:STAVBE, OBRIS_GEOM; 403 KO 1544 + 313 KO 1552
+južni bbox; recept scripts/p48_fetch_stavbe.sh, transformacija EPSG:3794 → WGS84
+pyproj always_xy — identično P47/P48).
+
+**Ključna motivacija (pošteno dokumentirana):** OSM posnetek je pokrival le jedro vasi
+(x −336..661 lokalnih metrov), tlorisi 1825 pa segajo do x −1510 (razpršena zidanica na
+zahodnih pobočjih) — odsotnost stavbe v OSM tam pomeni odsotnost POSNETKA, ne stavbe.
+Okno P54 = bbox(350 OSM) ∪ bbox(156 tlorisov) ± 50 m → **380 stavb** (vse KO 1544;
+KO 1552 južni bbox 0 v oknu — Adlešiči/Fučkovci izven okna A02; Fučkovci 25 mest nosijo
+uradne EID že od P49).
+
+**Metoda — repla kot kalibracija:** pravila P16 se NE spreminjajo. Skript
+`scripts/p54_present_gurs.py` (determinističen, I1–I8, `--check`) jih najprej
+**reproducira na starih OSM podatkih**: 156/156 statusov + osmId 41/41 + d ±0.05 m (I1) —
+pravila so pravilno prebrana (OBSTOJA d ≤ 8 ali d ≤ 20 ∧ prekrivanje ≥ 0.10 po preseku
+osno poravnanih pravokotnikov / ploščine tlorisa; NEGOTOVO d ≤ 40; NI JE VEČ d > 40;
+d = težišče↔težišče). Šele nato ista pravila tečejo na uradnih obriseh. Match se računa
+na ZAOKROŽENIH vrednostih (0.1 m) — datoteka je samoodločilna (kdo izračuna iz nje,
+dobi iste statuse; disciplina P16).
+
+**Rezultati:**
+
+| status | P16 (OSM) | P54 (GURS) | prehod |
+|---|---|---|---|
+| 🟢 obstaja | 15 | **18** | +4 negotovo→obstoja, −1 obstoja→negotovo |
+| 🟡 negotovo | 26 | **21** | −4, −2 v ni-je-več |
+| 🔴 ni je več | 115 | **117** | +2 negotovo→ni-je-več |
+
+7 tlorisov spremenilo status (fp3/13/110/112 negotovo→obstoja — GURS je potrdil stavbe,
+ki jih je OSM posnetek zamudil; fp52/98 negotovo→ni-je-več — GURS potrjuje odsotnost;
+fp66 obstoja→negotovo). **d je od P54 zapisana za vseh 156** (P16 le do ~117 m, sicer
+null) — UI (village-viewer/AR) prikazuje razdaljo tudi rdečim duhovom; do 1541.2 m na
+zahodnih pobočjih. id = EID_STAVBA (niz, 18 mest — varno čez JS Number preciznost);
+type = uradni GURS razred dobesedno.
+
+**Navzkrižje s P48 (I5):** replika px-pipe (meje A02 regex + celica cf + a02_geo2px):
+v celici cf **154 == modernEvaluated**, pari ≤ 25 px **37 == pairs** (20 različnih
+tlorisov — več sodobnih stavb na istem dvorišču), okno **40** stavb z najbližjim
+tlorisom ≤ 25 px (0.8014 m/px). px replika tlorisov ≤ 1.5 px.
+
+**Integracija:** runtime `src/data/atlas/present.json` (isti tip kot P16; _meta:
+gursSnapshot 2026-10-13, fetchReceipt, transform, osmSuperseded {15/26/115} + arhiv
+`research/issue17/present-osm-p16.json` — bajtna kopija nadomeščenega artefakta);
+village3d.ts (PresentBuilding.id: string, match.gursId, GURS_SNAPSHOT, IZGINILO_STATS.
+sourceSnapshot, PRESENCE_META GURS, zamanjski naslovi); atlas.ts izginilo
+(sourceSnapshot + noteEn GURS); ar-time-machine + village-viewer naslovi
+(»1825 ∩ GURS eZKN«); research.ts PRESENT_GURS_P54 + kartica v Raziskavah; sources.ts
+N083A02 opomba P54 (Si+En); QA **57 → 58** (`qa-p54-present-gurs`; vzorec qa-p51:
+runtime kontroly v produkciji — research/ ni v deploymentu, P53 lekcija).
+
+**Invarianti I1–I8: PASS** — I1 repla 156/156, I2 vhodi/okno/px-replika, I3 pravila 156,
+I4 števci/prehodi/d-ranges, I5 P48 križ 154/37/20/40, I6 shema (EID unikatni, gursId,
+d > 0), I7 determinizem bajtno, I8 dokaz ⊇ runtime.
+
+**Poštenost:** odsotnost stavbe še zmeraj **NI dokaz porušitve** — terenska preverba
+117 »ni je več« tlorisov ostaja priporočena [~]. SHEET_GEOREFS in dokazi P40–P53
+nespremenjeni (lekcija P9).

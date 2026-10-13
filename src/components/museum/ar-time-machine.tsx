@@ -15,7 +15,7 @@
  *    se ta odklene (TimeLens vzorec) in pokaže kartico »kaj je tu nekoč
  *    stalo« z viri; brez senzorjev se točko izbere ročno (pošten predogled);
  *  · KAJ JE IZGINILO? (issue #12): v letu »danes« so duhovi 1825 obarvani
- *    po usodi (🟢 obstaja · 🟡 negotovo · 🔴 ni je več — 1825 ∩ OSM posnetek);
+ *    po usodi (🟢 obstaja · 🟡 negotovo · 🔴 ni je več — 1825 ∩ uradni GURS eZKN, P54);
  *  · 360° S CERKVE (issue #12): fiksno stališče pri cerkvi sv. Vida — obrat
  *    pogleda na žiroskopu/kompasu (ali vlečenju), preklapljanje 1825 ⇄ danes
  *    = pogovor preteklost ↔ sedanjost (Nîmes Tour Magne vzorec);
@@ -593,8 +593,8 @@ export function ARTimeMachine({
         ? `griblje-museum.vercel.app · ${miniSpot.id.toUpperCase()} · INTERPRETACIJA`
         : year === 2026
           ? t(
-              `griblje-museum.vercel.app · 1825 ∩ OSM ${IZGINILO_STATS.osmSnapshot}`,
-              `griblje-museum.vercel.app · 1825 ∩ OSM ${IZGINILO_STATS.osmSnapshot}`,
+              `griblje-museum.vercel.app · 1825 ∩ GURS eZKN ${IZGINILO_STATS.sourceSnapshot}`,
+              `griblje-museum.vercel.app · 1825 ∩ GURS eZKN ${IZGINILO_STATS.sourceSnapshot}`,
             )
           : "griblje-museum.vercel.app · RECONSTRUCTED",
     });
@@ -870,8 +870,8 @@ export function ARTimeMachine({
           </span>
           <span className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-black/45 px-3 py-1.5 text-[11px] text-white/70 backdrop-blur">
             {t(
-              `OSM posnetek ${IZGINILO_STATS.osmSnapshot} · od ${IZGINILO_STATS.total1825} stavb 1825`,
-              `OSM snapshot ${IZGINILO_STATS.osmSnapshot} · of ${IZGINILO_STATS.total1825} buildings of 1825`,
+              `GURS eZKN posnetek ${IZGINILO_STATS.sourceSnapshot} · od ${IZGINILO_STATS.total1825} stavb 1825`,
+              `GURS eZKN snapshot ${IZGINILO_STATS.sourceSnapshot} · of ${IZGINILO_STATS.total1825} buildings of 1825`,
             )}
           </span>
         </div>
@@ -1426,7 +1426,7 @@ export function ARTimeMachine({
               <div className="min-w-0">
                 <p className="font-display text-sm font-semibold">
                   {card.kind === "present"
-                    ? t("Današnja stavba — OSM", "Present-day building — OSM")
+                    ? t("Današnja stavba — GURS eZKN", "Present-day building — GURS eZKN")
                     : card.kind === "growth"
                       ? t("Stavba ~1900 (ocena)", "Building ~1900 (estimate)")
                       : year === 2026
@@ -1439,7 +1439,7 @@ export function ARTimeMachine({
                     <>
                       <span className="inline-flex items-center gap-1.5 rounded-full border border-sky-300/40 bg-sky-400/15 px-2 py-0.5 font-semibold text-sky-200">
                         <span className="size-1.5 rounded-full bg-sky-300" aria-hidden="true" />
-                        {t("DOKUMENTIRANO · OSM", "DOCUMENTED · OSM")}
+                        {t("DOKUMENTIRANO · GURS eZKN", "DOCUMENTED · GURS eZKN")}
                       </span>
                       <span className="text-white/70">
                         {lang === "si" ? PRESENCE_META.sourceSi : PRESENCE_META.sourceEn}
@@ -1476,12 +1476,12 @@ export function ARTimeMachine({
                                 card.nearestPresent != null
                                   ? formatDistance(card.nearestPresent, lang)
                                   : t("več kot 1 km", "more than 1 km")
-                              } · viri: kataster 1825 (A02) + OSM posnetek ${IZGINILO_STATS.osmSnapshot} — terenska preverba čaka`,
+                              } · viri: kataster 1825 (A02) + uradni GURS eZKN ${IZGINILO_STATS.sourceSnapshot} — terenska preverba čaka`,
                               `nearest present-day building: ${
                                 card.nearestPresent != null
                                   ? formatDistance(card.nearestPresent, lang)
                                   : t("more than 1 km", "more than 1 km")
-                              } · sources: 1825 cadastre (A02) + OSM snapshot ${IZGINILO_STATS.osmSnapshot} — field check pending`,
+                              } · sources: 1825 cadastre (A02) + official GURS eZKN ${IZGINILO_STATS.sourceSnapshot} — field check pending`,
                             )
                           : card.presence === "uncertain"
                             ? t(
@@ -1489,16 +1489,16 @@ export function ARTimeMachine({
                                   card.nearestPresent != null
                                     ? formatDistance(card.nearestPresent, lang)
                                     : ""
-                                } — morda ista domačija · viri: kataster 1825 (A02) + OSM`,
+                                } — morda ista domačija · viri: kataster 1825 (A02) + uradni GURS eZKN`,
                                 `a present-day building within ${
                                   card.nearestPresent != null
                                     ? formatDistance(card.nearestPresent, lang)
                                     : ""
-                                } — perhaps the same farmstead · sources: 1825 cadastre (A02) + OSM`,
+                                } — perhaps the same farmstead · sources: 1825 cadastre (A02) + official GURS eZKN`,
                               )
                             : t(
-                                "današnja stavba stoji na tlorisu 1825 · viri: kataster 1825 (A02) + OSM",
-                                "a present-day building stands on the 1825 footprint · sources: 1825 cadastre (A02) + OSM",
+                                "današnja stavba stoji na tlorisu 1825 · viri: kataster 1825 (A02) + uradni GURS eZKN",
+                                "a present-day building stands on the 1825 footprint · sources: 1825 cadastre (A02) + official GURS eZKN",
                               )}
                       </span>
                     </>
@@ -1538,8 +1538,8 @@ export function ARTimeMachine({
               {card.kind === "present" ? (
                 <p>
                   {t(
-                    "Siva masa = digitalni dvojček današnjih stavb vasi (samo v 3D pregledu). Višine niso zabeležene v OSM — prikazane so ocena. V AR se današnje vidi skozi kamero, duhovi 1825 pa povedo, kje je kaj stalo.",
-                    "The grey mass = digital twin of today's village buildings (3D viewer only). Heights are not recorded in OSM — shown as an estimate. In AR the present shows through the camera, while the ghosts of 1825 mark what stood where.",
+                    "Siva masa = digitalni dvojček današnjih stavb vasi (samo v 3D pregledu; uradni GURS eZKN obrisi, P54). Višine niso del eZKN izvoza obrisov — prikazane so ocena. V AR se današnje vidi skozi kamero, duhovi 1825 pa povedo, kje je kaj stalo.",
+                    "The grey mass = digital twin of today's village buildings (3D viewer only; official GURS eZKN footprints, P54). Heights are not part of the eZKN footprint export — shown as an estimate. In AR the present shows through the camera, while the ghosts of 1825 mark what stood where.",
                   )}
                 </p>
               ) : card.kind === "growth" ? (

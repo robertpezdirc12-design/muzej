@@ -3205,3 +3205,42 @@ P53 (13. 10. 2026) — PRODUKCIJSKA SINHRONIZACIJA QA: 57/57 tudi na Vercelu (.v
   kopija → test pade (prava napaka).
 - Verifikacija: tsc 0, ESLint 0; simulacija obeh načinov (runQA z vbrizganim fs): REPO 57/57,
   PROD-SIM (research/ filtriran) 57/57 — sporočila poštena; strogost v repozitoriju nespremenjena.
+
+P54 (14. 10. 2026) — PRESENT.JSON NA URADNIH GURS OBRISIH: nadgradnja P16 »Kaj je izginilo?«
+- Naloga iz audit §28 (P48 next) + P49 next 3: vir današnjih stavb se nadgradi
+  iz OSM posnetka 2026-10-07 (15/26/115 — pokrival le jedro vasi) na uradni
+  GURS eZKN (WFS SI.GURS.KN:STAVBE, 403 KO 1544 + 313 KO 1552 južni bbox,
+  recept scripts/p48_fetch_stavbe.sh; EPSG:3794 → WGS84 pyproj always_xy,
+  identično P47/P48). Motivacija pošteno dokumentirana: OSM posnetek ni pokril
+  zahodnih pobočij (tlorisi do x −1510), odsotnost v OSM tam = odsotnost
+  posnetka, ne stavbe.
+- scripts/p54_present_gurs.py (determinističen, I1–I8, --check): REPLA KOT
+  KALIBRACIJA — pravila P16 najprej reproducirana na starih OSM podatkih
+  (156/156 statusov + osmId 41/41 + d ±0.05 m), šele nato uporabljena na
+  uradnih obriseh; match na zaokroženih vrednostih (0.1 m) — datoteka
+  samoodločilna (disciplina P16); okno = bbox(350 OSM) ∪ bbox(156 tlorisov)
+  ± 50 m → 380 stavb (vse KO 1544; KO 1552 južni bbox 0 v oknu — Fučkovci
+  nosijo uradne EID že od P49).
+- Rezultat: 18 obstaja · 21 negotovih · 117 ni jih več (P16: 15/26/115);
+  7 tlorisov spremenilo status (4× negotovo→obstoja — GURS potrdil stavbe,
+  ki jih je OSM zamudil; 2× negotovo→ni-je-več; 1× obstoja→negotovo);
+  d od P54 zapisana za VSE 156 (P16 le do ~117 m) — do 1541.2 m na zahodnih
+  pobočjih; id = EID_STAVBA (niz), type = uradni GURS razred dobesedno.
+- P48 navzkrižje (I5): px-pipe replika — celica cf 154 == modernEvaluated,
+  pari ≤ 25 px 37 == pairs (20 tlorisov), okno 40 stavb blizu tlorisa
+  (0.8014 m/px); px replika tlorisov ≤ 1.5 px.
+- Integracija: runtime src/data/atlas/present.json (isti tip kot P16; _meta
+  gursSnapshot/fetchReceipt/transform/osmSuperseded) + arhiv P16
+  research/issue17/present-osm-p16.json (bajtna kopija) + dokaz
+  research/issue17/present-gurs.json; village3d.ts (PresentBuilding.id:
+  string, match.gursId, GURS_SNAPSHOT, IZGINILO_STATS.sourceSnapshot,
+  PRESENCE_META GURS, captions); atlas.ts izginilo (sourceSnapshot + noteEn);
+  ar-time-machine + village-viewer naslovi »1825 ∩ GURS eZKN«; research.ts
+  PRESENT_GURS_P54 + kartica; sources.ts N083A02 opomba P54 (Si+En); audit
+  §34; README bullet; QA 57 → 58 (qa-p54-present-gurs, vzorec qa-p51 —
+  produkcija kontroly na runtime kopiji, P53 lekcija).
+- Verifikacija: --check determinizem PASS (bajtno); tsc/ESLint/build/E2E +
+  push na obe oddaljeni (glej commit).
+- Poštenost: odsotnost stavbe še zmeraj NI dokaz porušitve — terenska
+  preverba 117 tlorisov priporočena [~]; SHEET_GEOREFS in dokazi P40–P53
+  nespremenjeni (lekcija P9).

@@ -3370,7 +3370,7 @@ export const BUILDINGS_OVERLAY_P48: {
   findingsSi: [
     "Registracija stavb A02: sodobni GURS tlorisi (154 v celici cf) se registrirajo na narisane stavbne simbole 1825 z mediano residuala 9.8 m (p90 13.7 m) — stavbna raven potrjuje parcelno Raven P47 (9.8 m) pod isto GEOTRUTH preslikavo.",
     "A02 on-symbol 149/154 sodobnih stavb pada na narisane stavbne simbole 1825 (cov@best ≥ 0.5; mediana pokritosti DRAWN strata 1.0, cov@0 0.85) — jedro vasi je stavbno kontinuirano.",
-    "Kontinuiteta A02: 37 sodobnih stavb ima vektoriziran tloris 1825 v bližini ≤ 25 px (36 z cov@best ≥ 0.5); 136 od 156 tlorisov 1825 je brez sodobne stavbe v bližini (mediana najbližje 392.6 px ≈ 316.2 m) — razpršena zidanica 1825 (vinice/hambi na zahodnih pobočjih) ni preživela; nadgradja P16 present.json (OSM 15 obstaja · 26 negotovih · 115 ni jih več) z uradnimi GURS obrisi.",
+    "Kontinuiteta A02: 37 sodobnih stavb ima vektoriziran tloris 1825 v bližini ≤ 25 px (36 z cov@best ≥ 0.5); 136 od 156 tlorisov 1825 je brez sodobne stavbe v bližini (mediana najbližje 392.6 px ≈ 316.2 m) — razpršena zidanica 1825 (vinice/hambi na zahodnih pobočjih) ni preživela; nadgradja P16 present.json (OSM 15 obstaja · 26 negotovih · 115 ni jih več) z uradnimi GURS obrisi — izvedeno v P54 (18/21/117, repla pravil 156/156).",
     "A05/ch (Fučkovci): 26 sodobnih stavb pada na narisane stavbe 1825 z mediano residuala 10.1 m — neodvisna potrditev P46 afine na stavbni ravni; A04/cg: 0 on-symbol — vse sodobne stavbe v celici cg so novejše od risbe (paša WEIDENDORF, P47 EMPTY stratum)",
     "Blatt X (str. 138–139) kvantitativna opomba: 59 različnih numeričnih 'hausNr' vrednosti, 58 v razponu GRUND parcel (41–2500), a površine se z GRUND parcelami pri istih številkah UJEMAJO 0/37-krat — direktna referenca na register 1825 je REFRIRANA; površine vrstic (mediana 6.329 Joch, do 17.299 J) so red velikosti nad GRUND dvorišči (mediana 0.282 J) — vrstice so velike zemljiške parcele; owner stolpec vrstic 81–100 vsebuje 18 številk (63–80) — signal premika stolpcev pri branju; skladno z opombo vrstice 1 'Zusammenstellung der Grundstücke' in letnico 1860 v branjih (reambulacijska doba, glave listov 'Reambulirungs-Beimappe')",
     "Posledica za P40/P42: interpretacija 'Blatt X = register stavbnih mest' (P42 ARTIFAKT dokaz: številke 82–100 v stolpcu rabe) je ovržena na kvantitativni ravni — številke so lastna štetje vrstic (parzella == raba na vrsticah 82–100), površine pa izključujejo stavbna mesta; vpogled ostaja [~] do človeške paleografije str. 138–139; P40 'blattXOverlap 60/102' okvir je treba brati kot delno prekrivanje dveh različnih sekcij, ne kot registrsko vrzel"
@@ -3597,6 +3597,76 @@ export const LEAFLET_OVERLAY_P51: {
     "povezava 26 dokazanih mest A05 z domačijami PT (človeška potrditev števil na karti)",
     "nadgradnja P16 present.json za Fučkovci (25 mest z uradnimi GURS obrisi)",
     "vizualna potrditev neatline izrezov (P50/P46) — priporočeno, ne blokirajoče [~]",
+  ],
+};
+
+export const PRESENT_GURS_P54: {
+  series: "GEOREF";
+  source: string;
+  status: ResearchStatus;
+  generatedBy: string;
+  window: { rectLocal: [number, number, number, number]; gursInWindow: number; ko: number[] };
+  counts: { exists: number; uncertain: number; gone: number };
+  countsP16: { exists: number; uncertain: number; gone: number };
+  transitions: Record<string, number>;
+  changed: { i: number; p16: string; p54: string; d: number }[];
+  dRanges: { existsMax: number; goneMax: number };
+  p48Cross: { inCellCf: number; pairs25px: number; pairFootprints: number; modernNear25pxWindow: number; mPerPx: number };
+  replay: { pass: string; osmIdMatch: number };
+  invariants: Record<string, string>;
+  statusLine: string;
+  verdictSi: string;
+  verdictEn: string;
+  next: string[];
+} = {
+  series: "GEOREF",
+  source:
+    "GURS eZKN stavbe (research/georef-n83/gurs/stavbe-ko1544-0.json 403 + stavbe-ko1552-south-0.json 313, recept scripts/p48_fetch_stavbe.sh) + src/data/atlas/buildings.json (156 tlorisov, list A02, P9) + P16 arhiv (research/issue17/present-osm-p16.json, bajtna kopija) + P48 kontinuiteta (buildings-overlay.json); polni izpis research/issue17/present-gurs.json + runtime src/data/atlas/present.json",
+  status: "REVIEW",
+  generatedBy: "scripts/p54_present_gurs.py",
+  window: { rectLocal: [-1560.1, -717.2, 711.1, 1567.1], gursInWindow: 380, ko: [1544] },
+  counts: { exists: 18, uncertain: 21, gone: 117 },
+  countsP16: { exists: 15, uncertain: 26, gone: 115 },
+  transitions: {
+    "exists→exists": 14,
+    "exists→uncertain": 1,
+    "uncertain→exists": 4,
+    "uncertain→uncertain": 20,
+    "uncertain→gone": 2,
+    "gone→gone": 115,
+  },
+  changed: [
+    { i: 3, p16: "uncertain", p54: "exists", d: 3.5 },
+    { i: 13, p16: "uncertain", p54: "exists", d: 12.9 },
+    { i: 52, p16: "uncertain", p54: "gone", d: 44.6 },
+    { i: 66, p16: "exists", p54: "uncertain", d: 10.7 },
+    { i: 98, p16: "uncertain", p54: "gone", d: 53.4 },
+    { i: 110, p16: "uncertain", p54: "exists", d: 13.2 },
+    { i: 112, p16: "uncertain", p54: "exists", d: 11.1 },
+  ],
+  dRanges: { existsMax: 15.7, goneMax: 1541.2 },
+  p48Cross: { inCellCf: 154, pairs25px: 37, pairFootprints: 20, modernNear25pxWindow: 40, mPerPx: 0.8014 },
+  replay: { pass: "156/156", osmIdMatch: 41 },
+  invariants: {
+    I1: "REPLA P16 na starih OSM podatkih == stari statusi 156/156 (+ osmId 41/41, d ±0.05 m) — pravila pravilno prebrana — PASS",
+    I2: "403 + 313 značilk, 2 brez geometrije (KO 1544), 714 unikatnih EID; okno 380 stavb (vse KO 1544); px replika tlorisov ≤ 1.5 px; celica cf == P48 154 — PASS",
+    I3: "pravila za vseh 156: obstoja ⇒ d ≤ 20 ∧ (≤ 8 ∨ prekrivanje ≥ 0.10), negotovo ⇒ d ≤ 40, ni je več ⇒ d > 40 — PASS",
+    I4: "števci 18/21/117, prehodi 156 vsrstno pinani, spremenjenih 7, d-obstoja ≤ 15.7 m, d-ni-je-več ≤ 1541.2 m — PASS",
+    I5: "P48 navzkrižje: cf 154 == modernEvaluated, pari ≤ 25 px 37 == pairs, 20 tlorisov, okno 40 stavb blizu tlorisa — PASS",
+    I6: "shema: 380 present (unikatni EID niz, 0.1 m zaokroženo, uradni GURS razred, poly) + 156 match (gursId/null, d > 0) — PASS",
+    I7: "determinizem — bajtno identičen izpis pri ponovnem izračunu (--check)",
+    I8: "dokaz ⊇ runtime — present in match bajtno enaka v obeh izpisih",
+  },
+  statusLine:
+    "UPGRADED-DETERMINISTIC — P16 »Kaj je izginilo?« na uradnih GURS eZKN obriseh (380 stavb v oknu A02 + sodobna vas, vse KO 1544); pravila NESPREMENJENA, kalibrirana z replajo na starih OSM podatkih (156/156); 18 obstaja · 21 negotovih · 117 ni jih več (P16 OSM: 15/26/115); d zapisana za vse 156; odsotnost stavbe še zmeraj NI dokaz porušitve [~]",
+  verdictSi:
+    "P54 (2026-10-14): »Kaj je izginilo?« nadgrajeno z OSM posnetka (P16, 15/26/115 — pokrival le jedro vasi) na uradne GURS eZKN obrise (714 stavb z geometrijo; 380 v oknu A02 + sodobna vas, vse KO 1544 — popolna pokritost, vključno z zahodnimi pobočji razpršene zidanice). Pravila P16 NESPREMENJENA — skript jih najprej kalibrira z replajo na starih podatkih (156/156, vključno z osmId in d), šele nato uporabi na uradnih obriseh. Rezultat: 18 obstaja · 21 negotovih · 117 ni jih več; 7 tlorisov spremenilo status (4× negotovo→obstoja — GURS je potrdil stavbo, ki jo je OSM posnetek zamudil; 2× negotovo→ni-je-več — GURS potrjuje odsotnost; 1× obstoja→negotovo); d sedaj zapisana za vse 156 tlorisov (do 1541.2 m na zahodnih pobočjih, kjer OSM posnetka sploh ni bilo). P48 navzkrižje: celica cf 154 == modernEvaluated, pari ≤ 25 px 37 == pairs (20 tlorisov), okno 40 stavb blizu tlorisa. Pošteno: odsotnost stavbe še zmeraj NI dokaz porušitve — terenska preverba ostaja priporočena [~].",
+  verdictEn:
+    "P54 (2026-10-14): »What has vanished?« upgraded from the OSM snapshot (P16, 15/26/115 — covered the village core only) to official GURS eZKN footprints (714 buildings with geometry; 380 within the A02 + modern-village window, all KO 1544 — complete cadastral coverage, the western slopes of the dispersed settlement included). P16 rules UNCHANGED — the script first calibrates them by replay on the old data (156/156, including osmId and d), then applies them to the official footprints. Result: 18 exists · 21 uncertain · 117 gone; 7 footprints changed status (4× uncertain→exists — GURS confirmed buildings the OSM snapshot missed; 2× uncertain→gone — GURS confirms absence; 1× exists→uncertain); d now recorded for all 156 footprints (up to 1541.2 m on the western slopes, where the OSM snapshot had no coverage at all). P48 cross-check: cell cf 154 == modernEvaluated, pairs ≤ 25 px 37 == pairs (20 footprints), window 40 buildings near a footprint. Honest: absence of a building still does NOT prove demolition — field verification remains recommended [~].",
+  next: [
+    "terenska preverba »ni je več« tlorisov (lastnik, priporočeno [~]) — 117 tlorisov brez stavbe v 40 m",
+    "povezava 26 mest A05 (Fučkovci) ↔ domačije PT (lastnik) — uradni EID že od P49",
+    "paleografija str. 138–139 (Blatt X) — reambulacijska hipoteza [~]",
   ],
 };
 

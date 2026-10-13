@@ -27,6 +27,7 @@ import {
   FileJson,
   FileX2,
   GraduationCap,
+  Home,
   Landmark,
   Map as MapIcon,
   MessageSquareQuote,
@@ -69,6 +70,7 @@ import {
   FUCUKOVCI_P49,
   GEOREF_CLOSURE_P50,
   LEAFLET_OVERLAY_P51,
+  PRESENT_GURS_P54,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -1225,8 +1227,8 @@ export function MuseumResearch() {
                 </div>
                 <p className="mt-2 text-[11px] leading-relaxed text-muted-foreground/90">
                   {t(
-                    "Jedro vasi (Grüble, St. Veith) je stavbno kontinuirano: 149/154 sodobnih stavb v celici cf pada na narisane simbole 1825. Nasprotno pa 136 od 156 vektoriziranih tlorisov 1825 nima sodobne stavbe v bližini (mediana najbližje stavbe 392.6 px ≈ 316 m) — razpršena zidanica na zahodnih pobočjih (vinice, hambi) ni preživela. Nadgradja P16 present.json (OSM podlaga: 15 obstaja · 26 negotovih · 115 ni jih več) z uradnimi GURS obrisi.",
-                    "The village core (Grüble, St. Veith) is building-continuous: 149/154 modern buildings in cell cf fall on the drawn 1825 symbols. Conversely, 136 of 156 vectorized 1825 footprints have no modern building nearby (median nearest 392.6 px ≈ 316 m) — the dispersed settlement on the western slopes (vineyard cottages, hambas) did not survive. An upgrade of P16 present.json (OSM basis: 15 existing · 26 uncertain · 115 gone) with official GURS footprints.",
+                    "Jedro vasi (Grüble, St. Veith) je stavbno kontinuirano: 149/154 sodobnih stavb v celici cf pada na narisane simbole 1825. Nasprotno pa 136 od 156 vektoriziranih tlorisov 1825 nima sodobne stavbe v bližini (mediana najbližje stavbe 392.6 px ≈ 316 m) — razpršena zidanica na zahodnih pobočjih (vinice, hambi) ni preživela. Nadgradja P16 present.json (OSM podlaga: 15 obstaja · 26 negotovih · 115 ni jih več) z uradnimi GURS obrisi — izvedeno v P54 (spodaj: 18/21/117, repla pravil 156/156).",
+                    "The village core (Grüble, St. Veith) is building-continuous: 149/154 modern buildings in cell cf fall on the drawn 1825 symbols. Conversely, 136 of 156 vectorized 1825 footprints have no modern building nearby (median nearest 392.6 px ≈ 316 m) — the dispersed settlement on the western slopes (vineyard cottages, hambas) did not survive. An upgrade of P16 present.json (OSM basis: 15 existing · 26 uncertain · 115 gone) with official GURS footprints — carried out in P54 (below: 18/21/117, rules replay 156/156).",
                   )}
                 </p>
               </div>
@@ -1515,6 +1517,91 @@ export function MuseumResearch() {
                   {t(
                     "Ovoj je preračunan iz P46 afine == P50 boundsImageNWSE (≤ 5e-6°) — en sam vir resnice (runtime JSON, ki ga uvažata UI in QA). MERJENA SUBTELNOST je poštno dokumentirana: Leaflet ne podpira rotiranih prekrivk — slika je razpete v osno poravnan okvir pravega štirikotnika; odmik vogalov izmerjen iz členov afine (lng |b|·H, lat |d|·W): A03 19.3 m, A04 20.0 m, A05 20.0 m (dva vogala točna) — del ±40/50 m negotovosti lista. Skew ≤ 0.571° → osna postavitev je prikaz, ne meritev. Prekrivke so privzeto izklopljene — začetni pogled nespremenjen. Vizualni pregled s strani lastnika priporočen [~]. SHEET_GEOREFS in dokazi P40–P50 nespremenjeni. Strojno berljivo: /api/atlas/leaflet-overlay.",
                     "The envelope is recomputed from the P46 affine == P50 boundsImageNWSE (≤ 5e-6°) — a single source of truth (the runtime JSON imported by both UI and QA). The MEASURED SUBTLETY is honestly documented: Leaflet does not support rotated overlays — the image is stretched into an axis-aligned frame of the true quadrilateral; corner deviation measured from the affine terms (lng |b|·H, lat |d|·W): A03 19.3 m, A04 20.0 m, A05 20.0 m (two corners exact) — part of the sheet's ±40/50 m uncertainty. Skew ≤ 0.571° → the axis-aligned placement is a display, not a measurement. Overlays are default OFF — the initial view is unchanged. The owner's visual review recommended [~]. SHEET_GEOREFS and the P40–P50 evidence unchanged. Machine-readable: /api/atlas/leaflet-overlay.",
+                  )}
+                </p>
+              </div>
+            </div>
+
+            {/* Kaj je izginilo? — present.json na uradnih GURS obriseh (P54, issue #12) */}
+            <div className="min-w-0 rounded-xl border bg-card p-6 shadow-sm">
+              <h3 className="flex items-center gap-2 font-display text-lg font-semibold">
+                <Home className="size-4 text-primary" aria-hidden="true" />
+                {t("Kaj je izginilo? — present.json na uradnih GURS obriseh (P54)", "What has vanished? — present.json on official GURS footprints (P54)")}
+                <StatusBadge status={PRESENT_GURS_P54.status} />
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                {t(
+                  "P54 nadgradi P16 primerjavo »1825 ∩ danes« z OSM posnetka na uradne GURS eZKN obrise (380 stavb v oknu A02 + sodobna vas, vse KO 1544 — popolna pokritost, tudi zahodna pobočja, kjer OSM posnetka sploh ni bilo). Pravila P16 so NESPREMENJENA — skript jih najprej kalibrira z replajo na starih podatkih (156/156, vključno z osmId in d), šele nato uporabi na uradnih obriseh.",
+                  "P54 upgrades the P16 »1825 ∩ today« comparison from the OSM snapshot to official GURS eZKN footprints (380 buildings within the A02 + modern-village window, all KO 1544 — complete coverage, including the western slopes where the OSM snapshot had none at all). The P16 rules are UNCHANGED — the script first calibrates them by replay on the old data (156/156, including osmId and d), then applies them to the official footprints.",
+                )}
+              </p>
+
+              {/* P54: števci + prehodi */}
+              <div className="mt-4 rounded-lg border bg-secondary/30 p-3">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-sm font-semibold">
+                    {t("P54 — prehodi statusov (P16 OSM → P54 GURS)", "P54 — status transitions (P16 OSM → P54 GURS)")}
+                  </span>
+                  <span className="font-mono text-[11px] text-muted-foreground">scripts/p54_present_gurs.py</span>
+                </div>
+                <div className="mt-2 flex flex-wrap gap-1.5">
+                  <span className="rounded bg-emerald-100 px-1.5 py-0.5 dark:bg-emerald-950/40">🟢 {t("obstaja", "exists")} {PRESENT_GURS_P54.counts.exists} <span className="text-muted-foreground">(P16: {PRESENT_GURS_P54.countsP16.exists})</span></span>
+                  <span className="rounded bg-amber-100 px-1.5 py-0.5 dark:bg-amber-950/40">🟡 {t("negotovo", "uncertain")} {PRESENT_GURS_P54.counts.uncertain} <span className="text-muted-foreground">(P16: {PRESENT_GURS_P54.countsP16.uncertain})</span></span>
+                  <span className="rounded bg-red-100 px-1.5 py-0.5 dark:bg-red-950/40">🔴 {t("ni je več", "gone")} {PRESENT_GURS_P54.counts.gone} <span className="text-muted-foreground">(P16: {PRESENT_GURS_P54.countsP16.gone})</span></span>
+                </div>
+                <div className="mt-2 space-y-1 font-mono text-[11px]">
+                  {Object.entries(PRESENT_GURS_P54.transitions).map(([k, v]) => (
+                    <div key={k} className="rounded border bg-background px-2 py-1">
+                      {k}: <span className="font-semibold">{v}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* P54: repla + navzkrižje P48 */}
+              <div className="mt-3 grid gap-2 sm:grid-cols-2">
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="text-xs font-semibold">{t("Repla pravil (I1)", "Rules replay (I1)")}</p>
+                  <p className="mt-1 text-[11px] leading-relaxed text-muted-foreground">
+                    {t(
+                      `Pravila P16 na starih OSM podatkih reproducirajo stare statuse ${PRESENT_GURS_P54.replay.pass} (+ osmId ${PRESENT_GURS_P54.replay.osmIdMatch}/41, d ±0.05 m) — pravila so pravilno prebrana, vir se spreminja, metoda ne.`,
+                      `The P16 rules on the old OSM data reproduce the old statuses ${PRESENT_GURS_P54.replay.pass} (+ osmId ${PRESENT_GURS_P54.replay.osmIdMatch}/41, d ±0.05 m) — the rules are correctly read; the source changes, the method does not.`,
+                    )}
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="text-xs font-semibold">{t("Navzkrižje s P48 (I5)", "Cross-check with P48 (I5)")}</p>
+                  <p className="mt-1 font-mono text-[11px] leading-relaxed text-muted-foreground">
+                    cf {PRESENT_GURS_P54.p48Cross.inCellCf} == modernEvaluated · pari ≤ 25 px {PRESENT_GURS_P54.p48Cross.pairs25px} == pairs ({PRESENT_GURS_P54.p48Cross.pairFootprints} tlorisov) · okno {PRESENT_GURS_P54.p48Cross.modernNear25pxWindow} stavb blizu tlorisa · {PRESENT_GURS_P54.p48Cross.mPerPx} m/px
+                  </p>
+                </div>
+              </div>
+
+              {/* P54: spremenjeni tlorisi */}
+              <div className="mt-3 rounded-lg border bg-background p-3">
+                <p className="text-xs font-semibold">{t("Spremenjeni tlorisi (7)", "Changed footprints (7)")}</p>
+                <div className="mt-1 space-y-0.5 font-mono text-[11px] text-muted-foreground">
+                  {PRESENT_GURS_P54.changed.map((c) => (
+                    <div key={c.i}>
+                      fp{c.i}: {c.p16} → <span className="font-semibold text-foreground">{c.p54}</span> (d {c.d} m)
+                    </div>
+                  ))}
+                </div>
+                <p className="mt-1 text-[11px] text-muted-foreground">
+                  {t(
+                    `d od P54 zapisana za vse 156 tlorisov (obstoja ≤ ${PRESENT_GURS_P54.dRanges.existsMax} m; ni je več do ${PRESENT_GURS_P54.dRanges.goneMax} m na zahodnih pobočjih).`,
+                    `Since P54, d is recorded for all 156 footprints (exists ≤ ${PRESENT_GURS_P54.dRanges.existsMax} m; gone up to ${PRESENT_GURS_P54.dRanges.goneMax} m on the western slopes).`,
+                  )}
+                </p>
+              </div>
+
+              {/* P54: poštenost */}
+              <div className="mt-3 rounded-lg border border-emerald-200 bg-emerald-50/60 p-3 dark:border-emerald-900/50 dark:bg-emerald-950/30">
+                <p className="text-[11px] leading-relaxed text-foreground/80">
+                  <span className="font-semibold">{t("Pošten status: ", "Honest status: ")}</span>
+                  {t(
+                    "Odsotnost stavbe še zmeraj NI dokaz porušitve — terenska preverba ostaja priporočena [~]. Pravila in P16 praga (8/20/40 m, prekrivanje 0.10) nespremenjena; spreminja se LE vir (OSM → uradni GURS eZKN) in pokritost (380 stavb namesto 350; Zahodna pobočja zdaj pokrita). Arhiv P16 OSM artefakta: research/issue17/present-osm-p16.json (bajtna kopija). Strojno berljivo: research/issue17/present-gurs.json + runtime src/data/atlas/present.json (uvaža village3d.ts).",
+                    "Absence of a building still does NOT prove demolition — field verification remains recommended [~]. The rules and P16 thresholds (8/20/40 m, overlap 0.10) are unchanged; only the SOURCE changes (OSM → official GURS eZKN) and the coverage (380 buildings instead of 350; western slopes now covered). The P16 OSM artifact is archived: research/issue17/present-osm-p16.json (byte copy). Machine-readable: research/issue17/present-gurs.json + the runtime src/data/atlas/present.json (imported by village3d.ts).",
                   )}
                 </p>
               </div>

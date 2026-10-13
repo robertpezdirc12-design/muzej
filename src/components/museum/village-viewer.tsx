@@ -139,7 +139,7 @@ export function VillageViewer() {
                 <div className="min-w-0">
                   <p className="font-display text-sm font-semibold">
                     {card.kind === "present"
-                      ? t("Današnja stavba — OSM", "Present-day building — OSM")
+                      ? t("Današnja stavba — GURS eZKN", "Present-day building — GURS eZKN")
                       : card.kind === "growth"
                         ? t("Stavba ~1900 (ocena)", "Building ~1900 (estimate)")
                         : year === 2026
@@ -244,7 +244,7 @@ export function VillageViewer() {
           {year === 2026 ? (
             <>
               <p className="font-medium text-primary">
-                {t("Kaj je izginilo? — 1825 ∩ OSM", "What has vanished? — 1825 ∩ OSM")}
+                {t("Kaj je izginilo? — 1825 ∩ GURS eZKN", "What has vanished? — 1825 ∩ GURS eZKN")}
               </p>
               {PRESENCE_LEGEND.map((l) => (
                 <p key={l.status} className="flex items-center gap-2">
@@ -264,8 +264,8 @@ export function VillageViewer() {
               <p className="flex items-center gap-2">
                 <span className="inline-block size-3 rounded-[2px] bg-[#6b7566]" aria-hidden="true" />
                 {t(
-                  `današnje stavbe — OSM posnetek ${IZGINILO_STATS.osmSnapshot} (${IZGINILO_STATS.presentCount})`,
-                  `present-day buildings — OSM snapshot ${IZGINILO_STATS.osmSnapshot} (${IZGINILO_STATS.presentCount})`,
+                  `današnje stavbe — uradni GURS eZKN ${IZGINILO_STATS.sourceSnapshot} (${IZGINILO_STATS.presentCount})`,
+                  `present-day buildings — official GURS eZKN ${IZGINILO_STATS.sourceSnapshot} (${IZGINILO_STATS.presentCount})`,
                 )}
               </p>
             </>

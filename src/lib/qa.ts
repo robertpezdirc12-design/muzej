@@ -37,6 +37,7 @@ import {
   FUCUKOVCI_P49,
   GEOREF_CLOSURE_P50,
   LEAFLET_OVERLAY_P51,
+  PRESENT_GURS_P54,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -3151,6 +3152,130 @@ const p45bErrors: string[] = [];
     p51Errors.length === 0
       ? `A03 ±50 m (skew 0.5475°, odmik 19.3 m) · A04 ±40 m (0.568°, 20.0 m) · A05 ±40 m (0.5708°, 20.0 m) · ovoji == P50 5e-6° · stikala privzeto izklopljena · ${p51FileDetail}`
       : p51Errors.join("; "),
+  );
+
+  /* ── P54 (issue #12 nadgradnja): present.json na uradnih GURS obriseh ── */
+  const p54Errors: string[] = [];
+  const p54 = PRESENT_GURS_P54;
+  // 1) pinane vrednosti konstante
+  if (p54.counts.exists !== 18 || p54.counts.uncertain !== 21 || p54.counts.gone !== 117)
+    p54Errors.push(`konstanta števcev ${JSON.stringify(p54.counts)} ≠ 18/21/117`);
+  if (p54.countsP16.exists !== 15 || p54.countsP16.uncertain !== 26 || p54.countsP16.gone !== 115)
+    p54Errors.push(`konstanta P16 števcev ≠ 15/26/115`);
+  const transSum = Object.values(p54.transitions).reduce((a, b) => a + b, 0);
+  if (transSum !== 156) p54Errors.push(`prehodi vsota ${transSum} ≠ 156`);
+  if (p54.transitions["uncertain→exists"] !== 4 || p54.transitions["uncertain→gone"] !== 2 ||
+      p54.transitions["exists→uncertain"] !== 1 || p54.transitions["gone→gone"] !== 115)
+    p54Errors.push("prehodi ≠ pinane vrednosti (4/2/1/115)");
+  if (p54.changed.length !== 7) p54Errors.push(`spremenjenih ${p54.changed.length} ≠ 7`);
+  if (p54.replay.pass !== "156/156" || p54.replay.osmIdMatch !== 41)
+    p54Errors.push("repla ≠ 156/156 (+ osmId 41)");
+  if (p54.window.gursInWindow !== 380 || p54.window.ko[0] !== 1544)
+    p54Errors.push("okno ≠ 380 (KO 1544)");
+  if (p54.p48Cross.inCellCf !== 154 || p54.p48Cross.pairs25px !== 37 || p54.p48Cross.pairFootprints !== 20 || p54.p48Cross.modernNear25pxWindow !== 40)
+    p54Errors.push("P48 navzkrižje ≠ 154/37/20/40");
+  if (!Object.values(p54.invariants).every((v) => v.includes("PASS") || v.includes("bajtno")))
+    p54Errors.push("invarianti niso vsi PASS");
+  // 2) runtime present.json: števci + shema + pravila iz d
+  let p54RtDetail = "runtime present.json ni preverjen (readFile ni na voljo) — celovita kontrola teče na /api/qa";
+  let p54FileDetail = "dokazna datoteka ni preverjena (readFile ni na voljo)";
+  let p54UiDetail = "UI-vod ni preverjen (readFile ni na voljo)";
+  if (opts.readFile) {
+    const rawRt = opts.readFile("src/data/atlas/present.json");
+    if (rawRt === null) {
+      p54Errors.push("src/data/atlas/present.json ni berljiv (runtime)");
+    } else {
+      try {
+        const rt = JSON.parse(rawRt) as {
+          _meta: { gursSnapshot: string; osmSuperseded?: { snapshot: string; counts: { exists: number; uncertain: number; gone: number } } };
+          present: { id: string; x: number; z: number; w: number; d: number; area: number; type: string; poly: number[][] }[];
+          match: { status: string; d: number | null; gursId: string | null }[];
+        };
+        const cnt = { exists: 0, uncertain: 0, gone: 0 };
+        for (const m of rt.match) cnt[m.status as keyof typeof cnt] = (cnt[m.status as keyof typeof cnt] ?? 0) + 1;
+        if (cnt.exists !== 18 || cnt.uncertain !== 21 || cnt.gone !== 117)
+          p54Errors.push(`runtime števci ${JSON.stringify(cnt)} ≠ 18/21/117`);
+        if (rt.match.length !== 156) p54Errors.push(`runtime match ${rt.match.length} ≠ 156`);
+        if (rt.present.length !== 380) p54Errors.push(`runtime present ${rt.present.length} ≠ 380`);
+        const ids = new Set(rt.present.map((b) => b.id));
+        if (ids.size !== rt.present.length) p54Errors.push("runtime present: EID niso unikatni");
+        if (rt._meta.gursSnapshot !== "2026-10-13") p54Errors.push(`gursSnapshot ${rt._meta.gursSnapshot} ≠ 2026-10-13`);
+        if (!rt._meta.osmSuperseded || rt._meta.osmSuperseded.counts.exists !== 15 || rt._meta.osmSuperseded.counts.uncertain !== 26 || rt._meta.osmSuperseded.counts.gone !== 115)
+          p54Errors.push("osmSuperseded ≠ 15/26/115 (P16 arhiv)");
+        // pravila iz zapisanih d (prekrivanje preverja skript — tukaj pražni del)
+        for (let i = 0; i < rt.match.length; i++) {
+          const m = rt.match[i];
+          if (m.d === null || m.d <= 0) { p54Errors.push(`match[${i}]: d manjka ali ≤ 0`); break; }
+          if (m.status === "exists" && m.d > 20) p54Errors.push(`match[${i}]: obstoja z d ${m.d} > 20`);
+          if (m.status === "uncertain" && m.d > 40) p54Errors.push(`match[${i}]: negotovo z d ${m.d} > 40`);
+          if (m.status === "gone" && m.d <= 40) p54Errors.push(`match[${i}]: ni je več z d ${m.d} ≤ 40`);
+          if (m.status === "gone" && m.gursId !== null) p54Errors.push(`match[${i}]: ni je več z gursId`);
+          if (m.status !== "gone" && !m.gursId) p54Errors.push(`match[${i}]: brez gursId`);
+        }
+        p54RtDetail = `runtime preverjen: 380 stavb (GURS eZKN, posnetek 2026-10-13) · match 156 = 18/21/117 · pravila iz d PASS · arhiv P16 15/26/115`;
+      } catch {
+        p54Errors.push("runtime present.json ni veljaven JSON");
+      }
+    }
+    // 3) dokazna datoteka: repla + identičnost polj z runtime (vzorec qa-p51)
+    const rawEv = opts.readFile("research/issue17/present-gurs.json");
+    if (rawEv === null) {
+      p54FileDetail = "produkcija: research/ ni v deploymentu — kontrola na runtime kopiji (vzorec qa-p43-chain-full)";
+    } else {
+      try {
+        const ev = JSON.parse(rawEv) as {
+          replay: { pass: string };
+          counts: { exists: number; uncertain: number; gone: number };
+          transitions: Record<string, number>;
+          changed: unknown[];
+          p48Cross: { inCellCf: number; pairs25px: number; pairFootprints: number; modernNear25pxWindow: number };
+          present: unknown[];
+          match: unknown[];
+        };
+        if (ev.replay.pass !== "156/156") p54Errors.push("dokaz: repla ≠ 156/156");
+        if (ev.counts.exists !== 18 || ev.counts.uncertain !== 21 || ev.counts.gone !== 117)
+          p54Errors.push("dokaz: števci ≠ 18/21/117");
+        if (ev.changed.length !== 7) p54Errors.push("dokaz: spremenjenih ≠ 7");
+        if (ev.p48Cross.inCellCf !== 154 || ev.p48Cross.pairs25px !== 37 || ev.p48Cross.pairFootprints !== 20 || ev.p48Cross.modernNear25pxWindow !== 40)
+          p54Errors.push("dokaz: P48 navzkrižje ≠ 154/37/20/40");
+        const rawRt2 = opts.readFile("src/data/atlas/present.json");
+        if (rawRt2 !== null) {
+          const rt2 = JSON.parse(rawRt2) as { present: unknown[]; match: unknown[] };
+          if (JSON.stringify(ev.present) !== JSON.stringify(rt2.present))
+            p54Errors.push("dokaz ⊉ runtime: present polji nista enaki");
+          if (JSON.stringify(ev.match) !== JSON.stringify(rt2.match))
+            p54Errors.push("dokaz ⊉ runtime: match polji nista enaki");
+        }
+        p54FileDetail = `dokaz preverjen: repla ${ev.replay.pass} · prehodi ${Object.values(ev.transitions).reduce((a, b) => a + b, 0)} · dokaz == runtime (present + match)`;
+      } catch {
+        p54Errors.push("dokaz present-gurs.json ni veljaven JSON");
+      }
+    }
+    // 4) UI-vod: village3d uvaža runtime + GURS meta; AR/village-viewer naslovi
+    const v3d = opts.readFile("src/lib/village3d.ts");
+    const atm = opts.readFile("src/components/museum/ar-time-machine.tsx");
+    const vvw = opts.readFile("src/components/museum/village-viewer.tsx");
+    const ats = opts.readFile("src/lib/atlas.ts");
+    if (v3d === null) p54Errors.push("src/lib/village3d.ts ni berljiv (UI-vod)");
+    if (v3d !== null) {
+      if (!v3d.includes('@/data/atlas/present.json')) p54Errors.push("village3d ne uvaža runtime present.json");
+      if (!v3d.includes("GURS_SNAPSHOT") || !v3d.includes("gursSnapshot")) p54Errors.push("village3d: GURS_SNAPSHOT/gursSnapshot ni pinan");
+      if (!v3d.includes("sourceSnapshot")) p54Errors.push("village3d: IZGINILO_STATS.sourceSnapshot ni pinan");
+      if (!v3d.includes("uradni GURS eZKN obrisi")) p54Errors.push("village3d: vir ni GURS eZKN");
+    }
+    if (atm !== null && !atm.includes("1825 ∩ GURS eZKN")) p54Errors.push("AR: naslov ni GURS eZKN");
+    if (vvw !== null && !vvw.includes("1825 ∩ GURS eZKN")) p54Errors.push("village-viewer: naslov ni GURS eZKN");
+    if (ats !== null && !ats.includes("sourceSnapshot")) p54Errors.push("atlas.ts: izginilo.sourceSnapshot ni pinan");
+    p54UiDetail = `UI-vod preverjen: village3d (runtime + GURS_SNAPSHOT + sourceSnapshot) · AR/village-viewer naslovi · atlas.ts sourceSnapshot`;
+  }
+  push(
+    "qa-p54-present-gurs",
+    "P54: PRESENT.JSON NA URADNIH GURS OBRISIH — nadgradnja P16 »Kaj je izginilo?« (issue #12): OSM posnetek (15/26/115, pokrival le jedro vasi) → uradni GURS eZKN obrisi (714 stavb z geometrijo, 380 v oknu A02 + sodobna vas, vse KO 1544 — popolna pokritost z zahodnimi pobočji); pravila P16 NESPREMENJENA — kalibrirana z replajo na starih podatkih (156/156, + osmId 41, d ±0.05 m); rezultat 18 obstaja · 21 negotovih · 117 ni jih več; prehodi 156 vsrstno pinani (uncertain→exists 4, uncertain→gone 2, exists→uncertain 1); 7 spremenjenih tlorisov; d zapisana za vse (do 1541.2 m); P48 navzkrižje: cf 154 == modernEvaluated, pari ≤ 25 px 37 == pairs (20 tlorisov), okno 40; EPSG:3794 → WGS84 (pyproj always_xy, enako P47/P48); arhiv P16: research/issue17/present-osm-p16.json; status UPGRADED-DETERMINISTIC",
+    "P54: PRESENT.JSON ON OFFICIAL GURS FOOTPRINTS — an upgrade of the P16 »What has vanished?« (issue #12): OSM snapshot (15/26/115, covered the village core only) → official GURS eZKN footprints (714 buildings with geometry, 380 within the A02 + modern-village window, all KO 1544 — complete coverage with the western slopes); P16 rules UNCHANGED — calibrated by replay on the old data (156/156, + osmId 41, d ±0.05 m); result 18 exists · 21 uncertain · 117 gone; all 156 transitions pinned (uncertain→exists 4, uncertain→gone 2, exists→uncertain 1); 7 changed footprints; d recorded for all (up to 1541.2 m); P48 cross-check: cf 154 == modernEvaluated, pairs ≤ 25 px 37 == pairs (20 footprints), window 40; EPSG:3794 → WGS84 (pyproj always_xy, as P47/P48); P16 archive: research/issue17/present-osm-p16.json; status UPGRADED-DETERMINISTIC",
+    p54Errors.length === 0,
+    p54Errors.length === 0
+      ? `18 obstaja · 21 negotovih · 117 ni je več (P16 OSM 15/26/115) · repla 156/156 · P48 križ 154/37/20/40 · okno 380 (KO 1544) · ${p54RtDetail} · ${p54FileDetail} · ${p54UiDetail}`
+      : p54Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;

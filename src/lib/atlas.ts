@@ -416,18 +416,18 @@ export function getAtlasModel() {
       methodologyEn:
         "Procedural extrusion of cadastral footprints (LagunAR approach): footprints measured (sheet A02), heights/orientations interpreted; land use from VLM analysis; Kolpa georeferenced; church = museum GLB model.",
       deepLink: "/?casovni=1825",
-      /* Kaj je izginilo? (issue #12) — 1825 ∩ OSM po stavbi */
+      /* Kaj je izginilo? (issue #12; P54) — 1825 ∩ uradni GURS eZKN po stavbi */
       izginilo: {
         exists: IZGINILO_STATS.exists,
         uncertain: IZGINILO_STATS.uncertain,
         gone: IZGINILO_STATS.gone,
         total1825: IZGINILO_STATS.total1825,
         presentCount: IZGINILO_STATS.presentCount,
-        osmSnapshot: IZGINILO_STATS.osmSnapshot,
+        sourceSnapshot: IZGINILO_STATS.sourceSnapshot,
         status: "INTERPRETATION",
         noteSi: PRESENCE_META.methodSi,
         noteEn:
-          "Centroid matching of 156 cadastral footprints against present-day OSM buildings. exists: d≤8 m or (d≤20 m & overlap≥0.10); uncertain: building within 40 m or a small structure on the footprint; gone: none within 40 m. Absence from the OSM snapshot is NOT proof of demolition — field verification pending. St. Vitus' church: exists (1825 cadastre + standing building, 500th anniversary).",
+          "Centroid matching of 156 cadastral footprints against official GURS eZKN building footprints (P54 upgrade of the P16 OSM-snapshot comparison; rules replay-calibrated 156/156). exists: d≤8 m or (d≤20 m & overlap≥0.10); uncertain: building within 40 m; gone: none within 40 m. Absence of a building is NOT proof of demolition — field verification pending. St. Vitus' church: exists (1825 cadastre + standing building, 500th anniversary).",
         sourceSi: PRESENCE_META.sourceSi,
         sourceEn: PRESENCE_META.sourceEn,
         deepLink: "/?casovni=danes",
