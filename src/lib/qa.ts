@@ -3573,29 +3573,30 @@ const p45bErrors: string[] = [];
       try {
         const mode = rawEv57 !== null ? "repo" : "produkcija";
         const evRaw = (rawEv57 ?? rawRt57) as string;
-        const ev = JSON.parse(evRaw) as {
-          rowsEvidence: {
-            no: number; page: number; blatt: string; klafter: number | null; hausNr: string | null;
-            hausNrConf: string | null; base: string; lat: number | null; lng: number | null;
-            ratioM2K: number | null; confidence: string | null; klafterLayer: string | null;
-            layers?: { colsHausNr?: (string | null)[]; cells?: string | null };
-          }[];
-          tests: {
-            areas: { pairs: number; medianM2K: number; deltaPct: number; bandShareObserved: number; controlMedian: number };
-            adjacency: { pairs: number; medianM: number; share150: number; controlMedian: number; controlMinM: number; closePairs: [number, number][]; farPairs: [number, number][] };
-            restoration: { restored: number[]; retiredUnmatched: number[]; confidence: { STRONG: number; MEDIUM: number; WEAK: number } };
-          };
-          chain: { page3: string; page4: string; page5Committed: string; blatt: string };
+        const parsed = JSON.parse(evRaw) as Record<string, unknown>;
+        // dve obliki: dokaz (rowsEvidence + plasti) ali runtime kopija (rows)
+        const evRows = (parsed.rowsEvidence ?? parsed.rows) as {
+          no: number; page: number; blatt: string; klafter: number | null; hausNr: string | null;
+          hausNrConf: string | null; base: string; lat: number | null; lng: number | null;
+          ratioM2K: number | null; confidence: string | null; klafterLayer: string | null;
+          layers?: { colsHausNr?: (string | null)[]; cells?: string | null };
+        }[];
+        const tests = parsed.tests as {
+          areas: { pairs: number; medianM2K: number; deltaPct: number; bandShareObserved: number; controlMedian: number };
+          adjacency: { pairs: number; medianM: number; share150: number; controlMedian: number; controlMinM: number };
+          restoration: { restored: number[]; retiredUnmatched: number[]; confidence: { STRONG: number; MEDIUM: number; WEAK: number } };
         };
-        const rows = ev.rowsEvidence;
-        if (rows.length !== 40) p57Errors.push(`runtime vrstice ≠ 40 (${rows.length})`);
+        const rows = evRows;
+        if (rows.length !== 40) p57Errors.push(`vrstice ≠ 40 (${rows.length})`);
         if (!rows.every((r, i) => r.no === i + 1 && r.blatt === "I"))
           p57Errors.push("vrstice niso 1–40 na Blatt I");
-        if (rows.filter((r) => r.klafter !== null).length !== 38)
+        if (rows.filter((r) => r.klafter !== null && r.klafter !== undefined).length !== 38)
           p57Errors.push("vrstic s površino ≠ 38 (r1, r28 prazni)");
         // neodvisen preracun soslednosti iz samih vrstic (mehanika P55)
         const pos = new Map<number, [number, number]>();
-        for (const r of rows) if (r.lat !== null && r.lng !== null) pos.set(r.no, [r.lat, r.lng]);
+        for (const r of rows)
+          if (r.lat !== null && r.lat !== undefined && r.lng !== null && r.lng !== undefined)
+            pos.set(r.no, [r.lat, r.lng]);
         const d: number[] = [];
         for (let n = 1; n < 40; n++) {
           const a = pos.get(n), b = pos.get(n + 1);
@@ -3607,39 +3608,45 @@ const p45bErrors: string[] = [];
           return s.length % 2 ? s[(s.length - 1) / 2] : (s[s.length / 2 - 1] + s[s.length / 2]) / 2;
         };
         const dMed = med(d);
-        if (d.length !== ev.tests.adjacency.pairs)
-          p57Errors.push(`preracun: parov soslednosti ${d.length} ≠ ${ev.tests.adjacency.pairs}`);
-        if (Math.abs(dMed - ev.tests.adjacency.medianM) > 0.15)
-          p57Errors.push(`preracun: median soslednosti ${dMed.toFixed(1)} ≠ ${ev.tests.adjacency.medianM}`);
+        if (d.length !== tests.adjacency.pairs)
+          p57Errors.push(`preracun: parov soslednosti ${d.length} ≠ ${tests.adjacency.pairs}`);
+        if (Math.abs(dMed - tests.adjacency.medianM) > 0.15)
+          p57Errors.push(`preracun: median soslednosti ${dMed.toFixed(1)} ≠ ${tests.adjacency.medianM}`);
         // obnova: povezane base == lostBases P56 (iz P56 runtime)
         if (rawP56rt !== null) {
           const p56rt = JSON.parse(rawP56rt) as { sanitization: { lostBases: number[] } };
-          const matched = rows.filter((r) => r.lat !== null).map((r) => r.no).sort((a, b) => a - b);
+          const matched = rows
+            .filter((r) => r.lat !== null && r.lat !== undefined && r.lng !== null && r.lng !== undefined)
+            .map((r) => r.no).sort((a, b) => a - b);
           if (JSON.stringify(matched) !== JSON.stringify([...p56rt.sanitization.lostBases].sort((a, b) => a - b)))
             p57Errors.push("preracun: povezane base ≠ lostBases P56");
         }
         // zaupanje razredi
         const conf = { STRONG: 0, MEDIUM: 0, WEAK: 0 } as Record<string, number>;
         for (const r of rows) if (r.confidence) conf[r.confidence] = (conf[r.confidence] ?? 0) + 1;
-        if (conf.STRONG !== ev.tests.restoration.confidence.STRONG || conf.MEDIUM !== ev.tests.restoration.confidence.MEDIUM || conf.WEAK !== ev.tests.restoration.confidence.WEAK)
-          p57Errors.push(`preracun: zaupanje ${conf.STRONG}/${conf.MEDIUM}/${conf.WEAK} ≠ ${ev.tests.restoration.confidence.STRONG}/${ev.tests.restoration.confidence.MEDIUM}/${ev.tests.restoration.confidence.WEAK}`);
-        // kolonska plast Haus Nro.: vsi 3 prehodi prisotni za vsako vrstico
-        const colsMissing = rows.filter((r) => !r.layers?.colsHausNr || r.layers.colsHausNr.filter((v) => v !== null && v !== undefined).length < 3).length;
-        if (colsMissing > 0) p57Errors.push(`kolonska plast: ${colsMissing} vrstic brez 3 prehodov`);
-        p57RtDetail = `${mode}: 40 vrstic (38 površin, Blatt I 1–40) · preracun soslednosti ${d.length} parov / ${dMed.toFixed(1)} m == pini · obnova == lostBases P56 · zaupanje == pini · kolone 3/3`;
-        if (mode === "produkcija")
-          p57RtDetail += " (runtime kopija preverjena — research/ ni v deploymentu)";
-        // dokaz ⊇ runtime (samo v repozitoriju, kjer je dokaz na voljo)
+        if (conf.STRONG !== tests.restoration.confidence.STRONG || conf.MEDIUM !== tests.restoration.confidence.MEDIUM || conf.WEAK !== tests.restoration.confidence.WEAK)
+          p57Errors.push(`preracun: zaupanje ${conf.STRONG}/${conf.MEDIUM}/${conf.WEAK} ≠ ${tests.restoration.confidence.STRONG}/${tests.restoration.confidence.MEDIUM}/${tests.restoration.confidence.WEAK}`);
+        // kolonska plast Haus Nro. + celice: SAMO v dokazu (runtime kopija jih ne nosi)
+        const isEvidence = Array.isArray(parsed.rowsEvidence);
+        if (isEvidence) {
+          const colsMissing = rows.filter((r) => !r.layers?.colsHausNr || r.layers.colsHausNr.filter((v) => v !== null && v !== undefined).length < 3).length;
+          if (colsMissing > 0) p57Errors.push(`kolonska plast: ${colsMissing} vrstic brez 3 prehodov`);
+          p57RtDetail = `${mode}: 40 vrstic (38 površin, Blatt I 1–40) · preracun soslednosti ${d.length} parov / ${dMed.toFixed(1)} m == pini · obnova == lostBases P56 · zaupanje == pini · kolone 3/3`;
+        } else {
+          p57RtDetail = `${mode}: 40 vrstic (38 površin, Blatt I 1–40) · preracun soslednosti ${d.length} parov / ${dMed.toFixed(1)} m == pini · obnova == lostBases P56 · zaupanje == pini (runtime kopija preverjena — research/ ni v deploymentu, kolone/celice v dokazu)`;
+        }
+        // dokaz ⊇ runtime (samo v repozitoriju, kjer sta oba na voljo)
         if (rawEv57 !== null && rawRt57 !== null) {
           const rt = JSON.parse(rawRt57) as { rows: Record<string, unknown>[] };
+          const evRowsT = (parsed.rowsEvidence ?? []) as Record<string, unknown>[];
           const subset = rt.rows.every((rr, i) =>
             Object.entries(rr).every(([k, v]) =>
-              JSON.stringify((ev.rowsEvidence[i] as unknown as Record<string, unknown>)[k]) === JSON.stringify(v)));
+              JSON.stringify(evRowsT[i]?.[k]) === JSON.stringify(v)));
           if (!subset) p57Errors.push("dokaz ⊉ runtime (vrstice niso bajtno enake)");
           p57FileDetail = "dokaz preverjen: 40 vrstic ⊇ runtime bajtno (plasti: full/cols/areas/cells)";
         }
-      } catch {
-        p57Errors.push("ps-register-start ni veljaven JSON");
+      } catch (e) {
+        p57Errors.push(`ps-register-start obdelava neuspešna: ${String(e).slice(0, 80)}`);
       }
     }
   }
