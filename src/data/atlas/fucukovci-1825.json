@@ -1,0 +1,1727 @@
+{
+ "anchor": {
+  "offsetPx": 43.2,
+  "p10Geo": [
+   15.291,
+   45.5398
+  ],
+  "pxViaAffine": [
+   1944.8,
+   636.8
+  ],
+  "vlmReadPx": [
+   1975,
+   606
+  ]
+ },
+ "cell": "ch",
+ "cluster": {
+  "centroidDistToP10M": 130,
+  "centroidPx": [
+   2110.3,
+   605.1
+  ],
+  "centroidWGS84": [
+   45.540006,
+   15.292641
+  ],
+  "hull": {
+   "areaM2": 36336,
+   "nVertices": 7,
+   "ringWGS84": [
+    [
+     15.294112,
+     45.540707
+    ],
+    [
+     15.293795,
+     45.539468
+    ],
+    [
+     15.292338,
+     45.538759
+    ],
+    [
+     15.291539,
+     45.53962
+    ],
+    [
+     15.290926,
+     45.540292
+    ],
+    [
+     15.290876,
+     45.540506
+    ],
+    [
+     15.293075,
+     45.540779
+    ]
+   ]
+  },
+  "inkMass": {
+   "anchorsInside": 25,
+   "bboxPx": [
+    1208,
+    73,
+    2296,
+    892
+   ],
+   "bboxWGS84": [
+    [
+     15.283764947153,
+     45.543711174798
+    ],
+    [
+     15.294450332297,
+     45.538028620742
+    ]
+   ],
+   "componentId": 242,
+   "massPx": 257571
+  },
+  "nearestOnSymbolToAnchorPx": 48.9,
+  "onSymbolInCluster": 25,
+  "onSymbolTotal": 26,
+  "radiusPx": 380
+ },
+ "crops": [
+  {
+   "bytes": 150978,
+   "file": "cluster-overview.jpg",
+   "kind": "cluster-overview",
+   "note": "zelena = on-symbol mesta, oranžno = striktna neujemana jedra, magenta = masa črnila bbox, rdeči križ = P10 sidro",
+   "sha256": "d5823473fafac74bca13a37e04a752e7aaa6a8b54d8c6070a220620379381df9"
+  },
+  {
+   "bytes": 581102,
+   "file": "strict-contact-sheet.jpg",
+   "kind": "contact-sheet",
+   "note": "vsa striktna jedra (53): modro = korelirano, oranžno = neujemano [~] — za človeško presojo (drevesa/številke?)",
+   "sha256": "1486bf73bb13e0592e1f541fac52a4a9bae6e1b45fe9cf34fe04fefbdee4fa7b"
+  },
+  {
+   "bytes": 97022,
+   "distPx": 3.5,
+   "file": "pair-1.jpg",
+   "id": "100200000260605460",
+   "kind": "pair",
+   "sha256": "b66791e4b913dda6cf36733b8beb3ffa5db87000a1506d5a37e59a68d0cb8dd1"
+  },
+  {
+   "bytes": 101956,
+   "distPx": 3.8,
+   "file": "pair-2.jpg",
+   "id": "100200000324209291",
+   "kind": "pair",
+   "sha256": "0f6b624571348ff84ad410149096ae624eee7bca720ba0afa6b436ed35a67da8"
+  },
+  {
+   "bytes": 87892,
+   "distPx": 5.2,
+   "file": "pair-3.jpg",
+   "id": "100200000260605494",
+   "kind": "pair",
+   "sha256": "65f5c02acb036b20b05ec143f962bcfd48d439b85834c09e38fd9e1a2cc10f0f"
+  },
+  {
+   "bytes": 90962,
+   "distPx": 10.9,
+   "file": "pair-4.jpg",
+   "id": "100200000260605494",
+   "kind": "pair",
+   "sha256": "bd69a0cc9e007c3e59507915aa11b46831e4a15f9bbc8009342d767cbcf073d4"
+  },
+  {
+   "bytes": 102561,
+   "distPx": 13.9,
+   "file": "pair-5.jpg",
+   "id": "100200000260605452",
+   "kind": "pair",
+   "sha256": "644b53e1d4ceb8587cbf1a58d44da901351b155b3e41808f56d2cf6d777974f2"
+  },
+  {
+   "bytes": 90325,
+   "distPx": 14.1,
+   "file": "pair-6.jpg",
+   "id": "100200000260605494",
+   "kind": "pair",
+   "sha256": "dfdab7157c2f0bda624b427138b6de577323aa6169bc3f41d00608546959568c"
+  },
+  {
+   "bytes": 235665,
+   "file": "unmatched-cluster-sheet.jpg",
+   "kind": "unmatched-sheet",
+   "note": "neujemana jedra v sklopu (19) — GONE-kandidati [~] s triažo (building 2, unclear 4, ostalo text/drevo/številka/črta — glej JSON triageInCluster)",
+   "sha256": "40ab5502b747db210c8234d804459b435b2980391c1a41362ba88a4807fa87bd"
+  }
+ ],
+ "estimate": {
+  "continuityLowerRatio": 0.806,
+  "goneCandidatesBuilding": 2,
+  "goneCandidatesUnclear": 4,
+  "lowerBound": 27,
+  "onSymbolInCluster": 25,
+  "p10BuildingsVlm": 45,
+  "upperBound": 44
+ },
+ "generatedBy": "scripts/p49_fucukovci1825.py",
+ "invariants": {
+  "I1": "PASS — pariteta s P48: v celici 96, evalviranih 95, on-symbol 26",
+  "I2": "PASS — on-symbol residual mediana 9.8 m ≤ 25",
+  "I3": "PASS — P10 sidro odmik 43 px ≤ 50; 25/26 v sklopu; najbližje mesto 48.9 px; centroid 130 m ≤ 150",
+  "I4": "PASS — striktna detekcija: 53 jeder (≥ 40), 7 koreliranih (≥ 5), 19 neujemanih v sklopu (15–25), 46 vseh neujemanih (≤ 60)",
+  "I5": "PASS — P10 ~45 znotraj mej [27, 44] (GONE-kandidati 2 + nejasni 4)",
+  "I6": "PASS — 2 prehoda jedra bajtno identična",
+  "I7": "PASS — kanonski in runtime izpis bajtno identična",
+  "I8": "PASS — 9 izrezov z sha256"
+ },
+ "limits": {
+  "a02Vectorized": {
+   "hMedianM": 6.0,
+   "n": 156,
+   "wMedianM": 14.0
+  },
+  "note": "celtna vektorizacija posameznih tlorisov na A05 ni izvedljiva: roznati parcelni fill (siva ~168) je pod pragom 195, erodirana maska se v vasi zasici (37.5 %), stevilke/drevesa so v istem razredu kot simboli — dokaz: kontaktni list izrezov",
+  "pinkFillGrayMedian": 168.9,
+  "tDark": 195,
+  "villageBoxInkFraction": 0.403,
+  "villageBoxPx": [
+   1750,
+   480,
+   2200,
+   950
+  ]
+ },
+ "modern": {
+  "covBestMedian": 1.0,
+  "nDrawn": 28,
+  "nEmpty": 67,
+  "nEvaluated": 95,
+  "nInCell": 96,
+  "nOnSymbol": 26,
+  "residualM": 9.8,
+  "residualPxMedian": 12.7
+ },
+ "next": [
+  "človeška presoja kontaktnega lista striktnih jeder (drevesa/številke/stavbe)",
+  "povezava 25 dokazanih mest z domačijami PT (številke na karti)",
+  "nadgradnja P16 present.json za Fučkovci (25 mest z uradnimi GURS obrisi)",
+  "človeška potrditev neatline črt (P46/P47 izrezi) še vedno pogoj za SHEET_GEOREFS"
+ ],
+ "places": [
+  {
+   "cov0": 1.0,
+   "covBest": 1.0,
+   "distAnchorPx": 53.6,
+   "id": "100200000223441722",
+   "inCluster": true,
+   "kind": "stavbno-mesto-1825-z-naslednikom",
+   "ko": 1552,
+   "lat": 45.540161,
+   "lng": 15.291097,
+   "px": [
+    1954.1,
+    584.0
+   ],
+   "resM": 0.0,
+   "resPx": 0.0,
+   "tier": "STRONG"
+  },
+  {
+   "cov0": 0.815,
+   "covBest": 0.969,
+   "distAnchorPx": 103.9,
+   "id": "100200000223441730",
+   "inCluster": true,
+   "kind": "stavbno-mesto-1825-z-naslednikom",
+   "ko": 1552,
+   "lat": 45.540506,
+   "lng": 15.290877,
+   "px": [
+    1931.3,
+    533.8
+   ],
+   "resM": 4.9,
+   "resPx": 6.3,
+   "tier": "STRONG"
+  },
+  {
+   "cov0": 0.258,
+   "covBest": 1.0,
+   "distAnchorPx": 235.6,
+   "id": "100200000223441748",
+   "inCluster": true,
+   "kind": "stavbno-mesto-1825-z-naslednikom",
+   "ko": 1552,
+   "lat": 45.539964,
+   "lng": 15.293318,
+   "px": [
+    2178.9,
+    610.5
+   ],
+   "resM": 9.8,
+   "resPx": 12.6,
+   "tier": "STRONG"
+  },
+  {
+   "cov0": 0.76,
+   "covBest": 0.94,
+   "distAnchorPx": 75.3,
+   "id": "100200000223441755",
+   "inCluster": true,
+   "kind": "stavbno-mesto-1825-z-naslednikom",
+   "ko": 1552,
+   "lat": 45.540251,
+   "lng": 15.291361,
+   "px": [
+    1980.7,
+    570.6
+   ],
+   "resM": 10.1,
+   "resPx": 13.0,
+   "tier": "STRONG"
+  },
+  {
+   "cov0": 0.215,
+   "covBest": 1.0,
+   "distAnchorPx": 223.8,
+   "id": "100200000223441763",
+   "inCluster": true,
+   "kind": "stavbno-mesto-1825-z-naslednikom",
+   "ko": 1552,
+   "lat": 45.53982,
+   "lng": 15.293214,
+   "px": [
+    2168.5,
+    631.6
+   ],
+   "resM": 9.3,
+   "resPx": 12.0,
+   "tier": "STRONG"
+  },
+  {
+   "cov0": 0.535,
+   "covBest": 0.873,
+   "distAnchorPx": 263.8,
+   "id": "100200000223441771",
+   "inCluster": true,
+   "kind": "stavbno-mesto-1825-z-naslednikom",
+   "ko": 1552,
+   "lat": 45.539869,
+   "lng": 15.293608,
+   "px": [
+    2208.3,
+    624.2
+   ],
+   "resM": 14.3,
+   "resPx": 18.4,
+   "tier": "STRONG"
+  },
+  {
+   "cov0": 0.356,
+   "covBest": 0.763,
+   "distAnchorPx": 286.7,
+   "id": "100200000224478327",
+   "inCluster": true,
+   "kind": "stavbno-mesto-1825-z-naslednikom",
+   "ko": 1552,
+   "lat": 45.539468,
+   "lng": 15.293795,
+   "px": [
+    2227.8,
+    682.5
+   ],
+   "resM": 10.1,
+   "resPx": 13.0,
+   "tier": "MEDIUM"
+  },
+  {
+   "cov0": 0.769,
+   "covBest": 0.984,
+   "distAnchorPx": 236.7,
+   "id": "100200000224478335",
+   "inCluster": true,
+   "kind": "stavbno-mesto-1825-z-naslednikom",
+   "ko": 1552,
+   "lat": 45.539667,
+   "lng": 15.293334,
+   "px": [
+    2180.9,
+    653.9
+   ],
+   "resM": 11.3,
+   "resPx": 14.6,
+   "tier": "STRONG"
+  },
+  {
+   "cov0": 0.985,
+   "covBest": 1.0,
+   "distAnchorPx": 501.3,
+   "id": "100200000260605429",
+   "inCluster": false,
+   "kind": "stavbno-mesto-1825-z-naslednikom",
+   "ko": 1552,
+   "lat": 45.54078,
+   "lng": 15.286246,
+   "px": [
+    1462.9,
+    498.5
+   ],
+   "resM": 11.2,
+   "resPx": 14.4,
+   "tier": "STRONG"
+  },
+  {
+   "cov0": 0.958,
+   "covBest": 1.0,
+   "distAnchorPx": 72.3,
+   "id": "100200000260605445",
+   "inCluster": true,
+   "kind": "stavbno-mesto-1825-z-naslednikom",
+   "ko": 1552,
+   "lat": 45.540292,
+   "lng": 15.290926,
+   "px": [
+    1936.6,
+    565.0
+   ],
+   "resM": 13.2,
+   "resPx": 17.0,
+   "tier": "STRONG"
+  },
+  {
+   "cov0": 0.819,
+   "covBest": 0.947,
+   "distAnchorPx": 48.9,
+   "id": "100200000260605452",
+   "inCluster": true,
+   "kind": "stavbno-mesto-1825-z-naslednikom",
+   "ko": 1552,
+   "lat": 45.540042,
+   "lng": 15.291335,
+   "px": [
+    1978.3,
+    601.2
+   ],
+   "resM": 12.1,
+   "resPx": 15.6,
+   "tier": "STRONG"
+  },
+  {
+   "cov0": 1.0,
+   "covBest": 1.0,
+   "distAnchorPx": 114.7,
+   "id": "100200000260605460",
+   "inCluster": true,
+   "kind": "stavbno-mesto-1825-z-naslednikom",
+   "ko": 1552,
+   "lat": 45.539871,
+   "lng": 15.29213,
+   "px": [
+    2058.9,
+    625.3
+   ],
+   "resM": 0.0,
+   "resPx": 0.0,
+   "tier": "STRONG"
+  },
+  {
+   "cov0": 0.614,
+   "covBest": 0.988,
+   "distAnchorPx": 266.1,
+   "id": "100200000260605486",
+   "inCluster": true,
+   "kind": "stavbno-mesto-1825-z-naslednikom",
+   "ko": 1552,
+   "lat": 45.540758,
+   "lng": 15.293238,
+   "px": [
+    2169.7,
+    494.6
+   ],
+   "resM": 8.1,
+   "resPx": 10.4,
+   "tier": "STRONG"
+  },
+  {
+   "cov0": 1.0,
+   "covBest": 1.0,
+   "distAnchorPx": 251.1,
+   "id": "100200000260605494",
+   "inCluster": true,
+   "kind": "stavbno-mesto-1825-z-naslednikom",
+   "ko": 1552,
+   "lat": 45.540529,
+   "lng": 15.293249,
+   "px": [
+    2171.1,
+    528.1
+   ],
+   "resM": 0.0,
+   "resPx": 0.0,
+   "tier": "STRONG"
+  },
+  {
+   "cov0": 0.962,
+   "covBest": 1.0,
+   "distAnchorPx": 253.5,
+   "id": "100200000260605502",
+   "inCluster": true,
+   "kind": "stavbno-mesto-1825-z-naslednikom",
+   "ko": 1552,
+   "lat": 45.540262,
+   "lng": 15.293416,
+   "px": [
+    2188.4,
+    566.9
+   ],
+   "resM": 13.2,
+   "resPx": 17.0,
+   "tier": "STRONG"
+  },
+  {
+   "cov0": 0.982,
+   "covBest": 1.0,
+   "distAnchorPx": 249.6,
+   "id": "100200000260605528",
+   "inCluster": true,
+   "kind": "stavbno-mesto-1825-z-naslednikom",
+   "ko": 1552,
+   "lat": 45.540062,
+   "lng": 15.293439,
+   "px": [
+    2191.0,
+    596.1
+   ],
+   "resM": 13.2,
+   "resPx": 17.0,
+   "tier": "STRONG"
+  },
+  {
+   "cov0": 1.0,
+   "covBest": 1.0,
+   "distAnchorPx": 220.6,
+   "id": "100200000260605536",
+   "inCluster": true,
+   "kind": "stavbno-mesto-1825-z-naslednikom",
+   "ko": 1552,
+   "lat": 45.539651,
+   "lng": 15.293172,
+   "px": [
+    2164.5,
+    656.3
+   ],
+   "resM": 0.0,
+   "resPx": 0.0,
+   "tier": "STRONG"
+  },
+  {
+   "cov0": 0.933,
+   "covBest": 1.0,
+   "distAnchorPx": 108.2,
+   "id": "100200000313763738",
+   "inCluster": true,
+   "kind": "stavbno-mesto-1825-z-naslednikom",
+   "ko": 1552,
+   "lat": 45.539992,
+   "lng": 15.292034,
+   "px": [
+    2049.0,
+    607.7
+   ],
+   "resM": 9.9,
+   "resPx": 12.8,
+   "tier": "STRONG"
+  },
+  {
+   "cov0": 0.286,
+   "covBest": 0.984,
+   "distAnchorPx": 281.0,
+   "id": "100200000313763886",
+   "inCluster": true,
+   "kind": "stavbno-mesto-1825-z-naslednikom",
+   "ko": 1552,
+   "lat": 45.540352,
+   "lng": 15.293662,
+   "px": [
+    2213.1,
+    553.5
+   ],
+   "resM": 12.2,
+   "resPx": 15.8,
+   "tier": "STRONG"
+  },
+  {
+   "cov0": 0.226,
+   "covBest": 0.651,
+   "distAnchorPx": 341.4,
+   "id": "100200000313763928",
+   "inCluster": true,
+   "kind": "stavbno-mesto-1825-z-naslednikom",
+   "ko": 1552,
+   "lat": 45.540707,
+   "lng": 15.294112,
+   "px": [
+    2258.1,
+    501.3
+   ],
+   "resM": 13.7,
+   "resPx": 17.7,
+   "tier": "MEDIUM"
+  },
+  {
+   "cov0": 0.957,
+   "covBest": 0.991,
+   "distAnchorPx": 157.9,
+   "id": "100200000324209234",
+   "inCluster": true,
+   "kind": "stavbno-mesto-1825-z-naslednikom",
+   "ko": 1552,
+   "lat": 45.539588,
+   "lng": 15.292532,
+   "px": [
+    2099.9,
+    666.3
+   ],
+   "resM": 9.5,
+   "resPx": 12.2,
+   "tier": "STRONG"
+  },
+  {
+   "cov0": 1.0,
+   "covBest": 1.0,
+   "distAnchorPx": 115.0,
+   "id": "100200000324209291",
+   "inCluster": true,
+   "kind": "stavbno-mesto-1825-z-naslednikom",
+   "ko": 1552,
+   "lat": 45.539749,
+   "lng": 15.292135,
+   "px": [
+    2059.6,
+    643.2
+   ],
+   "resM": 0.0,
+   "resPx": 0.0,
+   "tier": "STRONG"
+  },
+  {
+   "cov0": 0.209,
+   "covBest": 0.561,
+   "distAnchorPx": 253.9,
+   "id": "100200000324209317",
+   "inCluster": true,
+   "kind": "stavbno-mesto-1825-z-naslednikom",
+   "ko": 1552,
+   "lat": 45.540779,
+   "lng": 15.293075,
+   "px": [
+    2153.2,
+    491.8
+   ],
+   "resM": 14.3,
+   "resPx": 18.4,
+   "tier": "MEDIUM"
+  },
+  {
+   "cov0": 0.991,
+   "covBest": 1.0,
+   "distAnchorPx": 203.5,
+   "id": "100200000324209465",
+   "inCluster": true,
+   "kind": "stavbno-mesto-1825-z-naslednikom",
+   "ko": 1552,
+   "lat": 45.538759,
+   "lng": 15.292339,
+   "px": [
+    2081.5,
+    787.5
+   ],
+   "resM": 4.4,
+   "resPx": 5.7,
+   "tier": "STRONG"
+  },
+  {
+   "cov0": 1.0,
+   "covBest": 1.0,
+   "distAnchorPx": 217.0,
+   "id": "100200000324541487",
+   "inCluster": true,
+   "kind": "stavbno-mesto-1825-z-naslednikom",
+   "ko": 1552,
+   "lat": 45.539436,
+   "lng": 15.293082,
+   "px": [
+    2155.7,
+    687.8
+   ],
+   "resM": 0.0,
+   "resPx": 0.0,
+   "tier": "STRONG"
+  },
+  {
+   "cov0": 0.983,
+   "covBest": 1.0,
+   "distAnchorPx": 60.5,
+   "id": "100200000380537411",
+   "inCluster": true,
+   "kind": "stavbno-mesto-1825-z-naslednikom",
+   "ko": 1552,
+   "lat": 45.53962,
+   "lng": 15.291539,
+   "px": [
+    1999.5,
+    662.6
+   ],
+   "resM": 9.5,
+   "resPx": 12.2,
+   "tier": "STRONG"
+  }
+ ],
+ "sbarMPerPx": 0.7746,
+ "sheet": "A05",
+ "status": "ANALYSIS-DETERMINISTIC",
+ "strict": {
+  "hMedianPx": 11.0,
+  "nCorroborated": 7,
+  "nSymbols": 53,
+  "nUnmatched": 46,
+  "nUnmatchedInCluster": 19,
+  "params": {
+   "bbox": [
+    6,
+    40
+   ],
+   "contrast": -13.0,
+   "df145": 0.55,
+   "fillMin": 0.42,
+   "minArea": 36,
+   "pairPx": 20,
+   "paper41": 0.25,
+   "ringMax": 198.0
+  },
+  "triageInCluster": {
+   "building": 2,
+   "lane-junction": 1,
+   "line-corner": 5,
+   "number": 1,
+   "text": 5,
+   "tree": 1,
+   "unclear": 4
+  },
+  "wMedianPx": 10.0
+ },
+ "symbols": [
+  {
+   "areaPx": 44,
+   "corrDistPx": 384.8,
+   "corrId": null,
+   "distAnchorPx": 681.7,
+   "fill": 0.629,
+   "hPx": 10,
+   "inCluster": false,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.543396,
+   "lng": 15.286699,
+   "px": [
+    1505,
+    116
+   ],
+   "ringMean": 172.8,
+   "triage": null,
+   "wPx": 7
+  },
+  {
+   "areaPx": 77,
+   "corrDistPx": 381.3,
+   "corrId": null,
+   "distAnchorPx": 611.3,
+   "fill": 0.778,
+   "hPx": 11,
+   "inCluster": false,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.543233,
+   "lng": 15.287537,
+   "px": [
+    1590,
+    139
+   ],
+   "ringMean": 181.7,
+   "triage": null,
+   "wPx": 9
+  },
+  {
+   "areaPx": 58,
+   "corrDistPx": 394.1,
+   "corrId": null,
+   "distAnchorPx": 816.7,
+   "fill": 0.753,
+   "hPx": 7,
+   "inCluster": false,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.543233,
+   "lng": 15.284619,
+   "px": [
+    1295,
+    142
+   ],
+   "ringMean": 186.1,
+   "triage": null,
+   "wPx": 11
+  },
+  {
+   "areaPx": 55,
+   "corrDistPx": 348.7,
+   "corrId": null,
+   "distAnchorPx": 750.6,
+   "fill": 0.764,
+   "hPx": 8,
+   "inCluster": false,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.543071,
+   "lng": 15.28527,
+   "px": [
+    1361,
+    165
+   ],
+   "ringMean": 189.6,
+   "triage": null,
+   "wPx": 9
+  },
+  {
+   "areaPx": 87,
+   "corrDistPx": 326.4,
+   "corrId": null,
+   "distAnchorPx": 637.0,
+   "fill": 0.644,
+   "hPx": 15,
+   "inCluster": false,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.542992,
+   "lng": 15.286703,
+   "px": [
+    1506,
+    175
+   ],
+   "ringMean": 171.9,
+   "triage": null,
+   "wPx": 9
+  },
+  {
+   "areaPx": 38,
+   "corrDistPx": 333.5,
+   "corrId": null,
+   "distAnchorPx": 602.0,
+   "fill": 0.792,
+   "hPx": 8,
+   "inCluster": false,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.542968,
+   "lng": 15.287188,
+   "px": [
+    1555,
+    178
+   ],
+   "ringMean": 188.0,
+   "triage": null,
+   "wPx": 6
+  },
+  {
+   "areaPx": 177,
+   "corrDistPx": 244.4,
+   "corrId": null,
+   "distAnchorPx": 590.9,
+   "fill": 0.562,
+   "hPx": 35,
+   "inCluster": false,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.542439,
+   "lng": 15.286567,
+   "px": [
+    1493,
+    256
+   ],
+   "ringMean": 173.7,
+   "triage": null,
+   "wPx": 9
+  },
+  {
+   "areaPx": 45,
+   "corrDistPx": 263.3,
+   "corrId": null,
+   "distAnchorPx": 699.0,
+   "fill": 0.562,
+   "hPx": 8,
+   "inCluster": false,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.542441,
+   "lng": 15.285231,
+   "px": [
+    1358,
+    257
+   ],
+   "ringMean": 166.4,
+   "triage": null,
+   "wPx": 10
+  },
+  {
+   "areaPx": 45,
+   "corrDistPx": 327.9,
+   "corrId": null,
+   "distAnchorPx": 439.3,
+   "fill": 0.562,
+   "hPx": 8,
+   "inCluster": false,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.542315,
+   "lng": 15.288613,
+   "px": [
+    1700,
+    272
+   ],
+   "ringMean": 163.8,
+   "triage": null,
+   "wPx": 10
+  },
+  {
+   "areaPx": 46,
+   "corrDistPx": 222.5,
+   "corrId": null,
+   "distAnchorPx": 599.5,
+   "fill": 0.852,
+   "hPx": 9,
+   "inCluster": false,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.542303,
+   "lng": 15.286298,
+   "px": [
+    1466,
+    276
+   ],
+   "ringMean": 165.0,
+   "triage": null,
+   "wPx": 6
+  },
+  {
+   "areaPx": 41,
+   "corrDistPx": 224.6,
+   "corrId": null,
+   "distAnchorPx": 631.3,
+   "fill": 0.854,
+   "hPx": 8,
+   "inCluster": false,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.542299,
+   "lng": 15.285902,
+   "px": [
+    1426,
+    277
+   ],
+   "ringMean": 164.8,
+   "triage": null,
+   "wPx": 6
+  },
+  {
+   "areaPx": 189,
+   "corrDistPx": 255.6,
+   "corrId": null,
+   "distAnchorPx": 712.4,
+   "fill": 0.741,
+   "hPx": 17,
+   "inCluster": false,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.542272,
+   "lng": 15.284922,
+   "px": [
+    1327,
+    282
+   ],
+   "ringMean": 155.3,
+   "triage": null,
+   "wPx": 15
+  },
+  {
+   "areaPx": 61,
+   "corrDistPx": 234.8,
+   "corrId": null,
+   "distAnchorPx": 673.8,
+   "fill": 0.792,
+   "hPx": 11,
+   "inCluster": false,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.542269,
+   "lng": 15.285368,
+   "px": [
+    1372,
+    282
+   ],
+   "ringMean": 161.5,
+   "triage": null,
+   "wPx": 7
+  },
+  {
+   "areaPx": 113,
+   "corrDistPx": 264.0,
+   "corrId": null,
+   "distAnchorPx": 731.2,
+   "fill": 0.457,
+   "hPx": 19,
+   "inCluster": false,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.542219,
+   "lng": 15.284665,
+   "px": [
+    1301,
+    290
+   ],
+   "ringMean": 160.2,
+   "triage": null,
+   "wPx": 13
+  },
+  {
+   "areaPx": 187,
+   "corrDistPx": 233.7,
+   "corrId": null,
+   "distAnchorPx": 320.0,
+   "fill": 0.607,
+   "hPx": 14,
+   "inCluster": true,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.541592,
+   "lng": 15.289177,
+   "px": [
+    1758,
+    377
+   ],
+   "ringMean": 170.1,
+   "triage": "lane-junction",
+   "wPx": 22
+  },
+  {
+   "areaPx": 93,
+   "corrDistPx": 119.3,
+   "corrId": null,
+   "distAnchorPx": 571.3,
+   "fill": 0.775,
+   "hPx": 12,
+   "inCluster": false,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.541573,
+   "lng": 15.285961,
+   "px": [
+    1433,
+    383
+   ],
+   "ringMean": 161.0,
+   "triage": null,
+   "wPx": 10
+  },
+  {
+   "areaPx": 108,
+   "corrDistPx": 132.4,
+   "corrId": null,
+   "distAnchorPx": 484.4,
+   "fill": 0.635,
+   "hPx": 17,
+   "inCluster": false,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.541553,
+   "lng": 15.286931,
+   "px": [
+    1531,
+    385
+   ],
+   "ringMean": 166.8,
+   "triage": null,
+   "wPx": 10
+  },
+  {
+   "areaPx": 72,
+   "corrDistPx": 137.0,
+   "corrId": null,
+   "distAnchorPx": 630.5,
+   "fill": 0.545,
+   "hPx": 12,
+   "inCluster": false,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.541366,
+   "lng": 15.285187,
+   "px": [
+    1355,
+    414
+   ],
+   "ringMean": 155.9,
+   "triage": null,
+   "wPx": 11
+  },
+  {
+   "areaPx": 124,
+   "corrDistPx": 91.6,
+   "corrId": null,
+   "distAnchorPx": 453.7,
+   "fill": 0.551,
+   "hPx": 15,
+   "inCluster": false,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.541162,
+   "lng": 15.286965,
+   "px": [
+    1535,
+    442
+   ],
+   "ringMean": 175.9,
+   "triage": null,
+   "wPx": 15
+  },
+  {
+   "areaPx": 80,
+   "corrDistPx": 101.6,
+   "corrId": null,
+   "distAnchorPx": 199.0,
+   "fill": 0.476,
+   "hPx": 14,
+   "inCluster": true,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.541071,
+   "lng": 15.290288,
+   "px": [
+    1871,
+    452
+   ],
+   "ringMean": 158.6,
+   "triage": "text",
+   "wPx": 12
+  },
+  {
+   "areaPx": 71,
+   "corrDistPx": 69.3,
+   "corrId": null,
+   "distAnchorPx": 466.1,
+   "fill": 0.473,
+   "hPx": 10,
+   "inCluster": false,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.541081,
+   "lng": 15.286776,
+   "px": [
+    1516,
+    454
+   ],
+   "ringMean": 170.8,
+   "triage": null,
+   "wPx": 15
+  },
+  {
+   "areaPx": 71,
+   "corrDistPx": 184.9,
+   "corrId": null,
+   "distAnchorPx": 256.4,
+   "fill": 0.461,
+   "hPx": 11,
+   "inCluster": true,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.541057,
+   "lng": 15.289229,
+   "px": [
+    1764,
+    455
+   ],
+   "ringMean": 169.3,
+   "triage": "text",
+   "wPx": 14
+  },
+  {
+   "areaPx": 83,
+   "corrDistPx": 147.8,
+   "corrId": null,
+   "distAnchorPx": 227.8,
+   "fill": 0.494,
+   "hPx": 14,
+   "inCluster": true,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.541041,
+   "lng": 15.289634,
+   "px": [
+    1805,
+    457
+   ],
+   "ringMean": 172.5,
+   "triage": "text",
+   "wPx": 12
+  },
+  {
+   "areaPx": 47,
+   "corrDistPx": 218.1,
+   "corrId": null,
+   "distAnchorPx": 322.5,
+   "fill": 0.653,
+   "hPx": 9,
+   "inCluster": true,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.54105,
+   "lng": 15.288368,
+   "px": [
+    1677,
+    457
+   ],
+   "ringMean": 165.8,
+   "triage": "text",
+   "wPx": 8
+  },
+  {
+   "areaPx": 41,
+   "corrDistPx": 227.9,
+   "corrId": null,
+   "distAnchorPx": 314.3,
+   "fill": 0.569,
+   "hPx": 8,
+   "inCluster": true,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.541049,
+   "lng": 15.288467,
+   "px": [
+    1687,
+    457
+   ],
+   "ringMean": 168.3,
+   "triage": "text",
+   "wPx": 9
+  },
+  {
+   "areaPx": 74,
+   "corrDistPx": 170.0,
+   "corrId": null,
+   "distAnchorPx": 670.9,
+   "fill": 0.587,
+   "hPx": 14,
+   "inCluster": false,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.541014,
+   "lng": 15.284599,
+   "px": [
+    1296,
+    466
+   ],
+   "ringMean": 150.4,
+   "triage": null,
+   "wPx": 9
+  },
+  {
+   "areaPx": 76,
+   "corrDistPx": 77.1,
+   "corrId": null,
+   "distAnchorPx": 577.0,
+   "fill": 0.528,
+   "hPx": 24,
+   "inCluster": false,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.540823,
+   "lng": 15.285486,
+   "px": [
+    1386,
+    493
+   ],
+   "ringMean": 155.2,
+   "triage": null,
+   "wPx": 6
+  },
+  {
+   "areaPx": 36,
+   "corrDistPx": 45.9,
+   "corrId": null,
+   "distAnchorPx": 547.3,
+   "fill": 0.444,
+   "hPx": 9,
+   "inCluster": false,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.540875,
+   "lng": 15.285813,
+   "px": [
+    1419,
+    485
+   ],
+   "ringMean": 166.4,
+   "triage": null,
+   "wPx": 9
+  },
+  {
+   "areaPx": 55,
+   "corrDistPx": 95.5,
+   "corrId": null,
+   "distAnchorPx": 170.8,
+   "fill": 0.764,
+   "hPx": 9,
+   "inCluster": true,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.540827,
+   "lng": 15.291808,
+   "px": [
+    2025,
+    486
+   ],
+   "ringMean": 168.3,
+   "triage": "unclear",
+   "wPx": 8
+  },
+  {
+   "areaPx": 89,
+   "corrDistPx": 95.1,
+   "corrId": null,
+   "distAnchorPx": 594.4,
+   "fill": 0.476,
+   "hPx": 11,
+   "inCluster": false,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.540824,
+   "lng": 15.285308,
+   "px": [
+    1368,
+    493
+   ],
+   "ringMean": 156.2,
+   "triage": null,
+   "wPx": 17
+  },
+  {
+   "areaPx": 70,
+   "corrDistPx": 162.9,
+   "corrId": null,
+   "distAnchorPx": 659.5,
+   "fill": 0.598,
+   "hPx": 13,
+   "inCluster": false,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.540795,
+   "lng": 15.284635,
+   "px": [
+    1300,
+    498
+   ],
+   "ringMean": 143.1,
+   "triage": null,
+   "wPx": 9
+  },
+  {
+   "areaPx": 50,
+   "corrDistPx": 55.9,
+   "corrId": null,
+   "distAnchorPx": 555.2,
+   "fill": 0.694,
+   "hPx": 9,
+   "inCluster": false,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.54078,
+   "lng": 15.285693,
+   "px": [
+    1407,
+    499
+   ],
+   "ringMean": 164.4,
+   "triage": null,
+   "wPx": 8
+  },
+  {
+   "areaPx": 38,
+   "corrDistPx": 231.1,
+   "corrId": null,
+   "distAnchorPx": 276.2,
+   "fill": 0.494,
+   "hPx": 11,
+   "inCluster": true,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.540719,
+   "lng": 15.288611,
+   "px": [
+    1702,
+    505
+   ],
+   "ringMean": 184.5,
+   "triage": "tree",
+   "wPx": 7
+  },
+  {
+   "areaPx": 103,
+   "corrDistPx": 14.1,
+   "corrId": "100200000260605494",
+   "distAnchorPx": 256.5,
+   "fill": 0.72,
+   "hPx": 11,
+   "inCluster": true,
+   "kind": "korelirano-jedro",
+   "lat": 45.540626,
+   "lng": 15.293239,
+   "px": [
+    2170,
+    514
+   ],
+   "ringMean": 167.8,
+   "triage": null,
+   "wPx": 13
+  },
+  {
+   "areaPx": 40,
+   "corrDistPx": 5.2,
+   "corrId": "100200000260605494",
+   "distAnchorPx": 246.1,
+   "fill": 0.625,
+   "hPx": 8,
+   "inCluster": true,
+   "kind": "korelirano-jedro",
+   "lat": 45.540523,
+   "lng": 15.293198,
+   "px": [
+    2166,
+    529
+   ],
+   "ringMean": 154.3,
+   "triage": null,
+   "wPx": 8
+  },
+  {
+   "areaPx": 36,
+   "corrDistPx": 99.6,
+   "corrId": null,
+   "distAnchorPx": 402.0,
+   "fill": 0.667,
+   "hPx": 9,
+   "inCluster": false,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.540551,
+   "lng": 15.287174,
+   "px": [
+    1557,
+    531
+   ],
+   "ringMean": 172.1,
+   "triage": null,
+   "wPx": 6
+  },
+  {
+   "areaPx": 59,
+   "corrDistPx": 10.9,
+   "corrId": "100200000260605494",
+   "distAnchorPx": 247.4,
+   "fill": 0.656,
+   "hPx": 10,
+   "inCluster": true,
+   "kind": "korelirano-jedro",
+   "lat": 45.540454,
+   "lng": 15.293257,
+   "px": [
+    2172,
+    539
+   ],
+   "ringMean": 162.7,
+   "triage": null,
+   "wPx": 9
+  },
+  {
+   "areaPx": 60,
+   "corrDistPx": 48.2,
+   "corrId": null,
+   "distAnchorPx": 121.4,
+   "fill": 0.682,
+   "hPx": 8,
+   "inCluster": true,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.540458,
+   "lng": 15.291733,
+   "px": [
+    2018,
+    540
+   ],
+   "ringMean": 173.1,
+   "triage": "unclear",
+   "wPx": 11
+  },
+  {
+   "areaPx": 58,
+   "corrDistPx": 36.6,
+   "corrId": null,
+   "distAnchorPx": 99.5,
+   "fill": 0.46,
+   "hPx": 18,
+   "inCluster": true,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.540405,
+   "lng": 15.290546,
+   "px": [
+    1898,
+    549
+   ],
+   "ringMean": 158.8,
+   "triage": "line-corner",
+   "wPx": 7
+  },
+  {
+   "areaPx": 112,
+   "corrDistPx": 35.8,
+   "corrId": null,
+   "distAnchorPx": 80.7,
+   "fill": 0.538,
+   "hPx": 16,
+   "inCluster": true,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.540267,
+   "lng": 15.290573,
+   "px": [
+    1901,
+    569
+   ],
+   "ringMean": 166.7,
+   "triage": "line-corner",
+   "wPx": 13
+  },
+  {
+   "areaPx": 89,
+   "corrDistPx": 13.9,
+   "corrId": "100200000260605452",
+   "distAnchorPx": 62.5,
+   "fill": 0.761,
+   "hPx": 9,
+   "inCluster": true,
+   "kind": "korelirano-jedro",
+   "lat": 45.540125,
+   "lng": 15.291402,
+   "px": [
+    1985,
+    589
+   ],
+   "ringMean": 172.3,
+   "triage": null,
+   "wPx": 13
+  },
+  {
+   "areaPx": 57,
+   "corrDistPx": 119.2,
+   "corrId": null,
+   "distAnchorPx": 557.6,
+   "fill": 0.792,
+   "hPx": 6,
+   "inCluster": false,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.540145,
+   "lng": 15.285507,
+   "px": [
+    1389,
+    592
+   ],
+   "ringMean": 165.7,
+   "triage": null,
+   "wPx": 12
+  },
+  {
+   "areaPx": 158,
+   "corrDistPx": 3.5,
+   "corrId": "100200000260605460",
+   "distAnchorPx": 117.6,
+   "fill": 0.64,
+   "hPx": 19,
+   "inCluster": true,
+   "kind": "korelirano-jedro",
+   "lat": 45.539859,
+   "lng": 15.292161,
+   "px": [
+    2062,
+    627
+   ],
+   "ringMean": 153.7,
+   "triage": null,
+   "wPx": 13
+  },
+  {
+   "areaPx": 151,
+   "corrDistPx": 24.4,
+   "corrId": null,
+   "distAnchorPx": 200.2,
+   "fill": 0.572,
+   "hPx": 12,
+   "inCluster": true,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.539778,
+   "lng": 15.292981,
+   "px": [
+    2145,
+    638
+   ],
+   "ringMean": 168.8,
+   "triage": "line-corner",
+   "wPx": 22
+  },
+  {
+   "areaPx": 85,
+   "corrDistPx": 3.8,
+   "corrId": "100200000324209291",
+   "distAnchorPx": 118.5,
+   "fill": 0.594,
+   "hPx": 11,
+   "inCluster": true,
+   "kind": "korelirano-jedro",
+   "lat": 45.539736,
+   "lng": 15.292169,
+   "px": [
+    2063,
+    645
+   ],
+   "ringMean": 157.5,
+   "triage": null,
+   "wPx": 13
+  },
+  {
+   "areaPx": 80,
+   "corrDistPx": 17.6,
+   "corrId": "100200000324209291",
+   "distAnchorPx": 107.3,
+   "fill": 0.556,
+   "hPx": 12,
+   "inCluster": true,
+   "kind": "korelirano-jedro",
+   "lat": 45.539648,
+   "lng": 15.292039,
+   "px": [
+    2050,
+    658
+   ],
+   "ringMean": 158.8,
+   "triage": null,
+   "wPx": 12
+  },
+  {
+   "areaPx": 110,
+   "corrDistPx": 23.9,
+   "corrId": null,
+   "distAnchorPx": 193.3,
+   "fill": 0.437,
+   "hPx": 12,
+   "inCluster": true,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.539457,
+   "lng": 15.292848,
+   "px": [
+    2132,
+    685
+   ],
+   "ringMean": 164.1,
+   "triage": "line-corner",
+   "wPx": 21
+  },
+  {
+   "areaPx": 97,
+   "corrDistPx": 67.5,
+   "corrId": null,
+   "distAnchorPx": 124.8,
+   "fill": 0.539,
+   "hPx": 12,
+   "inCluster": true,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.539258,
+   "lng": 15.291954,
+   "px": [
+    2042,
+    715
+   ],
+   "ringMean": 167.2,
+   "triage": "building",
+   "wPx": 15
+  },
+  {
+   "areaPx": 66,
+   "corrDistPx": 71.7,
+   "corrId": null,
+   "distAnchorPx": 81.7,
+   "fill": 0.55,
+   "hPx": 12,
+   "inCluster": true,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.539243,
+   "lng": 15.291084,
+   "px": [
+    1954,
+    718
+   ],
+   "ringMean": 169.8,
+   "triage": "unclear",
+   "wPx": 10
+  },
+  {
+   "areaPx": 73,
+   "corrDistPx": 57.0,
+   "corrId": null,
+   "distAnchorPx": 106.0,
+   "fill": 0.737,
+   "hPx": 11,
+   "inCluster": true,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.539239,
+   "lng": 15.291667,
+   "px": [
+    2013,
+    718
+   ],
+   "ringMean": 169.6,
+   "triage": "building",
+   "wPx": 9
+  },
+  {
+   "areaPx": 47,
+   "corrDistPx": 75.0,
+   "corrId": null,
+   "distAnchorPx": 129.0,
+   "fill": 0.783,
+   "hPx": 6,
+   "inCluster": true,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.539108,
+   "lng": 15.291794,
+   "px": [
+    2026,
+    737
+   ],
+   "ringMean": 159.4,
+   "triage": "number",
+   "wPx": 10
+  },
+  {
+   "areaPx": 43,
+   "corrDistPx": 52.7,
+   "corrId": null,
+   "distAnchorPx": 194.2,
+   "fill": 0.597,
+   "hPx": 8,
+   "inCluster": true,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.539069,
+   "lng": 15.292605,
+   "px": [
+    2108,
+    742
+   ],
+   "ringMean": 158.0,
+   "triage": "unclear",
+   "wPx": 9
+  },
+  {
+   "areaPx": 44,
+   "corrDistPx": 49.0,
+   "corrId": null,
+   "distAnchorPx": 202.8,
+   "fill": 0.611,
+   "hPx": 9,
+   "inCluster": true,
+   "kind": "neujemano-jedro-gone-kandidat",
+   "lat": 45.539013,
+   "lng": 15.292653,
+   "px": [
+    2113,
+    750
+   ],
+   "ringMean": 155.6,
+   "triage": "line-corner",
+   "wPx": 8
+  }
+ ],
+ "task": "P49 / issue #14 §3 — Fučkovci 1825: modern-anchored symbol evidence + striktna detekcija jeder + obseg sklopa (delna vektorizacija A05)",
+ "verdictEn": "Fučkovci 1825 on sheet A05 (cell ch): 26 modern buildings fall on drawn symbols (cov@best ≥ 0.5, residual median 9.8 m) — 25 of them inside the village cluster = proven building places with successors. Independent strict detection of dark cores: 53 (7 corroborated with on-symbol places, 19 unmatched inside the cluster; triage {'lane-junction': 1, 'text': 5, 'unclear': 4, 'tree': 1, 'line-corner': 5, 'building': 2, 'number': 1} — GONE candidates: 2 buildings + 4 unclear [~]). The P10 estimate of ~45 buildings lies within the bounds [27, 44] — no contradiction; the difference is detector recall (hatched symbols merge with the lattice). Cluster extent: hull 36336 m² (7 vertices), ink mass 257571 px. Full footprint vectorization is NOT feasible (pink fill gray ~168.9 < 195, mask saturation 0.403) — evidence layers + contact sheets for human review instead. SHEET_GEOREFS unchanged (P9 lesson).",
+ "verdictSi": "Fučkovci 1825 na listu A05 (celica ch): 26 sodobnih stavb pada na narisane simbole (cov@best ≥ 0.5, residual mediana 9.8 m) — 25 od njih v sklopu vasi = dokazana stavbna mesta z naslednikom. Neodvisna striktna detekcija temnih jeder: 53 (7 koreliranih z on-symbol mesti, 19 neujemanih v sklopu; triaža {'lane-junction': 1, 'text': 5, 'unclear': 4, 'tree': 1, 'line-corner': 5, 'building': 2, 'number': 1} — GONE-kandidati: 2 stavb + 4 nejasnih [~]). P10 ocena ~45 stavb je znotraj mej [27, 44] — brez protislovja; razlika = odzivnost detektorja (hatchirani simboli se staknejo z mrežo). Obseg sklopa: lupina 36336 m² (7 oglišč), masa črnila 257571 px. Celtna vektorizacija tlorisov NI izvedljiva (rožnati fill siva ~168.9 < 195, zasičenost 0.403) — namesto tega dokazni sloji + kontaktni listi za človeško presojo. SHEET_GEOREFS nespremenjen (lekcija P9)."
+}

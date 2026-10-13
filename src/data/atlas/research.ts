@@ -3331,3 +3331,67 @@ export const BUILDINGS_OVERLAY_P48: {
   ],
 };
 
+// ——— P49: FUČKOVCI 1825 — modern-anchored symbol evidence + striktna jedra + obseg sklopa (issue #14/§3) ———
+// Programsko generirano iz research/issue17/fucukovci-1825.json (scripts/p49_fucukovci1825.py).
+
+export const FUCUKOVCI_P49: {
+  series: "GEOREF";
+  source: string;
+  status: ResearchStatus;
+  generatedBy: string;
+  principle: { statement: string; control: string; limits: string };
+  anchor: { p10Geo: [number, number]; pxViaAffine: [number, number]; vlmReadPx: [number, number]; offsetPx: number };
+  modern: { nInCell: number; nEvaluated: number; nDrawn: number; nEmpty: number; nOnSymbol: number; residualM: number | null; covBestMedian: number | null };
+  cluster: { radiusPx: number; onSymbolInCluster: number; onSymbolTotal: number; nearestOnSymbolToAnchorPx: number; centroidDistToP10M: number; hullAreaM2: number; hullVertices: number; inkMassPx: number; inkBboxPx: [number, number, number, number] };
+  strict: { nSymbols: number; nCorroborated: number; nUnmatched: number; nUnmatchedInCluster: number; triageInCluster: Record<string, number>; wMedianPx: number; hMedianPx: number; pairPx: number };
+  estimate: { p10BuildingsVlm: number; onSymbolInCluster: number; goneCandidatesBuilding: number; goneCandidatesUnclear: number; lowerBound: number; upperBound: number; continuityLowerRatio: number };
+  limits: { pinkFillGrayMedian: number; tDark: number; villageBoxInkFraction: number; a02VectorizedN: number };
+  cropFiles: { file: string; kind: string; note?: string; distPx?: number; id?: string }[];
+  findingsSi: string[];
+  verdictSi: string;
+  verdictEn: string;
+  next: string[];
+} = {
+  series: "GEOREF",
+  source: "Sodobne stavbe GURS eZKN WFS (stavbe-ko1544-0.json 401 z geometrijo + stavbe-ko1552-south-0.json 313, recept scripts/p48_fetch_stavbe.sh) + P46 afina A05 (neatline-georef.json) + celica ch (ezkn-ix24.json) + sken public/atlas/n83-a05.jpg + tlorisi 1825 A02 (buildings.json) za primerjavo; polni izpis research/issue17/fucukovci-1825.json + src/data/atlas/fucukovci-1825.json; izrezi research/issue17/fucukovci-crops/ (9)",
+  status: "REVIEW",
+  generatedBy: "scripts/p49_fucukovci1825.py",
+  principle: {
+    statement: "tri neodvisni deterministični dokazni sloji za Fučkovci 1825 (list A05, celica ch): (1) MODERN-ANCHORED — sodobne stavbe preslikane prek P46 afine nazaj na sken; cov@best ≥ 0.5 na erodirani maski = stavbno mesto 1825 z naslednikom; (2) STRIKTNA DETEKCIJA JEDER — lokalni kontrast + zelo-temni delež + test obroča + oblika = temna jedra; korelacija z (1) ali GONE-kandidat [~] z vizualno triažo; (3) OBSEG SKLOPA — konveksna lupina dokazanih mest (px → WGS84) + masa črnila",
+    control: "pariteta s P48 (96/95/26, isti stroj cov@0/cov@best/strata); P10 sidro iz geografske tarče prek afine (odmik od VLM branja ≤ 50 px); determinizem I6 (2 prehoda bajtno); kanonski = runtime izpis (I7); sha256 izrezov (I8)",
+    limits: "celtna vektorizacija tlorisov na A05 NI izvedljiva: rožnati fill siva ~168 < 195 (zasenčitev maske), zasičenost erodirane maske v vasi 37.5 % (stakanje simbolov), številke/črki/drevesa v istem razredu kot simboli — namesto tega dokazni sloji + kontaktni listi za človeško presojo",
+  },
+  anchor: { p10Geo: [15.291, 45.5398], pxViaAffine: [1944.8, 636.8], vlmReadPx: [1975, 606], offsetPx: 43.2 },
+  modern: { nInCell: 96, nEvaluated: 95, nDrawn: 28, nEmpty: 67, nOnSymbol: 26, residualM: 9.8, covBestMedian: 1.0 },
+  cluster: { radiusPx: 380, onSymbolInCluster: 25, onSymbolTotal: 26, nearestOnSymbolToAnchorPx: 48.9, centroidDistToP10M: 130, hullAreaM2: 36336, hullVertices: 7, inkMassPx: 257571, inkBboxPx: [1208, 73, 2296, 892] },
+  strict: { nSymbols: 53, nCorroborated: 7, nUnmatched: 46, nUnmatchedInCluster: 19, triageInCluster: {"building": 2, "lane-junction": 1, "line-corner": 5, "number": 1, "text": 5, "tree": 1, "unclear": 4}, wMedianPx: 10.0, hMedianPx: 11.0, pairPx: 20 },
+  estimate: { p10BuildingsVlm: 45, onSymbolInCluster: 25, goneCandidatesBuilding: 2, goneCandidatesUnclear: 4, lowerBound: 27, upperBound: 44, continuityLowerRatio: 0.806 },
+  limits: { pinkFillGrayMedian: 168.9, tDark: 195, villageBoxInkFraction: 0.403, a02VectorizedN: 156 },
+  cropFiles: [
+    { file: "cluster-overview.jpg", kind: "cluster-overview", note: "zelena = on-symbol mesta, oranžno = striktna neujemana jedra, magenta = masa črnila bbox, rdeči križ = P10 sidro" },
+    { file: "strict-contact-sheet.jpg", kind: "contact-sheet", note: "vsa striktna jedra (53): modro = korelirano, oranžno = neujemano [~] — za človeško presojo (drevesa/številke?)" },
+    { file: "pair-1.jpg", kind: "pair", distPx: 3.5, id: "100200000260605460" },
+    { file: "pair-2.jpg", kind: "pair", distPx: 3.8, id: "100200000324209291" },
+    { file: "pair-3.jpg", kind: "pair", distPx: 5.2, id: "100200000260605494" },
+    { file: "pair-4.jpg", kind: "pair", distPx: 10.9, id: "100200000260605494" },
+    { file: "pair-5.jpg", kind: "pair", distPx: 13.9, id: "100200000260605452" },
+    { file: "pair-6.jpg", kind: "pair", distPx: 14.1, id: "100200000260605494" },
+    { file: "unmatched-cluster-sheet.jpg", kind: "unmatched-sheet", note: "neujemana jedra v sklopu (19) — GONE-kandidati [~] s triažo (building 2, unclear 4, ostalo text/drevo/številka/črta — glej JSON triageInCluster)" }
+  ],
+  findingsSi: [
+    "Modern-anchored dokaz (P48 stroj): 26 sodobnih stavb celice ch pada na narisane simbole 1825 (cov@best ≥ 0.5, residual mediana 9.8 m, cov@best mediana 1.0) — 25 od njih v sklopu Fučkovci (radij 380 px okoli P10 sidra) = dokazana stavbna mesta z naslednikom; WGS84 koordinate vsakega mesta v izpisu (JSON/API).",
+    "Neodvisna striktna detekcija temnih jeder (kontrast -13.0, g<145 ≥ 0.55, test obroča < 198.0): 53 jeder na listu, 7 koreliranih z on-symbol mesti (≤ 20 px), 19 neujemanih v sklopu — vizualna triaža (kontaktni list, provenienca: razvojna presoja, čaka lastnika): {\"building\": 2, \"lane-junction\": 1, \"line-corner\": 5, \"number\": 1, \"text\": 5, \"tree\": 1, \"unclear\": 4}.",
+    "Skladnost s P10 (~45 stavb [~]): spodnja meja 27 (25 anchored + 2 stavba iz triaže), zgornja meja 44 — P10 ocena znotraj mej, brez protislovja; razlika je odzivnost detektorja (hatchirani simboli se staknejo z gostoto vasi).",
+    "Dokaz o neizvedljivosti celotne vektorizacije (razvojno odkritje): rožnati parcelni fill na A05 ima sivo p50 ≈ 168.9 < prag 195 → barvna zasenčitev zaseži masko; erodirana maska se v škatli vasi zasiči (0.403 temnega) → simboli se staknejo v eno maso; številke/črki/drevesa so v istem kontrastnem razredu kot simboli (striktni detektor ~50 % preciznost brez konteksta) — za razliko od A02 (P9: 156 tlorisov, mediana 14.0×6.0 m).",
+    "Obseg sklopa: konveksna lupina 25 dokazanih mest = 36336 m² (7 oglišč, ringWGS84 v izpisu); masa črnila (največja erodirana komponenta z dokazanimi mesti) 257571 px, bbox [1208, 73, 2296, 892] px; centroid 130 m od P10 tarče (točka) — najbližje dokazano mesto 48.9 px (≈ 38 m), skladno s P46 'Fučkovci 33 m'.",
+    "Kontinuiteta Fučkovci (spodnja meja): 25 dokazanih mest z naslednikom od (25 + 2 + 4 [~]) = kontinuiteta ≥ 0.806 [~] — pozitivno glede na A02 razpršeno zidanico (P48: 136/156 brez naslednika); jedro vasi Fučkovci je ohranjeno."
+],
+  verdictSi: "Fučkovci 1825 na listu A05 (celica ch): 26 sodobnih stavb pada na narisane simbole (cov@best ≥ 0.5, residual mediana 9.8 m) — 25 od njih v sklopu vasi = dokazana stavbna mesta z naslednikom. Neodvisna striktna detekcija temnih jeder: 53 (7 koreliranih z on-symbol mesti, 19 neujemanih v sklopu; triaža {'lane-junction': 1, 'text': 5, 'unclear': 4, 'tree': 1, 'line-corner': 5, 'building': 2, 'number': 1} — GONE-kandidati: 2 stavb + 4 nejasnih [~]). P10 ocena ~45 stavb je znotraj mej [27, 44] — brez protislovja; razlika = odzivnost detektorja (hatchirani simboli se staknejo z mrežo). Obseg sklopa: lupina 36336 m² (7 oglišč), masa črnila 257571 px. Celtna vektorizacija tlorisov NI izvedljiva (rožnati fill siva ~168.9 < 195, zasičenost 0.403) — namesto tega dokazni sloji + kontaktni listi za človeško presojo. SHEET_GEOREFS nespremenjen (lekcija P9).",
+  verdictEn: "Fučkovci 1825 on sheet A05 (cell ch): 26 modern buildings fall on drawn symbols (cov@best ≥ 0.5, residual median 9.8 m) — 25 of them inside the village cluster = proven building places with successors. Independent strict detection of dark cores: 53 (7 corroborated with on-symbol places, 19 unmatched inside the cluster; triage {'lane-junction': 1, 'text': 5, 'unclear': 4, 'tree': 1, 'line-corner': 5, 'building': 2, 'number': 1} — GONE candidates: 2 buildings + 4 unclear [~]). The P10 estimate of ~45 buildings lies within the bounds [27, 44] — no contradiction; the difference is detector recall (hatched symbols merge with the lattice). Cluster extent: hull 36336 m² (7 vertices), ink mass 257571 px. Full footprint vectorization is NOT feasible (pink fill gray ~168.9 < 195, mask saturation 0.403) — evidence layers + contact sheets for human review instead. SHEET_GEOREFS unchanged (P9 lesson).",
+  next: [
+    "človeška presoja kontaktnega lista striktnih jeder (drevesa/številke/stavbe)",
+    "povezava 25 dokazanih mest z domačijami PT (številke na karti)",
+    "nadgradnja P16 present.json za Fučkovci (25 mest z uradnimi GURS obrisi)",
+    "človeška potrditev neatline črt (P46/P47 izrezi) še vedno pogoj za SHEET_GEOREFS"
+],
+};

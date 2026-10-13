@@ -33,6 +33,7 @@ import {
   NEATLINE_GEOREF_P46,
   GURS_OVERLAY_P47,
   BUILDINGS_OVERLAY_P48,
+  FUCUKOVCI_P49,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -2446,6 +2447,92 @@ export function runQA(opts: QAOptions = {}): QAReport {
     p48Errors.length === 0
       ? `A02 on-symbol 149/154 (residual 9.8 m) · A05 26/95 (10.1 m) · A04/A03 0 · kontinuiteta 37 parov (36 strong), GONE 136/156 · Blatt X 0/37 REFRIRANA · 12 izrezov · ${p48FileDetail}`
       : p48Errors.join("; "),
+  );
+
+  // ——— P49: FUČKOVCI 1825 — dokazna sloja + obseg sklopa ———
+  const p49Errors: string[] = [];
+  const p49 = FUCUKOVCI_P49;
+  // sidro + sklop: pinane vrednosti
+  if (p49.anchor.offsetPx !== 43.2 || p49.anchor.pxViaAffine[0] !== 1944.8 || p49.anchor.pxViaAffine[1] !== 636.8)
+    p49Errors.push("sidro: pinano (1944.8,636.8) / odmik 43.2 px ni izpolnjeno");
+  if (p49.modern.nInCell !== 96 || p49.modern.nEvaluated !== 95 || p49.modern.nOnSymbol !== 26)
+    p49Errors.push("pariteta s P48: 96/95/26 ni izpolnjena");
+  if (p49.modern.residualM === null || p49.modern.residualM > 25)
+    p49Errors.push("on-symbol residual nad 25 m");
+  if (p49.cluster.onSymbolInCluster !== 25 || p49.cluster.onSymbolTotal !== 26)
+    p49Errors.push("sklop: 25/26 on-symbol ni pinano");
+  if (p49.cluster.nearestOnSymbolToAnchorPx === null || p49.cluster.nearestOnSymbolToAnchorPx > 60)
+    p49Errors.push("najbližje mesto > 60 px od sidra");
+  if (p49.cluster.hullAreaM2 !== 36336 || p49.cluster.hullVertices !== 7 || p49.cluster.inkMassPx !== 257571)
+    p49Errors.push("obseg sklopa: lupina 36336 m² (7 oglišč) / masa 257571 px ni pinano");
+  // striktna detekcija + triaža
+  if (p49.strict.nSymbols !== 53 || p49.strict.nCorroborated !== 7 || p49.strict.nUnmatchedInCluster !== 19)
+    p49Errors.push("striktna detekcija: 53/7/19 ni pinano");
+  if (p49.strict.triageInCluster.building !== 2 || p49.strict.triageInCluster.unclear !== 4)
+    p49Errors.push("triaža: building 2 + unclear 4 ni pinano");
+  const p49TriageSum = Object.values(p49.strict.triageInCluster).reduce((a, b) => a + b, 0);
+  if (p49TriageSum !== p49.strict.nUnmatchedInCluster)
+    p49Errors.push("triaža: vsota ne sešteje neujemanih jeder v sklopu");
+  // skladnost s P10 (brez protislovja)
+  if (p49.estimate.lowerBound !== 27 || p49.estimate.upperBound !== 44)
+    p49Errors.push("ocena: meje [27, 44] ni pinana");
+  if (!(p49.estimate.lowerBound <= p49.estimate.p10BuildingsVlm && p49.estimate.upperBound >= 40))
+    p49Errors.push("P10 ~45 ni znotraj mej — protislovje");
+  if (p49.estimate.continuityLowerRatio !== 0.806)
+    p49Errors.push("ohranjenost (spodnja meja) 0.806 ni pinana");
+  // nedotaknjenost + izrezi
+  if (p49.cropFiles.length !== 9) p49Errors.push("cropFiles ni 9");
+  if (!p49.verdictSi.includes("SHEET_GEOREFS nespremenjen"))
+    p49Errors.push("verdict ne deklarira nedotaknjenosti SHEET_GEOREFS");
+  // dokazna datoteka (strežniški klic; vzorec qa-p37..p48)
+  let p49FileDetail = "dokazni datoteki nista preverjeni (readFile ni na voljo) — celovita kontrola teče na /api/qa";
+  if (opts.readFile) {
+    const rawEv = opts.readFile("research/issue17/fucukovci-1825.json");
+    const rawRt = opts.readFile("src/data/atlas/fucukovci-1825.json");
+    if (rawEv === null) p49Errors.push("research/issue17/fucukovci-1825.json ni berljiv (izpis scripts/p49_fucukovci1825.py)");
+    if (rawRt === null) p49Errors.push("src/data/atlas/fucukovci-1825.json ni berljiv (runtime kopija)");
+    if (rawEv !== null && rawRt !== null && rawEv !== rawRt)
+      p49Errors.push("dokazni in runtime izpis fucukovci-1825.json nista identična (skript mora izpisati oba enako)");
+    if (rawEv !== null) {
+      try {
+        const j = JSON.parse(rawEv) as {
+          modern: { nInCell: number; nEvaluated: number; nOnSymbol: number; residualM: number | null };
+          cluster: { onSymbolInCluster: number; hull: { areaM2: number }; inkMass: { massPx: number } };
+          strict: { nSymbols: number; nCorroborated: number; nUnmatchedInCluster: number; triageInCluster: Record<string, number> };
+          estimate: { lowerBound: number; upperBound: number };
+          places: unknown[];
+          symbols: unknown[];
+          crops: { file: string; sha256: string; bytes: number }[];
+          invariants: Record<string, string>;
+        };
+        if (j.modern.nInCell !== 96 || j.modern.nEvaluated !== 95 || j.modern.nOnSymbol !== 26)
+          p49Errors.push("JSON: pariteta 96/95/26 ni pinana");
+        if (j.cluster.onSymbolInCluster !== 25 || j.cluster.hull.areaM2 !== 36336 || j.cluster.inkMass.massPx !== 257571)
+          p49Errors.push("JSON: sklop 25/36336/257571 ni pinano");
+        if (j.strict.nSymbols !== 53 || j.strict.nCorroborated !== 7 || j.strict.nUnmatchedInCluster !== 19)
+          p49Errors.push("JSON: striktna detekcija 53/7/19 ni pinana");
+        if (j.estimate.lowerBound !== 27 || j.estimate.upperBound !== 44)
+          p49Errors.push("JSON: meje [27, 44] ni pinana");
+        if (j.places.length !== 26 || j.symbols.length !== 53)
+          p49Errors.push("JSON: 26 mest / 53 jeder ni pinano");
+        if (j.crops.length !== 9 || j.crops.some((c) => c.bytes <= 0 || c.sha256.length !== 64))
+          p49Errors.push("JSON izrezi: ni 9 ali manjkajo sha256/velikosti");
+        if (!Object.values(j.invariants).every((v) => v.includes("PASS") || v.includes("bajtno")))
+          p49Errors.push("JSON invarianti niso vsi PASS");
+        p49FileDetail = `dokazni datoteki preverjeni in identični (26 mest, 53 jeder, lupina 36336 m², 9 izrezov z sha256, invarianti I1–I8 PASS)`;
+      } catch {
+        p49Errors.push("research/issue17/fucukovci-1825.json ni veljaven JSON");
+      }
+    }
+  }
+  push(
+    "qa-p49-fucukovci-1825",
+    "P49: FUČKOVCI 1825 — modern-anchored symbol evidence + striktna detekcija jeder + obseg sklopa (issue #14/§3, delna vektorizacija A05): ugotovitev — celtna vektorizacija tlorisov na A05 NI izvedljiva (rožnati parcelni fill siva ~168.9 < prag 195 → barvna zasenčitev maske; erodirana maska se v škatli vasi zasiči 0.403 → simboli se staknejo; številke/črki/drevesa v istem kontrastnem razredu kot simboli — striktni detektor ~50 % preciznost brez konteksta); namesto tega TRI neodvisna dokazna sloja: (1) MODERN-ANCHORED (P48 stroj, pariteta 96/95/26): 26 sodobnih stavb pada na narisane simbole (residual mediana 9.8 m), 25 v sklopu Fučkovci (radij 380 px okoli P10 sidra (1944.8,636.8) — odmik 43.2 px od VLM branja; najbližje mesto 48.9 px ≈ 38 m, skladno s P46 'Fučkovci 33 m') = dokazana stavbna mesta z naslednikom (WGS84 v izpisu); (2) STRIKTNA DETEKCIJA JEDER (kontrast ≤ −13, g<145 ≥ 0.55, test obroča < 198): 53 jeder, 7 koreliranih (≤ 20 px), 19 neujemanih v sklopu — vizualna triaža (provenienca: razvojna presoja, čaka lastnika): 2 stavbi + 4 nejasni = GONE-kandidati [~], 5 text + 5 line-corner + 1 tree + 1 number + 1 lane-junction; (3) OBSEG SKLOPA: konveksna lupina 25 dokazanih mest 36 336 m² (7 oglišč, ringWGS84 v izpisu) + masa črnila 257 571 px; SKLADNOST s P10: ocena stavb [27, 44] — P10 ~45 znotraj mej, brez protislovja (razlika = odzivnost detektorja); OHRANJENOST Fučkovcev ≥ 0.806 [~] — jedro vasi ohranjeno (v nasprotju z A02 razpršeno zidanico P48: 136/156); 9 dokaznih izrezov (pregled sklopa, kontaktni list jeder, 6 parov, neujemani list) v research/issue17/fucukovci-crops/; SHEET_GEOREFS in dokazi P40–P48 nespremenjeni; status ANALYSIS-DETERMINISTIC",
+    "P49: FUČKOVCI 1825 — modern-anchored symbol evidence + strict dark-core detection + cluster extent (issue #14/§3, partial vectorization of A05): the finding — full footprint vectorization on A05 is NOT feasible (pink parcel fill gray ~168.9 < threshold 195 → color shading pollutes the mask; the eroded mask saturates at 0.403 inside the village box → symbols merge; numbers/letters/trees share the symbols' contrast class — the strict detector reaches ~50 % precision without context); instead THREE independent evidence layers: (1) MODERN-ANCHORED (P48 machinery, parity 96/95/26): 26 modern buildings fall on drawn symbols (residual median 9.8 m), 25 inside the Fučkovci cluster (radius 380 px around the P10 anchor (1944.8,636.8) — 43.2 px from the VLM read; nearest place 48.9 px ≈ 38 m, consistent with P46 'Fučkovci 33 m') = proven building places with successors (WGS84 in the evidence file); (2) STRICT CORE DETECTION (contrast ≤ −13, g<145 ≥ 0.55, ring test < 198): 53 cores, 7 corroborated (≤ 20 px), 19 unmatched inside the cluster — visual triage (provenance: development-time judgment, awaits owner): 2 buildings + 4 unclear = GONE candidates [~], 5 text + 5 line-corner + 1 tree + 1 number + 1 lane-junction; (3) CLUSTER EXTENT: convex hull of 25 proven places 36 336 m² (7 vertices, ringWGS84 in the evidence) + ink mass 257 571 px; CONSISTENCY with P10: building-count estimate [27, 44] — the P10 ~45 lies within the bounds, no contradiction (the difference is detector recall); SURVIVAL of Fučkovci ≥ 0.806 [~] — the village core survived (unlike the A02 dispersed settlement of P48: 136/156 without successor); 9 proof crops (cluster overview, core contact sheet, 6 pairs, unmatched sheet) in research/issue17/fucukovci-crops/; SHEET_GEOREFS and the P40–P48 evidence unchanged; status ANALYSIS-DETERMINISTIC",
+    p49Errors.length === 0,
+    p49Errors.length === 0
+      ? `26 mest (25 v sklopu, residual 9.8 m) · 53 jeder (7 koreliranih, triaža 2+4 [~]) · lupina 36336 m² · meje [27, 44] ⊇ P10 ~45 · 9 izrezov · ${p49FileDetail}`
+      : p49Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;

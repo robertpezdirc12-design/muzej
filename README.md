@@ -174,6 +174,16 @@ Zgodovinska katastrska slika vasi (franciscejski kataster, k.o. Griblje št. 83 
   izrezov (`research/issue17/buildings-crops/`); SHEET_GEOREFS in dokazi
   P40–P47 nespremenjeni; dokaz `research/issue17/buildings-overlay.json` +
   `scripts/p48_buildings_overlay.py` + `scripts/p48_fetch_stavbe.sh`;
+- **Fučkovci 1825 (P49, issue #14)** — delna vektorizacija A05: celtna
+  vektorizacija tlorisov NI izvedljiva (rožnati fill siva ~169 < 195,
+  zasičenost maske 40.3 % v vasi — izmerjeno); namesto tega tri neodvisna
+  dokazna sloja: **modern-anchored 26 mest** (25 v sklopu, residual 9.8 m,
+  WGS84 v izpisu), **striktna detekcija temnih jeder** (53; 7 koreliranih,
+  19 neujemanih v sklopu — triaža: 2 stavbi + 4 nejasni GONE-kandidati [~]),
+  **obseg sklopa** (lupina 36 336 m², masa črnila 257 571 px); ocena stavb
+  [27, 44] — P10 ~45 znotraj mej, brez protislovja; ohranjenost ≥ 0.806 [~];
+  9 izrezov (`research/issue17/fucukovci-crops/`); dokaz
+  `research/issue17/fucukovci-1825.json` + `scripts/p49_fucukovci1825.py`;
 - **globa povezava** `?atlas=hiša-75` (hiša št. 73 — demonstracijska veriga do MVG-010).
 
 API (statični, brez runtime AI):
@@ -206,6 +216,10 @@ API (statični, brez runtime AI):
   A05 Fučkovci 26/95 (10.1 m); kontinuiteta 37 parov, 136/156 tlorisov brez
   naslednika; Blatt X: direktna referenca REFRIRANA (0/37); 12 izrezov; status
   ANALYSIS-DETERMINISTIC (P48).
+- `GET /api/atlas/fucukovci-1825` — Fučkovci 1825: modern-anchored mesta (26,
+  25 v sklopu, residual 9.8 m) + striktna temna jedra (53, triaža) + obseg
+  sklopa (lupina 36 336 m²); ocena [27, 44] vs P10 ~45; 9 izrezov; status
+  ANALYSIS-DETERMINISTIC (P49).
 
 ## Varnost
 

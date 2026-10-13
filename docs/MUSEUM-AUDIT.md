@@ -1642,3 +1642,60 @@ interpretacije P42 (»register stavbnih mest«; ARTIFAKT številke 82–100 = la
 residual ≤ 15/25 m ∧ on-symbol 149, I3 A05 26 (10.1 m) ∧ A04 = 0, I4 kontinuiteta
 37/136, I5 Blatt X 60/59/58/37/0/18 pinano, I6 determinizem (2 prehoda bajtno), I7
 kanonski = runtime, I8 12 izrezov z sha256.
+
+## 29. P49 — Fučkovci 1825: modern-anchored symbol evidence + striktna detekcija jeder + obseg sklopa (delna vektorizacija A05)
+
+**Datum:** 2026-10-13 · **Skript:** `scripts/p49_fucukovci1825.py` (determinističen,
+brez AI ob delovanju, FAIL ob padu invariant I1–I8) · **Dokaz:**
+`research/issue17/fucukovci-1825.json` (identična runtime kopija
+`src/data/atlas/fucukovci-1825.json`) + 9 izrezov
+`research/issue17/fucukovci-crops/` (sha256 v dokazu).
+
+**Naloga (iz P48 »ostaja odprto«):** razširitev vektorizacije stavb 1825 na A05
+(Fučkovci). **Ugotovitev razvoja (dokaz o neizvedljivosti, izmerjeno):** celtna
+vektorizacija posameznih tlorisov na A05 ni izvedljiva — (a) rožnati parcelni
+fill ima sivo p50 ≈ 168.9 < prag 195 (barvna zasenčitev zaseži masko črnila,
+za razliko od A02); (b) erodirana maska se v škatli vasi (1750–2200 × 480–950)
+zasiči (40.3 % temnega → sosednji simboli se staknejo v eno maso); (c)
+številke/črki/drevesa so po velikosti in kontrastu v istem razredu kot simboli
+(striktni detektor brez konteksta doseže ~50 % preciznost — kontaktni list).
+Za razliko od A02 (P9: 156 tlorisov, mediana 14.0 × 6.0 m).
+
+**Metoda — tri neodvisna deterministična dokazna sloja:**
+
+1. **MODERN-ANCHORED** (P48 stroj, pariteta): 95 sodobnih stavb celice ch
+   preslikanih prek P46 afine nazaj na sken; cov@0/cov@best na erodirani maski;
+   ON-SYMBOL (cov@best ≥ 0.5) = stavbno mesto 1825 z neposrednim dokazom
+   (26; **25 v sklopu vasi**); residual mediana **9.8 m**; WGS84 koordinata
+   vsakega mesta v izpisu.
+2. **STRIKTNA DETEKCIJA JEDER** (neodvisna od 1): lokalni kontrast
+   (mean9−mean25 ≤ −13) + delež zelo temnega (g<145 ≥ 0.55 v 9×9) + izključitev
+   papirja (paper41 ≤ 0.25) + test obroča (ring < 198) + oblika (area ≥ 36,
+   bbox 6–40, fill ≥ 0.42) → **53 temnih jeder**; **7 koreliranih** z on-symbol
+   mesti (≤ 20 px), **19 neujemanih v sklopu** — vizualna triaža (provenienca:
+   razvojna presoja Z.ai, čaka potrditev lastnika; dokaz: kontaktni list):
+   **2 stavbi + 4 nejasni = GONE-kandidati [~]**, 5 text + 5 line-corner +
+   1 tree + 1 number + 1 lane-junction.
+3. **OBSEG SKLOPA:** konveksna lupina 25 dokazanih mest = **36 336 m²**
+   (7 oglišč, ringWGS84 v izpisu) + masa črnila (največja erodirana komponenta
+   z dokazanimi mesti) **257 571 px**.
+
+**Sidro in skladnost s P10:** P10 tarča (45.5398, 15.2910) prek P46 afine → px
+**(1944.8, 636.8)** — odmik 43.2 px od VLM branja (1975, 606); najbližje dokazano
+mesto **48.9 px ≈ 38 m** od sidra (skladno s P46 »Fučkovci 33 m«); centroid
+sklopa 130 m od P10 tarče (tarča je točka, centroid vasi naravno odmika).
+**Ocena števila stavb: [27, 44]** — P10 ocena ~45 [~] je znotraj mej, brez
+protislovja; razlika je odzivnost detektorja (hatchirani simboli se staknejo z
+gostoto vasi). **Ohranjenost Fučkovcev ≥ 0.806 [~]** — jedro vasi je ohranjeno
+(v nasprotju z razpršeno zidanico A02: P48 136/156 brez naslednika).
+
+**Integracija:** API `GET /api/atlas/fucukovci-1825` (force-static); TS
+`FUCUKOVCI_P49` (research.ts) + kartica »Georeferenca N83 — Fučkovci 1825:
+dokazna sloja + obseg sklopa (P49)« v Raziskavah; opombe P49 v virih N083A05
+(Si+En); QA **49 → 50** (`qa-p49-fucukovci-1825`). **SHEET_GEOREFS in dokazi
+P40–P48 namerno nespremenjeni** (lekcija P9).
+
+**Invarianti I1–I8: PASS** — I1 pariteta s P48 (96/95/26), I2 residual ≤ 25 m
+(9.8), I3 sidro 43 px ∧ 25/26 v sklopu ∧ najbližje 48.9 px ∧ centroid 130 m,
+I4 53/7/19 jeder, I5 P10 ~45 znotraj mej [27, 44], I6 determinizem (2 prehoda
+bajtno), I7 kanonski = runtime, I8 9 izrezov z sha256.

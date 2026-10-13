@@ -66,6 +66,7 @@ import {
   NEATLINE_GEOREF_P46,
   GURS_OVERLAY_P47,
   BUILDINGS_OVERLAY_P48,
+  FUCUKOVCI_P49,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -1272,6 +1273,104 @@ export function MuseumResearch() {
                   {t(
                     "Kontinuiteta je prikazana na ravni so-lociranosti (≤ 25 px ≈ 20 m) — pari NISO potrjeni za posamezne domačije PT (za to bo potrebna humanca potrditev simbolov in številk na karti). Blatt X interpretacija je kvantitativna opomba, ne verdikt. SHEET_GEOREFS in dokazi P40–P47 nespremenjeni. Strojno berljivo: /api/atlas/buildings-overlay.",
                     "Continuity is shown at the co-location level (≤ 25 px ≈ 20 m) — pairs are NOT confirmed as individual PT homesteads (that will require human confirmation of the map symbols and numbers). The Blatt X interpretation is a quantitative note, not a verdict. SHEET_GEOREFS and the P40–P47 evidence unchanged. Machine-readable: /api/atlas/buildings-overlay.",
+                  )}
+                </p>
+              </div>
+            </div>
+
+            {/* Georeferenca N83 — Fučkovci 1825 (P49, issue #14) */}
+            <div className="min-w-0 rounded-xl border bg-card p-6 shadow-sm">
+              <h3 className="flex items-center gap-2 font-display text-lg font-semibold">
+                <Crosshair className="size-4 text-primary" aria-hidden="true" />
+                {t("Georeferenca N83 — Fučkovci 1825: dokazna sloja + obseg sklopa (P49)", "N83 georeference — Fučkovci 1825: evidence layers + cluster extent (P49)")}
+                <StatusBadge status={FUCUKOVCI_P49.status} />
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                {t(
+                  "Razširitev vektorizacije stavb 1825 na A05 (Fučkovci) — ugotovitev: celtna vektorizacija tlorisov NI izvedljiva (rožnati parcelni fill ima sivo ~169 < prag 195, erodirana maska se v vasi zasiči, številke/črki/drevesa so v istem kontrastnem razredu kot simboli). Namesto tega tri neodvisna deterministična dokazna sloja: modern-anchored mesta, striktna temna jedra s triažo in obseg sklopa.",
+                  "Extending the 1825 building vectorization to A05 (Fučkovci) — the finding: full footprint vectorization is NOT feasible (pink parcel fill has gray ~169 < threshold 195, the eroded mask saturates inside the village, numbers/letters/trees share the contrast class of the symbols). Instead, three independent deterministic evidence layers: modern-anchored places, strict dark cores with triage, and the cluster extent.",
+                )}
+              </p>
+
+              {/* P49: tri sloji */}
+              <div className="mt-4 rounded-lg border bg-secondary/30 p-3">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-sm font-semibold">
+                    {t("P49 — tri neodvisna dokazna sloja (list A05 / celica ch)", "P49 — three independent evidence layers (sheet A05 / cell ch)")}
+                  </span>
+                  <span className="font-mono text-[11px] text-muted-foreground">scripts/p49_fucukovci1825.py</span>
+                </div>
+                <div className="mt-2 grid gap-1 text-[10px] sm:grid-cols-3">
+                  <div className="rounded border bg-background px-2 py-1.5">
+                    <div className="font-mono font-semibold">1) {t("modern-anchored", "modern-anchored")}</div>
+                    <div className="mt-1 flex flex-wrap gap-1 font-mono text-[9px]">
+                      <span className="rounded bg-emerald-100 px-1.5 py-0.5 dark:bg-emerald-950/40">{FUCUKOVCI_P49.modern.nOnSymbol} {t("mest z naslednikom", "places with successor")}</span>
+                      <span className="rounded bg-emerald-100 px-1.5 py-0.5 dark:bg-emerald-950/40">{FUCUKOVCI_P49.cluster.onSymbolInCluster} {t("v sklopu", "in cluster")}</span>
+                      <span className="rounded border px-1.5 py-0.5">residual {FUCUKOVCI_P49.modern.residualM} m</span>
+                    </div>
+                  </div>
+                  <div className="rounded border bg-background px-2 py-1.5">
+                    <div className="font-mono font-semibold">2) {t("striktna jedra", "strict cores")}</div>
+                    <div className="mt-1 flex flex-wrap gap-1 font-mono text-[9px]">
+                      <span className="rounded border px-1.5 py-0.5">{FUCUKOVCI_P49.strict.nSymbols} {t("jeder", "cores")}</span>
+                      <span className="rounded bg-emerald-100 px-1.5 py-0.5 dark:bg-emerald-950/40">{FUCUKOVCI_P49.strict.nCorroborated} {t("koreliranih", "corroborated")}</span>
+                      <span className="rounded bg-amber-100 px-1.5 py-0.5 dark:bg-amber-950/40">{FUCUKOVCI_P49.strict.nUnmatchedInCluster} {t("v sklopu neujemanih", "unmatched in cluster")}</span>
+                    </div>
+                  </div>
+                  <div className="rounded border bg-background px-2 py-1.5">
+                    <div className="font-mono font-semibold">3) {t("obseg sklopa", "cluster extent")}</div>
+                    <div className="mt-1 flex flex-wrap gap-1 font-mono text-[9px]">
+                      <span className="rounded border px-1.5 py-0.5">lupina {FUCUKOVCI_P49.cluster.hullAreaM2.toLocaleString("sl-SI")} m²</span>
+                      <span className="rounded border px-1.5 py-0.5">{t("masa črnila", "ink mass")} {FUCUKOVCI_P49.cluster.inkMassPx.toLocaleString("sl-SI")} px</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* P49: sidro + skladnost s P10 */}
+              <div className="mt-3 rounded-lg border bg-secondary/30 p-3">
+                <span className="text-sm font-semibold">
+                  {t("P49 — P10 sidro in skladnost ocene števila stavb", "P49 — P10 anchor and building-count consistency")}
+                </span>
+                <div className="mt-2 flex flex-wrap gap-1 font-mono text-[9px]">
+                  <span className="rounded border px-1.5 py-0.5">{t("sidro", "anchor")} ({FUCUKOVCI_P49.anchor.pxViaAffine[0]}, {FUCUKOVCI_P49.anchor.pxViaAffine[1]}) · odmik {FUCUKOVCI_P49.anchor.offsetPx} px</span>
+                  <span className="rounded bg-emerald-100 px-1.5 py-0.5 dark:bg-emerald-950/40">{t("najbližje mesto", "nearest place")} {FUCUKOVCI_P49.cluster.nearestOnSymbolToAnchorPx} px ≈ 38 m</span>
+                  <span className="rounded bg-emerald-100 px-1.5 py-0.5 dark:bg-emerald-950/40">{t("ocena", "estimate")} [{FUCUKOVCI_P49.estimate.lowerBound}, {FUCUKOVCI_P49.estimate.upperBound}] ⊇ P10 ~{FUCUKOVCI_P49.estimate.p10BuildingsVlm}</span>
+                  <span className="rounded border px-1.5 py-0.5">GONE {FUCUKOVCI_P49.estimate.goneCandidatesBuilding} + {FUCUKOVCI_P49.estimate.goneCandidatesUnclear} [~]</span>
+                  <span className="rounded bg-emerald-100 px-1.5 py-0.5 dark:bg-emerald-950/40">{t("ohranjenost ≥", "survival ≥")} {FUCUKOVCI_P49.estimate.continuityLowerRatio}</span>
+                </div>
+                <p className="mt-2 text-[11px] leading-relaxed text-muted-foreground/90">
+                  {t(
+                    "26 sodobnih stavb pada na narisane simbole 1825 (residual mediana 9.8 m) — 25 v sklopu vasi = dokazana stavbna mesta z naslednikom (WGS84 v izpisu). Neodvisna striktna detekcija: 53 temnih jeder, 7 koreliranih, 19 neujemanih v sklopu — vizualna triaža pokaže 2 stavbi + 4 nejasne GONE-kandidate [~] (ostalo text/črta/drevo/številka). P10 ocena ~45 stavb je znotraj mej [27, 44] — brez protislovja; razlika = odzivnost detektorja (hatchirani simboli se staknejo z gostoto vasi). Jedro Fučkovcev je ohranjeno (ohranjenost ≥ 0.806 [~]) — v nasprotju z razpršeno zidanico A02 (P48: 136/156 brez naslednika).",
+                    "26 modern buildings fall on the drawn 1825 symbols (residual median 9.8 m) — 25 inside the village cluster = proven building places with successors (WGS84 in the evidence file). Independent strict detection: 53 dark cores, 7 corroborated, 19 unmatched inside the cluster — visual triage shows 2 buildings + 4 unclear GONE candidates [~] (rest text/line/tree/number). The P10 estimate of ~45 buildings lies within the bounds [27, 44] — no contradiction; the difference is detector recall (hatched symbols merge with the village density). The Fučkovci core survived (survival ≥ 0.806 [~]) — unlike the A02 dispersed settlement (P48: 136/156 without successor).",
+                  )}
+                </p>
+              </div>
+
+              {/* P49: izrezi */}
+              <div className="mt-3 rounded-lg border bg-secondary/30 p-3">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-sm font-semibold">
+                    {t("P49 — dokazni izrezi (9)", "P49 — proof crops (9)")}
+                  </span>
+                  <span className="font-mono text-[11px] text-muted-foreground">research/issue17/fucukovci-crops/</span>
+                </div>
+                <div className="mt-2 max-h-32 space-y-1 overflow-y-auto pr-1">
+                  {FUCUKOVCI_P49.cropFiles.map((c) => (
+                    <p key={c.file} className="rounded border bg-background px-2 py-1 font-mono text-[10px] leading-snug text-muted-foreground/90">
+                      {c.file} — {c.kind === "pair" ? t(`modern-anchored mesto ↔ jedro (${c.distPx} px)`, `modern-anchored place ↔ core (${c.distPx} px)`) : c.kind === "cluster-overview" ? t("pregled sklopa: mesta + jedra + masa črnila + sidro", "cluster overview: places + cores + ink mass + anchor") : c.kind === "contact-sheet" ? t("kontaktni list vseh striktnih jeder", "contact sheet of all strict cores") : t("neujemana jedra v sklopu (GONE-kandidati, triaža)", "unmatched cores in cluster (GONE candidates, triage)")}
+                    </p>
+                  ))}
+                </div>
+              </div>
+
+              {/* P49: poštenost */}
+              <div className="mt-3 rounded-lg border border-emerald-200 bg-emerald-50/60 p-3 dark:border-emerald-900/50 dark:bg-emerald-950/30">
+                <p className="text-[11px] leading-relaxed text-foreground/80">
+                  <span className="font-semibold">{t("Pošten status: ", "Honest status: ")}</span>
+                  {t(
+                    "Celtna vektorizacija tlorisov na A05 NI izvedljiva — P49 dostavi dokazna sloja namesto popolnega seznama tlorisov. GONE-kandidati in ocena števila stavb ostajajo [~]: triaža jeder je razvojna presoja (provenienca v izpisu) in čaka potrditev lastnika prek kontaktnega lista. WGS84 koordinate 26 mest so vezane na sodobne stavbe (residual ~10 m), ne na neodvisno segmentacijo simbolov. SHEET_GEOREFS in dokazi P40–P48 nespremenjeni. Strojno berljivo: /api/atlas/fucukovci-1825.",
+                    "Full footprint vectorization on A05 is NOT feasible — P49 delivers evidence layers instead of a complete footprint list. GONE candidates and the building-count estimate remain [~]: the core triage is a development-time judgment (provenance in the evidence file) and awaits owner confirmation via the contact sheet. The WGS84 coordinates of the 26 places are bound to modern buildings (residual ~10 m), not to independent symbol segmentation. SHEET_GEOREFS and the P40–P48 evidence unchanged. Machine-readable: /api/atlas/fucukovci-1825.",
                   )}
                 </p>
               </div>
