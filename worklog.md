@@ -3187,3 +3187,21 @@ tiho ne prihajajo (nov primer "tihe izgube opozoril" — znan iz P42). Stanje
 vsebine je VSEENO SINHRONIZIRANO (ročni push 502a77a na obe oddaljeni); sync.yml
 se bo moral obnoviti samodejno, ko bo billing rešen (secret je že nov). Probe
 workflow na vejici probe/actions-test — pushan in izbrisan (diagnostika).
+
+P53 (13. 10. 2026) — PRODUKCIJSKA SINHRONIZACIJA QA: 57/57 tudi na Vercelu (.vercelignore vzorec)
+- Odkritje: po P52 merge je Vercel (auto-deploy GitHub main @ f0be736) prvič pognal združen QA
+  suite (57 testov) — 14 testov faze P38–P51 (GitLab linija) je padlo, vsi z vzorcem
+  "research/issue17/*.json ni berljiv". Vzrok: /api/qa je force-static → računano ob GRADNJI na
+  Vercelu, kjer research/ NAMENOMA ni (.vercelignore, 92 MB); src/data/atlas/*.json (runtime
+  kopije, bajtno identični izpisi skriptov) pa so v deploymentu. 5 GitHub-linijskih testov
+  (p38b/p39b/p43b/p44b/p45b) je varovalni vzorec že imelo (sentinel fileExists), 14
+  GitLab-linijskih pa ne — v repo/CI so vedno šla skozi (research/ prisoten), na Vercelu padla.
+- Popravek src/lib/qa.ts (vzorec qa-p43-chain-full): za vse 14 testov `const raw = rawEv ?? rawRt`
+  — dokaz najprej (repo/CI: identičnost obeh izpisov + strogost nespremenjena), v produkciji
+  kontrola na runtime kopiji (isti JSON, isti invarianti); mode-aware detail sporočila
+  ("produkcija: runtime kopija preverjena — research/ ni v deploymentu"); p38 (brez runtime
+  kopije) po sentinel vzorcu qa-p38-ps-blatt (napaka le, če research/ prisoten a dokaz manjka);
+  p45 I2: ps-lexicon.json ?? runtime kopija. Ne Obstaja tiho preskakovanje: če MANJKA TUDI runtime
+  kopija → test pade (prava napaka).
+- Verifikacija: tsc 0, ESLint 0; simulacija obeh načinov (runQA z vbrizganim fs): REPO 57/57,
+  PROD-SIM (research/ filtriran) 57/57 — sporočila poštena; strogost v repozitoriju nespremenjena.

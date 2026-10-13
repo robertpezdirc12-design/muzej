@@ -1515,7 +1515,13 @@ export function runQA(opts: QAOptions = {}): QAReport {
   if (opts.readFile) {
     const raw = opts.readFile("research/issue17/ps-reconciliation.json");
     if (raw === null) {
-      p38Errors.push("research/issue17/ps-reconciliation.json ni berljiv (izpis scripts/p38_ps_reconcile.py)");
+      // produkcija: research/ NAMENOMA ni v deploymentu (.vercelignore, 92 MB) —
+      // vzorec qa-p38-ps-blatt: dokaz ostane v repozitoriju; napaka le, če je
+      // research/ prisoten, a ta dokaz manjka.
+      if (opts.fileExists?.("research/issue17/ps-raw/ps-005.json"))
+        p38Errors.push("research/issue17/ps-reconciliation.json ni berljiv (izpis scripts/p38_ps_reconcile.py)");
+      else
+        p38FileDetail = "produkcija: dokaz ps-reconciliation.json ostane v repozitoriju (research/ ni v deploymentu — .vercelignore)";
     } else {
       try {
         const j = JSON.parse(raw) as {
@@ -1642,13 +1648,17 @@ const p38bErrors: string[] = [];
   if (opts.readFile) {
     const rawEv = opts.readFile("research/issue17/ps-landuse.json");
     const rawRt = opts.readFile("src/data/atlas/ps-landuse.json");
-    if (rawEv === null) p39Errors.push("research/issue17/ps-landuse.json ni berljiv (izpis scripts/p39_ps_landuse.py)");
+    // produkcija: research/ NAMENOMA ni v deploymentu (.vercelignore, 92 MB) —
+    // kontrola teče na runtime kopiji (bajtno identični izpis skripta; identičnost
+    // obeh izpisov se preveri v repozitoriju/CI). Vzorec qa-p43-chain-full.
+    const raw = rawEv ?? rawRt;
+    if (raw === null) p39Errors.push("research/issue17/ps-landuse.json ni berljiv (izpis scripts/p39_ps_landuse.py)");
     if (rawRt === null) p39Errors.push("src/data/atlas/ps-landuse.json ni berljiv (runtime kopija)");
     if (rawEv !== null && rawRt !== null && rawEv !== rawRt)
       p39Errors.push("dokazni in runtime izpis ps-landuse.json nista identična (skript mora izpisati oba enako)");
-    if (rawEv !== null) {
+    if (raw !== null) {
       try {
-        const j = JSON.parse(rawEv) as {
+        const j = JSON.parse(raw) as {
           totals: { modelEntries: number; parcelCulturePairs: number; parcelEntries: number };
           cultureClasses: { classifiedPairs: number; unclassified: { count: number } };
           parcels: unknown[];
@@ -1660,9 +1670,11 @@ const p38bErrors: string[] = [];
         if (j.cultureClasses.unclassified.count !== C.unclassified.count) p39Errors.push("JSON unclassified.count ≠ TS");
         if (j.parcels.length !== T.parcelEntries) p39Errors.push(`JSON parcels.length=${j.parcels.length} ≠ parcelEntries ${T.parcelEntries}`);
         if (j.neberezna.length !== T.nebereznaRows) p39Errors.push(`JSON neberezna.length=${j.neberezna.length} ≠ nebereznaRows ${T.nebereznaRows}`);
-        p39FileDetail = `dokazni datoteki preverjeni in identični (vnosov ${j.parcels.length}+${j.neberezna.length}, parov ${j.totals.parcelCulturePairs})`;
+        p39FileDetail = rawEv !== null
+          ? `dokazni datoteki preverjeni in identični (vnosov ${j.parcels.length}+${j.neberezna.length}, parov ${j.totals.parcelCulturePairs})`
+          : `produkcija: runtime kopija preverjena — research/ ni v deploymentu (vnosov ${j.parcels.length}+${j.neberezna.length}, parov ${j.totals.parcelCulturePairs})`;
       } catch {
-        p39Errors.push("research/issue17/ps-landuse.json ni veljaven JSON");
+        p39Errors.push("izpis ps-landuse.json ni veljaven JSON");
       }
     }
   }
@@ -1783,13 +1795,16 @@ const p39bErrors: string[] = [];
   if (opts.readFile) {
     const rawEv = opts.readFile("research/issue17/ps-recap.json");
     const rawRt = opts.readFile("src/data/atlas/ps-recap.json");
-    if (rawEv === null) p40Errors.push("research/issue17/ps-recap.json ni berljiv (izpis scripts/p40_ps_recap.py)");
+    // produkcija: kontrola na runtime kopiji (bajtno identični izpis skripta;
+    // identičnost obeh izpisov se preveri v repozitoriju/CI). Vzorec qa-p43-chain-full.
+    const raw = rawEv ?? rawRt;
+    if (raw === null) p40Errors.push("research/issue17/ps-recap.json ni berljiv (izpis scripts/p40_ps_recap.py)");
     if (rawRt === null) p40Errors.push("src/data/atlas/ps-recap.json ni berljiv (runtime kopija)");
     if (rawEv !== null && rawRt !== null && rawEv !== rawRt)
       p40Errors.push("dokazni in runtime izpis ps-recap.json nista identična (skript mora izpisati oba enako)");
-    if (rawEv !== null) {
+    if (raw !== null) {
       try {
-        const j = JSON.parse(rawEv) as {
+        const j = JSON.parse(raw) as {
           recapitulation: { summaGrundparzellen: number; summaBauplatze: number; zusammen: number };
           areaDecomposition: { rowsWithArea: number; rowsWithoutArea: number; bySection: Record<string, { joch: number; klafter: number }> };
           numericEcho: { refuted: boolean; maxParcelNadaljevanje: number };
@@ -1801,9 +1816,11 @@ const p39bErrors: string[] = [];
         if (j.areaDecomposition.rowsWithoutArea !== A.rowsWithoutArea) p40Errors.push("JSON rowsWithoutArea ≠ TS");
         if (j.areaDecomposition.bySection.GRUND_1_2505?.joch !== G.joch) p40Errors.push("JSON GRUND joch ≠ TS");
         if (!j.numericEcho.refuted || j.numericEcho.maxParcelNadaljevanje !== 2840) p40Errors.push("JSON numericEcho ni ovrgan z 2840");
-        p40FileDetail = `dokazni datoteki preverjeni in identični (recap ${j.recapitulation.zusammen}, površine ${j.areaDecomposition.rowsWithArea}+${j.areaDecomposition.rowsWithoutArea} vrstic)`;
+        p40FileDetail = rawEv !== null
+          ? `dokazni datoteki preverjeni in identični (recap ${j.recapitulation.zusammen}, površine ${j.areaDecomposition.rowsWithArea}+${j.areaDecomposition.rowsWithoutArea} vrstic)`
+          : `produkcija: runtime kopija preverjena — research/ ni v deploymentu (recap ${j.recapitulation.zusammen}, površine ${j.areaDecomposition.rowsWithArea}+${j.areaDecomposition.rowsWithoutArea} vrstic)`;
       } catch {
-        p40Errors.push("research/issue17/ps-recap.json ni veljaven JSON");
+        p40Errors.push("izpis ps-recap.json ni veljaven JSON");
       }
     }
   }
@@ -1867,13 +1884,16 @@ const p39bErrors: string[] = [];
   if (opts.readFile) {
     const rawEv = opts.readFile("research/issue17/ps-recap-paleo.json");
     const rawRt = opts.readFile("src/data/atlas/ps-recap-paleo.json");
-    if (rawEv === null) p41Errors.push("research/issue17/ps-recap-paleo.json ni berljiv (izpis scripts/p41_ps_recap_paleo.py)");
+    // produkcija: kontrola na runtime kopiji (bajtno identični izpis skripta;
+    // identičnost obeh izpisov se preveri v repozitoriju/CI). Vzorec qa-p43-chain-full.
+    const raw = rawEv ?? rawRt;
+    if (raw === null) p41Errors.push("research/issue17/ps-recap-paleo.json ni berljiv (izpis scripts/p41_ps_recap_paleo.py)");
     if (rawRt === null) p41Errors.push("src/data/atlas/ps-recap-paleo.json ni berljiv (runtime kopija)");
     if (rawEv !== null && rawRt !== null && rawEv !== rawRt)
       p41Errors.push("dokazni in runtime izpis ps-recap-paleo.json nista identična (skript mora izpisati oba enako)");
-    if (rawEv !== null) {
+    if (raw !== null) {
       try {
-        const j = JSON.parse(rawEv) as {
+        const j = JSON.parse(raw) as {
           reading: { page140Right: { rows: { areaDerGemeinde: { value: string } } }; page143: { values: string[] } };
           identities: Record<string, { pass: boolean }>;
           crossCheck: { areaAttribution: { preferred: { deltaPct: number } } };
@@ -1882,9 +1902,11 @@ const p39bErrors: string[] = [];
         if (j.reading.page143.values.join(",") !== P41.page143.values.join(",")) p41Errors.push("JSON page143 ≠ TS");
         if (!j.identities.e_areaGemeinde?.pass) p41Errors.push("JSON identiteta e_areaGemeinde ni PASS");
         if (Math.abs(j.crossCheck.areaAttribution.preferred.deltaPct - AT41.preferred.deltaPct) > 0.001) p41Errors.push("JSON deltaPct ≠ TS");
-        p41FileDetail = `dokazni datoteki preverjeni in identični (Area ${j.reading.page140Right.rows.areaDerGemeinde.value}, str. 143: ${j.reading.page143.values.join("/")})`;
+        p41FileDetail = rawEv !== null
+          ? `dokazni datoteki preverjeni in identični (Area ${j.reading.page140Right.rows.areaDerGemeinde.value}, str. 143: ${j.reading.page143.values.join("/")})`
+          : `produkcija: runtime kopija preverjena — research/ ni v deploymentu (Area ${j.reading.page140Right.rows.areaDerGemeinde.value}, str. 143: ${j.reading.page143.values.join("/")})`;
       } catch {
-        p41Errors.push("research/issue17/ps-recap-paleo.json ni veljaven JSON");
+        p41Errors.push("izpis ps-recap-paleo.json ni veljaven JSON");
       }
     }
   }
@@ -1972,13 +1994,16 @@ const p39bErrors: string[] = [];
   if (opts.readFile) {
     const rawEv = opts.readFile("research/issue17/ps-landuse-v2.json");
     const rawRt = opts.readFile("src/data/atlas/ps-landuse-v2.json");
-    if (rawEv === null) p42Errors.push("research/issue17/ps-landuse-v2.json ni berljiv (izpis scripts/p42_ps_rulebook_v2.py)");
+    // produkcija: kontrola na runtime kopiji (bajtno identični izpis skripta;
+    // identičnost obeh izpisov se preveri v repozitoriju/CI). Vzorec qa-p43-chain-full.
+    const raw = rawEv ?? rawRt;
+    if (raw === null) p42Errors.push("research/issue17/ps-landuse-v2.json ni berljiv (izpis scripts/p42_ps_rulebook_v2.py)");
     if (rawRt === null) p42Errors.push("src/data/atlas/ps-landuse-v2.json ni berljiv (runtime kopija)");
     if (rawEv !== null && rawRt !== null && rawEv !== rawRt)
       p42Errors.push("dokazni in runtime izpis ps-landuse-v2.json nista identična (skript mora izpisati oba enako)");
-    if (rawEv !== null) {
+    if (raw !== null) {
       try {
-        const j = JSON.parse(rawEv) as {
+        const j = JSON.parse(raw) as {
           stats: { pairsTotal: number; v2ClassifiedPairs: number; toponymPairs: number; artifaktPairs: number; unresolvedPairs: number; classifiedPctV2: number };
           rulebook: { version: string; v1Rules: { no: number }[]; appendedRules: { no: number; pairs: number; claimedRaw: Record<string, { pairs: number }> }[] };
           termTypes: { TOPONIM: { pairs: number }; ARTIFAKT: { pairs: number }; NEKLASIFICIRANO: { pairs: number; families: { id: string; pairs: number }[] } };
@@ -2009,9 +2034,11 @@ const p39bErrors: string[] = [];
           const jPairs = (j.values as { pairs: number }[]).reduce((a, v) => a + v.pairs, 0);
           if (jPairs !== 2632) p42Errors.push(`JSON values parov (${jPairs}) ≠ 2632`);
         }
-        p42FileDetail = `dokazni datoteki preverjeni in identični (pari ${j.stats.v2ClassifiedPairs}/${j.stats.pairsTotal} = ${j.stats.classifiedPctV2} %, 13 pravil, 16 družin)`;
+        p42FileDetail = rawEv !== null
+          ? `dokazni datoteki preverjeni in identični (pari ${j.stats.v2ClassifiedPairs}/${j.stats.pairsTotal} = ${j.stats.classifiedPctV2} %, 13 pravil, 16 družin)`
+          : `produkcija: runtime kopija preverjena — research/ ni v deploymentu (pari ${j.stats.v2ClassifiedPairs}/${j.stats.pairsTotal} = ${j.stats.classifiedPctV2} %, 13 pravil, 16 družin)`;
       } catch {
-        p42Errors.push("research/issue17/ps-landuse-v2.json ni veljaven JSON");
+        p42Errors.push("izpis ps-landuse-v2.json ni veljaven JSON");
       }
     }
   }
@@ -2076,13 +2103,16 @@ const p39bErrors: string[] = [];
   if (opts.readFile) {
     const rawEv = opts.readFile("research/issue17/ps-lexicon.json");
     const rawRt = opts.readFile("src/data/atlas/ps-lexicon.json");
-    if (rawEv === null) p43Errors.push("research/issue17/ps-lexicon.json ni berljiv (izpis scripts/p43_ps_lexicon.py)");
+    // produkcija: kontrola na runtime kopiji (bajtno identični izpis skripta;
+    // identičnost obeh izpisov se preveri v repozitoriju/CI). Vzorec qa-p43-chain-full.
+    const raw = rawEv ?? rawRt;
+    if (raw === null) p43Errors.push("research/issue17/ps-lexicon.json ni berljiv (izpis scripts/p43_ps_lexicon.py)");
     if (rawRt === null) p43Errors.push("src/data/atlas/ps-lexicon.json ni berljiv (runtime kopija)");
     if (rawEv !== null && rawRt !== null && rawEv !== rawRt)
       p43Errors.push("dokazni in runtime izpis ps-lexicon.json nista identična (skript mora izpisati oba enako)");
-    if (rawEv !== null) {
+    if (raw !== null) {
       try {
-        const j = JSON.parse(rawEv) as {
+        const j = JSON.parse(raw) as {
           families: { id: string; pairs: number; stablePairs: number; fallbackPairs: number; block: { distinctPages: number }; lexicon: { termTypeHypothesis: string; hypotheses: { candidate: string; source: string; confidence: string }[]; sources: string[] } }[];
           singles: { pairs: number; distinctRaw: number };
           pvReconciliation: { weidenGapJ: number; rowsModelTotalJ: number; pvTotalJ: number };
@@ -2104,9 +2134,11 @@ const p39bErrors: string[] = [];
         }
         if (j.pvReconciliation.weidenGapJ !== 576.24 || j.pvReconciliation.rowsModelTotalJ !== 1564.78 || j.pvReconciliation.pvTotalJ !== 1221.95)
           p43Errors.push("JSON PV sprava ≠ TS");
-        p43FileDetail = `dokazni datoteki preverjeni in identični (216+66=282 parov, DINGF 10/10, PV ${j.pvReconciliation.pvTotalJ} J)`;
+        p43FileDetail = rawEv !== null
+          ? `dokazni datoteki preverjeni in identični (216+66=282 parov, DINGF 10/10, PV ${j.pvReconciliation.pvTotalJ} J)`
+          : `produkcija: runtime kopija preverjena — research/ ni v deploymentu (216+66=282 parov, DINGF 10/10, PV ${j.pvReconciliation.pvTotalJ} J)`;
       } catch {
-        p43Errors.push("research/issue17/ps-lexicon.json ni veljaven JSON");
+        p43Errors.push("izpis ps-lexicon.json ni veljaven JSON");
       }
     }
   }
@@ -2233,13 +2265,16 @@ const p43bErrors: string[] = [];
   if (opts.readFile) {
     const rawEv = opts.readFile("research/issue17/ps-k1k2.json");
     const rawRt = opts.readFile("src/data/atlas/ps-k1k2.json");
-    if (rawEv === null) p44Errors.push("research/issue17/ps-k1k2.json ni berljiv (izpis scripts/p44_ps_k1k2.py)");
+    // produkcija: kontrola na runtime kopiji (bajtno identični izpis skripta;
+    // identičnost obeh izpisov se preveri v repozitoriju/CI). Vzorec qa-p43-chain-full.
+    const raw = rawEv ?? rawRt;
+    if (raw === null) p44Errors.push("research/issue17/ps-k1k2.json ni berljiv (izpis scripts/p44_ps_k1k2.py)");
     if (rawRt === null) p44Errors.push("src/data/atlas/ps-k1k2.json ni berljiv (runtime kopija)");
     if (rawEv !== null && rawRt !== null && rawEv !== rawRt)
       p44Errors.push("dokazni in runtime izpis ps-k1k2.json nista identična (skript mora izpisati oba enako)");
-    if (rawEv !== null) {
+    if (raw !== null) {
       try {
-        const j = JSON.parse(rawEv) as {
+        const j = JSON.parse(raw) as {
           constraint: { value: number };
           resolution: { state: string; k1: number; k2: number; confidence: string };
           hypotheses: { id: string; pair: number[]; accepted: boolean; rejection: string | null }[];
@@ -2254,9 +2289,11 @@ const p43bErrors: string[] = [];
         for (const [k, v] of Object.entries(j.identities)) {
           if (!v.pass) p44Errors.push(`JSON identiteta ${k} ni PASS`);
         }
-        p44FileDetail = `dokazni datoteki preverjeni in identični (K1=${j.resolution.k1}, K2=${j.resolution.k2}, omejitev ${j.constraint.value} K, H1 edina sprejeta)`;
+        p44FileDetail = rawEv !== null
+          ? `dokazni datoteki preverjeni in identični (K1=${j.resolution.k1}, K2=${j.resolution.k2}, omejitev ${j.constraint.value} K, H1 edina sprejeta)`
+          : `produkcija: runtime kopija preverjena — research/ ni v deploymentu (K1=${j.resolution.k1}, K2=${j.resolution.k2}, omejitev ${j.constraint.value} K, H1 edina sprejeta)`;
       } catch {
-        p44Errors.push("research/issue17/ps-k1k2.json ni veljaven JSON");
+        p44Errors.push("izpis ps-k1k2.json ni veljaven JSON");
       }
     }
   }
@@ -2401,14 +2438,17 @@ const p44bErrors: string[] = [];
   if (opts.readFile) {
     const rawEv = opts.readFile("research/issue17/ps-lexicon-verified.json");
     const rawRt = opts.readFile("src/data/atlas/ps-lexicon-verified.json");
-    const rawP43 = opts.readFile("research/issue17/ps-lexicon.json");
-    if (rawEv === null) p45Errors.push("research/issue17/ps-lexicon-verified.json ni berljiv (izpis scripts/p45_lex_verify.py)");
+    // produkcija: kontrola na runtime kopiji (bajtno identični izpis skripta;
+    // identičnost obeh izpisov se preveri v repozitoriju/CI). Vzorec qa-p43-chain-full.
+    const raw = rawEv ?? rawRt;
+    const rawP43 = opts.readFile("research/issue17/ps-lexicon.json") ?? opts.readFile("src/data/atlas/ps-lexicon.json");
+    if (raw === null) p45Errors.push("research/issue17/ps-lexicon-verified.json ni berljiv (izpis scripts/p45_lex_verify.py)");
     if (rawRt === null) p45Errors.push("src/data/atlas/ps-lexicon-verified.json ni berljiv (runtime kopija)");
     if (rawEv !== null && rawRt !== null && rawEv !== rawRt)
       p45Errors.push("dokazni in runtime izpis ps-lexicon-verified.json nista identična (skript mora izpisati oba enako)");
-    if (rawEv !== null) {
+    if (raw !== null) {
       try {
-        const j = JSON.parse(rawEv) as {
+        const j = JSON.parse(raw) as {
           campaign: { targetsTotal: number; byVerdict: Record<string, number> };
           families: { id: string; hypotheses: { candidate: string; verification: { verdict: string; targets: { id: string; noteSi?: string }[] } }[] }[];
         };
@@ -2433,11 +2473,13 @@ const p44bErrors: string[] = [];
             p45Errors.push("research/issue17/ps-lexicon.json (P43) ni veljaven JSON (potrebna za I2)");
           }
         } else {
-          p45Errors.push("research/issue17/ps-lexicon.json (P43) ni berljiv za I2");
+          p45Errors.push("ps-lexicon.json (P43 dokaz in runtime kopija) ni berljiv za I2");
         }
-        p45FileDetail = `dokazni datoteki preverjeni in identični (49 tarč, ${hyps} hipotez, NEPOTRJENO ${j.campaign.byVerdict.NEPOTRJENO}, I2 potrjena)`;
+        p45FileDetail = rawEv !== null
+          ? `dokazni datoteki preverjeni in identični (49 tarč, ${hyps} hipotez, NEPOTRJENO ${j.campaign.byVerdict.NEPOTRJENO}, I2 potrjena)`
+          : `produkcija: runtime kopija preverjena — research/ ni v deploymentu (49 tarč, ${hyps} hipotez, NEPOTRJENO ${j.campaign.byVerdict.NEPOTRJENO}, I2 potrjena)`;
       } catch {
-        p45Errors.push("research/issue17/ps-lexicon-verified.json ni veljaven JSON");
+        p45Errors.push("izpis ps-lexicon-verified.json ni veljaven JSON");
       }
     }
   }
@@ -2585,13 +2627,16 @@ const p45bErrors: string[] = [];
   if (opts.readFile) {
     const rawEv = opts.readFile("research/issue17/neatline-georef.json");
     const rawRt = opts.readFile("src/data/atlas/neatline-georef.json");
-    if (rawEv === null) p46Errors.push("research/issue17/neatline-georef.json ni berljiv (izpis scripts/p46_neatline_georef.py)");
+    // produkcija: kontrola na runtime kopiji (bajtno identični izpis skripta;
+    // identičnost obeh izpisov se preveri v repozitoriju/CI). Vzorec qa-p43-chain-full.
+    const raw = rawEv ?? rawRt;
+    if (raw === null) p46Errors.push("research/issue17/neatline-georef.json ni berljiv (izpis scripts/p46_neatline_georef.py)");
     if (rawRt === null) p46Errors.push("src/data/atlas/neatline-georef.json ni berljiv (runtime kopija)");
     if (rawEv !== null && rawRt !== null && rawEv !== rawRt)
       p46Errors.push("dokazni in runtime izpis neatline-georef.json nista identična (skript mora izpisati oba enako)");
-    if (rawEv !== null) {
+    if (raw !== null) {
       try {
-        const j = JSON.parse(rawEv) as {
+        const j = JSON.parse(raw) as {
           control: { residuals: Record<string, { residualM: number }> };
           sharedScale: { sbarMPerPx: number; axisConsistencyPct: number };
           sheets: Record<string, { proposedStatus: string; uncertaintyM: number; sides: Record<string, { source: string }>; affineFit: { rmsM: number } }>;
@@ -2608,9 +2653,11 @@ const p45bErrors: string[] = [];
           p46Errors.push("JSON validacij ni 7/7");
         if (!Object.values(j.invariants).every((v) => v.includes("PASS") || v.includes("bajtno")))
           p46Errors.push("JSON invarianti niso vsi PASS");
-        p46FileDetail = `dokazni datoteki preverjeni in identični (kontrola 9.3/13.2 m, s̄ ${j.sharedScale.sbarMPerPx} m/px, A04 RMS ${j.sheets.A04.affineFit.rmsM} m, 7/7 validacij)`;
+        p46FileDetail = rawEv !== null
+          ? `dokazni datoteki preverjeni in identični (kontrola 9.3/13.2 m, s̄ ${j.sharedScale.sbarMPerPx} m/px, A04 RMS ${j.sheets.A04.affineFit.rmsM} m, 7/7 validacij)`
+          : `produkcija: runtime kopija preverjena — research/ ni v deploymentu (kontrola 9.3/13.2 m, s̄ ${j.sharedScale.sbarMPerPx} m/px, 7/7 validacij)`;
       } catch {
-        p46Errors.push("research/issue17/neatline-georef.json ni veljaven JSON");
+        p46Errors.push("izpis neatline-georef.json ni veljaven JSON");
       }
     }
   }
@@ -2661,13 +2708,16 @@ const p45bErrors: string[] = [];
   if (opts.readFile) {
     const rawEv = opts.readFile("research/issue17/gurs-overlay.json");
     const rawRt = opts.readFile("src/data/atlas/gurs-overlay.json");
-    if (rawEv === null) p47Errors.push("research/issue17/gurs-overlay.json ni berljiv (izpis scripts/p47_gurs_overlay.py)");
+    // produkcija: kontrola na runtime kopiji (bajtno identični izpis skripta;
+    // identičnost obeh izpisov se preveri v repozitoriju/CI). Vzorec qa-p43-chain-full.
+    const raw = rawEv ?? rawRt;
+    if (raw === null) p47Errors.push("research/issue17/gurs-overlay.json ni berljiv (izpis scripts/p47_gurs_overlay.py)");
     if (rawRt === null) p47Errors.push("src/data/atlas/gurs-overlay.json ni berljiv (runtime kopija)");
     if (rawEv !== null && rawRt !== null && rawEv !== rawRt)
       p47Errors.push("dokazni in runtime izpis gurs-overlay.json nista identična (skript mora izpisati oba enako)");
-    if (rawEv !== null) {
+    if (raw !== null) {
       try {
-        const j = JSON.parse(rawEv) as {
+        const j = JSON.parse(raw) as {
           sheets: Record<string, { nDrawn: number; nEmpty: number; drawn: { cov0: { median: number }; covBest: { median: number }; residualM: { median: number; p90: number } }; controls: Record<string, { median: number }> }>;
           crops: { file: string; sha256: string; bytes: number }[];
           invariants: Record<string, string>;
@@ -2681,9 +2731,11 @@ const p45bErrors: string[] = [];
           p47Errors.push("JSON izrezi: ni 16 ali manjkajo sha256/velikosti");
         if (!Object.values(j.invariants).every((v) => v.includes("PASS") || v.includes("bajtno")))
           p47Errors.push("JSON invarianti niso vsi PASS");
-        p47FileDetail = `dokazni datoteki preverjeni in identični (mediane 9.8/9.8/5.6/9.3 m, A05 EMPTY 394, 16 izrezov z sha256)`;
+        p47FileDetail = rawEv !== null
+          ? `dokazni datoteki preverjeni in identični (mediane 9.8/9.8/5.6/9.3 m, A05 EMPTY 394, 16 izrezov z sha256)`
+          : `produkcija: runtime kopija preverjena — research/ ni v deploymentu (mediane 9.8/9.8/5.6/9.3 m, A05 EMPTY 394, 16 izrezov z sha256)`;
       } catch {
-        p47Errors.push("research/issue17/gurs-overlay.json ni veljaven JSON");
+        p47Errors.push("izpis gurs-overlay.json ni veljaven JSON");
       }
     }
   }
@@ -2745,13 +2797,16 @@ const p45bErrors: string[] = [];
   if (opts.readFile) {
     const rawEv = opts.readFile("research/issue17/buildings-overlay.json");
     const rawRt = opts.readFile("src/data/atlas/buildings-overlay.json");
-    if (rawEv === null) p48Errors.push("research/issue17/buildings-overlay.json ni berljiv (izpis scripts/p48_buildings_overlay.py)");
+    // produkcija: kontrola na runtime kopiji (bajtno identični izpis skripta;
+    // identičnost obeh izpisov se preveri v repozitoriju/CI). Vzorec qa-p43-chain-full.
+    const raw = rawEv ?? rawRt;
+    if (raw === null) p48Errors.push("research/issue17/buildings-overlay.json ni berljiv (izpis scripts/p48_buildings_overlay.py)");
     if (rawRt === null) p48Errors.push("src/data/atlas/buildings-overlay.json ni berljiv (runtime kopija)");
     if (rawEv !== null && rawRt !== null && rawEv !== rawRt)
       p48Errors.push("dokazni in runtime izpis buildings-overlay.json nista identična (skript mora izpisati oba enako)");
-    if (rawEv !== null) {
+    if (raw !== null) {
       try {
-        const j = JSON.parse(rawEv) as {
+        const j = JSON.parse(raw) as {
           sheets: Record<string, { nEvaluated: number; onSymbol: { n: number; residualM?: { median: number } } }>;
           continuity: { pairs: number; pairsStrong: number; gone: number; footprints1825: number };
           blattX: { rows: number; distinctHausNr: number; areasComparable: number; areasIdentical: number };
@@ -2768,9 +2823,11 @@ const p45bErrors: string[] = [];
           p48Errors.push("JSON izrezi: ni 12 ali manjkajo sha256/velikosti");
         if (!Object.values(j.invariants).every((v) => v.includes("PASS") || v.includes("bajtno")))
           p48Errors.push("JSON invarianti niso vsi PASS");
-        p48FileDetail = `dokazni datoteki preverjeni in identični (on-symbol 149/26, kontinuiteta 37/136, Blatt X 0/37, 12 izrezov z sha256)`;
+        p48FileDetail = rawEv !== null
+          ? `dokazni datoteki preverjeni in identični (on-symbol 149/26, kontinuiteta 37/136, Blatt X 0/37, 12 izrezov z sha256)`
+          : `produkcija: runtime kopija preverjena — research/ ni v deploymentu (on-symbol 149/26, kontinuiteta 37/136, Blatt X 0/37, 12 izrezov z sha256)`;
       } catch {
-        p48Errors.push("research/issue17/buildings-overlay.json ni veljaven JSON");
+        p48Errors.push("izpis buildings-overlay.json ni veljaven JSON");
       }
     }
   }
@@ -2824,13 +2881,16 @@ const p45bErrors: string[] = [];
   if (opts.readFile) {
     const rawEv = opts.readFile("research/issue17/fucukovci-1825.json");
     const rawRt = opts.readFile("src/data/atlas/fucukovci-1825.json");
-    if (rawEv === null) p49Errors.push("research/issue17/fucukovci-1825.json ni berljiv (izpis scripts/p49_fucukovci1825.py)");
+    // produkcija: kontrola na runtime kopiji (bajtno identični izpis skripta;
+    // identičnost obeh izpisov se preveri v repozitoriju/CI). Vzorec qa-p43-chain-full.
+    const raw = rawEv ?? rawRt;
+    if (raw === null) p49Errors.push("research/issue17/fucukovci-1825.json ni berljiv (izpis scripts/p49_fucukovci1825.py)");
     if (rawRt === null) p49Errors.push("src/data/atlas/fucukovci-1825.json ni berljiv (runtime kopija)");
     if (rawEv !== null && rawRt !== null && rawEv !== rawRt)
       p49Errors.push("dokazni in runtime izpis fucukovci-1825.json nista identična (skript mora izpisati oba enako)");
-    if (rawEv !== null) {
+    if (raw !== null) {
       try {
-        const j = JSON.parse(rawEv) as {
+        const j = JSON.parse(raw) as {
           modern: { nInCell: number; nEvaluated: number; nOnSymbol: number; residualM: number | null };
           cluster: { onSymbolInCluster: number; hull: { areaM2: number }; inkMass: { massPx: number } };
           strict: { nSymbols: number; nCorroborated: number; nUnmatchedInCluster: number; triageInCluster: Record<string, number> };
@@ -2854,9 +2914,11 @@ const p45bErrors: string[] = [];
           p49Errors.push("JSON izrezi: ni 9 ali manjkajo sha256/velikosti");
         if (!Object.values(j.invariants).every((v) => v.includes("PASS") || v.includes("bajtno")))
           p49Errors.push("JSON invarianti niso vsi PASS");
-        p49FileDetail = `dokazni datoteki preverjeni in identični (26 mest, 53 jeder, lupina 36336 m², 9 izrezov z sha256, invarianti I1–I8 PASS)`;
+        p49FileDetail = rawEv !== null
+          ? `dokazni datoteki preverjeni in identični (26 mest, 53 jeder, lupina 36336 m², 9 izrezov z sha256, invarianti I1–I8 PASS)`
+          : `produkcija: runtime kopija preverjena — research/ ni v deploymentu (26 mest, 53 jeder, lupina 36336 m², 9 izrezov z sha256, invarianti I1–I8 PASS)`;
       } catch {
-        p49Errors.push("research/issue17/fucukovci-1825.json ni veljaven JSON");
+        p49Errors.push("izpis fucukovci-1825.json ni veljaven JSON");
       }
     }
   }
@@ -2917,13 +2979,16 @@ const p45bErrors: string[] = [];
   if (opts.readFile) {
     const rawEv = opts.readFile("research/issue17/georef-closure.json");
     const rawRt = opts.readFile("src/data/atlas/georef-closure.json");
-    if (rawEv === null) p50Errors.push("research/issue17/georef-closure.json ni berljiv (izpis scripts/p50_georef_closure.py)");
+    // produkcija: kontrola na runtime kopiji (bajtno identični izpis skripta;
+    // identičnost obeh izpisov se preveri v repozitoriju/CI). Vzorec qa-p43-chain-full.
+    const raw = rawEv ?? rawRt;
+    if (raw === null) p50Errors.push("research/issue17/georef-closure.json ni berljiv (izpis scripts/p50_georef_closure.py)");
     if (rawRt === null) p50Errors.push("src/data/atlas/georef-closure.json ni berljiv (runtime kopija)");
     if (rawEv !== null && rawRt !== null && rawEv !== rawRt)
       p50Errors.push("dokazni in runtime izpis georef-closure.json nista identična (skript mora izpisati oba enako)");
-    if (rawEv !== null) {
+    if (raw !== null) {
       try {
-        const j = JSON.parse(rawEv) as {
+        const j = JSON.parse(raw) as {
           activation: { basis: string[] };
           sheets: Record<string, { status: string; uncertaintyM: number; scale: { scaleMPerPixel: number }; shiftVsP10M: { max: number } }>;
           sheetGeorefsPatch: Record<string, { bounds: [[number, number], [number, number]]; controlPoints: unknown[] }>;
@@ -2945,9 +3010,11 @@ const p45bErrors: string[] = [];
         }
         if (!Object.values(j.invariants).every((v) => v.includes("PASS") || v.includes("bajtno")))
           p50Errors.push("JSON invarianti niso vsi PASS");
-        p50FileDetail = `dokazni datoteki preverjeni in identični (3 listi, 5 plasti, meje == model.ts, invarianti I1–I10 PASS)`;
+        p50FileDetail = rawEv !== null
+          ? `dokazni datoteki preverjeni in identični (3 listi, 5 plasti, meje == model.ts, invarianti I1–I10 PASS)`
+          : `produkcija: runtime kopija preverjena — research/ ni v deploymentu (3 listi, 5 plasti, meje == model.ts, invarianti I1–I10 PASS)`;
       } catch {
-        p50Errors.push("research/issue17/georef-closure.json ni veljaven JSON");
+        p50Errors.push("izpis georef-closure.json ni veljaven JSON");
       }
     }
   }
@@ -3009,13 +3076,16 @@ const p45bErrors: string[] = [];
   if (opts.readFile) {
     const rawEv = opts.readFile("research/issue17/leaflet-overlay.json");
     const rawRt = opts.readFile("src/data/atlas/leaflet-overlay.json");
-    if (rawEv === null) p51Errors.push("research/issue17/leaflet-overlay.json ni berljiv (izpis scripts/p51_leaflet_overlay.py)");
+    // produkcija: kontrola na runtime kopiji (bajtno identični izpis skripta;
+    // identičnost obeh izpisov se preveri v repozitoriju/CI). Vzorec qa-p43-chain-full.
+    const raw = rawEv ?? rawRt;
+    if (raw === null) p51Errors.push("research/issue17/leaflet-overlay.json ni berljiv (izpis scripts/p51_leaflet_overlay.py)");
     if (rawRt === null) p51Errors.push("src/data/atlas/leaflet-overlay.json ni berljiv (runtime kopija)");
     if (rawEv !== null && rawRt !== null && rawEv !== rawRt)
       p51Errors.push("dokazni in runtime izpis leaflet-overlay.json nista identična (skript mora izpisati oba enako)");
-    if (rawEv !== null) {
+    if (raw !== null) {
       try {
-        const j = JSON.parse(rawEv) as {
+        const j = JSON.parse(raw) as {
           ui: { togglesDefault: boolean; toggles: string[] };
           sheets: Record<string, {
             pixels: { width: number; height: number };
@@ -3048,9 +3118,11 @@ const p45bErrors: string[] = [];
           if (jt.overlayDeviationM.max !== ts.overlayDeviationM.max) p51Errors.push(`${k}: odmik ≠ konstanta`);
           if (jt.pixels.width !== ts.pixels.width || jt.pixels.height !== ts.pixels.height) p51Errors.push(`${k}: pixels ≠ konstanta`);
         }
-        p51FileDetail = `dokazni in runtime izpis preverjeni in identični (3 listi, ovoji == konstanta 5e-6, sha256, skew 0.5475/0.568/0.5708, odmiki 19.3/20.0/20.0, invarianti I1–I8 PASS)`;
+        p51FileDetail = rawEv !== null
+          ? `dokazni in runtime izpis preverjeni in identični (3 listi, ovoji == konstanta 5e-6, sha256, skew 0.5475/0.568/0.5708, odmiki 19.3/20.0/20.0, invarianti I1–I8 PASS)`
+          : `produkcija: runtime kopija preverjena — research/ ni v deploymentu (3 listi, ovoji == konstanta 5e-6, sha256, skew/odmiki, invarianti I1–I8 PASS)`;
       } catch {
-        p51Errors.push("research/issue17/leaflet-overlay.json ni veljaven JSON");
+        p51Errors.push("izpis leaflet-overlay.json ni veljaven JSON");
       }
     }
     // UI-vod: canvas uvaža runtime JSON (en sam vir resnice) + stikala z privzetimi vrednostmi
