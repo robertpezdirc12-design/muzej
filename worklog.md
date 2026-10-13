@@ -3171,3 +3171,19 @@ supersesijo; pini obeh linij ohranjeni); token-health.yml po GitHub popravku
 (P42: GH_REPO + de-dup); audit §32 (P39b) + §33 (P52). Faze obeh linij
 razločene z oznako »b« (GitHub: P39b/P43b/P45b). GitHub secret GITLAB_TOKEN
 povrnjen z novim žetonom → dvosmerni sync.yml resume; push na OBE oddaljeni.
+
+
+### P52 dodatek — GitHub Actions BLOKER (2026-10-14)
+
+Diagnoza po povrnitvi secret `GITLAB_TOKEN` (PUT 204, updated_at potrjen) in 2×
+workflow_dispatch: sync (in VSI workflowi od 11.10. 20:53 UTC) padejo v ~5 s z
+PRAZNO listo korakov — job se sploh ne starta. Pripis check-run 115409687174:
+"The job was not started because recent account payments have failed or your
+spending limit needs to be increased. Please check the 'Billing & plans' section
+in your settings." → **BLOKER NA RAVNI RAČUNA (billing), ne workflowa** — ni
+rešljivo s PAT; dejanje lastnika: GitHub → Settings → Billing & plans
+(plačilo/zvišanje spending limita). Posledica: tudi opozorila token-health
+tiho ne prihajajo (nov primer "tihe izgube opozoril" — znan iz P42). Stanje
+vsebine je VSEENO SINHRONIZIRANO (ročni push 502a77a na obe oddaljeni); sync.yml
+se bo moral obnoviti samodejno, ko bo billing rešen (secret je že nov). Probe
+workflow na vejici probe/actions-test — pushan in izbrisan (diagnostika).
