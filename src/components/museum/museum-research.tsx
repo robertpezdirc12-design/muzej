@@ -67,6 +67,7 @@ import {
   GURS_OVERLAY_P47,
   BUILDINGS_OVERLAY_P48,
   FUCUKOVCI_P49,
+  GEOREF_CLOSURE_P50,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -1371,6 +1372,77 @@ export function MuseumResearch() {
                   {t(
                     "Celtna vektorizacija tlorisov na A05 NI izvedljiva — P49 dostavi dokazna sloja namesto popolnega seznama tlorisov. GONE-kandidati in ocena števila stavb ostajajo [~]: triaža jeder je razvojna presoja (provenienca v izpisu) in čaka potrditev lastnika prek kontaktnega lista. WGS84 koordinate 26 mest so vezane na sodobne stavbe (residual ~10 m), ne na neodvisno segmentacijo simbolov. SHEET_GEOREFS in dokazi P40–P48 nespremenjeni. Strojno berljivo: /api/atlas/fucukovci-1825.",
                     "Full footprint vectorization on A05 is NOT feasible — P49 delivers evidence layers instead of a complete footprint list. GONE candidates and the building-count estimate remain [~]: the core triage is a development-time judgment (provenance in the evidence file) and awaits owner confirmation via the contact sheet. The WGS84 coordinates of the 26 places are bound to modern buildings (residual ~10 m), not to independent symbol segmentation. SHEET_GEOREFS and the P40–P48 evidence unchanged. Machine-readable: /api/atlas/fucukovci-1825.",
+                  )}
+                </p>
+              </div>
+            </div>
+
+            {/* Georeferenca N83 — zapora A03–A05 (P50, issue #14) */}
+            <div className="min-w-0 rounded-xl border bg-card p-6 shadow-sm">
+              <h3 className="flex items-center gap-2 font-display text-lg font-semibold">
+                <Crosshair className="size-4 text-primary" aria-hidden="true" />
+                {t("Georeferenca N83 — zapora A03–A05: aktivacija P46 neatline afin (P50)", "N83 georeference — closure of A03–A05: activation of the P46 neatline affines (P50)")}
+                <StatusBadge status={GEOREF_CLOSURE_P50.status} />
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                {t(
+                  "P50 aktivira P46 predlog nadgradnje: meje listov A03–A05 = narisane neatline = uradne meje celic eZKN 1:2880. Odločbo nosi 5 neodvisnih plasti dokazov, ki merijo isto afino (neatline kalibriran na A02/EŠD 2122, parcele P47, stavbe P48, sidro P49, napisi 7/7) — negotovost pada iz ±200–400 m na ±40–50 m (4–8× izboljšava), 5/5 listov serije je zdaj georeferenciranih.",
+                  "P50 activates the P46 upgrade proposal: the bounds of sheets A03–A05 = the drawn neatlines = the official boundaries of the eZKN 1:2880 cells. The decision rests on 5 independent evidence layers measuring the same affine (neatline calibrated on A02/EŠD 2122, parcels P47, buildings P48, anchor P49, labels 7/7) — the uncertainty drops from ±200–400 m to ±40–50 m (a 4–8× improvement), and 5/5 sheets of the series are now georeferenced.",
+                )}
+              </p>
+
+              {/* P50: plasti dokazov */}
+              <div className="mt-4 rounded-lg border bg-secondary/30 p-3">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-sm font-semibold">
+                    {t("P50 — 5 neodvisnih plasti, ki merijo isto afino", "P50 — 5 independent layers measuring the same affine")}
+                  </span>
+                  <span className="font-mono text-[11px] text-muted-foreground">scripts/p50_georef_closure.py</span>
+                </div>
+                <div className="mt-2 space-y-1">
+                  {GEOREF_CLOSURE_P50.activation.basis.map((b, i) => (
+                    <p key={i} className="rounded border bg-background px-2 py-1 font-mono text-[10px] leading-snug text-muted-foreground/90">
+                      {b}
+                    </p>
+                  ))}
+                </div>
+              </div>
+
+              {/* P50: per-sheet rezultati */}
+              <div className="mt-3 rounded-lg border bg-secondary/30 p-3">
+                <span className="text-sm font-semibold">
+                  {t("P50 — nove meje in statusi (SHEET_GEOREFS)", "P50 — new bounds and statuses (SHEET_GEOREFS)")}
+                </span>
+                <div className="mt-2 space-y-1">
+                  {(["A03", "A04", "A05"] as const).map((k) => {
+                    const s = GEOREF_CLOSURE_P50.sheets[k];
+                    return (
+                      <div key={k} className="rounded border bg-background px-2 py-1.5">
+                        <div className="flex flex-wrap items-center gap-1 font-mono text-[9px]">
+                          <span className="font-semibold">{k} · {s.cell}</span>
+                          <span className="rounded bg-emerald-100 px-1.5 py-0.5 dark:bg-emerald-950/40">{s.status} ±{s.uncertaintyM} m</span>
+                          <span className="rounded border px-1.5 py-0.5">{s.detectedSides}/4 {t("strani detektiranih", "sides detected")}</span>
+                          <span className="rounded border px-1.5 py-0.5">{t("parcele", "parcels")} {s.parcelMedianM} m</span>
+                          <span className="rounded border px-1.5 py-0.5">{t("premik vs P10", "shift vs P10")} {s.shiftVsP10M.max} m</span>
+                          <span className="rounded border px-1.5 py-0.5">{s.scaleMPerPixel} m/px</span>
+                          {k === "A05" && <span className="rounded bg-emerald-100 px-1.5 py-0.5 dark:bg-emerald-950/40">26 {t("stavb on-symbol", "buildings on-symbol")}</span>}
+                        </div>
+                        <div className="mt-1 font-mono text-[9px] text-muted-foreground/80">
+                          {s.boundsNeatlineNWSE[0].join(", ")} → {s.boundsNeatlineNWSE[1].join(", ")}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* P50: poštenost */}
+              <div className="mt-3 rounded-lg border border-emerald-200 bg-emerald-50/60 p-3 dark:border-emerald-900/50 dark:bg-emerald-950/30">
+                <p className="text-[11px] leading-relaxed text-foreground/80">
+                  <span className="font-semibold">{t("Pošten status: ", "Honest status: ")}</span>
+                  {t(
+                    "Aktivacija sledi dogovorjenemu pravilu »če je dokaz, aktiviraj«: pogoj iz P46/P47 (človeška potrditev črt) je izpolnjen s tremi post-P46 neodvisnimi validacijami (parcele, stavbe, sidro). Vizualni pregled izrezov s strani lastnika ostaja priporočen [~]; nesoglasje → povratni commit (premik mej je le 17–18 m). Meje = neatline (celica), ne ovoj skena — robovi skena so v izpisu (boundsImageNWSE). Merilo ima ~1 % projekcijsko subtelnost (TM bbox vs geodetski rob) — vpliva le na ocene velikosti, ne na lege. A01/A02 (GEOTRUTH) nespremenjena. Strojno berljivo: /api/atlas/georef-closure.",
+                    "The activation follows the agreed rule »if there is evidence, activate«: the P46/P47 condition (human confirmation of the lines) is fulfilled by three post-P46 independent validations (parcels, buildings, anchor). The owner's visual review of the crops remains recommended [~]; disagreement → a revert commit (the bounds shift is only 17–18 m). Bounds = the neatline (cell), not the scan envelope — scan corners are in the evidence (boundsImageNWSE). The scale carries ~1 % projection subtlety (TM bbox vs geodesic edge) — it affects size estimates only, not positions. A01/A02 (GEOTRUTH) unchanged. Machine-readable: /api/atlas/georef-closure.",
                   )}
                 </p>
               </div>

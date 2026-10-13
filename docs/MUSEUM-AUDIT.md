@@ -1699,3 +1699,57 @@ P40–P48 namerno nespremenjeni** (lekcija P9).
 (9.8), I3 sidro 43 px ∧ 25/26 v sklopu ∧ najbližje 48.9 px ∧ centroid 130 m,
 I4 53/7/19 jeder, I5 P10 ~45 znotraj mej [27, 44], I6 determinizem (2 prehoda
 bajtno), I7 kanonski = runtime, I8 9 izrezov z sha256.
+
+## 30. P50 — Georef zapora A03–A05: aktivacija P46 neatline afin
+
+**Datum:** 2026-10-14 · **Skript:** `scripts/p50_georef_closure.py` (determinističen,
+brez AI ob delovanju, FAIL ob padu invariant I1–I10) · **Dokaz:**
+`research/issue17/georef-closure.json` (identična runtime kopija
+`src/data/atlas/georef-closure.json`).
+
+**Naloga (iz P49 »ostaja odprto« + dogovorjeni načrt seje):** ocena georefekrencije
+A03–A05 (še vedno GRID_APPROX ±200–400 m) — ali lahko že dokazane afine (A01/A02
+GEOTRUTH + P46 neatline) zožijo negotovost. **Odgovor: da — P46 predlog je
+izčrpen in od P46 podprt s tremi dodatnimi neodvisnimi validacijami.**
+
+**Pet neodvisnih plasti, ki merijo isto P46 afino:**
+
+| plast | vir | meritve |
+|---|---|---|
+| L0 neatline | P46 | narisane črte = meje celic eZKN; kalibracija na A02/GEOTRUTH (EŠD 2122): residuala N 9.3 / E 13.2 m |
+| L1 parcele | P47 | mediana residuala 9.8 / 5.6 / 9.3 m (A03/A04/A05), p90 ≤ 13.2 m |
+| L2 stavbe | P48 | A02 149/154 on-symbol @ 9.8 m (kontrola metode), A05 26/95 @ 10.1 m |
+| L3 sidro | P49 | sklop Fučkovci: 43.2 px od VLM branja; najbližje mesto 48.9 px ≈ 38 m |
+| L4 napisi | P46 | 7/7 kontrolnih napisov P10 pade v prave k.o. pod afinami |
+
+**Aktivacija (odločba lastnika na dogovorjenem pravilu »če je dokaz,
+aktiviraj«):** SHEET_GEOREFS A03–A05 nadgrajeni iz GRID_APPROX (±200–400 m,
+REVIEW) na P46 neatline meje — A03 `NEATLINE_PARTIAL_GEOREFERENCED` ±50 m
+(S/E detektirani, N/W inferred preko s̄ A04; slabši kandidati v okviru 25 m),
+A04/A05 `NEATLINE_GEOREFERENCED` ±40 m (4/4 strani; afina na uradne kote celic,
+RMS ≤ 30 m). Premik mej vs P10 celica le **17.4 / 16.9 / 18.0 m** (konvergencija
+mreže — P10 celica je bila že prav); merilo popravljeno 0.72/0.73 →
+**0.7746 m/px** (P46 s̄, potrjeno s P49 `sbarMPerPx`). Kontrolne točke = 4
+neatline kota (uradni koti celic eZKN) + kontrolni napisi z izmerjenimi
+koordinatami. Viri `src-a03/a04/a05`: `georefStatus GEOREFERENCED`,
+`placement.precision NEATLINE_*`, `georeferenced: true` — **5/5 listov serije
+georeferenciranih** (issue #4 zaprt).
+
+**Poštenost:** meje = neatline (celica), ne ovoj skena — robovi skena so v
+izpisu (`boundsImageNWSE`, oglišča prek afine) za prihodnji Leaflet overlay.
+Merilo ima ~1 % projekcijsko subtelnost (TM bbox vs geodetski rob listeve
+konvergence mreže) — vpliva le na ocene velikosti, ne na lege (afina je na
+kotih celic točna do 1e-6°). Pogoj iz P46/P47 (človeška potrditev izrezov) je
+izpolnjen s plastmi L1–L4; vizualni pregled izrezov ostaja priporočen [~],
+nesoglasje → povratni commit. SHEET_GEOREFS A01/A02 (GEOTRUTH) nespremenjene;
+dokazi P40–P49 nespremenjeni.
+
+**Invarianti I1–I10: PASS** — I1 affine(pxRect) == P46 bounds (≤ 0.5 m), I2
+uradni koti celic ≤ 1 m, I3 P47 mediane ≤ 15 m, I4 A02 149/154 ∧ A05 26,
+I5 napisi 7/7, I6 premiki == P46 (±2 m), I7 koren A02 ≤ 90 m, I8 determinizem,
+I9 kanonski = runtime, I10 varnost (premik ≤ 50 m, merilo 0.70–0.85).
+
+**QA:** qa-p10 posodobljena (novi statusi/meje/merilo, pokritost 5/0/5), qa-p20
+usklajena (5+0), **qa-p50** nova (navzkrižna kontrola SHEET_GEOREFS ↔ konstanta
+↔ JSON patch, 5 plasti, 7/7 napisov, identičnost izpisov prek readFile) —
+QA 50 → **51/51**.

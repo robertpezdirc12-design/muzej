@@ -34,6 +34,7 @@ import {
   GURS_OVERLAY_P47,
   BUILDINGS_OVERLAY_P48,
   FUCUKOVCI_P49,
+  GEOREF_CLOSURE_P50,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -860,16 +861,18 @@ export function runQA(opts: QAOptions = {}): QAReport {
   const georefA04 = SHEET_GEOREFS.find((g) => g.id === "georef-a04");
   const georefA05 = SHEET_GEOREFS.find((g) => g.id === "georef-a05");
 
-  // A03 = celica dg
+  // A03 = celica dg — P50: NEATLINE_PARTIAL_GEOREFERENCED (aktivacija P46 afine)
   if (!georefA03) {
     p10Errors.push("georef-a03 manjka v SHEET_GEOREFS");
   } else {
     const b = georefA03.bounds;
-    if (georefA03.status !== "REVIEW") p10Errors.push(`A03 status: ${georefA03.status} (pričakovano REVIEW)`);
-    if (Math.abs(b[0][0] - 45.5575) > 0.0005 || Math.abs(b[0][1] - 15.2485) > 0.0005)
-      p10Errors.push(`A03 bounds S/Z: ${b[0]} (pričakovano [45.5575, 15.2485] = celica VKIX24dg)`);
-    if (Math.abs(b[1][0] - 45.5437) > 0.0005 || Math.abs(b[1][1] - 15.273) > 0.0005)
-      p10Errors.push(`A03 bounds J/V: ${b[1]} (pričakovano [45.5437, 15.2730])`);
+    if (georefA03.status !== "NEATLINE_PARTIAL_GEOREFERENCED") p10Errors.push(`A03 status: ${georefA03.status} (pričakovano NEATLINE_PARTIAL_GEOREFERENCED — P50)`);
+    if (Math.abs(b[0][0] - 45.557532) > 5e-5 || Math.abs(b[0][1] - 15.248718) > 5e-5)
+      p10Errors.push(`A03 bounds S/Z: ${b[0]} (pričakovano [45.557532, 15.248718] = P46 neatline celice VKIX24dg)`);
+    if (Math.abs(b[1][0] - 45.543722) > 5e-5 || Math.abs(b[1][1] - 15.272827) > 5e-5)
+      p10Errors.push(`A03 bounds J/V: ${b[1]} (pričakovano [45.543722, 15.272827])`);
+    if (Math.abs(georefA03.scaleMPerPixel - 0.7746) > 0.005)
+      p10Errors.push(`A03 merilo: ${georefA03.scaleMPerPixel} (pričakovano 0,7746 — P46 s̄)`);
     if (georefA03.pixels.width !== 2645 || georefA03.pixels.height !== 2154)
       p10Errors.push(`A03 px: ${georefA03.pixels.width}×${georefA03.pixels.height}`);
     const cpSi = georefA03.controlPoints.map((c) => c.fromSi).join(" |");
@@ -877,35 +880,37 @@ export function runQA(opts: QAOptions = {}): QAReport {
       if (!cpSi.includes(must)) p10Errors.push(`A03 kontrolna točka manjka: ${must}`);
     }
     if (!georefA03.methodSi.includes("O.IX24dg")) p10Errors.push("A03 metoda mora navesti oznako »O.IX24dg«");
+    if (!georefA03.methodSi.includes("AKTIVACIJA P50")) p10Errors.push("A03 metoda mora navesti AKTIVACIJO P50");
   }
 
-  // A04 = POPRAVLJENA celica cg (P9 umaknjena)
+  // A04 = POPRAVLJENA celica cg (P9 umaknjena) — P50: NEATLINE_GEOREFERENCED
   if (!georefA04) {
     p10Errors.push("georef-a04 manjka v SHEET_GEOREFS");
   } else {
     const b = georefA04.bounds;
-    if (georefA04.status !== "REVIEW") p10Errors.push(`A04 status: ${georefA04.status} (pričakovano REVIEW — popravek P9)`);
-    if (Math.abs(b[0][0] - 45.5574) > 0.0005 || Math.abs(b[0][1] - 15.2728) > 0.0005)
-      p10Errors.push(`A04 bounds S/Z: ${b[0]} (pričakovano [45.5574, 15.2728] = celica VKIX24cg)`);
-    if (Math.abs(b[1][0] - 45.5436) > 0.0005 || Math.abs(b[1][1] - 15.2973) > 0.0005)
-      p10Errors.push(`A04 bounds J/V: ${b[1]} (pričakovano [45.5436, 15.2973])`);
-    if (georefA04.scaleMPerPixel !== 0.72) p10Errors.push(`A04 merilo: ${georefA04.scaleMPerPixel} (pričakovano 0,72)`);
+    if (georefA04.status !== "NEATLINE_GEOREFERENCED") p10Errors.push(`A04 status: ${georefA04.status} (pričakovano NEATLINE_GEOREFERENCED — P50)`);
+    if (Math.abs(b[0][0] - 45.55737) > 5e-5 || Math.abs(b[0][1] - 15.273012) > 5e-5)
+      p10Errors.push(`A04 bounds S/Z: ${b[0]} (pričakovano [45.55737, 15.273012] = P46 neatline celice VKIX24cg)`);
+    if (Math.abs(b[1][0] - 45.543554) > 5e-5 || Math.abs(b[1][1] - 15.297115) > 5e-5)
+      p10Errors.push(`A04 bounds J/V: ${b[1]} (pričakovano [45.543554, 15.297115])`);
+    if (Math.abs(georefA04.scaleMPerPixel - 0.7746) > 0.005) p10Errors.push(`A04 merilo: ${georefA04.scaleMPerPixel} (pričakovano 0,7746 — P46 s̄)`);
     if (!georefA04.methodSi.includes("POPRAVEK")) p10Errors.push("A04 metoda mora biti označena kot POPRAVEK");
     if (!georefA04.methodSi.includes("O.IX24cg")) p10Errors.push("A04 metoda mora navesti oznako »O.IX24cg«");
     if (!georefA04.methodSi.includes("636 m")) p10Errors.push("A04 metoda mora navesti zavrnitev P9 (mediana 636 m)");
+    if (!georefA04.methodSi.includes("AKTIVACIJA P50")) p10Errors.push("A04 metoda mora navesti AKTIVACIJO P50");
     if (georefA04.controlPoints.length < 3) p10Errors.push(`A04 kontrolne točke: ${georefA04.controlPoints.length} (pričakovano ≥ 3)`);
   }
 
-  // A05 = celica ch
+  // A05 = celica ch — P50: NEATLINE_GEOREFERENCED (aktivacija P46 afine)
   if (!georefA05) {
     p10Errors.push("georef-a05 manjka v SHEET_GEOREFS");
   } else {
     const b = georefA05.bounds;
-    if (georefA05.status !== "REVIEW") p10Errors.push(`A05 status: ${georefA05.status} (pričakovano REVIEW)`);
-    if (Math.abs(b[0][0] - 45.5437) > 0.0005 || Math.abs(b[0][1] - 15.2726) > 0.0005)
-      p10Errors.push(`A05 bounds S/Z: ${b[0]} (pričakovano [45.5437, 15.2726] = celica VKIX24ch)`);
-    if (Math.abs(b[1][0] - 45.5299) > 0.0005 || Math.abs(b[1][1] - 15.2971) > 0.0005)
-      p10Errors.push(`A05 bounds J/V: ${b[1]} (pričakovano [45.5299, 15.2971])`);
+    if (georefA05.status !== "NEATLINE_GEOREFERENCED") p10Errors.push(`A05 status: ${georefA05.status} (pričakovano NEATLINE_GEOREFERENCED — P50)`);
+    if (Math.abs(b[0][0] - 45.543722) > 5e-5 || Math.abs(b[0][1] - 15.272828) > 5e-5)
+      p10Errors.push(`A05 bounds S/Z: ${b[0]} (pričakovano [45.543722, 15.272828] = P46 neatline celice VKIX24ch)`);
+    if (Math.abs(b[1][0] - 45.529907) > 5e-5 || Math.abs(b[1][1] - 15.296925) > 5e-5)
+      p10Errors.push(`A05 bounds J/V: ${b[1]} (pričakovano [45.529907, 15.296925])`);
     if (georefA05.pixels.width !== 2634 || georefA05.pixels.height !== 2165)
       p10Errors.push(`A05 px: ${georefA05.pixels.width}×${georefA05.pixels.height}`);
     const cpSi = georefA05.controlPoints.map((c) => c.fromSi).join(" |");
@@ -913,14 +918,15 @@ export function runQA(opts: QAOptions = {}): QAReport {
       if (!cpSi.includes(must)) p10Errors.push(`A05 kontrolna točka manjka: ${must}`);
     }
     if (!georefA05.methodSi.includes("O.IX24ch")) p10Errors.push("A05 metoda mora navesti oznako »O.IX24ch«");
+    if (!georefA05.methodSi.includes("AKTIVACIJA P50")) p10Errors.push("A05 metoda mora navesti AKTIVACIJO P50");
   }
 
-  // viri: 2 lista VALIDIRANA (A01/A02) + 3 listi GRID_APPROX (A03–A05, issue #4 ločitev natančnosti)
+  // viri: 5 listov GEOREFERENCED (P50: A01/A02 VALIDATED_GEOREF + A03–A05 NEATLINE_*)
   const graphicSheets = ATLAS_SOURCES.filter((s) => s.type === "cadastral-map");
   const geoCount = graphicSheets.filter((s) => s.georefStatus === "GEOREFERENCED").length;
   const gridCount = graphicSheets.filter((s) => s.georefStatus === "GRID_APPROX").length;
-  if (geoCount !== 2) p10Errors.push(`validirano georeferencirani grafični listi: ${geoCount} (pričakovano 2 — A01/A02)`);
-  if (gridCount !== 3) p10Errors.push(`listi z okvirno umestitvijo (GRID_APPROX): ${gridCount} (pričakovano 3 — A03/A04/A05)`);
+  if (geoCount !== 5) p10Errors.push(`georeferencirani grafični listi: ${geoCount} (pričakovano 5 — A01–A05 od P50)`);
+  if (gridCount !== 0) p10Errors.push(`listi z okvirno umestitvijo (GRID_APPROX): ${gridCount} (pričakovano 0 — P50)`);
   const srcA01 = ATLAS_SOURCES.find((s) => s.id === "src-a01");
   const srcA02 = ATLAS_SOURCES.find((s) => s.id === "src-a02");
   const srcA03 = ATLAS_SOURCES.find((s) => s.id === "src-a03");
@@ -930,9 +936,13 @@ export function runQA(opts: QAOptions = {}): QAReport {
     if (!src || src.georefStatus !== "GEOREFERENCED" || src.georeferenced !== true || src.placement?.precision !== "VALIDATED_GEOREF")
       p10Errors.push(`${id} ni GEOREFERENCED z VALIDATED_GEOREF placement`);
   }
-  for (const [src, id, cell] of [[srcA03, "src-a03", "dg"], [srcA04, "src-a04", "cg"], [srcA05, "src-a05", "ch"]] as const) {
-    if (!src || src.georefStatus !== "GRID_APPROX" || src.georeferenced !== false || src.placement?.precision !== "GRID_APPROX")
-      p10Errors.push(`${id} ni GRID_APPROX z ustreznim placement`);
+  for (const [src, id, cell, precision] of [
+    [srcA03, "src-a03", "dg", "NEATLINE_PARTIAL_GEOREFERENCED"],
+    [srcA04, "src-a04", "cg", "NEATLINE_GEOREFERENCED"],
+    [srcA05, "src-a05", "ch", "NEATLINE_GEOREFERENCED"],
+  ] as const) {
+    if (!src || src.georefStatus !== "GEOREFERENCED" || src.georeferenced !== true || src.placement?.precision !== precision)
+      p10Errors.push(`${id} ni GEOREFERENCED z ${precision} placement (P50)`);
     else if (src.placement && !src.placement.methodSi.includes(cell))
       p10Errors.push(`${id} placement brez celice ${cell}`);
   }
@@ -943,15 +953,15 @@ export function runQA(opts: QAOptions = {}): QAReport {
   const srcEzkn = ATLAS_SOURCES.find((s) => s.id === "src-ezkn");
   if (srcEzkn && !srcEzkn.noteSi?.includes("O.IX24c"))
     p10Errors.push("src-ezkn opomba brez kod celic (O.IX24c…)");
-  // pokritost (issue #4: ločeno validirana 2 + približna 3)
+  // pokritost (issue #4: od P50 vseh 5 listov georeferenciranih)
   const covP10 = getCoverage();
-  if (covP10.sheetsGeoreferenced !== 2 || covP10.sheetsGridApprox !== 3 || covP10.sheetsTotal !== 5)
-    p10Errors.push(`COVERAGE listi: validirani ${covP10.sheetsGeoreferenced} / približni ${covP10.sheetsGridApprox} / skupaj ${covP10.sheetsTotal} (pričakovano 2/3/5)`);
+  if (covP10.sheetsGeoreferenced !== 5 || covP10.sheetsGridApprox !== 0 || covP10.sheetsTotal !== 5)
+    p10Errors.push(`COVERAGE listi: validirani ${covP10.sheetsGeoreferenced} / približni ${covP10.sheetsGridApprox} / skupaj ${covP10.sheetsTotal} (pričakovano 5/0/5 od P50)`);
 
   push(
     "qa-p10-ezkn-grid",
-    "P10: sekcija mreža eZKN razrešila vse liste — A03=celica dg, A04=celica cg (POPRAVEK P9), A05=celica ch; issue #4: 2 lista validirano georeferencirana (A01/A02), 3 listi okvirno umesčeni po mreži (GRID_APPROX ±200–400 m)",
-    "P10: the eZKN section grid resolved ALL sheets — A03=cell dg, A04=cell cg (P9 CORRECTION), A05=cell ch; issue #4: 2 sheets validated georeference (A01/A02), 3 sheets approximately placed by the grid (GRID_APPROX ±200–400 m)",
+    "P10: sekcija mreža eZKN razrešila vse liste — A03=celica dg, A04=celica cg (POPRAVEK P9), A05=celica ch; P50 (2026-10-14): A03–A05 nadgrajeni iz GRID_APPROX (±200–400 m) na P46 neatline afine (NEATLINE ±40/50 m) — 5/5 listov georeferenciranih",
+    "P10: the eZKN section grid resolved ALL sheets — A03=cell dg, A04=cell cg (P9 CORRECTION), A05=cell ch; P50 (2026-10-14): A03–A05 upgraded from GRID_APPROX (±200–400 m) to the P46 neatline affines (NEATLINE ±40/50 m) — 5/5 sheets georeferenced",
     p10Errors.length === 0,
     p10Errors.length === 0
       ? "Okvirjene oznake listov so KODI SEKCIJSKE MREŽE 1:2880 (eZKN/GURS, uradna geometrija D96/TM): A02=»O.IX24cƒ«→celica cf — središče vsebine A02 se NATANČNO ujema s središčem celice (princip list≈celica!) — torej A03=»O.IX24dg«→celica dg (45,5437–45,5575 N, 15,2485–15,273 E; vsebina = le vzhodni pas = zahodni rob k.o. Griblje; TRIBUTSCH→k.o. Tribuče ✓, WEIDENDORF→k.o. Bedenj ✓), A04=»O.IX24cg«→celica cg (45,5436–45,5574, 15,2728–15,2973 — DIREKTNO južno od A02; POPRAVEK P9: prejšnja lega na ovinku Kolpe pri Adlešičih zavrnjena — stavbna validacija 636 m mediane, kontrole P9 nedisukriminativne, »reka« = verjetno dolina; Kolpa teče IZVEN lista A04), A05=»O.IX24ch«→celica ch (45,5299–45,5437, 15,2726–15,2971 = skrajni jug 1825 k.o. Griblje — ozemlje pozneje odvzeto; sklop 45 stavb → Fučkovci/Dragoši [~], Pri Jankovichti → naselje Jankoviči ✓). Vsa stanja REVIEW (±200–400 m); identiteta listov neodvisno potrjena prek VAČ (5 listov N083A01–A05, križne korelacije predogledov); novi viri: GURS WFS (k.o. 1544 poligon + 2117 parcel + naselja), eZKN (mreža + ZKN skeni); prekritost 5/5"
@@ -1281,19 +1291,19 @@ export function runQA(opts: QAOptions = {}): QAReport {
     if (s.placement && !s.placement.lastChecked) p20geoErrors.push(`${s.id}: placement brez datuma preveritve`);
   }
   const covGeo = getCoverage();
-  if (covGeo.sheetsGeoreferenced !== 2 || covGeo.sheetsGridApprox !== 3)
-    p20geoErrors.push(`pokritost: ${covGeo.sheetsGeoreferenced}+${covGeo.sheetsGridApprox} (pričakovano 2+3)`);
+  if (covGeo.sheetsGeoreferenced !== 5 || covGeo.sheetsGridApprox !== 0)
+    p20geoErrors.push(`pokritost: ${covGeo.sheetsGeoreferenced}+${covGeo.sheetsGridApprox} (pričakovano 5+0 od P50)`);
   if (covGeo.archivalUnits !== 12) p20geoErrors.push(`archivalUnits: ${covGeo.archivalUnits} (pričakovano 12)`);
   if (covGeo.archivalPages !== 277) p20geoErrors.push(`archivalPages: ${covGeo.archivalPages} (pričakovano 277 = 143+71+49+8+4+1+1)`);
   if (covGeo.housesWithGeometry !== 0)
     p20geoErrors.push(`housesWithGeometry: ${covGeo.housesWithGeometry} — hiša↔stavba povezava zahteva dokaz (156 geometrij nima hišnih št.)`);
   push(
     "qa-p20-georef-precision",
-    "P20: natančnost prostorske umestitve ločena — A01/A02 VALIDIRANA georeferenca (±40–100 m), A03–A05 GRID_APPROX (±200–400 m, sekcijska mreža); 12 enot, 277 strani fonda, 0 hiš z dokazano geometrijo",
-    "P20: spatial placement precision separated — A01/A02 VALIDATED georeference (±40–100 m), A03–A05 GRID_APPROX (±200–400 m, section grid); 12 units, 277 fond pages, 0 houses with proven geometry",
+    "P20: natančnost prostorske umestitve ločena — A01/A02 VALIDIRANA georeferenca (±40–100 m), A03–A05 NEATLINE (±40–50 m od P50, prej GRID_APPROX ±200–400 m); 12 enot, 277 strani fonda, 0 hiš z dokazano geometrijo",
+    "P20: spatial placement precision separated — A01/A02 VALIDATED georeference (±40–100 m), A03–A05 NEATLINE (±40–50 m since P50, previously GRID_APPROX ±200–400 m); 12 units, 277 fond pages, 0 houses with proven geometry",
     p20geoErrors.length === 0,
     p20geoErrors.length === 0
-      ? "listi: 2 validirana + 3 približno umesčene (vsak s placement: method/controlPoints/accuracy/lastChecked); pokritost 2+3=5"
+      ? "listi: 5 georeferenciranih (2 VALIDATED_GEOREF + 3 NEATLINE_* od P50; vsak s placement: method/controlPoints/accuracy/lastChecked); pokritost 5+0=5"
       : p20geoErrors.join("; "),
   );
 
@@ -2533,6 +2543,97 @@ export function runQA(opts: QAOptions = {}): QAReport {
     p49Errors.length === 0
       ? `26 mest (25 v sklopu, residual 9.8 m) · 53 jeder (7 koreliranih, triaža 2+4 [~]) · lupina 36336 m² · meje [27, 44] ⊇ P10 ~45 · 9 izrezov · ${p49FileDetail}`
       : p49Errors.join("; "),
+  );
+
+  /* ── P50: GEOREF ZAPORA A03–A05 — aktivacija P46 neatline afin ————————————————— */
+  const p50Errors: string[] = [];
+  const p50 = GEOREF_CLOSURE_P50;
+  // 1) verdikt deklarira aktivacijo + pošten status človeškega pogoja
+  if (!p50.activation.decision.includes("AKTIVIRAN")) p50Errors.push("odločba ne deklarira aktivacije P46 predloga");
+  if (!p50.statusLine.includes("ACTIVATED-DETERMINISTIC")) p50Errors.push("statusLine ni ACTIVATED-DETERMINISTIC");
+  if (!p50.activation.humanGateNote.includes("priporočen [~]")) p50Errors.push("humanGateNote brez poštenega [~] statusa vizualnega pregleda");
+  if (p50.activation.basis.length !== 5) p50Errors.push(`basis: ${p50.activation.basis.length} plasti (pričakovano 5 — L0–L4)`);
+  // 2) navzkrižna kontrola: JSON/T konstanta ↔ živi SHEET_GEOREFS (KLJUČNA regresijska zavarovala)
+  for (const [key, sid] of [["A03", "georef-a03"], ["A04", "georef-a04"], ["A05", "georef-a05"]] as const) {
+    const g = SHEET_GEOREFS.find((x) => x.id === sid);
+    const s = p50.sheets[key];
+    if (!g || !s) {
+      p50Errors.push(`P50: manjka ${key}/${sid}`);
+      continue;
+    }
+    if (g.status !== s.status) p50Errors.push(`${key}: status ${g.status} ≠ konstanta ${s.status}`);
+    if (Math.abs(g.bounds[0][0] - s.boundsNeatlineNWSE[0][0]) > 5e-5 || Math.abs(g.bounds[0][1] - s.boundsNeatlineNWSE[0][1]) > 5e-5)
+      p50Errors.push(`${key}: bounds SZ ${g.bounds[0]} ≠ konstanta ${s.boundsNeatlineNWSE[0]}`);
+    if (Math.abs(g.bounds[1][0] - s.boundsNeatlineNWSE[1][0]) > 5e-5 || Math.abs(g.bounds[1][1] - s.boundsNeatlineNWSE[1][1]) > 5e-5)
+      p50Errors.push(`${key}: bounds JV ${g.bounds[1]} ≠ konstanta ${s.boundsNeatlineNWSE[1]}`);
+    if (Math.abs(g.scaleMPerPixel - s.scaleMPerPixel) > 5e-4) p50Errors.push(`${key}: merilo ${g.scaleMPerPixel} ≠ ${s.scaleMPerPixel}`);
+    if (g.controlPoints.length !== s.controlPointsN) p50Errors.push(`${key}: kontrolne točke ${g.controlPoints.length} ≠ ${s.controlPointsN}`);
+  }
+  // 3) pinane vrednosti dokaza
+  if (p50.sheets.A03.detectedSides !== 2 || p50.sheets.A04.detectedSides !== 4 || p50.sheets.A05.detectedSides !== 4)
+    p50Errors.push("detektirane strani 2/4/4 ni pinano");
+  for (const [key, med] of [["A03", 9.8], ["A04", 5.6], ["A05", 9.3]] as const) {
+    if (p50.sheets[key].parcelMedianM !== med) p50Errors.push(`${key}: P47 mediana ${p50.sheets[key].parcelMedianM} ≠ ${med}`);
+  }
+  if (p50.sheets.A05.buildingsOnSymbol !== 26) p50Errors.push("A05: 26 on-symbol ni pinano");
+  if (p50.sheets.A03.shiftVsP10M.max !== 17.4 || p50.sheets.A04.shiftVsP10M.max !== 16.9 || p50.sheets.A05.shiftVsP10M.max !== 18.0)
+    p50Errors.push("premiki vs P10 17.4/16.9/18.0 ni pinano");
+  if (p50.labelsValidation.length !== 7 || p50.labelsValidation.some((l) => !l.pass))
+    p50Errors.push("validacije napisov niso 7/7 PASS");
+  if (!Object.values(p50.invariants).every((v) => v.includes("PASS") || v.includes("bajtno")))
+    p50Errors.push("invarianti I1–I10 niso vsi PASS");
+  // 4) viri: opombe nosijo AKTIVACIJO P50
+  for (const sid of ["src-a03", "src-a04", "src-a05"]) {
+    const s = ATLAS_SOURCES.find((x) => x.id === sid);
+    if (!s || !s.noteSi?.includes("AKTIVACIJA P50")) p50Errors.push(`${sid}: opomba brez AKTIVACIJE P50`);
+  }
+  // 5) identičnost obeh izpisov prek vbrizganega readFile (vzorec qa-p37..p49)
+  let p50FileDetail = "dokazni datoteki nista preverjeni (readFile ni na voljo) — celovita kontrola teče na /api/qa";
+  if (opts.readFile) {
+    const rawEv = opts.readFile("research/issue17/georef-closure.json");
+    const rawRt = opts.readFile("src/data/atlas/georef-closure.json");
+    if (rawEv === null) p50Errors.push("research/issue17/georef-closure.json ni berljiv (izpis scripts/p50_georef_closure.py)");
+    if (rawRt === null) p50Errors.push("src/data/atlas/georef-closure.json ni berljiv (runtime kopija)");
+    if (rawEv !== null && rawRt !== null && rawEv !== rawRt)
+      p50Errors.push("dokazni in runtime izpis georef-closure.json nista identična (skript mora izpisati oba enako)");
+    if (rawEv !== null) {
+      try {
+        const j = JSON.parse(rawEv) as {
+          activation: { basis: string[] };
+          sheets: Record<string, { status: string; uncertaintyM: number; scale: { scaleMPerPixel: number }; shiftVsP10M: { max: number } }>;
+          sheetGeorefsPatch: Record<string, { bounds: [[number, number], [number, number]]; controlPoints: unknown[] }>;
+          invariants: Record<string, string>;
+        };
+        if (Object.keys(j.sheets).length !== 3) p50Errors.push("JSON: 3 listi ni pinano");
+        if (j.activation.basis.length !== 5) p50Errors.push("JSON: 5 plasti ni pinano");
+        if (j.sheets.A03.uncertaintyM !== 50 || j.sheets.A04.uncertaintyM !== 40 || j.sheets.A05.uncertaintyM !== 40)
+          p50Errors.push("JSON: negotovosti 50/40/40 ni pinano");
+        for (const sid of ["georef-a03", "georef-a04", "georef-a05"] as const) {
+          const g = SHEET_GEOREFS.find((x) => x.id === sid);
+          const p = j.sheetGeorefsPatch[sid];
+          if (!g || !p) {
+            p50Errors.push(`JSON patch: manjka ${sid}`);
+            continue;
+          }
+          if (Math.abs(p.bounds[0][0] - g.bounds[0][0]) > 5e-6 || Math.abs(p.bounds[1][1] - g.bounds[1][1]) > 5e-6)
+            p50Errors.push(`${sid}: patch meje ≠ model.ts (5e-6)`);
+        }
+        if (!Object.values(j.invariants).every((v) => v.includes("PASS") || v.includes("bajtno")))
+          p50Errors.push("JSON invarianti niso vsi PASS");
+        p50FileDetail = `dokazni datoteki preverjeni in identični (3 listi, 5 plasti, meje == model.ts, invarianti I1–I10 PASS)`;
+      } catch {
+        p50Errors.push("research/issue17/georef-closure.json ni veljaven JSON");
+      }
+    }
+  }
+  push(
+    "qa-p50-georef-closure",
+    "P50: GEOREF ZAPORA A03–A05 — aktivacija P46 neatline afin v SHEET_GEOREFS (issue #14/§3): 5 neodvisnih plasti dokazov (L0 neatline kalibriran na A02/GEOTRUTH 9.3/13.2 m; L1 parcele P47 9.8/5.6/9.3 m; L2 stavbe P48 149/154 + 26 on-symbol; L3 sidro P49 43.2 px; L4 napisi 7/7) → A03 NEATLINE_PARTIAL_GEOREFERENCED ±50 m (2/4 strani), A04/A05 NEATLINE_GEOREFERENCED ±40 m (4/4); meje premaknjene le 17.4/16.9/18.0 m vs P10 (konvergencija), merilo 0.7746 m/px (P46 s̄); GRID_APPROX → 5/5 listov georeferenciranih; vizualni pregled izrezov ostaja priporočen [~]",
+    "P50: GEOREF CLOSURE A03–A05 — activation of the P46 neatline affines into SHEET_GEOREFS (issue #14/§3): 5 independent evidence layers (L0 neatline calibrated on A02/GEOTRUTH 9.3/13.2 m; L1 parcels P47 9.8/5.6/9.3 m; L2 buildings P48 149/154 + 26 on-symbol; L3 anchor P49 43.2 px; L4 labels 7/7) → A03 NEATLINE_PARTIAL_GEOREFERENCED ±50 m (2/4 sides), A04/A05 NEATLINE_GEOREFERENCED ±40 m (4/4); bounds shifted only 17.4/16.9/18.0 m vs P10 (grid convergence), scale 0.7746 m/px (P46 s̄); GRID_APPROX → 5/5 sheets georeferenced; visual review of the crops remains recommended [~]",
+    p50Errors.length === 0,
+    p50Errors.length === 0
+      ? `A03 ±50 m (2/4 strani, parcele 9.8 m) · A04 ±40 m (4/4, parcele 5.6 m) · A05 ±40 m (4/4, parcele 9.3 m, 26 stavb) · premiki 17.4/16.9/18.0 m · merilo 0.7746 · napisi 7/7 · ${p50FileDetail}`
+      : p50Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;

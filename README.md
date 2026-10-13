@@ -184,6 +184,14 @@ Zgodovinska katastrska slika vasi (franciscejski kataster, k.o. Griblje št. 83 
   [27, 44] — P10 ~45 znotraj mej, brez protislovja; ohranjenost ≥ 0.806 [~];
   9 izrezov (`research/issue17/fucukovci-crops/`); dokaz
   `research/issue17/fucukovci-1825.json` + `scripts/p49_fucukovci1825.py`;
+- **Georef zapora A03–A05 (P50, issue #14)** — aktivacija P46 neatline afin v
+  SHEET_GEOREFS na 5 neodvisnih plasti dokazov (neatline kalibriran na A02
+  9,3/13,2 m; parcele P47 9,8/5,6/9,3 m; stavbe P48 149/154 + 26; sidro P49
+  43,2 px; napisi 7/7): **GRID_APPROX ±200–400 m → NEATLINE ±40/50 m** (A03
+  PARTIAL 2/4 strani; A04/A05 4/4), premik mej le 17,4/16,9/18,0 m
+  (konvergencija mreže), merilo 0,7746 m/px; **5/5 listov serije
+  georeferenciranih**; vizualni pregled izrezov priporočen [~]; dokaz
+  `research/issue17/georef-closure.json` + `scripts/p50_georef_closure.py`;
 - **globa povezava** `?atlas=hiša-75` (hiša št. 73 — demonstracijska veriga do MVG-010).
 
 API (statični, brez runtime AI):
@@ -220,6 +228,12 @@ API (statični, brez runtime AI):
   25 v sklopu, residual 9.8 m) + striktna temna jedra (53, triaža) + obseg
   sklopa (lupina 36 336 m²); ocena [27, 44] vs P10 ~45; 9 izrezov; status
   ANALYSIS-DETERMINISTIC (P49).
+- `GET /api/atlas/georef-closure` — georef zapora A03–A05 (P50): aktivacija
+  P46 neatline afin v SHEET_GEOREFS — 5 neodvisnih plasti (L0 kalibracija A02
+  9,3/13,2 m; L1 parcele 9,8/5,6/9,3 m; L2 stavbe 149/154 + 26; L3 sidro
+  43,2 px; L4 napisi 7/7); GRID_APPROX ±200–400 m → NEATLINE ±40/50 m;
+  premik mej le 17,4/16,9/18,0 m; 5/5 listov georeferenciranih;
+  status ACTIVATED-DETERMINISTIC.
 
 ## Varnost
 

@@ -240,8 +240,8 @@ export function MuseumAtlas({
             </div>
             <p className="mt-3 max-w-2xl text-muted-foreground">
               {t(
-                "Zgodovinska katastrska slika vasi Griblje (Grüble) iz franciscejskega katastra: 2 lista z VALIDIRANO georeferenco (A01/A02, GEOTRUTH na cerkvi EŠD 2122, ±40–100 m) + 3 listi z OKVIRNO umestitvijo po sekcijski mreži eZKN/GURS (A03/A04/A05, ±200–400 m — točkovno sidro še manjka; lega A04 popravljena v P10), register hiš 1–98 z lastniki, arhivski viri z dokazno verigo in primerjava 1825 ↔ danes.",
-                "The historical cadastral picture of the village of Griblje (Grüble) from the Franciscan cadastre: 2 sheets with a VALIDATED georeference (A01/A02, GEOTRUTH on the EŠD 2122 church, ±40–100 m) + 3 sheets APPROXIMATELY placed by the eZKN/GURS section grid (A03/A04/A05, ±200–400 m — a point anchor still missing; the A04 position corrected in P10), a register of houses 1–98 with owners, archival sources with an evidence chain, and an 1825 ↔ today comparison.",
+                "Zgodovinska katastrska slika vasi Griblje (Grüble) iz franciscejskega katastra: 5/5 listov z georeferenco — A01/A02 z VALIDIRANO afino (GEOTRUTH na cerkvi EŠD 2122, ±40–100 m) + A03/A04/A05 s P46 neatline afinami (P50: meje = uradne meje celic eZKN 1:2880, ±40–50 m; prej GRID_APPROX ±200–400 m), register hiš 1–98 z lastniki, arhivski viri z dokazno verigo in primerjava 1825 ↔ danes.",
+                "The historical cadastral picture of the village of Griblje (Grüble) from the Franciscan cadastre: 5/5 sheets georeferenced — A01/A02 with a VALIDATED affine (GEOTRUTH on the EŠD 2122 church, ±40–100 m) + A03/A04/A05 with the P46 neatline affines (P50: bounds = the official boundaries of the eZKN 1:2880 cells, ±40–50 m; previously GRID_APPROX ±200–400 m), a register of houses 1–98 with owners, archival sources with an evidence chain, and an 1825 ↔ today comparison.",
               )}
             </p>
           </div>

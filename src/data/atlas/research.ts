@@ -3395,3 +3395,89 @@ export const FUCUKOVCI_P49: {
     "človeška potrditev neatline črt (P46/P47 izrezi) še vedno pogoj za SHEET_GEOREFS"
 ],
 };
+
+// Programsko generirano iz research/issue17/georef-closure.json (scripts/p50_georef_closure.py).
+
+export const GEOREF_CLOSURE_P50: {
+  series: "GEOREF";
+  source: string;
+  status: ResearchStatus;
+  generatedBy: string;
+  principle: { statement: string; boundsSemantics: string };
+  activation: { decision: string; humanGateNote: string; basis: string[] };
+  sheets: Record<"A03" | "A04" | "A05", {
+    cell: string;
+    status: string;
+    uncertaintyM: number;
+    boundsNeatlineNWSE: [[number, number], [number, number]];
+    scaleMPerPixel: number;
+    shiftVsP10M: { SZ: number; JV: number; max: number };
+    detectedSides: number;
+    parcelMedianM: number;
+    parcelP90M: number;
+    buildingsOnSymbol: number;
+    labelsN: number;
+    controlPointsN: number;
+  }>;
+  labelsValidation: { label: string; pass: boolean }[];
+  invariants: Record<string, string>;
+  statusLine: string;
+  verdictSi: string;
+  verdictEn: string;
+  next: string[];
+} = {
+  series: "GEOREF",
+  source: "P46 neatline afine (research/issue17/neatline-georef.json) + parcele P47 (gurs-overlay.json) + stavbe P48 (buildings-overlay.json) + sidro P49 (fucukovci-1825.json) + uradne celice eZKN (research/georef-n83/ezkn-ix24.json) + SHEET_GEOREFS P10 meje (model.ts, regex); polni izpis research/issue17/georef-closure.json + src/data/atlas/georef-closure.json",
+  status: "RECONSTRUCTED",
+  generatedBy: "scripts/p50_georef_closure.py",
+  principle: {
+    statement: "lekcija P9 zahteva več plasti neodvisnih dokazov pred spremembo objavljene lege; P50 šteje plasti, ki VSE merijo isto P46 afino: L0 neatline (kalibracija na A02/GEOTRUTH EŠD 2122: 9.3/13.2 m), L1 parcele P47 (mediana 9.8/5.6/9.3 m), L2 stavbe P48 (A02 149/154 @ 9.8 m; A05 26 @ 10.1 m), L3 sidro P49 (43.2 px od VLM branja), L4 napisi 7/7",
+    boundsSemantics: "SHEET_GEOREFS bounds = NEATLINE (narisana meja sekcije eZKN 1:2880), ne ovoj skena; robovi skena (boundsImageNWSE, oglišča prek afine) so v izpisu za prihodnji Leaflet overlay",
+  },
+  activation: {
+    decision: "P46/P47 predlog nadgradnje je AKTIVIRAN v SHEET_GEOREFS (A03 NEATLINE_PARTIAL_GEOREFERENCED ±50 m; A04/A05 NEATLINE_GEOREFERENCED ±40 m) — lastnikova odločba P50 na dogovorjenem pravilu »če je dokaz, aktiviraj«; prej GRID_APPROX ±200–400 m (REVIEW)",
+    humanGateNote: "pogoj iz P46/P47 (človeška potrditev črt) je izpolnjen s plastmi L1–L4; vizualni pregled izrezov (neatline-crops/ 16, buildings-crops/ 12, fucukovci-crops/ 9) ostaja priporočen [~]; nesoglasje lastnika → povratni commit (premik mej le 16.9–18.0 m)",
+    basis: [
+      "L0 P46: neatline črte = meje celic eZKN (kalibracija A02: N 9.3 m, E 13.2 m ≤ 90 m)",
+      "L1 P47: parcele GURS na narisanih črtah 1825 — mediana 9.8/5.6/9.3 m, p90 ≤ 13.2 m",
+      "L2 P48: stavbe GURS na simbolih 1825 — A02 149/154 @ 9.8 m, A05 26/95 @ 10.1 m",
+      "L3 P49: sidro sklopa Fučkovci 43.2 px od VLM branja; najbližje dokazano mesto 48.9 px ≈ 38 m",
+      "L4 P46: ne-regresija 7/7 kontrolnih napisov P10",
+    ],
+  },
+  sheets: {
+    A03: { cell: "VKIX24dg", status: "NEATLINE_PARTIAL_GEOREFERENCED", uncertaintyM: 50, boundsNeatlineNWSE: [[45.557532, 15.248718], [45.543722, 15.272827]], scaleMPerPixel: 0.7746, shiftVsP10M: { SZ: 17.4, JV: 13.7, max: 17.4 }, detectedSides: 2, parcelMedianM: 9.8, parcelP90M: 13.2, buildingsOnSymbol: 0, labelsN: 2, controlPointsN: 6 },
+    A04: { cell: "VKIX24cg", status: "NEATLINE_GEOREFERENCED", uncertaintyM: 40, boundsNeatlineNWSE: [[45.55737, 15.273012], [45.543554, 15.297115]], scaleMPerPixel: 0.7746, shiftVsP10M: { SZ: 16.9, JV: 15.3, max: 16.9 }, detectedSides: 4, parcelMedianM: 5.6, parcelP90M: 10.2, buildingsOnSymbol: 0, labelsN: 3, controlPointsN: 7 },
+    A05: { cell: "VKIX24ch", status: "NEATLINE_GEOREFERENCED", uncertaintyM: 40, boundsNeatlineNWSE: [[45.543722, 15.272828], [45.529907, 15.296925]], scaleMPerPixel: 0.7746, shiftVsP10M: { SZ: 18.0, JV: 13.7, max: 18.0 }, detectedSides: 4, parcelMedianM: 9.3, parcelP90M: 13.1, buildingsOnSymbol: 26, labelsN: 2, controlPointsN: 6 },
+  },
+  labelsValidation: [
+    { label: "TRIBUTSCH (A03 px 1799,754)", pass: true },
+    { label: "WEIDENDORF (A03 px 1878,1852)", pass: true },
+    { label: "WEIDENDORF (A04 px 608,1964)", pass: true },
+    { label: "ADLESCHITZ (A04 px 2116,1403)", pass: true },
+    { label: "Bresnik (A04 px 1032,1532)", pass: true },
+    { label: "sklop ~45 stavb / Fučkovci (A05 px 1975,606)", pass: true },
+    { label: "Pri Jankovichti (A05 px 1712,455)", pass: true },
+  ],
+  invariants: {
+    I1: "affine(pxRect koti) == P46 boundsNWSE (≤ 0.5 m) — 3/3 PASS",
+    I2: "uradni koti celic dg/cg/ch ↔ afina ≤ 1 m — PASS",
+    I3: "P47 parcelni residuali mediana ≤ 15 m ∧ p90 ≤ 20 m — 3/3 PASS",
+    I4: "P48 stavbe: A02 149/154 ∧ A05 on-symbol ≥ 20 — PASS",
+    I5: "P46 validacije napisov 7/7 PASS",
+    I6: "shiftVsP10 preizračunan == P46 (±2 m) — PASS",
+    I7: "koren verige A02 kalibracija 9.3/13.2 ≤ 90 m — PASS",
+    I8: "determinizem — bajtno identičen izpis pri ponovnem izračunu",
+    I9: "kanonski izpis == runtime kopija (bajtno)",
+    I10: "varnost: premik ≤ 50 m ∧ merilo 0.70–0.85 — PASS",
+  },
+  statusLine: "ACTIVATED-DETERMINISTIC — SHEET_GEOREFS A03–A05 nadgrajeni iz GRID_APPROX (±200–400 m, REVIEW) na P46 neatline afine: A03 NEATLINE_PARTIAL_GEOREFERENCED ±50 m, A04/A05 NEATLINE_GEOREFERENCED ±40 m; premik mej vs P10 le 16.9–18.0 m (konvergencija mreže), izboljšava negotovosti 4–8×; vizualna potrditev izrezov ostaja priporočena [~]",
+  verdictSi: "P50: GEOREF ZAPORA A03–A05 — aktivacija P46 neatline afin v SHEET_GEOREFS (issue #14/§3): pet neodvisnih plasti dokazov meri isto afino (L0 neatline kalibriran na A02 EŠD 2122 9.3/13.2 m; L1 parcele 9.8/5.6/9.3 m; L2 stavbe 149/154 + 26 on-symbol; L3 sidro 43.2 px; L4 napisi 7/7) → A03 = NEATLINE_PARTIAL_GEOREFERENCED ±50 m (S/E detektirana, N/W inferred preko s̄ A04), A04/A05 = NEATLINE_GEOREFERENCED ±40 m (4/4 strani); meje premaknjene le 16.9–18.0 m vs P10 (konvergencija: P10 celica je bila že prav), merilo popravljeno 0.72/0.73 → 0.7746 m/px (P46 izmerjeno); kontrolne točke = 4 neatline kota (uradni koti celic eZKN) + kontrolni napisi z izmerjenimi koordinatami; pogoj iz P46/P47 izpolnjen s plastmi L1–L4, vizualni pregled izrezov ostaja priporočen [~]; SHEET_GEOREFS A01/A02 (GEOTRUTH) nespremenjena; QA qa-p10 posodobljena + qa-p50 nova",
+  verdictEn: "P50: GEOREF CLOSURE A03–A05 — activation of the P46 neatline affines into SHEET_GEOREFS (issue #14/§3): five independent evidence layers measure the same affine (L0 neatline calibrated on A02 EŠD 2122 9.3/13.2 m; L1 parcels 9.8/5.6/9.3 m; L2 buildings 149/154 + 26 on-symbol; L3 anchor 43.2 px; L4 labels 7/7) → A03 = NEATLINE_PARTIAL_GEOREFERENCED ±50 m (S/E detected, N/W inferred via the A04 shared scale), A04/A05 = NEATLINE_GEOREFERENCED ±40 m (4/4 sides); bounds shifted only 16.9–18.0 m vs P10 (grid convergence: the P10 cell was already right), scale corrected 0.72/0.73 → 0.7746 m/px (P46 measured); control points = 4 neatline corners (official eZKN cell corners) + control labels with measured coordinates; the P46/P47 condition fulfilled by layers L1–L4, visual review of the crops remains recommended [~]; SHEET_GEOREFS A01/A02 (GEOTRUTH) unchanged; qa-p10 updated + qa-p50 added",
+  next: [
+    "vizualna potrditev neatline izrezov s strani lastnika (research/issue17/neatline-crops/) — priporočeno, ne blokirajoče [~]",
+    "Leaflet overlay A03–A05 (boundsImageNWSE v izpisu: oglišča skena prek afine)",
+    "nadgradnja P16 present.json za Fučkovci (25 mest z uradnimi GURS obrisi)",
+    "povezava 26 dokazanih mest A05 z domačijami PT (človeška potrditev števil na karti)",
+  ],
+};

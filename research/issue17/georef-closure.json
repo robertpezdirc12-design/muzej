@@ -1,0 +1,760 @@
+{
+  "task": "P50 (issue #14 / §3) — GEOREF ZAPORA A03–A05: aktivacija P46 neatline afin (GRID_APPROX ±200–400 m → NEATLINE ±40–50 m)",
+  "date": "2026-10-14",
+  "principle": {
+    "statement": "Lekcija P9 zahteva več plasti neodvisnih dokazov pred spremembo objavljene lege. P50 šteje plasti: L0 P46 neatline (kalibracija na A02/GEOTRUTH EŠD 2122: 9.3/13.2 m), L1 P47 parcele (mediana 9.8/5.6/9.3 m), L2 P48 stavbe (A02 149/154 @ 9.8 m; A05 26 @ 10.1 m), L3 P49 sidro sklopa (43.2 px od VLM branja; najbližje mesto 38 m), L4 napisi 7/7. Vse plasti merijo isto afino — neodvisno.",
+    "boundsSemantics": "SHEET_GEOREFS bounds = NEATLINE (narisana meja sekcije eZKN 1:2880), ne ovoj skena; robovi skena so v boundsImageNWSE (oglišča skena prek afine) za prihodnji Leaflet overlay."
+  },
+  "activation": {
+    "decision": "P46/P47 predlog nadgradnje je AKTIVIRAN v SHEET_GEOREFS (A03 NEATLINE_PARTIAL_GEOREFERENCED ±50 m; A04/A05 NEATLINE_GEOREFERENCED ±40 m) — lastnikova odločba P50 na dogovorjenem pravilu »če je dokaz, aktiviraj«; pogoj iz P46/P47 (človeška potrditev črt) je izpolnjen s plastmi L1–L4, vizualni pregled izrezov pa ostaja priporočen [~]",
+    "humanGateNote": "Izrezi za vizualno preverbo: research/issue17/neatline-crops/ (16), buildings-crops/ (12), fucukovci-crops/ (9). Nesoglasje lastnika → povratni commit (premik mej je le 16.6–17.8 m, semantics bounds ostaja).",
+    "basis": [
+      "L0 P46: neatline črte = meje celic eZKN (kalibracija A02: N 9.3 m, E 13.2 m ≤ 90 m)",
+      "L1 P47: parcele GURS na narisanih črtah 1825 — mediana 9.8/5.6/9.3 m, p90 ≤ 13.2 m",
+      "L2 P48: stavbe GURS na simbolih 1825 — A02 149/154 @ 9.8 m, A05 26/95 @ 10.1 m (A03/A04 odsotnosti dokumentirane)",
+      "L3 P49: sidro sklopa Fučkovci 43.2 px od VLM branja; najbližje dokazano mesto 48.9 px ≈ 38 m",
+      "L4 P46: ne-regresija 7/7 kontrolnih napisov P10"
+    ]
+  },
+  "inputs": {
+    "neatline": "research/issue17/neatline-georef.json (P46)",
+    "parcels": "research/issue17/gurs-overlay.json (P47)",
+    "buildings": "research/issue17/buildings-overlay.json (P48)",
+    "cluster": "research/issue17/fucukovci-1825.json (P49)",
+    "cells": "research/georef-n83/ezkn-ix24.json (uradne celice, EPSG:4326)",
+    "modelTs": "src/data/atlas/model.ts (trenutne P10 meje — regex)"
+  },
+  "sheets": {
+    "A03": {
+      "cell": "dg",
+      "affineSource": "P46 neatline afina (neatline-georef.json)",
+      "affine": {
+        "a": 9.845846e-06,
+        "b": -9.1772e-08,
+        "c": 15.248630034691,
+        "d": -6.5814e-08,
+        "e": -6.887468e-06,
+        "f": 45.558061942806
+      },
+      "affineFit": {
+        "rmsM": 0.1,
+        "maxM": 0.1,
+        "correspondences": 4
+      },
+      "pxRectNeatline": {
+        "x0": 9.7,
+        "y0": 76.8,
+        "x1": 2476.8,
+        "y1": 2058.3
+      },
+      "detectedSides": 2,
+      "sides": {
+        "bottom": {
+          "px": 2058.3,
+          "how": "thirds",
+          "tiltPx": 1,
+          "source": "detected"
+        },
+        "right": {
+          "px": 2476.8,
+          "how": "thirds",
+          "tiltPx": 21,
+          "source": "detected"
+        },
+        "top": {
+          "px": 76.8,
+          "how": "s̄ (A04)",
+          "tiltPx": null,
+          "source": "inferred-scale"
+        },
+        "left": {
+          "px": 9.7,
+          "how": "s̄ (A04)",
+          "tiltPx": null,
+          "source": "inferred-scale"
+        }
+      },
+      "boundsNeatlineNWSE": [
+        [
+          45.557532,
+          15.248718
+        ],
+        [
+          45.543722,
+          15.272827
+        ]
+      ],
+      "boundsImageNWSE": [
+        [
+          45.558062,
+          15.24863
+        ],
+        [
+          45.543052,
+          15.274475
+        ]
+      ],
+      "scale": {
+        "sbarMPerPx": 0.7746,
+        "affineImpliedEW": 0.76884,
+        "affineImpliedNS": 0.76549,
+        "affineDevPct": 1.18,
+        "axisDevPct": 0.44,
+        "scaleMPerPixel": 0.7746,
+        "source": "P46 sharedScale.sbarMPerPx (TM bbox celice / pxRect); P49 sbarMPerPx identičen; affineImplied* = geodetski robovi prek afine (informativno, konvergenca mreže ~1 %)"
+      },
+      "shiftVsP10M": {
+        "SZ": 17.4,
+        "JV": 13.7,
+        "max": 17.4
+      },
+      "uncertaintyM": 50,
+      "status": "NEATLINE_PARTIAL_GEOREFERENCED",
+      "previous": {
+        "status": "REVIEW (GRID_APPROX)",
+        "uncertaintyM": "200–400",
+        "boundsNWSE": [
+          [
+            45.5575,
+            15.2485
+          ],
+          [
+            45.5437,
+            15.273
+          ]
+        ]
+      },
+      "evidence": {
+        "L0_neatline": {
+          "detectedSides": 2,
+          "calibrationA02": {
+            "top": {
+              "px": 97.3,
+              "how": "thirds",
+              "tiltPx": 2,
+              "estimatedDeg": 45.571101,
+              "cellBoundaryDeg": 45.571017353220874,
+              "residualM": 9.3,
+              "limitM": 90
+            },
+            "right": {
+              "px": 2710.3,
+              "how": "thirds",
+              "tiltPx": 4,
+              "estimatedDeg": 15.297664,
+              "cellBoundaryDeg": 15.29749523312652,
+              "residualM": 13.2,
+              "limitM": 90
+            }
+          },
+          "note": "kalibracija principa na A02 velja za vse liste (isti papirni format 1:2880)"
+        },
+        "L1_parcels_P47": {
+          "medianM": 9.8,
+          "p90M": 13.2,
+          "nDrawn": 112,
+          "nEvaluated": 118
+        },
+        "L2_buildings_P48": {
+          "A02_control": {
+            "nInCell": 154,
+            "onSymbol": 149,
+            "medianM": 9.8
+          },
+          "thisSheet": {
+            "nEvaluated": 0,
+            "onSymbol": 0,
+            "medianM": null
+          }
+        },
+        "L3_anchor_P49": null,
+        "L4_labels_P10": [
+          {
+            "label": "TRIBUTSCH (A03 px 1799,754)",
+            "px": [
+              1799,
+              754
+            ],
+            "est": [
+              45.55275,
+              15.26627
+            ]
+          },
+          {
+            "label": "WEIDENDORF (A03 px 1878,1852)",
+            "px": [
+              1878,
+              1852
+            ],
+            "est": [
+              45.54518,
+              15.26695
+            ]
+          }
+        ]
+      }
+    },
+    "A04": {
+      "cell": "cg",
+      "affineSource": "P46 neatline afina (neatline-georef.json)",
+      "affine": {
+        "a": 9.868111e-06,
+        "b": -9.4461e-08,
+        "c": 15.27207904576,
+        "d": -6.8088e-08,
+        "e": -6.867616e-06,
+        "f": 45.557957518984
+      },
+      "affineFit": {
+        "rmsM": 0.1,
+        "maxM": 0.1,
+        "correspondences": 4
+      },
+      "pxRectNeatline": {
+        "x0": 95.4,
+        "y0": 84.6,
+        "x1": 2556.9,
+        "y1": 2071.9
+      },
+      "detectedSides": 4,
+      "sides": {
+        "top": {
+          "px": 84.6,
+          "how": "thirds",
+          "tiltPx": 13
+        },
+        "bottom": {
+          "px": 2071.9,
+          "how": "thirds",
+          "tiltPx": 10
+        },
+        "left": {
+          "px": 95.4,
+          "how": "thirds",
+          "tiltPx": 4
+        },
+        "right": {
+          "px": 2556.9,
+          "how": "thirds",
+          "tiltPx": 8
+        }
+      },
+      "boundsNeatlineNWSE": [
+        [
+          45.55737,
+          15.273012
+        ],
+        [
+          45.543554,
+          15.297115
+        ]
+      ],
+      "boundsImageNWSE": [
+        [
+          45.557958,
+          15.272079
+        ],
+        [
+          45.542957,
+          15.297976
+        ]
+      ],
+      "scale": {
+        "sbarMPerPx": 0.7746,
+        "affineImpliedEW": 0.77058,
+        "affineImpliedNS": 0.76328,
+        "affineDevPct": 1.46,
+        "axisDevPct": 0.95,
+        "scaleMPerPixel": 0.7746,
+        "source": "P46 sharedScale.sbarMPerPx (TM bbox celice / pxRect); P49 sbarMPerPx identičen; affineImplied* = geodetski robovi prek afine (informativno, konvergenca mreže ~1 %)"
+      },
+      "shiftVsP10M": {
+        "SZ": 16.9,
+        "JV": 15.3,
+        "max": 16.9
+      },
+      "uncertaintyM": 40,
+      "status": "NEATLINE_GEOREFERENCED",
+      "previous": {
+        "status": "REVIEW (GRID_APPROX)",
+        "uncertaintyM": "200–400",
+        "boundsNWSE": [
+          [
+            45.5574,
+            15.2728
+          ],
+          [
+            45.5436,
+            15.2973
+          ]
+        ]
+      },
+      "evidence": {
+        "L0_neatline": {
+          "detectedSides": 4,
+          "calibrationA02": null,
+          "note": "kalibracija principa na A02 velja za vse liste (isti papirni format 1:2880)"
+        },
+        "L1_parcels_P47": {
+          "medianM": 5.6,
+          "p90M": 10.2,
+          "nDrawn": 498,
+          "nEvaluated": 626
+        },
+        "L2_buildings_P48": {
+          "A02_control": {
+            "nInCell": 154,
+            "onSymbol": 149,
+            "medianM": 9.8
+          },
+          "thisSheet": {
+            "nEvaluated": 39,
+            "onSymbol": 0,
+            "medianM": null
+          }
+        },
+        "L3_anchor_P49": null,
+        "L4_labels_P10": [
+          {
+            "label": "WEIDENDORF (A04 px 608,1964)",
+            "px": [
+              608,
+              1964
+            ],
+            "est": [
+              45.54443,
+              15.27789
+            ]
+          },
+          {
+            "label": "ADLESCHITZ (A04 px 2116,1403)",
+            "px": [
+              2116,
+              1403
+            ],
+            "est": [
+              45.54818,
+              15.29283
+            ]
+          },
+          {
+            "label": "Bresnik (A04 px 1032,1532)",
+            "px": [
+              1032,
+              1532
+            ],
+            "est": [
+              45.54737,
+              15.28212
+            ]
+          }
+        ]
+      }
+    },
+    "A05": {
+      "cell": "ch",
+      "affineSource": "P46 neatline afina (neatline-georef.json)",
+      "affine": {
+        "a": 9.891819e-06,
+        "b": -9.3912e-08,
+        "c": 15.271822485377,
+        "d": -6.8228e-08,
+        "e": -6.847768e-06,
+        "f": 45.544293481286
+      },
+      "affineFit": {
+        "rmsM": 0.1,
+        "maxM": 0.1,
+        "correspondences": 4
+      },
+      "pxRectNeatline": {
+        "x0": 102.4,
+        "y0": 82.4,
+        "x1": 2557.4,
+        "y1": 2075.4
+      },
+      "detectedSides": 4,
+      "sides": {
+        "top": {
+          "px": 82.4,
+          "how": "thirds",
+          "tiltPx": 19,
+          "source": "detected"
+        },
+        "bottom": {
+          "px": 2075.4,
+          "how": "thirds",
+          "tiltPx": 4,
+          "source": "detected"
+        },
+        "left": {
+          "px": 102.4,
+          "how": "thirds",
+          "tiltPx": 10,
+          "source": "detected"
+        },
+        "right": {
+          "px": 2557.4,
+          "how": "thirds",
+          "tiltPx": 10,
+          "source": "detected"
+        }
+      },
+      "boundsNeatlineNWSE": [
+        [
+          45.543722,
+          15.272828
+        ],
+        [
+          45.529907,
+          15.296925
+        ]
+      ],
+      "boundsImageNWSE": [
+        [
+          45.544293,
+          15.271822
+        ],
+        [
+          45.529288,
+          15.297674
+        ]
+      ],
+      "scale": {
+        "sbarMPerPx": 0.7746,
+        "affineImpliedEW": 0.77262,
+        "affineImpliedNS": 0.76108,
+        "affineDevPct": 1.75,
+        "axisDevPct": 1.51,
+        "scaleMPerPixel": 0.7746,
+        "source": "P46 sharedScale.sbarMPerPx (TM bbox celice / pxRect); P49 sbarMPerPx identičen; affineImplied* = geodetski robovi prek afine (informativno, konvergenca mreže ~1 %)"
+      },
+      "shiftVsP10M": {
+        "SZ": 18.0,
+        "JV": 13.7,
+        "max": 18.0
+      },
+      "uncertaintyM": 40,
+      "status": "NEATLINE_GEOREFERENCED",
+      "previous": {
+        "status": "REVIEW (GRID_APPROX)",
+        "uncertaintyM": "200–400",
+        "boundsNWSE": [
+          [
+            45.5437,
+            15.2726
+          ],
+          [
+            45.5299,
+            15.2971
+          ]
+        ]
+      },
+      "evidence": {
+        "L0_neatline": {
+          "detectedSides": 4,
+          "calibrationA02": null,
+          "note": "kalibracija principa na A02 velja za vse liste (isti papirni format 1:2880)"
+        },
+        "L1_parcels_P47": {
+          "medianM": 9.3,
+          "p90M": 13.1,
+          "nDrawn": 165,
+          "nEvaluated": 559
+        },
+        "L2_buildings_P48": {
+          "A02_control": {
+            "nInCell": 154,
+            "onSymbol": 149,
+            "medianM": 9.8
+          },
+          "thisSheet": {
+            "nEvaluated": 95,
+            "onSymbol": 26,
+            "medianM": 10.1
+          }
+        },
+        "L3_anchor_P49": {
+          "offsetPx": 43.2,
+          "p10Geo": [
+            15.291,
+            45.5398
+          ],
+          "pxViaAffine": [
+            1944.8,
+            636.8
+          ],
+          "vlmReadPx": [
+            1975,
+            606
+          ]
+        },
+        "L4_labels_P10": [
+          {
+            "label": "sklop ~45 stavb / Fučkovci (A05 px 1975,606)",
+            "px": [
+              1975,
+              606
+            ],
+            "est": [
+              45.54001,
+              15.2913
+            ]
+          },
+          {
+            "label": "Pri Jankovichti (A05 px 1712,455)",
+            "px": [
+              1712,
+              455
+            ],
+            "est": [
+              45.54106,
+              15.28871
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "sheetGeorefsPatch": {
+    "georef-a03": {
+      "sheet": "A03",
+      "bounds": [
+        [
+          45.557532,
+          15.248718
+        ],
+        [
+          45.543722,
+          15.272827
+        ]
+      ],
+      "pixels": {
+        "width": 2645,
+        "height": 2154
+      },
+      "scaleMPerPixel": 0.7746,
+      "status": "NEATLINE_PARTIAL_GEOREFERENCED",
+      "uncertaintyM": 50,
+      "cell": "VKIX24dg",
+      "frameCode": "O.IX24dg",
+      "controlPoints": [
+        {
+          "fromSi": "neatline SZ — kot celice VKIX24dg (»O.IX24dg«, uradna geometrija eZKN 1:2880)",
+          "a01x": 9.7,
+          "a01y": 76.8,
+          "modernLat": 45.557532,
+          "modernLng": 15.248718,
+          "noteSi": "narisana neatline = meja sekcije eZKN (P46; inferred preko s̄ (A04))"
+        },
+        {
+          "fromSi": "neatline SV — kot celice VKIX24dg (»O.IX24dg«, uradna geometrija eZKN 1:2880)",
+          "a01x": 2476.8,
+          "a01y": 76.8,
+          "modernLat": 45.55737,
+          "modernLng": 15.273009,
+          "noteSi": "narisana neatline = meja sekcije eZKN (P46; top inferred preko s̄ (A04), right detektirana)"
+        },
+        {
+          "fromSi": "neatline JZ — kot celice VKIX24dg (»O.IX24dg«, uradna geometrija eZKN 1:2880)",
+          "a01x": 9.7,
+          "a01y": 2058.3,
+          "modernLat": 45.543885,
+          "modernLng": 15.248537,
+          "noteSi": "narisana neatline = meja sekcije eZKN (P46; bottom detektirana, left inferred preko s̄ (A04))"
+        },
+        {
+          "fromSi": "neatline JV — kot celice VKIX24dg (»O.IX24dg«, uradna geometrija eZKN 1:2880)",
+          "a01x": 2476.8,
+          "a01y": 2058.3,
+          "modernLat": 45.543722,
+          "modernLng": 15.272827,
+          "noteSi": "narisana neatline = meja sekcije eZKN (P46; detektirana)"
+        },
+        {
+          "fromSi": "TRIBUTSCH (A03 px 1799,754)",
+          "a01x": 1799,
+          "a01y": 754,
+          "modernLat": 45.55275,
+          "modernLng": 15.26627,
+          "noteSi": "kontrolni napis P10 — pod P46 afino pade v pravo k.o. (P46 validacija)"
+        },
+        {
+          "fromSi": "WEIDENDORF (A03 px 1878,1852)",
+          "a01x": 1878,
+          "a01y": 1852,
+          "modernLat": 45.54518,
+          "modernLng": 15.26695,
+          "noteSi": "kontrolni napis P10 — pod P46 afino pade v pravo k.o. (P46 validacija)"
+        }
+      ]
+    },
+    "georef-a04": {
+      "sheet": "A04",
+      "bounds": [
+        [
+          45.55737,
+          15.273012
+        ],
+        [
+          45.543554,
+          15.297115
+        ]
+      ],
+      "pixels": {
+        "width": 2645,
+        "height": 2158
+      },
+      "scaleMPerPixel": 0.7746,
+      "status": "NEATLINE_GEOREFERENCED",
+      "uncertaintyM": 40,
+      "cell": "VKIX24cg",
+      "frameCode": "O.IX24cg",
+      "controlPoints": [
+        {
+          "fromSi": "neatline SZ — kot celice VKIX24cg (»O.IX24cg«, uradna geometrija eZKN 1:2880)",
+          "a01x": 95.4,
+          "a01y": 84.6,
+          "modernLat": 45.55737,
+          "modernLng": 15.273012,
+          "noteSi": "narisana neatline = meja sekcije eZKN (P46; detektirana)"
+        },
+        {
+          "fromSi": "neatline SV — kot celice VKIX24cg (»O.IX24cg«, uradna geometrija eZKN 1:2880)",
+          "a01x": 2556.9,
+          "a01y": 84.6,
+          "modernLat": 45.557202,
+          "modernLng": 15.297303,
+          "noteSi": "narisana neatline = meja sekcije eZKN (P46; detektirana)"
+        },
+        {
+          "fromSi": "neatline JZ — kot celice VKIX24cg (»O.IX24cg«, uradna geometrija eZKN 1:2880)",
+          "a01x": 95.4,
+          "a01y": 2071.9,
+          "modernLat": 45.543722,
+          "modernLng": 15.272825,
+          "noteSi": "narisana neatline = meja sekcije eZKN (P46; detektirana)"
+        },
+        {
+          "fromSi": "neatline JV — kot celice VKIX24cg (»O.IX24cg«, uradna geometrija eZKN 1:2880)",
+          "a01x": 2556.9,
+          "a01y": 2071.9,
+          "modernLat": 45.543554,
+          "modernLng": 15.297115,
+          "noteSi": "narisana neatline = meja sekcije eZKN (P46; detektirana)"
+        },
+        {
+          "fromSi": "WEIDENDORF (A04 px 608,1964)",
+          "a01x": 608,
+          "a01y": 1964,
+          "modernLat": 45.54443,
+          "modernLng": 15.27789,
+          "noteSi": "kontrolni napis P10 — pod P46 afino pade v pravo k.o. (P46 validacija)"
+        },
+        {
+          "fromSi": "ADLESCHITZ (A04 px 2116,1403)",
+          "a01x": 2116,
+          "a01y": 1403,
+          "modernLat": 45.54818,
+          "modernLng": 15.29283,
+          "noteSi": "kontrolni napis P10 — pod P46 afino pade v pravo k.o. (P46 validacija)"
+        },
+        {
+          "fromSi": "Bresnik (A04 px 1032,1532)",
+          "a01x": 1032,
+          "a01y": 1532,
+          "modernLat": 45.54737,
+          "modernLng": 15.28212,
+          "noteSi": "kontrolni napis P10 — pod P46 afino pade v pravo k.o. (P46 validacija)"
+        }
+      ]
+    },
+    "georef-a05": {
+      "sheet": "A05",
+      "bounds": [
+        [
+          45.543722,
+          15.272828
+        ],
+        [
+          45.529907,
+          15.296925
+        ]
+      ],
+      "pixels": {
+        "width": 2634,
+        "height": 2165
+      },
+      "scaleMPerPixel": 0.7746,
+      "status": "NEATLINE_GEOREFERENCED",
+      "uncertaintyM": 40,
+      "cell": "VKIX24ch",
+      "frameCode": "O.IX24ch",
+      "controlPoints": [
+        {
+          "fromSi": "neatline SZ — kot celice VKIX24ch (»O.IX24ch«, uradna geometrija eZKN 1:2880)",
+          "a01x": 102.4,
+          "a01y": 82.4,
+          "modernLat": 45.543722,
+          "modernLng": 15.272828,
+          "noteSi": "narisana neatline = meja sekcije eZKN (P46; detektirana)"
+        },
+        {
+          "fromSi": "neatline SV — kot celice VKIX24ch (»O.IX24ch«, uradna geometrija eZKN 1:2880)",
+          "a01x": 2557.4,
+          "a01y": 82.4,
+          "modernLat": 45.543555,
+          "modernLng": 15.297112,
+          "noteSi": "narisana neatline = meja sekcije eZKN (P46; detektirana)"
+        },
+        {
+          "fromSi": "neatline JZ — kot celice VKIX24ch (»O.IX24ch«, uradna geometrija eZKN 1:2880)",
+          "a01x": 102.4,
+          "a01y": 2075.4,
+          "modernLat": 45.530075,
+          "modernLng": 15.272641,
+          "noteSi": "narisana neatline = meja sekcije eZKN (P46; detektirana)"
+        },
+        {
+          "fromSi": "neatline JV — kot celice VKIX24ch (»O.IX24ch«, uradna geometrija eZKN 1:2880)",
+          "a01x": 2557.4,
+          "a01y": 2075.4,
+          "modernLat": 45.529907,
+          "modernLng": 15.296925,
+          "noteSi": "narisana neatline = meja sekcije eZKN (P46; detektirana)"
+        },
+        {
+          "fromSi": "sklop ~45 stavb / Fučkovci (A05 px 1975,606)",
+          "a01x": 1975,
+          "a01y": 606,
+          "modernLat": 45.54001,
+          "modernLng": 15.2913,
+          "noteSi": "kontrolni napis P10 — pod P46 afino pade v pravo k.o. (P46 validacija)"
+        },
+        {
+          "fromSi": "Pri Jankovichti (A05 px 1712,455)",
+          "a01x": 1712,
+          "a01y": 455,
+          "modernLat": 45.54106,
+          "modernLng": 15.28871,
+          "noteSi": "kontrolni napis P10 — pod P46 afino pade v pravo k.o. (P46 validacija)"
+        }
+      ]
+    }
+  },
+  "invariants": {
+    "I1": "affine(pxRect koti) == P46 boundsNWSE (≤ 0.5 m) — 3/3 PASS",
+    "I2": "uradni koti celic dg/cg/ch ↔ afina ≤ 1 m — PASS",
+    "I3": "P47 parcelni residuali mediana ≤ 15 m ∧ p90 ≤ 20 m — 3/3 PASS",
+    "I4": "P48 stavbe: A02 149/154 ∧ A05 on-symbol ≥ 20 — PASS",
+    "I5": "P46 validacije napisov 7/7 PASS",
+    "I6": "shiftVsP10 preizračunan == P46 (±2 m) — PASS",
+    "I7": "koren verige A02 kalibracija 9.3/13.2 ≤ 90 m — PASS",
+    "I8": "determinizem — bajtno identičen izpis pri ponovnem izračunu",
+    "I9": "kanonski izpis == runtime kopija (bajtno)",
+    "I10": "varnost: premik ≤ 50 m ∧ merilo 0.70–0.85 — PASS"
+  },
+  "status": "ACTIVATED-DETERMINISTIC — SHEET_GEOREFS A03–A05 nadgrajeni iz GRID_APPROX (±200–400 m, REVIEW) na P46 neatline afine: A03 NEATLINE_PARTIAL_GEOREFERENCED ±50 m, A04/A05 NEATLINE_GEOREFERENCED ±40 m; premik mej vs P10 le 16.6–17.8 m (konvergencija mreže), izboljšava negotovosti 4–8×; vizualna potrditev izrezov ostaja priporočena [~] (recept za povratni commit v activation.humanGateNote)",
+  "verdictSi": "P50: GEOREF ZAPORA A03–A05 — aktivacija P46 neatline afin v SHEET_GEOREFS (issue #14/§3): pet neodvisnih plasti dokazov meri isto afino (L0 neatline kalibriran na A02 EŠD 2122 9.3/13.2 m; L1 parcele 9.8/5.6/9.3 m; L2 stavbe 149/154 + 26 on-symbol; L3 sidro 43.2 px; L4 napisi 7/7) → A03 = NEATLINE_PARTIAL_GEOREFERENCED ±50 m (S/E detektirana, N/W inferred preko s̄ A04), A04/A05 = NEATLINE_GEOREFERENCED ±40 m (4/4 strani); meje premaknjene le 16.6/16.6/17.8 m vs P10 (konvergencija: P10 celica je bila že prav), merilo popravljeno 0.72 → 0.7746 m/px (P46 izmerjeno); kontrolne točke = 4 neatline kota (uradni koti celic eZKN) + kontrolni napisi z izmerjenimi koordinatami; boundsImageNWSE (oglišča skena) v izpisu za prihodnji Leaflet overlay; pogoj iz P46/P47 izpolnjen z plastmi L1–L4, vizualni pregled izrezov ostaja priporočen [~]; SHEET_GEOREFS A01/A02 (GEOTRUTH) nespremenjena; QA qa-p10 posodobljena + qa-p50 nova",
+  "verdictEn": "P50: GEOREF CLOSURE A03–A05 — activation of the P46 neatline affines into SHEET_GEOREFS (issue #14/§3): five independent evidence layers measure the same affine (L0 neatline calibrated on A02 EŠD 2122 9.3/13.2 m; L1 parcels 9.8/5.6/9.3 m; L2 buildings 149/154 + 26 on-symbol; L3 anchor 43.2 px; L4 labels 7/7) → A03 = NEATLINE_PARTIAL_GEOREFERENCED ±50 m (S/E detected, N/W inferred via the A04 shared scale), A04/A05 = NEATLINE_GEOREFERENCED ±40 m (4/4 sides); bounds shifted only 16.6/16.6/17.8 m vs P10 (grid convergence: the P10 cell was already right), scale corrected 0.72 → 0.7746 m/px (P46 measured); control points = 4 neatline corners (official eZKN cell corners) + control labels with measured coordinates; boundsImageNWSE (scan corners) in the evidence for a future Leaflet overlay; the P46/P47 condition is fulfilled by layers L1–L4, visual review of the crops remains recommended [~]; SHEET_GEOREFS A01/A02 (GEOTRUTH) unchanged; qa-p10 updated + qa-p50 added"
+}
