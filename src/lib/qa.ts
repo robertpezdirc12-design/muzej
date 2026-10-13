@@ -40,6 +40,7 @@ import {
   PRESENT_GURS_P54,
   PS_GEO_P55,
   REGISTER_TOPOLOGY_P56,
+  PS_REGISTER_START_P57,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -3534,6 +3535,122 @@ const p45bErrors: string[] = [];
     p56Errors.length === 0
       ? `serije 123/10/2 strani · kontaminacija 60/43 (median 0.0892 ≪ 3.7188, ~42×) · sanitiran join 1110 → 1067 / 800 → 774 · dvoumnost 515/475/512 · praznina 0 vs 53/78 · časovnica 584 (pik 1841: 83/44) · ${p56RtDetail} · ${p56FileDetail}`
       : p56Errors.join("; "),
+  );
+
+  /* ── P57 (issue #13): začetek registra PS — strani 3–4, številke 1–40, obnova 26 base ── */
+  const p57Errors: string[] = [];
+  const p57 = PS_REGISTER_START_P57;
+  // 1) pinane vrednosti konstante
+  if (p57.chain.page3 !== "1–20" || p57.chain.page4 !== "21–40" || p57.chain.page5Committed !== "41–60" || p57.chain.blatt !== "I")
+    p57Errors.push("veriga ≠ 1–20 / 21–40 / 41–60 / Blatt I");
+  if (p57.readMeta.fullPasses !== 3 || p57.readMeta.colsPasses !== 3 || p57.readMeta.areasPasses !== 3 || p57.readMeta.disputedCells !== 10)
+    p57Errors.push(`plasti ≠ 3/3/3/10 (${p57.readMeta.fullPasses}/${p57.readMeta.colsPasses}/${p57.readMeta.areasPasses}/${p57.readMeta.disputedCells})`);
+  if (p57.restoration.lostBasesP56 !== 26 || p57.restoration.restored !== 26 || p57.restoration.restoredWithArea !== 25 || p57.restoration.numberOnly !== 1)
+    p57Errors.push("obnova ≠ 26/26 (25 z območji + 1 številka)");
+  if (p57.restoration.retiredUnmatched !== 14)
+    p57Errors.push(`upokojene številke ≠ 14 (${p57.restoration.retiredUnmatched})`);
+  if (p57.restoration.confidence.STRONG !== 3 || p57.restoration.confidence.MEDIUM !== 14 || p57.restoration.confidence.WEAK !== 9)
+    p57Errors.push(`zaupanje ≠ 3/14/9 (${p57.restoration.confidence.STRONG}/${p57.restoration.confidence.MEDIUM}/${p57.restoration.confidence.WEAK})`);
+  if (p57.areas.pairs !== 25 || p57.areas.medianM2K !== 3.7594 || p57.areas.histQkM2 !== 3.59665 || p57.areas.deltaPct !== 4.53)
+    p57Errors.push(`površine ≠ 25 parov / 3.7594 / 3.59665 / +4.53 % (${p57.areas.pairs}/${p57.areas.medianM2K}/${p57.areas.histQkM2}/${p57.areas.deltaPct})`);
+  if (p57.areas.controlMedian !== 3.2098 || p57.areas.controlBandShare !== 0.0616 || p57.areas.bandShareObserved !== 0.16)
+    p57Errors.push(`površine kontrola ≠ 3.2098 / 6.16 % / 16 %`);
+  if (p57.adjacency.pairs !== 19 || p57.adjacency.medianM !== 81.2 || p57.adjacency.controlMedian !== 263 || p57.adjacency.controlMinM !== 126)
+    p57Errors.push(`soslednost ≠ 19 / 81.2 / 263 / 126 (${p57.adjacency.pairs}/${p57.adjacency.medianM}/${p57.adjacency.controlMedian}/${p57.adjacency.controlMinM})`);
+  if (p57.adjudication.layersStrong !== 27 || p57.adjudication.layersCells !== 10 || p57.adjudication.hausNr2of3 !== 2)
+    p57Errors.push(`adjudikacija ≠ 27/10/2 (${p57.adjudication.layersStrong}/${p57.adjudication.layersCells}/${p57.adjudication.hausNr2of3})`);
+  // 2) NEODVISEN preracun iz runtime vrstic (soslednost + veriga + obnova) — vzorec qa-p55/p56
+  let p57RtDetail = "runtime ps-register-start.json ni preverjen (readFile ni na voljo) — celovita kontrola teče na /api/qa";
+  let p57FileDetail = "dokazna datoteka ni preverjena (readFile ni na voljo)";
+  if (opts.readFile) {
+    // P53 lekcija: dokaz najprej (polna strogost), v produkciji runtime kopija
+    const rawEv57 = opts.readFile("research/issue17/ps-register-start.json");
+    const rawRt57 = opts.readFile("src/data/atlas/ps-register-start.json");
+    const rawP56rt = opts.readFile("src/data/atlas/ps-register-topology.json");
+    if (rawEv57 === null && rawRt57 === null) {
+      p57Errors.push("ps-register-start ni berljiv (ne dokaz ne runtime kopija)");
+    } else {
+      try {
+        const mode = rawEv57 !== null ? "repo" : "produkcija";
+        const evRaw = (rawEv57 ?? rawRt57) as string;
+        const ev = JSON.parse(evRaw) as {
+          rowsEvidence: {
+            no: number; page: number; blatt: string; klafter: number | null; hausNr: string | null;
+            hausNrConf: string | null; base: string; lat: number | null; lng: number | null;
+            ratioM2K: number | null; confidence: string | null; klafterLayer: string | null;
+            layers?: { colsHausNr?: (string | null)[]; cells?: string | null };
+          }[];
+          tests: {
+            areas: { pairs: number; medianM2K: number; deltaPct: number; bandShareObserved: number; controlMedian: number };
+            adjacency: { pairs: number; medianM: number; share150: number; controlMedian: number; controlMinM: number; closePairs: [number, number][]; farPairs: [number, number][] };
+            restoration: { restored: number[]; retiredUnmatched: number[]; confidence: { STRONG: number; MEDIUM: number; WEAK: number } };
+          };
+          chain: { page3: string; page4: string; page5Committed: string; blatt: string };
+        };
+        const rows = ev.rowsEvidence;
+        if (rows.length !== 40) p57Errors.push(`runtime vrstice ≠ 40 (${rows.length})`);
+        if (!rows.every((r, i) => r.no === i + 1 && r.blatt === "I"))
+          p57Errors.push("vrstice niso 1–40 na Blatt I");
+        if (rows.filter((r) => r.klafter !== null).length !== 38)
+          p57Errors.push("vrstic s površino ≠ 38 (r1, r28 prazni)");
+        // neodvisen preracun soslednosti iz samih vrstic (mehanika P55)
+        const pos = new Map<number, [number, number]>();
+        for (const r of rows) if (r.lat !== null && r.lng !== null) pos.set(r.no, [r.lat, r.lng]);
+        const d: number[] = [];
+        for (let n = 1; n < 40; n++) {
+          const a = pos.get(n), b = pos.get(n + 1);
+          if (a && b)
+            d.push(Math.hypot((a[0] - b[0]) * 111320, (a[1] - b[1]) * 111320 * 0.7));
+        }
+        const med = (xs: number[]) => {
+          const s = [...xs].sort((x, y) => x - y);
+          return s.length % 2 ? s[(s.length - 1) / 2] : (s[s.length / 2 - 1] + s[s.length / 2]) / 2;
+        };
+        const dMed = med(d);
+        if (d.length !== ev.tests.adjacency.pairs)
+          p57Errors.push(`preracun: parov soslednosti ${d.length} ≠ ${ev.tests.adjacency.pairs}`);
+        if (Math.abs(dMed - ev.tests.adjacency.medianM) > 0.15)
+          p57Errors.push(`preracun: median soslednosti ${dMed.toFixed(1)} ≠ ${ev.tests.adjacency.medianM}`);
+        // obnova: povezane base == lostBases P56 (iz P56 runtime)
+        if (rawP56rt !== null) {
+          const p56rt = JSON.parse(rawP56rt) as { sanitization: { lostBases: number[] } };
+          const matched = rows.filter((r) => r.lat !== null).map((r) => r.no).sort((a, b) => a - b);
+          if (JSON.stringify(matched) !== JSON.stringify([...p56rt.sanitization.lostBases].sort((a, b) => a - b)))
+            p57Errors.push("preracun: povezane base ≠ lostBases P56");
+        }
+        // zaupanje razredi
+        const conf = { STRONG: 0, MEDIUM: 0, WEAK: 0 } as Record<string, number>;
+        for (const r of rows) if (r.confidence) conf[r.confidence] = (conf[r.confidence] ?? 0) + 1;
+        if (conf.STRONG !== ev.tests.restoration.confidence.STRONG || conf.MEDIUM !== ev.tests.restoration.confidence.MEDIUM || conf.WEAK !== ev.tests.restoration.confidence.WEAK)
+          p57Errors.push(`preracun: zaupanje ${conf.STRONG}/${conf.MEDIUM}/${conf.WEAK} ≠ ${ev.tests.restoration.confidence.STRONG}/${ev.tests.restoration.confidence.MEDIUM}/${ev.tests.restoration.confidence.WEAK}`);
+        // kolonska plast Haus Nro.: vsi 3 prehodi prisotni za vsako vrstico
+        const colsMissing = rows.filter((r) => !r.layers?.colsHausNr || r.layers.colsHausNr.filter((v) => v !== null && v !== undefined).length < 3).length;
+        if (colsMissing > 0) p57Errors.push(`kolonska plast: ${colsMissing} vrstic brez 3 prehodov`);
+        p57RtDetail = `${mode}: 40 vrstic (38 površin, Blatt I 1–40) · preracun soslednosti ${d.length} parov / ${dMed.toFixed(1)} m == pini · obnova == lostBases P56 · zaupanje == pini · kolone 3/3`;
+        if (mode === "produkcija")
+          p57RtDetail += " (runtime kopija preverjena — research/ ni v deploymentu)";
+        // dokaz ⊇ runtime (samo v repozitoriju, kjer je dokaz na voljo)
+        if (rawEv57 !== null && rawRt57 !== null) {
+          const rt = JSON.parse(rawRt57) as { rows: Record<string, unknown>[] };
+          const subset = rt.rows.every((rr, i) =>
+            Object.entries(rr).every(([k, v]) =>
+              JSON.stringify((ev.rowsEvidence[i] as unknown as Record<string, unknown>)[k]) === JSON.stringify(v)));
+          if (!subset) p57Errors.push("dokaz ⊉ runtime (vrstice niso bajtno enake)");
+          p57FileDetail = "dokaz preverjen: 40 vrstic ⊇ runtime bajtno (plasti: full/cols/areas/cells)";
+        }
+      } catch {
+        p57Errors.push("ps-register-start ni veljaven JSON");
+      }
+    }
+  }
+  push(
+    "qa-p57-register-start",
+    "P57: ZAČETEK REGISTRA PS — strani 3–4 (številke 1–40, Blatt I), obnova 26 base (issue #13): strani, ki jih P38/P56 izbora nista vključili, prebrane s ŠTIRIMI plastmi (polna ×3, kolone Haus Nro. ×3 iz 3× izrezov, izrezi površin ×3 z LCS poravnavo, tarčne celice 6× za 10 spornih — r40 odločanje 3/3 = 413) z deterministično adjudikacijo; veriga Blatt I 1–60 zaprta (committed ps-005 = 41); join po mehaniki P55 obnovi 26/26 lostBases (25 s pari površin: median modern/QK 3.7594 ≈ 3.59665, Δ +4.53 %, kontrola seed 42 = 3.2098 — 2.4× dlje; pas ±10 % 16 % vs 6.2 %; + številka 1 brez površine); soslednost 19 parov median 81.2 m (kontrola 263 m, 3.2×; MIN 126 m > opaženi — Monte-Carlo 100 %); zaupanje STRONG 3 / MEDIUM 14 / WEAK 9; 14 upokojenih številk; r1/r28 prazni, Fürtrag [~]; status REVIEW",
+    "P57: PS REGISTER OPENING — pp. 3–4 (numbers 1–40, Blatt I), restoration of 26 bases (issue #13): the pages omitted by the P38/P56 selections, read in FOUR layers (full ×3, Haus Nro. columns ×3 from 3× crops, area crops ×3 with LCS alignment, targeted 6× cells for 10 disputed — r40 tie-broken 3/3 = 413) with deterministic adjudication; the Blatt I chain 1–60 closed (committed ps-005 = 41); the join by the P55 mechanics restores 26/26 lostBases (25 with area pairs: median modern/QK 3.7594 ≈ 3.59665, Δ +4.53 %, control seed 42 = 3.2098 — 2.4× farther; ±10 % band 16 % vs 6.2 %; + number 1 without an area); adjacency 19 pairs median 81.2 m (control 263 m, 3.2×; MIN 126 m > observed — Monte-Carlo 100 %); confidence STRONG 3 / MEDIUM 14 / WEAK 9; 14 retired numbers; r1/r28 blank, Fürtrag [~]; status REVIEW",
+    p57Errors.length === 0,
+    p57Errors.length === 0
+      ? `veriga 1–40 + ps-005 (41) · 4 plasti (3/3/3 + celice 6×) · obnova 26/26 (25 z območji, 1 številka) · površine 3.7594 ≈ 3.59665 (Δ +4.53 %, kontrola 3.2098) · soslednost 81.2 m vs 263 m (3.2×, MIN 126) · STRONG 3 / MEDIUM 14 / WEAK 9 · 14 upokojenih · ${p57RtDetail} · ${p57FileDetail}`
+      : p57Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;

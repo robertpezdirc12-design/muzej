@@ -1960,3 +1960,70 @@ d > 0), I7 determinizem bajtno, I8 dokaz ⊇ runtime.
 **Poštenost:** odsotnost stavbe še zmeraj **NI dokaz porušitve** — terenska preverba
 117 »ni je več« tlorisov ostaja priporočena [~]. SHEET_GEOREFS in dokazi P40–P53
 nespremenjeni (lekcija P9).
+
+## §35 — P57: začetek registra PS — strani 3–4, številke 1–40, obnova 26 lostBases (issue #13, 2026-10-13)
+
+**Kontekst:** P56 je saniral 43 lažnih povezav S3 zapadka (str. 138–139, lastno
+oštevilčenje 1–100) in pri tem izgubil 26 base (1–11, 13, 15–23, 26, 31, 33, 35, 36),
+ker glavni register strani 3–4 NISTA bili v P38 izboru branj (135 strani = 5–139).
+Edini vir teh številk je bil napačen S3 zapadek. P57 vrne primarni vir.
+
+**Branje (4 neodvisne plasti, glm-5v-turbo, VAČ pdfPageImage page=3/4; 2× Lanczos
++ JPEG q92 po receptu p41/P3 README):**
+1. polna stran ×3 prehodi → `ps-raw/ps-00{3,4}{,-pass2,-pass3}.json` (vrstice 1–20
+   oz. 21–40 v 3/3 prehodih, summa vrste ločeno);
+2. kolone Haus Nro. ×3 iz 3× izrezov leve tabele → `ps-raw/ps-00{3,4}-cols{,2,3}.json`
+   — polnostransko branje je sistematično mešalo dvomestne hišne številke (60–66)
+   s črkami ("6a/6b/6o", str. 4 vse "1"); izrezi so dali čiste vrednosti
+   (str. 3: 60, 61, 62, 63, 62, 60, 62, 61, 61, 60, 60, 60, 66, 65, 31, 29, 24, 20, 0, 50;
+   str. 4 3/3: 0, 61, 66, 64, 59, 49, 51, 64, 18, 52, 63, 36, 41, 11, 65, 62, 64, 64, 66, 66);
+3. izrezi površin ×3 z LCS poravnavo → `ps-raw/ps-00{3,4}-areas{,2,3}.json`
+   (na str. 4 VLM vstavi [?] — poravnava po vrednostih reši; r11 = 729 ne 129,
+   r12 = 99 ne 39/79, r32 = 42 ne 92, r9 = 485, r10 = 803, r23 = 1204, r29 = 916,
+   r30 = 205, r39 = 468, r40 = 413 [odločanje 3/3 celic]);
+4. tarčne celice 6× za 10 spornih vrednosti → `ps-raw/ps-0034-cells-arbitration.json`
+   (+ r40 odločanje `...-r40-p{2,3}.json`).
+
+**Adjudikacija (deterministično pravilo):** cells==areas → močno (2 zoom plasti);
+cells==full → močno; sicer cells [~]; sicer areas==full → močno; sicer areas [~];
+sicer full. Rezultat: 27 vrstic areas+full, 10 cells [~], 1 cells+full, 1 full,
+1 brez površine (r1 — celica PRAZNA; blot je nad imenom, ne nad površino; r28 prazna).
+
+**Veriga:** str. 3 = 1–20, str. 4 = 21–40, committed ps-005 = 41–60 → neprekinjen
+Blatt I 1–60 (PS-full-v2 range str. 5 = [41, 60]).
+
+**Join + testi (mehanika P55, P47 parcele k.o. 1544):**
+- OBNOVA: povezanih 26/40 številskih == TOČNO lostBases P56 (26) — 25 s pari
+  površin + številka 1 (sodobni *1/x obstaja; površina [?]);
+- (A) POVRŠINE: median modern/QK po 25 parih **3.7594** ≈ 1 Wiener QK **3.59665** m²
+  (Δ +4.53 %); premešana kontrola (seed 42) **3.2098** — 2.4× dlje od konstante;
+  pas ±10 %: **16.0 %** vs **6.2 %** (2.6×);
+- (B) SOSLEDNOST: 19 zaporednih parov median **81.2 m** (≤150 m: 63.2 % vs kontrola
+  28.2 %); kontrola (seed 7) median **263 m** (3.2×), **MIN 126 m > opaženi** —
+  Monte-Carlo 100 %; jedro 1–9 + 15 + 21–23 + 35–36 blizu (≤148 m); 16–20 razmak [~];
+- zaupanje: **STRONG 3 / MEDIUM 14 / WEAK 9**; upokojene številke **14**
+  (12, 14, 24, 25, 27–30, 32, 34, 37–40 — brez sodobne naslednice, konsolidacija [~]).
+
+**Fürtrag [~]:** str. 3 "1 | Fürtrag | 5 | 5744/574" (prečrtan rdeče) + rdeče
+"2 | 1495"; str. 4 "2 | Fürtrag | 4 | 987" + siva "1336" + rdeče "3 | 1447" —
+vsote NISO kumulativne (str. 3 > str. 4); interpretacija obsega odprta [~].
+Vsote vidnih vrstic: str. 3 = 5707 K, str. 4 = 6771 K.
+
+**Integracija:** runtime `src/data/atlas/ps-register-start.json` (kompakt) + dokaz
+`research/issue17/ps-register-start.json` (plasti + adjudikacija + testi); API
+`/api/atlas/ps-register-start` (force-static); research.ts `PS_REGISTER_START_P57`
++ kartica P57 v Raziskavah (Prepisi Kurrent) + zapora P56 (»NADGRADNJA v P57«);
+sources.ts N083PS opomba P57 (Si+En); README bullet; repo worklog P57; QA
+**60 → 61** (`qa-p57-register-start`: pini + neodvisen preracun soslednosti iz
+runtime vrstic + obnova == lostBases P56 iz P56 runtime + kolone 3/3 + dokaz ⊇
+runtime bajtno; P53 lekcija — produkcija kontroly na runtime kopiji).
+
+**Invarianti I1–I8: PASS** — I1 struktura + veriga, I2 Haus Nro. 0–66 (2 vrstici
+2/3), I3 površine 38/40 + plasti, I4 join 26 + bbox, I5 površine (pas + kontrola +
+Monte-Carlo rang), I6 soslednost (MIN kontrola > opaženi), I7 obnova == lostBases,
+I8 dokaz ⊇ runtime bajtno + `--check` determinizem.
+
+**Poštenost:** vse vrednosti = meritve nad committed artefakti; nič prepisanega na
+slepo; identifikacija posamezne parcele ostaja [~]; strojno branje ni dokazni vir
+(REVIEW). SHEET_GEOREFS in dokazi P40–P56 nespremenjeni (lekcija P9); P55/P56
+runtime nespremenjena (pini qa-p55/p56).

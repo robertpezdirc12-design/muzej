@@ -3355,3 +3355,60 @@ P55 (14. 10. 2026) — GEOLOKACIJA GRUNDPARCELLEN: PS protokol 1825 ↔ sodobne 
   kartici P55; screenshot p56-card.png); QA števec 60/60 v UI; mobilni 390×844 overflowX 0 +
   footer sticky (footerVisibleAtBottom true); konzola 0 napak/0 opozorjenj.
 - SHEET_GEOREFS in dokazi P40–P55 nespremenjeni (lekcija P9).
+
+## P57 (2026-10-13) — issue #13: ZAČETEK REGISTRA PS — STRANI 3–4 (ŠTEVILKE 1–40, BLATT I), OBNOVA 26 LOSTBASES
+
+- Vir: strani 3–4 protokola PS (ZAČETEK glavnega registra, Blatt I) — P38/P56
+  izbora ju NISVA vključila (135 strani = 5–139), edini vir številk 1–36 je bil
+  S3 zapadek (str. 138–139); P56 jih je moral sanirati (−26 base). Slike prek
+  VAČ pdfPageImage (uodid 373415, docid 41780, page=3/4; ~1272×1023) + 2× Lanczos
+  JPEG q92 (recept p41/P3 README).
+- BRANJE v 4 neodvisnih plasteh (glm-5v-turbo, 21 novih ps-raw datotek):
+  1. polna stran ×3 → ps-00{3,4}{,-pass2,-pass3}.json — vrstice 1–20 oz. 21–40
+     v 3/3 prehodih obeh strani; summa vrste ločeno ("Fürtrag");
+  2. kolone Haus Nro. ×3 iz 3× izrezov → ps-00{3,4}-cols{,2,3}.json — polna
+     stran je sistematično mešala dvomestne številke s črkami ("6a/6b/6o";
+     str. 4 vse "1") — izrezi dajo čiste vrednosti (str. 3: 60,61,62,63,62,60,62,
+     61,61,60,60,60,66,65,31,29,24,20,0,50; str. 4 3/3: 0,61,66,64,59,49,51,64,
+     18,52,63,36,41,11,65,62,64,64,66,66); 2 dvoma 2/3 (r6 = 60, r17 = 24);
+  3. izrezi površin ×3 (3× izrez, LCS poravnava po vrednostih) → ps-00{3,4}-
+     areas{,2,3}.json — razkrila: r11 = 729 (ne 129 — vodilna 7), r12 = 99
+     (ne 39/79 — vsota strani potrdi), r32 = 42 (ne 92), r9 = 485, r10 = 803,
+     r23 = 1204 (h-rep = 4), r29 = 916, r30 = 205, r39 = 468;
+  4. tarčne celice 6× za 10 spornih → ps-0034-cells-arbitration.json
+     (+ r40 odločanje ×2 → 3/3 = 413; izrez ujame tudi Fürtrag '087' spodaj —
+     prva vrstica vrednosti).
+- ADJUDIKACIJA (deterministično pravilo): cells==areas > cells==full > cells [~]
+  > areas==full > areas [~] > full. Rezultat: 27 areas+full, 10 cells [~],
+  1 cells+full, 1 full, 1 brez (r1 — celica PRAZNA, blot nad imenom; r28 prazna).
+  38/40 površin; vsote vidnih: str. 3 = 5707 K, str. 4 = 6771 K; Fürtrag [~]
+  (str. 3 prečrtan rdeče; str. 4 z rdečo črto + siva '1336' + rdeča revizija;
+  NISO kumulativni — str. 3 > str. 4).
+- VERIGA: 1–20 + 21–40 + committed ps-005 (41–60) = neprekinjen Blatt I 1–60
+  (PS-full-v2 range str. 5 = [41, 60]).
+- JOIN + TESTI (mehanika P55, P47 parcele): povezanih 26/40 == TOČNO lostBases
+  P56; (A) površine: 25 parov, median modern/QK 3.7594 ≈ 3.59665 (Δ +4.53 %;
+  kontrola seed 42 = 3.2098, 2.4× dlje; pas ±10 % 16.0 % vs 6.2 %) + številka 1
+  (sodobni *1/x obstaja, površina [?]); (B) soslednost: 19 parov, median 81.2 m
+  (≤150 m: 63.2 % vs kontrola 28.2 %), kontrola seed 7 median 263 m (3.2×), MIN
+  126 m > opaženi — Monte-Carlo 100 %; jedro 1–9 + 15 + 21–23 + 35–36 blizu,
+  16–20 razmak [~]; zaupanje STRONG 3 / MEDIUM 14 / WEAK 9; upokojene številke 14
+  (12, 14, 24, 25, 27–30, 32, 34, 37–40 — konsolidacija [~]).
+- Skripta scripts/p57_ps_register_start.py (deterministična, brez AI ob delovanju,
+  I1–I8, --check bajtno: I1 struktura+veriga · I2 Haus Nro. · I3 površine+Fürtrag ·
+  I4 join+bbox · I5 površine · I6 soslednost · I7 obnova==lostBases · I8 dokaz ⊇
+  runtime — VSE PASS; --check po commitu PASS). Bralne skripte: p57_ps_read_p34.mjs
+  (+ _cols, _areas) — posamezni prehodi po "stran:prehod" (ozadje v peskovniku
+  ne preživi — foreground izvajanje).
+- Izpisi: dokaz research/issue17/ps-register-start.json (plasti + adjudikacija +
+  testi + Fürtrag surovine) + runtime src/data/atlas/ps-register-start.json.
+- Integracija: API /api/atlas/ps-register-start (force-static) + PS_REGISTER_START_P57
+  (research.ts) + kartica P57 (Raziskave → Prepisi Kurrent) + zapora P56
+  (»NADGRADNJA v P57«) + sources.ts N083PS opomba P57 (Si+En) + audit §35 +
+  README bullet.
+- QA 60 → 61 (qa-p57-register-start): pini + neodvisen preracun soslednosti iz
+  runtime vrstic + obnova == lostBases P56 (iz P56 runtime) + zaupanje == pini +
+  kolone 3/3 + dokaz ⊇ runtime bajtno; P53 lekcija — produkcija kontroly na
+  runtime kopiji (research/ ni v deploymentu).
+- SHEET_GEOREFS in dokazi P40–P56 nespremenjeni (lekcija P9); P55/P56 runtime
+  nespremenjena (pini qa-p55/p56).

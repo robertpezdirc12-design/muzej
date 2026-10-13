@@ -1,0 +1,19 @@
+{
+ "page": 4,
+ "kind": "cols",
+ "pass": 3,
+ "model": "glm-5v-turbo",
+ "created": 1791923731,
+ "usage": {
+  "completion_tokens": 261,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3240,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3501
+ },
+ "content": "{\"grund\": \"21\", \"hausNr\": \"0\"}\n{\"grund\": \"22\", \"hausNr\": \"61\"}\n{\"grund\": \"23\", \"hausNr\": \"66\"}\n{\"grund\": \"24\", \"hausNr\": \"64\"}\n{\"grund\": \"25\", \"hausNr\": \"59\"}\n{\"grund\": \"26\", \"hausNr\": \"49\"}\n{\"grund\": \"27\", \"hausNr\": \"51\"}\n{\"grund\": \"28\", \"hausNr\": \"64\"}\n{\"grund\": \"29\", \"hausNr\": \"18\"}\n{\"grund\": \"30\", \"hausNr\": \"52\"}\n{\"grund\": \"31\", \"hausNr\": \"63\"}\n{\"grund\": \"32\", \"hausNr\": \"36\"}\n{\"grund\": \"33\", \"hausNr\": \"41\"}\n{\"grund\": \"34\", \"hausNr\": \"11\"}\n{\"grund\": \"35\", \"hausNr\": \"65\"}\n{\"grund\": \"36\", \"hausNr\": \"62\"}\n{\"grund\": \"37\", \"hausNr\": \"64\"}\n{\"grund\": \"38\", \"hausNr\": \"64\"}\n{\"grund\": \"39\", \"hausNr\": \"66\"}\n{\"grund\": \"40\", \"hausNr\": \"66\"}"
+}

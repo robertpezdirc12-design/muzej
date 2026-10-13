@@ -74,6 +74,7 @@ import {
   PRESENT_GURS_P54,
   PS_GEO_P55,
   REGISTER_TOPOLOGY_P56,
+  PS_REGISTER_START_P57,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -1767,6 +1768,76 @@ export function MuseumResearch() {
                   {t(
                     "Vse vrednosti so MERITVE nad committed artefakti (P55 evidence, ps-raw branja, PS-full-v2 adjudikacije, P47 parcele) — nič ni ugibano in nič ni prerazporejeno: S3 zapadek je odstranjen iz joina z dvema dokazoma (pass-razhajanje + površine ~42× off), per-Blatt instanci pa ostajata dvoumni [~], ker je blatt stolpec ~50 % šumen (4. VLM prehod na glave listov ostaja odprt). P55 runtime (ps-parcels-geo.json) je NESPREMENJEN — sanacija je dokumentirana in velja za prihodnje uporabe. Letnice anmerkung so per-row [~] VLM branja (1515/1522 najverjetneje navedbe starih urbarijev). Strojno berljivo: research/issue17/ps-register-topology.json + runtime src/data/atlas/ps-register-topology.json (/api/atlas/ps-register-topology).",
                     "All values are MEASUREMENTS over committed artifacts (P55 evidence, ps-raw reads, PS-full-v2 adjudications, P47 parcels) — nothing guessed, nothing reassigned: the S3 appendix is removed from the join with two proofs (pass disagreement + areas ~42× off), while per-sheet instances remain ambiguous [~] because the blatt column is ~50 % noisy (a 4th VLM pass on sheet headers remains open). The P55 runtime (ps-parcels-geo.json) is UNCHANGED — the sanitization is documented and applies to future uses. The anmerkung years are per-row [~] VLM readings (1515/1522 most likely references to old urbaria). Machine-readable: research/issue17/ps-register-topology.json + the runtime src/data/atlas/ps-register-topology.json (/api/atlas/ps-register-topology).",
+                  )}
+                </p>
+              </div>
+
+              {/* P57 zapora: strani 3–4 prebrane */}
+              <div className="mt-3 rounded-lg border border-amber-200 bg-amber-50/60 p-3 dark:border-amber-900/50 dark:bg-amber-950/30">
+                <p className="text-[11px] leading-relaxed text-foreground/80">
+                  <span className="font-semibold">{t("NADGRADNJA v P57: ", "SUPERSEDED IN P57: ")}</span>
+                  {t(
+                    "strani 3–4 (številke 1–40 glavnega registra) so ZDAJ prebrane s štirimi plastmi — vseh 26 izgubljenih base je obnovljenih s primarnim virom (Blatt I); glej kartico P57.",
+                    "pp. 3–4 (numbers 1–40 of the main register) are NOW read in four layers — all 26 lost bases are restored from the primary source (Blatt I); see the P57 card.",
+                  )}
+                </p>
+              </div>
+            </div>
+
+            {/* P57 — začetek registra PS: strani 3–4, številke 1–40, Blatt I (issue #13) */}
+            <div className="min-w-0 rounded-xl border bg-card p-6 shadow-sm">
+              <h3 className="flex items-center gap-2 font-display text-lg font-semibold">
+                <BookOpen className="size-4 text-primary" aria-hidden="true" />
+                {t("Začetek registra PS — strani 3–4, številke 1–40, obnova 26 base (P57)", "PS register opening — pp. 3–4, numbers 1–40, restoration of 26 bases (P57)")}
+                <StatusBadge status={PS_REGISTER_START_P57.status} />
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                {t(
+                  "Strani 3–4 protokola (začetek glavnega registra, Blatt I) — ki jih P38/P56 izbora nista vključila — so prebrane s ŠTIRIMI neodvisnimi plastmi in deterministično adjudicirane; join po mehaniki P55 obnovi TOČNO vseh 26 base, ki jih je P56 moral sanirati (edini vir teh številk je bil zapadek str. 138–139). Veriga Blatt I 1–60 je zaprta (committed ps-005 začne 41).",
+                  "Pages 3–4 of the protocol (the main register opening, Blatt I) — omitted by the P38/P56 selections — were read in FOUR independent layers and deterministically adjudicated; the join by the P55 mechanics restores EXACTLY the 26 bases P56 had to drop (whose only source was the pp. 138–139 appendix). The Blatt I chain 1–60 is closed (committed ps-005 starts at 41).",
+                )}
+              </p>
+
+              {/* P57: plasti branja */}
+              <div className="mt-3 rounded-lg border bg-background p-3">
+                <p className="text-xs font-semibold">{t("Štiri plasti branja (glm-5v-turbo)", "Four reading layers (glm-5v-turbo)")}</p>
+                <p className="mt-1 font-mono text-[11px] leading-relaxed text-muted-foreground">
+                  {t("polna stran", "full page")} ×{PS_REGISTER_START_P57.readMeta.fullPasses} · {t("kolone Haus Nro.", "Haus Nro. columns")} ×{PS_REGISTER_START_P57.readMeta.colsPasses} (3× {t("izrez", "crop")}) · {t("izrezi površin", "area crops")} ×{PS_REGISTER_START_P57.readMeta.areasPasses} (LCS) · {t("celice 6×", "6× cells")} ×{PS_REGISTER_START_P57.readMeta.cellsArbitration} ({PS_REGISTER_START_P57.readMeta.disputedCells} {t("spornih", "disputed")})
+                </p>
+                <p className="mt-1 font-mono text-[11px] leading-relaxed text-muted-foreground">
+                  {t("adjudikacija", "adjudication")}: {PS_REGISTER_START_P57.adjudication.layersStrong} {t("vrstic izrezi+polna", "rows areas+full")} · {PS_REGISTER_START_P57.adjudication.layersCells} {t("celic [~]", "cells [~]")} · {PS_REGISTER_START_P57.adjudication.hausNr2of3} Haus Nro. 2/3
+                </p>
+              </div>
+
+              {/* P57: obnova + testi */}
+              <div className="mt-3 grid gap-2 sm:grid-cols-3">
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="text-xs font-semibold">{t("Obnova lostBases P56", "Restoration of P56 lostBases")}</p>
+                  <p className="mt-1 font-mono text-[11px] leading-relaxed text-muted-foreground">
+                    {PS_REGISTER_START_P57.restoration.restored}/{PS_REGISTER_START_P57.restoration.lostBasesP56} {t("obnovljenih", "restored")} ({PS_REGISTER_START_P57.restoration.restoredWithArea} {t("z območji", "with areas")}, {PS_REGISTER_START_P57.restoration.numberOnly} {t("samo številka", "number only")}) · {t("zaupanje", "confidence")} STRONG {PS_REGISTER_START_P57.restoration.confidence.STRONG} / MEDIUM {PS_REGISTER_START_P57.restoration.confidence.MEDIUM} / WEAK {PS_REGISTER_START_P57.restoration.confidence.WEAK} · {PS_REGISTER_START_P57.restoration.retiredUnmatched} {t("upokojenih številk", "retired numbers")}
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="text-xs font-semibold">{t("Test (A) površine", "Test (A) areas")}</p>
+                  <p className="mt-1 font-mono text-[11px] leading-relaxed text-muted-foreground">
+                    median modern/QK {PS_REGISTER_START_P57.areas.medianM2K} ≈ {PS_REGISTER_START_P57.areas.histQkM2} ({PS_REGISTER_START_P57.areas.deltaPct > 0 ? "+" : ""}{PS_REGISTER_START_P57.areas.deltaPct} %) · {t("kontrola", "control")} {PS_REGISTER_START_P57.areas.controlMedian} (2.4× {t("dlje", "farther")}) · {t("pas ±10 %", "±10 % band")}: {Math.round(PS_REGISTER_START_P57.areas.bandShareObserved * 100)} % vs {Math.round(PS_REGISTER_START_P57.areas.controlBandShare * 100)} %
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="text-xs font-semibold">{t("Test (B) soslednost", "Test (B) adjacency")}</p>
+                  <p className="mt-1 font-mono text-[11px] leading-relaxed text-muted-foreground">
+                    {PS_REGISTER_START_P57.adjacency.pairs} {t("parov", "pairs")} · median {PS_REGISTER_START_P57.adjacency.medianM} m ({Math.round(PS_REGISTER_START_P57.adjacency.share150 * 100)} % ≤ 150 m) · {t("kontrola", "control")} {PS_REGISTER_START_P57.adjacency.controlMedian} m ({PS_REGISTER_START_P57.adjacency.controlRatio}×), MIN {PS_REGISTER_START_P57.adjacency.controlMinM} m &gt; {t("opaženi", "observed")} — Monte-Carlo 100 %
+                  </p>
+                </div>
+              </div>
+
+              {/* P57: poštenost */}
+              <div className="mt-3 rounded-lg border border-emerald-200 bg-emerald-50/60 p-3 dark:border-emerald-900/50 dark:bg-emerald-950/30">
+                <p className="text-[11px] leading-relaxed text-foreground/80">
+                  <span className="font-semibold">{t("Pošten status: ", "Honest status: ")}</span>
+                  {t(
+                    "Vse vrednosti so MERITVE nad committed artefakti (21 novih ps-raw datotek + P55 mehanika + P47 parcele) — nič ni prepisano na slepo: 10 spornih celic odločenih s tarčnimi 6× izrezi (r40 z odločanjem 3/3 = 413), Haus Nro. iz kolonskih izrezov (polnostransko branje je sistematično mešalo dvomestne številke s črkami); r1/r28 celici površin PRAZNI na originalu; vsotni vrsti ('Fürtrag') delno berljivi [~]; 14 številk brez sodobne naslednice = upokojene s konsolidacijo [~]; identifikacija posamezne parcele ostaja [~] (strojno branje ni dokazni vir). P55/P56 runtime nespremenjena (pini qa-p55/p56). Strojno berljivo: research/issue17/ps-register-start.json + runtime src/data/atlas/ps-register-start.json (/api/atlas/ps-register-start).",
+                    "All values are MEASUREMENTS over committed artifacts (21 new ps-raw files + the P55 mechanics + P47 parcels) — nothing copied blindly: 10 disputed cells decided with targeted 6× crops (r40 tie-broken 3/3 = 413), Haus Nro. from column crops (the full-page reading systematically confused two-digit numbers with letters); the r1/r28 area cells are BLANK on the original; the carry-forward ('Fürtrag') rows partly legible [~]; 14 numbers without a modern successor = retired by consolidation [~]; per-parcel identification remains [~] (machine reading is not an evidentiary source). The P55/P56 runtimes are unchanged (qa-p55/p56 pins). Machine-readable: research/issue17/ps-register-start.json + the runtime src/data/atlas/ps-register-start.json (/api/atlas/ps-register-start).",
                   )}
                 </p>
               </div>

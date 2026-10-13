@@ -1,0 +1,21 @@
+{
+ "pages": [
+  3,
+  4
+ ],
+ "kind": "cells-arbitration",
+ "model": "glm-5v-turbo",
+ "created": 1791924188,
+ "usage": {
+  "completion_tokens": 331,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3060,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3391
+ },
+ "content": "```json\n{\"slika\": 1, \"stran\": 3, \"vrstica\": 9, \"klafter\": \"485\"}\n{\"slika\": 2, \"stran\": 3, \"vrstica\": 10, \"klafter\": \"803\"}\n{\"slika\": 3, \"stran\": 3, \"vrstica\": 12, \"klafter\": \"99\"}\n{\"slika\": 4, \"stran\": 3, \"vrstica\": 1, \"klafter\": \"[?]\"}\n{\"slika\": 5, \"stran\": 4, \"vrstica\": 22, \"klafter\": \"372\"}\n{\"slika\": 6, \"stran\": 4, \"vrstica\": 23, \"klafter\": \"120h\"}\n{\"slika\": 7, \"stran\": 4, \"vrstica\": 29, \"klafter\": \"916\"}\n{\"slika\": 8, \"stran\": 4, \"vrstica\": 30, \"klafter\": \"205\"}\n{\"slika\": 9, \"stran\": 4, \"vrstica\": 32, \"klafter\": \"42\"}\n{\"slika\": 10, \"stran\": 4, \"vrstica\": 39, \"klafter\": \"468\"}\n{\"slika\": 11, \"stran\": 4, \"vrstica\": 40, \"klafter\": \"413\"}\n```"
+}

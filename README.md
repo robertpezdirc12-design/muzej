@@ -306,6 +306,26 @@ API (statični, brez runtime AI):
   (`/api/atlas/ps-register-topology`) + `scripts/p56_ps_register_topology.py`;
   QA 59 → **60**; SHEET_GEOREFS in dokazi P40–P55 nespremenjeni.
 
+- **začetek registra PS (P57, issue #13)** — strani 3–4 (številke 1–40, Blatt I),
+  ki jih P38/P56 izbora nista vključili, ZDAJ prebrane s **štirimi neodvisnimi
+  plastmi** (polna stran ×3, kolone Haus Nro. ×3 iz 3× izrezov — polnostransko
+  branje je mešalo dvomestne številke s črkami, izrezi površin ×3 z LCS
+  poravnavo, tarčne celice 6× za 10 spornih vrednosti z odločanjem) in
+  deterministično adjudicirane; **veriga Blatt I 1–60 zaprta** (committed
+  ps-005 začne 41); join po mehaniki P55 **obnovi 26/26 izgubljenih base P56**
+  (edini vir teh številk je bil zapadek str. 138–139): 25 s pari površin —
+  median modern/QK **3.7594 ≈ 1 Wiener QK 3.59665 m²** (Δ +4.53 %; kontrola
+  seed 42 = 3.2098, 2.4× dlje od konstante; pas ±10 % 16 % vs 6.2 %) + številka 1
+  (celica površine prazna); **soslednost** 19 parov median **81.2 m** (kontrola
+  seed 7: median 263 m, MIN 126 m > opaženi — Monte-Carlo 100 %); zaupanje
+  **STRONG 3 / MEDIUM 14 / WEAK 9**; **14 upokojenih številk** (12, 14, 24, 25,
+  27–30, 32, 34, 37–40 — brez sodobne naslednice, konsolidacija [~]); r1/r28
+  prazni; Fürtrag vsotni vrsti delno berljivi [~]; P55/P56 runtime nespremenjena
+  (pini qa-p55/p56); dokaz `research/issue17/ps-register-start.json` + runtime
+  `src/data/atlas/ps-register-start.json` (`/api/atlas/ps-register-start`) +
+  `scripts/p57_ps_register_start.py`; QA 60 → **61**; SHEET_GEOREFS in dokazi
+  P40–P56 nespremenjeni.
+
 ## Varnost
 
 Žeton `VERCEL_TOKEN` je shranjen izključno kot šifrirana GitHub Actions

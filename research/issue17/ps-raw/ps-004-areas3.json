@@ -1,0 +1,19 @@
+{
+ "page": 4,
+ "kind": "areas",
+ "pass": 3,
+ "model": "glm-5v-turbo",
+ "created": 1791924063,
+ "usage": {
+  "completion_tokens": 649,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 2134,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 2783
+ },
+ "content": "```json\n{\"vrstica\": 1, \"klafter\": \"76\", \"fürtrag\": false}\n{\"vrstica\": 2, \"klafter\": \"312\", \"fürtrag\": false}\n{\"vrstica\": 3, \"klafter\": \"[?]\", \"fürtrag\": false}\n{\"vrstica\": 4, \"klafter\": \"120h\", \"fürtrag\": false}\n{\"vrstica\": 5, \"klafter\": \"hh2\", \"fürtrag\": false}\n{\"vrstica\": 6, \"klafter\": \"394\", \"fürtrag\": false}\n{\"vrstica\": 7, \"klafter\": \"h51\", \"fürtrag\": false}\n{\"vrstica\": 8, \"klafter\": \"825\", \"fürtrag\": false}\n{\"vrstica\": 9, \"klafter\": \"[?]\", \"fürtrag\": false}\n{\"vrstica\": 10, \"klafter\": \"976\", \"fürtrag\": false}\n{\"vrstica\": 11, \"klafter\": \"205\", \"fürtrag\": false}\n{\"vrstica\": 12, \"klafter\": \"198\", \"fürtrag\": false}\n{\"vrstica\": 13, \"klafter\": \"h2\", \"fürtrag\": false}\n{\"vrstica\": 14, \"klafter\": \"16\", \"fürtrag\": false}\n{\"vrstica\": 15, \"klafter\": \"h\", \"fürtrag\": false}\n{\"vrstica\": 16, \"klafter\": \"172\", \"fürtrag\": false}\n{\"vrstica\": 17, \"klafter\": \"173\", \"fürtrag\": false}\n{\"vrstica\": 18, \"klafter\": \"206\", \"fürtrag\": false}\n{\"vrstica\": 19, \"klafter\": \"194\", \"fürtrag\": false}\n{\"vrstica\": 20, \"klafter\": \"468\", \"fürtrag\": true}\n```\n\n**Opombe:**\n*   Vrstica 3 je prazna (le znak za nadaljevanje `'`), zato `[?]`.\n*   Vrstica 9 je prazna (le pika `.`), zato `[?]`.\n*   Zadnja vidna vrstica v izrezu (št. 40) vsebuje številko **468** in na dnu celice zbirno število **1334** (verjetno vsota), zato označena kot `fürtrag: true`. Številka **413** spada že v naslednjo vrstico (parcela 41), ki ni več del zahtevanega območja 21–40.\n*   Črka 'h' na koncu številke (npr. 120h) pomeni polovico (halbe) kvadratnega klafterja."
+}

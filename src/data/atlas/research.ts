@@ -3897,3 +3897,105 @@ export const REGISTER_TOPOLOGY_P56: {
     "nadgradnja P55 runtime ps-parcels-geo.json v v2 z series flag (zahteva uskladitev qa-p55 pini)",
   ],
 };
+
+// ——— P57: ZAČETEK REGISTRA PS — strani 3–4 (številke 1–40, Blatt I), obnova 26 lostBases (issue #13) ———
+export const PS_REGISTER_START_P57: {
+  series: "PS";
+  source: string;
+  status: ResearchStatus;
+  generatedBy: string;
+  readMeta: {
+    model: string;
+    fullPasses: number;
+    colsPasses: number;
+    areasPasses: number;
+    cellsArbitration: number;
+    disputedCells: number;
+  };
+  chain: { page3: string; page4: string; page5Committed: string; blatt: string };
+  restoration: {
+    lostBasesP56: number;
+    restored: number;
+    restoredWithArea: number;
+    numberOnly: number;
+    retiredUnmatched: number;
+    confidence: { STRONG: number; MEDIUM: number; WEAK: number };
+  };
+  areas: {
+    pairs: number;
+    medianM2K: number;
+    histQkM2: number;
+    deltaPct: number;
+    bandShareObserved: number;
+    controlMedian: number;
+    controlBandShare: number;
+  };
+  adjacency: {
+    pairs: number;
+    medianM: number;
+    share150: number;
+    controlMedian: number;
+    controlMinM: number;
+    controlShare150: number;
+    controlRatio: number;
+  };
+  adjudication: { layersStrong: number; layersCells: number; hausNr2of3: number; areasFull: number };
+  statusLine: string;
+  verdictSi: string;
+  verdictEn: string;
+  next: string[];
+} = {
+  series: "PS",
+  source: "N083PS.pdf (VAČ uodid 373415, docid 41780) — pdfPageImage page=3/4; izrezi 3×/6× Lanczos",
+  status: "REVIEW",
+  generatedBy: "scripts/p57_ps_register_start.py (deterministično, brez AI ob delovanju)",
+  readMeta: {
+    model: "glm-5v-turbo",
+    fullPasses: 3,
+    colsPasses: 3,
+    areasPasses: 3,
+    cellsArbitration: 3,
+    disputedCells: 10,
+  },
+  chain: { page3: "1–20", page4: "21–40", page5Committed: "41–60", blatt: "I" },
+  restoration: {
+    lostBasesP56: 26,
+    restored: 26,
+    restoredWithArea: 25,
+    numberOnly: 1,
+    retiredUnmatched: 14,
+    confidence: { STRONG: 3, MEDIUM: 14, WEAK: 9 },
+  },
+  areas: {
+    pairs: 25,
+    medianM2K: 3.7594,
+    histQkM2: 3.59665,
+    deltaPct: 4.53,
+    bandShareObserved: 0.16,
+    controlMedian: 3.2098,
+    controlBandShare: 0.0616,
+  },
+  adjacency: {
+    pairs: 19,
+    medianM: 81.2,
+    share150: 0.6316,
+    controlMedian: 263,
+    controlMinM: 126,
+    controlShare150: 0.282,
+    controlRatio: 3.2,
+  },
+  adjudication: { layersStrong: 27, layersCells: 10, hausNr2of3: 2, areasFull: 27 },
+  statusLine:
+    "str. 3–4 (Blatt I, št. 1–40): 40 vrstic, 4 plasti branja · 26/26 izgubljenih base P56 obnovljenih (25 z območji, 1 številka) · median modern/QK 3.7594 ≈ 3.59665 (Δ +4.53 %, kontrola 3.2098) · soslednost 81.2 m vs kontrola 263 m (3.2×) · zaupanje STRONG 3 / MEDIUM 14 / WEAK 9 · upokojene številke 14",
+  verdictSi:
+    "P57: ZAČETEK REGISTRA PS (issue #13) — strani 3–4 (številke 1–40, Blatt I) prebrane s štirimi neodvisnimi VLM plastmi (polna stran ×3, kolone Haus Nro. ×3 iz 3× izrezov, izrezi površin ×3 z LCS poravnavo, tarčne celice 6× za 10 spornih vrednosti z odločanjem) in deterministično adjudicirane (pravilo plasti: celice+izrezi > celice+polna > celice [~] > izrezi+polna > izrezi [~] > polna); veriga Blatt I 1–60 zaprta (ps-005 committed začne 41); JOIN po mehaniki P55 poveže 26/40 številskih — TOČNO vseh 26 base, ki jih je P56 izgubil (edini vir je bil S3 zapadek str. 138–139) — 25 s pari površin (median modern/QK 3.7594 ≈ 1 Wiener QK 3.59665 m², Δ +4.53 %; kontrola seed 42 = 3.2098, 2.4× dlje od konstante; pas ±10 %: 16.0 % vs 6.2 %) + številka 1 (sodobni 1/1 obstaja, površina [?] — celica na originalu prazna); SOSLEDNOST: 19 zaporednih parov median 81.2 m (≤150 m: 63.2 % vs kontrola 28.2 %), kontrola seed 7 median 263 m (3.2×) z MIN 126 m > opaženi — Monte-Carlo 100 %; jedro 1–9 + 15 + 21–23 + 35–36 blizu (≤148 m), 16–20 razmak [~]; zaupanje STRONG 3 / MEDIUM 14 / WEAK 9; 14 številk (12, 14, 24, 25, 27–30, 32, 34, 37–40) danes brez sodobne naslednice — upokojene s konsolidacijo [~]; vsotni vrsti ('Fürtrag') delno berljivi [~]; r1/r28 celici površin prazni; identifikacija posamezne parcele ostaja [~] — strojno branje ni dokazni vir",
+  verdictEn:
+    "P57: PS REGISTER OPENING (issue #13) — pp. 3–4 (numbers 1–40, Blatt I) read in four independent VLM layers (full page ×3, Haus Nro. columns ×3 from 3× crops, area crops ×3 with LCS alignment, targeted 6× cells for 10 disputed values with tie-breaks) and deterministically adjudicated (layer rule: cells+areas > cells+full > cells [~] > areas+full > areas [~] > full); the Blatt I chain 1–60 is closed (committed ps-005 starts at 41); the join by the P55 mechanics links 26/40 numbers — EXACTLY the 26 bases P56 had to drop (whose only source was the pp. 138–139 appendix) — 25 with area pairs (median modern/QK 3.7594 ≈ 1 Wiener QK 3.59665 m², Δ +4.53 %; control seed 42 = 3.2098, 2.4× farther from the constant; ±10 % band: 16.0 % vs 6.2 %) plus number 1 (modern 1/1 exists, area [?] — the cell is blank on the original); ADJACENCY: 19 consecutive pairs median 81.2 m (≤150 m: 63.2 % vs control 28.2 %), control seed 7 median 263 m (3.2×) with MIN 126 m > observed — Monte-Carlo 100 %; the core 1–9 + 15 + 21–23 + 35–36 is close (≤148 m), 16–20 spaced out [~]; confidence STRONG 3 / MEDIUM 14 / WEAK 9; 14 numbers have no modern successor — retired by consolidation [~]; the carry-forward ('Fürtrag') rows are partly legible [~]; the r1/r28 area cells are blank; per-parcel identification remains [~] — machine reading is not an evidentiary source",
+  next: [
+    "4. VLM prehod na glave listov (»Nro. des Blattes«) — zdaj z metodiko 4 plasti iz P57 → per-Blatt ločitev 515 dvoumnih base",
+    "lokalizacija sekcije 102 Bauplätze (niso v kultur branjah; str. 1–2 + vezi ostajajo neprebrani)",
+    "vzrok sodobne praznine 2507–2607: preveriti Grundsteuerkataster 1841 pregrupiranja",
+    "nadgradnja P55 runtime ps-parcels-geo.json v v2 (series flag + P57 Blatt I vir za št. 1–36)",
+    "povezava P57 Haus Nro. (60–66 jedro + 31/29/24/20/50) s tlorisi 1825 in PT domačijami [~]",
+  ],
+};

@@ -1,0 +1,20 @@
+{
+ "page": 4,
+ "row": 40,
+ "kind": "cells-arbitration-r40",
+ "pass": 3,
+ "model": "glm-5v-turbo",
+ "created": 1791925393,
+ "usage": {
+  "completion_tokens": 12,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 447,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 459
+ },
+ "content": "{\"klafter\": \"413\n087\"}"
+}
