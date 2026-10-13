@@ -3764,3 +3764,136 @@ export const PS_GEO_P55: {
     "nadhodni WFS prenos kulturnih parcel KO 1552 za Fučkovci (zunaj PS protokola)",
   ],
 };
+
+export const REGISTER_TOPOLOGY_P56: {
+  series: "PS";
+  source: string;
+  status: ResearchStatus;
+  generatedBy: string;
+  pageSelection: { pages: number; rows: number; identity: string; mainRegisterPages3and4: string };
+  topology: {
+    S1: { pages: string; pageCount: number; rows: number; numMin: number; numMax: number };
+    S2: { pages: string; pageCount: number; rows: number; numMin: number; numMax: number };
+    S3: { pages: string; pageCount: number; rows: number; numMin: number; numMax: number };
+    S4: { rows: number; note: string };
+  };
+  contamination: {
+    s3RowsTotal: number;
+    s3RowsMatched: number;
+    s3BasesOverlappingS1: number;
+    ratioMedianS3: number;
+    ratioMedianS1: number;
+    historicalQkM2: number;
+  };
+  sanitization: {
+    matchedRowsBefore: number;
+    matchedRowsAfter: number;
+    uniqueBasesBefore: number;
+    uniqueBasesAfter: number;
+    lostBasesCount: number;
+    ratioMedianAfter: number;
+  };
+  perBlattAmbiguity: {
+    basesOnMultiplePages: number;
+    withinS1: number;
+    s1s3Collisions: number;
+    withinS2: number;
+    matchedRowsWithAmbiguousBase: number;
+    cleanRowsWithAmbiguousBase: number;
+  };
+  modernVoid: {
+    voidRange: number[];
+    modernCount: number;
+    psRows: number;
+    contRange: number[];
+    contModernCount: number;
+    contParcelsCount: number;
+  };
+  timeline: { annotatedRows: number; topYear: string; topYearRows: number; pages1841Count: number; earliest: string; latest: string };
+  invariants: Record<string, string>;
+  statusLine: string;
+  verdictSi: string;
+  verdictEn: string;
+  next: string[];
+} = {
+  series: "PS",
+  source:
+    "PS protokol N083PS — branja research/issue17/ps-raw/ps-*.json + izbira strani PS-full-v2.json (135 strani) + P55 evidence research/issue17/ps-parcels-geo.json (2762 vrstic) + sodobne parcele k.o. 1544 (P47 prenos, 2117); polni izpis research/issue17/ps-register-topology.json + runtime src/data/atlas/ps-register-topology.json",
+  status: "REVIEW",
+  generatedBy: "scripts/p56_ps_register_topology.py",
+  pageSelection: {
+    pages: 135,
+    rows: 2762,
+    identity: "zaporedje (page, parzella) bajtno enako P55 evidence vrsticam (I1)",
+    mainRegisterPages3and4: "strani 3–4 (številke 1–40) NISO v P38 izboru branj",
+  },
+  topology: {
+    S1: { pages: "5–127", pageCount: 123, rows: 2501, numMin: 41, numMax: 2500 },
+    S2: { pages: "128–137", pageCount: 10, rows: 201, numMin: 2507, numMax: 2840 },
+    S3: { pages: "138–139", pageCount: 2, rows: 60, numMin: 1, numMax: 100 },
+    S4: { rows: 0, note: "rekapitulacija + »Abschluß der Gemeinde« (str. 140–143) — izven numeričnega joina" },
+  },
+  contamination: {
+    s3RowsTotal: 60,
+    s3RowsMatched: 43,
+    s3BasesOverlappingS1: 20,
+    ratioMedianS3: 0.0892,
+    ratioMedianS1: 3.7188,
+    historicalQkM2: 3.59665,
+  },
+  sanitization: {
+    matchedRowsBefore: 1110,
+    matchedRowsAfter: 1067,
+    uniqueBasesBefore: 800,
+    uniqueBasesAfter: 774,
+    lostBasesCount: 26,
+    ratioMedianAfter: 3.7394,
+  },
+  perBlattAmbiguity: {
+    basesOnMultiplePages: 515,
+    withinS1: 475,
+    s1s3Collisions: 20,
+    withinS2: 20,
+    matchedRowsWithAmbiguousBase: 529,
+    cleanRowsWithAmbiguousBase: 512,
+  },
+  modernVoid: {
+    voidRange: [2507, 2607],
+    modernCount: 0,
+    psRows: 87,
+    contRange: [2608, 2700],
+    contModernCount: 53,
+    contParcelsCount: 78,
+  },
+  timeline: {
+    annotatedRows: 584,
+    topYear: "1841",
+    topYearRows: 83,
+    pages1841Count: 44,
+    earliest: "1515",
+    latest: "1934",
+  },
+  invariants: {
+    I1: "izbira strani P55 replicirana: 135 strani (pass1 58 / pass2 69 / pass3→pass1 8), vrstic 2700–2800; zaporedje (page, parzella) bajtno enako P55 evidence vrsticam — PASS",
+    I2: "segmentacija: S1 str. 5–127 (123 strani), S2 str. 128–137 (10, številke 2507–2840 kot prebrano — str. 129 blok 2826–2840 ni monotoničen [~]), S3 str. 138–139 (2, lastno oštevilčenje 1–100, markerja: »Zusammenstellung der Grundstücke« + številskih anmerkung na str. 139); pass2/pass3 razhajanje S3 v PS-full-v2 — PASS",
+    I3: "kontaminacija: S3 vrstic 50–70, povezanih 30–60; median razmerja S3 ≤ 0.5 ≪ S1 ≥ 3.3 (1 QK = 3.59665 vmes); prekrivanje base S3∩S1 ≥ 15 (base 1–40 brez S1 vira) — lažne povezave — PASS",
+    I4: "sanacija: matchedAfter = matchedBefore − matchedS3; median razmerja po sanaciji v [3.3, 3.9]; unikatne base ne narastejo — PASS",
+    I5: "dvoumnost: base na več straneh 400–650, znotraj S1 ≥ 100, povezane vrstice z dvoumno base ≥ 100 — MERJENO (brez ugibanja/prerazporeditev) — PASS",
+    I6: "praznina: sodobnih parcel [2507,2607] == 0 ∧ PS vrstic v rangu ≥ 60; sodobnih [2608,2700] v [50, 100] — PASS",
+    I7: "determinizem — bajtno identičen izpis pri ponovnem izračunu (--check)",
+    I8: "dokaz ⊇ runtime — kompaktne sekcije bajtno enake dokazu",
+  },
+  statusLine:
+    "ANALYSIS-DETERMINISTIC — topologija registra PS: S1 glavni register (str. 5–127, per-Blatt), S2 spremembni register (str. 128–137, številke 2507–2840, anmerkung dodatki 1805–1934), S3 zapadek »Zusammenstellung der Grundstücke« (str. 138–139, lastno oštevilčenje 1–100, pass2/pass3 razhajanje); SANACIJA P55: 43 lažnih povezav S3 odstranjenih (median razmerja S3 0.0892 ≪ S1 3.7188); per-Blatt dvoumnost kvantificirana: 515 base na več straneh, 512 povezanih vrstic dvoumnih [~]; sodobna praznina 2507–2607 (0 parcel) dokumentirana; časovnica anmerkung: 584 vrstic, pik 1841 (83)",
+  verdictSi:
+    "P56 (2026-10-13): register PS NI homogen — topologija razčlenjena v štiri serije. S1 glavni register (str. 5–127, 123 strani): per-Blatt številčenje, Grund ≈ 1–2505. S2 spremembni register (str. 128–137): številke 2507–2840 kot prebrano (str. 129 blok 2826–2840 ni monotoničen [~]) z anmerkung dodatki — prvootkrito: »einf. Vermessung vom Jahr 1805« (str. 128), »hinzugekommen 1841«, »Grundsteuerkataster 1841«, »Durch Kauf 1841«; register je bil vzdrževan še desetletja po 1825 (584 označenih vrstic, letnice 1515–1934, pik 1841 s 83 vrsticami na 44 straneh — prehod na Franziszeischer Kataster). S3 zapadek »Zusammenstellung der Grundstücke« (str. 138–139): LASTNO oštevilčenje 1–100 (18 številskih anmerkung na str. 139 — premik stolpcev) — in točno te vrstice je P55 join napačno povezal: 60 vrstic, 43 povezanih, median razmerja površin 0.0892 proti 3.7188 v glavnem registru (~42× odmik) — determinističen dokaz lažnih povezav, neodvisno potrjen s P48 Blatt X analizo in pass2/pass3 razhajanjem branja. SANACIJA: povezane vrstice 1110 → 1067; unikatne parcelne številke 800 → 774 (številke 1–40: glavni register strani 3–4 NISTA v P38 izboru branj — edini vir je bil S3 zapadek). Per-Blatt dvoumnost znotraj glavnega registra KVANTIFICIRANA: 515 base številk se pojavlja na več straneh (475 znotraj S1), 512 povezanih vrstic (sanitiran join) je dvoumnih [~] — brez prerazporeditev (blatt stolpec ~50 % šumen). Sodobna praznina: 0 parcel 2507–2607 (87 PS dodatkov brez sodobnih naslednic) proti 53 base / 78 parcelam 2608–2700 — vzrok [~].",
+  verdictEn:
+    "P56 (2026-10-13): the PS register is NOT homogeneous — its topology resolves into four series. S1 main register (pp. 5–127, 123 pages): per-sheet numbering, Grund ≈ 1–2505. S2 changes register (pp. 128–137): numbers 2507–2840 as read (p. 129 block 2826–2840 non-monotonic [~]) with annotated additions — first documented: »einf. Vermessung vom Jahr 1805« (p. 128), »hinzugekommen 1841«, »Grundsteuerkataster 1841«, »Durch Kauf 1841«; the register was maintained for decades after 1825 (584 annotated rows, years 1515–1934, peak 1841 with 83 rows on 44 pages — the transition to the Franziszeian tax cadastre). S3 appendix »Zusammenstellung der Grundstücke« (pp. 138–139): its OWN numbering 1–100 (18 column-shifted numeric anmerkung on p. 139) — and exactly these rows were falsely linked by the P55 join: 60 rows, 43 linked, median area ratio 0.0892 vs 3.7188 in the main register (~42× off) — deterministic proof of false links, independently corroborated by the P48 Blatt X analysis and the pass2/pass3 reading disagreement. SANITIZATION: linked rows 1110 → 1067; unique parcel numbers 800 → 774 (numbers 1–40: main-register pages 3–4 are NOT among the P38 reads — the appendix was their only source). Per-sheet ambiguity within the main register QUANTIFIED: 515 base numbers appear on more than one page (475 within S1), 512 of the sanitized linked rows remain ambiguous [~] — no reassignments (the blatt column is ~50 % noisy). Modern void: 0 parcels numbered 2507–2607 (87 PS additions without modern successors) versus 53 base numbers / 78 parcels 2608–2700 — cause unknown [~].",
+  next: [
+    "4. VLM prehod na glave listov (»Nro. des Blattes«) z usmerjeno pozivo → per-Blatt ločitev dvoumnih instanc (515 base)",
+    "prebrati strani 3–4 (številke 1–40 glavnega registra) — trenutno pokrite le z S3 zapadkom",
+    "lokalizacija sekcije 102 Bauplätze v protokolu (niso v kultur branjah; morda ločen register)",
+    "vzrok sodobne praznine 2507–2607: preveriti Grundsteuerkataster 1841 (Franziszeischer Kataster) pregrupiranja",
+    "nadgradnja P55 runtime ps-parcels-geo.json v v2 z series flag (zahteva uskladitev qa-p55 pini)",
+  ],
+};

@@ -285,6 +285,27 @@ API (statični, brez runtime AI):
   `scripts/p55_ps_parcels_geo.py`; QA 58 → **59**; SHEET_GEOREFS in
   dokazi P40–P54 nespremenjeni.
 
+- **topologija registra PS (P56, issue #13)** — register NI homogen:
+  **S1** glavni register (str. 5–127, per-Blatt številčenje, 41–2500),
+  **S2** spremembni register (str. 128–137, št. 2507–2840 kot prebrano;
+  dodatki z anmerkung — »einf. Vermessung vom Jahr 1805, bezogen vom Hof
+  Nr 1003«, »Grundsteuerkataster 1841« — register vzdrževan do 1934:
+  584 označenih vrstic, pik 1841 s 83 vrsticami na 44 straneh),
+  **S3** zapadek »Zusammenstellung der Grundstücke« (str. 138–139, LASTNO
+  oštevilčenje 1–100; pass2/pass3 razhajanje [1..40] vs [421..440]),
+  **S4** rekapitulacija; **SANACIJA P55**: 43 S3 vrstic lažno povezanih
+  (median razmerja površin 0.0892 ≪ 3.7188 — ~42× od 1 Wiener QK
+  3.59665 m²; + P48 Blatt X koroboracija) — sanitiran join **1110 → 1067
+  vrstic, 800 → 774 base** (št. 1–40: str. 3–4 niso v P38 izboru branj);
+  per-Blatt dvoumnost MERJENO (brez prerazporeditev): **515 base na več
+  straneh** (475 znotraj S1), 512 vrstic dvoumnih [~]; sodobna praznina
+  **0 parcel 2507–2607** (87 PS dodatkov brez naslednic) proti 53 base /
+  78 parcelam 2608–2700; P55 runtime nespremenjen (pini qa-p55);
+  dokaz `research/issue17/ps-register-topology.json` + runtime
+  `src/data/atlas/ps-register-topology.json`
+  (`/api/atlas/ps-register-topology`) + `scripts/p56_ps_register_topology.py`;
+  QA 59 → **60**; SHEET_GEOREFS in dokazi P40–P55 nespremenjeni.
+
 ## Varnost
 
 Žeton `VERCEL_TOKEN` je shranjen izključno kot šifrirana GitHub Actions

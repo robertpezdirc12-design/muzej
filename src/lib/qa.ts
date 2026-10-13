@@ -39,6 +39,7 @@ import {
   LEAFLET_OVERLAY_P51,
   PRESENT_GURS_P54,
   PS_GEO_P55,
+  REGISTER_TOPOLOGY_P56,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -3400,6 +3401,139 @@ const p45bErrors: string[] = [];
     p55Errors.length === 0
       ? `2762 vrstic (135 strani, 58/69/8) · 1110 povezanih / 800 parcel (40.2 %) · površine 3.6984 ≈ 3.59665 (Δ +2.83 %, kontrola 3.9731) · soslednost 51.8 m vs 1436.9 m (27.8×) · STRONG 171 / MEDIUM 775 / WEAK 164 · Furkofze 2159/2160 Van Wawech Mihó · ${p55RtDetail} · ${p55FileDetail}`
       : p55Errors.join("; "),
+  );
+
+  /* ── P56 (issue #13): topologija registra PS — serije, spremembe, sanacija P55 ── */
+  const p56Errors: string[] = [];
+  const p56 = REGISTER_TOPOLOGY_P56;
+  // 1) pinane vrednosti konstante
+  if (p56.pageSelection.pages !== 135 || p56.pageSelection.rows !== 2762)
+    p56Errors.push(`izbira strani ${p56.pageSelection.pages}/${p56.pageSelection.rows} ≠ 135/2762`);
+  if (p56.topology.S1.pageCount !== 123 || p56.topology.S2.pageCount !== 10 || p56.topology.S3.pageCount !== 2)
+    p56Errors.push(`strani serij ≠ 123/10/2 (${p56.topology.S1.pageCount}/${p56.topology.S2.pageCount}/${p56.topology.S3.pageCount})`);
+  if (p56.topology.S1.numMin !== 41 || p56.topology.S1.numMax !== 2500)
+    p56Errors.push("S1 številke ≠ 41/2500 (str. 3–4 niso prebrane)");
+  if (p56.topology.S2.numMin !== 2507 || p56.topology.S2.numMax !== 2840)
+    p56Errors.push("S2 številke ≠ 2507/2840");
+  if (p56.topology.S3.numMin !== 1 || p56.topology.S3.numMax !== 100 || p56.topology.S3.rows !== 60)
+    p56Errors.push("S3 številke/vrstice ≠ 1/100/60");
+  if (p56.contamination.s3RowsTotal !== 60 || p56.contamination.s3RowsMatched !== 43)
+    p56Errors.push("kontaminacija ≠ 60/43");
+  if (p56.contamination.ratioMedianS3 !== 0.0892 || p56.contamination.ratioMedianS1 !== 3.7188)
+    p56Errors.push(`mediana razmerij ≠ 0.0892/3.7188 (${p56.contamination.ratioMedianS3}/${p56.contamination.ratioMedianS1})`);
+  if (p56.contamination.historicalQkM2 !== 3.59665) p56Errors.push("QK ≠ 3.59665");
+  if (p56.sanitization.matchedRowsBefore !== 1110 || p56.sanitization.matchedRowsAfter !== 1067)
+    p56Errors.push("sanitacija vrstic ≠ 1110/1067");
+  if (p56.sanitization.uniqueBasesBefore !== 800 || p56.sanitization.uniqueBasesAfter !== 774)
+    p56Errors.push("sanitacija base ≠ 800/774");
+  if (p56.sanitization.lostBasesCount !== 26 || p56.sanitization.ratioMedianAfter !== 3.7394)
+    p56Errors.push("izgubljene base / median ≠ 26/3.7394");
+  if (p56.perBlattAmbiguity.basesOnMultiplePages !== 515 || p56.perBlattAmbiguity.withinS1 !== 475)
+    p56Errors.push("dvoumnost ≠ 515/475");
+  if (p56.perBlattAmbiguity.cleanRowsWithAmbiguousBase !== 512)
+    p56Errors.push("dvoumne vrstice (sanitiran join) ≠ 512");
+  if (p56.modernVoid.voidRange[0] !== 2507 || p56.modernVoid.modernCount !== 0 || p56.modernVoid.psRows !== 87)
+    p56Errors.push("praznina ≠ [2507,2607]/0/87");
+  if (p56.modernVoid.contModernCount !== 53 || p56.modernVoid.contParcelsCount !== 78)
+    p56Errors.push("2608–2700 ≠ 53 base/78 parcel");
+  if (p56.timeline.annotatedRows !== 584 || p56.timeline.topYear !== "1841" || p56.timeline.topYearRows !== 83 || p56.timeline.pages1841Count !== 44)
+    p56Errors.push("časovnica ≠ 584/1841/83/44");
+  if (!Object.values(p56.invariants).every((v) => v.includes("PASS") || v.includes("bajtno")))
+    p56Errors.push("invarianti niso vsi PASS");
+  // 2) runtime ps-register-topology.json + NEODVISEN preracun iz P55 runtime vrstic
+  let p56RtDetail = "runtime ps-register-topology.json ni preverjen (readFile ni na voljo) — celovita kontrola teče na /api/qa";
+  let p56FileDetail = "dokazna datoteka ni preverjena (readFile ni na voljo)";
+  if (opts.readFile) {
+    const rawRt56 = opts.readFile("src/data/atlas/ps-register-topology.json");
+    const rawRt55 = opts.readFile("src/data/atlas/ps-parcels-geo.json");
+    if (rawRt56 === null) {
+      p56Errors.push("src/data/atlas/ps-register-topology.json ni berljiv (runtime)");
+    } else if (rawRt55 === null) {
+      p56Errors.push("src/data/atlas/ps-parcels-geo.json ni berljiv (potreben za neodvisen preracun)");
+    } else {
+      try {
+        const rt56 = JSON.parse(rawRt56) as {
+          contamination: { s3RowsTotal: number; s3RowsMatched: number; ratioMedianS3: number; ratioMedianS1: number; rows: Record<string, unknown>[] };
+          sanitization: { matchedRowsBefore: number; matchedRowsAfter: number; uniqueBasesBefore: number; uniqueBasesAfter: number };
+          perBlattAmbiguity: { basesOnMultiplePages: number; cleanRowsWithAmbiguousBase: number };
+          modernVoid: { modernCount: number; contModernCount: number; contParcelsCount: number };
+          timeline: { annotatedRows: number; byYear: Record<string, number> };
+        };
+        const rt55 = JSON.parse(rawRt55) as {
+          rows: { page: number; base: string | null; lat: number | null; ratio: number | null; owner: string | null; kultur: string | null; areaQK: number | null; areaModern: number | null }[];
+        };
+        // neodvisen preracun kontaminacije iz P55 runtime vrstic (runtime = samo povezane vrstice,
+        // zato je iz njega izračunljiv le število POVEZANIH S3 vrstic; skupaj 60 je pinano iz evidence)
+        const s3Matched = rt55.rows.filter((r) => (r.page === 138 || r.page === 139) && r.lat !== null);
+        if (s3Matched.length !== rt56.contamination.s3RowsMatched)
+          p56Errors.push(`preracun: S3 povezanih ${s3Matched.length} ≠ ${rt56.contamination.s3RowsMatched}`);
+        const med = (xs: number[]) => {
+          const s = [...xs].sort((a, b) => a - b);
+          return s.length % 2 ? s[(s.length - 1) / 2] : (s[s.length / 2 - 1] + s[s.length / 2]) / 2;
+        };
+        const medS3 = med(s3Matched.map((r) => r.ratio as number).filter((x) => x !== null));
+        const s1Matched = rt55.rows.filter((r) => r.page >= 5 && r.page <= 127 && r.lat !== null && r.ratio !== null);
+        const medS1 = med(s1Matched.map((r) => r.ratio as number));
+        if (Math.abs(medS3 - rt56.contamination.ratioMedianS3) > 0.001)
+          p56Errors.push(`preracun: median S3 ${medS3.toFixed(4)} ≠ ${rt56.contamination.ratioMedianS3}`);
+        if (Math.abs(medS1 - rt56.contamination.ratioMedianS1) > 0.001)
+          p56Errors.push(`preracun: median S1 ${medS1.toFixed(4)} ≠ ${rt56.contamination.ratioMedianS1}`);
+        const totalMatched = rt55.rows.filter((r) => r.lat !== null).length;
+        if (totalMatched - s3Matched.length !== rt56.sanitization.matchedRowsAfter)
+          p56Errors.push(`preracun: sanitiranih ${totalMatched - s3Matched.length} ≠ ${rt56.sanitization.matchedRowsAfter}`);
+        // kontaminacijske vrstice ⊆ P55 runtime (bajtno po poljih)
+        const key = (r: Record<string, unknown>) => JSON.stringify([r.page, r.base, r.owner, r.kultur, r.areaQK, r.areaModern, r.ratio]);
+        const s3Keys = new Set(s3Matched.map(key));
+        const missing = rt56.contamination.rows.filter((r) => !s3Keys.has(key(r)));
+        if (missing.length > 0) p56Errors.push(`kontaminacijske vrstice ⊄ P55 runtime (${missing.length} manjkajočih)`);
+        // časovnica: vsota po letih == skupaj
+        const yearSum = Object.values(rt56.timeline.byYear).reduce((a, b) => a + b, 0);
+        if (yearSum !== rt56.timeline.annotatedRows)
+          p56Errors.push(`časovnica: vsota ${yearSum} ≠ ${rt56.timeline.annotatedRows}`);
+        p56RtDetail = `runtime preverjen: S3 povezane vrstice ${s3Matched.length} preracunane iz P55 (median S3 ${medS3.toFixed(4)} / S1 ${medS1.toFixed(4)}) · sanitirani join ${totalMatched - s3Matched.length} · časovnica ${yearSum}`;
+      } catch {
+        p56Errors.push("runtime ps-register-topology.json ni veljaven JSON");
+      }
+    }
+    // 3) dokazna datoteka: pini + dokaz ⊇ runtime (vzorec qa-p51, produkcija na runtime kopiji)
+    const rawEv56 = opts.readFile("research/issue17/ps-register-topology.json");
+    if (rawEv56 === null) {
+      p56FileDetail = "produkcija: research/ ni v deploymentu — kontrola na runtime kopiji (vzorec qa-p43-chain-full)";
+    } else {
+      try {
+        const ev = JSON.parse(rawEv56) as {
+          pageSelection: { rows: number; pages: number };
+          series: Record<string, { pageCount: number }>;
+          contamination: { rows: Record<string, unknown>[] };
+          sanitization: { matchedRowsAfter: number; uniqueBasesAfter: number };
+          timeline: { annotatedRows: number };
+        };
+        if (ev.pageSelection.rows !== 2762 || ev.pageSelection.pages !== 135)
+          p56Errors.push("dokaz: izbira strani ≠ 135/2762");
+        if (ev.series.S1.pageCount !== 123 || ev.series.S2.pageCount !== 10 || ev.series.S3.pageCount !== 2)
+          p56Errors.push("dokaz: serije ≠ 123/10/2");
+        if (ev.sanitization.matchedRowsAfter !== 1067 || ev.sanitization.uniqueBasesAfter !== 774)
+          p56Errors.push("dokaz: sanitacija ≠ 1067/774");
+        const rawRt56b = opts.readFile("src/data/atlas/ps-register-topology.json");
+        if (rawRt56b !== null) {
+          const rt56b = JSON.parse(rawRt56b) as { contamination: { rows: unknown[] } };
+          if (JSON.stringify(rt56b.contamination.rows) !== JSON.stringify(ev.contamination.rows))
+            p56Errors.push("dokaz ⊉ runtime: kontaminacijske vrstice niso bajtno enake");
+        }
+        p56FileDetail = `dokaz preverjen: ${ev.pageSelection.pages} strani, sanitacija ${ev.sanitization.matchedRowsAfter}/${ev.sanitization.uniqueBasesAfter} · dokaz == runtime (kontaminacijske vrstice)`;
+      } catch {
+        p56Errors.push("dokaz ps-register-topology.json ni veljaven JSON");
+      }
+    }
+  }
+  push(
+    "qa-p56-register-topology",
+    "P56: TOPOLOGIJA REGISTRA PS — serije, spremembe 1805–1934, sanacija P55 (issue #13): register NI homogen — S1 glavni register (str. 5–127, 123 strani, per-Blatt, 41–2500), S2 spremembni register (str. 128–137, 2507–2840 kot prebrano, anmerkung dodatki: »einf. Vermessung vom Jahr 1805«, »Grundsteuerkataster 1841«), S3 zapadek »Zusammenstellung der Grundstücke« (str. 138–139, LASTNO oštevilčenje 1–100, pass2/pass3 razhajanje [1..40] vs [421..440]), S4 rekapitulacija; SANACIJA: 43 S3 vrstic lažno povezanih v P55 (median razmerja 0.0892 ≪ 3.7188 — ~42× od 1 QK 3.59665) — sanitiran join 1110 → 1067 vrstic, 800 → 774 base (št. 1–40: str. 3–4 niso prebrane); per-Blatt dvoumnost MERJENO: 515 base na več straneh (475 znotraj S1), 512 vrstic dvoumnih [~], brez prerazporeditev; sodobna praznina 2507–2607 (0 parcel, 87 PS dodatkov) vs 53 base / 78 parcel 2608–2700; časovnica anmerkung: 584 vrstic, letnice 1515–1934, pik 1841 (83 vrstic / 44 strani); status ANALYSIS-DETERMINISTIC",
+    "P56: PS REGISTER TOPOLOGY — series, changes 1805–1934, P55 sanitization (issue #13): the register is NOT homogeneous — S1 main register (pp. 5–127, 123 pages, per-sheet, 41–2500), S2 changes register (pp. 128–137, 2507–2840 as read, annotated additions: »einf. Vermessung vom Jahr 1805«, »Grundsteuerkataster 1841«), S3 appendix »Zusammenstellung der Grundstücke« (pp. 138–139, OWN numbering 1–100, pass2/pass3 disagreement [1..40] vs [421..440]), S4 recapitulation; SANITIZATION: 43 S3 rows falsely linked in P55 (median ratio 0.0892 ≪ 3.7188 — ~42× off 1 QK 3.59665) — sanitized join 1,110 → 1,067 rows, 800 → 774 bases (nos. 1–40: pp. 3–4 not read); per-sheet ambiguity MEASURED: 515 bases on multiple pages (475 within S1), 512 rows ambiguous [~], no reassignments; modern void 2507–2607 (0 parcels, 87 PS additions) vs 53 bases / 78 parcels 2608–2700; anmerkung timeline: 584 rows, years 1515–1934, peak 1841 (83 rows / 44 pages); status ANALYSIS-DETERMINISTIC",
+    p56Errors.length === 0,
+    p56Errors.length === 0
+      ? `serije 123/10/2 strani · kontaminacija 60/43 (median 0.0892 ≪ 3.7188, ~42×) · sanitiran join 1110 → 1067 / 800 → 774 · dvoumnost 515/475/512 · praznina 0 vs 53/78 · časovnica 584 (pik 1841: 83/44) · ${p56RtDetail} · ${p56FileDetail}`
+      : p56Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;

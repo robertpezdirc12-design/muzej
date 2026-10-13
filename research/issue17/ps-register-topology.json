@@ -1,0 +1,8430 @@
+{
+ "task": "P56 (issue #13/§PS; ps-parcels-geo »next« — per-Blatt ločitev) — TOPOLOGIJA REGISTRA PS: serije S1/S2/S3, spremembe 1805–1934, sanacija P55 joina (43 lažnih povezav Blatt X zapadka), kvantifikacija per-Blatt dvoumnosti, sodobna praznina 2507–2607, časovnica anmerkung",
+ "date": "2026-10-13",
+ "principle": "Nič ni bilo ugibano: vse številke so meritve nad committed artefakti (P55 evidence vrstice, ps-raw branja, PS-full-v2 adjudikacije, P47 prenos parcel). S3 zapadek NI prerazporejen — odstranjen iz joina z dvema neodvisnima dokazoma (pass-razhajanje + površine ~40× off); per-Blatt instanci se NE ločujeta brez zanesljivih branj lista (blatt stolpec ~50 % šumen — PS-full-v2 blattNote) — samo kvantifikacija.",
+ "inputs": {
+  "psRaw": "research/issue17/ps-raw/ps-*.json (P36/P38 branja, 233 datotek)",
+  "pageSelection": "research/issue17/PS-full-v2.json (135 strani)",
+  "p55Evidence": "research/issue17/ps-parcels-geo.json (2762 vrstic, 1110 povezanih)",
+  "modernParcels": "research/georef-n83/gurs/parcels-ko1544-merged.json (2117, vse ko 1544)",
+  "p48BlattX": "research/issue17/buildings-overlay.json (neodvisna Blatt X analiza P48)"
+ },
+ "pageSelection": {
+  "pages": 135,
+  "rows": 2762,
+  "pass1": 58,
+  "pass2": 69,
+  "pass3Fallback": 8,
+  "identity": "zaporedje (page, parzella) bajtno enako P55 evidence vrsticam (I1)",
+  "mainRegisterPages3and4": "strani 3–4 (številke 1–40) NISO v P38 izboru branj"
+ },
+ "series": {
+  "S1": {
+   "labelSi": "glavni register (Blatt I–X, per-Blatt številčenje)",
+   "labelEn": "main register (Blatt I–X, per-sheet numbering)",
+   "pages": "5–127",
+   "pageCount": 123,
+   "rows": 2501,
+   "numMin": 41,
+   "numMax": 2500,
+   "note": "številke 1–40 (strani 3–4) niso prebrane; per-Blatt ponovitve = I5 dvoumnost"
+  },
+  "S2": {
+   "labelSi": "spremembni register — dodatki in spremembe po 1825",
+   "labelEn": "changes register — additions and changes after 1825",
+   "pages": "128–137",
+   "pageCount": 10,
+   "rows": 201,
+   "numMin": 2507,
+   "numMax": 2840,
+   "markers": [
+    "str. 128: »einf. Vermessung vom Jahr 1805, bezogen vom Hof Nr 1003«",
+    "str. 129: »Umfangsvollzug vom« + blok 2826–2840 (PS-full-v2 range — ni monotoničen z ostalimi stranimi S2) [~]",
+    "str. 134/137: »Durch Kauf... 1841« / »Dpf hinzugekommen 1841«",
+    "str. 135: »Grundsteuerkataster 1841«; št. 2611–2630 na treh straneh (133/134/135 — trojna pojavitev, merjeno v I5)"
+   ]
+  },
+  "S3": {
+   "labelSi": "zapadek — »Zusammenstellung der Grundstücke« (lastno oštevilčenje)",
+   "labelEn": "appendix — »Zusammenstellung der Grundstücke« (own numbering)",
+   "pages": "138–139",
+   "pageCount": 2,
+   "rows": 60,
+   "numMin": 1,
+   "numMax": 100,
+   "markers": [
+    "str. 138: anmerkung »Zusammenstellung der Grundstücke«",
+    "str. 139: 19 vrstic s ŠTEVILSKO anmerkung (premik stolpcev; ena letnica 1860)"
+   ],
+   "pass2Pass3Disagreement": {
+    "138": {
+     "pass2Range": [
+      1.0,
+      40.0
+     ],
+     "pass3Reading": [
+      421.0,
+      440.0
+     ]
+    },
+    "139": {
+     "pass2Range": [
+      81.0,
+      100.0
+     ],
+     "pass3Reading": [
+      417.0,
+      436.0
+     ]
+    }
+   }
+  },
+  "S4": {
+   "labelSi": "rekapitulacija + »Abschluß der Gemeinde« (str. 140–143)",
+   "labelEn": "recapitulation + »Abschluß der Gemeinde« (pp. 140–143)",
+   "rows": 0,
+   "note": "izven numeričnega joina (vsote, overovitev 1826); v P38 izboru niso numerične"
+  }
+ },
+ "contamination": {
+  "s3RowsTotal": 60,
+  "s3RowsMatched": 43,
+  "s3BasesOverlappingS1": 20,
+  "ratioMedianS3": 0.0892,
+  "ratioMedianS1": 3.7188,
+  "historicalQkM2": 3.59665,
+  "verdictSi": "S3 vrstice so številčno nezanesljive (pass2 [1..40]/[81..100] vs pass3 [421..440]/[417..436]) in po površinah neslurjive s parcelami, na katere jih je povezal P55 (median razmerja 0.0892 proti 3.7188 v glavnem registru — ~42× odmik od zgodovinskega 1 QK). Povezave = lažne (isti base, drug register).",
+  "rows": [
+   {
+    "page": 138,
+    "base": "1",
+    "owner": "Grübl Lorenz",
+    "kultur": "Wiese",
+    "areaQK": 4698.0,
+    "areaModern": 4548.0,
+    "ratio": 0.9681
+   },
+   {
+    "page": 138,
+    "base": "2",
+    "owner": "Grübl Lorenz",
+    "kultur": "Wiese",
+    "areaQK": 5447.0,
+    "areaModern": 486.0,
+    "ratio": 0.0892
+   },
+   {
+    "page": 138,
+    "base": "3",
+    "owner": "Grübl Lorenz",
+    "kultur": "Wiese",
+    "areaQK": 5706.0,
+    "areaModern": 1917.0,
+    "ratio": 0.336
+   },
+   {
+    "page": 138,
+    "base": "4",
+    "owner": "Grübl Lorenz",
+    "kultur": "Acker",
+    "areaQK": 3583.0,
+    "areaModern": 986.0,
+    "ratio": 0.2752
+   },
+   {
+    "page": 138,
+    "base": "5",
+    "owner": "Grübl Lorenz",
+    "kultur": "Acker",
+    "areaQK": 1140.0,
+    "areaModern": 1280.0,
+    "ratio": 1.1228
+   },
+   {
+    "page": 138,
+    "base": "6",
+    "owner": "Grübl Lorenz",
+    "kultur": "Acker",
+    "areaQK": 682.0,
+    "areaModern": 1608.0,
+    "ratio": 2.3578
+   },
+   {
+    "page": 138,
+    "base": "7",
+    "owner": "Grübl Lorenz",
+    "kultur": "Acker",
+    "areaQK": 9863.0,
+    "areaModern": 1406.0,
+    "ratio": 0.1426
+   },
+   {
+    "page": 138,
+    "base": "8",
+    "owner": "Grübl Lorenz",
+    "kultur": "Acker",
+    "areaQK": 1909.0,
+    "areaModern": 464.0,
+    "ratio": 0.2431
+   },
+   {
+    "page": 138,
+    "base": "9",
+    "owner": "Grübl Lorenz",
+    "kultur": "Acker",
+    "areaQK": 81.0,
+    "areaModern": 1734.0,
+    "ratio": 21.4074
+   },
+   {
+    "page": 138,
+    "base": "10",
+    "owner": "Grübl Lorenz",
+    "kultur": "Acker",
+    "areaQK": 4581.0,
+    "areaModern": 5063.0,
+    "ratio": 1.1052
+   },
+   {
+    "page": 138,
+    "base": "11",
+    "owner": "Grübl Lorenz",
+    "kultur": "Acker",
+    "areaQK": 2031.0,
+    "areaModern": 361.0,
+    "ratio": 0.1777
+   },
+   {
+    "page": 138,
+    "base": "13",
+    "owner": "Grübl Lorenz",
+    "kultur": "Acker",
+    "areaQK": 2888.0,
+    "areaModern": 572.0,
+    "ratio": 0.1981
+   },
+   {
+    "page": 138,
+    "base": "15",
+    "owner": "Grübl Lorenz",
+    "kultur": "Acker",
+    "areaQK": 10390.0,
+    "areaModern": 5137.0,
+    "ratio": 0.4944
+   },
+   {
+    "page": 138,
+    "base": "16",
+    "owner": "Grübl Lorenz",
+    "kultur": "Acker",
+    "areaQK": 16270.0,
+    "areaModern": 687.0,
+    "ratio": 0.0422
+   },
+   {
+    "page": 138,
+    "base": "17",
+    "owner": "Grübl Lorenz",
+    "kultur": "Acker",
+    "areaQK": 16817.0,
+    "areaModern": 723.0,
+    "ratio": 0.043
+   },
+   {
+    "page": 138,
+    "base": "18",
+    "owner": "Grübl Lorenz",
+    "kultur": "Acker",
+    "areaQK": 10783.0,
+    "areaModern": 1478.0,
+    "ratio": 0.1371
+   },
+   {
+    "page": 138,
+    "base": "19",
+    "owner": "Grübl Lorenz",
+    "kultur": "Acker",
+    "areaQK": 21908.0,
+    "areaModern": 42.0,
+    "ratio": 0.0019
+   },
+   {
+    "page": 138,
+    "base": "20",
+    "owner": "Grübl Lorenz",
+    "kultur": "Acker",
+    "areaQK": 10490.0,
+    "areaModern": 414.0,
+    "ratio": 0.0395
+   },
+   {
+    "page": 138,
+    "base": "21",
+    "owner": "Samm",
+    "kultur": "Acker",
+    "areaQK": null,
+    "areaModern": 43.0,
+    "ratio": null
+   },
+   {
+    "page": 138,
+    "base": "22",
+    "owner": "Samm",
+    "kultur": "Acker",
+    "areaQK": null,
+    "areaModern": 720.0,
+    "ratio": null
+   },
+   {
+    "page": 138,
+    "base": "23",
+    "owner": "Samm",
+    "kultur": "Acker",
+    "areaQK": null,
+    "areaModern": 84.0,
+    "ratio": null
+   },
+   {
+    "page": 138,
+    "base": "26",
+    "owner": "Samm",
+    "kultur": "Acker",
+    "areaQK": null,
+    "areaModern": 892.0,
+    "ratio": null
+   },
+   {
+    "page": 138,
+    "base": "31",
+    "owner": "Samm",
+    "kultur": "Acker",
+    "areaQK": null,
+    "areaModern": 993.0,
+    "ratio": null
+   },
+   {
+    "page": 138,
+    "base": "33",
+    "owner": "Samm",
+    "kultur": "Acker",
+    "areaQK": null,
+    "areaModern": 250.0,
+    "ratio": null
+   },
+   {
+    "page": 138,
+    "base": "35",
+    "owner": "Samm",
+    "kultur": "Acker",
+    "areaQK": null,
+    "areaModern": 47.0,
+    "ratio": null
+   },
+   {
+    "page": 138,
+    "base": "36",
+    "owner": "Samm",
+    "kultur": "Acker",
+    "areaQK": null,
+    "areaModern": 719.0,
+    "ratio": null
+   },
+   {
+    "page": 139,
+    "base": "81",
+    "owner": "Grübl Joh.",
+    "kultur": "81. flur",
+    "areaQK": 6790.0,
+    "areaModern": 523.0,
+    "ratio": 0.077
+   },
+   {
+    "page": 139,
+    "base": "82",
+    "owner": "6a",
+    "kultur": "82",
+    "areaQK": 8686.0,
+    "areaModern": 1653.0,
+    "ratio": 0.1903
+   },
+   {
+    "page": 139,
+    "base": "83",
+    "owner": "63",
+    "kultur": "83",
+    "areaQK": 296.0,
+    "areaModern": 1477.0,
+    "ratio": 4.9899
+   },
+   {
+    "page": 139,
+    "base": "84",
+    "owner": "64",
+    "kultur": "84",
+    "areaQK": 4064.0,
+    "areaModern": 76.0,
+    "ratio": 0.0187
+   },
+   {
+    "page": 139,
+    "base": "85",
+    "owner": "65",
+    "kultur": "85",
+    "areaQK": 11409.0,
+    "areaModern": 616.0,
+    "ratio": 0.054
+   },
+   {
+    "page": 139,
+    "base": "88",
+    "owner": "68",
+    "kultur": "88",
+    "areaQK": 20399.0,
+    "areaModern": 284.0,
+    "ratio": 0.0139
+   },
+   {
+    "page": 139,
+    "base": "89",
+    "owner": "69",
+    "kultur": "89",
+    "areaQK": 16027.0,
+    "areaModern": 600.0,
+    "ratio": 0.0374
+   },
+   {
+    "page": 139,
+    "base": "90",
+    "owner": "70",
+    "kultur": "90",
+    "areaQK": 12998.0,
+    "areaModern": 1738.0,
+    "ratio": 0.1337
+   },
+   {
+    "page": 139,
+    "base": "91",
+    "owner": "71",
+    "kultur": "91",
+    "areaQK": 22262.0,
+    "areaModern": 945.0,
+    "ratio": 0.0424
+   },
+   {
+    "page": 139,
+    "base": "92",
+    "owner": "72",
+    "kultur": "92",
+    "areaQK": 18904.0,
+    "areaModern": 490.0,
+    "ratio": 0.0259
+   },
+   {
+    "page": 139,
+    "base": "93",
+    "owner": "73",
+    "kultur": "93",
+    "areaQK": 18929.0,
+    "areaModern": 1033.0,
+    "ratio": 0.0546
+   },
+   {
+    "page": 139,
+    "base": "94",
+    "owner": "74",
+    "kultur": "94",
+    "areaQK": 20104.0,
+    "areaModern": 1764.0,
+    "ratio": 0.0877
+   },
+   {
+    "page": 139,
+    "base": "95",
+    "owner": "75",
+    "kultur": "95",
+    "areaQK": 17778.0,
+    "areaModern": 1322.0,
+    "ratio": 0.0744
+   },
+   {
+    "page": 139,
+    "base": "96",
+    "owner": "76",
+    "kultur": "96",
+    "areaQK": 18488.0,
+    "areaModern": 1021.0,
+    "ratio": 0.0552
+   },
+   {
+    "page": 139,
+    "base": "97",
+    "owner": "77",
+    "kultur": "97",
+    "areaQK": 18606.0,
+    "areaModern": 321.0,
+    "ratio": 0.0173
+   },
+   {
+    "page": 139,
+    "base": "98",
+    "owner": "78",
+    "kultur": "98",
+    "areaQK": 21479.0,
+    "areaModern": 2156.0,
+    "ratio": 0.1004
+   },
+   {
+    "page": 139,
+    "base": "100",
+    "owner": "80",
+    "kultur": "100",
+    "areaQK": 24301.0,
+    "areaModern": 1135.0,
+    "ratio": 0.0467
+   }
+  ]
+ },
+ "sanitization": {
+  "matchedRowsBefore": 1110,
+  "matchedRowsAfter": 1067,
+  "uniqueBasesBefore": 800,
+  "uniqueBasesAfter": 774,
+  "lostBases": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   13,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   26,
+   31,
+   33,
+   35,
+   36
+  ],
+  "lostNote": "številke 1–40: glavni register strani 3–4 NISTA v P38 izboru branj — edini vir teh številk je bil S3 zapadek; po sanaciji nepovezane",
+  "ratioMedianAfter": 3.7394,
+  "note": "P55 runtime (ps-parcels-geo.json) se NE spreminja (pini qa-p55) — sanacija je dokumentirana tukaj in upoštevana v kartici P55 (pošten status) ter pri vseh prihodnjih uporabah joina"
+ },
+ "perBlattAmbiguity": {
+  "basesOnMultiplePages": 515,
+  "withinS1": 475,
+  "s1s3Collisions": 20,
+  "withinS2": 20,
+  "matchedRowsWithAmbiguousBase": 529,
+  "cleanRowsWithAmbiguousBase": 512,
+  "verdictSi": "join po sami številki ne more ločiti per-Blatt instanc (P39: ista številka na različnih listih = druga parcela, lastniški test 29/29) — 529 povezanih vrstic dvoumnih [~]; brez zanesljivih branj lista (blatt stolpec ~50 % šumen — PS-full-v2 blattNote) se NE prerazporeja — samo meritve; 4. VLM prehod z pozivo na glave listov ostaja odprt",
+  "rows": [
+   {
+    "page": 7,
+    "base": "81",
+    "owner": "Schimer Thoma",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 7,
+    "base": "82",
+    "owner": "Pesdintz Thoma",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 7,
+    "base": "83",
+    "owner": "Lappany Michel",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 7,
+    "base": "84",
+    "owner": "Lappany Michel",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 7,
+    "base": "85",
+    "owner": "Lappany Michel",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 7,
+    "base": "88",
+    "owner": "Hobotshar Marx",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 7,
+    "base": "89",
+    "owner": "Strauß Georg",
+    "conf": "STRONG"
+   },
+   {
+    "page": 7,
+    "base": "90",
+    "owner": "Pesdintz Matthäus",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 7,
+    "base": "91",
+    "owner": "Schimer Thoma",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 7,
+    "base": "92",
+    "owner": "Schimer Jakob",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 7,
+    "base": "93",
+    "owner": "Pesdintz Matthäus",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 7,
+    "base": "94",
+    "owner": "Pesdintz Matthäus",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 7,
+    "base": "95",
+    "owner": "Hobotshar Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 7,
+    "base": "96",
+    "owner": "Strauß Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 7,
+    "base": "97",
+    "owner": "Hobotshar Marx",
+    "conf": "WEAK"
+   },
+   {
+    "page": 7,
+    "base": "98",
+    "owner": "Hobotshar Marx",
+    "conf": "WEAK"
+   },
+   {
+    "page": 7,
+    "base": "100",
+    "owner": "Hobotshar Marx",
+    "conf": "WEAK"
+   },
+   {
+    "page": 7,
+    "base": "102",
+    "owner": "Strauß Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 8,
+    "base": "102",
+    "owner": "Hrauf' Hanns",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 10,
+    "base": "160",
+    "owner": "Leschig Martin",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 11,
+    "base": "161",
+    "owner": "Poidir Matjaš",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 11,
+    "base": "162",
+    "owner": "Kustitar Matjaš",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 11,
+    "base": "163",
+    "owner": "Brulca Miko",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 11,
+    "base": "164",
+    "owner": "Schimer Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 11,
+    "base": "165",
+    "owner": "Schimer Matjaš",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 11,
+    "base": "166",
+    "owner": "Poidir Matjaš",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 11,
+    "base": "168",
+    "owner": "Poidir Georg",
+    "conf": "WEAK"
+   },
+   {
+    "page": 11,
+    "base": "171",
+    "owner": "Poidir Matjaš",
+    "conf": "WEAK"
+   },
+   {
+    "page": 11,
+    "base": "173",
+    "owner": "Brulca Miko",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 11,
+    "base": "174",
+    "owner": "Poidir Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 11,
+    "base": "175",
+    "owner": "Kustitar Matjaš",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 11,
+    "base": "176",
+    "owner": "Chrišchan Matjaš",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 11,
+    "base": "179",
+    "owner": "Brulca Miko",
+    "conf": "WEAK"
+   },
+   {
+    "page": 23,
+    "base": "405",
+    "owner": "Strauß Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 23,
+    "base": "406",
+    "owner": "Schimlty Peter",
+    "conf": "STRONG"
+   },
+   {
+    "page": 24,
+    "base": "405",
+    "owner": "Hatschbach Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 24,
+    "base": "406",
+    "owner": "Hatschbach Marxo",
+    "conf": "STRONG"
+   },
+   {
+    "page": 35,
+    "base": "641",
+    "owner": "Würich Maria",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 35,
+    "base": "642",
+    "owner": "Tschakl Mathäus",
+    "conf": "STRONG"
+   },
+   {
+    "page": 35,
+    "base": "643",
+    "owner": "Tschakl Mathäus",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 35,
+    "base": "644",
+    "owner": "Tschakl Mathäus",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 35,
+    "base": "646",
+    "owner": "Dreschler Mathäus",
+    "conf": "WEAK"
+   },
+   {
+    "page": 35,
+    "base": "648",
+    "owner": "Würich Maria",
+    "conf": "WEAK"
+   },
+   {
+    "page": 35,
+    "base": "651",
+    "owner": "Mallwetsch Markus",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 35,
+    "base": "652",
+    "owner": "Stuppler Mathäus",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 35,
+    "base": "653",
+    "owner": "Mallwetsch Johann",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 35,
+    "base": "654",
+    "owner": "Mallwetsch Johann",
+    "conf": "STRONG"
+   },
+   {
+    "page": 35,
+    "base": "655",
+    "owner": "Prinz Johann",
+    "conf": "STRONG"
+   },
+   {
+    "page": 35,
+    "base": "656",
+    "owner": "Prinz Johann",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 35,
+    "base": "657",
+    "owner": "Prinz Maria",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 35,
+    "base": "659",
+    "owner": "Stuppler Mathäus",
+    "conf": "WEAK"
+   },
+   {
+    "page": 36,
+    "base": "661",
+    "owner": "Mülley Daniel",
+    "conf": "WEAK"
+   },
+   {
+    "page": 36,
+    "base": "663",
+    "owner": "Würing Michael",
+    "conf": "WEAK"
+   },
+   {
+    "page": 36,
+    "base": "666",
+    "owner": "Weissbar Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 36,
+    "base": "667",
+    "owner": "Mülley Johann",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 36,
+    "base": "671",
+    "owner": "Würing Michael",
+    "conf": "WEAK"
+   },
+   {
+    "page": 36,
+    "base": "673",
+    "owner": "Mülley Franz",
+    "conf": "STRONG"
+   },
+   {
+    "page": 36,
+    "base": "674",
+    "owner": "Würing Johann",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 36,
+    "base": "675",
+    "owner": "Würing Michael",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 36,
+    "base": "676",
+    "owner": "Würing Michl",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 36,
+    "base": "679",
+    "owner": "Paschey Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 36,
+    "base": "680",
+    "owner": "Mülley Johann",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 40,
+    "base": "736",
+    "owner": "Mülleg Johann",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 40,
+    "base": "737",
+    "owner": "Whischand Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 40,
+    "base": "738",
+    "owner": "Wöring Mathäus",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 49,
+    "base": "922",
+    "owner": "Dragasch Jane",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 49,
+    "base": "923",
+    "owner": "Heise Marlo",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 49,
+    "base": "924",
+    "owner": "Dragasch Jane",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 49,
+    "base": "925",
+    "owner": "Loboschilak Wolf",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 49,
+    "base": "926",
+    "owner": "Lukeschitsch Malle",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 49,
+    "base": "927",
+    "owner": "Lukeschitsch Malle",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 49,
+    "base": "928",
+    "owner": "Pessing Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 49,
+    "base": "929",
+    "owner": "Pessing Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 49,
+    "base": "930",
+    "owner": "Hüsse Malle",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 49,
+    "base": "931",
+    "owner": "Lurre Omelle",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 49,
+    "base": "934",
+    "owner": "Lukeschitsch Mache",
+    "conf": "WEAK"
+   },
+   {
+    "page": 49,
+    "base": "936",
+    "owner": "Kalapischky Eve.",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 49,
+    "base": "937",
+    "owner": "Novak Martin / Brugel Eve.",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 49,
+    "base": "938",
+    "owner": "Kalapischitsch Eve.",
+    "conf": "STRONG"
+   },
+   {
+    "page": 49,
+    "base": "939",
+    "owner": "Novak Martin / Brugel Eve.",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 51,
+    "base": "962",
+    "owner": "Stautschital Franz",
+    "conf": "WEAK"
+   },
+   {
+    "page": 51,
+    "base": "965",
+    "owner": "Stautschital Wolf",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 51,
+    "base": "966",
+    "owner": "Stautschital Nikolaus",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 51,
+    "base": "970",
+    "owner": "Stautschital Wolf",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 51,
+    "base": "971",
+    "owner": "Stautschital Nikolaus",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 51,
+    "base": "972",
+    "owner": "Unrich Gregor",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 51,
+    "base": "975",
+    "owner": "Schimey John",
+    "conf": "STRONG"
+   },
+   {
+    "page": 51,
+    "base": "976",
+    "owner": "Schimey John",
+    "conf": "STRONG"
+   },
+   {
+    "page": 51,
+    "base": "977",
+    "owner": "Schimey Wolf",
+    "conf": "STRONG"
+   },
+   {
+    "page": 51,
+    "base": "978",
+    "owner": "Poiding Wolf",
+    "conf": "STRONG"
+   },
+   {
+    "page": 51,
+    "base": "979",
+    "owner": "Unrich John",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 52,
+    "base": "990",
+    "owner": "Stüblh Mühld",
+    "conf": "STRONG"
+   },
+   {
+    "page": 52,
+    "base": "991",
+    "owner": "Stüblh Mühld",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 52,
+    "base": "992",
+    "owner": "Stüblh Mühld",
+    "conf": "STRONG"
+   },
+   {
+    "page": 52,
+    "base": "993",
+    "owner": "Stüblh Mühld",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 52,
+    "base": "995",
+    "owner": "Schimeg Mühld",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 52,
+    "base": "996",
+    "owner": "Peter Mühld",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 52,
+    "base": "997",
+    "owner": "Stüblh Mühld",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 52,
+    "base": "998",
+    "owner": "Schlofshütter Johann",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 53,
+    "base": "1008",
+    "owner": "Schineg Johann",
+    "conf": "WEAK"
+   },
+   {
+    "page": 58,
+    "base": "1118",
+    "owner": "Schimaz Patten",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 58,
+    "base": "1119",
+    "owner": "Pacheg Wipfler",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 58,
+    "base": "1120",
+    "owner": "Pacheg Mulo",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 59,
+    "base": "1128",
+    "owner": "Pacheg Michl",
+    "conf": "WEAK"
+   },
+   {
+    "page": 59,
+    "base": "1131",
+    "owner": "Pacheg Michl",
+    "conf": "WEAK"
+   },
+   {
+    "page": 61,
+    "base": "161",
+    "owner": "Pestdiz Pattrl Lorenz",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 61,
+    "base": "162",
+    "owner": "Schimey Martho",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 61,
+    "base": "163",
+    "owner": "Schimey Martho",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 61,
+    "base": "164",
+    "owner": "Leuthold Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 61,
+    "base": "165",
+    "owner": "Pöllig Martho",
+    "conf": "STRONG"
+   },
+   {
+    "page": 61,
+    "base": "166",
+    "owner": "Pöllig Michael",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 61,
+    "base": "168",
+    "owner": "Schimey Martho",
+    "conf": "WEAK"
+   },
+   {
+    "page": 61,
+    "base": "171",
+    "owner": "Schimey Georg",
+    "conf": "WEAK"
+   },
+   {
+    "page": 61,
+    "base": "173",
+    "owner": "Brullat Martho",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 61,
+    "base": "174",
+    "owner": "Pestdiz Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 61,
+    "base": "175",
+    "owner": "Pestdiz Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 61,
+    "base": "176",
+    "owner": "Schimey Martho",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 61,
+    "base": "179",
+    "owner": "Brullat Martho",
+    "conf": "WEAK"
+   },
+   {
+    "page": 64,
+    "base": "1821",
+    "owner": "Büller Lorenz",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 64,
+    "base": "1825",
+    "owner": "Brinig Mihelj",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 64,
+    "base": "1826",
+    "owner": "Brinig Mihelj",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 64,
+    "base": "1827",
+    "owner": "Kreševan Mihelj",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 64,
+    "base": "1828",
+    "owner": "Gavčnik Gregor",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 64,
+    "base": "1829",
+    "owner": "Johann Gregor",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 64,
+    "base": "1830",
+    "owner": "Pavlič Mihelj",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 64,
+    "base": "1831",
+    "owner": "Gavčnik Miha",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 64,
+    "base": "1832",
+    "owner": "Pavlič Mihelj",
+    "conf": "STRONG"
+   },
+   {
+    "page": 64,
+    "base": "1833",
+    "owner": "Budle Miha",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 64,
+    "base": "1834",
+    "owner": "Lehko Gregor",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 64,
+    "base": "1835",
+    "owner": "Duh Gregor",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 64,
+    "base": "1836",
+    "owner": "Brinig Miha",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 64,
+    "base": "1837",
+    "owner": "Tillak Miha",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 64,
+    "base": "1838",
+    "owner": "Tillak Miha",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 64,
+    "base": "1839",
+    "owner": "Kreševan Gregor",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 64,
+    "base": "1840",
+    "owner": "Volklandšekb[?]",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 73,
+    "base": "1118",
+    "owner": "Höfneretz Johann",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 73,
+    "base": "1119",
+    "owner": "Krischan Martha",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 73,
+    "base": "1120",
+    "owner": "Krischan Martha",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 74,
+    "base": "1128",
+    "owner": "Verbitaker Chufg",
+    "conf": "WEAK"
+   },
+   {
+    "page": 74,
+    "base": "1131",
+    "owner": "Verbitaker Matja",
+    "conf": "WEAK"
+   },
+   {
+    "page": 78,
+    "base": "1603",
+    "owner": "Pachler Martin",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 78,
+    "base": "1604",
+    "owner": "Ullrich Otto",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 78,
+    "base": "1605",
+    "owner": "Tillak Anio",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 79,
+    "base": "1821",
+    "owner": "Pößlrey Peter Bäuer Grübl",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 79,
+    "base": "1825",
+    "owner": "Schimming Maria",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 79,
+    "base": "1826",
+    "owner": "Schintz Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 79,
+    "base": "1827",
+    "owner": "Schimming Johann",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 79,
+    "base": "1828",
+    "owner": "Aumeier Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 79,
+    "base": "1829",
+    "owner": "Uebl Anton",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 79,
+    "base": "1830",
+    "owner": "Schimming Paul",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 79,
+    "base": "1831",
+    "owner": "Schimming Paul",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 79,
+    "base": "1832",
+    "owner": "Uebl Thomas",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 79,
+    "base": "1833",
+    "owner": "Uebl Thomas",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 79,
+    "base": "1834",
+    "owner": "Schimming Anna",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 79,
+    "base": "1835",
+    "owner": "Schimming Johann",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 79,
+    "base": "1836",
+    "owner": "Schimming Magdalena",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 79,
+    "base": "1837",
+    "owner": "Ueich Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 79,
+    "base": "1838",
+    "owner": "Ueich Peter",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 79,
+    "base": "1839",
+    "owner": "Uebl Anton",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 79,
+    "base": "1840",
+    "owner": "Pößlrey Andreas",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 83,
+    "base": "161",
+    "owner": "Hlebtzschand",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 83,
+    "base": "162",
+    "owner": "Hlebtzschand",
+    "conf": "STRONG"
+   },
+   {
+    "page": 83,
+    "base": "163",
+    "owner": "Stainzldt Wölfl",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 83,
+    "base": "164",
+    "owner": "Hlebtzschand",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 83,
+    "base": "165",
+    "owner": "Stainzldt Wölfl",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 83,
+    "base": "166",
+    "owner": "Stainzhan Wölfl",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 83,
+    "base": "168",
+    "owner": "Stainzhan Wölfl",
+    "conf": "WEAK"
+   },
+   {
+    "page": 83,
+    "base": "171",
+    "owner": "Stainzldt Wölfl",
+    "conf": "WEAK"
+   },
+   {
+    "page": 83,
+    "base": "173",
+    "owner": "Stainzhan Wölfl",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 83,
+    "base": "174",
+    "owner": "Stainzhan Wölfl",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 83,
+    "base": "175",
+    "owner": "Stainzldt Wölfl",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 83,
+    "base": "176",
+    "owner": "Hlebtzschand",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 83,
+    "base": "179",
+    "owner": "Stainzhan Wölfl",
+    "conf": "WEAK"
+   },
+   {
+    "page": 84,
+    "base": "162",
+    "owner": "Schumitsch Matja",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 84,
+    "base": "163",
+    "owner": "Schumitsch Matja",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 84,
+    "base": "164",
+    "owner": "Hödle Schamb",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 84,
+    "base": "165",
+    "owner": "Dragosch Gregor",
+    "conf": "STRONG"
+   },
+   {
+    "page": 84,
+    "base": "166",
+    "owner": "Schumitsch Matja",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 84,
+    "base": "168",
+    "owner": "Schumitsch Marlo",
+    "conf": "WEAK"
+   },
+   {
+    "page": 84,
+    "base": "171",
+    "owner": "Stuller Mihlo",
+    "conf": "WEAK"
+   },
+   {
+    "page": 84,
+    "base": "173",
+    "owner": "Hödle Schaw",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 84,
+    "base": "174",
+    "owner": "Hödle Schaw",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 84,
+    "base": "175",
+    "owner": "Schumitsch Marlo",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 84,
+    "base": "176",
+    "owner": "Schumitsch Marlo",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 84,
+    "base": "179",
+    "owner": "Schaffhatsch Matja",
+    "conf": "WEAK"
+   },
+   {
+    "page": 85,
+    "base": "641",
+    "owner": "Stüllich Mihlo",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 85,
+    "base": "642",
+    "owner": "Schuster Mihlo",
+    "conf": "STRONG"
+   },
+   {
+    "page": 85,
+    "base": "643",
+    "owner": "Schimeg Mihel",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 85,
+    "base": "644",
+    "owner": "Preinig Mihel",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 85,
+    "base": "646",
+    "owner": "Milleger Johann",
+    "conf": "WEAK"
+   },
+   {
+    "page": 85,
+    "base": "648",
+    "owner": "Schimeg Mihel",
+    "conf": "WEAK"
+   },
+   {
+    "page": 85,
+    "base": "651",
+    "owner": "Knall Anna",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 85,
+    "base": "652",
+    "owner": "Schimeg Barbara",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 85,
+    "base": "653",
+    "owner": "Knall Anna",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 85,
+    "base": "654",
+    "owner": "Stüllich Mihlo",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 85,
+    "base": "655",
+    "owner": "Lukantsitsch Marla",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 85,
+    "base": "656",
+    "owner": "Knall Anna",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 85,
+    "base": "657",
+    "owner": "Novakl Martin",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 85,
+    "base": "659",
+    "owner": "Kubatschitsch Ja",
+    "conf": "WEAK"
+   },
+   {
+    "page": 86,
+    "base": "160",
+    "owner": "LahNitschek Hülfse Mann",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 86,
+    "base": "161",
+    "owner": "LahNitschek Waisen",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 86,
+    "base": "162",
+    "owner": "Pechir gneis",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 86,
+    "base": "163",
+    "owner": "Laune Hülfse",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 86,
+    "base": "164",
+    "owner": "Hantel Hlaw",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 86,
+    "base": "165",
+    "owner": "LahNitschek Hlaw",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 86,
+    "base": "166",
+    "owner": "Schober Hülfse",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 86,
+    "base": "168",
+    "owner": "Schober Hülfse",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 86,
+    "base": "171",
+    "owner": "Laune Hülfse",
+    "conf": "WEAK"
+   },
+   {
+    "page": 86,
+    "base": "173",
+    "owner": "Noaßl Mande",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 86,
+    "base": "174",
+    "owner": "Haindlan Hülfse",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 86,
+    "base": "175",
+    "owner": "LahNitschek Hülfse",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 86,
+    "base": "176",
+    "owner": "Schimey Patteu",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 86,
+    "base": "179",
+    "owner": "Pechir gneis",
+    "conf": "WEAK"
+   },
+   {
+    "page": 87,
+    "base": "661",
+    "owner": "Staudt Hans",
+    "conf": "WEAK"
+   },
+   {
+    "page": 87,
+    "base": "663",
+    "owner": "Dultsitsch Hans",
+    "conf": "WEAK"
+   },
+   {
+    "page": 87,
+    "base": "666",
+    "owner": "Dragauš Jerg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 87,
+    "base": "667",
+    "owner": "Hegole Mands",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 87,
+    "base": "671",
+    "owner": "Maaßl Mantsch",
+    "conf": "WEAK"
+   },
+   {
+    "page": 87,
+    "base": "673",
+    "owner": "Staudt Hans",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 87,
+    "base": "674",
+    "owner": "Dultsitsch Hans",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 87,
+    "base": "675",
+    "owner": "Maaßl Mantsch",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 87,
+    "base": "676",
+    "owner": "Kobentsch Mands",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 87,
+    "base": "679",
+    "owner": "Gummeier",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 87,
+    "base": "680",
+    "owner": "Hlebitsch Mufg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 88,
+    "base": "736",
+    "owner": "Dahofstättlich Malfg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 88,
+    "base": "737",
+    "owner": "Häuslty Ghan",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 88,
+    "base": "738",
+    "owner": "Gmuniden",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 90,
+    "base": "1944",
+    "owner": "Heinrich Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 90,
+    "base": "1945",
+    "owner": "Eurich Mädl",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 90,
+    "base": "1946",
+    "owner": "Pörtschach er Mägd",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 90,
+    "base": "1947",
+    "owner": "Hönig Mairadl",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 90,
+    "base": "1948",
+    "owner": "Knieschen Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 90,
+    "base": "1949",
+    "owner": "Knieschen Mägde",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 90,
+    "base": "1952",
+    "owner": "Knieschen Mägden",
+    "conf": "WEAK"
+   },
+   {
+    "page": 90,
+    "base": "1953",
+    "owner": "Knieschen Mägde",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 90,
+    "base": "1954",
+    "owner": "Knieschen Mägde",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 90,
+    "base": "1955",
+    "owner": "Knieschen Mägde",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 90,
+    "base": "1956",
+    "owner": "Hiebletzh Jhan",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 90,
+    "base": "1957",
+    "owner": "Hiebletzh Jhan",
+    "conf": "STRONG"
+   },
+   {
+    "page": 90,
+    "base": "1958",
+    "owner": "Hiebletzh Jhan",
+    "conf": "STRONG"
+   },
+   {
+    "page": 90,
+    "base": "1959",
+    "owner": "Khunertch Mägden",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 90,
+    "base": "1960",
+    "owner": "Hiebletzh Jhan",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 91,
+    "base": "962",
+    "owner": "Kreischan Hülga",
+    "conf": "WEAK"
+   },
+   {
+    "page": 91,
+    "base": "965",
+    "owner": "Kreischan Hülga",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 91,
+    "base": "966",
+    "owner": "Elebetz Blau",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 91,
+    "base": "970",
+    "owner": "Kreischan Hülga",
+    "conf": "STRONG"
+   },
+   {
+    "page": 91,
+    "base": "971",
+    "owner": "Schamuth Hülga",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 91,
+    "base": "972",
+    "owner": "Schamuth Hülga",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 91,
+    "base": "975",
+    "owner": "Unruh Miso",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 91,
+    "base": "976",
+    "owner": "Kreischan Hülga",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 91,
+    "base": "977",
+    "owner": "Unruh Miso",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 91,
+    "base": "978",
+    "owner": "Unruh Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 91,
+    "base": "979",
+    "owner": "Unruh Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 92,
+    "base": "990",
+    "owner": "Pfaur Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 92,
+    "base": "991",
+    "owner": "Schimeg Maria",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 92,
+    "base": "992",
+    "owner": "Schimeg Maria",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 92,
+    "base": "993",
+    "owner": "Schimeg Maria",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 92,
+    "base": "995",
+    "owner": "Schimeg Johann",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 92,
+    "base": "996",
+    "owner": "Lahmichl Maria",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 92,
+    "base": "997",
+    "owner": "Dlechtitl Maria",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 92,
+    "base": "998",
+    "owner": "Dlechtitl Maria",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 92,
+    "base": "1008",
+    "owner": "Knall Niklo",
+    "conf": "WEAK"
+   },
+   {
+    "page": 93,
+    "base": "1603",
+    "owner": "Verboten (er) Bueb?",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 93,
+    "base": "1604",
+    "owner": "Piringer Mathäus",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 93,
+    "base": "1605",
+    "owner": "[?] [?]",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 94,
+    "base": "1821",
+    "owner": "Peterig Mathä",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 94,
+    "base": "1825",
+    "owner": "Schamey Hanß",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 94,
+    "base": "1826",
+    "owner": "Göllach Matha",
+    "conf": "STRONG"
+   },
+   {
+    "page": 94,
+    "base": "1827",
+    "owner": "Schamey Kathar.",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 94,
+    "base": "1829",
+    "owner": "Schamey Hanß",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 94,
+    "base": "1830",
+    "owner": "Schamey Hanß",
+    "conf": "STRONG"
+   },
+   {
+    "page": 94,
+    "base": "1831",
+    "owner": "Peterig Mathä",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 94,
+    "base": "1832",
+    "owner": "Mellner Lorenz",
+    "conf": "STRONG"
+   },
+   {
+    "page": 94,
+    "base": "1833",
+    "owner": "Miller Joseph",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 94,
+    "base": "1834",
+    "owner": "Peterig Mathä",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 94,
+    "base": "1835",
+    "owner": "Peterig Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 94,
+    "base": "1836",
+    "owner": "Peterig Mathä",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 94,
+    "base": "1837",
+    "owner": "Kraichand Matho",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 94,
+    "base": "1838",
+    "owner": "Mellner Lorenz",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 94,
+    "base": "1839",
+    "owner": "Dannay Michael",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 94,
+    "base": "1840",
+    "owner": "Peterig Mathä",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 95,
+    "base": "1944",
+    "owner": "Leinichan Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 95,
+    "base": "1945",
+    "owner": "Leinichan Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 95,
+    "base": "1946",
+    "owner": "Vorbithaler Wolf",
+    "conf": "STRONG"
+   },
+   {
+    "page": 95,
+    "base": "1947",
+    "owner": "Stüllach Wolf",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 95,
+    "base": "1948",
+    "owner": "Pessirig Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 95,
+    "base": "1949",
+    "owner": "Grübler Michl",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 95,
+    "base": "1952",
+    "owner": "Schimeg Georg",
+    "conf": "WEAK"
+   },
+   {
+    "page": 95,
+    "base": "1953",
+    "owner": "Pessirig Wolf",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 95,
+    "base": "1954",
+    "owner": "Pessirig Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 95,
+    "base": "1955",
+    "owner": "Grübler Michl",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 95,
+    "base": "1956",
+    "owner": "Stüllach Wolf",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 95,
+    "base": "1957",
+    "owner": "Grüning Michl",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 95,
+    "base": "1958",
+    "owner": "Leinichan Maria",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 95,
+    "base": "1959",
+    "owner": "Grüning Johanna",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 95,
+    "base": "1960",
+    "owner": "Leinichan Michl",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 96,
+    "base": "1961",
+    "owner": "Fürlach Mathä",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 96,
+    "base": "1963",
+    "owner": "Schimatz Matho",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 96,
+    "base": "1964",
+    "owner": "Schimatz Matho",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 96,
+    "base": "1965",
+    "owner": "Böning Matho",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 96,
+    "base": "1966",
+    "owner": "Nitschhan Matho",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 96,
+    "base": "1967",
+    "owner": "Böning Matho",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 96,
+    "base": "1970",
+    "owner": "Mallwitz Joseph",
+    "conf": "WEAK"
+   },
+   {
+    "page": 96,
+    "base": "1972",
+    "owner": "Böning Matho",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 96,
+    "base": "1973",
+    "owner": "Deutischek Matho",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 96,
+    "base": "1974",
+    "owner": "Fürlach Huffa",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 96,
+    "base": "1975",
+    "owner": "Nitschhan Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 96,
+    "base": "1976",
+    "owner": "Schimatz Matho",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 96,
+    "base": "1977",
+    "owner": "Fürlach Huffa",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 96,
+    "base": "1978",
+    "owner": "Deutischek Matho",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 96,
+    "base": "1980",
+    "owner": "Stuppler Matho",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 99,
+    "base": "922",
+    "owner": "Deutlich Michael",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 99,
+    "base": "923",
+    "owner": "Deutlich Katharina",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 99,
+    "base": "924",
+    "owner": "Deutlich Maria",
+    "conf": "STRONG"
+   },
+   {
+    "page": 99,
+    "base": "925",
+    "owner": "Strauß Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 99,
+    "base": "926",
+    "owner": "Strauß Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 99,
+    "base": "927",
+    "owner": "Brünig Johann",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 99,
+    "base": "928",
+    "owner": "Brünig Michel",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 99,
+    "base": "929",
+    "owner": "Brünig Michael",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 99,
+    "base": "930",
+    "owner": "Brünig Michel",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 99,
+    "base": "931",
+    "owner": "Brünig Johann",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 99,
+    "base": "934",
+    "owner": "Brünig Michael",
+    "conf": "WEAK"
+   },
+   {
+    "page": 99,
+    "base": "936",
+    "owner": "Brünig Michel",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 99,
+    "base": "937",
+    "owner": "Pößnig Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 99,
+    "base": "938",
+    "owner": "Pößnig Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 99,
+    "base": "939",
+    "owner": "Pößnig Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 100,
+    "base": "1944",
+    "owner": "Huberl Martha",
+    "conf": "STRONG"
+   },
+   {
+    "page": 100,
+    "base": "1945",
+    "owner": "Böning Johann",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 100,
+    "base": "1946",
+    "owner": "Böning Martha",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 100,
+    "base": "1947",
+    "owner": "Böning Maria",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 100,
+    "base": "1948",
+    "owner": "Böning Martha",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 100,
+    "base": "1952",
+    "owner": "Huberl Martha",
+    "conf": "WEAK"
+   },
+   {
+    "page": 100,
+    "base": "1953",
+    "owner": "Pöll Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 100,
+    "base": "1954",
+    "owner": "Dechtlatsch Martha",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 100,
+    "base": "1955",
+    "owner": "Pförg Maria",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 100,
+    "base": "1956",
+    "owner": "Krischan Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 100,
+    "base": "1957",
+    "owner": "Podariz Martha",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 100,
+    "base": "1958",
+    "owner": "Hranig(?) Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 100,
+    "base": "1959",
+    "owner": "Podariz Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 100,
+    "base": "1960",
+    "owner": "Podariz Martha",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 101,
+    "base": "1960",
+    "owner": "Lorenz Lorenz",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 101,
+    "base": "1961",
+    "owner": "Riedl",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 101,
+    "base": "1963",
+    "owner": "Müllner",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 101,
+    "base": "1964",
+    "owner": "Müllner",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 101,
+    "base": "1965",
+    "owner": "Schimert",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 101,
+    "base": "1966",
+    "owner": "Leopold",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 101,
+    "base": "1967",
+    "owner": "Stullak",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 101,
+    "base": "1970",
+    "owner": "Stullak",
+    "conf": "WEAK"
+   },
+   {
+    "page": 101,
+    "base": "1972",
+    "owner": "Leudgar",
+    "conf": "STRONG"
+   },
+   {
+    "page": 101,
+    "base": "1973",
+    "owner": "Schimer",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 101,
+    "base": "1974",
+    "owner": "Schimert",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 101,
+    "base": "1975",
+    "owner": "Leopold",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 101,
+    "base": "1976",
+    "owner": "Leopold",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 101,
+    "base": "1977",
+    "owner": "Leopold",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 101,
+    "base": "1978",
+    "owner": "Pfister",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 101,
+    "base": "1980",
+    "owner": "Schimert",
+    "conf": "STRONG"
+   },
+   {
+    "page": 102,
+    "base": "1980",
+    "owner": "Heuritsch Hans Hanns grübl",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 103,
+    "base": "2002",
+    "owner": "Scholastika Gregor",
+    "conf": "STRONG"
+   },
+   {
+    "page": 103,
+    "base": "2003",
+    "owner": "Scholastika Monika",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 103,
+    "base": "2004",
+    "owner": "Seidig Maria",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 103,
+    "base": "2005",
+    "owner": "Wurach John",
+    "conf": "STRONG"
+   },
+   {
+    "page": 103,
+    "base": "2006",
+    "owner": "Lappany Michl",
+    "conf": "STRONG"
+   },
+   {
+    "page": 103,
+    "base": "2008",
+    "owner": "Lappany Michl",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 103,
+    "base": "2009",
+    "owner": "Lappeg Gregor",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 103,
+    "base": "2010",
+    "owner": "Lappeg Michael",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 103,
+    "base": "2011",
+    "owner": "Schumey Gregor",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 103,
+    "base": "2012",
+    "owner": "Schumer Monika",
+    "conf": "STRONG"
+   },
+   {
+    "page": 103,
+    "base": "2013",
+    "owner": "Seidig Kathi",
+    "conf": "STRONG"
+   },
+   {
+    "page": 103,
+    "base": "2014",
+    "owner": "Seidig Gregor",
+    "conf": "STRONG"
+   },
+   {
+    "page": 103,
+    "base": "2015",
+    "owner": "Braller Michl",
+    "conf": "STRONG"
+   },
+   {
+    "page": 103,
+    "base": "2016",
+    "owner": "Seidig Maria",
+    "conf": "STRONG"
+   },
+   {
+    "page": 103,
+    "base": "2017",
+    "owner": "Habler Maria",
+    "conf": "STRONG"
+   },
+   {
+    "page": 103,
+    "base": "2018",
+    "owner": "Lapeng Michl",
+    "conf": "STRONG"
+   },
+   {
+    "page": 103,
+    "base": "2019",
+    "owner": "Lapeng Michl",
+    "conf": "STRONG"
+   },
+   {
+    "page": 103,
+    "base": "2020",
+    "owner": "Lapeng Johann",
+    "conf": "STRONG"
+   },
+   {
+    "page": 104,
+    "base": "2021",
+    "owner": "Schimey Johann",
+    "conf": "STRONG"
+   },
+   {
+    "page": 104,
+    "base": "2022",
+    "owner": "Brünig Magdal",
+    "conf": "STRONG"
+   },
+   {
+    "page": 104,
+    "base": "2023",
+    "owner": "Stullak Adam",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 104,
+    "base": "2024",
+    "owner": "Krisch Jakob",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 104,
+    "base": "2025",
+    "owner": "Lappany Niko",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 104,
+    "base": "2025",
+    "owner": "Loidold Johann",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 104,
+    "base": "2027",
+    "owner": "Lappany Niko",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 104,
+    "base": "2028",
+    "owner": "Honschan Niko",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 104,
+    "base": "2029",
+    "owner": "Honschan Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 104,
+    "base": "2030",
+    "owner": "Hrautz Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 104,
+    "base": "2031",
+    "owner": "Loval Joanne",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 104,
+    "base": "2032",
+    "owner": "Stullak Johan",
+    "conf": "STRONG"
+   },
+   {
+    "page": 104,
+    "base": "2033",
+    "owner": "Schimey Magdal",
+    "conf": "STRONG"
+   },
+   {
+    "page": 104,
+    "base": "2034",
+    "owner": "Pavlic Magda",
+    "conf": "STRONG"
+   },
+   {
+    "page": 104,
+    "base": "2035",
+    "owner": "Stullak Niko",
+    "conf": "STRONG"
+   },
+   {
+    "page": 104,
+    "base": "2036",
+    "owner": "Schimey Johann",
+    "conf": "STRONG"
+   },
+   {
+    "page": 104,
+    "base": "2037",
+    "owner": "Stullak Niko",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 104,
+    "base": "2038",
+    "owner": "Loval Niko",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 105,
+    "base": "2060",
+    "owner": "Schimey Johane",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 105,
+    "base": "2061",
+    "owner": "Schimey Johane",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 106,
+    "base": "2060",
+    "owner": "Knäusch Johann",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 106,
+    "base": "2061",
+    "owner": "Knäusch Johann",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 106,
+    "base": "2066",
+    "owner": "Knäusch Nikolaus",
+    "conf": "WEAK"
+   },
+   {
+    "page": 106,
+    "base": "2068",
+    "owner": "Krischan Nikolaus",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 106,
+    "base": "2069",
+    "owner": "Knäusch an Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 106,
+    "base": "2070",
+    "owner": "Feschnig Johann",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 106,
+    "base": "2071",
+    "owner": "Lappany Nikolaus",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 106,
+    "base": "2072",
+    "owner": "Kneal Nikolaus",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 106,
+    "base": "2074",
+    "owner": "Kneal Nikolaus",
+    "conf": "WEAK"
+   },
+   {
+    "page": 106,
+    "base": "2076",
+    "owner": "Feschnig Johann",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 106,
+    "base": "2077",
+    "owner": "Festnig Johann",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 106,
+    "base": "2078",
+    "owner": "Krischan Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 106,
+    "base": "2079",
+    "owner": "Krischan Nikolaus",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 106,
+    "base": "2080",
+    "owner": null,
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 107,
+    "base": "2081",
+    "owner": "Krüzhan Miha",
+    "conf": "STRONG"
+   },
+   {
+    "page": 110,
+    "base": "2141",
+    "owner": "Brünig Johann Lorenz Grüble",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 110,
+    "base": "2143",
+    "owner": "Häupler Martin",
+    "conf": "WEAK"
+   },
+   {
+    "page": 110,
+    "base": "2148",
+    "owner": "Strauß Georg",
+    "conf": "STRONG"
+   },
+   {
+    "page": 110,
+    "base": "2149",
+    "owner": "Schimeg Nikolaus",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 110,
+    "base": "2150",
+    "owner": "Schimeg Johann",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 110,
+    "base": "2151",
+    "owner": "Kreischner Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 110,
+    "base": "2152",
+    "owner": "Kreischner Miso",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 110,
+    "base": "2154",
+    "owner": "Brünig Miso",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 110,
+    "base": "2155",
+    "owner": "Malleweichslochfrau",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 110,
+    "base": "2156",
+    "owner": "Brünig Miso",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 110,
+    "base": "2157",
+    "owner": "Malleweichslochfrau",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 110,
+    "base": "2158",
+    "owner": "Häupler Martin",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 110,
+    "base": "2159",
+    "owner": "Brünig Johann",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 110,
+    "base": "2160",
+    "owner": "Häupler Martin",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 113,
+    "base": "2218",
+    "owner": "Stambol Johann",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 113,
+    "base": "2219",
+    "owner": "Nooak Martin",
+    "conf": "STRONG"
+   },
+   {
+    "page": 113,
+    "base": "2220",
+    "owner": "Koritschan Marfa",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 114,
+    "base": "2218",
+    "owner": "Schöpf Scholastika",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 114,
+    "base": "2219",
+    "owner": "Knoll Hanne",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 114,
+    "base": "2220",
+    "owner": "Knoll Niklo",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 118,
+    "base": "2002",
+    "owner": "Heisslhan Mufi",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 118,
+    "base": "2003",
+    "owner": "Heisslhan Mufi",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 118,
+    "base": "2004",
+    "owner": "Pestig Gregor",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 118,
+    "base": "2005",
+    "owner": "Schneidlatz Mufi",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 118,
+    "base": "2006",
+    "owner": "Heisslhan Mufi",
+    "conf": "STRONG"
+   },
+   {
+    "page": 118,
+    "base": "2008",
+    "owner": "Heisslhan Mufi",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 118,
+    "base": "2009",
+    "owner": "Heisslhan Mufi",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 118,
+    "base": "2010",
+    "owner": "Heisslhan Mufi",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 118,
+    "base": "2011",
+    "owner": "Lorenz Higani",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 118,
+    "base": "2012",
+    "owner": "Hlebetz Johan",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 118,
+    "base": "2013",
+    "owner": "Heisslhan Mufi",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 118,
+    "base": "2014",
+    "owner": "Kapfelschlägerin",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 118,
+    "base": "2015",
+    "owner": "Knöfel Johan",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 118,
+    "base": "2016",
+    "owner": "Knöl Bauer",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 118,
+    "base": "2017",
+    "owner": "Nawal Maschi",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 118,
+    "base": "2018",
+    "owner": "Schneidlatz Mufi",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 118,
+    "base": "2019",
+    "owner": "Nawal Maschi",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 118,
+    "base": "2020",
+    "owner": "Knöl Bauer",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 119,
+    "base": "2021",
+    "owner": "Kreutz Johann Laud Grübl",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 119,
+    "base": "2022",
+    "owner": "Schöpfstättenbauer",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 119,
+    "base": "2023",
+    "owner": "Hlebetz Johann",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 119,
+    "base": "2024",
+    "owner": "Poiding Georg",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 119,
+    "base": "2025",
+    "owner": "Leure Witschur",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 119,
+    "base": "2027",
+    "owner": "Schinhan Marfa",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 119,
+    "base": "2028",
+    "owner": "Hlebetz Johann",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 119,
+    "base": "2029",
+    "owner": "Schimeg Michael",
+    "conf": "STRONG"
+   },
+   {
+    "page": 119,
+    "base": "2030",
+    "owner": "Schimeg Johann",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 119,
+    "base": "2031",
+    "owner": "Schimeg Paula",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 119,
+    "base": "2032",
+    "owner": "Schimeg Martha",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 119,
+    "base": "2033",
+    "owner": "Schimeg Paula",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 119,
+    "base": "2034",
+    "owner": "Schimeg Johann",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 119,
+    "base": "2035",
+    "owner": "Schimeg Johann",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 119,
+    "base": "2036",
+    "owner": "Schimeg Michael",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 119,
+    "base": "2037",
+    "owner": "Ulrich Paula",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 119,
+    "base": "2037",
+    "owner": "Poiding Martha",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 119,
+    "base": "2038",
+    "owner": "Ulrich Paula",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 121,
+    "base": "2061",
+    "owner": "Löhal Mio",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 121,
+    "base": "2066",
+    "owner": "Schimeg John",
+    "conf": "WEAK"
+   },
+   {
+    "page": 121,
+    "base": "2068",
+    "owner": "Pesdng Marfn",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 121,
+    "base": "2069",
+    "owner": "Pesdng Marfn",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 121,
+    "base": "2070",
+    "owner": "Pesdng Marfn",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 121,
+    "base": "2071",
+    "owner": "Pesdng Marfn",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 121,
+    "base": "2072",
+    "owner": "Hnrich Pidra",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 121,
+    "base": "2074",
+    "owner": "DieLehutete Mfga",
+    "conf": "WEAK"
+   },
+   {
+    "page": 121,
+    "base": "2076",
+    "owner": "Sleppots groy",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 121,
+    "base": "2077",
+    "owner": "Sleppots groy",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 121,
+    "base": "2078",
+    "owner": "Sneishen Mfga",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 121,
+    "base": "2079",
+    "owner": "Stallstall stck Mfga",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 121,
+    "base": "2080",
+    "owner": "Wlhopfstetck Niklas",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 121,
+    "base": "2081",
+    "owner": null,
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 122,
+    "base": "2402",
+    "owner": "Pessnig Johann",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 123,
+    "base": "2402",
+    "owner": "Hrastl Hans",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 125,
+    "base": "2141",
+    "owner": "Schimey Paula",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 125,
+    "base": "2143",
+    "owner": "Schimey Johann",
+    "conf": "WEAK"
+   },
+   {
+    "page": 125,
+    "base": "2148",
+    "owner": "Wardian Marfa",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 125,
+    "base": "2149",
+    "owner": "Wardian Marfa",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 125,
+    "base": "2150",
+    "owner": "Wardian Marfa",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 125,
+    "base": "2151",
+    "owner": "Wetschka Marfa",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 125,
+    "base": "2152",
+    "owner": "Wardian Marfa",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 125,
+    "base": "2154",
+    "owner": "Wardian Marfa",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 125,
+    "base": "2155",
+    "owner": "Wardian Marfa",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 125,
+    "base": "2156",
+    "owner": "Wardian Marfa",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 125,
+    "base": "2157",
+    "owner": "Wentuhina Marfa",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 125,
+    "base": "2158",
+    "owner": "Wardian Marfu",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 125,
+    "base": "2159",
+    "owner": "Van Wawech Mihó",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 125,
+    "base": "2160",
+    "owner": "Van Wawech Mihó",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 133,
+    "base": "2611",
+    "owner": "falktung",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 133,
+    "base": "2612",
+    "owner": "falktung",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 133,
+    "base": "2613",
+    "owner": "falktung",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 133,
+    "base": "2616",
+    "owner": "falktung",
+    "conf": "WEAK"
+   },
+   {
+    "page": 134,
+    "base": "2627",
+    "owner": "Wald im vornahmt naß Kleeau",
+    "conf": "WEAK"
+   },
+   {
+    "page": 134,
+    "base": "2628",
+    "owner": "Wald im Stau Rainaß Kleeau",
+    "conf": "WEAK"
+   },
+   {
+    "page": 134,
+    "base": "2629",
+    "owner": "föllwang",
+    "conf": "WEAK"
+   },
+   {
+    "page": 134,
+    "base": "2630",
+    "owner": "Wald im vorn hintern Kleeau",
+    "conf": "WEAK"
+   },
+   {
+    "page": 135,
+    "base": "2611",
+    "owner": "Gemeinde",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 135,
+    "base": "2612",
+    "owner": "Wiese im Grundstück Nr. 2607",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 135,
+    "base": "2613",
+    "owner": "Wiese im Grundstück Nr. 2607",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 135,
+    "base": "2616",
+    "owner": "Wiese im Grundstück Nr. 2607",
+    "conf": "WEAK"
+   },
+   {
+    "page": 135,
+    "base": "2627",
+    "owner": "Gemeinde",
+    "conf": "WEAK"
+   },
+   {
+    "page": 135,
+    "base": "2628",
+    "owner": "Gemeinde",
+    "conf": "WEAK"
+   },
+   {
+    "page": 135,
+    "base": "2629",
+    "owner": "Gemeinde",
+    "conf": "WEAK"
+   },
+   {
+    "page": 135,
+    "base": "2630",
+    "owner": "Gemeinde",
+    "conf": "WEAK"
+   },
+   {
+    "page": 139,
+    "base": "81",
+    "owner": "Grübl Joh.",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 139,
+    "base": "82",
+    "owner": "6a",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 139,
+    "base": "83",
+    "owner": "63",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 139,
+    "base": "84",
+    "owner": "64",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 139,
+    "base": "85",
+    "owner": "65",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 139,
+    "base": "88",
+    "owner": "68",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 139,
+    "base": "89",
+    "owner": "69",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 139,
+    "base": "90",
+    "owner": "70",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 139,
+    "base": "91",
+    "owner": "71",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 139,
+    "base": "92",
+    "owner": "72",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 139,
+    "base": "93",
+    "owner": "73",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 139,
+    "base": "94",
+    "owner": "74",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 139,
+    "base": "95",
+    "owner": "75",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 139,
+    "base": "96",
+    "owner": "76",
+    "conf": "MEDIUM"
+   },
+   {
+    "page": 139,
+    "base": "97",
+    "owner": "77",
+    "conf": "WEAK"
+   },
+   {
+    "page": 139,
+    "base": "98",
+    "owner": "78",
+    "conf": "WEAK"
+   },
+   {
+    "page": 139,
+    "base": "100",
+    "owner": "80",
+    "conf": "WEAK"
+   }
+  ]
+ },
+ "modernVoid": {
+  "voidRange": [
+   2507,
+   2607
+  ],
+  "modernCount": 0,
+  "psRows": 87,
+  "psUnique": 87,
+  "psPages": [
+   128,
+   130,
+   131,
+   132,
+   133
+  ],
+  "contRange": [
+   2608,
+   2700
+  ],
+  "contModernCount": 53,
+  "contParcelsCount": 78,
+  "contPsRows": 94,
+  "contPsUnique": 74,
+  "verdictSi": "v sodobnem k.o. 1544 NE obstaja nobena parcela 2507–2607 — točno tam, kjer register nadaljuje prek recap vsote 2505 (87 dodatkov S2); 2608–2700 pa obstaja (78 parcel). Vzrok praznine ni znan [~] — možnosti: ukinjene/absorbirane parcele, prenumeracija 1841 (Grundsteuerkataster); pošteno: samo opazovanje, brez trditve o vzroku"
+ },
+ "timeline": {
+  "annotatedRows": 584,
+  "byYear": {
+   "1515": 1,
+   "1522": 1,
+   "1790": 1,
+   "1805": 1,
+   "1811": 1,
+   "1813": 1,
+   "1820": 1,
+   "1824": 2,
+   "1826": 1,
+   "1831": 2,
+   "1834": 3,
+   "1835": 1,
+   "1840": 7,
+   "1841": 83,
+   "1843": 1,
+   "1844": 29,
+   "1846": 1,
+   "1847": 1,
+   "1857": 1,
+   "1860": 1,
+   "1861": 3,
+   "1862": 1,
+   "1863": 6,
+   "1864": 1,
+   "1866": 1,
+   "1870": 6,
+   "1878": 1,
+   "1881": 1,
+   "1884": 2,
+   "1894": 1,
+   "1924": 1,
+   "1929": 1,
+   "1934": 1,
+   "brez leta": 418
+  },
+  "pages1841": [
+   6,
+   8,
+   9,
+   10,
+   12,
+   26,
+   28,
+   40,
+   42,
+   43,
+   45,
+   53,
+   55,
+   57,
+   58,
+   59,
+   63,
+   68,
+   69,
+   76,
+   78,
+   79,
+   81,
+   84,
+   85,
+   86,
+   88,
+   92,
+   100,
+   104,
+   107,
+   110,
+   113,
+   114,
+   116,
+   117,
+   118,
+   124,
+   127,
+   134,
+   135,
+   137
+  ],
+  "pages1841Count": 42,
+  "earliest": "1515",
+  "latest": "1934",
+  "topYear": "1841",
+  "note": "protokol je bil vzdrževan ~stoletje (1811–1934 anmerkung); pik 1841 = prehod na Grundsteuerkataster (Franziszeischer Kataster); letnice 1515/1522 = [~] VLM branja (najverjetneje navedbe starih urbarijev); per-row [~]"
+ },
+ "pageMap": [
+  {
+   "page": 5,
+   "series": "S1",
+   "numMin": 41,
+   "numMax": 60,
+   "rows": 20,
+   "anmerkungRows": 6
+  },
+  {
+   "page": 6,
+   "series": "S1",
+   "numMin": 61,
+   "numMax": 80,
+   "rows": 21,
+   "anmerkungRows": 8
+  },
+  {
+   "page": 7,
+   "series": "S1",
+   "numMin": 81,
+   "numMax": 102,
+   "rows": 22,
+   "anmerkungRows": 14
+  },
+  {
+   "page": 8,
+   "series": "S1",
+   "numMin": 101,
+   "numMax": 120,
+   "rows": 20,
+   "anmerkungRows": 2
+  },
+  {
+   "page": 9,
+   "series": "S1",
+   "numMin": 121,
+   "numMax": 140,
+   "rows": 20,
+   "anmerkungRows": 3
+  },
+  {
+   "page": 10,
+   "series": "S1",
+   "numMin": 141,
+   "numMax": 160,
+   "rows": 20,
+   "anmerkungRows": 4
+  },
+  {
+   "page": 11,
+   "series": "S1",
+   "numMin": 161,
+   "numMax": 183,
+   "rows": 23,
+   "anmerkungRows": 1
+  },
+  {
+   "page": 12,
+   "series": "S1",
+   "numMin": 181,
+   "numMax": 200,
+   "rows": 20,
+   "anmerkungRows": 5
+  },
+  {
+   "page": 13,
+   "series": "S1",
+   "numMin": 201,
+   "numMax": 220,
+   "rows": 20,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 14,
+   "series": "S1",
+   "numMin": 221,
+   "numMax": 240,
+   "rows": 20,
+   "anmerkungRows": 4
+  },
+  {
+   "page": 15,
+   "series": "S1",
+   "numMin": 241,
+   "numMax": 260,
+   "rows": 20,
+   "anmerkungRows": 1
+  },
+  {
+   "page": 16,
+   "series": "S1",
+   "numMin": 261,
+   "numMax": 280,
+   "rows": 20,
+   "anmerkungRows": 2
+  },
+  {
+   "page": 17,
+   "series": "S1",
+   "numMin": 281,
+   "numMax": 300,
+   "rows": 20,
+   "anmerkungRows": 1
+  },
+  {
+   "page": 18,
+   "series": "S1",
+   "numMin": 301,
+   "numMax": 320,
+   "rows": 20,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 19,
+   "series": "S1",
+   "numMin": 321,
+   "numMax": 340,
+   "rows": 20,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 20,
+   "series": "S1",
+   "numMin": 341,
+   "numMax": 360,
+   "rows": 20,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 21,
+   "series": "S1",
+   "numMin": 361,
+   "numMax": 380,
+   "rows": 20,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 22,
+   "series": "S1",
+   "numMin": 381,
+   "numMax": 400,
+   "rows": 20,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 23,
+   "series": "S1",
+   "numMin": 401,
+   "numMax": 420,
+   "rows": 20,
+   "anmerkungRows": 2
+  },
+  {
+   "page": 24,
+   "series": "S1",
+   "numMin": 401,
+   "numMax": 420,
+   "rows": 20,
+   "anmerkungRows": 1
+  },
+  {
+   "page": 25,
+   "series": "S1",
+   "numMin": 441,
+   "numMax": 460,
+   "rows": 20,
+   "anmerkungRows": 3
+  },
+  {
+   "page": 26,
+   "series": "S1",
+   "numMin": 461,
+   "numMax": 480,
+   "rows": 20,
+   "anmerkungRows": 5
+  },
+  {
+   "page": 27,
+   "series": "S1",
+   "numMin": 481,
+   "numMax": 500,
+   "rows": 20,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 28,
+   "series": "S1",
+   "numMin": 501,
+   "numMax": 520,
+   "rows": 20,
+   "anmerkungRows": 13
+  },
+  {
+   "page": 29,
+   "series": "S1",
+   "numMin": 521,
+   "numMax": 540,
+   "rows": 20,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 30,
+   "series": "S1",
+   "numMin": 541,
+   "numMax": 560,
+   "rows": 20,
+   "anmerkungRows": 3
+  },
+  {
+   "page": 31,
+   "series": "S1",
+   "numMin": 564,
+   "numMax": 580,
+   "rows": 21,
+   "anmerkungRows": 1
+  },
+  {
+   "page": 32,
+   "series": "S1",
+   "numMin": 581,
+   "numMax": 600,
+   "rows": 20,
+   "anmerkungRows": 3
+  },
+  {
+   "page": 33,
+   "series": "S1",
+   "numMin": 601,
+   "numMax": 620,
+   "rows": 21,
+   "anmerkungRows": 3
+  },
+  {
+   "page": 34,
+   "series": "S1",
+   "numMin": 621,
+   "numMax": 640,
+   "rows": 20,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 35,
+   "series": "S1",
+   "numMin": 641,
+   "numMax": 660,
+   "rows": 20,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 36,
+   "series": "S1",
+   "numMin": 661,
+   "numMax": 680,
+   "rows": 20,
+   "anmerkungRows": 4
+  },
+  {
+   "page": 37,
+   "series": "S1",
+   "numMin": 701,
+   "numMax": 720,
+   "rows": 21,
+   "anmerkungRows": 4
+  },
+  {
+   "page": 38,
+   "series": "S1",
+   "numMin": 681,
+   "numMax": 700,
+   "rows": 20,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 39,
+   "series": "S1",
+   "numMin": 701,
+   "numMax": 720,
+   "rows": 21,
+   "anmerkungRows": 4
+  },
+  {
+   "page": 40,
+   "series": "S1",
+   "numMin": 721,
+   "numMax": 740,
+   "rows": 21,
+   "anmerkungRows": 3
+  },
+  {
+   "page": 41,
+   "series": "S1",
+   "numMin": 741,
+   "numMax": 760,
+   "rows": 20,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 42,
+   "series": "S1",
+   "numMin": 761,
+   "numMax": 780,
+   "rows": 21,
+   "anmerkungRows": 16
+  },
+  {
+   "page": 43,
+   "series": "S1",
+   "numMin": 801,
+   "numMax": 820,
+   "rows": 20,
+   "anmerkungRows": 20
+  },
+  {
+   "page": 44,
+   "series": "S1",
+   "numMin": 821,
+   "numMax": 841,
+   "rows": 21,
+   "anmerkungRows": 2
+  },
+  {
+   "page": 45,
+   "series": "S1",
+   "numMin": 841,
+   "numMax": 860,
+   "rows": 20,
+   "anmerkungRows": 2
+  },
+  {
+   "page": 46,
+   "series": "S1",
+   "numMin": 861,
+   "numMax": 880,
+   "rows": 20,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 47,
+   "series": "S1",
+   "numMin": 881,
+   "numMax": 900,
+   "rows": 20,
+   "anmerkungRows": 1
+  },
+  {
+   "page": 48,
+   "series": "S1",
+   "numMin": 901,
+   "numMax": 920,
+   "rows": 20,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 49,
+   "series": "S1",
+   "numMin": 921,
+   "numMax": 940,
+   "rows": 20,
+   "anmerkungRows": 2
+  },
+  {
+   "page": 50,
+   "series": "S1",
+   "numMin": 941,
+   "numMax": 960,
+   "rows": 20,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 51,
+   "series": "S1",
+   "numMin": 961,
+   "numMax": 980,
+   "rows": 20,
+   "anmerkungRows": 7
+  },
+  {
+   "page": 52,
+   "series": "S1",
+   "numMin": 981,
+   "numMax": 1000,
+   "rows": 20,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 53,
+   "series": "S1",
+   "numMin": 1001,
+   "numMax": 1020,
+   "rows": 20,
+   "anmerkungRows": 5
+  },
+  {
+   "page": 54,
+   "series": "S1",
+   "numMin": 1021,
+   "numMax": 1040,
+   "rows": 20,
+   "anmerkungRows": 2
+  },
+  {
+   "page": 55,
+   "series": "S1",
+   "numMin": 1041,
+   "numMax": 1061,
+   "rows": 21,
+   "anmerkungRows": 2
+  },
+  {
+   "page": 56,
+   "series": "S1",
+   "numMin": 1061,
+   "numMax": 1086,
+   "rows": 21,
+   "anmerkungRows": 4
+  },
+  {
+   "page": 57,
+   "series": "S1",
+   "numMin": 1081,
+   "numMax": 1100,
+   "rows": 20,
+   "anmerkungRows": 7
+  },
+  {
+   "page": 58,
+   "series": "S1",
+   "numMin": 1102,
+   "numMax": 1121,
+   "rows": 20,
+   "anmerkungRows": 12
+  },
+  {
+   "page": 59,
+   "series": "S1",
+   "numMin": 1121,
+   "numMax": 1141,
+   "rows": 21,
+   "anmerkungRows": 15
+  },
+  {
+   "page": 60,
+   "series": "S1",
+   "numMin": 1141,
+   "numMax": 1160,
+   "rows": 20,
+   "anmerkungRows": 10
+  },
+  {
+   "page": 61,
+   "series": "S1",
+   "numMin": 161,
+   "numMax": 180,
+   "rows": 20,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 62,
+   "series": "S1",
+   "numMin": 181,
+   "numMax": 200,
+   "rows": 20,
+   "anmerkungRows": 6
+  },
+  {
+   "page": 63,
+   "series": "S1",
+   "numMin": 1801,
+   "numMax": 1820,
+   "rows": 20,
+   "anmerkungRows": 19
+  },
+  {
+   "page": 64,
+   "series": "S1",
+   "numMin": 1821,
+   "numMax": 1840,
+   "rows": 20,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 65,
+   "series": "S1",
+   "numMin": 1234,
+   "numMax": 1260,
+   "rows": 22,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 66,
+   "series": "S1",
+   "numMin": 1261,
+   "numMax": 1281,
+   "rows": 21,
+   "anmerkungRows": 11
+  },
+  {
+   "page": 67,
+   "series": "S1",
+   "numMin": 1281,
+   "numMax": 1300,
+   "rows": 20,
+   "anmerkungRows": 1
+  },
+  {
+   "page": 68,
+   "series": "S1",
+   "numMin": 1201,
+   "numMax": 1221,
+   "rows": 21,
+   "anmerkungRows": 7
+  },
+  {
+   "page": 69,
+   "series": "S1",
+   "numMin": 1327,
+   "numMax": 1346,
+   "rows": 20,
+   "anmerkungRows": 7
+  },
+  {
+   "page": 70,
+   "series": "S1",
+   "numMin": 1241,
+   "numMax": 1260,
+   "rows": 20,
+   "anmerkungRows": 14
+  },
+  {
+   "page": 71,
+   "series": "S1",
+   "numMin": 1261,
+   "numMax": 1281,
+   "rows": 21,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 72,
+   "series": "S1",
+   "numMin": 1281,
+   "numMax": 1300,
+   "rows": 20,
+   "anmerkungRows": 2
+  },
+  {
+   "page": 73,
+   "series": "S1",
+   "numMin": 1101,
+   "numMax": 1120,
+   "rows": 20,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 74,
+   "series": "S1",
+   "numMin": 1121,
+   "numMax": 1140,
+   "rows": 20,
+   "anmerkungRows": 3
+  },
+  {
+   "page": 75,
+   "series": "S1",
+   "numMin": 1441,
+   "numMax": 1460,
+   "rows": 20,
+   "anmerkungRows": 4
+  },
+  {
+   "page": 76,
+   "series": "S1",
+   "numMin": 1161,
+   "numMax": 1180,
+   "rows": 21,
+   "anmerkungRows": 10
+  },
+  {
+   "page": 77,
+   "series": "S1",
+   "numMin": 1181,
+   "numMax": 1200,
+   "rows": 20,
+   "anmerkungRows": 3
+  },
+  {
+   "page": 78,
+   "series": "S1",
+   "numMin": 1601,
+   "numMax": 1620,
+   "rows": 20,
+   "anmerkungRows": 10
+  },
+  {
+   "page": 79,
+   "series": "S1",
+   "numMin": 1821,
+   "numMax": 1840,
+   "rows": 20,
+   "anmerkungRows": 17
+  },
+  {
+   "page": 80,
+   "series": "S1",
+   "numMin": 1644,
+   "numMax": 1662,
+   "rows": 19,
+   "anmerkungRows": 15
+  },
+  {
+   "page": 81,
+   "series": "S1",
+   "numMin": 1661,
+   "numMax": 1680,
+   "rows": 20,
+   "anmerkungRows": 6
+  },
+  {
+   "page": 82,
+   "series": "S1",
+   "numMin": 1681,
+   "numMax": 1700,
+   "rows": 20,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 83,
+   "series": "S1",
+   "numMin": 161,
+   "numMax": 181,
+   "rows": 21,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 84,
+   "series": "S1",
+   "numMin": 162,
+   "numMax": 182,
+   "rows": 21,
+   "anmerkungRows": 7
+  },
+  {
+   "page": 85,
+   "series": "S1",
+   "numMin": 641,
+   "numMax": 660,
+   "rows": 20,
+   "anmerkungRows": 20
+  },
+  {
+   "page": 86,
+   "series": "S1",
+   "numMin": 160,
+   "numMax": 180,
+   "rows": 21,
+   "anmerkungRows": 6
+  },
+  {
+   "page": 87,
+   "series": "S1",
+   "numMin": 661,
+   "numMax": 680,
+   "rows": 20,
+   "anmerkungRows": 1
+  },
+  {
+   "page": 88,
+   "series": "S1",
+   "numMin": 721,
+   "numMax": 740,
+   "rows": 20,
+   "anmerkungRows": 8
+  },
+  {
+   "page": 89,
+   "series": "S1",
+   "numMin": 1921,
+   "numMax": 1941,
+   "rows": 21,
+   "anmerkungRows": 13
+  },
+  {
+   "page": 90,
+   "series": "S1",
+   "numMin": 1941,
+   "numMax": 1960,
+   "rows": 20,
+   "anmerkungRows": 3
+  },
+  {
+   "page": 91,
+   "series": "S1",
+   "numMin": 961,
+   "numMax": 980,
+   "rows": 20,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 92,
+   "series": "S1",
+   "numMin": 990,
+   "numMax": 1008,
+   "rows": 20,
+   "anmerkungRows": 12
+  },
+  {
+   "page": 93,
+   "series": "S1",
+   "numMin": 1601,
+   "numMax": 1620,
+   "rows": 20,
+   "anmerkungRows": 9
+  },
+  {
+   "page": 94,
+   "series": "S1",
+   "numMin": 1821,
+   "numMax": 1841,
+   "rows": 20,
+   "anmerkungRows": 2
+  },
+  {
+   "page": 95,
+   "series": "S1",
+   "numMin": 1941,
+   "numMax": 1960,
+   "rows": 20,
+   "anmerkungRows": 1
+  },
+  {
+   "page": 96,
+   "series": "S1",
+   "numMin": 1961,
+   "numMax": 1980,
+   "rows": 20,
+   "anmerkungRows": 2
+  },
+  {
+   "page": 97,
+   "series": "S1",
+   "numMin": 1881,
+   "numMax": 1900,
+   "rows": 20,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 98,
+   "series": "S1",
+   "numMin": 1901,
+   "numMax": 1920,
+   "rows": 20,
+   "anmerkungRows": 1
+  },
+  {
+   "page": 99,
+   "series": "S1",
+   "numMin": 921,
+   "numMax": 940,
+   "rows": 20,
+   "anmerkungRows": 1
+  },
+  {
+   "page": 100,
+   "series": "S1",
+   "numMin": 1940,
+   "numMax": 1960,
+   "rows": 20,
+   "anmerkungRows": 3
+  },
+  {
+   "page": 101,
+   "series": "S1",
+   "numMin": 1960,
+   "numMax": 1980,
+   "rows": 20,
+   "anmerkungRows": 6
+  },
+  {
+   "page": 102,
+   "series": "S1",
+   "numMin": 1980,
+   "numMax": 1999,
+   "rows": 20,
+   "anmerkungRows": 2
+  },
+  {
+   "page": 103,
+   "series": "S1",
+   "numMin": 2001,
+   "numMax": 2020,
+   "rows": 20,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 104,
+   "series": "S1",
+   "numMin": 2021,
+   "numMax": 2040,
+   "rows": 21,
+   "anmerkungRows": 12
+  },
+  {
+   "page": 105,
+   "series": "S1",
+   "numMin": 2040,
+   "numMax": 2064,
+   "rows": 25,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 106,
+   "series": "S1",
+   "numMin": 2060,
+   "numMax": 2080,
+   "rows": 21,
+   "anmerkungRows": 1
+  },
+  {
+   "page": 107,
+   "series": "S1",
+   "numMin": 2081,
+   "numMax": 2100,
+   "rows": 20,
+   "anmerkungRows": 4
+  },
+  {
+   "page": 108,
+   "series": "S1",
+   "numMin": 2101,
+   "numMax": 2120,
+   "rows": 20,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 109,
+   "series": "S1",
+   "numMin": 2121,
+   "numMax": 2140,
+   "rows": 20,
+   "anmerkungRows": 1
+  },
+  {
+   "page": 110,
+   "series": "S1",
+   "numMin": 2141,
+   "numMax": 2160,
+   "rows": 20,
+   "anmerkungRows": 1
+  },
+  {
+   "page": 111,
+   "series": "S1",
+   "numMin": 2161,
+   "numMax": 2180,
+   "rows": 20,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 112,
+   "series": "S1",
+   "numMin": 2181,
+   "numMax": 2200,
+   "rows": 20,
+   "anmerkungRows": 1
+  },
+  {
+   "page": 113,
+   "series": "S1",
+   "numMin": 2201,
+   "numMax": 2220,
+   "rows": 20,
+   "anmerkungRows": 10
+  },
+  {
+   "page": 114,
+   "series": "S1",
+   "numMin": 2217,
+   "numMax": 2238,
+   "rows": 21,
+   "anmerkungRows": 15
+  },
+  {
+   "page": 115,
+   "series": "S1",
+   "numMin": 2241,
+   "numMax": 2260,
+   "rows": 20,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 116,
+   "series": "S1",
+   "numMin": 2261,
+   "numMax": 2280,
+   "rows": 20,
+   "anmerkungRows": 13
+  },
+  {
+   "page": 117,
+   "series": "S1",
+   "numMin": 2291,
+   "numMax": 2310,
+   "rows": 22,
+   "anmerkungRows": 1
+  },
+  {
+   "page": 118,
+   "series": "S1",
+   "numMin": 2001,
+   "numMax": 2020,
+   "rows": 20,
+   "anmerkungRows": 2
+  },
+  {
+   "page": 119,
+   "series": "S1",
+   "numMin": 2021,
+   "numMax": 2040,
+   "rows": 21,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 120,
+   "series": "S1",
+   "numMin": 2341,
+   "numMax": 2360,
+   "rows": 20,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 121,
+   "series": "S1",
+   "numMin": 2061,
+   "numMax": 2081,
+   "rows": 21,
+   "anmerkungRows": 21
+  },
+  {
+   "page": 122,
+   "series": "S1",
+   "numMin": 2383,
+   "numMax": 2402,
+   "rows": 20,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 123,
+   "series": "S1",
+   "numMin": 2401,
+   "numMax": 2420,
+   "rows": 20,
+   "anmerkungRows": 2
+  },
+  {
+   "page": 124,
+   "series": "S1",
+   "numMin": 2421,
+   "numMax": 2440,
+   "rows": 20,
+   "anmerkungRows": 2
+  },
+  {
+   "page": 125,
+   "series": "S1",
+   "numMin": 2141,
+   "numMax": 2160,
+   "rows": 20,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 126,
+   "series": "S1",
+   "numMin": 2461,
+   "numMax": 2480,
+   "rows": 21,
+   "anmerkungRows": 3
+  },
+  {
+   "page": 127,
+   "series": "S1",
+   "numMin": 2481,
+   "numMax": 2500,
+   "rows": 20,
+   "anmerkungRows": 1
+  },
+  {
+   "page": 128,
+   "series": "S2",
+   "numMin": 2507,
+   "numMax": 2526,
+   "rows": 20,
+   "anmerkungRows": 1
+  },
+  {
+   "page": 129,
+   "series": "S2",
+   "numMin": 2826,
+   "numMax": 2840,
+   "rows": 20,
+   "anmerkungRows": 2
+  },
+  {
+   "page": 130,
+   "series": "S2",
+   "numMin": 2541,
+   "numMax": 2560,
+   "rows": 20,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 131,
+   "series": "S2",
+   "numMin": 2561,
+   "numMax": 2580,
+   "rows": 20,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 132,
+   "series": "S2",
+   "numMin": 2581,
+   "numMax": 2600,
+   "rows": 20,
+   "anmerkungRows": 0
+  },
+  {
+   "page": 133,
+   "series": "S2",
+   "numMin": 2601,
+   "numMax": 2620,
+   "rows": 20,
+   "anmerkungRows": 3
+  },
+  {
+   "page": 134,
+   "series": "S2",
+   "numMin": 2621,
+   "numMax": 2641,
+   "rows": 21,
+   "anmerkungRows": 9
+  },
+  {
+   "page": 135,
+   "series": "S2",
+   "numMin": 2611,
+   "numMax": 2630,
+   "rows": 20,
+   "anmerkungRows": 3
+  },
+  {
+   "page": 136,
+   "series": "S2",
+   "numMin": 2661,
+   "numMax": 2680,
+   "rows": 20,
+   "anmerkungRows": 6
+  },
+  {
+   "page": 137,
+   "series": "S2",
+   "numMin": 2681,
+   "numMax": 2700,
+   "rows": 20,
+   "anmerkungRows": 11
+  },
+  {
+   "page": 138,
+   "series": "S3",
+   "numMin": 1,
+   "numMax": 40,
+   "rows": 40,
+   "anmerkungRows": 1
+  },
+  {
+   "page": 139,
+   "series": "S3",
+   "numMin": 81,
+   "numMax": 100,
+   "rows": 20,
+   "anmerkungRows": 19
+  }
+ ],
+ "annRecords": [
+  {
+   "page": 5,
+   "parzella": "45",
+   "year": "1844",
+   "text": "Dopftaufschreibung 1844\nZinsentl. verblümt"
+  },
+  {
+   "page": 5,
+   "parzella": "46",
+   "year": "1844",
+   "text": "Dopftaufschreibung 1844\nZinsentl. verblümt"
+  },
+  {
+   "page": 5,
+   "parzella": "47",
+   "year": null,
+   "text": "urta"
+  },
+  {
+   "page": 5,
+   "parzella": "48",
+   "year": null,
+   "text": "urta"
+  },
+  {
+   "page": 5,
+   "parzella": "53",
+   "year": "1844",
+   "text": "Dopftaufschreibung 1844\nZinsentl. verblümt"
+  },
+  {
+   "page": 5,
+   "parzella": "58",
+   "year": "1844",
+   "text": "Dopftaufschreibung 1844\nZinsentl. verblümt"
+  },
+  {
+   "page": 6,
+   "parzella": "61",
+   "year": "1841",
+   "text": "Oberpfarrhügel 1841, Immunitäts-Grund"
+  },
+  {
+   "page": 6,
+   "parzella": "62",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 6,
+   "parzella": "63",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 6,
+   "parzella": "64",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 6,
+   "parzella": "65",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 6,
+   "parzella": "66",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 6,
+   "parzella": "67",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 6,
+   "parzella": "68",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 7,
+   "parzella": "100",
+   "year": null,
+   "text": "dito"
+  },
+  {
+   "page": 7,
+   "parzella": "101",
+   "year": null,
+   "text": "dito"
+  },
+  {
+   "page": 7,
+   "parzella": "102",
+   "year": null,
+   "text": "dito"
+  },
+  {
+   "page": 7,
+   "parzella": "89",
+   "year": "1844",
+   "text": "Oek. landesfällig vom 1844. Schinerl'sche Erben"
+  },
+  {
+   "page": 7,
+   "parzella": "90",
+   "year": null,
+   "text": "dito"
+  },
+  {
+   "page": 7,
+   "parzella": "91",
+   "year": "1844",
+   "text": "Oek. landesfällig vom 1844. Schinerl'sche Erben"
+  },
+  {
+   "page": 7,
+   "parzella": "92",
+   "year": null,
+   "text": "dito"
+  },
+  {
+   "page": 7,
+   "parzella": "93",
+   "year": null,
+   "text": "dito"
+  },
+  {
+   "page": 7,
+   "parzella": "94",
+   "year": null,
+   "text": "dito"
+  },
+  {
+   "page": 7,
+   "parzella": "95",
+   "year": null,
+   "text": "dito"
+  },
+  {
+   "page": 7,
+   "parzella": "96",
+   "year": null,
+   "text": "dito"
+  },
+  {
+   "page": 7,
+   "parzella": "97",
+   "year": null,
+   "text": "dito"
+  },
+  {
+   "page": 7,
+   "parzella": "98",
+   "year": null,
+   "text": "dito"
+  },
+  {
+   "page": 7,
+   "parzella": "99",
+   "year": null,
+   "text": "dito"
+  },
+  {
+   "page": 8,
+   "parzella": "101",
+   "year": "1841",
+   "text": "aufgelöst 1841, Jännerwunde und Hüben"
+  },
+  {
+   "page": 8,
+   "parzella": "117",
+   "year": "1841",
+   "text": "Gebt aufgelöst 1841, Jannerwunde und Hüben"
+  },
+  {
+   "page": 9,
+   "parzella": "121",
+   "year": "1841",
+   "text": "gepfändet kupon 1841 / Gminrath schuldlos"
+  },
+  {
+   "page": 9,
+   "parzella": "126",
+   "year": "1846",
+   "text": "auf Pfaffengut / 5. F. 1846"
+  },
+  {
+   "page": 9,
+   "parzella": "133",
+   "year": "1863",
+   "text": "auf Oplkandtwinnung / Wiederspruch 1863"
+  },
+  {
+   "page": 10,
+   "parzella": "142",
+   "year": "1841",
+   "text": "Aufgepfändet 1841"
+  },
+  {
+   "page": 10,
+   "parzella": "144",
+   "year": "1841",
+   "text": "Aufgepfändet 1841"
+  },
+  {
+   "page": 10,
+   "parzella": "146",
+   "year": "1841",
+   "text": "Aufgepfändet 1841"
+  },
+  {
+   "page": 10,
+   "parzella": "154",
+   "year": "1841",
+   "text": "Aufgepfändet 1841"
+  },
+  {
+   "page": 11,
+   "parzella": "163",
+   "year": "1844",
+   "text": "Abt. aufgelassen 1844"
+  },
+  {
+   "page": 12,
+   "parzella": "181",
+   "year": "1841",
+   "text": "Aufgefühlt den 1841"
+  },
+  {
+   "page": 12,
+   "parzella": "182",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 12,
+   "parzella": "183",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 12,
+   "parzella": "194",
+   "year": "1841",
+   "text": "Aufgefühlt den 1841"
+  },
+  {
+   "page": 12,
+   "parzella": "196",
+   "year": "1841",
+   "text": "Aufgefühlt den 1841"
+  },
+  {
+   "page": 14,
+   "parzella": "221",
+   "year": "1863",
+   "text": "Anfg. Oekonomie-Division, überwiesen vom Jänner 1863."
+  },
+  {
+   "page": 14,
+   "parzella": "226",
+   "year": "1863",
+   "text": "Anfg. Oekonomie-Division, überwiesen vom Jänner 1863."
+  },
+  {
+   "page": 14,
+   "parzella": "228",
+   "year": "1861",
+   "text": "Anfg. Oekonomie-Division 1861"
+  },
+  {
+   "page": 14,
+   "parzella": "238",
+   "year": "1863",
+   "text": "Anfg. Oekonomie-Division, überwiesen vom Jänner 1863."
+  },
+  {
+   "page": 15,
+   "parzella": "259",
+   "year": null,
+   "text": "546"
+  },
+  {
+   "page": 16,
+   "parzella": "271",
+   "year": "1835",
+   "text": "mit Grundgültigkeit bezw. 1835"
+  },
+  {
+   "page": 16,
+   "parzella": "279",
+   "year": null,
+   "text": "748"
+  },
+  {
+   "page": 17,
+   "parzella": "292",
+   "year": null,
+   "text": "Wulf Gräfl. Besitzung"
+  },
+  {
+   "page": 23,
+   "parzella": "405",
+   "year": "1844",
+   "text": "durch Tausch erworben 1844"
+  },
+  {
+   "page": 23,
+   "parzella": "415",
+   "year": "1844",
+   "text": "durch Tausch erworben 1844"
+  },
+  {
+   "page": 24,
+   "parzella": "404",
+   "year": "1844",
+   "text": "Durch [?] aufgekauft 1844"
+  },
+  {
+   "page": 25,
+   "parzella": "441",
+   "year": "1834",
+   "text": "Durf. Kaufschilling 1834"
+  },
+  {
+   "page": 25,
+   "parzella": "445",
+   "year": "1834",
+   "text": "Durf. Kaufschilling 1834"
+  },
+  {
+   "page": 25,
+   "parzella": "458",
+   "year": "1834",
+   "text": "Durf. Kaufschilling 1834"
+  },
+  {
+   "page": 26,
+   "parzella": "461",
+   "year": "1841",
+   "text": "Zugeh. hieher vom 1841"
+  },
+  {
+   "page": 26,
+   "parzella": "462",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 26,
+   "parzella": "463",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 26,
+   "parzella": "464",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 26,
+   "parzella": "465",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 28,
+   "parzella": "505",
+   "year": "1841",
+   "text": "Anpf. lauffallb. vom 1841"
+  },
+  {
+   "page": 28,
+   "parzella": "506",
+   "year": null,
+   "text": "\""
+  },
+  {
+   "page": 28,
+   "parzella": "507",
+   "year": null,
+   "text": "\""
+  },
+  {
+   "page": 28,
+   "parzella": "508",
+   "year": null,
+   "text": "-"
+  },
+  {
+   "page": 28,
+   "parzella": "509",
+   "year": null,
+   "text": "-"
+  },
+  {
+   "page": 28,
+   "parzella": "510",
+   "year": null,
+   "text": "-"
+  },
+  {
+   "page": 28,
+   "parzella": "511",
+   "year": null,
+   "text": "-"
+  },
+  {
+   "page": 28,
+   "parzella": "512",
+   "year": "1841",
+   "text": "Anpf. lauffallb. vom 1841"
+  },
+  {
+   "page": 28,
+   "parzella": "513",
+   "year": null,
+   "text": "\""
+  },
+  {
+   "page": 28,
+   "parzella": "514",
+   "year": null,
+   "text": "\""
+  },
+  {
+   "page": 28,
+   "parzella": "515",
+   "year": null,
+   "text": "-"
+  },
+  {
+   "page": 28,
+   "parzella": "516",
+   "year": null,
+   "text": "-"
+  },
+  {
+   "page": 28,
+   "parzella": "517",
+   "year": "1841",
+   "text": "Anpf. lauffallb. vom 1841"
+  },
+  {
+   "page": 30,
+   "parzella": "544",
+   "year": null,
+   "text": "4-2657"
+  },
+  {
+   "page": 30,
+   "parzella": "545",
+   "year": null,
+   "text": "4-1352"
+  },
+  {
+   "page": 30,
+   "parzella": "546",
+   "year": null,
+   "text": "3-1305"
+  },
+  {
+   "page": 31,
+   "parzella": "577",
+   "year": null,
+   "text": "6 - 1228"
+  },
+  {
+   "page": 32,
+   "parzella": "592",
+   "year": null,
+   "text": "1416"
+  },
+  {
+   "page": 32,
+   "parzella": "593",
+   "year": null,
+   "text": "1- 645  2- 467"
+  },
+  {
+   "page": 32,
+   "parzella": "594",
+   "year": "1884",
+   "text": "Aufs fuffelbogen 1884"
+  },
+  {
+   "page": 33,
+   "parzella": "601",
+   "year": null,
+   "text": "Zurf Fusspfahlbogen 18th"
+  },
+  {
+   "page": 33,
+   "parzella": "602",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 33,
+   "parzella": "603",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 36,
+   "parzella": "668",
+   "year": "1840",
+   "text": "Oberaufschlagsweg 1840"
+  },
+  {
+   "page": 36,
+   "parzella": "669",
+   "year": null,
+   "text": "Ditta"
+  },
+  {
+   "page": 36,
+   "parzella": "670",
+   "year": null,
+   "text": "Ditta"
+  },
+  {
+   "page": 36,
+   "parzella": "671",
+   "year": null,
+   "text": "Ditta"
+  },
+  {
+   "page": 37,
+   "parzella": "713",
+   "year": null,
+   "text": "4 1209"
+  },
+  {
+   "page": 37,
+   "parzella": "714",
+   "year": null,
+   "text": "1 - 621"
+  },
+  {
+   "page": 37,
+   "parzella": "715",
+   "year": null,
+   "text": "3 - 388"
+  },
+  {
+   "page": 37,
+   "parzella": "718",
+   "year": null,
+   "text": "40"
+  },
+  {
+   "page": 39,
+   "parzella": "713",
+   "year": null,
+   "text": "9. 1200g"
+  },
+  {
+   "page": 39,
+   "parzella": "714",
+   "year": null,
+   "text": "1 - 621"
+  },
+  {
+   "page": 39,
+   "parzella": "715",
+   "year": null,
+   "text": "3 - 388"
+  },
+  {
+   "page": 39,
+   "parzella": "718",
+   "year": null,
+   "text": "540"
+  },
+  {
+   "page": 40,
+   "parzella": "734",
+   "year": "1841",
+   "text": "Pflichtaufgeboten 1841"
+  },
+  {
+   "page": 40,
+   "parzella": "735",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 40,
+   "parzella": "739",
+   "year": "1826",
+   "text": "Pflichtaufgeboten 20 J. 1826"
+  },
+  {
+   "page": 42,
+   "parzella": "761",
+   "year": null,
+   "text": "11'"
+  },
+  {
+   "page": 42,
+   "parzella": "765",
+   "year": "1841",
+   "text": "Im Kaufbrief bez. 1841"
+  },
+  {
+   "page": 42,
+   "parzella": "766",
+   "year": null,
+   "text": "cetto"
+  },
+  {
+   "page": 42,
+   "parzella": "767",
+   "year": null,
+   "text": "cetto"
+  },
+  {
+   "page": 42,
+   "parzella": "768",
+   "year": null,
+   "text": "cetto"
+  },
+  {
+   "page": 42,
+   "parzella": "769",
+   "year": null,
+   "text": "cetto"
+  },
+  {
+   "page": 42,
+   "parzella": "770",
+   "year": null,
+   "text": "cetto"
+  },
+  {
+   "page": 42,
+   "parzella": "771",
+   "year": null,
+   "text": "cetto"
+  },
+  {
+   "page": 42,
+   "parzella": "772",
+   "year": null,
+   "text": "cetto"
+  },
+  {
+   "page": 42,
+   "parzella": "774",
+   "year": "1841",
+   "text": "Im Kaufbrief bez. 1841"
+  },
+  {
+   "page": 42,
+   "parzella": "775",
+   "year": null,
+   "text": "cetto"
+  },
+  {
+   "page": 42,
+   "parzella": "776",
+   "year": null,
+   "text": "cetto"
+  },
+  {
+   "page": 42,
+   "parzella": "777",
+   "year": null,
+   "text": "cetto"
+  },
+  {
+   "page": 42,
+   "parzella": "778",
+   "year": null,
+   "text": "cetto"
+  },
+  {
+   "page": 42,
+   "parzella": "779",
+   "year": null,
+   "text": "cetto"
+  },
+  {
+   "page": 42,
+   "parzella": "780",
+   "year": null,
+   "text": "cetto"
+  },
+  {
+   "page": 43,
+   "parzella": "801",
+   "year": null,
+   "text": "158"
+  },
+  {
+   "page": 43,
+   "parzella": "802",
+   "year": "1841",
+   "text": "Aufgepfändet 1841"
+  },
+  {
+   "page": 43,
+   "parzella": "803",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 43,
+   "parzella": "804",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 43,
+   "parzella": "805",
+   "year": null,
+   "text": "258"
+  },
+  {
+   "page": 43,
+   "parzella": "806",
+   "year": null,
+   "text": "258"
+  },
+  {
+   "page": 43,
+   "parzella": "807",
+   "year": "1841",
+   "text": "Aufgepfändet 1841"
+  },
+  {
+   "page": 43,
+   "parzella": "808",
+   "year": null,
+   "text": "258"
+  },
+  {
+   "page": 43,
+   "parzella": "809",
+   "year": "1841",
+   "text": "Aufgepfändet 1841"
+  },
+  {
+   "page": 43,
+   "parzella": "810",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 43,
+   "parzella": "811",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 43,
+   "parzella": "812",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 43,
+   "parzella": "813",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 43,
+   "parzella": "814",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 43,
+   "parzella": "815",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 43,
+   "parzella": "816",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 43,
+   "parzella": "817",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 43,
+   "parzella": "818",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 43,
+   "parzella": "819",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 43,
+   "parzella": "820",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 44,
+   "parzella": "828",
+   "year": null,
+   "text": "Auf hiesigem Grund"
+  },
+  {
+   "page": 44,
+   "parzella": "840",
+   "year": null,
+   "text": "Auf hiesigem Grund"
+  },
+  {
+   "page": 45,
+   "parzella": "858",
+   "year": "1841",
+   "text": "Bauh. aufgelassen im 1841"
+  },
+  {
+   "page": 45,
+   "parzella": "859",
+   "year": "1841",
+   "text": "Aufgelassen im 1841"
+  },
+  {
+   "page": 47,
+   "parzella": "888",
+   "year": "1862",
+   "text": "Eing Oefentl. mitvermög. Wieswurth im Jahr 1862."
+  },
+  {
+   "page": 49,
+   "parzella": "926",
+   "year": null,
+   "text": "mit Wollgebäude"
+  },
+  {
+   "page": 49,
+   "parzella": "927",
+   "year": "1878",
+   "text": "d. J. 1878"
+  },
+  {
+   "page": 51,
+   "parzella": "963",
+   "year": "1844",
+   "text": "Rauf aufgestellt 1844"
+  },
+  {
+   "page": 51,
+   "parzella": "964",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 51,
+   "parzella": "965",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 51,
+   "parzella": "968",
+   "year": "1844",
+   "text": "Rauf aufgestellt 1844"
+  },
+  {
+   "page": 51,
+   "parzella": "969",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 51,
+   "parzella": "970",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 51,
+   "parzella": "971",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 53,
+   "parzella": "1006",
+   "year": null,
+   "text": "20"
+  },
+  {
+   "page": 53,
+   "parzella": "1009",
+   "year": "1841",
+   "text": "Aufgefühlt 1841"
+  },
+  {
+   "page": 53,
+   "parzella": "1013",
+   "year": "1841",
+   "text": "Aufgefühlt 1841"
+  },
+  {
+   "page": 53,
+   "parzella": "1015",
+   "year": "1841",
+   "text": "Aufgefühlt 1841"
+  },
+  {
+   "page": 53,
+   "parzella": "1017",
+   "year": "1841",
+   "text": "Aufgefühlt 1841"
+  },
+  {
+   "page": 54,
+   "parzella": "1021",
+   "year": null,
+   "text": "bey festgestellten"
+  },
+  {
+   "page": 54,
+   "parzella": "1022",
+   "year": null,
+   "text": "dito"
+  },
+  {
+   "page": 55,
+   "parzella": "1048",
+   "year": null,
+   "text": "618"
+  },
+  {
+   "page": 55,
+   "parzella": "1061",
+   "year": "1841",
+   "text": "Gef. aufgeschlagen 1841"
+  },
+  {
+   "page": 56,
+   "parzella": "1061",
+   "year": "1844",
+   "text": "Dpf eingeführt vom 1844"
+  },
+  {
+   "page": 56,
+   "parzella": "1066",
+   "year": "1844",
+   "text": "Dpf eingeführt vom 1844"
+  },
+  {
+   "page": 56,
+   "parzella": "1073",
+   "year": "1844",
+   "text": "Dpf eingeführt vom 1844"
+  },
+  {
+   "page": 56,
+   "parzella": "1078",
+   "year": "1844",
+   "text": "Dpf eingeführt vom 1844"
+  },
+  {
+   "page": 57,
+   "parzella": "1082",
+   "year": "1857",
+   "text": "Pf. kauf. Schimey Ignaz 1857"
+  },
+  {
+   "page": 57,
+   "parzella": "1083",
+   "year": null,
+   "text": "Sto"
+  },
+  {
+   "page": 57,
+   "parzella": "1084",
+   "year": null,
+   "text": "setto"
+  },
+  {
+   "page": 57,
+   "parzella": "1085",
+   "year": null,
+   "text": "otto"
+  },
+  {
+   "page": 57,
+   "parzella": "1091",
+   "year": "1847",
+   "text": "Pf. kauf. Stukar Lorenz 1847"
+  },
+  {
+   "page": 57,
+   "parzella": "1094",
+   "year": "1841",
+   "text": "Pf. kauf. Müllner Ignaz 1841"
+  },
+  {
+   "page": 57,
+   "parzella": "1095",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 58,
+   "parzella": "1105",
+   "year": null,
+   "text": "dette"
+  },
+  {
+   "page": 58,
+   "parzella": "1106",
+   "year": "1841",
+   "text": "Auf eingefühlt den 1841"
+  },
+  {
+   "page": 58,
+   "parzella": "1107",
+   "year": "1841",
+   "text": "Auf eingefühlt den 1841"
+  },
+  {
+   "page": 58,
+   "parzella": "1111",
+   "year": "1841",
+   "text": "Auf eingefühlt den 1841"
+  },
+  {
+   "page": 58,
+   "parzella": "1112",
+   "year": null,
+   "text": "dette"
+  },
+  {
+   "page": 58,
+   "parzella": "1113",
+   "year": null,
+   "text": "dette"
+  },
+  {
+   "page": 58,
+   "parzella": "1114",
+   "year": null,
+   "text": "dette"
+  },
+  {
+   "page": 58,
+   "parzella": "1115",
+   "year": null,
+   "text": "dette"
+  },
+  {
+   "page": 58,
+   "parzella": "1116",
+   "year": "1841",
+   "text": "Auf eingeführt den 1841"
+  },
+  {
+   "page": 58,
+   "parzella": "1117",
+   "year": "1841",
+   "text": "Auf eingefühlt den 1841"
+  },
+  {
+   "page": 58,
+   "parzella": "1119",
+   "year": null,
+   "text": "Summa 343 Lhizl dette 180"
+  },
+  {
+   "page": 58,
+   "parzella": "1121",
+   "year": null,
+   "text": "dette"
+  },
+  {
+   "page": 59,
+   "parzella": "1121",
+   "year": "1841",
+   "text": "Bpf. Kaufbrief vom 1841"
+  },
+  {
+   "page": 59,
+   "parzella": "1122",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 59,
+   "parzella": "1123",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 59,
+   "parzella": "1124",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 59,
+   "parzella": "1125",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 59,
+   "parzella": "1126",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 59,
+   "parzella": "1127",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 59,
+   "parzella": "1128",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 59,
+   "parzella": "1130",
+   "year": null,
+   "text": "1-1165"
+  },
+  {
+   "page": 59,
+   "parzella": "1133",
+   "year": "1841",
+   "text": "Bpf. Kaufbrief vom 1841"
+  },
+  {
+   "page": 59,
+   "parzella": "1134",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 59,
+   "parzella": "1136",
+   "year": null,
+   "text": "1123"
+  },
+  {
+   "page": 59,
+   "parzella": "1137",
+   "year": "1841",
+   "text": "Bpf. Kaufbrief vom 1841"
+  },
+  {
+   "page": 59,
+   "parzella": "1138",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 59,
+   "parzella": "1141",
+   "year": null,
+   "text": "366 798"
+  },
+  {
+   "page": 60,
+   "parzella": "1144",
+   "year": "1894",
+   "text": "Ried aufgelassen 1894"
+  },
+  {
+   "page": 60,
+   "parzella": "1145",
+   "year": null,
+   "text": "Dette"
+  },
+  {
+   "page": 60,
+   "parzella": "1146",
+   "year": null,
+   "text": "Dette"
+  },
+  {
+   "page": 60,
+   "parzella": "1147",
+   "year": null,
+   "text": "Dette"
+  },
+  {
+   "page": 60,
+   "parzella": "1148",
+   "year": null,
+   "text": "Dette"
+  },
+  {
+   "page": 60,
+   "parzella": "1149",
+   "year": null,
+   "text": "Dette"
+  },
+  {
+   "page": 60,
+   "parzella": "1150",
+   "year": null,
+   "text": "Dette"
+  },
+  {
+   "page": 60,
+   "parzella": "1155",
+   "year": null,
+   "text": "Laut de vom zu für nix"
+  },
+  {
+   "page": 60,
+   "parzella": "1156",
+   "year": null,
+   "text": "Dette de mühle ?"
+  },
+  {
+   "page": 60,
+   "parzella": "1157",
+   "year": null,
+   "text": "Brandstätt"
+  },
+  {
+   "page": 62,
+   "parzella": "191",
+   "year": "1844",
+   "text": "Aufgefullt bezm. 1844"
+  },
+  {
+   "page": 62,
+   "parzella": "192",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 62,
+   "parzella": "193",
+   "year": null,
+   "text": "Ditto."
+  },
+  {
+   "page": 62,
+   "parzella": "194",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 62,
+   "parzella": "199",
+   "year": "1844",
+   "text": "Aufgefullt bezm. 1844"
+  },
+  {
+   "page": 62,
+   "parzella": "200",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 63,
+   "parzella": "1801",
+   "year": "1841",
+   "text": "Provisorisch 1841"
+  },
+  {
+   "page": 63,
+   "parzella": "1802",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 63,
+   "parzella": "1803",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 63,
+   "parzella": "1804",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 63,
+   "parzella": "1805",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 63,
+   "parzella": "1806",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 63,
+   "parzella": "1807",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 63,
+   "parzella": "1808",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 63,
+   "parzella": "1809",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 63,
+   "parzella": "1810",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 63,
+   "parzella": "1811",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 63,
+   "parzella": "1812",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 63,
+   "parzella": "1813",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 63,
+   "parzella": "1814",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 63,
+   "parzella": "1815",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 63,
+   "parzella": "1816",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 63,
+   "parzella": "1817",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 63,
+   "parzella": "1818",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 63,
+   "parzella": "1819",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 66,
+   "parzella": "1265",
+   "year": "1844",
+   "text": "Auf eingefüllt bezum 1844"
+  },
+  {
+   "page": 66,
+   "parzella": "1266",
+   "year": null,
+   "text": "dito"
+  },
+  {
+   "page": 66,
+   "parzella": "1267",
+   "year": null,
+   "text": "dito"
+  },
+  {
+   "page": 66,
+   "parzella": "1268",
+   "year": null,
+   "text": "dito"
+  },
+  {
+   "page": 66,
+   "parzella": "1270",
+   "year": "1844",
+   "text": "Auf eingefüllt bezum 1844"
+  },
+  {
+   "page": 66,
+   "parzella": "1276",
+   "year": "1844",
+   "text": "Auf eingefüllt bezum 1844"
+  },
+  {
+   "page": 66,
+   "parzella": "1277",
+   "year": null,
+   "text": "dito"
+  },
+  {
+   "page": 66,
+   "parzella": "1278",
+   "year": null,
+   "text": "viello"
+  },
+  {
+   "page": 66,
+   "parzella": "1279",
+   "year": null,
+   "text": "dito"
+  },
+  {
+   "page": 66,
+   "parzella": "1280",
+   "year": null,
+   "text": "dito"
+  },
+  {
+   "page": 66,
+   "parzella": "1281",
+   "year": null,
+   "text": "dito"
+  },
+  {
+   "page": 67,
+   "parzella": "1283",
+   "year": "1844",
+   "text": "Auf hofstellbogen 1844"
+  },
+  {
+   "page": 68,
+   "parzella": "1214",
+   "year": null,
+   "text": "abgetreten an den"
+  },
+  {
+   "page": 68,
+   "parzella": "1215",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 68,
+   "parzella": "1216",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 68,
+   "parzella": "1218",
+   "year": "1841",
+   "text": "abgetreten an den 1841"
+  },
+  {
+   "page": 68,
+   "parzella": "1219",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 68,
+   "parzella": "1220",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 68,
+   "parzella": "1221",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 69,
+   "parzella": "1327",
+   "year": null,
+   "text": "Auf transportirt worden"
+  },
+  {
+   "page": 69,
+   "parzella": "1340",
+   "year": null,
+   "text": "7-1349"
+  },
+  {
+   "page": 69,
+   "parzella": "1341",
+   "year": null,
+   "text": "8-955"
+  },
+  {
+   "page": 69,
+   "parzella": "1343",
+   "year": "1841",
+   "text": "Auf transportirt worden 1841"
+  },
+  {
+   "page": 69,
+   "parzella": "1344",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 69,
+   "parzella": "1345",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 69,
+   "parzella": "1346",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 70,
+   "parzella": "1241",
+   "year": "1844",
+   "text": "Aufgufgefolgt 1844"
+  },
+  {
+   "page": 70,
+   "parzella": "1242",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 70,
+   "parzella": "1244",
+   "year": "1844",
+   "text": "Aufgufgefolgt 1844"
+  },
+  {
+   "page": 70,
+   "parzella": "1245",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 70,
+   "parzella": "1246",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 70,
+   "parzella": "1247",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 70,
+   "parzella": "1248",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 70,
+   "parzella": "1249",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 70,
+   "parzella": "1250",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 70,
+   "parzella": "1251",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 70,
+   "parzella": "1252",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 70,
+   "parzella": "1253",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 70,
+   "parzella": "1254",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 70,
+   "parzella": "1255",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 72,
+   "parzella": "1298",
+   "year": "1924",
+   "text": "7- 1924 1044"
+  },
+  {
+   "page": 72,
+   "parzella": "1299",
+   "year": null,
+   "text": "7- 880"
+  },
+  {
+   "page": 74,
+   "parzella": "1135",
+   "year": "1844",
+   "text": "auf transportirt vom 1844"
+  },
+  {
+   "page": 74,
+   "parzella": "1136",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 74,
+   "parzella": "1138",
+   "year": "1844",
+   "text": "auf transportirt vom 1844"
+  },
+  {
+   "page": 75,
+   "parzella": "1443",
+   "year": "1844",
+   "text": "Aufgefüllt 1844"
+  },
+  {
+   "page": 75,
+   "parzella": "1446",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 75,
+   "parzella": "1447",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 75,
+   "parzella": "1451",
+   "year": "1844",
+   "text": "Aufgefüllt 1844"
+  },
+  {
+   "page": 76,
+   "parzella": "1164",
+   "year": "1841",
+   "text": "Auf Ruffelbogen 1841"
+  },
+  {
+   "page": 76,
+   "parzella": "1169",
+   "year": "1841",
+   "text": "Auf Ruffelbogen 1841"
+  },
+  {
+   "page": 76,
+   "parzella": "1170",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 76,
+   "parzella": "1172",
+   "year": "1841",
+   "text": "Auf Ruffelbogen 1841"
+  },
+  {
+   "page": 76,
+   "parzella": "1173",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 76,
+   "parzella": "1174",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 76,
+   "parzella": "1175",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 76,
+   "parzella": "1176",
+   "year": null,
+   "text": "2 - 1361 Ditto"
+  },
+  {
+   "page": 76,
+   "parzella": "1178",
+   "year": null,
+   "text": "2 - 622 16"
+  },
+  {
+   "page": 76,
+   "parzella": "1179",
+   "year": null,
+   "text": "2 - 612"
+  },
+  {
+   "page": 77,
+   "parzella": "1184",
+   "year": null,
+   "text": "/"
+  },
+  {
+   "page": 77,
+   "parzella": "1185",
+   "year": null,
+   "text": "/"
+  },
+  {
+   "page": 77,
+   "parzella": "1188",
+   "year": null,
+   "text": "/"
+  },
+  {
+   "page": 78,
+   "parzella": "1605",
+   "year": "1841",
+   "text": "Aufgeführlt beygen 1841"
+  },
+  {
+   "page": 78,
+   "parzella": "1606",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 78,
+   "parzella": "1607",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 78,
+   "parzella": "1608",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 78,
+   "parzella": "1609",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 78,
+   "parzella": "1610",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 78,
+   "parzella": "1611",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 78,
+   "parzella": "1612",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 78,
+   "parzella": "1613",
+   "year": null,
+   "text": "Datto"
+  },
+  {
+   "page": 78,
+   "parzella": "1614",
+   "year": null,
+   "text": "Datto"
+  },
+  {
+   "page": 79,
+   "parzella": "1822",
+   "year": "1841",
+   "text": "Ganz aufgelöst 1841"
+  },
+  {
+   "page": 79,
+   "parzella": "1823",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 79,
+   "parzella": "1824",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 79,
+   "parzella": "1825",
+   "year": null,
+   "text": "ito ito"
+  },
+  {
+   "page": 79,
+   "parzella": "1826",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 79,
+   "parzella": "1827",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 79,
+   "parzella": "1828",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 79,
+   "parzella": "1829",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 79,
+   "parzella": "1830",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 79,
+   "parzella": "1831",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 79,
+   "parzella": "1833",
+   "year": "1841",
+   "text": "Ganz aufgelöst 1841"
+  },
+  {
+   "page": 79,
+   "parzella": "1834",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 79,
+   "parzella": "1835",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 79,
+   "parzella": "1836",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 79,
+   "parzella": "1837",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 79,
+   "parzella": "1838",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 79,
+   "parzella": "1839",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 80,
+   "parzella": "1644",
+   "year": null,
+   "text": "bey Guggenfeldigen sehr"
+  },
+  {
+   "page": 80,
+   "parzella": "1645",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 80,
+   "parzella": "1646",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 80,
+   "parzella": "1647",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 80,
+   "parzella": "1648",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 80,
+   "parzella": "1649",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 80,
+   "parzella": "1650",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 80,
+   "parzella": "1651",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 80,
+   "parzella": "1652",
+   "year": null,
+   "text": "Ditto."
+  },
+  {
+   "page": 80,
+   "parzella": "1653",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 80,
+   "parzella": "1654",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 80,
+   "parzella": "1655",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 80,
+   "parzella": "1656",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 80,
+   "parzella": "1657",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 80,
+   "parzella": "1658",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 81,
+   "parzella": "1663",
+   "year": "1841",
+   "text": "auf hofpoldbogen 1841"
+  },
+  {
+   "page": 81,
+   "parzella": "1664",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 81,
+   "parzella": "1665",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 81,
+   "parzella": "1666",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 81,
+   "parzella": "1667",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 81,
+   "parzella": "1676",
+   "year": "1870",
+   "text": "mit Pflanzbogen n: f. 1870"
+  },
+  {
+   "page": 84,
+   "parzella": "170",
+   "year": "1841",
+   "text": "Aufgefulltbygm 1841"
+  },
+  {
+   "page": 84,
+   "parzella": "171",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 84,
+   "parzella": "172",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 84,
+   "parzella": "173",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 84,
+   "parzella": "178",
+   "year": "1841",
+   "text": "Aufgefulltbygm 1841"
+  },
+  {
+   "page": 84,
+   "parzella": "179",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 84,
+   "parzella": "182",
+   "year": "1841",
+   "text": "Aufgefulltbygm 1841"
+  },
+  {
+   "page": 85,
+   "parzella": "641",
+   "year": null,
+   "text": "1-2 41"
+  },
+  {
+   "page": 85,
+   "parzella": "642",
+   "year": "1841",
+   "text": "Aufgufstellt den 1841"
+  },
+  {
+   "page": 85,
+   "parzella": "643",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 85,
+   "parzella": "644",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 85,
+   "parzella": "645",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 85,
+   "parzella": "646",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 85,
+   "parzella": "647",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 85,
+   "parzella": "648",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 85,
+   "parzella": "649",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 85,
+   "parzella": "650",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 85,
+   "parzella": "651",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 85,
+   "parzella": "652",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 85,
+   "parzella": "653",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 85,
+   "parzella": "654",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 85,
+   "parzella": "655",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 85,
+   "parzella": "656",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 85,
+   "parzella": "657",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 85,
+   "parzella": "658",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 85,
+   "parzella": "659",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 85,
+   "parzella": "660",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 86,
+   "parzella": "160",
+   "year": "1841",
+   "text": "Aufgepfändet von 1841"
+  },
+  {
+   "page": 86,
+   "parzella": "161",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 86,
+   "parzella": "172",
+   "year": "1841",
+   "text": "Aufgepfändet von 1841"
+  },
+  {
+   "page": 86,
+   "parzella": "173",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 86,
+   "parzella": "176",
+   "year": "1841",
+   "text": "Aufgepfändet von 1841"
+  },
+  {
+   "page": 86,
+   "parzella": "177",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 87,
+   "parzella": "667",
+   "year": "1861",
+   "text": "Auf Grundbuch 1861"
+  },
+  {
+   "page": 88,
+   "parzella": "726",
+   "year": "1811",
+   "text": "Aufsufgefilltym 1811"
+  },
+  {
+   "page": 88,
+   "parzella": "728",
+   "year": "1841",
+   "text": "Aufsufgefilltym 1841"
+  },
+  {
+   "page": 88,
+   "parzella": "729",
+   "year": null,
+   "text": "datto"
+  },
+  {
+   "page": 88,
+   "parzella": "730",
+   "year": null,
+   "text": "datto"
+  },
+  {
+   "page": 88,
+   "parzella": "731",
+   "year": null,
+   "text": "datto"
+  },
+  {
+   "page": 88,
+   "parzella": "736",
+   "year": "1831",
+   "text": "Aufsufgefilltym 1831"
+  },
+  {
+   "page": 88,
+   "parzella": "737",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 88,
+   "parzella": "740",
+   "year": "1841",
+   "text": "Aufsufgefilltym 1841"
+  },
+  {
+   "page": 89,
+   "parzella": "1923",
+   "year": null,
+   "text": "Durch Anfallbeym 184."
+  },
+  {
+   "page": 89,
+   "parzella": "1924",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 89,
+   "parzella": "1925",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 89,
+   "parzella": "1926",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 89,
+   "parzella": "1927",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 89,
+   "parzella": "1928",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 89,
+   "parzella": "1929",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 89,
+   "parzella": "1930",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 89,
+   "parzella": "1931",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 89,
+   "parzella": "1932",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 89,
+   "parzella": "1933",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 89,
+   "parzella": "1939",
+   "year": null,
+   "text": "2-1322 788"
+  },
+  {
+   "page": 89,
+   "parzella": "1940",
+   "year": null,
+   "text": "3-715"
+  },
+  {
+   "page": 90,
+   "parzella": "1943",
+   "year": "1861",
+   "text": "Pflichtschaffung 1861"
+  },
+  {
+   "page": 90,
+   "parzella": "1954",
+   "year": null,
+   "text": "b - 1372"
+  },
+  {
+   "page": 90,
+   "parzella": "1959",
+   "year": "1515",
+   "text": "6-1515"
+  },
+  {
+   "page": 92,
+   "parzella": "1000",
+   "year": null,
+   "text": "dito"
+  },
+  {
+   "page": 92,
+   "parzella": "1001",
+   "year": null,
+   "text": "dito"
+  },
+  {
+   "page": 92,
+   "parzella": "1002",
+   "year": null,
+   "text": "dito"
+  },
+  {
+   "page": 92,
+   "parzella": "1003",
+   "year": null,
+   "text": "dito"
+  },
+  {
+   "page": 92,
+   "parzella": "1003",
+   "year": null,
+   "text": "dito"
+  },
+  {
+   "page": 92,
+   "parzella": "1004",
+   "year": null,
+   "text": "dito"
+  },
+  {
+   "page": 92,
+   "parzella": "1005",
+   "year": null,
+   "text": "dito"
+  },
+  {
+   "page": 92,
+   "parzella": "1006",
+   "year": null,
+   "text": "dito"
+  },
+  {
+   "page": 92,
+   "parzella": "1007",
+   "year": null,
+   "text": "dito"
+  },
+  {
+   "page": 92,
+   "parzella": "1008",
+   "year": null,
+   "text": "dito"
+  },
+  {
+   "page": 92,
+   "parzella": "998",
+   "year": "1841",
+   "text": "Dittl eingeführt bezogen 1841"
+  },
+  {
+   "page": 92,
+   "parzella": "999",
+   "year": null,
+   "text": "dito"
+  },
+  {
+   "page": 93,
+   "parzella": "1601",
+   "year": "1824",
+   "text": "Durch Theilung im 1824"
+  },
+  {
+   "page": 93,
+   "parzella": "1602",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 93,
+   "parzella": "1603",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 93,
+   "parzella": "1604",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 93,
+   "parzella": "1606",
+   "year": "1824",
+   "text": "Durch Theilung im 1824"
+  },
+  {
+   "page": 93,
+   "parzella": "1607",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 93,
+   "parzella": "1613",
+   "year": null,
+   "text": "trifft Gültley 9."
+  },
+  {
+   "page": 93,
+   "parzella": "1614",
+   "year": "1870",
+   "text": "1870. 8-1117"
+  },
+  {
+   "page": 93,
+   "parzella": "1619",
+   "year": null,
+   "text": "6 165"
+  },
+  {
+   "page": 94,
+   "parzella": "1831",
+   "year": null,
+   "text": "mit Weyen no."
+  },
+  {
+   "page": 94,
+   "parzella": "1832",
+   "year": "1820",
+   "text": "1820"
+  },
+  {
+   "page": 95,
+   "parzella": "1949",
+   "year": "1870",
+   "text": "Wp. duffey's kugn. in 1870."
+  },
+  {
+   "page": 96,
+   "parzella": "1973",
+   "year": null,
+   "text": "649"
+  },
+  {
+   "page": 96,
+   "parzella": "1978",
+   "year": null,
+   "text": "2 - 263"
+  },
+  {
+   "page": 98,
+   "parzella": "1911",
+   "year": null,
+   "text": "2 - 45/"
+  },
+  {
+   "page": 99,
+   "parzella": "928",
+   "year": null,
+   "text": "4-1285"
+  },
+  {
+   "page": 100,
+   "parzella": "1943",
+   "year": null,
+   "text": "72"
+  },
+  {
+   "page": 100,
+   "parzella": "1952",
+   "year": null,
+   "text": "1"
+  },
+  {
+   "page": 100,
+   "parzella": "1959",
+   "year": "1841",
+   "text": "Rohr eingefället 1841"
+  },
+  {
+   "page": 101,
+   "parzella": "1960",
+   "year": null,
+   "text": "Roth gestiftet an:"
+  },
+  {
+   "page": 101,
+   "parzella": "1961",
+   "year": "1870",
+   "text": "1870"
+  },
+  {
+   "page": 101,
+   "parzella": "1964",
+   "year": null,
+   "text": "80."
+  },
+  {
+   "page": 101,
+   "parzella": "1975",
+   "year": "1844",
+   "text": "auf hofschloßgrund 1844"
+  },
+  {
+   "page": 101,
+   "parzella": "1976",
+   "year": null,
+   "text": "detto"
+  },
+  {
+   "page": 101,
+   "parzella": "1977",
+   "year": null,
+   "text": "detto"
+  },
+  {
+   "page": 102,
+   "parzella": "1983",
+   "year": "1870",
+   "text": "d. i. H. R. d. 3. 1870"
+  },
+  {
+   "page": 102,
+   "parzella": "1999",
+   "year": "1864",
+   "text": "auf Kaufgeld 1864"
+  },
+  {
+   "page": 104,
+   "parzella": "2023",
+   "year": "1841",
+   "text": "Durch Theilung entstanden 1841"
+  },
+  {
+   "page": 104,
+   "parzella": "2024",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 104,
+   "parzella": "2026",
+   "year": "1841",
+   "text": "Durch Theilung entstanden 1841"
+  },
+  {
+   "page": 104,
+   "parzella": "2027",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 104,
+   "parzella": "2028",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 104,
+   "parzella": "2029",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 104,
+   "parzella": "2030",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 104,
+   "parzella": "2031",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 104,
+   "parzella": "2037",
+   "year": "1840",
+   "text": "Durch Theilung entstanden 1840"
+  },
+  {
+   "page": 104,
+   "parzella": "2038",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 104,
+   "parzella": "2039",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 104,
+   "parzella": "2040",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 106,
+   "parzella": "2080",
+   "year": null,
+   "text": "7 851"
+  },
+  {
+   "page": 107,
+   "parzella": "2094",
+   "year": "1841",
+   "text": "Durch Kauf erhalten 1841"
+  },
+  {
+   "page": 107,
+   "parzella": "2095",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 107,
+   "parzella": "2096",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 107,
+   "parzella": "2097",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 109,
+   "parzella": "2126",
+   "year": "1870",
+   "text": "auf Waffey\nm. 1870"
+  },
+  {
+   "page": 110,
+   "parzella": "2148",
+   "year": "1841",
+   "text": "Auf Grundbuch 1841"
+  },
+  {
+   "page": 112,
+   "parzella": "2198",
+   "year": null,
+   "text": "Auf hofSTALLHOFN 26/47"
+  },
+  {
+   "page": 113,
+   "parzella": "2207",
+   "year": "1841",
+   "text": "Auf hupfälligen 1841"
+  },
+  {
+   "page": 113,
+   "parzella": "2209",
+   "year": "1841",
+   "text": "Auf hupfälligen 1841"
+  },
+  {
+   "page": 113,
+   "parzella": "2210",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 113,
+   "parzella": "2211",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 113,
+   "parzella": "2212",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 113,
+   "parzella": "2214",
+   "year": "1840",
+   "text": "Auf hupfälligen 1840"
+  },
+  {
+   "page": 113,
+   "parzella": "2215",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 113,
+   "parzella": "2217",
+   "year": "1840",
+   "text": "Auf hupfälligen 1840"
+  },
+  {
+   "page": 113,
+   "parzella": "2218",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 113,
+   "parzella": "2220",
+   "year": "1840",
+   "text": "Auf hupfälligen 1840"
+  },
+  {
+   "page": 114,
+   "parzella": "2217",
+   "year": "1840",
+   "text": "Pacht fällig den 1ten 1840"
+  },
+  {
+   "page": 114,
+   "parzella": "2218",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 114,
+   "parzella": "2221",
+   "year": "1841",
+   "text": "Pacht fällig den 1ten 1841"
+  },
+  {
+   "page": 114,
+   "parzella": "2222",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 114,
+   "parzella": "2225",
+   "year": "1841",
+   "text": "Pacht fällig den 1ten 1841"
+  },
+  {
+   "page": 114,
+   "parzella": "2226",
+   "year": "1841",
+   "text": "Pacht fällig den 1ten 1841"
+  },
+  {
+   "page": 114,
+   "parzella": "2228",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 114,
+   "parzella": "2229",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 114,
+   "parzella": "2230",
+   "year": "1840",
+   "text": "Pacht fällig den 1ten 1840"
+  },
+  {
+   "page": 114,
+   "parzella": "2231",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 114,
+   "parzella": "2232",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 114,
+   "parzella": "2233",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 114,
+   "parzella": "2234",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 114,
+   "parzella": "2235",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 114,
+   "parzella": "2236",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 116,
+   "parzella": "2261",
+   "year": null,
+   "text": "auf die Communairung Rückzagnymen"
+  },
+  {
+   "page": 116,
+   "parzella": "2264",
+   "year": "1841",
+   "text": "Aufhufbllgym 1841"
+  },
+  {
+   "page": 116,
+   "parzella": "2265",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 116,
+   "parzella": "2266",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 116,
+   "parzella": "2269",
+   "year": "1841",
+   "text": "Auf hufbllgym 1841"
+  },
+  {
+   "page": 116,
+   "parzella": "2270",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 116,
+   "parzella": "2271",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 116,
+   "parzella": "2272",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 116,
+   "parzella": "2275",
+   "year": "1841",
+   "text": "Auf hufbllgym 1841"
+  },
+  {
+   "page": 116,
+   "parzella": "2276",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 116,
+   "parzella": "2277",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 116,
+   "parzella": "2278",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 116,
+   "parzella": "2279",
+   "year": "1841",
+   "text": "Auf hufbllgym 1841"
+  },
+  {
+   "page": 117,
+   "parzella": "2291",
+   "year": "1841",
+   "text": "(Ditt) ausgeführt 1841"
+  },
+  {
+   "page": 118,
+   "parzella": "2007",
+   "year": "1843",
+   "text": "aufgufschlagen 1843"
+  },
+  {
+   "page": 118,
+   "parzella": "2018",
+   "year": "1841",
+   "text": "aufgufschlagen 1841"
+  },
+  {
+   "page": 121,
+   "parzella": "2061",
+   "year": null,
+   "text": "-"
+  },
+  {
+   "page": 121,
+   "parzella": "2062",
+   "year": null,
+   "text": "-"
+  },
+  {
+   "page": 121,
+   "parzella": "2063",
+   "year": null,
+   "text": "-"
+  },
+  {
+   "page": 121,
+   "parzella": "2064",
+   "year": null,
+   "text": "-"
+  },
+  {
+   "page": 121,
+   "parzella": "2065",
+   "year": null,
+   "text": "-"
+  },
+  {
+   "page": 121,
+   "parzella": "2066",
+   "year": null,
+   "text": "-"
+  },
+  {
+   "page": 121,
+   "parzella": "2067",
+   "year": null,
+   "text": "-"
+  },
+  {
+   "page": 121,
+   "parzella": "2068",
+   "year": null,
+   "text": "-"
+  },
+  {
+   "page": 121,
+   "parzella": "2069",
+   "year": null,
+   "text": "-"
+  },
+  {
+   "page": 121,
+   "parzella": "2070",
+   "year": null,
+   "text": "-"
+  },
+  {
+   "page": 121,
+   "parzella": "2071",
+   "year": null,
+   "text": "-"
+  },
+  {
+   "page": 121,
+   "parzella": "2072",
+   "year": null,
+   "text": "-"
+  },
+  {
+   "page": 121,
+   "parzella": "2073",
+   "year": null,
+   "text": "-"
+  },
+  {
+   "page": 121,
+   "parzella": "2074",
+   "year": "1881",
+   "text": "Wipf aufgelassen 1881"
+  },
+  {
+   "page": 121,
+   "parzella": "2075",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 121,
+   "parzella": "2076",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 121,
+   "parzella": "2077",
+   "year": null,
+   "text": "-"
+  },
+  {
+   "page": 121,
+   "parzella": "2078",
+   "year": "1863",
+   "text": "Wipf aufgelassen 1863"
+  },
+  {
+   "page": 121,
+   "parzella": "2079",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 121,
+   "parzella": "2080",
+   "year": null,
+   "text": "ditto"
+  },
+  {
+   "page": 121,
+   "parzella": "2081",
+   "year": null,
+   "text": "12 1046"
+  },
+  {
+   "page": 123,
+   "parzella": "2412",
+   "year": null,
+   "text": "11 68"
+  },
+  {
+   "page": 123,
+   "parzella": "2419",
+   "year": "1790",
+   "text": "8 1790"
+  },
+  {
+   "page": 124,
+   "parzella": "2426",
+   "year": "1841",
+   "text": "Pfaff Guffeld bezahlt 1841"
+  },
+  {
+   "page": 124,
+   "parzella": "2427",
+   "year": null,
+   "text": "dito"
+  },
+  {
+   "page": 126,
+   "parzella": "2461",
+   "year": "1863",
+   "text": "1863"
+  },
+  {
+   "page": 126,
+   "parzella": "2469",
+   "year": "1929",
+   "text": "1-1929"
+  },
+  {
+   "page": 126,
+   "parzella": "2478",
+   "year": "1522",
+   "text": "1522"
+  },
+  {
+   "page": 127,
+   "parzella": "2490",
+   "year": "1841",
+   "text": "Dyf. aufgehoben 1841"
+  },
+  {
+   "page": 128,
+   "parzella": "2507",
+   "year": "1805",
+   "text": "einf. Vermessung vom Jahr 1805, bezogen vom Hof Nr 1003"
+  },
+  {
+   "page": 129,
+   "parzella": "2836",
+   "year": null,
+   "text": "Umfangsvollzug vom"
+  },
+  {
+   "page": 129,
+   "parzella": "2837",
+   "year": null,
+   "text": "dctto"
+  },
+  {
+   "page": 133,
+   "parzella": "2609",
+   "year": "1831",
+   "text": "Ober feldbäckhugel 1831"
+  },
+  {
+   "page": 133,
+   "parzella": "2610",
+   "year": null,
+   "text": "dito"
+  },
+  {
+   "page": 133,
+   "parzella": "2611",
+   "year": null,
+   "text": "dette"
+  },
+  {
+   "page": 134,
+   "parzella": "2629",
+   "year": "1841",
+   "text": "Durch Kaufshuldigen 1841"
+  },
+  {
+   "page": 134,
+   "parzella": "2630",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 134,
+   "parzella": "2631",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 134,
+   "parzella": "2632",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 134,
+   "parzella": "2633",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 134,
+   "parzella": "2634",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 134,
+   "parzella": "2635",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 134,
+   "parzella": "2636",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 134,
+   "parzella": "2637",
+   "year": null,
+   "text": "Ditto"
+  },
+  {
+   "page": 135,
+   "parzella": "2625",
+   "year": "1841",
+   "text": "Grundsteuerkataster 1841"
+  },
+  {
+   "page": 135,
+   "parzella": "2627",
+   "year": "1841",
+   "text": "Grundsteuerkataster 1841"
+  },
+  {
+   "page": 135,
+   "parzella": "2629",
+   "year": "1841",
+   "text": "Grundsteuerkataster 1841"
+  },
+  {
+   "page": 136,
+   "parzella": "2663",
+   "year": null,
+   "text": "BM 110"
+  },
+  {
+   "page": 136,
+   "parzella": "2667",
+   "year": null,
+   "text": "325"
+  },
+  {
+   "page": 136,
+   "parzella": "2668",
+   "year": null,
+   "text": "DhM 57"
+  },
+  {
+   "page": 136,
+   "parzella": "2676",
+   "year": "1884",
+   "text": "Schafpfuldhupe 1884"
+  },
+  {
+   "page": 136,
+   "parzella": "2677",
+   "year": null,
+   "text": "DhM 15"
+  },
+  {
+   "page": 136,
+   "parzella": "2680",
+   "year": null,
+   "text": "BM 11"
+  },
+  {
+   "page": 137,
+   "parzella": "2681",
+   "year": "1841",
+   "text": "Dpf hinzugekommen 1841"
+  },
+  {
+   "page": 137,
+   "parzella": "2683",
+   "year": "1841",
+   "text": "Dpf hinzugekommen 1841"
+  },
+  {
+   "page": 137,
+   "parzella": "2684",
+   "year": "1841",
+   "text": "Dpf hinzugekommen 1841"
+  },
+  {
+   "page": 137,
+   "parzella": "2687",
+   "year": null,
+   "text": "dH 190"
+  },
+  {
+   "page": 137,
+   "parzella": "2688",
+   "year": "1841",
+   "text": "Dpf hinzugekommen 1841"
+  },
+  {
+   "page": 137,
+   "parzella": "2689",
+   "year": null,
+   "text": "dH 20"
+  },
+  {
+   "page": 137,
+   "parzella": "2691",
+   "year": null,
+   "text": "1018"
+  },
+  {
+   "page": 137,
+   "parzella": "2692",
+   "year": null,
+   "text": "Dpf hinzugekommen 2841"
+  },
+  {
+   "page": 137,
+   "parzella": "2698",
+   "year": null,
+   "text": "dH +15"
+  },
+  {
+   "page": 137,
+   "parzella": "2699",
+   "year": null,
+   "text": "Dpf hinzugekommen 2541"
+  },
+  {
+   "page": 137,
+   "parzella": "2700",
+   "year": null,
+   "text": "alte"
+  },
+  {
+   "page": 138,
+   "parzella": "1",
+   "year": null,
+   "text": "Zusammenstellung der Grundstücke"
+  },
+  {
+   "page": 139,
+   "parzella": "100",
+   "year": null,
+   "text": "884"
+  },
+  {
+   "page": 139,
+   "parzella": "81",
+   "year": "1860",
+   "text": "1860"
+  },
+  {
+   "page": 139,
+   "parzella": "82",
+   "year": null,
+   "text": "146"
+  },
+  {
+   "page": 139,
+   "parzella": "84",
+   "year": null,
+   "text": "851"
+  },
+  {
+   "page": 139,
+   "parzella": "85",
+   "year": null,
+   "text": "929"
+  },
+  {
+   "page": 139,
+   "parzella": "86",
+   "year": null,
+   "text": "982"
+  },
+  {
+   "page": 139,
+   "parzella": "87",
+   "year": null,
+   "text": "1056"
+  },
+  {
+   "page": 139,
+   "parzella": "88",
+   "year": "1934",
+   "text": "1934"
+  },
+  {
+   "page": 139,
+   "parzella": "89",
+   "year": null,
+   "text": "80"
+  },
+  {
+   "page": 139,
+   "parzella": "90",
+   "year": null,
+   "text": "108"
+  },
+  {
+   "page": 139,
+   "parzella": "91",
+   "year": null,
+   "text": "781"
+  },
+  {
+   "page": 139,
+   "parzella": "92",
+   "year": null,
+   "text": "366"
+  },
+  {
+   "page": 139,
+   "parzella": "93",
+   "year": null,
+   "text": "1169"
+  },
+  {
+   "page": 139,
+   "parzella": "94",
+   "year": null,
+   "text": "777"
+  },
+  {
+   "page": 139,
+   "parzella": "95",
+   "year": null,
+   "text": "1068"
+  },
+  {
+   "page": 139,
+   "parzella": "96",
+   "year": "1813",
+   "text": "1813"
+  },
+  {
+   "page": 139,
+   "parzella": "97",
+   "year": null,
+   "text": "649"
+  },
+  {
+   "page": 139,
+   "parzella": "98",
+   "year": "1866",
+   "text": "1866"
+  },
+  {
+   "page": 139,
+   "parzella": "99",
+   "year": null,
+   "text": "1046"
+  }
+ ],
+ "invariants": {
+  "I1": "izbira strani P55 replicirana: 135 strani (pass1 58 / pass2 69 / pass3→pass1 8), vrstic 2700–2800; zaporedje (page, parzella) bajtno enako P55 evidence vrsticam — PASS",
+  "I2": "segmentacija: S1 str. 5–127 (123 strani, per-Blatt Grund ≈ 1–2505), S2 str. 128–137 (10, številke 2507–2840 kot prebrano — str. 129 blok 2826–2840 ni monotoničen [~]), spremembe z anmerkung), S3 str. 138–139 (2, lastno oštevilčenje 1–100, markerja: »Zusammenstellung der Grundstücke« + ≥ 15 številskih anmerkung na str. 139); pass2/pass3 razhajanje S3 dokumentirano v PS-full-v2 — PASS",
+  "I3": "kontaminacija: S3 vrstic 50–70, povezanih 30–60; median razmerja S3 ≤ 0.5 ≪ S1 ≥ 3.3 (zgodovinski 1 QK = 3.59665 vmes); prekrivanje base S3∩S1 ≥ 15 (base 1–40 brez S1 vira — strani 3–4 niso prebrane) — lažne povezave — PASS",
+  "I4": "sanacija: matchedAfter = matchedBefore − matchedS3; median razmerja po sanaciji v [3.3, 3.9]; unikatne base ne narastejo — PASS",
+  "I5": "dvoumnost: base na več straneh 400–650, znotraj S1 ≥ 100, povezane vrstice z dvoumno base ≥ 100 — MERJENO (brez ugibanja/prerazporeditev) — PASS",
+  "I6": "praznina: sodobnih parcel [2507,2607] == 0 ∧ PS vrstic v rangu ≥ 60; sodobnih [2608,2700] v [50, 100] — PASS",
+  "I7": "determinizem — bajtno identičen izpis pri ponovnem izračunu (--check)",
+  "I8": "dokaz ⊇ runtime — kompaktne sekcije bajtno enake v obeh izpisih"
+ },
+ "statusLine": "ANALYSIS-DETERMINISTIC — topologija registra PS: S1 glavni register (str. 5–127, per-Blatt), S2 spremembni register (str. 128–137, številke 2507–2700, anmerkung dodatki 1805–1934), S3 zapadek »Zusammenstellung der Grundstücke« (str. 138–139, lastno oštevilčenje 1–100, letnica 1860, pass2/pass3 razhajanje); SANACIJA P55: 43 lažnih povezav S3 odstranjenih (median razmerja S3 0.0892 ≪ S1 3.7188); per-Blatt dvoumnost kvantificirana: 515 base na več straneh, 529 povezanih vrstic dvoumnih [~]; sodobna praznina 2507–2607 (0 parcel) dokumentirana; časovnica anmerkung: 584 vrstic, pik 1841 (83)",
+ "verdictSi": "P56 (2026-10-13): register PS NI homogen — topologija razčlenjena v štiri serije. S1 glavni register (str. 5–127, 123 strani): per-Blatt številčenje, Grund ≈ 1–2505. S2 spremembni register (str. 128–137): številke 2507–2840 kot prebrano (str. 129 blok 2826–2840 ni monotoničen [~]) z anmerkung dodatki — prvootkrito: »einf. Vermessung vom Jahr 1805« (str. 128), »hinzugekommen 1841«, »Grundsteuerkataster 1841«, »Durch Kauf 1841«; register je bil vzdrževan še desetletja po 1825 (584 označenih vrstic, letnice 1515–1934, pik 1841 s 83 vrsticami na 42 straneh — prehod na Franziszeischer Kataster). S3 zapadek »Zusammenstellung der Grundstücke« (str. 138–139): LASTNO oštevilčenje 1–100 (19 številskih anmerkung na str. 139 — premik stolpcev) — in točno te vrstice je P55 join napačno povezal: 60 vrstic, 43 povezanih, median razmerja površin 0.0892 proti 3.7188 v glavnem registru (~42× odmik) — determinističen dokaz lažnih povezav, neodvisno potrjen s P48 Blatt X analizo in pass2/pass3 razhajanjem branja. SANACIJA: povezane vrstice 1110 → 1067; unikatne parcelne številke 800 → 774 (številke 1–40: glavni register strani 3–4 NISTA v P38 izboru branj — edini vir teh številk je bil S3 zapadek; po sanaciji nepovezane). Per-Blatt dvoumnost znotraj glavnega registra KVANTIFICIRANA: 515 base številk se pojavlja na več straneh (475 znotraj S1), 512 povezanih vrstic (sanitiran join) je dvoumnih [~] — brez prerazporeditev (blatt stolpec ~50 % šumen). Sodobna praznina: 0 parcel 2507–2607 (87 PS dodatkov brez sodobnih naslednic) proti 53 base / 78 parcelam 2608–2700 — vzrok [~]. Odkritje kontekst: strani 3–4 (številke 1–40) niso v P38 izboru — številke 1–40 so v branjih zastopane LE z S3 zapadkom.",
+ "verdictEn": "P56 (2026-10-13): the PS register is NOT homogeneous — its topology resolves into four series. S1 main register (pp. 5–127, 123 pages): per-sheet numbering, Grund ≈ 1–2505. S2 changes register (pp. 128–137): numbers 2507–2840 as read (p. 129 block 2826–2840 non-monotonic [~]) with annotated additions — first documented: »einf. Vermessung vom Jahr 1805« (p. 128), »hinzugekommen 1841«, »Grundsteuerkataster 1841«, »Durch Kauf 1841«; the register was maintained for decades after 1825 (584 annotated rows, years 1515–1934, peak 1841 with 83 rows on 44 pages — the transition to the Franziszeian tax cadastre). S3 appendix »Zusammenstellung der Grundstücke« (pp. 138–139): its OWN numbering 1–100 (column-shifted numeric anmerkung on p. 139) — and exactly these rows were falsely linked by the P55 join: 60 rows, 43 linked, median area ratio 0.0892 vs 3.7188 in the main register (~42× off) — deterministic proof of false links, independently corroborated by the P48 Blatt X analysis and the pass2/pass3 reading disagreement. SANITIZATION: linked rows 1110 → 1067; unique parcel numbers 800 → 774 (številke 1–40: glavni register strani 3–4 NISTA v P38 izboru branj — edini vir teh številk je bil S3 zapadek; po sanaciji nepovezane). Per-sheet ambiguity within the main register QUANTIFIED: 515 base numbers appear on more than one page (475 within S1), 512 of the sanitized linked rows remain ambiguous [~] — no reassignments (the blatt column is ~50 % noisy). Modern void: 0 parcels numbered 2507–2607 (87 PS additions without modern successors) versus 78 parcels 2608–2700 — cause unknown [~]. Context discovery: pages 3–4 (numbers 1–40) are not among the P38 reads — numbers 1–40 are represented ONLY by the S3 appendix.",
+ "next": [
+  "4. VLM prehod na glave listov (»Nro. des Blattes«) z usmerjeno pozivo → per-Blatt ločitev dvoumnih instanc (515 base)",
+  "prebrati strani 3–4 (številke 1–40 glavnega registra) — trenutno pokrite le z S3 zapadkom",
+  "lokalizacija sekcije 102 Bauplätze v protokolu (niso v kultur branjah; morda ločen register)",
+  "vzrok sodobne praznine 2507–2607: preveriti Grundsteuerkataster 1841 (Franziszeischer Kataster) pregrupiranja",
+  "nadgradnja P55 runtime ps-parcels-geo.json v v2 z series flag (zahteva uskladitev qa-p55 pini)"
+ ]
+}

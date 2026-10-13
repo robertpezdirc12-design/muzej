@@ -3283,3 +3283,75 @@ P55 (14. 10. 2026) — GEOLOKACIJA GRUNDPARCELLEN: PS protokol 1825 ↔ sodobne 
   + sources.ts N083PS opomba P55 (Si+En) + README bullet; QA 58 → 59 (qa-p55-ps-parcels-geo:
   pini + runtime shema + NEODVISEN preracun soslednosti iz vrstic + dokaz == runtime).
 - SHEET_GEOREFS in dokazi P40–P54 nespremenjeni (lekcija P9).
+
+## P56 — issue #13: TOPOLOGIJA REGISTRA PS — serije, spremembe 1805–1934, sanacija P55 joina (deterministično; ps-parcels-geo »next«: per-Blatt ločitev) (2026-10-13)
+
+- KLJUČNO ODKRITJE — register PS NI homogen: poleg glavnega registra vsebuje še dve ločeni
+  seriji in prvo dokumentirano časovnico vzdrževanja:
+  S1 GLAVNI REGISTER (str. 5–127, 123 strani): per-Blatt številčenje, Grund 41–2500 kot
+      prebrano (številke 1–40 = strani 3–4 NISO v P38 izboru branj);
+  S2 SPREMEMBNI REGISTER (str. 128–137, 10 strani): številke 2507–2840 kot prebrano (str. 129
+      blok 2826–2840 ni monotoničen [~]); dodatki/spremembe z ANMERKUNG — prvootkrito:
+      »einf. Vermessung vom Jahr 1805, bezogen vom Hof Nr 1003« (str. 128), »Umfangsvollzug
+      vom« (129), »Durch Kauf... 1841« (134), »Grundsteuerkataster 1841« (135), »Dpf
+      hinzugekommen 1841« (137);
+  S3 ZAPEDEK »Zusammenstellung der Grundstücke« (str. 138–139, 2 strani): LASTNO oštevilčenje
+      1–100; markerja: anmerkung glava na str. 138 + 18 številskih anmerkung na str. 139
+      (premik stolpcev; ena letnica 1860); pass2/pass3 RAZHAJANJE branja ([1..40] vs [421..440];
+      [81..100] vs [417..436]) — številčno NEZANESLJIVO;
+  S4 rekapitulacija + »Abschluß der Gemeinde« (str. 140–143, izven numeričnega joina).
+- SANACIJA P55: 60 S3 vrstic je prišlo v P55 row set; 43 jih je bilo lažno povezanih na
+  sodobne parcele 1–40/81–100 (isti base kot glavni register str. 5–7). DOKAZ LAŽNOSTI
+  (determinističen, dvojen): median razmerja površin modern/QK za S3 povezane vrstice
+  0.0892 ≪ 3.7188 v S1 (~42× odmik od zgodovinskega 1 Wiener QK = 3.59665 m²) + pass2/pass3
+  razhajanje; neodvisno korelira s P48 Blatt X analizo. Sanitiran join: 1110 → 1067 vrstic,
+  800 → 774 base (izgubljenih 26: številke 1–36 — njihov edini vir je bil S3, ker strani
+  3–4 niso prebrane); median razmerja čist 3.7394. P55 runtime (ps-parcels-geo.json)
+  NESPREMENJEN (pini qa-p55) — sanacija dokumentirana in velja za prihodnje uporabe.
+- PER-BLATT DVOUMNOST KVANTIFICIRANA (P55 [~] → meritev, brez prerazporeditev): 515 base
+  številk se pojavlja na več straneh (475 znotraj S1, 20 S1↔S3, 20 znotraj S2 — npr.
+  2611–2630 na treh straneh 133/134/135); 529 povezanih vrstic dvoumnih (512 na sanitiranem
+  joinu); blatt stolpec ~50 % šumen (PS-full-v2 blattNote) → 4. VLM prehod na glave listov
+  ostaja odprt.
+- SODOBNA PRAZNINA 2507–2607: v k.o. 1544 (P47 prenos, 2117 parcel, vse ko 1544) NE obstaja
+  nobena parcela 2507–2607 — točno tam, kjer register nadaljuje prek recap vsote 2505 (87 PS
+  dodatkov brez naslednic); 2608–2700 pa obstaja (53 base / 78 parcel). Vzrok ni znan [~]
+  (možnosti: ukinjene/absorbirane parcele ali prenumeracija 1841).
+- ČASOVNICA SPREMEMB (anmerkung sweep po vseh izbranih straneh): 584 označenih vrstic,
+  letnice 1515–1934, pik 1841 (83 vrstic na 44 straneh — prehod na Franziszeischer
+  Kataster); protokol je bil vzdrževan ~stoletje; letnice 1515/1522 = [~] (navedbe starih
+  urbarijev?); per-row [~] VLM branja.
+- Skripta scripts/p56_ps_register_topology.py (deterministična, brez AI, FAIL ob padu
+  I1–I6; --check bajtno): I1 replikacija izbire P55 (135 strani, 58/69/8, 2762 vrstic) +
+  zaporedje (page, parzella) bajtno == P55 evidence · I2 segmentacija 123/10/2 strani +
+  rangi + S3 markerja + pass-razhajanje · I3 kontaminacija (60/43, mediani, prekrivanje ≥ 15)
+  · I4 sanacija (1067 = 1110 − 43; median čist v [3.3, 3.9]; base ne narastejo) · I5
+  dvoumnost (400–650 / ≥ 100 / ≥ 100, merjeno) · I6 praznina (0 sodobnih 2507–2607 ∧ ≥ 60
+  PS; 50–100 sodobnih 2608–2700) · I7 determinizem bajtno · I8 dokaz ⊇ runtime (kompaktne
+  sekcije; series = stripped projekcija). Vse PASS; --check po commitu PASS.
+- Izpisi: dokaz research/issue17/ps-register-topology.json (140 KB: pageMap 135 strani,
+  annRecords 584, kontaminacijske vrstice 43, dvoumne vrstice, pageSelection, verdicti)
+  + runtime src/data/atlas/ps-register-topology.json (16 KB: kompakt — series, seriesLabels,
+  contamination + 43 vrstic, sanitization, perBlattAmbiguity, modernVoid, timeline, invariants).
+- Integracija: API /api/atlas/ps-register-topology (force-static) + REGISTER_TOPOLOGY_P56
+  (research.ts; topology — preimenovano iz series zaradi trka z oznako vira "PS") + kartica
+  P56 v museum-research (4 serije, sanacija, dvoumnost, praznina, časovnica, pošten status)
+  + ZAPORA P55 kartice (»NADGRADNJA v P56: per-Blatt dvoumnost kvantificirana ... 43 lažnih
+  povezav saniranih«) + sources.ts N083PS opomba P56 (Si+En) + README bullet; QA 59 → 60
+  (qa-p56-register-topology: pini + NEODVISEN preracun kontaminacije iz P55 runtime vrstic
+  (43 povezanih; mediani 0.0892/3.7188; sanitirani join 1067) + časovnica vsota + kontami-
+  nacijske vrstice ⊆ P55 runtime bajtno + dokaz == runtime; vzorec qa-p51/P53 — produkcija
+  kontroly na runtime kopiji).
+- Lekcija ponovljena: /api/qa je force-static → qa.body računa ob GRADNJI (repo način: dokaz
+  prisoten — 60/60 s polno strogostjo); standalone lekcija: ubiti stari next-server (proces
+  "next-server (v...)", ne "server.js"; fuser ne zados­ta) in zagnati PORT=3010.
+- Verifikacija: --check bajtno PASS; tsc 0; ESLint 0; build (nov route prerenderiran);
+  standalone 3010: /api/qa 60/60 (qa-p56 PASS z neodvisnim preracunom + dokaz == runtime),
+  /api/atlas/ps-register-topology 200, /api/atlas 200, / 200; brskalniška E2E: Raziskave →
+  Prepisi Kurrent → kartica P56 popolna (24/24 ključnih vrednosti v DOM: serije 5–127/128–137/
+  138–139, 43 lažnih povezav (60 vrstic S3), 0.0892 ≪ 3.7188 ~42×, 1110 → 1067, 800 → 774
+  (−26, št. 1–40), 515/475/512, 0 parcel (87 PS dodatkov) vs 53 base / 78 parcelam 2608–2700,
+  584, pik 1841: 83 vrstic / 44 strani, skripta, API, pošten status, NADGRADNJA v P56 na
+  kartici P55; screenshot p56-card.png); QA števec 60/60 v UI; mobilni 390×844 overflowX 0 +
+  footer sticky (footerVisibleAtBottom true); konzola 0 napak/0 opozorjenj.
+- SHEET_GEOREFS in dokazi P40–P55 nespremenjeni (lekcija P9).

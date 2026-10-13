@@ -73,6 +73,7 @@ import {
   LEAFLET_OVERLAY_P51,
   PRESENT_GURS_P54,
   PS_GEO_P55,
+  REGISTER_TOPOLOGY_P56,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -1676,8 +1677,96 @@ export function MuseumResearch() {
                 <p className="text-[11px] leading-relaxed text-foreground/80">
                   <span className="font-semibold">{t("Pošten status: ", "Honest status: ")}</span>
                   {t(
-                    "Vztrajnost oštevilčenja je dokazana na POPULACIJSKI ravni (površine + soslednost); identifikacija POSAMEZNE parcele ostaja [~] (šumne VLM površine Kurrent + delitve/renumbering po 1825) — zato zaupanje vsake vrstice razvrščeno (STRONG = oba dokaza). Omejitev: protokol je organiziran po listih z lastnim številčenjem (P39: ista številka na različnih listih = druga parcela) — join po sami številki vleče tudi čez-listske napačne povezave; per-Blatt ločitev ostaja odprta. Izbira strani: za 8 strani izbranih na pass3 uporabljen pass1 (pass3 parsed ni na voljo, številčno nezanesljivo — odmik od PS-full-v2 dokumentiran). Strojno berljivo: research/issue17/ps-parcels-geo.json + runtime src/data/atlas/ps-parcels-geo.json (/api/atlas/ps-parcels-geo).",
-                    "The numbering persistence is proven at the POPULATION level (areas + adjacency); the identification of an INDIVIDUAL parcel remains [~] (noisy VLM Kurrent areas + post-1825 subdivisions/renumbering) — hence the per-row confidence tier (STRONG = both proofs). Limitation: the protocol is organized by sheets with their own numberings (P39: the same number on different sheets is a different parcel) — the number-only join also draws cross-sheet false links; the per-Blatt separation remains open. Page selection: pass1 used for the 8 pass3-chosen pages (pass3 has no parsed rows and is numerically unreliable — the deviation from PS-full-v2 is documented). Machine-readable: research/issue17/ps-parcels-geo.json + the runtime src/data/atlas/ps-parcels-geo.json (/api/atlas/ps-parcels-geo).",
+                    "Vztrajnost oštevilčenja je dokazana na POPULACIJSKI ravni (površine + soslednost); identifikacija POSAMEZNE parcele ostaja [~] (šumne VLM površine Kurrent + delitve/renumbering po 1825) — zato zaupanje vsake vrstice razvrščeno (STRONG = oba dokaza). Omejitev: protokol je organiziran po listih z lastnim številčenjem (P39: ista številka na različnih listih = druga parcela) — join po sami številki vleče tudi čez-listske napačne povezave; per-Blatt ločitev ostaja odprta. Izbira strani: za 8 strani izbranih na pass3 uporabljen pass1 (pass3 parsed ni na voljo, številčno nezanesljivo — odmik od PS-full-v2 dokumentiran). NADGRADNJA v P56: per-Blatt dvoumnost kvantificirana (515 base na več straneh) in zapadek str. 138–139 (lastno oštevilčenje 1–100) identificiran — 43 njegovih lažnih povezav saniranih; glej kartico P56. Strojno berljivo: research/issue17/ps-parcels-geo.json + runtime src/data/atlas/ps-parcels-geo.json (/api/atlas/ps-parcels-geo).",
+                    "The numbering persistence is proven at the POPULATION level (areas + adjacency); the identification of an INDIVIDUAL parcel remains [~] (noisy VLM Kurrent areas + post-1825 subdivisions/renumbering) — hence the per-row confidence tier (STRONG = both proofs). Limitation: the protocol is organized by sheets with their own numberings (P39: the same number on different sheets is a different parcel) — the number-only join also draws cross-sheet false links; the per-Blatt separation remains open. Page selection: pass1 used for the 8 pass3-chosen pages (pass3 has no parsed rows and is numerically unreliable — the deviation from PS-full-v2 is documented). SUPERSEDED IN P56: the per-Blatt ambiguity is quantified (515 base numbers on multiple pages) and the pp. 138–139 appendix (own numbering 1–100) identified — 43 of its false links sanitized; see the P56 card. Machine-readable: research/issue17/ps-parcels-geo.json + the runtime src/data/atlas/ps-parcels-geo.json (/api/atlas/ps-parcels-geo).",
+                  )}
+                </p>
+              </div>
+            </div>
+
+            {/* Topologija registra PS — serije, spremembe, sanacija P55 (P56, issue #13) */}
+            <div className="min-w-0 rounded-xl border bg-card p-6 shadow-sm">
+              <h3 className="flex items-center gap-2 font-display text-lg font-semibold">
+                <Landmark className="size-4 text-primary" aria-hidden="true" />
+                {t("Topologija registra PS — serije, spremembe 1805–1934, sanacija P55 (P56)", "PS register topology — series, changes 1805–1934, P55 sanitization (P56)")}
+                <StatusBadge status={REGISTER_TOPOLOGY_P56.status} />
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                {t(
+                  "Register PS NI homogen: poleg glavnega registra (per-Blatt številčenje) vsebuje spremembni register (dodatki z anmerkung — »Vermessung 1805«, »Grundsteuerkataster 1841«) in zapadek »Zusammenstellung der Grundstücke« z lastnim oštevilčenjem 1–100 — ki ga je P55 join napačno povezal s sodobnimi parcelami. P56 kontaminacijo kvantificira, sanira in meritve neodvisno ponovi.",
+                  "The PS register is NOT homogeneous: besides the main register (per-sheet numbering) it contains a changes register (annotated additions — »Vermessung 1805«, »Grundsteuerkataster 1841«) and the appendix »Zusammenstellung der Grundstücke« with its own numbering 1–100 — which the P55 join falsely linked to modern parcels. P56 quantifies and sanitizes the contamination with independent measurements.",
+                )}
+              </p>
+
+              {/* P56: serije */}
+              <div className="mt-4 rounded-lg border bg-secondary/30 p-3">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-sm font-semibold">
+                    {t("P56 — štiri serije registra", "P56 — four register series")}
+                  </span>
+                  <span className="font-mono text-[11px] text-muted-foreground">scripts/p56_ps_register_topology.py</span>
+                </div>
+                <div className="mt-2 grid gap-1.5 font-mono text-[11px] sm:grid-cols-2">
+                  <span className="rounded bg-emerald-100 px-1.5 py-0.5 dark:bg-emerald-950/40">
+                    S1 {t("glavni register", "main register")} {REGISTER_TOPOLOGY_P56.topology.S1.pages} ({REGISTER_TOPOLOGY_P56.topology.S1.pageCount} {t("str.", "pp.")}) · {REGISTER_TOPOLOGY_P56.topology.S1.numMin}–{REGISTER_TOPOLOGY_P56.topology.S1.numMax}
+                  </span>
+                  <span className="rounded bg-amber-100 px-1.5 py-0.5 dark:bg-amber-950/40">
+                    S2 {t("spremembni register", "changes register")} {REGISTER_TOPOLOGY_P56.topology.S2.pages} ({REGISTER_TOPOLOGY_P56.topology.S2.pageCount} {t("str.", "pp.")}) · {REGISTER_TOPOLOGY_P56.topology.S2.numMin}–{REGISTER_TOPOLOGY_P56.topology.S2.numMax}
+                  </span>
+                  <span className="rounded bg-red-100 px-1.5 py-0.5 dark:bg-red-950/40">
+                    S3 {t("zapadek", "appendix")} {REGISTER_TOPOLOGY_P56.topology.S3.pages} · {REGISTER_TOPOLOGY_P56.topology.S3.numMin}–{REGISTER_TOPOLOGY_P56.topology.S3.numMax} ({t("lastno oštevilčenje", "own numbering")})
+                  </span>
+                  <span className="rounded bg-stone-100 px-1.5 py-0.5 dark:bg-stone-800">
+                    S4 {t("rekapitulacija + Abschluß (str. 140–143)", "recapitulation + Abschluß (pp. 140–143)")}
+                  </span>
+                </div>
+              </div>
+
+              {/* P56: sanacija */}
+              <div className="mt-3 grid gap-2 sm:grid-cols-2">
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="text-xs font-semibold">{t("Sanacija P55 — lažne povezave S3", "P55 sanitization — false S3 links")}</p>
+                  <p className="mt-1 font-mono text-[11px] leading-relaxed text-muted-foreground">
+                    {REGISTER_TOPOLOGY_P56.contamination.s3RowsMatched} {t("lažnih povezav", "false links")} ({REGISTER_TOPOLOGY_P56.contamination.s3RowsTotal} {t("vrstic S3", "S3 rows")}) · median modern/QK {REGISTER_TOPOLOGY_P56.contamination.ratioMedianS3} ≪ {REGISTER_TOPOLOGY_P56.contamination.ratioMedianS1} (S1) · ~{Math.round(REGISTER_TOPOLOGY_P56.contamination.ratioMedianS1 / REGISTER_TOPOLOGY_P56.contamination.ratioMedianS3)}× {t("odmik od 1 QK", "off 1 QK")} {REGISTER_TOPOLOGY_P56.contamination.historicalQkM2} m² · pass2 [1..40] vs pass3 [421..440]
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="text-xs font-semibold">{t("Sanitiran join", "Sanitized join")}</p>
+                  <p className="mt-1 font-mono text-[11px] leading-relaxed text-muted-foreground">
+                    {REGISTER_TOPOLOGY_P56.sanitization.matchedRowsBefore} → {REGISTER_TOPOLOGY_P56.sanitization.matchedRowsAfter} {t("vrstic", "rows")} · {t("base", "bases")} {REGISTER_TOPOLOGY_P56.sanitization.uniqueBasesBefore} → {REGISTER_TOPOLOGY_P56.sanitization.uniqueBasesAfter} (−{REGISTER_TOPOLOGY_P56.sanitization.lostBasesCount}: št. 1–40, {t("str. 3–4 niso prebrane", "pp. 3–4 not read")}) · median {REGISTER_TOPOLOGY_P56.sanitization.ratioMedianAfter}
+                  </p>
+                </div>
+              </div>
+
+              {/* P56: dvoumnost + praznina + časovnica */}
+              <div className="mt-3 grid gap-2 sm:grid-cols-3">
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="text-xs font-semibold">{t("Per-Blatt dvoumnost (merjeno)", "Per-sheet ambiguity (measured)")}</p>
+                  <p className="mt-1 font-mono text-[11px] leading-relaxed text-muted-foreground">
+                    {REGISTER_TOPOLOGY_P56.perBlattAmbiguity.basesOnMultiplePages} {t("base na več straneh", "bases on multiple pages")} ({REGISTER_TOPOLOGY_P56.perBlattAmbiguity.withinS1} {t("znotraj S1", "within S1")}) · {REGISTER_TOPOLOGY_P56.perBlattAmbiguity.cleanRowsWithAmbiguousBase} {t("vrstic dvoumnih [~]", "ambiguous rows [~]")} · {t("brez prerazporeditev", "no reassignments")}
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="text-xs font-semibold">{t("Sodobna praznina 2507–2607", "Modern void 2507–2607")}</p>
+                  <p className="mt-1 font-mono text-[11px] leading-relaxed text-muted-foreground">
+                    0 {t("parcel", "parcels")} ({REGISTER_TOPOLOGY_P56.modernVoid.psRows} PS {t("dodatkov", "additions")}) {t("proti", "vs")} {REGISTER_TOPOLOGY_P56.modernVoid.contModernCount} base / {REGISTER_TOPOLOGY_P56.modernVoid.contParcelsCount} {t("parcelam", "parcels")} {REGISTER_TOPOLOGY_P56.modernVoid.contRange.join("–")} · {t("vzrok [~]", "cause [~]")}
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="text-xs font-semibold">{t("Časovnica sprememb", "Timeline of changes")}</p>
+                  <p className="mt-1 font-mono text-[11px] leading-relaxed text-muted-foreground">
+                    {REGISTER_TOPOLOGY_P56.timeline.annotatedRows} {t("označenih vrstic", "annotated rows")} · {REGISTER_TOPOLOGY_P56.timeline.earliest}–{REGISTER_TOPOLOGY_P56.timeline.latest} · {t("pik", "peak")} {REGISTER_TOPOLOGY_P56.timeline.topYear}: {REGISTER_TOPOLOGY_P56.timeline.topYearRows} {t("vrstic", "rows")} / {REGISTER_TOPOLOGY_P56.timeline.pages1841Count} {t("strani", "pages")} (Grundsteuerkataster)
+                  </p>
+                </div>
+              </div>
+
+              {/* P56: poštenost */}
+              <div className="mt-3 rounded-lg border border-emerald-200 bg-emerald-50/60 p-3 dark:border-emerald-900/50 dark:bg-emerald-950/30">
+                <p className="text-[11px] leading-relaxed text-foreground/80">
+                  <span className="font-semibold">{t("Pošten status: ", "Honest status: ")}</span>
+                  {t(
+                    "Vse vrednosti so MERITVE nad committed artefakti (P55 evidence, ps-raw branja, PS-full-v2 adjudikacije, P47 parcele) — nič ni ugibano in nič ni prerazporejeno: S3 zapadek je odstranjen iz joina z dvema dokazoma (pass-razhajanje + površine ~42× off), per-Blatt instanci pa ostajata dvoumni [~], ker je blatt stolpec ~50 % šumen (4. VLM prehod na glave listov ostaja odprt). P55 runtime (ps-parcels-geo.json) je NESPREMENJEN — sanacija je dokumentirana in velja za prihodnje uporabe. Letnice anmerkung so per-row [~] VLM branja (1515/1522 najverjetneje navedbe starih urbarijev). Strojno berljivo: research/issue17/ps-register-topology.json + runtime src/data/atlas/ps-register-topology.json (/api/atlas/ps-register-topology).",
+                    "All values are MEASUREMENTS over committed artifacts (P55 evidence, ps-raw reads, PS-full-v2 adjudications, P47 parcels) — nothing guessed, nothing reassigned: the S3 appendix is removed from the join with two proofs (pass disagreement + areas ~42× off), while per-sheet instances remain ambiguous [~] because the blatt column is ~50 % noisy (a 4th VLM pass on sheet headers remains open). The P55 runtime (ps-parcels-geo.json) is UNCHANGED — the sanitization is documented and applies to future uses. The anmerkung years are per-row [~] VLM readings (1515/1522 most likely references to old urbaria). Machine-readable: research/issue17/ps-register-topology.json + the runtime src/data/atlas/ps-register-topology.json (/api/atlas/ps-register-topology).",
                   )}
                 </p>
               </div>
