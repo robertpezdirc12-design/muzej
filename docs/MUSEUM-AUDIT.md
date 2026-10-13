@@ -1753,3 +1753,57 @@ I9 kanonski = runtime, I10 varnost (premik ≤ 50 m, merilo 0.70–0.85).
 usklajena (5+0), **qa-p50** nova (navzkrižna kontrola SHEET_GEOREFS ↔ konstanta
 ↔ JSON patch, 5 plasti, 7/7 napisov, identičnost izpisov prek readFile) —
 QA 50 → **51/51**.
+
+## 31. P51 — Leaflet overlay A03–A05: aktivacija slikovnih prekrivk
+
+**Datum:** 2026-10-14 · **Skript:** `scripts/p51_leaflet_overlay.py`
+(determinističen, brez AI ob delovanju, FAIL ob padu invariant I1–I8;
+`--check` = determinizem) · **Dokaz:**
+`research/issue17/leaflet-overlay.json` (identična runtime kopija
+`src/data/atlas/leaflet-overlay.json` — en sam vir resnice, ki ga uvažata
+UI in QA).
+
+**Naloga (iz P50 »ostaja odprto«):** listi A03/A04/A05 kot slikovne prekrivke
+na atlasnem zemljevidu — P50 je izpisal `boundsImageNWSE` (oglišča skena prek
+P46 afine) »za prihodnji Leaflet overlay«; P51 ga aktivira.
+
+**Neodvisnost ovoja:** ovoj skena je NEODVISNO preračunan iz P46 afine
+(NW = affine(0,0), SE = affine(W,H); pixels iz model.ts prek regexa) —
+ujemanje s P50 `boundsImageNWSE` ≤ 5e-6° (ni ročno prepisanih koordinat);
+ovoj ⊇ neatline meje SHEET_GEOREFS 3/3; meje znotraj atlasnega okvirja
+(bbox 5 listov ± 0.01°).
+
+**Merjena subtilnost (pošteno dokumentirana, ne skrita):** Leaflet ne podpira
+rotiranih prekrivk — `L.imageOverlay` sprejme le osno poravnan okvir (dva
+kota). Prekrivka je zato razpete v osno poravnan okvir pravega štirikotnika
+skena: SZ/JV vogala sta točna (affine(0,0) / affine(W,H)), preostala dva sta
+odmaknjena za lng |b|·H oz. lat |d|·W — izmerjeno: **A03 19.3 m, A04 20.0 m,
+A05 20.0 m** (dva vogala točna). Odmik je del ±40/50 m negotovosti lista in
+je zapisan per sheet (`overlayDeviationM`) v izpisu, kartici in opombi pod
+zemljevidom. Skew (naklon y-osi od navpičnice) = atan2(|d|, |e|):
+**0.5475 / 0.568 / 0.5708°** ≤ 1.0° → osna postavitev je prikaz, ne meritev.
+
+**Slike:** PIL dims == model.ts pixels (2645×2154 / 2645×2158 / 2634×2165) +
+sha256(64) per sheet.
+
+**UI:** `atlas-canvas.tsx` — `AtlasLayers` razširjen z `a03/a04/a05`;
+`L.imageOverlay` z ovojem iz runtime JSON import (en sam vir resnice) +
+črtkani neatline pravokotniki #8a6d3b (dash "6 5") s sticky tooltip statusom
+±40/50 m; skupna prosojnost z A01/A02 (okvir ostaja viden). `museum-atlas.tsx`
+— stikala »List A03 (±50 m) / A04 (±40 m) / A05 (±40 m)«, **privzeto
+IZKLOPLJENA** — začetni pogled nespremenjen; opomba pod zemljevidom navaja
+aktivacijo in merjene odmike.
+
+**Integracija:** API `GET /api/atlas/leaflet-overlay` (force-static); TS
+`LEAFLET_OVERLAY_P51` (research.ts, programsko generiran iz JSON-a) + kartica
+»Georeferenca N83 — Leaflet overlay A03–A05 (P51)« v Raziskavah (per-sheet
+ovoji + odmiki + pošten status); opombe P51 v virih N083A03/A04/A05 (Si+En);
+QA **51 → 52** (`qa-p51-leaflet-overlay`: UI-vod prek vbrizganega readFile,
+identičnost obeh izpisov, navzkrižna kontrola TS ↔ JSON — ovoji 5e-6, sha256,
+odmiki, skew — in navzkrižje s SHEET_GEOREFS). **SHEET_GEOREFS in dokazi
+P40–P50 nespremenjeni.**
+
+**Invarianti I1–I8: PASS** — I1 ovoj == P50 boundsImageNWSE (≤ 5e-6°), I2
+ovoj ⊇ neatline 3/3, I3 skew ≤ 1.0°, I4 PIL dims + sha256, I5 odmiki
+19.3/20.0/20.0 m, I6 atlasni okvir, I7 determinizem (--check bajtno), I8
+kanonski = runtime.

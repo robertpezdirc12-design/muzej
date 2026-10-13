@@ -35,6 +35,7 @@ import {
   BUILDINGS_OVERLAY_P48,
   FUCUKOVCI_P49,
   GEOREF_CLOSURE_P50,
+  LEAFLET_OVERLAY_P51,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -2634,6 +2635,126 @@ export function runQA(opts: QAOptions = {}): QAReport {
     p50Errors.length === 0
       ? `A03 ±50 m (2/4 strani, parcele 9.8 m) · A04 ±40 m (4/4, parcele 5.6 m) · A05 ±40 m (4/4, parcele 9.3 m, 26 stavb) · premiki 17.4/16.9/18.0 m · merilo 0.7746 · napisi 7/7 · ${p50FileDetail}`
       : p50Errors.join("; "),
+  );
+
+  /* ── P51: LEAFLET OVERLAY A03–A05 — aktivacija slikovnih prekrivk ————————— */
+  const p51Errors: string[] = [];
+  const p51 = LEAFLET_OVERLAY_P51;
+  // 1) status + UI nastavitve (privzeto izklopljeno — začetni pogled nespremenjen)
+  if (!p51.statusLine.includes("UI-ACTIVATED-DETERMINISTIC")) p51Errors.push("statusLine ni UI-ACTIVATED-DETERMINISTIC");
+  if (!p51.rotationSubtlety.includes("ne podpira rotiranih prekrivk")) p51Errors.push("rotationSubtlety brez merjene subtilnosti Leaflet rotacij");
+  if (p51.ui.togglesDefault !== false) p51Errors.push("stikala niso privzeto IZKLOPLJENA");
+  if (p51.ui.toggles.length !== 3) p51Errors.push("ni 3 stikal");
+  if (p51.ui.sharedOpacity !== true) p51Errors.push("skupna prosojnost ni aktivirana");
+  // 2) pinane vrednosti (skew + odmiki — vzorci iz izgubljene seje, preverjeni s preizračunom)
+  const p51SkewPin: Record<string, number> = { A03: 0.5475, A04: 0.568, A05: 0.5708 };
+  const p51DevPin: Record<string, number> = { A03: 19.3, A04: 20.0, A05: 20.0 };
+  for (const k of ["A03", "A04", "A05"] as const) {
+    const s = p51.sheets[k];
+    if (s.skewDeg !== p51SkewPin[k]) p51Errors.push(`${k}: skew ${s.skewDeg}° ≠ pinana ${p51SkewPin[k]}°`);
+    if (s.overlayDeviationM.max !== p51DevPin[k]) p51Errors.push(`${k}: odmik ${s.overlayDeviationM.max} m ≠ pinan ${p51DevPin[k]} m`);
+    if (s.overlayDeviationM.max > 20.5) p51Errors.push(`${k}: odmik > 20.5 m`);
+    if (s.sha256.length !== 64) p51Errors.push(`${k}: sha256 ni 64 znakov`);
+  }
+  // 3) navzkrižje s SHEET_GEOREFS: status + ovoj ⊇ neatline meje (KLJUČNA regresijska zavarovala)
+  for (const [key, sid] of [["A03", "georef-a03"], ["A04", "georef-a04"], ["A05", "georef-a05"]] as const) {
+    const g = SHEET_GEOREFS.find((x) => x.id === sid);
+    const s = p51.sheets[key];
+    if (!g || !s) {
+      p51Errors.push(`P51: manjka ${key}/${sid}`);
+      continue;
+    }
+    if (g.status !== s.status) p51Errors.push(`${key}: status ${g.status} ≠ konstanta ${s.status}`);
+    if (Math.abs(g.bounds[0][0] - s.neatlineFromHull[0][0]) > 5e-5 || Math.abs(g.bounds[0][1] - s.neatlineFromHull[0][1]) > 5e-5)
+      p51Errors.push(`${key}: neatline SZ ${g.bounds[0]} ≠ konstanta ${s.neatlineFromHull[0]}`);
+    if (Math.abs(g.bounds[1][0] - s.neatlineFromHull[1][0]) > 5e-5 || Math.abs(g.bounds[1][1] - s.neatlineFromHull[1][1]) > 5e-5)
+      p51Errors.push(`${key}: neatline JV ${g.bounds[1]} ≠ konstanta ${s.neatlineFromHull[1]}`);
+    // ovoj ⊇ neatline (lat in lng)
+    if (!(s.hullNWSE[0][0] >= s.neatlineFromHull[0][0] && s.hullNWSE[1][0] <= s.neatlineFromHull[1][0]))
+      p51Errors.push(`${key}: lat razpon ovoja ne obsega neatline`);
+    if (!(s.hullNWSE[0][1] <= s.neatlineFromHull[0][1] && s.hullNWSE[1][1] >= s.neatlineFromHull[1][1]))
+      p51Errors.push(`${key}: lng razpon ovoja ne obsega neatline`);
+  }
+  // 4) viri: opombe nosijo P51
+  for (const sid of ["src-a03", "src-a04", "src-a05"]) {
+    const s = ATLAS_SOURCES.find((x) => x.id === sid);
+    if (!s || !s.noteSi?.includes("LEAFLET OVERLAY")) p51Errors.push(`${sid}: opomba brez P51 LEAFLET OVERLAY`);
+  }
+  // 5) dokazna datoteka + UI-vod (strežniški klic; vzorec qa-p37..p50)
+  let p51FileDetail = "dokazni in UI datoteki nista preverjeni (readFile ni na voljo) — celovita kontrola teče na /api/qa";
+  if (opts.readFile) {
+    const rawEv = opts.readFile("research/issue17/leaflet-overlay.json");
+    const rawRt = opts.readFile("src/data/atlas/leaflet-overlay.json");
+    if (rawEv === null) p51Errors.push("research/issue17/leaflet-overlay.json ni berljiv (izpis scripts/p51_leaflet_overlay.py)");
+    if (rawRt === null) p51Errors.push("src/data/atlas/leaflet-overlay.json ni berljiv (runtime kopija)");
+    if (rawEv !== null && rawRt !== null && rawEv !== rawRt)
+      p51Errors.push("dokazni in runtime izpis leaflet-overlay.json nista identična (skript mora izpisati oba enako)");
+    if (rawEv !== null) {
+      try {
+        const j = JSON.parse(rawEv) as {
+          ui: { togglesDefault: boolean; toggles: string[] };
+          sheets: Record<string, {
+            pixels: { width: number; height: number };
+            sha256: string;
+            hullNWSE: [[number, number], [number, number]];
+            skewDeg: number;
+            overlayDeviationM: { max: number };
+            status: string;
+          }>;
+          invariants: Record<string, string>;
+        };
+        if (Object.keys(j.sheets).length !== 3) p51Errors.push("JSON: 3 listi ni pinano");
+        if (j.ui.togglesDefault !== false) p51Errors.push("JSON: stikala niso privzeto izklopljena");
+        if (!Object.values(j.invariants).every((v) => v.includes("PASS") || v.includes("bajtno")))
+          p51Errors.push("JSON invarianti niso vsi PASS");
+        // navzkrižna kontrola TS konstanta ↔ JSON (ovoji 5e-6, sha256, odmiki, skew)
+        for (const k of ["A03", "A04", "A05"] as const) {
+          const jt = j.sheets[k];
+          const ts = p51.sheets[k];
+          if (!jt || !ts) {
+            p51Errors.push(`navzkrižje TS↔JSON: manjka ${k}`);
+            continue;
+          }
+          if (Math.abs(jt.hullNWSE[0][0] - ts.hullNWSE[0][0]) > 5e-6 || Math.abs(jt.hullNWSE[0][1] - ts.hullNWSE[0][1]) > 5e-6)
+            p51Errors.push(`${k}: ovoj SZ ≠ konstanta (5e-6)`);
+          if (Math.abs(jt.hullNWSE[1][0] - ts.hullNWSE[1][0]) > 5e-6 || Math.abs(jt.hullNWSE[1][1] - ts.hullNWSE[1][1]) > 5e-6)
+            p51Errors.push(`${k}: ovoj JV ≠ konstanta (5e-6)`);
+          if (jt.sha256 !== ts.sha256) p51Errors.push(`${k}: sha256 ≠ konstanta`);
+          if (jt.skewDeg !== ts.skewDeg) p51Errors.push(`${k}: skew ≠ konstanta`);
+          if (jt.overlayDeviationM.max !== ts.overlayDeviationM.max) p51Errors.push(`${k}: odmik ≠ konstanta`);
+          if (jt.pixels.width !== ts.pixels.width || jt.pixels.height !== ts.pixels.height) p51Errors.push(`${k}: pixels ≠ konstanta`);
+        }
+        p51FileDetail = `dokazni in runtime izpis preverjeni in identični (3 listi, ovoji == konstanta 5e-6, sha256, skew 0.5475/0.568/0.5708, odmiki 19.3/20.0/20.0, invarianti I1–I8 PASS)`;
+      } catch {
+        p51Errors.push("research/issue17/leaflet-overlay.json ni veljaven JSON");
+      }
+    }
+    // UI-vod: canvas uvaža runtime JSON (en sam vir resnice) + stikala z privzetimi vrednostmi
+    const canvas = opts.readFile("src/components/museum/atlas-canvas.tsx");
+    const atlas = opts.readFile("src/components/museum/museum-atlas.tsx");
+    if (canvas === null) p51Errors.push("src/components/museum/atlas-canvas.tsx ni berljiv (UI-vod)");
+    if (atlas === null) p51Errors.push("src/components/museum/museum-atlas.tsx ni berljiv (UI-vod)");
+    if (canvas !== null) {
+      if (!canvas.includes("@/data/atlas/leaflet-overlay.json")) p51Errors.push("canvas ne uvaža runtime leaflet-overlay.json (en sam vir resnice)");
+      if (!canvas.includes("L.imageOverlay")) p51Errors.push("canvas ne uporablja L.imageOverlay");
+      if (!canvas.includes('dashArray: "6 5"') || !canvas.includes("#8a6d3b")) p51Errors.push("canvas: črtkani neatline okvirji #8a6d3b dash 6 5 niso pinani");
+      if (!canvas.includes("sticky: true")) p51Errors.push("canvas: sticky tooltip neatline okvirjev ni pinan");
+    }
+    if (atlas !== null) {
+      for (const [k, lab] of [["a03", "List A03 (±50 m)"], ["a04", "List A04 (±40 m)"], ["a05", "List A05 (±40 m)"]] as const) {
+        if (!atlas.includes(`"${k}", t("${lab}"`)) p51Errors.push(`museum-atlas: stikalo »${lab}« ni pinano`);
+        if (!atlas.includes(`${k}: false`)) p51Errors.push(`museum-atlas: ${k} ni privzeto izklopljen`);
+      }
+    }
+  }
+  push(
+    "qa-p51-leaflet-overlay",
+    "P51: LEAFLET OVERLAY A03–A05 — aktivacija slikovnih prekrivk (issue #14/§3): ovoj skena NEODVISNO preračunan iz P46 afine (NW = affine(0,0), SE = affine(W,H); pixels iz model.ts prek regexa) == P50 boundsImageNWSE ≤ 5e-6° — ni ročno prepisanih koordinat; MERJENA SUBTELNOST pošteno dokumentirana: Leaflet ne podpira rotiranih prekrivk — slika je razpete v osno poravnan okvir; odmik vogalov izmerjen iz členov afine (lng |b|·H, lat |d|·W): A03 19.3 m, A04 20.0 m, A05 20.0 m (dva vogala točna) — del ±40/50 m negotovosti lista; skew 0.5475/0.568/0.5708° ≤ 1.0°; slike preverjene (PIL dims == model.ts + sha256); UI: stikala privzeto IZKLOPLJENA, črtkani neatline okvirji s statusom, skupna prosojnost; SHEET_GEOREFS in dokazi P40–P50 nespremenjeni; status UI-ACTIVATED-DETERMINISTIC",
+    "P51: LEAFLET OVERLAY A03–A05 — activation of the image overlays (issue #14/§3): the scan envelope INDEPENDENTLY recomputed from the P46 affine (NW = affine(0,0), SE = affine(W,H); pixels from model.ts via regex) == P50 boundsImageNWSE ≤ 5e-6° — no hand-copied coordinates; the MEASURED SUBTLETY honestly documented: Leaflet does not support rotated overlays — the image is stretched into an axis-aligned frame; corner deviation measured from the affine terms (lng |b|·H, lat |d|·W): A03 19.3 m, A04 20.0 m, A05 20.0 m (two corners exact) — part of the sheet's ±40/50 m uncertainty; skew 0.5475/0.568/0.5708° ≤ 1.0°; images verified (PIL dims == model.ts + sha256); UI: toggles default OFF, dashed neatline frames with the status, shared opacity; SHEET_GEOREFS and the P40–P50 evidence unchanged; status UI-ACTIVATED-DETERMINISTIC",
+    p51Errors.length === 0,
+    p51Errors.length === 0
+      ? `A03 ±50 m (skew 0.5475°, odmik 19.3 m) · A04 ±40 m (0.568°, 20.0 m) · A05 ±40 m (0.5708°, 20.0 m) · ovoji == P50 5e-6° · stikala privzeto izklopljena · ${p51FileDetail}`
+      : p51Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;

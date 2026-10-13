@@ -68,6 +68,7 @@ import {
   BUILDINGS_OVERLAY_P48,
   FUCUKOVCI_P49,
   GEOREF_CLOSURE_P50,
+  LEAFLET_OVERLAY_P51,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -1443,6 +1444,77 @@ export function MuseumResearch() {
                   {t(
                     "Aktivacija sledi dogovorjenemu pravilu »če je dokaz, aktiviraj«: pogoj iz P46/P47 (človeška potrditev črt) je izpolnjen s tremi post-P46 neodvisnimi validacijami (parcele, stavbe, sidro). Vizualni pregled izrezov s strani lastnika ostaja priporočen [~]; nesoglasje → povratni commit (premik mej je le 17–18 m). Meje = neatline (celica), ne ovoj skena — robovi skena so v izpisu (boundsImageNWSE). Merilo ima ~1 % projekcijsko subtelnost (TM bbox vs geodetski rob) — vpliva le na ocene velikosti, ne na lege. A01/A02 (GEOTRUTH) nespremenjena. Strojno berljivo: /api/atlas/georef-closure.",
                     "The activation follows the agreed rule »if there is evidence, activate«: the P46/P47 condition (human confirmation of the lines) is fulfilled by three post-P46 independent validations (parcels, buildings, anchor). The owner's visual review of the crops remains recommended [~]; disagreement → a revert commit (the bounds shift is only 17–18 m). Bounds = the neatline (cell), not the scan envelope — scan corners are in the evidence (boundsImageNWSE). The scale carries ~1 % projection subtlety (TM bbox vs geodesic edge) — it affects size estimates only, not positions. A01/A02 (GEOTRUTH) unchanged. Machine-readable: /api/atlas/georef-closure.",
+                  )}
+                </p>
+              </div>
+            </div>
+
+            {/* Georeferenca N83 — Leaflet overlay A03–A05 (P51, issue #14) */}
+            <div className="min-w-0 rounded-xl border bg-card p-6 shadow-sm">
+              <h3 className="flex items-center gap-2 font-display text-lg font-semibold">
+                <Crosshair className="size-4 text-primary" aria-hidden="true" />
+                {t("Georeferenca N83 — Leaflet overlay A03–A05 (P51)", "N83 georeference — Leaflet overlay A03–A05 (P51)")}
+                <StatusBadge status={LEAFLET_OVERLAY_P51.status} />
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                {t(
+                  "P51 aktivira P50 boundsImageNWSE v atlasnem UI: listi A03/A04/A05 kot slikovne prekrivke (privzeto izklopljene, skupna prosojnost, ob vsaki črtkani neatline okvir s statusom ±40/50 m). Ovoj skena je NEODVISNO preračunan iz P46 afine — ni ročno prepisanih koordinat. MERJENA SUBTELNOST: Leaflet ne podpira rotiranih prekrivk — slika je razpete v osno poravnan okvir; odmik vogalov ≤ 20 m, dva vogala sta točna.",
+                  "P51 activates the P50 boundsImageNWSE in the atlas UI: sheets A03/A04/A05 as image overlays (default off, shared opacity, each with a dashed neatline frame showing the ±40/50 m status). The scan envelope is INDEPENDENTLY recomputed from the P46 affine — no hand-copied coordinates. MEASURED SUBTLETY: Leaflet does not support rotated overlays — the image is stretched into an axis-aligned frame; corner deviation ≤ 20 m, two corners exact.",
+                )}
+              </p>
+
+              {/* P51: per-sheet ovoji + odmiki */}
+              <div className="mt-4 rounded-lg border bg-secondary/30 p-3">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-sm font-semibold">
+                    {t("P51 — ovoji skena (L.imageOverlay) in merjeni odmiki", "P51 — scan envelopes (L.imageOverlay) and measured deviations")}
+                  </span>
+                  <span className="font-mono text-[11px] text-muted-foreground">scripts/p51_leaflet_overlay.py</span>
+                </div>
+                <div className="mt-2 space-y-1">
+                  {(["A03", "A04", "A05"] as const).map((k) => {
+                    const s = LEAFLET_OVERLAY_P51.sheets[k];
+                    return (
+                      <div key={k} className="rounded border bg-background px-2 py-1.5">
+                        <div className="flex flex-wrap items-center gap-1 font-mono text-[9px]">
+                          <span className="font-semibold">{k} · {s.cell} · {s.pixels.width}×{s.pixels.height}</span>
+                          <span className="rounded bg-emerald-100 px-1.5 py-0.5 dark:bg-emerald-950/40">{s.status} ±{s.uncertaintyM} m</span>
+                          <span className="rounded border px-1.5 py-0.5">skew {s.skewDeg}°</span>
+                          <span className="rounded border px-1.5 py-0.5">odmik ≤ {s.overlayDeviationM.max} m (dva vogala točna)</span>
+                        </div>
+                        <div className="mt-1 font-mono text-[9px] text-muted-foreground/80">
+                          {s.hullNWSE[0].join(", ")} → {s.hullNWSE[1].join(", ")} · {s.imageUrl} · sha256 {s.sha256.slice(0, 12)}…
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* P51: UI */}
+              <div className="mt-3 rounded-lg border bg-secondary/30 p-3">
+                <span className="text-sm font-semibold">
+                  {t("P51 — aktivacija v UI", "P51 — UI activation")}
+                </span>
+                <div className="mt-2 space-y-1">
+                  {LEAFLET_OVERLAY_P51.ui.toggles.map((tg) => (
+                    <p key={tg} className="rounded border bg-background px-2 py-1 font-mono text-[10px] leading-snug text-muted-foreground/90">
+                      stikalo »{tg}« — privzeto IZKLOPLJENO
+                    </p>
+                  ))}
+                  <p className="rounded border bg-background px-2 py-1 font-mono text-[10px] leading-snug text-muted-foreground/90">
+                    {LEAFLET_OVERLAY_P51.ui.neatlineFrames} · skupna prosojnost z A01/A02
+                  </p>
+                </div>
+              </div>
+
+              {/* P51: poštenost */}
+              <div className="mt-3 rounded-lg border border-emerald-200 bg-emerald-50/60 p-3 dark:border-emerald-900/50 dark:bg-emerald-950/30">
+                <p className="text-[11px] leading-relaxed text-foreground/80">
+                  <span className="font-semibold">{t("Pošten status: ", "Honest status: ")}</span>
+                  {t(
+                    "Ovoj je preračunan iz P46 afine == P50 boundsImageNWSE (≤ 5e-6°) — en sam vir resnice (runtime JSON, ki ga uvažata UI in QA). MERJENA SUBTELNOST je poštno dokumentirana: Leaflet ne podpira rotiranih prekrivk — slika je razpete v osno poravnan okvir pravega štirikotnika; odmik vogalov izmerjen iz členov afine (lng |b|·H, lat |d|·W): A03 19.3 m, A04 20.0 m, A05 20.0 m (dva vogala točna) — del ±40/50 m negotovosti lista. Skew ≤ 0.571° → osna postavitev je prikaz, ne meritev. Prekrivke so privzeto izklopljene — začetni pogled nespremenjen. Vizualni pregled s strani lastnika priporočen [~]. SHEET_GEOREFS in dokazi P40–P50 nespremenjeni. Strojno berljivo: /api/atlas/leaflet-overlay.",
+                    "The envelope is recomputed from the P46 affine == P50 boundsImageNWSE (≤ 5e-6°) — a single source of truth (the runtime JSON imported by both UI and QA). The MEASURED SUBTLETY is honestly documented: Leaflet does not support rotated overlays — the image is stretched into an axis-aligned frame of the true quadrilateral; corner deviation measured from the affine terms (lng |b|·H, lat |d|·W): A03 19.3 m, A04 20.0 m, A05 20.0 m (two corners exact) — part of the sheet's ±40/50 m uncertainty. Skew ≤ 0.571° → the axis-aligned placement is a display, not a measurement. Overlays are default OFF — the initial view is unchanged. The owner's visual review recommended [~]. SHEET_GEOREFS and the P40–P50 evidence unchanged. Machine-readable: /api/atlas/leaflet-overlay.",
                   )}
                 </p>
               </div>

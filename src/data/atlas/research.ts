@@ -3481,3 +3481,68 @@ export const GEOREF_CLOSURE_P50: {
     "povezava 26 dokazanih mest A05 z domačijami PT (človeška potrditev števil na karti)",
   ],
 };
+
+// Programsko generirano iz research/issue17/leaflet-overlay.json (scripts/p51_leaflet_overlay.py).
+
+export const LEAFLET_OVERLAY_P51: {
+  series: "GEOREF";
+  source: string;
+  status: ResearchStatus;
+  generatedBy: string;
+  rotationSubtlety: string;
+  sheets: Record<"A03" | "A04" | "A05", {
+    cell: string;
+    imageUrl: string;
+    pixels: { width: number; height: number };
+    sha256: string;
+    hullNWSE: [[number, number], [number, number]];
+    neatlineFromHull: [[number, number], [number, number]];
+    skewDeg: number;
+    overlayDeviationM: { lngBxH: number; latDxW: number; max: number };
+    status: string;
+    uncertaintyM: number;
+  }>;
+  ui: { toggles: string[]; togglesDefault: boolean; sharedOpacity: boolean; neatlineFrames: string };
+  invariants: Record<string, string>;
+  statusLine: string;
+  verdictSi: string;
+  verdictEn: string;
+  next: string[];
+} = {
+  series: "GEOREF",
+  source: "P46 afine (research/issue17/neatline-georef.json) + P50 boundsImageNWSE (georef-closure.json) + pixels/imageUrl iz model.ts (regex) + slike public/atlas/n83-a0{3,4,5}.jpg (PIL + sha256); polni izpis research/issue17/leaflet-overlay.json + src/data/atlas/leaflet-overlay.json",
+  status: "RECONSTRUCTED",
+  generatedBy: "scripts/p51_leaflet_overlay.py",
+  rotationSubtlety: "Leaflet ne podpira rotiranih prekrivk — slika je razpete v osno poravnan okvir pravega štirikotnika skena; SZ/JV vogala sta točna (affine(0,0) / affine(W,H)), preostala dva odmaknjeni za ≤ 20 m (izmerjeno iz |b|·H in |d|·W); skew ≤ 0.571° → osna postavitev je prikaz, ne meritev; odmik je del ±40/50 m negotovosti lista",
+  sheets: {
+    A03: { cell: "VKIX24dg", imageUrl: "/atlas/n83-a03.jpg", pixels: { width: 2645, height: 2154 }, sha256: "280e0bbf95d8635b448a36c90f3d372928c3842e835aaadc115be99388a07361", hullNWSE: [[45.558062, 15.24863], [45.543052, 15.274475]], neatlineFromHull: [[45.557532, 15.248718], [45.543722, 15.272827]], skewDeg: 0.5475, overlayDeviationM: { lngBxH: 15.4, latDxW: 19.3, max: 19.3 }, status: "NEATLINE_PARTIAL_GEOREFERENCED", uncertaintyM: 50 },
+    A04: { cell: "VKIX24cg", imageUrl: "/atlas/n83-a04.jpg", pixels: { width: 2645, height: 2158 }, sha256: "896cc93f548ff6bdb01bd1d4081fdd9fccfdcc5e8454a7ceec901d61265010fd", hullNWSE: [[45.557958, 15.272079], [45.542957, 15.297976]], neatlineFromHull: [[45.55737, 15.273012], [45.543554, 15.297115]], skewDeg: 0.568, overlayDeviationM: { lngBxH: 15.9, latDxW: 20.0, max: 20.0 }, status: "NEATLINE_GEOREFERENCED", uncertaintyM: 40 },
+    A05: { cell: "VKIX24ch", imageUrl: "/atlas/n83-a05.jpg", pixels: { width: 2634, height: 2165 }, sha256: "7b2a28dd92a32a8015f477823a7590f8ddba0f674c3754145347f26ac98d0902", hullNWSE: [[45.544293, 15.271822], [45.529288, 15.297674]], neatlineFromHull: [[45.543722, 15.272828], [45.529907, 15.296925]], skewDeg: 0.5708, overlayDeviationM: { lngBxH: 15.9, latDxW: 20.0, max: 20.0 }, status: "NEATLINE_GEOREFERENCED", uncertaintyM: 40 },
+  },
+  ui: {
+    toggles: ["List A03 (±50 m)", "List A04 (±40 m)", "List A05 (±40 m)"],
+    togglesDefault: false,
+    sharedOpacity: true,
+    neatlineFrames: "črtkani pravokotniki #8a6d3b (dash 6 5) s sticky tooltip statusom ±40/50 m",
+  },
+  invariants: {
+    I1: "ovoj NEODVISNO preračunan iz P46 afine == P50 boundsImageNWSE (≤ 5e-6°) — 3/3 PASS",
+    I2: "ovoj ⊇ neatline meje SHEET_GEOREFS (lat ∧ lng) — 3/3 PASS",
+    I3: "skew = atan2(|d|, |e|) ≤ 1.0° (0.5475/0.568/0.5708) — PASS",
+    I4: "slike: PIL dims == model.ts pixels ∧ sha256(64) — 3/3 PASS",
+    I5: "odmik vogalov == 19.3/20.0/20.0 m (dva vogala točna) — PASS",
+    I6: "meje v atlasnem okvirju (bbox 5 listov ± 0.01°) — 3/3 PASS",
+    I7: "determinizem — bajtno identičen izpis pri ponovnem izračunu (--check)",
+    I8: "kanonski izpis == runtime kopija (bajtno)",
+  },
+  statusLine: "UI-ACTIVATED-DETERMINISTIC — prekrivke A03/A04/A05 aktivirane v atlasnem UI (privzeto izklopljene, skupna prosojnost, neatline okvirji s statusom); ovoji neodvisno preračunani iz P46 afine (== P50 boundsImageNWSE ≤ 5e-6°); odmik osne postavitve ≤ 19.3/20.0/20.0 m (Leaflet brez rotacij — dva vogala točna), del ±40/50 m negotovosti listov; SHEET_GEOREFS in dokazi P40–P50 nespremenjeni",
+  verdictSi: "P51: LEAFLET OVERLAY A03–A05 — listi A03/A04/A05 kot slikovne prekrivke na atlasu (issue #14/§3): ovoj skena NEODVISNO preračunan iz P46 afine (NW = affine(0,0), SE = affine(W,H); pixels prek regexa iz model.ts) == P50 boundsImageNWSE ≤ 5e-6° — ni ročno prepisanih koordinat; MERJENA SUBTELNOST pošteno dokumentirana: Leaflet ne podpira rotiranih prekrivk — slika je razpete v osno poravnan okvir; odmik vogalov izmerjen iz členov afine (lng |b|·H, lat |d|·W): A03 19.3 m, A04 20.0 m, A05 20.0 m (dva vogala točna) — del ±40/50 m negotovosti lista, zapisan per sheet; skew 0.5475/0.568/0.5708° ≤ 1.0°; slike preverjene (PIL dims == model.ts + sha256); UI: stikala »List A03 (±50 m)/A04 (±40 m)/A05 (±40 m)« privzeto IZKLOPLJENA — začetni pogled nespremenjen; črtkani neatline okvirji s statusom; skupna prosojnost; SHEET_GEOREFS in dokazi P40–P50 nespremenjeni",
+  verdictEn: "P51: LEAFLET OVERLAY A03–A05 — sheets A03/A04/A05 as image overlays on the atlas (issue #14/§3): the scan envelope is INDEPENDENTLY recomputed from the P46 affine (NW = affine(0,0), SE = affine(W,H); pixels via regex from model.ts) == P50 boundsImageNWSE ≤ 5e-6° — no hand-copied coordinates; the MEASURED subtlety is honestly documented: Leaflet does not support rotated overlays — the image is stretched into an axis-aligned frame; corner deviation measured from the affine terms (lng |b|·H, lat |d|·W): A03 19.3 m, A04 20.0 m, A05 20.0 m (two corners exact) — part of the sheet's ±40/50 m uncertainty, recorded per sheet; skew 0.5475/0.568/0.5708° ≤ 1.0°; images verified (PIL dims == model.ts + sha256); UI: toggles »Sheet A03 (±50 m)/A04 (±40 m)/A05 (±40 m)« default OFF — the initial view is unchanged; dashed neatline frames with the status; shared opacity; SHEET_GEOREFS and the P40–P50 evidence unchanged",
+  next: [
+    "vizualna potrditev prekrivk na zemljevidu s strani lastnika (stikala A03–A05) — priporočeno [~]",
+    "povezava 26 dokazanih mest A05 z domačijami PT (človeška potrditev števil na karti)",
+    "nadgradnja P16 present.json za Fučkovci (25 mest z uradnimi GURS obrisi)",
+    "vizualna potrditev neatline izrezov (P50/P46) — priporočeno, ne blokirajoče [~]",
+  ],
+};
+

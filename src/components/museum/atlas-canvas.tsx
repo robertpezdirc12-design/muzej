@@ -7,6 +7,7 @@ import { useLang } from "./language-context";
 import { SHEET_GEOREFS, VECTOR_BUILDINGS, ATLAS_LOCATIONS } from "@/data/atlas/model";
 import { HERITAGE_UNITS } from "@/data/atlas/sources";
 import { LANDUSE_ZONES } from "@/data/atlas/landuse";
+import leafletOverlayJson from "@/data/atlas/leaflet-overlay.json";
 import type { GeoFix } from "@/lib/geo";
 
 /**
@@ -16,6 +17,12 @@ import type { GeoFix } from "@/lib/geo";
  *  · OSM — današnje stanje;
  *  · katastrska lista A01 / A02 — georeferencirana slikovna prekrivka
  *    (vir: SI AS 176/N/N83, Arhiv RS) z drsnikom prosojnosti;
+ *  · katastrski listi A03 / A04 / A05 — slikovna prekrivka (P51, issue #14/§3):
+ *    ovoj skena neodvisno preračunan iz P46 afine (== P50 boundsImageNWSE),
+ *    privzeto IZKLOPLJENA; Leaflet ne podpira rotiranih prekrivk — odmik
+ *    vogalov osne postavitve ≤ 20 m, del ±40/50 m negotovosti lista
+ *    (overlayDeviationM v leaflet-overlay.json); ob prekrivki črtkani
+ *    neatline okvir s statusom;
  *  · objekti ~1825 — vektorizacija z arhivskega lista (RECONSTRUCTED);
  *  · raba tal ~1825 — loke ob Kolpi, njivski mozaik, gozd (issue #7, RECONSTRUCTED);
  *  · cerkev sv. Vida (VERIFIED, EŠD 2122) in območje vasi (APPROXIMATE);
@@ -27,12 +34,33 @@ export interface AtlasLayers {
   osm: boolean;
   a01: boolean;
   a02: boolean;
+  a03: boolean;
+  a04: boolean;
+  a05: boolean;
   buildings: boolean;
   landuse: boolean;
   heritage: boolean;
   museum: boolean;
   vintage: boolean;
 }
+
+interface OverlaySheet {
+  sheet: "A03" | "A04" | "A05";
+  cell: string;
+  imageUrl: string;
+  hullNWSE: [[number, number], [number, number]];
+  neatlineNWSE: [[number, number], [number, number]];
+  status: string;
+  uncertaintyM: number;
+  overlayDeviationM: { max: number };
+}
+
+const OVERLAY_SHEETS = leafletOverlayJson.sheets as unknown as Record<
+  "A03" | "A04" | "A05",
+  OverlaySheet
+>;
+const OVERLAY_KEYS = ["a03", "a04", "a05"] as const;
+type OverlayKey = (typeof OVERLAY_KEYS)[number];
 
 export function AtlasCanvas({
   layers,
@@ -52,6 +80,11 @@ export function AtlasCanvas({
   const mapRef = useRef<L.Map | null>(null);
   const a01Ref = useRef<L.ImageOverlay | null>(null);
   const a02Ref = useRef<L.ImageOverlay | null>(null);
+  const overlayRef = useRef<Record<OverlayKey, { img: L.ImageOverlay; rect: L.Rectangle } | null>>({
+    a03: null,
+    a04: null,
+    a05: null,
+  });
   const buildingsRef = useRef<L.LayerGroup | null>(null);
   const landuseRef = useRef<L.LayerGroup | null>(null);
   const heritageRef = useRef<L.LayerGroup | null>(null);
@@ -95,6 +128,41 @@ export function AtlasCanvas({
     a02Ref.current = L.imageOverlay(a02.imageUrl, a02.bounds, {
       opacity,
       interactive: false,
+    });
+
+    /* listi A03–A05 (P51) — slikovna prekrivka + črtkani neatline okvir;
+       ovoj iz leaflet-overlay.json (en sam vir resnice), privzeto izklopljena */
+    (Object.keys(OVERLAY_SHEETS) as ("A03" | "A04" | "A05")[]).forEach((k) => {
+      const s = OVERLAY_SHEETS[k];
+      const key = ("a" + k.slice(1)) as OverlayKey; // A03 → a03
+      const img = L.imageOverlay(
+        s.imageUrl,
+        [
+          [s.hullNWSE[0][0], s.hullNWSE[0][1]],
+          [s.hullNWSE[1][0], s.hullNWSE[1][1]],
+        ],
+        { opacity, interactive: false },
+      );
+      const rect = L.rectangle(
+        [
+          [s.neatlineNWSE[0][0], s.neatlineNWSE[0][1]],
+          [s.neatlineNWSE[1][0], s.neatlineNWSE[1][1]],
+        ],
+        {
+          color: "#8a6d3b",
+          weight: 1.5,
+          dashArray: "6 5",
+          fill: false,
+          className: "mvg-atlas-neatline",
+        },
+      );
+      rect.bindTooltip(
+        lang === "si"
+          ? `List ${s.sheet} (${s.cell}) — ${s.status} ±${s.uncertaintyM} m · prekrivka: odmik osne postavitve ≤ ${s.overlayDeviationM.max} m (dva vogala točna, Leaflet brez rotacij) · P51`
+          : `Sheet ${s.sheet} (${s.cell}) — ${s.status} ±${s.uncertaintyM} m · overlay: axis-aligned deviation ≤ ${s.overlayDeviationM.max} m (two corners exact, Leaflet without rotation) · P51`,
+        { className: "mvg-tooltip", direction: "top", sticky: true },
+      );
+      overlayRef.current[key] = { img, rect };
     });
 
     /* objekti ~1825 — vektorizacija (RECONSTRUCTED) */
@@ -210,6 +278,7 @@ export function AtlasCanvas({
       mapRef.current = null;
       a01Ref.current = null;
       a02Ref.current = null;
+      overlayRef.current = { a03: null, a04: null, a05: null };
     };
      
   }, []);
@@ -225,15 +294,30 @@ export function AtlasCanvas({
     };
     apply(a01Ref.current, layers.a01);
     apply(a02Ref.current, layers.a02);
+    for (const key of OVERLAY_KEYS) {
+      const pair = overlayRef.current[key];
+      if (!pair) continue;
+      const on = layers[key];
+      if (on && !map.hasLayer(pair.img)) map.addLayer(pair.img);
+      if (on && !map.hasLayer(pair.rect)) map.addLayer(pair.rect);
+      if (!on && map.hasLayer(pair.img)) map.removeLayer(pair.img);
+      if (!on && map.hasLayer(pair.rect)) map.removeLayer(pair.rect);
+    }
     apply(buildingsRef.current, layers.buildings);
     apply(landuseRef.current, layers.landuse);
     apply(heritageRef.current, layers.heritage || layers.buildings);
   }, [layers]);
 
-  /* prosojnost prekrivk */
+  /* prosojnost prekrivk (skupaj z A03–A05; neatline okvir ostaja viden) */
   useEffect(() => {
     a01Ref.current?.setOpacity(opacity);
     a02Ref.current?.setOpacity(opacity);
+    for (const key of OVERLAY_KEYS) {
+      const pair = overlayRef.current[key];
+      if (!pair) continue;
+      pair.img.setOpacity(opacity);
+      pair.rect.setStyle({ opacity: Math.min(1, 0.35 + 0.65 * opacity) });
+    }
   }, [opacity]);
 
   /* sepija sodobnih ploščic */

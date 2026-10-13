@@ -192,6 +192,14 @@ Zgodovinska katastrska slika vasi (franciscejski kataster, k.o. Griblje št. 83 
   (konvergencija mreže), merilo 0,7746 m/px; **5/5 listov serije
   georeferenciranih**; vizualni pregled izrezov priporočen [~]; dokaz
   `research/issue17/georef-closure.json` + `scripts/p50_georef_closure.py`;
+- **Leaflet overlay A03–A05 (P51, issue #14)** — listi A03/A04/A05 kot
+  slikovne prekrivke na atlasu: ovoj skena NEODVISNO preračunan iz P46 afine
+  (== P50 boundsImageNWSE ≤ 5e-6° — ni ročno prepisanih koordinat);
+  MERJENA SUBTELNOST pošteno dokumentirana: Leaflet ne podpira rotiranih
+  prekrivk — odmik vogalov osne postavitve ≤ 19,3/20,0/20,0 m (dva vogala
+  točna), del ±40/50 m negotovosti lista; skew ≤ 0,5708°; stikala privzeto
+  IZKLOPLJENA, črtkani neatline okvirji s statusom, skupna prosojnost; dokaz
+  `research/issue17/leaflet-overlay.json` + `scripts/p51_leaflet_overlay.py`;
 - **globa povezava** `?atlas=hiša-75` (hiša št. 73 — demonstracijska veriga do MVG-010).
 
 API (statični, brez runtime AI):
@@ -234,6 +242,11 @@ API (statični, brez runtime AI):
   43,2 px; L4 napisi 7/7); GRID_APPROX ±200–400 m → NEATLINE ±40/50 m;
   premik mej le 17,4/16,9/18,0 m; 5/5 listov georeferenciranih;
   status ACTIVATED-DETERMINISTIC.
+- `GET /api/atlas/leaflet-overlay` — Leaflet overlay A03–A05 (P51): ovoji
+  skena neodvisno preračunani iz P46 afine (== P50 boundsImageNWSE ≤ 5e-6°),
+  odmiki osne postavitve ≤ 20 m (dva vogala točna — Leaflet brez rotacij),
+  skew ≤ 0,5708°, PIL dims + sha256 slik; UI stikala privzeto izklopljena;
+  status UI-ACTIVATED-DETERMINISTIC.
 
 ## Varnost
 

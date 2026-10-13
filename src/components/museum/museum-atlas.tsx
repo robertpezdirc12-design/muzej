@@ -96,6 +96,9 @@ export function MuseumAtlas({
     osm: true,
     a01: true,
     a02: true,
+    a03: false,
+    a04: false,
+    a05: false,
     buildings: true,
     landuse: false,
     heritage: false,
@@ -374,6 +377,9 @@ export function MuseumAtlas({
                   [
                     ["a01", t("List A01", "Sheet A01")],
                     ["a02", t("List A02", "Sheet A02")],
+                    ["a03", t("List A03 (±50 m)", "Sheet A03 (±50 m)")],
+                    ["a04", t("List A04 (±40 m)", "Sheet A04 (±40 m)")],
+                    ["a05", t("List A05 (±40 m)", "Sheet A05 (±40 m)")],
                     ["buildings", t("Objekti ~1825", "Buildings ~1825")],
                     ["landuse", t("Raba tal ~1825", "Land use ~1825")],
                     ["heritage", t("EŠD register", "EŠD register")],
@@ -409,8 +415,8 @@ export function MuseumAtlas({
               </div>
               <p className="mt-2 text-xs text-muted-foreground">
                 {t(
-                  "Listi A01 in A02: Arhiv Republike Slovenije, SI AS 176/N/N83, javno dostopno prek VAČ. Georeferenca: cerkev sv. Vida (±50–80 m), vas (±75–120 m) — status REVIEW. Objekti ~1825 so vektorizacija lista A02 (RECONSTRUCTED), ne izvirne meje parcel.",
-                  "Sheets A01 and A02: Archives of the Republic of Slovenia, SI AS 176/N/N83, publicly accessible via VAČ. Georeference: St. Vitus church (±50–80 m), village (±75–120 m) — REVIEW status. Buildings ~1825 are a vectorisation of sheet A02 (RECONSTRUCTED), not original parcel boundaries.",
+                  "Listi A01 in A02: Arhiv Republike Slovenije, SI AS 176/N/N83, javno dostopno prek VAČ. Georeferenca: cerkev sv. Vida (±50–80 m), vas (±75–120 m) — status REVIEW. Objekti ~1825 so vektorizacija lista A02 (RECONSTRUCTED), ne izvirne meje parcel. Listi A03–A05 (P51, privzeto izklopljeni): slikovna prekrivka po P50 neatline georeferenci (±40–50 m); Leaflet ne podpira rotiranih prekrivk — odmik vogalov osne postavitve ≤ 19,3/20,0/20,0 m (dva vogala točna), del negotovosti lista; ob prekrivki črtkani neatline okvir s statusom.",
+                  "Sheets A01 and A02: Archives of the Republic of Slovenia, SI AS 176/N/N83, publicly accessible via VAČ. Georeference: St. Vitus church (±50–80 m), village (±75–120 m) — REVIEW status. Buildings ~1825 are a vectorisation of sheet A02 (RECONSTRUCTED), not original parcel boundaries. Sheets A03–A05 (P51, default off): image overlay per the P50 neatline georeference (±40–50 m); Leaflet does not support rotated overlays — the corner deviation of the axis-aligned placement is ≤ 19.3/20.0/20.0 m (two corners exact), part of the sheet's uncertainty; a dashed neatline frame with the status accompanies each overlay.",
                 )}
               </p>
             </div>
