@@ -2044,6 +2044,133 @@ export const PS_LEXICON_VERIFIED_P45: {
   ],
 };
 
+export const NEATLINE_GEOREF_P46: {
+  series: "GEOREF";
+  source: string;
+  status: ResearchStatus;
+  generatedBy: string;
+  principle: { statement: string; calibration: string };
+  control: {
+    sheet: string;
+    residuals: Record<string, { px: number; residualM: number; limitM: number; how: string; tiltPx: number }>;
+    excluded: Record<string, string>;
+  };
+  sharedScale: { sbarMPerPx: number; sx: number; sy: number; axisConsistencyPct: number; source: string };
+  sheets: Record<
+    "A03" | "A04" | "A05",
+    {
+      cell: string;
+      proposedStatus: string;
+      uncertaintyM: number;
+      detectedSides: number;
+      sides: Record<string, { px: number; source?: string; how: string; tiltPx: number | null }>;
+      boundsNWSE: [[number, number], [number, number]];
+      shiftVsP10MaxM: number;
+      spanDeviationsPct: { NS: number; EW: number } | null;
+      previous: { status: string; uncertaintyM: string; boundsNWSE: [[number, number], [number, number]] };
+    }
+  >;
+  validations: { label: string; target: string; pass: boolean; distM?: number }[];
+  verdictSi: string;
+  verdictEn: string;
+  next: string[];
+} = {
+  series: "GEOREF",
+  source:
+    "Listi public/atlas/n83-a0{2,3,4,5}.jpg + uradna geometrija celic eZKN (research/georef-n83/ezkn-ix24.json, GURS, EPSG:4326) + kontrolna GEOTRUTH afina A02 (model.ts georef-a02, EŠD 2122 + Kolpa) + k.o. poligoni (research/georef-n83/gurs/naselja-wgs84.json); polni izpis research/issue17/neatline-georef.json + src/data/atlas/neatline-georef.json",
+  status: "REVIEW",
+  generatedBy: "scripts/p46_neatline_georef.py",
+  principle: {
+    statement:
+      "neatline franciscejske sekcije = meja sekcije eZKN 1:2880; uradna geometrija celic je znana → preslikava px ↔ WGS84 brez prostih parametrov (detekcija tanke črte: prag 195, dilatacija ±2 px, tretjinski vrhovi, toleranca nagiba ≤ 30 px, rezerva celotni profil ≥ 0,60)",
+    calibration:
+      "kontrola na A02 (cf) pod GEOTRUTH afino: detektirani neatline N (y≈97) in E (x≈2710) padata na uradni meji celice cf z residualoma 9 in 13 m — princip kvantitativno potrjen na validiranem listu",
+  },
+  control: {
+    sheet: "A02",
+    residuals: {
+      top: { px: 97.3, residualM: 9.3, limitM: 90, how: "thirds", tiltPx: 2 },
+      right: { px: 2710.3, residualM: 13.2, limitM: 90, how: "thirds", tiltPx: 4 },
+    },
+    excluded: {
+      left:
+        "linija pri px≈247 je prel papirja/scan artefakt — pravi west neatline (pričakovano px≈313) ni detektiran; izključeno iz kontrole",
+      bottom:
+        "kandidati 2015–2063 so mešanica signature-banda in neatline-a; kontroverzno — izključeno iz kontrole (ohranjeno kot opomba)",
+    },
+  },
+  sharedScale: { sbarMPerPx: 0.7746, sx: 0.77654, sy: 0.77266, axisConsistencyPct: 0.5, source: "A04 (sx, sy)" },
+  sheets: {
+    A03: {
+      cell: "dg",
+      proposedStatus: "NEATLINE_PARTIAL_GEOREFERENCED",
+      uncertaintyM: 50,
+      detectedSides: 2,
+      sides: {
+        bottom: { px: 2058.3, how: "thirds", tiltPx: 1, source: "detected" },
+        right: { px: 2476.8, how: "thirds", tiltPx: 21, source: "detected" },
+        top: { px: 76.8, how: "s̄ (A04)", tiltPx: null, source: "inferred-scale" },
+        left: { px: 9.7, how: "s̄ (A04)", tiltPx: null, source: "inferred-scale" },
+      },
+      boundsNWSE: [[45.557532, 15.248718], [45.543722, 15.272827]],
+      shiftVsP10MaxM: 17.1,
+      spanDeviationsPct: { NS: 0, EW: 0 },
+      previous: { status: "GRID_APPROX", uncertaintyM: "200–400", boundsNWSE: [[45.5575, 15.2485], [45.5437, 15.273]] },
+    },
+    A04: {
+      cell: "cg",
+      proposedStatus: "NEATLINE_GEOREFERENCED",
+      uncertaintyM: 40,
+      detectedSides: 4,
+      sides: {
+        top: { px: 84.6, how: "thirds", tiltPx: 13, source: "detected" },
+        bottom: { px: 2071.9, how: "thirds", tiltPx: 10, source: "detected" },
+        left: { px: 95.4, how: "thirds", tiltPx: 4, source: "detected" },
+        right: { px: 2556.9, how: "thirds", tiltPx: 8, source: "detected" },
+      },
+      boundsNWSE: [[45.55737, 15.273012], [45.543554, 15.297115]],
+      shiftVsP10MaxM: 16.6,
+      spanDeviationsPct: null,
+      previous: { status: "GRID_APPROX", uncertaintyM: "200–400", boundsNWSE: [[45.5574, 15.2728], [45.5436, 15.2973]] },
+    },
+    A05: {
+      cell: "ch",
+      proposedStatus: "NEATLINE_GEOREFERENCED",
+      uncertaintyM: 40,
+      detectedSides: 4,
+      sides: {
+        top: { px: 82.4, how: "thirds", tiltPx: 19, source: "detected" },
+        bottom: { px: 2075.4, how: "thirds", tiltPx: 4, source: "detected" },
+        left: { px: 102.4, how: "thirds", tiltPx: 10, source: "detected" },
+        right: { px: 2557.4, how: "thirds", tiltPx: 10, source: "detected" },
+      },
+      boundsNWSE: [[45.543722, 15.272828], [45.529907, 15.296925]],
+      shiftVsP10MaxM: 17.8,
+      spanDeviationsPct: { NS: 0.54, EW: 0.51 },
+      previous: { status: "GRID_APPROX", uncertaintyM: "200–400", boundsNWSE: [[45.5437, 15.2726], [45.5299, 15.2971]] },
+    },
+  },
+  validations: [
+    { label: "TRIBUTSCH (A03 px 1799,754)", target: "znotraj k.o. Tribuče (poligon)", pass: true },
+    { label: "WEIDENDORF (A03 px 1878,1852)", target: "znotraj k.o. Bedenj (poligon)", pass: true },
+    { label: "WEIDENDORF (A04 px 608,1964)", target: "znotraj k.o. Bedenj (poligon)", pass: true },
+    { label: "ADLESCHITZ (A04 px 2116,1403)", target: "izven modernega k.o. Griblje + znotraj celice cg", pass: true },
+    { label: "Bresnik (A04 px 1032,1532)", target: "≤ 700 m od (45.5476, 15.2824)", pass: true, distM: 34 },
+    { label: "sklop ~45 stavb / Fučkovci (A05 px 1975,606)", target: "≤ 700 m od (45.5398, 15.2910) + znotraj celice ch", pass: true, distM: 33 },
+    { label: "Pri Jankovichti (A05 px 1712,455)", target: "≤ 700 m od (45.5408, 15.2885)", pass: true, distM: 33 },
+  ],
+  verdictSi:
+    "Neatline georeferenciranje sekcij dg/cg/ch (A03–A05): princip 'neatline = meja sekcije' kalibriran na A02 z residualoma 9 in 13 m; A04 in A05 popolnoma zasidrani (4 detektirane strani, merilo 0.7727–0.7765 m/px, medosna konsistenca 0,5 %), A03 delno (S/E detektirana, N/W preko skupnega merila, šibki kandidati potrjujeta v okviru 25 m). Novo: ±40–50 m namesto ±200–400 m (4–8× izboljšanje). Ne-regresija 7/7 P10 kontrolnih napisov — Bresnik/Fučkovci/Jankovichti sedaj 33–34 m od P10 tarč. Premik mej vs P10 le 17–18 m (popravek konvergencije). SHEET_GEOREFS se namerno ne spreminja — predlog nadgradnje čaka človeško potrditev neatline črt (lekcija P9).",
+  verdictEn:
+    "Neatline georeferencing of sections dg/cg/ch (A03–A05): the 'neatline = section boundary' principle calibrated on A02 with residuals of 9 and 13 m; A04 and A05 fully anchored (4 detected sides, scale 0.7727–0.7765 m/px, axis consistency 0.5%), A03 partial (S/E detected, N/W via the shared scale, weak candidates corroborate within 25 m). New: ±40–50 m instead of ±200–400 m (a 4–8× improvement). Non-regression 7/7 P10 control labels — Bresnik/Fučkovci/Jankovichti now land 33–34 m from the P10 targets. Bounds shift vs P10 only 17–18 m (a convergence correction). SHEET_GEOREFS is deliberately unchanged — the upgrade proposal awaits human confirmation of the neatlines (the P9 lesson).",
+  next: [
+    "človeška potrditev detektiranih neatline črt (vizualni pregled izrezov ob 4× povečavi) → nato nadgradnja SHEET_GEOREFS A03–A05 + Leaflet overlay kot pri A01/A02",
+    "GURS stavbni overlay prek novih afin (A04: vsebina celice cg; A05: sklop Fučkovci) — kvantitativna primerjava z medi P10 (72 m)",
+    "presek z A03: vzhodni pas (x 83–100 %) mora kontinuirati na A02/A04 zahodni neatline — preverba zahteve",
+    "P9 retrakcija za A04 ostaja veljavna — nova neatline rešitev nadgradi P10 brez prostih podobnostnih parametrov (rotacija/merilo izhajata iz uradne celice, ne iz prostega fita)",
+  ],
+};
+
 export const PZ_ECONOMY_1825: {
   source: string;
   titleAsWritten: string;

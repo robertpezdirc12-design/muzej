@@ -2749,3 +2749,38 @@ Stage Summary:
   research/issue17/lexicon-verification-raw/ (26 datotek: 18 fran.si, 5 wiki,
   api-log, targets-plan, +2), src/data/atlas/ps-lexicon-verified.json,
   src/app/api/atlas/ps-lexicon-verified/route.ts.
+
+## P46 (2026-10-12) — Neatline georeferenciranje sekcij dg/cg/ch (A03–A05)
+
+- Princip: narisana neatline franciscejske sekcije = meja sekcije eZKN 1:2880;
+  uradna geometrija celic (GURS eZKN, EPSG:4326, research/georef-n83/
+  ezkn-ix24.json) znana → preslikava px ↔ WGS84 brez prostih parametrov.
+  Detekcija tanke črte: prag 195, dilatacija ±2 px, tretjinski vrhovi
+  (toleranca nagiba ≤ 30 px), rezerva celotni profil ≥ 0,60.
+- Kalibracija principa na A02 (GEOTRUTH afina, EŠD 2122 + Kolpa): detektirani
+  neatline N (y≈97, tilt 2 px) in E (x≈2710, tilt 4 px) padata na uradni meji
+  celice cf z residualoma 9,3 in 13,2 m (limita 90 m). Izključena W (prel
+  papirja pri px≈247) in S (signature-band).
+- Rezultati: A04 (cg) 4/4 strani → merilo sx 0.77654 / sy 0.77266 m/px
+  (medosna konsistenca 0,5 %), afina 4 vogalov RMS 0,1 m →
+  NEATLINE_GEOREFERENCED ±40 m; A05 (ch) 4/4 (N/W šibkejši pokritosti) →
+  NEATLINE_GEOREFERENCED ±40 m; A03 (dg) 2/4 (S tilt 1 px, E tilt 21 px; N/W
+  implicitno preko s̄ = 0.7746 m/px, šibki kandidati v okviru 25 m) →
+  NEATLINE_PARTIAL_GEOREFERENCED ±50 m. Vsledično: iz GRID_APPROX ±200–400 m
+  na ±40–50 m (4–8× izboljšanje). Premik novih mej vs P10 le 17–18 m
+  (konvergencija mreže).
+- Ne-regresija 7/7 P10 kontrolnih napisov na novih afineh: TRIBUTSCH znotraj
+  k.o. Tribuče, WEIDENDORF (A03 in A04) znotraj k.o. Bedenj (poligonska
+  validacija nad naselja-wgs84.json), ADLESCHITZ izven modernega k.o. Griblje,
+  Bresnik 34 m, Fučkovci 33 m, Pri Jankovichti 33 m od P10 tarč.
+- Poučna epizoda: prvi teki je imel obrnjeno kotno klasifikacijo celic (180°) —
+  afina je bila "popolna" (RMS 0,1 m), a je ne-regresijska validacija ujel
+  preklop; popravljeno z asercijsko zaščito N/J.
+- SHEET_GEOREFS (model.ts) namerno NESPREMJEN — determinističen predlog
+  nadgradnje čaka človeško potrditev detektiranih črt (lekcija P9).
+- Nove datoteke: scripts/p46_neatline_georef.py,
+  research/issue17/neatline-georef.json, src/data/atlas/neatline-georef.json,
+  src/app/api/atlas/neatline-georef/route.ts. Spremembe: research.ts
+  (+NEATLINE_GEOREF_P46 + kartica P46 v museum-research.tsx), sources.ts
+  (opombe P46 na N083A03/A04/A05), qa.ts (+qa-p46-neatline-georef), audit §26,
+  README (P46 + API seznam).

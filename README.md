@@ -138,6 +138,16 @@ Zgodovinska katastrska slika vasi (franciscejski kataster, k.o. Griblje št. 83 
   refutacije z verbatim definicijami, atribucije (Kärntner WB "Schulz 1972",
   Bezlaj SSN/SLA) zavrnjene; dokaz `research/issue17/ps-lexicon-verified.json`
   + `scripts/p45_lex_verify.py`;
+- **neatline georeferenciranje sekcij dg/cg/ch (P46, issue #14)** — narisana
+  neatline franciscejske sekcije = meja sekcije eZKN 1:2880; uradna geometrija
+  celic (GURS) znana → preslikava px ↔ WGS84 brez prostih parametrov; princip
+  kalibriran na A02 (GEOTRUTH, EŠD 2122): residuala 9,3 in 13,2 m; A04 in A05
+  zasidrani 4/4 strani (merilo 0.7727–0.7765 m/px, medosna konsistenca 0,5 %,
+  afina RMS 0,1 m), A03 delno (S/E detektirana, N/W preko skupnega merila) —
+  **±40–50 m namesto ±200–400 m**; ne-regresija 7/7 P10 kontrolnih napisov
+  (Bresnik/Fučkovci/Jankovichti 33–34 m); SHEET_GEOREFS namerno nespremenjen —
+  predlog nadgradnje čaka človeško potrditev črt (lekcija P9); dokaz
+  `research/issue17/neatline-georef.json` + `scripts/p46_neatline_georef.py`;
 - **globa povezava** `?atlas=hiša-75` (hiša št. 73 — demonstracijska veriga do MVG-010).
 
 API (statični, brez runtime AI):
@@ -157,7 +167,10 @@ API (statični, brez runtime AI):
   "nach Anlage" → K1 = 702, K2 = 1388 == branje pass2; Abschluß popolnoma zaprt (P44);
 - `GET /api/atlas/ps-lexicon-verified` — verifikacija leksikografskih virov P43:
   49 tarč, 0/70 potrjenih (33 NEPOTRJENO, 7 DELNO, 17 NEVERIFIKATORNO, 13 BREZ-VIRA);
-  DWB zvezčne natančnosti, SSKJ verbatim refutacije, atribucijske zavrnitve (P45).
+  DWB zvezčne natančnosti, SSKJ verbatim refutacije, atribucijske zavrnitve (P45);
+- `GET /api/atlas/neatline-georef` — neatline georeferenciranje A03–A05: princip
+  "neatline = meja sekcije eZKN" kalibriran na A02 (9,3/13,2 m); A04/A05 zasidrani
+  ±40 m, A03 delno ±50 m (iz ±200–400 m); 7/7 P10 validacij; predlog nadgradnje (P46).
 
 ## Varnost
 

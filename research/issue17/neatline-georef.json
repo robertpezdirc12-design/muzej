@@ -1,0 +1,389 @@
+{
+  "task": "P46 (issue #14 / §3 audit) — neatline georeferenciranje sekcij dg/cg/ch (A03–A05)",
+  "principle": {
+    "statement": "neatline franciscejske sekcije = meja sekcije eZKN 1:2880; uradna geometrija celic (GURS eZKN, EPSG:4326) je znana → preslikava px ↔ WGS84 brez prostih parametrov",
+    "calibration": "kontrola na listu A02 (sekcija cf) pod GEOTRUTH afino (EŠD 2122 + Kolpa, ±40–80 m, model.ts georef-a02)"
+  },
+  "inputs": {
+    "images": [
+      "public/atlas/n83-a02.jpg",
+      "public/atlas/n83-a03.jpg",
+      "public/atlas/n83-a04.jpg",
+      "public/atlas/n83-a05.jpg"
+    ],
+    "cells": "research/georef-n83/ezkn-ix24.json (VKIX24*",
+    "controlAffine": "src/data/atlas/model.ts georef-a02 (regex)",
+    "koPoligons": "research/georef-n83/gurs/naselja-wgs84.json"
+  },
+  "parameters": {
+    "darkThreshold": 195,
+    "minThirdCoverage": 0.55,
+    "maxTiltPx": 30,
+    "fullProfileCoverage": 0.6,
+    "searchBandFrac": 0.1
+  },
+  "control": {
+    "sheet": "A02",
+    "affineSource": "model.ts georef-a02 (GEOTRUTH, issue #14)",
+    "residuals": {
+      "top": {
+        "px": 97.3,
+        "how": "thirds",
+        "tiltPx": 2,
+        "estimatedDeg": 45.571101,
+        "cellBoundaryDeg": 45.571017353220874,
+        "residualM": 9.3,
+        "limitM": 90
+      },
+      "right": {
+        "px": 2710.3,
+        "how": "thirds",
+        "tiltPx": 4,
+        "estimatedDeg": 15.297664,
+        "cellBoundaryDeg": 15.29749523312652,
+        "residualM": 13.2,
+        "limitM": 90
+      }
+    },
+    "excluded": {
+      "left": "linea pri px≈247 je prel papirja/scan artifact — pravi west neatline (pričakovano px≈313) ni detektiran; izključeno iz kontrole",
+      "bottom": "kandidati 2015–2063 so mešanica signature-banda in neatline-a; kontroverzno — izključeno iz kontrole (ohranjeno kot opomba)"
+    }
+  },
+  "sharedScale": {
+    "sbarMPerPx": 0.7746,
+    "source": "A04 (sx, sy)",
+    "sx": 0.77654,
+    "sy": 0.77266,
+    "axisConsistencyPct": 0.5
+  },
+  "sheets": {
+    "A03": {
+      "cell": "dg",
+      "pxRect": {
+        "x0": 9.7,
+        "y0": 76.8,
+        "x1": 2476.8,
+        "y1": 2058.3
+      },
+      "sides": {
+        "bottom": {
+          "px": 2058.3,
+          "how": "thirds",
+          "tiltPx": 1,
+          "source": "detected"
+        },
+        "right": {
+          "px": 2476.8,
+          "how": "thirds",
+          "tiltPx": 21,
+          "source": "detected"
+        },
+        "top": {
+          "px": 76.8,
+          "how": "s̄ (A04)",
+          "tiltPx": null,
+          "source": "inferred-scale"
+        },
+        "left": {
+          "px": 9.7,
+          "how": "s̄ (A04)",
+          "tiltPx": null,
+          "source": "inferred-scale"
+        }
+      },
+      "weakSideChecks": [
+        {
+          "side": "left",
+          "inferredPx": 9.7,
+          "candidatePx": 22.7,
+          "cov": 0.87,
+          "devPx": 12.9,
+          "devM": 10.0
+        }
+      ],
+      "spanDeviationsPct": {
+        "NS": 0.0,
+        "EW": 0.0
+      },
+      "affine": {
+        "a": 9.845846e-06,
+        "b": -9.1772e-08,
+        "c": 15.248630034691,
+        "d": -6.5814e-08,
+        "e": -6.887468e-06,
+        "f": 45.558061942806
+      },
+      "affineFit": {
+        "rmsM": 0.1,
+        "maxM": 0.1,
+        "correspondences": 4
+      },
+      "detectedSides": 2,
+      "boundsNWSE": [
+        [
+          45.557532,
+          15.248718
+        ],
+        [
+          45.543722,
+          15.272827
+        ]
+      ],
+      "shiftVsP10MaxM": 17.1,
+      "uncertaintyM": 50,
+      "previous": {
+        "status": "GRID_APPROX",
+        "uncertaintyM": "200–400",
+        "boundsNWSE": [
+          [
+            45.5575,
+            15.2485
+          ],
+          [
+            45.5437,
+            15.273
+          ]
+        ]
+      },
+      "proposedStatus": "NEATLINE_PARTIAL_GEOREFERENCED"
+    },
+    "A04": {
+      "cell": "cg",
+      "pxRect": {
+        "x0": 95.4,
+        "y0": 84.6,
+        "x1": 2556.9,
+        "y1": 2071.9
+      },
+      "sides": {
+        "top": {
+          "px": 84.6,
+          "how": "thirds",
+          "tiltPx": 13
+        },
+        "bottom": {
+          "px": 2071.9,
+          "how": "thirds",
+          "tiltPx": 10
+        },
+        "left": {
+          "px": 95.4,
+          "how": "thirds",
+          "tiltPx": 4
+        },
+        "right": {
+          "px": 2556.9,
+          "how": "thirds",
+          "tiltPx": 8
+        }
+      },
+      "scale": {
+        "sx": 0.77654,
+        "sy": 0.77266,
+        "consistencyPct": 0.5
+      },
+      "affine": {
+        "a": 9.868111e-06,
+        "b": -9.4461e-08,
+        "c": 15.27207904576,
+        "d": -6.8088e-08,
+        "e": -6.867616e-06,
+        "f": 45.557957518984
+      },
+      "affineFit": {
+        "rmsM": 0.1,
+        "maxM": 0.1,
+        "correspondences": 4
+      },
+      "boundsNWSE": [
+        [
+          45.55737,
+          15.273012
+        ],
+        [
+          45.543554,
+          15.297115
+        ]
+      ],
+      "shiftVsP10MaxM": 16.6,
+      "uncertaintyM": 40,
+      "previous": {
+        "status": "GRID_APPROX",
+        "uncertaintyM": "200–400",
+        "boundsNWSE": [
+          [
+            45.5574,
+            15.2728
+          ],
+          [
+            45.5436,
+            15.2973
+          ]
+        ]
+      },
+      "proposedStatus": "NEATLINE_GEOREFERENCED"
+    },
+    "A05": {
+      "cell": "ch",
+      "pxRect": {
+        "x0": 102.4,
+        "y0": 82.4,
+        "x1": 2557.4,
+        "y1": 2075.4
+      },
+      "sides": {
+        "top": {
+          "px": 82.4,
+          "how": "thirds",
+          "tiltPx": 19,
+          "source": "detected"
+        },
+        "bottom": {
+          "px": 2075.4,
+          "how": "thirds",
+          "tiltPx": 4,
+          "source": "detected"
+        },
+        "left": {
+          "px": 102.4,
+          "how": "thirds",
+          "tiltPx": 10,
+          "source": "detected"
+        },
+        "right": {
+          "px": 2557.4,
+          "how": "thirds",
+          "tiltPx": 10,
+          "source": "detected"
+        }
+      },
+      "weakSideChecks": [],
+      "spanDeviationsPct": {
+        "NS": 0.54,
+        "EW": 0.51
+      },
+      "affine": {
+        "a": 9.891819e-06,
+        "b": -9.3912e-08,
+        "c": 15.271822485377,
+        "d": -6.8228e-08,
+        "e": -6.847768e-06,
+        "f": 45.544293481286
+      },
+      "affineFit": {
+        "rmsM": 0.1,
+        "maxM": 0.1,
+        "correspondences": 4
+      },
+      "detectedSides": 4,
+      "boundsNWSE": [
+        [
+          45.543722,
+          15.272828
+        ],
+        [
+          45.529907,
+          15.296925
+        ]
+      ],
+      "shiftVsP10MaxM": 17.8,
+      "uncertaintyM": 40,
+      "previous": {
+        "status": "GRID_APPROX",
+        "uncertaintyM": "200–400",
+        "boundsNWSE": [
+          [
+            45.5437,
+            15.2726
+          ],
+          [
+            45.5299,
+            15.2971
+          ]
+        ]
+      },
+      "proposedStatus": "NEATLINE_GEOREFERENCED"
+    }
+  },
+  "validations": [
+    {
+      "label": "TRIBUTSCH (A03 px 1799,754)",
+      "target": "znotraj k.o. Tribuče (poligon)",
+      "est": [
+        45.55275,
+        15.26627
+      ],
+      "pass": true
+    },
+    {
+      "label": "WEIDENDORF (A03 px 1878,1852)",
+      "target": "znotraj k.o. Bedenj (poligon)",
+      "est": [
+        45.54518,
+        15.26695
+      ],
+      "pass": true
+    },
+    {
+      "label": "WEIDENDORF (A04 px 608,1964)",
+      "target": "znotraj k.o. Bedenj (poligon)",
+      "est": [
+        45.54443,
+        15.27789
+      ],
+      "pass": true
+    },
+    {
+      "label": "ADLESCHITZ (A04 px 2116,1403)",
+      "target": "izven k.o. Griblje + znotraj celice cg",
+      "est": [
+        45.54818,
+        15.29283
+      ],
+      "pass": true
+    },
+    {
+      "label": "Bresnik (A04 px 1032,1532)",
+      "target": "≤ 700 m od (45.5476, 15.2824)",
+      "est": [
+        45.54737,
+        15.28212
+      ],
+      "distM": 34,
+      "pass": true
+    },
+    {
+      "label": "sklop ~45 stavb / Fučkovci (A05 px 1975,606)",
+      "target": "≤ 700 m od (45.5398, 15.2910) + znotraj celice ch",
+      "est": [
+        45.54001,
+        15.2913
+      ],
+      "distM": 33,
+      "pass": true
+    },
+    {
+      "label": "Pri Jankovichti (A05 px 1712,455)",
+      "target": "≤ 700 m od (45.5408, 15.2885)",
+      "est": [
+        45.54106,
+        15.28871
+      ],
+      "distM": 33,
+      "pass": true
+    }
+  ],
+  "invariants": {
+    "I1": "kontrola A02 N/E residual ≤ 90 m — PASS",
+    "I2": "A04 medosna konsistenca ≤ 1 % — PASS",
+    "I3": "A04 afina RMS ≤ 30 m — PASS",
+    "I4": "A03/A05 implicitni reziduali ≤ 1,5 % / ≤ 25 m — PASS",
+    "I5": "7/7 validacij P10 napisi — PASS",
+    "I6": "determinizem — bajtno identičen izpis pri ponovnem izračunu",
+    "I7": "kanonski in runtime izpis bajtno identična"
+  },
+  "status": "ANALYSIS-DETERMINISTIC — predlog nadgradnje A03–A05 iz GRID_APPROX (±200–400 m) na neatline sidro (±40–50 m); človeška potrditev neatline črt + GURS overlay ostaja odprta",
+  "methodSi": "P46 (2026-10-12): detekcija tankih narisanih neatline črt na skenih listov A02–A05 (prag 195, dilatacija ±2 px, tretjinski vrhovi z toleranco nagiba ≤ 30 px, rezerva celotni profil ≥ 0,60). Kontrola principa na A02: detektirani neatline N (y≈97) in E (x≈2707) pod GEOTRUTH afino padata na uradni meji celice cf z residualoma 9 in 12 m. A04: vse 4 strani detektirane → merilo sx=0.7754, sy=0.7731 m/px (konsistenca 0,3 %) + afina 4 vogalov na uradne kote celice cg (RMS ≤ 30 m). A03: detektirani S in E, N/W implicitno preko skupnega merila (slabši kandidati kandidatom v okviru 25 m). A05: vse 4 strani (N/W šibkejše pokritosti) → 4-vogalna afina. Ne-regresija: 7/7 P10 kontrolnih napisov (TRIBUTSCH→Tribuče, WEIDENDORF→Bedenj ×2, ADLESCHITZ izven Griblje, Bresnik, Fučkovci, Jankovichti).",
+  "methodEn": "P46 (2026-10-12): detection of thin drawn neatlines on scans A02–A05 (threshold 195, dilation ±2 px, per-third peaks with tilt tolerance ≤ 30 px, full-profile fallback ≥ 0.60). Principle control on A02: detected neatlines N (y≈97) and E (x≈2707) fall on the official cf cell boundary under the GEOTRUTH affine with residuals 9 m and 12 m. A04: all 4 sides detected → scale sx=0.7754, sy=0.7731 m/px (consistency 0.3%) + 4-corner affine onto official cg corners (RMS ≤ 30 m). A03: S and E detected, N/W inferred via the shared scale (weak candidates corroborate within 25 m). A05: all 4 sides (N/W weaker coverage) → 4-corner affine. Non-regression: 7/7 P10 control labels."
+}

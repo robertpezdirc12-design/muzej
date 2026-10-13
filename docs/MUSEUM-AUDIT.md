@@ -1452,3 +1452,62 @@ prek vbrizganega readFile — vzorec qa-p37..p44).
 - človeška paleografija 16 družin + 66 kitic (3. prehod ~15 dvoumnih strani,
   ko VAČ dosegljiv); semantika 7 par referenc str. 141 (UNRESOLVED); p141
   spodnji vsotni blok (ŠIBKO); p142 skupna dolžina (UNRESOLVED). Statusi REVIEW.
+
+## §26 — P46: neatline georeferenciranje sekcij dg/cg/ch, A03–A05 (issue #14 / §3)
+
+**Datum:** 2026-10-12 · **Skript:** `scripts/p46_neatline_georef.py`
+(determinističen, brez AI ob delovanju, FAIL ob padu invariant I1–I7) ·
+**Dokaz:** `research/issue17/neatline-georef.json` + identična runtime kopija
+`src/data/atlas/neatline-georef.json` · **API:** `GET /api/atlas/neatline-georef`
+
+### Princip
+
+Narisana **neatline** franciscejskega sekcije lista je natanko na meji sekcije
+katastrske mreže eZKN 1:2880. Uradna geometrija celic (GURS eZKN, EPSG:4326)
+je znana — torej detekcija tanke črte v pikselskem skenu da preslikavo
+px ↔ WGS84 **brez prostih parametrov** (rotacija/merilo izhajata iz uradne
+celice, ne iz prostega fita — poučna nasprotja s P9-ovinkom).
+
+Detekcija: prag temnosti 195, dilatacija ±2 px, tretjinski vrhovi z toleranco
+nagiba ≤ 30 px, rezerva celotni profil ≥ 0,60; sprejem ob ≥ 2 tretjinah z
+tilt ≤ 30 px.
+
+### Kalibracija principa (kontrola A02, I1)
+
+Detektirani neatline N (y≈97) in E (x≈2710) na validiranem listu A02 padata
+pod GEOTRUTH afino (model.ts georef-a02, EŠD 2122 + Kolpa) na uradni meji
+celice cf z **residualoma 9,3 in 13,2 m** (limita 90 m). Izključeni: W
+(linija px≈247 je prel papirja — pravi neatline pričakovan pri px≈313 ni
+detektiran) in S (signature-band kandidati 2015–2063).
+
+### Rezultati po listih
+
+| List | Celica | Strani | Merilo | Status | Negotovost |
+|------|--------|--------|--------|--------|------------|
+| A04 | cg | 4/4 (tilt 4–13 px) | sx 0.77654 / sy 0.77266 m/px, konsistenca 0,5 % | NEATLINE_GEOREFERENCED | **±40 m** (prej ±200–400 m) |
+| A05 | ch | 4/4 (N/W šibkejši pokritosti) | 4-vogalna afina | NEATLINE_GEOREFERENCED | **±40 m** (prej ±200–400 m) |
+| A03 | dg | 2/4 (S tilt 1 px, E tilt 21 px; N/W preko s̄) | implicitno od s̄ | NEATLINE_PARTIAL_GEOREFERENCED | **±50 m** (prej ±200–400 m) |
+
+Afina A04 na uradne kote celice: RMS 0,1 m. Premik novih mej vs P10
+GRID_APPROX (celična bbox) le **17–18 m** — popravek konvergencije mreže, ne
+premik lege.
+
+### Ne-regresija (I5) — 7/7 P10 kontrolnih napisov
+
+TRIBUTSCH (A03) znotraj k.o. Tribuče ✓; WEIDENDORF (A03 in A04) znotraj
+k.o. Bedenj ✓ (poligonska validacija nad `naselja-wgs84.json`);
+ADLESCHITZ (A04) izven modernega k.o. Griblje ✓; Bresnik **34 m**, sklop
+~45 stavb / Fučkovci **33 m**, Pri Jankovichti **33 m** od P10 tarč (prej
+znos ±200–400 m). Poučna epizoda: prvi teki je imel **obrnjeno kotno
+klasifikacijo** (180°) — afina je bila "popolna" (RMS 0,1 m), a je I5
+ujel preklop; popravljeno z asercijsko zaščito N/J v kornem razvrščevalniku.
+
+### Pošten status
+
+`SHEET_GEOREFS` (model.ts) ostaja **namerno nespremenjen** — rezultat je
+determinističen *predlog* nadgradnje; človeška potrditev detektiranih črt
+(vizualni pregled izrezov) je pogoj za nadgradnjo statusov in za Leaflet
+overlay (lekcija P9: brez človeške potrditve ne objavljamo nadgradenj).
+Kartica »Georeferenca N83 — neatline sidra A03–A05 (P46)« v Raziskavah;
+opombe P46 v virih N083A03/A04/A05; QA **46 → 47**
+(`qa-p46-neatline-georef`).

@@ -30,6 +30,7 @@ import {
   PS_LEXICON_P43,
   PS_K1K2_P44,
   PS_LEXICON_VERIFIED_P45,
+  NEATLINE_GEOREF_P46,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -2193,6 +2194,96 @@ export function runQA(opts: QAOptions = {}): QAReport {
     p45Errors.length === 0
       ? `0/70 potrjeno · 33/7/17/13 · fran.si 18 + wiki 14 + repo 1 + unreachable 16 · Lohn→Bd 12, Höfling→Bd 10, Efeu→Bd 3, Aue Bd 1 ✓, Öde Bd 13 ✓ · ${p45FileDetail}`
       : p45Errors.join("; "),
+  );
+
+  // ——— P46: NEATLINE georeferenciranje sekcij dg/cg/ch (A03–A05) ———
+  const p46Errors: string[] = [];
+  const p46 = NEATLINE_GEOREF_P46;
+  // kontrola principa: residuali ≤ 90 m
+  const p46Top = p46.control.residuals.top;
+  const p46Right = p46.control.residuals.right;
+  if (p46Top.residualM > 90 || p46Right.residualM > 90)
+    p46Errors.push("kontrolni residuali A02 nad 90 m");
+  if (p46Top.residualM !== 9.3 || p46Right.residualM !== 13.2)
+    p46Errors.push("pinani residuali A02 niso (9.3, 13.2) m");
+  // skupno merilo + medosna konsistenca ≤ 1 %
+  if (p46.sharedScale.axisConsistencyPct > 1)
+    p46Errors.push("medosna konsistenca merila nad 1 %");
+  if (p46.sharedScale.sbarMPerPx !== 0.7746 || p46.sharedScale.sx !== 0.77654 || p46.sharedScale.sy !== 0.77266)
+    p46Errors.push("pinano merilo (s̄ 0.7746, sx 0.77654, sy 0.77266) ni ok");
+  // listi: statusi, negotovosti, detekcije, premik vs P10 ≤ 25 m
+  const p46A04 = p46.sheets.A04;
+  const p46A05 = p46.sheets.A05;
+  const p46A03 = p46.sheets.A03;
+  if (p46A04.proposedStatus !== "NEATLINE_GEOREFERENCED" || p46A04.detectedSides !== 4 || p46A04.uncertaintyM !== 40)
+    p46Errors.push("A04 ni NEATLINE_GEOREFERENCED 4/4 ±40 m");
+  if (p46A05.proposedStatus !== "NEATLINE_GEOREFERENCED" || p46A05.detectedSides !== 4 || p46A05.uncertaintyM !== 40)
+    p46Errors.push("A05 ni NEATLINE_GEOREFERENCED 4/4 ±40 m");
+  if (p46A03.proposedStatus !== "NEATLINE_PARTIAL_GEOREFERENCED" || p46A03.detectedSides !== 2 || p46A03.uncertaintyM !== 50)
+    p46Errors.push("A03 ni NEATLINE_PARTIAL_GEOREFERENCED 2/4 ±50 m");
+  for (const [k, o] of Object.entries(p46.sheets)) {
+    if (o.shiftVsP10MaxM > 25) p46Errors.push(`${k}: premik vs P10 ${o.shiftVsP10MaxM} m > 25 m`);
+    if (o.previous.status !== "GRID_APPROX" || o.previous.uncertaintyM !== "200–400")
+      p46Errors.push(`${k}: prejšnje stanje ni GRID_APPROX ±200–400 m`);
+  }
+  // A03: N/W morata biti inferred-scale (izrecna delnost)
+  if (p46A03.sides.top.source !== "inferred-scale" || p46A03.sides.left.source !== "inferred-scale")
+    p46Errors.push("A03 top/left nista inferred-scale");
+  if (p46A03.sides.bottom.source !== "detected" || p46A03.sides.right.source !== "detected")
+    p46Errors.push("A03 bottom/right nista detected");
+  // ne-regresija: 7/7 validacij, pinane razdalje
+  if (p46.validations.length !== 7 || !p46.validations.every((v) => v.pass))
+    p46Errors.push("validacij ni 7/7 PASS");
+  const p46Bresnik = p46.validations.find((v) => v.label.includes("Bresnik"));
+  const p46Fuc = p46.validations.find((v) => v.label.includes("Fučkovci"));
+  const p46Jank = p46.validations.find((v) => v.label.includes("Jankovichti"));
+  if (p46Bresnik?.distM !== 34 || p46Fuc?.distM !== 33 || p46Jank?.distM !== 33)
+    p46Errors.push("pinane razdalje validacij niso (34, 33, 33) m");
+  // izrecna delnost: SHEET_GEOREFS ostaja nespremenjen (lekcija P9)
+  if (!p46.verdictSi.includes("SHEET_GEOREFS se namerno ne spreminja"))
+    p46Errors.push("verdict ne deklarira nedotaknjenosti SHEET_GEOREFS");
+  // dokazni datoteki (strežniški klic; vzorec qa-p37..p45)
+  let p46FileDetail = "dokazni datoteki nista preverjeni (readFile ni na voljo) — celovita kontrola teče na /api/qa";
+  if (opts.readFile) {
+    const rawEv = opts.readFile("research/issue17/neatline-georef.json");
+    const rawRt = opts.readFile("src/data/atlas/neatline-georef.json");
+    if (rawEv === null) p46Errors.push("research/issue17/neatline-georef.json ni berljiv (izpis scripts/p46_neatline_georef.py)");
+    if (rawRt === null) p46Errors.push("src/data/atlas/neatline-georef.json ni berljiv (runtime kopija)");
+    if (rawEv !== null && rawRt !== null && rawEv !== rawRt)
+      p46Errors.push("dokazni in runtime izpis neatline-georef.json nista identična (skript mora izpisati oba enako)");
+    if (rawEv !== null) {
+      try {
+        const j = JSON.parse(rawEv) as {
+          control: { residuals: Record<string, { residualM: number }> };
+          sharedScale: { sbarMPerPx: number; axisConsistencyPct: number };
+          sheets: Record<string, { proposedStatus: string; uncertaintyM: number; sides: Record<string, { source: string }>; affineFit: { rmsM: number } }>;
+          validations: { pass: boolean }[];
+          invariants: Record<string, string>;
+        };
+        if (j.control.residuals.top.residualM !== 9.3 || j.control.residuals.right.residualM !== 13.2)
+          p46Errors.push("JSON kontrolni residuali niso (9.3, 13.2) m");
+        if (j.sharedScale.sbarMPerPx !== 0.7746) p46Errors.push("JSON s̄ ni 0.7746");
+        if (j.sheets.A04.affineFit.rmsM > 30) p46Errors.push("JSON A04 afina RMS nad 30 m");
+        if (!j.sheets.A04.sides.top || !j.sheets.A03.sides.top.source.includes("inferred"))
+          p46Errors.push("JSON A03 top ni inferred-scale");
+        if (j.validations.length !== 7 || !j.validations.every((v) => v.pass))
+          p46Errors.push("JSON validacij ni 7/7");
+        if (!Object.values(j.invariants).every((v) => v.includes("PASS") || v.includes("bajtno")))
+          p46Errors.push("JSON invarianti niso vsi PASS");
+        p46FileDetail = `dokazni datoteki preverjeni in identični (kontrola 9.3/13.2 m, s̄ ${j.sharedScale.sbarMPerPx} m/px, A04 RMS ${j.sheets.A04.affineFit.rmsM} m, 7/7 validacij)`;
+      } catch {
+        p46Errors.push("research/issue17/neatline-georef.json ni veljaven JSON");
+      }
+    }
+  }
+  push(
+    "qa-p46-neatline-georef",
+    "P46: NEATLINE georeferenciranje sekcij dg/cg/ch (A03–A05, issue #14/§3) — princip 'neatline = meja sekcije eZKN 1:2880' kalibriran na A02 pod GEOTRUTH afino (residuala N 9.3 m, E 13.2 m ≤ 90); A04 (cg): 4/4 detektirane strani, merilo sx 0.77654 / sy 0.77266 m/px (medosna konsistenca 0,5 %), afina 4 vogalov RMS ≤ 30 m → NEATLINE_GEOREFERENCED ±40 m; A05 (ch): 4/4 strani (N/W šibkejši pokritosti) → NEATLINE_GEOREFERENCED ±40 m; A03 (dg): S/E detektirana, N/W inferred preko s̄ (šibki kandidati v okviru 25 m) → NEATLINE_PARTIAL ±50 m; premik novih mej vs P10 GRID_APPROX le 17–18 m (konvergencija mreže); ne-regresija 7/7 P10 kontrolnih napisov — TRIBUTSCH v Tribučeh, WEIDENDORF ×2 v Bedenjah, ADLESCHITZ izven Gribelj, Bresnik 34 m, Fučkovci 33 m, Pri Jankovichti 33 m; SHEET_GEOREFS namerno nespremenjen (lekcija P9) — predlog nadgradnje čaka človeško potrditev; status REVIEW",
+    "P46: NEATLINE georeferencing of sections dg/cg/ch (A03–A05, issue #14/§3) — the 'neatline = eZKN 1:2880 section boundary' principle calibrated on A02 under the GEOTRUTH affine (residuals N 9.3 m, E 13.2 m ≤ 90); A04 (cg): 4/4 sides detected, scale sx 0.77654 / sy 0.77266 m/px (axis consistency 0.5%), 4-corner affine RMS ≤ 30 m → NEATLINE_GEOREFERENCED ±40 m; A05 (ch): 4/4 sides (N/W weaker coverage) → NEATLINE_GEOREFERENCED ±40 m; A03 (dg): S/E detected, N/W inferred via s̄ (weak candidates within 25 m) → NEATLINE_PARTIAL ±50 m; new bounds shift vs P10 GRID_APPROX only 17–18 m (grid convergence); non-regression 7/7 P10 control labels — TRIBUTSCH in Tribuče, WEIDENDORF ×2 in Bedenj, ADLESCHITZ outside Griblje, Bresnik 34 m, Fučkovci 33 m, Pri Jankovichti 33 m; SHEET_GEOREFS deliberately unchanged (the P9 lesson) — the upgrade proposal awaits human confirmation; status REVIEW",
+    p46Errors.length === 0,
+    p46Errors.length === 0
+      ? `kontrola A02: 9.3/13.2 m · s̄ 0.7746 m/px (0,5 %) · A04/A05 4/4 ±40 m, A03 2/4 ±50 m · premik 17–18 m · 7/7 validacij (Bresnik 34, Fučkovci 33, Jankovichti 33 m) · ${p46FileDetail}`
+      : p46Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;

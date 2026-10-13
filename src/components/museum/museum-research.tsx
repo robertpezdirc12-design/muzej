@@ -21,6 +21,7 @@ import {
   Archive,
   BookOpen,
   CheckCircle2,
+  Crosshair,
   Database,
   ExternalLink,
   FileJson,
@@ -62,6 +63,7 @@ import {
   PS_LEXICON_P43,
   PS_K1K2_P44,
   PS_LEXICON_VERIFIED_P45,
+  NEATLINE_GEOREF_P46,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -962,6 +964,99 @@ export function MuseumResearch() {
                   {t(
                     "kandidati/glose/viri P43 ostajajo bajtno identični (invarianta I2) — verifikacija samo presoji opornost citatov; rabe ni prirejena (282 parov NEKLASIFICIRANO). Kanonični URL za 16 nedosegljivih tarč v dokazih; strojno berljivo: /api/atlas/ps-lexicon-verified.",
                     "the P43 candidates/glosses/sources remain byte-identical (invariant I2) — verification only assesses the citations; no use reassigned (282 pairs UNCLASSIFIED). Canonical URLs for the 16 unreachable targets are in the evidence; machine-readable: /api/atlas/ps-lexicon-verified.",
+                  )}
+                </p>
+              </div>
+            </div>
+
+            {/* Georeferenca N83 — neatline sidra dg/cg/ch (P46, issue #14) */}
+            <div className="min-w-0 rounded-xl border bg-card p-6 shadow-sm">
+              <h3 className="flex items-center gap-2 font-display text-lg font-semibold">
+                <Crosshair className="size-4 text-primary" aria-hidden="true" />
+                {t("Georeferenca N83 — neatline sidra A03–A05 (P46)", "N83 georeference — neatline anchors A03–A05 (P46)")}
+                <StatusBadge status={NEATLINE_GEOREF_P46.status} />
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                {t(
+                  "Narisana neatline franciscejske sekcije = meja sekcije eZKN 1:2880. Uradna geometrija celic (GURS) je znana → preslikava px ↔ WGS84 brez prostih parametrov. Princip kalibriran na A02 (GEOTRUTH, EŠD 2122): residuala 9 in 13 m. Rezultat: A03–A05 iz GRID_APPROX (±200–400 m) na ±40–50 m — 4–8× izboljšanje.",
+                  "The drawn neatline of a Franciscean section = the eZKN 1:2880 section boundary. The official cell geometry (GURS) is known → a px ↔ WGS84 mapping with no free parameters. The principle is calibrated on A02 (GEOTRUTH, EŠD 2122): residuals of 9 and 13 m. Result: A03–A05 upgraded from GRID_APPROX (±200–400 m) to ±40–50 m — a 4–8× improvement.",
+                )}
+              </p>
+
+              {/* P46: kontrola principa + skupno merilo */}
+              <div className="mt-4 rounded-lg border bg-secondary/30 p-3">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-sm font-semibold">
+                    {t("P46 — kontrola principa (A02) in skupno merilo", "P46 — principle control (A02) and shared scale")}
+                  </span>
+                  <span className="font-mono text-[11px] text-muted-foreground">s̄ = {NEATLINE_GEOREF_P46.sharedScale.sbarMPerPx} m/px</span>
+                </div>
+                <div className="mt-2 flex flex-wrap gap-1.5 font-mono text-[10px]">
+                  <span className="rounded-full border bg-background px-2 py-0.5">A02 N: {NEATLINE_GEOREF_P46.control.residuals.top.residualM} m</span>
+                  <span className="rounded-full border bg-background px-2 py-0.5">A02 E: {NEATLINE_GEOREF_P46.control.residuals.right.residualM} m</span>
+                  <span className="rounded-full border bg-background px-2 py-0.5">sx = {NEATLINE_GEOREF_P46.sharedScale.sx} m/px</span>
+                  <span className="rounded-full border bg-background px-2 py-0.5">sy = {NEATLINE_GEOREF_P46.sharedScale.sy} m/px</span>
+                  <span className="rounded-full border bg-background px-2 py-0.5">{t("medosna konsistenca", "axis consistency")} {NEATLINE_GEOREF_P46.sharedScale.axisConsistencyPct} %</span>
+                </div>
+              </div>
+
+              {/* P46: listi */}
+              <div className="mt-3 rounded-lg border bg-secondary/30 p-3">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-sm font-semibold">
+                    {t("P46 — listi: detekcija strani in nova meja", "P46 — sheets: side detection and new bounds")}
+                  </span>
+                  <span className="font-mono text-[11px] text-muted-foreground">{t("premik vs P10 le 17–18 m", "shift vs P10 only 17–18 m")}</span>
+                </div>
+                <div className="mt-2 space-y-1">
+                  {(Object.keys(NEATLINE_GEOREF_P46.sheets) as ("A03" | "A04" | "A05")[]).map((s) => {
+                    const o = NEATLINE_GEOREF_P46.sheets[s];
+                    const sides = Object.entries(o.sides);
+                    return (
+                      <div key={s} className="rounded border bg-background px-2 py-1.5 text-[10px]">
+                        <div className="flex flex-wrap items-center justify-between gap-2 font-mono">
+                          <span className="font-semibold">
+                            {s} ({o.cell}) — {o.proposedStatus === "NEATLINE_GEOREFERENCED" ? t("zasidran", "anchored") : t("delno zasidran", "partially anchored")}
+                          </span>
+                          <span className="text-muted-foreground">
+                            ±{o.uncertaintyM} m · {t("prej", "was")} ±{o.previous.uncertaintyM} m · {o.detectedSides}/4 {t("strani", "sides")}
+                          </span>
+                        </div>
+                        <div className="mt-1 flex flex-wrap gap-1 font-mono text-[9px] text-muted-foreground">
+                          {sides.map(([side, d]) => (
+                            <span key={side} className={d.source === "detected" ? "rounded bg-emerald-100 px-1.5 py-0.5 dark:bg-emerald-950/40" : "rounded bg-amber-100 px-1.5 py-0.5 dark:bg-amber-950/40"}>
+                              {side} {d.px} px {d.source === "detected" ? "✓" : "≈"}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* P46: ne-regresija */}
+              <div className="mt-3 rounded-lg border bg-secondary/30 p-3">
+                <span className="text-sm font-semibold">
+                  {t("P46 — ne-regresija: 7/7 P10 kontrolnih napisov", "P46 — non-regression: 7/7 P10 control labels")}
+                </span>
+                <div className="mt-2 max-h-44 space-y-1 overflow-y-auto pr-1">
+                  {NEATLINE_GEOREF_P46.validations.map((v, i) => (
+                    <p key={i} className="rounded border bg-background px-2 py-1 text-[10px] leading-snug text-muted-foreground/90">
+                      <span className="font-mono text-emerald-700 dark:text-emerald-400">✓</span> <span className="font-mono">{v.label}</span> → {v.target}
+                      {typeof v.distM === "number" ? ` — ${v.distM} m` : ""}
+                    </p>
+                  ))}
+                </div>
+              </div>
+
+              {/* P46: poštenost */}
+              <div className="mt-3 rounded-lg border border-emerald-200 bg-emerald-50/60 p-3 dark:border-emerald-900/50 dark:bg-emerald-950/30">
+                <p className="text-[11px] leading-relaxed text-foreground/80">
+                  <span className="font-semibold">{t("Pošten status: ", "Honest status: ")}</span>
+                  {t(
+                    "SHEET_GEOREFS se namerno NE spreminja — rezultat je determinističen predlog nadgradnje (invarianti I1–I7), človeška potrditev detektiranih neatline črt pa ostaja odprta (lekcija P9: brez človeške potrditve ne objavljamo nadgradenj statusa). Strojno berljivo: /api/atlas/neatline-georef.",
+                    "SHEET_GEOREFS is deliberately NOT changed — the result is a deterministic upgrade proposal (invariants I1–I7); human confirmation of the detected neatlines remains open (the P9 lesson: no status upgrades without human confirmation). Machine-readable: /api/atlas/neatline-georef.",
                   )}
                 </p>
               </div>
