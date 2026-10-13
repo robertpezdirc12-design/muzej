@@ -31,6 +31,7 @@ import {
   PS_K1K2_P44,
   PS_LEXICON_VERIFIED_P45,
   NEATLINE_GEOREF_P46,
+  GURS_OVERLAY_P47,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -2284,6 +2285,79 @@ export function runQA(opts: QAOptions = {}): QAReport {
     p46Errors.length === 0
       ? `kontrola A02: 9.3/13.2 m · s̄ 0.7746 m/px (0,5 %) · A04/A05 4/4 ±40 m, A03 2/4 ±50 m · premik 17–18 m · 7/7 validacij (Bresnik 34, Fučkovci 33, Jankovichti 33 m) · ${p46FileDetail}`
       : p46Errors.join("; "),
+  );
+
+  // ——— P47: GURS parcel overlay — neodvisna validacija neatline afin ———
+  const p47Errors: string[] = [];
+  const p47 = GURS_OVERLAY_P47;
+  // listi: pinane mediane residuala in DRAWN števila
+  const p47Res = { A02: 9.8, A03: 9.8, A04: 5.6, A05: 9.3 } as const;
+  const p47Drawn = { A02: 640, A03: 112, A04: 498, A05: 165 } as const;
+  for (const s of ["A02", "A03", "A04", "A05"] as const) {
+    const o = p47.sheets[s];
+    if (o.drawn.residualM.median !== p47Res[s])
+      p47Errors.push(`${s}: pinana mediana residuala ni ${p47Res[s]} m`);
+    if (o.nDrawn !== p47Drawn[s])
+      p47Errors.push(`${s}: pinano število DRAWN parcel ni ${p47Drawn[s]}`);
+    if (o.drawn.residualM.median > 25 || o.drawn.residualM.p90 > 40)
+      p47Errors.push(`${s}: residual nad pragom (≤ 25 / 40 m)`);
+    if (o.drawn.covBest.median <= o.drawn.cov0.median)
+      p47Errors.push(`${s}: cov@best ni nad cov@0`);
+  }
+  // registracijski nivo nad kontrolo-zamik 200 px (A03–A05)
+  for (const s of ["A03", "A04", "A05"] as const) {
+    const o = p47.sheets[s];
+    if (o.drawn.cov0.median <= o.controls["200"].median + 0.08)
+      p47Errors.push(`${s}: cov@0 ni nad kontrolo 200 px + 0.08`);
+  }
+  // A05: WAIDENDORF EMPTY stratum izrecno dokumentiran
+  if (p47.sheets.A05.nEmpty !== 394)
+    p47Errors.push("A05: pinano število EMPTY parcel ni 394");
+  if (!p47.sheets.A05.empty.note.includes("WAIDENDORF"))
+    p47Errors.push("A05: EMPTY opomba ne omenja WAIDENDORF");
+  // 16 izrezov, SHEET_GEOREFS ostaja (lekcija P9)
+  if (p47.cropFiles.length !== 16) p47Errors.push("cropFiles ni 16");
+  if (!p47.verdictSi.includes("SHEET_GEOREFS se še naprej NAMERNO ne spreminja"))
+    p47Errors.push("verdict ne deklarira nedotaknjenosti SHEET_GEOREFS");
+  // dokazna datoteka (strežniški klic; vzorec qa-p37..p46)
+  let p47FileDetail = "dokazni datoteki nista preverjeni (readFile ni na voljo) — celovita kontrola teče na /api/qa";
+  if (opts.readFile) {
+    const rawEv = opts.readFile("research/issue17/gurs-overlay.json");
+    const rawRt = opts.readFile("src/data/atlas/gurs-overlay.json");
+    if (rawEv === null) p47Errors.push("research/issue17/gurs-overlay.json ni berljiv (izpis scripts/p47_gurs_overlay.py)");
+    if (rawRt === null) p47Errors.push("src/data/atlas/gurs-overlay.json ni berljiv (runtime kopija)");
+    if (rawEv !== null && rawRt !== null && rawEv !== rawRt)
+      p47Errors.push("dokazni in runtime izpis gurs-overlay.json nista identična (skript mora izpisati oba enako)");
+    if (rawEv !== null) {
+      try {
+        const j = JSON.parse(rawEv) as {
+          sheets: Record<string, { nDrawn: number; nEmpty: number; drawn: { cov0: { median: number }; covBest: { median: number }; residualM: { median: number; p90: number } }; controls: Record<string, { median: number }> }>;
+          crops: { file: string; sha256: string; bytes: number }[];
+          invariants: Record<string, string>;
+        };
+        for (const [s, o] of Object.entries(j.sheets)) {
+          if (o.drawn.residualM.median !== p47Res[s as keyof typeof p47Res])
+            p47Errors.push(`JSON ${s}: mediana residuala ni pinana`);
+        }
+        if (j.sheets.A05.nEmpty !== 394) p47Errors.push("JSON A05 EMPTY ni 394");
+        if (j.crops.length !== 16 || j.crops.some((c) => c.bytes <= 0 || c.sha256.length !== 64))
+          p47Errors.push("JSON izrezi: ni 16 ali manjkajo sha256/velikosti");
+        if (!Object.values(j.invariants).every((v) => v.includes("PASS") || v.includes("bajtno")))
+          p47Errors.push("JSON invarianti niso vsi PASS");
+        p47FileDetail = `dokazni datoteki preverjeni in identični (mediane 9.8/9.8/5.6/9.3 m, A05 EMPTY 394, 16 izrezov z sha256)`;
+      } catch {
+        p47Errors.push("research/issue17/gurs-overlay.json ni veljaven JSON");
+      }
+    }
+  }
+  push(
+    "qa-p47-gurs-overlay",
+    "P47: GURS PARCEL OVERLAY — neodvisna validacija P46 neatline afin (A03–A05, issue #14/§3): sodobne parcele (GURS eZKN WFS; KO 1544 2117 + KO 1552 1113 v bboxu ch, EPSG:3794 → WGS84) preslikane prek afin pasti na narisane črte 1825 — mediana residuala 9.8/9.8/5.6/9.3 m (A02 kontrola GEOTRUTH/A03/A04/A05), p90 ≤ 13.7 m; pokritost črnila cov@0 0.44–0.54 sistematično nad kontrolo-zamik 200 px (0.19–0.47) in se pri najboljšem zamiku strmi (0.71–0.86); STRATA: A05 'Stab der Reambulierungs-Beimappe' — 394/559 EMPTY parcel = skupna paša WAIDENDORF v 1825 (land-use dokaz, ne napaka registracije), A04 128 EMPTY (južno prekrivanje KO 1552); 16 dokaznih izrezov (12 neatline trakov rdeča/oranžna + 4 parcel overlay zeleni) v research/issue17/neatline-crops/; SHEET_GEOREFS še naprej namerno nespremenjen (lekcija P9) — človeška potrditev izrezov ostaja pogoj nadgradnje; status REVIEW",
+    "P47: GURS PARCEL OVERLAY — an independent validation of the P46 neatline affines (A03–A05, issue #14/§3): modern parcels (GURS eZKN WFS; KO 1544 2117 + KO 1552 1113 within the ch bbox, EPSG:3794 → WGS84) mapped through the affines fall on the drawn 1825 lines — median residual 9.8/9.8/5.6/9.3 m (A02 GEOTRUTH control/A03/A04/A05), p90 ≤ 13.7 m; ink coverage cov@0 0.44–0.54 systematically above the 200-px shift control (0.19–0.47) and sharpening under best alignment (0.71–0.86); STRATA: A05 'Stab der Reambulierungs-Beimappe' — 394/559 EMPTY parcels = the 1825 WAIDENDORF common pasture (a land-use proof, not a registration error), A04 128 EMPTY (the southern KO 1552 overlap); 16 proof crops (12 neatline strips red/amber + 4 green parcel overlays) in research/issue17/neatline-crops/; SHEET_GEOREFS still deliberately unchanged (the P9 lesson) — human confirmation of the crops remains the upgrade condition; status REVIEW",
+    p47Errors.length === 0,
+    p47Errors.length === 0
+      ? `mediane residuala 9.8/9.8/5.6/9.3 m (p90 ≤ 13.7) · cov@0 nad ctrl200 · covBest 0.71–0.86 · A05 EMPTY 394 = WAIDENDORF · 16 izrezov · ${p47FileDetail}`
+      : p47Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;

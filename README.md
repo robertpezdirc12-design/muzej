@@ -148,6 +148,17 @@ Zgodovinska katastrska slika vasi (franciscejski kataster, k.o. Griblje št. 83 
   (Bresnik/Fučkovci/Jankovichti 33–34 m); SHEET_GEOREFS namerno nespremenjen —
   predlog nadgradnje čaka človeško potrditev črt (lekcija P9); dokaz
   `research/issue17/neatline-georef.json` + `scripts/p46_neatline_georef.py`;
+- **GURS parcel overlay (P47, issue #14)** — neodvisna validacija neatline
+  afin z zunanjim virom: sodobne parcele (GURS eZKN WFS; KO 1544 + KO 1552,
+  EPSG:3794 → WGS84) preslikane prek P46 afin pasti na narisane črte 1825 z
+  mediano residuala **5.6–9.8 m** (p90 ≤ 13.7 m; kontrola metode na A02 pod
+  GEOTRUTH: 9.8 m); pokritost črnila 0.44–0.55 nad kontrolami-zamiki (0.19–0.47),
+  pri poravnavi strmi (0.71–0.86); land-use dokaz: 394/559 parcel na A05 = 
+  skupna paša **WAIDENDORF** v 1825 (EMPTY stratum); 16 dokaznih izrezov za
+  človeško potrditev črt (`research/issue17/neatline-crops/`); SHEET_GEOREFS
+  še naprej namerno nespremenjen (lekcija P9); dokaz
+  `research/issue17/gurs-overlay.json` + `scripts/p47_gurs_overlay.py` +
+  `scripts/p47_fetch_ko1552.sh`;
 - **globa povezava** `?atlas=hiša-75` (hiša št. 73 — demonstracijska veriga do MVG-010).
 
 API (statični, brez runtime AI):
@@ -171,6 +182,10 @@ API (statični, brez runtime AI):
 - `GET /api/atlas/neatline-georef` — neatline georeferenciranje A03–A05: princip
   "neatline = meja sekcije eZKN" kalibriran na A02 (9,3/13,2 m); A04/A05 zasidrani
   ±40 m, A03 delno ±50 m (iz ±200–400 m); 7/7 P10 validacij; predlog nadgradnje (P46).
+- `GET /api/atlas/gurs-overlay` — neodvisna validacija neatline afin prek sodobnih
+  parcel (GURS eZKN WFS, KO 1544 + KO 1552): mediana residuala 5.6–9.8 m, p90 ≤ 13.7 m;
+  strata DRAWN/EMPTY (WAIDENDORF skupna paša 1825); 16 dokaznih izrezov; status ANALYSIS
+  — človeška potrditev črt še pred nado (P47).
 
 ## Varnost
 

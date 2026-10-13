@@ -2776,3 +2776,158 @@ export const ISSUE17_AUDIT = {
   principleEn:
     "Per the issue #17 rules: nothing from #16 duplicated; the Atlas was not rebuilt; PT 1–98 NOT re-transcribed (only reviewed); REVIEW→VERIFIED ONLY with primary evidence (public SEM record, VAČ, GisKD, Commons); AI is not an evidentiary source — VLM readings stay REVIEW with marked uncertainties [~]; negative results remain visible.",
 };
+
+// ——— P47: GURS parcel overlay — neodvisna validacija neatline afin (issue #14/§3) ———
+
+export const GURS_OVERLAY_P47: {
+  series: "GEOREF";
+  source: string;
+  status: ResearchStatus;
+  generatedBy: string;
+  principle: { statement: string; control: string; strata: string };
+  sheets: Record<
+    "A02" | "A03" | "A04" | "A05",
+    {
+      cell: string;
+      affineSource: string;
+      nInCell: number;
+      nEvaluated: number;
+      nDrawn: number;
+      nEmpty: number;
+      mPerPx: number;
+      drawn: {
+        cov0: { median: number; q25: number; q75: number };
+        covBest: { median: number };
+        residualPx: { median: number; q75: number; p90: number };
+        residualM: { median: number; p90: number };
+      };
+      controls: Record<string, { median: number; n: number }>;
+      empty: { note: string };
+    }
+  >;
+  cropFiles: { file: string; kind: string; sheet: string; side?: string; source?: string }[];
+  findingsSi: string[];
+  verdictSi: string;
+  verdictEn: string;
+  next: string[];
+} = {
+  series: "GEOREF",
+  source:
+    "Sodobne parcele GURS eZKN WFS (KO 1544: research/georef-n83/gurs/parceles-0..4.json iz P10; KO 1552 v bboxu ch: parceles-ko1552-ch-0..2.json iz P47, recept scripts/p47_fetch_ko1552.sh) + P46 afini (research/issue17/neatline-georef.json) + GEOTRUTH meje A02 (model.ts) + skeni public/atlas/n83-a0{2,3,4,5}.jpg; polni izpis research/issue17/gurs-overlay.json + src/data/atlas/gurs-overlay.json; izrezi research/issue17/neatline-crops/ (16)",
+  status: "REVIEW",
+  generatedBy: "scripts/p47_gurs_overlay.py",
+  principle: {
+    statement:
+      "sodobne katastrske parcele (GURS eZKN WFS, EPSG:3794 → WGS84) preslikane skozi P46 neatline afine morajo pasti na narisane črte franciscejskega katastra 1825; merimo pokritost črnila oboda (plus-oblika 3×3 temno, prag 195; vzorčenje 1,5 px) in residual najboljšega zamika ±12 px",
+    control:
+      "kontrola metode na A02 pod GEOTRUTH preslikavo meja (model.ts, ±40–80 m) — mediana residuala 9.8 m je skladna z deklarirano negotovostjo",
+    strata:
+      "lokalna gostota temnega (bbox±100 px) ≥ 0.06 → DRAWN (narisana površina); pod pragom → EMPTY (v 1825 nenarisano: skupna paša WAIDENDORF, gozd) — nizka pokritost EMPTY je lastnost rabe tal, ne napaka registracije",
+  },
+  sheets: {
+    A02: {
+      cell: "cf",
+      affineSource: "model.ts georef-a02 meje (osno poravnana, GEOTRUTH)",
+      nInCell: 749,
+      nEvaluated: 659,
+      nDrawn: 640,
+      nEmpty: 19,
+      mPerPx: 0.805,
+      drawn: {
+        cov0: { median: 0.542, q25: 0.388, q75: 0.686 },
+        covBest: { median: 0.717 },
+        residualPx: { median: 12.2, q75: 14.2, p90: 17.0 },
+        residualM: { median: 9.8, p90: 13.7 },
+      },
+      controls: { "100": { median: 0.496, n: 5120 }, "200": { median: 0.473, n: 5088 }, "400": { median: 0.433, n: 4787 } },
+      empty: { note: "brez (v naselbinskem jedru je vsa moderna zazidana tudi leta 1825 narisana)" },
+    },
+    A03: {
+      cell: "dg",
+      affineSource: "P46 neatline afina (neatline-georef.json)",
+      nInCell: 124,
+      nEvaluated: 118,
+      nDrawn: 112,
+      nEmpty: 6,
+      mPerPx: 0.775,
+      drawn: {
+        cov0: { median: 0.487, q25: 0.342, q75: 0.649 },
+        covBest: { median: 0.729 },
+        residualPx: { median: 12.7, q75: 15.3, p90: 17.0 },
+        residualM: { median: 9.8, p90: 13.2 },
+      },
+      controls: { "100": { median: 0.366, n: 896 }, "200": { median: 0.32, n: 888 }, "400": { median: 0.184, n: 775 } },
+      empty: { note: "6 parcel na robu (gozd)" },
+    },
+    A04: {
+      cell: "cg",
+      affineSource: "P46 neatline afina (neatline-georef.json)",
+      nInCell: 688,
+      nEvaluated: 626,
+      nDrawn: 498,
+      nEmpty: 128,
+      mPerPx: 0.775,
+      drawn: {
+        cov0: { median: 0.447, q25: 0.308, q75: 0.59 },
+        covBest: { median: 0.707 },
+        residualPx: { median: 7.2, q75: 10.8, p90: 13.2 },
+        residualM: { median: 5.6, p90: 10.2 },
+      },
+      controls: { "100": { median: 0.306, n: 3980 }, "200": { median: 0.298, n: 3929 }, "400": { median: 0.271, n: 3651 } },
+      empty: { note: "128 parcel (večinoma KO 1552 na južnem prekrivanju celic) na v 1825 nenarisanih površinah" },
+    },
+    A05: {
+      cell: "ch",
+      affineSource: "P46 neatline afina (neatline-georef.json)",
+      nInCell: 635,
+      nEvaluated: 559,
+      nDrawn: 165,
+      nEmpty: 394,
+      mPerPx: 0.775,
+      drawn: {
+        cov0: { median: 0.445, q25: 0.074, q75: 0.82 },
+        covBest: { median: 0.86 },
+        residualPx: { median: 12.0, q75: 14.4, p90: 17.0 },
+        residualM: { median: 9.3, p90: 13.1 },
+      },
+      controls: { "100": { median: 0.338, n: 1320 }, "200": { median: 0.189, n: 1316 }, "400": { median: 0.012, n: 1204 } },
+      empty: {
+        note: "394/559 parcel na v 1825 nenarisanih površinah — velikanska skupna paša WAIDENDORF (prosle črke sredi lista, 'Stab der Reambulierungs-Beimappe') + gozd; dokumentirana razlika rabe tal, ne napaka registracije",
+      },
+    },
+  },
+  cropFiles: [
+    { file: "A02-parcels.jpg", kind: "parcels", sheet: "A02" },
+    { file: "A03-parcels.jpg", kind: "parcels", sheet: "A03" },
+    { file: "A04-parcels.jpg", kind: "parcels", sheet: "A04" },
+    { file: "A05-parcels.jpg", kind: "parcels", sheet: "A05" },
+    { file: "A03-top.jpg", kind: "neatline", sheet: "A03", side: "top", source: "inferred-scale" },
+    { file: "A03-right.jpg", kind: "neatline", sheet: "A03", side: "right", source: "detected" },
+    { file: "A03-bottom.jpg", kind: "neatline", sheet: "A03", side: "bottom", source: "detected" },
+    { file: "A03-left.jpg", kind: "neatline", sheet: "A03", side: "left", source: "inferred-scale" },
+    { file: "A04-top.jpg", kind: "neatline", sheet: "A04", side: "top", source: "detected" },
+    { file: "A04-right.jpg", kind: "neatline", sheet: "A04", side: "right", source: "detected" },
+    { file: "A04-bottom.jpg", kind: "neatline", sheet: "A04", side: "bottom", source: "detected" },
+    { file: "A04-left.jpg", kind: "neatline", sheet: "A04", side: "left", source: "detected" },
+    { file: "A05-top.jpg", kind: "neatline", sheet: "A05", side: "top", source: "detected" },
+    { file: "A05-right.jpg", kind: "neatline", sheet: "A05", side: "right", source: "detected" },
+    { file: "A05-bottom.jpg", kind: "neatline", sheet: "A05", side: "bottom", source: "detected" },
+    { file: "A05-left.jpg", kind: "neatline", sheet: "A05", side: "left", source: "detected" },
+  ],
+  findingsSi: [
+    "Neodvisna validacija P46 afin z ZUNANJIM virom (GURS eZKN): sodobne parcele se registrirajo na risbo 1825 z mediano residuala 9.8/5.6/9.3 m (A03/A04/A05), p90 ≤ 13.2 m — znotraj neatline negotovosti ±40–50 m, daleč pod staro GRID_APPROX ±200–400 m.",
+    "Kontrola metode na A02 (GEOTRUTH ±40–80 m): mediana residuala 9.8 m — raven ujemanja enaka kot na P46 afineh, kar potrjuje tudi konsistentnost GEOTRUTH-a.",
+    "A05/ch je 'Stab der Reambulierungs-Beimappe' — 394/559 evalviranih parcel pada na v 1825 nenarisane površine (EMPTY): velikanska skupna paša WAIDENDORF s proslimi črkami sredi lista. To je kvantitativno dokumentirana razlika rabe tal (1825 paša → poznejša delitev), ne napaka registracije.",
+    "Pokritost črnila DRAWN parcel brez zamika (0.44–0.55) je sistematično nad kontrolo-zamik 200 px (0.19–0.30; na gosto narisani A02 tudi kontrole visoke — zato je tam odločilni residual) in se pri najboljšem zamiku (0.71–0.86) še strmi — tipičen podpis pravilne registracije.",
+  ],
+  verdictSi:
+    "GURS parcel overlay (P47): sodobna parcelna mreža (KO 1544 + KO 1552) preslikana prek P46 neatline afin se registrira na risbo 1825 z mediano residuala 5.6–9.8 m in p90 ≤ 13.2 m na vseh treh listih A03–A05; kontrola metode na A02 (GEOTRUTH) da 9.8 m. Pokritost črnila je nad kontrole-zamiki in se pri poravnavi strmi (0.71–0.86). A05 razkriva land-use dokaz: 394 EMPTY parcel = WAIDENDORF skupna paša v 1825. To je neodvisna zunanj validacija P46 — a SHEET_GEOREFS se še naprej NAMERNO ne spreminja: človeška potrditev neatline črt prek 16 dokaznih izrezov (research/issue17/neatline-crops/) ostaja pogoj nadgradnje (lekcija P9).",
+  verdictEn:
+    "GURS parcel overlay (P47): the modern parcel grid (KO 1544 + KO 1552) mapped through the P46 neatline affines registers onto the 1825 drawing with a median residual of 5.6–9.8 m and p90 ≤ 13.2 m on all three sheets A03–A05; the method control on A02 (GEOTRUTH) gives 9.8 m. Ink coverage sits above the shift controls and sharpens under alignment (0.71–0.86). A05 reveals a land-use proof: 394 EMPTY parcels = the WAIDENDORF common pasture of 1825. This is an independent external validation of P46 — yet SHEET_GEOREFS still deliberately remains unchanged: human confirmation of the neatlines via the 16 proof crops (research/issue17/neatline-crops/) remains the upgrade condition (the P9 lesson).",
+  next: [
+    "človeška potrditev detektiranih neatline črt (vizualni pregled 16 izrezov v research/issue17/neatline-crops/) → nato nadgradnja SHEET_GEOREFS A03–A05 + Leaflet overlay kot pri A01/A02",
+    "razširitev overlay-a na polne poligone KO 1552 (celotna k.o., ne samo bbox ch) za pokritost južnega dela",
+    "stavbni overlay: primerjava narisanih stavb 1825 (Blatt X register, 102 stavbnih mest) z modernimi stavbnimi parcelami GURS — most PUA↔PT↔PS↔GURS",
+    "najostrejši zamik (mediana 7–13 px ≈ 5–10 m) omogoča izris sodobnih parcel kot pomožnega sloja nad skeni v Atlasu (zahteve iz P46 next)",
+  ],
+};

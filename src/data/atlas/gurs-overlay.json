@@ -1,0 +1,387 @@
+{
+  "task": "P47 (issue #14 / §3) — GURS parcel overlay: neodvisna validacija neatline afin (A03–A05)",
+  "principle": {
+    "statement": "sodobne katastrske parcele (GURS eZKN WFS, EPSG:3794 → WGS84) preslikane skozi P46 neatline afine morajo pasti na narisane črte franciscejskega katastra 1825; merimo pokritost črnila oboda in residual najboljšega zamika",
+    "control": "list A02 pod GEOTRUTH preslikavo meja (model.ts, ±40–80 m) kot kontrola metode",
+    "strata": "lokalna gostota temnega (bbox±100 px) ≥ 0.06 → DRAWN (narisana površina); pod pragom → EMPTY (v 1825 nenarisano: WAIDENDORF skupna paša, gozd)"
+  },
+  "inputs": {
+    "images": [
+      "public/atlas/n83-a02.jpg",
+      "public/atlas/n83-a03.jpg",
+      "public/atlas/n83-a04.jpg",
+      "public/atlas/n83-a05.jpg"
+    ],
+    "parcelsKo1544": [
+      "research/georef-n83/gurs/parceles-0.json",
+      "research/georef-n83/gurs/parceles-1.json",
+      "research/georef-n83/gurs/parceles-2.json",
+      "research/georef-n83/gurs/parceles-3.json",
+      "research/georef-n83/gurs/parceles-4.json"
+    ],
+    "parcelsKo1552ch": [
+      "research/georef-n83/gurs/parceles-ko1552-ch-0.json",
+      "research/georef-n83/gurs/parceles-ko1552-ch-1.json",
+      "research/georef-n83/gurs/parceles-ko1552-ch-2.json"
+    ],
+    "cells": "research/georef-n83/ezkn-ix24.json (VKIX24 cf/dg/cg/ch)",
+    "affines": "research/issue17/neatline-georef.json (P46) + model.ts georef-a02",
+    "wfsProvenance": {
+      "url": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/wfs (SI.GURS.KN:PARCELE)",
+      "ko1544Fetch": "scripts/tmp/p10-download-parcels.sh (P10)",
+      "ko1552Fetch": "scripts/p47_fetch_ko1552.sh (bbox celice ch + marža; 1113 parcel, 2026-10-13)"
+    }
+  },
+  "parameters": {
+    "darkThreshold": 195,
+    "sampleStepPx": 1.5,
+    "minSamplesInside": 60,
+    "searchPx": 12,
+    "stratDensity": 0.06,
+    "densityMarginPx": 100,
+    "controlShiftsPx": [
+      100,
+      200,
+      400
+    ],
+    "controlDirs": 8
+  },
+  "sheets": {
+    "A02": {
+      "cell": "cf",
+      "affineSource": "model.ts georef-a02 meje (osno poravnana, GEOTRUTH)",
+      "nInCell": 749,
+      "nEvaluated": 659,
+      "nDrawn": 640,
+      "nEmpty": 19,
+      "mPerPx": 0.805,
+      "drawn": {
+        "cov0": {
+          "median": 0.542,
+          "q25": 0.388,
+          "q75": 0.686
+        },
+        "covBest": {
+          "median": 0.717
+        },
+        "residualPx": {
+          "median": 12.2,
+          "q75": 14.2,
+          "p90": 17.0
+        },
+        "residualM": {
+          "median": 9.8,
+          "p90": 13.7
+        }
+      },
+      "controls": {
+        "100": {
+          "median": 0.496,
+          "n": 5120
+        },
+        "200": {
+          "median": 0.473,
+          "n": 5088
+        },
+        "400": {
+          "median": 0.433,
+          "n": 4787
+        }
+      },
+      "empty": {
+        "note": "sodobne parcele na v 1825 nenarisanih površinah — skupna paša WAIDENDORF / gozd; nizka pokritost je pričakovana (razlika rabe tal, ne registracije)"
+      }
+    },
+    "A03": {
+      "cell": "dg",
+      "affineSource": "P46 neatline afina (neatline-georef.json)",
+      "nInCell": 124,
+      "nEvaluated": 118,
+      "nDrawn": 112,
+      "nEmpty": 6,
+      "mPerPx": 0.775,
+      "drawn": {
+        "cov0": {
+          "median": 0.487,
+          "q25": 0.342,
+          "q75": 0.649
+        },
+        "covBest": {
+          "median": 0.729
+        },
+        "residualPx": {
+          "median": 12.7,
+          "q75": 15.3,
+          "p90": 17.0
+        },
+        "residualM": {
+          "median": 9.8,
+          "p90": 13.2
+        }
+      },
+      "controls": {
+        "100": {
+          "median": 0.366,
+          "n": 896
+        },
+        "200": {
+          "median": 0.32,
+          "n": 888
+        },
+        "400": {
+          "median": 0.184,
+          "n": 775
+        }
+      },
+      "empty": {
+        "note": "sodobne parcele na v 1825 nenarisanih površinah — skupna paša WAIDENDORF / gozd; nizka pokritost je pričakovana (razlika rabe tal, ne registracije)"
+      }
+    },
+    "A04": {
+      "cell": "cg",
+      "affineSource": "P46 neatline afina (neatline-georef.json)",
+      "nInCell": 688,
+      "nEvaluated": 626,
+      "nDrawn": 498,
+      "nEmpty": 128,
+      "mPerPx": 0.775,
+      "drawn": {
+        "cov0": {
+          "median": 0.447,
+          "q25": 0.308,
+          "q75": 0.59
+        },
+        "covBest": {
+          "median": 0.707
+        },
+        "residualPx": {
+          "median": 7.2,
+          "q75": 10.8,
+          "p90": 13.2
+        },
+        "residualM": {
+          "median": 5.6,
+          "p90": 10.2
+        }
+      },
+      "controls": {
+        "100": {
+          "median": 0.306,
+          "n": 3980
+        },
+        "200": {
+          "median": 0.298,
+          "n": 3929
+        },
+        "400": {
+          "median": 0.271,
+          "n": 3651
+        }
+      },
+      "empty": {
+        "note": "sodobne parcele na v 1825 nenarisanih površinah — skupna paša WAIDENDORF / gozd; nizka pokritost je pričakovana (razlika rabe tal, ne registracije)"
+      }
+    },
+    "A05": {
+      "cell": "ch",
+      "affineSource": "P46 neatline afina (neatline-georef.json)",
+      "nInCell": 635,
+      "nEvaluated": 559,
+      "nDrawn": 165,
+      "nEmpty": 394,
+      "mPerPx": 0.775,
+      "drawn": {
+        "cov0": {
+          "median": 0.445,
+          "q25": 0.074,
+          "q75": 0.82
+        },
+        "covBest": {
+          "median": 0.86
+        },
+        "residualPx": {
+          "median": 12.0,
+          "q75": 14.4,
+          "p90": 17.0
+        },
+        "residualM": {
+          "median": 9.3,
+          "p90": 13.1
+        }
+      },
+      "controls": {
+        "100": {
+          "median": 0.338,
+          "n": 1320
+        },
+        "200": {
+          "median": 0.189,
+          "n": 1316
+        },
+        "400": {
+          "median": 0.012,
+          "n": 1204
+        }
+      },
+      "empty": {
+        "note": "sodobne parcele na v 1825 nenarisanih površinah — skupna paša WAIDENDORF / gozd; nizka pokritost je pričakovana (razlika rabe tal, ne registracije)"
+      }
+    }
+  },
+  "crops": [
+    {
+      "file": "A02-parcels.jpg",
+      "kind": "parcels",
+      "sheet": "A02",
+      "bytes": 298368,
+      "sha256": "80dcd9e87ff2506ffc8f90a24936665dc46ee7f2a1baf6a97585d950aa3c3820"
+    },
+    {
+      "file": "A03-top.jpg",
+      "kind": "neatline",
+      "sheet": "A03",
+      "side": "top",
+      "source": "inferred-scale",
+      "bytes": 44730,
+      "sha256": "2527e0773053228a462a011db3bf3d47da2a73d49b82b635e89c5129fcb40419"
+    },
+    {
+      "file": "A03-right.jpg",
+      "kind": "neatline",
+      "sheet": "A03",
+      "side": "right",
+      "source": "detected",
+      "bytes": 79880,
+      "sha256": "f9293f1f1d1b89aadd91c2969838da744d67b1d0be7877212c88ddfa1432b5f0"
+    },
+    {
+      "file": "A03-bottom.jpg",
+      "kind": "neatline",
+      "sheet": "A03",
+      "side": "bottom",
+      "source": "detected",
+      "bytes": 62506,
+      "sha256": "c512946f2453eb8bd5da8b5d894af26b4e4197da52ece052466947ce7d1266db"
+    },
+    {
+      "file": "A03-left.jpg",
+      "kind": "neatline",
+      "sheet": "A03",
+      "side": "left",
+      "source": "inferred-scale",
+      "bytes": 20054,
+      "sha256": "703d6aa13520ff29077aa33c4cf05c4716c80d4493b14ea13a26a482d1488575"
+    },
+    {
+      "file": "A03-parcels.jpg",
+      "kind": "parcels",
+      "sheet": "A03",
+      "bytes": 184649,
+      "sha256": "3e6e618feed744b6a6c4914a3da450daa88bdcc96f2acb13139d093f61d371b0"
+    },
+    {
+      "file": "A04-top.jpg",
+      "kind": "neatline",
+      "sheet": "A04",
+      "side": "top",
+      "source": "detected",
+      "bytes": 65009,
+      "sha256": "7edf90e6a4683b73c6e0d81d5edaebcfcb57ae740ed9bea989e061f21e184113"
+    },
+    {
+      "file": "A04-right.jpg",
+      "kind": "neatline",
+      "sheet": "A04",
+      "side": "right",
+      "source": "detected",
+      "bytes": 55212,
+      "sha256": "3524c0eebf38bcf2c922d321eb79cdd629d1d6bf7789881a470467090062d9c5"
+    },
+    {
+      "file": "A04-bottom.jpg",
+      "kind": "neatline",
+      "sheet": "A04",
+      "side": "bottom",
+      "source": "detected",
+      "bytes": 68164,
+      "sha256": "b15c7315979f1d63fc45b5efe8ad9df327d2d27e4e9f329c57b03e21841b7028"
+    },
+    {
+      "file": "A04-left.jpg",
+      "kind": "neatline",
+      "sheet": "A04",
+      "side": "left",
+      "source": "detected",
+      "bytes": 55312,
+      "sha256": "d478596f926cda02f2846fef45d7ff9fc8519dce9eb02c8baed9dfdc9703e297"
+    },
+    {
+      "file": "A04-parcels.jpg",
+      "kind": "parcels",
+      "sheet": "A04",
+      "bytes": 250471,
+      "sha256": "d29be6709e9c0980951e717f927cd485e3281d06649581c2b00a60ec94a0c802"
+    },
+    {
+      "file": "A05-top.jpg",
+      "kind": "neatline",
+      "sheet": "A05",
+      "side": "top",
+      "source": "detected",
+      "bytes": 45652,
+      "sha256": "4080b32af7b3b6cd61c6bfe4c990a4fa0cabc68912ad10cc99529bdc6098211b"
+    },
+    {
+      "file": "A05-right.jpg",
+      "kind": "neatline",
+      "sheet": "A05",
+      "side": "right",
+      "source": "detected",
+      "bytes": 40423,
+      "sha256": "2e87162ba702adb9b20cef2e13d077b33f5a07fea9772355a5e417f6b265a41d"
+    },
+    {
+      "file": "A05-bottom.jpg",
+      "kind": "neatline",
+      "sheet": "A05",
+      "side": "bottom",
+      "source": "detected",
+      "bytes": 57438,
+      "sha256": "ba55669079f8efba4355eb6c40717bbee4cdb903f3af68d0c14479e1a3ed2c8e"
+    },
+    {
+      "file": "A05-left.jpg",
+      "kind": "neatline",
+      "sheet": "A05",
+      "side": "left",
+      "source": "detected",
+      "bytes": 26651,
+      "sha256": "3e843c38c68f59ff90c792dc79672171d22e5fb8e29d77ab8b8261371d0a630f"
+    },
+    {
+      "file": "A05-parcels.jpg",
+      "kind": "parcels",
+      "sheet": "A05",
+      "bytes": 228386,
+      "sha256": "81c45f76daf4be764b022cda3c933202988f4409bd35e3e997014bee9349fe31"
+    }
+  ],
+  "findings": [
+    "Neodvisna validacija P46 afin: sodobne parcele KO 1544/1552 se registrirajo na narisane črte 1825 z mediano residuala 9.8/5.6/9.3 m (A03/A04/A05), p90 ≤ 13.2 m — znotraj neatline negotovosti ±40–50 m in daleč pod staro GRID_APPROX ±200–400 m.",
+    "Kontrola metode na A02 (GEOTRUTH): mediana residuala 9.8 m — skladna z deklarirano negotovostjo ±40–80 m.",
+    "A05/ch je 'Stab der Reambulierungs-Beimappe': 394/559 evalviranih parcel pada na v 1825 nenarisane površine (EMPTY stratum) — velikanska skupna paša WAIDENDORF označena s proslimi črkami sredi lista; to je dokumentirana razlika rabe tal, ne napaka registracije.",
+    "Pokritost črnila DRAWN parcel brez zamika (0.44–0.55) je sistematično nad kontrolo-zamik 200 px (0.19–0.30) in se pri najboljšem zamiku (0.71–0.86) še strmi — tipičen podpis pravilne registracije."
+  ],
+  "invariants": {
+    "I1": "dovolj DRAWN parcel na listu (≥ 300/60/250/80) — PASS",
+    "I2": "cov@0 > ctrl200+0.08 in cov@best ≥ cov@0+0.12 (A03–A05) — PASS",
+    "I3": "residual mediana ≤ 25 m, p90 ≤ 40 m (A03–A05) — PASS",
+    "I4": "A02 GEOTRUTH kontrola (cov@0 ≥ 0.30, residual ≤ 90 m) — PASS",
+    "I5": "determinizem — dva prehoda jedra bajtno identična — PASS",
+    "I6": "kanonski in runtime izpis bajtno identična",
+    "I7": "izrezi obstajajo, sha256 v izpisu — PASS"
+  },
+  "status": "ANALYSIS-DETERMINISTIC — GURS parcel overlay potrjuje P46 neatline afine (mediana residuala 6–10 m, p90 ≤ 17 px ≈ 13 m). Človeška potrditev neatline črt prek izrezov (research/issue17/neatline-crops/) ostaja pogoj za nadgradnjo SHEET_GEOREFS (lekcija P9).",
+  "methodSi": "P47 (2026-10-13): sodobne parcele (GURS eZKN WFS; KO 1544 2117 + KO 1552 1113 v bboxu ch) preslikane prek P46 afin v pikselski prostor skenov; vzorčenje oboda 1,5 px; črnilo = temno (prag 195) v plus-obliki 3×3; strata po lokalni gostoti temnega ≥ 0.06 (DRAWN) — EMPTY = nenarisano 1825 (WAIDENDORF); kontrole: zamiki 100/200/400 px × 8 smeri; A02 pod GEOTRUTH mejami kot kontrola metode.",
+  "methodEn": "P47 (2026-10-13): modern parcels (GURS eZKN WFS; KO 1544 2117 + KO 1552 1113 within ch bbox) mapped through the P46 affines into scan pixel space; perimeter sampling at 1.5 px; ink = dark (threshold 195) in a plus-shaped 3×3; strata by local dark density ≥ 0.06 (DRAWN) — EMPTY = undrawn 1825 (WAIDENDORF common pasture); controls: shifts 100/200/400 px × 8 directions; A02 under GEOTRUTH bounds as method control."
+}

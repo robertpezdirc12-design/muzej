@@ -2784,3 +2784,45 @@ Stage Summary:
   (+NEATLINE_GEOREF_P46 + kartica P46 v museum-research.tsx), sources.ts
   (opombe P46 na N083A03/A04/A05), qa.ts (+qa-p46-neatline-georef), audit §26,
   README (P46 + API seznam).
+
+## P47 (2026-10-13) — GURS parcel overlay: neodvisna validacija neatline afin (A03–A05)
+
+- Princip: P46 afine preslikajo px → WGS84 brez prostih parametrov; P47 jih
+  testira od zunanje strani — sodobne parcele (GURS eZKN WFS, EPSG:3794 →
+  WGS84) preslikane nazaj v pikselski prostor skenov morajo pasti na
+  narisane črte 1825. Meritvi: pokritost črnila oboda (plus-oblika 3×3,
+  prag 195, vzorčenje 1,5 px; cov@0 / cov@best ±12 px) + residual
+  registracije; kontrole: isti obodi zamaknjeni 100/200/400 px × 8 smeri.
+- Nov vir: KO 1552 poligoni v bboxu celice ch (GURS WFS, 1113 parcel,
+  scripts/p47_fetch_ko1552.sh — BBOX(GEOM,…) filter; DescribeFeatureType:
+  geometrijska lastnost = GEOM). KO 1544 (2117) iz P10.
+- Strata: lokalna gostota temnega (bbox±100 px) ≥ 0.06 → DRAWN, sicer EMPTY
+  (v 1825 nenarisano).
+- Rezultati (mediana residuala, DRAWN): A02/cf (GEOTRUTH kontrola) 9.8 m;
+  A03/dg 9.8 m (p90 13.2); A04/cg 5.6 m (p90 10.2); A05/ch 9.3 m (p90 13.1)
+  — 6–10 m, znotraj neatline ±40–50 m, daleč pod GRID_APPROX ±200–400 m.
+  cov@0 0.44–0.54 nad ctrl@200 (0.19–0.47), cov@best 0.71–0.86. Na gosto
+  narisanih listih so kontrole visoke — odločilna metrika residual.
+- NOVA land-use ugotovitev: A05/ch je 'Stab der Reambulierungs-Beimappe' —
+  394/559 parcel EMPTY = skupna paša WAIDENDORF (prosle črke sredi lista);
+  navezuje se na WEIDEN-GAP P43. A04: 128 EMPTY (južno prekrivanje KO 1552).
+- Izrezi: 16 JPG v research/issue17/neatline-crops/ (12 neatline trakov —
+  rdeča detektirana / oranžna inferirana črta; 4 parcel overlay zeleni;
+  sha256 + velikosti v dokazu) — dokazni sklop za človeško potrditev črt.
+- SHEET_GEOREFS namerno NESPREMJEN (lekcija P9) — overlay je validacija,
+  nadgradnja statusov šele po človeškem pregledu izrezov.
+- Skripta scripts/p47_gurs_overlay.py (deterministična, brez AI ob delovanju,
+  FAIL ob padu invariant): I1 števila DRAWN (300/60/250/80), I2 cov@0 >
+  ctrl200+0.08 ∧ cov@best ≥ cov@0+0.12 (A03–A05), I3 residual ≤ 25/40 m,
+  I4 A02 GEOTRUTH kontrola (≥ 0.30, ≤ 90 m), I5 determinizem (2 prehoda
+  jedra bajtno), I6 identična izpisa, I7 izrezi + sha256. Vse PASS.
+- Izpisi: research/issue17/gurs-overlay.json + identična runtime kopija
+  src/data/atlas/gurs-overlay.json; API GET /api/atlas/gurs-overlay
+  (force-static); TS GURS_OVERLAY_P47 (research.ts) + kartica "Georeferenca
+  N83 — GURS parcel overlay (P47)" v Raziskavah/kurrent (za P46); sources.ts
+  opombe P47 na N083A02/A03/A04/A05 (Si+En); audit §27; README (P47 bullet +
+  API seznam); repov worklog P47.
+- QA 47→48 (qa-p47-gurs-overlay: pinane mediane 9.8/9.8/5.6/9.3, DRAWN
+  640/112/498/165, A05 EMPTY 394 + WAIDENDORF opomba, cov pravila, 16
+  izrezov, nedotaknjenost SHEET_GEOREFS, navzkrižna kontrola obeh izpisov
+  prek vbrizganega readFile — vzorec qa-p37..p46).

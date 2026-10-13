@@ -1511,3 +1511,68 @@ overlay (lekcija P9: brez človeške potrditve ne objavljamo nadgradenj).
 Kartica »Georeferenca N83 — neatline sidra A03–A05 (P46)« v Raziskavah;
 opombe P46 v virih N083A03/A04/A05; QA **46 → 47**
 (`qa-p46-neatline-georef`).
+
+## §27 — P47: GURS parcel overlay — neodvisna validacija neatline afin (issue #14 / §3)
+
+**Datum:** 2026-10-13 · **Skript:** `scripts/p47_gurs_overlay.py`
+(determinističen, brez AI ob delovanju, FAIL ob padu invariant I1–I7) ·
+**Dokaz:** `research/issue17/gurs-overlay.json` + identična runtime kopija
+`src/data/atlas/gurs-overlay.json` · **Izrezi:**
+`research/issue17/neatline-crops/` (16) · **API:**
+`GET /api/atlas/gurs-overlay` · **Novi vir:** `scripts/p47_fetch_ko1552.sh`
++ `parceles-ko1552-ch-{0,1,2}.json` (GURS WFS, KO 1552 v bboxu celice ch,
+1113 parcel; KO 1544 poligoni iz P10)
+
+### Princip
+
+P46 neatline afine preslikajo px → WGS84 brez prostih parametrov. P47 jih
+testira **od zunanje strani**: sodobne katastrske parcele (GURS eZKN WFS,
+EPSG:3794 → WGS84) preslikane nazaj v pikselski prostor skenov morajo pasti
+na narisane črte franciscejskega katastra 1825. Meritvi: (a) **pokritost
+črnila** — delež vzorcev parcelnega oboda (1,5 px) na temnem (prag 195,
+plus-oblika 3×3) brez zamika (cov@0) in pri najboljšem zamiku ±12 px;
+(b) **residual registracije** — razdalja najboljšega zamika. Kontrole: isti
+obodi zamaknjeni 100/200/400 px v 8 smeri (nivo ozadja). Strata: parcela z
+lokalno gostoto temnega (bbox±100 px) ≥ 0.06 je **DRAWN** (narisana
+površina), pod pragom **EMPTY** (v 1825 nenarisano).
+
+### Rezultati (mediana residuala, DRAWN stratum)
+
+| list | celica | afina | DRAWN | EMPTY | cov@0 | cov@best | kontrola 200 px | residual | p90 |
+|------|--------|-------|-------|-------|-------|----------|-----------------|----------|-----|
+| A02 | cf | GEOTRUTH (kontrola metode) | 640 | 19 | 0.542 | 0.717 | 0.473 | **9.8 m** | 13.7 m |
+| A03 | dg | P46 neatline | 112 | 6 | 0.487 | 0.729 | 0.320 | **9.8 m** | 13.2 m |
+| A04 | cg | P46 neatline | 498 | 128 | 0.447 | 0.707 | 0.298 | **5.6 m** | 10.2 m |
+| A05 | ch | P46 neatline | 165 | 394 | 0.445 | 0.860 | 0.189 | **9.3 m** | 13.1 m |
+
+Sodobna parcelna mreža se registrira na risbo 1825 z mediano **5.6–9.8 m**
+(p90 ≤ 13.7 m) — znotraj neatline negotovosti ±40–50 m, daleč pod staro
+GRID_APPROX ±200–400 m. Kontrola metode na A02 (GEOTRUTH ±40–80 m) da 9.8 m
+— skladno. Na gosto narisanih listih so kontrole-zamiki prav tako visoke
+(gosta risba; A02 kontrola@100 = 0.496) — odločilna metrika je tam residual.
+
+### Nova ugotovitev o rabi tal — WAIDENDORF
+
+A05/ch nosi naslov *Stab der Reambulierungs-Beimappe*; **394/559** evalviranih
+parcel pada na v 1825 nenarisane površine (EMPTY stratum): velikanska skupna
+paša **WAIDENDORF**, označena s proslimi črkami sredi lista, + gozd. To je
+kvantitativno dokumentiran dokaz o rabi (1825 skupna paša → poznejša delitev
+v modernem k.o.), ne napaka registracije — in se navezuje na WEIDEN-GAP iz
+P43 (576,24 J neizrecnih pašnikov). Na A04 je 128 EMPTY parcel (večinoma KO
+1552 na južnem prekrivanju celic).
+
+### Dokazni izrezi (za človeško potrditev neatline črt)
+
+16 JPG v `research/issue17/neatline-crops/`: 12 trakov ob detektiranih
+(živa rdeča) / inferiranih (oranžna, prekrimljena) neatline črtah A03–A05 +
+4 overlay izreki z zelenimi sodobnimi parcelami (A02–A05; sha256 + velikosti
+v dokazu). To je pripravljen dokazni sklop za **človeško potrditev** — edini
+preostanek pred nadgradnjo `SHEET_GEOREFS` A03–A05 (lekcija P9).
+
+### Pošten status
+
+`SHEET_GEOREFS` (model.ts) ostaja **namerno nespremenjen** tudi po P47 —
+overlay je močna neodvisna validacija, a nadgradnja statusov sledi šele po
+človeškem pregledu izrezov. Kartica »Georeferenca N83 — GURS parcel overlay
+(P47)« v Raziskavah (za P46); opombe P47 v virih N083A02/A03/A04/A05; QA
+**47 → 48** (`qa-p47-gurs-overlay`).

@@ -64,6 +64,7 @@ import {
   PS_K1K2_P44,
   PS_LEXICON_VERIFIED_P45,
   NEATLINE_GEOREF_P46,
+  GURS_OVERLAY_P47,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -1057,6 +1058,95 @@ export function MuseumResearch() {
                   {t(
                     "SHEET_GEOREFS se namerno NE spreminja — rezultat je determinističen predlog nadgradnje (invarianti I1–I7), človeška potrditev detektiranih neatline črt pa ostaja odprta (lekcija P9: brez človeške potrditve ne objavljamo nadgradenj statusa). Strojno berljivo: /api/atlas/neatline-georef.",
                     "SHEET_GEOREFS is deliberately NOT changed — the result is a deterministic upgrade proposal (invariants I1–I7); human confirmation of the detected neatlines remains open (the P9 lesson: no status upgrades without human confirmation). Machine-readable: /api/atlas/neatline-georef.",
+                  )}
+                </p>
+              </div>
+            </div>
+
+            {/* Georeferenca N83 — GURS parcel overlay (P47, issue #14) */}
+            <div className="min-w-0 rounded-xl border bg-card p-6 shadow-sm">
+              <h3 className="flex items-center gap-2 font-display text-lg font-semibold">
+                <Crosshair className="size-4 text-primary" aria-hidden="true" />
+                {t("Georeferenca N83 — GURS parcel overlay (P47)", "N83 georeference — GURS parcel overlay (P47)")}
+                <StatusBadge status={GURS_OVERLAY_P47.status} />
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                {t(
+                  "Neodvisna validacija P46 neatline afin z zunanjim virom: sodobne katastrske parcele (GURS eZKN, KO 1544 + KO 1552) preslikane prek afin nazaj na skene morajo pasti na narisane črte 1825. Merimo pokritost črnila oboda in residual najboljšega zamika (±12 px); kontrole = isti obodi zamaknjeni 100–400 px v 8 smeri.",
+                  "An independent validation of the P46 neatline affines with an external source: modern cadastral parcels (GURS eZKN, KO 1544 + KO 1552) mapped back onto the scans must fall on the drawn 1825 lines. We measure perimeter ink coverage and the best-shift residual (±12 px); controls = the same perimeters shifted 100–400 px in 8 directions.",
+                )}
+              </p>
+
+              {/* P47: mediane residuala po listih */}
+              <div className="mt-4 rounded-lg border bg-secondary/30 p-3">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-sm font-semibold">
+                    {t("P47 — mediana residuala registracije (DRAWN stratum)", "P47 — median registration residual (DRAWN stratum)")}
+                  </span>
+                  <span className="font-mono text-[11px] text-muted-foreground">{t("kontrola metode A02 (GEOTRUTH)", "method control A02 (GEOTRUTH)")}</span>
+                </div>
+                <div className="mt-2 space-y-1">
+                  {(Object.keys(GURS_OVERLAY_P47.sheets) as ("A02" | "A03" | "A04" | "A05")[]).map((s) => {
+                    const o = GURS_OVERLAY_P47.sheets[s];
+                    return (
+                      <div key={s} className="rounded border bg-background px-2 py-1.5 text-[10px]">
+                        <div className="flex flex-wrap items-center justify-between gap-2 font-mono">
+                          <span className="font-semibold">
+                            {s} ({o.cell}) — {o.affineSource.startsWith("P46") ? t("P46 afina", "P46 affine") : t("GEOTRUTH meje", "GEOTRUTH bounds")}
+                          </span>
+                          <span className="text-muted-foreground">
+                            {o.nDrawn} DRAWN · {o.nEmpty} EMPTY · {o.nInCell} {t("v celici", "in cell")}
+                          </span>
+                        </div>
+                        <div className="mt-1 flex flex-wrap gap-1 font-mono text-[9px]">
+                          <span className="rounded bg-emerald-100 px-1.5 py-0.5 dark:bg-emerald-950/40">residual {o.drawn.residualM.median} m (p90 {o.drawn.residualM.p90} m)</span>
+                          <span className="rounded border px-1.5 py-0.5">cov@0 {o.drawn.cov0.median}</span>
+                          <span className="rounded border px-1.5 py-0.5">{t("najboljši", "best")} {o.drawn.covBest.median}</span>
+                          <span className="rounded border px-1.5 py-0.5">{t("kontrola", "ctrl")} 200 px {o.controls["200"].median}</span>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* P47: WAIDENDORF — land-use dokaz */}
+              <div className="mt-3 rounded-lg border bg-secondary/30 p-3">
+                <span className="text-sm font-semibold">
+                  {t("P47 — strata: A05/ch »Stab der Reambulierungs-Beimappe«", "P47 — strata: A05/ch 'Stab der Reambulierungs-Beimappe'")}
+                </span>
+                <p className="mt-1 text-[11px] leading-relaxed text-muted-foreground/90">
+                  {t(
+                    "394/559 evalviranih parcel na A05 pada na v 1825 NENARISANE površine (lokalna gostota črnila < 0.06): velikanska skupna paša WAIDENDORF, označena s proslimi črkami sredi lista, + gozd. Nizka pokritost tam je pričakovana lastnost rabe tal (1825 paša → poznejša delitev), ne napaka registracije — kvantitativno dokumentiran dokaz o rabi na strani P43 (WEIDEN-GAP).",
+                    "394/559 evaluated parcels on A05 fall on surfaces NOT drawn in 1825 (local ink density < 0.06): the giant common pasture WAIDENDORF, marked with spread letters across the sheet, plus forest. Low coverage there is an expected property of land use (1825 pasture → later subdivision), not a registration error — a quantitatively documented proof of land use on the P43 side (WEIDEN-GAP).",
+                  )}
+                </p>
+              </div>
+
+              {/* P47: izrezi za človeško potrditev */}
+              <div className="mt-3 rounded-lg border bg-secondary/30 p-3">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-sm font-semibold">
+                    {t("P47 — dokazni izrezi za človeško potrditev (16)", "P47 — proof crops for human confirmation (16)")}
+                  </span>
+                  <span className="font-mono text-[11px] text-muted-foreground">research/issue17/neatline-crops/</span>
+                </div>
+                <div className="mt-2 max-h-32 space-y-1 overflow-y-auto pr-1">
+                  {GURS_OVERLAY_P47.cropFiles.map((c) => (
+                    <p key={c.file} className="rounded border bg-background px-2 py-1 font-mono text-[10px] leading-snug text-muted-foreground/90">
+                      {c.file} — {c.kind === "neatline" ? (c.source === "detected" ? t("detektirana črta (rdeča)", "detected line (red)") : t("inferirana črta (oranžna, prekrimljena)", "inferred line (amber, dashed)")) : t("overlay sodobnih parcel (zelena)", "modern parcel overlay (green)")}
+                    </p>
+                  ))}
+                </div>
+              </div>
+
+              {/* P47: poštenost */}
+              <div className="mt-3 rounded-lg border border-emerald-200 bg-emerald-50/60 p-3 dark:border-emerald-900/50 dark:bg-emerald-950/30">
+                <p className="text-[11px] leading-relaxed text-foreground/80">
+                  <span className="font-semibold">{t("Pošten status: ", "Honest status: ")}</span>
+                  {t(
+                    "Overlay je neodvisna validacija P46 (mediana 5.6–9.8 m, p90 ≤ 13.2 m), a SHEET_GEOREFS se še naprej NAMERNO ne spreminja — človeška potrditev neatline črt prek izrezov ostaja pogoj nadgradnje (lekcija P9). Na gosto narisanih listih so kontrole-zamiki prav tako visoke (gosta risba) — zato je odločilna metrika residual. Strojno berljivo: /api/atlas/gurs-overlay.",
+                    "The overlay is an independent validation of P46 (median 5.6–9.8 m, p90 ≤ 13.2 m), yet SHEET_GEOREFS still deliberately remains unchanged — human confirmation of the neatlines via the crops remains the upgrade condition (the P9 lesson). On densely drawn sheets the shift controls are also high (dense drawing) — hence the residual is the decisive metric. Machine-readable: /api/atlas/gurs-overlay.",
                   )}
                 </p>
               </div>
