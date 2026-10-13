@@ -32,6 +32,7 @@ import {
   PS_LEXICON_VERIFIED_P45,
   NEATLINE_GEOREF_P46,
   GURS_OVERLAY_P47,
+  BUILDINGS_OVERLAY_P48,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -2358,6 +2359,93 @@ export function runQA(opts: QAOptions = {}): QAReport {
     p47Errors.length === 0
       ? `mediane residuala 9.8/9.8/5.6/9.3 m (p90 ≤ 13.7) · cov@0 nad ctrl200 · covBest 0.71–0.86 · A05 EMPTY 394 = WAIDENDORF · 16 izrezov · ${p47FileDetail}`
       : p47Errors.join("; "),
+  );
+
+  // ——— P48: STAVBNI OVERLAY — GURS stavbe ↔ stavbna mesta 1825 ———
+  const p48Errors: string[] = [];
+  const p48 = BUILDINGS_OVERLAY_P48;
+  // listi: pinane on-symbol številke in mediane residuala
+  const p48OnSymbol = { A02: 149, A03: 0, A04: 0, A05: 26 } as const;
+  const p48Res = { A02: 9.8, A05: 10.1 } as const;
+  for (const s of ["A02", "A03", "A04", "A05"] as const) {
+    const o = p48.sheets[s];
+    if (o.onSymbol.n !== p48OnSymbol[s])
+      p48Errors.push(`${s}: pinano število on-symbol stavb ni ${p48OnSymbol[s]}`);
+    if (o.nEvaluated === 0 && s !== "A03")
+      p48Errors.push(`${s}: brez evalviranih stavb`);
+  }
+  for (const s of ["A02", "A05"] as const) {
+    const os = p48.sheets[s].onSymbol;
+    if (os.residualM?.median !== p48Res[s])
+      p48Errors.push(`${s}: pinana mediana residuala ni ${p48Res[s]} m`);
+    if ((os.residualM?.median ?? 0) > 25)
+      p48Errors.push(`${s}: residual nad pragom 25 m`);
+    if ((os.covBest?.median ?? 0) <= (os.cov0?.median ?? 1))
+      p48Errors.push(`${s}: cov@best ni nad cov@0`);
+  }
+  // kontinuiteta: pinane vrednosti
+  if (p48.continuity.pairs !== 37 || p48.continuity.pairsStrong !== 36)
+    p48Errors.push("kontinuiteta: pinano parov 37 (strong 36) ni izpolnjeno");
+  if (p48.continuity.gone !== 136 || p48.continuity.footprints1825 !== 156)
+    p48Errors.push("kontinuiteta: GONE 136/156 ni pinano");
+  if (p48.continuity.onSymbolWithoutVector !== 113)
+    p48Errors.push("kontinuiteta: on-symbol-brez-vektorizacije ni 113");
+  // Blatt X: refirana direktna referenca (0 identičnih površin) je jedro testa
+  const bx = p48.blattX;
+  if (bx.rows !== 60 || bx.distinctHausNr !== 59 || bx.inGrundRange41_2500 !== 58)
+    p48Errors.push("Blatt X: pinane 60/59/58 ni izpolnjeno");
+  if (bx.areasComparable !== 37 || bx.areasIdentical !== 0)
+    p48Errors.push("Blatt X: površine 0/37 identičnih (refrirana referenca) ni pinano");
+  if (bx.b3OwnerNumeric !== 18)
+    p48Errors.push("Blatt X: owner-številke B3 ni 18");
+  if (!(bx.medianAreaJoch > 5 && bx.grundHouseMedianJoch < 1))
+    p48Errors.push("Blatt X: površine vrstic niso red velikosti nad dvorišči");
+  // izrezi + nedotaknjenost SHEET_GEOREFS
+  if (p48.cropFiles.length !== 12) p48Errors.push("cropFiles ni 12");
+  if (!p48.verdictSi.includes("SHEET_GEOREFS in obstoječi dokazi P40–P47 nespremenjeni"))
+    p48Errors.push("verdict ne deklarira nedotaknjenosti SHEET_GEOREFS in dokazov");
+  // dokazna datoteka (strežniški klic; vzorec qa-p37..p47)
+  let p48FileDetail = "dokazni datoteki nista preverjeni (readFile ni na voljo) — celovita kontrola teče na /api/qa";
+  if (opts.readFile) {
+    const rawEv = opts.readFile("research/issue17/buildings-overlay.json");
+    const rawRt = opts.readFile("src/data/atlas/buildings-overlay.json");
+    if (rawEv === null) p48Errors.push("research/issue17/buildings-overlay.json ni berljiv (izpis scripts/p48_buildings_overlay.py)");
+    if (rawRt === null) p48Errors.push("src/data/atlas/buildings-overlay.json ni berljiv (runtime kopija)");
+    if (rawEv !== null && rawRt !== null && rawEv !== rawRt)
+      p48Errors.push("dokazni in runtime izpis buildings-overlay.json nista identična (skript mora izpisati oba enako)");
+    if (rawEv !== null) {
+      try {
+        const j = JSON.parse(rawEv) as {
+          sheets: Record<string, { nEvaluated: number; onSymbol: { n: number; residualM?: { median: number } } }>;
+          continuity: { pairs: number; pairsStrong: number; gone: number; footprints1825: number };
+          blattX: { rows: number; distinctHausNr: number; areasComparable: number; areasIdentical: number };
+          crops: { file: string; sha256: string; bytes: number }[];
+          invariants: Record<string, string>;
+        };
+        if (j.sheets.A02.onSymbol.n !== 149 || j.sheets.A05.onSymbol.n !== 26)
+          p48Errors.push("JSON: on-symbol 149/26 ni pinano");
+        if (j.continuity.pairs !== 37 || j.continuity.gone !== 136)
+          p48Errors.push("JSON: kontinuiteta 37/136 ni pinana");
+        if (j.blattX.areasIdentical !== 0 || j.blattX.areasComparable !== 37)
+          p48Errors.push("JSON: Blatt X 0/37 ni pinano");
+        if (j.crops.length !== 12 || j.crops.some((c) => c.bytes <= 0 || c.sha256.length !== 64))
+          p48Errors.push("JSON izrezi: ni 12 ali manjkajo sha256/velikosti");
+        if (!Object.values(j.invariants).every((v) => v.includes("PASS") || v.includes("bajtno")))
+          p48Errors.push("JSON invarianti niso vsi PASS");
+        p48FileDetail = `dokazni datoteki preverjeni in identični (on-symbol 149/26, kontinuiteta 37/136, Blatt X 0/37, 12 izrezov z sha256)`;
+      } catch {
+        p48Errors.push("research/issue17/buildings-overlay.json ni veljaven JSON");
+      }
+    }
+  }
+  push(
+    "qa-p48-gurs-buildings",
+    "P48: STAVBNI OVERLAY — GURS stavbe ↔ stavbna mesta 1825 (issue #14/§3, most PUA↔PT↔PS↔GURS): sodobni stavbni tlorisi (GURS eZKN WFS SI.GURS.KN:STAVBE, OBRIS_GEOM; KO 1544 401 z geometrijo + KO 1552 južni bbox 313, recept scripts/p48_fetch_stavbe.sh) preslikani prek GEOTRUTH mej A02 / P46 afin A03–A05 morajo pasti na narisane stavbne simbole 1825 — pokritost notranjosti+oboda na ERODIRANI maski (prag 195, plus-oblika 3×3; tanke parcelne črte izginejo, polni simboli ostanejo): A02/cf 149/154 stavb on-symbol (cov@best mediana 1.0, DRAWN cov@0 0.85), mediana residuala 9.8 m (p90 13.7 m) — stavbna raven potrjuje parcelno raven P47 (9.8 m); A05/ch Fučkovci 26/95 on-symbol, residual 10.1 m — neodvisna potrditev P46 afine na stavbni ravni; A04/cg 0 on-symbol (sodobne stavbe na paši WEIDENDORF so novejše od risbe — skladno s P47 EMPTY stratum); A03/dg 0 sodobnih stavb (dokumentirano); KONTINUITETA A02: 37 parov tloris↔stavba (≤ 25 px ≈ 20 m; 36 strong z cov@best ≥ 0.5), 113 stavb na simbolih brez vektorizacije, 136/156 tlorisov 1825 brez naslednika (mediana najbližje stavbe 392.6 px ≈ 316 m — razpršena zidanica na zahodnih pobočjih: vinice/hambi niso preživeli) — nadgradja P16 present.json (OSM 15/26/115) z uradnimi GURS obrisi; BLATT X (str. 138–139) kvantitativna opomba: 59 različnih hausNr, 58 v razponu GRUND (41–2500; 57 dejanskih parcel), a površine se z GRUND parcelami pri istih številkah ujemajo 0/37-krat — direktna referenca na register 1825 REFRIRANA; površine vrstic (mediana 6.329 J, do 17.3 J) so red velikosti nad GRUND dvorišči (0.282 J); owner stolpec vrstic 81–100 vsebuje 18 številk (63–80) — signal premika stolpcev; skladno z 'Zusammenstellung der Grundstücke' (opomba vrstice 1), letnico 1860 in reambulacijskimi glavami je Blatt X verjetno poznejša zbirka parcel — kvantitativna poprava P42 interpretacije 'register stavbnih mest' (ostaja [~] do človeške paleografije); 12 dokaznih izrezov (6 parov zeleni/modri, gone rdeči, 2×A05 on-symbol, A05/A04 new, pregled A02) v research/issue17/buildings-crops/; SHEET_GEOREFS in dokazi P40–P47 nespremenjeni; status REVIEW",
+    "P48: BUILDING OVERLAY — GURS buildings ↔ 1825 building sites (issue #14/§3, the PUA↔PT↔PS↔GURS bridge): modern building footprints (GURS eZKN WFS SI.GURS.KN:STAVBE, OBRIS_GEOM; KO 1544 401 with geometry + KO 1552 south bbox 313, receipt scripts/p48_fetch_stavbe.sh) mapped via the A02 GEOTRUTH bounds / P46 affines A03–A05 must fall on the drawn 1825 building symbols — interior+perimeter coverage on the ERODED mask (threshold 195, plus-shape 3×3; thin parcel lines vanish, solid symbols survive): A02/cf 149/154 buildings on-symbol (cov@best median 1.0, DRAWN cov@0 0.85), median residual 9.8 m (p90 13.7 m) — the building level confirms the parcel level of P47 (9.8 m); A05/ch Fučkovci 26/95 on-symbol, residual 10.1 m — an independent confirmation of the P46 affine at the building level; A04/cg 0 on-symbol (modern buildings on the WEIDENDORF pasture are younger than the map — consistent with the P47 EMPTY stratum); A03/dg 0 modern buildings (documented); CONTINUITY A02: 37 footprint↔building pairs (≤ 25 px ≈ 20 m; 36 strong with cov@best ≥ 0.5), 113 buildings on symbols without vectorization, 136/156 1825 footprints without a successor (median nearest building 392.6 px ≈ 316 m — the dispersed settlement on the western slopes: vineyard cottages/hambas did not survive) — an upgrade of P16 present.json (OSM 15/26/115) with official GURS footprints; BLATT X (pp. 138–139) quantitative note: 59 distinct hausNr, 58 within the GRUND range (41–2500; 57 actual parcels), yet row areas match the GRUND parcels at the same numbers 0/37 times — the direct reference to the 1825 register REFUTED; row areas (median 6.329 J, up to 17.3 J) are an order of magnitude above GRUND curtilages (0.282 J); the owner column of rows 81–100 contains 18 numbers (63–80) — a column-shift signal; consistent with 'Zusammenstellung der Grundstücke' (row-1 note), the year 1860 and the reambulation sheet headers, Blatt X is likely a LATER parcel compilation — a quantitative correction of the P42 interpretation 'register of building sites' (remains [~] until human paleography); 12 proof crops (6 pairs green/blue, gone red, 2×A05 on-symbol, A05/A04 new, A02 overview) in research/issue17/buildings-crops/; SHEET_GEOREFS and the P40–P47 evidence unchanged; status REVIEW",
+    p48Errors.length === 0,
+    p48Errors.length === 0
+      ? `A02 on-symbol 149/154 (residual 9.8 m) · A05 26/95 (10.1 m) · A04/A03 0 · kontinuiteta 37 parov (36 strong), GONE 136/156 · Blatt X 0/37 REFRIRANA · 12 izrezov · ${p48FileDetail}`
+      : p48Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;

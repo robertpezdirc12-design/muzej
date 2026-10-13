@@ -159,6 +159,21 @@ Zgodovinska katastrska slika vasi (franciscejski kataster, k.o. Griblje št. 83 
   še naprej namerno nespremenjen (lekcija P9); dokaz
   `research/issue17/gurs-overlay.json` + `scripts/p47_gurs_overlay.py` +
   `scripts/p47_fetch_ko1552.sh`;
+- **stavbni overlay (P48, issue #14)** — most PUA↔PT↔PS↔GURS: sodobni stavbni
+  tlorisi (GURS eZKN WFS `SI.GURS.KN:STAVBE`, OBRIS_GEOM; KO 1544 401 + KO 1552
+  južni bbox 313) preslikani prek GEOTRUTH mej A02 / P46 afin pasti na narisane
+  stavbne simbole 1825 — **A02: 149/154 stavb on-symbol** (cov@best mediana 1.0),
+  mediana residuala **9.8 m** (p90 13.7 m) — stavbna raven potrjuje parcelno
+  (P47: 9.8 m); **A05 Fučkovci 26/95, residual 10.1 m**; A04/cg 0 on-symbol
+  (sodobne stavbe na paši WEIDENDORF so novejše); kontinuiteta A02: 37 parov
+  tloris↔stavba (36 strong), **136/156 tlorisov 1825 brez naslednika**
+  (razpršena zidanica — vinice/hambi na zahodnih pobočjih) — nadgradja P16
+  present.json; **Blatt X (str. 138–139): direktna referenca na register 1825
+  REFRIRANA** (0/37 identičnih površin; površine vrstic mediana 6.3 J vs
+  dvorišča 0.28 J) — kvantitativna poprava P42 interpretacije; 12 dokaznih
+  izrezov (`research/issue17/buildings-crops/`); SHEET_GEOREFS in dokazi
+  P40–P47 nespremenjeni; dokaz `research/issue17/buildings-overlay.json` +
+  `scripts/p48_buildings_overlay.py` + `scripts/p48_fetch_stavbe.sh`;
 - **globa povezava** `?atlas=hiša-75` (hiša št. 73 — demonstracijska veriga do MVG-010).
 
 API (statični, brez runtime AI):
@@ -186,6 +201,11 @@ API (statični, brez runtime AI):
   parcel (GURS eZKN WFS, KO 1544 + KO 1552): mediana residuala 5.6–9.8 m, p90 ≤ 13.7 m;
   strata DRAWN/EMPTY (WAIDENDORF skupna paša 1825); 16 dokaznih izrezov; status ANALYSIS
   — človeška potrditev črt še pred nado (P47).
+- `GET /api/atlas/buildings-overlay` — stavbni overlay: sodobni stavbni tlorisi
+  (GURS eZKN WFS) ↔ stavbna mesta 1825; A02 149/154 on-symbol (residual 9.9 m),
+  A05 Fučkovci 26/95 (10.1 m); kontinuiteta 37 parov, 136/156 tlorisov brez
+  naslednika; Blatt X: direktna referenca REFRIRANA (0/37); 12 izrezov; status
+  ANALYSIS-DETERMINISTIC (P48).
 
 ## Varnost
 

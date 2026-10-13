@@ -65,6 +65,7 @@ import {
   PS_LEXICON_VERIFIED_P45,
   NEATLINE_GEOREF_P46,
   GURS_OVERLAY_P47,
+  BUILDINGS_OVERLAY_P48,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -1147,6 +1148,130 @@ export function MuseumResearch() {
                   {t(
                     "Overlay je neodvisna validacija P46 (mediana 5.6–9.8 m, p90 ≤ 13.2 m), a SHEET_GEOREFS se še naprej NAMERNO ne spreminja — človeška potrditev neatline črt prek izrezov ostaja pogoj nadgradnje (lekcija P9). Na gosto narisanih listih so kontrole-zamiki prav tako visoke (gosta risba) — zato je odločilna metrika residual. Strojno berljivo: /api/atlas/gurs-overlay.",
                     "The overlay is an independent validation of P46 (median 5.6–9.8 m, p90 ≤ 13.2 m), yet SHEET_GEOREFS still deliberately remains unchanged — human confirmation of the neatlines via the crops remains the upgrade condition (the P9 lesson). On densely drawn sheets the shift controls are also high (dense drawing) — hence the residual is the decisive metric. Machine-readable: /api/atlas/gurs-overlay.",
+                  )}
+                </p>
+              </div>
+            </div>
+
+            {/* Georeferenca N83 — stavbni overlay (P48, issue #14) */}
+            <div className="min-w-0 rounded-xl border bg-card p-6 shadow-sm">
+              <h3 className="flex items-center gap-2 font-display text-lg font-semibold">
+                <Crosshair className="size-4 text-primary" aria-hidden="true" />
+                {t("Georeferenca N83 — stavbni overlay: GURS stavbe ↔ stavbna mesta 1825 (P48)", "N83 georeference — building overlay: GURS buildings ↔ 1825 building sites (P48)")}
+                <StatusBadge status={BUILDINGS_OVERLAY_P48.status} />
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                {t(
+                  "Most PUA↔PT↔PS↔GURS: sodobni stavbni tlorisi (GURS eZKN WFS, SI.GURS.KN:STAVBE — KO 1544 401 + KO 1552 južni bbox 313) preslikani prek GEOTRUTH meja A02 / P46 afin A03–A05 nazaj na skene morajo pasti na narisane stavbne simbole 1825. Merimo pokritost črnila notranjosti+oboda na erodirani maski (tanke parcelne črte izginejo, polni simboli ostanejo) in residual najboljšega zamika (±12 px).",
+                  "The PUA↔PT↔PS↔GURS bridge: modern building footprints (GURS eZKN WFS, SI.GURS.KN:STAVBE — KO 1544 401 + KO 1552 south bbox 313) mapped back through the A02 GEOTRUTH bounds / P46 affines must fall on the drawn 1825 building symbols. We measure interior+perimeter ink coverage on the eroded mask (thin parcel lines vanish, solid symbols survive) and the best-shift residual (±12 px).",
+                )}
+              </p>
+
+              {/* P48: registracija po listih */}
+              <div className="mt-4 rounded-lg border bg-secondary/30 p-3">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-sm font-semibold">
+                    {t("P48 — registracija na stavbni ravni (on-symbol = cov@best ≥ 0.5)", "P48 — building-level registration (on-symbol = cov@best ≥ 0.5)")}
+                  </span>
+                  <span className="font-mono text-[11px] text-muted-foreground">{t("714 stavb prenesenih", "714 buildings fetched")}</span>
+                </div>
+                <div className="mt-2 space-y-1">
+                  {(Object.keys(BUILDINGS_OVERLAY_P48.sheets) as ("A02" | "A03" | "A04" | "A05")[]).map((s) => {
+                    const o = BUILDINGS_OVERLAY_P48.sheets[s];
+                    const os = o.onSymbol;
+                    return (
+                      <div key={s} className="rounded border bg-background px-2 py-1.5 text-[10px]">
+                        <div className="flex flex-wrap items-center justify-between gap-2 font-mono">
+                          <span className="font-semibold">
+                            {s} ({o.cell}) — {o.affineSource.startsWith("P46") ? t("P46 afina", "P46 affine") : t("GEOTRUTH meje", "GEOTRUTH bounds")}
+                          </span>
+                          <span className="text-muted-foreground">
+                            {o.nEvaluated} {t("evalviranih", "evaluated")} · {o.nDrawn} DRAWN · {o.nEmpty} EMPTY
+                          </span>
+                        </div>
+                        <div className="mt-1 flex flex-wrap gap-1 font-mono text-[9px]">
+                          {os.n > 0 && os.residualM ? (
+                            <>
+                              <span className="rounded bg-emerald-100 px-1.5 py-0.5 dark:bg-emerald-950/40">on-symbol {os.n} ({Math.round((100 * os.n) / o.nEvaluated)}%)</span>
+                              <span className="rounded bg-emerald-100 px-1.5 py-0.5 dark:bg-emerald-950/40">residual {os.residualM.median} m (p90 {os.residualM.p90} m)</span>
+                              <span className="rounded border px-1.5 py-0.5">cov@0 {os.cov0?.median}</span>
+                              <span className="rounded border px-1.5 py-0.5">{t("najboljši", "best")} {os.covBest?.median}</span>
+                            </>
+                          ) : (
+                            <span className="rounded border px-1.5 py-0.5 text-muted-foreground">
+                              {s === "A03" ? t("brez sodobnih stavb v celici (dokumentirano)", "no modern buildings in the cell (documented)") : t("brez ujemanj — vse sodobne stavbe so novejše od risbe", "no matches — all modern buildings are younger than the map")}
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* P48: kontinuiteta 1825 ↔ danes */}
+              <div className="mt-3 rounded-lg border bg-secondary/30 p-3">
+                <span className="text-sm font-semibold">
+                  {t("P48 — kontinuiteta stavbnih mest 1825 ↔ danes (list A02)", "P48 — building-site continuity 1825 ↔ today (sheet A02)")}
+                </span>
+                <div className="mt-2 flex flex-wrap gap-1 font-mono text-[9px]">
+                  <span className="rounded bg-emerald-100 px-1.5 py-0.5 dark:bg-emerald-950/40">{BUILDINGS_OVERLAY_P48.continuity.pairs} {t("parov tloris↔stavba ≤ 25 px", "footprint↔building pairs ≤ 25 px")}</span>
+                  <span className="rounded bg-emerald-100 px-1.5 py-0.5 dark:bg-emerald-950/40">{BUILDINGS_OVERLAY_P48.continuity.pairsStrong} strong</span>
+                  <span className="rounded border px-1.5 py-0.5">{BUILDINGS_OVERLAY_P48.continuity.onSymbolWithoutVector} {t("na simbolih brez vektorizacije", "on symbols without vectorization")}</span>
+                  <span className="rounded bg-red-100 px-1.5 py-0.5 dark:bg-red-950/40">{BUILDINGS_OVERLAY_P48.continuity.gone}/156 {t("tlorisov brez naslednika", "footprints without successor")}</span>
+                </div>
+                <p className="mt-2 text-[11px] leading-relaxed text-muted-foreground/90">
+                  {t(
+                    "Jedro vasi (Grüble, St. Veith) je stavbno kontinuirano: 149/154 sodobnih stavb v celici cf pada na narisane simbole 1825. Nasprotno pa 136 od 156 vektoriziranih tlorisov 1825 nima sodobne stavbe v bližini (mediana najbližje stavbe 392.6 px ≈ 316 m) — razpršena zidanica na zahodnih pobočjih (vinice, hambi) ni preživela. Nadgradja P16 present.json (OSM podlaga: 15 obstaja · 26 negotovih · 115 ni jih več) z uradnimi GURS obrisi.",
+                    "The village core (Grüble, St. Veith) is building-continuous: 149/154 modern buildings in cell cf fall on the drawn 1825 symbols. Conversely, 136 of 156 vectorized 1825 footprints have no modern building nearby (median nearest 392.6 px ≈ 316 m) — the dispersed settlement on the western slopes (vineyard cottages, hambas) did not survive. An upgrade of P16 present.json (OSM basis: 15 existing · 26 uncertain · 115 gone) with official GURS footprints.",
+                  )}
+                </p>
+              </div>
+
+              {/* P48: Blatt X kvantitativna opomba */}
+              <div className="mt-3 rounded-lg border bg-secondary/30 p-3">
+                <span className="text-sm font-semibold">
+                  {t("P48 — Blatt X (str. 138–139): kvantitativna opomba k P40/P42", "P48 — Blatt X (pp. 138–139): a quantitative note on P40/P42")}
+                </span>
+                <div className="mt-2 flex flex-wrap gap-1 font-mono text-[9px]">
+                  <span className="rounded border px-1.5 py-0.5">{BUILDINGS_OVERLAY_P48.blattX.rows} vrstic</span>
+                  <span className="rounded border px-1.5 py-0.5">{BUILDINGS_OVERLAY_P48.blattX.inGrundRange41_2500}/{BUILDINGS_OVERLAY_P48.blattX.distinctHausNr} hausNr v razponu GRUND</span>
+                  <span className="rounded bg-red-100 px-1.5 py-0.5 dark:bg-red-950/40">površine identične {BUILDINGS_OVERLAY_P48.blattX.areasIdentical}/{BUILDINGS_OVERLAY_P48.blattX.areasComparable} — REFRIRANA referenca</span>
+                  <span className="rounded border px-1.5 py-0.5">mediana vrstic {BUILDINGS_OVERLAY_P48.blattX.medianAreaJoch} J vs dvorišča {BUILDINGS_OVERLAY_P48.blattX.grundHouseMedianJoch} J</span>
+                  <span className="rounded border px-1.5 py-0.5">owner-številke vrstic 81–100: {BUILDINGS_OVERLAY_P48.blattX.b3OwnerNumeric}</span>
+                </div>
+                <p className="mt-2 text-[11px] leading-relaxed text-muted-foreground/90">
+                  {t(
+                    "'hausNr' stolpec Blatt X se sklada z razponom parcel GRUND (58/59), a površine vrstic se z register 1825 pri istih številkah NE ujemajo (0/37) — in so red velikosti nad tipičnimi dvorišči (mediana 6.3 vs 0.28 Joch). Skladno z opombo vrstice 1 'Zusammenstellung der Grundstücke', letnico 1860 v branjih in reambulacijskimi glavami listov je Blatt X verjetno poznejša zbirka parcel (reambulacija), NE register stavbnih mest — kvantitativna poprava P42 interpretacije (ARTIFAKT številke 82–100 = lastno štetje vrstic). Ostaja [~] do človeške paleografije.",
+                    "The Blatt X 'hausNr' column aligns with the GRUND parcel range (58/59), yet row areas do NOT match the 1825 register at the same numbers (0/37) — and are an order of magnitude above typical curtilages (median 6.3 vs 0.28 Joch). Consistent with the row-1 note 'Zusammenstellung der Grundstücke', the year 1860 in the reads and the reambulation sheet headers, Blatt X is likely a LATER parcel compilation (reambulation), NOT a register of building sites — a quantitative correction of the P42 interpretation (the ARTIFAKT numbers 82–100 = the rows' own counting). Remains [~] until human paleography.",
+                  )}
+                </p>
+              </div>
+
+              {/* P48: izrezi */}
+              <div className="mt-3 rounded-lg border bg-secondary/30 p-3">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-sm font-semibold">
+                    {t("P48 — dokazni izrezi (12)", "P48 — proof crops (12)")}
+                  </span>
+                  <span className="font-mono text-[11px] text-muted-foreground">research/issue17/buildings-crops/</span>
+                </div>
+                <div className="mt-2 max-h-32 space-y-1 overflow-y-auto pr-1">
+                  {BUILDINGS_OVERLAY_P48.cropFiles.map((c) => (
+                    <p key={c.file} className="rounded border bg-background px-2 py-1 font-mono text-[10px] leading-snug text-muted-foreground/90">
+                      {c.file} — {c.kind === "continuity-pair" ? t(`par tloris↔stavba (${c.distPx} px)`, `footprint↔building pair (${c.distPx} px)`) : c.kind === "on-symbol" ? t("stavba na narisanim simbolom (zelena)", "building on drawn symbol (green)") : c.kind === "gone" ? t("tlorisi 1825 brez naslednika (rdeči)", "1825 footprints without successor (red)") : c.kind === "overview" ? t("pregled listov A02", "sheet A02 overview") : t("nove stavbe na nenarisanih površinah", "new buildings on undrawn surfaces")}
+                    </p>
+                  ))}
+                </div>
+              </div>
+
+              {/* P48: poštenost */}
+              <div className="mt-3 rounded-lg border border-emerald-200 bg-emerald-50/60 p-3 dark:border-emerald-900/50 dark:bg-emerald-950/30">
+                <p className="text-[11px] leading-relaxed text-foreground/80">
+                  <span className="font-semibold">{t("Pošten status: ", "Honest status: ")}</span>
+                  {t(
+                    "Kontinuiteta je prikazana na ravni so-lociranosti (≤ 25 px ≈ 20 m) — pari NISO potrjeni za posamezne domačije PT (za to bo potrebna humanca potrditev simbolov in številk na karti). Blatt X interpretacija je kvantitativna opomba, ne verdikt. SHEET_GEOREFS in dokazi P40–P47 nespremenjeni. Strojno berljivo: /api/atlas/buildings-overlay.",
+                    "Continuity is shown at the co-location level (≤ 25 px ≈ 20 m) — pairs are NOT confirmed as individual PT homesteads (that will require human confirmation of the map symbols and numbers). The Blatt X interpretation is a quantitative note, not a verdict. SHEET_GEOREFS and the P40–P47 evidence unchanged. Machine-readable: /api/atlas/buildings-overlay.",
                   )}
                 </p>
               </div>

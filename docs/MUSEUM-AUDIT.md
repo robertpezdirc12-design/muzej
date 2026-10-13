@@ -1576,3 +1576,69 @@ overlay je močna neodvisna validacija, a nadgradnja statusov sledi šele po
 človeškem pregledu izrezov. Kartica »Georeferenca N83 — GURS parcel overlay
 (P47)« v Raziskavah (za P46); opombe P47 v virih N083A02/A03/A04/A05; QA
 **47 → 48** (`qa-p47-gurs-overlay`).
+
+## 28. P48 — stavbni overlay: GURS stavbe ↔ stavbna mesta 1825 (most PUA↔PT↔PS↔GURS)
+
+**Datum:** 2026-10-13 · **Skript:** `scripts/p48_buildings_overlay.py` (determinističen,
+brez AI ob delovanju, FAIL ob padu invariant I1–I8) · **Dokaz:**
+`research/issue17/buildings-overlay.json` (identična runtime kopija
+`src/data/atlas/buildings-overlay.json`) + 12 izrezov
+`research/issue17/buildings-crops/` (sha256 v dokazu).
+
+**Nov vir (provenienca `scripts/p48_fetch_stavbe.sh`):** sodobni stavbni tlorisi iz
+GURS eZKN WFS, sloj `SI.GURS.KN:STAVBE`, geometrijska lastnost **OBRIS_GEOM**
+(poligon tlorisa, EPSG:3794): KO 1544 = 403 značilk / **401 z geometrijo** (2 brez
+OBRIS_GEOM); KO 1552 južni bbox (isti recept kot P47) = **313**. Skupaj 714 stavb.
+
+**Metoda:** tlorisi preslikani prek GEOTRUTH mej A02 (model.ts) / P46 afin A03–A05 na
+skene; vzorčenje notranjosti + oboda (korak 2 px, vrez 1,5 px); pokritost črnila na
+**erodirani maski** (prag 195, plus-oblika 3×3 — tanke parcelne črte izginejo, polni
+stavbni simboli ostanejo); cov@0, cov@best (±12 px: grobo 2, fino 1), kontrole
+100/200/400 px × 8 smeri; strata po pravilu P47 (gostota ≥ 0.06 → DRAWN);
+klasifikacija **ON-SYMBOL** (cov@best ≥ 0.5) / PARTIAL (0.25–0.5) / NEW (<0.25);
+kontinuiteta v px prostoru (PAIR ≤ 25 px ≈ 20 m).
+
+**Rezultati:**
+
+| list | evalviranih | on-symbol | residual (mediana/p90) | opomba |
+|---|---|---|---|---|
+| A02/cf (GEOTRUTH) | 154 | **149** | **9.8 / 13.7 m** | DRAWN cov@0 0.85, cov@best 1.0 |
+| A03/dg (P46) | 0 | 0 | — | brez sodobnih stavb v celici (dokumentirano) |
+| A04/cg (P46) | 39 | **0** | — | vse sodobne stavbe novejše (paša WEIDENDORF — skladno s P47 EMPTY) |
+| A05/ch (P46) | 95 | **26** | **10.1 m** | sklop Fučkovci — stavbna potrditev P46 afine |
+
+Stavbna raven potrjuje parcelno raven P47 (9.8 m) pod isto preslikavo — registracija
+GEOTRUTH/afin je skladna na oveh ravneh.
+
+**Kontinuiteta 1825 ↔ danes (A02):** 156 vektoriziranih tlorisov (P9) ↔ 154 sodobnih
+stavb: **37 parov** (36 strong), 113 stavb na narisanih simbolih brez vektorizacije,
+0 čistih NEW (vsaka sodobna stavba v jedru pada na narisano površino), **136/156
+tlorisov brez naslednika** (mediana najbližje sodobne stavbe 392.6 px ≈ 316 m) —
+razpršena zidanica na zahodnih pobočjih (vinice, hambi) ni preživela. Nadgradja P16
+`present.json` (OSM podlaga: 15 obstaja · 26 negotovih · 115 ni jih več) z uradnimi
+GURS obrisi.
+
+**Blatt X (str. 138–139) — kvantitativna opomba k P40/P42:** od 60 transkribiranih
+vrstic ima 59 različnih numeričnih `hausNr` vrednosti; **58 pade v razpon GRUND
+parcel (41–2500; 57 dejanskih parcel)**, a **površine vrstic se z GRUND parcelami
+pri istih številkah ujemajo 0/37-krat** → direktna referenca na register 1825 je
+**REFRIRANA**. Površine vrstic (mediana **6.329 Joch**, do 17.3 J) so red velikosti
+nad GRUND dvorišči (mediana **0.282 J**) — vrstice so velike zemljiške parcele, ne
+stavbna mesta. Owner stolpec vrstic 81–100 vsebuje **18 številk (63–80)** — signal
+premika stolpcev pri VLM branju. Skladno z opombo vrstice 1 »Zusammenstellung der
+Grundstücke«, letnico 1860 v branjih in reambulacijskimi glavami listov je Blatt X
+verjetno **poznejša (reambulacijska) zbirka parcel** — kvantitativna poprava
+interpretacije P42 (»register stavbnih mest«; ARTIFAKT številke 82–100 = lastno
+štetje vrstic). Ostaja **[~] do človeške paleografije str. 138–139**; P40
+`blattXOverlap` okvir (60/102) se bere kot delno prekrivanje različnih sekcij.
+
+**Integracija:** API `GET /api/atlas/buildings-overlay` (force-static); TS
+`BUILDINGS_OVERLAY_P48` (research.ts) + kartica »Georeferenca N83 — stavbni overlay
+(P48)« v Raziskavah; opombe P48 v virih N083A02/A05 (Si+En); QA **48 → 49**
+(`qa-p48-gurs-buildings`). **SHEET_GEOREFS in dokazi P40–P47 namerno nespremenjeni**
+(lekcija P9).
+
+**Invarianti I1–I8: PASS** — I1 prenos 401+313 / evalvirani 154·0·39·95, I2 A02
+residual ≤ 15/25 m ∧ on-symbol 149, I3 A05 26 (10.1 m) ∧ A04 = 0, I4 kontinuiteta
+37/136, I5 Blatt X 60/59/58/37/0/18 pinano, I6 determinizem (2 prehoda bajtno), I7
+kanonski = runtime, I8 12 izrezov z sha256.

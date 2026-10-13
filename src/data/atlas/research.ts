@@ -2931,3 +2931,403 @@ export const GURS_OVERLAY_P47: {
     "najostrejši zamik (mediana 7–13 px ≈ 5–10 m) omogoča izris sodobnih parcel kot pomožnega sloja nad skeni v Atlasu (zahteve iz P46 next)",
   ],
 };
+
+export const BUILDINGS_OVERLAY_P48: {
+  series: "GEOREF";
+  source: string;
+  status: ResearchStatus;
+  generatedBy: string;
+  principle: { statement: string; control: string; continuity: string; blattX: string };
+  sheets: Record<
+    "A02" | "A03" | "A04" | "A05",
+    {
+      cell: string;
+      affineSource: string;
+      nInCell: number;
+      nEvaluated: number;
+      nDrawn: number;
+      nEmpty: number;
+      mPerPx: number;
+      drawn: {
+        n: number;
+        cov0: { median: number; q25: number; q75: number };
+        covBest: { median: number };
+        residualPx: { median: number; p90: number };
+        residualM: { median: number; p90: number };
+      } | null;
+      onSymbol: {
+        n: number;
+        cov0?: { median: number; q25: number; q75: number };
+        covBest?: { median: number };
+        residualPx?: { median: number; p90: number };
+        residualM?: { median: number; p90: number };
+      };
+      controls: Record<string, { median: number; n: number }>;
+    }
+  >;
+  continuity: {
+    sheet: string; footprints1825: number; modernEvaluated: number; pairPx: number;
+    pairs: number; pairsStrong: number; pairDistPx: { median: number | null; p90: number | null };
+    onSymbolWithoutVector: number; new: number; gone: number; goneNearPx: { median: number | null };
+    clsCounts: Record<string, number>;
+  };
+  blattX: {
+    rows: number; distinctHausNr: number; inGrundRange41_2500: number; inGrundParcelSet: number;
+    inPtHouseSet: number; areasComparable: number; areasIdentical: number; b3OwnerNumeric: number;
+    b3OwnerRange: [number, number]; medianAreaJoch: number; maxAreaJoch: number;
+    grundHouseMedianJoch: number; footer138vsota: string | null; rows1_20ComputedK: number;
+    rows1_20ComputedAs: string;
+  };
+  cropFiles: { file: string; kind: string; sheet: string; distPx?: number; cls?: string; n?: number; covBest?: number }[];
+  findingsSi: string[];
+  verdictSi: string;
+  verdictEn: string;
+  next: string[];
+} = {
+  series: "GEOREF",
+  source: "Sodobni stavbni tlorisi GURS eZKN WFS SI.GURS.KN:STAVBE (KO 1544: research/georef-n83/gurs/stavbe-ko1544-0.json, 401 z geometrijo; KO 1552 južni bbox: stavbe-ko1552-south-0.json, 313; recept scripts/p48_fetch_stavbe.sh) + GEOTRUTH meje A02 (model.ts) + P46 afini (neatline-georef.json) + tlorisi 1825 (src/data/atlas/buildings.json, 156) + Blatt X (research/issue17/ps-landuse.json + houses.ts + ps-raw/ps-138.json); polni izpis research/issue17/buildings-overlay.json + src/data/atlas/buildings-overlay.json; izrezi research/issue17/buildings-crops/ (12)",
+  status: "REVIEW",
+  generatedBy: "scripts/p48_buildings_overlay.py",
+  principle: {
+    statement: "sodobni stavbni tlorisi (GURS eZKN WFS SI.GURS.KN:STAVBE, OBRIS_GEOM, EPSG:3794 → WGS84) preslikani prek GEOTRUTH meja A02 / P46 afin A03–A05 morajo pasti na narisane stavbne simbole 1825; merimo pokritost črnila notranjosti+oboda na erodirani maski (plus-oblika 3×3, prag 195 — tanke parcelne črte izginejo, polni simboli ostanejo) in residual najboljšega zamika ±12 px",
+    control: "kontrole-zamiki 100/200/400 px × 8 smeri; strata po pravilu P47 (lokalna gostota temnega ≥ 0.06 → DRAWN); klasifikacija stavb ON-SYMBOL (cov@best ≥ 0.5) / PARTIAL (0.25–0.5) / NEW (<0.25)",
+    continuity: "A02: 156 vektoriziranih tlorisov 1825 (buildings.json, px prostor primarno) ↔ sodobne stavbe — PAIR ≤ 25 px (≈ 20 m), GONE (brez sodobne stavbe), NEW (brez predhodnika)",
+    blattX: "deterministična kvantitativna opomba k interpretaciji P40/P42 — test referenc (razpon, površine, številke v owner stolpcu) iz committed dokazov, brez AI"
+  },
+  sheets: {
+    A02: {
+      cell: "cf",
+      affineSource: "model.ts georef-a02 meje (osno poravnana, GEOTRUTH)",
+      nInCell: 154,
+      nEvaluated: 154,
+      nDrawn: 154,
+      nEmpty: 0,
+      mPerPx: 0.805,
+      drawn: {
+        n: 154,
+        cov0: {
+          median: 0.85,
+          q25: 0.562,
+          q75: 1.0
+        },
+        covBest: {
+          median: 1.0
+        },
+        residualPx: {
+          median: 12.3,
+          p90: 17.0
+        },
+        residualM: {
+          median: 9.9,
+          p90: 13.7
+        }
+      },
+      onSymbol: {
+        n: 149,
+        cov0: {
+          median: 0.867,
+          q25: 0.581,
+          q75: 1.0
+        },
+        covBest: {
+          median: 1.0
+        },
+        residualPx: {
+          median: 12.2,
+          p90: 17.0
+        },
+        residualM: {
+          median: 9.8,
+          p90: 13.7
+        }
+      },
+      controls: {
+        "100": {
+          median: 0.622,
+          n: 1232
+        },
+        "200": {
+          median: 0.533,
+          n: 1217
+        },
+        "400": {
+          median: 0.522,
+          n: 1138
+        }
+      }
+    },
+    A03: {
+      cell: "dg",
+      affineSource: "P46 neatline afina (neatline-georef.json)",
+      nInCell: 0,
+      nEvaluated: 0,
+      nDrawn: 0,
+      nEmpty: 0,
+      mPerPx: 0.775,
+      drawn: null,
+      onSymbol: {
+        n: 0
+      },
+      controls: {
+        "100": {
+          median: 0.0,
+          n: 0
+        },
+        "200": {
+          median: 0.0,
+          n: 0
+        },
+        "400": {
+          median: 0.0,
+          n: 0
+        }
+      }
+    },
+    A04: {
+      cell: "cg",
+      affineSource: "P46 neatline afina (neatline-georef.json)",
+      nInCell: 39,
+      nEvaluated: 39,
+      nDrawn: 3,
+      nEmpty: 36,
+      mPerPx: 0.775,
+      drawn: {
+        n: 3,
+        cov0: {
+          median: 0.0,
+          q25: 0.0,
+          q75: 0.071
+        },
+        covBest: {
+          median: 0.046
+        },
+        residualPx: {
+          median: 0.0,
+          p90: 8.9
+        },
+        residualM: {
+          median: 0.0,
+          p90: 6.9
+        }
+      },
+      onSymbol: {
+        n: 0
+      },
+      controls: {
+        "100": {
+          median: 0.0,
+          n: 23
+        },
+        "200": {
+          median: 0.0,
+          n: 14
+        },
+        "400": {
+          median: 0.0,
+          n: 12
+        }
+      }
+    },
+    A05: {
+      cell: "ch",
+      affineSource: "P46 neatline afina (neatline-georef.json)",
+      nInCell: 96,
+      nEvaluated: 95,
+      nDrawn: 28,
+      nEmpty: 67,
+      mPerPx: 0.775,
+      drawn: {
+        n: 28,
+        cov0: {
+          median: 0.871,
+          q25: 0.339,
+          q75: 0.983
+        },
+        covBest: {
+          median: 1.0
+        },
+        residualPx: {
+          median: 12.9,
+          p90: 17.0
+        },
+        residualM: {
+          median: 10.0,
+          p90: 13.2
+        }
+      },
+      onSymbol: {
+        n: 26,
+        cov0: {
+          median: 0.928,
+          q25: 0.526,
+          q75: 0.985
+        },
+        covBest: {
+          median: 1.0
+        },
+        residualPx: {
+          median: 13.0,
+          p90: 17.0
+        },
+        residualM: {
+          median: 10.1,
+          p90: 13.2
+        }
+      },
+      controls: {
+        "100": {
+          median: 0.6,
+          n: 224
+        },
+        "200": {
+          median: 0.12,
+          n: 224
+        },
+        "400": {
+          median: 0.0,
+          n: 219
+        }
+      }
+    }
+  },
+  continuity: {
+    sheet: "A02",
+    footprints1825: 156,
+    modernEvaluated: 154,
+    pairPx: 25,
+    pairs: 37,
+    pairsStrong: 36,
+    pairDistPx: {
+      median: 16.3,
+      p90: 22.3
+    },
+    onSymbolWithoutVector: 113,
+    new: 0,
+    gone: 136,
+    goneNearPx: {
+      median: 392.6
+    },
+    clsCounts: {
+      "ON-SYMBOL-BREZ-VEKTORIZACIJE": 113,
+      "PAIR-STRONG": 36,
+      PAIR: 1,
+      UNCLASSIFIED: 4
+    }
+  },
+  blattX: {
+    rows: 60,
+    distinctHausNr: 59,
+    inGrundRange41_2500: 58,
+    inGrundParcelSet: 57,
+    inPtHouseSet: 22,
+    areasComparable: 37,
+    areasIdentical: 0,
+    b3OwnerNumeric: 18,
+    b3OwnerRange: [
+      63.0,
+      80.0
+    ],
+    medianAreaJoch: 6.329,
+    maxAreaJoch: 17.299,
+    grundHouseMedianJoch: 0.282,
+    footer138vsota: "101 Joch 283 Klafter",
+    rows1_20ComputedK: 147722,
+    rows1_20ComputedAs: "92 J 522 K"
+  },
+  cropFiles: [
+    {
+      file: "a02-pair-1.jpg",
+      kind: "continuity-pair",
+      sheet: "A02",
+      distPx: 2.3,
+      cls: "PAIR-STRONG"
+    },
+    {
+      file: "a02-pair-2.jpg",
+      kind: "continuity-pair",
+      sheet: "A02",
+      distPx: 2.8,
+      cls: "PAIR-STRONG"
+    },
+    {
+      file: "a02-pair-3.jpg",
+      kind: "continuity-pair",
+      sheet: "A02",
+      distPx: 3.4,
+      cls: "PAIR-STRONG"
+    },
+    {
+      file: "a02-pair-4.jpg",
+      kind: "continuity-pair",
+      sheet: "A02",
+      distPx: 6.6,
+      cls: "PAIR-STRONG"
+    },
+    {
+      file: "a02-pair-5.jpg",
+      kind: "continuity-pair",
+      sheet: "A02",
+      distPx: 7.6,
+      cls: "PAIR-STRONG"
+    },
+    {
+      file: "a02-pair-6.jpg",
+      kind: "continuity-pair",
+      sheet: "A02",
+      distPx: 8.1,
+      cls: "PAIR-STRONG"
+    },
+    {
+      file: "a02-gone.jpg",
+      kind: "gone",
+      sheet: "A02",
+      n: 40
+    },
+    {
+      file: "a05-symbol-1.jpg",
+      kind: "on-symbol",
+      sheet: "A05",
+      covBest: 1.0
+    },
+    {
+      file: "a05-symbol-2.jpg",
+      kind: "on-symbol",
+      sheet: "A05",
+      covBest: 0.969
+    },
+    {
+      file: "a05-new.jpg",
+      kind: "new",
+      sheet: "A05",
+      n: 30
+    },
+    {
+      file: "a04-new.jpg",
+      kind: "new",
+      sheet: "A04",
+      n: 39
+    },
+    {
+      file: "a02-overview.jpg",
+      kind: "overview",
+      sheet: "A02"
+    }
+  ],
+  findingsSi: [
+    "Registracija stavb A02: sodobni GURS tlorisi (154 v celici cf) se registrirajo na narisane stavbne simbole 1825 z mediano residuala 9.8 m (p90 13.7 m) — stavbna raven potrjuje parcelno Raven P47 (9.8 m) pod isto GEOTRUTH preslikavo.",
+    "A02 on-symbol 149/154 sodobnih stavb pada na narisane stavbne simbole 1825 (cov@best ≥ 0.5; mediana pokritosti DRAWN strata 1.0, cov@0 0.85) — jedro vasi je stavbno kontinuirano.",
+    "Kontinuiteta A02: 37 sodobnih stavb ima vektoriziran tloris 1825 v bližini ≤ 25 px (36 z cov@best ≥ 0.5); 136 od 156 tlorisov 1825 je brez sodobne stavbe v bližini (mediana najbližje 392.6 px ≈ 316.2 m) — razpršena zidanica 1825 (vinice/hambi na zahodnih pobočjih) ni preživela; nadgradja P16 present.json (OSM 15 obstaja · 26 negotovih · 115 ni jih več) z uradnimi GURS obrisi.",
+    "A05/ch (Fučkovci): 26 sodobnih stavb pada na narisane stavbe 1825 z mediano residuala 10.1 m — neodvisna potrditev P46 afine na stavbni ravni; A04/cg: 0 on-symbol — vse sodobne stavbe v celici cg so novejše od risbe (paša WEIDENDORF, P47 EMPTY stratum)",
+    "Blatt X (str. 138–139) kvantitativna opomba: 59 različnih numeričnih 'hausNr' vrednosti, 58 v razponu GRUND parcel (41–2500), a površine se z GRUND parcelami pri istih številkah UJEMAJO 0/37-krat — direktna referenca na register 1825 je REFRIRANA; površine vrstic (mediana 6.329 Joch, do 17.299 J) so red velikosti nad GRUND dvorišči (mediana 0.282 J) — vrstice so velike zemljiške parcele; owner stolpec vrstic 81–100 vsebuje 18 številk (63–80) — signal premika stolpcev pri branju; skladno z opombo vrstice 1 'Zusammenstellung der Grundstücke' in letnico 1860 v branjih (reambulacijska doba, glave listov 'Reambulirungs-Beimappe')",
+    "Posledica za P40/P42: interpretacija 'Blatt X = register stavbnih mest' (P42 ARTIFAKT dokaz: številke 82–100 v stolpcu rabe) je ovržena na kvantitativni ravni — številke so lastna štetje vrstic (parzella == raba na vrsticah 82–100), površine pa izključujejo stavbna mesta; vpogled ostaja [~] do človeške paleografije str. 138–139; P40 'blattXOverlap 60/102' okvir je treba brati kot delno prekrivanje dveh različnih sekcij, ne kot registrsko vrzel"
+  ],
+  verdictSi: "P48 (2026-10-13): sodobni stavbni tlorisi (GURS eZKN WFS, 403 KO 1544 + 313 KO 1552 južni bbox) preslikani na skene 1825 — registracija stavbne ravni: A02 mediana residuala 9.8 m (p90 13.7 m), 149/154 stavb pada na narisane simbole (cov@best mediana 1.0); A05 Fučkovci 26 stavb, residual 10.1 m; A04/cg 0 (sodobne stavbe na paši WEIDENDORF so novejše). Kontinuiteta A02: 37 parov tloris↔stavba (≤ 25 px), 136/156 tlorisov brez naslednika (razpršena zidanica 1825 na zahodnih pobočjih ni preživela — vinice/hambi), nadgradja P16 present.json. Blatt X: direktna referenca na register 1825 REFRIRANA (0/37 identičnih površin), površine vrstic so red velikosti nad dvorišči, owner stolpec vrstic 81–100 vsebuje številke — P42 interpretacija 'register stavbnih mest' kvantitativno ovržena, ostaja [~] do človeške paleografije. SHEET_GEOREFS in obstoječi dokazi P40–P47 nespremenjeni.",
+  verdictEn: "P48 (2026-10-13): modern building footprints (GURS eZKN WFS, 403 KO 1544 + 313 KO 1552 south bbox) mapped onto the 1825 scans — building-level registration: A02 median residual 9.8 m (p90 13.7 m), 149/154 buildings fall on drawn symbols (cov@best median 1.0); A05 Fučkovci 26 buildings, residual 10.1 m; A04/cg 0 (modern buildings on the WEIDENDORF pasture are younger than the map). A02 continuity: 37 footprint↔building pairs (≤ 25 px), 136/156 1825 footprints without a successor (the dispersed 1825 settlement on the western slopes did not survive — vineyard cottages/hambas), an upgrade of P16 present.json. Blatt X: direct reference to the 1825 register REFUTED (0/37 identical areas), row areas are an order of magnitude above house curtilages, the owner column of rows 81–100 contains numbers — the P42 interpretation 'register of building sites' is quantitatively refuted, remains [~] until human paleography. SHEET_GEOREFS and the existing P40–P47 evidence unchanged.",
+  next: [
+    "človeška paleografija str. 138–139 (Blatt X) — potrditev/ovržba reambulacijske hipoteze in premika stolpcev",
+    "človeška potrditev neatline črt (izrezi P46/P47) še vedno pogoj za nadgradnjo SHEET_GEOREFS",
+    "razširitev vektorizacije stavb 1825 na A05 (Fučkovci cluster) za polno kontinuiteto na južnih listih",
+    "stavbni overlay ← stavbna mesta PT (N083PT) — povezava parov z domačijskimi številkami prek map.village jedra ( potrebuje človeško potrditev simbolov)"
+  ],
+};
+
