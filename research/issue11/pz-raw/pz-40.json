@@ -1,0 +1,19 @@
+{
+ "page": 40,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:46:01.888Z",
+ "parseOk": true,
+ "structured": {
+  "page": 40,
+  "pageKind": "certification",
+  "sections": [
+   {
+    "culture": null,
+    "par": null,
+    "narrativeBrief": "Stran vsebuje zaključni certifikat (Abschrift) katastrskega cenilnega elaborata za občino Grüble/Griblje, podpisanega dne 9. junija 1830.",
+    "rows": []
+   }
+  ],
+  "pageNote": "Stran je čisto tekstovna/certifikacijska brez tabel. Vsebuje glavni podpisni blok z datumom 9. Juny 1830, seznam imen podpisnikov (Lorenz Robatsch, Georg Popay itd.), nadaljnje overitvene zapise z datumom 20. Juny 1830 in rdeči pečatni vtis v levem spodnjem kotu."
+ }
+}

@@ -2898,3 +2898,276 @@ Stage Summary:
 - QA: qa-p51-leaflet-overlay nova (UI-vod prek vbrizganega readFile: canvas uvaža runtime JSON + L.imageOverlay + dash "6 5" + #8a6d3b + sticky tooltip; museum-atlas stikala + privzete vrednosti false; identičnost obeh izpisov; navzkrižna kontrola TS ↔ JSON 5e-6; navzkrižje s SHEET_GEOREFS — status + neatline 5e-5 + ovoj ⊇ neatline; pinane skew/odmiki) — QA 51 → 52/52.
 - SHEET_GEOREFS in dokazi P40–P50 nespremenjeni (lekcija P9: objavljena lega se ne spreminja — P51 je prikazni sloj, ne meritve).
 - Ostaja odprto: vizualna potrditev prekrivk s strani lastnika (stikala A03–A05; priporočeno [~]); povezava 26 dokazanih mest A05 z domačijami PT; nadgradnja P16 present.json za Fučkovci; vizualna potrditev neatline izrezov (P46/P50).
+
+## P38 (GitHub linija) — issue #10: PS 3. prehod (20 ciljnih strani) + odkritje organizacije po listih (2026-10-11)
+
+- ELIMINACIJSKA ANALIZA obstoječih 213 branj (P36): parser popravki (format ```json + "vrstice" ovijalec,
+  frakcije 76½, robustni obseg z odstranjevanjem osamelcev); prekrivanja istih obsegov z RAZLIČNO vsebino
+  (0/20 enakih parov lastnik/kultura/površina) dokazujejo NAPAČNO PREBRANE številke, ne podvojene folije;
+  fizična sosledja (sosednje strani se verižijo, npr. 5→6→7 = 41-60→61-80→81-100) omogočajo adjudikacijo.
+- 20 CIJNIH STRANI določenih programsko (prekrivanje s sosledno podprto stranjo / sporno brez podpore);
+  strani 6 in 131 diagnosed kot parser-fail (drugačen format vsebine), ne manjkajoči.
+- 3. PREHOD: 20 strani prebranih z VLM (glm-5v-turbo) z izboljšanim pozivom (neprekinjeno zaporedje
+  številk kot kontrola, pozornost na kurzivne zamenjave 1/4/7, 5/6, ditto) — dokaz
+  research/issue17/ps-raw/ps-NNN-pass3.json (20 datotek, skupaj 233 VLM branj). Slike strani pridobljene
+  prek VAČ pdfPageImage API (PDF prenos se je izkazal za prepočasen — 56 MB v 4 min, strežnik podpira
+  samo cele datoteke).
+- STRUKTURNO ODKRITJE: stolpec Blatt razkriva organizacijo po LISTIH (I, II, IIb, III, IV, V, VII, IX, X)
+  — vsak list ima LASTNO številčenje parcel; isto številka na različnih listih je DRUGA parcela
+  (razlaga 'nemogočih' prekrivanj iz P36); kontrolna vsota 102 + 2505 = 2607 je vsota (list, številka)
+  parov čez vse liste, ne maksimum enega niza. Popravek P36 modela 'glavnega niza 1-2840'.
+- PRIMER: str. 24 strukturno potrjena kot 421-440 (pass3 zapolni vrzel; p1/p2 sta SKUPAJ napačno brala
+  401-420 — sistematna zamenjava 2↔4 v stoticah; dokaz korelacije napak med prehodoma → večina 2/3 NI
+  zanesljiv protokol, uporabljena pass3-prednost s strukturnimi varovalkami).
+- ADJUDIKACIJA: 135/135 strani izbranih branj, 2974 vrstic (PS-full-v2.json z obsegi, izbori in
+  utemeljitvami po strani); 7 NERESENIH strani (69, 85, 86, 88, 93, 128, 138 — tri medsebojno različna
+  branja) izrecno prepuščene človeškemu pregledu (issue #12).
+- REPO SPREMEMBE: sources.ts N083PS (structuredEntries 2743→2974, note P38 z odkritjem listov);
+  research.ts KURRENT_SERIES PS + PS_RECAP_1826 (sampleRowCount 2974, priporočila per-blatt);
+  qa.ts: p36/p20 pričakovane vrednosti usklajene (2743→2974), NOV TEST qa-p38-ps-blatt
+  (dokaz pass3 datotek + PS-full-v2.json prek fs injekcije; 39. test). QA 38→39, vse zeleno.
+- ISSUE #10 OSTAJA ODPRT: per-blatt rekonstrukcija (branja lista so šumna ~50 %), 7 nerešenih strani (#12),
+  razdvojitev večkulturnih vrstic, končna uskladitev s 2607.
+
+## P39 (GitHub linija) — issue #10: strukturna rekonstrukcija PS + ZAPRTJE (retro-dokumentacija; commit 670d8ca, 2026-10-11 08:10 UTC)
+
+> Vnos rekonstruiran v P42 — faza P39 je stekla v peskovniku, ki se je ponastavil pred zapisom
+> v ta dnevnik; viri: sporočilo commita 670d8ca + komentar na #10 (08:13 UTC) + zapisi QA.
+
+- SEGMENTACIJA po fizičnem vrstnem redu strani z lastniškim testom → 33 segmentov (listov).
+- VSEBINSKI DOKAZ per-list številčenja: vseh 29/29 parov strani z enakim obsegom številk ima za
+  iste številke RAZLIČNE lastnike (0 ujemanj) — npr. št. 421 = Krautisch (Blatt I, str. 24)
+  vs Hölzl (Blatt II, str. 83). P36 hipoteza »napačno prebrane številke« je S tem OVRŽENA;
+  P38 odkritje o listih (Blatt I–X, lastno številčenje) je potrjeno z vsebino, ne le stolpcem blatt.
+- 2724 unikatnih (segment, številka) parov: 50 večkulturnih dodatnih vrstic, 200 neberljivih št.
+- Kontrolna vsota 102 + 2505 = 2607 znotraj meje [2221, 2725] — KONSISTENTNO; eksaktna
+  potrditev izrecno preložena v #12 (7 nerešenih strani 69, 85, 86, 88, 93, 128, 138 +
+  morebitni fantomski obsegi).
+- Nov dokaz research/issue17/PS-reconstruction.json; sources/research noti + P39; MUSEUM-AUDIT §18.
+- QA 39→40 (qa-p39-ps-structure); ESLint 0, tsc 0, build 16/16, lokalno 40/40; deploy dpl_2xo2eDfG… READY.
+- ISSUE #10 ZAPRT (completed) z zaključnim komentarjem 08:13 UTC; obseg človeškega pregleda
+  razširjen na #12 (komentar 08:13:37 UTC).
+
+## P40 (GitHub linija) — številka brez faze (prazna)
+
+> V P42 ugotovljeno: med P39 (08:10 UTC) in P41 (13:35 UTC) 11. 10. 2026 ni ne commita ne
+> issue-komentarja ne dokaza, ki bi nosil oznako P40. Najverjetneje je bila številka rezervirana
+> v peskovniku, ki se je ponastavil pred izvedbo (enak vzorec kot izguba worklog-vnosov P39/P41).
+> Da se številjenje ne bi podvajalo, se nadaljuje s P42.
+
+## P41 (GitHub linija) — issue #13 (del 1): analiza številčenja hiš + veriga PUA→PS (retro-dokumentacija; commit 81da6f4, 2026-10-11 13:35 UTC)
+
+> Vnos rekonstruiran v P42 — enak vzrok kot pri P39 (ponastavitev peskovnika pred zapisom);
+> viri: sporočilo commita 81da6f4 + komentar na #13 (13:35:45 UTC).
+
+- TRI številska sistemi hiš (ne dva, kot je zapisano v raziskovalnem vprašanju P4):
+  PT (stavbne parcele) = lastno številčenje — 0/70 natančnih ujemanj s PS pri istih št.;
+  PUA (lastniški register) ≈ PS — megleno record-linkage 25:0 v prid PUA;
+  PS (parcelni protokol) sledi PUA (z VLM šumom).
+  Primeri: Hlebety (PUA h2) → PS 2 (13/48 vrstic); Noah (h4) → PS 4 (11/37);
+  Dragosch (h3/4/5) → PS 3(9), 5(5); Fillah Miho (h61, II:814–1861) → PS 5/5 Fillak (100 %);
+  Krischan (h31/36/37) → 60–76 %.
+- VRZEL PT↔PUA/PS je STRUKTURNA (PT hiša 6 = Tilel Miho vs PUA/PS hiša 6 = Höflehner/Comenda):
+  veriga stavba→parcela ni mogoča brez človeške paleografije (#12) ali vektorizacije A01/A02
+  z omestitvijo hiš po geometriji.
+- PUA »sections« so KAZALNIKI razpršenih parcel (isti razpon pri več lastnikih), ne izključne
+  posesti: trojna omejitev (razpon ∩ hišna št.) na 114 nizov → 13 močnih, 11 srednjih,
+  17 šibkih, 73 brez ujemanja.
+- VERIGA PUA hiša → PS parcela (od 65 PUA hiš): 7 DOKAZANA + 9 VERJETNA + 20 MOGOČA +
+  29 NEREŠENA; vsaka povezava nosi vir (stran/vrstica PS, segment/Blatt, št. parcele) ali
+  izrecno oznako negotovosti (merilo 3 izpolnjeno).
+- Dokazi: research/issue13/numbering-analysis.json (konsolidirano poročilo + veriga + vrzeli +
+  naslednji koraki) in research/issue13/chain-pua-ps.json (vseh 65 hiš s parcelami).
+  Metoda: megleno ujemanje priimkov (Levenshtein ≤ 2, B/P in Š variacije Kurrenta) nad že
+  prepisanimi registri — deterministično, brez novih VLM klicev.
+- Ostanek za DoD #13: 29 nerešenih PUA hiš + 84 PT hiš (→ #12), vektorizacija meja A01/A02
+  (GeoJSON), integrity test razširitev (po vektorizaciji). Issue ostaja odprt (P1).
+
+## P42 (GitHub linija) — sanacija tihe izgube opozoril token-health + retro-dokumentacija P39/P41 (2026-10-11)
+
+- IZHODIŠČE: dnevni pregled žetonov (run 38140520764, 11. 10. 12:46 UTC) je padel — VERCEL_DEAD=false
+  (žeton zdrav: uradni, brez roka, polni obseg — prej neveljavna vrednost v kontekstu pomočnika je bila
+  okrajšana, ne mrtva), GITLAB_DEAD=true (HTTP 401). A opozorilo na #6 NI prispelo: korak Opozorilo
+  je tiho padel — gh CLI brez GH_REPO in brez checkouta → »not a git repository« → gh issue comment
+  spodleti, issue #6 ostane ZAPRT brez komentarja. Run-based de-dup (prev=failure → »komentar že
+  obstaja«) bi opozorilo izgubil za vedno.
+- KRONOLOGIJA smrti GITLAB_TOKEN: rotacija na 2027-01-08 (10. 10. 14:40) je veljala — synci zeleni
+  do 11. 10. 06:23 UTC; prvi rdeči 07:09 (P38 push); torej umrl med 06:23 in 07:09 kljub roku
+  2027-01-08 → preklican na strani GitLaba (ne iztek); self_rotate z 401 ni mogoč → potreben nov PAT.
+- POPRAVEK token-health.yml: (1) GH_REPO env na koraku Opozorilo; (2) de-dup po VSEBINI #6 —
+  zadnje bot-opozorilo mlajše od 7 dni → brez novega, sicer objavi + reopen (samozdravilno, ne
+  izgubi opozorila če korak kdaj pade); (3) besedilo 401: self_rotate nemogoč, potreben nov PAT
+  (api + write_repository); (4) odstranjeno actions:read (gh run list ne potrebuje več).
+- E2E DOKAZ (run 38159267589, ročni dispatch po popravku): VERCEL success → GITLAB 401 →
+  opozorilo objavljeno prek github-actions[bot] (issuecomment-6111643095, 17:21:20 UTC) + #6
+  ponovno odprt + job exit 1 po zasnovi (rdeči job = dnevno e-poštno opominjanje lastnika).
+- DIAGNOZA na #6 (issuecomment-6111653749): kronologija, vzrok tihe izgube, sanacija, E2E dokaz,
+  stanje ogledala (za 4-5 commiti), prošnja za nov PAT (edina odvisnost od lastnika).
+- RETRO-DOKUMENTACIJA: vnos P39 (struktorna rekonstrukcija PS + zaprtje #10) in P41 (veriga
+  PUA→PS, #13 del 1) rekonstruirana iz sporočil commitov + issue-komentarjev — ponastavitve
+  peskovnika so jih izrinile pred zapisom; P40 = številka brez faze (enak vzorec izgube).
+- GIT IDENTITETA: peskovnik ponastavljen → user.name/email so bili »Z User« (past iz P35!);
+  nastavljeno na lastnikovo PRED commitom (Robert Pezdirc <robert.pezdirc12@gmail.com>).
+- SINHRONIZACIJA: sync.yml pada po zasnovi (varovalki FETCH_OK/PUSH_OK iz P21 javno poročata
+  401); obnovi se samodejno, ko nov PAT pride v skrivnost GITLAB_TOKEN (zaostanek 4-5 commitov
+  se nadoknadi v enem ciklu).
+- PRODUKCIJA: neprizadeta (4f0ae9d deploy zelen prek Vercel GitHub App; spremembe se dotikajo
+  samo .github/ + worklog.md, brez vpliva na gradnjo).
+
+## P43 (GitHub linija) — issue #13: PRVA CELOTNA VERIGA PT → PUA → PS (deterministično, nadaljevanje P41 nextStep 3) (2026-10-11)
+
+- ZDružITEV KOMPONENT: P5-c W-most (PT→PUA, 26 spojev, verdikti MATCH/PARTIAL/MISMATCH po
+  Levenshtein 0.72/0.50) + P41 veriga (PUA→PS, 65 hiš) — NOBEJ fazi jih še nista sestavili
+  v celoto; P43 = prva celotna veriga, točno naslov #13 (stavba→hišna št.→parcela→lastnik).
+- SKRIPT scripts/chain-full-pt-ps.py (deterministično, brez AI klicev): kompozicija obeh
+  komponent po načelu ZAUPOANJE VERIGE = NAJŠIBKEJŠA ČLENICA; hiše brez W. sklica → imenski
+  kandidati po VODILNEM ŽETONU (večinoma priimek; krstna imena ubita z zahtevo dolžine ≥ 4,
+  npr. lažni pozitiv »Jan«) — imenske povezave nikoli nad MOGOČA (isti lastnik več hiš);
+  nič-zguba: VSAKA od 105 PT vrstic (84 hiš + 21 parcelnih vrstic) ima vnos z rangom,
+  utemeljitvijo in viri.
+- REZULTATI (hiše): 2 DOKAZANA (Milleg Hans W.29 → PUA h29 MOČNA) + 5 VERJETNIH (Štunidat
+  Mufa W.1, Hlebetz Jan W.2, Brinig Magnus W.24, Brinig Miklo W.25) + 4 MOGOČE + 73 NEREŠENIH;
+  parcelne vrstice: 4+4+2+11; 6 hiš s priimkovno KORROBORACIJO čez W (W.2/21/24/25/29 —
+  dvojni dokaz: številka + priimek).
+- ODKRITJE (kontaminacija ujeta pred objavo): ATLAS_OWNERS houseRefs so MEŠANE narave —
+  prva gradnja pred odkritjem P4 je mešala PUA in PT številčenje (dokazan primer:
+  lastnik-milleg [34, 36] = PT hiši 35/36, ne PUA). Prva različica skripta je razširila
+  univerzum po njih → lažni kandidati (Hlebetz 1.0 pri hišah 34/36 prek žetona »Jan«).
+  SANACIJA: univerzum = IZKLJUČNO P41 veriga (continuation, cel register 49/49); 23 sklicov
+  A–B izven verige dokumentiranih kot mešano številčenje; uporaba strani A–B za verigo
+  izrecno preložena na #12 (človeška potrditev številk).
+- KRIŽNA POTRDITEV KORPUSA: rekonstrukcija izbranih (adjudiciranih) PS branj po PS-full-v2
+  (pass1/2/3 izbiri) — število vrstic po hišah se s P41 ujema 65/65 Točno → kompozicija
+  stoji na istem korpusu kot P41.
+- DOKAZ: research/issue13/chain-full-pt-ps.json (91,5 KB; meta + statistika + 105 vnosov;
+  vsak rang nosi razlog + vire: W verdikt + sim, PUA lastniki, PUA→PS rang, parcele PS s
+  stranjo/vrstico/blatt/številko).
+- INTEGRACIJA: sources.ts N083PT (nota SL+EN P43 + lastVerified 2026-10-11);
+  research.ts KURRENT_SERIES PT nota P43; NOVA QA kontrola qa-p43-chain-full (41. test;
+  preverja noto, kazalca na dokaz, range 2/5/4, korroboracijo 6, univerzum 65, križno
+  potrditev 65/65, strogo readFile preverjanje dokaza v repozitoriju/CI, preskok v
+  produkciji kjer research/ namenoma ni).
+- TESTI: ESLint 0; tsc 0; build 16/16 strani + 12 API poti; lokalni produkcijski strežnik:
+  /api/qa HTTP 200, QA 40→41, 41/41 zelenih (qa-p43-chain-full ZELEN).
+- #13 OSTAJA ODPRT: geometrija (156 stavb ↔ hišne št.) še vedno čaka vektorizacijo A01/A02
+  + #12; 29 nerešenih PUA hiš iz P41 ostaja; poročilo o napredku gre v komentar na #13.
+
+## P44 (GitHub linija) — issue #11: PZ tabele cenilnih razredov PREPISANE (str. 4–67, 71/71 strani fonda) (2026-10-12)
+
+- ZAGON: nadaljevanje po P43 (2acfc34); repo kloniran z novim GitHub PAT (ghp_QSn0…, preverjen
+  GET /user 200); VLM sonda OK (588 ms); PZ PDF ponovno prenesen z VAČ (vacId 373419, docId
+  41784, 13 MB, 71 strani); strani 4–67 izluščene pri 200 DPI (64 strani, ~1900×3123 px).
+- 1. KROG (scripts/p44-read-pz.mjs, 64 VLM klicev): enotni strukturirani prompt (kulture, razredi,
+  površine Joch/Klafter, vrednosti fl/kr, pridelki, vsote); surovi izpisi research/issue11/pz-raw/
+  (pz-NN.json); resume + 429/502 backoff (60/120/240/480 s). Ugotovitev okolja: ozadjski procesi
+  NE preživijo med klici bash orodja — batch izvajanje v ospredju (3 serije po ~9 min).
+- SANACIJA IZPISOV (scripts/p44-repair-raw.py, brez novih klicev): 7 strani neparsiranih — vzroki:
+  ```json fences, NEUBEŽNI notranji narekovaji v rawText (VLM prepisuje narekovaje dokumenta),
+  manjkajoči narekovaj ključa, 2 odrezana izpisa na 4000 znakov (rekonstrukcija do zadnjega
+  celovnega elementa + kontrolna ponovna branja).
+- 2. KROG (8 ciljnih branj): str. 25 (Ablösungs-Contract, rdeči popravki 388/387 j), 63 (Pacht
+  parcelna tabela — 16 vrstic, VZOREC za zneske/joch, ne polne površine), 65 (Hutweide gattunge —
+  10 imenovanih pašnikov + NADZORNA OPOMBA »Weiden gesamt: 636 j 263 kl« = PV NATANČNO!),
+  67 (rekapitulacija), 12/13/15 (sanacija), 50 (zgodovinska divergenca).
+- p67 PETERENJE (6 branj skupaj): 5 neodvisnih branj + verifikacija s PV kontekstom (12 kontrol)
+  + ODLOČILNI IZREZ vrstic 1–4 pri 1,6× (PIL crop + LANCZOS). REKAPITULACIJA: 10 razredov
+  (Acker I/II, Wiesen I/II, Kleine/Größere Gärten, Weingärten, Hutweiden, Weiden mit Holznutzung,
+  Bauarea) + Summa 1152 j 495 kl; Brutto 8872 fl 5¾ kr; Rein 4492 fl 51 kr; podpisa overiteljev.
+- ADJUDIKACIJA Acker II: 3 polna branja = 234, izrez 1,6× = 334 [~ Kurrent oblika »3«]; ODLOČITEV
+  334 — trije neodvisni dokazi: (a) aritmetika vrstic s 334 = 1145 ≈ Summa 1152 (s 234 = 1045,
+  Δ 107 nesmiselno), (b) PV Aecker 413 → Acker I+II = 80+334 = 414 (±1), (c) povečan izrez.
+  Končna potrditev = človeška paleografija (#12).
+- KORROBORACIJE: Acker I 80 j potrjen čez strani 12 (»Flächenraum von 80 Joch 974 Klafter« +
+  224 parcel); Weingärten 7 j = PV natančno; p6 povzetek »Total 1220 j 1493 kl« [~] ≈ PV grand
+  total 1221 j 1513 kl; PR 1028×1884 kl = 1210,5 j ≈ PV (−0,9 %) — štirje neodvisni sevi.
+- USKLDITEV s PV (research/issue11/pz-classes-full.json): Summa 1152 j 495 kl ≈ PV erste Summe
+  1148 j 539 kl → Δ +4 j ≈ 0,3 % ✓; po kulturah: Acker +1, Wiesen −44 / Weiden +40 (klasifikacijska
+  kompenzacija travnik↔pašnik), Gärten +1 [~], Bauarea −3 [~]; kontrola str. 65 (636 j 263 kl)
+  = PV natančno → PZ in PV sta ista presnova. INFERENCE (označeno): Rein ≈ 10,2 fl/prebivalca/leto,
+  neto 50,6 % bruto, pašniki 59 % klasificirane površine.
+- DIVERGENCE (6 registriranih): D2 str. 50 RAZREŠENA (prečrtani 20 fl 44 nadomešča 25 fl 44;
+  25 fl 44 − 10 fl 40½ = 15 fl 3½ ≈ zapisani 15 fl 5 — prejšnji 3 branj pojasnjena); D1 Acker II
+  ADJUDICIRANO 334 [~]; D3 Wiesen II 29/39 → 29 [~]; D4 Δ 7 j (vsota vrstic 1145 vs Summa 1152)
+  ODEPRTO; D5 Weingärten klaftri 42/665 ODEPRTO; D6 vrstični Rein zneski ODEPRTO → vse na #12.
+- STRUKTURA ZVEZKA (dokazirana, prvič): pp. 4–29 narativni §§ (Viehstand §4, tla, klasifikacija,
+  kulture z izročki), p. 30 tiskana primerjalna oblika, pp. 31–49 protokoli/overovitve +
+  klasifikacijske tabele, pp. 50–61 Veranschlagung/Rein-Ertrag §§ po kulturah, pp. 62–67
+  Zusammenstellung + Pacht tabele + REKAPITULACIJA.
+- INTEGRACIJA: sources.ts N083PZ (structuredEntries 10→11, note P44, lastVerified 2026-10-12);
+  research.ts PZ series (71/71, 11 zapisov, note) + NOV IZVOZ PZ_CLASS_TABLE_1825 (10 vrstic +
+  Summa + uskladitev SL/EN + divergence + inferenca) + PZ_ECONOMY_1825 veriga Acker I posodobljena
+  (divergenca razrešena, confidence nizka→srednja); atlas.ts inventar PZ (model/open besedila);
+  qa.ts P20 kontrole (structured 11, expectedRead 71, naslovi popravljene) + NOV TEST
+  qa-p44-pz-classes (42. test; preverja tabelo/summo/vsoto/adjudikacijo/uskladitev/verigo/dokaz
+  na disku z enako logiko preskoka produkcije kot p38/p39/p43); provenance pzClassTable1825.
+- TESTI: ESLint 0; tsc 0; build 16/16 strani + 12 API poti; lokalni produkcijski strežnik:
+  /api/qa 200, QA 41→42, 42/42 zelenih; provenance pzClassTable1825 prisoten.
+- PRODUKCIJA: push 6b92b35 (P44) + 1a04492 (popravek zastarelih naslovov P20 testov) — oba
+  deployana prek Vercel GitHub App; produkcijski QA 42/42 zelenih (computedAt 19:36 UTC);
+  dimnični test: / 200 (630 KB) lang=sl, ?exponat= 200×3, /api/* 200, 404 pravilno.
+- #11 ZAPRT (issuecomment-6112904134): vsa 4 merila dokončanja izpolnjena (prepis + uskladitev +
+  divergence + QA test); 4 odprte točke izrecno preložene na #12.
+- STANJE ODPRTEH ISSUEJEV: #6 (GitLab PAT — lastnik), #12 (paleografija — človek), #13 (geometrija
+  — vektorizacija + #12), #14 (A03–A05 sidra), #15 (arhiv SI AS 749), #16 (posnetki — lastnik),
+  #17 (teren — lastnik), #18 (matrike — delno arhiv).
+
+---
+
+Task ID: P45
+Agent: Z.ai Code (glavni agent)
+Task: "odlicno nadaljuj" — issue #14 (A03–A05 brez točkovnega sidra): validacija porazdelitve stavb + sanacija lažnega opozorila token-health + stanje #6
+
+Work Log:
+- ZAGON: repo na disku usklajen z origin (fetch OK, PAT ghp_QSn0… preverjen GET /user 200); ugotovitev — povzetek seje je bil ZASTAREL: delo je segalo do P44 (2026-10-12), issue #11 že zaprt; neodsledena datoteka scripts/p44-vlm-probe.mjs (sonda VLM iz P44 — dodana v repozitorij).
+- PREGLED ODPRTEH ISSUEJEV: #6 (žetoni), #12 (paleografija — človek), #13 (vektorizacija), #14 (A03–A05 sidra), #15 (SI AS 749/1138 — arhiv), #16–#18 (posnetki/teren/matrike — lastnik/delno). Za samostojno delo izbran #14 (P2, eksplicitno namenjen pomočniku).
+- #6 DIAGNOZA: token-health pade od 2026-10-11 — GITLAB_TOKEN mrtev (401, preklican na GitLabu kljub roku 2027-01-08; sinhronizacija zastala, ogledalo zaostaja ~9 commitov, samodejno se nadoknadi ob novem PAT — lastniška naloga); VERCEL_TOKEN 404 na /v2/user + 200 na /v9/projects = žeton z omejenim obsegom DELUJE za deploy (glavna pot od P35 = GitHub App, žeton potreben le za ročni rezervni deploy).
+- SANACIJA token-health.yml: novao veja elif [ "$pcode" = "200" ] → notice »žeton deluje, omejen obseg, deployu zadostuje« (prej: napačno »prehodna napaka« dnevno); komentar v YAML pojasnjuje zakaj (P45, 2026-10-12).
+- #45 METODA (scripts/p45-sheet-anchors.py + scripts/p45-verify.py, brez AI — čista deterministika):
+  1. KALIBRACIJA na A02 (156 stavb buildings.json = GEOTRUTH): resnična podobnost z y-zrcaljenjem — merilo 0,805 m/px, rotacija +0,02°, mediana ostanka 2,4 m; celično izračunano merilo (0,80) se ujema < 1 % → zanesljiv prior za A03–A05; izbira detektorja po F1 na resnici: RDEČE STEBLO (R−G>28 ∧ R−B>28) F1 0,56 / recall@50 0,94 — temne lise P10 le F1 0,35.
+  2. POPRAVKI SVOJE KODE med potjo (iskren popis): dvojno zrcaljenje y (geo_to_local Y obratno) → enoten okvir X-vzhod/Y-sever; lstsq poravnava yv (zaporedno namesto prepleteno) → napačna skala 0,18; centriranje sim_geo na vhodnem polju (ena točka → težišče!) → center_px参数; translacijska mreža okoli CELIČNO POVZETE težiščne lege (±500 m), ne absolutno okoli 0 (A03 veriga pri +722 m sprva IZVEN mreže!).
+  3. FIT per list: celična preslikava (okvir ≈ celica) vs prosti fit (4 parametri) vs OMEJENI fit (merilo = celično ±5 %, rotacija = prior ±3°) — vse z nič-testi (zasuki 90/180/270° + 30 naključnih zamikov ±350 m) in nasičeno-popoljenim točkovalnikom clip(1−(d−15)/85).
+- #45 REZULTATI (dokaz research/georef-n83/p45-sheet-fits.json):
+  - A03 (celica dg): veriga 30 simbolov (x 86–93 %, y 13–86 %) → sodobna veriga 51 stavb, CELIČNA mediana 89 m — POTRJENO; prosti fit le z nafizikalnimi rot +12°/s 0,60 (zavrnjen), omejeni slabši (153 m) → celica ostaja.
+  - A04 (celica cg): 170 simbolov po celem listu → mediana 69,7 m — POPRAVEK P10 kvantitativno POTRJEN (P9-lega: 636 m); omejeni fit 55 m zavrnjen — premaknil bi WEIDENDORF iz k.o. Bedenj (križna preverba > 15 m izboljšava); merilo fita 0,722 ≈ celično 0,717.
+  - A05 (celica ch): sklop 30 simbolov → mediana 27 m, 60 % znotraj 30 m — NAJMOČNEJŠA potrditev; omejeni fit neodvisno potrdi lego (Δ 64 m, mediana 23 m) — dva vira se strinjata; sklop (45,5404/15,2908) = Fučkovci/Jankoviči; ADLESC → naselje Fučkovci ✓; ODPRTA DVOUMNOST: prosta translacija → VZ rob (score 0,915, brez naselja, zunaj celice) — zavrnjena na okvirni kodi (3× brana), dokumentirana.
+  - Vsi prosti fitovi padejo v P9-past (pretreniranje 4 parametrov na 30 točkah) — tokrat PREPOZNANA in izognjena.
+- INTEGRACIJA: geotruth.ts NOV razdelek SHEET_TRUTH (3 zapisi: celica, kvantificirana validacija, status REVIEW, opombe SL/EN — tretje merilo dokončanja #14); model.ts SHEET_GEOREFS accuracy A03 ±150–250 m / A04 ±100–200 m / A05 ±100 m pri sklopu (poprej ±200–400 m) s P45 dokazi; sources.ts placement + noteSi/En vseh treh listov (A04 tudi methodSi/En — odstranjeno zastarelo »Brez točkovnega sidra — ni afine«); qa.ts NOV TEST qa-p45-sheet-anchors (42. → 43.; preverja SHEET_TRUTH vrednosti, P45 omembe v model+sources, odsotnost TO_COLLECT koncovk, dokaz na disku z enako logiko preskoka produkcije kot p38/p39/p43/p44); research/georef-n83/README.md nov P45 razdelek (metoda, rezultati, integracija).
+- TESTI: ESLint 0; tsc 0; build 16 strani + 12 API poti brez napak; lokalni produkcijski strežnik: /api/qa 43/43 zelenih (novi test PASS), /api/provenance 200.
+
+Stage Summary:
+- ISSUE #14 IZVEDEN v celoti (merila: vidna opomba o negotovosti v podatkih in UI — podvojena s kvantificiranimi ocenami; geotruth.ts posodobljen — SHEET_TRUTH; točkovnih sidrov cerkev/most ni na ruralnih listih — kvantificirana validacija porazdelitve je poštena nadomestna pot, statusi ostanejo REVIEW z dokumentirano negotovostjo)
+- Kalibracija na A02 (0,805 m/px, +0,02°, 2,4 m) dokazuje zanesljivost celičnega pristopa; rdeči detektor (F1 0,56) nadomesti šumne temne lise P10
+- Zavrnjeni fitovi z dokazi (nafizikalni parametri / kršitve oznak) — P9-past izrecno dokumentirana v README
+- token-health.yml: VERCEL 404/200 = uspeh (ne več dnevna lažna »prehodna napaka«); #6 čaka le še GitLab PAT od lastnika (Vercel žeton deluje, brez roka)
+- Produkcija: push v naslednjem koraku + dimnični test + zaključek #14
+- PRODUKCIJA (nadaljevanje Work Log): push 1e60c93 → samodejni deploy Vercel GitHub App; PROD /api/qa **43/43 zelenih** (qa-p45-sheet-anchors PASS, computedAt 20:50 UTC); dimnični test čist: / 200 (631 KB) lang=sl · ?odsek=atlas 200 · ?exponat= 200×3 · /api/atlas 200 · /api/provenance 200 · /nenajden 404 pravilno.
+- #14 ZAPRT (issuecomment + PATCH): vsa 3 merila izpolnjena (vidna negotovost + geotruth.ts SHEET_TRUTH + poštena nadomestna pot namesto odsotnih točkovnih sidrov); preostanek izrecno na #12/#13.
+- #6 komentar stanja: VERCEL_TOKEN deluje brez roka (404/200 = omejen obseg vcp_, deployu zadostuje — nič za narediti); GITLAB_TOKEN mrtev — potreben nov PAT od lastnika (navodila v komentarju); ogledalo ~9 commitov zaostanka, samodejno nadoknadilo.
+- token-health VERIFICIRAN E2E (ročni dispatch, run 38174097430 @ 1e60c93): ##[notice] VERCEL_TOKEN deluje (/v2/user=404, /v9/projects=200 — nova veja P45 deluje); ##[error] GITLAB_TOKEN 401 (edini rdeči — po zasnovi); opozorilo na #6 de-dup (botovo opozorilo < 7 dni).
+- STANJE ODPRTEH ISSUEJEV po P45: #6 (GitLab PAT — lastnik), #12 (paleografija — človek), #13 (vektorizacija — čaka #12), #15 (arhiv SI AS 749/1138), #16 (posnetki — lastnik), #17 (teren — lastnik), #18 (matrike — delno arhiv).
+
+
+---
+
+## P52 — REKONSTRUKCIJA GitHub↔GitLab: združitev dveh vzporednih linij (2026-10-14, issue #17 — sync dolg)
+
+Nov GitHub PAT (lastnik, robertpezdirc12-design) je odkril **pravo divergenco**:
+GitHub main (b856827) ni bil le "za GitLabom" — vseboval je 12 commitov (11.10.,
+P38–P45 GitHub linije), ki jih GitLab NIKOLI ni dobil, medtem ko je GitLab main
+(22d65bb) vseboval 14 commitov (12.–13.10., P38–P51 GitLab linije), ki jih GitHub
+ni imel. Merge-base 5e8e61b (P37). 115 GitHub-only datotek (PZ prepis 71/71 z 76
+VLM klici + pz-raw, PS-full-v2.json, PS-reconstruction.json + ps-raw pass-3,
+chain-full-pt-ps.json, p45-sheet-fits.json, 13 skriptov) + 16 obojestransko
+spremenjenih datotek.
+
+Združitev z avtoritativnim GitLab stanjem (P51): model.ts A03–A05 ostaja P50
+NEATLINE_* ±40/50 m (novejše od GitHub P45 ±100–250 m — SHEET_TRUTH ohranjen kot
+zgodovinski neodvisni dokaz); sources.ts note = union obeh pripovedi (N083PS
+2974, N083PZ 11 + 71/71, N083PT + veriga P43, A03–A05 + P45 validacijski stavki);
+research.ts + PZ_CLASS_TABLE_1825 + KURRENT_SERIES PS/PZ/PT po GitHub podatkih;
+qa.ts 52 → **57** (+ qa-p38-ps-blatt, qa-p39-ps-structure, qa-p43-chain-full,
+qa-p44-pz-classes, qa-p45-sheet-anchors — slednji adaptiran na P50 NEATLINE_*
+supersesijo; pini obeh linij ohranjeni); token-health.yml po GitHub popravku
+(P42: GH_REPO + de-dup); audit §32 (P39b) + §33 (P52). Faze obeh linij
+razločene z oznako »b« (GitHub: P39b/P43b/P45b). GitHub secret GITLAB_TOKEN
+povrnjen z novim žetonom → dvosmerni sync.yml resume; push na OBE oddaljeni.

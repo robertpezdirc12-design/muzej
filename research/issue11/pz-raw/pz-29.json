@@ -1,0 +1,19 @@
+{
+ "page": 29,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:42:43.248Z",
+ "parseOk": true,
+ "structured": {
+  "page": 29,
+  "pageKind": "narrative",
+  "sections": [
+   {
+    "culture": null,
+    "par": null,
+    "narrativeBrief": "Zusammenstellung der zur Begründung des Natural-Ertrages gesammelten Behelfe.",
+    "rows": []
+   }
+  ],
+  "pageNote": "Stran je naslovna stran za razdelek o povzetku pomožnih sredstev (Natural-Ertrag). Vsebuje samo naslov in podnaslov v lepi pisavi, brez tabel ali številskih podatkov. Spodnja polovica strani je prazna (mrežasti papir)."
+ }
+}

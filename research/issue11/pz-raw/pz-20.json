@@ -1,0 +1,38 @@
+{
+ "page": 20,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:40:17.868Z",
+ "parseOk": true,
+ "structured": {
+  "page": 20,
+  "pageKind": "narrative+table",
+  "sections": [
+   {
+    "culture": "Größere gemüfs-Gärten",
+    "par": "§. 6.",
+    "narrativeBrief": "Opisuje večje zelenjavne vrtove, razdeljene na dva dela: prvi del obsega približno 460 kvadratnih klafterjev z mešanimi kulturami (krompir, fižol, korenje), drugi pa okoli 1000 kvadratnih klafterjev s krompirom in drugo zelenjavo.",
+    "rows": [
+     {
+      "label": "Einige Clafse",
+      "areaJoch": null,
+      "areaKlafter": "460",
+      "values": null,
+      "yields": null,
+      "rawText": "Einige Clafse ... Der Gärtnern ihren Düngerstellung blosig/460",
+      "confidence": "~"
+     },
+     {
+      "label": "Größere Gemüse Garten",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "23 fl 44 kr",
+      "yields": null,
+      "rawText": "Größere Gemüse Garten --- 23 | 44",
+      "confidence": "clear"
+     }
+    ]
+   }
+  ],
+  "pageNote": "Stran vsebuje §6 o večjih zelenjavnih vrtovih (Größere gemüfs-Gärten) z narativnim opisom in eno povzetkovno tabelo na dnu. Rdeči rubricirani vpisi na levi strani tabele navajajo 'Rapsen=und', 'Möhren=', 'Kartoffeln='. Površina je podana v klaftrih (kvadratnih klafterjih)."
+ }
+}

@@ -30,6 +30,7 @@ import {
   PS_LEXICON_P43,
   PS_K1K2_P44,
   PS_LEXICON_VERIFIED_P45,
+  PZ_CLASS_TABLE_1825,
   NEATLINE_GEOREF_P46,
   GURS_OVERLAY_P47,
   BUILDINGS_OVERLAY_P48,
@@ -51,6 +52,7 @@ import {
 import { ATLAS_HOUSES } from "@/data/atlas/houses";
 import { ATLAS_OWNERS, SHEET_GEOREFS, VECTOR_BUILDINGS } from "@/data/atlas/model";
 import { ATLAS_SOURCES } from "@/data/atlas/sources";
+import { SHEET_TRUTH } from "@/data/atlas/geotruth";
 import { TREE_STATS, SMOKE_CHIMNEYS, HOUSENO_FINDING, TREES } from "./village3d";
 import { SOURCE_TYPE_LABELS } from "./museum";
 import { YEAR_STOPS, MAX_YEAR, formatStopYear } from "./timeline-stops";
@@ -1229,9 +1231,9 @@ export function runQA(opts: QAOptions = {}): QAReport {
   const srcPua = ATLAS_SOURCES.find((s) => s.id === "src-pua");
   if (puaInv && srcPua && (puaInv.structuredEntities !== PUA_CONTINUATION.rows.length || srcPua.structuredEntries !== PUA_CONTINUATION.rows.length))
     p20invErrors.push(`PUA structured ${puaInv.structuredEntities}/src ${srcPua.structuredEntries} != PUA_CONTINUATION ${PUA_CONTINUATION.rows.length} (43→101 napaka se ne sme ponoviti)`);
-  if (psInv && psInv.structuredEntities !== 2743)
-    p20invErrors.push(`PS structured: ${psInv.structuredEntities} != 2743 (P36 kampanja, dokaz ps-raw/PS-full.json)`);
-  if (pzInv && pzInv.structuredEntities !== 10) p20invErrors.push(`PZ structured: ${pzInv.structuredEntities}`);
+  if (psInv && psInv.structuredEntities !== 2974)
+    p20invErrors.push(`PS structured: ${psInv.structuredEntities} != 2974 (P36 2743 + P38 3. prehod, dokaz ps-raw/PS-full-v2.json)`);
+  if (pzInv && pzInv.structuredEntities !== 11) p20invErrors.push(`PZ structured: ${pzInv.structuredEntities} != 11 (P44: 10 razredov + Summa, dokaz pz-classes-full.json)`);
   if (a02Inv && a02Inv.structuredEntities !== VECTOR_BUILDINGS.length)
     p20invErrors.push(`A02 structured: ${a02Inv.structuredEntities} != ${VECTOR_BUILDINGS.length}`);
   if (inv.totals.spatiallyLinked !== 0 || inv.units.some((u) => u.spatiallyLinked !== 0))
@@ -1263,7 +1265,7 @@ export function runQA(opts: QAOptions = {}): QAReport {
   }
   // dokazane vrednosti iz surovih raziskav (issue #4 resolucije: PS 8, PZ 12)
   // P36 (2026-10-11): PS 143 — vse strani strojno prebrane (pass-1 celota + pass-2 78 strani; dokaz research/issue17/ps-raw/)
-  const expectedRead: Record<string, number> = { PR: 4, PS: 143, PUA: 49, PZ: 12, PT: 8, PG: 1, PV: 1 };
+  const expectedRead: Record<string, number> = { PR: 4, PS: 143, PUA: 49, PZ: 71, PT: 8, PG: 1, PV: 1 };
   for (const [code, n] of Object.entries(expectedRead)) {
     const k = KURRENT_SERIES.find((x) => x.code === code);
     if (k && k.pagesTranscribed !== n)
@@ -1273,11 +1275,11 @@ export function runQA(opts: QAOptions = {}): QAReport {
   if (!invScope.totals.scopeAccounted) p20pagesErrors.push("inventar: scopeAccounted ni true za vse enote");
   push(
     "qa-p20-series-pages",
-    "P20: dokazano prebrane strani po serijah (PR 4, PS 143 — P36 strojno, PUA 49, PZ 12, PT 8, PG 1, PV 1) — pagesReadList == pagesTranscribed, brez lukenj; PS in PZ usklajena z research/issue17 datotekami (ps-raw + PS-full.json)",
-    "P20: evidenced read pages per series (PR 4, PS 143 — P36 machine-read, PUA 49, PZ 12, PT 8, PG 1, PV 1) — pagesReadList == pagesTranscribed, no gaps; PS and PZ reconciled with the research/issue17 files (ps-raw + PS-full.json)",
+    "P20: dokazano prebrane strani po serijah (PR 4, PS 143 — P36 strojno + P38 3. prehod, PUA 49, PZ 71 — P44, PT 8, PG 1, PV 1) — pagesReadList == pagesTranscribed, brez lukenj; PS in PZ usklajena z research/issue17 datotekami (ps-raw + PS-full.json)",
+    "P20: evidenced read pages per series (PR 4, PS 143 — P36 machine-read + P38 3rd pass, PUA 49, PZ 71 — P44, PT 8, PG 1, PV 1) — pagesReadList == pagesTranscribed, no gaps; PS and PZ reconciled with the research/issue17 files (ps-raw + PS-full.json)",
     p20pagesErrors.length === 0,
     p20pagesErrors.length === 0
-      ? `skupaj ${invScope.totals.pagesRead}/${invScope.totals.pagesDeclared} prebranih; odprtih strani ${invScope.totals.pagesOpen} (PZ 4–67 razen vzorcev; PS strani strojno prebrane, a sprava s 2607 izrecno odprta) — 0 tihih`
+      ? `skupaj ${invScope.totals.pagesRead}/${invScope.totals.pagesDeclared} prebranih; odprtih strani ${invScope.totals.pagesOpen} (PZ 71/71 od P44; PS sprava s 2607 izrecno odprta) — 0 tihih`
       : p20pagesErrors.join("; "),
   );
 
@@ -1329,7 +1331,7 @@ export function runQA(opts: QAOptions = {}): QAReport {
     "P20: reconciliation checks the scope INVENTORY (read + open pages == declared), not just statuses; zeroLoss with a statement of what it certifies and does NOT; 0 stale PUA locators",
     p20recErrors.length === 0,
     p20recErrors.length === 0
-      ? `enote: ${rec.units.length}; vse scopeCheck.accounted; zeroLoss=${rec.zeroLoss}; pomen dokumentiran (PS 135 + PZ 59 strani izrecno odprtih, ne prikrito)`
+      ? `enote: ${rec.units.length}; vse scopeCheck.accounted; zeroLoss=${rec.zeroLoss}; pomen dokumentiran (vseh 277 strani prebranih — PZ 71/71 od P44; sprava PS 2607 izrecno odprta, ne prikrito)`
       : p20recErrors.join("; "),
   );
 
@@ -1427,8 +1429,8 @@ export function runQA(opts: QAOptions = {}): QAReport {
   const psSrc = ATLAS_SOURCES.find((s) => s.code === "N083PS");
   if (!psSrc) p36Errors.push("vir N083PS manjka");
   else {
-    if (psSrc.structuredEntries !== 2743)
-      p36Errors.push(`N083PS: structuredEntries=${psSrc.structuredEntries}, pričakovano 2743 (P36 strojni prepis 135 strani)`);
+    if (psSrc.structuredEntries !== 2974)
+      p36Errors.push(`N083PS: structuredEntries=${psSrc.structuredEntries}, pričakovano 2974 (P36 2743 + P38 3. prehod, dokaz PS-full-v2.json)`);
     if (psSrc.lastVerified !== "2026-10-12")
       p36Errors.push("N083PS: lastVerified ni 2026-10-12 (P36 kampanja, P41 ponovna preverba)");
     if (!(psSrc.noteSi ?? "").includes("ps-raw"))
@@ -1440,17 +1442,17 @@ export function runQA(opts: QAOptions = {}): QAReport {
     if (!(psSrc.noteSi ?? "").includes("Waldung") || !(psSrc.noteSi ?? "").includes("2607"))
       p36Errors.push("N083PS: nota SL ne dokumentira strukturnih ugotovitev (sekcije, kontrolna vsota)");
   }
-  if (PS_RECAP_1826.sampleRowCount !== 2743)
-    p36Errors.push(`PS_RECAP_1826.sampleRowCount=${PS_RECAP_1826.sampleRowCount}, pričakovano 2743`);
+  if (PS_RECAP_1826.sampleRowCount !== 2974)
+    p36Errors.push(`PS_RECAP_1826.sampleRowCount=${PS_RECAP_1826.sampleRowCount}, pričakovano 2974 (P36 2743 + P38 pass-3)`);
   if (!(PS_RECAP_1826.mostUsefulSi ?? "").includes("P36"))
     p36Errors.push("PS_RECAP_1826: priporočilo SL ne odraža P36 kampanje (zastarelo »NE prepisovati«)");
   push(
     "qa-p36-ps-machineread",
-    "P36: N083PS — strojni prepis VSEH 135 strani (5–139) dokumentiran v viru (2743 vrstic, dvoprehodno, dokaz ps-raw + PS-full.json); strukturne ugotovitve (pomešan zvezek, sekcije Waldung/Schmiegärten/Blatt X, kontrolna vsota 2607 kot vsota kategorij) vidne v notah; sprava s 2607 ostaja TO_COLLECT",
-    "P36: N083PS — machine transcription of ALL 135 pages (5–139) documented at the source (2,743 rows, two passes, evidence ps-raw + PS-full.json); structural findings (shuffled volume, Waldung/Schmiegärten/Blatt X sections, the 2,607 checksum as a category sum) visible in the notes; the reconciliation remains TO_COLLECT",
+    "P36: N083PS — strojni prepis VSEH 135 strani (5–139) dokumentiran v viru (2743 vrstic + P38 pass-3 = 2974, dvoprehodno, dokaz ps-raw + PS-full.json + PS-full-v2.json); strukturne ugotovitve (pomešan zvezek, organizacija po listih Blatt I–X, sekcije Waldung/Schmiegärten/Blatt X, kontrolna vsota 2607 kot vsota kategorij) vidne v notah; sprava s 2607 ostaja izrecno odprta",
+    "P36: N083PS — machine transcription of ALL 135 pages (5–139) documented at the source (2,743 rows + the P38 pass-3 = 2,974, two passes, evidence ps-raw + PS-full.json + PS-full-v2.json); structural findings (shuffled volume, the Blatt I–X sheet organization, Waldung/Schmiegärten/Blatt X sections, the 2,607 checksum as a category sum) visible in the notes; the reconciliation remains explicitly open",
     p36Errors.length === 0,
     p36Errors.length === 0
-      ? "135 strani · 2743 vrstic · 213 VLM branj (135 + 78) · 4 sekcije odkrite"
+      ? "135 strani · 2974 vrstic (2743 + pass-3) · 233 VLM branj · Blatt I–X + 4 sekcije"
       : p36Errors.join("; "),
   );
 
@@ -1545,6 +1547,46 @@ export function runQA(opts: QAOptions = {}): QAReport {
       : p38Errors.join("; "),
   );
 
+  // P38b (GitHub linija, 2026-10-11): 3. prehod PS — strukturno odkritje listov (Blatt) + adjudikacija.
+const p38bErrors: string[] = [];
+  {
+    const ps = ATLAS_SOURCES.find((s) => s.code === "N083PS");
+    if (!ps) p38bErrors.push("vir N083PS manjka");
+    else {
+      if (!(ps.noteSi ?? "").includes("P38")) p38bErrors.push("N083PS: nota SL ne dokumentira P38 (3. prehod)");
+      if (!(ps.noteSi ?? "").includes("Blatt I")) p38bErrors.push("N083PS: nota SL brez strukturnega odkritja listov (Blatt)");
+      if (!(ps.noteSi ?? "").includes("PS-full-v2.json")) p38bErrors.push("N083PS: nota SL brez kazalca na PS-full-v2.json");
+      if (!(ps.noteSi ?? "").includes("69, 85, 86, 88, 93, 128, 138"))
+        p38bErrors.push("N083PS: nota SL brez seznama nerešenih strani za #12");
+      if (!(ps.noteEn ?? "").includes("per-sheet")) p38bErrors.push("N083PS: nota EN brez per-sheet rekonstrukcije v naslednjih korakih");
+    }
+    if (PS_RECAP_1826.sampleRowCount !== 2974) p38bErrors.push("PS_RECAP: števec vrstic ni 2974");
+    if (!(PS_RECAP_1826.mostUsefulSi ?? "").includes("P38")) p38bErrors.push("PS_RECAP: priporočilo SL ne odraža P38");
+    // strežniška kontrola dokazov (odjemalski izris preskoči):
+    // - v repozitoriju/CI (research/ prisoten po .gitignore-pravilih) → STROGO:
+    //   vseh 20 datotek pass-3 + PS-full-v2.json mora obstajati;
+    // - v produkcijskem deploymentu research/ NAMENOMA ni (.vercelignore, 92 MB)
+    //   → kontrola se preskoči, dokazi ostanejo v repozitoriju.
+    if (opts.fileExists) {
+      const fileExists = opts.fileExists;
+      if (fileExists("research/issue17/ps-raw/ps-005.json")) {
+        const targets = [24, 37, 69, 79, 83, 84, 85, 86, 87, 88, 92, 93, 94, 99, 121, 125, 128, 135, 138, 139];
+        const missing = targets.filter((t) => !fileExists(`research/issue17/ps-raw/ps-${String(t).padStart(3, "0")}-pass3.json`));
+        if (missing.length) p38bErrors.push(`ps-raw: manjka pass3 za strani ${missing.join(", ")}`);
+        if (!fileExists("research/issue17/PS-full-v2.json")) p38bErrors.push("manjka PS-full-v2.json");
+      }
+    }
+  }
+  push(
+    "qa-p38-ps-blatt",
+    "P38: N083PS — 3. prehod 20 ciljnih strani (233 VLM branj) + odkritje organizacije po listih (Blatt I–X, lastno številčenje); identiteta parcele = (list, številka); kontrolna vsota 2607 je vsota čez vse liste; 7 nerešenih strani izrecno za človeški pregled (#12)",
+    "P38: N083PS — 3rd pass over 20 target pages (233 VLM reads) + discovery of sheet organization (Blatt I–X, own numbering); parcel identity = (sheet, number); the 2,607 checksum sums across all sheets; 7 unresolved pages explicitly deferred to human review (#12)",
+    p38bErrors.length === 0,
+    p38bErrors.length === 0
+      ? "20 strani pass-3 · 2974 izbranih vrstic · str. 24 potrjena 421-440 · nerešene: 69, 85, 86, 88, 93, 128, 138"
+      : p38bErrors.join("; "),
+  );
+
   /* ── P39 (issue #10): PS — razdvojitev večkulturnih vrstic v spravni model ── */
   const p39Errors: string[] = [];
   const L = PS_LANDUSE_P39;
@@ -1632,6 +1674,47 @@ export function runQA(opts: QAOptions = {}): QAReport {
     p39Errors.length === 0
       ? `2134 vnosov · 2632 parov · 430× več rab · 72,0 % klasificirano · ${p39FileDetail}`
       : p39Errors.join("; "),
+  );
+
+  // P39b (GitHub linija, 2026-10-11): strukturna rekonstrukcija PS (33 segmentov, per-list dokaz).
+const p39bErrors: string[] = [];
+  {
+    const ps = ATLAS_SOURCES.find((s) => s.code === "N083PS");
+    if (!ps) p39bErrors.push("vir N083PS manjka");
+    else {
+      if (!(ps.noteSi ?? "").includes("P39")) p39bErrors.push("N083PS: nota SL ne dokumentira P39 (strukturna rekonstrukcija)");
+      if (!(ps.noteSi ?? "").includes("PS-reconstruction.json")) p39bErrors.push("N083PS: nota SL brez kazalca na dokaz PS-reconstruction.json");
+      if (!(ps.noteSi ?? "").includes("29/29")) p39bErrors.push("N083PS: nota SL brez vsebinskega dokaza (29/29 parov z različnimi lastniki)");
+      if (!(ps.noteSi ?? "").includes("2724")) p39bErrors.push("N083PS: nota SL brez števca 2724 unikatnih (segment, številka) parov");
+      if (!(ps.noteSi ?? "").includes("[2221, 2725]")) p39bErrors.push("N083PS: nota SL brez meje [2221, 2725]");
+      if (!(ps.noteSi ?? "").includes("KONSISTENTNO")) p39bErrors.push("N083PS: nota SL brez sklepa o konsistentnosti s kontrolno vsoto");
+      if (!(ps.noteEn ?? "").includes("P39")) p39bErrors.push("N083PS: nota EN ne dokumentira P39");
+      if (!(ps.noteEn ?? "").includes("REFUTED")) p39bErrors.push("N083PS: nota EN brez REFUTED (ovrnitev P36 hipoteze)");
+      if (ps.structuredEntries !== 2974) p39bErrors.push("N083PS: structuredEntries spremenjen (P39 je analiza, ne nov prepis)");
+    }
+    const psSeries = KURRENT_SERIES.find((s) => s.code === "PS");
+    if (!psSeries) p39bErrors.push("KURRENT_SERIES: PS manjka");
+    else if (!(psSeries.noteSi ?? "").includes("P39")) p39bErrors.push("KURRENT_SERIES PS: nota SL ne odraža P39");
+    if (!(PS_RECAP_1826.mostUsefulSi ?? "").includes("P39")) p39bErrors.push("PS_RECAP: priporočilo SL ne odraža P39");
+    if (!(PS_RECAP_1826.mostUsefulEn ?? "").includes("P39")) p39bErrors.push("PS_RECAP: priporočilo EN ne odraža P39");
+    if (PS_RECAP_1826.sampleRowCount !== 2974) p39bErrors.push("PS_RECAP: sampleRowCount ni 2974");
+    // strežniška kontrola dokaza (enaka logika preskoka kot p38: v produkciji
+    // research/ namenoma ni — .vercelignore)
+    if (opts.fileExists) {
+      if (opts.fileExists("research/issue17/ps-raw/ps-005.json")) {
+        if (!opts.fileExists("research/issue17/PS-reconstruction.json"))
+          p39bErrors.push("manjka PS-reconstruction.json (dokaz P39)");
+      }
+    }
+  }
+  push(
+    "qa-p39-ps-structure",
+    "P39: N083PS — strukturna rekonstrukcija: 33 segmentov (fizična segmentacija + lastniški test); VSEBINSKI DOKAZ per-list številčenja (29/29 prekrivajočih parov z različnimi lastniki — P36 hipoteza o napačno prebranih številkah OVRŽENA); 2724 unikatnih (segment, številka) parov (50 večkulturnih dodatnih vrstic, 200 neberljivih številk); kontrolna vsota 102+2505=2607 znotraj meje [2221, 2725] — KONSISTENTNO; eksaktna potrditev za issue #12",
+    "P39: N083PS — structural reconstruction: 33 segments (physical segmentation + owner test); CONTENT EVIDENCE of per-sheet numbering (29/29 overlapping pairs with different owners — the P36 misread hypothesis REFUTED); 2,724 unique (segment, number) pairs (50 multi-culture extra rows, 200 unreadable numbers); the checksum 102+2,505=2,607 lies within the bounds [2,221, 2,725] — CONSISTENT; exact confirmation deferred to issue #12",
+    p39bErrors.length === 0,
+    p39bErrors.length === 0
+      ? "33 segmentov · 29/29 vsebinski dokaz · 2724 parov · 2607 znotraj [2221, 2725]"
+      : p39bErrors.join("; "),
   );
 
   // ——— P40: rekapitulacija str. 140–143 — deterministična primerjava s spravnim modelom (issue #10, P5-b) ———
@@ -2037,6 +2120,84 @@ export function runQA(opts: QAOptions = {}): QAReport {
       : p43Errors.join("; "),
   );
 
+  // P43b (GitHub linija, 2026-10-11): prva celotna veriga PT→PUA→PS.
+const p43bErrors: string[] = [];
+  {
+    const pt = ATLAS_SOURCES.find((s) => s.code === "N083PT");
+    if (!pt) p43bErrors.push("vir N083PT manjka");
+    else {
+      if (pt.lastVerified !== "2026-10-11")
+        p43bErrors.push(`N083PT: lastVerified=${pt.lastVerified}, pričakovano 2026-10-11 (dan P43)`);
+      if (!(pt.noteSi ?? "").includes("P43"))
+        p43bErrors.push("N083PT: nota SL ne dokumentira P43 (celotna veriga)");
+      if (!(pt.noteSi ?? "").includes("chain-full-pt-ps.json"))
+        p43bErrors.push("N083PT: nota SL brez kazalca na dokaz chain-full-pt-ps.json");
+      if (!(pt.noteSi ?? "").includes("2 DOKAZANI"))
+        p43bErrors.push("N083PT: nota SL brez rangov verige (2 DOKAZANI + 5 VERJETNIH + 4 MOGOČE)");
+      if (!(pt.noteSi ?? "").includes("65/65"))
+        p43bErrors.push("N083PT: nota SL brez križne potrditve korpusa (65/65)");
+      if (!(pt.noteSi ?? "").includes("mešano številčenje"))
+        p43bErrors.push("N083PT: nota SL brez opozorila o mešanem številčenju ATLAS_OWNERS");
+      if (!(pt.noteEn ?? "").includes("FIRST FULL CHAIN"))
+        p43bErrors.push("N083PT: nota EN brez FIRST FULL CHAIN (P43)");
+      if (pt.structuredEntries !== 84)
+        p43bErrors.push("N083PT: structuredEntries spremenjen (P43 je analiza, ne nov prepis)");
+    }
+    const ptSeries = KURRENT_SERIES.find((s) => s.code === "PT");
+    if (!ptSeries) p43bErrors.push("KURRENT_SERIES: PT manjka");
+    else if (!(ptSeries.noteSi ?? "").includes("P43"))
+      p43bErrors.push("KURRENT_SERIES PT: nota SL ne odraža P43");
+    // strežniška kontrola dokaza (enaka logika preskoka kot p38/p39: v
+    // produkciji research/ namenoma ni — .vercelignore, 92 MB)
+    if (opts.readFile) {
+      const raw = opts.readFile("research/issue13/chain-full-pt-ps.json");
+      if (raw) {
+        try {
+          const proof = JSON.parse(raw) as {
+            stats?: {
+              ptRows?: number;
+              ptHouses?: number;
+              houseTiers?: Record<string, number>;
+              housesCorroborated?: number;
+              puaUniverse?: number;
+            };
+            meta?: { crossValidation?: { exact?: number; housesChecked?: number } };
+          };
+          if (proof.stats?.ptRows !== 105)
+            p43bErrors.push(`dokaz: stats.ptRows=${proof.stats?.ptRows}, pričakovano 105 (84 hiš + 21 parcelnih vrstic)`);
+          if (proof.stats?.ptHouses !== 84)
+            p43bErrors.push(`dokaz: stats.ptHouses=${proof.stats?.ptHouses}, pričakovano 84`);
+          const ht = proof.stats?.houseTiers ?? {};
+          if (ht["DOKAZANA"] !== 2 || ht["VERJETNA"] !== 5 || ht["MOGOČA"] !== 4 || ht["NEREŠENA"] !== 73)
+            p43bErrors.push(
+              `dokaz: houseTiers=${JSON.stringify(ht)}, pričakovano {DOKAZANA:2, VERJETNA:5, MOGOČA:4, NEREŠENA:73}`,
+            );
+          if (proof.stats?.housesCorroborated !== 6)
+            p43bErrors.push(`dokaz: housesCorroborated=${proof.stats?.housesCorroborated}, pričakovano 6`);
+          if (proof.stats?.puaUniverse !== 65)
+            p43bErrors.push(`dokaz: puaUniverse=${proof.stats?.puaUniverse}, pričakovano 65 (samo P41 veriga)`);
+          const xv = proof.meta?.crossValidation;
+          if (xv?.exact !== 65 || xv?.housesChecked !== 65)
+            p43bErrors.push(`dokaz: križna potrditev korpusa=${xv?.exact}/${xv?.housesChecked}, pričakovano 65/65`);
+        } catch {
+          p43bErrors.push("dokaz: chain-full-pt-ps.json ni veljaven JSON");
+        }
+      } else if (opts.fileExists?.("research/issue13/chain-pua-ps.json")) {
+        // repozitorij ima research/ (P41 dokaz obstaja), a P43 dokaz manjka
+        p43bErrors.push("manjka research/issue13/chain-full-pt-ps.json (dokaz P43)");
+      }
+    }
+  }
+  push(
+    "qa-p43-chain-full",
+    "P43: N083PT — PRVA CELOTNA VERIGA PT→PUA→PS (kompozicija W-mostu P5-c + verige P41; 105 vrstic nič-zgube): 2 DOKAZANI + 5 VERJETNIH + 4 MOGOČE hiše segajo do parcel PS, 6 s priimkovno korroboracijo čez W; križna potrditev korpusa s P41 65/65 Točno; ATLAS_OWNERS houseRefs (mešano številčenje prve gradnje) izrecno izven verige; dokončna potrditev = #12",
+    "P43: N083PT — FIRST FULL CHAIN PT→PUA→PS (composition of the P5-c W-bridge + the P41 chain; 105 zero-loss rows): 2 PROVEN + 5 LIKELY + 4 POSSIBLE houses reach the PS parcels, 6 with surname corroboration across W; corpus cross-check against P41 65/65 EXACT; ATLAS_OWNERS houseRefs (first-build mixed numbering) explicitly excluded; final confirmation = #12",
+    p43bErrors.length === 0,
+    p43bErrors.length === 0
+      ? "105 vrstic · 2/5/4 hiše · 6 korroboriranih · korpus 65/65 · 65-ji univerzum"
+      : p43bErrors.join("; "),
+  );
+
   // ——— P44: N083PS — razcep K1/K2 (Abschluß der Gemeinde) ———
   const p44Errors: string[] = [];
   const KK = PS_K1K2_P44;
@@ -2107,6 +2268,86 @@ export function runQA(opts: QAOptions = {}): QAReport {
     p44Errors.length === 0
       ? `K1=702, K2=1388 · omejitev 2090 · H1 edina sprejeta (H2–H5 zavrnjene) · Abschluß zaprt · ${p44FileDetail}`
       : p44Errors.join("; "),
+  );
+
+  // P44 (GitHub linija, 2026-10-11): PZ tabele cenilnih razredov — popolnost in uskladitev.
+const p44bErrors: string[] = [];
+  // 1. tabela: 10 vrstic razredov + Summa
+  if (PZ_CLASS_TABLE_1825.rows.length !== 10)
+    p44bErrors.push(`classTable: ${PZ_CLASS_TABLE_1825.rows.length} vrstic != 10`);
+  if (PZ_CLASS_TABLE_1825.summa.joch !== 1152 || PZ_CLASS_TABLE_1825.summa.klafter !== 495)
+    p44bErrors.push(`Summa: ${PZ_CLASS_TABLE_1825.summa.joch}/${PZ_CLASS_TABLE_1825.summa.klafter} != 1152/495`);
+  if (PZ_CLASS_TABLE_1825.summa.reinTotal !== "4492 fl 51 kr")
+    p44bErrors.push(`Rein total: ${PZ_CLASS_TABLE_1825.summa.reinTotal}`);
+  if (PZ_CLASS_TABLE_1825.summa.bruttoTotal !== "8872 fl 5¾ kr")
+    p44bErrors.push(`Brutto total: ${PZ_CLASS_TABLE_1825.summa.bruttoTotal}`);
+  // 2. vsota vrstic = 1145 (adjudicirano) in razlika do Summe dokumentirana
+  const p44RowSum = PZ_CLASS_TABLE_1825.rows.reduce((a, r) => a + r.joch, 0);
+  if (p44RowSum !== PZ_CLASS_TABLE_1825.rowSumJoch)
+    p44bErrors.push(`vsota vrstic ${p44RowSum} != rowSumJoch ${PZ_CLASS_TABLE_1825.rowSumJoch}`);
+  if (Math.abs(PZ_CLASS_TABLE_1825.summa.joch - p44RowSum) !== 7)
+    p44bErrors.push(`Δ(Summa − vsota vrstic) != 7 (dokumentirana odprta točka D4)`);
+  // 3. adjudikacija Acker II = 334 [~] + Acker I korroboracija
+  const acker = PZ_CLASS_TABLE_1825.rows.filter((r) => r.culture === "Acker");
+  if (acker.length !== 2) p44bErrors.push(`Acker vrstic: ${acker.length} != 2 (razredov I in II, III/IV ni)`);
+  if (acker[0]?.joch !== 80) p44bErrors.push(`Acker I: ${acker[0]?.joch} != 80 (korroboracija str. 12)`);
+  if (acker[1]?.joch !== 334 || acker[1]?.confidence !== "~")
+    p44bErrors.push(`Acker II: ${acker[1]?.joch}/${acker[1]?.confidence} != 334/~ (adjudicirano, D1)`);
+  if (acker[0].joch + acker[1].joch - 413 > 1 || 413 - (acker[0].joch + acker[1].joch) > 1)
+    p44bErrors.push(`Acker I+II = ${acker[0].joch + acker[1].joch} ≫ PV Aecker 413 (±1)`);
+  // 4. Weingärten = PV 7 j; Weiden kontrola 636/263 v uskladitvi
+  const weing = PZ_CLASS_TABLE_1825.rows.find((r) => r.culture === "Weingärten");
+  if (!weing || weing.joch !== 7) p44bErrors.push("Weingärten != 7 joch (= PV)");
+  if (!PZ_CLASS_TABLE_1825.reconciliationSi.includes("636 j 263 kl"))
+    p44bErrors.push("uskladitev ne navaja kontrole str. 65 (Weiden gesamt 636 j 263 kl = PV)");
+  // 5. PZ_ECONOMY veriga — divergenca str. 50 razrešena
+  const ackerChain = PZ_ECONOMY_1825.valuationChain.find((s) => s.stepSi.startsWith("Ackerland razred I"));
+  if (!ackerChain || !ackerChain.valuesSi.includes("25 fl 44"))
+    p44bErrors.push("PZ_ECONOMY Acker I veriga ne nosi razrešene vrednosti 25 fl 44 (D2)");
+  if (ackerChain && ackerChain.confidence === "nizka")
+    p44bErrors.push("PZ_ECONOMY Acker I ostaja 'nizka' — P44 je divergenco razrešil");
+  // 6. stanja: KURRENT_SERIES PZ 71/71 + vir N083PZ strukturno 11
+  const pzSeries = KURRENT_SERIES.find((k) => k.code === "PZ");
+  if (!pzSeries || pzSeries.pagesTranscribed !== 71) p44bErrors.push("KURRENT_SERIES PZ ni 71/71");
+  const pzSrc = ATLAS_SOURCES.find((s) => s.code === "N083PZ");
+  if (!pzSrc || pzSrc.structuredEntries !== 11) p44bErrors.push("sources.ts N083PZ structuredEntries != 11");
+  // 7. dokaz v repozitoriju (enaka logika preskoka kot p38/p39/p43: v produkciji
+  // research/ namenoma ni v sliki — .vercelignore)
+  if (opts.readFile) {
+    const raw = opts.readFile("research/issue11/pz-classes-full.json");
+    if (raw) {
+      try {
+        const proof = JSON.parse(raw) as {
+          classTable?: unknown[];
+          divergences?: unknown[];
+          stats?: { vlmCallsP44?: number; pagesReadP44?: number; pagesReadTotal?: number };
+        };
+        if ((proof.classTable ?? []).length !== 10)
+          p44bErrors.push(`dokaz: classTable=${(proof.classTable ?? []).length}, pričakovano 10`);
+        if ((proof.divergences ?? []).length !== 6)
+          p44bErrors.push(`dokaz: divergences=${(proof.divergences ?? []).length}, pričakovano 6`);
+        if (proof.stats?.vlmCallsP44 !== 76)
+          p44bErrors.push(`dokaz: vlmCallsP44=${proof.stats?.vlmCallsP44}, pričakovano 76`);
+        if (proof.stats?.pagesReadP44 !== 64)
+          p44bErrors.push(`dokaz: pagesReadP44=${proof.stats?.pagesReadP44}, pričakovano 64`);
+        if (proof.stats?.pagesReadTotal !== 71)
+          p44bErrors.push(`dokaz: pagesReadTotal=${proof.stats?.pagesReadTotal}, pričakovano 71`);
+      } catch {
+        p44bErrors.push("dokaz: pz-classes-full.json ni veljaven JSON");
+      }
+    } else if (opts.fileExists?.("research/issue17/PZ-valuation.json")) {
+      // repozitorij ima research/ (issue #4 dokaz obstaja), a P44 dokaz manjka
+      p44bErrors.push("manjka research/issue11/pz-classes-full.json (dokaz P44)");
+    }
+  }
+  push(
+    "qa-p44-pz-classes",
+    "P44: N083PZ — prepis tabel cenilnih razredov (issue #11): 71/71 strani (76 VLM klicev); rekapitulacija str. 67: 10 razredov + Summa 1152 j 495 kl, Brutto 8872 fl 5¾ kr, Rein 4492 fl 51 kr; uskladitev s PV (Δ +4 j ≈ 0,3 %; kontrola str. 65 = 636 j 263 kl natančno); divergenca str. 50 RAZREŠENA; Acker II adjudicirano 334 [~]; 4 odprte točke registrirane za #12",
+    "P44: N083PZ — the valuation class tables transcribed (issue #11): 71/71 pages (76 VLM calls); the p. 67 recapitulation: 10 classes + Summa 1152 j 495 kl, gross 8872 fl 5¾ kr, net 4492 fl 51 kr; reconciliation with PV (Δ +4 j ≈ 0.3 %; the p. 65 control = 636 j 263 kl exactly); the p. 50 divergence RESOLVED; Acker II adjudicated to 334 [~]; 4 open points registered for #12",
+    p44bErrors.length === 0,
+    p44bErrors.length === 0
+      ? "10 razredov · Summa 1152/495 · vsota vrstic 1145 (Δ 7 dokumentirana) · Acker 80+334≈PV 413 · Weiden kontrola = PV"
+      : p44bErrors.join("; "),
   );
 
   // ——— P45: N083PS — verifikacija leksikografskih virov P43 ———
@@ -2208,6 +2449,89 @@ export function runQA(opts: QAOptions = {}): QAReport {
     p45Errors.length === 0
       ? `0/70 potrjeno · 33/7/17/13 · fran.si 18 + wiki 14 + repo 1 + unreachable 16 · Lohn→Bd 12, Höfling→Bd 10, Efeu→Bd 3, Aue Bd 1 ✓, Öde Bd 13 ✓ · ${p45FileDetail}`
       : p45Errors.join("; "),
+  );
+
+  // P45b (GitHub linija, 2026-10-11): validacija porazdelitve stavb A03–A05 (SHEET_TRUTH; statusi A03–A05 od P50 NEATLINE_*).
+const p45bErrors: string[] = [];
+  // 1. SHEET_TRUTH vsebuje vse tri liste s celicami in kvantificirano validacijo
+  if (SHEET_TRUTH.length !== 3) p45bErrors.push(`SHEET_TRUTH=${SHEET_TRUTH.length}, pri\u010dakovano 3`);
+  const p45Expect: Record<string, { cell: string; med: number; in30: number }> = {
+    A03: { cell: "VKIX24dg", med: 89, in30: 0.067 },
+    A04: { cell: "VKIX24cg", med: 69.7, in30: 0.118 },
+    A05: { cell: "VKIX24ch", med: 27, in30: 0.6 },
+  };
+  for (const st of SHEET_TRUTH) {
+    const exp = p45Expect[st.sheet];
+    if (!exp) {
+      p45bErrors.push(`SHEET_TRUTH nepri\u010dakovan list ${st.sheet}`);
+      continue;
+    }
+    if (st.cellCode !== exp.cell) p45bErrors.push(`${st.sheet}: celica ${st.cellCode} != ${exp.cell}`);
+    if (st.validation.medianDistanceM !== exp.med)
+      p45bErrors.push(`${st.sheet}: mediana ${st.validation.medianDistanceM} != ${exp.med}`);
+    if (st.validation.inlier30 !== exp.in30)
+      p45bErrors.push(`${st.sheet}: inlier30 ${st.validation.inlier30} != ${exp.in30}`);
+    if (st.validation.lastVerified !== "2026-10-12")
+      p45bErrors.push(`${st.sheet}: lastVerified ${st.validation.lastVerified}`);
+    if (st.status !== "REVIEW") p45bErrors.push(`${st.sheet}: status ${st.status} != REVIEW`);
+  }
+  // 2. SHEET_GEOREFS natan\u010dnosti nosijo P45 validacijo; statusi ostajajo REVIEW
+  for (const sheet of ["A03", "A04", "A05"]) {
+    const g = SHEET_GEOREFS.find((s) => s.sheet === sheet);
+    if (!g) {
+      p45bErrors.push(`SHEET_GEOREFS manjka ${sheet}`);
+      continue;
+    }
+    if (!g.accuracySi.includes("P50")) p45bErrors.push(`${sheet}: accuracySi brez P50 (P45 validacija ostaja v dokazu; runtime je P50 neatline)`);
+    if (!["NEATLINE_GEOREFERENCED", "NEATLINE_PARTIAL_GEOREFERENCED"].includes(g.status)) p45bErrors.push(`${sheet}: status ${g.status} ni NEATLINE_* (P50 aktivacija nad P45 celi\u010dno preslikavo)`);
+  }
+  // 3. sources.ts opombe: P45 omembe, ne pa starih TO_COLLECT koncovk
+  for (const code of ["N083A03", "N083A04", "N083A05"]) {
+    const src = ATLAS_SOURCES.find((s) => s.code === code);
+    if (!src) {
+      p45bErrors.push(`sources.ts manjka ${code}`);
+      continue;
+    }
+    if (!src.noteSi?.includes("P45")) p45bErrors.push(`${code}: noteSi brez P45`);
+    if (!src.noteEn?.includes("P45")) p45bErrors.push(`${code}: noteEn brez P45`);
+    if (src.noteSi?.includes("ostaja TO_COLLECT")) p45bErrors.push(`${code}: noteSi \u0161e vedno TO_COLLECT`);
+  }
+  // 4. dokaz v repozitoriju (enaka logika preskoka produkcije kot p38/p39/p43/p44)
+  if (opts.readFile) {
+    const raw = opts.readFile("research/georef-n83/p45-sheet-fits.json");
+    if (raw) {
+      try {
+        const proof = JSON.parse(raw) as {
+          a02Truth?: { scaleMPerPx?: number; rotDeg?: number };
+          a03?: { cell?: { stats?: { medianM?: number } } };
+          a04?: { cell?: { stats?: { medianM?: number } } };
+          a05?: { cell?: { stats?: { medianM?: number } }; alternatives?: unknown[] };
+        };
+        if (proof.a02Truth?.scaleMPerPx === undefined || Math.abs(proof.a02Truth.scaleMPerPx - 0.8046) > 0.001)
+          p45bErrors.push(`dokaz: a02Truth.scaleMPerPx=${proof.a02Truth?.scaleMPerPx}`);
+        if (Math.abs((proof.a03?.cell?.stats?.medianM ?? -1) - 89) > 0.5)
+          p45bErrors.push(`dokaz: a03 mediana=${proof.a03?.cell?.stats?.medianM}`);
+        if (Math.abs((proof.a04?.cell?.stats?.medianM ?? -1) - 69.7) > 0.5)
+          p45bErrors.push(`dokaz: a04 mediana=${proof.a04?.cell?.stats?.medianM}`);
+        if (Math.abs((proof.a05?.cell?.stats?.medianM ?? -1) - 27) > 0.5)
+          p45bErrors.push(`dokaz: a05 mediana=${proof.a05?.cell?.stats?.medianM}`);
+        if ((proof.a05?.alternatives ?? []).length < 4)
+          p45bErrors.push("dokaz: a05.alternatives < 4 (dvoumnost mora biti dokumentirana)");
+      } catch {
+        p45bErrors.push("dokaz: p45-sheet-fits.json ni veljaven JSON");
+      }
+    } else if (opts.fileExists?.("research/georef-n83/kolpa-modern-centerline.json")) {
+      p45bErrors.push("manjka research/georef-n83/p45-sheet-fits.json (dokaz P45)");
+    }
+  }
+  push(
+    "qa-p45-sheet-anchors",
+    "P45: A03\u2013A05 \u2014 validacija porazdelitve stavb (issue #14): celi\u010dne umestitve eZKN kvantitativno potrjene proti sodobnim stavbnim parcelam GURS (A03 veriga 30 simbolov \u2192 mediana 89 m; A04 170 simbolov \u2192 69,7 m; A05 sklop 30 \u2192 27 m, 60 % znotraj 30 m); kalibracija na A02 (156 stavb: 0,805 m/px, +0,02\u00b0, ostanek 2,4 m); prosti fitovi zavrnjeni (nestabilni); SHEET_TRUTH registriran; odprta dvoumnost A05 dokumentirana za #12/#13",
+    "P45: A03\u2013A05 \u2014 building-distribution validation (issue #14): the eZKN cell placements quantitatively confirmed against modern GURS building parcels (A03 chain of 30 symbols \u2192 a median of 89 m; A04 170 symbols \u2192 69.7 m; A05 cluster of 30 \u2192 27 m, 60 % within 30 m); the A02 calibration (156 buildings: 0.805 m/px, +0.02\u00b0, residual 2.4 m); the free fits rejected (unstable); SHEET_TRUTH registered; A05's open ambiguity documented for #12/#13",
+    p45bErrors.length === 0,
+    p45bErrors.length === 0
+      ? "A03 89 m \u00b7 A04 69,7 m \u00b7 A05 27 m (60 % @30) \u00b7 kalibracija A02 0,805 m/px \u00b7 3 lista REVIEW s po\u0161tenimi ocenami"
+      : p45bErrors.join("; "),
   );
 
   // ——— P46: NEATLINE georeferenciranje sekcij dg/cg/ch (A03–A05) ———

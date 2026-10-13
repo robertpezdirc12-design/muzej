@@ -1,0 +1,37 @@
+{
+ "page": 38,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:45:33.726Z",
+ "parseOk": true,
+ "structured": {
+  "page": 38,
+  "pageKind": "narrative",
+  "sections": [
+   {
+    "culture": null,
+    "par": "§. IV",
+    "narrativeBrief": "Im Ganzen ist dieses, welches in dem Grundeinmale liegt, Gesträuch, und es folgt keinem Lohnfrüchte nicht, sondern daselbst können Jährlich in Durchschnitt zu 2 Pfundeln mit lohn Abzumerzung nur zugezogen werden, weshalb gänzlich unwerth.",
+    "rows": [],
+    "rawText": "IV Alm-Grundl. Im Ganzen ist dieses, welches in dem Grundeinmale liegt, Gesträuch, und es folgt keinem Lohnfrüchte nicht, sondern daselbst können Jährlich in Durchschnitt zu 2 Pfundeln mit lohn Abzumerzung nur zugezogen werden, weshalb gänzlich unwerth.",
+    "confidence": "clear"
+   },
+   {
+    "culture": null,
+    "par": "§. V",
+    "narrativeBrief": "Dieses wird nun mindstens abgethan. Wurde vorigen Jahres aufgelassen blosst mindstens zuming zugeführten Klein Vieh oder Gänse, fuhren zugeführt und Apfel unpflegig werden höchstens 4 Eimer, find sonstig sehr tief, kalt, und schwer, ferner vornehmlich, wie jenen in Grundten ein langgründig, und sehr feuchtgemacht befindet, worinnen rissfeste, Ein forderne mindstens anzugeben, als auch Beerenpflanzen, und Düngerpläne als übermässig. Als Maßverhältnis wurden darin Pumgellen 8249½ und Zoll 260 Stück, sowie Masse Abschätzung der Grüble 8849½ gänzlich gewürfelt.",
+    "rows": [],
+    "rawText": "V Mittergrundl. Dieses wird nun mindstens abgethan. Wurde vorigen Jahres aufgelassen blosst mindstens zuming zugeführten Klein Vieh oder Gänse, fuhren zugeführt und Apfel unpflegig werden höchstens 4 Eimer, find sonstig sehr tief, kalt, und schwer, ferner vornehmlich, wie jenen in Grundten ein langgründig, und sehr feuchtgemacht befindet, worinnen rissfeste, Ein forderne mindstens anzugeben, als auch Beerenpflanzen, und Düngerpläne als übermässig. Als Maßverhältnis wurden darin Pumgellen 8249½ und Zoll 260 Stück, sowie Masse Abschätzung der Grüble 8849½ gänzlich gewürfelt.",
+    "confidence": "~"
+   },
+   {
+    "culture": null,
+    "par": "§. VI",
+    "narrativeBrief": "Dieses wird nun mindstens angezeigtermaßen angewiesen, main [~] [?] [~] [?].",
+    "rows": [],
+    "rawText": "VI Gärten. Dieses wird nun mindstens angezeigtermaßen angewiesen, main [~] [?] [~] [?].",
+    "confidence": "?"
+   }
+  ],
+  "pageNote": "Stran 38 vsebuje zgolj narativni opis (§ IV Alm-Grundl, § V Mittergrundl, § VI Gärten) brez tabel s številskimi podatki o površini in vrednostih. Besedilo je pisano v Kurrent pisavi, berljivost je splošno dobra, nekateri deli so nejasni (označeno z [~] ali [?]). Na levi strani je navpični rokopisni zapis (verjetno kasnejši dodatek)."
+ }
+}

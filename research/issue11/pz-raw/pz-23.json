@@ -1,0 +1,57 @@
+{
+ "page": 23,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:40:50.430Z",
+ "parseOk": true,
+ "structured": {
+  "page": 23,
+  "pageKind": "narrative+table",
+  "sections": [
+   {
+    "culture": "Huthweiden",
+    "par": "§. 8.",
+    "narrativeBrief": "V tej razredni skupini je površina 448 Joch 707 Klafter, ki je razdeljena na 119 parcel, od katerih je bila parcela št. 2045 z 1 Joch [~] Klafter izločena kot gozdno zemljišče.",
+    "rows": [
+     {
+      "label": "Einzelne Classe",
+      "areaJoch": "448",
+      "areaKlafter": "707",
+      "values": null,
+      "yields": null,
+      "rawText": "Einzelne Classe. In dieser Classe fällt ein Flächenraum von 448 Joch 707 Klafter,",
+      "confidence": "clear"
+     }
+    ]
+   },
+   {
+    "culture": "Huthweiden",
+    "par": null,
+    "narrativeBrief": "Te pašnike sestavljajo pretežno suhi in peščeni ter kamniti teraši z redko travo in nekaj nizkim grmovjem.",
+    "rows": []
+   },
+   {
+    "culture": "Huthweiden",
+    "par": null,
+    "narrativeBrief": "Zaradi kvalitete, ki ustreza drugemu razredu, in zaradi velikega oddaljenosti od hiš ter pomanjkanja gnoja in vode so te posesti ocenjene na najnižjo stopnjo naravnega dohodka.",
+    "rows": []
+   },
+   {
+    "culture": "Huthweiden (Produkte)",
+    "par": null,
+    "narrativeBrief": null,
+    "rows": [
+     {
+      "label": "Fisses Heu",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "Quantität: 3; Preis tarife: 30 kr; Geld Ertrag: 1 fl",
+      "yields": null,
+      "rawText": "Fisses Heu _______ 3 ___ 30 _ 1 __",
+      "confidence": "clear"
+     }
+    ]
+   }
+  ],
+  "pageNote": "Stran vsebuje rokopisni tekst v pisavi Kurrent z rdečimi rubrikami (številke 125, 1790, 119, 1388, 940) in eno tabelo za pridelke (Produkte) na dnu strani."
+ }
+}

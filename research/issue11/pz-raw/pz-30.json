@@ -1,0 +1,79 @@
+{
+ "page": 30,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:43:05.287Z",
+ "parseOk": true,
+ "structured": {
+  "page": 30,
+  "pageKind": "table",
+  "sections": [
+   {
+    "culture": "Ackerland",
+    "par": null,
+    "narrativeBrief": null,
+    "rows": [
+     {
+      "label": "I",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "Weizen 12, Korn 12, Gerste -, Hafer -, Spelz -, Mais 26, Hirse 15, Buchweizen 10, Steppel 80, Rüben -, Raps -, Flachs/Hanf -, Hanf 50",
+      "rawText": "I | 12 | 12 | - | - | - | 26 | 15 | 10 | 80 | - | - | - | 50",
+      "confidence": "clear"
+     },
+     {
+      "label": "II",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "Weizen 9, Korn 9, Gerste -, Hafer -, Spelz -, Mais 18, Hirse 10, Buchweizen 7, Steppel 65, Rüben -, Raps -, Flachs/Hanf -, Hanf 20",
+      "rawText": "II | 9 | 9 | - | - | - | 18 | 10 | 7 | 65 | - | - | - | 20",
+      "confidence": "clear"
+     }
+    ]
+   },
+   {
+    "culture": "Wiesen",
+    "par": null,
+    "narrativeBrief": null,
+    "rows": [
+     {
+      "label": "I",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "Heu süßes 14, Grumet saures/gemischt 6",
+      "rawText": "I | Heu: süßes 14 | Grumet: saures/gemischt 6",
+      "confidence": "clear"
+     },
+     {
+      "label": "II",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "Heu süßes 8, Grumet -",
+      "rawText": "II | Heu: süßes 8 | Grumet: -",
+      "confidence": "clear"
+     }
+    ]
+   },
+   {
+    "culture": "Weingärten",
+    "par": null,
+    "narrativeBrief": null,
+    "rows": [
+     {
+      "label": "C.",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "schlechterer Wein 12 Eimer",
+      "rawText": "C. | schlechterer Wein: 12 Eimer",
+      "confidence": "clear"
+     }
+    ]
+   }
+  ],
+  "pageNote": "Stran vsebuje tiskano tabelo 'Resultate der benützten Behelfe' s podvojenimi stolpci (levi za 'Angabe des Gemeinde-Ausschusses', desni za 'Heraus und mit Berücksichtigung...'). Podatki so vpisani ročno s črnilom; večina celic je prazna. Pri Ackerland I in II so podatki enaki v obeh stolpcih. Pri Wiesen I in II ter Weingärten C. so podatki samo v desnem stolpcu. V desnem kotu je podpis 'Grgurin' oz. podobno."
+ }
+}

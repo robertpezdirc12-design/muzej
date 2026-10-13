@@ -1,0 +1,19 @@
+{
+ "page": 32,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:43:36.164Z",
+ "parseOk": true,
+ "structured": {
+  "page": 32,
+  "pageKind": "narrative",
+  "sections": [
+   {
+    "culture": null,
+    "par": null,
+    "narrativeBrief": "Stran vsebuje le narativni opis (§1-7) in podpise; ni tabel s številskimi podatki o površinah, vrednostih ali pridelkih.",
+    "rows": []
+   }
+  ],
+  "pageNote": "Stran je čisto rokopisna, napisana v nemški Kurrent pisavi. Vsebuje oštevilčene odseke §1–7 z opisi kultur (Acker, Wiesen, Weingärten, Gärten, Hutweide), daljši narativni odstavek, datum 9. avgust 1830, seznam imen (Gnomi/župniki, učitelji) in podpise. Rdeče rubrike niso vidne na tej strani; manjkajo vse tabele s številskimi podatki (Joch, Klafter, fl, kr)."
+ }
+}

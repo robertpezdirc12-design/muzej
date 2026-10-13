@@ -1,0 +1,569 @@
+{
+ "meta": {
+  "phase": "P44",
+  "issue": 11,
+  "title": "PZ — prepis tabel cenilnih razredov kultur (str. 4–67) + uskladitev s PV",
+  "createdAt": "2026-10-11",
+  "source": "N083PZ (Arhiv RS, SI AS 176, k.o. Griblje) — Catastral-Schätzungs-Elaborat 1825",
+  "rawDir": "research/issue11/pz-raw/",
+  "status": "REVIEW — strojno branje ni dokazni vir; dokončna potrditev = človeška paleografija (issue #12)",
+  "honesty": "vse vrednosti so KOT PREBRANE; [~] = negotovo, [?] = neberljivo; adjudikacije so utemeljene in označene; nobena števka ni »popravljena« k pričakovani vrednosti brez dokaza"
+ },
+ "readings67": [
+  {
+   "read": "pass1",
+   "at": "2026-10-11T19:01:19.584Z",
+   "prompt": "splošni"
+  },
+  {
+   "read": "pass2",
+   "at": "2026-10-11T19:06:38.525Z",
+   "prompt": "recap-tabela"
+  },
+  {
+   "read": "half-top",
+   "at": "2026-10-11T19:11:30.325Z",
+   "prompt": "zgornja polovica"
+  },
+  {
+   "read": "half-bottom",
+   "at": "2026-10-11T19:11:45.463Z",
+   "prompt": "spodnja polovica"
+  },
+  {
+   "read": "verify",
+   "at": "2026-10-11T19:12:51.911Z",
+   "prompt": "verifikacija s PV kontekstom"
+  },
+  {
+   "read": "band1-zoom",
+   "at": "2026-10-11T19:15:05.532Z",
+   "prompt": "izrez vrstic 1-4, 1.6x povečava"
+  }
+ ],
+ "classTable": [
+  {
+   "culture": "Acker",
+   "class": "I",
+   "area": {
+    "joch": 80,
+    "klafter": 842,
+    "confidence": "clear"
+   },
+   "readingsArea": {
+    "pass1": "80/842",
+    "pass2": "80/842",
+    "half-top": "80/842",
+    "verify": "80/842 POTRJENO",
+    "band1": "80/842"
+   },
+   "corroboration": "str. 12 §3: »Flächenraum von 80 Joch 974 Klafter, welche in 224 [Parzellen]« — joch 80 točno, klafter 842/974 [~]",
+   "values": {
+    "bruttoPerJoch": "22 fl 44 kr [clear]",
+    "reinPerJoch": "13 fl 5 kr [~ 12/13/15 — glej p50]",
+    "reinClasse": "1030-7033 fl 30½ kr [~ števke se razhajajo med branjmi]"
+   },
+   "note": "p50 veriga (2. krog): Rob 25 fl 44 kr (prečrtano 20 fl 44) − Anschlag 10 fl 40½ kr = Rein 15 fl 3½ kr ≈ zapisani 15 fl 5 kr; p67 recap kaže 13 fl 5 [~] — kr števka 3/5 nestabilna"
+  },
+  {
+   "culture": "Acker",
+   "class": "II",
+   "area": {
+    "joch": 334,
+    "klafter": 120,
+    "confidence": "~"
+   },
+   "readingsArea": {
+    "pass1": "234/120",
+    "pass2": "234/120",
+    "verify": "234/120 (POTRJENO clear)",
+    "band1": "334/120 [~] — oblika črke ustreza 3"
+   },
+   "adjudication": "334 [~]: 3 celotna branja kažejo 234, ALE (a) odločilni izrez 1.6x prepozna Kurrent obliko '3' (raven zgornji črt), (b) aritmetika: vsota vrstic s 334 = 1145 j ≈ Summa 1152 (Δ 7), s 234 = 1045 (Δ 107!), (c) PV izkaz rabe tal: Aecker 413 j 870 kl — s 334 je Acker I+II = 414 j (+1), s 234 pa 314 (−99). Tri neodvisni dokazi podpirajo 334; končna potrditev = človeška paleografija (#12).",
+   "values": {
+    "bruttoPerJoch": "16 fl 50 kr [~ 1× 16 fl 30]",
+    "reinPerJoch": "7 fl 35 kr [clear]",
+    "reinClasse": "2533 fl 24½ kr [clear]"
+   },
+   "note": "Acker ima SAMO dva razreda (I, II) — 4 branj potrdijo, da razreda III/IV ni"
+  },
+  {
+   "culture": "Wiesen",
+   "class": "I",
+   "area": {
+    "joch": 15,
+    "klafter": 1594,
+    "confidence": "clear"
+   },
+   "readingsArea": {
+    "pass1": "15/1594",
+    "pass2": "15/1594",
+    "half-top": "15/1594",
+    "verify": "15/1594 POTRJENO",
+    "band1": "15[18]/1596"
+   },
+   "values": {
+    "bruttoPerJoch": "9 fl 24 kr [clear]",
+    "reinPerJoch": "7 fl 20 kr [clear]",
+    "reinClasse": "119 fl 58½ kr [clear]"
+   }
+  },
+  {
+   "culture": "Wiesen",
+   "class": "II",
+   "area": {
+    "joch": 29,
+    "klafter": 818,
+    "confidence": "~"
+   },
+   "readingsArea": {
+    "pass1": "29/818",
+    "pass2": "29/818",
+    "half-top": "39/818",
+    "verify": "29/818 (ni razreda III)",
+    "band1": "29/818 [~ 2 tipičen raven vrh]"
+   },
+   "values": {
+    "bruttoPerJoch": "4 fl [?] kr",
+    "reinPerJoch": "3 fl [?] kr",
+    "reinClasse": "88 fl 2¾-32 kr [~]"
+   },
+   "note": "Wiesen I+II = 44 j; PV pravi Wiesen 76 + Wiesen mit Obstbäumen 12 = 88 j — Δ −44 j (razmejitev travnikov/pašnikov med PZ in PV, glej uskladitev)"
+  },
+  {
+   "culture": "Kleine Gärten",
+   "class": "C",
+   "area": {
+    "joch": 3,
+    "klafter": 612,
+    "confidence": "~"
+   },
+   "readingsArea": {
+    "pass1": "0/612",
+    "pass2": "3/612",
+    "half-top": "3/619",
+    "verify": "3/612 (zadnja števka 2)",
+    "band1": "3/615"
+   },
+   "values": {
+    "bruttoPerJoch": "20-22 fl 44 kr [~]",
+    "reinPerJoch": "10-13 fl 5 kr [~]",
+    "reinClasse": "44-111 fl 16½ kr [~]"
+   },
+   "note": "joch 3 [~] (1× 0); klafter 612/615/619 [~] — zadnja števka nestabilna"
+  },
+  {
+   "culture": "Größere Gärten",
+   "class": "C",
+   "area": {
+    "joch": 0,
+    "klafter": 105,
+    "confidence": "~"
+   },
+   "readingsArea": {
+    "pass1": "0/105",
+    "pass2": "None/105",
+    "half-top": "None/405",
+    "verify": "0 (prazno)/105"
+   },
+   "values": {
+    "bruttoPerJoch": "20-23 fl 44 kr [~]",
+    "reinPerJoch": "10-13 fl 5 kr [~]",
+    "reinClasse": "3 fl 18½-18¾ kr [~]"
+   },
+   "note": "joch polj prazen (0) ali neberljiv; PV Gemüse Gärten 2 j 123 kl [~] — blizu"
+  },
+  {
+   "culture": "Weingärten",
+   "class": "C",
+   "area": {
+    "joch": 7,
+    "klafter": 42,
+    "confidence": "clear"
+   },
+   "readingsArea": {
+    "pass1": "7/42",
+    "pass2": "7/42",
+    "half-top": "7/42",
+    "verify": "7/42 POTRJENO (klaftra 42, NE 665 kot PV)"
+   },
+   "values": {
+    "bruttoPerJoch": "21-24 fl [~]",
+    "reinPerJoch": "7 fl 10 kr [clear]",
+    "reinClasse": "50 fl 20½-¾ kr [clear]"
+   },
+   "note": "joch 7 = PV točno; klafter 42 ≠ PV 665 [~] — ena od obeh števk je napačno prebrana (odprto za #12)"
+  },
+  {
+   "culture": "Hutweiden",
+   "class": "C",
+   "area": {
+    "joch": 118,
+    "klafter": 702,
+    "confidence": "~"
+   },
+   "readingsArea": {
+    "pass1": "113/702",
+    "pass2": "118/702",
+    "half-top": "118/702",
+    "half-bottom": "118/26",
+    "verify": "118/702 (113→118 popravek)"
+   },
+   "values": {
+    "bruttoPerJoch": "1 fl [?] kr",
+    "reinPerJoch": "−15 kr do −45 kr [~ NEGATIVEN čisti donos]",
+    "reinClasse": "88 fl 49½ kr [clear]"
+   },
+   "note": "negativen Rein-Ertrag/joch — pašniki po odbitku stroškov ne dajejo čistega donosa [~ znak negativnosti med branjmi variira]"
+  },
+  {
+   "culture": "Weiden mit Holznutzung",
+   "class": "C",
+   "area": {
+    "joch": 558,
+    "klafter": 846,
+    "confidence": "~"
+   },
+   "readingsArea": {
+    "pass1": "558/558",
+    "pass2": "58/558",
+    "half-top": "558/858",
+    "half-bottom": "558/46",
+    "verify": "558/846 [~]"
+   },
+   "adjudication": "joch 558 (3 od 4 branj); klafter 846 [~] (558/858/846/46 — nestabilno)",
+   "values": {
+    "bruttoPerJoch": "1 fl 6 kr [clear]",
+    "reinPerJoch": "−51 kr [~ NEGATIVEN]",
+    "reinClasse": "1174 fl [~ #½ — števka neberljiva]"
+   }
+  },
+  {
+   "culture": "Bauarea",
+   "class": "—",
+   "area": {
+    "joch": 1,
+    "klafter": 1199,
+    "confidence": "~"
+   },
+   "readingsArea": {
+    "pass1": "1/1199",
+    "pass2": "1/799",
+    "verify": "1/1199 POTRJENO"
+   },
+   "values": {
+    "bruttoPerJoch": "16 fl 50 kr [clear — enako PZ_ECONOMY verigi]",
+    "reinPerJoch": "7 fl 35 kr [clear]",
+    "reinClasse": "36 fl 7½ kr [~]"
+   },
+   "note": "PV Bau Parzellen 4 j 889 kl — PZ recap 1 j 1199 kl; razlika 3 j [~] odprto"
+  }
+ ],
+ "summa": {
+  "area": {
+   "joch": 1152,
+   "klafter": 495,
+   "confidence": "clear (4 od 5 branj; 1× 7152)"
+  },
+  "bruttoTotal": "8872 fl 5¾ kr [clear]",
+  "reinTotal": "4492 fl 51 kr [clear]",
+  "rowsArithmetic": {
+   "sumWithAdjudicated334": "80+334+15+29+3+0+7+118+558+1 = 1145 joch → Δ +7 od Summa 1152 [~ — preostali odmik znotraj šumov branj klafter]",
+   "sumWith234": "1045 joch → Δ +107 od Summe — NESKLEDNO s smernim totalom"
+  },
+  "signatures": "rdeči pripisi o lastništvu (»Mit dem Grundbuch«) + podpisa overiteljev (Lindner, Jörggasser, Pöglhofer) [~]"
+ },
+ "reconciliation": {
+  "pvSource": "research/issue17/PV.json + research.ts PV_LAND_USE_1825 (N083PV, vsaka celica ≥2 klica)",
+  "levelSumma": {
+   "pz": "1152 j 495 kl (Summa str. 67)",
+   "pvErsteSumme": "1148 j 539 kl (Ganze Area — obdelano)",
+   "delta": "+4 joch / −44 klafter (≈ +0,3 %) — SKLEDNO na ravni vsote",
+   "pvGrandTotal": "1221 j 1513 kl (vključno vodo/poti/stavbe) ≈ 703 ha",
+   "note": "PZ Summa pokriva samo klasificirane kulture (brej Flüsse/Wege), zato je prava primerjava PV erste Summe, ne grand total"
+  },
+  "levelCulture": [
+   {
+    "culture": "Acker (I+II)",
+    "pz": "414 j (80+334 adjud.)",
+    "pv": "413 j 870 kl",
+    "delta": "+1 joch — SKLEDNO"
+   },
+   {
+    "culture": "Wiesen (I+II)",
+    "pz": "44 j (15+29)",
+    "pv": "88 j 1808 kl (76 + 12 z sadjem)",
+    "delta": "−44 joch — PZ klasificira manj travnikov; meja travnik/pašnik je v PZ ožja (glej Weiden +40)"
+   },
+   {
+    "culture": "Weiden (Hutweiden + mit Holznutzung)",
+    "pz": "676 j (118+558)",
+    "pv": "636 j 263 kl",
+    "delta": "+40 joch — približno kompenzira Wiesen −44 (skupna delta kmetijskih kultur ≈ −4 ≈ Δ Summa)"
+   },
+   {
+    "culture": "Gärten (Kleine + Größere)",
+    "pz": "3 j + 0 j",
+    "pv": "2 j 123 kl (Gemüse)",
+    "delta": "+1 joch [~]"
+   },
+   {
+    "culture": "Weingärten",
+    "pz": "7 j 42 kl",
+    "pv": "7 j 665 kl",
+    "delta": "joch ENAK; klafter se razhaja (42/665) [~] — odprto"
+   },
+   {
+    "culture": "Bauarea",
+    "pz": "1 j 1199 kl",
+    "pv": "4 j 889 kl (Bau Parzellen)",
+    "delta": "−3 joch [~] — odprto"
+   }
+  ],
+  "independentControl": "str. 65 (Specifischer Ausweis Weiden): nadzorna opomba »Weiden gesamt: 636 j 263 kl« — NATANČNO PV vrednost (neodvisna potrditev, da sta PZ in PV ista presnova)",
+  "crossCheckPR": "PR mere 1028 × 1884 kl = 1210,5 jocha ≈ PV grand total 1221 (−0,9 %) — trije viri (PV, PR, PZ) se na ravni občine skladijo"
+ },
+ "divergences": [
+  {
+   "id": "D1",
+   "page": 67,
+   "cell": "Acker II joch",
+   "readings": "234 (3×: pass1, pass2, verify) vs 334 (band1 izrez 1.6×: oblika Kurrent '3')",
+   "status": "ADJUDICIRANO na 334 [~]",
+   "evidence": "aritmetika vrstic (1145 ≈ Summa 1152) + PV Acker 413 (414 = 80+334) + povečan izrez",
+   "residual": "končna potrditev človeška (#12)"
+  },
+  {
+   "id": "D2",
+   "page": 50,
+   "cell": "Acker I veriga vrednosti",
+   "readings": "zgodovinsko: Rob 20 ali 25 fl 44; Anschlag 8/10 fl 10½/30½/41½; Rein 12/13/15 fl 5 — nobena kombinacija konsistentna",
+   "status": "RAZREŠENO (P44 2. krog)",
+   "evidence": "25 fl 44 je VELJAVNO (20 fl 44 je PREČRTANO nadpisano); Anschlag 10 fl 40½; račun 25 fl 44 − 10 fl 40½ = 15 fl 3½ ≈ zapisani 15 fl 5 kr (zaokrožena razlika 1½ kr)",
+   "residual": "p67 recap kaže Rein 13 fl 5 [~] — števka 13/15 še vedno [~]; kr 3↔5 zamenjava v Kurrentu"
+  },
+  {
+   "id": "D3",
+   "page": 67,
+   "cell": "Wiesen II joch",
+   "readings": "29 (4×) vs 39 (1×)",
+   "status": "29 [~] (večinsko; band1: raven vrh tipičen za 2)",
+   "evidence": "—",
+   "residual": "Wiesen skupaj 44 vs PV 88 (−44) — del klasifikacijske razlike, ne nujno napačno branje"
+  },
+  {
+   "id": "D4",
+   "page": 67,
+   "cell": "vsota vrstic vs Summa",
+   "readings": "vrstice (adjudicirano) 1145 j vs Summa 1152 j",
+   "status": "ODEPRTO — dokumentirano",
+   "evidence": "5 branj ni našlo manjkajočih vrstic (ni Acker III, ni Wiesen III); Δ 7 j je znotraj šuma branj (Hutweiden 113/118, Weiden kl 558/846, Kleine Gärten kl 612-619)",
+   "residual": "potreben človeški pregled originala (#12)"
+  },
+  {
+   "id": "D5",
+   "page": 67,
+   "cell": "Weingärten klafter",
+   "readings": "42 (4×) vs PV 665",
+   "status": "ODEPRTO — obe vrednosti [~]",
+   "evidence": "joch 7 se ujema točno; klafter se ne",
+   "residual": "paleografski pregled (#12)"
+  },
+  {
+   "id": "D6",
+   "page": 67,
+   "cell": "Rein-Ertrag klasse Acker I",
+   "readings": "7033/1030/1911 fl 30½ kr med branjmi",
+   "status": "ODEPRTO — bruttoTotal in reinTotal (8872/4492) so stabilni [clear], vrstični zneski pa [~]",
+   "evidence": "—",
+   "residual": "#12"
+  }
+ ],
+ "support": {
+  "p65HutweideGattungen": {
+   "page": 65,
+   "title": "Specifischer Ausweis — Hutweide/Weide",
+   "rows": [
+    {
+     "name": "1. Land",
+     "area": "22 j 463 kl",
+     "values": "Brutto 10 fl 18 kr; Aufwand 9 fl 36 kr; Rein 15 fl 12 kr [~]"
+    },
+    {
+     "name": "2. Land (I-III)",
+     "area": "18 j 547 kl",
+     "values": "Brutto 8 fl 54 kr; Aufwand 7 fl 30 kr; Rein 15 fl 24 kr [~]"
+    },
+    {
+     "name": "3. Schippe",
+     "area": "9 j 24 kl",
+     "values": "Brutto 1 fl 32 kr [~]"
+    },
+    {
+     "name": "4. Gf. Gründe",
+     "area": "22 j 463 kl",
+     "values": "Aufwand 35 fl 22 kr [~]"
+    },
+    {
+     "name": "5. Gf. Grundstück",
+     "area": "22 j 464 kl",
+     "values": "Rein 12 fl 5 kr [~]"
+    },
+    {
+     "name": "6. Hungersberg",
+     "area": "25 j 70 kl",
+     "values": "Aufwand 20 fl 26 kr [~]"
+    },
+    {
+     "name": "7. Schmide",
+     "area": "4 j",
+     "values": "Aufwand 16 fl 54 kr [~]"
+    },
+    {
+     "name": "8. Schmide und Zug f. Futterung",
+     "area": "1 j",
+     "values": "[~]"
+    }
+   ],
+   "control": "»Weiden gesamt: 636 j 263 kl (Kontrollangabe)« = PV natančno",
+   "note": "imenovane pašne gattunge (lokalna imena: Schippe, Hungersberg, Schmide...) — prvotni vrstni red ohranjen; 10 prebranih vrstic, vrstice 9–10 delno [~]"
+  },
+  "p63PachtParcels": {
+   "page": 63,
+   "title": "Namen / Des Grundstückes / Nach den ausgefundenen Pachtungen",
+   "structure": "parcelne vrstice: zap. št., katastrska parcela, površina (klafter), Pacht fl/kr, stolpci primerjav (Gleichheit)",
+   "rows": "16 prebranih vrstic (Acker I detto, II, Wiesen, Weingärten); Summe Acker I = 1 J 1128 K [~]",
+   "note": "VZOREC parcel za izpeljavo zneskov na joch (Pacht-Capital), NI polni register površin — poln obseg je v p67 rekapitulaciji; navezuje se na p44 seznam Natural-Ertrag parcel"
+  },
+  "p44NaturalErtrag": {
+   "page": 44,
+   "title": "Natural-Ertrag vzorčnih parcel (Ackerland)",
+   "rows": "11 parcel: Weizen 18. 20 Muth., Hafer 9. 10., Gerste 30. 410 Eim. [~], Hirse 9. 10., Züger 10. 12., Erdäpfel 65. 70., ...",
+   "note": "pridelki (Metzen/Muthen/Eimer) za razredno oceno — vir za donosne verige na pp. 50–61"
+  },
+  "p12AckerIClass": {
+   "page": 12,
+   "title": "§ 3 Ackerland — Erste Classe",
+   "quote": "»In diese Classe fällt in Flächenraum von 80 Joch 974 Klafter, welche in 224 [Parzellen zerfallen]«",
+   "note": "NEODVISNA korroboracija Acker I = 80 joch (p67: 80 j 842 kl; p12: 80 j 974 kl [~] — joch ujemanje, klafter se razlikujeta za 132 kl [~])"
+  },
+  "p50AckerIChain": {
+   "page": 50,
+   "title": "Veranschlagung §. 1 Ackerland razred I",
+   "chain": "Rob-Ertrag 25 fl 44 kr (prečrtano: 20 fl 44) → summarischer Cultur-Aufwand 10 fl 18½ kr → Tarif 45 % → Anschlag 10 fl 40½ kr → Rein-Ertrag 15 fl 5 kr (račun: 15 fl 3½ kr)",
+   "status": "DIVERGENCA IZ #11 RAZREŠENA — 3 prejšnja napačno prebrana branja pojasnjena (prečrtano/nadpisano)"
+  },
+  "volumeStructure": {
+   "pp4-9": "narrativni §§: Viehstand §4, tla/kulture §§5–8 (Cultivirte/Unbenützte povzetek na p6: skupna površina 1220 j 1493 kl [~] ≈ PV 1221!) ",
+   "pp10-15": "klassifikacija po parcelah: Gülbgübln/Dürrfgübln seznama, kulture §§1–2, Acker §§3 (Erste Classe 80 j), Natural-Ertrag/Geld-Ertrag vzorčnih parcel",
+   "pp16-24": "opisi kultur z izročki: Acker §9, Wiesen §4, Kleine Gärten §5, Größere gemüß-Gärten §6, Weingärten §7, Nebenbenützung, Huthweiden §8, Weide mit Holznutzen §9",
+   "pp25-29": "Ablösungs-Contract §9 (388 j 946 kl, rdeči popravki 387/1938 [~]), Waldungen/Bauarea, Hutweide Leibrente, Bau-Area §16",
+   "p30": "tiskana primerjalna oblika Resultate der benützten Behelfe (Ausschuss vs Kommission, pridelki po razredih)",
+   "pp31-42": "protokoli, overovitve, javna razgrnitev (pp33, 40), klasifikacijski §§",
+   "pp43-49": "klassifikacijske tabele: Acker 3 Clasen, Natural-Ertrag Boden seznam, Hutweide III Classe, Wiesen/Gärten/Weingärten",
+   "pp50-61": "Veranschlagung des Cultur-Aufwandes und Darstellung des Rein-Ertrages — §§ po kulturah znova od 1 (Acker §1 p50, Wiesen §2 p53, Gärten §3 p55, Weingärten §5 p52/57, Größere Gärten §11 p56, Weiden §6 p58, Weiden mit Holznutzung §4 p59, Bau-Area p60, Hutweide §11 p51)",
+   "pp62-67": "Zusammenstellung: naslovna stran, parcelne Pacht tabele (p63), Hutweide Specifischer Ausweis (p65), naslovnica Specifischer Ausweis (p66), REKAPITULACIJA Endresultate (p67)",
+   "p6TotalNote": "povzetek na p6: »Total Fläche der Gemeinde 1220 Joch 1493 [kl?]« [~] — skoraj PV grand total 1221 j 1513 kl"
+  }
+ },
+ "stats": {
+  "pagesDeclared": 71,
+  "pagesReadBefore": 12,
+  "pagesReadP44": 64,
+  "pagesReadTotal": 71,
+  "vlmCallsP44": 76,
+  "rawFiles": [
+   "pz-04.json",
+   "pz-05.json",
+   "pz-06.json",
+   "pz-07.json",
+   "pz-08.json",
+   "pz-09.json",
+   "pz-10.json",
+   "pz-11.json",
+   "pz-12-pass2.json",
+   "pz-12.json",
+   "pz-13-pass2.json",
+   "pz-13.json",
+   "pz-14.json",
+   "pz-15-pass2.json",
+   "pz-15.json",
+   "pz-16.json",
+   "pz-17.json",
+   "pz-18.json",
+   "pz-19.json",
+   "pz-20.json",
+   "pz-21.json",
+   "pz-22.json",
+   "pz-23.json",
+   "pz-24.json",
+   "pz-25-pass2.json",
+   "pz-25.json",
+   "pz-26.json",
+   "pz-27.json",
+   "pz-28.json",
+   "pz-29.json",
+   "pz-30.json",
+   "pz-31.json",
+   "pz-32.json",
+   "pz-33.json",
+   "pz-34.json",
+   "pz-35.json",
+   "pz-36.json",
+   "pz-37.json",
+   "pz-38.json",
+   "pz-39.json",
+   "pz-40.json",
+   "pz-41.json",
+   "pz-42.json",
+   "pz-43.json",
+   "pz-44.json",
+   "pz-45.json",
+   "pz-46.json",
+   "pz-47.json",
+   "pz-48.json",
+   "pz-49.json",
+   "pz-50-pass2.json",
+   "pz-50.json",
+   "pz-51.json",
+   "pz-52.json",
+   "pz-53.json",
+   "pz-54.json",
+   "pz-55.json",
+   "pz-56.json",
+   "pz-57.json",
+   "pz-58.json",
+   "pz-59.json",
+   "pz-60.json",
+   "pz-61.json",
+   "pz-62.json",
+   "pz-63-pass2.json",
+   "pz-63.json",
+   "pz-64.json",
+   "pz-65-pass2.json",
+   "pz-65.json",
+   "pz-66.json",
+   "pz-67-band1.json",
+   "pz-67-half-spodnja.json",
+   "pz-67-half-zgornja.json",
+   "pz-67-pass2.json",
+   "pz-67-verify.json",
+   "pz-67.json"
+  ],
+  "methods": [
+   "1. krog: 64 strani (4–67), enotni strukturirani prompt, 1 klic/stran",
+   "lokalna sanacija izpisov: 7 strani (ubežni narekovaji, fences, odrezani JSON)",
+   "2. krog: 8 ciljnih strani (25, 63, 65, 67, 12, 13, 15, 50) s specifičnimi pozivi",
+   "2b: p67 razrez na polovici (zgornja/spodnja) za natančnost",
+   "2c: p67 verifikacija s PV kontekstom (12 kontrol)",
+   "2d: p67 odločilni izrez vrstic 1–4 pri 1.6× povečavi (Acker II 234 ali 334)"
+  ]
+ },
+ "inferences": {
+  "note": "INFERENCA (ne branje) — izpeljave iz prebranih vrednosti",
+  "reinPerInhabitant": "4492 fl 51 kr / 441 prebivalcev ≈ 10,2 fl na prebivalca letno (1825)",
+  "reinPerFamily": "4492 fl / 102 družin [~] ≈ 44 fl na družino",
+  "netRate": "Rein 4492 fl / Brutto 8872 fl ≈ 50,6 % — čisti donos je približno polovica bruto (skladno z verigo Bau-Area 45 %)",
+  "pastureDominance": "pašniki 676 j (59 % klasificirane površine) prevladujejo — skladno s PV (636 j od 1148)"
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "page": 50,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:54:41.336Z",
+ "parseOk": true,
+ "structured": {
+  "page": 50,
+  "pageKind": "narrative+table",
+  "sections": [
+   {
+    "culture": "Ackerland",
+    "par": "§. 1",
+    "narrativeBrief": "En sin einfache Läffern zuzumüßten und zu Güte bessern im Bestand betrug nur mit einem einfachen Pflügen zu Joch und Juch.",
+    "rows": [
+     {
+      "label": "I.",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "Rob-Ertrag: 26 fl 40 kr; Summatischer Cultur-Aufwand: 10 fl 16 kr; Tarif-Percent: 45; Anschlag: 10 fl 40 kr; Rein-Ertrag: 13 fl 5 kr",
+      "yields": null,
+      "rawText": "I. | 26 fl 40 kr | 10 fl 16 kr | 45 | 10 fl 40 kr | 13 fl 5 kr",
+      "confidence": "clear"
+     }
+    ]
+   }
+  ],
+  "pageNote": "Stran vsebuje naslov 'Veranschlagung des Cultur-Aufwandes' in podnaslov 'Darstellung des Rein-Ertrages' za kulturo Ackerland (§. 1). Vsebuje eno tabelo z razredom I., vrednosti so v fl/kr. Na levi strani so rdeči ročni vpisi 'Aschleingut', 'Ackerland', 'Wiesenland'. Pisanje je v Kurrent pisavi, berljivost je dobra, nekateri deli narativa so težje berljivi zaradi stiliziranega pisja."
+ }
+}

@@ -1,0 +1,3695 @@
+{
+  "meta": {
+    "title": "P43: celotna veriga PT → PUA → PS (issue #13)",
+    "generated": "2026-10-11",
+    "method": "deterministično (brez AI): kompozicija W-mostu P5-c (PT→PUA, verdikti po Levenshtein 0.72/0.50) in verige P41 (PUA→PS, megleno ujemanje priimkov nad izbranimi PS branjmi); zaupanje verige = najšibkejša členica; PT hiše brez W. sklica → imenski kandidati PO VODILNEM ŽETONU vsake strani (v večini primerov priimek — registri ga pišejo prvega; kjer vir piše krstno ime prvi (npr. Jožef Miko), je povezava ustrezno šibkejša in nikoli nad MOGOČA; prag 0.72) — dvoumnost obvezno dokumentirana; PUA univerzum = IZKLJUČNO P41 veriga (continuation, cel register) — ATLAS_OWNERS houseRefs so mešane narave in se ne uporabljajo",
+    "inputs": [
+      "src/data/atlas/houses.ts (PT, 84 hiš + parcelne vrstice)",
+      "research/p5/pua-pt-wbridge.json (W-most P5-c)",
+      "research/issue13/chain-pua-ps.json (veriga P41 — PUA univerzum)",
+      "research/issue17/PS-full-v2.json + ps-raw/ (korpus izbranih branj, križno potrjen)"
+    ],
+    "caveats": "Vsa branja so strojna (VLM, status REVIEW); MISMATCH je lahko bralna zmota, ne dokaz protislovja; imenske povezave so po naravi dvoumne (isti priimek več hiš) — nikoli nad MOGOČA; ATLAS_OWNERS (strani A–B PUA) houseRefs so MEŠANE narave (prva gradnja pred odkritjem P4: nekateri PUA, drugi PT-stranski — npr. lastnik-milleg [34, 36] = PT hiši) in se za verigo ne uporabljajo; dokončna potrditev vseh členic = človeška paleografija (#12) + vektorizacija A01/A02.",
+    "zeroLoss": "vsaka PT vrstica ima vnos (rang + utemeljitev + viri)",
+    "crossValidation": {
+      "housesChecked": 65,
+      "exact": 65,
+      "diff": [],
+      "note": "P41 je verigo gradil na istem korpusu izbranih branj; popolna ujemanja potrjujejo, da P43 razširitev (hiše 35 …) uporablja enak korpus."
+    }
+  },
+  "stats": {
+    "ptRows": 105,
+    "ptHouses": 84,
+    "ptParcelRows": 21,
+    "houseTiers": {
+      "DOKAZANA": 2,
+      "VERJETNA": 5,
+      "MOGOČA": 4,
+      "NEREŠENA": 73
+    },
+    "parcelRowTiers": {
+      "DOKAZANA": 4,
+      "VERJETNA": 4,
+      "MOGOČA": 2,
+      "NEREŠENA": 11
+    },
+    "housesWithW": 22,
+    "housesNameOnly": 1,
+    "housesCorroborated": 6,
+    "puaUniverse": 65,
+    "p41ChainHouses": 65,
+    "abRefsOutsideChain": {
+      "35": [
+        "Bring. Weygandt Bauern von Grüblen [PT rokopis: Brinig — Magnus/Malfa/Miklo ~]"
+      ],
+      "65": [
+        "Peutinger (Jhan, Mihel)"
+      ],
+      "73": [
+        "Peutinger (Jhan, Mihel)"
+      ],
+      "74": [
+        "Drulak (Jhan, Peter)"
+      ],
+      "75": [
+        "Drulak (Jhan, Peter)"
+      ],
+      "76": [
+        "Strauß Georg [~]",
+        "Hufschmied [~] (rdeči vpis, prečrtana 76½)"
+      ],
+      "77": [
+        "Dikobutar (Rupre, Mihelo, Mihlo, Marko)"
+      ],
+      "78": [
+        "Dikobutar (Rupre, Mihelo, Mihlo, Marko)"
+      ],
+      "79": [
+        "Strauß Georg [~]"
+      ],
+      "80": [
+        "Dikobutar (Rupre, Mihelo, Mihlo, Marko)"
+      ],
+      "81": [
+        "Strauß Georg [Groy] [~]"
+      ],
+      "82": [
+        "Strauß Georg [Groy] [~]"
+      ],
+      "83": [
+        "Strauß Georg [Groy] [~]"
+      ],
+      "84": [
+        "Strauß Georg [Groy] [~]"
+      ],
+      "87": [
+        "Heurisch Marko"
+      ],
+      "89": [
+        "Heurisch Marko"
+      ],
+      "90": [
+        "hiša 90: brania divergirajo [?]"
+      ],
+      "91": [
+        "Heurisch Marko"
+      ],
+      "92": [
+        "Strauß Georg [Groy] [~]"
+      ],
+      "95": [
+        "Schmerz Marko"
+      ],
+      "96": [
+        "Ihmeyer (Manko, Georg?) [~]"
+      ],
+      "97": [
+        "Schmerz Marko"
+      ],
+      "98": [
+        "k.k. Zollamt (ärarial) [~] — institucija"
+      ]
+    }
+  },
+  "chain": [
+    {
+      "id": "hiša-1",
+      "no": "1",
+      "owner": "Veith (H.) [~]",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-2",
+      "no": "2",
+      "owner": "Veith (St.?) [~]",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-3",
+      "no": "3",
+      "owner": "Šimec Jakob",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-4",
+      "no": "4",
+      "owner": "Šimec Matija",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-5",
+      "no": "5",
+      "owner": "Knavc Janez",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-6",
+      "no": "6",
+      "owner": "Tilel Miho",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-6b",
+      "no": "7",
+      "owner": "Lebing/Lebring Mädl. [~]",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-7",
+      "no": "7½",
+      "owner": "Bödig mündl. [~]",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-8",
+      "no": "8",
+      "owner": "Lebing/Lebring Mädl. [~]",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-9",
+      "no": "8½",
+      "owner": "Bödig mündl. [~]",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-10",
+      "no": "9",
+      "owner": "Stalhutstetisch Miho",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-11",
+      "no": "10",
+      "owner": "Stalhutstetisch Miho",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-12",
+      "no": "11",
+      "owner": "Stalhutstetisch Marko",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-13",
+      "no": "12",
+      "owner": "Stalhutstetisch Marko",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-14",
+      "no": "13",
+      "owner": "Stalhutstetisch Ruard",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-15",
+      "no": "14",
+      "owner": "Stalhutstetisch Jhan (Ivan)",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-16",
+      "no": "15",
+      "owner": "Stalhutstetisch Jhan (Hrovatic Jhan)",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-17",
+      "no": "16",
+      "owner": "Stautschel Jhan",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-18",
+      "no": "17",
+      "owner": "Stalhutsch Marko",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-19",
+      "no": "18",
+      "owner": "Hrovat Jhan",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-20",
+      "no": "19",
+      "owner": "Krudelen Matija",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-21",
+      "no": "20",
+      "owner": "Krištan/Kraihan Mäfa [~]",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [
+        {
+          "house": 3,
+          "sim": 1.0
+        },
+        {
+          "house": 69,
+          "sim": 1.0
+        },
+        {
+          "house": 31,
+          "sim": 0.75
+        },
+        {
+          "house": 36,
+          "sim": 0.75
+        },
+        {
+          "house": 37,
+          "sim": 0.75
+        },
+        {
+          "house": 57,
+          "sim": 0.75
+        }
+      ],
+      "nameLinkAmbiguous": {
+        "candidates": [
+          3,
+          69,
+          31,
+          36,
+          37,
+          57
+        ],
+        "note": "isti priimek več hiš — povezava ni enolična"
+      },
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-22",
+      "no": "21",
+      "owner": "Šture Majzel",
+      "kind": "hiša",
+      "W": [
+        10
+      ],
+      "links": [
+        {
+          "w": 10,
+          "wbridgeVerdict": "PARTIAL",
+          "wbridgeSim": 0.667,
+          "puaOwners": [
+            "Lure Mäusel buaß hulgäßl [~]"
+          ],
+          "puaToPsTier": "ŠIBKA",
+          "chainTier": "MOGOČA",
+          "reason": "W.PARTIAL + PUA↔PS ŠIBKA",
+          "psParcels": [
+            {
+              "page": 12,
+              "row": 7,
+              "blatt": "I:157/III:62",
+              "parzella": 186,
+              "kultur": "Acker"
+            },
+            {
+              "page": 12,
+              "row": 10,
+              "blatt": "I:157/III:62",
+              "parzella": 189,
+              "kultur": "Ackerland"
+            },
+            {
+              "page": 13,
+              "row": 1,
+              "blatt": "I:157/III:62",
+              "parzella": 201,
+              "kultur": "Acker"
+            },
+            {
+              "page": 13,
+              "row": 11,
+              "blatt": "I:157/III:62",
+              "parzella": 211,
+              "kultur": "Acker"
+            },
+            {
+              "page": 50,
+              "row": 11,
+              "blatt": "II:70/III:25",
+              "parzella": 951,
+              "kultur": "Acker"
+            },
+            {
+              "page": 50,
+              "row": 14,
+              "blatt": "II:70/III:25",
+              "parzella": 954,
+              "kultur": "Stumpf"
+            },
+            {
+              "page": 71,
+              "row": 19,
+              "blatt": "II:21/III:20",
+              "parzella": 1279,
+              "kultur": "Lorbeer"
+            },
+            {
+              "page": 71,
+              "row": 20,
+              "blatt": "II:21/III:20",
+              "parzella": 1280,
+              "kultur": "Findling und Lorbeer"
+            }
+          ],
+          "psParcelsTotal": 29
+        }
+      ],
+      "nameCandidates": [],
+      "chainTier": "MOGOČA",
+      "chainReason": "W.PARTIAL + PUA↔PS ŠIBKA"
+    },
+    {
+      "id": "hiša-23",
+      "no": "22",
+      "owner": "Šture Majzel",
+      "kind": "hiša",
+      "W": [
+        10
+      ],
+      "links": [
+        {
+          "w": 10,
+          "wbridgeVerdict": "PARTIAL",
+          "wbridgeSim": 0.667,
+          "puaOwners": [
+            "Lure Mäusel buaß hulgäßl [~]"
+          ],
+          "puaToPsTier": "ŠIBKA",
+          "chainTier": "MOGOČA",
+          "reason": "W.PARTIAL + PUA↔PS ŠIBKA",
+          "psParcels": [
+            {
+              "page": 12,
+              "row": 7,
+              "blatt": "I:157/III:62",
+              "parzella": 186,
+              "kultur": "Acker"
+            },
+            {
+              "page": 12,
+              "row": 10,
+              "blatt": "I:157/III:62",
+              "parzella": 189,
+              "kultur": "Ackerland"
+            },
+            {
+              "page": 13,
+              "row": 1,
+              "blatt": "I:157/III:62",
+              "parzella": 201,
+              "kultur": "Acker"
+            },
+            {
+              "page": 13,
+              "row": 11,
+              "blatt": "I:157/III:62",
+              "parzella": 211,
+              "kultur": "Acker"
+            },
+            {
+              "page": 50,
+              "row": 11,
+              "blatt": "II:70/III:25",
+              "parzella": 951,
+              "kultur": "Acker"
+            },
+            {
+              "page": 50,
+              "row": 14,
+              "blatt": "II:70/III:25",
+              "parzella": 954,
+              "kultur": "Stumpf"
+            },
+            {
+              "page": 71,
+              "row": 19,
+              "blatt": "II:21/III:20",
+              "parzella": 1279,
+              "kultur": "Lorbeer"
+            },
+            {
+              "page": 71,
+              "row": 20,
+              "blatt": "II:21/III:20",
+              "parzella": 1280,
+              "kultur": "Findling und Lorbeer"
+            }
+          ],
+          "psParcelsTotal": 29
+        }
+      ],
+      "nameCandidates": [],
+      "chainTier": "MOGOČA",
+      "chainReason": "W.PARTIAL + PUA↔PS ŠIBKA"
+    },
+    {
+      "id": "hiša-24",
+      "no": "23",
+      "owner": "Ludvig Gregor",
+      "kind": "hiša",
+      "W": [
+        11
+      ],
+      "links": [
+        {
+          "w": 11,
+          "wbridgeVerdict": "PARTIAL",
+          "wbridgeSim": 0.5,
+          "puaOwners": [
+            "Georg Grangl bauer zu Griblje [~]"
+          ],
+          "puaToPsTier": "NI_UJEMANJA",
+          "chainTier": "NEREŠENA",
+          "reason": "PUA↔PS: NI_UJEMANJA pri tej hiši"
+        }
+      ],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "PUA↔PS: NI_UJEMANJA pri tej hiši"
+    },
+    {
+      "id": "hiša-25",
+      "no": "24",
+      "owner": "Štunidat Mufa",
+      "kind": "hiša",
+      "W": [
+        1
+      ],
+      "links": [
+        {
+          "w": 1,
+          "wbridgeVerdict": "MATCH",
+          "wbridgeSim": 0.75,
+          "puaOwners": [
+            "Gemeinde Malfz Brandhofgässl [~]",
+            "Hölloschitsch Wufa Luina hau Dragosche [",
+            "Wardian Mathä bau[er]haußgütlein [~]"
+          ],
+          "puaToPsTier": "ŠIBKA",
+          "chainTier": "VERJETNA",
+          "reason": "W.MATCH + PUA↔PS ŠIBKA",
+          "psParcels": [
+            {
+              "page": 35,
+              "row": 6,
+              "blatt": "I:157/III:62",
+              "parzella": 645,
+              "kultur": null
+            },
+            {
+              "page": 35,
+              "row": 8,
+              "blatt": "I:157/III:62",
+              "parzella": 647,
+              "kultur": "Lache"
+            },
+            {
+              "page": 41,
+              "row": 7,
+              "blatt": "II:70/III:25",
+              "parzella": 747,
+              "kultur": "Garten"
+            },
+            {
+              "page": 42,
+              "row": 19,
+              "blatt": "II:70/III:25",
+              "parzella": 777,
+              "kultur": "Schlag"
+            },
+            {
+              "page": 44,
+              "row": 1,
+              "blatt": "II:70/III:25",
+              "parzella": 821,
+              "kultur": "Acker"
+            },
+            {
+              "page": 67,
+              "row": 2,
+              "blatt": "II:165/III:22",
+              "parzella": 1281,
+              "kultur": "Wiese"
+            },
+            {
+              "page": 67,
+              "row": 3,
+              "blatt": "II:165/III:22",
+              "parzella": 1282,
+              "kultur": "Acker"
+            },
+            {
+              "page": 67,
+              "row": 4,
+              "blatt": "II:165/III:22",
+              "parzella": 1283,
+              "kultur": "Wiese"
+            }
+          ],
+          "psParcelsTotal": 74
+        }
+      ],
+      "nameCandidates": [],
+      "chainTier": "VERJETNA",
+      "chainReason": "W.MATCH + PUA↔PS ŠIBKA"
+    },
+    {
+      "id": "hiša-26",
+      "no": "25",
+      "owner": "Štunidat Mufa",
+      "kind": "hiša",
+      "W": [
+        1
+      ],
+      "links": [
+        {
+          "w": 1,
+          "wbridgeVerdict": "MATCH",
+          "wbridgeSim": 0.75,
+          "puaOwners": [
+            "Gemeinde Malfz Brandhofgässl [~]",
+            "Hölloschitsch Wufa Luina hau Dragosche [",
+            "Wardian Mathä bau[er]haußgütlein [~]"
+          ],
+          "puaToPsTier": "ŠIBKA",
+          "chainTier": "VERJETNA",
+          "reason": "W.MATCH + PUA↔PS ŠIBKA",
+          "psParcels": [
+            {
+              "page": 35,
+              "row": 6,
+              "blatt": "I:157/III:62",
+              "parzella": 645,
+              "kultur": null
+            },
+            {
+              "page": 35,
+              "row": 8,
+              "blatt": "I:157/III:62",
+              "parzella": 647,
+              "kultur": "Lache"
+            },
+            {
+              "page": 41,
+              "row": 7,
+              "blatt": "II:70/III:25",
+              "parzella": 747,
+              "kultur": "Garten"
+            },
+            {
+              "page": 42,
+              "row": 19,
+              "blatt": "II:70/III:25",
+              "parzella": 777,
+              "kultur": "Schlag"
+            },
+            {
+              "page": 44,
+              "row": 1,
+              "blatt": "II:70/III:25",
+              "parzella": 821,
+              "kultur": "Acker"
+            },
+            {
+              "page": 67,
+              "row": 2,
+              "blatt": "II:165/III:22",
+              "parzella": 1281,
+              "kultur": "Wiese"
+            },
+            {
+              "page": 67,
+              "row": 3,
+              "blatt": "II:165/III:22",
+              "parzella": 1282,
+              "kultur": "Acker"
+            },
+            {
+              "page": 67,
+              "row": 4,
+              "blatt": "II:165/III:22",
+              "parzella": 1283,
+              "kultur": "Wiese"
+            }
+          ],
+          "psParcelsTotal": 74
+        }
+      ],
+      "nameCandidates": [],
+      "chainTier": "VERJETNA",
+      "chainReason": "W.MATCH + PUA↔PS ŠIBKA"
+    },
+    {
+      "id": "hiša-27",
+      "no": "26",
+      "owner": "Hlebetz Jan",
+      "kind": "hiša",
+      "W": [
+        2
+      ],
+      "links": [
+        {
+          "w": 2,
+          "wbridgeVerdict": "MATCH",
+          "wbridgeSim": 0.857,
+          "puaOwners": [
+            "Hlebety Johann, Bauer hiesig zu Grüble [",
+            "Kleppetz Georg büuerl hiesig Gemeinde: H"
+          ],
+          "puaToPsTier": "ŠIBKA",
+          "chainTier": "VERJETNA",
+          "reason": "W.MATCH + PUA↔PS ŠIBKA",
+          "psParcels": [
+            {
+              "page": 47,
+              "row": 6,
+              "blatt": "II:70/III:25",
+              "parzella": 886,
+              "kultur": "Lohn"
+            },
+            {
+              "page": 47,
+              "row": 9,
+              "blatt": "II:70/III:25",
+              "parzella": 889,
+              "kultur": "Allh[?]"
+            },
+            {
+              "page": 47,
+              "row": 10,
+              "blatt": "II:70/III:25",
+              "parzella": 890,
+              "kultur": "Garten"
+            },
+            {
+              "page": 47,
+              "row": 12,
+              "blatt": "II:70/III:25",
+              "parzella": 892,
+              "kultur": "Lohn"
+            },
+            {
+              "page": 47,
+              "row": 14,
+              "blatt": "II:70/III:25",
+              "parzella": 894,
+              "kultur": "Acker"
+            },
+            {
+              "page": 47,
+              "row": 19,
+              "blatt": "II:70/III:25",
+              "parzella": 899,
+              "kultur": "Lohn"
+            },
+            {
+              "page": 48,
+              "row": 1,
+              "blatt": "II:70/III:25",
+              "parzella": 901,
+              "kultur": "Acker"
+            },
+            {
+              "page": 48,
+              "row": 4,
+              "blatt": "II:70/III:25",
+              "parzella": 904,
+              "kultur": "Lhupa"
+            }
+          ],
+          "psParcelsTotal": 48
+        }
+      ],
+      "nameCandidates": [
+        {
+          "house": 2,
+          "sim": 0.857
+        }
+      ],
+      "nameCorroboratesW": [
+        2
+      ],
+      "chainTier": "VERJETNA",
+      "chainReason": "W.MATCH + PUA↔PS ŠIBKA"
+    },
+    {
+      "id": "hiša-28",
+      "no": "27",
+      "owner": "Jožef Miko",
+      "kind": "hiša",
+      "W": [
+        21
+      ],
+      "links": [
+        {
+          "w": 21,
+          "wbridgeVerdict": "MATCH",
+          "wbridgeSim": 0.8,
+          "puaOwners": [
+            "Janko vitnik [~]",
+            "Jožeg Muhč Bauer houlgübl [~]"
+          ],
+          "puaToPsTier": "NI_UJEMANJA",
+          "chainTier": "NEREŠENA",
+          "reason": "PUA↔PS: NI_UJEMANJA pri tej hiši"
+        }
+      ],
+      "nameCandidates": [
+        {
+          "house": 21,
+          "sim": 0.8
+        }
+      ],
+      "nameCorroboratesW": [
+        21
+      ],
+      "chainTier": "NEREŠENA",
+      "chainReason": "PUA↔PS: NI_UJEMANJA pri tej hiši"
+    },
+    {
+      "id": "hiša-29",
+      "no": "28",
+      "owner": "Jožef Miko",
+      "kind": "hiša",
+      "W": [
+        31
+      ],
+      "links": [
+        {
+          "w": 31,
+          "wbridgeVerdict": "MISMATCH",
+          "wbridgeSim": 0.4,
+          "puaOwners": [
+            "Gemeinde Malfz Brandhof Smibuche [~]",
+            "Krischan Mandschurischka / Griblje [~]",
+            "Schimey Stoffe Lorenz how Gribatsche [~]",
+            "Ulrich Pitter Bauer zu Gribla [~]"
+          ],
+          "puaToPsTier": "SREDNJA",
+          "chainTier": "NEREŠENA",
+          "reason": "W-most: lastniki se pri tej št. ne ujemajo (MISMATCH)"
+        }
+      ],
+      "nameCandidates": [
+        {
+          "house": 21,
+          "sim": 0.8
+        }
+      ],
+      "chainTier": "NEREŠENA",
+      "chainReason": "W-most: lastniki se pri tej št. ne ujemajo (MISMATCH)"
+    },
+    {
+      "id": "hiša-30",
+      "no": "29",
+      "owner": "Krišan Gregor",
+      "kind": "hiša",
+      "W": [
+        66
+      ],
+      "links": [
+        {
+          "w": 66,
+          "wbridgeVerdict": "PARTIAL",
+          "wbridgeSim": 0.5,
+          "puaOwners": [
+            "Nikolaus Grönig bauer und Gailb. [~]"
+          ],
+          "puaToPsTier": "NI_UJEMANJA",
+          "chainTier": "NEREŠENA",
+          "reason": "PUA↔PS: NI_UJEMANJA pri tej hiši"
+        }
+      ],
+      "nameCandidates": [
+        {
+          "house": 3,
+          "sim": 0.857
+        },
+        {
+          "house": 69,
+          "sim": 0.857
+        },
+        {
+          "house": 31,
+          "sim": 0.75
+        },
+        {
+          "house": 36,
+          "sim": 0.75
+        },
+        {
+          "house": 37,
+          "sim": 0.75
+        },
+        {
+          "house": 57,
+          "sim": 0.75
+        }
+      ],
+      "chainTier": "NEREŠENA",
+      "chainReason": "PUA↔PS: NI_UJEMANJA pri tej hiši"
+    },
+    {
+      "id": "hiša-31",
+      "no": "30",
+      "owner": "Krišan Gregor",
+      "kind": "hiša",
+      "W": [
+        66
+      ],
+      "links": [
+        {
+          "w": 66,
+          "wbridgeVerdict": "PARTIAL",
+          "wbridgeSim": 0.5,
+          "puaOwners": [
+            "Nikolaus Grönig bauer und Gailb. [~]"
+          ],
+          "puaToPsTier": "NI_UJEMANJA",
+          "chainTier": "NEREŠENA",
+          "reason": "PUA↔PS: NI_UJEMANJA pri tej hiši"
+        }
+      ],
+      "nameCandidates": [
+        {
+          "house": 3,
+          "sim": 0.857
+        },
+        {
+          "house": 69,
+          "sim": 0.857
+        },
+        {
+          "house": 31,
+          "sim": 0.75
+        },
+        {
+          "house": 36,
+          "sim": 0.75
+        },
+        {
+          "house": 37,
+          "sim": 0.75
+        },
+        {
+          "house": 57,
+          "sim": 0.75
+        }
+      ],
+      "chainTier": "NEREŠENA",
+      "chainReason": "PUA↔PS: NI_UJEMANJA pri tej hiši"
+    },
+    {
+      "id": "hiša-32",
+      "no": "31",
+      "owner": "Bring Marko",
+      "kind": "hiša",
+      "W": [
+        66
+      ],
+      "links": [
+        {
+          "w": 66,
+          "wbridgeVerdict": "PARTIAL",
+          "wbridgeSim": 0.5,
+          "puaOwners": [
+            "Nikolaus Grönig bauer und Gailb. [~]"
+          ],
+          "puaToPsTier": "NI_UJEMANJA",
+          "chainTier": "NEREŠENA",
+          "reason": "PUA↔PS: NI_UJEMANJA pri tej hiši"
+        }
+      ],
+      "nameCandidates": [
+        {
+          "house": 24,
+          "sim": 1.0
+        },
+        {
+          "house": 25,
+          "sim": 1.0
+        },
+        {
+          "house": 26,
+          "sim": 1.0
+        },
+        {
+          "house": 28,
+          "sim": 1.0
+        },
+        {
+          "house": 63,
+          "sim": 1.0
+        },
+        {
+          "house": 20,
+          "sim": 0.833
+        }
+      ],
+      "chainTier": "NEREŠENA",
+      "chainReason": "PUA↔PS: NI_UJEMANJA pri tej hiši"
+    },
+    {
+      "id": "hiša-33",
+      "no": "32",
+      "owner": "Bring Marko",
+      "kind": "hiša",
+      "W": [
+        65
+      ],
+      "links": [
+        {
+          "w": 65,
+          "wbridgeVerdict": "NO_PUA (napoved za str. 35–49)",
+          "wbridgeSim": 0.0,
+          "puaOwners": [],
+          "puaToPsTier": null,
+          "chainTier": "NEREŠENA",
+          "reason": "PUA stran te številke ne obstaja (P5-b: napovedi)"
+        }
+      ],
+      "nameCandidates": [
+        {
+          "house": 24,
+          "sim": 1.0
+        },
+        {
+          "house": 25,
+          "sim": 1.0
+        },
+        {
+          "house": 26,
+          "sim": 1.0
+        },
+        {
+          "house": 28,
+          "sim": 1.0
+        },
+        {
+          "house": 63,
+          "sim": 1.0
+        },
+        {
+          "house": 20,
+          "sim": 0.833
+        }
+      ],
+      "chainTier": "NEREŠENA",
+      "chainReason": "PUA stran te številke ne obstaja (P5-b: napovedi)"
+    },
+    {
+      "id": "hiša-34",
+      "no": "33",
+      "owner": "Varbutek Mufa",
+      "kind": "hiša",
+      "W": [
+        64
+      ],
+      "links": [
+        {
+          "w": 64,
+          "wbridgeVerdict": "MISMATCH",
+          "wbridgeSim": 0.455,
+          "puaOwners": [
+            "Verbitzcher Mathä bau[er]haußgütl [~]"
+          ],
+          "puaToPsTier": "ŠIBKA",
+          "chainTier": "NEREŠENA",
+          "reason": "W-most: lastniki se pri tej št. ne ujemajo (MISMATCH)"
+        }
+      ],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "W-most: lastniki se pri tej št. ne ujemajo (MISMATCH)"
+    },
+    {
+      "id": "hiša-35",
+      "no": "34",
+      "owner": "Milleg Hans [~]",
+      "kind": "hiša",
+      "W": [
+        29
+      ],
+      "links": [
+        {
+          "w": 29,
+          "wbridgeVerdict": "MATCH",
+          "wbridgeSim": 0.833,
+          "puaOwners": [
+            "Millej [~]",
+            "Schimey Maro baua haußgäbla [~]"
+          ],
+          "puaToPsTier": "SREDNJA",
+          "chainTier": "DOKAZANA",
+          "reason": "W.MATCH + PUA↔PS SREDNJA",
+          "psParcels": [
+            {
+              "page": 27,
+              "row": 1,
+              "blatt": "I:157/III:62",
+              "parzella": 481,
+              "kultur": "Gübel"
+            },
+            {
+              "page": 27,
+              "row": 17,
+              "blatt": "I:157/III:62",
+              "parzella": 497,
+              "kultur": "Wiesen"
+            },
+            {
+              "page": 28,
+              "row": 1,
+              "blatt": "I:157/III:62",
+              "parzella": 501,
+              "kultur": "Wiese"
+            },
+            {
+              "page": 29,
+              "row": 1,
+              "blatt": "I:157/III:62",
+              "parzella": 521,
+              "kultur": "Acker"
+            },
+            {
+              "page": 29,
+              "row": 13,
+              "blatt": "I:157/III:62",
+              "parzella": 533,
+              "kultur": "Acker"
+            },
+            {
+              "page": 31,
+              "row": 6,
+              "blatt": "I:157/III:62",
+              "parzella": 568,
+              "kultur": "Weide"
+            },
+            {
+              "page": 31,
+              "row": 7,
+              "blatt": "I:157/III:62",
+              "parzella": 569,
+              "kultur": "Acker"
+            },
+            {
+              "page": 31,
+              "row": 8,
+              "blatt": "I:157/III:62",
+              "parzella": 570,
+              "kultur": "Acker"
+            }
+          ],
+          "psParcelsTotal": 22
+        }
+      ],
+      "nameCandidates": [
+        {
+          "house": 22,
+          "sim": 0.833
+        },
+        {
+          "house": 29,
+          "sim": 0.833
+        }
+      ],
+      "nameCorroboratesW": [
+        29
+      ],
+      "chainTier": "DOKAZANA",
+      "chainReason": "W.MATCH + PUA↔PS SREDNJA"
+    },
+    {
+      "id": "hiša-36",
+      "no": "34 (prečrtana dvojnica)",
+      "owner": "Milleg Hans [~]",
+      "kind": "hiša",
+      "W": [
+        29
+      ],
+      "links": [
+        {
+          "w": 29,
+          "wbridgeVerdict": "MATCH",
+          "wbridgeSim": 0.833,
+          "puaOwners": [
+            "Millej [~]",
+            "Schimey Maro baua haußgäbla [~]"
+          ],
+          "puaToPsTier": "SREDNJA",
+          "chainTier": "DOKAZANA",
+          "reason": "W.MATCH + PUA↔PS SREDNJA",
+          "psParcels": [
+            {
+              "page": 27,
+              "row": 1,
+              "blatt": "I:157/III:62",
+              "parzella": 481,
+              "kultur": "Gübel"
+            },
+            {
+              "page": 27,
+              "row": 17,
+              "blatt": "I:157/III:62",
+              "parzella": 497,
+              "kultur": "Wiesen"
+            },
+            {
+              "page": 28,
+              "row": 1,
+              "blatt": "I:157/III:62",
+              "parzella": 501,
+              "kultur": "Wiese"
+            },
+            {
+              "page": 29,
+              "row": 1,
+              "blatt": "I:157/III:62",
+              "parzella": 521,
+              "kultur": "Acker"
+            },
+            {
+              "page": 29,
+              "row": 13,
+              "blatt": "I:157/III:62",
+              "parzella": 533,
+              "kultur": "Acker"
+            },
+            {
+              "page": 31,
+              "row": 6,
+              "blatt": "I:157/III:62",
+              "parzella": 568,
+              "kultur": "Weide"
+            },
+            {
+              "page": 31,
+              "row": 7,
+              "blatt": "I:157/III:62",
+              "parzella": 569,
+              "kultur": "Acker"
+            },
+            {
+              "page": 31,
+              "row": 8,
+              "blatt": "I:157/III:62",
+              "parzella": 570,
+              "kultur": "Acker"
+            }
+          ],
+          "psParcelsTotal": 22
+        }
+      ],
+      "nameCandidates": [
+        {
+          "house": 22,
+          "sim": 0.833
+        },
+        {
+          "house": 29,
+          "sim": 0.833
+        }
+      ],
+      "nameCorroboratesW": [
+        29
+      ],
+      "chainTier": "DOKAZANA",
+      "chainReason": "W.MATCH + PUA↔PS SREDNJA"
+    },
+    {
+      "id": "hiša-37",
+      "no": "35",
+      "owner": "Brinig Magnus [~]",
+      "kind": "hiša",
+      "W": [
+        24
+      ],
+      "links": [
+        {
+          "w": 24,
+          "wbridgeVerdict": "MATCH",
+          "wbridgeSim": 0.833,
+          "puaOwners": [
+            "Bring Migan/Michael Bauern hiesig Grübln"
+          ],
+          "puaToPsTier": "ŠIBKA",
+          "chainTier": "VERJETNA",
+          "reason": "W.MATCH + PUA↔PS ŠIBKA",
+          "psParcels": [
+            {
+              "page": 27,
+              "row": 10,
+              "blatt": "I:157/III:62",
+              "parzella": 490,
+              "kultur": "Wald"
+            },
+            {
+              "page": 27,
+              "row": 14,
+              "blatt": "I:157/III:62",
+              "parzella": 494,
+              "kultur": "Acker"
+            },
+            {
+              "page": 27,
+              "row": 18,
+              "blatt": "I:157/III:62",
+              "parzella": 498,
+              "kultur": "Wald"
+            },
+            {
+              "page": 28,
+              "row": 2,
+              "blatt": "I:157/III:62",
+              "parzella": 502,
+              "kultur": "Wiese"
+            },
+            {
+              "page": 28,
+              "row": 19,
+              "blatt": "I:157/III:62",
+              "parzella": 519,
+              "kultur": "Wiese"
+            },
+            {
+              "page": 29,
+              "row": 11,
+              "blatt": "I:157/III:62",
+              "parzella": 531,
+              "kultur": "Acker"
+            },
+            {
+              "page": 31,
+              "row": 9,
+              "blatt": "I:157/III:62",
+              "parzella": 571,
+              "kultur": "Weide"
+            },
+            {
+              "page": 31,
+              "row": 10,
+              "blatt": "I:157/III:62",
+              "parzella": 572,
+              "kultur": "Weide"
+            }
+          ],
+          "psParcelsTotal": 38
+        }
+      ],
+      "nameCandidates": [
+        {
+          "house": 24,
+          "sim": 0.833
+        },
+        {
+          "house": 25,
+          "sim": 0.833
+        },
+        {
+          "house": 26,
+          "sim": 0.833
+        },
+        {
+          "house": 28,
+          "sim": 0.833
+        },
+        {
+          "house": 63,
+          "sim": 0.833
+        }
+      ],
+      "nameCorroboratesW": [
+        24
+      ],
+      "chainTier": "VERJETNA",
+      "chainReason": "W.MATCH + PUA↔PS ŠIBKA"
+    },
+    {
+      "id": "hiša-38",
+      "no": "36",
+      "owner": "Milleg Hans [~]",
+      "kind": "hiša",
+      "W": [
+        27
+      ],
+      "links": [
+        {
+          "w": 27,
+          "wbridgeVerdict": "MISMATCH",
+          "wbridgeSim": 0.364,
+          "puaOwners": [
+            "Mallestitak [~]"
+          ],
+          "puaToPsTier": "NI_UJEMANJA",
+          "chainTier": "NEREŠENA",
+          "reason": "W-most: lastniki se pri tej št. ne ujemajo (MISMATCH)"
+        }
+      ],
+      "nameCandidates": [
+        {
+          "house": 22,
+          "sim": 0.833
+        },
+        {
+          "house": 29,
+          "sim": 0.833
+        }
+      ],
+      "chainTier": "NEREŠENA",
+      "chainReason": "W-most: lastniki se pri tej št. ne ujemajo (MISMATCH)"
+    },
+    {
+      "id": "hiša-39",
+      "no": "37",
+      "owner": "Brinig Malfa [~]",
+      "kind": "hiša",
+      "W": [
+        22,
+        23
+      ],
+      "links": [
+        {
+          "w": 22,
+          "wbridgeVerdict": "PARTIAL",
+          "wbridgeSim": 0.5,
+          "puaOwners": [
+            "Millea Johann bau Gsöbln [~]"
+          ],
+          "puaToPsTier": "ŠIBKA",
+          "chainTier": "MOGOČA",
+          "reason": "W.PARTIAL + PUA↔PS ŠIBKA",
+          "psParcels": [
+            {
+              "page": 9,
+              "row": 17,
+              "blatt": "III:45/II:20",
+              "parzella": 137,
+              "kultur": "Rüben"
+            },
+            {
+              "page": 13,
+              "row": 10,
+              "blatt": "I:157/III:62",
+              "parzella": 210,
+              "kultur": "Acker"
+            },
+            {
+              "page": 35,
+              "row": 10,
+              "blatt": "I:157/III:62",
+              "parzella": 649,
+              "kultur": "Garten"
+            },
+            {
+              "page": 35,
+              "row": 11,
+              "blatt": "I:157/III:62",
+              "parzella": 650,
+              "kultur": "Schlagwald"
+            },
+            {
+              "page": 36,
+              "row": 8,
+              "blatt": "I:157/III:62",
+              "parzella": 667,
+              "kultur": "Lhut"
+            },
+            {
+              "page": 36,
+              "row": 9,
+              "blatt": "I:157/III:62",
+              "parzella": 668,
+              "kultur": "Lhup"
+            },
+            {
+              "page": 36,
+              "row": 11,
+              "blatt": "I:157/III:62",
+              "parzella": 670,
+              "kultur": "Eidn"
+            },
+            {
+              "page": 36,
+              "row": 18,
+              "blatt": "I:157/III:62",
+              "parzella": 677,
+              "kultur": "Eidn"
+            }
+          ],
+          "psParcelsTotal": 23
+        },
+        {
+          "w": 23,
+          "wbridgeVerdict": "PARTIAL?",
+          "wbridgeSim": 0.667,
+          "puaOwners": [
+            "Bringz Wufa Luina hau Grüble [~]"
+          ],
+          "puaToPsTier": "NI_UJEMANJA",
+          "chainTier": "NEREŠENA",
+          "reason": "PUA↔PS: NI_UJEMANJA pri tej hiši"
+        }
+      ],
+      "nameCandidates": [
+        {
+          "house": 24,
+          "sim": 0.833
+        },
+        {
+          "house": 25,
+          "sim": 0.833
+        },
+        {
+          "house": 26,
+          "sim": 0.833
+        },
+        {
+          "house": 28,
+          "sim": 0.833
+        },
+        {
+          "house": 63,
+          "sim": 0.833
+        }
+      ],
+      "chainTier": "MOGOČA",
+      "chainReason": "W.PARTIAL + PUA↔PS ŠIBKA"
+    },
+    {
+      "id": "hiša-40",
+      "no": "38",
+      "owner": "Brinig Malfa [~]",
+      "kind": "hiša",
+      "W": [
+        20,
+        22
+      ],
+      "links": [
+        {
+          "w": 20,
+          "wbridgeVerdict": "PARTIAL?",
+          "wbridgeSim": 0.667,
+          "puaOwners": [
+            "Bringz Wufa Luina hau Grüble [~]",
+            "Polcig Michael buͤrſn/zu/gribla [~]"
+          ],
+          "puaToPsTier": "ŠIBKA",
+          "chainTier": "MOGOČA",
+          "reason": "W.PARTIAL + PUA↔PS ŠIBKA",
+          "psParcels": [
+            {
+              "page": 28,
+              "row": 20,
+              "blatt": "I:157/III:62",
+              "parzella": 520,
+              "kultur": "Wiese"
+            },
+            {
+              "page": 35,
+              "row": 13,
+              "blatt": "I:157/III:62",
+              "parzella": 652,
+              "kultur": "Wiese"
+            },
+            {
+              "page": 37,
+              "row": 7,
+              "blatt": "I:157/III:62",
+              "parzella": 707,
+              "kultur": "Garten"
+            },
+            {
+              "page": 40,
+              "row": 15,
+              "blatt": "II:70/III:25",
+              "parzella": 735,
+              "kultur": "Acker"
+            },
+            {
+              "page": 59,
+              "row": 1,
+              "blatt": "II:165/III:22",
+              "parzella": 1121,
+              "kultur": "Lukig"
+            },
+            {
+              "page": 59,
+              "row": 3,
+              "blatt": "II:165/III:22",
+              "parzella": 1123,
+              "kultur": "Lukig"
+            },
+            {
+              "page": 59,
+              "row": 6,
+              "blatt": "II:165/III:22",
+              "parzella": 1126,
+              "kultur": "Lukig"
+            },
+            {
+              "page": 59,
+              "row": 8,
+              "blatt": "II:165/III:22",
+              "parzella": 1128,
+              "kultur": "Acker"
+            }
+          ],
+          "psParcelsTotal": 29
+        },
+        {
+          "w": 22,
+          "wbridgeVerdict": "PARTIAL",
+          "wbridgeSim": 0.5,
+          "puaOwners": [
+            "Millea Johann bau Gsöbln [~]"
+          ],
+          "puaToPsTier": "ŠIBKA",
+          "chainTier": "MOGOČA",
+          "reason": "W.PARTIAL + PUA↔PS ŠIBKA",
+          "psParcels": [
+            {
+              "page": 9,
+              "row": 17,
+              "blatt": "III:45/II:20",
+              "parzella": 137,
+              "kultur": "Rüben"
+            },
+            {
+              "page": 13,
+              "row": 10,
+              "blatt": "I:157/III:62",
+              "parzella": 210,
+              "kultur": "Acker"
+            },
+            {
+              "page": 35,
+              "row": 10,
+              "blatt": "I:157/III:62",
+              "parzella": 649,
+              "kultur": "Garten"
+            },
+            {
+              "page": 35,
+              "row": 11,
+              "blatt": "I:157/III:62",
+              "parzella": 650,
+              "kultur": "Schlagwald"
+            },
+            {
+              "page": 36,
+              "row": 8,
+              "blatt": "I:157/III:62",
+              "parzella": 667,
+              "kultur": "Lhut"
+            },
+            {
+              "page": 36,
+              "row": 9,
+              "blatt": "I:157/III:62",
+              "parzella": 668,
+              "kultur": "Lhup"
+            },
+            {
+              "page": 36,
+              "row": 11,
+              "blatt": "I:157/III:62",
+              "parzella": 670,
+              "kultur": "Eidn"
+            },
+            {
+              "page": 36,
+              "row": 18,
+              "blatt": "I:157/III:62",
+              "parzella": 677,
+              "kultur": "Eidn"
+            }
+          ],
+          "psParcelsTotal": 23
+        }
+      ],
+      "nameCandidates": [
+        {
+          "house": 24,
+          "sim": 0.833
+        },
+        {
+          "house": 25,
+          "sim": 0.833
+        },
+        {
+          "house": 26,
+          "sim": 0.833
+        },
+        {
+          "house": 28,
+          "sim": 0.833
+        },
+        {
+          "house": 63,
+          "sim": 0.833
+        }
+      ],
+      "chainTier": "MOGOČA",
+      "chainReason": "W.PARTIAL + PUA↔PS ŠIBKA"
+    },
+    {
+      "id": "hiša-41",
+      "no": "39",
+      "owner": "Brinig Miklo [~]",
+      "kind": "hiša",
+      "W": [
+        25
+      ],
+      "links": [
+        {
+          "w": 25,
+          "wbridgeVerdict": "MATCH",
+          "wbridgeSim": 0.833,
+          "puaOwners": [
+            "Bring Miß/Martin Bauern hiesig Grübln [~"
+          ],
+          "puaToPsTier": "ŠIBKA",
+          "chainTier": "VERJETNA",
+          "reason": "W.MATCH + PUA↔PS ŠIBKA",
+          "psParcels": [
+            {
+              "page": 27,
+              "row": 11,
+              "blatt": "I:157/III:62",
+              "parzella": 491,
+              "kultur": "Wald"
+            },
+            {
+              "page": 27,
+              "row": 15,
+              "blatt": "I:157/III:62",
+              "parzella": 495,
+              "kultur": "Wald"
+            },
+            {
+              "page": 27,
+              "row": 19,
+              "blatt": "I:157/III:62",
+              "parzella": 499,
+              "kultur": "Wiesen"
+            },
+            {
+              "page": 28,
+              "row": 3,
+              "blatt": "I:157/III:62",
+              "parzella": 503,
+              "kultur": "Wiese"
+            },
+            {
+              "page": 28,
+              "row": 18,
+              "blatt": "I:157/III:62",
+              "parzella": 518,
+              "kultur": "Wiese"
+            },
+            {
+              "page": 29,
+              "row": 12,
+              "blatt": "I:157/III:62",
+              "parzella": 532,
+              "kultur": "Acker"
+            },
+            {
+              "page": 31,
+              "row": 2,
+              "blatt": "I:157/III:62",
+              "parzella": 564,
+              "kultur": "Acker"
+            },
+            {
+              "page": 31,
+              "row": 11,
+              "blatt": "I:157/III:62",
+              "parzella": 573,
+              "kultur": "Acker"
+            }
+          ],
+          "psParcelsTotal": 22
+        }
+      ],
+      "nameCandidates": [
+        {
+          "house": 24,
+          "sim": 0.833
+        },
+        {
+          "house": 25,
+          "sim": 0.833
+        },
+        {
+          "house": 26,
+          "sim": 0.833
+        },
+        {
+          "house": 28,
+          "sim": 0.833
+        },
+        {
+          "house": 63,
+          "sim": 0.833
+        }
+      ],
+      "nameCorroboratesW": [
+        25
+      ],
+      "chainTier": "VERJETNA",
+      "chainReason": "W.MATCH + PUA↔PS ŠIBKA"
+    },
+    {
+      "id": "hiša-42",
+      "no": "40",
+      "owner": "Brinig Malfa [~]",
+      "kind": "hiša",
+      "W": [
+        23
+      ],
+      "links": [
+        {
+          "w": 23,
+          "wbridgeVerdict": "PARTIAL?",
+          "wbridgeSim": 0.667,
+          "puaOwners": [
+            "Bringz Wufa Luina hau Grüble [~]"
+          ],
+          "puaToPsTier": "NI_UJEMANJA",
+          "chainTier": "NEREŠENA",
+          "reason": "PUA↔PS: NI_UJEMANJA pri tej hiši"
+        }
+      ],
+      "nameCandidates": [
+        {
+          "house": 24,
+          "sim": 0.833
+        },
+        {
+          "house": 25,
+          "sim": 0.833
+        },
+        {
+          "house": 26,
+          "sim": 0.833
+        },
+        {
+          "house": 28,
+          "sim": 0.833
+        },
+        {
+          "house": 63,
+          "sim": 0.833
+        }
+      ],
+      "chainTier": "NEREŠENA",
+      "chainReason": "PUA↔PS: NI_UJEMANJA pri tej hiši"
+    },
+    {
+      "id": "parcela-41",
+      "no": "—",
+      "owner": "Jörg Georg",
+      "kind": "parcela",
+      "W": [
+        64
+      ],
+      "links": [
+        {
+          "w": 64,
+          "wbridgeVerdict": "MISMATCH",
+          "wbridgeSim": 0.455,
+          "puaOwners": [
+            "Verbitzcher Mathä bau[er]haußgütl [~]"
+          ],
+          "puaToPsTier": "ŠIBKA",
+          "chainTier": "NEREŠENA",
+          "reason": "W-most: lastniki se pri tej št. ne ujemajo (MISMATCH)"
+        }
+      ],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "W-most: lastniki se pri tej št. ne ujemajo (MISMATCH)"
+    },
+    {
+      "id": "parcela-42",
+      "no": "—",
+      "owner": "Glan Georg",
+      "kind": "parcela",
+      "W": [
+        26
+      ],
+      "links": [
+        {
+          "w": 26,
+          "wbridgeVerdict": "MISMATCH",
+          "wbridgeSim": 0.4,
+          "puaOwners": [
+            "Bring Johann Bräun [~] houlg.",
+            "Jankowitsche Juran bauernhow Zerguische "
+          ],
+          "puaToPsTier": "ŠIBKA",
+          "chainTier": "NEREŠENA",
+          "reason": "W-most: lastniki se pri tej št. ne ujemajo (MISMATCH)"
+        }
+      ],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "W-most: lastniki se pri tej št. ne ujemajo (MISMATCH)"
+    },
+    {
+      "id": "parcela-43",
+      "no": "—",
+      "owner": "Glan Matthäus",
+      "kind": "parcela",
+      "W": [
+        27
+      ],
+      "links": [
+        {
+          "w": 27,
+          "wbridgeVerdict": "MISMATCH",
+          "wbridgeSim": 0.364,
+          "puaOwners": [
+            "Mallestitak [~]"
+          ],
+          "puaToPsTier": "NI_UJEMANJA",
+          "chainTier": "NEREŠENA",
+          "reason": "W-most: lastniki se pri tej št. ne ujemajo (MISMATCH)"
+        }
+      ],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "W-most: lastniki se pri tej št. ne ujemajo (MISMATCH)"
+    },
+    {
+      "id": "parcela-44",
+      "no": "—",
+      "owner": "Malfs Mathäus",
+      "kind": "parcela",
+      "W": [
+        20
+      ],
+      "links": [
+        {
+          "w": 20,
+          "wbridgeVerdict": "PARTIAL?",
+          "wbridgeSim": 0.667,
+          "puaOwners": [
+            "Bringz Wufa Luina hau Grüble [~]",
+            "Polcig Michael buͤrſn/zu/gribla [~]"
+          ],
+          "puaToPsTier": "ŠIBKA",
+          "chainTier": "MOGOČA",
+          "reason": "W.PARTIAL + PUA↔PS ŠIBKA",
+          "psParcels": [
+            {
+              "page": 28,
+              "row": 20,
+              "blatt": "I:157/III:62",
+              "parzella": 520,
+              "kultur": "Wiese"
+            },
+            {
+              "page": 35,
+              "row": 13,
+              "blatt": "I:157/III:62",
+              "parzella": 652,
+              "kultur": "Wiese"
+            },
+            {
+              "page": 37,
+              "row": 7,
+              "blatt": "I:157/III:62",
+              "parzella": 707,
+              "kultur": "Garten"
+            },
+            {
+              "page": 40,
+              "row": 15,
+              "blatt": "II:70/III:25",
+              "parzella": 735,
+              "kultur": "Acker"
+            },
+            {
+              "page": 59,
+              "row": 1,
+              "blatt": "II:165/III:22",
+              "parzella": 1121,
+              "kultur": "Lukig"
+            },
+            {
+              "page": 59,
+              "row": 3,
+              "blatt": "II:165/III:22",
+              "parzella": 1123,
+              "kultur": "Lukig"
+            },
+            {
+              "page": 59,
+              "row": 6,
+              "blatt": "II:165/III:22",
+              "parzella": 1126,
+              "kultur": "Lukig"
+            },
+            {
+              "page": 59,
+              "row": 8,
+              "blatt": "II:165/III:22",
+              "parzella": 1128,
+              "kultur": "Acker"
+            }
+          ],
+          "psParcelsTotal": 29
+        }
+      ],
+      "nameCandidates": [
+        {
+          "house": 1,
+          "sim": 0.8
+        },
+        {
+          "house": 31,
+          "sim": 0.8
+        }
+      ],
+      "chainTier": "MOGOČA",
+      "chainReason": "W.PARTIAL + PUA↔PS ŠIBKA"
+    },
+    {
+      "id": "parcela-45",
+      "no": "—",
+      "owner": "Mals Georg",
+      "kind": "parcela",
+      "W": [
+        28
+      ],
+      "links": [
+        {
+          "w": 28,
+          "wbridgeVerdict": "PARTIAL",
+          "wbridgeSim": 0.5,
+          "puaOwners": [
+            "Bring Mäda/Manda [~] (Magdalena) Brünn ["
+          ],
+          "puaToPsTier": "ŠIBKA",
+          "chainTier": "MOGOČA",
+          "reason": "W.PARTIAL + PUA↔PS ŠIBKA",
+          "psParcels": [
+            {
+              "page": 29,
+              "row": 8,
+              "blatt": "I:157/III:62",
+              "parzella": 528,
+              "kultur": "Lohgarn"
+            },
+            {
+              "page": 29,
+              "row": 20,
+              "blatt": "I:157/III:62",
+              "parzella": 540,
+              "kultur": "Acker"
+            },
+            {
+              "page": 34,
+              "row": 14,
+              "blatt": "I:157/III:62",
+              "parzella": 633,
+              "kultur": "Acker"
+            },
+            {
+              "page": 34,
+              "row": 16,
+              "blatt": "I:157/III:62",
+              "parzella": 635,
+              "kultur": "Acker"
+            },
+            {
+              "page": 35,
+              "row": 18,
+              "blatt": "I:157/III:62",
+              "parzella": 657,
+              "kultur": "Wiese"
+            },
+            {
+              "page": 37,
+              "row": 3,
+              "blatt": "I:157/III:62",
+              "parzella": 703,
+              "kultur": "Acker"
+            },
+            {
+              "page": 37,
+              "row": 10,
+              "blatt": "I:157/III:62",
+              "parzella": 710,
+              "kultur": "Wiese"
+            },
+            {
+              "page": 37,
+              "row": 13,
+              "blatt": "I:157/III:62",
+              "parzella": 713,
+              "kultur": "Wiese"
+            }
+          ],
+          "psParcelsTotal": 38
+        }
+      ],
+      "nameCandidates": [],
+      "chainTier": "MOGOČA",
+      "chainReason": "W.PARTIAL + PUA↔PS ŠIBKA"
+    },
+    {
+      "id": "parcela-46",
+      "no": "—",
+      "owner": "Grög Michael",
+      "kind": "parcela",
+      "W": [
+        63
+      ],
+      "links": [
+        {
+          "w": 63,
+          "wbridgeVerdict": "PARTIAL",
+          "wbridgeSim": 0.667,
+          "puaOwners": [
+            "Bring Manda Brinahug [~]",
+            "Nikolaus Grönig bauer und Gailb. [~]"
+          ],
+          "puaToPsTier": "NI_UJEMANJA",
+          "chainTier": "NEREŠENA",
+          "reason": "PUA↔PS: NI_UJEMANJA pri tej hiši"
+        }
+      ],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "PUA↔PS: NI_UJEMANJA pri tej hiši"
+    },
+    {
+      "id": "parcela-47",
+      "no": "—",
+      "owner": "Greg Michael",
+      "kind": "parcela",
+      "W": [
+        63
+      ],
+      "links": [
+        {
+          "w": 63,
+          "wbridgeVerdict": "PARTIAL",
+          "wbridgeSim": 0.667,
+          "puaOwners": [
+            "Bring Manda Brinahug [~]",
+            "Nikolaus Grönig bauer und Gailb. [~]"
+          ],
+          "puaToPsTier": "NI_UJEMANJA",
+          "chainTier": "NEREŠENA",
+          "reason": "PUA↔PS: NI_UJEMANJA pri tej hiši"
+        }
+      ],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "PUA↔PS: NI_UJEMANJA pri tej hiši"
+    },
+    {
+      "id": "parcela-48",
+      "no": "—",
+      "owner": "Greg Michael",
+      "kind": "parcela",
+      "W": [
+        63
+      ],
+      "links": [
+        {
+          "w": 63,
+          "wbridgeVerdict": "PARTIAL",
+          "wbridgeSim": 0.667,
+          "puaOwners": [
+            "Bring Manda Brinahug [~]",
+            "Nikolaus Grönig bauer und Gailb. [~]"
+          ],
+          "puaToPsTier": "NI_UJEMANJA",
+          "chainTier": "NEREŠENA",
+          "reason": "PUA↔PS: NI_UJEMANJA pri tej hiši"
+        }
+      ],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "PUA↔PS: NI_UJEMANJA pri tej hiši"
+    },
+    {
+      "id": "parcela-49",
+      "no": "—",
+      "owner": "Malt Simon",
+      "kind": "parcela",
+      "W": [
+        61
+      ],
+      "links": [
+        {
+          "w": 61,
+          "wbridgeVerdict": "MISMATCH",
+          "wbridgeSim": 0.4,
+          "puaOwners": [
+            "Fillah Miho [~]"
+          ],
+          "puaToPsTier": "SREDNJA",
+          "chainTier": "NEREŠENA",
+          "reason": "W-most: lastniki se pri tej št. ne ujemajo (MISMATCH)"
+        }
+      ],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "W-most: lastniki se pri tej št. ne ujemajo (MISMATCH)"
+    },
+    {
+      "id": "parcela-50",
+      "no": "—",
+      "owner": "Joger Schello",
+      "kind": "parcela",
+      "W": [
+        60
+      ],
+      "links": [
+        {
+          "w": 60,
+          "wbridgeVerdict": "MATCH",
+          "wbridgeSim": 1.0,
+          "puaOwners": [
+            "Georg Rußa Bauer zu Griblje [~]",
+            "Schello Georg Bauer/b zu Gribla [~]"
+          ],
+          "puaToPsTier": "SREDNJA",
+          "chainTier": "DOKAZANA",
+          "reason": "W.MATCH + PUA↔PS SREDNJA",
+          "psParcels": [
+            {
+              "page": 5,
+              "row": 14,
+              "blatt": "III:45/II:20",
+              "parzella": 53,
+              "kultur": "Acker"
+            },
+            {
+              "page": 10,
+              "row": 3,
+              "blatt": "III:45/II:20",
+              "parzella": 143,
+              "kultur": "Acker"
+            },
+            {
+              "page": 14,
+              "row": 11,
+              "blatt": "I:157/III:62",
+              "parzella": 231,
+              "kultur": "Wiese"
+            },
+            {
+              "page": 23,
+              "row": 12,
+              "blatt": "I:157/III:62",
+              "parzella": 412,
+              "kultur": "Erdar"
+            },
+            {
+              "page": 31,
+              "row": 14,
+              "blatt": "I:157/III:62",
+              "parzella": 576,
+              "kultur": "Weide"
+            },
+            {
+              "page": 31,
+              "row": 15,
+              "blatt": "I:157/III:62",
+              "parzella": 577,
+              "kultur": "Acker"
+            },
+            {
+              "page": 65,
+              "row": 11,
+              "blatt": "II:165/III:22",
+              "parzella": 1243,
+              "kultur": "Acker"
+            },
+            {
+              "page": 66,
+              "row": 22,
+              "blatt": "II:165/III:22",
+              "parzella": 1281,
+              "kultur": "Wald"
+            }
+          ],
+          "psParcelsTotal": 31
+        }
+      ],
+      "nameCandidates": [],
+      "chainTier": "DOKAZANA",
+      "chainReason": "W.MATCH + PUA↔PS SREDNJA"
+    },
+    {
+      "id": "parcela-51",
+      "no": "—",
+      "owner": "Joger Schello",
+      "kind": "parcela",
+      "W": [
+        60
+      ],
+      "links": [
+        {
+          "w": 60,
+          "wbridgeVerdict": "MATCH",
+          "wbridgeSim": 1.0,
+          "puaOwners": [
+            "Georg Rußa Bauer zu Griblje [~]",
+            "Schello Georg Bauer/b zu Gribla [~]"
+          ],
+          "puaToPsTier": "SREDNJA",
+          "chainTier": "DOKAZANA",
+          "reason": "W.MATCH + PUA↔PS SREDNJA",
+          "psParcels": [
+            {
+              "page": 5,
+              "row": 14,
+              "blatt": "III:45/II:20",
+              "parzella": 53,
+              "kultur": "Acker"
+            },
+            {
+              "page": 10,
+              "row": 3,
+              "blatt": "III:45/II:20",
+              "parzella": 143,
+              "kultur": "Acker"
+            },
+            {
+              "page": 14,
+              "row": 11,
+              "blatt": "I:157/III:62",
+              "parzella": 231,
+              "kultur": "Wiese"
+            },
+            {
+              "page": 23,
+              "row": 12,
+              "blatt": "I:157/III:62",
+              "parzella": 412,
+              "kultur": "Erdar"
+            },
+            {
+              "page": 31,
+              "row": 14,
+              "blatt": "I:157/III:62",
+              "parzella": 576,
+              "kultur": "Weide"
+            },
+            {
+              "page": 31,
+              "row": 15,
+              "blatt": "I:157/III:62",
+              "parzella": 577,
+              "kultur": "Acker"
+            },
+            {
+              "page": 65,
+              "row": 11,
+              "blatt": "II:165/III:22",
+              "parzella": 1243,
+              "kultur": "Acker"
+            },
+            {
+              "page": 66,
+              "row": 22,
+              "blatt": "II:165/III:22",
+              "parzella": 1281,
+              "kultur": "Wald"
+            }
+          ],
+          "psParcelsTotal": 31
+        }
+      ],
+      "nameCandidates": [],
+      "chainTier": "DOKAZANA",
+      "chainReason": "W.MATCH + PUA↔PS SREDNJA"
+    },
+    {
+      "id": "parcela-52",
+      "no": "—",
+      "owner": "Meßle Michael",
+      "kind": "parcela",
+      "W": [
+        62
+      ],
+      "links": [
+        {
+          "w": 62,
+          "wbridgeVerdict": "MISMATCH",
+          "wbridgeSim": 0.286,
+          "puaOwners": [
+            "Georg Juttner Bauer zu Griblje [~]",
+            "Kosirhan Mäda Bauer zu Griblje [~]"
+          ],
+          "puaToPsTier": "NI_UJEMANJA",
+          "chainTier": "NEREŠENA",
+          "reason": "W-most: lastniki se pri tej št. ne ujemajo (MISMATCH)"
+        }
+      ],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "W-most: lastniki se pri tej št. ne ujemajo (MISMATCH)"
+    },
+    {
+      "id": "parcela-52b",
+      "no": "—",
+      "owner": "Malt Simon D.",
+      "kind": "parcela",
+      "W": [
+        61
+      ],
+      "links": [
+        {
+          "w": 61,
+          "wbridgeVerdict": "MISMATCH",
+          "wbridgeSim": 0.4,
+          "puaOwners": [
+            "Fillah Miho [~]"
+          ],
+          "puaToPsTier": "SREDNJA",
+          "chainTier": "NEREŠENA",
+          "reason": "W-most: lastniki se pri tej št. ne ujemajo (MISMATCH)"
+        }
+      ],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "W-most: lastniki se pri tej št. ne ujemajo (MISMATCH)"
+    },
+    {
+      "id": "parcela-53",
+      "no": "—",
+      "owner": "Marlo Michael",
+      "kind": "parcela",
+      "W": [
+        31
+      ],
+      "links": [
+        {
+          "w": 31,
+          "wbridgeVerdict": "MISMATCH",
+          "wbridgeSim": 0.4,
+          "puaOwners": [
+            "Gemeinde Malfz Brandhof Smibuche [~]",
+            "Krischan Mandschurischka / Griblje [~]",
+            "Schimey Stoffe Lorenz how Gribatsche [~]",
+            "Ulrich Pitter Bauer zu Gribla [~]"
+          ],
+          "puaToPsTier": "SREDNJA",
+          "chainTier": "NEREŠENA",
+          "reason": "W-most: lastniki se pri tej št. ne ujemajo (MISMATCH)"
+        }
+      ],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "W-most: lastniki se pri tej št. ne ujemajo (MISMATCH)"
+    },
+    {
+      "id": "parcela-54",
+      "no": "—",
+      "owner": "Greg Ulrich",
+      "kind": "parcela",
+      "W": [
+        32
+      ],
+      "links": [
+        {
+          "w": 32,
+          "wbridgeVerdict": "PARTIAL",
+          "wbridgeSim": 0.667,
+          "puaOwners": [
+            "Urlich Georg baur/kauf/gübln [~]"
+          ],
+          "puaToPsTier": "SREDNJA",
+          "chainTier": "VERJETNA",
+          "reason": "W.PARTIAL + PUA↔PS SREDNJA",
+          "psParcels": [
+            {
+              "page": 5,
+              "row": 16,
+              "blatt": "III:45/II:20",
+              "parzella": 55,
+              "kultur": "Acker"
+            },
+            {
+              "page": 12,
+              "row": 8,
+              "blatt": "I:157/III:62",
+              "parzella": 187,
+              "kultur": "Ackerland"
+            },
+            {
+              "page": 13,
+              "row": 3,
+              "blatt": "I:157/III:62",
+              "parzella": 203,
+              "kultur": "Acker"
+            },
+            {
+              "page": 15,
+              "row": 2,
+              "blatt": "I:157/III:62",
+              "parzella": 242,
+              "kultur": "Acker"
+            },
+            {
+              "page": 23,
+              "row": 10,
+              "blatt": "I:157/III:62",
+              "parzella": 410,
+              "kultur": "Acker"
+            },
+            {
+              "page": 31,
+              "row": 16,
+              "blatt": "I:157/III:62",
+              "parzella": 578,
+              "kultur": "Acker"
+            },
+            {
+              "page": 31,
+              "row": 18,
+              "blatt": "I:157/III:62",
+              "parzella": null,
+              "kultur": "Acker"
+            },
+            {
+              "page": 34,
+              "row": 9,
+              "blatt": "I:157/III:62",
+              "parzella": 628,
+              "kultur": "Acker"
+            }
+          ],
+          "psParcelsTotal": 28
+        }
+      ],
+      "nameCandidates": [],
+      "chainTier": "VERJETNA",
+      "chainReason": "W.PARTIAL + PUA↔PS SREDNJA"
+    },
+    {
+      "id": "parcela-55",
+      "no": "—",
+      "owner": "Joger Schello",
+      "kind": "parcela",
+      "W": [
+        60
+      ],
+      "links": [
+        {
+          "w": 60,
+          "wbridgeVerdict": "MATCH",
+          "wbridgeSim": 1.0,
+          "puaOwners": [
+            "Georg Rußa Bauer zu Griblje [~]",
+            "Schello Georg Bauer/b zu Gribla [~]"
+          ],
+          "puaToPsTier": "SREDNJA",
+          "chainTier": "DOKAZANA",
+          "reason": "W.MATCH + PUA↔PS SREDNJA",
+          "psParcels": [
+            {
+              "page": 5,
+              "row": 14,
+              "blatt": "III:45/II:20",
+              "parzella": 53,
+              "kultur": "Acker"
+            },
+            {
+              "page": 10,
+              "row": 3,
+              "blatt": "III:45/II:20",
+              "parzella": 143,
+              "kultur": "Acker"
+            },
+            {
+              "page": 14,
+              "row": 11,
+              "blatt": "I:157/III:62",
+              "parzella": 231,
+              "kultur": "Wiese"
+            },
+            {
+              "page": 23,
+              "row": 12,
+              "blatt": "I:157/III:62",
+              "parzella": 412,
+              "kultur": "Erdar"
+            },
+            {
+              "page": 31,
+              "row": 14,
+              "blatt": "I:157/III:62",
+              "parzella": 576,
+              "kultur": "Weide"
+            },
+            {
+              "page": 31,
+              "row": 15,
+              "blatt": "I:157/III:62",
+              "parzella": 577,
+              "kultur": "Acker"
+            },
+            {
+              "page": 65,
+              "row": 11,
+              "blatt": "II:165/III:22",
+              "parzella": 1243,
+              "kultur": "Acker"
+            },
+            {
+              "page": 66,
+              "row": 22,
+              "blatt": "II:165/III:22",
+              "parzella": 1281,
+              "kultur": "Wald"
+            }
+          ],
+          "psParcelsTotal": 31
+        }
+      ],
+      "nameCandidates": [],
+      "chainTier": "DOKAZANA",
+      "chainReason": "W.MATCH + PUA↔PS SREDNJA"
+    },
+    {
+      "id": "parcela-56",
+      "no": "—",
+      "owner": "Malt Ulrich",
+      "kind": "parcela",
+      "W": [
+        68
+      ],
+      "links": [
+        {
+          "w": 68,
+          "wbridgeVerdict": "MATCH",
+          "wbridgeSim": 1.0,
+          "puaOwners": [
+            "Ulrich Mida Bauer zu Gribla [~]"
+          ],
+          "puaToPsTier": "SREDNJA",
+          "chainTier": "DOKAZANA",
+          "reason": "W.MATCH + PUA↔PS SREDNJA",
+          "psParcels": [
+            {
+              "page": 5,
+              "row": 17,
+              "blatt": "III:45/II:20",
+              "parzella": 56,
+              "kultur": "Acker"
+            },
+            {
+              "page": 13,
+              "row": 2,
+              "blatt": "I:157/III:62",
+              "parzella": 202,
+              "kultur": "Acker"
+            },
+            {
+              "page": 13,
+              "row": 4,
+              "blatt": "I:157/III:62",
+              "parzella": 204,
+              "kultur": "Acker"
+            },
+            {
+              "page": 23,
+              "row": 11,
+              "blatt": "I:157/III:62",
+              "parzella": 411,
+              "kultur": "Eidar"
+            },
+            {
+              "page": 34,
+              "row": 8,
+              "blatt": "I:157/III:62",
+              "parzella": 627,
+              "kultur": "Acker"
+            },
+            {
+              "page": 34,
+              "row": 10,
+              "blatt": "I:157/III:62",
+              "parzella": 629,
+              "kultur": "Acker"
+            },
+            {
+              "page": 34,
+              "row": 21,
+              "blatt": "I:157/III:62",
+              "parzella": 640,
+              "kultur": "Acker"
+            },
+            {
+              "page": 35,
+              "row": 2,
+              "blatt": "I:157/III:62",
+              "parzella": 641,
+              "kultur": "Wiese"
+            }
+          ],
+          "psParcelsTotal": 23
+        }
+      ],
+      "nameCandidates": [],
+      "chainTier": "DOKAZANA",
+      "chainReason": "W.MATCH + PUA↔PS SREDNJA"
+    },
+    {
+      "id": "parcela-57",
+      "no": "—",
+      "owner": "Piberig Ulrich",
+      "kind": "parcela",
+      "W": [
+        32
+      ],
+      "links": [
+        {
+          "w": 32,
+          "wbridgeVerdict": "PARTIAL",
+          "wbridgeSim": 0.667,
+          "puaOwners": [
+            "Urlich Georg baur/kauf/gübln [~]"
+          ],
+          "puaToPsTier": "SREDNJA",
+          "chainTier": "VERJETNA",
+          "reason": "W.PARTIAL + PUA↔PS SREDNJA",
+          "psParcels": [
+            {
+              "page": 5,
+              "row": 16,
+              "blatt": "III:45/II:20",
+              "parzella": 55,
+              "kultur": "Acker"
+            },
+            {
+              "page": 12,
+              "row": 8,
+              "blatt": "I:157/III:62",
+              "parzella": 187,
+              "kultur": "Ackerland"
+            },
+            {
+              "page": 13,
+              "row": 3,
+              "blatt": "I:157/III:62",
+              "parzella": 203,
+              "kultur": "Acker"
+            },
+            {
+              "page": 15,
+              "row": 2,
+              "blatt": "I:157/III:62",
+              "parzella": 242,
+              "kultur": "Acker"
+            },
+            {
+              "page": 23,
+              "row": 10,
+              "blatt": "I:157/III:62",
+              "parzella": 410,
+              "kultur": "Acker"
+            },
+            {
+              "page": 31,
+              "row": 16,
+              "blatt": "I:157/III:62",
+              "parzella": 578,
+              "kultur": "Acker"
+            },
+            {
+              "page": 31,
+              "row": 18,
+              "blatt": "I:157/III:62",
+              "parzella": null,
+              "kultur": "Acker"
+            },
+            {
+              "page": 34,
+              "row": 9,
+              "blatt": "I:157/III:62",
+              "parzella": 628,
+              "kultur": "Acker"
+            }
+          ],
+          "psParcelsTotal": 28
+        }
+      ],
+      "nameCandidates": [],
+      "chainTier": "VERJETNA",
+      "chainReason": "W.PARTIAL + PUA↔PS SREDNJA"
+    },
+    {
+      "id": "parcela-58",
+      "no": "—",
+      "owner": "Greg Ulrich",
+      "kind": "parcela",
+      "W": [
+        32
+      ],
+      "links": [
+        {
+          "w": 32,
+          "wbridgeVerdict": "PARTIAL",
+          "wbridgeSim": 0.667,
+          "puaOwners": [
+            "Urlich Georg baur/kauf/gübln [~]"
+          ],
+          "puaToPsTier": "SREDNJA",
+          "chainTier": "VERJETNA",
+          "reason": "W.PARTIAL + PUA↔PS SREDNJA",
+          "psParcels": [
+            {
+              "page": 5,
+              "row": 16,
+              "blatt": "III:45/II:20",
+              "parzella": 55,
+              "kultur": "Acker"
+            },
+            {
+              "page": 12,
+              "row": 8,
+              "blatt": "I:157/III:62",
+              "parzella": 187,
+              "kultur": "Ackerland"
+            },
+            {
+              "page": 13,
+              "row": 3,
+              "blatt": "I:157/III:62",
+              "parzella": 203,
+              "kultur": "Acker"
+            },
+            {
+              "page": 15,
+              "row": 2,
+              "blatt": "I:157/III:62",
+              "parzella": 242,
+              "kultur": "Acker"
+            },
+            {
+              "page": 23,
+              "row": 10,
+              "blatt": "I:157/III:62",
+              "parzella": 410,
+              "kultur": "Acker"
+            },
+            {
+              "page": 31,
+              "row": 16,
+              "blatt": "I:157/III:62",
+              "parzella": 578,
+              "kultur": "Acker"
+            },
+            {
+              "page": 31,
+              "row": 18,
+              "blatt": "I:157/III:62",
+              "parzella": null,
+              "kultur": "Acker"
+            },
+            {
+              "page": 34,
+              "row": 9,
+              "blatt": "I:157/III:62",
+              "parzella": 628,
+              "kultur": "Acker"
+            }
+          ],
+          "psParcelsTotal": 28
+        }
+      ],
+      "nameCandidates": [],
+      "chainTier": "VERJETNA",
+      "chainReason": "W.PARTIAL + PUA↔PS SREDNJA"
+    },
+    {
+      "id": "parcela-59",
+      "no": "—",
+      "owner": "Leder Simon",
+      "kind": "parcela",
+      "W": [
+        36
+      ],
+      "links": [
+        {
+          "w": 36,
+          "wbridgeVerdict": "PARTIAL",
+          "wbridgeSim": 0.5,
+          "puaOwners": [
+            "Fillah Jetter [~]",
+            "Krischan Malfs Leurschkau / Griblje [~]"
+          ],
+          "puaToPsTier": "SREDNJA",
+          "chainTier": "VERJETNA",
+          "reason": "W.PARTIAL + PUA↔PS SREDNJA",
+          "psParcels": [
+            {
+              "page": 5,
+              "row": 4,
+              "blatt": "III:45/II:20",
+              "parzella": 43,
+              "kultur": "Acker"
+            },
+            {
+              "page": 9,
+              "row": 15,
+              "blatt": "III:45/II:20",
+              "parzella": 135,
+              "kultur": "Rüben"
+            },
+            {
+              "page": 10,
+              "row": 13,
+              "blatt": "III:45/II:20",
+              "parzella": 153,
+              "kultur": "Acker"
+            },
+            {
+              "page": 10,
+              "row": 14,
+              "blatt": "III:45/II:20",
+              "parzella": 154,
+              "kultur": "Schupfend O.B."
+            },
+            {
+              "page": 10,
+              "row": 15,
+              "blatt": "III:45/II:20",
+              "parzella": 155,
+              "kultur": "Acker"
+            },
+            {
+              "page": 11,
+              "row": 17,
+              "blatt": "III:45/II:20",
+              "parzella": 176,
+              "kultur": "Gumig Gmde"
+            },
+            {
+              "page": 12,
+              "row": 3,
+              "blatt": "I:157/III:62",
+              "parzella": 182,
+              "kultur": "Acker"
+            },
+            {
+              "page": 13,
+              "row": 6,
+              "blatt": "I:157/III:62",
+              "parzella": 206,
+              "kultur": "Acker"
+            }
+          ],
+          "psParcelsTotal": 46
+        }
+      ],
+      "nameCandidates": [],
+      "chainTier": "VERJETNA",
+      "chainReason": "W.PARTIAL + PUA↔PS SREDNJA"
+    },
+    {
+      "id": "parcela-60",
+      "no": "—",
+      "owner": "Glan Simonz",
+      "kind": "parcela",
+      "W": [
+        65
+      ],
+      "links": [
+        {
+          "w": 65,
+          "wbridgeVerdict": "NO_PUA (napoved za str. 35–49)",
+          "wbridgeSim": 0.0,
+          "puaOwners": [],
+          "puaToPsTier": null,
+          "chainTier": "NEREŠENA",
+          "reason": "PUA stran te številke ne obstaja (P5-b: napovedi)"
+        }
+      ],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "PUA stran te številke ne obstaja (P5-b: napovedi)"
+    },
+    {
+      "id": "hiša-63",
+      "no": "61",
+      "owner": "Peutinger Jhan",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-64",
+      "no": "62",
+      "owner": "Lappanig Miho",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-65",
+      "no": "63",
+      "owner": "Šimec Ripane",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-66",
+      "no": "64",
+      "owner": "Šimec Jhan",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-67",
+      "no": "65",
+      "owner": "Peutinger Jhan",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-68",
+      "no": "66",
+      "owner": "Šimec Jhan",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-69",
+      "no": "67",
+      "owner": "Lappanig Miho",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-70",
+      "no": "68",
+      "owner": "Dikobutar Rupre",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-71",
+      "no": "69",
+      "owner": "Filak Peter",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-72",
+      "no": "70",
+      "owner": "Filak Peter",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-73",
+      "no": "71",
+      "owner": "Filak Mihel",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-73b",
+      "no": "71½",
+      "owner": "Stettner [~] (prečrtana)",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-74",
+      "no": "72",
+      "owner": "Dikobutar Mihelo",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-75",
+      "no": "73",
+      "owner": "Peutinger Mihel",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-76",
+      "no": "74",
+      "owner": "Drulak Jhan",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-77",
+      "no": "75",
+      "owner": "Drulak Peter",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-78",
+      "no": "76",
+      "owner": "Strauß Georg [~]",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [
+        {
+          "house": 45,
+          "sim": 1.0
+        },
+        {
+          "house": 71,
+          "sim": 1.0
+        },
+        {
+          "house": 72,
+          "sim": 1.0
+        }
+      ],
+      "nameLinkAmbiguous": {
+        "candidates": [
+          45,
+          71,
+          72
+        ],
+        "note": "isti priimek več hiš — povezava ni enolična"
+      },
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-78b",
+      "no": "76½",
+      "owner": "Hufschmied [~] (rdeči vpis, prečrtana)",
+      "kind": "hiša",
+      "W": [
+        47
+      ],
+      "links": [
+        {
+          "w": 47,
+          "wbridgeVerdict": "MISMATCH?",
+          "wbridgeSim": 0.3,
+          "puaOwners": [
+            "Matthäus Wundsch [~]"
+          ],
+          "puaToPsTier": "NI_UJEMANJA",
+          "chainTier": "NEREŠENA",
+          "reason": "W-most: lastniki se pri tej št. ne ujemajo (MISMATCH)"
+        }
+      ],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "W-most: lastniki se pri tej št. ne ujemajo (MISMATCH)"
+    },
+    {
+      "id": "hiša-79",
+      "no": "77",
+      "owner": "Dikobutar Mihlo",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-80",
+      "no": "78",
+      "owner": "Dikobutar Marko",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-81",
+      "no": "79",
+      "owner": "Strauß Georg [~] (vrstica rdeče prečrtana)",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [
+        {
+          "house": 45,
+          "sim": 1.0
+        },
+        {
+          "house": 71,
+          "sim": 1.0
+        },
+        {
+          "house": 72,
+          "sim": 1.0
+        }
+      ],
+      "nameLinkAmbiguous": {
+        "candidates": [
+          45,
+          71,
+          72
+        ],
+        "note": "isti priimek več hiš — povezava ni enolična"
+      },
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-82",
+      "no": "80",
+      "owner": "Dikobutar Marko",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-83",
+      "no": "81",
+      "owner": "Strauß Georg [Groy] [~]",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [
+        {
+          "house": 45,
+          "sim": 1.0
+        },
+        {
+          "house": 71,
+          "sim": 1.0
+        },
+        {
+          "house": 72,
+          "sim": 1.0
+        }
+      ],
+      "nameLinkAmbiguous": {
+        "candidates": [
+          45,
+          71,
+          72
+        ],
+        "note": "isti priimek več hiš — povezava ni enolična"
+      },
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-84",
+      "no": "82",
+      "owner": "Strauß Georg [Groy] [~]",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [
+        {
+          "house": 45,
+          "sim": 1.0
+        },
+        {
+          "house": 71,
+          "sim": 1.0
+        },
+        {
+          "house": 72,
+          "sim": 1.0
+        }
+      ],
+      "nameLinkAmbiguous": {
+        "candidates": [
+          45,
+          71,
+          72
+        ],
+        "note": "isti priimek več hiš — povezava ni enolična"
+      },
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-85",
+      "no": "83",
+      "owner": "Strauß Georg [Groy] [~]",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [
+        {
+          "house": 45,
+          "sim": 1.0
+        },
+        {
+          "house": 71,
+          "sim": 1.0
+        },
+        {
+          "house": 72,
+          "sim": 1.0
+        }
+      ],
+      "nameLinkAmbiguous": {
+        "candidates": [
+          45,
+          71,
+          72
+        ],
+        "note": "isti priimek več hiš — povezava ni enolična"
+      },
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-86",
+      "no": "84",
+      "owner": "Strauß Georg [Groy] [~]",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [
+        {
+          "house": 45,
+          "sim": 1.0
+        },
+        {
+          "house": 71,
+          "sim": 1.0
+        },
+        {
+          "house": 72,
+          "sim": 1.0
+        }
+      ],
+      "nameLinkAmbiguous": {
+        "candidates": [
+          45,
+          71,
+          72
+        ],
+        "note": "isti priimek več hiš — povezava ni enolična"
+      },
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-87",
+      "no": "85",
+      "owner": "Peta Krištof (Krischan)",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-88",
+      "no": "86",
+      "owner": "Matja Krištof",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-89",
+      "no": "87",
+      "owner": "Heurisch Marko",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-90",
+      "no": "88",
+      "owner": "Matja Krištof",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-91",
+      "no": "89",
+      "owner": "Heurisch Marko",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-92",
+      "no": "90",
+      "owner": "Kuncelj Miha [?] — branja divergirajo",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-93",
+      "no": "91",
+      "owner": "Heurisch Marko",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-94",
+      "no": "92",
+      "owner": "Groy Feidig",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-95",
+      "no": "93",
+      "owner": "Matja Feidig",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-96",
+      "no": "94",
+      "owner": "Matja Feidig",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-97",
+      "no": "95",
+      "owner": "Schmerz Marko",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [
+        {
+          "house": 55,
+          "sim": 0.75
+        },
+        {
+          "house": 56,
+          "sim": 0.75
+        }
+      ],
+      "nameLinkAmbiguous": {
+        "candidates": [
+          55,
+          56
+        ],
+        "note": "isti priimek več hiš — povezava ni enolična"
+      },
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-98",
+      "no": "96",
+      "owner": "Ihmeyer Manko [~]",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-99",
+      "no": "97",
+      "owner": "Schmerz Marko",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [
+        {
+          "house": 55,
+          "sim": 0.75
+        },
+        {
+          "house": 56,
+          "sim": 0.75
+        }
+      ],
+      "nameLinkAmbiguous": {
+        "candidates": [
+          55,
+          56
+        ],
+        "note": "isti priimek več hiš — povezava ni enolična"
+      },
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    },
+    {
+      "id": "hiša-100",
+      "no": "98",
+      "owner": "k.k. Zollamt (ärarial) [~] — institucija",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [
+        {
+          "house": 70,
+          "sim": 1.0
+        }
+      ],
+      "nameLink": {
+        "house": 70,
+        "sim": 1.0,
+        "tier": "NEREŠENA"
+      },
+      "chainTier": "NEREŠENA",
+      "chainReason": "ime: kandidat h70, a PUA↔PS NI_UJEMANJA"
+    },
+    {
+      "id": "hiša-101",
+      "no": "99",
+      "owner": "[prazna vrstica — zaključek str. 7]",
+      "kind": "hiša",
+      "W": [],
+      "links": [],
+      "nameCandidates": [],
+      "chainTier": "NEREŠENA",
+      "chainReason": "brez W. sklica in brez enoličnega imenskega kandidata"
+    }
+  ]
+}

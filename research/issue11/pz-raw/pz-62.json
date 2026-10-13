@@ -1,0 +1,19 @@
+{
+ "page": 62,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:58:37.467Z",
+ "parseOk": true,
+ "structured": {
+  "page": 62,
+  "pageKind": "narrative",
+  "sections": [
+   {
+    "culture": null,
+    "par": null,
+    "narrativeBrief": "Naslovna stran: Zulammenstellung über die jährliche Rente und den Capitalwerth der Grundstücke in der Gemeinde Grüble nach den aufgefundenen Pachtverträgen.",
+    "rows": []
+   }
+  ],
+  "pageNote": "Stran je tiskana naslovna stran (Zulammenstellung) brez tabel ali številskih podatkov. Vsebuje ročno zapisano ime občine 'Grüble' in številko 'B.' ter podpis na dnu. Besedilo je v mešani tiskani in ročni (Kurrent) pisavi."
+ }
+}

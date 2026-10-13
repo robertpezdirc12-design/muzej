@@ -1,0 +1,56 @@
+{
+ "page": 61,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:58:28.202Z",
+ "parseOk": true,
+ "structured": {
+  "page": 61,
+  "pageKind": "narrative+table",
+  "sections": [
+   {
+    "culture": "Hutweide/Weiden",
+    "par": null,
+    "narrativeBrief": "Ein einziges Stück wiesgemütlichen und zur Güte konsumirenden Rindvieh enthalt nur einen einzelligen Flächenraum zu Joch und Juchart.",
+    "rows": [],
+    "confidence": "clear"
+   },
+   {
+    "culture": "Hutweide/Weiden",
+    "par": null,
+    "narrativeBrief": "Kaufenswerth bezüglichem gegenwärtigen Einnahmen, möglicherweise durch zukünftige Verbesserungen und obigen Berechnungen aufgewiesen werden zu gewisser Zeitmessung.",
+    "rows": [],
+    "confidence": "~"
+   },
+   {
+    "culture": "Hutweide/Weiden",
+    "par": null,
+    "narrativeBrief": "Das find Pommuth (des) Berechnungs- oder Düngungs-Lohnmüssen findet im Dienste einer Commission Pommuth (des) Berechnungs als Übergabe-Lohn angemessen, worauf dann diese mitfindet, vermehrt, das ungestörten Besitzes mitfällt.",
+    "rows": [],
+    "confidence": "~"
+   },
+   {
+    "culture": "Zusammenfassung",
+    "par": "Darstellung des Rein-Ertrages",
+    "narrativeBrief": null,
+    "rows": [
+     {
+      "label": "Tabelle (leer)",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "Classe | Rob-Ertrag pr. i. J. Sch. fl. kr. | Summarischer Cultur-Aufwand fl. kr. | Tarif-Percent | Anschlag desselben im Gelde fl. kr. | Rein-Ertrag fl. kr.",
+      "confidence": "clear"
+     }
+    ]
+   },
+   {
+    "culture": "Begründung",
+    "par": "Begründung des ausgewiesenen Rein-Ertrages",
+    "narrativeBrief": null,
+    "rows": []
+   }
+  ],
+  "pageNote": "Stran vsebuje tri odstavke narativnega besedila o pašnikih/hutweidah in eno prazno tabelo za prikaz čistega donosa (Rein-Ertrag). Tabela ima napisane glave stolpcev, vendar vrstice podatkov so prazne. Na dnu je naslov za razlago/begründung, ki pa še ni izpolnjena. Pisava je Kurrent, berljivost dobra do zmerna, nekateri zapisi so paleografsko negotovi."
+ }
+}

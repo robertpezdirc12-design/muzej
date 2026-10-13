@@ -206,3 +206,70 @@ k.o. (Flurnamen: Pri Jankovichti = današnje naselje Jankoviči ✓).
 - `p10-targeted.json` (tiles-vlm/) — ciljani VLM skeni A03/A05
 - `vac-preview-*.jpg` — VAČ predogledi listov (korelacijska matrika)
 - skripte: `scripts/tmp/p10-*.mjs|py` (skeni, fiti, validacije)
+
+## P45 (2026-10-12, issue #14) — VALIDACIJA PORAZDELITVE STAVB: vse tri celične umestitve kvantitativno potrjene ⭢
+
+Ruralni listi A03/A04/A05 nimajo točkovnih sidrov vrste cerkev/most/sotočje
+(merila dokončanja #14 dopuščajo alternativno pot: vidno opombo o negotovosti
++ posodobljen geotruth.ts). P45 je izvedla tretjo pot — KVANTIFIKACIJO
+ obstoječe celične umestitve z neodvisnimi podatki:
+
+### Metoda (scripts/p45-sheet-anchors.py + scripts/p45-verify.py)
+
+1. **KALIBRACIJA na A02** (156 stavb buildings.json = GEOTRUTH resnica):
+   - resnična podobnost (z y-zrcaljenjem slika→sever): **merilo 0,805 m/px,
+     rotacija +0,02°, mediana ostanka 2,4 m** — celično izračunano merilo
+     (0,80) se s resnico ujema < 1 % → zanesljiv prior za sestrobdne liste;
+   - izbira detektorja simbolov po F1 na 156 resnicah: **rdeče steblo**
+     (R−G>28 ∧ R−B>28, 7–32×7–28 px) F1 0,56, recall@50 0,94 — bistveno
+     bolje od temnih lis P10 (F1 0,35; temne lise ločijo tudi črte besedila).
+2. **DETEKCIJA** na A03 (maska vzhodni pas x≥78 %), A04 (cel list), A05
+   (zgornja desna polovica).
+3. **Celična preslikava** (okvir lista ≈ celica eZKN) → statistika bližine
+   do sodobnih stavbnih parcel GURS (< 800 m²; k.o. 1544 + 1552 = 1.500).
+4. **Fitovi**: prosti (rot/merilo/translacija) in omejeni (merilo = celično
+   ±5 %, rotacija = prior ±3°) z nič-testi (zasuki 90/180/270° + 30
+   naključnih zamikov ±350 m) — nasičena P10 točkovalnica zamenjana z
+   nenasičeno (clip(1−(d−15)/85)).
+5. **Križne preverbe oznak** → naselja (point-in-polygon, pyproj D96/TM→WGS84).
+
+### Rezultati (dokaz: p45-sheet-fits.json)
+
+| list | simbolov 1825 | sodobnih v coni | CELIČNA mediana | inlier@30 | sklep |
+|---|---|---|---|---|---|
+| A03 (dg) | 30 (veriga x 86–93 %) | 51 | **89 m** | 0,067 | veriga = nadaljevanje vasi POTRJENO |
+| A04 (cg) | 170 (cel list) | 440 | **69,7 m** | 0,118 | POPRAVEK P10 POTRJEN (P9: 636 m) |
+| A05 (ch) | 30 (sklop x 52–86 %) | 535 | **27 m** | 0,60 | sklop Fučkovci/Jankoviči (45,5404/15,2908) |
+
+- **Prosti fitovi ZAVRŽENI** na vseh treh listih: izboljšajo mediano le z
+  nafizikalnimi parametri (A03 rot +12°/s 0,60; A04 rot +8,5°/s 0,54;
+  A05 rot −16°/s 0,53) — 4 prosti parametri + 30 točk = pretreniranje
+  (P9-past prepoznana in izognjena).
+- **Omejeni fit**: A05 neodvisno POTRDI celično lego (Δ 64 m, mediana 23 m —
+  dva neodvisna vira se strinjata); A04 izboljša mediano na 55 m a premakne
+  oznako WEIDENDORF iz k.o. Bedenj → ZAVRNJEN (križna preverba zmaga nad
+  15 m izboljšave); A03 slabši od celice (153 m).
+- **ODPRTA DVOUMNOST A05** (dokumentirana v geotruth.ts SHEET_TRUTH + QA):
+  prosta translacija najde višje ocene na VZ robu celice (0,915 pri
+  45,5328/15,2974 — brez naselja, zunaj celice) — gostota sodobnih stavb
+  metrike ne loči popolnoma; zavrnjeno na dokazu okvirne kode (3× prebrana),
+  razrešitev čaka #12 (paleografija) / #13 (vektorizacija).
+- Naselja ( centroids, WGS84): Fučkovci (45,5447/15,2947), Dragoši
+  (45,5550/15,2840 — celica cg!), Jankoviči (45,5333/15,2831) — A05 sklop
+  pade MED Fučkovce in Jankoviče (obmeje 1825 k.o. Griblje).
+
+### Integracija
+
+- `src/data/atlas/geotruth.ts` — NOV razdelek SHEET_TRUTH (3 zapisi z
+  kvantificirano validacijo; tretje merilo dokončanja #14);
+- `model.ts` SHEET_GEOREFS A03/A04/A05 — accuracy posodobljene iz
+  »±200–400 m« na poštene ocene (±150–250 / ±100–200 / ±100–200 m) z
+  P45 dokazi; statusi ostanejo REVIEW;
+- `sources.ts` — placement + noteSi/En vseh treh listov dopolnjeni;
+- `qa.ts` — novi test `qa-p45-sheet-anchors` (42. → 43. test).
+
+### Artefakti P45
+
+- `p45-sheet-fits.json` — celotni dokaz (kalibracija A02, detekcije, fiti,
+  nič-testi, oznake, vogali, alternative A05)
+- `scripts/p45-sheet-anchors.py`, `scripts/p45-verify.py` — reproducibilno

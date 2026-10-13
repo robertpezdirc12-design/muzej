@@ -1,0 +1,19 @@
+{
+ "page": 7,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:35:29.286Z",
+ "parseOk": true,
+ "structured": {
+  "page": 7,
+  "pageKind": "narrative",
+  "sections": [
+   {
+    "culture": "Ackerland",
+    "par": "§. 9.",
+    "narrativeBrief": "Die Grundstücke in diesem Gemeindebezirk sind, mit Ausnahme von a) des Ackerlandes, als Dikgen, Lese, Wies, Gärten, Weiden, Baufläche und Holz, die gewöhnlich und in geringem Quantität vorkommen, und deren Wert in dem Schätzungsergebnis angemessen sind; b) der Wiesen- und Weidelandes, als geringer Grund und Gärten; c) des Weinlandes, als weniger nützlichen pflanzbaren Boden; d) des Holzlandes, als Stümmen mit Gesträuchern.",
+    "rows": []
+   }
+  ],
+  "pageNote": "Stran je čisto narativna brez tabel, zapisana v nemški Kurrent pisavi. Vsebuje §9 s podčrki (a, b, c, d), ki opisujejo različne kulture zemljišč (Ackerland, Wiesen/Weideland, Weinland, Holzland). Besedilo je jasno berljivo, brez rdečih rubrik ali številskih podatkov na tej strani."
+ }
+}

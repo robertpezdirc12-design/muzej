@@ -1,0 +1,1390 @@
+{
+ "series": "PS",
+ "campaign": "P38 (2026-10-11): 3. prehod + strukturna odkritja",
+ "source": "N083PS.pdf (VAČ uodid 373415, docid 41780; 143 strani)",
+ "method": "P36: pass-1 (135 strani) + pass-2 (78). P38: eliminacijska analiza (prekrivanja z različno vsebino 0/20 enakih + fizična sosledja) -> 20 ciljnih strani; pass-3 z izboljšanim pozivom (poudarek na sosledju številk); adjudikacija: pass3 prednost, če strukturno veljaven (zapolni vrzel, brez konflikta s sosledno podprto stranjo), sicer večina; nerešeno = 3 medsebojno različna branja (človeški pregled, issue #12)",
+ "keyFindings": [
+  "ZVEZEK ORGANIZIRAN PO LISTIH (Blatt I, II, IIb, III, IV, V, VII, IX, X) — vsak list nosi lastno številčenje parcel; isto številko na različnih listih je DRUGA parcela (razlaga 'nemogočih' prekrivanj z 0/20 enako vsebino iz P36)",
+  "str. 24 STRUKTURNO POTRJENA kot 421-440 (pass3 zapolni vrzel; p1/p2 sta skupaj napačno brala 401-420 — sistematna zamenjava 2<->4 v stoticah, dokaz korelacije napak med prehodoma)",
+  "kontrolna vsota 2607 (102 + 2505) = vsota vseh (list, številka) parov čez vse liste, ne maksimum enega niza — potrditev in poštenje P36 ugotovitve o kategorijah",
+  "večkulturne vrstice: ista parcela ima več vrstic po kulturah (553+ številk) — razdvojitev še vedno TO_DO po človeški potrditvi"
+ ],
+ "pages": {
+  "5": {
+   "range": [
+    41.0,
+    60.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "prehoda se strinjata"
+  },
+  "6": {
+   "range": [
+    61.0,
+    80.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "7": {
+   "range": [
+    81.0,
+    102.0
+   ],
+   "pass": "pass2",
+   "rows": 24,
+   "adjudication": "prehoda se strinjata"
+  },
+  "8": {
+   "range": [
+    101.0,
+    120.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "9": {
+   "range": [
+    121.0,
+    140.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "10": {
+   "range": [
+    141.0,
+    160.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "11": {
+   "range": [
+    161.0,
+    183.0
+   ],
+   "pass": "pass2",
+   "rows": 25,
+   "adjudication": "izbran pass2 (sosledje)"
+  },
+  "12": {
+   "range": [
+    181.0,
+    200.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "prehoda se strinjata"
+  },
+  "13": {
+   "range": [
+    201.0,
+    220.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "14": {
+   "range": [
+    221.0,
+    240.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "15": {
+   "range": [
+    241.0,
+    260.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "16": {
+   "range": [
+    261.0,
+    280.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "17": {
+   "range": [
+    281.0,
+    300.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "18": {
+   "range": [
+    301.0,
+    320.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "19": {
+   "range": [
+    321.0,
+    340.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "20": {
+   "range": [
+    341.0,
+    360.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "21": {
+   "range": [
+    361.0,
+    380.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "22": {
+   "range": [
+    381.0,
+    400.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "23": {
+   "range": [
+    401.0,
+    420.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "24": {
+   "range": [
+    421.0,
+    440.0
+   ],
+   "pass": "pass3",
+   "rows": 22,
+   "adjudication": "pass3 — strukturno potrjen (zapolnjuje vrzel, brez konflikta)"
+  },
+  "25": {
+   "range": [
+    441.0,
+    460.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "izbran pass2 (sosledje)"
+  },
+  "26": {
+   "range": [
+    461.0,
+    480.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "prehoda se strinjata"
+  },
+  "27": {
+   "range": [
+    481.0,
+    500.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "28": {
+   "range": [
+    501.0,
+    520.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "29": {
+   "range": [
+    521.0,
+    540.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "30": {
+   "range": [
+    541.0,
+    560.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "31": {
+   "range": [
+    564.0,
+    580.0
+   ],
+   "pass": "pass2",
+   "rows": 23,
+   "adjudication": "prehoda se strinjata"
+  },
+  "32": {
+   "range": [
+    581.0,
+    600.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "prehoda se strinjata"
+  },
+  "33": {
+   "range": [
+    601.0,
+    620.0
+   ],
+   "pass": "pass1",
+   "rows": 22,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "34": {
+   "range": [
+    621.0,
+    640.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "prehoda se strinjata"
+  },
+  "35": {
+   "range": [
+    641.0,
+    660.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "prehoda se strinjata"
+  },
+  "36": {
+   "range": [
+    661.0,
+    680.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "izbran pass2 (sosledje)"
+  },
+  "37": {
+   "range": [
+    701.0,
+    723.0
+   ],
+   "pass": "pass3",
+   "rows": 25,
+   "adjudication": "pass3 — strukturno potrjen (veljaven obseg, brez konflikta)"
+  },
+  "38": {
+   "range": [
+    681.0,
+    700.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "prehoda se strinjata"
+  },
+  "39": {
+   "range": [
+    701.0,
+    720.0
+   ],
+   "pass": "pass1",
+   "rows": 22,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "40": {
+   "range": [
+    721.0,
+    740.0
+   ],
+   "pass": "pass1",
+   "rows": 22,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "41": {
+   "range": [
+    741.0,
+    760.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "42": {
+   "range": [
+    761.0,
+    780.0
+   ],
+   "pass": "pass2",
+   "rows": 23,
+   "adjudication": "prehoda se strinjata"
+  },
+  "43": {
+   "range": [
+    801.0,
+    820.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "prehoda se strinjata"
+  },
+  "44": {
+   "range": [
+    821.0,
+    841.0
+   ],
+   "pass": "pass1",
+   "rows": 22,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "45": {
+   "range": [
+    841.0,
+    860.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "prehoda se strinjata"
+  },
+  "46": {
+   "range": [
+    861.0,
+    880.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "47": {
+   "range": [
+    881.0,
+    900.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "48": {
+   "range": [
+    901.0,
+    920.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "49": {
+   "range": [
+    921.0,
+    940.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "50": {
+   "range": [
+    941.0,
+    960.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "51": {
+   "range": [
+    961.0,
+    980.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "52": {
+   "range": [
+    981.0,
+    1000.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "53": {
+   "range": [
+    1001.0,
+    1020.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "54": {
+   "range": [
+    1021.0,
+    1040.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "55": {
+   "range": [
+    1041.0,
+    1061.0
+   ],
+   "pass": "pass1",
+   "rows": 22,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "56": {
+   "range": [
+    1061.0,
+    1086.0
+   ],
+   "pass": "pass2",
+   "rows": 23,
+   "adjudication": "izbran pass2 (sosledje)"
+  },
+  "57": {
+   "range": [
+    1081.0,
+    1100.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "58": {
+   "range": [
+    1102.0,
+    1121.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "prehoda se strinjata"
+  },
+  "59": {
+   "range": [
+    1121.0,
+    1141.0
+   ],
+   "pass": "pass1",
+   "rows": 22,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "60": {
+   "range": [
+    1141.0,
+    1160.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "prehoda se strinjata"
+  },
+  "61": {
+   "range": [
+    161.0,
+    180.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "prehoda se strinjata"
+  },
+  "62": {
+   "range": [
+    181.0,
+    200.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "prehoda se strinjata"
+  },
+  "63": {
+   "range": [
+    1801.0,
+    1820.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "prehoda se strinjata"
+  },
+  "64": {
+   "range": [
+    1821.0,
+    1840.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "65": {
+   "range": [
+    1234.0,
+    1260.0
+   ],
+   "pass": "pass2",
+   "rows": 24,
+   "adjudication": "izbran pass2 (sosledje)"
+  },
+  "66": {
+   "range": [
+    1261.0,
+    1281.0
+   ],
+   "pass": "pass2",
+   "rows": 23,
+   "adjudication": "prehoda se strinjata"
+  },
+  "67": {
+   "range": [
+    1281.0,
+    1300.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "prehoda se strinjata"
+  },
+  "68": {
+   "range": [
+    1201.0,
+    1221.0
+   ],
+   "pass": "pass2",
+   "rows": 23,
+   "adjudication": "prehoda se strinjata"
+  },
+  "69": {
+   "range": [
+    1327.0,
+    1346.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "pass3 zavrnjen; izbran pass2 — NERESENO za človeški pregled",
+   "pass3Reading": [
+    1224.0,
+    1244.0
+   ]
+  },
+  "70": {
+   "range": [
+    1241.0,
+    1260.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "prehoda se strinjata"
+  },
+  "71": {
+   "range": [
+    1261.0,
+    1281.0
+   ],
+   "pass": "pass1",
+   "rows": 22,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "72": {
+   "range": [
+    1281.0,
+    1300.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "prehoda se strinjata"
+  },
+  "73": {
+   "range": [
+    1101.0,
+    1120.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "prehoda se strinjata"
+  },
+  "74": {
+   "range": [
+    1121.0,
+    1140.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "75": {
+   "range": [
+    1441.0,
+    1460.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "prehoda se strinjata"
+  },
+  "76": {
+   "range": [
+    1161.0,
+    1180.0
+   ],
+   "pass": "pass2",
+   "rows": 23,
+   "adjudication": "prehoda se strinjata"
+  },
+  "77": {
+   "range": [
+    1181.0,
+    1200.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "78": {
+   "range": [
+    1601.0,
+    1620.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "prehoda se strinjata"
+  },
+  "79": {
+   "range": [
+    1821.0,
+    1840.0
+   ],
+   "pass": "pass2",
+   "rows": 24,
+   "adjudication": "pass3 zavrnjen (konflikt); večina p1≈p2",
+   "pass3Reading": [
+    821.0,
+    840.0
+   ]
+  },
+  "80": {
+   "range": [
+    1644.0,
+    1662.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "izbran pass2 (sosledje)"
+  },
+  "81": {
+   "range": [
+    1661.0,
+    1680.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "izbran pass2 (sosledje)"
+  },
+  "82": {
+   "range": [
+    1681.0,
+    1700.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "izbran pass2 (sosledje)"
+  },
+  "83": {
+   "range": [
+    421.0,
+    441.0
+   ],
+   "pass": "pass3",
+   "rows": 23,
+   "adjudication": "pass3 — strukturno potrjen (zapolnjuje vrzel, brez konflikta)"
+  },
+  "84": {
+   "range": [
+    461.0,
+    482.0
+   ],
+   "pass": "pass3",
+   "rows": 24,
+   "adjudication": "pass3 — strukturno potrjen (veljaven obseg, brez konflikta)"
+  },
+  "85": {
+   "range": [
+    641.0,
+    660.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "pass3 zavrnjen; izbran pass2 — NERESENO za človeški pregled",
+   "pass3Reading": [
+    441.0,
+    461.0
+   ]
+  },
+  "86": {
+   "range": [
+    160.0,
+    180.0
+   ],
+   "pass": "pass2",
+   "rows": 23,
+   "adjudication": "pass3 zavrnjen; izbran pass2 — NERESENO za človeški pregled",
+   "pass3Reading": [
+    461.0,
+    481.0
+   ]
+  },
+  "87": {
+   "range": [
+    661.0,
+    680.0
+   ],
+   "pass": "pass3",
+   "rows": 22,
+   "adjudication": "pass3 — strukturno potrjen (veljaven obseg, brez konflikta)"
+  },
+  "88": {
+   "range": [
+    721.0,
+    740.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "pass3 zavrnjen; izbran pass2 — NERESENO za človeški pregled",
+   "pass3Reading": [
+    990.0,
+    1010.0
+   ]
+  },
+  "89": {
+   "range": [
+    1921.0,
+    1941.0
+   ],
+   "pass": "pass2",
+   "rows": 23,
+   "adjudication": "izbran pass2 (sosledje)"
+  },
+  "90": {
+   "range": [
+    1941.0,
+    1960.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "izbran pass2 (sosledje)"
+  },
+  "91": {
+   "range": [
+    961.0,
+    980.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "92": {
+   "range": [
+    990.0,
+    1008.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "pass3 zavrnjen (konflikt); večina p1≈p2",
+   "pass3Reading": [
+    721.0,
+    740.0
+   ]
+  },
+  "93": {
+   "range": [
+    1601.0,
+    1620.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "pass3 zavrnjen; izbran pass2 — NERESENO za človeški pregled",
+   "pass3Reading": [
+    421.0,
+    440.0
+   ]
+  },
+  "94": {
+   "range": [
+    921.0,
+    940.0
+   ],
+   "pass": "pass3",
+   "rows": 22,
+   "adjudication": "pass3 — strukturno potrjen (veljaven obseg, brez konflikta)"
+  },
+  "95": {
+   "range": [
+    1941.0,
+    1960.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "prehoda se strinjata"
+  },
+  "96": {
+   "range": [
+    1961.0,
+    1980.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "izbran pass2 (sosledje)"
+  },
+  "97": {
+   "range": [
+    1881.0,
+    1900.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "98": {
+   "range": [
+    1901.0,
+    1920.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "99": {
+   "range": [
+    921.0,
+    940.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "pass3 zavrnjen (konflikt); večina p1≈p2",
+   "pass3Reading": [
+    921.0,
+    940.0
+   ]
+  },
+  "100": {
+   "range": [
+    1940.0,
+    1960.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "prehoda se strinjata"
+  },
+  "101": {
+   "range": [
+    1960.0,
+    1980.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "prehoda se strinjata"
+  },
+  "102": {
+   "range": [
+    1980.0,
+    1999.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "izbran pass2 (sosledje)"
+  },
+  "103": {
+   "range": [
+    2001.0,
+    2020.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "prehoda se strinjata"
+  },
+  "104": {
+   "range": [
+    2021.0,
+    2040.0
+   ],
+   "pass": "pass2",
+   "rows": 23,
+   "adjudication": "prehoda se strinjata"
+  },
+  "105": {
+   "range": [
+    2040.0,
+    2064.0
+   ],
+   "pass": "pass2",
+   "rows": 27,
+   "adjudication": "prehoda se strinjata"
+  },
+  "106": {
+   "range": [
+    2060.0,
+    2080.0
+   ],
+   "pass": "pass2",
+   "rows": 23,
+   "adjudication": "prehoda se strinjata"
+  },
+  "107": {
+   "range": [
+    2081.0,
+    2100.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "108": {
+   "range": [
+    2101.0,
+    2120.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "109": {
+   "range": [
+    2121.0,
+    2140.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "110": {
+   "range": [
+    2141.0,
+    2160.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "111": {
+   "range": [
+    2161.0,
+    2180.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "112": {
+   "range": [
+    2181.0,
+    2200.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "113": {
+   "range": [
+    2201.0,
+    2220.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "114": {
+   "range": [
+    2217.0,
+    2238.0
+   ],
+   "pass": "pass2",
+   "rows": 23,
+   "adjudication": "prehoda se strinjata"
+  },
+  "115": {
+   "range": [
+    2241.0,
+    2260.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "prehoda se strinjata"
+  },
+  "116": {
+   "range": [
+    2261.0,
+    2280.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "117": {
+   "range": [
+    2291.0,
+    2310.0
+   ],
+   "pass": "pass2",
+   "rows": 24,
+   "adjudication": "prehoda se strinjata"
+  },
+  "118": {
+   "range": [
+    2001.0,
+    2020.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "prehoda se strinjata"
+  },
+  "119": {
+   "range": [
+    2021.0,
+    2040.0
+   ],
+   "pass": "pass1",
+   "rows": 22,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "120": {
+   "range": [
+    2341.0,
+    2360.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "prehoda se strinjata"
+  },
+  "121": {
+   "range": [
+    2641.0,
+    2660.0
+   ],
+   "pass": "pass3",
+   "rows": 22,
+   "adjudication": "pass3 — strukturno potrjen (veljaven obseg, brez konflikta)"
+  },
+  "122": {
+   "range": [
+    2383.0,
+    2402.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "izbran pass2 (sosledje)"
+  },
+  "123": {
+   "range": [
+    2401.0,
+    2420.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "prehoda se strinjata"
+  },
+  "124": {
+   "range": [
+    2421.0,
+    2440.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "125": {
+   "range": [
+    2461.0,
+    2480.0
+   ],
+   "pass": "pass3",
+   "rows": 22,
+   "adjudication": "pass3 — strukturno potrjen (veljaven obseg, brez konflikta)"
+  },
+  "126": {
+   "range": [
+    2461.0,
+    2480.0
+   ],
+   "pass": "pass2",
+   "rows": 23,
+   "adjudication": "izbran pass2 (sosledje)"
+  },
+  "127": {
+   "range": [
+    2481.0,
+    2500.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "prehoda se strinjata"
+  },
+  "128": {
+   "range": [
+    2507.0,
+    2526.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "pass3 zavrnjen; izbran pass2 — NERESENO za človeški pregled",
+   "pass3Reading": [
+    4201.0,
+    4220.0
+   ]
+  },
+  "129": {
+   "range": [
+    2826.0,
+    2840.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "izbran pass2"
+  },
+  "130": {
+   "range": [
+    2541.0,
+    2560.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "prehoda se strinjata"
+  },
+  "131": {
+   "range": [
+    2561.0,
+    2580.0
+   ],
+   "pass": "pass1",
+   "rows": 20,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "132": {
+   "range": [
+    2581.0,
+    2600.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "133": {
+   "range": [
+    2601.0,
+    2620.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "134": {
+   "range": [
+    2621.0,
+    2641.0
+   ],
+   "pass": "pass1",
+   "rows": 22,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "135": {
+   "range": [
+    2611.0,
+    2630.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "pass3 zavrnjen (konflikt); večina p1≈p2",
+   "pass3Reading": [
+    2601.0,
+    2620.0
+   ]
+  },
+  "136": {
+   "range": [
+    2661.0,
+    2680.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "prehoda se strinjata"
+  },
+  "137": {
+   "range": [
+    2681.0,
+    2700.0
+   ],
+   "pass": "pass1",
+   "rows": 21,
+   "adjudication": "izbran pass1 (sosledje)"
+  },
+  "138": {
+   "range": [
+    1.0,
+    40.0
+   ],
+   "pass": "pass2",
+   "rows": 42,
+   "adjudication": "pass3 zavrnjen; izbran pass2 — NERESENO za človeški pregled",
+   "pass3Reading": [
+    421.0,
+    440.0
+   ]
+  },
+  "139": {
+   "range": [
+    81.0,
+    100.0
+   ],
+   "pass": "pass2",
+   "rows": 22,
+   "adjudication": "pass3 zavrnjen (konflikt); večina p1≈p2",
+   "pass3Reading": [
+    417.0,
+    436.0
+   ]
+  }
+ },
+ "totals": {
+  "pagesChosen": 135,
+  "totalRows": 2974,
+  "vlmReads": 233,
+  "mainSeriesCovered_1_2505": 1952,
+  "mainSeriesTarget": 2505,
+  "missingRanges": [
+   [
+    561,
+    563
+   ],
+   [
+    781,
+    800
+   ],
+   [
+    1065,
+    1065
+   ],
+   [
+    1067,
+    1067
+   ],
+   [
+    1071,
+    1072
+   ],
+   [
+    1075,
+    1075
+   ],
+   [
+    1222,
+    1233
+   ],
+   [
+    1301,
+    1326
+   ],
+   [
+    1347,
+    1440
+   ],
+   [
+    1461,
+    1600
+   ],
+   [
+    1621,
+    1643
+   ],
+   [
+    1701,
+    1800
+   ],
+   [
+    1841,
+    1880
+   ],
+   [
+    1904,
+    1904
+   ],
+   [
+    1906,
+    1906
+   ],
+   [
+    2000,
+    2000
+   ],
+   [
+    2237,
+    2237
+   ],
+   [
+    2239,
+    2240
+   ],
+   [
+    2281,
+    2290
+   ],
+   [
+    2311,
+    2340
+   ],
+   [
+    2361,
+    2382
+   ],
+   [
+    2441,
+    2460
+   ],
+   [
+    2501,
+    2505
+   ]
+  ],
+  "unresolvedPages": [
+   69,
+   85,
+   86,
+   88,
+   93,
+   128,
+   138
+  ],
+  "blattPairsUnique_bestEffort": 1513,
+  "checksumTarget": 2607,
+  "blattNote": "število (blatt, št.) parov je ZGORNJA meja — branja stolpca blatt so šumna (~50 % '?' ali okvarjeno); dokončna per-blatt rekonstrukcija zahteva zanesljiva branja lista (človeški pregled ali četrti strojni prehod s pozivom na blatt)"
+ }
+}

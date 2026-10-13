@@ -1,0 +1,73 @@
+{
+ "page": 67,
+ "phase": "p44-pass2c-verify",
+ "readAt": "2026-10-11T19:12:51.911Z",
+ "parseOk": true,
+ "structured": {
+  "verifications": [
+   {
+    "no": 1,
+    "finding": "Acker I: 80 j 842 kl — POTRJENO",
+    "confidence": "clear"
+   },
+   {
+    "no": 2,
+    "finding": "Acker II: 234 j 120 kl — POTRJENO (ni razreda III ali IV, Acker se konča z II)",
+    "confidence": "clear"
+   },
+   {
+    "no": 3,
+    "finding": "Wiesen I: 15 j 1594 kl — POTRJENO",
+    "confidence": "clear"
+   },
+   {
+    "no": 4,
+    "finding": "Wiesen II: 29 j 818 kl — POTRJENO (ni razreda III, Wiesen se konča z II)",
+    "confidence": "clear"
+   },
+   {
+    "no": 5,
+    "finding": "Kleine Gärten: 3 j 612 kl — POTRJENO (zadnja števka je 2, ne 9)",
+    "confidence": "clear"
+   },
+   {
+    "no": 6,
+    "finding": "Größere Gärten: 0 j (prazno) in 105 kl — POTRJENO",
+    "confidence": "clear"
+   },
+   {
+    "no": 7,
+    "finding": "Weingärten: 7 j 42 kl — POTRJENO (klaftra sta 42, ne 665 kot v PV)",
+    "confidence": "clear"
+   },
+   {
+    "no": 8,
+    "finding": "Hutweiden: 118 j 702 kl — POPRAVEK (prva števka je 8, ne 3; prej napačno 113)",
+    "confidence": "clear"
+   },
+   {
+    "no": 9,
+    "finding": "Weiden mit Holznutzung: 558 j 846 kl — POPRAVEK (klafter so 846, ne 46/858; skupaj z Hutweiden 118+558=676 j, kar ustreza nadzoru ~636 j z odstopanjem)",
+    "confidence": "~"
+   },
+   {
+    "no": 10,
+    "finding": "Bauarea: 1 j 1199 kl — POTRJENO",
+    "confidence": "clear"
+   },
+   {
+    "no": 11,
+    "finding": "Summa: 1152 j 495 kl — POTRJENO; Brutto 8872 fl 5¾ kr — POTRJENO; Rein 4492 fl 51 kr — POTRJENO",
+    "confidence": "clear"
+   },
+   {
+    "no": 12,
+    "finding": "Med Wiesen II in Kleine Gärten ter med Weingärten in Hutweiden NI dodatnih vrstic",
+    "confidence": "clear"
+   }
+  ],
+  "extraRowsFound": "nobenih",
+  "summaCheck": "vsota površin 1152 j 495 kl potrjena; Brutto 8872 fl 5¾ kr in Rein 4492 fl 51 kl potrjeni",
+  "pageNote": "stran vsebuje rdeče pripise o lastništvu (»Mit dem Grundbuch«) in podpisa overiteljev (Lindner, Jörggasser, Pöglhofer)."
+ }
+}

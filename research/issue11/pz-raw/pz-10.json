@@ -1,0 +1,67 @@
+{
+ "page": 10,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:36:10.784Z",
+ "parseOk": true,
+ "structured": {
+  "page": 10,
+  "pageKind": "arrative",
+  "sections": [
+   {
+    "culture": null,
+    "par": null,
+    "narrativeBrief": "8 Gülbgübln vom 8 bis 15 Joch; 48 Dürrfgübln vom 5 bis 10; 9 Dürgfln vom 1 bis 5.",
+    "rows": [
+     {
+      "label": "ülbgübln",
+      "areaJoch": "-15",
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "8 Gülbgübln vom 8 bis 15 Joch",
+      "confidence": "lear"
+     },
+     {
+      "label": "ürrfgübln",
+      "areaJoch": "-10",
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "8 Dürrfgübln \" 5 \" 10 .",
+      "confidence": "lear"
+     },
+     {
+      "label": "ürgfln",
+      "areaJoch": "-5",
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": " Dürgfln .. \" 1 \" 5.",
+      "confidence": "lear"
+     }
+    ]
+   },
+   {
+    "culture": null,
+    "par": ". 13.",
+    "narrativeBrief": "ie gemeldeten Güter und Dürflungen sind dieser Gemeinde zugehörig, fruchtbar, gute Lage, Comenda Pächter, zudem öffentlichem Weiderecht unterworfen.",
+    "rows": []
+   },
+   {
+    "culture": "äuser",
+    "par": ". 14.",
+    "narrativeBrief": "ie Höfe und Stallgebäude sind meist aus Stein, gut gebaut, mit Holz überdacht, und besitzen neben dem Wohnhaus auch Nebengebäude, die ebenfalls gut erhalten sind.",
+    "rows": []
+   },
+   {
+    "culture": "ndustrielle Gewerbe",
+    "par": ". 15.",
+    "narrativeBrief": "s gibt in diesem Gebiet keine industriellen Gewerbe.",
+    "rows": []
+   }
+  ],
+  "pageNote": "tran vsebuje samo narativni opis (Kurrent pisava) brez tabel s številskimi vrednostmi. Vsebuje podatke o Gülbgübln, Dürrfgübln in Dürgfln ter opise hiš in industrije."
+ },
+ "raw": "```json\n{\n  \"page\": 10,\n  \"pageKind\": \"narrative\",\n  \"sections\": [\n    {\n      \"culture\": null,\n      \"par\": null,\n      \"narrativeBrief\": \"18 Gülbgübln vom 8 bis 15 Joch; 48 Dürrfgübln vom 5 bis 10; 9 Dürgfln vom 1 bis 5.\",\n      \"rows\": [\n        {\n          \"label\": \"Gülbgübln\",\n          \"areaJoch\": \"8-15\",\n          \"areaKlafter\": null,\n          \"values\": null,\n          \"yields\": null,\n          \"rawText\": \"18 Gülbgübln vom 8 bis 15 Joch\",\n          \"confidence\": \"clear\"\n        },\n        {\n          \"label\": \"Dürrfgübln\",\n          \"areaJoch\": \"5-10\",\n          \"areaKlafter\": null,\n          \"values\": null,\n          \"yields\": null,\n          \"rawText\": \"48 Dürrfgübln \" 5 \" 10 .\",\n          \"confidence\": \"clear\"\n        },\n        {\n          \"label\": \"Dürgfln\",\n          \"areaJoch\": \"1-5\",\n          \"areaKlafter\": null,\n          \"values\": null,\n          \"yields\": null,\n          \"rawText\": \"9 Dürgfln .. \" 1 \" 5.\",\n          \"confidence\": \"clear\"\n        }\n      ]\n    },\n    {\n      \"culture\": null,\n      \"par\": \"§. 13.\",\n      \"narrativeBrief\": \"Die gemeldeten Güter und Dürflungen sind dieser Gemeinde zugehörig, fruchtbar, gute Lage, Comenda Pächter, zudem öffentlichem Weiderecht unterworfen.\",\n      \"rows\": []\n    },\n    {\n      \"culture\": \"Häuser\",\n      \"par\": \"§. 14.\",\n      \"narrativeBrief\": \"Die Höfe und Stallgebäude sind meist aus Stein, gut gebaut, mit Holz überdacht, und besitzen neben dem Wohnhaus auch Nebengebäude, die ebenfalls gut erhalten sind.\",\n      \"rows\": []\n    },\n    {\n      \"culture\": \"Industrielle Gewerbe\",\n      \"par\": \"§. 15.\",\n      \"narrativeBrief\": \"Es gibt in diesem Gebiet keine industriellen Gewerbe.\",\n      \"rows\": []\n    }\n  ],\n  \"pageNote\": \"Stran vsebuje samo narativni opis (Kurrent pisava) brez tabel s številskimi vrednostmi. Vsebuje podatke o Gülbgübln, Dürrfgübln in Dürgfln ter opise hiš in industrije.\"\n}\n```",
+ "repairNote": "lokalno popravljeno (ubežni narekovaji, fences)"
+}

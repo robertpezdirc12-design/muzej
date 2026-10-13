@@ -1,0 +1,19 @@
+{
+ "page": 22,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:40:35.889Z",
+ "parseOk": true,
+ "structured": {
+  "page": 22,
+  "pageKind": "narrative",
+  "sections": [
+   {
+    "culture": "Nebenbenützung",
+    "par": null,
+    "narrativeBrief": "Die Abstufungen werden nie den Abstufungen der Hauptkulturen, und bei den meisten Fällen sind die Abstufthigen unbestimmt. Die Abstufung aber muß gleich auf dem abgestuften Preise gegründet werden, bis sie aufhört.",
+    "rows": []
+   }
+  ],
+  "pageNote": "Stran vsebuje samo narativni tekst pod naslovom 'Neben-benützung' (soporaba), brez tabel ali številskih vrednosti. Pisava je jasna in berljiva."
+ }
+}

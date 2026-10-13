@@ -1,0 +1,151 @@
+{
+ "page": 67,
+ "phase": "p44-pass2",
+ "why": "REKAPITULACIJA Endresultate — vsota vrstic 1037 j ≠ Summa 1152 j → manjkajo razredi",
+ "readAt": "2026-10-11T19:06:38.525Z",
+ "parseOk": true,
+ "structured": {
+  "page": 67,
+  "rows": [
+   {
+    "culture": "Acker",
+    "class": "I",
+    "areaJoch": 80,
+    "areaKlafter": 842,
+    "bruttoPerJoch": "22 fl 44 kr",
+    "bruttoTotal": "1911 fl 90¾ kr",
+    "compensation": "10 fl 10½ kr 4½ pf",
+    "reinPerJoch": "12 fl 5 kr",
+    "reinClasse": "1030 fl 30¼ kr",
+    "reinGattung": null,
+    "confidence": "clear"
+   },
+   {
+    "culture": "Acker",
+    "class": "II",
+    "areaJoch": 234,
+    "areaKlafter": 120,
+    "bruttoPerJoch": "16 fl 30 kr",
+    "bruttoTotal": "3824 fl 50½ kr",
+    "compensation": "9 fl 18½ kr 3 pf",
+    "reinPerJoch": "7 fl 35 kr",
+    "reinClasse": "2533 fl 24½ kr",
+    "reinGattung": "3586 69/96? fl",
+    "confidence": "~"
+   },
+   {
+    "culture": "Wiesen",
+    "class": "I",
+    "areaJoch": 15,
+    "areaKlafter": 1594,
+    "bruttoPerJoch": "9 fl 24 kr",
+    "bruttoTotal": "150 fl 21½ kr",
+    "compensation": "1 fl 58½ kr 20 pf",
+    "reinPerJoch": "7 fl 20 kr",
+    "reinClasse": "119 fl 58½ kr",
+    "reinGattung": null,
+    "confidence": "clear"
+   },
+   {
+    "culture": "Wiesen",
+    "class": "II",
+    "areaJoch": 29,
+    "areaKlafter": 818,
+    "bruttoPerJoch": "4 fl - kr",
+    "bruttoTotal": "118 fl 2¾ kr",
+    "compensation": "1 fl - kr 25 pf",
+    "reinPerJoch": "3 fl - kr",
+    "reinClasse": "88 fl 2¾ kr",
+    "reinGattung": "208 30/96? fl",
+    "confidence": "~"
+   },
+   {
+    "culture": "Kleine Gärten",
+    "class": "C",
+    "areaJoch": 3,
+    "areaKlafter": 612,
+    "bruttoPerJoch": "22 fl 44 kr",
+    "bruttoTotal": "80 fl 19½ kr",
+    "compensation": "10 fl 10½ kr 45 pf",
+    "reinPerJoch": "13 fl 5 kr",
+    "reinClasse": "44 fl 16½ kr",
+    "reinGattung": null,
+    "confidence": "~"
+   },
+   {
+    "culture": "Größere Gärten",
+    "class": "C",
+    "areaJoch": null,
+    "areaKlafter": 105,
+    "bruttoPerJoch": "23 fl 44 kr",
+    "bruttoTotal": "6 fl ¾ kr",
+    "compensation": "10 fl 10½ kr 15 pf",
+    "reinPerJoch": "13 fl 5 kr",
+    "reinClasse": "3 fl 18¾ kr",
+    "reinGattung": null,
+    "confidence": "?"
+   },
+   {
+    "culture": "Weingärten",
+    "class": "C",
+    "areaJoch": 7,
+    "areaKlafter": 42,
+    "bruttoPerJoch": "24 fl - kr",
+    "bruttoTotal": "168 fl 27½ kr",
+    "compensation": "16 fl 48 kr 70 pf",
+    "reinPerJoch": "7 fl 10 kr",
+    "reinClasse": "50 fl 20½ kr",
+    "reinGattung": null,
+    "confidence": "clear"
+   },
+   {
+    "culture": "Hutweiden",
+    "class": "C",
+    "areaJoch": 118,
+    "areaKlafter": 702,
+    "bruttoPerJoch": "1 fl - kr",
+    "bruttoTotal": "118 fl 26½ kr",
+    "compensation": "- 15 kr 25 pf",
+    "reinPerJoch": "- 15 kr",
+    "reinClasse": "88 fl 49½ kr",
+    "reinGattung": null,
+    "confidence": "~"
+   },
+   {
+    "culture": "Weiden mit Holznutzung",
+    "class": "C",
+    "areaJoch": 58,
+    "areaKlafter": 558,
+    "bruttoPerJoch": "1 fl 6 kr",
+    "bruttoTotal": "61 fl 11 kr",
+    "compensation": "- 15 kr 25 pf",
+    "reinPerJoch": "- 51 kr",
+    "reinClasse": "0 fl 59¾ kr",
+    "reinGattung": "0 fl 59¾? / 1174? fl",
+    "confidence": "?"
+   },
+   {
+    "culture": "Bauarea",
+    "class": "-",
+    "areaJoch": 1,
+    "areaKlafter": 799,
+    "bruttoPerJoch": "16 fl 50 kr",
+    "bruttoTotal": "79 fl 48½ kr",
+    "compensation": "9 fl 18½ kr 55 pf",
+    "reinPerJoch": "7 fl 35 kr",
+    "reinClasse": "36 fl 7½ kr",
+    "reinGattung": "36 fl 56½? fl",
+    "confidence": "~"
+   }
+  ],
+  "summa": {
+   "areaJoch": 1152,
+   "areaKlafter": 495,
+   "bruttoTotal": "8872 fl 53¾ kr",
+   "reinTotal": "4492 fl 51 kr",
+   "confidence": "clear"
+  },
+  "rowCount": 11,
+  "pageNote": "Tabela je ročno napisana, večinoma berljiva. Pri nekaterih številkah (zlasti pri rein Ertrag) so črte prečrtane ali popravljene, kar zahteva preverjanje z znanimi kontrolnimi vsotami."
+ }
+}

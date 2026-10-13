@@ -25,7 +25,6 @@ on:
 
 permissions:
   issues: write   # komentar/odpiranje issue #6 ob odkriti napaki
-  actions: read   # preverba prejšnjega izvajanja (de-dup opozoril)
 
 jobs:
   preveri:
@@ -59,6 +58,14 @@ jobs:
           fi
           if [ "$code" = "200" ] && [ "$pcode" = "200" ]; then
             echo "::notice::VERCEL_TOKEN deluje (HTTP 200, obseg ekipe dostopen)"
+            echo "dead=false" >> "$GITHUB_OUTPUT"
+          elif [ "$pcode" = "200" ]; then
+            # P45 (2026-10-12): /v2/user lahko vrne 404 za žetone z omejenim
+            # obsegom (vcp_) — kar pa za deploy ni odločilno; edino, kar
+            # `vercel deploy --token=…` potrebuje, je obseg ekipe (/v9/projects),
+            # in ta DELUJE (200). Prej je ta kombinacija napačno padla v
+            # »prehodno napako« (dnevno opozorilo brez razloga).
+            echo "::notice::VERCEL_TOKEN deluje (obseg ekipe dostopen, HTTP 200 na /v9/projects; /v2/user = $code — žeton z omejenim obsegom, deployu zadostuje)"
             echo "dead=false" >> "$GITHUB_OUTPUT"
           elif [ "$code" = "200" ] && { [ "$pcode" = "401" ] || [ "$pcode" = "403" ]; }; then
             echo "::error::VERCEL_TOKEN je veljaven, a NIMA dostopa do obsega ekipe (HTTP $pcode na /v9/projects) — samodejni deploy bi padel. Ustvari nov žeton z obsegom Full Account na vercel.com/account/tokens, glej issue #6."
@@ -103,6 +110,11 @@ jobs:
       - name: Opozorilo na issue #6 (ob odkriti napaki)
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # GH_REPO je NUJEN: ta workflow nima checkout koraka, brez njega
+          # gh CLI ne ve, kateri repozitorij je v igri, in vsak ukaz pade
+          # z »not a git repository« (natančno to se je zgodilo 2026-10-11:
+          # GITLAB_TOKEN je umrl, opozorilo na #6 pa TIHO ni prispelo)
+          GH_REPO: ${{ github.repository }}
           VERCEL_DEAD: ${{ steps.vercel.outputs.dead }}
           GITLAB_DEAD: ${{ steps.gitlab.outputs.dead }}
         if: ${{ steps.vercel.outputs.dead == 'true' || steps.gitlab.outputs.dead == 'true' }}
@@ -111,20 +123,30 @@ jobs:
             echo "Samodejni dnevni pregled žetonov je odkril napako:"
             echo ""
             [ "$VERCEL_DEAD" = "true" ] && echo "- **VERCEL_TOKEN** ne more nameščati (neveljaven ali brez obsega Full Account) — samodejni deploy je ustavljen (produkcija nemoteno teče). Obnova: [vercel.com/account/tokens](https://vercel.com/account/tokens) → ustvari žeton z obsegom **Full Account** (ne le računa) → izroči pomočniku, vnos v skrivnost je pripravljen."
-            [ "$GITLAB_DEAD" = "true" ] && echo "- **GITLAB_TOKEN** ne deluje več — sinhronizacija z GitLabom je ustavljena. Rešitev: podaljšanje prek rotacije (self_rotate) ali nov PAT na GitLabu."
+            [ "$GITLAB_DEAD" = "true" ] && echo "- **GITLAB_TOKEN** ne deluje več (401) — sinhronizacija z GitLabom je ustavljena. Ker žeton ni več veljaven, rotacija (self_rotate) NI mogoča — potreben je **nov PAT** na [gitlab.com/-/user_settings/personal_access_tokens](https://gitlab.com/-/user_settings/personal_access_tokens) (obseg api + write_repository) in izročitev pomočniku za vnos v skrivnost."
             echo ""
             echo "Navodila za obnovo: prvi prispevek tega issue-ja."
           } > /tmp/comment.md
-          # komentar samo ob prehodu iz zelenega v rdeče (vsakodnevno
+          # de-dup po VSEBINI issue #6, ne po zgodovini runov: če korak
+          # opozorila kdaj sam pade (kot 2026-10-11), run-based logika
+          # (prev=failure → »komentar že obstaja«) opozorilo za vedno
+          # izgubi. Vsebinska preverba se samozdravi: pogledamo zadnje
+          # opozorilo bota na #6; mlajše od 7 dni → brez novega (vsakodnevno
           # ponavljanje bi zasipalo issue; e-poštno opozorilo o padlem
-          # jobu že samo po sebi opominja vsak dan)
-          prev=$(gh run list --workflow token-health.yml --limit 5 \
-            --json conclusion --jq '[.[] | select(.conclusion != null)] | (.[0].conclusion // "unknown")' \
-            2>/dev/null || echo unknown)
-          if [ "$prev" = "failure" ]; then
-            echo "Prejšnje izvajanje je že padlo — komentar na #6 že obstaja, brez novega."
-          else
-            gh issue reopen 6 >/dev/null 2>&1 || true
-            gh issue comment 6 --body-file /tmp/comment.md
+          # jobu že samo po sebi opominja vsak dan), sicer objavimo.
+          last_alert=$(gh issue view 6 --json comments --jq \
+            '[.comments[]
+              | select(.author.login == "github-actions[bot]")
+              | select(.body | contains("Samodejni dnevni pregled žetonov je odkril napako"))
+              | .createdAt] | last // empty' \
+            2>/dev/null || echo "")
+          if [ -n "$last_alert" ]; then
+            age=$(( ($(date +%s) - $(date -d "$last_alert" +%s)) / 86400 ))
+            if [ "$age" -lt 7 ]; then
+              echo "Opozorilo je na #6 že objavljeno ($last_alert, pred $age dnevi) — brez novega."
+              exit 1
+            fi
           fi
+          gh issue reopen 6 >/dev/null 2>&1 || true
+          gh issue comment 6 --body-file /tmp/comment.md
           exit 1

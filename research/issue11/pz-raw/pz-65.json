@@ -1,0 +1,128 @@
+{
+ "page": 65,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T19:00:09.760Z",
+ "parseOk": true,
+ "structured": {
+  "page": 65,
+  "pageKind": "table",
+  "sections": [
+   {
+    "culture": "Hutweide (Gattung)",
+    "par": null,
+    "narrativeBrief": null,
+    "rows": [
+     {
+      "label": "1. Land",
+      "areaJoch": "22",
+      "areaKlafter": "463",
+      "values": "Rob-Ertrag: 10 fl 182 kr; Cultur-Aufwand: 945 fl 20 kr; Rein-Ertrag: 15 fl 12 kr",
+      "yields": "Weizen: 056/056, Gerste: 026/022, Hafer: 132/006, Hülsen: 735, Drescherheu Weizen: 026/026, Hafer: 039/091, Ohlsen: 016/187, Tage: 209/094, Hand: 2000/1800, Beschaaffungen: [?]",
+      "rawText": "1. Land | I | 22 463 | 056 056 . 026 022 132 006 . 735 . . 026 026 . 039 091 016 187 . 209 094 . . 2000 1800 . . 10 182 945 20 15 12",
+      "confidence": "~"
+     },
+     {
+      "label": "",
+      "areaJoch": "18",
+      "areaKlafter": "547",
+      "values": "Rob-Ertrag: 8 fl 54 kr; Cult-Aufwand: 825 fl 35 kr; Rein-Ertrag: 8 fl 15 kr",
+      "yields": "Weizen: 056/056, Gerste: 026/022, Hafer: 129/006, Hülsen: 135, Drescherheu Weizen: 020/020, Hafer: 024/022, Ohlsen: 066/181, Tage: 302/085, Hand: 1600/1340, Beschaaffungen: [?]",
+      "rawText": ". | II | 18 547 | 056 056 . 026 022 129 006 . 135 . . 020 020 . 024 022 066 181 . 302 085 . . 1600 1340 . . 8 54 825 35 8 15",
+      "confidence": "~"
+     },
+     {
+      "label": "",
+      "areaJoch": "11",
+      "areaKlafter": "547",
+      "values": "Rob-Ertrag: 7 fl 40½ kr; Cult-Aufwand: 7 fl 38 kr; Rein-Ertrag: 7 fl 10 kr",
+      "yields": "Weizen: 1/62, Gerste: 044/050, Hafer: 024/100, Drescherheu Hafer: 028/118, Ohlsen: 062/066, Tage: 1880/034, Hand: 1200/960, Beschaaffungen: [?]",
+      "rawText": ". | III | 11 547 | 1 62 . 044 050 024 100 . . . . . 028 118 062 066 . 1880 034 . . 1200 960 . . 7 40½ 7 38 7 10",
+      "confidence": "~"
+     },
+     {
+      "label": "2. Wiesen",
+      "areaJoch": "9",
+      "areaKlafter": "24",
+      "values": "Cult-Aufwand: 1 fl 57 kr; Rein-Ertrag: 1 fl 30 kr",
+      "yields": "[prazno]",
+      "rawText": "2. Wiesen | I | 9 24 | . . . . . . . . . . . . . . . . . . . . . . . . . . 1 57 20 1 30",
+      "confidence": "~"
+     },
+     {
+      "label": "",
+      "areaJoch": "4",
+      "areaKlafter": null,
+      "values": "Rein-Ertrag: 9 kr",
+      "yields": "[prazno]",
+      "rawText": ". | II | 4 | . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9",
+      "confidence": "~"
+     },
+     {
+      "label": "3. Gärten",
+      "areaJoch": "22",
+      "areaKlafter": "463",
+      "values": "Cult-Aufwand: 229 fl 25 kr; Rein-Ertrag: 12 fl 20 kr",
+      "yields": "[prazno]",
+      "rawText": "3. Gärten | I | 22 463 | . . . . . . . . . . . . . . . . . . . . . . . . . . 229 25 . 12 20",
+      "confidence": "~"
+     },
+     {
+      "label": "4. Gärten",
+      "areaJoch": "22",
+      "areaKlafter": "463",
+      "values": "Cult-Aufwand: 229 fl 25 kr; Rein-Ertrag: 12 fl 20 kr",
+      "yields": "[prazno]",
+      "rawText": "4. Gärten | I | 22 463 | . . . . . . . . . . . . . . . . . . . . . . . . . . 229 25 . 12 20",
+      "confidence": "~"
+     },
+     {
+      "label": "5. Weingarten",
+      "areaJoch": "27",
+      "areaKlafter": "70",
+      "values": "Cult-Aufwand: 16 fl 54 kr; Rein-Ertrag: 19 fl 15 kr",
+      "yields": "Hand: 800/1800, Eimer: 92/12",
+      "rawText": "5. Weingarten | I | 27 70 | . . . . . . . . . . . . . . . . . . . . 92 12 . 800 1800 . . 16 54 70 48 19 15",
+      "confidence": "~"
+     },
+     {
+      "label": "6. Weiden",
+      "areaJoch": "1",
+      "areaKlafter": null,
+      "values": "Cult-Aufwand: 132 fl 229 kr; Rein-Ertrag: 15 kr",
+      "yields": "[prazno]",
+      "rawText": "6. Weiden | I | 1 | . . . . . . . . . . . . . . . . . . . . . . . . . . 132 229 25 . 15",
+      "confidence": "~"
+     },
+     {
+      "label": "7. Weiden und Zieg",
+      "areaJoch": "1",
+      "areaKlafter": null,
+      "values": "Cult-Aufwand: 132 fl 229 kr; Rein-Ertrag: 15 kr",
+      "yields": "[prazno]",
+      "rawText": "7. Weiden und Zieg | I | 1 | . . . . . . . . . . . . . . . . . . . . . . . . . . 132 229 25 . 15",
+      "confidence": "~"
+     },
+     {
+      "label": "Scheune",
+      "areaJoch": "1",
+      "areaKlafter": "0",
+      "values": "Rein-Ertrag: 51 kr",
+      "yields": "[prazno]",
+      "rawText": "Scheune | 1 0 | . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 51",
+      "confidence": "~"
+     },
+     {
+      "label": "8. Bau-Area",
+      "areaJoch": "16",
+      "areaKlafter": "547",
+      "values": "Rein-Ertrag: 7 fl 32 kr",
+      "yields": "[prazno]",
+      "rawText": "8. Bau-Area | 16 547 | . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7 32",
+      "confidence": "~"
+     }
+    ]
+   }
+  ],
+  "pageNote": "Stran vsebuje veliko tabelirano obrazce za Hutweide z različnimi kulturami (Land, Wiesen, Gärten, Weingarten, Weiden, Bau-Area). Podatki so vpisani s črnilom in rdečim črtilom (fl/kr vrednosti). Kolumna 'Beschaaffungen' je večinoma prazna ali neberljiva. Na dnu strani je podpisni napis 'Neustadt den 6ten July 1824' z podpisi."
+ }
+}

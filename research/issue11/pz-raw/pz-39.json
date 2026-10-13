@@ -1,0 +1,37 @@
+{
+ "page": 39,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:45:50.506Z",
+ "parseOk": true,
+ "structured": {
+  "page": 39,
+  "pageKind": "narrative",
+  "sections": [
+   {
+    "culture": null,
+    "par": "§. 14",
+    "narrativeBrief": "Zemljišča, ki so bila prej gozdna in zdaj spremenjena v njive, imajo srednjo kakovost zemlje z mešanico peska in gline.",
+    "rows": []
+   },
+   {
+    "culture": null,
+    "par": "§. 15",
+    "narrativeBrief": "Travniki so razdeljeni v tri razrede glede na položaj, vlažnost in kakovost trave; prvi razred je najboljši.",
+    "rows": []
+   },
+   {
+    "culture": null,
+    "par": "§. 16",
+    "narrativeBrief": "Vinogradi so na sončnih legah z rdečo prstjo, delno terasasti, in dajejo dober pridelek v dobrih letih.",
+    "rows": []
+   },
+   {
+    "culture": null,
+    "par": null,
+    "narrativeBrief": "Podpis in datum: leta 1828 je bil elaborat pregledan in potrjen.",
+    "rows": []
+   }
+  ],
+  "pageNote": "Stran 39 vsebuje samo narativni besedilo v nemški Kurrent pisavi brez tabel ali številskih podatkov. Besedilo opisuje kmetijske površine (njive, travniki, vinoge) in vsebuje podpise z datumi 1828/1829. Rdeče rubrike (oznake paragrafov §14, §15, §16) so vidne. Pisanje je jasno berljivo."
+ }
+}

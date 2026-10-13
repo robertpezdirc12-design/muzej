@@ -1,0 +1,106 @@
+{
+ "page": 65,
+ "phase": "p44-pass2",
+ "why": "Hutweide tabela (12 vrstic) — površine razredov pašnikov",
+ "readAt": "2026-10-11T19:07:39.266Z",
+ "parseOk": true,
+ "structured": {
+  "page": 65,
+  "tableTitle": "Hutweide/Weide - Specifischer Ausweis",
+  "columns": "Nr., Hutweide-Gattung, Brutto-Geldertrag (fl kr), Samen (Weizen, Korn, Gerste, Hafer, Weizen, Hirse, Kartoffeln, Mais), Drescherlohn, Zug (Pferde, Ochsen), Hand (Tage), Betriebsausgaben (Werkzeuge, Bau, Holz), Cultur-Aufwand, Rein-Ertrag (fl kr)",
+  "rows": [
+   {
+    "no": 1,
+    "name": "1. Land",
+    "areaJoch": 22,
+    "areaKlafter": 463,
+    "values": "Brutto: 10 fl 18 kr; Aufwand: 9 fl 36 kr; Rein: 15 fl 12 kr",
+    "raw": "1. Land | 22 j 463 kl | Brutto 10-18 | Aufwand 9-36 | Rein 15-12",
+    "confidence": "clear"
+   },
+   {
+    "no": 2,
+    "name": "2. Land (I-III)",
+    "areaJoch": 18,
+    "areaKlafter": 547,
+    "values": "Brutto: 8 fl 54 kr; Aufwand: 7 fl 30 kr; Rein: 15 fl 24 kr",
+    "raw": "2. Land I-III | 18 j 547 kl | Brutto 8-54 | Aufwand 7-30 | Rein 15-24",
+    "confidence": "clear"
+   },
+   {
+    "no": 3,
+    "name": "3. Schippe",
+    "areaJoch": 9,
+    "areaKlafter": 24,
+    "values": "Brutto: 1 fl 32 kr; Aufwand: 1 fl 20 kr; Rein: 7 fl 30 kr",
+    "raw": "3. Schippe | 9 j 24 kl | Brutto 1-32 | Aufwand 1-20 | Rein 7-30",
+    "confidence": "~"
+   },
+   {
+    "no": 4,
+    "name": "4. Gf. Gründe",
+    "areaJoch": 22,
+    "areaKlafter": 463,
+    "values": "Aufwand: 35 fl 22 kr; Rein: 12 fl 20 kr",
+    "raw": "4. Gf. Gründe | 22 j 463 kl | Aufwand 35-22 | Rein 12-20",
+    "confidence": "?"
+   },
+   {
+    "no": 5,
+    "name": "5. Gf. Grundstück",
+    "areaJoch": 22,
+    "areaKlafter": 464,
+    "values": "Rein: 12 fl 5 kr",
+    "raw": "5. Gf. Grundstück | 22 j 464 kl | Rein 12-5",
+    "confidence": "?"
+   },
+   {
+    "no": 6,
+    "name": "6. Hungersberg",
+    "areaJoch": 25,
+    "areaKlafter": 70,
+    "values": "Aufwand: 20 fl 26 kr; Rein: 10 fl 15 kr",
+    "raw": "6. Hungersberg | 25 j 70 kl | Aufwand 20-26 | Rein 10-15",
+    "confidence": "~"
+   },
+   {
+    "no": 7,
+    "name": "7. Schmide",
+    "areaJoch": 4,
+    "areaKlafter": null,
+    "values": "Aufwand: 16 fl 54 kr; Rein: 8 fl 48 kr",
+    "raw": "7. Schmide | 4 j | Aufwand 16-54 | Rein 8-48",
+    "confidence": "~"
+   },
+   {
+    "no": 8,
+    "name": "8. Schmide und Zug f. Futterung",
+    "areaJoch": 1,
+    "areaKlafter": null,
+    "values": "Aufwand: 132 fl 22 kr; Rein: 15 fl -",
+    "raw": "8. Schmide und Zug f. Futterung | 1 j | Aufwand 132-22 | Rein 15-",
+    "confidence": "~"
+   },
+   {
+    "no": 9,
+    "name": "9. Sauerei",
+    "areaJoch": 1,
+    "areaKlafter": 40,
+    "values": "Rein: 6 fl -",
+    "raw": "9. Sauerei | 1 j 40 kl | Rein 6-",
+    "confidence": "?"
+   },
+   {
+    "no": 10,
+    "name": "10. Bau-Leea",
+    "areaJoch": 16,
+    "areaKlafter": null,
+    "values": "Rein: 7 fl 32 kr",
+    "raw": "10. Bau-Leea | 16 j | Rein 7-32",
+    "confidence": "?"
+   }
+  ],
+  "summe": "Weiden gesamt: 636 j 263 kl (laut Kontrollangabe); keine explizite Zeilensumme in Tabelle sichtbar",
+  "pageNote": "Tabela za občino Grüble, stran 65. Vsebuje podrobne podatke o Hutweidah (pašnikih) z razčlenitvijo pridelkov, stroškov in čistega donosa. Ročni vpisi v rdeči in črni tinti, delno težko berljivi. Podpisano julij 1824."
+ }
+}

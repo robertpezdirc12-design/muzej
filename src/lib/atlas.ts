@@ -282,10 +282,10 @@ export function getArchiveInventory(): ArchiveInventory {
         openEn = `the full transcription of ${pagesOpen} pages (${rangesOfOpenPages(pagesDeclared, read)}) TO_COLLECT; the checksum 102+2505=2607 (p. 143) is the baseline`;
         break;
       case "PZ":
-        modelSi = "10 strukturiranih zapisov (naslov, mere, prebivalstvo, cenilna veriga, datum)";
-        modelEn = "10 structured entries (title, dimensions, population, the valuation chain, the date)";
-        openSi = `tabele razredov na ${pagesOpen} straneh (${rangesOfOpenPages(pagesDeclared, read)}) NEPRESRANE — vzorčene strani 20–60 imajo nizko gotovost`;
-        openEn = `the class tables on ${pagesOpen} pages (${rangesOfOpenPages(pagesDeclared, read)}) UNTRANSCRIBED — the sampled pages 20–60 carry low confidence`;
+        modelSi = "11 vrstic rekapitulacije razredov (research.ts PZ_CLASS_TABLE_1825: 10 razredov + Summa); podporna gradiva v dokazu pz-classes-full.json (Pacht vzorec 16 parcel, 10 pašnih gattung, pridelki)";
+        modelEn = "11 recapitulation rows (research.ts PZ_CLASS_TABLE_1825: 10 classes + the Summa); supporting material in the pz-classes-full.json evidence (a 16-parcel Pacht sample, 10 pasture divisions, yields)";
+        openSi = "prepis je strojni (REVIEW) — 71/71 strani prebranih (P44); paleografska potrditev odprtih točk (Δ 7 j vsote, Weingärten/Bauarea klafter) čaka (#12)";
+        openEn = "the transcription is machine-assisted (REVIEW) — 71/71 pages read (P44); palaeographic confirmation of the open points (the Δ 7 j row-sum gap, the Weingärten/Bauarea klafter) pending (#12)";
         break;
       default:
         modelSi =

@@ -1,0 +1,19 @@
+{
+ "page": 47,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:53:59.791Z",
+ "parseOk": true,
+ "structured": {
+  "page": 47,
+  "pageKind": "narrative",
+  "sections": [
+   {
+    "culture": "Hutweiden und Weidewald",
+    "par": null,
+    "narrativeBrief": "Stran vsebuje opisne zapise o pašnikih in gozdnih pašnikih (Hutweiden und Weidewald) z osebnimi imeni, površinami in lastniškimi razmerji, ter podpise ocenjevalcev.",
+    "rows": []
+   }
+  ],
+  "pageNote": "Stran je čisto narrativna brez tabel. Vsebuje rokopis v nemški Kurrent pisavi z rdečim napisom 'ganz Nützlich' na vrhu, več odstavkov besedila, podpis 'M. Kranzl' (verjetno landvermesser) in seznam imen s križci (verjetno komisija ali pričuječi). Površine so zapisane v Joch in Klafter. Zadnja vrstica se nanaša na 'Hiekominy' (hišna komisija) in 'Landes-Abtheilungs-Commission'."
+ }
+}

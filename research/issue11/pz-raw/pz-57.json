@@ -1,0 +1,91 @@
+{
+ "page": 57,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:57:09.145Z",
+ "parseOk": true,
+ "structured": {
+  "page": 57,
+  "pageKind": "narrative+table",
+  "sections": [
+   {
+    "culture": "Weingärten",
+    "par": "§. 5.",
+    "narrativeBrief": "Ena sama Luffa nižjega razreda je Angle bnnnsfn im Rofentbug, entbuijt auf einer Lufffülligne flebenah zu Joch und Jucha.",
+    "rows": [
+     {
+      "label": "Izige Classe",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "Izige Classe Ena sama Luffa nižjega razreda je Angle bnnnsfn im Rofentbug, entbuijt auf einer Lufffülligne flebenah zu Joch",
+      "confidence": "~"
+     },
+     {
+      "label": "Joch",
+      "areaJoch": "1",
+      "areaKlafter": "241",
+      "values": null,
+      "yields": null,
+      "rawText": "und Jucha 241 fl — kr",
+      "confidence": "clear"
+     }
+    ]
+   },
+   {
+    "culture": "Weingärten",
+    "par": null,
+    "narrativeBrief": "Heuflein auf 4 bruggofflffnne fgyzfffen Einnifung angibt fife ein Gmmining der obygnne Rofentbugng neffonmlign nus jifnjgn Lidhmiifarnl mit.",
+    "rows": [
+     {
+      "label": "Heuflein",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "Heuflein auf 4 bruggofflffnne fgyzfffen Einnifung angibt fife ein Gmmining der obygnne Rofentbugng neffonmlign nus jifnjgn",
+      "confidence": "?"
+     },
+     {
+      "label": "Lidhmiifarnl",
+      "areaJoch": null,
+      "areaKlafter": "16",
+      "values": null,
+      "yields": null,
+      "rawText": "Lidhmiifarnl mit 16 fl 24 kr.",
+      "confidence": "~"
+     }
+    ]
+   },
+   {
+    "culture": "Weingärten",
+    "par": null,
+    "narrativeBrief": "Vie find 70/100 Pmmutha eing Rofentbugng. Abn Auffizungg-Loumiffen fincht anf Zuffnation 40 Pmmutha ing Rofentbugngs alb Ubijig-Sjurh vugimambln, mnmuef, wmnv einf mit myfinnd renndne, eng unregfframd Bopifted notfteld.",
+    "rows": []
+   },
+   {
+    "culture": "Weingärten",
+    "par": null,
+    "narrativeBrief": "Darstellung des Rein-Ertrages (tabela).",
+    "rows": [
+     {
+      "label": "Izige",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "Rob-Ertrag 24 fl; Summarischer Cultur-Aufwand 16 54 fl kr; Tarifs-Percent 70; Anschlag deselben im Gelde 16 48 fl kr; Rein-Ertrag 7 10 fl kr",
+      "yields": null,
+      "rawText": "Izige | 24 . | 16 54 | 70 | 16 48 | 7 .10",
+      "confidence": "clear"
+     }
+    ]
+   },
+   {
+    "culture": "Weingärten",
+    "par": null,
+    "narrativeBrief": "Begründung des ausgewiesenen Rein-Ertrages: Die Grunmuging Lidonlgjn dSjfth an hupf, als Pfaffmbügun, und fine Zi bri dud migijnud dhingartflghn ald bnmugbarine gmninub Podemol anpbomutb Aufphotgjug auf fine mi Puz vombung prbomut.",
+    "rows": []
+   }
+  ],
+  "pageNote": "Stran vsebuje §5 za Weingärten z narativnim opisom in povzetkovno tabelo 'Darstellung des Rein-Ertrages'. Obstaja rdeč rokopisni dodatek z leve strani tabele (verjetno kasnejša opomba: 'Ortbürgut', 'Abkürzung', 'Verpfändung'). Kurrent pisava je težko berljiva na nekaterih mestih, posebej v daljšem besedilu pod tabelo."
+ }
+}

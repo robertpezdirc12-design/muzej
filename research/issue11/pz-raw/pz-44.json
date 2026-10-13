@@ -1,0 +1,135 @@
+{
+ "page": 44,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:52:45.802Z",
+ "parseOk": true,
+ "structured": {
+  "page": 44,
+  "pageKind": "narrative+table",
+  "sections": [
+   {
+    "culture": "Wirtschaftshäuser",
+    "par": null,
+    "narrativeBrief": "Die Häuser zirca 9 Stück werden in 9 gleiche Theilguthaben getheilt, und gegen",
+    "rows": [
+     {
+      "label": "Jahr ein / Einigung / Theilguthaben / Summe",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "Jahr ein | Einigung | Theilguthaben | Summe | 1 | 1 | Gleiß und I ten Theilguthaben.",
+      "confidence": "clear"
+     }
+    ]
+   },
+   {
+    "culture": "Ackerland (Natural Ertrags Boden)",
+    "par": null,
+    "narrativeBrief": "Begung auf 1 Joch wird in I ten Abschätzungen.",
+    "rows": [
+     {
+      "label": "1",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "18 Metzen 20 Muthen Weizen",
+      "rawText": ". 1 . . . Weizen . . 18. 20 Muth.",
+      "confidence": "clear"
+     },
+     {
+      "label": "2",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "9 Metzen 10 Muthen Hafer",
+      "rawText": ". 2 . . . Hafer . . 9. 10 .",
+      "confidence": "clear"
+     },
+     {
+      "label": "3",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "30 Eimer 80 [?] Gerste",
+      "rawText": ". 3 . . . Gerste . . 30. 410 Eim.",
+      "confidence": "~"
+     },
+     {
+      "label": "4",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "9 Metzen 10 Muthen Hafer",
+      "rawText": ". 4 . . . Hafer . . 9. 10 Muth.",
+      "confidence": "clear"
+     },
+     {
+      "label": "5",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "9 Metzen 10 Muthen Hirse",
+      "rawText": ". 5 . . . Hirse . . 9. 10 .",
+      "confidence": "clear"
+     },
+     {
+      "label": "6",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "7 Eimer 8 [?] Muth. Gersten",
+      "rawText": ". 6 . . . Muth. Gersten 7. 8 .",
+      "confidence": "~"
+     },
+     {
+      "label": "7",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "10 Eimer 12 [?] Züger",
+      "rawText": ". 7 . . . Züger . . 10. 12 .",
+      "confidence": "clear"
+     },
+     {
+      "label": "8",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "65 Eimer 70 [?] Erdäpfel",
+      "rawText": ". 8 . . . Erdäpfle . . 65. 70 .",
+      "confidence": "clear"
+     },
+     {
+      "label": "9",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "9 Eimer 10 [?] Hirne",
+      "rawText": ". 9 . . . Hirne . . 9. 10 .",
+      "confidence": "clear"
+     },
+     {
+      "label": "10",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "7 Eimer 8 [?] Muth. Gersten",
+      "rawText": ". 10 . . . Muth. Gersten 7. 8 .",
+      "confidence": "~"
+     },
+     {
+      "label": "11",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "16 Eimer 12 [?] Züger",
+      "rawText": ". 11 . . . Züger . . 16. 12 .",
+      "confidence": "clear"
+     }
+    ]
+   }
+  ],
+  "pageNote": "Stran vsebuje ročno napisano tabelo za delitev gospodarskih hiš in seznam naravnih pridelkov za Ackerland. Pisanje je v Kurrent pisavi, berljivost je splošno dobra, nekateri številski podatki pri enotah so manj jasni (označeni z ~). Rdeče rubrike na tej strani niso vidne."
+ }
+}

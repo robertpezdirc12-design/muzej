@@ -1,0 +1,31 @@
+{
+ "page": 41,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:46:23.912Z",
+ "parseOk": true,
+ "structured": {
+  "page": 41,
+  "pageKind": "narrative",
+  "sections": [
+   {
+    "culture": null,
+    "par": null,
+    "narrativeBrief": "Beschreibung der Weingärten (Weingärten) und ihrer Lage, Exposition, Bodenbeschaffenheit sowie der Rebsorten (Gewürztraminer, Ruländer) mit Ertragsangaben aus den Jahren 1800, 1810 und 1822.",
+    "rows": []
+   },
+   {
+    "culture": null,
+    "par": null,
+    "narrativeBrief": "Unterschrift des Schätzungsausschusses (Schätzungs-Comité) und formeller Beschluss über die Klassifizierung der Weingärten in die Klassen I bis IV nach Lage, Exposition, Bodenqualität und Ertrag.",
+    "rows": []
+   },
+   {
+    "culture": null,
+    "par": null,
+    "narrativeBrief": "Datierung auf den 14. Oktober 1822 (den 14ten October 1822) und Unterschriftenliste der Kommissionsmitglieder (Vorsitzender, Beisitzer, Schriftführer) mit Siegel/Vermerk am Ende.",
+    "rows": []
+   }
+  ],
+  "pageNote": "Stran 41 vsebuje izključno zapisano besedilo (narativen opis) v nemški Kurrent pisavi brez tabel ali številskih podatkov. Zgornji del opisuje vinograde in njihove lastnosti, srednji del vsebuje sklep o razvrstitvi v razrede, spodnji del pa datiranje (14. oktobra 1822) in podpise članov komisije. Na dnu strani je vidna rjava madežasta pega (morda voda ali starostni madež), ki prekriva del podpisov. Vse je čitljivo, čeprav je pisava težja zaradi stiliziranih črk."
+ }
+}

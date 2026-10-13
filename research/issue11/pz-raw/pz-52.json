@@ -1,0 +1,53 @@
+{
+ "page": 52,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:55:20.648Z",
+ "parseOk": true,
+ "structured": {
+  "page": 52,
+  "pageKind": "narrative+table",
+  "sections": [
+   {
+    "culture": "Weingärten",
+    "par": null,
+    "narrativeBrief": null,
+    "rows": [
+     {
+      "label": "II.",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "Rob-Ertrag 16 fl 50¼ kr; Cultur-Aufwand 9 fl 31 kr; Tarif 55; Anschlag 9 fl 15½ kr; Rein-Ertrag 7 fl 35 kr",
+      "yields": null,
+      "rawText": "II. | 16 50¼ | 9 31 | 55 | 9 15½ | 7 35",
+      "confidence": "clear"
+     }
+    ]
+   },
+   {
+    "culture": null,
+    "par": null,
+    "narrativeBrief": "Es sind eins Laßfässgen mit Güte bessern in Rechnung gebracht auf eine einfälligme Erndte mahn zu Joch 16 fl 50¼ kr.",
+    "rows": []
+   },
+   {
+    "culture": null,
+    "par": null,
+    "narrativeBrief": "Hingegen auf A. brygffölligen fengffichen Lohnsführung angibt, sich dem zur Gummung und obiger Rechnung aufzumühen muß, jährigen Lohnauswand mit 9 fl [~] kr.",
+    "rows": []
+   },
+   {
+    "culture": null,
+    "par": null,
+    "narrativeBrief": "Und für 5659/100 Pfenntheil an Rechnung. Wenn Differenz-Lohnsführen findet Tagwerth im Zimen eine Zuführung 55 Pfenntheil an Rechnung als ob lütigs-Quirch angemessen, wovon auf eins mit 9 fl 13¾ kr abzins ungest remunire, die brygfföllen Beziffert nachfellt.",
+    "rows": []
+   },
+   {
+    "culture": null,
+    "par": null,
+    "narrativeBrief": "Begründung des ausgewiesenen Rein-Ertrages: Die Lohnmündung und Naturaleinnahmen wird in und durch B. über jahrführende zum jährlischen Pflanzen zu ein einfälligem auf Joch mit 6 fl 3½ kr, gemäß dem ausgemittelten Catastral forhmuge profl ungestymmen und sonst Pflanzenkoste und abgänglich Abnutzung etc. zum ungestrymbuht, worin man und daß ein Brygfful Abnutzung Brygfful auf für die Ausmündung bauet, und zuführlich endlich, 2/3 Laßfäßer Abnutzlichen und 2/3 Laß Abnutzlichen im ausgemündeten Gummich Knappfung und zum Nachlaß Gummisch Prosenze folglich analog my!",
+    "rows": []
+   }
+  ],
+  "pageNote": "Stran vsebuje narativni del na vrhu (opis vrednosti vinogradov), nato tabelo 'Darstellung des Rein-Ertrages' za II. razred Weingärten, spodaj pa dolgo 'Begründung' (utemeljitev) čistega donosa. Rdeči ročni vpisi: 'Diffe in genauesten Schätzungswürdigung', 'Diffe Klafer', ter opombe ob tabeli 'Diffe in genauesten Schätzungswürdigung', 'schlechtwurdig', 'Wegfall Beweis'."
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "page": 31,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:43:19.834Z",
+ "parseOk": true,
+ "structured": {
+  "page": 31,
+  "pageKind": "narrative",
+  "sections": [
+   {
+    "culture": null,
+    "par": null,
+    "narrativeBrief": "Protokol o začetku delovanja komisije za občino Grüble, ki je bila ustanovljena 19. junija, z navedbo prisotnih članov in sklepa o razdelitvi dela.",
+    "rows": []
+   },
+   {
+    "culture": null,
+    "par": null,
+    "narrativeBrief": "Določitev komisijev za posamezne vasi in njihove naloge pri popisu zemljišč ter navodila za sodelovanje z lokalnimi katastrskimi uradi.",
+    "rows": []
+   }
+  ],
+  "pageNote": "Stran vsebuje izključno besedilo (protokol) v nemški Kurrent pisavi brez tabel ali številskih podatkov. Zgornji del vsebuje naslove in uvodni odstavek, sledi seznam prisotnih (Erscheinenden) ter podrobnosti o organizaciji dela. Pisanje je jasno, rdeče rubrike so vidne pri naslovih."
+ }
+}

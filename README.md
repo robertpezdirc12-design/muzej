@@ -200,6 +200,15 @@ Zgodovinska katastrska slika vasi (franciscejski kataster, k.o. Griblje št. 83 
   točna), del ±40/50 m negotovosti lista; skew ≤ 0,5708°; stikala privzeto
   IZKLOPLJENA, črtkani neatline okvirji s statusom, skupna prosojnost; dokaz
   `research/issue17/leaflet-overlay.json` + `scripts/p51_leaflet_overlay.py`;
+- **Rekonstrukcija GitHub↔GitLab (P52, issue #17 — sync dolg)** — združitev dveh
+  vzporednih linij (merge-base P37): GitHub linija (11.10.) je prispevala 3. prehod
+  PS (233 VLM branj, PS-full-v2.json 2974 vrstic, odkritje Blatt I–X), strukturno
+  rekonstrukcijo (33 segmentov, 29/29 dokaz), prvo celotno verigo PT→PUA→PS
+  (chain-full-pt-ps.json), PZ tabele cenilnih razredov (71/71 strani,
+  PZ_CLASS_TABLE_1825, 76 VLM klicev) in validacijo porazdelitve stavb A03–A05
+  (SHEET_TRUTH — zgodovinski neodvisni dokaz; runtime georef od P50 neatline);
+  GitLab linija P38–P51 ostaja avtoritativna za georef in spravo. QA 52 → **57**
+  testov (5 GitHub-unique testov adaptiranih na spojeno stanje).
 - **globa povezava** `?atlas=hiša-75` (hiša št. 73 — demonstracijska veriga do MVG-010).
 
 API (statični, brez runtime AI):

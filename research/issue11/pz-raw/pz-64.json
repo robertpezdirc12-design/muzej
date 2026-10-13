@@ -1,0 +1,19 @@
+{
+ "page": 64,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:59:28.439Z",
+ "parseOk": true,
+ "structured": {
+  "page": 64,
+  "pageKind": "other",
+  "sections": [
+   {
+    "culture": "Acker, Wies und Weinlande (Zusammenstellung des gesammten Cultur-Aufwandes)",
+    "par": null,
+    "narrativeBrief": "Stran vsebuje samo naslovno stranico za skupni pregled kulturnih stroškov za občino Grüble/Griblje, XI. ocenitveni okraj.",
+    "rows": []
+   }
+  ],
+  "pageNote": "Stran je naslovna/predgovorna stranica brez tabel in številskih podatkov. Vsebuje tiskan naslov 'Zusammenstellung des gesammten Cultur Aufwandes beim Acker, Wies und Weinlande' ter ročne vpise: Land Krain, Kreis Neustadt, Steuerbezirk Krupp, Gemeinde Grüble. Rdeče rubrike ni, ni številskih vrstic."
+ }
+}

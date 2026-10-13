@@ -1,0 +1,29 @@
+{
+ "page": 21,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:40:30.258Z",
+ "parseOk": true,
+ "structured": {
+  "page": 21,
+  "pageKind": "narrative+table",
+  "sections": [
+   {
+    "culture": "Weingärten",
+    "par": "§. 7",
+    "narrativeBrief": "V tej razredni skupini je površina 7 Joch 32 Klafter, razdeljena na 64 parcele, pri čemer je parcela št. 294 z 1 Joch 260 Klafteri izpostavljena kot merilna parcela.",
+    "rows": [
+     {
+      "label": "Weifser schlechter inhaltl. Wein",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "12 Eimer",
+      "rawText": "Weifser schlechter inhaltl. Wein . 12 _ 2 _ 24 _",
+      "confidence": "clear"
+     }
+    ]
+   }
+  ],
+  "pageNote": "Stran vsebuje dolg opisni tekst v kurrentni pisavi za vinograde (§7) in na dnu eno tabelo pridelkov (Produkte) z rdečimi ročnimi pripombami ob strani. Številke so jasno zapisane, rdeči napisi so verjetno kasnejše overitve."
+ }
+}

@@ -1807,3 +1807,93 @@ P40–P50 nespremenjeni.**
 ovoj ⊇ neatline 3/3, I3 skew ≤ 1.0°, I4 PIL dims + sha256, I5 odmiki
 19.3/20.0/20.0 m, I6 atlasni okvir, I7 determinizem (--check bajtno), I8
 kanonski = runtime.
+
+## §32 — P39b (GitHub linija) — PS: strukturna rekonstrukcija, vsebinski dokaz per-list številčenja (issue #10, 2026-10-11; retro-sinhronizirano v P52)
+
+Nadgradnja §17 (P36) po P38 (3. prehod, 233 VLM branj, odkritje listov
+Blatt I–X). P39 je ČISTA ANALITIČNA faza nad obstoječimi dokazi (2974
+izbranih vrstic iz PS-full-v2.json + 233 neodvisnih branj v ps-raw/) — brez
+novih branj; dokaz `research/issue17/PS-reconstruction.json`.
+
+### Vsebinski dokaz per-list številčenja (odločilen)
+
+Vseh **29/29** parov strani z enakim obsegom številk (prekrivanje ≥ 15) ima za
+iste številke **RAZLIČNE lastnike** — 0 ujemanj (npr. št. 421: str. 24
+Blatt I = »Krautisch Gregor«, str. 83 Blatt II = »Hölzl Johann«; št. 161:
+str. 11 III = »Poidir Matjaš«, str. 61 IX = »Pestdiz Pattrl Lorenz«, str. 86
+= »LahNitschek Waisen«). Ista številka na različnih straneh je DOKAZANO druga
+parcela — P36 hipoteza »napačno prebrane številke« je OVRŽENA; P38 odkritje
+o listih je s Content dokazom potrjeno neodvisno od šumnega stolpca blatt.
+
+### Strukturna rekonstrukcija (segmentacija)
+
+- **Metoda:** segment = maksimalno zaporedje fizičnih strani z zveznim
+  številčenjem; prelom ob padcu/skoku številčenja ALI ob lastniškem konfliktu
+  (iste številke, različni lastniki = drug list); spojitve dotikajočih se
+  segmentov brez konflikta z usklajenimi blatt glasovi.
+- **Rezultat: 33 segmentov** (npr. seg 1 = str. 5–11, 41–183, Blatt III;
+  seg 3 = str. 12–38 + 86, 160–723, Blatt I; seg 2 = str. 138, 1–40, Blatt X;
+  Waldung 2601–2700 v seg 28/32). Zvezek je pomešan po listih — seznami
+  različnih listov so v vezavi prepleteni.
+- **Unikatnih (segment, številka) parov: 2724** (od 2974 vrstic: 50
+  večkulturnih dodatnih vrstic + 200 vrstic z neberljivo številko ≈ 6,7 %
+  šuma Kurrent).
+
+### Uskladitev s kontrolno vsoto 102 + 2505 = 2607
+
+| Metoda | Unikatni pari | Vloga |
+|---|---|---|
+| veriženje po dotiku (p39e) | 2221 | SPODNJA meja (preveč združi) |
+| fizična segmentacija (p39g) | 2725 | ZGORNJA meja (razcep isti list) |
+| refinirana (p39h, spojitve) | **2724** | najboljša ocena |
+
+Cilj **2505 parcel je znotraj meje [2221, 2725] — KONSISTENTNO**. Ostanek
++219 glede na 2505 pripisujem: 7 nerešenih strani (69, 85, 86, 88, 93, 128,
+138 — tri medsebojno različna branja, možni fantomski obsegi), 200 vrstic z
+neberljivo številko in morebitnim prekrivanjem segmentov istega lista brez
+lastniškega pričevanja (Waldung brez lastnikov). **Eksaktna potrditev
+štetja 2607 zahteva človeški paleografski pregled — izrecno preloženo v
+issue #12.**
+
+### Spremljajoče spremembe
+
+`sources.ts` N083PS nota + P39; `research.ts` KURRENT_SERIES PS nota +
+PS_RECAP_1826 priporočilo (P39); nov dokaz
+`research/issue17/PS-reconstruction.json`; QA 39 → **40**
+(`qa-p39-ps-structure`: 12 trditev o dokumentiranosti rekonstrukcije,
+mejah in dokazu). Strogo lokalno/CI: 40/40.
+
+---
+
+## §33 — P52: REKONSTRUKCIJA GitHub↔GitLab — združitev dveh vzporednih linij (2026-10-14)
+
+Obnova po peskovni ponastavitvi + preklicanem žetonu je razkrila **pravo globino
+divergence**: med 11. in 13. 10. 2026 sta tekle dve NEODVISNI liniji dela nad
+istem merge-base (P37, 5e8e61b):
+
+- **GitHub linija (11.10.)**: P38 (3. prehod PS, 233 VLM branj, odkritje Blatt I–X,
+  PS-full-v2.json 2974 vrstic), P39b (strukturna rekonstrukcija, 33 segmentov,
+  29/29 vsebinski dokaz), P43b (prva celotna veriga PT→PUA→PS), P44 (PZ tabele
+  cenilnih razredov, 71/71 strani, 76 VLM klicev, PZ_CLASS_TABLE_1825), P45b
+  (validacija porazdelitve stavb A03–A05, SHEET_TRUTH, p45-sheet-fits.json) +
+  sanacija token-health opozoril (P42).
+- **GitLab linija (12.–13.10.)**: P38–P45 (sprava PS: sekcije, parcela×raba,
+  rekapitulacija, paleografija, pravilnik rab v2, leksikon + K1/K2 + verifikacija),
+  P46–P51 (neatline georef → GURS overlay → stavbe → Fučkovci → georef zapora
+  → Leaflet overlay).
+
+Združitev (merge commit, dva starša): **115 GitHub-only datotek** (pz-raw 100,
+pz-classes-full.json, chain-full-pt-ps.json, PS-reconstruction.json, PS-full-v2.json,
+ps-raw pass-3, p45-sheet-fits.json, 13 skriptov) + **GitLab avtoritativno stanje**
+(model.ts A03–A05 = P50 NEATLINE_* ±40/50 m nad GitHub P45 ±100–250 m — novejše;
+SHEET_TRUTH ostaja kot zgodovinski neodvisni dokaz z opombo o supersesiji).
+
+Integracijske odločitve: N083PS structuredEntries 2743 → **2974** (P36 + pass-3);
+N083PZ 10 → **11** + 71/71 strani (P44); note virov = union obeh pripovedi (vse
+pinned literale obeh QA nizov ohranjene); qa.ts = 52 (GitLab) + 5 (GitHub-unique:
+qa-p38-ps-blatt, qa-p39-ps-structure, qa-p43-chain-full, qa-p44-pz-classes,
+qa-p45-sheet-anchors — slednji adaptiran: SHEET_GEOREFS kontrole sedaj preverjajo
+P50 NEATLINE_* supersesijo) = **57 testov**; faze P38–P45 obeh linij se v
+pripovedi ločijo z oznako »b« za GitHub-linijske (P39b/P43b/P45b), ker so
+številke faz kolidirale.
+

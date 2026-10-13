@@ -1,0 +1,63 @@
+{
+ "page": 56,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:56:44.325Z",
+ "parseOk": true,
+ "structured": {
+  "page": 56,
+  "pageKind": "narrative+table",
+  "sections": [
+   {
+    "culture": "Größere Gärten",
+    "par": "§. 11",
+    "narrativeBrief": "Ena sama lastnost zemlje, ki jo imajo veliki vrtovi, zahteva, da se upoštevajo le različne kulture na vsakem jochu.",
+    "rows": [
+     {
+      "label": "I",
+      "areaJoch": "20",
+      "areaKlafter": "44",
+      "values": null,
+      "yields": null,
+      "rawText": "I. ... 20 J. 44 kl.",
+      "confidence": "clear"
+     },
+     {
+      "label": "II",
+      "areaJoch": "10",
+      "areaKlafter": "183",
+      "values": null,
+      "yields": null,
+      "rawText": "II. ... 10 J. 183 kl.",
+      "confidence": "clear"
+     },
+     {
+      "label": "III",
+      "areaJoch": "10",
+      "areaKlafter": "403",
+      "values": null,
+      "yields": null,
+      "rawText": "III. ... 10 J. 403 kl.",
+      "confidence": "~"
+     }
+    ]
+   },
+   {
+    "culture": "Größere Gärten (Darstellung des Rein-Ertrages)",
+    "par": null,
+    "narrativeBrief": null,
+    "rows": [
+     {
+      "label": "I und II",
+      "areaJoch": "20",
+      "areaKlafter": "44",
+      "values": "Rob-Ertrag: [?]; Cultur-Aufwand: 10 fl 18[?] kr; Tarif: 46; Anschlag: 10 fl 40[?] kr; Rein-Ertrag: 13 fl 5 kr",
+      "yields": null,
+      "rawText": "I u. II | 20 J. 44 | 10 fl 18[?] kr | 46 | 10 fl 40[?] kr | 13 fl 5 kr",
+      "confidence": "~"
+     }
+    ]
+   }
+  ],
+  "pageNote": "Stran 56 vsebuje rokopisni opis in tabelo čistega prihodka za večje vrtove (Größere Gärten). Rdeči vpisi na levem robu kažejo 'Bepflanzung: Chlornuß, Weintrauben'. Pisanje je v Kurrent pisavi, nekateri številski podatki so delno nejasni zaradi pisave."
+ }
+}

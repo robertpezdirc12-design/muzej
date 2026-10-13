@@ -1,0 +1,31 @@
+{
+ "page": 48,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:54:21.506Z",
+ "parseOk": true,
+ "structured": {
+  "page": 48,
+  "pageKind": "narrative",
+  "sections": [
+   {
+    "culture": "Einwerthungs-Protocoll",
+    "par": null,
+    "narrativeBrief": "Protokol o vrednotenju za občino Grüble/Griblje, ki navaja, da je bilo zemljišče ocenjeno skupaj z lastniki in da so bile določene kulture.",
+    "rows": []
+   },
+   {
+    "culture": "Gewürzenland",
+    "par": null,
+    "narrativeBrief": "Ocenjevanje začimbne zemlje (morda gozd ali posebna raba), navedena sta dva razreda.",
+    "rows": []
+   },
+   {
+    "culture": "Garten",
+    "par": null,
+    "narrativeBrief": "Opis vrtov, ki so bili ocenjeni kot majhna površina brez dodatnih podatkov o pridelkih.",
+    "rows": []
+   }
+  ],
+  "pageNote": "Stran 48 vsebuje samo narativni besedilni del (Einwerthungs-Protocoll) brez numeričnih tabel. Besedilo je pisano v nemški Kurrent pisavi, rdeče rubrike označujejo naslove (Einwerthungs-Protocoll, Gewürzenland, Garten). Površine in denarne vrednosti na tej strani niso zapisane v tabelah."
+ }
+}

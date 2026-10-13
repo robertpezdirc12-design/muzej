@@ -1,0 +1,47 @@
+{
+ "page": 43,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:46:58.997Z",
+ "parseOk": true,
+ "structured": {
+  "page": 43,
+  "pageKind": "narrative+table",
+  "sections": [
+   {
+    "culture": "Ackerland",
+    "par": null,
+    "narrativeBrief": "Stran glavi: Ackerland mit 3 Clasen. Pod naslovom 1. Clase: Wirthschafts-Verhältnis; Ein Theil diesen Clafse befindet in günstiger Lage und Boden, und gegen",
+    "rows": [
+     {
+      "label": "Tabela: Zufrn ein / Einigung | Zufrstufen | Früchte",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "Zufrn ein | Einigung | Zufrstufen | Früchte | 1 | 1 | Mais in e:ig | 2 | 2 | Weizen und Korn | 3 | 3 | Lein in 2 Muffeln | 4 | 4 | Maisgrund in e:ig | 5 | 5 | Erbsen mit 1 Muffel | 6 | 6 | Linsen | 7 | 7 | Erdäpfel in e:ig | 8 | 8 | Bohnen mit Muffel Einic | 9 | 9 | Linsen",
+      "confidence": "clear"
+     },
+     {
+      "label": "Berechnung auf 1 Joch",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "Anschlag 720 fl (približno, končna številka)",
+      "yields": null,
+      "rawText": "Berechnung auf 1 Joch | einen unzuläßlich allen 3 Zufuren zu setzen Mäßaufwand | sind mal | Ertag V mit 90 zuzurechnenden Zufuren zu wähl | jener zulässlich mit - - - - 720 fl",
+      "confidence": "~"
+     },
+     {
+      "label": "Natural Ertrag pro Joch",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "Mais 26 Metzen; Weizen/Korn 12; Lein 50; Maisgrund 12; Erbsen 12; Rüben/Brunkern 10; Linsen 15; Erdäpfel 80; Bohnen 12; Muffel-Brunkern 10; Linsen 15",
+      "rawText": "Natural Ertrag pro Joch | Für 1. Zufur mit Mais . . . 26 Metzen | . 2 . . . und Weizen . . . 12 \" | . 3 . . . Lein in 2 Muffeln . 50 \" | . 4 . . . Maisgrund . . . 12 \" | . 5 . . . Bohnen . . . . . 12 \" | . . . : Rüben Brunkern . . . 10 \" | . 6 . . . Linsen . . . . . 15 \" | . 7 . . . Erdäpfel . . . . . 80 \" | . 8 . . . Bohnen . . . . . 12 \" | . . . : Muffel Brunkern . . . 10 \" | . 9 . . . Linsen . . . . . 15 \"",
+      "confidence": "clear"
+     }
+    ]
+   }
+  ],
+  "pageNote": "Stran vsebuje rokopisni opis kulture Ackerland s tremi razredi (Clasen), tabelo razvrščenja (Zufrstufen) za 1. razred, izračun na 1 Joch in naravni pridelek po posameznih kulturah. Pisava je Kurrent, berljiva, z rdečimi rubrikami (glava 'Ackerland mit 3 Clasen')."
+ }
+}

@@ -1,0 +1,147 @@
+{
+ "page": 45,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:53:25.265Z",
+ "parseOk": true,
+ "structured": {
+  "page": 45,
+  "pageKind": "narrative+table",
+  "sections": [
+   {
+    "culture": "Hutweide/Weiden (III. Classe)",
+    "par": null,
+    "narrativeBrief": "III. Klasse: Wirthschaftshäuser. Man beurtheilt diesen nach 9 jährigem Durchschnitt mit folgenden Ziffern.",
+    "rows": [
+     {
+      "label": "Güte Class",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "Güte Class | Einigung | Früchtigkeit | Summe",
+      "confidence": "clear"
+     },
+     {
+      "label": "1",
+      "areaJoch": "1",
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "rawText": "1 | 1 | [prazno] | [prazno]",
+      "confidence": "~"
+     }
+    ]
+   },
+   {
+    "culture": "Hutweide/Weiden (nadaljevanje)",
+    "par": null,
+    "narrativeBrief": "Gleich den Einigungsfrüchten Ausdrückliche Beurtheilung auf 1 Joch mit in der I = et II = III = Classen.",
+    "rows": []
+   },
+   {
+    "culture": "Natural Ertrag pro Joch",
+    "par": null,
+    "narrativeBrief": "Seznam naravnih pridelkov na joch: žito, krompir, lan, konoplja, koruza, ovsi, ječmen, pšenica, prosa, fižol, grah.",
+    "rows": [
+     {
+      "label": "1",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "14 Mz",
+      "rawText": "1 . Getraid und Mait . . . 14 Mz",
+      "confidence": "clear"
+     },
+     {
+      "label": "2",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "8 Mz",
+      "rawText": ". 2 . . Kartoffeln . . . 8 Mz",
+      "confidence": "clear"
+     },
+     {
+      "label": "3",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "30–80 Ctr",
+      "rawText": ". 3 . . Lein od 2 Mz/h . 30–80 Ctr",
+      "confidence": "~"
+     },
+     {
+      "label": "4",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "8 Mz",
+      "rawText": ". 4 . . Hanf/garn . . . 8 Mz",
+      "confidence": "~"
+     },
+     {
+      "label": "5",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "8 Mz",
+      "rawText": ". 5 . . Korn . . . 8 Mz",
+      "confidence": "clear"
+     },
+     {
+      "label": "6",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "6 Mz",
+      "rawText": ". 6 . . Hafer/Gartlen . . . 6 Mz",
+      "confidence": "~"
+     },
+     {
+      "label": "7",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "9 Mz",
+      "rawText": ". 7 . . Gerste . . . 9 Mz",
+      "confidence": "clear"
+     },
+     {
+      "label": "8",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "10 Mz",
+      "rawText": ". 8 . . Weizen . . . 10 Mz",
+      "confidence": "clear"
+     },
+     {
+      "label": "9",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "6 Mz",
+      "rawText": ". 9 . . Hirse/Gartlen . . . 6 Mz",
+      "confidence": "~"
+     },
+     {
+      "label": "10",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "9 Eimer",
+      "rawText": ". 10 . . Bohnen . . . 9 Eimer",
+      "confidence": "~"
+     }
+    ]
+   },
+   {
+    "culture": "Anmerkung",
+    "par": null,
+    "narrativeBrief": "Opomba: Če pride do sprememb v kmetovanju, se bodo te številke lahko prilagodile, da bodo ustrezale trenutnim razmeram.",
+    "rows": []
+   }
+  ],
+  "pageNote": "Stran 45 vsebuje mešano vsebino: na vrhu je tabela za III. razred pašnikov (Hutweide) z enim vpisanim Jochom in prečrtanimi rubrikami; sledi dolg seznam naravnih pridelkov (Natural Ertrag) z enotami Mz (Metzen), Ctr (Centner) in Eimer. Rdeče podčrtane so naslovi 'Beurtheilung' in 'Natural Ertrag' ter 'Anmerkung'. Pisanje je v nemški Kurrent pisavi, nekaj besed je nejasnih (označeno z ~). Stran ima diagonalno črto čez zgornjo tabelo."
+ }
+}

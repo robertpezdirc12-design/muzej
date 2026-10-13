@@ -1,0 +1,19 @@
+{
+ "page": 36,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:44:22.878Z",
+ "parseOk": true,
+ "structured": {
+  "page": 36,
+  "pageKind": "narrative",
+  "sections": [
+   {
+    "culture": "Hutweide/Weiden",
+    "par": "§. 591",
+    "narrativeBrief": "Opisuje pašnike in travnike v katastrski občini Grüble/Griblje, njihovo lego, sestavo tal in kakovost.",
+    "rows": []
+   }
+  ],
+  "pageNote": "Stran 36 vsebuje zgolj zapisano besedilo (narativen opis) v nemški Kurrent pisavi brez tabel ali številskih podatkov; prisotni so rdeči ročni vpisi (oznake 'Drühe Wiese', 'Südlein') in podpis 'Smiln Klappf' ter številka '11' na vrhu."
+ }
+}

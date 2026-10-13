@@ -44,10 +44,10 @@ export const KURRENT_SERIES: KurrentSeries[] = [
     pages: 143,
     pagesTranscribed: 143,
     pagesReadList: Array.from({ length: 143 }, (_, i) => i + 1),
-    structuredEntries: 2743,
+    structuredEntries: 2974,
     status: "REVIEW",
-    noteSi: "143 strani parcel; P36 (2026-10-11, issue #10): VSE strani strojno prebrane — 1–4 in 140–143 (struktura + rekapitulacija, issue #17/P5-b) + 5–139 (P36 kampanja: 2743 strukturiranih vrstic, pass-1 vseh strani + pass-2 78 strani z okvarjeno soslednostjo; dokaz research/issue17/ps-raw/ + PS-full.json). STRUKTURA: zvezek pomešan (strani niso v redu parcel — npr. str. 80–82 = parcele 1644–1700); več števčnih nizov — glavne parcele, Waldung (skupna gozdna, brez lastnikov), Schmiegärten (vrtovi), Blatt X (lastno številčenje 1–40); glavni niz sega čez 2840. Končna Summa (str. 143, rdeči tuš): 102 + 2505 = 2607 šteje KATEGORIJE, ne maksimum. PREOSTANE: 3. prehod ~15 dvoumnih strani, klasifikacija sekcij, razdvojitev večkulturnih vrstic (ista parcela več vrstic po kulturah), uskladitev s 2607 — issue #10 odprt. Vsi statusi REVIEW (strojno branje ni dokazni vir).",
-    noteEn: "143 pages of parcels; P36 (2026-10-11, issue #10): ALL pages machine-read — 1–4 and 140–143 (structure + recapitulation, issue #17/P5-b) + 5–139 (the P36 campaign: 2,743 structured rows, pass-1 on all pages + pass-2 on 78 pages with broken continuity; evidence research/issue17/ps-raw/ + PS-full.json). STRUCTURE: the volume is shuffled (pages not in parcel order — e.g. pp. 80–82 = parcels 1644–1700); several numbering series — main parcels, Waldung (communal forest, ownerless), Schmiegärten (gardens), Blatt X (own 1–40 numbering); the main series runs past 2840. The final Summa (p. 143, red ink): 102 + 2,505 = 2,607 counts CATEGORIES, not a maximum. REMAINS: a 3rd pass over ~15 ambiguous pages, section classification, splitting multi-culture rows (the same parcel has several rows by culture), matching against 2,607 — issue #10 open. All statuses REVIEW (machine reading is not evidentiary).",
+    noteSi: "143 strani parcel; P36 (2026-10-11, issue #10): VSE strani strojno prebrane — 1–4 in 140–143 (struktura + rekapitulacija, issue #17/P5-b) + 5–139 (P36 kampanja: 2743 strukturiranih vrstic, pass-1 vseh strani + pass-2 78 strani z okvarjeno soslednostjo; dokaz research/issue17/ps-raw/ + PS-full.json). P38 (2026-10-11, issue #10): 3. prehod 20 ciljnih strani (233 VLM branj skupaj; dokaz ps-raw/*-pass3.json + PS-full-v2.json; 2974 izbranih vrstic po adjudikaciji pass3-prednost) + ODKRITJE: zvezek je organiziran po LISTIH (Blatt I–X), vsak list ima LASTNO številčenje parcel — identiteta parcele = (list, številka). P39 (2026-10-11, issue #10): STRUKTURNA REKONSTRUKCIJA (dokaz research/issue17/PS-reconstruction.json) — segmentacija po fizičnem vrstnem redu z lastniškim testom: 33 segmentov; VSEBINSKI DOKAZ per-list številčenja: 29/29 prekrivajočih parov strani ima za iste številke RAZLIČNE lastnike (0 ujemanj) — P36 hipoteza o napačno prebranih številkah je OVRŽENA; 2724 unikatnih (segment, številka) parov, 50 večkulturnih dodatnih vrstic, 200 vrstic z neberljivo številko; kontrolna vsota 102 + 2505 = 2607 je znotraj meje [2221, 2725] — KONSISTENTNO, eksaktna potrditev zahteva človeški pregled (issue #12). Nerešene strani za človeški pregled (issue #12): 69, 85, 86, 88, 93, 128, 138. SPRAVA (P38–P45, 2026-10-12): sekcije GRUND 1889/2505 + NADALJEVANJE 95 + WALDUNG 81 + Blatt X 60; razdvojitev v model parcela×raba (2134 vnosov, 2632 parov, /api/atlas/ps-landuse); leksikon družin in razcepi K1/K2 (kartice Raziskav). Vsi statusi REVIEW (strojno branje ni dokazni vir).",
+    noteEn: "143 pages of parcels; P36 (2026-10-11, issue #10): ALL pages machine-read — 1–4 and 140–143 (structure + recapitulation, issue #17/P5-b) + 5–139 (the P36 campaign: 2,743 structured rows, pass-1 on all pages + pass-2 on 78 pages with broken continuity; evidence research/issue17/ps-raw/ + PS-full.json). P38 (2026-10-11, issue #10): 3rd pass over 20 target pages (233 VLM reads total; evidence ps-raw/*-pass3.json + PS-full-v2.json; 2,974 chosen rows, pass3-preferred adjudication) + DISCOVERY: the volume is organized by SHEETS (Blatt I–X), each with its own parcel numbering — parcel identity = (sheet, number). P39 (2026-10-11, issue #10): STRUCTURAL RECONSTRUCTION (evidence research/issue17/PS-reconstruction.json) — physical-order segmentation with the owner test: 33 segments; CONTENT EVIDENCE of per-sheet numbering: 29/29 overlapping page pairs carry DIFFERENT owners for the same numbers (0 matches) — the P36 misread-numbers hypothesis is REFUTED; 2,724 unique (segment, number) pairs, 50 multi-culture extra rows, 200 rows with unreadable numbers; the checksum 102 + 2,505 = 2,607 lies within the bounds [2,221, 2,725] — CONSISTENT, exact confirmation requires human review (issue #12). Unresolved pages for human review (issue #12): 69, 85, 86, 88, 93, 128, 138. RECONCILIATION (P38–P45, 2026-10-12): the sections GRUND 1,889/2,505 + CONTINUATION 95 + WALDUNG 81 + Blatt X 60; the split into the parcel×culture model (2,134 entries, 2,632 pairs, /api/atlas/ps-landuse); the family lexicon and the K1/K2 splits (the Research cards). All statuses REVIEW (machine reading is not evidentiary).",
   },
   {
     code: "PUA",
@@ -66,12 +66,12 @@ export const KURRENT_SERIES: KurrentSeries[] = [
     unitSi: "Katastrski cenilni elaborat",
     unitEn: "Cadastral valuation elaborate",
     pages: 71,
-    pagesTranscribed: 12,
-    pagesReadList: [1, 2, 3, 20, 30, 40, 50, 60, 68, 69, 70, 71],
-    structuredEntries: 10,
+    pagesTranscribed: 71,
+    pagesReadList: Array.from({ length: 71 }, (_, i) => i + 1),
+    structuredEntries: 11,
     status: "REVIEW",
-    noteSi: "71 strani ocen in razredov. Vzorčeno 12 strani (issue #4, 2026-10-10, dokaz: research/issue17/PZ-profile.json + PZ-valuation.json pagesSampled=[20,30,40,50,60]): 1–3 (naslov, §§ topografija/meje/prebivalstvo), 20/30/40/50/60 (cenilni razredi kultur, nizka gotovost — 3 VLM branja se razhajajo), 68–71 (zaključni protokoli: Vorlage, Geprüft, Nachtrag hus Zins, »Gemacht den 28ten Juli 1825«). POPRAVEK issue #4: prejšnji števec 10 se ni ujemal z lastno opombo (12 strani) — dokazano stanje je 12. Vsebina: topografija §1 (2294 joch 516 klafter [~]), prebivalstvo §3 (441 prebivalcev — 222 m/219 ž; 72 hiš [~]; 102 družin [~]), cenilna veriga Roh-Ertrag → Cultur-Aufwand → Rein-Ertrag (Bau-Area: 16 fl 50½ kr → 7 fl 35 kr/joch, aritmetika potrjena). Tabele razredov v sredini (str. 4–67, razen vzorčenih) so NEPRESRANE — poln prepis 59 strani TO_COLLECT.",
-    noteEn: "71 pages of valuations and classes. 12 pages sampled (issue #4, 2026-10-10, evidence: research/issue17/PZ-profile.json + PZ-valuation.json pagesSampled=[20,30,40,50,60]): 1–3 (title, §§ topography/boundaries/population), 20/30/40/50/60 (culture valuation classes, low confidence — 3 VLM readings disagree), 68–71 (closing protocols: Vorlage, Geprüft, Nachtrag hus Zins, »Gemacht den 28ten Juli 1825«). issue #4 CORRECTION: the previous count of 10 contradicted its own note (12 pages) — the evidenced state is 12. Content: topography §1 (2294 joch 516 klafter [~]), population §3 (441 inhabitants — 222 m/219 f; 72 houses [~]; 102 families [~]), the valuation chain Roh-Ertrag → Cultur-Aufwand → Rein-Ertrag (Bau-Area: 16 fl 50½ kr → 7 fl 35 kr/joch, arithmetic confirmed). The class tables in the middle (pp. 4–67, apart from the sampled ones) remain UNTRANSCRIBED — the full 59-page transcription TO_COLLECT.",
+    noteSi: "71 strani ocen in razredov — PREBRAN V CELIOTI. Issue #4 (2026-10-10): vzorčenih 12 strani (1–3 topografija, 20/30/40/50/60 razredi, 68–71 protokoli; dokaz PZ-profile.json + PZ-valuation.json). P44 (2026-10-12, issue #11, dokaz research/issue11/pz-classes-full.json + pz-raw/, 76 VLM klicev): 1. krog str. 4–67 (64 strani, enotni prompt) + 12 ciljnih ponovnih branj (str. 25, 63, 65, 67 + sanacija odrezanih 12/13/15 + divergentna 50) + p67 polovični branj, verifikacija s PV kontekstom in odločilni izrez 1,6×. REKAPITULACIJA str. 67: 10 razredov + Summa 1152 j 495 kl, Brutto 8872 fl 5¾ kr, Rein 4492 fl 51 kr; Acker I 80 j 842 kl (korroborirano s str. 12) + II 334 j 120 kl [~] (adjudicirano iz 234: Kurrent oblika »3«, aritmetika 1145 ≈ 1152, PV Acker 413); Wiesen 15+29 j; Weingärten 7 j; Hutweiden 118 + Weiden mit Holznutzung 558 j (negativen Rein/joch); Bauarea 1 j. USKLDITEV s PV: Summa ≈ PV erste Summe 1148 j (+4 ≈ 0,3 %); kontrola str. 65 »Weiden gesamt 636 j 263 kl« = PV natančno; divergenca str. 50 RAZREŠENA (25 fl 44 − 10 fl 40½ = 15 fl 3½ ≈ 15 fl 5). Odprto za #12: Δ 7 j (vsota vrstic vs Summa), Weingärten klafter 42/665, Bauarea 1/4 j. Vsi statusi REVIEW (strojno branje ni dokazni vir).",
+    noteEn: "71 pages of valuations and classes — READ IN FULL. Issue #4 (2026-10-10): 12 pages sampled (1–3 topography, 20/30/40/50/60 classes, 68–71 protocols; evidence PZ-profile.json + PZ-valuation.json). P44 (2026-10-12, issue #11, evidence research/issue11/pz-classes-full.json + pz-raw/, 76 VLM calls): pass 1 over pp. 4–67 (64 pages, a uniform prompt) + 12 targeted re-reads (pp. 25, 63, 65, 67 + repairing the truncated 12/13/15 + the divergent 50) + p67 half-reads, a verification pass with PV context and a decisive 1.6× crop. RECAPITULATION p. 67: 10 classes + Summa 1152 j 495 kl, gross 8872 fl 5¾ kr, net 4492 fl 51 kr; Acker I 80 j 842 kl (corroborated by p. 12) + II 334 j 120 kl [~] (adjudicated from 234: the Kurrent »3« shape, the arithmetic 1145 ≈ 1152, PV Acker 413); Wiesen 15+29 j; Weingärten 7 j; Hutweiden 118 + Weiden mit Holznutzung 558 j (negative net/joch); Bauarea 1 j. RECONCILIATION with PV: Summa ≈ PV erste Summe 1148 j (+4 ≈ 0.3 %); the p. 65 control »Weiden gesamt 636 j 263 kl« = PV exactly; the p. 50 divergence RESOLVED (25 fl 44 − 10 fl 40½ = 15 fl 3½ ≈ 15 fl 5). Open for #12: Δ 7 j (row sum vs Summa), Weingärten klafter 42/665, Bauarea 1/4 j. All statuses REVIEW (machine reading is not evidentiary).",
   },
   {
     code: "PT",
@@ -82,8 +82,8 @@ export const KURRENT_SERIES: KurrentSeries[] = [
     pagesReadList: [1, 2, 3, 4, 5, 6, 7, 8],
     structuredEntries: 84,
     status: "REVIEW",
-    noteSi: "84 stavbnih vrstic (hišne št. 1–99 + prečrtana dvojnica 34) prebranih s pomočjo strojnega branja; vsi vnosi status REVIEW. Issue #17: 101 vrstica preverjena (81 POTRJENIH, 15 popravkov, 4 manjkajoče vrstice, str. 4 konča pri hiši 40). P3 PALEOGRAFSKA PREVERBA (2. krog, 2026-10-08): sveži izrezi + povišana ločljivost, prompti »črka-za-črko«; 15 popravkov in 4 dodatne vrstice APLICIRANE v register (houses.ts) pri 2-kratni konvergenci branj; renumeracija str. 4 (36–41 → 35–40) 4× potrjena; statusi ostajajo REVIEW (2. krog je še vedno strojno branje; dokončna potrditev = človeška paleografija).",
-    noteEn: "84 building rows (house nos. 1–99 + the struck duplicate 34) read with machine assistance; all entries carry REVIEW status. Issue #17: 101 rows checked (81 CONFIRMED, 15 corrections, 4 missing rows, p. 4 ends at house 40). P3 PALAEOGRAPHIC VERIFICATION (2nd pass, 2026-10-08): fresh crops + upscaled resolution, letter-by-letter prompts; 15 corrections and 4 additional rows APPLIED to the register (houses.ts) on 2-pass convergence; the p. 4 renumbering (36–41 → 35–40) confirmed 4×; statuses stay REVIEW (the 2nd pass is still machine reading; final confirmation = human palaeography).",
+    noteSi: "84 stavbnih vrstic (hišne št. 1–99 + prečrtana dvojnica 34) prebranih s pomočjo strojnega branja; vsi vnosi status REVIEW. Issue #17: 101 vrstica preverjena (81 POTRJENIH, 15 popravkov, 4 manjkajoče vrstice, str. 4 konča pri hiši 40). P3 PALEOGRAFSKA PREVERBA (2. krog, 2026-10-08): sveži izrezi + povišana ločljivost, prompti »črka-za-črko«; 15 popravkov in 4 dodatne vrstice APLICIRANE v register (houses.ts) pri 2-kratni konvergenci branj; renumeracija str. 4 (36–41 → 35–40) 4× potrjena. P43 (2026-10-11, issue #13): PRVA CELOTNA VERIGA PT→PUA→PS (105 vrstic nič-zgube, dokaz research/issue13/chain-full-pt-ps.json) — 2 DOKAZANI + 5 VERJETNIH + 4 MOGOČE hiše segajo do parcel PS; križna potrditev korpusa s P41: 65/65 Točno; ATLAS_OWNERS houseRefs (mešano številčenje prve gradnje) izven verige. Statusi ostajajo REVIEW (dokončna potrditev = človeška paleografija #12).",
+    noteEn: "84 building rows (house nos. 1–99 + the struck duplicate 34) read with machine assistance; all entries carry REVIEW status. Issue #17: 101 rows checked (81 CONFIRMED, 15 corrections, 4 missing rows, p. 4 ends at house 40). P3 PALAEOGRAPHIC VERIFICATION (2nd pass, 2026-10-08): fresh crops + upscaled resolution, letter-by-letter prompts; 15 corrections and 4 additional rows APPLIED to the register (houses.ts) on 2-pass convergence; the p. 4 renumbering (36–41 → 35–40) confirmed 4×. P43 (2026-10-11, issue #13): FIRST FULL CHAIN PT→PUA→PS (105 zero-loss rows, evidence research/issue13/chain-full-pt-ps.json) — 2 PROVEN + 5 LIKELY + 4 POSSIBLE houses reach the PS parcels; corpus cross-check against P41: 65/65 EXACT; ATLAS_OWNERS houseRefs (first-build mixed numbering) excluded from the chain. Statuses stay REVIEW (final confirmation = human palaeography #12).",
   },
   {
     code: "PG",
@@ -991,7 +991,7 @@ export const PS_RECAP_1826: {
   mostUsefulEn: string;
   sampleRowCount: number;
 } = {
-  source: "N083PS str. 140–143 (Arhiv RS, SI AS 176, k.o. Griblje) — research/issue17/PS-structure.json; P36: str. 5–139 prebrane strojno (research/issue17/ps-raw/, PS-full.json)",
+  source: "N083PS str. 140–143 (Arhiv RS, SI AS 176, k.o. Griblje) — research/issue17/PS-structure.json; P36: strojni prepis str. 5–139 (ps-raw/, PS-full.json); P38: 3. prehod 20 ciljnih strani (PS-full-v2.json); P39: strukturna rekonstrukcija (PS-reconstruction.json)",
   status: "REVIEW",
   summaBauplätze: 102,
   summaGrundparzellen: 2505,
@@ -1012,10 +1012,64 @@ export const PS_RECAP_1826: {
     "Anmerkung",
   ],
   mostUsefulSi:
-    "Veriga hiša→parcela→lastnik je v VSAKI vrstici glavnega registra (stolpci Haus Nro. + lastnik + parcela + raba + površina), a vrstice NISO grupirane po lastnikih → vstop prek stolpca Haus Nro. P36 (2026-10-11): strojni prepis vseh 135 strani (5–139, 2743 vrstic, dvoprehodno na 78 straneh) IZVEDEN; P38 (2026-10-12): sekcije spravljene (GRUND 1889/2505, NADALJEVANJE 95, WALDUNG 81, Blatt X 60), P39 (2026-10-12): razdvojitev v model parcela×raba (2134 vnosov, 2632 parov, /api/atlas/ps-landuse) — preostane: 3. prehod dvoumnih strani, uskladitev s kontrolno vsoto 102 + 2505 = 2607 (šteje kategorije — glavni niz sega čez 2840), primerjava z rekapitulacijo (~str. 140–143) in nato ciljano po hišah prek Haus Nro.",
+    "Veriga hiša→parcela→lastnik je v VSAKI vrstici glavnega registra (stolpci Haus Nro. + lastnik + parcela + raba + površina), a vrstice NISO grupirane po lastnikih → vstop prek stolpca Haus Nro. P36 (2026-10-11): strojni prepis vseh 135 strani (5–139, 2743 vrstic, dvoprehodno na 78 straneh) IZVEDEN; P38 (2026-10-11): 3. prehod 20 ciljnih strani (233 VLM branj, 2974 izbranih vrstic) + odkritje organizacije po listih (Blatt I–X); P39 (2026-10-11): strukturna rekonstrukcija — 33 segmentov, 29/29 vsebinski dokaz per-list številčenja, 2724 unikatnih (segment, številka) parov, kontrolna vsota 2607 znotraj meje [2221, 2725] — KONSISTENTNO; SPRAVA (P38–P45, 2026-10-12): sekcije spravljene (GRUND 1889/2505, NADALJEVANJE 95, WALDUNG 81, Blatt X 60), razdvojitev v model parcela×raba (2134 vnosov, 2632 parov, /api/atlas/ps-landuse), leksikon družin + K1/K2 razcepi — preostane: uskladitev s kontrolno vsoto 102 + 2505 = 2607 (šteje kategorije — glavni niz sega čez 2840), primerjava z rekapitulacijo (~str. 140–143) in nato ciljano po hišah prek Haus Nro.",
   mostUsefulEn:
-    "The house→parcel→owner chain sits in EVERY row of the main register (Haus Nro. + owner + parcel + culture + area columns), but rows are NOT grouped by owner → enter via the Haus Nro. column. P36 (2026-10-11): the machine transcription of all 135 pages (5–139, 2,743 rows, two passes on 78 pages) is DONE; P38 (2026-10-12): sections reconciled (GRUND 1,889/2,505, CONTINUATION 95, WALDUNG 81, Blatt X 60); P39 (2026-10-12): split into the parcel×culture model (2,134 entries, 2,632 pairs, /api/atlas/ps-landuse) — remaining: a 3rd pass over ambiguous pages, matching against the checksum 102 + 2505 = 2,607 (it counts categories — the main series runs past 2840), comparison with the recapitulation (~pp. 140–143), then targeting by house via Haus Nro.",
-  sampleRowCount: 2743,
+    "The house→parcel→owner chain sits in EVERY row of the main register (Haus Nro. + owner + parcel + culture + area columns), but rows are NOT grouped by owner → enter via the Haus Nro. column. P36 (2026-10-11): the machine transcription of all 135 pages (5–139, 2,743 rows, two passes on 78 pages) is DONE; P38 (2026-10-11): the 3rd pass over 20 target pages (233 VLM reads, 2,974 chosen rows) + the discovery of the sheet organization (Blatt I–X); P39 (2026-10-11): the structural reconstruction — 33 segments, 29/29 content evidence of per-sheet numbering, 2,724 unique (segment, number) pairs, the checksum 2,607 within [2,221, 2,725] — CONSISTENT; RECONCILIATION (P38–P45, 2026-10-12): the sections reconciled (GRUND 1,889/2,505, CONTINUATION 95, WALDUNG 81, Blatt X 60), the split into the parcel×culture model (2,134 entries, 2,632 pairs, /api/atlas/ps-landuse), the family lexicon + the K1/K2 splits — remaining: matching against the checksum 102 + 2,505 = 2,607 (it counts categories — the main series runs past 2,840), comparison with the recapitulation (~pp. 140–143), then targeting by house via Haus Nro.",
+  sampleRowCount: 2974,
+};
+
+/** P44 (issue #11): PZ — adjudicirana tabela cenilnih razredov (rekapitulacija str. 67).
+ *  Vrednosti KOT PREBRANE; [~] = negotovo. 5 neodvisnih branj str. 67 + izrez 1,6×;
+ *  dokaz research/issue11/pz-classes-full.json (readings, divergence register, podporna gradiva). */
+export interface PzClassRow1825 {
+  culture: string;
+  classLabel: string;
+  joch: number;
+  klafter: number;
+  /** ~ = med branjmi variira; clear = stabilna */
+  confidence: "clear" | "~";
+  bruttoPerJoch: string;
+  reinPerJoch: string;
+  noteSi: string;
+}
+
+export const PZ_CLASS_TABLE_1825: {
+  source: string;
+  page: number;
+  status: ResearchStatus;
+  rows: PzClassRow1825[];
+  summa: { joch: number; klafter: number; bruttoTotal: string; reinTotal: string; confidence: string };
+  rowSumJoch: number;
+  reconciliationSi: string;
+  reconciliationEn: string;
+  divergencesSi: string;
+  inferencesSi: string;
+} = {
+  source: "N083PZ str. 67 (Specifischer Ausweis der Endresultate) — research/issue11/pz-classes-full.json",
+  page: 67,
+  status: "REVIEW",
+  rows: [
+    { culture: "Acker", classLabel: "I", joch: 80, klafter: 842, confidence: "clear", bruttoPerJoch: "22 fl 44 kr", reinPerJoch: "13 fl 5 kr [~ 13/15]", noteSi: "korroborirano s str. 12 (§3: 80 Joch 974 Klafter [~], 224 parcel)" },
+    { culture: "Acker", classLabel: "II", joch: 334, klafter: 120, confidence: "~", bruttoPerJoch: "16 fl 50 kr [~]", reinPerJoch: "7 fl 35 kr", noteSi: "adjudicirano iz 234: izrez 1,6× prepozna Kurrent »3«; aritmetika vrstic in PV Acker 413 podpirata 334; razreda III/IV ni (4 branj)" },
+    { culture: "Wiesen", classLabel: "I", joch: 15, klafter: 1594, confidence: "clear", bruttoPerJoch: "9 fl 24 kr", reinPerJoch: "7 fl 20 kr", noteSi: "" },
+    { culture: "Wiesen", classLabel: "II", joch: 29, klafter: 818, confidence: "~", bruttoPerJoch: "4 fl [?] kr", reinPerJoch: "3 fl [?] kr", noteSi: "1× prebrano 39; razreda III ni" },
+    { culture: "Kleine Gärten", classLabel: "C", joch: 3, klafter: 612, confidence: "~", bruttoPerJoch: "20–22 fl 44 kr [~]", reinPerJoch: "10–13 fl 5 kr [~]", noteSi: "klafter 612/615/619 [~]" },
+    { culture: "Größere Gärten", classLabel: "C", joch: 0, klafter: 105, confidence: "~", bruttoPerJoch: "20–23 fl 44 kr [~]", reinPerJoch: "10–13 fl 5 kr [~]", noteSi: "joch prazen ali neberljiv" },
+    { culture: "Weingärten", classLabel: "C", joch: 7, klafter: 42, confidence: "clear", bruttoPerJoch: "21–24 fl [~]", reinPerJoch: "7 fl 10 kr", noteSi: "joch = PV natančno; klafter 42 ≠ PV 665 [~] — odprto" },
+    { culture: "Hutweiden", classLabel: "C", joch: 118, klafter: 702, confidence: "~", bruttoPerJoch: "1 fl [?] kr", reinPerJoch: "−15 do −45 kr [~ negativen]", noteSi: "negativen čisti donos/joch — pašniki po stroških ne dajejo donosa [~]" },
+    { culture: "Weiden mit Holznutzung", classLabel: "C", joch: 558, klafter: 846, confidence: "~", bruttoPerJoch: "1 fl 6 kr", reinPerJoch: "−51 kr [~ negativen]", noteSi: "klafter 558/846/858 [~]" },
+    { culture: "Bauarea", classLabel: "—", joch: 1, klafter: 1199, confidence: "~", bruttoPerJoch: "16 fl 50 kr", reinPerJoch: "7 fl 35 kr", noteSi: "PV Bau 4 j 889 kl — razlika [~] odprta" },
+  ],
+  summa: { joch: 1152, klafter: 495, bruttoTotal: "8872 fl 5¾ kr", reinTotal: "4492 fl 51 kr", confidence: "clear (4/5 branj)" },
+  rowSumJoch: 1145,
+  reconciliationSi:
+    "Summa 1152 j 495 kl ≈ PV erste Summe 1148 j 539 kl (Δ +4 j ≈ 0,3 %) — klasificirane kulture se na ravni vsote skladijo. Po kulturah: Acker 414 ≈ PV 413 (+1); Wiesen 44 proti PV 88 (−44) in Weiden 676 proti PV 636 (+40) — PZ ožje klasificira travnike, širje pašnike (skupna kompenzacija ≈ −4); Weingärten 7 = PV 7; Gärten 3 ≈ PV 2 [~]; Bauarea 1 proti PV 4 [~]. NEODVISNA KONTROLA: str. 65 nadzorna opomba »Weiden gesamt: 636 j 263 kl« = PV natančno — PZ in PV sta ista presnova. PR: 1028 × 1884 kl = 1210,5 j ≈ PV grand total 1221 (−0,9 %).",
+  reconciliationEn:
+    "The Summa 1152 j 495 kl ≈ the PV erste Summe 1148 j 539 kl (Δ +4 j ≈ 0.3 %) — the classified cultures agree at the total level. By culture: Acker 414 ≈ PV 413 (+1); Wiesen 44 vs PV 88 (−44) and Weiden 676 vs PV 636 (+40) — PZ classifies meadows more narrowly and pastures more broadly (the compensation nets to ≈ −4); Weingärten 7 = PV 7; Gärten 3 ≈ PV 2 [~]; Bauarea 1 vs PV 4 [~]. INDEPENDENT CONTROL: the p. 65 note »Weiden gesamt: 636 j 263 kl« = PV exactly — PZ and PV share one survey. PR: 1028 × 1884 kl = 1210.5 j ≈ the PV grand total 1221 (−0.9 %).",
+  divergencesSi:
+    "6 registriranih divergenc (dokaz pz-classes-full.json): D1 Acker II 234/334 — ADJUDICIRANO na 334 [~] (3 dokazi, končna potrditev #12); D2 str. 50 Acker I veriga — RAZREŠENO (prečrtani 20 fl 44 nadomešča 25 fl 44; 25 fl 44 − 10 fl 40½ = 15 fl 3½ ≈ zapisani 15 fl 5); D3 Wiesen II 29/39 — večinsko 29 [~]; D4 vsota vrstic 1145 vs Summa 1152 (Δ 7 j) — ODEPRTO (5 branj ni našla manjkajočih vrstic); D5 Weingärten klafter 42/665 — ODEPRTO; D6 vrstični Rein zneski Acker I — ODEPRTO. Vse odprte točke gredo na človeško paleografijo (#12).",
+  inferencesSi:
+    "INFERENCA (ne branje): Rein 4492 fl 51 kr / 441 prebivalcev ≈ 10,2 fl na prebivalca letno; / 102 družine [~] ≈ 44 fl na družino; Rein/Brutto = 4492/8872 ≈ 50,6 % (skladno z Bau-Area stopnjo 45 %); pašniki 676 j = 59 % klasificirane površine (skladno PV).",
 };
 
 /**
@@ -2182,7 +2236,7 @@ export const PZ_ECONOMY_1825: {
   economicProfileSi: string;
   economicProfileEn: string;
 } = {
-  source: "N083PZ str. 1–3, 20, 30, 40, 50, 60, 68–71 (Arhiv RS, SI AS 176, k.o. Griblje) — research/issue17/PZ-profile.json + PZ-valuation.json",
+  source: "N083PZ str. 1–3, 20, 30, 40, 50, 60, 68–71 (Arhiv RS, SI AS 176, k.o. Griblje) — research/issue17/PZ-profile.json + PZ-valuation.json; P44 (str. 4–67 v celoti): research/issue11/pz-classes-full.json",
   titleAsWritten: "CATASTRAL-SCHÄTZUNGS-ELABORAT der Gemeinde Grüble (Land Krain, 83, Kreis Neustadtl, Steuerbezirk Krupge [~])",
   status: "REVIEW",
   population: { total: 441, male: 222, female: 219, houses: "72 [~]", families: "102 [~]", confidence: "prebivalstvo srednja; hiše/družine nizka [~]" },
@@ -2192,7 +2246,7 @@ export const PZ_ECONOMY_1825: {
     { stepSi: "Bau-Area (stavbna zemljišča) — Roh-Ertrag", valuesSi: "16 fl 50½ kr/joch", confidence: "srednja-visoka" },
     { stepSi: "Cultur-Aufwand (55 % bruto)", valuesSi: "9 fl 15¾ kr/joch (aritmetika potrjena: 55 % × 16 fl 50½)", confidence: "visoka" },
     { stepSi: "Rein-Ertrag (čisti donos stavbnih tal)", valuesSi: "7 fl 35 kr/joch", confidence: "visoka (1010,5 − 555,5 kr = 455 kr)" },
-    { stepSi: "Ackerland razred I [~]", valuesSi: "Rob 20–25 fl 44 kr; Rein 12–15 fl 5 kr — 3 klice se RAZHAJAJO", confidence: "nizka" },
+    { stepSi: "Ackerland razred I", valuesSi: "Rob 25 fl 44 kr (prečrtani 20 fl 44 je nadomeščen) − Anschlag 10 fl 40½ kr = Rein 15 fl 3½ ≈ zapisani 15 fl 5 kr — P44 RAZREŠILO prejšnjo divergenco treh branj (dokaz pz-classes-full.json D2)", confidence: "srednja" },
     { stepSi: "Wiesen razred I/II", valuesSi: "Heu 14/8 centnerjev, Grumet 6 (pridelek, ne fl)", confidence: "srednja" },
     { stepSi: "Weingärten [~C]", valuesSi: "Most 12 n.ö. Eimer/joch (pridelek)", confidence: "nizka" },
   ],
@@ -2762,9 +2816,9 @@ export const ISSUE17_AUDIT = {
     PR: "4/4 strani (REVIEW)",
     PG: "1/1 stran (REVIEW)",
     PV: "1/1 stran, 10 izpolnjenih vrstic od 20 (REVIEW)",
-    PS: "9 strani vzorčeno + rekapitulacija 102/2505/2607 (REVIEW)",
-    PUA: "10/49 strani, 38 vrstic (REVIEW)",
-    PZ: "10 strani vzorčeno, ekonomski profil (REVIEW)",
+    PS: "143/143 strani strojno (P36 2743 + P38 pass-3 = 2974; sprava s 2607 odprta) (REVIEW)",
+    PUA: "49/49 strani, 101 vrstic (REVIEW)",
+    PZ: "71/71 strani (P44: tabele razredov + rekapitulacija, 76 VLM klicev) (REVIEW)",
     PT: "8/8 pregledano proti registru: 81/101 potrjeno, 15 popravkov (REVIEW)",
   },
   stillOpenSi:

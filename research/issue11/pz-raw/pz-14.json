@@ -1,0 +1,37 @@
+{
+ "page": 14,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:38:05.906Z",
+ "parseOk": true,
+ "structured": {
+  "page": 14,
+  "pageKind": "narrative",
+  "sections": [
+   {
+    "culture": null,
+    "par": "Zweite Classe.",
+    "narrativeBrief": "V tej razredni skupini je površina 292 Joch 1190 kv. Klafter, razdeljena na 822 parcele, od katerih se parcela št. 594 z 1 Joch 501 kv. Klafter kot najboljša uvršča med njive (Ackergrund).",
+    "rows": []
+   },
+   {
+    "culture": null,
+    "par": "§. 9",
+    "narrativeBrief": "Ena tretjina zemljišča, ki je primerna za setvino in žetev pšenice, je namenjena oranju.",
+    "rows": []
+   },
+   {
+    "culture": null,
+    "par": "§. 10",
+    "narrativeBrief": "Nekatere manjše parcele so zaradi svoje lege in oblike primerne za gojenje zelenjadnih rastlin in krompirja; druge, večje, so zelo primere za gojenje koruze, fižola, graha in drugih podobnih poljščin, medtem ko so vse te parcele zaradi svoje sestave in lege primerne tudi za gojenje lanu in konoplj ter za zasajanje s sladkorno peso.",
+    "rows": []
+   },
+   {
+    "culture": null,
+    "par": "§. 11",
+    "narrativeBrief": "Ta razredna skupina ima zaradi svoje sestave in lege veliko prednost pri gojenju vseh vrst žit, zaradi česar je njena ocenjena vrednost precej višja od določenega cenzusa, tako da je treba upoštevati, da je treba pri ocenjevanju upoštevati tudi višjo ceno takšnih kultur.",
+    "rows": []
+   }
+  ],
+  "pageNote": "Stran 14 vsebuje izključno besedilo (narativen opis) v nemški Kurrent pisavi brez tabel ali številskih podatkov. V zgornjem desnem kotu sta vidni rdeči številki '299' in '130'. Besedilo opisuje drugi razred zemljišč (Zweite Classe) z navedbo površine 292 Joch 1190 kv. Klafter in 822 parcel."
+ }
+}

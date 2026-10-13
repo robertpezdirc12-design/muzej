@@ -1,0 +1,19 @@
+{
+ "page": 42,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:46:34.731Z",
+ "parseOk": true,
+ "structured": {
+  "page": 42,
+  "pageKind": "narrative",
+  "sections": [
+   {
+    "culture": null,
+    "par": null,
+    "narrativeBrief": "Stran je naslovna stran (Protokola) za katastrsko občino Grüble/Griblje, ki navaja, da so bili priča ocenjevanja zemljišč in pridelkov določeni komisarji.",
+    "rows": []
+   }
+  ],
+  "pageNote": "Stran vsebuje samo rokopisni tekst v nemški Kurrent pisavi: naslov 'Catastral Gemeinde Grüble', podpis komisije, seznam prisotnih oseb, datum 6. avgust 1832, pečat in začetek poročila ('Portrag'). Ni tabel s številkami. Rdeče rubrike niso prisotne na tej strani."
+ }
+}

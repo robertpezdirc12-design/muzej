@@ -1,0 +1,179 @@
+{
+ "page": 13,
+ "phase": "p44-pass2",
+ "why": "odrezan izpis 1. kroga — celostno ponovno branje",
+ "readAt": "2026-10-11T19:08:49.981Z",
+ "parseOk": true,
+ "structured": {
+  "page": 13,
+  "pageKind": "narrative+table",
+  "sections": [
+   {
+    "culture": "Natural-Ertrag",
+    "par": null,
+    "rows": [
+     {
+      "label": "1 gug um Mais",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "26 Metz",
+      "raw": "1 gug um Mais 26 - 26 -",
+      "confidence": "clear"
+     },
+     {
+      "label": "2 Weitzen",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "12 Metz",
+      "raw": "2 Weitzen 12 - 12 -",
+      "confidence": "clear"
+     },
+     {
+      "label": "3 Klee in 2 mafsen",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "503/4 Centner",
+      "raw": "3 Klee in 2 mafsen - 503/4 - 503/4",
+      "confidence": "clear"
+     },
+     {
+      "label": "4 Weitzen",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "12 Metz, 10 Eimer",
+      "raw": "4 Weitzen 12 - 12 - / 10 - 10 -",
+      "confidence": "clear"
+     },
+     {
+      "label": "5 Horn Roggenfutter",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "12 Eimer",
+      "raw": "5 Horn Roggenfutter 12 - 12 -",
+      "confidence": "clear"
+     },
+     {
+      "label": "6 Gmühs Rübenfutter, Hirse",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "10 Eimer, 15 Metz",
+      "raw": "6 Gmühs Rübenfutter 10 - 10 - / Hirse 15 - 15 -",
+      "confidence": "clear"
+     },
+     {
+      "label": "7 Erdapfel",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "80 Metz",
+      "raw": "7 Erdapfel 80 - 80 -",
+      "confidence": "clear"
+     },
+     {
+      "label": "8 Horn, Gmühs",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "12 Eimer, 10 Eimer",
+      "raw": "8 Horn 12 - 12 - / Gmühs 10 - 10 -",
+      "confidence": "clear"
+     },
+     {
+      "label": "9 Hirse",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "15 Metz",
+      "raw": "9 Hirse 15 - 15 -",
+      "confidence": "clear"
+     }
+    ]
+   },
+   {
+    "culture": "Erste Classe",
+    "par": null,
+    "rows": [
+     {
+      "label": "2/9 Chilgun",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "2 fl 5 kr",
+      "yields": "2 Metz 49 Centner",
+      "raw": "2/9 Chilgun 2 49 - 2 5 5 24",
+      "confidence": "clear"
+     },
+     {
+      "label": "2/9 Lene",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "1 fl 10 kr",
+      "yields": "2 Metz 49 Centner",
+      "raw": "2/9 Lene 2 49 - 1 10 3 7",
+      "confidence": "clear"
+     },
+     {
+      "label": "2/9 Muis",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "1 fl 10 kr",
+      "yields": "2 Metz 57 Centner",
+      "raw": "2/9 Muis 2 57 - 1 10 3 22 1/2",
+      "confidence": "clear"
+     },
+     {
+      "label": "2/9 Gugen",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": "1 fl 6 kr",
+      "yields": "3 Metz 21 Centner",
+      "raw": "2/9 Gugen 3 21 - 1 6 3 29 3/4",
+      "confidence": "clear"
+     },
+     {
+      "label": "2/9 Gnülme",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "3 Metz 21 Centner",
+      "raw": "2/9 Gnülme 3 21 - [?] 37 3 9 3/4",
+      "confidence": "~"
+     },
+     {
+      "label": "2/9 Buhengut",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "8 Metz 57 Centner",
+      "raw": "2/9 Buhengut 8 57 - [?] 14 2 4 3/4",
+      "confidence": "~"
+     },
+     {
+      "label": "1/9 Elms",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": "5 35/100 Centner",
+      "raw": "1/9 Elms - - 5 35/100 - 30 2 46 3/4",
+      "confidence": "~"
+     },
+     {
+      "label": "Summe",
+      "areaJoch": null,
+      "areaKlafter": null,
+      "values": null,
+      "yields": null,
+      "raw": "Summe und nijßigern Geldnutzung - - - - - 23 44",
+      "confidence": "clear"
+     }
+    ]
+   }
+  ],
+  "pageNote": "Tabela naravnih pridelkov za različne kulture in tabela denarnih vrednosti (Geld Ertrag) prvega razreda z izračuni."
+ }
+}

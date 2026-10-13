@@ -1,0 +1,25 @@
+{
+ "page": 9,
+ "phase": "p44-pass1",
+ "readAt": "2026-10-11T18:35:52.312Z",
+ "parseOk": true,
+ "structured": {
+  "page": 9,
+  "pageKind": "narrative",
+  "sections": [
+   {
+    "culture": null,
+    "par": "§. 11",
+    "narrativeBrief": "Ein für zumtheilst günstigem Fleißloth befindlichem Grundstück wird die Lage und Bodenbeschaffenheit mit sehr guter Qualität und Dünungsfähigkeit beschrieben.",
+    "rows": []
+   },
+   {
+    "culture": null,
+    "par": "§. 12",
+    "narrativeBrief": "Ein weniger günstiges Grundstück wird als Rustical Gut bezeichnet, wobei nur wenige Rindvieh Abtrieb in Ackerbau zu pflegen sind.",
+    "rows": []
+   }
+  ],
+  "pageNote": "Stran vsebuje samo narativni tekst v nemški Kurrent pisavi (odstavki §11 in §12), brez tabel ali številskih podatkov. Besedilo je čitljivo, z rdečimi rubrikami za številke paragrafov."
+ }
+}
