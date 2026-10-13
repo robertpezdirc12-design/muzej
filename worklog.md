@@ -3244,3 +3244,42 @@ P54 (14. 10. 2026) — PRESENT.JSON NA URADNIH GURS OBRISIH: nadgradnja P16 »Ka
 - Poštenost: odsotnost stavbe še zmeraj NI dokaz porušitve — terenska
   preverba 117 tlorisov priporočena [~]; SHEET_GEOREFS in dokazi P40–P53
   nespremenjeni (lekcija P9).
+
+P55 (14. 10. 2026) — GEOLOKACIJA GRUNDPARCELLEN: PS protokol 1825 ↔ sodobne parcele KO 1544
+- Naloga (PS-recap next, kontrola polnega prepisa): protokol PS (»Der Grund-Parcellen der
+  Gemeinde GRÜBLE«, 2505 Grundparzellen + 102 Bauplätze = 2607) ima lastnike/rabe/površine,
+  a brez geometrije — P55 ga prvič geolocira.
+- Najdba: številke parcel iz protokola se še vedno ujemajo s sodobnimi parcelnimi številkami
+  k.o. 1544 GRIBLJE (P47 prenos SI.GURS.KN:PARCELE); delitve po 1825 = base + pripona
+  (»52/1«), površine delov se seštejejo.
+- Dokaz vztrajnosti oštevilčenja 1825→2026 (dva neodvisna testa s kontrolami):
+  (A) POVRŠINE — median modern/QK po 1083 parih 3.6984 ≈ zgodovinski 1 Wiener QK 3.59665 m²
+      (Δ +2.83 %); premešana kontrola (seed 42) 3.9731; pas ±10 %: 16.9 % vs 4.0 %;
+  (B) PROSTORSKA SOSLEDNOST (odločilni) — protokol našteva parcele naraščajoče; 590
+      zaporednih parov ima sodobni središči 51.8 m narazen (q25/q75 31.2/91.0 m), 89.3 %
+      ≤ 150 m; premešana kontrola (seed 7) 1436.9 m / 2.5 % — 27.8× ožje.
+- Rezultat: 1110 vrstic (40.2 % od 2762 repliciranih; 800 unikatnih parcel, 241 skupin s
+  pripono) povezanih; zaupanje vrstic STRONG 171 / MEDIUM 775 / WEAK 164 — identifikacija
+  posamezne parcele [~].
+- Odkritje: sekcija wohnort »Furkofze« (Fučkovci) = 2 vrstici (parceli 2159/2160, lastnik
+  Van Wawech Mihó) — prvi imenovani Fučkovci v arhivu; obe parceli obstajata še danes.
+- Izbira strani: replikacija P38 (pass2 če izbrana, sicer pass1); za 8 strani izbranih na
+  pass3 (24/37/83/84/87/94/121/125) uporabljen pass1 — pass3 datoteke brez parsed.vrstice,
+  NDJSON vsebina številčno nezanesljiva (7/8 prvih parcel divergira od pass1+pass2); odmik
+  od PS-full-v2 izbire dokumentiran.
+- Omejitev pošteno: protokol je organiziran po listih z lastnim številčenjem (P39: ista
+  številka na različnih listih = druga parcela; lastniški test 29/29) — join po sami
+  številki vleče tudi čez-listske napačne povezave; vztrajnost dokazana na populacijski
+  ravni; per-Blatt ločitev ostaja odprta.
+- Skripta scripts/p55_ps_parcels_geo.py (deterministična, invarianti I1–I8, --check bajtno):
+  I1 izbira strani (135 strani, 2762 vrstic, 58/69/8) · I2 povezava 1110/800, bbox OK ·
+  I3 median 3.6984 v [3.30, 3.90] + kontrola višja · I4 pas 16.9 % > 2× 4.0 % · I5 soslednost
+  590 parov, median ≤ 100 m, ≥ 70 % ≤ 150 m, kontrola ≥ 5× · I6 determinizem · I7 dokaz ⊇
+  runtime · I8 Furkofze 2 vrstici (2159/2160). Vse PASS.
+- Izpisi: dokaz research/issue17/ps-parcels-geo.json (964 KB, vse vrstice + statistika +
+  verdicti) + runtime src/data/atlas/ps-parcels-geo.json (397 KB, 1110 povezanih vrstic).
+- Integracija: API /api/atlas/ps-parcels-geo (force-static) + PS_GEO_P55 (research.ts) +
+  kartica P55 v museum-research (povezava/zaupanje + dokaza A/B + Furkofze + pošten status)
+  + sources.ts N083PS opomba P55 (Si+En) + README bullet; QA 58 → 59 (qa-p55-ps-parcels-geo:
+  pini + runtime shema + NEODVISEN preracun soslednosti iz vrstic + dokaz == runtime).
+- SHEET_GEOREFS in dokazi P40–P54 nespremenjeni (lekcija P9).

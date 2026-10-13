@@ -268,6 +268,23 @@ API (statični, brez runtime AI):
   `research/issue17/present-gurs.json` + `scripts/p54_present_gurs.py`;
   QA 57 → **58**; SHEET_GEOREFS in dokazi P40–P53 nespremenjeni.
 
+- **geolokacija Grundparzellen (P55, issue #13)** — protokol PS
+  »Der Grund-Parcellen der Gemeinde GRÜBLE« (2505 + 102 = 2607) prvič
+  GEOLOCIRAN: **1110 vrstic (40.2 %) povezanih s sodobnimi parcelami
+  k.o. 1544 po ohranjeni parcelni številki** (delitve po 1825 = base +
+  pripona, 241 skupin); vztrajnost oštevilčenja 1825→2026 dokazana z
+  dvema neodvisnima testoma — (A) površine: median modern/QK **3.6984 ≈
+  1 Wiener QK 3.59665 m²** (Δ +2.83 %; premešana kontrola 3.9731, pas
+  ±10 % 16.9 % vs 4.0 %), (B) prostorska soslednost: **590 zaporednih
+  parov 51.8 m narazen** (naključno 1436.9 m — 27.8×; 89.3 % ≤ 150 m);
+  zaupanje vrstic STRONG 171 / MEDIUM 775 / WEAK 164, per-parcelno [~];
+  odkritje sekcije »Furkofze« (Fučkovci): 2 vrstici, parceli 2159/2160,
+  lastnik Van Wawech Mihó — prvi imenovani Fučkovci v arhivu; dokaz
+  `research/issue17/ps-parcels-geo.json` + runtime
+  `src/data/atlas/ps-parcels-geo.json` (`/api/atlas/ps-parcels-geo`) +
+  `scripts/p55_ps_parcels_geo.py`; QA 58 → **59**; SHEET_GEOREFS in
+  dokazi P40–P54 nespremenjeni.
+
 ## Varnost
 
 Žeton `VERCEL_TOKEN` je shranjen izključno kot šifrirana GitHub Actions

@@ -30,6 +30,7 @@ import {
   Home,
   Landmark,
   Map as MapIcon,
+  MapPin,
   MessageSquareQuote,
   Microscope,
   Search,
@@ -71,6 +72,7 @@ import {
   GEOREF_CLOSURE_P50,
   LEAFLET_OVERLAY_P51,
   PRESENT_GURS_P54,
+  PS_GEO_P55,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -1602,6 +1604,80 @@ export function MuseumResearch() {
                   {t(
                     "Odsotnost stavbe še zmeraj NI dokaz porušitve — terenska preverba ostaja priporočena [~]. Pravila in P16 praga (8/20/40 m, prekrivanje 0.10) nespremenjena; spreminja se LE vir (OSM → uradni GURS eZKN) in pokritost (380 stavb namesto 350; Zahodna pobočja zdaj pokrita). Arhiv P16 OSM artefakta: research/issue17/present-osm-p16.json (bajtna kopija). Strojno berljivo: research/issue17/present-gurs.json + runtime src/data/atlas/present.json (uvaža village3d.ts).",
                     "Absence of a building still does NOT prove demolition — field verification remains recommended [~]. The rules and P16 thresholds (8/20/40 m, overlap 0.10) are unchanged; only the SOURCE changes (OSM → official GURS eZKN) and the coverage (380 buildings instead of 350; western slopes now covered). The P16 OSM artifact is archived: research/issue17/present-osm-p16.json (byte copy). Machine-readable: research/issue17/present-gurs.json + the runtime src/data/atlas/present.json (imported by village3d.ts).",
+                  )}
+                </p>
+              </div>
+            </div>
+
+            {/* Geolokacija Grundparzellen — PS protokol 1825 ↔ parcele (P55, issue #13) */}
+            <div className="min-w-0 rounded-xl border bg-card p-6 shadow-sm">
+              <h3 className="flex items-center gap-2 font-display text-lg font-semibold">
+                <MapPin className="size-4 text-primary" aria-hidden="true" />
+                {t("Geolokacija Grundparzellen — PS protokol 1825 ↔ sodobne parcele (P55)", "Grundparzellen geolocation — PS protocol 1825 ↔ modern parcels (P55)")}
+                <StatusBadge status={PS_GEO_P55.status} />
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                {t(
+                  "PS = »Protocol der Grund-Parcellen der Gemeinde GRÜBLE« (2505 Grundparzellen + 102 Bauplätze = 2607): lastniki, rabe, površine — brez geometrije. P55 protokol prvič geolocira: številke parcel se še vedno ujemajo s sodobnimi parcelami k.o. 1544 (delitve po 1825 = base + pripona). Vztrajnost oštevilčenja dokazana z dvema neodvisnima testoma.",
+                  "PS = »Protocol der Grund-Parcellen der Gemeinde GRÜBLE« (2505 Grundparzellen + 102 Bauplätze = 2607): owners, uses, areas — no geometry. P55 geolocates the protocol for the first time: the parcel numbers still match the modern parcels of c.m. 1544 (post-1825 subdivisions = base + suffix). The numbering persistence is proven by two independent tests.",
+                )}
+              </p>
+
+              {/* P55: povezava + zaupanje */}
+              <div className="mt-4 rounded-lg border bg-secondary/30 p-3">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-sm font-semibold">
+                    {t("P55 — povezava in zaupanje vrstic", "P55 — row linking and confidence")}
+                  </span>
+                  <span className="font-mono text-[11px] text-muted-foreground">scripts/p55_ps_parcels_geo.py</span>
+                </div>
+                <div className="mt-2 flex flex-wrap gap-1.5">
+                  <span className="rounded bg-emerald-100 px-1.5 py-0.5 dark:bg-emerald-950/40">{t("povezanih", "linked")} {PS_GEO_P55.join.matchedRows} <span className="text-muted-foreground">({PS_GEO_P55.join.matchedSharePct} %)</span></span>
+                  <span className="rounded bg-stone-100 px-1.5 py-0.5 dark:bg-stone-800">{t("parcel", "parcels")} {PS_GEO_P55.join.psPositionedParcels}</span>
+                  <span className="rounded bg-stone-100 px-1.5 py-0.5 dark:bg-stone-800">{t("skupin s pripono", "suffix groups")} {PS_GEO_P55.join.suffixGroups}</span>
+                </div>
+                <div className="mt-2 flex flex-wrap gap-1.5 font-mono text-[11px]">
+                  <span className="rounded bg-emerald-100 px-1.5 py-0.5 dark:bg-emerald-950/40">STRONG {PS_GEO_P55.join.confCounts.STRONG}</span>
+                  <span className="rounded bg-amber-100 px-1.5 py-0.5 dark:bg-amber-950/40">MEDIUM {PS_GEO_P55.join.confCounts.MEDIUM}</span>
+                  <span className="rounded bg-red-100 px-1.5 py-0.5 dark:bg-red-950/40">WEAK {PS_GEO_P55.join.confCounts.WEAK}</span>
+                  <span className="text-muted-foreground">{t("(identifikacija posamezne parcele [~])", "(per-parcel identification [~])")}</span>
+                </div>
+              </div>
+
+              {/* P55: dokaza vztrajnosti */}
+              <div className="mt-3 grid gap-2 sm:grid-cols-2">
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="text-xs font-semibold">{t("Dokaz A — površine", "Proof A — areas")}</p>
+                  <p className="mt-1 font-mono text-[11px] leading-relaxed text-muted-foreground">
+                    median modern/QK {PS_GEO_P55.areaProof.medianRatio} ≈ 1 Wiener QK {PS_GEO_P55.areaProof.historicalQkM2} m² (Δ +{PS_GEO_P55.areaProof.deltaPct} %) · {PS_GEO_P55.areaProof.pairsWithArea} parov · pas ±10 %: {(PS_GEO_P55.areaProof.tightShare * 100).toFixed(1)} % {t("proti", "vs")} {(PS_GEO_P55.areaProof.shuffleTightShare * 100).toFixed(1)} % ({t("naključno", "shuffled")}) · {t("kontrola", "control")} {PS_GEO_P55.areaProof.shuffleMedian}
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="text-xs font-semibold">{t("Dokaz B — prostorska soslednost (odločilni)", "Proof B — spatial adjacency (decisive)")}</p>
+                  <p className="mt-1 font-mono text-[11px] leading-relaxed text-muted-foreground">
+                    {PS_GEO_P55.spatialProof.consecPairs} {t("zaporednih parov", "consecutive pairs")} · median {PS_GEO_P55.spatialProof.medianM} m ({t("naključno", "shuffled")} {PS_GEO_P55.spatialProof.shuffleMedianM} m — {PS_GEO_P55.spatialProof.enrichmentX}×) · {(PS_GEO_P55.spatialProof.share150 * 100).toFixed(1)} % ≤ 150 m ({t("naključno", "shuffled")} {(PS_GEO_P55.spatialProof.shuffleShare150 * 100).toFixed(1)} %)
+                  </p>
+                </div>
+              </div>
+
+              {/* P55: Furkofze odkritje */}
+              <div className="mt-3 rounded-lg border bg-background p-3">
+                <p className="text-xs font-semibold">{t("Odkritje: »Furkofze« (Fučkovci)", "Discovery: »Furkofze« (Fučkovci)")}</p>
+                <p className="mt-1 text-[11px] leading-relaxed text-muted-foreground">
+                  {t(
+                    `Sekcija wohnort »Furkofze« = ${PS_GEO_P55.furkovce.rows} vrstici (parceli ${PS_GEO_P55.furkovce.parcels.join("/")}, lastnik ${PS_GEO_P55.furkovce.owner.join(", ")}) — prvi imenovani prebivalci Fučkovci v arhivu; obe parceli obstajata še danes (P47). ${PS_GEO_P55.furkovce.note}`, 
+                    `The wohnort section »Furkofze« = ${PS_GEO_P55.furkovce.rows} rows (parcels ${PS_GEO_P55.furkovce.parcels.join("/")}, owner ${PS_GEO_P55.furkovce.owner.join(", ")}) — the first named inhabitants of Fučkovci in the archive; both parcels still exist (P47). ${PS_GEO_P55.furkovce.note}`,
+                  )}
+                </p>
+              </div>
+
+              {/* P55: poštenost */}
+              <div className="mt-3 rounded-lg border border-emerald-200 bg-emerald-50/60 p-3 dark:border-emerald-900/50 dark:bg-emerald-950/30">
+                <p className="text-[11px] leading-relaxed text-foreground/80">
+                  <span className="font-semibold">{t("Pošten status: ", "Honest status: ")}</span>
+                  {t(
+                    "Vztrajnost oštevilčenja je dokazana na POPULACIJSKI ravni (površine + soslednost); identifikacija POSAMEZNE parcele ostaja [~] (šumne VLM površine Kurrent + delitve/renumbering po 1825) — zato zaupanje vsake vrstice razvrščeno (STRONG = oba dokaza). Omejitev: protokol je organiziran po listih z lastnim številčenjem (P39: ista številka na različnih listih = druga parcela) — join po sami številki vleče tudi čez-listske napačne povezave; per-Blatt ločitev ostaja odprta. Izbira strani: za 8 strani izbranih na pass3 uporabljen pass1 (pass3 parsed ni na voljo, številčno nezanesljivo — odmik od PS-full-v2 dokumentiran). Strojno berljivo: research/issue17/ps-parcels-geo.json + runtime src/data/atlas/ps-parcels-geo.json (/api/atlas/ps-parcels-geo).",
+                    "The numbering persistence is proven at the POPULATION level (areas + adjacency); the identification of an INDIVIDUAL parcel remains [~] (noisy VLM Kurrent areas + post-1825 subdivisions/renumbering) — hence the per-row confidence tier (STRONG = both proofs). Limitation: the protocol is organized by sheets with their own numberings (P39: the same number on different sheets is a different parcel) — the number-only join also draws cross-sheet false links; the per-Blatt separation remains open. Page selection: pass1 used for the 8 pass3-chosen pages (pass3 has no parsed rows and is numerically unreliable — the deviation from PS-full-v2 is documented). Machine-readable: research/issue17/ps-parcels-geo.json + the runtime src/data/atlas/ps-parcels-geo.json (/api/atlas/ps-parcels-geo).",
                   )}
                 </p>
               </div>

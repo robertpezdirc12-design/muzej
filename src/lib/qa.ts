@@ -38,6 +38,7 @@ import {
   GEOREF_CLOSURE_P50,
   LEAFLET_OVERLAY_P51,
   PRESENT_GURS_P54,
+  PS_GEO_P55,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -3276,6 +3277,129 @@ const p45bErrors: string[] = [];
     p54Errors.length === 0
       ? `18 obstaja · 21 negotovih · 117 ni je več (P16 OSM 15/26/115) · repla 156/156 · P48 križ 154/37/20/40 · okno 380 (KO 1544) · ${p54RtDetail} · ${p54FileDetail} · ${p54UiDetail}`
       : p54Errors.join("; "),
+  );
+
+  /* ── P55 (issue #13): geolokacija Grundparzellen — PS 1825 ↔ parcele KO 1544 ── */
+  const p55Errors: string[] = [];
+  const p55 = PS_GEO_P55;
+  // 1) pinane vrednosti konstante
+  if (p55.pageSelection.pages !== 135 || p55.pageSelection.rows !== 2762)
+    p55Errors.push(`izbira strani ${p55.pageSelection.pages}/${p55.pageSelection.rows} ≠ 135/2762`);
+  if (p55.pageSelection.pass1 !== 58 || p55.pageSelection.pass2 !== 69 || p55.pageSelection.pass3Fallback !== 8)
+    p55Errors.push("prehodi strani ≠ 58/69/8");
+  if (p55.join.matchedRows !== 1110 || p55.join.psPositionedParcels !== 800 || p55.join.psUniqueNumbers !== 2106)
+    p55Errors.push(`povezava ≠ 1110/800/2106`);
+  if (p55.join.matchedSharePct !== 40.2 || p55.join.suffixGroups !== 241)
+    p55Errors.push("delež/skupine ≠ 40.2/241");
+  if (p55.join.confCounts.STRONG !== 171 || p55.join.confCounts.MEDIUM !== 775 || p55.join.confCounts.WEAK !== 164)
+    p55Errors.push(`zaupanje ≠ 171/775/164`);
+  if (p55.areaProof.medianRatio !== 3.6984 || p55.areaProof.pairsWithArea !== 1083)
+    p55Errors.push("površine ≠ 3.6984/1083");
+  if (p55.areaProof.historicalQkM2 !== 3.59665 || p55.areaProof.deltaPct !== 2.83)
+    p55Errors.push("QK faktor/Δ ≠ 3.59665/2.83");
+  if (p55.areaProof.shuffleMedian !== 3.9731 || p55.areaProof.shuffleTightShare !== 0.0397)
+    p55Errors.push("površinska kontrola ≠ 3.9731/0.0397");
+  if (p55.areaProof.tightShare !== 0.169 || p55.areaProof.tightN !== 183)
+    p55Errors.push("pas ±10 % ≠ 0.169/183");
+  if (p55.spatialProof.consecPairs !== 590 || p55.spatialProof.medianM !== 51.8)
+    p55Errors.push("soslednost ≠ 590/51.8");
+  if (p55.spatialProof.shuffleMedianM !== 1436.9 || p55.spatialProof.share150 !== 0.8932 || p55.spatialProof.enrichmentX !== 27.8)
+    p55Errors.push("soslednost kontrola ≠ 1436.9/0.8932/27.8");
+  if (p55.furkovce.rows !== 2 || p55.furkovce.parcels[0] !== 2159 || p55.furkovce.parcels[1] !== 2160)
+    p55Errors.push("Furkofze ≠ 2 vrstici (2159/2160)");
+  if (p55.furkovce.owner[0] !== "Van Wawech Mihó") p55Errors.push("Furkofze lastnik ≠ Van Wawech Mihó");
+  if (!Object.values(p55.invariants).every((v) => v.includes("PASS") || v.includes("bajtno")))
+    p55Errors.push("invarianti niso vsi PASS");
+  // 2) runtime ps-parcels-geo.json: števci + shema + preracun medianа soslednosti iz vrstic
+  let p55RtDetail = "runtime ps-parcels-geo.json ni preverjen (readFile ni na voljo) — celovita kontrola teče na /api/qa";
+  let p55FileDetail = "dokazna datoteka ni preverjena (readFile ni na voljo)";
+  if (opts.readFile) {
+    const rawRt = opts.readFile("src/data/atlas/ps-parcels-geo.json");
+    if (rawRt === null) {
+      p55Errors.push("src/data/atlas/ps-parcels-geo.json ni berljiv (runtime)");
+    } else {
+      try {
+        const rt = JSON.parse(rawRt) as {
+          pageSelection: { pages: number; rows: number };
+          join: { matchedRows: number; psPositionedParcels: number; confCounts: { STRONG: number; MEDIUM: number; WEAK: number } };
+          spatialProof: { consecPairs: number; medianM: number };
+          furkovce: { rows: number; parcels: number[] };
+          rows: { base: string; lat: number | null; lng: number | null; conf: string | null; ratio: number | null }[];
+        };
+        if (rt.rows.length !== rt.join.matchedRows)
+          p55Errors.push(`runtime vrstic ${rt.rows.length} ≠ join.matchedRows ${rt.join.matchedRows}`);
+        if (rt.join.matchedRows !== 1110 || rt.join.psPositionedParcels !== 800)
+          p55Errors.push("runtime povezava ≠ 1110/800");
+        const cc = { STRONG: 0, MEDIUM: 0, WEAK: 0 };
+        for (const r of rt.rows) {
+          if (r.conf && r.conf in cc) cc[r.conf as keyof typeof cc] += 1;
+          if (r.lat === null || r.lng === null) { p55Errors.push(`runtime vrstica brez pozicije pri conf=${r.conf}`); break; }
+        }
+        if (cc.STRONG !== 171 || cc.MEDIUM !== 775 || cc.WEAK !== 164)
+          p55Errors.push(`runtime zaupanje ${JSON.stringify(cc)} ≠ 171/775/164`);
+        // preracun soslednosti iz samih vrstic (neodvisno od stats bloka)
+        const pos = new Map<number, [number, number]>();
+        const seenBase = new Set<number>();
+        for (const r of rt.rows) {
+          const n = parseInt(r.base, 10);
+          if (!seenBase.has(n) && r.lat !== null && r.lng !== null) {
+            seenBase.add(n);
+            pos.set(n, [r.lat, r.lng]);
+          }
+        }
+        const dd: number[] = [];
+        for (const [n, p] of pos) {
+          const q = pos.get(n + 1);
+          if (q) dd.push(Math.hypot((p[0] - q[0]) * 111320, (p[1] - q[1]) * 111320 * 0.7));
+        }
+        dd.sort((a, b) => a - b);
+        const med = dd.length % 2 ? dd[(dd.length - 1) / 2] : (dd[dd.length / 2 - 1] + dd[dd.length / 2]) / 2;
+        if (dd.length !== rt.spatialProof.consecPairs)
+          p55Errors.push(`soslednost parov iz vrstic ${dd.length} ≠ ${rt.spatialProof.consecPairs}`);
+        if (Math.abs(med - rt.spatialProof.medianM) > 0.5)
+          p55Errors.push(`soslednost median iz vrstic ${med.toFixed(1)} ≠ ${rt.spatialProof.medianM}`);
+        if (rt.furkovce.rows !== 2) p55Errors.push("runtime Furkofze ≠ 2");
+        p55RtDetail = `runtime preverjen: ${rt.rows.length} povezanih vrstic (171/775/164) · soslednost preracunana iz vrstic: ${dd.length} parov, median ${med.toFixed(1)} m · Furkofze 2159/2160`;
+      } catch {
+        p55Errors.push("runtime ps-parcels-geo.json ni veljaven JSON");
+      }
+    }
+    // 3) dokazna datoteka: pini + identičnost povezanih vrstic z runtime (vzorec qa-p51)
+    const rawEv = opts.readFile("research/issue17/ps-parcels-geo.json");
+    if (rawEv === null) {
+      p55FileDetail = "produkcija: research/ ni v deploymentu — kontrola na runtime kopiji (vzorec qa-p43-chain-full)";
+    } else {
+      try {
+        const ev = JSON.parse(rawEv) as {
+          pageSelection: { rows: number };
+          join: { matchedRows: number };
+          rows: { lat: number | null }[];
+        };
+        if (ev.pageSelection.rows !== 2762) p55Errors.push("dokaz: vrstic ≠ 2762");
+        if (ev.join.matchedRows !== 1110) p55Errors.push("dokaz: povezanih ≠ 1110");
+        const evMatched = ev.rows.filter((r) => r.lat !== null).length;
+        if (evMatched !== 1110) p55Errors.push(`dokaz: vrstic s pozicijo ${evMatched} ≠ 1110`);
+        const rawRt2 = opts.readFile("src/data/atlas/ps-parcels-geo.json");
+        if (rawRt2 !== null) {
+          const rt2 = JSON.parse(rawRt2) as { rows: unknown[] };
+          const evMatchedRows = (ev.rows as unknown[]).filter((r) => (r as { lat: number | null }).lat !== null);
+          if (JSON.stringify(evMatchedRows) !== JSON.stringify(rt2.rows))
+            p55Errors.push("dokaz ⊉ runtime: povezane vrstice niso bajtno enake");
+        }
+        p55FileDetail = `dokaz preverjen: ${ev.pageSelection.rows} vrstic, ${ev.join.matchedRows} povezanih · dokaz == runtime (povezane vrstice)`;
+      } catch {
+        p55Errors.push("dokaz ps-parcels-geo.json ni veljaven JSON");
+      }
+    }
+  }
+  push(
+    "qa-p55-ps-parcels-geo",
+    "P55: GEOLOKACIJA GRUNDPARCELLEN — PS protokol 1825 ↔ sodobne parcele KO 1544 (issue #13): PS »Der Grund-Parcellen der Gemeinde GRÜBLE« (2505 Grundparzellen + 102 Bauplätze = 2607) prvič geolociran — 1110 vrstic (40.2 % od 2762) povezanih po parcelni številki (delitve: base + pripona, 241 skupin); vztrajnost oštevilčenja dokazana z dvema testoma: (A) površine median 3.6984 ≈ 1 Wiener QK = 3.59665 m² (Δ +2.83 %; premešana kontrola 3.9731; pas ±10 % 16.9 % vs 4.0 %), (B) prostorska soslednost — 590 zaporednih parov 51.8 m narazen (kontrola 1436.9 m, 27.8×; 89.3 % ≤ 150 m vs 2.5 %); zaupanje STRONG 171 / MEDIUM 775 / WEAK 164, per-parcelno [~]; odkritje Furkofze (Fučkovci): 2 vrstici, parceli 2159/2160, Van Wawech Mihó; izbira strani: za 8 pass3-strani pass1 (odmik dokumentiran); status DISCOVERED-DETERMINISTIC",
+    "P55: GEOLOCATION OF THE GRUNDPARCELLEN — PS protocol 1825 ↔ modern parcels of c.m. 1544 (issue #13): the PS »Der Grund-Parcellen der Gemeinde GRÜBLE« (2505 Grundparzellen + 102 Bauplätze = 2607) geolocated for the first time — 1110 rows (40.2 % of 2762) linked by parcel number (subdivisions: base + suffix, 241 groups); the numbering persistence proven by two tests: (A) areas median 3.6984 ≈ 1 Wiener QK = 3.59665 m² (Δ +2.83 %; shuffled control 3.9731; ±10 % band 16.9 % vs 4.0 %), (B) spatial adjacency — 590 consecutive pairs 51.8 m apart (control 1436.9 m, 27.8×; 89.3 % ≤ 150 m vs 2.5 %); confidence STRONG 171 / MEDIUM 775 / WEAK 164, per-parcel [~]; discovery Furkofze (Fučkovci): 2 rows, parcels 2159/2160, Van Wawech Mihó; page selection: pass1 for the 8 pass3-chosen pages (deviation documented); status DISCOVERED-DETERMINISTIC",
+    p55Errors.length === 0,
+    p55Errors.length === 0
+      ? `2762 vrstic (135 strani, 58/69/8) · 1110 povezanih / 800 parcel (40.2 %) · površine 3.6984 ≈ 3.59665 (Δ +2.83 %, kontrola 3.9731) · soslednost 51.8 m vs 1436.9 m (27.8×) · STRONG 171 / MEDIUM 775 / WEAK 164 · Furkofze 2159/2160 Van Wawech Mihó · ${p55RtDetail} · ${p55FileDetail}`
+      : p55Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;
