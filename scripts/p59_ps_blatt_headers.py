@@ -21,8 +21,8 @@
 #      p137 pass2 dopolnjeno; kvota 429 premagana)
 #   I2 Blatt I p3–4 == P57 runtime (26 vrstic blatt 'I') + p5–25 vse 'I'
 #   I3 arbitraža — vsi nesoglasja imajo zapisano odločitev (agent-oči, hardcoded)
-#   I4 atribucija — vseh 1093 vrstic v2 dobi blatt (p138 neberljivo [?] in
-#      p139 Haus Nro. nimata vrstic v v2 → null_pages prazna)
+#   I4 atribucija — vseh 1093 vrstic v2 dobi blatt (p138 neberljivo [?]; p139 =
+#      Blatt IIb po korekciji P63 — Parzelle 41–60, vrstic v v2 ni → null_pages prazna)
 #   I5 struktura — Blatt sekcije: I (3–42, parcele 1–800), II (43–…, 801–),
 #      oči-potrjene korekcije območja prehoda 721–800 (p40/p41/p42)
 #   I6 per-Blatt dvoumnost — bazi na več straneh == 211 (pin iz v2), nove mere:
@@ -93,10 +93,10 @@ ARBITRATION = {
           "2-prehodno soglasje + oči: 'II' @ r1, ditto; parcele 2661–2680"),
     137: ("II", [{"value": "I.II", "row": 6}, {"value": "I", "row": 8}],
           "2-prehodno soglasje + oči: 'II' @ r1 + korekcije 'I.II' @ r6, 'I' @ r8; parcele 2681–2700"),
-    138: (None, [],
-          "oči: tabela skoraj prazna, bledi zapisi neberljivi ('T.191'? @ r14, '89'? @ r27) [?] — brez zanesljive numerele"),
-    139: (None, [],
-          "oči: glava 'Nro. des Hauses.' — hišne številke 41–60 + vsota 82, ni numerele Blatt → P58 open #6"),
+    138: (None, [{"value": "T. 191", "row": 14}, {"value": "89", "row": 27}],
+          "P63 izčrpen pregled (6× izrezov 4× + VLM): leva tabela IZBRISANA — bledi ostanki 'T. 191'/'7. 191'[~] @ r14 (Blatt kolona) + parzelle 23/24[~] @ r14/r15, '89'/'86'[~] @ r27; rokopisne podglave 'Lotus'/'Lung'/'Al'[~] pod Vor und Zuname; brez zanesljive numerele — desna stran = 'Zusammenstellung der Grundstücke' (Wiese 1–20, Classe 21–40, vsota 101|15320) [~]"),
+    139: ("IIb", [],
+          "P63 KOREKCIJA: glava je 'Nro. des Blattes.' (prejšnja očesna razlaga 'Nro. des Hauses.' NAPAČNA — P58 open #6 zaprt); numerele 'IIb' @ r1 + ditto (oči 5× izrez + 2-od-3 VLM; 'b' [~]); Parzelle 41–60; desna stran = Kulturs Gattung 81–100, Classe 101–120, Fürtrag 189|1228; vsote 82|81, 125|183"),
 }
 
 # P62: UNREAD prazen — 133–136, 138–139 prebrana (2 prehoda), p137 pass2 dopolnjena
@@ -339,12 +339,13 @@ def main():
 
     # ————— izpisi —————
     ev = {
-        "task": "P59 (+P62 dopolnitev) — glave listov registra PS (Nro. des Blattes): per-Blatt atribucija strani + ločitev dvoumnih base v2, polna pokritost",
+        "task": "P59 (+P62 dopolnitev, +P63 korekcija p138/p139) — glave listov registra PS (Nro. des Blattes): per-Blatt atribucija strani + ločitev dvoumnih base v2, polna pokritost",
         "date": "2026-10-14",
         "principle": ("arbitraža 2 VLM prehoda + agent-oči na 3× izrezih (metodika P57); "
                       "stran atributirana na numeralo @ vrstica 1; sred-stranske numeralе = extras [~]; "
                       "MERITVE brez prerazporeditev — join v2 nespremenjen (disciplina P56/P58); "
-                      "P62: pokritost 135/135 (133–136, 138–139, p137 pass2 dopolnjena)"),
+                      "P62: pokritost 135/135 (133–136, 138–139, p137 pass2 dopolnjena); "
+                      "P63: korekcija p139 = Blatt IIb (oči 5× + 3. VLM prehod na fokusiranih izrezih kolon)"),
         "inputs": {
             "freshReads": "research/issue17/ps-raw/blatt-<page>{,-pass2}.json (135 strani posnetih × 2 prehoda — pokritost polna, izrez levega stolpca 3×)",
             "fetch": "scripts/p59_fetch_strip.py (VAČ uodid 373415 docid 41780, izrez x30–250, 3× Lanczos q92)",
@@ -357,7 +358,7 @@ def main():
             "polna": "135/135 strani (5–139) × 2 neodvisna VLM prehoda — pokritost POPOLNA (P62: dopolnjeno po premagani kvoti 429)",
             "S1": "strani 5–127: 123/123 × 2 prehoda",
             "S2": "strani 128–137: 10/10 × 2 prehoda",
-            "S3": "strani 138–139: 2/2 × 2 prehoda (138 bledi zapisi neberljivi [?]; 139 = 'Nro. des Hauses.' hišne 41–60, ni Blatt)",
+            "S3": "strani 138–139: 2/2 × 2 prehoda (138 = izbrisana leva tabela z bledimi ostanki [?] + 'Zusammenstellung der Grundstücke' desna; 139 = Blatt IIb @ r1, Parzelle 41–60 — korekcija P63)",
             "p3-4": "P57 polno branje (Blatt I)",
         },
         "arbitration": {
@@ -393,22 +394,26 @@ def main():
                        "I6 dvoumnost merjena", "I7 determinizem", "I8 dokaz ⊇ runtime",
                        "I9 join v2 nespremenjen"],
         "statusLine": ("P59 GLAVE LISTOV: 135/135 strani sveže branih (2 prehoda; polna pokritost — P62 dopolnilo 133–136, 138–139, p137 pass2 po premagani kvoti 429), "
-                       f"{len(arb_used)} arbitraža-oči, struktura Blatt I–V + lokalne sekcije; "
+                       f"{len(arb_used)} arbitraža-oči, struktura Blatt I–V + IIb + lokalne sekcije (P63: p139 = IIb, Parzelle 41–60); "
                        "211 dvoumnih base → %d čez-Blatt, %d ruleCandidate [~]; join v2 nespremenjen" % (len(multi_blatt), len(rule_cand))),
         "verdictSi": ("Glave listov registra PS prvič zanesljivo prebrane v POLNI pokritosti (135/135 × 2 prehoda + arbitraža-oči): "
                       "Blatt I = parcele 1–800 (strani 3–40, s prehodnimi popravki I→II na 721–800), Blatt II se začne pri 801 (43–92, p72 = III vmes); "
                       "konec registra (p133–137) nosi eksplicitne korekcijske cone IV→V/II (rdeči tuš); "
+                      "p139 = Blatt IIb (korekcija P63; Parzelle 41–60 + lastninske kolone — prejšnja razlaga 'Nro. des Hauses.' očesna napaka); "
+                      "p138 = izbrisana leva tabela z bledimi ostanki + 'Zusammenstellung der Grundstücke' (Wiese 1–20) desna (P63); "
                       "isto številko pod različnima Blattoma potrjeno kot druga parcela — 211 dvoumnih base v2 kvantificiranih per instanco; "
                       "join ostaja nespremenjen; parzella razponi svežih branj = nizka zaupanja (Kurrent 4↔8/7→1, dokumentirano)"),
         "verdictEn": ("Leaf headers of the PS register read reliably in FULL coverage (135/135 pages x 2 passes + arbitration): "
                       "Blatt I = parcels 1-800 (pages 3-42, with I-to-II correction annotations in 721-800), Blatt II starts at 801; "
                       "register end (p133-137) carries explicit IV-to-V/II correction zones (red ink); "
+                      "p139 = Blatt IIb (P63 correction; parcels 41-60 + owner columns - the earlier 'Nro. des Hauses.' reading was an eye error); "
+                      "p138 = erased left table with faint remains + 'Zusammenstellung der Grundstuecke' (Wiese 1-20) on the right (P63); "
                       "same number under different Blaetter confirmed as different parcels - the 211 ambiguous bases quantified per instance; "
                       "join unchanged; fresh parzella ranges are low-confidence (Kurrent 4-8/7-1 confusion, documented)"),
         "next": [
             "P62 IZVEDENO: 133–136, 138–139 + p137 pass2 prebrani — polna pokritost (kvota 429 premagana)",
-            "p138 bledi zapisi ('T.191'? @ r14, '89'? @ r27) [?]: rešiti s 6× izrezom ali original scan",
-            "p139 'Nro. des Hauses.' 41–60 + vsota 82 → P58 open #6 (Haus Nro. ↔ tlorisi)",
+            "p138 bledi ostanki DOKUMENTIRANI v P63 (tail-pages: 'T. 191'[~] @ r14, parzelle 23/24[~], '89/86'[~] @ r27) — paleografska razlaga ostaja [~]",
+            "p139 IIb KOREKCIJA P63 (glava je 'Nro. des Blattes.') — P58 open #6 ZAPRT; kolona 'Vor und Zuname' nosi številke 62–80 (konskripcija/Einlage? [~]) — razlaga ostaja odprta",
             "razlagati korekcijske cone IV→V (p133), II→IV (p134) in II→I (p137) — reorganizacija listov ali revisija [~]",
             "razširitev atribucije P60 na (nove) čez-Blatt base konec registra",
         ],

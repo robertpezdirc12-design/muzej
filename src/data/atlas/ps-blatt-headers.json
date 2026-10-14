@@ -42,7 +42,7 @@
  "coverage": {
   "S1": "strani 5–127: 123/123 × 2 prehoda",
   "S2": "strani 128–137: 10/10 × 2 prehoda",
-  "S3": "strani 138–139: 2/2 × 2 prehoda (138 bledi zapisi neberljivi [?]; 139 = 'Nro. des Hauses.' hišne 41–60, ni Blatt)",
+  "S3": "strani 138–139: 2/2 × 2 prehoda (138 = izbrisana leva tabela z bledimi ostanki [?] + 'Zusammenstellung der Grundstücke' desna; 139 = Blatt IIb @ r1, Parzelle 41–60 — korekcija P63)",
   "p3-4": "P57 polno branje (Blatt I)",
   "polna": "135/135 strani (5–139) × 2 neodvisna VLM prehoda — pokritost POPOLNA (P62: dopolnjeno po premagani kvoti 429)"
  },
@@ -416,17 +416,26 @@
   },
   "138": {
    "blatt": null,
-   "extras": [],
+   "extras": [
+    {
+     "row": 14,
+     "value": "T. 191"
+    },
+    {
+     "row": 27,
+     "value": "89"
+    }
+   ],
    "flag": true,
    "passes": 2,
-   "source": "arbitraža (oči na 3× izrezu): tabela skoraj prazna, bledi zapisi neberljivi ('T.191'? @ r14, '89'? @ r27) [?] — brez zanesljive numerele"
+   "source": "arbitraža (oči na 3× izrezu): P63 izčrpen pregled (6× izrezov 4× + VLM): leva tabela IZBRISANA — bledi ostanki 'T. 191'/'7. 191'[~] @ r14 (Blatt kolona) + parzelle 23/24[~] @ r14/r15, '89'/'86'[~] @ r27; rokopisne podglave 'Lotus'/'Lung'/'Al'[~] pod Vor und Zuname; brez zanesljive numerele — desna stran = 'Zusammenstellung der Grundstücke' (Wiese 1–20, Classe 21–40, vsota 101|15320) [~]"
   },
   "139": {
-   "blatt": null,
+   "blatt": "IIb",
    "extras": [],
    "flag": true,
    "passes": 2,
-   "source": "arbitraža (oči na 3× izrezu): glava 'Nro. des Hauses.' — hišne številke 41–60 + vsota 82, ni numerele Blatt → P58 open #6"
+   "source": "arbitraža (oči na 3× izrezu): P63 KOREKCIJA: glava je 'Nro. des Blattes.' (prejšnja očesna razlaga 'Nro. des Hauses.' NAPAČNA — P58 open #6 zaprt); numerele 'IIb' @ r1 + ditto (oči 5× izrez + 2-od-3 VLM; 'b' [~]); Parzelle 41–60; desna stran = Kulturs Gattung 81–100, Classe 101–120, Fürtrag 189|1228; vsote 82|81, 125|183"
   },
   "14": {
    "blatt": "I",
@@ -1163,7 +1172,7 @@
   "ruleCandidateNote": "baza z TOČNO eno instanco z median razmerjem v [0.8, 1.25] — kandidat za prihodnjo per-Blatt atribucijo joina (P60), MERJENO ne izvedeno [~]",
   "verdictSi": "per-Blatt ločitev MERJENA: od 211 bazi na več straneh jih 110 sega čez ≥2 Blatta (P39: ista številka pod različnima Blattoma = druga parcela) — instance zdaj razločljive; join po številki ostaja nespremenjen (brez dokaza se NE prerazporeja)"
  },
- "statusLine": "P59 GLAVE LISTOV: 135/135 strani sveže branih (2 prehoda; polna pokritost — P62 dopolnilo 133–136, 138–139, p137 pass2 po premagani kvoti 429), 32 arbitraža-oči, struktura Blatt I–V + lokalne sekcije; 211 dvoumnih base → 110 čez-Blatt, 17 ruleCandidate [~]; join v2 nespremenjen",
+ "statusLine": "P59 GLAVE LISTOV: 135/135 strani sveže branih (2 prehoda; polna pokritost — P62 dopolnilo 133–136, 138–139, p137 pass2 po premagani kvoti 429), 32 arbitraža-oči, struktura Blatt I–V + IIb + lokalne sekcije (P63: p139 = IIb, Parzelle 41–60); 211 dvoumnih base → 110 čez-Blatt, 17 ruleCandidate [~]; join v2 nespremenjen",
  "structure": {
   "blattSections": [
    {
@@ -1341,6 +1350,15 @@
     ]
    },
    {
+    "blatt": "IIb",
+    "n": 1,
+    "pageMax": 139,
+    "pageMin": 139,
+    "pages": [
+     139
+    ]
+   },
+   {
     "blatt": "I·II",
     "n": 1,
     "pageMax": 41,
@@ -1363,6 +1381,6 @@
   "interleavedLocalPages": "strani z majhnimi razponi sredi globalnega teka (npr. 26, 61–62, 81, 83–91: 41–60/101–120/161–180/601–620/921–960) — per-Riede/per-Blatt lokalne sekcije; p101 z ULOMKI (196½ ...) — podštevilčene parcele",
   "midPageTransitions": "p93 (1901–1907 prečrtano → 1303+), p101 (III→IV @ r7), p65 (II→III @ r2 [~])"
  },
- "task": "P59 (+P62 dopolnitev) — glave listov registra PS (Nro. des Blattes): per-Blatt atribucija strani + ločitev dvoumnih base v2, polna pokritost",
+ "task": "P59 (+P62 dopolnitev, +P63 korekcija p138/p139) — glave listov registra PS (Nro. des Blattes): per-Blatt atribucija strani + ločitev dvoumnih base v2, polna pokritost",
  "version": 1
 }

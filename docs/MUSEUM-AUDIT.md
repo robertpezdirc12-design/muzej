@@ -2328,3 +2328,69 @@ in `p61_ps_unit_semantics.py` (pini); TS konstante (research.ts) + kartice
 izrez ali original scan); p139 → P58 open #6 (Haus Nro.); razlaga korekcijskih
 con IV→V/II (reorganizacija listov ali revisija) OSTAJA ODPRTA [~]; join v2 in
 SHEET_GEOREFS nespremanjeni (lekcija P9).
+
+## §41 — P63: zaključne strani registra PS (138–139) — Blatt IIb + transkripcija tail tabel (issue #13, 2026-10-14)
+
+**Metoda (3 neodvisni prehodi, 2-od-3 konsenz):** (A) agent-oči na izrezih
+3×/4×/5× (6 con p138 + 10 con p139, Lanczos q95); (B) VLM glm-5v-turbo na
+polnih izrezih (`p63_ps_read_tail.mjs`, 6 delov); (C) VLM na fokusiranih
+izrezih kolon 5× (`p63_ps_read_cols.mjs`, 5 delov) + agent-oči 3. prehod na
+desnih kolonah p139. Razhodi → [~] + alternatives (42 flagov). KVOTA VLM
+deluje (P62 vzorec).
+
+**Odkritja (MERJENO):**
+- **p139 = Blatt IIb** (pod-list, NOV v strukturi registra PS): numerele
+  'IIb' @ r1 + ditto (oči 5× + VLM 2-od-3; 'b' [~]); Parzelle 41–60
+  (duplikat Blatt I številk pod IIb). **KOREKCIJA**: glava je
+  'Nro. des Blattes.' — prejšnja očesna razlaga 'Nro. des Hauses.'
+  (P60/P62) = očesna napaka → **P58 open #6 ZAPRT**.
+- **Lastninske kolone p139 leva** ('Des Eigenthümers'): Haus Nº rdeče
+  (1082, 1030, 998[~], 266, 695, 88, 1048[~], 286[~], 1284[~], 1317[~],
+  960, 943, 973[~], 1359, 946, 306, 762, 1484, 145[~], 345[~]);
+  **'Vor und Zuname' = rokopisne ŠTEVILKE 62–80** (ne imena; r1 =
+  'G. l. fin.'[~] — konskripcija/Einlage? [~]); Dominical (1,1,1,3,1,5,1,1,
+  1,1,7[~],7[~],7[~],1,1,1,2,1,5,3), Rustical prazno; Stand + Wohnort rdeče
+  (63, 1135, 289[~], 410, 1318, 1560, 384, 1294[~], 901, 324 | 4[~], 1482,
+  824, 1082, 1246[~], 789[~], 180, 864[~], 834[~], 1159[~]).
+- **p139 desna** ('Des Grundstückes'): Kulturs Gattung 81–100, Flächen
+  (N.Oe + QK), Classe 101–120 (r1 z bledim dodatnim zapisom [~]), Ertrag
+  fl|kr prazna (r1 '101⁴⁄₅'[~]), Capital fl rdeče (1860, 1146, —, 831, 909,
+  982, 1086, 1234, 80, 128, 781, 366, 1149[~], 999[~], 1060, 1513, 649,
+  1346, 1046, 584) + kr (Σ=153), Fürtrag 189|1228, vsota 162|1447, robni
+  zapisi [~].
+- **p138**: leva tabela IZBRISANA (bledi ostanki 'T. 191'/'7. 191'[~] @ r14
+  + parzelle 23/24[~], '89'/'86'[~] @ r27; rdeče prečrtani zapisi 18–40 @
+  srednja kolona [~]; podglave 'Lotus'/'Lung'/'Al'[~]); desna =
+  **'Zusammenstellung der Grundstücke'** (Wiese 1–20, Classe 21–40, vsota
+  101|15320 [~], rob 89|78 [~]).
+- **Vsote p139**: 82|81 (Dominical/Haus; vsota vidnih Dominical = 32 —
+  rekapitulacija čez več strani [~]), 125|183 (Stand/Wohnort), Fürtrag
+  189|1228 (prenašanje; QK te strani = 16543 [~]), 162|1447 (Capital) —
+  razlaga enot ODPRTA [~].
+
+**Skripta:** `scripts/p63_ps_tail_pages.py` (deterministična, brez AI ob
+delovanju, FAIL ob padu I1–I10; `--check` bajtno PASS: I1 pokritost 11/11
+tail + 2/2 blatt × 2 prehoda; I2 parzelle 41–60; I3 VorUndZuname 62–80;
+I4 IIb konsenz == pageAttribution p59; I5 kultur 81–100 + classe 101–120 +
+Fürtrag pini; I6 Capital pini + kr Σ=153; I7 vsote 82|81 + 125|183; I8 p138
+ostanki + Zusammenstellung; I9 dokaz ⊇ runtime bajtno; I10 determinizem).
+Izhodi: dokaz `research/issue17/ps-tail-pages.json` + runtime
+`src/data/atlas/ps-tail-pages.json`.
+
+**Veriga re-run (P63 korekcija @ p59 ARBITRATION: 139 → 'IIb', 138 →
+izčrpen opis):** p59 OK (arbitraža 32, soglasje 103; 211/110/17
+nespremenjeni — p138/139 brez vrstic v v2) → p60 OK (bajtno identično) →
+p61 OK (I8 bhrt_sha pin ea950ce2… → efe39f41…; modi 226/62 + FNV kontrole
+nespremanjeni; --check PASS vsi).
+
+**Integracija:** API `/api/atlas/ps-tail-pages` (force-static) + TAIL_P63
+(research.ts) + kartica P63 (zavihek Prepisi Kurrent, za P61) + posodobljeni
+P59 konstanti (coverage S3, verdicti, next) + sources.ts N083PS opomba P63
+(Si+En) + QA 65 → **66** (qa-p63-tail-pages: pini + neodvisen preracun
+naraščanj + Capital kr Σ=153 + IIb navzkrižje + dokaz == runtime bajtno;
+dve obliki po P53/P57/P58).
+
+**Poštenost:** enote vsot 82|81, 125|183, 162|1447 razlagalno ODPRETE [~];
+razlaga števil 62–80 @ 'Vor und Zuname' ODPRTA [~]; p138 bledi zapisi
+ostajajo [~]/[?]; join v2 in SHEET_GEOREFS nespremanjeni (lekcija P9);
+P55–P60 runtime nespremanjeni (P60 bajtno identičen; I8 pini po lekciji P9).

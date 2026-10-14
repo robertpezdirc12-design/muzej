@@ -424,7 +424,7 @@ def main():
     # ————— I8: P59/P60 runtime nespremanjeni —————
     if p60rt_sha != "28465b3e28fef763f951dc8ea379b7e071bd9d5fa109ebb9a577e594236e386a":
         fail("I8 P60 runtime sha256 odmik (pini po P9 lekciji)")
-    if bhrt_sha != "ea950ce2f46d0eb685f152a90e6f83a800f21936a5a520ab5c34769a940ac12e":  # P62: polna pokritost 135/135
+    if bhrt_sha != "efe39f41dc4f81703e3b8aa47632faef75222a000ad13b7a674f3a853c1ee66e":  # P63: korekcija p139 = Blatt IIb (oči 5x + 3. VLM prehod); p138 izčrpen opis ostankov + 'Zusammenstellung'
         fail("I8 P59 blatt-headers runtime sha256 odmik")
 
     # ————— I7: dokaz ⊇ runtime bajtno —————

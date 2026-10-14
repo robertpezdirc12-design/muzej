@@ -4051,7 +4051,7 @@ export const BLATT_HEADERS_P59: {
   coverage: {
     S1: "strani 5–127: 123/123 × 2 prehoda",
     S2: "strani 128–137: 10/10 × 2 prehoda",
-    S3: "strani 138–139: 2/2 × 2 prehoda (138 bledi zapisi neberljivi [?]; 139 = 'Nro. des Hauses.' hišne 41–60, ni Blatt)",
+    S3: "strani 138–139: 2/2 × 2 prehoda (138 = izbrisana leva tabela z bledimi ostanki [?] + 'Zusammenstellung der Grundstücke' desna; 139 = Blatt IIb @ r1, Parzelle 41–60 — korekcija P63)",
     pages34: "P57 polno branje (Blatt I)",
     polna: "135/135 strani × 2 prehoda — pokritost POPOLNA (P62: 133–136, 138–139, p137 pass2 dopolnjena po premagani kvoti 429)",
   },
@@ -4088,7 +4088,7 @@ export const BLATT_HEADERS_P59: {
   statusLine:
     "P59 GLAVE LISTOV: 135/135 strani sveže branih (2 prehoda; polna pokritost — P62 dopolnilo po premagani kvoti 429), 32 arbitraža-oči, struktura Blatt I–V + lokalne sekcije; 211 dvoumnih base → 110 čez-Blatt, 17 ruleCandidate [~]; join v2 nespremenjen",
   verdictSi:
-    "P59: GLAVE LISTOV REGISTRA PS (issue #13) — prvo zanesljivo branje stolpca 'Nro. des Blattes' (levi izrez 135/135 strani × 2 neodvisna prehoda + 32 arbitraž agent-oči na 3× izrezih; stari P38 blatt stolpec potrjeno šumen — p12 ditto prebrano kot 20× 'I'): Blatt I = parcele 1–800 (strani 3–40; prehodna cona 721–800 s popravki I→II na p40/p41/p42 [~]), Blatt II se začne pri 801 (strani 43–92; p72 = Blatt III 1281–1302 vmes; cona 1100–1640 prepletena z lokalnimi sekcijami 161–180/601–620/921–960 [~]); interleave per-Riede sekcij sredi globalnega teka (p26/p37/p39/...), p101 z ulomki (196½ — podštevilčene parcele); sred-stranski prehodi p93 (1901–1907 prečrtano → 1303+)/p101/p65; VLM Kurrent pasti dokumentirane (4↔8, 7→1, odrezane vodilne števke — parzella razponi nizka zaupanja, numeralе visoka); PER-BLATT DVoumnost: 211 base v2 na več straneh → 110 čez ≥2 Blatta (instance zdaj razločljive po P39), 17 ruleCandidate (edina instanca v pasu razmerij [0.8, 1.25] — npr. 163: Blatt I @ 7.0 vs Blatt II @ 0.981); konec registra (p133–137) nosi eksplicitne korekcijske cone IV→V/II (rdeči tuš, oči + 2-prehodno soglasje); join v2 NESPREMENJEN (meritve brez prerazporeditev — disciplina P56/P58); pokritost: POLNA 135/135 × 2 (P62: 133–136, 138–139, p137 pass2 dopolnjena); identifikacija per-Blatt instanc [~] — strojno branje ni dokazni vir",
+    "P59: GLAVE LISTOV REGISTRA PS (issue #13) — prvo zanesljivo branje stolpca 'Nro. des Blattes' (levi izrez 135/135 strani × 2 neodvisna prehoda + 32 arbitraž agent-oči na 3× izrezih; stari P38 blatt stolpec potrjeno šumen — p12 ditto prebrano kot 20× 'I'): Blatt I = parcele 1–800 (strani 3–40; prehodna cona 721–800 s popravki I→II na p40/p41/p42 [~]), Blatt II se začne pri 801 (strani 43–92; p72 = Blatt III 1281–1302 vmes; cona 1100–1640 prepletena z lokalnimi sekcijami 161–180/601–620/921–960 [~]); interleave per-Riede sekcij sredi globalnega teka (p26/p37/p39/...), p101 z ulomki (196½ — podštevilčene parcele); sred-stranski prehodi p93 (1901–1907 prečrtano → 1303+)/p101/p65; VLM Kurrent pasti dokumentirane (4↔8, 7→1, odrezane vodilne števke — parzella razponi nizka zaupanja, numeralе visoka); PER-BLATT DVoumnost: 211 base v2 na več straneh → 110 čez ≥2 Blatta (instance zdaj razločljive po P39), 17 ruleCandidate (edina instanca v pasu razmerij [0.8, 1.25] — npr. 163: Blatt I @ 7.0 vs Blatt II @ 0.981); konec registra (p133–137) nosi eksplicitne korekcijske cone IV→V/II (rdeči tuš, oči + 2-prehodno soglasje); P63 KOREKCIJA: p139 = Blatt IIb (pod-list; Parzelle 41–60 + lastninske kolone — prejšnja očesna razlaga 'Nro. des Hauses.' napaka; P58 open #6 ZAPRT), p138 = izbrisana leva tabela + 'Zusammenstellung der Grundstücke' (Wiese 1–20) desna; join v2 NESPREMENJEN (meritve brez prerazporeditev — disciplina P56/P58); pokritost: POLNA 135/135 × 2 (P62: 133–136, 138–139, p137 pass2 dopolnjena); identifikacija per-Blatt instanc [~] — strojno branje ni dokazni vir",
   verdictEn:
     "P59: PS REGISTER LEAF HEADERS (issue #13) — first reliable reading of the 'Nro. des Blattes' column (left-strip crops of 135/135 pages x 2 independent passes + 32 agent-eye arbitrations on 3x crops; the old P38 blatt column confirmed noisy — p12 ditto read as 20x 'I'): Blatt I = parcels 1-800 (pp. 3-40; transition zone 721-800 with I-to-II corrections on p40/p41/p42 [~]), Blatt II starts at 801 (pp. 43-92; p72 = Blatt III 1281-1302 in between; the 1100-1640 zone interleaved with local sections 161-180/601-620/921-960 [~]); per-Riede section interleave within the global run (p26/p37/p39/...), p101 with fractions (196 1/2 — sub-numbered parcels); mid-page transitions p93 (1901-1907 crossed out to 1303+)/p101/p65; VLM Kurrent pitfalls documented (4-8, 7-to-1, dropped leading digits — parzella ranges low-confidence, numerals high); PER-BLATT AMBIGUITY: of 211 v2 bases on multiple pages, 110 span >=2 Blaetter (instances now distinguishable per P39), 17 ruleCandidates (exactly one instance within the ratio band [0.8, 1.25] — e.g. 163: Blatt I @ 7.0 vs Blatt II @ 0.981); register end (p133–137) carries explicit IV→V/II correction zones (red ink, agent eyes + 2-pass agreement); the v2 join UNCHANGED (measurements without reassignments — P56/P58 discipline); coverage: FULL 135/135 x 2 (P62: 133–136, 138–139, p137 pass2 completed); per-Blatt instance identification [~] — machine reading is not an evidentiary source",
   next: [
@@ -4096,7 +4096,68 @@ export const BLATT_HEADERS_P59: {
     "P60 kandidat: per-Blatt atribucija joina za ruleCandidate baze (dokazno pravilo: edina instanca v pasu [0.8, 1.25] + soslednost) — zahteva lastno fazo s pini",
     "razlagati prehodno cono 721–800 (popravki I→II): reorganizacija listov ali Kultur skupine [~]",
     "p26/p37/p39 lokalne sekcije (161–180/101–120 pod Blatt I): povezati z Riede stolpcem polnih branj",
-    "4. VLM prehod glav izkoristi tudi P58 open #6 (Haus Nro. ↔ tlorisi)",
+    "P63 IZVEDENO: p139 = Blatt IIb (P58 open #6 zaprt), p138 ostanki + 'Zusammenstellung' dokumentirana — detajli v ps-tail-pages",
+  ],
+};
+
+export const TAIL_P63: {
+  series: "PS";
+  source: string;
+  status: ResearchStatus;
+  generatedBy: string;
+  blattIIb: { page: number; parzelle: string; vorUndZuname: string; vsote: Record<string, string> };
+  p139Structure: { levaGlava: string; desnaGlava: string; ertragNote: string };
+  vsote: { leva: Record<string, string>; desna: Record<string, string>; opomba: string };
+  p138: { leva: string; desna: string };
+  structureImpact: { blattNumerele: string; v2Impact: string };
+  flagsCount: number;
+  statusLine: string;
+  verdictSi: string;
+  verdictEn: string;
+  next: string[];
+} = {
+  series: "PS",
+  source:
+    "VAČ strani 138–139 (uodid 373415, docid 41780) — 6× izrezov 4× (p138) + 10 izrezov 2–5× (p139); 11 VLM branj tail-*.json + 2 blatt prehoda P62 + agent-oči 3. prehod na fokusiranih izrezih kolon 5×; dokaz research/issue17/ps-tail-pages.json + runtime src/data/atlas/ps-tail-pages.json",
+  status: "REVIEW",
+  generatedBy:
+    "scripts/p63_ps_tail_pages.py (deterministično, brez AI ob delovanju, FAIL ob padu I1–I10; --check bajtno PASS; branja scripts/p63_ps_read_tail.mjs + p63_ps_read_cols.mjs)",
+  blattIIb: {
+    page: 139,
+    parzelle: "41–60 (20 vrstic, naraščajoče)",
+    vorUndZuname: "rokopisne številke 62–80 @ r2–20 (ne imena); r1 = 'G. l. fin.'[~]",
+    vsote: { dominical: "82", haus: "81", stand: "125", wohnort: "183" },
+  },
+  p139Structure: {
+    levaGlava: "Nro. des Blattes | Benennung des Riedes | Nro. der Parzelle | Dominical | Rustical ×3 | Haus Nº | Vor und Zuname | Stand | Wohnort ('Des Eigenthümers')",
+    desnaGlava: "Kulturs Gattung | Flächen Inhalt (N.Oe | QK) | Classe | Reiner Ertrag (fl|kr) | Capital Werth (fl|kr) | Anmerkung ('Des Grundstückes')",
+    ertragNote: "Ertrag fl|kr prazna r2–20; r1 = '101⁴⁄₅'[~] (blede zapis z popravek); Capital fl (rdeče velike: 1860, 1146, —, 831, 909, 982, 1086, 1234, 80, 128, 781, 366, 1149[~], 999[~], 1060, 1513, 649, 1346, 1046, 584) + kr (male: Σ=153)",
+  },
+  vsote: {
+    leva: { dominical: "82", haus: "81", stand: "125", wohnort: "183" },
+    desna: { furetragNoe: "189", furetragKlafter: "1228", totalCapA: "162", totalCapB: "1447" },
+    opomba: "82|81 pod Dominical/Haus črto (vsota vidnih Dominical = 32 — rekapitulacija čez več strani [~]); Fürtrag 189|1228 = preneseno s prejšnje tabele [~] (QK te strani = 16543); 162|1447 = vsoti pod Capital črto (razlaga enot ODPRTA [~])",
+  },
+  p138: {
+    leva: "tabela IZBRISANA — bledi ostanki 'T. 191'[~] @ r14 + parzelle 23/24[~], '89'/'86'[~] @ r27; rdeče prečrtani zapisi 18–40 @ srednja kolona [~]; podglave 'Lotus'/'Lung'/'Al'[~] pod Vor und Zuname",
+    desna: "'Zusammenstellung der Grundstücke'[~] — Wiese 1–20, Classe 21–40, vsota 101|15320 [~], robni zapis 89/78 [~]",
+  },
+  structureImpact: {
+    blattNumerele: "I–V + IIb (pod-list) — IIb NOV v strukturi registra PS",
+    v2Impact: "p138/139 brez vrstic v v2 → perBlattAmbiguity 211/110/17 nespremenjeni; join v2 nespremenjen",
+  },
+  flagsCount: 42,
+  statusLine:
+    "P63 TAIL STRANI: p139 = Blatt IIb (Parzelle 41–60 + lastninske kolone; P58 open #6 ZAPRT — glava 'Nro. des Blattes.', ne 'Haus'), p138 = izbrisana leva + 'Zusammenstellung der Grundstücke' desna; transkripcija 20+20 vrstic, 42 flagov [~]; join v2 nespremenjen",
+  verdictSi:
+    "P63: ZAKLJUČNE STRANI REGISTRA PS (138–139) paleografsko zaključene s 3 neodvisnimi prehodi (VLM 2× + agent-oči na izrezih 4×–5×): p139 = Blatt IIb (pod-list — NOV v strukturi) s parcelami 41–60 (duplikat številk Blatt I pod IIb) in lastninskimi kolonami: Haus Nº rdeče (1082, 1030, 998[~], 266, 695, 88, 1048[~], 286[~], 1284[~], 1317[~], 960, 943, 973[~], 1359, 946, 306, 762, 1484, 145[~], 345[~]), 'Vor und Zuname' izpolnjen s ŠTEVILKAMI 62–80 (ne imena — konskripcija/Einlage? [~], r1 = 'G. l. fin.'[~]), Stand + Wohnort (rdeče); desna stran = kultura rekapitulacija 81–100 s Classo 101–120 + Fürtrag 189|1228; KOREKCIJA: prejšnja očesna razlaga 'Nro. des Hauses.' @ p139 = očesna napaka (glava je 'Nro. des Blattes.') — P58 open #6 ZAPRT; p138 = izbrisana leva tabela (bledi ostanki 'T. 191'[~] @ r14, parzelle 23/24[~], '89/86'[~] @ r27) + 'Zusammenstellung der Grundstücke' (Wiese 1–20, Classe 21–40) desna; enote vsot 82|81, 125|183, 162|1447 ostajajo razlagalno odprte [~]; join v2 nespremenjen; strojno branje ni dokazni vir",
+  verdictEn:
+    "P63: PS REGISTER TAIL PAGES (138-139) completed paleographically with 3 independent passes (VLM 2x + agent eyes on 4x-5x crops): p139 = Blatt IIb (sub-leaf — NEW in the register structure) with parcels 41-60 (duplicate Blatt I numbers under IIb) and owner columns: red Haus Nº (1082, 1030, 998[~], 266, 695, 88, 1048[~], 286[~], 1284[~], 1317[~], 960, 943, 973[~], 1359, 946, 306, 762, 1484, 145[~], 345[~]), 'Vor und Zuname' filled with NUMBERS 62-80 (not names — conscription/Einlage? [~], r1 = 'G. l. fin.'[~]), Stand + Wohnort (red); right page = culture recap 81-100 with Classe 101-120 + transfer 189|1228; CORRECTION: the earlier 'Nro. des Hauses.' reading was an eye error (the header is 'Nro. des Blattes.') — P58 open #6 CLOSED; p138 = erased left table (faint remains 'T. 191'[~] @ r14, parcels 23/24[~], '89/86'[~] @ r27) + 'Zusammenstellung der Grundstuecke' (Wiese 1-20, Classe 21-40) on the right; the unit meaning of sums 82|81, 125|183, 162|1447 remains open [~]; v2 join unchanged; machine reading is not an evidentiary source",
+  next: [
+    "razlaga 'Vor und Zuname' = številke 62–80 (konskripcija/Einlage?) — povezava s PF protokolom",
+    "razlaga enot vsot 82|81, 125|183, 162|1447 (dominikalni/rustikalni deleži?) [~]",
+    "p138 rdeči zapisi 18–40 @ srednja kolona — paleografska razlaga [~]",
+    "'Zusammenstellung der Grundstücke' (p138 desna) ↔ kulture tabele p61–99 — povezava [~]",
   ],
 };
 

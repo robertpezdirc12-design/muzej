@@ -1,0 +1,143 @@
+{
+ "target": "139-left",
+ "part": "a",
+ "model": "glm-5v-turbo",
+ "created": 1791998187,
+ "usage": {
+  "completion_tokens": 1002,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 2637,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3639
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "blatt": "IIb",
+    "benennung": null,
+    "parzelle": "41",
+    "dominical": "1",
+    "rustical": null,
+    "haus": "1082",
+    "vorUndZuname": "G. l. fin.",
+    "stand": null,
+    "wohnsort": "63"
+   },
+   {
+    "row": 2,
+    "blatt": "",
+    "benennung": null,
+    "parzelle": "42",
+    "dominical": "1",
+    "rustical": null,
+    "haus": "1030",
+    "vorUndZuname": "62",
+    "stand": "5",
+    "wohnsort": "1138"
+   },
+   {
+    "row": 3,
+    "blatt": "",
+    "benennung": null,
+    "parzelle": "43",
+    "dominical": "1",
+    "rustical": null,
+    "haus": "998",
+    "vorUndZuname": "63",
+    "stand": "9",
+    "wohnsort": "859"
+   },
+   {
+    "row": 4,
+    "blatt": "",
+    "benennung": null,
+    "parzelle": "44",
+    "dominical": "5",
+    "rustical": null,
+    "haus": "266",
+    "vorUndZuname": "64",
+    "stand": "2",
+    "wohnsort": "910"
+   },
+   {
+    "row": 5,
+    "blatt": "",
+    "benennung": null,
+    "parzelle": "45",
+    "dominical": "1",
+    "rustical": null,
+    "haus": "695",
+    "vorUndZuname": "65",
+    "stand": "6",
+    "wohnsort": "1318"
+   },
+   {
+    "row": 6,
+    "blatt": "",
+    "benennung": null,
+    "parzelle": "46",
+    "dominical": "5",
+    "rustical": null,
+    "haus": "88",
+    "vorUndZuname": "66",
+    "stand": "6",
+    "wohnsort": "1060"
+   },
+   {
+    "row": 7,
+    "blatt": "",
+    "benennung": null,
+    "parzelle": "47",
+    "dominical": "1",
+    "rustical": null,
+    "haus": "1045",
+    "vorUndZuname": "67",
+    "stand": "9",
+    "wohnsort": "884"
+   },
+   {
+    "row": 8,
+    "blatt": "",
+    "benennung": null,
+    "parzelle": "48",
+    "dominical": "1",
+    "rustical": null,
+    "haus": "286",
+    "vorUndZuname": "68",
+    "stand": "3",
+    "wohnsort": "1394"
+   },
+   {
+    "row": 9,
+    "blatt": "",
+    "benennung": null,
+    "parzelle": "49",
+    "dominical": "1",
+    "rustical": null,
+    "haus": "1204",
+    "vorUndZuname": "69",
+    "stand": "10",
+    "wohnsort": "901"
+   },
+   {
+    "row": 10,
+    "blatt": "",
+    "benennung": null,
+    "parzelle": "50",
+    "dominical": "1",
+    "rustical": null,
+    "haus": "1217",
+    "vorUndZuname": "70",
+    "stand": "8",
+    "wohnsort": "324"
+   }
+  ],
+  "opomba": "Stolpec 'Benennung des Riedes' in podstolpci 'Rustical' so prazni. Vrstica 1 ima v stolpcu 'Nro. des Blattes' zapisano 'IIb' (rimski številki II + črka b), v naslednjih vrsticah je prazno (brez ditto znamenj). Vse cifre v 'Nro. der Parzelle' so naraščajoče (41–50)."
+ },
+ "content": "```json\n{\n  \"vrstice\": [\n    {\n      \"row\": 1,\n      \"blatt\": \"IIb\",\n      \"benennung\": null,\n      \"parzelle\": \"41\",\n      \"dominical\": \"1\",\n      \"rustical\": null,\n      \"haus\": \"1082\",\n      \"vorUndZuname\": \"G. l. fin.\",\n      \"stand\": null,\n      \"wohnsort\": \"63\"\n    },\n    {\n      \"row\": 2,\n      \"blatt\": \"\",\n      \"benennung\": null,\n      \"parzelle\": \"42\",\n      \"dominical\": \"1\",\n      \"rustical\": null,\n      \"haus\": \"1030\",\n      \"vorUndZuname\": \"62\",\n      \"stand\": \"5\",\n      \"wohnsort\": \"1138\"\n    },\n    {\n      \"row\": 3,\n      \"blatt\": \"\",\n      \"benennung\": null,\n      \"parzelle\": \"43\",\n      \"dominical\": \"1\",\n      \"rustical\": null,\n      \"haus\": \"998\",\n      \"vorUndZuname\": \"63\",\n      \"stand\": \"9\",\n      \"wohnsort\": \"859\"\n    },\n    {\n      \"row\": 4,\n      \"blatt\": \"\",\n      \"benennung\": null,\n      \"parzelle\": \"44\",\n      \"dominical\": \"5\",\n      \"rustical\": null,\n      \"haus\": \"266\",\n      \"vorUndZuname\": \"64\",\n      \"stand\": \"2\",\n      \"wohnsort\": \"910\"\n    },\n    {\n      \"row\": 5,\n      \"blatt\": \"\",\n      \"benennung\": null,\n      \"parzelle\": \"45\",\n      \"dominical\": \"1\",\n      \"rustical\": null,\n      \"haus\": \"695\",\n      \"vorUndZuname\": \"65\",\n      \"stand\": \"6\",\n      \"wohnsort\": \"1318\"\n    },\n    {\n      \"row\": 6,\n      \"blatt\": \"\",\n      \"benennung\": null,\n      \"parzelle\": \"46\",\n      \"dominical\": \"5\",\n      \"rustical\": null,\n      \"haus\": \"88\",\n      \"vorUndZuname\": \"66\",\n      \"stand\": \"6\",\n      \"wohnsort\": \"1060\"\n    },\n    {\n      \"row\": 7,\n      \"blatt\": \"\",\n      \"benennung\": null,\n      \"parzelle\": \"47\",\n      \"dominical\": \"1\",\n      \"rustical\": null,\n      \"haus\": \"1045\",\n      \"vorUndZuname\": \"67\",\n      \"stand\": \"9\",\n      \"wohnsort\": \"884\"\n    },\n    {\n      \"row\": 8,\n      \"blatt\": \"\",\n      \"benennung\": null,\n      \"parzelle\": \"48\",\n      \"dominical\": \"1\",\n      \"rustical\": null,\n      \"haus\": \"286\",\n      \"vorUndZuname\": \"68\",\n      \"stand\": \"3\",\n      \"wohnsort\": \"1394\"\n    },\n    {\n      \"row\": 9,\n      \"blatt\": \"\",\n      \"benennung\": null,\n      \"parzelle\": \"49\",\n      \"dominical\": \"1\",\n      \"rustical\": null,\n      \"haus\": \"1204\",\n      \"vorUndZuname\": \"69\",\n      \"stand\": \"10\",\n      \"wohnsort\": \"901\"\n    },\n    {\n      \"row\": 10,\n      \"blatt\": \"\",\n      \"benennung\": null,\n      \"parzelle\": \"50\",\n      \"dominical\": \"1\",\n      \"rustical\": null,\n      \"haus\": \"1217\",\n      \"vorUndZuname\": \"70\",\n      \"stand\": \"8\",\n      \"wohnsort\": \"324\"\n    }\n  ],\n  \"opomba\": \"Stolpec 'Benennung des Riedes' in podstolpci 'Rustical' so prazni. Vrstica 1 ima v stolpcu 'Nro. des Blattes' zapisano 'IIb' (rimski številki II + črka b), v naslednjih vrsticah je prazno (brez ditto znamenj). Vse cifre v 'Nro. der Parzelle' so naraščajoče (41–50).\"\n}\n```"
+}

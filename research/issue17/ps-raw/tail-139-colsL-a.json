@@ -1,0 +1,83 @@
+{
+ "part": "colsL-a",
+ "model": "glm-5v-turbo",
+ "created": 1791998661,
+ "usage": {
+  "completion_tokens": 286,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3211,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3497
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "dominical": "1",
+    "rustical": null,
+    "haus": "1082"
+   },
+   {
+    "row": 2,
+    "dominical": "1",
+    "rustical": null,
+    "haus": "1030"
+   },
+   {
+    "row": 3,
+    "dominical": "1",
+    "rustical": null,
+    "haus": "998"
+   },
+   {
+    "row": 4,
+    "dominical": "3",
+    "rustical": null,
+    "haus": "266"
+   },
+   {
+    "row": 5,
+    "dominical": "1",
+    "rustical": null,
+    "haus": "698"
+   },
+   {
+    "row": 6,
+    "dominical": "5",
+    "rustical": null,
+    "haus": "68"
+   },
+   {
+    "row": 7,
+    "dominical": "7",
+    "rustical": null,
+    "haus": "1095"
+   },
+   {
+    "row": 8,
+    "dominical": "1",
+    "rustical": null,
+    "haus": "286"
+   },
+   {
+    "row": 9,
+    "dominical": "1",
+    "rustical": null,
+    "haus": "1254"
+   },
+   {
+    "row": 10,
+    "dominical": "1",
+    "rustical": null,
+    "haus": "1244"
+   }
+  ],
+  "vsote": [],
+  "opomba": ""
+ },
+ "content": "{\"vrstice\": [{\"row\": 1, \"dominical\": \"1\", \"rustical\": null, \"haus\": \"1082\"}, {\"row\": 2, \"dominical\": \"1\", \"rustical\": null, \"haus\": \"1030\"}, {\"row\": 3, \"dominical\": \"1\", \"rustical\": null, \"haus\": \"998\"}, {\"row\": 4, \"dominical\": \"3\", \"rustical\": null, \"haus\": \"266\"}, {\"row\": 5, \"dominical\": \"1\", \"rustical\": null, \"haus\": \"698\"}, {\"row\": 6, \"dominical\": \"5\", \"rustical\": null, \"haus\": \"68\"}, {\"row\": 7, \"dominical\": \"7\", \"rustical\": null, \"haus\": \"1095\"}, {\"row\": 8, \"dominical\": \"1\", \"rustical\": null, \"haus\": \"286\"}, {\"row\": 9, \"dominical\": \"1\", \"rustical\": null, \"haus\": \"1254\"}, {\"row\": 10, \"dominical\": \"1\", \"rustical\": null, \"haus\": \"1244\"}], \"vsote\": [], \"opomba\": \"\"}"
+}

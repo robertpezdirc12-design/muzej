@@ -1,0 +1,92 @@
+{
+ "part": "colsL-b",
+ "model": "glm-5v-turbo",
+ "created": 1791998670,
+ "usage": {
+  "completion_tokens": 315,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3240,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3555
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 11,
+    "dominical": "7",
+    "rustical": null,
+    "haus": "960"
+   },
+   {
+    "row": 12,
+    "dominical": "7",
+    "rustical": null,
+    "haus": "949"
+   },
+   {
+    "row": 13,
+    "dominical": "7",
+    "rustical": null,
+    "haus": "973"
+   },
+   {
+    "row": 14,
+    "dominical": "1",
+    "rustical": null,
+    "haus": "1359"
+   },
+   {
+    "row": 15,
+    "dominical": "1",
+    "rustical": null,
+    "haus": "946"
+   },
+   {
+    "row": 16,
+    "dominical": "1",
+    "rustical": null,
+    "haus": "306"
+   },
+   {
+    "row": 17,
+    "dominical": "2",
+    "rustical": null,
+    "haus": "762"
+   },
+   {
+    "row": 18,
+    "dominical": "1",
+    "rustical": null,
+    "haus": "1484"
+   },
+   {
+    "row": 19,
+    "dominical": "5",
+    "rustical": null,
+    "haus": "115"
+   },
+   {
+    "row": 20,
+    "dominical": "3",
+    "rustical": null,
+    "haus": "844"
+   }
+  ],
+  "vsote": [
+   {
+    "kol": "dominical",
+    "vrednost": "82"
+   },
+   {
+    "kol": "haus",
+    "vrednost": "81"
+   }
+  ],
+  "opomba": ""
+ },
+ "content": "{\"vrstice\": [{\"row\": 11, \"dominical\": \"7\", \"rustical\": null, \"haus\": \"960\"}, {\"row\": 12, \"dominical\": \"7\", \"rustical\": null, \"haus\": \"949\"}, {\"row\": 13, \"dominical\": \"7\", \"rustical\": null, \"haus\": \"973\"}, {\"row\": 14, \"dominical\": \"1\", \"rustical\": null, \"haus\": \"1359\"}, {\"row\": 15, \"dominical\": \"1\", \"rustical\": null, \"haus\": \"946\"}, {\"row\": 16, \"dominical\": \"1\", \"rustical\": null, \"haus\": \"306\"}, {\"row\": 17, \"dominical\": \"2\", \"rustical\": null, \"haus\": \"762\"}, {\"row\": 18, \"dominical\": \"1\", \"rustical\": null, \"haus\": \"1484\"}, {\"row\": 19, \"dominical\": \"5\", \"rustical\": null, \"haus\": \"115\"}, {\"row\": 20, \"dominical\": \"3\", \"rustical\": null, \"haus\": \"844\"}], \"vsote\": [{\"kol\": \"dominical\", \"vrednost\": \"82\"}, {\"kol\": \"haus\", \"vrednost\": \"81\"}], \"opomba\": \"\"}"
+}

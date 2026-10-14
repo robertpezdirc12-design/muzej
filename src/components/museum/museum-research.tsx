@@ -78,6 +78,7 @@ import {
   BLATT_HEADERS_P59,
   PERBLATT_ATTR_P60,
   UNIT_SEM_P61,
+  TAIL_P63,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -2025,6 +2026,68 @@ export function MuseumResearch() {
                   {t(
                     "Identiteta enote ODPRTA [~] (paleografija/dokumenti — naslednja faza); Implikacija za P60: pas pravilo [0.8, 1.25] izbere vrstico v konvenciji, številčno primerljivi s sodobno meritvijo — atribucija smiselna kot RELATIVA, atribucije P60 NESPREMENJENE; join v2 NESPREMENJEN (sha256 == P60 dokaz, I2); P59 pokritost POPOLNA (P62: 135/135 × 2 — moda B blattDist II 32 · IV 15). Strojno berljivo: research/issue17/ps-unit-semantics.json + runtime src/data/atlas/ps-unit-semantics.json (/api/atlas/ps-unit-semantics; gursCompact za produkcijo preracun).",
                     "Unit identity OPEN [~] (paleography/documents — next phase); implication for P60: the [0.8, 1.25] band selects the row in the convention numerically comparable with the modern measurement — attribution sound as RELATIVE, P60 attributions UNCHANGED; join v2 UNCHANGED (sha256 == P60 evidence, I2); P59 coverage FULL (P62: 135/135 × 2 — mode B blattDist II 32 · IV 15). Machine-readable: research/issue17/ps-unit-semantics.json + the runtime src/data/atlas/ps-unit-semantics.json (/api/atlas/ps-unit-semantics; gursCompact for the production re-computation).",
+                  )}
+                </p>
+              </div>
+            </div>
+
+            {/* P63 — zaključne strani registra PS (Blatt IIb + tail transkripcija) */}
+            <div className="min-w-0 rounded-xl border bg-card p-6 shadow-sm">
+              <h3 className="flex flex-wrap items-center gap-2 font-display text-lg font-semibold">
+                <ScrollText className="size-4 text-primary" aria-hidden="true" />
+                {t("Zaključne strani registra — Blatt IIb (P63)", "Register tail pages — Blatt IIb (P63)")}
+                <StatusBadge status={TAIL_P63.status} />
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                {t(
+                  "Paleografska zaključitev repa registra (str. 138–139) s 3 neodvisnimi prehodi (VLM 2× + agent-oči na izrezih 4×–5×; 2-od-3 konsenz, 42 flagov [~]).",
+                  "Paleographic completion of the register tail (pp. 138–139) with 3 independent passes (VLM 2× + agent eyes on 4×–5× crops; 2-of-3 consensus, 42 flags [~]).",
+                )}
+              </p>
+              <div className="mt-4 grid gap-2 text-xs sm:grid-cols-2">
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("Blatt IIb @ p139 (KOREKCIJA)", "Blatt IIb @ p139 (CORRECTION)")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "Glava je 'Nro. des Blattes.' — prejšnja očesna razlaga 'Nro. des Hauses.' NAPAČNA → P58 open #6 ZAPRT; numerele 'IIb' @ r1 (2-od-3) — pod-list NOV v strukturi; Parzelle 41–60 (duplikat Blatt I številk)",
+                      "The header is 'Nro. des Blattes.' — the earlier 'Nro. des Hauses.' eye reading was WRONG → P58 open #6 CLOSED; numeral 'IIb' @ r1 (2-of-3) — a sub-leaf NEW to the structure; parcels 41–60 (duplicate Blatt I numbers)",
+                    )}
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("Lastninske kolone (p139 leva)", "Owner columns (p139 left)")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "Haus Nº rdeče (1082, 1030, 998[~], 266, 695, 88, ...) · 'Vor und Zuname' = ŠTEVILKE 62–80 (ne imena; r1 'G. l. fin.'[~]) · Stand + Wohnort (rdeče); vsote 82|81, 125|183",
+                      "Red Haus Nº (1082, 1030, 998[~], 266, 695, 88, ...) · 'Vor und Zuname' = NUMBERS 62–80 (not names; r1 'G. l. fin.'[~]) · Stand + Wohnort (red); sums 82|81, 125|183",
+                    )}
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("Kultura rekapitulacija (p139 desna)", "Culture recap (p139 right)")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "Kulturs Gattung 81–100 · Classe 101–120 · Fürtrag 189|1228 · Capital fl (rdeče: 1860, 1146, —, 831, ...) + kr (Σ=153) · vsota 162|1447 [~]",
+                      "Kulturs Gattung 81–100 · Classe 101–120 · transfer 189|1228 · Capital fl (red: 1860, 1146, —, 831, ...) + kr (Σ=153) · total 162|1447 [~]",
+                    )}
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("p138: izbrisana leva + 'Zusammenstellung' desna", "p138: erased left + 'Zusammenstellung' right")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "Bledi ostanki: 'T. 191'[~] @ r14, parzelle 23/24[~], '89/86'[~] @ r27; desna: Wiese 1–20, Classe 21–40, vsota 101|15320 [~]",
+                      "Faint remains: 'T. 191'[~] @ r14, parcels 23/24[~], '89/86'[~] @ r27; right: Wiese 1–20, Classe 21–40, total 101|15320 [~]",
+                    )}
+                  </p>
+                </div>
+              </div>
+              <div className="mt-3 rounded-lg border border-emerald-200 bg-emerald-50/60 p-3 dark:border-emerald-900/50 dark:bg-emerald-950/30">
+                <p className="text-[11px] leading-relaxed text-foreground/80">
+                  <span className="font-semibold">{t("Pošten status: ", "Honest status: ")}</span>
+                  {t(
+                    "Razlaga števil 62–80 @ 'Vor und Zuname' (konskripcija/Einlage?) ODPRTA [~]; enote vsot 82|81, 125|183, 162|1447 ODPRETE [~]; join v2 NESPREMENJEN (p138/139 brez vrstic v v2 — 211/110/17 nespremenjeni). Strojno berljivo: research/issue17/ps-tail-pages.json + runtime src/data/atlas/ps-tail-pages.json (/api/atlas/ps-tail-pages).",
+                    "Interpretation of numbers 62–80 @ 'Vor und Zuname' (conscription/Einlage?) OPEN [~]; unit meaning of sums 82|81, 125|183, 162|1447 OPEN [~]; join v2 UNCHANGED (p138/139 without v2 rows — 211/110/17 unchanged). Machine-readable: research/issue17/ps-tail-pages.json + the runtime src/data/atlas/ps-tail-pages.json (/api/atlas/ps-tail-pages).",
                   )}
                 </p>
               </div>

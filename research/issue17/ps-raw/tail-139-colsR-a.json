@@ -1,0 +1,73 @@
+{
+ "part": "colsR-a",
+ "model": "glm-5v-turbo",
+ "created": 1791998678,
+ "usage": {
+  "completion_tokens": 215,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3182,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3397
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "stand": null,
+    "wohnort": "63"
+   },
+   {
+    "row": 2,
+    "stand": "3",
+    "wohnort": "1135"
+   },
+   {
+    "row": 3,
+    "stand": "9",
+    "wohnort": "259"
+   },
+   {
+    "row": 4,
+    "stand": "2",
+    "wohnort": "410"
+   },
+   {
+    "row": 5,
+    "stand": "6",
+    "wohnort": "1318"
+   },
+   {
+    "row": 6,
+    "stand": "6",
+    "wohnort": "1560"
+   },
+   {
+    "row": 7,
+    "stand": "9",
+    "wohnort": "384"
+   },
+   {
+    "row": 8,
+    "stand": "3",
+    "wohnort": "1396"
+   },
+   {
+    "row": 9,
+    "stand": "10",
+    "wohnort": "901"
+   },
+   {
+    "row": 10,
+    "stand": "8",
+    "wohnort": "324"
+   }
+  ],
+  "vsote": [],
+  "opomba": ""
+ },
+ "content": "{\"vrstice\": [{\"row\": 1, \"stand\": null, \"wohnort\": \"63\"}, {\"row\": 2, \"stand\": \"3\", \"wohnort\": \"1135\"}, {\"row\": 3, \"stand\": \"9\", \"wohnort\": \"259\"}, {\"row\": 4, \"stand\": \"2\", \"wohnort\": \"410\"}, {\"row\": 5, \"stand\": \"6\", \"wohnort\": \"1318\"}, {\"row\": 6, \"stand\": \"6\", \"wohnort\": \"1560\"}, {\"row\": 7, \"stand\": \"9\", \"wohnort\": \"384\"}, {\"row\": 8, \"stand\": \"3\", \"wohnort\": \"1396\"}, {\"row\": 9, \"stand\": \"10\", \"wohnort\": \"901\"}, {\"row\": 10, \"stand\": \"8\", \"wohnort\": \"324\"}], \"vsote\": [], \"opomba\": \"\"}"
+}

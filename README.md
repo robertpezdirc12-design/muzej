@@ -415,3 +415,18 @@ API (statični, brez runtime AI):
 Žeton `VERCEL_TOKEN` je shranjen izključno kot šifrirana GitHub Actions
 skrivnost in ni v repozitoriju. Datoteki `.gitignore` in `.vercelignore`
 preprečujeta prenos `.env*` in lokalnih datotek pri deployu.
+
+- **zaključne strani registra PS — Blatt IIb (P63, issue #13)** — rep
+  registra (138–139) paleografsko zaključen s 3 neodvisnimi prehodi (VLM 2×
+  + agent-oči na izrezih 4×–5×; 2-od-3 konsenz, 42 flagov [~]): **p139 =
+  Blatt IIb** (pod-list NOV v strukturi) s parcelami 41–60 (duplikat Blatt I
+  številk) + lastninske kolone — Haus Nº rdeče, **'Vor und Zuname' =
+  številke 62–80 (ne imena)**; desna stran = kultura rekapitulacija 81–100 /
+  Classe 101–120; **KOREKCIJA: prejšnja očesna razlaga 'Nro. des Hauses.' =
+  očesna napaka** (glava je 'Nro. des Blattes.') — **P58 open #6 ZAPRT**;
+  p138 = izbrisana leva tabela + 'Zusammenstellung der Grundstücke' (Wiese
+  1–20); vsote 82|81, 125|183, Fürtrag 189|1228, 162|1447 (enote odprte
+  [~]); veriga re-run P59→P60→P61 (`--check` bajtno PASS; I8 pin
+  efe39f41…); `scripts/p63_ps_tail_pages.py` (I1–I10, `--check` bajtno) +
+  API `/api/atlas/ps-tail-pages` + kartica P63; QA 65 → **66/66**;
+  SHEET_GEOREFS in join v2 nespremanjeni.

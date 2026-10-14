@@ -1,0 +1,144 @@
+{
+ "target": "139-right",
+ "part": "a",
+ "model": "glm-5v-turbo",
+ "created": 1791998228,
+ "usage": {
+  "completion_tokens": 982,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 4982,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 5964
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "kultur": "81",
+    "noe": "4",
+    "klafter": "590",
+    "classe": "101",
+    "ertragFl": null,
+    "ertragKr": "146",
+    "capitalFl": "1860",
+    "capitalKr": null,
+    "anmerkung": null
+   },
+   {
+    "row": 2,
+    "kultur": "82",
+    "noe": "8",
+    "klafter": "686",
+    "classe": "102",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": null,
+    "capitalKr": "146",
+    "anmerkung": null
+   },
+   {
+    "row": 3,
+    "kultur": "83",
+    "noe": null,
+    "klafter": "296",
+    "classe": "103",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": null,
+    "capitalKr": null,
+    "anmerkung": null
+   },
+   {
+    "row": 4,
+    "kultur": "84",
+    "noe": "2",
+    "klafter": "869",
+    "classe": "104",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": null,
+    "capitalKr": "831",
+    "anmerkung": null
+   },
+   {
+    "row": 5,
+    "kultur": "85",
+    "noe": "6",
+    "klafter": "1809",
+    "classe": "105",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": "8",
+    "capitalKr": "929",
+    "anmerkung": null
+   },
+   {
+    "row": 6,
+    "kultur": "86",
+    "noe": "4",
+    "klafter": "991",
+    "classe": "106",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": "16",
+    "capitalKr": "952",
+    "anmerkung": null
+   },
+   {
+    "row": 7,
+    "kultur": "87",
+    "noe": "3",
+    "klafter": "64",
+    "classe": "107",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": "16",
+    "capitalKr": "1086",
+    "anmerkung": null
+   },
+   {
+    "row": 8,
+    "kultur": "88",
+    "noe": "12",
+    "klafter": "1177",
+    "classe": "108",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": "6",
+    "capitalKr": "1234",
+    "anmerkung": null
+   },
+   {
+    "row": 9,
+    " kultur": "89",
+    "noe": "10",
+    "klafter": "27",
+    "classe": "109",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": "12",
+    "capitalKr": "80",
+    "anmerkung": null
+   },
+   {
+    "row": 10,
+    "kultur": "90",
+    "noe": "8",
+    "klafter": "198",
+    "classe": "110",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": "6",
+    "capitalKr": "128",
+    "anmerkung": null
+   }
+  ],
+  "vsote": [],
+  "opomba": "V tem izrezu (vrstice 81–90) ni vidnih spodnjih vsot (pod debelo črto). Vrstica 1: v stolpcu 'Ertrag' je zapis '101/148' (morda popravek ali dve vrednosti), v 'Ertrag kr' je rdeče '146', v 'Capital Werth fl.' je rdeče '1860'. Vrstica 89 ima pri številki '89' naključne črtice (prečrtano/označeno)."
+ },
+ "content": "```json\n{\n  \"vrstice\": [\n    {\n      \"row\": 1,\n      \"kultur\": \"81\",\n      \"noe\": \"4\",\n      \"klafter\": \"590\",\n      \"classe\": \"101\",\n      \"ertragFl\": null,\n      \"ertragKr\": \"146\",\n      \"capitalFl\": \"1860\",\n      \"capitalKr\": null,\n      \"anmerkung\": null\n    },\n    {\n      \"row\": 2,\n      \"kultur\": \"82\",\n      \"noe\": \"8\",\n      \"klafter\": \"686\",\n      \"classe\": \"102\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": null,\n      \"capitalKr\": \"146\",\n      \"anmerkung\": null\n    },\n    {\n      \"row\": 3,\n      \"kultur\": \"83\",\n      \"noe\": null,\n      \"klafter\": \"296\",\n      \"classe\": \"103\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": null,\n      \"capitalKr\": null,\n      \"anmerkung\": null\n    },\n    {\n      \"row\": 4,\n      \"kultur\": \"84\",\n      \"noe\": \"2\",\n      \"klafter\": \"869\",\n      \"classe\": \"104\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": null,\n      \"capitalKr\": \"831\",\n      \"anmerkung\": null\n    },\n    {\n      \"row\": 5,\n      \"kultur\": \"85\",\n      \"noe\": \"6\",\n      \"klafter\": \"1809\",\n      \"classe\": \"105\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": \"8\",\n      \"capitalKr\": \"929\",\n      \"anmerkung\": null\n    },\n    {\n      \"row\": 6,\n      \"kultur\": \"86\",\n      \"noe\": \"4\",\n      \"klafter\": \"991\",\n      \"classe\": \"106\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": \"16\",\n      \"capitalKr\": \"952\",\n      \"anmerkung\": null\n    },\n    {\n      \"row\": 7,\n      \"kultur\": \"87\",\n      \"noe\": \"3\",\n      \"klafter\": \"64\",\n      \"classe\": \"107\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": \"16\",\n      \"capitalKr\": \"1086\",\n      \"anmerkung\": null\n    },\n    {\n      \"row\": 8,\n      \"kultur\": \"88\",\n      \"noe\": \"12\",\n      \"klafter\": \"1177\",\n      \"classe\": \"108\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": \"6\",\n      \"capitalKr\": \"1234\",\n      \"anmerkung\": null\n    },\n    {\n      \"row\": 9,\n      \" kultur\": \"89\",\n      \"noe\": \"10\",\n      \"klafter\": \"27\",\n      \"classe\": \"109\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": \"12\",\n      \"capitalKr\": \"80\",\n      \"anmerkung\": null\n    },\n    {\n      \"row\": 10,\n      \"kultur\": \"90\",\n      \"noe\": \"8\",\n      \"klafter\": \"198\",\n      \"classe\": \"110\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": \"6\",\n      \"capitalKr\": \"128\",\n      \"anmerkung\": null\n    }\n  ],\n  \"vsote\": [],\n  \"opomba\": \"V tem izrezu (vrstice 81–90) ni vidnih spodnjih vsot (pod debelo črto). Vrstica 1: v stolpcu 'Ertrag' je zapis '101/148' (morda popravek ali dve vrednosti), v 'Ertrag kr' je rdeče '146', v 'Capital Werth fl.' je rdeče '1860'. Vrstica 89 ima pri številki '89' naključne črtice (prečrtano/označeno).\"\n}\n```"
+}

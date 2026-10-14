@@ -1,0 +1,1505 @@
+{
+ "date": "2026-10-14",
+ "inputs": {
+  "blattHeaders": "src/data/atlas/ps-blatt-headers.json (P59 v2 + P63 korekcija)",
+  "blattReads": "research/issue17/ps-raw/blatt-138{,-pass2}, blatt-139{,-pass2}.json (P62)",
+  "crops": "/tmp/p63/ (p138 6× 4×; p139 head/sum/full/cols/right/desna @ 2–5×, Lanczos q95)",
+  "tailReads": "research/issue17/ps-raw/tail-*.json (11 VLM branj, skip-existing)"
+ },
+ "invariants": [
+  "I1 pokritost 11/11 tail VLM + 2/2 blatt × 2 prehoda",
+  "I2 parzelle 41–60",
+  "I3 VorUndZuname 62–80",
+  "I4 IIb konsenz == P59 pageAttribution",
+  "I5 kultur 81–100 + classe 101–120 + Fürtrag 189|1228",
+  "I6 Capital pini (r1 1860, r20 584, kr Σ=147)",
+  "I7 vsote 82|81 + 125|183",
+  "I8 p138 ostanki + Zusammenstellung",
+  "I9 dokaz ⊇ runtime bajtno",
+  "I10 determinizem"
+ ],
+ "method": "3 neodvisna prehoda: (A) agent-oči na izrezih 3×/4×/5×; (B) VLM glm-5v-turbo na polnih izrezih (tail-139-left/right, tail-138-left/right); (C) VLM glm-5v-turbo na fokusiranih izrezih kolon 5× (tail-139-colsL/colsR/full-b2) + agent-oči 3. prehod na desnih kolonah 5×; 2-od-3 konsenz, razhodi → [~] + alternatives; p138 desna in p139 desna tretji prehod očesno",
+ "next": [
+  "razlaga 'Vor und Zuname' = številke 62–80 (konskripcija/Einlage?) — povezava s PF protokolom",
+  "razlaga enot vsot 82|81, 125|183, 162|1447 (dominikalni/rustikalni deleži?) [~]",
+  "p138 rdeči zapisi 18–40 @ srednja kolona — paleografska razlaga [~]",
+  "'Zusammenstellung der Grundstücke' (p138 desna) ↔ kulture tabele p61–99 — povezava [~]"
+ ],
+ "p138": {
+  "desna": {
+   "classeRange": "21–40",
+   "edge": {
+    "opomba": "robni zapis spodaj [~]",
+    "vrednost": [
+     "89",
+     [
+      "78"
+     ]
+    ]
+   },
+   "kulturRange": "1.–20. (Wiese)",
+   "rows": 20,
+   "sums": {
+    "klafter": "15320",
+    "noe": "101"
+   },
+   "title": "Zusammenstellung der Grundstücke[~]",
+   "vmesVsota": "Suma 120 (rdeče prečrtano) + Suma 403 @ ~r20/~r40 — oči z4/z6 [~]"
+  },
+  "leva": {
+   "ostanki": [
+    {
+     "blatt": "T. 191[~]",
+     "parzelle": "23[~]",
+     "row": 14
+    },
+    {
+     "parzelle": "24[~]",
+     "row": 15
+    },
+    {
+     "blatt": [
+      "89",
+      [
+       "86"
+      ]
+     ],
+     "parzelle": [
+      "86",
+      [
+       "89"
+      ]
+     ],
+     "row": 27
+    }
+   ],
+   "podglave": "'Lotus'/'Lotas'[~], 'Lung'/'Lang'[~], 'Al'/'Ae'[~] rokopisne podglave pod 'Vor und Zuname' (p138 z1 oči + VLM) [~]",
+   "rdeciZapisi": "rdeče prečrtani zapisi 18–40 @ srednja kolona leve strani (x≈320–420, cona Rustical/Haus) — oči z4/z6, VLM neviden [~]",
+   "status": "tabela IZBRISANA (bledi ostanki)"
+  }
+ },
+ "p139": {
+  "blatt": "IIb @ r1 + ditto (P63 KOREKCIJA — glava je 'Nro. des Blattes.', prejšnja očesna razlaga 'Nro. des Hauses.' očesna napaka; 'b' [~]; P58 open #6 ZAPRT)",
+  "desna": [
+   {
+    "alternatives": {
+     "klafter": [
+      "490"
+     ]
+    },
+    "capitalFl": "1860",
+    "capitalKr": "4",
+    "classe": "101",
+    "flags": [
+     "klafter"
+    ],
+    "klafter": "590",
+    "kultur": "81",
+    "noe": "4",
+    "row": 1
+   },
+   {
+    "alternatives": {
+     "capitalFl": [
+      "146"
+     ]
+    },
+    "capitalFl": "1146",
+    "capitalKr": "7",
+    "classe": "102",
+    "flags": [
+     "capitalFl"
+    ],
+    "klafter": "686",
+    "kultur": "82",
+    "noe": "8",
+    "row": 2
+   },
+   {
+    "alternatives": {
+     "noe": [
+      null
+     ]
+    },
+    "capitalFl": null,
+    "capitalKr": null,
+    "classe": "103",
+    "flags": [
+     "noe"
+    ],
+    "klafter": "296",
+    "kultur": "83",
+    "noe": "3",
+    "row": 3
+   },
+   {
+    "alternatives": {
+     "klafter": [
+      "864"
+     ]
+    },
+    "capitalFl": "831",
+    "capitalKr": "4",
+    "classe": "104",
+    "flags": [
+     "klafter"
+    ],
+    "klafter": "869",
+    "kultur": "84",
+    "noe": "2",
+    "row": 4
+   },
+   {
+    "alternatives": {
+     "klafter": [
+      "1309"
+     ]
+    },
+    "capitalFl": "909",
+    "capitalKr": "8",
+    "classe": "105",
+    "flags": [
+     "klafter"
+    ],
+    "klafter": "1809",
+    "kultur": "85",
+    "noe": "6",
+    "row": 5
+   },
+   {
+    "alternatives": {
+     "klafter": [
+      "921"
+     ]
+    },
+    "capitalFl": "982",
+    "capitalKr": "15",
+    "classe": "106",
+    "flags": [
+     "klafter"
+    ],
+    "klafter": "991",
+    "kultur": "86",
+    "noe": "4",
+    "row": 6
+   },
+   {
+    "alternatives": null,
+    "capitalFl": "1086",
+    "capitalKr": "16",
+    "classe": "107",
+    "flags": [],
+    "klafter": "64",
+    "kultur": "87",
+    "noe": "3",
+    "row": 7
+   },
+   {
+    "alternatives": {
+     "klafter": [
+      "1177"
+     ]
+    },
+    "capitalFl": "1234",
+    "capitalKr": "6",
+    "classe": "108",
+    "flags": [
+     "klafter"
+    ],
+    "klafter": "1179",
+    "kultur": "88",
+    "noe": "12",
+    "row": 8
+   },
+   {
+    "alternatives": null,
+    "capitalFl": "80",
+    "capitalKr": "12",
+    "classe": "109",
+    "flags": [],
+    "klafter": "27",
+    "kultur": "89",
+    "noe": "10",
+    "row": 9
+   },
+   {
+    "alternatives": {
+     "klafter": [
+      "198"
+     ]
+    },
+    "capitalFl": "128",
+    "capitalKr": "6",
+    "classe": "110",
+    "flags": [
+     "klafter"
+    ],
+    "klafter": "193",
+    "kultur": "90",
+    "noe": "8",
+    "row": 10
+   },
+   {
+    "alternatives": {
+     "klafter": [
+      "1162"
+     ]
+    },
+    "capitalFl": "781",
+    "capitalKr": "6",
+    "classe": "111",
+    "flags": [
+     "klafter"
+    ],
+    "klafter": "1462",
+    "kultur": "91",
+    "noe": "13",
+    "row": 11
+   },
+   {
+    "alternatives": {
+     "klafter": [
+      "1507"
+     ]
+    },
+    "capitalFl": "366",
+    "capitalKr": "4",
+    "classe": "112",
+    "flags": [
+     "klafter"
+    ],
+    "klafter": "1807",
+    "kultur": "92",
+    "noe": "11",
+    "row": 12
+   },
+   {
+    "alternatives": {
+     "capitalFl": [
+      "1169"
+     ],
+     "klafter": [
+      "1329"
+     ]
+    },
+    "capitalFl": "1149",
+    "capitalKr": null,
+    "classe": "113",
+    "flags": [
+     "klafter",
+     "capitalFl"
+    ],
+    "klafter": "1829",
+    "kultur": "93",
+    "noe": "14",
+    "row": 13
+   },
+   {
+    "alternatives": {
+     "capitalFl": [
+      "997"
+     ]
+    },
+    "capitalFl": "999",
+    "capitalKr": "6",
+    "classe": "114",
+    "flags": [
+     "capitalFl"
+    ],
+    "klafter": "904",
+    "kultur": "94",
+    "noe": "12",
+    "row": 14
+   },
+   {
+    "alternatives": {
+     "capitalKr": [
+      "5"
+     ]
+    },
+    "capitalFl": "1060",
+    "capitalKr": "8",
+    "classe": "115",
+    "flags": [
+     "capitalKr"
+    ],
+    "klafter": "178",
+    "kultur": "95",
+    "noe": "11",
+    "row": 15
+   },
+   {
+    "alternatives": {
+     "klafter": [
+      "888"
+     ]
+    },
+    "capitalFl": "1513",
+    "capitalKr": "10",
+    "classe": "116",
+    "flags": [
+     "klafter"
+    ],
+    "klafter": "805",
+    "kultur": "96",
+    "noe": "11",
+    "row": 16
+   },
+   {
+    "alternatives": null,
+    "capitalFl": "649",
+    "capitalKr": "13",
+    "classe": "117",
+    "flags": [],
+    "klafter": "1006",
+    "kultur": "97",
+    "noe": "11",
+    "row": 17
+   },
+   {
+    "alternatives": {
+     "klafter": [
+      "679"
+     ]
+    },
+    "capitalFl": "1346",
+    "capitalKr": "16",
+    "classe": "118",
+    "flags": [
+     "klafter"
+    ],
+    "klafter": "693",
+    "kultur": "98",
+    "noe": "13",
+    "row": 18
+   },
+   {
+    "alternatives": {
+     "klafter": [
+      "479"
+     ]
+    },
+    "capitalFl": "1046",
+    "capitalKr": "12",
+    "classe": "119",
+    "flags": [
+     "klafter"
+    ],
+    "klafter": "449",
+    "kultur": "99",
+    "noe": "17",
+    "row": 19
+   },
+   {
+    "alternatives": null,
+    "capitalFl": "584",
+    "capitalKr": null,
+    "classe": "120",
+    "flags": [],
+    "klafter": "701",
+    "kultur": "100",
+    "noe": "13",
+    "row": 20
+   }
+  ],
+  "desnaOpombe": {
+   "capitalKr_r3": "r3 = prazna ('—' prečrtano)",
+   "ertrag": "Ertrag fl|kr PRAZNA @ r2–20; r1 = '101⁴⁄₅'/'101 ja8'[~] (blede zapis z popravek)",
+   "robniZapisi": "'156', '9', '6.49'[~], '116', '146'[~] @ spodnji rob [~]"
+  },
+  "glava": "'Nro. des Blattes.' | 'Benennung des Riedes.' | 'Nro. der Parzelle.' | 'Gesetzliche Eigenschaft des Grundstückes' (Dominical | Rustical ×3) | 'Haus Nº' | 'Vor und Zuname' | 'Stand' | 'Wohnort' — DESNA: 'Des Grundstückes': 'Kulturs Gattung' | 'Flächen Inhalt' (N.Oe Sache | Quadrat Klafter) | 'Classe' | 'Reiner jährlicher Ertrag in Metall-Münze' (fl|kr) | 'Capital Werth nach p.Ct.' (fl|kr) | 'Anmerkung.'",
+  "leva": [
+   {
+    "alternatives": null,
+    "dominical": "1",
+    "flags": [],
+    "haus": "1082",
+    "row": 1,
+    "stand": null,
+    "vorUndZuname": "G. l. fin.[~]",
+    "wohnort": "63"
+   },
+   {
+    "alternatives": null,
+    "dominical": "1",
+    "flags": [],
+    "haus": "1030",
+    "row": 2,
+    "stand": "3",
+    "vorUndZuname": "62",
+    "wohnort": "1135"
+   },
+   {
+    "alternatives": {
+     "haus": [
+      "398"
+     ],
+     "wohnort": [
+      "859",
+      "259"
+     ]
+    },
+    "dominical": "1",
+    "flags": [
+     "haus",
+     "wohnort"
+    ],
+    "haus": "998",
+    "row": 3,
+    "stand": "9",
+    "vorUndZuname": "63",
+    "wohnort": "289"
+   },
+   {
+    "alternatives": null,
+    "dominical": "3",
+    "flags": [],
+    "haus": "266",
+    "row": 4,
+    "stand": "2",
+    "vorUndZuname": "64",
+    "wohnort": "410"
+   },
+   {
+    "alternatives": null,
+    "dominical": "1",
+    "flags": [],
+    "haus": "695",
+    "row": 5,
+    "stand": "6",
+    "vorUndZuname": "65",
+    "wohnort": "1318"
+   },
+   {
+    "alternatives": null,
+    "dominical": "5",
+    "flags": [],
+    "haus": "88",
+    "row": 6,
+    "stand": "6",
+    "vorUndZuname": "66",
+    "wohnort": "1560"
+   },
+   {
+    "alternatives": {
+     "haus": [
+      "1045",
+      "1095"
+     ]
+    },
+    "dominical": "1",
+    "flags": [
+     "haus"
+    ],
+    "haus": "1048",
+    "row": 7,
+    "stand": "9",
+    "vorUndZuname": "67",
+    "wohnort": "384"
+   },
+   {
+    "alternatives": {
+     "haus": [
+      "386"
+     ],
+     "wohnort": [
+      "1394",
+      "1396"
+     ]
+    },
+    "dominical": "1",
+    "flags": [
+     "haus",
+     "wohnort"
+    ],
+    "haus": "286",
+    "row": 8,
+    "stand": "3",
+    "vorUndZuname": "68",
+    "wohnort": "1294"
+   },
+   {
+    "alternatives": {
+     "haus": [
+      "1204",
+      "1254"
+     ]
+    },
+    "dominical": "1",
+    "flags": [
+     "haus"
+    ],
+    "haus": "1284",
+    "row": 9,
+    "stand": "10",
+    "vorUndZuname": "69",
+    "wohnort": "901"
+   },
+   {
+    "alternatives": {
+     "haus": [
+      "1217",
+      "1244"
+     ]
+    },
+    "dominical": "1",
+    "flags": [
+     "haus"
+    ],
+    "haus": "1317",
+    "row": 10,
+    "stand": "8",
+    "vorUndZuname": "70",
+    "wohnort": "324"
+   },
+   {
+    "alternatives": {
+     "dominical": [
+      "1"
+     ],
+     "wohnort": [
+      "7"
+     ]
+    },
+    "dominical": "7",
+    "flags": [
+     "dominical",
+     "wohnort"
+    ],
+    "haus": "960",
+    "row": 11,
+    "stand": "13",
+    "vorUndZuname": "71",
+    "wohnort": "4"
+   },
+   {
+    "alternatives": {
+     "dominical": [
+      "1"
+     ],
+     "stand": [
+      "1"
+     ]
+    },
+    "dominical": "7",
+    "flags": [
+     "dominical",
+     "stand"
+    ],
+    "haus": "943",
+    "row": 12,
+    "stand": "4",
+    "vorUndZuname": "72",
+    "wohnort": "1482"
+   },
+   {
+    "alternatives": {
+     "dominical": [
+      "1"
+     ],
+     "haus": [
+      "993"
+     ],
+     "stand": [
+      "1"
+     ]
+    },
+    "dominical": "7",
+    "flags": [
+     "dominical",
+     "haus",
+     "stand"
+    ],
+    "haus": "973",
+    "row": 13,
+    "stand": "4",
+    "vorUndZuname": "73",
+    "wohnort": "824"
+   },
+   {
+    "alternatives": {
+     "wohnort": [
+      "1052"
+     ]
+    },
+    "dominical": "1",
+    "flags": [
+     "wohnort"
+    ],
+    "haus": "1359",
+    "row": 14,
+    "stand": "6",
+    "vorUndZuname": "74",
+    "wohnort": "1082"
+   },
+   {
+    "alternatives": {
+     "stand": [
+      "5"
+     ],
+     "wohnort": [
+      "1244"
+     ]
+    },
+    "dominical": "1",
+    "flags": [
+     "stand",
+     "wohnort"
+    ],
+    "haus": "946",
+    "row": 15,
+    "stand": "8",
+    "vorUndZuname": "75",
+    "wohnort": "1246"
+   },
+   {
+    "alternatives": {
+     "stand": [
+      "1"
+     ],
+     "wohnort": [
+      "489"
+     ]
+    },
+    "dominical": "1",
+    "flags": [
+     "stand",
+     "wohnort"
+    ],
+    "haus": "306",
+    "row": 16,
+    "stand": "4",
+    "vorUndZuname": "76",
+    "wohnort": "789"
+   },
+   {
+    "alternatives": null,
+    "dominical": "2",
+    "flags": [],
+    "haus": "762",
+    "row": 17,
+    "stand": "2",
+    "vorUndZuname": "77",
+    "wohnort": "180"
+   },
+   {
+    "alternatives": {
+     "wohnort": [
+      "564"
+     ]
+    },
+    "dominical": "1",
+    "flags": [
+     "wohnort"
+    ],
+    "haus": "1484",
+    "row": 18,
+    "stand": "2",
+    "vorUndZuname": "78",
+    "wohnort": "864"
+   },
+   {
+    "alternatives": {
+     "haus": [
+      "115",
+      "118"
+     ],
+     "stand": [
+      "5"
+     ],
+     "wohnort": [
+      "534"
+     ]
+    },
+    "dominical": "5",
+    "flags": [
+     "haus",
+     "stand",
+     "wohnort"
+    ],
+    "haus": "145",
+    "row": 19,
+    "stand": "8",
+    "vorUndZuname": "79",
+    "wohnort": "834"
+   },
+   {
+    "alternatives": {
+     "haus": [
+      "844",
+      "944"
+     ],
+     "wohnort": [
+      "1154"
+     ]
+    },
+    "dominical": "3",
+    "flags": [
+     "haus",
+     "wohnort"
+    ],
+    "haus": "345",
+    "row": 20,
+    "stand": "3",
+    "vorUndZuname": "80",
+    "wohnort": "1159"
+   }
+  ],
+  "parzelle": "41–60 (20 vrstic, naraščajoče)",
+  "vorUndZuname": "rokopisne ŠTEVILKE 62–80 @ r2–20 (ne imena); r1 = 'G. l. fin.'[~] — interpretacija (konskripcija/Einlage?) ODPRTA [~]",
+  "vsote": {
+   "desna": {
+    "furetragKlafter": "1228",
+    "furetragNoe": "189",
+    "totalCapA": "162",
+    "totalCapB": "1447"
+   },
+   "leva": {
+    "dominical": "82",
+    "haus": "81",
+    "stand": "125",
+    "wohnort": "183"
+   },
+   "opomba": "82|81 = vsoti pod Dominical/Haus črto (vsota vidnih Dominical = 32 — rekapitulacija čez več strani [~]); 125|183 = vsoti pod Stand/Wohnort; Fürtrag 189|1228 = preneseno s prejšnje tabele [~] (QK te strani = 16543); 162|1447 = vsoti pod Capital črto (razlaga enot/fl-kr ODPRTA [~])"
+  }
+ },
+ "runtime": {
+  "blattIIb": {
+   "page": 139,
+   "parzelle": "41–60",
+   "vorUndZuname": "62–80",
+   "vsote": {
+    "dominical": "82",
+    "haus": "81",
+    "stand": "125",
+    "wohnort": "183"
+   }
+  },
+  "date": "2026-10-14",
+  "desna": [
+   {
+    "alternatives": {
+     "klafter": [
+      "490"
+     ]
+    },
+    "capitalFl": "1860",
+    "capitalKr": "4",
+    "classe": "101",
+    "flags": [
+     "klafter"
+    ],
+    "klafter": "590",
+    "kultur": "81",
+    "noe": "4",
+    "row": 1
+   },
+   {
+    "alternatives": {
+     "capitalFl": [
+      "146"
+     ]
+    },
+    "capitalFl": "1146",
+    "capitalKr": "7",
+    "classe": "102",
+    "flags": [
+     "capitalFl"
+    ],
+    "klafter": "686",
+    "kultur": "82",
+    "noe": "8",
+    "row": 2
+   },
+   {
+    "alternatives": {
+     "noe": [
+      null
+     ]
+    },
+    "capitalFl": null,
+    "capitalKr": null,
+    "classe": "103",
+    "flags": [
+     "noe"
+    ],
+    "klafter": "296",
+    "kultur": "83",
+    "noe": "3",
+    "row": 3
+   },
+   {
+    "alternatives": {
+     "klafter": [
+      "864"
+     ]
+    },
+    "capitalFl": "831",
+    "capitalKr": "4",
+    "classe": "104",
+    "flags": [
+     "klafter"
+    ],
+    "klafter": "869",
+    "kultur": "84",
+    "noe": "2",
+    "row": 4
+   },
+   {
+    "alternatives": {
+     "klafter": [
+      "1309"
+     ]
+    },
+    "capitalFl": "909",
+    "capitalKr": "8",
+    "classe": "105",
+    "flags": [
+     "klafter"
+    ],
+    "klafter": "1809",
+    "kultur": "85",
+    "noe": "6",
+    "row": 5
+   },
+   {
+    "alternatives": {
+     "klafter": [
+      "921"
+     ]
+    },
+    "capitalFl": "982",
+    "capitalKr": "15",
+    "classe": "106",
+    "flags": [
+     "klafter"
+    ],
+    "klafter": "991",
+    "kultur": "86",
+    "noe": "4",
+    "row": 6
+   },
+   {
+    "alternatives": null,
+    "capitalFl": "1086",
+    "capitalKr": "16",
+    "classe": "107",
+    "flags": [],
+    "klafter": "64",
+    "kultur": "87",
+    "noe": "3",
+    "row": 7
+   },
+   {
+    "alternatives": {
+     "klafter": [
+      "1177"
+     ]
+    },
+    "capitalFl": "1234",
+    "capitalKr": "6",
+    "classe": "108",
+    "flags": [
+     "klafter"
+    ],
+    "klafter": "1179",
+    "kultur": "88",
+    "noe": "12",
+    "row": 8
+   },
+   {
+    "alternatives": null,
+    "capitalFl": "80",
+    "capitalKr": "12",
+    "classe": "109",
+    "flags": [],
+    "klafter": "27",
+    "kultur": "89",
+    "noe": "10",
+    "row": 9
+   },
+   {
+    "alternatives": {
+     "klafter": [
+      "198"
+     ]
+    },
+    "capitalFl": "128",
+    "capitalKr": "6",
+    "classe": "110",
+    "flags": [
+     "klafter"
+    ],
+    "klafter": "193",
+    "kultur": "90",
+    "noe": "8",
+    "row": 10
+   },
+   {
+    "alternatives": {
+     "klafter": [
+      "1162"
+     ]
+    },
+    "capitalFl": "781",
+    "capitalKr": "6",
+    "classe": "111",
+    "flags": [
+     "klafter"
+    ],
+    "klafter": "1462",
+    "kultur": "91",
+    "noe": "13",
+    "row": 11
+   },
+   {
+    "alternatives": {
+     "klafter": [
+      "1507"
+     ]
+    },
+    "capitalFl": "366",
+    "capitalKr": "4",
+    "classe": "112",
+    "flags": [
+     "klafter"
+    ],
+    "klafter": "1807",
+    "kultur": "92",
+    "noe": "11",
+    "row": 12
+   },
+   {
+    "alternatives": {
+     "capitalFl": [
+      "1169"
+     ],
+     "klafter": [
+      "1329"
+     ]
+    },
+    "capitalFl": "1149",
+    "capitalKr": null,
+    "classe": "113",
+    "flags": [
+     "klafter",
+     "capitalFl"
+    ],
+    "klafter": "1829",
+    "kultur": "93",
+    "noe": "14",
+    "row": 13
+   },
+   {
+    "alternatives": {
+     "capitalFl": [
+      "997"
+     ]
+    },
+    "capitalFl": "999",
+    "capitalKr": "6",
+    "classe": "114",
+    "flags": [
+     "capitalFl"
+    ],
+    "klafter": "904",
+    "kultur": "94",
+    "noe": "12",
+    "row": 14
+   },
+   {
+    "alternatives": {
+     "capitalKr": [
+      "5"
+     ]
+    },
+    "capitalFl": "1060",
+    "capitalKr": "8",
+    "classe": "115",
+    "flags": [
+     "capitalKr"
+    ],
+    "klafter": "178",
+    "kultur": "95",
+    "noe": "11",
+    "row": 15
+   },
+   {
+    "alternatives": {
+     "klafter": [
+      "888"
+     ]
+    },
+    "capitalFl": "1513",
+    "capitalKr": "10",
+    "classe": "116",
+    "flags": [
+     "klafter"
+    ],
+    "klafter": "805",
+    "kultur": "96",
+    "noe": "11",
+    "row": 16
+   },
+   {
+    "alternatives": null,
+    "capitalFl": "649",
+    "capitalKr": "13",
+    "classe": "117",
+    "flags": [],
+    "klafter": "1006",
+    "kultur": "97",
+    "noe": "11",
+    "row": 17
+   },
+   {
+    "alternatives": {
+     "klafter": [
+      "679"
+     ]
+    },
+    "capitalFl": "1346",
+    "capitalKr": "16",
+    "classe": "118",
+    "flags": [
+     "klafter"
+    ],
+    "klafter": "693",
+    "kultur": "98",
+    "noe": "13",
+    "row": 18
+   },
+   {
+    "alternatives": {
+     "klafter": [
+      "479"
+     ]
+    },
+    "capitalFl": "1046",
+    "capitalKr": "12",
+    "classe": "119",
+    "flags": [
+     "klafter"
+    ],
+    "klafter": "449",
+    "kultur": "99",
+    "noe": "17",
+    "row": 19
+   },
+   {
+    "alternatives": null,
+    "capitalFl": "584",
+    "capitalKr": null,
+    "classe": "120",
+    "flags": [],
+    "klafter": "701",
+    "kultur": "100",
+    "noe": "13",
+    "row": 20
+   }
+  ],
+  "leva": [
+   {
+    "alternatives": null,
+    "dominical": "1",
+    "flags": [],
+    "haus": "1082",
+    "row": 1,
+    "stand": null,
+    "vorUndZuname": "G. l. fin.[~]",
+    "wohnort": "63"
+   },
+   {
+    "alternatives": null,
+    "dominical": "1",
+    "flags": [],
+    "haus": "1030",
+    "row": 2,
+    "stand": "3",
+    "vorUndZuname": "62",
+    "wohnort": "1135"
+   },
+   {
+    "alternatives": {
+     "haus": [
+      "398"
+     ],
+     "wohnort": [
+      "859",
+      "259"
+     ]
+    },
+    "dominical": "1",
+    "flags": [
+     "haus",
+     "wohnort"
+    ],
+    "haus": "998",
+    "row": 3,
+    "stand": "9",
+    "vorUndZuname": "63",
+    "wohnort": "289"
+   },
+   {
+    "alternatives": null,
+    "dominical": "3",
+    "flags": [],
+    "haus": "266",
+    "row": 4,
+    "stand": "2",
+    "vorUndZuname": "64",
+    "wohnort": "410"
+   },
+   {
+    "alternatives": null,
+    "dominical": "1",
+    "flags": [],
+    "haus": "695",
+    "row": 5,
+    "stand": "6",
+    "vorUndZuname": "65",
+    "wohnort": "1318"
+   },
+   {
+    "alternatives": null,
+    "dominical": "5",
+    "flags": [],
+    "haus": "88",
+    "row": 6,
+    "stand": "6",
+    "vorUndZuname": "66",
+    "wohnort": "1560"
+   },
+   {
+    "alternatives": {
+     "haus": [
+      "1045",
+      "1095"
+     ]
+    },
+    "dominical": "1",
+    "flags": [
+     "haus"
+    ],
+    "haus": "1048",
+    "row": 7,
+    "stand": "9",
+    "vorUndZuname": "67",
+    "wohnort": "384"
+   },
+   {
+    "alternatives": {
+     "haus": [
+      "386"
+     ],
+     "wohnort": [
+      "1394",
+      "1396"
+     ]
+    },
+    "dominical": "1",
+    "flags": [
+     "haus",
+     "wohnort"
+    ],
+    "haus": "286",
+    "row": 8,
+    "stand": "3",
+    "vorUndZuname": "68",
+    "wohnort": "1294"
+   },
+   {
+    "alternatives": {
+     "haus": [
+      "1204",
+      "1254"
+     ]
+    },
+    "dominical": "1",
+    "flags": [
+     "haus"
+    ],
+    "haus": "1284",
+    "row": 9,
+    "stand": "10",
+    "vorUndZuname": "69",
+    "wohnort": "901"
+   },
+   {
+    "alternatives": {
+     "haus": [
+      "1217",
+      "1244"
+     ]
+    },
+    "dominical": "1",
+    "flags": [
+     "haus"
+    ],
+    "haus": "1317",
+    "row": 10,
+    "stand": "8",
+    "vorUndZuname": "70",
+    "wohnort": "324"
+   },
+   {
+    "alternatives": {
+     "dominical": [
+      "1"
+     ],
+     "wohnort": [
+      "7"
+     ]
+    },
+    "dominical": "7",
+    "flags": [
+     "dominical",
+     "wohnort"
+    ],
+    "haus": "960",
+    "row": 11,
+    "stand": "13",
+    "vorUndZuname": "71",
+    "wohnort": "4"
+   },
+   {
+    "alternatives": {
+     "dominical": [
+      "1"
+     ],
+     "stand": [
+      "1"
+     ]
+    },
+    "dominical": "7",
+    "flags": [
+     "dominical",
+     "stand"
+    ],
+    "haus": "943",
+    "row": 12,
+    "stand": "4",
+    "vorUndZuname": "72",
+    "wohnort": "1482"
+   },
+   {
+    "alternatives": {
+     "dominical": [
+      "1"
+     ],
+     "haus": [
+      "993"
+     ],
+     "stand": [
+      "1"
+     ]
+    },
+    "dominical": "7",
+    "flags": [
+     "dominical",
+     "haus",
+     "stand"
+    ],
+    "haus": "973",
+    "row": 13,
+    "stand": "4",
+    "vorUndZuname": "73",
+    "wohnort": "824"
+   },
+   {
+    "alternatives": {
+     "wohnort": [
+      "1052"
+     ]
+    },
+    "dominical": "1",
+    "flags": [
+     "wohnort"
+    ],
+    "haus": "1359",
+    "row": 14,
+    "stand": "6",
+    "vorUndZuname": "74",
+    "wohnort": "1082"
+   },
+   {
+    "alternatives": {
+     "stand": [
+      "5"
+     ],
+     "wohnort": [
+      "1244"
+     ]
+    },
+    "dominical": "1",
+    "flags": [
+     "stand",
+     "wohnort"
+    ],
+    "haus": "946",
+    "row": 15,
+    "stand": "8",
+    "vorUndZuname": "75",
+    "wohnort": "1246"
+   },
+   {
+    "alternatives": {
+     "stand": [
+      "1"
+     ],
+     "wohnort": [
+      "489"
+     ]
+    },
+    "dominical": "1",
+    "flags": [
+     "stand",
+     "wohnort"
+    ],
+    "haus": "306",
+    "row": 16,
+    "stand": "4",
+    "vorUndZuname": "76",
+    "wohnort": "789"
+   },
+   {
+    "alternatives": null,
+    "dominical": "2",
+    "flags": [],
+    "haus": "762",
+    "row": 17,
+    "stand": "2",
+    "vorUndZuname": "77",
+    "wohnort": "180"
+   },
+   {
+    "alternatives": {
+     "wohnort": [
+      "564"
+     ]
+    },
+    "dominical": "1",
+    "flags": [
+     "wohnort"
+    ],
+    "haus": "1484",
+    "row": 18,
+    "stand": "2",
+    "vorUndZuname": "78",
+    "wohnort": "864"
+   },
+   {
+    "alternatives": {
+     "haus": [
+      "115",
+      "118"
+     ],
+     "stand": [
+      "5"
+     ],
+     "wohnort": [
+      "534"
+     ]
+    },
+    "dominical": "5",
+    "flags": [
+     "haus",
+     "stand",
+     "wohnort"
+    ],
+    "haus": "145",
+    "row": 19,
+    "stand": "8",
+    "vorUndZuname": "79",
+    "wohnort": "834"
+   },
+   {
+    "alternatives": {
+     "haus": [
+      "844",
+      "944"
+     ],
+     "wohnort": [
+      "1154"
+     ]
+    },
+    "dominical": "3",
+    "flags": [
+     "haus",
+     "wohnort"
+    ],
+    "haus": "345",
+    "row": 20,
+    "stand": "3",
+    "vorUndZuname": "80",
+    "wohnort": "1159"
+   }
+  ],
+  "p138": {
+   "desna": {
+    "classeRange": "21–40",
+    "edge": {
+     "opomba": "robni zapis spodaj [~]",
+     "vrednost": [
+      "89",
+      [
+       "78"
+      ]
+     ]
+    },
+    "kulturRange": "1.–20. (Wiese)",
+    "rows": 20,
+    "sums": {
+     "klafter": "15320",
+     "noe": "101"
+    },
+    "title": "Zusammenstellung der Grundstücke[~]",
+    "vmesVsota": "Suma 120 (rdeče prečrtano) + Suma 403 @ ~r20/~r40 — oči z4/z6 [~]"
+   },
+   "leva": {
+    "ostanki": [
+     {
+      "blatt": "T. 191[~]",
+      "parzelle": "23[~]",
+      "row": 14
+     },
+     {
+      "parzelle": "24[~]",
+      "row": 15
+     },
+     {
+      "blatt": [
+       "89",
+       [
+        "86"
+       ]
+      ],
+      "parzelle": [
+       "86",
+       [
+        "89"
+       ]
+      ],
+      "row": 27
+     }
+    ],
+    "status": "izbrisana"
+   }
+  },
+  "statusLine": "P63 TAIL STRANI: p139 = Blatt IIb (Parzelle 41–60 + lastninske kolone; P58 open #6 ZAPRT — glava 'Nro. des Blattes.', ne 'Haus'), p138 = izbrisana leva + 'Zusammenstellung der Grundstücke' desna; transkripcija 20+20 vrstic, 42 flagov [~]; join v2 nespremenjen",
+  "task": "P63 — zaključne strani registra PS (138–139): transkripcija tail tabel + korekcija p139 = Blatt IIb (P58 open #6 zaprt)",
+  "version": 1
+ },
+ "statusLine": "P63 TAIL STRANI: p139 = Blatt IIb (Parzelle 41–60 + lastninske kolone; P58 open #6 ZAPRT — glava 'Nro. des Blattes.', ne 'Haus'), p138 = izbrisana leva + 'Zusammenstellung der Grundstücke' desna; transkripcija 20+20 vrstic, 42 flagov [~]; join v2 nespremenjen",
+ "structureImpact": {
+  "blattNumerele": "I–V + IIb (pod-list) — IIb NOV v strukturi registra PS",
+  "pageAttribution": {
+   "138": null,
+   "139": "IIb"
+  },
+  "v2Impact": "p138/139 brez vrstic v v2 → perBlattAmbiguity 211/110/17 NESPREMENJENI; join v2 NESPREMENJEN (disciplina P56/P58)"
+ },
+ "task": "P63 — zaključne strani registra PS (138–139): transkripcija tail tabel + korekcija p139 = Blatt IIb (P58 open #6 zaprt)",
+ "verdictEn": "Tail pages of the PS register completed paleographically: p139 carries Blatt IIb with parcels 41-60 (duplicate Blatt I numbers under sub-leaf IIb) and owner columns (red Haus Nº, 'Vor und Zuname' filled with numbers 62-80, not names); right page = culture recap 81-100 with Classe 101-120. p138 = erased table with faint remains + 'Zusammenstellung der Grundstuecke' (Wiese 1-20). The earlier 'Nro. des Hauses.' reading was an eye error (corrected); unit meaning of sums 82|81, 125|183, 162|1447 remains open [~]",
+ "verdictSi": "Zaključne strani registra PS paleografsko zaključene: p139 nosi Blatt IIb z parcelami 41–60 (duplikat številk Blatt I pod pod-listom IIb) in lastninskimi kolonami (Haus Nº rdeče, 'Vor und Zuname' izpolnjen s številkami 62–80 — ne imena); desna stran = kultura rekapitulacija 81–100 s Classo 101–120. p138 = izbrisana tabela z bledimi ostanki + 'Zusammenstellung der Grundstücke' (Wiese 1–20). Prejšnja očesna razlaga 'Nro. des Hauses.' @ p139 = očesna napaka (korigirana); enote vsot 82|81, 125|183, 162|1447 ostajajo razlagalno odprte [~]"
+}

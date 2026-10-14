@@ -1,0 +1,102 @@
+{
+ "part": "full-b2",
+ "model": "glm-5v-turbo",
+ "created": 1791998699,
+ "usage": {
+  "completion_tokens": 481,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 2916,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3397
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 11,
+    "parzelle": "51",
+    "dominical": "7",
+    "rustical": null,
+    "haus": "960"
+   },
+   {
+    "row": 12,
+    "parzelle": "52",
+    "dominical": "7",
+    "rustical": null,
+    "haus": "943"
+   },
+   {
+    "row": 13,
+    "parzelle": "53",
+    "dominical": "7",
+    "rustical": null,
+    "haus": "973"
+   },
+   {
+    "row": 14,
+    "parzelle": "54",
+    "dominical": "1",
+    "rustical": null,
+    "haus": "1389"
+   },
+   {
+    "row": 15,
+    "parzelle": "55",
+    "dominical": "1",
+    "rustical": null,
+    "haus": "944"
+   },
+   {
+    "row": 16,
+    "parzelle": "56",
+    "dominical": "1",
+    "rustical": null,
+    "haus": "306"
+   },
+   {
+    "row": 17,
+    "parzelle": "57",
+    "dominical": "2",
+    "rustical": null,
+    "haus": "762"
+   },
+   {
+    "row": 18,
+    "parzelle": "58",
+    "dominical": "1",
+    "rustical": null,
+    "haus": "1484"
+   },
+   {
+    "row": 19,
+    "parzelle": "59",
+    "dominical": "5",
+    "rustical": null,
+    "haus": "118"
+   },
+   {
+    "row": 20,
+    "parzelle": "60",
+    "dominical": "3",
+    "rustical": null,
+    "haus": "944"
+   }
+  ],
+  "vsote": [
+   {
+    "kol": "dominical",
+    "vrednost": "82"
+   },
+   {
+    "kol": "haus",
+    "vrednost": "81"
+   }
+  ],
+  "opomba": "Vrstice 11–20 (Parzelle 51–60). Dominical: vrednosti 7,7,7,1,1,1,2,1,5,3. Haus: rdeči tuš. Vsota Dominical=82, Haus=81."
+ },
+ "content": "```json\n{\n  \"vrstice\": [\n    {\"row\": 11, \"parzelle\": \"51\", \"dominical\": \"7\", \"rustical\": null, \"haus\": \"960\"},\n    {\"row\": 12, \"parzelle\": \"52\", \"dominical\": \"7\", \"rustical\": null, \"haus\": \"943\"},\n    {\"row\": 13, \"parzelle\": \"53\", \"dominical\": \"7\", \"rustical\": null, \"haus\": \"973\"},\n    {\"row\": 14, \"parzelle\": \"54\", \"dominical\": \"1\", \"rustical\": null, \"haus\": \"1389\"},\n    {\"row\": 15, \"parzelle\": \"55\", \"dominical\": \"1\", \"rustical\": null, \"haus\": \"944\"},\n    {\"row\": 16, \"parzelle\": \"56\", \"dominical\": \"1\", \"rustical\": null, \"haus\": \"306\"},\n    {\"row\": 17, \"parzelle\": \"57\", \"dominical\": \"2\", \"rustical\": null, \"haus\": \"762\"},\n    {\"row\": 18, \"parzelle\": \"58\", \"dominical\": \"1\", \"rustical\": null, \"haus\": \"1484\"},\n    {\"row\": 19, \"parzelle\": \"59\", \"dominical\": \"5\", \"rustical\": null, \"haus\": \"118\"},\n    {\"row\": 20, \"parzelle\": \"60\", \"dominical\": \"3\", \"rustical\": null, \"haus\": \"944\"}\n  ],\n  \"vsote\": [\n    {\"kol\": \"dominical\", \"vrednost\": \"82\"},\n    {\"kol\": \"haus\", \"vrednost\": \"81\"}\n  ],\n  \"opomba\": \"Vrstice 11–20 (Parzelle 51–60). Dominical: vrednosti 7,7,7,1,1,1,2,1,5,3. Haus: rdeči tuš. Vsota Dominical=82, Haus=81.\"\n}\n```"
+}

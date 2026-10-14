@@ -1,0 +1,167 @@
+{
+ "target": "139-right",
+ "part": "b",
+ "model": "glm-5v-turbo",
+ "created": 1791998249,
+ "usage": {
+  "completion_tokens": 1102,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 5321,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 6423
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 11,
+    "kultur": "90",
+    "noe": "8",
+    "klafter": "195",
+    "classe": "110",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": "6",
+    "capitalKr": "128",
+    "anmerkung": null
+   },
+   {
+    "row": 12,
+    "kultur": "91",
+    "noe": "13",
+    "klafter": "1162",
+    "classe": "111",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": "6",
+    "capitalKr": "781",
+    "anmerkung": null
+   },
+   {
+    "row": 13,
+    "kultur": "92",
+    "noe": "11",
+    "klafter": "1807",
+    "classe": "112",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": "4",
+    "capitalKr": "366",
+    "anmerkung": null
+   },
+   {
+    "row": 14,
+    "kultur": "93",
+    "noe": "14",
+    "klafter": "1829",
+    "classe": "113",
+    "ertragFl": null,
+    "ertragKr": "1169",
+    "capitalFl": null,
+    "capitalKr": null,
+    "anmerkung": null
+   },
+   {
+    "row": 15,
+    "kultur": "94",
+    "noe": "12",
+    "klafter": "904",
+    "classe": "114",
+    "ertragFl": null,
+    "ertragKr": "997",
+    "capitalFl": "6",
+    "capitalKr": null,
+    "anmerkung": null
+   },
+   {
+    "row": 16,
+    "kultur": "95",
+    "noe": "11",
+    "klafter": "178",
+    "classe": "115",
+    "ertragFl": null,
+    "ertragKr": "1060",
+    "capitalFl": "5",
+    "capitalKr": null,
+    "anmerkung": null
+   },
+   {
+    "row": 17,
+    "kultur": "96",
+    "noe": "11",
+    "klafter": "805",
+    "classe": "116",
+    "ertragFl": null,
+    "ertragKr": "1313",
+    "capitalFl": "10",
+    "capitalKr": null,
+    "anmerkung": null
+   },
+   {
+    "row": 18,
+    "kultur": "97",
+    "noe": "11",
+    "klafter": "1006",
+    "classe": "117",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": "15",
+    "capitalKr": "614",
+    "anmerkung": null
+   },
+   {
+    "row": 19,
+    "kultur": "98",
+    "noe": "13",
+    "klafter": "693",
+    "classe": "118",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": "16",
+    "capitalKr": "1866",
+    "anmerkung": null
+   },
+   {
+    "row": 20,
+    "kultur": "99",
+    "noe": "17",
+    "klafter": "449",
+    "classe": "119",
+    "ertragFl": null,
+    "ertragKr": "1046",
+    "capitalFl": "12",
+    "capitalKr": null,
+    "anmerkung": null
+   },
+   {
+    "row": 21,
+    "kultur": "100",
+    "noe": "13",
+    "klafter": "701",
+    "classe": "120",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": null,
+    "capitalKr": "584",
+    "anmerkung": null
+   }
+  ],
+  "vsote": [
+   {
+    "opis": "Fürtrag",
+    "kol1": "189",
+    "kol2": "1228"
+   },
+   {
+    "opis": "Capital Werth",
+    "kol1": "162",
+    "kol2": "1447"
+   }
+  ],
+  "opomba": "Vrstica 91 (index 12): vrednost '781' je zapisana kot '781' (ne '791'). Vrstica 96 (index 17): '1313' je rdeče. Vrstica 99 (index 20): '1046' je rdeče. Vsota Fürtrag: 189 | 1228. Vsota Capital: 162 | 1447."
+ },
+ "content": "```json\n{\n  \"vrstice\": [\n    {\n      \"row\": 11,\n      \"kultur\": \"90\",\n      \"noe\": \"8\",\n      \"klafter\": \"195\",\n      \"classe\": \"110\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": \"6\",\n      \"capitalKr\": \"128\",\n      \"anmerkung\": null\n    },\n    {\n      \"row\": 12,\n      \"kultur\": \"91\",\n      \"noe\": \"13\",\n      \"klafter\": \"1162\",\n      \"classe\": \"111\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": \"6\",\n      \"capitalKr\": \"781\",\n      \"anmerkung\": null\n    },\n    {\n      \"row\": 13,\n      \"kultur\": \"92\",\n      \"noe\": \"11\",\n      \"klafter\": \"1807\",\n      \"classe\": \"112\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": \"4\",\n      \"capitalKr\": \"366\",\n      \"anmerkung\": null\n    },\n    {\n      \"row\": 14,\n      \"kultur\": \"93\",\n      \"noe\": \"14\",\n      \"klafter\": \"1829\",\n      \"classe\": \"113\",\n      \"ertragFl\": null,\n      \"ertragKr\": \"1169\",\n      \"capitalFl\": null,\n      \"capitalKr\": null,\n      \"anmerkung\": null\n    },\n    {\n      \"row\": 15,\n      \"kultur\": \"94\",\n      \"noe\": \"12\",\n      \"klafter\": \"904\",\n      \"classe\": \"114\",\n      \"ertragFl\": null,\n      \"ertragKr\": \"997\",\n      \"capitalFl\": \"6\",\n      \"capitalKr\": null,\n      \"anmerkung\": null\n    },\n    {\n      \"row\": 16,\n      \"kultur\": \"95\",\n      \"noe\": \"11\",\n      \"klafter\": \"178\",\n      \"classe\": \"115\",\n      \"ertragFl\": null,\n      \"ertragKr\": \"1060\",\n      \"capitalFl\": \"5\",\n      \"capitalKr\": null,\n      \"anmerkung\": null\n    },\n    {\n      \"row\": 17,\n      \"kultur\": \"96\",\n      \"noe\": \"11\",\n      \"klafter\": \"805\",\n      \"classe\": \"116\",\n      \"ertragFl\": null,\n      \"ertragKr\": \"1313\",\n      \"capitalFl\": \"10\",\n      \"capitalKr\": null,\n      \"anmerkung\": null\n    },\n    {\n      \"row\": 18,\n      \"kultur\": \"97\",\n      \"noe\": \"11\",\n      \"klafter\": \"1006\",\n      \"classe\": \"117\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": \"15\",\n      \"capitalKr\": \"614\",\n      \"anmerkung\": null\n    },\n    {\n      \"row\": 19,\n      \"kultur\": \"98\",\n      \"noe\": \"13\",\n      \"klafter\": \"693\",\n      \"classe\": \"118\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": \"16\",\n      \"capitalKr\": \"1866\",\n      \"anmerkung\": null\n    },\n    {\n      \"row\": 20,\n      \"kultur\": \"99\",\n      \"noe\": \"17\",\n      \"klafter\": \"449\",\n      \"classe\": \"119\",\n      \"ertragFl\": null,\n      \"ertragKr\": \"1046\",\n      \"capitalFl\": \"12\",\n      \"capitalKr\": null,\n      \"anmerkung\": null\n    },\n    {\n      \"row\": 21,\n      \"kultur\": \"100\",\n      \"noe\": \"13\",\n      \"klafter\": \"701\",\n      \"classe\": \"120\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": null,\n      \"capitalKr\": \"584\",\n      \"anmerkung\": null\n    }\n  ],\n  \"vsote\": [\n    {\n      \"opis\": \"Fürtrag\",\n      \"kol1\": \"189\",\n      \"kol2\": \"1228\"\n    },\n    {\n      \"opis\": \"Capital Werth\",\n      \"kol1\": \"162\",\n      \"kol2\": \"1447\"\n    }\n  ],\n  \"opomba\": \"Vrstica 91 (index 12): vrednost '781' je zapisana kot '781' (ne '791'). Vrstica 96 (index 17): '1313' je rdeče. Vrstica 99 (index 20): '1046' je rdeče. Vsota Fürtrag: 189 | 1228. Vsota Capital: 162 | 1447.\"\n}\n```"
+}

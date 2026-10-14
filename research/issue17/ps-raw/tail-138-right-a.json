@@ -1,0 +1,308 @@
+{
+ "target": "138-right",
+ "part": "a",
+ "model": "glm-5v-turbo",
+ "created": 1791998312,
+ "usage": {
+  "completion_tokens": 2120,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 6145,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 8265
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "kultur": "Zusammenstellung der Grundstücke",
+    "noe": null,
+    "klafter": null,
+    "classe": null,
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": null,
+    "capitalKr": null,
+    "anmerkung": null,
+    "precrtana": false
+   },
+   {
+    "row": 2,
+    "kultur": "1. Wiese",
+    "noe": "2",
+    "klafter": "1498",
+    "classe": "21",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": "1",
+    "capitalKr": "1143",
+    "anmerkung": null,
+    "precrtana": false
+   },
+   {
+    "row": 3,
+    "kultur": "2.",
+    "noe": "3",
+    "klafter": "647",
+    "classe": "22",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": "1",
+    "capitalKr": "919",
+    "anmerkung": null,
+    "precrtana": false
+   },
+   {
+    "row": 4,
+    " kultur": "3.",
+    "noe": "3",
+    "klafter": "906",
+    "classe": "23",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": "6",
+    "capitalKr": "62",
+    "anmerkung": null,
+    "precrtana": false
+   },
+   {
+    "row": 5,
+    "kultur": "4.",
+    "noe": "2",
+    "klafter": "389",
+    "classe": "24",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": "1",
+    "capitalKr": "1063",
+    "anmerkung": null,
+    "precrtana": false
+   },
+   {
+    "row": 6,
+    "kultur": "5.",
+    "noe": null,
+    "klafter": "1140",
+    "classe": "25",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": "4",
+    "capitalKr": "442",
+    "anmerkung": null,
+    "precrtana": false
+   },
+   {
+    "row": 7,
+    "kultur": "6.",
+    "noe": null,
+    "klafter": "682",
+    "classe": "26",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": "2",
+    "capitalKr": "448",
+    "anmerkung": null,
+    "precrtana": false
+   },
+   {
+    "row": 8,
+    "kultur": "7.",
+    "noe": "6",
+    "klafter": "265",
+    "classe": "27",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": "2",
+    "capitalKr": "432",
+    "anmerkung": null,
+    "precrtana": false
+   },
+   {
+    "row": 9,
+    "kultur": "8.",
+    "noe": "1",
+    "klafter": "309",
+    "classe": "28",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": "5",
+    "capitalKr": "1034",
+    "anmerkung": null,
+    "precrtana": false
+   },
+   {
+    "row": 10,
+    "kultur": "9.",
+    "noe": null,
+    "klafter": "81",
+    "classe": "29",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": "1",
+    "capitalKr": "628",
+    "anmerkung": null,
+    "precrtana": false
+   },
+   {
+    "row": 11,
+    "kultur": "10.",
+    "noe": "2",
+    "klafter": "1391",
+    "classe": "30",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": "3",
+    "capitalKr": "265",
+    "anmerkung": null,
+    "precrtana": false
+   },
+   {
+    "row": 12,
+    "kultur": "11.",
+    "noe": "1",
+    "klafter": "481",
+    "classe": "31",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": "1",
+    "capitalKr": "888",
+    "anmerkung": null,
+    "precrtana": false
+   },
+   {
+    "row": 13,
+    "kultur": "12.",
+    "noe": "6",
+    "klafter": "74",
+    "classe": "32",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": "1",
+    "capitalKr": "1464",
+    "anmerkung": null,
+    "precrtana": false
+   },
+   {
+    "row": 14,
+    "kultur": "13.",
+    "noe": "4",
+    "klafter": "1288",
+    "classe": "33",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": "2",
+    "capitalKr": "748",
+    "anmerkung": null,
+    "precrtana": false
+   },
+   {
+    "row": 15,
+    "kultur": "14.",
+    "noe": "5",
+    "klafter": "811",
+    "classe": "34",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": "3",
+    "capitalKr": "349",
+    "anmerkung": null,
+    "precrtana": false
+   },
+   {
+    "row": 16,
+    "kultur": "15.",
+    "noe": "6",
+    "klafter": "795",
+    "classe": "35",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": "4",
+    "capitalKr": "486",
+    "anmerkung": null,
+    "precrtana": false
+   },
+   {
+    "row": 17,
+    "kultur": "16.",
+    "noe": "10",
+    "klafter": "245",
+    "classe": "36",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": "4",
+    "capitalKr": "1009",
+    "anmerkung": null,
+    "precrtana": false
+   },
+   {
+    "row": 18,
+    "kultur": "17.",
+    "noe": "10",
+    "klafter": "817",
+    "classe": "37",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": "10",
+    "capitalKr": "295",
+    "anmerkung": null,
+    "precrtana": false
+   },
+   {
+    "row": 19,
+    "kultur": "18.",
+    "noe": "6",
+    "klafter": "1183",
+    "classe": "38",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": "6",
+    "capitalKr": "990",
+    "anmerkung": null,
+    "precrtana": false
+   },
+   {
+    "row": 20,
+    "kultur": "19.",
+    "noe": "12",
+    "klafter": "1405",
+    "classe": "39",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": "1",
+    "capitalKr": "843",
+    "anmerkung": null,
+    "precrtana": false
+   },
+   {
+    "row": 21,
+    "kultur": "20.",
+    "noe": "6",
+    "klafter": "390",
+    "classe": "40",
+    "ertragFl": null,
+    "ertragKr": null,
+    "capitalFl": "1",
+    "capitalKr": "1031",
+    "anmerkung": null,
+    "precrtana": false
+   }
+  ],
+  "vsote": [
+   {
+    "opis": "Baurag",
+    "kol1": "101",
+    "kol2": "15320"
+   },
+   {
+    "opis": "Capital Werth vsota",
+    "kol1": "89",
+    "kol2": "78"
+   }
+  ],
+  "opomba": "Stran vsebuje naslov 'Zusammenstellung der Grundstücke' in nadaljuje s številkami parcel (verjetno 1-20). Vrednosti v rdečem črnilu so prečrtane na levi strani (indeks), v desni tabeli pa so vidne kot vnosne vrednosti. Skupna vsota (Baurag) in kapitalska vrednost sta na dnu."
+ },
+ "content": "```json\n{\n  \"vrstice\": [\n    {\n      \"row\": 1,\n      \"kultur\": \"Zusammenstellung der Grundstücke\",\n      \"noe\": null,\n      \"klafter\": null,\n      \"classe\": null,\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": null,\n      \"capitalKr\": null,\n      \"anmerkung\": null,\n      \"precrtana\": false\n    },\n    {\n      \"row\": 2,\n      \"kultur\": \"1. Wiese\",\n      \"noe\": \"2\",\n      \"klafter\": \"1498\",\n      \"classe\": \"21\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": \"1\",\n      \"capitalKr\": \"1143\",\n      \"anmerkung\": null,\n      \"precrtana\": false\n    },\n    {\n      \"row\": 3,\n      \"kultur\": \"2.\",\n      \"noe\": \"3\",\n      \"klafter\": \"647\",\n      \"classe\": \"22\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": \"1\",\n      \"capitalKr\": \"919\",\n      \"anmerkung\": null,\n      \"precrtana\": false\n    },\n    {\n      \"row\": 4,\n      \" kultur\": \"3.\",\n      \"noe\": \"3\",\n      \"klafter\": \"906\",\n      \"classe\": \"23\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": \"6\",\n      \"capitalKr\": \"62\",\n      \"anmerkung\": null,\n      \"precrtana\": false\n    },\n    {\n      \"row\": 5,\n      \"kultur\": \"4.\",\n      \"noe\": \"2\",\n      \"klafter\": \"389\",\n      \"classe\": \"24\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": \"1\",\n      \"capitalKr\": \"1063\",\n      \"anmerkung\": null,\n      \"precrtana\": false\n    },\n    {\n      \"row\": 6,\n      \"kultur\": \"5.\",\n      \"noe\": null,\n      \"klafter\": \"1140\",\n      \"classe\": \"25\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": \"4\",\n      \"capitalKr\": \"442\",\n      \"anmerkung\": null,\n      \"precrtana\": false\n    },\n    {\n      \"row\": 7,\n      \"kultur\": \"6.\",\n      \"noe\": null,\n      \"klafter\": \"682\",\n      \"classe\": \"26\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": \"2\",\n      \"capitalKr\": \"448\",\n      \"anmerkung\": null,\n      \"precrtana\": false\n    },\n    {\n      \"row\": 8,\n      \"kultur\": \"7.\",\n      \"noe\": \"6\",\n      \"klafter\": \"265\",\n      \"classe\": \"27\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": \"2\",\n      \"capitalKr\": \"432\",\n      \"anmerkung\": null,\n      \"precrtana\": false\n    },\n    {\n      \"row\": 9,\n      \"kultur\": \"8.\",\n      \"noe\": \"1\",\n      \"klafter\": \"309\",\n      \"classe\": \"28\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": \"5\",\n      \"capitalKr\": \"1034\",\n      \"anmerkung\": null,\n      \"precrtana\": false\n    },\n    {\n      \"row\": 10,\n      \"kultur\": \"9.\",\n      \"noe\": null,\n      \"klafter\": \"81\",\n      \"classe\": \"29\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": \"1\",\n      \"capitalKr\": \"628\",\n      \"anmerkung\": null,\n      \"precrtana\": false\n    },\n    {\n      \"row\": 11,\n      \"kultur\": \"10.\",\n      \"noe\": \"2\",\n      \"klafter\": \"1391\",\n      \"classe\": \"30\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": \"3\",\n      \"capitalKr\": \"265\",\n      \"anmerkung\": null,\n      \"precrtana\": false\n    },\n    {\n      \"row\": 12,\n      \"kultur\": \"11.\",\n      \"noe\": \"1\",\n      \"klafter\": \"481\",\n      \"classe\": \"31\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": \"1\",\n      \"capitalKr\": \"888\",\n      \"anmerkung\": null,\n      \"precrtana\": false\n    },\n    {\n      \"row\": 13,\n      \"kultur\": \"12.\",\n      \"noe\": \"6\",\n      \"klafter\": \"74\",\n      \"classe\": \"32\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": \"1\",\n      \"capitalKr\": \"1464\",\n      \"anmerkung\": null,\n      \"precrtana\": false\n    },\n    {\n      \"row\": 14,\n      \"kultur\": \"13.\",\n      \"noe\": \"4\",\n      \"klafter\": \"1288\",\n      \"classe\": \"33\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": \"2\",\n      \"capitalKr\": \"748\",\n      \"anmerkung\": null,\n      \"precrtana\": false\n    },\n    {\n      \"row\": 15,\n      \"kultur\": \"14.\",\n      \"noe\": \"5\",\n      \"klafter\": \"811\",\n      \"classe\": \"34\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": \"3\",\n      \"capitalKr\": \"349\",\n      \"anmerkung\": null,\n      \"precrtana\": false\n    },\n    {\n      \"row\": 16,\n      \"kultur\": \"15.\",\n      \"noe\": \"6\",\n      \"klafter\": \"795\",\n      \"classe\": \"35\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": \"4\",\n      \"capitalKr\": \"486\",\n      \"anmerkung\": null,\n      \"precrtana\": false\n    },\n    {\n      \"row\": 17,\n      \"kultur\": \"16.\",\n      \"noe\": \"10\",\n      \"klafter\": \"245\",\n      \"classe\": \"36\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": \"4\",\n      \"capitalKr\": \"1009\",\n      \"anmerkung\": null,\n      \"precrtana\": false\n    },\n    {\n      \"row\": 18,\n      \"kultur\": \"17.\",\n      \"noe\": \"10\",\n      \"klafter\": \"817\",\n      \"classe\": \"37\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": \"10\",\n      \"capitalKr\": \"295\",\n      \"anmerkung\": null,\n      \"precrtana\": false\n    },\n    {\n      \"row\": 19,\n      \"kultur\": \"18.\",\n      \"noe\": \"6\",\n      \"klafter\": \"1183\",\n      \"classe\": \"38\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": \"6\",\n      \"capitalKr\": \"990\",\n      \"anmerkung\": null,\n      \"precrtana\": false\n    },\n    {\n      \"row\": 20,\n      \"kultur\": \"19.\",\n      \"noe\": \"12\",\n      \"klafter\": \"1405\",\n      \"classe\": \"39\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": \"1\",\n      \"capitalKr\": \"843\",\n      \"anmerkung\": null,\n      \"precrtana\": false\n    },\n    {\n      \"row\": 21,\n      \"kultur\": \"20.\",\n      \"noe\": \"6\",\n      \"klafter\": \"390\",\n      \"classe\": \"40\",\n      \"ertragFl\": null,\n      \"ertragKr\": null,\n      \"capitalFl\": \"1\",\n      \"capitalKr\": \"1031\",\n      \"anmerkung\": null,\n      \"precrtana\": false\n    }\n  ],\n  \"vsote\": [\n    {\n      \"opis\": \"Baurag\",\n      \"kol1\": \"101\",\n      \"kol2\": \"15320\"\n    },\n    {\n      \"opis\": \"Capital Werth vsota\",\n      \"kol1\": \"89\",\n      \"kol2\": \"78\"\n    }\n  ],\n  \"opomba\": \"Stran vsebuje naslov 'Zusammenstellung der Grundstücke' in nadaljuje s številkami parcel (verjetno 1-20). Vrednosti v rdečem črnilu so prečrtane na levi strani (indeks), v desni tabeli pa so vidne kot vnosne vrednosti. Skupna vsota (Baurag) in kapitalska vrednost sta na dnu.\"\n}\n```"
+}

@@ -1,0 +1,82 @@
+{
+ "part": "colsR-b",
+ "model": "glm-5v-turbo",
+ "created": 1791998687,
+ "usage": {
+  "completion_tokens": 333,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3201,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3534
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 11,
+    "stand": "13",
+    "wohnort": "4"
+   },
+   {
+    "row": 12,
+    "stand": "4",
+    "wohnort": "1482"
+   },
+   {
+    "row": 13,
+    "stand": "4",
+    "wohnort": "824"
+   },
+   {
+    "row": 14,
+    "stand": "6",
+    "wohnort": "1052"
+   },
+   {
+    "row": 15,
+    "stand": "5",
+    "wohnort": "1244"
+   },
+   {
+    "row": 16,
+    "stand": "4",
+    "wohnort": "489"
+   },
+   {
+    "row": 17,
+    "stand": "2",
+    "wohnort": "180"
+   },
+   {
+    "row": 18,
+    "stand": "2",
+    "wohnort": "564"
+   },
+   {
+    "row": 19,
+    "stand": "5",
+    "wohnort": "534"
+   },
+   {
+    "row": 20,
+    "stand": "3",
+    "wohnort": "1154"
+   }
+  ],
+  "vsote": [
+   {
+    "kol": "stand",
+    "vrednost": "25"
+   },
+   {
+    "kol": "wohnort",
+    "vrednost": "183"
+   }
+  ],
+  "opomba": "Vrstice 11–20 (Parzelle 51–60). V stolpcu 'Wohnort' so vrednosti zapisane v rdečem tušu (razen zadnje vrstice in vsote). Vsoti sta napisani pod debelo črto."
+ },
+ "content": "```json\n{\n  \"vrstice\": [\n    {\"row\": 11, \"stand\": \"13\", \"wohnort\": \"4\"},\n    {\"row\": 12, \"stand\": \"4\", \"wohnort\": \"1482\"},\n    {\"row\": 13, \"stand\": \"4\", \"wohnort\": \"824\"},\n    {\"row\": 14, \"stand\": \"6\", \"wohnort\": \"1052\"},\n    {\"row\": 15, \"stand\": \"5\", \"wohnort\": \"1244\"},\n    {\"row\": 16, \"stand\": \"4\", \"wohnort\": \"489\"},\n    {\"row\": 17, \"stand\": \"2\", \"wohnort\": \"180\"},\n    {\"row\": 18, \"stand\": \"2\", \"wohnort\": \"564\"},\n    {\"row\": 19, \"stand\": \"5\", \"wohnort\": \"534\"},\n    {\"row\": 20, \"stand\": \"3\", \"wohnort\": \"1154\"}\n  ],\n  \"vsote\": [\n    {\"kol\": \"stand\", \"vrednost\": \"25\"},\n    {\"kol\": \"wohnort\", \"vrednost\": \"183\"}\n  ],\n  \"opomba\": \"Vrstice 11–20 (Parzelle 51–60). V stolpcu 'Wohnort' so vrednosti zapisane v rdečem tušu (razen zadnje vrstice in vsote). Vsoti sta napisani pod debelo črto.\"\n}\n```"
+}

@@ -44,6 +44,7 @@ import {
   BLATT_HEADERS_P59,
   PERBLATT_ATTR_P60,
   UNIT_SEM_P61,
+  TAIL_P63,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -4196,6 +4197,79 @@ const p45bErrors: string[] = [];
     p61Errors.length === 0
       ? `pini modi 226/62/800/5 · hits A 209/37/220/118 · B 18/11/45/38 == preracun (v2 × gursCompact FNV) · blattDist II 32 · IV 15 · III 9 · I 5 · bloki 3/9 · multiB 2 · hipoteze ZAVRŽEN/NEUPORABNA/OSTAJA · ${p61FileDetail}`
       : p61Errors.join("; "),
+  );
+
+  /* ── P63 (issue #13): zaključne strani registra PS (138–139) — Blatt IIb + transkripcija tail tabel ── */
+  const p63Errors: string[] = [];
+  const tp63 = TAIL_P63;
+  // 1) TS pini
+  if (tp63.blattIIb.page !== 139 || tp63.flagsCount !== 42)
+    p63Errors.push("pini: IIb stran ≠ 139 ali flagi ≠ 42");
+  if (tp63.blattIIb.vsote.dominical !== "82" || tp63.blattIIb.vsote.haus !== "81" || tp63.blattIIb.vsote.stand !== "125" || tp63.blattIIb.vsote.wohnort !== "183")
+    p63Errors.push("pini: vsote leva ≠ 82|81|125|183");
+  if (tp63.vsote.desna.furetragNoe !== "189" || tp63.vsote.desna.furetragKlafter !== "1228" || tp63.vsote.desna.totalCapA !== "162" || tp63.vsote.desna.totalCapB !== "1447")
+    p63Errors.push("pini: vsote desna ≠ Fürtrag 189|1228 · 162|1447");
+  if (!tp63.structureImpact.blattNumerele.includes("IIb"))
+    p63Errors.push("pini: blattNumerele brez IIb");
+  // 2) datoteke + NEODVISEN preracun iz runtime kopij (dve obliki po P53/P57/P58)
+  let p63FileDetail = "datoteke niso preverjene (readFile ni na voljo) — celovita kontrola teče na /api/qa";
+  if (opts.readFile) {
+    const rawRt63 = opts.readFile("src/data/atlas/ps-tail-pages.json");
+    const rawEv63 = opts.readFile("research/issue17/ps-tail-pages.json");
+    const rawRt59b = opts.readFile("src/data/atlas/ps-blatt-headers.json");
+    if (rawRt63 === null || rawRt59b === null) {
+      p63Errors.push("runtime ps-tail-pages.json / ps-blatt-headers.json ni berljiv");
+    } else {
+      try {
+        const rt63 = JSON.parse(rawRt63) as {
+          leva: { row: number; dominical: string | null; haus: string | null; vorUndZuname: string | null; stand: string | null; wohnort: string | null }[];
+          desna: { row: number; kultur: string; noe: string | null; klafter: string | null; classe: string; capitalFl: string | null; capitalKr: string | null }[];
+          p138: { leva: { status: string; ostanki: { row: number; blatt?: string | [string, string[]]; parzelle?: string | [string, string[]] }[] }; desna: { rows: number; kulturRange: string } };
+        };
+        // parzelle = 41–60 (vrstni red), VorUndZuname = 62–80, kultur = 81–100, classe = 101–120
+        const vz = rt63.leva.slice(1).map((r) => r.vorUndZuname);
+        if (vz.join(",") !== Array.from({ length: 19 }, (_, i) => String(62 + i)).join(","))
+          p63Errors.push(`preracun: VorUndZuname ≠ 62–80 (${vz.slice(0, 3).join(",")}...)`);
+        const kul = rt63.desna.map((r) => r.kultur);
+        if (kul.join(",") !== Array.from({ length: 20 }, (_, i) => String(81 + i)).join(","))
+          p63Errors.push("preracun: kultur ≠ 81–100");
+        const cla = rt63.desna.map((r) => r.classe);
+        if (cla.join(",") !== Array.from({ length: 20 }, (_, i) => String(101 + i)).join(","))
+          p63Errors.push("preracun: classe ≠ 101–120");
+        const krSum = rt63.desna.reduce((s, r) => s + (r.capitalKr ? Number(r.capitalKr) : 0), 0);
+        if (krSum !== 153) p63Errors.push(`preracun: Capital kr Σ ${krSum} ≠ 153`);
+        if (rt63.desna[0].capitalFl !== "1860" || rt63.desna[19].capitalFl !== "584")
+          p63Errors.push("preracun: Capital fl pini (r1 1860 / r20 584)");
+        if (rt63.p138.leva.status !== "izbrisana" || rt63.p138.desna.rows !== 20)
+          p63Errors.push("preracun: p138 status/rows");
+        // IIb navzkrižje s P59 runtime pageAttribution
+        const rt59b = JSON.parse(rawRt59b) as { pageAttribution: Record<string, { blatt: string | null }> };
+        if (rt59b.pageAttribution["139"]?.blatt !== "IIb")
+          p63Errors.push(`navzkrižje: pageAttribution p139 ≠ 'IIb' (${rt59b.pageAttribution["139"]?.blatt})`);
+        if (rt59b.pageAttribution["138"]?.blatt !== null)
+          p63Errors.push("navzkrižje: pageAttribution p138 ≠ null");
+        // evidencа (samo repo): dokaz ⊇ runtime bajtno
+        if (rawEv63 !== null) {
+          const ev = JSON.parse(rawEv63) as { runtime: unknown };
+          if (JSON.stringify(ev.runtime) !== JSON.stringify(rt63))
+            p63Errors.push("dokaz: runtime ni bajtno podmnožica dokaza");
+        }
+        p63FileDetail = rawEv63 !== null
+          ? "repo: dokaz == runtime bajtno · preracun: VorUndZuname 62–80 · kultur 81–100 · classe 101–120 · Capital kr Σ=153 · IIb == pageAttribution p59"
+          : "produkcija: research/ ni v deploymentu — preracun na runtime kopijah (naraščanja + vsote + IIb navzkrižje)";
+      } catch (e) {
+        p63Errors.push(`ps-tail-pages datoteke neuspešno: ${String(e).slice(0, 80)}`);
+      }
+    }
+  }
+  push(
+    "qa-p63-tail-pages",
+    "P63: ZAKLJUČNE STRANI REGISTRA PS (138–139): p139 = Blatt IIb (pod-list — NOV v strukturi) s parcelami 41–60 (duplikat Blatt I številk) + lastninske kolone (Haus Nº rdeče, 'Vor und Zuname' = številke 62–80 — ne imena, Stand/Wohnort) + desna kultura rekapitulacija 81–100 / Classe 101–120 + Fürtrag 189|1228; KOREKCIJA: prejšnja očesna razlaga 'Nro. des Hauses.' = očesna napaka (glava je 'Nro. des Blattes.') — P58 open #6 ZAPRT; p138 = izbrisana leva tabela (bledi ostanki 'T. 191'[~] @ r14) + 'Zusammenstellung der Grundstücke' (Wiese 1–20) desna; 3 neodvisna prehoda (VLM 2× + agent-oči 4×–5×), 42 flagov [~]; enote vsot 82|81, 125|183, 162|1447 razlagalno odprte [~]; join v2 NESPREMENJEN; status REVIEW",
+    "P63: PS REGISTER TAIL PAGES (138-139): p139 = Blatt IIb (sub-leaf — NEW in the structure) with parcels 41-60 (duplicate Blatt I numbers) + owner columns (red Haus Nº, 'Vor und Zuname' = numbers 62-80 — not names, Stand/Wohnort) + right-page culture recap 81-100 / Classe 101-120 + transfer 189|1228; CORRECTION: the earlier 'Nro. des Hauses.' reading was an eye error (header is 'Nro. des Blattes.') — P58 open #6 CLOSED; p138 = erased left table (faint remains 'T. 191'[~] @ r14) + 'Zusammenstellung der Grundstuecke' (Wiese 1-20) right; 3 independent passes (VLM 2x + agent eyes 4x-5x), 42 flags [~]; unit meaning of sums 82|81, 125|183, 162|1447 open [~]; v2 join UNCHANGED; status REVIEW",
+    p63Errors.length === 0,
+    p63Errors.length === 0
+      ? `pini IIb p139 · parzelle 41–60 · VorUndZuname 62–80 · vsote 82|81 + 125|183 · Fürtrag 189|1228 · 162|1447 == preracun (naraščanja + Capital kr Σ=153 + IIb == pageAttribution p59) · 42 flagov [~] · ${p63FileDetail}`
+      : p63Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;

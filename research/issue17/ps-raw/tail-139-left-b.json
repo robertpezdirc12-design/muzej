@@ -1,0 +1,143 @@
+{
+ "target": "139-left",
+ "part": "b",
+ "model": "glm-5v-turbo",
+ "created": 1791998205,
+ "usage": {
+  "completion_tokens": 946,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 2639,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3585
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 11,
+    "blatt": "31",
+    "benennung": null,
+    "parzelle": "41",
+    "dominical": "7",
+    "rustical": null,
+    "haus": "13",
+    "vorUndZuname": "7",
+    "stand": null,
+    "wohnsort": "91"
+   },
+   {
+    "row": 12,
+    "blatt": "32",
+    "benennung": null,
+    "parzelle": "42",
+    "dominical": "7",
+    "rustical": null,
+    "haus": "7",
+    "vorUndZuname": "1682",
+    "stand": null,
+    "wohnsort": "92"
+   },
+   {
+    "row": 13,
+    "blatt": "33",
+    "benennung": null,
+    "parzelle": "43",
+    "dominical": "7",
+    "rustical": null,
+    "haus": "7",
+    "vorUndZuname": "824",
+    "stand": null,
+    "wohnsort": "93"
+   },
+   {
+    "row": 14,
+    "blatt": "34",
+    "benennung": null,
+    "parzelle": "44",
+    "dominical": "1",
+    "rustical": null,
+    "haus": "6",
+    "vorUndZuname": "1082",
+    "stand": null,
+    "wohnsort": "94"
+   },
+   {
+    "row": 15,
+    "blatt": "35",
+    "benennung": null,
+    "parzelle": "45",
+    "dominical": "1",
+    "rustical": null,
+    "haus": "5",
+    "vorUndZuname": "1244",
+    "stand": null,
+    "wohnsort": "95"
+   },
+   {
+    "row": 16,
+    "blatt": "36",
+    "benennung": null,
+    "parzelle": "46",
+    "dominical": "1",
+    "rustical": null,
+    "haus": "7",
+    "vorUndZuname": "787",
+    "stand": null,
+    "wohnsort": "96"
+   },
+   {
+    "row": 17,
+    "blatt": "37",
+    "benennung": null,
+    "parzelle": "47",
+    "dominical": "2",
+    "rustical": null,
+    "haus": "2",
+    "vorUndZuname": "180",
+    "stand": null,
+    "wohnsort": "97"
+   },
+   {
+    "row": 18,
+    "blatt": "38",
+    "benennung": null,
+    "parzelle": "48",
+    "dominical": "1",
+    "rustical": null,
+    "haus": "2",
+    "vorUndZuname": "564",
+    "stand": null,
+    "wohnsort": "98"
+   },
+   {
+    "row": 19,
+    "blatt": "39",
+    "benennung": null,
+    "parzelle": "49",
+    "dominical": "5",
+    "rustical": null,
+    "haus": "5",
+    "vorUndZuname": "834",
+    "stand": null,
+    "wohnsort": "99"
+   },
+   {
+    "row": 20,
+    "blatt": "60.",
+    "benennung": null,
+    "parzelle": "50",
+    "dominical": "3",
+    "rustical": null,
+    "haus": "3",
+    "vorUndZuname": "1154",
+    "stand": null,
+    "wohnsort": "100"
+   }
+  ],
+  "opomba": "Vrstica 20 (blatt '60.') je zadnja vrstica s podatki pred črto; pod njo so seštevki (82, 81, 125, 183). Vse številke parzel so naraščajoče (41–50)."
+ },
+ "content": "```json\n{\n  \"vrstice\": [\n    {\n      \"row\": 11,\n      \"blatt\": \"31\",\n      \"benennung\": null,\n      \"parzelle\": \"41\",\n      \"dominical\": \"7\",\n      \"rustical\": null,\n      \"haus\": \"13\",\n      \"vorUndZuname\": \"7\",\n      \"stand\": null,\n      \"wohnsort\": \"91\"\n    },\n    {\n      \"row\": 12,\n      \"blatt\": \"32\",\n      \"benennung\": null,\n      \"parzelle\": \"42\",\n      \"dominical\": \"7\",\n      \"rustical\": null,\n      \"haus\": \"7\",\n      \"vorUndZuname\": \"1682\",\n      \"stand\": null,\n      \"wohnsort\": \"92\"\n    },\n    {\n      \"row\": 13,\n      \"blatt\": \"33\",\n      \"benennung\": null,\n      \"parzelle\": \"43\",\n      \"dominical\": \"7\",\n      \"rustical\": null,\n      \"haus\": \"7\",\n      \"vorUndZuname\": \"824\",\n      \"stand\": null,\n      \"wohnsort\": \"93\"\n    },\n    {\n      \"row\": 14,\n      \"blatt\": \"34\",\n      \"benennung\": null,\n      \"parzelle\": \"44\",\n      \"dominical\": \"1\",\n      \"rustical\": null,\n      \"haus\": \"6\",\n      \"vorUndZuname\": \"1082\",\n      \"stand\": null,\n      \"wohnsort\": \"94\"\n    },\n    {\n      \"row\": 15,\n      \"blatt\": \"35\",\n      \"benennung\": null,\n      \"parzelle\": \"45\",\n      \"dominical\": \"1\",\n      \"rustical\": null,\n      \"haus\": \"5\",\n      \"vorUndZuname\": \"1244\",\n      \"stand\": null,\n      \"wohnsort\": \"95\"\n    },\n    {\n      \"row\": 16,\n      \"blatt\": \"36\",\n      \"benennung\": null,\n      \"parzelle\": \"46\",\n      \"dominical\": \"1\",\n      \"rustical\": null,\n      \"haus\": \"7\",\n      \"vorUndZuname\": \"787\",\n      \"stand\": null,\n      \"wohnsort\": \"96\"\n    },\n    {\n      \"row\": 17,\n      \"blatt\": \"37\",\n      \"benennung\": null,\n      \"parzelle\": \"47\",\n      \"dominical\": \"2\",\n      \"rustical\": null,\n      \"haus\": \"2\",\n      \"vorUndZuname\": \"180\",\n      \"stand\": null,\n      \"wohnsort\": \"97\"\n    },\n    {\n      \"row\": 18,\n      \"blatt\": \"38\",\n      \"benennung\": null,\n      \"parzelle\": \"48\",\n      \"dominical\": \"1\",\n      \"rustical\": null,\n      \"haus\": \"2\",\n      \"vorUndZuname\": \"564\",\n      \"stand\": null,\n      \"wohnsort\": \"98\"\n    },\n    {\n      \"row\": 19,\n      \"blatt\": \"39\",\n      \"benennung\": null,\n      \"parzelle\": \"49\",\n      \"dominical\": \"5\",\n      \"rustical\": null,\n      \"haus\": \"5\",\n      \"vorUndZuname\": \"834\",\n      \"stand\": null,\n      \"wohnsort\": \"99\"\n    },\n    {\n      \"row\": 20,\n      \"blatt\": \"60.\",\n      \"benennung\": null,\n      \"parzelle\": \"50\",\n      \"dominical\": \"3\",\n      \"rustical\": null,\n      \"haus\": \"3\",\n      \"vorUndZuname\": \"1154\",\n      \"stand\": null,\n      \"wohnsort\": \"100\"\n    }\n  ],\n  \"opomba\": \"Vrstica 20 (blatt '60.') je zadnja vrstica s podatki pred črto; pod njo so seštevki (82, 81, 125, 183). Vse številke parzel so naraščajoče (41–50).\"\n}\n```"
+}
