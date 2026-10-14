@@ -3515,3 +3515,24 @@ Work Log:
 Stage Summary:
 - P60 IZVEDEN (merjena atribucija 17 ruleCandidate: II 12 · I 1 · III 4; soslednost 21/23; Kultur-Tabellen struktura potrjena na pas-straneh 100 % re-listing; unit-semantics moda B/A ~3.6 dokumentirano kot ODPRTA — atribucija = relativa [~]); join v2 NESPREMENJEN (sha256 pinan; izpisi brez pozicij/površin); P55–P59 runtime nespremanjeni.
 - Ostaja odprto: 1) VLM kvota 429 → 13 manjkajočih branj P59 (133–136, 138–139, p137 pass2) + razširitev atribucije na 106 čez-Blatt base; 2) unit-semantics mode B (kolonialna enota ali delna površina?); 3) per-Blatt SPLIT joina (zahteva pini + odločitev lastnika); 4) p139 'Nro des Hauses.' 41–60 + vsota 82 → P58 open #6 (Haus Nro.); 5) lastniki pas-instanc ↔ PF protokol.
+
+---
+Task ID: 27
+Agent: Z.ai Code (glavni agent)
+Task: P61 — unit-semantics moda B: merjena karakterizacija s permutacijsko kontrolo (odprta točka P60 #1)
+
+Work Log:
+- Obnova konteksta: main @ eff9e9d (P60), GitLab == GitHub == Vercel @ P60 (HEAD preverjena prek API); handoff povzetek zastarel (P59/P60 že izvedena); /tmp/p59 preživel z točno strani 133–139 (surovine za 13 manjkajočih branj); VLM kvota ŠE VEDNO 429 (mikro-test 64 ms) → odprta točka #1 (13 VLM branj) ostaja blokirana → izbira P61: odprta točka #2 (unit-semantics mode B).
+- SONDE (ključna odkritja): (1) moda B NI koncentrirana na Kultur-Tabelah (razpršena 5–137, različne kulture); (2) P58 conf je IZPELJAN iz moda (at test = ratio ≈ 3.59665) — krožnost pojasni 0 STRONG pri moda B; (3) per-Blatt dvoumnost konfundira primerjavo po base (samo 5 base z obema modama, različne parcele); (4) GURS tabela parcels-ko1544-merged.json (2117 parcel, povrsina + lat/lng) omogoča permutacijsko kontrolo po metodi P55.
+- Permutacijska kontrola (deterministične FNV-1a-32 točke, radija 50/100 m, pas ±25 % na target areaQK × 3.59665): moda A real @50 0.9248 (209/226) vs perm 0.1637 (37/226) — ujeta = prava parcela; moda B real @50 0.2903 (18/62) vs perm 0.1774 (11/62) → prava parcela (QK×3.6) NI tik zraven → H1 napačni številčni join ZAVRŽEN kot glavni mehanizem; @100 m base rate raste z gostoto (0.5221/0.6129) — diskriminator je 50 m (robni primeri varni: 0.6 mm).
+- H3 delna površina NEUPORABNA (samo 2 base z ≥2 B vrsticami: 163, 176); blattDist moda B (P59 pageAttribution): II 31 · IV 11 · III 9 · I 5 · I·II 1 · null 5 — strukturni podpis; bloki 3/9 (p85 'Wiese und Gfrett' 653–657, p86, p117).
+- VERDIKT: moda B = dosledna drugačna registracijska konvencija (številka ≈ m²), identiteta enote ODPRTA [~]; implikacija za P60: pas pravilo [0.8, 1.25] = moda B — atribucija relativa smiselna; atribucije P60 in join v2 NESPREMENJENI.
+- scripts/p61_ps_unit_semantics.py (deterministična, brez AI ob delovanju, FAIL ob padu I1–I9; --check bajtno PASS): I1 modi == P60 (226/62, pasovi, QK_REF) · I2 sha256 v2 == P60 dokaz · I3 GURS 2117 · I4 FNV determinizem (pin 1711381398 + dvakratni izračun) · I5 blattDist pini · I6 bloki pini · I7 dokaz ⊇ runtime bajtno · I8 P59/P60 runtime sha256 pini (lekcija P9) · I9 --check.
+- Izpisi: dokaz research/issue17/ps-unit-semantics.json (metoda + summary + kontrola + hipoteze + implikacijeP60 + gursCompact) + runtime src/data/atlas/ps-unit-semantics.json (kompakt + gursCompact 2117 parcel za produkcijo preracun — lekcija P58).
+- Integracija: API /api/atlas/ps-unit-semantics (force-static) + UNIT_SEM_P61 (research.ts) + kartica P61 v museum-research (zavihek Prepisi Kurrent, za P60: modi, kontrola @50, struktura, hipoteze z verdikti, pošten status) + povezava iz P60 unit-semantics škatlice ("→ P61 merjeno") + sources.ts N083PS opomba P61 (Si+En) + audit §39 + README bullet + repov worklog P61.
+- QA 64 → 65 (qa-p61-unit-semantics): pini (modi 226/62/800/5, hits A 209/37/220/118 + B 18/11/45/38, blattDist, bloki 3/9, multiB 2, hipoteze ZAVRŽEN/NEUPORABNA/OSTAJA, navzkrižje P60 226/62) + NEODVISEN preracun: modi iz v2 runtime vrstic + FNV-1a permutacijska kontrola na runtime gursCompact (Math.imul — bajtno enako Python) + blattDist iz v2 vrstic × P59 runtime pageAttribution + dokaz == runtime bajtno; dve obliki po P53/P57/P58 (produkcija: preracun na runtime kopijah).
+
+Stage Summary:
+- P61 IZVEDEN (merjena karakterizacija moda B: H1 napačni join ZAVRŽEN s permutacijsko kontrolo, H3 neuporabna, H2 = druga konvencija [~] — identiteta enote ODPRTA); atribucije P60 + join v2 NESPREMENJENI (sha256 pini); P55–P60 runtime nespremanjeni (I8).
+- FNV-1a-32 permutacija = prenosljiva determinizma (Python ↔ TS Math.imul bajtno enako) — QA preracun izvedljiv tudi v produkciji (gursCompact v runtime).
+- Ostaja odprto: 1) identiteta enote moda B (paleografija/dokumenti — glave sekcij str. 61–99); 2) 13 VLM branj P59 (133–136, 138–139, p137 pass2) ob kvoti; 3) razširitev atribucije na 106 čez-Blatt base; 4) razlaga Kultur-Tabellen navzkrižje s P38; 5) per-Blatt SPLIT joina (odločitev lastnika); 6) lastniki pas-instanc ↔ PF protokol; 7) p139 Haus Nro. → P58 open #6.

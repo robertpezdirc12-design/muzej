@@ -378,6 +378,23 @@ API (statični, brez runtime AI):
   `scripts/p60_ps_perblatt_attribution.py` (I1–I7, `--check` bajtno);
   QA 63 → **64**; SHEET_GEOREFS in dokazi P40–P59 nespremenjeni.
 
+- **unit-semantics moda B (P61, issue #13)** — odprta točka P60 #1
+  ("kolonialna enota ali delna površina?") **MERJENO RAZREŠENA s
+  preusmeritvijo**: moda B (ratio ≈ 1, n=62, 42 strani, Blatt II 31 · IV 11 ·
+  III 9 · I 5; bloki 3/9) ni napaka ujeme in ni delna površina (samo 2 base z
+  ≥2 B vrsticami) — je **dosledna drugačna registracijska konvencija**
+  (številka ≈ sodobna meritev v m²); **permutacijska kontrola** na GURS
+  parcelah KO 1544 (2117 parcel, deterministične FNV-1a točke bajtno enake
+  Python/TS, radija 50/100 m, pas ±25 %): moda A real @50 0.9248 vs perm
+  0.1637 (ujeta = prava parcela), moda B real @50 0.2903 vs perm 0.1774 →
+  **H1 napačni številčni join ZAVRŽEN**; identiteta enote ODPRTA [~];
+  pas pravilo P59/P60 = moda B — atribucija relativa smiselna; **join v2
+  NESPREMENJEN**; dokaz `research/issue17/ps-unit-semantics.json` + runtime
+  `src/data/atlas/ps-unit-semantics.json` (gursCompact za produkcijo
+  preracun) (`/api/atlas/ps-unit-semantics`) +
+  `scripts/p61_ps_unit_semantics.py` (I1–I9, `--check` bajtno);
+  QA 64 → **65**; SHEET_GEOREFS in dokazi P40–P60 nespremenjeni.
+
 ## Varnost
 
 Žeton `VERCEL_TOKEN` je shranjen izključno kot šifrirana GitHub Actions

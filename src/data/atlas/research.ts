@@ -4198,3 +4198,126 @@ export const PERBLATT_ATTR_P60: {
     "povezati lastnike pas-instanc (npr. 163 II: Schimey Martho/Stainzldt Wölfl/Schumitsch Matja/Laune Hülfse) s PF protokolom",
   ],
 };
+
+export const UNIT_SEM_P61: {
+  version: number;
+  series: "PS";
+  source: string;
+  status: ResearchStatus;
+  generatedBy: string;
+  method: {
+    bands: { modaA: number[]; modaB: number[] };
+    qkReference: number;
+    radiusM: number[];
+    pas: number;
+    perm: string;
+    target: string;
+  };
+  summary: {
+    modi: { A: number; B: number; X: number; noRatio: number };
+    modaBPages: number;
+    modaBBlattDist: { II: number; IV: number; III: number; I: number; "I·II": number; null: number };
+    blocks: { pages: number[]; n: number; kultur: string | null }[];
+    multiB: string[];
+    areaQK: { B: { mediana: number; min: number; max: number }; A: { mediana: number; min: number; max: number } };
+  };
+  kontrola: Record<"A" | "B", {
+    n: number;
+    real50: { hit: number; rate: number };
+    perm50: { hit: number; rate: number };
+    real100: { hit: number; rate: number };
+    perm100: { hit: number; rate: number };
+  }>;
+  hipoteze: {
+    H1_napacenJoin: { status: string; dokaz: string };
+    H3_delnaPovrsina: { status: string; dokaz: string };
+    H2_drugaEnota: { status: string; dokaz: string };
+  };
+  implikacijeP60: { pasPravilo: string; smisel: string };
+  statusLine: string;
+  verdictSi: string;
+  verdictEn: string;
+  next: string[];
+} = {
+  version: 1,
+  series: "PS",
+  source:
+    "research/issue17/ps-parcels-geo-v2.json (rowsEvidence 1093, sha256 == P60) × research/georef-n83/gurs/parcels-ko1544-merged.json (2117 parcel P47) × ps-blatt-headers.json (pageAttribution P59); dokaz research/issue17/ps-unit-semantics.json + runtime src/data/atlas/ps-unit-semantics.json (gursCompact za produkcijo preracun)",
+  status: "REVIEW",
+  generatedBy:
+    "scripts/p61_ps_unit_semantics.py (deterministično, brez AI ob delovanju, FAIL ob padu I1–I9; --check bajtno PASS)",
+  method: {
+    bands: { modaA: [3.3, 4.3], modaB: [0.8, 1.25] },
+    qkReference: 3.59665,
+    radiusM: [50, 100],
+    pas: 0.25,
+    perm: "FNV-1a-32 na fiksnih nizih 'p61-perm-{i}-{lat|lng}' (Python/TS bajtno enako)",
+    target: "areaQK × 3.59665 (m²)",
+  },
+  summary: {
+    modi: { A: 226, B: 62, X: 800, noRatio: 5 },
+    modaBPages: 42,
+    modaBBlattDist: { II: 31, IV: 11, III: 9, I: 5, "I·II": 1, null: 5 },
+    blocks: [
+      { pages: [85], n: 5, kultur: "Wiese und Gfrett" },
+      { pages: [86], n: 2, kultur: "Wies" },
+      { pages: [117], n: 2, kultur: "Löwisch Thal" },
+    ],
+    multiB: ["163", "176"],
+    areaQK: {
+      B: { mediana: 987.5, min: 76, max: 10964 },
+      A: { mediana: 622.5, min: 23, max: 6139 },
+    },
+  },
+  kontrola: {
+    A: {
+      n: 226,
+      real50: { hit: 209, rate: 0.9248 },
+      perm50: { hit: 37, rate: 0.1637 },
+      real100: { hit: 220, rate: 0.9735 },
+      perm100: { hit: 118, rate: 0.5221 },
+    },
+    B: {
+      n: 62,
+      real50: { hit: 18, rate: 0.2903 },
+      perm50: { hit: 11, rate: 0.1774 },
+      real100: { hit: 45, rate: 0.7258 },
+      perm100: { hit: 38, rate: 0.6129 },
+    },
+  },
+  hipoteze: {
+    H1_napacenJoin: {
+      status: "ZAVRŽEN",
+      dokaz:
+        "moda A real @50 0.9248 vs perm 0.1637; moda B real @50 0.2903 vs perm 0.1774 — prava parcela (QK×3.6) pri moda B ni tik zraven; @100 m base rate raste z gostoto parcel (A perm 0.5221, B perm 0.6129) — diskriminator je 50 m",
+    },
+    H3_delnaPovrsina: {
+      status: "NEUPORABNA",
+      dokaz:
+        "samo 2 base z ≥2 moda B vrsticami (163: 226+214 @ p61/p86; 176: 334+289 @ p83/p86) — blok p85 = različne base (644–657 družina), ne delitve istih",
+    },
+    H2_drugaEnota: {
+      status: "OSTAJA [~]",
+      dokaz:
+        "meritev ujeta na pravo parcelo; register nosi številko ≈ m² — identiteta enote/konvencije ODPRTA (paleografija/dokumenti)",
+    },
+  },
+  implikacijeP60: {
+    pasPravilo: "[0.8, 1.25] = moda B pas",
+    smisel:
+      "pas izbere vrstico v konvenciji, številčno primerljivi s sodobno meritvijo — atribucija smiselna kot RELATIVA [~]; atribucije P60 NESPREMENJENE",
+  },
+  statusLine:
+    "P61 UNIT-SEMANTICS MERJENA: moda B (ratio ≈ 1, n=62) = drugačna registracijska konvencija [~], ne napaka ujeme — permutacijska kontrola @ 50/100 m pas ±25 %: moda A real 0.9248/0.9735 vs perm 0.1637/0.5221 (ujeta = prava parcela), moda B real 0.2903/0.7258 vs perm 0.1774/0.6129 → prava parcela (QK×3.6) ni v bližini → H1 napačni join ZAVRŽEN; delna površina neuporabna (2 base z ≥2 B); blattDist II 31 · IV 11 · III 9 · I 5; bloki 3/9; identiteta enote ODPRTA; pas pravilo P59/P60 = moda B — atribucija smiselna kot relativa",
+  verdictSi:
+    "P61 merjeno razrešuje odprto točko P60 #1 s preusmeritvijo: moda B ni napaka ujeme in ni delna površina — je dosledna drugačna registracijska konvencija površin (številka ≈ sodobna meritev v m²; n=62 vrstic, 42 strani, Blatt II 31 · IV 11 · III 9 · I 5). Permutacijska kontrola (FNV-1a deterministične točke, radija 50/100 m, pas ±25 %): pri moda A je prava parcela (površina ≈ QK×3.6) tik zraven (0.9248 @ 50 m vs 0.1637 naključno), pri moda B pa ni (0.2903 vs 0.1774) → napačni številčni join ZAVRŽEN kot glavni mehanizem. Delna površina neuporabna: samo 2 base z ≥2 moda B vrsticami. Identiteta enote ostaja ODPRTA [~] — paleografska/dokumentarna potrditev. Implikacija za P60: pas pravilo [0.8, 1.25] izbere vrstico v konvenciji, ki je številčno primerljiva s sodobno meritvijo — atribucija ostaja smiselna kot RELATIVA [~]; join v2 NESPREMENJEN",
+  verdictEn:
+    "P61 measures and re-frames P60 open point #1: mode B is not a join error and not a partial surface — it is a consistent alternative registration convention (number ≈ modern m2; n=62 rows, 42 pages, Blatt II 31 · IV 11 · III 9 · I 5). Permutation control (FNV-1a deterministic points, 50/100 m, ±25 %): for mode A the true parcel (≈ QK×3.6) sits next door (0.9248 @ 50 m vs 0.1637 random), for mode B it does not (0.2903 vs 0.1774) → wrong-number join REJECTED as the main mechanism. Partial surface unusable: only 2 bases with ≥2 mode B rows. Unit identity remains OPEN [~] — paleographic/documentary confirmation. Implication for P60: the [0.8, 1.25] band selects rows in the convention numerically comparable with the modern measurement — attribution remains sound as RELATIVE [~]; join v2 UNCHANGED",
+  next: [
+    "identiteta enote moda B (paleografija/dokumenti: glave sekcij str. 61–99, pojasnila registra)",
+    "razširitev atribucije na 106 čez-Blatt base (potrebna P59 pokritost 133–136 + 138–139 ob VLM kvoti)",
+    "razlaga strani 61/83–87/99 kot Kultur-Tabellen: navzkrižje s Kultur stolpcem polnih branj P38",
+    "per-Blatt SPLIT joina za atributirane base (zahteva pini + odločitev lastnika o pozicijah)",
+    "povezati lastnike pas-instanc (npr. 163 II) s PF protokolom",
+  ],
+};

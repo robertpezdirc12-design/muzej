@@ -77,6 +77,7 @@ import {
   PS_REGISTER_START_P57,
   BLATT_HEADERS_P59,
   PERBLATT_ATTR_P60,
+  UNIT_SEM_P61,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -1956,7 +1957,7 @@ export function MuseumResearch() {
                 <div className="rounded-lg border bg-background p-3">
                   <p className="text-xs font-semibold">{t("Unit-semantics (odprto)", "Unit semantics (open)")}</p>
                   <p className="mt-1 font-mono text-[11px] leading-relaxed text-muted-foreground">
-                    {t("moda A", "mode A")} ≈ 3.59665 (1 QK → m², n=226) · {t("moda B", "mode B")} ≈ 1 (n=62) · {t("faktor", "factor")} ~3.6 · {t("atribucija = relativa", "attribution = relative")} [~]
+                    {t("moda A", "mode A")} ≈ 3.59665 (1 QK → m², n=226) · {t("moda B", "mode B")} ≈ 1 (n=62) · {t("faktor", "factor")} ~3.6 · {t("atribucija = relativa", "attribution = relative")} [~] · <span className="text-primary">{t("→ P61 merjeno: moda B = drugačna konvencija, ne napaka ujeme", "→ P61 measured: mode B = a different convention, not a join error")}</span>
                   </p>
                 </div>
               </div>
@@ -1968,6 +1969,62 @@ export function MuseumResearch() {
                   {t(
                     "Atribucija = RELATIVNA (najboljše ujemanje med instancami baze) — absolutna korespondenca ni dokazana (unit gap moda A/B ~3.6, odprto); join v2 NESPREMENJEN (izpisi brez pozicij/površin; sha256 v2 vhoda pinan — I4 po gradnji); soslednost = kontrola kakovosti, ne diskriminator; P59 pokritost 133–136 + 138–139 še naprej odprta (VLM kvota) — atribucija se razširi ob dokončanju. Strojno berljivo: research/issue17/ps-perblatt-attribution.json + runtime src/data/atlas/ps-perblatt-attribution.json (/api/atlas/ps-perblatt-attribution).",
                     "The attribution is RELATIVE (the best match among a base's instances) — the absolute correspondence is not proven (mode A/B unit gap ~3.6, open); the v2 join UNCHANGED (outputs contain no positions/areas; the v2 input sha256 pinned — I4 by construction); adjacency = a quality control, not a discriminator; P59 coverage 133–136 + 138–139 remains open (VLM quota) — the attribution extends once finished. Machine-readable: research/issue17/ps-perblatt-attribution.json + the runtime src/data/atlas/ps-perblatt-attribution.json (/api/atlas/ps-perblatt-attribution).",
+                  )}
+                </p>
+              </div>
+            </div>
+
+            {/* P61 — unit-semantics moda B (issue #13) */}
+            <div className="min-w-0 rounded-xl border bg-card p-6 shadow-sm">
+              <h3 className="flex items-center gap-2 font-display text-lg font-semibold">
+                <BookOpen className="size-4 text-primary" aria-hidden="true" />
+                {t("Unit-semantics moda B — merjena karakterizacija (P61)", "Unit-semantics mode B — measured characterization (P61)")}
+                <StatusBadge status={UNIT_SEM_P61.status} />
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                {t(
+                  "Odprta točka P60 #1 ('kolonialna enota ali delna površina?') merjeno RAZREŠENA s preusmeritvijo: moda B ni napaka ujeme in ni delna površina — je dosledna drugačna registracijska konvencija površin (številka ≈ sodobna meritev v m²). Permutacijska kontrola na GURS parcelah KO 1544 z determinističnimi FNV-1a točkami (bajtno enako Python/TS) — identiteta enote ostaja odprta [~].",
+                  "P60 open point #1 ('a colonial unit or a partial surface?') measured and RE-FRAMED: mode B is neither a join error nor a partial surface — it is a consistent alternative registration convention (number ≈ modern m2). Permutation control on the GURS parcels KO 1544 with deterministic FNV-1a points (byte-identical Python/TS) — the unit identity remains open [~].",
+                )}
+              </p>
+
+              {/* P61: modi + kontrola */}
+              <div className="mt-3 grid gap-2 sm:grid-cols-3">
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="text-xs font-semibold">{t("Modi (pasovi == P60)", "Modes (bands == P60)")}</p>
+                  <p className="mt-1 font-mono text-[11px] leading-relaxed text-muted-foreground">
+                    {t("moda A", "mode A")} [3.3, 4.3] n=226 · {t("moda B", "mode B")} [0.8, 1.25] n=62 · {t("ostali", "other")} n=800 · {t("brez razmerja", "no ratio")} n=5
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="text-xs font-semibold">{t("Kontrola @ 50 m (ključni)", "Control @ 50 m (key)")}</p>
+                  <p className="mt-1 font-mono text-[11px] leading-relaxed text-muted-foreground">
+                    {t("moda A", "mode A")} {UNIT_SEM_P61.kontrola.A.real50.rate} vs {UNIT_SEM_P61.kontrola.A.perm50.rate} ({t("5.6×", "5.6×")}) · {t("moda B", "mode B")} {UNIT_SEM_P61.kontrola.B.real50.rate} vs {UNIT_SEM_P61.kontrola.B.perm50.rate} (1.6×) · @100 m {t("gostota", "density")} ({UNIT_SEM_P61.kontrola.A.perm100.rate}/{UNIT_SEM_P61.kontrola.B.perm100.rate})
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="text-xs font-semibold">{t("Struktura moda B", "Mode B structure")}</p>
+                  <p className="mt-1 font-mono text-[11px] leading-relaxed text-muted-foreground">
+                    42 {t("strani", "pages")} (5–137) · Blatt II 31 · IV 11 · III 9 · I 5 · {t("bloki", "blocks")} 3/9 (p85 'Wiese und Gfrett' 653–657, p86, p117)
+                  </p>
+                </div>
+              </div>
+
+              {/* P61: hipoteze */}
+              <div className="mt-3 rounded-lg border bg-background p-3">
+                <p className="text-xs font-semibold">{t("Hipoteze (merjeno)", "Hypotheses (measured)")}</p>
+                <p className="mt-1 font-mono text-[11px] leading-relaxed text-muted-foreground">
+                  H1 {t("napačni številčni join", "wrong-number join")}: <span className="rounded bg-rose-100 px-1.5 py-0.5 dark:bg-rose-950/40">{UNIT_SEM_P61.hipoteze.H1_napacenJoin.status}</span> ({UNIT_SEM_P61.hipoteze.H1_napacenJoin.dokaz}) · H3 {t("delna površina", "partial surface")}: <span className="rounded bg-amber-100 px-1.5 py-0.5 dark:bg-amber-950/40">{UNIT_SEM_P61.hipoteze.H3_delnaPovrsina.status}</span> ({t("samo", "only")} 2 base: 163, 176) · H2 {t("druga enota", "different unit")}: <span className="rounded bg-emerald-100 px-1.5 py-0.5 dark:bg-emerald-950/40">{UNIT_SEM_P61.hipoteze.H2_drugaEnota.status}</span>
+                </p>
+              </div>
+
+              {/* P61: implikacija + poštenost */}
+              <div className="mt-3 rounded-lg border border-emerald-200 bg-emerald-50/60 p-3 dark:border-emerald-900/50 dark:bg-emerald-950/30">
+                <p className="text-[11px] leading-relaxed text-foreground/80">
+                  <span className="font-semibold">{t("Pošten status: ", "Honest status: ")}</span>
+                  {t(
+                    "Identiteta enote ODPRTA [~] (paleografija/dokumenti — naslednja faza); Implikacija za P60: pas pravilo [0.8, 1.25] izbere vrstico v konvenciji, številčno primerljivi s sodobno meritvijo — atribucija smiselna kot RELATIVA, atribucije P60 NESPREMENJENE; join v2 NESPREMENJEN (sha256 == P60 dokaz, I2); P59 pokritost 133–136 + 138–139 še odprta (VLM kvota). Strojno berljivo: research/issue17/ps-unit-semantics.json + runtime src/data/atlas/ps-unit-semantics.json (/api/atlas/ps-unit-semantics; gursCompact za produkcijo preracun).",
+                    "Unit identity OPEN [~] (paleography/documents — next phase); implication for P60: the [0.8, 1.25] band selects the row in the convention numerically comparable with the modern measurement — attribution sound as RELATIVE, P60 attributions UNCHANGED; join v2 UNCHANGED (sha256 == P60 evidence, I2); P59 coverage 133–136 + 138–139 remains open (VLM quota). Machine-readable: research/issue17/ps-unit-semantics.json + the runtime src/data/atlas/ps-unit-semantics.json (/api/atlas/ps-unit-semantics; gursCompact for the production re-computation).",
                   )}
                 </p>
               </div>

@@ -2221,3 +2221,57 @@ dve obliki po P53/P57/P58 (produkcija: preracun na runtime kopijah).
 mode B ostaja odprto vprašanje (kolonialna merska enota ali delna površina [~]);
 P59 pokritost 133–136 + 138–139 še naprej odprta (VLM kvota 429) — atribucija se
 razširi ob dokončanju pokritosti; SHEET_GEOREFS in dokazi P40–P59 nespremenjeni.
+
+## §39 — P61: unit-semantics moda B — merjena karakterizacija s permutacijsko kontrolo (issue #13, 2026-10-14)
+
+**Odprta točka P60 #1** ("unit-semantics mode B: kolonialna merska enota ali
+delna površina [~]") je **merjeno RAZREŠENA s preusmeritvijo** — deterministična
+skripta `scripts/p61_ps_unit_semantics.py` (brez AI ob delovanju; FAIL ob padu
+I1–I9; `--check` bajtno PASS: I1 modi == P60 · I2 v2 sinkron · I3 GURS 2117 ·
+I4 FNV determinizem · I5 blattDist · I6 bloki · I7 dokaz ⊇ runtime · I8 P59/P60
+runtime pini · I9 determinizem).
+
+**Metoda (vse deterministično):**
+- pasovi == P60: moda A [3.3, 4.3] n=226 · moda B [0.8, 1.25] n=62 · ostali
+  n=800 · brez razmerja n=5 (ratio = areaModern / areaQK; 1 QK = 3.59665 m²);
+- **permutacijska kontrola** hipoteze H1 (napačen številčni join P55): točke iz
+  determinističnega FNV-1a-32 hash (bajtno enako Python/TS — QA preracun),
+  radija 50/100 m, površinski pas ±25 % glede na target = areaQK × 3.59665;
+- moda B struktura: 42 strani (5–137), Blatt dist (P59 pageAttribution)
+  II 31 · IV 11 · III 9 · I 5 · I·II 1 · null 5, bloki ≥2 sosedenih vrstic
+  3/9 (p85 'Wiese und Gfrett' 653–657, p86, p117), base z ≥2 B vrsticami samo 2.
+
+**MERJENI REZULTATI:**
+- moda A: real @50 m **0.9248** (209/226) vs perm **0.1637** (37/226) — prava
+  parcela (površina ≈ QK×3.6) je tik zraven → ujeta = prava parcela;
+- moda B: real @50 m **0.2903** (18/62) vs perm **0.1774** (11/62) — prava
+  parcela NI tik zraven → **H1 napačni join ZAVRŽEN** kot glavni mehanizem;
+- @100 m base rate raste z gostoto parcel (A perm 0.5221, B perm 0.6129) —
+  diskriminator je 50 m (robni primeri varni: najbližja točka meji 0.6 mm);
+- H3 delna površina: **NEUPORABNA** (samo 2 base z ≥2 B vrsticami: 163, 176);
+- H2 druga enota/konvencija: **OSTAJA [~]** — meritev ujeta na pravo parcelo;
+  register nosi številko ≈ m²; identiteta enote ODPRTA (paleografija/dokumenti).
+
+**Implikacija za P60:** pas pravilo [0.8, 1.25] izbere vrstico v konvenciji,
+številčno primerljivi s sodobno meritvijo — atribucija smiselna kot RELATIVA;
+atribucije P60 in join v2 NESPREMENJENI (I2 sha256 v2 == P60 dokaz; P59/P60
+runtime pini — I8 po lekciji P9).
+
+**Artefakti:** dokaz `research/issue17/ps-unit-semantics.json` (metoda, summary,
+kontrola, hipoteze, implikacijeP60, gursCompact) + runtime
+`src/data/atlas/ps-unit-semantics.json` (kompakt + gursCompact 2117 parcel za
+produkcijo preracun); API `/api/atlas/ps-unit-semantics` (force-static); kartica
+P61 (Raziskave → Prepisi Kurrent, za P60) + povezava iz P60 unit-semantics
+škatlice ("→ P61 merjeno"); sources.ts N083PS opomba P61 (Si+En).
+
+**QA 64 → 65:** `qa-p61-unit-semantics` — pini (modi 226/62/800/5, hits
+209/37/220/118 + 18/11/45/38, blattDist, bloki 3/9, multiB 2, hipoteze) +
+NEODVISEN preracun: modi iz v2 runtime vrstic + FNV-1a permutacijska kontrola na
+runtime gursCompact (Math.imul — bajtno enako Python) + blattDist iz v2 vrstic ×
+P59 runtime pageAttribution + dokaz == runtime bajtno; dve obliki po
+P53/P57/P58 (produkcija: preracun na runtime kopijah).
+
+**Poštenost:** identiteta enote ostaja ODPRTA [~] (naslednja faza:
+paleografija/dokumenti — glave sekcij str. 61–99, pojasnila registra); P59
+pokritost 133–136 + 138–139 še naprej odprta (VLM kvota 429); SHEET_GEOREFS in
+dokazi P40–P60 nespremenjeni.

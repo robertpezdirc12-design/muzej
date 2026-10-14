@@ -43,6 +43,7 @@ import {
   PS_REGISTER_START_P57,
   BLATT_HEADERS_P59,
   PERBLATT_ATTR_P60,
+  UNIT_SEM_P61,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -4042,6 +4043,159 @@ const p45bErrors: string[] = [];
     p60Errors.length === 0
       ? `pini 17 base / 23 vrstic · II 12 · I 1 · III 4 · soslednost 21/2 (671@p36, 934@p99) · 163 → II @ 0.9813 · 671 edina I · moda A 226 / moda B 62 · re-listing 100 % na 9 straneh · ${p60FileDetail}`
       : p60Errors.join("; "),
+  );
+
+  /* ── P61 (issue #13): unit-semantics moda B — merjena karakterizacija ── */
+  const p61Errors: string[] = [];
+  const us61 = UNIT_SEM_P61;
+  // 1) TS pini
+  if (us61.summary.modi.A !== 226 || us61.summary.modi.B !== 62 || us61.summary.modi.X !== 800 || us61.summary.modi.noRatio !== 5)
+    p61Errors.push("pini: modi ≠ A 226 / B 62 / X 800 / noRatio 5");
+  if (us61.summary.modi.A !== us61.kontrola.A.n || us61.summary.modi.B !== us61.kontrola.B.n)
+    p61Errors.push("pini: kontrola n ≠ modi");
+  if (us61.kontrola.A.real50.hit !== 209 || us61.kontrola.A.perm50.hit !== 37 || us61.kontrola.A.real100.hit !== 220 || us61.kontrola.A.perm100.hit !== 118)
+    p61Errors.push("pini: moda A hits ≠ 209/37/220/118");
+  if (us61.kontrola.B.real50.hit !== 18 || us61.kontrola.B.perm50.hit !== 11 || us61.kontrola.B.real100.hit !== 45 || us61.kontrola.B.perm100.hit !== 38)
+    p61Errors.push("pini: moda B hits ≠ 18/11/45/38");
+  if (us61.summary.modaBBlattDist.II !== 31 || us61.summary.modaBBlattDist.IV !== 11 || us61.summary.modaBBlattDist.III !== 9 || us61.summary.modaBBlattDist.I !== 5 || us61.summary.modaBBlattDist["I·II"] !== 1 || us61.summary.modaBBlattDist.null !== 5)
+    p61Errors.push("pini: blattDist ≠ II 31 · IV 11 · III 9 · I 5 · I·II 1 · null 5");
+  if (us61.summary.blocks.length !== 3 || us61.summary.blocks.reduce((s, b) => s + b.n, 0) !== 9)
+    p61Errors.push("pini: bloki ≠ 3/9");
+  if (us61.summary.multiB.length !== 2)
+    p61Errors.push("pini: multiB ≠ 2 (H3 neuporabna)");
+  if (us61.hipoteze.H1_napacenJoin.status !== "ZAVRŽEN" || us61.hipoteze.H3_delnaPovrsina.status !== "NEUPORABNA" || !us61.hipoteze.H2_drugaEnota.status.includes("OSTAJA"))
+    p61Errors.push("pini: hipoteze statusi ≠ ZAVRŽEN/NEUPORABNA/OSTAJA");
+  if (us61.summary.modi.A !== PERBLATT_ATTR_P60.unitSemantics.modaA.count || us61.summary.modi.B !== PERBLATT_ATTR_P60.unitSemantics.modaB.count)
+    p61Errors.push("pini: modi ≠ P60 unitSemantics (226/62)");
+  // 2) datoteke + NEODVISEN preracun (modi iz v2 vrstic × gursCompact FNV kontrola; dve obliki po P53/P57/P58)
+  let p61FileDetail = "datoteke niso preverjene (readFile ni na voljo) — celovita kontrola teče na /api/qa";
+  if (opts.readFile) {
+    const rawRt61 = opts.readFile("src/data/atlas/ps-unit-semantics.json");
+    const rawEv61 = opts.readFile("research/issue17/ps-unit-semantics.json");
+    const rawV2rt = opts.readFile("src/data/atlas/ps-parcels-geo.json");
+    if (rawRt61 === null || rawV2rt === null) {
+      p61Errors.push("runtime ps-unit-semantics.json / ps-parcels-geo.json ni berljiv");
+    } else {
+      try {
+        const rt61 = JSON.parse(rawRt61) as {
+          version?: number;
+          summary: { modi: Record<string, number>; modaBBlattDist: Record<string, number>; blocks: { n: number }[]; multiB: string[] };
+          kontrola: Record<string, Record<string, { hit: number; rate: number } | number>>;
+          pini: { v2Sha256: string; gursSha256: string; hits: Record<string, Record<string, number>>; fnv: number };
+          gursCompact: [string, number, number, number][];
+        };
+        const v2rt = JSON.parse(rawV2rt) as { version?: number; rows: { page: number; parzella: string; base: string; lat: number; lng: number; areaQK: number | null; ratio?: number | null }[] };
+        if (rt61.version !== 1) p61Errors.push("runtime version ≠ 1");
+        if (v2rt.version !== 2) p61Errors.push("v2 runtime version ≠ 2");
+        if (rt61.summary.modi.A !== us61.summary.modi.A || rt61.summary.modi.B !== us61.summary.modi.B)
+          p61Errors.push("TS ↔ runtime: modi ≠");
+        if (rt61.pini.hits.A.real50 !== 209 || rt61.pini.hits.B.real50 !== 18)
+          p61Errors.push("runtime: hits pini ≠ 209/18 @50");
+        // NEODVISEN preracun: modi iz v2 vrstic
+        const qkRef = 3.59665;
+        const cnt = { A: 0, B: 0, X: 0, noRatio: 0 };
+        const bnd = (v: number | null | undefined): "A" | "B" | "X" | null =>
+          v == null ? null : v >= 3.3 && v <= 4.3 ? "A" : v >= 0.8 && v <= 1.25 ? "B" : "X";
+        for (const r of v2rt.rows) {
+          const b = bnd(r.ratio);
+          cnt[b == null ? "noRatio" : b]++;
+        }
+        if (cnt.A !== 226 || cnt.B !== 62 || cnt.X !== 800 || cnt.noRatio !== 5)
+          p61Errors.push(`preracun: modi ${JSON.stringify(cnt)} ≠ 226/62/800/5`);
+        // NEODVISEN preracun: FNV-1a-32 permutacijska kontrola na gursCompact (ASCII nizi — bajtno enako Python)
+        const gc = rt61.gursCompact;
+        if (gc.length !== 2117) p61Errors.push(`runtime: gursCompact ${gc.length} ≠ 2117`);
+        const fnv1a32 = (s: string): number => {
+          let h = 0x811c9dc5;
+          for (let i = 0; i < s.length; i++) {
+            h ^= s.charCodeAt(i);
+            h = Math.imul(h, 0x01000193) >>> 0;
+          }
+          return h >>> 0;
+        };
+        let latMin = Infinity, latMax = -Infinity, lngMin = Infinity, lngMax = -Infinity;
+        for (const g of gc) {
+          if (g[2] < latMin) latMin = g[2];
+          if (g[2] > latMax) latMax = g[2];
+          if (g[3] < lngMin) lngMin = g[3];
+          if (g[3] > lngMax) lngMax = g[3];
+        }
+        const dm2 = (a0: number, a1: number, b0: number, b1: number): number => {
+          const dlat = (a0 - b0) * 111320.0;
+          const dlng = (a1 - b1) * 111320.0 * Math.cos(a0 * Math.PI / 180.0);
+          return Math.sqrt(dlat * dlat + dlng * dlng);
+        };
+        const hitCount = (pts: [number, number, number][], R: number): number => {
+          let ok = 0;
+          for (const [la, ln, t] of pts) {
+            if (t <= 0) continue;
+            let found = false;
+            for (const g of gc) {
+              if (dm2(la, ln, g[2], g[3]) <= R && Math.abs(g[1] - t) / t <= 0.25) { found = true; break; }
+            }
+            if (found) ok++;
+          }
+          return ok;
+        };
+        const pnum = (p: string): number => (/^\d+$/.test(p) ? Number(p) : 1e9);
+        const ordered = [...v2rt.rows].sort((x, y) => x.page - y.page || pnum(x.parzella) - pnum(y.parzella));
+        const realPts: Record<"A" | "B", [number, number, number][]> = { A: [], B: [] };
+        for (const r of ordered) {
+          const b = bnd(r.ratio);
+          if (b === "A" || b === "B") realPts[b].push([r.lat, r.lng, (r.areaQK ?? 0) * qkRef]);
+        }
+        const permPts: Record<"A" | "B", [number, number, number][]> = { A: [], B: [] };
+        for (const k of ["A", "B"] as const) {
+          for (let i = 0; i < realPts[k].length; i++) {
+            const la = latMin + (fnv1a32(`p61-perm-${i}-lat`) / 4294967296.0) * (latMax - latMin);
+            const ln = lngMin + (fnv1a32(`p61-perm-${i}-lng`) / 4294967296.0) * (lngMax - lngMin);
+            permPts[k].push([la, ln, realPts[k][i][2]]);
+          }
+        }
+        if (fnv1a32("p61-perm-0-lat") !== 1711381398) p61Errors.push("preracun: FNV pin ≠ 1711381398");
+        const hA50 = hitCount(realPts.A, 50), pA50 = hitCount(permPts.A, 50);
+        const hB50 = hitCount(realPts.B, 50), pB50 = hitCount(permPts.B, 50);
+        const hA100 = hitCount(realPts.A, 100), pA100 = hitCount(permPts.A, 100);
+        const hB100 = hitCount(realPts.B, 100), pB100 = hitCount(permPts.B, 100);
+        if (hA50 !== 209 || pA50 !== 37 || hA100 !== 220 || pA100 !== 118)
+          p61Errors.push(`preracun: moda A hits ${hA50}/${pA50}/${hA100}/${pA100} ≠ 209/37/220/118`);
+        if (hB50 !== 18 || pB50 !== 11 || hB100 !== 45 || pB100 !== 38)
+          p61Errors.push(`preracun: moda B hits ${hB50}/${pB50}/${hB100}/${pB100} ≠ 18/11/45/38`);
+        // blattDist preracun iz v2 vrstic × pageAttribution (P59 runtime)
+        const rawRt59 = opts.readFile("src/data/atlas/ps-blatt-headers.json");
+        if (rawRt59 !== null) {
+          const rt59 = JSON.parse(rawRt59) as { pageAttribution: Record<string, { blatt: string | null }> };
+          const bd: Record<string, number> = { II: 0, IV: 0, III: 0, I: 0, "I·II": 0, null: 0 };
+          for (const r of ordered) {
+            if (bnd(r.ratio) !== "B") continue;
+            const bl = rt59.pageAttribution[String(r.page)]?.blatt ?? null;
+            bd[bl ?? "null"]++;
+          }
+          if (bd.II !== 31 || bd.IV !== 11 || bd.III !== 9 || bd.I !== 5 || bd["I·II"] !== 1 || bd.null !== 5)
+            p61Errors.push(`preracun: blattDist ${JSON.stringify(bd)} ≠ II 31 · IV 11 · III 9 · I 5 · I·II 1 · null 5`);
+        }
+        // evidencа (samo repo): dokaz ⊇ runtime bajtno
+        if (rawEv61 !== null) {
+          const ev = JSON.parse(rawEv61) as { runtime: unknown };
+          if (JSON.stringify(ev.runtime) !== JSON.stringify(rt61))
+            p61Errors.push("dokaz: runtime ni bajtno podmnožica dokaza");
+        }
+        p61FileDetail = rawEv61 !== null
+          ? "repo: dokaz == runtime bajtno · preracun: modi 226/62/800/5 iz v2 vrstic · FNV-1a kontrola 209/37/220/118 + 18/11/45/38 == pini · blattDist II 31 · IV 11 · III 9 · I 5"
+          : "produkcija: research/ ni v deploymentu — preracun na runtime kopijah (v2 vrstice × gursCompact: modi 226/62 + kontrola 209/18 @50)";
+      } catch (e) {
+        p61Errors.push(`ps-unit-semantics datoteke neuspešno: ${String(e).slice(0, 80)}`);
+      }
+    }
+  }
+  push(
+    "qa-p61-unit-semantics",
+    "P61: UNIT-SEMANTICS moda B (issue #13): odprta točka P60 #1 merjeno razrešena s preusmeritvijo — moda B (ratio ≈ 1, n=62, 42 strani, Blatt II 31 · IV 11 · III 9 · I 5) ni napaka ujeme in ni delna površina (samo 2 base z ≥2 B vrsticami: 163, 176) — je dosledna drugačna registracijska konvencija (številka ≈ m²); PERMUTACIJSKA KONTROLA (FNV-1a deterministične točke, GURS 2117 parcel KO 1544, radija 50/100 m, pas ±25 %): moda A real @50 0.9248 vs perm 0.1637 (ujeta = prava parcela), moda B real @50 0.2903 vs perm 0.1774 → prava parcela (QK×3.6) ni tik zraven → H1 napačni join ZAVRŽEN; bloki 3/9 (p85 'Wiese und Gfrett' 653–657, p86, p117); identiteta enote ODPRTA [~]; pas pravilo P59/P60 = moda B — atribucija relativa smiselna; join v2 NESPREMENJEN; status REVIEW",
+    "P61: UNIT-SEMANTICS mode B (issue #13): P60 open point #1 measured and re-framed — mode B (ratio ≈ 1, n=62, 42 pages, Blatt II 31 · IV 11 · III 9 · I 5) is neither a join error nor a partial surface (only 2 bases with ≥2 B rows: 163, 176) — it is a consistent alternative registration convention (number ≈ m2); PERMUTATION CONTROL (FNV-1a deterministic points, 2117 GURS parcels KO 1544, 50/100 m, ±25 %): mode A real @50 0.9248 vs perm 0.1637 (the join = the true parcel), mode B real @50 0.2903 vs perm 0.1774 → the true parcel (QK×3.6) is not next door → H1 wrong join REJECTED; blocks 3/9 (p85 'Wiese und Gfrett' 653-657, p86, p117); unit identity OPEN [~]; the P59/P60 band rule = mode B — relative attribution sound; join v2 UNCHANGED; status REVIEW",
+    p61Errors.length === 0,
+    p61Errors.length === 0
+      ? `pini modi 226/62/800/5 · hits A 209/37/220/118 · B 18/11/45/38 == preracun (v2 × gursCompact FNV) · blattDist II 31 · IV 11 · III 9 · I 5 · bloki 3/9 · multiB 2 · hipoteze ZAVRŽEN/NEUPORABNA/OSTAJA · ${p61FileDetail}`
+      : p61Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;
