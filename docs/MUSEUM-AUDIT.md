@@ -2172,3 +2172,52 @@ avtoritativni ostajajo v2/pageMap podatki); sred-stranske numeralе = extras [~]
 ruleCandidate = merjen kandidat, ne izvedena atribucija; identifikacija per-Blatt
 instanc [~] (strojno branje ni dokazni vir); SHEET_GEOREFS in dokazi P40–P58
 nespremenjeni (lekcija P9); P55/P56/P57/P58 runtime nespremenjeni (pini QA).
+
+## §38 — P60: per-Blatt atribucija ruleCandidate base v2 — izvedba P59 pravila pasu (issue #13, 2026-10-14)
+
+**Kontekst:** P59 je meril per-Blatt instancе 211 dvoumnih base v2 in označil 17
+ruleCandidate (baza z TOČNO eno instanco z median razmerjem v pasu [0.8, 1.25])
+— MERJENO, ne izvedeno. P60 pravilo IZVEDE kot atribucijo, še naprej brez
+prerazporeditev joina (disciplina P56/P58/P59).
+
+**Izvedba (skripta `scripts/p60_ps_perblatt_attribution.py`, deterministična,
+brez AI ob delovanju, FAIL ob padu I1–I7, `--check` bajtno PASS):**
+- vsaka od 17 base dobi `attributedBlatt` = instanca v pasu: **II 12 · I 1 ·
+  III 4**, 23 pas-vrstic; primer 163 → Blatt II @ 0.9813 (4 kulture Wiese/
+  Prunigad/Weide/Aehn na straneh 61/83/84/86) vs Blatt I @ 7.0 @ p11; 671 edina
+  z in-band I; 928/934/939/1831 z in-band III;
+- re-izpeljava instanc iz v2 vrstic × P59 pageAttribution == P59 instances
+  (I2: rows/pages/median, Δ<1e-9);
+- **soslednost-kontrola** per pas-vrstica (sosedi ±1 po vrstnem redu vrstic
+  evidence na isti strani): **21/23 OK**; 671@p36 in 934@p99 [~] — prečrtane
+  vrstice v registru (strani z vrstnimi vrzelmi), ne protislovje;
+- **strukturni prinos:** strani pas-instanc (36, 49, 61, 83–87, 94, 99) nosijo
+  **100 % več-stranskih base** — potrditev interpretacije Kultur-Tabellen
+  (re-listing parcel po kulturah; p85 = "Wiese und Gfrett" družina za 644–657,
+  p99 = "Wiesen" sekcija za 928–939) [~];
+- **unit-semantics opomba (merjeno, odprto):** pas pravila ujema modo B
+  (ratio ≈ 1, n=62 globalno), NE modo A (≈ 3.59665 = 1 QK → m², n=226) —
+  faktor ~3.6 med modama; absolutna korespondenca pas-instanc ni dokazana —
+  atribucija = RELATIVNA (najboljše ujemanje med instancami baze) [~].
+
+**I4 (join nespremanjen):** sha256 v2 vhoda pinan v dokazu; izpisi ne vsebujejo
+pozicij/površin (kontrola po gradnji: geo polja le v pas-detaljah vrstic kot
+kopije vhoda); P55–P59 runtime nespremanjeni (pini QA).
+
+**Artefakti:** dokaz `research/issue17/ps-perblatt-attribution.json` (17 base s
+strukturami instanc, pas-detalje s soslednostjo, attrPageStats, unitSemantics)
++ runtime `src/data/atlas/ps-perblatt-attribution.json`; API
+`/api/atlas/ps-perblatt-attribution` (force-static); kartica P60 (Raziskave →
+Prepisi Kurrent) + zapora P59 točke "kandidat za P60" (→ IZVEDENO); sources.ts
+N083PS opomba P60 (Si+En).
+
+**QA 63 → 64:** `qa-p60-perblatt-attribution` — pini (17/23, II 12 · I 1 ·
+III 4, soslednost 21/2, moda A 226 / moda B 62, 163 → II @ 0.9813, 671 edina I)
++ NEODVISEN preracun iz v2 runtime vrstic × runtime pageAttribution
+(atribucije + mediani + soslednost po vrstnem redu) + dokaz == runtime bajtno;
+dve obliki po P53/P57/P58 (produkcija: preracun na runtime kopijah).
+
+**Poštenost:** atribucija je relativna, ne dokazana korespondenca; unit-semantics
+mode B ostaja odprto vprašanje (kolonialna merska enota ali delna površina [~]);
+P59 pokritost 133–136 + 138–139 še naprej odprta (VLM kvota 429) — atribucija se
+razširi ob dokončanju pokritosti; SHEET_GEOREFS in dokazi P40–P59 nespremenjeni.

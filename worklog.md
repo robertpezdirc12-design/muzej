@@ -3494,3 +3494,24 @@ P55 (14. 10. 2026) — GEOLOKACIJA GRUNDPARCELLEN: PS protokol 1825 ↔ sodobne 
   brskalniška E2E (agent-browser): Raziskave → Prepisi Kurrent → kartica P59 +
   QA 63/63 + mobilni 390×844 + konzola 0/0; SHEET_GEOREFS in dokazi P40–P58
   nespremenjeni (lekcija P9); P55/P56/P57/P58 runtime nespremenjeni (pini QA).
+
+---
+Task ID: 26
+Agent: Z.ai Code (glavni agent)
+Task: P60 — per-Blatt atribucija ruleCandidate base v2 (izvedba P59 pravila pasu [0.8, 1.25])
+
+Work Log:
+- Obnova konteksta: klon @ 27d25f3 (P59), GitLab == GitHub == Vercel potrjeni; okolišče ponastavljeno (klon + /tmp p59 izgubljena) → re-klon + bun install.
+- VAČ 133–139 ponovno prenešene (7/7 izrezov); branje z lastnimi očmi: p133 = V (r1 'IV.V' korekcija, r2 V), p134/135 = IV @ r1 (korekcijska cona), p136 = II, p137 = II (soglasje s pass1), p138 brez numerele (prazna tabela), p139 = prvi stolpec 'Nro des Hauses.' 41–60 + dominicil + vsota 82 — NI Blatt (nova vrednost za P58 open #6).
+- VLM kvota ŠE VEDNO 429 (mikro-test 92 ms) → 13 manjkajočih branj (133–136, 138–139 × 2 prehoda, p137 pass2) ostaja odprto; oči-vrednosti zapisane za prihodnjo arbitražo.
+- Izbira P60: odprta točka P59 #2 — izvedba ruleCandidate pravila.
+- SONDE (ključna odkritja): (1) soslednost-naivno (range+soseši) ne diskriminira — lokalne sekcije tečejo tudi v sekvenci; (2) KULTUR-TEBELE: strani 61/83–87/99 nosijo 100 % več-stranskih base — 163 ima 4 kulture (Wiese/Prunigad/Weide/Aehn) na 4 straneh; p85 = 'Wiese und Gfrett' družina (644–657), p99 = 'Wiesen' (928–939); (3) unit-semantics: pas [0.8, 1.25] ujema modo B (ratio ≈ 1, n=62), NE modo A (≈ 3.59665 = 1 QK → m², n=226) — faktor ~3.6, absolutna korespondenca ODPRTA.
+- scripts/p60_ps_perblatt_attribution.py (deterministična, brez AI ob delovanju, FAIL ob padu I1–I7; --check bajtno PASS): I1 ruleCandidate == P59 (17) · I2 re-izpeljava instanc == P59 (rows/pages/median Δ<1e-9) · I3 ena pas-instanca → attributedBlatt (II 12 · I 1 · III 4, 23 vrstic) · I4 join nespremanjen (sha256 v2 + brez geo polj izven pas-detalj) · I5 soslednost 21/23 (671@p36, 934@p99 [~]) + pas-strani pin · I6 determinizem · I7 dokaz ⊇ runtime bajtno; bugfix med delom: sosledja = preprosti sosednji indeksi v vrstnem redu (ne najbližja isto-base vrstica).
+- Izpisi: dokaz research/issue17/ps-perblatt-attribution.json (17 base s strukturami instanc + pas-detalje s soslednostjo + attrPageStats + unitSemantics) + runtime src/data/atlas/ps-perblatt-attribution.json.
+- Integracija: API /api/atlas/ps-perblatt-attribution (force-static) + PERBLATT_ATTR_P60 (research.ts) + kartica P60 v museum-research (zavihek Prepisi Kurrent, za P59: atribucije, primer 163, Kultur-Tabellen, unit-semantics, pošten status) + zapora P59 točke ('ruleCandidate → IZVEDENO v P60', Si+En) + sources.ts N083PS opomba P60 (Si+En) + audit §38 + README bullet.
+- QA 63 → 64 (qa-p60-perblatt-attribution): pini (17/23, II 12 · I 1 · III 4, soslednost 21/2, moda A 226 / moda B 62, 163 → II @ 0.9813, 671 edina I) + NEODVISEN preracun iz v2 runtime vrstic × runtime pageAttribution (atribucije + mediani + soslednost po vrstnem redu vrstic) + dokaz == runtime bajtno; dve obliki po P53/P57/P58 (produkcija: preracun na runtime kopijah).
+- Validacija: --check bajtno PASS; tsc 0; ESLint 0; build + standalone PROD-SIM na BUILD nivoju (lekcija P58); E2E agent-browser.
+
+Stage Summary:
+- P60 IZVEDEN (merjena atribucija 17 ruleCandidate: II 12 · I 1 · III 4; soslednost 21/23; Kultur-Tabellen struktura potrjena na pas-straneh 100 % re-listing; unit-semantics moda B/A ~3.6 dokumentirano kot ODPRTA — atribucija = relativa [~]); join v2 NESPREMENJEN (sha256 pinan; izpisi brez pozicij/površin); P55–P59 runtime nespremanjeni.
+- Ostaja odprto: 1) VLM kvota 429 → 13 manjkajočih branj P59 (133–136, 138–139, p137 pass2) + razširitev atribucije na 106 čez-Blatt base; 2) unit-semantics mode B (kolonialna enota ali delna površina?); 3) per-Blatt SPLIT joina (zahteva pini + odločitev lastnika); 4) p139 'Nro des Hauses.' 41–60 + vsota 82 → P58 open #6 (Haus Nro.); 5) lastniki pas-instanc ↔ PF protokol.

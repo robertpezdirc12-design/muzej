@@ -1,0 +1,900 @@
+{
+ "attrPageStats": {
+  "36": {
+   "bases": 11,
+   "blatt": "I",
+   "kultures": [
+    "Eidn",
+    "Lhup",
+    "Lhut"
+   ],
+   "multiPageBases": 11,
+   "multiPageShare": 1.0,
+   "rows": 11
+  },
+  "49": {
+   "bases": 15,
+   "blatt": "II",
+   "kultures": [
+    "Acker",
+    "Weingarten",
+    "Zehorn"
+   ],
+   "multiPageBases": 15,
+   "multiPageShare": 1.0,
+   "rows": 15
+  },
+  "61": {
+   "bases": 13,
+   "blatt": "II",
+   "kultures": [
+    "Acker",
+    "Wiese"
+   ],
+   "multiPageBases": 13,
+   "multiPageShare": 1.0,
+   "rows": 13
+  },
+  "83": {
+   "bases": 13,
+   "blatt": "II",
+   "kultures": [
+    "Abtragsbuh",
+    "Acker",
+    "Dingf.",
+    "Grünte",
+    "Prunigad",
+    "Rohrige",
+    "Sträuch mit Gipfelung"
+   ],
+   "multiPageBases": 13,
+   "multiPageShare": 1.0,
+   "rows": 13
+  },
+  "84": {
+   "bases": 12,
+   "blatt": "II",
+   "kultures": [
+    "Alm",
+    "Weide",
+    "Wein"
+   ],
+   "multiPageBases": 12,
+   "multiPageShare": 1.0,
+   "rows": 12
+  },
+  "85": {
+   "bases": 14,
+   "blatt": "II",
+   "kultures": [
+    "Wiese und Gfrett",
+    "Wiese und Gfrett Gfrett",
+    "Wiese und Gfrett Wiesen"
+   ],
+   "multiPageBases": 14,
+   "multiPageShare": 1.0,
+   "rows": 14
+  },
+  "86": {
+   "bases": 14,
+   "blatt": "II",
+   "kultures": [
+    "Aehn",
+    "Einhait und Gärten und Gärten und Gärten und Laubm.",
+    "Einhait und Gärten und Laubm.",
+    "Einhait und Laubm.",
+    "Wald",
+    "Wies"
+   ],
+   "multiPageBases": 14,
+   "multiPageShare": 1.0,
+   "rows": 14
+  },
+  "87": {
+   "bases": 11,
+   "blatt": "II",
+   "kultures": [
+    "Acker",
+    "Garten",
+    "Weide"
+   ],
+   "multiPageBases": 11,
+   "multiPageShare": 1.0,
+   "rows": 11
+  },
+  "94": {
+   "bases": 17,
+   "blatt": "III",
+   "kultures": [
+    "Wiese und Äcker",
+    "Äcker",
+    "Äcker und Wiesen"
+   ],
+   "multiPageBases": 16,
+   "multiPageShare": 0.9412,
+   "rows": 17
+  },
+  "99": {
+   "bases": 15,
+   "blatt": "III",
+   "kultures": [
+    "Wiesen"
+   ],
+   "multiPageBases": 15,
+   "multiPageShare": 1.0,
+   "rows": 15
+  }
+ },
+ "bases": {
+  "163": {
+   "attributedBlatt": "II",
+   "inBand": {
+    "medianRatio": 0.9813,
+    "pages": [
+     61,
+     83,
+     84,
+     86
+    ],
+    "rows": 4
+   },
+   "kulturProfile": [
+    "Aehn",
+    "Prunigad",
+    "Weide",
+    "Wiese"
+   ],
+   "outInstances": [
+    {
+     "blatt": "I",
+     "medianRatio": 7.0,
+     "pages": [
+      11
+     ]
+    }
+   ],
+   "rows": [
+    {
+     "kultur": "Wiese",
+     "owner": "Schimey Martho",
+     "page": 61,
+     "parzella": "163",
+     "ratio": 0.9292,
+     "sosledje": {
+      "next": 164,
+      "ok": true,
+      "prev": 162
+     }
+    },
+    {
+     "kultur": "Prunigad",
+     "owner": "Stainzldt Wölfl",
+     "page": 83,
+     "parzella": "163",
+     "ratio": 1.2805,
+     "sosledje": {
+      "next": 164,
+      "ok": true,
+      "prev": 162
+     }
+    },
+    {
+     "kultur": "Weide",
+     "owner": "Schumitsch Matja",
+     "page": 84,
+     "parzella": "163",
+     "ratio": 0.6231,
+     "sosledje": {
+      "next": 164,
+      "ok": true,
+      "prev": 162
+     }
+    },
+    {
+     "kultur": "Aehn",
+     "owner": "Laune Hülfse",
+     "page": 86,
+     "parzella": "163",
+     "ratio": 0.9813,
+     "sosledje": {
+      "next": 164,
+      "ok": true,
+      "prev": 162
+     }
+    }
+   ]
+  },
+  "176": {
+   "attributedBlatt": "II",
+   "inBand": {
+    "medianRatio": 0.9371,
+    "pages": [
+     61,
+     83,
+     84,
+     86
+    ],
+    "rows": 4
+   },
+   "kulturProfile": [
+    "Acker",
+    "Dingf.",
+    "Einhait und Gärten und Gärten und Gärten und Laubm.",
+    "Wein"
+   ],
+   "outInstances": [
+    {
+     "blatt": "I",
+     "medianRatio": 1.2828,
+     "pages": [
+      11
+     ]
+    }
+   ],
+   "rows": [
+    {
+     "kultur": "Acker",
+     "owner": "Schimey Martho",
+     "page": 61,
+     "parzella": "176",
+     "ratio": 0.4465,
+     "sosledje": {
+      "next": 179,
+      "ok": true,
+      "prev": 175
+     }
+    },
+    {
+     "kultur": "Dingf.",
+     "owner": "Hlebtzschand",
+     "page": 83,
+     "parzella": "176",
+     "ratio": 0.9371,
+     "sosledje": {
+      "next": 179,
+      "ok": true,
+      "prev": 175
+     }
+    },
+    {
+     "kultur": "Wein",
+     "owner": "Schumitsch Marlo",
+     "page": 84,
+     "parzella": "176",
+     "ratio": 0.5148,
+     "sosledje": {
+      "next": 179,
+      "ok": true,
+      "prev": 175
+     }
+    },
+    {
+     "kultur": "Einhait und Gärten und Gärten und Gärten und Laubm.",
+     "owner": "Schimey Patteu",
+     "page": 86,
+     "parzella": "176",
+     "ratio": 1.083,
+     "sosledje": {
+      "next": 179,
+      "ok": true,
+      "prev": 175
+     }
+    }
+   ]
+  },
+  "1831": {
+   "attributedBlatt": "III",
+   "inBand": {
+    "medianRatio": 1.0035,
+    "pages": [
+     94
+    ],
+    "rows": 1
+   },
+   "kulturProfile": [
+    "Wiese und Äcker"
+   ],
+   "outInstances": [
+    {
+     "blatt": "II",
+     "medianRatio": 6.4409,
+     "pages": [
+      64,
+      79
+     ]
+    }
+   ],
+   "rows": [
+    {
+     "kultur": "Wiese und Äcker",
+     "owner": "Peterig Mathä",
+     "page": 94,
+     "parzella": "1831",
+     "ratio": 1.0035,
+     "sosledje": {
+      "next": 1832,
+      "ok": true,
+      "prev": 1830
+     }
+    }
+   ]
+  },
+  "644": {
+   "attributedBlatt": "II",
+   "inBand": {
+    "medianRatio": 0.8617,
+    "pages": [
+     85
+    ],
+    "rows": 1
+   },
+   "kulturProfile": [
+    "Wiese und Gfrett Gfrett"
+   ],
+   "outInstances": [
+    {
+     "blatt": "I",
+     "medianRatio": 31.1429,
+     "pages": [
+      35
+     ]
+    }
+   ],
+   "rows": [
+    {
+     "kultur": "Wiese und Gfrett Gfrett",
+     "owner": "Preinig Mihel",
+     "page": 85,
+     "parzella": "644",
+     "ratio": 0.8617,
+     "sosledje": {
+      "next": 646,
+      "ok": true,
+      "prev": 643
+     }
+    }
+   ]
+  },
+  "653": {
+   "attributedBlatt": "II",
+   "inBand": {
+    "medianRatio": 0.9816,
+    "pages": [
+     85
+    ],
+    "rows": 1
+   },
+   "kulturProfile": [
+    "Wiese und Gfrett"
+   ],
+   "outInstances": [
+    {
+     "blatt": "I",
+     "medianRatio": 23.1667,
+     "pages": [
+      35
+     ]
+    }
+   ],
+   "rows": [
+    {
+     "kultur": "Wiese und Gfrett",
+     "owner": "Knall Anna",
+     "page": 85,
+     "parzella": "653",
+     "ratio": 0.9816,
+     "sosledje": {
+      "next": 654,
+      "ok": true,
+      "prev": 652
+     }
+    }
+   ]
+  },
+  "654": {
+   "attributedBlatt": "II",
+   "inBand": {
+    "medianRatio": 1.2231,
+    "pages": [
+     85
+    ],
+    "rows": 1
+   },
+   "kulturProfile": [
+    "Wiese und Gfrett"
+   ],
+   "outInstances": [
+    {
+     "blatt": "I",
+     "medianRatio": 3.6984,
+     "pages": [
+      35
+     ]
+    }
+   ],
+   "rows": [
+    {
+     "kultur": "Wiese und Gfrett",
+     "owner": "Stüllich Mihlo",
+     "page": 85,
+     "parzella": "654",
+     "ratio": 1.2231,
+     "sosledje": {
+      "next": 655,
+      "ok": true,
+      "prev": 653
+     }
+    }
+   ]
+  },
+  "655": {
+   "attributedBlatt": "II",
+   "inBand": {
+    "medianRatio": 0.8014,
+    "pages": [
+     85
+    ],
+    "rows": 1
+   },
+   "kulturProfile": [
+    "Wiese und Gfrett"
+   ],
+   "outInstances": [
+    {
+     "blatt": "I",
+     "medianRatio": 3.4913,
+     "pages": [
+      35
+     ]
+    }
+   ],
+   "rows": [
+    {
+     "kultur": "Wiese und Gfrett",
+     "owner": "Lukantsitsch Marla",
+     "page": 85,
+     "parzella": "655",
+     "ratio": 0.8014,
+     "sosledje": {
+      "next": 656,
+      "ok": true,
+      "prev": 654
+     }
+    }
+   ]
+  },
+  "656": {
+   "attributedBlatt": "II",
+   "inBand": {
+    "medianRatio": 0.8602,
+    "pages": [
+     85
+    ],
+    "rows": 1
+   },
+   "kulturProfile": [
+    "Wiese und Gfrett"
+   ],
+   "outInstances": [
+    {
+     "blatt": "I",
+     "medianRatio": 26.2692,
+     "pages": [
+      35
+     ]
+    }
+   ],
+   "rows": [
+    {
+     "kultur": "Wiese und Gfrett",
+     "owner": "Knall Anna",
+     "page": 85,
+     "parzella": "656",
+     "ratio": 0.8602,
+     "sosledje": {
+      "next": 657,
+      "ok": true,
+      "prev": 655
+     }
+    }
+   ]
+  },
+  "657": {
+   "attributedBlatt": "II",
+   "inBand": {
+    "medianRatio": 1.2126,
+    "pages": [
+     85
+    ],
+    "rows": 1
+   },
+   "kulturProfile": [
+    "Wiese und Gfrett"
+   ],
+   "outInstances": [
+    {
+     "blatt": "I",
+     "medianRatio": 3.0278,
+     "pages": [
+      35
+     ]
+    }
+   ],
+   "rows": [
+    {
+     "kultur": "Wiese und Gfrett",
+     "owner": "Novakl Martin",
+     "page": 85,
+     "parzella": "657",
+     "ratio": 1.2126,
+     "sosledje": {
+      "next": 659,
+      "ok": true,
+      "prev": 656
+     }
+    }
+   ]
+  },
+  "666": {
+   "attributedBlatt": "II",
+   "inBand": {
+    "medianRatio": 0.8537,
+    "pages": [
+     87
+    ],
+    "rows": 1
+   },
+   "kulturProfile": [
+    "Acker"
+   ],
+   "outInstances": [
+    {
+     "blatt": "I",
+     "medianRatio": 17.5938,
+     "pages": [
+      36
+     ]
+    }
+   ],
+   "rows": [
+    {
+     "kultur": "Acker",
+     "owner": "Dragauš Jerg",
+     "page": 87,
+     "parzella": "666",
+     "ratio": 0.8537,
+     "sosledje": {
+      "next": 667,
+      "ok": true,
+      "prev": 663
+     }
+    }
+   ]
+  },
+  "671": {
+   "attributedBlatt": "I",
+   "inBand": {
+    "medianRatio": 0.9086,
+    "pages": [
+     36
+    ],
+    "rows": 1
+   },
+   "kulturProfile": [
+    "Lhup"
+   ],
+   "outInstances": [
+    {
+     "blatt": "II",
+     "medianRatio": 0.1188,
+     "pages": [
+      87
+     ]
+    }
+   ],
+   "rows": [
+    {
+     "kultur": "Lhup",
+     "owner": "Würing Michael",
+     "page": 36,
+     "parzella": "671",
+     "ratio": 0.9086,
+     "sosledje": {
+      "next": 673,
+      "ok": false,
+      "prev": 667
+     }
+    }
+   ]
+  },
+  "676": {
+   "attributedBlatt": "II",
+   "inBand": {
+    "medianRatio": 0.8004,
+    "pages": [
+     87
+    ],
+    "rows": 1
+   },
+   "kulturProfile": [
+    "Acker"
+   ],
+   "outInstances": [
+    {
+     "blatt": "I",
+     "medianRatio": 12.0319,
+     "pages": [
+      36
+     ]
+    }
+   ],
+   "rows": [
+    {
+     "kultur": "Acker",
+     "owner": "Kobentsch Mands",
+     "page": 87,
+     "parzella": "676",
+     "ratio": 0.8004,
+     "sosledje": {
+      "next": 679,
+      "ok": true,
+      "prev": 675
+     }
+    }
+   ]
+  },
+  "928": {
+   "attributedBlatt": "III",
+   "inBand": {
+    "medianRatio": 0.9742,
+    "pages": [
+     99
+    ],
+    "rows": 1
+   },
+   "kulturProfile": [
+    "Wiesen"
+   ],
+   "outInstances": [
+    {
+     "blatt": "II",
+     "medianRatio": 5.6981,
+     "pages": [
+      49
+     ]
+    }
+   ],
+   "rows": [
+    {
+     "kultur": "Wiesen",
+     "owner": "Brünig Michel",
+     "page": 99,
+     "parzella": "928",
+     "ratio": 0.9742,
+     "sosledje": {
+      "next": 929,
+      "ok": true,
+      "prev": 927
+     }
+    }
+   ]
+  },
+  "930": {
+   "attributedBlatt": "II",
+   "inBand": {
+    "medianRatio": 1.2241,
+    "pages": [
+     49
+    ],
+    "rows": 1
+   },
+   "kulturProfile": [
+    "Zehorn"
+   ],
+   "outInstances": [
+    {
+     "blatt": "III",
+     "medianRatio": 0.3802,
+     "pages": [
+      99
+     ]
+    }
+   ],
+   "rows": [
+    {
+     "kultur": "Zehorn",
+     "owner": "Hüsse Malle",
+     "page": 49,
+     "parzella": "930",
+     "ratio": 1.2241,
+     "sosledje": {
+      "next": 931,
+      "ok": true,
+      "prev": 929
+     }
+    }
+   ]
+  },
+  "934": {
+   "attributedBlatt": "III",
+   "inBand": {
+    "medianRatio": 1.0498,
+    "pages": [
+     99
+    ],
+    "rows": 1
+   },
+   "kulturProfile": [
+    "Wiesen"
+   ],
+   "outInstances": [
+    {
+     "blatt": "II",
+     "medianRatio": 29.4483,
+     "pages": [
+      49
+     ]
+    }
+   ],
+   "rows": [
+    {
+     "kultur": "Wiesen",
+     "owner": "Brünig Michael",
+     "page": 99,
+     "parzella": "934",
+     "ratio": 1.0498,
+     "sosledje": {
+      "next": 936,
+      "ok": false,
+      "prev": 931
+     }
+    }
+   ]
+  },
+  "936": {
+   "attributedBlatt": "II",
+   "inBand": {
+    "medianRatio": 1.1757,
+    "pages": [
+     49
+    ],
+    "rows": 1
+   },
+   "kulturProfile": [
+    "Acker"
+   ],
+   "outInstances": [
+    {
+     "blatt": "III",
+     "medianRatio": 8.2899,
+     "pages": [
+      99
+     ]
+    }
+   ],
+   "rows": [
+    {
+     "kultur": "Acker",
+     "owner": "Kalapischky Eve.",
+     "page": 49,
+     "parzella": "936",
+     "ratio": 1.1757,
+     "sosledje": {
+      "next": 937,
+      "ok": true,
+      "prev": 934
+     }
+    }
+   ]
+  },
+  "939": {
+   "attributedBlatt": "III",
+   "inBand": {
+    "medianRatio": 1.049,
+    "pages": [
+     99
+    ],
+    "rows": 1
+   },
+   "kulturProfile": [
+    "Wiesen"
+   ],
+   "outInstances": [
+    {
+     "blatt": "II",
+     "medianRatio": 2.7558,
+     "pages": [
+      49
+     ]
+    }
+   ],
+   "rows": [
+    {
+     "kultur": "Wiesen",
+     "owner": "Pößnig Georg",
+     "page": 99,
+     "parzella": "939",
+     "ratio": 1.049,
+     "sosledje": {
+      "next": null,
+      "ok": true,
+      "prev": 938
+     }
+    }
+   ]
+  }
+ },
+ "date": "2026-10-14",
+ "generatedBy": "scripts/p60_ps_perblatt_attribution.py",
+ "rule": {
+  "band": "[0.8, 1.25] (raw ratio = areaModern / areaQK)",
+  "definition": "baza s TOČNO eno instanco (Blatt) z median razmerjem v pasu → attributedBlatt",
+  "origin": "P59 evidence perBlattAmbiguity.ruleCandidateNote (MERJENO); P60 izvedba z soslednostjo"
+ },
+ "statusLine": "P60 PER-BLATT ATRIBUCIJA: 17 ruleCandidate atributiranih (II 12 · I 1 · III 4), 23 vrstic, soslednost 21/23 [~]; re-listing 100 % na pas-straneh [36, 49, 61, 83, 84, 85, 86, 87, 99]; join v2 nespremenjen",
+ "summary": {
+  "attrPages": [
+   36,
+   49,
+   61,
+   83,
+   84,
+   85,
+   86,
+   87,
+   94,
+   99
+  ],
+  "attributedBlattDist": {
+   "I": 1,
+   "II": 12,
+   "III": 4
+  },
+  "bases": 17,
+  "relist100Pages": [
+   36,
+   49,
+   61,
+   83,
+   84,
+   85,
+   86,
+   87,
+   99
+  ],
+  "rows": 23,
+  "soslednost": {
+   "flag": 2,
+   "flaggedRows": [
+    "671@p36",
+    "934@p99"
+   ],
+   "ok": 21
+  }
+ },
+ "task": "P60 — per-Blatt atribucija ruleCandidate base v2 (izvedba P59 pravila pasu [0.8, 1.25])",
+ "unitSemantics": {
+  "factor": 3.59665,
+  "modaA": {
+   "band": [
+    3.3,
+    4.3
+   ],
+   "count": 226,
+   "note": "ratio ≈ 3.597 — prava konverzija QK → m² (1 QK = 3.59665 m²)"
+  },
+  "modaB": {
+   "band": [
+    0.8,
+    1.25
+   ],
+   "count": 62,
+   "note": "ratio ≈ 1 — areaModern ≈ areaQK po ŠTEVILKI; pas pravila P59/P60 ujema to modo"
+  },
+  "qkReference": 3.59665,
+  "status": "ODPRTO — absolutna korespondenca pas-instanc ni dokazana; atribucija = relativa (najboljše ujemanje med instancami) [~]"
+ },
+ "verdictEn": "Per-Blatt attribution of the 17 ruleCandidate bases EXECUTED (measured): each gets the instance within band [0.8, 1.25] — II 12 · I 1 · III 4 (23 rows); adjacency 21/23 (671/934 [~] = crossed-out rows in the register). Attribute pages (61, 83-87, 99, 36, 49, 94) carry 100% multi-page bases — Kultur-Tabellen re-listing [~]. NOTE: the band matches mode B (ratio ~ 1), not the 1 QK = 3.59665 m2 conversion (mode A) — absolute correspondence remains open; the v2 join UNCHANGED.",
+ "verdictSi": "Per-Blatt atribucija 17 ruleCandidate base IZVEDENA (merjeno): vsaka dobi instanco v pasu [0.8, 1.25] — II 12 · I 1 · III 4 (23 vrstic); soslednost 21/23 (671/934 [~] = prečrtane vrstice v registru). Strani pas-instanc (61, 83–87, 99, 36, 49, 94) nosijo 100 % več-stranskih base — Kultur-Tabellen re-listing [~]. OPOMBA: pas ujema modo B (ratio ≈ 1), ne konverzije 1 QK = 3.59665 m² (moda A) — absolutna korespondenca ostaja odprta; join v2 NESPREMENJEN.",
+ "version": 1
+}

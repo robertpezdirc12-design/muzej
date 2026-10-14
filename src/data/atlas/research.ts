@@ -4098,3 +4098,103 @@ export const BLATT_HEADERS_P59: {
     "4. VLM prehod glav izkoristi tudi P58 open #6 (Haus Nro. ↔ tlorisi)",
   ],
 };
+
+export const PERBLATT_ATTR_P60: {
+  version: number;
+  series: "PS";
+  source: string;
+  status: ResearchStatus;
+  generatedBy: string;
+  rule: { band: string; definition: string; origin: string };
+  summary: {
+    bases: number;
+    rows: number;
+    attributedBlattDist: { I: number; II: number; III: number };
+    soslednost: { ok: number; flag: number; flaggedRows: string[] };
+    attrPages: number[];
+    relist100Pages: number[];
+  };
+  attrBases: Record<string, { attributedBlatt: string; inBandMedian: number; inBandPages: number[]; outBlatts: string[] }>;
+  unitSemantics: {
+    qkReference: number;
+    modaA: { band: number[]; count: number; note: string };
+    modaB: { band: number[]; count: number; note: string };
+    factor: number;
+    status: string;
+  };
+  statusLine: string;
+  verdictSi: string;
+  verdictEn: string;
+  next: string[];
+} = {
+  version: 1,
+  series: "PS",
+  source:
+    "research/issue17/ps-parcels-geo-v2.json (rowsEvidence 1093) × ps-blatt-headers.json (pageAttribution P59); dokaz research/issue17/ps-perblatt-attribution.json + runtime src/data/atlas/ps-perblatt-attribution.json",
+  status: "REVIEW",
+  generatedBy:
+    "scripts/p60_ps_perblatt_attribution.py (deterministično, brez AI ob delovanju, FAIL ob padu I1–I7; --check bajtno PASS)",
+  rule: {
+    band: "[0.8, 1.25] (raw ratio = areaModern / areaQK)",
+    definition:
+      "baza s TOČNO eno instanco (Blatt) z median razmerjem v pasu → attributedBlatt",
+    origin:
+      "P59 evidence perBlattAmbiguity.ruleCandidateNote (MERJENO); P60 izvedba + soslednost-kontrola",
+  },
+  summary: {
+    bases: 17,
+    rows: 23,
+    attributedBlattDist: { I: 1, II: 12, III: 4 },
+    soslednost: { ok: 21, flag: 2, flaggedRows: ["671@p36", "934@p99"] },
+    attrPages: [36, 49, 61, 83, 84, 85, 86, 87, 94, 99],
+    relist100Pages: [36, 49, 61, 83, 84, 85, 86, 87, 99],
+  },
+  attrBases: {
+    "163": { attributedBlatt: "II", inBandMedian: 0.9813, inBandPages: [61, 83, 84, 86], outBlatts: ["I"] },
+    "176": { attributedBlatt: "II", inBandMedian: 0.9371, inBandPages: [61, 83, 84, 86], outBlatts: ["I"] },
+    "644": { attributedBlatt: "II", inBandMedian: 0.8617, inBandPages: [85], outBlatts: ["I"] },
+    "653": { attributedBlatt: "II", inBandMedian: 0.9816, inBandPages: [85], outBlatts: ["I"] },
+    "654": { attributedBlatt: "II", inBandMedian: 1.2231, inBandPages: [85], outBlatts: ["I"] },
+    "655": { attributedBlatt: "II", inBandMedian: 0.8014, inBandPages: [85], outBlatts: ["I"] },
+    "656": { attributedBlatt: "II", inBandMedian: 0.8602, inBandPages: [85], outBlatts: ["I"] },
+    "657": { attributedBlatt: "II", inBandMedian: 1.2126, inBandPages: [85], outBlatts: ["I"] },
+    "666": { attributedBlatt: "II", inBandMedian: 0.8537, inBandPages: [87], outBlatts: ["I"] },
+    "671": { attributedBlatt: "I", inBandMedian: 0.9086, inBandPages: [36], outBlatts: ["II"] },
+    "676": { attributedBlatt: "II", inBandMedian: 0.8004, inBandPages: [87], outBlatts: ["I"] },
+    "928": { attributedBlatt: "III", inBandMedian: 0.9742, inBandPages: [99], outBlatts: ["II"] },
+    "930": { attributedBlatt: "II", inBandMedian: 1.2241, inBandPages: [49], outBlatts: ["III"] },
+    "934": { attributedBlatt: "III", inBandMedian: 1.0498, inBandPages: [99], outBlatts: ["II"] },
+    "936": { attributedBlatt: "II", inBandMedian: 1.1757, inBandPages: [49], outBlatts: ["III"] },
+    "939": { attributedBlatt: "III", inBandMedian: 1.049, inBandPages: [99], outBlatts: ["II"] },
+    "1831": { attributedBlatt: "III", inBandMedian: 1.0035, inBandPages: [94], outBlatts: ["II"] },
+  },
+  unitSemantics: {
+    qkReference: 3.59665,
+    modaA: {
+      band: [3.3, 4.3],
+      count: 226,
+      note: "ratio ≈ 3.597 — prava konverzija QK → m² (1 QK = 3.59665 m²)",
+    },
+    modaB: {
+      band: [0.8, 1.25],
+      count: 62,
+      note: "ratio ≈ 1 — areaModern ≈ areaQK po ŠTEVILKI; pas pravila P59/P60 ujema to modo",
+    },
+    factor: 3.59665,
+    status:
+      "ODPRTO — absolutna korespondenca pas-instanc ni dokazana; atribucija = relativa (najboljše ujemanje med instancami) [~]",
+  },
+  statusLine:
+    "P60 PER-BLATT ATRIBUCIJA: 17 ruleCandidate atributiranih (II 12 · I 1 · III 4), 23 vrstic, soslednost 21/23 [~]; re-listing 100 % na pas-straneh [36, 49, 61, 83, 84, 85, 86, 87, 99]; join v2 nespremenjen",
+  verdictSi:
+    "P60: PER-BLATT ATRIBUCIJA ruleCandidate (issue #13) — P59 pravilo pasu [0.8, 1.25] IZVEDENO kot merjena atribucija: vsaka od 17 base dobi instanco v pasu (II 12 · I 1 · III 4; 23 vrstic; npr. 163: Blatt II @ 0.9813 — 4 kulture Wiese/Prunigad/Weide/Aehn na straneh 61/83/84/86 — vs Blatt I @ 7.0 @ p11); soslednost-kontrola 21/23 (671@p36 in 934@p99 [~] — prečrtane vrstice v registru); STRUKTURNI PRINOS: strani pas-instanc (36, 49, 61, 83–87, 94, 99) nosijo 100 % več-stranskih base — potrditev interpretacije Kultur-Tabellen (re-listing parcel po kulturah; p85 = 'Wiese und Gfrett' družina za 644–657, p99 = 'Wiesen' sekcija za 928–939); UNIT-SEMANTICS OPOMBA: pas ujema modo B (ratio ≈ 1, n=62), ne modo A (≈ 3.59665 = 1 QK → m², n=226) — faktor ~3.6 med modama, absolutna korespondenca ODPRTA, atribucija = relativa [~]; join v2 NESPREMENJEN (izpisi brez pozicij/površin, sha256 v2 vhoda pinan — disciplina P56/P58/P59)",
+  verdictEn:
+    "P60: PER-BLATT ATTRIBUTION OF RULECANDIDATES (issue #13) — the P59 band rule [0.8, 1.25] EXECUTED as a measured attribution: each of the 17 bases gets its in-band instance (II 12 · I 1 · III 4; 23 rows; e.g. 163: Blatt II @ 0.9813 — 4 cultures Wiese/Prunigad/Weide/Aehn on pp. 61/83/84/86 — vs Blatt I @ 7.0 @ p11); adjacency control 21/23 (671@p36 and 934@p99 [~] — crossed-out rows in the register); STRUCTURAL GAIN: the attribute pages (36, 49, 61, 83-87, 94, 99) carry 100% multi-page bases — confirming the Kultur-Tabellen interpretation (re-listing of parcels by culture; p85 = 'Wiese und Gfrett' family for 644-657, p99 = 'Wiesen' section for 928-939); UNIT-SEMANTICS NOTE: the band matches mode B (ratio ~ 1, n=62), not mode A (~ 3.59665 = 1 QK to m2, n=226) — a factor of ~3.6 between modes, absolute correspondence OPEN, attribution = relative [~]; the v2 join UNCHANGED (outputs contain no positions/areas, the v2 input sha256 pinned — P56/P58/P59 discipline)",
+  next: [
+    "razrešiti unit-semantics mode B (ratio ≈ 1): kolonialna merska enota ali delna površina [~]",
+    "razširiti atribucijo na vseh 106 čez-Blatt base (potrebno P59 pokritost 133–136 + 138–139 dokončati)",
+    "razlaga strani 61/83–87/99 kot Kultur-Tabellen: navzkrižje s Kultur stolpcem polnih branj P38",
+    "per-Blatt SPLIT joina za atributirane base (zahteva pini + odločitev lastnika o pozicijah)",
+    "povezati lastnike pas-instanc (npr. 163 II: Schimey Martho/Stainzldt Wölfl/Schumitsch Matja/Laune Hülfse) s PF protokolom",
+  ],
+};

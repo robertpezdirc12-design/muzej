@@ -42,6 +42,7 @@ import {
   REGISTER_TOPOLOGY_P56,
   PS_REGISTER_START_P57,
   BLATT_HEADERS_P59,
+  PERBLATT_ATTR_P60,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -3915,6 +3916,132 @@ const p45bErrors: string[] = [];
     p59Errors.length === 0
       ? `pini 211/106/17 · arbitraža 25 (soglasje 103) · Blatt I 1–800 (3–40) · Blatt II @ 801 (43–92, p72 III) · preracun iz v2 vrstic × pageAttribution == pini · P57 navzkrižje 40× 'I' · ${p59FileDetail}`
       : p59Errors.join("; "),
+  );
+
+  /* ── P60 (issue #13): per-Blatt atribucija ruleCandidate base (izvedba P59 pravila pasu) ── */
+  const p60Errors: string[] = [];
+  const p60 = PERBLATT_ATTR_P60;
+  // 1) TS pini
+  if (p60.summary.bases !== 17) p60Errors.push("pini: base ≠ 17");
+  if (p60.summary.rows !== 23) p60Errors.push("pini: vrstice ≠ 23");
+  if (p60.summary.attributedBlattDist.I !== 1 || p60.summary.attributedBlattDist.II !== 12 || p60.summary.attributedBlattDist.III !== 4)
+    p60Errors.push("pini: distribucija atribucij ≠ I 1 · II 12 · III 4");
+  if (p60.summary.soslednost.ok !== 21 || p60.summary.soslednost.flag !== 2)
+    p60Errors.push("pini: soslednost ≠ 21/2");
+  if (p60.summary.relist100Pages.length !== 9)
+    p60Errors.push("pini: re-listing 100 % strani ≠ 9");
+  if (p60.unitSemantics.modaA.count !== 226 || p60.unitSemantics.modaB.count !== 62)
+    p60Errors.push("pini: moda A ≠ 226 ali moda B ≠ 62");
+  if (Object.keys(p60.attrBases).length !== 17)
+    p60Errors.push("pini: attrBases ≠ 17");
+  const ab163 = p60.attrBases["163"];
+  if (!ab163 || ab163.attributedBlatt !== "II" || ab163.inBandMedian !== 0.9813 || ab163.inBandPages.join(",") !== "61,83,84,86" || ab163.outBlatts.join(",") !== "I")
+    p60Errors.push("pini: 163 ≠ II @ 0.9813 (61,83,84,86) vs I");
+  const ab671 = p60.attrBases["671"];
+  if (!ab671 || ab671.attributedBlatt !== "I")
+    p60Errors.push("pini: 671 ≠ I (edina z in-band I)");
+  // 2) datoteke + NEODVISEN preracun iz v2 runtime vrstic × runtime pageAttribution (dve obliki po P53/P57/P58)
+  let p60FileDetail = "datoteke niso preverjene (readFile ni na voljo) — celovita kontrola teče na /api/qa";
+  if (opts.readFile) {
+    const rawRt60 = opts.readFile("src/data/atlas/ps-perblatt-attribution.json");
+    const rawEv60 = opts.readFile("research/issue17/ps-perblatt-attribution.json");
+    const rawV2rt = opts.readFile("src/data/atlas/ps-parcels-geo.json");
+    const rawRt59 = opts.readFile("src/data/atlas/ps-blatt-headers.json");
+    if (rawRt60 === null || rawV2rt === null || rawRt59 === null) {
+      p60Errors.push("runtime ps-perblatt-attribution.json / ps-parcels-geo.json / ps-blatt-headers.json ni berljiv");
+    } else {
+      try {
+        const rt60 = JSON.parse(rawRt60) as {
+          version?: number;
+          summary: { bases: number; rows: number; attributedBlattDist: Record<string, number>; soslednost: { ok: number; flag: number }; attrPages: number[]; relist100Pages: number[] };
+          bases: Record<string, { attributedBlatt: string; inBand: { medianRatio: number; pages: number[] }; outInstances: { blatt: string; medianRatio: number }[]; rows: { page: number; ratio: number | null; sosledje: { ok: boolean } }[] }>;
+          unitSemantics: { modaA: { count: number }; modaB: { count: number } };
+        };
+        const v2rt = JSON.parse(rawV2rt) as { version?: number; rows: { page: number; base: string; ratio?: number | null }[] };
+        const rt59 = JSON.parse(rawRt59) as { pageAttribution: Record<string, { blatt: string | null }>; perBlattAmbiguity: { ruleCandidateBases: string[] } };
+        if (rt60.version !== 1) p60Errors.push("runtime version ≠ 1");
+        if (v2rt.version !== 2) p60Errors.push("v2 runtime version ≠ 2");
+        // TS ↔ runtime navzkrižje
+        if (rt60.summary.bases !== p60.summary.bases || rt60.summary.rows !== p60.summary.rows)
+          p60Errors.push("TS ↔ runtime: summary ≠");
+        if (JSON.stringify(rt60.summary.attrPages) !== JSON.stringify(p60.summary.attrPages))
+          p60Errors.push("TS ↔ runtime: attrPages ≠");
+        // NEODVISEN preracun: v2 vrstice × pageAttribution → instancе → pas-atribucija + soslednost
+        const pageOrder = new Map<number, string[]>();
+        const baseByBlatt = new Map<string, Map<string, number[]>>();
+        for (const r of v2rt.rows) {
+          if (!pageOrder.has(r.page)) pageOrder.set(r.page, []);
+          pageOrder.get(r.page)!.push(r.base);
+          const bl = rt59.pageAttribution[String(r.page)]?.blatt ?? null;
+          if (bl === null || typeof r.ratio !== "number") continue;
+          if (!baseByBlatt.has(r.base)) baseByBlatt.set(r.base, new Map());
+          const m = baseByBlatt.get(r.base)!;
+          if (!m.has(bl)) m.set(bl, []);
+          m.get(bl)!.push(r.ratio);
+        }
+        const med = (a: number[]) => [...a].sort((x, y) => x - y)[Math.floor(a.length / 2)];
+        const cands = rt59.perBlattAmbiguity.ruleCandidateBases;
+        if (cands.length !== 17) p60Errors.push(`preracun: ruleCandidate ${cands.length} ≠ 17`);
+        let attrRows = 0, adjOk = 0, adjFlag = 0;
+        const dist: Record<string, number> = { I: 0, II: 0, III: 0 };
+        for (const b of cands) {
+          const m = baseByBlatt.get(b);
+          if (!m) { p60Errors.push(`preracun: base ${b} brez instanc`); continue; }
+          const inBandBlatts = [...m.entries()].filter(([, rs]) => { const md = med(rs); return md >= 0.8 && md <= 1.25; });
+          if (inBandBlatts.length !== 1) { p60Errors.push(`preracun: ${b} pas-instanc ${inBandBlatts.length} ≠ 1`); continue; }
+          const [bl] = inBandBlatts[0];
+          dist[bl] = (dist[bl] ?? 0) + 1;
+          const rt = rt60.bases[b];
+          if (!rt) { p60Errors.push(`preracun: runtime brez base ${b}`); continue; }
+          if (rt.attributedBlatt !== bl) p60Errors.push(`preracun: ${b} attributedBlatt ${rt.attributedBlatt} ≠ preracun ${bl}`);
+          const md = med(m.get(bl)!);
+          if (Math.abs(md - rt.inBand.medianRatio) > 1e-9) p60Errors.push(`preracun: ${b} median ${md} ≠ runtime ${rt.inBand.medianRatio}`);
+          // soslednost po vrstnem redu v2 vrstic
+          for (const row of rt60.bases[b].rows) {
+            attrRows++;
+            const s = pageOrder.get(row.page) ?? [];
+            const idxs = s.map((bb, k) => ({ bb, k })).filter((x) => x.bb === b).map((x) => x.k);
+            let ok = false;
+            for (const k of idxs) {
+              const pv = s[k - 1], nx = s[k + 1];
+              if ((pv !== undefined && Math.abs(Number(pv) - Number(b)) === 1) || (nx !== undefined && Math.abs(Number(nx) - Number(b)) === 1)) ok = true;
+            }
+            if (ok !== row.sosledje.ok) p60Errors.push(`preracun: soslednost ${b}@p${row.page} ${ok} ≠ runtime ${row.sosledje.ok}`);
+            if (ok) adjOk++; else adjFlag++;
+          }
+        }
+        if (dist.I !== 1 || dist.II !== 12 || dist.III !== 4)
+          p60Errors.push(`preracun: distribucija ${JSON.stringify(dist)} ≠ I 1 · II 12 · III 4`);
+        if (attrRows !== 23) p60Errors.push(`preracun: pas-vrstice ${attrRows} ≠ 23`);
+        if (adjOk !== 21 || adjFlag !== 2) p60Errors.push(`preracun: soslednost ${adjOk}/${adjFlag} ≠ 21/2`);
+        if (rt60.summary.soslednost.ok !== adjOk || rt60.summary.soslednost.flag !== adjFlag)
+          p60Errors.push("runtime: soslednost summary ≠ preracun");
+        if (rt60.unitSemantics.modaA.count !== 226 || rt60.unitSemantics.modaB.count !== 62)
+          p60Errors.push("runtime: moda counts ≠ 226/62");
+        // evidencа (samo repo): dokaz ⊇ runtime bajtno
+        if (rawEv60 !== null) {
+          const ev = JSON.parse(rawEv60) as { runtime: unknown; v2Sha256?: string };
+          if (JSON.stringify(ev.runtime) !== JSON.stringify(rt60))
+            p60Errors.push("dokaz: runtime ni bajtno podmnožica dokaza");
+          if (!ev.v2Sha256 || ev.v2Sha256.length !== 64)
+            p60Errors.push("dokaz: v2Sha256 manjka");
+        }
+        p60FileDetail = rawEv60 !== null
+          ? "repo: dokaz (17 base + 23 vrstic + unitSemantics) == runtime bajtno · preracun iz v2 vrstic × pageAttribution: I 1 · II 12 · III 4 + soslednost 21/2"
+          : "produkcija: research/ ni v deploymentu — preracun na runtime kopijah (v2 vrstice × pageAttribution: I 1 · II 12 · III 4)";
+      } catch (e) {
+        p60Errors.push(`ps-perblatt-attribution datoteke neuspešno: ${String(e).slice(0, 80)}`);
+      }
+    }
+  }
+  push(
+    "qa-p60-perblatt-attribution",
+    "P60: PER-BLATT ATRIBUCIJA ruleCandidate (issue #13): P59 pravilo pasu [0.8, 1.25] IZVEDENO kot merjena atribucija — vsaka od 17 base dobi instanco v pasu (II 12 · I 1 · III 4, 23 vrstic; npr. 163 → Blatt II @ 0.9813 s 4 kulturami na 61/83/84/86 vs Blatt I @ 7.0 @ p11); soslednost-kontrola 21/23 (671/934 [~] = prečrtane vrstice); STRUKTURA: pas-strani (36, 49, 61, 83–87, 94, 99) nosijo 100 % več-stranskih base — Kultur-Tabellen re-listing [~]; UNIT-SEMANTICS: pas ujema modo B (≈ 1, n=62), ne modo A (≈ 3.59665 = 1 QK → m², n=226) — absolutna korespondenca ODPRTA, atribucija = relativa [~]; join v2 NESPREMENJEN (brez pozicij/površin, sha256 pinan); status REVIEW",
+    "P60: PER-BLATT ATTRIBUTION OF RULECANDIDATES (issue #13): the P59 band rule [0.8, 1.25] EXECUTED as a measured attribution — each of the 17 bases gets its in-band instance (II 12 · I 1 · III 4, 23 rows; e.g. 163 → Blatt II @ 0.9813 with 4 cultures on 61/83/84/86 vs Blatt I @ 7.0 @ p11); adjacency control 21/23 (671/934 [~] = crossed-out rows); STRUCTURE: attribute pages (36, 49, 61, 83-87, 94, 99) carry 100% multi-page bases — Kultur-Tabellen re-listing [~]; UNIT-SEMANTICS: the band matches mode B (~ 1, n=62), not mode A (~ 3.59665 = 1 QK to m2, n=226) — absolute correspondence OPEN, attribution = relative [~]; the v2 join UNCHANGED (no positions/areas, sha256 pinned); status REVIEW",
+    p60Errors.length === 0,
+    p60Errors.length === 0
+      ? `pini 17 base / 23 vrstic · II 12 · I 1 · III 4 · soslednost 21/2 (671@p36, 934@p99) · 163 → II @ 0.9813 · 671 edina I · moda A 226 / moda B 62 · re-listing 100 % na 9 straneh · ${p60FileDetail}`
+      : p60Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;

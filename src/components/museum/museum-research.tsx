@@ -76,6 +76,7 @@ import {
   REGISTER_TOPOLOGY_P56,
   PS_REGISTER_START_P57,
   BLATT_HEADERS_P59,
+  PERBLATT_ATTR_P60,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -1899,6 +1900,9 @@ export function MuseumResearch() {
                 <p className="mt-1 font-mono text-[11px] leading-relaxed text-muted-foreground">
                   {t("primer", "example")}: 163 — Blatt I @ 7.0 {t("proti", "vs")} Blatt II @ 0.981 ≈ 1 QK; {BLATT_HEADERS_P59.perBlattAmbiguity.ruleCandidateBases.slice(0, 8).join(", ")} ...
                 </p>
+                <p className="mt-1 font-mono text-[11px] leading-relaxed text-muted-foreground">
+                  {t("ruleCandidate", "ruleCandidates")}: <span className="rounded bg-emerald-100 px-1.5 py-0.5 dark:bg-emerald-950/40">{t("IZVEDENO v P60", "DONE in P60")}</span> — {t("glej kartico P60", "see the P60 card")}
+                </p>
               </div>
 
               {/* P59: poštenost */}
@@ -1906,8 +1910,64 @@ export function MuseumResearch() {
                 <p className="text-[11px] leading-relaxed text-foreground/80">
                   <span className="font-semibold">{t("Pošten status: ", "Honest status: ")}</span>
                   {t(
-                    "Numeralе visoka zaupanja (2-prehodno soglasje + 25 arbitraž s hardcoded razlogi); parzella razponi svežih branj NIZKA zaupanja — Kurrent pasti dokumentirane (4↔8, 7→1, odrezane vodilne števke), avtoritativni ostajajo v2/pageMap podatki; sred-stranske numeralе = extras [~]; ruleCandidate = MERJEN kandidat za P60, join v2 NESPREMENJEN (brez dokaza se NE prerazporeja — disciplina P56/P58); 133–136 + 138–139 ni svežega branja (VLM kvota — odprto); identifikacija per-Blatt instanc [~] (strojno branje ni dokazni vir). Strojno berljivo: research/issue17/ps-blatt-headers.json + runtime src/data/atlas/ps-blatt-headers.json (/api/atlas/ps-blatt-headers).",
-                    "The numerals are high-confidence (2-pass agreement + 25 arbitrations with hardcoded reasons); the fresh parzella ranges are LOW-confidence — Kurrent pitfalls documented (4↔8, 7→1, dropped leading digits), the authoritative data remain the v2/pageMap; mid-page numerals = extras [~]; ruleCandidate = a MEASURED candidate for P60, the v2 join UNCHANGED (nothing reassigned without proof — P56/P58 discipline); pp. 133–136 + 138–139 have no fresh reading (VLM quota — open); per-Blatt instance identification [~] (machine reading is not an evidentiary source). Machine-readable: research/issue17/ps-blatt-headers.json + the runtime src/data/atlas/ps-blatt-headers.json (/api/atlas/ps-blatt-headers).",
+                    "Numeralе visoka zaupanja (2-prehodno soglasje + 25 arbitraž s hardcoded razlogi); parzella razponi svežih branj NIZKA zaupanja — Kurrent pasti dokumentirane (4↔8, 7→1, odrezane vodilne števke), avtoritativni ostajajo v2/pageMap podatki; sred-stranske numeralе = extras [~]; ruleCandidate = MERJEN kandidat — IZVEDEN v P60 (kartica P60), join v2 NESPREMENJEN (brez dokaza se NE prerazporeja — disciplina P56/P58); 133–136 + 138–139 ni svežega branja (VLM kvota — odprto); identifikacija per-Blatt instanc [~] (strojno branje ni dokazni vir). Strojno berljivo: research/issue17/ps-blatt-headers.json + runtime src/data/atlas/ps-blatt-headers.json (/api/atlas/ps-blatt-headers).",
+                    "The numerals are high-confidence (2-pass agreement + 25 arbitrations with hardcoded reasons); the fresh parzella ranges are LOW-confidence — Kurrent pitfalls documented (4↔8, 7→1, dropped leading digits), the authoritative data remain the v2/pageMap; mid-page numerals = extras [~]; ruleCandidate = a MEASURED candidate — DONE in P60 (the P60 card), the v2 join UNCHANGED (nothing reassigned without proof — P56/P58 discipline); pp. 133–136 + 138–139 have no fresh reading (VLM quota — open); per-Blatt instance identification [~] (machine reading is not an evidentiary source). Machine-readable: research/issue17/ps-blatt-headers.json + the runtime src/data/atlas/ps-blatt-headers.json (/api/atlas/ps-blatt-headers).",
+                  )}
+                </p>
+              </div>
+            </div>
+
+            {/* P60 — per-Blatt atribucija ruleCandidate (issue #13) */}
+            <div className="min-w-0 rounded-xl border bg-card p-6 shadow-sm">
+              <h3 className="flex items-center gap-2 font-display text-lg font-semibold">
+                <BookOpen className="size-4 text-primary" aria-hidden="true" />
+                {t("Per-Blatt atribucija ruleCandidate (P60)", "Per-Blatt attribution of ruleCandidates (P60)")}
+                <StatusBadge status={PERBLATT_ATTR_P60.status} />
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                {t(
+                  "Izvedba P59 pravila pasu [0.8, 1.25]: vsaka od 17 ruleCandidate base dobi instanco v pasu kot attributedBlatt — merjeno, brez prerazporeditev joina (disciplina P56/P58/P59). Soslednost-kontrola po vrstnem redu vrstic; strukturni prinos: pas-strani = 100 % več-stranskih base (Kultur-Tabellen re-listing). Unit-semantics opomba: pas ujema modo B (≈ 1), ne modo A (≈ 3.59665 = 1 QK → m²) — absolutna korespondenca ostaja odprta.",
+                  "Execution of the P59 band rule [0.8, 1.25]: each of the 17 ruleCandidate bases gets its in-band instance as the attributedBlatt — measured, without reassigning the join (P56/P58/P59 discipline). Adjacency control in row order; structural gain: the attribute pages carry 100% multi-page bases (Kultur-Tabellen re-listing). Unit-semantics note: the band matches mode B (≈ 1), not mode A (≈ 3.59665 = 1 QK → m²) — the absolute correspondence remains open.",
+                )}
+              </p>
+
+              {/* P60: atribucije */}
+              <div className="mt-3 rounded-lg border bg-background p-3">
+                <p className="text-xs font-semibold">{t("Atribucije (merjeno)", "Attributions (measured)")}</p>
+                <p className="mt-1 font-mono text-[11px] leading-relaxed text-muted-foreground">
+                  <span className="rounded bg-stone-100 px-1.5 py-0.5 dark:bg-stone-800">{PERBLATT_ATTR_P60.summary.bases} base</span> · <span className="rounded bg-sky-100 px-1.5 py-0.5 dark:bg-sky-950/40">II {PERBLATT_ATTR_P60.summary.attributedBlattDist.II} · I {PERBLATT_ATTR_P60.summary.attributedBlattDist.I} · III {PERBLATT_ATTR_P60.summary.attributedBlattDist.III}</span> · {PERBLATT_ATTR_P60.summary.rows} {t("vrstic", "rows")} · {t("soslednost", "adjacency")} <span className="rounded bg-emerald-100 px-1.5 py-0.5 dark:bg-emerald-950/40">{PERBLATT_ATTR_P60.summary.soslednost.ok}/{PERBLATT_ATTR_P60.summary.rows}</span> ({PERBLATT_ATTR_P60.summary.soslednost.flaggedRows.join(", ")} [~] = {t("prečrtane vrstice", "crossed-out rows")})
+                </p>
+              </div>
+
+              {/* P60: primeri + struktura */}
+              <div className="mt-3 grid gap-2 sm:grid-cols-3">
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="text-xs font-semibold">{t("Primer 163", "Example 163")}</p>
+                  <p className="mt-1 font-mono text-[11px] leading-relaxed text-muted-foreground">
+                    → Blatt II @ {PERBLATT_ATTR_P60.attrBases["163"].inBandMedian} · {t("4 kulture", "4 cultures")} (Wiese/Prunigad/Weide/Aehn @ 61/83/84/86) · Blatt I @ 7.0 @ p11
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="text-xs font-semibold">{t("Kultur-Tabellen", "Kultur-Tabellen")}</p>
+                  <p className="mt-1 font-mono text-[11px] leading-relaxed text-muted-foreground">
+                    {PERBLATT_ATTR_P60.summary.relist100Pages.length} {t("pas-strani z 100 % več-stranskih base", "attribute pages with 100% multi-page bases")} (36, 49, 61, 83–87, 99) · p85 = Wiese und Gfrett (644–657) · p99 = Wiesen (928–939)
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="text-xs font-semibold">{t("Unit-semantics (odprto)", "Unit semantics (open)")}</p>
+                  <p className="mt-1 font-mono text-[11px] leading-relaxed text-muted-foreground">
+                    {t("moda A", "mode A")} ≈ 3.59665 (1 QK → m², n=226) · {t("moda B", "mode B")} ≈ 1 (n=62) · {t("faktor", "factor")} ~3.6 · {t("atribucija = relativa", "attribution = relative")} [~]
+                  </p>
+                </div>
+              </div>
+
+              {/* P60: poštenost */}
+              <div className="mt-3 rounded-lg border border-emerald-200 bg-emerald-50/60 p-3 dark:border-emerald-900/50 dark:bg-emerald-950/30">
+                <p className="text-[11px] leading-relaxed text-foreground/80">
+                  <span className="font-semibold">{t("Pošten status: ", "Honest status: ")}</span>
+                  {t(
+                    "Atribucija = RELATIVNA (najboljše ujemanje med instancami baze) — absolutna korespondenca ni dokazana (unit gap moda A/B ~3.6, odprto); join v2 NESPREMENJEN (izpisi brez pozicij/površin; sha256 v2 vhoda pinan — I4 po gradnji); soslednost = kontrola kakovosti, ne diskriminator; P59 pokritost 133–136 + 138–139 še naprej odprta (VLM kvota) — atribucija se razširi ob dokončanju. Strojno berljivo: research/issue17/ps-perblatt-attribution.json + runtime src/data/atlas/ps-perblatt-attribution.json (/api/atlas/ps-perblatt-attribution).",
+                    "The attribution is RELATIVE (the best match among a base's instances) — the absolute correspondence is not proven (mode A/B unit gap ~3.6, open); the v2 join UNCHANGED (outputs contain no positions/areas; the v2 input sha256 pinned — I4 by construction); adjacency = a quality control, not a discriminator; P59 coverage 133–136 + 138–139 remains open (VLM quota) — the attribution extends once finished. Machine-readable: research/issue17/ps-perblatt-attribution.json + the runtime src/data/atlas/ps-perblatt-attribution.json (/api/atlas/ps-perblatt-attribution).",
                   )}
                 </p>
               </div>

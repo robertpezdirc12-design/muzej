@@ -362,6 +362,22 @@ API (statični, brez runtime AI):
   `scripts/p59_ps_blatt_headers.py` (I1–I9, `--check` bajtno); QA 62 → **63**;
   SHEET_GEOREFS in dokazi P40–P58 nespremenjeni.
 
+- **per-Blatt atribucija ruleCandidate (P60, issue #13)** — P59 pravilo pasu
+  [0.8, 1.25] **IZVEDENO**: vsaka od 17 ruleCandidate base dobi instanco v
+  pasu kot attributedBlatt (**II 12 · I 1 · III 4**, 23 vrstic; npr. 163 →
+  Blatt II @ 0.9813 — 4 kulture na 61/83/84/86 — vs Blatt I @ 7.0 @ p11);
+  **soslednost-kontrola 21/23** (671/934 [~] — prečrtane vrstice);
+  **strukturni prinos**: pas-strani (36, 49, 61, 83–87, 94, 99) nosijo 100 %
+  več-stranskih base — **Kultur-Tabellen re-listing** [~]; unit-semantics
+  opomba: pas ujema modo B (ratio ≈ 1, n=62), ne modo A (≈ 3.59665 = 1 QK →
+  m², n=226) — absolutna korespondenca ODPRTA, atribucija = relativa [~];
+  **join v2 NESPREMENJEN** (izpisi brez pozicij/površin, sha256 pinan); dokaz
+  `research/issue17/ps-perblatt-attribution.json` + runtime
+  `src/data/atlas/ps-perblatt-attribution.json`
+  (`/api/atlas/ps-perblatt-attribution`) +
+  `scripts/p60_ps_perblatt_attribution.py` (I1–I7, `--check` bajtno);
+  QA 63 → **64**; SHEET_GEOREFS in dokazi P40–P59 nespremenjeni.
+
 ## Varnost
 
 Žeton `VERCEL_TOKEN` je shranjen izključno kot šifrirana GitHub Actions
