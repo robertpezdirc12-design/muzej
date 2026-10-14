@@ -1,0 +1,143 @@
+{
+ "page": 138,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791994267,
+ "usage": {
+  "completion_tokens": 503,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3899
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": null
+   },
+   {
+    "row": 2,
+    "parzella": null
+   },
+   {
+    "row": 3,
+    "parzella": null
+   },
+   {
+    "row": 4,
+    "parzella": null
+   },
+   {
+    "row": 5,
+    "parzella": null
+   },
+   {
+    "row": 6,
+    "parzella": null
+   },
+   {
+    "row": 7,
+    "parzella": null
+   },
+   {
+    "row": 8,
+    "parzella": null
+   },
+   {
+    "row": 9,
+    "parzella": null
+   },
+   {
+    "row": 10,
+    "parzella": null
+   },
+   {
+    "row": 11,
+    "parzella": null
+   },
+   {
+    "row": 12,
+    "parzella": null
+   },
+   {
+    "row": 13,
+    "parzella": null
+   },
+   {
+    "row": 14,
+    "parzella": "23"
+   },
+   {
+    "row": 15,
+    "parzella": "24"
+   },
+   {
+    "row": 16,
+    "parzella": null
+   },
+   {
+    "row": 17,
+    "parzella": null
+   },
+   {
+    "row": 18,
+    "parzella": null
+   },
+   {
+    "row": 19,
+    "parzella": null
+   },
+   {
+    "row": 20,
+    "parzella": null
+   },
+   {
+    "row": 21,
+    "parzella": null
+   },
+   {
+    "row": 22,
+    "parzella": null
+   },
+   {
+    "row": 23,
+    "parzella": null
+   },
+   {
+    "row": 24,
+    "parzella": null
+   },
+   {
+    "row": 25,
+    "parzella": null
+   },
+   {
+    "row": 26,
+    "parzella": null
+   },
+   {
+    "row": 27,
+    "parzella": null
+   }
+  ],
+  "blatt": [
+   {
+    "value": "T. 101",
+    "row": 14,
+    "atParzella": "23"
+   },
+   {
+    "value": "89",
+    "row": 27,
+    "atParzella": null
+   }
+  ],
+  "opomba": "Vrsta 27: številka 89 v stolpcu Blatt je negotova (lahko tudi 89 ali 86), v stolpcu Parzella ni vidne številke (le sledi črnila). Vrsta 15: številka 24 v stolpcu Parzella je slabo berljiva (lahko tudi 21 ali 25)."
+ },
+ "content": "{\"vrstice\": [{\"row\": 1, \"parzella\": null}, {\"row\": 2, \"parzella\": null}, {\"row\": 3, \"parzella\": null}, {\"row\": 4, \"parzella\": null}, {\"row\": 5, \"parzella\": null}, {\"row\": 6, \"parzella\": null}, {\"row\": 7, \"parzella\": null}, {\"row\": 8, \"parzella\": null}, {\"row\": 9, \"parzella\": null}, {\"row\": 10, \"parzella\": null}, {\"row\": 11, \"parzella\": null}, {\"row\": 12, \"parzella\": null}, {\"row\": 13, \"parzella\": null}, {\"row\": 14, \"parzella\": \"23\"}, {\"row\": 15, \"parzella\": \"24\"}, {\"row\": 16, \"parzella\": null}, {\"row\": 17, \"parzella\": null}, {\"row\": 18, \"parzella\": null}, {\"row\": 19, \"parzella\": null}, {\"row\": 20, \"parzella\": null}, {\"row\": 21, \"parzella\": null}, {\"row\": 22, \"parzella\": null}, {\"row\": 23, \"parzella\": null}, {\"row\": 24, \"parzella\": null}, {\"row\": 25, \"parzella\": null}, {\"row\": 26, \"parzella\": null}, {\"row\": 27, \"parzella\": null}], \"blatt\": [{\"value\": \"T. 101\", \"row\": 14, \"atParzella\": \"23\"}, {\"value\": \"89\", \"row\": 27, \"atParzella\": null}], \"opomba\": \"Vrsta 27: številka 89 v stolpcu Blatt je negotova (lahko tudi 89 ali 86), v stolpcu Parzella ni vidne številke (le sledi črnila). Vrsta 15: številka 24 v stolpcu Parzella je slabo berljiva (lahko tudi 21 ali 25).\"}"
+}

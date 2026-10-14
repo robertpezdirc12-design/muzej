@@ -1,0 +1,120 @@
+{
+ "page": 133,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791993911,
+ "usage": {
+  "completion_tokens": 493,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3889
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "2601"
+   },
+   {
+    "row": 2,
+    "parzella": "2602"
+   },
+   {
+    "row": 3,
+    "parzella": "2603"
+   },
+   {
+    "row": 4,
+    "parzella": "2604"
+   },
+   {
+    "row": 5,
+    "parzella": "2605"
+   },
+   {
+    "row": 6,
+    "parzella": "2606"
+   },
+   {
+    "row": 7,
+    "parzella": "2607"
+   },
+   {
+    "row": 8,
+    "parzella": "2608"
+   },
+   {
+    "row": 9,
+    "parzella": "2609"
+   },
+   {
+    "row": 10,
+    "parzella": "2610"
+   },
+   {
+    "row": 11,
+    "parzella": "2611"
+   },
+   {
+    "row": 12,
+    "parzella": "2612"
+   },
+   {
+    "row": 13,
+    "parzella": "2613"
+   },
+   {
+    "row": 14,
+    "parzella": "2614"
+   },
+   {
+    "row": 15,
+    "parzella": "2615"
+   },
+   {
+    "row": 16,
+    "parzella": "2616"
+   },
+   {
+    "row": 17,
+    "parzella": "2617"
+   },
+   {
+    "row": 18,
+    "parzella": "2618"
+   },
+   {
+    "row": 19,
+    "parzella": "2619"
+   },
+   {
+    "row": 20,
+    "parzella": "2620"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "IV. V",
+    "row": 1,
+    "atParzella": "2601"
+   },
+   {
+    "value": "V",
+    "row": 2,
+    "atParzella": "2602"
+   },
+   {
+    "value": "IV",
+    "row": 8,
+    "atParzella": "2608"
+   }
+  ],
+  "opomba": "Vrstice 9-11 (parcela 2609-2611) in vrstica 11 (parcela 2611) imajo rdeče prečrtane vrednosti; številke so vseeno zapisane kot vidne končne vrednosti."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"2601\"},\n    {\"row\": 2, \"parzella\": \"2602\"},\n    {\"row\": 3, \"parzella\": \"2603\"},\n    {\"row\": 4, \"parzella\": \"2604\"},\n    {\"row\": 5, \"parzella\": \"2605\"},\n    {\"row\": 6, \"parzella\": \"2606\"},\n    {\"row\": 7, \"parzella\": \"2607\"},\n    {\"row\": 8, \"parzella\": \"2608\"},\n    {\"row\": 9, \"parzella\": \"2609\"},\n    {\"row\": 10, \"parzella\": \"2610\"},\n    {\"row\": 11, \"parzella\": \"2611\"},\n    {\"row\": 12, \"parzella\": \"2612\"},\n    {\"row\": 13, \"parzella\": \"2613\"},\n    {\"row\": 14, \"parzella\": \"2614\"},\n    {\"row\": 15, \"parzella\": \"2615\"},\n    {\"row\": 16, \"parzella\": \"2616\"},\n    {\"row\": 17, \"parzella\": \"2617\"},\n    {\"row\": 18, \"parzella\": \"2618\"},\n    {\"row\": 19, \"parzella\": \"2619\"},\n    {\"row\": 20, \"parzella\": \"2620\"}\n  ],\n  \"blatt\": [\n    {\"value\": \"IV. V\", \"row\": 1, \"atParzella\": \"2601\"},\n    {\"value\": \"V\", \"row\": 2, \"atParzella\": \"2602\"},\n    {\"value\": \"IV\", \"row\": 8, \"atParzella\": \"2608\"}\n  ],\n  \"opomba\": \"Vrstice 9-11 (parcela 2609-2611) in vrstica 11 (parcela 2611) imajo rdeče prečrtane vrednosti; številke so vseeno zapisane kot vidne končne vrednosti.\"\n}"
+}

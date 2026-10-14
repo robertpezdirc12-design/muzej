@@ -3536,3 +3536,25 @@ Stage Summary:
 - P61 IZVEDEN (merjena karakterizacija moda B: H1 napačni join ZAVRŽEN s permutacijsko kontrolo, H3 neuporabna, H2 = druga konvencija [~] — identiteta enote ODPRTA); atribucije P60 + join v2 NESPREMENJENI (sha256 pini); P55–P60 runtime nespremanjeni (I8).
 - FNV-1a-32 permutacija = prenosljiva determinizma (Python ↔ TS Math.imul bajtno enako) — QA preracun izvedljiv tudi v produkciji (gursCompact v runtime).
 - Ostaja odprto: 1) identiteta enote moda B (paleografija/dokumenti — glave sekcij str. 61–99); 2) 13 VLM branj P59 (133–136, 138–139, p137 pass2) ob kvoti; 3) razširitev atribucije na 106 čez-Blatt base; 4) razlaga Kultur-Tabellen navzkrižje s P38; 5) per-Blatt SPLIT joina (odločitev lastnika); 6) lastniki pas-instanc ↔ PF protokol; 7) p139 Haus Nro. → P58 open #6.
+---
+Task ID: 28
+Agent: Z.ai Code (glavni agent)
+Task: P62 — glave listov registra PS: POLNA pokritost 135/135 × 2 prehoda (odprta točka P59/P61 #2 — 13 manjkajočih branj ob kvoti 429)
+
+Work Log:
+- Obnova konteksta: main @ 40e7443 (P61), GitLab == GitHub == 40e7443 (HEAD preverjena prek API obeh); handoff povzetek zastarel (P59/P60/P61 že izvedene); /tmp/p59 preživel z točno strani 133–139 (7 raw + send izrezov) — surovine pripravljene; 257 ps-raw datotek commitirano, 13 branj manjkalo (133–136, 138–139 × 2 + p137 pass2).
+- VLM kvota test: p133 pass1 OK v 6 s → 429 PREMAGANA; nohup background umrl ob session cleanup → preklop na foreground chunking (ena stran na klic).
+- 13/13 branj dopolnjenih (foreground: "133" / "134-136" / "138-139" / "137:2", ~6–9 s/branje, 0 NEUSPEH) → polna pokritost 135/135 × 2 prehoda (+ P57 str. 3–4).
+- Arbitraža novih strani z lastnimi očmi na 3× izrezih (Read tool): p133 = V ('IV.V' @ r1 korekcija IV→V, 'V' @ r2, 'IV' @ r8 prečrtan); p134 = IV @ r1 + 'II.IV' @ r5/r15, 'III.IV' @ r17, 'IV' @ r9/r18 (passi se razlikujeta le po presledkih — 'II. IV' vs 'II.IV'); p135 = IV @ r1, III @ r2, II @ r12; p136 = II @ r1 ditto; p137 = II @ r1 + 'I.II' @ r6, 'I' @ r8 (potrjuje P59 pass1); p138 = None [?] (tabela skoraj prazna, bledi zapisi 'T.191'?/'89'? neberljivi); p139 = None (glava 'Nro. des Hauses.' — hišne 41–60 + vsota 82, NI Blatt → P58 open #6). VLM == oči 100 %.
+- p59 skripta v2: ARBITRATION +7 strani (133–139) z None-handling; UNREAD prazen; I1 polna pokritost (S1 123/123 + S2/S3 12/12); I4 null_pages prazna (p138/139 brez vrstic v v2); coverage polna; statusLine/verdicts/next posodobljeni; opomba: prvi MultiEdit delno apliciran (non-atomic) — odkrito z rg diagnostiko in popravljeno posamezno.
+- Re-run veriga: P59 OK (arbitraža 32, soglasje 103, čez-Blatt 110 (+4), ruleCandidate 17 NEspremenjen; --check PASS) → P60 OK (vsi pini ostajajo; izhodi bajtno identični — sha256 nespremenjen; --check PASS) → P61: I5 blattDist zlom pričakovan (null 5 → II 32/IV 15/null 0: 5 moda B vrstic iz strani 133–136 se razporedi IV +4 (2632, 2636, 2641, 2628) / II +1 (2675)); pini posodobljeni (PIN_BLATT_B + I8 bhrt_sha ea950ce2…; p60rt_sha nespremenjen 28465b3e…); re-run OK (modi 226/62, permutacijske kontrole nespremenjene — ne visijo na blatt; --check PASS).
+- QA pine posodobljeni (qa-p59: 211/110/17 + arbitraža 32 + polna pokritost; qa-p61: blattDist II 32 · IV 15 · null 0; qa-p60 nespremenjen) + opisi/detail vrstice.
+- TS konstante research.ts posodobljene (BLATT_HEADERS_P59: pagesArbitrated 32, singlePassPages [], basesOnMultipleBlatter 110, coverage polna, statusLine/verdicts/next; PERBLATT_ATTR_P60 next; UNIT_SEM_P61 modaBBlattDist + verdicts; 106→110 v next obeh).
+- Kartice museum-research.tsx: P59 metoda vrstica (polna pokritost 135/135 namesto S2 6/10/S3 0/2 kvota), opombe P59 (32 arbitraž + P62 dopolnilo + korekcijske cone), P60 (pokritost POPOLNA), P61 (Blatt II 32 · IV 15 + POPOLNA), P56 zapora (110 span).
+- sources.ts N083PS opomba: Si (110 čez + P62 polna pokritost; 32 arbitraž-oči; Blatt II 32 · IV 15) + En (32 agent-eye; 110 span; Blatt II 32 · IV 15).
+- Audit §40 (polna pokritost + arbitraža + strukturni prinos + veriga re-run + QA + poštenost) + README bullet P62 + P61 blatt popravka + repov worklog.
+- SHEET_GEOREFS in dokazi P40–P59 nespremanjeni (lekcija P9); join v2 NESPREMENJEN (I9 sha256); P55–P60 runtime nespremanjeni (P60 izhodi bajtno identični; I8 pini po lekciji P9).
+
+Stage Summary:
+- P62 IZVEDEN: pokritost glav listov PS 135/135 strani × 2 prehoda POPOLNA; arbitraža 32 (VLM == oči 100 % na novih straneh); konec registra (p133–137) nosi eksplicitne korekcijske cone IV→V/II (rdeči tuš); čez-Blatt 106 → 110; ruleCandidate 17 in P60 atribucije NESPREMENJENI; moda B blattDist null 5 → IV +4 / II +1 (II 32 · IV 15 · III 9 · I 5 · I·II 1 · null 0); veriga P59→P60→P61 --check bajtno PASS; QA 65/65 pine posodobljeni.
+- Ostaja odprto: 1) p138 bledi zapisi [?] (6× izrez/original scan); 2) p139 Haus Nro. → P58 open #6; 3) razlaga korekcijskih con IV→V/II (reorganizacija ali revisija [~]); 4) identiteta enote moda B (paleografija/dokumenti — glave sekcij str. 61–99); 5) razširitev atribucije na 110 čez-Blatt base; 6) per-Blatt SPLIT joina (odločitev lastnika); 7) lastniki pas-instanc ↔ PF protokol.

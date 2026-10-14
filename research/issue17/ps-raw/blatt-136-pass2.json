@@ -1,0 +1,110 @@
+{
+ "page": 136,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791994253,
+ "usage": {
+  "completion_tokens": 461,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3857
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "2661"
+   },
+   {
+    "row": 2,
+    "parzella": "2662"
+   },
+   {
+    "row": 3,
+    "parzella": "2663"
+   },
+   {
+    "row": 4,
+    "parzella": "2664"
+   },
+   {
+    "row": 5,
+    "parzella": "2665"
+   },
+   {
+    "row": 6,
+    "parzella": "2666"
+   },
+   {
+    "row": 7,
+    "parzella": "2667"
+   },
+   {
+    "row": 8,
+    "parzella": "2668"
+   },
+   {
+    "row": 9,
+    "parzella": "2669"
+   },
+   {
+    "row": 10,
+    "parzella": "2670"
+   },
+   {
+    "row": 11,
+    "parzella": "2671"
+   },
+   {
+    "row": 12,
+    "parzella": "2672"
+   },
+   {
+    "row": 13,
+    "parzella": "2673"
+   },
+   {
+    "row": 14,
+    "parzella": "2674"
+   },
+   {
+    "row": 15,
+    "parzella": "2675"
+   },
+   {
+    "row": 16,
+    "parzella": "2676"
+   },
+   {
+    "row": 17,
+    "parzella": "2677"
+   },
+   {
+    "row": 18,
+    "parzella": "2678"
+   },
+   {
+    "row": 19,
+    "parzella": "2679"
+   },
+   {
+    "row": 20,
+    "parzella": "2680"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "II",
+    "row": 1,
+    "atParzella": "2661"
+   }
+  ],
+  "opomba": "Vrstica 16 (parzella 2676) je prečrtana z rdečim tušem. Vse ostale vrstice imajo v stolpcu 'Nro. des Blattes' ditto znamenja (dve piki/kljukici)."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"2661\"},\n    {\"row\": 2, \"parzella\": \"2662\"},\n    {\"row\": 3, \"parzella\": \"2663\"},\n    {\"row\": 4, \"parzella\": \"2664\"},\n    {\"row\": 5, \"parzella\": \"2665\"},\n    {\"row\": 6, \"parzella\": \"2666\"},\n    {\"row\": 7, \"parzella\": \"2667\"},\n    {\"row\": 8, \"parzella\": \"2668\"},\n    {\"row\": 9, \"parzella\": \"2669\"},\n    {\"row\": 10, \"parzella\": \"2670\"},\n    {\"row\": 11, \"parzella\": \"2671\"},\n    {\"row\": 12, \"parzella\": \"2672\"},\n    {\"row\": 13, \"parzella\": \"2673\"},\n    {\"row\": 14, \"parzella\": \"2674\"},\n    {\"row\": 15, \"parzella\": \"2675\"},\n    {\"row\": 16, \"parzella\": \"2676\"},\n    {\"row\": 17, \"parzella\": \"2677\"},\n    {\"row\": 18, \"parzella\": \"2678\"},\n    {\"row\": 19, \"parzella\": \"2679\"},\n    {\"row\": 20, \"parzella\": \"2680\"}\n  ],\n  \"blatt\": [\n    {\n      \"value\": \"II\",\n      \"row\": 1,\n      \"atParzella\": \"2661\"\n    }\n  ],\n  \"opomba\": \"Vrstica 16 (parzella 2676) je prečrtana z rdečim tušem. Vse ostale vrstice imajo v stolpcu 'Nro. des Blattes' ditto znamenja (dve piki/kljukici).\"\n}"
+}

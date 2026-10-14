@@ -1,0 +1,135 @@
+{
+ "page": 138,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791994278,
+ "usage": {
+  "completion_tokens": 500,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3896
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": ""
+   },
+   {
+    "row": 2,
+    "parzella": ""
+   },
+   {
+    "row": 3,
+    "parzella": ""
+   },
+   {
+    "row": 4,
+    "parzella": ""
+   },
+   {
+    "row": 5,
+    "parzella": ""
+   },
+   {
+    "row": 6,
+    "parzella": ""
+   },
+   {
+    "row": 7,
+    "parzella": ""
+   },
+   {
+    "row": 8,
+    "parzella": ""
+   },
+   {
+    "row": 9,
+    "parzella": ""
+   },
+   {
+    "row": 10,
+    "parzella": ""
+   },
+   {
+    "row": 11,
+    "parzella": ""
+   },
+   {
+    "row": 12,
+    "parzella": ""
+   },
+   {
+    "row": 13,
+    "parzella": ""
+   },
+   {
+    "row": 14,
+    "parzella": "23"
+   },
+   {
+    "row": 15,
+    "parzella": "24"
+   },
+   {
+    "row": 16,
+    "parzella": ""
+   },
+   {
+    "row": 17,
+    "parzella": ""
+   },
+   {
+    "row": 18,
+    "parzella": ""
+   },
+   {
+    "row": 19,
+    "parzella": ""
+   },
+   {
+    "row": 20,
+    "parzella": ""
+   },
+   {
+    "row": 21,
+    "parzella": ""
+   },
+   {
+    "row": 22,
+    "parzella": ""
+   },
+   {
+    "row": 23,
+    "parzella": ""
+   },
+   {
+    "row": 24,
+    "parzella": ""
+   },
+   {
+    "row": 25,
+    "parzella": ""
+   }
+  ],
+  "blatt": [
+   {
+    "value": "T. 191",
+    "row": 14,
+    "atParzella": "23"
+   },
+   {
+    "value": "89",
+    "row": 25,
+    "atParzella": ""
+   }
+  ],
+  "opomba": "Vrstica 14: v stolpcu Blatt je napisano 'T. 191' (morda 'I. 191' ali 'J. 191', vendar črka najbolj spominja na T), v stolpcu Parzella številka 23. Vrstica 15: Parzella 24 (druga cifra negotova, lahko tudi 21). Vrstica 25: v stolpcu Blatt številka 89."
+ },
+ "content": "{\"vrstice\": [{\"row\": 1, \"parzella\": \"\"}, {\"row\": 2, \"parzella\": \"\"}, {\"row\": 3, \"parzella\": \"\"}, {\"row\": 4, \"parzella\": \"\"}, {\"row\": 5, \"parzella\": \"\"}, {\"row\": 6, \"parzella\": \"\"}, {\"row\": 7, \"parzella\": \"\"}, {\"row\": 8, \"parzella\": \"\"}, {\"row\": 9, \"parzella\": \"\"}, {\"row\": 10, \"parzella\": \"\"}, {\"row\": 11, \"parzella\": \"\"}, {\"row\": 12, \"parzella\": \"\"}, {\"row\": 13, \"parzella\": \"\"}, {\"row\": 14, \"parzella\": \"23\"}, {\"row\": 15, \"parzella\": \"24\"}, {\"row\": 16, \"parzella\": \"\"}, {\"row\": 17, \"parzella\": \"\"}, {\"row\": 18, \"parzella\": \"\"}, {\"row\": 19, \"parzella\": \"\"}, {\"row\": 20, \"parzella\": \"\"}, {\"row\": 21, \"parzella\": \"\"}, {\"row\": 22, \"parzella\": \"\"}, {\"row\": 23, \"parzella\": \"\"}, {\"row\": 24, \"parzella\": \"\"}, {\"row\": 25, \"parzella\": \"\"}], \"blatt\": [{\"value\": \"T. 191\", \"row\": 14, \"atParzella\": \"23\"}, {\"value\": \"89\", \"row\": 25, \"atParzella\": \"\"}], \"opomba\": \"Vrstica 14: v stolpcu Blatt je napisano 'T. 191' (morda 'I. 191' ali 'J. 191', vendar črka najbolj spominja na T), v stolpcu Parzella številka 23. Vrstica 15: Parzella 24 (druga cifra negotova, lahko tudi 21). Vrstica 25: v stolpcu Blatt številka 89.\"}"
+}

@@ -1,0 +1,135 @@
+{
+ "page": 134,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791994204,
+ "usage": {
+  "completion_tokens": 589,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3985
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "2621"
+   },
+   {
+    "row": 2,
+    "parzella": "2622"
+   },
+   {
+    "row": 3,
+    "parzella": "2623"
+   },
+   {
+    "row": 4,
+    "parzella": "2624"
+   },
+   {
+    "row": 5,
+    "parzella": "2625"
+   },
+   {
+    "row": 6,
+    "parzella": "2626"
+   },
+   {
+    "row": 7,
+    "parzella": "2627"
+   },
+   {
+    "row": 8,
+    "parzella": "2628"
+   },
+   {
+    "row": 9,
+    "parzella": "2629"
+   },
+   {
+    "row": 10,
+    "parzella": "2630"
+   },
+   {
+    "row": 11,
+    "parzella": "2631"
+   },
+   {
+    "row": 12,
+    "parzella": "2632"
+   },
+   {
+    "row": 13,
+    "parzella": "2633"
+   },
+   {
+    "row": 14,
+    "parzella": "2634"
+   },
+   {
+    "row": 15,
+    "parzella": "2635"
+   },
+   {
+    "row": 16,
+    "parzella": "2636"
+   },
+   {
+    "row": 17,
+    "parzella": "2637"
+   },
+   {
+    "row": 18,
+    "parzella": "2638"
+   },
+   {
+    "row": 19,
+    "parzella": "2639"
+   },
+   {
+    "row": 20,
+    "parzella": "2640"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "IV",
+    "row": 1,
+    "atParzella": "2621"
+   },
+   {
+    "value": "II. IV",
+    "row": 5,
+    "atParzella": "2625"
+   },
+   {
+    "value": "IV",
+    "row": 9,
+    "atParzella": "2629"
+   },
+   {
+    "value": "II. IV",
+    "row": 15,
+    "atParzella": "2635"
+   },
+   {
+    "value": "III IV",
+    "row": 17,
+    "atParzella": "2637"
+   },
+   {
+    "value": "IV",
+    "row": 18,
+    "atParzella": "2638"
+   }
+  ],
+  "opomba": "Vrstice 8-16 (parcele 2628-2636) so prečrtane z rdečim tušem. Številke v stolpcu 'Nro. des Blattes' so izpisane kot rimske številke (IV), kombinacije (II. IV, III IV)."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"2621\"},\n    {\"row\": 2, \"parzella\": \"2622\"},\n    {\"row\": 3, \"parzella\": \"2623\"},\n    {\"row\": 4, \"parzella\": \"2624\"},\n    {\"row\": 5, \"parzella\": \"2625\"},\n    {\"row\": 6, \"parzella\": \"2626\"},\n    {\"row\": 7, \"parzella\": \"2627\"},\n    {\"row\": 8, \"parzella\": \"2628\"},\n    {\"row\": 9, \"parzella\": \"2629\"},\n    {\"row\": 10, \"parzella\": \"2630\"},\n    {\"row\": 11, \"parzella\": \"2631\"},\n    {\"row\": 12, \"parzella\": \"2632\"},\n    {\"row\": 13, \"parzella\": \"2633\"},\n    {\"row\": 14, \"parzella\": \"2634\"},\n    {\"row\": 15, \"parzella\": \"2635\"},\n    {\"row\": 16, \"parzella\": \"2636\"},\n    {\"row\": 17, \"parzella\": \"2637\"},\n    {\"row\": 18, \"parzella\": \"2638\"},\n    {\"row\": 19, \"parzella\": \"2639\"},\n    {\"row\": 20, \"parzella\": \"2640\"}\n  ],\n  \"blatt\": [\n    {\"value\": \"IV\", \"row\": 1, \"atParzella\": \"2621\"},\n    {\"value\": \"II. IV\", \"row\": 5, \"atParzella\": \"2625\"},\n    {\"value\": \"IV\", \"row\": 9, \"atParzella\": \"2629\"},\n    {\"value\": \"II. IV\", \"row\": 15, \"atParzella\": \"2635\"},\n    {\"value\": \"III IV\", \"row\": 17, \"atParzella\": \"2637\"},\n    {\"value\": \"IV\", \"row\": 18, \"atParzella\": \"2638\"}\n  ],\n  \"opomba\": \"Vrstice 8-16 (parcele 2628-2636) so prečrtane z rdečim tušem. Številke v stolpcu 'Nro. des Blattes' so izpisane kot rimske številke (IV), kombinacije (II. IV, III IV).\"\n}"
+}

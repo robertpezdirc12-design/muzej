@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
-# P59 — GLAVE LISTOV REGISTRA PS ("Nro. des Blattes") — per-Blatt atribucija
-# strani in ločitev dvoumnih base v2 (open item P58 #4; metodika 4 plasti P57).
+# P59 (+P62 dopolnitev) — GLAVE LISTOV REGISTRA PS ("Nro. des Blattes") —
+# per-Blatt atribucija strani in ločitev dvoumnih base v2 (open item P58 #4;
+# metodika 4 plasti P57). P62: polna pokritost 135/135 (133–136, 138–139,
+# p137 pass2 dopolnjena po premagani kvoti 429; oči-arbitraža potrjena).
 #
 # NAČELO (isto kot P56/P58): nič se NE prerazporeja brez dokaza — skripta
 # MERI in DOKUMENTIRA. Join v2 (1093 vrstic) ostaja NESPREMENJEN.
@@ -15,11 +17,12 @@
 #   src/data/atlas/ps-blatt-headers.json   (runtime, bajtno identična projekcija)
 #
 # Invarianti (FAIL ob padu):
-#   I1 pokritost — S1 5–127: 123/123 strani × 2 prehoda; S2/S3 vrste z razlogi
+#   I1 pokritost — 135/135 strani (5–139) × 2 prehoda (P62: 133–136, 138–139 +
+#      p137 pass2 dopolnjeno; kvota 429 premagana)
 #   I2 Blatt I p3–4 == P57 runtime (26 vrstic blatt 'I') + p5–25 vse 'I'
 #   I3 arbitraža — vsi nesoglasja imajo zapisano odločitev (agent-oči, hardcoded)
-#   I4 atribucija — vseh 1093 vrstic v2 dobi blatt (null le za neprebrane strani,
-#      števec pinan)
+#   I4 atribucija — vseh 1093 vrstic v2 dobi blatt (p138 neberljivo [?] in
+#      p139 Haus Nro. nimata vrstic v v2 → null_pages prazna)
 #   I5 struktura — Blatt sekcije: I (3–42, parcele 1–800), II (43–…, 801–),
 #      oči-potrjene korekcije območja prehoda 721–800 (p40/p41/p42)
 #   I6 per-Blatt dvoumnost — bazi na več straneh == 211 (pin iz v2), nove mere:
@@ -80,16 +83,24 @@ ARBITRATION = {
     125: ("V", [], "oči: glifa @ r1 dvomljiva IV/V, prečrtana [~] — 'V' po kontekstu (p126–132 V); sveže '17' = razpad glife"),
     127: ("V", [], "oči: 'V' @ r1 (pass2 'I' = zamaj)"),
     128: ("V", [], "oči: 'V' @ r1 prečrtano rdeče [~]"),
+    133: ("V", [{"value": "IV", "row": 8}],
+          "2-prehodno soglasje + oči: 'IV.V' @ r1 = korekcija IV→V, 'V' @ r2; 'IV' @ r8 = prečrtan [~]; parcele 2601–2620"),
+    134: ("IV", [{"value": "II.IV", "row": 5}, {"value": "IV", "row": 9}, {"value": "II.IV", "row": 15}, {"value": "III.IV", "row": 17}, {"value": "IV", "row": 18}],
+          "2-prehodno soglasje + oči: 'IV' @ r1; 'II.IV'/'III.IV' @ prečrtanih = korekcijski zapisi (passi se razlikujeta le po presledkih); parcele 2621–2640"),
+    135: ("IV", [{"value": "III", "row": 2}, {"value": "II", "row": 12}],
+          "2-prehodno soglasje + oči: 'IV' @ r1, 'III' @ r2, 'II' @ r12; parcele 2641–2660"),
+    136: ("II", [],
+          "2-prehodno soglasje + oči: 'II' @ r1, ditto; parcele 2661–2680"),
+    137: ("II", [{"value": "I.II", "row": 6}, {"value": "I", "row": 8}],
+          "2-prehodno soglasje + oči: 'II' @ r1 + korekcije 'I.II' @ r6, 'I' @ r8; parcele 2681–2700"),
+    138: (None, [],
+          "oči: tabela skoraj prazna, bledi zapisi neberljivi ('T.191'? @ r14, '89'? @ r27) [?] — brez zanesljive numerele"),
+    139: (None, [],
+          "oči: glava 'Nro. des Hauses.' — hišne številke 41–60 + vsota 82, ni numerele Blatt → P58 open #6"),
 }
 
-UNREAD = {
-    133: "S2 — ni svežega branja (VLM kvota 429 izčrpana; odprto)",
-    134: "S2 — ni svežega branja (VLM kvota 429 izčrpana; odprto)",
-    135: "S2 — ni svežega branja (VLM kvota 429 izčrpana; odprto)",
-    136: "S2 — ni svežega branja (VLM kvota 429 izčrpana; odprto)",
-    138: "S3 zapadek — P38 ps-138 brez blatt stolpca (nastop 'Zusammenstellung der Grundstücke', lastna oštevilčenja)",
-    139: "S3 zapadek — P38 ps-139 opaža 'III' ×1 [~]; ni svežega branja (kvota)",
-}
+# P62: UNREAD prazen — 133–136, 138–139 prebrana (2 prehoda), p137 pass2 dopolnjena
+UNREAD = {}
 
 
 def fail(msg):
@@ -177,7 +188,10 @@ def main():
         row1b = next((x["value"] for x in d["pass2"]["blatt"] if x["row"] == 1), None) if d["pass2"] and "blatt" in d["pass2"] else None
         if p in ARBITRATION:
             bl, extras, note = ARBITRATION[p]
-            core, flag = norm_roman(bl)
+            if bl is None:
+                core, flag = None, True
+            else:
+                core, flag = norm_roman(bl)
             note_clean = note[5:] if note.startswith("oči: ") else note
             page_attr[p] = {"blatt": core, "source": f"arbitraža (oči na 3× izrezu): {note_clean}",
                             "passes": npass, "extras": extras, "flag": True}
@@ -207,20 +221,20 @@ def main():
             page_attr[p] = {"blatt": None, "source": "stolpec brez izpisanih numeral (samo ditto) [~]",
                             "passes": npass, "extras": [], "flag": True}
 
-    # ————— I1 pokritost —————
+    # ————— I1 pokritost (v2: polna — P62) —————
     s1 = list(range(5, 128))
     s1_full = [p for p in s1 if pages[p]["pass1"] and pages[p]["pass2"]
                and "blatt" in pages[p]["pass1"] and "blatt" in pages[p]["pass2"]]
     if len(s1_full) != 123:
         fail(f"I1 S1 polna pokritost {len(s1_full)}/123")
-    s2_read = [p for p in range(128, 138) if pages[p]["pass1"]]
-    if sorted(s2_read) != [128, 129, 130, 131, 132, 137]:
-        fail(f"I1 S2 branja {s2_read}")
-    if pages[137]["pass2"] is not None:
-        fail("I1 p137 pass2 naj ne bi obstajal (kvota)")
-    s2_unread = [p for p in range(128, 138) if not pages[p]["pass1"]]
-    if sorted(s2_unread) != [133, 134, 135, 136]:
-        fail(f"I1 S2 neprebrane {s2_unread}")
+    rest_full = [p for p in range(128, 140) if pages[p]["pass1"] and pages[p]["pass2"]
+                 and "blatt" in pages[p]["pass1"] and "blatt" in pages[p]["pass2"]]
+    if len(rest_full) != 12:
+        fail(f"I1 S2/S3 polna pokritost {len(rest_full)}/12")
+    if UNREAD:
+        fail(f"I1 UNREAD ni prazen: {sorted(UNREAD)}")
+    if pages[3]["pass1"] is not None:
+        fail("I1 p3–4 imajo P57 polno branje, svežih prehodov naj ne bi bilo")
 
     # ————— I2 Blatt I navzkrižje s P57 —————
     p57_rows = p57["rows"]
@@ -258,7 +272,7 @@ def main():
         r["blattP59"] = b
         if b is None:
             null_pages.add(pg)
-    if null_pages != {133, 134, 135, 136}:
+    if null_pages:
         fail(f"I4 vrstice brez blatt na straneh {sorted(null_pages)}")
 
     # ————— I5 struktura —————
@@ -325,13 +339,14 @@ def main():
 
     # ————— izpisi —————
     ev = {
-        "task": "P59 — glave listov registra PS (Nro. des Blattes): per-Blatt atribucija strani + ločitev dvoumnih base v2",
+        "task": "P59 (+P62 dopolnitev) — glave listov registra PS (Nro. des Blattes): per-Blatt atribucija strani + ločitev dvoumnih base v2, polna pokritost",
         "date": "2026-10-14",
         "principle": ("arbitraža 2 VLM prehoda + agent-oči na 3× izrezih (metodika P57); "
                       "stran atributirana na numeralo @ vrstica 1; sred-stranske numeralе = extras [~]; "
-                      "MERITVE brez prerazporeditev — join v2 nespremenjen (disciplina P56/P58)"),
+                      "MERITVE brez prerazporeditev — join v2 nespremenjen (disciplina P56/P58); "
+                      "P62: pokritost 135/135 (133–136, 138–139, p137 pass2 dopolnjena)"),
         "inputs": {
-            "freshReads": "research/issue17/ps-raw/blatt-<page>{,-pass2}.json (135 strani posnetih, izrez levega stolpca 3×)",
+            "freshReads": "research/issue17/ps-raw/blatt-<page>{,-pass2}.json (135 strani posnetih × 2 prehoda — pokritost polna, izrez levega stolpca 3×)",
             "fetch": "scripts/p59_fetch_strip.py (VAČ uodid 373415 docid 41780, izrez x30–250, 3× Lanczos q92)",
             "reader": "scripts/p59_ps_read_blatt.mjs (glm-5v-turbo, 2 prehoda, JSON)",
             "v2": "research/issue17/ps-parcels-geo-v2.json (rowsEvidence 1093)",
@@ -339,9 +354,10 @@ def main():
             "blattI": "src/data/atlas/ps-register-start.json (P57, p3–4)",
         },
         "coverage": {
+            "polna": "135/135 strani (5–139) × 2 neodvisna VLM prehoda — pokritost POPOLNA (P62: dopolnjeno po premagani kvoti 429)",
             "S1": "strani 5–127: 123/123 × 2 prehoda",
-            "S2": "strani 128–132 + 137 branja (137 samo pass1); 133–136 ni branja — VLM kvota 429 (odprto)",
-            "S3": "strani 138–139 ni svežega branja (kvota); P38: ps-138 brez stolpca, ps-139 'III' ×1 [~]",
+            "S2": "strani 128–137: 10/10 × 2 prehoda",
+            "S3": "strani 138–139: 2/2 × 2 prehoda (138 bledi zapisi neberljivi [?]; 139 = 'Nro. des Hauses.' hišne 41–60, ni Blatt)",
             "p3-4": "P57 polno branje (Blatt I)",
         },
         "arbitration": {
@@ -372,27 +388,29 @@ def main():
                           "(P39: ista številka pod različnima Blattoma = druga parcela) — instance zdaj razločljive; "
                           "join po številki ostaja nespremenjen (brez dokaza se NE prerazporeja)" % len(multi_blatt)),
         },
-        "invariants": ["I1 pokritost", "I2 Blatt I == P57", "I3 arbitraža popolna",
-                       "I4 atribucija 1093/1093 (null le 133–136)", "I5 struktura jedra",
+        "invariants": ["I1 pokritost polna 135/135", "I2 Blatt I == P57", "I3 arbitraža popolna",
+                       "I4 atribucija 1093/1093 brez null", "I5 struktura jedra",
                        "I6 dvoumnost merjena", "I7 determinizem", "I8 dokaz ⊇ runtime",
                        "I9 join v2 nespremenjen"],
-        "statusLine": ("P59 GLAVE LISTOV: 129/135 strani sveže branih (2 prehoda; 133–136, 138–139 kvota, p137 pass2), "
+        "statusLine": ("P59 GLAVE LISTOV: 135/135 strani sveže branih (2 prehoda; polna pokritost — P62 dopolnilo 133–136, 138–139, p137 pass2 po premagani kvoti 429), "
                        f"{len(arb_used)} arbitraža-oči, struktura Blatt I–V + lokalne sekcije; "
                        "211 dvoumnih base → %d čez-Blatt, %d ruleCandidate [~]; join v2 nespremenjen" % (len(multi_blatt), len(rule_cand))),
-        "verdictSi": ("Glave listov registra PS prvič zanesljivo prebrane (S1 123/123 × 2 prehoda + 25 arbitraž-oči): "
+        "verdictSi": ("Glave listov registra PS prvič zanesljivo prebrane v POLNI pokritosti (135/135 × 2 prehoda + arbitraža-oči): "
                       "Blatt I = parcele 1–800 (strani 3–40, s prehodnimi popravki I→II na 721–800), Blatt II se začne pri 801 (43–92, p72 = III vmes); "
+                      "konec registra (p133–137) nosi eksplicitne korekcijske cone IV→V/II (rdeči tuš); "
                       "isto številko pod različnima Blattoma potrjeno kot druga parcela — 211 dvoumnih base v2 kvantificiranih per instanco; "
                       "join ostaja nespremenjen; parzella razponi svežih branj = nizka zaupanja (Kurrent 4↔8/7→1, dokumentirano)"),
-        "verdictEn": ("Leaf headers of the PS register read reliably for the first time (S1 123/123 pages x 2 passes + arbitration): "
+        "verdictEn": ("Leaf headers of the PS register read reliably in FULL coverage (135/135 pages x 2 passes + arbitration): "
                       "Blatt I = parcels 1-800 (pages 3-42, with I-to-II correction annotations in 721-800), Blatt II starts at 801; "
+                      "register end (p133-137) carries explicit IV-to-V/II correction zones (red ink); "
                       "same number under different Blaetter confirmed as different parcels - the 211 ambiguous bases quantified per instance; "
                       "join unchanged; fresh parzella ranges are low-confidence (Kurrent 4-8/7-1 confusion, documented)"),
         "next": [
-            "prebrati 133–136 (S2) + 138–139 (S3) ob ponovitvi VLM kvote + p137 pass2 — popolna pokritost",
-            "P60 kandidat: per-Blatt atribucija joina za ruleCandidate baze (dokazno pravilo: edina instancia v pasu [0.8, 1.25] + soslednost) — zahteva lastno fazo s pini",
-            "razlagati prehodno cono 721–800 (popravki I→II): reorganizacija listov ali Kultur skupine [~]",
-            "p26/p37/p39 lokalne sekcije (161–180/101–120 pod Blatt I): povezati z Riede stolpcem polnih branj",
-            "4. VLM prehod glav izkoristi tudi P58 open #6 (Haus Nro. ↔ tlorisi)",
+            "P62 IZVEDENO: 133–136, 138–139 + p137 pass2 prebrani — polna pokritost (kvota 429 premagana)",
+            "p138 bledi zapisi ('T.191'? @ r14, '89'? @ r27) [?]: rešiti s 6× izrezom ali original scan",
+            "p139 'Nro. des Hauses.' 41–60 + vsota 82 → P58 open #6 (Haus Nro. ↔ tlorisi)",
+            "razlagati korekcijske cone IV→V (p133), II→IV (p134) in II→I (p137) — reorganizacija listov ali revisija [~]",
+            "razširitev atribucije P60 na (nove) čez-Blatt base konec registra",
         ],
     }
 

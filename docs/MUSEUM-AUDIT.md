@@ -2275,3 +2275,56 @@ P53/P57/P58 (produkcija: preracun na runtime kopijah).
 paleografija/dokumenti — glave sekcij str. 61–99, pojasnila registra); P59
 pokritost 133–136 + 138–139 še naprej odprta (VLM kvota 429); SHEET_GEOREFS in
 dokazi P40–P60 nespremenjeni.
+
+## §40 — P62: glave listov registra PS — POLNA pokritost 135/135 × 2 prehoda (issue #13, 2026-10-14)
+
+**Odprta točka P59/P61 #2** ("13 manjkajočih branj: 133–136, 138–139 ×
+2 prehoda + p137 pass2 — VLM kvota 429") je **IZPOLNJENA**: kvota premagana,
+vseh 13 branj dopolnjenih (`scripts/p59_ps_read_blatt.mjs`, glm-5v-turbo,
+skip-existing; surovine VAČ str. 133–139 že prenešene v P60/P61), pokritost
+sedaj **135/135 strani × 2 neodvisna prehoda** (+ P57 polno branje str. 3–4).
+
+**Arbitraža novih strani (oči na 3× izrezih + 2-prehodno soglasje; VLM == oči
+100 % na vseh 7 straneh):**
+- p133 = **V** ('IV.V' @ r1 = korekcija IV→V, 'V' @ r2, 'IV' @ r8 prečrtan [~];
+  parcele 2601–2620),
+- p134 = **IV** @ r1 + korekcijski zapisi 'II.IV' @ r5/r15, 'III.IV' @ r17
+  (passi se razlikujeta le po presledkih); parcele 2621–2640,
+- p135 = **IV** @ r1, 'III' @ r2, 'II' @ r12 (padajoče); parcele 2641–2660,
+- p136 = **II** @ r1, ditto; parcele 2661–2680,
+- p137 = **II** @ r1 + korekcije 'I.II' @ r6, 'I' @ r8 (potrjuje P59 pass1);
+  parcele 2681–2700,
+- p138 = **None** [?] — tabela skoraj prazna, bledi zapisi neberljivi
+  ('T.191'? @ r14, '89'? @ r27),
+- p139 = **None** — glava 'Nro. des Hauses.' (hišne številke 41–60 + vsota 82,
+  NI numerele Blatt) → P58 open #6.
+
+**STRUKTURNI PRINOS:** konec registra (p133–137) nosi eksplicitne
+korekcijske cone IV→V/II (rdeči tuš) — prehodna cona analoška p40/p41/p42
+(I→II, 721–800); čez-Blatt base **106 → 110** (+4 iz strani 133–136), 211
+multi-page in **17 ruleCandidate NESPREMENJENI** (ruleCandidate razponi 161–1831
+izven strani 133–139) → P60 atribucije (II 12 · I 1 · III 4, 23 vrstic) bajtno
+nespremenjene. p138/139 nemata vrstic v v2 → I4 null_pages prazna.
+
+**Veriga re-run:** p59 skripta (v2: I1 polna pokritost 135/135 · UNREAD
+prazen · I4 brez null; `--check` bajtno PASS) → p60 (`--check` PASS, izhodi
+bajtno identični — sha256 nespremenjen) → p61 (I5 blattDist pin: moda B
+**II 32 · IV 15 · III 9 · I 5 · I·II 1 · null 0** — 5 null vrstic iz strani
+133–136 se razporedi IV +4 / II +1; I8 P59 runtime sha pin posodobljen; P60
+runtime pin nespremenjen; `--check` PASS; modi 226/62 in permutacijske kontrole
+nespremenjene — ne visijo na blatt).
+
+**QA:** pine posodobljeni (qa-p59: 211/110/17, arbitraža 32, polna pokritost
+135/135; qa-p61: blattDist II 32 · IV 15 · null 0) — testi ostajajo 65/65,
+vsebina preracunov NEODVISNO potrjena na runtime kopijah.
+
+**Artefakti:** 13 novih ps-raw branj `blatt-{133..139}{,-pass2}.json`;
+posodobljeni dokaz+runtime `ps-blatt-headers.json` (pageAttribution 137 strani,
+arbitraža 32), `ps-unit-semantics.json`; skripti `p59_ps_blatt_headers.py` (v2)
+in `p61_ps_unit_semantics.py` (pini); TS konstante (research.ts) + kartice
+(P59/P60/P61 metoda/opombe) + sources.ts N083PS (Si+En).
+
+**Poštenost:** p138 bledi zapisi ostajajo neberljivi [?] (naslednja faza: 6×
+izrez ali original scan); p139 → P58 open #6 (Haus Nro.); razlaga korekcijskih
+con IV→V/II (reorganizacija listov ali revisija) OSTAJA ODPRTA [~]; join v2 in
+SHEET_GEOREFS nespremanjeni (lekcija P9).

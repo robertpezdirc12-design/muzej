@@ -380,7 +380,7 @@ API (statični, brez runtime AI):
 
 - **unit-semantics moda B (P61, issue #13)** — odprta točka P60 #1
   ("kolonialna enota ali delna površina?") **MERJENO RAZREŠENA s
-  preusmeritvijo**: moda B (ratio ≈ 1, n=62, 42 strani, Blatt II 31 · IV 11 ·
+  preusmeritvijo**: moda B (ratio ≈ 1, n=62, 42 strani, Blatt II 32 · IV 15 ·
   III 9 · I 5; bloki 3/9) ni napaka ujeme in ni delna površina (samo 2 base z
   ≥2 B vrsticami) — je **dosledna drugačna registracijska konvencija**
   (številka ≈ sodobna meritev v m²); **permutacijska kontrola** na GURS
@@ -394,6 +394,21 @@ API (statični, brez runtime AI):
   preracun) (`/api/atlas/ps-unit-semantics`) +
   `scripts/p61_ps_unit_semantics.py` (I1–I9, `--check` bajtno);
   QA 64 → **65**; SHEET_GEOREFS in dokazi P40–P60 nespremenjeni.
+
+- **glave listov PS — polna pokritost (P62, issue #13)** — odprta točka
+  P59/P61 ("13 manjkajočih branj ob kvoti 429") **IZPOLNJENA**: kvota
+  premagana, vseh 13 VLM branj dopolnjenih (133–136, 138–139 × 2 prehoda +
+  p137 pass2) → pokritost **135/135 strani × 2 neodvisna prehoda**; arbitraža
+  oči == VLM 100 % na vseh 7 novih straneh (p133 = V s korekcijo 'IV.V',
+  p134 = IV + korekcije II.IV/III.IV, p135 = IV/III/II, p136/137 = II,
+  p138 neberljivo [?], p139 = 'Nro. des Hauses.' → P58 open #6); **konec
+  registra (p133–137) nosi eksplicitne korekcijske cone IV→V/II** (rdeči
+  tuš); čez-Blatt base **106 → 110**, 211 multi-page in **17 ruleCandidate
+  nespremenjeni** → P60 atribucije bajtno identične; moda B blattDist
+  **null 5 → IV +4 / II +1** (II 32 · IV 15); veriga re-run P59→P60→P61
+  (`--check` bajtno PASS vsi); QA pine posodobljeni (65/65);
+  dokaz+runtime `ps-blatt-headers.json` + `ps-unit-semantics.json`
+  posodobljeni; SHEET_GEOREFS in join v2 nespremanjeni.
 
 ## Varnost
 

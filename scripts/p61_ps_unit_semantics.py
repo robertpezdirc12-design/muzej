@@ -58,7 +58,7 @@ FNV_PIN = 1711381398  # FNV-1a-32("p61-perm-0-lat") — pin determinizma
 
 # ——— pini rezultatov (vzorci iz podatkov; skripta FAIL ob odmiku) ———
 PIN_MODI = {"A": 226, "B": 62, "X": 800, "noRatio": 5}
-PIN_BLATT_B = {"II": 31, "IV": 11, "III": 9, "I": 5, "I·II": 1, "null": 5}
+PIN_BLATT_B = {"II": 32, "IV": 15, "III": 9, "I": 5, "I·II": 1, "null": 0}  # P62: null 5 (strani 133–136) → IV +4, II +1
 PIN_BLOCKS = 3
 PIN_BLOCK_ROWS = 9
 PIN_MULTI_B_BASES = 2  # base z ≥2 moda B vrsticami (H3 neuporabna)
@@ -424,7 +424,7 @@ def main():
     # ————— I8: P59/P60 runtime nespremanjeni —————
     if p60rt_sha != "28465b3e28fef763f951dc8ea379b7e071bd9d5fa109ebb9a577e594236e386a":
         fail("I8 P60 runtime sha256 odmik (pini po P9 lekciji)")
-    if bhrt_sha != "537b8de19647d5042744545d7fa6986580663fd66f46e37e9bd22d194aa8b889":
+    if bhrt_sha != "ea950ce2f46d0eb685f152a90e6f83a800f21936a5a520ab5c34769a940ac12e":  # P62: polna pokritost 135/135
         fail("I8 P59 blatt-headers runtime sha256 odmik")
 
     # ————— I7: dokaz ⊇ runtime bajtno —————

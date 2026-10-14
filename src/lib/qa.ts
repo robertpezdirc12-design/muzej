@@ -3804,12 +3804,12 @@ const p45bErrors: string[] = [];
   // 1) TS pini
   if (p59.perBlattAmbiguity.basesOnMultiplePages_v2 !== 211)
     p59Errors.push("pini: base na več straneh ≠ 211");
-  if (p59.perBlattAmbiguity.basesOnMultipleBlatter !== 106)
-    p59Errors.push("pini: čez-Blatt base ≠ 106");
+  if (p59.perBlattAmbiguity.basesOnMultipleBlatter !== 110)
+    p59Errors.push("pini: čez-Blatt base ≠ 110");
   if (p59.perBlattAmbiguity.ruleCandidateBases.length !== 17)
     p59Errors.push("pini: ruleCandidate ≠ 17");
-  if (p59.arbitration.pagesArbitrated !== 25 || p59.arbitration.agreementPages !== 103)
-    p59Errors.push("pini: arbitraža ≠ 25 ali soglasje ≠ 103");
+  if (p59.arbitration.pagesArbitrated !== 32 || p59.arbitration.agreementPages !== 103)
+    p59Errors.push("pini: arbitraža ≠ 32 ali soglasje ≠ 103");
   if (p59.structure.coreBlattII.starts !== "801 (p43, oči)")
     p59Errors.push("pini: Blatt II začetek ≠ 801");
   // 2) datoteke + NEODVISEN preracun iz v2 runtime vrstic + runtime pageAttribution (dve obliki po P53/P57/P58)
@@ -3874,7 +3874,7 @@ const p45bErrors: string[] = [];
             if (inBand === 1) cand.push(b);
           }
         }
-        if (multiBlatt !== 106) p59Errors.push(`preracun: čez-Blatt base ${multiBlatt} ≠ 106`);
+        if (multiBlatt !== 110) p59Errors.push(`preracun: čez-Blatt base ${multiBlatt} ≠ 110`);
         if (cand.length !== 17) p59Errors.push(`preracun: ruleCandidate ${cand.length} ≠ 17`);
         const candSet = new Set(cand);
         for (const b of p59.perBlattAmbiguity.ruleCandidateBases)
@@ -3895,15 +3895,15 @@ const p45bErrors: string[] = [];
             pageAttribution: Record<string, { blatt: string | null }>;
             runtime: unknown;
           };
-          if (ev.arbitration.pagesArbitrated !== 25) p59Errors.push("dokaz: arbitraža ≠ 25");
+          if (ev.arbitration.pagesArbitrated !== 32) p59Errors.push("dokaz: arbitraža ≠ 32");
           if (JSON.stringify(ev.pageAttribution) !== JSON.stringify(rt59.pageAttribution))
             p59Errors.push("dokaz: pageAttribution ≠ runtime kopija");
           if (JSON.stringify(ev.runtime) !== JSON.stringify(rt59))
             p59Errors.push("dokaz: runtime ni bajtno podmnožica dokaza");
         }
         p59FileDetail = rawEv59 !== null
-          ? "repo: dokaz (pageAttribution 137 strani + arbitraža 25 + struktura) == runtime bajtno · preracun iz v2 vrstic: 211/106/17 + P57 navzkrižje 26× 'I'"
-          : "produkcija: research/ ni v deploymentu — preracun na runtime kopijah (pageAttribution × v2 vrstice: 211/106/17)";
+          ? "repo: dokaz (pageAttribution 137 strani + arbitraža 32 + struktura) == runtime bajtno · preracun iz v2 vrstic: 211/110/17 + P57 navzkrižje 26× 'I'"
+          : "produkcija: research/ ni v deploymentu — preracun na runtime kopijah (pageAttribution × v2 vrstice: 211/110/17)";
       } catch (e) {
         p59Errors.push(`ps-blatt-headers datoteke neuspešno: ${String(e).slice(0, 80)}`);
       }
@@ -3911,11 +3911,11 @@ const p45bErrors: string[] = [];
   }
   push(
     "qa-p59-blatt-headers",
-    "P59: GLAVE LISTOV REGISTRA PS (issue #13): stolpec 'Nro. des Blattes' prvič zanesljivo prebran — levi izrez 135 strani × 2 neodvisna VLM prehoda + 25 arbitraž agent-oči na 3× izrezih (hardcoded razlogi; stari P38 blatt stolpec potrjeno šumen — p12 ditto kot 20× 'I'); STRUKTURA: Blatt I = parcele 1–800 (str. 3–40; prehodna cona 721–800 s popravki I→II [~]), Blatt II se začne pri 801 (str. 43–92; p72 = Blatt III 1281–1302 vmes); PER-BLATT DVoumnost MERJENA: 211 base na več straneh → 106 čez ≥2 Blatta (P39: druga parcela), 17 ruleCandidate (edina instanca v pasu razmerij [0.8, 1.25]); join v2 NESPREMENJEN (meritve brez prerazporeditev); status REVIEW",
-    "P59: PS REGISTER LEAF HEADERS (issue #13): the 'Nro. des Blattes' column read reliably for the first time — left-strip crops of 135 pages × 2 independent VLM passes + 25 agent-eye arbitrations on 3× crops (hardcoded reasons; the old P38 blatt column confirmed noisy — p12 ditto as 20× 'I'); STRUCTURE: Blatt I = parcels 1–800 (pp. 3–40; transition zone 721–800 with I→II corrections [~]), Blatt II starts at 801 (pp. 43–92; p72 = Blatt III 1281–1302 in between); PER-BLATT AMBIGUITY MEASURED: 211 bases on multiple pages → 106 spanning ≥2 Blaetter (P39: a different parcel), 17 ruleCandidates (exactly one instance within the ratio band [0.8, 1.25]); the v2 join UNCHANGED (measurements without reassignments); status REVIEW",
+    "P59: GLAVE LISTOV REGISTRA PS (issue #13): stolpec 'Nro. des Blattes' prvič zanesljivo prebrano v POLNI pokritosti — levi izrez 135/135 strani × 2 neodvisna VLM prehoda + 32 arbitraž agent-oči na 3× izrezih (hardcoded razlogi; stari P38 blatt stolpec potrjeno šumen — p12 ditto kot 20× 'I'; P62: 133–136, 138–139 + p137 pass2 dopolnjeno po premagani kvoti 429); STRUKTURA: Blatt I = parcele 1–800 (str. 3–40; prehodna cona 721–800 s popravki I→II [~]), Blatt II se začne pri 801 (str. 43–92; p72 = Blatt III 1281–1302 vmes); konec registra (p133–137) nosi eksplicitne korekcijske cone IV→V/II (rdeči tuš); PER-BLATT DVoumnost MERJENA: 211 base na več straneh → 110 čez ≥2 Blatta (P39: druga parcela), 17 ruleCandidate (edina instanca v pasu razmerij [0.8, 1.25]); join v2 NESPREMENJEN (meritve brez prerazporeditev); status REVIEW",
+    "P59: PS REGISTER LEAF HEADERS (issue #13): the 'Nro. des Blattes' column read reliably in FULL coverage — left-strip crops of 135/135 pages × 2 independent VLM passes + 32 agent-eye arbitrations on 3× crops (hardcoded reasons; the old P38 blatt column confirmed noisy — p12 ditto as 20× 'I'; P62: 133–136, 138–139 + p137 pass2 completed after the 429 quota cleared); STRUCTURE: Blatt I = parcels 1–800 (pp. 3–40; transition zone 721–800 with I→II corrections [~]), Blatt II starts at 801 (pp. 43–92; p72 = Blatt III 1281–1302 in between); register end (p133–137) carries explicit IV→V/II correction zones (red ink); PER-BLATT AMBIGUITY MEASURED: 211 bases on multiple pages → 110 spanning ≥2 Blaetter (P39: a different parcel), 17 ruleCandidates (exactly one instance within the ratio band [0.8, 1.25]); the v2 join UNCHANGED (measurements without reassignments); status REVIEW",
     p59Errors.length === 0,
     p59Errors.length === 0
-      ? `pini 211/106/17 · arbitraža 25 (soglasje 103) · Blatt I 1–800 (3–40) · Blatt II @ 801 (43–92, p72 III) · preracun iz v2 vrstic × pageAttribution == pini · P57 navzkrižje 40× 'I' · ${p59FileDetail}`
+      ? `pini 211/110/17 · arbitraža 32 (soglasje 103) · Blatt I 1–800 (3–40) · Blatt II @ 801 (43–92, p72 III) · polna pokritost 135/135 (P62) · preracun iz v2 vrstic × pageAttribution == pini · P57 navzkrižje 40× 'I' · ${p59FileDetail}`
       : p59Errors.join("; "),
   );
 
@@ -4057,8 +4057,8 @@ const p45bErrors: string[] = [];
     p61Errors.push("pini: moda A hits ≠ 209/37/220/118");
   if (us61.kontrola.B.real50.hit !== 18 || us61.kontrola.B.perm50.hit !== 11 || us61.kontrola.B.real100.hit !== 45 || us61.kontrola.B.perm100.hit !== 38)
     p61Errors.push("pini: moda B hits ≠ 18/11/45/38");
-  if (us61.summary.modaBBlattDist.II !== 31 || us61.summary.modaBBlattDist.IV !== 11 || us61.summary.modaBBlattDist.III !== 9 || us61.summary.modaBBlattDist.I !== 5 || us61.summary.modaBBlattDist["I·II"] !== 1 || us61.summary.modaBBlattDist.null !== 5)
-    p61Errors.push("pini: blattDist ≠ II 31 · IV 11 · III 9 · I 5 · I·II 1 · null 5");
+  if (us61.summary.modaBBlattDist.II !== 32 || us61.summary.modaBBlattDist.IV !== 15 || us61.summary.modaBBlattDist.III !== 9 || us61.summary.modaBBlattDist.I !== 5 || us61.summary.modaBBlattDist["I·II"] !== 1 || us61.summary.modaBBlattDist.null !== 0)
+    p61Errors.push("pini: blattDist ≠ II 32 · IV 15 · III 9 · I 5 · I·II 1 · null 0 (P62: null 5 → IV +4, II +1)");
   if (us61.summary.blocks.length !== 3 || us61.summary.blocks.reduce((s, b) => s + b.n, 0) !== 9)
     p61Errors.push("pini: bloki ≠ 3/9");
   if (us61.summary.multiB.length !== 2)
@@ -4171,8 +4171,8 @@ const p45bErrors: string[] = [];
             const bl = rt59.pageAttribution[String(r.page)]?.blatt ?? null;
             bd[bl ?? "null"]++;
           }
-          if (bd.II !== 31 || bd.IV !== 11 || bd.III !== 9 || bd.I !== 5 || bd["I·II"] !== 1 || bd.null !== 5)
-            p61Errors.push(`preracun: blattDist ${JSON.stringify(bd)} ≠ II 31 · IV 11 · III 9 · I 5 · I·II 1 · null 5`);
+          if (bd.II !== 32 || bd.IV !== 15 || bd.III !== 9 || bd.I !== 5 || bd["I·II"] !== 1 || bd.null !== 0)
+            p61Errors.push(`preracun: blattDist ${JSON.stringify(bd)} ≠ II 32 · IV 15 · III 9 · I 5 · I·II 1 · null 0`);
         }
         // evidencа (samo repo): dokaz ⊇ runtime bajtno
         if (rawEv61 !== null) {
@@ -4181,7 +4181,7 @@ const p45bErrors: string[] = [];
             p61Errors.push("dokaz: runtime ni bajtno podmnožica dokaza");
         }
         p61FileDetail = rawEv61 !== null
-          ? "repo: dokaz == runtime bajtno · preracun: modi 226/62/800/5 iz v2 vrstic · FNV-1a kontrola 209/37/220/118 + 18/11/45/38 == pini · blattDist II 31 · IV 11 · III 9 · I 5"
+          ? "repo: dokaz == runtime bajtno · preracun: modi 226/62/800/5 iz v2 vrstic · FNV-1a kontrola 209/37/220/118 + 18/11/45/38 == pini · blattDist II 32 · IV 15 · III 9 · I 5"
           : "produkcija: research/ ni v deploymentu — preracun na runtime kopijah (v2 vrstice × gursCompact: modi 226/62 + kontrola 209/18 @50)";
       } catch (e) {
         p61Errors.push(`ps-unit-semantics datoteke neuspešno: ${String(e).slice(0, 80)}`);
@@ -4190,11 +4190,11 @@ const p45bErrors: string[] = [];
   }
   push(
     "qa-p61-unit-semantics",
-    "P61: UNIT-SEMANTICS moda B (issue #13): odprta točka P60 #1 merjeno razrešena s preusmeritvijo — moda B (ratio ≈ 1, n=62, 42 strani, Blatt II 31 · IV 11 · III 9 · I 5) ni napaka ujeme in ni delna površina (samo 2 base z ≥2 B vrsticami: 163, 176) — je dosledna drugačna registracijska konvencija (številka ≈ m²); PERMUTACIJSKA KONTROLA (FNV-1a deterministične točke, GURS 2117 parcel KO 1544, radija 50/100 m, pas ±25 %): moda A real @50 0.9248 vs perm 0.1637 (ujeta = prava parcela), moda B real @50 0.2903 vs perm 0.1774 → prava parcela (QK×3.6) ni tik zraven → H1 napačni join ZAVRŽEN; bloki 3/9 (p85 'Wiese und Gfrett' 653–657, p86, p117); identiteta enote ODPRTA [~]; pas pravilo P59/P60 = moda B — atribucija relativa smiselna; join v2 NESPREMENJEN; status REVIEW",
-    "P61: UNIT-SEMANTICS mode B (issue #13): P60 open point #1 measured and re-framed — mode B (ratio ≈ 1, n=62, 42 pages, Blatt II 31 · IV 11 · III 9 · I 5) is neither a join error nor a partial surface (only 2 bases with ≥2 B rows: 163, 176) — it is a consistent alternative registration convention (number ≈ m2); PERMUTATION CONTROL (FNV-1a deterministic points, 2117 GURS parcels KO 1544, 50/100 m, ±25 %): mode A real @50 0.9248 vs perm 0.1637 (the join = the true parcel), mode B real @50 0.2903 vs perm 0.1774 → the true parcel (QK×3.6) is not next door → H1 wrong join REJECTED; blocks 3/9 (p85 'Wiese und Gfrett' 653-657, p86, p117); unit identity OPEN [~]; the P59/P60 band rule = mode B — relative attribution sound; join v2 UNCHANGED; status REVIEW",
+    "P61: UNIT-SEMANTICS moda B (issue #13): odprta točka P60 #1 merjeno razrešena s preusmeritvijo — moda B (ratio ≈ 1, n=62, 42 strani, Blatt II 32 · IV 15 · III 9 · I 5; P62: null 5 → IV +4, II +1 po polni pokritosti) ni napaka ujeme in ni delna površina (samo 2 base z ≥2 B vrsticami: 163, 176) — je dosledna drugačna registracijska konvencija (številka ≈ m²); PERMUTACIJSKA KONTROLA (FNV-1a deterministične točke, GURS 2117 parcel KO 1544, radija 50/100 m, pas ±25 %): moda A real @50 0.9248 vs perm 0.1637 (ujeta = prava parcela), moda B real @50 0.2903 vs perm 0.1774 → prava parcela (QK×3.6) ni tik zraven → H1 napačni join ZAVRŽEN; bloki 3/9 (p85 'Wiese und Gfrett' 653–657, p86, p117); identiteta enote ODPRTA [~]; pas pravilo P59/P60 = moda B — atribucija relativa smiselna; join v2 NESPREMENJEN; status REVIEW",
+    "P61: UNIT-SEMANTICS mode B (issue #13): P60 open point #1 measured and re-framed — mode B (ratio ≈ 1, n=62, 42 pages, Blatt II 32 · IV 15 · III 9 · I 5; P62: null 5 → IV +4, II +1 after full coverage) is neither a join error nor a partial surface (only 2 bases with ≥2 B rows: 163, 176) — it is a consistent alternative registration convention (number ≈ m2); PERMUTATION CONTROL (FNV-1a deterministic points, 2117 GURS parcels KO 1544, 50/100 m, ±25 %): mode A real @50 0.9248 vs perm 0.1637 (the join = the true parcel), mode B real @50 0.2903 vs perm 0.1774 → the true parcel (QK×3.6) is not next door → H1 wrong join REJECTED; blocks 3/9 (p85 'Wiese und Gfrett' 653-657, p86, p117); unit identity OPEN [~]; the P59/P60 band rule = mode B — relative attribution sound; join v2 UNCHANGED; status REVIEW",
     p61Errors.length === 0,
     p61Errors.length === 0
-      ? `pini modi 226/62/800/5 · hits A 209/37/220/118 · B 18/11/45/38 == preracun (v2 × gursCompact FNV) · blattDist II 31 · IV 11 · III 9 · I 5 · bloki 3/9 · multiB 2 · hipoteze ZAVRŽEN/NEUPORABNA/OSTAJA · ${p61FileDetail}`
+      ? `pini modi 226/62/800/5 · hits A 209/37/220/118 · B 18/11/45/38 == preracun (v2 × gursCompact FNV) · blattDist II 32 · IV 15 · III 9 · I 5 · bloki 3/9 · multiB 2 · hipoteze ZAVRŽEN/NEUPORABNA/OSTAJA · ${p61FileDetail}`
       : p61Errors.join("; "),
   );
 

@@ -1,0 +1,120 @@
+{
+ "page": 137,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791994312,
+ "usage": {
+  "completion_tokens": 576,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 2
+  },
+  "total_tokens": 3972
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "2681"
+   },
+   {
+    "row": 2,
+    "parzella": "2682"
+   },
+   {
+    "row": 3,
+    "parzella": "2692"
+   },
+   {
+    "row": 4,
+    "parzella": "2684"
+   },
+   {
+    "row": 5,
+    "parzella": "2683"
+   },
+   {
+    "row": 6,
+    "parzella": "2686"
+   },
+   {
+    "row": 7,
+    "parzella": "2687"
+   },
+   {
+    "row": 8,
+    "parzella": "2689"
+   },
+   {
+    "row": 9,
+    "parzella": "2699"
+   },
+   {
+    "row": 10,
+    "parzella": "2690"
+   },
+   {
+    "row": 11,
+    "parzella": "2691"
+   },
+   {
+    "row": 12,
+    "parzella": "2693"
+   },
+   {
+    "row": 13,
+    "parzella": "2690"
+   },
+   {
+    "row": 14,
+    "parzella": "2694"
+   },
+   {
+    "row": 15,
+    "parzella": "2695"
+   },
+   {
+    "row": 16,
+    "parzella": "2696"
+   },
+   {
+    "row": 17,
+    "parzella": "2697"
+   },
+   {
+    "row": 18,
+    "parzella": "2698"
+   },
+   {
+    "row": 19,
+    "parzella": "2699"
+   },
+   {
+    "row": 20,
+    "parzella": "2700"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "II",
+    "row": 1,
+    "atParzella": "2681"
+   },
+   {
+    "value": "I.II",
+    "row": 6,
+    "atParzella": "2686"
+   },
+   {
+    "value": "I",
+    "row": 8,
+    "atParzella": "2689"
+   }
+  ],
+  "opomba": "Številke parcel so v območju 2681–2700. V stolpcu 'Nro. des Blattes' so izpisane rimske številke II (vrstica 1), I.II (vrstica 6) in I (vrstica 8). Nekatere vrstice imajo rdeče prečrtane vrednosti (npr. 2681, 2692, 2684, 2689, 2693, 2699, 2700), kar kaže na popravke ali brisanje."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"2681\"},\n    {\"row\": 2, \"parzella\": \"2682\"},\n    {\"row\": 3, \"parzella\": \"2692\"},\n    {\"row\": 4, \"parzella\": \"2684\"},\n    {\"row\": 5, \"parzella\": \"2683\"},\n    {\"row\": 6, \"parzella\": \"2686\"},\n    {\"row\": 7, \"parzella\": \"2687\"},\n    {\"row\": 8, \"parzella\": \"2689\"},\n    {\"row\": 9, \"parzella\": \"2699\"},\n    {\"row\": 10, \"parzella\": \"2690\"},\n    {\"row\": 11, \"parzella\": \"2691\"},\n    {\"row\": 12, \"parzella\": \"2693\"},\n    {\"row\": 13, \"parzella\": \"2690\"},\n    {\"row\": 14, \"parzella\": \"2694\"},\n    {\"row\": 15, \"parzella\": \"2695\"},\n    {\"row\": 16, \"parzella\": \"2696\"},\n    {\"row\": 17, \"parzella\": \"2697\"},\n    {\"row\": 18, \"parzella\": \"2698\"},\n    {\"row\": 19, \"parzella\": \"2699\"},\n    {\"row\": 20, \"parzella\": \"2700\"}\n  ],\n  \"blatt\": [\n    {\"value\": \"II\", \"row\": 1, \"atParzella\": \"2681\"},\n    {\"value\": \"I.II\", \"row\": 6, \"atParzella\": \"2686\"},\n    {\"value\": \"I\", \"row\": 8, \"atParzella\": \"2689\"}\n  ],\n  \"opomba\": \"Številke parcel so v območju 2681–2700. V stolpcu 'Nro. des Blattes' so izpisane rimske številke II (vrstica 1), I.II (vrstica 6) in I (vrstica 8). Nekatere vrstice imajo rdeče prečrtane vrednosti (npr. 2681, 2692, 2684, 2689, 2693, 2699, 2700), kar kaže na popravke ali brisanje.\"\n}"
+}

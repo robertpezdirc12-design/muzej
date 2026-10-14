@@ -4023,7 +4023,7 @@ export const BLATT_HEADERS_P59: {
   source: string;
   status: ResearchStatus;
   generatedBy: string;
-  coverage: { S1: string; S2: string; S3: string; pages34: string };
+  coverage: { S1: string; S2: string; S3: string; pages34: string; polna?: string };
   arbitration: { rule: string; pagesArbitrated: number; agreementPages: number; singlePassPages: number[] };
   structure: {
     coreBlattI: { pages: string; parcels: string; transitionZone: string };
@@ -4050,15 +4050,16 @@ export const BLATT_HEADERS_P59: {
   generatedBy: "scripts/p59_ps_blatt_headers.py (deterministično, brez AI ob delovanju; branja scripts/p59_ps_read_blatt.mjs + p59_fetch_strip.py)",
   coverage: {
     S1: "strani 5–127: 123/123 × 2 prehoda",
-    S2: "strani 128–132 + 137 branja (137 samo pass1); 133–136 ni svežega branja — VLM kvota 429 (odprto)",
-    S3: "strani 138–139 ni svežega branja (kvota); P38: ps-138 brez stolpca (nastop zapadka), ps-139 'III' ×1 [~]",
+    S2: "strani 128–137: 10/10 × 2 prehoda",
+    S3: "strani 138–139: 2/2 × 2 prehoda (138 bledi zapisi neberljivi [?]; 139 = 'Nro. des Hauses.' hišne 41–60, ni Blatt)",
     pages34: "P57 polno branje (Blatt I)",
+    polna: "135/135 strani × 2 prehoda — pokritost POPOLNA (P62: 133–136, 138–139, p137 pass2 dopolnjena po premagani kvoti 429)",
   },
   arbitration: {
-    rule: "numerala @ vrstica 1 = atribucija strani; nesoglasja prehodov razsodil agent vizualno na 3× izrezih (25 strani, hardcoded razlogi); sred-stranske numeralе = extras [~]",
-    pagesArbitrated: 25,
+    rule: "numerala @ vrstica 1 = atribucija strani; nesoglasja prehodov razsodil agent vizualno na 3× izrezih (32 strani, hardcoded razlogi); sred-stranske numeralе = extras [~]",
+    pagesArbitrated: 32,
     agreementPages: 103,
-    singlePassPages: [137],
+    singlePassPages: [],
   },
   structure: {
     coreBlattI: {
@@ -4077,21 +4078,21 @@ export const BLATT_HEADERS_P59: {
   },
   perBlattAmbiguity: {
     basesOnMultiplePages_v2: 211,
-    basesOnMultipleBlatter: 106,
+    basesOnMultipleBlatter: 110,
     ruleCandidateBases: ["163", "176", "644", "653", "654", "655", "656", "657", "666", "671", "676", "928", "930", "934", "936", "939", "1831"],
     ruleCandidateNote:
       "baza s TOČNO eno instanco z median razmerjem v [0.8, 1.25] — kandidat za prihodnjo per-Blatt atribucijo joina (P60), MERJENO ne izvedeno [~]",
     verdictSi:
-      "per-Blatt ločitev MERJENA: od 211 bazi na več straneh jih 106 sega čez ≥2 Blatta (P39: ista številka pod različnima Blattoma = druga parcela) — instance zdaj razločljive; join po številki ostaja nespremenjen (brez dokaza se NE prerazporeja)",
+      "per-Blatt ločitev MERJENA: od 211 bazi na več straneh jih 110 sega čez ≥2 Blatta (P62: +4 iz strani 133–136) (P39: ista številka pod različnima Blattoma = druga parcela) — instance zdaj razločljive; join po številki ostaja nespremenjen (brez dokaza se NE prerazporeja)",
   },
   statusLine:
-    "P59 GLAVE LISTOV: 129/135 strani sveže branih (2 prehoda; 133–136, 138–139 kvota, p137 pass2), 25 arbitraža-oči, struktura Blatt I–V + lokalne sekcije; 211 dvoumnih base → 106 čez-Blatt, 17 ruleCandidate [~]; join v2 nespremenjen",
+    "P59 GLAVE LISTOV: 135/135 strani sveže branih (2 prehoda; polna pokritost — P62 dopolnilo po premagani kvoti 429), 32 arbitraža-oči, struktura Blatt I–V + lokalne sekcije; 211 dvoumnih base → 110 čez-Blatt, 17 ruleCandidate [~]; join v2 nespremenjen",
   verdictSi:
-    "P59: GLAVE LISTOV REGISTRA PS (issue #13) — prvo zanesljivo branje stolpca 'Nro. des Blattes' (levi izrez 135 strani × 2 neodvisna prehoda + 25 arbitraž agent-oči na 3× izrezih; stari P38 blatt stolpec potrjeno šumen — p12 ditto prebrano kot 20× 'I'): Blatt I = parcele 1–800 (strani 3–40; prehodna cona 721–800 s popravki I→II na p40/p41/p42 [~]), Blatt II se začne pri 801 (strani 43–92; p72 = Blatt III 1281–1302 vmes; cona 1100–1640 prepletena z lokalnimi sekcijami 161–180/601–620/921–960 [~]); interleave per-Riede sekcij sredi globalnega teka (p26/p37/p39/...), p101 z ulomki (196½ — podštevilčene parcele); sred-stranski prehodi p93 (1901–1907 prečrtano → 1303+)/p101/p65; VLM Kurrent pasti dokumentirane (4↔8, 7→1, odrezane vodilne števke — parzella razponi nizka zaupanja, numeralе visoka); PER-BLATT DVoumnost: 211 base v2 na več straneh → 106 čez ≥2 Blatta (instance zdaj razločljive po P39), 17 ruleCandidate (edina instanca v pasu razmerij [0.8, 1.25] — npr. 163: Blatt I @ 7.0 vs Blatt II @ 0.981); join v2 NESPREMENJEN (meritve brez prerazporeditev — disciplina P56/P58); pokritost: S1 123/123 × 2, S2 6/10, S3 0/2 (kvota 429 — odprto); identifikacija per-Blatt instanc [~] — strojno branje ni dokazni vir",
+    "P59: GLAVE LISTOV REGISTRA PS (issue #13) — prvo zanesljivo branje stolpca 'Nro. des Blattes' (levi izrez 135/135 strani × 2 neodvisna prehoda + 32 arbitraž agent-oči na 3× izrezih; stari P38 blatt stolpec potrjeno šumen — p12 ditto prebrano kot 20× 'I'): Blatt I = parcele 1–800 (strani 3–40; prehodna cona 721–800 s popravki I→II na p40/p41/p42 [~]), Blatt II se začne pri 801 (strani 43–92; p72 = Blatt III 1281–1302 vmes; cona 1100–1640 prepletena z lokalnimi sekcijami 161–180/601–620/921–960 [~]); interleave per-Riede sekcij sredi globalnega teka (p26/p37/p39/...), p101 z ulomki (196½ — podštevilčene parcele); sred-stranski prehodi p93 (1901–1907 prečrtano → 1303+)/p101/p65; VLM Kurrent pasti dokumentirane (4↔8, 7→1, odrezane vodilne števke — parzella razponi nizka zaupanja, numeralе visoka); PER-BLATT DVoumnost: 211 base v2 na več straneh → 110 čez ≥2 Blatta (instance zdaj razločljive po P39), 17 ruleCandidate (edina instanca v pasu razmerij [0.8, 1.25] — npr. 163: Blatt I @ 7.0 vs Blatt II @ 0.981); konec registra (p133–137) nosi eksplicitne korekcijske cone IV→V/II (rdeči tuš, oči + 2-prehodno soglasje); join v2 NESPREMENJEN (meritve brez prerazporeditev — disciplina P56/P58); pokritost: POLNA 135/135 × 2 (P62: 133–136, 138–139, p137 pass2 dopolnjena); identifikacija per-Blatt instanc [~] — strojno branje ni dokazni vir",
   verdictEn:
-    "P59: PS REGISTER LEAF HEADERS (issue #13) — first reliable reading of the 'Nro. des Blattes' column (left-strip crops of 135 pages x 2 independent passes + 25 agent-eye arbitrations on 3x crops; the old P38 blatt column confirmed noisy — p12 ditto read as 20x 'I'): Blatt I = parcels 1-800 (pp. 3-40; transition zone 721-800 with I-to-II corrections on p40/p41/p42 [~]), Blatt II starts at 801 (pp. 43-92; p72 = Blatt III 1281-1302 in between; the 1100-1640 zone interleaved with local sections 161-180/601-620/921-960 [~]); per-Riede section interleave within the global run (p26/p37/p39/...), p101 with fractions (196 1/2 — sub-numbered parcels); mid-page transitions p93 (1901-1907 crossed out to 1303+)/p101/p65; VLM Kurrent pitfalls documented (4-8, 7-to-1, dropped leading digits — parzella ranges low-confidence, numerals high); PER-BLATT AMBIGUITY: of 211 v2 bases on multiple pages, 106 span >=2 Blaetter (instances now distinguishable per P39), 17 ruleCandidates (exactly one instance within the ratio band [0.8, 1.25] — e.g. 163: Blatt I @ 7.0 vs Blatt II @ 0.981); the v2 join UNCHANGED (measurements without reassignments — P56/P58 discipline); coverage: S1 123/123 x 2, S2 6/10, S3 0/2 (quota 429 — open); per-Blatt instance identification [~] — machine reading is not an evidentiary source",
+    "P59: PS REGISTER LEAF HEADERS (issue #13) — first reliable reading of the 'Nro. des Blattes' column (left-strip crops of 135/135 pages x 2 independent passes + 32 agent-eye arbitrations on 3x crops; the old P38 blatt column confirmed noisy — p12 ditto read as 20x 'I'): Blatt I = parcels 1-800 (pp. 3-40; transition zone 721-800 with I-to-II corrections on p40/p41/p42 [~]), Blatt II starts at 801 (pp. 43-92; p72 = Blatt III 1281-1302 in between; the 1100-1640 zone interleaved with local sections 161-180/601-620/921-960 [~]); per-Riede section interleave within the global run (p26/p37/p39/...), p101 with fractions (196 1/2 — sub-numbered parcels); mid-page transitions p93 (1901-1907 crossed out to 1303+)/p101/p65; VLM Kurrent pitfalls documented (4-8, 7-to-1, dropped leading digits — parzella ranges low-confidence, numerals high); PER-BLATT AMBIGUITY: of 211 v2 bases on multiple pages, 110 span >=2 Blaetter (instances now distinguishable per P39), 17 ruleCandidates (exactly one instance within the ratio band [0.8, 1.25] — e.g. 163: Blatt I @ 7.0 vs Blatt II @ 0.981); register end (p133–137) carries explicit IV→V/II correction zones (red ink, agent eyes + 2-pass agreement); the v2 join UNCHANGED (measurements without reassignments — P56/P58 discipline); coverage: FULL 135/135 x 2 (P62: 133–136, 138–139, p137 pass2 completed); per-Blatt instance identification [~] — machine reading is not an evidentiary source",
   next: [
-    "prebrati 133–136 (S2) + 138–139 (S3) ob ponovitvi VLM kvote + p137 pass2 — popolna pokritost",
+    "P62 IZVEDENO: 133–136, 138–139 + p137 pass2 prebrani — polna pokritost 135/135 (kvota 429 premagana)",
     "P60 kandidat: per-Blatt atribucija joina za ruleCandidate baze (dokazno pravilo: edina instanca v pasu [0.8, 1.25] + soslednost) — zahteva lastno fazo s pini",
     "razlagati prehodno cono 721–800 (popravki I→II): reorganizacija listov ali Kultur skupine [~]",
     "p26/p37/p39 lokalne sekcije (161–180/101–120 pod Blatt I): povezati z Riede stolpcem polnih branj",
@@ -4192,7 +4193,7 @@ export const PERBLATT_ATTR_P60: {
     "P60: PER-BLATT ATTRIBUTION OF RULECANDIDATES (issue #13) — the P59 band rule [0.8, 1.25] EXECUTED as a measured attribution: each of the 17 bases gets its in-band instance (II 12 · I 1 · III 4; 23 rows; e.g. 163: Blatt II @ 0.9813 — 4 cultures Wiese/Prunigad/Weide/Aehn on pp. 61/83/84/86 — vs Blatt I @ 7.0 @ p11); adjacency control 21/23 (671@p36 and 934@p99 [~] — crossed-out rows in the register); STRUCTURAL GAIN: the attribute pages (36, 49, 61, 83-87, 94, 99) carry 100% multi-page bases — confirming the Kultur-Tabellen interpretation (re-listing of parcels by culture; p85 = 'Wiese und Gfrett' family for 644-657, p99 = 'Wiesen' section for 928-939); UNIT-SEMANTICS NOTE: the band matches mode B (ratio ~ 1, n=62), not mode A (~ 3.59665 = 1 QK to m2, n=226) — a factor of ~3.6 between modes, absolute correspondence OPEN, attribution = relative [~]; the v2 join UNCHANGED (outputs contain no positions/areas, the v2 input sha256 pinned — P56/P58/P59 discipline)",
   next: [
     "razrešiti unit-semantics mode B (ratio ≈ 1): kolonialna merska enota ali delna površina [~]",
-    "razširiti atribucijo na vseh 106 čez-Blatt base (potrebno P59 pokritost 133–136 + 138–139 dokončati)",
+    "razširiti atribucijo na vseh 110 čez-Blatt base (P59 pokritost POPOLNA — P62)",
     "razlaga strani 61/83–87/99 kot Kultur-Tabellen: navzkrižje s Kultur stolpcem polnih branj P38",
     "per-Blatt SPLIT joina za atributirane base (zahteva pini + odločitev lastnika o pozicijah)",
     "povezati lastnike pas-instanc (npr. 163 II: Schimey Martho/Stainzldt Wölfl/Schumitsch Matja/Laune Hülfse) s PF protokolom",
@@ -4257,7 +4258,7 @@ export const UNIT_SEM_P61: {
   summary: {
     modi: { A: 226, B: 62, X: 800, noRatio: 5 },
     modaBPages: 42,
-    modaBBlattDist: { II: 31, IV: 11, III: 9, I: 5, "I·II": 1, null: 5 },
+    modaBBlattDist: { II: 32, IV: 15, III: 9, I: 5, "I·II": 1, null: 0 },
     blocks: [
       { pages: [85], n: 5, kultur: "Wiese und Gfrett" },
       { pages: [86], n: 2, kultur: "Wies" },
@@ -4308,14 +4309,14 @@ export const UNIT_SEM_P61: {
       "pas izbere vrstico v konvenciji, številčno primerljivi s sodobno meritvijo — atribucija smiselna kot RELATIVA [~]; atribucije P60 NESPREMENJENE",
   },
   statusLine:
-    "P61 UNIT-SEMANTICS MERJENA: moda B (ratio ≈ 1, n=62) = drugačna registracijska konvencija [~], ne napaka ujeme — permutacijska kontrola @ 50/100 m pas ±25 %: moda A real 0.9248/0.9735 vs perm 0.1637/0.5221 (ujeta = prava parcela), moda B real 0.2903/0.7258 vs perm 0.1774/0.6129 → prava parcela (QK×3.6) ni v bližini → H1 napačni join ZAVRŽEN; delna površina neuporabna (2 base z ≥2 B); blattDist II 31 · IV 11 · III 9 · I 5; bloki 3/9; identiteta enote ODPRTA; pas pravilo P59/P60 = moda B — atribucija smiselna kot relativa",
+    "P61 UNIT-SEMANTICS MERJENA: moda B (ratio ≈ 1, n=62) = drugačna registracijska konvencija [~], ne napaka ujeme — permutacijska kontrola @ 50/100 m pas ±25 %: moda A real 0.9248/0.9735 vs perm 0.1637/0.5221 (ujeta = prava parcela), moda B real 0.2903/0.7258 vs perm 0.1774/0.6129 → prava parcela (QK×3.6) ni v bližini → H1 napačni join ZAVRŽEN; delna površina neuporabna (2 base z ≥2 B); blattDist II 32 · IV 15 · III 9 · I 5 (P62: null 5 → IV +4, II +1); bloki 3/9; identiteta enote ODPRTA; pas pravilo P59/P60 = moda B — atribucija smiselna kot relativa",
   verdictSi:
-    "P61 merjeno razrešuje odprto točko P60 #1 s preusmeritvijo: moda B ni napaka ujeme in ni delna površina — je dosledna drugačna registracijska konvencija površin (številka ≈ sodobna meritev v m²; n=62 vrstic, 42 strani, Blatt II 31 · IV 11 · III 9 · I 5). Permutacijska kontrola (FNV-1a deterministične točke, radija 50/100 m, pas ±25 %): pri moda A je prava parcela (površina ≈ QK×3.6) tik zraven (0.9248 @ 50 m vs 0.1637 naključno), pri moda B pa ni (0.2903 vs 0.1774) → napačni številčni join ZAVRŽEN kot glavni mehanizem. Delna površina neuporabna: samo 2 base z ≥2 moda B vrsticami. Identiteta enote ostaja ODPRTA [~] — paleografska/dokumentarna potrditev. Implikacija za P60: pas pravilo [0.8, 1.25] izbere vrstico v konvenciji, ki je številčno primerljiva s sodobno meritvijo — atribucija ostaja smiselna kot RELATIVA [~]; join v2 NESPREMENJEN",
+    "P61 merjeno razrešuje odprto točko P60 #1 s preusmeritvijo: moda B ni napaka ujeme in ni delna površina — je dosledna drugačna registracijska konvencija površin (številka ≈ sodobna meritev v m²; n=62 vrstic, 42 strani, Blatt II 32 · IV 15 · III 9 · I 5). Permutacijska kontrola (FNV-1a deterministične točke, radija 50/100 m, pas ±25 %): pri moda A je prava parcela (površina ≈ QK×3.6) tik zraven (0.9248 @ 50 m vs 0.1637 naključno), pri moda B pa ni (0.2903 vs 0.1774) → napačni številčni join ZAVRŽEN kot glavni mehanizem. Delna površina neuporabna: samo 2 base z ≥2 moda B vrsticami. Identiteta enote ostaja ODPRTA [~] — paleografska/dokumentarna potrditev. Implikacija za P60: pas pravilo [0.8, 1.25] izbere vrstico v konvenciji, ki je številčno primerljiva s sodobno meritvijo — atribucija ostaja smiselna kot RELATIVA [~]; join v2 NESPREMENJEN",
   verdictEn:
-    "P61 measures and re-frames P60 open point #1: mode B is not a join error and not a partial surface — it is a consistent alternative registration convention (number ≈ modern m2; n=62 rows, 42 pages, Blatt II 31 · IV 11 · III 9 · I 5). Permutation control (FNV-1a deterministic points, 50/100 m, ±25 %): for mode A the true parcel (≈ QK×3.6) sits next door (0.9248 @ 50 m vs 0.1637 random), for mode B it does not (0.2903 vs 0.1774) → wrong-number join REJECTED as the main mechanism. Partial surface unusable: only 2 bases with ≥2 mode B rows. Unit identity remains OPEN [~] — paleographic/documentary confirmation. Implication for P60: the [0.8, 1.25] band selects rows in the convention numerically comparable with the modern measurement — attribution remains sound as RELATIVE [~]; join v2 UNCHANGED",
+    "P61 measures and re-frames P60 open point #1: mode B is not a join error and not a partial surface — it is a consistent alternative registration convention (number ≈ modern m2; n=62 rows, 42 pages, Blatt II 32 · IV 15 · III 9 · I 5). Permutation control (FNV-1a deterministic points, 50/100 m, ±25 %): for mode A the true parcel (≈ QK×3.6) sits next door (0.9248 @ 50 m vs 0.1637 random), for mode B it does not (0.2903 vs 0.1774) → wrong-number join REJECTED as the main mechanism. Partial surface unusable: only 2 bases with ≥2 mode B rows. Unit identity remains OPEN [~] — paleographic/documentary confirmation. Implication for P60: the [0.8, 1.25] band selects rows in the convention numerically comparable with the modern measurement — attribution remains sound as RELATIVE [~]; join v2 UNCHANGED",
   next: [
     "identiteta enote moda B (paleografija/dokumenti: glave sekcij str. 61–99, pojasnila registra)",
-    "razširitev atribucije na 106 čez-Blatt base (potrebna P59 pokritost 133–136 + 138–139 ob VLM kvoti)",
+    "razširitev atribucije na 110 čez-Blatt base (P59 pokritost POPOLNA — P62)",
     "razlaga strani 61/83–87/99 kot Kultur-Tabellen: navzkrižje s Kultur stolpcem polnih branj P38",
     "per-Blatt SPLIT joina za atributirane base (zahteva pini + odločitev lastnika o pozicijah)",
     "povezati lastnike pas-instanc (npr. 163 II) s PF protokolom",

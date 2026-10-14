@@ -26,19 +26,25 @@
    123,
    125,
    127,
-   128
+   128,
+   133,
+   134,
+   135,
+   136,
+   137,
+   138,
+   139
   ],
-  "pagesArbitrated": 25,
+  "pagesArbitrated": 32,
   "rule": "numerala @ vrstica 1 = atribucija strani; nesoglasja prehodov razsodil agent vizualno (izrezi 3×, hardcoded razlogi); sred-stranske numeralе = extras [~]",
-  "singlePassPages": [
-   137
-  ]
+  "singlePassPages": []
  },
  "coverage": {
   "S1": "strani 5–127: 123/123 × 2 prehoda",
-  "S2": "strani 128–132 + 137 branja (137 samo pass1); 133–136 ni branja — VLM kvota 429 (odprto)",
-  "S3": "strani 138–139 ni svežega branja (kvota); P38: ps-138 brez stolpca, ps-139 'III' ×1 [~]",
-  "p3-4": "P57 polno branje (Blatt I)"
+  "S2": "strani 128–137: 10/10 × 2 prehoda",
+  "S3": "strani 138–139: 2/2 × 2 prehoda (138 bledi zapisi neberljivi [?]; 139 = 'Nro. des Hauses.' hišne 41–60, ni Blatt)",
+  "p3-4": "P57 polno branje (Blatt I)",
+  "polna": "135/135 strani (5–139) × 2 neodvisna VLM prehoda — pokritost POPOLNA (P62: dopolnjeno po premagani kvoti 429)"
  },
  "date": "2026-10-14",
  "generatedBy": "scripts/p59_ps_blatt_headers.py",
@@ -330,53 +336,97 @@
    "source": "2-prehodno soglasje @ vrstica 1"
   },
   "133": {
-   "blatt": null,
-   "extras": [],
+   "blatt": "V",
+   "extras": [
+    {
+     "row": 8,
+     "value": "IV"
+    }
+   ],
    "flag": true,
-   "passes": 0,
-   "source": "S2 — ni svežega branja (VLM kvota 429 izčrpana; odprto)"
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 2-prehodno soglasje + oči: 'IV.V' @ r1 = korekcija IV→V, 'V' @ r2; 'IV' @ r8 = prečrtan [~]; parcele 2601–2620"
   },
   "134": {
-   "blatt": null,
-   "extras": [],
+   "blatt": "IV",
+   "extras": [
+    {
+     "row": 5,
+     "value": "II.IV"
+    },
+    {
+     "row": 9,
+     "value": "IV"
+    },
+    {
+     "row": 15,
+     "value": "II.IV"
+    },
+    {
+     "row": 17,
+     "value": "III.IV"
+    },
+    {
+     "row": 18,
+     "value": "IV"
+    }
+   ],
    "flag": true,
-   "passes": 0,
-   "source": "S2 — ni svežega branja (VLM kvota 429 izčrpana; odprto)"
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 2-prehodno soglasje + oči: 'IV' @ r1; 'II.IV'/'III.IV' @ prečrtanih = korekcijski zapisi (passi se razlikujeta le po presledkih); parcele 2621–2640"
   },
   "135": {
-   "blatt": null,
-   "extras": [],
+   "blatt": "IV",
+   "extras": [
+    {
+     "row": 2,
+     "value": "III"
+    },
+    {
+     "row": 12,
+     "value": "II"
+    }
+   ],
    "flag": true,
-   "passes": 0,
-   "source": "S2 — ni svežega branja (VLM kvota 429 izčrpana; odprto)"
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 2-prehodno soglasje + oči: 'IV' @ r1, 'III' @ r2, 'II' @ r12; parcele 2641–2660"
   },
   "136": {
-   "blatt": null,
-   "extras": [],
-   "flag": true,
-   "passes": 0,
-   "source": "S2 — ni svežega branja (VLM kvota 429 izčrpana; odprto)"
-  },
-  "137": {
    "blatt": "II",
    "extras": [],
    "flag": true,
-   "passes": 1,
-   "source": "en sam prehod @ vrstica 1 [~]"
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 2-prehodno soglasje + oči: 'II' @ r1, ditto; parcele 2661–2680"
+  },
+  "137": {
+   "blatt": "II",
+   "extras": [
+    {
+     "row": 6,
+     "value": "I.II"
+    },
+    {
+     "row": 8,
+     "value": "I"
+    }
+   ],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 2-prehodno soglasje + oči: 'II' @ r1 + korekcije 'I.II' @ r6, 'I' @ r8; parcele 2681–2700"
   },
   "138": {
    "blatt": null,
    "extras": [],
    "flag": true,
-   "passes": 0,
-   "source": "S3 zapadek — P38 ps-138 brez blatt stolpca (nastop 'Zusammenstellung der Grundstücke', lastna oštevilčenja)"
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): tabela skoraj prazna, bledi zapisi neberljivi ('T.191'? @ r14, '89'? @ r27) [?] — brez zanesljive numerele"
   },
   "139": {
    "blatt": null,
    "extras": [],
    "flag": true,
-   "passes": 0,
-   "source": "S3 zapadek — P38 ps-139 opaža 'III' ×1 [~]; ni svežega branja (kvota)"
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): glava 'Nro. des Hauses.' — hišne številke 41–60 + vsota 82, ni numerele Blatt → P58 open #6"
   },
   "14": {
    "blatt": "I",
@@ -1089,7 +1139,7 @@
   }
  },
  "perBlattAmbiguity": {
-  "basesOnMultipleBlatter": 106,
+  "basesOnMultipleBlatter": 110,
   "basesOnMultiplePages_v2": 211,
   "ruleCandidateBases": [
    "163",
@@ -1111,9 +1161,9 @@
    "1831"
   ],
   "ruleCandidateNote": "baza z TOČNO eno instanco z median razmerjem v [0.8, 1.25] — kandidat za prihodnjo per-Blatt atribucijo joina (P60), MERJENO ne izvedeno [~]",
-  "verdictSi": "per-Blatt ločitev MERJENA: od 211 bazi na več straneh jih 106 sega čez ≥2 Blatta (P39: ista številka pod različnima Blattoma = druga parcela) — instance zdaj razločljive; join po številki ostaja nespremenjen (brez dokaza se NE prerazporeja)"
+  "verdictSi": "per-Blatt ločitev MERJENA: od 211 bazi na več straneh jih 110 sega čez ≥2 Blatta (P39: ista številka pod različnima Blattoma = druga parcela) — instance zdaj razločljive; join po številki ostaja nespremenjen (brez dokaza se NE prerazporeja)"
  },
- "statusLine": "P59 GLAVE LISTOV: 129/135 strani sveže branih (2 prehoda; 133–136, 138–139 kvota, p137 pass2), 25 arbitraža-oči, struktura Blatt I–V + lokalne sekcije; 211 dvoumnih base → 106 čez-Blatt, 17 ruleCandidate [~]; join v2 nespremenjen",
+ "statusLine": "P59 GLAVE LISTOV: 135/135 strani sveže branih (2 prehoda; polna pokritost — P62 dopolnilo 133–136, 138–139, p137 pass2 po premagani kvoti 429), 32 arbitraža-oči, struktura Blatt I–V + lokalne sekcije; 211 dvoumnih base → 110 čez-Blatt, 17 ruleCandidate [~]; join v2 nespremenjen",
  "structure": {
   "blattSections": [
    {
@@ -1164,8 +1214,8 @@
    },
    {
     "blatt": "V",
-    "n": 8,
-    "pageMax": 132,
+    "n": 9,
+    "pageMax": 133,
     "pageMin": 125,
     "pages": [
      125,
@@ -1175,12 +1225,13 @@
      129,
      130,
      131,
-     132
+     132,
+     133
     ]
    },
    {
     "blatt": "II",
-    "n": 51,
+    "n": 52,
     "pageMax": 137,
     "pageMin": 43,
     "pages": [
@@ -1234,13 +1285,14 @@
      91,
      92,
      109,
+     136,
      137
     ]
    },
    {
     "blatt": "IV",
-    "n": 23,
-    "pageMax": 124,
+    "n": 25,
+    "pageMax": 135,
     "pageMin": 93,
     "pages": [
      93,
@@ -1265,7 +1317,9 @@
      121,
      122,
      123,
-     124
+     124,
+     134,
+     135
     ]
    },
    {
@@ -1309,6 +1363,6 @@
   "interleavedLocalPages": "strani z majhnimi razponi sredi globalnega teka (npr. 26, 61–62, 81, 83–91: 41–60/101–120/161–180/601–620/921–960) — per-Riede/per-Blatt lokalne sekcije; p101 z ULOMKI (196½ ...) — podštevilčene parcele",
   "midPageTransitions": "p93 (1901–1907 prečrtano → 1303+), p101 (III→IV @ r7), p65 (II→III @ r2 [~])"
  },
- "task": "P59 — glave listov registra PS (Nro. des Blattes): per-Blatt atribucija strani + ločitev dvoumnih base v2",
+ "task": "P59 (+P62 dopolnitev) — glave listov registra PS (Nro. des Blattes): per-Blatt atribucija strani + ločitev dvoumnih base v2, polna pokritost",
  "version": 1
 }
