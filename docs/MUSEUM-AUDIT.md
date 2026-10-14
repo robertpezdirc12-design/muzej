@@ -2027,3 +2027,92 @@ I8 dokaz ⊇ runtime bajtno + `--check` determinizem.
 slepo; identifikacija posamezne parcele ostaja [~]; strojno branje ni dokazni vir
 (REVIEW). SHEET_GEOREFS in dokazi P40–P56 nespremenjeni (lekcija P9); P55/P56
 runtime nespremenjena (pini qa-p55/p56).
+
+## §36 — P58: sanacija produkcije PS-PARCELS-GEO v2 — −43 lažnih S3, +26 Blatt I (issue #13, 2026-10-14)
+
+**Kontekst:** P56 je dokazal, da 43 povezanih vrstic S3 zapadka (str. 138–139,
+»Zusammenstellung der Grundstücke« z lastnim oštevilčenjem 1–100) ni pravih
+(median razmerja površin 0.0892 ≪ 3.7188 v S1 — ~42× odmik od 1 Wiener QK;
+pass-razhajanje), a je P55 runtime pustil nespremenjen (pini qa-p55). P57 je
+obnovil 26 lostBases iz primarnega vira. P58 izvede sanacijo v PRODUKCIJI:
+runtime `ps-parcels-geo.json` postane **v2**.
+
+**Sprememba (deterministična, skripta `scripts/p58_ps_parcels_geo_v2.py`):**
+- ODSTRANJENIH **43** vrstic str. 138–139 — nabor **bajtno enak** P56
+  kontaminacijskemu seznamu (kontrola I1: 7-poljska projekcija
+  page/base/owner/kultur/areaQK/areaModern/ratio, sortirano, ==);
+- DODANIH **26** vrstic Blatt I (str. 3–4, številke 1–36) iz P57 runtime-a —
+  base == P56 lostBases; lat/lng/areaModern/parts **dobesedno** kopirani;
+  dodatna polja `blatt`, `source: "P57"`, `readConf` (3/14/9), `anmerkung`;
+- vsaka vrstica nosi `series` (BI/S1/S2) in `ambiguous` (base na > 1 strani
+  znotraj v2).
+
+**KLJUČNA LASTNOST (dokazana z I3/I9):** pozicije vrstic so deterministične
+PER BASE (group_pos = ploščinsko uteženo središče sodobnih parcel številke b),
+zato odstranitev/dodatek vrstic NE spremeni nobene pozicije; množica
+pozicioniranih števil ostane 800 (−26 lostBases +26 Blatt I = iste številke).
+Posledica (merjeno): soslednost bajtno enaka v1 (590 parov / 51.8 m / q25-q75
+31.2/91.0 / 89.3 % ≤ 150 m / kontrola 1436.9 m — 27.8×) in S1/S2 conf bajtno
+enaka v1 (preracun z pravilom P55: 0 odmikov).
+
+**Dva merjena prinosa:**
+1. površinski median **3.6984 → 3.7709** (Δ +4.85 %): v1 vrednost je bila
+   UMETNO SNIZANA s 43 lažnimi povezavami z razmerji ~0.09; čista vrednost je
+   skladna z neodvisnima merjenjema P56 (3.7394) in P57 (3.7594); kontrola
+   (seed 42) 4.0829; pas ±10 %: 17.4 % vs 5.6 %; 1074 parov;
+2. per-Blatt dvoumnost na v2: **211 base / 495 vrstic** [~] (P56: 515 čez
+   celoten register vključno S3 — številke 1–36 zdaj obstajajo le na Blatt I).
+
+**Rezultat:** 1093 povezanih vrstic (BI 26 / S1 997 / S2 70), 800 pozicioniranih
+števil, zaupanje **STRONG 174 / MEDIUM 759 / WEAK 160**; Furkofze 2159/2160
+nespremenjeno.
+
+**Integracija:** dokaz v2 `research/issue17/ps-parcels-geo-v2.json` (rowsEvidence
++ v2Delta + invarianti) + runtime v2 `src/data/atlas/ps-parcels-geo.json`
+(version 2; v1 dokaz ARHIVIRAN nespremenjen); API `/api/atlas/ps-parcels-geo`
+(komentar v2); research.ts `PS_GEO_P55` v2 (version, v2Delta, novi števci,
+verdikti z zgodovino v1); kartica P55 v2 (serije + delta chipsi, pošten status
+»SANACIJA IZVEDENA v P58«); zapora P56 poštenega statusa (»od P58 SANIRAN v v2«);
+sources.ts N083PS opomba P58 (Si+En); README bullet; repo worklog P58.
+
+**QA 61 → 62:**
+- `qa-p55-ps-parcels-geo` PREPISAN na v2: pini (1093/1067/26, 800, 38.6 %,
+  26/997/70, 174/759/160, readConf 3/14/9, dvoumnost 211/495, −43/+26,
+  before 1110/3.6984/171-775-164, površine 3.7709/1074/4.85/4.0829/0.1741/0.0559,
+  soslednost 590/51.8/1436.9/0.8932/27.8) + neodvisna preracuna iz vrstic
+  (soslednost po mehaniki P55 + per-Blatt dvoumnost) + dve obliki po P53/P57
+  lekciji (dokaz v2 `rowsEvidence` v repozitoriju, runtime kopija `rows` v
+  produkciji; eksplicitne null/undefined kontrole; dokaz ⊇ runtime bajtno);
+- NOVI `qa-p58-ps-parcels-geo-v2`: v1 arhiv nespremenjen (2762/1110,
+  spatial 590/51.8/0.8932 — samo repo), runtime version 2, brez vrstic 138–139,
+  Blatt I 26 == lostBases P56, serije 997/70, delta == P56 sanitizacija
+  (1110→1067), v2 dokaz delta −43/+26, neinvarianca pini;
+- `qa-p56-register-topology` nadgrajen na v2 realnost: preracun iz P55 runtime
+  v2 — S3 vrstic **0** (sanacija IZVEDENA), Blatt I **26**, sanitirani S1/S2
+  **1067**, median S1 3.7188; kontaminacijske vrstice == **v2Delta.removed.
+  rowsDetail** bajtno (rowsDetail je del runtime v2Delta → kontrola izvedljiva
+  tudi v produkciji brez research/ — P53/P57 lekcija do konca).
+
+**Invarianti I1–I9: PASS** (I1 v1 identiteta + S3 bajtno == P56, I2 Blatt I
+dobesedno iz P57, I3 v2 struktura + 0 conf odmikov, I4 površine, I5 soslednost,
+I6 determinizem `--check` bajtno, I7 dokaz ⊇ runtime, I8 Furkofze, I9
+neinvarianca soslednosti == v1).
+
+**Verifikacija:** `--check` bajtno PASS; tsc 0; ESLint 0; build; standalone
+3010 (lekcija: pkill "next-server" po imenu): `/api/qa` **62/62** (qa-p55 v2,
+qa-p58, qa-p56 na v2 realnost — vsi PASS); **PROD-SIM (metoda P53/P57 do
+konca): build brez research/ → `/api/qa` 62/62 v produkciji obliki** (detail
+»produkcija: … kontrola na runtime kopiji«; kontaminacija 43 == rowsDetail iz
+RUNTIME — tudi brez research/); brskalniška E2E (agent-browser): persona
+Raziskovalec → Raziskave → Prepisi Kurrent → kartica P55 v2 **24/24 ključnih
+vrednosti v DOM** (1093, 38.6, Blatt I izven izbora, −43 S3 · +26 BI,
+BI 26 · S1 997 · S2 70, STRONG 174 / MEDIUM 759 / WEAK 160, 3.7709, 3.59665,
++4.85, 4.0829, 17.4, 5.6, 590, 51.8, 27.8, 211, 495, SANACIJA IZVEDENA v P58,
+P55 v2 header, QA 62/62, Furkofze, skripta p58); screenshot
+`/home/z/tmp/p58-card.png`; mobilni 390×844: overflowX 0, footer sticky;
+konzola 0 napak / 0 opozorjenj.
+
+**Poštenost:** sanacija se dotakne LE nabora vrstic in števcev — ne pozicij in
+ne S1/S2 zaupanj; v1 zgodovina ohranjena (arhiv + v2Delta.before); identifikacija
+posamezne parcele ostaja [~]; SHEET_GEOREFS in dokazi P40–P57 nespremenjeni
+(lekcija P9).

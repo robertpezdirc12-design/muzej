@@ -3412,3 +3412,33 @@ P55 (14. 10. 2026) — GEOLOKACIJA GRUNDPARCELLEN: PS protokol 1825 ↔ sodobne 
   runtime kopiji (research/ ni v deploymentu).
 - SHEET_GEOREFS in dokazi P40–P56 nespremenjeni (lekcija P9); P55/P56 runtime
   nespremenjena (pini qa-p55/p56).
+
+## P58 (2026-10-14) — sanacija produkcije PS-PARCELS-GEO v2: −43 lažnih S3, +26 Blatt I
+
+- Vstopno stanje: klon @ 0f3cd7a (P57-dodatek), GitLab == GitHub == Vercel, QA 61/61.
+- Izbrana naloga: odprta točka P56/P57 »nadgradnja P55 runtime v v2 (series flag + P57 Blatt I vir)« —
+  produkcija je še vsebovala 43 lažnih povezav S3, ki jih je P56 dokazal, a jih je pustil v runtime-u (pini qa-p55).
+- Skripta `scripts/p58_ps_parcels_geo_v2.py` (deterministična, brez AI ob delovanju, FAIL ob padu I1–I9;
+  `--check` bajtno): vhodi = v1 evidence (2762/1110) + P56 evidence/runtime (kontaminacija 43 + sanitizacija)
+  + P57 runtime (26 povezanih Blatt I); izhodi = `research/issue17/ps-parcels-geo-v2.json` (rowsEvidence +
+  v2Delta) + runtime `src/data/atlas/ps-parcels-geo.json` (version 2, 1093 vrstic).
+- KLJUČNA LASTNOST (dokazana, ne tržena): pozicije so per base → odstranitev/dodatek vrstic ne spremeni
+  nobene pozicije; množica pozicioniranih števil ostane 800 → soslednost bajtno enaka v1 (590/51.8/27.8×)
+  in S1/S2 conf bajtno enaka v1 (preracun: 0 odmikov) — invarianta I9.
+- Merjena prinosa: površinski median 3.6984 → 3.7709 (Δ +4.85 %; v1 snizan z lažnimi razmerji ~0.09;
+  skladno s P56 3.7394 in P57 3.7594) in per-Blatt dvoumnost na v2: 211 base / 495 vrstic [~].
+- Integracija: API komentar v2; research.ts PS_GEO_P55 v2 (version, v2Delta, novi števci, verdikti z v1
+  zgodovino); kartica P55 v2 (serije + delta chipsi, pošten status); zapora P56 (»od P58 SANIRAN v v2«);
+  sources.ts N083PS P58 (Si+En); audit §36; README bullet.
+- QA 61 → 62: qa-p55 PREPISAN na v2 (pini + preracuna soslednosti in dvoumnosti iz vrstic + dve obliki
+  po P53/P57: dokaz rowsEvidence / runtime rows, null/undefined tolerantno, dokaz ⊇ runtime bajtno) +
+  NOVI qa-p58 (v1 arhiv 2762/1110 nespremenjen, runtime version 2, brez 138–139, Blatt I 26 == lostBases,
+  delta == P56, neinvarianca pini) + qa-p56 NADGRAJEN na v2 realnost (S3 vrstic 0, Blatt I 26,
+  sanitirani S1/S2 1067, kontaminacija == v2Delta.removed.rowsDetail bajtno — rowsDetail je del
+  runtime v2Delta, kontrola izvedljiva tudi brez research/).
+- Verifikacija: --check bajtno PASS; tsc 0; ESLint 0; build; standalone 3010: /api/qa 62/62;
+  PROD-SIM po metodi P53/P57 DO KONCA — build BREZ research/ → /api/qa 62/62 v produkciji obliki
+  (opomba: /api/qa je force-static — odgovor je prerenderan pri buildu, zato mora biti produkcija
+  simulirana na BUILD nivoju, ne samo z brisanjem research/ iz standalone kopije); E2E agent-browser:
+  kartica P55 v2 24/24 vrednosti v DOM + QA 62/62 + mobilni 390×844 overflowX 0 + footer sticky +
+  konzola 0/0.

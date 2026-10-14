@@ -326,6 +326,24 @@ API (statični, brez runtime AI):
   `scripts/p57_ps_register_start.py`; QA 60 → **61**; SHEET_GEOREFS in dokazi
   P40–P56 nespremenjeni.
 
+- **sanacija produkcije PS-PARCELS-GEO (P58, issue #13, v2)** — v1 produkcija
+  (1110 vrstic) je vsebovala **43 lažnih povezav S3** (zapadek str. 138–139), ki
+  jih je P56 dokazal (površine ~42× od 1 QK + pass-razhajanje): P58 jih je
+  odstranil iz runtime-a (**nabor bajtno enak P56 kontaminacijskemu seznamu**) in
+  **dodal 26 Blatt I vrstic** iz primarnega vira P57 (točno vseh 26 lostBases) →
+  **1093 vrstic / 800 pozicioniranih števil**; vsaka vrstica zdaj nosi serijo
+  (BI/S1/S2) in per-Blatt dvoumnost (**211 base / 495 vrstic** [~]); KLJUČNA
+  LASTNOST: pozicije so per base, zato je **soslednost bajtno enaka v1**
+  (590 parov / 51.8 m / 27.8×) in S1/S2 zaupanje nespremenjeno
+  (**STRONG 174 / MEDIUM 759 / WEAK 160**); **površinski median čist 3.7709**
+  (Δ +4.85 % — v1 3.6984 je bil umetno snizan; skladno z neodvisnima merjenjema
+  P56 3.7394 in P57 3.7594); v1 dokaz arhiviran nespremenjen + v2Delta zgodovina;
+  dokaz `research/issue17/ps-parcels-geo-v2.json` + runtime v2
+  `src/data/atlas/ps-parcels-geo.json` (`/api/atlas/ps-parcels-geo`) +
+  `scripts/p58_ps_parcels_geo_v2.py` (`--check` bajtno); QA 61 → **62**
+  (qa-p55 prepisan na v2 + novi qa-p58: v1 arhiv + delta == P56 + dve obliki
+  po P53/P57 lekciji); SHEET_GEOREFS in dokazi P40–P57 nespremenjeni.
+
 ## Varnost
 
 Žeton `VERCEL_TOKEN` je shranjen izključno kot šifrirana GitHub Actions

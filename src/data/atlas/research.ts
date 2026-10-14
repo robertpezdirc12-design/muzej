@@ -3675,11 +3675,13 @@ export const PRESENT_GURS_P54: {
 
 export const PS_GEO_P55: {
   series: "PS";
+  version: number;
   source: string;
   status: ResearchStatus;
   generatedBy: string;
   pageSelection: { pages: number; rows: number; pass1: number; pass2: number; pass3Fallback: number; checksum: string; pass3Note: string };
-  join: { psUniqueNumbers: number; psPositionedParcels: number; matchedRows: number; matchedSharePct: number; suffixGroups: number; confCounts: { STRONG: number; MEDIUM: number; WEAK: number } };
+  join: { matchedRows: number; matchedRowsS1S2: number; matchedRowsBI: number; matchedSharePct: number; psUniqueNumbers: number; psPositionedParcels: number; suffixGroups: number; seriesCounts: { BI: number; S1: number; S2: number }; confCounts: { STRONG: number; MEDIUM: number; WEAK: number }; readConfBI: { STRONG: number; MEDIUM: number; WEAK: number }; ambiguousBases: number; ambiguousRows: number };
+  v2Delta: { removedRows: number; removedPages: string; addedRows: number; addedSource: string; before: { matchedRows: number; confCounts: { STRONG: number; MEDIUM: number; WEAK: number }; areaMedian: number }; invariance: string };
   areaProof: { pairsWithArea: number; medianRatio: number; q25: number; q75: number; tightN: number; tightShare: number; shuffleMedian: number; shuffleTightShare: number; historicalQkM2: number; deltaPct: number };
   spatialProof: { consecPairs: number; medianM: number; q25M: number; q75M: number; share150: number; shuffleMedianM: number; shuffleShare150: number; enrichmentX: number };
   furkovce: { wohnort: string; rows: number; parcels: number[]; owner: string[]; note: string };
@@ -3690,10 +3692,11 @@ export const PS_GEO_P55: {
   next: string[];
 } = {
   series: "PS",
+  version: 2,
   source:
-    "PS protokol N083PS (VAČ uodid 373415, docid 41780; 143 strani; branja research/issue17/ps-raw/ps-*.json, izbira strani PS-full-v2.json) + sodobne parcele k.o. 1544 GRIBLJE (research/georef-n83/gurs/parcels-ko1544-merged.json, 2117, P47 prenos SI.GURS.KN:PARCELE); polni izpis research/issue17/ps-parcels-geo.json + runtime src/data/atlas/ps-parcels-geo.json",
+    "PS protokol N083PS (VAČ uodid 373415, docid 41780; 143 strani; branja research/issue17/ps-raw/ps-*.json, izbira strani PS-full-v2.json) + sodobne parcele k.o. 1544 GRIBLJE (research/georef-n83/gurs/parcels-ko1544-merged.json, 2117, P47 prenos SI.GURS.KN:PARCELE) + Blatt I str. 3–4 (P57 primarni vir, src/data/atlas/ps-register-start.json); v2 dokaz research/issue17/ps-parcels-geo-v2.json + runtime src/data/atlas/ps-parcels-geo.json (v1 dokaz arhiviran nespremenjen)",
   status: "REVIEW",
-  generatedBy: "scripts/p55_ps_parcels_geo.py",
+  generatedBy: "scripts/p58_ps_parcels_geo_v2.py (v2); v1: scripts/p55_ps_parcels_geo.py",
   pageSelection: {
     pages: 135,
     rows: 2762,
@@ -3705,24 +3708,38 @@ export const PS_GEO_P55: {
       "8 strani izbranih na pass3 (24/37/83/84/87/94/121/125): pass3 datoteke brez parsed.vrstice, NDJSON vsebina številčno nezanesljiva (7/8 prvih parcel divergira od pass1 in pass2, ki se strinjata) → uporabljen pass1; odmik od PS-full-v2 izbire dokumentiran",
   },
   join: {
+    matchedRows: 1093,
+    matchedRowsS1S2: 1067,
+    matchedRowsBI: 26,
+    matchedSharePct: 38.6,
     psUniqueNumbers: 2106,
     psPositionedParcels: 800,
-    matchedRows: 1110,
-    matchedSharePct: 40.2,
     suffixGroups: 241,
-    confCounts: { STRONG: 171, MEDIUM: 775, WEAK: 164 },
+    seriesCounts: { BI: 26, S1: 997, S2: 70 },
+    confCounts: { STRONG: 174, MEDIUM: 759, WEAK: 160 },
+    readConfBI: { STRONG: 3, MEDIUM: 14, WEAK: 9 },
+    ambiguousBases: 211,
+    ambiguousRows: 495,
+  },
+  v2Delta: {
+    removedRows: 43,
+    removedPages: "str. 138–139 (S3 zapadek »Zusammenstellung der Grundstücke«, lastno oštevilčenje 1–100) — P56 dokaz: median razmerja površin 0.0892 ≪ 3.7188 v S1 (~42× od 1 QK) + pass-razhajanje; nabor 43 vrstic bajtno enak P56 kontaminacijskemu seznamu",
+    addedRows: 26,
+    addedSource: "P57 ps-register-start.json (štiri neodvisne VLM plasti + deterministična adjudikacija) — točno vseh 26 lostBases P56 (številke 1–36; št. 1 brez površine — blot)",
+    before: { matchedRows: 1110, confCounts: { STRONG: 171, MEDIUM: 775, WEAK: 164 }, areaMedian: 3.6984 },
+    invariance: "pozicije vrstic so deterministične PER BASE (ploščinsko uteženo središče sodobnih parcel številke) — odstranitev/dodatek vrstic ne spremeni nobene pozicije; množica pozicioniranih števil ostane 800 → soslednost in S1/S2 conf bajtno enaka v1",
   },
   areaProof: {
-    pairsWithArea: 1083,
-    medianRatio: 3.6984,
-    q25: 2.0955,
-    q75: 8.1467,
-    tightN: 183,
-    tightShare: 0.169,
-    shuffleMedian: 3.9731,
-    shuffleTightShare: 0.0397,
+    pairsWithArea: 1074,
+    medianRatio: 3.7709,
+    q25: 2.3222,
+    q75: 8.2676,
+    tightN: 187,
+    tightShare: 0.1741,
+    shuffleMedian: 4.0829,
+    shuffleTightShare: 0.0559,
     historicalQkM2: 3.59665,
-    deltaPct: 2.83,
+    deltaPct: 4.85,
   },
   spatialProof: {
     consecPairs: 590,
@@ -3739,29 +3756,30 @@ export const PS_GEO_P55: {
     rows: 2,
     parcels: [2159, 2160],
     owner: ["Van Wawech Mihó"],
-    note: "prvi imenovani prebivalci Fučkovci v arhivu (PS str. 125); parceli obstajata še danes (P47) [~]",
+    note: "prvi imenovani prebivalci Fučkovci v arhivu (PS str. 125); parceli obstajata še danes (P47) [~] — v2 nespremenjeno",
   },
   invariants: {
-    I1: "izbira strani P38 replicirana: 135 strani (pass1 58 / pass2 69 / pass3→pass1 8), vrstic 2700–2800 (≈ kontrolna vsota 2607 + prebri glav/robov); za 8 pass3-strani pass1 (odmik dokumentiran) — PASS",
-    I2: "povezava 1110 vrstic (900–1250), 800 unikatnih parcel (750–850), vse pozicije znotraj bbox KO 1544 ± 200 m — PASS",
-    I3: "površine: median 3.6984 v [3.30, 3.90], Δ 2.83 % ≤ 3.5 % od 3.59665; premešana kontrola (seed 42) 3.9731 višja — PASS",
-    I4: "pas ±10 %: realni 16.9 % > 2× kontrola 4.0 % — PASS",
-    I5: "soslednost: 590 parov (500–700), median 51.8 m ≤ 100 m, ≤150 m 89.3 % ≥ 70 %, kontrola (seed 7) 1436.9 m ≥ 5× — PASS",
+    I1: "v1 identiteta: 2762 vrstic / 1110 povezanih; S3 (str. 138–139) natanko 43, bajtno enake P56 kontaminacijskemu seznamu; S1/S2 1067/774 == P56 sanitizacija — PASS",
+    I2: "Blatt I: 26 vrstic P57, base == P56 lostBases, strani 3–4, lat/lng/areaModern/parts dobesedno kopirani, readConf 3/14/9 — PASS",
+    I3: "v2: 1093 = 1067 + 26; serije BI 26 / S1 997 / S2 70; 800 base; S1/S2 polja bajtno enaka v1 (preracun conf: 0 odmikov) — PASS",
+    I4: "površine: 1074 parov, median 3.7709 v [3.30, 3.90], Δ +4.85 % ≤ 5.0 % od 3.59665; premešana kontrola (seed 42) 4.0829 višja; pas ±10 % 17.4 % > 2× 5.6 % — PASS",
+    I5: "soslednost: 590 parov, median 51.8 m ≤ 100 m, ≤150 m 89.3 % ≥ 70 %, kontrola (seed 7) 1436.9 m ≥ 5× — PASS",
     I6: "determinizem — bajtno identičen izpis pri ponovnem izračunu (--check)",
-    I7: "dokaz ⊇ runtime — povezane vrstice bajtno enake v obeh izpisih",
+    I7: "dokaz ⊇ runtime — rowsEvidence bajtno enake runtime rows",
     I8: "Furkofze: natanko 2 vrstici, parceli {2159, 2160}, lastnik Van Wawech — PASS",
+    I9: "neinvarianca soslednosti: 590/51.8/0.8932 bajtno == v1 spatialProof (pozicije per base, množica števil 800 nespremenjena) — PASS",
   },
   statusLine:
-    "DISCOVERED-DETERMINISTIC — PS protokol 1825 prvič geolociran: 1110 vrstic (40.2 %) povezanih s sodobnimi parcelami KO 1544 po ohranjeni parcelni številki (delitve: base + pripona); vztrajnost dokazana: površine median 3.6984 ≈ 1 QK = 3.59665 m² (Δ +2.8 %, kontrola 3.9731) in soslednost 51.8 m vs naključno 1436.9 m (27.8×); per-parcelno zaupanje STRONG 171 / MEDIUM 775 / WEAK 164; identifikacija posamezne parcele ostaja [~]",
+    "SANITIZED-DETERMINISTIC — PS geolokacija v2 (P58): 1093 vrstic povezanih (1067 S1/S2 iz P55 joina po odstranitvi 43 lažnih S3 povezav [P56: površine ~42× od 1 QK + pass-razhajanje] + 26 Blatt I vrstic iz primarnega vira P57); 800 pozicioniranih številk; površine median 3.7709 ≈ 1 QK = 3.59665 m² (Δ +4.85 %, kontrola 4.0829) — čista vrednost, v1 3.6984 je bil snizan s 43 lažnimi S3 povezavami; soslednost NEINVARIANTNA: 590 parov / 51.8 m / 27.8× — identično v1; zaupanje STRONG 174 / MEDIUM 759 / WEAK 160; per-Blatt dvoumnost na v2: 211 base / 495 vrstic [~]",
   verdictSi:
-    "P55 (2026-10-14): protokol PS »Der Grund-Parcellen der Gemeinde GRÜBLE« (1825; 2505 Grundparzellen + 102 Bauplätze = 2607) je prvič GEOLOCIRAN — 1110 vrstic (40.2 % od 2762 repliciranih) se poveže s sodobnimi parcelami k.o. 1544 GRIBLJE (P47 prenos) po parcelni številki (delitve po 1825: base + pripona, površine delov seštejte; 241 skupin s pripono). Vztrajnost oštevilčenja 1825→2026 dokazujeta dva neodvisna testa: (A) POVRŠINE — median razmerja modern/QK po 1083 parih = 3.6984 ≈ zgodovinski 1 Wiener QK = 3.59665 m² (Δ +2.83 %); premešana kontrola (seed 42) 3.9731, pas ±10 %: 16.9 % proti 4.0 %; (B) PROSTORSKA SOSLEDNOST (odločilni) — protokol našteva parcele naraščajoče, zato morajo biti zaporedne številke sosede: 590 zaporednih parov ima sodobni središči 51.8 m narazen (q25/q75 31.2/91.0 m), 89.3 % ≤ 150 m; premešana kontrola (seed 7): 1436.9 m / 2.5 % — 27.8× ožje. Zaupanje vrstic: STRONG (oba dokaza) 171, MEDIUM (en) 775, WEAK (samo številka) 164 — identifikacija posamezne parcele ostaja [~]. Odkritje: sekcija »Furkofze« (Fučkovci) = 2 vrstici (parceli 2159/2160, lastnik Van Wawech Mihó) — prvi imenovani Fučkovci v arhivu; obe parceli obstajata še danes. Omejitev pošteno: protokol je organiziran po listih z lastnim številčenjem (P39: ista številka na različnih listih = druga parcela, lastniški test 29/29) — join po sami številki vleče tudi čez-listske napačne povezave; vztrajnost je dokazana na populacijski ravni, identifikacija posamezne parcele ostaja [~]. Izbira strani: za 8 strani izbranih na pass3 uporabljen pass1 (pass3 parsed ni na voljo in je številčno nezanesljiv — odmik od PS-full-v2 dokumentiran).",
+    "P58 (2026-10-14, v2): produkcija geolokacije PS (P55) SANIRANA in NADGRAJENA. ODSTRANJENIH 43 vrstic str. 138–139 (zapadek »Zusammenstellung der Grundstücke« z lastnim oštevilčenjem 1–100), ki jih je P56 dokazal kot lažne povezave (median razmerja površin 0.0892 ≪ 3.7188 v S1 — ~42× odmik od 1 Wiener QK; pass-razhajanje); nabor 43 vrstic je bajtno enak P56 kontaminacijskemu seznamu. DODANIH 26 vrstic Blatt I (str. 3–4, številke 1–36) iz primarnega vira P57 (štiri neodvisne VLM plasti) — točno vseh 26 lostBases P56. Rezultat: 1093 povezanih vrstic (1067 S1/S2 + 26 BI), 800 pozicioniranih števil. DVA MERJENA PRINOSA: (1) površinski median se dvigne z 3.6984 na 3.7709 (Δ +4.85 %) — v1 vrednost je bila UMETNO SNIZANA s 43 lažnimi povezavami z razmerji ~0.09; čista vrednost je skladna z neodvisnima merjenjema P56 (3.7394) in P57 (3.7594); kontrola (seed 42) 4.0829, pas ±10 % 17.4 % proti 5.6 %; (2) soslednost ostane BAJTNO ENAKA v1 — 590 parov / 51.8 m / 27.8× — pozicije so per base in množica pozicioniranih števil se ni spremenila, kar samo po sebi dokazuje, da sanitacija ne dotakne prostorske strukture. Zaupanje: STRONG 174 / MEDIUM 759 / WEAK 160 (S1/S2 vrednosti bajtno enake v1); Blatt I vrstice dodatno nosijo readConf iz P57 (STRONG 3 / MEDIUM 14 / WEAK 9). Per-Blatt dvoumnost na v2: 211 base / 495 vrstic [~] (P56: 515 čez celoten register vključno S3). Zgodovina v1 (1110 vrstic / 40.2 % / median 3.6984) arhivirana v v1 dokazu in v2Delta; identifikacija posamezne parcele ostaja [~].",
   verdictEn:
-    "P55 (2026-10-14): the PS protocol »Der Grund-Parcellen der Gemeinde GRÜBLE« (1825; 2505 Grundparzellen + 102 Bauplätze = 2607) is GEOLOCATED for the first time — 1110 rows (40.2 % of 2762 replicated) link to modern parcels of c.m. 1544 GRIBLJE (P47 export) by parcel number (post-1825 subdivisions: base + suffix, part areas summed; 241 suffix groups). The persistence of the numbering 1825→2026 is proven by two independent tests: (A) AREAS — the median modern/QK ratio over 1083 pairs = 3.6984 ≈ the historical 1 Wiener QK = 3.59665 m² (Δ +2.83 %); shuffled control (seed 42) 3.9731, ±10 % band: 16.9 % vs 4.0 %; (B) SPATIAL ADJACENCY (decisive) — the protocol lists parcels in ascending order, so consecutive numbers must be neighbours: 590 consecutive pairs have their modern centroids 51.8 m apart (q25/q75 31.2/91.0 m), 89.3 % ≤ 150 m; shuffled control (seed 7): 1436.9 m / 2.5 % — 27.8× tighter. Row confidence: STRONG (both proofs) 171, MEDIUM (one) 775, WEAK (number only) 164 — per-parcel identification remains [~]. Discovery: the »Furkofze« (Fučkovci) section = 2 rows (parcels 2159/2160, owner Van Wawech Mihó) — the first named inhabitants of Fučkovci in the archive; both parcels still exist. Honest limitation: the protocol is organized by sheets with their own numberings (P39: the same number on different sheets is a DIFFERENT parcel; owner test 29/29) — the number-only join also draws cross-sheet false links; the persistence is proven at the population level, per-parcel identification remains [~]. Page selection: for the 8 pass3-chosen pages pass1 was used (pass3 has no parsed rows and is numerically unreliable — deviation from PS-full-v2 documented).",
+    "P58 (2026-10-14, v2): the P55 PS-geolocation production SANITIZED and upgraded. REMOVED: 43 rows of pp. 138–139 (the »Zusammenstellung der Grundstücke« appendix with its own numbering 1–100), proven false by P56 (median area ratio 0.0892 ≪ 3.7188 in S1 — ~42× off 1 Wiener QK; pass disagreement); the 43-row set is byte-identical to the P56 contamination list. ADDED: 26 Blatt I rows (pp. 3–4, numbers 1–36) from the P57 primary source (four independent VLM layers) — exactly all 26 lostBases of P56. Result: 1093 linked rows (1067 S1/S2 + 26 BI), 800 positioned numbers. TWO MEASURED EFFECTS: (1) the area median rises from 3.6984 to 3.7709 (Δ +4.85 %) — the v1 value was artificially LOWERED by 43 false links with ratios ~0.09; the clean value agrees with the independent P56 (3.7394) and P57 (3.7594) measurements; control (seed 42) 4.0829, ±10 % band 17.4 % vs 5.6 %; (2) the adjacency stays BYTE-IDENTICAL to v1 — 590 pairs / 51.8 m / 27.8× — positions are per-base and the set of positioned numbers unchanged, which by itself proves the sanitization does not touch the spatial structure. Confidence: STRONG 174 / MEDIUM 759 / WEAK 160 (S1/S2 values byte-identical to v1); the Blatt I rows additionally carry the P57 readConf (STRONG 3 / MEDIUM 14 / WEAK 9). Per-sheet ambiguity within v2: 211 bases / 495 rows [~] (P56: 515 across the full register incl. S3). The v1 history (1110 rows / 40.2 % / median 3.6984) is archived in the v1 evidence and v2Delta; per-parcel identification remains [~].",
   next: [
-    "Bauplätze (102 stavbnih mest): ločitev vrstic Bauplatz v protokolu → pozicije dvorišč 1825",
-    "per-Blatt ločitev joina (P39: ista številka na različnih listih = DRUGA parcela; lastniški test 29/29) — delež čez-listskih napačnih povezav neznana [~]",
-    "povezava lastnik ↔ tlorisi 1825 (buildings.json P9) prek geolociranih parcel [~]",
-    "nadhodni WFS prenos kulturnih parcel KO 1552 za Fučkovci (zunaj PS protokola)",
+    "4. VLM prehod na glave listov (»Nro. des Blattes«) — per-Blatt ločitev 211 dvoumnih base v2 (metodika štirih plasti iz P57)",
+    "prebrati strani 1–2 (naslovnica + rekapitulacija; lokalizacija 102 Bauplätze)",
+    "povezava P57 Haus Nro. (60–66 jedro + 31/29/24/20/50) s tlorisi 1825 in PT domačijami [~]",
+    "paleografija str. 138–139 (Blatt X) — zdaj izven joina, zgodovinski kontekst",
   ],
 };
 
