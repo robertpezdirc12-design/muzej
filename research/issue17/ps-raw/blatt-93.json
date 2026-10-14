@@ -1,0 +1,125 @@
+{
+ "page": 93,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791969470,
+ "usage": {
+  "completion_tokens": 524,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3492,
+  "prompt_tokens_details": {
+   "cached_tokens": 13
+  },
+  "total_tokens": 4016
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "191"
+   },
+   {
+    "row": 2,
+    "parzella": "192"
+   },
+   {
+    "row": 3,
+    "parzella": "193"
+   },
+   {
+    "row": 4,
+    "parzella": "194"
+   },
+   {
+    "row": 5,
+    "parzella": "195"
+   },
+   {
+    "row": 6,
+    "parzella": "196"
+   },
+   {
+    "row": 7,
+    "parzella": "197"
+   },
+   {
+    "row": 8,
+    "parzella": "198"
+   },
+   {
+    "row": 9,
+    "parzella": "199"
+   },
+   {
+    "row": 10,
+    "parzella": "190"
+   },
+   {
+    "row": 11,
+    "parzella": "1911"
+   },
+   {
+    "row": 12,
+    "parzella": "1912"
+   },
+   {
+    "row": 13,
+    "parzella": "1913"
+   },
+   {
+    "row": 14,
+    "parzella": "1914"
+   },
+   {
+    "row": 15,
+    "parzella": "1915"
+   },
+   {
+    "row": 16,
+    "parzella": "1916"
+   },
+   {
+    "row": 17,
+    "parzella": "1917"
+   },
+   {
+    "row": 18,
+    "parzella": "1918"
+   },
+   {
+    "row": 19,
+    "parzella": "1919"
+   },
+   {
+    "row": 20,
+    "parzella": "1920"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "I",
+    "row": 1,
+    "atParzella": "191"
+   },
+   {
+    "value": "II",
+    "row": 11,
+    "atParzella": "1911"
+   },
+   {
+    "value": "III",
+    "row": 13,
+    "atParzella": "1913"
+   },
+   {
+    "value": "IV",
+    "row": 17,
+    "atParzella": "1917"
+   }
+  ],
+  "opomba": "Vrstica 11: parcelna številka izgleda kot '1911' (štirje znaki), kar je nenavadno za naraščajoče številke (po 190 bi pričakovali 191), vendar je zapis jasno berljiv. Vrstica 13: Blatt III je prečrtan in popravljena vrednost ni povsem jasna (morda II ali IV), zato označeno negotovo."
+ },
+ "content": "{\"vrstice\": [{\"row\": 1, \"parzella\": \"191\"}, {\"row\": 2, \"parzella\": \"192\"}, {\"row\": 3, \"parzella\": \"193\"}, {\"row\": 4, \"parzella\": \"194\"}, {\"row\": 5, \"parzella\": \"195\"}, {\"row\": 6, \"parzella\": \"196\"}, {\"row\": 7, \"parzella\": \"197\"}, {\"row\": 8, \"parzella\": \"198\"}, {\"row\": 9, \"parzella\": \"199\"}, {\"row\": 10, \"parzella\": \"190\"}, {\"row\": 11, \"parzella\": \"1911\"}, {\"row\": 12, \"parzella\": \"1912\"}, {\"row\": 13, \"parzella\": \"1913\"}, {\"row\": 14, \"parzella\": \"1914\"}, {\"row\": 15, \"parzella\": \"1915\"}, {\"row\": 16, \"parzella\": \"1916\"}, {\"row\": 17, \"parzella\": \"1917\"}, {\"row\": 18, \"parzella\": \"1918\"}, {\"row\": 19, \"parzella\": \"1919\"}, {\"row\": 20, \"parzella\": \"1920\"}], \"blatt\": [{\"value\": \"I\", \"row\": 1, \"atParzella\": \"191\"}, {\"value\": \"II\", \"row\": 11, \"atParzella\": \"1911\"}, {\"value\": \"III\", \"row\": 13, \"atParzella\": \"1913\"}, {\"value\": \"IV\", \"row\": 17, \"atParzella\": \"1917\"}], \"opomba\": \"Vrstica 11: parcelna številka izgleda kot '1911' (štirje znaki), kar je nenavadno za naraščajoče številke (po 190 bi pričakovali 191), vendar je zapis jasno berljiv. Vrstica 13: Blatt III je prečrtan in popravljena vrednost ni povsem jasna (morda II ali IV), zato označeno negotovo.\"}"
+}

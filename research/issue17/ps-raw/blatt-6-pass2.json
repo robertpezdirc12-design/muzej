@@ -1,0 +1,110 @@
+{
+ "page": 6,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791965988,
+ "usage": {
+  "completion_tokens": 419,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3815
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "61"
+   },
+   {
+    "row": 2,
+    "parzella": "62"
+   },
+   {
+    "row": 3,
+    "parzella": "63"
+   },
+   {
+    "row": 4,
+    "parzella": "64"
+   },
+   {
+    "row": 5,
+    "parzella": "65"
+   },
+   {
+    "row": 6,
+    "parzella": "66"
+   },
+   {
+    "row": 7,
+    "parzella": "67"
+   },
+   {
+    "row": 8,
+    "parzella": "68"
+   },
+   {
+    "row": 9,
+    "parzella": "69"
+   },
+   {
+    "row": 10,
+    "parzella": "70"
+   },
+   {
+    "row": 11,
+    "parzella": "71"
+   },
+   {
+    "row": 12,
+    "parzella": "72"
+   },
+   {
+    "row": 13,
+    "parzella": "73"
+   },
+   {
+    "row": 14,
+    "parzella": "74"
+   },
+   {
+    "row": 15,
+    "parzella": "75"
+   },
+   {
+    "row": 16,
+    "parzella": "76"
+   },
+   {
+    "row": 17,
+    "parzella": "77[~]"
+   },
+   {
+    "row": 18,
+    "parzella": "78"
+   },
+   {
+    "row": 19,
+    "parzella": "79"
+   },
+   {
+    "row": 20,
+    "parzella": "80"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "I",
+    "row": 1,
+    "atParzella": "61"
+   }
+  ],
+  "opomba": "Vrstica 17: številka parcela je nejasna (morda 77 ali popravljena vrednost), označena z [~]. Vse ostale vrstice v stolpcu 1 vsebujejo le ditto znamenja (dve piki)."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"61\"},\n    {\"row\": 2, \"parzella\": \"62\"},\n    {\"row\": 3, \"parzella\": \"63\"},\n    {\"row\": 4, \"parzella\": \"64\"},\n    {\"row\": 5, \"parzella\": \"65\"},\n    {\"row\": 6, \"parzella\": \"66\"},\n    {\"row\": 7, \"parzella\": \"67\"},\n    {\"row\": 8, \"parzella\": \"68\"},\n    {\"row\": 9, \"parzella\": \"69\"},\n    {\"row\": 10, \"parzella\": \"70\"},\n    {\"row\": 11, \"parzella\": \"71\"},\n    {\"row\": 12, \"parzella\": \"72\"},\n    {\"row\": 13, \"parzella\": \"73\"},\n    {\"row\": 14, \"parzella\": \"74\"},\n    {\"row\": 15, \"parzella\": \"75\"},\n    {\"row\": 16, \"parzella\": \"76\"},\n    {\"row\": 17, \"parzella\": \"77[~]\"},\n    {\"row\": 18, \"parzella\": \"78\"},\n    {\"row\": 19, \"parzella\": \"79\"},\n    {\"row\": 20, \"parzella\": \"80\"}\n  ],\n  \"blatt\": [\n    {\"value\": \"I\", \"row\": 1, \"atParzella\": \"61\"}\n  ],\n  \"opomba\": \"Vrstica 17: številka parcela je nejasna (morda 77 ali popravljena vrednost), označena z [~]. Vse ostale vrstice v stolpcu 1 vsebujejo le ditto znamenja (dve piki).\"\n}"
+}

@@ -1,0 +1,115 @@
+{
+ "page": 128,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791970843,
+ "usage": {
+  "completion_tokens": 504,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3900
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "2501"
+   },
+   {
+    "row": 2,
+    "parzella": "2502"
+   },
+   {
+    "row": 3,
+    "parzella": "2503"
+   },
+   {
+    "row": 4,
+    "parzella": "2504"
+   },
+   {
+    "row": 5,
+    "parzella": "2505"
+   },
+   {
+    "row": 6,
+    "parzella": "2506"
+   },
+   {
+    "row": 7,
+    "parzella": "2507"
+   },
+   {
+    "row": 8,
+    "parzella": "2508"
+   },
+   {
+    "row": 9,
+    "parzella": "2509"
+   },
+   {
+    "row": 10,
+    "parzella": "2510"
+   },
+   {
+    "row": 11,
+    "parzella": "2511"
+   },
+   {
+    "row": 12,
+    "parzella": "2512"
+   },
+   {
+    "row": 13,
+    "parzella": "2513"
+   },
+   {
+    "row": 14,
+    "parzella": "2514"
+   },
+   {
+    "row": 15,
+    "parzella": "2515"
+   },
+   {
+    "row": 16,
+    "parzella": "2516"
+   },
+   {
+    "row": 17,
+    "parzella": "2517"
+   },
+   {
+    "row": 18,
+    "parzella": "2518"
+   },
+   {
+    "row": 19,
+    "parzella": "2519"
+   },
+   {
+    "row": 20,
+    "parzella": "2520"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "V",
+    "row": 1,
+    "atParzella": "2501"
+   },
+   {
+    "value": "VI",
+    "row": 11,
+    "atParzella": "2511"
+   }
+  ],
+  "opomba": "Vrstica 11: številka lista VI je prečrtana z rdečim tušem in zamenjana (ali nadpisana) z VII; vrednost VII je tudi prečrtana. Končna vrednost je negotova [~]. Vrstica 11 ima tudi rdeče prečrtano parcelno številko 2511."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"2501\"},\n    {\"row\": 2, \"parzella\": \"2502\"},\n    {\"row\": 3, \"parzella\": \"2503\"},\n    {\"row\": 4, \"parzella\": \"2504\"},\n    {\"row\": 5, \"parzella\": \"2505\"},\n    {\"row\": 6, \"parzella\": \"2506\"},\n    {\"row\": 7, \"parzella\": \"2507\"},\n    {\"row\": 8, \"parzella\": \"2508\"},\n    {\"row\": 9, \"parzella\": \"2509\"},\n    {\"row\": 10, \"parzella\": \"2510\"},\n    {\"row\": 11, \"parzella\": \"2511\"},\n    {\"row\": 12, \"parzella\": \"2512\"},\n    {\"row\": 13, \"parzella\": \"2513\"},\n    {\"row\": 14, \"parzella\": \"2514\"},\n    {\"row\": 15, \"parzella\": \"2515\"},\n    {\"row\": 16, \"parzella\": \"2516\"},\n    {\"row\": 17, \"parzella\": \"2517\"},\n    {\"row\": 18, \"parzella\": \"2518\"},\n    {\"row\": 19, \"parzella\": \"2519\"},\n    {\"row\": 20, \"parzella\": \"2520\"}\n  ],\n  \"blatt\": [\n    {\n      \"value\": \"V\",\n      \"row\": 1,\n      \"atParzella\": \"2501\"\n    },\n    {\n      \"value\": \"VI\",\n      \"row\": 11,\n      \"atParzella\": \"2511\"\n    }\n  ],\n  \"opomba\": \"Vrstica 11: številka lista VI je prečrtana z rdečim tušem in zamenjana (ali nadpisana) z VII; vrednost VII je tudi prečrtana. Končna vrednost je negotova [~]. Vrstica 11 ima tudi rdeče prečrtano parcelno številko 2511.\"\n}"
+}

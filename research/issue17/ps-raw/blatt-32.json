@@ -1,0 +1,120 @@
+{
+ "page": 32,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791966725,
+ "usage": {
+  "completion_tokens": 556,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3952
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "581"
+   },
+   {
+    "row": 2,
+    "parzella": "582"
+   },
+   {
+    "row": 3,
+    "parzella": "583"
+   },
+   {
+    "row": 4,
+    "parzella": "584"
+   },
+   {
+    "row": 5,
+    "parzella": "585"
+   },
+   {
+    "row": 6,
+    "parzella": "586"
+   },
+   {
+    "row": 7,
+    "parzella": "587"
+   },
+   {
+    "row": 8,
+    "parzella": "588"
+   },
+   {
+    "row": 9,
+    "parzella": "589"
+   },
+   {
+    "row": 10,
+    "parzella": "590"
+   },
+   {
+    "row": 11,
+    "parzella": "591"
+   },
+   {
+    "row": 12,
+    "parzella": "592"
+   },
+   {
+    "row": 13,
+    "parzella": "593"
+   },
+   {
+    "row": 14,
+    "parzella": "594"
+   },
+   {
+    "row": 15,
+    "parzella": "595"
+   },
+   {
+    "row": 16,
+    "parzella": "596"
+   },
+   {
+    "row": 17,
+    "parzella": "597"
+   },
+   {
+    "row": 18,
+    "parzella": "598"
+   },
+   {
+    "row": 19,
+    "parzella": "599"
+   },
+   {
+    "row": 20,
+    "parzella": "600"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "I",
+    "row": 1,
+    "atParzella": "581"
+   },
+   {
+    "value": "II",
+    "row": 9,
+    "atParzella": "589"
+   },
+   {
+    "value": "III",
+    "row": 12,
+    "atParzella": "592"
+   }
+  ],
+  "opomba": "Vrstice 14-20 (parcele 594-600) so prečrtane z rdečim tušem. V stolpcu 'Nro. des Blattes' so v vrsticah 2-8 in 10-11, 13 ter 16-20 ditto znamenja (dve piki), ki niso izpisana kot številke. Vrsta 15 ima v stolpcu Blatt zapisano številko, ki je težko berljiva (morda popravljena), zato ni vključena med jasno prebrane vrednosti."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"581\"},\n    {\"row\": 2, \"parzella\": \"582\"},\n    {\"row\": 3, \"parzella\": \"583\"},\n    {\"row\": 4, \"parzella\": \"584\"},\n    {\"row\": 5, \"parzella\": \"585\"},\n    {\"row\": 6, \"parzella\": \"586\"},\n    {\"row\": 7, \"parzella\": \"587\"},\n    {\"row\": 8, \"parzella\": \"588\"},\n    {\"row\": 9, \"parzella\": \"589\"},\n    {\"row\": 10, \"parzella\": \"590\"},\n    {\"row\": 11, \"parzella\": \"591\"},\n    {\"row\": 12, \"parzella\": \"592\"},\n    {\"row\": 13, \"parzella\": \"593\"},\n    {\"row\": 14, \"parzella\": \"594\"},\n    {\"row\": 15, \"parzella\": \"595\"},\n    {\"row\": 16, \"parzella\": \"596\"},\n    {\"row\": 17, \"parzella\": \"597\"},\n    {\"row\": 18, \"parzella\": \"598\"},\n    {\"row\": 19, \"parzella\": \"599\"},\n    {\"row\": 20, \"parzella\": \"600\"}\n  ],\n  \"blatt\": [\n    {\"value\": \"I\", \"row\": 1, \"atParzella\": \"581\"},\n    {\"value\": \"II\", \"row\": 9, \"atParzella\": \"589\"},\n    {\"value\": \"III\", \"row\": 12, \"atParzella\": \"592\"}\n  ],\n  \"opomba\": \"Vrstice 14-20 (parcele 594-600) so prečrtane z rdečim tušem. V stolpcu 'Nro. des Blattes' so v vrsticah 2-8 in 10-11, 13 ter 16-20 ditto znamenja (dve piki), ki niso izpisana kot številke. Vrsta 15 ima v stolpcu Blatt zapisano številko, ki je težko berljiva (morda popravljena), zato ni vključena med jasno prebrane vrednosti.\"\n}"
+}

@@ -1,0 +1,110 @@
+{
+ "page": 125,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791970724,
+ "usage": {
+  "completion_tokens": 478,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3874
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "2441"
+   },
+   {
+    "row": 2,
+    "parzella": "2442"
+   },
+   {
+    "row": 3,
+    "parzella": "2443"
+   },
+   {
+    "row": 4,
+    "parzella": "2444"
+   },
+   {
+    "row": 5,
+    "parzella": "2445"
+   },
+   {
+    "row": 6,
+    "parzella": "2446"
+   },
+   {
+    "row": 7,
+    "parzella": "2447"
+   },
+   {
+    "row": 8,
+    "parzella": "2448"
+   },
+   {
+    "row": 9,
+    "parzella": "2449"
+   },
+   {
+    "row": 10,
+    "parzella": "2450"
+   },
+   {
+    "row": 11,
+    "parzella": "2451"
+   },
+   {
+    "row": 12,
+    "parzella": "2452"
+   },
+   {
+    "row": 13,
+    "parzella": "2453"
+   },
+   {
+    "row": 14,
+    "parzella": "2454"
+   },
+   {
+    "row": 15,
+    "parzella": "2455"
+   },
+   {
+    "row": 16,
+    "parzella": "2456"
+   },
+   {
+    "row": 17,
+    "parzella": "2457"
+   },
+   {
+    "row": 18,
+    "parzella": "2458"
+   },
+   {
+    "row": 19,
+    "parzella": "2459"
+   },
+   {
+    "row": 20,
+    "parzella": "2460"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "17",
+    "row": 1,
+    "atParzella": "2441"
+   }
+  ],
+  "opomba": "Vrstica 1: v stolpcu 'Nro. des Blattes' je zapisana številka 17 (arabske cifre), v naslednjih vrsticah so ditto znamenja (dve piki). Vse parcelne številke so naraščajoče (2441–2460), brez rdečih prečrtanj."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"2441\"},\n    {\"row\": 2, \"parzella\": \"2442\"},\n    {\"row\": 3, \"parzella\": \"2443\"},\n    {\"row\": 4, \"parzella\": \"2444\"},\n    {\"row\": 5, \"parzella\": \"2445\"},\n    {\"row\": 6, \"parzella\": \"2446\"},\n    {\"row\": 7, \"parzella\": \"2447\"},\n    {\"row\": 8, \"parzella\": \"2448\"},\n    {\"row\": 9, \"parzella\": \"2449\"},\n    {\"row\": 10, \"parzella\": \"2450\"},\n    {\"row\": 11, \"parzella\": \"2451\"},\n    {\"row\": 12, \"parzella\": \"2452\"},\n    {\"row\": 13, \"parzella\": \"2453\"},\n    {\"row\": 14, \"parzella\": \"2454\"},\n    {\"row\": 15, \"parzella\": \"2455\"},\n    {\"row\": 16, \"parzella\": \"2456\"},\n    {\"row\": 17, \"parzella\": \"2457\"},\n    {\"row\": 18, \"parzella\": \"2458\"},\n    {\"row\": 19, \"parzella\": \"2459\"},\n    {\"row\": 20, \"parzella\": \"2460\"}\n  ],\n  \"blatt\": [\n    {\n      \"value\": \"17\",\n      \"row\": 1,\n      \"atParzella\": \"2441\"\n    }\n  ],\n  \"opomba\": \"Vrstica 1: v stolpcu 'Nro. des Blattes' je zapisana številka 17 (arabske cifre), v naslednjih vrsticah so ditto znamenja (dve piki). Vse parcelne številke so naraščajoče (2441–2460), brez rdečih prečrtanj.\"\n}"
+}

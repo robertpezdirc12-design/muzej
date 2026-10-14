@@ -1,0 +1,110 @@
+{
+ "page": 118,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791970351,
+ "usage": {
+  "completion_tokens": 339,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3492,
+  "prompt_tokens_details": {
+   "cached_tokens": 13
+  },
+  "total_tokens": 3831
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "2001"
+   },
+   {
+    "row": 2,
+    "parzella": "2002"
+   },
+   {
+    "row": 3,
+    "parzella": "2003"
+   },
+   {
+    "row": 4,
+    "parzella": "2004"
+   },
+   {
+    "row": 5,
+    "parzella": "2005"
+   },
+   {
+    "row": 6,
+    "parzella": "2006"
+   },
+   {
+    "row": 7,
+    "parzella": "2007"
+   },
+   {
+    "row": 8,
+    "parzella": "2008"
+   },
+   {
+    "row": 9,
+    "parzella": "2009"
+   },
+   {
+    "row": 10,
+    "parzella": "2010"
+   },
+   {
+    "row": 11,
+    "parzella": "2011"
+   },
+   {
+    "row": 12,
+    "parzella": "2012"
+   },
+   {
+    "row": 13,
+    "parzella": "2013"
+   },
+   {
+    "row": 14,
+    "parzella": "2014"
+   },
+   {
+    "row": 15,
+    "parzella": "2015"
+   },
+   {
+    "row": 16,
+    "parzella": "2016"
+   },
+   {
+    "row": 17,
+    "parzella": "2017"
+   },
+   {
+    "row": 18,
+    "parzella": "2018"
+   },
+   {
+    "row": 19,
+    "parzella": "2019"
+   },
+   {
+    "row": 20,
+    "parzella": "2020"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "IV",
+    "row": 1,
+    "atParzella": "2001"
+   }
+  ],
+  "opomba": null
+ },
+ "content": "{\"vrstice\": [{\"row\": 1, \"parzella\": \"2001\"}, {\"row\": 2, \"parzella\": \"2002\"}, {\"row\": 3, \"parzella\": \"2003\"}, {\"row\": 4, \"parzella\": \"2004\"}, {\"row\": 5, \"parzella\": \"2005\"}, {\"row\": 6, \"parzella\": \"2006\"}, {\"row\": 7, \"parzella\": \"2007\"}, {\"row\": 8, \"parzella\": \"2008\"}, {\"row\": 9, \"parzella\": \"2009\"}, {\"row\": 10, \"parzella\": \"2010\"}, {\"row\": 11, \"parzella\": \"2011\"}, {\"row\": 12, \"parzella\": \"2012\"}, {\"row\": 13, \"parzella\": \"2013\"}, {\"row\": 14, \"parzella\": \"2014\"}, {\"row\": 15, \"parzella\": \"2015\"}, {\"row\": 16, \"parzella\": \"2016\"}, {\"row\": 17, \"parzella\": \"2017\"}, {\"row\": 18, \"parzella\": \"2018\"}, {\"row\": 19, \"parzella\": \"2019\"}, {\"row\": 20, \"parzella\": \"2020\"}], \"blatt\": [{\"value\": \"IV\", \"row\": 1, \"atParzella\": \"2001\"}], \"opomba\": null}"
+}

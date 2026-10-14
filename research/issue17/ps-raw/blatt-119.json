@@ -1,0 +1,120 @@
+{
+ "page": 119,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791970364,
+ "usage": {
+  "completion_tokens": 489,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3885
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "2021"
+   },
+   {
+    "row": 2,
+    "parzella": "2022"
+   },
+   {
+    "row": 3,
+    "parzella": "2020"
+   },
+   {
+    "row": 4,
+    "parzella": "2024"
+   },
+   {
+    "row": 5,
+    "parzella": "2025"
+   },
+   {
+    "row": 6,
+    "parzella": "2026"
+   },
+   {
+    "row": 7,
+    "parzella": "2017"
+   },
+   {
+    "row": 8,
+    "parzella": "2018"
+   },
+   {
+    "row": 9,
+    "parzella": "2029"
+   },
+   {
+    "row": 10,
+    "parzella": "2030"
+   },
+   {
+    "row": 11,
+    "parzella": "2031"
+   },
+   {
+    "row": 12,
+    "parzella": "2032"
+   },
+   {
+    "row": 13,
+    "parzella": "2033"
+   },
+   {
+    "row": 14,
+    "parzella": "2034"
+   },
+   {
+    "row": 15,
+    "parzella": "2035"
+   },
+   {
+    "row": 16,
+    "parzella": "2037"
+   },
+   {
+    "row": 17,
+    "parzella": "2039"
+   },
+   {
+    "row": 18,
+    "parzella": "2041[~]"
+   },
+   {
+    "row": 19,
+    "parzella": "2043"
+   },
+   {
+    "row": 20,
+    "parzella": "2040"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "IV",
+    "row": 1,
+    "atParzella": "2021"
+   },
+   {
+    "value": "XIV",
+    "row": 9,
+    "atParzella": "2029"
+   },
+   {
+    "value": "V",
+    "row": 10,
+    "atParzella": "2030"
+   }
+  ],
+  "opomba": "Vrstni red parcel ni strogo naraščajoč (2020 po 2022, 2024 pred 2025, 2017-2018 po 2026, 2040 na koncu). V vrstici 18 je številka morda 2041 (ali 2047), v vrstici 20 je 2040 (ne 2046). Blatt XIV je prečrtan in popravljen na V."
+ },
+ "content": "{\"vrstice\": [{\"row\": 1, \"parzella\": \"2021\"}, {\"row\": 2, \"parzella\": \"2022\"}, {\"row\": 3, \"parzella\": \"2020\"}, {\"row\": 4, \"parzella\": \"2024\"}, {\"row\": 5, \"parzella\": \"2025\"}, {\"row\": 6, \"parzella\": \"2026\"}, {\"row\": 7, \"parzella\": \"2017\"}, {\"row\": 8, \"parzella\": \"2018\"}, {\"row\": 9, \"parzella\": \"2029\"}, {\"row\": 10, \"parzella\": \"2030\"}, {\"row\": 11, \"parzella\": \"2031\"}, {\"row\": 12, \"parzella\": \"2032\"}, {\"row\": 13, \"parzella\": \"2033\"}, {\"row\": 14, \"parzella\": \"2034\"}, {\"row\": 15, \"parzella\": \"2035\"}, {\"row\": 16, \"parzella\": \"2037\"}, {\"row\": 17, \"parzella\": \"2039\"}, {\"row\": 18, \"parzella\": \"2041[~]\"}, {\"row\": 19, \"parzella\": \"2043\"}, {\"row\": 20, \"parzella\": \"2040\"}], \"blatt\": [{\"value\": \"IV\", \"row\": 1, \"atParzella\": \"2021\"}, {\"value\": \"XIV\", \"row\": 9, \"atParzella\": \"2029\"}, {\"value\": \"V\", \"row\": 10, \"atParzella\": \"2030\"}], \"opomba\": \"Vrstni red parcel ni strogo naraščajoč (2020 po 2022, 2024 pred 2025, 2017-2018 po 2026, 2040 na koncu). V vrstici 18 je številka morda 2041 (ali 2047), v vrstici 20 je 2040 (ne 2046). Blatt XIV je prečrtan in popravljen na V.\"}"
+}

@@ -4017,3 +4017,84 @@ export const PS_REGISTER_START_P57: {
     "povezava P57 Haus Nro. (60–66 jedro + 31/29/24/20/50) s tlorisi 1825 in PT domačijami [~]",
   ],
 };
+
+export const BLATT_HEADERS_P59: {
+  series: "PS";
+  source: string;
+  status: ResearchStatus;
+  generatedBy: string;
+  coverage: { S1: string; S2: string; S3: string; pages34: string };
+  arbitration: { rule: string; pagesArbitrated: number; agreementPages: number; singlePassPages: number[] };
+  structure: {
+    coreBlattI: { pages: string; parcels: string; transitionZone: string };
+    coreBlattII: { pages: string; starts: string; interleave: string };
+    interleavedLocalPages: string;
+    midPageTransitions: string;
+  };
+  perBlattAmbiguity: {
+    basesOnMultiplePages_v2: number;
+    basesOnMultipleBlatter: number;
+    ruleCandidateBases: string[];
+    ruleCandidateNote: string;
+    verdictSi: string;
+  };
+  statusLine: string;
+  verdictSi: string;
+  verdictEn: string;
+  next: string[];
+} = {
+  series: "PS",
+  source:
+    "N083PS.pdf (VAČ uodid 373415, docid 41780) — izrezi levega stolpca (x30–250, 3× Lanczos q92) iz 135 posnetkov strani 5–139 + P57 polno branje str. 3–4; sveža branja research/issue17/ps-raw/blatt-<page>{,-pass2}.json",
+  status: "REVIEW",
+  generatedBy: "scripts/p59_ps_blatt_headers.py (deterministično, brez AI ob delovanju; branja scripts/p59_ps_read_blatt.mjs + p59_fetch_strip.py)",
+  coverage: {
+    S1: "strani 5–127: 123/123 × 2 prehoda",
+    S2: "strani 128–132 + 137 branja (137 samo pass1); 133–136 ni svežega branja — VLM kvota 429 (odprto)",
+    S3: "strani 138–139 ni svežega branja (kvota); P38: ps-138 brez stolpca (nastop zapadka), ps-139 'III' ×1 [~]",
+    pages34: "P57 polno branje (Blatt I)",
+  },
+  arbitration: {
+    rule: "numerala @ vrstica 1 = atribucija strani; nesoglasja prehodov razsodil agent vizualno na 3× izrezih (25 strani, hardcoded razlogi); sred-stranske numeralе = extras [~]",
+    pagesArbitrated: 25,
+    agreementPages: 103,
+    singlePassPages: [137],
+  },
+  structure: {
+    coreBlattI: {
+      pages: "3–40 (38 strani) + p41 'I·II' + p42 'III' prečrtano [~]",
+      parcels: "1–800",
+      transitionZone: "721–800 (p40/p41/p42 popravki I→II [~])",
+    },
+    coreBlattII: {
+      pages: "43–92 (49 strani)",
+      starts: "801 (p43, oči)",
+      interleave: "p72 = Blatt III (1281–1302) znotraj II območja — cona 1100–1640 prepletena (p79 1621–1640 → p80 1541–1560 padajoče)",
+    },
+    interleavedLocalPages:
+      "strani z majhnimi razponi sredi globalnega teka (npr. 26, 61–62, 81, 83–91: 41–60/101–120/161–180/601–620/921–960) — per-Riede/per-Blatt lokalne sekcije; p101 z ULOMKI (196½ ...) — podštevilčene parcele",
+    midPageTransitions: "p93 (1901–1907 prečrtano → 1303+), p101 (III→IV @ r7), p65 (II→III @ r2 [~])",
+  },
+  perBlattAmbiguity: {
+    basesOnMultiplePages_v2: 211,
+    basesOnMultipleBlatter: 106,
+    ruleCandidateBases: ["163", "176", "644", "653", "654", "655", "656", "657", "666", "671", "676", "928", "930", "934", "936", "939", "1831"],
+    ruleCandidateNote:
+      "baza s TOČNO eno instanco z median razmerjem v [0.8, 1.25] — kandidat za prihodnjo per-Blatt atribucijo joina (P60), MERJENO ne izvedeno [~]",
+    verdictSi:
+      "per-Blatt ločitev MERJENA: od 211 bazi na več straneh jih 106 sega čez ≥2 Blatta (P39: ista številka pod različnima Blattoma = druga parcela) — instance zdaj razločljive; join po številki ostaja nespremenjen (brez dokaza se NE prerazporeja)",
+  },
+  statusLine:
+    "P59 GLAVE LISTOV: 129/135 strani sveže branih (2 prehoda; 133–136, 138–139 kvota, p137 pass2), 25 arbitraža-oči, struktura Blatt I–V + lokalne sekcije; 211 dvoumnih base → 106 čez-Blatt, 17 ruleCandidate [~]; join v2 nespremenjen",
+  verdictSi:
+    "P59: GLAVE LISTOV REGISTRA PS (issue #13) — prvo zanesljivo branje stolpca 'Nro. des Blattes' (levi izrez 135 strani × 2 neodvisna prehoda + 25 arbitraž agent-oči na 3× izrezih; stari P38 blatt stolpec potrjeno šumen — p12 ditto prebrano kot 20× 'I'): Blatt I = parcele 1–800 (strani 3–40; prehodna cona 721–800 s popravki I→II na p40/p41/p42 [~]), Blatt II se začne pri 801 (strani 43–92; p72 = Blatt III 1281–1302 vmes; cona 1100–1640 prepletena z lokalnimi sekcijami 161–180/601–620/921–960 [~]); interleave per-Riede sekcij sredi globalnega teka (p26/p37/p39/...), p101 z ulomki (196½ — podštevilčene parcele); sred-stranski prehodi p93 (1901–1907 prečrtano → 1303+)/p101/p65; VLM Kurrent pasti dokumentirane (4↔8, 7→1, odrezane vodilne števke — parzella razponi nizka zaupanja, numeralе visoka); PER-BLATT DVoumnost: 211 base v2 na več straneh → 106 čez ≥2 Blatta (instance zdaj razločljive po P39), 17 ruleCandidate (edina instanca v pasu razmerij [0.8, 1.25] — npr. 163: Blatt I @ 7.0 vs Blatt II @ 0.981); join v2 NESPREMENJEN (meritve brez prerazporeditev — disciplina P56/P58); pokritost: S1 123/123 × 2, S2 6/10, S3 0/2 (kvota 429 — odprto); identifikacija per-Blatt instanc [~] — strojno branje ni dokazni vir",
+  verdictEn:
+    "P59: PS REGISTER LEAF HEADERS (issue #13) — first reliable reading of the 'Nro. des Blattes' column (left-strip crops of 135 pages x 2 independent passes + 25 agent-eye arbitrations on 3x crops; the old P38 blatt column confirmed noisy — p12 ditto read as 20x 'I'): Blatt I = parcels 1-800 (pp. 3-40; transition zone 721-800 with I-to-II corrections on p40/p41/p42 [~]), Blatt II starts at 801 (pp. 43-92; p72 = Blatt III 1281-1302 in between; the 1100-1640 zone interleaved with local sections 161-180/601-620/921-960 [~]); per-Riede section interleave within the global run (p26/p37/p39/...), p101 with fractions (196 1/2 — sub-numbered parcels); mid-page transitions p93 (1901-1907 crossed out to 1303+)/p101/p65; VLM Kurrent pitfalls documented (4-8, 7-to-1, dropped leading digits — parzella ranges low-confidence, numerals high); PER-BLATT AMBIGUITY: of 211 v2 bases on multiple pages, 106 span >=2 Blaetter (instances now distinguishable per P39), 17 ruleCandidates (exactly one instance within the ratio band [0.8, 1.25] — e.g. 163: Blatt I @ 7.0 vs Blatt II @ 0.981); the v2 join UNCHANGED (measurements without reassignments — P56/P58 discipline); coverage: S1 123/123 x 2, S2 6/10, S3 0/2 (quota 429 — open); per-Blatt instance identification [~] — machine reading is not an evidentiary source",
+  next: [
+    "prebrati 133–136 (S2) + 138–139 (S3) ob ponovitvi VLM kvote + p137 pass2 — popolna pokritost",
+    "P60 kandidat: per-Blatt atribucija joina za ruleCandidate baze (dokazno pravilo: edina instanca v pasu [0.8, 1.25] + soslednost) — zahteva lastno fazo s pini",
+    "razlagati prehodno cono 721–800 (popravki I→II): reorganizacija listov ali Kultur skupine [~]",
+    "p26/p37/p39 lokalne sekcije (161–180/101–120 pod Blatt I): povezati z Riede stolpcem polnih branj",
+    "4. VLM prehod glav izkoristi tudi P58 open #6 (Haus Nro. ↔ tlorisi)",
+  ],
+};

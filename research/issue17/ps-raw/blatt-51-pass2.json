@@ -1,0 +1,110 @@
+{
+ "page": 51,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791967395,
+ "usage": {
+  "completion_tokens": 473,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3869
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "961"
+   },
+   {
+    "row": 2,
+    "parzella": "962"
+   },
+   {
+    "row": 3,
+    "parzella": "963"
+   },
+   {
+    "row": 4,
+    "parzella": "964"
+   },
+   {
+    "row": 5,
+    "parzella": "965"
+   },
+   {
+    "row": 6,
+    "parzella": "966"
+   },
+   {
+    "row": 7,
+    "parzella": "967"
+   },
+   {
+    "row": 8,
+    "parzella": "968"
+   },
+   {
+    "row": 9,
+    "parzella": "969"
+   },
+   {
+    "row": 10,
+    "parzella": "970"
+   },
+   {
+    "row": 11,
+    "parzella": "971"
+   },
+   {
+    "row": 12,
+    "parzella": "972"
+   },
+   {
+    "row": 13,
+    "parzella": "973"
+   },
+   {
+    "row": 14,
+    "parzella": "974"
+   },
+   {
+    "row": 15,
+    "parzella": "975"
+   },
+   {
+    "row": 16,
+    "parzella": "976"
+   },
+   {
+    "row": 17,
+    "parzella": "977"
+   },
+   {
+    "row": 18,
+    "parzella": "978"
+   },
+   {
+    "row": 19,
+    "parzella": "979"
+   },
+   {
+    "row": 20,
+    "parzella": "980"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "II",
+    "row": 1,
+    "atParzella": "961"
+   }
+  ],
+  "opomba": "Številke parcel so napisane v Kurrent pisavi (9-6-1 do 9-8-0). Vrstice 3, 4, 5, 8, 9, 10 in 11 imajo rdeče prečrtane številke (verjetno izbrisane/veljavne popravki). V stolpcu 1 (Blatt) je v prvi vrstici izpisana rimska številka II (prečrtana), v nadaljnjih vrsticah samo ditto znamenja (dve piki)."
+ },
+ "content": "{\"vrstice\": [{\"row\": 1, \"parzella\": \"961\"}, {\"row\": 2, \"parzella\": \"962\"}, {\"row\": 3, \"parzella\": \"963\"}, {\"row\": 4, \"parzella\": \"964\"}, {\"row\": 5, \"parzella\": \"965\"}, {\"row\": 6, \"parzella\": \"966\"}, {\"row\": 7, \"parzella\": \"967\"}, {\"row\": 8, \"parzella\": \"968\"}, {\"row\": 9, \"parzella\": \"969\"}, {\"row\": 10, \"parzella\": \"970\"}, {\"row\": 11, \"parzella\": \"971\"}, {\"row\": 12, \"parzella\": \"972\"}, {\"row\": 13, \"parzella\": \"973\"}, {\"row\": 14, \"parzella\": \"974\"}, {\"row\": 15, \"parzella\": \"975\"}, {\"row\": 16, \"parzella\": \"976\"}, {\"row\": 17, \"parzella\": \"977\"}, {\"row\": 18, \"parzella\": \"978\"}, {\"row\": 19, \"parzella\": \"979\"}, {\"row\": 20, \"parzella\": \"980\"}], \"blatt\": [{\"value\": \"II\", \"row\": 1, \"atParzella\": \"961\"}], \"opomba\": \"Številke parcel so napisane v Kurrent pisavi (9-6-1 do 9-8-0). Vrstice 3, 4, 5, 8, 9, 10 in 11 imajo rdeče prečrtane številke (verjetno izbrisane/veljavne popravki). V stolpcu 1 (Blatt) je v prvi vrstici izpisana rimska številka II (prečrtana), v nadaljnjih vrsticah samo ditto znamenja (dve piki).\"}"
+}

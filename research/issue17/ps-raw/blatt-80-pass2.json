@@ -1,0 +1,110 @@
+{
+ "page": 80,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791968821,
+ "usage": {
+  "completion_tokens": 441,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 13
+  },
+  "total_tokens": 3837
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "1541"
+   },
+   {
+    "row": 2,
+    "parzella": "1542"
+   },
+   {
+    "row": 3,
+    "parzella": "1543"
+   },
+   {
+    "row": 4,
+    "parzella": "1544"
+   },
+   {
+    "row": 5,
+    "parzella": "1545"
+   },
+   {
+    "row": 6,
+    "parzella": "1546"
+   },
+   {
+    "row": 7,
+    "parzella": "1547"
+   },
+   {
+    "row": 8,
+    "parzella": "1548"
+   },
+   {
+    "row": 9,
+    "parzella": "1549"
+   },
+   {
+    "row": 10,
+    "parzella": "1550"
+   },
+   {
+    "row": 11,
+    "parzella": "1551"
+   },
+   {
+    "row": 12,
+    "parzella": "1552"
+   },
+   {
+    "row": 13,
+    "parzella": "1553"
+   },
+   {
+    "row": 14,
+    "parzella": "1554"
+   },
+   {
+    "row": 15,
+    "parzella": "1555"
+   },
+   {
+    "row": 16,
+    "parzella": "1556"
+   },
+   {
+    "row": 17,
+    "parzella": "1557"
+   },
+   {
+    "row": 18,
+    "parzella": "1558"
+   },
+   {
+    "row": 19,
+    "parzella": "1559"
+   },
+   {
+    "row": 20,
+    "parzella": "1560"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "II",
+    "row": 1,
+    "atParzella": "1541"
+   }
+  ],
+  "opomba": "Vrstica 20 (parcela 1560) je prečrtana z velikim križcem. Vse številke so naraščajoče (1541-1560). Številka 4 v Kurrentu ima značilno zanko in je včasih podobna 8 ali 9, vendar v kontekstu naraščajočega zaporedja so vse cifre jasno berljive."
+ },
+ "content": "{\"vrstice\": [{\"row\": 1, \"parzella\": \"1541\"}, {\"row\": 2, \"parzella\": \"1542\"}, {\"row\": 3, \"parzella\": \"1543\"}, {\"row\": 4, \"parzella\": \"1544\"}, {\"row\": 5, \"parzella\": \"1545\"}, {\"row\": 6, \"parzella\": \"1546\"}, {\"row\": 7, \"parzella\": \"1547\"}, {\"row\": 8, \"parzella\": \"1548\"}, {\"row\": 9, \"parzella\": \"1549\"}, {\"row\": 10, \"parzella\": \"1550\"}, {\"row\": 11, \"parzella\": \"1551\"}, {\"row\": 12, \"parzella\": \"1552\"}, {\"row\": 13, \"parzella\": \"1553\"}, {\"row\": 14, \"parzella\": \"1554\"}, {\"row\": 15, \"parzella\": \"1555\"}, {\"row\": 16, \"parzella\": \"1556\"}, {\"row\": 17, \"parzella\": \"1557\"}, {\"row\": 18, \"parzella\": \"1558\"}, {\"row\": 19, \"parzella\": \"1559\"}, {\"row\": 20, \"parzella\": \"1560\"}], \"blatt\": [{\"value\": \"II\", \"row\": 1, \"atParzella\": \"1541\"}], \"opomba\": \"Vrstica 20 (parcela 1560) je prečrtana z velikim križcem. Vse številke so naraščajoče (1541-1560). Številka 4 v Kurrentu ima značilno zanko in je včasih podobna 8 ali 9, vendar v kontekstu naraščajočega zaporedja so vse cifre jasno berljive.\"}"
+}

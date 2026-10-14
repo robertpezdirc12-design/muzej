@@ -1,0 +1,110 @@
+{
+ "page": 122,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791970591,
+ "usage": {
+  "completion_tokens": 497,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3893
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "2781"
+   },
+   {
+    "row": 2,
+    "parzella": "2782"
+   },
+   {
+    "row": 3,
+    "parzella": "2783"
+   },
+   {
+    "row": 4,
+    "parzella": "2784"
+   },
+   {
+    "row": 5,
+    "parzella": "2785"
+   },
+   {
+    "row": 6,
+    "parzella": "2786"
+   },
+   {
+    "row": 7,
+    "parzella": "2787"
+   },
+   {
+    "row": 8,
+    "parzella": "2788"
+   },
+   {
+    "row": 9,
+    "parzella": "2789"
+   },
+   {
+    "row": 10,
+    "parzella": "2790"
+   },
+   {
+    "row": 11,
+    "parzella": "2791"
+   },
+   {
+    "row": 12,
+    "parzella": "2792"
+   },
+   {
+    "row": 13,
+    "parzella": "2793"
+   },
+   {
+    "row": 14,
+    "parzella": "2794"
+   },
+   {
+    "row": 15,
+    "parzella": "2795"
+   },
+   {
+    "row": 16,
+    "parzella": "2796"
+   },
+   {
+    "row": 17,
+    "parzella": "2797"
+   },
+   {
+    "row": 18,
+    "parzella": "2798"
+   },
+   {
+    "row": 19,
+    "parzella": "2799"
+   },
+   {
+    "row": 20,
+    "parzella": "2800"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "IV",
+    "row": 1,
+    "atParzella": "2781"
+   }
+  ],
+  "opomba": "Vrstica 4: parcelna številka 2384 je prečrtana z rdečim in nadpisana z 2784 (ali podobno), vendar je končna vrednost 2784 v skladu z naraščajočim zaporedjem. Vse številke so napisane s Kurrent pisavo in večina je prečrtanih z rdečim tušem."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"2781\"},\n    {\"row\": 2, \"parzella\": \"2782\"},\n    {\"row\": 3, \"parzella\": \"2783\"},\n    {\"row\": 4, \"parzella\": \"2784\"},\n    {\"row\": 5, \"parzella\": \"2785\"},\n    {\"row\": 6, \"parzella\": \"2786\"},\n    {\"row\": 7, \"parzella\": \"2787\"},\n    {\"row\": 8, \"parzella\": \"2788\"},\n    {\"row\": 9, \"parzella\": \"2789\"},\n    {\"row\": 10, \"parzella\": \"2790\"},\n    {\"row\": 11, \"parzella\": \"2791\"},\n    {\"row\": 12, \"parzella\": \"2792\"},\n    {\"row\": 13, \"parzella\": \"2793\"},\n    {\"row\": 14, \"parzella\": \"2794\"},\n    {\"row\": 15, \"parzella\": \"2795\"},\n    {\"row\": 16, \"parzella\": \"2796\"},\n    {\"row\": 17, \"parzella\": \"2797\"},\n    {\"row\": 18, \"parzella\": \"2798\"},\n    {\"row\": 19, \"parzella\": \"2799\"},\n    {\"row\": 20, \"parzella\": \"2800\"}\n  ],\n  \"blatt\": [\n    {\n      \"value\": \"IV\",\n      \"row\": 1,\n      \"atParzella\": \"2781\"\n    }\n  ],\n  \"opomba\": \"Vrstica 4: parcelna številka 2384 je prečrtana z rdečim in nadpisana z 2784 (ali podobno), vendar je končna vrednost 2784 v skladu z naraščajočim zaporedjem. Vse številke so napisane s Kurrent pisavo in večina je prečrtanih z rdečim tušem.\"\n}"
+}

@@ -344,6 +344,24 @@ API (statični, brez runtime AI):
   (qa-p55 prepisan na v2 + novi qa-p58: v1 arhiv + delta == P56 + dve obliki
   po P53/P57 lekciji); SHEET_GEOREFS in dokazi P40–P57 nespremenjeni.
 
+- **glave listov registra PS (P59, issue #13)** — stolpec **»Nro. des Blattes«**
+  prvič zanesljivo prebran: levi izrez vseh 135 strani (5–139) × 2 neodvisna VLM
+  prehoda + **25 arbitraž agent-oči** na 3× izrezih (stari P38 blatt stolpec
+  potrjeno šumen — p12 ditto prebrano kot 20× 'I'); STRUKTURA: **Blatt I =
+  parcele 1–800** (str. 3–40; prehodna cona 721–800 s popravki I→II [~]),
+  **Blatt II se začne pri 801** (str. 43–92; p72 = Blatt III 1281–1302 vmes;
+  cona 1100–1640 prepletena z lokalnimi sekcijami 161–180/601–620/921–960; p101
+  z ulomki 196½); **per-Blatt ločitev 211 dvoumnih base v2 MERJENA**: 106 čez
+  ≥2 Blatta (P39: ista številka pod različnima Blattoma = druga parcela),
+  **17 ruleCandidate** (edina instanca v pasu razmerij [0.8, 1.25] — npr. 163:
+  Blatt I @ 7.0 vs Blatt II @ 0.981 ≈ 1 QK) — kandidati za P60; **join v2
+  NESPREMENJEN** (meritve brez prerazporeditev); pokritost S1 123/123 × 2, S2
+  6/10, S3 0/2 (VLM kvota 429 — odprto); dokaz
+  `research/issue17/ps-blatt-headers.json` + runtime
+  `src/data/atlas/ps-blatt-headers.json` (`/api/atlas/ps-blatt-headers`) +
+  `scripts/p59_ps_blatt_headers.py` (I1–I9, `--check` bajtno); QA 62 → **63**;
+  SHEET_GEOREFS in dokazi P40–P58 nespremenjeni.
+
 ## Varnost
 
 Žeton `VERCEL_TOKEN` je shranjen izključno kot šifrirana GitHub Actions

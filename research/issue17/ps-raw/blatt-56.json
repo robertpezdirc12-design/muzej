@@ -1,0 +1,110 @@
+{
+ "page": 56,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791967950,
+ "usage": {
+  "completion_tokens": 404,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3492,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3896
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "1061"
+   },
+   {
+    "row": 2,
+    "parzella": "1062"
+   },
+   {
+    "row": 3,
+    "parzella": "1063"
+   },
+   {
+    "row": 4,
+    "parzella": "1064"
+   },
+   {
+    "row": 5,
+    "parzella": "1065"
+   },
+   {
+    "row": 6,
+    "parzella": "1066"
+   },
+   {
+    "row": 7,
+    "parzella": "1067"
+   },
+   {
+    "row": 8,
+    "parzella": "1068"
+   },
+   {
+    "row": 9,
+    "parzella": "1069"
+   },
+   {
+    "row": 10,
+    "parzella": "1070"
+   },
+   {
+    "row": 11,
+    "parzella": "1071"
+   },
+   {
+    "row": 12,
+    "parzella": "1072"
+   },
+   {
+    "row": 13,
+    "parzella": "1073"
+   },
+   {
+    "row": 14,
+    "parzella": "1074"
+   },
+   {
+    "row": 15,
+    "parzella": "1075"
+   },
+   {
+    "row": 16,
+    "parzella": "1076"
+   },
+   {
+    "row": 17,
+    "parzella": "1077"
+   },
+   {
+    "row": 18,
+    "parzella": "1078"
+   },
+   {
+    "row": 19,
+    "parzella": "1079"
+   },
+   {
+    "row": 20,
+    "parzella": "1080"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "II",
+    "row": 1,
+    "atParzella": "1061"
+   }
+  ],
+  "opomba": "Vrstica 1: Blatt II (rimska številka). Vse nadaljnje vrstice imajo ditto (\"), ki niso zapisane. Vse parcelne številke so trimestne in naraščajoče (1061-1080)."
+ },
+ "content": "{\"vrstice\": [{\"row\": 1, \"parzella\": \"1061\"}, {\"row\": 2, \"parzella\": \"1062\"}, {\"row\": 3, \"parzella\": \"1063\"}, {\"row\": 4, \"parzella\": \"1064\"}, {\"row\": 5, \"parzella\": \"1065\"}, {\"row\": 6, \"parzella\": \"1066\"}, {\"row\": 7, \"parzella\": \"1067\"}, {\"row\": 8, \"parzella\": \"1068\"}, {\"row\": 9, \"parzella\": \"1069\"}, {\"row\": 10, \"parzella\": \"1070\"}, {\"row\": 11, \"parzella\": \"1071\"}, {\"row\": 12, \"parzella\": \"1072\"}, {\"row\": 13, \"parzella\": \"1073\"}, {\"row\": 14, \"parzella\": \"1074\"}, {\"row\": 15, \"parzella\": \"1075\"}, {\"row\": 16, \"parzella\": \"1076\"}, {\"row\": 17, \"parzella\": \"1077\"}, {\"row\": 18, \"parzella\": \"1078\"}, {\"row\": 19, \"parzella\": \"1079\"}, {\"row\": 20, \"parzella\": \"1080\"}], \"blatt\": [{\"value\": \"II\", \"row\": 1, \"atParzella\": \"1061\"}], \"opomba\": \"Vrstica 1: Blatt II (rimska številka). Vse nadaljnje vrstice imajo ditto (\\\"), ki niso zapisane. Vse parcelne številke so trimestne in naraščajoče (1061-1080).\"}"
+}

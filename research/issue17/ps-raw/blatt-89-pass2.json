@@ -1,0 +1,110 @@
+{
+ "page": 89,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791969368,
+ "usage": {
+  "completion_tokens": 457,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3492,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3949
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "921"
+   },
+   {
+    "row": 2,
+    "parzella": "922"
+   },
+   {
+    "row": 3,
+    "parzella": "923"
+   },
+   {
+    "row": 4,
+    "parzella": "924"
+   },
+   {
+    "row": 5,
+    "parzella": "925"
+   },
+   {
+    "row": 6,
+    "parzella": "926"
+   },
+   {
+    "row": 7,
+    "parzella": "927"
+   },
+   {
+    "row": 8,
+    "parzella": "928"
+   },
+   {
+    "row": 9,
+    "parzella": "929"
+   },
+   {
+    "row": 10,
+    "parzella": "930"
+   },
+   {
+    "row": 11,
+    "parzella": "931"
+   },
+   {
+    "row": 12,
+    "parzella": "932"
+   },
+   {
+    "row": 13,
+    "parzella": "933"
+   },
+   {
+    "row": 14,
+    "parzella": "934"
+   },
+   {
+    "row": 15,
+    "parzella": "935"
+   },
+   {
+    "row": 16,
+    "parzella": "936"
+   },
+   {
+    "row": 17,
+    "parzella": "937"
+   },
+   {
+    "row": 18,
+    "parzella": "938"
+   },
+   {
+    "row": 19,
+    "parzella": "939"
+   },
+   {
+    "row": 20,
+    "parzella": "940"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "II",
+    "row": 1,
+    "atParzella": "921"
+   }
+  ],
+  "opomba": "Vrstice 3-20 v stolpcu 1 vsebujejo ditto znamenja (\"), ki niso prepisana. Številke parcel so zapisane v kurrent pisavi; nekatere vrstice (3-5, 8-12, 14-16, 18-19) imajo rdečo prečrto (verjetno brisanje/veljavnost). Vrstni red številk je naraščajoči (921-940)."
+ },
+ "content": "{\"vrstice\": [{\"row\": 1, \"parzella\": \"921\"}, {\"row\": 2, \"parzella\": \"922\"}, {\"row\": 3, \"parzella\": \"923\"}, {\"row\": 4, \"parzella\": \"924\"}, {\"row\": 5, \"parzella\": \"925\"}, {\"row\": 6, \"parzella\": \"926\"}, {\"row\": 7, \"parzella\": \"927\"}, {\"row\": 8, \"parzella\": \"928\"}, {\"row\": 9, \"parzella\": \"929\"}, {\"row\": 10, \"parzella\": \"930\"}, {\"row\": 11, \"parzella\": \"931\"}, {\"row\": 12, \"parzella\": \"932\"}, {\"row\": 13, \"parzella\": \"933\"}, {\"row\": 14, \"parzella\": \"934\"}, {\"row\": 15, \"parzella\": \"935\"}, {\"row\": 16, \"parzella\": \"936\"}, {\"row\": 17, \"parzella\": \"937\"}, {\"row\": 18, \"parzella\": \"938\"}, {\"row\": 19, \"parzella\": \"939\"}, {\"row\": 20, \"parzella\": \"940\"}], \"blatt\": [{\"value\": \"II\", \"row\": 1, \"atParzella\": \"921\"}], \"opomba\": \"Vrstice 3-20 v stolpcu 1 vsebujejo ditto znamenja (\\\"), ki niso prepisana. Številke parcel so zapisane v kurrent pisavi; nekatere vrstice (3-5, 8-12, 14-16, 18-19) imajo rdečo prečrto (verjetno brisanje/veljavnost). Vrstni red številk je naraščajoči (921-940).\"}"
+}

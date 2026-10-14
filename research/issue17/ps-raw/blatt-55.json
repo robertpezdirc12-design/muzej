@@ -1,0 +1,110 @@
+{
+ "page": 55,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791967501,
+ "usage": {
+  "completion_tokens": 487,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3883
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "1041"
+   },
+   {
+    "row": 2,
+    "parzella": "1042"
+   },
+   {
+    "row": 3,
+    "parzella": "1043"
+   },
+   {
+    "row": 4,
+    "parzella": "1044"
+   },
+   {
+    "row": 5,
+    "parzella": "1045"
+   },
+   {
+    "row": 6,
+    "parzella": "1046"
+   },
+   {
+    "row": 7,
+    "parzella": "1047"
+   },
+   {
+    "row": 8,
+    "parzella": "1048"
+   },
+   {
+    "row": 9,
+    "parzella": "1049"
+   },
+   {
+    "row": 10,
+    "parzella": "1050"
+   },
+   {
+    "row": 11,
+    "parzella": "1051"
+   },
+   {
+    "row": 12,
+    "parzella": "1052"
+   },
+   {
+    "row": 13,
+    "parzella": "1053"
+   },
+   {
+    "row": 14,
+    "parzella": "1054"
+   },
+   {
+    "row": 15,
+    "parzella": "1055"
+   },
+   {
+    "row": 16,
+    "parzella": "1056"
+   },
+   {
+    "row": 17,
+    "parzella": "1057"
+   },
+   {
+    "row": 18,
+    "parzella": "1058"
+   },
+   {
+    "row": 19,
+    "parzella": "1059"
+   },
+   {
+    "row": 20,
+    "parzella": "1060"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "II",
+    "row": 1,
+    "atParzella": "1041"
+   }
+  ],
+  "opomba": "Vrstice 5, 7, 9, 12, 16 in 20 imajo rdečo prečrtano parcelno številko (verjetno izbrisane parcele). V stolpcu 'Bezeichnung' so vidni rokopisni vnos (npr. 'A', 'G') in rdeči zapisi ('Riede Gemeinde...'). Številke v stolpcu 'Nro. der Parzelle' so naraščajoče od 1041 do 1060."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"1041\"},\n    {\"row\": 2, \"parzella\": \"1042\"},\n    {\"row\": 3, \"parzella\": \"1043\"},\n    {\"row\": 4, \"parzella\": \"1044\"},\n    {\"row\": 5, \"parzella\": \"1045\"},\n    {\"row\": 6, \"parzella\": \"1046\"},\n    {\"row\": 7, \"parzella\": \"1047\"},\n    {\"row\": 8, \"parzella\": \"1048\"},\n    {\"row\": 9, \"parzella\": \"1049\"},\n    {\"row\": 10, \"parzella\": \"1050\"},\n    {\"row\": 11, \"parzella\": \"1051\"},\n    {\"row\": 12, \"parzella\": \"1052\"},\n    {\"row\": 13, \"parzella\": \"1053\"},\n    {\"row\": 14, \"parzella\": \"1054\"},\n    {\"row\": 15, \"parzella\": \"1055\"},\n    {\"row\": 16, \"parzella\": \"1056\"},\n    {\"row\": 17, \"parzella\": \"1057\"},\n    {\"row\": 18, \"parzella\": \"1058\"},\n    {\"row\": 19, \"parzella\": \"1059\"},\n    {\"row\": 20, \"parzella\": \"1060\"}\n  ],\n  \"blatt\": [\n    {\"value\": \"II\", \"row\": 1, \"atParzella\": \"1041\"}\n  ],\n  \"opomba\": \"Vrstice 5, 7, 9, 12, 16 in 20 imajo rdečo prečrtano parcelno številko (verjetno izbrisane parcele). V stolpcu 'Bezeichnung' so vidni rokopisni vnos (npr. 'A', 'G') in rdeči zapisi ('Riede Gemeinde...'). Številke v stolpcu 'Nro. der Parzelle' so naraščajoče od 1041 do 1060.\"\n}"
+}

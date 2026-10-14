@@ -1,0 +1,110 @@
+{
+ "page": 130,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791970883,
+ "usage": {
+  "completion_tokens": 471,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3867
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "2541"
+   },
+   {
+    "row": 2,
+    "parzella": "2542"
+   },
+   {
+    "row": 3,
+    "parzella": "2543"
+   },
+   {
+    "row": 4,
+    "parzella": "2544"
+   },
+   {
+    "row": 5,
+    "parzella": "2545"
+   },
+   {
+    "row": 6,
+    "parzella": "2546"
+   },
+   {
+    "row": 7,
+    "parzella": "2547"
+   },
+   {
+    "row": 8,
+    "parzella": "2548"
+   },
+   {
+    "row": 9,
+    "parzella": "2549"
+   },
+   {
+    "row": 10,
+    "parzella": "2550"
+   },
+   {
+    "row": 11,
+    "parzella": "2551"
+   },
+   {
+    "row": 12,
+    "parzella": "2552"
+   },
+   {
+    "row": 13,
+    "parzella": "2553"
+   },
+   {
+    "row": 14,
+    "parzella": "2554"
+   },
+   {
+    "row": 15,
+    "parzella": "2555"
+   },
+   {
+    "row": 16,
+    "parzella": "2556"
+   },
+   {
+    "row": 17,
+    "parzella": "2557"
+   },
+   {
+    "row": 18,
+    "parzella": "2558"
+   },
+   {
+    "row": 19,
+    "parzella": "2559"
+   },
+   {
+    "row": 20,
+    "parzella": "2560"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "V",
+    "row": 1,
+    "atParzella": "2541"
+   }
+  ],
+  "opomba": "Vrstica 10: številka parcelne številke 2550 je z rdečim tušem prečrtana (vsebuje tudi črko 'a' v stolpcu Bezeichnung). Vrstica 17: številka 2557 ima dolgo črto (morda prečrtana ali le podčrtana)."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"2541\"},\n    {\"row\": 2, \"parzella\": \"2542\"},\n    {\"row\": 3, \"parzella\": \"2543\"},\n    {\"row\": 4, \"parzella\": \"2544\"},\n    {\"row\": 5, \"parzella\": \"2545\"},\n    {\"row\": 6, \"parzella\": \"2546\"},\n    {\"row\": 7, \"parzella\": \"2547\"},\n    {\"row\": 8, \"parzella\": \"2548\"},\n    {\"row\": 9, \"parzella\": \"2549\"},\n    {\"row\": 10, \"parzella\": \"2550\"},\n    {\"row\": 11, \"parzella\": \"2551\"},\n    {\"row\": 12, \"parzella\": \"2552\"},\n    {\"row\": 13, \"parzella\": \"2553\"},\n    {\"row\": 14, \"parzella\": \"2554\"},\n    {\"row\": 15, \"parzella\": \"2555\"},\n    {\"row\": 16, \"parzella\": \"2556\"},\n    {\"row\": 17, \"parzella\": \"2557\"},\n    {\"row\": 18, \"parzella\": \"2558\"},\n    {\"row\": 19, \"parzella\": \"2559\"},\n    {\"row\": 20, \"parzella\": \"2560\"}\n  ],\n  \"blatt\": [\n    {\n      \"value\": \"V\",\n      \"row\": 1,\n      \"atParzella\": \"2541\"\n    }\n  ],\n  \"opomba\": \"Vrstica 10: številka parcelne številke 2550 je z rdečim tušem prečrtana (vsebuje tudi črko 'a' v stolpcu Bezeichnung). Vrstica 17: številka 2557 ima dolgo črto (morda prečrtana ali le podčrtana).\"\n}"
+}

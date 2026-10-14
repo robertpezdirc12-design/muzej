@@ -1,0 +1,114 @@
+{
+ "page": 117,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791970315,
+ "usage": {
+  "completion_tokens": 485,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 2
+  },
+  "total_tokens": 3881
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "2294"
+   },
+   {
+    "row": 2,
+    "parzella": "2293"
+   },
+   {
+    "row": 3,
+    "parzella": "2292"
+   },
+   {
+    "row": 4,
+    "parzella": "2284"
+   },
+   {
+    "row": 5,
+    "parzella": "2285"
+   },
+   {
+    "row": 6,
+    "parzella": "2285"
+   },
+   {
+    "row": 7,
+    "parzella": "2286"
+   },
+   {
+    "row": 8,
+    "parzella": "2286"
+   },
+   {
+    "row": 9,
+    "parzella": "2289"
+   },
+   {
+    "row": 10,
+    "parzella": "2288"
+   },
+   {
+    "row": 11,
+    "parzella": "2287"
+   },
+   {
+    "row": 12,
+    "parzella": "2283"
+   },
+   {
+    "row": 13,
+    "parzella": "2290"
+   },
+   {
+    "row": 14,
+    "parzella": "2291"
+   },
+   {
+    "row": 15,
+    "parzella": "2297"
+   },
+   {
+    "row": 16,
+    "parzella": "2294"
+   },
+   {
+    "row": 17,
+    "parzella": "2295"
+   },
+   {
+    "row": 18,
+    "parzella": "2296"
+   },
+   {
+    "row": 19,
+    "parzella": "2298"
+   },
+   {
+    "row": 20,
+    "parzella": "2299"
+   },
+   {
+    "row": 21,
+    "parzella": "2300"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "VI",
+    "row": 1,
+    "atParzella": "2294"
+   }
+  ],
+  "opomba": "Vrstica 1: Blatt VI (rimsko število). Vrstice 2-21: ditto znamenja. Parcelne številke so v območju 2283-2300; vrstici 6 in 8 imata podvojene številke (2285 oziroma 2286), kar je zabeleženo kot napisano."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"2294\"},\n    {\"row\": 2, \"parzella\": \"2293\"},\n    {\"row\": 3, \"parzella\": \"2292\"},\n    {\"row\": 4, \"parzella\": \"2284\"},\n    {\"row\": 5, \"parzella\": \"2285\"},\n    {\"row\": 6, \"parzella\": \"2285\"},\n    {\"row\": 7, \"parzella\": \"2286\"},\n    {\"row\": 8, \"parzella\": \"2286\"},\n    {\"row\": 9, \"parzella\": \"2289\"},\n    {\"row\": 10, \"parzella\": \"2288\"},\n    {\"row\": 11, \"parzella\": \"2287\"},\n    {\"row\": 12, \"parzella\": \"2283\"},\n    {\"row\": 13, \"parzella\": \"2290\"},\n    {\"row\": 14, \"parzella\": \"2291\"},\n    {\"row\": 15, \"parzella\": \"2297\"},\n    {\"row\": 16, \"parzella\": \"2294\"},\n    {\"row\": 17, \"parzella\": \"2295\"},\n    {\"row\": 18, \"parzella\": \"2296\"},\n    {\"row\": 19, \"parzella\": \"2298\"},\n    {\"row\": 20, \"parzella\": \"2299\"},\n    {\"row\": 21, \"parzella\": \"2300\"}\n  ],\n  \"blatt\": [\n    {\"value\": \"VI\", \"row\": 1, \"atParzella\": \"2294\"}\n  ],\n  \"opomba\": \"Vrstica 1: Blatt VI (rimsko število). Vrstice 2-21: ditto znamenja. Parcelne številke so v območju 2283-2300; vrstici 6 in 8 imata podvojene številke (2285 oziroma 2286), kar je zabeleženo kot napisano.\"\n}"
+}

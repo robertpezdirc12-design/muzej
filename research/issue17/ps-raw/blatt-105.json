@@ -1,0 +1,106 @@
+{
+ "page": 105,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791969838,
+ "usage": {
+  "completion_tokens": 425,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3821
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "2040"
+   },
+   {
+    "row": 2,
+    "parzella": "2042"
+   },
+   {
+    "row": 3,
+    "parzella": "2044"
+   },
+   {
+    "row": 4,
+    "parzella": "2046"
+   },
+   {
+    "row": 5,
+    "parzella": "2048"
+   },
+   {
+    "row": 6,
+    "parzella": "2050"
+   },
+   {
+    "row": 7,
+    "parzella": "2052"
+   },
+   {
+    "row": 8,
+    "parzella": "2054"
+   },
+   {
+    "row": 9,
+    "parzella": "2056"
+   },
+   {
+    "row": 10,
+    "parzella": "2058"
+   },
+   {
+    "row": 11,
+    "parzella": "2060"
+   },
+   {
+    "row": 12,
+    "parzella": "2062"
+   },
+   {
+    "row": 13,
+    "parzella": "2064"
+   },
+   {
+    "row": 14,
+    "parzella": "2066"
+   },
+   {
+    "row": 15,
+    "parzella": "2068"
+   },
+   {
+    "row": 16,
+    "parzella": "2070"
+   },
+   {
+    "row": 17,
+    "parzella": "2072"
+   },
+   {
+    "row": 18,
+    "parzella": "2074"
+   },
+   {
+    "row": 19,
+    "parzella": "2076"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "IV",
+    "row": 1,
+    "atParzella": "2040"
+   }
+  ],
+  "opomba": "Vse številke v stolpcu 'Nro. der Parzelle' so prečrtane z rdečim tušem. Številka lista IV je zapisana le v prvi vrstici, v nadaljnjih vrsticah so ditto znaki (dve piki)."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"2040\"},\n    {\"row\": 2, \"parzella\": \"2042\"},\n    {\"row\": 3, \"parzella\": \"2044\"},\n    {\"row\": 4, \"parzella\": \"2046\"},\n    {\"row\": 5, \"parzella\": \"2048\"},\n    {\"row\": 6, \"parzella\": \"2050\"},\n    {\"row\": 7, \"parzella\": \"2052\"},\n    {\"row\": 8, \"parzella\": \"2054\"},\n    {\"row\": 9, \"parzella\": \"2056\"},\n    {\"row\": 10, \"parzella\": \"2058\"},\n    {\"row\": 11, \"parzella\": \"2060\"},\n    {\"row\": 12, \"parzella\": \"2062\"},\n    {\"row\": 13, \"parzella\": \"2064\"},\n    {\"row\": 14, \"parzella\": \"2066\"},\n    {\"row\": 15, \"parzella\": \"2068\"},\n    {\"row\": 16, \"parzella\": \"2070\"},\n    {\"row\": 17, \"parzella\": \"2072\"},\n    {\"row\": 18, \"parzella\": \"2074\"},\n    {\"row\": 19, \"parzella\": \"2076\"}\n  ],\n  \"blatt\": [\n    {\"value\": \"IV\", \"row\": 1, \"atParzella\": \"2040\"}\n  ],\n  \"opomba\": \"Vse številke v stolpcu 'Nro. der Parzelle' so prečrtane z rdečim tušem. Številka lista IV je zapisana le v prvi vrstici, v nadaljnjih vrsticah so ditto znaki (dve piki).\"\n}"
+}

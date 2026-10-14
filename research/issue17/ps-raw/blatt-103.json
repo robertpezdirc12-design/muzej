@@ -1,0 +1,110 @@
+{
+ "page": 103,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791969755,
+ "usage": {
+  "completion_tokens": 465,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3861
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "2001"
+   },
+   {
+    "row": 2,
+    "parzella": "2002"
+   },
+   {
+    "row": 3,
+    "parzella": "2003"
+   },
+   {
+    "row": 4,
+    "parzella": "2004"
+   },
+   {
+    "row": 5,
+    "parzella": "2005"
+   },
+   {
+    "row": 6,
+    "parzella": "2006"
+   },
+   {
+    "row": 7,
+    "parzella": "2007"
+   },
+   {
+    "row": 8,
+    "parzella": "2008"
+   },
+   {
+    "row": 9,
+    "parzella": "2009"
+   },
+   {
+    "row": 10,
+    "parzella": "2010"
+   },
+   {
+    "row": 11,
+    "parzella": "2011"
+   },
+   {
+    "row": 12,
+    "parzella": "2012"
+   },
+   {
+    "row": 13,
+    "parzella": "2013"
+   },
+   {
+    "row": 14,
+    "parzella": "2014"
+   },
+   {
+    "row": 15,
+    "parzella": "2015"
+   },
+   {
+    "row": 16,
+    "parzella": "2016"
+   },
+   {
+    "row": 17,
+    "parzella": "2017"
+   },
+   {
+    "row": 18,
+    "parzella": "2018"
+   },
+   {
+    "row": 19,
+    "parzella": "2019"
+   },
+   {
+    "row": 20,
+    "parzella": "2020"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "IV",
+    "row": 1,
+    "atParzella": "2001"
+   }
+  ],
+  "opomba": "Vrstice 1–8 imajo rdečo prečrto (verjetno preklicane/obravnavane). Vrstica 1 vsebuje rimsko številko IV (Blatt IV), vse nadaljnje vrstice v stolpcu 1 vsebujejo le ditto znamenja (dve piki), ki niso zapisana."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"2001\"},\n    {\"row\": 2, \"parzella\": \"2002\"},\n    {\"row\": 3, \"parzella\": \"2003\"},\n    {\"row\": 4, \"parzella\": \"2004\"},\n    {\"row\": 5, \"parzella\": \"2005\"},\n    {\"row\": 6, \"parzella\": \"2006\"},\n    {\"row\": 7, \"parzella\": \"2007\"},\n    {\"row\": 8, \"parzella\": \"2008\"},\n    {\"row\": 9, \"parzella\": \"2009\"},\n    {\"row\": 10, \"parzella\": \"2010\"},\n    {\"row\": 11, \"parzella\": \"2011\"},\n    {\"row\": 12, \"parzella\": \"2012\"},\n    {\"row\": 13, \"parzella\": \"2013\"},\n    {\"row\": 14, \"parzella\": \"2014\"},\n    {\"row\": 15, \"parzella\": \"2015\"},\n    {\"row\": 16, \"parzella\": \"2016\"},\n    {\"row\": 17, \"parzella\": \"2017\"},\n    {\"row\": 18, \"parzella\": \"2018\"},\n    {\"row\": 19, \"parzella\": \"2019\"},\n    {\"row\": 20, \"parzella\": \"2020\"}\n  ],\n  \"blatt\": [\n    {\n      \"value\": \"IV\",\n      \"row\": 1,\n      \"atParzella\": \"2001\"\n    }\n  ],\n  \"opomba\": \"Vrstice 1–8 imajo rdečo prečrto (verjetno preklicane/obravnavane). Vrstica 1 vsebuje rimsko številko IV (Blatt IV), vse nadaljnje vrstice v stolpcu 1 vsebujejo le ditto znamenja (dve piki), ki niso zapisana.\"\n}"
+}

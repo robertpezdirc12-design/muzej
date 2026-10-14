@@ -1,0 +1,114 @@
+{
+ "page": 70,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791968478,
+ "usage": {
+  "completion_tokens": 532,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3492,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 4024
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "1241"
+   },
+   {
+    "row": 2,
+    "parzella": "1242"
+   },
+   {
+    "row": 3,
+    "parzella": "1243"
+   },
+   {
+    "row": 4,
+    "parzella": "1244"
+   },
+   {
+    "row": 5,
+    "parzella": "1245"
+   },
+   {
+    "row": 6,
+    "parzella": "1246"
+   },
+   {
+    "row": 7,
+    "parzella": "1247"
+   },
+   {
+    "row": 8,
+    "parzella": "1248"
+   },
+   {
+    "row": 9,
+    "parzella": "1249"
+   },
+   {
+    "row": 10,
+    "parzella": "1250"
+   },
+   {
+    "row": 11,
+    "parzella": "1251"
+   },
+   {
+    "row": 12,
+    "parzella": "1252"
+   },
+   {
+    "row": 13,
+    "parzella": "1253"
+   },
+   {
+    "row": 14,
+    "parzella": "1254"
+   },
+   {
+    "row": 15,
+    "parzella": "1255"
+   },
+   {
+    "row": 16,
+    "parzella": "1256"
+   },
+   {
+    "row": 17,
+    "parzella": "1257"
+   },
+   {
+    "row": 18,
+    "parzella": "1258"
+   },
+   {
+    "row": 19,
+    "parzella": "1259"
+   },
+   {
+    "row": 20,
+    "parzella": "1260"
+   },
+   {
+    "row": 21,
+    "parzella": "1261"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "II",
+    "row": 1,
+    "atParzella": "1241"
+   }
+  ],
+  "opomba": "Vse številke v stolpcu 'Nro. der Parzelle' so naraščajoče (1241–1261). Vrstice z rdečim prečrtanjem (npr. 1244, 1246, 1248, 1250, 1252, 1254) vsebujejo še vedno berljive številke. Stolpec 'Nro. des Blattes' vsebuje rimsko številko II. v prvi vrstici, v ostalih vrsticah so ditto znaki (dve piki)."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"1241\"},\n    {\"row\": 2, \"parzella\": \"1242\"},\n    {\"row\": 3, \"parzella\": \"1243\"},\n    {\"row\": 4, \"parzella\": \"1244\"},\n    {\"row\": 5, \"parzella\": \"1245\"},\n    {\"row\": 6, \"parzella\": \"1246\"},\n    {\"row\": 7, \"parzella\": \"1247\"},\n    {\"row\": 8, \"parzella\": \"1248\"},\n    {\"row\": 9, \"parzella\": \"1249\"},\n    {\"row\": 10, \"parzella\": \"1250\"},\n    {\"row\": 11, \"parzella\": \"1251\"},\n    {\"row\": 12, \"parzella\": \"1252\"},\n    {\"row\": 13, \"parzella\": \"1253\"},\n    {\"row\": 14, \"parzella\": \"1254\"},\n    {\"row\": 15, \"parzella\": \"1255\"},\n    {\"row\": 16, \"parzella\": \"1256\"},\n    {\"row\": 17, \"parzella\": \"1257\"},\n    {\"row\": 18, \"parzella\": \"1258\"},\n    {\"row\": 19, \"parzella\": \"1259\"},\n    {\"row\": 20, \"parzella\": \"1260\"},\n    {\"row\": 21, \"parzella\": \"1261\"}\n  ],\n  \"blatt\": [\n    {\n      \"value\": \"II\",\n      \"row\": 1,\n      \"atParzella\": \"1241\"\n    }\n  ],\n  \"opomba\": \"Vse številke v stolpcu 'Nro. der Parzelle' so naraščajoče (1241–1261). Vrstice z rdečim prečrtanjem (npr. 1244, 1246, 1248, 1250, 1252, 1254) vsebujejo še vedno berljive številke. Stolpec 'Nro. des Blattes' vsebuje rimsko številko II. v prvi vrstici, v ostalih vrsticah so ditto znaki (dve piki).\"\n}"
+}

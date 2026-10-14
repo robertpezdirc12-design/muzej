@@ -1,0 +1,110 @@
+{
+ "page": 78,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791968751,
+ "usage": {
+  "completion_tokens": 425,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3492,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3917
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "1501"
+   },
+   {
+    "row": 2,
+    "parzella": "1502"
+   },
+   {
+    "row": 3,
+    "parzella": "1503"
+   },
+   {
+    "row": 4,
+    "parzella": "1504"
+   },
+   {
+    "row": 5,
+    "parzella": "1505"
+   },
+   {
+    "row": 6,
+    "parzella": "1506"
+   },
+   {
+    "row": 7,
+    "parzella": "1507"
+   },
+   {
+    "row": 8,
+    "parzella": "1508"
+   },
+   {
+    "row": 9,
+    "parzella": "1509"
+   },
+   {
+    "row": 10,
+    "parzella": "1510"
+   },
+   {
+    "row": 11,
+    "parzella": "1511"
+   },
+   {
+    "row": 12,
+    "parzella": "1512"
+   },
+   {
+    "row": 13,
+    "parzella": "1513"
+   },
+   {
+    "row": 14,
+    "parzella": "1514"
+   },
+   {
+    "row": 15,
+    "parzella": "1515"
+   },
+   {
+    "row": 16,
+    "parzella": "1516"
+   },
+   {
+    "row": 17,
+    "parzella": "1517"
+   },
+   {
+    "row": 18,
+    "parzella": "1518"
+   },
+   {
+    "row": 19,
+    "parzella": "1519"
+   },
+   {
+    "row": 20,
+    "parzella": "1520"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "II",
+    "row": 1,
+    "atParzella": "1501"
+   }
+  ],
+  "opomba": "Vrstice 5-14 (parcele 1505-1514) so prečrtane z rdečim tušem. V stolpcu 'Bezeichnung' je zapisano 'Wüstung Pod'."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"1501\"},\n    {\"row\": 2, \"parzella\": \"1502\"},\n    {\"row\": 3, \"parzella\": \"1503\"},\n    {\"row\": 4, \"parzella\": \"1504\"},\n    {\"row\": 5, \"parzella\": \"1505\"},\n    {\"row\": 6, \"parzella\": \"1506\"},\n    {\"row\": 7, \"parzella\": \"1507\"},\n    {\"row\": 8, \"parzella\": \"1508\"},\n    {\"row\": 9, \"parzella\": \"1509\"},\n    {\"row\": 10, \"parzella\": \"1510\"},\n    {\"row\": 11, \"parzella\": \"1511\"},\n    {\"row\": 12, \"parzella\": \"1512\"},\n    {\"row\": 13, \"parzella\": \"1513\"},\n    {\"row\": 14, \"parzella\": \"1514\"},\n    {\"row\": 15, \"parzella\": \"1515\"},\n    {\"row\": 16, \"parzella\": \"1516\"},\n    {\"row\": 17, \"parzella\": \"1517\"},\n    {\"row\": 18, \"parzella\": \"1518\"},\n    {\"row\": 19, \"parzella\": \"1519\"},\n    {\"row\": 20, \"parzella\": \"1520\"}\n  ],\n  \"blatt\": [\n    {\n      \"value\": \"II\",\n      \"row\": 1,\n      \"atParzella\": \"1501\"\n    }\n  ],\n  \"opomba\": \"Vrstice 5-14 (parcele 1505-1514) so prečrtane z rdečim tušem. V stolpcu 'Bezeichnung' je zapisano 'Wüstung Pod'.\"\n}"
+}

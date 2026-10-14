@@ -1,0 +1,120 @@
+{
+ "page": 92,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791969460,
+ "usage": {
+  "completion_tokens": 505,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 3394
+  },
+  "total_tokens": 3901
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "281"
+   },
+   {
+    "row": 2,
+    "parzella": "282"
+   },
+   {
+    "row": 3,
+    "parzella": "283"
+   },
+   {
+    "row": 4,
+    "parzella": "284"
+   },
+   {
+    "row": 5,
+    "parzella": "285"
+   },
+   {
+    "row": 6,
+    "parzella": "286"
+   },
+   {
+    "row": 7,
+    "parzella": "287"
+   },
+   {
+    "row": 8,
+    "parzella": "288"
+   },
+   {
+    "row": 9,
+    "parzella": "289"
+   },
+   {
+    "row": 10,
+    "parzella": "290"
+   },
+   {
+    "row": 11,
+    "parzella": "291"
+   },
+   {
+    "row": 12,
+    "parzella": "292"
+   },
+   {
+    "row": 13,
+    "parzella": "293"
+   },
+   {
+    "row": 14,
+    "parzella": "294"
+   },
+   {
+    "row": 15,
+    "parzella": "295"
+   },
+   {
+    "row": 16,
+    "parzella": "296"
+   },
+   {
+    "row": 17,
+    "parzella": "297"
+   },
+   {
+    "row": 18,
+    "parzella": "298"
+   },
+   {
+    "row": 19,
+    "parzella": "299"
+   },
+   {
+    "row": 20,
+    "parzella": "300"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "II",
+    "row": 1,
+    "atParzella": "281"
+   },
+   {
+    "value": "III",
+    "row": 2,
+    "atParzella": "282"
+   },
+   {
+    "value": "IV",
+    "row": 11,
+    "atParzella": "290"
+   }
+  ],
+  "opomba": "Vrstice 10-20 imajo rdeče prečrtane parcelne številke (verjetno izbrisane/veljavno preklicane). Številke v stolpcu 'Nro. der Parzelle' so naraščajoče (281-300). V stolpcu 1 so vidne rimske številke II (vrstica 1), III (vrstica 2) in IV (vrstica 11); preostale vrstice vsebujejo ditto znamenja."
+ },
+ "content": "{\"vrstice\": [{\"row\": 1, \"parzella\": \"281\"}, {\"row\": 2, \"parzella\": \"282\"}, {\"row\": 3, \"parzella\": \"283\"}, {\"row\": 4, \"parzella\": \"284\"}, {\"row\": 5, \"parzella\": \"285\"}, {\"row\": 6, \"parzella\": \"286\"}, {\"row\": 7, \"parzella\": \"287\"}, {\"row\": 8, \"parzella\": \"288\"}, {\"row\": 9, \"parzella\": \"289\"}, {\"row\": 10, \"parzella\": \"290\"}, {\"row\": 11, \"parzella\": \"291\"}, {\"row\": 12, \"parzella\": \"292\"}, {\"row\": 13, \"parzella\": \"293\"}, {\"row\": 14, \"parzella\": \"294\"}, {\"row\": 15, \"parzella\": \"295\"}, {\"row\": 16, \"parzella\": \"296\"}, {\"row\": 17, \"parzella\": \"297\"}, {\"row\": 18, \"parzella\": \"298\"}, {\"row\": 19, \"parzella\": \"299\"}, {\"row\": 20, \"parzella\": \"300\"}], \"blatt\": [{\"value\": \"II\", \"row\": 1, \"atParzella\": \"281\"}, {\"value\": \"III\", \"row\": 2, \"atParzella\": \"282\"}, {\"value\": \"IV\", \"row\": 11, \"atParzella\": \"290\"}], \"opomba\": \"Vrstice 10-20 imajo rdeče prečrtane parcelne številke (verjetno izbrisane/veljavno preklicane). Številke v stolpcu 'Nro. der Parzelle' so naraščajoče (281-300). V stolpcu 1 so vidne rimske številke II (vrstica 1), III (vrstica 2) in IV (vrstica 11); preostale vrstice vsebujejo ditto znamenja.\"}"
+}

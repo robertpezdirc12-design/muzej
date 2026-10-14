@@ -1,0 +1,5353 @@
+{
+ "arbitration": {
+  "agreementPages": 103,
+  "arbitratedPages": [
+   24,
+   32,
+   40,
+   41,
+   42,
+   43,
+   55,
+   62,
+   76,
+   77,
+   78,
+   83,
+   92,
+   93,
+   100,
+   101,
+   107,
+   116,
+   117,
+   119,
+   121,
+   123,
+   125,
+   127,
+   128
+  ],
+  "pagesArbitrated": 25,
+  "rule": "numerala @ vrstica 1 = atribucija strani; nesoglasja prehodov razsodil agent vizualno (izrezi 3×, hardcoded razlogi); sred-stranske numeralе = extras [~]",
+  "singlePassPages": [
+   137
+  ]
+ },
+ "coverage": {
+  "S1": "strani 5–127: 123/123 × 2 prehoda",
+  "S2": "strani 128–132 + 137 branja (137 samo pass1); 133–136 ni branja — VLM kvota 429 (odprto)",
+  "S3": "strani 138–139 ni svežega branja (kvota); P38: ps-138 brez stolpca, ps-139 'III' ×1 [~]",
+  "p3-4": "P57 polno branje (Blatt I)"
+ },
+ "date": "2026-10-14",
+ "inputs": {
+  "blattI": "src/data/atlas/ps-register-start.json (P57, p3–4)",
+  "fetch": "scripts/p59_fetch_strip.py (VAČ uodid 373415 docid 41780, izrez x30–250, 3× Lanczos q92)",
+  "freshReads": "research/issue17/ps-raw/blatt-<page>{,-pass2}.json (135 strani posnetih, izrez levega stolpca 3×)",
+  "pageMap": "research/issue17/ps-register-topology.json (P56)",
+  "reader": "scripts/p59_ps_read_blatt.mjs (glm-5v-turbo, 2 prehoda, JSON)",
+  "v2": "research/issue17/ps-parcels-geo-v2.json (rowsEvidence 1093)"
+ },
+ "invariants": [
+  "I1 pokritost",
+  "I2 Blatt I == P57",
+  "I3 arbitraža popolna",
+  "I4 atribucija 1093/1093 (null le 133–136)",
+  "I5 struktura jedra",
+  "I6 dvoumnost merjena",
+  "I7 determinizem",
+  "I8 dokaz ⊇ runtime",
+  "I9 join v2 nespremenjen"
+ ],
+ "next": [
+  "prebrati 133–136 (S2) + 138–139 (S3) ob ponovitvi VLM kvote + p137 pass2 — popolna pokritost",
+  "P60 kandidat: per-Blatt atribucija joina za ruleCandidate baze (dokazno pravilo: edina instancia v pasu [0.8, 1.25] + soslednost) — zahteva lastno fazo s pini",
+  "razlagati prehodno cono 721–800 (popravki I→II): reorganizacija listov ali Kultur skupine [~]",
+  "p26/p37/p39 lokalne sekcije (161–180/101–120 pod Blatt I): povezati z Riede stolpcem polnih branj",
+  "4. VLM prehod glav izkoristi tudi P58 open #6 (Haus Nro. ↔ tlorisi)"
+ ],
+ "pageAttribution": {
+  "10": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "100": {
+   "blatt": "III",
+   "extras": [
+    {
+     "row": 5,
+     "value": "III·IV"
+    },
+    {
+     "row": 12,
+     "value": "III"
+    },
+    {
+     "row": 13,
+     "value": "III·III"
+    }
+   ],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'III' @ r1 + oznake; pass2 'II' @ r1 = zamaji"
+  },
+  "101": {
+   "blatt": "III",
+   "extras": [
+    {
+     "row": 7,
+     "value": "IV"
+    }
+   ],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 2-prehodno soglasje III @ r1 + IV @ r7; parcele 196–202¼ z ULOMKI (196½, 196¾ ...) — podštevilčene parcele"
+  },
+  "102": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "103": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "104": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "105": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "106": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "107": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'IV' @ r1 (sveže 'VII' = zamaj florisa); parcele 2081–2100"
+  },
+  "108": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "109": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "11": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "110": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "111": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "112": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "113": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "114": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "115": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "116": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'IV' @ r1; pass2 'V' = zamaj"
+  },
+  "117": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'IV' @ r1 (pass1 'VI' = zamaj)"
+  },
+  "118": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "119": {
+   "blatt": "IV",
+   "extras": [
+    {
+     "row": 9,
+     "value": "IV"
+    },
+    {
+     "row": 10,
+     "value": "IV."
+    }
+   ],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): vrstica-1 soglasna ('IV' oba prehoda); oznake @ r9/r10; parcele 2021–2040"
+  },
+  "12": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "120": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "121": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'IV' @ r1; parcele 2061–2080 (realno prekrivanje s p106 — ne napaka)"
+  },
+  "122": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "123": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'IV' @ r1 prečrtano [~]; parcele 2401–2420 (sveže [241-260] = odrezana vodilna 2)"
+  },
+  "124": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "125": {
+   "blatt": "V",
+   "extras": [],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): glifa @ r1 dvomljiva IV/V, prečrtana [~] — 'V' po kontekstu (p126–132 V); sveže '17' = razpad glife"
+  },
+  "126": {
+   "blatt": "V",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "127": {
+   "blatt": "V",
+   "extras": [],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'V' @ r1 (pass2 'I' = zamaj)"
+  },
+  "128": {
+   "blatt": "V",
+   "extras": [],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'V' @ r1 prečrtano rdeče [~]"
+  },
+  "129": {
+   "blatt": "V",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "13": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "130": {
+   "blatt": "V",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "131": {
+   "blatt": "V",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "132": {
+   "blatt": "V",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "133": {
+   "blatt": null,
+   "extras": [],
+   "flag": true,
+   "passes": 0,
+   "source": "S2 — ni svežega branja (VLM kvota 429 izčrpana; odprto)"
+  },
+  "134": {
+   "blatt": null,
+   "extras": [],
+   "flag": true,
+   "passes": 0,
+   "source": "S2 — ni svežega branja (VLM kvota 429 izčrpana; odprto)"
+  },
+  "135": {
+   "blatt": null,
+   "extras": [],
+   "flag": true,
+   "passes": 0,
+   "source": "S2 — ni svežega branja (VLM kvota 429 izčrpana; odprto)"
+  },
+  "136": {
+   "blatt": null,
+   "extras": [],
+   "flag": true,
+   "passes": 0,
+   "source": "S2 — ni svežega branja (VLM kvota 429 izčrpana; odprto)"
+  },
+  "137": {
+   "blatt": "II",
+   "extras": [],
+   "flag": true,
+   "passes": 1,
+   "source": "en sam prehod @ vrstica 1 [~]"
+  },
+  "138": {
+   "blatt": null,
+   "extras": [],
+   "flag": true,
+   "passes": 0,
+   "source": "S3 zapadek — P38 ps-138 brez blatt stolpca (nastop 'Zusammenstellung der Grundstücke', lastna oštevilčenja)"
+  },
+  "139": {
+   "blatt": null,
+   "extras": [],
+   "flag": true,
+   "passes": 0,
+   "source": "S3 zapadek — P38 ps-139 opaža 'III' ×1 [~]; ni svežega branja (kvota)"
+  },
+  "14": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "15": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "16": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "17": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "18": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "19": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "20": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "21": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "22": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "23": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "24": {
+   "blatt": "I",
+   "extras": [],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): fantomske II/III/IV iz pass1 = rokopis prek stolpcev (oči: samo 'I' + ditto); parcele 421–440 (pageMap 401–420 = P38 podvojitev ps-023/024)"
+  },
+  "25": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "26": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "27": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "28": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "29": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "3": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 0,
+   "source": "P57 polno branje (blatt stolpec 'I' @ r1)"
+  },
+  "30": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "31": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "32": {
+   "blatt": "I",
+   "extras": [],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'I' @ r1; 'II'/'III' iz obeh prehodov (r9/r10, r12/r13) = rokopisni zamaj prek stolpcev; parcele 581–600"
+  },
+  "33": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "34": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "35": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "36": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "37": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "38": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "39": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "4": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 0,
+   "source": "P57 polno branje (blatt stolpec 'I' @ r1)"
+  },
+  "40": {
+   "blatt": "I",
+   "extras": [
+    {
+     "row": 5,
+     "value": "I·II"
+    },
+    {
+     "row": 6,
+     "value": "I·II"
+    },
+    {
+     "row": 19,
+     "value": "I·II"
+    }
+   ],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'I' @ r1; oznake 'I·II' @ r5/r6/r19 = popravek prehoda Blatt I→II (območje 725+)"
+  },
+  "41": {
+   "blatt": "I·II",
+   "extras": [],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'I·II' @ r1 (kot zapisano, prehodni popravek); parcele 741–760 (sveže [141-160] = Kurrent 7→1)"
+  },
+  "42": {
+   "blatt": "III",
+   "extras": [
+    {
+     "row": 18,
+     "value": "II"
+    }
+   ],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'III' @ r1 prečrtano [~]; 'II' @ r18; parcele 761–780 (sveže [161-180] = Kurrent 7→1)"
+  },
+  "43": {
+   "blatt": "II",
+   "extras": [],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'II' @ r1, parcele 801–820 (sveže [801-920] = Kurrent 2→9 na zadnji) — Blatt II se začne pri 801"
+  },
+  "44": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "45": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "46": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "47": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "48": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "49": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "5": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "50": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "51": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "52": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "53": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "54": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "55": {
+   "blatt": "II",
+   "extras": [
+    {
+     "row": 17,
+     "value": "II"
+    }
+   ],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'II' @ r1 + oznaka @ r17; pass2 III/IV = zamaji rdečih zapisov"
+  },
+  "56": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "57": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "58": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "59": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "6": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "60": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "61": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "62": {
+   "blatt": "II",
+   "extras": [
+    {
+     "row": 2,
+     "value": "II"
+    },
+    {
+     "row": 3,
+     "value": "II"
+    }
+   ],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'II' @ r1 + dodatni 'II' @ r2/r3 (poudarki); pass 'III' = zamaji"
+  },
+  "63": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "64": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "65": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "66": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "67": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "68": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "69": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "7": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "70": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "71": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "72": {
+   "blatt": "III",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "73": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "74": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "75": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "76": {
+   "blatt": "II",
+   "extras": [],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'II.' @ r1 (oba prehoda 'III' = zamaj pike/florisa); parcele 1461–1480 (sveže [161-180] = odrezana vodilna 14)"
+  },
+  "77": {
+   "blatt": "II",
+   "extras": [],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'II.' @ r1 (sveže 'III' = zamaj pike); parcele 1481–1500"
+  },
+  "78": {
+   "blatt": "II",
+   "extras": [],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'II' @ r1 prečrtano [~]; parcele 1501–1520 (večinoma rdeče prečrtane)"
+  },
+  "79": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "8": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "80": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "81": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "82": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "83": {
+   "blatt": "II",
+   "extras": [],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'II' @ r1 (VLM oba prehoda prazna — spregledan); parcele ~160–182"
+  },
+  "84": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "85": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "86": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "87": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "88": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "89": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "9": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "90": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "91": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "92": {
+   "blatt": "II",
+   "extras": [
+    {
+     "row": 2,
+     "value": "I·IV"
+    },
+    {
+     "row": 11,
+     "value": "II"
+    },
+    {
+     "row": 12,
+     "value": "II·III"
+    }
+   ],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'II' @ r1 + popravki @ r2/r11/r12; parcele 1881–1900 večinoma prečrtane"
+  },
+  "93": {
+   "blatt": "IV",
+   "extras": [
+    {
+     "row": 11,
+     "value": "III·III"
+    },
+    {
+     "row": 13,
+     "value": "II·III"
+    },
+    {
+     "row": 17,
+     "value": "III"
+    }
+   ],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'IV' @ r1; PREHOD SEKCIJE sredi strani (1901–1907 prečrtano → 1303+) z oznakami; pass1 'I' = odrezan 'IV'"
+  },
+  "94": {
+   "blatt": "III",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "95": {
+   "blatt": "III",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "96": {
+   "blatt": "III",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "97": {
+   "blatt": "III",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "98": {
+   "blatt": "III",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "99": {
+   "blatt": "III",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  }
+ },
+ "pageMapDivergences": [
+  {
+   "note": "fantomske II/III/IV iz pass1 = rokopis prek stolpcev (oči: samo 'I' + ditto); parcele 421–440 (pageMap 401–420 = P38 podvojitev ps-023/024)",
+   "page": 24,
+   "pageMapNum": [
+    401,
+    420
+   ]
+  },
+  {
+   "note": "oči: 'I' @ r1; 'II'/'III' iz obeh prehodov (r9/r10, r12/r13) = rokopisni zamaj prek stolpcev; parcele 581–600",
+   "page": 32,
+   "pageMapNum": [
+    581,
+    600
+   ]
+  },
+  {
+   "note": "oči: 'I·II' @ r1 (kot zapisano, prehodni popravek); parcele 741–760 (sveže [141-160] = Kurrent 7→1)",
+   "page": 41,
+   "pageMapNum": [
+    741,
+    760
+   ]
+  },
+  {
+   "note": "oči: 'III' @ r1 prečrtano [~]; 'II' @ r18; parcele 761–780 (sveže [161-180] = Kurrent 7→1)",
+   "page": 42,
+   "pageMapNum": [
+    761,
+    780
+   ]
+  },
+  {
+   "note": "oči: 'II' @ r1, parcele 801–820 (sveže [801-920] = Kurrent 2→9 na zadnji) — Blatt II se začne pri 801",
+   "page": 43,
+   "pageMapNum": [
+    801,
+    820
+   ]
+  },
+  {
+   "note": "oči: 'II' @ r1 + oznaka @ r17; pass2 III/IV = zamaji rdečih zapisov",
+   "page": 55,
+   "pageMapNum": [
+    1041,
+    1061
+   ]
+  },
+  {
+   "note": "oči: 'II' @ r1 + dodatni 'II' @ r2/r3 (poudarki); pass 'III' = zamaji",
+   "page": 62,
+   "pageMapNum": [
+    181,
+    200
+   ]
+  },
+  {
+   "note": "oči: 'II.' @ r1 (oba prehoda 'III' = zamaj pike/florisa); parcele 1461–1480 (sveže [161-180] = odrezana vodilna 14)",
+   "page": 76,
+   "pageMapNum": [
+    1161,
+    1180
+   ]
+  },
+  {
+   "note": "oči: 'II.' @ r1 (sveže 'III' = zamaj pike); parcele 1481–1500",
+   "page": 77,
+   "pageMapNum": [
+    1181,
+    1200
+   ]
+  },
+  {
+   "note": "oči: 'II' @ r1 prečrtano [~]; parcele 1501–1520 (večinoma rdeče prečrtane)",
+   "page": 78,
+   "pageMapNum": [
+    1601,
+    1620
+   ]
+  },
+  {
+   "note": "oči: 'II' @ r1 (VLM oba prehoda prazna — spregledan); parcele ~160–182",
+   "page": 83,
+   "pageMapNum": [
+    161,
+    181
+   ]
+  },
+  {
+   "note": "oči: 'II' @ r1 + popravki @ r2/r11/r12; parcele 1881–1900 večinoma prečrtane",
+   "page": 92,
+   "pageMapNum": [
+    990,
+    1008
+   ]
+  },
+  {
+   "note": "oči: 'IV' @ r1; PREHOD SEKCIJE sredi strani (1901–1907 prečrtano → 1303+) z oznakami; pass1 'I' = odrezan 'IV'",
+   "page": 93,
+   "pageMapNum": [
+    1601,
+    1620
+   ]
+  },
+  {
+   "note": "oči: 'III' @ r1 + oznake; pass2 'II' @ r1 = zamaji",
+   "page": 100,
+   "pageMapNum": [
+    1940,
+    1960
+   ]
+  },
+  {
+   "note": "2-prehodno soglasje III @ r1 + IV @ r7; parcele 196–202¼ z ULOMKI (196½, 196¾ ...) — podštevilčene parcele",
+   "page": 101,
+   "pageMapNum": [
+    1960,
+    1980
+   ]
+  },
+  {
+   "note": "oči: 'IV' @ r1 (sveže 'VII' = zamaj florisa); parcele 2081–2100",
+   "page": 107,
+   "pageMapNum": [
+    2081,
+    2100
+   ]
+  },
+  {
+   "note": "oči: 'IV' @ r1; pass2 'V' = zamaj",
+   "page": 116,
+   "pageMapNum": [
+    2261,
+    2280
+   ]
+  },
+  {
+   "note": "oči: 'IV' @ r1 (pass1 'VI' = zamaj)",
+   "page": 117,
+   "pageMapNum": [
+    2291,
+    2310
+   ]
+  },
+  {
+   "note": "vrstica-1 soglasna ('IV' oba prehoda); oznake @ r9/r10; parcele 2021–2040",
+   "page": 119,
+   "pageMapNum": [
+    2021,
+    2040
+   ]
+  },
+  {
+   "note": "oči: 'IV' @ r1; parcele 2061–2080 (realno prekrivanje s p106 — ne napaka)",
+   "page": 121,
+   "pageMapNum": [
+    2061,
+    2081
+   ]
+  },
+  {
+   "note": "oči: 'IV' @ r1 prečrtano [~]; parcele 2401–2420 (sveže [241-260] = odrezana vodilna 2)",
+   "page": 123,
+   "pageMapNum": [
+    2401,
+    2420
+   ]
+  },
+  {
+   "note": "oči: glifa @ r1 dvomljiva IV/V, prečrtana [~] — 'V' po kontekstu (p126–132 V); sveže '17' = razpad glife",
+   "page": 125,
+   "pageMapNum": [
+    2141,
+    2160
+   ]
+  },
+  {
+   "note": "oči: 'V' @ r1 (pass2 'I' = zamaj)",
+   "page": 127,
+   "pageMapNum": [
+    2481,
+    2500
+   ]
+  }
+ ],
+ "perBlattAmbiguity": {
+  "basesOnMultipleBlatter": 106,
+  "basesOnMultiplePages_v2": 211,
+  "instances": {
+   "160": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 7.942,
+      "pages": [
+       10
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 0.6793,
+      "pages": [
+       86
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1603": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 0.7049,
+      "pages": [
+       78
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "IV",
+      "medianRatio": 0.5443,
+      "pages": [
+       93
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1604": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 2.7933,
+      "pages": [
+       78
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "IV",
+      "medianRatio": 2.9862,
+      "pages": [
+       93
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1605": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 0.2288,
+      "pages": [
+       78
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "IV",
+      "medianRatio": null,
+      "pages": [
+       93
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "161": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 0.2324,
+      "pages": [
+       11
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 0.0508,
+      "pages": [
+       61,
+       83,
+       86
+      ],
+      "rows": 3
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "162": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 6.918,
+      "pages": [
+       11
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 2.5422,
+      "pages": [
+       61,
+       83,
+       84,
+       86
+      ],
+      "rows": 4
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "163": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 7.0,
+      "pages": [
+       11
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 0.9813,
+      "pages": [
+       61,
+       83,
+       84,
+       86
+      ],
+      "rows": 4
+     }
+    ],
+    "nInBand": 1,
+    "ruleCandidate": true
+   },
+   "164": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 7.5871,
+      "pages": [
+       11
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 5.6582,
+      "pages": [
+       61,
+       83,
+       84,
+       86
+      ],
+      "rows": 4
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "165": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 17.2022,
+      "pages": [
+       11
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 4.4636,
+      "pages": [
+       61,
+       83,
+       84,
+       86
+      ],
+      "rows": 4
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "166": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 11.2367,
+      "pages": [
+       11
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 12.7802,
+      "pages": [
+       61,
+       83,
+       84,
+       86
+      ],
+      "rows": 4
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "168": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 4.4051,
+      "pages": [
+       11
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 3.6245,
+      "pages": [
+       61,
+       83,
+       84,
+       86
+      ],
+      "rows": 4
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "171": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 10.5312,
+      "pages": [
+       11
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 19.2571,
+      "pages": [
+       61,
+       83,
+       84,
+       86
+      ],
+      "rows": 4
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "173": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 47.2468,
+      "pages": [
+       11
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 44.3659,
+      "pages": [
+       61,
+       83,
+       84,
+       86
+      ],
+      "rows": 4
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "174": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 59.407,
+      "pages": [
+       11
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 9.4963,
+      "pages": [
+       61,
+       83,
+       84,
+       86
+      ],
+      "rows": 4
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "175": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 1.5417,
+      "pages": [
+       11
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 4.8052,
+      "pages": [
+       61,
+       83,
+       84,
+       86
+      ],
+      "rows": 4
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "176": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 1.2828,
+      "pages": [
+       11
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 0.9371,
+      "pages": [
+       61,
+       83,
+       84,
+       86
+      ],
+      "rows": 4
+     }
+    ],
+    "nInBand": 1,
+    "ruleCandidate": true
+   },
+   "179": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 22.8553,
+      "pages": [
+       11
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 4.9771,
+      "pages": [
+       61,
+       83,
+       84,
+       86
+      ],
+      "rows": 4
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1821": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 92.5079,
+      "pages": [
+       64,
+       79
+      ],
+      "rows": 2
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 27.7524,
+      "pages": [
+       94
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1825": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 0.2724,
+      "pages": [
+       64,
+       79
+      ],
+      "rows": 2
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 1.4909,
+      "pages": [
+       94
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1826": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 9.2778,
+      "pages": [
+       64,
+       79
+      ],
+      "rows": 2
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 3.5914,
+      "pages": [
+       94
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1827": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 397.1154,
+      "pages": [
+       64,
+       79
+      ],
+      "rows": 2
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 3.959,
+      "pages": [
+       94
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1829": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 33.9294,
+      "pages": [
+       64,
+       79
+      ],
+      "rows": 2
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 2.5613,
+      "pages": [
+       94
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1830": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 9.3945,
+      "pages": [
+       64,
+       79
+      ],
+      "rows": 2
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 3.6297,
+      "pages": [
+       94
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1831": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 6.4409,
+      "pages": [
+       64,
+       79
+      ],
+      "rows": 2
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 1.0035,
+      "pages": [
+       94
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 1,
+    "ruleCandidate": true
+   },
+   "1832": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 127.3438,
+      "pages": [
+       64,
+       79
+      ],
+      "rows": 2
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 3.3789,
+      "pages": [
+       94
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1833": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 143.7,
+      "pages": [
+       64,
+       79
+      ],
+      "rows": 2
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 13.272,
+      "pages": [
+       94
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1834": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 0.2764,
+      "pages": [
+       64,
+       79
+      ],
+      "rows": 2
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 0.0879,
+      "pages": [
+       94
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1835": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 13.896,
+      "pages": [
+       64,
+       79
+      ],
+      "rows": 2
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 62.0357,
+      "pages": [
+       94
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1836": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 13.7361,
+      "pages": [
+       64,
+       79
+      ],
+      "rows": 2
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 3.081,
+      "pages": [
+       94
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1837": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 8.3875,
+      "pages": [
+       64,
+       79
+      ],
+      "rows": 2
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 4.7551,
+      "pages": [
+       94
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1838": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 45.4726,
+      "pages": [
+       64,
+       79
+      ],
+      "rows": 2
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 6.4083,
+      "pages": [
+       94
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1839": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 6.092,
+      "pages": [
+       64,
+       79
+      ],
+      "rows": 2
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 0.676,
+      "pages": [
+       94
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1840": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 1.3231,
+      "pages": [
+       64,
+       79
+      ],
+      "rows": 2
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 2.3761,
+      "pages": [
+       94
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1944": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 56.5082,
+      "pages": [
+       90
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 3.6554,
+      "pages": [
+       95,
+       100
+      ],
+      "rows": 2
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1945": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 10.6082,
+      "pages": [
+       90
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 13.451,
+      "pages": [
+       95,
+       100
+      ],
+      "rows": 2
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1946": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 2.6687,
+      "pages": [
+       90
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 4.1208,
+      "pages": [
+       95,
+       100
+      ],
+      "rows": 2
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1947": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 5.2148,
+      "pages": [
+       90
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 5.3587,
+      "pages": [
+       95,
+       100
+      ],
+      "rows": 2
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1948": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 4.7427,
+      "pages": [
+       90
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 12.2515,
+      "pages": [
+       95,
+       100
+      ],
+      "rows": 2
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1949": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 4.7541,
+      "pages": [
+       90
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 17.4874,
+      "pages": [
+       95
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1952": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 25.8178,
+      "pages": [
+       90
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 15.2073,
+      "pages": [
+       95,
+       100
+      ],
+      "rows": 2
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1953": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 43.9908,
+      "pages": [
+       90
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 30.2206,
+      "pages": [
+       95,
+       100
+      ],
+      "rows": 2
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1954": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 20.0484,
+      "pages": [
+       90
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 6.5367,
+      "pages": [
+       95,
+       100
+      ],
+      "rows": 2
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1955": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 136.5758,
+      "pages": [
+       90
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 6.3929,
+      "pages": [
+       95,
+       100
+      ],
+      "rows": 2
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1956": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 0.5895,
+      "pages": [
+       90
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 51.0588,
+      "pages": [
+       95,
+       100
+      ],
+      "rows": 2
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1957": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 3.3035,
+      "pages": [
+       90
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 12.3281,
+      "pages": [
+       95,
+       100
+      ],
+      "rows": 2
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1958": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 3.5706,
+      "pages": [
+       90
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 12.1042,
+      "pages": [
+       95,
+       100
+      ],
+      "rows": 2
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1959": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 39.3434,
+      "pages": [
+       90
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 7.1534,
+      "pages": [
+       95,
+       100
+      ],
+      "rows": 2
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1960": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 5.3014,
+      "pages": [
+       90
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 13.9708,
+      "pages": [
+       95,
+       100,
+       101
+      ],
+      "rows": 3
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1980": {
+    "instances": [
+     {
+      "blatt": "III",
+      "medianRatio": 15.8963,
+      "pages": [
+       96,
+       101
+      ],
+      "rows": 2
+     },
+     {
+      "blatt": "IV",
+      "medianRatio": 10.42,
+      "pages": [
+       102
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "2141": {
+    "instances": [
+     {
+      "blatt": "IV",
+      "medianRatio": 2.9536,
+      "pages": [
+       110
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "V",
+      "medianRatio": 7.2549,
+      "pages": [
+       125
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "2143": {
+    "instances": [
+     {
+      "blatt": "IV",
+      "medianRatio": 8.4024,
+      "pages": [
+       110
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "V",
+      "medianRatio": 7.8494,
+      "pages": [
+       125
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "2148": {
+    "instances": [
+     {
+      "blatt": "IV",
+      "medianRatio": 3.3614,
+      "pages": [
+       110
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "V",
+      "medianRatio": 5.9097,
+      "pages": [
+       125
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "2149": {
+    "instances": [
+     {
+      "blatt": "IV",
+      "medianRatio": 1.6345,
+      "pages": [
+       110
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "V",
+      "medianRatio": 2.143,
+      "pages": [
+       125
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "2150": {
+    "instances": [
+     {
+      "blatt": "IV",
+      "medianRatio": 2.2915,
+      "pages": [
+       110
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "V",
+      "medianRatio": 9.8917,
+      "pages": [
+       125
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "2151": {
+    "instances": [
+     {
+      "blatt": "IV",
+      "medianRatio": 2.8051,
+      "pages": [
+       110
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "V",
+      "medianRatio": 0.5073,
+      "pages": [
+       125
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "2152": {
+    "instances": [
+     {
+      "blatt": "IV",
+      "medianRatio": 65.1461,
+      "pages": [
+       110
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "V",
+      "medianRatio": 5.2281,
+      "pages": [
+       125
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "2154": {
+    "instances": [
+     {
+      "blatt": "IV",
+      "medianRatio": 0.5312,
+      "pages": [
+       110
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "V",
+      "medianRatio": 0.7556,
+      "pages": [
+       125
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "2155": {
+    "instances": [
+     {
+      "blatt": "IV",
+      "medianRatio": 2.4923,
+      "pages": [
+       110
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "V",
+      "medianRatio": 48.35,
+      "pages": [
+       125
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "2156": {
+    "instances": [
+     {
+      "blatt": "IV",
+      "medianRatio": 8.1472,
+      "pages": [
+       110
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "V",
+      "medianRatio": 6.2547,
+      "pages": [
+       125
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "2157": {
+    "instances": [
+     {
+      "blatt": "IV",
+      "medianRatio": 6.7793,
+      "pages": [
+       110
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "V",
+      "medianRatio": 28.88,
+      "pages": [
+       125
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "2158": {
+    "instances": [
+     {
+      "blatt": "IV",
+      "medianRatio": 1.4651,
+      "pages": [
+       110
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "V",
+      "medianRatio": 9.6923,
+      "pages": [
+       125
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "2159": {
+    "instances": [
+     {
+      "blatt": "IV",
+      "medianRatio": 1.4386,
+      "pages": [
+       110
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "V",
+      "medianRatio": 2.2374,
+      "pages": [
+       125
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "2160": {
+    "instances": [
+     {
+      "blatt": "IV",
+      "medianRatio": 6.4109,
+      "pages": [
+       110
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "V",
+      "medianRatio": 2.3125,
+      "pages": [
+       125
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "641": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 4.5366,
+      "pages": [
+       35
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 1.5813,
+      "pages": [
+       85
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "642": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 3.5141,
+      "pages": [
+       35
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 3.7872,
+      "pages": [
+       85
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "643": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 3.0534,
+      "pages": [
+       35
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 2.6728,
+      "pages": [
+       85
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "644": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 31.1429,
+      "pages": [
+       35
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 0.8617,
+      "pages": [
+       85
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 1,
+    "ruleCandidate": true
+   },
+   "646": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 5.6263,
+      "pages": [
+       35
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 2.7201,
+      "pages": [
+       85
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "648": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 1.31,
+      "pages": [
+       35
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 0.1871,
+      "pages": [
+       85
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "651": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 9.54,
+      "pages": [
+       35
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 8.6871,
+      "pages": [
+       85
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "652": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 10.4573,
+      "pages": [
+       35
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 2.4155,
+      "pages": [
+       85
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "653": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 23.1667,
+      "pages": [
+       35
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 0.9816,
+      "pages": [
+       85
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 1,
+    "ruleCandidate": true
+   },
+   "654": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 3.6984,
+      "pages": [
+       35
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 1.2231,
+      "pages": [
+       85
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 1,
+    "ruleCandidate": true
+   },
+   "655": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 3.4913,
+      "pages": [
+       35
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 0.8014,
+      "pages": [
+       85
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 1,
+    "ruleCandidate": true
+   },
+   "656": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 26.2692,
+      "pages": [
+       35
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 0.8602,
+      "pages": [
+       85
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 1,
+    "ruleCandidate": true
+   },
+   "657": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 3.0278,
+      "pages": [
+       35
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 1.2126,
+      "pages": [
+       85
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 1,
+    "ruleCandidate": true
+   },
+   "659": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 4.7292,
+      "pages": [
+       35
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 0.3934,
+      "pages": [
+       85
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "661": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 1.8149,
+      "pages": [
+       36
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 1.711,
+      "pages": [
+       87
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "663": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 58.5,
+      "pages": [
+       36
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 1.8438,
+      "pages": [
+       87
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "666": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 17.5938,
+      "pages": [
+       36
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 0.8537,
+      "pages": [
+       87
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 1,
+    "ruleCandidate": true
+   },
+   "667": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 24.6143,
+      "pages": [
+       36
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 1.5009,
+      "pages": [
+       87
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "671": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 0.9086,
+      "pages": [
+       36
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 0.1188,
+      "pages": [
+       87
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 1,
+    "ruleCandidate": true
+   },
+   "673": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 3.5957,
+      "pages": [
+       36
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 0.5521,
+      "pages": [
+       87
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "674": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 1.6349,
+      "pages": [
+       36
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 0.5639,
+      "pages": [
+       87
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "675": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 4.0878,
+      "pages": [
+       36
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 0.473,
+      "pages": [
+       87
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "676": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 12.0319,
+      "pages": [
+       36
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 0.8004,
+      "pages": [
+       87
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 1,
+    "ruleCandidate": true
+   },
+   "679": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 13.7444,
+      "pages": [
+       36
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 137.4444,
+      "pages": [
+       87
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "680": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 75.9259,
+      "pages": [
+       36
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 854.1667,
+      "pages": [
+       87
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "736": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 3.983,
+      "pages": [
+       40
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 0.5275,
+      "pages": [
+       88
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "737": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 10.1507,
+      "pages": [
+       40
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 134.6786,
+      "pages": [
+       88
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "738": {
+    "instances": [
+     {
+      "blatt": "I",
+      "medianRatio": 2.649,
+      "pages": [
+       40
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "II",
+      "medianRatio": 14.4167,
+      "pages": [
+       88
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "922": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 64.4737,
+      "pages": [
+       49
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 28.7975,
+      "pages": [
+       99
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "923": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 15.7336,
+      "pages": [
+       49
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 12.18,
+      "pages": [
+       99
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "924": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 1.2733,
+      "pages": [
+       49
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 3.3644,
+      "pages": [
+       99
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "925": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 7.3503,
+      "pages": [
+       49
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 2.1796,
+      "pages": [
+       99
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "926": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 4.4961,
+      "pages": [
+       49
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 9.1671,
+      "pages": [
+       99
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "927": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 0.7803,
+      "pages": [
+       49
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 1.7056,
+      "pages": [
+       99
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "928": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 5.6981,
+      "pages": [
+       49
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 0.9742,
+      "pages": [
+       99
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 1,
+    "ruleCandidate": true
+   },
+   "929": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 3.1916,
+      "pages": [
+       49
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 2.156,
+      "pages": [
+       99
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "930": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 1.2241,
+      "pages": [
+       49
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 0.3802,
+      "pages": [
+       99
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 1,
+    "ruleCandidate": true
+   },
+   "931": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 29.0619,
+      "pages": [
+       49
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 8.7006,
+      "pages": [
+       99
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "934": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 29.4483,
+      "pages": [
+       49
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 1.0498,
+      "pages": [
+       99
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 1,
+    "ruleCandidate": true
+   },
+   "936": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 1.1757,
+      "pages": [
+       49
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 8.2899,
+      "pages": [
+       99
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 1,
+    "ruleCandidate": true
+   },
+   "937": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 4.9928,
+      "pages": [
+       49
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 23.1333,
+      "pages": [
+       99
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "938": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 3.7394,
+      "pages": [
+       49
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 4.734,
+      "pages": [
+       99
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "939": {
+    "instances": [
+     {
+      "blatt": "II",
+      "medianRatio": 2.7558,
+      "pages": [
+       49
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "III",
+      "medianRatio": 1.049,
+      "pages": [
+       99
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 1,
+    "ruleCandidate": true
+   }
+  },
+  "multiBlattBaseList": [
+   "160",
+   "161",
+   "162",
+   "163",
+   "164",
+   "165",
+   "166",
+   "168",
+   "171",
+   "173",
+   "174",
+   "175",
+   "176",
+   "179",
+   "641",
+   "642",
+   "643",
+   "644",
+   "646",
+   "648",
+   "651",
+   "652",
+   "653",
+   "654",
+   "655",
+   "656",
+   "657",
+   "659",
+   "661",
+   "663",
+   "666",
+   "667",
+   "671",
+   "673",
+   "674",
+   "675",
+   "676",
+   "679",
+   "680",
+   "736",
+   "737",
+   "738",
+   "922",
+   "923",
+   "924",
+   "925",
+   "926",
+   "927",
+   "928",
+   "929",
+   "930",
+   "931",
+   "934",
+   "936",
+   "937",
+   "938",
+   "939",
+   "1603",
+   "1604",
+   "1605",
+   "1821",
+   "1825",
+   "1826",
+   "1827",
+   "1829",
+   "1830",
+   "1831",
+   "1832",
+   "1833",
+   "1834",
+   "1835",
+   "1836",
+   "1837",
+   "1838",
+   "1839",
+   "1840",
+   "1944",
+   "1945",
+   "1946",
+   "1947",
+   "1948",
+   "1949",
+   "1952",
+   "1953",
+   "1954",
+   "1955",
+   "1956",
+   "1957",
+   "1958",
+   "1959",
+   "1960",
+   "1980",
+   "2141",
+   "2143",
+   "2148",
+   "2149",
+   "2150",
+   "2151",
+   "2152",
+   "2154",
+   "2155",
+   "2156",
+   "2157",
+   "2158",
+   "2159",
+   "2160"
+  ],
+  "ruleCandidateBases": [
+   "163",
+   "176",
+   "644",
+   "653",
+   "654",
+   "655",
+   "656",
+   "657",
+   "666",
+   "671",
+   "676",
+   "928",
+   "930",
+   "934",
+   "936",
+   "939",
+   "1831"
+  ],
+  "ruleCandidateNote": "baza z TOČNO eno instanco z median razmerjem v [0.8, 1.25] — kandidat za prihodnjo per-Blatt atribucijo joina (P60), MERJENO ne izvedeno [~]",
+  "verdictSi": "per-Blatt ločitev MERJENA: od 211 bazi na več straneh jih 106 sega čez ≥2 Blatta (P39: ista številka pod različnima Blattoma = druga parcela) — instance zdaj razločljive; join po številki ostaja nespremenjen (brez dokaza se NE prerazporeja)"
+ },
+ "principle": "arbitraža 2 VLM prehoda + agent-oči na 3× izrezih (metodika P57); stran atributirana na numeralo @ vrstica 1; sred-stranske numeralе = extras [~]; MERITVE brez prerazporeditev — join v2 nespremenjen (disciplina P56/P58)",
+ "runtime": {
+  "arbitration": {
+   "agreementPages": 103,
+   "arbitratedPages": [
+    24,
+    32,
+    40,
+    41,
+    42,
+    43,
+    55,
+    62,
+    76,
+    77,
+    78,
+    83,
+    92,
+    93,
+    100,
+    101,
+    107,
+    116,
+    117,
+    119,
+    121,
+    123,
+    125,
+    127,
+    128
+   ],
+   "pagesArbitrated": 25,
+   "rule": "numerala @ vrstica 1 = atribucija strani; nesoglasja prehodov razsodil agent vizualno (izrezi 3×, hardcoded razlogi); sred-stranske numeralе = extras [~]",
+   "singlePassPages": [
+    137
+   ]
+  },
+  "coverage": {
+   "S1": "strani 5–127: 123/123 × 2 prehoda",
+   "S2": "strani 128–132 + 137 branja (137 samo pass1); 133–136 ni branja — VLM kvota 429 (odprto)",
+   "S3": "strani 138–139 ni svežega branja (kvota); P38: ps-138 brez stolpca, ps-139 'III' ×1 [~]",
+   "p3-4": "P57 polno branje (Blatt I)"
+  },
+  "date": "2026-10-14",
+  "generatedBy": "scripts/p59_ps_blatt_headers.py",
+  "pageAttribution": {
+   "10": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "100": {
+    "blatt": "III",
+    "extras": [
+     {
+      "row": 5,
+      "value": "III·IV"
+     },
+     {
+      "row": 12,
+      "value": "III"
+     },
+     {
+      "row": 13,
+      "value": "III·III"
+     }
+    ],
+    "flag": true,
+    "passes": 2,
+    "source": "arbitraža (oči na 3× izrezu): 'III' @ r1 + oznake; pass2 'II' @ r1 = zamaji"
+   },
+   "101": {
+    "blatt": "III",
+    "extras": [
+     {
+      "row": 7,
+      "value": "IV"
+     }
+    ],
+    "flag": true,
+    "passes": 2,
+    "source": "arbitraža (oči na 3× izrezu): 2-prehodno soglasje III @ r1 + IV @ r7; parcele 196–202¼ z ULOMKI (196½, 196¾ ...) — podštevilčene parcele"
+   },
+   "102": {
+    "blatt": "IV",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "103": {
+    "blatt": "IV",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "104": {
+    "blatt": "IV",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "105": {
+    "blatt": "IV",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "106": {
+    "blatt": "IV",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "107": {
+    "blatt": "IV",
+    "extras": [],
+    "flag": true,
+    "passes": 2,
+    "source": "arbitraža (oči na 3× izrezu): 'IV' @ r1 (sveže 'VII' = zamaj florisa); parcele 2081–2100"
+   },
+   "108": {
+    "blatt": "IV",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "109": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "11": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "110": {
+    "blatt": "IV",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "111": {
+    "blatt": "IV",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "112": {
+    "blatt": "IV",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "113": {
+    "blatt": "IV",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "114": {
+    "blatt": "IV",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "115": {
+    "blatt": "IV",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "116": {
+    "blatt": "IV",
+    "extras": [],
+    "flag": true,
+    "passes": 2,
+    "source": "arbitraža (oči na 3× izrezu): 'IV' @ r1; pass2 'V' = zamaj"
+   },
+   "117": {
+    "blatt": "IV",
+    "extras": [],
+    "flag": true,
+    "passes": 2,
+    "source": "arbitraža (oči na 3× izrezu): 'IV' @ r1 (pass1 'VI' = zamaj)"
+   },
+   "118": {
+    "blatt": "IV",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "119": {
+    "blatt": "IV",
+    "extras": [
+     {
+      "row": 9,
+      "value": "IV"
+     },
+     {
+      "row": 10,
+      "value": "IV."
+     }
+    ],
+    "flag": true,
+    "passes": 2,
+    "source": "arbitraža (oči na 3× izrezu): vrstica-1 soglasna ('IV' oba prehoda); oznake @ r9/r10; parcele 2021–2040"
+   },
+   "12": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "120": {
+    "blatt": "IV",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "121": {
+    "blatt": "IV",
+    "extras": [],
+    "flag": true,
+    "passes": 2,
+    "source": "arbitraža (oči na 3× izrezu): 'IV' @ r1; parcele 2061–2080 (realno prekrivanje s p106 — ne napaka)"
+   },
+   "122": {
+    "blatt": "IV",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "123": {
+    "blatt": "IV",
+    "extras": [],
+    "flag": true,
+    "passes": 2,
+    "source": "arbitraža (oči na 3× izrezu): 'IV' @ r1 prečrtano [~]; parcele 2401–2420 (sveže [241-260] = odrezana vodilna 2)"
+   },
+   "124": {
+    "blatt": "IV",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "125": {
+    "blatt": "V",
+    "extras": [],
+    "flag": true,
+    "passes": 2,
+    "source": "arbitraža (oči na 3× izrezu): glifa @ r1 dvomljiva IV/V, prečrtana [~] — 'V' po kontekstu (p126–132 V); sveže '17' = razpad glife"
+   },
+   "126": {
+    "blatt": "V",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "127": {
+    "blatt": "V",
+    "extras": [],
+    "flag": true,
+    "passes": 2,
+    "source": "arbitraža (oči na 3× izrezu): 'V' @ r1 (pass2 'I' = zamaj)"
+   },
+   "128": {
+    "blatt": "V",
+    "extras": [],
+    "flag": true,
+    "passes": 2,
+    "source": "arbitraža (oči na 3× izrezu): 'V' @ r1 prečrtano rdeče [~]"
+   },
+   "129": {
+    "blatt": "V",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "13": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "130": {
+    "blatt": "V",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "131": {
+    "blatt": "V",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "132": {
+    "blatt": "V",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "133": {
+    "blatt": null,
+    "extras": [],
+    "flag": true,
+    "passes": 0,
+    "source": "S2 — ni svežega branja (VLM kvota 429 izčrpana; odprto)"
+   },
+   "134": {
+    "blatt": null,
+    "extras": [],
+    "flag": true,
+    "passes": 0,
+    "source": "S2 — ni svežega branja (VLM kvota 429 izčrpana; odprto)"
+   },
+   "135": {
+    "blatt": null,
+    "extras": [],
+    "flag": true,
+    "passes": 0,
+    "source": "S2 — ni svežega branja (VLM kvota 429 izčrpana; odprto)"
+   },
+   "136": {
+    "blatt": null,
+    "extras": [],
+    "flag": true,
+    "passes": 0,
+    "source": "S2 — ni svežega branja (VLM kvota 429 izčrpana; odprto)"
+   },
+   "137": {
+    "blatt": "II",
+    "extras": [],
+    "flag": true,
+    "passes": 1,
+    "source": "en sam prehod @ vrstica 1 [~]"
+   },
+   "138": {
+    "blatt": null,
+    "extras": [],
+    "flag": true,
+    "passes": 0,
+    "source": "S3 zapadek — P38 ps-138 brez blatt stolpca (nastop 'Zusammenstellung der Grundstücke', lastna oštevilčenja)"
+   },
+   "139": {
+    "blatt": null,
+    "extras": [],
+    "flag": true,
+    "passes": 0,
+    "source": "S3 zapadek — P38 ps-139 opaža 'III' ×1 [~]; ni svežega branja (kvota)"
+   },
+   "14": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "15": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "16": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "17": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "18": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "19": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "20": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "21": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "22": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "23": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "24": {
+    "blatt": "I",
+    "extras": [],
+    "flag": true,
+    "passes": 2,
+    "source": "arbitraža (oči na 3× izrezu): fantomske II/III/IV iz pass1 = rokopis prek stolpcev (oči: samo 'I' + ditto); parcele 421–440 (pageMap 401–420 = P38 podvojitev ps-023/024)"
+   },
+   "25": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "26": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "27": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "28": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "29": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "3": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 0,
+    "source": "P57 polno branje (blatt stolpec 'I' @ r1)"
+   },
+   "30": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "31": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "32": {
+    "blatt": "I",
+    "extras": [],
+    "flag": true,
+    "passes": 2,
+    "source": "arbitraža (oči na 3× izrezu): 'I' @ r1; 'II'/'III' iz obeh prehodov (r9/r10, r12/r13) = rokopisni zamaj prek stolpcev; parcele 581–600"
+   },
+   "33": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "34": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "35": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "36": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "37": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "38": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "39": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "4": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 0,
+    "source": "P57 polno branje (blatt stolpec 'I' @ r1)"
+   },
+   "40": {
+    "blatt": "I",
+    "extras": [
+     {
+      "row": 5,
+      "value": "I·II"
+     },
+     {
+      "row": 6,
+      "value": "I·II"
+     },
+     {
+      "row": 19,
+      "value": "I·II"
+     }
+    ],
+    "flag": true,
+    "passes": 2,
+    "source": "arbitraža (oči na 3× izrezu): 'I' @ r1; oznake 'I·II' @ r5/r6/r19 = popravek prehoda Blatt I→II (območje 725+)"
+   },
+   "41": {
+    "blatt": "I·II",
+    "extras": [],
+    "flag": true,
+    "passes": 2,
+    "source": "arbitraža (oči na 3× izrezu): 'I·II' @ r1 (kot zapisano, prehodni popravek); parcele 741–760 (sveže [141-160] = Kurrent 7→1)"
+   },
+   "42": {
+    "blatt": "III",
+    "extras": [
+     {
+      "row": 18,
+      "value": "II"
+     }
+    ],
+    "flag": true,
+    "passes": 2,
+    "source": "arbitraža (oči na 3× izrezu): 'III' @ r1 prečrtano [~]; 'II' @ r18; parcele 761–780 (sveže [161-180] = Kurrent 7→1)"
+   },
+   "43": {
+    "blatt": "II",
+    "extras": [],
+    "flag": true,
+    "passes": 2,
+    "source": "arbitraža (oči na 3× izrezu): 'II' @ r1, parcele 801–820 (sveže [801-920] = Kurrent 2→9 na zadnji) — Blatt II se začne pri 801"
+   },
+   "44": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "45": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "46": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "47": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "48": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "49": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "5": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "50": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "51": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "52": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "53": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "54": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "55": {
+    "blatt": "II",
+    "extras": [
+     {
+      "row": 17,
+      "value": "II"
+     }
+    ],
+    "flag": true,
+    "passes": 2,
+    "source": "arbitraža (oči na 3× izrezu): 'II' @ r1 + oznaka @ r17; pass2 III/IV = zamaji rdečih zapisov"
+   },
+   "56": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "57": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "58": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "59": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "6": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "60": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "61": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "62": {
+    "blatt": "II",
+    "extras": [
+     {
+      "row": 2,
+      "value": "II"
+     },
+     {
+      "row": 3,
+      "value": "II"
+     }
+    ],
+    "flag": true,
+    "passes": 2,
+    "source": "arbitraža (oči na 3× izrezu): 'II' @ r1 + dodatni 'II' @ r2/r3 (poudarki); pass 'III' = zamaji"
+   },
+   "63": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "64": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "65": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "66": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "67": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "68": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "69": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "7": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "70": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "71": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "72": {
+    "blatt": "III",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "73": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "74": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "75": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "76": {
+    "blatt": "II",
+    "extras": [],
+    "flag": true,
+    "passes": 2,
+    "source": "arbitraža (oči na 3× izrezu): 'II.' @ r1 (oba prehoda 'III' = zamaj pike/florisa); parcele 1461–1480 (sveže [161-180] = odrezana vodilna 14)"
+   },
+   "77": {
+    "blatt": "II",
+    "extras": [],
+    "flag": true,
+    "passes": 2,
+    "source": "arbitraža (oči na 3× izrezu): 'II.' @ r1 (sveže 'III' = zamaj pike); parcele 1481–1500"
+   },
+   "78": {
+    "blatt": "II",
+    "extras": [],
+    "flag": true,
+    "passes": 2,
+    "source": "arbitraža (oči na 3× izrezu): 'II' @ r1 prečrtano [~]; parcele 1501–1520 (večinoma rdeče prečrtane)"
+   },
+   "79": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "8": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "80": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "81": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "82": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "83": {
+    "blatt": "II",
+    "extras": [],
+    "flag": true,
+    "passes": 2,
+    "source": "arbitraža (oči na 3× izrezu): 'II' @ r1 (VLM oba prehoda prazna — spregledan); parcele ~160–182"
+   },
+   "84": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "85": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "86": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "87": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "88": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "89": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "9": {
+    "blatt": "I",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "90": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "91": {
+    "blatt": "II",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "92": {
+    "blatt": "II",
+    "extras": [
+     {
+      "row": 2,
+      "value": "I·IV"
+     },
+     {
+      "row": 11,
+      "value": "II"
+     },
+     {
+      "row": 12,
+      "value": "II·III"
+     }
+    ],
+    "flag": true,
+    "passes": 2,
+    "source": "arbitraža (oči na 3× izrezu): 'II' @ r1 + popravki @ r2/r11/r12; parcele 1881–1900 večinoma prečrtane"
+   },
+   "93": {
+    "blatt": "IV",
+    "extras": [
+     {
+      "row": 11,
+      "value": "III·III"
+     },
+     {
+      "row": 13,
+      "value": "II·III"
+     },
+     {
+      "row": 17,
+      "value": "III"
+     }
+    ],
+    "flag": true,
+    "passes": 2,
+    "source": "arbitraža (oči na 3× izrezu): 'IV' @ r1; PREHOD SEKCIJE sredi strani (1901–1907 prečrtano → 1303+) z oznakami; pass1 'I' = odrezan 'IV'"
+   },
+   "94": {
+    "blatt": "III",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "95": {
+    "blatt": "III",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "96": {
+    "blatt": "III",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "97": {
+    "blatt": "III",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "98": {
+    "blatt": "III",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   },
+   "99": {
+    "blatt": "III",
+    "extras": [],
+    "flag": false,
+    "passes": 2,
+    "source": "2-prehodno soglasje @ vrstica 1"
+   }
+  },
+  "perBlattAmbiguity": {
+   "basesOnMultipleBlatter": 106,
+   "basesOnMultiplePages_v2": 211,
+   "ruleCandidateBases": [
+    "163",
+    "176",
+    "644",
+    "653",
+    "654",
+    "655",
+    "656",
+    "657",
+    "666",
+    "671",
+    "676",
+    "928",
+    "930",
+    "934",
+    "936",
+    "939",
+    "1831"
+   ],
+   "ruleCandidateNote": "baza z TOČNO eno instanco z median razmerjem v [0.8, 1.25] — kandidat za prihodnjo per-Blatt atribucijo joina (P60), MERJENO ne izvedeno [~]",
+   "verdictSi": "per-Blatt ločitev MERJENA: od 211 bazi na več straneh jih 106 sega čez ≥2 Blatta (P39: ista številka pod različnima Blattoma = druga parcela) — instance zdaj razločljive; join po številki ostaja nespremenjen (brez dokaza se NE prerazporeja)"
+  },
+  "statusLine": "P59 GLAVE LISTOV: 129/135 strani sveže branih (2 prehoda; 133–136, 138–139 kvota, p137 pass2), 25 arbitraža-oči, struktura Blatt I–V + lokalne sekcije; 211 dvoumnih base → 106 čez-Blatt, 17 ruleCandidate [~]; join v2 nespremenjen",
+  "structure": {
+   "blattSections": [
+    {
+     "blatt": "I",
+     "n": 38,
+     "pageMax": 40,
+     "pageMin": 3,
+     "pages": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+     ]
+    },
+    {
+     "blatt": "V",
+     "n": 8,
+     "pageMax": 132,
+     "pageMin": 125,
+     "pages": [
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132
+     ]
+    },
+    {
+     "blatt": "II",
+     "n": 51,
+     "pageMax": 137,
+     "pageMin": 43,
+     "pages": [
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      109,
+      137
+     ]
+    },
+    {
+     "blatt": "IV",
+     "n": 23,
+     "pageMax": 124,
+     "pageMin": 93,
+     "pages": [
+      93,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124
+     ]
+    },
+    {
+     "blatt": "III",
+     "n": 10,
+     "pageMax": 101,
+     "pageMin": 42,
+     "pages": [
+      42,
+      72,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101
+     ]
+    },
+    {
+     "blatt": "I·II",
+     "n": 1,
+     "pageMax": 41,
+     "pageMin": 41,
+     "pages": [
+      41
+     ]
+    }
+   ],
+   "coreBlattI": {
+    "pages": "3–40 (38 strani) + p41 'I·II' + p42 'III' prečrtano [~]",
+    "parcels": "1–800",
+    "transitionZone": "721–800 (p40/p41/p42 popravki I→II [~])"
+   },
+   "coreBlattII": {
+    "interleave": "p72 = Blatt III (1281–1302) znotraj II območja — cona 1100–1640 prepletena (p79 1621–1640 → p80 1541–1560 padajoče)",
+    "pages": "43–92 (49 strani)",
+    "starts": "801 (p43, oči)"
+   },
+   "interleavedLocalPages": "strani z majhnimi razponi sredi globalnega teka (npr. 26, 61–62, 81, 83–91: 41–60/101–120/161–180/601–620/921–960) — per-Riede/per-Blatt lokalne sekcije; p101 z ULOMKI (196½ ...) — podštevilčene parcele",
+   "midPageTransitions": "p93 (1901–1907 prečrtano → 1303+), p101 (III→IV @ r7), p65 (II→III @ r2 [~])"
+  },
+  "task": "P59 — glave listov registra PS (Nro. des Blattes): per-Blatt atribucija strani + ločitev dvoumnih base v2",
+  "version": 1
+ },
+ "statusLine": "P59 GLAVE LISTOV: 129/135 strani sveže branih (2 prehoda; 133–136, 138–139 kvota, p137 pass2), 25 arbitraža-oči, struktura Blatt I–V + lokalne sekcije; 211 dvoumnih base → 106 čez-Blatt, 17 ruleCandidate [~]; join v2 nespremenjen",
+ "structure": {
+  "blattSections": [
+   {
+    "blatt": "I",
+    "n": 38,
+    "pageMax": 40,
+    "pageMin": 3,
+    "pages": [
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39,
+     40
+    ]
+   },
+   {
+    "blatt": "V",
+    "n": 8,
+    "pageMax": 132,
+    "pageMin": 125,
+    "pages": [
+     125,
+     126,
+     127,
+     128,
+     129,
+     130,
+     131,
+     132
+    ]
+   },
+   {
+    "blatt": "II",
+    "n": 51,
+    "pageMax": 137,
+    "pageMin": 43,
+    "pages": [
+     43,
+     44,
+     45,
+     46,
+     47,
+     48,
+     49,
+     50,
+     51,
+     52,
+     53,
+     54,
+     55,
+     56,
+     57,
+     58,
+     59,
+     60,
+     61,
+     62,
+     63,
+     64,
+     65,
+     66,
+     67,
+     68,
+     69,
+     70,
+     71,
+     73,
+     74,
+     75,
+     76,
+     77,
+     78,
+     79,
+     80,
+     81,
+     82,
+     83,
+     84,
+     85,
+     86,
+     87,
+     88,
+     89,
+     90,
+     91,
+     92,
+     109,
+     137
+    ]
+   },
+   {
+    "blatt": "IV",
+    "n": 23,
+    "pageMax": 124,
+    "pageMin": 93,
+    "pages": [
+     93,
+     102,
+     103,
+     104,
+     105,
+     106,
+     107,
+     108,
+     110,
+     111,
+     112,
+     113,
+     114,
+     115,
+     116,
+     117,
+     118,
+     119,
+     120,
+     121,
+     122,
+     123,
+     124
+    ]
+   },
+   {
+    "blatt": "III",
+    "n": 10,
+    "pageMax": 101,
+    "pageMin": 42,
+    "pages": [
+     42,
+     72,
+     94,
+     95,
+     96,
+     97,
+     98,
+     99,
+     100,
+     101
+    ]
+   },
+   {
+    "blatt": "I·II",
+    "n": 1,
+    "pageMax": 41,
+    "pageMin": 41,
+    "pages": [
+     41
+    ]
+   }
+  ],
+  "coreBlattI": {
+   "pages": "3–40 (38 strani) + p41 'I·II' + p42 'III' prečrtano [~]",
+   "parcels": "1–800",
+   "transitionZone": "721–800 (p40/p41/p42 popravki I→II [~])"
+  },
+  "coreBlattII": {
+   "interleave": "p72 = Blatt III (1281–1302) znotraj II območja — cona 1100–1640 prepletena (p79 1621–1640 → p80 1541–1560 padajoče)",
+   "pages": "43–92 (49 strani)",
+   "starts": "801 (p43, oči)"
+  },
+  "interleavedLocalPages": "strani z majhnimi razponi sredi globalnega teka (npr. 26, 61–62, 81, 83–91: 41–60/101–120/161–180/601–620/921–960) — per-Riede/per-Blatt lokalne sekcije; p101 z ULOMKI (196½ ...) — podštevilčene parcele",
+  "midPageTransitions": "p93 (1901–1907 prečrtano → 1303+), p101 (III→IV @ r7), p65 (II→III @ r2 [~])"
+ },
+ "task": "P59 — glave listov registra PS (Nro. des Blattes): per-Blatt atribucija strani + ločitev dvoumnih base v2",
+ "verdictEn": "Leaf headers of the PS register read reliably for the first time (S1 123/123 pages x 2 passes + arbitration): Blatt I = parcels 1-800 (pages 3-42, with I-to-II correction annotations in 721-800), Blatt II starts at 801; same number under different Blaetter confirmed as different parcels - the 211 ambiguous bases quantified per instance; join unchanged; fresh parzella ranges are low-confidence (Kurrent 4-8/7-1 confusion, documented)",
+ "verdictSi": "Glave listov registra PS prvič zanesljivo prebrane (S1 123/123 × 2 prehoda + 25 arbitraž-oči): Blatt I = parcele 1–800 (strani 3–40, s prehodnimi popravki I→II na 721–800), Blatt II se začne pri 801 (43–92, p72 = III vmes); isto številko pod različnima Blattoma potrjeno kot druga parcela — 211 dvoumnih base v2 kvantificiranih per instanco; join ostaja nespremenjen; parzella razponi svežih branj = nizka zaupanja (Kurrent 4↔8/7→1, dokumentirano)"
+}

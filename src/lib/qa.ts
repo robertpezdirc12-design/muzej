@@ -41,6 +41,7 @@ import {
   PS_GEO_P55,
   REGISTER_TOPOLOGY_P56,
   PS_REGISTER_START_P57,
+  BLATT_HEADERS_P59,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -3793,6 +3794,127 @@ const p45bErrors: string[] = [];
     p57Errors.length === 0
       ? `veriga 1–40 + ps-005 (41) · 4 plasti (3/3/3 + celice 6×) · obnova 26/26 (25 z območji, 1 številka) · površine 3.7594 ≈ 3.59665 (Δ +4.53 %, kontrola 3.2098) · soslednost 81.2 m vs 263 m (3.2×, MIN 126) · STRONG 3 / MEDIUM 14 / WEAK 9 · 14 upokojenih · ${p57RtDetail} · ${p57FileDetail}`
       : p57Errors.join("; "),
+  );
+
+  /* ── P59 (issue #13): glave listov registra PS — per-Blatt atribucija + ločitev dvoumnih base ── */
+  const p59Errors: string[] = [];
+  const p59 = BLATT_HEADERS_P59;
+  // 1) TS pini
+  if (p59.perBlattAmbiguity.basesOnMultiplePages_v2 !== 211)
+    p59Errors.push("pini: base na več straneh ≠ 211");
+  if (p59.perBlattAmbiguity.basesOnMultipleBlatter !== 106)
+    p59Errors.push("pini: čez-Blatt base ≠ 106");
+  if (p59.perBlattAmbiguity.ruleCandidateBases.length !== 17)
+    p59Errors.push("pini: ruleCandidate ≠ 17");
+  if (p59.arbitration.pagesArbitrated !== 25 || p59.arbitration.agreementPages !== 103)
+    p59Errors.push("pini: arbitraža ≠ 25 ali soglasje ≠ 103");
+  if (p59.structure.coreBlattII.starts !== "801 (p43, oči)")
+    p59Errors.push("pini: Blatt II začetek ≠ 801");
+  // 2) datoteke + NEODVISEN preracun iz v2 runtime vrstic + runtime pageAttribution (dve obliki po P53/P57/P58)
+  let p59FileDetail = "datoteke niso preverjene (readFile ni na voljo) — celovita kontrola teče na /api/qa";
+  if (opts.readFile) {
+    const rawRt59 = opts.readFile("src/data/atlas/ps-blatt-headers.json");
+    const rawEv59 = opts.readFile("research/issue17/ps-blatt-headers.json");
+    const rawV2rt = opts.readFile("src/data/atlas/ps-parcels-geo.json");
+    const rawP57rt = opts.readFile("src/data/atlas/ps-register-start.json");
+    if (rawRt59 === null || rawV2rt === null) {
+      p59Errors.push("runtime ps-blatt-headers.json ali ps-parcels-geo.json ni berljiv");
+    } else {
+      try {
+        const rt59 = JSON.parse(rawRt59) as {
+          version?: number;
+          pageAttribution: Record<string, { blatt: string | null }>;
+          perBlattAmbiguity: { basesOnMultiplePages_v2: number; basesOnMultipleBlatter: number; ruleCandidateBases: string[] };
+        };
+        const v2rt = JSON.parse(rawV2rt) as {
+          version?: number;
+          rows: { page: number; base: string; ratio?: number | null }[];
+        };
+        if (rt59.version !== 1) p59Errors.push("runtime version ≠ 1");
+        if (v2rt.version !== 2) p59Errors.push("v2 runtime version ≠ 2");
+        // TS ↔ runtime JSON navzkrižje
+        if (rt59.perBlattAmbiguity.basesOnMultiplePages_v2 !== p59.perBlattAmbiguity.basesOnMultiplePages_v2
+          || rt59.perBlattAmbiguity.basesOnMultipleBlatter !== p59.perBlattAmbiguity.basesOnMultipleBlatter)
+          p59Errors.push("TS ↔ runtime: dvoumnost pini niso enake");
+        // NEODVISEN preracun: v2 vrstice × runtime pageAttribution → per-Blatt analiza
+        const basePages = new Map<string, Set<number>>();
+        const baseBlatts = new Map<string, Set<string>>();
+        const baseRows = new Map<string, Map<string, number[]>>();
+        for (const r of v2rt.rows) {
+          if (!basePages.has(r.base)) basePages.set(r.base, new Set());
+          basePages.get(r.base)!.add(r.page);
+          const bl = rt59.pageAttribution[String(r.page)]?.blatt ?? null;
+          if (bl !== null) {
+            if (!baseBlatts.has(r.base)) baseBlatts.set(r.base, new Set());
+            baseBlatts.get(r.base)!.add(bl);
+            if (!baseRows.has(r.base)) baseRows.set(r.base, new Map());
+            const m = baseRows.get(r.base)!;
+            if (!m.has(bl)) m.set(bl, []);
+            if (typeof r.ratio === "number") m.get(bl)!.push(r.ratio);
+          }
+        }
+        let multiPage = 0;
+        for (const s of basePages.values()) if (s.size > 1) multiPage++;
+        if (multiPage !== 211) p59Errors.push(`preracun: base na več straneh ${multiPage} ≠ 211`);
+        let multiBlatt = 0;
+        const cand: string[] = [];
+        for (const [b, bls] of baseBlatts) {
+          if (bls.size > 1) {
+            multiBlatt++;
+            const m = baseRows.get(b)!;
+            let inBand = 0;
+            for (const ratios of m.values()) {
+              if (ratios.length === 0) continue;
+              const sorted = [...ratios].sort((x, y) => x - y);
+              const med = sorted[Math.floor(sorted.length / 2)];
+              if (med >= 0.8 && med <= 1.25) inBand++;
+            }
+            if (inBand === 1) cand.push(b);
+          }
+        }
+        if (multiBlatt !== 106) p59Errors.push(`preracun: čez-Blatt base ${multiBlatt} ≠ 106`);
+        if (cand.length !== 17) p59Errors.push(`preracun: ruleCandidate ${cand.length} ≠ 17`);
+        const candSet = new Set(cand);
+        for (const b of p59.perBlattAmbiguity.ruleCandidateBases)
+          if (!candSet.has(b)) p59Errors.push(`preracun: ruleCandidate ${b} manjka v preracunu`);
+        // P57 navzkrižje: Blatt I strani 3–4
+        if (rawP57rt !== null) {
+          const p57rt = JSON.parse(rawP57rt) as { rows: { blatt?: string | null }[] };
+          const biRows = p57rt.rows.filter((r) => r.blatt === "I");
+          if (biRows.length !== 40) p59Errors.push(`P57 navzkrižje: vrstic blatt 'I' ≠ 40 (${biRows.length})`);
+        }
+        if (rt59.pageAttribution["3"]?.blatt !== "I" || rt59.pageAttribution["4"]?.blatt !== "I")
+          p59Errors.push("pageAttribution p3/p4 ≠ 'I'");
+        if (rt59.pageAttribution["43"]?.blatt !== "II") p59Errors.push("pageAttribution p43 ≠ 'II' (Blatt II @ 801)");
+        // evidencа (samo repo): pageAttribution == runtime + arbitražni zapisi
+        if (rawEv59 !== null) {
+          const ev = JSON.parse(rawEv59) as {
+            arbitration: { pagesArbitrated: number };
+            pageAttribution: Record<string, { blatt: string | null }>;
+            runtime: unknown;
+          };
+          if (ev.arbitration.pagesArbitrated !== 25) p59Errors.push("dokaz: arbitraža ≠ 25");
+          if (JSON.stringify(ev.pageAttribution) !== JSON.stringify(rt59.pageAttribution))
+            p59Errors.push("dokaz: pageAttribution ≠ runtime kopija");
+          if (JSON.stringify(ev.runtime) !== JSON.stringify(rt59))
+            p59Errors.push("dokaz: runtime ni bajtno podmnožica dokaza");
+        }
+        p59FileDetail = rawEv59 !== null
+          ? "repo: dokaz (pageAttribution 137 strani + arbitraža 25 + struktura) == runtime bajtno · preracun iz v2 vrstic: 211/106/17 + P57 navzkrižje 26× 'I'"
+          : "produkcija: research/ ni v deploymentu — preracun na runtime kopijah (pageAttribution × v2 vrstice: 211/106/17)";
+      } catch (e) {
+        p59Errors.push(`ps-blatt-headers datoteke neuspešno: ${String(e).slice(0, 80)}`);
+      }
+    }
+  }
+  push(
+    "qa-p59-blatt-headers",
+    "P59: GLAVE LISTOV REGISTRA PS (issue #13): stolpec 'Nro. des Blattes' prvič zanesljivo prebran — levi izrez 135 strani × 2 neodvisna VLM prehoda + 25 arbitraž agent-oči na 3× izrezih (hardcoded razlogi; stari P38 blatt stolpec potrjeno šumen — p12 ditto kot 20× 'I'); STRUKTURA: Blatt I = parcele 1–800 (str. 3–40; prehodna cona 721–800 s popravki I→II [~]), Blatt II se začne pri 801 (str. 43–92; p72 = Blatt III 1281–1302 vmes); PER-BLATT DVoumnost MERJENA: 211 base na več straneh → 106 čez ≥2 Blatta (P39: druga parcela), 17 ruleCandidate (edina instanca v pasu razmerij [0.8, 1.25]); join v2 NESPREMENJEN (meritve brez prerazporeditev); status REVIEW",
+    "P59: PS REGISTER LEAF HEADERS (issue #13): the 'Nro. des Blattes' column read reliably for the first time — left-strip crops of 135 pages × 2 independent VLM passes + 25 agent-eye arbitrations on 3× crops (hardcoded reasons; the old P38 blatt column confirmed noisy — p12 ditto as 20× 'I'); STRUCTURE: Blatt I = parcels 1–800 (pp. 3–40; transition zone 721–800 with I→II corrections [~]), Blatt II starts at 801 (pp. 43–92; p72 = Blatt III 1281–1302 in between); PER-BLATT AMBIGUITY MEASURED: 211 bases on multiple pages → 106 spanning ≥2 Blaetter (P39: a different parcel), 17 ruleCandidates (exactly one instance within the ratio band [0.8, 1.25]); the v2 join UNCHANGED (measurements without reassignments); status REVIEW",
+    p59Errors.length === 0,
+    p59Errors.length === 0
+      ? `pini 211/106/17 · arbitraža 25 (soglasje 103) · Blatt I 1–800 (3–40) · Blatt II @ 801 (43–92, p72 III) · preracun iz v2 vrstic × pageAttribution == pini · P57 navzkrižje 40× 'I' · ${p59FileDetail}`
+      : p59Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;

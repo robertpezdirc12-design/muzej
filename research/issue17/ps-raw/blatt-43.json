@@ -1,0 +1,110 @@
+{
+ "page": 43,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791967059,
+ "usage": {
+  "completion_tokens": 420,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 13
+  },
+  "total_tokens": 3816
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "801"
+   },
+   {
+    "row": 2,
+    "parzella": "802"
+   },
+   {
+    "row": 3,
+    "parzella": "803"
+   },
+   {
+    "row": 4,
+    "parzella": "804"
+   },
+   {
+    "row": 5,
+    "parzella": "805"
+   },
+   {
+    "row": 6,
+    "parzella": "806"
+   },
+   {
+    "row": 7,
+    "parzella": "807"
+   },
+   {
+    "row": 8,
+    "parzella": "808"
+   },
+   {
+    "row": 9,
+    "parzella": "809"
+   },
+   {
+    "row": 10,
+    "parzella": "810"
+   },
+   {
+    "row": 11,
+    "parzella": "811"
+   },
+   {
+    "row": 12,
+    "parzella": "812"
+   },
+   {
+    "row": 13,
+    "parzella": "813"
+   },
+   {
+    "row": 14,
+    "parzella": "814"
+   },
+   {
+    "row": 15,
+    "parzella": "915"
+   },
+   {
+    "row": 16,
+    "parzella": "916"
+   },
+   {
+    "row": 17,
+    "parzella": "917"
+   },
+   {
+    "row": 18,
+    "parzella": "918"
+   },
+   {
+    "row": 19,
+    "parzella": "919"
+   },
+   {
+    "row": 20,
+    "parzella": "920"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "II",
+    "row": 1,
+    "atParzella": "801"
+   }
+  ],
+  "opomba": "Vrstica 15: parcelna številka je napisana kot '915' (prva cifra je podobna 9, lahko tudi 8 ali prečrtan 4), kar prekine naraščajoče zaporedje po 814. Vrstice 15-20 se nadaljujejo z 9xx."
+ },
+ "content": "{\"vrstice\": [{\"row\": 1, \"parzella\": \"801\"}, {\"row\": 2, \"parzella\": \"802\"}, {\"row\": 3, \"parzella\": \"803\"}, {\"row\": 4, \"parzella\": \"804\"}, {\"row\": 5, \"parzella\": \"805\"}, {\"row\": 6, \"parzella\": \"806\"}, {\"row\": 7, \"parzella\": \"807\"}, {\"row\": 8, \"parzella\": \"808\"}, {\"row\": 9, \"parzella\": \"809\"}, {\"row\": 10, \"parzella\": \"810\"}, {\"row\": 11, \"parzella\": \"811\"}, {\"row\": 12, \"parzella\": \"812\"}, {\"row\": 13, \"parzella\": \"813\"}, {\"row\": 14, \"parzella\": \"814\"}, {\"row\": 15, \"parzella\": \"915\"}, {\"row\": 16, \"parzella\": \"916\"}, {\"row\": 17, \"parzella\": \"917\"}, {\"row\": 18, \"parzella\": \"918\"}, {\"row\": 19, \"parzella\": \"919\"}, {\"row\": 20, \"parzella\": \"920\"}], \"blatt\": [{\"value\": \"II\", \"row\": 1, \"atParzella\": \"801\"}], \"opomba\": \"Vrstica 15: parcelna številka je napisana kot '915' (prva cifra je podobna 9, lahko tudi 8 ali prečrtan 4), kar prekine naraščajoče zaporedje po 814. Vrstice 15-20 se nadaljujejo z 9xx.\"}"
+}

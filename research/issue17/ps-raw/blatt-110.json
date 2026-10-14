@@ -1,0 +1,110 @@
+{
+ "page": 110,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791969971,
+ "usage": {
+  "completion_tokens": 451,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3492,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3943
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "2141"
+   },
+   {
+    "row": 2,
+    "parzella": "2142"
+   },
+   {
+    "row": 3,
+    "parzella": "2143"
+   },
+   {
+    "row": 4,
+    "parzella": "2144"
+   },
+   {
+    "row": 5,
+    "parzella": "2145"
+   },
+   {
+    "row": 6,
+    "parzella": "2146"
+   },
+   {
+    "row": 7,
+    "parzella": "2147"
+   },
+   {
+    "row": 8,
+    "parzella": "2148"
+   },
+   {
+    "row": 9,
+    "parzella": "2149"
+   },
+   {
+    "row": 10,
+    "parzella": "2150"
+   },
+   {
+    "row": 11,
+    "parzella": "2151"
+   },
+   {
+    "row": 12,
+    "parzella": "2152"
+   },
+   {
+    "row": 13,
+    "parzella": "2153"
+   },
+   {
+    "row": 14,
+    "parzella": "2154"
+   },
+   {
+    "row": 15,
+    "parzella": "2155"
+   },
+   {
+    "row": 16,
+    "parzella": "2156"
+   },
+   {
+    "row": 17,
+    "parzella": "2157"
+   },
+   {
+    "row": 18,
+    "parzella": "2158"
+   },
+   {
+    "row": 19,
+    "parzella": "2159"
+   },
+   {
+    "row": 20,
+    "parzella": "2160"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "IV",
+    "row": 1,
+    "atParzella": "2141"
+   }
+  ],
+  "opomba": "Vrstica 8 (parzella 2148) je prečrtana z rdečim tušem. Vse ostale vrstice v stolpcu 1 (Nro. des Blattes) vsebujejo le ditto znamenja (dve piki), brez izpisane številke."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"2141\"},\n    {\"row\": 2, \"parzella\": \"2142\"},\n    {\"row\": 3, \"parzella\": \"2143\"},\n    {\"row\": 4, \"parzella\": \"2144\"},\n    {\"row\": 5, \"parzella\": \"2145\"},\n    {\"row\": 6, \"parzella\": \"2146\"},\n    {\"row\": 7, \"parzella\": \"2147\"},\n    {\"row\": 8, \"parzella\": \"2148\"},\n    {\"row\": 9, \"parzella\": \"2149\"},\n    {\"row\": 10, \"parzella\": \"2150\"},\n    {\"row\": 11, \"parzella\": \"2151\"},\n    {\"row\": 12, \"parzella\": \"2152\"},\n    {\"row\": 13, \"parzella\": \"2153\"},\n    {\"row\": 14, \"parzella\": \"2154\"},\n    {\"row\": 15, \"parzella\": \"2155\"},\n    {\"row\": 16, \"parzella\": \"2156\"},\n    {\"row\": 17, \"parzella\": \"2157\"},\n    {\"row\": 18, \"parzella\": \"2158\"},\n    {\"row\": 19, \"parzella\": \"2159\"},\n    {\"row\": 20, \"parzella\": \"2160\"}\n  ],\n  \"blatt\": [\n    {\n      \"value\": \"IV\",\n      \"row\": 1,\n      \"atParzella\": \"2141\"\n    }\n  ],\n  \"opomba\": \"Vrstica 8 (parzella 2148) je prečrtana z rdečim tušem. Vse ostale vrstice v stolpcu 1 (Nro. des Blattes) vsebujejo le ditto znamenja (dve piki), brez izpisane številke.\"\n}"
+}

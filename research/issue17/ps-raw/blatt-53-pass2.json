@@ -1,0 +1,110 @@
+{
+ "page": 53,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791967434,
+ "usage": {
+  "completion_tokens": 339,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3735
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "1001"
+   },
+   {
+    "row": 2,
+    "parzella": "1002"
+   },
+   {
+    "row": 3,
+    "parzella": "1003"
+   },
+   {
+    "row": 4,
+    "parzella": "1004"
+   },
+   {
+    "row": 5,
+    "parzella": "1005"
+   },
+   {
+    "row": 6,
+    "parzella": "1006"
+   },
+   {
+    "row": 7,
+    "parzella": "1007"
+   },
+   {
+    "row": 8,
+    "parzella": "1008"
+   },
+   {
+    "row": 9,
+    "parzella": "1009"
+   },
+   {
+    "row": 10,
+    "parzella": "1010"
+   },
+   {
+    "row": 11,
+    "parzella": "1011"
+   },
+   {
+    "row": 12,
+    "parzella": "1012"
+   },
+   {
+    "row": 13,
+    "parzella": "1013"
+   },
+   {
+    "row": 14,
+    "parzella": "1014"
+   },
+   {
+    "row": 15,
+    "parzella": "1015"
+   },
+   {
+    "row": 16,
+    "parzella": "1016"
+   },
+   {
+    "row": 17,
+    "parzella": "1017"
+   },
+   {
+    "row": 18,
+    "parzella": "1018"
+   },
+   {
+    "row": 19,
+    "parzella": "1019"
+   },
+   {
+    "row": 20,
+    "parzella": "1020"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "II",
+    "row": 1,
+    "atParzella": "1001"
+   }
+  ],
+  "opomba": null
+ },
+ "content": "{\"vrstice\": [{\"row\": 1, \"parzella\": \"1001\"}, {\"row\": 2, \"parzella\": \"1002\"}, {\"row\": 3, \"parzella\": \"1003\"}, {\"row\": 4, \"parzella\": \"1004\"}, {\"row\": 5, \"parzella\": \"1005\"}, {\"row\": 6, \"parzella\": \"1006\"}, {\"row\": 7, \"parzella\": \"1007\"}, {\"row\": 8, \"parzella\": \"1008\"}, {\"row\": 9, \"parzella\": \"1009\"}, {\"row\": 10, \"parzella\": \"1010\"}, {\"row\": 11, \"parzella\": \"1011\"}, {\"row\": 12, \"parzella\": \"1012\"}, {\"row\": 13, \"parzella\": \"1013\"}, {\"row\": 14, \"parzella\": \"1014\"}, {\"row\": 15, \"parzella\": \"1015\"}, {\"row\": 16, \"parzella\": \"1016\"}, {\"row\": 17, \"parzella\": \"1017\"}, {\"row\": 18, \"parzella\": \"1018\"}, {\"row\": 19, \"parzella\": \"1019\"}, {\"row\": 20, \"parzella\": \"1020\"}], \"blatt\": [{\"value\": \"II\", \"row\": 1, \"atParzella\": \"1001\"}], \"opomba\": null}"
+}

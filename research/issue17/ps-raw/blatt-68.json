@@ -1,0 +1,110 @@
+{
+ "page": 68,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791968428,
+ "usage": {
+  "completion_tokens": 432,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3828
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "1201"
+   },
+   {
+    "row": 2,
+    "parzella": "1202"
+   },
+   {
+    "row": 3,
+    "parzella": "1203"
+   },
+   {
+    "row": 4,
+    "parzella": "1204"
+   },
+   {
+    "row": 5,
+    "parzella": "1205"
+   },
+   {
+    "row": 6,
+    "parzella": "1206"
+   },
+   {
+    "row": 7,
+    "parzella": "1207"
+   },
+   {
+    "row": 8,
+    "parzella": "1208"
+   },
+   {
+    "row": 9,
+    "parzella": "1209"
+   },
+   {
+    "row": 10,
+    "parzella": "1210"
+   },
+   {
+    "row": 11,
+    "parzella": "1211"
+   },
+   {
+    "row": 12,
+    "parzella": "1212"
+   },
+   {
+    "row": 13,
+    "parzella": "1213"
+   },
+   {
+    "row": 14,
+    "parzella": "1214"
+   },
+   {
+    "row": 15,
+    "parzella": "1215"
+   },
+   {
+    "row": 16,
+    "parzella": "1216"
+   },
+   {
+    "row": 17,
+    "parzella": "1217"
+   },
+   {
+    "row": 18,
+    "parzella": "1218"
+   },
+   {
+    "row": 19,
+    "parzella": "1219"
+   },
+   {
+    "row": 20,
+    "parzella": "1220"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "II",
+    "row": 1,
+    "atParzella": "1201"
+   }
+  ],
+  "opomba": "Vrstice 13-20 so prečrtane z rdečim tušem. Številke v stolpcu 1 (Blatt) so naraščajoče (1201-1220). V prvem stolpcu je izpisana rimska številka II (morda z manjšo popravko/piko), v nadaljevanju ditto znamenja."
+ },
+ "content": "{\"vrstice\": [{\"row\": 1, \"parzella\": \"1201\"}, {\"row\": 2, \"parzella\": \"1202\"}, {\"row\": 3, \"parzella\": \"1203\"}, {\"row\": 4, \"parzella\": \"1204\"}, {\"row\": 5, \"parzella\": \"1205\"}, {\"row\": 6, \"parzella\": \"1206\"}, {\"row\": 7, \"parzella\": \"1207\"}, {\"row\": 8, \"parzella\": \"1208\"}, {\"row\": 9, \"parzella\": \"1209\"}, {\"row\": 10, \"parzella\": \"1210\"}, {\"row\": 11, \"parzella\": \"1211\"}, {\"row\": 12, \"parzella\": \"1212\"}, {\"row\": 13, \"parzella\": \"1213\"}, {\"row\": 14, \"parzella\": \"1214\"}, {\"row\": 15, \"parzella\": \"1215\"}, {\"row\": 16, \"parzella\": \"1216\"}, {\"row\": 17, \"parzella\": \"1217\"}, {\"row\": 18, \"parzella\": \"1218\"}, {\"row\": 19, \"parzella\": \"1219\"}, {\"row\": 20, \"parzella\": \"1220\"}], \"blatt\": [{\"value\": \"II\", \"row\": 1, \"atParzella\": \"1201\"}], \"opomba\": \"Vrstice 13-20 so prečrtane z rdečim tušem. Številke v stolpcu 1 (Blatt) so naraščajoče (1201-1220). V prvem stolpcu je izpisana rimska številka II (morda z manjšo popravko/piko), v nadaljevanju ditto znamenja.\"}"
+}

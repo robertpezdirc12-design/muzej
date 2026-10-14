@@ -3442,3 +3442,55 @@ P55 (14. 10. 2026) — GEOLOKACIJA GRUNDPARCELLEN: PS protokol 1825 ↔ sodobne 
   simulirana na BUILD nivoju, ne samo z brisanjem research/ iz standalone kopije); E2E agent-browser:
   kartica P55 v2 24/24 vrednosti v DOM + QA 62/62 + mobilni 390×844 overflowX 0 + footer sticky +
   konzola 0/0.
+
+## P59 (2026-10-14) — glave listov registra PS ("Nro. des Blattes"): per-Blatt atribucija + ločitev dvoumnih base
+
+- Vstopno stanje: klon @ 1244eaf (P58), GitLab == GitHub == Vercel, QA 62/62.
+- Izbrana naloga: odprta točka P56/P58 »4. VLM prehod na glave listov« — per-Blatt
+  ločitev 211 dvoumnih base v2 (metodika 4 plasti iz P57, posvečeno glavam).
+- Priprava: `scripts/p59_fetch_strip.py` — izrez LEVEGA stolpca (x30–250, 3× Lanczos
+  q92, manifest sha256) iz vseh 135 VAČ posnetkov strani 5–139.
+- Branje: `scripts/p59_ps_read_blatt.mjs` — 2 neodvisna prehoda glm-5v-turbo na
+  stran (poziv z Kurrent opozorili: 4 ≈ 8, vodilna 1 ozka, naraščajočnost); ~270
+  klicev v foreground (lekcija P57); 133–136 + 138–139 ni branja (VLM kvota 429 —
+  odprto), p137 samo pass1.
+- KLJUČNA ODKRITJA: (1) Blatt I = parcele 1–800 (str. 3–40; prehodna cona 721–800 s
+  popravki I→II na p40/p41/p42 [~]); Blatt II se začne pri 801 (p43); p72 = Blatt
+  III (1281–1302) znotraj II; cona 1100–1640 prepletena z lokalnimi sekcijami
+  (161–180/601–620/921–960), p101 z ulomki (196½); (2) stari P38 blatt stolpec
+  potrjeno šumen (p12 ditto kot 20× 'I'; p76/p77 'II.' kot 'III'; ps-023/024
+  podvojeni razpon — pageMap p24 popravljen na 421–440 z očmi); (3) VLM Kurrent
+  pasti dokumentirane (4↔8, 7→1, odrezane vodilne števke) — parzella razponi
+  nizka zaupanja, numeralе visoka.
+- 25 arbitraž agent-oči (nesoglasja prehodov) — hardcoded razlogi, deterministično
+  (p59_ps_blatt_headers.py ARBITRATION).
+- Skripta `scripts/p59_ps_blatt_headers.py` (deterministična, brez AI ob delovanju,
+  FAIL ob padu I1–I9; `--check` bajtno PASS): I1 pokritost (S1 123/123 × 2) · I2
+  Blatt I == P57 (26 vrstic) · I3 arbitraža popolna · I4 atribucija 1093/1093 · I5
+  struktura jedra (I 38 strani 3–40, II 49 strani 43–92 brez p72) · I6 dvoumnost
+  (211 → 106 čez-Blatt, 17 ruleCandidate) · I7 determinizem · I8 dokaz ⊇ runtime ·
+  I9 join v2 nespremanjen (sha256).
+- REZULTAT: per-Blatt ločitev MERJENA — od 211 base na več straneh jih 106 sega čez
+  ≥2 Blatta (P39: druga parcela); 17 ruleCandidate (edina instanca z median
+  razmerjem v [0.8, 1.25]; npr. 163: Blatt I @ 7.0 vs Blatt II @ 0.981 ≈ 1 QK) —
+  kandidati za P60; join v2 NESPREMENJEN (meritve brez prerazporeditev).
+- Izpisi: dokaz research/issue17/ps-blatt-headers.json (pageAttribution 137 strani,
+  arbitraža z razlogi, struktura, instance, pageMapDivergences) + runtime
+  src/data/atlas/ps-blatt-headers.json (25 KB) + 270 svežih ps-raw branj
+  blatt-<page>{,-pass2}.json.
+- Integracija: API /api/atlas/ps-blatt-headers (force-static) + BLATT_HEADERS_P59
+  (research.ts) + kartica P59 v museum-research (zavihek Prepisi Kurrent: metoda +
+  pokritost, struktura Blatt I/II/lokalne, dvoumnost s primerom 163, pošten status)
+  + zapora P56 odprte točke (»IZVEDEN v P59«) + sources.ts N083PS opomba P59 (Si+En)
+  + audit §37 + README bullet + repov worklog P59.
+- QA 62 → 63 (qa-p59-blatt-headers): pini (211/106/17, arbitraža 25, Blatt II @ 801)
+  + NEODVISEN preracun iz v2 runtime vrstic × runtime pageAttribution (multiPage
+  211, multiBlatt 106, ruleCandidate 17 + množica == pini) + P57 navzkrižje (26×
+  'I') + dokaz == runtime bajtno; dve obliki po P53/P57/P58 (produkcija: preracun
+  na runtime kopijah).
+- Verifikacija: --check bajtno PASS; tsc 0; ESLint 0; build; standalone 3010:
+  /api/qa 63/63; PROD-SIM (build BREZ research/ — lekcija P58 na BUILD nivoju):
+  /api/qa 63/63 v produkciji obliki; /api/atlas/ps-blatt-headers 200; / 200;
+  brskalniška E2E (agent-browser): Raziskave → Prepisi Kurrent → kartica P59 +
+  QA 63/63 + mobilni 390×844 + konzola 0/0; SHEET_GEOREFS in dokazi P40–P58
+  nespremenjeni (lekcija P9); P55/P56/P57/P58 runtime nespremenjeni (pini QA).

@@ -1,0 +1,143 @@
+{
+ "page": 101,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791969727,
+ "usage": {
+  "completion_tokens": 599,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3995
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "196"
+   },
+   {
+    "row": 2,
+    "parzella": "196½"
+   },
+   {
+    "row": 3,
+    "parzella": "196¾"
+   },
+   {
+    "row": 4,
+    "parzella": "197"
+   },
+   {
+    "row": 5,
+    "parzella": "198"
+   },
+   {
+    "row": 6,
+    "parzella": "199"
+   },
+   {
+    "row": 7,
+    "parzella": "200"
+   },
+   {
+    "row": 8,
+    "parzella": "201"
+   },
+   {
+    "row": 9,
+    "parzella": "202"
+   },
+   {
+    "row": 10,
+    "parzella": "203"
+   },
+   {
+    "row": 11,
+    "parzella": "204"
+   },
+   {
+    "row": 12,
+    "parzella": "205"
+   },
+   {
+    "row": 13,
+    "parzella": "206"
+   },
+   {
+    "row": 14,
+    "parzella": "207"
+   },
+   {
+    "row": 15,
+    "parzella": "208"
+   },
+   {
+    "row": 16,
+    "parzella": "209"
+   },
+   {
+    "row": 17,
+    "parzella": "210"
+   },
+   {
+    "row": 18,
+    "parzella": "211"
+   },
+   {
+    "row": 19,
+    "parzella": "212"
+   },
+   {
+    "row": 20,
+    "parzella": "213"
+   },
+   {
+    "row": 21,
+    "parzella": "214"
+   },
+   {
+    "row": 22,
+    "parzella": "215"
+   },
+   {
+    "row": 23,
+    "parzella": "216"
+   },
+   {
+    "row": 24,
+    "parzella": "217"
+   },
+   {
+    "row": 25,
+    "parzella": "218"
+   },
+   {
+    "row": 26,
+    "parzella": "219"
+   },
+   {
+    "row": 27,
+    "parzella": "220"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "III",
+    "row": 1,
+    "atParzella": "196"
+   },
+   {
+    "value": "IV",
+    "row": 7,
+    "atParzella": "200"
+   }
+  ],
+  "opomba": "Vrstice 5 (199) in 6 (200) imajo rdečo prečrtano številko parcele (verjetno izbrisane/ponovno dodeljene). Številke v stolpcu 'Nro. der Parzelle' so napisane v kurrentni pisavi in se naraščajo od 196 do 220. Vrstica 2 vsebuje polovično parcelo (196½), vrstica 3 četrtinsko (196¾)."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"196\"},\n    {\"row\": 2, \"parzella\": \"196½\"},\n    {\"row\": 3, \"parzella\": \"196¾\"},\n    {\"row\": 4, \"parzella\": \"197\"},\n    {\"row\": 5, \"parzella\": \"198\"},\n    {\"row\": 6, \"parzella\": \"199\"},\n    {\"row\": 7, \"parzella\": \"200\"},\n    {\"row\": 8, \"parzella\": \"201\"},\n    {\"row\": 9, \"parzella\": \"202\"},\n    {\"row\": 10, \"parzella\": \"203\"},\n    {\"row\": 11, \"parzella\": \"204\"},\n    {\"row\": 12, \"parzella\": \"205\"},\n    {\"row\": 13, \"parzella\": \"206\"},\n    {\"row\": 14, \"parzella\": \"207\"},\n    {\"row\": 15, \"parzella\": \"208\"},\n    {\"row\": 16, \"parzella\": \"209\"},\n    {\"row\": 17, \"parzella\": \"210\"},\n    {\"row\": 18, \"parzella\": \"211\"},\n    {\"row\": 19, \"parzella\": \"212\"},\n    {\"row\": 20, \"parzella\": \"213\"},\n    {\"row\": 21, \"parzella\": \"214\"},\n    {\"row\": 22, \"parzella\": \"215\"},\n    {\"row\": 23, \"parzella\": \"216\"},\n    {\"row\": 24, \"parzella\": \"217\"},\n    {\"row\": 25, \"parzella\": \"218\"},\n    {\"row\": 26, \"parzella\": \"219\"},\n    {\"row\": 27, \"parzella\": \"220\"}\n  ],\n  \"blatt\": [\n    {\"value\": \"III\", \"row\": 1, \"atParzella\": \"196\"},\n    {\"value\": \"IV\", \"row\": 7, \"atParzella\": \"200\"}\n  ],\n  \"opomba\": \"Vrstice 5 (199) in 6 (200) imajo rdečo prečrtano številko parcele (verjetno izbrisane/ponovno dodeljene). Številke v stolpcu 'Nro. der Parzelle' so napisane v kurrentni pisavi in se naraščajo od 196 do 220. Vrstica 2 vsebuje polovično parcelo (196½), vrstica 3 četrtinsko (196¾).\"\n}"
+}

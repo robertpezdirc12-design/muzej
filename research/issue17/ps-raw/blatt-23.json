@@ -1,0 +1,110 @@
+{
+ "page": 23,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791967401,
+ "usage": {
+  "completion_tokens": 454,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3850
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "401"
+   },
+   {
+    "row": 2,
+    "parzella": "402"
+   },
+   {
+    "row": 3,
+    "parzella": "403"
+   },
+   {
+    "row": 4,
+    "parzella": "404"
+   },
+   {
+    "row": 5,
+    "parzella": "405"
+   },
+   {
+    "row": 6,
+    "parzella": "406"
+   },
+   {
+    "row": 7,
+    "parzella": "407"
+   },
+   {
+    "row": 8,
+    "parzella": "408"
+   },
+   {
+    "row": 9,
+    "parzella": "409"
+   },
+   {
+    "row": 10,
+    "parzella": "410"
+   },
+   {
+    "row": 11,
+    "parzella": "411"
+   },
+   {
+    "row": 12,
+    "parzella": "412"
+   },
+   {
+    "row": 13,
+    "parzella": "413"
+   },
+   {
+    "row": 14,
+    "parzella": "414"
+   },
+   {
+    "row": 15,
+    "parzella": "415"
+   },
+   {
+    "row": 16,
+    "parzella": "416"
+   },
+   {
+    "row": 17,
+    "parzella": "417"
+   },
+   {
+    "row": 18,
+    "parzella": "418"
+   },
+   {
+    "row": 19,
+    "parzella": "419"
+   },
+   {
+    "row": 20,
+    "parzella": "420"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "I",
+    "row": 1,
+    "atParzella": "401"
+   }
+  ],
+  "opomba": "Vrstica 5 (parz. 405) je prečrtana z rdečim tušem. V stolpcu 'Bezeichnung des Grundstückes' so rokopisne opombe (verjetno 'J. e. Wiese' in 'Waldgrundstücke'), vendar niso del zahtevanih podatkov."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"401\"},\n    {\"row\": 2, \"parzella\": \"402\"},\n    {\"row\": 3, \"parzella\": \"403\"},\n    {\"row\": 4, \"parzella\": \"404\"},\n    {\"row\": 5, \"parzella\": \"405\"},\n    {\"row\": 6, \"parzella\": \"406\"},\n    {\"row\": 7, \"parzella\": \"407\"},\n    {\"row\": 8, \"parzella\": \"408\"},\n    {\"row\": 9, \"parzella\": \"409\"},\n    {\"row\": 10, \"parzella\": \"410\"},\n    {\"row\": 11, \"parzella\": \"411\"},\n    {\"row\": 12, \"parzella\": \"412\"},\n    {\"row\": 13, \"parzella\": \"413\"},\n    {\"row\": 14, \"parzella\": \"414\"},\n    {\"row\": 15, \"parzella\": \"415\"},\n    {\"row\": 16, \"parzella\": \"416\"},\n    {\"row\": 17, \"parzella\": \"417\"},\n    {\"row\": 18, \"parzella\": \"418\"},\n    {\"row\": 19, \"parzella\": \"419\"},\n    {\"row\": 20, \"parzella\": \"420\"}\n  ],\n  \"blatt\": [\n    {\n      \"value\": \"I\",\n      \"row\": 1,\n      \"atParzella\": \"401\"\n    }\n  ],\n  \"opomba\": \"Vrstica 5 (parz. 405) je prečrtana z rdečim tušem. V stolpcu 'Bezeichnung des Grundstückes' so rokopisne opombe (verjetno 'J. e. Wiese' in 'Waldgrundstücke'), vendar niso del zahtevanih podatkov.\"\n}"
+}

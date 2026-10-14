@@ -1,0 +1,110 @@
+{
+ "page": 99,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791969651,
+ "usage": {
+  "completion_tokens": 350,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 2
+  },
+  "total_tokens": 3746
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "1921"
+   },
+   {
+    "row": 2,
+    "parzella": "1922"
+   },
+   {
+    "row": 3,
+    "parzella": "1923"
+   },
+   {
+    "row": 4,
+    "parzella": "1924"
+   },
+   {
+    "row": 5,
+    "parzella": "1925"
+   },
+   {
+    "row": 6,
+    "parzella": "1926"
+   },
+   {
+    "row": 7,
+    "parzella": "1927"
+   },
+   {
+    "row": 8,
+    "parzella": "1928"
+   },
+   {
+    "row": 9,
+    "parzella": "1929"
+   },
+   {
+    "row": 10,
+    "parzella": "1930"
+   },
+   {
+    "row": 11,
+    "parzella": "1931"
+   },
+   {
+    "row": 12,
+    "parzella": "1932"
+   },
+   {
+    "row": 13,
+    "parzella": "1933"
+   },
+   {
+    "row": 14,
+    "parzella": "1934"
+   },
+   {
+    "row": 15,
+    "parzella": "1935"
+   },
+   {
+    "row": 16,
+    "parzella": "1936"
+   },
+   {
+    "row": 17,
+    "parzella": "1937"
+   },
+   {
+    "row": 18,
+    "parzella": "1938"
+   },
+   {
+    "row": 19,
+    "parzella": "1939"
+   },
+   {
+    "row": 20,
+    "parzella": "1940"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "III",
+    "row": 1,
+    "atParzella": "1921"
+   }
+  ],
+  "opomba": null
+ },
+ "content": "{\"vrstice\": [{\"row\": 1, \"parzella\": \"1921\"}, {\"row\": 2, \"parzella\": \"1922\"}, {\"row\": 3, \"parzella\": \"1923\"}, {\"row\": 4, \"parzella\": \"1924\"}, {\"row\": 5, \"parzella\": \"1925\"}, {\"row\": 6, \"parzella\": \"1926\"}, {\"row\": 7, \"parzella\": \"1927\"}, {\"row\": 8, \"parzella\": \"1928\"}, {\"row\": 9, \"parzella\": \"1929\"}, {\"row\": 10, \"parzella\": \"1930\"}, {\"row\": 11, \"parzella\": \"1931\"}, {\"row\": 12, \"parzella\": \"1932\"}, {\"row\": 13, \"parzella\": \"1933\"}, {\"row\": 14, \"parzella\": \"1934\"}, {\"row\": 15, \"parzella\": \"1935\"}, {\"row\": 16, \"parzella\": \"1936\"}, {\"row\": 17, \"parzella\": \"1937\"}, {\"row\": 18, \"parzella\": \"1938\"}, {\"row\": 19, \"parzella\": \"1939\"}, {\"row\": 20, \"parzella\": \"1940\"}], \"blatt\": [{\"value\": \"III\", \"row\": 1, \"atParzella\": \"1921\"}], \"opomba\": null}"
+}

@@ -1,0 +1,114 @@
+{
+ "page": 126,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791970736,
+ "usage": {
+  "completion_tokens": 517,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3913
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "2460"
+   },
+   {
+    "row": 2,
+    "parzella": "2461"
+   },
+   {
+    "row": 3,
+    "parzella": "2462"
+   },
+   {
+    "row": 4,
+    "parzella": "2463"
+   },
+   {
+    "row": 5,
+    "parzella": "2464"
+   },
+   {
+    "row": 6,
+    "parzella": "2465"
+   },
+   {
+    "row": 7,
+    "parzella": "2466"
+   },
+   {
+    "row": 8,
+    "parzella": "2467"
+   },
+   {
+    "row": 9,
+    "parzella": "2468"
+   },
+   {
+    "row": 10,
+    "parzella": "2469"
+   },
+   {
+    "row": 11,
+    "parzella": "2470"
+   },
+   {
+    "row": 12,
+    "parzella": "2471"
+   },
+   {
+    "row": 13,
+    "parzella": "2472"
+   },
+   {
+    "row": 14,
+    "parzella": "2473"
+   },
+   {
+    "row": 15,
+    "parzella": "2474"
+   },
+   {
+    "row": 16,
+    "parzella": "2475"
+   },
+   {
+    "row": 17,
+    "parzella": "2476"
+   },
+   {
+    "row": 18,
+    "parzella": "2477"
+   },
+   {
+    "row": 19,
+    "parzella": "2478"
+   },
+   {
+    "row": 20,
+    "parzella": "2479"
+   },
+   {
+    "row": 21,
+    "parzella": "2480"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "V",
+    "row": 1,
+    "atParzella": "2460"
+   }
+  ],
+  "opomba": "Vrstica z parcelo 2461 je prečrtana z rdečim tušem. Vse ostale številke so naraščajoče (2460–2480). V stolpcu 1 (Nro. des Blattes) je v prvi vrstici izpisana rimska številka V, v nadaljnjih vrsticah so ditto-znamenja (dve piki)."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"2460\"},\n    {\"row\": 2, \"parzella\": \"2461\"},\n    {\"row\": 3, \"parzella\": \"2462\"},\n    {\"row\": 4, \"parzella\": \"2463\"},\n    {\"row\": 5, \"parzella\": \"2464\"},\n    {\"row\": 6, \"parzella\": \"2465\"},\n    {\"row\": 7, \"parzella\": \"2466\"},\n    {\"row\": 8, \"parzella\": \"2467\"},\n    {\"row\": 9, \"parzella\": \"2468\"},\n    {\"row\": 10, \"parzella\": \"2469\"},\n    {\"row\": 11, \"parzella\": \"2470\"},\n    {\"row\": 12, \"parzella\": \"2471\"},\n    {\"row\": 13, \"parzella\": \"2472\"},\n    {\"row\": 14, \"parzella\": \"2473\"},\n    {\"row\": 15, \"parzella\": \"2474\"},\n    {\"row\": 16, \"parzella\": \"2475\"},\n    {\"row\": 17, \"parzella\": \"2476\"},\n    {\"row\": 18, \"parzella\": \"2477\"},\n    {\"row\": 19, \"parzella\": \"2478\"},\n    {\"row\": 20, \"parzella\": \"2479\"},\n    {\"row\": 21, \"parzella\": \"2480\"}\n  ],\n  \"blatt\": [\n    {\n      \"value\": \"V\",\n      \"row\": 1,\n      \"atParzella\": \"2460\"\n    }\n  ],\n  \"opomba\": \"Vrstica z parcelo 2461 je prečrtana z rdečim tušem. Vse ostale številke so naraščajoče (2460–2480). V stolpcu 1 (Nro. des Blattes) je v prvi vrstici izpisana rimska številka V, v nadaljnjih vrsticah so ditto-znamenja (dve piki).\"\n}"
+}

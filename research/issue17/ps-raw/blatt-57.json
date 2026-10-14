@@ -1,0 +1,110 @@
+{
+ "page": 57,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791968043,
+ "usage": {
+  "completion_tokens": 508,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3904
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "1081"
+   },
+   {
+    "row": 2,
+    "parzella": "1082"
+   },
+   {
+    "row": 3,
+    "parzella": "1083"
+   },
+   {
+    "row": 4,
+    "parzella": "1084"
+   },
+   {
+    "row": 5,
+    "parzella": "1085"
+   },
+   {
+    "row": 6,
+    "parzella": "1086"
+   },
+   {
+    "row": 7,
+    "parzella": "1087"
+   },
+   {
+    "row": 8,
+    "parzella": "1088"
+   },
+   {
+    "row": 9,
+    "parzella": "1089"
+   },
+   {
+    "row": 10,
+    "parzella": "1090"
+   },
+   {
+    "row": 11,
+    "parzella": "1091"
+   },
+   {
+    "row": 12,
+    "parzella": "1092"
+   },
+   {
+    "row": 13,
+    "parzella": "1093"
+   },
+   {
+    "row": 14,
+    "parzella": "1094"
+   },
+   {
+    "row": 15,
+    "parzella": "1095"
+   },
+   {
+    "row": 16,
+    "parzella": "1096"
+   },
+   {
+    "row": 17,
+    "parzella": "1097"
+   },
+   {
+    "row": 18,
+    "parzella": "1098"
+   },
+   {
+    "row": 19,
+    "parzella": "1099"
+   },
+   {
+    "row": 20,
+    "parzella": "1100"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "II",
+    "row": 1,
+    "atParzella": "1081"
+   }
+  ],
+  "opomba": "Vrstice 2-5, 11, 14 in 20 imajo rdečo prečrto (verjetno brisanje/invalidacija). Vrstica 12 vsebuje veliko črko 'D' (morda oznaka za nov list ali poseben vnos) v stolpcu 2. Vrstice 16-17 vsebujejo rokopisno opombo (nečitljivo/zmešano z drugim besedilom). Številke so naraščajoče od 1081 do 1100."
+ },
+ "content": "```json\n{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"1081\"},\n    {\"row\": 2, \"parzella\": \"1082\"},\n    {\"row\": 3, \"parzella\": \"1083\"},\n    {\"row\": 4, \"parzella\": \"1084\"},\n    {\"row\": 5, \"parzella\": \"1085\"},\n    {\"row\": 6, \"parzella\": \"1086\"},\n    {\"row\": 7, \"parzella\": \"1087\"},\n    {\"row\": 8, \"parzella\": \"1088\"},\n    {\"row\": 9, \"parzella\": \"1089\"},\n    {\"row\": 10, \"parzella\": \"1090\"},\n    {\"row\": 11, \"parzella\": \"1091\"},\n    {\"row\": 12, \"parzella\": \"1092\"},\n    {\"row\": 13, \"parzella\": \"1093\"},\n    {\"row\": 14, \"parzella\": \"1094\"},\n    {\"row\": 15, \"parzella\": \"1095\"},\n    {\"row\": 16, \"parzella\": \"1096\"},\n    {\"row\": 17, \"parzella\": \"1097\"},\n    {\"row\": 18, \"parzella\": \"1098\"},\n    {\"row\": 19, \"parzella\": \"1099\"},\n    {\"row\": 20, \"parzella\": \"1100\"}\n  ],\n  \"blatt\": [\n    {\n      \"value\": \"II\",\n      \"row\": 1,\n      \"atParzella\": \"1081\"\n    }\n  ],\n  \"opomba\": \"Vrstice 2-5, 11, 14 in 20 imajo rdečo prečrto (verjetno brisanje/invalidacija). Vrstica 12 vsebuje veliko črko 'D' (morda oznaka za nov list ali poseben vnos) v stolpcu 2. Vrstice 16-17 vsebujejo rokopisno opombo (nečitljivo/zmešano z drugim besedilom). Številke so naraščajoče od 1081 do 1100.\"\n}\n```"
+}

@@ -1,0 +1,110 @@
+{
+ "page": 45,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791967218,
+ "usage": {
+  "completion_tokens": 479,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 13
+  },
+  "total_tokens": 3875
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "841"
+   },
+   {
+    "row": 2,
+    "parzella": "842"
+   },
+   {
+    "row": 3,
+    "parzella": "843"
+   },
+   {
+    "row": 4,
+    "parzella": "844"
+   },
+   {
+    "row": 5,
+    "parzella": "845"
+   },
+   {
+    "row": 6,
+    "parzella": "846"
+   },
+   {
+    "row": 7,
+    "parzella": "847"
+   },
+   {
+    "row": 8,
+    "parzella": "848"
+   },
+   {
+    "row": 9,
+    "parzella": "849"
+   },
+   {
+    "row": 10,
+    "parzella": "850"
+   },
+   {
+    "row": 11,
+    "parzella": "851"
+   },
+   {
+    "row": 12,
+    "parzella": "852"
+   },
+   {
+    "row": 13,
+    "parzella": "853"
+   },
+   {
+    "row": 14,
+    "parzella": "854"
+   },
+   {
+    "row": 15,
+    "parzella": "855"
+   },
+   {
+    "row": 16,
+    "parzella": "856"
+   },
+   {
+    "row": 17,
+    "parzella": "857"
+   },
+   {
+    "row": 18,
+    "parzella": "858"
+   },
+   {
+    "row": 19,
+    "parzella": "859"
+   },
+   {
+    "row": 20,
+    "parzella": "860"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "II",
+    "row": 1,
+    "atParzella": "841"
+   }
+  ],
+  "opomba": "Številke parcel so napisane v obliki '84x' in '85x' (trimestne), kar je značilno za franciscejski kataster. Vrstica z parcelo 858 ima rdečo prečrto, vrstica z 859 tudi. Številka lista II je izpisana samo v prvi vrstici, nadaljnje vsebujejo ditto (dve piki)."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"841\"},\n    {\"row\": 2, \"parzella\": \"842\"},\n    {\"row\": 3, \"parzella\": \"843\"},\n    {\"row\": 4, \"parzella\": \"844\"},\n    {\"row\": 5, \"parzella\": \"845\"},\n    {\"row\": 6, \"parzella\": \"846\"},\n    {\"row\": 7, \"parzella\": \"847\"},\n    {\"row\": 8, \"parzella\": \"848\"},\n    {\"row\": 9, \"parzella\": \"849\"},\n    {\"row\": 10, \"parzella\": \"850\"},\n    {\"row\": 11, \"parzella\": \"851\"},\n    {\"row\": 12, \"parzella\": \"852\"},\n    {\"row\": 13, \"parzella\": \"853\"},\n    {\"row\": 14, \"parzella\": \"854\"},\n    {\"row\": 15, \"parzella\": \"855\"},\n    {\"row\": 16, \"parzella\": \"856\"},\n    {\"row\": 17, \"parzella\": \"857\"},\n    {\"row\": 18, \"parzella\": \"858\"},\n    {\"row\": 19, \"parzella\": \"859\"},\n    {\"row\": 20, \"parzella\": \"860\"}\n  ],\n  \"blatt\": [\n    {\n      \"value\": \"II\",\n      \"row\": 1,\n      \"atParzella\": \"841\"\n    }\n  ],\n  \"opomba\": \"Številke parcel so napisane v obliki '84x' in '85x' (trimestne), kar je značilno za franciscejski kataster. Vrstica z parcelo 858 ima rdečo prečrto, vrstica z 859 tudi. Številka lista II je izpisana samo v prvi vrstici, nadaljnje vsebujejo ditto (dve piki).\"\n}"
+}

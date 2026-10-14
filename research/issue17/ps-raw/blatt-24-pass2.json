@@ -1,0 +1,110 @@
+{
+ "page": 24,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791967436,
+ "usage": {
+  "completion_tokens": 410,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3806
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "421"
+   },
+   {
+    "row": 2,
+    "parzella": "422"
+   },
+   {
+    "row": 3,
+    "parzella": "423"
+   },
+   {
+    "row": 4,
+    "parzella": "424"
+   },
+   {
+    "row": 5,
+    "parzella": "425"
+   },
+   {
+    "row": 6,
+    "parzella": "426"
+   },
+   {
+    "row": 7,
+    "parzella": "427"
+   },
+   {
+    "row": 8,
+    "parzella": "428"
+   },
+   {
+    "row": 9,
+    "parzella": "429"
+   },
+   {
+    "row": 10,
+    "parzella": "430"
+   },
+   {
+    "row": 11,
+    "parzella": "431"
+   },
+   {
+    "row": 12,
+    "parzella": "432"
+   },
+   {
+    "row": 13,
+    "parzella": "433"
+   },
+   {
+    "row": 14,
+    "parzella": "434"
+   },
+   {
+    "row": 15,
+    "parzella": "435"
+   },
+   {
+    "row": 16,
+    "parzella": "436"
+   },
+   {
+    "row": 17,
+    "parzella": "437"
+   },
+   {
+    "row": 18,
+    "parzella": "438"
+   },
+   {
+    "row": 19,
+    "parzella": "439"
+   },
+   {
+    "row": 20,
+    "parzella": "440"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "I",
+    "row": 1,
+    "atParzella": "421"
+   }
+  ],
+  "opomba": "Vrstice 4-20 imajo rdečo prečrto (verjetno preklicane/veljavne v novem stanju). V stolpcu 1 je izpisana samo rimska številka I v prvi vrstici, vse ostalo so ditto (\") znaki."
+ },
+ "content": "{\"vrstice\": [{\"row\": 1, \"parzella\": \"421\"}, {\"row\": 2, \"parzella\": \"422\"}, {\"row\": 3, \"parzella\": \"423\"}, {\"row\": 4, \"parzella\": \"424\"}, {\"row\": 5, \"parzella\": \"425\"}, {\"row\": 6, \"parzella\": \"426\"}, {\"row\": 7, \"parzella\": \"427\"}, {\"row\": 8, \"parzella\": \"428\"}, {\"row\": 9, \"parzella\": \"429\"}, {\"row\": 10, \"parzella\": \"430\"}, {\"row\": 11, \"parzella\": \"431\"}, {\"row\": 12, \"parzella\": \"432\"}, {\"row\": 13, \"parzella\": \"433\"}, {\"row\": 14, \"parzella\": \"434\"}, {\"row\": 15, \"parzella\": \"435\"}, {\"row\": 16, \"parzella\": \"436\"}, {\"row\": 17, \"parzella\": \"437\"}, {\"row\": 18, \"parzella\": \"438\"}, {\"row\": 19, \"parzella\": \"439\"}, {\"row\": 20, \"parzella\": \"440\"}], \"blatt\": [{\"value\": \"I\", \"row\": 1, \"atParzella\": \"421\"}], \"opomba\": \"Vrstice 4-20 imajo rdečo prečrto (verjetno preklicane/veljavne v novem stanju). V stolpcu 1 je izpisana samo rimska številka I v prvi vrstici, vse ostalo so ditto (\\\") znaki.\"}"
+}

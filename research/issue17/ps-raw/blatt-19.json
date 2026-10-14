@@ -1,0 +1,110 @@
+{
+ "page": 19,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791966311,
+ "usage": {
+  "completion_tokens": 480,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3876
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "321"
+   },
+   {
+    "row": 2,
+    "parzella": "322"
+   },
+   {
+    "row": 3,
+    "parzella": "323"
+   },
+   {
+    "row": 4,
+    "parzella": "324"
+   },
+   {
+    "row": 5,
+    "parzella": "325"
+   },
+   {
+    "row": 6,
+    "parzella": "326"
+   },
+   {
+    "row": 7,
+    "parzella": "327"
+   },
+   {
+    "row": 8,
+    "parzella": "328"
+   },
+   {
+    "row": 9,
+    "parzella": "329"
+   },
+   {
+    "row": 10,
+    "parzella": "330"
+   },
+   {
+    "row": 11,
+    "parzella": "331"
+   },
+   {
+    "row": 12,
+    "parzella": "332"
+   },
+   {
+    "row": 13,
+    "parzella": "333"
+   },
+   {
+    "row": 14,
+    "parzella": "334"
+   },
+   {
+    "row": 15,
+    "parzella": "335"
+   },
+   {
+    "row": 16,
+    "parzella": "336"
+   },
+   {
+    "row": 17,
+    "parzella": "337"
+   },
+   {
+    "row": 18,
+    "parzella": "338"
+   },
+   {
+    "row": 19,
+    "parzella": "339"
+   },
+   {
+    "row": 20,
+    "parzella": "340"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "I",
+    "row": 1,
+    "atParzella": "321"
+   }
+  ],
+  "opomba": "Vrstica 9 (parzela 329) je prečrtana z rdečim tušem. V stolpcu 'Bezeichnung des Grundstückes' so rokopisne opombe (npr. vrstica 9: 'hiesige Grundstücke gem[äß]...'). Vse ostale vrstice v stolpcu 'Nro. des Blattes' vsebujejo ditto znamenja (dve piki)."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"321\"},\n    {\"row\": 2, \"parzella\": \"322\"},\n    {\"row\": 3, \"parzella\": \"323\"},\n    {\"row\": 4, \"parzella\": \"324\"},\n    {\"row\": 5, \"parzella\": \"325\"},\n    {\"row\": 6, \"parzella\": \"326\"},\n    {\"row\": 7, \"parzella\": \"327\"},\n    {\"row\": 8, \"parzella\": \"328\"},\n    {\"row\": 9, \"parzella\": \"329\"},\n    {\"row\": 10, \"parzella\": \"330\"},\n    {\"row\": 11, \"parzella\": \"331\"},\n    {\"row\": 12, \"parzella\": \"332\"},\n    {\"row\": 13, \"parzella\": \"333\"},\n    {\"row\": 14, \"parzella\": \"334\"},\n    {\"row\": 15, \"parzella\": \"335\"},\n    {\"row\": 16, \"parzella\": \"336\"},\n    {\"row\": 17, \"parzella\": \"337\"},\n    {\"row\": 18, \"parzella\": \"338\"},\n    {\"row\": 19, \"parzella\": \"339\"},\n    {\"row\": 20, \"parzella\": \"340\"}\n  ],\n  \"blatt\": [\n    {\n      \"value\": \"I\",\n      \"row\": 1,\n      \"atParzella\": \"321\"\n    }\n  ],\n  \"opomba\": \"Vrstica 9 (parzela 329) je prečrtana z rdečim tušem. V stolpcu 'Bezeichnung des Grundstückes' so rokopisne opombe (npr. vrstica 9: 'hiesige Grundstücke gem[äß]...'). Vse ostale vrstice v stolpcu 'Nro. des Blattes' vsebujejo ditto znamenja (dve piki).\"\n}"
+}

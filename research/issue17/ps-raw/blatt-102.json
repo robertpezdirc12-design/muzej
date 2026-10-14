@@ -1,0 +1,110 @@
+{
+ "page": 102,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791969737,
+ "usage": {
+  "completion_tokens": 375,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 2
+  },
+  "total_tokens": 3771
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "1981"
+   },
+   {
+    "row": 2,
+    "parzella": "1982"
+   },
+   {
+    "row": 3,
+    "parzella": "1983"
+   },
+   {
+    "row": 4,
+    "parzella": "1984"
+   },
+   {
+    "row": 5,
+    "parzella": "1985"
+   },
+   {
+    "row": 6,
+    "parzella": "1986"
+   },
+   {
+    "row": 7,
+    "parzella": "1987"
+   },
+   {
+    "row": 8,
+    "parzella": "1988"
+   },
+   {
+    "row": 9,
+    "parzella": "1989"
+   },
+   {
+    "row": 10,
+    "parzella": "1990"
+   },
+   {
+    "row": 11,
+    "parzella": "1991"
+   },
+   {
+    "row": 12,
+    "parzella": "1992"
+   },
+   {
+    "row": 13,
+    "parzella": "1993"
+   },
+   {
+    "row": 14,
+    "parzella": "1994"
+   },
+   {
+    "row": 15,
+    "parzella": "1995"
+   },
+   {
+    "row": 16,
+    "parzella": "1996"
+   },
+   {
+    "row": 17,
+    "parzella": "1997"
+   },
+   {
+    "row": 18,
+    "parzella": "1998"
+   },
+   {
+    "row": 19,
+    "parzella": "1999"
+   },
+   {
+    "row": 20,
+    "parzella": "2000"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "IV",
+    "row": 1,
+    "atParzella": "1981"
+   }
+  ],
+  "opomba": null
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"1981\"},\n    {\"row\": 2, \"parzella\": \"1982\"},\n    {\"row\": 3, \"parzella\": \"1983\"},\n    {\"row\": 4, \"parzella\": \"1984\"},\n    {\"row\": 5, \"parzella\": \"1985\"},\n    {\"row\": 6, \"parzella\": \"1986\"},\n    {\"row\": 7, \"parzella\": \"1987\"},\n    {\"row\": 8, \"parzella\": \"1988\"},\n    {\"row\": 9, \"parzella\": \"1989\"},\n    {\"row\": 10, \"parzella\": \"1990\"},\n    {\"row\": 11, \"parzella\": \"1991\"},\n    {\"row\": 12, \"parzella\": \"1992\"},\n    {\"row\": 13, \"parzella\": \"1993\"},\n    {\"row\": 14, \"parzella\": \"1994\"},\n    {\"row\": 15, \"parzella\": \"1995\"},\n    {\"row\": 16, \"parzella\": \"1996\"},\n    {\"row\": 17, \"parzella\": \"1997\"},\n    {\"row\": 18, \"parzella\": \"1998\"},\n    {\"row\": 19, \"parzella\": \"1999\"},\n    {\"row\": 20, \"parzella\": \"2000\"}\n  ],\n  \"blatt\": [\n    {\n      \"value\": \"IV\",\n      \"row\": 1,\n      \"atParzella\": \"1981\"\n    }\n  ],\n  \"opomba\": null\n}"
+}

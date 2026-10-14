@@ -1,0 +1,126 @@
+{
+ "page": 117,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791970333,
+ "usage": {
+  "completion_tokens": 575,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3971
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "2294"
+   },
+   {
+    "row": 2,
+    "parzella": "2293"
+   },
+   {
+    "row": 3,
+    "parzella": "2292"
+   },
+   {
+    "row": 4,
+    "parzella": "2284"
+   },
+   {
+    "row": 5,
+    "parzella": "2285"
+   },
+   {
+    "row": 6,
+    "parzella": "2285"
+   },
+   {
+    "row": 7,
+    "parzella": "2286"
+   },
+   {
+    "row": 8,
+    "parzella": "2286"
+   },
+   {
+    "row": 9,
+    "parzella": "2289"
+   },
+   {
+    "row": 10,
+    "parzella": "2289"
+   },
+   {
+    "row": 11,
+    "parzella": "2289"
+   },
+   {
+    "row": 12,
+    "parzella": "2290"
+   },
+   {
+    "row": 13,
+    "parzella": "2291"
+   },
+   {
+    "row": 14,
+    "parzella": "2291"
+   },
+   {
+    "row": 15,
+    "parzella": "2292"
+   },
+   {
+    "row": 16,
+    "parzella": "2293"
+   },
+   {
+    "row": 17,
+    "parzella": "2293"
+   },
+   {
+    "row": 18,
+    "parzella": "2294"
+   },
+   {
+    "row": 19,
+    "parzella": "2295"
+   },
+   {
+    "row": 20,
+    "parzella": "2296"
+   },
+   {
+    "row": 21,
+    "parzella": "2297"
+   },
+   {
+    "row": 22,
+    "parzella": "2298"
+   },
+   {
+    "row": 23,
+    "parzella": "2299"
+   },
+   {
+    "row": 24,
+    "parzella": "2300"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "IV",
+    "row": 1,
+    "atParzella": "2294"
+   }
+  ],
+  "opomba": "Vrstica 1: številka IV (Blatt) je prečrtana z rdečim črtami. Vrstice 6-8 in 10-24: številke parcel so prečrtane z rdečo črto (verjetno brisane/veljavne popravki). Številke v stolpcu Nro. der Parzelle niso strogo naraščajoče (ponavljanja in majhni odkloni), kar ustreza rokopisu."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"2294\"},\n    {\"row\": 2, \"parzella\": \"2293\"},\n    {\"row\": 3, \"parzella\": \"2292\"},\n    {\"row\": 4, \"parzella\": \"2284\"},\n    {\"row\": 5, \"parzella\": \"2285\"},\n    {\"row\": 6, \"parzella\": \"2285\"},\n    {\"row\": 7, \"parzella\": \"2286\"},\n    {\"row\": 8, \"parzella\": \"2286\"},\n    {\"row\": 9, \"parzella\": \"2289\"},\n    {\"row\": 10, \"parzella\": \"2289\"},\n    {\"row\": 11, \"parzella\": \"2289\"},\n    {\"row\": 12, \"parzella\": \"2290\"},\n    {\"row\": 13, \"parzella\": \"2291\"},\n    {\"row\": 14, \"parzella\": \"2291\"},\n    {\"row\": 15, \"parzella\": \"2292\"},\n    {\"row\": 16, \"parzella\": \"2293\"},\n    {\"row\": 17, \"parzella\": \"2293\"},\n    {\"row\": 18, \"parzella\": \"2294\"},\n    {\"row\": 19, \"parzella\": \"2295\"},\n    {\"row\": 20, \"parzella\": \"2296\"},\n    {\"row\": 21, \"parzella\": \"2297\"},\n    {\"row\": 22, \"parzella\": \"2298\"},\n    {\"row\": 23, \"parzella\": \"2299\"},\n    {\"row\": 24, \"parzella\": \"2300\"}\n  ],\n  \"blatt\": [\n    {\n      \"value\": \"IV\",\n      \"row\": 1,\n      \"atParzella\": \"2294\"\n    }\n  ],\n  \"opomba\": \"Vrstica 1: številka IV (Blatt) je prečrtana z rdečim črtami. Vrstice 6-8 in 10-24: številke parcel so prečrtane z rdečo črto (verjetno brisane/veljavne popravki). Številke v stolpcu Nro. der Parzelle niso strogo naraščajoče (ponavljanja in majhni odkloni), kar ustreza rokopisu.\"\n}"
+}

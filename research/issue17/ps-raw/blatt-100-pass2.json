@@ -1,0 +1,120 @@
+{
+ "page": 100,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791969698,
+ "usage": {
+  "completion_tokens": 426,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3822
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "1941"
+   },
+   {
+    "row": 2,
+    "parzella": "1942"
+   },
+   {
+    "row": 3,
+    "parzella": "1943"
+   },
+   {
+    "row": 4,
+    "parzella": "1944"
+   },
+   {
+    "row": 5,
+    "parzella": "1945"
+   },
+   {
+    "row": 6,
+    "parzella": "1946"
+   },
+   {
+    "row": 7,
+    "parzella": "1947"
+   },
+   {
+    "row": 8,
+    "parzella": "1948"
+   },
+   {
+    "row": 9,
+    "parzella": "1949"
+   },
+   {
+    "row": 10,
+    "parzella": "1950"
+   },
+   {
+    "row": 11,
+    "parzella": "1951"
+   },
+   {
+    "row": 12,
+    "parzella": "1952"
+   },
+   {
+    "row": 13,
+    "parzella": "1953"
+   },
+   {
+    "row": 14,
+    "parzella": "1954"
+   },
+   {
+    "row": 15,
+    "parzella": "1955"
+   },
+   {
+    "row": 16,
+    "parzella": "1956"
+   },
+   {
+    "row": 17,
+    "parzella": "1957"
+   },
+   {
+    "row": 18,
+    "parzella": "1958"
+   },
+   {
+    "row": 19,
+    "parzella": "1959"
+   },
+   {
+    "row": 20,
+    "parzella": "1960"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "II",
+    "row": 1,
+    "atParzella": "1941"
+   },
+   {
+    "value": "III",
+    "row": 4,
+    "atParzella": "1944"
+   },
+   {
+    "value": "IV",
+    "row": 11,
+    "atParzella": "1951"
+   }
+  ],
+  "opomba": null
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"1941\"},\n    {\"row\": 2, \"parzella\": \"1942\"},\n    {\"row\": 3, \"parzella\": \"1943\"},\n    {\"row\": 4, \"parzella\": \"1944\"},\n    {\"row\": 5, \"parzella\": \"1945\"},\n    {\"row\": 6, \"parzella\": \"1946\"},\n    {\"row\": 7, \"parzella\": \"1947\"},\n    {\"row\": 8, \"parzella\": \"1948\"},\n    {\"row\": 9, \"parzella\": \"1949\"},\n    {\"row\": 10, \"parzella\": \"1950\"},\n    {\"row\": 11, \"parzella\": \"1951\"},\n    {\"row\": 12, \"parzella\": \"1952\"},\n    {\"row\": 13, \"parzella\": \"1953\"},\n    {\"row\": 14, \"parzella\": \"1954\"},\n    {\"row\": 15, \"parzella\": \"1955\"},\n    {\"row\": 16, \"parzella\": \"1956\"},\n    {\"row\": 17, \"parzella\": \"1957\"},\n    {\"row\": 18, \"parzella\": \"1958\"},\n    {\"row\": 19, \"parzella\": \"1959\"},\n    {\"row\": 20, \"parzella\": \"1960\"}\n  ],\n  \"blatt\": [\n    {\"value\": \"II\", \"row\": 1, \"atParzella\": \"1941\"},\n    {\"value\": \"III\", \"row\": 4, \"atParzella\": \"1944\"},\n    {\"value\": \"IV\", \"row\": 11, \"atParzella\": \"1951\"}\n  ],\n  \"opomba\": null\n}"
+}

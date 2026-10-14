@@ -1,0 +1,110 @@
+{
+ "page": 47,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791967296,
+ "usage": {
+  "completion_tokens": 469,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3865
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "881"
+   },
+   {
+    "row": 2,
+    "parzella": "882"
+   },
+   {
+    "row": 3,
+    "parzella": "883"
+   },
+   {
+    "row": 4,
+    "parzella": "884"
+   },
+   {
+    "row": 5,
+    "parzella": "885"
+   },
+   {
+    "row": 6,
+    "parzella": "886"
+   },
+   {
+    "row": 7,
+    "parzella": "887"
+   },
+   {
+    "row": 8,
+    "parzella": "888"
+   },
+   {
+    "row": 9,
+    "parzella": "889"
+   },
+   {
+    "row": 10,
+    "parzella": "890"
+   },
+   {
+    "row": 11,
+    "parzella": "891"
+   },
+   {
+    "row": 12,
+    "parzella": "892"
+   },
+   {
+    "row": 13,
+    "parzella": "893"
+   },
+   {
+    "row": 14,
+    "parzella": "894"
+   },
+   {
+    "row": 15,
+    "parzella": "895"
+   },
+   {
+    "row": 16,
+    "parzella": "896"
+   },
+   {
+    "row": 17,
+    "parzella": "897"
+   },
+   {
+    "row": 18,
+    "parzella": "898"
+   },
+   {
+    "row": 19,
+    "parzella": "899"
+   },
+   {
+    "row": 20,
+    "parzella": "900"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "II",
+    "row": 1,
+    "atParzella": "881"
+   }
+  ],
+  "opomba": "Vrstice 2-7 (parcele 882-887) so prečrtane z rdečim tušem. V stolpcu 'Bezeichnung des Grundstückes' so rokopisne opombe (npr. 'Wiesen', 'Gütl', 'v. 184...'). Vse ostale vrstice v stolpcu 1 vsebujejo ditto znake ('')."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"881\"},\n    {\"row\": 2, \"parzella\": \"882\"},\n    {\"row\": 3, \"parzella\": \"883\"},\n    {\"row\": 4, \"parzella\": \"884\"},\n    {\"row\": 5, \"parzella\": \"885\"},\n    {\"row\": 6, \"parzella\": \"886\"},\n    {\"row\": 7, \"parzella\": \"887\"},\n    {\"row\": 8, \"parzella\": \"888\"},\n    {\"row\": 9, \"parzella\": \"889\"},\n    {\"row\": 10, \"parzella\": \"890\"},\n    {\"row\": 11, \"parzella\": \"891\"},\n    {\"row\": 12, \"parzella\": \"892\"},\n    {\"row\": 13, \"parzella\": \"893\"},\n    {\"row\": 14, \"parzella\": \"894\"},\n    {\"row\": 15, \"parzella\": \"895\"},\n    {\"row\": 16, \"parzella\": \"896\"},\n    {\"row\": 17, \"parzella\": \"897\"},\n    {\"row\": 18, \"parzella\": \"898\"},\n    {\"row\": 19, \"parzella\": \"899\"},\n    {\"row\": 20, \"parzella\": \"900\"}\n  ],\n  \"blatt\": [\n    {\n      \"value\": \"II\",\n      \"row\": 1,\n      \"atParzella\": \"881\"\n    }\n  ],\n  \"opomba\": \"Vrstice 2-7 (parcele 882-887) so prečrtane z rdečim tušem. V stolpcu 'Bezeichnung des Grundstückes' so rokopisne opombe (npr. 'Wiesen', 'Gütl', 'v. 184...'). Vse ostale vrstice v stolpcu 1 vsebujejo ditto znake ('').\"\n}"
+}

@@ -1,0 +1,110 @@
+{
+ "page": 121,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791970489,
+ "usage": {
+  "completion_tokens": 461,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3857
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "261"
+   },
+   {
+    "row": 2,
+    "parzella": "262"
+   },
+   {
+    "row": 3,
+    "parzella": "263"
+   },
+   {
+    "row": 4,
+    "parzella": "264"
+   },
+   {
+    "row": 5,
+    "parzella": "265"
+   },
+   {
+    "row": 6,
+    "parzella": "266"
+   },
+   {
+    "row": 7,
+    "parzella": "267"
+   },
+   {
+    "row": 8,
+    "parzella": "268"
+   },
+   {
+    "row": 9,
+    "parzella": "269"
+   },
+   {
+    "row": 10,
+    "parzella": "270"
+   },
+   {
+    "row": 11,
+    "parzella": "271"
+   },
+   {
+    "row": 12,
+    "parzella": "272"
+   },
+   {
+    "row": 13,
+    "parzella": "273"
+   },
+   {
+    "row": 14,
+    "parzella": "274"
+   },
+   {
+    "row": 15,
+    "parzella": "275"
+   },
+   {
+    "row": 16,
+    "parzella": "276"
+   },
+   {
+    "row": 17,
+    "parzella": "277"
+   },
+   {
+    "row": 18,
+    "parzella": "278"
+   },
+   {
+    "row": 19,
+    "parzella": "279"
+   },
+   {
+    "row": 20,
+    "parzella": "280"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "IV",
+    "row": 1,
+    "atParzella": "261"
+   }
+  ],
+  "opomba": "Vrstice 14-20 (parcele 274-280) so prečrtane z rdečim tušem. V stolpcu 'Nro. des Blattes' je v prvi vrstici zapisana rimska številka IV (prečrtana), v nadaljnjih vrsticah pa so le ditto znaki (dve piki)."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"261\"},\n    {\"row\": 2, \"parzella\": \"262\"},\n    {\"row\": 3, \"parzella\": \"263\"},\n    {\"row\": 4, \"parzella\": \"264\"},\n    {\"row\": 5, \"parzella\": \"265\"},\n    {\"row\": 6, \"parzella\": \"266\"},\n    {\"row\": 7, \"parzella\": \"267\"},\n    {\"row\": 8, \"parzella\": \"268\"},\n    {\"row\": 9, \"parzella\": \"269\"},\n    {\"row\": 10, \"parzella\": \"270\"},\n    {\"row\": 11, \"parzella\": \"271\"},\n    {\"row\": 12, \"parzella\": \"272\"},\n    {\"row\": 13, \"parzella\": \"273\"},\n    {\"row\": 14, \"parzella\": \"274\"},\n    {\"row\": 15, \"parzella\": \"275\"},\n    {\"row\": 16, \"parzella\": \"276\"},\n    {\"row\": 17, \"parzella\": \"277\"},\n    {\"row\": 18, \"parzella\": \"278\"},\n    {\"row\": 19, \"parzella\": \"279\"},\n    {\"row\": 20, \"parzella\": \"280\"}\n  ],\n  \"blatt\": [\n    {\n      \"value\": \"IV\",\n      \"row\": 1,\n      \"atParzella\": \"261\"\n    }\n  ],\n  \"opomba\": \"Vrstice 14-20 (parcele 274-280) so prečrtane z rdečim tušem. V stolpcu 'Nro. des Blattes' je v prvi vrstici zapisana rimska številka IV (prečrtana), v nadaljnjih vrsticah pa so le ditto znaki (dve piki).\"\n}"
+}

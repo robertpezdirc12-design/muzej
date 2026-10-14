@@ -1,0 +1,110 @@
+{
+ "page": 75,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791968632,
+ "usage": {
+  "completion_tokens": 523,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 13
+  },
+  "total_tokens": 3919
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "9447"
+   },
+   {
+    "row": 2,
+    "parzella": "9448"
+   },
+   {
+    "row": 3,
+    "parzella": "9449"
+   },
+   {
+    "row": 4,
+    "parzella": "9450"
+   },
+   {
+    "row": 5,
+    "parzella": "9456"
+   },
+   {
+    "row": 6,
+    "parzella": "9466"
+   },
+   {
+    "row": 7,
+    "parzella": "9474"
+   },
+   {
+    "row": 8,
+    "parzella": "11478"
+   },
+   {
+    "row": 9,
+    "parzella": "11479"
+   },
+   {
+    "row": 10,
+    "parzella": "11480"
+   },
+   {
+    "row": 11,
+    "parzella": "11481"
+   },
+   {
+    "row": 12,
+    "parzella": "11498"
+   },
+   {
+    "row": 13,
+    "parzella": "11502"
+   },
+   {
+    "row": 14,
+    "parzella": "11504"
+   },
+   {
+    "row": 15,
+    "parzella": "11561"
+   },
+   {
+    "row": 16,
+    "parzella": "11566"
+   },
+   {
+    "row": 17,
+    "parzella": "11677"
+   },
+   {
+    "row": 18,
+    "parzella": "11588"
+   },
+   {
+    "row": 19,
+    "parzella": "11609"
+   },
+   {
+    "row": 20,
+    "parzella": "11600"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "II",
+    "row": 1,
+    "atParzella": "9447"
+   }
+  ],
+  "opomba": "Vrstice 4-6 in 11 imajo rdečo prečrto (verjetno brisanje/invalidacija). Številke v stolpcu Parzella so napisane v Kurrent pisavi; pri nekaterih (npr. vrstica 15: 11561) je prva števka 1 ozka in lahko spregljiva. Vrstni red ni strogo naraščajoč (npr. 9474 -> 11478 preskok; 11588 -> 11609 -> 11600 padec), kar ustreza originalnemu zapisu."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"9447\"},\n    {\"row\": 2, \"parzella\": \"9448\"},\n    {\"row\": 3, \"parzella\": \"9449\"},\n    {\"row\": 4, \"parzella\": \"9450\"},\n    {\"row\": 5, \"parzella\": \"9456\"},\n    {\"row\": 6, \"parzella\": \"9466\"},\n    {\"row\": 7, \"parzella\": \"9474\"},\n    {\"row\": 8, \"parzella\": \"11478\"},\n    {\"row\": 9, \"parzella\": \"11479\"},\n    {\"row\": 10, \"parzella\": \"11480\"},\n    {\"row\": 11, \"parzella\": \"11481\"},\n    {\"row\": 12, \"parzella\": \"11498\"},\n    {\"row\": 13, \"parzella\": \"11502\"},\n    {\"row\": 14, \"parzella\": \"11504\"},\n    {\"row\": 15, \"parzella\": \"11561\"},\n    {\"row\": 16, \"parzella\": \"11566\"},\n    {\"row\": 17, \"parzella\": \"11677\"},\n    {\"row\": 18, \"parzella\": \"11588\"},\n    {\"row\": 19, \"parzella\": \"11609\"},\n    {\"row\": 20, \"parzella\": \"11600\"}\n  ],\n  \"blatt\": [\n    {\n      \"value\": \"II\",\n      \"row\": 1,\n      \"atParzella\": \"9447\"\n    }\n  ],\n  \"opomba\": \"Vrstice 4-6 in 11 imajo rdečo prečrto (verjetno brisanje/invalidacija). Številke v stolpcu Parzella so napisane v Kurrent pisavi; pri nekaterih (npr. vrstica 15: 11561) je prva števka 1 ozka in lahko spregljiva. Vrstni red ni strogo naraščajoč (npr. 9474 -> 11478 preskok; 11588 -> 11609 -> 11600 padec), kar ustreza originalnemu zapisu.\"\n}"
+}

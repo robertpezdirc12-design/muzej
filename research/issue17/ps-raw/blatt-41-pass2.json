@@ -1,0 +1,110 @@
+{
+ "page": 41,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791967012,
+ "usage": {
+  "completion_tokens": 450,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3846
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "141"
+   },
+   {
+    "row": 2,
+    "parzella": "142"
+   },
+   {
+    "row": 3,
+    "parzella": "143"
+   },
+   {
+    "row": 4,
+    "parzella": "144"
+   },
+   {
+    "row": 5,
+    "parzella": "145"
+   },
+   {
+    "row": 6,
+    "parzella": "146"
+   },
+   {
+    "row": 7,
+    "parzella": "147"
+   },
+   {
+    "row": 8,
+    "parzella": "148"
+   },
+   {
+    "row": 9,
+    "parzella": "149"
+   },
+   {
+    "row": 10,
+    "parzella": "150"
+   },
+   {
+    "row": 11,
+    "parzella": "151"
+   },
+   {
+    "row": 12,
+    "parzella": "152"
+   },
+   {
+    "row": 13,
+    "parzella": "153"
+   },
+   {
+    "row": 14,
+    "parzella": "154"
+   },
+   {
+    "row": 15,
+    "parzella": "155"
+   },
+   {
+    "row": 16,
+    "parzella": "156"
+   },
+   {
+    "row": 17,
+    "parzella": "157"
+   },
+   {
+    "row": 18,
+    "parzella": "158"
+   },
+   {
+    "row": 19,
+    "parzella": "159"
+   },
+   {
+    "row": 20,
+    "parzella": "160"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "I.II",
+    "row": 1,
+    "atParzella": "141"
+   }
+  ],
+  "opomba": "Vrstica 5 (parcela 145) je prečrtana z rdečim tušem. V stolpcu 'Nro. des Blattes' je v prvi vrstici zapisano 'I.II' (prečrtano), v nadaljnjih vrsticah so ditto znaki (''). Številke parcel so naraščajoče od 141 do 160."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"141\"},\n    {\"row\": 2, \"parzella\": \"142\"},\n    {\"row\": 3, \"parzella\": \"143\"},\n    {\"row\": 4, \"parzella\": \"144\"},\n    {\"row\": 5, \"parzella\": \"145\"},\n    {\"row\": 6, \"parzella\": \"146\"},\n    {\"row\": 7, \"parzella\": \"147\"},\n    {\"row\": 8, \"parzella\": \"148\"},\n    {\"row\": 9, \"parzella\": \"149\"},\n    {\"row\": 10, \"parzella\": \"150\"},\n    {\"row\": 11, \"parzella\": \"151\"},\n    {\"row\": 12, \"parzella\": \"152\"},\n    {\"row\": 13, \"parzella\": \"153\"},\n    {\"row\": 14, \"parzella\": \"154\"},\n    {\"row\": 15, \"parzella\": \"155\"},\n    {\"row\": 16, \"parzella\": \"156\"},\n    {\"row\": 17, \"parzella\": \"157\"},\n    {\"row\": 18, \"parzella\": \"158\"},\n    {\"row\": 19, \"parzella\": \"159\"},\n    {\"row\": 20, \"parzella\": \"160\"}\n  ],\n  \"blatt\": [\n    {\n      \"value\": \"I.II\",\n      \"row\": 1,\n      \"atParzella\": \"141\"\n    }\n  ],\n  \"opomba\": \"Vrstica 5 (parcela 145) je prečrtana z rdečim tušem. V stolpcu 'Nro. des Blattes' je v prvi vrstici zapisano 'I.II' (prečrtano), v nadaljnjih vrsticah so ditto znaki (''). Številke parcel so naraščajoče od 141 do 160.\"\n}"
+}

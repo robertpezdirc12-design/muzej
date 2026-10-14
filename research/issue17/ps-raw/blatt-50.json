@@ -1,0 +1,110 @@
+{
+ "page": 50,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791967360,
+ "usage": {
+  "completion_tokens": 431,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3827
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "941"
+   },
+   {
+    "row": 2,
+    "parzella": "942"
+   },
+   {
+    "row": 3,
+    "parzella": "943"
+   },
+   {
+    "row": 4,
+    "parzella": "944"
+   },
+   {
+    "row": 5,
+    "parzella": "945"
+   },
+   {
+    "row": 6,
+    "parzella": "946"
+   },
+   {
+    "row": 7,
+    "parzella": "947"
+   },
+   {
+    "row": 8,
+    "parzella": "948"
+   },
+   {
+    "row": 9,
+    "parzella": "949"
+   },
+   {
+    "row": 10,
+    "parzella": "950"
+   },
+   {
+    "row": 11,
+    "parzella": "951"
+   },
+   {
+    "row": 12,
+    "parzella": "952"
+   },
+   {
+    "row": 13,
+    "parzella": "953"
+   },
+   {
+    "row": 14,
+    "parzella": "954"
+   },
+   {
+    "row": 15,
+    "parzella": "955"
+   },
+   {
+    "row": 16,
+    "parzella": "956"
+   },
+   {
+    "row": 17,
+    "parzella": "957"
+   },
+   {
+    "row": 18,
+    "parzella": "958"
+   },
+   {
+    "row": 19,
+    "parzella": "959"
+   },
+   {
+    "row": 20,
+    "parzella": "960"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "II",
+    "row": 1,
+    "atParzella": "941"
+   }
+  ],
+  "opomba": "Številke v stolpcu 'Nro. der Parzelle' so zapisane v obliki 94x/95x (verjetno nadaljevanje številčenja iz prejšnje strani). Vrstica 10 (950) ima rdečo prečrto (izbris/vložek). Vrstni red je naraščajoči."
+ },
+ "content": "{\"vrstice\": [{\"row\": 1, \"parzella\": \"941\"}, {\"row\": 2, \"parzella\": \"942\"}, {\"row\": 3, \"parzella\": \"943\"}, {\"row\": 4, \"parzella\": \"944\"}, {\"row\": 5, \"parzella\": \"945\"}, {\"row\": 6, \"parzella\": \"946\"}, {\"row\": 7, \"parzella\": \"947\"}, {\"row\": 8, \"parzella\": \"948\"}, {\"row\": 9, \"parzella\": \"949\"}, {\"row\": 10, \"parzella\": \"950\"}, {\"row\": 11, \"parzella\": \"951\"}, {\"row\": 12, \"parzella\": \"952\"}, {\"row\": 13, \"parzella\": \"953\"}, {\"row\": 14, \"parzella\": \"954\"}, {\"row\": 15, \"parzella\": \"955\"}, {\"row\": 16, \"parzella\": \"956\"}, {\"row\": 17, \"parzella\": \"957\"}, {\"row\": 18, \"parzella\": \"958\"}, {\"row\": 19, \"parzella\": \"959\"}, {\"row\": 20, \"parzella\": \"960\"}], \"blatt\": [{\"value\": \"II\", \"row\": 1, \"atParzella\": \"941\"}], \"opomba\": \"Številke v stolpcu 'Nro. der Parzelle' so zapisane v obliki 94x/95x (verjetno nadaljevanje številčenja iz prejšnje strani). Vrstica 10 (950) ima rdečo prečrto (izbris/vložek). Vrstni red je naraščajoči.\"}"
+}

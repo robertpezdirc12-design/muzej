@@ -1,0 +1,120 @@
+{
+ "page": 55,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791967511,
+ "usage": {
+  "completion_tokens": 524,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 2
+  },
+  "total_tokens": 3920
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "1041"
+   },
+   {
+    "row": 2,
+    "parzella": "1042"
+   },
+   {
+    "row": 3,
+    "parzella": "1043"
+   },
+   {
+    "row": 4,
+    "parzella": "1044"
+   },
+   {
+    "row": 5,
+    "parzella": "1045"
+   },
+   {
+    "row": 6,
+    "parzella": "1046"
+   },
+   {
+    "row": 7,
+    "parzella": "1047"
+   },
+   {
+    "row": 8,
+    "parzella": "1048"
+   },
+   {
+    "row": 9,
+    "parzella": "1049"
+   },
+   {
+    "row": 10,
+    "parzella": "1050"
+   },
+   {
+    "row": 11,
+    "parzella": "1051"
+   },
+   {
+    "row": 12,
+    "parzella": "1052"
+   },
+   {
+    "row": 13,
+    "parzella": "1053"
+   },
+   {
+    "row": 14,
+    "parzella": "1054"
+   },
+   {
+    "row": 15,
+    "parzella": "1055"
+   },
+   {
+    "row": 16,
+    "parzella": "1056"
+   },
+   {
+    "row": 17,
+    "parzella": "1057"
+   },
+   {
+    "row": 18,
+    "parzella": "1058"
+   },
+   {
+    "row": 19,
+    "parzella": "1059"
+   },
+   {
+    "row": 20,
+    "parzella": "1060"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "II",
+    "row": 1,
+    "atParzella": "1041"
+   },
+   {
+    "value": "III",
+    "row": 13,
+    "atParzella": "1052"
+   },
+   {
+    "value": "IV",
+    "row": 16,
+    "atParzella": "1055"
+   }
+  ],
+  "opomba": "Vrstice 5-7 in 12 imajo rdeče prečrtane parcelne številke (verjetno izbrisane/veljavno popravljene). Vrstica 20 (1060) je rdeče prečrtana. Številka v vrstici 9 (1049) ima pred seboj zapisano '90' (morda napaka pri pisanju ali oznaka), glavna številka pa je 1049."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"1041\"},\n    {\"row\": 2, \"parzella\": \"1042\"},\n    {\"row\": 3, \"parzella\": \"1043\"},\n    {\"row\": 4, \"parzella\": \"1044\"},\n    {\"row\": 5, \"parzella\": \"1045\"},\n    {\"row\": 6, \"parzella\": \"1046\"},\n    {\"row\": 7, \"parzella\": \"1047\"},\n    {\"row\": 8, \"parzella\": \"1048\"},\n    {\"row\": 9, \"parzella\": \"1049\"},\n    {\"row\": 10, \"parzella\": \"1050\"},\n    {\"row\": 11, \"parzella\": \"1051\"},\n    {\"row\": 12, \"parzella\": \"1052\"},\n    {\"row\": 13, \"parzella\": \"1053\"},\n    {\"row\": 14, \"parzella\": \"1054\"},\n    {\"row\": 15, \"parzella\": \"1055\"},\n    {\"row\": 16, \"parzella\": \"1056\"},\n    {\"row\": 17, \"parzella\": \"1057\"},\n    {\"row\": 18, \"parzella\": \"1058\"},\n    {\"row\": 19, \"parzella\": \"1059\"},\n    {\"row\": 20, \"parzella\": \"1060\"}\n  ],\n  \"blatt\": [\n    {\"value\": \"II\", \"row\": 1, \"atParzella\": \"1041\"},\n    {\"value\": \"III\", \"row\": 13, \"atParzella\": \"1052\"},\n    {\"value\": \"IV\", \"row\": 16, \"atParzella\": \"1055\"}\n  ],\n  \"opomba\": \"Vrstice 5-7 in 12 imajo rdeče prečrtane parcelne številke (verjetno izbrisane/veljavno popravljene). Vrstica 20 (1060) je rdeče prečrtana. Številka v vrstici 9 (1049) ima pred seboj zapisano '90' (morda napaka pri pisanju ali oznaka), glavna številka pa je 1049.\"\n}"
+}

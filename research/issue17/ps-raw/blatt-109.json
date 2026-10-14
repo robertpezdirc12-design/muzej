@@ -1,0 +1,110 @@
+{
+ "page": 109,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791969939,
+ "usage": {
+  "completion_tokens": 479,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3875
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "2121"
+   },
+   {
+    "row": 2,
+    "parzella": "2122"
+   },
+   {
+    "row": 3,
+    "parzella": "2123"
+   },
+   {
+    "row": 4,
+    "parzella": "2124"
+   },
+   {
+    "row": 5,
+    "parzella": "2125"
+   },
+   {
+    "row": 6,
+    "parzella": "2126"
+   },
+   {
+    "row": 7,
+    "parzella": "2127"
+   },
+   {
+    "row": 8,
+    "parzella": "2128"
+   },
+   {
+    "row": 9,
+    "parzella": "2129"
+   },
+   {
+    "row": 10,
+    "parzella": "2130"
+   },
+   {
+    "row": 11,
+    "parzella": "2131"
+   },
+   {
+    "row": 12,
+    "parzella": "2132"
+   },
+   {
+    "row": 13,
+    "parzella": "2133"
+   },
+   {
+    "row": 14,
+    "parzella": "2134"
+   },
+   {
+    "row": 15,
+    "parzella": "2135"
+   },
+   {
+    "row": 16,
+    "parzella": "2136"
+   },
+   {
+    "row": 17,
+    "parzella": "2137"
+   },
+   {
+    "row": 18,
+    "parzella": "2138"
+   },
+   {
+    "row": 19,
+    "parzella": "2139"
+   },
+   {
+    "row": 20,
+    "parzella": "2140"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "II",
+    "row": 1,
+    "atParzella": "2121"
+   }
+  ],
+  "opomba": "Vrstice 6 (parzella 2126) in 7 (parzella 2127) imata rdečo prečrto. Vrstica 3 (parzella 2123) je morda prečrtana ali popravljena. Številka v stolpcu 'Nro. des Blattes' je zapisana kot arabska številka 11 (ali rimska II), sledi ji črtica."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"2121\"},\n    {\"row\": 2, \"parzella\": \"2122\"},\n    {\"row\": 3, \"parzella\": \"2123\"},\n    {\"row\": 4, \"parzella\": \"2124\"},\n    {\"row\": 5, \"parzella\": \"2125\"},\n    {\"row\": 6, \"parzella\": \"2126\"},\n    {\"row\": 7, \"parzella\": \"2127\"},\n    {\"row\": 8, \"parzella\": \"2128\"},\n    {\"row\": 9, \"parzella\": \"2129\"},\n    {\"row\": 10, \"parzella\": \"2130\"},\n    {\"row\": 11, \"parzella\": \"2131\"},\n    {\"row\": 12, \"parzella\": \"2132\"},\n    {\"row\": 13, \"parzella\": \"2133\"},\n    {\"row\": 14, \"parzella\": \"2134\"},\n    {\"row\": 15, \"parzella\": \"2135\"},\n    {\"row\": 16, \"parzella\": \"2136\"},\n    {\"row\": 17, \"parzella\": \"2137\"},\n    {\"row\": 18, \"parzella\": \"2138\"},\n    {\"row\": 19, \"parzella\": \"2139\"},\n    {\"row\": 20, \"parzella\": \"2140\"}\n  ],\n  \"blatt\": [\n    {\n      \"value\": \"II\",\n      \"row\": 1,\n      \"atParzella\": \"2121\"\n    }\n  ],\n  \"opomba\": \"Vrstice 6 (parzella 2126) in 7 (parzella 2127) imata rdečo prečrto. Vrstica 3 (parzella 2123) je morda prečrtana ali popravljena. Številka v stolpcu 'Nro. des Blattes' je zapisana kot arabska številka 11 (ali rimska II), sledi ji črtica.\"\n}"
+}

@@ -1,0 +1,106 @@
+{
+ "page": 127,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791970771,
+ "usage": {
+  "completion_tokens": 448,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3844
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "2482"
+   },
+   {
+    "row": 2,
+    "parzella": "2483"
+   },
+   {
+    "row": 3,
+    "parzella": "2484"
+   },
+   {
+    "row": 4,
+    "parzella": "2485"
+   },
+   {
+    "row": 5,
+    "parzella": "2486"
+   },
+   {
+    "row": 6,
+    "parzella": "2487"
+   },
+   {
+    "row": 7,
+    "parzella": "2488"
+   },
+   {
+    "row": 8,
+    "parzella": "2489"
+   },
+   {
+    "row": 9,
+    "parzella": "2490"
+   },
+   {
+    "row": 10,
+    "parzella": "2491"
+   },
+   {
+    "row": 11,
+    "parzella": "2492"
+   },
+   {
+    "row": 12,
+    "parzella": "2493"
+   },
+   {
+    "row": 13,
+    "parzella": "2494"
+   },
+   {
+    "row": 14,
+    "parzella": "2495"
+   },
+   {
+    "row": 15,
+    "parzella": "2496"
+   },
+   {
+    "row": 16,
+    "parzella": "2497"
+   },
+   {
+    "row": 17,
+    "parzella": "2498"
+   },
+   {
+    "row": 18,
+    "parzella": "2499"
+   },
+   {
+    "row": 19,
+    "parzella": "2500"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "I",
+    "row": 1,
+    "atParzella": "2482"
+   }
+  ],
+  "opomba": "Vrstice z rdečim prečrtanjem (okoli vrstic 14-16) vsebujejo številke 2495-2497; številka v stolpcu Blatt je rimska I (ali morda VII, a glede na kontekst najverjetneje I)."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"2482\"},\n    {\"row\": 2, \"parzella\": \"2483\"},\n    {\"row\": 3, \"parzella\": \"2484\"},\n    {\"row\": 4, \"parzella\": \"2485\"},\n    {\"row\": 5, \"parzella\": \"2486\"},\n    {\"row\": 6, \"parzella\": \"2487\"},\n    {\"row\": 7, \"parzella\": \"2488\"},\n    {\"row\": 8, \"parzella\": \"2489\"},\n    {\"row\": 9, \"parzella\": \"2490\"},\n    {\"row\": 10, \"parzella\": \"2491\"},\n    {\"row\": 11, \"parzella\": \"2492\"},\n    {\"row\": 12, \"parzella\": \"2493\"},\n    {\"row\": 13, \"parzella\": \"2494\"},\n    {\"row\": 14, \"parzella\": \"2495\"},\n    {\"row\": 15, \"parzella\": \"2496\"},\n    {\"row\": 16, \"parzella\": \"2497\"},\n    {\"row\": 17, \"parzella\": \"2498\"},\n    {\"row\": 18, \"parzella\": \"2499\"},\n    {\"row\": 19, \"parzella\": \"2500\"}\n  ],\n  \"blatt\": [\n    {\"value\": \"I\", \"row\": 1, \"atParzella\": \"2482\"}\n  ],\n  \"opomba\": \"Vrstice z rdečim prečrtanjem (okoli vrstic 14-16) vsebujejo številke 2495-2497; številka v stolpcu Blatt je rimska I (ali morda VII, a glede na kontekst najverjetneje I).\"\n}"
+}

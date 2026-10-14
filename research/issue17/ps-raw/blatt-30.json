@@ -1,0 +1,110 @@
+{
+ "page": 30,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791966674,
+ "usage": {
+  "completion_tokens": 481,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3877
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "541"
+   },
+   {
+    "row": 2,
+    "parzella": "542"
+   },
+   {
+    "row": 3,
+    "parzella": "543"
+   },
+   {
+    "row": 4,
+    "parzella": "544"
+   },
+   {
+    "row": 5,
+    "parzella": "545"
+   },
+   {
+    "row": 6,
+    "parzella": "546"
+   },
+   {
+    "row": 7,
+    "parzella": "547"
+   },
+   {
+    "row": 8,
+    "parzella": "548"
+   },
+   {
+    "row": 9,
+    "parzella": "549"
+   },
+   {
+    "row": 10,
+    "parzella": "550"
+   },
+   {
+    "row": 11,
+    "parzella": "551"
+   },
+   {
+    "row": 12,
+    "parzella": "552"
+   },
+   {
+    "row": 13,
+    "parzella": "553"
+   },
+   {
+    "row": 14,
+    "parzella": "554"
+   },
+   {
+    "row": 15,
+    "parzella": "555"
+   },
+   {
+    "row": 16,
+    "parzella": "556"
+   },
+   {
+    "row": 17,
+    "parzella": "557"
+   },
+   {
+    "row": 18,
+    "parzella": "558"
+   },
+   {
+    "row": 19,
+    "parzella": "559"
+   },
+   {
+    "row": 20,
+    "parzella": "560"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "I",
+    "row": 1,
+    "atParzella": "541"
+   }
+  ],
+  "opomba": "Vrstice 12-20 (parcele 552-560) so prečrtane z rdečim tušem. V stolpcu 'Bezeichnung des Grundstückes' sta v vrsticah 13 in 14 zapisana črka 'a' oziroma 'b'. Vrsta 7 vsebuje rokopisni vnos, ki je morda začetek novega Blatta (II?), a ni jasno berljiv kot številka."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"541\"},\n    {\"row\": 2, \"parzella\": \"542\"},\n    {\"row\": 3, \"parzella\": \"543\"},\n    {\"row\": 4, \"parzella\": \"544\"},\n    {\"row\": 5, \"parzella\": \"545\"},\n    {\"row\": 6, \"parzella\": \"546\"},\n    {\"row\": 7, \"parzella\": \"547\"},\n    {\"row\": 8, \"parzella\": \"548\"},\n    {\"row\": 9, \"parzella\": \"549\"},\n    {\"row\": 10, \"parzella\": \"550\"},\n    {\"row\": 11, \"parzella\": \"551\"},\n    {\"row\": 12, \"parzella\": \"552\"},\n    {\"row\": 13, \"parzella\": \"553\"},\n    {\"row\": 14, \"parzella\": \"554\"},\n    {\"row\": 15, \"parzella\": \"555\"},\n    {\"row\": 16, \"parzella\": \"556\"},\n    {\"row\": 17, \"parzella\": \"557\"},\n    {\"row\": 18, \"parzella\": \"558\"},\n    {\"row\": 19, \"parzella\": \"559\"},\n    {\"row\": 20, \"parzella\": \"560\"}\n  ],\n  \"blatt\": [\n    {\"value\": \"I\", \"row\": 1, \"atParzella\": \"541\"}\n  ],\n  \"opomba\": \"Vrstice 12-20 (parcele 552-560) so prečrtane z rdečim tušem. V stolpcu 'Bezeichnung des Grundstückes' sta v vrsticah 13 in 14 zapisana črka 'a' oziroma 'b'. Vrsta 7 vsebuje rokopisni vnos, ki je morda začetek novega Blatta (II?), a ni jasno berljiv kot številka.\"\n}"
+}

@@ -1,0 +1,110 @@
+{
+ "page": 13,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791966192,
+ "usage": {
+  "completion_tokens": 460,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 2
+  },
+  "total_tokens": 3856
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "201"
+   },
+   {
+    "row": 2,
+    "parzella": "204"
+   },
+   {
+    "row": 3,
+    "parzella": "203"
+   },
+   {
+    "row": 4,
+    "parzella": "204"
+   },
+   {
+    "row": 5,
+    "parzella": "205"
+   },
+   {
+    "row": 6,
+    "parzella": "206"
+   },
+   {
+    "row": 7,
+    "parzella": "207"
+   },
+   {
+    "row": 8,
+    "parzella": "208"
+   },
+   {
+    "row": 9,
+    "parzella": "209"
+   },
+   {
+    "row": 10,
+    "parzella": "210"
+   },
+   {
+    "row": 11,
+    "parzella": "211"
+   },
+   {
+    "row": 12,
+    "parzella": "212"
+   },
+   {
+    "row": 13,
+    "parzella": "213"
+   },
+   {
+    "row": 14,
+    "parzella": "214"
+   },
+   {
+    "row": 15,
+    "parzella": "215"
+   },
+   {
+    "row": 16,
+    "parzella": "216"
+   },
+   {
+    "row": 17,
+    "parzella": "217"
+   },
+   {
+    "row": 18,
+    "parzella": "218"
+   },
+   {
+    "row": 19,
+    "parzella": "219"
+   },
+   {
+    "row": 20,
+    "parzella": "220"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "I",
+    "row": 1,
+    "atParzella": "201"
+   }
+  ],
+  "opomba": "Vrstica 15 (parcela 215) in vrstica 16 (parcela 216) sta rdeče prečrtani. V stolpcu 'Bezeichnung des Grundstückes' so rokopisne opombe (npr. 'fünf Grenz...', 'fünf 1853', 'fünf 1859'). Vse cifre v stolpcu 3 so tri-cifrene številke v območju 201-220."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"201\"},\n    {\"row\": 2, \"parzella\": \"204\"},\n    {\"row\": 3, \"parzella\": \"203\"},\n    {\"row\": 4, \"parzella\": \"204\"},\n    {\"row\": 5, \"parzella\": \"205\"},\n    {\"row\": 6, \"parzella\": \"206\"},\n    {\"row\": 7, \"parzella\": \"207\"},\n    {\"row\": 8, \"parzella\": \"208\"},\n    {\"row\": 9, \"parzella\": \"209\"},\n    {\"row\": 10, \"parzella\": \"210\"},\n    {\"row\": 11, \"parzella\": \"211\"},\n    {\"row\": 12, \"parzella\": \"212\"},\n    {\"row\": 13, \"parzella\": \"213\"},\n    {\"row\": 14, \"parzella\": \"214\"},\n    {\"row\": 15, \"parzella\": \"215\"},\n    {\"row\": 16, \"parzella\": \"216\"},\n    {\"row\": 17, \"parzella\": \"217\"},\n    {\"row\": 18, \"parzella\": \"218\"},\n    {\"row\": 19, \"parzella\": \"219\"},\n    {\"row\": 20, \"parzella\": \"220\"}\n  ],\n  \"blatt\": [\n    {\n      \"value\": \"I\",\n      \"row\": 1,\n      \"atParzella\": \"201\"\n    }\n  ],\n  \"opomba\": \"Vrstica 15 (parcela 215) in vrstica 16 (parcela 216) sta rdeče prečrtani. V stolpcu 'Bezeichnung des Grundstückes' so rokopisne opombe (npr. 'fünf Grenz...', 'fünf 1853', 'fünf 1859'). Vse cifre v stolpcu 3 so tri-cifrene številke v območju 201-220.\"\n}"
+}

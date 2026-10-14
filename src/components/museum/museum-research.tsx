@@ -75,6 +75,7 @@ import {
   PS_GEO_P55,
   REGISTER_TOPOLOGY_P56,
   PS_REGISTER_START_P57,
+  BLATT_HEADERS_P59,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -1768,8 +1769,8 @@ export function MuseumResearch() {
                 <p className="text-[11px] leading-relaxed text-foreground/80">
                   <span className="font-semibold">{t("Pošten status: ", "Honest status: ")}</span>
                   {t(
-                    "Vse vrednosti so MERITVE nad committed artefakti (P55 evidence, ps-raw branja, PS-full-v2 adjudikacije, P47 parcele) — nič ni ugibano in nič ni prerazporejeno: S3 zapadek je odstranjen iz joina z dvema dokazoma (pass-razhajanje + površine ~42× off), per-Blatt instanci pa ostajata dvoumni [~], ker je blatt stolpec ~50 % šumen (4. VLM prehod na glave listov ostaja odprt). P55 runtime (ps-parcels-geo.json) je od P58 SANIRAN v v2 — 43 lažnih S3 povezav odstranjenih (nabor bajtno enak spodnjemu seznamu) in 26 Blatt I vrstic dodanih (P57) → 1093 vrstic; glej kartico P55 v2. Letnice anmerkung so per-row [~] VLM branja (1515/1522 najverjetneje navedbe starih urbarijev). Strojno berljivo: research/issue17/ps-register-topology.json + runtime src/data/atlas/ps-register-topology.json (/api/atlas/ps-register-topology).",
-                    "All values are MEASUREMENTS over committed artifacts (P55 evidence, ps-raw reads, PS-full-v2 adjudications, P47 parcels) — nothing guessed, nothing reassigned: the S3 appendix is removed from the join with two proofs (pass disagreement + areas ~42× off), while per-sheet instances remain ambiguous [~] because the blatt column is ~50 % noisy (a 4th VLM pass on sheet headers remains open). Since P58 the P55 runtime (ps-parcels-geo.json) is SANITIZED to v2 — 43 false S3 links removed (the set byte-identical to the list below) and 26 Blatt I rows added (P57) → 1093 rows; see the P55 v2 card. The anmerkung years are per-row [~] VLM readings (1515/1522 most likely references to old urbaria). Machine-readable: research/issue17/ps-register-topology.json + the runtime src/data/atlas/ps-register-topology.json (/api/atlas/ps-register-topology).",
+                    "Vse vrednosti so MERITVE nad committed artefakti (P55 evidence, ps-raw branja, PS-full-v2 adjudikacije, P47 parcele) — nič ni ugibano in nič ni prerazporejeno: S3 zapadek je odstranjen iz joina z dvema dokazoma (pass-razhajanje + površine ~42× off), per-Blatt instanci pa ostajata dvoumni [~] (4. VLM prehod na glave listov IZVEDEN v P59 — od 211 dvoumnih base jih 106 sega čez ≥2 Blatta, 17 ruleCandidate; join še naprej nespremenjen, glej kartico P59). P55 runtime (ps-parcels-geo.json) je od P58 SANIRAN v v2 — 43 lažnih S3 povezav odstranjenih (nabor bajtno enak spodnjemu seznamu) in 26 Blatt I vrstic dodanih (P57) → 1093 vrstic; glej kartico P55 v2. Letnice anmerkung so per-row [~] VLM branja (1515/1522 najverjetneje navedbe starih urbarijev). Strojno berljivo: research/issue17/ps-register-topology.json + runtime src/data/atlas/ps-register-topology.json (/api/atlas/ps-register-topology).",
+                    "All values are MEASUREMENTS over committed artifacts (P55 evidence, ps-raw reads, PS-full-v2 adjudications, P47 parcels) — nothing guessed, nothing reassigned: the S3 appendix is removed from the join with two proofs (pass disagreement + areas ~42× off), while per-sheet instances remain ambiguous [~] (the 4th VLM pass on leaf headers was DONE in P59 — of 211 ambiguous bases 106 span ≥2 Blaetter, 17 ruleCandidates; the join remains unchanged, see the P59 card). Since P58 the P55 runtime (ps-parcels-geo.json) is SANITIZED to v2 — 43 false S3 links removed (the set byte-identical to the list below) and 26 Blatt I rows added (P57) → 1093 rows; see the P55 v2 card. The anmerkung years are per-row [~] VLM readings (1515/1522 most likely references to old urbaria). Machine-readable: research/issue17/ps-register-topology.json + the runtime src/data/atlas/ps-register-topology.json (/api/atlas/ps-register-topology).",
                   )}
                 </p>
               </div>
@@ -1840,6 +1841,73 @@ export function MuseumResearch() {
                   {t(
                     "Vse vrednosti so MERITVE nad committed artefakti (21 novih ps-raw datotek + P55 mehanika + P47 parcele) — nič ni prepisano na slepo: 10 spornih celic odločenih s tarčnimi 6× izrezi (r40 z odločanjem 3/3 = 413), Haus Nro. iz kolonskih izrezov (polnostransko branje je sistematično mešalo dvomestne številke s črkami); r1/r28 celici površin PRAZNI na originalu; vsotni vrsti ('Fürtrag') delno berljivi [~]; 14 številk brez sodobne naslednice = upokojene s konsolidacijo [~]; identifikacija posamezne parcele ostaja [~] (strojno branje ni dokazni vir). P55/P56 runtime nespremenjena (pini qa-p55/p56). Strojno berljivo: research/issue17/ps-register-start.json + runtime src/data/atlas/ps-register-start.json (/api/atlas/ps-register-start).",
                     "All values are MEASUREMENTS over committed artifacts (21 new ps-raw files + the P55 mechanics + P47 parcels) — nothing copied blindly: 10 disputed cells decided with targeted 6× crops (r40 tie-broken 3/3 = 413), Haus Nro. from column crops (the full-page reading systematically confused two-digit numbers with letters); the r1/r28 area cells are BLANK on the original; the carry-forward ('Fürtrag') rows partly legible [~]; 14 numbers without a modern successor = retired by consolidation [~]; per-parcel identification remains [~] (machine reading is not an evidentiary source). The P55/P56 runtimes are unchanged (qa-p55/p56 pins). Machine-readable: research/issue17/ps-register-start.json + the runtime src/data/atlas/ps-register-start.json (/api/atlas/ps-register-start).",
+                  )}
+                </p>
+              </div>
+            </div>
+
+            {/* P59 — glave listov registra PS: Nro. des Blattes (issue #13) */}
+            <div className="min-w-0 rounded-xl border bg-card p-6 shadow-sm">
+              <h3 className="flex items-center gap-2 font-display text-lg font-semibold">
+                <BookOpen className="size-4 text-primary" aria-hidden="true" />
+                {t("Glave listov registra PS — Nro. des Blattes (P59)", "PS register leaf headers — Nro. des Blattes (P59)")}
+                <StatusBadge status={BLATT_HEADERS_P59.status} />
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                {t(
+                  "Prvo zanesljivo branje stolpca »Nro. des Blattes«: levi izrez 135 strani × 2 neodvisna prehoda + 25 arbitraž agent-oči na 3× izrezih (stari P38 blatt stolpec potrjeno šumen). Rezultat: Blatt I = parcele 1–800, Blatt II se začne pri 801; isto številka pod različnima Blattoma = druga parcela (P39) — per-Blatt ločitev 211 dvoumnih base v2 je ZDAJ MERLJIVA. Join ostaja nespremenjen (meritve brez prerazporeditev).",
+                  "First reliable reading of the 'Nro. des Blattes' column: left-strip crops of 135 pages × 2 independent passes + 25 agent-eye arbitrations on 3× crops (the old P38 blatt column confirmed noisy). Result: Blatt I = parcels 1–800, Blatt II starts at 801; the same number under different Blaetter = a different parcel (P39) — the per-Blatt disambiguation of the 211 ambiguous v2 bases is now MEASURABLE. The join remains unchanged (measurements without reassignments).",
+                )}
+              </p>
+
+              {/* P59: pokritost + metoda */}
+              <div className="mt-3 rounded-lg border bg-background p-3">
+                <p className="text-xs font-semibold">{t("Metoda in pokritost", "Method and coverage")}</p>
+                <p className="mt-1 font-mono text-[11px] leading-relaxed text-muted-foreground">
+                  {t("izrezi levega stolpca", "left-strip crops")} 135 × 3× Lanczos · 2 {t("prehoda", "passes")} (glm-5v-turbo) · {BLATT_HEADERS_P59.arbitration.agreementPages} {t("strani soglasja", "agreement pages")} · <span className="rounded bg-amber-100 px-1.5 py-0.5 dark:bg-amber-950/40">{BLATT_HEADERS_P59.arbitration.pagesArbitrated} {t("arbitraža-oči", "agent-eye arbitrations")}</span> · S1 123/123 × 2 · S2 6/10 · S3 0/2 ({t("kvota VLM 429", "VLM quota 429")})
+                </p>
+              </div>
+
+              {/* P59: struktura Blatt */}
+              <div className="mt-3 grid gap-2 sm:grid-cols-3">
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="text-xs font-semibold">{t("Blatt I", "Blatt I")}</p>
+                  <p className="mt-1 font-mono text-[11px] leading-relaxed text-muted-foreground">
+                    {t("parcele", "parcels")} 1–800 · {t("strani", "pages")} 3–40 · {t("prehodna cona", "transition zone")} 721–800: popravki I→II [~] (p40/p41/p42)
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="text-xs font-semibold">{t("Blatt II", "Blatt II")}</p>
+                  <p className="mt-1 font-mono text-[11px] leading-relaxed text-muted-foreground">
+                    {t("se začne pri", "starts at")} 801 (p43) · {t("strani", "pages")} 43–92 · p72 = Blatt III (1281–1302) {t("vmes", "in between")} · {t("cona", "zone")} 1100–1640 {t("prepletena", "interleaved")}
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="text-xs font-semibold">{t("Lokalne sekcije", "Local sections")}</p>
+                  <p className="mt-1 font-mono text-[11px] leading-relaxed text-muted-foreground">
+                    161–180 / 101–120 / 601–620 / 921–960 {t("sredi globalnega teka", "within the global run")} · p101 {t("z ulomki", "with fractions")} (196½)
+                  </p>
+                </div>
+              </div>
+
+              {/* P59: per-Blatt dvoumnost */}
+              <div className="mt-3 rounded-lg border bg-background p-3">
+                <p className="text-xs font-semibold">{t("Per-Blatt dvoumnost v2 (merjeno)", "Per-Blatt ambiguity of v2 (measured)")}</p>
+                <p className="mt-1 font-mono text-[11px] leading-relaxed text-muted-foreground">
+                  <span className="rounded bg-stone-100 px-1.5 py-0.5 dark:bg-stone-800">{BLATT_HEADERS_P59.perBlattAmbiguity.basesOnMultiplePages_v2} {t("base na več straneh", "bases on multiple pages")}</span> → <span className="rounded bg-sky-100 px-1.5 py-0.5 dark:bg-sky-950/40">{BLATT_HEADERS_P59.perBlattAmbiguity.basesOnMultipleBlatter} {t("čez ≥2 Blatta", "span ≥2 Blaetter")}</span> · <span className="rounded bg-emerald-100 px-1.5 py-0.5 dark:bg-emerald-950/40">{BLATT_HEADERS_P59.perBlattAmbiguity.ruleCandidateBases.length} ruleCandidate</span> ({t("edina instanca v pasu razmerij", "exactly one instance in the ratio band")} [0.8, 1.25])
+                </p>
+                <p className="mt-1 font-mono text-[11px] leading-relaxed text-muted-foreground">
+                  {t("primer", "example")}: 163 — Blatt I @ 7.0 {t("proti", "vs")} Blatt II @ 0.981 ≈ 1 QK; {BLATT_HEADERS_P59.perBlattAmbiguity.ruleCandidateBases.slice(0, 8).join(", ")} ...
+                </p>
+              </div>
+
+              {/* P59: poštenost */}
+              <div className="mt-3 rounded-lg border border-emerald-200 bg-emerald-50/60 p-3 dark:border-emerald-900/50 dark:bg-emerald-950/30">
+                <p className="text-[11px] leading-relaxed text-foreground/80">
+                  <span className="font-semibold">{t("Pošten status: ", "Honest status: ")}</span>
+                  {t(
+                    "Numeralе visoka zaupanja (2-prehodno soglasje + 25 arbitraž s hardcoded razlogi); parzella razponi svežih branj NIZKA zaupanja — Kurrent pasti dokumentirane (4↔8, 7→1, odrezane vodilne števke), avtoritativni ostajajo v2/pageMap podatki; sred-stranske numeralе = extras [~]; ruleCandidate = MERJEN kandidat za P60, join v2 NESPREMENJEN (brez dokaza se NE prerazporeja — disciplina P56/P58); 133–136 + 138–139 ni svežega branja (VLM kvota — odprto); identifikacija per-Blatt instanc [~] (strojno branje ni dokazni vir). Strojno berljivo: research/issue17/ps-blatt-headers.json + runtime src/data/atlas/ps-blatt-headers.json (/api/atlas/ps-blatt-headers).",
+                    "The numerals are high-confidence (2-pass agreement + 25 arbitrations with hardcoded reasons); the fresh parzella ranges are LOW-confidence — Kurrent pitfalls documented (4↔8, 7→1, dropped leading digits), the authoritative data remain the v2/pageMap; mid-page numerals = extras [~]; ruleCandidate = a MEASURED candidate for P60, the v2 join UNCHANGED (nothing reassigned without proof — P56/P58 discipline); pp. 133–136 + 138–139 have no fresh reading (VLM quota — open); per-Blatt instance identification [~] (machine reading is not an evidentiary source). Machine-readable: research/issue17/ps-blatt-headers.json + the runtime src/data/atlas/ps-blatt-headers.json (/api/atlas/ps-blatt-headers).",
                   )}
                 </p>
               </div>

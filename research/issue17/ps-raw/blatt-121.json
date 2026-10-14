@@ -1,0 +1,110 @@
+{
+ "page": 121,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791970475,
+ "usage": {
+  "completion_tokens": 460,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3856
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "2061"
+   },
+   {
+    "row": 2,
+    "parzella": "2062"
+   },
+   {
+    "row": 3,
+    "parzella": "2063"
+   },
+   {
+    "row": 4,
+    "parzella": "2064"
+   },
+   {
+    "row": 5,
+    "parzella": "2065"
+   },
+   {
+    "row": 6,
+    "parzella": "2066"
+   },
+   {
+    "row": 7,
+    "parzella": "2067"
+   },
+   {
+    "row": 8,
+    "parzella": "2068"
+   },
+   {
+    "row": 9,
+    "parzella": "2069"
+   },
+   {
+    "row": 10,
+    "parzella": "2070"
+   },
+   {
+    "row": 11,
+    "parzella": "2071"
+   },
+   {
+    "row": 12,
+    "parzella": "2072"
+   },
+   {
+    "row": 13,
+    "parzella": "2073"
+   },
+   {
+    "row": 14,
+    "parzella": "2074"
+   },
+   {
+    "row": 15,
+    "parzella": "2075"
+   },
+   {
+    "row": 16,
+    "parzella": "2076"
+   },
+   {
+    "row": 17,
+    "parzella": "2077"
+   },
+   {
+    "row": 18,
+    "parzella": "2078"
+   },
+   {
+    "row": 19,
+    "parzella": "2079"
+   },
+   {
+    "row": 20,
+    "parzella": "2080"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "IV",
+    "row": 1,
+    "atParzella": "2061"
+   }
+  ],
+  "opomba": "Vrstice 14-20 (parzelle 2074-2080) so prečrtane z rdečim tušem. V stolpcu 'Nro. des Blattes' je v prvi vrstici zapisana rimska številka IV (prečrtana), v nadaljnjih vrsticah pa ditto znamenja."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"2061\"},\n    {\"row\": 2, \"parzella\": \"2062\"},\n    {\"row\": 3, \"parzella\": \"2063\"},\n    {\"row\": 4, \"parzella\": \"2064\"},\n    {\"row\": 5, \"parzella\": \"2065\"},\n    {\"row\": 6, \"parzella\": \"2066\"},\n    {\"row\": 7, \"parzella\": \"2067\"},\n    {\"row\": 8, \"parzella\": \"2068\"},\n    {\"row\": 9, \"parzella\": \"2069\"},\n    {\"row\": 10, \"parzella\": \"2070\"},\n    {\"row\": 11, \"parzella\": \"2071\"},\n    {\"row\": 12, \"parzella\": \"2072\"},\n    {\"row\": 13, \"parzella\": \"2073\"},\n    {\"row\": 14, \"parzella\": \"2074\"},\n    {\"row\": 15, \"parzella\": \"2075\"},\n    {\"row\": 16, \"parzella\": \"2076\"},\n    {\"row\": 17, \"parzella\": \"2077\"},\n    {\"row\": 18, \"parzella\": \"2078\"},\n    {\"row\": 19, \"parzella\": \"2079\"},\n    {\"row\": 20, \"parzella\": \"2080\"}\n  ],\n  \"blatt\": [\n    {\n      \"value\": \"IV\",\n      \"row\": 1,\n      \"atParzella\": \"2061\"\n    }\n  ],\n  \"opomba\": \"Vrstice 14-20 (parzelle 2074-2080) so prečrtane z rdečim tušem. V stolpcu 'Nro. des Blattes' je v prvi vrstici zapisana rimska številka IV (prečrtana), v nadaljnjih vrsticah pa ditto znamenja.\"\n}"
+}

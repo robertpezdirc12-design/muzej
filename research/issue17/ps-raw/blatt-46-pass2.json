@@ -1,0 +1,110 @@
+{
+ "page": 46,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791967284,
+ "usage": {
+  "completion_tokens": 470,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3866
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "861"
+   },
+   {
+    "row": 2,
+    "parzella": "862"
+   },
+   {
+    "row": 3,
+    "parzella": "863"
+   },
+   {
+    "row": 4,
+    "parzella": "864"
+   },
+   {
+    "row": 5,
+    "parzella": "865"
+   },
+   {
+    "row": 6,
+    "parzella": "866"
+   },
+   {
+    "row": 7,
+    "parzella": "867"
+   },
+   {
+    "row": 8,
+    "parzella": "868"
+   },
+   {
+    "row": 9,
+    "parzella": "869"
+   },
+   {
+    "row": 10,
+    "parzella": "870"
+   },
+   {
+    "row": 11,
+    "parzella": "871"
+   },
+   {
+    "row": 12,
+    "parzella": "872"
+   },
+   {
+    "row": 13,
+    "parzella": "873"
+   },
+   {
+    "row": 14,
+    "parzella": "874"
+   },
+   {
+    "row": 15,
+    "parzella": "875"
+   },
+   {
+    "row": 16,
+    "parzella": "876"
+   },
+   {
+    "row": 17,
+    "parzella": "877"
+   },
+   {
+    "row": 18,
+    "parzella": "878"
+   },
+   {
+    "row": 19,
+    "parzella": "879"
+   },
+   {
+    "row": 20,
+    "parzella": "880"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "II",
+    "row": 1,
+    "atParzella": "861"
+   }
+  ],
+  "opomba": "Vrstica 10 (parzella 870) je prečrtana z rdečim tušem. Vrstice 9 in 11 vsebujejo rokopisne opombe v rdečem tušu v stolpcu 'Bezeichnung'. Vse ostale vrstice v stolpcu 'Nro. des Blattes' vsebujejo ditto znamenja."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"861\"},\n    {\"row\": 2, \"parzella\": \"862\"},\n    {\"row\": 3, \"parzella\": \"863\"},\n    {\"row\": 4, \"parzella\": \"864\"},\n    {\"row\": 5, \"parzella\": \"865\"},\n    {\"row\": 6, \"parzella\": \"866\"},\n    {\"row\": 7, \"parzella\": \"867\"},\n    {\"row\": 8, \"parzella\": \"868\"},\n    {\"row\": 9, \"parzella\": \"869\"},\n    {\"row\": 10, \"parzella\": \"870\"},\n    {\"row\": 11, \"parzella\": \"871\"},\n    {\"row\": 12, \"parzella\": \"872\"},\n    {\"row\": 13, \"parzella\": \"873\"},\n    {\"row\": 14, \"parzella\": \"874\"},\n    {\"row\": 15, \"parzella\": \"875\"},\n    {\"row\": 16, \"parzella\": \"876\"},\n    {\"row\": 17, \"parzella\": \"877\"},\n    {\"row\": 18, \"parzella\": \"878\"},\n    {\"row\": 19, \"parzella\": \"879\"},\n    {\"row\": 20, \"parzella\": \"880\"}\n  ],\n  \"blatt\": [\n    {\n      \"value\": \"II\",\n      \"row\": 1,\n      \"atParzella\": \"861\"\n    }\n  ],\n  \"opomba\": \"Vrstica 10 (parzella 870) je prečrtana z rdečim tušem. Vrstice 9 in 11 vsebujejo rokopisne opombe v rdečem tušu v stolpcu 'Bezeichnung'. Vse ostale vrstice v stolpcu 'Nro. des Blattes' vsebujejo ditto znamenja.\"\n}"
+}

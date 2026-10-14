@@ -1,0 +1,125 @@
+{
+ "page": 40,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791966985,
+ "usage": {
+  "completion_tokens": 490,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3886
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "721"
+   },
+   {
+    "row": 2,
+    "parzella": "722"
+   },
+   {
+    "row": 3,
+    "parzella": "723"
+   },
+   {
+    "row": 4,
+    "parzella": "724"
+   },
+   {
+    "row": 5,
+    "parzella": "725"
+   },
+   {
+    "row": 6,
+    "parzella": "726"
+   },
+   {
+    "row": 7,
+    "parzella": "727"
+   },
+   {
+    "row": 8,
+    "parzella": "728"
+   },
+   {
+    "row": 9,
+    "parzella": "729"
+   },
+   {
+    "row": 10,
+    "parzella": "730"
+   },
+   {
+    "row": 11,
+    "parzella": "731"
+   },
+   {
+    "row": 12,
+    "parzella": "732"
+   },
+   {
+    "row": 13,
+    "parzella": "733"
+   },
+   {
+    "row": 14,
+    "parzella": "734"
+   },
+   {
+    "row": 15,
+    "parzella": "735"
+   },
+   {
+    "row": 16,
+    "parzella": "736"
+   },
+   {
+    "row": 17,
+    "parzella": "737"
+   },
+   {
+    "row": 18,
+    "parzella": "738"
+   },
+   {
+    "row": 19,
+    "parzella": "739"
+   },
+   {
+    "row": 20,
+    "parzella": "740"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "I",
+    "row": 1,
+    "atParzella": "721"
+   },
+   {
+    "value": "II",
+    "row": 5,
+    "atParzella": "725"
+   },
+   {
+    "value": "III",
+    "row": 6,
+    "atParzella": "726"
+   },
+   {
+    "value": "IV",
+    "row": 19,
+    "atParzella": "739"
+   }
+  ],
+  "opomba": "Vrstice 14-16 (parcelne številke 734-736) imajo rdečo prečrto (verjetno brisanje/veljavnost). Številka v vrstici 5 je napisana kot 'II' (ali morda 'II' s črtico), v vrstici 6 pa 'III'."
+ },
+ "content": "{\"vrstice\": [{\"row\": 1, \"parzella\": \"721\"}, {\"row\": 2, \"parzella\": \"722\"}, {\"row\": 3, \"parzella\": \"723\"}, {\"row\": 4, \"parzella\": \"724\"}, {\"row\": 5, \"parzella\": \"725\"}, {\"row\": 6, \"parzella\": \"726\"}, {\"row\": 7, \"parzella\": \"727\"}, {\"row\": 8, \"parzella\": \"728\"}, {\"row\": 9, \"parzella\": \"729\"}, {\"row\": 10, \"parzella\": \"730\"}, {\"row\": 11, \"parzella\": \"731\"}, {\"row\": 12, \"parzella\": \"732\"}, {\"row\": 13, \"parzella\": \"733\"}, {\"row\": 14, \"parzella\": \"734\"}, {\"row\": 15, \"parzella\": \"735\"}, {\"row\": 16, \"parzella\": \"736\"}, {\"row\": 17, \"parzella\": \"737\"}, {\"row\": 18, \"parzella\": \"738\"}, {\"row\": 19, \"parzella\": \"739\"}, {\"row\": 20, \"parzella\": \"740\"}], \"blatt\": [{\"value\": \"I\", \"row\": 1, \"atParzella\": \"721\"}, {\"value\": \"II\", \"row\": 5, \"atParzella\": \"725\"}, {\"value\": \"III\", \"row\": 6, \"atParzella\": \"726\"}, {\"value\": \"IV\", \"row\": 19, \"atParzella\": \"739\"}], \"opomba\": \"Vrstice 14-16 (parcelne številke 734-736) imajo rdečo prečrto (verjetno brisanje/veljavnost). Številka v vrstici 5 je napisana kot 'II' (ali morda 'II' s črtico), v vrstici 6 pa 'III'.\"}"
+}

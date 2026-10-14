@@ -1,0 +1,110 @@
+{
+ "page": 129,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791970865,
+ "usage": {
+  "completion_tokens": 492,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3888
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "2521"
+   },
+   {
+    "row": 2,
+    "parzella": "2522"
+   },
+   {
+    "row": 3,
+    "parzella": "2523"
+   },
+   {
+    "row": 4,
+    "parzella": "2524"
+   },
+   {
+    "row": 5,
+    "parzella": "2525"
+   },
+   {
+    "row": 6,
+    "parzella": "2526"
+   },
+   {
+    "row": 7,
+    "parzella": "2527"
+   },
+   {
+    "row": 8,
+    "parzella": "2528"
+   },
+   {
+    "row": 9,
+    "parzella": "2529"
+   },
+   {
+    "row": 10,
+    "parzella": "2530"
+   },
+   {
+    "row": 11,
+    "parzella": "2530"
+   },
+   {
+    "row": 12,
+    "parzella": "2532"
+   },
+   {
+    "row": 13,
+    "parzella": "2533"
+   },
+   {
+    "row": 14,
+    "parzella": "2534"
+   },
+   {
+    "row": 15,
+    "parzella": "2535"
+   },
+   {
+    "row": 16,
+    "parzella": "2536"
+   },
+   {
+    "row": 17,
+    "parzella": "2537"
+   },
+   {
+    "row": 18,
+    "parzella": "2538"
+   },
+   {
+    "row": 19,
+    "parzella": "2539"
+   },
+   {
+    "row": 20,
+    "parzella": "2540"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "V",
+    "row": 1,
+    "atParzella": "2521"
+   }
+  ],
+  "opomba": "Vrstica 11: parcelna številka je ponovljena (2530), morda napaka v originalu ali 2531 (nejasno). Vrstice 16 in 17 imajo rdečo prečrto. Številke so v Kurrent pisavi; pri nekaterih (npr. 2536, 2537) je zapis nekoliko dvoumen."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"2521\"},\n    {\"row\": 2, \"parzella\": \"2522\"},\n    {\"row\": 3, \"parzella\": \"2523\"},\n    {\"row\": 4, \"parzella\": \"2524\"},\n    {\"row\": 5, \"parzella\": \"2525\"},\n    {\"row\": 6, \"parzella\": \"2526\"},\n    {\"row\": 7, \"parzella\": \"2527\"},\n    {\"row\": 8, \"parzella\": \"2528\"},\n    {\"row\": 9, \"parzella\": \"2529\"},\n    {\"row\": 10, \"parzella\": \"2530\"},\n    {\"row\": 11, \"parzella\": \"2530\"},\n    {\"row\": 12, \"parzella\": \"2532\"},\n    {\"row\": 13, \"parzella\": \"2533\"},\n    {\"row\": 14, \"parzella\": \"2534\"},\n    {\"row\": 15, \"parzella\": \"2535\"},\n    {\"row\": 16, \"parzella\": \"2536\"},\n    {\"row\": 17, \"parzella\": \"2537\"},\n    {\"row\": 18, \"parzella\": \"2538\"},\n    {\"row\": 19, \"parzella\": \"2539\"},\n    {\"row\": 20, \"parzella\": \"2540\"}\n  ],\n  \"blatt\": [\n    {\n      \"value\": \"V\",\n      \"row\": 1,\n      \"atParzella\": \"2521\"\n    }\n  ],\n  \"opomba\": \"Vrstica 11: parcelna številka je ponovljena (2530), morda napaka v originalu ali 2531 (nejasno). Vrstice 16 in 17 imajo rdečo prečrto. Številke so v Kurrent pisavi; pri nekaterih (npr. 2536, 2537) je zapis nekoliko dvoumen.\"\n}"
+}

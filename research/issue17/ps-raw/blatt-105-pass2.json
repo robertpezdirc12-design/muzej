@@ -1,0 +1,102 @@
+{
+ "page": 105,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791969848,
+ "usage": {
+  "completion_tokens": 417,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3813
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "2044"
+   },
+   {
+    "row": 2,
+    "parzella": "2042"
+   },
+   {
+    "row": 3,
+    "parzella": "2043"
+   },
+   {
+    "row": 4,
+    "parzella": "2046"
+   },
+   {
+    "row": 5,
+    "parzella": "2048"
+   },
+   {
+    "row": 6,
+    "parzella": "2049"
+   },
+   {
+    "row": 7,
+    "parzella": "2047"
+   },
+   {
+    "row": 8,
+    "parzella": "2050"
+   },
+   {
+    "row": 9,
+    "parzella": "2051"
+   },
+   {
+    "row": 10,
+    "parzella": "2052"
+   },
+   {
+    "row": 11,
+    "parzella": "2053"
+   },
+   {
+    "row": 12,
+    "parzella": "2054"
+   },
+   {
+    "row": 13,
+    "parzella": "2055"
+   },
+   {
+    "row": 14,
+    "parzella": "2056"
+   },
+   {
+    "row": 15,
+    "parzella": "2057"
+   },
+   {
+    "row": 16,
+    "parzella": "2058"
+   },
+   {
+    "row": 17,
+    "parzella": "2059"
+   },
+   {
+    "row": 18,
+    "parzella": "2060"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "IV",
+    "row": 1,
+    "atParzella": "2044"
+   }
+  ],
+  "opomba": "Vse vrstice imajo v stolpcu 'Nro. des Blattes' ditto znamenje (dve piki), razen prve vrstice, kjer je izpisana rimska številka IV. Številke parcel so naraščajoče (z manjšimi nepravilnostmi: 2042 pred 2043, 2047 po 2048), vse prečrtane z rdečim tušem."
+ },
+ "content": "{\"vrstice\": [{\"row\": 1, \"parzella\": \"2044\"}, {\"row\": 2, \"parzella\": \"2042\"}, {\"row\": 3, \"parzella\": \"2043\"}, {\"row\": 4, \"parzella\": \"2046\"}, {\"row\": 5, \"parzella\": \"2048\"}, {\"row\": 6, \"parzella\": \"2049\"}, {\"row\": 7, \"parzella\": \"2047\"}, {\"row\": 8, \"parzella\": \"2050\"}, {\"row\": 9, \"parzella\": \"2051\"}, {\"row\": 10, \"parzella\": \"2052\"}, {\"row\": 11, \"parzella\": \"2053\"}, {\"row\": 12, \"parzella\": \"2054\"}, {\"row\": 13, \"parzella\": \"2055\"}, {\"row\": 14, \"parzella\": \"2056\"}, {\"row\": 15, \"parzella\": \"2057\"}, {\"row\": 16, \"parzella\": \"2058\"}, {\"row\": 17, \"parzella\": \"2059\"}, {\"row\": 18, \"parzella\": \"2060\"}], \"blatt\": [{\"value\": \"IV\", \"row\": 1, \"atParzella\": \"2044\"}], \"opomba\": \"Vse vrstice imajo v stolpcu 'Nro. des Blattes' ditto znamenje (dve piki), razen prve vrstice, kjer je izpisana rimska številka IV. Številke parcel so naraščajoče (z manjšimi nepravilnostmi: 2042 pred 2043, 2047 po 2048), vse prečrtane z rdečim tušem.\"}"
+}

@@ -1,0 +1,106 @@
+{
+ "page": 102,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791969745,
+ "usage": {
+  "completion_tokens": 379,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 3394
+  },
+  "total_tokens": 3775
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "1981"
+   },
+   {
+    "row": 2,
+    "parzella": "1982"
+   },
+   {
+    "row": 3,
+    "parzella": "1983"
+   },
+   {
+    "row": 4,
+    "parzella": "1984"
+   },
+   {
+    "row": 5,
+    "parzella": "1985"
+   },
+   {
+    "row": 6,
+    "parzella": "1986"
+   },
+   {
+    "row": 7,
+    "parzella": "1987"
+   },
+   {
+    "row": 8,
+    "parzella": "1988"
+   },
+   {
+    "row": 9,
+    "parzella": "1989"
+   },
+   {
+    "row": 10,
+    "parzella": "1990"
+   },
+   {
+    "row": 11,
+    "parzella": "1991"
+   },
+   {
+    "row": 12,
+    "parzella": "1992"
+   },
+   {
+    "row": 13,
+    "parzella": "1994"
+   },
+   {
+    "row": 14,
+    "parzella": "1995"
+   },
+   {
+    "row": 15,
+    "parzella": "1996"
+   },
+   {
+    "row": 16,
+    "parzella": "1997"
+   },
+   {
+    "row": 17,
+    "parzella": "1998"
+   },
+   {
+    "row": 18,
+    "parzella": "1999"
+   },
+   {
+    "row": 19,
+    "parzella": "2000"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "IV",
+    "row": 1,
+    "atParzella": "1981"
+   }
+  ],
+  "opomba": "Vrstica 13 (parcela 1993) manjka v izvirniku (preskočena številka). Vrstica 19 (parcela 2000) je prečrtana z rdečim tušem."
+ },
+ "content": "{\"vrstice\": [{\"row\": 1, \"parzella\": \"1981\"}, {\"row\": 2, \"parzella\": \"1982\"}, {\"row\": 3, \"parzella\": \"1983\"}, {\"row\": 4, \"parzella\": \"1984\"}, {\"row\": 5, \"parzella\": \"1985\"}, {\"row\": 6, \"parzella\": \"1986\"}, {\"row\": 7, \"parzella\": \"1987\"}, {\"row\": 8, \"parzella\": \"1988\"}, {\"row\": 9, \"parzella\": \"1989\"}, {\"row\": 10, \"parzella\": \"1990\"}, {\"row\": 11, \"parzella\": \"1991\"}, {\"row\": 12, \"parzella\": \"1992\"}, {\"row\": 13, \"parzella\": \"1994\"}, {\"row\": 14, \"parzella\": \"1995\"}, {\"row\": 15, \"parzella\": \"1996\"}, {\"row\": 16, \"parzella\": \"1997\"}, {\"row\": 17, \"parzella\": \"1998\"}, {\"row\": 18, \"parzella\": \"1999\"}, {\"row\": 19, \"parzella\": \"2000\"}], \"blatt\": [{\"value\": \"IV\", \"row\": 1, \"atParzella\": \"1981\"}], \"opomba\": \"Vrstica 13 (parcela 1993) manjka v izvirniku (preskočena številka). Vrstica 19 (parcela 2000) je prečrtana z rdečim tušem.\"}"
+}

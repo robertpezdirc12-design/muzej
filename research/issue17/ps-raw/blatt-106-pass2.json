@@ -1,0 +1,110 @@
+{
+ "page": 106,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791969872,
+ "usage": {
+  "completion_tokens": 470,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3492,
+  "prompt_tokens_details": {
+   "cached_tokens": 13
+  },
+  "total_tokens": 3962
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "206"
+   },
+   {
+    "row": 2,
+    "parzella": "206"
+   },
+   {
+    "row": 3,
+    "parzella": "206"
+   },
+   {
+    "row": 4,
+    "parzella": "206"
+   },
+   {
+    "row": 5,
+    "parzella": "206"
+   },
+   {
+    "row": 6,
+    "parzella": "206"
+   },
+   {
+    "row": 7,
+    "parzella": "207"
+   },
+   {
+    "row": 8,
+    "parzella": "208"
+   },
+   {
+    "row": 9,
+    "parzella": "209"
+   },
+   {
+    "row": 10,
+    "parzella": "210"
+   },
+   {
+    "row": 11,
+    "parzella": "211"
+   },
+   {
+    "row": 12,
+    "parzella": "212"
+   },
+   {
+    "row": 13,
+    "parzella": "213"
+   },
+   {
+    "row": 14,
+    "parzella": "214"
+   },
+   {
+    "row": 15,
+    "parzella": "215"
+   },
+   {
+    "row": 16,
+    "parzella": "216"
+   },
+   {
+    "row": 17,
+    "parzella": "217"
+   },
+   {
+    "row": 18,
+    "parzella": "218"
+   },
+   {
+    "row": 19,
+    "parzella": "219"
+   },
+   {
+    "row": 20,
+    "parzella": "220"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "IV",
+    "row": 1,
+    "atParzella": "206"
+   }
+  ],
+  "opomba": "Vrstice 2-6 imajo v stolpcu Blatt ditto znamenja (dve piki), ki niso prepisana. Vrstica 7 ima v stolpcu Bezeichnung rokopisni vnos (morda 'N.' ali okrajšava). Vse parcelne številke so zapisane s črno črnilom, vrstice 1-6 in nekateri deli drugih vrstic imajo rdečo prečrtavo črto."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"206\"},\n    {\"row\": 2, \"parzella\": \"206\"},\n    {\"row\": 3, \"parzella\": \"206\"},\n    {\"row\": 4, \"parzella\": \"206\"},\n    {\"row\": 5, \"parzella\": \"206\"},\n    {\"row\": 6, \"parzella\": \"206\"},\n    {\"row\": 7, \"parzella\": \"207\"},\n    {\"row\": 8, \"parzella\": \"208\"},\n    {\"row\": 9, \"parzella\": \"209\"},\n    {\"row\": 10, \"parzella\": \"210\"},\n    {\"row\": 11, \"parzella\": \"211\"},\n    {\"row\": 12, \"parzella\": \"212\"},\n    {\"row\": 13, \"parzella\": \"213\"},\n    {\"row\": 14, \"parzella\": \"214\"},\n    {\"row\": 15, \"parzella\": \"215\"},\n    {\"row\": 16, \"parzella\": \"216\"},\n    {\"row\": 17, \"parzella\": \"217\"},\n    {\"row\": 18, \"parzella\": \"218\"},\n    {\"row\": 19, \"parzella\": \"219\"},\n    {\"row\": 20, \"parzella\": \"220\"}\n  ],\n  \"blatt\": [\n    {\n      \"value\": \"IV\",\n      \"row\": 1,\n      \"atParzella\": \"206\"\n    }\n  ],\n  \"opomba\": \"Vrstice 2-6 imajo v stolpcu Blatt ditto znamenja (dve piki), ki niso prepisana. Vrstica 7 ima v stolpcu Bezeichnung rokopisni vnos (morda 'N.' ali okrajšava). Vse parcelne številke so zapisane s črno črnilom, vrstice 1-6 in nekateri deli drugih vrstic imajo rdečo prečrtavo črto.\"\n}"
+}

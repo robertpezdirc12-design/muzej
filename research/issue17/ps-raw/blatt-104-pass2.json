@@ -1,0 +1,114 @@
+{
+ "page": 104,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791969828,
+ "usage": {
+  "completion_tokens": 386,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3782
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "2021"
+   },
+   {
+    "row": 2,
+    "parzella": "2022"
+   },
+   {
+    "row": 3,
+    "parzella": "2023"
+   },
+   {
+    "row": 4,
+    "parzella": "2024"
+   },
+   {
+    "row": 5,
+    "parzella": "2025"
+   },
+   {
+    "row": 6,
+    "parzella": "2025½"
+   },
+   {
+    "row": 7,
+    "parzella": "2026"
+   },
+   {
+    "row": 8,
+    "parzella": "2027"
+   },
+   {
+    "row": 9,
+    "parzella": "2028"
+   },
+   {
+    "row": 10,
+    "parzella": "2029"
+   },
+   {
+    "row": 11,
+    "parzella": "2030"
+   },
+   {
+    "row": 12,
+    "parzella": "2031"
+   },
+   {
+    "row": 13,
+    "parzella": "2032"
+   },
+   {
+    "row": 14,
+    "parzella": "2033"
+   },
+   {
+    "row": 15,
+    "parzella": "2034"
+   },
+   {
+    "row": 16,
+    "parzella": "2035"
+   },
+   {
+    "row": 17,
+    "parzella": "2036"
+   },
+   {
+    "row": 18,
+    "parzella": "2037"
+   },
+   {
+    "row": 19,
+    "parzella": "2038"
+   },
+   {
+    "row": 20,
+    "parzella": "2039"
+   },
+   {
+    "row": 21,
+    "parzella": "2040"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "IV",
+    "row": 1,
+    "atParzella": "2021"
+   }
+  ],
+  "opomba": null
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"2021\"},\n    {\"row\": 2, \"parzella\": \"2022\"},\n    {\"row\": 3, \"parzella\": \"2023\"},\n    {\"row\": 4, \"parzella\": \"2024\"},\n    {\"row\": 5, \"parzella\": \"2025\"},\n    {\"row\": 6, \"parzella\": \"2025½\"},\n    {\"row\": 7, \"parzella\": \"2026\"},\n    {\"row\": 8, \"parzella\": \"2027\"},\n    {\"row\": 9, \"parzella\": \"2028\"},\n    {\"row\": 10, \"parzella\": \"2029\"},\n    {\"row\": 11, \"parzella\": \"2030\"},\n    {\"row\": 12, \"parzella\": \"2031\"},\n    {\"row\": 13, \"parzella\": \"2032\"},\n    {\"row\": 14, \"parzella\": \"2033\"},\n    {\"row\": 15, \"parzella\": \"2034\"},\n    {\"row\": 16, \"parzella\": \"2035\"},\n    {\"row\": 17, \"parzella\": \"2036\"},\n    {\"row\": 18, \"parzella\": \"2037\"},\n    {\"row\": 19, \"parzella\": \"2038\"},\n    {\"row\": 20, \"parzella\": \"2039\"},\n    {\"row\": 21, \"parzella\": \"2040\"}\n  ],\n  \"blatt\": [\n    {\"value\": \"IV\", \"row\": 1, \"atParzella\": \"2021\"}\n  ],\n  \"opomba\": null\n}"
+}

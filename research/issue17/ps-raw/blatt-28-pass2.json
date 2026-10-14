@@ -1,0 +1,110 @@
+{
+ "page": 28,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791967832,
+ "usage": {
+  "completion_tokens": 462,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 13
+  },
+  "total_tokens": 3858
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "501"
+   },
+   {
+    "row": 2,
+    "parzella": "502"
+   },
+   {
+    "row": 3,
+    "parzella": "503"
+   },
+   {
+    "row": 4,
+    "parzella": "504"
+   },
+   {
+    "row": 5,
+    "parzella": "505"
+   },
+   {
+    "row": 6,
+    "parzella": "506"
+   },
+   {
+    "row": 7,
+    "parzella": "507"
+   },
+   {
+    "row": 8,
+    "parzella": "508"
+   },
+   {
+    "row": 9,
+    "parzella": "509"
+   },
+   {
+    "row": 10,
+    "parzella": "510"
+   },
+   {
+    "row": 11,
+    "parzella": "511"
+   },
+   {
+    "row": 12,
+    "parzella": "512"
+   },
+   {
+    "row": 13,
+    "parzella": "513"
+   },
+   {
+    "row": 14,
+    "parzella": "514"
+   },
+   {
+    "row": 15,
+    "parzella": "515"
+   },
+   {
+    "row": 16,
+    "parzella": "516"
+   },
+   {
+    "row": 17,
+    "parzella": "517"
+   },
+   {
+    "row": 18,
+    "parzella": "518"
+   },
+   {
+    "row": 19,
+    "parzella": "519"
+   },
+   {
+    "row": 20,
+    "parzella": "520"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "I",
+    "row": 1,
+    "atParzella": "501"
+   }
+  ],
+  "opomba": "Vrstice 5-6 (parzelle 505-506), 13-14 (513-514) in 17 (517) so prečrtane z rdečim tušem. V stolpcu 'Bezeichnung des Grundstückes' so rokopisne opombe (npr. 'e', 'N', '4'), ki niso del zahtevanih podatkov."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"501\"},\n    {\"row\": 2, \"parzella\": \"502\"},\n    {\"row\": 3, \"parzella\": \"503\"},\n    {\"row\": 4, \"parzella\": \"504\"},\n    {\"row\": 5, \"parzella\": \"505\"},\n    {\"row\": 6, \"parzella\": \"506\"},\n    {\"row\": 7, \"parzella\": \"507\"},\n    {\"row\": 8, \"parzella\": \"508\"},\n    {\"row\": 9, \"parzella\": \"509\"},\n    {\"row\": 10, \"parzella\": \"510\"},\n    {\"row\": 11, \"parzella\": \"511\"},\n    {\"row\": 12, \"parzella\": \"512\"},\n    {\"row\": 13, \"parzella\": \"513\"},\n    {\"row\": 14, \"parzella\": \"514\"},\n    {\"row\": 15, \"parzella\": \"515\"},\n    {\"row\": 16, \"parzella\": \"516\"},\n    {\"row\": 17, \"parzella\": \"517\"},\n    {\"row\": 18, \"parzella\": \"518\"},\n    {\"row\": 19, \"parzella\": \"519\"},\n    {\"row\": 20, \"parzella\": \"520\"}\n  ],\n  \"blatt\": [\n    {\"value\": \"I\", \"row\": 1, \"atParzella\": \"501\"}\n  ],\n  \"opomba\": \"Vrstice 5-6 (parzelle 505-506), 13-14 (513-514) in 17 (517) so prečrtane z rdečim tušem. V stolpcu 'Bezeichnung des Grundstückes' so rokopisne opombe (npr. 'e', 'N', '4'), ki niso del zahtevanih podatkov.\"\n}"
+}

@@ -2116,3 +2116,59 @@ konzola 0 napak / 0 opozorjenj.
 ne S1/S2 zaupanj; v1 zgodovina ohranjena (arhiv + v2Delta.before); identifikacija
 posamezne parcele ostaja [~]; SHEET_GEOREFS in dokazi P40–P57 nespremenjeni
 (lekcija P9).
+
+## §37 — P59: glave listov registra PS ("Nro. des Blattes") — per-Blatt atribucija strani + ločitev dvoumnih base v2 (issue #13, 2026-10-14)
+
+P56 je per-Blatt dvoumnost kvantificiral (515 base na več straneh), a jo je pustil
+odprto: »blatt stolpec ~50 % šumen — 4. VLM prehod z pozivo na glave listov ostaja
+odprt«. P58 je v2 produkcijo znesla na 211 dvoumnih base / 495 vrstic [~]. P59 izvede
+posvečen 4. prehod:
+
+**Metoda (metodika P57, posvečeno glavam):** levi stolpec tabele izrezan iz vseh
+135 VAČ posnetkov strani 5–139 (`scripts/p59_fetch_strip.py`: x30–250, 3× Lanczos
+q92, manifest s sha256); 2 neodvisna VLM prehoda na stran (`scripts/p59_ps_read_blatt.mjs`,
+glm-5v-turbo; poziv z eksplicitnimi Kurrent opozorili — števka 4 ≈ 8, vodilna 1 ozka,
+naraščajoče številke); 25 nesoglasij razsodil agent vizualno na 3× izrezih
+(hardcoded razlogi, deterministično).
+
+**Ključna odkritja:**
+
+1. **Struktura Blatt:** Blatt I = parcele 1–800 (strani 3–40); prehodna cona 721–800
+   nosi popravke I→II (p40 oznake @ r5/r6/r19, p41 'I·II' @ r1, p42 'III' prečrtano +
+   'II' @ r18 [~]); Blatt II se začne pri 801 (p43, parcele 801–820). Znotraj II
+   območja p72 = Blatt III (1281–1302) — cona 1100–1640 prepletena (p79 1621–1640 →
+   p80 1541–1560 padajoče). Lokalne sekcije sredi globalnega teka (26: 161–180 pod I;
+   61–62/81/83–87: 161–180 pod II; 88: 601–620; 89–91: 921–960), p101 z ulomki
+   (196½, 196¾ — podštevilčene parcele), p93 prehod sekcije sredi strani
+   (1901–1907 prečrtano → 1303+).
+2. **Stare P38 branje potrjeno šumno:** p12 ditto znamenja prebrana kot 20× 'I';
+   p76/p77 'II.' obe prehoda prebrana kot 'III' (zamaj pike); ps-023/024 podvojeni
+   razpon (401–420 na obeh — sveže branje p24 = 421–440, oči).
+3. **VLM Kurrent pasti (dokumentirane):** 4↔8 (p5: 41–60 prebrano 81–100 v 1. pozivu),
+   7→1 (p41: 741–760 → 141–160), odrezane vodilne števke (p76: 1461 → 161);
+   parzella razponi svežih branj = nizka zaupanja [~], numeralе = visoka
+   (2-prehodno soglasje + arbitraža).
+4. **Per-Blatt dvoumnost zdaj MERLJIVA:** od 211 base v2 na več straneh jih 106 sega
+   čez ≥2 Blatta (P39: ista številka pod različnima Blattoma = druga parcela);
+   **17 ruleCandidate** — baza z TOČNO eno instanco z median razmerjem v [0.8, 1.25]
+   (npr. 163: Blatt I @ 7.0 vs Blatt II @ 0.981 ≈ 1 QK) — kandidati za P60 per-Blatt
+   atribucijo joina. JOIN V2 NESPREMENJEN (meritve brez prerazporeditev — disciplina
+   P56/P58).
+
+**Artefakti:** dokaz `research/issue17/ps-blatt-headers.json` (pageAttribution 137
+strani, arbitraža z razlogi, struktura, per-Blatt instance, pageMapDivergences) +
+runtime `src/data/atlas/ps-blatt-headers.json`; skripte `scripts/p59_fetch_strip.py`,
+`scripts/p59_ps_read_blatt.mjs`, `scripts/p59_ps_blatt_headers.py` (I1–I9, `--check`
+bajtno PASS); 270 svežih ps-raw branj `blatt-<page>{,-pass2}.json`; API
+`/api/atlas/ps-blatt-headers` (force-static); kartica P59 (Raziskave → Prepisi
+Kurrent) + zapora P56 odprte točke; sources.ts N083PS opomba P59 (Si+En).
+
+**Pokritost:** S1 5–127 = 123/123 × 2 prehoda; S2 128–132 + 137 (p137 samo pass1);
+133–136 in 138–139 ni svežega branja (VLM kvota 429 — odprto). Blatt I strani 3–4
+iz P57 polnega branja (navzkrižje I2: 26 vrstic blatt 'I' == P57 runtime).
+
+**Poštenost:** numeralе visoka zaupanja, parzella razponi nizka (Kurrent pasti —
+avtoritativni ostajajo v2/pageMap podatki); sred-stranske numeralе = extras [~];
+ruleCandidate = merjen kandidat, ne izvedena atribucija; identifikacija per-Blatt
+instanc [~] (strojno branje ni dokazni vir); SHEET_GEOREFS in dokazi P40–P58
+nespremenjeni (lekcija P9); P55/P56/P57/P58 runtime nespremenjeni (pini QA).

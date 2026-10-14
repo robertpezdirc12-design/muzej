@@ -1,0 +1,1314 @@
+{
+ "arbitration": {
+  "agreementPages": 103,
+  "arbitratedPages": [
+   24,
+   32,
+   40,
+   41,
+   42,
+   43,
+   55,
+   62,
+   76,
+   77,
+   78,
+   83,
+   92,
+   93,
+   100,
+   101,
+   107,
+   116,
+   117,
+   119,
+   121,
+   123,
+   125,
+   127,
+   128
+  ],
+  "pagesArbitrated": 25,
+  "rule": "numerala @ vrstica 1 = atribucija strani; nesoglasja prehodov razsodil agent vizualno (izrezi 3×, hardcoded razlogi); sred-stranske numeralе = extras [~]",
+  "singlePassPages": [
+   137
+  ]
+ },
+ "coverage": {
+  "S1": "strani 5–127: 123/123 × 2 prehoda",
+  "S2": "strani 128–132 + 137 branja (137 samo pass1); 133–136 ni branja — VLM kvota 429 (odprto)",
+  "S3": "strani 138–139 ni svežega branja (kvota); P38: ps-138 brez stolpca, ps-139 'III' ×1 [~]",
+  "p3-4": "P57 polno branje (Blatt I)"
+ },
+ "date": "2026-10-14",
+ "generatedBy": "scripts/p59_ps_blatt_headers.py",
+ "pageAttribution": {
+  "10": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "100": {
+   "blatt": "III",
+   "extras": [
+    {
+     "row": 5,
+     "value": "III·IV"
+    },
+    {
+     "row": 12,
+     "value": "III"
+    },
+    {
+     "row": 13,
+     "value": "III·III"
+    }
+   ],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'III' @ r1 + oznake; pass2 'II' @ r1 = zamaji"
+  },
+  "101": {
+   "blatt": "III",
+   "extras": [
+    {
+     "row": 7,
+     "value": "IV"
+    }
+   ],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 2-prehodno soglasje III @ r1 + IV @ r7; parcele 196–202¼ z ULOMKI (196½, 196¾ ...) — podštevilčene parcele"
+  },
+  "102": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "103": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "104": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "105": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "106": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "107": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'IV' @ r1 (sveže 'VII' = zamaj florisa); parcele 2081–2100"
+  },
+  "108": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "109": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "11": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "110": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "111": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "112": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "113": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "114": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "115": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "116": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'IV' @ r1; pass2 'V' = zamaj"
+  },
+  "117": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'IV' @ r1 (pass1 'VI' = zamaj)"
+  },
+  "118": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "119": {
+   "blatt": "IV",
+   "extras": [
+    {
+     "row": 9,
+     "value": "IV"
+    },
+    {
+     "row": 10,
+     "value": "IV."
+    }
+   ],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): vrstica-1 soglasna ('IV' oba prehoda); oznake @ r9/r10; parcele 2021–2040"
+  },
+  "12": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "120": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "121": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'IV' @ r1; parcele 2061–2080 (realno prekrivanje s p106 — ne napaka)"
+  },
+  "122": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "123": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'IV' @ r1 prečrtano [~]; parcele 2401–2420 (sveže [241-260] = odrezana vodilna 2)"
+  },
+  "124": {
+   "blatt": "IV",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "125": {
+   "blatt": "V",
+   "extras": [],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): glifa @ r1 dvomljiva IV/V, prečrtana [~] — 'V' po kontekstu (p126–132 V); sveže '17' = razpad glife"
+  },
+  "126": {
+   "blatt": "V",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "127": {
+   "blatt": "V",
+   "extras": [],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'V' @ r1 (pass2 'I' = zamaj)"
+  },
+  "128": {
+   "blatt": "V",
+   "extras": [],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'V' @ r1 prečrtano rdeče [~]"
+  },
+  "129": {
+   "blatt": "V",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "13": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "130": {
+   "blatt": "V",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "131": {
+   "blatt": "V",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "132": {
+   "blatt": "V",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "133": {
+   "blatt": null,
+   "extras": [],
+   "flag": true,
+   "passes": 0,
+   "source": "S2 — ni svežega branja (VLM kvota 429 izčrpana; odprto)"
+  },
+  "134": {
+   "blatt": null,
+   "extras": [],
+   "flag": true,
+   "passes": 0,
+   "source": "S2 — ni svežega branja (VLM kvota 429 izčrpana; odprto)"
+  },
+  "135": {
+   "blatt": null,
+   "extras": [],
+   "flag": true,
+   "passes": 0,
+   "source": "S2 — ni svežega branja (VLM kvota 429 izčrpana; odprto)"
+  },
+  "136": {
+   "blatt": null,
+   "extras": [],
+   "flag": true,
+   "passes": 0,
+   "source": "S2 — ni svežega branja (VLM kvota 429 izčrpana; odprto)"
+  },
+  "137": {
+   "blatt": "II",
+   "extras": [],
+   "flag": true,
+   "passes": 1,
+   "source": "en sam prehod @ vrstica 1 [~]"
+  },
+  "138": {
+   "blatt": null,
+   "extras": [],
+   "flag": true,
+   "passes": 0,
+   "source": "S3 zapadek — P38 ps-138 brez blatt stolpca (nastop 'Zusammenstellung der Grundstücke', lastna oštevilčenja)"
+  },
+  "139": {
+   "blatt": null,
+   "extras": [],
+   "flag": true,
+   "passes": 0,
+   "source": "S3 zapadek — P38 ps-139 opaža 'III' ×1 [~]; ni svežega branja (kvota)"
+  },
+  "14": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "15": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "16": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "17": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "18": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "19": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "20": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "21": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "22": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "23": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "24": {
+   "blatt": "I",
+   "extras": [],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): fantomske II/III/IV iz pass1 = rokopis prek stolpcev (oči: samo 'I' + ditto); parcele 421–440 (pageMap 401–420 = P38 podvojitev ps-023/024)"
+  },
+  "25": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "26": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "27": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "28": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "29": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "3": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 0,
+   "source": "P57 polno branje (blatt stolpec 'I' @ r1)"
+  },
+  "30": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "31": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "32": {
+   "blatt": "I",
+   "extras": [],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'I' @ r1; 'II'/'III' iz obeh prehodov (r9/r10, r12/r13) = rokopisni zamaj prek stolpcev; parcele 581–600"
+  },
+  "33": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "34": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "35": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "36": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "37": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "38": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "39": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "4": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 0,
+   "source": "P57 polno branje (blatt stolpec 'I' @ r1)"
+  },
+  "40": {
+   "blatt": "I",
+   "extras": [
+    {
+     "row": 5,
+     "value": "I·II"
+    },
+    {
+     "row": 6,
+     "value": "I·II"
+    },
+    {
+     "row": 19,
+     "value": "I·II"
+    }
+   ],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'I' @ r1; oznake 'I·II' @ r5/r6/r19 = popravek prehoda Blatt I→II (območje 725+)"
+  },
+  "41": {
+   "blatt": "I·II",
+   "extras": [],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'I·II' @ r1 (kot zapisano, prehodni popravek); parcele 741–760 (sveže [141-160] = Kurrent 7→1)"
+  },
+  "42": {
+   "blatt": "III",
+   "extras": [
+    {
+     "row": 18,
+     "value": "II"
+    }
+   ],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'III' @ r1 prečrtano [~]; 'II' @ r18; parcele 761–780 (sveže [161-180] = Kurrent 7→1)"
+  },
+  "43": {
+   "blatt": "II",
+   "extras": [],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'II' @ r1, parcele 801–820 (sveže [801-920] = Kurrent 2→9 na zadnji) — Blatt II se začne pri 801"
+  },
+  "44": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "45": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "46": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "47": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "48": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "49": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "5": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "50": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "51": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "52": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "53": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "54": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "55": {
+   "blatt": "II",
+   "extras": [
+    {
+     "row": 17,
+     "value": "II"
+    }
+   ],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'II' @ r1 + oznaka @ r17; pass2 III/IV = zamaji rdečih zapisov"
+  },
+  "56": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "57": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "58": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "59": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "6": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "60": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "61": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "62": {
+   "blatt": "II",
+   "extras": [
+    {
+     "row": 2,
+     "value": "II"
+    },
+    {
+     "row": 3,
+     "value": "II"
+    }
+   ],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'II' @ r1 + dodatni 'II' @ r2/r3 (poudarki); pass 'III' = zamaji"
+  },
+  "63": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "64": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "65": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "66": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "67": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "68": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "69": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "7": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "70": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "71": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "72": {
+   "blatt": "III",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "73": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "74": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "75": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "76": {
+   "blatt": "II",
+   "extras": [],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'II.' @ r1 (oba prehoda 'III' = zamaj pike/florisa); parcele 1461–1480 (sveže [161-180] = odrezana vodilna 14)"
+  },
+  "77": {
+   "blatt": "II",
+   "extras": [],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'II.' @ r1 (sveže 'III' = zamaj pike); parcele 1481–1500"
+  },
+  "78": {
+   "blatt": "II",
+   "extras": [],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'II' @ r1 prečrtano [~]; parcele 1501–1520 (večinoma rdeče prečrtane)"
+  },
+  "79": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "8": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "80": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "81": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "82": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "83": {
+   "blatt": "II",
+   "extras": [],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'II' @ r1 (VLM oba prehoda prazna — spregledan); parcele ~160–182"
+  },
+  "84": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "85": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "86": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "87": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "88": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "89": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "9": {
+   "blatt": "I",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "90": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "91": {
+   "blatt": "II",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "92": {
+   "blatt": "II",
+   "extras": [
+    {
+     "row": 2,
+     "value": "I·IV"
+    },
+    {
+     "row": 11,
+     "value": "II"
+    },
+    {
+     "row": 12,
+     "value": "II·III"
+    }
+   ],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'II' @ r1 + popravki @ r2/r11/r12; parcele 1881–1900 večinoma prečrtane"
+  },
+  "93": {
+   "blatt": "IV",
+   "extras": [
+    {
+     "row": 11,
+     "value": "III·III"
+    },
+    {
+     "row": 13,
+     "value": "II·III"
+    },
+    {
+     "row": 17,
+     "value": "III"
+    }
+   ],
+   "flag": true,
+   "passes": 2,
+   "source": "arbitraža (oči na 3× izrezu): 'IV' @ r1; PREHOD SEKCIJE sredi strani (1901–1907 prečrtano → 1303+) z oznakami; pass1 'I' = odrezan 'IV'"
+  },
+  "94": {
+   "blatt": "III",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "95": {
+   "blatt": "III",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "96": {
+   "blatt": "III",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "97": {
+   "blatt": "III",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "98": {
+   "blatt": "III",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  },
+  "99": {
+   "blatt": "III",
+   "extras": [],
+   "flag": false,
+   "passes": 2,
+   "source": "2-prehodno soglasje @ vrstica 1"
+  }
+ },
+ "perBlattAmbiguity": {
+  "basesOnMultipleBlatter": 106,
+  "basesOnMultiplePages_v2": 211,
+  "ruleCandidateBases": [
+   "163",
+   "176",
+   "644",
+   "653",
+   "654",
+   "655",
+   "656",
+   "657",
+   "666",
+   "671",
+   "676",
+   "928",
+   "930",
+   "934",
+   "936",
+   "939",
+   "1831"
+  ],
+  "ruleCandidateNote": "baza z TOČNO eno instanco z median razmerjem v [0.8, 1.25] — kandidat za prihodnjo per-Blatt atribucijo joina (P60), MERJENO ne izvedeno [~]",
+  "verdictSi": "per-Blatt ločitev MERJENA: od 211 bazi na več straneh jih 106 sega čez ≥2 Blatta (P39: ista številka pod različnima Blattoma = druga parcela) — instance zdaj razločljive; join po številki ostaja nespremenjen (brez dokaza se NE prerazporeja)"
+ },
+ "statusLine": "P59 GLAVE LISTOV: 129/135 strani sveže branih (2 prehoda; 133–136, 138–139 kvota, p137 pass2), 25 arbitraža-oči, struktura Blatt I–V + lokalne sekcije; 211 dvoumnih base → 106 čez-Blatt, 17 ruleCandidate [~]; join v2 nespremenjen",
+ "structure": {
+  "blattSections": [
+   {
+    "blatt": "I",
+    "n": 38,
+    "pageMax": 40,
+    "pageMin": 3,
+    "pages": [
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39,
+     40
+    ]
+   },
+   {
+    "blatt": "V",
+    "n": 8,
+    "pageMax": 132,
+    "pageMin": 125,
+    "pages": [
+     125,
+     126,
+     127,
+     128,
+     129,
+     130,
+     131,
+     132
+    ]
+   },
+   {
+    "blatt": "II",
+    "n": 51,
+    "pageMax": 137,
+    "pageMin": 43,
+    "pages": [
+     43,
+     44,
+     45,
+     46,
+     47,
+     48,
+     49,
+     50,
+     51,
+     52,
+     53,
+     54,
+     55,
+     56,
+     57,
+     58,
+     59,
+     60,
+     61,
+     62,
+     63,
+     64,
+     65,
+     66,
+     67,
+     68,
+     69,
+     70,
+     71,
+     73,
+     74,
+     75,
+     76,
+     77,
+     78,
+     79,
+     80,
+     81,
+     82,
+     83,
+     84,
+     85,
+     86,
+     87,
+     88,
+     89,
+     90,
+     91,
+     92,
+     109,
+     137
+    ]
+   },
+   {
+    "blatt": "IV",
+    "n": 23,
+    "pageMax": 124,
+    "pageMin": 93,
+    "pages": [
+     93,
+     102,
+     103,
+     104,
+     105,
+     106,
+     107,
+     108,
+     110,
+     111,
+     112,
+     113,
+     114,
+     115,
+     116,
+     117,
+     118,
+     119,
+     120,
+     121,
+     122,
+     123,
+     124
+    ]
+   },
+   {
+    "blatt": "III",
+    "n": 10,
+    "pageMax": 101,
+    "pageMin": 42,
+    "pages": [
+     42,
+     72,
+     94,
+     95,
+     96,
+     97,
+     98,
+     99,
+     100,
+     101
+    ]
+   },
+   {
+    "blatt": "I·II",
+    "n": 1,
+    "pageMax": 41,
+    "pageMin": 41,
+    "pages": [
+     41
+    ]
+   }
+  ],
+  "coreBlattI": {
+   "pages": "3–40 (38 strani) + p41 'I·II' + p42 'III' prečrtano [~]",
+   "parcels": "1–800",
+   "transitionZone": "721–800 (p40/p41/p42 popravki I→II [~])"
+  },
+  "coreBlattII": {
+   "interleave": "p72 = Blatt III (1281–1302) znotraj II območja — cona 1100–1640 prepletena (p79 1621–1640 → p80 1541–1560 padajoče)",
+   "pages": "43–92 (49 strani)",
+   "starts": "801 (p43, oči)"
+  },
+  "interleavedLocalPages": "strani z majhnimi razponi sredi globalnega teka (npr. 26, 61–62, 81, 83–91: 41–60/101–120/161–180/601–620/921–960) — per-Riede/per-Blatt lokalne sekcije; p101 z ULOMKI (196½ ...) — podštevilčene parcele",
+  "midPageTransitions": "p93 (1901–1907 prečrtano → 1303+), p101 (III→IV @ r7), p65 (II→III @ r2 [~])"
+ },
+ "task": "P59 — glave listov registra PS (Nro. des Blattes): per-Blatt atribucija strani + ločitev dvoumnih base v2",
+ "version": 1
+}

@@ -1,0 +1,110 @@
+{
+ "page": 54,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791967444,
+ "usage": {
+  "completion_tokens": 424,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3820
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "1021"
+   },
+   {
+    "row": 2,
+    "parzella": "1022"
+   },
+   {
+    "row": 3,
+    "parzella": "1023"
+   },
+   {
+    "row": 4,
+    "parzella": "1024"
+   },
+   {
+    "row": 5,
+    "parzella": "1025"
+   },
+   {
+    "row": 6,
+    "parzella": "1026"
+   },
+   {
+    "row": 7,
+    "parzella": "1027"
+   },
+   {
+    "row": 8,
+    "parzella": "1028"
+   },
+   {
+    "row": 9,
+    "parzella": "1029"
+   },
+   {
+    "row": 10,
+    "parzella": "1030"
+   },
+   {
+    "row": 11,
+    "parzella": "1031"
+   },
+   {
+    "row": 12,
+    "parzella": "1032"
+   },
+   {
+    "row": 13,
+    "parzella": "1033"
+   },
+   {
+    "row": 14,
+    "parzella": "1034"
+   },
+   {
+    "row": 15,
+    "parzella": "1035"
+   },
+   {
+    "row": 16,
+    "parzella": "1036"
+   },
+   {
+    "row": 17,
+    "parzella": "1037"
+   },
+   {
+    "row": 18,
+    "parzella": "1038"
+   },
+   {
+    "row": 19,
+    "parzella": "1039"
+   },
+   {
+    "row": 20,
+    "parzella": "1040"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "II",
+    "row": 1,
+    "atParzella": "1021"
+   }
+  ],
+  "opomba": "Vrstica 1: številka lista II je prečrtana (rdeče), vendar berljiva kot končna vrednost. Vrstici 1 in 2 imata rdeče prečrtane parcelne številke (1021, 1022), kar kaže na morebitno brisanje/invalidacijo v izvirniku."
+ },
+ "content": "{\"vrstice\": [{\"row\": 1, \"parzella\": \"1021\"}, {\"row\": 2, \"parzella\": \"1022\"}, {\"row\": 3, \"parzella\": \"1023\"}, {\"row\": 4, \"parzella\": \"1024\"}, {\"row\": 5, \"parzella\": \"1025\"}, {\"row\": 6, \"parzella\": \"1026\"}, {\"row\": 7, \"parzella\": \"1027\"}, {\"row\": 8, \"parzella\": \"1028\"}, {\"row\": 9, \"parzella\": \"1029\"}, {\"row\": 10, \"parzella\": \"1030\"}, {\"row\": 11, \"parzella\": \"1031\"}, {\"row\": 12, \"parzella\": \"1032\"}, {\"row\": 13, \"parzella\": \"1033\"}, {\"row\": 14, \"parzella\": \"1034\"}, {\"row\": 15, \"parzella\": \"1035\"}, {\"row\": 16, \"parzella\": \"1036\"}, {\"row\": 17, \"parzella\": \"1037\"}, {\"row\": 18, \"parzella\": \"1038\"}, {\"row\": 19, \"parzella\": \"1039\"}, {\"row\": 20, \"parzella\": \"1040\"}], \"blatt\": [{\"value\": \"II\", \"row\": 1, \"atParzella\": \"1021\"}], \"opomba\": \"Vrstica 1: številka lista II je prečrtana (rdeče), vendar berljiva kot končna vrednost. Vrstici 1 in 2 imata rdeče prečrtane parcelne številke (1021, 1022), kar kaže na morebitno brisanje/invalidacijo v izvirniku.\"}"
+}

@@ -1,0 +1,110 @@
+{
+ "page": 36,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791966873,
+ "usage": {
+  "completion_tokens": 459,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3855
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "661"
+   },
+   {
+    "row": 2,
+    "parzella": "662"
+   },
+   {
+    "row": 3,
+    "parzella": "663"
+   },
+   {
+    "row": 4,
+    "parzella": "664"
+   },
+   {
+    "row": 5,
+    "parzella": "665"
+   },
+   {
+    "row": 6,
+    "parzella": "666"
+   },
+   {
+    "row": 7,
+    "parzella": "667"
+   },
+   {
+    "row": 8,
+    "parzella": "668"
+   },
+   {
+    "row": 9,
+    "parzella": "669"
+   },
+   {
+    "row": 10,
+    "parzella": "670"
+   },
+   {
+    "row": 11,
+    "parzella": "671"
+   },
+   {
+    "row": 12,
+    "parzella": "672"
+   },
+   {
+    "row": 13,
+    "parzella": "673"
+   },
+   {
+    "row": 14,
+    "parzella": "674"
+   },
+   {
+    "row": 15,
+    "parzella": "675"
+   },
+   {
+    "row": 16,
+    "parzella": "676"
+   },
+   {
+    "row": 17,
+    "parzella": "677"
+   },
+   {
+    "row": 18,
+    "parzella": "678"
+   },
+   {
+    "row": 19,
+    "parzella": "679"
+   },
+   {
+    "row": 20,
+    "parzella": "680"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "I",
+    "row": 1,
+    "atParzella": "661"
+   }
+  ],
+  "opomba": "Vrstice 7-10 in 18 imajo rdeče prečrtane parcelne številke (verjetno izbrisane/veljavne popravki). Številka v vrstici 20 je zapisana kot '680' (ali morda '68o' s črko o), kar predstavlja skok od 679."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"661\"},\n    {\"row\": 2, \"parzella\": \"662\"},\n    {\"row\": 3, \"parzella\": \"663\"},\n    {\"row\": 4, \"parzella\": \"664\"},\n    {\"row\": 5, \"parzella\": \"665\"},\n    {\"row\": 6, \"parzella\": \"666\"},\n    {\"row\": 7, \"parzella\": \"667\"},\n    {\"row\": 8, \"parzella\": \"668\"},\n    {\"row\": 9, \"parzella\": \"669\"},\n    {\"row\": 10, \"parzella\": \"670\"},\n    {\"row\": 11, \"parzella\": \"671\"},\n    {\"row\": 12, \"parzella\": \"672\"},\n    {\"row\": 13, \"parzella\": \"673\"},\n    {\"row\": 14, \"parzella\": \"674\"},\n    {\"row\": 15, \"parzella\": \"675\"},\n    {\"row\": 16, \"parzella\": \"676\"},\n    {\"row\": 17, \"parzella\": \"677\"},\n    {\"row\": 18, \"parzella\": \"678\"},\n    {\"row\": 19, \"parzella\": \"679\"},\n    {\"row\": 20, \"parzella\": \"680\"}\n  ],\n  \"blatt\": [\n    {\n      \"value\": \"I\",\n      \"row\": 1,\n      \"atParzella\": \"661\"\n    }\n  ],\n  \"opomba\": \"Vrstice 7-10 in 18 imajo rdeče prečrtane parcelne številke (verjetno izbrisane/veljavne popravki). Številka v vrstici 20 je zapisana kot '680' (ali morda '68o' s črko o), kar predstavlja skok od 679.\"\n}"
+}

@@ -1,0 +1,115 @@
+{
+ "page": 124,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791970703,
+ "usage": {
+  "completion_tokens": 480,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3876
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "4121"
+   },
+   {
+    "row": 2,
+    "parzella": "4122"
+   },
+   {
+    "row": 3,
+    "parzella": "4123"
+   },
+   {
+    "row": 4,
+    "parzella": "4124"
+   },
+   {
+    "row": 5,
+    "parzella": "4125"
+   },
+   {
+    "row": 6,
+    "parzella": "4126"
+   },
+   {
+    "row": 7,
+    "parzella": "4127"
+   },
+   {
+    "row": 8,
+    "parzella": "4128"
+   },
+   {
+    "row": 9,
+    "parzella": "4129"
+   },
+   {
+    "row": 10,
+    "parzella": "4130"
+   },
+   {
+    "row": 11,
+    "parzella": "4131"
+   },
+   {
+    "row": 12,
+    "parzella": "4132"
+   },
+   {
+    "row": 13,
+    "parzella": "4133"
+   },
+   {
+    "row": 14,
+    "parzella": "4134"
+   },
+   {
+    "row": 15,
+    "parzella": "4135"
+   },
+   {
+    "row": 16,
+    "parzella": "4136"
+   },
+   {
+    "row": 17,
+    "parzella": "4137"
+   },
+   {
+    "row": 18,
+    "parzella": "4138"
+   },
+   {
+    "row": 19,
+    "parzella": "4139"
+   },
+   {
+    "row": 20,
+    "parzella": "4140"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "IV",
+    "row": 1,
+    "atParzella": "4121"
+   },
+   {
+    "value": "IV. V",
+    "row": 15,
+    "atParzella": "4135"
+   }
+  ],
+  "opomba": "Vrstice 6 (4126), 7 (4127) in 15 (4135) imajo rdeče prečrtane številke parcel. V vrstici 15 je numerala Blatt spremenjena iz IV na IV.V (ali V)."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"4121\"},\n    {\"row\": 2, \"parzella\": \"4122\"},\n    {\"row\": 3, \"parzella\": \"4123\"},\n    {\"row\": 4, \"parzella\": \"4124\"},\n    {\"row\": 5, \"parzella\": \"4125\"},\n    {\"row\": 6, \"parzella\": \"4126\"},\n    {\"row\": 7, \"parzella\": \"4127\"},\n    {\"row\": 8, \"parzella\": \"4128\"},\n    {\"row\": 9, \"parzella\": \"4129\"},\n    {\"row\": 10, \"parzella\": \"4130\"},\n    {\"row\": 11, \"parzella\": \"4131\"},\n    {\"row\": 12, \"parzella\": \"4132\"},\n    {\"row\": 13, \"parzella\": \"4133\"},\n    {\"row\": 14, \"parzella\": \"4134\"},\n    {\"row\": 15, \"parzella\": \"4135\"},\n    {\"row\": 16, \"parzella\": \"4136\"},\n    {\"row\": 17, \"parzella\": \"4137\"},\n    {\"row\": 18, \"parzella\": \"4138\"},\n    {\"row\": 19, \"parzella\": \"4139\"},\n    {\"row\": 20, \"parzella\": \"4140\"}\n  ],\n  \"blatt\": [\n    {\"value\": \"IV\", \"row\": 1, \"atParzella\": \"4121\"},\n    {\"value\": \"IV. V\", \"row\": 15, \"atParzella\": \"4135\"}\n  ],\n  \"opomba\": \"Vrstice 6 (4126), 7 (4127) in 15 (4135) imajo rdeče prečrtane številke parcel. V vrstici 15 je numerala Blatt spremenjena iz IV na IV.V (ali V).\"\n}"
+}

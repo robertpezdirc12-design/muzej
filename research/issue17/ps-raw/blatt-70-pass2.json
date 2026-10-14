@@ -1,0 +1,110 @@
+{
+ "page": 70,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791968491,
+ "usage": {
+  "completion_tokens": 444,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3492,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3936
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "1241"
+   },
+   {
+    "row": 2,
+    "parzella": "1242"
+   },
+   {
+    "row": 3,
+    "parzella": "1243"
+   },
+   {
+    "row": 4,
+    "parzella": "1244"
+   },
+   {
+    "row": 5,
+    "parzella": "1245"
+   },
+   {
+    "row": 6,
+    "parzella": "1246"
+   },
+   {
+    "row": 7,
+    "parzella": "1247"
+   },
+   {
+    "row": 8,
+    "parzella": "1248"
+   },
+   {
+    "row": 9,
+    "parzella": "1249"
+   },
+   {
+    "row": 10,
+    "parzella": "1250"
+   },
+   {
+    "row": 11,
+    "parzella": "1251"
+   },
+   {
+    "row": 12,
+    "parzella": "1252"
+   },
+   {
+    "row": 13,
+    "parzella": "1253"
+   },
+   {
+    "row": 14,
+    "parzella": "1254"
+   },
+   {
+    "row": 15,
+    "parzella": "1255"
+   },
+   {
+    "row": 16,
+    "parzella": "1256"
+   },
+   {
+    "row": 17,
+    "parzella": "1257"
+   },
+   {
+    "row": 18,
+    "parzella": "1258"
+   },
+   {
+    "row": 19,
+    "parzella": "1259"
+   },
+   {
+    "row": 20,
+    "parzella": "1260"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "II",
+    "row": 1,
+    "atParzella": "1241"
+   }
+  ],
+  "opomba": "Vrstica 1: rimska številka II. v stolpcu Blatt. Vse nadaljnje vrstice imajo ditto (\"), ki niso zapisane. Številke parcel so tri-ciferne (12xx), naraščajoče od 1241 do 1260. Vrstice z rdečo prečrtano številko parcele so vključene z vidno vrednostjo."
+ },
+ "content": "{\"vrstice\": [{\"row\": 1, \"parzella\": \"1241\"}, {\"row\": 2, \"parzella\": \"1242\"}, {\"row\": 3, \"parzella\": \"1243\"}, {\"row\": 4, \"parzella\": \"1244\"}, {\"row\": 5, \"parzella\": \"1245\"}, {\"row\": 6, \"parzella\": \"1246\"}, {\"row\": 7, \"parzella\": \"1247\"}, {\"row\": 8, \"parzella\": \"1248\"}, {\"row\": 9, \"parzella\": \"1249\"}, {\"row\": 10, \"parzella\": \"1250\"}, {\"row\": 11, \"parzella\": \"1251\"}, {\"row\": 12, \"parzella\": \"1252\"}, {\"row\": 13, \"parzella\": \"1253\"}, {\"row\": 14, \"parzella\": \"1254\"}, {\"row\": 15, \"parzella\": \"1255\"}, {\"row\": 16, \"parzella\": \"1256\"}, {\"row\": 17, \"parzella\": \"1257\"}, {\"row\": 18, \"parzella\": \"1258\"}, {\"row\": 19, \"parzella\": \"1259\"}, {\"row\": 20, \"parzella\": \"1260\"}], \"blatt\": [{\"value\": \"II\", \"row\": 1, \"atParzella\": \"1241\"}], \"opomba\": \"Vrstica 1: rimska številka II. v stolpcu Blatt. Vse nadaljnje vrstice imajo ditto (\\\"), ki niso zapisane. Številke parcel so tri-ciferne (12xx), naraščajoče od 1241 do 1260. Vrstice z rdečo prečrtano številko parcele so vključene z vidno vrednostjo.\"}"
+}

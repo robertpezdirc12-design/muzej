@@ -1,0 +1,110 @@
+{
+ "page": 25,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791967460,
+ "usage": {
+  "completion_tokens": 496,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3892
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "441"
+   },
+   {
+    "row": 2,
+    "parzella": "442"
+   },
+   {
+    "row": 3,
+    "parzella": "443"
+   },
+   {
+    "row": 4,
+    "parzella": "444"
+   },
+   {
+    "row": 5,
+    "parzella": "445"
+   },
+   {
+    "row": 6,
+    "parzella": "446"
+   },
+   {
+    "row": 7,
+    "parzella": "447"
+   },
+   {
+    "row": 8,
+    "parzella": "448"
+   },
+   {
+    "row": 9,
+    "parzella": "449"
+   },
+   {
+    "row": 10,
+    "parzella": "450"
+   },
+   {
+    "row": 11,
+    "parzella": "451"
+   },
+   {
+    "row": 12,
+    "parzella": "452"
+   },
+   {
+    "row": 13,
+    "parzella": "453"
+   },
+   {
+    "row": 14,
+    "parzella": "454"
+   },
+   {
+    "row": 15,
+    "parzella": "455"
+   },
+   {
+    "row": 16,
+    "parzella": "456"
+   },
+   {
+    "row": 17,
+    "parzella": "457"
+   },
+   {
+    "row": 18,
+    "parzella": "458"
+   },
+   {
+    "row": 19,
+    "parzella": "459"
+   },
+   {
+    "row": 20,
+    "parzella": "460"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "I",
+    "row": 1,
+    "atParzella": "441"
+   }
+  ],
+  "opomba": "Vrstice z rdečim prečrtanjem (parzelle 441, 445, 446, 458, 459, 460) so vključene kot vidne končne vrednosti. V stolpcu 'Nro. des Blattes' je v prvi vrstici izpisana rimska številka I, v nadaljnjih vrsticah pa so ditto znaki (dve piki), ki jih po navodilih ne prepišemo."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"441\"},\n    {\"row\": 2, \"parzella\": \"442\"},\n    {\"row\": 3, \"parzella\": \"443\"},\n    {\"row\": 4, \"parzella\": \"444\"},\n    {\"row\": 5, \"parzella\": \"445\"},\n    {\"row\": 6, \"parzella\": \"446\"},\n    {\"row\": 7, \"parzella\": \"447\"},\n    {\"row\": 8, \"parzella\": \"448\"},\n    {\"row\": 9, \"parzella\": \"449\"},\n    {\"row\": 10, \"parzella\": \"450\"},\n    {\"row\": 11, \"parzella\": \"451\"},\n    {\"row\": 12, \"parzella\": \"452\"},\n    {\"row\": 13, \"parzella\": \"453\"},\n    {\"row\": 14, \"parzella\": \"454\"},\n    {\"row\": 15, \"parzella\": \"455\"},\n    {\"row\": 16, \"parzella\": \"456\"},\n    {\"row\": 17, \"parzella\": \"457\"},\n    {\"row\": 18, \"parzella\": \"458\"},\n    {\"row\": 19, \"parzella\": \"459\"},\n    {\"row\": 20, \"parzella\": \"460\"}\n  ],\n  \"blatt\": [\n    {\n      \"value\": \"I\",\n      \"row\": 1,\n      \"atParzella\": \"441\"\n    }\n  ],\n  \"opomba\": \"Vrstice z rdečim prečrtanjem (parzelle 441, 445, 446, 458, 459, 460) so vključene kot vidne končne vrednosti. V stolpcu 'Nro. des Blattes' je v prvi vrstici izpisana rimska številka I, v nadaljnjih vrsticah pa so ditto znaki (dve piki), ki jih po navodilih ne prepišemo.\"\n}"
+}

@@ -1,0 +1,110 @@
+{
+ "page": 120,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791970464,
+ "usage": {
+  "completion_tokens": 443,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3492,
+  "prompt_tokens_details": {
+   "cached_tokens": 2
+  },
+  "total_tokens": 3935
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "2391"
+   },
+   {
+    "row": 2,
+    "parzella": "2392"
+   },
+   {
+    "row": 3,
+    "parzella": "2342"
+   },
+   {
+    "row": 4,
+    "parzella": "2344"
+   },
+   {
+    "row": 5,
+    "parzella": "2345"
+   },
+   {
+    "row": 6,
+    "parzella": "2346"
+   },
+   {
+    "row": 7,
+    "parzella": "2347"
+   },
+   {
+    "row": 8,
+    "parzella": "2348"
+   },
+   {
+    "row": 9,
+    "parzella": "2349"
+   },
+   {
+    "row": 10,
+    "parzella": "2350"
+   },
+   {
+    "row": 11,
+    "parzella": "2351"
+   },
+   {
+    "row": 12,
+    "parzella": "2352"
+   },
+   {
+    "row": 13,
+    "parzella": "2353"
+   },
+   {
+    "row": 14,
+    "parzella": "2354"
+   },
+   {
+    "row": 15,
+    "parzella": "2355"
+   },
+   {
+    "row": 16,
+    "parzella": "2356"
+   },
+   {
+    "row": 17,
+    "parzella": "2357"
+   },
+   {
+    "row": 18,
+    "parzella": "2358"
+   },
+   {
+    "row": 19,
+    "parzella": "2359"
+   },
+   {
+    "row": 20,
+    "parzella": "2360"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "IV",
+    "row": 1,
+    "atParzella": "2391"
+   }
+  ],
+  "opomba": "Vrstica 1: številka Blatt je rimska IV (ali morda II s prečko), ostale vrstice imajo ditto znamenja. Vrstice 3-4 (2342, 2344): zaporedje ni strogo naraščajoče (preskok/napaka v originalu ali branju). Številke parcel so 4-mestne."
+ },
+ "content": "{\"vrstice\": [{\"row\": 1, \"parzella\": \"2391\"}, {\"row\": 2, \"parzella\": \"2392\"}, {\"row\": 3, \"parzella\": \"2342\"}, {\"row\": 4, \"parzella\": \"2344\"}, {\"row\": 5, \"parzella\": \"2345\"}, {\"row\": 6, \"parzella\": \"2346\"}, {\"row\": 7, \"parzella\": \"2347\"}, {\"row\": 8, \"parzella\": \"2348\"}, {\"row\": 9, \"parzella\": \"2349\"}, {\"row\": 10, \"parzella\": \"2350\"}, {\"row\": 11, \"parzella\": \"2351\"}, {\"row\": 12, \"parzella\": \"2352\"}, {\"row\": 13, \"parzella\": \"2353\"}, {\"row\": 14, \"parzella\": \"2354\"}, {\"row\": 15, \"parzella\": \"2355\"}, {\"row\": 16, \"parzella\": \"2356\"}, {\"row\": 17, \"parzella\": \"2357\"}, {\"row\": 18, \"parzella\": \"2358\"}, {\"row\": 19, \"parzella\": \"2359\"}, {\"row\": 20, \"parzella\": \"2360\"}], \"blatt\": [{\"value\": \"IV\", \"row\": 1, \"atParzella\": \"2391\"}], \"opomba\": \"Vrstica 1: številka Blatt je rimska IV (ali morda II s prečko), ostale vrstice imajo ditto znamenja. Vrstice 3-4 (2342, 2344): zaporedje ni strogo naraščajoče (preskok/napaka v originalu ali branju). Številke parcel so 4-mestne.\"}"
+}

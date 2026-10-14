@@ -1,0 +1,110 @@
+{
+ "page": 60,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791968162,
+ "usage": {
+  "completion_tokens": 440,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3492,
+  "prompt_tokens_details": {
+   "cached_tokens": 13
+  },
+  "total_tokens": 3932
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "141"
+   },
+   {
+    "row": 2,
+    "parzella": "142"
+   },
+   {
+    "row": 3,
+    "parzella": "143"
+   },
+   {
+    "row": 4,
+    "parzella": "144"
+   },
+   {
+    "row": 5,
+    "parzella": "145"
+   },
+   {
+    "row": 6,
+    "parzella": "146"
+   },
+   {
+    "row": 7,
+    "parzella": "147"
+   },
+   {
+    "row": 8,
+    "parzella": "148"
+   },
+   {
+    "row": 9,
+    "parzella": "149"
+   },
+   {
+    "row": 10,
+    "parzella": "150"
+   },
+   {
+    "row": 11,
+    "parzella": "151"
+   },
+   {
+    "row": 12,
+    "parzella": "152"
+   },
+   {
+    "row": 13,
+    "parzella": "153"
+   },
+   {
+    "row": 14,
+    "parzella": "154"
+   },
+   {
+    "row": 15,
+    "parzella": "155"
+   },
+   {
+    "row": 16,
+    "parzella": "156"
+   },
+   {
+    "row": 17,
+    "parzella": "157"
+   },
+   {
+    "row": 18,
+    "parzella": "158"
+   },
+   {
+    "row": 19,
+    "parzella": "159"
+   },
+   {
+    "row": 20,
+    "parzella": "160"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "II",
+    "row": 1,
+    "atParzella": "141"
+   }
+  ],
+  "opomba": "Vrstice 3-6 (parcela 144-147) in vrstica 8 (parcela 149) imajo rdečo prečrto (verjetno brisanje/storno). Številke v stolpcu 'Nro. der Parzelle' so naraščajoče od 141 do 160. Vrstica 1 vsebuje rimsko številko II v stolpcu 'Nro. des Blattes', vse ostale vrstice imajo ditto znamenja."
+ },
+ "content": "{\"vrstice\": [{\"row\": 1, \"parzella\": \"141\"}, {\"row\": 2, \"parzella\": \"142\"}, {\"row\": 3, \"parzella\": \"143\"}, {\"row\": 4, \"parzella\": \"144\"}, {\"row\": 5, \"parzella\": \"145\"}, {\"row\": 6, \"parzella\": \"146\"}, {\"row\": 7, \"parzella\": \"147\"}, {\"row\": 8, \"parzella\": \"148\"}, {\"row\": 9, \"parzella\": \"149\"}, {\"row\": 10, \"parzella\": \"150\"}, {\"row\": 11, \"parzella\": \"151\"}, {\"row\": 12, \"parzella\": \"152\"}, {\"row\": 13, \"parzella\": \"153\"}, {\"row\": 14, \"parzella\": \"154\"}, {\"row\": 15, \"parzella\": \"155\"}, {\"row\": 16, \"parzella\": \"156\"}, {\"row\": 17, \"parzella\": \"157\"}, {\"row\": 18, \"parzella\": \"158\"}, {\"row\": 19, \"parzella\": \"159\"}, {\"row\": 20, \"parzella\": \"160\"}], \"blatt\": [{\"value\": \"II\", \"row\": 1, \"atParzella\": \"141\"}], \"opomba\": \"Vrstice 3-6 (parcela 144-147) in vrstica 8 (parcela 149) imajo rdečo prečrto (verjetno brisanje/storno). Številke v stolpcu 'Nro. der Parzelle' so naraščajoče od 141 do 160. Vrstica 1 vsebuje rimsko številko II v stolpcu 'Nro. des Blattes', vse ostale vrstice imajo ditto znamenja.\"}"
+}

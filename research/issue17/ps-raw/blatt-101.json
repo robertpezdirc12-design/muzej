@@ -1,0 +1,131 @@
+{
+ "page": 101,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791969708,
+ "usage": {
+  "completion_tokens": 553,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 2
+  },
+  "total_tokens": 3949
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "196"
+   },
+   {
+    "row": 2,
+    "parzella": "196½"
+   },
+   {
+    "row": 3,
+    "parzella": "196¾"
+   },
+   {
+    "row": 4,
+    "parzella": "196⁷/₈"
+   },
+   {
+    "row": 5,
+    "parzella": "197"
+   },
+   {
+    "row": 6,
+    "parzella": "197½"
+   },
+   {
+    "row": 7,
+    "parzella": "197¾"
+   },
+   {
+    "row": 8,
+    "parzella": "198"
+   },
+   {
+    "row": 9,
+    "parzella": "198½"
+   },
+   {
+    "row": 10,
+    "parzella": "198¾"
+   },
+   {
+    "row": 11,
+    "parzella": "199"
+   },
+   {
+    "row": 12,
+    "parzella": "199¼"
+   },
+   {
+    "row": 13,
+    "parzella": "199½"
+   },
+   {
+    "row": 14,
+    "parzella": "199¾"
+   },
+   {
+    "row": 15,
+    "parzella": "200"
+   },
+   {
+    "row": 16,
+    "parzella": "200¼"
+   },
+   {
+    "row": 17,
+    "parzella": "200½"
+   },
+   {
+    "row": 18,
+    "parzella": "200¾"
+   },
+   {
+    "row": 19,
+    "parzella": "201"
+   },
+   {
+    "row": 20,
+    "parzella": "201¼"
+   },
+   {
+    "row": 21,
+    "parzella": "201½"
+   },
+   {
+    "row": 22,
+    "parzella": "201¾"
+   },
+   {
+    "row": 23,
+    "parzella": "202"
+   },
+   {
+    "row": 24,
+    "parzella": "202¼"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "III",
+    "row": 1,
+    "atParzella": "196"
+   },
+   {
+    "value": "IV",
+    "row": 8,
+    "atParzella": "198"
+   }
+  ],
+  "opomba": "Številke parcel so zapisane v obliki mešanih števil (celi del + ulomek: ½, ¾, ⅞, ¼). Vrstice s parcelami 197 in 199¾ imajo rdečo prečrtavo (verjetno brisanje/stavka). Številka lista IV je izpisana v vrstici 8 (pri parceli 198)."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"196\"},\n    {\"row\": 2, \"parzella\": \"196½\"},\n    {\"row\": 3, \"parzella\": \"196¾\"},\n    {\"row\": 4, \"parzella\": \"196⁷/₈\"},\n    {\"row\": 5, \"parzella\": \"197\"},\n    {\"row\": 6, \"parzella\": \"197½\"},\n    {\"row\": 7, \"parzella\": \"197¾\"},\n    {\"row\": 8, \"parzella\": \"198\"},\n    {\"row\": 9, \"parzella\": \"198½\"},\n    {\"row\": 10, \"parzella\": \"198¾\"},\n    {\"row\": 11, \"parzella\": \"199\"},\n    {\"row\": 12, \"parzella\": \"199¼\"},\n    {\"row\": 13, \"parzella\": \"199½\"},\n    {\"row\": 14, \"parzella\": \"199¾\"},\n    {\"row\": 15, \"parzella\": \"200\"},\n    {\"row\": 16, \"parzella\": \"200¼\"},\n    {\"row\": 17, \"parzella\": \"200½\"},\n    {\"row\": 18, \"parzella\": \"200¾\"},\n    {\"row\": 19, \"parzella\": \"201\"},\n    {\"row\": 20, \"parzella\": \"201¼\"},\n    {\"row\": 21, \"parzella\": \"201½\"},\n    {\"row\": 22, \"parzella\": \"201¾\"},\n    {\"row\": 23, \"parzella\": \"202\"},\n    {\"row\": 24, \"parzella\": \"202¼\"}\n  ],\n  \"blatt\": [\n    {\"value\": \"III\", \"row\": 1, \"atParzella\": \"196\"},\n    {\"value\": \"IV\", \"row\": 8, \"atParzella\": \"198\"}\n  ],\n  \"opomba\": \"Številke parcel so zapisane v obliki mešanih števil (celi del + ulomek: ½, ¾, ⅞, ¼). Vrstice s parcelami 197 in 199¾ imajo rdečo prečrtavo (verjetno brisanje/stavka). Številka lista IV je izpisana v vrstici 8 (pri parceli 198).\"\n}"
+}

@@ -1,0 +1,110 @@
+{
+ "page": 7,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791965999,
+ "usage": {
+  "completion_tokens": 468,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3864
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "81"
+   },
+   {
+    "row": 2,
+    "parzella": "82"
+   },
+   {
+    "row": 3,
+    "parzella": "83"
+   },
+   {
+    "row": 4,
+    "parzella": "84"
+   },
+   {
+    "row": 5,
+    "parzella": "85"
+   },
+   {
+    "row": 6,
+    "parzella": "86"
+   },
+   {
+    "row": 7,
+    "parzella": "87"
+   },
+   {
+    "row": 8,
+    "parzella": "88"
+   },
+   {
+    "row": 9,
+    "parzella": "89"
+   },
+   {
+    "row": 10,
+    "parzella": "90"
+   },
+   {
+    "row": 11,
+    "parzella": "91"
+   },
+   {
+    "row": 12,
+    "parzella": "92"
+   },
+   {
+    "row": 13,
+    "parzella": "93"
+   },
+   {
+    "row": 14,
+    "parzella": "94"
+   },
+   {
+    "row": 15,
+    "parzella": "95"
+   },
+   {
+    "row": 16,
+    "parzella": "96"
+   },
+   {
+    "row": 17,
+    "parzella": "97"
+   },
+   {
+    "row": 18,
+    "parzella": "98"
+   },
+   {
+    "row": 19,
+    "parzella": "99"
+   },
+   {
+    "row": 20,
+    "parzella": "100"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "I",
+    "row": 1,
+    "atParzella": "81"
+   }
+  ],
+  "opomba": "Vrstice 8–20 (parcelne številke 88–100) so prečrtane z rdečim tušem. V stolpcu 'Nro. des Blattes' je v prvi vrstici zapisana rimska številka I, v vseh nadaljnjih vrsticah pa so ditto znamenja (dve piki). Številke v tretjem stolpcu so naraščajoče od 81 do 100."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"81\"},\n    {\"row\": 2, \"parzella\": \"82\"},\n    {\"row\": 3, \"parzella\": \"83\"},\n    {\"row\": 4, \"parzella\": \"84\"},\n    {\"row\": 5, \"parzella\": \"85\"},\n    {\"row\": 6, \"parzella\": \"86\"},\n    {\"row\": 7, \"parzella\": \"87\"},\n    {\"row\": 8, \"parzella\": \"88\"},\n    {\"row\": 9, \"parzella\": \"89\"},\n    {\"row\": 10, \"parzella\": \"90\"},\n    {\"row\": 11, \"parzella\": \"91\"},\n    {\"row\": 12, \"parzella\": \"92\"},\n    {\"row\": 13, \"parzella\": \"93\"},\n    {\"row\": 14, \"parzella\": \"94\"},\n    {\"row\": 15, \"parzella\": \"95\"},\n    {\"row\": 16, \"parzella\": \"96\"},\n    {\"row\": 17, \"parzella\": \"97\"},\n    {\"row\": 18, \"parzella\": \"98\"},\n    {\"row\": 19, \"parzella\": \"99\"},\n    {\"row\": 20, \"parzella\": \"100\"}\n  ],\n  \"blatt\": [\n    {\n      \"value\": \"I\",\n      \"row\": 1,\n      \"atParzella\": \"81\"\n    }\n  ],\n  \"opomba\": \"Vrstice 8–20 (parcelne številke 88–100) so prečrtane z rdečim tušem. V stolpcu 'Nro. des Blattes' je v prvi vrstici zapisana rimska številka I, v vseh nadaljnjih vrsticah pa so ditto znamenja (dve piki). Številke v tretjem stolpcu so naraščajoče od 81 do 100.\"\n}"
+}

@@ -1,0 +1,110 @@
+{
+ "page": 97,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791969599,
+ "usage": {
+  "completion_tokens": 375,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3771
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "1841"
+   },
+   {
+    "row": 2,
+    "parzella": "1842"
+   },
+   {
+    "row": 3,
+    "parzella": "1843"
+   },
+   {
+    "row": 4,
+    "parzella": "1844"
+   },
+   {
+    "row": 5,
+    "parzella": "1845"
+   },
+   {
+    "row": 6,
+    "parzella": "1846"
+   },
+   {
+    "row": 7,
+    "parzella": "1847"
+   },
+   {
+    "row": 8,
+    "parzella": "1848"
+   },
+   {
+    "row": 9,
+    "parzella": "1849"
+   },
+   {
+    "row": 10,
+    "parzella": "1850"
+   },
+   {
+    "row": 11,
+    "parzella": "1851"
+   },
+   {
+    "row": 12,
+    "parzella": "1852"
+   },
+   {
+    "row": 13,
+    "parzella": "1853"
+   },
+   {
+    "row": 14,
+    "parzella": "1854"
+   },
+   {
+    "row": 15,
+    "parzella": "1855"
+   },
+   {
+    "row": 16,
+    "parzella": "1856"
+   },
+   {
+    "row": 17,
+    "parzella": "1857"
+   },
+   {
+    "row": 18,
+    "parzella": "1858"
+   },
+   {
+    "row": 19,
+    "parzella": "1859"
+   },
+   {
+    "row": 20,
+    "parzella": "1860"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "III",
+    "row": 1,
+    "atParzella": "1841"
+   }
+  ],
+  "opomba": null
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"1841\"},\n    {\"row\": 2, \"parzella\": \"1842\"},\n    {\"row\": 3, \"parzella\": \"1843\"},\n    {\"row\": 4, \"parzella\": \"1844\"},\n    {\"row\": 5, \"parzella\": \"1845\"},\n    {\"row\": 6, \"parzella\": \"1846\"},\n    {\"row\": 7, \"parzella\": \"1847\"},\n    {\"row\": 8, \"parzella\": \"1848\"},\n    {\"row\": 9, \"parzella\": \"1849\"},\n    {\"row\": 10, \"parzella\": \"1850\"},\n    {\"row\": 11, \"parzella\": \"1851\"},\n    {\"row\": 12, \"parzella\": \"1852\"},\n    {\"row\": 13, \"parzella\": \"1853\"},\n    {\"row\": 14, \"parzella\": \"1854\"},\n    {\"row\": 15, \"parzella\": \"1855\"},\n    {\"row\": 16, \"parzella\": \"1856\"},\n    {\"row\": 17, \"parzella\": \"1857\"},\n    {\"row\": 18, \"parzella\": \"1858\"},\n    {\"row\": 19, \"parzella\": \"1859\"},\n    {\"row\": 20, \"parzella\": \"1860\"}\n  ],\n  \"blatt\": [\n    {\n      \"value\": \"III\",\n      \"row\": 1,\n      \"atParzella\": \"1841\"\n    }\n  ],\n  \"opomba\": null\n}"
+}

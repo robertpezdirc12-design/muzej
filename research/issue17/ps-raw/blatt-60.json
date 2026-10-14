@@ -1,0 +1,110 @@
+{
+ "page": 60,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791968153,
+ "usage": {
+  "completion_tokens": 498,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3492,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3990
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "1141"
+   },
+   {
+    "row": 2,
+    "parzella": "1142"
+   },
+   {
+    "row": 3,
+    "parzella": "1143"
+   },
+   {
+    "row": 4,
+    "parzella": "1144"
+   },
+   {
+    "row": 5,
+    "parzella": "1145"
+   },
+   {
+    "row": 6,
+    "parzella": "1146"
+   },
+   {
+    "row": 7,
+    "parzella": "1147"
+   },
+   {
+    "row": 8,
+    "parzella": "1148"
+   },
+   {
+    "row": 9,
+    "parzella": "1149"
+   },
+   {
+    "row": 10,
+    "parzella": "1150"
+   },
+   {
+    "row": 11,
+    "parzella": "1151"
+   },
+   {
+    "row": 12,
+    "parzella": "1152"
+   },
+   {
+    "row": 13,
+    "parzella": "1153"
+   },
+   {
+    "row": 14,
+    "parzella": "1154"
+   },
+   {
+    "row": 15,
+    "parzella": "1155"
+   },
+   {
+    "row": 16,
+    "parzella": "1156"
+   },
+   {
+    "row": 17,
+    "parzella": "1157"
+   },
+   {
+    "row": 18,
+    "parzella": "1158"
+   },
+   {
+    "row": 19,
+    "parzella": "1159"
+   },
+   {
+    "row": 20,
+    "parzella": "1160"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "II",
+    "row": 1,
+    "atParzella": "1141"
+   }
+  ],
+  "opomba": "Vrstice 3-10 imajo rdeče prečrtane parcelne številke (verjetno izbrisane/veljavno preklicane). Vrstica 1 v stolpcu 'Nro. des Blattes' vsebuje rimsko številko II (ali morda '17' s črtico, najverjetneje pa gre za rimski II). Vse nadaljnje vrstice v tem stolpcu vsebujejo le ditto znamenja (dve piki)."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"1141\"},\n    {\"row\": 2, \"parzella\": \"1142\"},\n    {\"row\": 3, \"parzella\": \"1143\"},\n    {\"row\": 4, \"parzella\": \"1144\"},\n    {\"row\": 5, \"parzella\": \"1145\"},\n    {\"row\": 6, \"parzella\": \"1146\"},\n    {\"row\": 7, \"parzella\": \"1147\"},\n    {\"row\": 8, \"parzella\": \"1148\"},\n    {\"row\": 9, \"parzella\": \"1149\"},\n    {\"row\": 10, \"parzella\": \"1150\"},\n    {\"row\": 11, \"parzella\": \"1151\"},\n    {\"row\": 12, \"parzella\": \"1152\"},\n    {\"row\": 13, \"parzella\": \"1153\"},\n    {\"row\": 14, \"parzella\": \"1154\"},\n    {\"row\": 15, \"parzella\": \"1155\"},\n    {\"row\": 16, \"parzella\": \"1156\"},\n    {\"row\": 17, \"parzella\": \"1157\"},\n    {\"row\": 18, \"parzella\": \"1158\"},\n    {\"row\": 19, \"parzella\": \"1159\"},\n    {\"row\": 20, \"parzella\": \"1160\"}\n  ],\n  \"blatt\": [\n    {\n      \"value\": \"II\",\n      \"row\": 1,\n      \"atParzella\": \"1141\"\n    }\n  ],\n  \"opomba\": \"Vrstice 3-10 imajo rdeče prečrtane parcelne številke (verjetno izbrisane/veljavno preklicane). Vrstica 1 v stolpcu 'Nro. des Blattes' vsebuje rimsko številko II (ali morda '17' s črtico, najverjetneje pa gre za rimski II). Vse nadaljnje vrstice v tem stolpcu vsebujejo le ditto znamenja (dve piki).\"\n}"
+}

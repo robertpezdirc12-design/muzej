@@ -1,0 +1,110 @@
+{
+ "page": 44,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791967150,
+ "usage": {
+  "completion_tokens": 455,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3851
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "821"
+   },
+   {
+    "row": 2,
+    "parzella": "822"
+   },
+   {
+    "row": 3,
+    "parzella": "823"
+   },
+   {
+    "row": 4,
+    "parzella": "824"
+   },
+   {
+    "row": 5,
+    "parzella": "825"
+   },
+   {
+    "row": 6,
+    "parzella": "826"
+   },
+   {
+    "row": 7,
+    "parzella": "827"
+   },
+   {
+    "row": 8,
+    "parzella": "828"
+   },
+   {
+    "row": 9,
+    "parzella": "829"
+   },
+   {
+    "row": 10,
+    "parzella": "830"
+   },
+   {
+    "row": 11,
+    "parzella": "831"
+   },
+   {
+    "row": 12,
+    "parzella": "832"
+   },
+   {
+    "row": 13,
+    "parzella": "833"
+   },
+   {
+    "row": 14,
+    "parzella": "834"
+   },
+   {
+    "row": 15,
+    "parzella": "835"
+   },
+   {
+    "row": 16,
+    "parzella": "836"
+   },
+   {
+    "row": 17,
+    "parzella": "837"
+   },
+   {
+    "row": 18,
+    "parzella": "838"
+   },
+   {
+    "row": 19,
+    "parzella": "839"
+   },
+   {
+    "row": 20,
+    "parzella": "840"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "II",
+    "row": 1,
+    "atParzella": "821"
+   }
+  ],
+  "opomba": "Vrstica 8 (parzella 828) in vrstica 19 (parzella 839) sta prečrtani z rdečim tušem. Vse ostale vrstice v stolpcu 1 (Nro. des Blattes) vsebujejo ditto znamenja (dve piki)."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"821\"},\n    {\"row\": 2, \"parzella\": \"822\"},\n    {\"row\": 3, \"parzella\": \"823\"},\n    {\"row\": 4, \"parzella\": \"824\"},\n    {\"row\": 5, \"parzella\": \"825\"},\n    {\"row\": 6, \"parzella\": \"826\"},\n    {\"row\": 7, \"parzella\": \"827\"},\n    {\"row\": 8, \"parzella\": \"828\"},\n    {\"row\": 9, \"parzella\": \"829\"},\n    {\"row\": 10, \"parzella\": \"830\"},\n    {\"row\": 11, \"parzella\": \"831\"},\n    {\"row\": 12, \"parzella\": \"832\"},\n    {\"row\": 13, \"parzella\": \"833\"},\n    {\"row\": 14, \"parzella\": \"834\"},\n    {\"row\": 15, \"parzella\": \"835\"},\n    {\"row\": 16, \"parzella\": \"836\"},\n    {\"row\": 17, \"parzella\": \"837\"},\n    {\"row\": 18, \"parzella\": \"838\"},\n    {\"row\": 19, \"parzella\": \"839\"},\n    {\"row\": 20, \"parzella\": \"840\"}\n  ],\n  \"blatt\": [\n    {\n      \"value\": \"II\",\n      \"row\": 1,\n      \"atParzella\": \"821\"\n    }\n  ],\n  \"opomba\": \"Vrstica 8 (parzella 828) in vrstica 19 (parzella 839) sta prečrtani z rdečim tušem. Vse ostale vrstice v stolpcu 1 (Nro. des Blattes) vsebujejo ditto znamenja (dve piki).\"\n}"
+}

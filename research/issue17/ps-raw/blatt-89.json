@@ -1,0 +1,110 @@
+{
+ "page": 89,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791969355,
+ "usage": {
+  "completion_tokens": 504,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3492,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3996
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "921"
+   },
+   {
+    "row": 2,
+    "parzella": "922"
+   },
+   {
+    "row": 3,
+    "parzella": "923"
+   },
+   {
+    "row": 4,
+    "parzella": "924"
+   },
+   {
+    "row": 5,
+    "parzella": "925"
+   },
+   {
+    "row": 6,
+    "parzella": "926"
+   },
+   {
+    "row": 7,
+    "parzella": "927"
+   },
+   {
+    "row": 8,
+    "parzella": "928"
+   },
+   {
+    "row": 9,
+    "parzella": "929"
+   },
+   {
+    "row": 10,
+    "parzella": "930"
+   },
+   {
+    "row": 11,
+    "parzella": "931"
+   },
+   {
+    "row": 12,
+    "parzella": "932"
+   },
+   {
+    "row": 13,
+    "parzella": "933"
+   },
+   {
+    "row": 14,
+    "parzella": "934"
+   },
+   {
+    "row": 15,
+    "parzella": "935"
+   },
+   {
+    "row": 16,
+    "parzella": "936"
+   },
+   {
+    "row": 17,
+    "parzella": "937"
+   },
+   {
+    "row": 18,
+    "parzella": "938"
+   },
+   {
+    "row": 19,
+    "parzella": "939"
+   },
+   {
+    "row": 20,
+    "parzella": "940"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "II",
+    "row": 1,
+    "atParzella": "921"
+   }
+  ],
+  "opomba": "Vrstica 1: Blatt II (prečrtano), parcela 921. Vrstice 2-20: samo ditto znamenja v stolpcu Blatt. Vse parcelne številke naraščajoče (921-940). Številke 923, 924, 925, 927, 929, 930, 932, 933, 937, 939 imajo rdeče prečrte (verjetno brisanje/veljavnost)."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"921\"},\n    {\"row\": 2, \"parzella\": \"922\"},\n    {\"row\": 3, \"parzella\": \"923\"},\n    {\"row\": 4, \"parzella\": \"924\"},\n    {\"row\": 5, \"parzella\": \"925\"},\n    {\"row\": 6, \"parzella\": \"926\"},\n    {\"row\": 7, \"parzella\": \"927\"},\n    {\"row\": 8, \"parzella\": \"928\"},\n    {\"row\": 9, \"parzella\": \"929\"},\n    {\"row\": 10, \"parzella\": \"930\"},\n    {\"row\": 11, \"parzella\": \"931\"},\n    {\"row\": 12, \"parzella\": \"932\"},\n    {\"row\": 13, \"parzella\": \"933\"},\n    {\"row\": 14, \"parzella\": \"934\"},\n    {\"row\": 15, \"parzella\": \"935\"},\n    {\"row\": 16, \"parzella\": \"936\"},\n    {\"row\": 17, \"parzella\": \"937\"},\n    {\"row\": 18, \"parzella\": \"938\"},\n    {\"row\": 19, \"parzella\": \"939\"},\n    {\"row\": 20, \"parzella\": \"940\"}\n  ],\n  \"blatt\": [\n    {\n      \"value\": \"II\",\n      \"row\": 1,\n      \"atParzella\": \"921\"\n    }\n  ],\n  \"opomba\": \"Vrstica 1: Blatt II (prečrtano), parcela 921. Vrstice 2-20: samo ditto znamenja v stolpcu Blatt. Vse parcelne številke naraščajoče (921-940). Številke 923, 924, 925, 927, 929, 930, 932, 933, 937, 939 imajo rdeče prečrte (verjetno brisanje/veljavnost).\"\n}"
+}

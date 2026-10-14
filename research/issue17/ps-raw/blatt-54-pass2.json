@@ -1,0 +1,110 @@
+{
+ "page": 54,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791967458,
+ "usage": {
+  "completion_tokens": 485,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3881
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "1021"
+   },
+   {
+    "row": 2,
+    "parzella": "1022"
+   },
+   {
+    "row": 3,
+    "parzella": "1023"
+   },
+   {
+    "row": 4,
+    "parzella": "1024"
+   },
+   {
+    "row": 5,
+    "parzella": "1025"
+   },
+   {
+    "row": 6,
+    "parzella": "1026"
+   },
+   {
+    "row": 7,
+    "parzella": "1027"
+   },
+   {
+    "row": 8,
+    "parzella": "1028"
+   },
+   {
+    "row": 9,
+    "parzella": "1029"
+   },
+   {
+    "row": 10,
+    "parzella": "1030"
+   },
+   {
+    "row": 11,
+    "parzella": "1031"
+   },
+   {
+    "row": 12,
+    "parzella": "1032"
+   },
+   {
+    "row": 13,
+    "parzella": "1033"
+   },
+   {
+    "row": 14,
+    "parzella": "1034"
+   },
+   {
+    "row": 15,
+    "parzella": "1035"
+   },
+   {
+    "row": 16,
+    "parzella": "1036"
+   },
+   {
+    "row": 17,
+    "parzella": "1037"
+   },
+   {
+    "row": 18,
+    "parzella": "1038"
+   },
+   {
+    "row": 19,
+    "parzella": "1039"
+   },
+   {
+    "row": 20,
+    "parzella": "1040"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "II",
+    "row": 1,
+    "atParzella": "1021"
+   }
+  ],
+  "opomba": "Vrstice 1-2 imajo rdečo prečrtano parcelno številko (verjetno brisanje/storno). V stolpcu 1 je v prvi vrstici napisana rimska številka II (prečrtana), v nadaljnjih vrsticah so ditto znamenja (dve piki). Številke v stolpcu 3 so naraščajoče od 1021 do 1040."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"1021\"},\n    {\"row\": 2, \"parzella\": \"1022\"},\n    {\"row\": 3, \"parzella\": \"1023\"},\n    {\"row\": 4, \"parzella\": \"1024\"},\n    {\"row\": 5, \"parzella\": \"1025\"},\n    {\"row\": 6, \"parzella\": \"1026\"},\n    {\"row\": 7, \"parzella\": \"1027\"},\n    {\"row\": 8, \"parzella\": \"1028\"},\n    {\"row\": 9, \"parzella\": \"1029\"},\n    {\"row\": 10, \"parzella\": \"1030\"},\n    {\"row\": 11, \"parzella\": \"1031\"},\n    {\"row\": 12, \"parzella\": \"1032\"},\n    {\"row\": 13, \"parzella\": \"1033\"},\n    {\"row\": 14, \"parzella\": \"1034\"},\n    {\"row\": 15, \"parzella\": \"1035\"},\n    {\"row\": 16, \"parzella\": \"1036\"},\n    {\"row\": 17, \"parzella\": \"1037\"},\n    {\"row\": 18, \"parzella\": \"1038\"},\n    {\"row\": 19, \"parzella\": \"1039\"},\n    {\"row\": 20, \"parzella\": \"1040\"}\n  ],\n  \"blatt\": [\n    {\n      \"value\": \"II\",\n      \"row\": 1,\n      \"atParzella\": \"1021\"\n    }\n  ],\n  \"opomba\": \"Vrstice 1-2 imajo rdečo prečrtano parcelno številko (verjetno brisanje/storno). V stolpcu 1 je v prvi vrstici napisana rimska številka II (prečrtana), v nadaljnjih vrsticah so ditto znamenja (dve piki). Številke v stolpcu 3 so naraščajoče od 1021 do 1040.\"\n}"
+}

@@ -1,0 +1,103 @@
+{
+ "page": 116,
+ "pass": 2,
+ "model": "glm-5v-turbo",
+ "created": 1791970306,
+ "usage": {
+  "completion_tokens": 381,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3777
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "264"
+   },
+   {
+    "row": 2,
+    "parzella": "265"
+   },
+   {
+    "row": 3,
+    "parzella": "266"
+   },
+   {
+    "row": 4,
+    "parzella": "267"
+   },
+   {
+    "row": 5,
+    "parzella": "268"
+   },
+   {
+    "row": 6,
+    "parzella": "269"
+   },
+   {
+    "row": 7,
+    "parzella": "270"
+   },
+   {
+    "row": 8,
+    "parzella": "271"
+   },
+   {
+    "row": 9,
+    "parzella": "272"
+   },
+   {
+    "row": 10,
+    "parzella": "273"
+   },
+   {
+    "row": 11,
+    "parzella": "274"
+   },
+   {
+    "row": 12,
+    "parzella": "275"
+   },
+   {
+    "row": 13,
+    "parzella": "276"
+   },
+   {
+    "row": 14,
+    "parzella": "277"
+   },
+   {
+    "row": 15,
+    "parzella": "278"
+   },
+   {
+    "row": 16,
+    "parzella": "279"
+   },
+   {
+    "row": 17,
+    "parzella": "280"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "IV",
+    "row": 1,
+    "atParzella": "264"
+   },
+   {
+    "value": "V",
+    "row": 10,
+    "atParzella": "273"
+   }
+  ],
+  "opomba": "Številke parcel so naraščajoče (264-280). Vrstica 1: Blatt IV (prečrtano/popravljeno?). Vrstica 10: Blatt V (velika kurrent črka V). Ostale vrstice imajo ditto znamenja."
+ },
+ "content": "{\"vrstice\": [{\"row\": 1, \"parzella\": \"264\"}, {\"row\": 2, \"parzella\": \"265\"}, {\"row\": 3, \"parzella\": \"266\"}, {\"row\": 4, \"parzella\": \"267\"}, {\"row\": 5, \"parzella\": \"268\"}, {\"row\": 6, \"parzella\": \"269\"}, {\"row\": 7, \"parzella\": \"270\"}, {\"row\": 8, \"parzella\": \"271\"}, {\"row\": 9, \"parzella\": \"272\"}, {\"row\": 10, \"parzella\": \"273\"}, {\"row\": 11, \"parzella\": \"274\"}, {\"row\": 12, \"parzella\": \"275\"}, {\"row\": 13, \"parzella\": \"276\"}, {\"row\": 14, \"parzella\": \"277\"}, {\"row\": 15, \"parzella\": \"278\"}, {\"row\": 16, \"parzella\": \"279\"}, {\"row\": 17, \"parzella\": \"280\"}], \"blatt\": [{\"value\": \"IV\", \"row\": 1, \"atParzella\": \"264\"}, {\"value\": \"V\", \"row\": 10, \"atParzella\": \"273\"}], \"opomba\": \"Številke parcel so naraščajoče (264-280). Vrstica 1: Blatt IV (prečrtano/popravljeno?). Vrstica 10: Blatt V (velika kurrent črka V). Ostale vrstice imajo ditto znamenja.\"}"
+}

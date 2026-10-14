@@ -1,0 +1,110 @@
+{
+ "page": 5,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791965910,
+ "usage": {
+  "completion_tokens": 467,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3863
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "41"
+   },
+   {
+    "row": 2,
+    "parzella": "42"
+   },
+   {
+    "row": 3,
+    "parzella": "43"
+   },
+   {
+    "row": 4,
+    "parzella": "44"
+   },
+   {
+    "row": 5,
+    "parzella": "45"
+   },
+   {
+    "row": 6,
+    "parzella": "46"
+   },
+   {
+    "row": 7,
+    "parzella": "47"
+   },
+   {
+    "row": 8,
+    "parzella": "48"
+   },
+   {
+    "row": 9,
+    "parzella": "49"
+   },
+   {
+    "row": 10,
+    "parzella": "50"
+   },
+   {
+    "row": 11,
+    "parzella": "51"
+   },
+   {
+    "row": 12,
+    "parzella": "52"
+   },
+   {
+    "row": 13,
+    "parzella": "53"
+   },
+   {
+    "row": 14,
+    "parzella": "54"
+   },
+   {
+    "row": 15,
+    "parzella": "55"
+   },
+   {
+    "row": 16,
+    "parzella": "56"
+   },
+   {
+    "row": 17,
+    "parzella": "57"
+   },
+   {
+    "row": 18,
+    "parzella": "58"
+   },
+   {
+    "row": 19,
+    "parzella": "59"
+   },
+   {
+    "row": 20,
+    "parzella": "60"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "I",
+    "row": 1,
+    "atParzella": "41"
+   }
+  ],
+  "opomba": "Vrstice 4-7 in 12 ter 17 in 20 imajo rdečo prečrto (verjetno brisanje/veljavnost). Številke v stolpcu 'Nro. der Parzelle' so naraščajoče (41-60). Vrstica 1 ima izpisano rimsko številko 'I' v stolpcu 'Nro. des Blattes', vse ostale vrstice imajo ditto znamenja (dve piki). Števka 1 je v Kurrent pisavi ozka črtica (npr. pri 41, 51, itd.)."
+ },
+ "content": "{\"vrstice\": [{\"row\": 1, \"parzella\": \"41\"}, {\"row\": 2, \"parzella\": \"42\"}, {\"row\": 3, \"parzella\": \"43\"}, {\"row\": 4, \"parzella\": \"44\"}, {\"row\": 5, \"parzella\": \"45\"}, {\"row\": 6, \"parzella\": \"46\"}, {\"row\": 7, \"parzella\": \"47\"}, {\"row\": 8, \"parzella\": \"48\"}, {\"row\": 9, \"parzella\": \"49\"}, {\"row\": 10, \"parzella\": \"50\"}, {\"row\": 11, \"parzella\": \"51\"}, {\"row\": 12, \"parzella\": \"52\"}, {\"row\": 13, \"parzella\": \"53\"}, {\"row\": 14, \"parzella\": \"54\"}, {\"row\": 15, \"parzella\": \"55\"}, {\"row\": 16, \"parzella\": \"56\"}, {\"row\": 17, \"parzella\": \"57\"}, {\"row\": 18, \"parzella\": \"58\"}, {\"row\": 19, \"parzella\": \"59\"}, {\"row\": 20, \"parzella\": \"60\"}], \"blatt\": [{\"value\": \"I\", \"row\": 1, \"atParzella\": \"41\"}], \"opomba\": \"Vrstice 4-7 in 12 ter 17 in 20 imajo rdečo prečrto (verjetno brisanje/veljavnost). Številke v stolpcu 'Nro. der Parzelle' so naraščajoče (41-60). Vrstica 1 ima izpisano rimsko številko 'I' v stolpcu 'Nro. des Blattes', vse ostale vrstice imajo ditto znamenja (dve piki). Števka 1 je v Kurrent pisavi ozka črtica (npr. pri 41, 51, itd.).\"}"
+}

@@ -1,0 +1,125 @@
+{
+ "page": 24,
+ "pass": 1,
+ "model": "glm-5v-turbo",
+ "created": 1791967426,
+ "usage": {
+  "completion_tokens": 535,
+  "completion_tokens_details": {
+   "reasoning_tokens": 0
+  },
+  "prompt_tokens": 3396,
+  "prompt_tokens_details": {
+   "cached_tokens": 0
+  },
+  "total_tokens": 3931
+ },
+ "parsed": {
+  "vrstice": [
+   {
+    "row": 1,
+    "parzella": "421"
+   },
+   {
+    "row": 2,
+    "parzella": "422"
+   },
+   {
+    "row": 3,
+    "parzella": "423"
+   },
+   {
+    "row": 4,
+    "parzella": "424"
+   },
+   {
+    "row": 5,
+    "parzella": "425"
+   },
+   {
+    "row": 6,
+    "parzella": "426"
+   },
+   {
+    "row": 7,
+    "parzella": "427"
+   },
+   {
+    "row": 8,
+    "parzella": "428"
+   },
+   {
+    "row": 9,
+    "parzella": "429"
+   },
+   {
+    "row": 10,
+    "parzella": "430"
+   },
+   {
+    "row": 11,
+    "parzella": "431"
+   },
+   {
+    "row": 12,
+    "parzella": "432"
+   },
+   {
+    "row": 13,
+    "parzella": "433"
+   },
+   {
+    "row": 14,
+    "parzella": "434"
+   },
+   {
+    "row": 15,
+    "parzella": "435"
+   },
+   {
+    "row": 16,
+    "parzella": "436"
+   },
+   {
+    "row": 17,
+    "parzella": "437"
+   },
+   {
+    "row": 18,
+    "parzella": "438"
+   },
+   {
+    "row": 19,
+    "parzella": "439"
+   },
+   {
+    "row": 20,
+    "parzella": "440"
+   }
+  ],
+  "blatt": [
+   {
+    "value": "I",
+    "row": 1,
+    "atParzella": "421"
+   },
+   {
+    "value": "II",
+    "row": 6,
+    "atParzella": "426"
+   },
+   {
+    "value": "III",
+    "row": 9,
+    "atParzella": "429"
+   },
+   {
+    "value": "IV",
+    "row": 13,
+    "atParzella": "433"
+   }
+  ],
+  "opomba": "Vrstice 4-20 imajo rdečo prečrto (verjetno kasnejše brisanje/invalidacija). Številke v stolpcu 'Nro. der Parzelle' so naraščajoče (421-440). V stolpcu 1 so vidne rimske številke I, II, III, IV; preostale vrstice imajo ditto (\") znake."
+ },
+ "content": "{\n  \"vrstice\": [\n    {\"row\": 1, \"parzella\": \"421\"},\n    {\"row\": 2, \"parzella\": \"422\"},\n    {\"row\": 3, \"parzella\": \"423\"},\n    {\"row\": 4, \"parzella\": \"424\"},\n    {\"row\": 5, \"parzella\": \"425\"},\n    {\"row\": 6, \"parzella\": \"426\"},\n    {\"row\": 7, \"parzella\": \"427\"},\n    {\"row\": 8, \"parzella\": \"428\"},\n    {\"row\": 9, \"parzella\": \"429\"},\n    {\"row\": 10, \"parzella\": \"430\"},\n    {\"row\": 11, \"parzella\": \"431\"},\n    {\"row\": 12, \"parzella\": \"432\"},\n    {\"row\": 13, \"parzella\": \"433\"},\n    {\"row\": 14, \"parzella\": \"434\"},\n    {\"row\": 15, \"parzella\": \"435\"},\n    {\"row\": 16, \"parzella\": \"436\"},\n    {\"row\": 17, \"parzella\": \"437\"},\n    {\"row\": 18, \"parzella\": \"438\"},\n    {\"row\": 19, \"parzella\": \"439\"},\n    {\"row\": 20, \"parzella\": \"440\"}\n  ],\n  \"blatt\": [\n    {\"value\": \"I\", \"row\": 1, \"atParzella\": \"421\"},\n    {\"value\": \"II\", \"row\": 6, \"atParzella\": \"426\"},\n    {\"value\": \"III\", \"row\": 9, \"atParzella\": \"429\"},\n    {\"value\": \"IV\", \"row\": 13, \"atParzella\": \"433\"}\n  ],\n  \"opomba\": \"Vrstice 4-20 imajo rdečo prečrto (verjetno kasnejše brisanje/invalidacija). Številke v stolpcu 'Nro. der Parzelle' so naraščajoče (421-440). V stolpcu 1 so vidne rimske številke I, II, III, IV; preostale vrstice imajo ditto (\\\") znake.\"\n}"
+}
