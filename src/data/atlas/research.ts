@@ -4666,3 +4666,76 @@ export const SPLIT_PACK_P66: {
     "lastniki atributiranih instanc ↔ PF protokol (ostaja iz P65)",
   ],
 };
+
+// ——— P67 (issue #13): forenzični paket anomalij — skok II·IV, sosledje
+// flagi, R1↔R2 divergence, univerzalna disjunktnost. Vir: skripta
+// scripts/p67_ps_anomaly_forensics.py (I1–I8, --check bajtno PASS) →
+// dokaz research/issue17/ps-anomaly-forensics.json + runtime
+// src/data/atlas/ps-anomaly-forensics.json. V2 join NESPREMENJEN.
+export const ANOM_FORENSICS_P67: {
+  version: number;
+  series: "PS";
+  source: string;
+  status: ResearchStatus;
+  generatedBy: string;
+  rule: { renumber: string; sosledje: string; ownersByBlatt: string; modeB: string };
+  summary: {
+    renumberMappings: number;
+    collisions: number;
+    fusedBasesResolved: string[];
+    flagRowsExplained: number;
+    flagRowsTotal: number;
+    crossBlattBases: number;
+    ownerDisjoint: number;
+    ownerRelationDist: Record<string, number>;
+    divergences: Record<string, string>;
+    projection: { bases: number; multiPage: number; crossBlatt: number; r3Single: number };
+  };
+  statusLine: string;
+  verdictSi: string;
+  verdictEn: string;
+  next: string[];
+} = {
+  version: 1,
+  series: "PS",
+  source:
+    "research/issue17/ps-parcels-geo-v2.json (rowsEvidence 1093) × research/issue17/ps-blatt-headers.json (pageAttribution P59) × src/data/atlas/ps-attribution-full.json (P65 211) × src/data/atlas/ps-split-pack.json (P66 39) × research/georef-n83/gurs/parcels-ko1544-merged.json (2117 poligonov) × ps-raw dokazi (P38 + strip); dokaz research/issue17/ps-anomaly-forensics.json + runtime src/data/atlas/ps-anomaly-forensics.json",
+  status: "REVIEW",
+  generatedBy:
+    "scripts/p67_ps_anomaly_forensics.py (deterministično, brez AI ob delovanju, FAIL ob padu I1–I8; --check bajtno PASS; 28× sha256 pini)",
+  rule: {
+    renumber:
+      "17 preslikav (p78 160x→150x, p93 160x→190x, p87 +1020) — SPECIFIKACIJA za P68; v2 nespremanjen",
+    sosledje:
+      "±1 sosed znotraj v2 vrstic iste strani (P65 replikacija); flag = brez soseda",
+    ownersByBlatt:
+      "v2 vrstice × P59 pageAttribution; relacija disjoint|equal|overlap|open (P66 metoda)",
+    modeB:
+      "razmerje areaModern/areaQK ∈ [0.8, 1.25] (P60/P61) — v izpis samo članstvo (I6)",
+  },
+  summary: {
+    renumberMappings: 17,
+    collisions: 0,
+    fusedBasesResolved: ["1603", "1604", "1605", "661", "671"],
+    flagRowsExplained: 11,
+    flagRowsTotal: 11,
+    crossBlattBases: 110,
+    ownerDisjoint: 110,
+    ownerRelationDist: { disjoint: 110 },
+    divergences: { "671": "razrešena (ni divergencia)", "930": "[~] z merjenim dokazom" },
+    projection: { bases: 802, multiPage: 208, crossBlatt: 107, r3Single: 101 },
+  },
+  statusLine:
+    "P67 FORENZIKA: skok II·IV = artifakt dvojne Kurrent zamenjave (p78 1501–1520, p93 1901–1920, p87 1681–1700 — oči+strip 2×+karta; renumerifikacija 17 preslikav); 5 sosledje flagov = obseg joina (11/11 razloženih; sosedje brez poligonov; meja strani); 671 ni divergenca (II instanca = 1691), 930 [~] z dokazom; disjunktnost lastnikov per Blatt UNIVERZALNA 110/110; v2 nespremanjen; renumerifikacija = P68",
+  verdictSi:
+    "P67: FORENZIČNI PAKET ANOMALIJ (issue #13) — štiri merjena dela, deterministično, brez AI ob delovanju; v2 join NESPREMENJEN (disciplina P56–P66). (A) SKOK II·IV (1603/1604) = ARTIFAKT DVOJNE KURRENT ZAMENJAVE: p78 (Blatt II, Wüstung 'Pod Grabino') prave številke 1501–1520 (strip 2× bajtno, vrstice 5–14 rdeče prečrtane, kontinuiteta 1461–1480→1481–1500→1501–1520, karta: 1461–1500 ima 12 poligonov / 1121–1200 PRAZNO), v2 1603–1605 = P38 napaka 5→6 → prave 1503/1504/1505; p93 (Blatt IV) prave 1901–1920 (strip 2× r11–20 bajtno, oči r1–8 = 1901–1908 z rdečimi prečrtami 1901–1904/1906–1907, karta: blok 1901–1907 ima TOČNO 7 poligonov), P38 pass1 = 9→0 (1001–1020), pass2 = 9→6 (1601–1620) → prave 1903/1904/1905; p87 (Blatt II) prave 1681–1700 (pass2 + oči r1–8 = 1681–1688; pass1 661–680 = izguba vodilne 1 + 8→6; strip 161–180 = odrezane vodilne) → 11 v2 vrstic napačno (+1020) in nosi LAŽNO geometrijo (poligoni 661–680 = Blatt I p36 instance, koordinate bajtno identične). Posledica: 1603/1604 = lažni fuziji II 1503/1504 × IV 1903/1904 — skok II·IV IZGINE; 1605 = fuzija II 1505 (prečrtan) × IV 1905; 661/671 = lažni fuziji I × II 1681/1691 — čez-Blatt primera RAZPADETA; p93 (IV) in p98 (III) nosita ISTI obseg 1901–1920 (disjunktni lastniki — per-Blatt primež); karta: 1903/1904/1905 poligoni obstajajo (jugozahodna lokacija), 1503–1505 in 1681–1700 NE; 16xx poligoni na tretji lokaciji (v2 jih je lažno pripisal fuzijam). RENUMERIFIKACIJA 17 preslikav (p78 3×, p93 3×, p87 11×; 0 kolizij) = P68; projekcija: base 800→802, multi-page 211→208, čez-Blatt 110→107 (1903 pas split 0.7081 [~], 1905 R2b [~]), runtime −14 vrstic brez geometrije. (B) 5 SOSLEDJE FLAGOV (646, 661, 1821, 2141, 2143; 11 vrstic) = ARTEFAKT OBSEGA JOINA: manjkajoči sosedje obstajajo v registru (P38 z imeni: 645 'Ulrich Franz', 647 'Gemeinde', 662 'Mülley Franzl', 1822 'Büller Lorenz', 1823 'Gavčnik Miha', 1824 'Gavčnik Gregor', 2142 'Häupler Martin', 2144–2147 …), a brez poligonov v karti → izpad iz v2 (38.6 % pokritost); 1821/2141/661 so začetki strani (1820/2140 imata poligona — na prejšnji strani, per-page kontrola je ne vidi); 11/11 razloženih, 0 anomalij registra. (C) R1↔R2: 671 RAZREŠENA (ni divergencia — II instanca @p87 = 1691, druga parcela; 671 ostane I-only); 930 ostaja [~] z merjenim dokazom (moda B pas ✓@p49 ✗@p99, disjunktna lastnika, sosedi ±1 na obeh straneh, karta 921–940: 9 poligonov). (D) UNIVERZALNA DISJUNKTNOST: lastniki per Blatt DISJUNKTNI za VSEH 110 čez-Blatt base (110/110; 39 split == P66 bajtno, 71 atributiranih 71/71) → per-Blatt številčenje: ista številka pod različnima Blattoma = 2 RAZLIČNI realni parceli; atribucija (R1/R2a/R2b) je dodelitev geometrije instanci, ne identiteta parcele [~]. Strojna forenzika ni dokazni vir; odločitev o renumerifikaciji in SPLIT joinu = LASTNIKA (P68/P69).",
+  verdictEn:
+    "P67: ANOMALY FORENSICS PACK (issue #13) — four measured parts, deterministic, no AI at runtime; the v2 join UNCHANGED (P56–P66 discipline). (A) THE II·IV SKIP (1603/1604) = A DOUBLE KURRENT SUBSTITUTION ARTIFACT: p78 (Blatt II, Wüstung 'Pod Grabino') true numbers 1501–1520 (strip 2 passes byte-exact, rows 5–14 red-crossed, continuity 1461–1480→1481–1500→1501–1520, map: 1461–1500 has 12 polygons / 1121–1200 EMPTY), v2 1603–1605 = P38 error 5→6 → true 1503/1504/1505; p93 (Blatt IV) true 1901–1920 (strip 2 passes r11–20 byte-exact, eyes r1–8 = 1901–1908 with red crossings 1901–1904/1906–1907, map: block 1901–1907 has EXACTLY 7 polygons), P38 pass1 = 9→0 (1001–1020), pass2 = 9→6 (1601–1620) → true 1903/1904/1905; p87 (Blatt II) true 1681–1700 (pass2 + eyes r1–8 = 1681–1688; pass1 661–680 = lost leading 1 + 8→6; strip 161–180 = clipped leading digits) → 11 v2 rows wrong (+1020) carrying FALSE geometry (the 661–680 polygons belong to the Blatt I p36 instances — coordinates byte-identical). Consequences: 1603/1604 = false fusions of II 1503/1504 × IV 1903/1904 — the II·IV skip DISSOLVES; 1605 = fusion of II 1505 (crossed) × IV 1905; 661/671 = false fusions I × II 1681/1691 — the cross-Blatt pairs COLLAPSE; p93 (IV) and p98 (III) carry the SAME range 1901–1920 (disjoint owners — a textbook per-Blatt overlap); map: 1903/1904/1905 polygons exist (south-west location), 1503–1505 and 1681–1700 do NOT; the 16xx polygons sit at a third location (falsely assigned to the fusions by v2). RENUMBERING 17 mappings (p78 3×, p93 3×, p87 11×; 0 collisions) = P68; projection: bases 800→802, multi-page 211→208, cross-Blatt 110→107 (1903 split band 0.7081 [~], 1905 R2b [~]), runtime −14 geometry-less rows. (B) THE 5 ADJACENCY FLAGS (646, 661, 1821, 2141, 2143; 11 rows) = A JOIN-SCOPE ARTIFACT: the missing neighbours exist in the register (P38 with names: 645 'Ulrich Franz', 647 'Gemeinde', 662 'Mülley Franzl', 1822 'Büller Lorenz', 1823 'Gavčnik Miha', 1824 'Gavčnik Gregor', 2142 'Häupler Martin', 2144–2147 …) but have no polygons in the map → dropped from v2 (38.6 % coverage); 1821/2141/661 are page-start rows (1820/2140 HAVE polygons — on the previous page, invisible to the per-page check); 11/11 explained, 0 register anomalies. (C) R1↔R2: 671 RESOLVED (not a divergence — the II instance @p87 = 1691, a different parcel; 671 stays I-only); 930 remains [~] with measured evidence (mode B band ✓@p49 ✗@p99, disjoint owners, ±1 neighbours on both pages, map 921–940: 9 polygons). (D) UNIVERSAL DISJOINTNESS: owners per Blatt DISJOINT for ALL 110 cross-Blatt bases (110/110; the 39 split byte-equal P66, the 71 attributed 71/71) → per-Blatt numbering: the same number under different Blatts = 2 DIFFERENT real parcels; the attribution (R1/R2a/R2b) is a geometry-to-instance assignment, not parcel identity [~]. Machine forensics is not a source of proof; the renumbering and SPLIT join decisions belong to the OWNER (P68/P69).",
+  next: [
+    "P68 — v3 sanacija številčenja: 17 preslikav (p78/p93/p87) + re-join (1903/1904/1905 poligoni, konflikt III@p98 vs IV@p93 [~]) + veriga re-run P59–P66 s posodobljenimi pini",
+    "SPLIT joina (lastniška odločitev, zdaj nad popravljeno številčenje — 1603/1604/661 izpadajo, 1903/1905 nastopata)",
+    "sistemski pregled preostalih P38 pass1 slojev (p74/p76/p77 1121–1200 brez kartnih poligonov [~]; p88 721–740)",
+    "930: dokončna atribucija (PF protokol / lastniška odločitev)",
+    "lastniki atributiranih instanc ↔ PF protokol (ostaja iz P65)",
+  ],
+};

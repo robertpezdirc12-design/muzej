@@ -82,6 +82,7 @@ import {
   ATTR_EXT_P64,
   ATTR_FULL_P65,
   SPLIT_PACK_P66,
+  ANOM_FORENSICS_P67,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -2277,6 +2278,68 @@ export function MuseumResearch() {
                   {t(
                     "P66 NE odloča o SPLIT joinu — odločitev je LASTNIŠKA (2 geometriji; razdelitev per deleži ali per lastnika); P65 polja 39× bajtno (I3); join v2 NESPREMENJEN; strojna atribucija ni dokazni vir. Strojno berljivo: research/issue17/ps-split-pack.json + runtime src/data/atlas/ps-split-pack.json (/api/atlas/ps-split-pack).",
                     "P66 does NOT decide the SPLIT join — the decision belongs to the OWNER (2 geometries; split per shares or per owner); the P65 fields byte-identical 39× (I3); the v2 join UNCHANGED; machine attribution is not an evidentiary source. Machine-readable: research/issue17/ps-split-pack.json + the runtime src/data/atlas/ps-split-pack.json (/api/atlas/ps-split-pack).",
+                  )}
+                </p>
+              </div>
+            </div>
+
+            {/* P67 — forenzični paket anomalij: skok II·IV, flagi, R1↔R2, disjunktnost */}
+            <div className="min-w-0 rounded-xl border bg-card p-6 shadow-sm">
+              <h3 className="flex flex-wrap items-center gap-2 font-display text-lg font-semibold">
+                <ScrollText className="size-4 text-primary" aria-hidden="true" />
+                {t("Forenzika anomalij — skok II·IV, flagi, disjunktnost (P67)", "Anomaly forensics — II·IV skip, flags, disjointness (P67)")}
+                <StatusBadge status={ANOM_FORENSICS_P67.status} />
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                {t(
+                  "Štiri merjena dela (kandidati P66 next + P64/P65 divergenci): forenzika 2 skokov II·IV, 5 sosledje flagov, R1↔R2 divergenc in univerzalna lastniška disjunktnost — deterministično, brez AI ob delovanju.",
+                  "Four measured parts (P66 next candidates + P64/P65 divergences): forensics of the 2 II·IV skips, the 5 adjacency flags, the R1↔R2 divergences and universal owner disjointness — deterministic, no AI at runtime.",
+                )}
+              </p>
+              <div className="mt-4 grid gap-2 text-xs sm:grid-cols-2">
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("A — skok II·IV = artifakt cifr", "A — the II·IV skip = a digit artifact")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "p78 prave 1501–1520 (Wüstung Pod Grabino; napaka 5→6), p93 prave 1901–1920 (napaka 9→6/9→0), p87 prave 1681–1700 (napaka −1020 + lažna geometrija); 1603/1604/1605/661/671 = lažne fuzije — skok IZGINE; renumerifikacija 17 preslikav = P68",
+                      "p78 true 1501–1520 (Wüstung Pod Grabino; error 5→6), p93 true 1901–1920 (error 9→6/9→0), p87 true 1681–1700 (error −1020 + false geometry); 1603/1604/1605/661/671 = false fusions — the skip DISSOLVES; renumbering 17 mappings = P68",
+                    )}
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("B — 5 sosledje flagov", "B — the 5 adjacency flags")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "11/11 razloženih = artefakt obsega joina: manjkajoči sosedje obstajajo v registru (P38 z imeni), a brez poligonov v karti → izpad iz v2 (38,6 % pokritost); 1821/2141/661 = začetki strani (meja strani)",
+                      "11/11 explained = a join-scope artifact: the missing neighbours exist in the register (P38 with names) but have no map polygons → dropped from v2 (38.6 % coverage); 1821/2141/661 = page starts (page boundary)",
+                    )}
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("C — R1↔R2 divergenci", "C — the R1↔R2 divergences")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "671 RAZREŠENA (II instanca @p87 = 1691 — druga parcela; 671 ostane I-only); 930 ostaja [~] z merjenim dokazom (moda B ✓@p49 ✗@p99, disjunktna lastnika, sosedi ±1 na obeh straneh)",
+                      "671 RESOLVED (the II instance @p87 = 1691 — a different parcel; 671 stays I-only); 930 remains [~] with measured evidence (mode B ✓@p49 ✗@p99, disjoint owners, ±1 neighbours on both pages)",
+                    )}
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("D — univerzalna disjunktnost", "D — universal disjointness")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "Lastniki per Blatt DISJUNKTNI 110/110 čez-Blatt base (39 split == P66 bajtno, 71 atributiranih 71/71) → ista številka pod različnima Blattoma = 2 RAZLIČNI realni parceli; projekcija: base 802, multi-page 208",
+                      "Owners per Blatt DISJOINT 110/110 cross-Blatt bases (39 split byte-equal P66, 71 attributed 71/71) → the same number under different Blatts = 2 DIFFERENT real parcels; projection: 802 bases, 208 multi-page",
+                    )}
+                  </p>
+                </div>
+              </div>
+              <div className="mt-3 rounded-lg border border-emerald-200 bg-emerald-50/60 p-3 dark:border-emerald-900/50 dark:bg-emerald-950/30">
+                <p className="text-[11px] leading-relaxed text-foreground/80">
+                  <span className="font-semibold">{t("Pošten status: ", "Honest status: ")}</span>
+                  {t(
+                    "P67 NE izvaja renumerifikacije — v2 join NESPREMENJEN (disciplina P56–P66); 17 preslikav je SPECIFIKACIJA za P68 (odločitev lastnika); 930 ostaja [~]; strojna forenzika ni dokazni vir. Strojno berljivo: research/issue17/ps-anomaly-forensics.json + runtime src/data/atlas/ps-anomaly-forensics.json (/api/atlas/ps-anomaly-forensics).",
+                    "P67 does NOT perform the renumbering — the v2 join UNCHANGED (P56–P66 discipline); the 17 mappings are a SPECIFICATION for P68 (owner decision); 930 remains [~]; machine forensics is not an evidentiary source. Machine-readable: research/issue17/ps-anomaly-forensics.json + the runtime src/data/atlas/ps-anomaly-forensics.json (/api/atlas/ps-anomaly-forensics).",
                   )}
                 </p>
               </div>

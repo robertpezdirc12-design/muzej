@@ -1,0 +1,1299 @@
+{
+ "date": "2026-10-14",
+ "inputSha256": {
+  "research/georef-n83/gurs/parcels-ko1544-merged.json": "fee91fca736348f40ef11d38b7a5b51d51656a9768cda648f4d737029bb3941f",
+  "research/issue17/PS-full-v2.json": "81f140e989d50a67656a81ed166c5b2c400617a9a1036a85758df0cf312fc92c",
+  "research/issue17/ps-blatt-headers.json": "95929a2e373f7e4acd8f5fe4e93db08419e18c8dfbc604c1fc87beeae65da973",
+  "research/issue17/ps-parcels-geo-v2.json": "ebb8f7298de713e73bc7417f392d60c7e5eb03a6675f96317320188750e27731",
+  "research/issue17/ps-raw/blatt-76.json": "e2aca956f40e0e18e9af8b1ddcfa4f6a10696e074d2fadbec635f0f973da0fb1",
+  "research/issue17/ps-raw/blatt-77.json": "c69fa7b00af9ac9c814a3ae69220fbcb9a8834e77dae8326fd016a1b3a048cbc",
+  "research/issue17/ps-raw/blatt-78-pass2.json": "28bf987a04d47cb320520ef1b041c0e9671ea92084ae20fc13b3b8c620a3915a",
+  "research/issue17/ps-raw/blatt-78.json": "dfe3e7539c3fa590e52b42474197071e8c6d732def4f787ee2b8a7d4ec498430",
+  "research/issue17/ps-raw/blatt-93.json": "4a1e3047add687de0b291a7f26eeca3f3c4ff2ae48c36b1707ab41dbd5da1b84",
+  "research/issue17/ps-raw/ps-035-pass2.json": "166a0a8fa6197858da270c63d8a456e6602b58e1dfa8a4b25bc900bfa0ae4582",
+  "research/issue17/ps-raw/ps-036-pass2.json": "7f606b86951f8a350946ec441da7d13921ae9c8e3a7a0174a3abdcbae78674a6",
+  "research/issue17/ps-raw/ps-063.json": "8e72d4553c5df30037a81c4a40d88cd55bbc5dc89299b2de4afde8601999e895",
+  "research/issue17/ps-raw/ps-064.json": "27798813d5b24bf7454b86451ac62ee5fef69d92aca92bd2680e43c6ad6ff541",
+  "research/issue17/ps-raw/ps-078-pass2.json": "37249e79aa551ea1c827b23360832e34d57495dd9aa510849b5c9cf39ffad4ac",
+  "research/issue17/ps-raw/ps-078.json": "4a34bc35c33d747ac9fc8aef7eae82cf99db47d0ce3f3cc69020ec53c27872be",
+  "research/issue17/ps-raw/ps-079-pass2.json": "f57cfc668fe6d907e8b22cebcd85634c0853467874f6dc6728196adcd284ac8e",
+  "research/issue17/ps-raw/ps-085-pass2.json": "29047bc4256a56a8e3372d13ac6000a8ddcbefaeb012374fb692c673082cdb89",
+  "research/issue17/ps-raw/ps-087-pass2.json": "ed58996f7c53c7dde087968ce89c9a9ca94400d1117d3be5ce5e80d797ec4a5a",
+  "research/issue17/ps-raw/ps-087.json": "56d3091fa2453b2f4f1d25d1e4c7d5fcbfd2beef779a339a06f3e5e0d6f50b9f",
+  "research/issue17/ps-raw/ps-093-pass2.json": "e3b60506287552e8490331c1119831aa6b76cd3167032d210feff35a17e3eaf9",
+  "research/issue17/ps-raw/ps-093.json": "617217fa9f4f49ee85f75a816759cdd6c10054b26e8584cb9f6655ac9b65842f",
+  "research/issue17/ps-raw/ps-094-pass2.json": "9d8e5111aa8d9b04c936f19d9a0c5b992e45d011b6f2e25cbd6f1c4836ed0a65",
+  "research/issue17/ps-raw/ps-098.json": "eb03515d70d89f18d81b2de3301fb6a0597972362fa3f05d21c39b2415a5e3a9",
+  "research/issue17/ps-raw/ps-110.json": "e794924e02189dd6d086c0a939938fc705ffd0b69a2ecf085c1572a96bb42310",
+  "research/issue17/ps-raw/ps-125-pass2.json": "4188a6bd34e89ca601f2e3d64a59b474c10bddeff74d90ce9a1cc99bbfc9fb23",
+  "research/issue17/ps-register-topology.json": "2fddc76fb94b69fed55170220fa8dfa3ace4a9466043d264b8b8df788e78a50c",
+  "src/data/atlas/ps-attribution-full.json": "74477ac800ad47b4a37805aa0b398ddc88327f8c45afc342f97a084813d0396d",
+  "src/data/atlas/ps-split-pack.json": "77337affcb9ff436727c7f868ca18ba9036282bb91ff8e9eac4b735ccebad981"
+ },
+ "inputs": {
+  "geo": "research/georef-n83/gurs/parcels-ko1544-merged.json (2117 poligonov KO 1544)",
+  "p38raw": "research/issue17/ps-raw/ps-*.json (dokazi sosedov + sloji napak)",
+  "p59": "research/issue17/ps-blatt-headers.json (pageAttribution)",
+  "p65rt": "src/data/atlas/ps-attribution-full.json (211)",
+  "p66rt": "src/data/atlas/ps-split-pack.json (39)",
+  "strip": "research/issue17/ps-raw/blatt-*.json (strip branja)",
+  "topo": "research/issue17/ps-register-topology.json (pageMap)",
+  "v2": "research/issue17/ps-parcels-geo-v2.json (rowsEvidence 1093)"
+ },
+ "invariants": [
+  "I1 vhodni pini (27× sha256 + števci 1093/800/211/39/110/101)",
+  "I2/A dokazi p78/p93/p87 (strip 2× bajtno; arbitražni nizi; karta 1901–1907 ✓ / 1503–1505, 1681–1700, 1121–1200 ∅ / 1461–1500 ≥ 10)",
+  "I3/A kolizije renumerifikacije (0) + lažna geometrija p87 (11 vrstic == p36 koordinate)",
+  "I4/B flagi == P65 bajtno (5 base, 11 vrstic); M ne-prazna ∧ vsi M brez poligona; 1820/2140 v v2 (meja strani)",
+  "I5/C 671 R1/I + 930 R1/II + moda B pas ✓@p49 ✗@p99 + disjunktna lastnika + sosedi ±1 obeh strani",
+  "I6/D 110/110 disjoint; 39 split == P66 bajtno; 0 prehodnih strani; brez lat/lng/areaModern/ratio v izpisu",
+  "I7 dokaz ⊇ runtime (bajtno podmnožica)",
+  "I8 determinizem (--check bajtno)"
+ ],
+ "next": [
+  "P68 — v3 sanacija številčenja: 17 preslikav (p78/p93/p87) + re-join (1903/1904/1905 poligoni, konflikt III@p98 vs IV@p93 [~]) + veriga re-run P59–P66 s posodobljenimi pini",
+  "SPLIT joina (lastniška odločitev, zdaj nad popravljeno številčenje — 1603/1604/661 izpadajo, 1903/1905 nastopata)",
+  "sistemski pregled preostalih P38 pass1 slojev (p74/p76/p77 1121–1200 brez kartnih poligonov [~]; p88 721–740)",
+  "930: dokončna atribucija (PF protokol / lastniška odločitev)",
+  "lastniki atributiranih instanc ↔ PF protokol (ostaja iz P65)"
+ ],
+ "parts": {
+  "A": {
+   "collisions": "0 (1503–1505, 1904, 1681–1700 proste; 1903/1905 samo p98)",
+   "falseGeometry": {
+    "note": "koordinate bajtno == p36 (isti poligoni 661–680 = Blatt I parcele)",
+    "p87Rows": 11
+   },
+   "fusedBases": {
+    "1603": [
+     {
+      "areaQK": 776.0,
+      "kultur": "Acker",
+      "owner": "Pachler Martin",
+      "page": 78
+     },
+     {
+      "areaQK": 1005.0,
+      "kultur": "Weide und Gfällgut, Laubm.",
+      "owner": "Verboten (er) Bueb?",
+      "page": 93
+     }
+    ],
+    "1604": [
+     {
+      "areaQK": 774.0,
+      "kultur": "Acker",
+      "owner": "Ullrich Otto",
+      "page": 78
+     },
+     {
+      "areaQK": 724.0,
+      "kultur": "Weide und Gfällgut, Laubm.",
+      "owner": "Piringer Mathäus",
+      "page": 93
+     }
+    ],
+    "1605": [
+     {
+      "areaQK": 2688.0,
+      "kultur": "Gemeinde Grätzig",
+      "owner": "Tillak Anio",
+      "page": 78
+     },
+     {
+      "areaQK": null,
+      "kultur": null,
+      "owner": "[?] [?]",
+      "page": 93
+     }
+    ]
+   },
+   "mapWitness": {
+    "absent": [
+     "1503",
+     "1504",
+     "1505",
+     "1681–1700",
+     "1121–1200"
+    ],
+    "note": "16xx poligoni (1603, 1604/1-3, 1605) na tretji lokaciji (v2 lažna dodelitev fuzijam); 19xx ~1.6 km JugZ",
+    "present": {
+     "1461–1500": "≥10",
+     "1901–1907": 7,
+     "1903": true,
+     "1904": true,
+     "1905": true
+    }
+   },
+   "p93p98Overlap": {
+    "owners": "disjunktni",
+    "p93": "IV",
+    "p98": "III",
+    "range": "1901–1920"
+   },
+   "projection": {
+    "bases": {
+     "after": 802,
+     "before": 800
+    },
+    "crossBlatt": {
+     "after": 107,
+     "before": 110
+    },
+    "multiPage": {
+     "after": 208,
+     "before": 211
+    },
+    "new1903": {
+     "class": "split pas [~]",
+     "shareIII": 0.7081
+    },
+    "new1905": {
+     "class": "R2b areaIncomplete [~]"
+    },
+    "note": "razvrstitev novih base = izhod P68 pipeline [~]",
+    "r3Single": 101,
+    "runtimeRows": "-14 brez geometrije (3× p78, 11× p87); p93 3× re-claim (1904 čisto, 1903/1905 konflikt z III@p98 [~])"
+   },
+   "renumberSpec": [
+    {
+     "new": "1503",
+     "old": "1603",
+     "page": 78
+    },
+    {
+     "new": "1504",
+     "old": "1604",
+     "page": 78
+    },
+    {
+     "new": "1505",
+     "old": "1605",
+     "page": 78
+    },
+    {
+     "new": "1903",
+     "old": "1603",
+     "page": 93
+    },
+    {
+     "new": "1904",
+     "old": "1604",
+     "page": 93
+    },
+    {
+     "new": "1905",
+     "old": "1605",
+     "page": 93
+    },
+    {
+     "new": "1681",
+     "old": "661",
+     "page": 87
+    },
+    {
+     "new": "1683",
+     "old": "663",
+     "page": 87
+    },
+    {
+     "new": "1686",
+     "old": "666",
+     "page": 87
+    },
+    {
+     "new": "1687",
+     "old": "667",
+     "page": 87
+    },
+    {
+     "new": "1691",
+     "old": "671",
+     "page": 87
+    },
+    {
+     "new": "1693",
+     "old": "673",
+     "page": 87
+    },
+    {
+     "new": "1694",
+     "old": "674",
+     "page": 87
+    },
+    {
+     "new": "1695",
+     "old": "675",
+     "page": 87
+    },
+    {
+     "new": "1696",
+     "old": "676",
+     "page": 87
+    },
+    {
+     "new": "1699",
+     "old": "679",
+     "page": 87
+    },
+    {
+     "new": "1700",
+     "old": "680",
+     "page": 87
+    }
+   ],
+   "stripEvidence": {
+    "p77": {
+     "numbers": "1481–1500",
+     "reads": [
+      "blatt-77.json"
+     ]
+    },
+    "p78": {
+     "bezeichnung": "Wüstung Pod Grabino",
+     "crossed": "vrstice 5–14 (1505–1514) rdeče",
+     "numbers": "1501–1520 (2× bajtno)",
+     "reads": [
+      "blatt-78.json",
+      "blatt-78-pass2.json"
+     ]
+    },
+    "p87": {
+     "numbers": "1681–1700 (oči r1–8 = 1681–1688)",
+     "p38pass1": "661–680 (izguba vodilne 1 + 8→6)",
+     "reads": [
+      "ps-087-pass2.json"
+     ],
+     "strip": "161–180 (odrezane vodilne)"
+    },
+    "p93": {
+     "crossed": "1901–1904, 1906–1907 (oči)",
+     "numbers": "1901–1920 (r11–20 bajtno; r1–10 garbled)",
+     "p38pass1": "1001–1020 (9→0)",
+     "p38pass2": "1601–1620 (9→6)",
+     "reads": [
+      "blatt-93.json"
+     ]
+    }
+   }
+  },
+  "B": {
+   "details": [
+    {
+     "flag": "1821@p64",
+     "missingInV2": [
+      "1822",
+      "1823",
+      "1824"
+     ],
+     "neighborEvidence": {
+      "1822": {
+       "klafter": "190",
+       "kultur": "Acker",
+       "name": "Büller Lorenz"
+      }
+     },
+     "pageStart": true,
+     "registerNeighbors": [
+      "1822"
+     ]
+    },
+    {
+     "flag": "1821@p79",
+     "missingInV2": [
+      "1822",
+      "1823",
+      "1824"
+     ],
+     "neighborEvidence": {
+      "1822": {
+       "klafter": "416",
+       "kultur": "Einöd Wiese Gey. sätä",
+       "name": "Seehofer Georg"
+      }
+     },
+     "pageStart": false,
+     "registerNeighbors": [
+      "1822"
+     ]
+    },
+    {
+     "flag": "1821@p94",
+     "missingInV2": [
+      "1822",
+      "1823",
+      "1824"
+     ],
+     "neighborEvidence": {
+      "1822": {
+       "klafter": "876",
+       "kultur": "Wiese und Äcker",
+       "name": "Peterig Mathä"
+      }
+     },
+     "pageStart": false,
+     "registerNeighbors": [
+      "1822"
+     ]
+    },
+    {
+     "flag": "2141@p110",
+     "missingInV2": [
+      "2142",
+      "2144",
+      "2145",
+      "2146",
+      "2147",
+      "2153"
+     ],
+     "neighborEvidence": {
+      "2142": {
+       "klafter": "728",
+       "kultur": "Einhemdtl. Purgstall",
+       "name": "Häupler Martin"
+      }
+     },
+     "pageStart": true,
+     "registerNeighbors": [
+      "2142"
+     ]
+    },
+    {
+     "flag": "2141@p125",
+     "missingInV2": [
+      "2142",
+      "2144",
+      "2145",
+      "2146",
+      "2147",
+      "2153"
+     ],
+     "neighborEvidence": {
+      "2142": {
+       "klafter": "207",
+       "kultur": "Schüttboden",
+       "name": "Schimey Johann"
+      }
+     },
+     "pageStart": false,
+     "registerNeighbors": [
+      "2142"
+     ]
+    },
+    {
+     "flag": "2143@p110",
+     "missingInV2": [
+      "2142",
+      "2144",
+      "2145",
+      "2146",
+      "2147",
+      "2153"
+     ],
+     "neighborEvidence": {
+      "2142": {
+       "klafter": "728",
+       "kultur": "Einhemdtl. Purgstall",
+       "name": "Häupler Martin"
+      },
+      "2144": {
+       "klafter": "1540",
+       "kultur": "Einhemdtl. Purgstall",
+       "name": "Kerol Miso"
+      }
+     },
+     "pageStart": false,
+     "registerNeighbors": [
+      "2142",
+      "2144"
+     ]
+    },
+    {
+     "flag": "2143@p125",
+     "missingInV2": [
+      "2142",
+      "2144",
+      "2145",
+      "2146",
+      "2147",
+      "2153"
+     ],
+     "neighborEvidence": {
+      "2142": {
+       "klafter": "207",
+       "kultur": "Schüttboden",
+       "name": "Schimey Johann"
+      },
+      "2144": {
+       "klafter": "1128",
+       "kultur": "Schüttboden",
+       "name": "Pauditsch Johann"
+      }
+     },
+     "pageStart": false,
+     "registerNeighbors": [
+      "2142",
+      "2144"
+     ]
+    },
+    {
+     "flag": "646@p35",
+     "missingInV2": [
+      "645",
+      "647",
+      "649",
+      "650",
+      "658",
+      "660"
+     ],
+     "neighborEvidence": {
+      "645": {
+       "klafter": null,
+       "kultur": null,
+       "name": "Ulrich Franz"
+      },
+      "647": {
+       "klafter": "26",
+       "kultur": "Lache",
+       "name": "Gemeinde"
+      }
+     },
+     "pageStart": false,
+     "registerNeighbors": [
+      "645",
+      "647"
+     ]
+    },
+    {
+     "flag": "646@p85",
+     "missingInV2": [
+      "645",
+      "647",
+      "649",
+      "650",
+      "658",
+      "660"
+     ],
+     "neighborEvidence": {
+      "645": {
+       "klafter": "707",
+       "kultur": "Wiese und Gf. Pöllern",
+       "name": "Hrnisch Mihlo"
+      },
+      "647": {
+       "klafter": "774",
+       "kultur": "Wiese und Gfrett Wiesen",
+       "name": "Hrantsch Gregor"
+      }
+     },
+     "pageStart": false,
+     "registerNeighbors": [
+      "645",
+      "647"
+     ]
+    },
+    {
+     "flag": "661@p36",
+     "missingInV2": [
+      "662",
+      "664",
+      "665",
+      "668",
+      "669",
+      "670",
+      "672",
+      "677",
+      "678"
+     ],
+     "neighborEvidence": {
+      "662": {
+       "klafter": "328",
+       "kultur": "Eidn",
+       "name": "Mülley Franzl"
+      }
+     },
+     "pageStart": true,
+     "registerNeighbors": [
+      "662"
+     ]
+    },
+    {
+     "flag": "661@p87",
+     "missingInV2": [
+      "662",
+      "664",
+      "665",
+      "668",
+      "669",
+      "670",
+      "672",
+      "677",
+      "678"
+     ],
+     "neighborEvidence": {
+      "662": {
+       "klafter": "1932",
+       "kultur": "Acker",
+       "name": "Dultsitsch Mufg"
+      }
+     },
+     "pageStart": false,
+     "registerNeighbors": [
+      "662"
+     ]
+    }
+   ],
+   "flagBases": [
+    "1821",
+    "2141",
+    "2143",
+    "646",
+    "661"
+   ],
+   "flagRows": 11,
+   "pageBoundary": {
+    "1820": "p63, poligon ✓, v v2 ✓",
+    "2140": "p109, poligon ✓, v v2 ✓",
+    "note": "začetki strani 1821/2141/661 — per-page kontrola ne vidi prejšnje strani"
+   },
+   "perBase": {
+    "1821": {
+     "flag": 3,
+     "flaggedRows": [
+      "1821@p64",
+      "1821@p79",
+      "1821@p94"
+     ],
+     "ok": 0
+    },
+    "2141": {
+     "flag": 2,
+     "flaggedRows": [
+      "2141@p110",
+      "2141@p125"
+     ],
+     "ok": 0
+    },
+    "2143": {
+     "flag": 2,
+     "flaggedRows": [
+      "2143@p110",
+      "2143@p125"
+     ],
+     "ok": 0
+    },
+    "646": {
+     "flag": 2,
+     "flaggedRows": [
+      "646@p35",
+      "646@p85"
+     ],
+     "ok": 0
+    },
+    "661": {
+     "flag": 2,
+     "flaggedRows": [
+      "661@p36",
+      "661@p87"
+     ],
+     "ok": 0
+    }
+   },
+   "verdict": "11/11 razloženih (obseg joina + meja strani); 0 anomalij registra; sosledje ostaja merilo kakovosti, ne napake"
+  },
+  "C": {
+   "671": {
+    "p65": {
+     "attributedBlatt": "I",
+     "status": "R1"
+    },
+    "reason": "II instanca @p87 = 1691 (renumerifikacija p87); 671 ostane I-only @p36",
+    "verdict": "RAZREŠENA — ni divergencia"
+   },
+   "930": {
+    "mapBlock": "921–940: 9 poligonov (mehka podpora)",
+    "modeB": {
+     "p49": true,
+     "p99": false
+    },
+    "neighborsBothPages": {
+     "p49": true,
+     "p99": true
+    },
+    "owners": [
+     "Brünig Michel",
+     "Hüsse Malle"
+    ],
+    "ownersDisjoint": true,
+    "p65": {
+     "attributedBlatt": "II",
+     "status": "R1"
+    },
+    "verdict": "ostaja [~] z merjenim dokazom"
+   }
+  },
+  "D": {
+   "attributedSubset": {
+    "count": 71,
+    "disjoint": 71
+   },
+   "crossBlattBases": 110,
+   "disjoint": 110,
+   "ownerRelationDist": {
+    "disjoint": 110
+   },
+   "splitSubset": {
+    "count": 39,
+    "note": "39 polj bajtno == P66 (ownersByBlatt + ownerRelation)"
+   },
+   "verdict": "per-Blatt številčenje: ista številka pod različnima Blattoma = 2 RAZLIČNI realni parceli; atribucija = dodelitev geometrije instanci [~]"
+  }
+ },
+ "principle": "forenzični paket anomalij (kandidati P66 next #3/#4 + P64/P65 divergenci + nova univerzalna meritev): 4 dela (A skok II·IV = artifakt dvojne Kurrent zamenjave s renumerifikacijsko specifikacijo; B sosledje flagi = obseg joina; C R1↔R2 — 671 razrešena, 930 [~]; D univerzalna disjunktnost 110/110); deterministično, brez AI ob delovanju; v2 nespremanjen; odločitev o renumerifikaciji = lastnika (P68)",
+ "runtime": {
+  "date": "2026-10-14",
+  "generatedBy": "scripts/p67_ps_anomaly_forensics.py",
+  "next": [
+   "P68 — v3 sanacija številčenja: 17 preslikav (p78/p93/p87) + re-join (1903/1904/1905 poligoni, konflikt III@p98 vs IV@p93 [~]) + veriga re-run P59–P66 s posodobljenimi pini",
+   "SPLIT joina (lastniška odločitev, zdaj nad popravljeno številčenje — 1603/1604/661 izpadajo, 1903/1905 nastopata)",
+   "sistemski pregled preostalih P38 pass1 slojev (p74/p76/p77 1121–1200 brez kartnih poligonov [~]; p88 721–740)",
+   "930: dokončna atribucija (PF protokol / lastniška odločitev)",
+   "lastniki atributiranih instanc ↔ PF protokol (ostaja iz P65)"
+  ],
+  "parts": {
+   "A": {
+    "collisions": "0 (1503–1505, 1904, 1681–1700 proste; 1903/1905 samo p98)",
+    "falseGeometry": {
+     "note": "koordinate bajtno == p36 (isti poligoni 661–680 = Blatt I parcele)",
+     "p87Rows": 11
+    },
+    "fusedBases": {
+     "1603": [
+      {
+       "areaQK": 776.0,
+       "kultur": "Acker",
+       "owner": "Pachler Martin",
+       "page": 78
+      },
+      {
+       "areaQK": 1005.0,
+       "kultur": "Weide und Gfällgut, Laubm.",
+       "owner": "Verboten (er) Bueb?",
+       "page": 93
+      }
+     ],
+     "1604": [
+      {
+       "areaQK": 774.0,
+       "kultur": "Acker",
+       "owner": "Ullrich Otto",
+       "page": 78
+      },
+      {
+       "areaQK": 724.0,
+       "kultur": "Weide und Gfällgut, Laubm.",
+       "owner": "Piringer Mathäus",
+       "page": 93
+      }
+     ],
+     "1605": [
+      {
+       "areaQK": 2688.0,
+       "kultur": "Gemeinde Grätzig",
+       "owner": "Tillak Anio",
+       "page": 78
+      },
+      {
+       "areaQK": null,
+       "kultur": null,
+       "owner": "[?] [?]",
+       "page": 93
+      }
+     ]
+    },
+    "mapWitness": {
+     "absent": [
+      "1503",
+      "1504",
+      "1505",
+      "1681–1700",
+      "1121–1200"
+     ],
+     "note": "16xx poligoni (1603, 1604/1-3, 1605) na tretji lokaciji (v2 lažna dodelitev fuzijam); 19xx ~1.6 km JugZ",
+     "present": {
+      "1461–1500": "≥10",
+      "1901–1907": 7,
+      "1903": true,
+      "1904": true,
+      "1905": true
+     }
+    },
+    "p93p98Overlap": {
+     "owners": "disjunktni",
+     "p93": "IV",
+     "p98": "III",
+     "range": "1901–1920"
+    },
+    "projection": {
+     "bases": {
+      "after": 802,
+      "before": 800
+     },
+     "crossBlatt": {
+      "after": 107,
+      "before": 110
+     },
+     "multiPage": {
+      "after": 208,
+      "before": 211
+     },
+     "new1903": {
+      "class": "split pas [~]",
+      "shareIII": 0.7081
+     },
+     "new1905": {
+      "class": "R2b areaIncomplete [~]"
+     },
+     "note": "razvrstitev novih base = izhod P68 pipeline [~]",
+     "r3Single": 101,
+     "runtimeRows": "-14 brez geometrije (3× p78, 11× p87); p93 3× re-claim (1904 čisto, 1903/1905 konflikt z III@p98 [~])"
+    },
+    "renumberSpec": [
+     {
+      "new": "1503",
+      "old": "1603",
+      "page": 78
+     },
+     {
+      "new": "1504",
+      "old": "1604",
+      "page": 78
+     },
+     {
+      "new": "1505",
+      "old": "1605",
+      "page": 78
+     },
+     {
+      "new": "1903",
+      "old": "1603",
+      "page": 93
+     },
+     {
+      "new": "1904",
+      "old": "1604",
+      "page": 93
+     },
+     {
+      "new": "1905",
+      "old": "1605",
+      "page": 93
+     },
+     {
+      "new": "1681",
+      "old": "661",
+      "page": 87
+     },
+     {
+      "new": "1683",
+      "old": "663",
+      "page": 87
+     },
+     {
+      "new": "1686",
+      "old": "666",
+      "page": 87
+     },
+     {
+      "new": "1687",
+      "old": "667",
+      "page": 87
+     },
+     {
+      "new": "1691",
+      "old": "671",
+      "page": 87
+     },
+     {
+      "new": "1693",
+      "old": "673",
+      "page": 87
+     },
+     {
+      "new": "1694",
+      "old": "674",
+      "page": 87
+     },
+     {
+      "new": "1695",
+      "old": "675",
+      "page": 87
+     },
+     {
+      "new": "1696",
+      "old": "676",
+      "page": 87
+     },
+     {
+      "new": "1699",
+      "old": "679",
+      "page": 87
+     },
+     {
+      "new": "1700",
+      "old": "680",
+      "page": 87
+     }
+    ],
+    "stripEvidence": {
+     "p77": {
+      "numbers": "1481–1500",
+      "reads": [
+       "blatt-77.json"
+      ]
+     },
+     "p78": {
+      "bezeichnung": "Wüstung Pod Grabino",
+      "crossed": "vrstice 5–14 (1505–1514) rdeče",
+      "numbers": "1501–1520 (2× bajtno)",
+      "reads": [
+       "blatt-78.json",
+       "blatt-78-pass2.json"
+      ]
+     },
+     "p87": {
+      "numbers": "1681–1700 (oči r1–8 = 1681–1688)",
+      "p38pass1": "661–680 (izguba vodilne 1 + 8→6)",
+      "reads": [
+       "ps-087-pass2.json"
+      ],
+      "strip": "161–180 (odrezane vodilne)"
+     },
+     "p93": {
+      "crossed": "1901–1904, 1906–1907 (oči)",
+      "numbers": "1901–1920 (r11–20 bajtno; r1–10 garbled)",
+      "p38pass1": "1001–1020 (9→0)",
+      "p38pass2": "1601–1620 (9→6)",
+      "reads": [
+       "blatt-93.json"
+      ]
+     }
+    }
+   },
+   "B": {
+    "details": [
+     {
+      "flag": "1821@p64",
+      "missingInV2": [
+       "1822",
+       "1823",
+       "1824"
+      ],
+      "neighborEvidence": {
+       "1822": {
+        "klafter": "190",
+        "kultur": "Acker",
+        "name": "Büller Lorenz"
+       }
+      },
+      "pageStart": true,
+      "registerNeighbors": [
+       "1822"
+      ]
+     },
+     {
+      "flag": "1821@p79",
+      "missingInV2": [
+       "1822",
+       "1823",
+       "1824"
+      ],
+      "neighborEvidence": {
+       "1822": {
+        "klafter": "416",
+        "kultur": "Einöd Wiese Gey. sätä",
+        "name": "Seehofer Georg"
+       }
+      },
+      "pageStart": false,
+      "registerNeighbors": [
+       "1822"
+      ]
+     },
+     {
+      "flag": "1821@p94",
+      "missingInV2": [
+       "1822",
+       "1823",
+       "1824"
+      ],
+      "neighborEvidence": {
+       "1822": {
+        "klafter": "876",
+        "kultur": "Wiese und Äcker",
+        "name": "Peterig Mathä"
+       }
+      },
+      "pageStart": false,
+      "registerNeighbors": [
+       "1822"
+      ]
+     },
+     {
+      "flag": "2141@p110",
+      "missingInV2": [
+       "2142",
+       "2144",
+       "2145",
+       "2146",
+       "2147",
+       "2153"
+      ],
+      "neighborEvidence": {
+       "2142": {
+        "klafter": "728",
+        "kultur": "Einhemdtl. Purgstall",
+        "name": "Häupler Martin"
+       }
+      },
+      "pageStart": true,
+      "registerNeighbors": [
+       "2142"
+      ]
+     },
+     {
+      "flag": "2141@p125",
+      "missingInV2": [
+       "2142",
+       "2144",
+       "2145",
+       "2146",
+       "2147",
+       "2153"
+      ],
+      "neighborEvidence": {
+       "2142": {
+        "klafter": "207",
+        "kultur": "Schüttboden",
+        "name": "Schimey Johann"
+       }
+      },
+      "pageStart": false,
+      "registerNeighbors": [
+       "2142"
+      ]
+     },
+     {
+      "flag": "2143@p110",
+      "missingInV2": [
+       "2142",
+       "2144",
+       "2145",
+       "2146",
+       "2147",
+       "2153"
+      ],
+      "neighborEvidence": {
+       "2142": {
+        "klafter": "728",
+        "kultur": "Einhemdtl. Purgstall",
+        "name": "Häupler Martin"
+       },
+       "2144": {
+        "klafter": "1540",
+        "kultur": "Einhemdtl. Purgstall",
+        "name": "Kerol Miso"
+       }
+      },
+      "pageStart": false,
+      "registerNeighbors": [
+       "2142",
+       "2144"
+      ]
+     },
+     {
+      "flag": "2143@p125",
+      "missingInV2": [
+       "2142",
+       "2144",
+       "2145",
+       "2146",
+       "2147",
+       "2153"
+      ],
+      "neighborEvidence": {
+       "2142": {
+        "klafter": "207",
+        "kultur": "Schüttboden",
+        "name": "Schimey Johann"
+       },
+       "2144": {
+        "klafter": "1128",
+        "kultur": "Schüttboden",
+        "name": "Pauditsch Johann"
+       }
+      },
+      "pageStart": false,
+      "registerNeighbors": [
+       "2142",
+       "2144"
+      ]
+     },
+     {
+      "flag": "646@p35",
+      "missingInV2": [
+       "645",
+       "647",
+       "649",
+       "650",
+       "658",
+       "660"
+      ],
+      "neighborEvidence": {
+       "645": {
+        "klafter": null,
+        "kultur": null,
+        "name": "Ulrich Franz"
+       },
+       "647": {
+        "klafter": "26",
+        "kultur": "Lache",
+        "name": "Gemeinde"
+       }
+      },
+      "pageStart": false,
+      "registerNeighbors": [
+       "645",
+       "647"
+      ]
+     },
+     {
+      "flag": "646@p85",
+      "missingInV2": [
+       "645",
+       "647",
+       "649",
+       "650",
+       "658",
+       "660"
+      ],
+      "neighborEvidence": {
+       "645": {
+        "klafter": "707",
+        "kultur": "Wiese und Gf. Pöllern",
+        "name": "Hrnisch Mihlo"
+       },
+       "647": {
+        "klafter": "774",
+        "kultur": "Wiese und Gfrett Wiesen",
+        "name": "Hrantsch Gregor"
+       }
+      },
+      "pageStart": false,
+      "registerNeighbors": [
+       "645",
+       "647"
+      ]
+     },
+     {
+      "flag": "661@p36",
+      "missingInV2": [
+       "662",
+       "664",
+       "665",
+       "668",
+       "669",
+       "670",
+       "672",
+       "677",
+       "678"
+      ],
+      "neighborEvidence": {
+       "662": {
+        "klafter": "328",
+        "kultur": "Eidn",
+        "name": "Mülley Franzl"
+       }
+      },
+      "pageStart": true,
+      "registerNeighbors": [
+       "662"
+      ]
+     },
+     {
+      "flag": "661@p87",
+      "missingInV2": [
+       "662",
+       "664",
+       "665",
+       "668",
+       "669",
+       "670",
+       "672",
+       "677",
+       "678"
+      ],
+      "neighborEvidence": {
+       "662": {
+        "klafter": "1932",
+        "kultur": "Acker",
+        "name": "Dultsitsch Mufg"
+       }
+      },
+      "pageStart": false,
+      "registerNeighbors": [
+       "662"
+      ]
+     }
+    ],
+    "flagBases": [
+     "1821",
+     "2141",
+     "2143",
+     "646",
+     "661"
+    ],
+    "flagRows": 11,
+    "pageBoundary": {
+     "1820": "p63, poligon ✓, v v2 ✓",
+     "2140": "p109, poligon ✓, v v2 ✓",
+     "note": "začetki strani 1821/2141/661 — per-page kontrola ne vidi prejšnje strani"
+    },
+    "perBase": {
+     "1821": {
+      "flag": 3,
+      "flaggedRows": [
+       "1821@p64",
+       "1821@p79",
+       "1821@p94"
+      ],
+      "ok": 0
+     },
+     "2141": {
+      "flag": 2,
+      "flaggedRows": [
+       "2141@p110",
+       "2141@p125"
+      ],
+      "ok": 0
+     },
+     "2143": {
+      "flag": 2,
+      "flaggedRows": [
+       "2143@p110",
+       "2143@p125"
+      ],
+      "ok": 0
+     },
+     "646": {
+      "flag": 2,
+      "flaggedRows": [
+       "646@p35",
+       "646@p85"
+      ],
+      "ok": 0
+     },
+     "661": {
+      "flag": 2,
+      "flaggedRows": [
+       "661@p36",
+       "661@p87"
+      ],
+      "ok": 0
+     }
+    },
+    "verdict": "11/11 razloženih (obseg joina + meja strani); 0 anomalij registra; sosledje ostaja merilo kakovosti, ne napake"
+   },
+   "C": {
+    "671": {
+     "p65": {
+      "attributedBlatt": "I",
+      "status": "R1"
+     },
+     "reason": "II instanca @p87 = 1691 (renumerifikacija p87); 671 ostane I-only @p36",
+     "verdict": "RAZREŠENA — ni divergencia"
+    },
+    "930": {
+     "mapBlock": "921–940: 9 poligonov (mehka podpora)",
+     "modeB": {
+      "p49": true,
+      "p99": false
+     },
+     "neighborsBothPages": {
+      "p49": true,
+      "p99": true
+     },
+     "owners": [
+      "Brünig Michel",
+      "Hüsse Malle"
+     ],
+     "ownersDisjoint": true,
+     "p65": {
+      "attributedBlatt": "II",
+      "status": "R1"
+     },
+     "verdict": "ostaja [~] z merjenim dokazom"
+    }
+   },
+   "D": {
+    "attributedSubset": {
+     "count": 71,
+     "disjoint": 71
+    },
+    "crossBlattBases": 110,
+    "disjoint": 110,
+    "ownerRelationDist": {
+     "disjoint": 110
+    },
+    "splitSubset": {
+     "count": 39,
+     "note": "39 polj bajtno == P66 (ownersByBlatt + ownerRelation)"
+    },
+    "verdict": "per-Blatt številčenje: ista številka pod različnima Blattoma = 2 RAZLIČNI realni parceli; atribucija = dodelitev geometrije instanci [~]"
+   }
+  },
+  "rule": {
+   "modeB": "razmerje areaModern/areaQK ∈ [0.8, 1.25] (P60/P61) — v izpis samo članstvo (I6)",
+   "ownersByBlatt": "v2 vrstice × P59 pageAttribution; relacija disjoint|equal|overlap|open (P66 metoda)",
+   "renumber": "17 preslikav (p78 160x→150x, p93 160x→190x, p87 +1020) — SPECIFIKACIJA za P68, v2 nespremenjen",
+   "sosledje": "±1 sosed znotraj v2 vrstic iste strani (P65 replikacija); flag = brez soseda"
+  },
+  "statusLine": "P67 FORENZIKA: skok II·IV = artifakt dvojne Kurrent zamenjave (p78 1501–1520, p93 1901–1920, p87 1681–1700 — oči+strip 2×+karta; renumerifikacija 17 preslikav); 5 sosledje flagov = obseg joina (11/11 razloženih; sosedje brez poligonov; meja strani); 671 ni divergenca (II instanca = 1691), 930 [~] z dokazom; disjunktnost lastnikov per Blatt UNIVERZALNA 110/110; v2 nespremenjen; renumerifikacija = P68",
+  "summary": {
+   "collisions": 0,
+   "crossBlattBases": 110,
+   "divergences": {
+    "671": "razrešena (ni divergencia)",
+    "930": "[~] z merjenim dokazom"
+   },
+   "flagRowsExplained": 11,
+   "flagRowsTotal": 11,
+   "fusedBasesResolved": [
+    "1603",
+    "1604",
+    "1605",
+    "661",
+    "671"
+   ],
+   "ownerDisjoint": 110,
+   "ownerRelationDist": {
+    "disjoint": 110
+   },
+   "projection": {
+    "bases": 802,
+    "crossBlatt": 107,
+    "multiPage": 208,
+    "r3Single": 101
+   },
+   "renumberMappings": 17
+  },
+  "task": "P67 — forenzični paket anomalij: skok II·IV, sosledje flagi, R1↔R2 divergence, univerzalna disjunktnost",
+  "verdictEn": "P67: ANOMALY FORENSICS PACK (issue #13) — four measured parts, deterministic, no AI at runtime; v2 join UNCHANGED (P56–P66 discipline). (A) THE II·IV SKIP (1603/1604) = A DOUBLE KURRENT SUBSTITUTION ARTIFACT: p78 (Blatt II, Wüstung 'Pod Grabino') true numbers 1501–1520 (strip 2 passes byte-exact, rows 5–14 red-crossed, continuity 1461–1480→1481–1500→1501–1520, map: 1461–1500 has 12 polygons / 1121–1200 EMPTY), v2 1603–1605 = P38 error 5→6 → true 1503/1504/1505; p93 (Blatt IV) true 1901–1920 (strip 2 passes r11–20 byte-exact, eyes r1–8 = 1901–1908 with red crossings 1901–1904/1906–1907, map: block 1901–1907 has EXACTLY 7 polygons), P38 pass1 = 9→0 (1001–1020), pass2 = 9→6 (1601–1620) → true 1903/1904/1905; p87 (Blatt II) true 1681–1700 (pass2 + eyes r1–8 = 1681–1688; pass1 661–680 = lost leading 1 + 8→6; strip 161–180 = clipped leading digits) → 11 v2 rows wrong (+1020) carrying FALSE geometry (the 661–680 polygons belong to the Blatt I p36 instances — coordinates byte-identical). Consequences: 1603/1604 = false fusions of II 1503/1504 × IV 1903/1904 — the II·IV skip DISSOLVES; 1605 = fusion of II 1505 (crossed) × IV 1905; 661/671 = false fusions I × II 1681/1691 — the cross-Blatt pairs COLLAPSE; p93 (IV) and p98 (III) carry the SAME range 1901–1920 (disjoint owners — a textbook per-Blatt overlap); map: 1903/1904/1905 polygons exist (south-west location), 1503–1505 and 1681–1700 do NOT; the 16xx polygons sit at a third location (falsely assigned to the fusions by v2). RENUMBERING 17 mappings (p78 3×, p93 3×, p87 11×; 0 collisions) = P68; projection: bases 800→802, multi-page 211→208, cross-Blatt 110→107 (1903 split band 0.7081 [~], 1905 R2b [~]), runtime −14 geometry-less rows. (B) THE 5 ADJACENCY FLAGS (646, 661, 1821, 2141, 2143; 11 rows) = A JOIN-SCOPE ARTIFACT: the missing neighbours exist in the register (P38 with names: 645 'Ulrich Franz', 647 'Gemeinde', 662 'Mülley Franzl', 1822 'Büller Lorenz', 1823 'Gavčnik Miha', 1824 'Gavčnik Gregor', 2142 'Häupler Martin', 2144–2147 …) but have no polygons in the map → dropped from v2 (38.6 % coverage); 1821/2141/661 are page-start rows (1820/2140 HAVE polygons — on the previous page, invisible to the per-page check); 11/11 explained, 0 register anomalies. (C) R1↔R2: 671 RESOLVED (not a divergence — the II instance @p87 = 1691, a different parcel; 671 stays I-only); 930 remains [~] with measured evidence (mode B band ✓@p49 ✗@p99, disjoint owners, ±1 neighbours on both pages, map 921–940: 9 polygons). (D) UNIVERSAL DISJOINTNESS: owners per Blatt DISJOINT for ALL 110 cross-Blatt bases (110/110; the 39 split byte-equal P66, the 71 attributed 71/71) → per-Blatt numbering: the same number under different Blatts = 2 DIFFERENT real parcels; the attribution (R1/R2a/R2b) is a geometry-to-instance assignment, not parcel identity [~]. Machine forensics is not a source of proof; the renumbering and SPLIT join decisions belong to the OWNER (P68/P69).",
+  "verdictSi": "P67: FORENZIČNI PAKET ANOMALIJ (issue #13) — štiri merjena dela, deterministično, brez AI ob delovanju; v2 join NESPREMENJEN (disciplina P56–P66). (A) SKOK II·IV (1603/1604) = ARTIFAKT DVOJNE KURRENT ZAMENJAVE: p78 (Blatt II, Wüstung 'Pod Grabino') prave številke 1501–1520 (strip 2× bajtno, vrstice 5–14 rdeče prečrtane, kontinuiteta 1461–1480→1481–1500→1501–1520, karta: 1461–1500 ima 12 poligonov / 1121–1200 PRAZNO), v2 1603–1605 = P38 napaka 5→6 → prave 1503/1504/1505; p93 (Blatt IV) prave 1901–1920 (strip 2× r11–20 bajtno, oči r1–8 = 1901–1908 z rdečimi prečrtami 1901–1904/1906–1907, karta: blok 1901–1907 ima TOČNO 7 poligonov), P38 pass1 = 9→0 (1001–1020), pass2 = 9→6 (1601–1620) → prave 1903/1904/1905; p87 (Blatt II) prave 1681–1700 (pass2 + oči r1–8 = 1681–1688; pass1 661–680 = izguba vodilne 1 + 8→6; strip 161–180 = odrezane vodilne) → 11 v2 vrstic napačno (+1020) in nosi LAŽNO geometrijo (poligoni 661–680 = Blatt I p36 instance, koordinate bajtno identične). Posledica: 1603/1604 = lažni fuziji II 1503/1504 × IV 1903/1904 — skok II·IV IZGINE; 1605 = fuzija II 1505 (prečrtan) × IV 1905; 661/671 = lažni fuziji I × II 1681/1691 — čez-Blatt primera RAZPADETA; p93 (IV) in p98 (III) nosita ISTI obseg 1901–1920 (disjunktni lastniki — per-Blatt primež); karta: 1903/1904/1905 poligoni obstajajo (jugozahodna lokacija), 1503–1505 in 1681–1700 NE; 16xx poligoni na tretji lokaciji (v2 jih je lažno pripisal fuzijam). RENUMERIFIKACIJA 17 preslikav (p78 3×, p93 3×, p87 11×; 0 kolizij) = P68; projekcija: base 800→802, multi-page 211→208, čez-Blatt 110→107 (1903 pas split 0.7081 [~], 1905 R2b [~]), runtime −14 vrstic brez geometrije. (B) 5 SOSLEDJE FLAGOV (646, 661, 1821, 2141, 2143; 11 vrstic) = ARTEFAKT OBSEGA JOINA: manjkajoči sosedje obstajajo v registru (P38 z imeni: 645 'Ulrich Franz', 647 'Gemeinde', 662 'Mülley Franzl', 1822 'Büller Lorenz', 1823 'Gavčnik Miha', 1824 'Gavčnik Gregor', 2142 'Häupler Martin', 2144–2147 …), a brez poligonov v karti → izpad iz v2 (38.6 % pokritost); 1821/2141/661 so začetki strani (1820/2140 imata poligona — na prejšnji strani, per-page kontrola je ne vidi); 11/11 razloženih, 0 anomalij registra. (C) R1↔R2: 671 RAZREŠENA (ni divergencia — II instanca @p87 = 1691, druga parcela; 671 ostane I-only); 930 ostaja [~] z merjenim dokazom (moda B pas ✓@p49 ✗@p99, disjunktna lastnika, sosedi ±1 na obeh straneh, karta 921–940: 9 poligonov). (D) UNIVERZALNA DISJUNKTNOST: lastniki per Blatt DISJUNKTNI za VSEH 110 čez-Blatt base (110/110; 39 split == P66 bajtno, 71 atributiranih 71/71) → per-Blatt številčenje: ista številka pod različnima Blattoma = 2 RAZLIČNI realni parceli; atribucija (R1/R2a/R2b) je dodelitev geometrije instanci, ne identiteta parcele [~]. Strojna forenzika ni dokazni vir; odločitev o renumerifikaciji in SPLIT joinu = LASTNIKA (P68/P69).",
+  "version": 1
+ },
+ "statusLine": "P67 FORENZIKA: skok II·IV = artifakt dvojne Kurrent zamenjave (p78 1501–1520, p93 1901–1920, p87 1681–1700 — oči+strip 2×+karta; renumerifikacija 17 preslikav); 5 sosledje flagov = obseg joina (11/11 razloženih; sosedje brez poligonov; meja strani); 671 ni divergenca (II instanca = 1691), 930 [~] z dokazom; disjunktnost lastnikov per Blatt UNIVERZALNA 110/110; v2 nespremenjen; renumerifikacija = P68",
+ "task": "P67 — forenzični paket anomalij: skok II·IV, sosledje flagi, R1↔R2 divergence, univerzalna disjunktnost",
+ "verdictEn": "P67: ANOMALY FORENSICS PACK (issue #13) — four measured parts, deterministic, no AI at runtime; v2 join UNCHANGED (P56–P66 discipline). (A) THE II·IV SKIP (1603/1604) = A DOUBLE KURRENT SUBSTITUTION ARTIFACT: p78 (Blatt II, Wüstung 'Pod Grabino') true numbers 1501–1520 (strip 2 passes byte-exact, rows 5–14 red-crossed, continuity 1461–1480→1481–1500→1501–1520, map: 1461–1500 has 12 polygons / 1121–1200 EMPTY), v2 1603–1605 = P38 error 5→6 → true 1503/1504/1505; p93 (Blatt IV) true 1901–1920 (strip 2 passes r11–20 byte-exact, eyes r1–8 = 1901–1908 with red crossings 1901–1904/1906–1907, map: block 1901–1907 has EXACTLY 7 polygons), P38 pass1 = 9→0 (1001–1020), pass2 = 9→6 (1601–1620) → true 1903/1904/1905; p87 (Blatt II) true 1681–1700 (pass2 + eyes r1–8 = 1681–1688; pass1 661–680 = lost leading 1 + 8→6; strip 161–180 = clipped leading digits) → 11 v2 rows wrong (+1020) carrying FALSE geometry (the 661–680 polygons belong to the Blatt I p36 instances — coordinates byte-identical). Consequences: 1603/1604 = false fusions of II 1503/1504 × IV 1903/1904 — the II·IV skip DISSOLVES; 1605 = fusion of II 1505 (crossed) × IV 1905; 661/671 = false fusions I × II 1681/1691 — the cross-Blatt pairs COLLAPSE; p93 (IV) and p98 (III) carry the SAME range 1901–1920 (disjoint owners — a textbook per-Blatt overlap); map: 1903/1904/1905 polygons exist (south-west location), 1503–1505 and 1681–1700 do NOT; the 16xx polygons sit at a third location (falsely assigned to the fusions by v2). RENUMBERING 17 mappings (p78 3×, p93 3×, p87 11×; 0 collisions) = P68; projection: bases 800→802, multi-page 211→208, cross-Blatt 110→107 (1903 split band 0.7081 [~], 1905 R2b [~]), runtime −14 geometry-less rows. (B) THE 5 ADJACENCY FLAGS (646, 661, 1821, 2141, 2143; 11 rows) = A JOIN-SCOPE ARTIFACT: the missing neighbours exist in the register (P38 with names: 645 'Ulrich Franz', 647 'Gemeinde', 662 'Mülley Franzl', 1822 'Büller Lorenz', 1823 'Gavčnik Miha', 1824 'Gavčnik Gregor', 2142 'Häupler Martin', 2144–2147 …) but have no polygons in the map → dropped from v2 (38.6 % coverage); 1821/2141/661 are page-start rows (1820/2140 HAVE polygons — on the previous page, invisible to the per-page check); 11/11 explained, 0 register anomalies. (C) R1↔R2: 671 RESOLVED (not a divergence — the II instance @p87 = 1691, a different parcel; 671 stays I-only); 930 remains [~] with measured evidence (mode B band ✓@p49 ✗@p99, disjoint owners, ±1 neighbours on both pages, map 921–940: 9 polygons). (D) UNIVERSAL DISJOINTNESS: owners per Blatt DISJOINT for ALL 110 cross-Blatt bases (110/110; the 39 split byte-equal P66, the 71 attributed 71/71) → per-Blatt numbering: the same number under different Blatts = 2 DIFFERENT real parcels; the attribution (R1/R2a/R2b) is a geometry-to-instance assignment, not parcel identity [~]. Machine forensics is not a source of proof; the renumbering and SPLIT join decisions belong to the OWNER (P68/P69).",
+ "verdictSi": "P67: FORENZIČNI PAKET ANOMALIJ (issue #13) — štiri merjena dela, deterministično, brez AI ob delovanju; v2 join NESPREMENJEN (disciplina P56–P66). (A) SKOK II·IV (1603/1604) = ARTIFAKT DVOJNE KURRENT ZAMENJAVE: p78 (Blatt II, Wüstung 'Pod Grabino') prave številke 1501–1520 (strip 2× bajtno, vrstice 5–14 rdeče prečrtane, kontinuiteta 1461–1480→1481–1500→1501–1520, karta: 1461–1500 ima 12 poligonov / 1121–1200 PRAZNO), v2 1603–1605 = P38 napaka 5→6 → prave 1503/1504/1505; p93 (Blatt IV) prave 1901–1920 (strip 2× r11–20 bajtno, oči r1–8 = 1901–1908 z rdečimi prečrtami 1901–1904/1906–1907, karta: blok 1901–1907 ima TOČNO 7 poligonov), P38 pass1 = 9→0 (1001–1020), pass2 = 9→6 (1601–1620) → prave 1903/1904/1905; p87 (Blatt II) prave 1681–1700 (pass2 + oči r1–8 = 1681–1688; pass1 661–680 = izguba vodilne 1 + 8→6; strip 161–180 = odrezane vodilne) → 11 v2 vrstic napačno (+1020) in nosi LAŽNO geometrijo (poligoni 661–680 = Blatt I p36 instance, koordinate bajtno identične). Posledica: 1603/1604 = lažni fuziji II 1503/1504 × IV 1903/1904 — skok II·IV IZGINE; 1605 = fuzija II 1505 (prečrtan) × IV 1905; 661/671 = lažni fuziji I × II 1681/1691 — čez-Blatt primera RAZPADETA; p93 (IV) in p98 (III) nosita ISTI obseg 1901–1920 (disjunktni lastniki — per-Blatt primež); karta: 1903/1904/1905 poligoni obstajajo (jugozahodna lokacija), 1503–1505 in 1681–1700 NE; 16xx poligoni na tretji lokaciji (v2 jih je lažno pripisal fuzijam). RENUMERIFIKACIJA 17 preslikav (p78 3×, p93 3×, p87 11×; 0 kolizij) = P68; projekcija: base 800→802, multi-page 211→208, čez-Blatt 110→107 (1903 pas split 0.7081 [~], 1905 R2b [~]), runtime −14 vrstic brez geometrije. (B) 5 SOSLEDJE FLAGOV (646, 661, 1821, 2141, 2143; 11 vrstic) = ARTEFAKT OBSEGA JOINA: manjkajoči sosedje obstajajo v registru (P38 z imeni: 645 'Ulrich Franz', 647 'Gemeinde', 662 'Mülley Franzl', 1822 'Büller Lorenz', 1823 'Gavčnik Miha', 1824 'Gavčnik Gregor', 2142 'Häupler Martin', 2144–2147 …), a brez poligonov v karti → izpad iz v2 (38.6 % pokritost); 1821/2141/661 so začetki strani (1820/2140 imata poligona — na prejšnji strani, per-page kontrola je ne vidi); 11/11 razloženih, 0 anomalij registra. (C) R1↔R2: 671 RAZREŠENA (ni divergencia — II instanca @p87 = 1691, druga parcela; 671 ostane I-only); 930 ostaja [~] z merjenim dokazom (moda B pas ✓@p49 ✗@p99, disjunktna lastnika, sosedi ±1 na obeh straneh, karta 921–940: 9 poligonov). (D) UNIVERZALNA DISJUNKTNOST: lastniki per Blatt DISJUNKTNI za VSEH 110 čez-Blatt base (110/110; 39 split == P66 bajtno, 71 atributiranih 71/71) → per-Blatt številčenje: ista številka pod različnima Blattoma = 2 RAZLIČNI realni parceli; atribucija (R1/R2a/R2b) je dodelitev geometrije instanci, ne identiteta parcele [~]. Strojna forenzika ni dokazni vir; odločitev o renumerifikaciji in SPLIT joinu = LASTNIKA (P68/P69)."
+}

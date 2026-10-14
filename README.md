@@ -477,3 +477,21 @@ preprečujeta prenos `.env*` in lokalnih datotek pri deployu.
   `research/issue17/ps-split-pack.json` + API
   `/api/atlas/ps-split-pack` + kartica P66; QA 68 → **69/69**;
   join v2 in SHEET_GEOREFS nespremanjeni.
+- **forenzični paket anomalij — skok II·IV, flagi, disjunktnost (P67, issue #13)** — štiri merjena
+  dela nad odprtimi točkami P66/P64/P65 (deterministično, brez AI ob delovanju; v2 NESPREMENJEN):
+  **(A) skok II·IV = artifakt DVOJNE Kurrent zamenjave** — p78 (Wüstung Pod Grabino) prave
+  1501–1520 (strip 2× bajtno, vrstice 5–14 rdeče prečrtane, kontinuiteta 1461→1520, karta:
+  1461–1500 ima 12 poligonov / 1121–1200 PRAZNO), p93 prave 1901–1920 (karta: blok 1901–1907 =
+  TOČNO 7 prečrtanih poligonov; P38 napaki 9→0 in 9→6), p87 prave 1681–1700 (pass1 661–680 =
+  izguba vodilne 1 + 8→6; 11 vrstic z LAŽNO geometrijo == p36) → 1603/1604/1605/661/671 = lažne
+  fuzije: skok IZGINE, čez-Blatt primera RAZPADETA; renumerifikacija 17 preslikav (0 kolizij) =
+  P68; projekcija base 802, multi-page 208; **(B) 5 sosledje flagov = artefakt obsega joina** —
+  manjkajoči sosedje obstajajo v registru (P38 z imeni), brez poligonov v karti; 1820/2140 na
+  prejšnjih straneh (meja strani); 11/11 razloženih; **(C) R1↔R2: 671 RAZREŠENA** (II instanca
+  @p87 = 1691), 930 [~] z merjenim dokazom; **(D) univerzalna disjunktnost lastnikov per Blatt
+  110/110** čez-Blatt base (39 split == P66 bajtno, 71 atributiranih 71/71) — per-Blatt številčenje:
+  ista številka pod različnima Blattoma = 2 RAZLIČNI realni parceli;
+  `scripts/p67_ps_anomaly_forensics.py` (I1–I8, `--check` bajtno PASS; 28× sha pini vhodov po
+  lekciji P9) + dokaz `research/issue17/ps-anomaly-forensics.json` + API
+  `/api/atlas/ps-anomaly-forensics` + kartica P67; QA 69 → **70/70**; join v2 in SHEET_GEOREFS
+  nespremanjeni.

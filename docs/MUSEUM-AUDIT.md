@@ -2565,3 +2565,109 @@ razdelitev per deleži ali per lastnika) — P66 je samo dokazni vir;
 2 skoka II·IV nerazložena [~]; 5 sosledje flagov [~]; strojna
 atribucija ni dokazni vir; join v2 in SHEET_GEOREFS nespremanjeni
 (lekcija P9); P55–P65 runtime nespremanjeni (I1 sha pini).
+
+## §45 — P67: forenzični paket anomalij — skok II·IV, sosledje flagi, R1↔R2 divergence, univerzalna disjunktnost (issue #13, 2026-10-14)
+
+Kandidati iz P66 `next` #3/#4 + P64/P65 divergence + nova univerzalna
+meritev — **štiri dela, deterministično, brez AI ob delovanju; v2 join
+NESPREMENJEN** (disciplina P56–P66); očesna verifikacija strani 78/87/93
+na 3×–4× izrezih (recept P41/P57) kot neodvisna plast.
+
+**(A) Skok II·IV (1603/1604) = ARTIFAKT DVOJNE KURRENT ZAMENJAVE:**
+- **p78** (Blatt II, Bezeichnung "Pod Grabino" — Wüstung): strip 2×
+  bajtno **1501–1520**; vrstice 5–14 (1505–1514) rdeče prečrtane
+  (opomba obeh prehodov); kontinuiteta p76→p77→p78 =
+  1461–1480 → 1481–1500 (strip bajtno) → 1501–1520; karta KO 1544:
+  1461–1500 ima 12 poligonov, 1121–1200 (P38-era branja p74/p76/p77)
+  PRAZNO; P38 pass1+pass2 = 1601–1620 (napaka 5→6) → v2 1603/1604/1605
+  napačno, prave **1503/1504/1505**.
+- **p93** (Blatt IV): strip 2× vrstice 11–20 bajtno **1911–1920**,
+  vrstice 1–10 garbled 19xx; oči: r1–8 = 1901–1908, prečrtane
+  r1–r4/r6–r7, r5 (1905) čista; karta: blok **1901–1907 = TOČNO 7
+  poligonov** (= prečrtani blok!) + 1910/1913/1914; P38 pass1 =
+  1001–1020 (9→0), pass2 = 1601–1620 (9→6) → prave
+  **1903/1904/1905**.
+- **p87** (Blatt II): P38 pass1 = 661–680, pass2 = 1681–1700, strip =
+  161–180 (odrezane vodilne); oči: r1–8 = **1681–1688** (r5/r7
+  prečrtani) → pass2 pravilen; v2 (pass1-vir) 11 vrstic napačno
+  (+1020: 661→1681 … 680→1700) in nosi **LAŽNO geometrijo**
+  (poligoni 661–680 = Blatt I p36 instance — koordinate bajtno
+  identične p36, 11/11 merjeno).
+- **Posledice**: 1603/1604 = lažni fuziji II 1503/1504 × IV
+  1903/1904 (skok II·IV IZGINE); 1605 = fuzija II 1505 (prečrtan) ×
+  IV 1905; 661/671 = lažni fuziji I 661/671 × II 1681/1691 (čez-Blatt
+  primera RAZPADETA — 671 ni več R1↔R2 divergenca); p93 (IV) × p98
+  (III) nosita ISTI obseg 1901–1920 (disjunktni lastniki — per-Blatt
+  primež); karta: 1903/1904/1905 poligoni obstajajo (jugozahodna
+  lokacija), 1503–1505 in 1681–1700 NE; 16xx poligoni (1603,
+  1604/1-3, 1605) na tretji lokaciji — v2 jih je lažno pripisal
+  fuzijam.
+- **Renumerifikacija 17 preslikav** (p78 3×, p93 3×, p87 11×):
+  kolizije 0 (1503–1505, 1904, 1681–1700 proste; 1903/1905 samo p98);
+  projekcija (številčenjski nivo): base 800→802, multi-page 211→208,
+  čez-Blatt 110→107, R3-single 101; 1903 pas split 0.7081 [~], 1905
+  R2b [~]; runtime −14 vrstic brez geometrije; p93 3× re-claim
+  (1904 čisto, 1903/1905 konflikt z III@p98 [~]) — **izvedba P68**
+  (lastniška odločitev + veriga re-run).
+
+**(B) 5 sosledje flagov (646, 661, 1821, 2141, 2143; 11 vrstic) =
+ARTEFAKT OBSEGA JOINA:** manjkajoči sosedje obstajajo v registru
+(P38 z imeni: 645 'Ulrich Franz', 647 'Gemeinde', 662 'Mülley Franzl',
+1822 'Büller Lorenz', 1823 'Gavčnik Miha', 1824 'Gavčnik Gregor',
+2142 'Häupler Martin', 2144–2147 …), a brez poligonov v karti → izpad
+iz v2 (matchedShare 38.6 %); 1821/2141/661 so začetki strani (1820 p63
+in 2140 p109 IMATA poligona in sta v v2 — na prejšnji strani, per-page
+kontrola je ne vidi); M per flag ne-prazna ∧ vsi M brez poligona;
+**11/11 razloženih, 0 anomalij registra**.
+
+**(C) R1↔R2 divergenci:** **671 RAZREŠENA** — ni divergencia: II
+instanca @p87 je pravzaprap 1691 (renumerifikacija p87); 671 ostane
+I-only @p36; **930 ostaja [~]** z merjenim dokazom: moda B pas
+✓@p49 (1.2241) ✗@p99 (0.3802), disjunktna lastnika ('Zehorn' vs
+'Wiesen'), sosedi ±1 na OBEH straneh (929/931 v v2 p49 IN p99),
+pageMap blok 921–940: karta 9 poligonov (mehka podpora).
+
+**(D) UNIVERZALNA DISJUNKTNOST:** lastniki per Blatt DISJUNKTNI za
+**VSEH 110 čez-Blatt več-stranskih base** (110/110; rekurzivno iz
+v2 × P59 pageAttribution; 0 prehodnih strani '·' v množici; 39 split
+polja bajtno == P66 I6-kontrola; 71 atributiranih 71/71) → per-Blatt
+številčenje: ista številka pod različnima Blattoma = 2 RAZLIČNI
+realni parceli; atribucija (R1/R2a/R2b) je dodelitev geometrije
+instanci, ne identiteta parcele [~].
+
+**Skripta:** `scripts/p67_ps_anomaly_forensics.py` (deterministična,
+brez AI ob delovanju, FAIL ob padu I1–I8; `--check` bajtno PASS: I1
+vhodni pini 28× sha256 (v2 ev ebb8f729…, P59 ev 95929a2e…, P65 rt
+74477ac8…, P66 rt 77337aff…, topo 2fddc76f…, PS-full-v2 81f140e9…,
+karta fee91fca… + 21 dokaznih branja) + števci
+1093/800/211/39/110/101; I2/A dokazi p78/p93/p87 (strip 2× bajtno;
+arbitražni nizi '1501–1520'/'1901–1907 prečrtano'; karta 1901–1907 ⊆
+poligoni / 1503–1505, 1681–1700, 1121–1200 ∅ / 1461–1500 ≥ 10);
+I3/A kolizije 0 + lažna geometrija p87 11/11; I4/B flagi == P65
+bajtno (5 base, 11 vrstic) + M ne-prazna ∧ brez poligonov + 1820/2140
+v v2; I5/C 671 R1/I + 930 R1/II + moda B pas + sosedi ±1; I6/D
+110/110 disjoint + 39 split == P66 bajtno + 0 prehodnih strani + brez
+lat/lng/areaModern/ratio; I7 dokaz ⊇ runtime bajtno; I8
+determinizem). Izhodi: dokaz `research/issue17/ps-anomaly-forensics.json`
++ runtime `src/data/atlas/ps-anomaly-forensics.json` (4 dela z
+dokaznimi sekcijami, renumerifikacijsko specifikacijo 17 preslikav in
+projekcijo).
+
+**Integracija:** API `/api/atlas/ps-anomaly-forensics` (force-static) +
+ANOM_FORENSICS_P67 (research.ts) + kartica P67 (zavihek Prepisi
+Kurrent, za P66) + sources.ts N083PS opomba P67 (Si+En) + README
+bullet + ta §45.
+
+**QA 69 → 70:** `qa-p67-anomaly-forensics` — pini (17/0, fuzije 5,
+flagi 11/11, disjunktnost 110/110, projekcija 802/208/107) +
+NEODVISEN preracun iz runtime kopij (fuzije 1603/1604/1605 @78+93,
+661/671 @36+87; disjunktnost 110/110 iz v2 × pageAttribution; 39
+split ownerRelation == P66 bajtno) + dokaz == runtime bajtno; dve
+obliki po P53/P57/P58 (produkcija: preracun na runtime kopijah).
+
+**Poštenost:** renumerifikacija NI izvedena — 17 preslikav je
+SPECIFIKACIJA za P68 (lastniška odločitev + veriga re-run P59–P66 s
+posodobljenimi pini); 930 ostaja [~]; strojna forenzika ni dokazni
+vir; join v2 in SHEET_GEOREFS nespremanjeni (lekcija P9); P55–P66
+runtime nespremanjeni (I1 sha pini); očesna verifikacija (strani
+78/87/93) dokumentirana v repovem worklogu (Task 33).

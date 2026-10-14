@@ -48,6 +48,7 @@ import {
   ATTR_EXT_P64,
   ATTR_FULL_P65,
   SPLIT_PACK_P66,
+  ANOM_FORENSICS_P67,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -4743,6 +4744,126 @@ const p45bErrors: string[] = [];
     p66Errors.length === 0
       ? `pini 39/93 · pari 7/21/2/9 (37/2) · disjoint 39 · 25/13/1 · pasovi 23/11/5 · kulture 92 · geo 39/0/0 · sosledje 82/11 == preracun (39 split base iz v2 × P65 × pageAttribution; I3 P65 bajtno) · ${p66FileDetail}`
       : p66Errors.join("; "),
+  );
+
+  /* ── P67 (issue #13): forenzični paket anomalij ── */
+  const p67Errors: string[] = [];
+  const af67 = ANOM_FORENSICS_P67;
+  // 1) TS pini
+  if (af67.summary.renumberMappings !== 17 || af67.summary.collisions !== 0)
+    p67Errors.push("pini: renumerifikacija ≠ 17/0");
+  if (af67.summary.fusedBasesResolved.join(",") !== "1603,1604,1605,661,671")
+    p67Errors.push("pini: fuzije ≠ 1603/1604/1605/661/671");
+  if (af67.summary.flagRowsExplained !== 11 || af67.summary.flagRowsTotal !== 11)
+    p67Errors.push("pini: flagi ≠ 11/11");
+  if (af67.summary.crossBlattBases !== 110 || af67.summary.ownerDisjoint !== 110 ||
+      af67.summary.ownerRelationDist.disjoint !== 110)
+    p67Errors.push("pini: disjunktnost ≠ 110/110");
+  if (af67.summary.projection.bases !== 802 || af67.summary.projection.multiPage !== 208 ||
+      af67.summary.projection.crossBlatt !== 107 || af67.summary.projection.r3Single !== 101)
+    p67Errors.push("pini: projekcija ≠ 802/208/107/101");
+  // 2) datoteke + NEODVISEN preracun iz runtime kopij (dve obliki po P53/P57/P58)
+  let p67FileDetail = "datoteke niso preverjene (readFile ni na voljo) — celovita kontrola teče na /api/qa";
+  if (opts.readFile) {
+    const rawRt67 = opts.readFile("src/data/atlas/ps-anomaly-forensics.json");
+    const rawEv67 = opts.readFile("research/issue17/ps-anomaly-forensics.json");
+    const rawRt66b = opts.readFile("src/data/atlas/ps-split-pack.json");
+    const rawRt65c = opts.readFile("src/data/atlas/ps-attribution-full.json");
+    const rawRt59d = opts.readFile("src/data/atlas/ps-blatt-headers.json");
+    const rawV2rt67 = opts.readFile("src/data/atlas/ps-parcels-geo.json");
+    if (rawRt67 === null || rawRt66b === null || rawRt65c === null || rawRt59d === null || rawV2rt67 === null) {
+      p67Errors.push("runtime ps-anomaly-forensics / ps-split-pack / ps-attribution-full / ps-blatt-headers / ps-parcels-geo ni berljiv");
+    } else {
+      try {
+        const rt67 = JSON.parse(rawRt67) as { summary: Record<string, unknown> };
+        const rt66b = JSON.parse(rawRt66b) as { bases: Record<string, { ownerRelation: string; ownersByBlatt: Record<string, string[]> }> };
+        const rt65c = JSON.parse(rawRt65c) as { bases: Record<string, { status: string }> };
+        const rt59d = JSON.parse(rawRt59d) as { pageAttribution: Record<string, { blatt: string | null }> };
+        const v2rt67 = JSON.parse(rawV2rt67) as { rows: { base: string; page: number; owner: string | null }[] };
+        // NEODVISEN preracun 1: fuzije — 1603/1604/1605 na p78+p93; 661/671 na p36+p87
+        const byBase67 = new Map<string, { page: number; owner: string | null }[]>();
+        for (const r of v2rt67.rows) {
+          const arr = byBase67.get(r.base) ?? [];
+          arr.push({ page: r.page, owner: r.owner });
+          byBase67.set(r.base, arr);
+        }
+        for (const b of ["1603", "1604", "1605"]) {
+          const pgs = (byBase67.get(b) ?? []).map((x) => x.page).sort();
+          if (pgs.join(",") !== "78,93") p67Errors.push(`preracun: ${b} strani ${pgs.join(",")} ≠ 78,93`);
+        }
+        for (const b of ["661", "671"]) {
+          const pgs = (byBase67.get(b) ?? []).map((x) => x.page).sort();
+          if (pgs.join(",") !== "36,87") p67Errors.push(`preracun: ${b} strani ${pgs.join(",")} ≠ 36,87`);
+        }
+        // NEODVISEN preracun 2: univerzalna disjunktnost 110/110 (v2 × pageAttribution)
+        const cross67 = Object.keys(rt65c.bases).filter((b) => rt65c.bases[b].status !== "R3-single");
+        if (cross67.length !== 110) p67Errors.push(`preracun: čez-Blatt ${cross67.length} ≠ 110`);
+        let disj67 = 0;
+        for (const b of cross67) {
+          const ob = new Map<string, Set<string>>();
+          for (const r of byBase67.get(b) ?? []) {
+            const bl = rt59d.pageAttribution[String(r.page)]?.blatt;
+            if (!bl) { p67Errors.push(`preracun: ${b} stran ${r.page} brez atribucije`); continue; }
+            const s = ob.get(bl) ?? new Set<string>();
+            if (r.owner) s.add(r.owner);
+            ob.set(bl, s);
+          }
+          const sets = [...ob.values()];
+          const ok = sets.length >= 2 && sets.every((s) => [...sets].every((t) => s === t || [...s].every((o) => !t.has(o))));
+          if (ok) disj67 += 1;
+        }
+        if (disj67 !== 110) p67Errors.push(`preracun: disjunktnost ${disj67} ≠ 110`);
+        // NEODVISEN preracun 3: 39 split ownerRelation == P66 bajtno
+        const rel67of = (ob: Record<string, string[]>): string => {
+          const sets = Object.values(ob).map((v) => new Set(v));
+          if (sets.length < 2) return "single-Blatt";
+          if (sets.some((s) => s.size === 0)) return "open";
+          const disj = sets.every((s, i) => sets.every((t, j) => i === j || [...s].every((o) => !t.has(o))));
+          if (disj) return "disjoint";
+          const eq = sets.every((s) => JSON.stringify([...s].sort()) === JSON.stringify([...sets[0]].sort()));
+          return eq ? "equal" : "overlap";
+        };
+        let relMis67 = 0;
+        for (const [b, e66] of Object.entries(rt66b.bases)) {
+          const ob = new Map<string, Set<string>>();
+          for (const r of byBase67.get(b) ?? []) {
+            const bl = rt59d.pageAttribution[String(r.page)]?.blatt;
+            if (!bl) continue;
+            const s = ob.get(bl) ?? new Set<string>();
+            if (r.owner) s.add(r.owner);
+            ob.set(bl, s);
+          }
+          const rebuilt: Record<string, string[]> = {};
+          for (const [k, v] of [...ob.entries()].sort()) rebuilt[k] = [...v].sort();
+          if (JSON.stringify(rebuilt) !== JSON.stringify(e66.ownersByBlatt) || rel67of(rebuilt) !== e66.ownerRelation) relMis67 += 1;
+        }
+        if (relMis67 !== 0) p67Errors.push(`preracun: P66 ownerRelation odmiki ${relMis67} ≠ 0`);
+        // summary kontrola runtime
+        const s67 = rt67.summary as { renumberMappings: number; ownerDisjoint: number; flagRowsExplained: number };
+        if (s67.renumberMappings !== 17 || s67.ownerDisjoint !== 110 || s67.flagRowsExplained !== 11)
+          p67Errors.push("runtime summary ≠ 17/110/11");
+        // evidencа (samo repo): dokaz ⊇ runtime bajtno
+        if (rawEv67 !== null) {
+          const ev67 = JSON.parse(rawEv67) as { runtime: unknown };
+          if (JSON.stringify(ev67.runtime) !== JSON.stringify(rt67))
+            p67Errors.push("dokaz: runtime ni bajtno podmnožica dokaza");
+        }
+        p67FileDetail = rawEv67 !== null
+          ? "repo: dokaz == runtime bajtno · preracun: fuzije (1603/1604/1605 @78+93; 661/671 @36+87) + disjunktnost 110/110 (v2 × pageAttribution) + P66 ownerRelation bajtno"
+          : "produkcija: research/ ni v deploymentu — preracun na runtime kopijah (fuzije, disjunktnost 110, P66 relacije)";
+      } catch (e) {
+        p67Errors.push(`ps-anomaly-forensics datoteke neuspešno: ${String(e).slice(0, 80)}`);
+      }
+    }
+  }
+  push(
+    "qa-p67-anomaly-forensics",
+    "P67: FORENZIČNI PAKET ANOMALIJ (issue #13): (A) skok II·IV = artifakt dvojne Kurrent zamenjave — p78 prave 1501–1520 (Wüstung Pod Grabino; napaka 5→6), p93 prave 1901–1920 (9→6/9→0; karta blok 1901–1907 = 7 poligonov), p87 prave 1681–1700 (−1020; lažna geometrija == p36) → 1603/1604/1605/661/671 lažne fuzije, skok IZGINE, renumerifikacija 17 preslikav = P68; (B) 5 sosledje flagov = obseg joina (11/11 razloženih; sosedje brez poligonov; meja strani); (C) 671 razrešena (1691), 930 [~] z dokazom; (D) disjunktnost lastnikov per Blatt UNIVERZALNA 110/110; v2 NESPREMENJEN; status REVIEW",
+    "P67: ANOMALY FORENSICS PACK (issue #13): (A) the II·IV skip = a double Kurrent substitution artifact — p78 true 1501–1520 (Wüstung Pod Grabino; error 5→6), p93 true 1901–1920 (9→6/9→0; map block 1901–1907 = 7 polygons), p87 true 1681–1700 (−1020; false geometry == p36) → 1603/1604/1605/661/671 false fusions, the skip DISSOLVES, renumbering 17 mappings = P68; (B) the 5 adjacency flags = join scope (11/11 explained; neighbours without polygons; page boundary); (C) 671 resolved (1691), 930 [~] with evidence; (D) owner disjointness per Blatt UNIVERSAL 110/110; v2 UNCHANGED; status REVIEW",
+    p67Errors.length === 0,
+    p67Errors.length === 0
+      ? `pini 17/0 · fuzije 5 · flagi 11/11 · disjunktnost 110/110 · projekcija 802/208/107 == preracun (fuzije + disjunktnost iz v2 × pageAttribution; P66 ownerRelation bajtno) · ${p67FileDetail}`
+      : p67Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;
