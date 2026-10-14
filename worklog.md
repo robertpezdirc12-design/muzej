@@ -3558,3 +3558,27 @@ Work Log:
 Stage Summary:
 - P62 IZVEDEN: pokritost glav listov PS 135/135 strani × 2 prehoda POPOLNA; arbitraža 32 (VLM == oči 100 % na novih straneh); konec registra (p133–137) nosi eksplicitne korekcijske cone IV→V/II (rdeči tuš); čez-Blatt 106 → 110; ruleCandidate 17 in P60 atribucije NESPREMENJENI; moda B blattDist null 5 → IV +4 / II +1 (II 32 · IV 15 · III 9 · I 5 · I·II 1 · null 0); veriga P59→P60→P61 --check bajtno PASS; QA 65/65 pine posodobljeni.
 - Ostaja odprto: 1) p138 bledi zapisi [?] (6× izrez/original scan); 2) p139 Haus Nro. → P58 open #6; 3) razlaga korekcijskih con IV→V/II (reorganizacija ali revisija [~]); 4) identiteta enote moda B (paleografija/dokumenti — glave sekcij str. 61–99); 5) razširitev atribucije na 110 čez-Blatt base; 6) per-Blatt SPLIT joina (odločitev lastnika); 7) lastniki pas-instanc ↔ PF protokol.
+
+---
+Task ID: 29
+Agent: Z.ai Code (glavni agent)
+Task: P63 — zaključne strani registra PS (138–139): Blatt IIb + transkripcija tail tabel (odprti točki P62 #1/p138 in #2/p139 → P58 open #6)
+
+Work Log:
+- Obnova konteksta: main @ 924d08c (P62) na obeh remote (HEAD preverjena prek API; GitLab fetch 403 = WAF blip, push kasneje 1. poskus OK); /tmp/p59 preživel (raw 133–139 + send izrezi); P59/P60/P61/P62 že pushane — handoff povzetek zastarel.
+- Izrezi: p138 = 6 horizontalnih pasov (x30–470) 4× + leva v celoti 3× + desna 2.5×; p139 = head 5×, sum 4×, full-a/b 2×, right-a/b 3×, colsL/colsR 5×, full-b2 3×, desnaNOE/CAP 5× (Lanczos q95).
+- Očesna kontrola send-139: glava je 'Nro. des Blattes.' — prejšnja očesna razlaga 'Nro. des Hauses.' (P60/P62) NAPAČNA → korekcija.
+- VLM branje 11 delov (p63_ps_read_tail.mjs 6 + p63_ps_read_cols.mjs 5; glm-5v-turbo, kvota deluje, 5–29 s/del, skip-existing).
+- KONSZENZ 2-od-3 (oči + polni izrezi + fokusirani izrezi): p139 leva = Parzelle 41–60 + 'IIb' @ r1 (potrjen!) + Haus Nº rdeče (1082, 1030, 998[~], … 345[~]) + 'Vor und Zuname' = ŠTEVILKE 62–80 (ne imena!; r1 'G. l. fin.'[~]) + Dominical (1,1,1,3,1,5,…7[~]×3…,3) + Stand/Wohnort; desna = Kulturs Gattung 81–100 + QK (590…701) + Classe 101–120 + Ertrag prazna (r1 '101⁴⁄₅'[~]) + Capital fl rdeče (1860…584) + kr (Σ=153) + Fürtrag 189|1228 + vsota 162|1447; p138 = leva IZBRISANA ('T. 191'[~] @ r14, parzelle 23/24[~], '89/86'[~] @ r27, rdeči zapisi 18–40 [~]) + desna 'Zusammenstellung der Grundstücke' (Wiese 1–20, Classe 21–40, vsota 101|15320 [~]).
+- p59 skripta: ARBITRATION 138 (izčrpen opis + extras) / 139 ('IIb', korekcijska opomba) + coverage S3/task/principle/statusLine/verdicts/next; re-run OK (arbitraža 32, 211/110/17 nespremenjeni — p138/139 brez v2 vrstic) → p60 re-run bajtno IDENTIČNO → p61 I8 bhrt_sha pin ea950ce2… → efe39f41… (modi/FNV/blattDist nespremanjeni); --check PASS vse.
+- p63_ps_tail_pages.py (deterministična, I1–I10, --check bajtno PASS; popravek pina 147 → 153 po izračunu iz CONS): dokaz research/issue17/ps-tail-pages.json + runtime src/data/atlas/ps-tail-pages.json; 11 tail-*.json ps-raw branj commitiranih.
+- Integracija: API /api/atlas/ps-tail-pages (force-static) + TAIL_P63 (research.ts) + kartica P63 (Prepisi Kurrent, za P61) + BLATT_HEADERS_P59 posodobitev + sources.ts N083PS P63 (Si+En) + audit §41 + README bullet.
+- QA 65 → 66 (qa-p63-tail-pages: pini + preracun naraščanj + Capital kr Σ=153 + IIb == pageAttribution p59 + dokaz == runtime bajtno; dve obliki).
+- Validacija: tsc 0, ESLint 0, build; standalone 3010 66/66 (repo), PROD-SIM build BREZ research/ 66/66 produkcija + /api/atlas/ps-tail-pages 200 (IIb p139, 20+20); E2E agent-browser (produkcija, foreground chunking — background procesi umrejo ob session cleanup): P63 kartica 20/20 v DOM + 0 napak + overflowX false + footer sticky + mobilni 390×844 ok + screenshoti p63-card.png/p63-mobile.png (lokalno).
+- Commit 9bdba21 (owner identiteta Robert Pezdirc; 29 datotek, 4993 insertions) → push GitLab 924d08c..9bdba21 (1. poskus) + GitHub (1. poskus) → HEAD verifikacija prek API obeh (GitLab potreboval 2. poskus — WAF blip) → VERCEL POTRJEN: /api/qa 66/66, qa-p63 PASS, ps-tail-pages 200, / 200.
+- Worklog Task 29 (lokalni + repov).
+
+Stage Summary:
+- P63 ZAKLJUČEN & PUSHAN (GitLab = GitHub = Vercel @ 9bdba21; QA 66/66 repo/produkcija/Vercel): p139 = Blatt IIb (pod-list NOV v strukturi; Parzelle 41–60 = duplikat Blatt I številk; lastninske kolone z rdečim Haus Nº in ŠTEVILKAMI 62–80 @ 'Vor und Zuname'); P58 open #6 ZAPRT (očesna napaka korigirana); p138 = izbrisana leva + 'Zusammenstellung der Grundstücke' desna; enote vsot 82|81, 125|183, 162|1447 razlagalno odprte [~]; 42 flagov [~]; join v2 + SHEET_GEOREFS nespremanjeni; P55–P60 runtime nespremanjeni.
+- Ostaja odprto (lastnik): 1) razlaga števil 62–80 @ 'Vor und Zuname' (konskripcija/Einlage?) — povezava s PF protokolom; 2) razlaga enot vsot 82|81, 125|183, 162|1447 (dominikalni/rustikalni deleži?) [~]; 3) p138 rdeči zapisi 18–40 @ srednja kolona — paleografska razlaga [~]; 4) 'Zusammenstellung' ↔ kulture tabele p61–99 povezava [~]; 5) razlaga korekcijskih con IV→V/II (reorganizacija ali revisija) [~]; 6) identiteta enote moda B (glave sekcij str. 61–99); 7) razširitev atribucije na 110 čez-Blatt base; 8) per-Blatt SPLIT joina (odločitev lastnika); 9) GitHub Actions BILLING; 10) GitLab PAT rotacija.
+- Push recept potrdjen: ročni dvojni push (HTTP/1.1 vgrajeni žetoni, obe 1. poskus) + API HEAD verifikacija (GitLab WAF blip → 2. poskus) + Vercel /api/qa kontrola; Vercel domena = griblje-museum.vercel.app; /tmp/p63 izrezi ostanejo na disku.
