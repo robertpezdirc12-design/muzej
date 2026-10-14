@@ -430,3 +430,17 @@ preprečujeta prenos `.env*` in lokalnih datotek pri deployu.
   efe39f41…); `scripts/p63_ps_tail_pages.py` (I1–I10, `--check` bajtno) +
   API `/api/atlas/ps-tail-pages` + kartica P63; QA 65 → **66/66**;
   SHEET_GEOREFS in join v2 nespremanjeni.
+- **razširitev per-Blatt atribucije na 110 čez-Blatt base (P64, issue #13)** —
+  odprta točka P60/P62 #7 z merjeno hierarhijo pravil (deterministično, brez
+  AI ob delovanju): **R1** pas [0.8, 1.25] = P60 (17 base, bajtno) · **R2a**
+  area-dominanca ≥ 0.75 (53: II 29 · III 11 · IV 5 · I 4 · V 4) · **R2b**
+  ena-Blatt-s-površino (1: 1605 — II 2688 QK, IV brez areaQK [~]) → **71/110
+  atributiranih** (Blatt II 42 · III 15 · I 5 · IV 5 · V 4); **39 split**
+  (delež 0.5–0.75: II 19 · III 9 · IV 6 · V 4 · I 1) z alternativami po
+  deležih — za lastniško odločitev o per-Blatt SPLIT joinu; konsistenca
+  R1↔R2 15/17 (2 merjeni divergence: 930, 671 [~]); občutljivost praga 0.75
+  (24 @ ≥0.9 … 69 @ ≥0.6 od 92); soslednost 186/216 (R1 21/23 kot P60);
+  `scripts/p64_ps_attribution_ext.py` (I1–I8, `--check` bajtno PASS; sha
+  pini vhodov po lekciji P9) + dokaz `research/issue17/ps-attribution-ext.json`
+  + API `/api/atlas/ps-attribution-ext` + kartica P64; QA 66 → **67/67**;
+  join v2 in SHEET_GEOREFS nespremanjeni.

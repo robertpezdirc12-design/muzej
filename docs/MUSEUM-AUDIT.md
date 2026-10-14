@@ -2394,3 +2394,58 @@ dve obliki po P53/P57/P58).
 razlaga števil 62–80 @ 'Vor und Zuname' ODPRTA [~]; p138 bledi zapisi
 ostajajo [~]/[?]; join v2 in SHEET_GEOREFS nespremanjeni (lekcija P9);
 P55–P60 runtime nespremanjeni (P60 bajtno identičen; I8 pini po lekciji P9).
+
+## §42 — P64: razširitev per-Blatt atribucije na vseh 110 čez-Blatt base — merjena hierarhija pravil (issue #13, 2026-10-14)
+
+**Kontekst:** odprta točka P60/P62 #7 (»razširiti atribucijo na vseh 110
+čez-Blatt base«) — predpogoj izpolnjen s polno pokritostjo glav listov
+135/135 × 2 (P62/P63). Join v2 ostaja NESPREMENJEN (disciplina
+P56/P58/P59) — atribucije so meritve, ne prerazporeditve.
+
+**Metoda (deterministična hierarhija pravil, brez AI ob delovanju):**
+- **R1 (pas, P60)** — 17 ruleCandidate base: attributedBlatt = instanca v
+  pasu [0.8, 1.25] (moda B), bajtno konsistentno s P60 evidence (I3).
+- **R2a (area-dominanca ≥ 0.75)** — dominantni Blatt po Σ areaQK: 53 base
+  (II 29 · III 11 · IV 5 · I 4 · V 4).
+- **R2b (ena-Blatt-s-površino)** — točno en Blatt nosi vso izmerjeno
+  površino: 1 base (1605: II 2688.0 QK @ p78 vs IV @ p93 brez areaQK) +
+  flag `areaIncomplete` [~].
+- → **71/110 atributiranih** (Blatt II 42 · III 15 · I 5 · IV 5 · V 4).
+- **split** — dominantni delež v [0.5, 0.75): 39 base (II 19 · III 9 ·
+  IV 6 · V 4 · I 1) z alternativami po deležih — attributedBlatt = null;
+  kandidati za lastniško odločitev o per-Blatt SPLIT joinu (npr. 642:
+  I 0.5187 (319.0 QK) vs II 0.4813 (296.0 QK) — 2 kulturi, 2 lastnika).
+- **fragmented** (< 0.5) — MERJENO 0 primerov.
+
+**Merjene kontrole:**
+- **Konsistenca R1↔R2**: za vseh 17 tudi area-dominanca — 15/17 soglasij,
+  2 merjeni divergence (930: R1 II vs R2 dom III @ 0.763; 671: R1 I vs
+  R2 dom II @ 0.8844) — R1 (moda B pas) ima prednost [~].
+- **Občutljivost praga 0.75**: 24 base @ ≥0.9, 45 @ ≥0.8, 53 @ ≥0.75,
+  58 @ ≥0.7, 63 @ ≥2/3, 69 @ ≥0.6 (od 92 z izmerjeno površino).
+- **Soslednost** relevantnih vrstic (atributirani Blatt / vse za split):
+  186/216 ok, 30 flagov (prečrtane vrstice [~]; R1 del 21/23 kot P60).
+
+**Skripta:** `scripts/p64_ps_attribution_ext.py` (deterministična, brez AI
+ob delovanju, FAIL ob padu I1–I8; `--check` bajtno PASS: I1 vhodni pini
+110/17 + sha256 runtime vhodov (bhrt efe39f41…, p60rt 28465b3e…, v2 ev
+ebb8f729… — lekcija P9); I2 re-izpeljava instanc == P59 za vseh 110;
+I3 R1 == P60 bajtno; I4 pokritost pravil + distribucije; I5 soslednost
+števci; I6 join nespremanjen + brez geo polj (areaQK samo v blattShares/
+rows); I7 dokaz ⊇ runtime bajtno; I8 determinizem). Izhodi: dokaz
+`research/issue17/ps-attribution-ext.json` (160 KB) + runtime
+`src/data/atlas/ps-attribution-ext.json` (77 KB).
+
+**Integracija:** API `/api/atlas/ps-attribution-ext` (force-static) +
+ATTR_EXT_P64 (research.ts, z notable primeri 163/930/671/1605/642) +
+kartica P64 (zavihek Prepisi Kurrent, za P63) + sources.ts N083PS opomba
+P64 (Si+En) + QA 66 → **67** (qa-p64-attribution-ext: pini + NEODVISEN
+preracun vseh 110 base — deleže, status, atribucijo iz v2 runtime vrstic ×
+pageAttribution P59; R1 == P60 runtime; dokaz == runtime bajtno; dve
+obliki po P53/P57/P58).
+
+**Poštenost:** 39 split base ostaja NEATRIBUTIRANIH [~] z alternativami —
+odločitev lastnika (#8); 2 R1↔R2 divergenci nerazloženi [~] (moda B vs
+area-dominanca); R2b 1605 = areaIncomplete [~] (IV brez areaQK v registru);
+strojna atribucija ni dokazni vir; join v2 in SHEET_GEOREFS nespremanjeni
+(lekcija P9); P55–P61 runtime nespremanjeni (I1 sha pini).

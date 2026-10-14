@@ -79,6 +79,7 @@ import {
   PERBLATT_ATTR_P60,
   UNIT_SEM_P61,
   TAIL_P63,
+  ATTR_EXT_P64,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -2088,6 +2089,68 @@ export function MuseumResearch() {
                   {t(
                     "Razlaga števil 62–80 @ 'Vor und Zuname' (konskripcija/Einlage?) ODPRTA [~]; enote vsot 82|81, 125|183, 162|1447 ODPRETE [~]; join v2 NESPREMENJEN (p138/139 brez vrstic v v2 — 211/110/17 nespremenjeni). Strojno berljivo: research/issue17/ps-tail-pages.json + runtime src/data/atlas/ps-tail-pages.json (/api/atlas/ps-tail-pages).",
                     "Interpretation of numbers 62–80 @ 'Vor und Zuname' (conscription/Einlage?) OPEN [~]; unit meaning of sums 82|81, 125|183, 162|1447 OPEN [~]; join v2 UNCHANGED (p138/139 without v2 rows — 211/110/17 unchanged). Machine-readable: research/issue17/ps-tail-pages.json + the runtime src/data/atlas/ps-tail-pages.json (/api/atlas/ps-tail-pages).",
+                  )}
+                </p>
+              </div>
+            </div>
+
+            {/* P64 — razširitev per-Blatt atribucije na 110 čez-Blatt base */}
+            <div className="min-w-0 rounded-xl border bg-card p-6 shadow-sm">
+              <h3 className="flex flex-wrap items-center gap-2 font-display text-lg font-semibold">
+                <ScrollText className="size-4 text-primary" aria-hidden="true" />
+                {t("Per-Blatt atribucija — razširitev na 110 (P64)", "Per-Blatt attribution — extended to 110 (P64)")}
+                <StatusBadge status={ATTR_EXT_P64.status} />
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                {t(
+                  "Odprta točka P60/P62 #7: atribucija razširjena z merjeno hierarhijo pravil (R1 pas · R2a area-dominanca ≥ 0.75 · R2b ena-area) — 71/110 atributiranih, 39 split z alternativami.",
+                  "P60/P62 open point #7: attribution extended with a measured rule hierarchy (R1 band · R2a area-dominance >= 0.75 · R2b single-area) — 71/110 attributed, 39 splits with alternatives.",
+                )}
+              </p>
+              <div className="mt-4 grid gap-2 text-xs sm:grid-cols-2">
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("Hierarhija pravil (merjeno)", "Rule hierarchy (measured)")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "R1 pas [0.8, 1.25] = P60 (17, bajtno) · R2a dominanca ≥ 0.75 (53: II 29 · III 11 · IV 5 · I 4 · V 4) · R2b ena-Blatt-s-površino (1: 1605) → 71/110 (II 42 · III 15 · I 5 · IV 5 · V 4)",
+                      "R1 band [0.8, 1.25] = P60 (17, byte-identical) · R2a dominance >= 0.75 (53: II 29 · III 11 · IV 5 · I 4 · V 4) · R2b single-Blatt-with-area (1: 1605) -> 71/110 (II 42 · III 15 · I 5 · IV 5 · V 4)",
+                    )}
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("R1↔R2 konsistenca", "R1-vs-R2 consistency")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "15/17 soglasij; 2 merjeni divergence: 930 (R1 II vs R2 dom III @ 0.763), 671 (R1 I vs R2 dom II @ 0.8844) — pas (moda B) ima prednost [~]",
+                      "15/17 agreements; 2 measured divergences: 930 (R1 II vs R2 dom III @ 0.763), 671 (R1 I vs R2 dom II @ 0.8844) — the band (mode B) takes precedence [~]",
+                    )}
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("Split base (39) + prag", "Split bases (39) + threshold")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "Dominantni delež 0.5–0.75 (II 19 · III 9 · IV 6 · V 4 · I 1) z alternativami po deležih — npr. 642: I 0.5187 vs II 0.4813 (2 kulturi, 2 lastnika); občutljivost: 24 @ ≥0.9 · 45 @ ≥0.8 · 53 @ ≥0.75 · 69 @ ≥0.6",
+                      "Dominant share 0.5-0.75 (II 19 · III 9 · IV 6 · V 4 · I 1) with per-share alternatives — e.g. 642: I 0.5187 vs II 0.4813 (2 cultures, 2 owners); sensitivity: 24 @ >=0.9 · 45 @ >=0.8 · 53 @ >=0.75 · 69 @ >=0.6",
+                    )}
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("Soslednost + join", "Adjacency + join")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "Soslednost relevantnih vrstic 186/216 (flag 30 — prečrtane vrstice [~]; R1 del 21/23 kot P60); join v2 NESPREMENJEN — meritve brez prerazporeditev",
+                      "Adjacency of relevant rows 186/216 (30 flags — crossed-out rows [~]; the R1 part 21/23 as P60); the v2 join UNCHANGED — measurements without reassignments",
+                    )}
+                  </p>
+                </div>
+              </div>
+              <div className="mt-3 rounded-lg border border-emerald-200 bg-emerald-50/60 p-3 dark:border-emerald-900/50 dark:bg-emerald-950/30">
+                <p className="text-[11px] leading-relaxed text-foreground/80">
+                  <span className="font-semibold">{t("Pošten status: ", "Honest status: ")}</span>
+                  {t(
+                    "39 split base ostaja NEATRIBUTIRANIH [~] z alternativami — odločitev lastnika za per-Blatt SPLIT joina (#8); 2 R1↔R2 divergenci nerazloženi [~] (moda B vs area-dominanca); strojna atribucija ni dokazni vir. Strojno berljivo: research/issue17/ps-attribution-ext.json + runtime src/data/atlas/ps-attribution-ext.json (/api/atlas/ps-attribution-ext).",
+                    "39 split bases remain UNATTRIBUTED [~] with alternatives — the owner decision for the per-Blatt SPLIT join (#8); 2 R1-vs-R2 divergences unexplained [~] (mode B vs area dominance); machine attribution is not an evidentiary source. Machine-readable: research/issue17/ps-attribution-ext.json + the runtime src/data/atlas/ps-attribution-ext.json (/api/atlas/ps-attribution-ext).",
                   )}
                 </p>
               </div>

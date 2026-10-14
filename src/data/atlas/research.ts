@@ -4383,3 +4383,115 @@ export const UNIT_SEM_P61: {
     "povezati lastnike pas-instanc (npr. 163 II) s PF protokolom",
   ],
 };
+
+export const ATTR_EXT_P64: {
+  version: number;
+  series: "PS";
+  source: string;
+  status: ResearchStatus;
+  generatedBy: string;
+  rule: { R1: string; R2a: string; R2b: string; split: string; fragmented: string; soslednost: string };
+  summary: {
+    bases: number;
+    attributed: number;
+    statusDist: { R1: number; R2a: number; R2b: number; split: number; fragmented: number };
+    attributedBlattDist: { I: number; II: number; III: number; IV: number; V: number };
+    distByRule: {
+      R1: { I: number; II: number; III: number };
+      R2a: { I: number; II: number; III: number; IV: number; V: number };
+      R2b: { II: number };
+    };
+    splitDominantDist: { I: number; II: number; III: number; IV: number; V: number };
+    thresholdSensitivity: Record<string, number>;
+    soslednost: { ok: number; flag: number; relevantRows: number; r1Subset: { ok: number; flag: number } };
+    r1R2Consistency: {
+      agree: number;
+      diverge: number;
+      divergentBases: { base: string; r1: string; r2Dominant: string; share: number }[];
+    };
+  };
+  notable: Record<string, { status: string; attributedBlatt: string | null; noteSi: string }>;
+  statusLine: string;
+  verdictSi: string;
+  verdictEn: string;
+  next: string[];
+} = {
+  version: 1,
+  series: "PS",
+  source:
+    "research/issue17/ps-parcels-geo-v2.json (rowsEvidence 1093) × ps-blatt-headers.json (pageAttribution P59) × ps-perblatt-attribution.json (R1 P60); dokaz research/issue17/ps-attribution-ext.json + runtime src/data/atlas/ps-attribution-ext.json",
+  status: "REVIEW",
+  generatedBy:
+    "scripts/p64_ps_attribution_ext.py (deterministično, brez AI ob delovanju, FAIL ob padu I1–I8; --check bajtno PASS)",
+  rule: {
+    R1: "pas [0.8, 1.25] (P60, moda B) — 17 base, bajtno konsistentno s P60",
+    R2a: "area-dominanca: dominantni Blatt (Σ areaQK) z deležem ≥ 0.75",
+    R2b: "točno en Blatt nosi vso izmerjeno površino → attributedBlatt + areaIncomplete flag",
+    split: "dominantni delež v [0.5, 0.75) → attributedBlatt = null + blattShares alternative",
+    fragmented: "dominantni delež < 0.5 (MERJENO: 0 primerov)",
+    soslednost:
+      "sosedi ±1 po vrstnem redu vrstic evidence na isti strani; za atributirane base nad vrsticami atributiranega Blatta, za split nad vsemi",
+  },
+  summary: {
+    bases: 110,
+    attributed: 71,
+    statusDist: { R1: 17, R2a: 53, R2b: 1, split: 39, fragmented: 0 },
+    attributedBlattDist: { I: 5, II: 42, III: 15, IV: 5, V: 4 },
+    distByRule: {
+      R1: { I: 1, II: 12, III: 4 },
+      R2a: { I: 4, II: 29, III: 11, IV: 5, V: 4 },
+      R2b: { II: 1 },
+    },
+    splitDominantDist: { I: 1, II: 19, III: 9, IV: 6, V: 4 },
+    thresholdSensitivity: { "0.6": 69, "0.6667": 63, "0.7": 58, "0.75": 53, "0.8": 45, "0.9": 24 },
+    soslednost: { ok: 186, flag: 30, relevantRows: 216, r1Subset: { ok: 21, flag: 2 } },
+    r1R2Consistency: {
+      agree: 15,
+      diverge: 2,
+      divergentBases: [
+        { base: "671", r1: "I", r2Dominant: "II", share: 0.8844 },
+        { base: "930", r1: "II", r2Dominant: "III", share: 0.763 },
+      ],
+    },
+  },
+  notable: {
+    "163": {
+      status: "R1",
+      attributedBlatt: "II",
+      noteSi: "pas @ 0.9813 (p61/83/84/86) — area-dominanca sovpada (II 941.0 QK @ 0.9691 vs I 30.0 @ 0.0309)",
+    },
+    "930": {
+      status: "R1",
+      attributedBlatt: "II",
+      noteSi: "MERJENA DIVERGENCA: R1 II (moda B pas @ p49) vs R2 dominantni III @ 0.763 — R1 ima prednost [~]",
+    },
+    "671": {
+      status: "R1",
+      attributedBlatt: "I",
+      noteSi: "MERJENA DIVERGENCA: R1 I (moda B pas @ p36) vs R2 dominantni II @ 0.8844 (1423.0 QK) — R1 ima prednost [~]; soslednost flag (prečrtana vrstica)",
+    },
+    "1605": {
+      status: "R2b",
+      attributedBlatt: "II",
+      noteSi: "ena sama Blatt s površino: II 2688.0 QK @ p78 (share 1.0) vs IV @ p93 brez areaQK — areaIncomplete flag [~]",
+    },
+    "642": {
+      status: "split",
+      attributedBlatt: null,
+      noteSi: "pravi split: I 319.0 QK @ 0.5187 (p35) vs II 296.0 @ 0.4813 (p85) — dve različni kulturi in lastnika; odločitev lastnika",
+    },
+  },
+  statusLine:
+    "P64 RAZŠIRITEV ATRIBUCIJE: 71/110 čez-Blatt base atributiranih (R1 pas 17 · R2a dominanca ≥0.75 53 · R2b 1), 39 split z alternativami [~]; R1↔R2 soglasje 15/17 (671, 930 [~]); Blatt II 42 · III 15 · I 5 · IV 5 · V 4; join v2 nespremanjen",
+  verdictSi:
+    "P64: RAZŠIRITEV PER-BLATT ATRIBUCIJE NA VSEH 110 ČEZ-BLATT BASE (issue #13) — odprta točka P60/P62 #7 izpolnjena z merjeno hierarhijo pravil: R1 pas [0.8, 1.25] (P60, 17 base — bajtno konsistentno) · R2a area-dominanca ≥ 0.75 (53 base: II 29 · III 11 · IV 5 · I 4 · V 4) · R2b ena sama Blatt s površino (1: 1605 — II 2688 QK, IV brez areaQK [~]) → skupaj 71/110 atributiranih (Blatt II 42 · III 15 · I 5 · IV 5 · V 4); 39 base status 'split' (dominantni delež 0.5–0.75: II 19 · III 9 · IV 6 · V 4 · I 1) z alternativami po deležih — kandidati za lastniško odločitev o per-Blatt SPLIT joinu; KONSISTENCA R1↔R2: 15/17 soglasij, 2 merjeni divergence (930: R1 II vs R2 dom III @ 0.763; 671: R1 I vs R2 dom II @ 0.8844) — R1 (moda B pas) ima prednost [~]; občutljivost praga 0.75: 24 base @ ≥0.9, 45 @ ≥0.8, 53 @ ≥0.75, 58 @ ≥0.7, 63 @ ≥2/3, 69 @ ≥0.6 (od 92 z izmerjeno površino); soslednost relevantnih vrstic 186/216 (flag 30 — prečrtane vrstice [~]; R1 del 21/23 kot P60); join v2 NESPREMENJEN (meritve brez prerazporeditev — disciplina P56/P58/P59); strojna atribucija ni dokazni vir",
+  verdictEn:
+    "P64: PER-BLATT ATTRIBUTION EXTENDED TO ALL 110 CROSS-BLATT BASES (issue #13) — the P60/P62 open point #7 fulfilled with a measured rule hierarchy: R1 band [0.8, 1.25] (P60, 17 bases — byte-consistent) · R2a area dominance >= 0.75 (53 bases: II 29 · III 11 · IV 5 · I 4 · V 4) · R2b a single Blatt holding all measured area (1: 1605 — II 2688 QK, IV without areaQK [~]) -> 71/110 attributed in total (Blatt II 42 · III 15 · I 5 · IV 5 · V 4); 39 bases status 'split' (dominant share 0.5-0.75: II 19 · III 9 · IV 6 · V 4 · I 1) with per-share alternatives — candidates for the owner decision on the per-Blatt SPLIT join; R1-vs-R2 CONSISTENCY: 15/17 agreements, 2 measured divergences (930: R1 II vs R2 dom III @ 0.763; 671: R1 I vs R2 dom II @ 0.8844) — R1 (mode B band) takes precedence [~]; threshold sensitivity at 0.75: 24 bases @ >=0.9, 45 @ >=0.8, 53 @ >=0.75, 58 @ >=0.7, 63 @ >=2/3, 69 @ >=0.6 (of 92 with measured area); adjacency of relevant rows 186/216 (30 flags — crossed-out rows [~]; the R1 part 21/23 as P60); the v2 join UNCHANGED (measurements without reassignments — P56/P58/P59 discipline); machine attribution is not an evidentiary source",
+  next: [
+    "per-Blatt SPLIT joina za 71 atributiranih base (odločitev lastnika o pozicijah) — 39 split base z alternativami po deležih",
+    "razlaga 2 R1↔R2 divergenc (930: moda B pas @ p49 vs III dominanca @ 0.763; 671: moda B pas @ p36 vs II dominanca @ 0.8844) [~]",
+    "atribucija 101 single-Blatt več-stranskih base (211 − 110; instanca enotna po Blattu — trivialno, za SPLIT join potrebna lastniška odločitev)",
+    "razlaga mode B enote (glave sekcij str. 61–99 — identiteta enote ostaja odprta [~])",
+    "lastniki atributiranih instanc ↔ PF protokol (npr. 163 II: Schimey Martho/Stainzldt Wölfl/Schumitsch Matja/Laune Hülfse)",
+  ],
+};

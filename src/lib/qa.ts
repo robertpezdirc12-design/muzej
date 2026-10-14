@@ -45,6 +45,7 @@ import {
   PERBLATT_ATTR_P60,
   UNIT_SEM_P61,
   TAIL_P63,
+  ATTR_EXT_P64,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -4270,6 +4271,144 @@ const p45bErrors: string[] = [];
     p63Errors.length === 0
       ? `pini IIb p139 · parzelle 41–60 · VorUndZuname 62–80 · vsote 82|81 + 125|183 · Fürtrag 189|1228 · 162|1447 == preracun (naraščanja + Capital kr Σ=153 + IIb == pageAttribution p59) · 42 flagov [~] · ${p63FileDetail}`
       : p63Errors.join("; "),
+  );
+
+  /* ── P64 (issue #13): razširitev per-Blatt atribucije na 110 čez-Blatt base ── */
+  const p64Errors: string[] = [];
+  const ae64 = ATTR_EXT_P64;
+  // 1) TS pini
+  if (ae64.summary.bases !== 110 || ae64.summary.attributed !== 71)
+    p64Errors.push("pini: base ≠ 110 ali attributed ≠ 71");
+  if (ae64.summary.statusDist.R1 !== 17 || ae64.summary.statusDist.R2a !== 53 ||
+      ae64.summary.statusDist.R2b !== 1 || ae64.summary.statusDist.split !== 39 ||
+      ae64.summary.statusDist.fragmented !== 0)
+    p64Errors.push("pini: statusDist ≠ 17/53/1/39/0");
+  if (ae64.summary.attributedBlattDist.I !== 5 || ae64.summary.attributedBlattDist.II !== 42 ||
+      ae64.summary.attributedBlattDist.III !== 15 || ae64.summary.attributedBlattDist.IV !== 5 ||
+      ae64.summary.attributedBlattDist.V !== 4)
+    p64Errors.push("pini: attributedBlattDist ≠ I 5 · II 42 · III 15 · IV 5 · V 4");
+  if (ae64.summary.thresholdSensitivity["0.75"] !== 53 || ae64.summary.thresholdSensitivity["0.9"] !== 24)
+    p64Errors.push("pini: občutljivost praga ≠ 53 @ 0.75 / 24 @ 0.9");
+  if (ae64.summary.r1R2Consistency.diverge !== 2 || ae64.summary.r1R2Consistency.agree !== 15)
+    p64Errors.push("pini: R1↔R2 ≠ 15/17");
+  if (ae64.summary.soslednost.ok !== 186 || ae64.summary.soslednost.flag !== 30 ||
+      ae64.summary.soslednost.relevantRows !== 216 || ae64.summary.soslednost.r1Subset.ok !== 21 ||
+      ae64.summary.soslednost.r1Subset.flag !== 2)
+    p64Errors.push("pini: soslednost ≠ 186/30 (216; R1 21/2)");
+  if (ae64.summary.splitDominantDist.II !== 19 || ae64.summary.splitDominantDist.III !== 9 ||
+      ae64.summary.splitDominantDist.IV !== 6 || ae64.summary.splitDominantDist.V !== 4 ||
+      ae64.summary.splitDominantDist.I !== 1)
+    p64Errors.push("pini: splitDominantDist ≠ II 19 · III 9 · IV 6 · V 4 · I 1");
+  if (ae64.summary.distByRule.R2a.II !== 29 || ae64.summary.distByRule.R2a.III !== 11 ||
+      ae64.summary.distByRule.R2a.IV !== 5 || ae64.summary.distByRule.R2a.I !== 4 ||
+      ae64.summary.distByRule.R2a.V !== 4)
+    p64Errors.push("pini: distByRule.R2a ≠ II 29 · III 11 · IV 5 · I 4 · V 4");
+  // 2) datoteke + NEODVISEN preracun iz runtime kopij (dve obliki po P53/P57/P58)
+  let p64FileDetail = "datoteke niso preverjene (readFile ni na voljo) — celovita kontrola teče na /api/qa";
+  if (opts.readFile) {
+    const rawRt64 = opts.readFile("src/data/atlas/ps-attribution-ext.json");
+    const rawEv64 = opts.readFile("research/issue17/ps-attribution-ext.json");
+    const rawRt59c = opts.readFile("src/data/atlas/ps-blatt-headers.json");
+    const rawRt60 = opts.readFile("src/data/atlas/ps-perblatt-attribution.json");
+    const rawV2rt = opts.readFile("src/data/atlas/ps-parcels-geo.json");
+    if (rawRt64 === null || rawRt59c === null || rawRt60 === null || rawV2rt === null) {
+      p64Errors.push("runtime ps-attribution-ext / ps-blatt-headers / ps-perblatt-attribution / ps-parcels-geo ni berljiv");
+    } else {
+      try {
+        const rt64 = JSON.parse(rawRt64) as {
+          summary: { bases: number; attributed: number; statusDist: Record<string, number>; attributedBlattDist: Record<string, number> };
+          bases: Record<string, { status: string; attributedBlatt: string | null; blattShares: { blatt: string; areaQK: number; share: number | null }[]; sosledje: { ok: number; flag: number } }>;
+        };
+        const rt59c = JSON.parse(rawRt59c) as { pageAttribution: Record<string, { blatt: string | null }> };
+        const rt60 = JSON.parse(rawRt60) as { bases: Record<string, { attributedBlatt: string }> };
+        const v2rt = JSON.parse(rawV2rt) as { rows: { base: string; page: number; parzella: string; ratio: number | null; areaQK: number | null }[] };
+        // NEODVISEN preracun: vrstice v2 × pageAttribution → deleže → pravila
+        const rowsByBase64 = new Map<string, { page: number; base: string; ratio: number | null; areaQK: number | null }[]>();
+        for (const r of v2rt.rows) {
+          if (!rowsByBase64.has(r.base)) rowsByBase64.set(r.base, []);
+          rowsByBase64.get(r.base)!.push(r);
+        }
+        const r2h = (x: number) => Math.floor(x * 100 + 0.5) / 100;
+        const r4h = (x: number) => Math.floor(x * 10000 + 0.5) / 10000;
+        let attrCount = 0;
+        let distII = 0, distIII = 0, distI = 0, distIV = 0, distV = 0;
+        for (const [b64, e64] of Object.entries(rt64.bases)) {
+          const rr = rowsByBase64.get(b64) ?? [];
+          const areas = new Map<string, { a: number; n: number }>();
+          for (const r of rr) {
+            const bl = rt59c.pageAttribution[String(r.page)]?.blatt;
+            if (!bl) continue;
+            const cur = areas.get(bl) ?? { a: 0, n: 0 };
+            cur.a += r.areaQK ?? 0;
+            cur.n += 1;
+            areas.set(bl, cur);
+          }
+          const tot = [...areas.values()].reduce((s, x) => s + x.a, 0);
+          const shares = [...areas.entries()]
+            .map(([bl, x]) => ({ blatt: bl, areaQK: r2h(x.a), share: tot > 0 ? r4h(x.a / tot) : null }))
+            .sort((x, y) => y.areaQK - x.areaQK || x.blatt.localeCompare(y.blatt));
+          // deleži bajtno == runtime
+          if (shares.length !== e64.blattShares.length ||
+              shares.some((s, i) => s.blatt !== e64.blattShares[i].blatt ||
+                s.areaQK !== e64.blattShares[i].areaQK || s.share !== e64.blattShares[i].share))
+            p64Errors.push(`preracun: ${b64} blattShares ≠ runtime`);
+          // status/atribucija po pravilih
+          const withArea = shares.filter((s) => s.areaQK > 0);
+          let expStatus: string;
+          let expAttr: string | null;
+          if (rt60.bases[b64]) {
+            expStatus = "R1";
+            expAttr = rt60.bases[b64].attributedBlatt;
+          } else if (tot <= 0) {
+            expStatus = "fragmented"; expAttr = null;
+          } else if (withArea.length === 1) {
+            expStatus = "R2b"; expAttr = withArea[0].blatt;
+          } else if ((shares[0].share ?? 0) >= 0.75) {
+            expStatus = "R2a"; expAttr = shares[0].blatt;
+          } else if ((shares[0].share ?? 0) >= 0.5) {
+            expStatus = "split"; expAttr = null;
+          } else {
+            expStatus = "fragmented"; expAttr = null;
+          }
+          if (e64.status !== expStatus || e64.attributedBlatt !== expAttr)
+            p64Errors.push(`preracun: ${b64} status/atribucija ≠ pravilu (${e64.status}/${e64.attributedBlatt} vs ${expStatus}/${expAttr})`);
+          if (expAttr) {
+            attrCount++;
+            if (expAttr === "II") distII++; else if (expAttr === "III") distIII++;
+            else if (expAttr === "I") distI++; else if (expAttr === "IV") distIV++; else distV++;
+          }
+        }
+        if (attrCount !== rt64.summary.attributed)
+          p64Errors.push(`preracun: attributed ${attrCount} ≠ runtime ${rt64.summary.attributed}`);
+        if (distI !== 5 || distII !== 42 || distIII !== 15 || distIV !== 5 || distV !== 4)
+          p64Errors.push(`preracun: dist I ${distI} · II ${distII} · III ${distIII} · IV ${distIV} · V ${distV} ≠ 5/42/15/5/4`);
+        // R1 == P60 runtime (17)
+        for (const b64 of Object.keys(rt60.bases)) {
+          if (rt64.bases[b64]?.status !== "R1" || rt64.bases[b64]?.attributedBlatt !== rt60.bases[b64].attributedBlatt)
+            p64Errors.push(`navzkrižje: ${b64} R1 ≠ P60 atribuciji`);
+        }
+        // evidencа (samo repo): dokaz ⊇ runtime bajtno
+        if (rawEv64 !== null) {
+          const ev = JSON.parse(rawEv64) as { runtime: unknown };
+          if (JSON.stringify(ev.runtime) !== JSON.stringify(rt64))
+            p64Errors.push("dokaz: runtime ni bajtno podmnožica dokaza");
+        }
+        p64FileDetail = rawEv64 !== null
+          ? "repo: dokaz == runtime bajtno · preracun: 110 base deleže + pravila iz v2 × pageAttribution · dist 5/42/15/5/4 · R1 == P60"
+          : "produkcija: research/ ni v deploymentu — preracun na runtime kopijah (110 base: deleže, status, atribucija, dist)";
+      } catch (e) {
+        p64Errors.push(`ps-attribution-ext datoteke neuspešno: ${String(e).slice(0, 80)}`);
+      }
+    }
+  }
+  push(
+    "qa-p64-attribution-ext",
+    "P64: RAZŠIRITEV PER-BLATT ATRIBUCIJE NA VSEH 110 ČEZ-BLATT BASE (issue #13): odprta točka P60/P62 #7 z merjeno hierarhijo pravil — R1 pas [0.8, 1.25] (P60, 17, bajtno) · R2a area-dominanca ≥ 0.75 (53: II 29 · III 11 · IV 5 · I 4 · V 4) · R2b ena-Blatt-s-površino (1: 1605 — II 2688 QK, IV brez areaQK [~]) → 71/110 atributiranih (II 42 · III 15 · I 5 · IV 5 · V 4); 39 split (delež 0.5–0.75: II 19 · III 9 · IV 6 · V 4 · I 1) z alternativami — za lastniško odločitev o SPLIT joinu; R1↔R2 soglasje 15/17, 2 merjeni divergence (930: II vs III @ 0.763; 671: I vs II @ 0.8844) [~]; občutljivost praga 24/45/53/58/63/69 @ ≥0.9/0.8/0.75/0.7/2⁄3/0.6; soslednost 186/216 (R1 21/23 kot P60); join v2 NESPREMENJEN; status REVIEW",
+    "P64: PER-BLATT ATTRIBUTION EXTENDED TO ALL 110 CROSS-BLATT BASES (issue #13): P60/P62 open point #7 with a measured rule hierarchy — R1 band [0.8, 1.25] (P60, 17, byte-identical) · R2a area dominance >= 0.75 (53: II 29 · III 11 · IV 5 · I 4 · V 4) · R2b single-Blatt-with-area (1: 1605 — II 2688 QK, IV without areaQK [~]) -> 71/110 attributed (II 42 · III 15 · I 5 · IV 5 · V 4); 39 splits (share 0.5-0.75: II 19 · III 9 · IV 6 · V 4 · I 1) with alternatives — for the owner decision on the SPLIT join; R1-vs-R2 agreement 15/17, 2 measured divergences (930: II vs III @ 0.763; 671: I vs II @ 0.8844) [~]; threshold sensitivity 24/45/53/58/63/69 @ >=0.9/0.8/0.75/0.7/2-3/0.6; adjacency 186/216 (R1 21/23 as P60); join v2 UNCHANGED; status REVIEW",
+    p64Errors.length === 0,
+    p64Errors.length === 0
+      ? `pini 110/71 · 17/53/1/39/0 · II 42 · III 15 · I 5 · IV 5 · V 4 · prag 53 @ 0.75 · R1↔R2 15/17 == preracun (110 base deleže + status + atribucija iz v2 × pageAttribution; R1 == P60) · ${p64FileDetail}`
+      : p64Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;
