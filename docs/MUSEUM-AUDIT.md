@@ -2449,3 +2449,56 @@ odločitev lastnika (#8); 2 R1↔R2 divergenci nerazloženi [~] (moda B vs
 area-dominanca); R2b 1605 = areaIncomplete [~] (IV brez areaQK v registru);
 strojna atribucija ni dokazni vir; join v2 in SHEET_GEOREFS nespremanjeni
 (lekcija P9); P55–P61 runtime nespremanjeni (I1 sha pini).
+
+## §43 — P65: polna per-Blatt atribucija — 101 single-Blatt več-stranskih base, pokritost 211/211 (issue #13, 2026-10-14)
+
+**Odprta točka P64 #3** izpolnjena: 101 base, katerih VSE vrstice nosijo
+strani ISTEGA Blatta, dobi ta Blatt kot `attributedBlatt` (status
+`R3-single`) — atribucija trivialna in nedvoumna (ni potreben pas, ne
+dominanca).
+
+**Merjeno (R3-single):**
+- **Distribucija po Blattih**: I 3 · II 26 · III 14 · IV 58 (101 base).
+- **Vrstice**: 205 (98 base × 2 vrstici + 3 base × 3 vrstice); vseh 101
+  base ima izmerjeno površino (0 brez areaQK).
+- **Pokritost več-stranskih base POPOLNA: 211/211** (110 čez-Blatt iz
+  P64 + 101 single-Blatt) → skupaj **172 atributiranih**
+  (Blatt II 68 · IV 63 · III 29 · I 8 · V 4) + **39 split** z
+  alternativami (lastniška odločitev o per-Blatt SPLIT joinu).
+- **Polna pokritost registra (kontrolni blok coverage)**: 800 base ×
+  1093 vrstic = **589 single-page** (implicitno atributirane prek
+  pageAttribution strani: I 145 · I·II 10 · II 183 · III 28 · IV 205 ·
+  V 18) + **211 multi-page**; **0 vrstic** brez atribucije strani
+  (p138/139 brez vrstic v v2).
+- **Soslednost** relevantnih vrstic skupaj **375/425** (flag 50;
+  R3 del 189/209 — 20 flagov, prečrtane vrstice [~]; P64 del 186/216
+  nespremenjen).
+
+**Konsistenca**: 110 P64 atribucij bajtno nespremenjenih (I3 — deep
+equality per base); R3 množica disjunktna od P64 (razčlenitev izčrpna:
+multi-page == multi-Blatt ⊔ single-Blatt, I2).
+
+**Skripta:** `scripts/p65_ps_attribution_full.py` (deterministična, brez
+AI ob delovanju, FAIL ob padu I1–I8; `--check` bajtno PASS: I1 vhodni
+pini 5× sha256 (v2 ev ebb8f729…, bhrt efe39f41…, p60rt 28465b3e…, p64ev
+a6f6d8af…, p64rt 7e5ea64a…) + števci 1093/800/211/110/101; I2 razčlenitev
+izčrpna + disjunktna (R3: 1 Blatt, pages ≥ 2, 0 null vrstic); I3 P64
+podmnožica bajtno (110); I4 pokritost + distribucije; I5 soslednost
+(R3 189/20; skupaj 375/50); I6 join nespremanjen + brez geo polj
+(areaQK samo v blattShares); I7 dokaz ⊇ runtime bajtno; I8 determinizem).
+Izhodi: dokaz `research/issue17/ps-attribution-full.json` + runtime
+`src/data/atlas/ps-attribution-full.json` (polni dataset 211 base).
+
+**Integracija:** API `/api/atlas/ps-attribution-full` (force-static) +
+ATTR_FULL_P65 (research.ts) + kartica P65 (zavihek Prepisi Kurrent, za
+P64) + sources.ts N083PS opomba P65 (Si+En) + QA 67 → **68**
+(qa-p65-attribution-full: pini + NEODVISEN preracun 211 multi-page —
+razčlenitev, R3 atribucije, deleži, coverage iz v2 runtime vrstic ×
+pageAttribution P59; I3 P64 bajtno; dokaz == runtime bajtno; dve obliki
+po P53/P57/P58).
+
+**Poštenost:** 39 split base ostaja NEATRIBUTIRANIH [~] z alternativami
+— odločitev lastnika o SPLIT joinu; 'I·II' prehodne strani (10
+single-page base) razlagalno odprte [~]; strojna atribucija ni dokazni
+vir; join v2 in SHEET_GEOREFS nespremanjeni (lekcija P9); P55–P64
+runtime nespremanjeni (I1 sha pini).

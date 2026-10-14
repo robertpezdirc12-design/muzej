@@ -4495,3 +4495,96 @@ export const ATTR_EXT_P64: {
     "lastniki atributiranih instanc ↔ PF protokol (npr. 163 II: Schimey Martho/Stainzldt Wölfl/Schumitsch Matja/Laune Hülfse)",
   ],
 };
+
+export const ATTR_FULL_P65: {
+  version: number;
+  series: "PS";
+  source: string;
+  status: ResearchStatus;
+  generatedBy: string;
+  rule: { R1: string; R2a: string; R2b: string; "R3-single": string; split: string; soslednost: string };
+  summary: {
+    multiPageBases: number;
+    attributed: number;
+    split: number;
+    statusDist: { R1: number; R2a: number; R2b: number; "R3-single": number; split: number };
+    attributedBlattDist: { I: number; II: number; III: number; IV: number; V: number };
+    distByRule: {
+      R1: { I: number; II: number; III: number };
+      R2a: { I: number; II: number; III: number; IV: number; V: number };
+      R2b: { II: number };
+      "R3-single": { I: number; II: number; III: number; IV: number };
+    };
+    soslednost: { ok: number; flag: number; relevantRows: number; r3Subset: { ok: number; flag: number } };
+    r3Rows: { total: number; rowsPerBaseDist: Record<string, number> };
+    coverage: {
+      basesTotal: number;
+      rowsTotal: number;
+      singlePage: number;
+      singlePageByBlatt: Record<string, number>;
+      multiPage: number;
+      multiBlatt: number;
+      singleBlattMultiPage: number;
+      nullAttributionRows: number;
+    };
+  };
+  statusLine: string;
+  verdictSi: string;
+  verdictEn: string;
+  next: string[];
+} = {
+  version: 1,
+  series: "PS",
+  source:
+    "research/issue17/ps-parcels-geo-v2.json (rowsEvidence 1093) × ps-blatt-headers.json (pageAttribution P59) × ps-attribution-ext.json (P64 runtime 110, bajtno); dokaz research/issue17/ps-attribution-full.json + runtime src/data/atlas/ps-attribution-full.json",
+  status: "REVIEW",
+  generatedBy:
+    "scripts/p65_ps_attribution_full.py (deterministično, brez AI ob delovanju, FAIL ob padu I1–I8; --check bajtno PASS)",
+  rule: {
+    R1: "pas [0.8, 1.25] (P60, moda B) — 17 base, bajtno konsistentno s P60 (P64)",
+    R2a: "area-dominanca: dominantni Blatt (Σ areaQK) z deležem ≥ 0.75 (P64)",
+    R2b: "točno en Blatt nosi vso izmerjeno površino → attributedBlatt + areaIncomplete flag (P64)",
+    "R3-single": "vse vrstice base na straneh ISTEGA Blatta → attributedBlatt = ta Blatt (trivialno, P65)",
+    split: "dominantni delež v [0.5, 0.75) → attributedBlatt = null + blattShares alternative (P64)",
+    soslednost:
+      "sosedi ±1 po vrstnem redu vrstic evidence na isti strani; za atributirane base nad vrsticami atributiranega Blatta, za split nad vsemi (P64 metoda)",
+  },
+  summary: {
+    multiPageBases: 211,
+    attributed: 172,
+    split: 39,
+    statusDist: { R1: 17, R2a: 53, R2b: 1, "R3-single": 101, split: 39 },
+    attributedBlattDist: { I: 8, II: 68, III: 29, IV: 63, V: 4 },
+    distByRule: {
+      R1: { I: 1, II: 12, III: 4 },
+      R2a: { I: 4, II: 29, III: 11, IV: 5, V: 4 },
+      R2b: { II: 1 },
+      "R3-single": { I: 3, II: 26, III: 14, IV: 58 },
+    },
+    soslednost: { ok: 375, flag: 50, relevantRows: 425, r3Subset: { ok: 189, flag: 20 } },
+    r3Rows: { total: 205, rowsPerBaseDist: { "2": 98, "3": 3 } },
+    coverage: {
+      basesTotal: 800,
+      rowsTotal: 1093,
+      singlePage: 589,
+      singlePageByBlatt: { I: 145, "I·II": 10, II: 183, III: 28, IV: 205, V: 18 },
+      multiPage: 211,
+      multiBlatt: 110,
+      singleBlattMultiPage: 101,
+      nullAttributionRows: 0,
+    },
+  },
+  statusLine:
+    "P65 POLNA ATRIBUCIJA: 172/211 več-stranskih base atributiranih (P64 R1/R2a/R2b 71 + R3-single 101), 39 split z alternativami [~]; Blatt II 68 · IV 63 · III 29 · I 8 · V 4; pokritost registra 800 base (589 single-page implicitno + 211 multi-page polno); join v2 nespremanjen",
+  verdictSi:
+    "P65: POLNA PER-BLATT ATRIBUCIJA — 101 SINGLE-BLATT VEČ-STRANSKIH BASE (issue #13) — odprta točka P64 #3 izpolnjena: 101 base, katerih vse vrstice nosijo strani ISTEGA Blatta, dobi ta Blatt kot attributedBlatt (status 'R3-single', trivialno in nedvoumno: I 3 · II 26 · III 14 · IV 58; 205 vrstic — 98 base × 2 + 3 base × 3; vseh 101 z izmerjeno površino) → pokritost več-stranskih base POPOLNA: 211/211 (110 čez-Blatt iz P64 + 101 single-Blatt), skupaj 172 atributiranih (Blatt II 68 · IV 63 · III 29 · I 8 · V 4) + 39 split z alternativami (lastniška odločitev o SPLIT joinu); POLNA POKRITOST REGISTRA (kontrolni blok): 800 base × 1093 vrstic = 589 single-page (implicitno atributirane prek strani: I 145 · I·II 10 · II 183 · III 28 · IV 205 · V 18) + 211 multi-page; 0 vrstic brez atribucije strani; soslednost relevantnih vrstic skupaj 375/425 (R3 del 189/209, flag 20); 110 P64 atribucij bajtno nespremenjenih (I3); join v2 NESPREMENJEN (meritve brez prerazporeditev — disciplina P56/P58/P59); strojna atribucija ni dokazni vir",
+  verdictEn:
+    "P65: FULL PER-BLATT ATTRIBUTION — 101 SINGLE-BLATT MULTI-PAGE BASES (issue #13) — the P64 open point #3 fulfilled: the 101 bases whose all rows sit on pages of the SAME Blatt receive that Blatt as attributedBlatt (status 'R3-single', trivial and unambiguous: I 3 · II 26 · III 14 · IV 58; 205 rows — 98 bases × 2 + 3 bases × 3; all 101 with measured area) -> the multi-page coverage is COMPLETE: 211/211 (110 cross-Blatt from P64 + 101 single-Blatt), 172 attributed in total (Blatt II 68 · IV 63 · III 29 · I 8 · V 4) + 39 splits with alternatives (owner decision on the SPLIT join); FULL REGISTER COVERAGE (control block): 800 bases × 1,093 rows = 589 single-page (implicitly attributed via the page: I 145 · I·II 10 · II 183 · III 28 · IV 205 · V 18) + 211 multi-page; 0 rows without page attribution; adjacency of relevant rows 375/425 in total (the R3 part 189/209, 20 flags); the 110 P64 attributions byte-unchanged (I3); the v2 join UNCHANGED (measurements without reassignments — P56/P58/P59 discipline); machine attribution is not an evidentiary source",
+  next: [
+    "per-Blatt SPLIT joina za 39 split base (odločitev lastnika o pozicijah/razdelitvah) — zdaj nad polnim datasetom 211",
+    "razlaga 2 R1↔R2 divergenc (930: moda B pas @ p49 vs III dominanca @ 0.763; 671: moda B pas @ p36 vs II dominanca @ 0.8844) [~]",
+    "razlaga mode B enote (glave sekcij str. 61–99 — identiteta enote ostaja odprta [~])",
+    "lastniki atributiranih instanc ↔ PF protokol (npr. 163 II: Schimey Martho/Stainzldt Wölfl/Schumitsch Matja/Laune Hülfse)",
+    "'I·II' prehodne strani (10 single-page base) — paleografska razlaga prehodne cone [~]",
+  ],
+};

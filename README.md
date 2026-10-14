@@ -444,3 +444,19 @@ preprečujeta prenos `.env*` in lokalnih datotek pri deployu.
   pini vhodov po lekciji P9) + dokaz `research/issue17/ps-attribution-ext.json`
   + API `/api/atlas/ps-attribution-ext` + kartica P64; QA 66 → **67/67**;
   join v2 in SHEET_GEOREFS nespremanjeni.
+- **polna per-Blatt atribucija — 101 single-Blatt več-stranskih base (P65,
+  issue #13)** — odprta točka P64 #3 izpolnjena (deterministično, brez AI ob
+  delovanju): 101 base, katerih vse vrstice nosijo strani ISTEGA Blatta, dobi
+  ta Blatt kot attributedBlatt (status **R3-single** — trivialno in nedvoumno:
+  I 3 · II 26 · III 14 · IV 58; 205 vrstic — 98 × 2 + 3 × 3; vse z izmerjeno
+  površino) → **pokritost več-stranskih base POPOLNA: 211/211** (110 čez-Blatt
+  iz P64 bajtno + 101), skupaj **172 atributiranih** (Blatt II 68 · IV 63 ·
+  III 29 · I 8 · V 4) + 39 split z alternativami — za lastniško odločitev o
+  per-Blatt SPLIT joinu; **polna pokritost registra**: 800 base × 1093 vrstic
+  = 589 single-page (implicitno prek strani: I 145 · I·II 10 · II 183 · III 28
+  · IV 205 · V 18) + 211 multi-page; 0 vrstic brez atribucije; soslednost
+  375/425 (R3 189/209); `scripts/p65_ps_attribution_full.py` (I1–I8, `--check`
+  bajtno PASS; 5× sha pini vhodov po lekciji P9) + dokaz
+  `research/issue17/ps-attribution-full.json` + API
+  `/api/atlas/ps-attribution-full` + kartica P65; QA 67 → **68/68**;
+  join v2 in SHEET_GEOREFS nespremanjeni.

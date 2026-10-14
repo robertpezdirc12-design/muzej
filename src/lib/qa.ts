@@ -46,6 +46,7 @@ import {
   UNIT_SEM_P61,
   TAIL_P63,
   ATTR_EXT_P64,
+  ATTR_FULL_P65,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -4409,6 +4410,149 @@ const p45bErrors: string[] = [];
     p64Errors.length === 0
       ? `pini 110/71 · 17/53/1/39/0 · II 42 · III 15 · I 5 · IV 5 · V 4 · prag 53 @ 0.75 · R1↔R2 15/17 == preracun (110 base deleže + status + atribucija iz v2 × pageAttribution; R1 == P60) · ${p64FileDetail}`
       : p64Errors.join("; "),
+  );
+
+  /* ── P65 (issue #13): polna per-Blatt atribucija — 101 single-Blatt več-stranskih base ── */
+  const p65Errors: string[] = [];
+  const af65 = ATTR_FULL_P65;
+  // 1) TS pini
+  if (af65.summary.multiPageBases !== 211 || af65.summary.attributed !== 172 || af65.summary.split !== 39)
+    p65Errors.push("pini: multiPage ≠ 211 ali attributed ≠ 172 ali split ≠ 39");
+  if (af65.summary.statusDist.R1 !== 17 || af65.summary.statusDist.R2a !== 53 ||
+      af65.summary.statusDist.R2b !== 1 || af65.summary.statusDist["R3-single"] !== 101 ||
+      af65.summary.statusDist.split !== 39)
+    p65Errors.push("pini: statusDist ≠ 17/53/1/101/39");
+  if (af65.summary.attributedBlattDist.I !== 8 || af65.summary.attributedBlattDist.II !== 68 ||
+      af65.summary.attributedBlattDist.III !== 29 || af65.summary.attributedBlattDist.IV !== 63 ||
+      af65.summary.attributedBlattDist.V !== 4)
+    p65Errors.push("pini: attributedBlattDist ≠ I 8 · II 68 · III 29 · IV 63 · V 4");
+  if (af65.summary.distByRule["R3-single"].I !== 3 || af65.summary.distByRule["R3-single"].II !== 26 ||
+      af65.summary.distByRule["R3-single"].III !== 14 || af65.summary.distByRule["R3-single"].IV !== 58)
+    p65Errors.push("pini: R3-single dist ≠ I 3 · II 26 · III 14 · IV 58");
+  if (af65.summary.soslednost.ok !== 375 || af65.summary.soslednost.flag !== 50 ||
+      af65.summary.soslednost.relevantRows !== 425 || af65.summary.soslednost.r3Subset.ok !== 189 ||
+      af65.summary.soslednost.r3Subset.flag !== 20)
+    p65Errors.push("pini: soslednost ≠ 375/50 (425; R3 189/20)");
+  if (af65.summary.r3Rows.total !== 205)
+    p65Errors.push("pini: R3 vrstic ≠ 205");
+  const cov65 = af65.summary.coverage;
+  if (cov65.basesTotal !== 800 || cov65.rowsTotal !== 1093 || cov65.singlePage !== 589 ||
+      cov65.multiPage !== 211 || cov65.multiBlatt !== 110 || cov65.singleBlattMultiPage !== 101 ||
+      cov65.nullAttributionRows !== 0)
+    p65Errors.push("pini: coverage ≠ 800/1093/589/211/110/101/0");
+  if (cov65.singlePageByBlatt.I !== 145 || cov65.singlePageByBlatt["I·II"] !== 10 ||
+      cov65.singlePageByBlatt.II !== 183 || cov65.singlePageByBlatt.III !== 28 ||
+      cov65.singlePageByBlatt.IV !== 205 || cov65.singlePageByBlatt.V !== 18)
+    p65Errors.push("pini: singlePageByBlatt ≠ I 145 · I·II 10 · II 183 · III 28 · IV 205 · V 18");
+  // 2) datoteke + NEODVISEN preracun iz runtime kopij (dve obliki po P53/P57/P58)
+  let p65FileDetail = "datoteke niso preverjene (readFile ni na voljo) — celovita kontrola teče na /api/qa";
+  if (opts.readFile) {
+    const rawRt65 = opts.readFile("src/data/atlas/ps-attribution-full.json");
+    const rawEv65 = opts.readFile("research/issue17/ps-attribution-full.json");
+    const rawRt64b = opts.readFile("src/data/atlas/ps-attribution-ext.json");
+    const rawRt59d = opts.readFile("src/data/atlas/ps-blatt-headers.json");
+    const rawV2rt65 = opts.readFile("src/data/atlas/ps-parcels-geo.json");
+    if (rawRt65 === null || rawRt64b === null || rawRt59d === null || rawV2rt65 === null) {
+      p65Errors.push("runtime ps-attribution-full / ps-attribution-ext / ps-blatt-headers / ps-parcels-geo ni berljiv");
+    } else {
+      try {
+        const rt65 = JSON.parse(rawRt65) as {
+          summary: { multiPageBases: number; attributed: number; statusDist: Record<string, number>; attributedBlattDist: Record<string, number>; distByRule: Record<string, Record<string, number>>; coverage: Record<string, unknown> };
+          bases: Record<string, { status: string; attributedBlatt: string | null; blattShares: { blatt: string; areaQK: number; share: number | null }[]; rowsTotal?: number; sosledje: { ok: number; flag: number } }>;
+        };
+        const rt64b = JSON.parse(rawRt64b) as { bases: Record<string, unknown> };
+        const rt59d = JSON.parse(rawRt59d) as { pageAttribution: Record<string, { blatt: string | null }> };
+        const v2rt65 = JSON.parse(rawV2rt65) as { rows: { base: string; page: number; areaQK: number | null }[] };
+        // NEODVISEN preracun: vrstice v2 → base → strani → Blatt
+        const rowsByBase65 = new Map<string, { page: number; areaQK: number | null }[]>();
+        for (const r of v2rt65.rows) {
+          if (!rowsByBase65.has(r.base)) rowsByBase65.set(r.base, []);
+          rowsByBase65.get(r.base)!.push(r);
+        }
+        const pagesOf = (b65: string): number[] =>
+          [...new Set((rowsByBase65.get(b65) ?? []).map((r) => r.page))].sort((x, y) => x - y);
+        const blOf = (p65: number): string | null => rt59d.pageAttribution[String(p65)]?.blatt ?? null;
+        const multiPage65 = [...rowsByBase65.keys()].filter((b65) => pagesOf(b65).length >= 2);
+        const r3set = new Set(multiPage65.filter((b65) => !(b65 in rt64b.bases)));
+        if (multiPage65.length !== 211) p65Errors.push(`preracun: multi-page ${multiPage65.length} ≠ 211`);
+        if (r3set.size !== 101) p65Errors.push(`preracun: R3 base ${r3set.size} ≠ 101`);
+        // coverage preracun
+        const sp65 = [...rowsByBase65.keys()].filter((b65) => pagesOf(b65).length === 1);
+        const spBlatt: Record<string, number> = {};
+        for (const b65 of sp65) {
+          const bl = blOf(pagesOf(b65)[0]) ?? "null";
+          spBlatt[bl] = (spBlatt[bl] ?? 0) + 1;
+        }
+        if (rowsByBase65.size !== 800 || sp65.length !== 589)
+          p65Errors.push(`preracun: base ${rowsByBase65.size}/single-page ${sp65.length} ≠ 800/589`);
+        const spExp: Record<string, number> = { I: 145, "I·II": 10, II: 183, III: 28, IV: 205, V: 18 };
+        for (const [k, v] of Object.entries(spExp)) if ((spBlatt[k] ?? 0) !== v) p65Errors.push(`preracun: singlePageByBlatt.${k} ${spBlatt[k] ?? 0} ≠ ${v}`);
+        const nullRows65 = v2rt65.rows.filter((r) => !blOf(r.page)).length;
+        if (nullRows65 !== 0) p65Errors.push(`preracun: vrstic brez atribucije ${nullRows65} ≠ 0`);
+        // R3 preracun: točno 1 Blatt, atribucija + deleži bajtno
+        const r2h65 = (x: number) => Math.floor(x * 100 + 0.5) / 100;
+        const r4h65 = (x: number) => Math.floor(x * 10000 + 0.5) / 10000;
+        let r3I = 0, r3II = 0, r3III = 0, r3IV = 0, r3Rows = 0;
+        for (const b65 of r3set) {
+          const e65 = rt65.bases[b65];
+          if (!e65) { p65Errors.push(`preracun: ${b65} manjka v runtime R3`); continue; }
+          const bls = new Set((rowsByBase65.get(b65) ?? []).map((r) => blOf(r.page)));
+          if (bls.size !== 1 || bls.has(null)) { p65Errors.push(`preracun: ${b65} Blatt-i ${bls.size} ≠ 1`); continue; }
+          const attr = [...bls][0];
+          if (e65.status !== "R3-single" || e65.attributedBlatt !== attr)
+            p65Errors.push(`preracun: ${b65} status/atribucija ≠ R3-single/${attr}`);
+          if (pagesOf(b65).length < 2) p65Errors.push(`preracun: ${b65} strani < 2`);
+          // blattShares bajtno (ena Blatt)
+          const area = (rowsByBase65.get(b65) ?? []).reduce((s, r) => s + (r.areaQK ?? 0), 0);
+          const expShare = area > 0 ? r4h65(1) : null;
+          if (e65.blattShares.length !== 1 || e65.blattShares[0].blatt !== attr ||
+              e65.blattShares[0].areaQK !== r2h65(area) || e65.blattShares[0].share !== expShare)
+            p65Errors.push(`preracun: ${b65} blattShares ≠ runtime`);
+          if (attr === "I") r3I++; else if (attr === "II") r3II++; else if (attr === "III") r3III++; else r3IV++;
+          r3Rows += e65.rowsTotal ?? 0;
+        }
+        if (r3I !== 3 || r3II !== 26 || r3III !== 14 || r3IV !== 58)
+          p65Errors.push(`preracun: R3 dist I ${r3I} · II ${r3II} · III ${r3III} · IV ${r3IV} ≠ 3/26/14/58`);
+        if (r3Rows !== 205) p65Errors.push(`preracun: R3 vrstic ${r3Rows} ≠ 205`);
+        // skupna atribucija: 172 + dist iz vseh 211
+        let attr65 = 0;
+        const ad: Record<string, number> = { I: 0, II: 0, III: 0, IV: 0, V: 0 };
+        for (const e65 of Object.values(rt65.bases)) {
+          if (e65.attributedBlatt) {
+            attr65++;
+            if (e65.attributedBlatt in ad) ad[e65.attributedBlatt]++;
+          }
+        }
+        if (attr65 !== 172) p65Errors.push(`preracun: attributed ${attr65} ≠ 172`);
+        if (ad.I !== 8 || ad.II !== 68 || ad.III !== 29 || ad.IV !== 63 || ad.V !== 4)
+          p65Errors.push(`preracun: dist I ${ad.I} · II ${ad.II} · III ${ad.III} · IV ${ad.IV} · V ${ad.V} ≠ 8/68/29/63/4`);
+        // I3: P64 podmnožica bajtno (110)
+        for (const [b65, e64b] of Object.entries(rt64b.bases)) {
+          if (JSON.stringify(rt65.bases[b65]) !== JSON.stringify(e64b))
+            p65Errors.push(`I3: ${b65} P64 podmnožica ni bajtno`);
+        }
+        // evidencа (samo repo): dokaz ⊇ runtime bajtno
+        if (rawEv65 !== null) {
+          const ev = JSON.parse(rawEv65) as { runtime: unknown };
+          if (JSON.stringify(ev.runtime) !== JSON.stringify(rt65))
+            p65Errors.push("dokaz: runtime ni bajtno podmnožica dokaza");
+        }
+        p65FileDetail = rawEv65 !== null
+          ? "repo: dokaz == runtime bajtno · preracun: 211 multi-page (110 P64 bajtno + 101 R3) iz v2 × pageAttribution · coverage 800/589 · dist 8/68/29/63/4"
+          : "produkcija: research/ ni v deploymentu — preracun na runtime kopijah (211 base: razčlenitev, R3 atribucije, deleži, coverage)";
+      } catch (e) {
+        p65Errors.push(`ps-attribution-full datoteke neuspešno: ${String(e).slice(0, 80)}`);
+      }
+    }
+  }
+  push(
+    "qa-p65-attribution-full",
+    "P65: POLNA PER-BLATT ATRIBUCIJA (issue #13): odprta točka P64 #3 izpolnjena — 101 single-Blatt več-stranskih base (vse vrstice na straneh ISTEGA Blatta) atributiranih s statusom 'R3-single' (trivialno: I 3 · II 26 · III 14 · IV 58; 205 vrstic — 98 × 2 + 3 × 3) → pokritost več-stranskih base POPOLNA 211/211 (110 čez-Blatt P64 bajtno + 101), skupaj 172 atributiranih (Blatt II 68 · IV 63 · III 29 · I 8 · V 4) + 39 split z alternativami (lastniška odločitev); POLNA POKRITOST REGISTRA: 800 base × 1093 vrstic = 589 single-page (I 145 · I·II 10 · II 183 · III 28 · IV 205 · V 18) + 211 multi-page, 0 vrstic brez atribucije; soslednost 375/425 (R3 189/209); join v2 NESPREMENJEN; status REVIEW",
+    "P65: FULL PER-BLATT ATTRIBUTION (issue #13): the P64 open point #3 fulfilled — the 101 single-Blatt multi-page bases (all rows on pages of the SAME Blatt) attributed with status 'R3-single' (trivial: I 3 · II 26 · III 14 · IV 58; 205 rows — 98 × 2 + 3 × 3) -> multi-page coverage COMPLETE 211/211 (110 cross-Blatt P64 byte-identical + 101), 172 attributed in total (Blatt II 68 · IV 63 · III 29 · I 8 · V 4) + 39 splits with alternatives (owner decision); FULL REGISTER COVERAGE: 800 bases × 1,093 rows = 589 single-page (I 145 · I·II 10 · II 183 · III 28 · IV 205 · V 18) + 211 multi-page, 0 rows without attribution; adjacency 375/425 (R3 189/209); join v2 UNCHANGED; status REVIEW",
+    p65Errors.length === 0,
+    p65Errors.length === 0
+      ? `pini 211/172/39 · 17/53/1/101/39 · II 68 · IV 63 · III 29 · I 8 · V 4 · R3 3/26/14/58 · coverage 800/589/211 · soslednost 375/50 (R3 189/20) == preracun (211 multi-page + coverage iz v2 × pageAttribution; I3 P64 bajtno) · ${p65FileDetail}`
+      : p65Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;

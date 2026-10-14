@@ -1,0 +1,8619 @@
+{
+ "bases": {
+  "1008": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 3627.0,
+     "blatt": "II",
+     "pages": [
+      53,
+      92
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Abtränig Spötlg. Leumuth",
+    "Acker"
+   ],
+   "owners": [
+    "Knall Niklo",
+    "Schineg Johann"
+   ],
+   "pages": [
+    53,
+    92
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 2,
+    "flaggedRows": [
+     "1008@p53",
+     "1008@p92"
+    ],
+    "ok": 0
+   },
+   "status": "R3-single"
+  },
+  "102": {
+   "attributedBlatt": "I",
+   "blattShares": [
+    {
+     "areaQK": 864.0,
+     "blatt": "I",
+     "pages": [
+      7,
+      8
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Gruning Gartl",
+    "Schupfn"
+   ],
+   "owners": [
+    "Hrauf' Hanns",
+    "Strauß Georg"
+   ],
+   "pages": [
+    7,
+    8
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 1,
+    "flaggedRows": [
+     "102@p7"
+    ],
+    "ok": 1
+   },
+   "status": "R3-single"
+  },
+  "1118": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 2272.0,
+     "blatt": "II",
+     "pages": [
+      58,
+      73
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Eingemaut Gfrörer und Laimauer",
+    "Lhize"
+   ],
+   "owners": [
+    "Höfneretz Johann",
+    "Schimaz Patten"
+   ],
+   "pages": [
+    58,
+    73
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "1119": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 2018.0,
+     "blatt": "II",
+     "pages": [
+      58,
+      73
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Eingemaut Gfrörer und Lorenz",
+    "Lhizgutl [?]"
+   ],
+   "owners": [
+    "Krischan Martha",
+    "Pacheg Wipfler"
+   ],
+   "pages": [
+    58,
+    73
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "1120": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 835.0,
+     "blatt": "II",
+     "pages": [
+      58,
+      73
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Eingemaut Gfrörer und Lorenz",
+    "Lhize"
+   ],
+   "owners": [
+    "Krischan Martha",
+    "Pacheg Mulo"
+   ],
+   "pages": [
+    58,
+    73
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "1128": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 2037.0,
+     "blatt": "II",
+     "pages": [
+      59,
+      74
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Schlagfeld G'floggsb."
+   ],
+   "owners": [
+    "Pacheg Michl",
+    "Verbitaker Chufg"
+   ],
+   "pages": [
+    59,
+    74
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 2,
+    "flaggedRows": [
+     "1128@p59",
+     "1128@p74"
+    ],
+    "ok": 0
+   },
+   "status": "R3-single"
+  },
+  "1131": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 708.0,
+     "blatt": "II",
+     "pages": [
+      59,
+      74
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Lukig",
+    "Schlagfeld G'floggsb."
+   ],
+   "owners": [
+    "Pacheg Michl",
+    "Verbitaker Matja"
+   ],
+   "pages": [
+    59,
+    74
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 2,
+    "flaggedRows": [
+     "1131@p59",
+     "1131@p74"
+    ],
+    "ok": 0
+   },
+   "status": "R3-single"
+  },
+  "160": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 2420.0,
+     "blatt": "II",
+     "pages": [
+      86
+     ],
+     "rows": 1,
+     "share": 0.9212
+    },
+    {
+     "areaQK": 207.0,
+     "blatt": "I",
+     "pages": [
+      10
+     ],
+     "rows": 1,
+     "share": 0.0788
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Einhait und Gärten und Laubm."
+   ],
+   "owners": [
+    "LahNitschek Hülfse Mann",
+    "Leschig Martin"
+   ],
+   "pages": [
+    10,
+    86
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R2a"
+  },
+  "1603": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 1005.0,
+     "blatt": "IV",
+     "pages": [
+      93
+     ],
+     "rows": 1,
+     "share": 0.5643
+    },
+    {
+     "areaQK": 776.0,
+     "blatt": "II",
+     "pages": [
+      78
+     ],
+     "rows": 1,
+     "share": 0.4357
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Weide und Gfällgut, Laubm."
+   ],
+   "owners": [
+    "Pachler Martin",
+    "Verboten (er) Bueb?"
+   ],
+   "pages": [
+    78,
+    93
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "1604": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 774.0,
+     "blatt": "II",
+     "pages": [
+      78
+     ],
+     "rows": 1,
+     "share": 0.5167
+    },
+    {
+     "areaQK": 724.0,
+     "blatt": "IV",
+     "pages": [
+      93
+     ],
+     "rows": 1,
+     "share": 0.4833
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Weide und Gfällgut, Laubm."
+   ],
+   "owners": [
+    "Piringer Mathäus",
+    "Ullrich Otto"
+   ],
+   "pages": [
+    78,
+    93
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "1605": {
+   "areaIncomplete": true,
+   "arealessBlatts": [
+    "IV"
+   ],
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 2688.0,
+     "blatt": "II",
+     "pages": [
+      78
+     ],
+     "rows": 1,
+     "share": 1.0
+    },
+    {
+     "areaQK": 0.0,
+     "blatt": "IV",
+     "pages": [
+      93
+     ],
+     "rows": 1,
+     "share": 0.0
+    }
+   ],
+   "kultures": [
+    "Gemeinde Grätzig"
+   ],
+   "owners": [
+    "Tillak Anio",
+    "[?] [?]"
+   ],
+   "pages": [
+    78,
+    93
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R2b"
+  },
+  "161": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 3356.0,
+     "blatt": "II",
+     "pages": [
+      61,
+      83,
+      86
+     ],
+     "rows": 3,
+     "share": 0.933
+    },
+    {
+     "areaQK": 241.0,
+     "blatt": "I",
+     "pages": [
+      11
+     ],
+     "rows": 1,
+     "share": 0.067
+    }
+   ],
+   "kultures": [
+    "Dingf.",
+    "Einhait und Laubm.",
+    "Lohgimand",
+    "Wiese"
+   ],
+   "owners": [
+    "Hlebtzschand",
+    "LahNitschek Waisen",
+    "Pestdiz Pattrl Lorenz",
+    "Poidir Matjaš"
+   ],
+   "pages": [
+    11,
+    61,
+    83,
+    86
+   ],
+   "rowsTotal": 4,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 3
+   },
+   "status": "R2a"
+  },
+  "162": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 3619.0,
+     "blatt": "II",
+     "pages": [
+      61,
+      83,
+      84,
+      86
+     ],
+     "rows": 4,
+     "share": 0.9834
+    },
+    {
+     "areaQK": 61.0,
+     "blatt": "I",
+     "pages": [
+      11
+     ],
+     "rows": 1,
+     "share": 0.0166
+    }
+   ],
+   "kultures": [
+    "Abtragsbuh",
+    "Alm",
+    "Wald",
+    "Wiese"
+   ],
+   "owners": [
+    "Hlebtzschand",
+    "Kustitar Matjaš",
+    "Pechir gneis",
+    "Schimey Martho",
+    "Schumitsch Matja"
+   ],
+   "pages": [
+    11,
+    61,
+    83,
+    84,
+    86
+   ],
+   "rowsTotal": 5,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 4
+   },
+   "status": "R2a"
+  },
+  "163": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 941.0,
+     "blatt": "II",
+     "pages": [
+      61,
+      83,
+      84,
+      86
+     ],
+     "rows": 4,
+     "share": 0.9691
+    },
+    {
+     "areaQK": 30.0,
+     "blatt": "I",
+     "pages": [
+      11
+     ],
+     "rows": 1,
+     "share": 0.0309
+    }
+   ],
+   "kultures": [
+    "Aehn",
+    "Eidau",
+    "Prunigad",
+    "Weide",
+    "Wiese"
+   ],
+   "owners": [
+    "Brulca Miko",
+    "Laune Hülfse",
+    "Schimey Martho",
+    "Schumitsch Matja",
+    "Stainzldt Wölfl"
+   ],
+   "pages": [
+    11,
+    61,
+    83,
+    84,
+    86
+   ],
+   "pas": {
+    "medianRatio": 0.9813,
+    "pages": [
+     61,
+     83,
+     84,
+     86
+    ],
+    "rows": 4
+   },
+   "rowsTotal": 5,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 4
+   },
+   "status": "R1"
+  },
+  "164": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 1455.0,
+     "blatt": "II",
+     "pages": [
+      61,
+      83,
+      84,
+      86
+     ],
+     "rows": 4,
+     "share": 0.8464
+    },
+    {
+     "areaQK": 264.0,
+     "blatt": "I",
+     "pages": [
+      11
+     ],
+     "rows": 1,
+     "share": 0.1536
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Aehn",
+    "Alm",
+    "Lohgimand",
+    "Rohrige"
+   ],
+   "owners": [
+    "Hantel Hlaw",
+    "Hlebtzschand",
+    "Hödle Schamb",
+    "Leuthold Georg",
+    "Schimer Georg"
+   ],
+   "pages": [
+    11,
+    61,
+    83,
+    84,
+    86
+   ],
+   "rowsTotal": 5,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 4
+   },
+   "status": "R2a"
+  },
+  "165": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 1294.0,
+     "blatt": "II",
+     "pages": [
+      61,
+      83,
+      84,
+      86
+     ],
+     "rows": 4,
+     "share": 0.9356
+    },
+    {
+     "areaQK": 89.0,
+     "blatt": "I",
+     "pages": [
+      11
+     ],
+     "rows": 1,
+     "share": 0.0644
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Aehn",
+    "Alm",
+    "Dingf.",
+    "Lohgimand 667"
+   ],
+   "owners": [
+    "Dragosch Gregor",
+    "LahNitschek Hlaw",
+    "Pöllig Martho",
+    "Schimer Matjaš",
+    "Stainzldt Wölfl"
+   ],
+   "pages": [
+    11,
+    61,
+    83,
+    84,
+    86
+   ],
+   "rowsTotal": 5,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 4
+   },
+   "status": "R2a"
+  },
+  "166": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 824.0,
+     "blatt": "II",
+     "pages": [
+      61,
+      83,
+      84,
+      86
+     ],
+     "rows": 4,
+     "share": 0.7992
+    },
+    {
+     "areaQK": 207.0,
+     "blatt": "I",
+     "pages": [
+      11
+     ],
+     "rows": 1,
+     "share": 0.2008
+    }
+   ],
+   "kultures": [
+    "Alm",
+    "Dingf.",
+    "Lohgimand 647",
+    "Wald",
+    "Wiese"
+   ],
+   "owners": [
+    "Poidir Matjaš",
+    "Pöllig Michael",
+    "Schober Hülfse",
+    "Schumitsch Matja",
+    "Stainzhan Wölfl"
+   ],
+   "pages": [
+    11,
+    61,
+    83,
+    84,
+    86
+   ],
+   "rowsTotal": 5,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 4
+   },
+   "status": "R2a"
+  },
+  "168": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 2023.0,
+     "blatt": "II",
+     "pages": [
+      61,
+      83,
+      84,
+      86
+     ],
+     "rows": 4,
+     "share": 0.9121
+    },
+    {
+     "areaQK": 195.0,
+     "blatt": "I",
+     "pages": [
+      11
+     ],
+     "rows": 1,
+     "share": 0.0879
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Alm",
+    "Lohgimand 697",
+    "Wald",
+    "Wiese"
+   ],
+   "owners": [
+    "Poidir Georg",
+    "Schimey Martho",
+    "Schober Hülfse",
+    "Schumitsch Marlo",
+    "Stainzhan Wölfl"
+   ],
+   "pages": [
+    11,
+    61,
+    83,
+    84,
+    86
+   ],
+   "rowsTotal": 5,
+   "sosledje": {
+    "flag": 4,
+    "flaggedRows": [
+     "168@p61",
+     "168@p83",
+     "168@p84",
+     "168@p86"
+    ],
+    "ok": 0
+   },
+   "status": "R2a"
+  },
+  "171": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 867.0,
+     "blatt": "II",
+     "pages": [
+      61,
+      83,
+      84,
+      86
+     ],
+     "rows": 4,
+     "share": 0.9313
+    },
+    {
+     "areaQK": 64.0,
+     "blatt": "I",
+     "pages": [
+      11
+     ],
+     "rows": 1,
+     "share": 0.0687
+    }
+   ],
+   "kultures": [
+    "Alm",
+    "Dingf.",
+    "Eidau",
+    "Wies",
+    "Wiese"
+   ],
+   "owners": [
+    "Laune Hülfse",
+    "Poidir Matjaš",
+    "Schimey Georg",
+    "Stainzldt Wölfl",
+    "Stuller Mihlo"
+   ],
+   "pages": [
+    11,
+    61,
+    83,
+    84,
+    86
+   ],
+   "rowsTotal": 5,
+   "sosledje": {
+    "flag": 4,
+    "flaggedRows": [
+     "171@p61",
+     "171@p83",
+     "171@p84",
+     "171@p86"
+    ],
+    "ok": 0
+   },
+   "status": "R2a"
+  },
+  "173": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 1270.0,
+     "blatt": "II",
+     "pages": [
+      61,
+      83,
+      84,
+      86
+     ],
+     "rows": 4,
+     "share": 0.9428
+    },
+    {
+     "areaQK": 77.0,
+     "blatt": "I",
+     "pages": [
+      11
+     ],
+     "rows": 1,
+     "share": 0.0572
+    }
+   ],
+   "kultures": [
+    "Dingf.",
+    "Gumig Gmand",
+    "Wein",
+    "Wies",
+    "Wiese"
+   ],
+   "owners": [
+    "Brulca Miko",
+    "Brullat Martho",
+    "Hödle Schaw",
+    "Noaßl Mande",
+    "Stainzhan Wölfl"
+   ],
+   "pages": [
+    11,
+    61,
+    83,
+    84,
+    86
+   ],
+   "rowsTotal": 5,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 4
+   },
+   "status": "R2a"
+  },
+  "174": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 2853.0,
+     "blatt": "II",
+     "pages": [
+      61,
+      83,
+      84,
+      86
+     ],
+     "rows": 4,
+     "share": 0.9707
+    },
+    {
+     "areaQK": 86.0,
+     "blatt": "I",
+     "pages": [
+      11
+     ],
+     "rows": 1,
+     "share": 0.0293
+    }
+   ],
+   "kultures": [
+    "Alm",
+    "Gumig Gmde",
+    "Sträuch mit Gipfelung",
+    "Wies",
+    "Wiese"
+   ],
+   "owners": [
+    "Haindlan Hülfse",
+    "Hödle Schaw",
+    "Pestdiz Georg",
+    "Poidir Georg",
+    "Stainzhan Wölfl"
+   ],
+   "pages": [
+    11,
+    61,
+    83,
+    84,
+    86
+   ],
+   "rowsTotal": 5,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 4
+   },
+   "status": "R2a"
+  },
+  "175": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 1876.0,
+     "blatt": "II",
+     "pages": [
+      61,
+      83,
+      84,
+      86
+     ],
+     "rows": 4,
+     "share": 0.8866
+    },
+    {
+     "areaQK": 240.0,
+     "blatt": "I",
+     "pages": [
+      11
+     ],
+     "rows": 1,
+     "share": 0.1134
+    }
+   ],
+   "kultures": [
+    "Grünte",
+    "Gumig Gmde",
+    "Wein",
+    "Wies",
+    "Wiese"
+   ],
+   "owners": [
+    "Kustitar Matjaš",
+    "LahNitschek Hülfse",
+    "Pestdiz Georg",
+    "Schumitsch Marlo",
+    "Stainzldt Wölfl"
+   ],
+   "pages": [
+    11,
+    61,
+    83,
+    84,
+    86
+   ],
+   "rowsTotal": 5,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 4
+   },
+   "status": "R2a"
+  },
+  "176": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 1932.0,
+     "blatt": "II",
+     "pages": [
+      61,
+      83,
+      84,
+      86
+     ],
+     "rows": 4,
+     "share": 0.8879
+    },
+    {
+     "areaQK": 244.0,
+     "blatt": "I",
+     "pages": [
+      11
+     ],
+     "rows": 1,
+     "share": 0.1121
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Dingf.",
+    "Einhait und Gärten und Gärten und Gärten und Laubm.",
+    "Gumig Gmde",
+    "Wein"
+   ],
+   "owners": [
+    "Chrišchan Matjaš",
+    "Hlebtzschand",
+    "Schimey Martho",
+    "Schimey Patteu",
+    "Schumitsch Marlo"
+   ],
+   "pages": [
+    11,
+    61,
+    83,
+    84,
+    86
+   ],
+   "pas": {
+    "medianRatio": 0.9371,
+    "pages": [
+     61,
+     83,
+     84,
+     86
+    ],
+    "rows": 4
+   },
+   "rowsTotal": 5,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 4
+   },
+   "status": "R1"
+  },
+  "179": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 2778.0,
+     "blatt": "II",
+     "pages": [
+      61,
+      83,
+      84,
+      86
+     ],
+     "rows": 4,
+     "share": 0.9734
+    },
+    {
+     "areaQK": 76.0,
+     "blatt": "I",
+     "pages": [
+      11
+     ],
+     "rows": 1,
+     "share": 0.0266
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Aehn",
+    "Alm",
+    "Eidau"
+   ],
+   "owners": [
+    "Brulca Miko",
+    "Brullat Martho",
+    "Pechir gneis",
+    "Schaffhatsch Matja",
+    "Stainzhan Wölfl"
+   ],
+   "pages": [
+    11,
+    61,
+    83,
+    84,
+    86
+   ],
+   "rowsTotal": 5,
+   "sosledje": {
+    "flag": 4,
+    "flaggedRows": [
+     "179@p61",
+     "179@p83",
+     "179@p84",
+     "179@p86"
+    ],
+    "ok": 0
+   },
+   "status": "R2a"
+  },
+  "1821": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 481.0,
+     "blatt": "II",
+     "pages": [
+      64,
+      79
+     ],
+     "rows": 2,
+     "share": 0.6961
+    },
+    {
+     "areaQK": 210.0,
+     "blatt": "III",
+     "pages": [
+      94
+     ],
+     "rows": 1,
+     "share": 0.3039
+    }
+   ],
+   "kultures": [
+    "Einöd Wiese Geyersättä",
+    "Wiese und Äcker",
+    "Äfling"
+   ],
+   "owners": [
+    "Büller Lorenz",
+    "Peterig Mathä",
+    "Pößlrey Peter Bäuer Grübl"
+   ],
+   "pages": [
+    64,
+    79,
+    94
+   ],
+   "rowsTotal": 3,
+   "sosledje": {
+    "flag": 3,
+    "flaggedRows": [
+     "1821@p64",
+     "1821@p79",
+     "1821@p94"
+    ],
+    "ok": 0
+   },
+   "status": "split"
+  },
+  "1825": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 1298.0,
+     "blatt": "II",
+     "pages": [
+      64,
+      79
+     ],
+     "rows": 2,
+     "share": 0.9219
+    },
+    {
+     "areaQK": 110.0,
+     "blatt": "III",
+     "pages": [
+      94
+     ],
+     "rows": 1,
+     "share": 0.0781
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Einöd Wiese Geyersättä",
+    "Wiese und Äcker"
+   ],
+   "owners": [
+    "Brinig Mihelj",
+    "Schamey Hanß",
+    "Schimming Maria"
+   ],
+   "pages": [
+    64,
+    79,
+    94
+   ],
+   "rowsTotal": 3,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R2a"
+  },
+  "1826": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 1182.0,
+     "blatt": "II",
+     "pages": [
+      64,
+      79
+     ],
+     "rows": 2,
+     "share": 0.9271
+    },
+    {
+     "areaQK": 93.0,
+     "blatt": "III",
+     "pages": [
+      94
+     ],
+     "rows": 1,
+     "share": 0.0729
+    }
+   ],
+   "kultures": [
+    "Einöd Wiese Geyersättä",
+    "Wiese und Äcker",
+    "Äfling"
+   ],
+   "owners": [
+    "Brinig Mihelj",
+    "Göllach Matha",
+    "Schintz Georg"
+   ],
+   "pages": [
+    64,
+    79,
+    94
+   ],
+   "rowsTotal": 3,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R2a"
+  },
+  "1827": {
+   "attributedBlatt": "III",
+   "blattShares": [
+    {
+     "areaQK": 2608.0,
+     "blatt": "III",
+     "pages": [
+      94
+     ],
+     "rows": 1,
+     "share": 0.8446
+    },
+    {
+     "areaQK": 480.0,
+     "blatt": "II",
+     "pages": [
+      64,
+      79
+     ],
+     "rows": 2,
+     "share": 0.1554
+    }
+   ],
+   "kultures": [
+    "Einöd Wiese Geyersättä",
+    "Wiese",
+    "Wiese und Äcker"
+   ],
+   "owners": [
+    "Kreševan Mihelj",
+    "Schamey Kathar.",
+    "Schimming Johann"
+   ],
+   "pages": [
+    64,
+    79,
+    94
+   ],
+   "rowsTotal": 3,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R2a"
+  },
+  "1828": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 3593.0,
+     "blatt": "II",
+     "pages": [
+      64,
+      79
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Einöd Wiese Geyersättä",
+    "Wiese"
+   ],
+   "owners": [
+    "Aumeier Georg",
+    "Gavčnik Gregor"
+   ],
+   "pages": [
+    64,
+    79
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "1829": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 4961.0,
+     "blatt": "II",
+     "pages": [
+      64,
+      79
+     ],
+     "rows": 2,
+     "share": 0.815
+    },
+    {
+     "areaQK": 1126.0,
+     "blatt": "III",
+     "pages": [
+      94
+     ],
+     "rows": 1,
+     "share": 0.185
+    }
+   ],
+   "kultures": [
+    "Einöd Wiese Gey. sätä",
+    "Wiese und Äcker",
+    "Äfling"
+   ],
+   "owners": [
+    "Johann Gregor",
+    "Schamey Hanß",
+    "Uebl Anton"
+   ],
+   "pages": [
+    64,
+    79,
+    94
+   ],
+   "rowsTotal": 3,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R2a"
+  },
+  "1830": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 4947.0,
+     "blatt": "II",
+     "pages": [
+      64,
+      79
+     ],
+     "rows": 2,
+     "share": 0.8687
+    },
+    {
+     "areaQK": 748.0,
+     "blatt": "III",
+     "pages": [
+      94
+     ],
+     "rows": 1,
+     "share": 0.1313
+    }
+   ],
+   "kultures": [
+    "Einöd Wiese Geyersättä",
+    "Wiese und Äcker",
+    "Äfling"
+   ],
+   "owners": [
+    "Pavlič Mihelj",
+    "Schamey Hanß",
+    "Schimming Paul"
+   ],
+   "pages": [
+    64,
+    79,
+    94
+   ],
+   "rowsTotal": 3,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R2a"
+  },
+  "1831": {
+   "attributedBlatt": "III",
+   "blattShares": [
+    {
+     "areaQK": 2824.0,
+     "blatt": "III",
+     "pages": [
+      94
+     ],
+     "rows": 1,
+     "share": 0.6408
+    },
+    {
+     "areaQK": 1583.0,
+     "blatt": "II",
+     "pages": [
+      64,
+      79
+     ],
+     "rows": 2,
+     "share": 0.3592
+    }
+   ],
+   "kultures": [
+    "Einöd Wiese Gey. sätä",
+    "Wiese und Äcker",
+    "Äfling"
+   ],
+   "owners": [
+    "Gavčnik Miha",
+    "Peterig Mathä",
+    "Schimming Paul"
+   ],
+   "pages": [
+    64,
+    79,
+    94
+   ],
+   "pas": {
+    "medianRatio": 1.0035,
+    "pages": [
+     94
+    ],
+    "rows": 1
+   },
+   "rowsTotal": 3,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R1"
+  },
+  "1832": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 1206.0,
+     "blatt": "III",
+     "pages": [
+      94
+     ],
+     "rows": 1,
+     "share": 0.5196
+    },
+    {
+     "areaQK": 1115.0,
+     "blatt": "II",
+     "pages": [
+      64,
+      79
+     ],
+     "rows": 2,
+     "share": 0.4804
+    }
+   ],
+   "kultures": [
+    "Einhauß",
+    "Wiese und Äcker",
+    "Äfling"
+   ],
+   "owners": [
+    "Mellner Lorenz",
+    "Pavlič Mihelj",
+    "Uebl Thomas"
+   ],
+   "pages": [
+    64,
+    79,
+    94
+   ],
+   "rowsTotal": 3,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 3
+   },
+   "status": "split"
+  },
+  "1833": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 2122.0,
+     "blatt": "II",
+     "pages": [
+      64,
+      79
+     ],
+     "rows": 2,
+     "share": 0.6405
+    },
+    {
+     "areaQK": 1191.0,
+     "blatt": "III",
+     "pages": [
+      94
+     ],
+     "rows": 1,
+     "share": 0.3595
+    }
+   ],
+   "kultures": [
+    "Einöd Wiese Gey. sätä",
+    "Wiese und Äcker",
+    "Äfling"
+   ],
+   "owners": [
+    "Budle Miha",
+    "Miller Joseph",
+    "Uebl Thomas"
+   ],
+   "pages": [
+    64,
+    79,
+    94
+   ],
+   "rowsTotal": 3,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 3
+   },
+   "status": "split"
+  },
+  "1834": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 1531.0,
+     "blatt": "II",
+     "pages": [
+      64,
+      79
+     ],
+     "rows": 2,
+     "share": 0.5689
+    },
+    {
+     "areaQK": 1160.0,
+     "blatt": "III",
+     "pages": [
+      94
+     ],
+     "rows": 1,
+     "share": 0.4311
+    }
+   ],
+   "kultures": [
+    "Einöd Wiese Geyersättä",
+    "Wiese und Äcker",
+    "Äfling"
+   ],
+   "owners": [
+    "Lehko Gregor",
+    "Peterig Mathä",
+    "Schimming Anna"
+   ],
+   "pages": [
+    64,
+    79,
+    94
+   ],
+   "rowsTotal": 3,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 3
+   },
+   "status": "split"
+  },
+  "1835": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 2569.0,
+     "blatt": "II",
+     "pages": [
+      64,
+      79
+     ],
+     "rows": 2,
+     "share": 0.9787
+    },
+    {
+     "areaQK": 56.0,
+     "blatt": "III",
+     "pages": [
+      94
+     ],
+     "rows": 1,
+     "share": 0.0213
+    }
+   ],
+   "kultures": [
+    "Einöd Wiese Geyersättä",
+    "Äcker",
+    "Äfling"
+   ],
+   "owners": [
+    "Duh Gregor",
+    "Peterig Georg",
+    "Schimming Johann"
+   ],
+   "pages": [
+    64,
+    79,
+    94
+   ],
+   "rowsTotal": 3,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R2a"
+  },
+  "1836": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 1420.0,
+     "blatt": "II",
+     "pages": [
+      64,
+      79
+     ],
+     "rows": 2,
+     "share": 0.5959
+    },
+    {
+     "areaQK": 963.0,
+     "blatt": "III",
+     "pages": [
+      94
+     ],
+     "rows": 1,
+     "share": 0.4041
+    }
+   ],
+   "kultures": [
+    "Einöd Wiese Geyersättä",
+    "Äcker und Wiesen",
+    "Äfling"
+   ],
+   "owners": [
+    "Brinig Miha",
+    "Peterig Mathä",
+    "Schimming Magdalena"
+   ],
+   "pages": [
+    64,
+    79,
+    94
+   ],
+   "rowsTotal": 3,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 3
+   },
+   "status": "split"
+  },
+  "1837": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 1087.0,
+     "blatt": "II",
+     "pages": [
+      64,
+      79
+     ],
+     "rows": 2,
+     "share": 0.5785
+    },
+    {
+     "areaQK": 792.0,
+     "blatt": "III",
+     "pages": [
+      94
+     ],
+     "rows": 1,
+     "share": 0.4215
+    }
+   ],
+   "kultures": [
+    "Einöd Wiese Geyersättä",
+    "Gärten Gartlitzg",
+    "Äcker und Wiesen"
+   ],
+   "owners": [
+    "Kraichand Matho",
+    "Tillak Miha",
+    "Ueich Georg"
+   ],
+   "pages": [
+    64,
+    79,
+    94
+   ],
+   "rowsTotal": 3,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 3
+   },
+   "status": "split"
+  },
+  "1838": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 1036.0,
+     "blatt": "III",
+     "pages": [
+      94
+     ],
+     "rows": 1,
+     "share": 0.6356
+    },
+    {
+     "areaQK": 594.0,
+     "blatt": "II",
+     "pages": [
+      64,
+      79
+     ],
+     "rows": 2,
+     "share": 0.3644
+    }
+   ],
+   "kultures": [
+    "Einöd Wiese Geyersättä",
+    "Wiese und Äcker",
+    "Äfling"
+   ],
+   "owners": [
+    "Mellner Lorenz",
+    "Tillak Miha",
+    "Ueich Peter"
+   ],
+   "pages": [
+    64,
+    79,
+    94
+   ],
+   "rowsTotal": 3,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 3
+   },
+   "status": "split"
+  },
+  "1839": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 2352.0,
+     "blatt": "III",
+     "pages": [
+      94
+     ],
+     "rows": 1,
+     "share": 0.5494
+    },
+    {
+     "areaQK": 1929.0,
+     "blatt": "II",
+     "pages": [
+      64,
+      79
+     ],
+     "rows": 2,
+     "share": 0.4506
+    }
+   ],
+   "kultures": [
+    "Einöd Wiese Geyersättä",
+    "Äcker und Wiesen",
+    "Äfling"
+   ],
+   "owners": [
+    "Dannay Michael",
+    "Kreševan Gregor",
+    "Uebl Anton"
+   ],
+   "pages": [
+    64,
+    79,
+    94
+   ],
+   "rowsTotal": 3,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 3
+   },
+   "status": "split"
+  },
+  "1840": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 1832.0,
+     "blatt": "II",
+     "pages": [
+      64,
+      79
+     ],
+     "rows": 2,
+     "share": 0.8078
+    },
+    {
+     "areaQK": 436.0,
+     "blatt": "III",
+     "pages": [
+      94
+     ],
+     "rows": 1,
+     "share": 0.1922
+    }
+   ],
+   "kultures": [
+    "Eshauß",
+    "Äcker und Wiesen",
+    "Äfling"
+   ],
+   "owners": [
+    "Peterig Mathä",
+    "Pößlrey Andreas",
+    "Volklandšekb[?]"
+   ],
+   "pages": [
+    64,
+    79,
+    94
+   ],
+   "rowsTotal": 3,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R2a"
+  },
+  "1944": {
+   "attributedBlatt": "III",
+   "blattShares": [
+    {
+     "areaQK": 4608.0,
+     "blatt": "III",
+     "pages": [
+      95,
+      100
+     ],
+     "rows": 2,
+     "share": 0.9742
+    },
+    {
+     "areaQK": 122.0,
+     "blatt": "II",
+     "pages": [
+      90
+     ],
+     "rows": 1,
+     "share": 0.0258
+    }
+   ],
+   "kultures": [
+    "Schüttwiese, Gypfang, Laume",
+    "Wiese",
+    "Äcker und Wiesen"
+   ],
+   "owners": [
+    "Heinrich Georg",
+    "Huberl Martha",
+    "Leinichan Georg"
+   ],
+   "pages": [
+    90,
+    95,
+    100
+   ],
+   "rowsTotal": 3,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R2a"
+  },
+  "1945": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 953.0,
+     "blatt": "III",
+     "pages": [
+      95,
+      100
+     ],
+     "rows": 2,
+     "share": 0.6208
+    },
+    {
+     "areaQK": 582.0,
+     "blatt": "II",
+     "pages": [
+      90
+     ],
+     "rows": 1,
+     "share": 0.3792
+    }
+   ],
+   "kultures": [
+    "Schüttwiese, Gypfang, Laume",
+    "Wiese",
+    "Äcker und Wiesen"
+   ],
+   "owners": [
+    "Böning Johann",
+    "Eurich Mädl",
+    "Leinichan Georg"
+   ],
+   "pages": [
+    90,
+    95,
+    100
+   ],
+   "rowsTotal": 3,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 3
+   },
+   "status": "split"
+  },
+  "1946": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 1519.0,
+     "blatt": "III",
+     "pages": [
+      95,
+      100
+     ],
+     "rows": 2,
+     "share": 0.5717
+    },
+    {
+     "areaQK": 1138.0,
+     "blatt": "II",
+     "pages": [
+      90
+     ],
+     "rows": 1,
+     "share": 0.4283
+    }
+   ],
+   "kultures": [
+    "Schüttwiese, Gypfang, Laume",
+    "Wiese",
+    "Äcker und Wiesen"
+   ],
+   "owners": [
+    "Böning Martha",
+    "Pörtschach er Mägd",
+    "Vorbithaler Wolf"
+   ],
+   "pages": [
+    90,
+    95,
+    100
+   ],
+   "rowsTotal": 3,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 3
+   },
+   "status": "split"
+  },
+  "1947": {
+   "attributedBlatt": "III",
+   "blattShares": [
+    {
+     "areaQK": 3652.0,
+     "blatt": "III",
+     "pages": [
+      95,
+      100
+     ],
+     "rows": 2,
+     "share": 0.7969
+    },
+    {
+     "areaQK": 931.0,
+     "blatt": "II",
+     "pages": [
+      90
+     ],
+     "rows": 1,
+     "share": 0.2031
+    }
+   ],
+   "kultures": [
+    "Schüttwiese, Gypfang, Laume",
+    "Wiese",
+    "Äcker und Wiesen"
+   ],
+   "owners": [
+    "Böning Maria",
+    "Hönig Mairadl",
+    "Stüllach Wolf"
+   ],
+   "pages": [
+    90,
+    95,
+    100
+   ],
+   "rowsTotal": 3,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R2a"
+  },
+  "1948": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 2126.0,
+     "blatt": "II",
+     "pages": [
+      90
+     ],
+     "rows": 1,
+     "share": 0.5222
+    },
+    {
+     "areaQK": 1945.0,
+     "blatt": "III",
+     "pages": [
+      95,
+      100
+     ],
+     "rows": 2,
+     "share": 0.4778
+    }
+   ],
+   "kultures": [
+    "Schüttwiese, Gypfang, Laume",
+    "Wiesen und Laubm",
+    "Äcker und Wiesen"
+   ],
+   "owners": [
+    "Böning Martha",
+    "Knieschen Georg",
+    "Pessirig Georg"
+   ],
+   "pages": [
+    90,
+    95,
+    100
+   ],
+   "rowsTotal": 3,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 3
+   },
+   "status": "split"
+  },
+  "1949": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 2196.0,
+     "blatt": "II",
+     "pages": [
+      90
+     ],
+     "rows": 1,
+     "share": 0.7863
+    },
+    {
+     "areaQK": 597.0,
+     "blatt": "III",
+     "pages": [
+      95
+     ],
+     "rows": 1,
+     "share": 0.2137
+    }
+   ],
+   "kultures": [
+    "Wiesen und Laubm",
+    "Äcker und Wiesen"
+   ],
+   "owners": [
+    "Grübler Michl",
+    "Knieschen Mägde"
+   ],
+   "pages": [
+    90,
+    95
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R2a"
+  },
+  "1952": {
+   "attributedBlatt": "III",
+   "blattShares": [
+    {
+     "areaQK": 1860.0,
+     "blatt": "III",
+     "pages": [
+      95,
+      100
+     ],
+     "rows": 2,
+     "share": 0.7939
+    },
+    {
+     "areaQK": 483.0,
+     "blatt": "II",
+     "pages": [
+      90
+     ],
+     "rows": 1,
+     "share": 0.2061
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Schüttwiese, Gypfang, Laume",
+    "Äcker und Wiesen"
+   ],
+   "owners": [
+    "Huberl Martha",
+    "Knieschen Mägden",
+    "Schimeg Georg"
+   ],
+   "pages": [
+    90,
+    95,
+    100
+   ],
+   "rowsTotal": 3,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R2a"
+  },
+  "1953": {
+   "attributedBlatt": "III",
+   "blattShares": [
+    {
+     "areaQK": 1777.0,
+     "blatt": "III",
+     "pages": [
+      95,
+      100
+     ],
+     "rows": 2,
+     "share": 0.8446
+    },
+    {
+     "areaQK": 327.0,
+     "blatt": "II",
+     "pages": [
+      90
+     ],
+     "rows": 1,
+     "share": 0.1554
+    }
+   ],
+   "kultures": [
+    "Schüttwiese, Gypfang, Laume",
+    "Wiese",
+    "Äcker und Wiesen"
+   ],
+   "owners": [
+    "Knieschen Mägde",
+    "Pessirig Wolf",
+    "Pöll Georg"
+   ],
+   "pages": [
+    90,
+    95,
+    100
+   ],
+   "rowsTotal": 3,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R2a"
+  },
+  "1954": {
+   "attributedBlatt": "III",
+   "blattShares": [
+    {
+     "areaQK": 3644.0,
+     "blatt": "III",
+     "pages": [
+      95,
+      100
+     ],
+     "rows": 2,
+     "share": 0.8716
+    },
+    {
+     "areaQK": 537.0,
+     "blatt": "II",
+     "pages": [
+      90
+     ],
+     "rows": 1,
+     "share": 0.1284
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Schüttwiese, Gypfang, Laume",
+    "Äcker und Wiesen"
+   ],
+   "owners": [
+    "Dechtlatsch Martha",
+    "Knieschen Mägde",
+    "Pessirig Georg"
+   ],
+   "pages": [
+    90,
+    95,
+    100
+   ],
+   "rowsTotal": 3,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R2a"
+  },
+  "1955": {
+   "attributedBlatt": "III",
+   "blattShares": [
+    {
+     "areaQK": 3332.0,
+     "blatt": "III",
+     "pages": [
+      95,
+      100
+     ],
+     "rows": 2,
+     "share": 0.9902
+    },
+    {
+     "areaQK": 33.0,
+     "blatt": "II",
+     "pages": [
+      90
+     ],
+     "rows": 1,
+     "share": 0.0098
+    }
+   ],
+   "kultures": [
+    "Schüttwiese, Gypfang",
+    "Wiese",
+    "Äcker und Wiesen"
+   ],
+   "owners": [
+    "Grübler Michl",
+    "Knieschen Mägde",
+    "Pförg Maria"
+   ],
+   "pages": [
+    90,
+    95,
+    100
+   ],
+   "rowsTotal": 3,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R2a"
+  },
+  "1956": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 4417.0,
+     "blatt": "II",
+     "pages": [
+      90
+     ],
+     "rows": 1,
+     "share": 0.7707
+    },
+    {
+     "areaQK": 1314.0,
+     "blatt": "III",
+     "pages": [
+      95,
+      100
+     ],
+     "rows": 2,
+     "share": 0.2293
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Schüttwiese, Gypfang, Laume",
+    "Wald"
+   ],
+   "owners": [
+    "Hiebletzh Jhan",
+    "Krischan Georg",
+    "Stüllach Wolf"
+   ],
+   "pages": [
+    90,
+    95,
+    100
+   ],
+   "rowsTotal": 3,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R2a"
+  },
+  "1957": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 1183.0,
+     "blatt": "II",
+     "pages": [
+      90
+     ],
+     "rows": 1,
+     "share": 0.518
+    },
+    {
+     "areaQK": 1101.0,
+     "blatt": "III",
+     "pages": [
+      95,
+      100
+     ],
+     "rows": 2,
+     "share": 0.482
+    }
+   ],
+   "kultures": [
+    "Schüttwiese, Gypfang, Laume",
+    "Wiesen und Laubm",
+    "Äcker und Wiesen"
+   ],
+   "owners": [
+    "Grüning Michl",
+    "Hiebletzh Jhan",
+    "Podariz Martha"
+   ],
+   "pages": [
+    90,
+    95,
+    100
+   ],
+   "rowsTotal": 3,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 3
+   },
+   "status": "split"
+  },
+  "1958": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 2634.0,
+     "blatt": "II",
+     "pages": [
+      90
+     ],
+     "rows": 1,
+     "share": 0.5882
+    },
+    {
+     "areaQK": 1844.0,
+     "blatt": "III",
+     "pages": [
+      95,
+      100
+     ],
+     "rows": 2,
+     "share": 0.4118
+    }
+   ],
+   "kultures": [
+    "Schüttwiese, Gypfang, Laume",
+    "Wiesen und Laubm",
+    "Äcker und Wiesen"
+   ],
+   "owners": [
+    "Hiebletzh Jhan",
+    "Hranig(?) Georg",
+    "Leinichan Maria"
+   ],
+   "pages": [
+    90,
+    95,
+    100
+   ],
+   "rowsTotal": 3,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 3
+   },
+   "status": "split"
+  },
+  "1959": {
+   "attributedBlatt": "III",
+   "blattShares": [
+    {
+     "areaQK": 3659.0,
+     "blatt": "III",
+     "pages": [
+      95,
+      100
+     ],
+     "rows": 2,
+     "share": 0.9487
+    },
+    {
+     "areaQK": 198.0,
+     "blatt": "II",
+     "pages": [
+      90
+     ],
+     "rows": 1,
+     "share": 0.0513
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Schüttwiese, Gypfang, Laume",
+    "Äcker und Wiesen"
+   ],
+   "owners": [
+    "Grüning Johanna",
+    "Khunertch Mägden",
+    "Podariz Georg"
+   ],
+   "pages": [
+    90,
+    95,
+    100
+   ],
+   "rowsTotal": 3,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R2a"
+  },
+  "1960": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 3627.0,
+     "blatt": "III",
+     "pages": [
+      95,
+      100,
+      101
+     ],
+     "rows": 3,
+     "share": 0.6362
+    },
+    {
+     "areaQK": 2074.0,
+     "blatt": "II",
+     "pages": [
+      90
+     ],
+     "rows": 1,
+     "share": 0.3638
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Schüttwiese, Gypfang, Laume",
+    "Wiesen und Laubm",
+    "Äcker und Wiesen"
+   ],
+   "owners": [
+    "Hiebletzh Jhan",
+    "Leinichan Michl",
+    "Lorenz Lorenz",
+    "Podariz Martha"
+   ],
+   "pages": [
+    90,
+    95,
+    100,
+    101
+   ],
+   "rowsTotal": 4,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 4
+   },
+   "status": "split"
+  },
+  "1961": {
+   "attributedBlatt": "III",
+   "blattShares": [
+    {
+     "areaQK": 962.0,
+     "blatt": "III",
+     "pages": [
+      96,
+      101
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Schlagfeld"
+   ],
+   "owners": [
+    "Fürlach Mathä",
+    "Riedl"
+   ],
+   "pages": [
+    96,
+    101
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 1,
+    "flaggedRows": [
+     "1961@p96"
+    ],
+    "ok": 1
+   },
+   "status": "R3-single"
+  },
+  "1963": {
+   "attributedBlatt": "III",
+   "blattShares": [
+    {
+     "areaQK": 4394.0,
+     "blatt": "III",
+     "pages": [
+      96,
+      101
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Luppa"
+   ],
+   "owners": [
+    "Müllner",
+    "Schimatz Matho"
+   ],
+   "pages": [
+    96,
+    101
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "1964": {
+   "attributedBlatt": "III",
+   "blattShares": [
+    {
+     "areaQK": 6569.0,
+     "blatt": "III",
+     "pages": [
+      96,
+      101
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Schlagfeld"
+   ],
+   "owners": [
+    "Müllner",
+    "Schimatz Matho"
+   ],
+   "pages": [
+    96,
+    101
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "1965": {
+   "attributedBlatt": "III",
+   "blattShares": [
+    {
+     "areaQK": 1874.0,
+     "blatt": "III",
+     "pages": [
+      96,
+      101
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Luppa"
+   ],
+   "owners": [
+    "Böning Matho",
+    "Schimert"
+   ],
+   "pages": [
+    96,
+    101
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "1966": {
+   "attributedBlatt": "III",
+   "blattShares": [
+    {
+     "areaQK": 1835.0,
+     "blatt": "III",
+     "pages": [
+      96,
+      101
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Schlagfeld"
+   ],
+   "owners": [
+    "Leopold",
+    "Nitschhan Matho"
+   ],
+   "pages": [
+    96,
+    101
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "1967": {
+   "attributedBlatt": "III",
+   "blattShares": [
+    {
+     "areaQK": 1265.0,
+     "blatt": "III",
+     "pages": [
+      96,
+      101
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Schlagfeld"
+   ],
+   "owners": [
+    "Böning Matho",
+    "Stullak"
+   ],
+   "pages": [
+    96,
+    101
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "1970": {
+   "attributedBlatt": "III",
+   "blattShares": [
+    {
+     "areaQK": 3393.0,
+     "blatt": "III",
+     "pages": [
+      96,
+      101
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Wiese",
+    "Wiesen und Hügeln und Raine"
+   ],
+   "owners": [
+    "Mallwitz Joseph",
+    "Stullak"
+   ],
+   "pages": [
+    96,
+    101
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 2,
+    "flaggedRows": [
+     "1970@p96",
+     "1970@p101"
+    ],
+    "ok": 0
+   },
+   "status": "R3-single"
+  },
+  "1972": {
+   "attributedBlatt": "III",
+   "blattShares": [
+    {
+     "areaQK": 1413.0,
+     "blatt": "III",
+     "pages": [
+      96,
+      101
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Luppa"
+   ],
+   "owners": [
+    "Böning Matho",
+    "Leudgar"
+   ],
+   "pages": [
+    96,
+    101
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "1973": {
+   "attributedBlatt": "III",
+   "blattShares": [
+    {
+     "areaQK": 1247.0,
+     "blatt": "III",
+     "pages": [
+      96,
+      101
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Schlagfeld"
+   ],
+   "owners": [
+    "Deutischek Matho",
+    "Schimer"
+   ],
+   "pages": [
+    96,
+    101
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "1974": {
+   "attributedBlatt": "III",
+   "blattShares": [
+    {
+     "areaQK": 645.0,
+     "blatt": "III",
+     "pages": [
+      96,
+      101
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Schlagfeld"
+   ],
+   "owners": [
+    "Fürlach Huffa",
+    "Schimert"
+   ],
+   "pages": [
+    96,
+    101
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "1975": {
+   "attributedBlatt": "III",
+   "blattShares": [
+    {
+     "areaQK": 2768.0,
+     "blatt": "III",
+     "pages": [
+      96,
+      101
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Schlagfeld"
+   ],
+   "owners": [
+    "Leopold",
+    "Nitschhan Georg"
+   ],
+   "pages": [
+    96,
+    101
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "1976": {
+   "attributedBlatt": "III",
+   "blattShares": [
+    {
+     "areaQK": 1984.0,
+     "blatt": "III",
+     "pages": [
+      96,
+      101
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Wald und Gesträuch und Raine"
+   ],
+   "owners": [
+    "Leopold",
+    "Schimatz Matho"
+   ],
+   "pages": [
+    96,
+    101
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "1977": {
+   "attributedBlatt": "III",
+   "blattShares": [
+    {
+     "areaQK": 1824.0,
+     "blatt": "III",
+     "pages": [
+      96,
+      101
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Wald und Gesträuch und Raine"
+   ],
+   "owners": [
+    "Fürlach Huffa",
+    "Leopold"
+   ],
+   "pages": [
+    96,
+    101
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "1978": {
+   "attributedBlatt": "III",
+   "blattShares": [
+    {
+     "areaQK": 2178.0,
+     "blatt": "III",
+     "pages": [
+      96,
+      101
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Wald und Gesträuch und Raine"
+   ],
+   "owners": [
+    "Deutischek Matho",
+    "Pfister"
+   ],
+   "pages": [
+    96,
+    101
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "1980": {
+   "attributedBlatt": "III",
+   "blattShares": [
+    {
+     "areaQK": 7528.0,
+     "blatt": "III",
+     "pages": [
+      96,
+      101
+     ],
+     "rows": 2,
+     "share": 0.7803
+    },
+    {
+     "areaQK": 2119.0,
+     "blatt": "IV",
+     "pages": [
+      102
+     ],
+     "rows": 1,
+     "share": 0.2197
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Acker und Wiesen",
+    "Schlagfeld"
+   ],
+   "owners": [
+    "Heuritsch Hans Hanns grübl",
+    "Schimert",
+    "Stuppler Matho"
+   ],
+   "pages": [
+    96,
+    101,
+    102
+   ],
+   "rowsTotal": 3,
+   "sosledje": {
+    "flag": 1,
+    "flaggedRows": [
+     "1980@p101"
+    ],
+    "ok": 1
+   },
+   "status": "R2a"
+  },
+  "2002": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 3043.0,
+     "blatt": "IV",
+     "pages": [
+      103,
+      118
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Wiste"
+   ],
+   "owners": [
+    "Heisslhan Mufi",
+    "Scholastika Gregor"
+   ],
+   "pages": [
+    103,
+    118
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2003": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 1723.0,
+     "blatt": "IV",
+     "pages": [
+      103,
+      118
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Wiste"
+   ],
+   "owners": [
+    "Heisslhan Mufi",
+    "Scholastika Monika"
+   ],
+   "pages": [
+    103,
+    118
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2004": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 1097.0,
+     "blatt": "IV",
+     "pages": [
+      103,
+      118
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Wistmad"
+   ],
+   "owners": [
+    "Pestig Gregor",
+    "Seidig Maria"
+   ],
+   "pages": [
+    103,
+    118
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2005": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 3090.0,
+     "blatt": "IV",
+     "pages": [
+      103,
+      118
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Wistmad"
+   ],
+   "owners": [
+    "Schneidlatz Mufi",
+    "Wurach John"
+   ],
+   "pages": [
+    103,
+    118
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2006": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 1952.0,
+     "blatt": "IV",
+     "pages": [
+      103,
+      118
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Wistmad"
+   ],
+   "owners": [
+    "Heisslhan Mufi",
+    "Lappany Michl"
+   ],
+   "pages": [
+    103,
+    118
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2008": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 1326.0,
+     "blatt": "IV",
+     "pages": [
+      103,
+      118
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Wistn"
+   ],
+   "owners": [
+    "Heisslhan Mufi",
+    "Lappany Michl"
+   ],
+   "pages": [
+    103,
+    118
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2009": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 3349.0,
+     "blatt": "IV",
+     "pages": [
+      103,
+      118
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Wiste"
+   ],
+   "owners": [
+    "Heisslhan Mufi",
+    "Lappeg Gregor"
+   ],
+   "pages": [
+    103,
+    118
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2010": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 2354.0,
+     "blatt": "IV",
+     "pages": [
+      103,
+      118
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Wiste"
+   ],
+   "owners": [
+    "Heisslhan Mufi",
+    "Lappeg Michael"
+   ],
+   "pages": [
+    103,
+    118
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2011": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 2152.0,
+     "blatt": "IV",
+     "pages": [
+      103,
+      118
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Eggwisen"
+   ],
+   "owners": [
+    "Lorenz Higani",
+    "Schumey Gregor"
+   ],
+   "pages": [
+    103,
+    118
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2012": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 4423.0,
+     "blatt": "IV",
+     "pages": [
+      103,
+      118
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Wistmad"
+   ],
+   "owners": [
+    "Hlebetz Johan",
+    "Schumer Monika"
+   ],
+   "pages": [
+    103,
+    118
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2013": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 1209.0,
+     "blatt": "IV",
+     "pages": [
+      103,
+      118
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Wistmad"
+   ],
+   "owners": [
+    "Heisslhan Mufi",
+    "Seidig Kathi"
+   ],
+   "pages": [
+    103,
+    118
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2014": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 1512.0,
+     "blatt": "IV",
+     "pages": [
+      103,
+      118
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Wistmad"
+   ],
+   "owners": [
+    "Kapfelschlägerin",
+    "Seidig Gregor"
+   ],
+   "pages": [
+    103,
+    118
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2015": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 1302.0,
+     "blatt": "IV",
+     "pages": [
+      103,
+      118
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Wistmad"
+   ],
+   "owners": [
+    "Braller Michl",
+    "Knöfel Johan"
+   ],
+   "pages": [
+    103,
+    118
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2016": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 1095.0,
+     "blatt": "IV",
+     "pages": [
+      103,
+      118
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Wistmad"
+   ],
+   "owners": [
+    "Knöl Bauer",
+    "Seidig Maria"
+   ],
+   "pages": [
+    103,
+    118
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2017": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 1427.0,
+     "blatt": "IV",
+     "pages": [
+      103,
+      118
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Wistmad"
+   ],
+   "owners": [
+    "Habler Maria",
+    "Nawal Maschi"
+   ],
+   "pages": [
+    103,
+    118
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2018": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 2096.0,
+     "blatt": "IV",
+     "pages": [
+      103,
+      118
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Wistmad"
+   ],
+   "owners": [
+    "Lapeng Michl",
+    "Schneidlatz Mufi"
+   ],
+   "pages": [
+    103,
+    118
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2019": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 1981.0,
+     "blatt": "IV",
+     "pages": [
+      103,
+      118
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Wiste"
+   ],
+   "owners": [
+    "Lapeng Michl",
+    "Nawal Maschi"
+   ],
+   "pages": [
+    103,
+    118
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2020": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 3185.0,
+     "blatt": "IV",
+     "pages": [
+      103,
+      118
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Wiste"
+   ],
+   "owners": [
+    "Knöl Bauer",
+    "Lapeng Johann"
+   ],
+   "pages": [
+    103,
+    118
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2021": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 289.0,
+     "blatt": "IV",
+     "pages": [
+      104,
+      119
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker"
+   ],
+   "owners": [
+    "Kreutz Johann Laud Grübl",
+    "Schimey Johann"
+   ],
+   "pages": [
+    104,
+    119
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2022": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 3421.0,
+     "blatt": "IV",
+     "pages": [
+      104,
+      119
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker"
+   ],
+   "owners": [
+    "Brünig Magdal",
+    "Schöpfstättenbauer"
+   ],
+   "pages": [
+    104,
+    119
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2023": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 1445.0,
+     "blatt": "IV",
+     "pages": [
+      104,
+      119
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Schüttgrund"
+   ],
+   "owners": [
+    "Hlebetz Johann",
+    "Stullak Adam"
+   ],
+   "pages": [
+    104,
+    119
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2024": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 470.0,
+     "blatt": "IV",
+     "pages": [
+      104,
+      119
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Schüttgrund"
+   ],
+   "owners": [
+    "Krisch Jakob",
+    "Poiding Georg"
+   ],
+   "pages": [
+    104,
+    119
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2025": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 1205.0,
+     "blatt": "IV",
+     "pages": [
+      104,
+      119
+     ],
+     "rows": 3,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Schüttgrund"
+   ],
+   "owners": [
+    "Lappany Niko",
+    "Leure Witschur",
+    "Loidold Johann"
+   ],
+   "pages": [
+    104,
+    119
+   ],
+   "rowsTotal": 3,
+   "sosledje": {
+    "flag": 2,
+    "flaggedRows": [
+     "2025@p104",
+     "2025@p104"
+    ],
+    "ok": 3
+   },
+   "status": "R3-single"
+  },
+  "2027": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 2874.0,
+     "blatt": "IV",
+     "pages": [
+      104,
+      119
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Schüttgrund"
+   ],
+   "owners": [
+    "Lappany Niko",
+    "Schinhan Marfa"
+   ],
+   "pages": [
+    104,
+    119
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2028": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 1459.0,
+     "blatt": "IV",
+     "pages": [
+      104,
+      119
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Schüttgrund"
+   ],
+   "owners": [
+    "Hlebetz Johann",
+    "Honschan Niko"
+   ],
+   "pages": [
+    104,
+    119
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2029": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 2220.0,
+     "blatt": "IV",
+     "pages": [
+      104,
+      119
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Schüttläger"
+   ],
+   "owners": [
+    "Honschan Georg",
+    "Schimeg Michael"
+   ],
+   "pages": [
+    104,
+    119
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2030": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 2289.0,
+     "blatt": "IV",
+     "pages": [
+      104,
+      119
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker"
+   ],
+   "owners": [
+    "Hrautz Georg",
+    "Schimeg Johann"
+   ],
+   "pages": [
+    104,
+    119
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2031": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 3431.0,
+     "blatt": "IV",
+     "pages": [
+      104,
+      119
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker"
+   ],
+   "owners": [
+    "Loval Joanne",
+    "Schimeg Paula"
+   ],
+   "pages": [
+    104,
+    119
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2032": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 1930.0,
+     "blatt": "IV",
+     "pages": [
+      104,
+      119
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker"
+   ],
+   "owners": [
+    "Schimeg Martha",
+    "Stullak Johan"
+   ],
+   "pages": [
+    104,
+    119
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2033": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 7565.0,
+     "blatt": "IV",
+     "pages": [
+      104,
+      119
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Schüttgrund"
+   ],
+   "owners": [
+    "Schimeg Paula",
+    "Schimey Magdal"
+   ],
+   "pages": [
+    104,
+    119
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2034": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 1710.0,
+     "blatt": "IV",
+     "pages": [
+      104,
+      119
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Schüttgrund"
+   ],
+   "owners": [
+    "Pavlic Magda",
+    "Schimeg Johann"
+   ],
+   "pages": [
+    104,
+    119
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2035": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 1257.0,
+     "blatt": "IV",
+     "pages": [
+      104,
+      119
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Schüttgrund"
+   ],
+   "owners": [
+    "Schimeg Johann",
+    "Stullak Niko"
+   ],
+   "pages": [
+    104,
+    119
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2036": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 5694.0,
+     "blatt": "IV",
+     "pages": [
+      104,
+      119
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Schüttgrund"
+   ],
+   "owners": [
+    "Schimeg Michael",
+    "Schimey Johann"
+   ],
+   "pages": [
+    104,
+    119
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2037": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 915.0,
+     "blatt": "IV",
+     "pages": [
+      104,
+      119
+     ],
+     "rows": 3,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker"
+   ],
+   "owners": [
+    "Poiding Martha",
+    "Stullak Niko",
+    "Ulrich Paula"
+   ],
+   "pages": [
+    104,
+    119
+   ],
+   "rowsTotal": 3,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 5
+   },
+   "status": "R3-single"
+  },
+  "2038": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 641.0,
+     "blatt": "IV",
+     "pages": [
+      104,
+      119
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker"
+   ],
+   "owners": [
+    "Loval Niko",
+    "Ulrich Paula"
+   ],
+   "pages": [
+    104,
+    119
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2060": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 2033.0,
+     "blatt": "IV",
+     "pages": [
+      105,
+      106
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Acker und Wiese"
+   ],
+   "owners": [
+    "Knäusch Johann",
+    "Schimey Johane"
+   ],
+   "pages": [
+    105,
+    106
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2061": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 13096.0,
+     "blatt": "IV",
+     "pages": [
+      105,
+      106,
+      121
+     ],
+     "rows": 3,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Acker und Wiese",
+    "Lkhld"
+   ],
+   "owners": [
+    "Knäusch Johann",
+    "Löhal Mio",
+    "Schimey Johane"
+   ],
+   "pages": [
+    105,
+    106,
+    121
+   ],
+   "rowsTotal": 3,
+   "sosledje": {
+    "flag": 1,
+    "flaggedRows": [
+     "2061@p121"
+    ],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2066": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 497.0,
+     "blatt": "IV",
+     "pages": [
+      106,
+      121
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Lkhld"
+   ],
+   "owners": [
+    "Knäusch Nikolaus",
+    "Schimeg John"
+   ],
+   "pages": [
+    106,
+    121
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 2,
+    "flaggedRows": [
+     "2066@p106",
+     "2066@p121"
+    ],
+    "ok": 0
+   },
+   "status": "R3-single"
+  },
+  "2068": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 733.0,
+     "blatt": "IV",
+     "pages": [
+      106,
+      121
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Lkhld"
+   ],
+   "owners": [
+    "Krischan Nikolaus",
+    "Pesdng Marfn"
+   ],
+   "pages": [
+    106,
+    121
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2069": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 2599.0,
+     "blatt": "IV",
+     "pages": [
+      106,
+      121
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Ldbruhld Leimann"
+   ],
+   "owners": [
+    "Knäusch an Georg",
+    "Pesdng Marfn"
+   ],
+   "pages": [
+    106,
+    121
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2070": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 985.0,
+     "blatt": "IV",
+     "pages": [
+      106,
+      121
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Ldbruhld Leimann"
+   ],
+   "owners": [
+    "Feschnig Johann",
+    "Pesdng Marfn"
+   ],
+   "pages": [
+    106,
+    121
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2071": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 1848.0,
+     "blatt": "IV",
+     "pages": [
+      106,
+      121
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Ldbruhld Leimann"
+   ],
+   "owners": [
+    "Lappany Nikolaus",
+    "Pesdng Marfn"
+   ],
+   "pages": [
+    106,
+    121
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2072": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 1459.0,
+     "blatt": "IV",
+     "pages": [
+      106,
+      121
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Ldbruhld Leimann"
+   ],
+   "owners": [
+    "Hnrich Pidra",
+    "Kneal Nikolaus"
+   ],
+   "pages": [
+    106,
+    121
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2074": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 706.0,
+     "blatt": "IV",
+     "pages": [
+      106,
+      121
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Ldbruhld Leimann",
+    "Wiese"
+   ],
+   "owners": [
+    "DieLehutete Mfga",
+    "Kneal Nikolaus"
+   ],
+   "pages": [
+    106,
+    121
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 2,
+    "flaggedRows": [
+     "2074@p106",
+     "2074@p121"
+    ],
+    "ok": 0
+   },
+   "status": "R3-single"
+  },
+  "2076": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 1216.0,
+     "blatt": "IV",
+     "pages": [
+      106,
+      121
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Lkhlda"
+   ],
+   "owners": [
+    "Feschnig Johann",
+    "Sleppots groy"
+   ],
+   "pages": [
+    106,
+    121
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2077": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 2102.0,
+     "blatt": "IV",
+     "pages": [
+      106,
+      121
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Ehda"
+   ],
+   "owners": [
+    "Festnig Johann",
+    "Sleppots groy"
+   ],
+   "pages": [
+    106,
+    121
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2078": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 3821.0,
+     "blatt": "IV",
+     "pages": [
+      106,
+      121
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Ldbruhld Leimann"
+   ],
+   "owners": [
+    "Krischan Georg",
+    "Sneishen Mfga"
+   ],
+   "pages": [
+    106,
+    121
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2079": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 2977.0,
+     "blatt": "IV",
+     "pages": [
+      106,
+      121
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Ldbruhld Leimann"
+   ],
+   "owners": [
+    "Krischan Nikolaus",
+    "Stallstall stck Mfga"
+   ],
+   "pages": [
+    106,
+    121
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2080": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 16752.0,
+     "blatt": "IV",
+     "pages": [
+      106,
+      121
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "100 Futter",
+    "Ldbruhld Leimann"
+   ],
+   "owners": [
+    "Wlhopfstetck Niklas"
+   ],
+   "pages": [
+    106,
+    121
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2081": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 28064.0,
+     "blatt": "IV",
+     "pages": [
+      107,
+      121
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "119 Fürträg.",
+    "Acker und Wiese"
+   ],
+   "owners": [
+    "Krüzhan Miha"
+   ],
+   "pages": [
+    107,
+    121
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2141": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 2024.0,
+     "blatt": "IV",
+     "pages": [
+      110
+     ],
+     "rows": 1,
+     "share": 0.7107
+    },
+    {
+     "areaQK": 824.0,
+     "blatt": "V",
+     "pages": [
+      125
+     ],
+     "rows": 1,
+     "share": 0.2893
+    }
+   ],
+   "kultures": [
+    "Einhemdtl. Purgstall",
+    "Schüttboden"
+   ],
+   "owners": [
+    "Brünig Johann Lorenz Grüble",
+    "Schimey Paula"
+   ],
+   "pages": [
+    110,
+    125
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 2,
+    "flaggedRows": [
+     "2141@p110",
+     "2141@p125"
+    ],
+    "ok": 0
+   },
+   "status": "split"
+  },
+  "2143": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 790.0,
+     "blatt": "V",
+     "pages": [
+      125
+     ],
+     "rows": 1,
+     "share": 0.517
+    },
+    {
+     "areaQK": 738.0,
+     "blatt": "IV",
+     "pages": [
+      110
+     ],
+     "rows": 1,
+     "share": 0.483
+    }
+   ],
+   "kultures": [
+    "Einhemdtl. Purgstall",
+    "Schüttboden"
+   ],
+   "owners": [
+    "Häupler Martin",
+    "Schimey Johann"
+   ],
+   "pages": [
+    110,
+    125
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 2,
+    "flaggedRows": [
+     "2143@p110",
+     "2143@p125"
+    ],
+    "ok": 0
+   },
+   "status": "split"
+  },
+  "2148": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 2064.0,
+     "blatt": "IV",
+     "pages": [
+      110
+     ],
+     "rows": 1,
+     "share": 0.6374
+    },
+    {
+     "areaQK": 1174.0,
+     "blatt": "V",
+     "pages": [
+      125
+     ],
+     "rows": 1,
+     "share": 0.3626
+    }
+   ],
+   "kultures": [
+    "Einhemdtl. Purgstall",
+    "Lehm"
+   ],
+   "owners": [
+    "Strauß Georg",
+    "Wardian Marfa"
+   ],
+   "pages": [
+    110,
+    125
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "2149": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 1100.0,
+     "blatt": "IV",
+     "pages": [
+      110
+     ],
+     "rows": 1,
+     "share": 0.5673
+    },
+    {
+     "areaQK": 839.0,
+     "blatt": "V",
+     "pages": [
+      125
+     ],
+     "rows": 1,
+     "share": 0.4327
+    }
+   ],
+   "kultures": [
+    "Einhemdtl. Purgstall",
+    "Schüttboden"
+   ],
+   "owners": [
+    "Schimeg Nikolaus",
+    "Wardian Marfa"
+   ],
+   "pages": [
+    110,
+    125
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "2150": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 518.0,
+     "blatt": "IV",
+     "pages": [
+      110
+     ],
+     "rows": 1,
+     "share": 0.8119
+    },
+    {
+     "areaQK": 120.0,
+     "blatt": "V",
+     "pages": [
+      125
+     ],
+     "rows": 1,
+     "share": 0.1881
+    }
+   ],
+   "kultures": [
+    "Einhemdtl. Purgstall",
+    "Weide"
+   ],
+   "owners": [
+    "Schimeg Johann",
+    "Wardian Marfa"
+   ],
+   "pages": [
+    110,
+    125
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R2a"
+  },
+  "2151": {
+   "attributedBlatt": "V",
+   "blattShares": [
+    {
+     "areaQK": 1305.0,
+     "blatt": "V",
+     "pages": [
+      125
+     ],
+     "rows": 1,
+     "share": 0.8469
+    },
+    {
+     "areaQK": 236.0,
+     "blatt": "IV",
+     "pages": [
+      110
+     ],
+     "rows": 1,
+     "share": 0.1531
+    }
+   ],
+   "kultures": [
+    "Einhemdtl. Purgstall",
+    "Schüttboden"
+   ],
+   "owners": [
+    "Kreischner Georg",
+    "Wetschka Marfa"
+   ],
+   "pages": [
+    110,
+    125
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R2a"
+  },
+  "2152": {
+   "attributedBlatt": "V",
+   "blattShares": [
+    {
+     "areaQK": 1109.0,
+     "blatt": "V",
+     "pages": [
+      125
+     ],
+     "rows": 1,
+     "share": 0.9257
+    },
+    {
+     "areaQK": 89.0,
+     "blatt": "IV",
+     "pages": [
+      110
+     ],
+     "rows": 1,
+     "share": 0.0743
+    }
+   ],
+   "kultures": [
+    "Einhemdtl. Purgstall",
+    "Lehde"
+   ],
+   "owners": [
+    "Kreischner Miso",
+    "Wardian Marfa"
+   ],
+   "pages": [
+    110,
+    125
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R2a"
+  },
+  "2154": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 128.0,
+     "blatt": "IV",
+     "pages": [
+      110
+     ],
+     "rows": 1,
+     "share": 0.5872
+    },
+    {
+     "areaQK": 90.0,
+     "blatt": "V",
+     "pages": [
+      125
+     ],
+     "rows": 1,
+     "share": 0.4128
+    }
+   ],
+   "kultures": [
+    "Einhemdtl. Purgstall",
+    "Lehfe"
+   ],
+   "owners": [
+    "Brünig Miso",
+    "Wardian Marfa"
+   ],
+   "pages": [
+    110,
+    125
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "2155": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 388.0,
+     "blatt": "IV",
+     "pages": [
+      110
+     ],
+     "rows": 1,
+     "share": 0.951
+    },
+    {
+     "areaQK": 20.0,
+     "blatt": "V",
+     "pages": [
+      125
+     ],
+     "rows": 1,
+     "share": 0.049
+    }
+   ],
+   "kultures": [
+    "Einhemdtl. Purgstall",
+    "Weide"
+   ],
+   "owners": [
+    "Malleweichslochfrau",
+    "Wardian Marfa"
+   ],
+   "pages": [
+    110,
+    125
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R2a"
+  },
+  "2156": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 805.0,
+     "blatt": "V",
+     "pages": [
+      125
+     ],
+     "rows": 1,
+     "share": 0.5657
+    },
+    {
+     "areaQK": 618.0,
+     "blatt": "IV",
+     "pages": [
+      110
+     ],
+     "rows": 1,
+     "share": 0.4343
+    }
+   ],
+   "kultures": [
+    "Einhemdtl. Purgstall",
+    "Lehfe"
+   ],
+   "owners": [
+    "Brünig Miso",
+    "Wardian Marfa"
+   ],
+   "pages": [
+    110,
+    125
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "2157": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 426.0,
+     "blatt": "IV",
+     "pages": [
+      110
+     ],
+     "rows": 1,
+     "share": 0.8099
+    },
+    {
+     "areaQK": 100.0,
+     "blatt": "V",
+     "pages": [
+      125
+     ],
+     "rows": 1,
+     "share": 0.1901
+    }
+   ],
+   "kultures": [
+    "Einhemdtl. Purgstall",
+    "Lehfe"
+   ],
+   "owners": [
+    "Malleweichslochfrau",
+    "Wentuhina Marfa"
+   ],
+   "pages": [
+    110,
+    125
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R2a"
+  },
+  "2158": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 86.0,
+     "blatt": "IV",
+     "pages": [
+      110
+     ],
+     "rows": 1,
+     "share": 0.8687
+    },
+    {
+     "areaQK": 13.0,
+     "blatt": "V",
+     "pages": [
+      125
+     ],
+     "rows": 1,
+     "share": 0.1313
+    }
+   ],
+   "kultures": [
+    "Einhemdtl.",
+    "Lehfen"
+   ],
+   "owners": [
+    "Häupler Martin",
+    "Wardian Marfu"
+   ],
+   "pages": [
+    110,
+    125
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R2a"
+  },
+  "2159": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 1605.0,
+     "blatt": "IV",
+     "pages": [
+      110
+     ],
+     "rows": 1,
+     "share": 0.6086
+    },
+    {
+     "areaQK": 1032.0,
+     "blatt": "V",
+     "pages": [
+      125
+     ],
+     "rows": 1,
+     "share": 0.3914
+    }
+   ],
+   "kultures": [
+    "Einhemdtl. Purgstall",
+    "Schüttboden"
+   ],
+   "owners": [
+    "Brünig Johann",
+    "Van Wawech Mihó"
+   ],
+   "pages": [
+    110,
+    125
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "2160": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 560.0,
+     "blatt": "V",
+     "pages": [
+      125
+     ],
+     "rows": 1,
+     "share": 0.7349
+    },
+    {
+     "areaQK": 202.0,
+     "blatt": "IV",
+     "pages": [
+      110
+     ],
+     "rows": 1,
+     "share": 0.2651
+    }
+   ],
+   "kultures": [
+    "Einhemdtl. Purgstall",
+    "Lehfe"
+   ],
+   "owners": [
+    "Häupler Martin",
+    "Van Wawech Mihó"
+   ],
+   "pages": [
+    110,
+    125
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "2218": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 3017.0,
+     "blatt": "IV",
+     "pages": [
+      113,
+      114
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Einhemisches Heu",
+    "Einschichtl. Wiese mit Poggi u. Bau"
+   ],
+   "owners": [
+    "Schöpf Scholastika",
+    "Stambol Johann"
+   ],
+   "pages": [
+    113,
+    114
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2219": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 2458.0,
+     "blatt": "IV",
+     "pages": [
+      113,
+      114
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Einhemisches Gras",
+    "Einschicht mit Poggi u. Bau"
+   ],
+   "owners": [
+    "Knoll Hanne",
+    "Nooak Martin"
+   ],
+   "pages": [
+    113,
+    114
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2220": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 2212.0,
+     "blatt": "IV",
+     "pages": [
+      113,
+      114
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Einhemisches Gras",
+    "Einschichtl. Wiese, Poggibau"
+   ],
+   "owners": [
+    "Knoll Niklo",
+    "Koritschan Marfa"
+   ],
+   "pages": [
+    113,
+    114
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2402": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 1114.0,
+     "blatt": "IV",
+     "pages": [
+      122,
+      123
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker und Wiese, Hang in Böschung",
+    "Acker und Wiesen"
+   ],
+   "owners": [
+    "Hrastl Hans",
+    "Pessnig Johann"
+   ],
+   "pages": [
+    122,
+    123
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 1,
+    "flaggedRows": [
+     "2402@p122"
+    ],
+    "ok": 1
+   },
+   "status": "R3-single"
+  },
+  "2611": {
+   "attributedBlatt": "V",
+   "blattShares": [
+    {
+     "areaQK": 2093.0,
+     "blatt": "V",
+     "pages": [
+      133
+     ],
+     "rows": 1,
+     "share": 0.9822
+    },
+    {
+     "areaQK": 38.0,
+     "blatt": "IV",
+     "pages": [
+      135
+     ],
+     "rows": 1,
+     "share": 0.0178
+    }
+   ],
+   "kultures": [
+    "Wiese"
+   ],
+   "owners": [
+    "Gemeinde",
+    "falktung"
+   ],
+   "pages": [
+    133,
+    135
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R2a"
+  },
+  "2612": {
+   "attributedBlatt": "V",
+   "blattShares": [
+    {
+     "areaQK": 1878.0,
+     "blatt": "V",
+     "pages": [
+      133
+     ],
+     "rows": 1,
+     "share": 0.8422
+    },
+    {
+     "areaQK": 352.0,
+     "blatt": "IV",
+     "pages": [
+      135
+     ],
+     "rows": 1,
+     "share": 0.1578
+    }
+   ],
+   "kultures": [
+    "Wiese"
+   ],
+   "owners": [
+    "Wiese im Grundstück Nr. 2607",
+    "falktung"
+   ],
+   "pages": [
+    133,
+    135
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R2a"
+  },
+  "2613": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 320.0,
+     "blatt": "V",
+     "pages": [
+      133
+     ],
+     "rows": 1,
+     "share": 0.5178
+    },
+    {
+     "areaQK": 298.0,
+     "blatt": "IV",
+     "pages": [
+      135
+     ],
+     "rows": 1,
+     "share": 0.4822
+    }
+   ],
+   "kultures": [
+    "Wiese"
+   ],
+   "owners": [
+    "Wiese im Grundstück Nr. 2607",
+    "falktung"
+   ],
+   "pages": [
+    133,
+    135
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "2616": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 228.0,
+     "blatt": "IV",
+     "pages": [
+      135
+     ],
+     "rows": 1,
+     "share": 0.8321
+    },
+    {
+     "areaQK": 46.0,
+     "blatt": "V",
+     "pages": [
+      133
+     ],
+     "rows": 1,
+     "share": 0.1679
+    }
+   ],
+   "kultures": [
+    "Wiese"
+   ],
+   "owners": [
+    "Wiese im Grundstück Nr. 2607",
+    "falktung"
+   ],
+   "pages": [
+    133,
+    135
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 1,
+    "flaggedRows": [
+     "2616@p135"
+    ],
+    "ok": 0
+   },
+   "status": "R2a"
+  },
+  "2627": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 1070.0,
+     "blatt": "IV",
+     "pages": [
+      134,
+      135
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Wald",
+    "Wiese"
+   ],
+   "owners": [
+    "Gemeinde",
+    "Wald im vornahmt naß Kleeau"
+   ],
+   "pages": [
+    134,
+    135
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2628": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 1612.0,
+     "blatt": "IV",
+     "pages": [
+      134,
+      135
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Wald",
+    "Wiese"
+   ],
+   "owners": [
+    "Gemeinde",
+    "Wald im Stau Rainaß Kleeau"
+   ],
+   "pages": [
+    134,
+    135
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2629": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 1774.0,
+     "blatt": "IV",
+     "pages": [
+      134,
+      135
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Wald",
+    "Wiese"
+   ],
+   "owners": [
+    "Gemeinde",
+    "föllwang"
+   ],
+   "pages": [
+    134,
+    135
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "2630": {
+   "attributedBlatt": "IV",
+   "blattShares": [
+    {
+     "areaQK": 1146.0,
+     "blatt": "IV",
+     "pages": [
+      134,
+      135
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Wald",
+    "Wiese"
+   ],
+   "owners": [
+    "Gemeinde",
+    "Wald im vorn hintern Kleeau"
+   ],
+   "pages": [
+    134,
+    135
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "405": {
+   "attributedBlatt": "I",
+   "blattShares": [
+    {
+     "areaQK": 1411.0,
+     "blatt": "I",
+     "pages": [
+      23,
+      24
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker"
+   ],
+   "owners": [
+    "Hatschbach Georg",
+    "Strauß Georg"
+   ],
+   "pages": [
+    23,
+    24
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "406": {
+   "attributedBlatt": "I",
+   "blattShares": [
+    {
+     "areaQK": 2263.0,
+     "blatt": "I",
+     "pages": [
+      23,
+      24
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker"
+   ],
+   "owners": [
+    "Hatschbach Marxo",
+    "Schimlty Peter"
+   ],
+   "pages": [
+    23,
+    24
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "641": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 941.0,
+     "blatt": "II",
+     "pages": [
+      85
+     ],
+     "rows": 1,
+     "share": 0.7415
+    },
+    {
+     "areaQK": 328.0,
+     "blatt": "I",
+     "pages": [
+      35
+     ],
+     "rows": 1,
+     "share": 0.2585
+    }
+   ],
+   "kultures": [
+    "Wiese",
+    "Wiese und Gfrett"
+   ],
+   "owners": [
+    "Stüllich Mihlo",
+    "Würich Maria"
+   ],
+   "pages": [
+    35,
+    85
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "642": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 319.0,
+     "blatt": "I",
+     "pages": [
+      35
+     ],
+     "rows": 1,
+     "share": 0.5187
+    },
+    {
+     "areaQK": 296.0,
+     "blatt": "II",
+     "pages": [
+      85
+     ],
+     "rows": 1,
+     "share": 0.4813
+    }
+   ],
+   "kultures": [
+    "Schlagwald",
+    "Wiese und Gfrett"
+   ],
+   "owners": [
+    "Schuster Mihlo",
+    "Tschakl Mathäus"
+   ],
+   "pages": [
+    35,
+    85
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "643": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 706.0,
+     "blatt": "II",
+     "pages": [
+      85
+     ],
+     "rows": 1,
+     "share": 0.5332
+    },
+    {
+     "areaQK": 618.0,
+     "blatt": "I",
+     "pages": [
+      35
+     ],
+     "rows": 1,
+     "share": 0.4668
+    }
+   ],
+   "kultures": [
+    "Schlagwald",
+    "Wiese und Gfrett Wiesen"
+   ],
+   "owners": [
+    "Schimeg Mihel",
+    "Tschakl Mathäus"
+   ],
+   "pages": [
+    35,
+    85
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "644": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 759.0,
+     "blatt": "II",
+     "pages": [
+      85
+     ],
+     "rows": 1,
+     "share": 0.9731
+    },
+    {
+     "areaQK": 21.0,
+     "blatt": "I",
+     "pages": [
+      35
+     ],
+     "rows": 1,
+     "share": 0.0269
+    }
+   ],
+   "kultures": [
+    "Lohgrube",
+    "Wiese und Gfrett Gfrett"
+   ],
+   "owners": [
+    "Preinig Mihel",
+    "Tschakl Mathäus"
+   ],
+   "pages": [
+    35,
+    85
+   ],
+   "pas": {
+    "medianRatio": 0.8617,
+    "pages": [
+     85
+    ],
+    "rows": 1
+   },
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R1"
+  },
+  "646": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 786.0,
+     "blatt": "II",
+     "pages": [
+      85
+     ],
+     "rows": 1,
+     "share": 0.6741
+    },
+    {
+     "areaQK": 380.0,
+     "blatt": "I",
+     "pages": [
+      35
+     ],
+     "rows": 1,
+     "share": 0.3259
+    }
+   ],
+   "kultures": [
+    "Schlagwald",
+    "Wiese und Gfrett"
+   ],
+   "owners": [
+    "Dreschler Mathäus",
+    "Milleger Johann"
+   ],
+   "pages": [
+    35,
+    85
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 2,
+    "flaggedRows": [
+     "646@p35",
+     "646@p85"
+    ],
+    "ok": 0
+   },
+   "status": "split"
+  },
+  "648": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 700.0,
+     "blatt": "II",
+     "pages": [
+      85
+     ],
+     "rows": 1,
+     "share": 0.875
+    },
+    {
+     "areaQK": 100.0,
+     "blatt": "I",
+     "pages": [
+      35
+     ],
+     "rows": 1,
+     "share": 0.125
+    }
+   ],
+   "kultures": [
+    "Lohgrube",
+    "Wiese und Gfrett"
+   ],
+   "owners": [
+    "Schimeg Mihel",
+    "Würich Maria"
+   ],
+   "pages": [
+    35,
+    85
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 1,
+    "flaggedRows": [
+     "648@p85"
+    ],
+    "ok": 0
+   },
+   "status": "R2a"
+  },
+  "651": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 783.0,
+     "blatt": "II",
+     "pages": [
+      85
+     ],
+     "rows": 1,
+     "share": 0.5234
+    },
+    {
+     "areaQK": 713.0,
+     "blatt": "I",
+     "pages": [
+      35
+     ],
+     "rows": 1,
+     "share": 0.4766
+    }
+   ],
+   "kultures": [
+    "Schlagwald",
+    "Wiese und Gfrett Wiesen"
+   ],
+   "owners": [
+    "Knall Anna",
+    "Mallwetsch Markus"
+   ],
+   "pages": [
+    35,
+    85
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "652": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 710.0,
+     "blatt": "II",
+     "pages": [
+      85
+     ],
+     "rows": 1,
+     "share": 0.8124
+    },
+    {
+     "areaQK": 164.0,
+     "blatt": "I",
+     "pages": [
+      35
+     ],
+     "rows": 1,
+     "share": 0.1876
+    }
+   ],
+   "kultures": [
+    "Wiese",
+    "Wiese und Gfrett"
+   ],
+   "owners": [
+    "Schimeg Barbara",
+    "Stuppler Mathäus"
+   ],
+   "pages": [
+    35,
+    85
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R2a"
+  },
+  "653": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 708.0,
+     "blatt": "II",
+     "pages": [
+      85
+     ],
+     "rows": 1,
+     "share": 0.9593
+    },
+    {
+     "areaQK": 30.0,
+     "blatt": "I",
+     "pages": [
+      35
+     ],
+     "rows": 1,
+     "share": 0.0407
+    }
+   ],
+   "kultures": [
+    "Wiese",
+    "Wiese und Gfrett"
+   ],
+   "owners": [
+    "Knall Anna",
+    "Mallwetsch Johann"
+   ],
+   "pages": [
+    35,
+    85
+   ],
+   "pas": {
+    "medianRatio": 0.9816,
+    "pages": [
+     85
+    ],
+    "rows": 1
+   },
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R1"
+  },
+  "654": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 762.0,
+     "blatt": "II",
+     "pages": [
+      85
+     ],
+     "rows": 1,
+     "share": 0.7515
+    },
+    {
+     "areaQK": 252.0,
+     "blatt": "I",
+     "pages": [
+      35
+     ],
+     "rows": 1,
+     "share": 0.2485
+    }
+   ],
+   "kultures": [
+    "Schlagwald",
+    "Wiese und Gfrett"
+   ],
+   "owners": [
+    "Mallwetsch Johann",
+    "Stüllich Mihlo"
+   ],
+   "pages": [
+    35,
+    85
+   ],
+   "pas": {
+    "medianRatio": 1.2231,
+    "pages": [
+     85
+    ],
+    "rows": 1
+   },
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R1"
+  },
+  "655": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 1002.0,
+     "blatt": "II",
+     "pages": [
+      85
+     ],
+     "rows": 1,
+     "share": 0.8133
+    },
+    {
+     "areaQK": 230.0,
+     "blatt": "I",
+     "pages": [
+      35
+     ],
+     "rows": 1,
+     "share": 0.1867
+    }
+   ],
+   "kultures": [
+    "Schlagwald",
+    "Wiese und Gfrett"
+   ],
+   "owners": [
+    "Lukantsitsch Marla",
+    "Prinz Johann"
+   ],
+   "pages": [
+    35,
+    85
+   ],
+   "pas": {
+    "medianRatio": 0.8014,
+    "pages": [
+     85
+    ],
+    "rows": 1
+   },
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R1"
+  },
+  "656": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 794.0,
+     "blatt": "II",
+     "pages": [
+      85
+     ],
+     "rows": 1,
+     "share": 0.9683
+    },
+    {
+     "areaQK": 26.0,
+     "blatt": "I",
+     "pages": [
+      35
+     ],
+     "rows": 1,
+     "share": 0.0317
+    }
+   ],
+   "kultures": [
+    "Wiese",
+    "Wiese und Gfrett"
+   ],
+   "owners": [
+    "Knall Anna",
+    "Prinz Johann"
+   ],
+   "pages": [
+    35,
+    85
+   ],
+   "pas": {
+    "medianRatio": 0.8602,
+    "pages": [
+     85
+    ],
+    "rows": 1
+   },
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R1"
+  },
+  "657": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 809.0,
+     "blatt": "II",
+     "pages": [
+      85
+     ],
+     "rows": 1,
+     "share": 0.714
+    },
+    {
+     "areaQK": 324.0,
+     "blatt": "I",
+     "pages": [
+      35
+     ],
+     "rows": 1,
+     "share": 0.286
+    }
+   ],
+   "kultures": [
+    "Wiese",
+    "Wiese und Gfrett"
+   ],
+   "owners": [
+    "Novakl Martin",
+    "Prinz Maria"
+   ],
+   "pages": [
+    35,
+    85
+   ],
+   "pas": {
+    "medianRatio": 1.2126,
+    "pages": [
+     85
+    ],
+    "rows": 1
+   },
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R1"
+  },
+  "659": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 577.0,
+     "blatt": "II",
+     "pages": [
+      85
+     ],
+     "rows": 1,
+     "share": 0.9232
+    },
+    {
+     "areaQK": 48.0,
+     "blatt": "I",
+     "pages": [
+      35
+     ],
+     "rows": 1,
+     "share": 0.0768
+    }
+   ],
+   "kultures": [
+    "Lohgrube",
+    "Wiese und Gfrett"
+   ],
+   "owners": [
+    "Kubatschitsch Ja",
+    "Stuppler Mathäus"
+   ],
+   "pages": [
+    35,
+    85
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 1,
+    "flaggedRows": [
+     "659@p85"
+    ],
+    "ok": 0
+   },
+   "status": "R2a"
+  },
+  "661": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 699.0,
+     "blatt": "II",
+     "pages": [
+      87
+     ],
+     "rows": 1,
+     "share": 0.5147
+    },
+    {
+     "areaQK": 659.0,
+     "blatt": "I",
+     "pages": [
+      36
+     ],
+     "rows": 1,
+     "share": 0.4853
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Lhup"
+   ],
+   "owners": [
+    "Mülley Daniel",
+    "Staudt Hans"
+   ],
+   "pages": [
+    36,
+    87
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 2,
+    "flaggedRows": [
+     "661@p36",
+     "661@p87"
+    ],
+    "ok": 0
+   },
+   "status": "split"
+  },
+  "663": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 698.0,
+     "blatt": "II",
+     "pages": [
+      87
+     ],
+     "rows": 1,
+     "share": 0.9694
+    },
+    {
+     "areaQK": 22.0,
+     "blatt": "I",
+     "pages": [
+      36
+     ],
+     "rows": 1,
+     "share": 0.0306
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Lhup"
+   ],
+   "owners": [
+    "Dultsitsch Hans",
+    "Würing Michael"
+   ],
+   "pages": [
+    36,
+    87
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 1,
+    "flaggedRows": [
+     "663@p87"
+    ],
+    "ok": 0
+   },
+   "status": "R2a"
+  },
+  "666": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 1319.0,
+     "blatt": "II",
+     "pages": [
+      87
+     ],
+     "rows": 1,
+     "share": 0.9537
+    },
+    {
+     "areaQK": 64.0,
+     "blatt": "I",
+     "pages": [
+      36
+     ],
+     "rows": 1,
+     "share": 0.0463
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Eidn"
+   ],
+   "owners": [
+    "Dragauš Jerg",
+    "Weissbar Georg"
+   ],
+   "pages": [
+    36,
+    87
+   ],
+   "pas": {
+    "medianRatio": 0.8537,
+    "pages": [
+     87
+    ],
+    "rows": 1
+   },
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R1"
+  },
+  "667": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 1148.0,
+     "blatt": "II",
+     "pages": [
+      87
+     ],
+     "rows": 1,
+     "share": 0.9425
+    },
+    {
+     "areaQK": 70.0,
+     "blatt": "I",
+     "pages": [
+      36
+     ],
+     "rows": 1,
+     "share": 0.0575
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Lhut"
+   ],
+   "owners": [
+    "Hegole Mands",
+    "Mülley Johann"
+   ],
+   "pages": [
+    36,
+    87
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R2a"
+  },
+  "671": {
+   "attributedBlatt": "I",
+   "blattShares": [
+    {
+     "areaQK": 1423.0,
+     "blatt": "II",
+     "pages": [
+      87
+     ],
+     "rows": 1,
+     "share": 0.8844
+    },
+    {
+     "areaQK": 186.0,
+     "blatt": "I",
+     "pages": [
+      36
+     ],
+     "rows": 1,
+     "share": 0.1156
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Lhup"
+   ],
+   "owners": [
+    "Maaßl Mantsch",
+    "Würing Michael"
+   ],
+   "pages": [
+    36,
+    87
+   ],
+   "pas": {
+    "medianRatio": 0.9086,
+    "pages": [
+     36
+    ],
+    "rows": 1
+   },
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 1,
+    "flaggedRows": [
+     "671@p36"
+    ],
+    "ok": 0
+   },
+   "status": "R1"
+  },
+  "673": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 1498.0,
+     "blatt": "II",
+     "pages": [
+      87
+     ],
+     "rows": 1,
+     "share": 0.8669
+    },
+    {
+     "areaQK": 230.0,
+     "blatt": "I",
+     "pages": [
+      36
+     ],
+     "rows": 1,
+     "share": 0.1331
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Lhup"
+   ],
+   "owners": [
+    "Mülley Franz",
+    "Staudt Hans"
+   ],
+   "pages": [
+    36,
+    87
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R2a"
+  },
+  "674": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 548.0,
+     "blatt": "II",
+     "pages": [
+      87
+     ],
+     "rows": 1,
+     "share": 0.7436
+    },
+    {
+     "areaQK": 189.0,
+     "blatt": "I",
+     "pages": [
+      36
+     ],
+     "rows": 1,
+     "share": 0.2564
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Eidn"
+   ],
+   "owners": [
+    "Dultsitsch Hans",
+    "Würing Johann"
+   ],
+   "pages": [
+    36,
+    87
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "675": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 1279.0,
+     "blatt": "II",
+     "pages": [
+      87
+     ],
+     "rows": 1,
+     "share": 0.8963
+    },
+    {
+     "areaQK": 148.0,
+     "blatt": "I",
+     "pages": [
+      36
+     ],
+     "rows": 1,
+     "share": 0.1037
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Eidn"
+   ],
+   "owners": [
+    "Maaßl Mantsch",
+    "Würing Michael"
+   ],
+   "pages": [
+    36,
+    87
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R2a"
+  },
+  "676": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 1413.0,
+     "blatt": "II",
+     "pages": [
+      87
+     ],
+     "rows": 1,
+     "share": 0.9376
+    },
+    {
+     "areaQK": 94.0,
+     "blatt": "I",
+     "pages": [
+      36
+     ],
+     "rows": 1,
+     "share": 0.0624
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Eidn"
+   ],
+   "owners": [
+    "Kobentsch Mands",
+    "Würing Michl"
+   ],
+   "pages": [
+    36,
+    87
+   ],
+   "pas": {
+    "medianRatio": 0.8004,
+    "pages": [
+     87
+    ],
+    "rows": 1
+   },
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R1"
+  },
+  "679": {
+   "attributedBlatt": "I",
+   "blattShares": [
+    {
+     "areaQK": 180.0,
+     "blatt": "I",
+     "pages": [
+      36
+     ],
+     "rows": 1,
+     "share": 0.9091
+    },
+    {
+     "areaQK": 18.0,
+     "blatt": "II",
+     "pages": [
+      87
+     ],
+     "rows": 1,
+     "share": 0.0909
+    }
+   ],
+   "kultures": [
+    "Lhup",
+    "Weide"
+   ],
+   "owners": [
+    "Gummeier",
+    "Paschey Georg"
+   ],
+   "pages": [
+    36,
+    87
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R2a"
+  },
+  "680": {
+   "attributedBlatt": "I",
+   "blattShares": [
+    {
+     "areaQK": 135.0,
+     "blatt": "I",
+     "pages": [
+      36
+     ],
+     "rows": 1,
+     "share": 0.9184
+    },
+    {
+     "areaQK": 12.0,
+     "blatt": "II",
+     "pages": [
+      87
+     ],
+     "rows": 1,
+     "share": 0.0816
+    }
+   ],
+   "kultures": [
+    "Eidn",
+    "Garten"
+   ],
+   "owners": [
+    "Hlebitsch Mufg",
+    "Mülley Johann"
+   ],
+   "pages": [
+    36,
+    87
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R2a"
+  },
+  "736": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 4447.0,
+     "blatt": "II",
+     "pages": [
+      88
+     ],
+     "rows": 1,
+     "share": 0.883
+    },
+    {
+     "areaQK": 589.0,
+     "blatt": "I",
+     "pages": [
+      40
+     ],
+     "rows": 1,
+     "share": 0.117
+    }
+   ],
+   "kultures": [
+    "Alm",
+    "Schupfen u. Gst."
+   ],
+   "owners": [
+    "Dahofstättlich Malfg",
+    "Mülleg Johann"
+   ],
+   "pages": [
+    40,
+    88
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R2a"
+  },
+  "737": {
+   "attributedBlatt": "I",
+   "blattShares": [
+    {
+     "areaQK": 743.0,
+     "blatt": "I",
+     "pages": [
+      40
+     ],
+     "rows": 1,
+     "share": 0.9299
+    },
+    {
+     "areaQK": 56.0,
+     "blatt": "II",
+     "pages": [
+      88
+     ],
+     "rows": 1,
+     "share": 0.0701
+    }
+   ],
+   "kultures": [
+    "Schupfen u. Gst.",
+    "Wiesg"
+   ],
+   "owners": [
+    "Häuslty Ghan",
+    "Whischand Georg"
+   ],
+   "pages": [
+    40,
+    88
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R2a"
+  },
+  "738": {
+   "attributedBlatt": "I",
+   "blattShares": [
+    {
+     "areaQK": 849.0,
+     "blatt": "I",
+     "pages": [
+      40
+     ],
+     "rows": 1,
+     "share": 0.8448
+    },
+    {
+     "areaQK": 156.0,
+     "blatt": "II",
+     "pages": [
+      88
+     ],
+     "rows": 1,
+     "share": 0.1552
+    }
+   ],
+   "kultures": [
+    "Schupfen u. Gst.",
+    "Wiesg"
+   ],
+   "owners": [
+    "Gmuniden",
+    "Wöring Mathäus"
+   ],
+   "pages": [
+    40,
+    88
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R2a"
+  },
+  "922": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 553.0,
+     "blatt": "III",
+     "pages": [
+      99
+     ],
+     "rows": 1,
+     "share": 0.6913
+    },
+    {
+     "areaQK": 247.0,
+     "blatt": "II",
+     "pages": [
+      49
+     ],
+     "rows": 1,
+     "share": 0.3088
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Wiesen"
+   ],
+   "owners": [
+    "Deutlich Michael",
+    "Dragasch Jane"
+   ],
+   "pages": [
+    49,
+    99
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "923": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 611.0,
+     "blatt": "III",
+     "pages": [
+      99
+     ],
+     "rows": 1,
+     "share": 0.5637
+    },
+    {
+     "areaQK": 473.0,
+     "blatt": "II",
+     "pages": [
+      49
+     ],
+     "rows": 1,
+     "share": 0.4363
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Wiesen"
+   ],
+   "owners": [
+    "Deutlich Katharina",
+    "Heise Marlo"
+   ],
+   "pages": [
+    49,
+    99
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "924": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 1617.0,
+     "blatt": "II",
+     "pages": [
+      49
+     ],
+     "rows": 1,
+     "share": 0.7254
+    },
+    {
+     "areaQK": 612.0,
+     "blatt": "III",
+     "pages": [
+      99
+     ],
+     "rows": 1,
+     "share": 0.2746
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Wiesen"
+   ],
+   "owners": [
+    "Deutlich Maria",
+    "Dragasch Jane"
+   ],
+   "pages": [
+    49,
+    99
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "925": {
+   "attributedBlatt": "III",
+   "blattShares": [
+    {
+     "areaQK": 1993.0,
+     "blatt": "III",
+     "pages": [
+      99
+     ],
+     "rows": 1,
+     "share": 0.7713
+    },
+    {
+     "areaQK": 591.0,
+     "blatt": "II",
+     "pages": [
+      49
+     ],
+     "rows": 1,
+     "share": 0.2287
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Wiesen"
+   ],
+   "owners": [
+    "Loboschilak Wolf",
+    "Strauß Georg"
+   ],
+   "pages": [
+    49,
+    99
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R2a"
+  },
+  "926": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 1415.0,
+     "blatt": "II",
+     "pages": [
+      49
+     ],
+     "rows": 1,
+     "share": 0.6709
+    },
+    {
+     "areaQK": 694.0,
+     "blatt": "III",
+     "pages": [
+      99
+     ],
+     "rows": 1,
+     "share": 0.3291
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Wiesen"
+   ],
+   "owners": [
+    "Lukeschitsch Malle",
+    "Strauß Georg"
+   ],
+   "pages": [
+    49,
+    99
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "927": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 1552.0,
+     "blatt": "II",
+     "pages": [
+      49
+     ],
+     "rows": 1,
+     "share": 0.6861
+    },
+    {
+     "areaQK": 710.0,
+     "blatt": "III",
+     "pages": [
+      99
+     ],
+     "rows": 1,
+     "share": 0.3139
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Wiesen"
+   ],
+   "owners": [
+    "Brünig Johann",
+    "Lukeschitsch Malle"
+   ],
+   "pages": [
+    49,
+    99
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "928": {
+   "attributedBlatt": "III",
+   "blattShares": [
+    {
+     "areaQK": 1240.0,
+     "blatt": "III",
+     "pages": [
+      99
+     ],
+     "rows": 1,
+     "share": 0.854
+    },
+    {
+     "areaQK": 212.0,
+     "blatt": "II",
+     "pages": [
+      49
+     ],
+     "rows": 1,
+     "share": 0.146
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Wiesen"
+   ],
+   "owners": [
+    "Brünig Michel",
+    "Pessing Georg"
+   ],
+   "pages": [
+    49,
+    99
+   ],
+   "pas": {
+    "medianRatio": 0.9742,
+    "pages": [
+     99
+    ],
+    "rows": 1
+   },
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R1"
+  },
+  "929": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 564.0,
+     "blatt": "III",
+     "pages": [
+      99
+     ],
+     "rows": 1,
+     "share": 0.5968
+    },
+    {
+     "areaQK": 381.0,
+     "blatt": "II",
+     "pages": [
+      49
+     ],
+     "rows": 1,
+     "share": 0.4032
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Wiesen"
+   ],
+   "owners": [
+    "Brünig Michael",
+    "Pessing Georg"
+   ],
+   "pages": [
+    49,
+    99
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "930": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 776.0,
+     "blatt": "III",
+     "pages": [
+      99
+     ],
+     "rows": 1,
+     "share": 0.763
+    },
+    {
+     "areaQK": 241.0,
+     "blatt": "II",
+     "pages": [
+      49
+     ],
+     "rows": 1,
+     "share": 0.237
+    }
+   ],
+   "kultures": [
+    "Wiesen",
+    "Zehorn"
+   ],
+   "owners": [
+    "Brünig Michel",
+    "Hüsse Malle"
+   ],
+   "pages": [
+    49,
+    99
+   ],
+   "pas": {
+    "medianRatio": 1.2241,
+    "pages": [
+     49
+    ],
+    "rows": 1
+   },
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R1"
+  },
+  "931": {
+   "attributedBlatt": "III",
+   "blattShares": [
+    {
+     "areaQK": 324.0,
+     "blatt": "III",
+     "pages": [
+      99
+     ],
+     "rows": 1,
+     "share": 0.7696
+    },
+    {
+     "areaQK": 97.0,
+     "blatt": "II",
+     "pages": [
+      49
+     ],
+     "rows": 1,
+     "share": 0.2304
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Wiesen"
+   ],
+   "owners": [
+    "Brünig Johann",
+    "Lurre Omelle"
+   ],
+   "pages": [
+    49,
+    99
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R2a"
+  },
+  "934": {
+   "attributedBlatt": "III",
+   "blattShares": [
+    {
+     "areaQK": 1627.0,
+     "blatt": "III",
+     "pages": [
+      99
+     ],
+     "rows": 1,
+     "share": 0.9656
+    },
+    {
+     "areaQK": 58.0,
+     "blatt": "II",
+     "pages": [
+      49
+     ],
+     "rows": 1,
+     "share": 0.0344
+    }
+   ],
+   "kultures": [
+    "Weingarten",
+    "Wiesen"
+   ],
+   "owners": [
+    "Brünig Michael",
+    "Lukeschitsch Mache"
+   ],
+   "pages": [
+    49,
+    99
+   ],
+   "pas": {
+    "medianRatio": 1.0498,
+    "pages": [
+     99
+    ],
+    "rows": 1
+   },
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 1,
+    "flaggedRows": [
+     "934@p99"
+    ],
+    "ok": 0
+   },
+   "status": "R1"
+  },
+  "936": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 973.0,
+     "blatt": "II",
+     "pages": [
+      49
+     ],
+     "rows": 1,
+     "share": 0.8758
+    },
+    {
+     "areaQK": 138.0,
+     "blatt": "III",
+     "pages": [
+      99
+     ],
+     "rows": 1,
+     "share": 0.1242
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Wiesen"
+   ],
+   "owners": [
+    "Brünig Michel",
+    "Kalapischky Eve."
+   ],
+   "pages": [
+    49,
+    99
+   ],
+   "pas": {
+    "medianRatio": 1.1757,
+    "pages": [
+     49
+    ],
+    "rows": 1
+   },
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R1"
+  },
+  "937": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 556.0,
+     "blatt": "II",
+     "pages": [
+      49
+     ],
+     "rows": 1,
+     "share": 0.8225
+    },
+    {
+     "areaQK": 120.0,
+     "blatt": "III",
+     "pages": [
+      99
+     ],
+     "rows": 1,
+     "share": 0.1775
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Wiesen"
+   ],
+   "owners": [
+    "Novak Martin / Brugel Eve.",
+    "Pößnig Georg"
+   ],
+   "pages": [
+    49,
+    99
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R2a"
+  },
+  "938": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 376.0,
+     "blatt": "II",
+     "pages": [
+      49
+     ],
+     "rows": 1,
+     "share": 0.5587
+    },
+    {
+     "areaQK": 297.0,
+     "blatt": "III",
+     "pages": [
+      99
+     ],
+     "rows": 1,
+     "share": 0.4413
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Wiesen"
+   ],
+   "owners": [
+    "Kalapischitsch Eve.",
+    "Pößnig Georg"
+   ],
+   "pages": [
+    49,
+    99
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "939": {
+   "attributedBlatt": "III",
+   "blattShares": [
+    {
+     "areaQK": 1592.0,
+     "blatt": "III",
+     "pages": [
+      99
+     ],
+     "rows": 1,
+     "share": 0.7243
+    },
+    {
+     "areaQK": 606.0,
+     "blatt": "II",
+     "pages": [
+      49
+     ],
+     "rows": 1,
+     "share": 0.2757
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Wiesen"
+   ],
+   "owners": [
+    "Novak Martin / Brugel Eve.",
+    "Pößnig Georg"
+   ],
+   "pages": [
+    49,
+    99
+   ],
+   "pas": {
+    "medianRatio": 1.049,
+    "pages": [
+     99
+    ],
+    "rows": 1
+   },
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 1
+   },
+   "status": "R1"
+  },
+  "962": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 170.0,
+     "blatt": "II",
+     "pages": [
+      51,
+      91
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Schupfisch Äcker"
+   ],
+   "owners": [
+    "Kreischan Hülga",
+    "Stautschital Franz"
+   ],
+   "pages": [
+    51,
+    91
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 2,
+    "flaggedRows": [
+     "962@p51",
+     "962@p91"
+    ],
+    "ok": 0
+   },
+   "status": "R3-single"
+  },
+  "965": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 241.0,
+     "blatt": "II",
+     "pages": [
+      51,
+      91
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Ebenhard Äcker"
+   ],
+   "owners": [
+    "Kreischan Hülga",
+    "Stautschital Wolf"
+   ],
+   "pages": [
+    51,
+    91
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "966": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 730.0,
+     "blatt": "II",
+     "pages": [
+      51,
+      91
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Schupf."
+   ],
+   "owners": [
+    "Elebetz Blau",
+    "Stautschital Nikolaus"
+   ],
+   "pages": [
+    51,
+    91
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "970": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 2903.0,
+     "blatt": "II",
+     "pages": [
+      51,
+      91
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker"
+   ],
+   "owners": [
+    "Kreischan Hülga",
+    "Stautschital Wolf"
+   ],
+   "pages": [
+    51,
+    91
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "971": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 4227.0,
+     "blatt": "II",
+     "pages": [
+      51,
+      91
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker"
+   ],
+   "owners": [
+    "Schamuth Hülga",
+    "Stautschital Nikolaus"
+   ],
+   "pages": [
+    51,
+    91
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "972": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 340.0,
+     "blatt": "II",
+     "pages": [
+      51,
+      91
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Wein"
+   ],
+   "owners": [
+    "Schamuth Hülga",
+    "Unrich Gregor"
+   ],
+   "pages": [
+    51,
+    91
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "975": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 2317.0,
+     "blatt": "II",
+     "pages": [
+      51,
+      91
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Wein"
+   ],
+   "owners": [
+    "Schimey John",
+    "Unruh Miso"
+   ],
+   "pages": [
+    51,
+    91
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "976": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 484.0,
+     "blatt": "II",
+     "pages": [
+      51,
+      91
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker"
+   ],
+   "owners": [
+    "Kreischan Hülga",
+    "Schimey John"
+   ],
+   "pages": [
+    51,
+    91
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "977": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 561.0,
+     "blatt": "II",
+     "pages": [
+      51,
+      91
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Wein"
+   ],
+   "owners": [
+    "Schimey Wolf",
+    "Unruh Miso"
+   ],
+   "pages": [
+    51,
+    91
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "978": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 1140.0,
+     "blatt": "II",
+     "pages": [
+      51,
+      91
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Wein"
+   ],
+   "owners": [
+    "Poiding Wolf",
+    "Unruh Georg"
+   ],
+   "pages": [
+    51,
+    91
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "979": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 1142.0,
+     "blatt": "II",
+     "pages": [
+      51,
+      91
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Wein"
+   ],
+   "owners": [
+    "Unrich John",
+    "Unruh Georg"
+   ],
+   "pages": [
+    51,
+    91
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "990": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 2112.0,
+     "blatt": "II",
+     "pages": [
+      52,
+      92
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Gemüse Garten",
+    "Wiese"
+   ],
+   "owners": [
+    "Pfaur Georg",
+    "Stüblh Mühld"
+   ],
+   "pages": [
+    52,
+    92
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "991": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 2580.0,
+     "blatt": "II",
+     "pages": [
+      52,
+      92
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Alm",
+    "Weingarten 66[?]"
+   ],
+   "owners": [
+    "Schimeg Maria",
+    "Stüblh Mühld"
+   ],
+   "pages": [
+    52,
+    92
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "992": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 814.0,
+     "blatt": "II",
+     "pages": [
+      52,
+      92
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Wiese"
+   ],
+   "owners": [
+    "Schimeg Maria",
+    "Stüblh Mühld"
+   ],
+   "pages": [
+    52,
+    92
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "993": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 3853.0,
+     "blatt": "II",
+     "pages": [
+      52,
+      92
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Wiese"
+   ],
+   "owners": [
+    "Schimeg Maria",
+    "Stüblh Mühld"
+   ],
+   "pages": [
+    52,
+    92
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "995": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 1449.0,
+     "blatt": "II",
+     "pages": [
+      52,
+      92
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Wiese"
+   ],
+   "owners": [
+    "Schimeg Johann",
+    "Schimeg Mühld"
+   ],
+   "pages": [
+    52,
+    92
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "996": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 978.0,
+     "blatt": "II",
+     "pages": [
+      52,
+      92
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Wiese"
+   ],
+   "owners": [
+    "Lahmichl Maria",
+    "Peter Mühld"
+   ],
+   "pages": [
+    52,
+    92
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "997": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 1962.0,
+     "blatt": "II",
+     "pages": [
+      52,
+      92
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Wiese"
+   ],
+   "owners": [
+    "Dlechtitl Maria",
+    "Stüblh Mühld"
+   ],
+   "pages": [
+    52,
+    92
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  },
+  "998": {
+   "attributedBlatt": "II",
+   "blattShares": [
+    {
+     "areaQK": 754.0,
+     "blatt": "II",
+     "pages": [
+      52,
+      92
+     ],
+     "rows": 2,
+     "share": 1.0
+    }
+   ],
+   "kultures": [
+    "Acker",
+    "Wiese"
+   ],
+   "owners": [
+    "Dlechtitl Maria",
+    "Schlofshütter Johann"
+   ],
+   "pages": [
+    52,
+    92
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "R3-single"
+  }
+ },
+ "date": "2026-10-14",
+ "generatedBy": "scripts/p65_ps_attribution_full.py",
+ "next": [
+  "per-Blatt SPLIT joina za 39 split base (odločitev lastnika o pozicijah/razdelitvah) — zdaj nad polnim datasetom 211",
+  "razlaga 2 R1↔R2 divergenc (930: moda B pas @ p49 vs III dominanca @ 0.763; 671: moda B pas @ p36 vs II dominanca @ 0.8844) [~]",
+  "razlaga mode B enote (glave sekcij str. 61–99 — identiteta enote ostaja odprta [~])",
+  "lastniki atributiranih instanc ↔ PF protokol (npr. 163 II: Schimey Martho/Stainzldt Wölfl/Schumitsch Matja/Laune Hülfse)",
+  "'I·II' prehodne strani (10 single-page base) — paleografska razlaga prehodne cone [~]"
+ ],
+ "rule": {
+  "R1": "pas [0.8, 1.25] (P60, moda B) — 17 base, bajtno konsistentno s P60 (P64)",
+  "R2a": "area-dominanca: dominantni Blatt (Σ areaQK) z deležem ≥ 0.75 (P64)",
+  "R2b": "točno en Blatt nosi vso izmerjeno površino → attributedBlatt + areaIncomplete flag (P64)",
+  "R3-single": "vse vrstice base na straneh ISTEGA Blatta → attributedBlatt = ta Blatt (trivialno, P65)",
+  "soslednost": "kontrola kakovosti per vrstica (sosedi ±1 po vrstnem redu vrstic evidence na isti strani); za atributirane base nad vrsticami atributiranega Blatta, za split nad vsemi (P64 metoda)",
+  "split": "dominantni delež v [0.5, 0.75) → attributedBlatt = null + blattShares alternative (P64)"
+ },
+ "statusLine": "P65 POLNA ATRIBUCIJA: 172/211 več-stranskih base atributiranih (P64 R1/R2a/R2b 71 + R3-single 101), 39 split z alternativami [~]; Blatt II 68 · IV 63 · III 29 · I 8 · V 4; pokritost registra 800 base (589 single-page implicitno + 211 multi-page polno); join v2 nespremanjen",
+ "summary": {
+  "attributed": 172,
+  "attributedBlattDist": {
+   "I": 8,
+   "II": 68,
+   "III": 29,
+   "IV": 63,
+   "V": 4
+  },
+  "coverage": {
+   "basesTotal": 800,
+   "multiBlatt": 110,
+   "multiPage": 211,
+   "nullAttributionRows": 0,
+   "rowsTotal": 1093,
+   "singleBlattMultiPage": 101,
+   "singlePage": 589,
+   "singlePageByBlatt": {
+    "I": 145,
+    "II": 183,
+    "III": 28,
+    "IV": 205,
+    "I·II": 10,
+    "V": 18
+   }
+  },
+  "distByRule": {
+   "R1": {
+    "I": 1,
+    "II": 12,
+    "III": 4
+   },
+   "R2a": {
+    "I": 4,
+    "II": 29,
+    "III": 11,
+    "IV": 5,
+    "V": 4
+   },
+   "R2b": {
+    "II": 1
+   },
+   "R3-single": {
+    "I": 3,
+    "II": 26,
+    "III": 14,
+    "IV": 58
+   }
+  },
+  "multiPageBases": 211,
+  "r3Rows": {
+   "rowsPerBaseDist": {
+    "2": 98,
+    "3": 3
+   },
+   "total": 205
+  },
+  "soslednost": {
+   "flag": 50,
+   "flaggedRowsR3": [
+    "1008@p53",
+    "1008@p92",
+    "102@p7",
+    "1128@p59",
+    "1128@p74",
+    "1131@p59",
+    "1131@p74",
+    "1961@p96",
+    "1970@p101",
+    "1970@p96",
+    "2025@p104",
+    "2025@p104",
+    "2061@p121",
+    "2066@p106",
+    "2066@p121",
+    "2074@p106",
+    "2074@p121",
+    "2402@p122",
+    "962@p51",
+    "962@p91"
+   ],
+   "ok": 375,
+   "r3Subset": {
+    "flag": 20,
+    "ok": 189
+   },
+   "relevantRows": 425
+  },
+  "split": 39,
+  "statusDist": {
+   "R1": 17,
+   "R2a": 53,
+   "R2b": 1,
+   "R3-single": 101,
+   "split": 39
+  }
+ },
+ "task": "P65 — polna per-Blatt atribucija: 101 single-Blatt več-stranskih base (odprta točka P64 #3)",
+ "verdictEn": "P65: FULL PER-BLATT ATTRIBUTION — 101 SINGLE-BLATT MULTI-PAGE BASES (issue #13) — the P64 open point #3 fulfilled: the 101 bases whose all rows sit on pages of the SAME Blatt receive that Blatt as attributedBlatt (status 'R3-single', trivial and unambiguous: I 3 · II 26 · III 14 · IV 58; 205 rows — 98 bases × 2 + 3 bases × 3; all 101 with measured area) -> the multi-page coverage is COMPLETE: 211/211 (110 cross-Blatt from P64 + 101 single-Blatt), 172 attributed in total (Blatt II 68 · IV 63 · III 29 · I 8 · V 4) + 39 splits with alternatives (owner decision on the SPLIT join); FULL REGISTER COVERAGE (control block): 800 bases × 1,093 rows = 589 single-page (implicitly attributed via the page: I 145 · I·II 10 · II 183 · III 28 · IV 205 · V 18) + 211 multi-page; 0 rows without page attribution; adjacency of relevant rows 375/425 in total (the R3 part 189/209, 20 flags); the 110 P64 attributions byte-unchanged (I3); the v2 join UNCHANGED (measurements without reassignments — P56/P58/P59 discipline); machine attribution is not an evidentiary source",
+ "verdictSi": "P65: POLNA PER-BLATT ATRIBUCIJA — 101 SINGLE-BLATT VEČ-STRANSKIH BASE (issue #13) — odprta točka P64 #3 izpolnjena: 101 base, katerih vse vrstice nosijo strani ISTEGA Blatta, dobi ta Blatt kot attributedBlatt (status 'R3-single', trivialno in nedvoumno: I 3 · II 26 · III 14 · IV 58; 205 vrstic — 98 base × 2 + 3 base × 3; vseh 101 z izmerjeno površino) → pokritost več-stranskih base POPOLNA: 211/211 (110 čez-Blatt iz P64 + 101 single-Blatt), skupaj 172 atributiranih (Blatt II 68 · IV 63 · III 29 · I 8 · V 4) + 39 split z alternativami (lastniška odločitev o SPLIT joinu); POLNA POKRITOST REGISTRA (kontrolni blok): 800 base × 1093 vrstic = 589 single-page (implicitno atributirane prek strani: I 145 · I·II 10 · II 183 · III 28 · IV 205 · V 18) + 211 multi-page; 0 vrstic brez atribucije strani; soslednost relevantnih vrstic skupaj 375/425 (R3 del 189/209, flag 20); 110 P64 atribucij bajtno nespremenjenih (I3); join v2 NESPREMENJEN (meritve brez prerazporeditev — disciplina P56/P58/P59); strojna atribucija ni dokazni vir",
+ "version": 1
+}

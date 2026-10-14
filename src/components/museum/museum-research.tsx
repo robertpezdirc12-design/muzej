@@ -80,6 +80,7 @@ import {
   UNIT_SEM_P61,
   TAIL_P63,
   ATTR_EXT_P64,
+  ATTR_FULL_P65,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -2151,6 +2152,68 @@ export function MuseumResearch() {
                   {t(
                     "39 split base ostaja NEATRIBUTIRANIH [~] z alternativami — odločitev lastnika za per-Blatt SPLIT joina (#8); 2 R1↔R2 divergenci nerazloženi [~] (moda B vs area-dominanca); strojna atribucija ni dokazni vir. Strojno berljivo: research/issue17/ps-attribution-ext.json + runtime src/data/atlas/ps-attribution-ext.json (/api/atlas/ps-attribution-ext).",
                     "39 split bases remain UNATTRIBUTED [~] with alternatives — the owner decision for the per-Blatt SPLIT join (#8); 2 R1-vs-R2 divergences unexplained [~] (mode B vs area dominance); machine attribution is not an evidentiary source. Machine-readable: research/issue17/ps-attribution-ext.json + the runtime src/data/atlas/ps-attribution-ext.json (/api/atlas/ps-attribution-ext).",
+                  )}
+                </p>
+              </div>
+            </div>
+
+            {/* P65 — polna per-Blatt atribucija: 101 single-Blatt + pokritost 211/211 */}
+            <div className="min-w-0 rounded-xl border bg-card p-6 shadow-sm">
+              <h3 className="flex flex-wrap items-center gap-2 font-display text-lg font-semibold">
+                <ScrollText className="size-4 text-primary" aria-hidden="true" />
+                {t("Per-Blatt atribucija — polna pokritost 211/211 (P65)", "Per-Blatt attribution — full coverage 211/211 (P65)")}
+                <StatusBadge status={ATTR_FULL_P65.status} />
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                {t(
+                  "Odprta točka P64 #3: 101 single-Blatt več-stranskih base atributiranih (vse vrstice na straneh istega Blatta — trivialno, R3-single) → pokritost več-stranskih base POPOLNA: 211/211.",
+                  "P64 open point #3: the 101 single-Blatt multi-page bases attributed (all rows on pages of the same Blatt — trivial, R3-single) -> multi-page coverage COMPLETE: 211/211.",
+                )}
+              </p>
+              <div className="mt-4 grid gap-2 text-xs sm:grid-cols-2">
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("R3-single (merjeno)", "R3-single (measured)")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "I 3 · II 26 · III 14 · IV 58 (101 base, 205 vrstic — 98 × 2 + 3 × 3; vse z izmerjeno površino) → skupaj 172 atributiranih (Blatt II 68 · IV 63 · III 29 · I 8 · V 4)",
+                      "I 3 · II 26 · III 14 · IV 58 (101 bases, 205 rows — 98 × 2 + 3 × 3; all with measured area) -> 172 attributed in total (Blatt II 68 · IV 63 · III 29 · I 8 · V 4)",
+                    )}
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("Polna pokritost registra", "Full register coverage")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "800 base × 1093 vrstic = 589 single-page (implicitno prek strani: I 145 · I·II 10 · II 183 · III 28 · IV 205 · V 18) + 211 multi-page (110 čez-Blatt + 101 single-Blatt); 0 vrstic brez atribucije",
+                      "800 bases × 1,093 rows = 589 single-page (implicit via the page: I 145 · I·II 10 · II 183 · III 28 · IV 205 · V 18) + 211 multi-page (110 cross-Blatt + 101 single-Blatt); 0 rows without attribution",
+                    )}
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("Soslednost", "Adjacency")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "Relevantnih vrstic skupaj 375/425 (flag 50); R3 del 189/209 — prečrtane vrstice [~]; P64 del 186/216 nespremenjen",
+                      "Relevant rows 375/425 in total (50 flags); the R3 part 189/209 — crossed-out rows [~]; the P64 part 186/216 unchanged",
+                    )}
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("Konsistenca + join", "Consistency + join")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "110 P64 atribucij bajtno nespremenjenih (I3); R3 nesoglasij s P64: 0 (disjunktni množici); join v2 NESPREMENJEN — meritve brez prerazporeditev",
+                      "The 110 P64 attributions byte-unchanged (I3); R3 conflicts with P64: 0 (disjoint sets); the v2 join UNCHANGED — measurements without reassignments",
+                    )}
+                  </p>
+                </div>
+              </div>
+              <div className="mt-3 rounded-lg border border-emerald-200 bg-emerald-50/60 p-3 dark:border-emerald-900/50 dark:bg-emerald-950/30">
+                <p className="text-[11px] leading-relaxed text-foreground/80">
+                  <span className="font-semibold">{t("Pošten status: ", "Honest status: ")}</span>
+                  {t(
+                    "39 split base ostaja NEATRIBUTIRANIH [~] (odločitev lastnika za SPLIT joina); 'I·II' prehodne strani (10 single-page base) razlagalno odprte [~]; strojna atribucija ni dokazni vir. Strojno berljivo: research/issue17/ps-attribution-full.json + runtime src/data/atlas/ps-attribution-full.json (/api/atlas/ps-attribution-full).",
+                    "39 split bases remain UNATTRIBUTED [~] (owner decision on the SPLIT join); 'I·II' transition pages (10 single-page bases) open [~]; machine attribution is not an evidentiary source. Machine-readable: research/issue17/ps-attribution-full.json + the runtime src/data/atlas/ps-attribution-full.json (/api/atlas/ps-attribution-full).",
                   )}
                 </p>
               </div>
