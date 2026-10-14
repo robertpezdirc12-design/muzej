@@ -460,3 +460,20 @@ preprečujeta prenos `.env*` in lokalnih datotek pri deployu.
   `research/issue17/ps-attribution-full.json` + API
   `/api/atlas/ps-attribution-full` + kartica P65; QA 67 → **68/68**;
   join v2 in SHEET_GEOREFS nespremanjeni.
+- **split decision pack — 39 split base (P66, issue #13)** — priprava za
+  lastniško odločitev o per-Blatt SPLIT joinu (odprta točka P64 #8;
+  deterministično, brez AI ob delovanju; NE odloča namesto lastnika —
+  MERI in DOKAZUJE dejstva): 39 base × 2 deleža, 93 vrstic (25 × 2 +
+  13 × 3 + 1 × 4); Blatt pari I·II 7 · II·III 21 · II·IV 2 · IV·V 9
+  (sosednji 37, skok 2: 1603/1604 — isti kulturi); **lastniki per Blatt
+  DISJUNKTNI 39/39** (2–3 edinstvenih: 25/13/1) — močan dokaz, da je
+  ista številka pod različnima Blattoma 2 RAZLIČNI realni parceli;
+  dominantni deleži [0.50,0.60) 23 · [0.60,0.70) 11 · [0.70,0.75) 5;
+  kulture 92 z razčlenitvijo per Blatt; **GEO 39/39: ena geometrija
+  joina v2 na vseh vrsticah** (na nivoju številke — SPLIT bi zahteval
+  2 geometriji); areaSuspect 0; sosledje split del 82/93 (flag 11 —
+  5 base); `scripts/p66_ps_split_pack.py` (I1–I8, `--check` bajtno
+  PASS; 3× sha pini vhodov po lekciji P9) + dokaz
+  `research/issue17/ps-split-pack.json` + API
+  `/api/atlas/ps-split-pack` + kartica P66; QA 68 → **69/69**;
+  join v2 in SHEET_GEOREFS nespremanjeni.

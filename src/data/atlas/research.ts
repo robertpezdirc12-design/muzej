@@ -4588,3 +4588,81 @@ export const ATTR_FULL_P65: {
     "'I·II' prehodne strani (10 single-page base) — paleografska razlaga prehodne cone [~]",
   ],
 };
+
+export const SPLIT_PACK_P66: {
+  version: number;
+  series: "PS";
+  source: string;
+  status: ResearchStatus;
+  generatedBy: string;
+  rule: { source: string; blattPair: string; ownerRelation: string; dominantShare: string; geoShared: string };
+  summary: {
+    splitBases: number;
+    rowsTotal: number;
+    rowsPerBaseDist: Record<string, number>;
+    shareCountDist: Record<string, number>;
+    blattPairDist: Record<string, number>;
+    adjacentPairs: number;
+    skipPairs: number;
+    uniqueOwnersDist: Record<string, number>;
+    ownerRelationDist: Record<string, number>;
+    dominantShareBuckets: Record<string, number>;
+    kulturesTotal: number;
+    geoShared: { shared: number; distinct: number; null: number };
+    areaSuspectRows: number;
+    sosledje: { ok: number; flag: number; relevantRows: number; flagBases: string[] };
+  };
+  statusLine: string;
+  verdictSi: string;
+  verdictEn: string;
+  next: string[];
+} = {
+  version: 1,
+  series: "PS",
+  source:
+    "src/data/atlas/ps-attribution-full.json (P65 runtime 211, split 39 — bajtni vir) × research/issue17/ps-parcels-geo-v2.json (rowsEvidence 1093) × research/issue17/ps-blatt-headers.json (pageAttribution P59); dokaz research/issue17/ps-split-pack.json + runtime src/data/atlas/ps-split-pack.json",
+  status: "REVIEW",
+  generatedBy:
+    "scripts/p66_ps_split_pack.py (deterministično, brez AI ob delovanju, FAIL ob padu I1–I8; --check bajtno PASS)",
+  rule: {
+    source:
+      "split base = P65 status 'split' (dominantni delež v [0.5, 0.75), attributedBlatt null, blattShares alternative) — P66 ne spreminja pravil",
+    blattPair:
+      "urejen par Blattov split base ('·' join); sosednji = v ADJACENT {(I,II),(II,III),(III,IV),(IV,V)}",
+    ownerRelation:
+      "disjunktnost množic lastnikov per Blatt: 'disjoint' | 'equal' | 'overlap' | 'open' (prazna množica)",
+    dominantShare:
+      "share[0] (P65 sort: Σ areaQK desc, Blatt asc); pasovi [0.50,0.60)/[0.60,0.70)/[0.70,0.75)",
+    geoShared:
+      "ali vse vrstice base nosijo isti par (lat, lng) v v2 (null = vse brez); SAMO števec v summary — koordinate ne gredo v izpis (I6)",
+  },
+  summary: {
+    splitBases: 39,
+    rowsTotal: 93,
+    rowsPerBaseDist: { "2": 25, "3": 13, "4": 1 },
+    shareCountDist: { "2": 39 },
+    blattPairDist: { "I·II": 7, "II·III": 21, "II·IV": 2, "IV·V": 9 },
+    adjacentPairs: 37,
+    skipPairs: 2,
+    uniqueOwnersDist: { "2": 25, "3": 13, "4": 1 },
+    ownerRelationDist: { disjoint: 39 },
+    dominantShareBuckets: { "0.50–0.60": 23, "0.60–0.70": 11, "0.70–0.75": 5 },
+    kulturesTotal: 92,
+    geoShared: { shared: 39, distinct: 0, null: 0 },
+    areaSuspectRows: 0,
+    sosledje: { ok: 82, flag: 11, relevantRows: 93, flagBases: ["1821", "2141", "2143", "646", "661"] },
+  },
+  statusLine:
+    "P66 SPLIT PACK: 39 split base (39 ⊂ 211 multi-page), 93 vrstic; pari I·II 7 · II·III 21 · II·IV 2 · IV·V 9 (sosednji 37, skok 2); lastniki per Blatt DISJUNKTNI 39/39; pasovi 23/11/5; geo ena geometrija 39/39; join v2 nespremanjen; odločitev lastnika",
+  verdictSi:
+    "P66: SPLIT DECISION PACK — 39 SPLIT BASE (issue #13) — odločitveni paket za per-Blatt SPLIT joina (odprta točka P64 #8, kandidat #1 iz P65; deterministično, brez AI ob delovanju; NE odloča namesto lastnika — MERI in DOKAZUJE dejstva): vseh 39 base ima TOČNO 2 deleža (blattShares), 93 vrstic (25 × 2 + 13 × 3 + 1 × 4); Blatt pari I·II 7 · II·III 21 · II·IV 2 · IV·V 9 (37/39 sosednja Blatta, 2 skoka II·IV — 1603/1604, isti kulturi na obeh Blattih); LASTNIŠKA RAZČLENITEV PER BLATT: 39/39 DISJUNKTNI lastniki — vsak split base ima različne lastnike po Blattih (močan dokaz, da je ista številka pod različnima Blattoma 2 RAZLIČNI realni parceli); 2–3 edinstvenih lastnikov (25/13/1); dominantni deleži [0.50,0.60) 23 · [0.60,0.70) 11 · [0.70,0.75) 5; kulture 92 (kulturesByBlatt); GEO: 39/39 base nosi VSEH vrstic ENAKO geometrijo joina v2 (0 različnih) — join v2 je na nivoju številke, zato SPLIT join bi zahteval 2 geometriji (števec merjen brez koordinat — I6); areaSuspect 0; sosledje split del 82/93 (flag 11 — 5 base: 646, 661, 1821, 2141, 2143); P65 polja 39× bajtno (I3); join v2 NESPREMENJEN (disciplina P56/P58/P59/P65); odločitev LASTNIKA",
+  verdictEn:
+    "P66: SPLIT DECISION PACK — 39 SPLIT BASES (issue #13) — the decision pack for the per-Blatt SPLIT join (P64 open point #8, candidate #1 from P65; deterministic, no AI at runtime; does NOT decide on behalf of the owner — MEASURES and PROVES the facts): all 39 bases have EXACTLY 2 shares (blattShares), 93 rows (25 × 2 + 13 × 3 + 1 × 4); Blatt pairs I·II 7 · II·III 21 · II·IV 2 · IV·V 9 (37/39 adjacent Blatts, 2 skips II·IV — 1603/1604, same cultures on both Blatts); OWNERSHIP PARTITION PER BLATT: 39/39 DISJOINT owners — every split base has different owners per Blatt (strong evidence that the same number under different Blatts is 2 DIFFERENT real parcels); 2–3 unique owners (25/13/1); dominant shares [0.50,0.60) 23 · [0.60,0.70) 11 · [0.70,0.75) 5; cultures 92 (kulturesByBlatt); GEO: 39/39 bases carry the SAME join-v2 geometry for ALL rows (0 distinct) — the v2 join is at the number level, so a SPLIT join would require 2 geometries (counter measured without coordinates — I6); areaSuspect 0; adjacency split part 82/93 (11 flags — 5 bases: 646, 661, 1821, 2141, 2143); the P65 fields byte-identical 39× (I3); the v2 join UNCHANGED (P56/P58/P59/P65 discipline); the decision belongs to the OWNER",
+  next: [
+    "LASTNIŠKA ODLOČITEV o per-Blatt SPLIT joinu za 39 base (2 geometriji; razdelitev per deleži ali per lastnika) — ta paket je dokazni vir",
+    "izvedba SPLIT joina (ob odobritvi): v2 join upgrade — 39 base → 78 kandidatnih instanc per Blatt, geometrije per Blatt georef [~]",
+    "razlaga 2 skokov II·IV (1603, 1604: isti kulturi 'Acker' + 'Weide und Gfällgut, Laubm.' na obeh Blattih — preveriti dednost/preimenovanje)",
+    "razlaga 5 sosledje flagov (646, 661, 1821, 2141, 2143)",
+    "lastniki atributiranih instanc ↔ PF protokol (ostaja iz P65)",
+  ],
+};

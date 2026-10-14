@@ -2502,3 +2502,66 @@ po P53/P57/P58).
 single-page base) razlagalno odprte [~]; strojna atribucija ni dokazni
 vir; join v2 in SHEET_GEOREFS nespremanjeni (lekcija P9); P55–P64
 runtime nespremanjeni (I1 sha pini).
+
+## §44 — P66: split decision pack — 39 split base, odločitveni paket za per-Blatt SPLIT joina (issue #13, 2026-10-14)
+
+Kandidat #1 iz P65 `next` (odprta točka P64 #8): **P66 NE odloča
+namesto lastnika** — MERI in DOKAZUJE dejstva, ki odločitev o per-Blatt
+SPLIT joinu podpirajo (deterministično, brez AI ob delovanju; join v2
+NESPREMENJEN — disciplina P56/P58/P59/P65).
+
+**Merjeno (39 split base iz P65 runtime, bajtni vir):**
+- **Razčlenitev**: vseh 39 base ima TOČNO 2 deleža (blattShares);
+  93 vrstic (25 base × 2 + 13 × 3 + 1 × 4); Σ share = 1 (toleranca
+  1e-3 — deleži half-up @ 4 decimalki); Σ areaQK per Blatt == Σ
+  areaQK vrstic (bajtno).
+- **Blatt pari**: I·II 7 · II·III 21 · II·IV 2 · IV·V 9 —
+  **37/39 sosednja Blatta**, 2 skoka II·IV (1603, 1604: isti kulturi
+  'Acker' + 'Weide und Gfällgut, Laubm.' na obeh Blattih — preveriti
+  dednost/preimenovanje).
+- **LASTNIŠKA RAZČLENITEV PER BLATT: 39/39 DISJUNKTNI lastniki** —
+  vsak split base ima različne lastnike po Blattih (množici
+  ownersByBlatt disjunktni) → močan dokaz, da je ista številka pod
+  različnima Blattoma **2 RAZLIČNI realni parceli**, ne isti parceli
+  prestopa meje; 2–3 edinstvenih lastnikov (25/13/1).
+- **Dominantni delež pasovi**: [0.50,0.60) 23 · [0.60,0.70) 11 ·
+  [0.70,0.75) 5 (razlog za split: delež < 0.75, R2a ne zadošča).
+- **Kulture**: 92 z razčlenitvijo per Blatt (kulturesByBlatt).
+- **GEO: 39/39 base nosi VSEH vrstic ENAKO geometrijo joina v2**
+  (0 različnih, 0 null) — join v2 je na nivoju številke, zato SPLIT
+  join bi zahteval 2 geometriji; števec merjen brez koordinat (I6 —
+  brez lat/lng/areaModern/ratio v izpisu).
+- **Kakovost**: areaSuspect 0; sosledje split del **82/93**
+  (flag 11 — 5 base: 646, 661, 1821, 2141, 2143).
+
+**Konsistenca**: P65 polja 39× bajtno (I3 — deep equality per base:
+status, attributedBlatt, blattShares, rowsTotal, pages, kultures,
+owners, sosledje); sosledje split del == P65 bajtno (I5).
+
+**Skripta:** `scripts/p66_ps_split_pack.py` (deterministična, brez
+AI ob delovanju, FAIL ob padu I1–I8; `--check` bajtno PASS: I1 vhodni
+pini 3× sha256 (v2 ev ebb8f729…, P59 ev 95929a2e…, P65 rt 74477ac8…)
++ števci 1093/800/211/39; I2 razčlenitev (39 ⊂ 211; 2 deleža; Σ share
+= 1; Σ areaQK == vrstice); I3 P65 polja bajtno (39×); I4 distribucije
+(pairs/skip/owners/rel/pasovi/kulture/geo/suspect); I5 sosledje split
+del == P65 bajtno (82/93); I6 brez georef polj (lat/lng/areaModern/
+ratio) + geoShared samo števec; I7 dokaz ⊇ runtime bajtno; I8
+determinizem). Izhodi: dokaz `research/issue17/ps-split-pack.json` +
+runtime `src/data/atlas/ps-split-pack.json` (polni dataset 39 base z
+per-vrstično razčlenitvijo: page, blatt, parzella, owner, stand,
+hausNr, wohnort, kultur, joch, klafter, areaQK, parts, conf, series,
+ambiguous + source/readConf/anmerkung ko obstajajo).
+
+**Integracija:** API `/api/atlas/ps-split-pack` (force-static) +
+SPLIT_PACK_P66 (research.ts) + kartica P66 (zavihek Prepisi Kurrent,
+za P65) + sources.ts N083PS opomba P66 (Si+En) + QA 68 → **69**
+(qa-p66-split-pack: pini + NEODVISEN preracun 39 split base iz v2
+runtime vrstic × P65 runtime × pageAttribution P59 — blattPair,
+ownerRelation, pasovi, geoShared, sosledje; I3 P65 bajtno; dokaz ==
+runtime bajtno; dve obliki po P53/P57/P58).
+
+**Poštenost:** odločitev o SPLIT joinu je LASTNIŠKA (2 geometriji;
+razdelitev per deleži ali per lastnika) — P66 je samo dokazni vir;
+2 skoka II·IV nerazložena [~]; 5 sosledje flagov [~]; strojna
+atribucija ni dokazni vir; join v2 in SHEET_GEOREFS nespremanjeni
+(lekcija P9); P55–P65 runtime nespremanjeni (I1 sha pini).

@@ -1,0 +1,9173 @@
+{
+ "bases": {
+  "1603": {
+   "attributedBlatt": null,
+   "blattPair": "II·IV",
+   "blattShares": [
+    {
+     "areaQK": 1005.0,
+     "blatt": "IV",
+     "pages": [
+      93
+     ],
+     "rows": 1,
+     "share": 0.5643
+    },
+    {
+     "areaQK": 776.0,
+     "blatt": "II",
+     "pages": [
+      78
+     ],
+     "rows": 1,
+     "share": 0.4357
+    }
+   ],
+   "dominantShare": 0.5643,
+   "geoShared": true,
+   "kultures": [
+    "Acker",
+    "Weide und Gfällgut, Laubm."
+   ],
+   "kulturesByBlatt": {
+    "II": [
+     "Acker"
+    ],
+    "IV": [
+     "Weide und Gfällgut, Laubm."
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Pachler Martin",
+    "Verboten (er) Bueb?"
+   ],
+   "ownersByBlatt": {
+    "II": [
+     "Pachler Martin"
+    ],
+    "IV": [
+     "Verboten (er) Bueb?"
+    ]
+   },
+   "pages": [
+    78,
+    93
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 776.0,
+     "areaSuspect": false,
+     "base": "1603",
+     "blatt": "II",
+     "conf": "MEDIUM",
+     "hausNr": "30",
+     "joch": null,
+     "klafter": 776.0,
+     "kultur": "Acker",
+     "owner": "Pachler Martin",
+     "page": 78,
+     "parts": 1,
+     "parzella": "1603",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grübln",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 1005.0,
+     "areaSuspect": false,
+     "base": "1603",
+     "blatt": "IV",
+     "conf": "MEDIUM",
+     "hausNr": "64",
+     "joch": null,
+     "klafter": 1005.0,
+     "kultur": "Weide und Gfällgut, Laubm.",
+     "owner": "Verboten (er) Bueb?",
+     "page": 93,
+     "parts": 1,
+     "parzella": "1603",
+     "series": "S1",
+     "stand": "Bauer",
+     "wohnort": "Grüble",
+     "wohnortInherited": false
+    }
+   ],
+   "rowsTotal": 2,
+   "shareDelta": 0.1286,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "1604": {
+   "attributedBlatt": null,
+   "blattPair": "II·IV",
+   "blattShares": [
+    {
+     "areaQK": 774.0,
+     "blatt": "II",
+     "pages": [
+      78
+     ],
+     "rows": 1,
+     "share": 0.5167
+    },
+    {
+     "areaQK": 724.0,
+     "blatt": "IV",
+     "pages": [
+      93
+     ],
+     "rows": 1,
+     "share": 0.4833
+    }
+   ],
+   "dominantShare": 0.5167,
+   "geoShared": true,
+   "kultures": [
+    "Acker",
+    "Weide und Gfällgut, Laubm."
+   ],
+   "kulturesByBlatt": {
+    "II": [
+     "Acker"
+    ],
+    "IV": [
+     "Weide und Gfällgut, Laubm."
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Piringer Mathäus",
+    "Ullrich Otto"
+   ],
+   "ownersByBlatt": {
+    "II": [
+     "Ullrich Otto"
+    ],
+    "IV": [
+     "Piringer Mathäus"
+    ]
+   },
+   "pages": [
+    78,
+    93
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 774.0,
+     "areaSuspect": false,
+     "base": "1604",
+     "blatt": "II",
+     "conf": "MEDIUM",
+     "hausNr": "31",
+     "joch": null,
+     "klafter": 774.0,
+     "kultur": "Acker",
+     "owner": "Ullrich Otto",
+     "page": 78,
+     "parts": 3,
+     "parzella": "1604",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grübln",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 724.0,
+     "areaSuspect": false,
+     "base": "1604",
+     "blatt": "IV",
+     "conf": "MEDIUM",
+     "hausNr": "63",
+     "joch": null,
+     "klafter": 724.0,
+     "kultur": "Weide und Gfällgut, Laubm.",
+     "owner": "Piringer Mathäus",
+     "page": 93,
+     "parts": 3,
+     "parzella": "1604",
+     "series": "S1",
+     "stand": "Bauer",
+     "wohnort": "Grüble",
+     "wohnortInherited": false
+    }
+   ],
+   "rowsTotal": 2,
+   "shareDelta": 0.0334,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "1821": {
+   "attributedBlatt": null,
+   "blattPair": "II·III",
+   "blattShares": [
+    {
+     "areaQK": 481.0,
+     "blatt": "II",
+     "pages": [
+      64,
+      79
+     ],
+     "rows": 2,
+     "share": 0.6961
+    },
+    {
+     "areaQK": 210.0,
+     "blatt": "III",
+     "pages": [
+      94
+     ],
+     "rows": 1,
+     "share": 0.3039
+    }
+   ],
+   "dominantShare": 0.6961,
+   "geoShared": true,
+   "kultures": [
+    "Einöd Wiese Geyersättä",
+    "Wiese und Äcker",
+    "Äfling"
+   ],
+   "kulturesByBlatt": {
+    "II": [
+     "Einöd Wiese Geyersättä",
+     "Äfling"
+    ],
+    "III": [
+     "Wiese und Äcker"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Büller Lorenz",
+    "Peterig Mathä",
+    "Pößlrey Peter Bäuer Grübl"
+   ],
+   "ownersByBlatt": {
+    "II": [
+     "Büller Lorenz",
+     "Pößlrey Peter Bäuer Grübl"
+    ],
+    "III": [
+     "Peterig Mathä"
+    ]
+   },
+   "pages": [
+    64,
+    79,
+    94
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 63.0,
+     "areaSuspect": false,
+     "base": "1821",
+     "blatt": "II",
+     "conf": "MEDIUM",
+     "hausNr": "1 29",
+     "joch": null,
+     "klafter": 63.0,
+     "kultur": "Äfling",
+     "owner": "Büller Lorenz",
+     "page": 64,
+     "parts": 1,
+     "parzella": "1821",
+     "series": "S1",
+     "stand": "Grübler",
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 418.0,
+     "areaSuspect": false,
+     "base": "1821",
+     "blatt": "II",
+     "conf": "MEDIUM",
+     "hausNr": "14",
+     "joch": null,
+     "klafter": 418.0,
+     "kultur": "Einöd Wiese Geyersättä",
+     "owner": "Pößlrey Peter Bäuer Grübl",
+     "page": 79,
+     "parts": 1,
+     "parzella": "1821",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grübln",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 210.0,
+     "areaSuspect": false,
+     "base": "1821",
+     "blatt": "III",
+     "conf": "MEDIUM",
+     "hausNr": "1 1/2",
+     "joch": null,
+     "klafter": 210.0,
+     "kultur": "Wiese und Äcker",
+     "owner": "Peterig Mathä",
+     "page": 94,
+     "parts": 1,
+     "parzella": "1821",
+     "series": "S1",
+     "stand": "Bauer",
+     "wohnort": "Grüble",
+     "wohnortInherited": false
+    }
+   ],
+   "rowsTotal": 3,
+   "shareDelta": 0.3922,
+   "sosledje": {
+    "flag": 3,
+    "flaggedRows": [
+     "1821@p64",
+     "1821@p79",
+     "1821@p94"
+    ],
+    "ok": 0
+   },
+   "status": "split"
+  },
+  "1832": {
+   "attributedBlatt": null,
+   "blattPair": "II·III",
+   "blattShares": [
+    {
+     "areaQK": 1206.0,
+     "blatt": "III",
+     "pages": [
+      94
+     ],
+     "rows": 1,
+     "share": 0.5196
+    },
+    {
+     "areaQK": 1115.0,
+     "blatt": "II",
+     "pages": [
+      64,
+      79
+     ],
+     "rows": 2,
+     "share": 0.4804
+    }
+   ],
+   "dominantShare": 0.5196,
+   "geoShared": true,
+   "kultures": [
+    "Einhauß",
+    "Wiese und Äcker",
+    "Äfling"
+   ],
+   "kulturesByBlatt": {
+    "II": [
+     "Einhauß",
+     "Äfling"
+    ],
+    "III": [
+     "Wiese und Äcker"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Mellner Lorenz",
+    "Pavlič Mihelj",
+    "Uebl Thomas"
+   ],
+   "ownersByBlatt": {
+    "II": [
+     "Pavlič Mihelj",
+     "Uebl Thomas"
+    ],
+    "III": [
+     "Mellner Lorenz"
+    ]
+   },
+   "pages": [
+    64,
+    79,
+    94
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 1083.0,
+     "areaSuspect": false,
+     "base": "1832",
+     "blatt": "II",
+     "conf": "STRONG",
+     "hausNr": "1 42",
+     "joch": null,
+     "klafter": 1083.0,
+     "kultur": "Äfling",
+     "owner": "Pavlič Mihelj",
+     "page": 64,
+     "parts": 1,
+     "parzella": "1832",
+     "series": "S1",
+     "stand": "Grübler",
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 32.0,
+     "areaSuspect": false,
+     "base": "1832",
+     "blatt": "II",
+     "conf": "MEDIUM",
+     "hausNr": "17",
+     "joch": null,
+     "klafter": 32.0,
+     "kultur": "Einhauß",
+     "owner": "Uebl Thomas",
+     "page": 79,
+     "parts": 1,
+     "parzella": "1832",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grübln",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 1206.0,
+     "areaSuspect": false,
+     "base": "1832",
+     "blatt": "III",
+     "conf": "STRONG",
+     "hausNr": "1 60",
+     "joch": null,
+     "klafter": 1206.0,
+     "kultur": "Wiese und Äcker",
+     "owner": "Mellner Lorenz",
+     "page": 94,
+     "parts": 1,
+     "parzella": "1832",
+     "series": "S1",
+     "stand": "Bauer",
+     "wohnort": "Grüble",
+     "wohnortInherited": false
+    }
+   ],
+   "rowsTotal": 3,
+   "shareDelta": 0.0392,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 3
+   },
+   "status": "split"
+  },
+  "1833": {
+   "attributedBlatt": null,
+   "blattPair": "II·III",
+   "blattShares": [
+    {
+     "areaQK": 2122.0,
+     "blatt": "II",
+     "pages": [
+      64,
+      79
+     ],
+     "rows": 2,
+     "share": 0.6405
+    },
+    {
+     "areaQK": 1191.0,
+     "blatt": "III",
+     "pages": [
+      94
+     ],
+     "rows": 1,
+     "share": 0.3595
+    }
+   ],
+   "dominantShare": 0.6405,
+   "geoShared": true,
+   "kultures": [
+    "Einöd Wiese Gey. sätä",
+    "Wiese und Äcker",
+    "Äfling"
+   ],
+   "kulturesByBlatt": {
+    "II": [
+     "Einöd Wiese Gey. sätä",
+     "Äfling"
+    ],
+    "III": [
+     "Wiese und Äcker"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Budle Miha",
+    "Miller Joseph",
+    "Uebl Thomas"
+   ],
+   "ownersByBlatt": {
+    "II": [
+     "Budle Miha",
+     "Uebl Thomas"
+    ],
+    "III": [
+     "Miller Joseph"
+    ]
+   },
+   "pages": [
+    64,
+    79,
+    94
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 110.0,
+     "areaSuspect": false,
+     "base": "1833",
+     "blatt": "II",
+     "conf": "MEDIUM",
+     "hausNr": "1 43",
+     "joch": null,
+     "klafter": 110.0,
+     "kultur": "Äfling",
+     "owner": "Budle Miha",
+     "page": 64,
+     "parts": 1,
+     "parzella": "1833",
+     "series": "S1",
+     "stand": "Grübler",
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 2012.0,
+     "areaSuspect": false,
+     "base": "1833",
+     "blatt": "II",
+     "conf": "MEDIUM",
+     "hausNr": "17",
+     "joch": 1.0,
+     "klafter": 412.0,
+     "kultur": "Einöd Wiese Gey. sätä",
+     "owner": "Uebl Thomas",
+     "page": 79,
+     "parts": 1,
+     "parzella": "1833",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grübln",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 1191.0,
+     "areaSuspect": false,
+     "base": "1833",
+     "blatt": "III",
+     "conf": "MEDIUM",
+     "hausNr": "1 22",
+     "joch": null,
+     "klafter": 1191.0,
+     "kultur": "Wiese und Äcker",
+     "owner": "Miller Joseph",
+     "page": 94,
+     "parts": 1,
+     "parzella": "1833",
+     "series": "S1",
+     "stand": "Bauer",
+     "wohnort": "Grüble",
+     "wohnortInherited": false
+    }
+   ],
+   "rowsTotal": 3,
+   "shareDelta": 0.281,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 3
+   },
+   "status": "split"
+  },
+  "1834": {
+   "attributedBlatt": null,
+   "blattPair": "II·III",
+   "blattShares": [
+    {
+     "areaQK": 1531.0,
+     "blatt": "II",
+     "pages": [
+      64,
+      79
+     ],
+     "rows": 2,
+     "share": 0.5689
+    },
+    {
+     "areaQK": 1160.0,
+     "blatt": "III",
+     "pages": [
+      94
+     ],
+     "rows": 1,
+     "share": 0.4311
+    }
+   ],
+   "dominantShare": 0.5689,
+   "geoShared": true,
+   "kultures": [
+    "Einöd Wiese Geyersättä",
+    "Wiese und Äcker",
+    "Äfling"
+   ],
+   "kulturesByBlatt": {
+    "II": [
+     "Einöd Wiese Geyersättä",
+     "Äfling"
+    ],
+    "III": [
+     "Wiese und Äcker"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Lehko Gregor",
+    "Peterig Mathä",
+    "Schimming Anna"
+   ],
+   "ownersByBlatt": {
+    "II": [
+     "Lehko Gregor",
+     "Schimming Anna"
+    ],
+    "III": [
+     "Peterig Mathä"
+    ]
+   },
+   "pages": [
+    64,
+    79,
+    94
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 369.0,
+     "areaSuspect": false,
+     "base": "1834",
+     "blatt": "II",
+     "conf": "MEDIUM",
+     "hausNr": "1 60",
+     "joch": null,
+     "klafter": 369.0,
+     "kultur": "Äfling",
+     "owner": "Lehko Gregor",
+     "page": 64,
+     "parts": 1,
+     "parzella": "1834",
+     "series": "S1",
+     "stand": "Grübler",
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 1162.0,
+     "areaSuspect": false,
+     "base": "1834",
+     "blatt": "II",
+     "conf": "MEDIUM",
+     "hausNr": "36",
+     "joch": null,
+     "klafter": 1162.0,
+     "kultur": "Einöd Wiese Geyersättä",
+     "owner": "Schimming Anna",
+     "page": 79,
+     "parts": 1,
+     "parzella": "1834",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grübln",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 1160.0,
+     "areaSuspect": false,
+     "base": "1834",
+     "blatt": "III",
+     "conf": "MEDIUM",
+     "hausNr": "1 40",
+     "joch": null,
+     "klafter": 1160.0,
+     "kultur": "Wiese und Äcker",
+     "owner": "Peterig Mathä",
+     "page": 94,
+     "parts": 1,
+     "parzella": "1834",
+     "series": "S1",
+     "stand": "Bauer",
+     "wohnort": "Grüble",
+     "wohnortInherited": false
+    }
+   ],
+   "rowsTotal": 3,
+   "shareDelta": 0.1378,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 3
+   },
+   "status": "split"
+  },
+  "1836": {
+   "attributedBlatt": null,
+   "blattPair": "II·III",
+   "blattShares": [
+    {
+     "areaQK": 1420.0,
+     "blatt": "II",
+     "pages": [
+      64,
+      79
+     ],
+     "rows": 2,
+     "share": 0.5959
+    },
+    {
+     "areaQK": 963.0,
+     "blatt": "III",
+     "pages": [
+      94
+     ],
+     "rows": 1,
+     "share": 0.4041
+    }
+   ],
+   "dominantShare": 0.5959,
+   "geoShared": true,
+   "kultures": [
+    "Einöd Wiese Geyersättä",
+    "Äcker und Wiesen",
+    "Äfling"
+   ],
+   "kulturesByBlatt": {
+    "II": [
+     "Einöd Wiese Geyersättä",
+     "Äfling"
+    ],
+    "III": [
+     "Äcker und Wiesen"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Brinig Miha",
+    "Peterig Mathä",
+    "Schimming Magdalena"
+   ],
+   "ownersByBlatt": {
+    "II": [
+     "Brinig Miha",
+     "Schimming Magdalena"
+    ],
+    "III": [
+     "Peterig Mathä"
+    ]
+   },
+   "pages": [
+    64,
+    79,
+    94
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 216.0,
+     "areaSuspect": false,
+     "base": "1836",
+     "blatt": "II",
+     "conf": "MEDIUM",
+     "hausNr": "1 68",
+     "joch": null,
+     "klafter": 216.0,
+     "kultur": "Äfling",
+     "owner": "Brinig Miha",
+     "page": 64,
+     "parts": 1,
+     "parzella": "1836",
+     "series": "S1",
+     "stand": "Grübler",
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 1204.0,
+     "areaSuspect": false,
+     "base": "1836",
+     "blatt": "II",
+     "conf": "MEDIUM",
+     "hausNr": "19",
+     "joch": null,
+     "klafter": 1204.0,
+     "kultur": "Einöd Wiese Geyersättä",
+     "owner": "Schimming Magdalena",
+     "page": 79,
+     "parts": 1,
+     "parzella": "1836",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grübln",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 963.0,
+     "areaSuspect": false,
+     "base": "1836",
+     "blatt": "III",
+     "conf": "MEDIUM",
+     "hausNr": "1 40",
+     "joch": null,
+     "klafter": 963.0,
+     "kultur": "Äcker und Wiesen",
+     "owner": "Peterig Mathä",
+     "page": 94,
+     "parts": 1,
+     "parzella": "1836",
+     "series": "S1",
+     "stand": "Bauer",
+     "wohnort": "Grüble",
+     "wohnortInherited": false
+    }
+   ],
+   "rowsTotal": 3,
+   "shareDelta": 0.1918,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 3
+   },
+   "status": "split"
+  },
+  "1837": {
+   "attributedBlatt": null,
+   "blattPair": "II·III",
+   "blattShares": [
+    {
+     "areaQK": 1087.0,
+     "blatt": "II",
+     "pages": [
+      64,
+      79
+     ],
+     "rows": 2,
+     "share": 0.5785
+    },
+    {
+     "areaQK": 792.0,
+     "blatt": "III",
+     "pages": [
+      94
+     ],
+     "rows": 1,
+     "share": 0.4215
+    }
+   ],
+   "dominantShare": 0.5785,
+   "geoShared": true,
+   "kultures": [
+    "Einöd Wiese Geyersättä",
+    "Gärten Gartlitzg",
+    "Äcker und Wiesen"
+   ],
+   "kulturesByBlatt": {
+    "II": [
+     "Einöd Wiese Geyersättä",
+     "Gärten Gartlitzg"
+    ],
+    "III": [
+     "Äcker und Wiesen"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Kraichand Matho",
+    "Tillak Miha",
+    "Ueich Georg"
+   ],
+   "ownersByBlatt": {
+    "II": [
+     "Tillak Miha",
+     "Ueich Georg"
+    ],
+    "III": [
+     "Kraichand Matho"
+    ]
+   },
+   "pages": [
+    64,
+    79,
+    94
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 449.0,
+     "areaSuspect": false,
+     "base": "1837",
+     "blatt": "II",
+     "conf": "MEDIUM",
+     "hausNr": "1 61",
+     "joch": null,
+     "klafter": 449.0,
+     "kultur": "Gärten Gartlitzg",
+     "owner": "Tillak Miha",
+     "page": 64,
+     "parts": 1,
+     "parzella": "1837",
+     "series": "S1",
+     "stand": "Grübler",
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 638.0,
+     "areaSuspect": false,
+     "base": "1837",
+     "blatt": "II",
+     "conf": "MEDIUM",
+     "hausNr": "23",
+     "joch": null,
+     "klafter": 638.0,
+     "kultur": "Einöd Wiese Geyersättä",
+     "owner": "Ueich Georg",
+     "page": 79,
+     "parts": 1,
+     "parzella": "1837",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grübln",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 792.0,
+     "areaSuspect": false,
+     "base": "1837",
+     "blatt": "III",
+     "conf": "MEDIUM",
+     "hausNr": "1 62",
+     "joch": null,
+     "klafter": 792.0,
+     "kultur": "Äcker und Wiesen",
+     "owner": "Kraichand Matho",
+     "page": 94,
+     "parts": 1,
+     "parzella": "1837",
+     "series": "S1",
+     "stand": "Bauer",
+     "wohnort": "Grüble",
+     "wohnortInherited": false
+    }
+   ],
+   "rowsTotal": 3,
+   "shareDelta": 0.157,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 3
+   },
+   "status": "split"
+  },
+  "1838": {
+   "attributedBlatt": null,
+   "blattPair": "II·III",
+   "blattShares": [
+    {
+     "areaQK": 1036.0,
+     "blatt": "III",
+     "pages": [
+      94
+     ],
+     "rows": 1,
+     "share": 0.6356
+    },
+    {
+     "areaQK": 594.0,
+     "blatt": "II",
+     "pages": [
+      64,
+      79
+     ],
+     "rows": 2,
+     "share": 0.3644
+    }
+   ],
+   "dominantShare": 0.6356,
+   "geoShared": true,
+   "kultures": [
+    "Einöd Wiese Geyersättä",
+    "Wiese und Äcker",
+    "Äfling"
+   ],
+   "kulturesByBlatt": {
+    "II": [
+     "Einöd Wiese Geyersättä",
+     "Äfling"
+    ],
+    "III": [
+     "Wiese und Äcker"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Mellner Lorenz",
+    "Tillak Miha",
+    "Ueich Peter"
+   ],
+   "ownersByBlatt": {
+    "II": [
+     "Tillak Miha",
+     "Ueich Peter"
+    ],
+    "III": [
+     "Mellner Lorenz"
+    ]
+   },
+   "pages": [
+    64,
+    79,
+    94
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 146.0,
+     "areaSuspect": false,
+     "base": "1838",
+     "blatt": "II",
+     "conf": "MEDIUM",
+     "hausNr": "1 61",
+     "joch": null,
+     "klafter": 146.0,
+     "kultur": "Äfling",
+     "owner": "Tillak Miha",
+     "page": 64,
+     "parts": 2,
+     "parzella": "1838",
+     "series": "S1",
+     "stand": "Grübler",
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 448.0,
+     "areaSuspect": false,
+     "base": "1838",
+     "blatt": "II",
+     "conf": "MEDIUM",
+     "hausNr": "63",
+     "joch": null,
+     "klafter": 448.0,
+     "kultur": "Einöd Wiese Geyersättä",
+     "owner": "Ueich Peter",
+     "page": 79,
+     "parts": 2,
+     "parzella": "1838",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grübln",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 1036.0,
+     "areaSuspect": false,
+     "base": "1838",
+     "blatt": "III",
+     "conf": "MEDIUM",
+     "hausNr": "1 60",
+     "joch": null,
+     "klafter": 1036.0,
+     "kultur": "Wiese und Äcker",
+     "owner": "Mellner Lorenz",
+     "page": 94,
+     "parts": 2,
+     "parzella": "1838",
+     "series": "S1",
+     "stand": "Bauer",
+     "wohnort": "Grüble",
+     "wohnortInherited": false
+    }
+   ],
+   "rowsTotal": 3,
+   "shareDelta": 0.2712,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 3
+   },
+   "status": "split"
+  },
+  "1839": {
+   "attributedBlatt": null,
+   "blattPair": "II·III",
+   "blattShares": [
+    {
+     "areaQK": 2352.0,
+     "blatt": "III",
+     "pages": [
+      94
+     ],
+     "rows": 1,
+     "share": 0.5494
+    },
+    {
+     "areaQK": 1929.0,
+     "blatt": "II",
+     "pages": [
+      64,
+      79
+     ],
+     "rows": 2,
+     "share": 0.4506
+    }
+   ],
+   "dominantShare": 0.5494,
+   "geoShared": true,
+   "kultures": [
+    "Einöd Wiese Geyersättä",
+    "Äcker und Wiesen",
+    "Äfling"
+   ],
+   "kulturesByBlatt": {
+    "II": [
+     "Einöd Wiese Geyersättä",
+     "Äfling"
+    ],
+    "III": [
+     "Äcker und Wiesen"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Dannay Michael",
+    "Kreševan Gregor",
+    "Uebl Anton"
+   ],
+   "ownersByBlatt": {
+    "II": [
+     "Kreševan Gregor",
+     "Uebl Anton"
+    ],
+    "III": [
+     "Dannay Michael"
+    ]
+   },
+   "pages": [
+    64,
+    79,
+    94
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 261.0,
+     "areaSuspect": false,
+     "base": "1839",
+     "blatt": "II",
+     "conf": "MEDIUM",
+     "hausNr": "1 63",
+     "joch": null,
+     "klafter": 261.0,
+     "kultur": "Äfling",
+     "owner": "Kreševan Gregor",
+     "page": 64,
+     "parts": 1,
+     "parzella": "1839",
+     "series": "S1",
+     "stand": "Grübler",
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 1668.0,
+     "areaSuspect": false,
+     "base": "1839",
+     "blatt": "II",
+     "conf": "MEDIUM",
+     "hausNr": "16",
+     "joch": 1.0,
+     "klafter": 68.0,
+     "kultur": "Einöd Wiese Geyersättä",
+     "owner": "Uebl Anton",
+     "page": 79,
+     "parts": 1,
+     "parzella": "1839",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grübln",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 2352.0,
+     "areaSuspect": false,
+     "base": "1839",
+     "blatt": "III",
+     "conf": "MEDIUM",
+     "hausNr": "1 24",
+     "joch": 1.0,
+     "klafter": 752.0,
+     "kultur": "Äcker und Wiesen",
+     "owner": "Dannay Michael",
+     "page": 94,
+     "parts": 1,
+     "parzella": "1839",
+     "series": "S1",
+     "stand": "Bauer",
+     "wohnort": "Grüble",
+     "wohnortInherited": false
+    }
+   ],
+   "rowsTotal": 3,
+   "shareDelta": 0.0988,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 3
+   },
+   "status": "split"
+  },
+  "1945": {
+   "attributedBlatt": null,
+   "blattPair": "II·III",
+   "blattShares": [
+    {
+     "areaQK": 953.0,
+     "blatt": "III",
+     "pages": [
+      95,
+      100
+     ],
+     "rows": 2,
+     "share": 0.6208
+    },
+    {
+     "areaQK": 582.0,
+     "blatt": "II",
+     "pages": [
+      90
+     ],
+     "rows": 1,
+     "share": 0.3792
+    }
+   ],
+   "dominantShare": 0.6208,
+   "geoShared": true,
+   "kultures": [
+    "Schüttwiese, Gypfang, Laume",
+    "Wiese",
+    "Äcker und Wiesen"
+   ],
+   "kulturesByBlatt": {
+    "II": [
+     "Wiese"
+    ],
+    "III": [
+     "Schüttwiese, Gypfang, Laume",
+     "Äcker und Wiesen"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Böning Johann",
+    "Eurich Mädl",
+    "Leinichan Georg"
+   ],
+   "ownersByBlatt": {
+    "II": [
+     "Eurich Mädl"
+    ],
+    "III": [
+     "Böning Johann",
+     "Leinichan Georg"
+    ]
+   },
+   "pages": [
+    90,
+    95,
+    100
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 582.0,
+     "areaSuspect": false,
+     "base": "1945",
+     "blatt": "II",
+     "conf": "MEDIUM",
+     "hausNr": "1 63",
+     "joch": null,
+     "klafter": 582.0,
+     "kultur": "Wiese",
+     "owner": "Eurich Mädl",
+     "page": 90,
+     "parts": 1,
+     "parzella": "1945",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 494.0,
+     "areaSuspect": false,
+     "base": "1945",
+     "blatt": "III",
+     "conf": "MEDIUM",
+     "hausNr": "60",
+     "joch": null,
+     "klafter": 494.0,
+     "kultur": "Äcker und Wiesen",
+     "owner": "Leinichan Georg",
+     "page": 95,
+     "parts": 1,
+     "parzella": "1945",
+     "series": "S1",
+     "stand": "Bauer",
+     "wohnort": "Grüble",
+     "wohnortInherited": false
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 459.0,
+     "areaSuspect": false,
+     "base": "1945",
+     "blatt": "III",
+     "conf": "MEDIUM",
+     "hausNr": "1 26",
+     "joch": null,
+     "klafter": 459.0,
+     "kultur": "Schüttwiese, Gypfang, Laume",
+     "owner": "Böning Johann",
+     "page": 100,
+     "parts": 1,
+     "parzella": "1945",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    }
+   ],
+   "rowsTotal": 3,
+   "shareDelta": 0.2416,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 3
+   },
+   "status": "split"
+  },
+  "1946": {
+   "attributedBlatt": null,
+   "blattPair": "II·III",
+   "blattShares": [
+    {
+     "areaQK": 1519.0,
+     "blatt": "III",
+     "pages": [
+      95,
+      100
+     ],
+     "rows": 2,
+     "share": 0.5717
+    },
+    {
+     "areaQK": 1138.0,
+     "blatt": "II",
+     "pages": [
+      90
+     ],
+     "rows": 1,
+     "share": 0.4283
+    }
+   ],
+   "dominantShare": 0.5717,
+   "geoShared": true,
+   "kultures": [
+    "Schüttwiese, Gypfang, Laume",
+    "Wiese",
+    "Äcker und Wiesen"
+   ],
+   "kulturesByBlatt": {
+    "II": [
+     "Wiese"
+    ],
+    "III": [
+     "Schüttwiese, Gypfang, Laume",
+     "Äcker und Wiesen"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Böning Martha",
+    "Pörtschach er Mägd",
+    "Vorbithaler Wolf"
+   ],
+   "ownersByBlatt": {
+    "II": [
+     "Pörtschach er Mägd"
+    ],
+    "III": [
+     "Böning Martha",
+     "Vorbithaler Wolf"
+    ]
+   },
+   "pages": [
+    90,
+    95,
+    100
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 1138.0,
+     "areaSuspect": false,
+     "base": "1946",
+     "blatt": "II",
+     "conf": "MEDIUM",
+     "hausNr": "1 64",
+     "joch": null,
+     "klafter": 1138.0,
+     "kultur": "Wiese",
+     "owner": "Pörtschach er Mägd",
+     "page": 90,
+     "parts": 1,
+     "parzella": "1946",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 782.0,
+     "areaSuspect": false,
+     "base": "1946",
+     "blatt": "III",
+     "conf": "STRONG",
+     "hausNr": "64",
+     "joch": null,
+     "klafter": 782.0,
+     "kultur": "Äcker und Wiesen",
+     "owner": "Vorbithaler Wolf",
+     "page": 95,
+     "parts": 1,
+     "parzella": "1946",
+     "series": "S1",
+     "stand": "Bauer",
+     "wohnort": "Grüble",
+     "wohnortInherited": false
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 737.0,
+     "areaSuspect": false,
+     "base": "1946",
+     "blatt": "III",
+     "conf": "MEDIUM",
+     "hausNr": "1 20",
+     "joch": null,
+     "klafter": 737.0,
+     "kultur": "Schüttwiese, Gypfang, Laume",
+     "owner": "Böning Martha",
+     "page": 100,
+     "parts": 1,
+     "parzella": "1946",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    }
+   ],
+   "rowsTotal": 3,
+   "shareDelta": 0.1434,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 3
+   },
+   "status": "split"
+  },
+  "1948": {
+   "attributedBlatt": null,
+   "blattPair": "II·III",
+   "blattShares": [
+    {
+     "areaQK": 2126.0,
+     "blatt": "II",
+     "pages": [
+      90
+     ],
+     "rows": 1,
+     "share": 0.5222
+    },
+    {
+     "areaQK": 1945.0,
+     "blatt": "III",
+     "pages": [
+      95,
+      100
+     ],
+     "rows": 2,
+     "share": 0.4778
+    }
+   ],
+   "dominantShare": 0.5222,
+   "geoShared": true,
+   "kultures": [
+    "Schüttwiese, Gypfang, Laume",
+    "Wiesen und Laubm",
+    "Äcker und Wiesen"
+   ],
+   "kulturesByBlatt": {
+    "II": [
+     "Wiesen und Laubm"
+    ],
+    "III": [
+     "Schüttwiese, Gypfang, Laume",
+     "Äcker und Wiesen"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Böning Martha",
+    "Knieschen Georg",
+    "Pessirig Georg"
+   ],
+   "ownersByBlatt": {
+    "II": [
+     "Knieschen Georg"
+    ],
+    "III": [
+     "Böning Martha",
+     "Pessirig Georg"
+    ]
+   },
+   "pages": [
+    90,
+    95,
+    100
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 2126.0,
+     "areaSuspect": false,
+     "base": "1948",
+     "blatt": "II",
+     "conf": "MEDIUM",
+     "hausNr": "1 66",
+     "joch": 1.0,
+     "klafter": 526.0,
+     "kultur": "Wiesen und Laubm",
+     "owner": "Knieschen Georg",
+     "page": 90,
+     "parts": 1,
+     "parzella": "1948",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 823.0,
+     "areaSuspect": false,
+     "base": "1948",
+     "blatt": "III",
+     "conf": "MEDIUM",
+     "hausNr": "41",
+     "joch": null,
+     "klafter": 823.0,
+     "kultur": "Äcker und Wiesen",
+     "owner": "Pessirig Georg",
+     "page": 95,
+     "parts": 1,
+     "parzella": "1948",
+     "series": "S1",
+     "stand": "Bauer",
+     "wohnort": "Grüble",
+     "wohnortInherited": false
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 1122.0,
+     "areaSuspect": false,
+     "base": "1948",
+     "blatt": "III",
+     "conf": "MEDIUM",
+     "hausNr": "1 23",
+     "joch": null,
+     "klafter": 1122.0,
+     "kultur": "Schüttwiese, Gypfang, Laume",
+     "owner": "Böning Martha",
+     "page": 100,
+     "parts": 1,
+     "parzella": "1948",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    }
+   ],
+   "rowsTotal": 3,
+   "shareDelta": 0.0444,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 3
+   },
+   "status": "split"
+  },
+  "1957": {
+   "attributedBlatt": null,
+   "blattPair": "II·III",
+   "blattShares": [
+    {
+     "areaQK": 1183.0,
+     "blatt": "II",
+     "pages": [
+      90
+     ],
+     "rows": 1,
+     "share": 0.518
+    },
+    {
+     "areaQK": 1101.0,
+     "blatt": "III",
+     "pages": [
+      95,
+      100
+     ],
+     "rows": 2,
+     "share": 0.482
+    }
+   ],
+   "dominantShare": 0.518,
+   "geoShared": true,
+   "kultures": [
+    "Schüttwiese, Gypfang, Laume",
+    "Wiesen und Laubm",
+    "Äcker und Wiesen"
+   ],
+   "kulturesByBlatt": {
+    "II": [
+     "Wiesen und Laubm"
+    ],
+    "III": [
+     "Schüttwiese, Gypfang, Laume",
+     "Äcker und Wiesen"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Grüning Michl",
+    "Hiebletzh Jhan",
+    "Podariz Martha"
+   ],
+   "ownersByBlatt": {
+    "II": [
+     "Hiebletzh Jhan"
+    ],
+    "III": [
+     "Grüning Michl",
+     "Podariz Martha"
+    ]
+   },
+   "pages": [
+    90,
+    95,
+    100
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 1183.0,
+     "areaSuspect": false,
+     "base": "1957",
+     "blatt": "II",
+     "conf": "STRONG",
+     "hausNr": "1 2",
+     "joch": null,
+     "klafter": 1183.0,
+     "kultur": "Wiesen und Laubm",
+     "owner": "Hiebletzh Jhan",
+     "page": 90,
+     "parts": 1,
+     "parzella": "1957",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 317.0,
+     "areaSuspect": false,
+     "base": "1957",
+     "blatt": "III",
+     "conf": "MEDIUM",
+     "hausNr": "25",
+     "joch": null,
+     "klafter": 317.0,
+     "kultur": "Äcker und Wiesen",
+     "owner": "Grüning Michl",
+     "page": 95,
+     "parts": 1,
+     "parzella": "1957",
+     "series": "S1",
+     "stand": "Bauer",
+     "wohnort": "Grüble",
+     "wohnortInherited": false
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 784.0,
+     "areaSuspect": false,
+     "base": "1957",
+     "blatt": "III",
+     "conf": "MEDIUM",
+     "hausNr": "1 40",
+     "joch": null,
+     "klafter": 784.0,
+     "kultur": "Schüttwiese, Gypfang, Laume",
+     "owner": "Podariz Martha",
+     "page": 100,
+     "parts": 1,
+     "parzella": "1957",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    }
+   ],
+   "rowsTotal": 3,
+   "shareDelta": 0.036,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 3
+   },
+   "status": "split"
+  },
+  "1958": {
+   "attributedBlatt": null,
+   "blattPair": "II·III",
+   "blattShares": [
+    {
+     "areaQK": 2634.0,
+     "blatt": "II",
+     "pages": [
+      90
+     ],
+     "rows": 1,
+     "share": 0.5882
+    },
+    {
+     "areaQK": 1844.0,
+     "blatt": "III",
+     "pages": [
+      95,
+      100
+     ],
+     "rows": 2,
+     "share": 0.4118
+    }
+   ],
+   "dominantShare": 0.5882,
+   "geoShared": true,
+   "kultures": [
+    "Schüttwiese, Gypfang, Laume",
+    "Wiesen und Laubm",
+    "Äcker und Wiesen"
+   ],
+   "kulturesByBlatt": {
+    "II": [
+     "Wiesen und Laubm"
+    ],
+    "III": [
+     "Schüttwiese, Gypfang, Laume",
+     "Äcker und Wiesen"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Hiebletzh Jhan",
+    "Hranig(?) Georg",
+    "Leinichan Maria"
+   ],
+   "ownersByBlatt": {
+    "II": [
+     "Hiebletzh Jhan"
+    ],
+    "III": [
+     "Hranig(?) Georg",
+     "Leinichan Maria"
+    ]
+   },
+   "pages": [
+    90,
+    95,
+    100
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 2634.0,
+     "areaSuspect": false,
+     "base": "1958",
+     "blatt": "II",
+     "conf": "STRONG",
+     "hausNr": "1 2",
+     "joch": 1.0,
+     "klafter": 1034.0,
+     "kultur": "Wiesen und Laubm",
+     "owner": "Hiebletzh Jhan",
+     "page": 90,
+     "parts": 3,
+     "parzella": "1958",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 777.0,
+     "areaSuspect": false,
+     "base": "1958",
+     "blatt": "III",
+     "conf": "MEDIUM",
+     "hausNr": "21",
+     "joch": null,
+     "klafter": 777.0,
+     "kultur": "Äcker und Wiesen",
+     "owner": "Leinichan Maria",
+     "page": 95,
+     "parts": 3,
+     "parzella": "1958",
+     "series": "S1",
+     "stand": "Bauer",
+     "wohnort": "Grüble",
+     "wohnortInherited": false
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 1067.0,
+     "areaSuspect": false,
+     "base": "1958",
+     "blatt": "III",
+     "conf": "MEDIUM",
+     "hausNr": "1 42",
+     "joch": null,
+     "klafter": 1067.0,
+     "kultur": "Schüttwiese, Gypfang, Laume",
+     "owner": "Hranig(?) Georg",
+     "page": 100,
+     "parts": 3,
+     "parzella": "1958",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    }
+   ],
+   "rowsTotal": 3,
+   "shareDelta": 0.1764,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 3
+   },
+   "status": "split"
+  },
+  "1960": {
+   "attributedBlatt": null,
+   "blattPair": "II·III",
+   "blattShares": [
+    {
+     "areaQK": 3627.0,
+     "blatt": "III",
+     "pages": [
+      95,
+      100,
+      101
+     ],
+     "rows": 3,
+     "share": 0.6362
+    },
+    {
+     "areaQK": 2074.0,
+     "blatt": "II",
+     "pages": [
+      90
+     ],
+     "rows": 1,
+     "share": 0.3638
+    }
+   ],
+   "dominantShare": 0.6362,
+   "geoShared": true,
+   "kultures": [
+    "Acker",
+    "Schüttwiese, Gypfang, Laume",
+    "Wiesen und Laubm",
+    "Äcker und Wiesen"
+   ],
+   "kulturesByBlatt": {
+    "II": [
+     "Wiesen und Laubm"
+    ],
+    "III": [
+     "Acker",
+     "Schüttwiese, Gypfang, Laume",
+     "Äcker und Wiesen"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Hiebletzh Jhan",
+    "Leinichan Michl",
+    "Lorenz Lorenz",
+    "Podariz Martha"
+   ],
+   "ownersByBlatt": {
+    "II": [
+     "Hiebletzh Jhan"
+    ],
+    "III": [
+     "Leinichan Michl",
+     "Lorenz Lorenz",
+     "Podariz Martha"
+    ]
+   },
+   "pages": [
+    90,
+    95,
+    100,
+    101
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 2074.0,
+     "areaSuspect": false,
+     "base": "1960",
+     "blatt": "II",
+     "conf": "MEDIUM",
+     "hausNr": "1 2",
+     "joch": 1.0,
+     "klafter": 474.0,
+     "kultur": "Wiesen und Laubm",
+     "owner": "Hiebletzh Jhan",
+     "page": 90,
+     "parts": 1,
+     "parzella": "1960",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 787.0,
+     "areaSuspect": false,
+     "base": "1960",
+     "blatt": "III",
+     "conf": "MEDIUM",
+     "hausNr": "62",
+     "joch": null,
+     "klafter": 787.0,
+     "kultur": "Äcker und Wiesen",
+     "owner": "Leinichan Michl",
+     "page": 95,
+     "parts": 1,
+     "parzella": "1960",
+     "series": "S1",
+     "stand": "Bauer",
+     "wohnort": "Grüble",
+     "wohnortInherited": false
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 2186.0,
+     "areaSuspect": false,
+     "base": "1960",
+     "blatt": "III",
+     "conf": "MEDIUM",
+     "hausNr": "1 42",
+     "joch": 1.0,
+     "klafter": 586.0,
+     "kultur": "Schüttwiese, Gypfang, Laume",
+     "owner": "Podariz Martha",
+     "page": 100,
+     "parts": 1,
+     "parzella": "1960",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 654.0,
+     "areaSuspect": false,
+     "base": "1960",
+     "blatt": "III",
+     "conf": "MEDIUM",
+     "hausNr": "1 1/2",
+     "joch": null,
+     "klafter": 654.0,
+     "kultur": "Acker",
+     "owner": "Lorenz Lorenz",
+     "page": 101,
+     "parts": 1,
+     "parzella": "1960",
+     "series": "S1",
+     "stand": "Bauer",
+     "wohnort": "Grübl.",
+     "wohnortInherited": false
+    }
+   ],
+   "rowsTotal": 4,
+   "shareDelta": 0.2724,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 4
+   },
+   "status": "split"
+  },
+  "2141": {
+   "attributedBlatt": null,
+   "blattPair": "IV·V",
+   "blattShares": [
+    {
+     "areaQK": 2024.0,
+     "blatt": "IV",
+     "pages": [
+      110
+     ],
+     "rows": 1,
+     "share": 0.7107
+    },
+    {
+     "areaQK": 824.0,
+     "blatt": "V",
+     "pages": [
+      125
+     ],
+     "rows": 1,
+     "share": 0.2893
+    }
+   ],
+   "dominantShare": 0.7107,
+   "geoShared": true,
+   "kultures": [
+    "Einhemdtl. Purgstall",
+    "Schüttboden"
+   ],
+   "kulturesByBlatt": {
+    "IV": [
+     "Einhemdtl. Purgstall"
+    ],
+    "V": [
+     "Schüttboden"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Brünig Johann Lorenz Grüble",
+    "Schimey Paula"
+   ],
+   "ownersByBlatt": {
+    "IV": [
+     "Brünig Johann Lorenz Grüble"
+    ],
+    "V": [
+     "Schimey Paula"
+    ]
+   },
+   "pages": [
+    110,
+    125
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 2024.0,
+     "areaSuspect": false,
+     "base": "2141",
+     "blatt": "IV",
+     "conf": "MEDIUM",
+     "hausNr": "26",
+     "joch": 1.0,
+     "klafter": 424.0,
+     "kultur": "Einhemdtl. Purgstall",
+     "owner": "Brünig Johann Lorenz Grüble",
+     "page": 110,
+     "parts": 1,
+     "parzella": "2141",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 824.0,
+     "areaSuspect": false,
+     "base": "2141",
+     "blatt": "V",
+     "conf": "MEDIUM",
+     "hausNr": "36",
+     "joch": null,
+     "klafter": 824.0,
+     "kultur": "Schüttboden",
+     "owner": "Schimey Paula",
+     "page": 125,
+     "parts": 1,
+     "parzella": "2141",
+     "series": "S1",
+     "stand": "Leinweber",
+     "wohnort": "Grüble",
+     "wohnortInherited": false
+    }
+   ],
+   "rowsTotal": 2,
+   "shareDelta": 0.4214,
+   "sosledje": {
+    "flag": 2,
+    "flaggedRows": [
+     "2141@p110",
+     "2141@p125"
+    ],
+    "ok": 0
+   },
+   "status": "split"
+  },
+  "2143": {
+   "attributedBlatt": null,
+   "blattPair": "IV·V",
+   "blattShares": [
+    {
+     "areaQK": 790.0,
+     "blatt": "V",
+     "pages": [
+      125
+     ],
+     "rows": 1,
+     "share": 0.517
+    },
+    {
+     "areaQK": 738.0,
+     "blatt": "IV",
+     "pages": [
+      110
+     ],
+     "rows": 1,
+     "share": 0.483
+    }
+   ],
+   "dominantShare": 0.517,
+   "geoShared": true,
+   "kultures": [
+    "Einhemdtl. Purgstall",
+    "Schüttboden"
+   ],
+   "kulturesByBlatt": {
+    "IV": [
+     "Einhemdtl. Purgstall"
+    ],
+    "V": [
+     "Schüttboden"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Häupler Martin",
+    "Schimey Johann"
+   ],
+   "ownersByBlatt": {
+    "IV": [
+     "Häupler Martin"
+    ],
+    "V": [
+     "Schimey Johann"
+    ]
+   },
+   "pages": [
+    110,
+    125
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 738.0,
+     "areaSuspect": false,
+     "base": "2143",
+     "blatt": "IV",
+     "conf": "WEAK",
+     "hausNr": "20",
+     "joch": null,
+     "klafter": 738.0,
+     "kultur": "Einhemdtl. Purgstall",
+     "owner": "Häupler Martin",
+     "page": 110,
+     "parts": 1,
+     "parzella": "2143",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 790.0,
+     "areaSuspect": false,
+     "base": "2143",
+     "blatt": "V",
+     "conf": "WEAK",
+     "hausNr": "35",
+     "joch": null,
+     "klafter": 790.0,
+     "kultur": "Schüttboden",
+     "owner": "Schimey Johann",
+     "page": 125,
+     "parts": 1,
+     "parzella": "2143",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    }
+   ],
+   "rowsTotal": 2,
+   "shareDelta": 0.034,
+   "sosledje": {
+    "flag": 2,
+    "flaggedRows": [
+     "2143@p110",
+     "2143@p125"
+    ],
+    "ok": 0
+   },
+   "status": "split"
+  },
+  "2148": {
+   "attributedBlatt": null,
+   "blattPair": "IV·V",
+   "blattShares": [
+    {
+     "areaQK": 2064.0,
+     "blatt": "IV",
+     "pages": [
+      110
+     ],
+     "rows": 1,
+     "share": 0.6374
+    },
+    {
+     "areaQK": 1174.0,
+     "blatt": "V",
+     "pages": [
+      125
+     ],
+     "rows": 1,
+     "share": 0.3626
+    }
+   ],
+   "dominantShare": 0.6374,
+   "geoShared": true,
+   "kultures": [
+    "Einhemdtl. Purgstall",
+    "Lehm"
+   ],
+   "kulturesByBlatt": {
+    "IV": [
+     "Einhemdtl. Purgstall"
+    ],
+    "V": [
+     "Lehm"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Strauß Georg",
+    "Wardian Marfa"
+   ],
+   "ownersByBlatt": {
+    "IV": [
+     "Strauß Georg"
+    ],
+    "V": [
+     "Wardian Marfa"
+    ]
+   },
+   "pages": [
+    110,
+    125
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 2064.0,
+     "areaSuspect": false,
+     "base": "2148",
+     "blatt": "IV",
+     "conf": "STRONG",
+     "hausNr": "63",
+     "joch": 1.0,
+     "klafter": 464.0,
+     "kultur": "Einhemdtl. Purgstall",
+     "owner": "Strauß Georg",
+     "page": 110,
+     "parts": 5,
+     "parzella": "2148",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 1174.0,
+     "areaSuspect": false,
+     "base": "2148",
+     "blatt": "V",
+     "conf": "MEDIUM",
+     "hausNr": "1",
+     "joch": null,
+     "klafter": 1174.0,
+     "kultur": "Lehm",
+     "owner": "Wardian Marfa",
+     "page": 125,
+     "parts": 5,
+     "parzella": "2148",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Dolenge",
+     "wohnortInherited": false
+    }
+   ],
+   "rowsTotal": 2,
+   "shareDelta": 0.2748,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "2149": {
+   "attributedBlatt": null,
+   "blattPair": "IV·V",
+   "blattShares": [
+    {
+     "areaQK": 1100.0,
+     "blatt": "IV",
+     "pages": [
+      110
+     ],
+     "rows": 1,
+     "share": 0.5673
+    },
+    {
+     "areaQK": 839.0,
+     "blatt": "V",
+     "pages": [
+      125
+     ],
+     "rows": 1,
+     "share": 0.4327
+    }
+   ],
+   "dominantShare": 0.5673,
+   "geoShared": true,
+   "kultures": [
+    "Einhemdtl. Purgstall",
+    "Schüttboden"
+   ],
+   "kulturesByBlatt": {
+    "IV": [
+     "Einhemdtl. Purgstall"
+    ],
+    "V": [
+     "Schüttboden"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Schimeg Nikolaus",
+    "Wardian Marfa"
+   ],
+   "ownersByBlatt": {
+    "IV": [
+     "Schimeg Nikolaus"
+    ],
+    "V": [
+     "Wardian Marfa"
+    ]
+   },
+   "pages": [
+    110,
+    125
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 1100.0,
+     "areaSuspect": false,
+     "base": "2149",
+     "blatt": "IV",
+     "conf": "MEDIUM",
+     "hausNr": "68",
+     "joch": null,
+     "klafter": 1100.0,
+     "kultur": "Einhemdtl. Purgstall",
+     "owner": "Schimeg Nikolaus",
+     "page": 110,
+     "parts": 1,
+     "parzella": "2149",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 839.0,
+     "areaSuspect": false,
+     "base": "2149",
+     "blatt": "V",
+     "conf": "MEDIUM",
+     "hausNr": "1",
+     "joch": null,
+     "klafter": 839.0,
+     "kultur": "Schüttboden",
+     "owner": "Wardian Marfa",
+     "page": 125,
+     "parts": 1,
+     "parzella": "2149",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Dolenge",
+     "wohnortInherited": true
+    }
+   ],
+   "rowsTotal": 2,
+   "shareDelta": 0.1346,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "2154": {
+   "attributedBlatt": null,
+   "blattPair": "IV·V",
+   "blattShares": [
+    {
+     "areaQK": 128.0,
+     "blatt": "IV",
+     "pages": [
+      110
+     ],
+     "rows": 1,
+     "share": 0.5872
+    },
+    {
+     "areaQK": 90.0,
+     "blatt": "V",
+     "pages": [
+      125
+     ],
+     "rows": 1,
+     "share": 0.4128
+    }
+   ],
+   "dominantShare": 0.5872,
+   "geoShared": true,
+   "kultures": [
+    "Einhemdtl. Purgstall",
+    "Lehfe"
+   ],
+   "kulturesByBlatt": {
+    "IV": [
+     "Einhemdtl. Purgstall"
+    ],
+    "V": [
+     "Lehfe"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Brünig Miso",
+    "Wardian Marfa"
+   ],
+   "ownersByBlatt": {
+    "IV": [
+     "Brünig Miso"
+    ],
+    "V": [
+     "Wardian Marfa"
+    ]
+   },
+   "pages": [
+    110,
+    125
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 128.0,
+     "areaSuspect": false,
+     "base": "2154",
+     "blatt": "IV",
+     "conf": "MEDIUM",
+     "hausNr": "28",
+     "joch": null,
+     "klafter": 128.0,
+     "kultur": "Einhemdtl. Purgstall",
+     "owner": "Brünig Miso",
+     "page": 110,
+     "parts": 1,
+     "parzella": "2154",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 90.0,
+     "areaSuspect": false,
+     "base": "2154",
+     "blatt": "V",
+     "conf": "MEDIUM",
+     "hausNr": "1",
+     "joch": null,
+     "klafter": 90.0,
+     "kultur": "Lehfe",
+     "owner": "Wardian Marfa",
+     "page": 125,
+     "parts": 1,
+     "parzella": "2154",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Dolenge",
+     "wohnortInherited": true
+    }
+   ],
+   "rowsTotal": 2,
+   "shareDelta": 0.1744,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "2156": {
+   "attributedBlatt": null,
+   "blattPair": "IV·V",
+   "blattShares": [
+    {
+     "areaQK": 805.0,
+     "blatt": "V",
+     "pages": [
+      125
+     ],
+     "rows": 1,
+     "share": 0.5657
+    },
+    {
+     "areaQK": 618.0,
+     "blatt": "IV",
+     "pages": [
+      110
+     ],
+     "rows": 1,
+     "share": 0.4343
+    }
+   ],
+   "dominantShare": 0.5657,
+   "geoShared": true,
+   "kultures": [
+    "Einhemdtl. Purgstall",
+    "Lehfe"
+   ],
+   "kulturesByBlatt": {
+    "IV": [
+     "Einhemdtl. Purgstall"
+    ],
+    "V": [
+     "Lehfe"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Brünig Miso",
+    "Wardian Marfa"
+   ],
+   "ownersByBlatt": {
+    "IV": [
+     "Brünig Miso"
+    ],
+    "V": [
+     "Wardian Marfa"
+    ]
+   },
+   "pages": [
+    110,
+    125
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 618.0,
+     "areaSuspect": false,
+     "base": "2156",
+     "blatt": "IV",
+     "conf": "MEDIUM",
+     "hausNr": "28",
+     "joch": null,
+     "klafter": 618.0,
+     "kultur": "Einhemdtl. Purgstall",
+     "owner": "Brünig Miso",
+     "page": 110,
+     "parts": 1,
+     "parzella": "2156",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 805.0,
+     "areaSuspect": false,
+     "base": "2156",
+     "blatt": "V",
+     "conf": "MEDIUM",
+     "hausNr": "1",
+     "joch": null,
+     "klafter": 805.0,
+     "kultur": "Lehfe",
+     "owner": "Wardian Marfa",
+     "page": 125,
+     "parts": 1,
+     "parzella": "2156",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Dolenge",
+     "wohnortInherited": true
+    }
+   ],
+   "rowsTotal": 2,
+   "shareDelta": 0.1314,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "2159": {
+   "attributedBlatt": null,
+   "blattPair": "IV·V",
+   "blattShares": [
+    {
+     "areaQK": 1605.0,
+     "blatt": "IV",
+     "pages": [
+      110
+     ],
+     "rows": 1,
+     "share": 0.6086
+    },
+    {
+     "areaQK": 1032.0,
+     "blatt": "V",
+     "pages": [
+      125
+     ],
+     "rows": 1,
+     "share": 0.3914
+    }
+   ],
+   "dominantShare": 0.6086,
+   "geoShared": true,
+   "kultures": [
+    "Einhemdtl. Purgstall",
+    "Schüttboden"
+   ],
+   "kulturesByBlatt": {
+    "IV": [
+     "Einhemdtl. Purgstall"
+    ],
+    "V": [
+     "Schüttboden"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Brünig Johann",
+    "Van Wawech Mihó"
+   ],
+   "ownersByBlatt": {
+    "IV": [
+     "Brünig Johann"
+    ],
+    "V": [
+     "Van Wawech Mihó"
+    ]
+   },
+   "pages": [
+    110,
+    125
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 1605.0,
+     "areaSuspect": false,
+     "base": "2159",
+     "blatt": "IV",
+     "conf": "MEDIUM",
+     "hausNr": "26",
+     "joch": 1.0,
+     "klafter": 5.0,
+     "kultur": "Einhemdtl. Purgstall",
+     "owner": "Brünig Johann",
+     "page": 110,
+     "parts": 1,
+     "parzella": "2159",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 1032.0,
+     "areaSuspect": false,
+     "base": "2159",
+     "blatt": "V",
+     "conf": "MEDIUM",
+     "hausNr": "2",
+     "joch": null,
+     "klafter": 1032.0,
+     "kultur": "Schüttboden",
+     "owner": "Van Wawech Mihó",
+     "page": 125,
+     "parts": 1,
+     "parzella": "2159",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Furkofze",
+     "wohnortInherited": false
+    }
+   ],
+   "rowsTotal": 2,
+   "shareDelta": 0.2172,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "2160": {
+   "attributedBlatt": null,
+   "blattPair": "IV·V",
+   "blattShares": [
+    {
+     "areaQK": 560.0,
+     "blatt": "V",
+     "pages": [
+      125
+     ],
+     "rows": 1,
+     "share": 0.7349
+    },
+    {
+     "areaQK": 202.0,
+     "blatt": "IV",
+     "pages": [
+      110
+     ],
+     "rows": 1,
+     "share": 0.2651
+    }
+   ],
+   "dominantShare": 0.7349,
+   "geoShared": true,
+   "kultures": [
+    "Einhemdtl. Purgstall",
+    "Lehfe"
+   ],
+   "kulturesByBlatt": {
+    "IV": [
+     "Einhemdtl. Purgstall"
+    ],
+    "V": [
+     "Lehfe"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Häupler Martin",
+    "Van Wawech Mihó"
+   ],
+   "ownersByBlatt": {
+    "IV": [
+     "Häupler Martin"
+    ],
+    "V": [
+     "Van Wawech Mihó"
+    ]
+   },
+   "pages": [
+    110,
+    125
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 202.0,
+     "areaSuspect": false,
+     "base": "2160",
+     "blatt": "IV",
+     "conf": "MEDIUM",
+     "hausNr": "30",
+     "joch": null,
+     "klafter": 202.0,
+     "kultur": "Einhemdtl. Purgstall",
+     "owner": "Häupler Martin",
+     "page": 110,
+     "parts": 1,
+     "parzella": "2160",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 560.0,
+     "areaSuspect": false,
+     "base": "2160",
+     "blatt": "V",
+     "conf": "MEDIUM",
+     "hausNr": "3",
+     "joch": null,
+     "klafter": 560.0,
+     "kultur": "Lehfe",
+     "owner": "Van Wawech Mihó",
+     "page": 125,
+     "parts": 1,
+     "parzella": "2160",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Furkofze",
+     "wohnortInherited": true
+    }
+   ],
+   "rowsTotal": 2,
+   "shareDelta": 0.4698,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "2613": {
+   "attributedBlatt": null,
+   "blattPair": "IV·V",
+   "blattShares": [
+    {
+     "areaQK": 320.0,
+     "blatt": "V",
+     "pages": [
+      133
+     ],
+     "rows": 1,
+     "share": 0.5178
+    },
+    {
+     "areaQK": 298.0,
+     "blatt": "IV",
+     "pages": [
+      135
+     ],
+     "rows": 1,
+     "share": 0.4822
+    }
+   ],
+   "dominantShare": 0.5178,
+   "geoShared": true,
+   "kultures": [
+    "Wiese"
+   ],
+   "kulturesByBlatt": {
+    "IV": [
+     "Wiese"
+    ],
+    "V": [
+     "Wiese"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Wiese im Grundstück Nr. 2607",
+    "falktung"
+   ],
+   "ownersByBlatt": {
+    "IV": [
+     "Wiese im Grundstück Nr. 2607"
+    ],
+    "V": [
+     "falktung"
+    ]
+   },
+   "pages": [
+    133,
+    135
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 320.0,
+     "areaSuspect": false,
+     "base": "2613",
+     "blatt": "V",
+     "conf": "MEDIUM",
+     "hausNr": null,
+     "joch": null,
+     "klafter": 320.0,
+     "kultur": "Wiese",
+     "owner": "falktung",
+     "page": 133,
+     "parts": 1,
+     "parzella": "2613",
+     "series": "S2",
+     "stand": null,
+     "wohnort": "Fakernmuhl",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 298.0,
+     "areaSuspect": false,
+     "base": "2613",
+     "blatt": "IV",
+     "conf": "MEDIUM",
+     "hausNr": null,
+     "joch": null,
+     "klafter": 298.0,
+     "kultur": "Wiese",
+     "owner": "Wiese im Grundstück Nr. 2607",
+     "page": 135,
+     "parts": 1,
+     "parzella": "2613",
+     "series": "S2",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    }
+   ],
+   "rowsTotal": 2,
+   "shareDelta": 0.0356,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "641": {
+   "attributedBlatt": null,
+   "blattPair": "I·II",
+   "blattShares": [
+    {
+     "areaQK": 941.0,
+     "blatt": "II",
+     "pages": [
+      85
+     ],
+     "rows": 1,
+     "share": 0.7415
+    },
+    {
+     "areaQK": 328.0,
+     "blatt": "I",
+     "pages": [
+      35
+     ],
+     "rows": 1,
+     "share": 0.2585
+    }
+   ],
+   "dominantShare": 0.7415,
+   "geoShared": true,
+   "kultures": [
+    "Wiese",
+    "Wiese und Gfrett"
+   ],
+   "kulturesByBlatt": {
+    "I": [
+     "Wiese"
+    ],
+    "II": [
+     "Wiese und Gfrett"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Stüllich Mihlo",
+    "Würich Maria"
+   ],
+   "ownersByBlatt": {
+    "I": [
+     "Würich Maria"
+    ],
+    "II": [
+     "Stüllich Mihlo"
+    ]
+   },
+   "pages": [
+    35,
+    85
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 328.0,
+     "areaSuspect": false,
+     "base": "641",
+     "blatt": "I",
+     "conf": "MEDIUM",
+     "hausNr": "68",
+     "joch": null,
+     "klafter": 328.0,
+     "kultur": "Wiese",
+     "owner": "Würich Maria",
+     "page": 35,
+     "parts": 3,
+     "parzella": "641",
+     "series": "S1",
+     "stand": "Lehnerin",
+     "wohnort": "Grübl",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 941.0,
+     "areaSuspect": false,
+     "base": "641",
+     "blatt": "II",
+     "conf": "MEDIUM",
+     "hausNr": "1 16",
+     "joch": null,
+     "klafter": 941.0,
+     "kultur": "Wiese und Gfrett",
+     "owner": "Stüllich Mihlo",
+     "page": 85,
+     "parts": 3,
+     "parzella": "641",
+     "series": "S1",
+     "stand": "Bauer",
+     "wohnort": "Grüble",
+     "wohnortInherited": false
+    }
+   ],
+   "rowsTotal": 2,
+   "shareDelta": 0.483,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "642": {
+   "attributedBlatt": null,
+   "blattPair": "I·II",
+   "blattShares": [
+    {
+     "areaQK": 319.0,
+     "blatt": "I",
+     "pages": [
+      35
+     ],
+     "rows": 1,
+     "share": 0.5187
+    },
+    {
+     "areaQK": 296.0,
+     "blatt": "II",
+     "pages": [
+      85
+     ],
+     "rows": 1,
+     "share": 0.4813
+    }
+   ],
+   "dominantShare": 0.5187,
+   "geoShared": true,
+   "kultures": [
+    "Schlagwald",
+    "Wiese und Gfrett"
+   ],
+   "kulturesByBlatt": {
+    "I": [
+     "Schlagwald"
+    ],
+    "II": [
+     "Wiese und Gfrett"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Schuster Mihlo",
+    "Tschakl Mathäus"
+   ],
+   "ownersByBlatt": {
+    "I": [
+     "Tschakl Mathäus"
+    ],
+    "II": [
+     "Schuster Mihlo"
+    ]
+   },
+   "pages": [
+    35,
+    85
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 319.0,
+     "areaSuspect": false,
+     "base": "642",
+     "blatt": "I",
+     "conf": "STRONG",
+     "hausNr": "35",
+     "joch": null,
+     "klafter": 319.0,
+     "kultur": "Schlagwald",
+     "owner": "Tschakl Mathäus",
+     "page": 35,
+     "parts": 1,
+     "parzella": "642",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grübl",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 296.0,
+     "areaSuspect": false,
+     "base": "642",
+     "blatt": "II",
+     "conf": "STRONG",
+     "hausNr": "1 62",
+     "joch": null,
+     "klafter": 296.0,
+     "kultur": "Wiese und Gfrett",
+     "owner": "Schuster Mihlo",
+     "page": 85,
+     "parts": 1,
+     "parzella": "642",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    }
+   ],
+   "rowsTotal": 2,
+   "shareDelta": 0.0374,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "643": {
+   "attributedBlatt": null,
+   "blattPair": "I·II",
+   "blattShares": [
+    {
+     "areaQK": 706.0,
+     "blatt": "II",
+     "pages": [
+      85
+     ],
+     "rows": 1,
+     "share": 0.5332
+    },
+    {
+     "areaQK": 618.0,
+     "blatt": "I",
+     "pages": [
+      35
+     ],
+     "rows": 1,
+     "share": 0.4668
+    }
+   ],
+   "dominantShare": 0.5332,
+   "geoShared": true,
+   "kultures": [
+    "Schlagwald",
+    "Wiese und Gfrett Wiesen"
+   ],
+   "kulturesByBlatt": {
+    "I": [
+     "Schlagwald"
+    ],
+    "II": [
+     "Wiese und Gfrett Wiesen"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Schimeg Mihel",
+    "Tschakl Mathäus"
+   ],
+   "ownersByBlatt": {
+    "I": [
+     "Tschakl Mathäus"
+    ],
+    "II": [
+     "Schimeg Mihel"
+    ]
+   },
+   "pages": [
+    35,
+    85
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 618.0,
+     "areaSuspect": false,
+     "base": "643",
+     "blatt": "I",
+     "conf": "MEDIUM",
+     "hausNr": "34",
+     "joch": null,
+     "klafter": 618.0,
+     "kultur": "Schlagwald",
+     "owner": "Tschakl Mathäus",
+     "page": 35,
+     "parts": 1,
+     "parzella": "643",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grübl",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 706.0,
+     "areaSuspect": false,
+     "base": "643",
+     "blatt": "II",
+     "conf": "MEDIUM",
+     "hausNr": "1 19",
+     "joch": null,
+     "klafter": 706.0,
+     "kultur": "Wiese und Gfrett Wiesen",
+     "owner": "Schimeg Mihel",
+     "page": 85,
+     "parts": 1,
+     "parzella": "643",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    }
+   ],
+   "rowsTotal": 2,
+   "shareDelta": 0.0664,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "646": {
+   "attributedBlatt": null,
+   "blattPair": "I·II",
+   "blattShares": [
+    {
+     "areaQK": 786.0,
+     "blatt": "II",
+     "pages": [
+      85
+     ],
+     "rows": 1,
+     "share": 0.6741
+    },
+    {
+     "areaQK": 380.0,
+     "blatt": "I",
+     "pages": [
+      35
+     ],
+     "rows": 1,
+     "share": 0.3259
+    }
+   ],
+   "dominantShare": 0.6741,
+   "geoShared": true,
+   "kultures": [
+    "Schlagwald",
+    "Wiese und Gfrett"
+   ],
+   "kulturesByBlatt": {
+    "I": [
+     "Schlagwald"
+    ],
+    "II": [
+     "Wiese und Gfrett"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Dreschler Mathäus",
+    "Milleger Johann"
+   ],
+   "ownersByBlatt": {
+    "I": [
+     "Dreschler Mathäus"
+    ],
+    "II": [
+     "Milleger Johann"
+    ]
+   },
+   "pages": [
+    35,
+    85
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 380.0,
+     "areaSuspect": false,
+     "base": "646",
+     "blatt": "I",
+     "conf": "WEAK",
+     "hausNr": "23",
+     "joch": null,
+     "klafter": 380.0,
+     "kultur": "Schlagwald",
+     "owner": "Dreschler Mathäus",
+     "page": 35,
+     "parts": 3,
+     "parzella": "646",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grübl",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 786.0,
+     "areaSuspect": false,
+     "base": "646",
+     "blatt": "II",
+     "conf": "WEAK",
+     "hausNr": "1 22",
+     "joch": null,
+     "klafter": 786.0,
+     "kultur": "Wiese und Gfrett",
+     "owner": "Milleger Johann",
+     "page": 85,
+     "parts": 3,
+     "parzella": "646",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    }
+   ],
+   "rowsTotal": 2,
+   "shareDelta": 0.3482,
+   "sosledje": {
+    "flag": 2,
+    "flaggedRows": [
+     "646@p35",
+     "646@p85"
+    ],
+    "ok": 0
+   },
+   "status": "split"
+  },
+  "651": {
+   "attributedBlatt": null,
+   "blattPair": "I·II",
+   "blattShares": [
+    {
+     "areaQK": 783.0,
+     "blatt": "II",
+     "pages": [
+      85
+     ],
+     "rows": 1,
+     "share": 0.5234
+    },
+    {
+     "areaQK": 713.0,
+     "blatt": "I",
+     "pages": [
+      35
+     ],
+     "rows": 1,
+     "share": 0.4766
+    }
+   ],
+   "dominantShare": 0.5234,
+   "geoShared": true,
+   "kultures": [
+    "Schlagwald",
+    "Wiese und Gfrett Wiesen"
+   ],
+   "kulturesByBlatt": {
+    "I": [
+     "Schlagwald"
+    ],
+    "II": [
+     "Wiese und Gfrett Wiesen"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Knall Anna",
+    "Mallwetsch Markus"
+   ],
+   "ownersByBlatt": {
+    "I": [
+     "Mallwetsch Markus"
+    ],
+    "II": [
+     "Knall Anna"
+    ]
+   },
+   "pages": [
+    35,
+    85
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 713.0,
+     "areaSuspect": false,
+     "base": "651",
+     "blatt": "I",
+     "conf": "MEDIUM",
+     "hausNr": "31",
+     "joch": null,
+     "klafter": 713.0,
+     "kultur": "Schlagwald",
+     "owner": "Mallwetsch Markus",
+     "page": 35,
+     "parts": 2,
+     "parzella": "651",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grübl",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 783.0,
+     "areaSuspect": false,
+     "base": "651",
+     "blatt": "II",
+     "conf": "MEDIUM",
+     "hausNr": "1 17",
+     "joch": null,
+     "klafter": 783.0,
+     "kultur": "Wiese und Gfrett Wiesen",
+     "owner": "Knall Anna",
+     "page": 85,
+     "parts": 2,
+     "parzella": "651",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    }
+   ],
+   "rowsTotal": 2,
+   "shareDelta": 0.0468,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "661": {
+   "attributedBlatt": null,
+   "blattPair": "I·II",
+   "blattShares": [
+    {
+     "areaQK": 699.0,
+     "blatt": "II",
+     "pages": [
+      87
+     ],
+     "rows": 1,
+     "share": 0.5147
+    },
+    {
+     "areaQK": 659.0,
+     "blatt": "I",
+     "pages": [
+      36
+     ],
+     "rows": 1,
+     "share": 0.4853
+    }
+   ],
+   "dominantShare": 0.5147,
+   "geoShared": true,
+   "kultures": [
+    "Acker",
+    "Lhup"
+   ],
+   "kulturesByBlatt": {
+    "I": [
+     "Lhup"
+    ],
+    "II": [
+     "Acker"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Mülley Daniel",
+    "Staudt Hans"
+   ],
+   "ownersByBlatt": {
+    "I": [
+     "Mülley Daniel"
+    ],
+    "II": [
+     "Staudt Hans"
+    ]
+   },
+   "pages": [
+    36,
+    87
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 659.0,
+     "areaSuspect": false,
+     "base": "661",
+     "blatt": "I",
+     "conf": "WEAK",
+     "hausNr": "29",
+     "joch": null,
+     "klafter": 659.0,
+     "kultur": "Lhup",
+     "owner": "Mülley Daniel",
+     "page": 36,
+     "parts": 1,
+     "parzella": "661",
+     "series": "S1",
+     "stand": "Land",
+     "wohnort": "Grüble",
+     "wohnortInherited": false
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 699.0,
+     "areaSuspect": false,
+     "base": "661",
+     "blatt": "II",
+     "conf": "WEAK",
+     "hausNr": "1/2",
+     "joch": null,
+     "klafter": 699.0,
+     "kultur": "Acker",
+     "owner": "Staudt Hans",
+     "page": 87,
+     "parts": 1,
+     "parzella": "661",
+     "series": "S1",
+     "stand": "Bauer",
+     "wohnort": "Grüble",
+     "wohnortInherited": false
+    }
+   ],
+   "rowsTotal": 2,
+   "shareDelta": 0.0294,
+   "sosledje": {
+    "flag": 2,
+    "flaggedRows": [
+     "661@p36",
+     "661@p87"
+    ],
+    "ok": 0
+   },
+   "status": "split"
+  },
+  "674": {
+   "attributedBlatt": null,
+   "blattPair": "I·II",
+   "blattShares": [
+    {
+     "areaQK": 548.0,
+     "blatt": "II",
+     "pages": [
+      87
+     ],
+     "rows": 1,
+     "share": 0.7436
+    },
+    {
+     "areaQK": 189.0,
+     "blatt": "I",
+     "pages": [
+      36
+     ],
+     "rows": 1,
+     "share": 0.2564
+    }
+   ],
+   "dominantShare": 0.7436,
+   "geoShared": true,
+   "kultures": [
+    "Acker",
+    "Eidn"
+   ],
+   "kulturesByBlatt": {
+    "I": [
+     "Eidn"
+    ],
+    "II": [
+     "Acker"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Dultsitsch Hans",
+    "Würing Johann"
+   ],
+   "ownersByBlatt": {
+    "I": [
+     "Würing Johann"
+    ],
+    "II": [
+     "Dultsitsch Hans"
+    ]
+   },
+   "pages": [
+    36,
+    87
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 189.0,
+     "areaSuspect": false,
+     "base": "674",
+     "blatt": "I",
+     "conf": "MEDIUM",
+     "hausNr": "26",
+     "joch": null,
+     "klafter": 189.0,
+     "kultur": "Eidn",
+     "owner": "Würing Johann",
+     "page": 36,
+     "parts": 1,
+     "parzella": "674",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 548.0,
+     "areaSuspect": false,
+     "base": "674",
+     "blatt": "II",
+     "conf": "MEDIUM",
+     "hausNr": "1/6",
+     "joch": null,
+     "klafter": 548.0,
+     "kultur": "Acker",
+     "owner": "Dultsitsch Hans",
+     "page": 87,
+     "parts": 1,
+     "parzella": "674",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    }
+   ],
+   "rowsTotal": 2,
+   "shareDelta": 0.4872,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "922": {
+   "attributedBlatt": null,
+   "blattPair": "II·III",
+   "blattShares": [
+    {
+     "areaQK": 553.0,
+     "blatt": "III",
+     "pages": [
+      99
+     ],
+     "rows": 1,
+     "share": 0.6913
+    },
+    {
+     "areaQK": 247.0,
+     "blatt": "II",
+     "pages": [
+      49
+     ],
+     "rows": 1,
+     "share": 0.3088
+    }
+   ],
+   "dominantShare": 0.6913,
+   "geoShared": true,
+   "kultures": [
+    "Acker",
+    "Wiesen"
+   ],
+   "kulturesByBlatt": {
+    "II": [
+     "Acker"
+    ],
+    "III": [
+     "Wiesen"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Deutlich Michael",
+    "Dragasch Jane"
+   ],
+   "ownersByBlatt": {
+    "II": [
+     "Dragasch Jane"
+    ],
+    "III": [
+     "Deutlich Michael"
+    ]
+   },
+   "pages": [
+    49,
+    99
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 247.0,
+     "areaSuspect": false,
+     "base": "922",
+     "blatt": "II",
+     "conf": "MEDIUM",
+     "hausNr": "1/5",
+     "joch": null,
+     "klafter": 247.0,
+     "kultur": "Acker",
+     "owner": "Dragasch Jane",
+     "page": 49,
+     "parts": 1,
+     "parzella": "922",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Dragasche",
+     "wohnortInherited": false
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 553.0,
+     "areaSuspect": false,
+     "base": "922",
+     "blatt": "III",
+     "conf": "MEDIUM",
+     "hausNr": "20",
+     "joch": null,
+     "klafter": 553.0,
+     "kultur": "Wiesen",
+     "owner": "Deutlich Michael",
+     "page": 99,
+     "parts": 1,
+     "parzella": "922",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    }
+   ],
+   "rowsTotal": 2,
+   "shareDelta": 0.3825,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "923": {
+   "attributedBlatt": null,
+   "blattPair": "II·III",
+   "blattShares": [
+    {
+     "areaQK": 611.0,
+     "blatt": "III",
+     "pages": [
+      99
+     ],
+     "rows": 1,
+     "share": 0.5637
+    },
+    {
+     "areaQK": 473.0,
+     "blatt": "II",
+     "pages": [
+      49
+     ],
+     "rows": 1,
+     "share": 0.4363
+    }
+   ],
+   "dominantShare": 0.5637,
+   "geoShared": true,
+   "kultures": [
+    "Acker",
+    "Wiesen"
+   ],
+   "kulturesByBlatt": {
+    "II": [
+     "Acker"
+    ],
+    "III": [
+     "Wiesen"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Deutlich Katharina",
+    "Heise Marlo"
+   ],
+   "ownersByBlatt": {
+    "II": [
+     "Heise Marlo"
+    ],
+    "III": [
+     "Deutlich Katharina"
+    ]
+   },
+   "pages": [
+    49,
+    99
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 473.0,
+     "areaSuspect": false,
+     "base": "923",
+     "blatt": "II",
+     "conf": "MEDIUM",
+     "hausNr": "1/3",
+     "joch": null,
+     "klafter": 473.0,
+     "kultur": "Acker",
+     "owner": "Heise Marlo",
+     "page": 49,
+     "parts": 1,
+     "parzella": "923",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Dragasche",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 611.0,
+     "areaSuspect": false,
+     "base": "923",
+     "blatt": "III",
+     "conf": "MEDIUM",
+     "hausNr": "20",
+     "joch": null,
+     "klafter": 611.0,
+     "kultur": "Wiesen",
+     "owner": "Deutlich Katharina",
+     "page": 99,
+     "parts": 1,
+     "parzella": "923",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    }
+   ],
+   "rowsTotal": 2,
+   "shareDelta": 0.1274,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "924": {
+   "attributedBlatt": null,
+   "blattPair": "II·III",
+   "blattShares": [
+    {
+     "areaQK": 1617.0,
+     "blatt": "II",
+     "pages": [
+      49
+     ],
+     "rows": 1,
+     "share": 0.7254
+    },
+    {
+     "areaQK": 612.0,
+     "blatt": "III",
+     "pages": [
+      99
+     ],
+     "rows": 1,
+     "share": 0.2746
+    }
+   ],
+   "dominantShare": 0.7254,
+   "geoShared": true,
+   "kultures": [
+    "Acker",
+    "Wiesen"
+   ],
+   "kulturesByBlatt": {
+    "II": [
+     "Acker"
+    ],
+    "III": [
+     "Wiesen"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Deutlich Maria",
+    "Dragasch Jane"
+   ],
+   "ownersByBlatt": {
+    "II": [
+     "Dragasch Jane"
+    ],
+    "III": [
+     "Deutlich Maria"
+    ]
+   },
+   "pages": [
+    49,
+    99
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 1617.0,
+     "areaSuspect": false,
+     "base": "924",
+     "blatt": "II",
+     "conf": "MEDIUM",
+     "hausNr": "1/5",
+     "joch": 1.0,
+     "klafter": 17.0,
+     "kultur": "Acker",
+     "owner": "Dragasch Jane",
+     "page": 49,
+     "parts": 1,
+     "parzella": "924",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Dragasche",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 612.0,
+     "areaSuspect": false,
+     "base": "924",
+     "blatt": "III",
+     "conf": "STRONG",
+     "hausNr": "20",
+     "joch": null,
+     "klafter": 612.0,
+     "kultur": "Wiesen",
+     "owner": "Deutlich Maria",
+     "page": 99,
+     "parts": 1,
+     "parzella": "924",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    }
+   ],
+   "rowsTotal": 2,
+   "shareDelta": 0.4508,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "926": {
+   "attributedBlatt": null,
+   "blattPair": "II·III",
+   "blattShares": [
+    {
+     "areaQK": 1415.0,
+     "blatt": "II",
+     "pages": [
+      49
+     ],
+     "rows": 1,
+     "share": 0.6709
+    },
+    {
+     "areaQK": 694.0,
+     "blatt": "III",
+     "pages": [
+      99
+     ],
+     "rows": 1,
+     "share": 0.3291
+    }
+   ],
+   "dominantShare": 0.6709,
+   "geoShared": true,
+   "kultures": [
+    "Acker",
+    "Wiesen"
+   ],
+   "kulturesByBlatt": {
+    "II": [
+     "Acker"
+    ],
+    "III": [
+     "Wiesen"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Lukeschitsch Malle",
+    "Strauß Georg"
+   ],
+   "ownersByBlatt": {
+    "II": [
+     "Lukeschitsch Malle"
+    ],
+    "III": [
+     "Strauß Georg"
+    ]
+   },
+   "pages": [
+    49,
+    99
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 1415.0,
+     "areaSuspect": false,
+     "base": "926",
+     "blatt": "II",
+     "conf": "MEDIUM",
+     "hausNr": "1/12",
+     "joch": null,
+     "klafter": 1415.0,
+     "kultur": "Acker",
+     "owner": "Lukeschitsch Malle",
+     "page": 49,
+     "parts": 2,
+     "parzella": "926",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Güble",
+     "wohnortInherited": false
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 694.0,
+     "areaSuspect": false,
+     "base": "926",
+     "blatt": "III",
+     "conf": "MEDIUM",
+     "hausNr": "43",
+     "joch": null,
+     "klafter": 694.0,
+     "kultur": "Wiesen",
+     "owner": "Strauß Georg",
+     "page": 99,
+     "parts": 2,
+     "parzella": "926",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    }
+   ],
+   "rowsTotal": 2,
+   "shareDelta": 0.3418,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "927": {
+   "attributedBlatt": null,
+   "blattPair": "II·III",
+   "blattShares": [
+    {
+     "areaQK": 1552.0,
+     "blatt": "II",
+     "pages": [
+      49
+     ],
+     "rows": 1,
+     "share": 0.6861
+    },
+    {
+     "areaQK": 710.0,
+     "blatt": "III",
+     "pages": [
+      99
+     ],
+     "rows": 1,
+     "share": 0.3139
+    }
+   ],
+   "dominantShare": 0.6861,
+   "geoShared": true,
+   "kultures": [
+    "Acker",
+    "Wiesen"
+   ],
+   "kulturesByBlatt": {
+    "II": [
+     "Acker"
+    ],
+    "III": [
+     "Wiesen"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Brünig Johann",
+    "Lukeschitsch Malle"
+   ],
+   "ownersByBlatt": {
+    "II": [
+     "Lukeschitsch Malle"
+    ],
+    "III": [
+     "Brünig Johann"
+    ]
+   },
+   "pages": [
+    49,
+    99
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 1552.0,
+     "areaSuspect": false,
+     "base": "927",
+     "blatt": "II",
+     "conf": "MEDIUM",
+     "hausNr": "1/12",
+     "joch": null,
+     "klafter": 1552.0,
+     "kultur": "Acker",
+     "owner": "Lukeschitsch Malle",
+     "page": 49,
+     "parts": 1,
+     "parzella": "927",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Güble",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 710.0,
+     "areaSuspect": false,
+     "base": "927",
+     "blatt": "III",
+     "conf": "MEDIUM",
+     "hausNr": "26",
+     "joch": null,
+     "klafter": 710.0,
+     "kultur": "Wiesen",
+     "owner": "Brünig Johann",
+     "page": 99,
+     "parts": 1,
+     "parzella": "927",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    }
+   ],
+   "rowsTotal": 2,
+   "shareDelta": 0.3722,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "929": {
+   "attributedBlatt": null,
+   "blattPair": "II·III",
+   "blattShares": [
+    {
+     "areaQK": 564.0,
+     "blatt": "III",
+     "pages": [
+      99
+     ],
+     "rows": 1,
+     "share": 0.5968
+    },
+    {
+     "areaQK": 381.0,
+     "blatt": "II",
+     "pages": [
+      49
+     ],
+     "rows": 1,
+     "share": 0.4032
+    }
+   ],
+   "dominantShare": 0.5968,
+   "geoShared": true,
+   "kultures": [
+    "Acker",
+    "Wiesen"
+   ],
+   "kulturesByBlatt": {
+    "II": [
+     "Acker"
+    ],
+    "III": [
+     "Wiesen"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Brünig Michael",
+    "Pessing Georg"
+   ],
+   "ownersByBlatt": {
+    "II": [
+     "Pessing Georg"
+    ],
+    "III": [
+     "Brünig Michael"
+    ]
+   },
+   "pages": [
+    49,
+    99
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 381.0,
+     "areaSuspect": false,
+     "base": "929",
+     "blatt": "II",
+     "conf": "MEDIUM",
+     "hausNr": "1/11",
+     "joch": null,
+     "klafter": 381.0,
+     "kultur": "Acker",
+     "owner": "Pessing Georg",
+     "page": 49,
+     "parts": 2,
+     "parzella": "929",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Güble",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 564.0,
+     "areaSuspect": false,
+     "base": "929",
+     "blatt": "III",
+     "conf": "MEDIUM",
+     "hausNr": "24",
+     "joch": null,
+     "klafter": 564.0,
+     "kultur": "Wiesen",
+     "owner": "Brünig Michael",
+     "page": 99,
+     "parts": 2,
+     "parzella": "929",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    }
+   ],
+   "rowsTotal": 2,
+   "shareDelta": 0.1936,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  },
+  "938": {
+   "attributedBlatt": null,
+   "blattPair": "II·III",
+   "blattShares": [
+    {
+     "areaQK": 376.0,
+     "blatt": "II",
+     "pages": [
+      49
+     ],
+     "rows": 1,
+     "share": 0.5587
+    },
+    {
+     "areaQK": 297.0,
+     "blatt": "III",
+     "pages": [
+      99
+     ],
+     "rows": 1,
+     "share": 0.4413
+    }
+   ],
+   "dominantShare": 0.5587,
+   "geoShared": true,
+   "kultures": [
+    "Acker",
+    "Wiesen"
+   ],
+   "kulturesByBlatt": {
+    "II": [
+     "Acker"
+    ],
+    "III": [
+     "Wiesen"
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Kalapischitsch Eve.",
+    "Pößnig Georg"
+   ],
+   "ownersByBlatt": {
+    "II": [
+     "Kalapischitsch Eve."
+    ],
+    "III": [
+     "Pößnig Georg"
+    ]
+   },
+   "pages": [
+    49,
+    99
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 376.0,
+     "areaSuspect": false,
+     "base": "938",
+     "blatt": "II",
+     "conf": "STRONG",
+     "hausNr": "1/6",
+     "joch": null,
+     "klafter": 376.0,
+     "kultur": "Acker",
+     "owner": "Kalapischitsch Eve.",
+     "page": 49,
+     "parts": 3,
+     "parzella": "938",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Güble",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 297.0,
+     "areaSuspect": false,
+     "base": "938",
+     "blatt": "III",
+     "conf": "MEDIUM",
+     "hausNr": "69",
+     "joch": null,
+     "klafter": 297.0,
+     "kultur": "Wiesen",
+     "owner": "Pößnig Georg",
+     "page": 99,
+     "parts": 3,
+     "parzella": "938",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Grüble",
+     "wohnortInherited": true
+    }
+   ],
+   "rowsTotal": 2,
+   "shareDelta": 0.1174,
+   "sosledje": {
+    "flag": 0,
+    "flaggedRows": [],
+    "ok": 2
+   },
+   "status": "split"
+  }
+ },
+ "date": "2026-10-14",
+ "inputSha256": {
+  "p59": "95929a2e373f7e4acd8f5fe4e93db08419e18c8dfbc604c1fc87beeae65da973",
+  "p65rt": "74477ac800ad47b4a37805aa0b398ddc88327f8c45afc342f97a084813d0396d"
+ },
+ "inputs": {
+  "p59": "research/issue17/ps-blatt-headers.json (pageAttribution)",
+  "p65rt": "src/data/atlas/ps-attribution-full.json (P65 runtime — bajtni vir 211, split 39)",
+  "v2": "research/issue17/ps-parcels-geo-v2.json (rowsEvidence 1093)"
+ },
+ "invariants": [
+  "I1 vhodni pini (3× sha256 + števci 1093/800/211/39)",
+  "I2 razčlenitev (39 ⊂ 211; 2 deleža; Σ share = 1; Σ areaQK == vrstice)",
+  "I3 P65 polja bajtno (deep equality 39×)",
+  "I4 distribucije (pairs/skip/owners/rel/pasovi/kulture/geo/suspect)",
+  "I5 sosledje split del == P65 bajtno (82/93; flag 5 base)",
+  "I6 brez georef polj (lat/lng/areaModern/ratio); geoShared samo števec",
+  "I7 dokaz ⊇ runtime",
+  "I8 determinizem (--check)"
+ ],
+ "next": [
+  "LASTNIŠKA ODLOČITEV o per-Blatt SPLIT joinu za 39 base (2 geometriji; razdelitev per deleži ali per lastnika) — ta paket je dokazni vir",
+  "izvedba SPLIT joina (ob odobritvi): v2 join upgrade — 39 base → 78 kandidatnih instanc per Blatt, geometrije per Blatt georef [~]",
+  "razlaga 2 skokov II·IV (1603, 1604: isti kulturi 'Acker' + 'Weide und Gfällgut, Laubm.' na obeh Blattih — preveriti dednost/preimenovanje)",
+  "razlaga 5 sosledje flagov (646, 661, 1821, 2141, 2143)",
+  "lastniki atributiranih instanc ↔ PF protokol (ostaja iz P65)"
+ ],
+ "principle": "odločitveni paket za lastniško odločitev o per-Blatt SPLIT joinu (#8): 39 split base iz P65 (bajtni vir) × v2 vrstice × P59 pageAttribution — per-Blatt razčlenitev vrstic, kulture, lastnikov; merjeni: Blatt pari (37/39 sosednji, 2 skoka), deležni pasovi, disjunktnost lastnikov (39/39), geo delitev (39/39 ena geometrija), sosledje; NE odloča namesto lastnika; join v2 nespremanjen (disciplina P56/P58/P59/P65)",
+ "rule": {
+  "blattPair": "urejen par Blattov split base ('·' join); sosednji = v ADJACENT {(I,II),(II,III),(III,IV),(IV,V)}",
+  "dominantShare": "share[0] (P65 sort: Σ areaQK desc, Blatt asc); pasovi [0.50,0.60)/[0.60,0.70)/[0.70,0.75)",
+  "geoShared": "ali vse vrstice base nosijo isti par (lat, lng) v v2 (null = vse brez); SAMO števec v summary — koordinate ne gredo v izpis (I6)",
+  "ownerRelation": "disjunktnost množic lastnikov per Blatt: 'disjoint' | 'equal' | 'overlap' | 'open' (prazna množica)",
+  "source": "split base = P65 status 'split' (dominantni delež v [0.5, 0.75), attributedBlatt null, blattShares alternative) — P66 ne spreminja pravil"
+ },
+ "runtime": {
+  "bases": {
+   "1603": {
+    "attributedBlatt": null,
+    "blattPair": "II·IV",
+    "blattShares": [
+     {
+      "areaQK": 1005.0,
+      "blatt": "IV",
+      "pages": [
+       93
+      ],
+      "rows": 1,
+      "share": 0.5643
+     },
+     {
+      "areaQK": 776.0,
+      "blatt": "II",
+      "pages": [
+       78
+      ],
+      "rows": 1,
+      "share": 0.4357
+     }
+    ],
+    "dominantShare": 0.5643,
+    "geoShared": true,
+    "kultures": [
+     "Acker",
+     "Weide und Gfällgut, Laubm."
+    ],
+    "kulturesByBlatt": {
+     "II": [
+      "Acker"
+     ],
+     "IV": [
+      "Weide und Gfällgut, Laubm."
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Pachler Martin",
+     "Verboten (er) Bueb?"
+    ],
+    "ownersByBlatt": {
+     "II": [
+      "Pachler Martin"
+     ],
+     "IV": [
+      "Verboten (er) Bueb?"
+     ]
+    },
+    "pages": [
+     78,
+     93
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 776.0,
+      "areaSuspect": false,
+      "base": "1603",
+      "blatt": "II",
+      "conf": "MEDIUM",
+      "hausNr": "30",
+      "joch": null,
+      "klafter": 776.0,
+      "kultur": "Acker",
+      "owner": "Pachler Martin",
+      "page": 78,
+      "parts": 1,
+      "parzella": "1603",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grübln",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 1005.0,
+      "areaSuspect": false,
+      "base": "1603",
+      "blatt": "IV",
+      "conf": "MEDIUM",
+      "hausNr": "64",
+      "joch": null,
+      "klafter": 1005.0,
+      "kultur": "Weide und Gfällgut, Laubm.",
+      "owner": "Verboten (er) Bueb?",
+      "page": 93,
+      "parts": 1,
+      "parzella": "1603",
+      "series": "S1",
+      "stand": "Bauer",
+      "wohnort": "Grüble",
+      "wohnortInherited": false
+     }
+    ],
+    "rowsTotal": 2,
+    "shareDelta": 0.1286,
+    "sosledje": {
+     "flag": 0,
+     "flaggedRows": [],
+     "ok": 2
+    },
+    "status": "split"
+   },
+   "1604": {
+    "attributedBlatt": null,
+    "blattPair": "II·IV",
+    "blattShares": [
+     {
+      "areaQK": 774.0,
+      "blatt": "II",
+      "pages": [
+       78
+      ],
+      "rows": 1,
+      "share": 0.5167
+     },
+     {
+      "areaQK": 724.0,
+      "blatt": "IV",
+      "pages": [
+       93
+      ],
+      "rows": 1,
+      "share": 0.4833
+     }
+    ],
+    "dominantShare": 0.5167,
+    "geoShared": true,
+    "kultures": [
+     "Acker",
+     "Weide und Gfällgut, Laubm."
+    ],
+    "kulturesByBlatt": {
+     "II": [
+      "Acker"
+     ],
+     "IV": [
+      "Weide und Gfällgut, Laubm."
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Piringer Mathäus",
+     "Ullrich Otto"
+    ],
+    "ownersByBlatt": {
+     "II": [
+      "Ullrich Otto"
+     ],
+     "IV": [
+      "Piringer Mathäus"
+     ]
+    },
+    "pages": [
+     78,
+     93
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 774.0,
+      "areaSuspect": false,
+      "base": "1604",
+      "blatt": "II",
+      "conf": "MEDIUM",
+      "hausNr": "31",
+      "joch": null,
+      "klafter": 774.0,
+      "kultur": "Acker",
+      "owner": "Ullrich Otto",
+      "page": 78,
+      "parts": 3,
+      "parzella": "1604",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grübln",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 724.0,
+      "areaSuspect": false,
+      "base": "1604",
+      "blatt": "IV",
+      "conf": "MEDIUM",
+      "hausNr": "63",
+      "joch": null,
+      "klafter": 724.0,
+      "kultur": "Weide und Gfällgut, Laubm.",
+      "owner": "Piringer Mathäus",
+      "page": 93,
+      "parts": 3,
+      "parzella": "1604",
+      "series": "S1",
+      "stand": "Bauer",
+      "wohnort": "Grüble",
+      "wohnortInherited": false
+     }
+    ],
+    "rowsTotal": 2,
+    "shareDelta": 0.0334,
+    "sosledje": {
+     "flag": 0,
+     "flaggedRows": [],
+     "ok": 2
+    },
+    "status": "split"
+   },
+   "1821": {
+    "attributedBlatt": null,
+    "blattPair": "II·III",
+    "blattShares": [
+     {
+      "areaQK": 481.0,
+      "blatt": "II",
+      "pages": [
+       64,
+       79
+      ],
+      "rows": 2,
+      "share": 0.6961
+     },
+     {
+      "areaQK": 210.0,
+      "blatt": "III",
+      "pages": [
+       94
+      ],
+      "rows": 1,
+      "share": 0.3039
+     }
+    ],
+    "dominantShare": 0.6961,
+    "geoShared": true,
+    "kultures": [
+     "Einöd Wiese Geyersättä",
+     "Wiese und Äcker",
+     "Äfling"
+    ],
+    "kulturesByBlatt": {
+     "II": [
+      "Einöd Wiese Geyersättä",
+      "Äfling"
+     ],
+     "III": [
+      "Wiese und Äcker"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Büller Lorenz",
+     "Peterig Mathä",
+     "Pößlrey Peter Bäuer Grübl"
+    ],
+    "ownersByBlatt": {
+     "II": [
+      "Büller Lorenz",
+      "Pößlrey Peter Bäuer Grübl"
+     ],
+     "III": [
+      "Peterig Mathä"
+     ]
+    },
+    "pages": [
+     64,
+     79,
+     94
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 63.0,
+      "areaSuspect": false,
+      "base": "1821",
+      "blatt": "II",
+      "conf": "MEDIUM",
+      "hausNr": "1 29",
+      "joch": null,
+      "klafter": 63.0,
+      "kultur": "Äfling",
+      "owner": "Büller Lorenz",
+      "page": 64,
+      "parts": 1,
+      "parzella": "1821",
+      "series": "S1",
+      "stand": "Grübler",
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 418.0,
+      "areaSuspect": false,
+      "base": "1821",
+      "blatt": "II",
+      "conf": "MEDIUM",
+      "hausNr": "14",
+      "joch": null,
+      "klafter": 418.0,
+      "kultur": "Einöd Wiese Geyersättä",
+      "owner": "Pößlrey Peter Bäuer Grübl",
+      "page": 79,
+      "parts": 1,
+      "parzella": "1821",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grübln",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 210.0,
+      "areaSuspect": false,
+      "base": "1821",
+      "blatt": "III",
+      "conf": "MEDIUM",
+      "hausNr": "1 1/2",
+      "joch": null,
+      "klafter": 210.0,
+      "kultur": "Wiese und Äcker",
+      "owner": "Peterig Mathä",
+      "page": 94,
+      "parts": 1,
+      "parzella": "1821",
+      "series": "S1",
+      "stand": "Bauer",
+      "wohnort": "Grüble",
+      "wohnortInherited": false
+     }
+    ],
+    "rowsTotal": 3,
+    "shareDelta": 0.3922,
+    "sosledje": {
+     "flag": 3,
+     "flaggedRows": [
+      "1821@p64",
+      "1821@p79",
+      "1821@p94"
+     ],
+     "ok": 0
+    },
+    "status": "split"
+   },
+   "1832": {
+    "attributedBlatt": null,
+    "blattPair": "II·III",
+    "blattShares": [
+     {
+      "areaQK": 1206.0,
+      "blatt": "III",
+      "pages": [
+       94
+      ],
+      "rows": 1,
+      "share": 0.5196
+     },
+     {
+      "areaQK": 1115.0,
+      "blatt": "II",
+      "pages": [
+       64,
+       79
+      ],
+      "rows": 2,
+      "share": 0.4804
+     }
+    ],
+    "dominantShare": 0.5196,
+    "geoShared": true,
+    "kultures": [
+     "Einhauß",
+     "Wiese und Äcker",
+     "Äfling"
+    ],
+    "kulturesByBlatt": {
+     "II": [
+      "Einhauß",
+      "Äfling"
+     ],
+     "III": [
+      "Wiese und Äcker"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Mellner Lorenz",
+     "Pavlič Mihelj",
+     "Uebl Thomas"
+    ],
+    "ownersByBlatt": {
+     "II": [
+      "Pavlič Mihelj",
+      "Uebl Thomas"
+     ],
+     "III": [
+      "Mellner Lorenz"
+     ]
+    },
+    "pages": [
+     64,
+     79,
+     94
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 1083.0,
+      "areaSuspect": false,
+      "base": "1832",
+      "blatt": "II",
+      "conf": "STRONG",
+      "hausNr": "1 42",
+      "joch": null,
+      "klafter": 1083.0,
+      "kultur": "Äfling",
+      "owner": "Pavlič Mihelj",
+      "page": 64,
+      "parts": 1,
+      "parzella": "1832",
+      "series": "S1",
+      "stand": "Grübler",
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 32.0,
+      "areaSuspect": false,
+      "base": "1832",
+      "blatt": "II",
+      "conf": "MEDIUM",
+      "hausNr": "17",
+      "joch": null,
+      "klafter": 32.0,
+      "kultur": "Einhauß",
+      "owner": "Uebl Thomas",
+      "page": 79,
+      "parts": 1,
+      "parzella": "1832",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grübln",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 1206.0,
+      "areaSuspect": false,
+      "base": "1832",
+      "blatt": "III",
+      "conf": "STRONG",
+      "hausNr": "1 60",
+      "joch": null,
+      "klafter": 1206.0,
+      "kultur": "Wiese und Äcker",
+      "owner": "Mellner Lorenz",
+      "page": 94,
+      "parts": 1,
+      "parzella": "1832",
+      "series": "S1",
+      "stand": "Bauer",
+      "wohnort": "Grüble",
+      "wohnortInherited": false
+     }
+    ],
+    "rowsTotal": 3,
+    "shareDelta": 0.0392,
+    "sosledje": {
+     "flag": 0,
+     "flaggedRows": [],
+     "ok": 3
+    },
+    "status": "split"
+   },
+   "1833": {
+    "attributedBlatt": null,
+    "blattPair": "II·III",
+    "blattShares": [
+     {
+      "areaQK": 2122.0,
+      "blatt": "II",
+      "pages": [
+       64,
+       79
+      ],
+      "rows": 2,
+      "share": 0.6405
+     },
+     {
+      "areaQK": 1191.0,
+      "blatt": "III",
+      "pages": [
+       94
+      ],
+      "rows": 1,
+      "share": 0.3595
+     }
+    ],
+    "dominantShare": 0.6405,
+    "geoShared": true,
+    "kultures": [
+     "Einöd Wiese Gey. sätä",
+     "Wiese und Äcker",
+     "Äfling"
+    ],
+    "kulturesByBlatt": {
+     "II": [
+      "Einöd Wiese Gey. sätä",
+      "Äfling"
+     ],
+     "III": [
+      "Wiese und Äcker"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Budle Miha",
+     "Miller Joseph",
+     "Uebl Thomas"
+    ],
+    "ownersByBlatt": {
+     "II": [
+      "Budle Miha",
+      "Uebl Thomas"
+     ],
+     "III": [
+      "Miller Joseph"
+     ]
+    },
+    "pages": [
+     64,
+     79,
+     94
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 110.0,
+      "areaSuspect": false,
+      "base": "1833",
+      "blatt": "II",
+      "conf": "MEDIUM",
+      "hausNr": "1 43",
+      "joch": null,
+      "klafter": 110.0,
+      "kultur": "Äfling",
+      "owner": "Budle Miha",
+      "page": 64,
+      "parts": 1,
+      "parzella": "1833",
+      "series": "S1",
+      "stand": "Grübler",
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 2012.0,
+      "areaSuspect": false,
+      "base": "1833",
+      "blatt": "II",
+      "conf": "MEDIUM",
+      "hausNr": "17",
+      "joch": 1.0,
+      "klafter": 412.0,
+      "kultur": "Einöd Wiese Gey. sätä",
+      "owner": "Uebl Thomas",
+      "page": 79,
+      "parts": 1,
+      "parzella": "1833",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grübln",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 1191.0,
+      "areaSuspect": false,
+      "base": "1833",
+      "blatt": "III",
+      "conf": "MEDIUM",
+      "hausNr": "1 22",
+      "joch": null,
+      "klafter": 1191.0,
+      "kultur": "Wiese und Äcker",
+      "owner": "Miller Joseph",
+      "page": 94,
+      "parts": 1,
+      "parzella": "1833",
+      "series": "S1",
+      "stand": "Bauer",
+      "wohnort": "Grüble",
+      "wohnortInherited": false
+     }
+    ],
+    "rowsTotal": 3,
+    "shareDelta": 0.281,
+    "sosledje": {
+     "flag": 0,
+     "flaggedRows": [],
+     "ok": 3
+    },
+    "status": "split"
+   },
+   "1834": {
+    "attributedBlatt": null,
+    "blattPair": "II·III",
+    "blattShares": [
+     {
+      "areaQK": 1531.0,
+      "blatt": "II",
+      "pages": [
+       64,
+       79
+      ],
+      "rows": 2,
+      "share": 0.5689
+     },
+     {
+      "areaQK": 1160.0,
+      "blatt": "III",
+      "pages": [
+       94
+      ],
+      "rows": 1,
+      "share": 0.4311
+     }
+    ],
+    "dominantShare": 0.5689,
+    "geoShared": true,
+    "kultures": [
+     "Einöd Wiese Geyersättä",
+     "Wiese und Äcker",
+     "Äfling"
+    ],
+    "kulturesByBlatt": {
+     "II": [
+      "Einöd Wiese Geyersättä",
+      "Äfling"
+     ],
+     "III": [
+      "Wiese und Äcker"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Lehko Gregor",
+     "Peterig Mathä",
+     "Schimming Anna"
+    ],
+    "ownersByBlatt": {
+     "II": [
+      "Lehko Gregor",
+      "Schimming Anna"
+     ],
+     "III": [
+      "Peterig Mathä"
+     ]
+    },
+    "pages": [
+     64,
+     79,
+     94
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 369.0,
+      "areaSuspect": false,
+      "base": "1834",
+      "blatt": "II",
+      "conf": "MEDIUM",
+      "hausNr": "1 60",
+      "joch": null,
+      "klafter": 369.0,
+      "kultur": "Äfling",
+      "owner": "Lehko Gregor",
+      "page": 64,
+      "parts": 1,
+      "parzella": "1834",
+      "series": "S1",
+      "stand": "Grübler",
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 1162.0,
+      "areaSuspect": false,
+      "base": "1834",
+      "blatt": "II",
+      "conf": "MEDIUM",
+      "hausNr": "36",
+      "joch": null,
+      "klafter": 1162.0,
+      "kultur": "Einöd Wiese Geyersättä",
+      "owner": "Schimming Anna",
+      "page": 79,
+      "parts": 1,
+      "parzella": "1834",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grübln",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 1160.0,
+      "areaSuspect": false,
+      "base": "1834",
+      "blatt": "III",
+      "conf": "MEDIUM",
+      "hausNr": "1 40",
+      "joch": null,
+      "klafter": 1160.0,
+      "kultur": "Wiese und Äcker",
+      "owner": "Peterig Mathä",
+      "page": 94,
+      "parts": 1,
+      "parzella": "1834",
+      "series": "S1",
+      "stand": "Bauer",
+      "wohnort": "Grüble",
+      "wohnortInherited": false
+     }
+    ],
+    "rowsTotal": 3,
+    "shareDelta": 0.1378,
+    "sosledje": {
+     "flag": 0,
+     "flaggedRows": [],
+     "ok": 3
+    },
+    "status": "split"
+   },
+   "1836": {
+    "attributedBlatt": null,
+    "blattPair": "II·III",
+    "blattShares": [
+     {
+      "areaQK": 1420.0,
+      "blatt": "II",
+      "pages": [
+       64,
+       79
+      ],
+      "rows": 2,
+      "share": 0.5959
+     },
+     {
+      "areaQK": 963.0,
+      "blatt": "III",
+      "pages": [
+       94
+      ],
+      "rows": 1,
+      "share": 0.4041
+     }
+    ],
+    "dominantShare": 0.5959,
+    "geoShared": true,
+    "kultures": [
+     "Einöd Wiese Geyersättä",
+     "Äcker und Wiesen",
+     "Äfling"
+    ],
+    "kulturesByBlatt": {
+     "II": [
+      "Einöd Wiese Geyersättä",
+      "Äfling"
+     ],
+     "III": [
+      "Äcker und Wiesen"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Brinig Miha",
+     "Peterig Mathä",
+     "Schimming Magdalena"
+    ],
+    "ownersByBlatt": {
+     "II": [
+      "Brinig Miha",
+      "Schimming Magdalena"
+     ],
+     "III": [
+      "Peterig Mathä"
+     ]
+    },
+    "pages": [
+     64,
+     79,
+     94
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 216.0,
+      "areaSuspect": false,
+      "base": "1836",
+      "blatt": "II",
+      "conf": "MEDIUM",
+      "hausNr": "1 68",
+      "joch": null,
+      "klafter": 216.0,
+      "kultur": "Äfling",
+      "owner": "Brinig Miha",
+      "page": 64,
+      "parts": 1,
+      "parzella": "1836",
+      "series": "S1",
+      "stand": "Grübler",
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 1204.0,
+      "areaSuspect": false,
+      "base": "1836",
+      "blatt": "II",
+      "conf": "MEDIUM",
+      "hausNr": "19",
+      "joch": null,
+      "klafter": 1204.0,
+      "kultur": "Einöd Wiese Geyersättä",
+      "owner": "Schimming Magdalena",
+      "page": 79,
+      "parts": 1,
+      "parzella": "1836",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grübln",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 963.0,
+      "areaSuspect": false,
+      "base": "1836",
+      "blatt": "III",
+      "conf": "MEDIUM",
+      "hausNr": "1 40",
+      "joch": null,
+      "klafter": 963.0,
+      "kultur": "Äcker und Wiesen",
+      "owner": "Peterig Mathä",
+      "page": 94,
+      "parts": 1,
+      "parzella": "1836",
+      "series": "S1",
+      "stand": "Bauer",
+      "wohnort": "Grüble",
+      "wohnortInherited": false
+     }
+    ],
+    "rowsTotal": 3,
+    "shareDelta": 0.1918,
+    "sosledje": {
+     "flag": 0,
+     "flaggedRows": [],
+     "ok": 3
+    },
+    "status": "split"
+   },
+   "1837": {
+    "attributedBlatt": null,
+    "blattPair": "II·III",
+    "blattShares": [
+     {
+      "areaQK": 1087.0,
+      "blatt": "II",
+      "pages": [
+       64,
+       79
+      ],
+      "rows": 2,
+      "share": 0.5785
+     },
+     {
+      "areaQK": 792.0,
+      "blatt": "III",
+      "pages": [
+       94
+      ],
+      "rows": 1,
+      "share": 0.4215
+     }
+    ],
+    "dominantShare": 0.5785,
+    "geoShared": true,
+    "kultures": [
+     "Einöd Wiese Geyersättä",
+     "Gärten Gartlitzg",
+     "Äcker und Wiesen"
+    ],
+    "kulturesByBlatt": {
+     "II": [
+      "Einöd Wiese Geyersättä",
+      "Gärten Gartlitzg"
+     ],
+     "III": [
+      "Äcker und Wiesen"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Kraichand Matho",
+     "Tillak Miha",
+     "Ueich Georg"
+    ],
+    "ownersByBlatt": {
+     "II": [
+      "Tillak Miha",
+      "Ueich Georg"
+     ],
+     "III": [
+      "Kraichand Matho"
+     ]
+    },
+    "pages": [
+     64,
+     79,
+     94
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 449.0,
+      "areaSuspect": false,
+      "base": "1837",
+      "blatt": "II",
+      "conf": "MEDIUM",
+      "hausNr": "1 61",
+      "joch": null,
+      "klafter": 449.0,
+      "kultur": "Gärten Gartlitzg",
+      "owner": "Tillak Miha",
+      "page": 64,
+      "parts": 1,
+      "parzella": "1837",
+      "series": "S1",
+      "stand": "Grübler",
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 638.0,
+      "areaSuspect": false,
+      "base": "1837",
+      "blatt": "II",
+      "conf": "MEDIUM",
+      "hausNr": "23",
+      "joch": null,
+      "klafter": 638.0,
+      "kultur": "Einöd Wiese Geyersättä",
+      "owner": "Ueich Georg",
+      "page": 79,
+      "parts": 1,
+      "parzella": "1837",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grübln",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 792.0,
+      "areaSuspect": false,
+      "base": "1837",
+      "blatt": "III",
+      "conf": "MEDIUM",
+      "hausNr": "1 62",
+      "joch": null,
+      "klafter": 792.0,
+      "kultur": "Äcker und Wiesen",
+      "owner": "Kraichand Matho",
+      "page": 94,
+      "parts": 1,
+      "parzella": "1837",
+      "series": "S1",
+      "stand": "Bauer",
+      "wohnort": "Grüble",
+      "wohnortInherited": false
+     }
+    ],
+    "rowsTotal": 3,
+    "shareDelta": 0.157,
+    "sosledje": {
+     "flag": 0,
+     "flaggedRows": [],
+     "ok": 3
+    },
+    "status": "split"
+   },
+   "1838": {
+    "attributedBlatt": null,
+    "blattPair": "II·III",
+    "blattShares": [
+     {
+      "areaQK": 1036.0,
+      "blatt": "III",
+      "pages": [
+       94
+      ],
+      "rows": 1,
+      "share": 0.6356
+     },
+     {
+      "areaQK": 594.0,
+      "blatt": "II",
+      "pages": [
+       64,
+       79
+      ],
+      "rows": 2,
+      "share": 0.3644
+     }
+    ],
+    "dominantShare": 0.6356,
+    "geoShared": true,
+    "kultures": [
+     "Einöd Wiese Geyersättä",
+     "Wiese und Äcker",
+     "Äfling"
+    ],
+    "kulturesByBlatt": {
+     "II": [
+      "Einöd Wiese Geyersättä",
+      "Äfling"
+     ],
+     "III": [
+      "Wiese und Äcker"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Mellner Lorenz",
+     "Tillak Miha",
+     "Ueich Peter"
+    ],
+    "ownersByBlatt": {
+     "II": [
+      "Tillak Miha",
+      "Ueich Peter"
+     ],
+     "III": [
+      "Mellner Lorenz"
+     ]
+    },
+    "pages": [
+     64,
+     79,
+     94
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 146.0,
+      "areaSuspect": false,
+      "base": "1838",
+      "blatt": "II",
+      "conf": "MEDIUM",
+      "hausNr": "1 61",
+      "joch": null,
+      "klafter": 146.0,
+      "kultur": "Äfling",
+      "owner": "Tillak Miha",
+      "page": 64,
+      "parts": 2,
+      "parzella": "1838",
+      "series": "S1",
+      "stand": "Grübler",
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 448.0,
+      "areaSuspect": false,
+      "base": "1838",
+      "blatt": "II",
+      "conf": "MEDIUM",
+      "hausNr": "63",
+      "joch": null,
+      "klafter": 448.0,
+      "kultur": "Einöd Wiese Geyersättä",
+      "owner": "Ueich Peter",
+      "page": 79,
+      "parts": 2,
+      "parzella": "1838",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grübln",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 1036.0,
+      "areaSuspect": false,
+      "base": "1838",
+      "blatt": "III",
+      "conf": "MEDIUM",
+      "hausNr": "1 60",
+      "joch": null,
+      "klafter": 1036.0,
+      "kultur": "Wiese und Äcker",
+      "owner": "Mellner Lorenz",
+      "page": 94,
+      "parts": 2,
+      "parzella": "1838",
+      "series": "S1",
+      "stand": "Bauer",
+      "wohnort": "Grüble",
+      "wohnortInherited": false
+     }
+    ],
+    "rowsTotal": 3,
+    "shareDelta": 0.2712,
+    "sosledje": {
+     "flag": 0,
+     "flaggedRows": [],
+     "ok": 3
+    },
+    "status": "split"
+   },
+   "1839": {
+    "attributedBlatt": null,
+    "blattPair": "II·III",
+    "blattShares": [
+     {
+      "areaQK": 2352.0,
+      "blatt": "III",
+      "pages": [
+       94
+      ],
+      "rows": 1,
+      "share": 0.5494
+     },
+     {
+      "areaQK": 1929.0,
+      "blatt": "II",
+      "pages": [
+       64,
+       79
+      ],
+      "rows": 2,
+      "share": 0.4506
+     }
+    ],
+    "dominantShare": 0.5494,
+    "geoShared": true,
+    "kultures": [
+     "Einöd Wiese Geyersättä",
+     "Äcker und Wiesen",
+     "Äfling"
+    ],
+    "kulturesByBlatt": {
+     "II": [
+      "Einöd Wiese Geyersättä",
+      "Äfling"
+     ],
+     "III": [
+      "Äcker und Wiesen"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Dannay Michael",
+     "Kreševan Gregor",
+     "Uebl Anton"
+    ],
+    "ownersByBlatt": {
+     "II": [
+      "Kreševan Gregor",
+      "Uebl Anton"
+     ],
+     "III": [
+      "Dannay Michael"
+     ]
+    },
+    "pages": [
+     64,
+     79,
+     94
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 261.0,
+      "areaSuspect": false,
+      "base": "1839",
+      "blatt": "II",
+      "conf": "MEDIUM",
+      "hausNr": "1 63",
+      "joch": null,
+      "klafter": 261.0,
+      "kultur": "Äfling",
+      "owner": "Kreševan Gregor",
+      "page": 64,
+      "parts": 1,
+      "parzella": "1839",
+      "series": "S1",
+      "stand": "Grübler",
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 1668.0,
+      "areaSuspect": false,
+      "base": "1839",
+      "blatt": "II",
+      "conf": "MEDIUM",
+      "hausNr": "16",
+      "joch": 1.0,
+      "klafter": 68.0,
+      "kultur": "Einöd Wiese Geyersättä",
+      "owner": "Uebl Anton",
+      "page": 79,
+      "parts": 1,
+      "parzella": "1839",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grübln",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 2352.0,
+      "areaSuspect": false,
+      "base": "1839",
+      "blatt": "III",
+      "conf": "MEDIUM",
+      "hausNr": "1 24",
+      "joch": 1.0,
+      "klafter": 752.0,
+      "kultur": "Äcker und Wiesen",
+      "owner": "Dannay Michael",
+      "page": 94,
+      "parts": 1,
+      "parzella": "1839",
+      "series": "S1",
+      "stand": "Bauer",
+      "wohnort": "Grüble",
+      "wohnortInherited": false
+     }
+    ],
+    "rowsTotal": 3,
+    "shareDelta": 0.0988,
+    "sosledje": {
+     "flag": 0,
+     "flaggedRows": [],
+     "ok": 3
+    },
+    "status": "split"
+   },
+   "1945": {
+    "attributedBlatt": null,
+    "blattPair": "II·III",
+    "blattShares": [
+     {
+      "areaQK": 953.0,
+      "blatt": "III",
+      "pages": [
+       95,
+       100
+      ],
+      "rows": 2,
+      "share": 0.6208
+     },
+     {
+      "areaQK": 582.0,
+      "blatt": "II",
+      "pages": [
+       90
+      ],
+      "rows": 1,
+      "share": 0.3792
+     }
+    ],
+    "dominantShare": 0.6208,
+    "geoShared": true,
+    "kultures": [
+     "Schüttwiese, Gypfang, Laume",
+     "Wiese",
+     "Äcker und Wiesen"
+    ],
+    "kulturesByBlatt": {
+     "II": [
+      "Wiese"
+     ],
+     "III": [
+      "Schüttwiese, Gypfang, Laume",
+      "Äcker und Wiesen"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Böning Johann",
+     "Eurich Mädl",
+     "Leinichan Georg"
+    ],
+    "ownersByBlatt": {
+     "II": [
+      "Eurich Mädl"
+     ],
+     "III": [
+      "Böning Johann",
+      "Leinichan Georg"
+     ]
+    },
+    "pages": [
+     90,
+     95,
+     100
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 582.0,
+      "areaSuspect": false,
+      "base": "1945",
+      "blatt": "II",
+      "conf": "MEDIUM",
+      "hausNr": "1 63",
+      "joch": null,
+      "klafter": 582.0,
+      "kultur": "Wiese",
+      "owner": "Eurich Mädl",
+      "page": 90,
+      "parts": 1,
+      "parzella": "1945",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 494.0,
+      "areaSuspect": false,
+      "base": "1945",
+      "blatt": "III",
+      "conf": "MEDIUM",
+      "hausNr": "60",
+      "joch": null,
+      "klafter": 494.0,
+      "kultur": "Äcker und Wiesen",
+      "owner": "Leinichan Georg",
+      "page": 95,
+      "parts": 1,
+      "parzella": "1945",
+      "series": "S1",
+      "stand": "Bauer",
+      "wohnort": "Grüble",
+      "wohnortInherited": false
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 459.0,
+      "areaSuspect": false,
+      "base": "1945",
+      "blatt": "III",
+      "conf": "MEDIUM",
+      "hausNr": "1 26",
+      "joch": null,
+      "klafter": 459.0,
+      "kultur": "Schüttwiese, Gypfang, Laume",
+      "owner": "Böning Johann",
+      "page": 100,
+      "parts": 1,
+      "parzella": "1945",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     }
+    ],
+    "rowsTotal": 3,
+    "shareDelta": 0.2416,
+    "sosledje": {
+     "flag": 0,
+     "flaggedRows": [],
+     "ok": 3
+    },
+    "status": "split"
+   },
+   "1946": {
+    "attributedBlatt": null,
+    "blattPair": "II·III",
+    "blattShares": [
+     {
+      "areaQK": 1519.0,
+      "blatt": "III",
+      "pages": [
+       95,
+       100
+      ],
+      "rows": 2,
+      "share": 0.5717
+     },
+     {
+      "areaQK": 1138.0,
+      "blatt": "II",
+      "pages": [
+       90
+      ],
+      "rows": 1,
+      "share": 0.4283
+     }
+    ],
+    "dominantShare": 0.5717,
+    "geoShared": true,
+    "kultures": [
+     "Schüttwiese, Gypfang, Laume",
+     "Wiese",
+     "Äcker und Wiesen"
+    ],
+    "kulturesByBlatt": {
+     "II": [
+      "Wiese"
+     ],
+     "III": [
+      "Schüttwiese, Gypfang, Laume",
+      "Äcker und Wiesen"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Böning Martha",
+     "Pörtschach er Mägd",
+     "Vorbithaler Wolf"
+    ],
+    "ownersByBlatt": {
+     "II": [
+      "Pörtschach er Mägd"
+     ],
+     "III": [
+      "Böning Martha",
+      "Vorbithaler Wolf"
+     ]
+    },
+    "pages": [
+     90,
+     95,
+     100
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 1138.0,
+      "areaSuspect": false,
+      "base": "1946",
+      "blatt": "II",
+      "conf": "MEDIUM",
+      "hausNr": "1 64",
+      "joch": null,
+      "klafter": 1138.0,
+      "kultur": "Wiese",
+      "owner": "Pörtschach er Mägd",
+      "page": 90,
+      "parts": 1,
+      "parzella": "1946",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 782.0,
+      "areaSuspect": false,
+      "base": "1946",
+      "blatt": "III",
+      "conf": "STRONG",
+      "hausNr": "64",
+      "joch": null,
+      "klafter": 782.0,
+      "kultur": "Äcker und Wiesen",
+      "owner": "Vorbithaler Wolf",
+      "page": 95,
+      "parts": 1,
+      "parzella": "1946",
+      "series": "S1",
+      "stand": "Bauer",
+      "wohnort": "Grüble",
+      "wohnortInherited": false
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 737.0,
+      "areaSuspect": false,
+      "base": "1946",
+      "blatt": "III",
+      "conf": "MEDIUM",
+      "hausNr": "1 20",
+      "joch": null,
+      "klafter": 737.0,
+      "kultur": "Schüttwiese, Gypfang, Laume",
+      "owner": "Böning Martha",
+      "page": 100,
+      "parts": 1,
+      "parzella": "1946",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     }
+    ],
+    "rowsTotal": 3,
+    "shareDelta": 0.1434,
+    "sosledje": {
+     "flag": 0,
+     "flaggedRows": [],
+     "ok": 3
+    },
+    "status": "split"
+   },
+   "1948": {
+    "attributedBlatt": null,
+    "blattPair": "II·III",
+    "blattShares": [
+     {
+      "areaQK": 2126.0,
+      "blatt": "II",
+      "pages": [
+       90
+      ],
+      "rows": 1,
+      "share": 0.5222
+     },
+     {
+      "areaQK": 1945.0,
+      "blatt": "III",
+      "pages": [
+       95,
+       100
+      ],
+      "rows": 2,
+      "share": 0.4778
+     }
+    ],
+    "dominantShare": 0.5222,
+    "geoShared": true,
+    "kultures": [
+     "Schüttwiese, Gypfang, Laume",
+     "Wiesen und Laubm",
+     "Äcker und Wiesen"
+    ],
+    "kulturesByBlatt": {
+     "II": [
+      "Wiesen und Laubm"
+     ],
+     "III": [
+      "Schüttwiese, Gypfang, Laume",
+      "Äcker und Wiesen"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Böning Martha",
+     "Knieschen Georg",
+     "Pessirig Georg"
+    ],
+    "ownersByBlatt": {
+     "II": [
+      "Knieschen Georg"
+     ],
+     "III": [
+      "Böning Martha",
+      "Pessirig Georg"
+     ]
+    },
+    "pages": [
+     90,
+     95,
+     100
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 2126.0,
+      "areaSuspect": false,
+      "base": "1948",
+      "blatt": "II",
+      "conf": "MEDIUM",
+      "hausNr": "1 66",
+      "joch": 1.0,
+      "klafter": 526.0,
+      "kultur": "Wiesen und Laubm",
+      "owner": "Knieschen Georg",
+      "page": 90,
+      "parts": 1,
+      "parzella": "1948",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 823.0,
+      "areaSuspect": false,
+      "base": "1948",
+      "blatt": "III",
+      "conf": "MEDIUM",
+      "hausNr": "41",
+      "joch": null,
+      "klafter": 823.0,
+      "kultur": "Äcker und Wiesen",
+      "owner": "Pessirig Georg",
+      "page": 95,
+      "parts": 1,
+      "parzella": "1948",
+      "series": "S1",
+      "stand": "Bauer",
+      "wohnort": "Grüble",
+      "wohnortInherited": false
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 1122.0,
+      "areaSuspect": false,
+      "base": "1948",
+      "blatt": "III",
+      "conf": "MEDIUM",
+      "hausNr": "1 23",
+      "joch": null,
+      "klafter": 1122.0,
+      "kultur": "Schüttwiese, Gypfang, Laume",
+      "owner": "Böning Martha",
+      "page": 100,
+      "parts": 1,
+      "parzella": "1948",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     }
+    ],
+    "rowsTotal": 3,
+    "shareDelta": 0.0444,
+    "sosledje": {
+     "flag": 0,
+     "flaggedRows": [],
+     "ok": 3
+    },
+    "status": "split"
+   },
+   "1957": {
+    "attributedBlatt": null,
+    "blattPair": "II·III",
+    "blattShares": [
+     {
+      "areaQK": 1183.0,
+      "blatt": "II",
+      "pages": [
+       90
+      ],
+      "rows": 1,
+      "share": 0.518
+     },
+     {
+      "areaQK": 1101.0,
+      "blatt": "III",
+      "pages": [
+       95,
+       100
+      ],
+      "rows": 2,
+      "share": 0.482
+     }
+    ],
+    "dominantShare": 0.518,
+    "geoShared": true,
+    "kultures": [
+     "Schüttwiese, Gypfang, Laume",
+     "Wiesen und Laubm",
+     "Äcker und Wiesen"
+    ],
+    "kulturesByBlatt": {
+     "II": [
+      "Wiesen und Laubm"
+     ],
+     "III": [
+      "Schüttwiese, Gypfang, Laume",
+      "Äcker und Wiesen"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Grüning Michl",
+     "Hiebletzh Jhan",
+     "Podariz Martha"
+    ],
+    "ownersByBlatt": {
+     "II": [
+      "Hiebletzh Jhan"
+     ],
+     "III": [
+      "Grüning Michl",
+      "Podariz Martha"
+     ]
+    },
+    "pages": [
+     90,
+     95,
+     100
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 1183.0,
+      "areaSuspect": false,
+      "base": "1957",
+      "blatt": "II",
+      "conf": "STRONG",
+      "hausNr": "1 2",
+      "joch": null,
+      "klafter": 1183.0,
+      "kultur": "Wiesen und Laubm",
+      "owner": "Hiebletzh Jhan",
+      "page": 90,
+      "parts": 1,
+      "parzella": "1957",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 317.0,
+      "areaSuspect": false,
+      "base": "1957",
+      "blatt": "III",
+      "conf": "MEDIUM",
+      "hausNr": "25",
+      "joch": null,
+      "klafter": 317.0,
+      "kultur": "Äcker und Wiesen",
+      "owner": "Grüning Michl",
+      "page": 95,
+      "parts": 1,
+      "parzella": "1957",
+      "series": "S1",
+      "stand": "Bauer",
+      "wohnort": "Grüble",
+      "wohnortInherited": false
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 784.0,
+      "areaSuspect": false,
+      "base": "1957",
+      "blatt": "III",
+      "conf": "MEDIUM",
+      "hausNr": "1 40",
+      "joch": null,
+      "klafter": 784.0,
+      "kultur": "Schüttwiese, Gypfang, Laume",
+      "owner": "Podariz Martha",
+      "page": 100,
+      "parts": 1,
+      "parzella": "1957",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     }
+    ],
+    "rowsTotal": 3,
+    "shareDelta": 0.036,
+    "sosledje": {
+     "flag": 0,
+     "flaggedRows": [],
+     "ok": 3
+    },
+    "status": "split"
+   },
+   "1958": {
+    "attributedBlatt": null,
+    "blattPair": "II·III",
+    "blattShares": [
+     {
+      "areaQK": 2634.0,
+      "blatt": "II",
+      "pages": [
+       90
+      ],
+      "rows": 1,
+      "share": 0.5882
+     },
+     {
+      "areaQK": 1844.0,
+      "blatt": "III",
+      "pages": [
+       95,
+       100
+      ],
+      "rows": 2,
+      "share": 0.4118
+     }
+    ],
+    "dominantShare": 0.5882,
+    "geoShared": true,
+    "kultures": [
+     "Schüttwiese, Gypfang, Laume",
+     "Wiesen und Laubm",
+     "Äcker und Wiesen"
+    ],
+    "kulturesByBlatt": {
+     "II": [
+      "Wiesen und Laubm"
+     ],
+     "III": [
+      "Schüttwiese, Gypfang, Laume",
+      "Äcker und Wiesen"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Hiebletzh Jhan",
+     "Hranig(?) Georg",
+     "Leinichan Maria"
+    ],
+    "ownersByBlatt": {
+     "II": [
+      "Hiebletzh Jhan"
+     ],
+     "III": [
+      "Hranig(?) Georg",
+      "Leinichan Maria"
+     ]
+    },
+    "pages": [
+     90,
+     95,
+     100
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 2634.0,
+      "areaSuspect": false,
+      "base": "1958",
+      "blatt": "II",
+      "conf": "STRONG",
+      "hausNr": "1 2",
+      "joch": 1.0,
+      "klafter": 1034.0,
+      "kultur": "Wiesen und Laubm",
+      "owner": "Hiebletzh Jhan",
+      "page": 90,
+      "parts": 3,
+      "parzella": "1958",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 777.0,
+      "areaSuspect": false,
+      "base": "1958",
+      "blatt": "III",
+      "conf": "MEDIUM",
+      "hausNr": "21",
+      "joch": null,
+      "klafter": 777.0,
+      "kultur": "Äcker und Wiesen",
+      "owner": "Leinichan Maria",
+      "page": 95,
+      "parts": 3,
+      "parzella": "1958",
+      "series": "S1",
+      "stand": "Bauer",
+      "wohnort": "Grüble",
+      "wohnortInherited": false
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 1067.0,
+      "areaSuspect": false,
+      "base": "1958",
+      "blatt": "III",
+      "conf": "MEDIUM",
+      "hausNr": "1 42",
+      "joch": null,
+      "klafter": 1067.0,
+      "kultur": "Schüttwiese, Gypfang, Laume",
+      "owner": "Hranig(?) Georg",
+      "page": 100,
+      "parts": 3,
+      "parzella": "1958",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     }
+    ],
+    "rowsTotal": 3,
+    "shareDelta": 0.1764,
+    "sosledje": {
+     "flag": 0,
+     "flaggedRows": [],
+     "ok": 3
+    },
+    "status": "split"
+   },
+   "1960": {
+    "attributedBlatt": null,
+    "blattPair": "II·III",
+    "blattShares": [
+     {
+      "areaQK": 3627.0,
+      "blatt": "III",
+      "pages": [
+       95,
+       100,
+       101
+      ],
+      "rows": 3,
+      "share": 0.6362
+     },
+     {
+      "areaQK": 2074.0,
+      "blatt": "II",
+      "pages": [
+       90
+      ],
+      "rows": 1,
+      "share": 0.3638
+     }
+    ],
+    "dominantShare": 0.6362,
+    "geoShared": true,
+    "kultures": [
+     "Acker",
+     "Schüttwiese, Gypfang, Laume",
+     "Wiesen und Laubm",
+     "Äcker und Wiesen"
+    ],
+    "kulturesByBlatt": {
+     "II": [
+      "Wiesen und Laubm"
+     ],
+     "III": [
+      "Acker",
+      "Schüttwiese, Gypfang, Laume",
+      "Äcker und Wiesen"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Hiebletzh Jhan",
+     "Leinichan Michl",
+     "Lorenz Lorenz",
+     "Podariz Martha"
+    ],
+    "ownersByBlatt": {
+     "II": [
+      "Hiebletzh Jhan"
+     ],
+     "III": [
+      "Leinichan Michl",
+      "Lorenz Lorenz",
+      "Podariz Martha"
+     ]
+    },
+    "pages": [
+     90,
+     95,
+     100,
+     101
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 2074.0,
+      "areaSuspect": false,
+      "base": "1960",
+      "blatt": "II",
+      "conf": "MEDIUM",
+      "hausNr": "1 2",
+      "joch": 1.0,
+      "klafter": 474.0,
+      "kultur": "Wiesen und Laubm",
+      "owner": "Hiebletzh Jhan",
+      "page": 90,
+      "parts": 1,
+      "parzella": "1960",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 787.0,
+      "areaSuspect": false,
+      "base": "1960",
+      "blatt": "III",
+      "conf": "MEDIUM",
+      "hausNr": "62",
+      "joch": null,
+      "klafter": 787.0,
+      "kultur": "Äcker und Wiesen",
+      "owner": "Leinichan Michl",
+      "page": 95,
+      "parts": 1,
+      "parzella": "1960",
+      "series": "S1",
+      "stand": "Bauer",
+      "wohnort": "Grüble",
+      "wohnortInherited": false
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 2186.0,
+      "areaSuspect": false,
+      "base": "1960",
+      "blatt": "III",
+      "conf": "MEDIUM",
+      "hausNr": "1 42",
+      "joch": 1.0,
+      "klafter": 586.0,
+      "kultur": "Schüttwiese, Gypfang, Laume",
+      "owner": "Podariz Martha",
+      "page": 100,
+      "parts": 1,
+      "parzella": "1960",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 654.0,
+      "areaSuspect": false,
+      "base": "1960",
+      "blatt": "III",
+      "conf": "MEDIUM",
+      "hausNr": "1 1/2",
+      "joch": null,
+      "klafter": 654.0,
+      "kultur": "Acker",
+      "owner": "Lorenz Lorenz",
+      "page": 101,
+      "parts": 1,
+      "parzella": "1960",
+      "series": "S1",
+      "stand": "Bauer",
+      "wohnort": "Grübl.",
+      "wohnortInherited": false
+     }
+    ],
+    "rowsTotal": 4,
+    "shareDelta": 0.2724,
+    "sosledje": {
+     "flag": 0,
+     "flaggedRows": [],
+     "ok": 4
+    },
+    "status": "split"
+   },
+   "2141": {
+    "attributedBlatt": null,
+    "blattPair": "IV·V",
+    "blattShares": [
+     {
+      "areaQK": 2024.0,
+      "blatt": "IV",
+      "pages": [
+       110
+      ],
+      "rows": 1,
+      "share": 0.7107
+     },
+     {
+      "areaQK": 824.0,
+      "blatt": "V",
+      "pages": [
+       125
+      ],
+      "rows": 1,
+      "share": 0.2893
+     }
+    ],
+    "dominantShare": 0.7107,
+    "geoShared": true,
+    "kultures": [
+     "Einhemdtl. Purgstall",
+     "Schüttboden"
+    ],
+    "kulturesByBlatt": {
+     "IV": [
+      "Einhemdtl. Purgstall"
+     ],
+     "V": [
+      "Schüttboden"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Brünig Johann Lorenz Grüble",
+     "Schimey Paula"
+    ],
+    "ownersByBlatt": {
+     "IV": [
+      "Brünig Johann Lorenz Grüble"
+     ],
+     "V": [
+      "Schimey Paula"
+     ]
+    },
+    "pages": [
+     110,
+     125
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 2024.0,
+      "areaSuspect": false,
+      "base": "2141",
+      "blatt": "IV",
+      "conf": "MEDIUM",
+      "hausNr": "26",
+      "joch": 1.0,
+      "klafter": 424.0,
+      "kultur": "Einhemdtl. Purgstall",
+      "owner": "Brünig Johann Lorenz Grüble",
+      "page": 110,
+      "parts": 1,
+      "parzella": "2141",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 824.0,
+      "areaSuspect": false,
+      "base": "2141",
+      "blatt": "V",
+      "conf": "MEDIUM",
+      "hausNr": "36",
+      "joch": null,
+      "klafter": 824.0,
+      "kultur": "Schüttboden",
+      "owner": "Schimey Paula",
+      "page": 125,
+      "parts": 1,
+      "parzella": "2141",
+      "series": "S1",
+      "stand": "Leinweber",
+      "wohnort": "Grüble",
+      "wohnortInherited": false
+     }
+    ],
+    "rowsTotal": 2,
+    "shareDelta": 0.4214,
+    "sosledje": {
+     "flag": 2,
+     "flaggedRows": [
+      "2141@p110",
+      "2141@p125"
+     ],
+     "ok": 0
+    },
+    "status": "split"
+   },
+   "2143": {
+    "attributedBlatt": null,
+    "blattPair": "IV·V",
+    "blattShares": [
+     {
+      "areaQK": 790.0,
+      "blatt": "V",
+      "pages": [
+       125
+      ],
+      "rows": 1,
+      "share": 0.517
+     },
+     {
+      "areaQK": 738.0,
+      "blatt": "IV",
+      "pages": [
+       110
+      ],
+      "rows": 1,
+      "share": 0.483
+     }
+    ],
+    "dominantShare": 0.517,
+    "geoShared": true,
+    "kultures": [
+     "Einhemdtl. Purgstall",
+     "Schüttboden"
+    ],
+    "kulturesByBlatt": {
+     "IV": [
+      "Einhemdtl. Purgstall"
+     ],
+     "V": [
+      "Schüttboden"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Häupler Martin",
+     "Schimey Johann"
+    ],
+    "ownersByBlatt": {
+     "IV": [
+      "Häupler Martin"
+     ],
+     "V": [
+      "Schimey Johann"
+     ]
+    },
+    "pages": [
+     110,
+     125
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 738.0,
+      "areaSuspect": false,
+      "base": "2143",
+      "blatt": "IV",
+      "conf": "WEAK",
+      "hausNr": "20",
+      "joch": null,
+      "klafter": 738.0,
+      "kultur": "Einhemdtl. Purgstall",
+      "owner": "Häupler Martin",
+      "page": 110,
+      "parts": 1,
+      "parzella": "2143",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 790.0,
+      "areaSuspect": false,
+      "base": "2143",
+      "blatt": "V",
+      "conf": "WEAK",
+      "hausNr": "35",
+      "joch": null,
+      "klafter": 790.0,
+      "kultur": "Schüttboden",
+      "owner": "Schimey Johann",
+      "page": 125,
+      "parts": 1,
+      "parzella": "2143",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     }
+    ],
+    "rowsTotal": 2,
+    "shareDelta": 0.034,
+    "sosledje": {
+     "flag": 2,
+     "flaggedRows": [
+      "2143@p110",
+      "2143@p125"
+     ],
+     "ok": 0
+    },
+    "status": "split"
+   },
+   "2148": {
+    "attributedBlatt": null,
+    "blattPair": "IV·V",
+    "blattShares": [
+     {
+      "areaQK": 2064.0,
+      "blatt": "IV",
+      "pages": [
+       110
+      ],
+      "rows": 1,
+      "share": 0.6374
+     },
+     {
+      "areaQK": 1174.0,
+      "blatt": "V",
+      "pages": [
+       125
+      ],
+      "rows": 1,
+      "share": 0.3626
+     }
+    ],
+    "dominantShare": 0.6374,
+    "geoShared": true,
+    "kultures": [
+     "Einhemdtl. Purgstall",
+     "Lehm"
+    ],
+    "kulturesByBlatt": {
+     "IV": [
+      "Einhemdtl. Purgstall"
+     ],
+     "V": [
+      "Lehm"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Strauß Georg",
+     "Wardian Marfa"
+    ],
+    "ownersByBlatt": {
+     "IV": [
+      "Strauß Georg"
+     ],
+     "V": [
+      "Wardian Marfa"
+     ]
+    },
+    "pages": [
+     110,
+     125
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 2064.0,
+      "areaSuspect": false,
+      "base": "2148",
+      "blatt": "IV",
+      "conf": "STRONG",
+      "hausNr": "63",
+      "joch": 1.0,
+      "klafter": 464.0,
+      "kultur": "Einhemdtl. Purgstall",
+      "owner": "Strauß Georg",
+      "page": 110,
+      "parts": 5,
+      "parzella": "2148",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 1174.0,
+      "areaSuspect": false,
+      "base": "2148",
+      "blatt": "V",
+      "conf": "MEDIUM",
+      "hausNr": "1",
+      "joch": null,
+      "klafter": 1174.0,
+      "kultur": "Lehm",
+      "owner": "Wardian Marfa",
+      "page": 125,
+      "parts": 5,
+      "parzella": "2148",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Dolenge",
+      "wohnortInherited": false
+     }
+    ],
+    "rowsTotal": 2,
+    "shareDelta": 0.2748,
+    "sosledje": {
+     "flag": 0,
+     "flaggedRows": [],
+     "ok": 2
+    },
+    "status": "split"
+   },
+   "2149": {
+    "attributedBlatt": null,
+    "blattPair": "IV·V",
+    "blattShares": [
+     {
+      "areaQK": 1100.0,
+      "blatt": "IV",
+      "pages": [
+       110
+      ],
+      "rows": 1,
+      "share": 0.5673
+     },
+     {
+      "areaQK": 839.0,
+      "blatt": "V",
+      "pages": [
+       125
+      ],
+      "rows": 1,
+      "share": 0.4327
+     }
+    ],
+    "dominantShare": 0.5673,
+    "geoShared": true,
+    "kultures": [
+     "Einhemdtl. Purgstall",
+     "Schüttboden"
+    ],
+    "kulturesByBlatt": {
+     "IV": [
+      "Einhemdtl. Purgstall"
+     ],
+     "V": [
+      "Schüttboden"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Schimeg Nikolaus",
+     "Wardian Marfa"
+    ],
+    "ownersByBlatt": {
+     "IV": [
+      "Schimeg Nikolaus"
+     ],
+     "V": [
+      "Wardian Marfa"
+     ]
+    },
+    "pages": [
+     110,
+     125
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 1100.0,
+      "areaSuspect": false,
+      "base": "2149",
+      "blatt": "IV",
+      "conf": "MEDIUM",
+      "hausNr": "68",
+      "joch": null,
+      "klafter": 1100.0,
+      "kultur": "Einhemdtl. Purgstall",
+      "owner": "Schimeg Nikolaus",
+      "page": 110,
+      "parts": 1,
+      "parzella": "2149",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 839.0,
+      "areaSuspect": false,
+      "base": "2149",
+      "blatt": "V",
+      "conf": "MEDIUM",
+      "hausNr": "1",
+      "joch": null,
+      "klafter": 839.0,
+      "kultur": "Schüttboden",
+      "owner": "Wardian Marfa",
+      "page": 125,
+      "parts": 1,
+      "parzella": "2149",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Dolenge",
+      "wohnortInherited": true
+     }
+    ],
+    "rowsTotal": 2,
+    "shareDelta": 0.1346,
+    "sosledje": {
+     "flag": 0,
+     "flaggedRows": [],
+     "ok": 2
+    },
+    "status": "split"
+   },
+   "2154": {
+    "attributedBlatt": null,
+    "blattPair": "IV·V",
+    "blattShares": [
+     {
+      "areaQK": 128.0,
+      "blatt": "IV",
+      "pages": [
+       110
+      ],
+      "rows": 1,
+      "share": 0.5872
+     },
+     {
+      "areaQK": 90.0,
+      "blatt": "V",
+      "pages": [
+       125
+      ],
+      "rows": 1,
+      "share": 0.4128
+     }
+    ],
+    "dominantShare": 0.5872,
+    "geoShared": true,
+    "kultures": [
+     "Einhemdtl. Purgstall",
+     "Lehfe"
+    ],
+    "kulturesByBlatt": {
+     "IV": [
+      "Einhemdtl. Purgstall"
+     ],
+     "V": [
+      "Lehfe"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Brünig Miso",
+     "Wardian Marfa"
+    ],
+    "ownersByBlatt": {
+     "IV": [
+      "Brünig Miso"
+     ],
+     "V": [
+      "Wardian Marfa"
+     ]
+    },
+    "pages": [
+     110,
+     125
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 128.0,
+      "areaSuspect": false,
+      "base": "2154",
+      "blatt": "IV",
+      "conf": "MEDIUM",
+      "hausNr": "28",
+      "joch": null,
+      "klafter": 128.0,
+      "kultur": "Einhemdtl. Purgstall",
+      "owner": "Brünig Miso",
+      "page": 110,
+      "parts": 1,
+      "parzella": "2154",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 90.0,
+      "areaSuspect": false,
+      "base": "2154",
+      "blatt": "V",
+      "conf": "MEDIUM",
+      "hausNr": "1",
+      "joch": null,
+      "klafter": 90.0,
+      "kultur": "Lehfe",
+      "owner": "Wardian Marfa",
+      "page": 125,
+      "parts": 1,
+      "parzella": "2154",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Dolenge",
+      "wohnortInherited": true
+     }
+    ],
+    "rowsTotal": 2,
+    "shareDelta": 0.1744,
+    "sosledje": {
+     "flag": 0,
+     "flaggedRows": [],
+     "ok": 2
+    },
+    "status": "split"
+   },
+   "2156": {
+    "attributedBlatt": null,
+    "blattPair": "IV·V",
+    "blattShares": [
+     {
+      "areaQK": 805.0,
+      "blatt": "V",
+      "pages": [
+       125
+      ],
+      "rows": 1,
+      "share": 0.5657
+     },
+     {
+      "areaQK": 618.0,
+      "blatt": "IV",
+      "pages": [
+       110
+      ],
+      "rows": 1,
+      "share": 0.4343
+     }
+    ],
+    "dominantShare": 0.5657,
+    "geoShared": true,
+    "kultures": [
+     "Einhemdtl. Purgstall",
+     "Lehfe"
+    ],
+    "kulturesByBlatt": {
+     "IV": [
+      "Einhemdtl. Purgstall"
+     ],
+     "V": [
+      "Lehfe"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Brünig Miso",
+     "Wardian Marfa"
+    ],
+    "ownersByBlatt": {
+     "IV": [
+      "Brünig Miso"
+     ],
+     "V": [
+      "Wardian Marfa"
+     ]
+    },
+    "pages": [
+     110,
+     125
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 618.0,
+      "areaSuspect": false,
+      "base": "2156",
+      "blatt": "IV",
+      "conf": "MEDIUM",
+      "hausNr": "28",
+      "joch": null,
+      "klafter": 618.0,
+      "kultur": "Einhemdtl. Purgstall",
+      "owner": "Brünig Miso",
+      "page": 110,
+      "parts": 1,
+      "parzella": "2156",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 805.0,
+      "areaSuspect": false,
+      "base": "2156",
+      "blatt": "V",
+      "conf": "MEDIUM",
+      "hausNr": "1",
+      "joch": null,
+      "klafter": 805.0,
+      "kultur": "Lehfe",
+      "owner": "Wardian Marfa",
+      "page": 125,
+      "parts": 1,
+      "parzella": "2156",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Dolenge",
+      "wohnortInherited": true
+     }
+    ],
+    "rowsTotal": 2,
+    "shareDelta": 0.1314,
+    "sosledje": {
+     "flag": 0,
+     "flaggedRows": [],
+     "ok": 2
+    },
+    "status": "split"
+   },
+   "2159": {
+    "attributedBlatt": null,
+    "blattPair": "IV·V",
+    "blattShares": [
+     {
+      "areaQK": 1605.0,
+      "blatt": "IV",
+      "pages": [
+       110
+      ],
+      "rows": 1,
+      "share": 0.6086
+     },
+     {
+      "areaQK": 1032.0,
+      "blatt": "V",
+      "pages": [
+       125
+      ],
+      "rows": 1,
+      "share": 0.3914
+     }
+    ],
+    "dominantShare": 0.6086,
+    "geoShared": true,
+    "kultures": [
+     "Einhemdtl. Purgstall",
+     "Schüttboden"
+    ],
+    "kulturesByBlatt": {
+     "IV": [
+      "Einhemdtl. Purgstall"
+     ],
+     "V": [
+      "Schüttboden"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Brünig Johann",
+     "Van Wawech Mihó"
+    ],
+    "ownersByBlatt": {
+     "IV": [
+      "Brünig Johann"
+     ],
+     "V": [
+      "Van Wawech Mihó"
+     ]
+    },
+    "pages": [
+     110,
+     125
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 1605.0,
+      "areaSuspect": false,
+      "base": "2159",
+      "blatt": "IV",
+      "conf": "MEDIUM",
+      "hausNr": "26",
+      "joch": 1.0,
+      "klafter": 5.0,
+      "kultur": "Einhemdtl. Purgstall",
+      "owner": "Brünig Johann",
+      "page": 110,
+      "parts": 1,
+      "parzella": "2159",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 1032.0,
+      "areaSuspect": false,
+      "base": "2159",
+      "blatt": "V",
+      "conf": "MEDIUM",
+      "hausNr": "2",
+      "joch": null,
+      "klafter": 1032.0,
+      "kultur": "Schüttboden",
+      "owner": "Van Wawech Mihó",
+      "page": 125,
+      "parts": 1,
+      "parzella": "2159",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Furkofze",
+      "wohnortInherited": false
+     }
+    ],
+    "rowsTotal": 2,
+    "shareDelta": 0.2172,
+    "sosledje": {
+     "flag": 0,
+     "flaggedRows": [],
+     "ok": 2
+    },
+    "status": "split"
+   },
+   "2160": {
+    "attributedBlatt": null,
+    "blattPair": "IV·V",
+    "blattShares": [
+     {
+      "areaQK": 560.0,
+      "blatt": "V",
+      "pages": [
+       125
+      ],
+      "rows": 1,
+      "share": 0.7349
+     },
+     {
+      "areaQK": 202.0,
+      "blatt": "IV",
+      "pages": [
+       110
+      ],
+      "rows": 1,
+      "share": 0.2651
+     }
+    ],
+    "dominantShare": 0.7349,
+    "geoShared": true,
+    "kultures": [
+     "Einhemdtl. Purgstall",
+     "Lehfe"
+    ],
+    "kulturesByBlatt": {
+     "IV": [
+      "Einhemdtl. Purgstall"
+     ],
+     "V": [
+      "Lehfe"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Häupler Martin",
+     "Van Wawech Mihó"
+    ],
+    "ownersByBlatt": {
+     "IV": [
+      "Häupler Martin"
+     ],
+     "V": [
+      "Van Wawech Mihó"
+     ]
+    },
+    "pages": [
+     110,
+     125
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 202.0,
+      "areaSuspect": false,
+      "base": "2160",
+      "blatt": "IV",
+      "conf": "MEDIUM",
+      "hausNr": "30",
+      "joch": null,
+      "klafter": 202.0,
+      "kultur": "Einhemdtl. Purgstall",
+      "owner": "Häupler Martin",
+      "page": 110,
+      "parts": 1,
+      "parzella": "2160",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 560.0,
+      "areaSuspect": false,
+      "base": "2160",
+      "blatt": "V",
+      "conf": "MEDIUM",
+      "hausNr": "3",
+      "joch": null,
+      "klafter": 560.0,
+      "kultur": "Lehfe",
+      "owner": "Van Wawech Mihó",
+      "page": 125,
+      "parts": 1,
+      "parzella": "2160",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Furkofze",
+      "wohnortInherited": true
+     }
+    ],
+    "rowsTotal": 2,
+    "shareDelta": 0.4698,
+    "sosledje": {
+     "flag": 0,
+     "flaggedRows": [],
+     "ok": 2
+    },
+    "status": "split"
+   },
+   "2613": {
+    "attributedBlatt": null,
+    "blattPair": "IV·V",
+    "blattShares": [
+     {
+      "areaQK": 320.0,
+      "blatt": "V",
+      "pages": [
+       133
+      ],
+      "rows": 1,
+      "share": 0.5178
+     },
+     {
+      "areaQK": 298.0,
+      "blatt": "IV",
+      "pages": [
+       135
+      ],
+      "rows": 1,
+      "share": 0.4822
+     }
+    ],
+    "dominantShare": 0.5178,
+    "geoShared": true,
+    "kultures": [
+     "Wiese"
+    ],
+    "kulturesByBlatt": {
+     "IV": [
+      "Wiese"
+     ],
+     "V": [
+      "Wiese"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Wiese im Grundstück Nr. 2607",
+     "falktung"
+    ],
+    "ownersByBlatt": {
+     "IV": [
+      "Wiese im Grundstück Nr. 2607"
+     ],
+     "V": [
+      "falktung"
+     ]
+    },
+    "pages": [
+     133,
+     135
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 320.0,
+      "areaSuspect": false,
+      "base": "2613",
+      "blatt": "V",
+      "conf": "MEDIUM",
+      "hausNr": null,
+      "joch": null,
+      "klafter": 320.0,
+      "kultur": "Wiese",
+      "owner": "falktung",
+      "page": 133,
+      "parts": 1,
+      "parzella": "2613",
+      "series": "S2",
+      "stand": null,
+      "wohnort": "Fakernmuhl",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 298.0,
+      "areaSuspect": false,
+      "base": "2613",
+      "blatt": "IV",
+      "conf": "MEDIUM",
+      "hausNr": null,
+      "joch": null,
+      "klafter": 298.0,
+      "kultur": "Wiese",
+      "owner": "Wiese im Grundstück Nr. 2607",
+      "page": 135,
+      "parts": 1,
+      "parzella": "2613",
+      "series": "S2",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     }
+    ],
+    "rowsTotal": 2,
+    "shareDelta": 0.0356,
+    "sosledje": {
+     "flag": 0,
+     "flaggedRows": [],
+     "ok": 2
+    },
+    "status": "split"
+   },
+   "641": {
+    "attributedBlatt": null,
+    "blattPair": "I·II",
+    "blattShares": [
+     {
+      "areaQK": 941.0,
+      "blatt": "II",
+      "pages": [
+       85
+      ],
+      "rows": 1,
+      "share": 0.7415
+     },
+     {
+      "areaQK": 328.0,
+      "blatt": "I",
+      "pages": [
+       35
+      ],
+      "rows": 1,
+      "share": 0.2585
+     }
+    ],
+    "dominantShare": 0.7415,
+    "geoShared": true,
+    "kultures": [
+     "Wiese",
+     "Wiese und Gfrett"
+    ],
+    "kulturesByBlatt": {
+     "I": [
+      "Wiese"
+     ],
+     "II": [
+      "Wiese und Gfrett"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Stüllich Mihlo",
+     "Würich Maria"
+    ],
+    "ownersByBlatt": {
+     "I": [
+      "Würich Maria"
+     ],
+     "II": [
+      "Stüllich Mihlo"
+     ]
+    },
+    "pages": [
+     35,
+     85
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 328.0,
+      "areaSuspect": false,
+      "base": "641",
+      "blatt": "I",
+      "conf": "MEDIUM",
+      "hausNr": "68",
+      "joch": null,
+      "klafter": 328.0,
+      "kultur": "Wiese",
+      "owner": "Würich Maria",
+      "page": 35,
+      "parts": 3,
+      "parzella": "641",
+      "series": "S1",
+      "stand": "Lehnerin",
+      "wohnort": "Grübl",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 941.0,
+      "areaSuspect": false,
+      "base": "641",
+      "blatt": "II",
+      "conf": "MEDIUM",
+      "hausNr": "1 16",
+      "joch": null,
+      "klafter": 941.0,
+      "kultur": "Wiese und Gfrett",
+      "owner": "Stüllich Mihlo",
+      "page": 85,
+      "parts": 3,
+      "parzella": "641",
+      "series": "S1",
+      "stand": "Bauer",
+      "wohnort": "Grüble",
+      "wohnortInherited": false
+     }
+    ],
+    "rowsTotal": 2,
+    "shareDelta": 0.483,
+    "sosledje": {
+     "flag": 0,
+     "flaggedRows": [],
+     "ok": 2
+    },
+    "status": "split"
+   },
+   "642": {
+    "attributedBlatt": null,
+    "blattPair": "I·II",
+    "blattShares": [
+     {
+      "areaQK": 319.0,
+      "blatt": "I",
+      "pages": [
+       35
+      ],
+      "rows": 1,
+      "share": 0.5187
+     },
+     {
+      "areaQK": 296.0,
+      "blatt": "II",
+      "pages": [
+       85
+      ],
+      "rows": 1,
+      "share": 0.4813
+     }
+    ],
+    "dominantShare": 0.5187,
+    "geoShared": true,
+    "kultures": [
+     "Schlagwald",
+     "Wiese und Gfrett"
+    ],
+    "kulturesByBlatt": {
+     "I": [
+      "Schlagwald"
+     ],
+     "II": [
+      "Wiese und Gfrett"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Schuster Mihlo",
+     "Tschakl Mathäus"
+    ],
+    "ownersByBlatt": {
+     "I": [
+      "Tschakl Mathäus"
+     ],
+     "II": [
+      "Schuster Mihlo"
+     ]
+    },
+    "pages": [
+     35,
+     85
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 319.0,
+      "areaSuspect": false,
+      "base": "642",
+      "blatt": "I",
+      "conf": "STRONG",
+      "hausNr": "35",
+      "joch": null,
+      "klafter": 319.0,
+      "kultur": "Schlagwald",
+      "owner": "Tschakl Mathäus",
+      "page": 35,
+      "parts": 1,
+      "parzella": "642",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grübl",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 296.0,
+      "areaSuspect": false,
+      "base": "642",
+      "blatt": "II",
+      "conf": "STRONG",
+      "hausNr": "1 62",
+      "joch": null,
+      "klafter": 296.0,
+      "kultur": "Wiese und Gfrett",
+      "owner": "Schuster Mihlo",
+      "page": 85,
+      "parts": 1,
+      "parzella": "642",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     }
+    ],
+    "rowsTotal": 2,
+    "shareDelta": 0.0374,
+    "sosledje": {
+     "flag": 0,
+     "flaggedRows": [],
+     "ok": 2
+    },
+    "status": "split"
+   },
+   "643": {
+    "attributedBlatt": null,
+    "blattPair": "I·II",
+    "blattShares": [
+     {
+      "areaQK": 706.0,
+      "blatt": "II",
+      "pages": [
+       85
+      ],
+      "rows": 1,
+      "share": 0.5332
+     },
+     {
+      "areaQK": 618.0,
+      "blatt": "I",
+      "pages": [
+       35
+      ],
+      "rows": 1,
+      "share": 0.4668
+     }
+    ],
+    "dominantShare": 0.5332,
+    "geoShared": true,
+    "kultures": [
+     "Schlagwald",
+     "Wiese und Gfrett Wiesen"
+    ],
+    "kulturesByBlatt": {
+     "I": [
+      "Schlagwald"
+     ],
+     "II": [
+      "Wiese und Gfrett Wiesen"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Schimeg Mihel",
+     "Tschakl Mathäus"
+    ],
+    "ownersByBlatt": {
+     "I": [
+      "Tschakl Mathäus"
+     ],
+     "II": [
+      "Schimeg Mihel"
+     ]
+    },
+    "pages": [
+     35,
+     85
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 618.0,
+      "areaSuspect": false,
+      "base": "643",
+      "blatt": "I",
+      "conf": "MEDIUM",
+      "hausNr": "34",
+      "joch": null,
+      "klafter": 618.0,
+      "kultur": "Schlagwald",
+      "owner": "Tschakl Mathäus",
+      "page": 35,
+      "parts": 1,
+      "parzella": "643",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grübl",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 706.0,
+      "areaSuspect": false,
+      "base": "643",
+      "blatt": "II",
+      "conf": "MEDIUM",
+      "hausNr": "1 19",
+      "joch": null,
+      "klafter": 706.0,
+      "kultur": "Wiese und Gfrett Wiesen",
+      "owner": "Schimeg Mihel",
+      "page": 85,
+      "parts": 1,
+      "parzella": "643",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     }
+    ],
+    "rowsTotal": 2,
+    "shareDelta": 0.0664,
+    "sosledje": {
+     "flag": 0,
+     "flaggedRows": [],
+     "ok": 2
+    },
+    "status": "split"
+   },
+   "646": {
+    "attributedBlatt": null,
+    "blattPair": "I·II",
+    "blattShares": [
+     {
+      "areaQK": 786.0,
+      "blatt": "II",
+      "pages": [
+       85
+      ],
+      "rows": 1,
+      "share": 0.6741
+     },
+     {
+      "areaQK": 380.0,
+      "blatt": "I",
+      "pages": [
+       35
+      ],
+      "rows": 1,
+      "share": 0.3259
+     }
+    ],
+    "dominantShare": 0.6741,
+    "geoShared": true,
+    "kultures": [
+     "Schlagwald",
+     "Wiese und Gfrett"
+    ],
+    "kulturesByBlatt": {
+     "I": [
+      "Schlagwald"
+     ],
+     "II": [
+      "Wiese und Gfrett"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Dreschler Mathäus",
+     "Milleger Johann"
+    ],
+    "ownersByBlatt": {
+     "I": [
+      "Dreschler Mathäus"
+     ],
+     "II": [
+      "Milleger Johann"
+     ]
+    },
+    "pages": [
+     35,
+     85
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 380.0,
+      "areaSuspect": false,
+      "base": "646",
+      "blatt": "I",
+      "conf": "WEAK",
+      "hausNr": "23",
+      "joch": null,
+      "klafter": 380.0,
+      "kultur": "Schlagwald",
+      "owner": "Dreschler Mathäus",
+      "page": 35,
+      "parts": 3,
+      "parzella": "646",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grübl",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 786.0,
+      "areaSuspect": false,
+      "base": "646",
+      "blatt": "II",
+      "conf": "WEAK",
+      "hausNr": "1 22",
+      "joch": null,
+      "klafter": 786.0,
+      "kultur": "Wiese und Gfrett",
+      "owner": "Milleger Johann",
+      "page": 85,
+      "parts": 3,
+      "parzella": "646",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     }
+    ],
+    "rowsTotal": 2,
+    "shareDelta": 0.3482,
+    "sosledje": {
+     "flag": 2,
+     "flaggedRows": [
+      "646@p35",
+      "646@p85"
+     ],
+     "ok": 0
+    },
+    "status": "split"
+   },
+   "651": {
+    "attributedBlatt": null,
+    "blattPair": "I·II",
+    "blattShares": [
+     {
+      "areaQK": 783.0,
+      "blatt": "II",
+      "pages": [
+       85
+      ],
+      "rows": 1,
+      "share": 0.5234
+     },
+     {
+      "areaQK": 713.0,
+      "blatt": "I",
+      "pages": [
+       35
+      ],
+      "rows": 1,
+      "share": 0.4766
+     }
+    ],
+    "dominantShare": 0.5234,
+    "geoShared": true,
+    "kultures": [
+     "Schlagwald",
+     "Wiese und Gfrett Wiesen"
+    ],
+    "kulturesByBlatt": {
+     "I": [
+      "Schlagwald"
+     ],
+     "II": [
+      "Wiese und Gfrett Wiesen"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Knall Anna",
+     "Mallwetsch Markus"
+    ],
+    "ownersByBlatt": {
+     "I": [
+      "Mallwetsch Markus"
+     ],
+     "II": [
+      "Knall Anna"
+     ]
+    },
+    "pages": [
+     35,
+     85
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 713.0,
+      "areaSuspect": false,
+      "base": "651",
+      "blatt": "I",
+      "conf": "MEDIUM",
+      "hausNr": "31",
+      "joch": null,
+      "klafter": 713.0,
+      "kultur": "Schlagwald",
+      "owner": "Mallwetsch Markus",
+      "page": 35,
+      "parts": 2,
+      "parzella": "651",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grübl",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 783.0,
+      "areaSuspect": false,
+      "base": "651",
+      "blatt": "II",
+      "conf": "MEDIUM",
+      "hausNr": "1 17",
+      "joch": null,
+      "klafter": 783.0,
+      "kultur": "Wiese und Gfrett Wiesen",
+      "owner": "Knall Anna",
+      "page": 85,
+      "parts": 2,
+      "parzella": "651",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     }
+    ],
+    "rowsTotal": 2,
+    "shareDelta": 0.0468,
+    "sosledje": {
+     "flag": 0,
+     "flaggedRows": [],
+     "ok": 2
+    },
+    "status": "split"
+   },
+   "661": {
+    "attributedBlatt": null,
+    "blattPair": "I·II",
+    "blattShares": [
+     {
+      "areaQK": 699.0,
+      "blatt": "II",
+      "pages": [
+       87
+      ],
+      "rows": 1,
+      "share": 0.5147
+     },
+     {
+      "areaQK": 659.0,
+      "blatt": "I",
+      "pages": [
+       36
+      ],
+      "rows": 1,
+      "share": 0.4853
+     }
+    ],
+    "dominantShare": 0.5147,
+    "geoShared": true,
+    "kultures": [
+     "Acker",
+     "Lhup"
+    ],
+    "kulturesByBlatt": {
+     "I": [
+      "Lhup"
+     ],
+     "II": [
+      "Acker"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Mülley Daniel",
+     "Staudt Hans"
+    ],
+    "ownersByBlatt": {
+     "I": [
+      "Mülley Daniel"
+     ],
+     "II": [
+      "Staudt Hans"
+     ]
+    },
+    "pages": [
+     36,
+     87
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 659.0,
+      "areaSuspect": false,
+      "base": "661",
+      "blatt": "I",
+      "conf": "WEAK",
+      "hausNr": "29",
+      "joch": null,
+      "klafter": 659.0,
+      "kultur": "Lhup",
+      "owner": "Mülley Daniel",
+      "page": 36,
+      "parts": 1,
+      "parzella": "661",
+      "series": "S1",
+      "stand": "Land",
+      "wohnort": "Grüble",
+      "wohnortInherited": false
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 699.0,
+      "areaSuspect": false,
+      "base": "661",
+      "blatt": "II",
+      "conf": "WEAK",
+      "hausNr": "1/2",
+      "joch": null,
+      "klafter": 699.0,
+      "kultur": "Acker",
+      "owner": "Staudt Hans",
+      "page": 87,
+      "parts": 1,
+      "parzella": "661",
+      "series": "S1",
+      "stand": "Bauer",
+      "wohnort": "Grüble",
+      "wohnortInherited": false
+     }
+    ],
+    "rowsTotal": 2,
+    "shareDelta": 0.0294,
+    "sosledje": {
+     "flag": 2,
+     "flaggedRows": [
+      "661@p36",
+      "661@p87"
+     ],
+     "ok": 0
+    },
+    "status": "split"
+   },
+   "674": {
+    "attributedBlatt": null,
+    "blattPair": "I·II",
+    "blattShares": [
+     {
+      "areaQK": 548.0,
+      "blatt": "II",
+      "pages": [
+       87
+      ],
+      "rows": 1,
+      "share": 0.7436
+     },
+     {
+      "areaQK": 189.0,
+      "blatt": "I",
+      "pages": [
+       36
+      ],
+      "rows": 1,
+      "share": 0.2564
+     }
+    ],
+    "dominantShare": 0.7436,
+    "geoShared": true,
+    "kultures": [
+     "Acker",
+     "Eidn"
+    ],
+    "kulturesByBlatt": {
+     "I": [
+      "Eidn"
+     ],
+     "II": [
+      "Acker"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Dultsitsch Hans",
+     "Würing Johann"
+    ],
+    "ownersByBlatt": {
+     "I": [
+      "Würing Johann"
+     ],
+     "II": [
+      "Dultsitsch Hans"
+     ]
+    },
+    "pages": [
+     36,
+     87
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 189.0,
+      "areaSuspect": false,
+      "base": "674",
+      "blatt": "I",
+      "conf": "MEDIUM",
+      "hausNr": "26",
+      "joch": null,
+      "klafter": 189.0,
+      "kultur": "Eidn",
+      "owner": "Würing Johann",
+      "page": 36,
+      "parts": 1,
+      "parzella": "674",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 548.0,
+      "areaSuspect": false,
+      "base": "674",
+      "blatt": "II",
+      "conf": "MEDIUM",
+      "hausNr": "1/6",
+      "joch": null,
+      "klafter": 548.0,
+      "kultur": "Acker",
+      "owner": "Dultsitsch Hans",
+      "page": 87,
+      "parts": 1,
+      "parzella": "674",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     }
+    ],
+    "rowsTotal": 2,
+    "shareDelta": 0.4872,
+    "sosledje": {
+     "flag": 0,
+     "flaggedRows": [],
+     "ok": 2
+    },
+    "status": "split"
+   },
+   "922": {
+    "attributedBlatt": null,
+    "blattPair": "II·III",
+    "blattShares": [
+     {
+      "areaQK": 553.0,
+      "blatt": "III",
+      "pages": [
+       99
+      ],
+      "rows": 1,
+      "share": 0.6913
+     },
+     {
+      "areaQK": 247.0,
+      "blatt": "II",
+      "pages": [
+       49
+      ],
+      "rows": 1,
+      "share": 0.3088
+     }
+    ],
+    "dominantShare": 0.6913,
+    "geoShared": true,
+    "kultures": [
+     "Acker",
+     "Wiesen"
+    ],
+    "kulturesByBlatt": {
+     "II": [
+      "Acker"
+     ],
+     "III": [
+      "Wiesen"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Deutlich Michael",
+     "Dragasch Jane"
+    ],
+    "ownersByBlatt": {
+     "II": [
+      "Dragasch Jane"
+     ],
+     "III": [
+      "Deutlich Michael"
+     ]
+    },
+    "pages": [
+     49,
+     99
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 247.0,
+      "areaSuspect": false,
+      "base": "922",
+      "blatt": "II",
+      "conf": "MEDIUM",
+      "hausNr": "1/5",
+      "joch": null,
+      "klafter": 247.0,
+      "kultur": "Acker",
+      "owner": "Dragasch Jane",
+      "page": 49,
+      "parts": 1,
+      "parzella": "922",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Dragasche",
+      "wohnortInherited": false
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 553.0,
+      "areaSuspect": false,
+      "base": "922",
+      "blatt": "III",
+      "conf": "MEDIUM",
+      "hausNr": "20",
+      "joch": null,
+      "klafter": 553.0,
+      "kultur": "Wiesen",
+      "owner": "Deutlich Michael",
+      "page": 99,
+      "parts": 1,
+      "parzella": "922",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     }
+    ],
+    "rowsTotal": 2,
+    "shareDelta": 0.3825,
+    "sosledje": {
+     "flag": 0,
+     "flaggedRows": [],
+     "ok": 2
+    },
+    "status": "split"
+   },
+   "923": {
+    "attributedBlatt": null,
+    "blattPair": "II·III",
+    "blattShares": [
+     {
+      "areaQK": 611.0,
+      "blatt": "III",
+      "pages": [
+       99
+      ],
+      "rows": 1,
+      "share": 0.5637
+     },
+     {
+      "areaQK": 473.0,
+      "blatt": "II",
+      "pages": [
+       49
+      ],
+      "rows": 1,
+      "share": 0.4363
+     }
+    ],
+    "dominantShare": 0.5637,
+    "geoShared": true,
+    "kultures": [
+     "Acker",
+     "Wiesen"
+    ],
+    "kulturesByBlatt": {
+     "II": [
+      "Acker"
+     ],
+     "III": [
+      "Wiesen"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Deutlich Katharina",
+     "Heise Marlo"
+    ],
+    "ownersByBlatt": {
+     "II": [
+      "Heise Marlo"
+     ],
+     "III": [
+      "Deutlich Katharina"
+     ]
+    },
+    "pages": [
+     49,
+     99
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 473.0,
+      "areaSuspect": false,
+      "base": "923",
+      "blatt": "II",
+      "conf": "MEDIUM",
+      "hausNr": "1/3",
+      "joch": null,
+      "klafter": 473.0,
+      "kultur": "Acker",
+      "owner": "Heise Marlo",
+      "page": 49,
+      "parts": 1,
+      "parzella": "923",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Dragasche",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 611.0,
+      "areaSuspect": false,
+      "base": "923",
+      "blatt": "III",
+      "conf": "MEDIUM",
+      "hausNr": "20",
+      "joch": null,
+      "klafter": 611.0,
+      "kultur": "Wiesen",
+      "owner": "Deutlich Katharina",
+      "page": 99,
+      "parts": 1,
+      "parzella": "923",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     }
+    ],
+    "rowsTotal": 2,
+    "shareDelta": 0.1274,
+    "sosledje": {
+     "flag": 0,
+     "flaggedRows": [],
+     "ok": 2
+    },
+    "status": "split"
+   },
+   "924": {
+    "attributedBlatt": null,
+    "blattPair": "II·III",
+    "blattShares": [
+     {
+      "areaQK": 1617.0,
+      "blatt": "II",
+      "pages": [
+       49
+      ],
+      "rows": 1,
+      "share": 0.7254
+     },
+     {
+      "areaQK": 612.0,
+      "blatt": "III",
+      "pages": [
+       99
+      ],
+      "rows": 1,
+      "share": 0.2746
+     }
+    ],
+    "dominantShare": 0.7254,
+    "geoShared": true,
+    "kultures": [
+     "Acker",
+     "Wiesen"
+    ],
+    "kulturesByBlatt": {
+     "II": [
+      "Acker"
+     ],
+     "III": [
+      "Wiesen"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Deutlich Maria",
+     "Dragasch Jane"
+    ],
+    "ownersByBlatt": {
+     "II": [
+      "Dragasch Jane"
+     ],
+     "III": [
+      "Deutlich Maria"
+     ]
+    },
+    "pages": [
+     49,
+     99
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 1617.0,
+      "areaSuspect": false,
+      "base": "924",
+      "blatt": "II",
+      "conf": "MEDIUM",
+      "hausNr": "1/5",
+      "joch": 1.0,
+      "klafter": 17.0,
+      "kultur": "Acker",
+      "owner": "Dragasch Jane",
+      "page": 49,
+      "parts": 1,
+      "parzella": "924",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Dragasche",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 612.0,
+      "areaSuspect": false,
+      "base": "924",
+      "blatt": "III",
+      "conf": "STRONG",
+      "hausNr": "20",
+      "joch": null,
+      "klafter": 612.0,
+      "kultur": "Wiesen",
+      "owner": "Deutlich Maria",
+      "page": 99,
+      "parts": 1,
+      "parzella": "924",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     }
+    ],
+    "rowsTotal": 2,
+    "shareDelta": 0.4508,
+    "sosledje": {
+     "flag": 0,
+     "flaggedRows": [],
+     "ok": 2
+    },
+    "status": "split"
+   },
+   "926": {
+    "attributedBlatt": null,
+    "blattPair": "II·III",
+    "blattShares": [
+     {
+      "areaQK": 1415.0,
+      "blatt": "II",
+      "pages": [
+       49
+      ],
+      "rows": 1,
+      "share": 0.6709
+     },
+     {
+      "areaQK": 694.0,
+      "blatt": "III",
+      "pages": [
+       99
+      ],
+      "rows": 1,
+      "share": 0.3291
+     }
+    ],
+    "dominantShare": 0.6709,
+    "geoShared": true,
+    "kultures": [
+     "Acker",
+     "Wiesen"
+    ],
+    "kulturesByBlatt": {
+     "II": [
+      "Acker"
+     ],
+     "III": [
+      "Wiesen"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Lukeschitsch Malle",
+     "Strauß Georg"
+    ],
+    "ownersByBlatt": {
+     "II": [
+      "Lukeschitsch Malle"
+     ],
+     "III": [
+      "Strauß Georg"
+     ]
+    },
+    "pages": [
+     49,
+     99
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 1415.0,
+      "areaSuspect": false,
+      "base": "926",
+      "blatt": "II",
+      "conf": "MEDIUM",
+      "hausNr": "1/12",
+      "joch": null,
+      "klafter": 1415.0,
+      "kultur": "Acker",
+      "owner": "Lukeschitsch Malle",
+      "page": 49,
+      "parts": 2,
+      "parzella": "926",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Güble",
+      "wohnortInherited": false
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 694.0,
+      "areaSuspect": false,
+      "base": "926",
+      "blatt": "III",
+      "conf": "MEDIUM",
+      "hausNr": "43",
+      "joch": null,
+      "klafter": 694.0,
+      "kultur": "Wiesen",
+      "owner": "Strauß Georg",
+      "page": 99,
+      "parts": 2,
+      "parzella": "926",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     }
+    ],
+    "rowsTotal": 2,
+    "shareDelta": 0.3418,
+    "sosledje": {
+     "flag": 0,
+     "flaggedRows": [],
+     "ok": 2
+    },
+    "status": "split"
+   },
+   "927": {
+    "attributedBlatt": null,
+    "blattPair": "II·III",
+    "blattShares": [
+     {
+      "areaQK": 1552.0,
+      "blatt": "II",
+      "pages": [
+       49
+      ],
+      "rows": 1,
+      "share": 0.6861
+     },
+     {
+      "areaQK": 710.0,
+      "blatt": "III",
+      "pages": [
+       99
+      ],
+      "rows": 1,
+      "share": 0.3139
+     }
+    ],
+    "dominantShare": 0.6861,
+    "geoShared": true,
+    "kultures": [
+     "Acker",
+     "Wiesen"
+    ],
+    "kulturesByBlatt": {
+     "II": [
+      "Acker"
+     ],
+     "III": [
+      "Wiesen"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Brünig Johann",
+     "Lukeschitsch Malle"
+    ],
+    "ownersByBlatt": {
+     "II": [
+      "Lukeschitsch Malle"
+     ],
+     "III": [
+      "Brünig Johann"
+     ]
+    },
+    "pages": [
+     49,
+     99
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 1552.0,
+      "areaSuspect": false,
+      "base": "927",
+      "blatt": "II",
+      "conf": "MEDIUM",
+      "hausNr": "1/12",
+      "joch": null,
+      "klafter": 1552.0,
+      "kultur": "Acker",
+      "owner": "Lukeschitsch Malle",
+      "page": 49,
+      "parts": 1,
+      "parzella": "927",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Güble",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 710.0,
+      "areaSuspect": false,
+      "base": "927",
+      "blatt": "III",
+      "conf": "MEDIUM",
+      "hausNr": "26",
+      "joch": null,
+      "klafter": 710.0,
+      "kultur": "Wiesen",
+      "owner": "Brünig Johann",
+      "page": 99,
+      "parts": 1,
+      "parzella": "927",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     }
+    ],
+    "rowsTotal": 2,
+    "shareDelta": 0.3722,
+    "sosledje": {
+     "flag": 0,
+     "flaggedRows": [],
+     "ok": 2
+    },
+    "status": "split"
+   },
+   "929": {
+    "attributedBlatt": null,
+    "blattPair": "II·III",
+    "blattShares": [
+     {
+      "areaQK": 564.0,
+      "blatt": "III",
+      "pages": [
+       99
+      ],
+      "rows": 1,
+      "share": 0.5968
+     },
+     {
+      "areaQK": 381.0,
+      "blatt": "II",
+      "pages": [
+       49
+      ],
+      "rows": 1,
+      "share": 0.4032
+     }
+    ],
+    "dominantShare": 0.5968,
+    "geoShared": true,
+    "kultures": [
+     "Acker",
+     "Wiesen"
+    ],
+    "kulturesByBlatt": {
+     "II": [
+      "Acker"
+     ],
+     "III": [
+      "Wiesen"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Brünig Michael",
+     "Pessing Georg"
+    ],
+    "ownersByBlatt": {
+     "II": [
+      "Pessing Georg"
+     ],
+     "III": [
+      "Brünig Michael"
+     ]
+    },
+    "pages": [
+     49,
+     99
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 381.0,
+      "areaSuspect": false,
+      "base": "929",
+      "blatt": "II",
+      "conf": "MEDIUM",
+      "hausNr": "1/11",
+      "joch": null,
+      "klafter": 381.0,
+      "kultur": "Acker",
+      "owner": "Pessing Georg",
+      "page": 49,
+      "parts": 2,
+      "parzella": "929",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Güble",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 564.0,
+      "areaSuspect": false,
+      "base": "929",
+      "blatt": "III",
+      "conf": "MEDIUM",
+      "hausNr": "24",
+      "joch": null,
+      "klafter": 564.0,
+      "kultur": "Wiesen",
+      "owner": "Brünig Michael",
+      "page": 99,
+      "parts": 2,
+      "parzella": "929",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     }
+    ],
+    "rowsTotal": 2,
+    "shareDelta": 0.1936,
+    "sosledje": {
+     "flag": 0,
+     "flaggedRows": [],
+     "ok": 2
+    },
+    "status": "split"
+   },
+   "938": {
+    "attributedBlatt": null,
+    "blattPair": "II·III",
+    "blattShares": [
+     {
+      "areaQK": 376.0,
+      "blatt": "II",
+      "pages": [
+       49
+      ],
+      "rows": 1,
+      "share": 0.5587
+     },
+     {
+      "areaQK": 297.0,
+      "blatt": "III",
+      "pages": [
+       99
+      ],
+      "rows": 1,
+      "share": 0.4413
+     }
+    ],
+    "dominantShare": 0.5587,
+    "geoShared": true,
+    "kultures": [
+     "Acker",
+     "Wiesen"
+    ],
+    "kulturesByBlatt": {
+     "II": [
+      "Acker"
+     ],
+     "III": [
+      "Wiesen"
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Kalapischitsch Eve.",
+     "Pößnig Georg"
+    ],
+    "ownersByBlatt": {
+     "II": [
+      "Kalapischitsch Eve."
+     ],
+     "III": [
+      "Pößnig Georg"
+     ]
+    },
+    "pages": [
+     49,
+     99
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 376.0,
+      "areaSuspect": false,
+      "base": "938",
+      "blatt": "II",
+      "conf": "STRONG",
+      "hausNr": "1/6",
+      "joch": null,
+      "klafter": 376.0,
+      "kultur": "Acker",
+      "owner": "Kalapischitsch Eve.",
+      "page": 49,
+      "parts": 3,
+      "parzella": "938",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Güble",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 297.0,
+      "areaSuspect": false,
+      "base": "938",
+      "blatt": "III",
+      "conf": "MEDIUM",
+      "hausNr": "69",
+      "joch": null,
+      "klafter": 297.0,
+      "kultur": "Wiesen",
+      "owner": "Pößnig Georg",
+      "page": 99,
+      "parts": 3,
+      "parzella": "938",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Grüble",
+      "wohnortInherited": true
+     }
+    ],
+    "rowsTotal": 2,
+    "shareDelta": 0.1174,
+    "sosledje": {
+     "flag": 0,
+     "flaggedRows": [],
+     "ok": 2
+    },
+    "status": "split"
+   }
+  },
+  "date": "2026-10-14",
+  "generatedBy": "scripts/p66_ps_split_pack.py",
+  "next": [
+   "LASTNIŠKA ODLOČITEV o per-Blatt SPLIT joinu za 39 base (2 geometriji; razdelitev per deleži ali per lastnika) — ta paket je dokazni vir",
+   "izvedba SPLIT joina (ob odobritvi): v2 join upgrade — 39 base → 78 kandidatnih instanc per Blatt, geometrije per Blatt georef [~]",
+   "razlaga 2 skokov II·IV (1603, 1604: isti kulturi 'Acker' + 'Weide und Gfällgut, Laubm.' na obeh Blattih — preveriti dednost/preimenovanje)",
+   "razlaga 5 sosledje flagov (646, 661, 1821, 2141, 2143)",
+   "lastniki atributiranih instanc ↔ PF protokol (ostaja iz P65)"
+  ],
+  "rule": {
+   "blattPair": "urejen par Blattov split base ('·' join); sosednji = v ADJACENT {(I,II),(II,III),(III,IV),(IV,V)}",
+   "dominantShare": "share[0] (P65 sort: Σ areaQK desc, Blatt asc); pasovi [0.50,0.60)/[0.60,0.70)/[0.70,0.75)",
+   "geoShared": "ali vse vrstice base nosijo isti par (lat, lng) v v2 (null = vse brez); SAMO števec v summary — koordinate ne gredo v izpis (I6)",
+   "ownerRelation": "disjunktnost množic lastnikov per Blatt: 'disjoint' | 'equal' | 'overlap' | 'open' (prazna množica)",
+   "source": "split base = P65 status 'split' (dominantni delež v [0.5, 0.75), attributedBlatt null, blattShares alternative) — P66 ne spreminja pravil"
+  },
+  "statusLine": "P66 SPLIT PACK: 39 split base (39 ⊂ 211 multi-page), 93 vrstic; pari I·II 7 · II·III 21 · II·IV 2 · IV·V 9 (sosednji 37, skok 2); lastniki per Blatt DISJUNKTNI 39/39; pasovi 23/11/5; geo ena geometrija 39/39; join v2 nespremanjen; odločitev lastnika",
+  "summary": {
+   "adjacentPairs": 37,
+   "areaSuspectRows": 0,
+   "blattPairDist": {
+    "II·III": 21,
+    "II·IV": 2,
+    "IV·V": 9,
+    "I·II": 7
+   },
+   "dominantShareBuckets": {
+    "0.50–0.60": 23,
+    "0.60–0.70": 11,
+    "0.70–0.75": 5
+   },
+   "geoShared": {
+    "distinct": 0,
+    "null": 0,
+    "shared": 39
+   },
+   "kulturesTotal": 92,
+   "ownerRelationDist": {
+    "disjoint": 39
+   },
+   "rowsPerBaseDist": {
+    "2": 25,
+    "3": 13,
+    "4": 1
+   },
+   "rowsTotal": 93,
+   "shareCountDist": {
+    "2": 39
+   },
+   "skipPairs": 2,
+   "sosledje": {
+    "flag": 11,
+    "flagBases": [
+     "1821",
+     "2141",
+     "2143",
+     "646",
+     "661"
+    ],
+    "ok": 82,
+    "relevantRows": 93
+   },
+   "splitBases": 39,
+   "uniqueOwnersDist": {
+    "2": 25,
+    "3": 13,
+    "4": 1
+   }
+  },
+  "task": "P66 — split decision pack: 39 split base (odločitveni paket za per-Blatt SPLIT joina)",
+  "verdictEn": "P66: SPLIT DECISION PACK — 39 SPLIT BASES (issue #13) — the decision pack for the per-Blatt SPLIT join (P64 open point #8, candidate #1 from P65; deterministic, no AI at runtime; does NOT decide on behalf of the owner — MEASURES and PROVES the facts): all 39 bases have EXACTLY 2 shares (blattShares), 93 rows (25 × 2 + 13 × 3 + 1 × 4); Blatt pairs I·II 7 · II·III 21 · II·IV 2 · IV·V 9 (37/39 adjacent Blatts, 2 skips II·IV — 1603/1604, same cultures on both Blatts); OWNERSHIP PARTITION PER BLATT: 39/39 DISJOINT owners — every split base has different owners per Blatt (strong evidence that the same number under different Blatts is 2 DIFFERENT real parcels); 2–3 unique owners (25/13/1); dominant shares [0.50,0.60) 23 · [0.60,0.70) 11 · [0.70,0.75) 5; cultures 92 (kulturesByBlatt); GEO: 39/39 bases carry the SAME join-v2 geometry for ALL rows (0 distinct) — the v2 join is at the number level, so a SPLIT join would require 2 geometries (counter measured without coordinates — I6); areaSuspect 0; adjacency split part 82/93 (11 flags — 5 bases: 646, 661, 1821, 2141, 2143); the P65 fields byte-identical 39× (I3); the v2 join UNCHANGED (P56/P58/P59/P65 discipline); the decision belongs to the OWNER",
+  "verdictSi": "P66: SPLIT DECISION PACK — 39 SPLIT BASE (issue #13) — odločitveni paket za per-Blatt SPLIT joina (odprta točka P64 #8, kandidat #1 iz P65; deterministično, brez AI ob delovanju; NE odloča namesto lastnika — MERI in DOKAZUJE dejstva): vseh 39 base ima TOČNO 2 deleža (blattShares), 93 vrstic (25 × 2 + 13 × 3 + 1 × 4); Blatt pari I·II 7 · II·III 21 · II·IV 2 · IV·V 9 (37/39 sosednja Blatta, 2 skoka II·IV — 1603/1604, isti kulturi na obeh Blattih); LASTNIŠKA RAZČLENITEV PER BLATT: 39/39 DISJUNKTNI lastniki — vsak split base ima različne lastnike po Blattih (močan dokaz, da je ista številka pod različnima Blattoma 2 RAZLIČNI realni parceli); 2–3 edinstvenih lastnikov (25/13/1); dominantni deleži [0.50,0.60) 23 · [0.60,0.70) 11 · [0.70,0.75) 5; kulture 92 (kulturesByBlatt); GEO: 39/39 base nosi VSEH vrstic ENAKO geometrijo joina v2 (0 različnih) — join v2 je na nivoju številke, zato SPLIT join bi zahteval 2 geometriji (števec merjen brez koordinat — I6); areaSuspect 0; sosledje split del 82/93 (flag 11 — 5 base: 646, 661, 1821, 2141, 2143); P65 polja 39× bajtno (I3); join v2 NESPREMENJEN (disciplina P56/P58/P59/P65); odločitev LASTNIKA",
+  "version": 1
+ },
+ "statusLine": "P66 SPLIT PACK: 39 split base (39 ⊂ 211 multi-page), 93 vrstic; pari I·II 7 · II·III 21 · II·IV 2 · IV·V 9 (sosednji 37, skok 2); lastniki per Blatt DISJUNKTNI 39/39; pasovi 23/11/5; geo ena geometrija 39/39; join v2 nespremanjen; odločitev lastnika",
+ "summary": {
+  "adjacentPairs": 37,
+  "areaSuspectRows": 0,
+  "blattPairDist": {
+   "II·III": 21,
+   "II·IV": 2,
+   "IV·V": 9,
+   "I·II": 7
+  },
+  "dominantShareBuckets": {
+   "0.50–0.60": 23,
+   "0.60–0.70": 11,
+   "0.70–0.75": 5
+  },
+  "geoShared": {
+   "distinct": 0,
+   "null": 0,
+   "shared": 39
+  },
+  "kulturesTotal": 92,
+  "ownerRelationDist": {
+   "disjoint": 39
+  },
+  "rowsPerBaseDist": {
+   "2": 25,
+   "3": 13,
+   "4": 1
+  },
+  "rowsTotal": 93,
+  "shareCountDist": {
+   "2": 39
+  },
+  "skipPairs": 2,
+  "sosledje": {
+   "flag": 11,
+   "flagBases": [
+    "1821",
+    "2141",
+    "2143",
+    "646",
+    "661"
+   ],
+   "ok": 82,
+   "relevantRows": 93
+  },
+  "splitBases": 39,
+  "uniqueOwnersDist": {
+   "2": 25,
+   "3": 13,
+   "4": 1
+  }
+ },
+ "task": "P66 — split decision pack: 39 split base (odločitveni paket za per-Blatt SPLIT joina)",
+ "v2Sha256": "ebb8f7298de713e73bc7417f392d60c7e5eb03a6675f96317320188750e27731",
+ "verdictEn": "P66: SPLIT DECISION PACK — 39 SPLIT BASES (issue #13) — the decision pack for the per-Blatt SPLIT join (P64 open point #8, candidate #1 from P65; deterministic, no AI at runtime; does NOT decide on behalf of the owner — MEASURES and PROVES the facts): all 39 bases have EXACTLY 2 shares (blattShares), 93 rows (25 × 2 + 13 × 3 + 1 × 4); Blatt pairs I·II 7 · II·III 21 · II·IV 2 · IV·V 9 (37/39 adjacent Blatts, 2 skips II·IV — 1603/1604, same cultures on both Blatts); OWNERSHIP PARTITION PER BLATT: 39/39 DISJOINT owners — every split base has different owners per Blatt (strong evidence that the same number under different Blatts is 2 DIFFERENT real parcels); 2–3 unique owners (25/13/1); dominant shares [0.50,0.60) 23 · [0.60,0.70) 11 · [0.70,0.75) 5; cultures 92 (kulturesByBlatt); GEO: 39/39 bases carry the SAME join-v2 geometry for ALL rows (0 distinct) — the v2 join is at the number level, so a SPLIT join would require 2 geometries (counter measured without coordinates — I6); areaSuspect 0; adjacency split part 82/93 (11 flags — 5 bases: 646, 661, 1821, 2141, 2143); the P65 fields byte-identical 39× (I3); the v2 join UNCHANGED (P56/P58/P59/P65 discipline); the decision belongs to the OWNER",
+ "verdictSi": "P66: SPLIT DECISION PACK — 39 SPLIT BASE (issue #13) — odločitveni paket za per-Blatt SPLIT joina (odprta točka P64 #8, kandidat #1 iz P65; deterministično, brez AI ob delovanju; NE odloča namesto lastnika — MERI in DOKAZUJE dejstva): vseh 39 base ima TOČNO 2 deleža (blattShares), 93 vrstic (25 × 2 + 13 × 3 + 1 × 4); Blatt pari I·II 7 · II·III 21 · II·IV 2 · IV·V 9 (37/39 sosednja Blatta, 2 skoka II·IV — 1603/1604, isti kulturi na obeh Blattih); LASTNIŠKA RAZČLENITEV PER BLATT: 39/39 DISJUNKTNI lastniki — vsak split base ima različne lastnike po Blattih (močan dokaz, da je ista številka pod različnima Blattoma 2 RAZLIČNI realni parceli); 2–3 edinstvenih lastnikov (25/13/1); dominantni deleži [0.50,0.60) 23 · [0.60,0.70) 11 · [0.70,0.75) 5; kulture 92 (kulturesByBlatt); GEO: 39/39 base nosi VSEH vrstic ENAKO geometrijo joina v2 (0 različnih) — join v2 je na nivoju številke, zato SPLIT join bi zahteval 2 geometriji (števec merjen brez koordinat — I6); areaSuspect 0; sosledje split del 82/93 (flag 11 — 5 base: 646, 661, 1821, 2141, 2143); P65 polja 39× bajtno (I3); join v2 NESPREMENJEN (disciplina P56/P58/P59/P65); odločitev LASTNIKA"
+}

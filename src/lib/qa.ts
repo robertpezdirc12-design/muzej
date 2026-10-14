@@ -47,6 +47,7 @@ import {
   TAIL_P63,
   ATTR_EXT_P64,
   ATTR_FULL_P65,
+  SPLIT_PACK_P66,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -4553,6 +4554,195 @@ const p45bErrors: string[] = [];
     p65Errors.length === 0
       ? `pini 211/172/39 · 17/53/1/101/39 · II 68 · IV 63 · III 29 · I 8 · V 4 · R3 3/26/14/58 · coverage 800/589/211 · soslednost 375/50 (R3 189/20) == preracun (211 multi-page + coverage iz v2 × pageAttribution; I3 P64 bajtno) · ${p65FileDetail}`
       : p65Errors.join("; "),
+  );
+
+  /* ── P66 (issue #13): split decision pack — 39 split base ── */
+  const p66Errors: string[] = [];
+  const sp66 = SPLIT_PACK_P66;
+  // 1) TS pini
+  if (sp66.summary.splitBases !== 39 || sp66.summary.rowsTotal !== 93)
+    p66Errors.push("pini: splitBases ≠ 39 ali rowsTotal ≠ 93");
+  if (sp66.summary.shareCountDist["2"] !== 39)
+    p66Errors.push("pini: shareCount ≠ 39 × 2");
+  if (sp66.summary.blattPairDist["I·II"] !== 7 || sp66.summary.blattPairDist["II·III"] !== 21 ||
+      sp66.summary.blattPairDist["II·IV"] !== 2 || sp66.summary.blattPairDist["IV·V"] !== 9)
+    p66Errors.push("pini: blattPairDist ≠ 7/21/2/9");
+  if (sp66.summary.adjacentPairs !== 37 || sp66.summary.skipPairs !== 2)
+    p66Errors.push("pini: sosednji/skok ≠ 37/2");
+  if (sp66.summary.uniqueOwnersDist["2"] !== 25 || sp66.summary.uniqueOwnersDist["3"] !== 13 ||
+      sp66.summary.uniqueOwnersDist["4"] !== 1)
+    p66Errors.push("pini: uniqueOwners ≠ 25/13/1");
+  if (sp66.summary.ownerRelationDist.disjoint !== 39)
+    p66Errors.push("pini: ownerRelation ≠ disjoint 39");
+  if (sp66.summary.dominantShareBuckets["0.50–0.60"] !== 23 ||
+      sp66.summary.dominantShareBuckets["0.60–0.70"] !== 11 ||
+      sp66.summary.dominantShareBuckets["0.70–0.75"] !== 5)
+    p66Errors.push("pini: pasovi ≠ 23/11/5");
+  if (sp66.summary.kulturesTotal !== 92)
+    p66Errors.push("pini: kulture ≠ 92");
+  if (sp66.summary.geoShared.shared !== 39 || sp66.summary.geoShared.distinct !== 0 || sp66.summary.geoShared.null !== 0)
+    p66Errors.push("pini: geoShared ≠ 39/0/0");
+  if (sp66.summary.areaSuspectRows !== 0)
+    p66Errors.push("pini: areaSuspect ≠ 0");
+  if (sp66.summary.sosledje.ok !== 82 || sp66.summary.sosledje.flag !== 11 ||
+      sp66.summary.sosledje.relevantRows !== 93 ||
+      sp66.summary.sosledje.flagBases.join(",") !== "1821,2141,2143,646,661")
+    p66Errors.push("pini: sosledje split ≠ 82/11 (93; flag base 5)");
+  // 2) datoteke + NEODVISEN preracun iz runtime kopij (dve obliki po P53/P57/P58)
+  let p66FileDetail = "datoteke niso preverjene (readFile ni na voljo) — celovita kontrola teče na /api/qa";
+  if (opts.readFile) {
+    const rawRt66 = opts.readFile("src/data/atlas/ps-split-pack.json");
+    const rawEv66 = opts.readFile("research/issue17/ps-split-pack.json");
+    const rawRt65b = opts.readFile("src/data/atlas/ps-attribution-full.json");
+    const rawRt59c = opts.readFile("src/data/atlas/ps-blatt-headers.json");
+    const rawV2rt66 = opts.readFile("src/data/atlas/ps-parcels-geo.json");
+    if (rawRt66 === null || rawRt65b === null || rawRt59c === null || rawV2rt66 === null) {
+      p66Errors.push("runtime ps-split-pack / ps-attribution-full / ps-blatt-headers / ps-parcels-geo ni berljiv");
+    } else {
+      try {
+        type Sp66Row = { page: number; blatt: string; parzella: string; base: string; owner: string | null; kultur: string | null; areaQK: number | null; areaSuspect: boolean | null };
+        type Sp66Base = {
+          status: string; attributedBlatt: string | null;
+          blattShares: { blatt: string; areaQK: number; share: number | null; rows: number; pages: number[] }[];
+          rowsTotal: number; pages: number[]; kultures: string[]; owners: string[];
+          sosledje: { ok: number; flag: number };
+          blattPair: string; dominantShare: number | null; shareDelta: number | null;
+          ownerRelation: string; geoShared: boolean | null;
+          kulturesByBlatt: Record<string, string[]>; ownersByBlatt: Record<string, string[]>;
+          rows: Sp66Row[];
+        };
+        const rt66 = JSON.parse(rawRt66) as { summary: Record<string, unknown>; bases: Record<string, Sp66Base> };
+        const rt65b = JSON.parse(rawRt65b) as { summary: { soslednost: { ok: number; flag: number } }; bases: Record<string, { status: string; attributedBlatt: string | null; blattShares: { blatt: string; areaQK: number; share: number | null }[]; rowsTotal: number; pages: number[]; kultures: string[]; owners: string[]; sosledje: { ok: number; flag: number } }> };
+        const rt59c = JSON.parse(rawRt59c) as { pageAttribution: Record<string, { blatt: string | null }> };
+        const v2rt66 = JSON.parse(rawV2rt66) as { rows: { base: string; page: number; owner: string | null; kultur: string | null; areaQK: number | null; areaSuspect: boolean | null; lat: number | null; lng: number | null }[] };
+        // NEODVISEN preracun: split set iz P65 runtime; per base vse meritve iz v2
+        const rowsByBase66 = new Map<string, { page: number; owner: string | null; kultur: string | null; areaQK: number | null; areaSuspect: boolean | null; lat: number | null; lng: number | null }[]>();
+        for (const r of v2rt66.rows) {
+          if (!rowsByBase66.has(r.base)) rowsByBase66.set(r.base, []);
+          rowsByBase66.get(r.base)!.push(r);
+        }
+        const blOf66 = (p: number): string | null => rt59c.pageAttribution[String(p)]?.blatt ?? null;
+        const split65 = new Set(Object.entries(rt65b.bases).filter(([, e]) => e.status === "split").map(([k]) => k));
+        if (split65.size !== 39) p66Errors.push(`preracun: split base iz P65 ${split65.size} ≠ 39`);
+        const pairs66: Record<string, number> = {};
+        let adj66 = 0, skip66 = 0;
+        const rel66: Record<string, number> = {};
+        const buck66: Record<string, number> = {};
+        const uo66: Record<string, number> = {};
+        let rowsTotal66 = 0, kult66 = 0, geoSh66 = 0, geoDi66 = 0, geoNu66 = 0, sus66 = 0;
+        let sosOk66 = 0, sosFl66 = 0;
+        const flBases66: string[] = [];
+        const ADJ66 = new Set(["I·II", "II·III", "III·IV", "IV·V"]);
+        for (const b66 of split65) {
+          const e65b = rt65b.bases[b66];
+          const rs66 = rowsByBase66.get(b66) ?? [];
+          if (rs66.length !== e65b.rowsTotal) p66Errors.push(`preracun: ${b66} vrstic ${rs66.length} ≠ P65 ${e65b.rowsTotal}`);
+          // I3: P65 polja bajtno
+          const e66b = rt66.bases[b66];
+          if (!e66b) { p66Errors.push(`preracun: ${b66} manjka v runtime split-pack`); continue; }
+          for (const k of ["status", "attributedBlatt", "blattShares", "rowsTotal", "pages", "kultures", "owners", "sosledje"] as const) {
+            if (JSON.stringify((e66b as unknown as Record<string, unknown>)[k]) !== JSON.stringify((e65b as unknown as Record<string, unknown>)[k]))
+              p66Errors.push(`I3: ${b66} polje ${k} ni bajtno`);
+          }
+          // blattShares kontrola
+          if (e65b.blattShares.length !== 2) p66Errors.push(`preracun: ${b66} blattShares ${e65b.blattShares.length} ≠ 2`);
+          const sSum66 = e65b.blattShares.reduce((s, sh) => s + (sh.share ?? 0), 0);
+          if (Math.abs(sSum66 - 1) > 1e-3) p66Errors.push(`preracun: ${b66} Σ share ${sSum66} ≠ 1`);
+          const aSum66 = e65b.blattShares.reduce((s, sh) => s + sh.areaQK, 0);
+          const rSum66 = rs66.reduce((s, r) => s + (r.areaQK ?? 0), 0);
+          if (Math.abs(aSum66 - rSum66) > 1e-6) p66Errors.push(`preracun: ${b66} Σ areaQK ${aSum66} ≠ vrstice ${rSum66}`);
+          // pari + sosednost
+          const bls66 = [...new Set(e65b.blattShares.map((sh) => sh.blatt))].sort();
+          if (bls66.length !== 2) p66Errors.push(`preracun: ${b66} Blatt-i ${bls66.length} ≠ 2`);
+          const pair66 = bls66.join("·");
+          pairs66[pair66] = (pairs66[pair66] ?? 0) + 1;
+          if (ADJ66.has(pair66)) adj66++; else skip66++;
+          // lastniki per Blatt (iz v2 — NEODVISENO)
+          const ownBy66: Record<string, Set<string>> = {};
+          for (const r of rs66) {
+            const bl = blOf66(r.page);
+            if (!bl) p66Errors.push(`preracun: ${b66} stran ${r.page} brez Blatta`);
+            else {
+              (ownBy66[bl] ??= new Set());
+              if (r.owner) ownBy66[bl].add(r.owner);
+            }
+            if (r.areaSuspect) sus66++;
+          }
+          const keys66 = Object.keys(ownBy66).sort();
+          let rel: string;
+          if (!ownBy66[keys66[0]]?.size || !ownBy66[keys66[1]]?.size) rel = "open";
+          else if ([...ownBy66[keys66[0]]].every((o) => !ownBy66[keys66[1]].has(o))) rel = "disjoint";
+          else if (ownBy66[keys66[0]].size === ownBy66[keys66[1]].size && [...ownBy66[keys66[0]]].every((o) => ownBy66[keys66[1]].has(o))) rel = "equal";
+          else rel = "overlap";
+          rel66[rel] = (rel66[rel] ?? 0) + 1;
+          if (e66b.ownerRelation !== rel) p66Errors.push(`preracun: ${b66} ownerRelation ${e66b.ownerRelation} ≠ ${rel}`);
+          // pas dominantnega
+          const dom66 = e65b.blattShares[0].share ?? 0;
+          const buck66s = dom66 >= 0.7 ? "0.70–0.75" : dom66 >= 0.6 ? "0.60–0.70" : dom66 >= 0.5 ? "0.50–0.60" : "outside";
+          buck66[buck66s] = (buck66[buck66s] ?? 0) + 1;
+          if (e66b.dominantShare !== e65b.blattShares[0].share) p66Errors.push(`preracun: ${b66} dominantShare ≠ P65`);
+          // geo (iz v2 — NEODVISENO, samo števec)
+          const geoSet66 = new Set(rs66.map((r) => `${r.lat}|${r.lng}`));
+          let gs66: boolean | null;
+          if (geoSet66.has("null|null") && geoSet66.size === 1) { gs66 = null; geoNu66++; }
+          else if (geoSet66.size <= 1) { gs66 = true; geoSh66++; }
+          else { gs66 = false; geoDi66++; }
+          if (e66b.geoShared !== gs66) p66Errors.push(`preracun: ${b66} geoShared ${e66b.geoShared} ≠ ${gs66}`);
+          // vrstice + kulture
+          rowsTotal66 += e65b.rowsTotal;
+          kult66 += e65b.kultures.length;
+          uo66[String(new Set(e65b.owners).size)] = (uo66[String(new Set(e65b.owners).size)] ?? 0) + 1;
+          // sosledje == P65 runtime vsota
+          sosOk66 += e65b.sosledje.ok;
+          sosFl66 += e65b.sosledje.flag;
+          if (e65b.sosledje.flag > 0) flBases66.push(b66);
+          if (e66b.sosledje.ok !== e65b.sosledje.ok || e66b.sosledje.flag !== e65b.sosledje.flag)
+            p66Errors.push(`preracun: ${b66} sosledje ≠ P65 runtime`);
+          if (e66b.rows.length !== e65b.rowsTotal) p66Errors.push(`preracun: ${b66} rows ${e66b.rows.length} ≠ ${e65b.rowsTotal}`);
+        }
+        if (pairs66["I·II"] !== 7 || pairs66["II·III"] !== 21 || pairs66["II·IV"] !== 2 || pairs66["IV·V"] !== 9)
+          p66Errors.push(`preracun: pari ${JSON.stringify(pairs66)} ≠ 7/21/2/9`);
+        if (adj66 !== 37 || skip66 !== 2) p66Errors.push(`preracun: sosednji/skok ${adj66}/${skip66} ≠ 37/2`);
+        if ((rel66.disjoint ?? 0) !== 39) p66Errors.push(`preracun: ownerRelation ${JSON.stringify(rel66)} ≠ disjoint 39`);
+        if ((buck66["0.50–0.60"] ?? 0) !== 23 || (buck66["0.60–0.70"] ?? 0) !== 11 || (buck66["0.70–0.75"] ?? 0) !== 5)
+          p66Errors.push(`preracun: pasovi ${JSON.stringify(buck66)} ≠ 23/11/5`);
+        if ((uo66["2"] ?? 0) !== 25 || (uo66["3"] ?? 0) !== 13 || (uo66["4"] ?? 0) !== 1)
+          p66Errors.push(`preracun: uniqueOwners ${JSON.stringify(uo66)} ≠ 25/13/1`);
+        if (kult66 !== 92) p66Errors.push(`preracun: kulture ${kult66} ≠ 92`);
+        if (geoSh66 !== 39 || geoDi66 !== 0 || geoNu66 !== 0) p66Errors.push(`preracun: geo ${geoSh66}/${geoDi66}/${geoNu66} ≠ 39/0/0`);
+        if (sus66 !== 0) p66Errors.push(`preracun: areaSuspect ${sus66} ≠ 0`);
+        if (rowsTotal66 !== 93) p66Errors.push(`preracun: vrstic ${rowsTotal66} ≠ 93`);
+        if (sosOk66 !== 82 || sosFl66 !== 11) p66Errors.push(`preracun: sosledje ${sosOk66}/${sosFl66} ≠ 82/11`);
+        if (flBases66.sort().join(",") !== "1821,2141,2143,646,661") p66Errors.push(`preracun: flag base ${flBases66.sort().join(",")} ≠ 5 znanih`);
+        // summary kontrola runtime
+        const s66 = rt66.summary as { splitBases: number; rowsTotal: number; kulturesTotal: number; sosledje: { ok: number; flag: number } };
+        if (s66.splitBases !== 39 || s66.rowsTotal !== 93 || s66.kulturesTotal !== 92 || s66.sosledje.ok !== 82 || s66.sosledje.flag !== 11)
+          p66Errors.push("runtime summary ≠ 39/93/92/82/11");
+        // P65 skupna soslednost nespremanjena (375/50)
+        if (rt65b.summary.soslednost.ok !== 375 || rt65b.summary.soslednost.flag !== 50)
+          p66Errors.push("P65 skupna soslednost spremenjena ≠ 375/50");
+        // evidencа (samo repo): dokaz ⊇ runtime bajtno
+        if (rawEv66 !== null) {
+          const ev66 = JSON.parse(rawEv66) as { runtime: unknown };
+          if (JSON.stringify(ev66.runtime) !== JSON.stringify(rt66))
+            p66Errors.push("dokaz: runtime ni bajtno podmnožica dokaza");
+        }
+        p66FileDetail = rawEv66 !== null
+          ? "repo: dokaz == runtime bajtno · preracun: 39 split base (pini, pari 7/21/2/9, disjunktnost 39, pasovi 23/11/5, geo 39, sosledje 82/11) iz v2 × P65 × pageAttribution · I3 P65 bajtno"
+          : "produkcija: research/ ni v deploymentu — preracun na runtime kopijah (39 split base: pari, relacije lastnikov, pasovi, geo, sosledje)";
+      } catch (e) {
+        p66Errors.push(`ps-split-pack datoteke neuspešno: ${String(e).slice(0, 80)}`);
+      }
+    }
+  }
+  push(
+    "qa-p66-split-pack",
+    "P66: SPLIT DECISION PACK (issue #13): odločitveni paket za per-Blatt SPLIT joina (P64 #8) — NE odloča namesto lastnika, MERI in DOKAZUJE: 39 base × 2 deleža, 93 vrstic (25 × 2 + 13 × 3 + 1 × 4); pari Blattov I·II 7 · II·III 21 · II·IV 2 · IV·V 9 (sosednji 37, skok 2: 1603/1604); lastniki per Blatt DISJUNKTNI 39/39 (2–3 edinstvenih: 25/13/1) — močan dokaz za 2 RAZLIČNI realni parceli; dominantni deleži 23/11/5; kulture 92; GEO 39/39 ena geometrija joina v2 (SPLIT bi zahteval 2); areaSuspect 0; sosledje split del 82/93 (flag 11 — 5 base); P65 polja 39× bajtno; join v2 NESPREMENJEN; odločitev LASTNIKA; status REVIEW",
+    "P66: SPLIT DECISION PACK (issue #13): the decision pack for the per-Blatt SPLIT join (P64 #8) — it does NOT decide on behalf of the owner, it MEASURES and PROVES: 39 bases × 2 shares, 93 rows (25 × 2 + 13 × 3 + 1 × 4); Blatt pairs I·II 7 · II·III 21 · II·IV 2 · IV·V 9 (adjacent 37, skips 2: 1603/1604); owners per Blatt DISJOINT 39/39 (2–3 unique: 25/13/1) — strong evidence for 2 DIFFERENT real parcels; dominant shares 23/11/5; cultures 92; GEO 39/39 one join-v2 geometry (a SPLIT would require 2); areaSuspect 0; adjacency split part 82/93 (11 flags — 5 bases); the P65 fields byte-identical 39×; the v2 join UNCHANGED; the decision belongs to the OWNER; status REVIEW",
+    p66Errors.length === 0,
+    p66Errors.length === 0
+      ? `pini 39/93 · pari 7/21/2/9 (37/2) · disjoint 39 · 25/13/1 · pasovi 23/11/5 · kulture 92 · geo 39/0/0 · sosledje 82/11 == preracun (39 split base iz v2 × P65 × pageAttribution; I3 P65 bajtno) · ${p66FileDetail}`
+      : p66Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;
