@@ -2,7 +2,7 @@
   "phase": "P78",
   "title": "Produkcija & žetoni: operativni zdravstveni audit (issue #6)",
   "status": "OPERATIONAL-AUDIT",
-  "issuedAt": "2026-10-15T20:59:49Z",
+  "issuedAt": "2026-10-15T21:08:06Z",
   "vercel": {
     "home": {
       "http": 200,
@@ -60,9 +60,9 @@
     }
   },
   "mirrors": {
-    "gitlabMain": "fa537a7662a85b0e7f0fed15acfaec9902e1a30f",
-    "githubMain": "fa537a7662a85b0e7f0fed15acfaec9902e1a30f",
-    "localHead": "fa537a7662a85b0e7f0fed15acfaec9902e1a30f",
+    "gitlabMain": "c7773185a10e8ee3518f99bb500205ece3e95ace",
+    "githubMain": "c7773185a10e8ee3518f99bb500205ece3e95ace",
+    "localHead": "c7773185a10e8ee3518f99bb500205ece3e95ace",
     "method": "git ls-remote (GitHub REST GET /commits/main vrne 404 neavtentificirano — repozitorij zaseben; ls-remote z žetonom iz remote URL)"
   },
   "workflowsPresent": {
@@ -76,9 +76,9 @@
       "billingBlocked": true,
       "annotation": "The job was not started because recent account payments have failed or your spending limit needs to be increased. Please check the 'Billing & plans' section in your settings",
       "syncLatest": {
-        "runId": 38805294449,
-        "createdAt": "2026-10-15T20:51:18Z",
-        "event": "workflow_dispatch",
+        "runId": 38806893972,
+        "createdAt": "2026-10-15T21:03:22Z",
+        "event": "push",
         "conclusion": "failure",
         "jobConclusion": "failure",
         "steps": 0,

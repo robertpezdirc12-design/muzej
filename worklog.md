@@ -4036,3 +4036,15 @@ Stage Summary:
 - P78 ZAKLJUČEN: produkcija + zrcala + PAT #3 vsi zdravi; GitHub Actions BLOKIRAN na računu (billing) — sync/watchdog/rezerva mrtvi; GITLAB_TOKEN skrivnost sanirana; dokaz research/issue17/tokens-production-audit.json (I1–I9 PASS, --check bajtno PASS).
 - ⚠ LASTNIŠKE AKCIJE po prioriteti: ① GitHub Billing & plans (plačilna metoda / spending limit — obnovi sync.yml + token-health.yml + deploy.yml; API ne more); ② nov VERCEL_TOKEN (vercel.com/account/tokens — obnovi SAMO rezervni deploy; primarna pot NEODVISNA in dela); ③ raziskovalne odločitve P76 ① / P77 ② (nespremenjene).
 - Po sanaciji billinga bo p78 --check (I8) realno FAIL — namerna lastnost: dokaz zahteva ponovno izdajo, ki dokumentira sanirano stanje.
+---
+Task ID: 47-a (popravek P78 --check — odstranjen sha pin iz stabilnega jedra)
+Agent: Z.ai Code (glavni)
+Task: končna kontrola P78 — prvi --check PO commitu c777318 je FAIL (dokaz je pinil sha zrcal na audit-trenutek; vsak nov commit jih invalidira)
+
+Work Log:
+- Diagnoza: mirrors {gitlabMain/githubMain/localHead = fa537a7…} v stabilnem jedru; po commitu c777318 fresh probe vrne c777318… → bajtna razlika @ mirrors.
+- Popravek: stable_core zdaj iz zrcal ohrani IZREKO enakosti ("identical", izračunana sveža pri vsakem --check), posamezne sha pa odvrže (evidenca audit-trenutka ostane v dokazu za bralca). Izreka FRESH FAIL, če katera stran zaostane → namerna lastnost (ponovna izdaja dokaza).
+- Rebuild + dvojni --check PASS (bajtno stabilno tudi čez rune in commite); I1–I9 PASS.
+
+Stage Summary:
+- p78 --check zdaj odporen na nove commite; edini legalni FAIL vzroki: produkcija padla, zrcala razsinhronizirana, PAT potekel/rotiran, Actions stanje spremenjeno (npr. sanacija billinga → namenjen FAIL → nova izdaja dokaza).

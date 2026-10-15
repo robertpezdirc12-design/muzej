@@ -375,8 +375,15 @@ def build_dokaz():
 
 
 def stable_core(d):
-    """Bajtno stabilno jedro (brez časovnih žigov, run/job id-jev in
-    velikosti odgovorov — spreminjajo se z deployi)."""
+    """Bajtno stabilno jedro (brez časovnih žigov, run/job id-jev, velikosti
+    odgovorov in sha pinov — spreminjajo se z deployi/commiti).
+
+    Zrcala: stabilno jedro OHRANI izreko enakosti (identical), NE pa
+    posameznih sha vrednosti — te se spremeni s vsakim commitom, zato bi
+    fiksiranje dokončno pokvarilo --check (lekcija prvega zagona 2026-10-15:
+    dokaz @ fa537a7, --check po commitu c777318 → FAIL na sha pinu). Izreka
+    se vedno izračuna SVEŽA: če katera stran zaostane, je fresh identical
+    False → --check FAIL → ponovna izdaja dokaza (namerna lastnost)."""
     d2 = json.loads(json.dumps(d))
     d2.pop("issuedAt", None)
     if isinstance(d2.get("vercel"), dict):
@@ -388,6 +395,13 @@ def stable_core(d):
             p.pop("runId", None)
             p.pop("createdAt", None)
             p.pop("event", None)
+    m = d2.get("mirrors")
+    if isinstance(m, dict):
+        g, h, l = m.get("gitlabMain"), m.get("githubMain"), m.get("localHead")
+        d2["mirrors"] = {
+            "identical": bool(g and g == h == l),
+            "method": m.get("method"),
+        }
     return json.dumps(d2, sort_keys=True, ensure_ascii=False)
 
 
