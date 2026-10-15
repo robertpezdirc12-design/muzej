@@ -4015,3 +4015,24 @@ Stage Summary:
 - P77 ZAKLJUČEN: PF protokol = DOKAZANI NEGATIV na VAČ (12 enot k.o. N83, tektonski sprehod, docid mapiranje +373413→41778, sosedski probe 0/6) — vir identitete pas-instanc zahteva fizični arhiv; dokaz research/issue17/pf-vac-inventory.json + skripta --check bajtno PASS.
 - README urejen in posodobljen (Task 45 + P77 bullet + stanje po P77); push GitLab (vir resnice) → GitHub (zrcalo → Vercel) z lastnikovo identiteto.
 - ⚠ OSTAJA LASTNIŠKA ODLOČITEV (P78+): ① opcija sekcij A/B1/B2/B3 iz P76 paketa (MERI, NE odloča); ② fizični arhiv za PF protokol (operativno — VAČ absenca dokazana); ③ žetoni (issue #6; VERCEL_TOKEN ⚠, GitLab PAT).
+---
+Task ID: 47 (P78 — produkcija & žetoni audit + sanacija skrivnosti)
+Agent: Z.ai Code (glavni)
+Task: Owner ukaz "odlicno nadaljuj" — po P77 edina NE-lastniška odprta točka: ③ žetoni/operativa (issue #6)
+
+Work Log:
+- Kontekst: repo @ fa537a7 (P77; drevo čisto; GitLab = GitHub = lokalna, 0/0). Vse raziskovalne niti skonvergirale k lastniškim odločitvam → P78 = operativni audit.
+- PROBE produkcija: GET / 200 (704 548 B == post-P77 deploy), /api/qa ok True 79/79 (79 testov; qa-p76-sections-perblatt True), /api/atlas/ps-parcels-geo v7/891 — produkcija ZDRAVA in AKTUALNA.
+- PROBE zrcala: git ls-remote origin main == github main == git rev-parse HEAD == fa537a7 (GitHub REST GET /commits/main 404 neavtentificirano — repozitorij zaseben; ls-remote z žetonom iz remote URL).
+- PROBE GitLab: /personal_access_tokens/self 200 — PAT #3 id 28471532, name "dsfsd", active, revoked false, rok AVTORITATIVNO 2026-11-14 (naslov issue #6 navaja 2026-11-09 = stari žeton), scopes ⊇ api+write_repository+read_repository+self_rotate; /projects/87462760 200 (markec-group1/muzej) — WAF 403 stohastično (znan vzorec; retry-loop).
+- DISCOVERY 1 — GitHub Actions blokiran na NIVOJU RAČUNA (billing): vsi jobi NE STARTAJO (failure v ~2 s, steps [], runner_id 0, logi BlobNotFound); kontrolni dispatch sync.yml (run 38805294449) IN token-health.yml (run 38805695856) — enak podpis na obeh; check-run anotacija (avtoritativno GitHub): "The job was not started because recent account payments have failed or your spending limit needs to be increased. Please check the 'Billing & plans' section in your settings". Zadnji uspešen sync run 2026-10-11T06:23:19Z; watchdog mrtav od ~10-13 — ZATO NI opozoril ob izteku VERCEL_TOKEN (2026-10-14); rezervni deploy prav tako mrtav.
+- DISCOVERY 2 — skrivnost GITLAB_TOKEN v Actions držala neveljaven PAT #2 (updated 2026-10-13T16:18:56Z).
+- SANACIJA P78: GITLAB_TOKEN skrivnost posodobljena z aktualnim PAT #3 — libsodium sealed box (PyNaCl 1.6.2; javni ključ repa key_id 3380204578043523366), PUT /repos/…/actions/secrets/GITLAB_TOKEN → HTTP 204, updated 2026-10-15T20:51:08Z; kontrolni dispatch po sanaciji še vedno failure brez korakov → potrdilo, da vzrok NI žeton (blokada računa ostaja).
+- Skripta scripts/p78_tokens_production_audit.py (deterministično, brez AI; I1–I9; --check bajtno PASS; live probe Vercel + GitLab (WAF-retry 6×) + zrcala ls-remote (retry 4×) + Actions check-run anotacija; brez mutacij — sanacija dokumentirana kot statičen "repair" zapis) → dokaz research/issue17/tokens-production-audit.json (OPERATIONAL-AUDIT; sanacija + časovnica + vpliv per workflow + 3 lastniške akcije po prioriteti).
+- INTEGRACIJA: README (P78 bullet za P77; "Zadnje stanje" → po P78; ③ žetoni prepisana z avtoritativnimi dejstvi; QA veriga p60–p67 + p70–p78; Povezava GitHub → Vercel tabela: stale ref scripts/renew_vercel_token.py (NIKOLI obstajal v repu) → prava metoda PUT skrivnosti (sealed box); Zdravje žetona vrstica ⚠ watchdog MRTV); audit §55; kartica NI dodana (operativni audit — ni produkcija vsebine); QA ostaja 79/79.
+- Verifikacija: veriga p60–p67 + p70–p78 --check bajtno PASS (p68 zamrznjen po C2; vse PASS); tsc --noEmit 0; ESLint 0; v7 runtime join NESPREMENJEN (sha256 4bb40370…; disciplina I9).
+
+Stage Summary:
+- P78 ZAKLJUČEN: produkcija + zrcala + PAT #3 vsi zdravi; GitHub Actions BLOKIRAN na računu (billing) — sync/watchdog/rezerva mrtvi; GITLAB_TOKEN skrivnost sanirana; dokaz research/issue17/tokens-production-audit.json (I1–I9 PASS, --check bajtno PASS).
+- ⚠ LASTNIŠKE AKCIJE po prioriteti: ① GitHub Billing & plans (plačilna metoda / spending limit — obnovi sync.yml + token-health.yml + deploy.yml; API ne more); ② nov VERCEL_TOKEN (vercel.com/account/tokens — obnovi SAMO rezervni deploy; primarna pot NEODVISNA in dela); ③ raziskovalne odločitve P76 ① / P77 ② (nespremenjene).
+- Po sanaciji billinga bo p78 --check (I8) realno FAIL — namerna lastnost: dokaz zahteva ponovno izdajo, ki dokumentira sanirano stanje.

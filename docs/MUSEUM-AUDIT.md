@@ -3326,3 +3326,77 @@ raziskovalno linijo; strojno berljivo prek dokaza).
 2.21_5.5) — VAČ se je dan prej posodabljal, iskalni API je pokvarjen, zato je
 inventar pridobljen prek tektonike (avtoritativno drevo). Absenca na VAČ ne
 izključuje obstoja v fizičnem arhivu ali drugem fondu [~].
+
+## §55 — P78: produkcija & žetoni — operativni zdravstveni audit (issue #6) — 2026-10-15
+
+**Sprožilec:** owner ukaz »odlicno nadaljuj« — po P77 so vse raziskovalne niti
+skonvergirale k lastniškim odločitvam; edina NE-lastniška odprta točka je ③
+žetoni/operativa (issue #6).
+
+**Metoda (deterministični probe, brez AI):** produkcija (`GET /`, `/api/qa`,
+`/api/atlas/ps-parcels-geo`), GitLab (`/personal_access_tokens/self` —
+avtoritativni rok žetona — in `/projects/87462760`; WAF-retry), zrcala
+(`git ls-remote` origin/github/HEAD), GitHub Actions stanje (zadnji runi
+sync.yml + token-health.yml → job steps/runner_id → check-run anotacija),
+lokalna prisotnost workflow datotek. Skripta `scripts/p78_tokens_production_audit.py`
+(I1–I9, `--check` bajtno PASS; brez mutacij) → dokaz
+`research/issue17/tokens-production-audit.json` (OPERATIONAL-AUDIT).
+
+**Ugotovitve:**
+1. **Produkcija ZDRAVA in AKTUALNA:** `GET /` HTTP 200 (704 548 B == post-P77
+   deploy), `/api/qa` ok True 79/79 (79 testov; `qa-p76-sections-perblatt`
+   True), geo `version 7` / 891 vrstic.
+2. **Zrcala bajtno identična:** GitLab = GitHub = lokalni HEAD (ls-remote;
+   GitHub REST `GET /commits/main` 404 neavtentificirano — repozitorij
+   zaseben).
+3. **GitLab PAT #3 avtoritativno aktiven:** id 28471532, name `dsfsd`,
+   active, revoked false, rok **2026-11-14**, scopes ⊇ api +
+   write_repository + read_repository + self_rotate. Rok 2026-11-09 v
+   naslovu issue #6 se nanaša na stari žeton (P78 ga ne popravlja na
+   GitHubu — kosmetika issue je kosmetika lastnika).
+4. **DISCOVERY — GitHub Actions blokiran na nivoju računa (billing):** vsi
+   jobi NE STARTAJO — job `failure` v ~2 s, `steps: []`, `runner_id: 0`,
+   logi `BlobNotFound`; check-run anotacija (avtoritativno GitHub):
+   *"The job was not started because recent account payments have failed or
+   your spending limit needs to be increased. Please check the 'Billing &
+   plans' section in your settings."* Kontrolni dispatch token-health.yml
+   (brez checkouta, čisti curl) daje enak podpis → blokada je na računu,
+   ne na workflowu. Zadetki: **sync.yml** (dvosmerna sinhronizacija — mreža
+   varnosti; zadnji uspeh 2026-10-11T06:23:19Z), **token-health.yml**
+   (dnevni watchdog žetonov — zato NI opozoril 10-13/14/15 ob izteku
+   VERCEL_TOKEN 2026-10-14) in **deploy.yml** (rezervni deploy; zadnji
+   uspeh 2026-10-11T06:12:27Z; potekel žeton = dodaten razlog).
+5. **SANACIJA P78 (skrivnost):** `GITLAB_TOKEN` v GitHub Actions je držal
+   neveljaven PAT #2 (updated 2026-10-13T16:18:56Z) — zamenjan z aktualnim
+   PAT #3: vrednost šifrirana z libsodium sealed box (PyNaCl 1.6.2) z
+   javnim ključem repozitorija (key_id 3380204578043523366),
+   `PUT /repos/…/actions/secrets/GITLAB_TOKEN` → HTTP 204, updated
+   2026-10-15T20:51:08Z. Nujno tudi samo po sebi: stari PAT bi povzročil
+   auth padec, takoj ko bi Actions začel teči. Kontrolni dispatch sync.yml
+   po sanaciji (run 38805294449): še vedno failure v ~2 s brez korakov —
+   potrdilo, da vzrok NI žeton.
+
+**Vpliv na projekt (per workflow):** primarna produkcijska pot (Vercel
+GitHub App) je NEODVISNA od Actions in od žetonov — deployi in produkcija
+tečejo normalno. Mrtve so samo rezervne/nadzorne plasti: sync (operativno
+neškodljivo, dokler glavni agent puša na OBE strani — P21 disciplina),
+watchdog (mehka točka; ročni `p78 --check` jo nadomešča) in rezervni deploy.
+
+**Lastniške akcije po prioriteti (iz dokaza):**
+1. GitHub → Settings → **Billing & plans**: plačilna metoda / spending
+   limit (API brez admin:billing scope ne more) — obnovi sync + watchdog +
+   rezervo;
+2. **VERCEL_TOKEN**: nov žeton na vercel.com/account/tokens (Vercel API ne
+   ustvarja žetonov) — obnovi SAMO rezervni deploy;
+3. raziskovalne odločitve P76 ① (opcije sekcij A/B1/B2/B3) in P77 ②
+   (fizični arhiv za PF) — neoperativno, nespremenjeno.
+
+**Poštenost:** audit odraža stanje 2026-10-15 (live probe; `--check` ga
+ponovno izmeri). Po lastniški sanaciji billinga bo `--check` (I8) realno
+FALIL — to je namerna lastnost: dokaz zahteva ponovno izdajo, ki bo
+ dokumentirala sanirano stanje.
+
+**v7 runtime join NESPREMENJEN** (sha256 4bb40370…; disciplina I9). QA
+ostaja 79/79 (operativni audit ni produkcija vsebine — ni nove kartice niti
+nove QA kontrole). Veriga `p60–p67 + p70–p78 --check` bajtno PASS; tsc 0;
+ESLint 0.

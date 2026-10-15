@@ -1,0 +1,153 @@
+{
+  "phase": "P78",
+  "title": "Produkcija & žetoni: operativni zdravstveni audit (issue #6)",
+  "status": "OPERATIONAL-AUDIT",
+  "issuedAt": "2026-10-15T20:59:49Z",
+  "vercel": {
+    "home": {
+      "http": 200,
+      "bytes": 704548
+    },
+    "qa": {
+      "http": 200,
+      "ok": true,
+      "passed": 79,
+      "failed": 0,
+      "tests": 79,
+      "qaP76Pass": true
+    },
+    "geo": {
+      "http": 200,
+      "version": 7,
+      "rows": 891
+    },
+    "deployArchitecture": {
+      "primary": "Vercel GitHub App (brez žetona) — vsak push na main samodejno gradi produkcijo; NEODVISEN od poteka VERCEL_TOKEN",
+      "reserve": "deploy.yml (workflow_dispatch, VERCEL_TOKEN) — trenutno MRTV: žeton potekel 2026-10-14 + Actions blokada računa"
+    }
+  },
+  "gitlab": {
+    "pat": {
+      "http": 200,
+      "id": 28471532,
+      "name": "dsfsd",
+      "active": true,
+      "revoked": false,
+      "expiresAt": "2026-11-14",
+      "scopes": [
+        "ai_features",
+        "api",
+        "create_runner",
+        "k8s_proxy",
+        "manage_runner",
+        "read_api",
+        "read_registry",
+        "read_repository",
+        "read_user",
+        "read_virtual_registry",
+        "self_rotate",
+        "write_registry",
+        "write_repository",
+        "write_virtual_registry"
+      ],
+      "hasApiScope": true,
+      "hasWriteRepositoryScope": true
+    },
+    "project": {
+      "http": 200,
+      "id": 87462760,
+      "pathWithNamespace": "markec-group1/muzej"
+    }
+  },
+  "mirrors": {
+    "gitlabMain": "fa537a7662a85b0e7f0fed15acfaec9902e1a30f",
+    "githubMain": "fa537a7662a85b0e7f0fed15acfaec9902e1a30f",
+    "localHead": "fa537a7662a85b0e7f0fed15acfaec9902e1a30f",
+    "method": "git ls-remote (GitHub REST GET /commits/main vrne 404 neavtentificirano — repozitorij zaseben; ls-remote z žetonom iz remote URL)"
+  },
+  "workflowsPresent": {
+    "build-check.yml": true,
+    "deploy.yml": true,
+    "sync.yml": true,
+    "token-health.yml": true
+  },
+  "actions": {
+    "probes": {
+      "billingBlocked": true,
+      "annotation": "The job was not started because recent account payments have failed or your spending limit needs to be increased. Please check the 'Billing & plans' section in your settings",
+      "syncLatest": {
+        "runId": 38805294449,
+        "createdAt": "2026-10-15T20:51:18Z",
+        "event": "workflow_dispatch",
+        "conclusion": "failure",
+        "jobConclusion": "failure",
+        "steps": 0,
+        "runnerId": 0,
+        "annotation": "The job was not started because recent account payments have failed or your spending limit needs to be increased. Please check the 'Billing & plans' section in your settings"
+      },
+      "tokenHealthLatest": {
+        "runId": 38805695856,
+        "createdAt": "2026-10-15T20:54:19Z",
+        "event": "workflow_dispatch",
+        "conclusion": "failure",
+        "jobConclusion": "failure",
+        "steps": 0,
+        "runnerId": 0,
+        "annotation": "The job was not started because recent account payments have failed or your spending limit needs to be increased. Please check the 'Billing & plans' section in your settings"
+      }
+    },
+    "billingBlocked": true,
+    "authoritativeAnnotation": "The job was not started because recent account payments have failed or your spending limit needs to be increased. Please check the 'Billing & plans' section in your settings",
+    "timeline": {
+      "syncLastSuccess": "2026-10-11T06:23:19Z",
+      "watchdogLastBotAlert": "2026-10-11T17:21:20Z (issue #6)",
+      "watchdogBlindFrom": "~2026-10-13 (od takrat naprej jobi brez korakov — opozoril 10-13/14/15 NI bilo, četudi je VERCEL_TOKEN potekel 2026-10-14)",
+      "deployReserveLastSuccess": "2026-10-11T06:12:27Z"
+    },
+    "impact": {
+      "sync.yml": "dvosmerna sinhronizacija (mreža varnosti) mrtva — operativno neškodljivo, dokler glavni agent puša na OBE strani (P21 disciplina)",
+      "token-health.yml": "dnevni watchdog žetonov mrtav — mehka točka; ročni audit P78 jo nadomešča do sanacije",
+      "deploy.yml": "rezervni deploy mrtav (dvojni razlog: žeton potekel + blokada) — primarna pot NEODVISNA"
+    }
+  },
+  "repair": {
+    "secret": "GITLAB_TOKEN",
+    "previousSecretUpdatedAt": "2026-10-13T16:18:56Z",
+    "previousSecretEra": "PAT #2 (neveljaven — iztekel/preklican)",
+    "repairedAt": "2026-10-15T20:51:08Z",
+    "method": "PUT /repos/{repo}/actions/secrets/GITLAB_TOKEN — vrednost šifrirana z libsodium sealed box (PyNaCl 1.6.2) z javnim ključem repozitorija (key_id 3380204578043523366); odgovor HTTP 204",
+    "postRepairSecretUpdatedAt": "2026-10-15T20:51:08Z",
+    "verification": "workflow_dispatch sync.yml (run 38805294449) po sanaciji: failure v ~2 s, steps [], runner_id 0 — dokazalo, da vzrok NI žeton, temveč blokada računa (anotacija check-run); enak podpis tudi dispatch token-health.yml (run 38805695856)",
+    "verdict": "SKRIVNOST SANIRANA (nujno, ne glede na blokado); Actions ostaja BLOKIRAN na nivoju računa — sanacija LASTNIŠKA (Billing & plans)"
+  },
+  "ownerActions": [
+    {
+      "priority": 1,
+      "action": "GitHub → Settings → Billing & plans: plačilna metoda / spending limit (avtoritativna anotacija GitHub; brez admin:billing scope API ne more)",
+      "restores": "sync.yml (mreža varnosti) + token-health.yml (watchdog) + deploy.yml (rezerva)"
+    },
+    {
+      "priority": 2,
+      "action": "VERCEL_TOKEN: ustvari nov žeton na vercel.com/account/tokens (Vercel API ne more ustvarjati žetonov; potekel 2026-10-14)",
+      "restores": "samo rezervni deploy; primarni GitHub App deploy dela, produkcija aktualna (704 548 B, P77)"
+    },
+    {
+      "priority": 3,
+      "action": "raziskovalne odločitve iz P76/P77 (neoperativno): ① opcija sekcij A/B1/B2/B3; ② fizični arhiv za PF protokol",
+      "restores": "raziskovalna nadaljevanja P79+"
+    }
+  ],
+  "verdict": "PRODUKCIJA ZDRAVA in AKTUALNA (704 548 B == P77 deploy; QA 79/79 vključno z qa-p76; geo v7/891); zrcala bajtno identična (GitLab = GitHub = lokalna); GitLab PAT #3 AKTIVEN (rok AVTORITATIVNO 2026-11-14 — prej navajan 2026-11-09 v naslovu issue #6 je bil stari žeton). GitHub Actions NA RAČUNU BLOKIRAN (billing) — trajna lastniška akcija; skrivnost GITLAB_TOKEN sanirana v P78; VERCEL_TOKEN potekel (rezerva).",
+  "invariants": {
+    "I1_vercel_200": true,
+    "I2_qa_79_79": true,
+    "I3_qa_p76_pass": true,
+    "I4_geo_v7_891": true,
+    "I5_pat_active": true,
+    "I6_project_87462760": true,
+    "I7_mirrors_identical": true,
+    "I8_actions_state_consistent": true,
+    "I9_workflows_present": true
+  },
+  "invariantsPass": true
+}
