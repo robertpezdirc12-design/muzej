@@ -2,18 +2,18 @@
   "phase": "P78",
   "title": "Produkcija & žetoni: operativni zdravstveni audit (issue #6)",
   "status": "OPERATIONAL-AUDIT",
-  "issuedAt": "2026-10-15T21:08:06Z",
+  "issuedAt": "2026-10-15T21:36:20Z",
   "vercel": {
     "home": {
       "http": 200,
-      "bytes": 704548
+      "bytes": 707102
     },
     "qa": {
       "http": 200,
       "ok": true,
-      "passed": 79,
+      "passed": 80,
       "failed": 0,
-      "tests": 79,
+      "tests": 80,
       "qaP76Pass": true
     },
     "geo": {
@@ -60,9 +60,9 @@
     }
   },
   "mirrors": {
-    "gitlabMain": "c7773185a10e8ee3518f99bb500205ece3e95ace",
-    "githubMain": "c7773185a10e8ee3518f99bb500205ece3e95ace",
-    "localHead": "c7773185a10e8ee3518f99bb500205ece3e95ace",
+    "gitlabMain": "54c1d3e3ca75282422bd243bacdeceefda8f1e81",
+    "githubMain": "54c1d3e3ca75282422bd243bacdeceefda8f1e81",
+    "localHead": "54c1d3e3ca75282422bd243bacdeceefda8f1e81",
     "method": "git ls-remote (GitHub REST GET /commits/main vrne 404 neavtentificirano — repozitorij zaseben; ls-remote z žetonom iz remote URL)"
   },
   "workflowsPresent": {
@@ -76,8 +76,8 @@
       "billingBlocked": true,
       "annotation": "The job was not started because recent account payments have failed or your spending limit needs to be increased. Please check the 'Billing & plans' section in your settings",
       "syncLatest": {
-        "runId": 38806893972,
-        "createdAt": "2026-10-15T21:03:22Z",
+        "runId": 38810765778,
+        "createdAt": "2026-10-15T21:33:23Z",
         "event": "push",
         "conclusion": "failure",
         "jobConclusion": "failure",
@@ -137,10 +137,10 @@
       "restores": "raziskovalna nadaljevanja P79+"
     }
   ],
-  "verdict": "PRODUKCIJA ZDRAVA in AKTUALNA (704 548 B == P77 deploy; QA 79/79 vključno z qa-p76; geo v7/891); zrcala bajtno identična (GitLab = GitHub = lokalna); GitLab PAT #3 AKTIVEN (rok AVTORITATIVNO 2026-11-14 — prej navajan 2026-11-09 v naslovu issue #6 je bil stari žeton). GitHub Actions NA RAČUNU BLOKIRAN (billing) — trajna lastniška akcija; skrivnost GITLAB_TOKEN sanirana v P78; VERCEL_TOKEN potekel (rezerva).",
+  "verdict": "PRODUKCIJA ZDRAVA in AKTUALNA (velikost odgovora == zadnji deploy; QA zelena — ok, 0 napak, ≥ 79 kontrol, qa-p76 True); zrcala bajtno identična (GitLab = GitHub = lokalna); GitLab PAT #3 AKTIVEN (rok AVTORITATIVNO 2026-11-14 — prej navajan 2026-11-09 v naslovu issue #6 je bil stari žeton). GitHub Actions NA RAČUNU BLOKIRAN (billing) — trajna lastniška akcija; skrivnost GITLAB_TOKEN sanirana v P78; VERCEL_TOKEN potekel (rezerva).",
   "invariants": {
     "I1_vercel_200": true,
-    "I2_qa_79_79": true,
+    "I2_qa_green": true,
     "I3_qa_p76_pass": true,
     "I4_geo_v7_891": true,
     "I5_pat_active": true,

@@ -59,7 +59,10 @@ GH_API = "https://api.github.com/repos/robertpezdirc12-design/muzej"
 GH_REPO = "robertpezdirc12-design/muzej"
 
 # --- pričakovano stanje (invarianti I1–I9) ---
-EXPECTED_QA = {"ok": True, "passed": 79, "failed": 0}
+# QA invarianta je ELASTIČNA (lekcija re-izdaje 2026-10-15): operativni audit
+# meri ZDRAVJE, ne registrira števila kontrol — QA raste z fazami (P79: 79 →
+# 80), zato se pina ok/failed/min-passed, NE točna številka.
+EXPECTED_QA_MIN_PASSED = 79
 QA_P76_ID = "qa-p76-sections-perblatt"
 EXPECTED_GEO = {"version": 7, "rows": 891}
 EXPECTED_PAT_ID = 28471532
@@ -330,8 +333,9 @@ def build_dokaz():
                         "PF protokol"),
              "restores": "raziskovalna nadaljevanja P79+"},
         ],
-        "verdict": ("PRODUKCIJA ZDRAVA in AKTUALNA (704 548 B == P77 deploy; "
-                    "QA 79/79 vključno z qa-p76; geo v7/891); zrcala "
+        "verdict": ("PRODUKCIJA ZDRAVA in AKTUALNA (velikost odgovora == zadnji "
+                    "deploy; QA zelena — ok, 0 napak, ≥ "
+                    f"{EXPECTED_QA_MIN_PASSED} kontrol, qa-p76 True); zrcala "
                     "bajtno identična (GitLab = GitHub = lokalna); GitLab "
                     "PAT #3 AKTIVEN (rok AVTORITATIVNO 2026-11-14 — prej "
                     "navajan 2026-11-09 v naslovu issue #6 je bil stari "
@@ -344,8 +348,11 @@ def build_dokaz():
     dokaz["invariants"] = {
         "I1_vercel_200": (home["http"] == 200
                           and home.get("bytes", 0) >= 500000),
-        "I2_qa_79_79": all(qa.get(k) == v for k, v in EXPECTED_QA.items())
-                       and qa.get("tests") == 79,
+        "I2_qa_green": (qa.get("ok") is True
+                        and qa.get("failed") == 0
+                        and isinstance(qa.get("passed"), int)
+                        and qa.get("passed") >= EXPECTED_QA_MIN_PASSED
+                        and qa.get("tests") == qa.get("passed")),
         "I3_qa_p76_pass": qa.get("qaP76Pass") is True,
         "I4_geo_v7_891": all(geo.get(k) == v
                              for k, v in EXPECTED_GEO.items()),
@@ -389,6 +396,11 @@ def stable_core(d):
     if isinstance(d2.get("vercel"), dict):
         if isinstance(d2["vercel"].get("home"), dict):
             d2["vercel"]["home"].pop("bytes", None)
+        # QA številke so ELASTIČNE (rastejo z fazami — P79: 79 → 80): stabilno
+        # jedro ohrani ok/failed/qaP76Pass, odvrže passed/tests
+        if isinstance(d2["vercel"].get("qa"), dict):
+            d2["vercel"]["qa"].pop("passed", None)
+            d2["vercel"]["qa"].pop("tests", None)
     for key in ("syncLatest", "tokenHealthLatest"):
         p = d2.get("actions", {}).get("probes", {}).get(key)
         if isinstance(p, dict):

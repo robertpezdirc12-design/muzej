@@ -4067,3 +4067,16 @@ Stage Summary:
 - P79 ZAKLJUČEN: vzorčni prepis župnijskih matrik (polno leto 1886 + sidro 1887; 14 vpisov / 13 hiš; nad merili issue #18); dokaz parish-sample-transcription.json + verifikator p79 (I1–I8 PASS); HOUSE_VITALS 2 → 15; QA 80/80 (qa-p79).
 - Odprto (issue #18 naslednje faze): poročne/mrliške knjige za iste hiše; povezava lastniških imen 1825 (PT/PUA) ↔ matrični priimki (Strauš, Šimec, Jakopič, Križan, Podolivec …); poln prepis po letih = lastniška prioriteta.
 - ⚠ POZOR: p78 proof pina QA 79 — po deployu P79 (80/80) potreben re-issue p78 dokaza (resilient core: passed ≥ 79, brez pina številke).
+---
+Task ID: 48-a (p78 proof re-issue — elastčen QA invarianta po P79 deployu)
+Agent: Z.ai Code (glavni)
+Task: P79 je dvignil QA 79 → 80 — p78 operativni dokaz (pin QA 79) bi po deployu FAILAL; re-izdaja z elastčnim jedrom
+
+Work Log:
+- Diagnoza: p78 je pinil točno QA številko (passed 79 + tests 79 v jedru + "QA 79/79" v verdictu) — operativni audit NE sme registrirati števila kontrol (raste z fazami).
+- Popravek: I2_qa_79_79 → I2_qa_green (ok True, failed 0, passed ≥ 79, tests == passed); stabilno jedro odvrže passed/tests (ohrani ok/failed/qaP76Pass); verdict brez točne številke ("QA zelena — ok, 0 napak, ≥ 79 kontrol, qa-p76 True").
+- Re-izdaja po P79 deployu (54c1d3e): produkcija 200 (707 102 B — nov deploy), QA 80/80, geo v7/891, PAT rok 2026-11-14, Actions blokada True; I1–I9 PASS; dvojni --check PASS.
+
+Stage Summary:
+- p78 --check zdaj odporen tudi na rast QA; edini legalni FAIL vzroki: produkcija padla / QA < 79 ali ok=False / zrcala razsinhronizirana / PAT rotiran-potekel / Actions stanje spremenjeno (sanacija billinga → namenjen FAIL → nova izdaja).
+- Veriga popolna: p60–p79 --check vse PASS (p68 zamrznjen po C2).
