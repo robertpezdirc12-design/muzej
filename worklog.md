@@ -3922,3 +3922,41 @@ Stage Summary:
 - P75 IZVEDEN (opcija A1 = privzeta pot iz P74 packa; lastniški ukaz "nadaljuj" 2026-10-15): v7 = 891 vrstic (32.3 % izbire) / 879 base / multi 2 / cross 0 / ambRows 4; KONEC lažnih fuzij čez Blatte po celotnem registru (ista številka pod dvema sosednjima Blattoma = 2 realni parceli; per-Blatt numeracija); vrstice ostanejo v registru brez geometrije; opcija A2 (različen keep pri 29 base) in opcija B (georef Blattnih kart [~]) ostajata dokumentirani reverzijski poti.
 - QA 78/78 (repo + produkcija); E2E 19/19; tsc 0 / lint 0; veriga p60–p74 --check PASS; P9: SHEET_GEOREFS in dokazi P40–P74 nespremenjeni.
 - ⚠ NASLEDNJE LASTNIŠKE ODLOČITVE (P76+): ① reverzija C4 na A2 (min Blatt; različen keep pri 29) ali B (per-Blatt instance + razdelitev geometrije; georef [~]); ② per-Blatt instance sekcij (56; P60 moda B / PF protokol); ③ GitHub Actions billing (#7, operacijsko).
+
+---
+Task ID: 44-a (data faza — glavni agent)
+Agent: Z.ai Code (glavni)
+Task: P76 — lokalne sekcije: per-Blatt instance odločitveni paket (56 vrstic, p83–86 + p88; odprta lastniška točka P70 ①/P71 C1; vzorec P72/P74 — paket MERI, NE odloča)
+
+Work Log:
+- Obnova konteksta: repo @ 73cf117 (GitLab = GitHub = lokalna); owner ukaz "odlicno nadaljuj" (vzorec: naslednja faza = odprta točka ② per-Blatt instance sekcij); GitHub issues check: #7 CLOSED (audit-only), #6 OPEN (žetoni — VERCEL_TOKEN poteče 2026-10-14 ⚠, GitLab PAT 2026-11-09), #13 OPEN (aktivna veriga).
+- RAZISKA (merjeno, vse iz committed datotek): 56 sekcij vrstic (P69 sectionClass bajtno; p83 13 · p84 12 · p85 14 · p86 14 · p88 3; 31 base: 160–179 subset 14 · 641–659 subset 14 · 736–738 3) — vse strane Blatt II (P59 pageAttribution 5/5; p83 flag=true arbiatraža). v3 rowsEvidence 1079 — vseh 56 najdenih bajtno (page+base+owner; areaQK == P69).
+- KLJUČNE MERITVE: ① counterpar v v7: 31/31 base točno 1 preživela vrstica (Blatt I 23: p10 1/p11 5/p35 14/p40 3; Blatt II 8: p61 8), vsi z lat/lng (C1 I4 nasledstvo — 0 poligonov praznih), conf STRONG 4/MEDIUM 21/WEAK 6; ② evolucija C4: 13/31 base bilo v v6 cross setu (I p11 × II p61) — 8 obdržalo II (161–165, 174, 176, 179), 5 obdržalo I (166, 168, 171, 173, 175), 18 single-Blatt; ③ JEDRO — identitetna disjunktnost razširjena iz P69 vzorca na celoto: lastniki sekcija×counterpar 0 prekrivanj + sekcija×sekcija 0, hišne številke 0 isti / 31 različni (vsak base drugačen hn — 31/31); ④ P56 pageMap ponovitev bandov 5/5 (p83 161–181 / p84 162–182 / p86 160–180 ⊆ [p11 161–183 · p61 161–180]; p85 641–660 == p35; p88 721–740 == p40); ⑤ P60 moda B: 8 base attributed (163, 176 → inBand [61,83,84,86]; 644, 653–657 → inBand [85]) = 12/56 vrstic z band identiteto, 44 [~] (PF protokol = manjkajoči vir — ni v repu); ⑥ v3 forenzika lažnih fuzij: geoShared 56/56, ratio moda B 11 / moda A 5 / absurdni >4.3 20 (max 134.6786), median 2.5442, areaSuspect 1, conf 3/42/11, Σ areaQK {83: 3708, 84: 10273, 85: 10333, 86: 9544, 88: 4659} = 38517, kulture Alm 9/Dingf. 6/Wein 3/Wald 3 …, wohnort 56/56.
+- OPCIJE (predračun nad v7 — counters re-izračunani, ne deklarirani): A status quo 891/879/2/0/4; B1 re-admisija vseh 56 (base-ključ) 947/33/23/91 — crossBlatt 23 KRŠI C4 NIL-CLAIM → obvezen per-instanca ključ (base, stran): 0 kolizij (v7 ima 0 vrstic na sekcij straneh; 0 (base,stran) duplikatov) → crossBlatt 0/multiPage 2/ambRows 4; B2 samo P60 band 12 vrstic → 903/10/6/24 (+ instance ključ 0/2/4; 44 ostane izključenih); B3 geometrija per Blatt = [~] neizvedljivo (zahteva georef Blatt II karte + PF protokol).
+- SKRIPTA scripts/p76_ps_sections_perblatt_pack.py (deterministično, brez AI; I1–I9; pini P69 99962e24…/v3 af7479e4…/v7 4d701a71…/P59 650f13dc…/P56 2fddc76f…/P60 2c2b2ace…/v7 runtime 4bb40370…) → dokaz research/issue17/ps-sections-perblatt-pack.json + runtime src/data/atlas/ps-sections-perblatt-pack.json (bajtna projekcija — brez principle/inputs/invariants/ratioV3/geoSharedV3/pageMapBand).
+- 2 popravka med razvojem: odstranjen neporaabljen b1_inst; instance-ključ kontrola prestrukturirana (namesto fuzijske simulacije: 0 kolizij (base,stran) + 0 v7 vrstic na sekcij straneh → withInstanceKey = posledica modela).
+- VERIGA: p60–p67 + p70–p75 --check PASS (p68 zamrznjen po C2 — zgodovinsko); P76 --check bajtno PASS (I8 determinizem).
+- v7 runtime join NESPREMENJEN (sha 4bb40370… pin I9); SHEET_GEOREFS in dokazi P40–P75 nespremenjeni (lekcija P9).
+
+Stage Summary:
+- P76 PAKET IZDELAN (v7 NESPREMENJEN): 56 sekcij vrstic / 31 base — identitetno DISJUNKTNE od counterpartov (lastniki 0/0, hn 31/31 različni — dokazano na celoti), counterpar struktura (I 23 / II 8), C4 evolucija (13/18), P60 band 12/56, opcije A/B1/B2/B3 predračunane (B1 krši NIL-CLAIM z base-ključem — potreben instance ključ). Izbira opcije = LASTNIŠKA.
+- Sledi INTEGRACIJA (44-b, full-stack-developer): research.ts SECTIONS_PERBLATT_P76 + kartica P76 (Prepisi Kurrent, za P75) + qa-p76-sections-perblatt (79. kontrola; dve obliki repo/produkcija) + sources.ts N083PS P76 + audit §53 + README bullet + API komentar; nato push protokol (GitLab UA recept → GitHub → dvojna API verifikacija → Vercel).
+
+---
+Task ID: 44-b
+Agent: full-stack-developer
+Task: P76 — integracija (research.ts + kartica P76 + qa-p76 + sources + audit §53 + README + API komentar)
+
+Work Log:
+- Obnova konteksta: repo /home/z/muzej @ 73cf117 + delovno drevo z 44-a spremembami (skripta p76 + dokaz + runtime pack, ne-commitano); prebrana worklog 44-a + vzorci 42/43.
+- research.ts: NOVA konstanta SECTIONS_PERBLATT_P76 (verbatim iz runtime packa; status REVIEW; summary vsa polja; opcije A/B1/B2/B3 z note/violationNote/leftOut; statusLine; verdicti Si/En; next ④; hausNrDetail/p60Detail/sectionRows izpuščeni — QA bere runtime datoteko).
+- museum-research.tsx: NOVA kartica P76 "Lokalne sekcije — per-Blatt instance (odločitveni paket)" za P75 (h3 + StatusBadge REVIEW + uvod + 4 celice: Ključni števci / Identitetna disjunktnost / P60 moda B + v3 forenzika / Opcije + emerald NIL footer: paket NE SPREMINJA v7 joina, sha 4bb40370…, poti dokaz/runtime/skripta/API); poštene opombe na P70/P71 karticah (Si+En); vsebina kartic P70–P75 sicer NESPREMENJENA.
+- qa.ts: NOVA kontrola qa-p76-sections-perblatt (79.) po vzorcu qa-p74/qa-p75: p76Pins (TS pini) + p76FileCheck (celoven neodvisen preracun iz 5 runtime datotek: ps-pass1-layers sectionClass × ps-parcels-geo v7 × ps-blatt-headers × ps-perblatt-attribution × pack runtime); opcije re-izpeljane iz v7 + pack sectionRows (strip register-native); crossBlatt po P59 pageAttribution (NE row.blatt); instance-ključ kontrola (0 kolizij (base,stran)); dve obliki repo/produkcija.
+- sources.ts N083PS P76 segment (Si+En); audit §53; README P76 bullet (QA 79/79 v novem bulletu; zgodovinski "78/78" v P75 bulletu obdržan po vzorcu); API route komentar (P76; "dokazi P40–P74" → "P40–P75"; payload nespremenjen).
+- DEVIACIJE (izmerjene): P56 pageMap samo v dokazu — produkcija veja preverja parzelle ⊆ pinned bandi (vzorec P74 deviacije ②); README zgodovinski števec obdržan.
+- Verifikacija: tsc 0 · lint 0 · p76 --check bajtno PASS · QA repo 79/79 (qa-p76 True) · STROGI PROD-SIM (brez research/, BUILD 0): 79/79 produkcija · API v7/891 NESPREMENJENO · E2E agent-browser: kartica P76 ključni nizi v DOM, konzola 0 napak, mobilni 390×844 overflowX false, footer gap 0, screenshoti /tmp/p76/.
+
+Stage Summary:
+- P76 INTEGRACIJA ZAKLJUČENA: per-Blatt instance odločitveni paket (56 vrstic / 31 base; disjunktnost 0/0; hn 31/31 različni; P60 band 12/56; opcije A/B1/B2/B3) vidna na kartici P76 (za P75), dokazan z qa-p76-sections-perblatt — QA 78 → **79/79** (repo + produkcija).
+- v7 runtime join NESPREMENJEN (891/879, sha 4bb40370…); izbira opcije (A/B1/B2/B3) = LASTNIŠKA.
+- Spremenjene datoteke (44-b): research.ts, museum-research.tsx, qa.ts, sources.ts, docs/MUSEUM-AUDIT.md, README.md, api route. NE COMMITANO — commit/push opravi glavni agent.

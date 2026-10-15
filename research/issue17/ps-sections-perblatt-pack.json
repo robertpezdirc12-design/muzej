@@ -1,0 +1,1848 @@
+{
+  "task": "P76 — lokalne sekcije: per-Blatt instance odločitveni paket (56 vrstic; vzorec P72/P74 — paket MERI, NE odloča)",
+  "date": "2026-10-15",
+  "generatedBy": "scripts/p76_ps_sections_perblatt_pack.py (deterministično, brez AI ob delovanju)",
+  "version": 1,
+  "summary": {
+    "sectionRows": 56,
+    "sectionBases": 31,
+    "pages": {
+      "83": 13,
+      "84": 12,
+      "85": 14,
+      "86": 14,
+      "88": 3
+    },
+    "blatt": "II",
+    "sumAreaQK": {
+      "83": 3708,
+      "84": 10273,
+      "85": 10333,
+      "86": 9544,
+      "88": 4659
+    },
+    "sumAreaQKTotal": 38517,
+    "counterparts": {
+      "total": 31,
+      "byBlatt": {
+        "I": 23,
+        "II": 8
+      },
+      "byPage": {
+        "10": 1,
+        "11": 5,
+        "35": 14,
+        "40": 3,
+        "61": 8
+      },
+      "withGeometry": 31,
+      "conf": {
+        "STRONG": 4,
+        "MEDIUM": 21,
+        "WEAK": 6
+      }
+    },
+    "c4Evolution": {
+      "members": 13,
+      "keptII": 8,
+      "keptI": 5,
+      "singleBlatt": 18,
+      "keptIIBases": [
+        "161",
+        "162",
+        "163",
+        "164",
+        "165",
+        "174",
+        "176",
+        "179"
+      ],
+      "keptIBases": [
+        "166",
+        "168",
+        "171",
+        "173",
+        "175"
+      ]
+    },
+    "identity": {
+      "ownerOverlapVsCounterpart": 0,
+      "ownerOverlapWithinSections": 0,
+      "hausNr": {
+        "isti": 0,
+        "različni": 31
+      },
+      "pageMapBandOverlap": 5
+    },
+    "p60Band": {
+      "attributedBases": [
+        "163",
+        "176",
+        "644",
+        "653",
+        "654",
+        "655",
+        "656",
+        "657"
+      ],
+      "rowsInBand": 12,
+      "rowsWithoutBand": 44
+    },
+    "v3Forensics": {
+      "geoShared": 56,
+      "ratio": {
+        "n": 56,
+        "modaB": 11,
+        "modaA": 5,
+        "absurdniGT43": 20,
+        "median": 2.5442,
+        "max": 134.6786
+      },
+      "areaSuspect": 1,
+      "conf": {
+        "STRONG": 3,
+        "MEDIUM": 42,
+        "WEAK": 11
+      },
+      "kultureTop": {
+        "Wiese und Gfrett": 11,
+        "Alm": 9,
+        "Dingf.": 6,
+        "Aehn": 4,
+        "Wies": 4,
+        "Wein": 3,
+        "Wald": 3,
+        "Acker": 2
+      },
+      "wohnortRows": 56
+    }
+  },
+  "opcije": {
+    "A_statusQuo": {
+      "rows": 891,
+      "bases": 879,
+      "multiPage": 2,
+      "crossBlatt": 0,
+      "ambRows": 4,
+      "note": "v7 nespremenjen — sekcije v registru brez geometrije (dokaz P69 sectionClass)"
+    },
+    "B1_readmitAll": {
+      "rows": 947,
+      "bases": 879,
+      "multiPage": 33,
+      "crossBlatt": 23,
+      "ambRows": 91,
+      "added": 56,
+      "nilClaimViolation": true,
+      "violationNote": "crossBlatt 23 krši C4 NIL-CLAIM (23 base dobi vrstici na I in II)",
+      "withInstanceKey": {
+        "crossBlatt": 0,
+        "multiPage": 2,
+        "ambRows": 4,
+        "note": "ključ (base, stran) za sekcije — brez fuzije"
+      }
+    },
+    "B2_p60Band": {
+      "rows": 903,
+      "bases": 879,
+      "multiPage": 10,
+      "crossBlatt": 6,
+      "ambRows": 24,
+      "added": 12,
+      "withInstanceKey": {
+        "crossBlatt": 0,
+        "multiPage": 2,
+        "ambRows": 4
+      },
+      "leftOut": 44
+    },
+    "B3_georef": {
+      "executable": false,
+      "prerequisites": [
+        "georef Blatt II sekcije karte",
+        "PF protokol (vir ni v repu — lastniki pas-instanc ↔ poligoni)"
+      ],
+      "status": "[~] neizvedljivo danes"
+    }
+  },
+  "kulture": {
+    "Wiese und Gfrett": 11,
+    "Alm": 9,
+    "Dingf.": 6,
+    "Aehn": 4,
+    "Wies": 4,
+    "Wald": 3,
+    "Wein": 3,
+    "Acker": 2,
+    "Wiese und Gfrett Wiesen": 2,
+    "Wiesg": 2,
+    "Abtragsbuh": 1,
+    "Einhait und Gärten und Gärten und Gärten und Laubm.": 1,
+    "Einhait und Gärten und Laubm.": 1,
+    "Einhait und Laubm.": 1,
+    "Grünte": 1,
+    "Prunigad": 1,
+    "Rohrige": 1,
+    "Sträuch mit Gipfelung": 1,
+    "Weide": 1,
+    "Wiese und Gfrett Gfrett": 1
+  },
+  "hausNrDetail": {
+    "160": {
+      "sekcije": [
+        "8"
+      ],
+      "counterpar": [
+        "42"
+      ]
+    },
+    "161": {
+      "sekcije": [
+        "1 2",
+        "10"
+      ],
+      "counterpar": [
+        "40"
+      ]
+    },
+    "162": {
+      "sekcije": [
+        "1",
+        "1 2",
+        "11"
+      ],
+      "counterpar": [
+        "99"
+      ]
+    },
+    "163": {
+      "sekcije": [
+        "1",
+        "1 1",
+        "10"
+      ],
+      "counterpar": [
+        "99"
+      ]
+    },
+    "164": {
+      "sekcije": [
+        "1 2",
+        "2",
+        "5"
+      ],
+      "counterpar": [
+        "66"
+      ]
+    },
+    "165": {
+      "sekcije": [
+        "1 1",
+        "3",
+        "6"
+      ],
+      "counterpar": [
+        "21"
+      ]
+    },
+    "166": {
+      "sekcije": [
+        "1",
+        "1 6g",
+        "2"
+      ],
+      "counterpar": [
+        "40"
+      ]
+    },
+    "168": {
+      "sekcije": [
+        "1 3",
+        "3",
+        "9"
+      ],
+      "counterpar": [
+        "41"
+      ]
+    },
+    "171": {
+      "sekcije": [
+        "1 1",
+        "10",
+        "16"
+      ],
+      "counterpar": [
+        "40"
+      ]
+    },
+    "173": {
+      "sekcije": [
+        "1 9",
+        "2",
+        "4"
+      ],
+      "counterpar": [
+        "40"
+      ]
+    },
+    "174": {
+      "sekcije": [
+        "1 6g",
+        "2",
+        "9"
+      ],
+      "counterpar": [
+        "41"
+      ]
+    },
+    "175": {
+      "sekcije": [
+        "1 1",
+        "12",
+        "4"
+      ],
+      "counterpar": [
+        "44"
+      ]
+    },
+    "176": {
+      "sekcije": [
+        "1 2",
+        "18",
+        "7"
+      ],
+      "counterpar": [
+        "99"
+      ]
+    },
+    "179": {
+      "sekcije": [
+        "1 3",
+        "11",
+        "9"
+      ],
+      "counterpar": [
+        "40"
+      ]
+    },
+    "641": {
+      "sekcije": [
+        "1 16"
+      ],
+      "counterpar": [
+        "68"
+      ]
+    },
+    "642": {
+      "sekcije": [
+        "1 62"
+      ],
+      "counterpar": [
+        "35"
+      ]
+    },
+    "643": {
+      "sekcije": [
+        "1 19"
+      ],
+      "counterpar": [
+        "34"
+      ]
+    },
+    "644": {
+      "sekcije": [
+        "1 24"
+      ],
+      "counterpar": [
+        "34"
+      ]
+    },
+    "646": {
+      "sekcije": [
+        "1 22"
+      ],
+      "counterpar": [
+        "23"
+      ]
+    },
+    "648": {
+      "sekcije": [
+        "1 49"
+      ],
+      "counterpar": [
+        "68"
+      ]
+    },
+    "651": {
+      "sekcije": [
+        "1 17"
+      ],
+      "counterpar": [
+        "31"
+      ]
+    },
+    "652": {
+      "sekcije": [
+        "1 18"
+      ],
+      "counterpar": [
+        "20"
+      ]
+    },
+    "653": {
+      "sekcije": [
+        "1 17"
+      ],
+      "counterpar": [
+        "27"
+      ]
+    },
+    "654": {
+      "sekcije": [
+        "1 16"
+      ],
+      "counterpar": [
+        "27"
+      ]
+    },
+    "655": {
+      "sekcije": [
+        "1 7"
+      ],
+      "counterpar": [
+        "26"
+      ]
+    },
+    "656": {
+      "sekcije": [
+        "1 17"
+      ],
+      "counterpar": [
+        "26"
+      ]
+    },
+    "657": {
+      "sekcije": [
+        "1 14"
+      ],
+      "counterpar": [
+        "28"
+      ]
+    },
+    "659": {
+      "sekcije": [
+        "1 6"
+      ],
+      "counterpar": [
+        "30"
+      ]
+    },
+    "736": {
+      "sekcije": [
+        "1 8"
+      ],
+      "counterpar": [
+        "22"
+      ]
+    },
+    "737": {
+      "sekcije": [
+        "1 6"
+      ],
+      "counterpar": [
+        "66"
+      ]
+    },
+    "738": {
+      "sekcije": [
+        "1 6"
+      ],
+      "counterpar": [
+        "65"
+      ]
+    }
+  },
+  "p60Detail": {
+    "163": {
+      "attributedBlatt": "II",
+      "inBandPages": [
+        61,
+        83,
+        84,
+        86
+      ],
+      "inBandMedian": 0.9813,
+      "outInstances": [
+        {
+          "blatt": "I",
+          "medianRatio": 7.0
+        }
+      ]
+    },
+    "176": {
+      "attributedBlatt": "II",
+      "inBandPages": [
+        61,
+        83,
+        84,
+        86
+      ],
+      "inBandMedian": 0.9371,
+      "outInstances": [
+        {
+          "blatt": "I",
+          "medianRatio": 1.2828
+        }
+      ]
+    },
+    "644": {
+      "attributedBlatt": "II",
+      "inBandPages": [
+        85
+      ],
+      "inBandMedian": 0.8617,
+      "outInstances": [
+        {
+          "blatt": "I",
+          "medianRatio": 31.1429
+        }
+      ]
+    },
+    "653": {
+      "attributedBlatt": "II",
+      "inBandPages": [
+        85
+      ],
+      "inBandMedian": 0.9816,
+      "outInstances": [
+        {
+          "blatt": "I",
+          "medianRatio": 23.1667
+        }
+      ]
+    },
+    "654": {
+      "attributedBlatt": "II",
+      "inBandPages": [
+        85
+      ],
+      "inBandMedian": 1.2231,
+      "outInstances": [
+        {
+          "blatt": "I",
+          "medianRatio": 3.6984
+        }
+      ]
+    },
+    "655": {
+      "attributedBlatt": "II",
+      "inBandPages": [
+        85
+      ],
+      "inBandMedian": 0.8014,
+      "outInstances": [
+        {
+          "blatt": "I",
+          "medianRatio": 3.4913
+        }
+      ]
+    },
+    "656": {
+      "attributedBlatt": "II",
+      "inBandPages": [
+        85
+      ],
+      "inBandMedian": 0.8602,
+      "outInstances": [
+        {
+          "blatt": "I",
+          "medianRatio": 26.2692
+        }
+      ]
+    },
+    "657": {
+      "attributedBlatt": "II",
+      "inBandPages": [
+        85
+      ],
+      "inBandMedian": 1.2126,
+      "outInstances": [
+        {
+          "blatt": "I",
+          "medianRatio": 3.0278
+        }
+      ]
+    }
+  },
+  "statusLine": "P76: 56 sekcij vrstic (p83–86, p88; Blatt II) × 31 base — lastniki disjunktni 0/0 · hn 0 isti / 31 različni · counterpar v v7 31/31 (I 23 / II 8) · P60 band 8 base (12 vrstic) · opcije A/B1/B2 predračunane · izbira LASTNIŠKA",
+  "verdictSi": "56 sekcij vrstic na Blatt II (p83–86, p88; 31 base) je identitetno DISJUNKTNO od svojih v7 counterpartov (lastniki 0/0, hišne številke 31/31 različne) — dokazano na celotni množici, ne samo na P69 vzorcu. Per-Blatt instance so merjeno izvedljive: P60 moda B pokrije 12/56 vrstic (8 base), PF protokol (ni še v repu) je manjkajoči vir za ostale 44. Preprosta re-admisija (B1) bi z base-ključem ponovno ustvarila 23 cross-Blatt fuzij (krši C4 NIL-CLAIM) — zato izvedba zahteva per-instanca ključ. Izbira opcije (A status quo / B1 / B2 / B3 georef) = LASTNIŠKA.",
+  "verdictEn": "56 section rows on Blatt II (p83–86, p88; 31 bases) are identity-DISJOINT from their v7 counterparts (owners 0/0, house numbers 31/31 different) — proven on the full set, not just the P69 sample. Per-Blatt instances are measurably feasible: P60 mode B covers 12/56 rows (8 bases), the PF protocol (not yet in the repo) is the missing source for the other 44. Plain re-admission (B1) with the base key would re-create 23 cross-Blatt fusions (violates the C4 NIL-CLAIM) — execution therefore requires a per-instance key. The option choice (A status quo / B1 / B2 / B3 georef) = OWNER.",
+  "next": [
+    "① izbira opcije: A status quo (v7) / B1 vse 56 (obvezen instance ključ) / B2 samo P60 band 12 / B3 georef [~] = LASTNIŠKA odločitev",
+    "② PF protokol kot vir identitete sekcij (ni v repu; povezati lastnike pas-instanc s poligoni — P60/P61/P63–P68 next)",
+    "③ georef Blatt II sekcije karte (predpogoj B3) [~]",
+    "④ p83 dvojni blok 161–170 ×2 ostaja [~] (P69; 8× nebere zanesljivo)"
+  ],
+  "principle": "Paket MERI, NE odloča (vzorec P72/P74): 56 sekcij vrstic (P69 sectionClass bajtno) × v7 univerzum × v3 forenzika × P59/P56/P60 kontekst — vse meritve deterministične, brez AI ob delovanju; v7 join NESPREMENJEN (I9 sha pin). Opcije A/B1/B2/B3 so PREDRACUNANE nad v7 (counters re-izračunani, ne deklarirani); izbira = LASTNIKA. Identitetna disjunktnost (lastniki, hišne številke) je razširjena iz P69 vzorca (p83/p84 vs p11; p85 vs p35) na celotnih 56 vrstic.",
+  "inputs": {
+    "p69Sha256": "99962e24dc129a253e7100cb297aa6b73989f96b1d5ff7c95d55d8735c52829e",
+    "v3Sha256": "af7479e428182f381d3a2537896493d7cf86210fac7027221e22ac2aea218b53",
+    "v7Sha256": "4d701a71e2cd58a5cd8feefeec8534132ff717f8cb340ec20b4da1ba4a7aad6f",
+    "p59Sha256": "650f13dccab1da70a60d04c41ce9f7887ca94eafea8a0a7927c104ca899b76f3",
+    "p56Sha256": "2fddc76fb94b69fed55170220fa8dfa3ace4a9466043d264b8b8df788e78a50c",
+    "p60Sha256": "2c2b2acec50e5410d489fa3d4cfbc866f4a02403f3d33fb33e425d3c75e5e8f2",
+    "v7RuntimeSha256": "4bb4037064f427287061f592ee6ef75a497b1b4ddcf9a5e8173c911c9949234d"
+  },
+  "sectionRows": [
+    {
+      "page": 83,
+      "parzella": "161",
+      "base": "161",
+      "owner": "Hlebtzschand",
+      "stand": "Bauer grube",
+      "hausNr": "1 2",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Dingf.",
+      "klafter": 1103.0,
+      "areaQK": 1103.0,
+      "areaSuspect": false,
+      "parts": 1,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 0.0508,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        161,
+        181
+      ]
+    },
+    {
+      "page": 83,
+      "parzella": "162",
+      "base": "162",
+      "owner": "Hlebtzschand",
+      "hausNr": "1 2",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Abtragsbuh",
+      "klafter": 124.0,
+      "areaQK": 124.0,
+      "areaSuspect": false,
+      "parts": 2,
+      "conf": "STRONG",
+      "series": "S1",
+      "ratioV3": 3.4032,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        161,
+        181
+      ]
+    },
+    {
+      "page": 83,
+      "parzella": "163",
+      "base": "163",
+      "owner": "Stainzldt Wölfl",
+      "hausNr": "1 1",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Prunigad",
+      "klafter": 164.0,
+      "areaQK": 164.0,
+      "areaSuspect": false,
+      "parts": 1,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 1.2805,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        161,
+        181
+      ]
+    },
+    {
+      "page": 83,
+      "parzella": "164",
+      "base": "164",
+      "owner": "Hlebtzschand",
+      "hausNr": "1 2",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Rohrige",
+      "klafter": 39.0,
+      "areaQK": 39.0,
+      "areaSuspect": false,
+      "parts": 1,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 51.359,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        161,
+        181
+      ]
+    },
+    {
+      "page": 83,
+      "parzella": "165",
+      "base": "165",
+      "owner": "Stainzldt Wölfl",
+      "hausNr": "1 1",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Dingf.",
+      "klafter": 143.0,
+      "areaQK": 143.0,
+      "areaSuspect": false,
+      "parts": 1,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 10.7063,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        161,
+        181
+      ]
+    },
+    {
+      "page": 83,
+      "parzella": "166",
+      "base": "166",
+      "owner": "Stainzhan Wölfl",
+      "hausNr": "1 6g",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Dingf.",
+      "klafter": 261.0,
+      "areaQK": 261.0,
+      "areaSuspect": false,
+      "parts": 4,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 8.9119,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        161,
+        181
+      ]
+    },
+    {
+      "page": 83,
+      "parzella": "168",
+      "base": "168",
+      "owner": "Stainzhan Wölfl",
+      "hausNr": "1 3",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Acker",
+      "klafter": 527.0,
+      "areaQK": 527.0,
+      "areaSuspect": false,
+      "parts": 1,
+      "conf": "WEAK",
+      "series": "S1",
+      "ratioV3": 1.63,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        161,
+        181
+      ]
+    },
+    {
+      "page": 83,
+      "parzella": "171",
+      "base": "171",
+      "owner": "Stainzldt Wölfl",
+      "hausNr": "1 1",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Dingf.",
+      "klafter": 36.0,
+      "areaQK": 36.0,
+      "areaSuspect": false,
+      "parts": 2,
+      "conf": "WEAK",
+      "series": "S1",
+      "ratioV3": 18.7222,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        161,
+        181
+      ]
+    },
+    {
+      "page": 83,
+      "parzella": "173",
+      "base": "173",
+      "owner": "Stainzhan Wölfl",
+      "hausNr": "1 9",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Dingf.",
+      "klafter": 82.0,
+      "areaQK": 82.0,
+      "areaSuspect": false,
+      "parts": 1,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 44.3659,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        161,
+        181
+      ]
+    },
+    {
+      "page": 83,
+      "parzella": "174",
+      "base": "174",
+      "owner": "Stainzhan Wölfl",
+      "hausNr": "1 6g",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Sträuch mit Gipfelung",
+      "klafter": 538.0,
+      "areaQK": 538.0,
+      "areaSuspect": false,
+      "parts": 2,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 9.4963,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        161,
+        181
+      ]
+    },
+    {
+      "page": 83,
+      "parzella": "175",
+      "base": "175",
+      "owner": "Stainzldt Wölfl",
+      "hausNr": "1 1",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Grünte",
+      "klafter": 8.0,
+      "areaQK": 8.0,
+      "areaSuspect": false,
+      "parts": 1,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 46.25,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        161,
+        181
+      ]
+    },
+    {
+      "page": 83,
+      "parzella": "176",
+      "base": "176",
+      "owner": "Hlebtzschand",
+      "hausNr": "1 2",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Dingf.",
+      "klafter": 334.0,
+      "areaQK": 334.0,
+      "areaSuspect": false,
+      "parts": 1,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 0.9371,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        161,
+        181
+      ]
+    },
+    {
+      "page": 83,
+      "parzella": "179",
+      "base": "179",
+      "owner": "Stainzhan Wölfl",
+      "hausNr": "1 3",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Acker",
+      "klafter": 349.0,
+      "areaQK": 349.0,
+      "areaSuspect": false,
+      "parts": 1,
+      "conf": "WEAK",
+      "series": "S1",
+      "ratioV3": 4.9771,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        161,
+        181
+      ]
+    },
+    {
+      "page": 84,
+      "parzella": "162",
+      "base": "162",
+      "owner": "Schumitsch Matja",
+      "stand": "Bauer",
+      "hausNr": "1",
+      "wohnort": "Grüble",
+      "wohnortInherited": false,
+      "kultur": "Alm",
+      "joch": 1.0,
+      "klafter": 1024.0,
+      "areaQK": 2624.0,
+      "areaSuspect": false,
+      "parts": 2,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 0.1608,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        162,
+        182
+      ]
+    },
+    {
+      "page": 84,
+      "parzella": "163",
+      "base": "163",
+      "owner": "Schumitsch Matja",
+      "hausNr": "1",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Weide",
+      "klafter": 337.0,
+      "areaQK": 337.0,
+      "areaSuspect": false,
+      "parts": 1,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 0.6231,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        162,
+        182
+      ]
+    },
+    {
+      "page": 84,
+      "parzella": "164",
+      "base": "164",
+      "owner": "Hödle Schamb",
+      "hausNr": "2",
+      "wohnort": "Dragosch",
+      "wohnortInherited": false,
+      "kultur": "Alm",
+      "klafter": 630.0,
+      "areaQK": 630.0,
+      "areaSuspect": false,
+      "parts": 1,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 3.1794,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        162,
+        182
+      ]
+    },
+    {
+      "page": 84,
+      "parzella": "165",
+      "base": "165",
+      "owner": "Dragosch Gregor",
+      "hausNr": "3",
+      "wohnort": "Dragosch",
+      "wohnortInherited": true,
+      "kultur": "Alm",
+      "klafter": 397.0,
+      "areaQK": 397.0,
+      "areaSuspect": false,
+      "parts": 1,
+      "conf": "STRONG",
+      "series": "S1",
+      "ratioV3": 3.8564,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        162,
+        182
+      ]
+    },
+    {
+      "page": 84,
+      "parzella": "166",
+      "base": "166",
+      "owner": "Schumitsch Matja",
+      "hausNr": "1",
+      "wohnort": "Dragosch",
+      "wohnortInherited": true,
+      "kultur": "Alm",
+      "klafter": 182.0,
+      "areaQK": 182.0,
+      "areaSuspect": false,
+      "parts": 4,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 12.7802,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        162,
+        182
+      ]
+    },
+    {
+      "page": 84,
+      "parzella": "168",
+      "base": "168",
+      "owner": "Schumitsch Marlo",
+      "hausNr": "9",
+      "wohnort": "grüble",
+      "wohnortInherited": true,
+      "kultur": "Alm",
+      "klafter": 1213.0,
+      "areaQK": 1213.0,
+      "areaSuspect": false,
+      "parts": 1,
+      "conf": "WEAK",
+      "series": "S1",
+      "ratioV3": 0.7082,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        162,
+        182
+      ]
+    },
+    {
+      "page": 84,
+      "parzella": "171",
+      "base": "171",
+      "owner": "Stuller Mihlo",
+      "hausNr": "16",
+      "wohnort": "grüble",
+      "wohnortInherited": true,
+      "kultur": "Alm",
+      "klafter": 763.0,
+      "areaQK": 763.0,
+      "areaSuspect": false,
+      "parts": 2,
+      "conf": "WEAK",
+      "series": "S1",
+      "ratioV3": 0.8834,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        162,
+        182
+      ]
+    },
+    {
+      "page": 84,
+      "parzella": "173",
+      "base": "173",
+      "owner": "Hödle Schaw",
+      "hausNr": "2",
+      "wohnort": "grüble",
+      "wohnortInherited": true,
+      "kultur": "Wein",
+      "klafter": 519.0,
+      "areaQK": 519.0,
+      "areaSuspect": false,
+      "parts": 1,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 7.0096,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        162,
+        182
+      ]
+    },
+    {
+      "page": 84,
+      "parzella": "174",
+      "base": "174",
+      "owner": "Hödle Schaw",
+      "hausNr": "2",
+      "wohnort": "grüble",
+      "wohnortInherited": true,
+      "kultur": "Alm",
+      "klafter": 1251.0,
+      "areaQK": 1251.0,
+      "areaSuspect": false,
+      "parts": 2,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 4.0839,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        162,
+        182
+      ]
+    },
+    {
+      "page": 84,
+      "parzella": "175",
+      "base": "175",
+      "owner": "Schumitsch Marlo",
+      "hausNr": "4",
+      "wohnort": "grüble",
+      "wohnortInherited": true,
+      "kultur": "Wein",
+      "klafter": 1403.0,
+      "areaQK": 1403.0,
+      "areaSuspect": false,
+      "parts": 1,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 0.2637,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        162,
+        182
+      ]
+    },
+    {
+      "page": 84,
+      "parzella": "176",
+      "base": "176",
+      "owner": "Schumitsch Marlo",
+      "hausNr": "7",
+      "wohnort": "grüble",
+      "wohnortInherited": true,
+      "kultur": "Wein",
+      "klafter": 608.0,
+      "areaQK": 608.0,
+      "areaSuspect": false,
+      "parts": 1,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 0.5148,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        162,
+        182
+      ]
+    },
+    {
+      "page": 84,
+      "parzella": "179",
+      "base": "179",
+      "owner": "Schaffhatsch Matja",
+      "hausNr": "9",
+      "wohnort": "grüble",
+      "wohnortInherited": true,
+      "kultur": "Alm",
+      "klafter": 346.0,
+      "areaQK": 346.0,
+      "areaSuspect": false,
+      "parts": 1,
+      "conf": "WEAK",
+      "series": "S1",
+      "ratioV3": 5.0202,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        162,
+        182
+      ]
+    },
+    {
+      "page": 85,
+      "parzella": "641",
+      "base": "641",
+      "owner": "Stüllich Mihlo",
+      "stand": "Bauer",
+      "hausNr": "1 16",
+      "wohnort": "Grüble",
+      "wohnortInherited": false,
+      "kultur": "Wiese und Gfrett",
+      "klafter": 941.0,
+      "areaQK": 941.0,
+      "areaSuspect": false,
+      "parts": 3,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 1.5813,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        641,
+        660
+      ]
+    },
+    {
+      "page": 85,
+      "parzella": "642",
+      "base": "642",
+      "owner": "Schuster Mihlo",
+      "hausNr": "1 62",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Wiese und Gfrett",
+      "klafter": 296.0,
+      "areaQK": 296.0,
+      "areaSuspect": false,
+      "parts": 1,
+      "conf": "STRONG",
+      "series": "S1",
+      "ratioV3": 3.7872,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        641,
+        660
+      ]
+    },
+    {
+      "page": 85,
+      "parzella": "643",
+      "base": "643",
+      "owner": "Schimeg Mihel",
+      "hausNr": "1 19",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Wiese und Gfrett Wiesen",
+      "klafter": 706.0,
+      "areaQK": 706.0,
+      "areaSuspect": false,
+      "parts": 1,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 2.6728,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        641,
+        660
+      ]
+    },
+    {
+      "page": 85,
+      "parzella": "644",
+      "base": "644",
+      "owner": "Preinig Mihel",
+      "hausNr": "1 24",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Wiese und Gfrett Gfrett",
+      "klafter": 759.0,
+      "areaQK": 759.0,
+      "areaSuspect": false,
+      "parts": 2,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 0.8617,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        641,
+        660
+      ]
+    },
+    {
+      "page": 85,
+      "parzella": "646",
+      "base": "646",
+      "owner": "Milleger Johann",
+      "hausNr": "1 22",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Wiese und Gfrett",
+      "klafter": 786.0,
+      "areaQK": 786.0,
+      "areaSuspect": false,
+      "parts": 3,
+      "conf": "WEAK",
+      "series": "S1",
+      "ratioV3": 2.7201,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        641,
+        660
+      ]
+    },
+    {
+      "page": 85,
+      "parzella": "648",
+      "base": "648",
+      "owner": "Schimeg Mihel",
+      "hausNr": "1 49",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Wiese und Gfrett",
+      "klafter": 700.0,
+      "areaQK": 700.0,
+      "areaSuspect": false,
+      "parts": 1,
+      "conf": "WEAK",
+      "series": "S1",
+      "ratioV3": 0.1871,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        641,
+        660
+      ]
+    },
+    {
+      "page": 85,
+      "parzella": "651",
+      "base": "651",
+      "owner": "Knall Anna",
+      "hausNr": "1 17",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Wiese und Gfrett Wiesen",
+      "klafter": 783.0,
+      "areaQK": 783.0,
+      "areaSuspect": false,
+      "parts": 2,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 8.6871,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        641,
+        660
+      ]
+    },
+    {
+      "page": 85,
+      "parzella": "652",
+      "base": "652",
+      "owner": "Schimeg Barbara",
+      "hausNr": "1 18",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Wiese und Gfrett",
+      "klafter": 710.0,
+      "areaQK": 710.0,
+      "areaSuspect": false,
+      "parts": 5,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 2.4155,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        641,
+        660
+      ]
+    },
+    {
+      "page": 85,
+      "parzella": "653",
+      "base": "653",
+      "owner": "Knall Anna",
+      "hausNr": "1 17",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Wiese und Gfrett",
+      "klafter": 708.0,
+      "areaQK": 708.0,
+      "areaSuspect": false,
+      "parts": 1,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 0.9816,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        641,
+        660
+      ]
+    },
+    {
+      "page": 85,
+      "parzella": "654",
+      "base": "654",
+      "owner": "Stüllich Mihlo",
+      "hausNr": "1 16",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Wiese und Gfrett",
+      "klafter": 762.0,
+      "areaQK": 762.0,
+      "areaSuspect": false,
+      "parts": 1,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 1.2231,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        641,
+        660
+      ]
+    },
+    {
+      "page": 85,
+      "parzella": "655",
+      "base": "655",
+      "owner": "Lukantsitsch Marla",
+      "hausNr": "1 7",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Wiese und Gfrett",
+      "klafter": 1002.0,
+      "areaQK": 1002.0,
+      "areaSuspect": false,
+      "parts": 1,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 0.8014,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        641,
+        660
+      ]
+    },
+    {
+      "page": 85,
+      "parzella": "656",
+      "base": "656",
+      "owner": "Knall Anna",
+      "hausNr": "1 17",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Wiese und Gfrett",
+      "klafter": 794.0,
+      "areaQK": 794.0,
+      "areaSuspect": false,
+      "parts": 2,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 0.8602,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        641,
+        660
+      ]
+    },
+    {
+      "page": 85,
+      "parzella": "657",
+      "base": "657",
+      "owner": "Novakl Martin",
+      "hausNr": "1 14",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Wiese und Gfrett",
+      "klafter": 809.0,
+      "areaQK": 809.0,
+      "areaSuspect": false,
+      "parts": 5,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 1.2126,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        641,
+        660
+      ]
+    },
+    {
+      "page": 85,
+      "parzella": "659",
+      "base": "659",
+      "owner": "Kubatschitsch Ja",
+      "hausNr": "1 6",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Wiese und Gfrett",
+      "klafter": 577.0,
+      "areaQK": 577.0,
+      "areaSuspect": false,
+      "parts": 1,
+      "conf": "WEAK",
+      "series": "S1",
+      "ratioV3": 0.3934,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        641,
+        660
+      ]
+    },
+    {
+      "page": 86,
+      "parzella": "160",
+      "base": "160",
+      "owner": "LahNitschek Hülfse Mann",
+      "hausNr": "8",
+      "wohnort": "Grüble",
+      "wohnortInherited": false,
+      "kultur": "Einhait und Gärten und Laubm.",
+      "joch": 1.0,
+      "klafter": 820.0,
+      "areaQK": 2420.0,
+      "areaSuspect": false,
+      "parts": 2,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 0.6793,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        160,
+        180
+      ]
+    },
+    {
+      "page": 86,
+      "parzella": "161",
+      "base": "161",
+      "owner": "LahNitschek Waisen",
+      "hausNr": "10",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Einhait und Laubm.",
+      "joch": 1.0,
+      "klafter": 5.0,
+      "areaQK": 1605.0,
+      "areaSuspect": false,
+      "parts": 1,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 0.0349,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        160,
+        180
+      ]
+    },
+    {
+      "page": 86,
+      "parzella": "162",
+      "base": "162",
+      "owner": "Pechir gneis",
+      "hausNr": "11",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Wald",
+      "klafter": 705.0,
+      "areaQK": 705.0,
+      "areaSuspect": false,
+      "parts": 2,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 0.5986,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        160,
+        180
+      ]
+    },
+    {
+      "page": 86,
+      "parzella": "163",
+      "base": "163",
+      "owner": "Laune Hülfse",
+      "hausNr": "10",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Aehn",
+      "klafter": 214.0,
+      "areaQK": 214.0,
+      "areaSuspect": false,
+      "parts": 1,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 0.9813,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        160,
+        180
+      ]
+    },
+    {
+      "page": 86,
+      "parzella": "164",
+      "base": "164",
+      "owner": "Hantel Hlaw",
+      "hausNr": "5",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Aehn",
+      "klafter": 432.0,
+      "areaQK": 432.0,
+      "areaSuspect": false,
+      "parts": 1,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 4.6366,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        160,
+        180
+      ]
+    },
+    {
+      "page": 86,
+      "parzella": "165",
+      "base": "165",
+      "owner": "LahNitschek Hlaw",
+      "hausNr": "6",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Aehn",
+      "klafter": 343.0,
+      "areaQK": 343.0,
+      "areaSuspect": false,
+      "parts": 1,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 4.4636,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        160,
+        180
+      ]
+    },
+    {
+      "page": 86,
+      "parzella": "166",
+      "base": "166",
+      "owner": "Schober Hülfse",
+      "hausNr": "2",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Wald",
+      "klafter": 314.0,
+      "areaQK": 314.0,
+      "areaSuspect": false,
+      "parts": 4,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 7.4076,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        160,
+        180
+      ]
+    },
+    {
+      "page": 86,
+      "parzella": "168",
+      "base": "168",
+      "owner": "Schober Hülfse",
+      "hausNr": "3",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Wald",
+      "klafter": 237.0,
+      "areaQK": 237.0,
+      "areaSuspect": false,
+      "parts": 1,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 3.6245,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        160,
+        180
+      ]
+    },
+    {
+      "page": 86,
+      "parzella": "171",
+      "base": "171",
+      "owner": "Laune Hülfse",
+      "hausNr": "10",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Wies",
+      "klafter": 33.0,
+      "areaQK": 33.0,
+      "areaSuspect": false,
+      "parts": 2,
+      "conf": "WEAK",
+      "series": "S1",
+      "ratioV3": 20.4242,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        160,
+        180
+      ]
+    },
+    {
+      "page": 86,
+      "parzella": "173",
+      "base": "173",
+      "owner": "Noaßl Mande",
+      "hausNr": "4",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Wies",
+      "klafter": 609.0,
+      "areaQK": 609.0,
+      "areaSuspect": false,
+      "parts": 1,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 5.9737,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        160,
+        180
+      ]
+    },
+    {
+      "page": 86,
+      "parzella": "174",
+      "base": "174",
+      "owner": "Haindlan Hülfse",
+      "hausNr": "9",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Wies",
+      "klafter": 620.0,
+      "areaQK": 620.0,
+      "areaSuspect": false,
+      "parts": 2,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 8.2403,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        160,
+        180
+      ]
+    },
+    {
+      "page": 86,
+      "parzella": "175",
+      "base": "175",
+      "owner": "LahNitschek Hülfse",
+      "hausNr": "12",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Wies",
+      "klafter": 388.0,
+      "areaQK": 388.0,
+      "areaSuspect": false,
+      "parts": 1,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 0.9536,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        160,
+        180
+      ]
+    },
+    {
+      "page": 86,
+      "parzella": "176",
+      "base": "176",
+      "owner": "Schimey Patteu",
+      "hausNr": "18",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Einhait und Gärten und Gärten und Gärten und Laubm.",
+      "klafter": 289.0,
+      "areaQK": 289.0,
+      "areaSuspect": false,
+      "parts": 1,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 1.083,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        160,
+        180
+      ]
+    },
+    {
+      "page": 86,
+      "parzella": "179",
+      "base": "179",
+      "owner": "Pechir gneis",
+      "hausNr": "11",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Aehn",
+      "klafter": 1335.0,
+      "areaQK": 1335.0,
+      "areaSuspect": false,
+      "parts": 1,
+      "conf": "WEAK",
+      "series": "S1",
+      "ratioV3": 1.3011,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        160,
+        180
+      ]
+    },
+    {
+      "page": 88,
+      "parzella": "736",
+      "base": "736",
+      "owner": "Dahofstättlich Malfg",
+      "hausNr": "1 8",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Alm",
+      "klafter": 4447.0,
+      "areaQK": 4447.0,
+      "areaSuspect": true,
+      "parts": 1,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 0.5275,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        721,
+        740
+      ]
+    },
+    {
+      "page": 88,
+      "parzella": "737",
+      "base": "737",
+      "owner": "Häuslty Ghan",
+      "stand": "Bauer",
+      "hausNr": "1 6",
+      "wohnort": "Grüble",
+      "wohnortInherited": false,
+      "kultur": "Wiesg",
+      "klafter": 56.0,
+      "areaQK": 56.0,
+      "areaSuspect": false,
+      "parts": 2,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 134.6786,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        721,
+        740
+      ]
+    },
+    {
+      "page": 88,
+      "parzella": "738",
+      "base": "738",
+      "owner": "Gmuniden",
+      "hausNr": "1 6",
+      "wohnort": "Grüble",
+      "wohnortInherited": true,
+      "kultur": "Wiesg",
+      "klafter": 156.0,
+      "areaQK": 156.0,
+      "areaSuspect": false,
+      "parts": 3,
+      "conf": "MEDIUM",
+      "series": "S1",
+      "ratioV3": 14.4167,
+      "geoSharedV3": true,
+      "pageMapBand": [
+        721,
+        740
+      ]
+    }
+  ],
+  "invariants": [
+    "I1 vhodni pini (6× sha256 + v7 runtime + števci)",
+    "I2 sekcije 56 bajtno == P69; 56/56 v v3 (areaQK ==)",
+    "I3 univerzum: Blatt II 5/5; counterpar 31/31 (I 23 / II 8; lat/lng 31/31; conf 4/21/6); evolucija C4 13 (II 8 / I 5) / 18",
+    "I4 identiteta: lastniki 0/0 · hn 0/31 · pageMap 5/5",
+    "I5 v3 forenzika: geoShared 56/56 · ratio 11/5/20 · Σ areaQK 38517 · kulture · wohnort 56; izpis brez lat/lng/areaModern",
+    "I6 P60 band: 8 base · 12/56 vrstic · inBand strane == pin",
+    "I7 opcije predračun == pin (A/B1/B2 + instance ključ; B3 [~])",
+    "I8 determinizem (--check bajtno)",
+    "I9 v7 runtime join NESPREMENJEN (sha256 pin)"
+  ]
+}

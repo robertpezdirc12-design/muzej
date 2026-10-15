@@ -66,8 +66,16 @@ export const dynamic = "force-static";
  *    (Δ +5.94 %); sosledje 652/51.8 m (nespremenjeno); vrstice ostanejo
  *    v registru brez geometrije; v6 arhiviran v dokazu; PAYLOAD/
  *    schema NESPREMENJENA.
+ *  · P76: LOKALNE SEKCIJE — per-Blatt instance odločitveni paket
+ *    (odprta točka P70 ①/P71 C1; vzorec P72/P74 — MERI, NE odloča)
+ *    — 56 sekcij vrstic (p83–86 + p88; Blatt II) × 31 base identitetno
+ *    disjunktne od counterpartov (lastniki 0/0, hn 31/31 različne);
+ *    counterpar v v7 31/31 (I 23 / II 8); P60 band 12/56; opcije
+ *    A/B1/B2/B3 predračunane (B1 krši NIL-CLAIM z base-ključem →
+ *    per-instanca ključ) — v7 runtime NESPREMENJEN (dokaz research/
+ *    issue17/ps-sections-perblatt-pack.json; izbira LASTNIKA).
  *
- * Status: SANITIZED-DETERMINISTIC. SHEET_GEOREFS in dokazi P40–P74
+ * Status: SANITIZED-DETERMINISTIC. SHEET_GEOREFS in dokazi P40–P75
  * nespremanjeni; v2/v3/v4/v5/v6 dokazi arhivirani (research/issue17/
  * ps-parcels-geo-v2.json, -v3.json, -v4.json, -v5.json, -v6.json).
  *

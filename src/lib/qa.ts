@@ -57,6 +57,7 @@ import {
   SPLIT_OPTION_A_P73,
   CROSS_BLATT_P74,
   CROSS_SPLIT_A1_P75,
+  SECTIONS_PERBLATT_P76,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -1352,6 +1353,489 @@ function p74FileCheck(
     }
   }
   return { errors, detail: p74FileDetail };
+}
+
+/**
+ * qa-p76 TS pini (SECTIONS_PERBLATT_P76) — izvlečeno iz runQA (vzorec p75Pins).
+ */
+function p76Pins(c76: typeof SECTIONS_PERBLATT_P76, p72canon: (m: Record<string, unknown>) => string): string[] {
+  const errors: string[] = [];
+  if (c76.version !== 1) errors.push(`pini: version ≠ 1 (${c76.version})`);
+  if (c76.date !== "2026-10-15") errors.push(`pini: date ≠ 2026-10-15 (${c76.date})`);
+  if (!c76.task.includes("per-Blatt instance")) errors.push("pini: task ni P76 per-Blatt instance");
+  if (c76.status !== "REVIEW") errors.push(`pini: status ≠ REVIEW (${c76.status})`);
+  if (c76.next.length !== 4) errors.push(`pini: next ≠ 4 točk (${c76.next.length})`);
+  {
+    const s = c76.summary;
+    if (s.sectionRows !== 56 || s.sectionBases !== 31)
+      errors.push(`pini: sekcije ≠ 56/31 (${s.sectionRows}/${s.sectionBases})`);
+    if (p72canon(s.pages) !== p72canon({ "83": 13, "84": 12, "85": 14, "86": 14, "88": 3 }))
+      errors.push(`pini: strani ≠ pin (${p72canon(s.pages)})`);
+    if (s.blatt !== "II") errors.push(`pini: blatt ≠ II (${s.blatt})`);
+    if (p72canon(s.sumAreaQK) !== p72canon({ "83": 3708, "84": 10273, "85": 10333, "86": 9544, "88": 4659 })
+      || s.sumAreaQKTotal !== 38517)
+      errors.push(`pini: Σ areaQK ≠ pin (${p72canon(s.sumAreaQK)}/${s.sumAreaQKTotal})`);
+    const cp = s.counterparts;
+    if (cp.total !== 31 || cp.withGeometry !== 31)
+      errors.push(`pini: counterpar ≠ 31/31 (${cp.total}/${cp.withGeometry})`);
+    if (p72canon(cp.byBlatt) !== p72canon({ I: 23, II: 8 }) || p72canon(cp.byPage) !== p72canon({ "10": 1, "11": 5, "35": 14, "40": 3, "61": 8 }))
+      errors.push(`pini: counterpar disti ≠ pin (${p72canon(cp.byBlatt)} / ${p72canon(cp.byPage)})`);
+    if (cp.conf.STRONG !== 4 || cp.conf.MEDIUM !== 21 || cp.conf.WEAK !== 6)
+      errors.push(`pini: counterpar conf ≠ 4/21/6 (${cp.conf.STRONG}/${cp.conf.MEDIUM}/${cp.conf.WEAK})`);
+    const c4 = s.c4Evolution;
+    if (c4.members !== 13 || c4.keptII !== 8 || c4.keptI !== 5 || c4.singleBlatt !== 18)
+      errors.push(`pini: C4 ≠ 13/8/5/18 (${c4.members}/${c4.keptII}/${c4.keptI}/${c4.singleBlatt})`);
+    if (JSON.stringify(c4.keptIIBases) !== JSON.stringify(["161", "162", "163", "164", "165", "174", "176", "179"])
+      || JSON.stringify(c4.keptIBases) !== JSON.stringify(["166", "168", "171", "173", "175"]))
+      errors.push(`pini: C4 kept base seznami ≠ pin (${c4.keptIIBases.join(",")}/${c4.keptIBases.join(",")})`);
+    const id = s.identity;
+    if (id.ownerOverlapVsCounterpart !== 0 || id.ownerOverlapWithinSections !== 0)
+      errors.push(`pini: lastniki ≠ 0/0 (${id.ownerOverlapVsCounterpart}/${id.ownerOverlapWithinSections})`);
+    if (id.hausNr.isti !== 0 || id.hausNr["različni"] !== 31)
+      errors.push(`pini: hn ≠ 0/31 (${id.hausNr.isti}/${id.hausNr["različni"]})`);
+    if (id.pageMapBandOverlap !== 5) errors.push(`pini: pageMap band overlap ≠ 5 (${id.pageMapBandOverlap})`);
+    const b60 = s.p60Band;
+    if (JSON.stringify(b60.attributedBases) !== JSON.stringify(["163", "176", "644", "653", "654", "655", "656", "657"]))
+      errors.push(`pini: P60 attributed base ≠ pin (${b60.attributedBases.join(",")})`);
+    if (b60.rowsInBand !== 12 || b60.rowsWithoutBand !== 44)
+      errors.push(`pini: P60 band vrstice ≠ 12/44 (${b60.rowsInBand}/${b60.rowsWithoutBand})`);
+    const f3 = s.v3Forensics;
+    if (f3.geoShared !== 56) errors.push(`pini: geoShared ≠ 56 (${f3.geoShared})`);
+    if (f3.ratio.n !== 56 || f3.ratio.modaB !== 11 || f3.ratio.modaA !== 5 || f3.ratio.absurdniGT43 !== 20
+      || f3.ratio.median !== 2.5442 || f3.ratio.max !== 134.6786)
+      errors.push(`pini: ratio ≠ 56/11/5/20/2.5442/134.6786 (${f3.ratio.n}/${f3.ratio.modaB}/${f3.ratio.modaA}/${f3.ratio.absurdniGT43}/${f3.ratio.median}/${f3.ratio.max})`);
+    if (f3.areaSuspect !== 1) errors.push(`pini: areaSuspect ≠ 1 (${f3.areaSuspect})`);
+    if (f3.conf.STRONG !== 3 || f3.conf.MEDIUM !== 42 || f3.conf.WEAK !== 11)
+      errors.push(`pini: v3 conf ≠ 3/42/11 (${f3.conf.STRONG}/${f3.conf.MEDIUM}/${f3.conf.WEAK})`);
+    if (p72canon(f3.kultureTop) !== p72canon({ "Wiese und Gfrett": 11, "Alm": 9, "Dingf.": 6, "Aehn": 4, "Wies": 4, "Wein": 3, "Wald": 3, "Acker": 2 }))
+      errors.push(`pini: kultureTop ≠ pin (${p72canon(f3.kultureTop)})`);
+    if (f3.wohnortRows !== 56) errors.push(`pini: wohnort ≠ 56 (${f3.wohnortRows})`);
+  }
+  {
+    const o = c76.opcije;
+    if (o.A_statusQuo.rows !== 891 || o.A_statusQuo.bases !== 879 || o.A_statusQuo.multiPage !== 2 || o.A_statusQuo.crossBlatt !== 0 || o.A_statusQuo.ambRows !== 4)
+      errors.push(`pini: opcija A ≠ 891/879/2/0/4 (${o.A_statusQuo.rows}/${o.A_statusQuo.bases}/${o.A_statusQuo.multiPage}/${o.A_statusQuo.crossBlatt}/${o.A_statusQuo.ambRows})`);
+    const b1 = o.B1_readmitAll;
+    if (b1.rows !== 947 || b1.bases !== 879 || b1.multiPage !== 33 || b1.crossBlatt !== 23 || b1.ambRows !== 91 || b1.added !== 56)
+      errors.push(`pini: opcija B1 ≠ 947/879/33/23/91 (+56) (${b1.rows}/${b1.bases}/${b1.multiPage}/${b1.crossBlatt}/${b1.ambRows}/${b1.added})`);
+    if (b1.nilClaimViolation !== true) errors.push("pini: B1 nilClaimViolation ≠ true");
+    if (b1.withInstanceKey.crossBlatt !== 0 || b1.withInstanceKey.multiPage !== 2 || b1.withInstanceKey.ambRows !== 4)
+      errors.push(`pini: B1 instance ključ ≠ 0/2/4 (${b1.withInstanceKey.crossBlatt}/${b1.withInstanceKey.multiPage}/${b1.withInstanceKey.ambRows})`);
+    const b2 = o.B2_p60Band;
+    if (b2.rows !== 903 || b2.bases !== 879 || b2.multiPage !== 10 || b2.crossBlatt !== 6 || b2.ambRows !== 24 || b2.added !== 12 || b2.leftOut !== 44)
+      errors.push(`pini: opcija B2 ≠ 903/879/10/6/24 (+12, −44) (${b2.rows}/${b2.bases}/${b2.multiPage}/${b2.crossBlatt}/${b2.ambRows}/${b2.added}/${b2.leftOut})`);
+    if (b2.withInstanceKey.crossBlatt !== 0 || b2.withInstanceKey.multiPage !== 2 || b2.withInstanceKey.ambRows !== 4)
+      errors.push(`pini: B2 instance ključ ≠ 0/2/4 (${b2.withInstanceKey.crossBlatt}/${b2.withInstanceKey.multiPage}/${b2.withInstanceKey.ambRows})`);
+    if (o.B3_georef.executable !== false) errors.push("pini: B3 executable ≠ false");
+  }
+  return errors;
+}
+
+/**
+ * qa-p76 datotečna veja — izvlečena iz runQA (isti vzorec kot p74FileCheck/
+ * p75FileCheck). CELOVEN neodvisen preracun per-Blatt instance paketa iz
+ * runtime datotek: P69 sectionClass × v7 runtime × P59 pageAttribution ×
+ * P60 band × pack runtime (dve obliki: repo bere tudi dokaze iz research/,
+ * produkcija preracunava izključno iz runtime datotek).
+ */
+function p76FileCheck(
+  opts: QAOptions,
+  p72canon: (m: Record<string, unknown>) => string,
+  d76: typeof SECTIONS_PERBLATT_P76,
+): { errors: string[]; detail: string } {
+  const errors: string[] = [];
+  let p76FileDetail = "datoteke niso preverjene (readFile ni na voljo) — celovita kontrola teče na /api/qa";
+  if (opts.readFile) {
+    const rawRt76 = opts.readFile("src/data/atlas/ps-parcels-geo.json");
+    const rawP5976 = opts.readFile("src/data/atlas/ps-blatt-headers.json");
+    const rawP6976 = opts.readFile("src/data/atlas/ps-pass1-layers.json");
+    const rawP6076 = opts.readFile("src/data/atlas/ps-perblatt-attribution.json");
+    const rawPack76 = opts.readFile("src/data/atlas/ps-sections-perblatt-pack.json");
+    if (rawRt76 === null || rawP5976 === null || rawP6976 === null || rawP6076 === null || rawPack76 === null) {
+      errors.push("runtime ps-parcels-geo / ps-blatt-headers / ps-pass1-layers / ps-perblatt-attribution / ps-sections-perblatt-pack ni berljiv");
+    } else {
+      try {
+        type P76Row = {
+          page: number;
+          parzella?: string | null;
+          base: string;
+          owner: string | null;
+          hausNr?: string | null;
+          areaQK?: number | null;
+          areaSuspect?: boolean;
+          conf?: string | null;
+          lat?: number | null;
+          lng?: number | null;
+        };
+        type P76SecRow = { page: number; parzella: string; base: string; owner: string; hausNr?: string | null; areaQK?: number | null };
+        const rt76 = JSON.parse(rawRt76) as {
+          version?: number;
+          v7Delta?: { after?: { rows?: number; bases?: number; multiPage?: number; crossBlatt?: number } };
+          rows: P76Row[];
+        };
+        const p5976 = JSON.parse(rawP5976) as { pageAttribution: Record<string, { blatt?: string | null }> };
+        const p6976 = JSON.parse(rawP6976) as { sectionClass?: { rows?: P76SecRow[] } };
+        const p6076 = JSON.parse(rawP6076) as { bases?: Record<string, { inBand?: { pages?: number[] } }> };
+        const pack76 = JSON.parse(rawPack76) as {
+          version?: number;
+          task?: string;
+          date?: string;
+          statusLine?: string;
+          verdictSi?: string;
+          verdictEn?: string;
+          next?: string[];
+          summary?: Record<string, unknown>;
+          opcije?: Record<string, unknown>;
+          kulture?: Record<string, number>;
+          hausNrDetail?: Record<string, unknown>;
+          p60Detail?: Record<string, unknown>;
+          sectionRows?: P76SecRow[];
+        };
+        const blattOf76 = (page: number): string | null => p5976.pageAttribution[String(page)]?.blatt ?? null;
+        const SEC_PAGES76 = new Set([83, 84, 85, 86, 88]);
+        const PM_SEC76: Record<string, [number, number]> = {
+          "83": [161, 181], "84": [162, 182], "85": [641, 660], "86": [160, 180], "88": [721, 740],
+        };
+        const PM_GLOB76: Record<string, [number, number]> = { "11": [161, 183], "61": [161, 180], "35": [641, 660], "40": [721, 740] };
+        const secCls76 = p6976.sectionClass?.rows ?? [];
+        const secPack76 = pack76.sectionRows ?? [];
+        const byBaseRt76 = new Map<string, P76Row[]>();
+        for (const r of rt76.rows) byBaseRt76.set(r.base, [...(byBaseRt76.get(r.base) ?? []), r]);
+        const secBaseSet76 = new Set(secCls76.map((s) => s.base));
+        const secBases76 = [...secBaseSet76].sort((a, b) => Number(a) - Number(b));
+        const perPage76: Record<string, number> = {};
+        const cpBlatt76: Record<string, number> = {};
+        let hnIsti76 = 0;
+        let hnRaz76 = 0;
+        let rowsInBand76 = 0;
+        let a76 = { rows: 0, bases: 0, multiPage: 0, crossBlatt: 0, ambRows: 0 };
+        let b176 = { rows: 0, bases: 0, multiPage: 0, crossBlatt: 0, ambRows: 0 };
+        let b276 = { rows: 0, bases: 0, multiPage: 0, crossBlatt: 0, ambRows: 0 };
+        // (a) 56 vrstic / 31 base / per-page {83:13, 84:12, 85:14, 86:14, 88:3};
+        //     pack sectionRows == P69 sectionClass (page|base|owner)
+        for (const s of secCls76) perPage76[String(s.page)] = (perPage76[String(s.page)] ?? 0) + 1;
+        if (secCls76.length !== 56) errors.push(`(a) P69 sectionClass vrstic ≠ 56 (${secCls76.length})`);
+        if (p72canon(perPage76) !== p72canon(d76.summary.pages)) errors.push(`(a) per-page ≠ pin (${p72canon(perPage76)})`);
+        if (secBases76.length !== 31) errors.push(`(a) base ≠ 31 (${secBases76.length})`);
+        if (secPack76.length !== 56) errors.push(`(a) pack sectionRows ≠ 56 (${secPack76.length})`);
+        {
+          const clsKeys = new Set(secCls76.map((s) => `${s.page}|${s.base}|${s.owner}`));
+          const packKeys = new Set(secPack76.map((s) => `${s.page}|${s.base}|${s.owner}`));
+          if (clsKeys.size !== 56 || packKeys.size !== 56 || ![...clsKeys].every((k) => packKeys.has(k)))
+            errors.push("(a) pack sectionRows ≠ P69 sectionClass (page|base|owner)");
+        }
+        // (b) vse strane Blatt II po P59 (NE po row.blatt — nezanesljivo)
+        {
+          let b2ok76 = 0;
+          for (const pg of Object.keys(d76.summary.pages)) if (blattOf76(Number(pg)) === d76.summary.blatt) b2ok76 += 1;
+          if (b2ok76 !== 5) errors.push(`(b) strani Blatt II ≠ 5/5 (${b2ok76})`);
+        }
+        // (c) counterpar 31/31: točno 1 vrstica v v7 (Blatt po P59 pageAttribution; lat/lng 31/31)
+        {
+          const cpPages76: Record<string, number> = {};
+          const cpConf76: Record<string, number> = {};
+          let cpBad76 = 0;
+          let cpNoGeo76 = 0;
+          for (const b of secBases76) {
+            const rs = byBaseRt76.get(b) ?? [];
+            if (rs.length !== 1) {
+              cpBad76 += 1;
+              continue;
+            }
+            const r = rs[0];
+            const bl = blattOf76(r.page);
+            if (bl) cpBlatt76[bl] = (cpBlatt76[bl] ?? 0) + 1;
+            cpPages76[String(r.page)] = (cpPages76[String(r.page)] ?? 0) + 1;
+            if (r.conf) cpConf76[r.conf] = (cpConf76[r.conf] ?? 0) + 1;
+            if (r.lat == null || r.lng == null) cpNoGeo76 += 1;
+          }
+          if (cpBad76 !== 0) errors.push(`(c) counterpar 1 vrstica v v7 ≠ 31/31 (${cpBad76} odstopanj)`);
+          if (p72canon(cpBlatt76) !== p72canon(d76.summary.counterparts.byBlatt)) errors.push(`(c) counterpar Blatt ≠ pin (${p72canon(cpBlatt76)})`);
+          if (p72canon(cpPages76) !== p72canon(d76.summary.counterparts.byPage)) errors.push(`(c) counterpar strani ≠ pin (${p72canon(cpPages76)})`);
+          if (p72canon(cpConf76) !== p72canon(d76.summary.counterparts.conf)) errors.push(`(c) counterpar conf ≠ pin (${p72canon(cpConf76)})`);
+          if (cpNoGeo76 !== 0) errors.push(`(c) counterparji brez geometrije ≠ 0 (${cpNoGeo76})`);
+        }
+        // (d) lastniki sekcija×counterpar 0 + sekcija×sekcija 0 (set-izračun)
+        {
+          let ovCp76 = 0;
+          for (const s of secPack76) {
+            for (const r of byBaseRt76.get(s.base) ?? [])
+              if (s.owner && r.owner && s.owner === r.owner) ovCp76 += 1;
+          }
+          if (ovCp76 !== d76.summary.identity.ownerOverlapVsCounterpart) errors.push(`(d) lastniki sekcija×counterpar ≠ 0 (${ovCp76})`);
+          const bySecBase76 = new Map<string, P76SecRow[]>();
+          for (const s of secPack76) bySecBase76.set(s.base, [...(bySecBase76.get(s.base) ?? []), s]);
+          let ovSec76 = 0;
+          for (const [, rs] of bySecBase76)
+            for (let i = 0; i < rs.length; i++)
+              for (let j = i + 1; j < rs.length; j++)
+                if (rs[i].owner && rs[i].owner === rs[j].owner) ovSec76 += 1;
+          if (ovSec76 !== d76.summary.identity.ownerOverlapWithinSections) errors.push(`(d) lastniki sekcija×sekcija ≠ 0 (${ovSec76})`);
+        }
+        // (e) hn: 0 isti / 31 različni (sekcije iz pack runtime hausNr; counterpar iz v7)
+        for (const b of secBases76) {
+          const secHns = new Set(secPack76.filter((s) => s.base === b && s.hausNr != null).map((s) => String(s.hausNr)));
+          const cpHns = new Set((byBaseRt76.get(b) ?? []).filter((r) => r.hausNr != null).map((r) => String(r.hausNr)));
+          if (secHns.size === 0 || cpHns.size === 0) {
+            errors.push(`(e) base ${b}: manjkajoče hn (sec ${secHns.size} / cp ${cpHns.size})`);
+            continue;
+          }
+          if ([...secHns].some((h) => cpHns.has(h))) hnIsti76 += 1;
+          else hnRaz76 += 1;
+        }
+        if (hnIsti76 !== d76.summary.identity.hausNr.isti || hnRaz76 !== d76.summary.identity.hausNr["različni"])
+          errors.push(`(e) hn isti/različni ≠ 0/31 (${hnIsti76}/${hnRaz76})`);
+        // (f) pageMap: sekcija parzelle v pinned bandih (produkcija); pini == P56 dokaz (repo)
+        {
+          let pmBad76 = 0;
+          for (const s of secPack76) {
+            const rng = PM_SEC76[String(s.page)];
+            const n = Number(s.parzella);
+            if (!rng || !Number.isFinite(n) || n < rng[0] || n > rng[1]) pmBad76 += 1;
+          }
+          if (pmBad76 !== 0) errors.push(`(f) sekcija parzelle izven pinned bandov (${pmBad76})`);
+        }
+        // (g) Σ areaQK per stran == pack summary
+        {
+          const sumqk76: Record<string, number> = {};
+          for (const s of secPack76) sumqk76[String(s.page)] = Math.round((sumqk76[String(s.page)] ?? 0) + (s.areaQK ?? 0));
+          if (p72canon(sumqk76) !== p72canon(d76.summary.sumAreaQK)
+            || Object.values(sumqk76).reduce((a, v) => a + v, 0) !== d76.summary.sumAreaQKTotal)
+            errors.push(`(g) Σ areaQK ≠ pin (${p72canon(sumqk76)})`);
+        }
+        // (h) P60 band: 8 attributed base == pack; rowsInBand 12 (inBand strane iz P60 runtime × sekcije)
+        {
+          const p60Bases76 = p6076.bases ?? {};
+          const p60Sec76 = Object.keys(p60Bases76).filter((b) => secBaseSet76.has(b)).sort((a, b) => Number(a) - Number(b));
+          if (JSON.stringify(p60Sec76) !== JSON.stringify(d76.summary.p60Band.attributedBases))
+            errors.push(`(h) P60 sekcije base ≠ pin (${p60Sec76.join(",")})`);
+          let rowsInBandNow76 = 0;
+          for (const b of p60Sec76) {
+            const pages = new Set(p60Bases76[b]?.inBand?.pages ?? []);
+            rowsInBandNow76 += secCls76.filter((s) => s.base === b && pages.has(s.page)).length;
+          }
+          rowsInBand76 = rowsInBandNow76;
+          if (rowsInBand76 !== d76.summary.p60Band.rowsInBand) errors.push(`(h) rowsInBand ≠ 12 (${rowsInBand76})`);
+          const bandSet76 = new Set(p60Sec76);
+          const b2Rows76 = secCls76.filter((s) => bandSet76.has(s.base)).length;
+          if (b2Rows76 !== d76.opcije.B2_p60Band.added) errors.push(`(h) B2 subset vrstic ≠ 12 (${b2Rows76})`);
+        }
+        // (i) opcije re-izpeljane iz v7 runtime + pack sectionRows (register-native polja);
+        //     crossBlatt po P59 pageAttribution; instance ključ (base, stran): 0 kolizij/0 duplikatov
+        {
+          const counters76 = (rows: { page: number; base: string }[]) => {
+            const byBase = new Map<string, { pages: Set<number>; n: number }>();
+            for (const r of rows) {
+              const rec = byBase.get(r.base);
+              if (rec) {
+                rec.pages.add(r.page);
+                rec.n += 1;
+              } else byBase.set(r.base, { pages: new Set([r.page]), n: 1 });
+            }
+            const multi = [...byBase.values()].filter((v) => v.pages.size > 1);
+            let cross = 0;
+            for (const [, v] of byBase) {
+              const bls = new Set<string>();
+              for (const p of v.pages) {
+                const bl = blattOf76(p);
+                if (bl) bls.add(bl);
+              }
+              if (bls.size > 1) cross += 1;
+            }
+            return {
+              rows: rows.length,
+              bases: byBase.size,
+              multiPage: multi.length,
+              crossBlatt: cross,
+              ambRows: multi.reduce((a, v) => a + v.n, 0),
+            };
+          };
+          const a76Now = counters76(rt76.rows);
+          const b1Rows76: { page: number; base: string }[] = [...rt76.rows, ...secPack76.map((s) => ({ page: s.page, base: s.base }))];
+          const b176Now = counters76(b1Rows76);
+          const bandSet76 = new Set(Object.keys(p6076.bases ?? {}).filter((b) => secBaseSet76.has(b)));
+          const b2Sel76 = secPack76.filter((s) => bandSet76.has(s.base));
+          const b276Now = counters76([...rt76.rows, ...b2Sel76.map((s) => ({ page: s.page, base: s.base }))]);
+          a76 = a76Now;
+          b176 = b176Now;
+          b276 = b276Now;
+          if (a76Now.rows !== d76.opcije.A_statusQuo.rows || a76Now.multiPage !== d76.opcije.A_statusQuo.multiPage
+            || a76Now.crossBlatt !== d76.opcije.A_statusQuo.crossBlatt || a76Now.ambRows !== d76.opcije.A_statusQuo.ambRows)
+            errors.push(`(i) opcija A preracun ≠ 891/2/0/4 (${a76Now.rows}/${a76Now.multiPage}/${a76Now.crossBlatt}/${a76Now.ambRows})`);
+          if (b176Now.rows !== d76.opcije.B1_readmitAll.rows || b176Now.multiPage !== d76.opcije.B1_readmitAll.multiPage
+            || b176Now.crossBlatt !== d76.opcije.B1_readmitAll.crossBlatt || b176Now.ambRows !== d76.opcije.B1_readmitAll.ambRows)
+            errors.push(`(i) opcija B1 preracun ≠ 947/33/23/91 (${b176Now.rows}/${b176Now.multiPage}/${b176Now.crossBlatt}/${b176Now.ambRows})`);
+          if (b276Now.rows !== d76.opcije.B2_p60Band.rows || b276Now.multiPage !== d76.opcije.B2_p60Band.multiPage
+            || b276Now.crossBlatt !== d76.opcije.B2_p60Band.crossBlatt || b276Now.ambRows !== d76.opcije.B2_p60Band.ambRows)
+            errors.push(`(i) opcija B2 preracun ≠ 903/10/6/24 (${b276Now.rows}/${b276Now.multiPage}/${b276Now.crossBlatt}/${b276Now.ambRows})`);
+          const v7Keys76 = new Set(rt76.rows.map((r) => `${r.base}|${r.page}`));
+          const clash76 = secCls76.filter((s) => v7Keys76.has(`${s.base}|${s.page}`)).length;
+          const secKeyCount76 = new Map<string, number>();
+          for (const s of secCls76) secKeyCount76.set(`${s.base}|${s.page}`, (secKeyCount76.get(`${s.base}|${s.page}`) ?? 0) + 1);
+          const dup76 = [...secKeyCount76.values()].filter((n) => n > 1).length;
+          const onSec76 = rt76.rows.filter((r) => SEC_PAGES76.has(r.page)).length;
+          if (clash76 !== 0 || dup76 !== 0 || onSec76 !== 0)
+            errors.push(`(i) instance ključ: kolizije ${clash76} · duplikati ${dup76} · v7 na sekcij straneh ${onSec76} ≠ 0/0/0`);
+          if (a76Now.multiPage !== d76.opcije.B1_readmitAll.withInstanceKey.multiPage
+            || a76Now.crossBlatt !== d76.opcije.B1_readmitAll.withInstanceKey.crossBlatt
+            || a76Now.ambRows !== d76.opcije.B1_readmitAll.withInstanceKey.ambRows)
+            errors.push(`(i) withInstanceKey ≠ 0/2/4 (${a76Now.crossBlatt}/${a76Now.multiPage}/${a76Now.ambRows})`);
+        }
+        // (j) pack runtime == TS konstanta (summary/opcije/statusLine po poljih)
+        if (pack76.version !== 1) errors.push(`runtime pack version ≠ 1 (${pack76.version})`);
+        if (pack76.task !== d76.task || pack76.date !== d76.date || pack76.statusLine !== d76.statusLine
+          || pack76.verdictSi !== d76.verdictSi || pack76.verdictEn !== d76.verdictEn
+          || JSON.stringify(pack76.next ?? []) !== JSON.stringify(d76.next))
+          errors.push("runtime pack task/date/statusLine/verdicti/next ≠ TS konstanta SECTIONS_PERBLATT_P76");
+        const ps76 = pack76.summary ?? {};
+        const obj76 = (o: unknown, k: string): Record<string, unknown> =>
+          o && typeof o === "object" && k in (o as Record<string, unknown>) && (o as Record<string, unknown>)[k] !== null && typeof (o as Record<string, unknown>)[k] === "object"
+            ? ((o as Record<string, unknown>)[k] as Record<string, unknown>)
+            : {};
+        const num76 = (o: unknown, k: string): number => {
+          const v = (o as Record<string, unknown> | null)?.[k];
+          return typeof v === "number" ? v : -999;
+        };
+        const str76 = (o: unknown, k: string): string => {
+          const v = k in (o as Record<string, unknown>) ? (o as Record<string, unknown>)[k] : undefined;
+          return typeof v === "string" ? v : "";
+        };
+        if (num76(ps76, "sectionRows") !== 56 || num76(ps76, "sectionBases") !== 31 || num76(ps76, "sumAreaQKTotal") !== 38517 || str76(ps76, "blatt") !== "II")
+          errors.push("(j) pack summary števci ≠ pini 56/31/38517/II");
+        if (p72canon(obj76(ps76, "pages")) !== p72canon(d76.summary.pages)
+          || p72canon(obj76(ps76, "sumAreaQK")) !== p72canon(d76.summary.sumAreaQK))
+          errors.push("(j) pack summary pages/sumAreaQK ≠ TS konstanta");
+        const cps76 = obj76(ps76, "counterparts");
+        if (num76(cps76, "total") !== 31 || num76(cps76, "withGeometry") !== 31
+          || p72canon(obj76(cps76, "byBlatt")) !== p72canon(d76.summary.counterparts.byBlatt)
+          || p72canon(obj76(cps76, "byPage")) !== p72canon(d76.summary.counterparts.byPage)
+          || JSON.stringify(obj76(cps76, "conf")) !== JSON.stringify(d76.summary.counterparts.conf))
+          errors.push("(j) pack counterparts ≠ TS konstanta");
+        const c4s76 = obj76(ps76, "c4Evolution");
+        if (num76(c4s76, "members") !== 13 || num76(c4s76, "keptII") !== 8 || num76(c4s76, "keptI") !== 5 || num76(c4s76, "singleBlatt") !== 18
+          || JSON.stringify(obj76(c4s76, "keptIIBases")) !== JSON.stringify(d76.summary.c4Evolution.keptIIBases)
+          || JSON.stringify(obj76(c4s76, "keptIBases")) !== JSON.stringify(d76.summary.c4Evolution.keptIBases))
+          errors.push("(j) pack c4Evolution ≠ TS konstanta");
+        const ids76 = obj76(ps76, "identity");
+        if (num76(ids76, "ownerOverlapVsCounterpart") !== 0 || num76(ids76, "ownerOverlapWithinSections") !== 0
+          || num76(ids76, "pageMapBandOverlap") !== 5
+          || p72canon(obj76(ids76, "hausNr")) !== p72canon({ isti: 0, "različni": 31 }))
+          errors.push("(j) pack identity ≠ TS konstanta");
+        const p60s76 = obj76(ps76, "p60Band");
+        if (num76(p60s76, "rowsInBand") !== 12 || num76(p60s76, "rowsWithoutBand") !== 44
+          || JSON.stringify(obj76(p60s76, "attributedBases")) !== JSON.stringify(d76.summary.p60Band.attributedBases))
+          errors.push("(j) pack p60Band ≠ TS konstanta");
+        const f3s76 = obj76(ps76, "v3Forensics");
+        if (num76(f3s76, "geoShared") !== 56 || num76(f3s76, "areaSuspect") !== 1 || num76(f3s76, "wohnortRows") !== 56
+          || JSON.stringify(obj76(f3s76, "conf")) !== JSON.stringify(d76.summary.v3Forensics.conf)
+          || p72canon(obj76(f3s76, "kultureTop")) !== p72canon(d76.summary.v3Forensics.kultureTop))
+          errors.push("(j) pack v3Forensics (geoShared/suspect/conf/kultureTop/wohnort) ≠ TS konstanta");
+        {
+          const r76 = obj76(f3s76, "ratio");
+          const rr = d76.summary.v3Forensics.ratio;
+          if (num76(r76, "n") !== rr.n || num76(r76, "modaB") !== rr.modaB || num76(r76, "modaA") !== rr.modaA
+            || num76(r76, "absurdniGT43") !== rr.absurdniGT43 || num76(r76, "median") !== rr.median || num76(r76, "max") !== rr.max)
+            errors.push("(j) pack ratio ≠ TS konstanta");
+        }
+        const op76 = pack76.opcije ?? {};
+        const oA76 = obj76(op76, "A_statusQuo");
+        const oB176 = obj76(op76, "B1_readmitAll");
+        const oB276 = obj76(op76, "B2_p60Band");
+        const oB376 = obj76(op76, "B3_georef");
+        if (num76(oA76, "rows") !== 891 || num76(oA76, "bases") !== 879 || num76(oA76, "multiPage") !== 2 || num76(oA76, "crossBlatt") !== 0 || num76(oA76, "ambRows") !== 4)
+          errors.push("(j) pack opcija A ≠ TS konstanta");
+        const b1w76 = obj76(oB176, "withInstanceKey");
+        if (num76(oB176, "rows") !== 947 || num76(oB176, "bases") !== 879 || num76(oB176, "multiPage") !== 33 || num76(oB176, "crossBlatt") !== 23
+          || num76(oB176, "ambRows") !== 91 || num76(oB176, "added") !== 56 || oB176.nilClaimViolation !== true
+          || num76(b1w76, "crossBlatt") !== 0 || num76(b1w76, "multiPage") !== 2 || num76(b1w76, "ambRows") !== 4
+          || str76(oB176, "violationNote") !== d76.opcije.B1_readmitAll.violationNote)
+          errors.push("(j) pack opcija B1 ≠ TS konstanta");
+        const b2w76 = obj76(oB276, "withInstanceKey");
+        if (num76(oB276, "rows") !== 903 || num76(oB276, "bases") !== 879 || num76(oB276, "multiPage") !== 10 || num76(oB276, "crossBlatt") !== 6
+          || num76(oB276, "ambRows") !== 24 || num76(oB276, "added") !== 12 || num76(oB276, "leftOut") !== 44
+          || num76(b2w76, "crossBlatt") !== 0 || num76(b2w76, "multiPage") !== 2 || num76(b2w76, "ambRows") !== 4)
+          errors.push("(j) pack opcija B2 ≠ TS konstanta");
+        if (oB376.executable !== false || JSON.stringify(obj76(oB376, "prerequisites")) !== JSON.stringify(d76.opcije.B3_georef.prerequisites))
+          errors.push("(j) pack opcija B3 ≠ TS konstanta");
+        // (k) v7 join pini: version 7, rows 891, bases 879, v7Delta.after {multiPage 2, crossBlatt 0}
+        if (rt76.version !== 7) errors.push(`(k) runtime version ≠ 7 (${rt76.version})`);
+        if (rt76.rows.length !== 891 || byBaseRt76.size !== 879)
+          errors.push(`(k) v7 runtime ≠ 891/879 (${rt76.rows.length}/${byBaseRt76.size})`);
+        {
+          const d7 = rt76.v7Delta ?? {};
+          if (d7.after?.rows !== 891 || d7.after?.bases !== 879 || d7.after?.multiPage !== 2 || d7.after?.crossBlatt !== 0)
+            errors.push(`(k) v7Delta.after ≠ 891/879/2/0 (${d7.after?.rows}/${d7.after?.bases}/${d7.after?.multiPage}/${d7.after?.crossBlatt})`);
+        }
+        const p76Sum = (tag: string) =>
+          `sekcije ${secCls76.length}/31 (p83 ${perPage76["83"] ?? 0} · p84 ${perPage76["84"] ?? 0} · p85 ${perPage76["85"] ?? 0} · p86 ${perPage76["86"] ?? 0} · p88 ${perPage76["88"] ?? 0}), Blatt II 5/5, counterpar 31/31 (I ${cpBlatt76.I ?? 0} / II ${cpBlatt76.II ?? 0}, lat/lng 31/31), lastniki 0/0, hn ${hnIsti76}/${hnRaz76}, Σ areaQK ${d76.summary.sumAreaQKTotal}, P60 band ${rowsInBand76}/56, opcije A ${a76.rows}/${a76.multiPage}/${a76.crossBlatt}/${a76.ambRows} · B1 ${b176.rows}/${b176.multiPage}/${b176.crossBlatt}/${b176.ambRows} · B2 ${b276.rows}/${b276.multiPage}/${b276.crossBlatt}/${b276.ambRows}, instance ključ 0/2/4, pageMap bandi ⊇ parzelle${tag}`;
+        // repo dodatki: dokaz == runtime bajtno na skupnih poljih + P56 dokaz pageMap == pini
+        const rawEv76 = opts.readFile("research/issue17/ps-sections-perblatt-pack.json");
+        if (rawEv76 === null) {
+          p76FileDetail = `produkcija: preracun na runtime datotekah — ${p76Sum("")}`;
+        } else {
+          const ev76 = JSON.parse(rawEv76) as {
+            task?: string;
+            date?: string;
+            statusLine?: string;
+            summary?: Record<string, unknown>;
+            opcije?: Record<string, unknown>;
+            kulture?: Record<string, number>;
+            hausNrDetail?: Record<string, unknown>;
+            p60Detail?: Record<string, unknown>;
+            next?: string[];
+            inputs?: Record<string, string>;
+            invariants?: string[];
+            sectionRows?: (P76SecRow & { ratioV3?: number | null; geoSharedV3?: boolean; pageMapBand?: number[] })[];
+          };
+          if (ev76.task !== pack76.task || ev76.date !== pack76.date || ev76.statusLine !== pack76.statusLine
+            || JSON.stringify(ev76.next ?? []) !== JSON.stringify(pack76.next ?? []))
+            errors.push("dokaz task/date/statusLine/next ≠ runtime pack");
+          if (JSON.stringify(ev76.summary) !== JSON.stringify(ps76)) errors.push("dokaz summary ≠ runtime summary (bajtno)");
+          if (JSON.stringify(ev76.opcije) !== JSON.stringify(op76)) errors.push("dokaz opcije ≠ runtime opcije (bajtno)");
+          if (JSON.stringify(ev76.kulture) !== JSON.stringify(pack76.kulture)) errors.push("dokaz kulture ≠ runtime kulture (bajtno)");
+          if (JSON.stringify(ev76.hausNrDetail) !== JSON.stringify(pack76.hausNrDetail)) errors.push("dokaz hausNrDetail ≠ runtime hausNrDetail (bajtno)");
+          if (JSON.stringify(ev76.p60Detail) !== JSON.stringify(pack76.p60Detail)) errors.push("dokaz p60Detail ≠ runtime p60Detail (bajtno)");
+          {
+            const evRows76 = ev76.sectionRows ?? [];
+            if (evRows76.length !== 56) errors.push(`dokaz sectionRows ≠ 56 (${evRows76.length})`);
+            let srMis76 = 0;
+            for (let i = 0; i < Math.min(evRows76.length, secPack76.length); i++) {
+              const evR = evRows76[i] as Record<string, unknown>;
+              const rtR = secPack76[i] as unknown as Record<string, unknown>;
+              for (const k of Object.keys(rtR)) {
+                if (JSON.stringify(evR[k]) !== JSON.stringify(rtR[k])) {
+                  srMis76 += 1;
+                  break;
+                }
+              }
+              // dokaz dodatna polja: ratioV3/geoSharedV3/pageMapBand (runtime projekcija jih izpusti)
+              if (evR.geoSharedV3 !== true || evR.pageMapBand == null || evR.ratioV3 == null) srMis76 += 1;
+            }
+            if (srMis76 !== 0) errors.push(`dokaz sectionRows ≠ runtime + (ratioV3/geoSharedV3/pageMapBand) (${srMis76})`);
+          }
+          if (!Array.isArray(ev76.invariants) || ev76.invariants.length !== 9) errors.push("dokaz invarianti ≠ 9 (I1–I9)");
+          if (Object.keys(ev76.inputs ?? {}).length !== 7) errors.push(`dokaz inputs ≠ 7 pinov (${Object.keys(ev76.inputs ?? {}).length})`);
+          if (ev76.inputs?.v7RuntimeSha256 !== "4bb4037064f427287061f592ee6ef75a497b1b4ddcf9a5e8173c911c9949234d")
+            errors.push("dokaz inputs.v7RuntimeSha256 ≠ v7 runtime 4bb40370… (I9)");
+          const rawP5676 = opts.readFile("research/issue17/ps-register-topology.json");
+          if (rawP5676 !== null) {
+            const p56ev76 = JSON.parse(rawP5676) as { pageMap?: { page: number; numMin: number; numMax: number }[] };
+            const pm76 = new Map((p56ev76.pageMap ?? []).map((x) => [String(x.page), [x.numMin, x.numMax] as [number, number]]));
+            let pmMis76 = 0;
+            for (const [pg, rng] of Object.entries({ ...PM_SEC76, ...PM_GLOB76 })) {
+              const ref = pm76.get(pg);
+              if (!ref || ref[0] !== rng[0] || ref[1] !== rng[1]) pmMis76 += 1;
+            }
+            if (pmMis76 !== 0) errors.push(`P56 dokaz pageMap ≠ pini (${pmMis76} strani)`);
+          }
+          p76FileDetail = `repo: dokaz == runtime (summary/opcije/kulture/hausNrDetail/p60Detail bajtno; sectionRows + ratioV3/geoSharedV3/pageMapBand; invarianti I1–I9; inputs 7 sha pini; P56 dokaz pageMap == pini) · ${p76Sum(" ")}`;
+        }
+      } catch (e) {
+        errors.push(`ps-sections-perblatt-pack datoteke neuspešno: ${String(e).slice(0, 80)}`);
+      }
+    }
+  }
+  return { errors, detail: p76FileDetail };
 }
 
 export function runQA(opts: QAOptions = {}): QAReport {
@@ -7258,6 +7742,25 @@ const p45bErrors: string[] = [];
     p75Errors.length === 0
       ? `pini 48/48/48 · before 939/879/50/48 → after 891/879/2/0 · A2 različen keep 29 · removedByPage == pin · nil-claim 0 · cross set na v7 == prazno · area 871/3.8102 (Δ +5.94 %) · sosledje 652/51.8 · conf 172/588/131 · serije 803/62/26 · dvoumnost 2/4 (48 T→F) · ${p75Files.detail}`
       : p75Errors.join("; "),
+  );
+
+  // ——— qa-p76: lokalne sekcije — per-Blatt instance odločitveni paket (pini SECTIONS_PERBLATT_P76
+  //      + celoven neodvisen preracun iz runtime datotek: P69 sectionClass × v7 runtime × P59
+  //      pageAttribution × P60 band × pack runtime; opcije A/B1/B2 re-izpeljane + instance ključ;
+  //      datotečna veja v p76FileCheck) ———
+  const c76 = SECTIONS_PERBLATT_P76;
+  const p76Errors: string[] = [];
+  p76Errors.push(...p76Pins(c76, p72canon));
+  const p76Files = p76FileCheck(opts, p72canon, c76);
+  p76Errors.push(...p76Files.errors);
+  push(
+    "qa-p76-sections-perblatt",
+    "P76: LOKALNE SEKCIJE — PER-BLATT INSTANCE (odločitveni paket, issue #13) — 56 sekcij vrstic (p83 13 · p84 12 · p85 14 · p86 14 · p88 3; vse Blatt II po P59 pageAttribution) × 31 base (P69 sectionClass bajtno; vzorec P72/P74 — paket MERI, NE odloča; odprta točka P70 ①/P71 C1; deterministično, brez AI ob delovanju; v7 join NESPREMENJEN): counterpar v v7 31/31 točno 1 vrstica (Blatt I 23: p10 1 · p11 5 · p35 14 · p40 3 / Blatt II 8: p61 8; lat/lng 31/31 — C1 I4 nasledstvo; conf STRONG 4/MEDIUM 21/WEAK 6) — JEDRO: identitetna disjunktnost razširjena iz P69 vzorca na celoto — lastniki sekcija×counterpar 0 prekrivanj + sekcija×sekcija 0 (set-izračun), hišne številke 0 isti / 31 različni; evolucija C4: 13/31 base bilo v v6 cross setu (I p11 × II p61) — 8 obdržalo II (161–165, 174, 176, 179), 5 obdržalo I (166, 168, 171, 173, 175), 18 single-Blatt; P56 pageMap ponovitev bandov 5/5 (p83 161–181 ⊆ p11 161–183 + p61 161–180; p85 641–660 == p35; p88 721–740 == p40); P60 moda B: 8 base attributed (163, 176, 644, 653–657) = 12/56 vrstic z band identiteto, 44 [~] brez (PF protokol = manjkajoči vir, ni v repu); v3 forenzika lažnih fuzij: geoShared 56/56, ratio moda B 11 / moda A 5 / absurdni > 4.3 20 (max 134.6786, median 2.5442), areaSuspect 1, conf 3/42/11, Σ areaQK {83: 3708, 84: 10273, 85: 10333, 86: 9544, 88: 4659} = 38517 QK, kulture Alm 9 · Dingf. 6 · Wein 3 …, wohnort 56/56; OPCIJE (predračun nad v7 — izbira LASTNIŠKA): A status quo 891/879/2/0/4 (v7 nespremenjen — sekcije v registru brez geometrije, dokaz P69 sectionClass); B1 re-admisija vseh 56 z base-ključem 947/33/23/91 — KRŠI C4 NIL-CLAIM (23 base dobi vrstici na I in II) → OBVEZEN per-instanca ključ (base, stran): 0 kolizij + 0 duplikatov + 0 vrstic v7 na sekcij straneh → crossBlatt 0/multiPage 2/ambRows 4; B2 samo P60 band 12 vrstic 903/10/6/24 (+ instance ključ 0/2/4; 44 ostane izključenih [~]); B3 geometrija per Blatt = [~] neizvedljivo (zahteva georef Blatt II karte + PF protokol); skripta scripts/p76_ps_sections_perblatt_pack.py (I1–I9, --check bajtno PASS); status REVIEW",
+    "P76: LOCAL SECTIONS — PER-BLATT INSTANCES (decision pack, issue #13) — 56 section rows (p83 13 · p84 12 · p85 14 · p86 14 · p88 3; all Blatt II per the P59 pageAttribution) × 31 bases (the P69 sectionClass byte-equal; the P72/P74 pattern — the pack MEASURES, it does not decide; the P70 ①/P71 C1 open point; deterministic, no AI at runtime; the v7 join UNCHANGED): counterpart in v7 31/31 exactly 1 row (Blatt I 23: p10 1 · p11 5 · p35 14 · p40 3 / Blatt II 8: p61 8; lat/lng 31/31 — the C1 I4 succession; conf STRONG 4/MEDIUM 21/WEAK 6) — THE CORE: identity disjointness extended from the P69 sample to the full set — owners section×counterpart 0 overlaps + section×section 0 (set computation), house numbers 0 same / 31 different; the C4 evolution: 13/31 bases were in the v6 cross set (I p11 × II p61) — 8 kept II (161–165, 174, 176, 179), 5 kept I (166, 168, 171, 173, 175), 18 single-Blatt; the P56 pageMap band restart 5/5 (p83 161–181 ⊆ p11 161–183 + p61 161–180; p85 641–660 == p35; p88 721–740 == p40); P60 mode B: 8 attributed bases (163, 176, 644, 653–657) = 12/56 rows with a band identity, 44 [~] without (the PF protocol = the missing source, not in the repo); the v3 false-fusion forensics: geoShared 56/56, ratio mode B 11 / mode A 5 / absurd > 4.3 20 (max 134.6786, median 2.5442), areaSuspect 1, conf 3/42/11, Σ areaQK {83: 3708, 84: 10273, 85: 10333, 86: 9544, 88: 4659} = 38517 QK, cultures Alm 9 · Dingf. 6 · Wein 3 …, wohnort 56/56; OPTIONS (pre-computed over v7 — the choice is the OWNER's): A status quo 891/879/2/0/4 (v7 unchanged — the sections in the register without geometry, the P69 sectionClass proof); B1 re-admission of all 56 with the base key 947/33/23/91 — VIOLATES the C4 NIL-CLAIM (23 bases would get rows on both I and II) → the per-instance key (base, page) is MANDATORY: 0 collisions + 0 duplicates + 0 v7 rows on the section pages → crossBlatt 0/multiPage 2/ambRows 4; B2 only the P60 band 12 rows 903/10/6/24 (+ the instance key 0/2/4; 44 remain excluded [~]); B3 geometry per Blatt = [~] not executable (requires the georef of the Blatt II sheet + the PF protocol); the script scripts/p76_ps_sections_perblatt_pack.py (I1–I9, --check byte-equal PASS); status REVIEW",
+    p76Errors.length === 0,
+    p76Errors.length === 0
+      ? `pini 56/31 · strani 13/12/14/14/3 · Σ areaQK 38517 · counterpar 31/31 (I 23 / II 8; conf 4/21/6) · lastniki 0/0 · hn 0/31 · pageMap bandi ⊇ parzelle · C4 13 (II 8 / I 5) / 18 single · P60 band 12/56 · opcije A 891/2/0/4 · B1 947/33/23/91 (KRŠI NIL-CLAIM → instance ključ 0/2/4) · B2 903/10/6/24 · B3 [~] · v7 runtime 891/879 (v7Delta.after 2/0) · ${p76Files.detail}`
+      : p76Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;  return {

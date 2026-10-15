@@ -5791,3 +5791,197 @@ export const CROSS_SPLIT_A1_P75: {
     "operacijsko: GitHub Actions billing (#7)",
   ],
 };
+
+// ——— P76 (issue #13): LOKALNE SEKCIJE — PER-BLATT INSTANCE (odločitveni
+// paket). 56 sekcij vrstic (p83–86 + p88; vse Blatt II po P59; P69
+// sectionClass bajtno) × 31 base — identitetno DISJUNKTNE od svojih v7
+// counterpartov (lastniki 0/0, hišne številke 31/31 različne) — dokazano na
+// celotni množici, ne samo na P69 vzorcu. Vir: skripta
+// scripts/p76_ps_sections_perblatt_pack.py (I1–I9, --check bajtno PASS) →
+// dokaz research/issue17/ps-sections-perblatt-pack.json + runtime
+// src/data/atlas/ps-sections-perblatt-pack.json (bajtna projekcija;
+// hausNrDetail/p60Detail/sectionRows bere QA neposredno iz runtime
+// datotek — v TS konstanti preveliki). Paket MERI, NE odloča (vzorec
+// P72/P74); v7 join NESPREMENJEN (sha pin 4bb40370…).
+export const SECTIONS_PERBLATT_P76: {
+  version: number;
+  series: "PS";
+  task: string;
+  date: string;
+  status: ResearchStatus;
+  generatedBy: string;
+  summary: {
+    sectionRows: number;
+    sectionBases: number;
+    pages: Record<string, number>;
+    blatt: string;
+    sumAreaQK: Record<string, number>;
+    sumAreaQKTotal: number;
+    counterparts: {
+      total: number;
+      byBlatt: Record<string, number>;
+      byPage: Record<string, number>;
+      withGeometry: number;
+      conf: { STRONG: number; MEDIUM: number; WEAK: number };
+    };
+    c4Evolution: {
+      members: number;
+      keptII: number;
+      keptI: number;
+      singleBlatt: number;
+      keptIIBases: string[];
+      keptIBases: string[];
+    };
+    identity: {
+      ownerOverlapVsCounterpart: number;
+      ownerOverlapWithinSections: number;
+      hausNr: { isti: number; "različni": number };
+      pageMapBandOverlap: number;
+    };
+    p60Band: {
+      attributedBases: string[];
+      rowsInBand: number;
+      rowsWithoutBand: number;
+    };
+    v3Forensics: {
+      geoShared: number;
+      ratio: { n: number; modaB: number; modaA: number; absurdniGT43: number; median: number; max: number };
+      areaSuspect: number;
+      conf: { STRONG: number; MEDIUM: number; WEAK: number };
+      kultureTop: Record<string, number>;
+      wohnortRows: number;
+    };
+  };
+  opcije: {
+    A_statusQuo: { rows: number; bases: number; multiPage: number; crossBlatt: number; ambRows: number; note: string };
+    B1_readmitAll: {
+      rows: number; bases: number; multiPage: number; crossBlatt: number; ambRows: number; added: number;
+      nilClaimViolation: boolean; violationNote: string;
+      withInstanceKey: { crossBlatt: number; multiPage: number; ambRows: number; note: string };
+    };
+    B2_p60Band: {
+      rows: number; bases: number; multiPage: number; crossBlatt: number; ambRows: number; added: number;
+      withInstanceKey: { crossBlatt: number; multiPage: number; ambRows: number }; leftOut: number;
+    };
+    B3_georef: { executable: boolean; prerequisites: string[]; status: string };
+  };
+  statusLine: string;
+  verdictSi: string;
+  verdictEn: string;
+  next: string[];
+} = {
+  version: 1,
+  series: "PS",
+  task: "P76 — lokalne sekcije: per-Blatt instance odločitveni paket (56 vrstic; vzorec P72/P74 — paket MERI, NE odloča)",
+  date: "2026-10-15",
+  status: "REVIEW",
+  generatedBy:
+    "scripts/p76_ps_sections_perblatt_pack.py (deterministično, brez AI ob delovanju)",
+  summary: {
+    sectionRows: 56,
+    sectionBases: 31,
+    pages: { "83": 13, "84": 12, "85": 14, "86": 14, "88": 3 },
+    blatt: "II",
+    sumAreaQK: { "83": 3708, "84": 10273, "85": 10333, "86": 9544, "88": 4659 },
+    sumAreaQKTotal: 38517,
+    counterparts: {
+      total: 31,
+      byBlatt: { I: 23, II: 8 },
+      byPage: { "10": 1, "11": 5, "35": 14, "40": 3, "61": 8 },
+      withGeometry: 31,
+      conf: { STRONG: 4, MEDIUM: 21, WEAK: 6 },
+    },
+    c4Evolution: {
+      members: 13,
+      keptII: 8,
+      keptI: 5,
+      singleBlatt: 18,
+      keptIIBases: ["161", "162", "163", "164", "165", "174", "176", "179"],
+      keptIBases: ["166", "168", "171", "173", "175"],
+    },
+    identity: {
+      ownerOverlapVsCounterpart: 0,
+      ownerOverlapWithinSections: 0,
+      hausNr: { isti: 0, "različni": 31 },
+      pageMapBandOverlap: 5,
+    },
+    p60Band: {
+      attributedBases: ["163", "176", "644", "653", "654", "655", "656", "657"],
+      rowsInBand: 12,
+      rowsWithoutBand: 44,
+    },
+    v3Forensics: {
+      geoShared: 56,
+      ratio: { n: 56, modaB: 11, modaA: 5, absurdniGT43: 20, median: 2.5442, max: 134.6786 },
+      areaSuspect: 1,
+      conf: { STRONG: 3, MEDIUM: 42, WEAK: 11 },
+      kultureTop: {
+        "Wiese und Gfrett": 11,
+        "Alm": 9,
+        "Dingf.": 6,
+        "Aehn": 4,
+        "Wies": 4,
+        "Wein": 3,
+        "Wald": 3,
+        "Acker": 2,
+      },
+      wohnortRows: 56,
+    },
+  },
+  opcije: {
+    A_statusQuo: {
+      rows: 891,
+      bases: 879,
+      multiPage: 2,
+      crossBlatt: 0,
+      ambRows: 4,
+      note: "v7 nespremenjen — sekcije v registru brez geometrije (dokaz P69 sectionClass)",
+    },
+    B1_readmitAll: {
+      rows: 947,
+      bases: 879,
+      multiPage: 33,
+      crossBlatt: 23,
+      ambRows: 91,
+      added: 56,
+      nilClaimViolation: true,
+      violationNote: "crossBlatt 23 krši C4 NIL-CLAIM (23 base dobi vrstici na I in II)",
+      withInstanceKey: {
+        crossBlatt: 0,
+        multiPage: 2,
+        ambRows: 4,
+        note: "ključ (base, stran) za sekcije — brez fuzije",
+      },
+    },
+    B2_p60Band: {
+      rows: 903,
+      bases: 879,
+      multiPage: 10,
+      crossBlatt: 6,
+      ambRows: 24,
+      added: 12,
+      withInstanceKey: { crossBlatt: 0, multiPage: 2, ambRows: 4 },
+      leftOut: 44,
+    },
+    B3_georef: {
+      executable: false,
+      prerequisites: [
+        "georef Blatt II sekcije karte",
+        "PF protokol (vir ni v repu — lastniki pas-instanc ↔ poligoni)",
+      ],
+      status: "[~] neizvedljivo danes",
+    },
+  },
+  statusLine:
+    "P76: 56 sekcij vrstic (p83–86, p88; Blatt II) × 31 base — lastniki disjunktni 0/0 · hn 0 isti / 31 različni · counterpar v v7 31/31 (I 23 / II 8) · P60 band 8 base (12 vrstic) · opcije A/B1/B2 predračunane · izbira LASTNIŠKA",
+  verdictSi:
+    "56 sekcij vrstic na Blatt II (p83–86, p88; 31 base) je identitetno DISJUNKTNO od svojih v7 counterpartov (lastniki 0/0, hišne številke 31/31 različne) — dokazano na celotni množici, ne samo na P69 vzorcu. Per-Blatt instance so merjeno izvedljive: P60 moda B pokrije 12/56 vrstic (8 base), PF protokol (ni še v repu) je manjkajoči vir za ostale 44. Preprosta re-admisija (B1) bi z base-ključem ponovno ustvarila 23 cross-Blatt fuzij (krši C4 NIL-CLAIM) — zato izvedba zahteva per-instanca ključ. Izbira opcije (A status quo / B1 / B2 / B3 georef) = LASTNIŠKA.",
+  verdictEn:
+    "56 section rows on Blatt II (p83–86, p88; 31 bases) are identity-DISJOINT from their v7 counterparts (owners 0/0, house numbers 31/31 different) — proven on the full set, not just the P69 sample. Per-Blatt instances are measurably feasible: P60 mode B covers 12/56 rows (8 bases), the PF protocol (not yet in the repo) is the missing source for the other 44. Plain re-admission (B1) with the base key would re-create 23 cross-Blatt fusions (violates the C4 NIL-CLAIM) — execution therefore requires a per-instance key. The option choice (A status quo / B1 / B2 / B3 georef) = OWNER.",
+  next: [
+    "① izbira opcije: A status quo (v7) / B1 vse 56 (obvezen instance ključ) / B2 samo P60 band 12 / B3 georef [~] = LASTNIŠKA odločitev",
+    "② PF protokol kot vir identitete sekcij (ni v repu; povezati lastnike pas-instanc s poligoni — P60/P61/P63–P68 next)",
+    "③ georef Blatt II sekcije karte (predpogoj B3) [~]",
+    "④ p83 dvojni blok 161–170 ×2 ostaja [~] (P69; 8× nebere zanesljivo)",
+  ],
+};

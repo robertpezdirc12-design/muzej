@@ -3173,3 +3173,102 @@ A2/B ostajata dokumentirani poti. Strojno berljivo:
 research/issue17/ps-parcels-geo-v7.json + runtime
 src/data/atlas/ps-parcels-geo.json (skripta
 scripts/p75_ps_v7_cross_split_a1.py, I1–I8, `--check` bajtno PASS).
+
+
+---
+
+## §53 — P76: lokalne sekcije — per-Blatt instance odločitveni paket — 2026-10-15
+
+**Sprožilec:** lastniški ukaz »odlicno nadaljuj« (2026-10-15) — naslednja odprta
+točka ② iz P70 ①/P71 C1: per-Blatt instance 56 sekcij vrstic (P60 moda B /
+PF protokol); vzorec P72/P74: **paket MERI, NE odloča** (deterministično, brez
+AI ob delovanju); **v7 join NESPREMENJEN** (disciplina P56–P75; sha256 pin I9
+na v7 runtime 4bb40370…).
+
+### Univerzum in metoda
+
+- 56 sekcij vrstic (P69 sectionClass bajtno; p83 13 · p84 12 · p85 14 ·
+  p86 14 · p88 3; 31 base: 160–179 subset 14 · 641–659 subset 14 · 736–738 3)
+  — vse strane **Blatt II** (P59 pageAttribution 5/5; p83 flag=true
+  arbitraža); 56/56 najdenih v v3 rowsEvidence (page+base+owner; areaQK ==
+  P69);
+- meritve deterministične nad v7 univerzumom × v3 forenzika × P59/P56/P60
+  kontekst — opcije PREDRAČUNANE (counters re-izračunani, ne deklarirani);
+  izbira = LASTNIŠKA.
+
+### Merjeno (44-a)
+
+- **counterpar v v7: 31/31 base točno 1 preživela vrstica** (posledica
+  C1 + C3 + C4): 23 Blatt I (p10 1 · p11 5 · p35 14 · p40 3) + 8 Blatt II
+  (p61 8); vsi 31 z geometrijo (C1 I4 nasledstvo — 0 poligonov praznih);
+  conf STRONG 4 / MEDIUM 21 / WEAK 6;
+- **evolucija C4: 13/31 base bilo v v6 cross-Blatt setu (I p11 × II p61)** —
+  8 obdržalo II (161–165, 174, 176, 179), 5 obdržalo I (166, 168, 171, 173,
+  175); 18/31 single-Blatt;
+- **JEDRO — identitetna disjunktnost razširjena iz P69 vzorca na celoto:**
+  lastniki sekcija×counterpar **0 prekrivanj** (56/31 base) + sekcija×
+  sekcija **0** (set-izračun); hišne številke **0 isti / 31 različni**
+  (31/31 base z hn na obeh straneh) — razširitev P69 primera (p85 641 Hi16
+  vs p35 641 Hi68) na celotno množico;
+- **P56 pageMap ponovitev bandov 5/5:** p83 161–181 / p84 162–182 /
+  p86 160–180 ⊆ [p11 161–183 · p61 161–180]; p85 641–660 == p35;
+  p88 721–740 == p40;
+- **P60 moda B band: 8/31 base attributed** (163, 176 → inBand [61, 83, 84,
+  86]; 644, 653–657 → inBand [85]) = **12/56 vrstic z band identiteto**;
+  44 [~] brez (PF protokol = manjkajoči vir, ni v repu — P60/P61/P63–P68
+  next);
+- **v3 forenzika lažnih fuzij:** geoShared 56/56 (sekcija je delila
+  geometrijo sodobne parcele s counterparom); ratio dist: moda B [0.8, 1.25]
+  11 · moda A [3.3, 4.3] 5 · **absurdni > 4.3: 20 (max 134.6786)** ·
+  median 2.5442; areaSuspect 1; conf 3/42/11 (v3 — lažno); **Σ areaQK**
+  {83: 3708, 84: 10273, 85: 10333, 86: 9544, 88: 4659} = **38517 QK**;
+  kulture Alm 9 · Dingf. 6 · Wein 3 …; wohnort 56/56.
+
+### Opcije A/B1/B2/B3 (predračun — odločitev LASTNIŠKA)
+
+- **A status quo (v7):** rows 891 / bases 879 / multiPage 2 / crossBlatt 0 /
+  ambRows 4 — sekcije v registru brez geometrije (dokaz P69 sectionClass);
+- **B1 re-admisija vseh 56 (base-ključ, brez geometrije):** rows 947 /
+  multiPage 33 / **crossBlatt 23** / ambRows 91 — **KRŠI C4 NIL-CLAIM**
+  (23 base dobi vrstici na I in II) → **OBVEZEN per-instanca ključ
+  (base, stran)**: 0 kolizij + 0 duplikatov + 0 vrstic v7 na sekcij straneh
+  → crossBlatt 0 / multiPage 2 / ambRows 4 (nespremenjeno);
+- **B2 samo P60 band subset (12 vrstic, 8 base):** rows 903 / multiPage 10 /
+  crossBlatt 6 / ambRows 24 (isti problem, manjši); z instance ključem
+  crossBlatt 0 / multiPage 2 / ambRows 4; **44 vrstic ostane izključenih [~]**;
+- **B3 geometrija per Blatt:** ZAHTEVA georef Blatt II sekcije karte +
+  PF protokol (vir ni v repu) — **[~] neizvedljivo danes**.
+
+### Skripta, invarianti in QA
+
+- Skripta scripts/p76_ps_sections_perblatt_pack.py (I1–I9, `--check` bajtno
+  PASS; pini P69 99962e24…, v3 af7479e4…, v7 4d701a71…, P59 650f13dc…,
+  P56 2fddc76f…, P60 2c2b2ace…, v7 runtime 4bb40370…).
+- Dokaz research/issue17/ps-sections-perblatt-pack.json (summary/opcije/
+  kulture/hausNrDetail/p60Detail + sectionRows 56 × ratioV3/geoSharedV3/
+  pageMapBand; inputs 7 sha pinov; invarianti I1–I9) + runtime
+  src/data/atlas/ps-sections-perblatt-pack.json (bajtna projekcija — brez
+  principle/inputs/invariants + sectionRows brez ratioV3/geoSharedV3/
+  pageMapBand).
+- Veriga skript: p60–p67 + p70–p75 `--check` PASS (p68 zamrznjen po C2 —
+  zgodovinsko); P76 ne spreminja nobenega obstoječega dokaza/runtime-a.
+- QA 78 → **79/79** (nova qa-p76-sections-perblatt: TS pini na
+  SECTIONS_PERBLATT_P76 + CELOVEN neodvisen preracun iz runtime datotek —
+  ps-pass1-layers sectionClass × v7 runtime × P59 pageAttribution ×
+  ps-perblatt-attribution × pack runtime: 56/31/per-page, Blatt II 5/5,
+  counterpar 31/31 (Blatt po P59 — NE po row.blatt), lastniki 0/0,
+  hn 0/31, pageMap bandi ⊇ parzelle, Σ areaQK, P60 band 12/56, opcije
+  A/B1/B2 re-izpeljane iz v7 + pack vrstic (strip na register-native
+  polja) + instance ključ 0/0/0, pack == TS konstanta po poljih, v7 join
+  pini 891/879/2/0; repo dodaja dokaz == runtime bajtno (summary/opcije/
+  kulture/hausNrDetail/p60Detail + sectionRows + ratioV3/geoSharedV3/
+  pageMapBand), invarianti I1–I9, inputs 7 pinov, P56 dokaz pageMap ==
+  pini; dve obliki repo/produkcija).
+
+**Poštenost:** paket NE SPREMINJA v7 joina — samo meri in dokazuje
+(NIL); izbira opcije (A/B1/B2/B3) je LASTNIŠKA; PF protokol je manjkajoči
+vir [~] (44 vrstic brez band identitete); p83 dvojni blok 161–170 ×2 ostaja
+[~] (P69; 8× nebere zanesljivo). Strojno berljivo:
+research/issue17/ps-sections-perblatt-pack.json + runtime
+src/data/atlas/ps-sections-perblatt-pack.json (skripta
+scripts/p76_ps_sections_perblatt_pack.py, I1–I9, `--check` bajtno PASS).
