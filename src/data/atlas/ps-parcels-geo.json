@@ -1,8 +1,8 @@
 {
-  "version": 2,
-  "task": "P58 (issue #13) — PS-PARCELS-GEO v2: sanirana geolokacija (43 lažnih S3 odstranjenih po P56, 26 Blatt I dodanih iz P57)",
+  "version": 3,
+  "task": "P68 (issue #13) — PS-PARCELS-GEO v3: sanirano številčenje (17 preslikav p78/p93/p87 po P67 specifikaciji, re-join po P55 metodi)",
   "date": "2026-10-14",
-  "generatedBy": "scripts/p58_ps_parcels_geo_v2.py",
+  "generatedBy": "scripts/p68_ps_v3_renumber.py",
   "historicalConstant": {
     "wienerQkM2": 3.59665
   },
@@ -18,500 +18,62 @@
     "pass3Note": "8 strani izbranih na pass3 (24/37/83/84/87/94/121/125): pass3 datoteke brez parsed.vrstice, NDJSON vsebina številčno nezanesljiva (7/8 prvih parcel divergira od pass1 in pass2, ki se strinjata) → uporabljen pass1; odmik od PS-full-v2 izbire dokumentiran"
   },
   "join": {
-    "matchedRows": 1093,
-    "matchedRowsS1S2": 1067,
+    "matchedRows": 1079,
+    "matchedRowsS1S2": 1053,
     "matchedRowsBI": 26,
-    "matchedSharePct": 38.6,
+    "matchedSharePct": 39.1,
     "psUniqueNumbers": 2106,
-    "psPositionedParcels": 800,
-    "suffixGroups": 241,
+    "psPositionedParcels": 798,
+    "suffixGroups": 240,
     "seriesCounts": {
-      "BI": 26,
-      "S1": 997,
-      "S2": 70
+      "S1": 983,
+      "S2": 70,
+      "BI": 26
     },
     "confCounts": {
       "STRONG": 174,
-      "MEDIUM": 759,
-      "WEAK": 160
+      "MEDIUM": 749,
+      "WEAK": 156
     },
     "readConfBI": {
       "STRONG": 3,
       "MEDIUM": 14,
       "WEAK": 9
     },
-    "ambiguousBases": 211,
-    "ambiguousRows": 495
+    "ambiguousBases": 199,
+    "ambiguousRows": 472
   },
-  "v2Delta": {
-    "reason": "sanacija produkcije: 43 lažnih povezav S3 (P56 dokaz) odstranjenih, 26 Blatt I vrstic iz primarnega vira P57 dodanih",
-    "removed": {
-      "rows": 43,
-      "pages": [
-        138,
-        139
-      ],
-      "proof": "P56 kontaminacija: median razmerja površin 0.0892 ≪ 3.7188 (S1) — ~42× odmik od 1 Wiener QK 3.59665 — + pass-razhajanje str. 138–139 (P48 Blatt X koroboracija); nabor 43 vrstic bajtno enak P56 seznamu",
-      "rowsDetail": [
-        {
-          "page": 138,
-          "base": "1",
-          "owner": "Grübl Lorenz",
-          "kultur": "Wiese",
-          "areaQK": 4698.0,
-          "areaModern": 4548.0,
-          "ratio": 0.9681
-        },
-        {
-          "page": 138,
-          "base": "2",
-          "owner": "Grübl Lorenz",
-          "kultur": "Wiese",
-          "areaQK": 5447.0,
-          "areaModern": 486.0,
-          "ratio": 0.0892
-        },
-        {
-          "page": 138,
-          "base": "3",
-          "owner": "Grübl Lorenz",
-          "kultur": "Wiese",
-          "areaQK": 5706.0,
-          "areaModern": 1917.0,
-          "ratio": 0.336
-        },
-        {
-          "page": 138,
-          "base": "4",
-          "owner": "Grübl Lorenz",
-          "kultur": "Acker",
-          "areaQK": 3583.0,
-          "areaModern": 986.0,
-          "ratio": 0.2752
-        },
-        {
-          "page": 138,
-          "base": "5",
-          "owner": "Grübl Lorenz",
-          "kultur": "Acker",
-          "areaQK": 1140.0,
-          "areaModern": 1280.0,
-          "ratio": 1.1228
-        },
-        {
-          "page": 138,
-          "base": "6",
-          "owner": "Grübl Lorenz",
-          "kultur": "Acker",
-          "areaQK": 682.0,
-          "areaModern": 1608.0,
-          "ratio": 2.3578
-        },
-        {
-          "page": 138,
-          "base": "7",
-          "owner": "Grübl Lorenz",
-          "kultur": "Acker",
-          "areaQK": 9863.0,
-          "areaModern": 1406.0,
-          "ratio": 0.1426
-        },
-        {
-          "page": 138,
-          "base": "8",
-          "owner": "Grübl Lorenz",
-          "kultur": "Acker",
-          "areaQK": 1909.0,
-          "areaModern": 464.0,
-          "ratio": 0.2431
-        },
-        {
-          "page": 138,
-          "base": "9",
-          "owner": "Grübl Lorenz",
-          "kultur": "Acker",
-          "areaQK": 81.0,
-          "areaModern": 1734.0,
-          "ratio": 21.4074
-        },
-        {
-          "page": 138,
-          "base": "10",
-          "owner": "Grübl Lorenz",
-          "kultur": "Acker",
-          "areaQK": 4581.0,
-          "areaModern": 5063.0,
-          "ratio": 1.1052
-        },
-        {
-          "page": 138,
-          "base": "11",
-          "owner": "Grübl Lorenz",
-          "kultur": "Acker",
-          "areaQK": 2031.0,
-          "areaModern": 361.0,
-          "ratio": 0.1777
-        },
-        {
-          "page": 138,
-          "base": "13",
-          "owner": "Grübl Lorenz",
-          "kultur": "Acker",
-          "areaQK": 2888.0,
-          "areaModern": 572.0,
-          "ratio": 0.1981
-        },
-        {
-          "page": 138,
-          "base": "15",
-          "owner": "Grübl Lorenz",
-          "kultur": "Acker",
-          "areaQK": 10390.0,
-          "areaModern": 5137.0,
-          "ratio": 0.4944
-        },
-        {
-          "page": 138,
-          "base": "16",
-          "owner": "Grübl Lorenz",
-          "kultur": "Acker",
-          "areaQK": 16270.0,
-          "areaModern": 687.0,
-          "ratio": 0.0422
-        },
-        {
-          "page": 138,
-          "base": "17",
-          "owner": "Grübl Lorenz",
-          "kultur": "Acker",
-          "areaQK": 16817.0,
-          "areaModern": 723.0,
-          "ratio": 0.043
-        },
-        {
-          "page": 138,
-          "base": "18",
-          "owner": "Grübl Lorenz",
-          "kultur": "Acker",
-          "areaQK": 10783.0,
-          "areaModern": 1478.0,
-          "ratio": 0.1371
-        },
-        {
-          "page": 138,
-          "base": "19",
-          "owner": "Grübl Lorenz",
-          "kultur": "Acker",
-          "areaQK": 21908.0,
-          "areaModern": 42.0,
-          "ratio": 0.0019
-        },
-        {
-          "page": 138,
-          "base": "20",
-          "owner": "Grübl Lorenz",
-          "kultur": "Acker",
-          "areaQK": 10490.0,
-          "areaModern": 414.0,
-          "ratio": 0.0395
-        },
-        {
-          "page": 138,
-          "base": "21",
-          "owner": "Samm",
-          "kultur": "Acker",
-          "areaQK": null,
-          "areaModern": 43.0,
-          "ratio": null
-        },
-        {
-          "page": 138,
-          "base": "22",
-          "owner": "Samm",
-          "kultur": "Acker",
-          "areaQK": null,
-          "areaModern": 720.0,
-          "ratio": null
-        },
-        {
-          "page": 138,
-          "base": "23",
-          "owner": "Samm",
-          "kultur": "Acker",
-          "areaQK": null,
-          "areaModern": 84.0,
-          "ratio": null
-        },
-        {
-          "page": 138,
-          "base": "26",
-          "owner": "Samm",
-          "kultur": "Acker",
-          "areaQK": null,
-          "areaModern": 892.0,
-          "ratio": null
-        },
-        {
-          "page": 138,
-          "base": "31",
-          "owner": "Samm",
-          "kultur": "Acker",
-          "areaQK": null,
-          "areaModern": 993.0,
-          "ratio": null
-        },
-        {
-          "page": 138,
-          "base": "33",
-          "owner": "Samm",
-          "kultur": "Acker",
-          "areaQK": null,
-          "areaModern": 250.0,
-          "ratio": null
-        },
-        {
-          "page": 138,
-          "base": "35",
-          "owner": "Samm",
-          "kultur": "Acker",
-          "areaQK": null,
-          "areaModern": 47.0,
-          "ratio": null
-        },
-        {
-          "page": 138,
-          "base": "36",
-          "owner": "Samm",
-          "kultur": "Acker",
-          "areaQK": null,
-          "areaModern": 719.0,
-          "ratio": null
-        },
-        {
-          "page": 139,
-          "base": "81",
-          "owner": "Grübl Joh.",
-          "kultur": "81. flur",
-          "areaQK": 6790.0,
-          "areaModern": 523.0,
-          "ratio": 0.077
-        },
-        {
-          "page": 139,
-          "base": "82",
-          "owner": "6a",
-          "kultur": "82",
-          "areaQK": 8686.0,
-          "areaModern": 1653.0,
-          "ratio": 0.1903
-        },
-        {
-          "page": 139,
-          "base": "83",
-          "owner": "63",
-          "kultur": "83",
-          "areaQK": 296.0,
-          "areaModern": 1477.0,
-          "ratio": 4.9899
-        },
-        {
-          "page": 139,
-          "base": "84",
-          "owner": "64",
-          "kultur": "84",
-          "areaQK": 4064.0,
-          "areaModern": 76.0,
-          "ratio": 0.0187
-        },
-        {
-          "page": 139,
-          "base": "85",
-          "owner": "65",
-          "kultur": "85",
-          "areaQK": 11409.0,
-          "areaModern": 616.0,
-          "ratio": 0.054
-        },
-        {
-          "page": 139,
-          "base": "88",
-          "owner": "68",
-          "kultur": "88",
-          "areaQK": 20399.0,
-          "areaModern": 284.0,
-          "ratio": 0.0139
-        },
-        {
-          "page": 139,
-          "base": "89",
-          "owner": "69",
-          "kultur": "89",
-          "areaQK": 16027.0,
-          "areaModern": 600.0,
-          "ratio": 0.0374
-        },
-        {
-          "page": 139,
-          "base": "90",
-          "owner": "70",
-          "kultur": "90",
-          "areaQK": 12998.0,
-          "areaModern": 1738.0,
-          "ratio": 0.1337
-        },
-        {
-          "page": 139,
-          "base": "91",
-          "owner": "71",
-          "kultur": "91",
-          "areaQK": 22262.0,
-          "areaModern": 945.0,
-          "ratio": 0.0424
-        },
-        {
-          "page": 139,
-          "base": "92",
-          "owner": "72",
-          "kultur": "92",
-          "areaQK": 18904.0,
-          "areaModern": 490.0,
-          "ratio": 0.0259
-        },
-        {
-          "page": 139,
-          "base": "93",
-          "owner": "73",
-          "kultur": "93",
-          "areaQK": 18929.0,
-          "areaModern": 1033.0,
-          "ratio": 0.0546
-        },
-        {
-          "page": 139,
-          "base": "94",
-          "owner": "74",
-          "kultur": "94",
-          "areaQK": 20104.0,
-          "areaModern": 1764.0,
-          "ratio": 0.0877
-        },
-        {
-          "page": 139,
-          "base": "95",
-          "owner": "75",
-          "kultur": "95",
-          "areaQK": 17778.0,
-          "areaModern": 1322.0,
-          "ratio": 0.0744
-        },
-        {
-          "page": 139,
-          "base": "96",
-          "owner": "76",
-          "kultur": "96",
-          "areaQK": 18488.0,
-          "areaModern": 1021.0,
-          "ratio": 0.0552
-        },
-        {
-          "page": 139,
-          "base": "97",
-          "owner": "77",
-          "kultur": "97",
-          "areaQK": 18606.0,
-          "areaModern": 321.0,
-          "ratio": 0.0173
-        },
-        {
-          "page": 139,
-          "base": "98",
-          "owner": "78",
-          "kultur": "98",
-          "areaQK": 21479.0,
-          "areaModern": 2156.0,
-          "ratio": 0.1004
-        },
-        {
-          "page": 139,
-          "base": "100",
-          "owner": "80",
-          "kultur": "100",
-          "areaQK": 24301.0,
-          "areaModern": 1135.0,
-          "ratio": 0.0467
-        }
-      ]
-    },
-    "added": {
-      "rows": 26,
-      "source": "P57 ps-register-start.json (štiri neodvisne VLM plasti + deterministična adjudikacija; qa-p57)",
-      "bases": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        13,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        26,
-        31,
-        33,
-        35,
-        36
-      ],
-      "note": "točno 26 lostBases P56; št. 1 brez površine (blot) — povezana samo po številki"
-    },
+  "v3Delta": {
+    "reason": "sanacija številčenja: 17 preslikav (p78 160x→150x, p93 160x→190x, p87 +1020) po P67 forenzični specifikaciji (oči + strip 2× + kontinuiteta + karta); re-join po P55 metodi",
+    "renumbered": 17,
+    "removed": 14,
+    "added": 0,
     "before": {
-      "matchedRows": 1110,
-      "uniqueBases": 800,
-      "confCounts": {
-        "STRONG": 171,
-        "MEDIUM": 775,
-        "WEAK": 164
-      },
-      "areaMedian": 3.6984,
-      "areaPairs": 1083,
-      "spatialMedianM": 51.8
+      "rows": 1093,
+      "bases": 800,
+      "multiPage": 211,
+      "crossBlatt": 110
     },
     "after": {
-      "matchedRows": 1093,
-      "uniqueBases": 800,
-      "confCounts": {
-        "STRONG": 174,
-        "MEDIUM": 759,
-        "WEAK": 160
-      },
-      "areaMedian": 3.7709,
-      "areaPairs": 1074,
-      "spatialMedianM": 51.8
+      "rows": 1079,
+      "bases": 798,
+      "multiPage": 199,
+      "crossBlatt": 98
     },
-    "invariance": "pozicije per base (group_pos) + množica pozicioniranih števil 800 nespremenjena → soslednost in S1/S2 conf bajtno enaka v1 (I9/I3)"
+    "invariance": "nespremenjene vrstice bajtno == v2 (lekcija P9); group-derived polja (ambiguous/conf) prekalkulirana po P55 metodi; v2 ostaja arhiviran (research/issue17/ps-parcels-geo-v2.json)",
+    "note": "psUniqueNumbers 2106 = meritev registra (branja ps-raw nespremenjena — sanacija le na join ključu)"
   },
   "areaProof": {
-    "pairsWithArea": 1074,
-    "medianRatio": 3.7709,
-    "q25": 2.3222,
-    "q75": 8.2676,
+    "pairsWithArea": 1060,
+    "medianRatio": 3.8512,
+    "q25": 2.4103,
+    "q75": 8.3459,
     "tightN": 187,
-    "tightShare": 0.1741,
-    "shuffleMedian": 4.0829,
-    "shuffleTightShare": 0.0559,
+    "tightShare": 0.1764,
+    "shuffleMedian": 4.2771,
+    "shuffleTightShare": 0.0472,
     "historicalQkM2": 3.59665,
-    "deltaPct": 4.85
+    "deltaPct": 7.08
   },
   "spatialProof": {
     "consecPairs": 590,
@@ -519,9 +81,9 @@
     "q25M": 31.2,
     "q75M": 91.0,
     "share150": 0.8932,
-    "shuffleMedianM": 1436.9,
-    "shuffleShare150": 0.025,
-    "enrichmentX": 27.8
+    "shuffleMedianM": 1466.1,
+    "shuffleShare150": 0.0226,
+    "enrichmentX": 28.3
   },
   "furkovce": {
     "wohnort": "Furkofze",
@@ -536,11 +98,11 @@
     "note": "prvi imenovani prebivalci Fučkovci v arhivu (PS str. 125); parceli obstajata še danes (P47) [~] — v2 nespremenjeno"
   },
   "perBlattAmbiguity": {
-    "basesOnMultiplePages": 211,
-    "rowsWithAmbiguousBase": 495,
-    "note": "znotraj v2 (BI+S1+S2); P56 je meril 515 base čez celotni register (vključno S3) — v2 manj, ker številke 1–36 zdaj obstajajo le na Blatt I [~]"
+    "basesOnMultiplePages": 199,
+    "rowsWithAmbiguousBase": 472,
+    "note": "base na > 1 strani v v3 (P68 re-join po P55 metodi); čez-Blatt 98 (blattDist I·II 31 / II·III 46 / III·IV 3 / IV·V 18) [~]"
   },
-  "statusLine": "SANITIZED-DETERMINISTIC — PS geolokacija v2 (P58): 1093 vrstic povezanih (1067 S1/S2 iz P55 joina po odstranitvi 43 lažnih S3 povezav [P56: površine ~42× od 1 QK + pass-razhajanje] + 26 Blatt I vrstic iz primarnega vira P57); 800 pozicioniranih številk; površine median 3.7709 ≈ 1 QK = 3.59665 (Δ +4.85 %, kontrola 4.0829) — čista vrednost, v1 3.6984 je bil snizan s 43 lažnimi S3 povezavami; soslednost NEINVARIANTNA: 590 parov / 51.8 m / 27.8× — identično v1; zaupanje STRONG 174 / MEDIUM 759 / WEAK 160; per-Blatt dvoumnost na v2: 211 base / 495 vrstic [~]",
+  "statusLine": "P68 V3 SANACIJA ŠTEVILČENJA: 17 preslikav izvedenih (p78 160x→150x, p93 160x→190x, p87 +1020 — bajtno po P67 specifikaciji, 0 kolizij); re-join po P55 metodi: 14 vrstic izpada (base brez PF poligona — 3× p78 Wüstung Pod Grabino, 11× p87), p93 3× re-claim na 1903/1904/1905 (poligoni JZ, 1903/1905 re-claim pozicij p98, 1904 nova base); v3: 1079 vrstic / 798 base / multi-page 199 / cross-Blatt 98 (odmiki od P67 aproksimacije [~] dokumentirani); fuzije: 1903 = III×2+IV×1 (delež 0.7081), 1905 R2b profil, 1904 ratio 6.8052 izven pasu (prečrtana vrstica); area median 3.8512 (Δ 7.08 %), sosledje 590 parov / 51.8 m (28.3×); v2 ostaja arhiv (ebbd8f29…); SPLIT join = LASTNIKA (P69)",
   "rows": [
     {
       "page": 3,
@@ -4761,7 +4323,7 @@
       "ratio": 1.8149,
       "conf": "WEAK",
       "series": "S1",
-      "ambiguous": true
+      "ambiguous": false
     },
     {
       "page": 36,
@@ -4784,7 +4346,7 @@
       "ratio": 58.5,
       "conf": "WEAK",
       "series": "S1",
-      "ambiguous": true
+      "ambiguous": false
     },
     {
       "page": 36,
@@ -4807,7 +4369,7 @@
       "ratio": 17.5938,
       "conf": "MEDIUM",
       "series": "S1",
-      "ambiguous": true
+      "ambiguous": false
     },
     {
       "page": 36,
@@ -4830,7 +4392,7 @@
       "ratio": 24.6143,
       "conf": "MEDIUM",
       "series": "S1",
-      "ambiguous": true
+      "ambiguous": false
     },
     {
       "page": 36,
@@ -4853,7 +4415,7 @@
       "ratio": 0.9086,
       "conf": "WEAK",
       "series": "S1",
-      "ambiguous": true
+      "ambiguous": false
     },
     {
       "page": 36,
@@ -4876,7 +4438,7 @@
       "ratio": 3.5957,
       "conf": "STRONG",
       "series": "S1",
-      "ambiguous": true
+      "ambiguous": false
     },
     {
       "page": 36,
@@ -4899,7 +4461,7 @@
       "ratio": 1.6349,
       "conf": "MEDIUM",
       "series": "S1",
-      "ambiguous": true
+      "ambiguous": false
     },
     {
       "page": 36,
@@ -4922,7 +4484,7 @@
       "ratio": 4.0878,
       "conf": "MEDIUM",
       "series": "S1",
-      "ambiguous": true
+      "ambiguous": false
     },
     {
       "page": 36,
@@ -4945,7 +4507,7 @@
       "ratio": 12.0319,
       "conf": "MEDIUM",
       "series": "S1",
-      "ambiguous": true
+      "ambiguous": false
     },
     {
       "page": 36,
@@ -4968,7 +4530,7 @@
       "ratio": 13.7444,
       "conf": "MEDIUM",
       "series": "S1",
-      "ambiguous": true
+      "ambiguous": false
     },
     {
       "page": 36,
@@ -4991,7 +4553,7 @@
       "ratio": 75.9259,
       "conf": "MEDIUM",
       "series": "S1",
-      "ambiguous": true
+      "ambiguous": false
     },
     {
       "page": 38,
@@ -9962,75 +9524,6 @@
       "ambiguous": false
     },
     {
-      "page": 78,
-      "parzella": "1603",
-      "base": "1603",
-      "owner": "Pachler Martin",
-      "stand": null,
-      "hausNr": "30",
-      "wohnort": "Grübln",
-      "wohnortInherited": true,
-      "kultur": "Acker",
-      "joch": null,
-      "klafter": 776.0,
-      "areaQK": 776.0,
-      "areaSuspect": false,
-      "parts": 1,
-      "lat": 45.563337,
-      "lng": 15.292912,
-      "areaModern": 547.0,
-      "ratio": 0.7049,
-      "conf": "MEDIUM",
-      "series": "S1",
-      "ambiguous": true
-    },
-    {
-      "page": 78,
-      "parzella": "1604",
-      "base": "1604",
-      "owner": "Ullrich Otto",
-      "stand": null,
-      "hausNr": "31",
-      "wohnort": "Grübln",
-      "wohnortInherited": true,
-      "kultur": "Acker",
-      "joch": null,
-      "klafter": 774.0,
-      "areaQK": 774.0,
-      "areaSuspect": false,
-      "parts": 3,
-      "lat": 45.5636909,
-      "lng": 15.2926395,
-      "areaModern": 2162.0,
-      "ratio": 2.7933,
-      "conf": "MEDIUM",
-      "series": "S1",
-      "ambiguous": true
-    },
-    {
-      "page": 78,
-      "parzella": "1605",
-      "base": "1605",
-      "owner": "Tillak Anio",
-      "stand": null,
-      "hausNr": "16",
-      "wohnort": "Grübln",
-      "wohnortInherited": true,
-      "kultur": "Gemeinde Grätzig",
-      "joch": 1.0,
-      "klafter": 1088.0,
-      "areaQK": 2688.0,
-      "areaSuspect": false,
-      "parts": 1,
-      "lat": 45.563359,
-      "lng": 15.293209,
-      "areaModern": 615.0,
-      "ratio": 0.2288,
-      "conf": "MEDIUM",
-      "series": "S1",
-      "ambiguous": true
-    },
-    {
       "page": 79,
       "parzella": "1821",
       "base": "1821",
@@ -11871,259 +11364,6 @@
       "ambiguous": true
     },
     {
-      "page": 87,
-      "parzella": "661",
-      "base": "661",
-      "owner": "Staudt Hans",
-      "stand": "Bauer",
-      "hausNr": "1/2",
-      "wohnort": "Grüble",
-      "wohnortInherited": false,
-      "kultur": "Acker",
-      "joch": null,
-      "klafter": 699.0,
-      "areaQK": 699.0,
-      "areaSuspect": false,
-      "parts": 1,
-      "lat": 45.57173,
-      "lng": 15.29028,
-      "areaModern": 1196.0,
-      "ratio": 1.711,
-      "conf": "WEAK",
-      "series": "S1",
-      "ambiguous": true
-    },
-    {
-      "page": 87,
-      "parzella": "663",
-      "base": "663",
-      "owner": "Dultsitsch Hans",
-      "stand": null,
-      "hausNr": "1/6",
-      "wohnort": "Grüble",
-      "wohnortInherited": false,
-      "kultur": "Acker",
-      "joch": null,
-      "klafter": 698.0,
-      "areaQK": 698.0,
-      "areaSuspect": false,
-      "parts": 1,
-      "lat": 45.571532,
-      "lng": 15.290064,
-      "areaModern": 1287.0,
-      "ratio": 1.8438,
-      "conf": "WEAK",
-      "series": "S1",
-      "ambiguous": true
-    },
-    {
-      "page": 87,
-      "parzella": "666",
-      "base": "666",
-      "owner": "Dragauš Jerg",
-      "stand": null,
-      "hausNr": "1/3",
-      "wohnort": "Dragatuš",
-      "wohnortInherited": false,
-      "kultur": "Acker",
-      "joch": null,
-      "klafter": 1319.0,
-      "areaQK": 1319.0,
-      "areaSuspect": false,
-      "parts": 1,
-      "lat": 45.570973,
-      "lng": 15.290152,
-      "areaModern": 1126.0,
-      "ratio": 0.8537,
-      "conf": "MEDIUM",
-      "series": "S1",
-      "ambiguous": true
-    },
-    {
-      "page": 87,
-      "parzella": "667",
-      "base": "667",
-      "owner": "Hegole Mands",
-      "stand": null,
-      "hausNr": "1/2",
-      "wohnort": "Dragatuš",
-      "wohnortInherited": true,
-      "kultur": "Acker",
-      "joch": null,
-      "klafter": 1148.0,
-      "areaQK": 1148.0,
-      "areaSuspect": false,
-      "parts": 2,
-      "lat": 45.5713173,
-      "lng": 15.28932,
-      "areaModern": 1723.0,
-      "ratio": 1.5009,
-      "conf": "MEDIUM",
-      "series": "S1",
-      "ambiguous": true
-    },
-    {
-      "page": 87,
-      "parzella": "671",
-      "base": "671",
-      "owner": "Maaßl Mantsch",
-      "stand": null,
-      "hausNr": "1/11",
-      "wohnort": "Grüble",
-      "wohnortInherited": true,
-      "kultur": "Acker",
-      "joch": null,
-      "klafter": 1423.0,
-      "areaQK": 1423.0,
-      "areaSuspect": false,
-      "parts": 1,
-      "lat": 45.571619,
-      "lng": 15.289723,
-      "areaModern": 169.0,
-      "ratio": 0.1188,
-      "conf": "WEAK",
-      "series": "S1",
-      "ambiguous": true
-    },
-    {
-      "page": 87,
-      "parzella": "673",
-      "base": "673",
-      "owner": "Staudt Hans",
-      "stand": null,
-      "hausNr": "1/5",
-      "wohnort": "Grüble",
-      "wohnortInherited": true,
-      "kultur": "Acker",
-      "joch": null,
-      "klafter": 1498.0,
-      "areaQK": 1498.0,
-      "areaSuspect": false,
-      "parts": 3,
-      "lat": 45.572246,
-      "lng": 15.2898476,
-      "areaModern": 827.0,
-      "ratio": 0.5521,
-      "conf": "MEDIUM",
-      "series": "S1",
-      "ambiguous": true
-    },
-    {
-      "page": 87,
-      "parzella": "674",
-      "base": "674",
-      "owner": "Dultsitsch Hans",
-      "stand": null,
-      "hausNr": "1/6",
-      "wohnort": "Grüble",
-      "wohnortInherited": true,
-      "kultur": "Acker",
-      "joch": null,
-      "klafter": 548.0,
-      "areaQK": 548.0,
-      "areaSuspect": false,
-      "parts": 1,
-      "lat": 45.572768,
-      "lng": 15.289746,
-      "areaModern": 309.0,
-      "ratio": 0.5639,
-      "conf": "MEDIUM",
-      "series": "S1",
-      "ambiguous": true
-    },
-    {
-      "page": 87,
-      "parzella": "675",
-      "base": "675",
-      "owner": "Maaßl Mantsch",
-      "stand": null,
-      "hausNr": "1/4",
-      "wohnort": "Grüble",
-      "wohnortInherited": true,
-      "kultur": "Acker",
-      "joch": null,
-      "klafter": 1279.0,
-      "areaQK": 1279.0,
-      "areaSuspect": false,
-      "parts": 1,
-      "lat": 45.572589,
-      "lng": 15.289486,
-      "areaModern": 605.0,
-      "ratio": 0.473,
-      "conf": "MEDIUM",
-      "series": "S1",
-      "ambiguous": true
-    },
-    {
-      "page": 87,
-      "parzella": "676",
-      "base": "676",
-      "owner": "Kobentsch Mands",
-      "stand": null,
-      "hausNr": "1/4",
-      "wohnort": "Grüble",
-      "wohnortInherited": true,
-      "kultur": "Acker",
-      "joch": null,
-      "klafter": 1413.0,
-      "areaQK": 1413.0,
-      "areaSuspect": false,
-      "parts": 1,
-      "lat": 45.572253,
-      "lng": 15.289795,
-      "areaModern": 1131.0,
-      "ratio": 0.8004,
-      "conf": "MEDIUM",
-      "series": "S1",
-      "ambiguous": true
-    },
-    {
-      "page": 87,
-      "parzella": "679",
-      "base": "679",
-      "owner": "Gummeier",
-      "stand": null,
-      "hausNr": "1/2",
-      "wohnort": "Grüble",
-      "wohnortInherited": true,
-      "kultur": "Weide",
-      "joch": null,
-      "klafter": 18.0,
-      "areaQK": 18.0,
-      "areaSuspect": false,
-      "parts": 1,
-      "lat": 45.572139,
-      "lng": 15.289517,
-      "areaModern": 2474.0,
-      "ratio": 137.4444,
-      "conf": "MEDIUM",
-      "series": "S1",
-      "ambiguous": true
-    },
-    {
-      "page": 87,
-      "parzella": "680",
-      "base": "680",
-      "owner": "Hlebitsch Mufg",
-      "stand": null,
-      "hausNr": "1/2",
-      "wohnort": "Grüble",
-      "wohnortInherited": true,
-      "kultur": "Garten",
-      "joch": null,
-      "klafter": 12.0,
-      "areaQK": 12.0,
-      "areaSuspect": false,
-      "parts": 2,
-      "lat": 45.5722294,
-      "lng": 15.2889417,
-      "areaModern": 10250.0,
-      "ratio": 854.1667,
-      "conf": "MEDIUM",
-      "series": "S1",
-      "ambiguous": true
-    },
-    {
       "page": 88,
       "parzella": "736",
       "base": "736",
@@ -13207,7 +12447,7 @@
     {
       "page": 93,
       "parzella": "1603",
-      "base": "1603",
+      "base": "1903",
       "owner": "Verboten (er) Bueb?",
       "stand": "Bauer",
       "hausNr": "64",
@@ -13219,10 +12459,10 @@
       "areaQK": 1005.0,
       "areaSuspect": false,
       "parts": 1,
-      "lat": 45.563337,
-      "lng": 15.292912,
-      "areaModern": 547.0,
-      "ratio": 0.5443,
+      "lat": 45.54932,
+      "lng": 15.2706,
+      "areaModern": 1266.0,
+      "ratio": 1.2597,
       "conf": "MEDIUM",
       "series": "S1",
       "ambiguous": true
@@ -13230,7 +12470,7 @@
     {
       "page": 93,
       "parzella": "1604",
-      "base": "1604",
+      "base": "1904",
       "owner": "Piringer Mathäus",
       "stand": "Bauer",
       "hausNr": "63",
@@ -13241,19 +12481,19 @@
       "klafter": 724.0,
       "areaQK": 724.0,
       "areaSuspect": false,
-      "parts": 3,
-      "lat": 45.5636909,
-      "lng": 15.2926395,
-      "areaModern": 2162.0,
-      "ratio": 2.9862,
+      "parts": 1,
+      "lat": 45.549053,
+      "lng": 15.26961,
+      "areaModern": 4927.0,
+      "ratio": 6.8052,
       "conf": "MEDIUM",
       "series": "S1",
-      "ambiguous": true
+      "ambiguous": false
     },
     {
       "page": 93,
       "parzella": "1605",
-      "base": "1605",
+      "base": "1905",
       "owner": "[?] [?]",
       "stand": "Bauer",
       "hausNr": "44",
@@ -13265,9 +12505,9 @@
       "areaQK": null,
       "areaSuspect": false,
       "parts": 1,
-      "lat": 45.563359,
-      "lng": 15.293209,
-      "areaModern": 615.0,
+      "lat": 45.548745,
+      "lng": 15.268804,
+      "areaModern": 4934.0,
       "ratio": null,
       "conf": "MEDIUM",
       "series": "S1",
@@ -14766,7 +14006,7 @@
       "ratio": 0.8242,
       "conf": "MEDIUM",
       "series": "S1",
-      "ambiguous": false
+      "ambiguous": true
     },
     {
       "page": 98,
@@ -14789,7 +14029,7 @@
       "ratio": 1.4035,
       "conf": "MEDIUM",
       "series": "S1",
-      "ambiguous": false
+      "ambiguous": true
     },
     {
       "page": 98,
@@ -14810,9 +14050,9 @@
       "lng": 15.268804,
       "areaModern": 4934.0,
       "ratio": 5.2997,
-      "conf": "WEAK",
+      "conf": "MEDIUM",
       "series": "S1",
-      "ambiguous": false
+      "ambiguous": true
     },
     {
       "page": 98,

@@ -1,17 +1,5 @@
 {
  "attrPageStats": {
-  "36": {
-   "bases": 11,
-   "blatt": "I",
-   "kultures": [
-    "Eidn",
-    "Lhup",
-    "Lhut"
-   ],
-   "multiPageBases": 11,
-   "multiPageShare": 1.0,
-   "rows": 11
-  },
   "49": {
    "bases": 15,
    "blatt": "II",
@@ -89,18 +77,6 @@
    "multiPageBases": 14,
    "multiPageShare": 1.0,
    "rows": 14
-  },
-  "87": {
-   "bases": 11,
-   "blatt": "II",
-   "kultures": [
-    "Acker",
-    "Garten",
-    "Weide"
-   ],
-   "multiPageBases": 11,
-   "multiPageShare": 1.0,
-   "rows": 11
   },
   "94": {
    "bases": 17,
@@ -535,114 +511,6 @@
     }
    ]
   },
-  "666": {
-   "attributedBlatt": "II",
-   "inBand": {
-    "medianRatio": 0.8537,
-    "pages": [
-     87
-    ],
-    "rows": 1
-   },
-   "kulturProfile": [
-    "Acker"
-   ],
-   "outInstances": [
-    {
-     "blatt": "I",
-     "medianRatio": 17.5938,
-     "pages": [
-      36
-     ]
-    }
-   ],
-   "rows": [
-    {
-     "kultur": "Acker",
-     "owner": "Dragauš Jerg",
-     "page": 87,
-     "parzella": "666",
-     "ratio": 0.8537,
-     "sosledje": {
-      "next": 667,
-      "ok": true,
-      "prev": 663
-     }
-    }
-   ]
-  },
-  "671": {
-   "attributedBlatt": "I",
-   "inBand": {
-    "medianRatio": 0.9086,
-    "pages": [
-     36
-    ],
-    "rows": 1
-   },
-   "kulturProfile": [
-    "Lhup"
-   ],
-   "outInstances": [
-    {
-     "blatt": "II",
-     "medianRatio": 0.1188,
-     "pages": [
-      87
-     ]
-    }
-   ],
-   "rows": [
-    {
-     "kultur": "Lhup",
-     "owner": "Würing Michael",
-     "page": 36,
-     "parzella": "671",
-     "ratio": 0.9086,
-     "sosledje": {
-      "next": 673,
-      "ok": false,
-      "prev": 667
-     }
-    }
-   ]
-  },
-  "676": {
-   "attributedBlatt": "II",
-   "inBand": {
-    "medianRatio": 0.8004,
-    "pages": [
-     87
-    ],
-    "rows": 1
-   },
-   "kulturProfile": [
-    "Acker"
-   ],
-   "outInstances": [
-    {
-     "blatt": "I",
-     "medianRatio": 12.0319,
-     "pages": [
-      36
-     ]
-    }
-   ],
-   "rows": [
-    {
-     "kultur": "Acker",
-     "owner": "Kobentsch Mands",
-     "page": 87,
-     "parzella": "676",
-     "ratio": 0.8004,
-     "sosledje": {
-      "next": 679,
-      "ok": true,
-      "prev": 675
-     }
-    }
-   ]
-  },
   "928": {
    "attributedBlatt": "III",
    "inBand": {
@@ -831,48 +699,42 @@
   "definition": "baza s TOČNO eno instanco (Blatt) z median razmerjem v pasu → attributedBlatt",
   "origin": "P59 evidence perBlattAmbiguity.ruleCandidateNote (MERJENO); P60 izvedba z soslednostjo"
  },
- "statusLine": "P60 PER-BLATT ATRIBUCIJA: 17 ruleCandidate atributiranih (II 12 · I 1 · III 4), 23 vrstic, soslednost 21/23 [~]; re-listing 100 % na pas-straneh [36, 49, 61, 83, 84, 85, 86, 87, 99]; join v2 nespremenjen",
+ "statusLine": "P60 PER-BLATT ATRIBUCIJA: 14 ruleCandidate atributiranih (II 10 · I 0 · III 4), 20 vrstic, soslednost 19/20 [~]; re-listing 100 % na pas-straneh [49, 61, 83, 84, 85, 86, 99]; join v2 nespremenjen",
  "summary": {
   "attrPages": [
-   36,
    49,
    61,
    83,
    84,
    85,
    86,
-   87,
    94,
    99
   ],
   "attributedBlattDist": {
-   "I": 1,
-   "II": 12,
+   "II": 10,
    "III": 4
   },
-  "bases": 17,
+  "bases": 14,
   "relist100Pages": [
-   36,
    49,
    61,
    83,
    84,
    85,
    86,
-   87,
    99
   ],
-  "rows": 23,
+  "rows": 20,
   "soslednost": {
-   "flag": 2,
+   "flag": 1,
    "flaggedRows": [
-    "671@p36",
     "934@p99"
    ],
-   "ok": 21
+   "ok": 19
   }
  },
- "task": "P60 — per-Blatt atribucija ruleCandidate base v2 (izvedba P59 pravila pasu [0.8, 1.25])",
+ "task": "P60 — per-Blatt atribucija ruleCandidate base v3 (izvedba P59 pravila pasu [0.8, 1.25]; P68 v3 re-run)",
  "unitSemantics": {
   "factor": 3.59665,
   "modaA": {
@@ -888,13 +750,13 @@
     0.8,
     1.25
    ],
-   "count": 62,
+   "count": 60,
    "note": "ratio ≈ 1 — areaModern ≈ areaQK po ŠTEVILKI; pas pravila P59/P60 ujema to modo"
   },
   "qkReference": 3.59665,
   "status": "ODPRTO — absolutna korespondenca pas-instanc ni dokazana; atribucija = relativa (najboljše ujemanje med instancami) [~]"
  },
- "verdictEn": "Per-Blatt attribution of the 17 ruleCandidate bases EXECUTED (measured): each gets the instance within band [0.8, 1.25] — II 12 · I 1 · III 4 (23 rows); adjacency 21/23 (671/934 [~] = crossed-out rows in the register). Attribute pages (61, 83-87, 99, 36, 49, 94) carry 100% multi-page bases — Kultur-Tabellen re-listing [~]. NOTE: the band matches mode B (ratio ~ 1), not the 1 QK = 3.59665 m2 conversion (mode A) — absolute correspondence remains open; the v2 join UNCHANGED.",
- "verdictSi": "Per-Blatt atribucija 17 ruleCandidate base IZVEDENA (merjeno): vsaka dobi instanco v pasu [0.8, 1.25] — II 12 · I 1 · III 4 (23 vrstic); soslednost 21/23 (671/934 [~] = prečrtane vrstice v registru). Strani pas-instanc (61, 83–87, 99, 36, 49, 94) nosijo 100 % več-stranskih base — Kultur-Tabellen re-listing [~]. OPOMBA: pas ujema modo B (ratio ≈ 1), ne konverzije 1 QK = 3.59665 m² (moda A) — absolutna korespondenca ostaja odprta; join v2 NESPREMENJEN.",
+ "verdictEn": "Per-Blatt attribution of the 14 ruleCandidate bases EXECUTED (measured, v3 P68): each gets the instance within band [0.8, 1.25] — II 10 · III 4 (20 rows); adjacency 19/20 (934 [~] = a crossed-out register row). Attribute pages (61, 83-86, 99, 49, 94) carry 100% multi-page bases — Kultur-Tabellen re-listing [~]. NOTE: the band matches mode B (ratio ~ 1), not the 1 QK = 3.59665 m2 conversion (mode A) — absolute correspondence remains open; the v3 join UNCHANGED.",
+ "verdictSi": "Per-Blatt atribucija 14 ruleCandidate base IZVEDENA (merjeno, v3 P68): vsaka dobi instanco v pasu [0.8, 1.25] — II 10 · III 4 (20 vrstic); soslednost 19/20 (934 [~] = prečrtana vrstica v registru). Strani pas-instanc (61, 83–86, 99, 49, 94) nosijo 100 % več-stranskih base — Kultur-Tabellen re-listing [~]. OPOMBA: pas ujema modo B (ratio ≈ 1), ne konverzije 1 QK = 3.59665 m² (moda A) — absolutna korespondenca ostaja odprta; join v3 NESPREMENJEN.",
  "version": 1
 }

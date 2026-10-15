@@ -43,7 +43,7 @@
 #   I4 pokritost pravil: R1 17 · R2a 53 · R2b 1 · split 39 · fragmented 0 = 110;
 #      atributiranih 71 (Blatt II 42 · III 15 · I 5 · IV 5 · V 4);
 #      občutljivost praga: 69/63/58/53/45/24 @ ≥0.6/0.6667/0.7/0.75/0.8/0.9
-#   I5 soslednost števci: 186/30 (R1 del 21/2; flagged vsebuje 671@p36, 934@p99)
+#   I5 soslednost števci: v3 175/29 (R1 del 19/1; flagged vsebuje 934@p99; v2: 186/30)
 #   I6 join nespremanjen (sha256 v2 vhoda; brez lat/lng povsod; areaQK samo
 #      v blattShares in rows-detaljah)
 #   I7 dokaz ⊇ runtime (bajtno podmnožica)
@@ -56,7 +56,7 @@ import sys
 from collections import Counter, defaultdict
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-V2 = os.path.join(ROOT, "research/issue17/ps-parcels-geo-v2.json")
+V2 = os.path.join(ROOT, "research/issue17/ps-parcels-geo-v3.json")  # P68 v3
 P59 = os.path.join(ROOT, "research/issue17/ps-blatt-headers.json")
 P60 = os.path.join(ROOT, "research/issue17/ps-perblatt-attribution.json")
 BHRT = os.path.join(ROOT, "src/data/atlas/ps-blatt-headers.json")
@@ -68,18 +68,18 @@ RATIO_LO, RATIO_HI = 0.8, 1.25      # P60 pas (moda B)
 DOM_THR = 0.75                       # R2a prag dominance
 SPLIT_LO = 0.5                       # pod tem = fragmented
 
-PIN_V2_EV_SHA = "ebb8f7298de713e73bc7417f392d60c7e5eb03a6675f96317320188750e27731"
-PIN_BHRT_SHA = "efe39f41dc4f81703e3b8aa47632faef75222a000ad13b7a674f3a853c1ee66e"
-PIN_P60RT_SHA = "28465b3e28fef763f951dc8ea379b7e071bd9d5fa109ebb9a577e594236e386a"
+PIN_V2_EV_SHA = "af7479e428182f381d3a2537896493d7cf86210fac7027221e22ac2aea218b53"  # P68: v3 dokaz (1079; + join blok)
+PIN_BHRT_SHA = "f4c4dedcd6c65d4d1480b4124ae93d00304be2f24f30aa74ca5d0c6ff8c9efe6"  # P68: v3 re-run
+PIN_P60RT_SHA = "c42bf221141e46aee0c387506bdf594c24373d41b19420fe2fc8fc2b7047d6e4"  # P68: v3 re-run
 
-EXPECTED_STATUS_DIST = {"R1": 17, "R2a": 53, "R2b": 1, "split": 39, "fragmented": 0}
-EXPECTED_ATTR_BLATT = {"II": 42, "III": 15, "I": 5, "IV": 5, "V": 4}
-EXPECTED_R2A = {"I": 4, "II": 29, "III": 11, "IV": 5, "V": 4}
-EXPECTED_SPLIT_DOM = {"I": 1, "II": 19, "III": 9, "IV": 6, "V": 4}
-EXPECTED_SENS = {"0.6": 69, "0.6667": 63, "0.7": 58, "0.75": 53, "0.8": 45, "0.9": 24}
-EXPECTED_SOS = {"ok": 186, "flag": 30}
-EXPECTED_R1_SOS = {"ok": 21, "flag": 2}
-EXPECTED_DIVERGE = {"930": ("II", "III"), "671": ("I", "II")}
+EXPECTED_STATUS_DIST = {"R1": 14, "R2a": 47, "R2b": 1, "split": 36, "fragmented": 0}  # P68 v3 (v2: R1 17/R2a 53/R2b 1/split 39)
+EXPECTED_ATTR_BLATT = {"II": 35, "I": 2, "III": 16, "IV": 5, "V": 4}  # P68 v3 (v2: II 42/III 15/I 5/IV 5/V 4)
+EXPECTED_R2A = {"I": 2, "II": 25, "III": 11, "IV": 5, "V": 4}  # P68 v3 (v2: I 4/II 29/III 11/IV 5/V 4)
+EXPECTED_SPLIT_DOM = {"I": 1, "II": 16, "III": 10, "IV": 5, "V": 4}  # P68 v3 (v2: I 1/II 19/III 9/IV 6/V 4)
+EXPECTED_SENS = {"0.6": 63, "0.6667": 57, "0.7": 52, "0.75": 47, "0.8": 39, "0.9": 20}  # P68 v3 (v2: 69/63/58/53/45/24)
+EXPECTED_SOS = {"ok": 175, "flag": 29}  # P68 v3 (v2: 186/30)
+EXPECTED_R1_SOS = {"ok": 19, "flag": 1}  # P68 v3 (v2: 21/2)
+EXPECTED_DIVERGE = {"930": ("II", "III")}  # P68 v3 (671 RAZPADLA — II instanca = 1691; P67 part C)
 
 
 def fail(msg):
@@ -122,10 +122,10 @@ def main():
         fail("I1 sha256 runtime ps-blatt-headers.json ≠ pin (drift)")
     if sha256(P60RT) != PIN_P60RT_SHA:
         fail("I1 sha256 runtime ps-perblatt-attribution.json ≠ pin (drift)")
-    if len(multi) != 110:
-        fail(f"I1 multiBlattBaseList {len(multi)} ≠ 110")
-    if len(cands) != 17:
-        fail(f"I1 ruleCandidate {len(cands)} ≠ 17")
+    if len(multi) != 98:
+        fail(f"I1 multiBlattBaseList {len(multi)} ≠ 98 (v3 P68; v2: 110)")
+    if len(cands) != 14:
+        fail(f"I1 ruleCandidate {len(cands)} ≠ 14 (v3 P68; v2: 17)")
     if sorted(cands) != sorted(p60["bases"].keys()):
         fail("I1 ruleCandidate ≠ P60 bases ključi")
     p60rt = json.load(open(P60RT))
@@ -187,7 +187,9 @@ def main():
     bases_out = {}
     status_dist = Counter()
     attr_dist = Counter()
+    r1_dist = Counter()
     r2a_dist = Counter()
+    r2b_dist = Counter()
     split_dom = Counter()
     sens = Counter()
     sos_all = {"ok": 0, "flag": 0}
@@ -245,6 +247,7 @@ def main():
                 fail(f"I3 {b}: inBand pages ≠ P60")
             entry["status"] = "R1"
             entry["attributedBlatt"] = attr_blatt
+            r1_dist[attr_blatt] += 1
             entry["pas"] = {"medianRatio": attr["medianRatio"], "pages": attr["pages"],
                             "rows": p60b["inBand"]["rows"]}
             # konsistenca z R2 (area-dominanca)
@@ -265,6 +268,7 @@ def main():
             if len(with_area) == 1:
                 entry["status"] = "R2b"
                 entry["attributedBlatt"] = with_area[0]["blatt"]
+                r2b_dist[with_area[0]["blatt"]] += 1
                 entry["areaIncomplete"] = True
                 entry["arealessBlatts"] = [s["blatt"] for s in shares
                                            if (s["areaQK"] or 0) == 0]
@@ -323,8 +327,8 @@ def main():
         fail(f"I5 soslednost {sos_all} ≠ {EXPECTED_SOS}")
     if r1_sos["ok"] != EXPECTED_R1_SOS["ok"] or r1_sos["flag"] != EXPECTED_R1_SOS["flag"]:
         fail(f"I5 R1 soslednost {r1_sos} ≠ {EXPECTED_R1_SOS}")
-    if "671@p36" not in sos_flagged or "934@p99" not in sos_flagged:
-        fail("I5 flaggedRows brez 671@p36 / 934@p99")
+    if "934@p99" not in sos_flagged:  # P68 v3: 671@p36 izpadla (671 single-Blatt po renum; P67 part C)
+        fail("I5 flaggedRows brez 934@p99")
 
     # ————— I6: brez geo polj; areaQK samo v blattShares + rows —————
     v2_sha = sha256(V2)
@@ -408,9 +412,9 @@ def main():
             "attributed": n_attr,
             "statusDist": {k: status_dist[k] for k in ("R1", "R2a", "R2b", "split", "fragmented")},
             "attributedBlattDist": dict(sorted(attr_dist.items())),
-            "distByRule": {"R1": {"I": 1, "II": 12, "III": 4},
+            "distByRule": {"R1": dict(sorted(r1_dist.items())),
                            "R2a": dict(sorted(r2a_dist.items())),
-                           "R2b": {"II": 1}},
+                           "R2b": dict(sorted(r2b_dist.items()))},
             "splitDominantDist": dict(sorted(split_dom.items())),
             "thresholdSensitivity": {k: sens[k] for k in sorted(sens)},
             "soslednost": {"ok": sos_all["ok"], "flag": sos_all["flag"],

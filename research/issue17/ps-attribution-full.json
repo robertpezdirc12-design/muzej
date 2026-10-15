@@ -291,135 +291,6 @@
    },
    "status": "R2a"
   },
-  "1603": {
-   "attributedBlatt": null,
-   "blattShares": [
-    {
-     "areaQK": 1005.0,
-     "blatt": "IV",
-     "pages": [
-      93
-     ],
-     "rows": 1,
-     "share": 0.5643
-    },
-    {
-     "areaQK": 776.0,
-     "blatt": "II",
-     "pages": [
-      78
-     ],
-     "rows": 1,
-     "share": 0.4357
-    }
-   ],
-   "kultures": [
-    "Acker",
-    "Weide und Gfällgut, Laubm."
-   ],
-   "owners": [
-    "Pachler Martin",
-    "Verboten (er) Bueb?"
-   ],
-   "pages": [
-    78,
-    93
-   ],
-   "rowsTotal": 2,
-   "sosledje": {
-    "flag": 0,
-    "flaggedRows": [],
-    "ok": 2
-   },
-   "status": "split"
-  },
-  "1604": {
-   "attributedBlatt": null,
-   "blattShares": [
-    {
-     "areaQK": 774.0,
-     "blatt": "II",
-     "pages": [
-      78
-     ],
-     "rows": 1,
-     "share": 0.5167
-    },
-    {
-     "areaQK": 724.0,
-     "blatt": "IV",
-     "pages": [
-      93
-     ],
-     "rows": 1,
-     "share": 0.4833
-    }
-   ],
-   "kultures": [
-    "Acker",
-    "Weide und Gfällgut, Laubm."
-   ],
-   "owners": [
-    "Piringer Mathäus",
-    "Ullrich Otto"
-   ],
-   "pages": [
-    78,
-    93
-   ],
-   "rowsTotal": 2,
-   "sosledje": {
-    "flag": 0,
-    "flaggedRows": [],
-    "ok": 2
-   },
-   "status": "split"
-  },
-  "1605": {
-   "areaIncomplete": true,
-   "arealessBlatts": [
-    "IV"
-   ],
-   "attributedBlatt": "II",
-   "blattShares": [
-    {
-     "areaQK": 2688.0,
-     "blatt": "II",
-     "pages": [
-      78
-     ],
-     "rows": 1,
-     "share": 1.0
-    },
-    {
-     "areaQK": 0.0,
-     "blatt": "IV",
-     "pages": [
-      93
-     ],
-     "rows": 1,
-     "share": 0.0
-    }
-   ],
-   "kultures": [
-    "Gemeinde Grätzig"
-   ],
-   "owners": [
-    "Tillak Anio",
-    "[?] [?]"
-   ],
-   "pages": [
-    78,
-    93
-   ],
-   "rowsTotal": 2,
-   "sosledje": {
-    "flag": 0,
-    "flaggedRows": [],
-    "ok": 1
-   },
-   "status": "R2b"
-  },
   "161": {
    "attributedBlatt": "II",
    "blattShares": [
@@ -1931,6 +1802,99 @@
     "ok": 2
    },
    "status": "R2a"
+  },
+  "1903": {
+   "attributedBlatt": null,
+   "blattShares": [
+    {
+     "areaQK": 2438.0,
+     "blatt": "III",
+     "pages": [
+      98
+     ],
+     "rows": 2,
+     "share": 0.7081
+    },
+    {
+     "areaQK": 1005.0,
+     "blatt": "IV",
+     "pages": [
+      93
+     ],
+     "rows": 1,
+     "share": 0.2919
+    }
+   ],
+   "kultures": [
+    "Acker und Wiese",
+    "Weide und Gfällgut, Laubm."
+   ],
+   "owners": [
+    "Deutlich Marfa",
+    "Milleger Johann",
+    "Verboten (er) Bueb?"
+   ],
+   "pages": [
+    93,
+    98
+   ],
+   "rowsTotal": 3,
+   "sosledje": {
+    "flag": 2,
+    "flaggedRows": [
+     "1903@p98",
+     "1903@p98"
+    ],
+    "ok": 3
+   },
+   "status": "split"
+  },
+  "1905": {
+   "areaIncomplete": true,
+   "arealessBlatts": [
+    "IV"
+   ],
+   "attributedBlatt": "III",
+   "blattShares": [
+    {
+     "areaQK": 931.0,
+     "blatt": "III",
+     "pages": [
+      98
+     ],
+     "rows": 1,
+     "share": 1.0
+    },
+    {
+     "areaQK": 0.0,
+     "blatt": "IV",
+     "pages": [
+      93
+     ],
+     "rows": 1,
+     "share": 0.0
+    }
+   ],
+   "kultures": [
+    "Acker und Wiese"
+   ],
+   "owners": [
+    "Schinig Peter",
+    "[?] [?]"
+   ],
+   "pages": [
+    93,
+    98
+   ],
+   "rowsTotal": 2,
+   "sosledje": {
+    "flag": 1,
+    "flaggedRows": [
+     "1905@p98"
+    ],
+    "ok": 0
+   },
+   "status": "R2b"
   },
   "1944": {
    "attributedBlatt": "III",
@@ -6568,496 +6532,6 @@
    },
    "status": "R2a"
   },
-  "661": {
-   "attributedBlatt": null,
-   "blattShares": [
-    {
-     "areaQK": 699.0,
-     "blatt": "II",
-     "pages": [
-      87
-     ],
-     "rows": 1,
-     "share": 0.5147
-    },
-    {
-     "areaQK": 659.0,
-     "blatt": "I",
-     "pages": [
-      36
-     ],
-     "rows": 1,
-     "share": 0.4853
-    }
-   ],
-   "kultures": [
-    "Acker",
-    "Lhup"
-   ],
-   "owners": [
-    "Mülley Daniel",
-    "Staudt Hans"
-   ],
-   "pages": [
-    36,
-    87
-   ],
-   "rowsTotal": 2,
-   "sosledje": {
-    "flag": 2,
-    "flaggedRows": [
-     "661@p36",
-     "661@p87"
-    ],
-    "ok": 0
-   },
-   "status": "split"
-  },
-  "663": {
-   "attributedBlatt": "II",
-   "blattShares": [
-    {
-     "areaQK": 698.0,
-     "blatt": "II",
-     "pages": [
-      87
-     ],
-     "rows": 1,
-     "share": 0.9694
-    },
-    {
-     "areaQK": 22.0,
-     "blatt": "I",
-     "pages": [
-      36
-     ],
-     "rows": 1,
-     "share": 0.0306
-    }
-   ],
-   "kultures": [
-    "Acker",
-    "Lhup"
-   ],
-   "owners": [
-    "Dultsitsch Hans",
-    "Würing Michael"
-   ],
-   "pages": [
-    36,
-    87
-   ],
-   "rowsTotal": 2,
-   "sosledje": {
-    "flag": 1,
-    "flaggedRows": [
-     "663@p87"
-    ],
-    "ok": 0
-   },
-   "status": "R2a"
-  },
-  "666": {
-   "attributedBlatt": "II",
-   "blattShares": [
-    {
-     "areaQK": 1319.0,
-     "blatt": "II",
-     "pages": [
-      87
-     ],
-     "rows": 1,
-     "share": 0.9537
-    },
-    {
-     "areaQK": 64.0,
-     "blatt": "I",
-     "pages": [
-      36
-     ],
-     "rows": 1,
-     "share": 0.0463
-    }
-   ],
-   "kultures": [
-    "Acker",
-    "Eidn"
-   ],
-   "owners": [
-    "Dragauš Jerg",
-    "Weissbar Georg"
-   ],
-   "pages": [
-    36,
-    87
-   ],
-   "pas": {
-    "medianRatio": 0.8537,
-    "pages": [
-     87
-    ],
-    "rows": 1
-   },
-   "rowsTotal": 2,
-   "sosledje": {
-    "flag": 0,
-    "flaggedRows": [],
-    "ok": 1
-   },
-   "status": "R1"
-  },
-  "667": {
-   "attributedBlatt": "II",
-   "blattShares": [
-    {
-     "areaQK": 1148.0,
-     "blatt": "II",
-     "pages": [
-      87
-     ],
-     "rows": 1,
-     "share": 0.9425
-    },
-    {
-     "areaQK": 70.0,
-     "blatt": "I",
-     "pages": [
-      36
-     ],
-     "rows": 1,
-     "share": 0.0575
-    }
-   ],
-   "kultures": [
-    "Acker",
-    "Lhut"
-   ],
-   "owners": [
-    "Hegole Mands",
-    "Mülley Johann"
-   ],
-   "pages": [
-    36,
-    87
-   ],
-   "rowsTotal": 2,
-   "sosledje": {
-    "flag": 0,
-    "flaggedRows": [],
-    "ok": 1
-   },
-   "status": "R2a"
-  },
-  "671": {
-   "attributedBlatt": "I",
-   "blattShares": [
-    {
-     "areaQK": 1423.0,
-     "blatt": "II",
-     "pages": [
-      87
-     ],
-     "rows": 1,
-     "share": 0.8844
-    },
-    {
-     "areaQK": 186.0,
-     "blatt": "I",
-     "pages": [
-      36
-     ],
-     "rows": 1,
-     "share": 0.1156
-    }
-   ],
-   "kultures": [
-    "Acker",
-    "Lhup"
-   ],
-   "owners": [
-    "Maaßl Mantsch",
-    "Würing Michael"
-   ],
-   "pages": [
-    36,
-    87
-   ],
-   "pas": {
-    "medianRatio": 0.9086,
-    "pages": [
-     36
-    ],
-    "rows": 1
-   },
-   "rowsTotal": 2,
-   "sosledje": {
-    "flag": 1,
-    "flaggedRows": [
-     "671@p36"
-    ],
-    "ok": 0
-   },
-   "status": "R1"
-  },
-  "673": {
-   "attributedBlatt": "II",
-   "blattShares": [
-    {
-     "areaQK": 1498.0,
-     "blatt": "II",
-     "pages": [
-      87
-     ],
-     "rows": 1,
-     "share": 0.8669
-    },
-    {
-     "areaQK": 230.0,
-     "blatt": "I",
-     "pages": [
-      36
-     ],
-     "rows": 1,
-     "share": 0.1331
-    }
-   ],
-   "kultures": [
-    "Acker",
-    "Lhup"
-   ],
-   "owners": [
-    "Mülley Franz",
-    "Staudt Hans"
-   ],
-   "pages": [
-    36,
-    87
-   ],
-   "rowsTotal": 2,
-   "sosledje": {
-    "flag": 0,
-    "flaggedRows": [],
-    "ok": 1
-   },
-   "status": "R2a"
-  },
-  "674": {
-   "attributedBlatt": null,
-   "blattShares": [
-    {
-     "areaQK": 548.0,
-     "blatt": "II",
-     "pages": [
-      87
-     ],
-     "rows": 1,
-     "share": 0.7436
-    },
-    {
-     "areaQK": 189.0,
-     "blatt": "I",
-     "pages": [
-      36
-     ],
-     "rows": 1,
-     "share": 0.2564
-    }
-   ],
-   "kultures": [
-    "Acker",
-    "Eidn"
-   ],
-   "owners": [
-    "Dultsitsch Hans",
-    "Würing Johann"
-   ],
-   "pages": [
-    36,
-    87
-   ],
-   "rowsTotal": 2,
-   "sosledje": {
-    "flag": 0,
-    "flaggedRows": [],
-    "ok": 2
-   },
-   "status": "split"
-  },
-  "675": {
-   "attributedBlatt": "II",
-   "blattShares": [
-    {
-     "areaQK": 1279.0,
-     "blatt": "II",
-     "pages": [
-      87
-     ],
-     "rows": 1,
-     "share": 0.8963
-    },
-    {
-     "areaQK": 148.0,
-     "blatt": "I",
-     "pages": [
-      36
-     ],
-     "rows": 1,
-     "share": 0.1037
-    }
-   ],
-   "kultures": [
-    "Acker",
-    "Eidn"
-   ],
-   "owners": [
-    "Maaßl Mantsch",
-    "Würing Michael"
-   ],
-   "pages": [
-    36,
-    87
-   ],
-   "rowsTotal": 2,
-   "sosledje": {
-    "flag": 0,
-    "flaggedRows": [],
-    "ok": 1
-   },
-   "status": "R2a"
-  },
-  "676": {
-   "attributedBlatt": "II",
-   "blattShares": [
-    {
-     "areaQK": 1413.0,
-     "blatt": "II",
-     "pages": [
-      87
-     ],
-     "rows": 1,
-     "share": 0.9376
-    },
-    {
-     "areaQK": 94.0,
-     "blatt": "I",
-     "pages": [
-      36
-     ],
-     "rows": 1,
-     "share": 0.0624
-    }
-   ],
-   "kultures": [
-    "Acker",
-    "Eidn"
-   ],
-   "owners": [
-    "Kobentsch Mands",
-    "Würing Michl"
-   ],
-   "pages": [
-    36,
-    87
-   ],
-   "pas": {
-    "medianRatio": 0.8004,
-    "pages": [
-     87
-    ],
-    "rows": 1
-   },
-   "rowsTotal": 2,
-   "sosledje": {
-    "flag": 0,
-    "flaggedRows": [],
-    "ok": 1
-   },
-   "status": "R1"
-  },
-  "679": {
-   "attributedBlatt": "I",
-   "blattShares": [
-    {
-     "areaQK": 180.0,
-     "blatt": "I",
-     "pages": [
-      36
-     ],
-     "rows": 1,
-     "share": 0.9091
-    },
-    {
-     "areaQK": 18.0,
-     "blatt": "II",
-     "pages": [
-      87
-     ],
-     "rows": 1,
-     "share": 0.0909
-    }
-   ],
-   "kultures": [
-    "Lhup",
-    "Weide"
-   ],
-   "owners": [
-    "Gummeier",
-    "Paschey Georg"
-   ],
-   "pages": [
-    36,
-    87
-   ],
-   "rowsTotal": 2,
-   "sosledje": {
-    "flag": 0,
-    "flaggedRows": [],
-    "ok": 1
-   },
-   "status": "R2a"
-  },
-  "680": {
-   "attributedBlatt": "I",
-   "blattShares": [
-    {
-     "areaQK": 135.0,
-     "blatt": "I",
-     "pages": [
-      36
-     ],
-     "rows": 1,
-     "share": 0.9184
-    },
-    {
-     "areaQK": 12.0,
-     "blatt": "II",
-     "pages": [
-      87
-     ],
-     "rows": 1,
-     "share": 0.0816
-    }
-   ],
-   "kultures": [
-    "Eidn",
-    "Garten"
-   ],
-   "owners": [
-    "Hlebitsch Mufg",
-    "Mülley Johann"
-   ],
-   "pages": [
-    36,
-    87
-   ],
-   "rowsTotal": 2,
-   "sosledje": {
-    "flag": 0,
-    "flaggedRows": [],
-    "ok": 1
-   },
-   "status": "R2a"
-  },
   "736": {
    "attributedBlatt": "II",
    "blattShares": [
@@ -8499,16 +7973,16 @@
  },
  "date": "2026-10-14",
  "inputSha256": {
-  "bhrt": "efe39f41dc4f81703e3b8aa47632faef75222a000ad13b7a674f3a853c1ee66e",
-  "p60rt": "28465b3e28fef763f951dc8ea379b7e071bd9d5fa109ebb9a577e594236e386a",
-  "p64ev": "a6f6d8af27141ab1edae7ddaff211254fe36d190342a880d7d8be058c445e09c",
-  "p64rt": "7e5ea64a4a45f2a3c73e5dfe8b8fcbc7618bd79aee717cfd58ff35376257cd73"
+  "bhrt": "f4c4dedcd6c65d4d1480b4124ae93d00304be2f24f30aa74ca5d0c6ff8c9efe6",
+  "p60rt": "c42bf221141e46aee0c387506bdf594c24373d41b19420fe2fc8fc2b7047d6e4",
+  "p64ev": "4dab5e834b1416f06a4cdc95f25f7cabc24c8ec7efe1ce2e53fc4eb404786cf8",
+  "p64rt": "dda6bebdbd89a4dd8064a1bd062cbc090312f23ee2f75907048fcd463fc566ba"
  },
  "inputs": {
   "p59": "research/issue17/ps-blatt-headers.json (pageAttribution + perBlattAmbiguity 211/110)",
   "p64ev": "research/issue17/ps-attribution-ext.json (P64 dokaz — pin)",
   "p64rt": "src/data/atlas/ps-attribution-ext.json (P64 runtime — bajtni vir 110 base)",
-  "v2": "research/issue17/ps-parcels-geo-v2.json (rowsEvidence 1093)"
+  "v2": "research/issue17/ps-parcels-geo-v3.json (rowsEvidence 1079; P68 v3)"
  },
  "invariants": [
   "I1 vhodni pini (5× sha256 + števci 1093/800/211/110/101)",
@@ -8828,135 +8302,6 @@
      "ok": 1
     },
     "status": "R2a"
-   },
-   "1603": {
-    "attributedBlatt": null,
-    "blattShares": [
-     {
-      "areaQK": 1005.0,
-      "blatt": "IV",
-      "pages": [
-       93
-      ],
-      "rows": 1,
-      "share": 0.5643
-     },
-     {
-      "areaQK": 776.0,
-      "blatt": "II",
-      "pages": [
-       78
-      ],
-      "rows": 1,
-      "share": 0.4357
-     }
-    ],
-    "kultures": [
-     "Acker",
-     "Weide und Gfällgut, Laubm."
-    ],
-    "owners": [
-     "Pachler Martin",
-     "Verboten (er) Bueb?"
-    ],
-    "pages": [
-     78,
-     93
-    ],
-    "rowsTotal": 2,
-    "sosledje": {
-     "flag": 0,
-     "flaggedRows": [],
-     "ok": 2
-    },
-    "status": "split"
-   },
-   "1604": {
-    "attributedBlatt": null,
-    "blattShares": [
-     {
-      "areaQK": 774.0,
-      "blatt": "II",
-      "pages": [
-       78
-      ],
-      "rows": 1,
-      "share": 0.5167
-     },
-     {
-      "areaQK": 724.0,
-      "blatt": "IV",
-      "pages": [
-       93
-      ],
-      "rows": 1,
-      "share": 0.4833
-     }
-    ],
-    "kultures": [
-     "Acker",
-     "Weide und Gfällgut, Laubm."
-    ],
-    "owners": [
-     "Piringer Mathäus",
-     "Ullrich Otto"
-    ],
-    "pages": [
-     78,
-     93
-    ],
-    "rowsTotal": 2,
-    "sosledje": {
-     "flag": 0,
-     "flaggedRows": [],
-     "ok": 2
-    },
-    "status": "split"
-   },
-   "1605": {
-    "areaIncomplete": true,
-    "arealessBlatts": [
-     "IV"
-    ],
-    "attributedBlatt": "II",
-    "blattShares": [
-     {
-      "areaQK": 2688.0,
-      "blatt": "II",
-      "pages": [
-       78
-      ],
-      "rows": 1,
-      "share": 1.0
-     },
-     {
-      "areaQK": 0.0,
-      "blatt": "IV",
-      "pages": [
-       93
-      ],
-      "rows": 1,
-      "share": 0.0
-     }
-    ],
-    "kultures": [
-     "Gemeinde Grätzig"
-    ],
-    "owners": [
-     "Tillak Anio",
-     "[?] [?]"
-    ],
-    "pages": [
-     78,
-     93
-    ],
-    "rowsTotal": 2,
-    "sosledje": {
-     "flag": 0,
-     "flaggedRows": [],
-     "ok": 1
-    },
-    "status": "R2b"
    },
    "161": {
     "attributedBlatt": "II",
@@ -10469,6 +9814,99 @@
      "ok": 2
     },
     "status": "R2a"
+   },
+   "1903": {
+    "attributedBlatt": null,
+    "blattShares": [
+     {
+      "areaQK": 2438.0,
+      "blatt": "III",
+      "pages": [
+       98
+      ],
+      "rows": 2,
+      "share": 0.7081
+     },
+     {
+      "areaQK": 1005.0,
+      "blatt": "IV",
+      "pages": [
+       93
+      ],
+      "rows": 1,
+      "share": 0.2919
+     }
+    ],
+    "kultures": [
+     "Acker und Wiese",
+     "Weide und Gfällgut, Laubm."
+    ],
+    "owners": [
+     "Deutlich Marfa",
+     "Milleger Johann",
+     "Verboten (er) Bueb?"
+    ],
+    "pages": [
+     93,
+     98
+    ],
+    "rowsTotal": 3,
+    "sosledje": {
+     "flag": 2,
+     "flaggedRows": [
+      "1903@p98",
+      "1903@p98"
+     ],
+     "ok": 3
+    },
+    "status": "split"
+   },
+   "1905": {
+    "areaIncomplete": true,
+    "arealessBlatts": [
+     "IV"
+    ],
+    "attributedBlatt": "III",
+    "blattShares": [
+     {
+      "areaQK": 931.0,
+      "blatt": "III",
+      "pages": [
+       98
+      ],
+      "rows": 1,
+      "share": 1.0
+     },
+     {
+      "areaQK": 0.0,
+      "blatt": "IV",
+      "pages": [
+       93
+      ],
+      "rows": 1,
+      "share": 0.0
+     }
+    ],
+    "kultures": [
+     "Acker und Wiese"
+    ],
+    "owners": [
+     "Schinig Peter",
+     "[?] [?]"
+    ],
+    "pages": [
+     93,
+     98
+    ],
+    "rowsTotal": 2,
+    "sosledje": {
+     "flag": 1,
+     "flaggedRows": [
+      "1905@p98"
+     ],
+     "ok": 0
+    },
+    "status": "R2b"
    },
    "1944": {
     "attributedBlatt": "III",
@@ -15106,496 +14544,6 @@
     },
     "status": "R2a"
    },
-   "661": {
-    "attributedBlatt": null,
-    "blattShares": [
-     {
-      "areaQK": 699.0,
-      "blatt": "II",
-      "pages": [
-       87
-      ],
-      "rows": 1,
-      "share": 0.5147
-     },
-     {
-      "areaQK": 659.0,
-      "blatt": "I",
-      "pages": [
-       36
-      ],
-      "rows": 1,
-      "share": 0.4853
-     }
-    ],
-    "kultures": [
-     "Acker",
-     "Lhup"
-    ],
-    "owners": [
-     "Mülley Daniel",
-     "Staudt Hans"
-    ],
-    "pages": [
-     36,
-     87
-    ],
-    "rowsTotal": 2,
-    "sosledje": {
-     "flag": 2,
-     "flaggedRows": [
-      "661@p36",
-      "661@p87"
-     ],
-     "ok": 0
-    },
-    "status": "split"
-   },
-   "663": {
-    "attributedBlatt": "II",
-    "blattShares": [
-     {
-      "areaQK": 698.0,
-      "blatt": "II",
-      "pages": [
-       87
-      ],
-      "rows": 1,
-      "share": 0.9694
-     },
-     {
-      "areaQK": 22.0,
-      "blatt": "I",
-      "pages": [
-       36
-      ],
-      "rows": 1,
-      "share": 0.0306
-     }
-    ],
-    "kultures": [
-     "Acker",
-     "Lhup"
-    ],
-    "owners": [
-     "Dultsitsch Hans",
-     "Würing Michael"
-    ],
-    "pages": [
-     36,
-     87
-    ],
-    "rowsTotal": 2,
-    "sosledje": {
-     "flag": 1,
-     "flaggedRows": [
-      "663@p87"
-     ],
-     "ok": 0
-    },
-    "status": "R2a"
-   },
-   "666": {
-    "attributedBlatt": "II",
-    "blattShares": [
-     {
-      "areaQK": 1319.0,
-      "blatt": "II",
-      "pages": [
-       87
-      ],
-      "rows": 1,
-      "share": 0.9537
-     },
-     {
-      "areaQK": 64.0,
-      "blatt": "I",
-      "pages": [
-       36
-      ],
-      "rows": 1,
-      "share": 0.0463
-     }
-    ],
-    "kultures": [
-     "Acker",
-     "Eidn"
-    ],
-    "owners": [
-     "Dragauš Jerg",
-     "Weissbar Georg"
-    ],
-    "pages": [
-     36,
-     87
-    ],
-    "pas": {
-     "medianRatio": 0.8537,
-     "pages": [
-      87
-     ],
-     "rows": 1
-    },
-    "rowsTotal": 2,
-    "sosledje": {
-     "flag": 0,
-     "flaggedRows": [],
-     "ok": 1
-    },
-    "status": "R1"
-   },
-   "667": {
-    "attributedBlatt": "II",
-    "blattShares": [
-     {
-      "areaQK": 1148.0,
-      "blatt": "II",
-      "pages": [
-       87
-      ],
-      "rows": 1,
-      "share": 0.9425
-     },
-     {
-      "areaQK": 70.0,
-      "blatt": "I",
-      "pages": [
-       36
-      ],
-      "rows": 1,
-      "share": 0.0575
-     }
-    ],
-    "kultures": [
-     "Acker",
-     "Lhut"
-    ],
-    "owners": [
-     "Hegole Mands",
-     "Mülley Johann"
-    ],
-    "pages": [
-     36,
-     87
-    ],
-    "rowsTotal": 2,
-    "sosledje": {
-     "flag": 0,
-     "flaggedRows": [],
-     "ok": 1
-    },
-    "status": "R2a"
-   },
-   "671": {
-    "attributedBlatt": "I",
-    "blattShares": [
-     {
-      "areaQK": 1423.0,
-      "blatt": "II",
-      "pages": [
-       87
-      ],
-      "rows": 1,
-      "share": 0.8844
-     },
-     {
-      "areaQK": 186.0,
-      "blatt": "I",
-      "pages": [
-       36
-      ],
-      "rows": 1,
-      "share": 0.1156
-     }
-    ],
-    "kultures": [
-     "Acker",
-     "Lhup"
-    ],
-    "owners": [
-     "Maaßl Mantsch",
-     "Würing Michael"
-    ],
-    "pages": [
-     36,
-     87
-    ],
-    "pas": {
-     "medianRatio": 0.9086,
-     "pages": [
-      36
-     ],
-     "rows": 1
-    },
-    "rowsTotal": 2,
-    "sosledje": {
-     "flag": 1,
-     "flaggedRows": [
-      "671@p36"
-     ],
-     "ok": 0
-    },
-    "status": "R1"
-   },
-   "673": {
-    "attributedBlatt": "II",
-    "blattShares": [
-     {
-      "areaQK": 1498.0,
-      "blatt": "II",
-      "pages": [
-       87
-      ],
-      "rows": 1,
-      "share": 0.8669
-     },
-     {
-      "areaQK": 230.0,
-      "blatt": "I",
-      "pages": [
-       36
-      ],
-      "rows": 1,
-      "share": 0.1331
-     }
-    ],
-    "kultures": [
-     "Acker",
-     "Lhup"
-    ],
-    "owners": [
-     "Mülley Franz",
-     "Staudt Hans"
-    ],
-    "pages": [
-     36,
-     87
-    ],
-    "rowsTotal": 2,
-    "sosledje": {
-     "flag": 0,
-     "flaggedRows": [],
-     "ok": 1
-    },
-    "status": "R2a"
-   },
-   "674": {
-    "attributedBlatt": null,
-    "blattShares": [
-     {
-      "areaQK": 548.0,
-      "blatt": "II",
-      "pages": [
-       87
-      ],
-      "rows": 1,
-      "share": 0.7436
-     },
-     {
-      "areaQK": 189.0,
-      "blatt": "I",
-      "pages": [
-       36
-      ],
-      "rows": 1,
-      "share": 0.2564
-     }
-    ],
-    "kultures": [
-     "Acker",
-     "Eidn"
-    ],
-    "owners": [
-     "Dultsitsch Hans",
-     "Würing Johann"
-    ],
-    "pages": [
-     36,
-     87
-    ],
-    "rowsTotal": 2,
-    "sosledje": {
-     "flag": 0,
-     "flaggedRows": [],
-     "ok": 2
-    },
-    "status": "split"
-   },
-   "675": {
-    "attributedBlatt": "II",
-    "blattShares": [
-     {
-      "areaQK": 1279.0,
-      "blatt": "II",
-      "pages": [
-       87
-      ],
-      "rows": 1,
-      "share": 0.8963
-     },
-     {
-      "areaQK": 148.0,
-      "blatt": "I",
-      "pages": [
-       36
-      ],
-      "rows": 1,
-      "share": 0.1037
-     }
-    ],
-    "kultures": [
-     "Acker",
-     "Eidn"
-    ],
-    "owners": [
-     "Maaßl Mantsch",
-     "Würing Michael"
-    ],
-    "pages": [
-     36,
-     87
-    ],
-    "rowsTotal": 2,
-    "sosledje": {
-     "flag": 0,
-     "flaggedRows": [],
-     "ok": 1
-    },
-    "status": "R2a"
-   },
-   "676": {
-    "attributedBlatt": "II",
-    "blattShares": [
-     {
-      "areaQK": 1413.0,
-      "blatt": "II",
-      "pages": [
-       87
-      ],
-      "rows": 1,
-      "share": 0.9376
-     },
-     {
-      "areaQK": 94.0,
-      "blatt": "I",
-      "pages": [
-       36
-      ],
-      "rows": 1,
-      "share": 0.0624
-     }
-    ],
-    "kultures": [
-     "Acker",
-     "Eidn"
-    ],
-    "owners": [
-     "Kobentsch Mands",
-     "Würing Michl"
-    ],
-    "pages": [
-     36,
-     87
-    ],
-    "pas": {
-     "medianRatio": 0.8004,
-     "pages": [
-      87
-     ],
-     "rows": 1
-    },
-    "rowsTotal": 2,
-    "sosledje": {
-     "flag": 0,
-     "flaggedRows": [],
-     "ok": 1
-    },
-    "status": "R1"
-   },
-   "679": {
-    "attributedBlatt": "I",
-    "blattShares": [
-     {
-      "areaQK": 180.0,
-      "blatt": "I",
-      "pages": [
-       36
-      ],
-      "rows": 1,
-      "share": 0.9091
-     },
-     {
-      "areaQK": 18.0,
-      "blatt": "II",
-      "pages": [
-       87
-      ],
-      "rows": 1,
-      "share": 0.0909
-     }
-    ],
-    "kultures": [
-     "Lhup",
-     "Weide"
-    ],
-    "owners": [
-     "Gummeier",
-     "Paschey Georg"
-    ],
-    "pages": [
-     36,
-     87
-    ],
-    "rowsTotal": 2,
-    "sosledje": {
-     "flag": 0,
-     "flaggedRows": [],
-     "ok": 1
-    },
-    "status": "R2a"
-   },
-   "680": {
-    "attributedBlatt": "I",
-    "blattShares": [
-     {
-      "areaQK": 135.0,
-      "blatt": "I",
-      "pages": [
-       36
-      ],
-      "rows": 1,
-      "share": 0.9184
-     },
-     {
-      "areaQK": 12.0,
-      "blatt": "II",
-      "pages": [
-       87
-      ],
-      "rows": 1,
-      "share": 0.0816
-     }
-    ],
-    "kultures": [
-     "Eidn",
-     "Garten"
-    ],
-    "owners": [
-     "Hlebitsch Mufg",
-     "Mülley Johann"
-    ],
-    "pages": [
-     36,
-     87
-    ],
-    "rowsTotal": 2,
-    "sosledje": {
-     "flag": 0,
-     "flaggedRows": [],
-     "ok": 1
-    },
-    "status": "R2a"
-   },
    "736": {
     "attributedBlatt": "II",
     "blattShares": [
@@ -17052,48 +16000,47 @@
    "soslednost": "kontrola kakovosti per vrstica (sosedi ±1 po vrstnem redu vrstic evidence na isti strani); za atributirane base nad vrsticami atributiranega Blatta, za split nad vsemi (P64 metoda)",
    "split": "dominantni delež v [0.5, 0.75) → attributedBlatt = null + blattShares alternative (P64)"
   },
-  "statusLine": "P65 POLNA ATRIBUCIJA: 172/211 več-stranskih base atributiranih (P64 R1/R2a/R2b 71 + R3-single 101), 39 split z alternativami [~]; Blatt II 68 · IV 63 · III 29 · I 8 · V 4; pokritost registra 800 base (589 single-page implicitno + 211 multi-page polno); join v2 nespremanjen",
+  "statusLine": "P65 POLNA ATRIBUCIJA: 172/211 več-stranskih base atributiranih (P64 R1/R2a/R2b 71 + R3-single 101), 36 split z alternativami [~]; Blatt II 61 · IV 63 · III 30 · I 5 · V 4; pokritost registra 800 base (589 single-page implicitno + 211 multi-page polno); join v2 nespremanjen",
   "summary": {
-   "attributed": 172,
+   "attributed": 163,
    "attributedBlattDist": {
-    "I": 8,
-    "II": 68,
-    "III": 29,
+    "I": 5,
+    "II": 61,
+    "III": 30,
     "IV": 63,
     "V": 4
    },
    "coverage": {
-    "basesTotal": 800,
-    "multiBlatt": 110,
-    "multiPage": 211,
+    "basesTotal": 798,
+    "multiBlatt": 98,
+    "multiPage": 199,
     "nullAttributionRows": 0,
-    "rowsTotal": 1093,
+    "rowsTotal": 1079,
     "singleBlattMultiPage": 101,
-    "singlePage": 589,
+    "singlePage": 599,
     "singlePageByBlatt": {
-     "I": 145,
+     "I": 156,
      "II": 183,
-     "III": 28,
-     "IV": 205,
+     "III": 26,
+     "IV": 206,
      "I·II": 10,
      "V": 18
     }
    },
    "distByRule": {
     "R1": {
-     "I": 1,
-     "II": 12,
+     "II": 10,
      "III": 4
     },
     "R2a": {
-     "I": 4,
-     "II": 29,
+     "I": 2,
+     "II": 25,
      "III": 11,
      "IV": 5,
      "V": 4
     },
     "R2b": {
-     "II": 1
+     "III": 1
     },
     "R3-single": {
      "I": 3,
@@ -17102,7 +16049,7 @@
      "IV": 58
     }
    },
-   "multiPageBases": 211,
+   "multiPageBases": 199,
    "r3Rows": {
     "rowsPerBaseDist": {
      "2": 98,
@@ -17111,7 +16058,7 @@
     "total": 205
    },
    "soslednost": {
-    "flag": 50,
+    "flag": 49,
     "flaggedRowsR3": [
      "1008@p53",
      "1008@p92",
@@ -17134,20 +16081,20 @@
      "962@p51",
      "962@p91"
     ],
-    "ok": 375,
+    "ok": 364,
     "r3Subset": {
      "flag": 20,
      "ok": 189
     },
-    "relevantRows": 425
+    "relevantRows": 413
    },
-   "split": 39,
+   "split": 36,
    "statusDist": {
-    "R1": 17,
-    "R2a": 53,
+    "R1": 14,
+    "R2a": 47,
     "R2b": 1,
     "R3-single": 101,
-    "split": 39
+    "split": 36
    }
   },
   "task": "P65 — polna per-Blatt atribucija: 101 single-Blatt več-stranskih base (odprta točka P64 #3)",
@@ -17155,48 +16102,47 @@
   "verdictSi": "P65: POLNA PER-BLATT ATRIBUCIJA — 101 SINGLE-BLATT VEČ-STRANSKIH BASE (issue #13) — odprta točka P64 #3 izpolnjena: 101 base, katerih vse vrstice nosijo strani ISTEGA Blatta, dobi ta Blatt kot attributedBlatt (status 'R3-single', trivialno in nedvoumno: I 3 · II 26 · III 14 · IV 58; 205 vrstic — 98 base × 2 + 3 base × 3; vseh 101 z izmerjeno površino) → pokritost več-stranskih base POPOLNA: 211/211 (110 čez-Blatt iz P64 + 101 single-Blatt), skupaj 172 atributiranih (Blatt II 68 · IV 63 · III 29 · I 8 · V 4) + 39 split z alternativami (lastniška odločitev o SPLIT joinu); POLNA POKRITOST REGISTRA (kontrolni blok): 800 base × 1093 vrstic = 589 single-page (implicitno atributirane prek strani: I 145 · I·II 10 · II 183 · III 28 · IV 205 · V 18) + 211 multi-page; 0 vrstic brez atribucije strani; soslednost relevantnih vrstic skupaj 375/425 (R3 del 189/209, flag 20); 110 P64 atribucij bajtno nespremenjenih (I3); join v2 NESPREMENJEN (meritve brez prerazporeditev — disciplina P56/P58/P59); strojna atribucija ni dokazni vir",
   "version": 1
  },
- "statusLine": "P65 POLNA ATRIBUCIJA: 172/211 več-stranskih base atributiranih (P64 R1/R2a/R2b 71 + R3-single 101), 39 split z alternativami [~]; Blatt II 68 · IV 63 · III 29 · I 8 · V 4; pokritost registra 800 base (589 single-page implicitno + 211 multi-page polno); join v2 nespremanjen",
+ "statusLine": "P65 POLNA ATRIBUCIJA: 172/211 več-stranskih base atributiranih (P64 R1/R2a/R2b 71 + R3-single 101), 36 split z alternativami [~]; Blatt II 61 · IV 63 · III 30 · I 5 · V 4; pokritost registra 800 base (589 single-page implicitno + 211 multi-page polno); join v2 nespremanjen",
  "summary": {
-  "attributed": 172,
+  "attributed": 163,
   "attributedBlattDist": {
-   "I": 8,
-   "II": 68,
-   "III": 29,
+   "I": 5,
+   "II": 61,
+   "III": 30,
    "IV": 63,
    "V": 4
   },
   "coverage": {
-   "basesTotal": 800,
-   "multiBlatt": 110,
-   "multiPage": 211,
+   "basesTotal": 798,
+   "multiBlatt": 98,
+   "multiPage": 199,
    "nullAttributionRows": 0,
-   "rowsTotal": 1093,
+   "rowsTotal": 1079,
    "singleBlattMultiPage": 101,
-   "singlePage": 589,
+   "singlePage": 599,
    "singlePageByBlatt": {
-    "I": 145,
+    "I": 156,
     "II": 183,
-    "III": 28,
-    "IV": 205,
+    "III": 26,
+    "IV": 206,
     "I·II": 10,
     "V": 18
    }
   },
   "distByRule": {
    "R1": {
-    "I": 1,
-    "II": 12,
+    "II": 10,
     "III": 4
    },
    "R2a": {
-    "I": 4,
-    "II": 29,
+    "I": 2,
+    "II": 25,
     "III": 11,
     "IV": 5,
     "V": 4
    },
    "R2b": {
-    "II": 1
+    "III": 1
    },
    "R3-single": {
     "I": 3,
@@ -17205,7 +16151,7 @@
     "IV": 58
    }
   },
-  "multiPageBases": 211,
+  "multiPageBases": 199,
   "r3Rows": {
    "rowsPerBaseDist": {
     "2": 98,
@@ -17214,7 +16160,7 @@
    "total": 205
   },
   "soslednost": {
-   "flag": 50,
+   "flag": 49,
    "flaggedRowsR3": [
     "1008@p53",
     "1008@p92",
@@ -17237,24 +16183,24 @@
     "962@p51",
     "962@p91"
    ],
-   "ok": 375,
+   "ok": 364,
    "r3Subset": {
     "flag": 20,
     "ok": 189
    },
-   "relevantRows": 425
+   "relevantRows": 413
   },
-  "split": 39,
+  "split": 36,
   "statusDist": {
-   "R1": 17,
-   "R2a": 53,
+   "R1": 14,
+   "R2a": 47,
    "R2b": 1,
    "R3-single": 101,
-   "split": 39
+   "split": 36
   }
  },
  "task": "P65 — polna per-Blatt atribucija: 101 single-Blatt več-stranskih base (odprta točka P64 #3)",
- "v2Sha256": "ebb8f7298de713e73bc7417f392d60c7e5eb03a6675f96317320188750e27731",
+ "v2Sha256": "af7479e428182f381d3a2537896493d7cf86210fac7027221e22ac2aea218b53",
  "verdictEn": "P65: FULL PER-BLATT ATTRIBUTION — 101 SINGLE-BLATT MULTI-PAGE BASES (issue #13) — the P64 open point #3 fulfilled: the 101 bases whose all rows sit on pages of the SAME Blatt receive that Blatt as attributedBlatt (status 'R3-single', trivial and unambiguous: I 3 · II 26 · III 14 · IV 58; 205 rows — 98 bases × 2 + 3 bases × 3; all 101 with measured area) -> the multi-page coverage is COMPLETE: 211/211 (110 cross-Blatt from P64 + 101 single-Blatt), 172 attributed in total (Blatt II 68 · IV 63 · III 29 · I 8 · V 4) + 39 splits with alternatives (owner decision on the SPLIT join); FULL REGISTER COVERAGE (control block): 800 bases × 1,093 rows = 589 single-page (implicitly attributed via the page: I 145 · I·II 10 · II 183 · III 28 · IV 205 · V 18) + 211 multi-page; 0 rows without page attribution; adjacency of relevant rows 375/425 in total (the R3 part 189/209, 20 flags); the 110 P64 attributions byte-unchanged (I3); the v2 join UNCHANGED (measurements without reassignments — P56/P58/P59 discipline); machine attribution is not an evidentiary source",
  "verdictSi": "P65: POLNA PER-BLATT ATRIBUCIJA — 101 SINGLE-BLATT VEČ-STRANSKIH BASE (issue #13) — odprta točka P64 #3 izpolnjena: 101 base, katerih vse vrstice nosijo strani ISTEGA Blatta, dobi ta Blatt kot attributedBlatt (status 'R3-single', trivialno in nedvoumno: I 3 · II 26 · III 14 · IV 58; 205 vrstic — 98 base × 2 + 3 base × 3; vseh 101 z izmerjeno površino) → pokritost več-stranskih base POPOLNA: 211/211 (110 čez-Blatt iz P64 + 101 single-Blatt), skupaj 172 atributiranih (Blatt II 68 · IV 63 · III 29 · I 8 · V 4) + 39 split z alternativami (lastniška odločitev o SPLIT joinu); POLNA POKRITOST REGISTRA (kontrolni blok): 800 base × 1093 vrstic = 589 single-page (implicitno atributirane prek strani: I 145 · I·II 10 · II 183 · III 28 · IV 205 · V 18) + 211 multi-page; 0 vrstic brez atribucije strani; soslednost relevantnih vrstic skupaj 375/425 (R3 del 189/209, flag 20); 110 P64 atribucij bajtno nespremenjenih (I3); join v2 NESPREMENJEN (meritve brez prerazporeditev — disciplina P56/P58/P59); strojna atribucija ni dokazni vir"
 }

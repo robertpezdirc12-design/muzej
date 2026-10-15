@@ -3,7 +3,7 @@
  "inputSha256": {
   "research/georef-n83/gurs/parcels-ko1544-merged.json": "fee91fca736348f40ef11d38b7a5b51d51656a9768cda648f4d737029bb3941f",
   "research/issue17/PS-full-v2.json": "81f140e989d50a67656a81ed166c5b2c400617a9a1036a85758df0cf312fc92c",
-  "research/issue17/ps-blatt-headers.json": "95929a2e373f7e4acd8f5fe4e93db08419e18c8dfbc604c1fc87beeae65da973",
+  "research/issue17/ps-blatt-headers.json": "650f13dccab1da70a60d04c41ce9f7887ca94eafea8a0a7927c104ca899b76f3",
   "research/issue17/ps-parcels-geo-v2.json": "ebb8f7298de713e73bc7417f392d60c7e5eb03a6675f96317320188750e27731",
   "research/issue17/ps-raw/blatt-76.json": "e2aca956f40e0e18e9af8b1ddcfa4f6a10696e074d2fadbec635f0f973da0fb1",
   "research/issue17/ps-raw/blatt-77.json": "c69fa7b00af9ac9c814a3ae69220fbcb9a8834e77dae8326fd016a1b3a048cbc",
@@ -27,8 +27,8 @@
   "research/issue17/ps-raw/ps-110.json": "e794924e02189dd6d086c0a939938fc705ffd0b69a2ecf085c1572a96bb42310",
   "research/issue17/ps-raw/ps-125-pass2.json": "4188a6bd34e89ca601f2e3d64a59b474c10bddeff74d90ce9a1cc99bbfc9fb23",
   "research/issue17/ps-register-topology.json": "2fddc76fb94b69fed55170220fa8dfa3ace4a9466043d264b8b8df788e78a50c",
-  "src/data/atlas/ps-attribution-full.json": "74477ac800ad47b4a37805aa0b398ddc88327f8c45afc342f97a084813d0396d",
-  "src/data/atlas/ps-split-pack.json": "77337affcb9ff436727c7f868ca18ba9036282bb91ff8e9eac4b735ccebad981"
+  "src/data/atlas/ps-attribution-full.json": "e714c3550e759a59f6577e24f3aa314e42e30c951353e7f290d360a4bba16b57",
+  "src/data/atlas/ps-split-pack.json": "f5fcd8e9f6d4891104fa6fa4d65887f232e06a7ac171b164d33903ddadff67f2"
  },
  "inputs": {
   "geo": "research/georef-n83/gurs/parcels-ko1544-merged.json (2117 poligonov KO 1544)",
@@ -133,16 +133,16 @@
    },
    "projection": {
     "bases": {
-     "after": 802,
+     "after": 798,
      "before": 800
     },
     "crossBlatt": {
-     "after": 107,
-     "before": 110
+     "after": 98,
+     "before": 98
     },
     "multiPage": {
-     "after": 208,
-     "before": 211
+     "after": 199,
+     "before": 199
     },
     "new1903": {
      "class": "split pas [~]",
@@ -493,53 +493,45 @@
      ]
     },
     {
-     "flag": "661@p36",
+     "flag": "1903@p98",
      "missingInV2": [
-      "662",
-      "664",
-      "665",
-      "668",
-      "669",
-      "670",
-      "672",
-      "677",
-      "678"
+      "1908",
+      "1909",
+      "1912",
+      "1915",
+      "1916"
      ],
      "neighborEvidence": {
-      "662": {
-       "klafter": "328",
-       "kultur": "Eidn",
-       "name": "Mülley Franzl"
-      }
-     },
-     "pageStart": true,
-     "registerNeighbors": [
-      "662"
-     ]
-    },
-    {
-     "flag": "661@p87",
-     "missingInV2": [
-      "662",
-      "664",
-      "665",
-      "668",
-      "669",
-      "670",
-      "672",
-      "677",
-      "678"
-     ],
-     "neighborEvidence": {
-      "662": {
-       "klafter": "1932",
-       "kultur": "Acker",
-       "name": "Dultsitsch Mufg"
+      "1902": {
+       "klafter": "358",
+       "kultur": "Acker und Wiese",
+       "name": "Staudigl Georg"
       }
      },
      "pageStart": false,
      "registerNeighbors": [
-      "662"
+      "1902"
+     ]
+    },
+    {
+     "flag": "1903@p98",
+     "missingInV2": [
+      "1908",
+      "1909",
+      "1912",
+      "1915",
+      "1916"
+     ],
+     "neighborEvidence": {
+      "1902": {
+       "klafter": "358",
+       "kultur": "Acker und Wiese",
+       "name": "Staudigl Georg"
+      }
+     },
+     "pageStart": false,
+     "registerNeighbors": [
+      "1902"
      ]
     }
    ],
@@ -548,7 +540,7 @@
     "2141",
     "2143",
     "646",
-    "661"
+    "1903"
    ],
    "flagRows": 11,
    "pageBoundary": {
@@ -565,6 +557,14 @@
       "1821@p94"
      ],
      "ok": 0
+    },
+    "1903": {
+     "flag": 2,
+     "flaggedRows": [
+      "1903@p98",
+      "1903@p98"
+     ],
+     "ok": 3
     },
     "2141": {
      "flag": 2,
@@ -589,26 +589,19 @@
       "646@p85"
      ],
      "ok": 0
-    },
-    "661": {
-     "flag": 2,
-     "flaggedRows": [
-      "661@p36",
-      "661@p87"
-     ],
-     "ok": 0
     }
    },
    "verdict": "11/11 razloženih (obseg joina + meja strani); 0 anomalij registra; sosledje ostaja merilo kakovosti, ne napake"
   },
   "C": {
    "671": {
-    "p65": {
-     "attributedBlatt": "I",
-     "status": "R1"
+    "p68": {
+     "new": "1691",
+     "old": "671",
+     "page": 87
     },
-    "reason": "II instanca @p87 = 1691 (renumerifikacija p87); 671 ostane I-only @p36",
-    "verdict": "RAZREŠENA — ni divergencia"
+    "reason": "II instanca @p87 = 1691 (renumerifikacija p87 — P68 preslikava); 671 ostane I-only @p36 (single-Blatt, izpadla iz P65 dvoumnosti)",
+    "verdict": "RAZREŠENA — ni divergencia (P68 IZVEDENA)"
    },
    "930": {
     "mapBlock": "921–940: 9 poligonov (mehka podpora)",
@@ -634,16 +627,16 @@
   },
   "D": {
    "attributedSubset": {
-    "count": 71,
-    "disjoint": 71
+    "count": 62,
+    "disjoint": 62
    },
-   "crossBlattBases": 110,
-   "disjoint": 110,
+   "crossBlattBases": 98,
+   "disjoint": 98,
    "ownerRelationDist": {
-    "disjoint": 110
+    "disjoint": 98
    },
    "splitSubset": {
-    "count": 39,
+    "count": 36,
     "note": "39 polj bajtno == P66 (ownersByBlatt + ownerRelation)"
    },
    "verdict": "per-Blatt številčenje: ista številka pod različnima Blattoma = 2 RAZLIČNI realni parceli; atribucija = dodelitev geometrije instanci [~]"
@@ -736,16 +729,16 @@
     },
     "projection": {
      "bases": {
-      "after": 802,
+      "after": 798,
       "before": 800
      },
      "crossBlatt": {
-      "after": 107,
-      "before": 110
+      "after": 98,
+      "before": 98
      },
      "multiPage": {
-      "after": 208,
-      "before": 211
+      "after": 199,
+      "before": 199
      },
      "new1903": {
       "class": "split pas [~]",
@@ -1096,53 +1089,45 @@
       ]
      },
      {
-      "flag": "661@p36",
+      "flag": "1903@p98",
       "missingInV2": [
-       "662",
-       "664",
-       "665",
-       "668",
-       "669",
-       "670",
-       "672",
-       "677",
-       "678"
+       "1908",
+       "1909",
+       "1912",
+       "1915",
+       "1916"
       ],
       "neighborEvidence": {
-       "662": {
-        "klafter": "328",
-        "kultur": "Eidn",
-        "name": "Mülley Franzl"
-       }
-      },
-      "pageStart": true,
-      "registerNeighbors": [
-       "662"
-      ]
-     },
-     {
-      "flag": "661@p87",
-      "missingInV2": [
-       "662",
-       "664",
-       "665",
-       "668",
-       "669",
-       "670",
-       "672",
-       "677",
-       "678"
-      ],
-      "neighborEvidence": {
-       "662": {
-        "klafter": "1932",
-        "kultur": "Acker",
-        "name": "Dultsitsch Mufg"
+       "1902": {
+        "klafter": "358",
+        "kultur": "Acker und Wiese",
+        "name": "Staudigl Georg"
        }
       },
       "pageStart": false,
       "registerNeighbors": [
-       "662"
+       "1902"
+      ]
+     },
+     {
+      "flag": "1903@p98",
+      "missingInV2": [
+       "1908",
+       "1909",
+       "1912",
+       "1915",
+       "1916"
+      ],
+      "neighborEvidence": {
+       "1902": {
+        "klafter": "358",
+        "kultur": "Acker und Wiese",
+        "name": "Staudigl Georg"
+       }
+      },
+      "pageStart": false,
+      "registerNeighbors": [
+       "1902"
       ]
      }
     ],
@@ -1151,7 +1136,7 @@
      "2141",
      "2143",
      "646",
-     "661"
+     "1903"
     ],
     "flagRows": 11,
     "pageBoundary": {
@@ -1168,6 +1153,14 @@
        "1821@p94"
       ],
       "ok": 0
+     },
+     "1903": {
+      "flag": 2,
+      "flaggedRows": [
+       "1903@p98",
+       "1903@p98"
+      ],
+      "ok": 3
      },
      "2141": {
       "flag": 2,
@@ -1192,26 +1185,19 @@
        "646@p85"
       ],
       "ok": 0
-     },
-     "661": {
-      "flag": 2,
-      "flaggedRows": [
-       "661@p36",
-       "661@p87"
-      ],
-      "ok": 0
      }
     },
     "verdict": "11/11 razloženih (obseg joina + meja strani); 0 anomalij registra; sosledje ostaja merilo kakovosti, ne napake"
    },
    "C": {
     "671": {
-     "p65": {
-      "attributedBlatt": "I",
-      "status": "R1"
+     "p68": {
+      "new": "1691",
+      "old": "671",
+      "page": 87
      },
-     "reason": "II instanca @p87 = 1691 (renumerifikacija p87); 671 ostane I-only @p36",
-     "verdict": "RAZREŠENA — ni divergencia"
+     "reason": "II instanca @p87 = 1691 (renumerifikacija p87 — P68 preslikava); 671 ostane I-only @p36 (single-Blatt, izpadla iz P65 dvoumnosti)",
+     "verdict": "RAZREŠENA — ni divergencia (P68 IZVEDENA)"
     },
     "930": {
      "mapBlock": "921–940: 9 poligonov (mehka podpora)",
@@ -1237,16 +1223,16 @@
    },
    "D": {
     "attributedSubset": {
-     "count": 71,
-     "disjoint": 71
+     "count": 62,
+     "disjoint": 62
     },
-    "crossBlattBases": 110,
-    "disjoint": 110,
+    "crossBlattBases": 98,
+    "disjoint": 98,
     "ownerRelationDist": {
-     "disjoint": 110
+     "disjoint": 98
     },
     "splitSubset": {
-     "count": 39,
+     "count": 36,
      "note": "39 polj bajtno == P66 (ownersByBlatt + ownerRelation)"
     },
     "verdict": "per-Blatt številčenje: ista številka pod različnima Blattoma = 2 RAZLIČNI realni parceli; atribucija = dodelitev geometrije instanci [~]"
@@ -1261,7 +1247,7 @@
   "statusLine": "P67 FORENZIKA: skok II·IV = artifakt dvojne Kurrent zamenjave (p78 1501–1520, p93 1901–1920, p87 1681–1700 — oči+strip 2×+karta; renumerifikacija 17 preslikav); 5 sosledje flagov = obseg joina (11/11 razloženih; sosedje brez poligonov; meja strani); 671 ni divergenca (II instanca = 1691), 930 [~] z dokazom; disjunktnost lastnikov per Blatt UNIVERZALNA 110/110; v2 nespremenjen; renumerifikacija = P68",
   "summary": {
    "collisions": 0,
-   "crossBlattBases": 110,
+   "crossBlattBases": 98,
    "divergences": {
     "671": "razrešena (ni divergencia)",
     "930": "[~] z merjenim dokazom"
@@ -1275,14 +1261,14 @@
     "661",
     "671"
    ],
-   "ownerDisjoint": 110,
+   "ownerDisjoint": 98,
    "ownerRelationDist": {
-    "disjoint": 110
+    "disjoint": 98
    },
    "projection": {
-    "bases": 802,
-    "crossBlatt": 107,
-    "multiPage": 208,
+    "bases": 798,
+    "crossBlatt": 98,
+    "multiPage": 199,
     "r3Single": 101
    },
    "renumberMappings": 17

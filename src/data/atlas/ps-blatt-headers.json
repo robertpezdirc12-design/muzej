@@ -1148,8 +1148,8 @@
   }
  },
  "perBlattAmbiguity": {
-  "basesOnMultipleBlatter": 110,
-  "basesOnMultiplePages_v2": 211,
+  "basesOnMultipleBlatter": 98,
+  "basesOnMultiplePages_v2": 199,
   "ruleCandidateBases": [
    "163",
    "176",
@@ -1159,9 +1159,6 @@
    "655",
    "656",
    "657",
-   "666",
-   "671",
-   "676",
    "928",
    "930",
    "934",
@@ -1170,9 +1167,9 @@
    "1831"
   ],
   "ruleCandidateNote": "baza z TOČNO eno instanco z median razmerjem v [0.8, 1.25] — kandidat za prihodnjo per-Blatt atribucijo joina (P60), MERJENO ne izvedeno [~]",
-  "verdictSi": "per-Blatt ločitev MERJENA: od 211 bazi na več straneh jih 110 sega čez ≥2 Blatta (P39: ista številka pod različnima Blattoma = druga parcela) — instance zdaj razločljive; join po številki ostaja nespremenjen (brez dokaza se NE prerazporeja)"
+  "verdictSi": "per-Blatt ločitev MERJENA: od 211 bazi na več straneh jih 98 sega čez ≥2 Blatta (P39: ista številka pod različnima Blattoma = druga parcela) — instance zdaj razločljive; join po številki ostaja nespremenjen (brez dokaza se NE prerazporeja)"
  },
- "statusLine": "P59 GLAVE LISTOV: 135/135 strani sveže branih (2 prehoda; polna pokritost — P62 dopolnilo 133–136, 138–139, p137 pass2 po premagani kvoti 429), 32 arbitraža-oči, struktura Blatt I–V + IIb + lokalne sekcije (P63: p139 = IIb, Parzelle 41–60); 211 dvoumnih base → 110 čez-Blatt, 17 ruleCandidate [~]; join v2 nespremenjen",
+ "statusLine": "P59 GLAVE LISTOV: 135/135 strani sveže branih (2 prehoda; polna pokritost — P62 dopolnilo 133–136, 138–139, p137 pass2 po premagani kvoti 429), 32 arbitraža-oči, struktura Blatt I–V + IIb + lokalne sekcije (P63: p139 = IIb, Parzelle 41–60); 199 dvoumnih base (v3 P68; v2: 211) → 98 čez-Blatt, 14 ruleCandidate [~]; join v3 nespremenjen",
  "structure": {
   "blattSections": [
    {

@@ -3,7 +3,7 @@
  "gursSha256": "fee91fca736348f40ef11d38b7a5b51d51656a9768cda648f4d737029bb3941f",
  "hipoteze": {
   "H1_napacenJoin": {
-   "dokaz": "moda A real @50 0.9248 vs perm 0.1637; moda B real @50 0.2903 vs perm 0.1774 — prava parcela (QK×3.6) pri moda B ni tik zraven; @100 m base rate raste z gostoto parcel (A perm 0.5221, B perm 0.6129) — diskriminator je 50 m",
+   "dokaz": "moda A real @50 0.9248 vs perm 0.1637; moda B real @50 0.3 vs perm 0.2167 — prava parcela (QK×3.6) pri moda B ni tik zraven; @100 m base rate raste z gostoto parcel (A perm 0.5221, B perm 0.6333) — diskriminator je 50 m",
    "status": "ZAVRŽEN"
   },
   "H2_drugaEnota": {
@@ -23,7 +23,7 @@
   "gurs": "research/georef-n83/gurs/parcels-ko1544-merged.json (2117 parcel, P47)",
   "p59": "research/issue17/ps-blatt-headers.json (pageAttribution)",
   "p60": "research/issue17/ps-perblatt-attribution.json (unitSemantics + v2Sha256)",
-  "v2": "research/issue17/ps-parcels-geo-v2.json (rowsEvidence 1093, sha256 == P60)"
+  "v2": "research/issue17/ps-parcels-geo-v3.json (rowsEvidence 1079; P68 v3 — sha256 == P60)"
  },
  "invariants": [
   "I1 modi == P60",
@@ -57,22 +57,22 @@
    }
   },
   "B": {
-   "n": 62,
+   "n": 60,
    "perm100": {
     "hit": 38,
-    "rate": 0.6129
+    "rate": 0.6333
    },
    "perm50": {
-    "hit": 11,
-    "rate": 0.1774
+    "hit": 13,
+    "rate": 0.2167
    },
    "real100": {
     "hit": 45,
-    "rate": 0.7258
+    "rate": 0.75
    },
    "real50": {
     "hit": 18,
-    "rate": 0.2903
+    "rate": 0.3
    }
   }
  },
@@ -12813,7 +12813,7 @@
   ],
   "hipoteze": {
    "H1_napacenJoin": {
-    "dokaz": "moda A real @50 0.9248 vs perm 0.1637; moda B real @50 0.2903 vs perm 0.1774 — prava parcela (QK×3.6) pri moda B ni tik zraven; @100 m base rate raste z gostoto parcel (A perm 0.5221, B perm 0.6129) — diskriminator je 50 m",
+    "dokaz": "moda A real @50 0.9248 vs perm 0.1637; moda B real @50 0.3 vs perm 0.2167 — prava parcela (QK×3.6) pri moda B ni tik zraven; @100 m base rate raste z gostoto parcel (A perm 0.5221, B perm 0.6333) — diskriminator je 50 m",
     "status": "ZAVRŽEN"
    },
    "H2_drugaEnota": {
@@ -12850,22 +12850,22 @@
     }
    },
    "B": {
-    "n": 62,
+    "n": 60,
     "perm100": {
      "hit": 38,
-     "rate": 0.6129
+     "rate": 0.6333
     },
     "perm50": {
-     "hit": 11,
-     "rate": 0.1774
+     "hit": 13,
+     "rate": 0.2167
     },
     "real100": {
      "hit": 45,
-     "rate": 0.7258
+     "rate": 0.75
     },
     "real50": {
      "hit": 18,
-     "rate": 0.2903
+     "rate": 0.3
     }
    }
   },
@@ -12892,13 +12892,13 @@
   "pini": {
    "blattDist": {
     "I": 5,
-    "II": 32,
+    "II": 30,
     "III": 9,
     "IV": 15,
     "I·II": 1,
     "null": 0
    },
-   "blattHeadersRuntimeSha256": "efe39f41dc4f81703e3b8aa47632faef75222a000ad13b7a674f3a853c1ee66e",
+   "blattHeadersRuntimeSha256": "f4c4dedcd6c65d4d1480b4124ae93d00304be2f24f30aa74ca5d0c6ff8c9efe6",
    "blocks": {
     "n": 3,
     "rows": 9
@@ -12915,16 +12915,16 @@
     },
     "B": {
      "perm100": 38,
-     "perm50": 11,
+     "perm50": 13,
      "real100": 45,
      "real50": 18
     }
    },
    "multiB": 2,
-   "p60RuntimeSha256": "28465b3e28fef763f951dc8ea379b7e071bd9d5fa109ebb9a577e594236e386a",
-   "v2Sha256": "ebb8f7298de713e73bc7417f392d60c7e5eb03a6675f96317320188750e27731"
+   "p60RuntimeSha256": "c42bf221141e46aee0c387506bdf594c24373d41b19420fe2fc8fc2b7047d6e4",
+   "v2Sha256": "af7479e428182f381d3a2537896493d7cf86210fac7027221e22ac2aea218b53"
   },
-  "statusLine": "P61 UNIT-SEMANTICS MERJENA: moda B (ratio ≈ 1, n=62) = drugačna registracijska konvencija [~], ne napaka ujeme — permutacijska kontrola @ 50/100 m pas ±25 %: moda A real 0.9248/0.9735 vs perm 0.1637/0.5221 (ujeta = prava parcela), moda B real 0.2903/0.7258 vs perm 0.1774/0.6129 → prava parcela (QK×3.6) ni v bližini → H1 napačni join ZAVRŽEN; delna površina neuporabna (2 base z ≥2 B); blattDist II 32 · IV 15 · III 9 · I 5; bloki 3/9; identiteta enote ODPRTA; pas pravilo P59/P60 = moda B — atribucija smiselna kot relativa",
+  "statusLine": "P61 UNIT-SEMANTICS MERJENA: moda B (ratio ≈ 1, n=60) = drugačna registracijska konvencija [~], ne napaka ujeme — permutacijska kontrola @ 50/100 m pas ±25 %: moda A real 0.9248/0.9735 vs perm 0.1637/0.5221 (ujeta = prava parcela), moda B real 0.3/0.75 vs perm 0.2167/0.6333 → prava parcela (QK×3.6) ni v bližini → H1 napačni join ZAVRŽEN; delna površina neuporabna (2 base z ≥2 B); blattDist II 30 · IV 15 · III 9 · I 5; bloki 3/9; identiteta enote ODPRTA; pas pravilo P59/P60 = moda B — atribucija smiselna kot relativa",
   "summary": {
    "areaQK": {
     "A": {
@@ -12934,7 +12934,7 @@
     },
     "B": {
      "max": 10964.0,
-     "mediana": 1002.0,
+     "mediana": 973.0,
      "min": 76.0
     }
    },
@@ -12979,7 +12979,7 @@
    "kulturTopB": [
     [
      "Acker",
-     13
+     11
     ],
     [
      "Wiese",
@@ -13020,7 +13020,7 @@
    ],
    "modaBBlattDist": {
     "I": 5,
-    "II": 32,
+    "II": 30,
     "III": 9,
     "IV": 15,
     "I·II": 1,
@@ -13049,7 +13049,6 @@
     84,
     85,
     86,
-    87,
     91,
     92,
     94,
@@ -13072,8 +13071,8 @@
    ],
    "modi": {
     "A": 226,
-    "B": 62,
-    "X": 800,
+    "B": 60,
+    "X": 788,
     "noRatio": 5
    },
    "multiB": [
@@ -13082,11 +13081,11 @@
    ]
   },
   "task": "P61 — unit-semantics moda B: merjena karakterizacija (odprta točka P60 #1)",
-  "verdictEn": "P61 measures and re-frames P60 open point #1: mode B is not a join error and not a partial surface — it is a consistent alternative registration convention (number ≈ modern m²; n=62 rows, 42 pages, Blatt II 32 · IV 15 · III 9 · I 5). Permutation control (FNV-1a deterministic points, 50/100 m, ±25 %): for mode A the true parcel (≈ QK×3.6) sits next door (0.9248 @ 50 m vs 0.1637 random), for mode B it does not (0.2903 vs 0.1774) → wrong-number join REJECTED as the main mechanism. Partial surface unusable: only 2 bases with ≥2 mode B rows. Unit identity remains OPEN [~] — paleographic/documentary confirmation. Implication for P60: the [0.8, 1.25] band selects rows in the convention numerically comparable with the modern measurement — attribution remains sound as RELATIVE [~]; join v2 UNCHANGED.",
-  "verdictSi": "P61 merjeno razrešuje odprto točko P60 #1 s preusmeritvijo: moda B ni napaka ujeme in ni delna površina — je dosledna drugačna registracijska konvencija površin (številka ≈ sodobna meritev v m²; n=62 vrstic, 42 strani, Blatt II 32 · IV 15 · III 9 · I 5). Permutacijska kontrola (FNV-1a deterministične točke, radija 50/100 m, pas ±25 %): pri moda A je prava parcela (površina ≈ QK×3.6) tik zraven (0.9248 @ 50 m vs 0.1637 naključno), pri moda B pa ni (0.2903 vs 0.1774) → napačni številčni join ZAVRŽEN kot glavni mehanizem. Delna površina neuporabna: samo 2 base z ≥2 moda B vrsticami. Identiteta enote ostaja ODPRTA [~] — paleografska/dokumentarna potrditev. Implikacija za P60: pas pravilo [0.8, 1.25] izbere vrstico v konvenciji, ki je številčno primerljiva s sodobno meritvijo — atribucija ostaja smiselna kot RELATIVA [~]; join v2 NESPREMENJEN.",
+  "verdictEn": "P61 measures and re-frames P60 open point #1: mode B is not a join error and not a partial surface — it is a consistent alternative registration convention (number ≈ modern m²; n=60 rows, 41 pages, Blatt II 30 · IV 15 · III 9 · I 5). Permutation control (FNV-1a deterministic points, 50/100 m, ±25 %): for mode A the true parcel (≈ QK×3.6) sits next door (0.9248 @ 50 m vs 0.1637 random), for mode B it does not (0.3 vs 0.2167) → wrong-number join REJECTED as the main mechanism. Partial surface unusable: only 2 bases with ≥2 mode B rows. Unit identity remains OPEN [~] — paleographic/documentary confirmation. Implication for P60: the [0.8, 1.25] band selects rows in the convention numerically comparable with the modern measurement — attribution remains sound as RELATIVE [~]; join v2 UNCHANGED.",
+  "verdictSi": "P61 merjeno razrešuje odprto točko P60 #1 s preusmeritvijo: moda B ni napaka ujeme in ni delna površina — je dosledna drugačna registracijska konvencija površin (številka ≈ sodobna meritev v m²; n=60 vrstic, 41 strani, Blatt II 30 · IV 15 · III 9 · I 5). Permutacijska kontrola (FNV-1a deterministične točke, radija 50/100 m, pas ±25 %): pri moda A je prava parcela (površina ≈ QK×3.6) tik zraven (0.9248 @ 50 m vs 0.1637 naključno), pri moda B pa ni (0.3 vs 0.2167) → napačni številčni join ZAVRŽEN kot glavni mehanizem. Delna površina neuporabna: samo 2 base z ≥2 moda B vrsticami. Identiteta enote ostaja ODPRTA [~] — paleografska/dokumentarna potrditev. Implikacija za P60: pas pravilo [0.8, 1.25] izbere vrstico v konvenciji, ki je številčno primerljiva s sodobno meritvijo — atribucija ostaja smiselna kot RELATIVA [~]; join v2 NESPREMENJEN.",
   "version": 1
  },
- "statusLine": "P61 UNIT-SEMANTICS MERJENA: moda B (ratio ≈ 1, n=62) = drugačna registracijska konvencija [~], ne napaka ujeme — permutacijska kontrola @ 50/100 m pas ±25 %: moda A real 0.9248/0.9735 vs perm 0.1637/0.5221 (ujeta = prava parcela), moda B real 0.2903/0.7258 vs perm 0.1774/0.6129 → prava parcela (QK×3.6) ni v bližini → H1 napačni join ZAVRŽEN; delna površina neuporabna (2 base z ≥2 B); blattDist II 32 · IV 15 · III 9 · I 5; bloki 3/9; identiteta enote ODPRTA; pas pravilo P59/P60 = moda B — atribucija smiselna kot relativa",
+ "statusLine": "P61 UNIT-SEMANTICS MERJENA: moda B (ratio ≈ 1, n=60) = drugačna registracijska konvencija [~], ne napaka ujeme — permutacijska kontrola @ 50/100 m pas ±25 %: moda A real 0.9248/0.9735 vs perm 0.1637/0.5221 (ujeta = prava parcela), moda B real 0.3/0.75 vs perm 0.2167/0.6333 → prava parcela (QK×3.6) ni v bližini → H1 napačni join ZAVRŽEN; delna površina neuporabna (2 base z ≥2 B); blattDist II 30 · IV 15 · III 9 · I 5; bloki 3/9; identiteta enote ODPRTA; pas pravilo P59/P60 = moda B — atribucija smiselna kot relativa",
  "summary": {
   "areaQK": {
    "A": {
@@ -13096,7 +13095,7 @@
    },
    "B": {
     "max": 10964.0,
-    "mediana": 1002.0,
+    "mediana": 973.0,
     "min": 76.0
    }
   },
@@ -13141,7 +13140,7 @@
   "kulturTopB": [
    [
     "Acker",
-    13
+    11
    ],
    [
     "Wiese",
@@ -13182,7 +13181,7 @@
   ],
   "modaBBlattDist": {
    "I": 5,
-   "II": 32,
+   "II": 30,
    "III": 9,
    "IV": 15,
    "I·II": 1,
@@ -13211,7 +13210,6 @@
    84,
    85,
    86,
-   87,
    91,
    92,
    94,
@@ -13234,8 +13232,8 @@
   ],
   "modi": {
    "A": 226,
-   "B": 62,
-   "X": 800,
+   "B": 60,
+   "X": 788,
    "noRatio": 5
   },
   "multiB": [
@@ -13244,7 +13242,7 @@
   ]
  },
  "task": "P61 — unit-semantics moda B: merjena karakterizacija (odprta točka P60 #1)",
- "v2Sha256": "ebb8f7298de713e73bc7417f392d60c7e5eb03a6675f96317320188750e27731",
- "verdictEn": "P61 measures and re-frames P60 open point #1: mode B is not a join error and not a partial surface — it is a consistent alternative registration convention (number ≈ modern m²; n=62 rows, 42 pages, Blatt II 32 · IV 15 · III 9 · I 5). Permutation control (FNV-1a deterministic points, 50/100 m, ±25 %): for mode A the true parcel (≈ QK×3.6) sits next door (0.9248 @ 50 m vs 0.1637 random), for mode B it does not (0.2903 vs 0.1774) → wrong-number join REJECTED as the main mechanism. Partial surface unusable: only 2 bases with ≥2 mode B rows. Unit identity remains OPEN [~] — paleographic/documentary confirmation. Implication for P60: the [0.8, 1.25] band selects rows in the convention numerically comparable with the modern measurement — attribution remains sound as RELATIVE [~]; join v2 UNCHANGED.",
- "verdictSi": "P61 merjeno razrešuje odprto točko P60 #1 s preusmeritvijo: moda B ni napaka ujeme in ni delna površina — je dosledna drugačna registracijska konvencija površin (številka ≈ sodobna meritev v m²; n=62 vrstic, 42 strani, Blatt II 32 · IV 15 · III 9 · I 5). Permutacijska kontrola (FNV-1a deterministične točke, radija 50/100 m, pas ±25 %): pri moda A je prava parcela (površina ≈ QK×3.6) tik zraven (0.9248 @ 50 m vs 0.1637 naključno), pri moda B pa ni (0.2903 vs 0.1774) → napačni številčni join ZAVRŽEN kot glavni mehanizem. Delna površina neuporabna: samo 2 base z ≥2 moda B vrsticami. Identiteta enote ostaja ODPRTA [~] — paleografska/dokumentarna potrditev. Implikacija za P60: pas pravilo [0.8, 1.25] izbere vrstico v konvenciji, ki je številčno primerljiva s sodobno meritvijo — atribucija ostaja smiselna kot RELATIVA [~]; join v2 NESPREMENJEN."
+ "v2Sha256": "af7479e428182f381d3a2537896493d7cf86210fac7027221e22ac2aea218b53",
+ "verdictEn": "P61 measures and re-frames P60 open point #1: mode B is not a join error and not a partial surface — it is a consistent alternative registration convention (number ≈ modern m²; n=60 rows, 41 pages, Blatt II 30 · IV 15 · III 9 · I 5). Permutation control (FNV-1a deterministic points, 50/100 m, ±25 %): for mode A the true parcel (≈ QK×3.6) sits next door (0.9248 @ 50 m vs 0.1637 random), for mode B it does not (0.3 vs 0.2167) → wrong-number join REJECTED as the main mechanism. Partial surface unusable: only 2 bases with ≥2 mode B rows. Unit identity remains OPEN [~] — paleographic/documentary confirmation. Implication for P60: the [0.8, 1.25] band selects rows in the convention numerically comparable with the modern measurement — attribution remains sound as RELATIVE [~]; join v2 UNCHANGED.",
+ "verdictSi": "P61 merjeno razrešuje odprto točko P60 #1 s preusmeritvijo: moda B ni napaka ujeme in ni delna površina — je dosledna drugačna registracijska konvencija površin (številka ≈ sodobna meritev v m²; n=60 vrstic, 41 strani, Blatt II 30 · IV 15 · III 9 · I 5). Permutacijska kontrola (FNV-1a deterministične točke, radija 50/100 m, pas ±25 %): pri moda A je prava parcela (površina ≈ QK×3.6) tik zraven (0.9248 @ 50 m vs 0.1637 naključno), pri moda B pa ni (0.3 vs 0.2167) → napačni številčni join ZAVRŽEN kot glavni mehanizem. Delna površina neuporabna: samo 2 base z ≥2 moda B vrsticami. Identiteta enote ostaja ODPRTA [~] — paleografska/dokumentarna potrditev. Implikacija za P60: pas pravilo [0.8, 1.25] izbere vrstico v konvenciji, ki je številčno primerljiva s sodobno meritvijo — atribucija ostaja smiselna kot RELATIVA [~]; join v2 NESPREMENJEN."
 }

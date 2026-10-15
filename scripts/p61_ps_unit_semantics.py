@@ -37,7 +37,7 @@ import sys
 from collections import defaultdict
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-V2 = os.path.join(ROOT, "research/issue17/ps-parcels-geo-v2.json")
+V2 = os.path.join(ROOT, "research/issue17/ps-parcels-geo-v3.json")  # P68 v3
 P59 = os.path.join(ROOT, "research/issue17/ps-blatt-headers.json")
 P60_EV = os.path.join(ROOT, "research/issue17/ps-perblatt-attribution.json")
 P60_RT = os.path.join(ROOT, "src/data/atlas/ps-perblatt-attribution.json")
@@ -57,15 +57,15 @@ FNV_PRIME = 0x01000193
 FNV_PIN = 1711381398  # FNV-1a-32("p61-perm-0-lat") — pin determinizma
 
 # ——— pini rezultatov (vzorci iz podatkov; skripta FAIL ob odmiku) ———
-PIN_MODI = {"A": 226, "B": 62, "X": 800, "noRatio": 5}
-PIN_BLATT_B = {"II": 32, "IV": 15, "III": 9, "I": 5, "I·II": 1, "null": 0}  # P62: null 5 (strani 133–136) → IV +4, II +1
+PIN_MODI = {"A": 226, "B": 60, "X": 788, "noRatio": 5}  # P68 v3 (v2: A 226 / B 62 / X 800 / noRatio 5)
+PIN_BLATT_B = {"II": 30, "IV": 15, "III": 9, "I": 5, "I·II": 1, "null": 0}  # P68 v3 (v2: II 32 / IV 15 / III 9 / I 5 / I·II 1 / null 0) — kalibrirati po re-run
 PIN_BLOCKS = 3
 PIN_BLOCK_ROWS = 9
 PIN_MULTI_B_BASES = 2  # base z ≥2 moda B vrsticami (H3 neuporabna)
 # hit številce (realno/perm) @ radij — I4-primerjava + runtime pini za QA
 PIN_HITS = {
     "A": {"real50": 209, "perm50": 37, "real100": 220, "perm100": 118},
-    "B": {"real50": 18, "perm50": 11, "real100": 45, "perm100": 38},
+    "B": {"real50": 18, "perm50": 13, "real100": 45, "perm100": 38},
 }
 
 
@@ -322,7 +322,7 @@ def main():
                       "registracijska konvencija [~], identiteta enote ODPRTA; deterministične "
                       "FNV-1a točke (prenosljivo Python/TS) po receptu P55 kontrol"),
         "inputs": {
-            "v2": "research/issue17/ps-parcels-geo-v2.json (rowsEvidence 1093, sha256 == P60)",
+            "v2": "research/issue17/ps-parcels-geo-v3.json (rowsEvidence 1079; P68 v3 — sha256 == P60)",
             "gurs": "research/georef-n83/gurs/parcels-ko1544-merged.json (2117 parcel, P47)",
             "p59": "research/issue17/ps-blatt-headers.json (pageAttribution)",
             "p60": "research/issue17/ps-perblatt-attribution.json (unitSemantics + v2Sha256)",
@@ -422,9 +422,9 @@ def main():
     }
 
     # ————— I8: P59/P60 runtime nespremanjeni —————
-    if p60rt_sha != "28465b3e28fef763f951dc8ea379b7e071bd9d5fa109ebb9a577e594236e386a":
+    if p60rt_sha != "c42bf221141e46aee0c387506bdf594c24373d41b19420fe2fc8fc2b7047d6e4":  # P68: v3 re-run (14 base; I 0 / II 10 / III 4)
         fail("I8 P60 runtime sha256 odmik (pini po P9 lekciji)")
-    if bhrt_sha != "efe39f41dc4f81703e3b8aa47632faef75222a000ad13b7a674f3a853c1ee66e":  # P63: korekcija p139 = Blatt IIb (oči 5x + 3. VLM prehod); p138 izčrpen opis ostankov + 'Zusammenstellung'
+    if bhrt_sha != "f4c4dedcd6c65d4d1480b4124ae93d00304be2f24f30aa74ca5d0c6ff8c9efe6":  # P68: v3 re-run (199/98/14; v2: 211/110/17)
         fail("I8 P59 blatt-headers runtime sha256 odmik")
 
     # ————— I7: dokaz ⊇ runtime bajtno —————

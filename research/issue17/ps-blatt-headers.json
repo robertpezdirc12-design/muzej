@@ -53,7 +53,7 @@
   "freshReads": "research/issue17/ps-raw/blatt-<page>{,-pass2}.json (135 strani posnetih × 2 prehoda — pokritost polna, izrez levega stolpca 3×)",
   "pageMap": "research/issue17/ps-register-topology.json (P56)",
   "reader": "scripts/p59_ps_read_blatt.mjs (glm-5v-turbo, 2 prehoda, JSON)",
-  "v2": "research/issue17/ps-parcels-geo-v2.json (rowsEvidence 1093)"
+  "v2": "research/issue17/ps-parcels-geo-v3.json (rowsEvidence 1079; P68 v3 — v2 arhiviran)"
  },
  "invariants": [
   "I1 pokritost polna 135/135",
@@ -1399,8 +1399,8 @@
   }
  ],
  "perBlattAmbiguity": {
-  "basesOnMultipleBlatter": 110,
-  "basesOnMultiplePages_v2": 211,
+  "basesOnMultipleBlatter": 98,
+  "basesOnMultiplePages_v2": 199,
   "instances": {
    "160": {
     "instances": [
@@ -1417,72 +1417,6 @@
       "medianRatio": 0.6793,
       "pages": [
        86
-      ],
-      "rows": 1
-     }
-    ],
-    "nInBand": 0,
-    "ruleCandidate": false
-   },
-   "1603": {
-    "instances": [
-     {
-      "blatt": "II",
-      "medianRatio": 0.7049,
-      "pages": [
-       78
-      ],
-      "rows": 1
-     },
-     {
-      "blatt": "IV",
-      "medianRatio": 0.5443,
-      "pages": [
-       93
-      ],
-      "rows": 1
-     }
-    ],
-    "nInBand": 0,
-    "ruleCandidate": false
-   },
-   "1604": {
-    "instances": [
-     {
-      "blatt": "II",
-      "medianRatio": 2.7933,
-      "pages": [
-       78
-      ],
-      "rows": 1
-     },
-     {
-      "blatt": "IV",
-      "medianRatio": 2.9862,
-      "pages": [
-       93
-      ],
-      "rows": 1
-     }
-    ],
-    "nInBand": 0,
-    "ruleCandidate": false
-   },
-   "1605": {
-    "instances": [
-     {
-      "blatt": "II",
-      "medianRatio": 0.2288,
-      "pages": [
-       78
-      ],
-      "rows": 1
-     },
-     {
-      "blatt": "IV",
-      "medianRatio": null,
-      "pages": [
-       93
       ],
       "rows": 1
      }
@@ -2175,6 +2109,50 @@
       "medianRatio": 2.3761,
       "pages": [
        94
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1903": {
+    "instances": [
+     {
+      "blatt": "III",
+      "medianRatio": 1.4035,
+      "pages": [
+       98
+      ],
+      "rows": 2
+     },
+     {
+      "blatt": "IV",
+      "medianRatio": 1.2597,
+      "pages": [
+       93
+      ],
+      "rows": 1
+     }
+    ],
+    "nInBand": 0,
+    "ruleCandidate": false
+   },
+   "1905": {
+    "instances": [
+     {
+      "blatt": "III",
+      "medianRatio": 5.2997,
+      "pages": [
+       98
+      ],
+      "rows": 1
+     },
+     {
+      "blatt": "IV",
+      "medianRatio": null,
+      "pages": [
+       93
       ],
       "rows": 1
      }
@@ -3254,248 +3232,6 @@
     "nInBand": 0,
     "ruleCandidate": false
    },
-   "661": {
-    "instances": [
-     {
-      "blatt": "I",
-      "medianRatio": 1.8149,
-      "pages": [
-       36
-      ],
-      "rows": 1
-     },
-     {
-      "blatt": "II",
-      "medianRatio": 1.711,
-      "pages": [
-       87
-      ],
-      "rows": 1
-     }
-    ],
-    "nInBand": 0,
-    "ruleCandidate": false
-   },
-   "663": {
-    "instances": [
-     {
-      "blatt": "I",
-      "medianRatio": 58.5,
-      "pages": [
-       36
-      ],
-      "rows": 1
-     },
-     {
-      "blatt": "II",
-      "medianRatio": 1.8438,
-      "pages": [
-       87
-      ],
-      "rows": 1
-     }
-    ],
-    "nInBand": 0,
-    "ruleCandidate": false
-   },
-   "666": {
-    "instances": [
-     {
-      "blatt": "I",
-      "medianRatio": 17.5938,
-      "pages": [
-       36
-      ],
-      "rows": 1
-     },
-     {
-      "blatt": "II",
-      "medianRatio": 0.8537,
-      "pages": [
-       87
-      ],
-      "rows": 1
-     }
-    ],
-    "nInBand": 1,
-    "ruleCandidate": true
-   },
-   "667": {
-    "instances": [
-     {
-      "blatt": "I",
-      "medianRatio": 24.6143,
-      "pages": [
-       36
-      ],
-      "rows": 1
-     },
-     {
-      "blatt": "II",
-      "medianRatio": 1.5009,
-      "pages": [
-       87
-      ],
-      "rows": 1
-     }
-    ],
-    "nInBand": 0,
-    "ruleCandidate": false
-   },
-   "671": {
-    "instances": [
-     {
-      "blatt": "I",
-      "medianRatio": 0.9086,
-      "pages": [
-       36
-      ],
-      "rows": 1
-     },
-     {
-      "blatt": "II",
-      "medianRatio": 0.1188,
-      "pages": [
-       87
-      ],
-      "rows": 1
-     }
-    ],
-    "nInBand": 1,
-    "ruleCandidate": true
-   },
-   "673": {
-    "instances": [
-     {
-      "blatt": "I",
-      "medianRatio": 3.5957,
-      "pages": [
-       36
-      ],
-      "rows": 1
-     },
-     {
-      "blatt": "II",
-      "medianRatio": 0.5521,
-      "pages": [
-       87
-      ],
-      "rows": 1
-     }
-    ],
-    "nInBand": 0,
-    "ruleCandidate": false
-   },
-   "674": {
-    "instances": [
-     {
-      "blatt": "I",
-      "medianRatio": 1.6349,
-      "pages": [
-       36
-      ],
-      "rows": 1
-     },
-     {
-      "blatt": "II",
-      "medianRatio": 0.5639,
-      "pages": [
-       87
-      ],
-      "rows": 1
-     }
-    ],
-    "nInBand": 0,
-    "ruleCandidate": false
-   },
-   "675": {
-    "instances": [
-     {
-      "blatt": "I",
-      "medianRatio": 4.0878,
-      "pages": [
-       36
-      ],
-      "rows": 1
-     },
-     {
-      "blatt": "II",
-      "medianRatio": 0.473,
-      "pages": [
-       87
-      ],
-      "rows": 1
-     }
-    ],
-    "nInBand": 0,
-    "ruleCandidate": false
-   },
-   "676": {
-    "instances": [
-     {
-      "blatt": "I",
-      "medianRatio": 12.0319,
-      "pages": [
-       36
-      ],
-      "rows": 1
-     },
-     {
-      "blatt": "II",
-      "medianRatio": 0.8004,
-      "pages": [
-       87
-      ],
-      "rows": 1
-     }
-    ],
-    "nInBand": 1,
-    "ruleCandidate": true
-   },
-   "679": {
-    "instances": [
-     {
-      "blatt": "I",
-      "medianRatio": 13.7444,
-      "pages": [
-       36
-      ],
-      "rows": 1
-     },
-     {
-      "blatt": "II",
-      "medianRatio": 137.4444,
-      "pages": [
-       87
-      ],
-      "rows": 1
-     }
-    ],
-    "nInBand": 0,
-    "ruleCandidate": false
-   },
-   "680": {
-    "instances": [
-     {
-      "blatt": "I",
-      "medianRatio": 75.9259,
-      "pages": [
-       36
-      ],
-      "rows": 1
-     },
-     {
-      "blatt": "II",
-      "medianRatio": 854.1667,
-      "pages": [
-       87
-      ],
-      "rows": 1
-     }
-    ],
-    "nInBand": 0,
-    "ruleCandidate": false
-   },
    "736": {
     "instances": [
      {
@@ -3922,17 +3658,6 @@
    "656",
    "657",
    "659",
-   "661",
-   "663",
-   "666",
-   "667",
-   "671",
-   "673",
-   "674",
-   "675",
-   "676",
-   "679",
-   "680",
    "736",
    "737",
    "738",
@@ -3951,9 +3676,6 @@
    "937",
    "938",
    "939",
-   "1603",
-   "1604",
-   "1605",
    "1821",
    "1825",
    "1826",
@@ -3970,6 +3692,8 @@
    "1838",
    "1839",
    "1840",
+   "1903",
+   "1905",
    "1944",
    "1945",
    "1946",
@@ -4014,9 +3738,6 @@
    "655",
    "656",
    "657",
-   "666",
-   "671",
-   "676",
    "928",
    "930",
    "934",
@@ -4025,7 +3746,7 @@
    "1831"
   ],
   "ruleCandidateNote": "baza z TOČNO eno instanco z median razmerjem v [0.8, 1.25] — kandidat za prihodnjo per-Blatt atribucijo joina (P60), MERJENO ne izvedeno [~]",
-  "verdictSi": "per-Blatt ločitev MERJENA: od 211 bazi na več straneh jih 110 sega čez ≥2 Blatta (P39: ista številka pod različnima Blattoma = druga parcela) — instance zdaj razločljive; join po številki ostaja nespremenjen (brez dokaza se NE prerazporeja)"
+  "verdictSi": "per-Blatt ločitev MERJENA: od 211 bazi na več straneh jih 98 sega čez ≥2 Blatta (P39: ista številka pod različnima Blattoma = druga parcela) — instance zdaj razločljive; join po številki ostaja nespremenjen (brez dokaza se NE prerazporeja)"
  },
  "principle": "arbitraža 2 VLM prehoda + agent-oči na 3× izrezih (metodika P57); stran atributirana na numeralo @ vrstica 1; sred-stranske numeralе = extras [~]; MERITVE brez prerazporeditev — join v2 nespremenjen (disciplina P56/P58); P62: pokritost 135/135 (133–136, 138–139, p137 pass2 dopolnjena); P63: korekcija p139 = Blatt IIb (oči 5× + 3. VLM prehod na fokusiranih izrezih kolon)",
  "runtime": {
@@ -5178,8 +4899,8 @@
    }
   },
   "perBlattAmbiguity": {
-   "basesOnMultipleBlatter": 110,
-   "basesOnMultiplePages_v2": 211,
+   "basesOnMultipleBlatter": 98,
+   "basesOnMultiplePages_v2": 199,
    "ruleCandidateBases": [
     "163",
     "176",
@@ -5189,9 +4910,6 @@
     "655",
     "656",
     "657",
-    "666",
-    "671",
-    "676",
     "928",
     "930",
     "934",
@@ -5200,9 +4918,9 @@
     "1831"
    ],
    "ruleCandidateNote": "baza z TOČNO eno instanco z median razmerjem v [0.8, 1.25] — kandidat za prihodnjo per-Blatt atribucijo joina (P60), MERJENO ne izvedeno [~]",
-   "verdictSi": "per-Blatt ločitev MERJENA: od 211 bazi na več straneh jih 110 sega čez ≥2 Blatta (P39: ista številka pod različnima Blattoma = druga parcela) — instance zdaj razločljive; join po številki ostaja nespremenjen (brez dokaza se NE prerazporeja)"
+   "verdictSi": "per-Blatt ločitev MERJENA: od 211 bazi na več straneh jih 98 sega čez ≥2 Blatta (P39: ista številka pod različnima Blattoma = druga parcela) — instance zdaj razločljive; join po številki ostaja nespremenjen (brez dokaza se NE prerazporeja)"
   },
-  "statusLine": "P59 GLAVE LISTOV: 135/135 strani sveže branih (2 prehoda; polna pokritost — P62 dopolnilo 133–136, 138–139, p137 pass2 po premagani kvoti 429), 32 arbitraža-oči, struktura Blatt I–V + IIb + lokalne sekcije (P63: p139 = IIb, Parzelle 41–60); 211 dvoumnih base → 110 čez-Blatt, 17 ruleCandidate [~]; join v2 nespremenjen",
+  "statusLine": "P59 GLAVE LISTOV: 135/135 strani sveže branih (2 prehoda; polna pokritost — P62 dopolnilo 133–136, 138–139, p137 pass2 po premagani kvoti 429), 32 arbitraža-oči, struktura Blatt I–V + IIb + lokalne sekcije (P63: p139 = IIb, Parzelle 41–60); 199 dvoumnih base (v3 P68; v2: 211) → 98 čez-Blatt, 14 ruleCandidate [~]; join v3 nespremenjen",
   "structure": {
    "blattSections": [
     {
@@ -5414,7 +5132,7 @@
   "task": "P59 (+P62 dopolnitev, +P63 korekcija p138/p139) — glave listov registra PS (Nro. des Blattes): per-Blatt atribucija strani + ločitev dvoumnih base v2, polna pokritost",
   "version": 1
  },
- "statusLine": "P59 GLAVE LISTOV: 135/135 strani sveže branih (2 prehoda; polna pokritost — P62 dopolnilo 133–136, 138–139, p137 pass2 po premagani kvoti 429), 32 arbitraža-oči, struktura Blatt I–V + IIb + lokalne sekcije (P63: p139 = IIb, Parzelle 41–60); 211 dvoumnih base → 110 čez-Blatt, 17 ruleCandidate [~]; join v2 nespremenjen",
+ "statusLine": "P59 GLAVE LISTOV: 135/135 strani sveže branih (2 prehoda; polna pokritost — P62 dopolnilo 133–136, 138–139, p137 pass2 po premagani kvoti 429), 32 arbitraža-oči, struktura Blatt I–V + IIb + lokalne sekcije (P63: p139 = IIb, Parzelle 41–60); 199 dvoumnih base (v3 P68; v2: 211) → 98 čez-Blatt, 14 ruleCandidate [~]; join v3 nespremenjen",
  "structure": {
   "blattSections": [
    {
@@ -5624,6 +5342,6 @@
   "midPageTransitions": "p93 (1901–1907 prečrtano → 1303+), p101 (III→IV @ r7), p65 (II→III @ r2 [~])"
  },
  "task": "P59 (+P62 dopolnitev, +P63 korekcija p138/p139) — glave listov registra PS (Nro. des Blattes): per-Blatt atribucija strani + ločitev dvoumnih base v2, polna pokritost",
- "verdictEn": "Leaf headers of the PS register read reliably in FULL coverage (135/135 pages x 2 passes + arbitration): Blatt I = parcels 1-800 (pages 3-42, with I-to-II correction annotations in 721-800), Blatt II starts at 801; register end (p133-137) carries explicit IV-to-V/II correction zones (red ink); p139 = Blatt IIb (P63 correction; parcels 41-60 + owner columns - the earlier 'Nro. des Hauses.' reading was an eye error); p138 = erased left table with faint remains + 'Zusammenstellung der Grundstuecke' (Wiese 1-20) on the right (P63); same number under different Blaetter confirmed as different parcels - the 211 ambiguous bases quantified per instance; join unchanged; fresh parzella ranges are low-confidence (Kurrent 4-8/7-1 confusion, documented)",
- "verdictSi": "Glave listov registra PS prvič zanesljivo prebrane v POLNI pokritosti (135/135 × 2 prehoda + arbitraža-oči): Blatt I = parcele 1–800 (strani 3–40, s prehodnimi popravki I→II na 721–800), Blatt II se začne pri 801 (43–92, p72 = III vmes); konec registra (p133–137) nosi eksplicitne korekcijske cone IV→V/II (rdeči tuš); p139 = Blatt IIb (korekcija P63; Parzelle 41–60 + lastninske kolone — prejšnja razlaga 'Nro. des Hauses.' očesna napaka); p138 = izbrisana leva tabela z bledimi ostanki + 'Zusammenstellung der Grundstücke' (Wiese 1–20) desna (P63); isto številko pod različnima Blattoma potrjeno kot druga parcela — 211 dvoumnih base v2 kvantificiranih per instanco; join ostaja nespremenjen; parzella razponi svežih branj = nizka zaupanja (Kurrent 4↔8/7→1, dokumentirano)"
+ "verdictEn": "Leaf headers of the PS register read reliably in FULL coverage (135/135 pages x 2 passes + arbitration): Blatt I = parcels 1-800 (pages 3-42, with I-to-II correction annotations in 721-800), Blatt II starts at 801; register end (p133-137) carries explicit IV-to-V/II correction zones (red ink); p139 = Blatt IIb (P63 correction; parcels 41-60 + owner columns - the earlier 'Nro. des Hauses.' reading was an eye error); p138 = erased left table with faint remains + 'Zusammenstellung der Grundstuecke' (Wiese 1-20) on the right (P63); same number under different Blaetter confirmed as different parcels - the 199 ambiguous bases in v3 (v2: 211; P68 renum) quantified per instance; join unchanged; fresh parzella ranges are low-confidence (Kurrent 4-8/7-1 confusion, documented)",
+ "verdictSi": "Glave listov registra PS prvič zanesljivo prebrane v POLNI pokritosti (135/135 × 2 prehoda + arbitraža-oči): Blatt I = parcele 1–800 (strani 3–40, s prehodnimi popravki I→II na 721–800), Blatt II se začne pri 801 (43–92, p72 = III vmes); konec registra (p133–137) nosi eksplicitne korekcijske cone IV→V/II (rdeči tuš); p139 = Blatt IIb (korekcija P63; Parzelle 41–60 + lastninske kolone — prejšnja razlaga 'Nro. des Hauses.' očesna napaka); p138 = izbrisana leva tabela z bledimi ostanki + 'Zusammenstellung der Grundstücke' (Wiese 1–20) desna (P63); isto številko pod različnima Blattoma potrjeno kot druga parcela — 199 dvoumnih base v3 (v2: 211; P68 renum) kvantificiranih per instanco; join ostaja nespremenjen; parzella razponi svežih branj = nizka zaupanja (Kurrent 4↔8/7→1, dokumentirano)"
 }

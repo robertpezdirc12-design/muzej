@@ -83,6 +83,7 @@ import {
   ATTR_FULL_P65,
   SPLIT_PACK_P66,
   ANOM_FORENSICS_P67,
+  V3_RENUMBER_P68,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -1688,8 +1689,8 @@ export function MuseumResearch() {
                 <p className="text-[11px] leading-relaxed text-foreground/80">
                   <span className="font-semibold">{t("Pošten status: ", "Honest status: ")}</span>
                   {t(
-                    "Vztrajnost oštevilčenja je dokazana na POPULACIJSKI ravni (površine + soslednost); identifikacija POSAMEZNE parcele ostaja [~] (šumne VLM površine Kurrent + delitve/renumbering po 1825) — zato zaupanje vsake vrstice razvrščeno (STRONG = oba dokaza). Omejitev: protokol je organiziran po listih z lastnim številčenjem (P39: ista številka na različnih listih = druga parcela) — join po sami številki vleče tudi čez-listske napačne povezave; per-Blatt ločitev ostaja odprta. Izbira strani: za 8 strani izbranih na pass3 uporabljen pass1 (pass3 parsed ni na voljo, številčno nezanesljivo — odmik od PS-full-v2 dokumentiran). SANACIJA IZVEDENA v P58 (v2): 43 lažnih povezav S3 odstranjenih iz produkcije (nabor bajtno enak P56 seznamu) in 26 Blatt I vrstic dodanih iz primarnega vira P57 (vseh 26 lostBases) → 1093 vrstic; površinski median čist 3.7709 (v1 3.6984 je bil umetno snizan z lažnimi povezavami z razmerji ~0.09), soslednost in S1/S2 zaupanje bajtno enaka v1. Zgodovina v1 arhivirana (v1 dokaz + v2Delta); glej kartici P56/P57. Strojno berljivo: research/issue17/ps-parcels-geo-v2.json + runtime src/data/atlas/ps-parcels-geo.json (/api/atlas/ps-parcels-geo).",
-                    "The numbering persistence is proven at the POPULATION level (areas + adjacency); the identification of an INDIVIDUAL parcel remains [~] (noisy VLM Kurrent areas + post-1825 subdivisions/renumbering) — hence the per-row confidence tier (STRONG = both proofs). Limitation: the protocol is organized by sheets with their own numberings (P39: the same number on different sheets is a different parcel) — the number-only join also draws cross-sheet false links; the per-Blatt separation remains open. Page selection: pass1 used for the 8 pass3-chosen pages (pass3 has no parsed rows and is numerically unreliable — the deviation from PS-full-v2 is documented). SANITIZATION REALIZED IN P58 (v2): 43 false S3 links removed from production (the set byte-identical to the P56 list) and 26 Blatt I rows added from the P57 primary source (all 26 lostBases) → 1093 rows; the clean area median 3.7709 (the v1 3.6984 was artificially lowered by false links with ratios ~0.09), adjacency and S1/S2 confidence byte-identical to v1. The v1 history is archived (v1 evidence + v2Delta); see the P56/P57 cards. Machine-readable: research/issue17/ps-parcels-geo-v2.json + the runtime src/data/atlas/ps-parcels-geo.json (/api/atlas/ps-parcels-geo).",
+                    "Vztrajnost oštevilčenja je dokazana na POPULACIJSKI ravni (površine + soslednost); identifikacija POSAMEZNE parcele ostaja [~] (šumne VLM površine Kurrent + delitve/renumbering po 1825) — zato zaupanje vsake vrstice razvrščeno (STRONG = oba dokaza). Omejitev: protokol je organiziran po listih z lastnim številčenjem (P39: ista številka na različnih listih = druga parcela) — join po sami številki vleče tudi čez-listske napačne povezave; per-Blatt ločitev ostaja odprta. Izbira strani: za 8 strani izbranih na pass3 uporabljen pass1 (pass3 parsed ni na voljo, številčno nezanesljivo — odmik od PS-full-v2 dokumentiran). SANACIJI IZVEDENI: P58 (v2) — 43 lažnih povezav S3 odstranjenih (nabor bajtno enak P56 seznamu) in 26 Blatt I vrstic dodanih (vseh 26 lostBases); P68 (v3, AKTUALNO) — 17 preslikav P67 forenzične specifikacije (dvojna Kurrent zamenjava p78/p93/p87) + re-join → 1079 vrstic / 798 števil; površinski median 3.8512, soslednost 590/51.8/28.3×. Zgodovina arhivirana (v1 + v2 dokaza, v2Delta/v3Delta); glej kartici P56/P57/P68. Strojno berljivo: research/issue17/ps-parcels-geo-v3.json + runtime src/data/atlas/ps-parcels-geo.json (/api/atlas/ps-parcels-geo).",
+                    "The numbering persistence is proven at the POPULATION level (areas + adjacency); the identification of an INDIVIDUAL parcel remains [~] (noisy VLM Kurrent areas + post-1825 subdivisions/renumbering) — hence the per-row confidence tier (STRONG = both proofs). Limitation: the protocol is organized by sheets with their own numberings (P39: the same number on different sheets is a different parcel) — the number-only join also draws cross-sheet false links; the per-Blatt separation remains open. Page selection: pass1 used for the 8 pass3-chosen pages (pass3 has no parsed rows and is numerically unreliable — the deviation from PS-full-v2 is documented). SANITATIONS REALIZED: P58 (v2) — 43 false S3 links removed (the set byte-identical to the P56 list) and 26 Blatt I rows added (all 26 lostBases); P68 (v3, CURRENT) — 17 mappings of the P67 forensic specification (the double Kurrent substitution p78/p93/p87) + re-join → 1079 rows / 798 numbers; area median 3.8512, adjacency 590/51.8/28.3×. History archived (v1 + v2 evidences, v2Delta/v3Delta); see the P56/P57/P68 cards. Machine-readable: research/issue17/ps-parcels-geo-v3.json + the runtime src/data/atlas/ps-parcels-geo.json (/api/atlas/ps-parcels-geo).",
                   )}
                 </p>
               </div>
@@ -2338,8 +2339,70 @@ export function MuseumResearch() {
                 <p className="text-[11px] leading-relaxed text-foreground/80">
                   <span className="font-semibold">{t("Pošten status: ", "Honest status: ")}</span>
                   {t(
-                    "P67 NE izvaja renumerifikacije — v2 join NESPREMENJEN (disciplina P56–P66); 17 preslikav je SPECIFIKACIJA za P68 (odločitev lastnika); 930 ostaja [~]; strojna forenzika ni dokazni vir. Strojno berljivo: research/issue17/ps-anomaly-forensics.json + runtime src/data/atlas/ps-anomaly-forensics.json (/api/atlas/ps-anomaly-forensics).",
-                    "P67 does NOT perform the renumbering — the v2 join UNCHANGED (P56–P66 discipline); the 17 mappings are a SPECIFICATION for P68 (owner decision); 930 remains [~]; machine forensics is not an evidentiary source. Machine-readable: research/issue17/ps-anomaly-forensics.json + the runtime src/data/atlas/ps-anomaly-forensics.json (/api/atlas/ps-anomaly-forensics).",
+                    "P67 forenzika meri NAPAKE v2 (v2 join ostaja arhivsko nespremenjen v tem dokazu); 17 preslikav je bila SPECIFIKACIJA za P68 — P68 jo je IZVEDEL (v3 runtime; odmiki aproksimacije 802/208/107 vs P68 meritve 798/199/98 dokumentirani); 930 ostaja [~]; strojna forenzika ni dokazni vir. Strojno berljivo: research/issue17/ps-anomaly-forensics.json + runtime src/data/atlas/ps-anomaly-forensics.json (/api/atlas/ps-anomaly-forensics).",
+                    "P67 forensics measures the v2 ERRORS (the v2 join stays archived-unchanged in this evidence); the 17 mappings were a SPECIFICATION for P68 — P68 has REALIZED it (the v3 runtime; the approximation deviations 802/208/107 vs the P68 measurements 798/199/98 documented); 930 remains [~]; machine forensics is not an evidentiary source. Machine-readable: research/issue17/ps-anomaly-forensics.json + the runtime src/data/atlas/ps-anomaly-forensics.json (/api/atlas/ps-anomaly-forensics).",
+                  )}
+                </p>
+              </div>
+            </div>
+
+            {/* P68 — v3 sanacija številčenja: 17 preslikav + re-join */}
+            <div className="min-w-0 rounded-xl border bg-card p-6 shadow-sm">
+              <h3 className="flex flex-wrap items-center gap-2 font-display text-lg font-semibold">
+                <ScrollText className="size-4 text-primary" aria-hidden="true" />
+                {t("Sanacija številčenja v3 — 17 preslikav + re-join (P68)", "Numbering sanitation v3 — 17 mappings + re-join (P68)")}
+                <StatusBadge status={V3_RENUMBER_P68.status} />
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                {t(
+                  "Mehanski izvod P67 forenzične specifikacije (dvojna Kurrent zamenjava p78/p93/p87) — deterministično, brez AI ob delovanju; registrska branja nespremenjena, sanacija le na join ključu.",
+                  "A mechanical derivation of the P67 forensic specification (the double Kurrent substitution p78/p93/p87) — deterministic, no AI at runtime; the register reads unchanged, the sanitation touches only the join key.",
+                )}
+              </p>
+              <div className="mt-4 grid gap-2 text-xs sm:grid-cols-2">
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("17 preslikav, 0 kolizij", "17 mappings, 0 collisions")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "p78 1603/1604/1605→1503/1504/1505 (Blatt II, Wüstung Pod Grabino; napaka 5→6); p93 →1903/1904/1905 (Blatt IV; napaka 9→6/9→0); p87 661–680→1681–1700 (+1020; izguba vodilne 1 + 8→6) — parzella ostaja originalno branje",
+                      "p78 1603/1604/1605→1503/1504/1505 (Blatt II, Wüstung Pod Grabino; error 5→6); p93 →1903/1904/1905 (Blatt IV; error 9→6/9→0); p87 661–680→1681–1700 (+1020; lost leading 1 + 8→6) — parzella keeps the original reading",
+                    )}
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("Re-join po P55 metodi", "Re-join by the P55 method")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "14 vrstic izpada (base brez PF poligona — kartni priči P67: 1503–1505 in 1681–1700 NE obstajajo); p93 3× re-claim na 1903/1904/1905 (jugozahodna lokacija; 1903/1905 delita poziciji s p98 III); nespremenjene vrstice bajtno == v2",
+                      "14 rows dropped (base without a PF polygon — the P67 map witnesses: 1503–1505 and 1681–1700 do NOT exist); p93 3× re-claim on 1903/1904/1905 (south-west location; 1903/1905 share positions with p98 III); unchanged rows byte-identical to v2",
+                    )}
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("Meritve v3", "v3 measurements")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "1079 vrstic / 798 base / 199 multi-page / 98 cross-Blatt (blattDist I·II 31 · II·III 46 · III·IV 3 · IV·V 18); površine median 3.8512 (Δ +7.08 %, kontrola 4.2771); soslednost 590/51.8/28.3×; zaupanje 171/735/147",
+                      "1079 rows / 798 bases / 199 multi-page / 98 cross-Blatt (blattDist I·II 31 · II·III 46 · III·IV 3 · IV·V 18); area median 3.8512 (Δ +7.08 %, control 4.2771); adjacency 590/51.8/28.3×; confidence 171/735/147",
+                    )}
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("Fuzije in odmiki", "Fusions and deviations")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "1903 = III×2+IV×1 (delež III 0.7081 == P67; split kandidat — LASTNIKA); 1905 = R2b profil (p93 brez areaQK); 1904 = nova base, ratio 6.8052 izven pasu (prečrtana vrstica registra); odmiki od P67 aproksimacije 802/208/107 → 798/199/98 dokumentirani [~]",
+                      "1903 = III×2+IV×1 (share III 0.7081 == P67; split candidate — OWNER); 1905 = R2b profile (p93 without areaQK); 1904 = a new base, ratio 6.8052 out of band (a crossed register row); deviations from the P67 approximation 802/208/107 → 798/199/98 documented [~]",
+                    )}
+                  </p>
+                </div>
+              </div>
+              <div className="mt-3 rounded-lg border border-emerald-200 bg-emerald-50/60 p-3 dark:border-emerald-900/50 dark:bg-emerald-950/30">
+                <p className="text-[11px] leading-relaxed text-foreground/80">
+                  <span className="font-semibold">{t("Pošten status: ", "Honest status: ")}</span>
+                  {t(
+                    "Skok II·IV IZGINE iz joina (lažni fuziji 1603/1604 razpadeta); čez-Blatt lažni pari 661/671 razpadejo (Blatt I instanci ostanejo čisti); per-Blatt instanca 1903/1905 (III vs IV) ostane fuzija v v3 [~] — SPLIT join odločitev ostaja LASTNIKA (P69); veriga re-run P59–P66 s posodobljenimi pini izvedena. Strojno berljivo: research/issue17/ps-parcels-geo-v3.json + runtime src/data/atlas/ps-parcels-geo.json (/api/atlas/ps-parcels-geo).",
+                    "The II·IV skip DISSOLVES from the join (the false 1603/1604 fusions collapse); the cross-Blatt false pairs 661/671 collapse (the Blatt I instances stay clean); the per-Blatt instance 1903/1905 (III vs IV) remains fused in v3 [~] — the SPLIT join decision remains the OWNER's (P69); the re-run chain P59–P66 with updated pins realized. Machine-readable: research/issue17/ps-parcels-geo-v3.json + the runtime src/data/atlas/ps-parcels-geo.json (/api/atlas/ps-parcels-geo).",
                   )}
                 </p>
               </div>

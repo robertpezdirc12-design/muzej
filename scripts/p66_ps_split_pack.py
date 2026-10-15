@@ -62,34 +62,34 @@ import sys
 from collections import Counter, defaultdict
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-V2 = os.path.join(ROOT, "research/issue17/ps-parcels-geo-v2.json")
+V2 = os.path.join(ROOT, "research/issue17/ps-parcels-geo-v3.json")  # P68 v3
 P59 = os.path.join(ROOT, "research/issue17/ps-blatt-headers.json")
 P65RT = os.path.join(ROOT, "src/data/atlas/ps-attribution-full.json")
 OUT_EV = os.path.join(ROOT, "research/issue17/ps-split-pack.json")
 OUT_RT = os.path.join(ROOT, "src/data/atlas/ps-split-pack.json")
 
-PIN_V2EV_SHA = "ebb8f7298de713e73bc7417f392d60c7e5eb03a6675f96317320188750e27731"
-PIN_P59EV_SHA = "95929a2e373f7e4acd8f5fe4e93db08419e18c8dfbc604c1fc87beeae65da973"
-PIN_P65RT_SHA = "74477ac800ad47b4a37805aa0b398ddc88327f8c45afc342f97a084813d0396d"
+PIN_V2EV_SHA = "af7479e428182f381d3a2537896493d7cf86210fac7027221e22ac2aea218b53"  # P68 v3 (join blok)
+PIN_P59EV_SHA = "650f13dccab1da70a60d04c41ce9f7887ca94eafea8a0a7927c104ca899b76f3"  # P68 v3 re-run
+PIN_P65RT_SHA = "e714c3550e759a59f6577e24f3aa314e42e30c951353e7f290d360a4bba16b57"  # P68 v3 re-run
 
-EXPECTED_ROWS = 1093
-EXPECTED_BASES = 800
-EXPECTED_MULTI = 211
-EXPECTED_SPLIT = 39
+EXPECTED_ROWS = 1079  # P68 v3 (v2: 1093)
+EXPECTED_BASES = 798  # P68 v3 (v2: 800)
+EXPECTED_MULTI = 199  # P68 v3 (v2: 211)
+EXPECTED_SPLIT = 36  # P68 v3 (v2: 39) — kalibrirati
 
-EXPECTED_PAIRS = {"I·II": 7, "II·III": 21, "II·IV": 2, "IV·V": 9}
-EXPECTED_ADJACENT = 37
-EXPECTED_SKIP = 2
-EXPECTED_SHARE_COUNT = {"2": 39}
-EXPECTED_ROWS_DIST = {"2": 25, "3": 13, "4": 1}
-EXPECTED_OWNERS = {"2": 25, "3": 13, "4": 1}
-EXPECTED_OWNER_REL = {"disjoint": 39}
-EXPECTED_BUCKETS = {"0.50–0.60": 23, "0.60–0.70": 11, "0.70–0.75": 5}
-EXPECTED_KULTURES = 92
-EXPECTED_GEO = {"shared": 39, "distinct": 0, "null": 0}
+EXPECTED_PAIRS = {"I·II": 5, "II·III": 21, "III·IV": 1, "IV·V": 9}  # P68 v3 (v2: I·II 7/II·III 21/II·IV 2/IV·V 9) — II·IV IZGINE
+EXPECTED_ADJACENT = 36  # P68 v3 (v2: 37)
+EXPECTED_SKIP = 0  # P68 v3 (v2: 2) — skok II·IV razpadel
+EXPECTED_SHARE_COUNT = {"2": 36}  # P68 v3 (v2: 39)
+EXPECTED_ROWS_DIST = {"2": 21, "3": 14, "4": 1}  # P68 v3 (v2: 25/13/1)
+EXPECTED_OWNERS = {"2": 21, "3": 14, "4": 1}  # P68 v3 (v2: 25/13/1)
+EXPECTED_OWNER_REL = {"disjoint": 36}  # P68 v3 (v2: 39)
+EXPECTED_BUCKETS = {"0.50–0.60": 20, "0.60–0.70": 11, "0.70–0.75": 5}  # P68 v3 (v2: 23/11/5)
+EXPECTED_KULTURES = 86  # P68 v3 (v2: 92)
+EXPECTED_GEO = {"shared": 36, "distinct": 0, "null": 0}  # P68 v3 (v2: 39)
 EXPECTED_AREA_SUSPECT = 0
-EXPECTED_SOS = {"ok": 82, "flag": 11}
-EXPECTED_SOS_FLAG_BASES = ["1821", "2141", "2143", "646", "661"]
+EXPECTED_SOS = {"ok": 79, "flag": 11}  # P68 v3 (v2: 82/11)
+EXPECTED_SOS_FLAG_BASES = ["1821", "1903", "2141", "2143", "646"]  # P68 v3 (661 razpadla; 1903 nov — IV instanca @p93 brez soseda po renum)
 
 P65_KEYS = ("status", "attributedBlatt", "blattShares", "rowsTotal", "pages",
             "kultures", "owners", "sosledje")

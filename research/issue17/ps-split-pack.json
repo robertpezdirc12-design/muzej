@@ -1,215 +1,5 @@
 {
  "bases": {
-  "1603": {
-   "attributedBlatt": null,
-   "blattPair": "II·IV",
-   "blattShares": [
-    {
-     "areaQK": 1005.0,
-     "blatt": "IV",
-     "pages": [
-      93
-     ],
-     "rows": 1,
-     "share": 0.5643
-    },
-    {
-     "areaQK": 776.0,
-     "blatt": "II",
-     "pages": [
-      78
-     ],
-     "rows": 1,
-     "share": 0.4357
-    }
-   ],
-   "dominantShare": 0.5643,
-   "geoShared": true,
-   "kultures": [
-    "Acker",
-    "Weide und Gfällgut, Laubm."
-   ],
-   "kulturesByBlatt": {
-    "II": [
-     "Acker"
-    ],
-    "IV": [
-     "Weide und Gfällgut, Laubm."
-    ]
-   },
-   "ownerRelation": "disjoint",
-   "owners": [
-    "Pachler Martin",
-    "Verboten (er) Bueb?"
-   ],
-   "ownersByBlatt": {
-    "II": [
-     "Pachler Martin"
-    ],
-    "IV": [
-     "Verboten (er) Bueb?"
-    ]
-   },
-   "pages": [
-    78,
-    93
-   ],
-   "rows": [
-    {
-     "ambiguous": true,
-     "areaQK": 776.0,
-     "areaSuspect": false,
-     "base": "1603",
-     "blatt": "II",
-     "conf": "MEDIUM",
-     "hausNr": "30",
-     "joch": null,
-     "klafter": 776.0,
-     "kultur": "Acker",
-     "owner": "Pachler Martin",
-     "page": 78,
-     "parts": 1,
-     "parzella": "1603",
-     "series": "S1",
-     "stand": null,
-     "wohnort": "Grübln",
-     "wohnortInherited": true
-    },
-    {
-     "ambiguous": true,
-     "areaQK": 1005.0,
-     "areaSuspect": false,
-     "base": "1603",
-     "blatt": "IV",
-     "conf": "MEDIUM",
-     "hausNr": "64",
-     "joch": null,
-     "klafter": 1005.0,
-     "kultur": "Weide und Gfällgut, Laubm.",
-     "owner": "Verboten (er) Bueb?",
-     "page": 93,
-     "parts": 1,
-     "parzella": "1603",
-     "series": "S1",
-     "stand": "Bauer",
-     "wohnort": "Grüble",
-     "wohnortInherited": false
-    }
-   ],
-   "rowsTotal": 2,
-   "shareDelta": 0.1286,
-   "sosledje": {
-    "flag": 0,
-    "flaggedRows": [],
-    "ok": 2
-   },
-   "status": "split"
-  },
-  "1604": {
-   "attributedBlatt": null,
-   "blattPair": "II·IV",
-   "blattShares": [
-    {
-     "areaQK": 774.0,
-     "blatt": "II",
-     "pages": [
-      78
-     ],
-     "rows": 1,
-     "share": 0.5167
-    },
-    {
-     "areaQK": 724.0,
-     "blatt": "IV",
-     "pages": [
-      93
-     ],
-     "rows": 1,
-     "share": 0.4833
-    }
-   ],
-   "dominantShare": 0.5167,
-   "geoShared": true,
-   "kultures": [
-    "Acker",
-    "Weide und Gfällgut, Laubm."
-   ],
-   "kulturesByBlatt": {
-    "II": [
-     "Acker"
-    ],
-    "IV": [
-     "Weide und Gfällgut, Laubm."
-    ]
-   },
-   "ownerRelation": "disjoint",
-   "owners": [
-    "Piringer Mathäus",
-    "Ullrich Otto"
-   ],
-   "ownersByBlatt": {
-    "II": [
-     "Ullrich Otto"
-    ],
-    "IV": [
-     "Piringer Mathäus"
-    ]
-   },
-   "pages": [
-    78,
-    93
-   ],
-   "rows": [
-    {
-     "ambiguous": true,
-     "areaQK": 774.0,
-     "areaSuspect": false,
-     "base": "1604",
-     "blatt": "II",
-     "conf": "MEDIUM",
-     "hausNr": "31",
-     "joch": null,
-     "klafter": 774.0,
-     "kultur": "Acker",
-     "owner": "Ullrich Otto",
-     "page": 78,
-     "parts": 3,
-     "parzella": "1604",
-     "series": "S1",
-     "stand": null,
-     "wohnort": "Grübln",
-     "wohnortInherited": true
-    },
-    {
-     "ambiguous": true,
-     "areaQK": 724.0,
-     "areaSuspect": false,
-     "base": "1604",
-     "blatt": "IV",
-     "conf": "MEDIUM",
-     "hausNr": "63",
-     "joch": null,
-     "klafter": 724.0,
-     "kultur": "Weide und Gfällgut, Laubm.",
-     "owner": "Piringer Mathäus",
-     "page": 93,
-     "parts": 3,
-     "parzella": "1604",
-     "series": "S1",
-     "stand": "Bauer",
-     "wohnort": "Grüble",
-     "wohnortInherited": false
-    }
-   ],
-   "rowsTotal": 2,
-   "shareDelta": 0.0334,
-   "sosledje": {
-    "flag": 0,
-    "flaggedRows": [],
-    "ok": 2
-   },
-   "status": "split"
-  },
   "1821": {
    "attributedBlatt": null,
    "blattPair": "II·III",
@@ -1258,6 +1048,136 @@
    "sosledje": {
     "flag": 0,
     "flaggedRows": [],
+    "ok": 3
+   },
+   "status": "split"
+  },
+  "1903": {
+   "attributedBlatt": null,
+   "blattPair": "III·IV",
+   "blattShares": [
+    {
+     "areaQK": 2438.0,
+     "blatt": "III",
+     "pages": [
+      98
+     ],
+     "rows": 2,
+     "share": 0.7081
+    },
+    {
+     "areaQK": 1005.0,
+     "blatt": "IV",
+     "pages": [
+      93
+     ],
+     "rows": 1,
+     "share": 0.2919
+    }
+   ],
+   "dominantShare": 0.7081,
+   "geoShared": true,
+   "kultures": [
+    "Acker und Wiese",
+    "Weide und Gfällgut, Laubm."
+   ],
+   "kulturesByBlatt": {
+    "III": [
+     "Acker und Wiese"
+    ],
+    "IV": [
+     "Weide und Gfällgut, Laubm."
+    ]
+   },
+   "ownerRelation": "disjoint",
+   "owners": [
+    "Deutlich Marfa",
+    "Milleger Johann",
+    "Verboten (er) Bueb?"
+   ],
+   "ownersByBlatt": {
+    "III": [
+     "Deutlich Marfa",
+     "Milleger Johann"
+    ],
+    "IV": [
+     "Verboten (er) Bueb?"
+    ]
+   },
+   "pages": [
+    93,
+    98
+   ],
+   "rows": [
+    {
+     "ambiguous": true,
+     "areaQK": 1005.0,
+     "areaSuspect": false,
+     "base": "1903",
+     "blatt": "IV",
+     "conf": "MEDIUM",
+     "hausNr": "64",
+     "joch": null,
+     "klafter": 1005.0,
+     "kultur": "Weide und Gfällgut, Laubm.",
+     "owner": "Verboten (er) Bueb?",
+     "page": 93,
+     "parts": 1,
+     "parzella": "1603",
+     "series": "S1",
+     "stand": "Bauer",
+     "wohnort": "Grüble",
+     "wohnortInherited": false
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 1536.0,
+     "areaSuspect": false,
+     "base": "1903",
+     "blatt": "III",
+     "conf": "MEDIUM",
+     "hausNr": "1 22",
+     "joch": null,
+     "klafter": 1536.0,
+     "kultur": "Acker und Wiese",
+     "owner": "Milleger Johann",
+     "page": 98,
+     "parts": 1,
+     "parzella": "1903",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Gribla",
+     "wohnortInherited": true
+    },
+    {
+     "ambiguous": true,
+     "areaQK": 902.0,
+     "areaSuspect": false,
+     "base": "1903",
+     "blatt": "III",
+     "conf": "MEDIUM",
+     "hausNr": "1 33",
+     "joch": null,
+     "klafter": 902.0,
+     "kultur": "Acker und Wiese",
+     "owner": "Deutlich Marfa",
+     "page": 98,
+     "parts": 1,
+     "parzella": "1903",
+     "series": "S1",
+     "stand": null,
+     "wohnort": "Gribla",
+     "wohnortInherited": true
+    }
+   ],
+   "rowsTotal": 3,
+   "shareDelta": 0.4162,
+   "sosledje": {
+    "flag": 2,
+    "flaggedRows": [
+     "1903@p98",
+     "1903@p98"
+    ],
     "ok": 3
    },
    "status": "split"
@@ -3552,219 +3472,6 @@
    },
    "status": "split"
   },
-  "661": {
-   "attributedBlatt": null,
-   "blattPair": "I·II",
-   "blattShares": [
-    {
-     "areaQK": 699.0,
-     "blatt": "II",
-     "pages": [
-      87
-     ],
-     "rows": 1,
-     "share": 0.5147
-    },
-    {
-     "areaQK": 659.0,
-     "blatt": "I",
-     "pages": [
-      36
-     ],
-     "rows": 1,
-     "share": 0.4853
-    }
-   ],
-   "dominantShare": 0.5147,
-   "geoShared": true,
-   "kultures": [
-    "Acker",
-    "Lhup"
-   ],
-   "kulturesByBlatt": {
-    "I": [
-     "Lhup"
-    ],
-    "II": [
-     "Acker"
-    ]
-   },
-   "ownerRelation": "disjoint",
-   "owners": [
-    "Mülley Daniel",
-    "Staudt Hans"
-   ],
-   "ownersByBlatt": {
-    "I": [
-     "Mülley Daniel"
-    ],
-    "II": [
-     "Staudt Hans"
-    ]
-   },
-   "pages": [
-    36,
-    87
-   ],
-   "rows": [
-    {
-     "ambiguous": true,
-     "areaQK": 659.0,
-     "areaSuspect": false,
-     "base": "661",
-     "blatt": "I",
-     "conf": "WEAK",
-     "hausNr": "29",
-     "joch": null,
-     "klafter": 659.0,
-     "kultur": "Lhup",
-     "owner": "Mülley Daniel",
-     "page": 36,
-     "parts": 1,
-     "parzella": "661",
-     "series": "S1",
-     "stand": "Land",
-     "wohnort": "Grüble",
-     "wohnortInherited": false
-    },
-    {
-     "ambiguous": true,
-     "areaQK": 699.0,
-     "areaSuspect": false,
-     "base": "661",
-     "blatt": "II",
-     "conf": "WEAK",
-     "hausNr": "1/2",
-     "joch": null,
-     "klafter": 699.0,
-     "kultur": "Acker",
-     "owner": "Staudt Hans",
-     "page": 87,
-     "parts": 1,
-     "parzella": "661",
-     "series": "S1",
-     "stand": "Bauer",
-     "wohnort": "Grüble",
-     "wohnortInherited": false
-    }
-   ],
-   "rowsTotal": 2,
-   "shareDelta": 0.0294,
-   "sosledje": {
-    "flag": 2,
-    "flaggedRows": [
-     "661@p36",
-     "661@p87"
-    ],
-    "ok": 0
-   },
-   "status": "split"
-  },
-  "674": {
-   "attributedBlatt": null,
-   "blattPair": "I·II",
-   "blattShares": [
-    {
-     "areaQK": 548.0,
-     "blatt": "II",
-     "pages": [
-      87
-     ],
-     "rows": 1,
-     "share": 0.7436
-    },
-    {
-     "areaQK": 189.0,
-     "blatt": "I",
-     "pages": [
-      36
-     ],
-     "rows": 1,
-     "share": 0.2564
-    }
-   ],
-   "dominantShare": 0.7436,
-   "geoShared": true,
-   "kultures": [
-    "Acker",
-    "Eidn"
-   ],
-   "kulturesByBlatt": {
-    "I": [
-     "Eidn"
-    ],
-    "II": [
-     "Acker"
-    ]
-   },
-   "ownerRelation": "disjoint",
-   "owners": [
-    "Dultsitsch Hans",
-    "Würing Johann"
-   ],
-   "ownersByBlatt": {
-    "I": [
-     "Würing Johann"
-    ],
-    "II": [
-     "Dultsitsch Hans"
-    ]
-   },
-   "pages": [
-    36,
-    87
-   ],
-   "rows": [
-    {
-     "ambiguous": true,
-     "areaQK": 189.0,
-     "areaSuspect": false,
-     "base": "674",
-     "blatt": "I",
-     "conf": "MEDIUM",
-     "hausNr": "26",
-     "joch": null,
-     "klafter": 189.0,
-     "kultur": "Eidn",
-     "owner": "Würing Johann",
-     "page": 36,
-     "parts": 1,
-     "parzella": "674",
-     "series": "S1",
-     "stand": null,
-     "wohnort": "Grüble",
-     "wohnortInherited": true
-    },
-    {
-     "ambiguous": true,
-     "areaQK": 548.0,
-     "areaSuspect": false,
-     "base": "674",
-     "blatt": "II",
-     "conf": "MEDIUM",
-     "hausNr": "1/6",
-     "joch": null,
-     "klafter": 548.0,
-     "kultur": "Acker",
-     "owner": "Dultsitsch Hans",
-     "page": 87,
-     "parts": 1,
-     "parzella": "674",
-     "series": "S1",
-     "stand": null,
-     "wohnort": "Grüble",
-     "wohnortInherited": true
-    }
-   ],
-   "rowsTotal": 2,
-   "shareDelta": 0.4872,
-   "sosledje": {
-    "flag": 0,
-    "flaggedRows": [],
-    "ok": 2
-   },
-   "status": "split"
-  },
   "922": {
    "attributedBlatt": null,
    "blattPair": "II·III",
@@ -4503,8 +4210,8 @@
  },
  "date": "2026-10-14",
  "inputSha256": {
-  "p59": "95929a2e373f7e4acd8f5fe4e93db08419e18c8dfbc604c1fc87beeae65da973",
-  "p65rt": "74477ac800ad47b4a37805aa0b398ddc88327f8c45afc342f97a084813d0396d"
+  "p59": "650f13dccab1da70a60d04c41ce9f7887ca94eafea8a0a7927c104ca899b76f3",
+  "p65rt": "e714c3550e759a59f6577e24f3aa314e42e30c951353e7f290d360a4bba16b57"
  },
  "inputs": {
   "p59": "research/issue17/ps-blatt-headers.json (pageAttribution)",
@@ -4538,216 +4245,6 @@
  },
  "runtime": {
   "bases": {
-   "1603": {
-    "attributedBlatt": null,
-    "blattPair": "II·IV",
-    "blattShares": [
-     {
-      "areaQK": 1005.0,
-      "blatt": "IV",
-      "pages": [
-       93
-      ],
-      "rows": 1,
-      "share": 0.5643
-     },
-     {
-      "areaQK": 776.0,
-      "blatt": "II",
-      "pages": [
-       78
-      ],
-      "rows": 1,
-      "share": 0.4357
-     }
-    ],
-    "dominantShare": 0.5643,
-    "geoShared": true,
-    "kultures": [
-     "Acker",
-     "Weide und Gfällgut, Laubm."
-    ],
-    "kulturesByBlatt": {
-     "II": [
-      "Acker"
-     ],
-     "IV": [
-      "Weide und Gfällgut, Laubm."
-     ]
-    },
-    "ownerRelation": "disjoint",
-    "owners": [
-     "Pachler Martin",
-     "Verboten (er) Bueb?"
-    ],
-    "ownersByBlatt": {
-     "II": [
-      "Pachler Martin"
-     ],
-     "IV": [
-      "Verboten (er) Bueb?"
-     ]
-    },
-    "pages": [
-     78,
-     93
-    ],
-    "rows": [
-     {
-      "ambiguous": true,
-      "areaQK": 776.0,
-      "areaSuspect": false,
-      "base": "1603",
-      "blatt": "II",
-      "conf": "MEDIUM",
-      "hausNr": "30",
-      "joch": null,
-      "klafter": 776.0,
-      "kultur": "Acker",
-      "owner": "Pachler Martin",
-      "page": 78,
-      "parts": 1,
-      "parzella": "1603",
-      "series": "S1",
-      "stand": null,
-      "wohnort": "Grübln",
-      "wohnortInherited": true
-     },
-     {
-      "ambiguous": true,
-      "areaQK": 1005.0,
-      "areaSuspect": false,
-      "base": "1603",
-      "blatt": "IV",
-      "conf": "MEDIUM",
-      "hausNr": "64",
-      "joch": null,
-      "klafter": 1005.0,
-      "kultur": "Weide und Gfällgut, Laubm.",
-      "owner": "Verboten (er) Bueb?",
-      "page": 93,
-      "parts": 1,
-      "parzella": "1603",
-      "series": "S1",
-      "stand": "Bauer",
-      "wohnort": "Grüble",
-      "wohnortInherited": false
-     }
-    ],
-    "rowsTotal": 2,
-    "shareDelta": 0.1286,
-    "sosledje": {
-     "flag": 0,
-     "flaggedRows": [],
-     "ok": 2
-    },
-    "status": "split"
-   },
-   "1604": {
-    "attributedBlatt": null,
-    "blattPair": "II·IV",
-    "blattShares": [
-     {
-      "areaQK": 774.0,
-      "blatt": "II",
-      "pages": [
-       78
-      ],
-      "rows": 1,
-      "share": 0.5167
-     },
-     {
-      "areaQK": 724.0,
-      "blatt": "IV",
-      "pages": [
-       93
-      ],
-      "rows": 1,
-      "share": 0.4833
-     }
-    ],
-    "dominantShare": 0.5167,
-    "geoShared": true,
-    "kultures": [
-     "Acker",
-     "Weide und Gfällgut, Laubm."
-    ],
-    "kulturesByBlatt": {
-     "II": [
-      "Acker"
-     ],
-     "IV": [
-      "Weide und Gfällgut, Laubm."
-     ]
-    },
-    "ownerRelation": "disjoint",
-    "owners": [
-     "Piringer Mathäus",
-     "Ullrich Otto"
-    ],
-    "ownersByBlatt": {
-     "II": [
-      "Ullrich Otto"
-     ],
-     "IV": [
-      "Piringer Mathäus"
-     ]
-    },
-    "pages": [
-     78,
-     93
-    ],
-    "rows": [
-     {
-      "ambiguous": true,
-      "areaQK": 774.0,
-      "areaSuspect": false,
-      "base": "1604",
-      "blatt": "II",
-      "conf": "MEDIUM",
-      "hausNr": "31",
-      "joch": null,
-      "klafter": 774.0,
-      "kultur": "Acker",
-      "owner": "Ullrich Otto",
-      "page": 78,
-      "parts": 3,
-      "parzella": "1604",
-      "series": "S1",
-      "stand": null,
-      "wohnort": "Grübln",
-      "wohnortInherited": true
-     },
-     {
-      "ambiguous": true,
-      "areaQK": 724.0,
-      "areaSuspect": false,
-      "base": "1604",
-      "blatt": "IV",
-      "conf": "MEDIUM",
-      "hausNr": "63",
-      "joch": null,
-      "klafter": 724.0,
-      "kultur": "Weide und Gfällgut, Laubm.",
-      "owner": "Piringer Mathäus",
-      "page": 93,
-      "parts": 3,
-      "parzella": "1604",
-      "series": "S1",
-      "stand": "Bauer",
-      "wohnort": "Grüble",
-      "wohnortInherited": false
-     }
-    ],
-    "rowsTotal": 2,
-    "shareDelta": 0.0334,
-    "sosledje": {
-     "flag": 0,
-     "flaggedRows": [],
-     "ok": 2
-    },
-    "status": "split"
-   },
    "1821": {
     "attributedBlatt": null,
     "blattPair": "II·III",
@@ -5796,6 +5293,136 @@
     "sosledje": {
      "flag": 0,
      "flaggedRows": [],
+     "ok": 3
+    },
+    "status": "split"
+   },
+   "1903": {
+    "attributedBlatt": null,
+    "blattPair": "III·IV",
+    "blattShares": [
+     {
+      "areaQK": 2438.0,
+      "blatt": "III",
+      "pages": [
+       98
+      ],
+      "rows": 2,
+      "share": 0.7081
+     },
+     {
+      "areaQK": 1005.0,
+      "blatt": "IV",
+      "pages": [
+       93
+      ],
+      "rows": 1,
+      "share": 0.2919
+     }
+    ],
+    "dominantShare": 0.7081,
+    "geoShared": true,
+    "kultures": [
+     "Acker und Wiese",
+     "Weide und Gfällgut, Laubm."
+    ],
+    "kulturesByBlatt": {
+     "III": [
+      "Acker und Wiese"
+     ],
+     "IV": [
+      "Weide und Gfällgut, Laubm."
+     ]
+    },
+    "ownerRelation": "disjoint",
+    "owners": [
+     "Deutlich Marfa",
+     "Milleger Johann",
+     "Verboten (er) Bueb?"
+    ],
+    "ownersByBlatt": {
+     "III": [
+      "Deutlich Marfa",
+      "Milleger Johann"
+     ],
+     "IV": [
+      "Verboten (er) Bueb?"
+     ]
+    },
+    "pages": [
+     93,
+     98
+    ],
+    "rows": [
+     {
+      "ambiguous": true,
+      "areaQK": 1005.0,
+      "areaSuspect": false,
+      "base": "1903",
+      "blatt": "IV",
+      "conf": "MEDIUM",
+      "hausNr": "64",
+      "joch": null,
+      "klafter": 1005.0,
+      "kultur": "Weide und Gfällgut, Laubm.",
+      "owner": "Verboten (er) Bueb?",
+      "page": 93,
+      "parts": 1,
+      "parzella": "1603",
+      "series": "S1",
+      "stand": "Bauer",
+      "wohnort": "Grüble",
+      "wohnortInherited": false
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 1536.0,
+      "areaSuspect": false,
+      "base": "1903",
+      "blatt": "III",
+      "conf": "MEDIUM",
+      "hausNr": "1 22",
+      "joch": null,
+      "klafter": 1536.0,
+      "kultur": "Acker und Wiese",
+      "owner": "Milleger Johann",
+      "page": 98,
+      "parts": 1,
+      "parzella": "1903",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Gribla",
+      "wohnortInherited": true
+     },
+     {
+      "ambiguous": true,
+      "areaQK": 902.0,
+      "areaSuspect": false,
+      "base": "1903",
+      "blatt": "III",
+      "conf": "MEDIUM",
+      "hausNr": "1 33",
+      "joch": null,
+      "klafter": 902.0,
+      "kultur": "Acker und Wiese",
+      "owner": "Deutlich Marfa",
+      "page": 98,
+      "parts": 1,
+      "parzella": "1903",
+      "series": "S1",
+      "stand": null,
+      "wohnort": "Gribla",
+      "wohnortInherited": true
+     }
+    ],
+    "rowsTotal": 3,
+    "shareDelta": 0.4162,
+    "sosledje": {
+     "flag": 2,
+     "flaggedRows": [
+      "1903@p98",
+      "1903@p98"
+     ],
      "ok": 3
     },
     "status": "split"
@@ -8090,219 +7717,6 @@
     },
     "status": "split"
    },
-   "661": {
-    "attributedBlatt": null,
-    "blattPair": "I·II",
-    "blattShares": [
-     {
-      "areaQK": 699.0,
-      "blatt": "II",
-      "pages": [
-       87
-      ],
-      "rows": 1,
-      "share": 0.5147
-     },
-     {
-      "areaQK": 659.0,
-      "blatt": "I",
-      "pages": [
-       36
-      ],
-      "rows": 1,
-      "share": 0.4853
-     }
-    ],
-    "dominantShare": 0.5147,
-    "geoShared": true,
-    "kultures": [
-     "Acker",
-     "Lhup"
-    ],
-    "kulturesByBlatt": {
-     "I": [
-      "Lhup"
-     ],
-     "II": [
-      "Acker"
-     ]
-    },
-    "ownerRelation": "disjoint",
-    "owners": [
-     "Mülley Daniel",
-     "Staudt Hans"
-    ],
-    "ownersByBlatt": {
-     "I": [
-      "Mülley Daniel"
-     ],
-     "II": [
-      "Staudt Hans"
-     ]
-    },
-    "pages": [
-     36,
-     87
-    ],
-    "rows": [
-     {
-      "ambiguous": true,
-      "areaQK": 659.0,
-      "areaSuspect": false,
-      "base": "661",
-      "blatt": "I",
-      "conf": "WEAK",
-      "hausNr": "29",
-      "joch": null,
-      "klafter": 659.0,
-      "kultur": "Lhup",
-      "owner": "Mülley Daniel",
-      "page": 36,
-      "parts": 1,
-      "parzella": "661",
-      "series": "S1",
-      "stand": "Land",
-      "wohnort": "Grüble",
-      "wohnortInherited": false
-     },
-     {
-      "ambiguous": true,
-      "areaQK": 699.0,
-      "areaSuspect": false,
-      "base": "661",
-      "blatt": "II",
-      "conf": "WEAK",
-      "hausNr": "1/2",
-      "joch": null,
-      "klafter": 699.0,
-      "kultur": "Acker",
-      "owner": "Staudt Hans",
-      "page": 87,
-      "parts": 1,
-      "parzella": "661",
-      "series": "S1",
-      "stand": "Bauer",
-      "wohnort": "Grüble",
-      "wohnortInherited": false
-     }
-    ],
-    "rowsTotal": 2,
-    "shareDelta": 0.0294,
-    "sosledje": {
-     "flag": 2,
-     "flaggedRows": [
-      "661@p36",
-      "661@p87"
-     ],
-     "ok": 0
-    },
-    "status": "split"
-   },
-   "674": {
-    "attributedBlatt": null,
-    "blattPair": "I·II",
-    "blattShares": [
-     {
-      "areaQK": 548.0,
-      "blatt": "II",
-      "pages": [
-       87
-      ],
-      "rows": 1,
-      "share": 0.7436
-     },
-     {
-      "areaQK": 189.0,
-      "blatt": "I",
-      "pages": [
-       36
-      ],
-      "rows": 1,
-      "share": 0.2564
-     }
-    ],
-    "dominantShare": 0.7436,
-    "geoShared": true,
-    "kultures": [
-     "Acker",
-     "Eidn"
-    ],
-    "kulturesByBlatt": {
-     "I": [
-      "Eidn"
-     ],
-     "II": [
-      "Acker"
-     ]
-    },
-    "ownerRelation": "disjoint",
-    "owners": [
-     "Dultsitsch Hans",
-     "Würing Johann"
-    ],
-    "ownersByBlatt": {
-     "I": [
-      "Würing Johann"
-     ],
-     "II": [
-      "Dultsitsch Hans"
-     ]
-    },
-    "pages": [
-     36,
-     87
-    ],
-    "rows": [
-     {
-      "ambiguous": true,
-      "areaQK": 189.0,
-      "areaSuspect": false,
-      "base": "674",
-      "blatt": "I",
-      "conf": "MEDIUM",
-      "hausNr": "26",
-      "joch": null,
-      "klafter": 189.0,
-      "kultur": "Eidn",
-      "owner": "Würing Johann",
-      "page": 36,
-      "parts": 1,
-      "parzella": "674",
-      "series": "S1",
-      "stand": null,
-      "wohnort": "Grüble",
-      "wohnortInherited": true
-     },
-     {
-      "ambiguous": true,
-      "areaQK": 548.0,
-      "areaSuspect": false,
-      "base": "674",
-      "blatt": "II",
-      "conf": "MEDIUM",
-      "hausNr": "1/6",
-      "joch": null,
-      "klafter": 548.0,
-      "kultur": "Acker",
-      "owner": "Dultsitsch Hans",
-      "page": 87,
-      "parts": 1,
-      "parzella": "674",
-      "series": "S1",
-      "stand": null,
-      "wohnort": "Grüble",
-      "wohnortInherited": true
-     }
-    ],
-    "rowsTotal": 2,
-    "shareDelta": 0.4872,
-    "sosledje": {
-     "flag": 0,
-     "flaggedRows": [],
-     "ok": 2
-    },
-    "status": "split"
-   },
    "922": {
     "attributedBlatt": null,
     "blattPair": "II·III",
@@ -9055,56 +8469,56 @@
    "ownerRelation": "disjunktnost množic lastnikov per Blatt: 'disjoint' | 'equal' | 'overlap' | 'open' (prazna množica)",
    "source": "split base = P65 status 'split' (dominantni delež v [0.5, 0.75), attributedBlatt null, blattShares alternative) — P66 ne spreminja pravil"
   },
-  "statusLine": "P66 SPLIT PACK: 39 split base (39 ⊂ 211 multi-page), 93 vrstic; pari I·II 7 · II·III 21 · II·IV 2 · IV·V 9 (sosednji 37, skok 2); lastniki per Blatt DISJUNKTNI 39/39; pasovi 23/11/5; geo ena geometrija 39/39; join v2 nespremanjen; odločitev lastnika",
+  "statusLine": "P66 SPLIT PACK: 36 split base (39 ⊂ 211 multi-page), 88 vrstic; pari I·II 5 · II·III 21 · II·IV 0 · IV·V 9 (sosednji 36, skok 0); lastniki per Blatt DISJUNKTNI 36/39; pasovi 23/11/5; geo ena geometrija 36/39; join v2 nespremanjen; odločitev lastnika",
   "summary": {
-   "adjacentPairs": 37,
+   "adjacentPairs": 36,
    "areaSuspectRows": 0,
    "blattPairDist": {
+    "III·IV": 1,
     "II·III": 21,
-    "II·IV": 2,
     "IV·V": 9,
-    "I·II": 7
+    "I·II": 5
    },
    "dominantShareBuckets": {
-    "0.50–0.60": 23,
+    "0.50–0.60": 20,
     "0.60–0.70": 11,
     "0.70–0.75": 5
    },
    "geoShared": {
     "distinct": 0,
     "null": 0,
-    "shared": 39
+    "shared": 36
    },
-   "kulturesTotal": 92,
+   "kulturesTotal": 86,
    "ownerRelationDist": {
-    "disjoint": 39
+    "disjoint": 36
    },
    "rowsPerBaseDist": {
-    "2": 25,
-    "3": 13,
+    "2": 21,
+    "3": 14,
     "4": 1
    },
-   "rowsTotal": 93,
+   "rowsTotal": 88,
    "shareCountDist": {
-    "2": 39
+    "2": 36
    },
-   "skipPairs": 2,
+   "skipPairs": 0,
    "sosledje": {
     "flag": 11,
     "flagBases": [
      "1821",
+     "1903",
      "2141",
      "2143",
-     "646",
-     "661"
+     "646"
     ],
-    "ok": 82,
-    "relevantRows": 93
+    "ok": 79,
+    "relevantRows": 90
    },
-   "splitBases": 39,
+   "splitBases": 36,
    "uniqueOwnersDist": {
-    "2": 25,
-    "3": 13,
+    "2": 21,
+    "3": 14,
     "4": 1
    }
   },
@@ -9113,61 +8527,61 @@
   "verdictSi": "P66: SPLIT DECISION PACK — 39 SPLIT BASE (issue #13) — odločitveni paket za per-Blatt SPLIT joina (odprta točka P64 #8, kandidat #1 iz P65; deterministično, brez AI ob delovanju; NE odloča namesto lastnika — MERI in DOKAZUJE dejstva): vseh 39 base ima TOČNO 2 deleža (blattShares), 93 vrstic (25 × 2 + 13 × 3 + 1 × 4); Blatt pari I·II 7 · II·III 21 · II·IV 2 · IV·V 9 (37/39 sosednja Blatta, 2 skoka II·IV — 1603/1604, isti kulturi na obeh Blattih); LASTNIŠKA RAZČLENITEV PER BLATT: 39/39 DISJUNKTNI lastniki — vsak split base ima različne lastnike po Blattih (močan dokaz, da je ista številka pod različnima Blattoma 2 RAZLIČNI realni parceli); 2–3 edinstvenih lastnikov (25/13/1); dominantni deleži [0.50,0.60) 23 · [0.60,0.70) 11 · [0.70,0.75) 5; kulture 92 (kulturesByBlatt); GEO: 39/39 base nosi VSEH vrstic ENAKO geometrijo joina v2 (0 različnih) — join v2 je na nivoju številke, zato SPLIT join bi zahteval 2 geometriji (števec merjen brez koordinat — I6); areaSuspect 0; sosledje split del 82/93 (flag 11 — 5 base: 646, 661, 1821, 2141, 2143); P65 polja 39× bajtno (I3); join v2 NESPREMENJEN (disciplina P56/P58/P59/P65); odločitev LASTNIKA",
   "version": 1
  },
- "statusLine": "P66 SPLIT PACK: 39 split base (39 ⊂ 211 multi-page), 93 vrstic; pari I·II 7 · II·III 21 · II·IV 2 · IV·V 9 (sosednji 37, skok 2); lastniki per Blatt DISJUNKTNI 39/39; pasovi 23/11/5; geo ena geometrija 39/39; join v2 nespremanjen; odločitev lastnika",
+ "statusLine": "P66 SPLIT PACK: 36 split base (39 ⊂ 211 multi-page), 88 vrstic; pari I·II 5 · II·III 21 · II·IV 0 · IV·V 9 (sosednji 36, skok 0); lastniki per Blatt DISJUNKTNI 36/39; pasovi 23/11/5; geo ena geometrija 36/39; join v2 nespremanjen; odločitev lastnika",
  "summary": {
-  "adjacentPairs": 37,
+  "adjacentPairs": 36,
   "areaSuspectRows": 0,
   "blattPairDist": {
+   "III·IV": 1,
    "II·III": 21,
-   "II·IV": 2,
    "IV·V": 9,
-   "I·II": 7
+   "I·II": 5
   },
   "dominantShareBuckets": {
-   "0.50–0.60": 23,
+   "0.50–0.60": 20,
    "0.60–0.70": 11,
    "0.70–0.75": 5
   },
   "geoShared": {
    "distinct": 0,
    "null": 0,
-   "shared": 39
+   "shared": 36
   },
-  "kulturesTotal": 92,
+  "kulturesTotal": 86,
   "ownerRelationDist": {
-   "disjoint": 39
+   "disjoint": 36
   },
   "rowsPerBaseDist": {
-   "2": 25,
-   "3": 13,
+   "2": 21,
+   "3": 14,
    "4": 1
   },
-  "rowsTotal": 93,
+  "rowsTotal": 88,
   "shareCountDist": {
-   "2": 39
+   "2": 36
   },
-  "skipPairs": 2,
+  "skipPairs": 0,
   "sosledje": {
    "flag": 11,
    "flagBases": [
     "1821",
+    "1903",
     "2141",
     "2143",
-    "646",
-    "661"
+    "646"
    ],
-   "ok": 82,
-   "relevantRows": 93
+   "ok": 79,
+   "relevantRows": 90
   },
-  "splitBases": 39,
+  "splitBases": 36,
   "uniqueOwnersDist": {
-   "2": 25,
-   "3": 13,
+   "2": 21,
+   "3": 14,
    "4": 1
   }
  },
  "task": "P66 — split decision pack: 39 split base (odločitveni paket za per-Blatt SPLIT joina)",
- "v2Sha256": "ebb8f7298de713e73bc7417f392d60c7e5eb03a6675f96317320188750e27731",
+ "v2Sha256": "af7479e428182f381d3a2537896493d7cf86210fac7027221e22ac2aea218b53",
  "verdictEn": "P66: SPLIT DECISION PACK — 39 SPLIT BASES (issue #13) — the decision pack for the per-Blatt SPLIT join (P64 open point #8, candidate #1 from P65; deterministic, no AI at runtime; does NOT decide on behalf of the owner — MEASURES and PROVES the facts): all 39 bases have EXACTLY 2 shares (blattShares), 93 rows (25 × 2 + 13 × 3 + 1 × 4); Blatt pairs I·II 7 · II·III 21 · II·IV 2 · IV·V 9 (37/39 adjacent Blatts, 2 skips II·IV — 1603/1604, same cultures on both Blatts); OWNERSHIP PARTITION PER BLATT: 39/39 DISJOINT owners — every split base has different owners per Blatt (strong evidence that the same number under different Blatts is 2 DIFFERENT real parcels); 2–3 unique owners (25/13/1); dominant shares [0.50,0.60) 23 · [0.60,0.70) 11 · [0.70,0.75) 5; cultures 92 (kulturesByBlatt); GEO: 39/39 bases carry the SAME join-v2 geometry for ALL rows (0 distinct) — the v2 join is at the number level, so a SPLIT join would require 2 geometries (counter measured without coordinates — I6); areaSuspect 0; adjacency split part 82/93 (11 flags — 5 bases: 646, 661, 1821, 2141, 2143); the P65 fields byte-identical 39× (I3); the v2 join UNCHANGED (P56/P58/P59/P65 discipline); the decision belongs to the OWNER",
  "verdictSi": "P66: SPLIT DECISION PACK — 39 SPLIT BASE (issue #13) — odločitveni paket za per-Blatt SPLIT joina (odprta točka P64 #8, kandidat #1 iz P65; deterministično, brez AI ob delovanju; NE odloča namesto lastnika — MERI in DOKAZUJE dejstva): vseh 39 base ima TOČNO 2 deleža (blattShares), 93 vrstic (25 × 2 + 13 × 3 + 1 × 4); Blatt pari I·II 7 · II·III 21 · II·IV 2 · IV·V 9 (37/39 sosednja Blatta, 2 skoka II·IV — 1603/1604, isti kulturi na obeh Blattih); LASTNIŠKA RAZČLENITEV PER BLATT: 39/39 DISJUNKTNI lastniki — vsak split base ima različne lastnike po Blattih (močan dokaz, da je ista številka pod različnima Blattoma 2 RAZLIČNI realni parceli); 2–3 edinstvenih lastnikov (25/13/1); dominantni deleži [0.50,0.60) 23 · [0.60,0.70) 11 · [0.70,0.75) 5; kulture 92 (kulturesByBlatt); GEO: 39/39 base nosi VSEH vrstic ENAKO geometrijo joina v2 (0 različnih) — join v2 je na nivoju številke, zato SPLIT join bi zahteval 2 geometriji (števec merjen brez koordinat — I6); areaSuspect 0; sosledje split del 82/93 (flag 11 — 5 base: 646, 661, 1821, 2141, 2143); P65 polja 39× bajtno (I3); join v2 NESPREMENJEN (disciplina P56/P58/P59/P65); odločitev LASTNIKA"
 }

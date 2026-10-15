@@ -4,12 +4,16 @@
 # metodika 4 plasti P57). P62: polna pokritost 135/135 (133–136, 138–139,
 # p137 pass2 dopolnjena po premagani kvoti 429; oči-arbitraža potrjena).
 #
-# NAČELO (isto kot P56/P58): nič se NE prerazporeja brez dokaza — skripta
-# MERI in DOKUMENTIRA. Join v2 (1093 vrstic) ostaja NESPREMENJEN.
+# P68 re-run: vhod preusmerjen na v3 dokaz (ps-parcels-geo-v3.json, 1079 vrstic,
+# P68 renumifikacija 17 preslikav + re-join) — pine/dvoumnost posodobljeni na v3
+# (v2 vrednosti arhivirane v P59 dokazu zgodovine in v2 dokazu).
+#
+# NAČELO (isto kot P56/P58/P68): nič se NE prerazporeja brez dokaza — skripta
+# MERI in DOKUMENTIRA. Join v3 (1079 vrstic; P68) ostaja NESPREMENJEN.
 #
 # Vhodi (vsi committed):
 #   research/issue17/ps-raw/blatt-<page>{,-pass2}.json  — sveži VLM prehodi
-#   research/issue17/ps-parcels-geo-v2.json             — vrstice v2 (rowsEvidence)
+#   research/issue17/ps-parcels-geo-v3.json             — vrstice v3 (rowsEvidence; P68)
 #   research/issue17/ps-register-topology.json          — pageMap P56 (navzkrižje)
 #   src/data/atlas/ps-register-start.json               — Blatt I p3–4 (P57)
 # Izhodi:
@@ -21,12 +25,12 @@
 #      p137 pass2 dopolnjeno; kvota 429 premagana)
 #   I2 Blatt I p3–4 == P57 runtime (26 vrstic blatt 'I') + p5–25 vse 'I'
 #   I3 arbitraža — vsi nesoglasja imajo zapisano odločitev (agent-oči, hardcoded)
-#   I4 atribucija — vseh 1093 vrstic v2 dobi blatt (p138 neberljivo [?]; p139 =
-#      Blatt IIb po korekciji P63 — Parzelle 41–60, vrstic v v2 ni → null_pages prazna)
+#   I4 atribucija — vseh 1079 vrstic v3 dobi blatt (p138 neberljivo [?]; p139 =
+#      Blatt IIb po korekciji P63 — Parzelle 41–60, vrstic v v3 ni → null_pages prazna)
 #   I5 struktura — Blatt sekcije: I (3–42, parcele 1–800), II (43–…, 801–),
 #      oči-potrjene korekcije območja prehoda 721–800 (p40/p41/p42)
-#   I6 per-Blatt dvoumnost — bazi na več straneh == 211 (pin iz v2), nove mere:
-#      bazi na več BLATTOVIH, instance, ruleCandidate (en ∉ [0.8, 1.25])
+#   I6 per-Blatt dvoumnost — bazi na več straneh == 199 (pin iz v3 P68; v2: 211),
+#      nove mere: bazi na več BLATTOVIH, instance, ruleCandidate (en ∉ [0.8, 1.25])
 #   I7 determinizem — --check bajtno identično
 #   I8 dokaz ⊇ runtime (bajtno podmnožica)
 #   I9 join v2 nespremenjen (sha256 rowsEvidence == vhod)
@@ -38,7 +42,7 @@ from collections import defaultdict
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW = os.path.join(ROOT, "research/issue17/ps-raw")
-V2 = os.path.join(ROOT, "research/issue17/ps-parcels-geo-v2.json")
+V2 = os.path.join(ROOT, "research/issue17/ps-parcels-geo-v3.json")  # P68 v3
 TOPO = os.path.join(ROOT, "research/issue17/ps-register-topology.json")
 P57 = os.path.join(ROOT, "src/data/atlas/ps-register-start.json")
 OUT_EV = os.path.join(ROOT, "research/issue17/ps-blatt-headers.json")
@@ -299,8 +303,8 @@ def main():
     for r in rows:
         base_pages[r["base"]].add(r["page"])
     multi_page = {b for b, s in base_pages.items() if len(s) > 1}
-    if len(multi_page) != 211:
-        fail(f"I6 bazi na več straneh {len(multi_page)} != 211")
+    if len(multi_page) != 199:
+        fail(f"I6 bazi na več straneh {len(multi_page)} != 199 (v3 P68; v2: 211)")
     base_blatts = defaultdict(set)
     for r in rows:
         if r["blattP59"]:
@@ -350,7 +354,7 @@ def main():
             "freshReads": "research/issue17/ps-raw/blatt-<page>{,-pass2}.json (135 strani posnetih × 2 prehoda — pokritost polna, izrez levega stolpca 3×)",
             "fetch": "scripts/p59_fetch_strip.py (VAČ uodid 373415 docid 41780, izrez x30–250, 3× Lanczos q92)",
             "reader": "scripts/p59_ps_read_blatt.mjs (glm-5v-turbo, 2 prehoda, JSON)",
-            "v2": "research/issue17/ps-parcels-geo-v2.json (rowsEvidence 1093)",
+            "v2": "research/issue17/ps-parcels-geo-v3.json (rowsEvidence 1079; P68 v3 — v2 arhiviran)",
             "pageMap": "research/issue17/ps-register-topology.json (P56)",
             "blattI": "src/data/atlas/ps-register-start.json (P57, p3–4)",
         },
@@ -395,20 +399,20 @@ def main():
                        "I9 join v2 nespremenjen"],
         "statusLine": ("P59 GLAVE LISTOV: 135/135 strani sveže branih (2 prehoda; polna pokritost — P62 dopolnilo 133–136, 138–139, p137 pass2 po premagani kvoti 429), "
                        f"{len(arb_used)} arbitraža-oči, struktura Blatt I–V + IIb + lokalne sekcije (P63: p139 = IIb, Parzelle 41–60); "
-                       "211 dvoumnih base → %d čez-Blatt, %d ruleCandidate [~]; join v2 nespremenjen" % (len(multi_blatt), len(rule_cand))),
+                       "199 dvoumnih base (v3 P68; v2: 211) → %d čez-Blatt, %d ruleCandidate [~]; join v3 nespremenjen" % (len(multi_blatt), len(rule_cand))),
         "verdictSi": ("Glave listov registra PS prvič zanesljivo prebrane v POLNI pokritosti (135/135 × 2 prehoda + arbitraža-oči): "
                       "Blatt I = parcele 1–800 (strani 3–40, s prehodnimi popravki I→II na 721–800), Blatt II se začne pri 801 (43–92, p72 = III vmes); "
                       "konec registra (p133–137) nosi eksplicitne korekcijske cone IV→V/II (rdeči tuš); "
                       "p139 = Blatt IIb (korekcija P63; Parzelle 41–60 + lastninske kolone — prejšnja razlaga 'Nro. des Hauses.' očesna napaka); "
                       "p138 = izbrisana leva tabela z bledimi ostanki + 'Zusammenstellung der Grundstücke' (Wiese 1–20) desna (P63); "
-                      "isto številko pod različnima Blattoma potrjeno kot druga parcela — 211 dvoumnih base v2 kvantificiranih per instanco; "
+                      "isto številko pod različnima Blattoma potrjeno kot druga parcela — 199 dvoumnih base v3 (v2: 211; P68 renum) kvantificiranih per instanco; "
                       "join ostaja nespremenjen; parzella razponi svežih branj = nizka zaupanja (Kurrent 4↔8/7→1, dokumentirano)"),
         "verdictEn": ("Leaf headers of the PS register read reliably in FULL coverage (135/135 pages x 2 passes + arbitration): "
                       "Blatt I = parcels 1-800 (pages 3-42, with I-to-II correction annotations in 721-800), Blatt II starts at 801; "
                       "register end (p133-137) carries explicit IV-to-V/II correction zones (red ink); "
                       "p139 = Blatt IIb (P63 correction; parcels 41-60 + owner columns - the earlier 'Nro. des Hauses.' reading was an eye error); "
                       "p138 = erased left table with faint remains + 'Zusammenstellung der Grundstuecke' (Wiese 1-20) on the right (P63); "
-                      "same number under different Blaetter confirmed as different parcels - the 211 ambiguous bases quantified per instance; "
+                      "same number under different Blaetter confirmed as different parcels - the 199 ambiguous bases in v3 (v2: 211; P68 renum) quantified per instance; "
                       "join unchanged; fresh parzella ranges are low-confidence (Kurrent 4-8/7-1 confusion, documented)"),
         "next": [
             "P62 IZVEDENO: 133–136, 138–139 + p137 pass2 prebrani — polna pokritost (kvota 429 premagana)",

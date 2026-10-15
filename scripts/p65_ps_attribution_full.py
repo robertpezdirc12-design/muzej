@@ -62,7 +62,7 @@ import sys
 from collections import Counter, defaultdict
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-V2 = os.path.join(ROOT, "research/issue17/ps-parcels-geo-v2.json")
+V2 = os.path.join(ROOT, "research/issue17/ps-parcels-geo-v3.json")  # P68 v3
 P59 = os.path.join(ROOT, "research/issue17/ps-blatt-headers.json")
 P64EV = os.path.join(ROOT, "research/issue17/ps-attribution-ext.json")
 BHRT = os.path.join(ROOT, "src/data/atlas/ps-blatt-headers.json")
@@ -71,22 +71,22 @@ P64RT = os.path.join(ROOT, "src/data/atlas/ps-attribution-ext.json")
 OUT_EV = os.path.join(ROOT, "research/issue17/ps-attribution-full.json")
 OUT_RT = os.path.join(ROOT, "src/data/atlas/ps-attribution-full.json")
 
-PIN_V2_EV_SHA = "ebb8f7298de713e73bc7417f392d60c7e5eb03a6675f96317320188750e27731"
-PIN_BHRT_SHA = "efe39f41dc4f81703e3b8aa47632faef75222a000ad13b7a674f3a853c1ee66e"
-PIN_P60RT_SHA = "28465b3e28fef763f951dc8ea379b7e071bd9d5fa109ebb9a577e594236e386a"
-PIN_P64EV_SHA = "a6f6d8af27141ab1edae7ddaff211254fe36d190342a880d7d8be058c445e09c"
-PIN_P64RT_SHA = "7e5ea64a4a45f2a3c73e5dfe8b8fcbc7618bd79aee717cfd58ff35376257cd73"
+PIN_V2_EV_SHA = "af7479e428182f381d3a2537896493d7cf86210fac7027221e22ac2aea218b53"  # P68 v3 (join blok)
+PIN_BHRT_SHA = "f4c4dedcd6c65d4d1480b4124ae93d00304be2f24f30aa74ca5d0c6ff8c9efe6"  # P68 v3 re-run
+PIN_P60RT_SHA = "c42bf221141e46aee0c387506bdf594c24373d41b19420fe2fc8fc2b7047d6e4"  # P68 v3 re-run
+PIN_P64EV_SHA = "4dab5e834b1416f06a4cdc95f25f7cabc24c8ec7efe1ce2e53fc4eb404786cf8"  # P68 v3 re-run (distByRule dinamično)
+PIN_P64RT_SHA = "dda6bebdbd89a4dd8064a1bd062cbc090312f23ee2f75907048fcd463fc566ba"  # P68 v3 re-run (distByRule dinamično)
 
-EXPECTED_STATUS_DIST = {"R1": 17, "R2a": 53, "R2b": 1, "R3-single": 101, "split": 39}
-EXPECTED_ATTR_BLATT = {"I": 8, "II": 68, "III": 29, "IV": 63, "V": 4}
+EXPECTED_STATUS_DIST = {"R1": 14, "R2a": 47, "R2b": 1, "R3-single": 101, "split": 36}  # P68 v3 (v2: 17/53/1/101/39)
+EXPECTED_ATTR_BLATT = {"I": 5, "II": 61, "III": 30, "IV": 63, "V": 4}  # P68 v3 (v2: I 8/II 68/III 29/IV 63/V 4)
 EXPECTED_R3_BLATT = {"I": 3, "II": 26, "III": 14, "IV": 58}
 EXPECTED_COVERAGE = {
-    "basesTotal": 800, "rowsTotal": 1093, "singlePage": 589,
-    "multiPage": 211, "multiBlatt": 110, "singleBlattMultiPage": 101,
+    "basesTotal": 798, "rowsTotal": 1079, "singlePage": 599,  # P68 v3 (v2: 800/1093/589)
+    "multiPage": 199, "multiBlatt": 98, "singleBlattMultiPage": 101,  # P68 v3 (v2: 211/110/101)
     "nullAttributionRows": 0,
 }
-EXPECTED_SP_BY_BLATT = {"I": 145, "I·II": 10, "II": 183, "III": 28, "IV": 205, "V": 18}
-EXPECTED_SOS = {"ok": 375, "flag": 50}
+EXPECTED_SP_BY_BLATT = {"I": 156, "I·II": 10, "II": 183, "III": 26, "IV": 206, "V": 18}  # P68 v3 (v2: I 145/III 28/IV 205)
+EXPECTED_SOS = {"ok": 364, "flag": 49}  # P68 v3 (v2: 375/50)
 EXPECTED_R3_SOS = {"ok": 189, "flag": 20}
 EXPECTED_R3_ROWS = 205
 EXPECTED_R3_ROWS_DIST = {2: 98, 3: 3}
@@ -130,10 +130,10 @@ def main():
         fail("I1 sha256 dokaza ps-attribution-ext.json ≠ pin (drift)")
     if sha256(P64RT) != PIN_P64RT_SHA:
         fail("I1 sha256 runtime ps-attribution-ext.json ≠ pin (drift)")
-    if len(rows) != 1093:
-        fail(f"I1 rowsEvidence {len(rows)} ≠ 1093")
-    if len(multi_blatt_list) != 110:
-        fail(f"I1 multiBlattBaseList {len(multi_blatt_list)} ≠ 110")
+    if len(rows) != 1079:
+        fail(f"I1 rowsEvidence {len(rows)} ≠ 1079 (v3 P68; v2: 1093)")
+    if len(multi_blatt_list) != 98:
+        fail(f"I1 multiBlattBaseList {len(multi_blatt_list)} ≠ 98 (v3 P68; v2: 110)")
     if sorted(p64rt["bases"].keys()) != sorted(multi_blatt_list):
         fail("I1 P64 runtime base ≠ multiBlattBaseList")
 
@@ -153,11 +153,11 @@ def main():
     if len(pages_by_base) != EXPECTED_COVERAGE["basesTotal"]:
         fail(f"I2 base skupaj {len(pages_by_base)} ≠ 800")
     if len(multi_page) != EXPECTED_COVERAGE["multiPage"]:
-        fail(f"I2 multi-page {len(multi_page)} ≠ 211 (P59 basesOnMultiplePages_v2)")
+        fail(f"I2 multi-page {len(multi_page)} ≠ 199 (v3 P68; v2: 211 — P59 basesOnMultiplePages_v2)")
     if not multi_blatt.issubset(multi_page):
         fail("I2 multiBlattBaseList ⊄ multi-page (razčlenitev razbita)")
     if len(r3_bases) != EXPECTED_COVERAGE["singleBlattMultiPage"]:
-        fail(f"I2 single-Blatt multi-page {len(r3_bases)} ≠ 101")
+        fail(f"I2 single-Blatt multi-page {len(r3_bases)} ≠ 101")  # v3: izračun (v2: 101)
 
     def blatt(p):
         return page_attr.get(str(p), {}).get("blatt")
@@ -219,7 +219,7 @@ def main():
 
     # ————— R3-single: 101 base —————
     status_dist = Counter({k: EXPECTED_STATUS_DIST[k] for k in ("R1", "R2a", "R2b", "split")})
-    attr_dist = Counter({"I": 5, "II": 42, "III": 15, "IV": 5, "V": 4})  # P64 del
+    attr_dist = Counter(p64rt["summary"]["attributedBlattDist"])  # P64 del (dinamično — P68 v3)
     r3_dist = Counter()
     sos_all = {"ok": p64rt["summary"]["soslednost"]["ok"],
                "flag": p64rt["summary"]["soslednost"]["flag"]}  # P64 del (I3 bajtno)
@@ -270,7 +270,7 @@ def main():
     if dict(r3_dist) != EXPECTED_R3_BLATT:
         fail(f"I4 R3-single dist {dict(r3_dist)} ≠ {EXPECTED_R3_BLATT}")
     if len(bases_out) != EXPECTED_COVERAGE["multiPage"]:
-        fail(f"I4 base izpisanih {len(bases_out)} ≠ 211")
+        fail(f"I4 base izpisanih {len(bases_out)} ≠ 198 (v3 P68; v2: 211)")
 
     single_page = {b: p[0] for b, p in pages_by_base.items() if len(p) == 1}
     sp_by_blatt = Counter(blatt(p) for p in single_page.values())
@@ -366,7 +366,7 @@ def main():
                       "P56/P58/P59); 39 split base ostaja za lastniško "
                       "odločitev o SPLIT joinu"),
         "inputs": {
-            "v2": "research/issue17/ps-parcels-geo-v2.json (rowsEvidence 1093)",
+            "v2": "research/issue17/ps-parcels-geo-v3.json (rowsEvidence 1079; P68 v3)",
             "p59": "research/issue17/ps-blatt-headers.json (pageAttribution + perBlattAmbiguity 211/110)",
             "p64ev": "research/issue17/ps-attribution-ext.json (P64 dokaz — pin)",
             "p64rt": "src/data/atlas/ps-attribution-ext.json (P64 runtime — bajtni vir 110 base)",
@@ -391,9 +391,9 @@ def main():
             "statusDist": {k: status_dist[k] for k in ("R1", "R2a", "R2b", "R3-single", "split")},
             "attributedBlattDist": dict(sorted(attr_dist.items())),
             "distByRule": {
-                "R1": {"I": 1, "II": 12, "III": 4},
-                "R2a": {"I": 4, "II": 29, "III": 11, "IV": 5, "V": 4},
-                "R2b": {"II": 1},
+                "R1": {"II": 10, "III": 4},
+                "R2a": {"I": 2, "II": 25, "III": 11, "IV": 5, "V": 4},
+                "R2b": {"III": 1},
                 "R3-single": dict(sorted(r3_dist.items())),
             },
             "soslednost": {"ok": sos_all["ok"], "flag": sos_all["flag"],

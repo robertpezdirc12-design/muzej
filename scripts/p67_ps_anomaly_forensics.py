@@ -137,11 +137,11 @@ PINS = {
     "research/issue17/ps-parcels-geo-v2.json":
         "ebb8f7298de713e73bc7417f392d60c7e5eb03a6675f96317320188750e27731",
     "research/issue17/ps-blatt-headers.json":
-        "95929a2e373f7e4acd8f5fe4e93db08419e18c8dfbc604c1fc87beeae65da973",
+        "650f13dccab1da70a60d04c41ce9f7887ca94eafea8a0a7927c104ca899b76f3",
     "src/data/atlas/ps-attribution-full.json":
-        "74477ac800ad47b4a37805aa0b398ddc88327f8c45afc342f97a084813d0396d",
+        "e714c3550e759a59f6577e24f3aa314e42e30c951353e7f290d360a4bba16b57",
     "src/data/atlas/ps-split-pack.json":
-        "77337affcb9ff436727c7f868ca18ba9036282bb91ff8e9eac4b735ccebad981",
+        "f5fcd8e9f6d4891104fa6fa4d65887f232e06a7ac171b164d33903ddadff67f2",
     "research/issue17/ps-register-topology.json":
         "2fddc76fb94b69fed55170220fa8dfa3ace4a9466043d264b8b8df788e78a50c",
     "research/issue17/PS-full-v2.json":
@@ -202,13 +202,13 @@ GEO = os.path.join(ROOT, "research/georef-n83/gurs/parcels-ko1544-merged.json")
 
 EXPECTED_ROWS = 1093
 EXPECTED_BASES = 800
-EXPECTED_MULTI = 211
-EXPECTED_SPLIT = 39
-EXPECTED_CROSS = 110
+EXPECTED_MULTI = 199  # P68 v3 (P65 bases; v2: 211)
+EXPECTED_SPLIT = 36  # P68 v3 (v2: 39)
+EXPECTED_CROSS = 98  # P68 v3 (v2: 110)
 EXPECTED_R3 = 101
 
-FLAG_BASES = ["1821", "2141", "2143", "646", "661"]
-FLAG_ROWS = 11
+FLAG_BASES = ["1821", "2141", "2143", "646", "1903"]  # P68 v3 (661 razpadla; 1903 nov)
+FLAG_ROWS = 11  # P68 v3 (661 izpada, 1903 nastopi; v2: 11)
 
 # renumerifikacijska specifikacija (20 preslikav) — P68 izvedba
 RENUM = [
@@ -415,15 +415,23 @@ def main():
 
     # ————— I4/B: sosledje flagi —————
     # repliciraj P65 sosledje za 5 flag base (±1 sosed znotraj strani)
+    # P68: sosledje replikacija nad v3 base (v2 vrstice + RENUM preslikave)
+    renum_map = {(m["page"], m["old"]): m["new"] for m in RENUM}
+    v3_base_of = lambda r: renum_map.get((r["page"], r["base"]), r["base"])
+    v3_seq_by_page = {pg: [renum_map.get((pg, x["base"]), x["base"]) for x in rr]
+                      for pg, rr in rows_by_page.items()}
+
     def sosled_repl(b):
         ok = flag = 0
         flagged = []
-        for r in rows_by_base[b]:
-            seq = rows_by_page[r["page"]]
-            ks = [k for k, bb in enumerate(seq) if bb["base"] == r["base"]]
+        for r in rows:
+            if v3_base_of(r) != b:
+                continue
+            seq = v3_seq_by_page[r["page"]]
+            ks = [k for k, bb in enumerate(seq) if bb == b]
             for k in ks:
-                pb = seq[k - 1]["base"] if k > 0 else None
-                nb = seq[k + 1]["base"] if k + 1 < len(seq) else None
+                pb = seq[k - 1] if k > 0 else None
+                nb = seq[k + 1] if k + 1 < len(seq) else None
                 near = (pb is not None and abs(int(pb) - int(b)) == 1) or \
                        (nb is not None and abs(int(nb) - int(b)) == 1)
                 if near:
@@ -497,12 +505,17 @@ def main():
 
     # ————— I5/C: R1↔R2 —————
     # 671: II instanca @p87 je po renumerifikaciji 1691 → ni divergencia
-    e671 = p65_bases["671"]
-    if e671["status"] != "R1" or e671["attributedBlatt"] != "I":
-        fail("I5 671 P65 status/atribucija != R1/I")
+    # 671 RAZREŠENA (P67 part C; P68 utemeljitev: II instanca @p87 = 1691):
+    # po P68 v3 je 671 single-Blatt (p36) → IZPADLA iz P65 bases (dvoumnost)
+    if "671" in p65_bases:
+        fail("I5 671 še v P65 bases (po P68 pričakovano single-Blatt)")
+    p36_671 = [r for r in rows_by_base["671"] if r["page"] == 36]
     p87_671 = [r for r in rows_by_base["671"] if r["page"] == 87]
-    if len(p87_671) != 1:
-        fail("I5 671@p87: pričakovana 1 vrstica")
+    if len(p36_671) != 1 or len(p87_671) != 1:
+        fail("I5 671@v2: pričakovani instanci p36 + p87")
+    v3_1691 = [r for r in rows if v3_base_of(r) == "1691" and r["page"] == 87]
+    if len(v3_1691) != 1:
+        fail("I5 1691@p87: preslikava 671→1691 manjka (P68)")
     # moda B pas članstvo (razmerje iz v2, I6: v izpis samo bool)
     def mode_b(r):
         qk, am = r.get("areaQK"), r.get("areaModern")
@@ -538,8 +551,9 @@ def main():
 
     def owners_by_blatt(b):
         d = defaultdict(set)
-        for r in rows_by_base[b]:
-            d[blatt_of(r["page"])].add(r["owner"])
+        for r in rows:
+            if v3_base_of(r) == b:
+                d[blatt_of(r["page"])].add(r["owner"])
         return {k: sorted(v) for k, v in sorted(d.items())}
 
     def relation(ob):
@@ -591,13 +605,12 @@ def main():
             for i, v in enumerate(node):
                 assert_no_geo(v, f"{path}[{i}]")
 
-    # ————— projekcija (številčenjski nivo) —————
-    # base: 800 − {1603,1604,1605} + {1503,1504,1505,1903,1904} = 802
-    bases_after = EXPECTED_BASES - 3 + 5
-    # multi-page: −1603 −1604 −1605 −661 −671 +1903 +1905
-    multi_after = EXPECTED_MULTI - 5 + 2
-    # čez-Blatt: isti premik (R3-single nespremenjen)
-    cross_after = EXPECTED_CROSS - 5 + 2
+    # ————— projekcija (številčenjski nivo) — ZAMENJANA s P68 MERITVAMI —————
+    # P67 aproksimacija [~] (bases 802 / multi 208 / cross 107) je bila
+    # izračunana pred P68; P68 pipeline je MERIL dejanske vrednosti nad v3:
+    bases_after = 798   # P68 (aproksimacija 802: ni štela izpada 1503–1505/1681–1700)
+    multi_after = 199   # P68 (aproksimacija 208: ni štela 9 preostalih 661–680 cross)
+    cross_after = 98    # P68 (aproksimacija 107; P68 blattDist I·II 31 / II·III 46 / III·IV 3 / IV·V 18)
     # 1903: III 2438 QK vs IV 1005 → delež 0.7081 < 0.75 → pas split [~]
     sh1903 = round(2438 / (2438 + 1005), 4)
     if abs(sh1903 - 0.7081) > 1e-9:
@@ -771,11 +784,11 @@ def main():
                    "ne napake",
     }
     part_c = {
-        "671": {"verdict": "RAZREŠENA — ni divergencia",
-                "reason": "II instanca @p87 = 1691 (renumerifikacija p87); "
-                          "671 ostane I-only @p36",
-                "p65": {"status": e671["status"],
-                        "attributedBlatt": e671["attributedBlatt"]}},
+        "671": {"verdict": "RAZREŠENA — ni divergencia (P68 IZVEDENA)",
+                "reason": "II instanca @p87 = 1691 (renumerifikacija p87 — "
+                          "P68 preslikava); 671 ostane I-only @p36 "
+                          "(single-Blatt, izpadla iz P65 dvoumnosti)",
+                "p68": {"new": "1691", "old": "671", "page": 87}},
         "930": {"verdict": "ostaja [~] z merjenim dokazom",
                 "p65": {"status": e930["status"],
                         "attributedBlatt": e930["attributedBlatt"]},

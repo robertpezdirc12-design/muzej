@@ -40,7 +40,7 @@ import sys
 from collections import defaultdict
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-V2 = os.path.join(ROOT, "research/issue17/ps-parcels-geo-v2.json")
+V2 = os.path.join(ROOT, "research/issue17/ps-parcels-geo-v3.json")  # P68 v3
 P59 = os.path.join(ROOT, "research/issue17/ps-blatt-headers.json")
 OUT_EV = os.path.join(ROOT, "research/issue17/ps-perblatt-attribution.json")
 OUT_RT = os.path.join(ROOT, "src/data/atlas/ps-perblatt-attribution.json")
@@ -50,9 +50,9 @@ RATIO_LO, RATIO_HI = 0.8, 1.25
 QK_REF = 3.59665
 MODA_A = (3.3, 4.3)
 # strani pas-instanc (izhajajo iz podatkov; pinned v I5-struktura)
-EXPECTED_ATTR_PAGES = {61, 83, 84, 85, 86, 87, 99, 36, 49, 94}
-EXPECTED_ATTR_BLATT = {"I": 1, "II": 12, "III": 4}
-EXPECTED_ADJ = {"ok": 21, "flag": 2}
+EXPECTED_ATTR_PAGES = {49, 61, 83, 84, 85, 86, 94, 99}  # P68 v3 (v2: +87, +36)
+EXPECTED_ATTR_BLATT = {"II": 10, "III": 4}  # P68 v3: 14 base (v2: 17; I 1 / II 12 / III 4) — 671 izpada (single-Blatt), I 0
+EXPECTED_ADJ = {"ok": 19, "flag": 1}  # P68 v3 (v2: 21/2)
 
 
 def fail(msg):
@@ -92,8 +92,8 @@ def main():
     p59_cands = p59["perBlattAmbiguity"]["ruleCandidateBases"]
     if cands != p59_cands:
         fail(f"I1 ruleCandidate seznam ≠ P59 pin: {cands} vs {p59_cands}")
-    if len(cands) != 17:
-        fail(f"I1 ruleCandidate {len(cands)} ≠ 17")
+    if len(cands) != 14:
+        fail(f"I1 ruleCandidate {len(cands)} ≠ 14 (v3 P68; v2: 17)")
 
     bases_out = {}
     attr_pages = set()
@@ -235,30 +235,30 @@ def main():
         fail(f"I5 pas-strani {sorted(attr_pages)} ≠ {sorted(EXPECTED_ATTR_PAGES)}")
 
     verdict_si = (
-        "Per-Blatt atribucija 17 ruleCandidate base IZVEDENA (merjeno): vsaka dobi "
-        "instanco v pasu [0.8, 1.25] — II 12 · I 1 · III 4 (23 vrstic); soslednost 21/23 "
-        "(671/934 [~] = prečrtane vrstice v registru). Strani pas-instanc (61, 83–87, 99, "
-        "36, 49, 94) nosijo 100 % več-stranskih base — Kultur-Tabellen re-listing [~]. "
-        "OPOMBA: pas ujema modo B (ratio ≈ 1), ne konverzije 1 QK = 3.59665 m² (moda A) "
-        "— absolutna korespondenca ostaja odprta; join v2 NESPREMENJEN."
+        "Per-Blatt atribucija 14 ruleCandidate base IZVEDENA (merjeno, v3 P68): vsaka dobi "
+        "instanco v pasu [0.8, 1.25] — II 10 · III 4 (20 vrstic); soslednost 19/20 "
+        "(934 [~] = prečrtana vrstica v registru). Strani pas-instanc (61, 83–86, 99, "
+        "49, 94) nosijo 100 % več-stranskih base — "
+        "Kultur-Tabellen re-listing [~]. OPOMBA: pas ujema modo B (ratio ≈ 1), ne konverzije "
+        "1 QK = 3.59665 m² (moda A) — absolutna korespondenca ostaja odprta; join v3 NESPREMENJEN."
     )
     verdict_en = (
-        "Per-Blatt attribution of the 17 ruleCandidate bases EXECUTED (measured): each gets "
-        "the instance within band [0.8, 1.25] — II 12 · I 1 · III 4 (23 rows); adjacency 21/23 "
-        "(671/934 [~] = crossed-out rows in the register). Attribute pages (61, 83-87, 99, "
-        "36, 49, 94) carry 100% multi-page bases — Kultur-Tabellen re-listing [~]. "
+        "Per-Blatt attribution of the 14 ruleCandidate bases EXECUTED (measured, v3 P68): each gets "
+        "the instance within band [0.8, 1.25] — II 10 · III 4 (20 rows); adjacency 19/20 "
+        "(934 [~] = a crossed-out register row). Attribute pages (61, 83-86, 99, "
+        "49, 94) carry 100% multi-page bases — Kultur-Tabellen re-listing [~]. "
         "NOTE: the band matches mode B (ratio ~ 1), not the 1 QK = 3.59665 m2 conversion "
-        "(mode A) — absolute correspondence remains open; the v2 join UNCHANGED."
+        "(mode A) — absolute correspondence remains open; the v3 join UNCHANGED."
     )
 
     ev = {
-        "task": "P60 — per-Blatt atribucija ruleCandidate base v2 (izvedba P59 pravila pasu [0.8, 1.25])",
+        "task": "P60 — per-Blatt atribucija ruleCandidate base v3 (izvedba P59 pravila pasu [0.8, 1.25]; P68 v3 re-run)",
         "date": "2026-10-14",
         "principle": ("izvedba P59 ruleCandidate pravila kot atribucije; MERJENO brez prerazporeditev — "
                       "join v2 nespremenjen (disciplina P56/P58/P59); soslednost = kontrola kakovosti; "
                       "unit-semantics moda B vs moda A dokumentirano kot odprto"),
         "inputs": {
-            "v2": "research/issue17/ps-parcels-geo-v2.json (rowsEvidence 1093, sha256 spodaj)",
+            "v2": "research/issue17/ps-parcels-geo-v3.json (rowsEvidence 1079; P68 v3 — sha256 spodaj)",
             "p59": "research/issue17/ps-blatt-headers.json (pageAttribution + instances + ruleCandidateBases)",
         },
         "rule": {

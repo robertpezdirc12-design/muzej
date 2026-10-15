@@ -3681,6 +3681,7 @@ export const PS_GEO_P55: {
   generatedBy: string;
   pageSelection: { pages: number; rows: number; pass1: number; pass2: number; pass3Fallback: number; checksum: string; pass3Note: string };
   join: { matchedRows: number; matchedRowsS1S2: number; matchedRowsBI: number; matchedSharePct: number; psUniqueNumbers: number; psPositionedParcels: number; suffixGroups: number; seriesCounts: { BI: number; S1: number; S2: number }; confCounts: { STRONG: number; MEDIUM: number; WEAK: number }; readConfBI: { STRONG: number; MEDIUM: number; WEAK: number }; ambiguousBases: number; ambiguousRows: number };
+  v3Delta: { renumbered: number; removedRows: number; removedReason: string; after: { rows: number; bases: number; multiPage: number; crossBlatt: number }; invariance: string; p67Deltas: string };
   v2Delta: { removedRows: number; removedPages: string; addedRows: number; addedSource: string; before: { matchedRows: number; confCounts: { STRONG: number; MEDIUM: number; WEAK: number }; areaMedian: number }; invariance: string };
   areaProof: { pairsWithArea: number; medianRatio: number; q25: number; q75: number; tightN: number; tightShare: number; shuffleMedian: number; shuffleTightShare: number; historicalQkM2: number; deltaPct: number };
   spatialProof: { consecPairs: number; medianM: number; q25M: number; q75M: number; share150: number; shuffleMedianM: number; shuffleShare150: number; enrichmentX: number };
@@ -3692,11 +3693,11 @@ export const PS_GEO_P55: {
   next: string[];
 } = {
   series: "PS",
-  version: 2,
+  version: 3,
   source:
-    "PS protokol N083PS (VAČ uodid 373415, docid 41780; 143 strani; branja research/issue17/ps-raw/ps-*.json, izbira strani PS-full-v2.json) + sodobne parcele k.o. 1544 GRIBLJE (research/georef-n83/gurs/parcels-ko1544-merged.json, 2117, P47 prenos SI.GURS.KN:PARCELE) + Blatt I str. 3–4 (P57 primarni vir, src/data/atlas/ps-register-start.json); v2 dokaz research/issue17/ps-parcels-geo-v2.json + runtime src/data/atlas/ps-parcels-geo.json (v1 dokaz arhiviran nespremenjen)",
+    "PS protokol N083PS (VAČ uodid 373415, docid 41780; 143 strani; branja research/issue17/ps-raw/ps-*.json, izbira strani PS-full-v2.json) + sodobne parcele k.o. 1544 GRIBLJE (research/georef-n83/gurs/parcels-ko1544-merged.json, 2117, P47 prenos SI.GURS.KN:PARCELE) + Blatt I str. 3–4 (P57 primarni vir, src/data/atlas/ps-register-start.json); v3 dokaz research/issue17/ps-parcels-geo-v3.json + runtime src/data/atlas/ps-parcels-geo.json (v2 dokaz arhiviran nespremenjen: research/issue17/ps-parcels-geo-v2.json)",
   status: "REVIEW",
-  generatedBy: "scripts/p58_ps_parcels_geo_v2.py (v2); v1: scripts/p55_ps_parcels_geo.py",
+  generatedBy: "scripts/p68_ps_v3_renumber.py (v3); v2: scripts/p58_ps_parcels_geo_v2.py; v1: scripts/p55_ps_parcels_geo.py",
   pageSelection: {
     pages: 135,
     rows: 2762,
@@ -3708,38 +3709,46 @@ export const PS_GEO_P55: {
       "8 strani izbranih na pass3 (24/37/83/84/87/94/121/125): pass3 datoteke brez parsed.vrstice, NDJSON vsebina številčno nezanesljiva (7/8 prvih parcel divergira od pass1 in pass2, ki se strinjata) → uporabljen pass1; odmik od PS-full-v2 izbire dokumentiran",
   },
   join: {
-    matchedRows: 1093,
-    matchedRowsS1S2: 1067,
+    matchedRows: 1079,
+    matchedRowsS1S2: 1053,
     matchedRowsBI: 26,
-    matchedSharePct: 38.6,
+    matchedSharePct: 39.1,
     psUniqueNumbers: 2106,
-    psPositionedParcels: 800,
-    suffixGroups: 241,
-    seriesCounts: { BI: 26, S1: 997, S2: 70 },
-    confCounts: { STRONG: 174, MEDIUM: 759, WEAK: 160 },
+    psPositionedParcels: 798,
+    suffixGroups: 240,
+    seriesCounts: { BI: 26, S1: 983, S2: 70 },
+    confCounts: { STRONG: 174, MEDIUM: 749, WEAK: 156 },  // TOTAL (v2 konvencija; S1/S2 171/735/147)
     readConfBI: { STRONG: 3, MEDIUM: 14, WEAK: 9 },
-    ambiguousBases: 211,
-    ambiguousRows: 495,
+    ambiguousBases: 199,
+    ambiguousRows: 472,
+  },
+  v3Delta: {
+    renumbered: 17,
+    removedRows: 14,
+    removedReason: "preslikana base brez PF poligona v k.o. 1544 (P67 kartni priči: 1503–1505 in 1681–1700 NE obstajajo); vrstica registra ostaja v ps-raw, izpada le iz joina",
+    after: { rows: 1079, bases: 798, multiPage: 199, crossBlatt: 98 },
+    invariance: "nespremenjene vrstice bajtno == v2 (lekcija P9); group-derived polja (ambiguous 15, conf 1) prekalkulirana po P55 metodi; registrska branja ps-raw NESPREMENJENA — sanacija le na join ključu (base), parzella ostaja originalno branje",
+    p67Deltas: "odmiki od P67 aproksimacije [~]: bases 802→798 (−4), multi-page 208→199 (−9), cross-Blatt 107→98 (−9) — aproksimacija ni štela 9 preostalih 661–680 cross base niti izpada 1503–1505/1681–1700",
   },
   v2Delta: {
     removedRows: 43,
-    removedPages: "str. 138–139 (S3 zapadek »Zusammenstellung der Grundstücke«, lastno oštevilčenje 1–100) — P56 dokaz: median razmerja površin 0.0892 ≪ 3.7188 v S1 (~42× od 1 QK) + pass-razhajanje; nabor 43 vrstic bajtno enak P56 kontaminacijskemu seznamu",
+    removedPages: "str. 138–139 (S3 zapadek »Zusammenstellung der Grundstücke«, lastno oštevilčenje 1–100) — P56 dokaz: median razmerja površin 0.0892 ≪ 3.7188 v S1 (~42× od 1 QK) + pass-razhajanje; nabor 43 vrstic bajtno enak P56 kontaminacijskemu seznamu (P58 zgodovina — arhiv)",
     addedRows: 26,
     addedSource: "P57 ps-register-start.json (štiri neodvisne VLM plasti + deterministična adjudikacija) — točno vseh 26 lostBases P56 (številke 1–36; št. 1 brez površine — blot)",
     before: { matchedRows: 1110, confCounts: { STRONG: 171, MEDIUM: 775, WEAK: 164 }, areaMedian: 3.6984 },
-    invariance: "pozicije vrstic so deterministične PER BASE (ploščinsko uteženo središče sodobnih parcel številke) — odstranitev/dodatek vrstic ne spremeni nobene pozicije; množica pozicioniranih števil ostane 800 → soslednost in S1/S2 conf bajtno enaka v1",
+    invariance: "pozicije vrstic so deterministične PER BASE (ploščinsko uteženo središče sodobnih parcel številke) — odstranitev/dodatek vrstic ne spremeni nobene pozicije; množica pozicioniranih števil ostane 800 → soslednost in S1/S2 conf bajtno enaka v1 (P58 zgodovina — arhiv)",
   },
   areaProof: {
-    pairsWithArea: 1074,
-    medianRatio: 3.7709,
-    q25: 2.3222,
-    q75: 8.2676,
+    pairsWithArea: 1060,
+    medianRatio: 3.8512,
+    q25: 2.4103,
+    q75: 8.3459,
     tightN: 187,
-    tightShare: 0.1741,
-    shuffleMedian: 4.0829,
-    shuffleTightShare: 0.0559,
+    tightShare: 0.1764,
+    shuffleMedian: 4.2771,
+    shuffleTightShare: 0.0472,
     historicalQkM2: 3.59665,
-    deltaPct: 4.85,
+    deltaPct: 7.08,
   },
   spatialProof: {
     consecPairs: 590,
@@ -3747,39 +3756,111 @@ export const PS_GEO_P55: {
     q25M: 31.2,
     q75M: 91.0,
     share150: 0.8932,
-    shuffleMedianM: 1436.9,
-    shuffleShare150: 0.025,
-    enrichmentX: 27.8,
+    shuffleMedianM: 1466.1,
+    shuffleShare150: 0.0226,
+    enrichmentX: 28.3,
   },
   furkovce: {
     wohnort: "Furkofze",
     rows: 2,
     parcels: [2159, 2160],
     owner: ["Van Wawech Mihó"],
-    note: "prvi imenovani prebivalci Fučkovci v arhivu (PS str. 125); parceli obstajata še danes (P47) [~] — v2 nespremenjeno",
+    note: "prvi imenovani prebivalci Fučkovci v arhivu (PS str. 125); parceli obstajata še danes (P47) [~] — v3 nespremenjeno",
   },
   invariants: {
-    I1: "v1 identiteta: 2762 vrstic / 1110 povezanih; S3 (str. 138–139) natanko 43, bajtno enake P56 kontaminacijskemu seznamu; S1/S2 1067/774 == P56 sanitizacija — PASS",
-    I2: "Blatt I: 26 vrstic P57, base == P56 lostBases, strani 3–4, lat/lng/areaModern/parts dobesedno kopirani, readConf 3/14/9 — PASS",
-    I3: "v2: 1093 = 1067 + 26; serije BI 26 / S1 997 / S2 70; 800 base; S1/S2 polja bajtno enaka v1 (preracun conf: 0 odmikov) — PASS",
-    I4: "površine: 1074 parov, median 3.7709 v [3.30, 3.90], Δ +4.85 % ≤ 5.0 % od 3.59665; premešana kontrola (seed 42) 4.0829 višja; pas ±10 % 17.4 % > 2× 5.6 % — PASS",
-    I5: "soslednost: 590 parov, median 51.8 m ≤ 100 m, ≤150 m 89.3 % ≥ 70 %, kontrola (seed 7) 1436.9 m ≥ 5× — PASS",
-    I6: "determinizem — bajtno identičen izpis pri ponovnem izračunu (--check)",
-    I7: "dokaz ⊇ runtime — rowsEvidence bajtno enake runtime rows",
-    I8: "Furkofze: natanko 2 vrstici, parceli {2159, 2160}, lastnik Van Wawech — PASS",
-    I9: "neinvarianca soslednosti: 590/51.8/0.8932 bajtno == v1 spatialProof (pozicije per base, množica števil 800 nespremenjena) — PASS",
+    I1: "RENUM 17 preslikav == P67 renumberSpec bajtno; kolizij 0 (novi base prosti ali samo strani drugačnega Blatta) — PASS",
+    I2: "pini: v2 dokaz ebb8f729…, P67 b3b64feb…, P59 95929a2e…, PARCELS fee91fca… — PASS",
+    I3: "17 preslikanih; 14 izpada (3× p78, 11× p87); p93 3× re-claim == group_pos == v2 poziciji p98 — PASS",
+    I4: "nespremenjene vrstice bajtno == v2 (1062); group-derived samo ambiguous 15 + conf 1 — PASS",
+    I5: "rows 1079, bases 798, multi 199, cross 98, ambRows 472; area 3.8512; sosledje 590/51.8 — PASS",
+    I6: "fuzije: 1903 III×2+IV×1 (delež III 0.7081 == P67), 1905 R2b profil, 1904 ratio 6.8052 izven pasu (prečrtana vrstica registra) — PASS",
+    I7: "odmiki od P67 aproksimacije dokumentirani (−4/−9/−9) — meritve bajtno == pini (merjeno, ne aproksimacija)",
+    I8: "dokaz rowsEvidence == runtime rows bajtno (1079) — PASS",
+    I9: "determinizem — bajtno identičen izpis pri ponovnem izračunu (--check)",
   },
   statusLine:
-    "SANITIZED-DETERMINISTIC — PS geolokacija v2 (P58): 1093 vrstic povezanih (1067 S1/S2 iz P55 joina po odstranitvi 43 lažnih S3 povezav [P56: površine ~42× od 1 QK + pass-razhajanje] + 26 Blatt I vrstic iz primarnega vira P57); 800 pozicioniranih številk; površine median 3.7709 ≈ 1 QK = 3.59665 m² (Δ +4.85 %, kontrola 4.0829) — čista vrednost, v1 3.6984 je bil snizan s 43 lažnimi S3 povezavami; soslednost NEINVARIANTNA: 590 parov / 51.8 m / 27.8× — identično v1; zaupanje STRONG 174 / MEDIUM 759 / WEAK 160; per-Blatt dvoumnost na v2: 211 base / 495 vrstic [~]",
+    "SANITIZED-DETERMINISTIC — PS geolokacija v3 (P68): 17 preslikav P67 specifikacije IZVEDENIH (p78 160x→150x, p93 160x→190x, p87 +1020; 0 kolizij); re-join po P55 metodi: 14 vrstic izpada (base brez PF poligona), p93 3× re-claim na 1903/1904/1905; 1079 vrstic / 798 base / multi-page 199 / cross-Blatt 98 (odmiki od P67 aproksimacije [~] dokumentirani); fuzije: 1903 = III×2+IV×1 (delež 0.7081), 1905 R2b, 1904 ratio 6.8052 izven pasu; površine median 3.8512 ≈ 1 QK = 3.59665 m² (Δ +7.08 %, kontrola 4.2771); soslednost 590 parov / 51.8 m / 28.3×; zaupanje STRONG 174 / MEDIUM 749 / WEAK 156; per-Blatt dvoumnost na v3: 199 base / 472 vrstic [~]; v2 arhiviran; SPLIT join = LASTNIKA (P69)",
   verdictSi:
-    "P58 (2026-10-14, v2): produkcija geolokacije PS (P55) SANIRANA in NADGRAJENA. ODSTRANJENIH 43 vrstic str. 138–139 (zapadek »Zusammenstellung der Grundstücke« z lastnim oštevilčenjem 1–100), ki jih je P56 dokazal kot lažne povezave (median razmerja površin 0.0892 ≪ 3.7188 v S1 — ~42× odmik od 1 Wiener QK; pass-razhajanje); nabor 43 vrstic je bajtno enak P56 kontaminacijskemu seznamu. DODANIH 26 vrstic Blatt I (str. 3–4, številke 1–36) iz primarnega vira P57 (štiri neodvisne VLM plasti) — točno vseh 26 lostBases P56. Rezultat: 1093 povezanih vrstic (1067 S1/S2 + 26 BI), 800 pozicioniranih števil. DVA MERJENA PRINOSA: (1) površinski median se dvigne z 3.6984 na 3.7709 (Δ +4.85 %) — v1 vrednost je bila UMETNO SNIZANA s 43 lažnimi povezavami z razmerji ~0.09; čista vrednost je skladna z neodvisnima merjenjema P56 (3.7394) in P57 (3.7594); kontrola (seed 42) 4.0829, pas ±10 % 17.4 % proti 5.6 %; (2) soslednost ostane BAJTNO ENAKA v1 — 590 parov / 51.8 m / 27.8× — pozicije so per base in množica pozicioniranih števil se ni spremenila, kar samo po sebi dokazuje, da sanitacija ne dotakne prostorske strukture. Zaupanje: STRONG 174 / MEDIUM 759 / WEAK 160 (S1/S2 vrednosti bajtno enake v1); Blatt I vrstice dodatno nosijo readConf iz P57 (STRONG 3 / MEDIUM 14 / WEAK 9). Per-Blatt dvoumnost na v2: 211 base / 495 vrstic [~] (P56: 515 čez celoten register vključno S3). Zgodovina v1 (1110 vrstic / 40.2 % / median 3.6984) arhivirana v v1 dokazu in v2Delta; identifikacija posamezne parcele ostaja [~].",
+    "P68 (2026-10-14, v3): sanacija številčenja IZVEDENA kot mehanski izvod P67 forenzične specifikacije (dvojna Kurrent zamenjava: p78 5→6, p93 9→6/9→0, p87 −1020). 17 preslikav s 0 kolizijami; re-join po P55 metodi: 14 vrstic izpada (base brez PF poligona — kartni priči P67), p93 3 vrstice re-claimajo poligone 1903/1904/1905 (jugozahodna lokacija; 1903/1905 delita poziciji s p98 instancami III). Skok II·IV IZGINE iz joina (lažni fuziji 1603/1604 razpadeta); čez-Blatt lažni pari 661/671 razpadejo (Blatt I instanci ostanejo čisti). Meritve: 1079 vrstic (39.1 %), 798 base, 199 multi-page, 98 cross-Blatt (blattDist I·II 31 / II·III 46 / III·IV 3 / IV·V 18), area median 3.8512 (Δ +7.08 %, kontrola seed 42: 4.2771), soslednost 590 parov / 51.8 m / 28.3× (kontrola 1466.1 m). Zaupanje 174/749/156. Odmiki od P67 aproksimacije (802/208/107) so izračunane vrednosti, ne napake. Nespremenjene vrstice bajtno == v2; registrska branja nespremenjena; P58 zgodovina (−43 S3 / +26 Blatt I) v v2Delta arhivu. SPLIT join odločitev ostaja LASTNIKA (P69); per-Blatt instanca 1903/1905 (III vs IV) ostane fuzija v v3 [~].",
   verdictEn:
-    "P58 (2026-10-14, v2): the P55 PS-geolocation production SANITIZED and upgraded. REMOVED: 43 rows of pp. 138–139 (the »Zusammenstellung der Grundstücke« appendix with its own numbering 1–100), proven false by P56 (median area ratio 0.0892 ≪ 3.7188 in S1 — ~42× off 1 Wiener QK; pass disagreement); the 43-row set is byte-identical to the P56 contamination list. ADDED: 26 Blatt I rows (pp. 3–4, numbers 1–36) from the P57 primary source (four independent VLM layers) — exactly all 26 lostBases of P56. Result: 1093 linked rows (1067 S1/S2 + 26 BI), 800 positioned numbers. TWO MEASURED EFFECTS: (1) the area median rises from 3.6984 to 3.7709 (Δ +4.85 %) — the v1 value was artificially LOWERED by 43 false links with ratios ~0.09; the clean value agrees with the independent P56 (3.7394) and P57 (3.7594) measurements; control (seed 42) 4.0829, ±10 % band 17.4 % vs 5.6 %; (2) the adjacency stays BYTE-IDENTICAL to v1 — 590 pairs / 51.8 m / 27.8× — positions are per-base and the set of positioned numbers unchanged, which by itself proves the sanitization does not touch the spatial structure. Confidence: STRONG 174 / MEDIUM 759 / WEAK 160 (S1/S2 values byte-identical to v1); the Blatt I rows additionally carry the P57 readConf (STRONG 3 / MEDIUM 14 / WEAK 9). Per-sheet ambiguity within v2: 211 bases / 495 rows [~] (P56: 515 across the full register incl. S3). The v1 history (1110 rows / 40.2 % / median 3.6984) is archived in the v1 evidence and v2Delta; per-parcel identification remains [~].",
+    "P68 (2026-10-14, v3): the renumbering sanitation REALIZED as a mechanical derivation of the P67 forensic specification (the double Kurrent substitution: p78 5→6, p93 9→6/9→0, p87 −1020). 17 mappings with 0 collisions; re-join by the P55 method: 14 rows dropped (base without a PF polygon — the P67 map witnesses), p93 3 rows re-claim the 1903/1904/1905 polygons (south-west location; 1903/1905 share positions with the p98 III instances). The II·IV skip DISSOLVES from the join (the false 1603/1604 fusions collapse); the cross-Blatt false pairs 661/671 collapse (the Blatt I instances stay clean). Measurements: 1079 rows (39.1 %), 798 bases, 199 multi-page, 98 cross-Blatt (blattDist I·II 31 / II·III 46 / III·IV 3 / IV·V 18), area median 3.8512 (Δ +7.08 %, control seed 42: 4.2771), adjacency 590 pairs / 51.8 m / 28.3× (control 1466.1 m). Confidence 174/749/156. Deviations from the P67 approximation (802/208/107) are computed values, not errors. Unchanged rows byte-identical to v2; register reads unchanged; the P58 history (−43 S3 / +26 Blatt I) archived in v2Delta. The SPLIT join decision remains the OWNER's (P69); the per-Blatt instances 1903/1905 (III vs IV) remain fused in v3 [~].",
   next: [
-    "4. VLM prehod na glave listov (»Nro. des Blattes«) — per-Blatt ločitev 211 dvoumnih base v2 (metodika štirih plasti iz P57)",
-    "prebrati strani 1–2 (naslovnica + rekapitulacija; lokalizacija 102 Bauplätze)",
-    "povezava P57 Haus Nro. (60–66 jedro + 31/29/24/20/50) s tlorisi 1825 in PT domačijami [~]",
-    "paleografija str. 138–139 (Blatt X) — zdaj izven joina, zgodovinski kontekst",
+    "veriga re-run P59–P66 s posodobljenimi pini (atribucije/moda B/split nad v3)",
+    "SPLIT joina (lastniška odločitev — zdaj nad v3: 1903/1905 nastopata kot cross-Blatt, 1603/1604/661/671 izpadajo)",
+    "930: dokončna atribucija (PF protokol / lastniška odločitev)",
+    "sistemski pregled preostalih P38 pass1 slojev (p74/p76/p77 1121–1200 [~]; p88 721–740 [~])",
+  ],
+};
+
+export const V3_RENUMBER_P68: {
+  version: number;
+  series: "PS";
+  source: string;
+  status: ResearchStatus;
+  generatedBy: string;
+  renumberSpec: { new: string; old: string; page: number }[];
+  summary: {
+    removedRows: number;
+    bases: { before: number; after: number };
+    multiPage: { before: number; after: number };
+    crossBlatt: { before: number; after: number };
+    blattDist: { "I·II": number; "II·III": number; "III·IV": number; "IV·V": number };
+    fusion1903: { rows: number; shareIII: number };
+    fusion1905: string;
+    fusion1904: string;
+  };
+  statusLine: string;
+  verdictSi: string;
+  verdictEn: string;
+  next: string[];
+} = {
+  version: 1,
+  series: "PS",
+  source:
+    "research/issue17/ps-parcels-geo-v2.json (rowsEvidence 1093, sha256 ebb8f729…) × research/issue17/ps-anomaly-forensics.json (renumberSpec 17, sha256 b3b64feb…) × research/issue17/ps-blatt-headers.json (pageAttribution P59, sha256 95929a2e…) × research/georef-n83/gurs/parcels-ko1544-merged.json (2117 poligonov, sha256 fee91fca…); dokaz research/issue17/ps-parcels-geo-v3.json + runtime src/data/atlas/ps-parcels-geo.json (version 3)",
+  status: "REVIEW",
+  generatedBy:
+    "scripts/p68_ps_v3_renumber.py (deterministično, brez AI ob delovanju, FAIL ob padu I1–I9; --check bajtno PASS)",
+  renumberSpec: [
+    { new: "1503", old: "1603", page: 78 },
+    { new: "1504", old: "1604", page: 78 },
+    { new: "1505", old: "1605", page: 78 },
+    { new: "1903", old: "1603", page: 93 },
+    { new: "1904", old: "1604", page: 93 },
+    { new: "1905", old: "1605", page: 93 },
+    { new: "1681", old: "661", page: 87 },
+    { new: "1683", old: "663", page: 87 },
+    { new: "1686", old: "666", page: 87 },
+    { new: "1687", old: "667", page: 87 },
+    { new: "1691", old: "671", page: 87 },
+    { new: "1693", old: "673", page: 87 },
+    { new: "1694", old: "674", page: 87 },
+    { new: "1695", old: "675", page: 87 },
+    { new: "1696", old: "676", page: 87 },
+    { new: "1699", old: "679", page: 87 },
+    { new: "1700", old: "680", page: 87 },
+  ],
+  summary: {
+    removedRows: 14,
+    bases: { before: 800, after: 798 },
+    multiPage: { before: 211, after: 199 },
+    crossBlatt: { before: 110, after: 98 },
+    blattDist: { "I·II": 31, "II·III": 46, "III·IV": 3, "IV·V": 18 },
+    fusion1903: { rows: 3, shareIII: 0.7081 },
+    fusion1905: "2 vrstici (III p98 + IV p93 brez areaQK → R2b profil [~])",
+    fusion1904: "1 vrstica (IV p93); nova base s PF poligonom 4927 m²; ratio 6.8052 izven pasu (prečrtana vrstica registra)",
+  },
+  statusLine:
+    "P68 V3 SANACIJA: 17 preslikav izvedenih (p78 160x→150x, p93 160x→190x, p87 +1020 — bajtno po P67, 0 kolizij); re-join po P55 metodi: 14 vrstic izpada (base brez PF poligona), p93 3× re-claim na 1903/1904/1905; v3: 1079 vrstic / 798 base / multi 199 / cross-Blatt 98 (odmiki od P67 aproksimacije [~]: −4/−9/−9); fuzije: 1903 III×2+IV×1 (0.7081), 1905 R2b, 1904 6.8052; v2 arhiviran; SPLIT = LASTNIKA (P69)",
+  verdictSi:
+    "P68: V3 SANACIJA ŠTEVILČENJA IZVEDENA (issue #13) — mehanski izvod P67 specifikacije, deterministično, brez AI ob delovanju. 17 preslikav s 0 kolizijami; re-join po P55 metodi: 14 vrstic izpada (base brez PF poligona — kartni priči P67), p93 3 vrstice re-claimajo poligone 1903/1904/1905 (jugozahodna lokacija; 1903/1905 delita poziciji s p98 instancami III). Skok II·IV IZGINE iz joina (lažni fuziji 1603/1604 razpadeta); čez-Blatt lažni pari 661/671 razpadejo. Meritve: 1079 vrstic, 798 base, 199 multi-page, 98 cross-Blatt; area median 3.8512 (Δ +7.08 %); sosledje 590/51.8/28.3×. Odmiki od P67 aproksimacije (802/208/107) so izračunane vrednosti — aproksimacija ni štela 9 preostalih 661–680 cross base in izpada brez-poligonov. Nespremenjene vrstice bajtno == v2; registrska branja ps-raw NESPREMENJENA (parzella ostaja originalno branje — sanacija le na join ključu). SPLIT join odločitev ostaja LASTNIKA (P69). Strojno berljivo: research/issue17/ps-parcels-geo-v3.json + runtime src/data/atlas/ps-parcels-geo.json (/api/atlas/ps-parcels-geo).",
+  verdictEn:
+    "P68: THE v3 RENUMBERING SANITATION REALIZED (issue #13) — a mechanical derivation of the P67 specification, deterministic, no AI at runtime. 17 mappings with 0 collisions; re-join by the P55 method: 14 rows dropped (base without a PF polygon — the P67 map witnesses), p93 3 rows re-claim the 1903/1904/1905 polygons (south-west location; 1903/1905 share positions with the p98 III instances). The II·IV skip DISSOLVES from the join (the false 1603/1604 fusions collapse); the cross-Blatt false pairs 661/671 collapse. Measurements: 1079 rows, 798 bases, 199 multi-page, 98 cross-Blatt; area median 3.8512 (Δ +7.08 %); adjacency 590/51.8/28.3×. Deviations from the P67 approximation (802/208/107) are computed values — the approximation ignored the 9 remaining 661–680 cross bases and the polygon-less drops. Unchanged rows byte-identical to v2; the ps-raw register reads UNCHANGED (parzella keeps the original reading — the sanitation touches only the join key). The SPLIT join decision remains the OWNER's (P69). Machine-readable: research/issue17/ps-parcels-geo-v3.json + the runtime src/data/atlas/ps-parcels-geo.json (/api/atlas/ps-parcels-geo).",
+  next: [
+    "veriga re-run P59–P66 s posodobljenimi pini (atribucije/moda B/split nad v3)",
+    "SPLIT joina (lastniška odločitev — 1903/1905 nastopata kot cross-Blatt)",
+    "930: dokončna atribucija (PF protokol / lastniška odločitev)",
+    "sistemski pregled preostalih P38 pass1 slojev (p74/p76/p77 1121–1200 [~]; p88 721–740 [~])",
   ],
 };
 
@@ -4077,20 +4158,20 @@ export const BLATT_HEADERS_P59: {
     midPageTransitions: "p93 (1901–1907 prečrtano → 1303+), p101 (III→IV @ r7), p65 (II→III @ r2 [~])",
   },
   perBlattAmbiguity: {
-    basesOnMultiplePages_v2: 211,
-    basesOnMultipleBlatter: 110,
-    ruleCandidateBases: ["163", "176", "644", "653", "654", "655", "656", "657", "666", "671", "676", "928", "930", "934", "936", "939", "1831"],
+    basesOnMultiplePages_v2: 199,
+    basesOnMultipleBlatter: 98,
+    ruleCandidateBases: ["163", "176", "644", "653", "654", "655", "656", "657", "928", "930", "934", "936", "939", "1831"],
     ruleCandidateNote:
       "baza s TOČNO eno instanco z median razmerjem v [0.8, 1.25] — kandidat za prihodnjo per-Blatt atribucijo joina (P60), MERJENO ne izvedeno [~]",
     verdictSi:
-      "per-Blatt ločitev MERJENA: od 211 bazi na več straneh jih 110 sega čez ≥2 Blatta (P62: +4 iz strani 133–136) (P39: ista številka pod različnima Blattoma = druga parcela) — instance zdaj razločljive; join po številki ostaja nespremenjen (brez dokaza se NE prerazporeja)",
+      "per-Blatt ločitev MERJENA: od 199 bazi na več straneh (v3 P68; v2: 211) jih 98 sega čez ≥2 Blatta (P39: ista številka pod različnima Blattoma = druga parcela) — instance zdaj razločljive; join po številki ostaja nespremenjen (brez dokaza se NE prerazporeja)",
   },
   statusLine:
-    "P59 GLAVE LISTOV: 135/135 strani sveže branih (2 prehoda; polna pokritost — P62 dopolnilo po premagani kvoti 429), 32 arbitraža-oči, struktura Blatt I–V + lokalne sekcije; 211 dvoumnih base → 110 čez-Blatt, 17 ruleCandidate [~]; join v2 nespremenjen",
+    "P59 GLAVE LISTOV: 135/135 strani sveže branih (2 prehoda; polna pokritost — P62 dopolnilo po premagani kvoti 429), 32 arbitraža-oči, struktura Blatt I–V + lokalne sekcije; 199 dvoumnih base (v3 P68; v2: 211) → 98 čez-Blatt, 14 ruleCandidate [~]; join v3 nespremenjen",
   verdictSi:
-    "P59: GLAVE LISTOV REGISTRA PS (issue #13) — prvo zanesljivo branje stolpca 'Nro. des Blattes' (levi izrez 135/135 strani × 2 neodvisna prehoda + 32 arbitraž agent-oči na 3× izrezih; stari P38 blatt stolpec potrjeno šumen — p12 ditto prebrano kot 20× 'I'): Blatt I = parcele 1–800 (strani 3–40; prehodna cona 721–800 s popravki I→II na p40/p41/p42 [~]), Blatt II se začne pri 801 (strani 43–92; p72 = Blatt III 1281–1302 vmes; cona 1100–1640 prepletena z lokalnimi sekcijami 161–180/601–620/921–960 [~]); interleave per-Riede sekcij sredi globalnega teka (p26/p37/p39/...), p101 z ulomki (196½ — podštevilčene parcele); sred-stranski prehodi p93 (1901–1907 prečrtano → 1303+)/p101/p65; VLM Kurrent pasti dokumentirane (4↔8, 7→1, odrezane vodilne števke — parzella razponi nizka zaupanja, numeralе visoka); PER-BLATT DVoumnost: 211 base v2 na več straneh → 110 čez ≥2 Blatta (instance zdaj razločljive po P39), 17 ruleCandidate (edina instanca v pasu razmerij [0.8, 1.25] — npr. 163: Blatt I @ 7.0 vs Blatt II @ 0.981); konec registra (p133–137) nosi eksplicitne korekcijske cone IV→V/II (rdeči tuš, oči + 2-prehodno soglasje); P63 KOREKCIJA: p139 = Blatt IIb (pod-list; Parzelle 41–60 + lastninske kolone — prejšnja očesna razlaga 'Nro. des Hauses.' napaka; P58 open #6 ZAPRT), p138 = izbrisana leva tabela + 'Zusammenstellung der Grundstücke' (Wiese 1–20) desna; join v2 NESPREMENJEN (meritve brez prerazporeditev — disciplina P56/P58); pokritost: POLNA 135/135 × 2 (P62: 133–136, 138–139, p137 pass2 dopolnjena); identifikacija per-Blatt instanc [~] — strojno branje ni dokazni vir",
+    "P59: GLAVE LISTOV REGISTRA PS (issue #13) — prvo zanesljivo branje stolpca 'Nro. des Blattes' (levi izrez 135/135 strani × 2 neodvisna prehoda + 32 arbitraž agent-oči na 3× izrezih; stari P38 blatt stolpec potrjeno šumen — p12 ditto prebrano kot 20× 'I'): Blatt I = parcele 1–800 (strani 3–40; prehodna cona 721–800 s popravki I→II na p40/p41/p42 [~]), Blatt II se začne pri 801 (strani 43–92; p72 = Blatt III 1281–1302 vmes; cona 1100–1640 prepletena z lokalnimi sekcijami 161–180/601–620/921–960 [~]); interleave per-Riede sekcij sredi globalnega teka (p26/p37/p39/...), p101 z ulomki (196½ — podštevilčene parcele); sred-stranski prehodi p93 (1901–1907 prečrtano → 1303+)/p101/p65; VLM Kurrent pasti dokumentirane (4↔8, 7→1, odrezane vodilne števke — parzella razponi nizka zaupanja, numeralе visoka); PER-BLATT DVoumnost: 199 base v3 na več straneh (v2: 211; P68 renum) → 98 čez ≥2 Blatta (instance zdaj razločljive po P39), 14 ruleCandidate (edina instanca v pasu razmerij [0.8, 1.25] — npr. 163: Blatt I @ 7.0 vs Blatt II @ 0.981); konec registra (p133–137) nosi eksplicitne korekcijske cone IV→V/II (rdeči tuš, oči + 2-prehodno soglasje); P63 KOREKCIJA: p139 = Blatt IIb (pod-list; Parzelle 41–60 + lastninske kolone — prejšnja očesna razlaga 'Nro. des Hauses.' napaka; P58 open #6 ZAPRT), p138 = izbrisana leva tabela + 'Zusammenstellung der Grundstücke' (Wiese 1–20) desna; join v2 NESPREMENJEN (meritve brez prerazporeditev — disciplina P56/P58); pokritost: POLNA 135/135 × 2 (P62: 133–136, 138–139, p137 pass2 dopolnjena); identifikacija per-Blatt instanc [~] — strojno branje ni dokazni vir",
   verdictEn:
-    "P59: PS REGISTER LEAF HEADERS (issue #13) — first reliable reading of the 'Nro. des Blattes' column (left-strip crops of 135/135 pages x 2 independent passes + 32 agent-eye arbitrations on 3x crops; the old P38 blatt column confirmed noisy — p12 ditto read as 20x 'I'): Blatt I = parcels 1-800 (pp. 3-40; transition zone 721-800 with I-to-II corrections on p40/p41/p42 [~]), Blatt II starts at 801 (pp. 43-92; p72 = Blatt III 1281-1302 in between; the 1100-1640 zone interleaved with local sections 161-180/601-620/921-960 [~]); per-Riede section interleave within the global run (p26/p37/p39/...), p101 with fractions (196 1/2 — sub-numbered parcels); mid-page transitions p93 (1901-1907 crossed out to 1303+)/p101/p65; VLM Kurrent pitfalls documented (4-8, 7-to-1, dropped leading digits — parzella ranges low-confidence, numerals high); PER-BLATT AMBIGUITY: of 211 v2 bases on multiple pages, 110 span >=2 Blaetter (instances now distinguishable per P39), 17 ruleCandidates (exactly one instance within the ratio band [0.8, 1.25] — e.g. 163: Blatt I @ 7.0 vs Blatt II @ 0.981); register end (p133–137) carries explicit IV→V/II correction zones (red ink, agent eyes + 2-pass agreement); the v2 join UNCHANGED (measurements without reassignments — P56/P58 discipline); coverage: FULL 135/135 x 2 (P62: 133–136, 138–139, p137 pass2 completed); per-Blatt instance identification [~] — machine reading is not an evidentiary source",
+    "P59: PS REGISTER LEAF HEADERS (issue #13) — first reliable reading of the 'Nro. des Blattes' column (left-strip crops of 135/135 pages x 2 independent passes + 32 agent-eye arbitrations on 3x crops; the old P38 blatt column confirmed noisy — p12 ditto read as 20x 'I'): Blatt I = parcels 1-800 (pp. 3-40; transition zone 721-800 with I-to-II corrections on p40/p41/p42 [~]), Blatt II starts at 801 (pp. 43-92; p72 = Blatt III 1281-1302 in between; the 1100-1640 zone interleaved with local sections 161-180/601-620/921-960 [~]); per-Riede section interleave within the global run (p26/p37/p39/...), p101 with fractions (196 1/2 — sub-numbered parcels); mid-page transitions p93 (1901-1907 crossed out to 1303+)/p101/p65; VLM Kurrent pitfalls documented (4-8, 7-to-1, dropped leading digits — parzella ranges low-confidence, numerals high); PER-BLATT AMBIGUITY: of 199 v3 bases on multiple pages (v2: 211; P68 renumbering), 98 span >=2 Blaetter (instances now distinguishable per P39), 14 ruleCandidates (exactly one instance within the ratio band [0.8, 1.25] — e.g. 163: Blatt I @ 7.0 vs Blatt II @ 0.981); register end (p133–137) carries explicit IV→V/II correction zones (red ink, agent eyes + 2-pass agreement); the v2 join UNCHANGED (measurements without reassignments — P56/P58 discipline); coverage: FULL 135/135 x 2 (P62: 133–136, 138–139, p137 pass2 completed); per-Blatt instance identification [~] — machine reading is not an evidentiary source",
   next: [
     "P62 IZVEDENO: 133–136, 138–139 + p137 pass2 prebrani — polna pokritost 135/135 (kvota 429 premagana)",
     "P60 kandidat: per-Blatt atribucija joina za ruleCandidate baze (dokazno pravilo: edina instanca v pasu [0.8, 1.25] + soslednost) — zahteva lastno fazo s pini",
@@ -4144,7 +4225,7 @@ export const TAIL_P63: {
   },
   structureImpact: {
     blattNumerele: "I–V + IIb (pod-list) — IIb NOV v strukturi registra PS",
-    v2Impact: "p138/139 brez vrstic v v2 → perBlattAmbiguity 211/110/17 nespremenjeni; join v2 nespremenjen",
+    v2Impact: "p138/139 brez vrstic v v2 → perBlattAmbiguity 211/110/17 (v2) / 199/98/14 (v3 P68); join v2 nespremenjen",
   },
   flagsCount: 42,
   statusLine:
@@ -4204,12 +4285,12 @@ export const PERBLATT_ATTR_P60: {
       "P59 evidence perBlattAmbiguity.ruleCandidateNote (MERJENO); P60 izvedba + soslednost-kontrola",
   },
   summary: {
-    bases: 17,
-    rows: 23,
-    attributedBlattDist: { I: 1, II: 12, III: 4 },
-    soslednost: { ok: 21, flag: 2, flaggedRows: ["671@p36", "934@p99"] },
-    attrPages: [36, 49, 61, 83, 84, 85, 86, 87, 94, 99],
-    relist100Pages: [36, 49, 61, 83, 84, 85, 86, 87, 99],
+    bases: 14,
+    rows: 20,
+    attributedBlattDist: { I: 0, II: 10, III: 4 },
+    soslednost: { ok: 19, flag: 1, flaggedRows: ["934@p99"] },
+    attrPages: [49, 61, 83, 84, 85, 86, 94, 99],
+    relist100Pages: [49, 61, 83, 84, 85, 86, 99],
   },
   attrBases: {
     "163": { attributedBlatt: "II", inBandMedian: 0.9813, inBandPages: [61, 83, 84, 86], outBlatts: ["I"] },
@@ -4220,9 +4301,6 @@ export const PERBLATT_ATTR_P60: {
     "655": { attributedBlatt: "II", inBandMedian: 0.8014, inBandPages: [85], outBlatts: ["I"] },
     "656": { attributedBlatt: "II", inBandMedian: 0.8602, inBandPages: [85], outBlatts: ["I"] },
     "657": { attributedBlatt: "II", inBandMedian: 1.2126, inBandPages: [85], outBlatts: ["I"] },
-    "666": { attributedBlatt: "II", inBandMedian: 0.8537, inBandPages: [87], outBlatts: ["I"] },
-    "671": { attributedBlatt: "I", inBandMedian: 0.9086, inBandPages: [36], outBlatts: ["II"] },
-    "676": { attributedBlatt: "II", inBandMedian: 0.8004, inBandPages: [87], outBlatts: ["I"] },
     "928": { attributedBlatt: "III", inBandMedian: 0.9742, inBandPages: [99], outBlatts: ["II"] },
     "930": { attributedBlatt: "II", inBandMedian: 1.2241, inBandPages: [49], outBlatts: ["III"] },
     "934": { attributedBlatt: "III", inBandMedian: 1.0498, inBandPages: [99], outBlatts: ["II"] },
@@ -4239,19 +4317,19 @@ export const PERBLATT_ATTR_P60: {
     },
     modaB: {
       band: [0.8, 1.25],
-      count: 62,
-      note: "ratio ≈ 1 — areaModern ≈ areaQK po ŠTEVILKI; pas pravila P59/P60 ujema to modo",
+      count: 60,
+      note: "ratio ≈ 1 — areaModern ≈ areaQK po ŠTEVILKI; pas pravila P59/P60 ujema to modo (P68 v3)",
     },
     factor: 3.59665,
     status:
       "ODPRTO — absolutna korespondenca pas-instanc ni dokazana; atribucija = relativa (najboljše ujemanje med instancami) [~]",
   },
   statusLine:
-    "P60 PER-BLATT ATRIBUCIJA: 17 ruleCandidate atributiranih (II 12 · I 1 · III 4), 23 vrstic, soslednost 21/23 [~]; re-listing 100 % na pas-straneh [36, 49, 61, 83, 84, 85, 86, 87, 99]; join v2 nespremenjen",
+    "P60 PER-BLATT ATRIBUCIJA: 14 ruleCandidate atributiranih (II 10 · III 4), 20 vrstic, soslednost 19/20 [~]; re-listing 100 % na pas-straneh [49, 61, 83, 84, 85, 86, 99]; join v3 nespremenjen (P68 v3 re-run)",
   verdictSi:
-    "P60: PER-BLATT ATRIBUCIJA ruleCandidate (issue #13) — P59 pravilo pasu [0.8, 1.25] IZVEDENO kot merjena atribucija: vsaka od 17 base dobi instanco v pasu (II 12 · I 1 · III 4; 23 vrstic; npr. 163: Blatt II @ 0.9813 — 4 kulture Wiese/Prunigad/Weide/Aehn na straneh 61/83/84/86 — vs Blatt I @ 7.0 @ p11); soslednost-kontrola 21/23 (671@p36 in 934@p99 [~] — prečrtane vrstice v registru); STRUKTURNI PRINOS: strani pas-instanc (36, 49, 61, 83–87, 94, 99) nosijo 100 % več-stranskih base — potrditev interpretacije Kultur-Tabellen (re-listing parcel po kulturah; p85 = 'Wiese und Gfrett' družina za 644–657, p99 = 'Wiesen' sekcija za 928–939); UNIT-SEMANTICS OPOMBA: pas ujema modo B (ratio ≈ 1, n=62), ne modo A (≈ 3.59665 = 1 QK → m², n=226) — faktor ~3.6 med modama, absolutna korespondenca ODPRTA, atribucija = relativa [~]; join v2 NESPREMENJEN (izpisi brez pozicij/površin, sha256 v2 vhoda pinan — disciplina P56/P58/P59)",
+    "P60: PER-BLATT ATRIBUCIJA ruleCandidate (issue #13; P68 v3 re-run) — P59 pravilo pasu [0.8, 1.25] IZVEDENO kot merjena atribucija: vsaka od 14 base dobi instanco v pasu (II 10 · III 4; 20 vrstic; npr. 163: Blatt II @ 0.9813 — kulture Wiese/Prunigad/Weide/Aehn na straneh 61/83/84/86 — vs Blatt I @ 7.0 @ p11); soslednost-kontrola 19/20 (934@p99 [~] — prečrtana vrstica; 671/666/676 izpadle — single-Blatt po P68 renum); STRUKTURNI PRINOS: strani pas-instanc (49, 61, 83–86, 94, 99) nosijo 100 % več-stranskih base — potrditev interpretacije Kultur-Tabellen (re-listing parcel po kulturah; p85 = 'Wiese und Gfrett' družina za 644–657, p99 = 'Wiesen' sekcija za 928–939); UNIT-SEMANTICS OPOMBA: pas ujema modo B (ratio ≈ 1, n=60), ne modo A (≈ 3.59665 = 1 QK → m², n=226) — faktor ~3.6 med modama, absolutna korespondenca ODPRTA, atribucija = relativa [~]; join v3 NESPREMENJEN (izpisi brez pozicij/površin, sha256 v3 vhoda pinan — disciplina P56/P58/P59/P68)",
   verdictEn:
-    "P60: PER-BLATT ATTRIBUTION OF RULECANDIDATES (issue #13) — the P59 band rule [0.8, 1.25] EXECUTED as a measured attribution: each of the 17 bases gets its in-band instance (II 12 · I 1 · III 4; 23 rows; e.g. 163: Blatt II @ 0.9813 — 4 cultures Wiese/Prunigad/Weide/Aehn on pp. 61/83/84/86 — vs Blatt I @ 7.0 @ p11); adjacency control 21/23 (671@p36 and 934@p99 [~] — crossed-out rows in the register); STRUCTURAL GAIN: the attribute pages (36, 49, 61, 83-87, 94, 99) carry 100% multi-page bases — confirming the Kultur-Tabellen interpretation (re-listing of parcels by culture; p85 = 'Wiese und Gfrett' family for 644-657, p99 = 'Wiesen' section for 928-939); UNIT-SEMANTICS NOTE: the band matches mode B (ratio ~ 1, n=62), not mode A (~ 3.59665 = 1 QK to m2, n=226) — a factor of ~3.6 between modes, absolute correspondence OPEN, attribution = relative [~]; the v2 join UNCHANGED (outputs contain no positions/areas, the v2 input sha256 pinned — P56/P58/P59 discipline)",
+    "P60: PER-BLATT ATTRIBUTION OF RULECANDIDATES (issue #13; P68 v3 re-run) — the P59 band rule [0.8, 1.25] EXECUTED as a measured attribution: each of the 14 bases gets its in-band instance (II 10 · III 4; 20 rows; e.g. 163: Blatt II @ 0.9813 — cultures Wiese/Prunigad/Weide/Aehn on pp. 61/83/84/86 — vs Blatt I @ 7.0 @ p11); adjacency control 19/20 (934@p99 [~] — crossed-out row; 671/666/676 dropped — single-Blatt after the P68 renumbering); STRUCTURAL GAIN: the attribute pages (49, 61, 83-86, 94, 99) carry 100% multi-page bases — confirming the Kultur-Tabellen interpretation (re-listing of parcels by culture; p85 = 'Wiese und Gfrett' family for 644-657, p99 = 'Wiesen' section for 928-939); UNIT-SEMANTICS NOTE: the band matches mode B (ratio ~ 1, n=60), not mode A (~ 3.59665 = 1 QK to m2, n=226) — a factor of ~3.6 between modes, absolute correspondence OPEN, attribution = relative [~]; the v3 join UNCHANGED (outputs contain no positions/areas, the v3 input sha256 pinned — P56/P58/P59/P68 discipline)",
   next: [
     "razrešiti unit-semantics mode B (ratio ≈ 1): kolonialna merska enota ali delna površina [~]",
     "razširiti atribucijo na vseh 110 čez-Blatt base (P59 pokritost POPOLNA — P62)",
@@ -4317,9 +4395,9 @@ export const UNIT_SEM_P61: {
     target: "areaQK × 3.59665 (m²)",
   },
   summary: {
-    modi: { A: 226, B: 62, X: 800, noRatio: 5 },
+    modi: { A: 226, B: 60, X: 788, noRatio: 5 },  // P68 v3 (v2: A 226/B 62/X 800)
     modaBPages: 42,
-    modaBBlattDist: { II: 32, IV: 15, III: 9, I: 5, "I·II": 1, null: 0 },
+    modaBBlattDist: { II: 30, IV: 15, III: 9, I: 5, "I·II": 1, null: 0 },  // P68 v3 (v2: II 32)
     blocks: [
       { pages: [85], n: 5, kultur: "Wiese und Gfrett" },
       { pages: [86], n: 2, kultur: "Wies" },
@@ -4327,9 +4405,9 @@ export const UNIT_SEM_P61: {
     ],
     multiB: ["163", "176"],
     areaQK: {
-      B: { mediana: 987.5, min: 76, max: 10964 },
-      A: { mediana: 622.5, min: 23, max: 6139 },
-    },
+      B: { mediana: 973, min: 76, max: 10964 },
+      A: { mediana: 633, min: 23, max: 6139 },
+    },  // P68 v3 (v2: B 987.5 / A 622.5)
   },
   kontrola: {
     A: {
@@ -4340,12 +4418,12 @@ export const UNIT_SEM_P61: {
       perm100: { hit: 118, rate: 0.5221 },
     },
     B: {
-      n: 62,
-      real50: { hit: 18, rate: 0.2903 },
-      perm50: { hit: 11, rate: 0.1774 },
-      real100: { hit: 45, rate: 0.7258 },
-      perm100: { hit: 38, rate: 0.6129 },
-    },
+      n: 60,
+      real50: { hit: 18, rate: 0.3 },
+      perm50: { hit: 13, rate: 0.2167 },
+      real100: { hit: 45, rate: 0.75 },
+      perm100: { hit: 38, rate: 0.6333 },
+    },  // P68 v3 (v2 n=62: 0.2903/0.1774/0.7258/0.6129)
   },
   hipoteze: {
     H1_napacenJoin: {
@@ -4370,11 +4448,11 @@ export const UNIT_SEM_P61: {
       "pas izbere vrstico v konvenciji, številčno primerljivi s sodobno meritvijo — atribucija smiselna kot RELATIVA [~]; atribucije P60 NESPREMENJENE",
   },
   statusLine:
-    "P61 UNIT-SEMANTICS MERJENA: moda B (ratio ≈ 1, n=62) = drugačna registracijska konvencija [~], ne napaka ujeme — permutacijska kontrola @ 50/100 m pas ±25 %: moda A real 0.9248/0.9735 vs perm 0.1637/0.5221 (ujeta = prava parcela), moda B real 0.2903/0.7258 vs perm 0.1774/0.6129 → prava parcela (QK×3.6) ni v bližini → H1 napačni join ZAVRŽEN; delna površina neuporabna (2 base z ≥2 B); blattDist II 32 · IV 15 · III 9 · I 5 (P62: null 5 → IV +4, II +1); bloki 3/9; identiteta enote ODPRTA; pas pravilo P59/P60 = moda B — atribucija smiselna kot relativa",
+    "P61 UNIT-SEMANTICS MERJENA: moda B (ratio ≈ 1, n=60) = drugačna registracijska konvencija [~], ne napaka ujeme — permutacijska kontrola @ 50/100 m pas ±25 %: moda A real 0.9248/0.9735 vs perm 0.1637/0.5221 (ujeta = prava parcela), moda B real 0.3/0.75 vs perm 0.2167/0.6333 → prava parcela (QK×3.6) ni v bližini → H1 napačni join ZAVRŽEN; delna površina neuporabna (2 base z ≥2 B); blattDist II 30 · IV 15 · III 9 · I 5 (P68 v3; v2: II 32); bloki 3/9; identiteta enote ODPRTA; pas pravilo P59/P60 = moda B — atribucija smiselna kot relativa",
   verdictSi:
-    "P61 merjeno razrešuje odprto točko P60 #1 s preusmeritvijo: moda B ni napaka ujeme in ni delna površina — je dosledna drugačna registracijska konvencija površin (številka ≈ sodobna meritev v m²; n=62 vrstic, 42 strani, Blatt II 32 · IV 15 · III 9 · I 5). Permutacijska kontrola (FNV-1a deterministične točke, radija 50/100 m, pas ±25 %): pri moda A je prava parcela (površina ≈ QK×3.6) tik zraven (0.9248 @ 50 m vs 0.1637 naključno), pri moda B pa ni (0.2903 vs 0.1774) → napačni številčni join ZAVRŽEN kot glavni mehanizem. Delna površina neuporabna: samo 2 base z ≥2 moda B vrsticami. Identiteta enote ostaja ODPRTA [~] — paleografska/dokumentarna potrditev. Implikacija za P60: pas pravilo [0.8, 1.25] izbere vrstico v konvenciji, ki je številčno primerljiva s sodobno meritvijo — atribucija ostaja smiselna kot RELATIVA [~]; join v2 NESPREMENJEN",
+    "P61 merjeno razrešuje odprto točko P60 #1 s preusmeritvijo: moda B ni napaka ujeme in ni delna površina — je dosledna drugačna registracijska konvencija površin (številka ≈ sodobna meritev v m²; n=60 vrstic, 41 strani, Blatt II 30 · IV 15 · III 9 · I 5). Permutacijska kontrola (FNV-1a deterministične točke, radija 50/100 m, pas ±25 %): pri moda A je prava parcela (površina ≈ QK×3.6) tik zraven (0.9248 @ 50 m vs 0.1637 naključno), pri moda B pa ni (0.2903 vs 0.1774) → napačni številčni join ZAVRŽEN kot glavni mehanizem. Delna površina neuporabna: samo 2 base z ≥2 moda B vrsticami. Identiteta enote ostaja ODPRTA [~] — paleografska/dokumentarna potrditev. Implikacija za P60: pas pravilo [0.8, 1.25] izbere vrstico v konvenciji, ki je številčno primerljiva s sodobno meritvijo — atribucija ostaja smiselna kot RELATIVA [~]; join v2 NESPREMENJEN",
   verdictEn:
-    "P61 measures and re-frames P60 open point #1: mode B is not a join error and not a partial surface — it is a consistent alternative registration convention (number ≈ modern m2; n=62 rows, 42 pages, Blatt II 32 · IV 15 · III 9 · I 5). Permutation control (FNV-1a deterministic points, 50/100 m, ±25 %): for mode A the true parcel (≈ QK×3.6) sits next door (0.9248 @ 50 m vs 0.1637 random), for mode B it does not (0.2903 vs 0.1774) → wrong-number join REJECTED as the main mechanism. Partial surface unusable: only 2 bases with ≥2 mode B rows. Unit identity remains OPEN [~] — paleographic/documentary confirmation. Implication for P60: the [0.8, 1.25] band selects rows in the convention numerically comparable with the modern measurement — attribution remains sound as RELATIVE [~]; join v2 UNCHANGED",
+    "P61 measures and re-frames P60 open point #1: mode B is not a join error and not a partial surface — it is a consistent alternative registration convention (number ≈ modern m2; n=60 rows, 41 pages, Blatt II 30 · IV 15 · III 9 · I 5). Permutation control (FNV-1a deterministic points, 50/100 m, ±25 %): for mode A the true parcel (≈ QK×3.6) sits next door (0.9248 @ 50 m vs 0.1637 random), for mode B it does not (0.2903 vs 0.1774) → wrong-number join REJECTED as the main mechanism. Partial surface unusable: only 2 bases with ≥2 mode B rows. Unit identity remains OPEN [~] — paleographic/documentary confirmation. Implication for P60: the [0.8, 1.25] band selects rows in the convention numerically comparable with the modern measurement — attribution remains sound as RELATIVE [~]; join v2 UNCHANGED",
   next: [
     "identiteta enote moda B (paleografija/dokumenti: glave sekcij str. 61–99, pojasnila registra)",
     "razširitev atribucije na 110 čez-Blatt base (P59 pokritost POPOLNA — P62)",
@@ -4397,9 +4475,9 @@ export const ATTR_EXT_P64: {
     statusDist: { R1: number; R2a: number; R2b: number; split: number; fragmented: number };
     attributedBlattDist: { I: number; II: number; III: number; IV: number; V: number };
     distByRule: {
-      R1: { I: number; II: number; III: number };
+      R1: Record<string, number>;
       R2a: { I: number; II: number; III: number; IV: number; V: number };
-      R2b: { II: number };
+      R2b: Record<string, number>;
     };
     splitDominantDist: { I: number; II: number; III: number; IV: number; V: number };
     thresholdSensitivity: Record<string, number>;
@@ -4419,12 +4497,12 @@ export const ATTR_EXT_P64: {
   version: 1,
   series: "PS",
   source:
-    "research/issue17/ps-parcels-geo-v2.json (rowsEvidence 1093) × ps-blatt-headers.json (pageAttribution P59) × ps-perblatt-attribution.json (R1 P60); dokaz research/issue17/ps-attribution-ext.json + runtime src/data/atlas/ps-attribution-ext.json",
+    "research/issue17/ps-parcels-geo-v3.json (rowsEvidence 1079; P68 v3) × ps-blatt-headers.json (pageAttribution P59) × ps-perblatt-attribution.json (R1 P60); dokaz research/issue17/ps-attribution-ext.json + runtime src/data/atlas/ps-attribution-ext.json",
   status: "REVIEW",
   generatedBy:
-    "scripts/p64_ps_attribution_ext.py (deterministično, brez AI ob delovanju, FAIL ob padu I1–I8; --check bajtno PASS)",
+    "scripts/p64_ps_attribution_ext.py (deterministično, brez AI ob delovanju, FAIL ob padu I1–I8; --check bajtno PASS; P68 v3 re-run)",
   rule: {
-    R1: "pas [0.8, 1.25] (P60, moda B) — 17 base, bajtno konsistentno s P60",
+    R1: "pas [0.8, 1.25] (P60, moda B) — 14 base, bajtno konsistentno s P60",
     R2a: "area-dominanca: dominantni Blatt (Σ areaQK) z deležem ≥ 0.75",
     R2b: "točno en Blatt nosi vso izmerjeno površino → attributedBlatt + areaIncomplete flag",
     split: "dominantni delež v [0.5, 0.75) → attributedBlatt = null + blattShares alternative",
@@ -4433,23 +4511,22 @@ export const ATTR_EXT_P64: {
       "sosedi ±1 po vrstnem redu vrstic evidence na isti strani; za atributirane base nad vrsticami atributiranega Blatta, za split nad vsemi",
   },
   summary: {
-    bases: 110,
-    attributed: 71,
-    statusDist: { R1: 17, R2a: 53, R2b: 1, split: 39, fragmented: 0 },
-    attributedBlattDist: { I: 5, II: 42, III: 15, IV: 5, V: 4 },
+    bases: 98,
+    attributed: 62,
+    statusDist: { R1: 14, R2a: 47, R2b: 1, split: 36, fragmented: 0 },
+    attributedBlattDist: { I: 2, II: 35, III: 16, IV: 5, V: 4 },
     distByRule: {
-      R1: { I: 1, II: 12, III: 4 },
-      R2a: { I: 4, II: 29, III: 11, IV: 5, V: 4 },
-      R2b: { II: 1 },
+      R1: { II: 10, III: 4 },
+      R2a: { I: 2, II: 25, III: 11, IV: 5, V: 4 },
+      R2b: { III: 1 },
     },
-    splitDominantDist: { I: 1, II: 19, III: 9, IV: 6, V: 4 },
-    thresholdSensitivity: { "0.6": 69, "0.6667": 63, "0.7": 58, "0.75": 53, "0.8": 45, "0.9": 24 },
-    soslednost: { ok: 186, flag: 30, relevantRows: 216, r1Subset: { ok: 21, flag: 2 } },
+    splitDominantDist: { I: 1, II: 16, III: 10, IV: 5, V: 4 },
+    thresholdSensitivity: { "0.6": 63, "0.6667": 57, "0.7": 52, "0.75": 47, "0.8": 39, "0.9": 20 },
+    soslednost: { ok: 175, flag: 29, relevantRows: 204, r1Subset: { ok: 19, flag: 1 } },
     r1R2Consistency: {
-      agree: 15,
-      diverge: 2,
+      agree: 16,
+      diverge: 1,
       divergentBases: [
-        { base: "671", r1: "I", r2Dominant: "II", share: 0.8844 },
         { base: "930", r1: "II", r2Dominant: "III", share: 0.763 },
       ],
     },
@@ -4465,15 +4542,10 @@ export const ATTR_EXT_P64: {
       attributedBlatt: "II",
       noteSi: "MERJENA DIVERGENCA: R1 II (moda B pas @ p49) vs R2 dominantni III @ 0.763 — R1 ima prednost [~]",
     },
-    "671": {
-      status: "R1",
-      attributedBlatt: "I",
-      noteSi: "MERJENA DIVERGENCA: R1 I (moda B pas @ p36) vs R2 dominantni II @ 0.8844 (1423.0 QK) — R1 ima prednost [~]; soslednost flag (prečrtana vrstica)",
-    },
     "1605": {
       status: "R2b",
-      attributedBlatt: "II",
-      noteSi: "ena sama Blatt s površino: II 2688.0 QK @ p78 (share 1.0) vs IV @ p93 brez areaQK — areaIncomplete flag [~]",
+      attributedBlatt: "IV",
+      noteSi: "ena sama Blatt s površino: IV 4934.0 m² @ p93 (1905; brez areaQK) vs III @ p98 — areaIncomplete flag [~]; P68: 1605 → 1905 (p78 prečrtana vrstica izpadla)",
     },
     "642": {
       status: "split",
@@ -4510,9 +4582,9 @@ export const ATTR_FULL_P65: {
     statusDist: { R1: number; R2a: number; R2b: number; "R3-single": number; split: number };
     attributedBlattDist: { I: number; II: number; III: number; IV: number; V: number };
     distByRule: {
-      R1: { I: number; II: number; III: number };
+      R1: Record<string, number>;
       R2a: { I: number; II: number; III: number; IV: number; V: number };
-      R2b: { II: number };
+      R2b: Record<string, number>;
       "R3-single": { I: number; II: number; III: number; IV: number };
     };
     soslednost: { ok: number; flag: number; relevantRows: number; r3Subset: { ok: number; flag: number } };
@@ -4536,12 +4608,12 @@ export const ATTR_FULL_P65: {
   version: 1,
   series: "PS",
   source:
-    "research/issue17/ps-parcels-geo-v2.json (rowsEvidence 1093) × ps-blatt-headers.json (pageAttribution P59) × ps-attribution-ext.json (P64 runtime 110, bajtno); dokaz research/issue17/ps-attribution-full.json + runtime src/data/atlas/ps-attribution-full.json",
+    "research/issue17/ps-parcels-geo-v3.json (rowsEvidence 1079; P68 v3) × ps-blatt-headers.json (pageAttribution P59) × ps-attribution-ext.json (P64 runtime 98, bajtno); dokaz research/issue17/ps-attribution-full.json + runtime src/data/atlas/ps-attribution-full.json",
   status: "REVIEW",
   generatedBy:
-    "scripts/p65_ps_attribution_full.py (deterministično, brez AI ob delovanju, FAIL ob padu I1–I8; --check bajtno PASS)",
+    "scripts/p65_ps_attribution_full.py (deterministično, brez AI ob delovanju, FAIL ob padu I1–I8; --check bajtno PASS; P68 v3 re-run)",
   rule: {
-    R1: "pas [0.8, 1.25] (P60, moda B) — 17 base, bajtno konsistentno s P60 (P64)",
+    R1: "pas [0.8, 1.25] (P60, moda B) — 14 base, bajtno konsistentno s P60 (P64)",
     R2a: "area-dominanca: dominantni Blatt (Σ areaQK) z deležem ≥ 0.75 (P64)",
     R2b: "točno en Blatt nosi vso izmerjeno površino → attributedBlatt + areaIncomplete flag (P64)",
     "R3-single": "vse vrstice base na straneh ISTEGA Blatta → attributedBlatt = ta Blatt (trivialno, P65)",
@@ -4550,36 +4622,36 @@ export const ATTR_FULL_P65: {
       "sosedi ±1 po vrstnem redu vrstic evidence na isti strani; za atributirane base nad vrsticami atributiranega Blatta, za split nad vsemi (P64 metoda)",
   },
   summary: {
-    multiPageBases: 211,
-    attributed: 172,
-    split: 39,
-    statusDist: { R1: 17, R2a: 53, R2b: 1, "R3-single": 101, split: 39 },
-    attributedBlattDist: { I: 8, II: 68, III: 29, IV: 63, V: 4 },
+    multiPageBases: 199,
+    attributed: 163,
+    split: 36,
+    statusDist: { R1: 14, R2a: 47, R2b: 1, "R3-single": 101, split: 36 },
+    attributedBlattDist: { I: 5, II: 61, III: 30, IV: 63, V: 4 },
     distByRule: {
-      R1: { I: 1, II: 12, III: 4 },
-      R2a: { I: 4, II: 29, III: 11, IV: 5, V: 4 },
-      R2b: { II: 1 },
+      R1: { II: 10, III: 4 },
+      R2a: { I: 2, II: 25, III: 11, IV: 5, V: 4 },
+      R2b: { III: 1 },
       "R3-single": { I: 3, II: 26, III: 14, IV: 58 },
     },
-    soslednost: { ok: 375, flag: 50, relevantRows: 425, r3Subset: { ok: 189, flag: 20 } },
+    soslednost: { ok: 364, flag: 49, relevantRows: 413, r3Subset: { ok: 189, flag: 20 } },
     r3Rows: { total: 205, rowsPerBaseDist: { "2": 98, "3": 3 } },
     coverage: {
-      basesTotal: 800,
-      rowsTotal: 1093,
-      singlePage: 589,
-      singlePageByBlatt: { I: 145, "I·II": 10, II: 183, III: 28, IV: 205, V: 18 },
-      multiPage: 211,
-      multiBlatt: 110,
+      basesTotal: 798,
+      rowsTotal: 1079,
+      singlePage: 599,
+      singlePageByBlatt: { I: 156, "I·II": 10, II: 183, III: 26, IV: 206, V: 18 },
+      multiPage: 199,
+      multiBlatt: 98,
       singleBlattMultiPage: 101,
       nullAttributionRows: 0,
     },
   },
   statusLine:
-    "P65 POLNA ATRIBUCIJA: 172/211 več-stranskih base atributiranih (P64 R1/R2a/R2b 71 + R3-single 101), 39 split z alternativami [~]; Blatt II 68 · IV 63 · III 29 · I 8 · V 4; pokritost registra 800 base (589 single-page implicitno + 211 multi-page polno); join v2 nespremanjen",
+    "P65 POLNA ATRIBUCIJA: 163/199 več-stranskih base atributiranih (P64 R1/R2a/R2b 62 + R3-single 101), 36 split z alternativami [~]; Blatt II 61 · IV 63 · III 30 · I 5 · V 4; pokritost registra 798 base (599 single-page implicitno + 199 multi-page polno); join v3 nespremanjen (P68 v3 re-run)",
   verdictSi:
-    "P65: POLNA PER-BLATT ATRIBUCIJA — 101 SINGLE-BLATT VEČ-STRANSKIH BASE (issue #13) — odprta točka P64 #3 izpolnjena: 101 base, katerih vse vrstice nosijo strani ISTEGA Blatta, dobi ta Blatt kot attributedBlatt (status 'R3-single', trivialno in nedvoumno: I 3 · II 26 · III 14 · IV 58; 205 vrstic — 98 base × 2 + 3 base × 3; vseh 101 z izmerjeno površino) → pokritost več-stranskih base POPOLNA: 211/211 (110 čez-Blatt iz P64 + 101 single-Blatt), skupaj 172 atributiranih (Blatt II 68 · IV 63 · III 29 · I 8 · V 4) + 39 split z alternativami (lastniška odločitev o SPLIT joinu); POLNA POKRITOST REGISTRA (kontrolni blok): 800 base × 1093 vrstic = 589 single-page (implicitno atributirane prek strani: I 145 · I·II 10 · II 183 · III 28 · IV 205 · V 18) + 211 multi-page; 0 vrstic brez atribucije strani; soslednost relevantnih vrstic skupaj 375/425 (R3 del 189/209, flag 20); 110 P64 atribucij bajtno nespremenjenih (I3); join v2 NESPREMENJEN (meritve brez prerazporeditev — disciplina P56/P58/P59); strojna atribucija ni dokazni vir",
+    "P65: POLNA PER-BLATT ATRIBUCIJA — 101 SINGLE-BLATT VEČ-STRANSKIH BASE (issue #13) — odprta točka P64 #3 izpolnjena: 101 base, katerih vse vrstice nosijo strani ISTEGA Blatta, dobi ta Blatt kot attributedBlatt (status 'R3-single', trivialno in nedvoumno: I 3 · II 26 · III 14 · IV 58; 205 vrstic — 98 base × 2 + 3 base × 3; vseh 101 z izmerjeno površino) → pokritost več-stranskih base POPOLNA: 199/199 (98 čez-Blatt iz P64 + 101 single-Blatt), skupaj 163 atributiranih (Blatt II 61 · IV 63 · III 30 · I 5 · V 4) + 36 split z alternativami (lastniška odločitev o SPLIT joinu); POLNA POKRITOST REGISTRA (kontrolni blok): 798 base × 1079 vrstic = 599 single-page (implicitno atributirane prek strani: I 156 · I·II 10 · II 183 · III 26 · IV 206 · V 18) + 199 multi-page; 0 vrstic brez atribucije strani; soslednost relevantnih vrstic skupaj 364/413 (R3 del 189/209, flag 20); 98 P64 atribucij bajtno nespremenjenih (I3); join v3 NESPREMENJEN (meritve brez prerazporeditev — disciplina P56/P58/P59/P68); strojna atribucija ni dokazni vir",
   verdictEn:
-    "P65: FULL PER-BLATT ATTRIBUTION — 101 SINGLE-BLATT MULTI-PAGE BASES (issue #13) — the P64 open point #3 fulfilled: the 101 bases whose all rows sit on pages of the SAME Blatt receive that Blatt as attributedBlatt (status 'R3-single', trivial and unambiguous: I 3 · II 26 · III 14 · IV 58; 205 rows — 98 bases × 2 + 3 bases × 3; all 101 with measured area) -> the multi-page coverage is COMPLETE: 211/211 (110 cross-Blatt from P64 + 101 single-Blatt), 172 attributed in total (Blatt II 68 · IV 63 · III 29 · I 8 · V 4) + 39 splits with alternatives (owner decision on the SPLIT join); FULL REGISTER COVERAGE (control block): 800 bases × 1,093 rows = 589 single-page (implicitly attributed via the page: I 145 · I·II 10 · II 183 · III 28 · IV 205 · V 18) + 211 multi-page; 0 rows without page attribution; adjacency of relevant rows 375/425 in total (the R3 part 189/209, 20 flags); the 110 P64 attributions byte-unchanged (I3); the v2 join UNCHANGED (measurements without reassignments — P56/P58/P59 discipline); machine attribution is not an evidentiary source",
+    "P65: FULL PER-BLATT ATTRIBUTION — 101 SINGLE-BLATT MULTI-PAGE BASES (issue #13) — the P64 open point #3 fulfilled: the 101 bases whose all rows sit on pages of the SAME Blatt receive that Blatt as attributedBlatt (status 'R3-single', trivial and unambiguous: I 3 · II 26 · III 14 · IV 58; 205 rows — 98 bases × 2 + 3 bases × 3; all 101 with measured area) -> the multi-page coverage is COMPLETE: 199/199 (98 cross-Blatt from P64 + 101 single-Blatt), 163 attributed in total (Blatt II 61 · IV 63 · III 30 · I 5 · V 4) + 36 splits with alternatives (owner decision on the SPLIT join); FULL REGISTER COVERAGE (control block): 798 bases × 1,079 rows = 599 single-page (implicitly attributed via the page: I 156 · I·II 10 · II 183 · III 26 · IV 206 · V 18) + 199 multi-page; 0 rows without page attribution; adjacency of relevant rows 364/413 in total (the R3 part 189/209, 20 flags); the 98 P64 attributions byte-unchanged (I3); the v3 join UNCHANGED (measurements without reassignments — P56/P58/P59/P68 discipline); machine attribution is not an evidentiary source",
   next: [
     "per-Blatt SPLIT joina za 39 split base (odločitev lastnika o pozicijah/razdelitvah) — zdaj nad polnim datasetom 211",
     "razlaga 2 R1↔R2 divergenc (930: moda B pas @ p49 vs III dominanca @ 0.763; 671: moda B pas @ p36 vs II dominanca @ 0.8844) [~]",
@@ -4620,7 +4692,7 @@ export const SPLIT_PACK_P66: {
   version: 1,
   series: "PS",
   source:
-    "src/data/atlas/ps-attribution-full.json (P65 runtime 211, split 39 — bajtni vir) × research/issue17/ps-parcels-geo-v2.json (rowsEvidence 1093) × research/issue17/ps-blatt-headers.json (pageAttribution P59); dokaz research/issue17/ps-split-pack.json + runtime src/data/atlas/ps-split-pack.json",
+    "src/data/atlas/ps-attribution-full.json (P65 runtime 199, split 36 — bajtni vir) × research/issue17/ps-parcels-geo-v3.json (rowsEvidence 1079; P68 v3) × research/issue17/ps-blatt-headers.json (pageAttribution P59); dokaz research/issue17/ps-split-pack.json + runtime src/data/atlas/ps-split-pack.json",
   status: "REVIEW",
   generatedBy:
     "scripts/p66_ps_split_pack.py (deterministično, brez AI ob delovanju, FAIL ob padu I1–I8; --check bajtno PASS)",
@@ -4637,32 +4709,32 @@ export const SPLIT_PACK_P66: {
       "ali vse vrstice base nosijo isti par (lat, lng) v v2 (null = vse brez); SAMO števec v summary — koordinate ne gredo v izpis (I6)",
   },
   summary: {
-    splitBases: 39,
-    rowsTotal: 93,
-    rowsPerBaseDist: { "2": 25, "3": 13, "4": 1 },
-    shareCountDist: { "2": 39 },
-    blattPairDist: { "I·II": 7, "II·III": 21, "II·IV": 2, "IV·V": 9 },
-    adjacentPairs: 37,
-    skipPairs: 2,
-    uniqueOwnersDist: { "2": 25, "3": 13, "4": 1 },
-    ownerRelationDist: { disjoint: 39 },
-    dominantShareBuckets: { "0.50–0.60": 23, "0.60–0.70": 11, "0.70–0.75": 5 },
-    kulturesTotal: 92,
-    geoShared: { shared: 39, distinct: 0, null: 0 },
+    splitBases: 36,
+    rowsTotal: 88,
+    rowsPerBaseDist: { "2": 21, "3": 14, "4": 1 },
+    shareCountDist: { "2": 36 },
+    blattPairDist: { "I·II": 5, "II·III": 21, "III·IV": 1, "IV·V": 9 },
+    adjacentPairs: 36,
+    skipPairs: 0,
+    uniqueOwnersDist: { "2": 21, "3": 14, "4": 1 },
+    ownerRelationDist: { disjoint: 36 },
+    dominantShareBuckets: { "0.50–0.60": 20, "0.60–0.70": 11, "0.70–0.75": 5 },
+    kulturesTotal: 86,
+    geoShared: { shared: 36, distinct: 0, null: 0 },
     areaSuspectRows: 0,
-    sosledje: { ok: 82, flag: 11, relevantRows: 93, flagBases: ["1821", "2141", "2143", "646", "661"] },
+    sosledje: { ok: 79, flag: 11, relevantRows: 90, flagBases: ["1821", "1903", "2141", "2143", "646"] },
   },
   statusLine:
-    "P66 SPLIT PACK: 39 split base (39 ⊂ 211 multi-page), 93 vrstic; pari I·II 7 · II·III 21 · II·IV 2 · IV·V 9 (sosednji 37, skok 2); lastniki per Blatt DISJUNKTNI 39/39; pasovi 23/11/5; geo ena geometrija 39/39; join v2 nespremanjen; odločitev lastnika",
+    "P66 SPLIT PACK: 36 split base (36 ⊂ 199 multi-page; P68 v3 re-run), 88 vrstic; pari I·II 5 · II·III 21 · III·IV 1 · IV·V 9 (sosednji 36, skok 0 — II·IV skok razpadel); lastniki per Blatt DISJUNKTNI 36/36; pasovi 20/11/5; geo ena geometrija 36/36; join v3 nespremanjen; odločitev lastnika",
   verdictSi:
-    "P66: SPLIT DECISION PACK — 39 SPLIT BASE (issue #13) — odločitveni paket za per-Blatt SPLIT joina (odprta točka P64 #8, kandidat #1 iz P65; deterministično, brez AI ob delovanju; NE odloča namesto lastnika — MERI in DOKAZUJE dejstva): vseh 39 base ima TOČNO 2 deleža (blattShares), 93 vrstic (25 × 2 + 13 × 3 + 1 × 4); Blatt pari I·II 7 · II·III 21 · II·IV 2 · IV·V 9 (37/39 sosednja Blatta, 2 skoka II·IV — 1603/1604, isti kulturi na obeh Blattih); LASTNIŠKA RAZČLENITEV PER BLATT: 39/39 DISJUNKTNI lastniki — vsak split base ima različne lastnike po Blattih (močan dokaz, da je ista številka pod različnima Blattoma 2 RAZLIČNI realni parceli); 2–3 edinstvenih lastnikov (25/13/1); dominantni deleži [0.50,0.60) 23 · [0.60,0.70) 11 · [0.70,0.75) 5; kulture 92 (kulturesByBlatt); GEO: 39/39 base nosi VSEH vrstic ENAKO geometrijo joina v2 (0 različnih) — join v2 je na nivoju številke, zato SPLIT join bi zahteval 2 geometriji (števec merjen brez koordinat — I6); areaSuspect 0; sosledje split del 82/93 (flag 11 — 5 base: 646, 661, 1821, 2141, 2143); P65 polja 39× bajtno (I3); join v2 NESPREMENJEN (disciplina P56/P58/P59/P65); odločitev LASTNIKA",
+    "P66: SPLIT DECISION PACK — 39 SPLIT BASE (issue #13) — odločitveni paket za per-Blatt SPLIT joina (odprta točka P64 #8, kandidat #1 iz P65; deterministično, brez AI ob delovanju; NE odloča namesto lastnika — MERI in DOKAZUJE dejstva): vseh 36 base ima TOČNO 2 deleža (blattShares), 88 vrstic (21 × 2 + 14 × 3 + 1 × 4); Blatt pari I·II 5 · II·III 21 · III·IV 1 · IV·V 9 (36/36 sosednja Blatta, 0 skokov — II·IV skok RAZPADEL s P68 renumifikacijo 1603/1604); LASTNIŠKA RAZČLENITEV PER BLATT: 36/36 DISJUNKTNI lastniki — vsak split base ima različne lastnike po Blattih (močan dokaz, da je ista številka pod različnima Blattoma 2 RAZLIČNI realni parceli); 2–3 edinstvenih lastnikov (21/14/1); dominantni deleži [0.50,0.60) 20 · [0.60,0.70) 11 · [0.70,0.75) 5; kulture 86 (kulturesByBlatt); GEO: 36/36 base nosi VSEH vrstic ENAKO geometrijo joina v3 (0 različnih) — join v3 je na nivoju številke, zato SPLIT join bi zahteval 2 geometriji (števec merjen brez koordinat — I6); areaSuspect 0; sosledje split del 79/90 (flag 11 — 5 base: 646, 1821, 1903, 2141, 2143); P65 polja 36× bajtno (I3); join v3 NESPREMENJEN (disciplina P56/P58/P59/P65/P68); odločitev LASTNIKA",
   verdictEn:
-    "P66: SPLIT DECISION PACK — 39 SPLIT BASES (issue #13) — the decision pack for the per-Blatt SPLIT join (P64 open point #8, candidate #1 from P65; deterministic, no AI at runtime; does NOT decide on behalf of the owner — MEASURES and PROVES the facts): all 39 bases have EXACTLY 2 shares (blattShares), 93 rows (25 × 2 + 13 × 3 + 1 × 4); Blatt pairs I·II 7 · II·III 21 · II·IV 2 · IV·V 9 (37/39 adjacent Blatts, 2 skips II·IV — 1603/1604, same cultures on both Blatts); OWNERSHIP PARTITION PER BLATT: 39/39 DISJOINT owners — every split base has different owners per Blatt (strong evidence that the same number under different Blatts is 2 DIFFERENT real parcels); 2–3 unique owners (25/13/1); dominant shares [0.50,0.60) 23 · [0.60,0.70) 11 · [0.70,0.75) 5; cultures 92 (kulturesByBlatt); GEO: 39/39 bases carry the SAME join-v2 geometry for ALL rows (0 distinct) — the v2 join is at the number level, so a SPLIT join would require 2 geometries (counter measured without coordinates — I6); areaSuspect 0; adjacency split part 82/93 (11 flags — 5 bases: 646, 661, 1821, 2141, 2143); the P65 fields byte-identical 39× (I3); the v2 join UNCHANGED (P56/P58/P59/P65 discipline); the decision belongs to the OWNER",
+    "P66: SPLIT DECISION PACK — 39 SPLIT BASES (issue #13) — the decision pack for the per-Blatt SPLIT join (P64 open point #8, candidate #1 from P65; deterministic, no AI at runtime; does NOT decide on behalf of the owner — MEASURES and PROVES the facts): all 36 bases have EXACTLY 2 shares (blattShares), 88 rows (21 × 2 + 14 × 3 + 1 × 4); Blatt pairs I·II 5 · II·III 21 · III·IV 1 · IV·V 9 (36/36 adjacent Blatts, 0 skips — the II·IV skip DISSOLVED with the P68 renumbering of 1603/1604); OWNERSHIP PARTITION PER BLATT: 36/36 DISJOINT owners — every split base has different owners per Blatt (strong evidence that the same number under different Blatts is 2 DIFFERENT real parcels); 2–3 unique owners (21/14/1); dominant shares [0.50,0.60) 20 · [0.60,0.70) 11 · [0.70,0.75) 5; cultures 86 (kulturesByBlatt); GEO: 36/36 bases carry the SAME join-v3 geometry for ALL rows (0 distinct) — the v3 join is at the number level, so a SPLIT join would require 2 geometries (counter measured without coordinates — I6); areaSuspect 0; adjacency split part 79/90 (11 flags — 5 bases: 646, 1821, 1903, 2141, 2143); the P65 fields byte-identical 36× (I3); the v3 join UNCHANGED (P56/P58/P59/P65/P68 discipline); the decision belongs to the OWNER",
   next: [
     "LASTNIŠKA ODLOČITEV o per-Blatt SPLIT joinu za 39 base (2 geometriji; razdelitev per deleži ali per lastnika) — ta paket je dokazni vir",
     "izvedba SPLIT joina (ob odobritvi): v2 join upgrade — 39 base → 78 kandidatnih instanc per Blatt, geometrije per Blatt georef [~]",
-    "razlaga 2 skokov II·IV (1603, 1604: isti kulturi 'Acker' + 'Weide und Gfällgut, Laubm.' na obeh Blattih — preveriti dednost/preimenovanje)",
-    "razlaga 5 sosledje flagov (646, 661, 1821, 2141, 2143)",
+    "P68 IZVEDENO: 2 skokov II·IV RAZPADLA (1603→1503/1903, 1604→1504/1904 — lažne fuzije); 1605 → 1905 (R2b), 661/671 čez-Blatt primera razpadla",
+    "razlaga 5 sosledje flagov (646, 1821, 1903, 2141, 2143 — 661 razpadla, 1903 nov)",
     "lastniki atributiranih instanc ↔ PF protokol (ostaja iz P65)",
   ],
 };
@@ -4705,7 +4777,7 @@ export const ANOM_FORENSICS_P67: {
     "scripts/p67_ps_anomaly_forensics.py (deterministično, brez AI ob delovanju, FAIL ob padu I1–I8; --check bajtno PASS; 28× sha256 pini)",
   rule: {
     renumber:
-      "17 preslikav (p78 160x→150x, p93 160x→190x, p87 +1020) — SPECIFIKACIJA za P68; v2 nespremanjen",
+      "17 preslikav (p78 160x→150x, p93 160x→190x, p87 +1020) — P68 IZVEDENA (v3); v2 forenzika nespremenjena",
     sosledje:
       "±1 sosed znotraj v2 vrstic iste strani (P65 replikacija); flag = brez soseda",
     ownersByBlatt:
@@ -4719,20 +4791,20 @@ export const ANOM_FORENSICS_P67: {
     fusedBasesResolved: ["1603", "1604", "1605", "661", "671"],
     flagRowsExplained: 11,
     flagRowsTotal: 11,
-    crossBlattBases: 110,
-    ownerDisjoint: 110,
-    ownerRelationDist: { disjoint: 110 },
-    divergences: { "671": "razrešena (ni divergencia)", "930": "[~] z merjenim dokazom" },
-    projection: { bases: 802, multiPage: 208, crossBlatt: 107, r3Single: 101 },
+    crossBlattBases: 98,
+    ownerDisjoint: 98,
+    ownerRelationDist: { disjoint: 98 },
+    divergences: { "671": "razrešena (ni divergencia; P68 preslikava 671→1691)", "930": "[~] z merjenim dokazom" },
+    projection: { bases: 798, multiPage: 199, crossBlatt: 98, r3Single: 101 },
   },
   statusLine:
-    "P67 FORENZIKA: skok II·IV = artifakt dvojne Kurrent zamenjave (p78 1501–1520, p93 1901–1920, p87 1681–1700 — oči+strip 2×+karta; renumerifikacija 17 preslikav); 5 sosledje flagov = obseg joina (11/11 razloženih; sosedje brez poligonov; meja strani); 671 ni divergenca (II instanca = 1691), 930 [~] z dokazom; disjunktnost lastnikov per Blatt UNIVERZALNA 110/110; v2 nespremanjen; renumerifikacija = P68",
+    "P67 FORENZIKA: skok II·IV = artifakt dvojne Kurrent zamenjave (p78 1501–1520, p93 1901–1920, p87 1681–1700 — oči+strip 2×+karta; renumerifikacija 17 preslikav = P68 IZVEDENA); 5 sosledje flagov = obseg joina (11/11 razloženih; sosedje brez poligonov; meja strani); 671 ni divergenca (II instanca = 1691), 930 [~] z dokazom; disjunktnost lastnikov per Blatt UNIVERZALNA (v2 110/110; v3 98/98); projekcija = P68 meritve (798/199/98); v2 forenzika nespremanjena",
   verdictSi:
-    "P67: FORENZIČNI PAKET ANOMALIJ (issue #13) — štiri merjena dela, deterministično, brez AI ob delovanju; v2 join NESPREMENJEN (disciplina P56–P66). (A) SKOK II·IV (1603/1604) = ARTIFAKT DVOJNE KURRENT ZAMENJAVE: p78 (Blatt II, Wüstung 'Pod Grabino') prave številke 1501–1520 (strip 2× bajtno, vrstice 5–14 rdeče prečrtane, kontinuiteta 1461–1480→1481–1500→1501–1520, karta: 1461–1500 ima 12 poligonov / 1121–1200 PRAZNO), v2 1603–1605 = P38 napaka 5→6 → prave 1503/1504/1505; p93 (Blatt IV) prave 1901–1920 (strip 2× r11–20 bajtno, oči r1–8 = 1901–1908 z rdečimi prečrtami 1901–1904/1906–1907, karta: blok 1901–1907 ima TOČNO 7 poligonov), P38 pass1 = 9→0 (1001–1020), pass2 = 9→6 (1601–1620) → prave 1903/1904/1905; p87 (Blatt II) prave 1681–1700 (pass2 + oči r1–8 = 1681–1688; pass1 661–680 = izguba vodilne 1 + 8→6; strip 161–180 = odrezane vodilne) → 11 v2 vrstic napačno (+1020) in nosi LAŽNO geometrijo (poligoni 661–680 = Blatt I p36 instance, koordinate bajtno identične). Posledica: 1603/1604 = lažni fuziji II 1503/1504 × IV 1903/1904 — skok II·IV IZGINE; 1605 = fuzija II 1505 (prečrtan) × IV 1905; 661/671 = lažni fuziji I × II 1681/1691 — čez-Blatt primera RAZPADETA; p93 (IV) in p98 (III) nosita ISTI obseg 1901–1920 (disjunktni lastniki — per-Blatt primež); karta: 1903/1904/1905 poligoni obstajajo (jugozahodna lokacija), 1503–1505 in 1681–1700 NE; 16xx poligoni na tretji lokaciji (v2 jih je lažno pripisal fuzijam). RENUMERIFIKACIJA 17 preslikav (p78 3×, p93 3×, p87 11×; 0 kolizij) = P68; projekcija: base 800→802, multi-page 211→208, čez-Blatt 110→107 (1903 pas split 0.7081 [~], 1905 R2b [~]), runtime −14 vrstic brez geometrije. (B) 5 SOSLEDJE FLAGOV (646, 661, 1821, 2141, 2143; 11 vrstic) = ARTEFAKT OBSEGA JOINA: manjkajoči sosedje obstajajo v registru (P38 z imeni: 645 'Ulrich Franz', 647 'Gemeinde', 662 'Mülley Franzl', 1822 'Büller Lorenz', 1823 'Gavčnik Miha', 1824 'Gavčnik Gregor', 2142 'Häupler Martin', 2144–2147 …), a brez poligonov v karti → izpad iz v2 (38.6 % pokritost); 1821/2141/661 so začetki strani (1820/2140 imata poligona — na prejšnji strani, per-page kontrola je ne vidi); 11/11 razloženih, 0 anomalij registra. (C) R1↔R2: 671 RAZREŠENA (ni divergencia — II instanca @p87 = 1691, druga parcela; 671 ostane I-only); 930 ostaja [~] z merjenim dokazom (moda B pas ✓@p49 ✗@p99, disjunktna lastnika, sosedi ±1 na obeh straneh, karta 921–940: 9 poligonov). (D) UNIVERZALNA DISJUNKTNOST: lastniki per Blatt DISJUNKTNI za VSEH 110 čez-Blatt base (110/110; 39 split == P66 bajtno, 71 atributiranih 71/71) → per-Blatt številčenje: ista številka pod različnima Blattoma = 2 RAZLIČNI realni parceli; atribucija (R1/R2a/R2b) je dodelitev geometrije instanci, ne identiteta parcele [~]. Strojna forenzika ni dokazni vir; odločitev o renumerifikaciji in SPLIT joinu = LASTNIKA (P68/P69).",
+    "P67: FORENZIČNI PAKET ANOMALIJ (issue #13) — štiri merjena dela, deterministično, brez AI ob delovanju; v2 join NESPREMENJEN (disciplina P56–P66). (A) SKOK II·IV (1603/1604) = ARTIFAKT DVOJNE KURRENT ZAMENJAVE: p78 (Blatt II, Wüstung 'Pod Grabino') prave številke 1501–1520 (strip 2× bajtno, vrstice 5–14 rdeče prečrtane, kontinuiteta 1461–1480→1481–1500→1501–1520, karta: 1461–1500 ima 12 poligonov / 1121–1200 PRAZNO), v2 1603–1605 = P38 napaka 5→6 → prave 1503/1504/1505; p93 (Blatt IV) prave 1901–1920 (strip 2× r11–20 bajtno, oči r1–8 = 1901–1908 z rdečimi prečrtami 1901–1904/1906–1907, karta: blok 1901–1907 ima TOČNO 7 poligonov), P38 pass1 = 9→0 (1001–1020), pass2 = 9→6 (1601–1620) → prave 1903/1904/1905; p87 (Blatt II) prave 1681–1700 (pass2 + oči r1–8 = 1681–1688; pass1 661–680 = izguba vodilne 1 + 8→6; strip 161–180 = odrezane vodilne) → 11 v2 vrstic napačno (+1020) in nosi LAŽNO geometrijo (poligoni 661–680 = Blatt I p36 instance, koordinate bajtno identične). Posledica: 1603/1604 = lažni fuziji II 1503/1504 × IV 1903/1904 — skok II·IV IZGINE; 1605 = fuzija II 1505 (prečrtan) × IV 1905; 661/671 = lažni fuziji I × II 1681/1691 — čez-Blatt primera RAZPADETA; p93 (IV) in p98 (III) nosita ISTI obseg 1901–1920 (disjunktni lastniki — per-Blatt primež); karta: 1903/1904/1905 poligoni obstajajo (jugozahodna lokacija), 1503–1505 in 1681–1700 NE; 16xx poligoni na tretji lokaciji (v2 jih je lažno pripisal fuzijam). RENUMERIFIKACIJA 17 preslikav (p78 3×, p93 3×, p87 11×; 0 kolizij) = P68 IZVEDENA; P68 meritve: base 800→798, multi-page 211→199, čez-Blatt 110→98 (blattDist I·II 31 / II·III 46 / III·IV 3 / IV·V 18; 1903 pas split 0.7081 [~], 1905 R2b [~]), runtime −14 vrstic brez geometrije (P67 aproksimacija 802/208/107 je bila [~]). (B) 5 SOSLEDJE FLAGOV (646, 661, 1821, 2141, 2143; 11 vrstic) = ARTEFAKT OBSEGA JOINA: manjkajoči sosedje obstajajo v registru (P38 z imeni: 645 'Ulrich Franz', 647 'Gemeinde', 662 'Mülley Franzl', 1822 'Büller Lorenz', 1823 'Gavčnik Miha', 1824 'Gavčnik Gregor', 2142 'Häupler Martin', 2144–2147 …), a brez poligonov v karti → izpad iz v2 (38.6 % pokritost); 1821/2141/661 so začetki strani (1820/2140 imata poligona — na prejšnji strani, per-page kontrola je ne vidi); 11/11 razloženih, 0 anomalij registra. (C) R1↔R2: 671 RAZREŠENA (ni divergencia — II instanca @p87 = 1691, druga parcela; 671 ostane I-only); 930 ostaja [~] z merjenim dokazom (moda B pas ✓@p49 ✗@p99, disjunktna lastnika, sosedi ±1 na obeh straneh, karta 921–940: 9 poligonov). (D) UNIVERZALNA DISJUNKTNOST: lastniki per Blatt DISJUNKTNI za VSE čez-Blatt base (v2 110/110; v3 98/98; 36 split == P66 bajtno, 62 atributiranih 62/62) → per-Blatt številčenje: ista številka pod različnima Blattoma = 2 RAZLIČNI realni parceli; atribucija (R1/R2a/R2b) je dodelitev geometrije instanci, ne identiteta parcele [~]. Strojna forenzika ni dokazni vir; renumerifikacija P68 IZVEDENA; odločitev o SPLIT joinu = LASTNIKA (P69).",
   verdictEn:
-    "P67: ANOMALY FORENSICS PACK (issue #13) — four measured parts, deterministic, no AI at runtime; the v2 join UNCHANGED (P56–P66 discipline). (A) THE II·IV SKIP (1603/1604) = A DOUBLE KURRENT SUBSTITUTION ARTIFACT: p78 (Blatt II, Wüstung 'Pod Grabino') true numbers 1501–1520 (strip 2 passes byte-exact, rows 5–14 red-crossed, continuity 1461–1480→1481–1500→1501–1520, map: 1461–1500 has 12 polygons / 1121–1200 EMPTY), v2 1603–1605 = P38 error 5→6 → true 1503/1504/1505; p93 (Blatt IV) true 1901–1920 (strip 2 passes r11–20 byte-exact, eyes r1–8 = 1901–1908 with red crossings 1901–1904/1906–1907, map: block 1901–1907 has EXACTLY 7 polygons), P38 pass1 = 9→0 (1001–1020), pass2 = 9→6 (1601–1620) → true 1903/1904/1905; p87 (Blatt II) true 1681–1700 (pass2 + eyes r1–8 = 1681–1688; pass1 661–680 = lost leading 1 + 8→6; strip 161–180 = clipped leading digits) → 11 v2 rows wrong (+1020) carrying FALSE geometry (the 661–680 polygons belong to the Blatt I p36 instances — coordinates byte-identical). Consequences: 1603/1604 = false fusions of II 1503/1504 × IV 1903/1904 — the II·IV skip DISSOLVES; 1605 = fusion of II 1505 (crossed) × IV 1905; 661/671 = false fusions I × II 1681/1691 — the cross-Blatt pairs COLLAPSE; p93 (IV) and p98 (III) carry the SAME range 1901–1920 (disjoint owners — a textbook per-Blatt overlap); map: 1903/1904/1905 polygons exist (south-west location), 1503–1505 and 1681–1700 do NOT; the 16xx polygons sit at a third location (falsely assigned to the fusions by v2). RENUMBERING 17 mappings (p78 3×, p93 3×, p87 11×; 0 collisions) = P68; projection: bases 800→802, multi-page 211→208, cross-Blatt 110→107 (1903 split band 0.7081 [~], 1905 R2b [~]), runtime −14 geometry-less rows. (B) THE 5 ADJACENCY FLAGS (646, 661, 1821, 2141, 2143; 11 rows) = A JOIN-SCOPE ARTIFACT: the missing neighbours exist in the register (P38 with names: 645 'Ulrich Franz', 647 'Gemeinde', 662 'Mülley Franzl', 1822 'Büller Lorenz', 1823 'Gavčnik Miha', 1824 'Gavčnik Gregor', 2142 'Häupler Martin', 2144–2147 …) but have no polygons in the map → dropped from v2 (38.6 % coverage); 1821/2141/661 are page-start rows (1820/2140 HAVE polygons — on the previous page, invisible to the per-page check); 11/11 explained, 0 register anomalies. (C) R1↔R2: 671 RESOLVED (not a divergence — the II instance @p87 = 1691, a different parcel; 671 stays I-only); 930 remains [~] with measured evidence (mode B band ✓@p49 ✗@p99, disjoint owners, ±1 neighbours on both pages, map 921–940: 9 polygons). (D) UNIVERSAL DISJOINTNESS: owners per Blatt DISJOINT for ALL 110 cross-Blatt bases (110/110; the 39 split byte-equal P66, the 71 attributed 71/71) → per-Blatt numbering: the same number under different Blatts = 2 DIFFERENT real parcels; the attribution (R1/R2a/R2b) is a geometry-to-instance assignment, not parcel identity [~]. Machine forensics is not a source of proof; the renumbering and SPLIT join decisions belong to the OWNER (P68/P69).",
+    "P67: ANOMALY FORENSICS PACK (issue #13) — four measured parts, deterministic, no AI at runtime; the v2 join UNCHANGED (P56–P66 discipline). (A) THE II·IV SKIP (1603/1604) = A DOUBLE KURRENT SUBSTITUTION ARTIFACT: p78 (Blatt II, Wüstung 'Pod Grabino') true numbers 1501–1520 (strip 2 passes byte-exact, rows 5–14 red-crossed, continuity 1461–1480→1481–1500→1501–1520, map: 1461–1500 has 12 polygons / 1121–1200 EMPTY), v2 1603–1605 = P38 error 5→6 → true 1503/1504/1505; p93 (Blatt IV) true 1901–1920 (strip 2 passes r11–20 byte-exact, eyes r1–8 = 1901–1908 with red crossings 1901–1904/1906–1907, map: block 1901–1907 has EXACTLY 7 polygons), P38 pass1 = 9→0 (1001–1020), pass2 = 9→6 (1601–1620) → true 1903/1904/1905; p87 (Blatt II) true 1681–1700 (pass2 + eyes r1–8 = 1681–1688; pass1 661–680 = lost leading 1 + 8→6; strip 161–180 = clipped leading digits) → 11 v2 rows wrong (+1020) carrying FALSE geometry (the 661–680 polygons belong to the Blatt I p36 instances — coordinates byte-identical). Consequences: 1603/1604 = false fusions of II 1503/1504 × IV 1903/1904 — the II·IV skip DISSOLVES; 1605 = fusion of II 1505 (crossed) × IV 1905; 661/671 = false fusions I × II 1681/1691 — the cross-Blatt pairs COLLAPSE; p93 (IV) and p98 (III) carry the SAME range 1901–1920 (disjoint owners — a textbook per-Blatt overlap); map: 1903/1904/1905 polygons exist (south-west location), 1503–1505 and 1681–1700 do NOT; the 16xx polygons sit at a third location (falsely assigned to the fusions by v2). RENUMBERING 17 mappings (p78 3×, p93 3×, p87 11×; 0 collisions) = P68; P68 measurements: bases 800→798, multi-page 211→199, cross-Blatt 110→98 (the P67 approximation 802/208/107 was [~]), runtime −14 geometry-less rows. (B) THE 5 ADJACENCY FLAGS (646, 661, 1821, 2141, 2143; 11 rows) = A JOIN-SCOPE ARTIFACT: the missing neighbours exist in the register (P38 with names: 645 'Ulrich Franz', 647 'Gemeinde', 662 'Mülley Franzl', 1822 'Büller Lorenz', 1823 'Gavčnik Miha', 1824 'Gavčnik Gregor', 2142 'Häupler Martin', 2144–2147 …) but have no polygons in the map → dropped from v2 (38.6 % coverage); 1821/2141/661 are page-start rows (1820/2140 HAVE polygons — on the previous page, invisible to the per-page check); 11/11 explained, 0 register anomalies. (C) R1↔R2: 671 RESOLVED (not a divergence — the II instance @p87 = 1691, a different parcel; 671 stays I-only); 930 remains [~] with measured evidence (mode B band ✓@p49 ✗@p99, disjoint owners, ±1 neighbours on both pages, map 921–940: 9 polygons). (D) UNIVERSAL DISJOINTNESS: owners per Blatt DISJOINT for ALL cross-Blatt bases (v2 110/110; v3 98/98; the 36 split byte-equal P66, the 62 attributed 62/62) → per-Blatt numbering: the same number under different Blatts = 2 DIFFERENT real parcels; the attribution (R1/R2a/R2b) is a geometry-to-instance assignment, not parcel identity [~]. Machine forensics is not a source of proof; the renumbering was REALIZED by P68; the SPLIT join decision belongs to the OWNER (P69).",
   next: [
-    "P68 — v3 sanacija številčenja: 17 preslikav (p78/p93/p87) + re-join (1903/1904/1905 poligoni, konflikt III@p98 vs IV@p93 [~]) + veriga re-run P59–P66 s posodobljenimi pini",
+    "P68 IZVEDENA: v3 sanacija številčenja (17 preslikav + re-join + veriga re-run P59–P66 s posodobljenimi pini) — glej kartico P68",
     "SPLIT joina (lastniška odločitev, zdaj nad popravljeno številčenje — 1603/1604/661 izpadajo, 1903/1905 nastopata)",
     "sistemski pregled preostalih P38 pass1 slojev (p74/p76/p77 1121–1200 brez kartnih poligonov [~]; p88 721–740)",
     "930: dokončna atribucija (PF protokol / lastniška odločitev)",
