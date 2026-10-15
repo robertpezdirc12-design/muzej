@@ -3400,3 +3400,71 @@ FALIL — to je namerna lastnost: dokaz zahteva ponovno izdajo, ki bo
 ostaja 79/79 (operativni audit ni produkcija vsebine — ni nove kartice niti
 nove QA kontrole). Veriga `p60–p67 + p70–p78 --check` bajtno PASS; tsc 0;
 ESLint 0.
+
+## §56 — P79: župnija Podzemelj — vzorčni prepis matričnih vpisov (issue #18) — 2026-10-15
+
+**Sprožilec:** owner ukaz »nadaljuj« — po P78 so raziskovalne niti skonvergirale
+k lastniškim odločitvam; edina NE-lastniška vsebinska nit: issue #18 (ŽUPNIJA
+— matrični vpisi z gribeljskimi hišnimi št.; do P79 prepisana samo hiša 61).
+
+**Vir:** Matricula Online, krstna knjiga **04105** (1886–1919), Nadškofijski
+arhiv Ljubljana, župnija Podzemelj (Griblje = zgodovinsko matično območje;
+sv. Vid = 3. podružnica — parish.ts). Prosto dostopno; slike prek base64-
+kodiranih URL-jev v JSON `files` knjižne strani (326 slik).
+
+**Metoda (paleografska faza + deterministična verifikacija):**
+- okvir vzorca: **polno leto 1886** (skeni 2–15 == tiskane strani 1–14;
+  stran = sken − 1; kontrola: sken 11 → stran 10 Okt 1886, sken 16 → stran
+  15 Januar 1887) — vsi vpisi z Griblji v tem letu; vrstice 1–95 prebrane;
+  **+ sidro 1887** (sken 20 = stran 19): ponovno branje obstoječega zapisa
+  hiše 61 (verifikacija obstoječih podatkov);
+- branje: skeni prenešeni v delovni imenik (NI v repu), stran + 2×/2.2×
+  izrezi dvomljivih celic (PIL LANCZOS); Kurrent z označbo negotovosti [~];
+- deterministična verifikacija: `scripts/p79_parish_sample.py` (I1–I8):
+  knjiga HTTP 200, inventar 326 slik, citirani skeni 10/10 JPEG 200, okvir,
+  PT usklajenost (branje `research/issue13/chain-full-pt-ps.json`), celovitost
+  polj, sidro hiša 61.
+
+**Rezultat — 14 vpisov / 13 različnih hiš** (nad merili issue #18 — vzorec
+5 hiš): 8 [~] · 11 · 13 · 16 · 36×2 · 39 · 54 · 56 · 57 · 61 · 71 · 75 · 94.
+Vsak vpis: signatura, leto, mesec/dan rojstva in krsta, vas, hišna št.,
+otrok, oče (ime + stan: ½ zemg. / hižar / bajtar), mati (roj. priimek),
+botra/botr, robovni pripisi.
+
+**Ugotovitve:**
+1. **PT usklajenost = dokaz številčne evolucije:** PT 1825 nabor hiš
+   (chain-full-pt-ps.json) je **1–40 + 61–99** z polovičkami (7½, 8½, 71½,
+   76½) + prečrtana dvojnica 34 — **LUKNJA 41–60**. Parish 1886: 10/13 hiš v
+   naboru (8, 11, 13, 16, 36, 39, 61, 71, 75, 94), **3/13 (54, 56, 57) v
+   luknji 41–60** → številčenje se je med 1825 in 1886 razširilo/
+   preštevilčilo. Številčna usklajenost ≠ identiteta stavbe (za to bi bila
+   potrebna povezava prek lastniških imen — opozorilo PUA/PT iz issue #18
+   ostaja).
+2. **Hiša 36 = dva vpisa v 1886** (row 39: mati Barbara Šimec, oče ni
+   zapisan — nezakonska rojstva dokumentirana kot zapisana; row 95: oče
+   Matija Križan, mati Ana roj. Milavec) → dve družini pod eno hišno št.
+   [~] (glavna kmetija + inst-hiša?).
+3. **Poznejši modri pripisi 20. stoletja** (»umrl dne …«, npr. hiša 39:
+   umrl 18.9.1961 *v Gribljah št. 39* — administrativni vpis POTRJUJE
+   hišno št.; hiša 16: umrla 19.3.1962) dokumentirani ločeno od osnovnega
+   vpisa.
+4. **Sidro hiša 61 POTRJENO** (sken 20, stran 19, vrstica 28: Griblje 61,
+   Katarina, April 1887): sken/leto/hiša/ime == parish.ts; oče: obe branji
+   dokumentirane (obstoječe »Miha P.—« / ponovno »Miko Jože H.?« [~] —
+   priimek ostaja negotov).
+
+**Integracija:** `parish.ts` HOUSE_VITALS 2 → 15 (vsi DOCUMENTED, dopolnjene
+strani); QA 79 → **80/80** (nova `qa-p79-parish-sample`: celovit runtime
+preracun iz HOUSE_VITALS × PARISH_BOOKS + pini PT klasifikacije 10/3 —
+okvir/sidro/PT/usklajenost; dve obliki repo/produkcija po P53/P57/P58 —
+produkcija ne bere research/); kartica NI dodana (paleografski dokaz
+raziskovalne linije — strojno berljiv prek dokaza, vzorec P77).
+
+**Poštenost:** prepis je VZOREC (leto 1886 + sidro 1887), ne celotna knjiga
+(326 skenov; 1886–1919). Kurrent branja imen nosijo [~]; hišne številke so
+preverjene z izrezi. Številčna usklajenost s PT je OBSERVACIJA, ne dokaz
+istovetnosti stavbe. Nezakonska rojstva in pripisi so dokumentirani kot
+zapisani.
+
+**v7 runtime join NESPREMENJEN** (sha256 4bb40370…). Veriga `p60–p67 +
+p70–p79 --check` PASS; tsc 0; ESLint 0.

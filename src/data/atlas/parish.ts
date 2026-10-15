@@ -69,8 +69,14 @@ export const PARISH_BOOKS: ParishBook[] = [
 
 /**
  * HIŠNE ZGODBE — matrični vpisi z gribeljskimi hišnimi številkami.
- * Dokumentirano iz zapisa sveti-vid (Krstna knjiga 04105, vpisi z Griblji).
- * Ostale hiše: status TO_COLLECT (vpisov še nismo prebrali/prepisali).
+ * P79 (issue #18, 2026-10-15): VZORČNI PREPIS — polno leto 1886 (skeni
+ * 2–15, strani 1–14 Krstne knjige 04105: vsi vpisi z Griblji v tem letu)
+ * + sidro 1887 (verifikacija obstoječega zapisa hiše 61). Pred P79:
+ * prepisana samo hiša 61. Kurrent branja imen z [~] (negotovost);
+ * hišne številke preverjene z izrezi. PT usklajenost: 10/13 vpisov v
+ * naboru PT 1825 (1–40 + 61–99), 54/56/57 v luknji 41–60 — dokaz
+ * številčne evolucije (dokaz: research/issue17/parish-sample-transcription.json;
+ * verifikator: scripts/p79_parish_sample.py --check, I1–I8).
  */
 export interface HouseVital {
   houseNo: string;
@@ -84,6 +90,139 @@ export interface HouseVital {
 }
 
 export const HOUSE_VITALS: HouseVital[] = [
+  // ——— P79 vzorec: polno leto 1886 (vsi Griblje vpisi, strani 1–14) ———
+  {
+    houseNo: "8",
+    bookSignature: "04105",
+    year: 1886,
+    scan: 2,
+    page: 1,
+    whatSi: "krščena Barbara (7. 1.) — oče Janez Jakofčič [~] ½ zemg., mati Marija roj. Meh [~]; hišna št. 8 [~] (drobna, bleda)",
+    whatEn: "baptized Barbara (Jan 7) — father Janez Jakofčič [~] half-farmer, mother Marija née Meh [~]; house no. 8 [~] (tiny, faint)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "54",
+    bookSignature: "04105",
+    year: 1886,
+    scan: 2,
+    page: 1,
+    whatSi: "krščena Marija (13. 1.) — oče Janez Pintec? [~] ½ zemg., mati Ana roj. Strauš [~]; hiša 54 v PT luknji 41–60 (evolucija številčenja)",
+    whatEn: "baptized Marija (Jan 13) — father Janez Pintec? [~] half-farmer, mother Ana née Strauš [~]; house 54 in the PT 41–60 gap (numbering evolution)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "16",
+    bookSignature: "04105",
+    year: 1886,
+    scan: 4,
+    page: 3,
+    whatSi: "krščena Neža (18. 2.) — oče Matija Plebučar? [~] ½ zemg., mati Katarina rojena Meh; poznejši pripis: umrla 19.3.1962 [~]",
+    whatEn: "baptized Neža (Feb 18) — father Matija Plebučar? [~] half-farmer, mother Katarina née Meh; later note: died 19 Mar 1962 [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "57",
+    bookSignature: "04105",
+    year: 1886,
+    scan: 4,
+    page: 3,
+    whatSi: "krščen Jurij (1./2. 4.) — oče Peter Podolivec, hižar, mati Marija roj. Stupanič; hiša 57 (razločena od 54 na isti strani) v PT luknji 41–60",
+    whatEn: "baptized Jurij (Apr 1/2) — father Peter Podolivec, cottager, mother Marija née Stupanič; house 57 (distinct from 54 on the same page) in the PT 41–60 gap",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "11",
+    bookSignature: "04105",
+    year: 1886,
+    scan: 6,
+    page: 5,
+    whatSi: "krščen Anton (19. 5.) — oče Matija Kurnič [~] ½ zemg., mati Katarina roj. Dragoš",
+    whatEn: "baptized Anton (May 19) — father Matija Kurnič [~] half-farmer, mother Katarina née Dragoš",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "36",
+    bookSignature: "04105",
+    year: 1886,
+    scan: 7,
+    page: 6,
+    whatSi: "krščena Marija (10./12. 6.) — oče NI zapisan (prazna celica), mati Barbara Šimec roj. [~]; hiša 36, prvi od dveh vpisov 1886",
+    whatEn: "baptized Marija (Jun 10/12) — father NOT recorded (empty cell), mother Barbara Šimec née [~]; house 36, first of two 1886 entries",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "94",
+    bookSignature: "04105",
+    year: 1886,
+    scan: 9,
+    page: 8,
+    whatSi: "krščen Jožef (7./8. 8.) — oče Matija Rambič? [~] ½ zemg., mati Ana roj. Podlivc [~]; hiša 94 je v PT naboru (61–99 blok)",
+    whatEn: "baptized Jožef (Aug 7/8) — father Matija Rambič? [~] half-farmer, mother Ana née Podlivc [~]; house 94 is in the PT set (61–99 block)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "39",
+    bookSignature: "04105",
+    year: 1886,
+    scan: 12,
+    page: 11,
+    whatSi: "krščen Janez (23./24. 10.) — oče Nikolaj Šimec ½ zemg., mati Barbara roj. Jakopič; poznejši pripis: umrl 18.9.1961 v Gribljah št. 39 (potrjuje hišno št.)",
+    whatEn: "baptized Janez (Oct 23/24) — father Nikolaj Šimec half-farmer, mother Barbara née Jakopič; later note: died 18 Sep 1961 in Griblje no. 39 (confirms the house number)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "13",
+    bookSignature: "04105",
+    year: 1886,
+    scan: 12,
+    page: 11,
+    whatSi: "krščena Katarina (1. 11.) — oče Matija Jakopič? [~] ½ zemg., mati Marija roj. Podlivc? [~]; robovni zapis + 37/9.1887",
+    whatEn: "baptized Katarina (Nov 1) — father Matija Jakopič? [~] half-farmer, mother Marija née Podlivc? [~]; marginal +37/9.1887",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "71",
+    bookSignature: "04105",
+    year: 1886,
+    scan: 13,
+    page: 12,
+    whatSi: "krščen Matija (12./13. 11.) — oče Jurij Strauš ½ zemg., mati Barbara roj. Jakopič; robovni zapis + ½ 91",
+    whatEn: "baptized Matija (Nov 12/13) — father Jurij Strauš half-farmer, mother Barbara née Jakopič; marginal +½91",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "56",
+    bookSignature: "04105",
+    year: 1886,
+    scan: 14,
+    page: 13,
+    whatSi: "krščena Marija (21. 11.) — oče Janez Šimec ½ zemg., mati Dora roj. Podžire [~]; hiša 56 v PT luknji 41–60",
+    whatEn: "baptized Marija (Nov 21) — father Janez Šimec half-farmer, mother Dora née Podžire [~]; house 56 in the PT 41–60 gap",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "36",
+    bookSignature: "04105",
+    year: 1886,
+    scan: 15,
+    page: 14,
+    whatSi: "krščena Marija (23. 12.) — oče Matija Križan ½ zemg., mati Ana roj. Milavec; hiša 36, DRUGI vpis v 1886 (dve družini pod eno hišno št. [~])",
+    whatEn: "baptized Marija (Dec 23) — father Matija Križan half-farmer, mother Ana née Milavec; house 36, SECOND 1886 entry (two families under one house number [~])",
+    status: "DOCUMENTED",
+  },
+  // ——— P79 sidro 1887 (isti postopek, dodatni dokaz) ———
+  {
+    houseNo: "75",
+    bookSignature: "04105",
+    year: 1887,
+    scan: 20,
+    page: 19,
+    whatSi: "krščen Janez (16. 4.) — oče Janez Jakobič? [~] ½ zemg., mati Marija roj. Stubler",
+    whatEn: "baptized Janez (Apr 16) — father Janez Jakobič? [~] half-farmer, mother Marija née Stubler",
+    status: "DOCUMENTED",
+  },
+  // ——— pred P79 (hiša 61; P79 ponovno prebral in potrdil sken 20) ———
   {
     houseNo: "61",
     bookSignature: "04105",

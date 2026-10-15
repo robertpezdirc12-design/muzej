@@ -4048,3 +4048,22 @@ Work Log:
 
 Stage Summary:
 - p78 --check zdaj odporen na nove commite; edini legalni FAIL vzroki: produkcija padla, zrcala razsinhronizirana, PAT potekel/rotiran, Actions stanje spremenjeno (npr. sanacija billinga → namenjen FAIL → nova izdaja dokaza).
+---
+Task ID: 48 (P79 — župnija Podzemelj: vzorčni prepis matričnih vpisov, issue #18)
+Agent: Z.ai Code (glavni)
+Task: Owner ukaz "nadaljuj" — po P78 edina NE-lastniška vsebinska nit: issue #18 (ŽUPNIJA; do P79 prepisana samo hiša 61)
+
+Work Log:
+- Kontekst: repo @ b24b173 (P78+fix; GitLab = GitHub = lokalna; QA 79/79 dev). Izbira faze: pregled odprtih issues (#12 človeška paleografija = lastniška; #15 nedigitalizirani viri = lastniška; #16 človeški glas = lastniška; #17 fizični telefon = lastniška; #13 lastniške odločitve) → #18 ŽUPNIJA = izvedljiva (vir prosto dostopen na Matricula Online).
+- PROBE vira: knjiga 04105 (krstna 1886–1919) HTTP 200; slika-shema dekodirana (JSON "files": ["/image/<base64>/"] → hosted-images.matricula-online.eu; 326 slik).
+- PALEOGRAFSKA FAZA: skeni 2–20 prenešeni v /tmp/p79 (NI v repu); stran = sken − 1 (kontrola: sken 11 → stran 10 Okt 1886; sken 16 → stran 15 Jan 1887 → 1886 = skeni 2–15); branje strani + 2×/2.2× izrezi dvomljivih celic (PIL LANCZOS); Kurrent z [~].
+- REZULTAT: polno leto 1886 — vsi Griblje vpisi (12) + sidro 1887 (2: Janez 75 + verifikacija Katarina 61) = 14 vpisov / 13 hiš (8 [~] · 11 · 13 · 16 · 36×2 · 39 · 54 · 56 · 57 · 61 · 71 · 75 · 94) — NAD merili issue #18 (5 hiš). Vsak vpis: signatura/leto/stran/skan/hišna št./otrok/starši/botra/pripisi.
+- UGOTOVITVE: ① PT usklajenost = DOKAZ ŠTEVILČNE EVOLUCIJE — PT 1825 nabor = 1–40 + 61–99 (LUKNJA 41–60): 10/13 v naboru, 3/13 (54, 56, 57) v luknji; številčna usklajenost ≠ identiteta stavbe; ② hiša 36 = 2 vpisa 1886 (brez očeta / oče Matija Križan) — dve družini [~]; ③ modri pripisi 20. st. (hiša 39: umrl 18.9.1961 v Gribljah št. 39 — POTRJUJE št.) ločeno; ④ SIDRO: hiša 61 ponovno prebrana + POTRJENA (sken/leto/hiša/ime == parish.ts; oče obe branji: "Miha P.—" / "Miko Jože H.?" [~]).
+- Skripta scripts/p79_parish_sample.py (deterministični verifikator, brez AI; I1–I8: knjiga 200, inventar 326, citirani skeni 10/10 JPEG, okvir 1886 ⊆ 2–15 + stran == sken−1, PT klasifikacija == pin, celovitost polj, sidro 61; --check PASS) → dokaz research/issue17/parish-sample-transcription.json (SAMPLE-TRANSCRIPTION; ročna faza, skripta je NE prepisuje).
+- INTEGRACIJA: parish.ts HOUSE_VITALS 2 → 15 (vsi DOCUMENTED, s stranmi; komentar P79); qa.ts import HOUSE_VITALS/PARISH_BOOKS + nova kontrola qa-p79-parish-sample (celovit runtime preracun + pini PT klasifikacije 10/3; dve obliki repo/produkcija po P53/P57/P58 — produkcija ne bere research/) — QA 79 → 80/80; kartica NI dodana (vzorec P77).
+- Verifikacija: /api/qa (dev) 80/80 ok, qa-p79 True; p79 --check PASS (I1–I8); tsc --noEmit 0; ESLint 0; v7 runtime join NESPREMENJEN (sha256 4bb40370…; disciplina I9).
+
+Stage Summary:
+- P79 ZAKLJUČEN: vzorčni prepis župnijskih matrik (polno leto 1886 + sidro 1887; 14 vpisov / 13 hiš; nad merili issue #18); dokaz parish-sample-transcription.json + verifikator p79 (I1–I8 PASS); HOUSE_VITALS 2 → 15; QA 80/80 (qa-p79).
+- Odprto (issue #18 naslednje faze): poročne/mrliške knjige za iste hiše; povezava lastniških imen 1825 (PT/PUA) ↔ matrični priimki (Strauš, Šimec, Jakopič, Križan, Podolivec …); poln prepis po letih = lastniška prioriteta.
+- ⚠ POZOR: p78 proof pina QA 79 — po deployu P79 (80/80) potreben re-issue p78 dokaza (resilient core: passed ≥ 79, brez pina številke).

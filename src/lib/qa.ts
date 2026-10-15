@@ -10,6 +10,7 @@ import { WALKS, walkItemsWithGaps, WALK_GAPS } from "./walks";
 import { computeCoverage } from "./coverage";
 import { buildReconciliation } from "./reconciliation";
 import { NEGATIVE_RESULTS } from "@/data/atlas/sources";
+import { HOUSE_VITALS, PARISH_BOOKS } from "@/data/atlas/parish";
 import { parishStats, getCoverage, getArchiveInventory } from "./atlas";
 import { PANORAMAS } from "@/data/atlas/panoramas";
 import { TIME_SPOTS } from "@/data/atlas/timespots";
@@ -7761,6 +7762,55 @@ const p45bErrors: string[] = [];
     p76Errors.length === 0
       ? `pini 56/31 · strani 13/12/14/14/3 · Σ areaQK 38517 · counterpar 31/31 (I 23 / II 8; conf 4/21/6) · lastniki 0/0 · hn 0/31 · pageMap bandi ⊇ parzelle · C4 13 (II 8 / I 5) / 18 single · P60 band 12/56 · opcije A 891/2/0/4 · B1 947/33/23/91 (KRŠI NIL-CLAIM → instance ključ 0/2/4) · B2 903/10/6/24 · B3 [~] · v7 runtime 891/879 (v7Delta.after 2/0) · ${p76Files.detail}`
       : p76Errors.join("; "),
+  );
+
+  // ——— qa-p79: župnija Podzemelj — vzorčni prepis matrik (issue #18; HOUSE_VITALS;
+  //      deterministično iz runtime podatka parish.ts + pini PT klasifikacije;
+  //      paleografska faza dokumentirana v research/issue17/parish-sample-transcription.json,
+  //      live verifikator scripts/p79_parish_sample.py --check I1–I8) ———
+  const p79Hv = HOUSE_VITALS;
+  const p79Errors: string[] = [];
+  // PT klasifikacija (pin iz research/issue13/chain-full-pt-ps.json; PT 1825:
+  // 84 hiš 1–40 + 61–99 z polovičkami; LUKNJA 41–60) — produkcija ne bere
+  // research/, zato klasifikacija živi kot pin (vzorec p76 pini)
+  const P79_PT_IN_SET = ["8", "16", "11", "36", "94", "39", "13", "71", "75", "61"];
+  const P79_PT_GAP = ["54", "57", "56"];
+  if (p79Hv.length !== 15)
+    p79Errors.push(`HOUSE_VITALS št. vpisov ≠ 15 (${p79Hv.length})`);
+  const p79Houses = new Set(p79Hv.map((h) => h.houseNo));
+  if (p79Houses.size !== 13)
+    p79Errors.push(`različnih hiš ≠ 13 (${p79Houses.size}: ${[...p79Houses].sort().join(",")})`);
+  const p79Book = PARISH_BOOKS.find((b) => b.signature === "04105");
+  if (!p79Book || p79Book.type !== "baptism" || p79Book.from !== 1886 || p79Book.to !== 1919)
+    p79Errors.push("PARISH_BOOKS: 04105 (baptism 1886–1919) ni dokumentiran");
+  const p79Bad = p79Hv.filter(
+    (h) => h.status !== "DOCUMENTED" || h.bookSignature !== "04105" || !h.scan ||
+      h.year < (p79Book?.from ?? 1886) || h.year > (p79Book?.to ?? 1919),
+  );
+  if (p79Bad.length > 0)
+    p79Errors.push(`vpisi brez statusa/signature/skena ali izven obdobja knjige: ${p79Bad.length}`);
+  // okvir vzorca: vsi vpisi leta 1886 v skenih 2–15 s stran == sken − 1; sidro 1887 = sken 20
+  const p79Frame = p79Hv.filter((h) => h.year === 1886);
+  if (p79Frame.length !== 12)
+    p79Errors.push(`vpisov 1886 ≠ 12 (${p79Frame.length})`);
+  if (p79Frame.some((h) => !h.scan || h.scan < 2 || h.scan > 15 || h.page !== h.scan - 1))
+    p79Errors.push("okvir 1886: sken izven 2–15 ali stran ≠ sken − 1");
+  const p79Anchor = p79Hv.filter((h) => h.year === 1887 && h.scan === 20);
+  if (p79Anchor.length !== 2) // Katarina 61 (obstoječi) + Janez 75 (P79 sidro)
+    p79Errors.push(`sidro 1887 (sken 20) ≠ 2 vpisa (${p79Anchor.length})`);
+  // PT klasifikacija == pin (10 v naboru + 3 v luknji 41–60)
+  const p79InSet = [...p79Houses].filter((h) => P79_PT_IN_SET.includes(h));
+  const p79Gap = [...p79Houses].filter((h) => P79_PT_GAP.includes(h));
+  if (p79InSet.length !== 10 || p79Gap.length !== 3)
+    p79Errors.push(`PT klasifikacija ≠ 10/3 (${p79InSet.length}/${p79Gap.length})`);
+  push(
+    "qa-p79-parish-sample",
+    "P79: ŽUPNIJA PODZEMELJ — VZORČNI PREPIS MATRIČNIH VPISOV Z GRIBELJSKIMI HIŠNIMI ŠT. (issue #18; vir Matricula Online, Krstna knjiga 04105 1886–1919; paleografska faza + deterministična verifikacija; deterministično, brez AI ob delovanju): VZOREC = polno leto 1886 (skeni 2–15 == tiskane strani 1–14: VSI vpisi z Griblji v tem letu) + sidro 1887 (verifikacija obstoječega zapisa hiše 61) — 15 vpisov / 13 različnih hiš (8 [~], 11, 13, 16, 36×2 — dve družini pod eno št. [~], 39, 54, 56, 57, 61, 71, 75, 94) — NAD merili issue #18 (vzorec 5 hiš); vsak vpis: signatura + leto + stran/skan + hišna št. + otrok + starši (Kurrent z [~]); okvir 1886: 12 vpisov, skeni 2–15, stran == sken − 1 (kontrola sken 11 → stran 10, sken 20 → 19); PT usklajenost (pin iz chain-full-pt-ps.json: 84 hiš 1–40 + 61–99 z polovičkami, LUKNJA 41–60): 10/13 hiš v naboru (8, 11, 13, 16, 36, 39, 61, 71, 75, 94), 3/13 (54, 56, 57) v luknji 41–60 — DOKAZ ŠTEVILČNE EVOLUCIJE med 1825 in 1886 (številčna usklajenost ≠ identiteta stavbe); hiša 36: 2 vpisa v 1886 (row 39 brez očeta — mati Barbara Šimec; row 95 oče Matija Križan) — dokumentirano kot zapisano; poznejši modri pripisi 20. st. (umrl dne …, npr. hiša 39: umrl 18.9.1961 v Gribljah št. 39 — potrjuje hišno št.) dokumentirani ločeno; sidro: hiša 61 (sken 20, stran 19, vrstica 28 — Katarina) ponovno prebrana in POTRJENA (sken/leto/hiša/ime == parish.ts; oče: obe branji dokumentirani — »Miha P.—« obstoječe / »Miko Jože H.?« ponovno); live verifikacija: knjiga HTTP 200, inventar 326 slik (base64 dekodiranje), citirani skeni 10/10 JPEG 200; skripta scripts/p79_parish_sample.py (I1–I8, --check PASS); status SAMPLE-TRANSCRIPTION",
+    "P79: PARISH OF PODZEMELJ — SAMPLE TRANSCRIPTION OF REGISTER ENTRIES WITH GRIBLJE HOUSE NUMBERS (issue #18; source Matricula Online, Baptism register 04105 1886–1919; paleographic phase + deterministic verification; deterministic, no AI at runtime): SAMPLE = the full year 1886 (scans 2–15 == printed pages 1–14: ALL Griblje entries in that year) + the 1887 anchor (verification of the existing house-61 record) — 15 entries / 13 distinct houses (8 [~], 11, 13, 16, 36×2 — two families under one number [~], 39, 54, 56, 57, 61, 71, 75, 94) — ABOVE the issue #18 criteria (a 5-house sample); every entry: signature + year + page/scan + house number + child + parents (Kurrent with [~]); the 1886 frame: 12 entries, scans 2–15, page == scan − 1 (controls scan 11 → page 10, scan 20 → 19); the PT consistency (pin from chain-full-pt-ps.json: 84 houses 1–40 + 61–99 with halves, the GAP 41–60): 10/13 houses in the set (8, 11, 13, 16, 36, 39, 61, 71, 75, 94), 3/13 (54, 56, 57) in the 41–60 gap — EVIDENCE OF NUMERIC EVOLUTION between 1825 and 1886 (numeric consistency ≠ building identity); house 36: 2 entries in 1886 (row 39 without a father — mother Barbara Šimec; row 95 father Matija Križan) — documented as written; later blue 20th-century annotations (died …, e.g. house 39: died 18 Sep 1961 in Griblje no. 39 — confirms the house number) documented separately; the anchor: house 61 (scan 20, page 19, row 28 — Katarina) re-read and CONFIRMED (scan/year/house/child == parish.ts; the father: both readings documented — »Miha P.—« existing / »Miko Jože H.?« re-read); live verification: the book HTTP 200, an inventory of 326 images (base64 decoding), the cited scans 10/10 JPEG 200; the script scripts/p79_parish_sample.py (I1–I8, --check PASS); status SAMPLE-TRANSCRIPTION",
+    p79Errors.length === 0,
+    p79Errors.length === 0
+      ? `15 vpisov / 13 hiš · 1886 okvir 12 (skeni 2–15, stran == sken−1) · sidro 1887 2 vpisa (sken 20) · PT 10/3 (54, 56, 57 v luknji 41–60) · knjiga 04105 1886–1919 · [~] negotovosti dokumentirane · hiša 36 dva vpisa · pripisi 20. st. ločeno`
+      : p79Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;  return {
