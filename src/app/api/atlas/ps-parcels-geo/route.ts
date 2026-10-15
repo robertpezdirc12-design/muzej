@@ -27,14 +27,28 @@ export const dynamic = "force-static";
  *    3.8843 ≈ 1 Wiener QK 3.59665 m² (Δ +8.0 %); soslednost 654 parov /
  *    52.0 m / 27.6×; 56 sekijskih vrstic (p83–86, p88) nespremanjenih
  *    (exclude/per-Blatt = LASTNIKA); registrska branja (ps-raw) NESPREMENJENA.
+ *  · P71 (v5, AKTUALNO): KOREKCIJE v4 — (C1) 56 sekijskih vrstic
+ *    (p83–86, p88) EXCLUDE iz joina (P69 sectionClass bajtno; dokazane
+ *    lažne fuzije na Blatt I poligone; LASTNIŠKA odločitev: opcija exclude;
+ *    vrstice ostanejo v registru brez geometrije; 0 poligonov ostane
+ *    praznih) + (C2) P93 REVERZIJA — P68 renum 160x→190x OVRŽEN z
+ *    notranjo glifno forenziko (r9 = 1609 / r19 = 1619: 6 ≠ 9, isti
+ *    pisar; kontrole p98 '1916' in p92 981–983) + annRecords anotatorja
+ *    (1601–1619) + pageMap P56 + P38 pass2: 15 vrstic base := parzella,
+ *    PF ujemanja {1603, 1604, 1605} (prej prazni poligoni dobili prve
+ *    vrstice), 12 izpadlih; PF 1901–1920 brez lažnih dvojnih zahtevkov
+ *    p93 (ostane p98 III); v5: 1077 vrstic / 879 pozicioniranih števil;
+ *    površine median 3.9052 ≈ 1 Wiener QK 3.59665 m² (Δ +8.58 %);
+ *    soslednost 652 parov / 51.8 m / 25.5×.
  *
- * Status: SANITIZED-DETERMINISTIC. SHEET_GEOREFS in dokazi P40–P69
- * nespremanjeni; v2/v3 dokaza arhivirana (research/issue17/
- * ps-parcels-geo-v2.json, -v3.json).
+ * Status: SANITIZED-DETERMINISTIC. SHEET_GEOREFS in dokazi P40–P70
+ * nespremanjeni; v2/v3/v4 dokazi arhivirani (research/issue17/
+ * ps-parcels-geo-v2.json, -v3.json, -v4.json).
  *
- * Dokaz v4: research/issue17/ps-parcels-geo-v4.json (izpis skripta
- * scripts/p70_ps_v4_rejoin.py; invarianti I1–I9, `--check` = determinizem).
- * Runtime: src/data/atlas/ps-parcels-geo.json (version 4).
+ * Dokaz v5: research/issue17/ps-parcels-geo-v5.json (izpis skripta
+ * scripts/p71_ps_v5_sections_p93.py; invarianti I1–I9, `--check` =
+ * determinizem; forenzika research/issue17/p93-forensics/).
+ * Runtime: src/data/atlas/ps-parcels-geo.json (version 5).
  */
 export async function GET() {
   return NextResponse.json(psParcelsGeo, {

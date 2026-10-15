@@ -861,15 +861,33 @@ def build_documents():
     if check:
         ev2 = json.dumps(json.loads(V4_EV.read_text(encoding="utf-8")),
                          ensure_ascii=False)
-        rt2 = json.dumps(json.loads(OUT_RUNTIME.read_text(encoding="utf-8")),
-                         ensure_ascii=False)
-        if json.dumps(evidence, ensure_ascii=False) == ev2 and \
-                json.dumps(runtime, ensure_ascii=False) == rt2:
-            print("P70 --check: determinizem PASS (dokaz + runtime bajtno "
-                  "identična)")
-            return 0
-        print("P70 --check: MISMATCH")
-        return 1
+        if json.dumps(evidence, ensure_ascii=False) != ev2:
+            print("P70 --check: MISMATCH (dokaz)")
+            return 1
+        rt_disk = json.loads(OUT_RUNTIME.read_text(encoding="utf-8"))
+        if rt_disk.get("version") == 4:
+            if json.dumps(runtime, ensure_ascii=False) == \
+                    json.dumps(rt_disk, ensure_ascii=False):
+                print("P70 --check: determinizem PASS (dokaz + runtime "
+                      "bajtno identična)")
+                return 0
+            print("P70 --check: MISMATCH (runtime v4)")
+            return 1
+        # runtime je napredoval (P71 v5) — dokaz ostaja zamrznjen arhiv
+        # (vsebina v4 runtime živi v dokazu); disk runtime mora deklarirati
+        # nasledstvo (version ≥ 5 + v5Delta z dokumentiranimi korekcijami)
+        d = rt_disk.get("v5Delta") or {}
+        if not (rt_disk.get("version", 0) >= 5
+                and d.get("excludedSections") == 56
+                and d.get("revertedP93") == 15):
+            print("P70 --check: MISMATCH (runtime nasledstvo ni "
+                  "deklarirano: version "
+                  f"{rt_disk.get('version')}, v5Delta {bool(d)})")
+            return 1
+        print("P70 --check: determinizem PASS (dokaz bajtno; runtime "
+              "nadgrajen na v" + str(rt_disk.get("version")) + " po P71 "
+              "(C1 sekcije + C2 p93) — v4 arhiviran v dokazu)")
+        return 0
 
     V4_EV.write_text(jdump(evidence) + "\n", encoding="utf-8")
     print(f"  ✓ zapisano: {V4_EV.relative_to(REPO)} "

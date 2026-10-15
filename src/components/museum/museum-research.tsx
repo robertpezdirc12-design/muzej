@@ -86,6 +86,7 @@ import {
   V3_RENUMBER_P68,
   PASS1_LAYERS_P69,
   V4_REJOIN_P70,
+  V5_SECTIONS_P93_P71,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -2465,8 +2466,8 @@ export function MuseumResearch() {
                 <p className="text-[11px] leading-relaxed text-foreground/80">
                   <span className="font-semibold">{t("Pošten status: ", "Honest status: ")}</span>
                   {t(
-                    "Join v3 je bil NESPREMENJEN — 77 renum + 98 rejoin = SPEC izvedena v P70 (v4: 77 preslikav + 95 rejoin, 33 fuzij isti-Blatt dokumentiranih, SPLIT = LASTNIKA); odločitev o 56 sekijskih vrsticah = še vedno LASTNIKA. Strojno berljivo: research/issue17/ps-pass1-layers.json + runtime src/data/atlas/ps-pass1-layers.json (/api/atlas/ps-pass1-layers).",
-                    "The v3 join was UNCHANGED — the 77 renums + 98 rejoins = a SPEC realized in P70 (v4: 77 mappings + 95 rejoins, 33 same-Blatt fusions documented, SPLIT = the OWNER's); the decision on the 56 section rows = still the OWNER's. Machine-readable: research/issue17/ps-pass1-layers.json + the runtime src/data/atlas/ps-pass1-layers.json (/api/atlas/ps-pass1-layers).",
+                    "Join v3 je bil NESPREMENJEN — 77 renum + 98 rejoin = SPEC izvedena v P70 (v4: 77 preslikav + 95 rejoin, 33 fuzij isti-Blatt dokumentiranih, SPLIT = LASTNIKA); odločitev o 56 sekijskih vrsticah izvedena v P71 (opcija exclude); P71 je z glifno forenziko OVRŽEL tudi eyesVerdicts p93 (prave 1601–1620, NE 1901–1920). Strojno berljivo: research/issue17/ps-pass1-layers.json + runtime src/data/atlas/ps-pass1-layers.json (/api/atlas/ps-pass1-layers).",
+                    "The v3 join was UNCHANGED — the 77 renums + 98 rejoins = a SPEC realized in P70 (v4: 77 mappings + 95 rejoins, 33 same-Blatt fusions documented, SPLIT = the OWNER's); the decision on the 56 section rows realized in P71 (the exclude option); P71 also REFUTED the eyesVerdicts p93 with glyph forensics (the true 1601–1620, NOT 1901–1920). Machine-readable: research/issue17/ps-pass1-layers.json + the runtime src/data/atlas/ps-pass1-layers.json (/api/atlas/ps-pass1-layers).",
                   )}
                 </p>
               </div>
@@ -2527,8 +2528,70 @@ export function MuseumResearch() {
                 <p className="text-[11px] leading-relaxed text-foreground/80">
                   <span className="font-semibold">{t("Pošten status: ", "Honest status: ")}</span>
                   {t(
-                    "Mehanski izvod P69 specifikacije — nič ni bilo ugibano: preslikave bajtno == P69, kandidati bajtno == P69 rejoinSpec, sloji dokumentirani, 33 fuzij dokumentiranih (SPLIT = LASTNIKA), 56 sekijskih vrstic nespremenjenih (exclude/per-Blatt = LASTNIKA), 3 kandidati p80 brez vira [~]. Strojno berljivo: research/issue17/ps-parcels-geo-v4.json + runtime src/data/atlas/ps-parcels-geo.json (version 4, /api/atlas/ps-parcels-geo).",
-                    "A mechanical derivation of the P69 specification — nothing was guessed: the mappings byte-equal P69, the candidates byte-equal the P69 rejoinSpec, the layers documented, 33 fusions documented (SPLIT = OWNER), 56 section rows unchanged (exclude/per-Blatt = OWNER), 3 candidates p80 without a source [~]. Machine-readable: research/issue17/ps-parcels-geo-v4.json + the runtime src/data/atlas/ps-parcels-geo.json (version 4, /api/atlas/ps-parcels-geo).",
+                    "Mehanski izvod P69 specifikacije — nič ni bilo ugibano: preslikave bajtno == P69, kandidati bajtno == P69 rejoinSpec, sloji dokumentirani, 33 fuzij dokumentiranih (SPLIT = LASTNIKA), 3 kandidati p80 brez vira [~]. KOREKCIJE izvedene v P71 (C1 sekcije exclude + C2 p93 reverzija) — v4 dokaz ostaje zamrznjen, runtime je v5 (1077 vrstic / 879 base). Strojno berljivo: research/issue17/ps-parcels-geo-v4.json + runtime src/data/atlas/ps-parcels-geo.json (version 5, /api/atlas/ps-parcels-geo).",
+                    "A mechanical derivation of the P69 specification — nothing was guessed: the mappings byte-equal P69, the candidates byte-equal the P69 rejoinSpec, the layers documented, 33 fusions documented (SPLIT = OWNER), 3 candidates p80 without a source [~]. The CORRECTIONS realized in P71 (C1 sections excluded + C2 p93 reverted) — the v4 proof stays frozen, the runtime is v5 (1,077 rows / 879 bases). Machine-readable: research/issue17/ps-parcels-geo-v4.json + the runtime src/data/atlas/ps-parcels-geo.json (version 5, /api/atlas/ps-parcels-geo).",
+                  )}
+                </p>
+              </div>
+            </div>
+
+            {/* P71 — korekcije v4: sekcije exclude + p93 reverzija (v5) */}
+            <div className="min-w-0 rounded-xl border bg-card p-6 shadow-sm">
+              <h3 className="flex flex-wrap items-center gap-2 font-display text-lg font-semibold">
+                <ScrollText className="size-4 text-primary" aria-hidden="true" />
+                {t("Korekcije v4 — sekcije exclude + p93 reverzija (P71)", "v4 corrections — sections excluded + p93 reverted (P71)")}
+                <StatusBadge status={V5_SECTIONS_P93_P71.status} />
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                {t(
+                  "Dve korekciji v4 po novi očesni forenziki: (C1) 56 sekijskih vrstic izpadlo iz joina (P69 dokazane lažne fuzije; lastniška odločitev — opcija exclude) + (C2) P68 renum p93 160x→190x OVRŽEN — stran bere 1601–1620 (glifna forenzika + annRecords + pageMap + pass2).",
+                  "Two corrections to v4 after new ocular forensics: (C1) 56 section rows dropped from the join (P69-proven false fusions; owner decision — the exclude option) + (C2) the P68 renum p93 160x→190x REFUTED — the page reads 1601–1620 (glyph forensics + annRecords + the pageMap + pass2).",
+                )}
+              </p>
+              <div className="mt-4 grid gap-2 text-xs sm:grid-cols-2">
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("C1 — 56 sekijskih vrstic exclude", "C1 — 56 section rows excluded")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "strani 83 (13) · 84 (12) · 85 (14) · 86 (14) · 88 (3) — P69 dokazane lažne fuzije na Blatt I poligone (Σ ratio 161 = 235.65×); LASTNIŠKA odločitev: opcija exclude; per-Blatt instance (P60 moda B / PF protokol) ostaja odprta točka; vrstice ostanejo v registru brez geometrije — 0 poligonov ostane praznih",
+                      "pages 83 (13) · 84 (12) · 85 (14) · 86 (14) · 88 (3) — P69-proven false fusions onto Blatt I polygons (Σ ratio 161 = 235.65×); the OWNER's decision: the exclude option; per-Blatt instances (P60 mode B / the PF protocol) remain an open question; the rows stay in the register without geometry — 0 polygons left empty",
+                    )}
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("C2 — p93 reverzija (15 vrstic)", "C2 — the p93 reversion (15 rows)")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "notranja glifna kontrola r9 = 1609 / r19 = 1619 (6 ≠ 9, isti pisar; kontrola p98 '1916' = 9 in 6 v istem številu; p92 981–983 verificirane 9) + annRecords anotatorja (1601–1619, 'Durch Theilung im 1824') + pageMap P56 + P38 pass2; 15 vrstic base := parzella; PF ujemanja 1603/1604/1605 (prej prazni poligoni dobili prve vrstice), 12 izpadlih; PF 1901–1920 brez lažnih dvojnih zahtevkov p93 (ostane p98 III); forenzika: research/issue17/p93-forensics/ (7 izrezov 8–12×)",
+                      "the within-page glyph control r9 = 1609 / r19 = 1619 (6 ≠ 9, same scribe; the p98 '1916' control = 9 and 6 in the same number; p92 981–983 verified 9s) + the annotator's annRecords (1601–1619, 'Durch Theilung im 1824') + the P56 pageMap + P38 pass2; 15 rows base := parzella; PF matches 1603/1604/1605 (previously empty polygons got their first rows), 12 dropped; PF 1901–1920 free of p93's false double claims (p98 III remains); forensics: research/issue17/p93-forensics/ (7 crops 8–12×)",
+                    )}
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("v5 meritve", "v5 measurements")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "1077 vrstic (39.0 %) / 879 base / multi-page 184 / cross-Blatt 48; odstranjenih 68 = C1 56 + C2 12 (iz v4 1145/878/215/79); area median 3.9052 (Δ +8.58 %, kontrola 4.2304); soslednost 652/51.8 m/25.5×; zaupanje 183/745/149; dvoumnost 184/373 [~]",
+                      "1,077 rows (39.0 %) / 879 bases / multi-page 184 / cross-Blatt 48; 68 removed = C1 56 + C2 12 (from the v4 1145/878/215/79); area median 3.9052 (Δ +8.58 %, control 4.2304); adjacency 652/51.8 m/25.5×; confidence 183/745/149; ambiguity 184/373 [~]",
+                    )}
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("Skripta in veriga", "Script and chain")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "scripts/p71_ps_v5_sections_p93.py (--check bajtno PASS; pini v4 57ed1b0d…, P69 99962e24…, P59 650f13dc…, P56 2fddc76f…, PARCELS fee91fca…); veriga: P59–P67 --check PASS, P69 zamrznjen (v3 dokaz), P70 --check PASS; odprte praznine: PF 1644–1655, 1673/1679, 1842–1860, 1904/1906 (brez registrskih strani; modernVoid [~])",
+                      "scripts/p71_ps_v5_sections_p93.py (--check byte-equal PASS; pins v4 57ed1b0d…, P69 99962e24…, P59 650f13dc…, P56 2fddc76f…, PARCELS fee91fca…); the chain: P59–P67 --check PASS, P69 frozen (the v3 proof), P70 --check PASS; open voids: PF 1644–1655, 1673/1679, 1842–1860, 1904/1906 (no register pages; modernVoid [~])",
+                    )}
+                  </p>
+                </div>
+              </div>
+              <div className="mt-3 rounded-lg border border-emerald-200 bg-emerald-50/60 p-3 dark:border-emerald-900/50 dark:bg-emerald-950/30">
+                <p className="text-[11px] leading-relaxed text-foreground/80">
+                  <span className="font-semibold">{t("Pošten status: ", "Honest status: ")}</span>
+                  {t(
+                    "Odstranjena sta LE lažna zahtevka — noben nov podatek ni izmišljen (P71 načelo); per-Blatt instance 56 sekijskih vrstic in SPLIT joina ostajata LASTNIŠKI odločitvi; P67 trditev '9→6' za p93 ovržena — p93 NI bil v očesni coni; nespremenjene vrstice bajtno == v4. Strojno berljivo: research/issue17/ps-parcels-geo-v5.json + runtime src/data/atlas/ps-parcels-geo.json (version 5, /api/atlas/ps-parcels-geo).",
+                    "Only the false claims were removed — nothing new was invented (the P71 principle); the per-Blatt instances of the 56 section rows and the SPLIT join remain the OWNER's decisions; the P67 '9→6' claim for p93 refuted — p93 was NOT in the eye zone; unchanged rows byte-identical to v4. Machine-readable: research/issue17/ps-parcels-geo-v5.json + the runtime src/data/atlas/ps-parcels-geo.json (version 5, /api/atlas/ps-parcels-geo).",
                   )}
                 </p>
               </div>

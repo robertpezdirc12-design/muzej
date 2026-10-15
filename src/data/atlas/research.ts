@@ -3682,7 +3682,7 @@ export const PS_GEO_P55: {
   pageSelection: { pages: number; rows: number; pass1: number; pass2: number; pass3Fallback: number; checksum: string; pass3Note: string };
   join: { matchedRows: number; matchedRowsS1S2: number; matchedRowsBI: number; matchedSharePct: number; psUniqueNumbers: number; psPositionedParcels: number; suffixGroups: number; seriesCounts: { BI: number; S1: number; S2: number }; confCounts: { STRONG: number; MEDIUM: number; WEAK: number }; readConfBI: { STRONG: number; MEDIUM: number; WEAK: number }; ambiguousBases: number; ambiguousRows: number };
   v3Delta: { renumbered: number; removedRows: number; removedReason: string; after: { rows: number; bases: number; multiPage: number; crossBlatt: number }; invariance: string; p67Deltas: string };
-  v4Delta: { renumbered: number; addedRows: number; removedRows: number; noSource: string[]; fuzijeIstiBlatt: number; after: { rows: number; bases: number; multiPage: number; crossBlatt: number }; invariance: string };
+  v5Delta: { excludedSections: number; revertedP93: number; removed: number; before: { rows: number; bases: number; multiPage: number; crossBlatt: number }; after: { rows: number; bases: number; multiPage: number; crossBlatt: number }; invariance: string };
   v2Delta: { removedRows: number; removedPages: string; addedRows: number; addedSource: string; before: { matchedRows: number; confCounts: { STRONG: number; MEDIUM: number; WEAK: number }; areaMedian: number }; invariance: string };
   areaProof: { pairsWithArea: number; medianRatio: number; q25: number; q75: number; tightN: number; tightShare: number; shuffleMedian: number; shuffleTightShare: number; historicalQkM2: number; deltaPct: number };
   spatialProof: { consecPairs: number; medianM: number; q25M: number; q75M: number; share150: number; shuffleMedianM: number; shuffleShare150: number; enrichmentX: number };
@@ -3694,11 +3694,11 @@ export const PS_GEO_P55: {
   next: string[];
 } = {
   series: "PS",
-  version: 4,
+  version: 5,
   source:
-    "PS protokol N083PS (VAČ uodid 373415, docid 41780; 143 strani; branja research/issue17/ps-raw/ps-*.json, izbira strani PS-full-v2.json) + sodobne parcele k.o. 1544 GRIBLJE (research/georef-n83/gurs/parcels-ko1544-merged.json, 2117, P47 prenos SI.GURS.KN:PARCELE) + Blatt I str. 3–4 (P57 primarni vir, src/data/atlas/ps-register-start.json); v4 dokaz research/issue17/ps-parcels-geo-v4.json + runtime src/data/atlas/ps-parcels-geo.json (v2/v3 dokaza arhivirana nespremenjena: research/issue17/ps-parcels-geo-v2.json, -v3.json)",
+    "PS protokol N083PS (VAČ uodid 373415, docid 41780; 143 strani; branja research/issue17/ps-raw/ps-*.json, izbira strani PS-full-v2.json) + sodobne parcele k.o. 1544 GRIBLJE (research/georef-n83/gurs/parcels-ko1544-merged.json, 2117, P47 prenos SI.GURS.KN:PARCELE) + Blatt I str. 3–4 (P57 primarni vir, src/data/atlas/ps-register-start.json); v5 dokaz research/issue17/ps-parcels-geo-v5.json + runtime src/data/atlas/ps-parcels-geo.json (v2/v3/v4 dokazi arhivirani nespremenjeni: research/issue17/ps-parcels-geo-v2.json, -v3.json, -v4.json)",
   status: "REVIEW",
-  generatedBy: "scripts/p70_ps_v4_rejoin.py (v4); v3: scripts/p68_ps_v3_renumber.py; v2: scripts/p58_ps_parcels_geo_v2.py; v1: scripts/p55_ps_parcels_geo.py",
+  generatedBy: "scripts/p71_ps_v5_sections_p93.py (v5); v4: scripts/p70_ps_v4_rejoin.py; v3: scripts/p68_ps_v3_renumber.py; v2: scripts/p58_ps_parcels_geo_v2.py; v1: scripts/p55_ps_parcels_geo.py",
   pageSelection: {
     pages: 135,
     rows: 2762,
@@ -3710,27 +3710,26 @@ export const PS_GEO_P55: {
       "8 strani izbranih na pass3 (24/37/83/84/87/94/121/125): pass3 datoteke brez parsed.vrstice, NDJSON vsebina številčno nezanesljiva (7/8 prvih parcel divergira od pass1 in pass2, ki se strinjata) → uporabljen pass1; odmik od PS-full-v2 izbire dokumentiran",
   },
   join: {
-    matchedRows: 1145,
-    matchedRowsS1S2: 1119,
+    matchedRows: 1077,
+    matchedRowsS1S2: 1051,
     matchedRowsBI: 26,
-    matchedSharePct: 41.5,
+    matchedSharePct: 39.0,
     psUniqueNumbers: 2106,
-    psPositionedParcels: 878,
-    suffixGroups: 270,
-    seriesCounts: { BI: 26, S1: 1049, S2: 70 },
-    confCounts: { STRONG: 188, MEDIUM: 797, WEAK: 160 },  // TOTAL (v2 konvencija; S1/S2 del 171/…)
+    psPositionedParcels: 879,
+    suffixGroups: 271,
+    seriesCounts: { BI: 26, S1: 981, S2: 70 },
+    confCounts: { STRONG: 183, MEDIUM: 745, WEAK: 149 },  // TOTAL (v2 konvencija; S1/S2 del 171/…)
     readConfBI: { STRONG: 3, MEDIUM: 14, WEAK: 9 },
-    ambiguousBases: 215,
-    ambiguousRows: 475,
+    ambiguousBases: 184,
+    ambiguousRows: 373,
   },
-  v4Delta: {
-    renumbered: 77,
-    addedRows: 95,
-    removedRows: 29,
-    noSource: ["p80 1541", "p80 1542", "p80 1543"],
-    fuzijeIstiBlatt: 33,
-    after: { rows: 1145, bases: 878, multiPage: 215, crossBlatt: 79 },
-    invariance: "nespremenjene vrstice bajtno == v3 (959; lekcija P9); group-derived polja (ambiguous 93, conf 15) prekalkulirana po P55 metodi; registrska branja ps-raw NESPREMENJENA — sanacija le na join ključu (base), parzella ostaja originalno branje; 56 sekijskih vrstic (p83–86, p88) nespremenjenih",
+  v5Delta: {
+    excludedSections: 56,
+    revertedP93: 15,
+    removed: 68,
+    before: { rows: 1145, bases: 878, multiPage: 215, crossBlatt: 79 },
+    after: { rows: 1077, bases: 879, multiPage: 184, crossBlatt: 48 },
+    invariance: "nespremenjene vrstice bajtno == v4 (lekcija P9); group-derived polja (ambiguous/conf) prekalkulirana po P55 metodi; registrska branja ps-raw NESPREMENJENA — C1/C2 odstranjujeta LE lažne zahtevke, noben nov podatek ni izmišljen; v4 arhiviran (research/issue17/ps-parcels-geo-v4.json)",
   },
   v3Delta: {
     renumbered: 17,
@@ -3749,57 +3748,57 @@ export const PS_GEO_P55: {
     invariance: "pozicije vrstic so deterministične PER BASE (ploščinsko uteženo središče sodobnih parcel številke) — odstranitev/dodatek vrstic ne spremeni nobene pozicije; množica pozicioniranih števil ostane 800 → soslednost in S1/S2 conf bajtno enaka v1 (P58 zgodovina — arhiv)",
   },
   areaProof: {
-    pairsWithArea: 1124,
-    medianRatio: 3.8843,
-    q25: 2.5402,
-    q75: 7.942,
-    tightN: 201,
-    tightShare: 0.1788,
-    shuffleMedian: 4.2701,
-    shuffleTightShare: 0.0552,
+    pairsWithArea: 1057,
+    medianRatio: 3.9052,
+    q25: 2.649,
+    q75: 7.9444,
+    tightN: 195,
+    tightShare: 0.1845,
+    shuffleMedian: 4.2304,
+    shuffleTightShare: 0.0539,
     historicalQkM2: 3.59665,
-    deltaPct: 8.0,
+    deltaPct: 8.58,
   },
   spatialProof: {
-    consecPairs: 654,
-    medianM: 52.0,
+    consecPairs: 652,
+    medianM: 51.8,
     q25M: 33.0,
-    q75M: 87.7,
-    share150: 0.9052,
-    shuffleMedianM: 1434.0,
-    shuffleShare150: 0.0182,
-    enrichmentX: 27.6,
+    q75M: 87.8,
+    share150: 0.9049,
+    shuffleMedianM: 1320.7,
+    shuffleShare150: 0.0171,
+    enrichmentX: 25.5,
   },
   furkovce: {
     wohnort: "Furkofze",
     rows: 2,
     parcels: [2159, 2160],
     owner: ["Van Wawech Mihó"],
-    note: "prvi imenovani prebivalci Fučkovci v arhivu (PS str. 125); parceli obstajata še danes (P47) [~] — v3 nespremenjeno",
+    note: "prvi imenovani prebivalci Fučkovci v arhivu (PS str. 125); parceli obstajata še danes (P47) [~] — v5 nespremenjeno",
   },
   invariants: {
-    I1: "RENUM 77 preslikav == P69 renumSpec bajtno; kolizije == 33 fuzij (dva bloka registra 921–1000: p49–52 + p89–92; SPLIT = LASTNIKA) — PASS",
-    I2: "pini: v3 dokaz af7479e4…, P69 99962e24…, P59 650f13dc…, PARCELS fee91fca… — PASS",
-    I3: "98 kandidatov == P69 rejoinSpec; 95 dodanih iz ps-raw slojev; 3 brez vira [~] (p80 1541–1543; p1 odrez blok 62–81) — PASS",
-    I4: "NOVI P55 normalizacija (areaQK = j·1600+k, wohnort propagate); kolizije pokrite s 33 fuzijami — PASS",
-    I5: "rows 1145, bases 878, multi 215, cross 79, ambRows 475; area 3.8843; sosledje 654/52.0 — PASS (pini)",
-    I6: "nespremenjene vrstice bajtno == v3 (959); group-derived (ambiguous/conf) 43; preslikane 77; nove 95 — PASS",
-    I7: "sekcije 56 (p83–86, p88) nespremenjene — lastniška odločitev čaka — PASS",
-    I8: "dokaz rowsEvidence == runtime rows bajtno (1145) — PASS",
+    I1: "C1 set == P69 sectionClass (bajtno); 56 vrstic; vse v4 vrstice strani 83–86/88 == set; po C1 noben base ne izgubi vseh vrstic (0 praznih) — PASS",
+    I2: "pini: v4 dokaz 57ed1b0d…, P69 99962e24…, P59 650f13dc…, P56 2fddc76f…, PARCELS fee91fca… — PASS",
+    I3: "p93 15× reverzija (offset +300 razveljavljen); base := parzella 15/15; PF ujemanja == {1603, 1604, 1605}; 12 izpadlih; annRecords 160x/161x — PASS",
+    I4: "PF 1901–1920 brez lažnih dvojnih zahtevkov p93 (ostane p98 III); PF 1904/1906 izpadeta iz base seta (dokumentirana praznina) — PASS",
+    I5: "rows 1077, bases 879, multi 184, cross 48, ambRows 373; area 3.9052; sosledje 652/51.8 — PASS (pini)",
+    I6: "nespremenjene vrstice bajtno == v4; group-derived (ambiguous/conf) prekalkulirana po P55 metodi — PASS",
+    I7: "p93 obdržane vrstice: lat/lng/areaModern/ratio == group_pos(base) konsistentno — PASS",
+    I8: "dokaz rowsEvidence == runtime rows bajtno (1077) — PASS",
     I9: "determinizem — bajtno identičen izpis pri ponovnem izračunu (--check)",
   },
   statusLine:
-    "SANITIZED-DETERMINISTIC — PS geolokacija v4 (P70): izvedba P69 specifikacije — 77 renum preslikav (bajtno po P69 očesni forenziki; p74 +300, p79 −300, p80/p81 −100, p89/p90 ±1000, p92 −9, p99 +1000) + 95 rejoin vrstic iz starih P38 slojev (P55 metoda; p74 14 · p76 18 · p77 2 · p78 10 · p79 2 · p80 3 · p81 3 · p82 16 · p89 9 · p90 2 · p92 1 · p93 12 · p99 3; 3 brez vira [~]); 33 fuzij isti-Blatt (dva bloka registra 921–1000: p49–52 + p89–92; SPLIT = LASTNIKA); 1145 vrstic / 878 base / multi-page 215 / cross-Blatt 79; površine median 3.8843 ≈ 1 QK = 3.59665 m² (Δ +8.0 %, kontrola 4.2701); soslednost 654 parov / 52.0 m / 27.6×; zaupanje STRONG 188 / MEDIUM 797 / WEAK 160; per-Blatt dvoumnost: 215 base / 475 vrstic [~]; 56 sekijskih vrstic (p83–86, p88) nespremenjenih — lastniška odločitev čaka; v3 arhiviran",
+    "SANITIZED-DETERMINISTIC — PS geolokacija v5 (P71): dve korekciji v4 — (C1) 56 sekijskih vrstic (p83–86, p88) EXCLUDE iz joina (P69 dokazane lažne fuzije na Blatt I poligone; lastniška odločitev: opcija exclude; per-Blatt instance = odprta točka; vrstice ostanejo v registru brez geometrije) + (C2) P93 REVERZIJA — P68 renum 160x→190x ovržen z notranjo glifno forenziko (r9=1609/r19=1619: 6 ≠ 9, isti pisar; kontrola p98 1916; p92 981–983), annRecords anotatorja (1601–1619, 'Durch Theilung im 1824'), pageMap P56 in P38 pass2 — 15 vrstic base := parzella, PF ujemanja 1603/1604/1605 (prej prazni poligoni dobili prve vrstice), 12 izpadlih; PF 1901–1920 brez lažnih dvojnih zahtevkov p93 (ostane p98 III); 1077 vrstic (39.0 %) / 879 base / multi-page 184 / cross-Blatt 48; površine median 3.9052 ≈ 1 QK = 3.59665 m² (Δ +8.58 %, kontrola 4.2304); soslednost 652 parov / 51.8 m / 25.5×; zaupanje STRONG 183 / MEDIUM 745 / WEAK 149; per-Blatt dvoumnost: 184 base / 373 vrstic [~]; forenzični izrezi research/issue17/p93-forensics/ (7 PNG); v4 arhiviran",
   verdictSi:
-    "P70 (2026-10-15, v4): izvedba P69 specifikacije kot mehanski izvod (deterministično, brez AI ob delovanju). 77 renum preslikav (bajtno po P69; konec lažnih fuzij: p74 1121–1140 → 1421–1440 (4→1 artefakt), p76 1161–1180 → 1461–1480, p79 182x → 152x (5→8), p80/p81 16xx → 15xx (5→6), p89/p90 19xx → 9xx (fantom-1 ±1000 — 9 dolgi ascender ≠ vodilna 1), p92 +9 zamik, p99 92x → 192x (Blatt III)) + 95 rejoin vrstic iz starih P38 slojev (ključi po korekciji, P55 normalizacija, group_pos poligoni; 3 kandidati p80 1541–1543 brez vira — p1 odrez blok 62–81, identiteta [~]). 33 fuzij isti-Blatt: register vsebuje 921–1000 v dveh blokih (p49–52 »glavni tek« + p89–92 »stolpec«) — SPLIT = LASTNIKA. Meritve: 1145 vrstic (41.5 %), 878 base, 215 multi-page, 79 cross-Blatt, area median 3.8843 (Δ +8.0 %, kontrola seed 42: 4.2701), soslednost 654 parov / 52.0 m / 27.6× (kontrola 1434.0 m). Zaupanje 188/797/160. 56 sekijskih vrstic (p83–86, p88) nespremenjenih — exclude ali per-Blatt instance = lastniška odločitev. Nespremenjene vrstice bajtno == v3; registrska branja nespremanjena; v3 arhiviran.",
+    "P71 (2026-10-15, v5): dve korekciji v4 na podlagi nove očesne forenzike. (C1) 56 sekijskih vrstic p83–86/p88 izpadlo iz joina — dokazane lažne fuzije na Blatt I poligone (lastniška odločitev P71, opcija exclude; per-Blatt instance ostaja odprta lastniška točka; vrstice ostanejo v registru brez geometrije — 0 poligonov ostane praznih). (C2) P68 renum p93 160x→190x ovržen: notranja glifna kontrola na p93 (1609/1619: 6 ≠ 9 pri istem pisarju; kontrola p98 '1916' = 9 in 6 v istem številu; p92 981–983 verificirane 9), annRecords anotatorja (1601–1619, 'Durch Theilung im 1824'), pageMap P56 in P38 pass2 soglasno dokazujejo 1601–1620 — 15 vrstic reverziranih na originalno branje, 3 ostanejo povezane (PF 1603/1604/1605 — prej prazni poligoni dobili prve vrstice), 12 izpadlih; PF 1901–1920 brez lažnih dvojnih zahtevkov p93 (ostane p98 III); PF 1904/1906 izpadeta iz base seta (dokumentirana praznina). Meritve: 1077 vrstic (39.0 %), 879 base, 184 multi-page, 48 cross-Blatt, area median 3.9052 (Δ +8.58 %, kontrola 4.2304), soslednost 652 parov / 51.8 m / 25.5× (kontrola 1320.7 m). Zaupanje 183/745/149. Nespremenjene vrstice bajtno == v4; registrska branja nespremanjena; v4 arhiviran.",
   verdictEn:
-    "P70 (2026-10-15, v4): the P69 specification realized as a mechanical derivation (deterministic, no AI at runtime). 77 renumber mappings (byte-equal to P69; end of the false fusions: p74 1121–1140 → 1421–1440 (4→1 artifact), p76 1161–1180 → 1461–1480, p79 182x → 152x (5→8), p80/p81 16xx → 15xx (5→6), p89/p90 19xx → 9xx (phantom-1 ±1000 — a long ascender 9 is not a leading 1), p92 +9 shift, p99 92x → 192x (Blatt III)) + 95 rejoined rows from the old P38 layers (keys corrected, P55 normalization, group_pos polygons; 3 candidates p80 1541–1543 without a source — p1 clipped block 62–81, identity [~]). 33 same-Blatt fusions: the register holds 921–1000 in two blocks (p49–52 'main run' + p89–92 'column') — SPLIT = the OWNER's call. Measurements: 1145 rows (41.5 %), 878 bases, 215 multi-page, 79 cross-Blatt, area median 3.8843 (Δ +8.0 %, control seed 42: 4.2701), adjacency 654 pairs / 52.0 m / 27.6× (control 1434.0 m). Confidence 188/797/160. 56 section rows (p83–86, p88) unchanged — exclude or per-Blatt instances = the owner's decision. Unchanged rows byte-identical to v3; register reads unchanged; v3 archived.",
+    "P71 (2026-10-15, v5): two corrections to v4 based on new ocular forensics. (C1) 56 section rows p83–86/p88 excluded from the join — proven false fusions onto Blatt I polygons (owner decision P71, the exclude option; per-Blatt instances remain an open owner question; the rows stay in the register without geometry — 0 polygons left empty). (C2) The P68 renum p93 160x→190x refuted: within-page glyph control on p93 (1609/1619: 6 ≠ 9 by the same scribe; the p98 '1916' control = 9 and 6 in the same number; p92 981–983 verified 9s), the contemporary annotator's annRecords (1601–1619, 'Durch Theilung im 1824'), the pageMap and P38 pass2 all prove 1601–1620 — 15 rows reverted to the original reading, 3 stay matched (PF 1603/1604/1605 — previously empty polygons got their first rows), 12 dropped; PF 1901–1920 free of p93's false double claims (p98 III remains); PF 1904/1906 dropped from the base set (a documented void). Measurements: 1,077 rows (39.0 %), 879 bases, 184 multi-page, 48 cross-Blatt, area median 3.9052 (Δ +8.58 %, control 4.2304), adjacency 652 pairs / 51.8 m / 25.5× (control 1,320.7 m). Confidence 183/745/149. Unchanged rows byte-identical to v4; register reads unchanged; v4 archived.",
   next: [
-    "LASTNIŠKI: 56 sekijskih vrstic (p83–86, p88) — exclude iz joina ali per-Blatt instance (P60 moda B / PF protokol)",
-    "LASTNIŠKI: SPLIT joina (33 fuzij isti-Blatt + cross-Blatt)",
+    "LASTNIŠKO: ① per-Blatt instance sekcij (P60 moda B / PF protokol) — 56 vrstic čaka identiteto sekcij",
+    "LASTNIŠKO: ② SPLIT joina (33 fuzij isti-Blatt 921–1000: p49–52 × p89–92; + cross-Blatt)",
+    "praznine brez registrskih strani: PF 1644–1655, 1673/1679, 1842–1860, 1904/1906 (modernVoid [~] — brez trditve o vzroku)",
     "III/IV cona p94+ — sistemski pregled preostalih slojev (openQuestions #3 P69)",
     "PF protokol povezava (lastniki pas-instanc)",
-    "veriga re-run P60–P61 s posodobljenimi pini (atribucije nad v4)",
   ],
 };
 
@@ -5063,5 +5062,113 @@ export const V4_REJOIN_P70: {
     "III/IV cona p94+ — sistemski pregled preostalih slojev (openQuestions #3 P69)",
     "PF protokol povezava (lastniki pas-instanc)",
     "veriga re-run P60–P61 s posodobljenimi pini (atribucije nad v4)",
+  ],
+};
+
+export const V5_SECTIONS_P93_P71: {
+  phase: string;
+  series: "PS";
+  task: string;
+  status: ResearchStatus;
+  runtime: string;
+  proof: string;
+  script: string;
+  forensics: string;
+  chain: string;
+  v5Delta: {
+    excludedSections: number;
+    revertedP93: number;
+    removed: number;
+    before: { rows: number; bases: number; multiPage: number; crossBlatt: number };
+    after: { rows: number; bases: number; multiPage: number; crossBlatt: number };
+  };
+  corrections: {
+    C1: { excluded: number; pages: number[]; decision: string };
+    C2: { reverted: number; pfMatches: string[]; removed: number; evidence: string[] };
+  };
+  summary: {
+    rows: number;
+    bases: number;
+    multiPage: number;
+    crossBlatt: number;
+    sharePct: number;
+    series: { BI: number; S1: number; S2: number };
+    conf: { STRONG: number; MEDIUM: number; WEAK: number };
+    ambBases: number;
+    ambRows: number;
+    areaMedian: number;
+    areaDeltaPct: number;
+    consecPairs: number;
+    consecMedianM: number;
+    enrichmentX: number;
+    removedByPage: Record<string, number>;
+  };
+  statusLine: string;
+  verdictSi: string;
+  verdictEn: string;
+  next: string[];
+} = {
+  phase: "P71",
+  series: "PS",
+  task: "Korekcije v4: C1 sekcije exclude 56 (p83–86, p88) + C2 p93 reverzija (15 vrstic base := parzella)",
+  status: "REVIEW",
+  runtime: "src/data/atlas/ps-parcels-geo.json (version 5)",
+  proof: "research/issue17/ps-parcels-geo-v5.json",
+  script: "scripts/p71_ps_v5_sections_p93.py (--check bajtno PASS; pini v4 57ed1b0d…, P69 99962e24…, P59 650f13dc…, P56 2fddc76f…, PARCELS fee91fca…)",
+  forensics: "research/issue17/p93-forensics/ (7 izrezov 8–12×)",
+  chain: "P59–P67 --check PASS; P69 zamrznjen (v3 dokaz); P70 --check PASS (dokaz bajtno, runtime nasledstvo v5 deklarirano)",
+  v5Delta: {
+    excludedSections: 56,
+    revertedP93: 15,
+    removed: 68,
+    before: { rows: 1145, bases: 878, multiPage: 215, crossBlatt: 79 },
+    after: { rows: 1077, bases: 879, multiPage: 184, crossBlatt: 48 },
+  },
+  corrections: {
+    C1: {
+      excluded: 56,
+      pages: [83, 84, 85, 86, 88],
+      decision: "LASTNIK (P71): opcija exclude; per-Blatt instance = odprta",
+    },
+    C2: {
+      reverted: 15,
+      pfMatches: ["1603", "1604", "1605"],
+      removed: 12,
+      evidence: [
+        "glifna forenzika: notranja kontrola r9=1609/r19=1619 (6 ≠ 9, isti pisar)",
+        "annRecords anotatorja 1601–1619 (Durch Theilung im 1824)",
+        "pageMap P56 1601–1620",
+        "P38 pass2 1601–1620",
+        "P67 trditev '9→6' za p93 ovržena — p93 NI bil v očesni coni",
+      ],
+    },
+  },
+  summary: {
+    rows: 1077,
+    bases: 879,
+    multiPage: 184,
+    crossBlatt: 48,
+    sharePct: 39.0,
+    series: { BI: 26, S1: 981, S2: 70 },
+    conf: { STRONG: 183, MEDIUM: 745, WEAK: 149 },
+    ambBases: 184,
+    ambRows: 373,
+    areaMedian: 3.9052,
+    areaDeltaPct: 8.58,
+    consecPairs: 652,
+    consecMedianM: 51.8,
+    enrichmentX: 25.5,
+    removedByPage: { "83": 13, "84": 12, "85": 14, "86": 14, "88": 3, "93": 12 },
+  },
+  statusLine:
+    "P71 KOREKCIJE v4: C1 sekcije exclude — 56 vrstic (p83–86, p88; P69 dokazane lažne fuzije na Blatt I poligone; lastniška odločitev: opcija exclude; vrstice ostanejo v registru brez geometrije — 0 poligonov ostane praznih) + C2 p93 reverzija — P68 renum 160x→190x (+300) NAPAKA, notranja glifna forenzika (r9=1609/r19=1619: 6 ≠ 9; kontrola p98 1916; p92 981–983) + annRecords anotatorja (1601–1619) + pageMap P56 + P38 pass2 soglasno dokazujejo 1601–1620: 15 vrstic base := parzella, PF ujemanja 1603/1604/1605 (prej prazni poligoni dobili prve vrstice), 12 izpadlih; PF 1901–1920 brez lažnih dvojnih zahtevkov p93 (ostane p98 III); v5: 1077 vrstic (39.0 %) / 879 base / 184 multi-page / 48 cross-Blatt; area median 3.9052 (Δ +8.58 %); soslednost 652/51.8 m/25.5×; odprte praznine: PF 1644–1655, 1673/1679, 1842–1860, 1904/1906 (brez registrskih strani; modernVoid [~])",
+  verdictSi:
+    "P71: dve korekciji v4. (C1) 56 sekijskih vrstic (p83–86, p88) EXCLUDE iz joina — P69 dokazane lažne fuzije na Blatt I poligone; lastniška odločitev (opcija exclude); per-Blatt instance ostaja odprta točka; vrstice ostanejo v registru brez geometrije. (C2) P93 REVERZIJA — P68 renum 160x→190x ovržen (glifna forenzika + annRecords + pageMap P56 + P38 pass2): 15 vrstic base := parzella, PF ujemanja 1603/1604/1605 (prej prazni poligoni dobili prve vrstice), 12 izpadlih; PF 1901–1920 brez lažnih dvojnih zahtevkov p93 (ostane p98 III); PF 1904/1906 izpadeta iz base seta (dokumentirana praznina). V5: 1077 vrstic / 879 base / 184 multi / 48 cross.",
+  verdictEn:
+    "P71: two corrections to v4. (C1) 56 section rows (p83–86, p88) EXCLUDED from the join — P69-proven false fusions onto Blatt I polygons; owner decision (the exclude option); per-Blatt instances remain an open question; the rows stay in the register without geometry. (C2) THE P93 REVERSION — the P68 renum 160x→190x refuted (glyph forensics + annRecords + the P56 pageMap + P38 pass2): 15 rows base := parzella, PF matches 1603/1604/1605 (previously empty polygons got their first rows), 12 dropped; PF 1901–1920 free of p93's false double claims (p98 III remains); PF 1904/1906 dropped from the base set (a documented void). V5: 1,077 rows / 879 bases / 184 multi / 48 cross.",
+  next: [
+    "LASTNIŠKO: ① per-Blatt instance sekcij (P60 moda B / PF protokol) — 56 vrstic čaka identiteto sekcij",
+    "LASTNIŠKO: ② SPLIT joina (33 fuzij isti-Blatt + cross-Blatt)",
+    "praznine brez registrskih strani: PF 1644–1655, 1673/1679, 1842–1860, 1904/1906 (modernVoid [~])",
   ],
 };

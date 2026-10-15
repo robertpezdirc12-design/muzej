@@ -195,9 +195,15 @@ def main() -> int:
     if v3.get("version") == 3:
         rows = v3["rows"]
     else:
-        # P70 je izvedel P69 specifikacijo (runtime = v4) — klasifikacija
-        # ostaje zamrznjena na arhivirani v3 rowsEvidence (bajtno enaka)
+        # P70 je izvedel P69 specifikacijo (runtime = v4), P71 korekcije
+        # (runtime = v5) — klasifikacija ostaja zamrznjena na arhivirani
+        # v3 rowsEvidence (bajtno enaka); pin na live runtime se NE spreminja
         rows = json.loads(V3_EV.read_text(encoding="utf-8"))["rowsEvidence"]
+        disk = json.loads(PROOF.read_text(encoding="utf-8")) \
+            if PROOF.exists() else None
+        frozen = (disk or {}).get("inputs", {}).get("pins", {}).get("v3")
+        if frozen:
+            pins["v3"] = frozen  # bajtna reprodukcija zamrznjenega dokaza
     card, card_raw = load_card()
     pagemap, ann, topo = load_topo()
 

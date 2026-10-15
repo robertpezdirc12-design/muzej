@@ -2787,3 +2787,88 @@ vrsticah in SPLIT joinu = LASTNIKA. Strojno berljivo:
 research/issue17/ps-parcels-geo-v4.json + runtime
 src/data/atlas/ps-parcels-geo.json (skripta scripts/p70_ps_v4_rejoin.py,
 I1–I9, --check bajtno PASS).
+
+## §48 — P71: korekcije v4 (C1 sekcije exclude + C2 p93 reverzija → v5) — 2026-10-15
+
+**Sprožilec:** lastniški ukaz (odprti točki P70 ① in P69 openQuestions #3/p93).
+**Metoda:** očesna forenzika po P67 receptu (izrezi VAČ 3× + zoomi 10–12×),
+notranja glifna kontrola, deterministično, brez AI ob delovanju.
+
+### C1 — 56 sekijskih vrstic (p83–86, p88) EXCLUDE iz joina
+
+- Odločitev: LASTNIK (P71) — opcija "exclude" iz P69 sectionClass.options;
+  per-Blatt instance (P60 moda B / PF protokol) ostaja odprta lastniška
+  točka.
+- Dokaz (P69, nespremenjen): Σ ratio 161 = 235.65×, 162 = 31.39×,
+  175 = 19.92×, 990 = 8.99× proti čistim 1441 = 1.09; lastniško prekrivanje
+  p83/p84 vs p11 = 0; hiše p85 641/646/655 = 16/22/7 ≠ p35 68/23/26.
+- Izvedba: 56 vrstic (p83 13 · p84 12 · p85 14 · p86 14 · p88 3) bajtno ==
+  P69 sectionClass; izpadle iz runtime joina, ostanejo v registru
+  (dokaz: corrections.C1.excludedRows); **invarianta I4: 0 poligonov ostane
+  praznih** — vsi 56 base imajo legitimne druge zahtevalce (p11/p61, p33,
+  p35, p52 …).
+
+### C2 — p93 reverzija: P68 renum 160x→190x (+300) = NAPAKA
+
+- **Glifna forenzika (notranja kontrola, odločilno):** p93 vrstica 9 =
+  "1609" in vrstica 19 = "1619" — gotova ZADNJA števka 9 (zaprt zgornji
+  lok + rep pod osnovnico) je vidno RAZLIČNA od srednje števke (spodnja
+  zanka, odprt vrh, brez repa = 6); isti pisar, ista stran. Enako r5
+  "1605", r16 "1616", r20 "1620". Kontrole: p98 "1916" @12× (9 in 6 v
+  istem številu = dve različni črki), p92 981–983 (P69-verificirane 9 =
+  isti glif kot p98). Izrezi: research/issue17/p93-forensics/ (7 PNG).
+- **Ovrga P67 trditvi:** "9→6/9→0 — P67 že dokazal" za p93 = napačno
+  prenesena (p93 NI bil v P67 očesni coni p74–92/p99; artefakt realen na
+  drugih straneh). P69 eyesVerdicts p93 ("true [1901,1920]") je bil
+  nikoli očesno verificiran — utemeljen le na karta-fit hevristiki.
+- **Neodvisni viri:** annRecords anotatorja (9 zapisov referencira
+  1601, 1602, 1603, 1604, 1606, 1607, 1613, 1614, 1619 — "Durch Theilung
+  im 1824", "trifft Gültley 9.", "1870. 8-1117"); pageMap P56
+  (numMin/numMax 1601–1620); P38 pass2 (1601–1620); monotoničnost
+  (vrstica N = 1600+N, 20/20).
+- Izvedba: 15 vrstic base := parzella (reverz na originalno branje);
+  PF ujemanja == {1603, 1604, 1605} (invarianta I3 — napoved izpolnjena);
+  12 izpadlih (base brez PF poligona — 1601–1620 večinoma odsotnih v
+  sodobnem k.o. 1544); PF 1901–1920 izgubi lažne dvojne zahtevke p93
+  (ostane p98 III); PF 1904/1906 izpadeta iz base seta (dokumentirana
+  praznina); PF 1603/1604/1605 dobijo prve prave vrstice.
+
+### Meritve v5 (runtime src/data/atlas/ps-parcels-geo.json, version 5)
+
+- rows 1145 → **1077** (39.0 % izbire 2762) / bases 878 → **879** /
+  multi-page 215 → **184** / cross-Blatt 79 → **48**;
+- area median **3.9052** ≈ 1 Wiener QK 3.59665 m² (Δ +8.58 %, kontrola
+  seed 42 = 4.2304); soslednost **652 parov / 51.8 m / 25.5×** (kontrola
+  1320.7 m); zaupanje **183/745/149**; dvoumnost **184/373** [~];
+- nespremenjene vrstice bajtno == v4 (1041 + 33 group-derived; lekcija P9).
+
+### Veriga in QA
+
+- Skripta scripts/p71_ps_v5_sections_p93.py (I1–I9, --check bajtno PASS;
+  pini v4 57ed1b0d…, P69 99962e24…, P59 650f13dc…, P56 2fddc76f…,
+  PARCELS fee91fca…). Veriga: P59–P67 --check PASS; P69 zamrznjen (v3
+  dokaz; pini.v3 zamrznjen iz obstoječega dokaza — P70 recept); P70
+  --check PASS (dokaz bajtno; runtime nasledstvo v5 deklarirano).
+  Prejšnje faze: p55/p57/p58/p68 --check MISMATCH (znano stanje od P70 —
+  runtime verzija napredovala; pokrito z QA "dve obliki").
+- QA 73 → **74/74** (nova qa-p71-v5-corrections: pini v5Delta 56/15/68 +
+  before/after + neodvisen preracun — 0 sekijskih vrstic, p93 base ==
+  parzella 3/3 {1603,1604,1605}, 1904/1906 izpad, 1603/1604/1605 prisotni,
+  area median 3.9052; dokaz == runtime bajtno; dve obliki; qa-p55/p58 na
+  v5 realnost; qa-p70 repo oblika na zamrznjenem v4 dokazu + produkcija
+  deklaracija nasledstva).
+
+### Odprte praznine (dokumentirane, brez trditve o vzroku [~])
+
+- PF 1644–1655 (8 poligonov), 1673/1679 (2), 1842–1860 (13), 1904/1906
+  (2): brez registrskih strani/zahtevkov — pageMap pokritost preverjena;
+  možnosti (Abschreibung, prelom številčenja) = odprto.
+- P56 modernVoid 2507–2607 (87 dodatkov S2) — nespremenjeno.
+- LASTNIŠKO (naslednja faza): ① per-Blatt instance 56 sekcij, ② SPLIT
+  joina (33 fuzij isti-Blatt + cross-Blatt), ③ praznine.
+
+**Poštenost:** C1/C2 odstranjujeta LE dokumentirane lažne zahtevke — noben
+nov podatek ni izmišljen. Strojno berljivo:
+research/issue17/ps-parcels-geo-v5.json + runtime
+src/data/atlas/ps-parcels-geo.json (skripta
+scripts/p71_ps_v5_sections_p93.py, I1–I9, --check bajtno PASS).
