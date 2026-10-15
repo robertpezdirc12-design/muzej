@@ -50,8 +50,15 @@ export const dynamic = "force-static";
  *    → 939 vrstic / 879 base / multi 50 / cross 48; area median 3.8941
  *    (Δ +8.27 %); sosledje 652/51.8 m (nespremenjeno); nearDual
  *    2080/2081 ostanejo; v5 arhiviran v dokazu.
+ *  · P74: CROSS-BLATT dvojnosti registra (odločitveni paket za
+ *    cross-Blatt SPLIT joina — odprta točka P73 ①; P66 vzorec
+ *    re-izpeljan iz v6; NE odloča namesto lastnika — MERI in DOKAZUJE)
+ *    — 48 cross base / 96 vrstic / 1 vrstica per Blatt 48/48; lastniki
+ *    med Blatti disjunktni 48/48; opciji A1/A2 (rows 891, cross 0) —
+ *    v6 runtime NESPREMENJEN (dokaz research/issue17/
+ *    ps-cross-blatt-pack.json; odločitev LASTNIKA).
  *
- * Status: SANITIZED-DETERMINISTIC. SHEET_GEOREFS in dokazi P40–P72
+ * Status: SANITIZED-DETERMINISTIC. SHEET_GEOREFS in dokazi P40–P73
  * nespremanjeni; v2/v3/v4/v5 dokazi arhivirani (research/issue17/
  * ps-parcels-geo-v2.json, -v3.json, -v4.json, -v5.json).
  *

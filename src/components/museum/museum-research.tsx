@@ -89,6 +89,7 @@ import {
   V5_SECTIONS_P93_P71,
   DUAL_OCCURRENCE_P72,
   SPLIT_OPTION_A_P73,
+  CROSS_BLATT_P74,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -2530,8 +2531,8 @@ export function MuseumResearch() {
                 <p className="text-[11px] leading-relaxed text-foreground/80">
                   <span className="font-semibold">{t("Pošten status: ", "Honest status: ")}</span>
                   {t(
-                    "Mehanski izvod P69 specifikacije — nič ni bilo ugibano: preslikave bajtno == P69, kandidati bajtno == P69 rejoinSpec, sloji dokumentirani, 33 fuzij dokumentiranih (SPLIT = LASTNIKA), 3 kandidati p80 brez vira [~]. KOREKCIJE izvedene v P71 (C1 sekcije exclude + C2 p93 reverzija) — v4 dokaz ostaja zamrznjen; runtime je napredoval na v5 (P71: 1077 vrstic / 879 base) in nato v6 (P73: 939 vrstic / 879 base). P72: 33 kolizij = podmnožica 135 isti-Blatt dual base (odločitveni paket — isti pojav se razteza na cel register). P73: isti-Blatt SPLIT izveden (opcija A) — 33 kolizij = podmnožica 135; druge-blok vrstice izpadle iz joina. Strojno berljivo: research/issue17/ps-parcels-geo-v4.json + runtime src/data/atlas/ps-parcels-geo.json (version 6, /api/atlas/ps-parcels-geo).",
-                    "A mechanical derivation of the P69 specification — nothing was guessed: the mappings byte-equal P69, the candidates byte-equal the P69 rejoinSpec, the layers documented, 33 fusions documented (SPLIT = OWNER), 3 candidates p80 without a source [~]. The CORRECTIONS realized in P71 (C1 sections excluded + C2 p93 reverted) — the v4 proof stays frozen; the runtime has advanced to v5 (P71: 1,077 rows / 879 bases) and then v6 (P73: 939 rows / 879 bases). P72: the 33 collisions are a subset of the 135 same-Blatt dual bases (the decision pack — the same phenomenon extends to the whole register). P73: the same-Blatt SPLIT executed (option A) — the 33 collisions are a subset of 135; the second-block rows dropped from the join. Machine-readable: research/issue17/ps-parcels-geo-v4.json + the runtime src/data/atlas/ps-parcels-geo.json (version 6, /api/atlas/ps-parcels-geo).",
+                    "Mehanski izvod P69 specifikacije — nič ni bilo ugibano: preslikave bajtno == P69, kandidati bajtno == P69 rejoinSpec, sloji dokumentirani, 33 fuzij dokumentiranih (SPLIT = LASTNIKA), 3 kandidati p80 brez vira [~]. KOREKCIJE izvedene v P71 (C1 sekcije exclude + C2 p93 reverzija) — v4 dokaz ostaja zamrznjen; runtime je napredoval na v5 (P71: 1077 vrstic / 879 base) in nato v6 (P73: 939 vrstic / 879 base). P72: 33 kolizij = podmnožica 135 isti-Blatt dual base (odločitveni paket — isti pojav se razteza na cel register). P73: isti-Blatt SPLIT izveden (opcija A) — 33 kolizij = podmnožica 135; druge-blok vrstice izpadle iz joina. P74: cross-Blatt odločitveni paket — 48 base (lastniki med Blatti disjunktni 48/48) — v6 join NESPREMENJEN. Strojno berljivo: research/issue17/ps-parcels-geo-v4.json + runtime src/data/atlas/ps-parcels-geo.json (version 6, /api/atlas/ps-parcels-geo).",
+                    "A mechanical derivation of the P69 specification — nothing was guessed: the mappings byte-equal P69, the candidates byte-equal the P69 rejoinSpec, the layers documented, 33 fusions documented (SPLIT = OWNER), 3 candidates p80 without a source [~]. The CORRECTIONS realized in P71 (C1 sections excluded + C2 p93 reverted) — the v4 proof stays frozen; the runtime has advanced to v5 (P71: 1,077 rows / 879 bases) and then v6 (P73: 939 rows / 879 bases). P72: the 33 collisions are a subset of the 135 same-Blatt dual bases (the decision pack — the same phenomenon extends to the whole register). P73: the same-Blatt SPLIT executed (option A) — the 33 collisions are a subset of 135; the second-block rows dropped from the join. P74: the cross-Blatt decision pack — 48 bases (owners disjoint across Blatts 48/48) — the v6 join UNCHANGED. Machine-readable: research/issue17/ps-parcels-geo-v4.json + the runtime src/data/atlas/ps-parcels-geo.json (version 6, /api/atlas/ps-parcels-geo).",
                   )}
                 </p>
               </div>
@@ -2592,8 +2593,8 @@ export function MuseumResearch() {
                 <p className="text-[11px] leading-relaxed text-foreground/80">
                   <span className="font-semibold">{t("Pošten status: ", "Honest status: ")}</span>
                   {t(
-                    "Odstranjena sta LE lažna zahtevka — noben nov podatek ni izmišljen (P71 načelo); per-Blatt instance 56 sekijskih vrstic ostaja LASTNIŠKA odločitev; P67 trditev '9→6' za p93 ovržena — p93 NI bil v očesni coni; nespremenjene vrstice bajtno == v4. P72: isti-Blatt dual base (135) = odločitveni paket za SPLIT joina — 33 P70 kolizij = podmnožica (odločitev ostaja LASTNIKA). P73: isti-Blatt SPLIT opcija A (drop 138 vrstic drugega bloka) — v5 arhiviran v dokazu, runtime je v6. Strojno berljivo: research/issue17/ps-parcels-geo-v5.json + runtime src/data/atlas/ps-parcels-geo.json (version 6, /api/atlas/ps-parcels-geo).",
-                    "Only the false claims were removed — nothing new was invented (the P71 principle); the per-Blatt instances of the 56 section rows and the SPLIT join remain the OWNER's decisions; the P67 '9→6' claim for p93 refuted — p93 was NOT in the eye zone; unchanged rows byte-identical to v4. P72: the same-Blatt dual bases (135) = the decision pack for the SPLIT join — the 33 P70 collisions are a subset (the decision remains the OWNER's). P73: the same-Blatt SPLIT option A (138 second-block rows dropped) — v5 archived in the proof, the runtime is v6. Machine-readable: research/issue17/ps-parcels-geo-v5.json + the runtime src/data/atlas/ps-parcels-geo.json (version 6, /api/atlas/ps-parcels-geo).",
+                    "Odstranjena sta LE lažna zahtevka — noben nov podatek ni izmišljen (P71 načelo); per-Blatt instance 56 sekijskih vrstic ostaja LASTNIŠKA odločitev; P67 trditev '9→6' za p93 ovržena — p93 NI bil v očesni coni; nespremenjene vrstice bajtno == v4. P72: isti-Blatt dual base (135) = odločitveni paket za SPLIT joina — 33 P70 kolizij = podmnožica (odločitev ostaja LASTNIKA). P73: isti-Blatt SPLIT opcija A (drop 138 vrstic drugega bloka) — v5 arhiviran v dokazu, runtime je v6. P74: cross-Blatt odločitveni paket (48 base; opciji A1/A2) — v6 join NESPREMENJEN, odločitev ostaja LASTNIKA. Strojno berljivo: research/issue17/ps-parcels-geo-v5.json + runtime src/data/atlas/ps-parcels-geo.json (version 6, /api/atlas/ps-parcels-geo).",
+                    "Only the false claims were removed — nothing new was invented (the P71 principle); the per-Blatt instances of the 56 section rows and the SPLIT join remain the OWNER's decisions; the P67 '9→6' claim for p93 refuted — p93 was NOT in the eye zone; unchanged rows byte-identical to v4. P72: the same-Blatt dual bases (135) = the decision pack for the SPLIT join — the 33 P70 collisions are a subset (the decision remains the OWNER's). P73: the same-Blatt SPLIT option A (138 second-block rows dropped) — v5 archived in the proof, the runtime is v6. P74: the cross-Blatt decision pack (48 bases; options A1/A2) — the v6 join UNCHANGED, the decision remains the OWNER's. Machine-readable: research/issue17/ps-parcels-geo-v5.json + the runtime src/data/atlas/ps-parcels-geo.json (version 6, /api/atlas/ps-parcels-geo).",
                   )}
                 </p>
               </div>
@@ -2654,8 +2655,8 @@ export function MuseumResearch() {
                 <p className="text-[11px] leading-relaxed text-foreground/80">
                   <span className="font-semibold">{t("Pošten status: ", "Honest status: ")}</span>
                   {t(
-                    "Opcije: A (exclude drugi blok po C1 vzorcu — pripravljeno, ob odobritvi v6), B (per-page instance — zahteva georef Blattnih kart [~]), C (re-renum — neodločljivo, pageMap razponi prekrivajo). Odločitev: LASTNIK (P70 »SPLIT = LASTNIKA«) — paket MERI in DOKAZUJE, ne odloča; v5 runtime join NESPREMENJEN ob P72 (skripta scripts/p72_ps_dual_pack.py, I1–I9, --check bajtno PASS). P73: opcija A IZVEDENA — v6 (drop 137 kombinacij = 138 vrstic; rows 939); paket (dokaz + runtime) ostaja nespremenjen. Strojno berljivo: research/issue17/ps-dual-occurrence-pack.json + runtime src/data/atlas/ps-dual-occurrence-pack.json.",
-                    "Options: A (exclude the second block per the C1 pattern — prepared, v6 upon approval), B (per-page instances — requires georeferenced Blatt sheets [~]), C (re-numbering — undecidable, the pageMap ranges overlap). The decision: the OWNER (P70 \"SPLIT = OWNER\") — the pack MEASURES and PROVES, it does not decide; the v5 runtime join UNCHANGED at P72 (the script scripts/p72_ps_dual_pack.py, I1–I9, --check byte-equal PASS). P73: option A EXECUTED — v6 (137 combinations = 138 rows dropped; rows 939); the pack (proof + runtime) remains unchanged. Machine-readable: research/issue17/ps-dual-occurrence-pack.json + the runtime src/data/atlas/ps-dual-occurrence-pack.json.",
+                    "Opcije: A (exclude drugi blok po C1 vzorcu — pripravljeno, ob odobritvi v6), B (per-page instance — zahteva georef Blattnih kart [~]), C (re-renum — neodločljivo, pageMap razponi prekrivajo). Odločitev: LASTNIK (P70 »SPLIT = LASTNIKA«) — paket MERI in DOKAZUJE, ne odloča; v5 runtime join NESPREMENJEN ob P72 (skripta scripts/p72_ps_dual_pack.py, I1–I9, --check bajtno PASS). P73: opcija A IZVEDENA — v6 (drop 137 kombinacij = 138 vrstic; rows 939); paket (dokaz + runtime) ostaja nespremenjen. P74: cross-Blatt paket re-izpeljan iz v6 — 48 base (P66 36: 17 ostaja, 19 odhaja, 31 novih); lastniki med Blatti disjunktni 48/48. Strojno berljivo: research/issue17/ps-dual-occurrence-pack.json + runtime src/data/atlas/ps-dual-occurrence-pack.json.",
+                    "Options: A (exclude the second block per the C1 pattern — prepared, v6 upon approval), B (per-page instances — requires georeferenced Blatt sheets [~]), C (re-numbering — undecidable, the pageMap ranges overlap). The decision: the OWNER (P70 \"SPLIT = OWNER\") — the pack MEASURES and PROVES, it does not decide; the v5 runtime join UNCHANGED at P72 (the script scripts/p72_ps_dual_pack.py, I1–I9, --check byte-equal PASS). P73: option A EXECUTED — v6 (137 combinations = 138 rows dropped; rows 939); the pack (proof + runtime) remains unchanged. P74: the cross-Blatt pack re-derived from v6 — 48 bases (P66 36: 17 remain, 19 leave, 31 new); owners disjoint across Blatts 48/48. Machine-readable: research/issue17/ps-dual-occurrence-pack.json + the runtime src/data/atlas/ps-dual-occurrence-pack.json.",
                   )}
                 </p>
               </div>
@@ -2716,8 +2717,70 @@ export function MuseumResearch() {
                 <p className="text-[11px] leading-relaxed text-foreground/80">
                   <span className="font-semibold">{t("Pošten status: ", "Honest status: ")}</span>
                   {t(
-                    "C3 odstranjuje LE lažne fuzije (dvojni zapis) — noben nov podatek ni izmišljen; nearDual 2080/2081 ostanejo (4 vrstice; opcija A jih NE izpada); 0 base brez vrstic; ohranjene vrstice (brez group-derived) bajtno == v5; conf 0 sprememb (geografija nedeprava); cross-Blatt SPLIT (P66 pack — 36 base) ostaja LOČENA lastniška odločitev; opcija B (per-page instance) zahteva georef Blattnih kart [~]. Strojno berljivo: research/issue17/ps-parcels-geo-v6.json + runtime src/data/atlas/ps-parcels-geo.json (version 6, /api/atlas/ps-parcels-geo; v5 arhiviran v dokazu).",
-                    "C3 removes ONLY false fusions (the dual entry) — nothing new was invented; near-duals 2080/2081 remain (4 rows; option A does NOT drop them); 0 bases left empty; unchanged rows (non-derived fields) byte-identical to v5; conf 0 changes (geography untouched); the cross-Blatt SPLIT (P66 pack — 36 bases) remains a SEPARATE owner decision; option B (per-page instances) requires georeferenced Blatt sheets [~]. Machine-readable: research/issue17/ps-parcels-geo-v6.json + the runtime src/data/atlas/ps-parcels-geo.json (version 6, /api/atlas/ps-parcels-geo; v5 archived in the proof).",
+                    "C3 odstranjuje LE lažne fuzije (dvojni zapis) — noben nov podatek ni izmišljen; nearDual 2080/2081 ostanejo (4 vrstice; opcija A jih NE izpada); 0 base brez vrstic; ohranjene vrstice (brez group-derived) bajtno == v5; conf 0 sprememb (geografija nedeprava); cross-Blatt SPLIT (P66 pack — 36 base) ostaja LOČENA lastniška odločitev; opcija B (per-page instance) zahteva georef Blattnih kart [~]. P74: cross-Blatt odločitveni paket — 48 base iz v6 (P66 vzorec re-izpeljan; opciji A1/A2; lastniki disjunktni 48/48) — v6 join NESPREMENJEN, odločitev LASTNIKA. Strojno berljivo: research/issue17/ps-parcels-geo-v6.json + runtime src/data/atlas/ps-parcels-geo.json (version 6, /api/atlas/ps-parcels-geo; v5 arhiviran v dokazu).",
+                    "C3 removes ONLY false fusions (the dual entry) — nothing new was invented; near-duals 2080/2081 remain (4 rows; option A does NOT drop them); 0 bases left empty; unchanged rows (non-derived fields) byte-identical to v5; conf 0 changes (geography untouched); the cross-Blatt SPLIT (P66 pack — 36 bases) remains a SEPARATE owner decision; option B (per-page instances) requires georeferenced Blatt sheets [~]. P74: the cross-Blatt decision pack — 48 bases from v6 (the P66 pattern re-derived; options A1/A2; owners disjoint 48/48) — the v6 join UNCHANGED, the decision belongs to the OWNER. Machine-readable: research/issue17/ps-parcels-geo-v6.json + the runtime src/data/atlas/ps-parcels-geo.json (version 6, /api/atlas/ps-parcels-geo; v5 archived in the proof).",
+                  )}
+                </p>
+              </div>
+            </div>
+
+            {/* P74 — cross-Blatt dvojnosti registra (odločitveni paket) */}
+            <div className="min-w-0 rounded-xl border bg-card p-6 shadow-sm">
+              <h3 className="flex flex-wrap items-center gap-2 font-display text-lg font-semibold">
+                <ScrollText className="size-4 text-primary" aria-hidden="true" />
+                {t("P74 — Cross-Blatt dvojnosti registra (odločitveni paket)", "P74 — Register cross-Blatt dual occurrences (decision pack)")}
+                <StatusBadge status={CROSS_BLATT_P74.status} />
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                {t(
+                  "Odločitveni paket za cross-Blatt SPLIT joina (odprta točka P73 ①; P66 vzorec re-izpeljan iz v6 univerzuma): 48 base z vrsticami na ≥ 2 RAZLIČNIH sosednjih Blattih — ista številka pod dvema Blattoma = 2 RAZLIČNI realni parceli, ker se numeracija per Blatt PONOVI (deterministično, brez AI ob delovanju; NE odloča namesto lastnika — MERI in DOKAZUJE; v6 join NESPREMENJEN).",
+                  "The decision pack for the cross-Blatt SPLIT join (P73 open point ①; the P66 pattern re-derived from the v6 universe): 48 bases with rows on ≥ 2 DIFFERENT adjacent Blatts — the same number under two Blatts = 2 DIFFERENT real parcels, because numbering RESTARTS per Blatt (deterministic, no AI at runtime; does NOT decide on behalf of the owner — MEASURES and PROVES; the v6 join UNCHANGED).",
+                )}
+              </p>
+              <div className="mt-4 grid gap-2 text-xs sm:grid-cols-2">
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("Ključni števci", "Key counters")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "48 cross-Blatt base / 96 vrstic / 1 vrstica per Blatt 48/48; lastniki med Blatti DISJUNKTNI 48/48 (0 prekrivanj; P66 v v3: 36/36) — jedro paketa; pari Blattov: I·II 13 · II·III 16 · III·IV 1 · IV·V 18 (sosednji 48, skoki 0); geoShared 48/48 (v6 join fuzira dve parceli pod eno geometrijo)",
+                      "48 cross-Blatt bases / 96 rows / 1 row per Blatt 48/48; owners DISJOINT across Blatts 48/48 (0 overlaps; P66 in v3: 36/36) — the core of the pack; Blatt pairs: I·II 13 · II·III 16 · III·IV 1 · IV·V 18 (48 adjacent, 0 skips); geoShared 48/48 (the v6 join fuses two parcels under one geometry)",
+                    )}
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("Dokaz ponovitve numeracije", "Evidence of numbering restart")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "pageMap prekrivanja razponov parov 48/48 po P56 (p11 I 161–183 / p61 II 161–180; p64 II 1821–1840 / p94 III 1821–1841; p110 IV 2141–2160 / p125 V 2141–2160); hišne številke: 42 različne · 2 isti (161, 174) · 4 brez hn na eni strani (2611, 2612, 2613, 2616); kulture deljene 5",
+                      "pageMap range overlaps of the pairs 48/48 per P56 (p11 I 161–183 / p61 II 161–180; p64 II 1821–1840 / p94 III 1821–1841; p110 IV 2141–2160 / p125 V 2141–2160); house numbers: 42 different · 2 same (161, 174) · 4 without a house number on one side (2611, 2612, 2613, 2616); cultures shared 5",
+                    )}
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("Površine in deleži", "Areas and shares")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "Σ areaQK per Blatt: I 1874 / II 11364 / III 18300 / IV 13257 / V 13118 QK; dominantni deleži (pasovi): [0.50,0.60) 8 · [0.60,0.70) 5 · [0.70,0.75) 8 · ≥0.75 27 — P66 kriterij <0.75 bi pokril samo 21 (univerzum 48); areaSuspect 0; deleži izenačeni 0; serije S1 88 / S2 8",
+                      "Σ areaQK per Blatt: I 1874 / II 11364 / III 18300 / IV 13257 / V 13118 QK; dominant shares (bands): [0.50,0.60) 8 · [0.60,0.70) 5 · [0.70,0.75) 8 · ≥0.75 27 — the P66 criterion <0.75 would cover only 21 (the universe is 48); areaSuspect 0; share ties 0; series S1 88 / S2 8",
+                    )}
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("Opciji A1/A2 + evolucija P66", "Options A1/A2 + the P66 evolution")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "opcija A1 (keep DOMINANT Blatt): drop 48 vrstic, 0 base brez vrstic, rows 939 → 891, multi 50 → 2, cross 48 → 0, ambRows 100 → 4; opcija A2 (keep MIN Blatt): enaki števci, keep različen pri 29 base; evolucija P66 → v6: 17/36 ostaja · 19 odhaja (C1 sekcije 5 · C3 isti-Blatt drop 13 · C2 p93 reverzija 1) · 31 novih (že v v5)",
+                      "option A1 (keep the DOMINANT Blatt): 48 rows dropped, 0 bases left empty, rows 939 → 891, multi 50 → 2, cross 48 → 0, ambRows 100 → 4; option A2 (keep the MIN Blatt): identical counters, a different keep on 29 bases; the P66 → v6 evolution: 17/36 remain · 19 leave (C1 sections 5 · C3 isti-Blatt drop 13 · C2 p93 reversal 1) · 31 new (already in v5)",
+                    )}
+                  </p>
+                </div>
+              </div>
+              <div className="mt-3 rounded-lg border border-emerald-200 bg-emerald-50/60 p-3 dark:border-emerald-900/50 dark:bg-emerald-950/30">
+                <p className="text-[11px] leading-relaxed text-foreground/80">
+                  <span className="font-semibold">{t("Pošten status: ", "Honest status: ")}</span>
+                  {t(
+                    "Paket NE SPREMINJA v6 joina — samo meri in dokazuje; izbira pravila (A1 dominantni Blatt / A2 min Blatt / B per-Blatt instance + razdelitev geometrije — zahteva georef Blattnih kart [~]) je ODLOČITEV LASTNIKA; vrstice ostanejo v registru brez geometrije ob izvedbi (C1/C3 vzorec); veriga: P73 = isti-Blatt SPLIT opcija A izvedena (v6), P74 = cross-Blatt odločitveni paket (odprta točka P73 ① dokumentirana); nearDual 2080/2081 ostanejo isti-Blatt; skripta scripts/p74_ps_cross_blatt_pack.py (I1–I9, --check bajtno PASS; v6 runtime sha pin I9). Strojno berljivo: research/issue17/ps-cross-blatt-pack.json + runtime src/data/atlas/ps-cross-blatt-pack.json.",
+                    "The pack does NOT change the v6 join — it only measures and proves; the rule choice (A1 the dominant Blatt / A2 the min Blatt / B per-Blatt instances + geometry split — requires georeferenced Blatt sheets [~]) is the OWNER's DECISION; upon execution the rows stay in the register without geometry (the C1/C3 pattern); the chain: P73 = the same-Blatt SPLIT option A executed (v6), P74 = the cross-Blatt decision pack (the P73 open point ① documented); near-duals 2080/2081 remain same-Blatt; the script scripts/p74_ps_cross_blatt_pack.py (I1–I9, --check byte-equal PASS; the v6 runtime sha pin I9). Machine-readable: research/issue17/ps-cross-blatt-pack.json + the runtime src/data/atlas/ps-cross-blatt-pack.json.",
                   )}
                 </p>
               </div>

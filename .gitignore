@@ -66,3 +66,6 @@ tool-results/
 .tmp/
 tool-results/
 3100
+
+# agent work context (subagent worklogs — not source)
+/agent-ctx/

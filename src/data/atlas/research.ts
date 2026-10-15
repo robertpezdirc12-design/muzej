@@ -5467,3 +5467,173 @@ export const SPLIT_OPTION_A_P73: {
     "operacijsko: GitHub Actions billing (#7)",
   ],
 };
+
+// ——— P74 (issue #13): odločitveni paket CROSS-BLATT DVOJNOSTI REGISTRA —
+// 48 čez-Blatt base (odprta točka P73 ①; P66 vzorec re-izpeljan iz v6
+// univerzuma). PAKET NE SPREMINJA v6 joina — samo meri in dokazuje
+// (deterministično, brez AI ob delovanju). Vir: skripta
+// scripts/p74_ps_cross_blatt_pack.py (I1–I9, --check bajtno PASS) →
+// dokaz research/issue17/ps-cross-blatt-pack.json + runtime
+// src/data/atlas/ps-cross-blatt-pack.json (version 1).
+export const CROSS_BLATT_P74: {
+  version: number;
+  series: "PS";
+  task: string;
+  date: string;
+  principle: string;
+  status: ResearchStatus;
+  generatedBy: string;
+  inputs: { v6ev: string; p59: string; p56: string; p66: string; p72: string };
+  rule: {
+    cross: string;
+    blattPair: string;
+    dominantShare: string;
+    ownerRelation: string;
+    pageMap: string;
+    optionA1: string;
+    optionA2: string;
+    evolution: string;
+  };
+  summary: {
+    crossBases: number;
+    rowsCrossBlatt: number;
+    oneRowPerBlatt: boolean;
+    blattPairDist: Record<string, number>;
+    adjacentPairs: number;
+    skipPairs: number;
+    ownerDisjoint: number;
+    ownerOverlap: number;
+    hausNrDist: Record<string, number>;
+    hausNrIstiBases: string[];
+    hausNrBrezBases: string[];
+    kulturesSharedBases: number;
+    dominantShareBuckets: Record<string, number>;
+    areaSuspectRows: number;
+    shareTies: number;
+    areaQKSumByBlatt: Record<string, number>;
+    pageMapOverlapPairs: number;
+    seriesDist: Record<string, number>;
+    geoShared: { shared: number; distinct: number; null: number };
+    p66Evolution: {
+      stay: number;
+      leave: number;
+      leaveC1: number;
+      leaveC3: number;
+      leaveC2: number;
+      new: number;
+      leaveBases: Record<string, { pages: number[]; reason: string }>;
+      stayBases: string[];
+      newBases: string[];
+    };
+    optionA1: { drop: number; rows: number; bases: number; lost: number; multi: number; cross: number; ambRows: number };
+    optionA2: { drop: number; rows: number; bases: number; lost: number; multi: number; cross: number; ambRows: number };
+    optionA2DifferentKeep: number;
+  };
+  statusLine: string;
+  verdictSi: string;
+  verdictEn: string;
+  next: string[];
+} = {
+  version: 1,
+  series: "PS",
+  task: "P74 — cross-Blatt dual pack: 48 čez-Blatt base (odločitveni paket za cross-Blatt SPLIT joina)",
+  date: "2026-10-15",
+  principle:
+    "odločitveni paket za lastniško odločitev o cross-Blatt SPLIT joinu (odprta točka P73 ①): 48 cross base iz v6 rowsEvidence × P59 pageAttribution × P56 pageMap — per-Blatt razčlenitev vrstic, lastnikov, hišnih številke, kultur, Σ areaQK, pageMap razponi, opciji A1/A2 predračun, evolucija P66 → v6; NE odloča namesto lastnika; v6 join nespremenjen (disciplina P56–P73)",
+  status: "REVIEW",
+  generatedBy:
+    "scripts/p74_ps_cross_blatt_pack.py (deterministično, brez AI ob delovanju, FAIL ob padu I1–I9; --check bajtno PASS; 6× sha256 pini vhodov)",
+  inputs: {
+    v6ev: "research/issue17/ps-parcels-geo-v6.json (rowsEvidence 939)",
+    p59: "research/issue17/ps-blatt-headers.json (pageAttribution)",
+    p56: "research/issue17/ps-register-topology.json (pageMap)",
+    p66: "research/issue17/ps-split-pack.json (primerjava 36)",
+    p72: "research/issue17/ps-dual-occurrence-pack.json (kontekst)",
+  },
+  rule: {
+    cross: "base z vrsticami na ≥ 2 RAZLIČNIH Blattih (P59 pageAttribution; 1 vrstica per Blatt pričakovana — per-Blatt numeracija)",
+    blattPair: "par Blattov sorted po vrstnem redu I–V; sosednji par = ordinalna razlika 1",
+    dominantShare: "max delež Σ areaQK per Blatt; izenačeni deleži → min Blatt (ties 0 v v6)",
+    ownerRelation: "disjoint = množice lastnikov per Blatt brez skupnega lastnika",
+    pageMap: "P56 numMin/numMax per stran + prekrivanje razponov — dokaz ponovitve serije čez Blatte",
+    optionA1: "keep DOMINANT Blatt (P66 'dominantShare' okvir); drop vrstic drugih Blattov — vrstice ostanejo v registru, izpadajo iz joina (C1/C3 vzorec)",
+    optionA2: "keep MIN Blatt (vrstni red I–V; P73 'min stran' analog) — enaki števci, drugačen keep pri 29 base",
+    evolution: "razlog odhoda P66 base: C1 sekcije (p83–86/p88), C3 isti-Blatt drop, C2 p93 reverzija",
+  },
+  summary: {
+    crossBases: 48,
+    rowsCrossBlatt: 96,
+    oneRowPerBlatt: true,
+    blattPairDist: { "III·IV": 1, "II·III": 16, "IV·V": 18, "I·II": 13 },
+    adjacentPairs: 48,
+    skipPairs: 0,
+    ownerDisjoint: 48,
+    ownerOverlap: 0,
+    hausNrDist: { "isti": 2, "različni": 42, "brez": 4 },
+    hausNrIstiBases: ["161", "174"],
+    hausNrBrezBases: ["2611", "2612", "2613", "2616"],
+    kulturesSharedBases: 5,
+    dominantShareBuckets: { "0.70–0.75": 8, "≥0.75": 27, "0.50–0.60": 8, "0.60–0.70": 5 },
+    areaSuspectRows: 0,
+    shareTies: 0,
+    areaQKSumByBlatt: { I: 1874, II: 11364, III: 18300, IV: 13257, V: 13118 },
+    pageMapOverlapPairs: 48,
+    seriesDist: { S1: 88, S2: 8 },
+    geoShared: { shared: 48, distinct: 0, null: 0 },
+    p66Evolution: {
+      stay: 17,
+      leave: 19,
+      leaveC1: 5,
+      leaveC3: 13,
+      leaveC2: 1,
+      new: 31,
+      leaveBases: {
+        "641": { pages: [85], reason: "C1" },
+        "642": { pages: [85], reason: "C1" },
+        "643": { pages: [85], reason: "C1" },
+        "646": { pages: [85], reason: "C1" },
+        "651": { pages: [85], reason: "C1" },
+        "922": { pages: [89], reason: "C3" },
+        "923": { pages: [89], reason: "C3" },
+        "924": { pages: [89], reason: "C3" },
+        "926": { pages: [89], reason: "C3" },
+        "927": { pages: [89], reason: "C3" },
+        "929": { pages: [89], reason: "C3" },
+        "938": { pages: [89], reason: "C3" },
+        "1903": { pages: [93], reason: "C2" },
+        "1945": { pages: [100], reason: "C3" },
+        "1946": { pages: [100], reason: "C3" },
+        "1948": { pages: [100], reason: "C3" },
+        "1957": { pages: [100], reason: "C3" },
+        "1958": { pages: [100], reason: "C3" },
+        "1960": { pages: [100, 101], reason: "C3" },
+      },
+      stayBases: [
+        "1821", "1832", "1833", "1834", "1836", "1837", "1838", "1839",
+        "2141", "2143", "2148", "2149", "2154", "2156", "2159", "2160", "2613",
+      ],
+      newBases: [
+        "161", "162", "163", "164", "165", "166", "168", "171", "173", "174",
+        "175", "176", "179", "1825", "1826", "1827", "1829", "1830", "1831",
+        "1835", "1840", "1980", "2150", "2151", "2152", "2155", "2157", "2158",
+        "2611", "2612", "2616",
+      ],
+    },
+    optionA1: { drop: 48, rows: 891, bases: 879, lost: 0, multi: 2, cross: 0, ambRows: 4 },
+    optionA2: { drop: 48, rows: 891, bases: 879, lost: 0, multi: 2, cross: 0, ambRows: 4 },
+    optionA2DifferentKeep: 29,
+  },
+  statusLine:
+    "P74 CROSS-BLATT PACK: 48 cross-Blatt base (96 vrstic; 1 vrstica per Blatt 48/48), lastniki DISJUNKTNI 48/48 · pari I·II 13 · II·III 16 · III·IV 1 · IV·V 18 (sosednji 48, skoki 0) · pasovi 8/5/8/27 (≥0.75: 27) · hn 42 različne · 2 isti · 4 brez · geo deljena 48/48 · opcija A1 drop 48 → rows 891, cross 0 · P66 evolucija: 17 ostaja · 19 odhaja (C1 5 / C3 13 / C2 1) · 31 novih",
+  verdictSi:
+    "P74: CROSS-BLATT DVOJNOSTI REGISTRA — 48 ČEZ-BLATT BASE (issue #13) — odločitveni paket za cross-Blatt SPLIT joina (odprta točka P73 ①; P66 vzorec re-izpeljan iz v6; deterministično, brez AI ob delovanju; NE odloča namesto lastnika — MERI in DOKAZUJE): 48 base z vrsticami na ≥ 2 RAZLIČNIH sosednjih Blattih (I·II 13 · II·III 16 · III·IV 1 · IV·V 18; skoki 0), vsak točno 1 vrstica per Blatt — množice lastnikov med Blatti DISJUNKTNE 48/48 (0 prekrivanj; P66 v v3: 36/36) — ista številka pod dvema Blattoma = 2 RAZLIČNI realni parceli, ker se numeracija per Blatt PONOVI (P56 pageMap: p11 I 161–183 / p61 II 161–180; p64 II 1821–1840 / p94 III 1821–1841; p110 IV 2141–2160 / p125 V 2141–2160; prekrivanja razponov 48/48) — hišne številke RAZLIČNE 42/48 (2 isti: 161, 174; 4 brez hn na eni strani), Σ areaQK per Blatt I 1874 / II 11364 / III 18300 / IV 13257 / V 13118 QK; v6 join teh 48 base FUZIRA dve realni parceli pod eno geometrijo (geoShared 48/48); dominantni deleži: [0.50,0.60) 8 · [0.60,0.70) 5 · [0.70,0.75) 8 · ≥0.75 27 (P66 kriterij <0.75 bi pokril samo 21); evolucija P66 → v6: 17/36 ostaja, 19 odhaja (C1 sekcije 5 · C3 isti-Blatt drop 13 · C2 p93 reverzija 1), 31 novih (že v v5); opcija A1 (keep DOMINANT Blatt): drop 48 vrstic, 0 base brez vrstic, rows 939 → 891, multi 50 → 2, cross 48 → 0, ambRows 100 → 4; opcija A2 (keep MIN Blatt) enaki števci, keep različen pri 29 base — izbira pravila LASTNIŠKA; opcija B (per-Blatt instance + razdelitev geometrije) zahteva georef Blattnih kart [~]; v6 join NESPREMENJEN; odločitev LASTNIKA",
+  verdictEn:
+    "P74: REGISTER CROSS-BLATT DUAL OCCURRENCES — 48 CROSS-BLATT BASES (issue #13) — the decision pack for the cross-Blatt SPLIT join (P73 open point ①; the P66 pattern re-derived from the v6 universe; deterministic, no AI at runtime; does NOT decide on behalf of the owner — MEASURES and PROVES): 48 bases with rows on ≥ 2 DIFFERENT adjacent Blatts (I·II 13 · II·III 16 · III·IV 1 · IV·V 18; 0 skips), exactly 1 row per Blatt each — owner sets are DISJOINT across Blatts 48/48 (0 overlaps; P66 in v3: 36/36) — the same number under two Blatts = 2 DIFFERENT real parcels, because numbering RESTARTS per Blatt (P56 pageMap: p11 I 161–183 / p61 II 161–180; p64 II 1821–1840 / p94 III 1821–1841; p110 IV 2141–2160 / p125 V 2141–2160; range overlaps 48/48) — house numbers DIFFERENT 42/48 (2 same: 161, 174; 4 without house numbers on one side), Σ areaQK per Blatt I 1874 / II 11364 / III 18300 / IV 13257 / V 13118 QK; the v6 join FUSES two real parcels under one geometry for these 48 bases (geoShared 48/48); dominant shares: [0.50,0.60) 8 · [0.60,0.70) 5 · [0.70,0.75) 8 · ≥0.75 27 (the P66 criterion <0.75 would cover only 21); P66 → v6 evolution: 17/36 remain, 19 leave (C1 sections 5 · C3 isti-Blatt drop 13 · C2 p93 reversal 1), 31 new (already in v5); option A1 (keep the DOMINANT Blatt): 48 rows dropped, 0 bases left empty, rows 939 → 891, multi 50 → 2, cross 48 → 0, ambRows 100 → 4; option A2 (keep the MIN Blatt) has identical counters but a different keep on 29 bases — the rule choice belongs to the OWNER; option B (per-Blatt instances + geometry split) requires georeferenced Blatt sheets [~]; v6 join UNCHANGED",
+  next: [
+    "LASTNIŠKA ODLOČITEV o cross-Blatt SPLIT joinu za 48 base — opcija A1 (keep dominant Blatt) / opcija A2 (keep min Blatt) / opcija B (per-Blatt instance + razdelitev geometrije; georef Blattnih kart [~]) — ta paket je dokazni vir",
+    "izvedba (ob odobritvi): P75 po vzorcu P73 — drop vrstic drugih Blattov po izbranem pravilu → v7 (939 → 891 vrstic, cross 0)",
+    "po izvedbi: konsistentnost z P66 paketom (17 ostajajočih base) in P72/P73 (nearDual 2080/2081 ostanejo isti-Blatt)",
+    "razlaga 2 isti-hn base (161, 174) — deljena hiša ali branje (P72 vzorec: dokumentirano per base)",
+    "operacijsko: GitHub Actions billing (#7); per-Blatt instance sekcij (56) zahteva georef Blattnih kart",
+  ],
+};

@@ -3019,3 +3019,75 @@ conf 0 sprememb (geografija nedeprava). Strojno berljivo:
 research/issue17/ps-parcels-geo-v6.json + runtime
 src/data/atlas/ps-parcels-geo.json (skripta
 scripts/p73_ps_v6_split_a.py, I1–I8, `--check` bajtno PASS).
+
+## §51 — P74: cross-Blatt dvojnosti registra — 48 čez-Blatt base (odločitveni paket) — 2026-10-15
+
+**Sprožilec:** odprta točka P73 ① (cross-Blatt SPLIT P66 pack) — P66 vzorec
+re-izpeljan iz v6 univerzuma; vzorec P66/P72: **NE odloča namesto lastnika —
+MERI in DOKAZUJE** (deterministično, brez AI ob delovanju); **v6 join
+NESPREMENJEN** (disciplina P56–P73; sha256 pin I9 na v6 runtime).
+
+### Definicija (cross pravilo)
+
+- cross set = base z vrsticami na ≥ 2 **RAZLIČNIH Blattih** (P59
+  pageAttribution) — 48 base / 96 vrstic; točno **1 vrstica per Blatt
+  48/48** (per-Blatt numeracija).
+- ista številka pod dvema **sosednjima** Blattoma = 2 RAZLIČNI realni
+  parceli, ker se numeracija per Blatt PONOVI — dokaz: **pageMap
+  prekrivanja razponov parov 48/48** po P56 (p11 I 161–183 / p61 II
+  161–180; p64 II 1821–1840 / p94 III 1821–1841; p110 IV 2141–2160 /
+  p125 V 2141–2160).
+
+### Merjeno (v6 univerzum)
+
+- **lastniki med Blatti DISJUNKTNI 48/48** (0 prekrivanj; P66 v v3: 36/36)
+  — **jedro paketa** (neodvisen set-izračun);
+- blattPair dist: **I·II 13 · II·III 16 · III·IV 1 · IV·V 18** (sosednji
+  48, skoki 0);
+- hišne številke: **42 različne · 2 isti (161, 174) · 4 brez hn na eni
+  strani (2611, 2612, 2613, 2616)**; kulture deljene 5; areaSuspect 0;
+  deleži izenačeni 0; serije S1 88 / S2 8; geoShared 48/48 (v6 join
+  fuzira dve parceli pod eno geometrijo);
+- **Σ areaQK per Blatt: I 1874 / II 11364 / III 18300 / IV 13257 /
+  V 13118 QK**; dominantni deleži (pasovi): [0.50,0.60) 8 · [0.60,0.70) 5 ·
+  [0.70,0.75) 8 · **≥0.75 27** — P66 kriterij <0.75 bi pokril samo 21
+  (univerzum 48);
+- **evolucija P66 → v6: 17/36 ostaja · 19 odhaja (C1 sekcije 5 · C3
+  isti-Blatt drop 13 · C2 p93 reverzija 1) · 31 novih** (že v v5; P66 jih
+  ni pokril po P65 kriteriju dominantShare < 0.75).
+
+### Opciji A1/A2 (predračun — odločitev LASTNIKA)
+
+- **opcija A1** (keep DOMINANT Blatt; izenačeni deleži → min Blatt): drop
+  48 vrstic, 0 base brez vrstic, **rows 939 → 891**, multi 50 → 2,
+  **cross 48 → 0**, ambRows 100 → 4;
+- **opcija A2** (keep MIN Blatt, vrstni red I–V; P73 »min stran« analog):
+  enaki števci, keep **različen pri 29 base** — izbira pravila LASTNIŠKA;
+- opcija B (per-Blatt instance + razdelitev geometrije) zahteva georef
+  Blattnih kart [~]; vrstice ostanejo v registru brez geometrije ob
+  izvedbi (C1/C3 vzorec).
+
+### Skripta, invarianti in QA
+
+- Skripta scripts/p74_ps_cross_blatt_pack.py (I1–I9, `--check` bajtno
+  PASS; pini v6 dokaz de13f10b…, v6 runtime 6270b267…, P59 650f13dc…,
+  P56 2fddc76f…, P66 02214eba…, P72 0922a701…).
+- Dokaz research/issue17/ps-cross-blatt-pack.json (bases 48 s per-Blatt
+  razčlenitvijo + pageMap + opcijaA per base) + runtime
+  src/data/atlas/ps-cross-blatt-pack.json (version 1; bajtna projekcija
+  I7).
+- QA 76 → **77/77** (nova qa-p74-cross-blatt: TS pini na CROSS_BLATT_P74
+  + CELOVEN neodvisen preracun cross seta iz v6 runtime vrstic × P59
+  pageAttribution × P66 pack runtime — 48/96, 1-per-Blatt 48/48,
+  blattDist, lastniki 48/48, hn 42/2/4 s seznami, Σ areaQK per Blatt,
+  pasovi, opciji A1/A2 re-izpeljani iz runtime vrstic, evolucija P66
+  17/19/31 + razlogi C1/C3/C2, pageMap prekrivanja 48/48 + razponi ⊇
+  runtime parzella; repo dodaja dokaz == runtime bajtno + P56 pageMap ==
+  pack pageMap + razlogi odhoda po skriptni metodi (v5/v6 removedRows);
+  dve obliki).
+
+**Poštenost:** paket samo meri in dokazuje — v6 join NESPREMENJEN;
+odločitev o cross-Blatt SPLIT joinu (A1/A2/B) je LASTNIKA. Strojno
+berljivo: research/issue17/ps-cross-blatt-pack.json + runtime
+src/data/atlas/ps-cross-blatt-pack.json (skripta
+scripts/p74_ps_cross_blatt_pack.py, I1–I9, `--check` bajtno PASS).
