@@ -2872,3 +2872,69 @@ nov podatek ni izmišljen. Strojno berljivo:
 research/issue17/ps-parcels-geo-v5.json + runtime
 src/data/atlas/ps-parcels-geo.json (skripta
 scripts/p71_ps_v5_sections_p93.py, I1–I9, --check bajtno PASS).
+
+## §49 — P72: dvojnosti registra — 135 isti-Blatt dual base (odločitveni paket) — 2026-10-15
+
+**Sprožilec:** ad-hoc forenzika faze — P70 33 kolizij (p49/89 × 15, p50/90 × 10,
+p52/92 × 8) niso izoliran pojav 921–1000, ampak STRUKTURNI pojav celega
+registra. **Metoda:** odločitveni paket po P66 vzorcu (MERI in DOKAZUJE,
+NE odloča namesto lastnika; P70 »SPLIT = LASTNIKA«); deterministično, brez
+AI ob delovanju; v5 join NESPREMENJEN.
+
+### Definicija dual base (pravilo paketa)
+
+- base z ≥ 2 vrsticami na ≥ 2 straneh **ISTEGA Blatta**, kjer so množice
+  lastnikov med straneh **DISJUNKTNE** (brez skupnega lastnika);
+  blockA = min stran paru (»glavni tek«), blockB = ostale (»drugi blok«).
+- 2 nearDual base (2080, 2081) z disjunktnimi lastniki, kjer ena stran brez
+  lastnikov — konservativno IZKLJUČENE iz dual (opcija A jih NE izpada).
+
+### Merjeno (135 dual base iz v5 rowsEvidence × P59 pageAttribution × P56 pageMap)
+
+- **274 vrstic** (2 tri-zapisni: (95,100,101) in (105,106,121));
+  lastniki med straneh DISJUNKTNI **135/135**;
+- hišne številke **RAZLIČNE 130/135** (5 brez hn na eni strani; 0 isti);
+  kulture **124 različne / 11 prekrivanj**;
+- stranski pari delijo iste številčne razpone po **P56 pageMap**
+  (p23/p24 = 401–420 obe; p51/p91 = 961–980 obe; p103/p118 = 2001–2020 obe …)
+  z odmiki po blokih konsistentnimi (**40 × 44 · 15 × 49 · 5 × 29 · 1 × 13**;
+  2 triple gapi 6/16) = **DVOJNI ZAPIS iste serije v dveh blokih registra**;
+- Σ areaQK blok A **128 125** / blok B **145 057** QK;
+- **P70 33 kolizij = PODMNOŽICA** + 11 starih p51×p91 (v2 era) +
+  **91 dozdaj neopaženih** — v4/v5 join teh 135 base FUZIRA dve realni
+  parceli pod eno številko.
+
+### Opcija A predračun (drop drugi-blok vrstic po C1 vzorcu)
+
+- drop **137** vrstic (vrstice ostanejo v registru, izpadajo iz joina;
+  keep = min stran), **0 base brez vrstic**, rows **1077 → 939**,
+  multi **184 → 50**, cross **48** nespremenjen.
+
+### Opcije in odločitev
+
+- **A** (exclude drugi blok po C1 vzorcu) — pripravljeno (ob odobritvi v6);
+- **B** (per-page instance) — zahteva georef Blattnih kart
+  (Franciscejski kataster I–V) — ločen podprojekt [~];
+- **C** (re-renum) — neodločljivo (pageMap razponi prekrivajo);
+- **Odločitev: LASTNIK** (P70 »SPLIT = LASTNIKA«; cross-Blatt SPLIT iz
+  P66 pack ostaja ločena lastniška odločitev — 36 base, deleži [0.5,0.75)).
+
+### Skripta, invarianti in QA
+
+- Skripta scripts/p72_ps_dual_pack.py (I1–I9, `--check` bajtno PASS; pini
+  v4 57ed1b0d…, v5 6c96210d…, P59 650f13dc…, P56 2fddc76f…, v5 runtime
+  0b5e8bf7…; I9 v5 runtime join NESPREMENJEN — sha256 pin).
+- Dokaz research/issue17/ps-dual-occurrence-pack.json (bases 135 ×
+  per-base forenzika; brez georef polj — I6) + runtime
+  src/data/atlas/ps-dual-occurrence-pack.json (bajtna projekcija — I7).
+- QA 74 → **75/75** (nova qa-p72-dual-pack: pini + NEODVISEN preracun
+  dual seta iz v5 runtime vrstic v OBEH oblikah — dual 135, nearDual 2,
+  vrstice 274, triples 2, lastniki 135/135, hn/kulture/odmiki/pari == pin,
+  Σ areaQK 128 125/145 057, opcija A 137/939/879/0/50/48, P70 33 ⊂ dual,
+  p51×p91 11 ločenih od P70, novih 91; repo dodaja dokaz == runtime bajtno).
+
+**Poštenost:** paket NE odloča namesto lastnika — opcije so dokumentirane z
+merjenimi posledicami; v5 runtime join NESPREMENJEN. Strojno berljivo:
+research/issue17/ps-dual-occurrence-pack.json + runtime
+src/data/atlas/ps-dual-occurrence-pack.json (skripta
+scripts/p72_ps_dual_pack.py, I1–I9, `--check` bajtno PASS).

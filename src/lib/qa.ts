@@ -53,6 +53,7 @@ import {
   PASS1_LAYERS_P69,
   V4_REJOIN_P70,
   V5_SECTIONS_P93_P71,
+  DUAL_OCCURRENCE_P72,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -5418,6 +5419,325 @@ const p45bErrors: string[] = [];
     p71Errors.length === 0
       ? `pini v5Delta 56/15/68 · before 1145/878/215/79 · after 1077/879/184/48 · area 3.9052 (+8.58 %) · sosledje 652/51.8/25.5× · corrections 56/15/12/{1603,1604,1605} · ${p71FileDetail}`
       : p71Errors.join("; "),
+  );
+
+  // ——— qa-p72: P72 dual occurrence pack (pini + neodvisen preracun dual set iz v5 runtime vrstic) ———
+  const d72 = DUAL_OCCURRENCE_P72;
+  const p72Errors: string[] = [];
+  const p72canon = (m: Record<string, unknown>) =>
+    Object.entries(m)
+      .sort((a, b) => (a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : 0))
+      .map(([k, v]) => `${k}:${String(v)}`)
+      .join(";");
+  const PIN_PAIRS_P72: Record<string, number> = {
+    "(103, 118)": 18,
+    "(104, 119)": 17,
+    "(105, 106)": 1,
+    "(105, 106, 121)": 1,
+    "(106, 121)": 11,
+    "(113, 114)": 3,
+    "(122, 123)": 1,
+    "(134, 135)": 4,
+    "(23, 24)": 2,
+    "(49, 89)": 15,
+    "(50, 90)": 10,
+    "(51, 91)": 11,
+    "(52, 92)": 8,
+    "(58, 73)": 3,
+    "(7, 8)": 1,
+    "(95, 100)": 13,
+    "(95, 100, 101)": 1,
+    "(96, 101)": 15,
+  };
+  const PIN_GAPS_P72: Record<string, number> = { "1": 13, "15": 49, "16": 1, "40": 44, "5": 29, "6": 1 };
+  // 1) TS pini (DUAL_OCCURRENCE_P72)
+  if (d72.summary.dualBases !== 135) p72Errors.push(`pini: dualBases ≠ 135 (${d72.summary.dualBases})`);
+  if (d72.summary.rowsSameBlatt !== 274) p72Errors.push(`pini: rowsSameBlatt ≠ 274 (${d72.summary.rowsSameBlatt})`);
+  if (d72.summary.triples !== 2) p72Errors.push(`pini: triples ≠ 2 (${d72.summary.triples})`);
+  if (JSON.stringify(d72.summary.nearDualBases) !== JSON.stringify(["2080", "2081"]))
+    p72Errors.push(`pini: nearDualBases ≠ 2080,2081 (${d72.summary.nearDualBases.join(",")})`);
+  if (d72.summary.ownerDisjoint !== 135) p72Errors.push(`pini: ownerDisjoint ≠ 135 (${d72.summary.ownerDisjoint})`);
+  if (p72canon(d72.summary.hausNrDist) !== p72canon({ "različni": 130, "None": 5 }))
+    p72Errors.push(`pini: hausNrDist ≠ {različni: 130, None: 5} (${p72canon(d72.summary.hausNrDist)})`);
+  if (p72canon(d72.summary.kultureDist) !== p72canon({ "različne": 124, "prekrivanje": 11 }))
+    p72Errors.push(`pini: kultureDist ≠ {različne: 124, prekrivanje: 11} (${p72canon(d72.summary.kultureDist)})`);
+  if (p72canon(d72.summary.gapDist) !== p72canon(PIN_GAPS_P72))
+    p72Errors.push(`pini: gapDist ≠ pin (${p72canon(d72.summary.gapDist)})`);
+  if (p72canon(d72.summary.pairDist) !== p72canon(PIN_PAIRS_P72))
+    p72Errors.push(`pini: pairDist ≠ pin (${p72canon(d72.summary.pairDist)})`);
+  if (d72.summary.p70Subset !== 33 || d72.summary.p51x91old !== 11 || d72.summary.newUnnoticed !== 91)
+    p72Errors.push(`pini: P70 podmnožica ≠ 33/11/91 (${d72.summary.p70Subset}/${d72.summary.p51x91old}/${d72.summary.newUnnoticed})`);
+  if (d72.summary.areaQKSumA !== 128125 || d72.summary.areaQKSumB !== 145057)
+    p72Errors.push(`pini: areaQK Σ ≠ 128125/145057 (${d72.summary.areaQKSumA}/${d72.summary.areaQKSumB})`);
+  {
+    const oa = d72.summary.optionA;
+    if (oa.drop !== 137 || oa.rows !== 939 || oa.bases !== 879 || oa.lost !== 0 || oa.multi !== 50 || oa.cross !== 48)
+      p72Errors.push(`pini: optionA ≠ 137/939/879/0/50/48 (${oa.drop}/${oa.rows}/${oa.bases}/${oa.lost}/${oa.multi}/${oa.cross})`);
+  }
+  // 2) datoteke + NEODVISEN preracun dual seta iz v5 runtime vrstic (dve obliki po P53/P57/P58;
+  //    v5 runtime in P59 pageAttribution sta berljiva v OBEH oblikah — celovit preracun tudi produkcija)
+  let p72FileDetail = "datoteke niso preverjene (readFile ni na voljo) — celovita kontrola teče na /api/qa";
+  if (opts.readFile) {
+    const rawRt = opts.readFile("src/data/atlas/ps-parcels-geo.json");
+    const rawP59 = opts.readFile("src/data/atlas/ps-blatt-headers.json");
+    const rawPackRt = opts.readFile("src/data/atlas/ps-dual-occurrence-pack.json");
+    const rawPackEv = opts.readFile("research/issue17/ps-dual-occurrence-pack.json");
+    if (rawRt === null || rawP59 === null || rawPackRt === null) {
+      p72Errors.push("runtime ps-parcels-geo / ps-blatt-headers / ps-dual-occurrence-pack ni berljiv");
+    } else {
+      try {
+        type P72Row = {
+          page: number;
+          base: string;
+          owner: string | null;
+          hausNr?: string | null;
+          kultur?: string | null;
+          areaQK: number | null;
+        };
+        const rt = JSON.parse(rawRt) as { version?: number; rows: P72Row[] };
+        const p59 = JSON.parse(rawP59) as { pageAttribution: Record<string, { blatt?: string | null }> };
+        if (rt.version !== 5) p72Errors.push(`runtime version ≠ 5 (${rt.version})`);
+        if (rt.rows.length !== 1077) p72Errors.push(`runtime vrstic ≠ 1077 (${rt.rows.length})`);
+        const blattOf72 = (page: number): string | null => p59.pageAttribution[String(page)]?.blatt ?? null;
+        const allDisjoint = (sets: Set<string>[]) => {
+          for (let i = 0; i < sets.length; i++)
+            for (let j = i + 1; j < sets.length; j++)
+              for (const v of sets[i]) if (sets[j].has(v)) return false;
+          return true;
+        };
+        const byBase = new Map<string, P72Row[]>();
+        for (const r of rt.rows) {
+          const arr = byBase.get(r.base);
+          if (arr) arr.push(r);
+          else byBase.set(r.base, [r]);
+        }
+        // re-izpeljava dual set (skripta I2/I3/I4/I5 logika — dual = isti-Blatt + disjunktni lastniki;
+        // nearDual = disjunktni tudi brez lastnikov strani — konservativno izključeni)
+        const duals = new Map<string, number[]>();
+        const nearDuals = new Map<string, number[]>();
+        for (const [b, rs] of byBase) {
+          if (rs.length < 2) continue;
+          const pagesByBlatt = new Map<string, Set<number>>();
+          for (const r of rs) {
+            const bl = blattOf72(r.page);
+            if (!bl) continue;
+            const s = pagesByBlatt.get(bl);
+            if (s) s.add(r.page);
+            else pagesByBlatt.set(bl, new Set([r.page]));
+          }
+          for (const [bl, pgs] of pagesByBlatt) {
+            if (pgs.size < 2) continue;
+            const rs2 = rs.filter((r) => blattOf72(r.page) === bl && pgs.has(r.page));
+            const perPage = new Map<number, Set<string>>();
+            const perPageAll = new Map<number, Set<string>>();
+            for (const r of rs2) {
+              if (r.owner) {
+                const s = perPage.get(r.page);
+                if (s) s.add(r.owner);
+                else perPage.set(r.page, new Set([r.owner]));
+              }
+              const sa = perPageAll.get(r.page);
+              if (sa) sa.add(r.owner as string);
+              else perPageAll.set(r.page, new Set([r.owner as string]));
+            }
+            const pp = [...perPage.values()].filter((s) => s.size > 0);
+            const pall = [...perPageAll.values()].filter((s) => s.size > 0);
+            const key = `${b}|${bl}`;
+            if (pp.length >= 2 && allDisjoint(pp)) duals.set(key, [...pgs].sort((a, c) => a - c));
+            else if (pall.length >= 2 && allDisjoint(pall)) nearDuals.set(key, [...pgs].sort((a, c) => a - c));
+          }
+        }
+        if (duals.size !== 135) p72Errors.push(`preracun: dual base ≠ 135 (${duals.size})`);
+        if (nearDuals.size !== 2) p72Errors.push(`preracun: nearDual ≠ 2 (${nearDuals.size})`);
+        const nearKeys = [...nearDuals.keys()].map((k) => k.split("|")[0]).sort().join(",");
+        if (nearKeys !== "2080,2081") p72Errors.push(`preracun: nearDual ≠ 2080,2081 (${nearKeys})`);
+        let rowsIB = 0;
+        for (const r of rt.rows) if (duals.has(`${r.base}|${blattOf72(r.page)}`)) rowsIB += 1;
+        if (rowsIB !== 274) p72Errors.push(`preracun: isti-Blatt vrstic ≠ 274 (${rowsIB})`);
+        let triples = 0;
+        for (const pgs of duals.values()) if (pgs.length > 2) triples += 1;
+        if (triples !== 2) p72Errors.push(`preracun: tri-zapisnih ≠ 2 (${triples})`);
+        // forenzika per base: pari, odmiki, lastniki, hn, kulture, Σ areaQK per blok
+        const pairDist = new Map<string, number>();
+        const gapDist = new Map<string, number>();
+        const hnDist: Record<string, number> = {};
+        const kultDist: Record<string, number> = {};
+        let ownerDisjoint = 0;
+        let sumA = 0;
+        let sumB = 0;
+        for (const [key, pgs] of duals) {
+          const b = key.split("|")[0];
+          const bl = key.split("|")[1];
+          const rs2 = (byBase.get(b) as P72Row[]).filter((r) => blattOf72(r.page) === bl && pgs.includes(r.page));
+          const per = new Map<number, P72Row[]>();
+          for (const r of rs2) {
+            const arr = per.get(r.page);
+            if (arr) arr.push(r);
+            else per.set(r.page, [r]);
+          }
+          const pages = [...per.keys()].sort((a, c) => a - c);
+          const pk = `(${pages.join(", ")})`;
+          pairDist.set(pk, (pairDist.get(pk) ?? 0) + 1);
+          const m = pages[0];
+          for (const p of pages.slice(1)) {
+            const g = String(p - m);
+            gapDist.set(g, (gapDist.get(g) ?? 0) + 1);
+          }
+          const osets = pages
+            .map((p) => new Set((per.get(p) as P72Row[]).map((r) => r.owner).filter((o): o is string => !!o)))
+            .filter((s) => s.size > 0);
+          if (osets.length >= 2 && allDisjoint(osets)) ownerDisjoint += 1;
+          const hsets = pages
+            .map((p) => new Set((per.get(p) as P72Row[]).map((r) => r.hausNr).filter((h): h is string => !!h)))
+            .filter((s) => s.size > 0);
+          if (hsets.length < 2) hnDist["None"] = (hnDist["None"] ?? 0) + 1;
+          else if (allDisjoint(hsets)) hnDist["različni"] = (hnDist["različni"] ?? 0) + 1;
+          else hnDist["isti"] = (hnDist["isti"] ?? 0) + 1;
+          const ksets = pages
+            .map((p) => new Set((per.get(p) as P72Row[]).map((r) => r.kultur).filter((k): k is string => !!k)))
+            .filter((s) => s.size > 0);
+          if (ksets.length > 0 && allDisjoint(ksets)) kultDist["različne"] = (kultDist["različne"] ?? 0) + 1;
+          else kultDist["prekrivanje"] = (kultDist["prekrivanje"] ?? 0) + 1;
+          sumA += (per.get(m) as P72Row[]).reduce((a, r) => a + (r.areaQK ?? 0), 0);
+          sumB += pages
+            .slice(1)
+            .reduce((a, p) => a + (per.get(p) as P72Row[]).reduce((x, r) => x + (r.areaQK ?? 0), 0), 0);
+        }
+        if (ownerDisjoint !== 135) p72Errors.push(`preracun: ownerDisjoint ≠ 135 (${ownerDisjoint})`);
+        if (p72canon(hnDist) !== "None:5;različni:130") p72Errors.push(`preracun: hn ${p72canon(hnDist)} ≠ None:5;različni:130`);
+        if (p72canon(kultDist) !== "prekrivanje:11;različne:124")
+          p72Errors.push(`preracun: kulture ${p72canon(kultDist)} ≠ prekrivanje:11;različne:124`);
+        if (p72canon(Object.fromEntries(gapDist)) !== p72canon(PIN_GAPS_P72))
+          p72Errors.push(`preracun: odmiki ${p72canon(Object.fromEntries(gapDist))} ≠ pin`);
+        if (p72canon(Object.fromEntries(pairDist)) !== p72canon(PIN_PAIRS_P72))
+          p72Errors.push(`preracun: pari ${p72canon(Object.fromEntries(pairDist))} ≠ pin`);
+        if (Math.round(sumA) !== 128125 || Math.round(sumB) !== 145057)
+          p72Errors.push(`preracun: Σ areaQK ≠ 128125/145057 (${Math.round(sumA)}/${Math.round(sumB)})`);
+        // opcija A: drop drugi-blok vrstic (keep = min stran »glavni tek«)
+        const drop = new Set<string>();
+        for (const [key, pgs] of duals) {
+          const b = key.split("|")[0];
+          const m = pgs[0];
+          for (const p of pgs) if (p !== m) drop.add(`${p}|${b}`);
+        }
+        const rowsA = rt.rows.filter((r) => !drop.has(`${r.page}|${r.base}`));
+        const basesA = new Set(rowsA.map((r) => r.base));
+        const lost = byBase.size - basesA.size;
+        if (drop.size !== 137) p72Errors.push(`preracun opcija A: drop ≠ 137 (${drop.size})`);
+        if (rowsA.length !== 939) p72Errors.push(`preracun opcija A: rows ≠ 939 (${rowsA.length})`);
+        if (lost !== 0) p72Errors.push(`preracun opcija A: lost ≠ 0 (${lost})`);
+        const byBaseA = new Map<string, Set<number>>();
+        for (const r of rowsA) {
+          const s = byBaseA.get(r.base);
+          if (s) s.add(r.page);
+          else byBaseA.set(r.base, new Set([r.page]));
+        }
+        const multiA = [...byBaseA.values()].filter((s) => s.size > 1).length;
+        if (multiA !== 50) p72Errors.push(`preracun opcija A: multi ≠ 50 (${multiA})`);
+        let crossA = 0;
+        for (const [b2, s] of byBaseA) {
+          const bls = new Set<string>();
+          for (const r of byBase.get(b2) as P72Row[]) {
+            if (!s.has(r.page)) continue;
+            const bl = blattOf72(r.page);
+            if (bl) bls.add(bl);
+          }
+          if (bls.size > 1) crossA += 1;
+        }
+        if (crossA !== 48) p72Errors.push(`preracun opcija A: cross ≠ 48 (${crossA})`);
+        // P70 33 kolizij ⊂ dual; p51×p91 stare (11, ločene od P70); novih 91
+        const p70Bases = new Set(r70.collisions.istiBlatt.map((c) => c.base));
+        for (const c of r70.collisions.istiBlatt) {
+          if (!duals.has(`${c.base}|II`)) p72Errors.push(`preracun: P70 base ${c.base} ni isti-Blatt dual`);
+        }
+        const p51x91 = [...duals.keys()]
+          .filter((k) => k.endsWith("|II") && (duals.get(k) as number[]).join(",") === "51,91")
+          .map((k) => k.split("|")[0]);
+        if (p51x91.length !== 11) p72Errors.push(`preracun: p51×p91 starih ≠ 11 (${p51x91.length})`);
+        if (p51x91.some((b) => p70Bases.has(b))) p72Errors.push("preracun: p51×p91 base v P70 kolizijah (pričakovano ločeno)");
+        const dualBases = new Set([...duals.keys()].map((k) => k.split("|")[0]));
+        const newUnnoticed = [...dualBases].filter((b) => !p70Bases.has(b) && !p51x91.includes(b)).length;
+        if (newUnnoticed !== 91) p72Errors.push(`preracun: newUnnoticed ≠ 91 (${newUnnoticed})`);
+        // runtime pack == TS konstanta (pini po poljih — ključi JSON so po skripti urejeni)
+        const packRt = JSON.parse(rawPackRt) as {
+          version?: number;
+          task?: string;
+          date?: string;
+          statusLine?: string;
+          verdictSi?: string;
+          verdictEn?: string;
+          rule?: Record<string, string>;
+          summary?: Record<string, unknown>;
+          bases?: Record<string, { base?: string; blatt?: string; pages?: number[]; gap?: number[]; p70Collision?: boolean }>;
+        };
+        if (packRt.version !== 1) p72Errors.push(`runtime pack version ≠ 1 (${packRt.version})`);
+        if (packRt.task !== d72.task || packRt.date !== d72.date || packRt.statusLine !== d72.statusLine
+          || packRt.verdictSi !== d72.verdictSi || packRt.verdictEn !== d72.verdictEn)
+          p72Errors.push("runtime pack task/date/statusLine/verdicti ≠ TS konstanta DUAL_OCCURRENCE_P72");
+        for (const [k, v] of Object.entries(d72.rule)) {
+          if ((packRt.rule ?? {})[k] !== v) p72Errors.push(`runtime pack rule.${k} ≠ TS konstanta`);
+        }
+        const ps = (packRt.summary ?? {}) as Record<string, unknown>;
+        const num = (k: string) => (typeof ps[k] === "number" ? (ps[k] as number) : -1);
+        if (num("dualBases") !== 135 || num("rowsSameBlatt") !== 274 || num("triples") !== 2 || num("ownerDisjoint") !== 135
+          || num("p70Subset") !== 33 || num("p51x91old") !== 11 || num("newUnnoticed") !== 91
+          || num("areaQKSumA") !== 128125 || num("areaQKSumB") !== 145057)
+          p72Errors.push("runtime pack summary števci ≠ pini 135/274/2/135/33/11/91/128125/145057");
+        if (JSON.stringify(ps.nearDualBases) !== JSON.stringify(d72.summary.nearDualBases))
+          p72Errors.push("runtime pack nearDualBases ≠ 2080,2081");
+        if (p72canon(ps.hausNrDist as Record<string, number>) !== p72canon(d72.summary.hausNrDist)
+          || p72canon(ps.kultureDist as Record<string, number>) !== p72canon(d72.summary.kultureDist)
+          || p72canon(ps.gapDist as Record<string, number>) !== p72canon(d72.summary.gapDist)
+          || p72canon(ps.pairDist as Record<string, number>) !== p72canon(d72.summary.pairDist))
+          p72Errors.push("runtime pack disti ≠ TS konstanta (hn/kulture/odmiki/pari)");
+        const oaRt = (ps.optionA ?? {}) as Record<string, unknown>;
+        if (oaRt.drop !== 137 || oaRt.rows !== 939 || oaRt.bases !== 879 || oaRt.lost !== 0
+          || oaRt.multi !== 50 || oaRt.cross !== 48)
+          p72Errors.push("runtime pack optionA ≠ 137/939/879/0/50/48");
+        const packBases = Object.keys(packRt.bases ?? {});
+        if (packBases.length !== 135) p72Errors.push(`runtime pack bases ≠ 135 (${packBases.length})`);
+        for (const c of r70.collisions.istiBlatt) {
+          const pb = (packRt.bases ?? {})[c.base];
+          if (!pb || !pb.p70Collision) p72Errors.push(`runtime pack: P70 base ${c.base} ni dual z p70Collision`);
+        }
+        if (rawPackEv !== null) {
+          // repo: dokaz ⊇ runtime (bajtna projekcija) + dokazni števci
+          const packEv = JSON.parse(rawPackEv) as {
+            task?: string;
+            date?: string;
+            summary?: Record<string, unknown>;
+            runtime?: Record<string, unknown>;
+            bases?: Record<string, unknown>;
+            v5Sha256?: string;
+            invariants?: string[];
+          };
+          if (packEv.task !== d72.task) p72Errors.push("dokaz task ≠ TS konstanta");
+          if (packEv.date !== "2026-10-15") p72Errors.push(`dokaz date ≠ 2026-10-15 (${packEv.date})`);
+          if (JSON.stringify(packEv.summary) !== JSON.stringify(packRt.summary))
+            p72Errors.push("dokaz summary ≠ runtime summary");
+          if (JSON.stringify(packEv.runtime) !== JSON.stringify(packRt))
+            p72Errors.push("dokaz runtime ≠ runtime pack (bajtna projekcija I7)");
+          if (Object.keys(packEv.bases ?? {}).length !== 135)
+            p72Errors.push(`dokaz bases ≠ 135 (${Object.keys(packEv.bases ?? {}).length})`);
+          if (!Array.isArray(packEv.invariants) || packEv.invariants.length !== 9)
+            p72Errors.push("dokaz invarianti ≠ 9 (I1–I9)");
+          p72FileDetail = `repo: dokaz == runtime (summary bajtno, runtime bajtna projekcija I7, bases 135, invarianti I1–I9, v5Sha256 ${String(packEv.v5Sha256 ?? "").slice(0, 8)}…) · preracun iz v5 vrstic: dual ${duals.size} + nearDual ${nearDuals.size}, isti-Blatt vrstic ${rowsIB}, triples ${triples}, lastniki ${ownerDisjoint}/135, opcija A drop ${drop.size}/rows ${rowsA.length}/lost ${lost}/multi ${multiA}/cross ${crossA}, Σ areaQK A ${Math.round(sumA)}/B ${Math.round(sumB)}, P70 33 ⊂ dual + p51×p91 ${p51x91.length} + novih ${newUnnoticed}`;
+        } else {
+          p72FileDetail = `produkcija: runtime pack preverjen (135 base, summary == TS konstanta, P70 33 z p70Collision) · preracun iz v5 vrstic: dual ${duals.size} + nearDual ${nearDuals.size}, isti-Blatt vrstic ${rowsIB}, triples ${triples}, lastniki ${ownerDisjoint}/135, opcija A drop ${drop.size}/rows ${rowsA.length}/lost ${lost}/multi ${multiA}/cross ${crossA}, Σ areaQK A ${Math.round(sumA)}/B ${Math.round(sumB)}, P70 33 ⊂ dual + p51×p91 ${p51x91.length} + novih ${newUnnoticed}`;
+        }
+      } catch (e) {
+        p72Errors.push(`ps-dual-occurrence-pack datoteke neuspešno: ${String(e).slice(0, 80)}`);
+      }
+    }
+  }
+  push(
+    "qa-p72-dual-pack",
+    "P72: DVOJNOSTI REGISTRA — 135 ISTI-BLATT DUAL BASE (issue #13) — odločitveni paket za isti-Blatt SPLIT joina (P70 »SPLIT = LASTNIKA«; razširitev P66 cross-Blatt vzorca; deterministično, brez AI ob delovanju; NE odloča namesto lastnika — MERI in DOKAZUJE; v5 runtime join NESPREMENJEN): 135 base z vrsticami na ≥ 2 straneh ISTEGA Blatta ima med straneh DISJUNKTNE lastnike (274 vrstice; 2 tri-zapisni (95,100,101)/(105,106,121) + 2 nearDual z strani brez lastnikov — 2080, 2081); stranski pari delijo iste številčne razpone po P56 pageMap (p23/p24 = 401–420 obe; p51/p91 = 961–980 obe; p103/p118 = 2001–2020 obe …) z odmiki po blokih konsistentnimi (40 × 44 · 15 × 49 · 5 × 29 · 1 × 13; 2 triple gapi 6/16) = DVOJNI ZAPIS iste serije v dveh blokih registra; hišne številke RAZLIČNE 130/135 (5 brez hn; 0 isti); kulture 124 različne / 11 prekrivanj; Σ areaQK blok A 128 125 / blok B 145 057 QK; P70 33 kolizij (p49/89 × 15, p50/90 × 10, p52/92 × 8) = PODMNOŽICA + 11 starih p51×p91 (v2 era) + 91 dozdaj neopaženih; opcija A (drop drugi-blok vrstic po C1 vzorcu): drop 137, 0 base brez vrstic, rows 1077 → 939, multi 184 → 50, cross 48 (nespr.); opcija B (per-page instance) zahteva georef Blattnih kart [~]; opcija C (re-renum) neodločljiva (pageMap razponi prekrivajo); skripta scripts/p72_ps_dual_pack.py (I1–I9, --check bajtno PASS); status REVIEW",
+    "P72: REGISTER DUAL OCCURRENCES — 135 SAME-BLATT DUAL BASES (issue #13) — the decision pack for the same-Blatt SPLIT join (P70 \"SPLIT = OWNER\"; extending the P66 cross-Blatt pattern; deterministic, no AI at runtime; does NOT decide on behalf of the owner — MEASURES and PROVES; the v5 runtime join UNCHANGED): 135 bases with rows on ≥ 2 pages of the SAME Blatt have DISJOINT owners across those pages (274 rows; 2 triples (95,100,101)/(105,106,121) + 2 near-duals with owner-less pages — 2080, 2081); page pairs share the same number ranges per the P56 pageMap (p23/p24 = 401–420 both; p51/p91 = 961–980 both; p103/p118 = 2001–2020 both …) with consistent per-block gaps (40 × 44 · 15 × 49 · 5 × 29 · 1 × 13; 2 triple gaps 6/16) = DUAL ENTRY of the same series in two register blocks; house numbers DIFFERENT 130/135 (5 without a house number; 0 same); cultures 124 different / 11 overlapping; Σ areaQK block A 128 125 / block B 145 057 QK; the P70 33 collisions (p49/89 × 15, p50/90 × 10, p52/92 × 8) are a SUBSET + 11 old p51×p91 (v2 era) + 91 previously unnoticed; option A (drop second-block rows per the C1 pattern): drop 137, 0 bases left empty, rows 1,077 → 939, multi 184 → 50, cross 48 (unchanged); option B (per-page instances) requires georeferenced Blatt sheets [~]; option C (re-numbering) undecidable (the pageMap ranges overlap); the script scripts/p72_ps_dual_pack.py (I1–I9, --check byte-equal PASS); status REVIEW",
+    p72Errors.length === 0,
+    p72Errors.length === 0
+      ? `pini dual 135 · vrstic 274 · triples 2 · nearDual 2080/2081 · lastniki 135/135 · hn 130/5 · kulture 124/11 · odmiki/pari == pin · P70 33 ⊂ dual + 11 starih + 91 novih · Σ areaQK 128125/145057 · opcija A 137/939/879/0/50/48 · ${p72FileDetail}`
+      : p72Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;  return {

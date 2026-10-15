@@ -40,6 +40,10 @@ export const dynamic = "force-static";
  *    p93 (ostane p98 III); v5: 1077 vrstic / 879 pozicioniranih števil;
  *    površine median 3.9052 ≈ 1 Wiener QK 3.59665 m² (Δ +8.58 %);
  *    soslednost 652 parov / 51.8 m / 25.5×.
+ *  · P72: paket dvojnosti (odločitveni paket za isti-Blatt SPLIT joina —
+ *    135 dual base; P70 33 kolizij = podmnožica; opcija A predračun rows
+ *    939) — v5 runtime NESPREMENJEN (dokaz research/issue17/
+ *    ps-dual-occurrence-pack.json; odločitev LASTNIKA).
  *
  * Status: SANITIZED-DETERMINISTIC. SHEET_GEOREFS in dokazi P40–P70
  * nespremanjeni; v2/v3/v4 dokazi arhivirani (research/issue17/

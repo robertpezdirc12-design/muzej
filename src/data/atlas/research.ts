@@ -5172,3 +5172,136 @@ export const V5_SECTIONS_P93_P71: {
     "praznine brez registrskih strani: PF 1644–1655, 1673/1679, 1842–1860, 1904/1906 (modernVoid [~])",
   ],
 };
+
+// ——— P72 (issue #13): odločitveni paket DVOJNOSTI REGISTRA — isti-Blatt
+// dual base. Vir: skripta scripts/p72_ps_dual_pack.py (I1–I9, --check
+// bajtno PASS) → dokaz research/issue17/ps-dual-occurrence-pack.json +
+// runtime src/data/atlas/ps-dual-occurrence-pack.json (bajtna projekcija).
+// Odločitveni paket — NE odloča namesto lastnika (P70 »SPLIT = LASTNIKA«);
+// v5 runtime join NESPREMENJEN.
+export const DUAL_OCCURRENCE_P72: {
+  version: number;
+  series: "PS";
+  task: string;
+  date: string;
+  principle: string;
+  status: ResearchStatus;
+  generatedBy: string;
+  inputs: { p56: string; p59: string; v4ev: string; v5ev: string };
+  rule: { dual: string; blockA: string; gap: string; optionA: string; pageMapRange: string };
+  summary: {
+    dualBases: number;
+    rowsSameBlatt: number;
+    triples: number;
+    nearDualBases: string[];
+    nearDualNote: string;
+    ownerDisjoint: number;
+    hausNrDist: Record<string, number>;
+    kultureDist: Record<string, number>;
+    gapDist: Record<string, number>;
+    pairDist: Record<string, number>;
+    p70Subset: number;
+    p51x91old: number;
+    newUnnoticed: number;
+    areaQKSumA: number;
+    areaQKSumB: number;
+    optionA: {
+      drop: number;
+      rows: number;
+      bases: number;
+      lost: number;
+      multi: number;
+      cross: number;
+      ambiguous: Record<string, number>;
+      conf: Record<string, number>;
+    };
+  };
+  statusLine: string;
+  verdictSi: string;
+  verdictEn: string;
+  next: string[];
+} = {
+  version: 1,
+  series: "PS",
+  task: "P72 — dual occurrence pack: 135 isti-Blatt dual base (odločitveni paket za isti-Blatt SPLIT joina)",
+  date: "2026-10-15",
+  principle:
+    "odločitveni paket za lastniško odločitev o isti-Blatt SPLIT joinu (P70 »SPLIT = LASTNIKA«): 137 dual base iz v5 rowsEvidence × P59 pageAttribution × P56 pageMap — stranski pari, lastniki, hišne številke, kulture, Σ areaQK per blok, pageMap razponi, opcija A predračun; NE odloča namesto lastnika; v5 join nespremenjen (disciplina P56–P71)",
+  status: "REVIEW",
+  generatedBy:
+    "scripts/p72_ps_dual_pack.py (deterministično, brez AI ob delovanju, FAIL ob padu I1–I9; --check bajtno PASS; 5× sha256 pini vhodov)",
+  inputs: {
+    p56: "research/issue17/ps-register-topology.json (pageMap)",
+    p59: "research/issue17/ps-blatt-headers.json (pageAttribution)",
+    v4ev: "research/issue17/ps-parcels-geo-v4.json (collisions.istiBlatt 33)",
+    v5ev: "research/issue17/ps-parcels-geo-v5.json (rowsEvidence 1077)",
+  },
+  rule: {
+    dual:
+      "base z ≥ 2 vrsticami na ≥ 2 straneh ISTEGA Blatta, kjer so množice lastnikov med straneh DISJUNKTNE (brez skupnega lastnika)",
+    blockA: "min stran paru (»glavni tek«); blockB = ostale (»drugi blok«)",
+    gap: "odmik drugih strani od min strani per base (triple: 2 gapi)",
+    optionA: "drop drugi-blok vrstic (C1 vzorec: vrstice ostanejo v registru, izpadajo iz joina; keep = min stran)",
+    pageMapRange: "P56 numMin/numMax per stran — dokaz skupnih serij obeh blokov",
+  },
+  summary: {
+    dualBases: 135,
+    rowsSameBlatt: 274,
+    triples: 2,
+    nearDualBases: ["2080", "2081"],
+    nearDualNote:
+      "base z disjunktnimi lastniki med straneh, kjer ena stran brez lastnikov (konservativno izključene iz dual; opcija A jih NE izpada)",
+    ownerDisjoint: 135,
+    hausNrDist: { "različni": 130, "None": 5 },
+    kultureDist: { "različne": 124, "prekrivanje": 11 },
+    gapDist: { "1": 13, "5": 29, "6": 1, "15": 49, "16": 1, "40": 44 },
+    pairDist: {
+      "(103, 118)": 18,
+      "(104, 119)": 17,
+      "(105, 106)": 1,
+      "(105, 106, 121)": 1,
+      "(106, 121)": 11,
+      "(113, 114)": 3,
+      "(122, 123)": 1,
+      "(134, 135)": 4,
+      "(23, 24)": 2,
+      "(49, 89)": 15,
+      "(50, 90)": 10,
+      "(51, 91)": 11,
+      "(52, 92)": 8,
+      "(58, 73)": 3,
+      "(7, 8)": 1,
+      "(95, 100)": 13,
+      "(95, 100, 101)": 1,
+      "(96, 101)": 15,
+    },
+    p70Subset: 33,
+    p51x91old: 11,
+    newUnnoticed: 91,
+    areaQKSumA: 128125,
+    areaQKSumB: 145057,
+    optionA: {
+      drop: 137,
+      rows: 939,
+      bases: 879,
+      lost: 0,
+      multi: 50,
+      cross: 48,
+      ambiguous: { "false": 704, "true": 235 },
+      conf: { MEDIUM: 629, STRONG: 174, WEAK: 136 },
+    },
+  },
+  statusLine:
+    "P72 DUAL PACK: 135 isti-Blatt dual base (274 vrstic; 2 triples) + 2 nearDual; lastniki med straneh DISJUNKTNI 135/135; hn različni 130/135; odmiki 40 × 44 · 15 × 49 · 5 × 29 · 1 × 13; P70 33 ⊂ 135 (podmnožica) + 11 starih + 91 novih; opcija A: drop 137, rows 939, lost 0; v5 join nespremenjen; odločitev lastnika",
+  verdictSi:
+    "P72: DVOJNOSTI REGISTRA — 135 ISTI-BLATT DUAL BASE (issue #13) — odločitveni paket za isti-Blatt SPLIT joina (P70 »SPLIT = LASTNIKA«; razširitev P66 cross-Blatt vzorca; deterministično, brez AI ob delovanju; NE odloča namesto lastnika — MERI in DOKAZUJE): 135 base z vrsticami na ≥ 2 straneh ISTEGA Blatta ima med straneh DISJUNKTNE lastnike (274 vrstice; 2 tri-zapisni + 2 nearDual z strani brez lastnikov — 2080, 2081) — stranski pari delijo iste številčne razpone po P56 pageMap (p23/p24 = 401–420 obe; p51/p91 = 961–980 obe; p103/p118 = 2001–2020 obe …) z konsistentnimi odmiki po blokih (40 × 44 · 15 × 49 · 5 × 29 · 1 × 13; 2 triple gapi 6/16) = DVOJNI ZAPIS iste serije v dveh blokih registra — hišne številke RAZLIČNE 130/135 (5 brez hn na eni strani; 0 isti), Σ areaQK blok A 128 125 / blok B 145 057 QK; P70 33 kolizij (p49/89 × 15, p50/90 × 10, p52/92 × 8) = PODMNOŽICA + 11 starih p51×p91 (v2 era) + 91 dozdaj neopaženih — v4/v5 join teh 135 base FUZIRA dve realni parceli pod eno številko; opcija A (drop drugi-blok vrstic po C1 vzorcu): 137 vrstic izpada, 0 base brez vrstic, rows 1077 → 939, multi 184 → 50, cross 48 (nespr.); opcija B (per-page instance) zahteva georef Blattnih kart [~]; opcija C (re-renum) neodločljiva (pageMap razponi prekrivajo); odločitev LASTNIKA",
+  verdictEn:
+    "P72: REGISTER DUAL OCCURRENCES — 135 SAME-BLATT DUAL BASES (issue #13) — the decision pack for the same-Blatt SPLIT join (P70 \"SPLIT = OWNER\"; extending the P66 cross-Blatt pattern; deterministic, no AI at runtime; does NOT decide on behalf of the owner — MEASURES and PROVES): 135 bases with rows on ≥ 2 pages of the SAME Blatt have DISJOINT owners across those pages (274 rows; 2 triple entries + 2 near-duals with owner-less pages — 2080, 2081) — page pairs share the same number ranges per P56 pageMap (p23/p24 = 401–420 both; p51/p91 = 961–980 both; p103/p118 = 2001–2020 both …) with consistent per-block gaps (40 × 44 · 15 × 49 · 5 × 29 · 1 × 13; 2 triple gaps 6/16) = DUAL ENTRY of the same series in two register blocks — house numbers DIFFERENT 130/135 (5 without house numbers on one side; 0 same documented), Σ areaQK block A 128 125 / block B 145 057 QK; the P70 33 collisions (p49/89 × 15, p50/90 × 10, p52/92 × 8) are a SUBSET + 11 old p51×p91 (v2 era) + 91 previously unnoticed — the v4/v5 join FUSES two real parcels under one number for these 135 bases; option A (drop second-block rows per the C1 pattern): 137 rows dropped, 0 bases left empty, rows 1077 → 939, multi 184 → 50, cross 48 (unchanged); option B (per-page instances) requires georeferenced Blatt sheets [~]; option C (re-numbering) undecidable (pageMap ranges overlap); the decision belongs to the OWNER",
+  next: [
+    "LASTNIŠKA ODLOČITEV o isti-Blatt SPLIT joinu za 135 dual base (opcija A exclude drugi blok / B per-page instance / C neodločljivo)",
+    "izvedba opcije A (ob odobritvi): v6 — drop 137 drugi-blok vrstic (C1 vzorec; vrstice ostanejo v registru; 0 base brez vrstic; rows 939, multi 50, cross 48)",
+    "izvedba opcije B: zahteva georef Blattnih kart (Franciscejski kataster I–V) — ločen podprojekt [~]",
+    "posodobitev P70 kolizij dokumentacije (33 = podmnožica 137; reason »dva bloka« se razteza na cel register)",
+    "cross-Blatt SPLIT (P66 pack) ostaja ločena lastniška odločitev (36 base, deleži [0.5,0.75))",
+  ],
+};
