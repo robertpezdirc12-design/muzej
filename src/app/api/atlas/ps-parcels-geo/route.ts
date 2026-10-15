@@ -57,15 +57,24 @@ export const dynamic = "force-static";
  *    med Blatti disjunktni 48/48; opciji A1/A2 (rows 891, cross 0) —
  *    v6 runtime NESPREMENJEN (dokaz research/issue17/
  *    ps-cross-blatt-pack.json; odločitev LASTNIKA).
+ *  · P75 (v7, AKTUALNO): CROSS-BLATT SPLIT opcija A1 — izvedba C4 iz
+ *    P74 paketa (lastniška odločitev 2026-10-15; keep = DOMINANT Blatt
+ *    po Σ areaQK; ties 0): za 48 cross base (P74 pack; ista številka
+ *    pod dvema Blattoma = 2 realni parceli) je vrstica ne-dominantnega
+ *    Blatta izpadla iz joina — drop 48 kombinacij = 48 vrstic → 891
+ *    vrstic / 879 base / multi 2 / cross 0; area median 3.8102
+ *    (Δ +5.94 %); sosledje 652/51.8 m (nespremenjeno); vrstice ostanejo
+ *    v registru brez geometrije; v6 arhiviran v dokazu; PAYLOAD/
+ *    schema NESPREMENJENA.
  *
- * Status: SANITIZED-DETERMINISTIC. SHEET_GEOREFS in dokazi P40–P73
- * nespremanjeni; v2/v3/v4/v5 dokazi arhivirani (research/issue17/
- * ps-parcels-geo-v2.json, -v3.json, -v4.json, -v5.json).
+ * Status: SANITIZED-DETERMINISTIC. SHEET_GEOREFS in dokazi P40–P74
+ * nespremanjeni; v2/v3/v4/v5/v6 dokazi arhivirani (research/issue17/
+ * ps-parcels-geo-v2.json, -v3.json, -v4.json, -v5.json, -v6.json).
  *
- * Dokaz v6: research/issue17/ps-parcels-geo-v6.json (izpis skripta
- * scripts/p73_ps_v6_split_a.py; invarianti I1–I8, `--check` =
- * determinizem; nasledstvo v5Delta + v6Delta v runtime).
- * Runtime: src/data/atlas/ps-parcels-geo.json (version 6).
+ * Dokaz v7: research/issue17/ps-parcels-geo-v7.json (izpis skripta
+ * scripts/p75_ps_v7_cross_split_a1.py; invarianti I1–I8, `--check` =
+ * determinizem; nasledstvo v5Delta + v6Delta + v7Delta v runtime).
+ * Runtime: src/data/atlas/ps-parcels-geo.json (version 7).
  */
 export async function GET() {
   return NextResponse.json(psParcelsGeo, {

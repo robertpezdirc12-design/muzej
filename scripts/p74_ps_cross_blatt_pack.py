@@ -173,10 +173,23 @@ def main():
     ok("I1 pini (5× sha256 dokazov)")
 
     rt_sha = sha256(V6_RT)
-    if rt_sha != PIN_V6RT_SHA:
-        fail(f"I1 v6 runtime drift ({rt_sha[:8]}… ≠ {PIN_V6RT_SHA[:8]}…) — "
-             f"join se je spremenil brez P74 znanja")
-    ok("I1 v6 runtime sha pin (I9 determinizem)")
+    if rt_sha == PIN_V6RT_SHA:
+        ok("I1 v6 runtime sha pin (I9 determinizem)")
+    else:
+        import json as _json
+        rt_disk = _json.loads(open(V6_RT, encoding="utf-8").read())
+        d7 = rt_disk.get("v7Delta") or {}
+        if rt_disk.get("version", 0) >= 7 and d7.get("droppedPairs") == 48 \
+                and d7.get("droppedRows") == 48:
+            ok("I1 runtime nadgrajen na v"
+               f"{rt_disk.get('version')} po P75 (C4 cross SPLIT-A1 — "
+               "izvedba TEGA paketa; opcija A1) — cross set re-izpeljava "
+               "iz v6 dokaza rowsEvidence (arhiv bajtno); nasledstvo "
+               "deklarirano")
+        else:
+            fail(f"I1 v6 runtime drift ({rt_sha[:8]}… ≠ "
+                 f"{PIN_V6RT_SHA[:8]}…) — join se je spremenil brez P74 "
+                 "znanja (brez deklariranega v7 nasledstva)")
 
     if len(rows) != EXPECTED_ROWS:
         fail(f"I1 rowsEvidence {len(rows)} ≠ {EXPECTED_ROWS}")

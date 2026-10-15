@@ -3684,6 +3684,7 @@ export const PS_GEO_P55: {
   v3Delta: { renumbered: number; removedRows: number; removedReason: string; after: { rows: number; bases: number; multiPage: number; crossBlatt: number }; invariance: string; p67Deltas: string };
   v5Delta: { excludedSections: number; revertedP93: number; removed: number; before: { rows: number; bases: number; multiPage: number; crossBlatt: number }; after: { rows: number; bases: number; multiPage: number; crossBlatt: number }; invariance: string };
   v6Delta: { splitBases: number; droppedPairs: number; droppedRows: number; before: { rows: number; bases: number; multiPage: number; crossBlatt: number }; after: { rows: number; bases: number; multiPage: number; crossBlatt: number }; reason: string; invariance: string; note: string };
+  v7Delta: { crossBases: number; droppedPairs: number; droppedRows: number; before: { rows: number; bases: number; multiPage: number; crossBlatt: number }; after: { rows: number; bases: number; multiPage: number; crossBlatt: number }; reason: string; invariance: string; note: string };
   v2Delta: { removedRows: number; removedPages: string; addedRows: number; addedSource: string; before: { matchedRows: number; confCounts: { STRONG: number; MEDIUM: number; WEAK: number }; areaMedian: number }; invariance: string };
   areaProof: { pairsWithArea: number; medianRatio: number; q25: number; q75: number; tightN: number; tightShare: number; shuffleMedian: number; shuffleTightShare: number; historicalQkM2: number; deltaPct: number };
   spatialProof: { consecPairs: number; medianM: number; q25M: number; q75M: number; share150: number; shuffleMedianM: number; shuffleShare150: number; enrichmentX: number };
@@ -3695,11 +3696,11 @@ export const PS_GEO_P55: {
   next: string[];
 } = {
   series: "PS",
-  version: 6,
+  version: 7,
   source:
-    "PS protokol N083PS (VAČ uodid 373415, docid 41780; 143 strani; branja research/issue17/ps-raw/ps-*.json, izbira strani PS-full-v2.json) + sodobne parcele k.o. 1544 GRIBLJE (research/georef-n83/gurs/parcels-ko1544-merged.json, 2117, P47 prenos SI.GURS.KN:PARCELE) + Blatt I str. 3–4 (P57 primarni vir, src/data/atlas/ps-register-start.json); v6 dokaz research/issue17/ps-parcels-geo-v6.json + runtime src/data/atlas/ps-parcels-geo.json (v2/v3/v4/v5 dokazi arhivirani nespremenjeni: research/issue17/ps-parcels-geo-v2.json, -v3.json, -v4.json, -v5.json)",
+    "PS protokol N083PS (VAČ uodid 373415, docid 41780; 143 strani; branja research/issue17/ps-raw/ps-*.json, izbira strani PS-full-v2.json) + sodobne parcele k.o. 1544 GRIBLJE (research/georef-n83/gurs/parcels-ko1544-merged.json, 2117, P47 prenos SI.GURS.KN:PARCELE) + Blatt I str. 3–4 (P57 primarni vir, src/data/atlas/ps-register-start.json); v7 dokaz research/issue17/ps-parcels-geo-v7.json + runtime src/data/atlas/ps-parcels-geo.json (v2/v3/v4/v5/v6 dokazi arhivirani nespremenjeni: research/issue17/ps-parcels-geo-v2.json, -v3.json, -v4.json, -v5.json, -v6.json)",
   status: "REVIEW",
-  generatedBy: "scripts/p73_ps_v6_split_a.py (v6); v5: scripts/p71_ps_v5_sections_p93.py; v4: scripts/p70_ps_v4_rejoin.py; v3: scripts/p68_ps_v3_renumber.py; v2: scripts/p58_ps_parcels_geo_v2.py; v1: scripts/p55_ps_parcels_geo.py",
+  generatedBy: "scripts/p75_ps_v7_cross_split_a1.py (v7); v6: scripts/p73_ps_v6_split_a.py; v5: scripts/p71_ps_v5_sections_p93.py; v4: scripts/p70_ps_v4_rejoin.py; v3: scripts/p68_ps_v3_renumber.py; v2: scripts/p58_ps_parcels_geo_v2.py; v1: scripts/p55_ps_parcels_geo.py",
   pageSelection: {
     pages: 135,
     rows: 2762,
@@ -3711,18 +3712,28 @@ export const PS_GEO_P55: {
       "8 strani izbranih na pass3 (24/37/83/84/87/94/121/125): pass3 datoteke brez parsed.vrstice, NDJSON vsebina številčno nezanesljiva (7/8 prvih parcel divergira od pass1 in pass2, ki se strinjata) → uporabljen pass1; odmik od PS-full-v2 izbire dokumentiran",
   },
   join: {
-    matchedRows: 939,
-    matchedRowsS1S2: 913,
+    matchedRows: 891,
+    matchedRowsS1S2: 865,
     matchedRowsBI: 26,
-    matchedSharePct: 34.0,
+    matchedSharePct: 32.3,
     psUniqueNumbers: 2106,
     psPositionedParcels: 879,
     suffixGroups: 271,
-    seriesCounts: { BI: 26, S1: 847, S2: 66 },
-    confCounts: { STRONG: 174, MEDIUM: 629, WEAK: 136 },  // TOTAL (v2 konvencija; S1/S2 del 171/…)
+    seriesCounts: { BI: 26, S1: 803, S2: 62 },
+    confCounts: { STRONG: 172, MEDIUM: 588, WEAK: 131 },  // TOTAL (v2 konvencija; S1/S2 del 171/…)
     readConfBI: { STRONG: 3, MEDIUM: 14, WEAK: 9 },
-    ambiguousBases: 50,
-    ambiguousRows: 100,
+    ambiguousBases: 2,
+    ambiguousRows: 4,
+  },
+  v7Delta: {
+    crossBases: 48,
+    droppedPairs: 48,
+    droppedRows: 48,
+    before: { rows: 939, bases: 879, multiPage: 50, crossBlatt: 48 },
+    after: { rows: 891, bases: 879, multiPage: 2, crossBlatt: 0 },
+    reason: "C4: cross-Blatt SPLIT opcija A1 — drop ne-dominant-Blatt vrstic za 48 cross base (P74 pack; lastniška odločitev 2026-10-15; konec lažnih fuzij čez Blatte)",
+    invariance: "ohranjene vrstice bajtno == v6 (lekcija P9; drop samo odstranjuje); ambiguous prekalkuliran po P55 metodi (derivat strani; 48 derived True→False); conf nespremenjen (geografija nedeprava); v6 ostaja arhiviran (research/issue17/ps-parcels-geo-v6.json)",
+    note: "C4 odstranjuje LE lažne fuzije (ista številka pod dvema Blattoma; lastniki med Blatti disjunktni) — noben nov podatek ni izmišljen; vrstice ostanejo v registru brez geometrije; opcija A2 bi pri 29 base obdržala drugo vrstico (izbira pravila lastniška)",
   },
   v6Delta: {
     splitBases: 135,
@@ -3759,16 +3770,16 @@ export const PS_GEO_P55: {
     invariance: "pozicije vrstic so deterministične PER BASE (ploščinsko uteženo središče sodobnih parcel številke) — odstranitev/dodatek vrstic ne spremeni nobene pozicije; množica pozicioniranih števil ostane 800 → soslednost in S1/S2 conf bajtno enaka v1 (P58 zgodovina — arhiv)",
   },
   areaProof: {
-    pairsWithArea: 919,
-    medianRatio: 3.8941,
-    q25: 2.8051,
-    q75: 7.5871,
-    tightN: 186,
-    tightShare: 0.2024,
-    shuffleMedian: 4.5766,
-    shuffleTightShare: 0.0457,
+    pairsWithArea: 871,
+    medianRatio: 3.8102,
+    q25: 2.798,
+    q75: 7.0499,
+    tightN: 183,
+    tightShare: 0.2101,
+    shuffleMedian: 4.1435,
+    shuffleTightShare: 0.0586,
     historicalQkM2: 3.59665,
-    deltaPct: 8.27,
+    deltaPct: 5.94,
   },
   spatialProof: {
     consecPairs: 652,
@@ -3785,31 +3796,29 @@ export const PS_GEO_P55: {
     rows: 2,
     parcels: [2159, 2160],
     owner: ["Van Wawech Mihó"],
-    note: "prvi imenovani prebivalci Fučkovci v arhivu (PS str. 125); parceli obstajata še danes (P47) [~] — v6 nespremenjeno",
+    note: "prvi imenovani prebivalci Fučkovci v arhivu (PS str. 125); parceli obstajata še danes (P47) [~] — v7 nespremenjeno",
   },
   invariants: {
-    I1: "C3 drop == P72 optionA (137 kombinacij = 138 vrstic; keep = min stran); dual set == P72 dokaz (bajtno; 135 · 274 · 2 triples; nearDual 2080/2081) — PASS",
-    I2: "pini: v5 dokaz 6c96210d…, P72 dual pack 0922a701…, P59 650f13dc…, P56 2fddc76f…, PARCELS fee91fca… — PASS",
-    I3: "P70 33 kolizij ⊂ drop (drugi blok: p89 × 15, p90 × 10, p92 × 8); po C3 noben base ne izgubi vseh vrstic (0 praznih); nearDual 2080/2081 vrstice ostanejo — PASS",
-    I4: "ambiguous P55 prekalkulacija == pini (50 base / 100 vrstic; 135 True→False); conf 0 sprememb (geografija nedeprava; 174/629/136) — PASS",
-    I5: "rows 939, bases 879, multi 50, cross 48, ambRows 100; area 3.8941; sosledje 652/51.8 — PASS (pini)",
-    I6: "nespremenjene vrstice (brez group-derived) bajtno == v5; drop samo odstranjuje — PASS",
-    I7: "dokaz rowsEvidence == runtime rows bajtno (939) — PASS",
-    I8: "v5 ostaja arhiviran (research/issue17/ps-parcels-geo-v5.json); v5Delta + v6Delta = zgodovina nasledstva — PASS",
-    I9: "determinizem — bajtno identičen izpis pri ponovnem izračunu (--check)",
+    I1: "pini v6/P74 pack/P59/P56/PARCELS sha256; v6 runtime nasledstvena veja (v6 pin ALI version ≥ 7 + v7Delta droppedPairs 48)",
+    I2: "cross set re-izpeljava == P74 dokaz (bajtno; 48 · 96 · 1 per Blatt 48/48 · disjunktni 48/48 · dominantBlatt == pack · ties 0)",
+    I3: "drop == P74 optionA1 (48 kombinacij = 48 vrstic; rows 891; bases 879; lost 0; multi 2; cross 0; ambRows 4); A2 različen keep 29; BI drop izmerjen",
+    I4: "po C4 noben base ne izgubi vseh vrstic (0 praznih)",
+    I5: "ambiguous P55 prekalkulacija == pini; conf 0 sprememb (geografija nedeprava)",
+    I6: "meritve == pini; nespremenjene vrstice bajtno == v6; derived vrstice: ostala polja bajtno == v6",
+    I7: "dokaz ⊇ runtime bajtno",
+    I8: "determinizem --check bajtno",
   },
   statusLine:
-    "SANITIZED-DETERMINISTIC — PS geolokacija v6 (P73): C3 ISTI-BLATT SPLIT opcija A — za 135 dual base z vrsticami na ≥ 2 straneh istega Blatta z DISJUNKTNIMI lastniki (P72 dual pack: dvojni zapis iste serije v dveh blokih registra; lastniško soglasje 2026-10-15) so vrstice drugega bloka izpadle iz joina (drop 137 kombinacij = 138 vrstic; keep = min stran; P70 33 kolizij = podmnožica; vrstice ostanejo v registru brez geometrije; 0 base brez vrstic; nearDual 2080/2081 ostanejo); 939 vrstic (34.0 %) / 879 base / multi-page 50 / cross-Blatt 48; površine median 3.8941 ≈ 1 QK = 3.59665 m² (Δ +8.27 %, kontrola 4.5766); soslednost 652 parov / 51.8 m / 25.5×; zaupanje STRONG 174 / MEDIUM 629 / WEAK 136; per-Blatt dvoumnost: 50 base / 100 vrstic [~]; ambiguous prekalkuliran po P55 metodi, conf nespremenjen (geografija nedeprava); zgodovina arhivirana: C1 sekcije exclude 56 + C2 p93 reverzija 15 (v5, P71) → v4 1145/878/215/79 (P70) → v3 17 preslikav (P68) → v2 −43 S3/+26 Blatt I (P58); v5 arhiviran",
+    "P75 SPLIT v6: C4 cross-Blatt SPLIT opcija A1 — 48 cross base (P74 pack: vrstice na ≥ 2 sosednjih Blattih I·II 13 · II·III 16 · III·IV 1 · IV·V 18; 1 vrstica per Blatt 48/48; lastniki disjunktni 48/48; pageMap prekrivanja 48/48 — per-Blatt ponovitev numeracije): drop 48 kombinacij = 48 vrstic (keep = DOMINANT Blatt po Σ areaQK; ties 0; A2 različen keep pri 29 base; vrstice ostanejo v registru brez geometrije; lastniška odločitev 2026-10-15); 0 base brez vrstic; v7: 891 vrstic / 879 base / multi-page 2 / cross-Blatt 0; area median 3.8102 (Δ 5.94 %), sosledje 652 parov / 51.8 m (25.5×)",
   verdictSi:
-    "P73 (2026-10-15, v6): isti-Blatt SPLIT joina izveden (opcija A iz P72 dual pack; lastniško soglasje 2026-10-15; P70 »SPLIT = LASTNIKA« razširjen na cel register). Za 135 base z vrsticami na ≥ 2 straneh istega Blatta z disjunktnimi lastniki (dvojni zapis iste serije v dveh blokih registra — pageMap razponi + odmiki 40 × 44 · 15 × 49 · 5 × 29 · 1 × 13) so vrstice drugega bloka izpadle iz joina: drop 137 kombinacij = 138 vrstic (keep = min stran »glavni tek«; P70 33 kolizij = podmnožica: p89 × 15, p90 × 10, p92 × 8) — konec lažnih fuzij isti-Blatt po celotnem registru. Vrstice ostanejo v registru brez geometrije (removedRows), nearDual 2080/2081 ostanejo, noben base ne izgubi vseh vrstic (0 praznih); ambiguous prekalkuliran po P55 metodi (50 base / 100 vrstic; 135 True→False), conf nespremenjen (geografija nedeprava). Meritve: 939 vrstic (34.0 %), 879 base, 50 multi-page, 48 cross-Blatt, area median 3.8941 (Δ +8.27 %, kontrola 4.5766), soslednost 652 parov / 51.8 m / 25.5× (kontrola 1320.7 m). Zaupanje 174/629/136. Nespremanjene vrstice (brez group-derived) bajtno == v5; v5 arhiviran (zgodovina: C1 sekcije exclude 56 + C2 p93 reverzija 15, P71). Cross-Blatt SPLIT (P66 pack, 36 base) ostaja ločena lastniška odločitev.",
+    "Cross-Blatt SPLIT joina izveden (opcija A1 iz P74 packa; lastniška odločitev 2026-10-15): za 48 base z vrsticami na ≥ 2 sosednjih Blattih z disjunktnimi lastniki (ista številka pod dvema Blattoma = 2 realni parceli — numeracija per Blatt se ponovi; P56 pageMap prekrivanja 48/48) je vrstica ne-dominantnega Blatta izpadla iz joina (48 kombinacij = 48 vrstic; keep = DOMINANT Blatt po Σ areaQK; ties 0; A2 bi pri 29 base obdržala drugo vrstico) — konec lažnih fuzij čez Blatte po celotnem registru; vrstice ostanejo v registru (removedRows), noben base ne izgubi vseh vrstic; ambiguous prekalkuliran po P55 metodi, conf nespremenjen (geografija nedeprava). V7: 891 vrstic (32.3 % izbire) / 879 base. Opcija B (per-Blatt instance + razdelitev geometrije) ostane vezana na georef Blattnih kart [~].",
   verdictEn:
-    "P73 (2026-10-15, v6): the same-Blatt SPLIT of the join executed (option A from the P72 dual pack; owner consent 2026-10-15; P70 \"SPLIT = OWNER\" extended to the whole register). For the 135 bases with rows on ≥ 2 pages of the same Blatt and disjoint owners across the pages (the dual entry of the same series in two register blocks — pageMap ranges + gaps 40 × 44 · 15 × 49 · 5 × 29 · 1 × 13) the second-block rows are dropped from the join: 137 combinations = 138 rows dropped (keep = the minimum 'main run' page; the P70 33 collisions are a subset: p89 × 15, p90 × 10, p92 × 8) — an end to same-Blatt false fusions across the whole register. The rows stay in the register without geometry (removedRows), near-duals 2080/2081 are kept, no base loses all rows (0 empty); ambiguous recomputed per the P55 method (50 bases / 100 rows; 135 True→False), conf unchanged (geography untouched). Measurements: 939 rows (34.0 %), 879 bases, 50 multi-page, 48 cross-Blatt, area median 3.8941 (Δ +8.27 %, control 4.5766), adjacency 652 pairs / 51.8 m / 25.5× (control 1,320.7 m). Confidence 174/629/136. Unchanged rows (non-derived fields) byte-identical to v5; v5 archived (history: C1 sections excluded 56 + C2 p93 reversion 15, P71). The cross-Blatt SPLIT (P66 pack, 36 bases) remains a separate owner decision.",
+    "Cross-Blatt SPLIT of the join executed (option A1 from the P74 pack; owner decision 2026-10-15): for the 48 bases with rows on ≥ 2 adjacent Blatts and disjoint owners across Blatts (the same number under two Blatts = 2 real parcels — per-Blatt numbering repeats; P56 pageMap overlaps 48/48), the non-dominant-Blatt row is dropped from the join (48 combinations = 48 rows; keep = the DOMINANT Blatt by Σ areaQK; no ties; A2 would keep the other row for 29 bases) — an end to cross-Blatt false fusions across the whole register; rows remain in the register (removedRows), no base loses all rows; ambiguous recomputed per the P55 method, conf unchanged (geography untouched). V7: 891 rows (32.3 % of the selection) / 879 bases. Option B (per-Blatt instances + geometry split) remains tied to the georeferencing of the Blatt maps [~].",
   next: [
-    "LASTNIŠKO: cross-Blatt SPLIT (P66 pack — 36 base, deleži [0.5,0.75)) — ločena odločitev od isti-Blatt SPLIT",
-    "LASTNIŠKO: per-Blatt instance sekcij (P60 moda B / PF protokol) — 56 vrstic čaka identiteto sekcij",
-    "opcija B (per-page instance za SPLIT) zahteva georef Blattnih kart (Franciscejski kataster I–V) — ločen podprojekt [~]",
-    "praznine brez registrskih strani: PF 1644–1655, 1673/1679, 1842–1860, 1904/1906 (modernVoid [~] — brez trditve o vzroku)",
-    "PF protokol povezava (lastniki pas-instanc)",
+    "LASTNIŠKO: opcija A2 (keep MIN Blatt — različen keep pri 29 base) ali B (per-Blatt instance + razdelitev geometrije; georef Blattnih kart [~]) — reverzija/dopolnitev C4 dokumentirana",
+    "LASTNIŠKO: per-Blatt instance sekcij (56 vrstic; P60 moda B / PF protokol)",
+    "praznine brez registrskih strani: PF 1644–1655, 1673/1679, 1842–1860, 1904/1906 (modernVoid [~])",
+    "operacijsko: GitHub Actions billing (#7)",
   ],
 };
 
@@ -5635,5 +5644,150 @@ export const CROSS_BLATT_P74: {
     "po izvedbi: konsistentnost z P66 paketom (17 ostajajočih base) in P72/P73 (nearDual 2080/2081 ostanejo isti-Blatt)",
     "razlaga 2 isti-hn base (161, 174) — deljena hiša ali branje (P72 vzorec: dokumentirano per base)",
     "operacijsko: GitHub Actions billing (#7); per-Blatt instance sekcij (56) zahteva georef Blattnih kart",
+  ],
+};
+
+// ——— P75 (issue #13): CROSS-BLATT SPLIT — OPCIJA A1 (v7). Izvedba C4 iz
+// P74 odločitvenega paketa (lastniška odločitev 2026-10-15; ukaz "nadaljuj"
+// po vzorcu soglasja P72→P73): za 48 cross base z vrsticami na ≥ 2
+// sosednjih Blattih z DISJUNKTNIMI lastniki (ista številka pod dvema
+// Blattoma = 2 realni parceli — per-Blatt ponovitev numeracije; P56
+// pageMap prekrivanja 48/48) je vrstica ne-dominantnega Blatta izpadla iz
+// joina. Vir: skripta scripts/p75_ps_v7_cross_split_a1.py (I1–I8, --check
+// bajtno PASS) → dokaz research/issue17/ps-parcels-geo-v7.json + runtime
+// src/data/atlas/ps-parcels-geo.json (version 7). P9: ohranjene vrstice
+// bajtno == v6; v6 arhiviran v dokazu; vrstice ostanejo v registru brez
+// geometrije.
+export const CROSS_SPLIT_A1_P75: {
+  version: number;
+  series: "PS";
+  task: string;
+  date: string;
+  principle: string;
+  status: ResearchStatus;
+  generatedBy: string;
+  inputs: { v6ev: string; crossPack: string; p59: string; p56: string; parcels: string };
+  rule: { cross: string; drop: string; keep: string; a2: string; register: string };
+  summary: {
+    crossBases: number;
+    droppedPairs: number;
+    droppedRows: number;
+    a2DifferentKeep: number;
+    before: { rows: number; bases: number; multiPage: number; crossBlatt: number };
+    after: { rows: number; bases: number; multiPage: number; crossBlatt: number };
+    sharePct: number;
+    ambBases: number;
+    ambRows: number;
+    ambDerivedTrueToFalse: number;
+    series: { BI: number; S1: number; S2: number };
+    conf: { STRONG: number; MEDIUM: number; WEAK: number };
+    readConfBI: { STRONG: number; MEDIUM: number; WEAK: number };
+    removedByPage: Record<string, number>;
+    areaMedian: number;
+    areaDeltaPct: number;
+    consecPairs: number;
+    consecMedianM: number;
+    enrichmentX: number;
+  };
+  areaProof: { pairsWithArea: number; medianRatio: number; q25: number; q75: number; tightN: number; tightShare: number; shuffleMedian: number; shuffleTightShare: number; historicalQkM2: number; deltaPct: number };
+  spatialProof: { consecPairs: number; medianM: number; q25M: number; q75M: number; share150: number; shuffleMedianM: number; shuffleShare150: number; enrichmentX: number };
+  proof: string;
+  runtime: string;
+  script: string;
+  statusLine: string;
+  verdictSi: string;
+  verdictEn: string;
+  next: string[];
+} = {
+  version: 7,
+  series: "PS",
+  task: "P75 (issue #13) — PS-PARCELS-GEO v7: cross-Blatt SPLIT (opcija A1 — drop ne-dominant-Blatt vrstic za 48 cross base)",
+  date: "2026-10-15",
+  principle:
+    "samo odstranjevanje dokumentiranih lažnih fuzij (ista številka pod dvema sosednjima Blattoma = 2 realni parceli; per-Blatt numeracija); noben nov podatek; cross set derivat determinističnih lastnosti (strani × Blatt × lastniki × areaQK) iz committed dokazov",
+  status: "EXECUTED",
+  generatedBy:
+    "scripts/p75_ps_v7_cross_split_a1.py (deterministično, brez AI ob delovanju, FAIL ob padu I1–I8; --check bajtno PASS; 5× sha256 pini vhodov)",
+  inputs: {
+    v6ev: "de13f10bee5f7b6f21a389997e470214760f04b7f384f1236c7d6215feacfe18",
+    crossPack: "0779bb9a3ff0f1741c7104e5350be8963030b2b15fe381c3dbc023840bc720e7",
+    p59: "650f13dccab1da70a60d04c41ce9f7887ca94eafea8a0a7927c104ca899b76f3",
+    p56: "2fddc76fb94b69fed55170220fa8dfa3ace4a9466043d264b8b8df788e78a50c",
+    parcels: "fee91fca736348f40ef11d38b7a5b51d51656a9768cda648f4d737029bb3941f",
+  },
+  rule: {
+    cross: "base z vrsticami na ≥ 2 RAZLIČNIH sosednjih Blattih (P74 pack; lastniki med Blatti DISJUNKTNI 48/48; 1 vrstica per Blatt 48/48) — ista številka pod dvema Blattoma = 2 realni parceli (per-Blatt ponovitev numeracije; P56 pageMap prekrivanja 48/48)",
+    drop: "drop (page, base) kombinacij ne-dominantnega Blatta — 48 kombinacij = 48 vrstic (P74 optionA.keepBlatt/keepPage)",
+    keep: "keep = DOMINANT Blatt po Σ areaQK (ties 0; P66 'dominantShare' okvir)",
+    a2: "opcija A2 (keep MIN Blatt) bi pri 29 base obdržala drugo vrstico; opcija B (per-Blatt instance + razdelitev geometrije) zahteva georef Blattnih kart [~]",
+    register: "vrstice ostanejo v REGISTRU (dokaz removedRows 48), izpadajo iz runtime joina (brez geometrije); 0 base ne izgubi vseh vrstic",
+  },
+  summary: {
+    crossBases: 48,
+    droppedPairs: 48,
+    droppedRows: 48,
+    a2DifferentKeep: 29,
+    before: { rows: 939, bases: 879, multiPage: 50, crossBlatt: 48 },
+    after: { rows: 891, bases: 879, multiPage: 2, crossBlatt: 0 },
+    sharePct: 32.3,
+    ambBases: 2,
+    ambRows: 4,
+    ambDerivedTrueToFalse: 48,
+    series: { BI: 26, S1: 803, S2: 62 },
+    conf: { STRONG: 172, MEDIUM: 588, WEAK: 131 },
+    readConfBI: { STRONG: 3, MEDIUM: 14, WEAK: 9 },
+    removedByPage: {
+      "11": 8,
+      "61": 5,
+      "64": 12,
+      "94": 4,
+      "96": 1,
+      "110": 5,
+      "125": 9,
+      "133": 1,
+      "135": 3,
+    },
+    areaMedian: 3.8102,
+    areaDeltaPct: 5.94,
+    consecPairs: 652,
+    consecMedianM: 51.8,
+    enrichmentX: 25.5,
+  },
+  areaProof: {
+    pairsWithArea: 871,
+    medianRatio: 3.8102,
+    q25: 2.798,
+    q75: 7.0499,
+    tightN: 183,
+    tightShare: 0.2101,
+    shuffleMedian: 4.1435,
+    shuffleTightShare: 0.0586,
+    historicalQkM2: 3.59665,
+    deltaPct: 5.94,
+  },
+  spatialProof: {
+    consecPairs: 652,
+    medianM: 51.8,
+    q25M: 33.0,
+    q75M: 87.8,
+    share150: 0.9049,
+    shuffleMedianM: 1320.7,
+    shuffleShare150: 0.0171,
+    enrichmentX: 25.5,
+  },
+  proof: "research/issue17/ps-parcels-geo-v7.json (corrections C4 z odločitvijo + evidence + droppedRows 48 + removedRows 48; inputs pini; invarianti I1–I8; rowsEvidence 891)",
+  runtime: "src/data/atlas/ps-parcels-geo.json (version 7; v5Delta + v6Delta + v7Delta = zgodovina nasledstva)",
+  script: "scripts/p75_ps_v7_cross_split_a1.py (--check bajtno PASS; veriga p60–p74 PASS; pini v6 de13f10b…, P74 pack 0779bb9a…, P59 650f13dc…, P56 2fddc76f…, PARCELS fee91fca…)",
+  statusLine:
+    "P75 SPLIT v6: C4 cross-Blatt SPLIT opcija A1 — 48 cross base (P74 pack: vrstice na ≥ 2 sosednjih Blattih I·II 13 · II·III 16 · III·IV 1 · IV·V 18; 1 vrstica per Blatt 48/48; lastniki disjunktni 48/48; pageMap prekrivanja 48/48 — per-Blatt ponovitev numeracije): drop 48 kombinacij = 48 vrstic (keep = DOMINANT Blatt po Σ areaQK; ties 0; A2 različen keep pri 29 base; vrstice ostanejo v registru brez geometrije; lastniška odločitev 2026-10-15); 0 base brez vrstic; v7: 891 vrstic / 879 base / multi-page 2 / cross-Blatt 0; area median 3.8102 (Δ 5.94 %), sosledje 652 parov / 51.8 m (25.5×)",
+  verdictSi:
+    "Cross-Blatt SPLIT joina izveden (opcija A1 iz P74 packa; lastniška odločitev 2026-10-15): za 48 base z vrsticami na ≥ 2 sosednjih Blattih z disjunktnimi lastniki (ista številka pod dvema Blattoma = 2 realni parceli — numeracija per Blatt se ponovi; P56 pageMap prekrivanja 48/48) je vrstica ne-dominantnega Blatta izpadla iz joina (48 kombinacij = 48 vrstic; keep = DOMINANT Blatt po Σ areaQK; ties 0; A2 bi pri 29 base obdržala drugo vrstico) — konec lažnih fuzij čez Blatte po celotnem registru; vrstice ostanejo v registru (removedRows), noben base ne izgubi vseh vrstic; ambiguous prekalkuliran po P55 metodi, conf nespremenjen (geografija nedeprava). V7: 891 vrstic (32.3 % izbire) / 879 base. Opcija B (per-Blatt instance + razdelitev geometrije) ostane vezana na georef Blattnih kart [~].",
+  verdictEn:
+    "Cross-Blatt SPLIT of the join executed (option A1 from the P74 pack; owner decision 2026-10-15): for the 48 bases with rows on ≥ 2 adjacent Blatts and disjoint owners across Blatts (the same number under two Blatts = 2 real parcels — per-Blatt numbering repeats; P56 pageMap overlaps 48/48), the non-dominant-Blatt row is dropped from the join (48 combinations = 48 rows; keep = the DOMINANT Blatt by Σ areaQK; no ties; A2 would keep the other row for 29 bases) — an end to cross-Blatt false fusions across the whole register; rows remain in the register (removedRows), no base loses all rows; ambiguous recomputed per the P55 method, conf unchanged (geography untouched). V7: 891 rows (32.3 % of the selection) / 879 bases. Option B (per-Blatt instances + geometry split) remains tied to the georeferencing of the Blatt maps [~].",
+  next: [
+    "LASTNIŠKO: opcija A2 (keep MIN Blatt — različen keep pri 29 base) ali B (per-Blatt instance + razdelitev geometrije; georef Blattnih kart [~]) — reverzija/dopolnitev C4 dokumentirana",
+    "LASTNIŠKO: per-Blatt instance sekcij (56 vrstic; P60 moda B / PF protokol)",
+    "praznine brez registrskih strani: PF 1644–1655, 1673/1679, 1842–1860, 1904/1906 (modernVoid [~])",
+    "operacijsko: GitHub Actions billing (#7)",
   ],
 };

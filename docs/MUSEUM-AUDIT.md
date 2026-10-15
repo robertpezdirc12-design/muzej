@@ -3091,3 +3091,85 @@ odločitev o cross-Blatt SPLIT joinu (A1/A2/B) je LASTNIKA. Strojno
 berljivo: research/issue17/ps-cross-blatt-pack.json + runtime
 src/data/atlas/ps-cross-blatt-pack.json (skripta
 scripts/p74_ps_cross_blatt_pack.py, I1–I9, `--check` bajtno PASS).
+
+---
+
+## §52 — P75: cross-Blatt SPLIT opcija A1 — v7 (izvedba C4 iz P74 paketa) — 2026-10-15
+
+**Sprožilec:** lastniški ukaz »nadaljuj« 2026-10-15 po odločitvenem paketu
+P74 (§51) — vzorec P72→P73: **privzeta pot = opcija A1** (keep DOMINANT
+Blatt po Σ areaQK; ties 0) izvedena kot C4; deterministično, brez AI ob
+delovanju; **samo odstranjevanje dokumentiranih lažnih fuzij** — noben nov
+podatek ni izmišljen.
+
+### Pravilo C4 (izvedba)
+
+- univerzum: **48 cross base** iz P74 packa (vrstice na ≥ 2 sosednjih
+  Blattih; 96 vrstic; 1 vrstica per Blatt 48/48; lastniki med Blatti
+  disjunktni 48/48; pageMap prekrivanja 48/48 = per-Blatt ponovitev
+  numeracije — ista številka pod dvema Blattoma = **2 realni parceli**);
+- **drop = vrstica ne-dominantnega Blatta** (keep = DOMINANT Blatt po
+  Σ areaQK; ties 0) — **48 kombinacij (page, base) = 48 vrstic**; 0 base
+  brez vrstic (I4);
+- opcija A2 (keep MIN Blatt) bi pri **29 base** obdržala drugo vrstico;
+  opcija B (per-Blatt instance + razdelitev geometrije) zahteva georef
+  Blattnih kart [~] — ostajata reverzibilni/dokumentirani poti (reverzija/
+  dopolnitev C4 dokumentirana v `next`).
+
+### Merjeno (v7 = v6 − 48 dropov)
+
+- **before 939 / 879 / 50 / 48 → after 891 / 879 / 2 / 0** (vrstice /
+  base / multi-page / cross-Blatt) — 939 − 48 = 891 vrstic (32.3 % izbire);
+- dvoumnost 100 → **4 vrstic** (2 base; **48 derived True→False** po P55
+  metodi — dual base po dropu enostranska); conf **0 sprememb** (172/588/
+  131 — geografija nedeprava); serije S1 803 / S2 62 / BI 26; readConfBI
+  3/14/9 nespremenjen; biDrop 0;
+- **area median 3.8102** (Δ **+5.94 %**; 871 parov; tight 183 / 0.2101;
+  kontrola shuffle 4.1435 / 0.0586); sosledje **652 parov / 51.8 m /
+  25.5×** (nespremenjeno — dropi ne razbijejo soslednih parov);
+- removedByPage: {11: 8, 61: 5, 64: 12, 94: 4, 96: 1, 110: 5, 125: 9,
+  133: 1, 135: 3}.
+
+### Nasledstvo (P9 disciplina) in NIL-CLAIM
+
+- **ohranjene vrstice bajtno == v6** (drop samo odstranjuje; edina
+  sprememba derived `ambiguous` 48 True→False); vrstice ostanejo v
+  REGISTRU brez geometrije (removedRows 48 v dokazu); v6 ostaja arhiviran
+  (research/issue17/ps-parcels-geo-v6.json); v5Delta + v6Delta + v7Delta =
+  zgodovina nasledstva (1145 → 1077 → 939 → 891);
+- **NIL-CLAIM (QA pozitivna kontrola): v7 runtime ne vsebuje nobene od 48
+  drop kombinacij; cross set na v7 == PRAZNO** (multi-page 2, cross-Blatt 0).
+
+### Skripta, invarianti in QA
+
+- Skripta scripts/p75_ps_v7_cross_split_a1.py (I1–I8, `--check` bajtno
+  PASS; pini v6 dokaz de13f10b…, P74 pack 0779bb9a…, P59 650f13dc…,
+  P56 2fddc76f…, PARCELS fee91fca…; I1 vsebuje v6 runtime nasledstveno
+  vejo: v6 pin ALI version ≥ 7 + v7Delta droppedPairs 48).
+- Dokaz research/issue17/ps-parcels-geo-v7.json (corrections C4 z
+  odločitvijo + evidence + droppedRows 48 + removedRows 48; inputs 5
+  pini; rowsEvidence 891) + runtime src/data/atlas/ps-parcels-geo.json
+  (version 7; PAYLOAD/schema NESPREMENJENA).
+- Veriga skript: p60–p67 + p70–p74 `--check` PASS (p68 zamrznjen po C2 —
+  zgodovinsko; P74 skripta ima I1 nasledstveno vejo na v7).
+- QA 77 → **78/78** (nova qa-p75-cross-split: TS pini na
+  CROSS_SPLIT_A1_P75 + CELOVEN neodvisen preracun: (a) cross set
+  re-izpeljava iz P74 pack runtime bases[].rows × P59 pageAttribution ==
+  pack bases bajtno; (b) A1 drop izpeljava == pack.optionA.keepBlatt/
+  keepPage; (c) NIL-CLAIM 0 drop kombinacij v v7; (d) nasledstvo 939 − 48
+  = 891 / 879 / multi 2 / cross 0 / ambRows 4 / conf 172-588-131 / serije
+  803-62-26; (e) successionska veja version 7 + v7Delta; (f) area/spatial
+  preracun == pini; produkcija veja IZMERJENA iz v7 runtime datotek
+  (vzorec P73 lekcije); dve obliki repo/produkcija).
+- Prilagojene kontrole na v7 realnost (successionske veje, zgodovinski
+  pini ostanejo): qa-p72 (pack vrstice zamrznjene + nil-claim), qa-p73
+  (v7 veja + nil-claim C3), qa-p74 (cross set iz pack runtime rows —
+  v7 runtime cross == prazno), qa-p55/p58/p68/p70/p71 (izmerjene v7
+  vrednosti).
+
+**Poštenost:** C4 odstranjuje LE lažne fuzije čez Blatte — noben nov
+podatek ni izmišljen; vrstice ostanejo v registru brez geometrije; opcija
+A2/B ostajata dokumentirani poti. Strojno berljivo:
+research/issue17/ps-parcels-geo-v7.json + runtime
+src/data/atlas/ps-parcels-geo.json (skripta
+scripts/p75_ps_v7_cross_split_a1.py, I1–I8, `--check` bajtno PASS).
