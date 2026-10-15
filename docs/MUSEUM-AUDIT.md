@@ -3272,3 +3272,57 @@ vir [~] (44 vrstic brez band identitete); p83 dvojni blok 161–170 ×2 ostaja
 research/issue17/ps-sections-perblatt-pack.json + runtime
 src/data/atlas/ps-sections-perblatt-pack.json (skripta
 scripts/p76_ps_sections_perblatt_pack.py, I1–I9, `--check` bajtno PASS).
+
+## §54 — P77: PF protokol — VAČ inventarna forenzika (dokazani negativ) — 2026-10-15
+
+**Sprožilec:** owner ukaz »nadaljuj uredi readme pushaj in nadaljuj« — po README
+ureditvi (Task 45) naslednja ne-lastniška odprta točka ② iz P76: »PF protokol =
+manjkajoči vir« (vir identitete pas-instanc; P60 moda B — 44 [~] vrstic brez
+band identitete).
+
+**Vprašanje:** ali je protokol-slični vir (PF/Parzellen-Führer/Stavbni
+protokol) za k.o. N83 Griblje digitaliziran na VAČ?
+
+**Metoda (deterministična, brez AI):**
+- VAČ je bil posodobljen 2026-10-14 (verzija 2.21_5.5): `fieldSearchFindAjax`
+  vrača `totalItems 0` za VSE kriterije, `details?id=` javlja interno napako
+  tudi za znane id-je (227663, 373415) — **edini delujoč API je tektonika**
+  (`archivePlanSearchAjax`) in `pdfPageImage` (slike);
+- besedilni sprehod po tektoniki: root → 000 UPRAVA (653381) → 070 Posebni
+  upravni organi (653535) → 071 uprava/pravosodje (653582) → **SI AS 176
+  Franciscejski kataster za Kranjsko (1823–1869) (23253)** → N Novomeška
+  kresija (226589, 310 k.o. na 3 straneh) → **N83 Griblje, k.o. (227663)**;
+- N83 otroci: natanko 2 skupini — **grafični (227665)**: 5 listov A01–A05
+  (227666/227668/227670/227671/227673) · **spisovni (373412)**: 7 enot PG
+  (373413), PR (373414), PS (373415), PT (373416), PUA (373417), PV (373418),
+  PZ (373419) — skupaj **12 enot** == številu v README;
+- mapiranje `docid = uodid − 331635` verificirano z JPEG probe page=1 na vseh
+  7 spisovnih enotah (7/7 HTTP 200 + ff-d8 magic; PS/PG znana recepta
+  potrjena kot posebna primera istega odmika);
+- sosedski uodid prostor (373411, 373420–373424): 0/6 JPEG — razpon spisovnih
+  enot je točno 373413–373419, ni skrite enote.
+
+**Rezultat — DOKAZANI NEGATIV (I6):** med 12 enotami k.o. N83 na VAČ ni
+dodatnega protokola (PF/Parzellen-Führer/Stavbni protokol). Edini
+protokol-slični vir = **N083PT Seznam stavbnih parcel (373416)**, ki je ŽE v
+repu (PT: 105 prebranih vrstic = 84 hišnih + 21 parcelnih; audit §13;
+vir identitete hišnih številk).
+
+**Implikacija (P76 ②):** vir identitete pas-instanc NI na VAČ — potreben je
+fizični arhiv (Arhiv RS, SI AS 176 ali SI AS 52 Finančna direkcija 1825–1924)
+ali drugi fond. P76 opcije B1/B2 ostajata edini izvedljivi poti brez PF
+protokola; opcija A = status quo; izbira ostaja **LASTNIŠKA**.
+
+**Skripta in invarianti:** `scripts/p77_pf_vac_inventory.py` (I1–I8;
+`--check` bajtno PASS — stabilno jedro brez časovnih žigov/verzije VAČ) →
+dokaz `research/issue17/pf-vac-inventory.json` (PROVEN-NEGATIVE-INVENTORY).
+**QA ostaja 79/79** — VAČ inventar je zunanji odvisni vir (omrežje) in po
+P53/P57/P58 lekciji NE sme biti produkcija QA kontrola; dokaz je ponovljiv
+z `--check`. **v7 runtime join NESPREMENJEN** (sha256 4bb40370…; disciplina
+I9). Kartica NI dodana (ni produkcija vsebine — inventarni dokaz za
+raziskovalno linijo; strojno berljivo prek dokaza).
+
+**Poštenost:** dokazani negativ velja ZA VAČ STANJE 2026-10-15 (verzija
+2.21_5.5) — VAČ se je dan prej posodabljal, iskalni API je pokvarjen, zato je
+inventar pridobljen prek tektonike (avtoritativno drevo). Absenca na VAČ ne
+izključuje obstoja v fizičnem arhivu ali drugem fondu [~].

@@ -3993,3 +3993,25 @@ Work Log:
 Stage Summary:
 - README UREJEN: kronologija P40–P76 zdaj neprekinjena v ATLAS sekciji; P70/P71 bulleti celovita; NOVA "Zadnje stanje" sekcija (v7 + QA 79/79 + zrcaljenje + odprte odločitve) — prvi dostopnik lahko iz README bere trenutno stanje brez workloga.
 - Naslednja stopnja (P77): LASTNIŠKA odločitev o opciji sekcij (A status quo / B1 vse 56 z per-instanca ključem / B2 samo P60 band 12 / B3 georef [~]) — paket P76 MERI, NE odloča.
+
+---
+Task ID: 46 (P77 — PF protokol VAČ inventarna forenzika + README ureditev push)
+Agent: Z.ai Code (glavni)
+Task: Owner ukaz "nadaljuj uredi readme pushaj in nadaljuj" — ① README ureditev + push (Task 45 commita 4679c08 + 1346e99), ② P77: naslednja ne-lastniška odprta točka ② iz P76 (PF protokol = manjkajoči vir)
+
+Work Log:
+- README ureditev (Task 45): osirel P70 rep pripet na P70 bullet; P71 bulletu dodan standardni rep (skripta + dokaz v5 + kartica + QA 74/74); ## Varnost prestavljen na konec (prej prekinjal P63–P76 kronologijo); NOVA sekcija "Zadnje stanje raziskave" (v7 891/879, nasledstvo v1→v7, QA 79/79, zrcaljenje GitLab=vir resnice/GitHub=zrcalo, odpri lastniške odločitve P77+); 9 tipkav nespremanjen → nespremenjen; osirel "#" naslov odstranjen. Commita 4679c08 (readme) + 1346e99 (worklog), push GitLab → GitHub (obe 1. poskus PASS), dvojna verifikacija (GitLab API 1346e99c = GitHub ls-remote = lokalna; avtor Robert Pezdirc), Vercel / 200 (704 548 B nov deploy) + /api/qa 79/79.
+- P77 RAZISKAVA: VAČ je bil posodobljen 2026-10-14 (verzija 2.21_5.5) — fieldSearchFindAjax vrača totalItems 0 za VSE kriterije (shell + ajax + async poll 6×4 s), details?id= javlja interno napako tudi za znana id-ja 227663/373415; pdfPageImage DELOJE. Odkrit delujoč API: tektonika archivePlanSearchAjax (GET id=&page=; drevo jstree).
+- Tektonski sprehod (besedilno vođen, ne po ID-jih): root(id=1) → 000 UPRAVA (653381) → 070 Posebni upravni organi (653535) → 071 uprava/pravosodje (653582) → SI AS 176 Franciscejski kataster za Kranjsko 1823–1869 (23253) → N Novomeška kresija (226589; 310 k.o. na 3 straneh) → N83 Griblje, k.o. (227663).
+- INVENTAR N83: natanko 2 skupini — grafični (227665): A01 227666 / A02 227668 / A03 227670 / A04 227671 / A05 227673; spisovni (373412): PG 373413 / PR 373414 / PS 373415 / PT 373416 / PUA 373417 / PV 373418 / PZ 373419 = 12 enot == README številu.
+- Mapiranje docid = uodid − 331635 (PS 373415→41780 kontrola; PG 373413→41778 odkritje): JPEG probe page=1 na vseh 7 spisovnih enotah 7/7 PASS (HTTP 200 + ff-d8). Sosedski uodid prostor 373411 + 373420–373424: 0/6 JPEG (razpon točno 373413–373419; 373412 = grupno vozlišče spisovnih, brez slike).
+- DOKAZANI NEGATIV (I6): med 12 enotami k.o. N83 na VAČ NI dodatnega protokola (PF/Parzellen-Führer/Stavbni protokol); edini protokol-slični vir = PT Seznam stavbnih parcel (373416) — ŽE v repu (105 vrstic; audit §13). Fond ima še "Legenda in pregledne karte" (241775; legenda 8 listov + 6 preglednih zemljevidov — brez protokola).
+- IMPLIKACIJA: vir identitete pas-instanc NI na VAČ → fizični arhiv (SI AS 176 ali SI AS 52 Finančna direkcija 1825–1924) ali drugi fond = operativna lastniška akcija; P76 opcije B1/B2 ostajata edini izvedljivi poti brez PF protokola; opcija A = status quo; izbira LASTNIŠKA.
+- Skripta scripts/p77_pf_vac_inventory.py (deterministično, brez AI; I1–I8; --check bajtno PASS — stabilno jedro brez časovnih žigov/verzije; normalizacija dvojnih presledkov VAČ besedil) → dokaz research/issue17/pf-vac-inventory.json (PROVEN-NEGATIVE-INVENTORY; VAČ API status dokumentiran).
+- INTEGRACIJA: audit §54; README P77 bullet (za P76; vzorec kronologije) + "Zadnje stanje" ② posodobljena (P77 dokazani negativ + dokaz pot + fizični arhiv). Kartica NI dodana (ni produkcija vsebine — inventarni dokaz raziskovalne linije; strojno berljivo prek dokaza). QA ostaja 79/79 (VAČ = zunanji omrežni vir — ne sme biti produkcija QA kontrola, P53/P57/P58 lekcija; dokaz ponovljiv s --check).
+- Verifikacija: veriga p60–p67 + p70–p76 --check PASS + p77 --check PASS; /api/qa (dev) 79/79 ok; tsc --noEmit 0; ESLint 0; v7 runtime join NESPREMENJEN (sha256 4bb40370…; disciplina I9).
+
+Stage Summary:
+- P77 ZAKLJUČEN: PF protokol = DOKAZANI NEGATIV na VAČ (12 enot k.o. N83, tektonski sprehod, docid mapiranje +373413→41778, sosedski probe 0/6) — vir identitete pas-instanc zahteva fizični arhiv; dokaz research/issue17/pf-vac-inventory.json + skripta --check bajtno PASS.
+- README urejen in posodobljen (Task 45 + P77 bullet + stanje po P77); push GitLab (vir resnice) → GitHub (zrcalo → Vercel) z lastnikovo identiteto.
+- ⚠ OSTAJA LASTNIŠKA ODLOČITEV (P78+): ① opcija sekcij A/B1/B2/B3 iz P76 paketa (MERI, NE odloča); ② fizični arhiv za PF protokol (operativno — VAČ absenca dokazana); ③ žetoni (issue #6; VERCEL_TOKEN ⚠, GitLab PAT).

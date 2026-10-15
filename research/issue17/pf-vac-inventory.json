@@ -1,0 +1,268 @@
+{
+  "phase": "P77",
+  "title": "PF protokol: VAČ inventarna forenzika k.o. N83 Griblje — dokazani negativ",
+  "status": "PROVEN-NEGATIVE-INVENTORY",
+  "issuedAt": "2026-10-15T20:26:22+02:00",
+  "vac": {
+    "baseUrl": "https://vac.sjas.gov.si",
+    "versionObserved": "2.21_5.5",
+    "apiStatus": {
+      "archivePlanSearchAjax": "WORKING",
+      "fieldSearchFindAjax": "BROKEN (totalItems 0 za vse kriterije)",
+      "details": "BROKEN (interno napaka za znane id-je)",
+      "pdfPageImage": "WORKING (docid = uodid - 331635)"
+    }
+  },
+  "method": {
+    "navigation": "besedilni sprehod po tektoniki (archivePlanSearchAjax), ne po ID-jih",
+    "docidMapping": "docid = uodid -331635",
+    "probes": "pdfPageImage page=1, JPEG magic ff-d8"
+  },
+  "path": [
+    {
+      "needle": "000 UPRAVA",
+      "id": "653381",
+      "text": "000 UPRAVA",
+      "type": "10",
+      "expectedId": null,
+      "childrenCount": 10
+    },
+    {
+      "needle": "070 Posebni upravni organi in organizacije do 1945/1947",
+      "id": "653535",
+      "text": "070 Posebni  upravni organi in organizacije do 1945/1947",
+      "type": "10",
+      "expectedId": null,
+      "childrenCount": 9
+    },
+    {
+      "needle": "071 Posebni organi za upravo, pravosodje in notranje in zunanje zadeve do 1945/1947",
+      "id": "653582",
+      "text": "071 Posebni organi za upravo, pravosodje in notranje in zunanje zadeve do 1945/1947",
+      "type": "10",
+      "expectedId": null,
+      "childrenCount": 3
+    },
+    {
+      "needle": "SI AS 176 Franciscejski kataster za Kranjsko",
+      "id": "23253",
+      "text": "SI AS 176 Franciscejski kataster za Kranjsko (1823-1869)",
+      "type": "8",
+      "expectedId": "23253",
+      "childrenCount": 40
+    },
+    {
+      "needle": "N Novomeška kresija",
+      "id": "226589",
+      "text": "N Novomeška kresija",
+      "type": "5",
+      "expectedId": "226589",
+      "childrenCount": 4
+    },
+    {
+      "needle": "N83 Griblje, k.o.",
+      "id": "227663",
+      "text": "N83 Griblje, k.o.",
+      "type": "3",
+      "expectedId": "227663",
+      "childrenCount": 102
+    }
+  ],
+  "ko83Groups": [
+    {
+      "id": "227665",
+      "text": "grafični"
+    },
+    {
+      "id": "373412",
+      "text": "spisovni"
+    }
+  ],
+  "inventory": {
+    "graphic": [
+      {
+        "id": "227666",
+        "text": "N083A01 list A01"
+      },
+      {
+        "id": "227668",
+        "text": "N083A02 list A02"
+      },
+      {
+        "id": "227670",
+        "text": "N083A03 list A03"
+      },
+      {
+        "id": "227671",
+        "text": "N083A04 list A04"
+      },
+      {
+        "id": "227673",
+        "text": "N083A05 list A05"
+      }
+    ],
+    "spisovni": [
+      {
+        "id": "373413",
+        "text": "N083PG Skica"
+      },
+      {
+        "id": "373414",
+        "text": "N083PR Opis meje"
+      },
+      {
+        "id": "373415",
+        "text": "N083PS Seznam zemljiških parcel"
+      },
+      {
+        "id": "373416",
+        "text": "N083PT Seznam stavbnih parcel"
+      },
+      {
+        "id": "373417",
+        "text": "N083PUA Abecedni seznam lastnikov zemljišč"
+      },
+      {
+        "id": "373418",
+        "text": "N083PV Izkaz rabe zemljišč"
+      },
+      {
+        "id": "373419",
+        "text": "N083PZ Katastrski cenilni elaborat"
+      }
+    ],
+    "totalUnits": 12
+  },
+  "docidProbes": [
+    {
+      "uodid": 373413,
+      "docid": 41778,
+      "page": 1,
+      "http": "200",
+      "bytes": 70624,
+      "jpeg": true
+    },
+    {
+      "uodid": 373414,
+      "docid": 41779,
+      "page": 1,
+      "http": "200",
+      "bytes": 38329,
+      "jpeg": true
+    },
+    {
+      "uodid": 373415,
+      "docid": 41780,
+      "page": 1,
+      "http": "200",
+      "bytes": 39834,
+      "jpeg": true
+    },
+    {
+      "uodid": 373416,
+      "docid": 41781,
+      "page": 1,
+      "http": "200",
+      "bytes": 35910,
+      "jpeg": true
+    },
+    {
+      "uodid": 373417,
+      "docid": 41782,
+      "page": 1,
+      "http": "200",
+      "bytes": 36704,
+      "jpeg": true
+    },
+    {
+      "uodid": 373418,
+      "docid": 41783,
+      "page": 1,
+      "http": "200",
+      "bytes": 164963,
+      "jpeg": true
+    },
+    {
+      "uodid": 373419,
+      "docid": 41784,
+      "page": 1,
+      "http": "200",
+      "bytes": 52642,
+      "jpeg": true
+    }
+  ],
+  "adjacentUodidProbes": [
+    {
+      "uodid": 373411,
+      "docid": 41776,
+      "page": 1,
+      "http": "200",
+      "bytes": 38104,
+      "jpeg": false
+    },
+    {
+      "uodid": 373420,
+      "docid": 41785,
+      "page": 1,
+      "http": "200",
+      "bytes": 38104,
+      "jpeg": false
+    },
+    {
+      "uodid": 373421,
+      "docid": 41786,
+      "page": 1,
+      "http": "200",
+      "bytes": 38104,
+      "jpeg": false
+    },
+    {
+      "uodid": 373422,
+      "docid": 41787,
+      "page": 1,
+      "http": "200",
+      "bytes": 38104,
+      "jpeg": false
+    },
+    {
+      "uodid": 373423,
+      "docid": 41788,
+      "page": 1,
+      "http": "200",
+      "bytes": 38104,
+      "jpeg": false
+    },
+    {
+      "uodid": 373424,
+      "docid": 41789,
+      "page": 1,
+      "http": "200",
+      "bytes": 38104,
+      "jpeg": false
+    }
+  ],
+  "pfSearch": {
+    "tokens": [
+      "PF",
+      "Parzellen-Führer",
+      "Parzellenführer",
+      "Führer",
+      "Protokol",
+      "Protokoll"
+    ],
+    "hits": [],
+    "verdict": "DOKAZANI NEGATIV: med 12 enotami k.o. N83 na VAČ ni dodatnega protokola (PF/Parzellen-Führer/Stavbni protokol). Edini protokol-slični vir = N083PT Seznam stavbnih parcel (373416), ŽE v repu (PT 105 vrstic; audit §13)."
+  },
+  "implication": "Vir identitete pas-instanc (P76 ②, P60 moda B 44 [~] vrstic) NI na VAČ — potreben fizični arhiv (Arhiv RS, SI AS 176 ali SI AS 52 Finančna direkcija 1825–1924) ali drugi fond. P76 opcije B1/B2 ostaneta edini izvedljivi poti brez PF protokola; opcija A = status quo; izbira ostaja LASTNIŠKA.",
+  "invariants": {
+    "I1_path": true,
+    "I2_ko83_two_groups": true,
+    "I3_graphic_5": true,
+    "I4_spisovni_7": true,
+    "I5_total_12": true,
+    "I6_pf_absent": true,
+    "I7_docid_all_jpeg": true,
+    "I8_adjacent_no_jpeg": true
+  },
+  "invariantsPass": true
+}

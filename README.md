@@ -504,8 +504,10 @@ API (statični, brez runtime AI):
   `scripts/p75_ps_v7_cross_split_a1.py` (I1–I8, `--check` bajtno PASS; veriga p60–p74 PASS) + dokaz `research/issue17/ps-parcels-geo-v7.json` + runtime `src/data/atlas/ps-parcels-geo.json` (version 7) + kartica P75; QA 77 → **78/78** (nova qa-p75-cross-split: celoven neodvisen preracun + nil-claim + nasledstvo 939 − 48 = 891 + area/sosledje preracun; produkcija veja izmerjena iz v7 runtime).
 - **lokalne sekcije — per-Blatt instance odločitveni paket (P76, issue #13)** — odprta točka P70 ①/P71 C1 (vzorec P72/P74 — paket MERI, NE odloča; **v7 join nespremenjen**): **56 sekcij vrstic** (p83 13 · p84 12 · p85 14 · p86 14 · p88 3; vse **Blatt II** po P59) × **31 base** — identitetno **DISJUNKTNE od counterpartov** (lastniki **0/0** — sekcija×counterpar IN sekcija×sekcija; hišne številke **0 isti / 31 različni**) — dokazano na celotni množici, ne samo na P69 vzorcu; **counterpar v v7 31/31** (Blatt I 23: p10 1 · p11 5 · p35 14 · p40 3 / Blatt II 8: p61 8; lat/lng 31/31); evolucija C4 **13/31 cross** (8 obdržalo II, 5 I) / **18 single**; P56 pageMap ponovitev bandov **5/5** (p83 161–181 ⊆ p11 161–183 + p61 161–180; p85 641–660 == p35; p88 721–740 == p40); P60 moda B **8 base = 12/56 vrstic** z band identiteto, 44 [~] brez (PF protokol = manjkajoči vir); v3 forenzika: geoShared 56/56, ratio absurdni >4.3: **20 (max 134.6786)**, Σ areaQK **38517 QK**; opcije: **A** status quo 891/2/0/4 · **B1** vse 56 → 947/33/23/91 — **KRŠI C4 NIL-CLAIM z base-ključem (23 cross)** → obvezen **per-instanca ključ (base, stran)**: 0/2/4 · **B2** samo P60 band 12 → 903/10/6/24 (+ instance 0/2/4; 44 ostane [~]) · **B3** georef [~] neizvedljivo — **izbira LASTNIŠKA**;
   `scripts/p76_ps_sections_perblatt_pack.py` (I1–I9, `--check` bajtno PASS) + dokaz `research/issue17/ps-sections-perblatt-pack.json` + runtime `src/data/atlas/ps-sections-perblatt-pack.json` + kartica P76; QA 78 → **79/79** (nova qa-p76-sections-perblatt: celoven neodvisen preracun iz P69 sectionClass × v7 runtime × P59 × P60 × pack runtime; opcije re-izpeljane + instance ključ; repo dodaja dokaz == runtime bajtno + P56 dokaz pageMap == pini); v7 runtime join NESPREMENJEN (sha256 pin I9, 4bb40370…).
+- **PF protokol — VAČ inventarna forenzika, dokazani negativ (P77, issue #13)** — odprta točka P76 ② (vir identitete pas-instanc; MERI, NE odloča; **v7 join nespremenjen**): VAČ je bil posodobljen 2026-10-14 (verzija 2.21_5.5) — iskalni API pokvarjen (`fieldSearch` 0 zadetkov za vse kriterije, `details` interna napaka), **edini delujoč API = tektonika** (`archivePlanSearchAjax`) + `pdfPageImage`; besedilni sprehod po tektoniki (root → 000 UPRAVA → 070 → 071 → **SI AS 176 (23253)** → N Novomeška kresija (226589) → **N83 Griblje (227663)**): natanko **12 enot** (grafični A01–A05 + spisovni PG/PR/PS/PT/PUA/PV/PZ; 373413–373419) == številu v README; **mapiranje `docid = uodid − 331635`** verificirano 7/7 JPEG probe; sosedski uodid prostor (373411, 373420–373424) 0/6 JPEG — ni skrite enote; **DOKAZANI NEGATIV (I6): med 12 enotami NI dodatnega protokola (PF/Parzellen-Führer/Stavbni protokol)** — edini protokol-slični vir = PT Seznam stavbnih parcel (373416), ŽE v repu (105 vrstic); **implikacija: vir identitete pas-instanc NI na VAČ → fizični arhiv (SI AS 176 ali SI AS 52 Finančna direkcija) ali drugi fond — operativna lastniška akcija; P76 opcije B1/B2 ostajata edini izvedljivi poti brez PF protokola, izbira LASTNIŠKA**;
+  `scripts/p77_pf_vac_inventory.py` (I1–I8, `--check` bajtno PASS) + dokaz `research/issue17/pf-vac-inventory.json` (PROVEN-NEGATIVE-INVENTORY); QA ostaja **79/79** (VAČ = zunanji omrežni vir — ne sme biti produkcija QA kontrola, P53/P57/P58 lekcija; dokaz ponovljiv s `--check`); v7 runtime join NESPREMENJEN (sha256 4bb40370…).
 
-## Zadnje stanje raziskave (po P76 · 2026-10-15)
+## Zadnje stanje raziskave (po P77 · 2026-10-15)
 
 - **Runtime join**: `src/data/atlas/ps-parcels-geo.json` — **version 7**:
   **891 vrstic (32.3 %) / 879 base / multi 2 / cross 0 / ambRows 4**;
@@ -529,8 +531,9 @@ API (statični, brez runtime AI):
   ① opcija lokalnih sekcij iz P76 paketa — **A** status quo (v7, trenutna) /
   **B1** vse 56 vrstic (obvezen per-instanca ključ (base, stran)) /
   **B2** samo P60 band 12 / **B3** georef Blattnih kart [~];
-  ② PF protokol kot vir identitete pas-instanc (ni v repu —
-  P60/P61/P63–P68 next);
+  ② PF protokol kot vir identitete pas-instanc — **P77 DOKAZANI NEGATIV:
+  NI na VAČ** (12 enot k.o. N83; dokaz `research/issue17/pf-vac-inventory.json`)
+  → potreben fizični arhiv (SI AS 176 ali SI AS 52) ali drugi fond;
   ③ žetoni: VERCEL_TOKEN (samo rezervni ročni deploy) in GitLab PAT —
   veljavnost spremlja `token-health.yml` / issue #6.
 
