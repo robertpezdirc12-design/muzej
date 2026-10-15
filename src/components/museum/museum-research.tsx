@@ -85,6 +85,7 @@ import {
   ANOM_FORENSICS_P67,
   V3_RENUMBER_P68,
   PASS1_LAYERS_P69,
+  V4_REJOIN_P70,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -2464,8 +2465,70 @@ export function MuseumResearch() {
                 <p className="text-[11px] leading-relaxed text-foreground/80">
                   <span className="font-semibold">{t("Pošten status: ", "Honest status: ")}</span>
                   {t(
-                    "Join v3 NESPREMENJEN (disciplina P56–P68) — 77 renum + 98 rejoin = SPEC za P70 (izvedba = veriga re-run P59–P68 s posodobljenimi pini); odločitev o 56 sekijskih vrsticah = LASTNIKA. Strojno berljivo: research/issue17/ps-pass1-layers.json + runtime src/data/atlas/ps-pass1-layers.json (/api/atlas/ps-pass1-layers).",
-                    "The v3 join UNCHANGED (P56–P68 discipline) — the 77 renums + 98 rejoins = a SPEC for P70 (the realization = the re-run chain P59–P68 with updated pins); the decision on the 56 section rows = the OWNER's. Machine-readable: research/issue17/ps-pass1-layers.json + the runtime src/data/atlas/ps-pass1-layers.json (/api/atlas/ps-pass1-layers).",
+                    "Join v3 je bil NESPREMENJEN — 77 renum + 98 rejoin = SPEC izvedena v P70 (v4: 77 preslikav + 95 rejoin, 33 fuzij isti-Blatt dokumentiranih, SPLIT = LASTNIKA); odločitev o 56 sekijskih vrsticah = še vedno LASTNIKA. Strojno berljivo: research/issue17/ps-pass1-layers.json + runtime src/data/atlas/ps-pass1-layers.json (/api/atlas/ps-pass1-layers).",
+                    "The v3 join was UNCHANGED — the 77 renums + 98 rejoins = a SPEC realized in P70 (v4: 77 mappings + 95 rejoins, 33 same-Blatt fusions documented, SPLIT = the OWNER's); the decision on the 56 section rows = still the OWNER's. Machine-readable: research/issue17/ps-pass1-layers.json + the runtime src/data/atlas/ps-pass1-layers.json (/api/atlas/ps-pass1-layers).",
+                  )}
+                </p>
+              </div>
+            </div>
+
+            {/* P70 — izvedba P69 specifikacije: 77 renum + 95 rejoin (v4) */}
+            <div className="min-w-0 rounded-xl border bg-card p-6 shadow-sm">
+              <h3 className="flex flex-wrap items-center gap-2 font-display text-lg font-semibold">
+                <ScrollText className="size-4 text-primary" aria-hidden="true" />
+                {t("Izvedba P69 specifikacije — 77 renum + 95 rejoin (P70)", "The P69 specification realized — 77 renums + 95 rejoins (P70)")}
+                <StatusBadge status={V4_REJOIN_P70.status} />
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                {t(
+                  "P69 specifikacija IZVEDENA kot mehanski izvod (deterministično, brez AI ob delovanju): 77 preslikav join ključev + 95 vrstic re-joinanih na prave poligone iz starih P38 slojev — konec lažnih fuzij cone p73–93/p99.",
+                  "The P69 specification REALIZED as a mechanical derivation (deterministic, no AI at runtime): 77 join-key mappings + 95 rows re-joined to the right polygons from the old P38 layers — the end of the false fusions of the p73–93/p99 zone.",
+                )}
+              </p>
+              <div className="mt-4 grid gap-2 text-xs sm:grid-cols-2">
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("77 renum preslikav (bajtno po P69)", "77 renumber mappings (byte-equal to P69)")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "p74 +300 (4→1), p79 −300 (5→8), p80/p81 −100 (5→6), p89/p90 ±1000 (fantom-1 — 9 dolgi ascender ≠ vodilna 1), p92 −9 (+9 zamik), p99 +1000 (Blatt III zrcalno)",
+                      "p74 +300 (4→1), p79 −300 (5→8), p80/p81 −100 (5→6), p89/p90 ±1000 (phantom-1 — a long ascender 9 is not a leading 1), p92 −9 (+9 shift), p99 +1000 (Blatt III mirror)",
+                    )}
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("95 rejoin vrstic iz ps-raw slojev", "95 rejoined rows from the ps-raw layers")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "p74 14 · p76 18 · p77 2 · p78 10 · p79 2 · p80 3 · p81 3 · p82 16 · p89 9 · p90 2 · p92 1 · p93 12 · p99 3; sloji po P69 (pass1-pravilen p74/82/89/90/91, pass3→p1 p87); 3 kandidati p80 (1541–1543) brez vira [~] (p1 odrez blok 62–81)",
+                      "p74 14 · p76 18 · p77 2 · p78 10 · p79 2 · p80 3 · p81 3 · p82 16 · p89 9 · p90 2 · p92 1 · p93 12 · p99 3; layers per P69 (pass1-correct p74/82/89/90/91, pass3→p1 p87); 3 candidates p80 (1541–1543) without a source [~] (p1 clipped block 62–81)",
+                    )}
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("33 fuzij isti-Blatt (921–1000 ×2)", "33 same-Blatt fusions (921–1000 ×2)")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "register vsebuje 921–1000 v dveh blokih (p49–52 »glavni tek« + p89–92 »stolpec« — P69): preslikane + nove p89/p90/p92 instancess fuzirane na p49/p50/p52 poligone (različni lastniki!); SPLIT join odločitev = LASTNIKA",
+                      "the register holds 921–1000 in two blocks (p49–52 'main run' + p89–92 'column' — P69): the mapped + new p89/p90/p92 instances are fused onto the p49/p50/p52 polygons (different owners!); the SPLIT join decision = the OWNER's",
+                    )}
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("v4 meritve", "v4 measurements")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      `1145 vrstic / 878 base / multi-page 215 / cross-Blatt 79; izpadlih preslikanih brez poligona 29; area median 3.8843 (Δ +8.0 %, kontrola 4.2701); soslednost 654/52.0/27.6×; zaupanje 188/797/160; 56 sekijskih vrstic (p83–86, p88) nespremenjenih`,
+                      `1145 rows / 878 bases / multi-page 215 / cross-Blatt 79; 29 mapped rows dropped without polygons; area median 3.8843 (Δ +8.0 %, control 4.2701); adjacency 654/52.0/27.6×; confidence 188/797/160; 56 section rows (p83–86, p88) unchanged`,
+                    )}
+                  </p>
+                </div>
+              </div>
+              <div className="mt-3 rounded-lg border border-emerald-200 bg-emerald-50/60 p-3 dark:border-emerald-900/50 dark:bg-emerald-950/30">
+                <p className="text-[11px] leading-relaxed text-foreground/80">
+                  <span className="font-semibold">{t("Pošten status: ", "Honest status: ")}</span>
+                  {t(
+                    "Mehanski izvod P69 specifikacije — nič ni bilo ugibano: preslikave bajtno == P69, kandidati bajtno == P69 rejoinSpec, sloji dokumentirani, 33 fuzij dokumentiranih (SPLIT = LASTNIKA), 56 sekijskih vrstic nespremenjenih (exclude/per-Blatt = LASTNIKA), 3 kandidati p80 brez vira [~]. Strojno berljivo: research/issue17/ps-parcels-geo-v4.json + runtime src/data/atlas/ps-parcels-geo.json (version 4, /api/atlas/ps-parcels-geo).",
+                    "A mechanical derivation of the P69 specification — nothing was guessed: the mappings byte-equal P69, the candidates byte-equal the P69 rejoinSpec, the layers documented, 33 fusions documented (SPLIT = OWNER), 56 section rows unchanged (exclude/per-Blatt = OWNER), 3 candidates p80 without a source [~]. Machine-readable: research/issue17/ps-parcels-geo-v4.json + the runtime src/data/atlas/ps-parcels-geo.json (version 4, /api/atlas/ps-parcels-geo).",
                   )}
                 </p>
               </div>

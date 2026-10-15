@@ -2720,3 +2720,70 @@ vrsticah (exclude / per-Blatt instance) = LASTNIKA; p83 blok B ostaja
 worklogu (Task 35). Strojno berljivo: research/issue17/ps-pass1-layers.json
 + runtime src/data/atlas/ps-pass1-layers.json (skripta
 scripts/p69_ps_pass1_layers.py, I1–I6, --check bajtno PASS).
+
+## §47 — P70: izvedba P69 specifikacije (77 renum + 95 rejoin → v4) — 2026-10-15
+
+**Naloga:** P69 specifikacija (§46: 77 renum preslikav + 98 rejoin kandidatov)
+IZVEDENA kot mehanski izvod — deterministična skripta, brez AI ob delovanju.
+
+**Izvedba (`scripts/p70_ps_v4_rejoin.py`, invarianti I1–I9, `--check` bajtno
+PASS):**
+
+- **77 renum preslikav** bajtno == P69 renumSpec (p74 2× +300, p79 17× −300,
+  p80 8× −100, p81 2× −100, p89 9× −1000, p90 15× −1000, p92 9× −9,
+  p99 15× +1000); preslikani ključi ∈ v3 točno 77; **parzella ostaja
+  originalno branje** (sanacija le na join ključu — disciplina P68).
+- **95 rejoin vrstic** iz starih P38 slojev (kandidati == P69 rejoinSpec,
+  98, bajtno; − 3 brez vira): p74 14 · p76 18 · p77 2 · p78 10 · p79 2 ·
+  p80 3 · p81 3 · p82 16 · p89 9 · p90 2 · p92 1 · p93 12 · p99 3.
+  Sloji po strani (dokumentirani po P69 perPage artefaktih + P38 izbiri +
+  pass1-je-pravilen opombah): pass1-pravilen p74 (+300)/p82/p89/p90/p91,
+  p87 pass3→pass1, P38 izbira sicer. P55 normalizacija (areaQK = j·1600+k,
+  wohnort propagate), group_pos poligoni.
+- **3 kandidati brez vira [~]:** p80 1541–1543 — p80 p1 sloj = odrez blok
+  62–81 (identiteta [~], P69 ne klasificira); kandidatov se ne izmišljuje.
+- **29 preslikanih izpada** (base brez PF poligona — removedRows
+  dokumentirane po straneh v dokazu).
+- **33 fuzij isti-Blatt:** register vsebuje 921–1000 v dveh blokih
+  (p49–52 »glavni tek« + p89–92 »stolpec«; P69) — vse p89/p90/p92
+  preslikane + nove base instancess fuzirane na p49/p50/p52 poligone
+  (različni lastniki: npr. 922 = Dragasch Jane p49 × Lauffstätten Nikl
+  p89). SPLIT join odločitev = LASTNIKA.
+- **56 sekijskih vrstic (p83–86, p88) NESPREMENJENIH** — exclude ali
+  per-Blatt instance = lastniška odločitev (šteje kot lastniška točka #1
+  za naslednjo fazo).
+
+**Meritve v4:** 1145 vrstic (41.5 %) / 878 base / 215 multi-page /
+79 cross-Blatt; area median 3.8843 ≈ 1 Wiener QK 3.59665 m² (Δ +8.0 %,
+kontrola seed 42: 4.2701); soslednost 654 parov / 52.0 m / 27.6×
+(kontrola 1434.0 m); zaupanje STRONG 188 / MEDIUM 797 / WEAK 160;
+dvoumnost 215 base / 475 vrstic [~]; group-derived spremembe
+(ambiguous 93, conf 15) dokumentirane; nespremenjene vrstice bajtno == v3
+(959; lekcija P9).
+
+**Veriga re-run:** P59–P67 skripte --check PASS (neodvisne od v4);
+P69 klasifikacija **zamrznjena na v3 dokaz** (`ps-parcels-geo-v3.json`
+rowsEvidence — skripta preveri runtime verzijo in pada na arhiv, klasifikacija
+bajtno nespremenjena 166/33/77/56/77/98/117).
+
+**Integracija:** dokaz `research/issue17/ps-parcels-geo-v4.json` + runtime
+`src/data/atlas/ps-parcels-geo.json` (version 4) + API
+`/api/atlas/ps-parcels-geo` (komentar v4) + PS_GEO_P55 (v4: join/area/
+spatial/v4Delta/verdict) + V4_REJOIN_P70 (research.ts) + kartica P70
+(museum-research, za P69) + P69 kartica pošten status ("SPEC izvedena") +
+sources.ts N083PS P70 (Si+En) + README bullet.
+
+**QA 72 → 73/73** (nova qa-p70: pini 77/95/29/32 + neodvisen preracun
+na runtime v4 — 1145 vrstic, serije 26/1049/70, zaupanje 188/797/160,
+preslikave parzella == original, fuzije 32 iz vrstic, sekcije 56,
+area median 3.8843; dokaz == runtime bajtno; dve obliki po P53/P57/P58;
+qa-p55/p58 posodobljeni na v4 realnost, qa-p68 preracun na v4 runtime
+s parzello == originalno branje).
+
+**Poštenost:** v4 = mehanski izvod P69 specifikacije (nič ni bilo ugibano:
+preslikave bajtno == P69, kandidati bajtno == P69, sloji dokumentirani,
+kolizije merjene, brez vira [~] dokumentirane); odločitvi o 56 sekijskih
+vrsticah in SPLIT joinu = LASTNIKA. Strojno berljivo:
+research/issue17/ps-parcels-geo-v4.json + runtime
+src/data/atlas/ps-parcels-geo.json (skripta scripts/p70_ps_v4_rejoin.py,
+I1–I9, --check bajtno PASS).

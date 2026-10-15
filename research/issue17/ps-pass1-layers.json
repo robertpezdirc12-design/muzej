@@ -543,8 +543,10 @@
    "card": "fee91fca736348f40ef11d38b7a5b51d51656a9768cda648f4d737029bb3941f",
    "p59headers": "650f13dccab1da70a60d04c41ce9f7887ca94eafea8a0a7927c104ca899b76f3",
    "topology": "2fddc76fb94b69fed55170220fa8dfa3ace4a9466043d264b8b8df788e78a50c",
-   "v3": "4d26aefd4fe89ff47e6c55c3bd48df85ade860c88fb2c649816fd84d311aa033"
+   "v3": "10321bc06dada7b26592907111c03a4ce77fcdce4ba8cd4daf417cdc529aeeb7",
+   "v3RowsSource": "af7479e428182f381d3a2537896493d7cf86210fac7027221e22ac2aea218b53"
   },
+  "v3RowsSource": "research/issue17/ps-parcels-geo-v3.json (sha256 af7479e4…; klasifikacija zamrznjena na v3)",
   "v3Version": 3,
   "v3rows": 1079
  },

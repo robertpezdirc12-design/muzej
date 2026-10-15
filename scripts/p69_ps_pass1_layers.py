@@ -38,6 +38,7 @@ DATE = "2026-10-15"
 QK_M2 = 3.59665
 
 V3 = REPO / "src/data/atlas/ps-parcels-geo.json"
+V3_EV = REPO / "research/issue17/ps-parcels-geo-v3.json"  # arhiv v3 (P70 izvedba → runtime v4)
 CARD = REPO / "research/georef-n83/gurs/parcels-ko1544-merged.json"
 TOPO = REPO / "research/issue17/ps-register-topology.json"
 P59H = REPO / "research/issue17/ps-blatt-headers.json"
@@ -179,7 +180,8 @@ def main() -> int:
     check = "--check" in sys.argv
 
     # ---------- I1: vhodi ----------
-    inputs = {"v3": V3, "card": CARD, "topology": TOPO, "p59headers": P59H}
+    inputs = {"v3": V3, "v3RowsSource": V3_EV, "card": CARD,
+              "topology": TOPO, "p59headers": P59H}
     pins = {}
     for k, p in inputs.items():
         inv("I1", p.exists(), f"manjka {p}")
@@ -190,7 +192,12 @@ def main() -> int:
             old_pass_pins[f.name] = sha256(f)
 
     v3 = json.loads(V3.read_text(encoding="utf-8"))
-    rows = v3["rows"]
+    if v3.get("version") == 3:
+        rows = v3["rows"]
+    else:
+        # P70 je izvedel P69 specifikacijo (runtime = v4) — klasifikacija
+        # ostaje zamrznjena na arhivirani v3 rowsEvidence (bajtno enaka)
+        rows = json.loads(V3_EV.read_text(encoding="utf-8"))["rowsEvidence"]
     card, card_raw = load_card()
     pagemap, ann, topo = load_topo()
 
@@ -408,7 +415,10 @@ def main() -> int:
             "instruments": ["oči", "kontinuiteta", "karta", "annRecords P56", "Blatt stolpec", "hišne številke", "površinska razmerja"],
         },
         "inputs": {"pins": pins, "oldPassPins": old_pass_pins,
-                   "v3Version": v3.get("version"), "v3rows": len(rows)},
+                   "v3RowsSource": "research/issue17/ps-parcels-geo-v3.json "
+                                   f"(sha256 {sha256(V3_EV)[:8]}…; "
+                                   "klasifikacija zamrznjena na v3)",
+                   "v3Version": 3, "v3rows": len(rows)},
         "eyesVerdicts": {str(p): {k: EYES[p][k] for k in ("true", "blatt", "cls", "crossed", "note")}
                          for p in PAGES},
         "perPage": {str(p): per_page[p] for p in sorted(per_page)},

@@ -3682,6 +3682,7 @@ export const PS_GEO_P55: {
   pageSelection: { pages: number; rows: number; pass1: number; pass2: number; pass3Fallback: number; checksum: string; pass3Note: string };
   join: { matchedRows: number; matchedRowsS1S2: number; matchedRowsBI: number; matchedSharePct: number; psUniqueNumbers: number; psPositionedParcels: number; suffixGroups: number; seriesCounts: { BI: number; S1: number; S2: number }; confCounts: { STRONG: number; MEDIUM: number; WEAK: number }; readConfBI: { STRONG: number; MEDIUM: number; WEAK: number }; ambiguousBases: number; ambiguousRows: number };
   v3Delta: { renumbered: number; removedRows: number; removedReason: string; after: { rows: number; bases: number; multiPage: number; crossBlatt: number }; invariance: string; p67Deltas: string };
+  v4Delta: { renumbered: number; addedRows: number; removedRows: number; noSource: string[]; fuzijeIstiBlatt: number; after: { rows: number; bases: number; multiPage: number; crossBlatt: number }; invariance: string };
   v2Delta: { removedRows: number; removedPages: string; addedRows: number; addedSource: string; before: { matchedRows: number; confCounts: { STRONG: number; MEDIUM: number; WEAK: number }; areaMedian: number }; invariance: string };
   areaProof: { pairsWithArea: number; medianRatio: number; q25: number; q75: number; tightN: number; tightShare: number; shuffleMedian: number; shuffleTightShare: number; historicalQkM2: number; deltaPct: number };
   spatialProof: { consecPairs: number; medianM: number; q25M: number; q75M: number; share150: number; shuffleMedianM: number; shuffleShare150: number; enrichmentX: number };
@@ -3693,11 +3694,11 @@ export const PS_GEO_P55: {
   next: string[];
 } = {
   series: "PS",
-  version: 3,
+  version: 4,
   source:
-    "PS protokol N083PS (VAČ uodid 373415, docid 41780; 143 strani; branja research/issue17/ps-raw/ps-*.json, izbira strani PS-full-v2.json) + sodobne parcele k.o. 1544 GRIBLJE (research/georef-n83/gurs/parcels-ko1544-merged.json, 2117, P47 prenos SI.GURS.KN:PARCELE) + Blatt I str. 3–4 (P57 primarni vir, src/data/atlas/ps-register-start.json); v3 dokaz research/issue17/ps-parcels-geo-v3.json + runtime src/data/atlas/ps-parcels-geo.json (v2 dokaz arhiviran nespremenjen: research/issue17/ps-parcels-geo-v2.json)",
+    "PS protokol N083PS (VAČ uodid 373415, docid 41780; 143 strani; branja research/issue17/ps-raw/ps-*.json, izbira strani PS-full-v2.json) + sodobne parcele k.o. 1544 GRIBLJE (research/georef-n83/gurs/parcels-ko1544-merged.json, 2117, P47 prenos SI.GURS.KN:PARCELE) + Blatt I str. 3–4 (P57 primarni vir, src/data/atlas/ps-register-start.json); v4 dokaz research/issue17/ps-parcels-geo-v4.json + runtime src/data/atlas/ps-parcels-geo.json (v2/v3 dokaza arhivirana nespremenjena: research/issue17/ps-parcels-geo-v2.json, -v3.json)",
   status: "REVIEW",
-  generatedBy: "scripts/p68_ps_v3_renumber.py (v3); v2: scripts/p58_ps_parcels_geo_v2.py; v1: scripts/p55_ps_parcels_geo.py",
+  generatedBy: "scripts/p70_ps_v4_rejoin.py (v4); v3: scripts/p68_ps_v3_renumber.py; v2: scripts/p58_ps_parcels_geo_v2.py; v1: scripts/p55_ps_parcels_geo.py",
   pageSelection: {
     pages: 135,
     rows: 2762,
@@ -3709,18 +3710,27 @@ export const PS_GEO_P55: {
       "8 strani izbranih na pass3 (24/37/83/84/87/94/121/125): pass3 datoteke brez parsed.vrstice, NDJSON vsebina številčno nezanesljiva (7/8 prvih parcel divergira od pass1 in pass2, ki se strinjata) → uporabljen pass1; odmik od PS-full-v2 izbire dokumentiran",
   },
   join: {
-    matchedRows: 1079,
-    matchedRowsS1S2: 1053,
+    matchedRows: 1145,
+    matchedRowsS1S2: 1119,
     matchedRowsBI: 26,
-    matchedSharePct: 39.1,
+    matchedSharePct: 41.5,
     psUniqueNumbers: 2106,
-    psPositionedParcels: 798,
-    suffixGroups: 240,
-    seriesCounts: { BI: 26, S1: 983, S2: 70 },
-    confCounts: { STRONG: 174, MEDIUM: 749, WEAK: 156 },  // TOTAL (v2 konvencija; S1/S2 171/735/147)
+    psPositionedParcels: 878,
+    suffixGroups: 270,
+    seriesCounts: { BI: 26, S1: 1049, S2: 70 },
+    confCounts: { STRONG: 188, MEDIUM: 797, WEAK: 160 },  // TOTAL (v2 konvencija; S1/S2 del 171/…)
     readConfBI: { STRONG: 3, MEDIUM: 14, WEAK: 9 },
-    ambiguousBases: 199,
-    ambiguousRows: 472,
+    ambiguousBases: 215,
+    ambiguousRows: 475,
+  },
+  v4Delta: {
+    renumbered: 77,
+    addedRows: 95,
+    removedRows: 29,
+    noSource: ["p80 1541", "p80 1542", "p80 1543"],
+    fuzijeIstiBlatt: 33,
+    after: { rows: 1145, bases: 878, multiPage: 215, crossBlatt: 79 },
+    invariance: "nespremenjene vrstice bajtno == v3 (959; lekcija P9); group-derived polja (ambiguous 93, conf 15) prekalkulirana po P55 metodi; registrska branja ps-raw NESPREMENJENA — sanacija le na join ključu (base), parzella ostaja originalno branje; 56 sekijskih vrstic (p83–86, p88) nespremenjenih",
   },
   v3Delta: {
     renumbered: 17,
@@ -3739,26 +3749,26 @@ export const PS_GEO_P55: {
     invariance: "pozicije vrstic so deterministične PER BASE (ploščinsko uteženo središče sodobnih parcel številke) — odstranitev/dodatek vrstic ne spremeni nobene pozicije; množica pozicioniranih števil ostane 800 → soslednost in S1/S2 conf bajtno enaka v1 (P58 zgodovina — arhiv)",
   },
   areaProof: {
-    pairsWithArea: 1060,
-    medianRatio: 3.8512,
-    q25: 2.4103,
-    q75: 8.3459,
-    tightN: 187,
-    tightShare: 0.1764,
-    shuffleMedian: 4.2771,
-    shuffleTightShare: 0.0472,
+    pairsWithArea: 1124,
+    medianRatio: 3.8843,
+    q25: 2.5402,
+    q75: 7.942,
+    tightN: 201,
+    tightShare: 0.1788,
+    shuffleMedian: 4.2701,
+    shuffleTightShare: 0.0552,
     historicalQkM2: 3.59665,
-    deltaPct: 7.08,
+    deltaPct: 8.0,
   },
   spatialProof: {
-    consecPairs: 590,
-    medianM: 51.8,
-    q25M: 31.2,
-    q75M: 91.0,
-    share150: 0.8932,
-    shuffleMedianM: 1466.1,
-    shuffleShare150: 0.0226,
-    enrichmentX: 28.3,
+    consecPairs: 654,
+    medianM: 52.0,
+    q25M: 33.0,
+    q75M: 87.7,
+    share150: 0.9052,
+    shuffleMedianM: 1434.0,
+    shuffleShare150: 0.0182,
+    enrichmentX: 27.6,
   },
   furkovce: {
     wohnort: "Furkofze",
@@ -3768,27 +3778,28 @@ export const PS_GEO_P55: {
     note: "prvi imenovani prebivalci Fučkovci v arhivu (PS str. 125); parceli obstajata še danes (P47) [~] — v3 nespremenjeno",
   },
   invariants: {
-    I1: "RENUM 17 preslikav == P67 renumberSpec bajtno; kolizij 0 (novi base prosti ali samo strani drugačnega Blatta) — PASS",
-    I2: "pini: v2 dokaz ebb8f729…, P67 b3b64feb…, P59 95929a2e…, PARCELS fee91fca… — PASS",
-    I3: "17 preslikanih; 14 izpada (3× p78, 11× p87); p93 3× re-claim == group_pos == v2 poziciji p98 — PASS",
-    I4: "nespremenjene vrstice bajtno == v2 (1062); group-derived samo ambiguous 15 + conf 1 — PASS",
-    I5: "rows 1079, bases 798, multi 199, cross 98, ambRows 472; area 3.8512; sosledje 590/51.8 — PASS",
-    I6: "fuzije: 1903 III×2+IV×1 (delež III 0.7081 == P67), 1905 R2b profil, 1904 ratio 6.8052 izven pasu (prečrtana vrstica registra) — PASS",
-    I7: "odmiki od P67 aproksimacije dokumentirani (−4/−9/−9) — meritve bajtno == pini (merjeno, ne aproksimacija)",
-    I8: "dokaz rowsEvidence == runtime rows bajtno (1079) — PASS",
+    I1: "RENUM 77 preslikav == P69 renumSpec bajtno; kolizije == 33 fuzij (dva bloka registra 921–1000: p49–52 + p89–92; SPLIT = LASTNIKA) — PASS",
+    I2: "pini: v3 dokaz af7479e4…, P69 99962e24…, P59 650f13dc…, PARCELS fee91fca… — PASS",
+    I3: "98 kandidatov == P69 rejoinSpec; 95 dodanih iz ps-raw slojev; 3 brez vira [~] (p80 1541–1543; p1 odrez blok 62–81) — PASS",
+    I4: "NOVI P55 normalizacija (areaQK = j·1600+k, wohnort propagate); kolizije pokrite s 33 fuzijami — PASS",
+    I5: "rows 1145, bases 878, multi 215, cross 79, ambRows 475; area 3.8843; sosledje 654/52.0 — PASS (pini)",
+    I6: "nespremenjene vrstice bajtno == v3 (959); group-derived (ambiguous/conf) 43; preslikane 77; nove 95 — PASS",
+    I7: "sekcije 56 (p83–86, p88) nespremenjene — lastniška odločitev čaka — PASS",
+    I8: "dokaz rowsEvidence == runtime rows bajtno (1145) — PASS",
     I9: "determinizem — bajtno identičen izpis pri ponovnem izračunu (--check)",
   },
   statusLine:
-    "SANITIZED-DETERMINISTIC — PS geolokacija v3 (P68): 17 preslikav P67 specifikacije IZVEDENIH (p78 160x→150x, p93 160x→190x, p87 +1020; 0 kolizij); re-join po P55 metodi: 14 vrstic izpada (base brez PF poligona), p93 3× re-claim na 1903/1904/1905; 1079 vrstic / 798 base / multi-page 199 / cross-Blatt 98 (odmiki od P67 aproksimacije [~] dokumentirani); fuzije: 1903 = III×2+IV×1 (delež 0.7081), 1905 R2b, 1904 ratio 6.8052 izven pasu; površine median 3.8512 ≈ 1 QK = 3.59665 m² (Δ +7.08 %, kontrola 4.2771); soslednost 590 parov / 51.8 m / 28.3×; zaupanje STRONG 174 / MEDIUM 749 / WEAK 156; per-Blatt dvoumnost na v3: 199 base / 472 vrstic [~]; v2 arhiviran; SPLIT join = LASTNIKA (P69)",
+    "SANITIZED-DETERMINISTIC — PS geolokacija v4 (P70): izvedba P69 specifikacije — 77 renum preslikav (bajtno po P69 očesni forenziki; p74 +300, p79 −300, p80/p81 −100, p89/p90 ±1000, p92 −9, p99 +1000) + 95 rejoin vrstic iz starih P38 slojev (P55 metoda; p74 14 · p76 18 · p77 2 · p78 10 · p79 2 · p80 3 · p81 3 · p82 16 · p89 9 · p90 2 · p92 1 · p93 12 · p99 3; 3 brez vira [~]); 33 fuzij isti-Blatt (dva bloka registra 921–1000: p49–52 + p89–92; SPLIT = LASTNIKA); 1145 vrstic / 878 base / multi-page 215 / cross-Blatt 79; površine median 3.8843 ≈ 1 QK = 3.59665 m² (Δ +8.0 %, kontrola 4.2701); soslednost 654 parov / 52.0 m / 27.6×; zaupanje STRONG 188 / MEDIUM 797 / WEAK 160; per-Blatt dvoumnost: 215 base / 475 vrstic [~]; 56 sekijskih vrstic (p83–86, p88) nespremenjenih — lastniška odločitev čaka; v3 arhiviran",
   verdictSi:
-    "P68 (2026-10-14, v3): sanacija številčenja IZVEDENA kot mehanski izvod P67 forenzične specifikacije (dvojna Kurrent zamenjava: p78 5→6, p93 9→6/9→0, p87 −1020). 17 preslikav s 0 kolizijami; re-join po P55 metodi: 14 vrstic izpada (base brez PF poligona — kartni priči P67), p93 3 vrstice re-claimajo poligone 1903/1904/1905 (jugozahodna lokacija; 1903/1905 delita poziciji s p98 instancami III). Skok II·IV IZGINE iz joina (lažni fuziji 1603/1604 razpadeta); čez-Blatt lažni pari 661/671 razpadejo (Blatt I instanci ostanejo čisti). Meritve: 1079 vrstic (39.1 %), 798 base, 199 multi-page, 98 cross-Blatt (blattDist I·II 31 / II·III 46 / III·IV 3 / IV·V 18), area median 3.8512 (Δ +7.08 %, kontrola seed 42: 4.2771), soslednost 590 parov / 51.8 m / 28.3× (kontrola 1466.1 m). Zaupanje 174/749/156. Odmiki od P67 aproksimacije (802/208/107) so izračunane vrednosti, ne napake. Nespremenjene vrstice bajtno == v2; registrska branja nespremenjena; P58 zgodovina (−43 S3 / +26 Blatt I) v v2Delta arhivu. SPLIT join odločitev ostaja LASTNIKA (P69); per-Blatt instanca 1903/1905 (III vs IV) ostane fuzija v v3 [~].",
+    "P70 (2026-10-15, v4): izvedba P69 specifikacije kot mehanski izvod (deterministično, brez AI ob delovanju). 77 renum preslikav (bajtno po P69; konec lažnih fuzij: p74 1121–1140 → 1421–1440 (4→1 artefakt), p76 1161–1180 → 1461–1480, p79 182x → 152x (5→8), p80/p81 16xx → 15xx (5→6), p89/p90 19xx → 9xx (fantom-1 ±1000 — 9 dolgi ascender ≠ vodilna 1), p92 +9 zamik, p99 92x → 192x (Blatt III)) + 95 rejoin vrstic iz starih P38 slojev (ključi po korekciji, P55 normalizacija, group_pos poligoni; 3 kandidati p80 1541–1543 brez vira — p1 odrez blok 62–81, identiteta [~]). 33 fuzij isti-Blatt: register vsebuje 921–1000 v dveh blokih (p49–52 »glavni tek« + p89–92 »stolpec«) — SPLIT = LASTNIKA. Meritve: 1145 vrstic (41.5 %), 878 base, 215 multi-page, 79 cross-Blatt, area median 3.8843 (Δ +8.0 %, kontrola seed 42: 4.2701), soslednost 654 parov / 52.0 m / 27.6× (kontrola 1434.0 m). Zaupanje 188/797/160. 56 sekijskih vrstic (p83–86, p88) nespremenjenih — exclude ali per-Blatt instance = lastniška odločitev. Nespremenjene vrstice bajtno == v3; registrska branja nespremanjena; v3 arhiviran.",
   verdictEn:
-    "P68 (2026-10-14, v3): the renumbering sanitation REALIZED as a mechanical derivation of the P67 forensic specification (the double Kurrent substitution: p78 5→6, p93 9→6/9→0, p87 −1020). 17 mappings with 0 collisions; re-join by the P55 method: 14 rows dropped (base without a PF polygon — the P67 map witnesses), p93 3 rows re-claim the 1903/1904/1905 polygons (south-west location; 1903/1905 share positions with the p98 III instances). The II·IV skip DISSOLVES from the join (the false 1603/1604 fusions collapse); the cross-Blatt false pairs 661/671 collapse (the Blatt I instances stay clean). Measurements: 1079 rows (39.1 %), 798 bases, 199 multi-page, 98 cross-Blatt (blattDist I·II 31 / II·III 46 / III·IV 3 / IV·V 18), area median 3.8512 (Δ +7.08 %, control seed 42: 4.2771), adjacency 590 pairs / 51.8 m / 28.3× (control 1466.1 m). Confidence 174/749/156. Deviations from the P67 approximation (802/208/107) are computed values, not errors. Unchanged rows byte-identical to v2; register reads unchanged; the P58 history (−43 S3 / +26 Blatt I) archived in v2Delta. The SPLIT join decision remains the OWNER's (P69); the per-Blatt instances 1903/1905 (III vs IV) remain fused in v3 [~].",
+    "P70 (2026-10-15, v4): the P69 specification realized as a mechanical derivation (deterministic, no AI at runtime). 77 renumber mappings (byte-equal to P69; end of the false fusions: p74 1121–1140 → 1421–1440 (4→1 artifact), p76 1161–1180 → 1461–1480, p79 182x → 152x (5→8), p80/p81 16xx → 15xx (5→6), p89/p90 19xx → 9xx (phantom-1 ±1000 — a long ascender 9 is not a leading 1), p92 +9 shift, p99 92x → 192x (Blatt III)) + 95 rejoined rows from the old P38 layers (keys corrected, P55 normalization, group_pos polygons; 3 candidates p80 1541–1543 without a source — p1 clipped block 62–81, identity [~]). 33 same-Blatt fusions: the register holds 921–1000 in two blocks (p49–52 'main run' + p89–92 'column') — SPLIT = the OWNER's call. Measurements: 1145 rows (41.5 %), 878 bases, 215 multi-page, 79 cross-Blatt, area median 3.8843 (Δ +8.0 %, control seed 42: 4.2701), adjacency 654 pairs / 52.0 m / 27.6× (control 1434.0 m). Confidence 188/797/160. 56 section rows (p83–86, p88) unchanged — exclude or per-Blatt instances = the owner's decision. Unchanged rows byte-identical to v3; register reads unchanged; v3 archived.",
   next: [
-    "veriga re-run P59–P66 s posodobljenimi pini (atribucije/moda B/split nad v3)",
-    "SPLIT joina (lastniška odločitev — zdaj nad v3: 1903/1905 nastopata kot cross-Blatt, 1603/1604/661/671 izpadajo)",
-    "930: dokončna atribucija (PF protokol / lastniška odločitev)",
-    "sistemski pregled preostalih P38 pass1 slojev (p74/p76/p77 1121–1200 [~]; p88 721–740 [~])",
+    "LASTNIŠKI: 56 sekijskih vrstic (p83–86, p88) — exclude iz joina ali per-Blatt instance (P60 moda B / PF protokol)",
+    "LASTNIŠKI: SPLIT joina (33 fuzij isti-Blatt + cross-Blatt)",
+    "III/IV cona p94+ — sistemski pregled preostalih slojev (openQuestions #3 P69)",
+    "PF protokol povezava (lastniki pas-instanc)",
+    "veriga re-run P60–P61 s posodobljenimi pini (atribucije nad v4)",
   ],
 };
 
@@ -4901,5 +4912,156 @@ export const ANOM_FORENSICS_P67: {
     "sistemski pregled preostalih P38 pass1 slojev (p74/p76/p77 1121–1200 brez kartnih poligonov [~]; p88 721–740)",
     "930: dokončna atribucija (PF protokol / lastniška odločitev)",
     "lastniki atributiranih instanc ↔ PF protokol (ostaja iz P65)",
+  ],
+};
+
+
+// ——— P70: IZVEDBA P69 SPECIFIKACIJE — 77 renum preslikav + 95 rejoin (issue #13) ———
+
+export const V4_REJOIN_P70: {
+  version: number;
+  series: "PS";
+  source: string;
+  status: ResearchStatus;
+  generatedBy: string;
+  renumberSpec: { page: number; from: string; to: string; offset: number; crossed: boolean }[];
+  rejoinSources: Record<string, { sloj: string; offset: number }>;
+  addedByPage: Record<string, number>;
+  noSource: { page: number; base: string; reason: string }[];
+  collisions: { istiBlatt: { page: number; base: string; existingPage: number }[]; reason: string };
+  summary: {
+    rowsBefore: number;
+    rowsAfter: number;
+    bases: number;
+    multiPage: number;
+    crossBlatt: number;
+    renumbered: number;
+    added: number;
+    removed: number;
+    fuzije: number;
+    sectionsUnchanged: number;
+    areaMedian: number;
+    areaDeltaPct: number;
+    consecPairs: number;
+    consecMedianM: number;
+    conf: { STRONG: number; MEDIUM: number; WEAK: number };
+  };
+  statusLine: string;
+  verdictSi: string;
+  verdictEn: string;
+  next: string[];
+} = {
+  version: 1,
+  series: "PS",
+  source:
+    "research/issue17/ps-parcels-geo-v3.json (rowsEvidence 1079) × research/issue17/ps-pass1-layers.json (P69 renumSpec 77 + rejoinSpec 98) × research/issue17/ps-blatt-headers.json (pageAttribution P59) × research/issue17/ps-raw/ps-0NN{,-pass2}.json (P38 branja — vir 95 rejoin vrstic) × research/georef-n83/gurs/parcels-ko1544-merged.json (2117 poligonov); dokaz research/issue17/ps-parcels-geo-v4.json + runtime src/data/atlas/ps-parcels-geo.json (v3 arhiviran: research/issue17/ps-parcels-geo-v3.json)",
+  status: "REVIEW",
+  generatedBy:
+    "scripts/p70_ps_v4_rejoin.py (deterministično, brez AI ob delovanju, FAIL ob padu I1–I9; --check bajtno PASS; pini v3/P69/P59/PARCELS sha256)",
+  renumberSpec: [
+    { page: 74, from: "1128", to: "1428", offset: 300, crossed: false },
+    { page: 74, from: "1131", to: "1431", offset: 300, crossed: false },
+    { page: 79, from: "1821", to: "1521", offset: -300, crossed: false },
+    { page: 79, from: "1825", to: "1525", offset: -300, crossed: false },
+    { page: 89, from: "1921", to: "921", offset: -1000, crossed: false },
+    { page: 90, from: "1944", to: "944", offset: -1000, crossed: false },
+    { page: 92, from: "990", to: "981", offset: -9, crossed: true },
+    { page: 92, from: "992", to: "983", offset: -9, crossed: true },
+    { page: 99, from: "921", to: "1921", offset: 1000, crossed: false },
+    { page: 99, from: "932", to: "1932", offset: 1000, crossed: false },
+  ],
+  rejoinSources: {
+    "73": { sloj: "pass2", offset: 0 },
+    "74": { sloj: "pass1", offset: 300 },
+    "75": { sloj: "pass2", offset: 0 },
+    "76": { sloj: "pass2", offset: 300 },
+    "77": { sloj: "pass2", offset: 0 },
+    "78": { sloj: "pass2", offset: -100 },
+    "79": { sloj: "pass2", offset: -300 },
+    "80": { sloj: "pass2", offset: -100 },
+    "81": { sloj: "pass2", offset: -100 },
+    "82": { sloj: "pass1", offset: 0 },
+    "87": { sloj: "pass3", offset: 0 },
+    "89": { sloj: "pass1", offset: 0 },
+    "90": { sloj: "pass1", offset: 0 },
+    "91": { sloj: "pass1", offset: 0 },
+    "92": { sloj: "pass2", offset: -9 },
+    "93": { sloj: "pass2", offset: 300 },
+    "99": { sloj: "pass2", offset: 1000 },
+  },
+  addedByPage: { "74": 14, "76": 18, "77": 2, "78": 10, "79": 2, "80": 3, "81": 3, "82": 16, "89": 9, "90": 2, "92": 1, "93": 12, "99": 3 },
+  noSource: [
+    { page: 80, base: "1541", reason: "sloj ne podaja vrstice (p1 odrez blok 62–81, identiteta [~])" },
+    { page: 80, base: "1542", reason: "sloj ne podaja vrstice (p1 odrez blok 62–81, identiteta [~])" },
+    { page: 80, base: "1543", reason: "sloj ne podaja vrstice (p1 odrez blok 62–81, identiteta [~])" },
+  ],
+  collisions: {
+    istiBlatt: [
+      { page: 89, base: "922", existingPage: 49 },
+      { page: 89, base: "923", existingPage: 49 },
+      { page: 89, base: "924", existingPage: 49 },
+      { page: 89, base: "925", existingPage: 49 },
+      { page: 89, base: "926", existingPage: 49 },
+      { page: 89, base: "927", existingPage: 49 },
+      { page: 89, base: "928", existingPage: 49 },
+      { page: 89, base: "929", existingPage: 49 },
+      { page: 89, base: "930", existingPage: 49 },
+      { page: 89, base: "931", existingPage: 49 },
+      { page: 89, base: "934", existingPage: 49 },
+      { page: 89, base: "936", existingPage: 49 },
+      { page: 89, base: "937", existingPage: 49 },
+      { page: 89, base: "938", existingPage: 49 },
+      { page: 89, base: "939", existingPage: 49 },
+      { page: 90, base: "942", existingPage: 50 },
+      { page: 90, base: "945", existingPage: 50 },
+      { page: 90, base: "946", existingPage: 50 },
+      { page: 90, base: "947", existingPage: 50 },
+      { page: 90, base: "949", existingPage: 50 },
+      { page: 90, base: "951", existingPage: 50 },
+      { page: 90, base: "952", existingPage: 50 },
+      { page: 90, base: "955", existingPage: 50 },
+      { page: 90, base: "959", existingPage: 50 },
+      { page: 90, base: "960", existingPage: 50 },
+      { page: 92, base: "982", existingPage: 52 },
+      { page: 92, base: "983", existingPage: 52 },
+      { page: 92, base: "984", existingPage: 52 },
+      { page: 92, base: "985", existingPage: 52 },
+      { page: 92, base: "986", existingPage: 52 },
+      { page: 92, base: "987", existingPage: 52 },
+      { page: 92, base: "988", existingPage: 52 },
+      { page: 92, base: "989", existingPage: 52 },
+    ],
+    reason:
+      "register vsebuje 921–1000 v dveh blokih (p49–52 »glavni tek« + p89–92 »stolpec«; P69) — 33 fuzij dokumentirane; SPLIT join odločitev = LASTNIKA",
+  },
+  summary: {
+    rowsBefore: 1079,
+    rowsAfter: 1145,
+    bases: 878,
+    multiPage: 215,
+    crossBlatt: 79,
+    renumbered: 77,
+    added: 95,
+    removed: 29,
+    fuzije: 33,
+    sectionsUnchanged: 56,
+    areaMedian: 3.8843,
+    areaDeltaPct: 8.0,
+    consecPairs: 654,
+    consecMedianM: 52.0,
+    conf: { STRONG: 188, MEDIUM: 797, WEAK: 160 },
+  },
+  statusLine:
+    "P70 IZVEDBA P69 SPECIFIKACIJE: 77 renum preslikav (bajtno po P69; p74 +300, p79 −300, p80/p81 −100, p89/p90 ±1000, p92 −9, p99 +1000) + 95 rejoin vrstic iz ps-raw slojev po P55 metodi (p74 14 · p76 18 · p77 2 · p78 10 · p79 2 · p80 3 · p81 3 · p82 16 · p89 9 · p90 2 · p92 1 · p93 12 · p99 3); 3 kandidati p80 (1541–1543) brez vira (p1 odrez blok 62–81, identiteta [~]); 33 fuzij isti-Blatt (dva bloka registra 921–1000: p49–52 + p89–92; SPLIT = LASTNIKA); izpadlih preslikanih brez poligona 29; v4: 1145 vrstic / 878 base / multi-page 215 / cross-Blatt 79; area median 3.8843 (Δ +8.0 %), sosledje 654 parov / 52.0 m (27.6×); 56 sekijskih vrstic (p83–86, p88) nespremenjenih — lastniška odločitev čaka",
+  verdictSi:
+    "P70: IZVEDBA P69 SPECIFIKACIJE (issue #13) — mehanski izvod, deterministično, brez AI ob delovanju. 77 renum preslikav (bajtno po P69 očesni forenziki) + 95 rejoin vrstic iz starih P38 slojev (ključi po korekciji, P55 normalizacija, group_pos poligoni). Konec lažnih fuzij: p74 1121–1140 → 1421–1440 (4→1 artefakt), p76 1161–1180 → 1461–1480, p79 182x → 152x (5→8), p80/p81 16xx → 15xx (5→6), p89/p90 19xx → 9xx (fantom-1 ±1000 — 9 dolgi ascender ≠ vodilna 1), p92 +9 zamik, p99 92x → 192x (Blatt III). 33 fuzij isti-Blatt (dva bloka registra 921–1000: p49–52 + p89–92 — P69 dokumentirano) — SPLIT = LASTNIKA. 56 sekijskih vrstic (p83–86, p88) nespremenjenih — exclude ali per-Blatt instance = lastniška odločitev. Veriga P59–P67 skript --check PASS (P69 klasifikacija zamrznjena na v3 dokaz).",
+  verdictEn:
+    "P70: THE P69 SPECIFICATION REALIZED (issue #13) — a mechanical derivation, deterministic, no AI at runtime. 77 renumber mappings (byte-equal to P69 ocular forensics) + 95 rejoined rows from the old P38 layers (keys corrected, P55 normalization, group_pos polygons). End of false fusions: p74 1121–1140 → 1421–1440 (4→1 artifact), p76 1161–1180 → 1461–1480, p79 182x → 152x (5→8), p80/p81 16xx → 15xx (5→6), p89/p90 19xx → 9xx (phantom-1 ±1000 — a long ascender 9 is not a leading 1), p92 +9 shift, p99 92x → 192x (Blatt III). 33 same-Blatt fusions (the register holds 921–1000 in two blocks: p49–52 'main run' + p89–92 'column') — SPLIT = OWNER's call. 56 section rows (p83–86, p88) unchanged — exclude or per-Blatt instances = the owner's decision. The P59–P67 script chain --check PASS (the P69 classification frozen to the v3 evidence).",
+  next: [
+    "LASTNIŠKI: 56 sekijskih vrstic (p83–86, p88) — exclude iz joina ali per-Blatt instance (P60 moda B / PF protokol)",
+    "LASTNIŠKI: SPLIT joina (33 fuzij isti-Blatt + cross-Blatt)",
+    "III/IV cona p94+ — sistemski pregled preostalih slojev (openQuestions #3 P69)",
+    "PF protokol povezava (lastniki pas-instanc)",
+    "veriga re-run P60–P61 s posodobljenimi pini (atribucije nad v4)",
   ],
 };
