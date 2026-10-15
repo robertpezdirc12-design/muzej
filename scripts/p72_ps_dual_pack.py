@@ -54,7 +54,8 @@
 #   I6 brez georef polj (lat, lng, areaModern, ratio) v izpisu
 #   I7 dokaz ⊇ runtime (bajtno podmnožica)
 #   I8 determinizem — --check bajtno identično
-#   I9 v5 runtime join NESPREMENJEN (sha256 src/data/atlas/ps-parcels-geo.json)
+#   I9 v5 runtime join NESPREMENJEN ob P72 (sha256 pin; po P73 disk
+#      nasledstvo — version ≥ 6 + v6Delta)
 import hashlib
 import json
 import os
@@ -141,10 +142,24 @@ def main():
     for path, pin, name in ((V4_EV, PIN_V4EV_SHA, "v4 dokaz"),
                             (V5_EV, PIN_V5EV_SHA, "v5 dokaz"),
                             (P59_EV, PIN_P59EV_SHA, "P59 dokaz"),
-                            (P56_EV, PIN_P56EV_SHA, "P56 dokaz"),
-                            (V5_RT, PIN_V5RT_SHA, "v5 runtime")):
+                            (P56_EV, PIN_P56EV_SHA, "P56 dokaz")):
         if sha256(path) != pin:
             fail(f"I1 sha256 {name} se je spremenil (drift)")
+    rt_sha = sha256(V5_RT)
+    if rt_sha == PIN_V5RT_SHA:
+        ok("I1 pini (4× sha256) + v5 runtime sha pin (v5)")
+    else:
+        rt_disk = json.load(open(V5_RT))
+        d6 = rt_disk.get("v6Delta") or {}
+        if not (rt_disk.get("version", 0) >= 6
+                and d6.get("droppedPairs") == 137
+                and d6.get("droppedRows") == 138):
+            fail(f"I1 v5 runtime drift ({rt_sha[:8]}…) brez deklariranega "
+                 f"nasledstva (version {rt_disk.get('version')})")
+        else:
+            ok("I1 pini (4× sha256) + v5 runtime nadgrajen na v"
+               f"{rt_disk.get('version')} po P73 (C3 isti-Blatt SPLIT "
+               "opcija A) — vhodne vrstice iz v5 dokaza (arhiv)")
     if len(rows) != EXPECTED_ROWS:
         fail(f"I1 rowsEvidence {len(rows)} ≠ {EXPECTED_ROWS}")
     bases_all = {r["base"] for r in rows}
@@ -426,7 +441,7 @@ def main():
         },
         "v5Sha256": sha256(V5_EV),
         "inputSha256": {"v4": sha256(V4_EV), "p59": sha256(P59_EV),
-                        "p56": sha256(P56_EV), "v5rt": sha256(V5_RT)},
+                        "p56": sha256(P56_EV), "v5rt": PIN_V5RT_SHA},
         "summary": {
             "dualBases": len(bases_out),
             "rowsSameBlatt": rows_ib,

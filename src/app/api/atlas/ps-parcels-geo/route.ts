@@ -27,7 +27,7 @@ export const dynamic = "force-static";
  *    3.8843 ≈ 1 Wiener QK 3.59665 m² (Δ +8.0 %); soslednost 654 parov /
  *    52.0 m / 27.6×; 56 sekijskih vrstic (p83–86, p88) nespremanjenih
  *    (exclude/per-Blatt = LASTNIKA); registrska branja (ps-raw) NESPREMENJENA.
- *  · P71 (v5, AKTUALNO): KOREKCIJE v4 — (C1) 56 sekijskih vrstic
+ *  · P71 (v5): KOREKCIJE v4 — (C1) 56 sekijskih vrstic
  *    (p83–86, p88) EXCLUDE iz joina (P69 sectionClass bajtno; dokazane
  *    lažne fuzije na Blatt I poligone; LASTNIŠKA odločitev: opcija exclude;
  *    vrstice ostanejo v registru brez geometrije; 0 poligonov ostane
@@ -44,15 +44,21 @@ export const dynamic = "force-static";
  *    135 dual base; P70 33 kolizij = podmnožica; opcija A predračun rows
  *    939) — v5 runtime NESPREMENJEN (dokaz research/issue17/
  *    ps-dual-occurrence-pack.json; odločitev LASTNIKA).
+ *  · P73 (v6, AKTUALNO): ISTI-BLATT SPLIT opcija A — 135 dual base
+ *    (P72 dual pack; lastniki disjunktni 135/135; P70 33 = podmnožica):
+ *    drop 137 kombinacij = 138 vrstic (drugi blok, keep = min stran)
+ *    → 939 vrstic / 879 base / multi 50 / cross 48; area median 3.8941
+ *    (Δ +8.27 %); sosledje 652/51.8 m (nespremenjeno); nearDual
+ *    2080/2081 ostanejo; v5 arhiviran v dokazu.
  *
- * Status: SANITIZED-DETERMINISTIC. SHEET_GEOREFS in dokazi P40–P70
- * nespremanjeni; v2/v3/v4 dokazi arhivirani (research/issue17/
- * ps-parcels-geo-v2.json, -v3.json, -v4.json).
+ * Status: SANITIZED-DETERMINISTIC. SHEET_GEOREFS in dokazi P40–P72
+ * nespremanjeni; v2/v3/v4/v5 dokazi arhivirani (research/issue17/
+ * ps-parcels-geo-v2.json, -v3.json, -v4.json, -v5.json).
  *
- * Dokaz v5: research/issue17/ps-parcels-geo-v5.json (izpis skripta
- * scripts/p71_ps_v5_sections_p93.py; invarianti I1–I9, `--check` =
- * determinizem; forenzika research/issue17/p93-forensics/).
- * Runtime: src/data/atlas/ps-parcels-geo.json (version 5).
+ * Dokaz v6: research/issue17/ps-parcels-geo-v6.json (izpis skripta
+ * scripts/p73_ps_v6_split_a.py; invarianti I1–I8, `--check` =
+ * determinizem; nasledstvo v5Delta + v6Delta v runtime).
+ * Runtime: src/data/atlas/ps-parcels-geo.json (version 6).
  */
 export async function GET() {
   return NextResponse.json(psParcelsGeo, {

@@ -598,23 +598,38 @@ def jdump_pretty(obj) -> str:
 def check():
     """I9: drugi preizračun bajtno identičen zapisanima dokumentoma."""
     ev1 = json.loads(V5_EV.read_text(encoding="utf-8"))
-    rt1 = json.loads(OUT_RUNTIME.read_text(encoding="utf-8"))
     ev1s = json.dumps(ev1, ensure_ascii=False, sort_keys=True)
-    rt1s = json.dumps(rt1, ensure_ascii=False, sort_keys=True)
     ev2, rt2 = compute_pair()
     if json.dumps(ev2, ensure_ascii=False, sort_keys=True) != ev1s:
         print("  ✗ I9 dokaz: drugi preizračun ≠ zapisano")
         return 1
-    if json.dumps(rt2, ensure_ascii=False, sort_keys=True) != rt1s:
-        print("  ✗ I9 runtime: drugi preizračun ≠ zapisano")
-        return 1
+    rt_disk = json.loads(OUT_RUNTIME.read_text(encoding="utf-8"))
+    if rt_disk.get("version") == 5:
+        if json.dumps(rt2, ensure_ascii=False, sort_keys=True) != \
+                json.dumps(rt_disk, ensure_ascii=False, sort_keys=True):
+            print("  ✗ I9 runtime: drugi preizračun ≠ zapisano")
+            return 1
+        print("  ✓ I9 determinizem: drugi preizračun bajtno == zapisano "
+              "(dokaz + runtime)")
+    else:
+        # runtime je napredoval (P73 v6) — dokaz ostaje zamrznjen arhiv
+        # (vsebina v5 runtime živi v dokazu); disk runtime mora deklarirati
+        # nasledstvo (version ≥ 6 + v6Delta z dokumentirano korekcijo C3)
+        d6 = rt_disk.get("v6Delta") or {}
+        if not (rt_disk.get("version", 0) >= 6
+                and d6.get("droppedPairs") == 137
+                and d6.get("droppedRows") == 138):
+            print("  ✗ I9 runtime nasledstvo ni deklarirano (version "
+                  f"{rt_disk.get('version')}, v6Delta {bool(d6)})")
+            return 1
+        print("  ✓ I9 determinizem: dokaz bajtno; runtime nadgrajen na v"
+              + str(rt_disk.get("version")) + " po P73 (C3 isti-Blatt "
+              "SPLIT opcija A) — v5 arhiviran v dokazu")
     if FAILURES:
         print(f"P71 --check: {len(FAILURES)} invariant(ov) PADLO")
         for f in FAILURES:
             print(f"  → {f}")
         return 1
-    print("  ✓ I9 determinizem: drugi preizračun bajtno == zapisano "
-          "(dokaz + runtime)")
     print("P71 --check: VSE INVARIANTE PASS (bajtno)")
     return 0
 

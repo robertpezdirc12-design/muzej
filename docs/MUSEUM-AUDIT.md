@@ -2938,3 +2938,84 @@ merjenimi posledicami; v5 runtime join NESPREMENJEN. Strojno berljivo:
 research/issue17/ps-dual-occurrence-pack.json + runtime
 src/data/atlas/ps-dual-occurrence-pack.json (skripta
 scripts/p72_ps_dual_pack.py, I1–I9, `--check` bajtno PASS).
+
+## §50 — P73: isti-Blatt SPLIT — opcija A (v6) — 2026-10-15
+
+**Sprožilec:** lastniška odločitev (soglasje 2026-10-15) po P72 dual pack —
+opcija A (exclude drugi blok po C1 vzorcu) izvedena kot korekcija C3.
+**Metoda:** deterministično, brez AI ob delovanju; drop samo odstranjuje
+(P9: ohranjene vrstice brez group-derived sprememb bajtno == v5; v5 arhiviran
+v dokazu — nasledstvo deklarirano z v5Delta + v6Delta).
+
+### Definicija (drop pravilo)
+
+- dual set = **135 base** iz P72 dual pack: base z ≥ 2 vrsticami na ≥ 2
+  straneh **ISTEGA Blatta**, množice lastnikov med straneh **DISJUNKTNE**
+  (274 vrstic; 2 tri-zapisni (95,100,101)/(105,106,121)).
+- drop = (page, base) kombinacije, kjer page ≠ min strani dual seta
+  (**drugi blok**); **keep = min stran** (»glavni tek«) — 137 kombinacij =
+  **138 vrstic** (1 kombinacija ima 2 vrstici: (119, 2037)).
+- vrstice ostanejo v REGISTRU (dokaz removedRows), izpadajo iz runtime
+  joina (brez geometrije); nearDual **2080/2081 ostanejo** (4 vrstice —
+  opcija A jih NE izpada).
+
+### Merjeno (v6)
+
+- **939 vrstic** (34.0 % izbire 2762) / **879 base** / multi-page
+  **184 → 50** / cross-Blatt **48** (nespremenjen);
+- serije **S1 847 / S2 66 / BI 26**; zaupanje **STRONG 174 / MEDIUM 629 /
+  WEAK 136** (conf 0 sprememb — geografija nedeprava);
+- dvoumnost **50 base / 100 vrstic** (ambiguous prekalkuliran po P55
+  metodi; **135 True→False** — dual base zdaj enostranske);
+- **P70 33 kolizij = PODMNOŽICA** dropa (drugi blok: p89 × 15, p90 × 10,
+  p92 × 8); **0 base brez vrstic** (lost 0);
+- removedByPage: {8: 1, 24: 2, 73: 3, 89: 15, 90: 10, 91: 11, 92: 8,
+  100: 14, 101: 16, 106: 2, 114: 3, 118: 18, 119: 18, 121: 12, 123: 1,
+  135: 4} = 138;
+- **areaProof**: 919 parov, median **3.8941** ≈ 1 Wiener QK 3.59665 m²
+  (Δ **+8.27 %**, kontrola seed 42 = 4.5766; tight 186 = 0.2024);
+- **spatialProof** NESPREMENJEN: 652 parov / 51.8 m / 25.5× (share150
+  0.9049).
+
+### Nasledstvena disciplina
+
+- v5 arhiviran nespremenjen (research/issue17/ps-parcels-geo-v5.json);
+  runtime nosi **v5Delta** (56/15/68, before 1145/878/215/79, after
+  1077/879/184/48) **+ v6Delta** (135/137/138, before 1077/879/184/48,
+  after 939/879/50/48) = zgodovina nasledstva;
+- veriga: P71/P72 skripti z nasledstvenima vejama (--check PASS; disk
+  runtime version ≥ 6 + v6Delta 137/138); P69 zamrznjen; P70/P71/P72
+  dokazi nespremenjeni (lekcija P9).
+
+### Skripta, invarianti in QA
+
+- Skripta scripts/p73_ps_v6_split_a.py (I1–I8, `--check` bajtno PASS;
+  pini v5 6c96210d…, P72 dual pack 0922a701…, P59 650f13dc…, P56
+  2fddc76f…, PARCELS fee91fca…; v5 runtime nasledstvena veja).
+- Dokaz research/issue17/ps-parcels-geo-v6.json (corrections C3 +
+  removedRows 138 + rowsEvidence 939) + runtime
+  src/data/atlas/ps-parcels-geo.json (version 6; I7 dokaz ⊇ runtime
+  bajtno).
+- QA 75 → **76/76** (nova qa-p73-v6-split: TS pini na SPLIT_OPTION_A_P73
+  + CELOVEN neodvisen preracun iz runtime datotek — dual set 135 iz dual
+  pack runtime vrstic × P59, drop 137 = 138 vrstic, nil-claim (0 drop
+  kombinacij v v6), vrstice 939, dual-base 1-stran 135/135, lost 0,
+  nearDual 2080/2081 = 4 vrstice, dvoumnost 50/100 z zastavicami,
+  P70 p89/90/92 = 0, conf 174/629/136, serije 847/66/26, area preracun
+  919/3.8941, sosledje 652; repo dodaja dokaz == runtime bajtno +
+  removedRows == drop set + v5 nasledstvo (1077 − 138 = 939, vrstni red
+  ohranjen, edina sprememba ambiguous 135 True→False); dve obliki).
+- Posodobljene kontrole na v6 realnost (dve obliki): qa-p55/p58 (pini v6
+  939/879/50/48, area 3.8941), qa-p70 (v6Delta nasledstvo), qa-p71
+  (v6Delta + v5Delta arhiv + nasledstvo ključev), qa-p72 (preracun dual
+  seta iz dual pack runtime vrstic + nil-claim; opcija A == izvedba
+  939/0/50/48), qa-p68 (nasledstvena veja; multi 50 v v6 veji) +
+  produkcijske veje qa-p56/p59/p60/p61/p65 (v6 pine: S1/S2 913, multi
+  50, R3 2, single-page 829 …).
+
+**Poštenost:** C3 odstranjuje LE lažne fuzije (dvojni zapis) — noben nov
+podatek ni izmišljen; vrstice ostanejo v registru brez geometrije;
+conf 0 sprememb (geografija nedeprava). Strojno berljivo:
+research/issue17/ps-parcels-geo-v6.json + runtime
+src/data/atlas/ps-parcels-geo.json (skripta
+scripts/p73_ps_v6_split_a.py, I1–I8, `--check` bajtno PASS).

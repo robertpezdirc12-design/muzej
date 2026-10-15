@@ -54,6 +54,7 @@ import {
   V4_REJOIN_P70,
   V5_SECTIONS_P93_P71,
   DUAL_OCCURRENCE_P72,
+  SPLIT_OPTION_A_P73,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -3294,27 +3295,27 @@ const p45bErrors: string[] = [];
       : p54Errors.join("; "),
   );
 
-  /* ── P55 (issue #13): geolokacija Grundparzellen — PS 1825 ↔ parcele KO 1544 (v5 @ P71) ── */
+  /* ── P55 (issue #13): geolokacija Grundparzellen — PS 1825 ↔ parcele KO 1544 (v6 @ P73) ── */
   const p55Errors: string[] = [];
   const p55 = PS_GEO_P55;
-  // 1) pinane vrednosti konstante (v5 @ P71: C1 sekcije exclude 56 + C2 p93 reverzija 15)
-  if (p55.version !== 5) p55Errors.push(`version ≠ 5 (${p55.version})`);
+  // 1) pinane vrednosti konstante (v6 @ P73: C3 isti-Blatt SPLIT opcija A — drop 137 = 138 vrstic)
+  if (p55.version !== 6) p55Errors.push(`version ≠ 6 (${p55.version})`);
   if (p55.pageSelection.pages !== 135 || p55.pageSelection.rows !== 2762)
     p55Errors.push(`izbira strani ${p55.pageSelection.pages}/${p55.pageSelection.rows} ≠ 135/2762`);
   if (p55.pageSelection.pass1 !== 58 || p55.pageSelection.pass2 !== 69 || p55.pageSelection.pass3Fallback !== 8)
     p55Errors.push("prehodi strani ≠ 58/69/8");
-  if (p55.join.matchedRows !== 1077 || p55.join.matchedRowsS1S2 !== 1051 || p55.join.matchedRowsBI !== 26)
-    p55Errors.push(`povezava ≠ 1077/1051/26 (${p55.join.matchedRows}/${p55.join.matchedRowsS1S2}/${p55.join.matchedRowsBI})`);
-  if (p55.join.matchedSharePct !== 39.0 || p55.join.suffixGroups !== 271 || p55.join.psPositionedParcels !== 879)
-    p55Errors.push("delež/skupine/parcele ≠ 39.0/271/879");
-  if (p55.join.seriesCounts.BI !== 26 || p55.join.seriesCounts.S1 !== 981 || p55.join.seriesCounts.S2 !== 70)
-    p55Errors.push(`serije ≠ 26/981/70`);
-  if (p55.join.confCounts.STRONG !== 183 || p55.join.confCounts.MEDIUM !== 745 || p55.join.confCounts.WEAK !== 149)
-    p55Errors.push(`zaupanje ≠ 183/745/149 (v5 TOTAL)`);
+  if (p55.join.matchedRows !== 939 || p55.join.matchedRowsS1S2 !== 913 || p55.join.matchedRowsBI !== 26)
+    p55Errors.push(`povezava ≠ 939/913/26 (${p55.join.matchedRows}/${p55.join.matchedRowsS1S2}/${p55.join.matchedRowsBI})`);
+  if (p55.join.matchedSharePct !== 34.0 || p55.join.suffixGroups !== 271 || p55.join.psPositionedParcels !== 879)
+    p55Errors.push("delež/skupine/parcele ≠ 34.0/271/879");
+  if (p55.join.seriesCounts.BI !== 26 || p55.join.seriesCounts.S1 !== 847 || p55.join.seriesCounts.S2 !== 66)
+    p55Errors.push(`serije ≠ 26/847/66`);
+  if (p55.join.confCounts.STRONG !== 174 || p55.join.confCounts.MEDIUM !== 629 || p55.join.confCounts.WEAK !== 136)
+    p55Errors.push(`zaupanje ≠ 174/629/136 (v6 TOTAL)`);
   if (p55.join.readConfBI.STRONG !== 3 || p55.join.readConfBI.MEDIUM !== 14 || p55.join.readConfBI.WEAK !== 9)
     p55Errors.push("readConf Blatt I ≠ 3/14/9");
-  if (p55.join.ambiguousBases !== 184 || p55.join.ambiguousRows !== 373)
-    p55Errors.push(`per-Blatt dvoumnost ≠ 184/373`);
+  if (p55.join.ambiguousBases !== 50 || p55.join.ambiguousRows !== 100)
+    p55Errors.push(`per-Blatt dvoumnost ≠ 50/100`);
   if (p55.v3Delta.renumbered !== 17 || p55.v3Delta.removedRows !== 14)
     p55Errors.push(`v3Delta ≠ 17/14 (${p55.v3Delta.renumbered}/${p55.v3Delta.removedRows})`);
   if (p55.v3Delta.after.rows !== 1079 || p55.v3Delta.after.bases !== 798
@@ -3327,20 +3328,28 @@ const p45bErrors: string[] = [];
     p55Errors.push("v5Delta.before ≠ 1145/878/215/79 (v4)");
   if (p55.v5Delta.after.rows !== 1077 || p55.v5Delta.after.bases !== 879
     || p55.v5Delta.after.multiPage !== 184 || p55.v5Delta.after.crossBlatt !== 48)
-    p55Errors.push("v5Delta.after ≠ 1077/879/184/48");
+    p55Errors.push("v5Delta.after ≠ 1077/879/184/48 (arhiv)");
+  if (p55.v6Delta.splitBases !== 135 || p55.v6Delta.droppedPairs !== 137 || p55.v6Delta.droppedRows !== 138)
+    p55Errors.push(`v6Delta ≠ 135/137/138 (${p55.v6Delta.splitBases}/${p55.v6Delta.droppedPairs}/${p55.v6Delta.droppedRows})`);
+  if (p55.v6Delta.before.rows !== 1077 || p55.v6Delta.before.bases !== 879
+    || p55.v6Delta.before.multiPage !== 184 || p55.v6Delta.before.crossBlatt !== 48)
+    p55Errors.push("v6Delta.before ≠ 1077/879/184/48 (v5)");
+  if (p55.v6Delta.after.rows !== 939 || p55.v6Delta.after.bases !== 879
+    || p55.v6Delta.after.multiPage !== 50 || p55.v6Delta.after.crossBlatt !== 48)
+    p55Errors.push(`v6Delta.after ≠ 939/879/50/48 (${p55.v6Delta.after.rows}/${p55.v6Delta.after.bases}/${p55.v6Delta.after.multiPage}/${p55.v6Delta.after.crossBlatt})`);
   if (p55.v2Delta.removedRows !== 43 || p55.v2Delta.addedRows !== 26)
     p55Errors.push(`v2Delta (P58 arhiv) ≠ −43/+26 (${p55.v2Delta.removedRows}/${p55.v2Delta.addedRows})`);
   if (p55.v2Delta.before.matchedRows !== 1110 || p55.v2Delta.before.areaMedian !== 3.6984
     || p55.v2Delta.before.confCounts.STRONG !== 171)
     p55Errors.push("v2Delta.before ≠ 1110/3.6984/171");
-  if (p55.areaProof.medianRatio !== 3.9052 || p55.areaProof.pairsWithArea !== 1057)
-    p55Errors.push("površine ≠ 3.9052/1057");
-  if (p55.areaProof.historicalQkM2 !== 3.59665 || p55.areaProof.deltaPct !== 8.58)
-    p55Errors.push("QK faktor/Δ ≠ 3.59665/8.58");
-  if (p55.areaProof.shuffleMedian !== 4.2304 || p55.areaProof.shuffleTightShare !== 0.0539)
-    p55Errors.push("površinska kontrola ≠ 4.2304/0.0539");
-  if (p55.areaProof.tightShare !== 0.1845 || p55.areaProof.tightN !== 195)
-    p55Errors.push("pas ±10 % ≠ 0.1845/195");
+  if (p55.areaProof.medianRatio !== 3.8941 || p55.areaProof.pairsWithArea !== 919)
+    p55Errors.push("površine ≠ 3.8941/919");
+  if (p55.areaProof.historicalQkM2 !== 3.59665 || p55.areaProof.deltaPct !== 8.27)
+    p55Errors.push("QK faktor/Δ ≠ 3.59665/8.27");
+  if (p55.areaProof.shuffleMedian !== 4.5766 || p55.areaProof.shuffleTightShare !== 0.0457)
+    p55Errors.push("površinska kontrola ≠ 4.5766/0.0457");
+  if (p55.areaProof.tightShare !== 0.2024 || p55.areaProof.tightN !== 186)
+    p55Errors.push("pas ±10 % ≠ 0.2024/186");
   if (p55.spatialProof.consecPairs !== 652 || p55.spatialProof.medianM !== 51.8)
     p55Errors.push("soslednost ≠ 652/51.8");
   if (p55.spatialProof.shuffleMedianM !== 1320.7 || p55.spatialProof.share150 !== 0.9049 || p55.spatialProof.enrichmentX !== 25.5)
@@ -3350,14 +3359,14 @@ const p45bErrors: string[] = [];
   if (p55.furkovce.owner[0] !== "Van Wawech Mihó") p55Errors.push("Furkofze lastnik ≠ Van Wawech Mihó");
   if (!Object.values(p55.invariants).every((v) => v.includes("PASS") || v.includes("bajtno")))
     p55Errors.push("invarianti niso vsi PASS");
-  // 2) runtime v5 + dokaz v5 (P53/P57 lekcija: dve obliki — dokaz rowsEvidence, runtime kopija rows)
+  // 2) runtime v6 + dokaz v6 (P53/P57 lekcija: dve obliki — dokaz rowsEvidence, runtime kopija rows)
   let p55RtDetail = "runtime ps-parcels-geo.json ni preverjen (readFile ni na voljo) — celovita kontrola teče na /api/qa";
   let p55FileDetail = "dokazna datoteka ni preverjena (readFile ni na voljo)";
   if (opts.readFile) {
-    const rawEv = opts.readFile("research/issue17/ps-parcels-geo-v5.json");
+    const rawEv = opts.readFile("research/issue17/ps-parcels-geo-v6.json");
     const rawRt = opts.readFile("src/data/atlas/ps-parcels-geo.json");
     if (rawEv === null && rawRt === null) {
-      p55Errors.push("ps-parcels-geo ni berljiv (ne dokaz v5 ne runtime kopija)");
+      p55Errors.push("ps-parcels-geo ni berljiv (ne dokaz v6 ne runtime kopija)");
     } else {
       try {
         const mode = rawEv !== null ? "repo" : "produkcija";
@@ -3370,13 +3379,13 @@ const p45bErrors: string[] = [];
           rows?: { base: string; page: number; series?: string; conf?: string | null; readConf?: string | null; lat: number | null; lng: number | null; ambiguous?: boolean }[];
         };
         const rows = (parsed.rowsEvidence ?? parsed.rows) as NonNullable<typeof parsed.rows>;
-        if (parsed.version !== undefined && parsed.version !== 5)
-          p55Errors.push(`version ≠ 5 (${parsed.version})`);
-        if (rows.length !== 1077) p55Errors.push(`vrstice ≠ 1077 (${rows.length})`);
+        if (parsed.version !== undefined && parsed.version !== 6)
+          p55Errors.push(`version ≠ 6 (${parsed.version})`);
+        if (rows.length !== 939) p55Errors.push(`vrstice ≠ 939 (${rows.length})`);
         if (rows.length !== parsed.join.matchedRows)
           p55Errors.push(`vrstic ${rows.length} ≠ join.matchedRows ${parsed.join.matchedRows}`);
-        if (parsed.join.matchedRows !== 1077 || parsed.join.matchedRowsS1S2 !== 1051 || parsed.join.matchedRowsBI !== 26)
-          p55Errors.push("runtime povezava ≠ 1077/1051/26");
+        if (parsed.join.matchedRows !== 939 || parsed.join.matchedRowsS1S2 !== 913 || parsed.join.matchedRowsBI !== 26)
+          p55Errors.push("runtime povezava ≠ 939/913/26");
         const cc = { STRONG: 0, MEDIUM: 0, WEAK: 0 };
         const sc = { BI: 0, S1: 0, S2: 0 };
         const rc = { STRONG: 0, MEDIUM: 0, WEAK: 0 };
@@ -3389,10 +3398,10 @@ const p45bErrors: string[] = [];
             break;
           }
         }
-        if (cc.STRONG !== 183 || cc.MEDIUM !== 745 || cc.WEAK !== 149)
-          p55Errors.push(`runtime zaupanje ${JSON.stringify(cc)} ≠ 183/745/149 (v5 TOTAL)`);
-        if (sc.BI !== 26 || sc.S1 !== 981 || sc.S2 !== 70)
-          p55Errors.push(`runtime serije ${JSON.stringify(sc)} ≠ 26/981/70`);
+        if (cc.STRONG !== 174 || cc.MEDIUM !== 629 || cc.WEAK !== 136)
+          p55Errors.push(`runtime zaupanje ${JSON.stringify(cc)} ≠ 174/629/136 (v6 TOTAL)`);
+        if (sc.BI !== 26 || sc.S1 !== 847 || sc.S2 !== 66)
+          p55Errors.push(`runtime serije ${JSON.stringify(sc)} ≠ 26/847/66`);
         if (rc.STRONG !== 3 || rc.MEDIUM !== 14 || rc.WEAK !== 9)
           p55Errors.push(`runtime readConf BI ${JSON.stringify(rc)} ≠ 3/14/9`);
         // preracun soslednosti iz samih vrstic (mehanika P55: številski pari n, n+1)
@@ -3416,7 +3425,7 @@ const p45bErrors: string[] = [];
           p55Errors.push(`soslednost parov iz vrstic ${dd.length} ≠ ${parsed.spatialProof.consecPairs}`);
         if (Math.abs(med - parsed.spatialProof.medianM) > 0.5)
           p55Errors.push(`soslednost median iz vrstic ${med.toFixed(1)} ≠ ${parsed.spatialProof.medianM}`);
-        // neodvisen preracun per-Blatt dvoumnosti (base na > 1 strani znotraj v2)
+        // neodvisen preracun per-Blatt dvoumnosti (base na > 1 strani znotraj v6)
         const pagesByBase = new Map<string, Set<number>>();
         for (const r of rows) {
           const s = pagesByBase.get(r.base) ?? new Set<number>();
@@ -3430,30 +3439,30 @@ const p45bErrors: string[] = [];
         if (ambBases !== parsed.join.ambiguousBases || ambRows !== parsed.join.ambiguousRows)
           p55Errors.push(`dvoumnost preracun ${ambBases}/${ambRows} ≠ ${parsed.join.ambiguousBases}/${parsed.join.ambiguousRows}`);
         if (parsed.furkovce.rows !== 2) p55Errors.push("runtime Furkofze ≠ 2");
-        p55RtDetail = `${mode}: 1077 vrstic (serije 26/981/70, zaupanje 183/745/149, readConf BI 3/14/9) · soslednost preracunana iz vrstic: ${dd.length} parov, median ${med.toFixed(1)} m · dvoumnost ${ambBases}/${ambRows} · Furkofze 2159/2160`;
+        p55RtDetail = `${mode}: 939 vrstic (serije 26/847/66, zaupanje 174/629/136, readConf BI 3/14/9) · soslednost preracunana iz vrstic: ${dd.length} parov, median ${med.toFixed(1)} m · dvoumnost ${ambBases}/${ambRows} · Furkofze 2159/2160`;
         // dokaz ⊇ runtime bajtno (samo v repozitoriju, kjer sta oba na voljo)
         if (rawEv !== null && rawRt !== null) {
           const rt2 = JSON.parse(rawRt) as { version?: number; rows: Record<string, unknown>[] };
           const evRows = (parsed.rowsEvidence ?? []) as Record<string, unknown>[];
           const subset = rt2.rows.every((rr, i) =>
             Object.entries(rr).every(([k, v]) => JSON.stringify(evRows[i]?.[k]) === JSON.stringify(v)));
-          if (!subset) p55Errors.push("dokaz v5 ⊉ runtime: vrstice niso bajtno enake");
-          p55FileDetail = "dokaz v5 preverjen: 1077 vrstic ⊇ runtime bajtno (rowsEvidence == rows)";
+          if (!subset) p55Errors.push("dokaz v6 ⊉ runtime: vrstice niso bajtno enake");
+          p55FileDetail = "dokaz v6 preverjen: 939 vrstic ⊇ runtime bajtno (rowsEvidence == rows)";
         } else {
           p55FileDetail = "produkcija: research/ ni v deploymentu — kontrola na runtime kopiji (vzorec qa-p43-chain-full)";
         }
       } catch (e) {
-        p55Errors.push(`ps-parcels-geo v5 obdelava neuspešna: ${String(e).slice(0, 80)}`);
+        p55Errors.push(`ps-parcels-geo v6 obdelava neuspešna: ${String(e).slice(0, 80)}`);
       }
     }
   }
   push(
     "qa-p55-ps-parcels-geo",
-    "P55 v5: GEOLOKACIJA GRUNDPARCELLEN — korekcije v4 (P71, issue #13): (C1) 56 sekijskih vrstic (p83–86, p88) EXCLUDE iz joina (P69 dokazane lažne fuzije na Blatt I poligone; lastniška odločitev: opcija exclude; per-Blatt instance = odprta; vrstice ostanejo v registru brez geometrije) + (C2) P93 REVERZIJA — P68 renum 160x→190x ovržen (glifna forenzika r9=1609/r19=1619: 6 ≠ 9; annRecords 1601–1619; pageMap P56; P38 pass2): 15 vrstic base := parzella, PF ujemanja 1603/1604/1605 (prej prazni poligoni dobili prve vrstice), 12 izpadlih; PF 1901–1920 brez lažnih dvojnih zahtevkov p93 (ostane p98 III); zgodovina: P70 v4 (77 renum + 95 rejoin + 33 fuzij isti-Blatt), P68 v3 (17 preslikav + 14 izpada), P58 (−43 S3/+26 Blatt I): 1077 vrstic povezanih (1051 S1/S2 + 26 Blatt I); 879 pozicioniranih števil; površine median 3.9052 ≈ 1 Wiener QK 3.59665 m² (Δ +8.58 %, kontrola seed 42 = 4.2304); soslednost 652 parov / 51.8 m / 25.5×; zaupanje STRONG 183 / MEDIUM 745 / WEAK 149 + readConf BI 3/14/9; per-Blatt dvoumnost 184 base / 373 vrstic [~]; nespremenjene vrstice bajtno == v4; status SANITIZED-DETERMINISTIC",
-    "P55 v5: GRUNDPARCELLEN GEOLOCATION — v4 corrections (P71: C1 — 56 section rows p83–86/p88 excluded, P69-proven false fusions, the owner's exclude option, per-Blatt instances open, rows stay in the register without geometry; C2 — the p93 reversion, the P68 renum 160x→190x refuted by glyph forensics r9=1609/r19=1619 (6 ≠ 9) + annRecords 1601–1619 + the P56 pageMap + P38 pass2: 15 rows base := parzella, PF matches 1603/1604/1605 (previously empty polygons got their first rows), 12 dropped; PF 1901–1920 free of p93's false double claims — p98 III remains; history: P70 v4 (77 renums + 95 rejoins + 33 same-Blatt fusions), P68 v3 (17 mappings + 14 dropped), P58 (−43 S3/+26 Blatt I)): 1,077 linked rows (1,051 S1/S2 + 26 Blatt I); 879 positioned numbers; areas median 3.9052 ≈ 1 Wiener QK 3.59665 m² (Δ +8.58 %, control seed 42 = 4.2304); adjacency 652 pairs / 51.8 m / 25.5×; confidence STRONG 183 / MEDIUM 745 / WEAK 149 + readConf BI 3/14/9; per-sheet ambiguity 184 bases / 373 rows [~]; unchanged rows byte-identical to v4; status SANITIZED-DETERMINISTIC",
+    "P55 v6: GEOLOKACIJA GRUNDPARZELLEN — C3 isti-Blatt SPLIT opcija A (P73, issue #13): za 135 dual base (P72 dual pack: lastniki med straneh disjunktni 135/135; dvojni zapis iste serije v dveh blokih registra) so vrstice drugega bloka izpadle iz joina — drop 137 kombinacij = 138 vrstic (keep = min stran; P70 33 kolizij = podmnožica; vrstice ostanejo v registru brez geometrije; 0 base brez vrstic; nearDual 2080/2081 ostanejo); zgodovina: P71 v5 (C1 56 sekijskih + C2 p93 reverzija 15), P70 v4 (77 renum + 95 rejoin + 33 fuzij isti-Blatt), P68 v3 (17 preslikav + 14 izpada), P58 (−43 S3/+26 Blatt I): 939 vrstic povezanih (913 S1/S2 + 26 Blatt I); 879 pozicioniranih števil; površine median 3.8941 ≈ 1 Wiener QK 3.59665 m² (Δ +8.27 %, kontrola seed 42 = 4.5766); soslednost 652 parov / 51.8 m / 25.5× (nespremenjena); zaupanje STRONG 174 / MEDIUM 629 / WEAK 136 + readConf BI 3/14/9; per-Blatt dvoumnost 50 base / 100 vrstic [~]; ohranjene vrstice (brez group-derived) bajtno == v5; status SANITIZED-DETERMINISTIC",
+    "P55 v6: GRUNDPARZELLEN GEOLOCATION — C3 the same-Blatt SPLIT option A (P73): for the 135 dual bases (the P72 dual pack: owners disjoint 135/135 across pages; the dual entry of the same series in two register blocks) the second-block rows are dropped from the join — 137 combinations = 138 rows (keep = the min page; the P70 33 collisions are a subset; the rows stay in the register without geometry; 0 bases left empty; near-duals 2080/2081 kept); history: P71 v5 (C1 56 sections + C2 p93 reversion 15), P70 v4 (77 renums + 95 rejoins + 33 same-Blatt fusions), P68 v3 (17 mappings + 14 dropped), P58 (−43 S3/+26 Blatt I): 939 linked rows (913 S1/S2 + 26 Blatt I); 879 positioned numbers; areas median 3.8941 ≈ 1 Wiener QK 3.59665 m² (Δ +8.27 %, control seed 42 = 4.5766); adjacency 652 pairs / 51.8 m / 25.5× (unchanged); confidence STRONG 174 / MEDIUM 629 / WEAK 136 + readConf BI 3/14/9; per-sheet ambiguity 50 bases / 100 rows [~]; unchanged rows (non-derived fields) byte-identical to v5; status SANITIZED-DETERMINISTIC",
     p55Errors.length === 0,
     p55Errors.length === 0
-      ? `v5: 1077 vrstic (1051 S1/S2 + 26 Blatt I) / 879 števil · v5Delta C1 56 + C2 15 (12 izpadlih) = 68 · PF 1603/1604/1605 · v4 arhiv 1145/878/215/79 · v3Delta arhiv 17/14 · v2Delta arhiv −43/+26 · površine 3.9052 ≈ 3.59665 (Δ +8.58 %, kontrola 4.2304) · soslednost 652/51.8/25.5× · STRONG 183 / MEDIUM 745 / WEAK 149 · dvoumnost 184/373 · Furkofze 2159/2160 · ${p55RtDetail} · ${p55FileDetail}`
+      ? `v6: 939 vrstic (913 S1/S2 + 26 Blatt I) / 879 števil · v6Delta C3 135/137/138 (1077/879/184/48 → 939/879/50/48) · v5Delta arhiv 56/15/68 · v4 arhiv 1145/878/215/79 · v3Delta arhiv 17/14 · v2Delta arhiv −43/+26 · površine 3.8941 ≈ 3.59665 (Δ +8.27 %, kontrola 4.5766) · soslednost 652/51.8/25.5× · STRONG 174 / MEDIUM 629 / WEAK 136 · dvoumnost 50/100 · Furkofze 2159/2160 · ${p55RtDetail} · ${p55FileDetail}`
       : p55Errors.join("; "),
   );
 
@@ -3469,9 +3478,9 @@ const p45bErrors: string[] = [];
   if (p55.spatialProof.consecPairs !== 652 || p55.spatialProof.medianM !== 51.8
     || p55.spatialProof.q25M !== 33.0 || p55.spatialProof.q75M !== 87.8 || p55.spatialProof.share150 !== 0.9049)
     p58Errors.push("soslednost (I9) ≠ v5 pini 652/51.8/33.0/87.8/0.9049");
-  if (p55.areaProof.medianRatio !== 3.9052 || p55.v2Delta.before.areaMedian !== 3.6984
+  if (p55.areaProof.medianRatio !== 3.8941 || p55.v2Delta.before.areaMedian !== 3.6984
     || p55.areaProof.medianRatio <= p55.v2Delta.before.areaMedian)
-    p58Errors.push("površinski median v5 ≤ v1 (pričakovano zvišanje 3.6984 → 3.7709 → 3.8512 → 3.8843 → 3.9052)");
+    p58Errors.push("površinski median v6 ≤ v1 (pričakovano zvišanje 3.6984 → 3.7709 → 3.8512 → 3.8843 → 3.9052 → 3.8941)");
   // 2) datoteke: v1 arhiv nespremenjen + v2 delta == P56 + runtime version 2 (dve obliki po P53/P57)
   let p58FileDetail = "datoteke niso preverjene (readFile ni na voljo) — celovita kontrola teče na /api/qa";
   if (opts.readFile) {
@@ -3488,15 +3497,15 @@ const p45bErrors: string[] = [];
           v2Delta?: { removed?: { rows?: number }; added?: { rows?: number; bases?: number[] } };
           rows: { page: number; base: string; series?: string }[];
         };
-        if (rt.version !== 5) p58Errors.push(`runtime version ≠ 5 (${rt.version})`);
-        if (rt.rows.length !== 1077) p58Errors.push(`runtime vrstic ≠ 1077 (${rt.rows.length})`);
+        if (rt.version !== 6) p58Errors.push(`runtime version ≠ 6 (${rt.version})`);
+        if (rt.rows.length !== 939) p58Errors.push(`runtime vrstic ≠ 939 (${rt.rows.length})`);
         if (rt.rows.some((r) => r.page === 138 || r.page === 139))
           p58Errors.push("runtime vsebuje še S3 vrstice (str. 138–139)");
         const bi = rt.rows.filter((r) => r.page === 3 || r.page === 4);
         if (bi.length !== 26) p58Errors.push(`runtime Blatt I vrstic ≠ 26 (${bi.length})`);
-        if (rt.rows.filter((r) => r.series === "S1").length !== 981
-          || rt.rows.filter((r) => r.series === "S2").length !== 70)
-          p58Errors.push("runtime serije S1/S2 ≠ 981/70 (v5 P71)");
+        if (rt.rows.filter((r) => r.series === "S1").length !== 847
+          || rt.rows.filter((r) => r.series === "S2").length !== 66)
+          p58Errors.push("runtime serije S1/S2 ≠ 847/66 (v6 P73)");
         // P56 konsistenca: delta == sanitizacija
         if (rawP56rt !== null) {
           const p56rt = JSON.parse(rawP56rt) as { sanitization: { matchedRowsBefore: number; matchedRowsAfter: number; uniqueBasesAfter: number; lostBases: number[] } };
@@ -3534,8 +3543,8 @@ const p45bErrors: string[] = [];
           if ((v2.rowsEvidence ?? []).length !== 1093) p58Errors.push("v2 dokaz: rowsEvidence ≠ 1093");
         }
         p58FileDetail = rawV1 !== null && rawV2 !== null
-          ? "repo: v1 arhiv nespremenjen (2762/1110, spatial 590/51.8) · v2 dokaz delta −43/+26 · runtime version 5 (P71 v5: 1077 vrstic), brez S3, Blatt I 26 == lostBases P56"
-          : "produkcija: research/ ni v deploymentu — kontrola na runtime kopiji (version 5, −43 S3 P58 arhiv, +26 Blatt I == lostBases)";
+          ? "repo: v1 arhiv nespremenjen (2762/1110, spatial 590/51.8) · v2 dokaz delta −43/+26 · runtime version 6 (P73 v6: 939 vrstic), brez S3, Blatt I 26 == lostBases P56"
+          : "produkcija: research/ ni v deploymentu — kontrola na runtime kopiji (version 6, −43 S3 P58 arhiv, +26 Blatt I == lostBases)";
       } catch (e) {
         p58Errors.push(`ps-parcels-geo v2 datoteke neuspešno: ${String(e).slice(0, 80)}`);
       }
@@ -3547,7 +3556,7 @@ const p45bErrors: string[] = [];
     "P58: PS-PARCELS-GEO v2 PRODUCTION SANITIZATION (issue #13): the v1 production (1110 rows) contained 43 false S3 links (pp. 138–139 appendix) — proven by P56 (areas ~42× off 1 QK, pass disagreement), removed from the runtime by P58 (the set byte-identical to the P56 contamination list) and 26 Blatt I rows added from the P57 primary source (exactly all 26 lostBases) → 1093 rows / 800 numbers; INVARIANCE: per-base positions → adjacency and S1/S2 confidence byte-identical to v1 (590/51.8/27.8×; 174/759/160); clean area median 3.7709 (Δ +4.85 %) — the v1 3.6984 was artificially lowered; the v1 evidence archived unchanged; status SANITIZED-DETERMINISTIC",
     p58Errors.length === 0,
     p58Errors.length === 0
-      ? `v2 delta −43/+26 (P58 arhiv) · v1 arhiv 2762/1110 (repo) · runtime 1077 vrstic version 5 (P71 v5: BI 26 == lostBases P56, S1 981, S2 70, brez str. 138–139) · neinvarianca 590/51.8/0.8932 · median 3.6984 → 3.7709 (P58) → 3.8512 (P68) → 3.8843 (P70) → 3.9052 (P71) · ${p58FileDetail}`
+      ? `v2 delta −43/+26 (P58 arhiv) · v1 arhiv 2762/1110 (repo) · runtime 939 vrstic version 6 (P73 v6: BI 26 == lostBases P56, S1 847, S2 66, brez str. 138–139) · neinvarianca 590/51.8/0.8932 · median 3.6984 → 3.7709 (P58) → 3.8512 (P68) → 3.8843 (P70) → 3.9052 (P71) → 3.8941 (P73, drop lažnih fuzij) · ${p58FileDetail}`
       : p58Errors.join("; "),
   );
 
@@ -3622,11 +3631,13 @@ const p45bErrors: string[] = [];
           rows: { page: number; base: string | null; lat: number | null; ratio: number | null; owner: string | null; kultur: string | null; areaQK: number | null; areaModern: number | null }[];
         };
         const join56 = { version: joinSrc56.version, rows: joinSrc56.rowsEvidence ?? joinSrc56.rows };
-        const expS1S256 = joinMode56 === "v3-dokaz" ? 1053 : 1051;
-        const expTotal56 = joinMode56 === "v3-dokaz" ? 1079 : 1077;
-        const expMedS1 = joinMode56 === "v3-dokaz" ? 3.7588 : 3.8823;
-        if (join56.version !== undefined && join56.version !== (joinMode56 === "v3-dokaz" ? 3 : 5))
-          p56Errors.push(`join vir version ≠ ${joinMode56 === "v3-dokaz" ? 3 : 5} (${join56.version})`);
+        // P73: runtime je v6 (C3 isti-Blatt SPLIT) — v5 pine ostajajo za nasledstveno vejo
+        const isV6rt56 = joinMode56 !== "v3-dokaz" && (join56.version ?? 0) >= 6;
+        const expS1S256 = joinMode56 === "v3-dokaz" ? 1053 : isV6rt56 ? 913 : 1051;
+        const expTotal56 = joinMode56 === "v3-dokaz" ? 1079 : isV6rt56 ? 939 : 1077;
+        const expMedS1 = joinMode56 === "v3-dokaz" ? 3.7588 : isV6rt56 ? 3.8323 : 3.8823;
+        if (join56.version !== undefined && join56.version !== (joinMode56 === "v3-dokaz" ? 3 : isV6rt56 ? 6 : 5))
+          p56Errors.push(`join vir version ≠ ${joinMode56 === "v3-dokaz" ? 3 : isV6rt56 ? 6 : 5} (${join56.version})`);
         const s3Matched = join56.rows.filter((r) => (r.page === 138 || r.page === 139) && r.lat !== null);
         if (s3Matched.length !== 0)
           p56Errors.push(`preracun: P55 join še vsebuje S3 vrstice (${s3Matched.length} ≠ 0)`);
@@ -3872,9 +3883,10 @@ const p45bErrors: string[] = [];
         const joinMode59 = rawJoin59 !== null ? "v3-dokaz" : "v5-runtime";
         const joinSrc59 = (JSON.parse((rawJoin59 ?? rawV2rt) as string) as { version?: number; rowsEvidence?: { page: number; base: string; ratio?: number | null }[]; rows: { page: number; base: string; ratio?: number | null }[] });
         const joinRows59 = { version: joinSrc59.version, rows: joinSrc59.rowsEvidence ?? joinSrc59.rows };
-        if (joinRows59.version !== (joinMode59 === "v3-dokaz" ? 3 : 5))
-          p59Errors.push(`join vir version ≠ ${joinMode59 === "v3-dokaz" ? 3 : 5} (${joinRows59.version})`);
-        const expMulti59 = joinMode59 === "v3-dokaz" ? 199 : 184;
+        const isV6rt59 = joinMode59 !== "v3-dokaz" && (joinRows59.version ?? 0) >= 6;
+        if (joinRows59.version !== (joinMode59 === "v3-dokaz" ? 3 : isV6rt59 ? 6 : 5))
+          p59Errors.push(`join vir version ≠ ${joinMode59 === "v3-dokaz" ? 3 : isV6rt59 ? 6 : 5} (${joinRows59.version})`);
+        const expMulti59 = joinMode59 === "v3-dokaz" ? 199 : isV6rt59 ? 50 : 184;
         const expCross59 = joinMode59 === "v3-dokaz" ? 98 : 48;
         const expCand59 = joinMode59 === "v3-dokaz" ? 14 : 3;
         // TS ↔ runtime JSON navzkrižje
@@ -3948,7 +3960,7 @@ const p45bErrors: string[] = [];
         }
         p59FileDetail = rawEv59 !== null
           ? "repo: dokaz (pageAttribution 137 strani + arbitraža 32 + struktura) == runtime bajtno · preracun iz v3 dokaza: 199/98/14 + P57 navzkrižje"
-          : `produkcija: research/ ni v deploymentu — preracun na v5 runtime (${joinMode59}: multi ${multiPage} / cross ${multiBlatt} / ruleCandidate ${cand.length} — P71 meritve; v4 215/79/11)`;
+          : `produkcija: research/ ni v deploymentu — preracun na runtime kopiji (${joinMode59}${isV6rt59 ? ", v6 po P73" : ", v5 P71 meritve; v4 215/79/11"}: multi ${multiPage} / cross ${multiBlatt} / ruleCandidate ${cand.length})`;
       } catch (e) {
         p59Errors.push(`ps-blatt-headers datoteke neuspešno: ${String(e).slice(0, 80)}`);
       }
@@ -4011,11 +4023,12 @@ const p45bErrors: string[] = [];
         const joinMode60 = rawJoin60 !== null ? "v3-dokaz" : "v5-runtime";
         const joinSrc60 = (JSON.parse((rawJoin60 ?? rawV2rt) as string) as { version?: number; rowsEvidence?: { page: number; base: string; ratio?: number | null }[]; rows: { page: number; base: string; ratio?: number | null }[] });
         const joinRows60 = { version: joinSrc60.version, rows: joinSrc60.rowsEvidence ?? joinSrc60.rows };
-        if (joinRows60.version !== (joinMode60 === "v3-dokaz" ? 3 : 5))
-          p60Errors.push(`join vir version ≠ ${joinMode60 === "v3-dokaz" ? 3 : 5} (${joinRows60.version})`);
-        const expDist60 = joinMode60 === "v3-dokaz" ? { I: 0, II: 10, III: 4 } : { I: 0, II: 2, III: 1 };
-        const expRows60 = joinMode60 === "v3-dokaz" ? 20 : 6;
-        const expAdj60 = joinMode60 === "v3-dokaz" ? { ok: 19, flag: 1 } : { ok: 3, flag: 3 };
+        const isV6rt60 = joinMode60 !== "v3-dokaz" && (joinRows60.version ?? 0) >= 6;
+        if (joinRows60.version !== (joinMode60 === "v3-dokaz" ? 3 : isV6rt60 ? 6 : 5))
+          p60Errors.push(`join vir version ≠ ${joinMode60 === "v3-dokaz" ? 3 : isV6rt60 ? 6 : 5} (${joinRows60.version})`);
+        const expDist60 = joinMode60 === "v3-dokaz" ? { I: 0, II: 10, III: 4 } : isV6rt60 ? { I: 0, II: 3, III: 1 } : { I: 0, II: 2, III: 1 };
+        const expRows60 = joinMode60 === "v3-dokaz" ? 20 : isV6rt60 ? 7 : 6;
+        const expAdj60 = joinMode60 === "v3-dokaz" ? { ok: 19, flag: 1 } : isV6rt60 ? { ok: 4, flag: 3 } : { ok: 3, flag: 3 };
         // TS ↔ runtime navzkrižje
         if (rt60.summary.bases !== p60.summary.bases || rt60.summary.rows !== p60.summary.rows)
           p60Errors.push("TS ↔ runtime: summary ≠");
@@ -4151,12 +4164,13 @@ const p45bErrors: string[] = [];
           ? (JSON.parse(rawJoin61 as string) as { version?: number; rowsEvidence?: { page: number; parzella: string; base: string; lat: number; lng: number; areaQK: number | null; ratio?: number | null }[]; rows: { page: number; parzella: string; base: string; lat: number; lng: number; areaQK: number | null; ratio?: number | null }[] })
           : rawV2rtParsed;
         const v2rt = { version: joinSrc61.version, rows: joinSrc61.rowsEvidence ?? joinSrc61.rows };
-        if (v2rt.version !== (joinMode61 === "v3-dokaz" ? 3 : 5))
-          p61Errors.push(`join vir version ≠ ${joinMode61 === "v3-dokaz" ? 3 : 5} (${v2rt.version})`);
-        const expModi61 = joinMode61 === "v3-dokaz" ? { A: 226, B: 60, X: 788, noRatio: 5 } : { A: 236, B: 48, X: 788, noRatio: 5 };
-        const expA61 = joinMode61 === "v3-dokaz" ? { h50: 209, h100: 37, p50: 220, p100: 118 } : { h50: 217, h100: 45, p50: 230, p100: 116 };
-        const expB61 = joinMode61 === "v3-dokaz" ? { h50: 18, h100: 13, p50: 45, p100: 38 } : { h50: 17, h100: 6, p50: 35, p100: 25 };
-        const expBlatt61 = joinMode61 === "v3-dokaz" ? { II: 30, IV: 15, III: 9, I: 5, "I·II": 1, null: 0 } : { II: 21, IV: 15, III: 6, I: 5, "I·II": 1, null: 0 };
+        const isV6rt61 = joinMode61 !== "v3-dokaz" && (v2rt.version ?? 0) >= 6;
+        if (v2rt.version !== (joinMode61 === "v3-dokaz" ? 3 : isV6rt61 ? 6 : 5))
+          p61Errors.push(`join vir version ≠ ${joinMode61 === "v3-dokaz" ? 3 : isV6rt61 ? 6 : 5} (${v2rt.version})`);
+        const expModi61 = joinMode61 === "v3-dokaz" ? { A: 226, B: 60, X: 788, noRatio: 5 } : isV6rt61 ? { A: 223, B: 42, X: 669, noRatio: 5 } : { A: 236, B: 48, X: 788, noRatio: 5 };
+        const expA61 = joinMode61 === "v3-dokaz" ? { h50: 209, h100: 37, p50: 220, p100: 118 } : isV6rt61 ? { h50: 206, h100: 37, p50: 218, p100: 104 } : { h50: 217, h100: 45, p50: 230, p100: 116 };
+        const expB61 = joinMode61 === "v3-dokaz" ? { h50: 18, h100: 13, p50: 45, p100: 38 } : isV6rt61 ? { h50: 16, h100: 7, p50: 31, p100: 25 } : { h50: 17, h100: 6, p50: 35, p100: 25 };
+        const expBlatt61 = joinMode61 === "v3-dokaz" ? { II: 30, IV: 15, III: 9, I: 5, "I·II": 1, null: 0 } : isV6rt61 ? { II: 18, IV: 12, III: 6, I: 5, "I·II": 1, null: 0 } : { II: 21, IV: 15, III: 6, I: 5, "I·II": 1, null: 0 };
         if (rt61.summary.modi.A !== us61.summary.modi.A || rt61.summary.modi.B !== us61.summary.modi.B)
           p61Errors.push("TS ↔ runtime: modi ≠");
         if (rt61.pini.hits.A.real50 !== 209 || rt61.pini.hits.B.real50 !== 18)
@@ -4253,7 +4267,7 @@ const p45bErrors: string[] = [];
         }
         p61FileDetail = rawEv61 !== null
           ? "repo: dokaz == runtime bajtno · preracun: modi 226/60/788/5 iz v3 vrstic · FNV-1a kontrola 209/37/220/118 + 18/13/45/38 == pini · blattDist II 30 · IV 15 · III 9 · I 5"
-          : "produkcija: research/ ni v deploymentu — preracun na runtime kopijah (v5 vrstice × gursCompact: modi 236/48/788/5 + kontrola A 217/45/230/116 · B 17/6/35/25 — P71)";
+          : `produkcija: research/ ni v deploymentu — preracun na runtime kopijah (${isV6rt61 ? "v6 vrstice × gursCompact: modi 223/42/669/5 + kontrola A 206/37/218/104 · B 16/7/31/25 — P73" : "v5 vrstice × gursCompact: modi 236/48/788/5 + kontrola A 217/45/230/116 · B 17/6/35/25 — P71"})`;
       } catch (e) {
         p61Errors.push(`ps-unit-semantics datoteke neuspešno: ${String(e).slice(0, 80)}`);
       }
@@ -4549,11 +4563,14 @@ const p45bErrors: string[] = [];
           ? JSON.parse(rawJoin65 as string)
           : JSON.parse(rawV2rt65)) as { rowsEvidence?: { base: string; page: number; areaQK: number | null }[]; rows: { base: string; page: number; areaQK: number | null }[] };
         const v2rt65 = { rows: joinSrc65.rowsEvidence ?? joinSrc65.rows };
-        const expMulti65 = joinMode65 === "v3-dokaz" ? 199 : 184;
-        const expR3_65 = joinMode65 === "v3-dokaz" ? 101 : 107;
-        const expBase65 = joinMode65 === "v3-dokaz" ? [798, 599] : [879, 695];
+        const isV6rt65 = joinMode65 !== "v3-dokaz" && ((joinSrc65 as { version?: number }).version ?? 0) >= 6;
+        const expMulti65 = joinMode65 === "v3-dokaz" ? 199 : isV6rt65 ? 50 : 184;
+        const expR3_65 = joinMode65 === "v3-dokaz" ? 101 : isV6rt65 ? 2 : 107;
+        const expBase65 = joinMode65 === "v3-dokaz" ? [798, 599] : isV6rt65 ? [879, 829] : [879, 695];
         const expSp65 = joinMode65 === "v3-dokaz"
           ? { I: 156, "I·II": 10, II: 183, III: 26, IV: 206, V: 18 }
+          : isV6rt65
+          ? { I: 177, "I·II": 10, II: 294, III: 66, IV: 264, V: 18 }
           : { I: 174, "I·II": 10, II: 247, III: 38, IV: 208, V: 18 };
         // NEODVISEN preracun: vrstice v2 → base → strani → Blatt
         const rowsByBase65 = new Map<string, { page: number; areaQK: number | null }[]>();
@@ -5017,8 +5034,10 @@ const p45bErrors: string[] = [];
           rows: { page: number; base: string; parzella: string; lat: number | null }[];
         };
         const rt59p = JSON.parse(rawRt59p) as { pageAttribution: Record<string, { blatt: string | null }> };
-        if (rt68.version !== 5) p68Errors.push(`runtime version ≠ 5 (${rt68.version})`);
-        if (rt68.rows.length !== 1077) p68Errors.push(`runtime vrstic ≠ 1077 (${rt68.rows.length})`);
+        // P73: runtime je v6 — v3/v5 živita v zamrznjenih dokazih; nasledstvo preverjeno
+        const isV6rt68 = (rt68.version ?? 0) >= 6;
+        if (!(rt68.version === 5 || isV6rt68)) p68Errors.push(`runtime version ≠ 5 ali ≥ 6 (${rt68.version})`);
+        if (rt68.rows.length !== (isV6rt68 ? 939 : 1077)) p68Errors.push(`runtime vrstic ≠ ${isV6rt68 ? 939 : 1077} (${rt68.rows.length})`);
         // neodvisen preracun: repo = v3 DOKAZ (P68 pini realnost); produkcija = v5 runtime
         // (P71: p93 reverzija — base := parzella @p93; P70 re-join ohranja preslikave p74–p99)
         const rawJoin68 = opts.readFile("research/issue17/ps-parcels-geo-v3.json");
@@ -5050,7 +5069,7 @@ const p45bErrors: string[] = [];
           if (pgs !== exp) p68Errors.push(`preracun: ${b} strani ${pgs} ≠ ${exp} (P68; instanca ostane)`);
         }
         // multi-page + cross-blatt iz vrstic × pageAttribution (repo: v3 dokaz == pini; produkcija: v5)
-        const expMulti68 = joinMode68 === "v3-dokaz" ? 199 : 184;
+        const expMulti68 = joinMode68 === "v3-dokaz" ? 199 : isV6rt68 ? 50 : 184;
         const expCross68 = joinMode68 === "v3-dokaz" ? 98 : 48;
         const expBase68 = joinMode68 === "v3-dokaz" ? 798 : 879;
         const pagesByBase68 = new Map<string, Set<number>>();
@@ -5085,8 +5104,8 @@ const p45bErrors: string[] = [];
           if (!subset) p68Errors.push("dokaz v3 ⊉ runtime: vrstice niso bajtno enake");
         }
         p68FileDetail = rawEv68 !== null
-          ? "repo: dokaz == runtime bajtno · preracun: renumSpec 17 preslikav nad v3 (parzella == original), izpadli 1603–1605/661/671, 1903 @93+98 ×3, multi/cross 199/98 iz v3 × pageAttribution · runtime nasledstvo v5"
-          : "produkcija: research/ ni v deploymentu — preracun na runtime kopiji (version 5, renumSpec s p93 reverzijo, 1903 @98 ×2, multi/cross 184/48)";
+          ? `repo: dokaz == runtime bajtno · preracun: renumSpec 17 preslikav nad v3 (parzella == original), izpadli 1603–1605/661/671, 1903 @93+98 ×3, multi/cross 199/98 iz v3 × pageAttribution · runtime nasledstvo v${rt68.version} (v6 po P73: multi 50)`
+          : `produkcija: research/ ni v deploymentu — preracun na runtime kopiji (version ${rt68.version}, renumSpec s p93 reverzijo, 1903 @98 ×2, multi/cross ${expMulti68}/48)`;
       } catch (e) {
         p68Errors.push(`ps-parcels-geo v3 datoteke neuspešno: ${String(e).slice(0, 80)}`);
       }
@@ -5209,7 +5228,7 @@ const p45bErrors: string[] = [];
     p70Errors.push("pini: noSource ≠ 3 × p80");
   if (r70.collisions.istiBlatt.length !== 33)
     p70Errors.push(`pini: kolizij isti-Blatt ≠ 32 (${r70.collisions.istiBlatt.length})`);
-  if (p55v4.version !== 5 || p55v4.v5Delta.excludedSections !== 56 || p55v4.v5Delta.revertedP93 !== 15
+  if (p55v4.version < 5 || p55v4.v5Delta.excludedSections !== 56 || p55v4.v5Delta.revertedP93 !== 15
     || p55v4.v5Delta.before.rows !== 1145 || p55v4.v5Delta.before.bases !== 878)
     p70Errors.push("pini: PS_GEO_P55 v5Delta (nasledstvo v4: before 1145/878 + C1 56 + C2 15) odmika");
   // 2) datoteke + NEODVISEN preracun (dve obliki po P53/P57/P58)
@@ -5226,6 +5245,7 @@ const p45bErrors: string[] = [];
           join: { matchedRows: number; psPositionedParcels: number; ambiguousBases: number; ambiguousRows: number; seriesCounts: { BI: number; S1: number; S2: number }; confCounts: { STRONG: number; MEDIUM: number; WEAK: number } };
           v4Delta?: { renumbered?: number; added?: number; removed?: number; noSource?: string[] };
           v5Delta?: { excludedSections?: number; revertedP93?: number; removed?: number; before?: { rows?: number; bases?: number; multiPage?: number; crossBlatt?: number } };
+          v6Delta?: { splitBases?: number; droppedPairs?: number; droppedRows?: number; before?: { rows?: number }; after?: { rows?: number } };
           rows: { page: number; base: string; parzella: string; series?: string; conf?: string | null; ambiguous?: boolean; areaQK: number | null; areaModern: number | null; areaSuspect?: boolean }[];
         };
         // P71: runtime je v5 — v4 živi v zamrznjenem dokazu; runtime mora
@@ -5236,8 +5256,17 @@ const p45bErrors: string[] = [];
             p70Errors.push(`runtime v5Delta ≠ 56/15/68 (${d5.excludedSections}/${d5.revertedP93}/${d5.removed})`);
           if (d5.before?.rows !== 1145 || d5.before?.bases !== 878 || d5.before?.multiPage !== 215 || d5.before?.crossBlatt !== 79)
             p70Errors.push(`runtime v5Delta.before ≠ 1145/878/215/79 (${d5.before?.rows}/${d5.before?.bases}/${d5.before?.multiPage}/${d5.before?.crossBlatt})`);
-          if (rt70.join.matchedRows !== 1077 || rt70.join.psPositionedParcels !== 879)
+          if ((rt70.version ?? 0) >= 6) {
+            const d6 = rt70.v6Delta ?? {};
+            if (d6.splitBases !== 135 || d6.droppedPairs !== 137 || d6.droppedRows !== 138)
+              p70Errors.push(`runtime v6Delta ≠ 135/137/138 (${d6.splitBases}/${d6.droppedPairs}/${d6.droppedRows})`);
+            if (d6.before?.rows !== 1077 || d6.after?.rows !== 939)
+              p70Errors.push(`runtime v6Delta rows ≠ 1077→939 (${d6.before?.rows}→${d6.after?.rows})`);
+            if (rt70.join.matchedRows !== 939 || rt70.join.psPositionedParcels !== 879)
+              p70Errors.push(`runtime v6 join ≠ 939/879 (${rt70.join.matchedRows}/${rt70.join.psPositionedParcels})`);
+          } else if (rt70.join.matchedRows !== 1077 || rt70.join.psPositionedParcels !== 879) {
             p70Errors.push(`runtime v5 join ≠ 1077/879 (${rt70.join.matchedRows}/${rt70.join.psPositionedParcels})`);
+          }
         } else if (rt70.version !== 4) {
           p70Errors.push(`runtime version ≠ 4 ali ≥ 5 (${rt70.version})`);
         }
@@ -5288,12 +5317,12 @@ const p45bErrors: string[] = [];
             if ((ev70.collisions?.istiBlatt ?? []).length !== 33) p70Errors.push("dokaz kolizij ≠ 33");
             p70FileDetail = `repo: dokaz v4 zamrznjen (${(ev70.rowsEvidence ?? []).length} vrstic bajtno) · preracun na rowsEvidence: 1145 vrstic, preslikave parzella == originalno branje, fuzije 33 iz vrstic, sekcije 56, area median 3.8843 · runtime deklarira nasledstvo v5 (P71: C1 56 + C2 15)`;
           } else {
-            p70FileDetail = `produkcija: v4 dokaz ni v buildu — preracun na v4 vrstvicah preskočen; runtime v5 deklarira nasledstvo (v5Delta 56/15/68, before 1145/878/215/79, join 1077/879) · preslikave ${mappedCount} vzorcev == to`;
+            p70FileDetail = `produkcija: v4 dokaz ni v buildu — preracun na v4 vrstvicah preskočen; runtime v${rt70.version ?? 5} deklarira nasledstvo (v5Delta 56/15/68, before 1145/878/215/79, join ${rt70.join.matchedRows}/${rt70.join.psPositionedParcels}${(rt70.version ?? 0) >= 6 ? '; v6Delta 135/137/138 — P73 isti-Blatt SPLIT' : ''}) · preslikave ${mappedCount} vzorcev == to`;
           }
         } else if ((rt70.version ?? 0) >= 5) {
           // produkcija: v4 dokaz ni v buildu — vrstični preracun v4 preskočen;
           // nasledstvo je že preverjeno zgoraj (v5Delta deklaracija)
-          p70FileDetail = `produkcija: v4 dokaz ni v buildu — preracun v4 preskočen; runtime v5 deklarira nasledstvo (v5Delta 56/15/68, before 1145/878/215/79, join 1077/879)`;
+          p70FileDetail = `produkcija: v4 dokaz ni v buildu — preracun v4 preskočen; runtime v${rt70.version ?? 5} deklarira nasledstvo (v5Delta 56/15/68, before 1145/878/215/79, join ${rt70.join.matchedRows}/${rt70.join.psPositionedParcels}${(rt70.version ?? 0) >= 6 ? '; v6Delta 135/137/138 — P73 isti-Blatt SPLIT' : ''})`;
         } else {
           p70Errors.push(`v4 vrstic za preracun ≠ 1145 (${v4rows.length})`);
         }
@@ -5312,12 +5341,12 @@ const p45bErrors: string[] = [];
       : p70Errors.join("; "),
   );
 
-  // ——— qa-p71: korekcije v4 (C1 sekcije exclude + C2 p93 reverzija) ———
+  // ——— qa-p71: korekcije v4 (C1 sekcije exclude + C2 p93 reverzija; v6 runtime nasledstvo po P73) ———
   const p71Errors: string[] = [];
   const p71 = PS_GEO_P55;
   const v5 = V5_SECTIONS_P93_P71;
-  // 1) TS pini (v5)
-  if (p71.version !== 5) p71Errors.push(`pini: version ≠ 5 (${p71.version})`);
+  // 1) TS pini (v6 @ P73; v5Delta ostaja pinan kot arhiv nasledstva)
+  if (p71.version !== 6) p71Errors.push(`pini: version ≠ 6 (${p71.version})`);
   if (p71.v5Delta.excludedSections !== 56 || p71.v5Delta.revertedP93 !== 15 || p71.v5Delta.removed !== 68)
     p71Errors.push(`pini: v5Delta ≠ 56/15/68 (${p71.v5Delta.excludedSections}/${p71.v5Delta.revertedP93}/${p71.v5Delta.removed})`);
   if (p71.v5Delta.before.rows !== 1145 || p71.v5Delta.before.bases !== 878
@@ -5326,13 +5355,18 @@ const p45bErrors: string[] = [];
   if (p71.v5Delta.after.rows !== 1077 || p71.v5Delta.after.bases !== 879
     || p71.v5Delta.after.multiPage !== 184 || p71.v5Delta.after.crossBlatt !== 48)
     p71Errors.push(`pini: v5Delta.after ≠ 1077/879/184/48 (${p71.v5Delta.after.rows}/${p71.v5Delta.after.bases}/${p71.v5Delta.after.multiPage}/${p71.v5Delta.after.crossBlatt})`);
-  if (p71.join.matchedRows !== 1077 || p71.join.psPositionedParcels !== 879
-    || p71.join.ambiguousBases !== 184 || p71.join.ambiguousRows !== 373)
-    p71Errors.push("pini: join ≠ 1077/879/184/373");
-  if (p71.areaProof.medianRatio !== 3.9052 || p71.areaProof.deltaPct !== 8.58
+  if (p71.v6Delta.splitBases !== 135 || p71.v6Delta.droppedPairs !== 137 || p71.v6Delta.droppedRows !== 138)
+    p71Errors.push(`pini: v6Delta ≠ 135/137/138 (${p71.v6Delta.splitBases}/${p71.v6Delta.droppedPairs}/${p71.v6Delta.droppedRows})`);
+  if (p71.v6Delta.after.rows !== 939 || p71.v6Delta.after.bases !== 879
+    || p71.v6Delta.after.multiPage !== 50 || p71.v6Delta.after.crossBlatt !== 48)
+    p71Errors.push(`pini: v6Delta.after ≠ 939/879/50/48 (${p71.v6Delta.after.rows}/${p71.v6Delta.after.bases}/${p71.v6Delta.after.multiPage}/${p71.v6Delta.after.crossBlatt})`);
+  if (p71.join.matchedRows !== 939 || p71.join.psPositionedParcels !== 879
+    || p71.join.ambiguousBases !== 50 || p71.join.ambiguousRows !== 100)
+    p71Errors.push("pini: join ≠ 939/879/50/100");
+  if (p71.areaProof.medianRatio !== 3.8941 || p71.areaProof.deltaPct !== 8.27
     || p71.spatialProof.consecPairs !== 652 || p71.spatialProof.medianM !== 51.8
     || p71.spatialProof.enrichmentX !== 25.5)
-    p71Errors.push("pini: area/spatial ≠ 3.9052/8.58/652/51.8/25.5");
+    p71Errors.push("pini: area/spatial ≠ 3.8941/8.27/652/51.8/25.5");
   if (v5.corrections.C1.excluded !== 56 || v5.corrections.C2.reverted !== 15
     || v5.corrections.C2.removed !== 12
     || v5.corrections.C2.pfMatches.join(",") !== "1603,1604,1605")
@@ -5350,13 +5384,25 @@ const p45bErrors: string[] = [];
           version?: number;
           join: { matchedRows: number; psPositionedParcels: number; ambiguousBases: number; ambiguousRows: number };
           v5Delta?: { excludedSections?: number; revertedP93?: number; removed?: number };
+          v6Delta?: { splitBases?: number; droppedPairs?: number; droppedRows?: number };
           rows: { page: number; base: string; parzella: string; areaQK: number | null; areaModern: number | null; areaSuspect?: boolean }[];
         };
-        if (rt.version !== 5) p71Errors.push(`runtime version ≠ 5 (${rt.version})`);
-        if (rt.rows.length !== 1077) p71Errors.push(`runtime vrstic ≠ 1077 (${rt.rows.length})`);
-        if (rt.join.matchedRows !== 1077 || rt.join.psPositionedParcels !== 879
-          || rt.join.ambiguousBases !== 184 || rt.join.ambiguousRows !== 373)
-          p71Errors.push(`runtime join ≠ 1077/879/184/373 (${rt.join.matchedRows}/${rt.join.psPositionedParcels}/${rt.join.ambiguousBases}/${rt.join.ambiguousRows})`);
+        // P73: runtime je v6 — v5 živi v zamrznjenem dokazu; runtime mora
+        // deklarirati nasledstvo (v6Delta == C3 SPLIT opcija A + v5Delta še vedno prisoten)
+        if ((rt.version ?? 0) >= 6) {
+          const d6 = rt.v6Delta ?? {};
+          if (d6.splitBases !== 135 || d6.droppedPairs !== 137 || d6.droppedRows !== 138)
+            p71Errors.push(`runtime v6Delta ≠ 135/137/138 (${d6.splitBases}/${d6.droppedPairs}/${d6.droppedRows})`);
+          const d5 = rt.v5Delta ?? {};
+          if (d5.excludedSections !== 56 || d5.revertedP93 !== 15 || d5.removed !== 68)
+            p71Errors.push(`runtime v5Delta (arhiv) ≠ 56/15/68 (${d5.excludedSections}/${d5.revertedP93}/${d5.removed})`);
+        } else if (rt.version !== 5) {
+          p71Errors.push(`runtime version ≠ 5 ali ≥ 6 (${rt.version})`);
+        }
+        if (rt.rows.length !== 939) p71Errors.push(`runtime vrstic ≠ 939 (${rt.rows.length})`);
+        if (rt.join.matchedRows !== 939 || rt.join.psPositionedParcels !== 879
+          || rt.join.ambiguousBases !== 50 || rt.join.ambiguousRows !== 100)
+          p71Errors.push(`runtime join ≠ 939/879/50/100 (${rt.join.matchedRows}/${rt.join.psPositionedParcels}/${rt.join.ambiguousBases}/${rt.join.ambiguousRows})`);
         // C1 preracun: 0 vrstic na sekijskih straneh (83/84/85/86/88)
         const secRows = rt.rows.filter((r) => r.page === 83 || r.page === 84 || r.page === 85 || r.page === 86 || r.page === 88).length;
         if (secRows !== 0) p71Errors.push(`preracun C1: sekijskih vrstic v runtime ≠ 0 (${secRows})`);
@@ -5383,7 +5429,7 @@ const p45bErrors: string[] = [];
         const p71Med = p71Ratios.length % 2
           ? p71Ratios[(p71Ratios.length - 1) / 2]
           : (p71Ratios[p71Ratios.length / 2 - 1] + p71Ratios[p71Ratios.length / 2]) / 2;
-        if (Math.abs(p71Med - 3.9052) > 0.005) p71Errors.push(`preracun: area median ${p71Med.toFixed(4)} ≠ 3.9052`);
+        if (Math.abs(p71Med - 3.8941) > 0.005) p71Errors.push(`preracun: area median ${p71Med.toFixed(4)} ≠ 3.8941`);
         if (rawEv !== null) {
           const ev = JSON.parse(rawEv) as {
             version?: number;
@@ -5399,12 +5445,15 @@ const p45bErrors: string[] = [];
             p71Errors.push(`dokaz C2 ≠ 12 izpad / 15 reverz (${(ev.corrections?.C2?.removedRows ?? []).length}/${ev.corrections?.C2?.revertedRows})`);
           if ((ev.removedRows ?? []).length !== 68)
             p71Errors.push(`dokaz removedRows ≠ 68 (${(ev.removedRows ?? []).length})`);
-          const subset = rt.rows.every((rr, i) =>
-            Object.entries(rr).every(([k, v]) => JSON.stringify((ev.rowsEvidence ?? [])[i]?.[k]) === JSON.stringify(v)));
-          if (!subset) p71Errors.push("dokaz v5 ⊉ runtime: vrstice niso bajtno enake");
-          p71FileDetail = `repo: dokaz v5 == runtime bajtno (${(ev.rowsEvidence ?? []).length} vrstic; C1 56 + C2 12/15 = 68 removedRows) · preracun: 0 sekijskih vrstic, p93 base == parzella 3/3 {1603,1604,1605}, 1904/1906 izpad, 1603/1604/1605 prisotni, area median ${p71Med.toFixed(4)}`;
+          // P73: runtime je v6 — v5 dokaz ostaja zamrznjen; nasledstvo
+          // preverjeno kot vsebujočnost ključev (v6 rows ⊆ v5 rowsEvidence,
+          // 1077 − 138 dropov = 939); bajtno projekcijo opravlja qa-p73
+          const evKeys = new Set(((ev.rowsEvidence ?? []) as Record<string, unknown>[]).map((r) => `${r.page}|${r.base}`));
+          if (!rt.rows.every((rr) => evKeys.has(`${rr.page}|${rr.base}`)))
+            p71Errors.push("nasledstvo v5→v6: vrstica runtime ni v v5 rowsEvidence");
+          p71FileDetail = `repo: dokaz v5 zamrznjen (${(ev.rowsEvidence ?? []).length} vrstic; C1 56 + C2 12/15 = 68 removedRows) · nasledstvo v6: 939 vrstic ⊆ v5 (−138 dropov P73) · preracun: 0 sekijskih vrstic, p93 base == parzella 3/3 {1603,1604,1605}, 1904/1906 izpad, 1603/1604/1605 prisotni, area median ${p71Med.toFixed(4)}`;
         } else {
-          p71FileDetail = `produkcija: preracun na runtime v5 — 0 sekijskih vrstic, p93 base == parzella 3/3 {1603,1604,1605}, 1904/1906 izpad, 1603/1604/1605 prisotni, area median ${p71Med.toFixed(4)}`;
+          p71FileDetail = `produkcija: preracun na runtime v6 — 0 sekijskih vrstic, p93 base == parzella 3/3 {1603,1604,1605}, 1904/1906 izpad, 1603/1604/1605 prisotni, area median ${p71Med.toFixed(4)}`;
         }
       } catch (e) {
         p71Errors.push(`ps-parcels-geo v5 datoteke neuspešno: ${String(e).slice(0, 80)}`);
@@ -5413,11 +5462,11 @@ const p45bErrors: string[] = [];
   }
   push(
     "qa-p71-v5-corrections",
-    "P71: KOREKCIJE v4 (issue #13) — (C1) 56 sekijskih vrstic (p83 13 · p84 12 · p85 14 · p86 14 · p88 3) EXCLUDE iz joina (P69 sectionClass bajtno; dokazane lažne fuzije na Blatt I poligone — Σ ratio 161 = 235.65×, lastniško prekrivanje s p11 = 0; LASTNIŠKA odločitev: opcija exclude; vrstice ostanejo v registru brez geometrije; 0 poligonov ostane praznih) + (C2) P93 REVERZIJA — P68 renum 160x→190x OVRŽEN: notranja glifna kontrola (r9 = 1609 / r19 = 1619 — gotova 9 z repom ≠ srednja 6; isti pisar; kontrole p98 '1916' = 9 in 6 v istem številu, p92 981–983 verificirane 9) + annRecords anotatorja (1601–1619, 'Durch Theilung im 1824', '1870. 8-1117') + pageMap P56 + P38 pass2; 15 vrstic base := parzella; PF ujemanja {1603, 1604, 1605} (prej prazni poligoni dobili prve vrstice), 12 izpadlih (base brez PF poligona — 1601–1620 večinoma odsotnih v sodobnem k.o.); PF 1901–1920 brez lažnih dvojnih zahtevkov p93 (ostane p98 III), PF 1904/1906 izpadla iz base seta; v5: 1077 vrstic / 879 base / 184 multi-page / 48 cross-Blatt; area median 3.9052 (Δ +8.58 %, kontrola 4.2304); soslednost 652/51.8/25.5×; nespremenjene vrstice bajtno == v4 (1041 + 33 group-derived); forenzika research/issue17/p93-forensics/ (7 izrezov 8–12×); skripta --check PASS; status REVIEW",
-    "P71: THE v4 CORRECTIONS (issue #13) — (C1) 56 section rows (p83 13 · p84 12 · p85 14 · p86 14 · p88 3) EXCLUDED from the join (P69 sectionClass byte-equal; proven false fusions onto Blatt I polygons — Σ ratio 161 = 235.65×, owner overlap with p11 = 0; the OWNER's decision: the exclude option; the rows stay in the register without geometry; 0 polygons left empty) + (C2) THE P93 REVERSION — the P68 renum 160x→190x REFUTED: the within-page glyph control (r9 = 1609 / r19 = 1619 — the certain 9 with a descender ≠ the middle 6; same scribe; controls p98 '1916' = 9 and 6 in the same number, p92 981–983 verified 9s) + the annotator's annRecords (1601–1619, 'Durch Theilung im 1824', '1870. 8-1117') + the P56 pageMap + P38 pass2; 15 rows base := parzella; PF matches {1603, 1604, 1605} (previously empty polygons got their first rows), 12 dropped (base without a PF polygon — 1601–1620 mostly absent from the modern c.m.); PF 1901–1920 free of p93's false double claims (p98 III remains), PF 1904/1906 dropped from the base set; v5: 1,077 rows / 879 bases / 184 multi-page / 48 cross-Blatt; area median 3.9052 (Δ +8.58 %, control 4.2304); adjacency 652/51.8/25.5×; unchanged rows byte-identical to v4 (1,041 + 33 group-derived); forensics research/issue17/p93-forensics/ (7 crops 8–12×); the script --check PASS; status REVIEW",
+    "P71: KOREKCIJE v4 (issue #13) — (C1) 56 sekijskih vrstic (p83 13 · p84 12 · p85 14 · p86 14 · p88 3) EXCLUDE iz joina (P69 sectionClass bajtno; dokazane lažne fuzije na Blatt I poligone — Σ ratio 161 = 235.65×, lastniško prekrivanje s p11 = 0; LASTNIŠKA odločitev: opcija exclude; vrstice ostanejo v registru brez geometrije; 0 poligonov ostane praznih) + (C2) P93 REVERZIJA — P68 renum 160x→190x OVRŽEN: notranja glifna kontrola (r9 = 1609 / r19 = 1619 — gotova 9 z repom ≠ srednja 6; isti pisar; kontrole p98 '1916' = 9 in 6 v istem številu, p92 981–983 verificirane 9) + annRecords anotatorja (1601–1619, 'Durch Theilung im 1824', '1870. 8-1117') + pageMap P56 + P38 pass2; 15 vrstic base := parzella; PF ujemanja {1603, 1604, 1605} (prej prazni poligoni dobili prve vrstice), 12 izpadlih (base brez PF poligona — 1601–1620 večinoma odsotnih v sodobnem k.o.); PF 1901–1920 brez lažnih dvojnih zahtevkov p93 (ostane p98 III), PF 1904/1906 izpadla iz base seta; v5: 1077 vrstic / 879 base / 184 multi-page / 48 cross-Blatt; area median 3.9052 (Δ +8.58 %, kontrola 4.2304); soslednost 652/51.8/25.5×; nespremenjene vrstice bajtno == v4 (1041 + 33 group-derived); forenzika research/issue17/p93-forensics/ (7 izrezov 8–12×); skripta --check PASS; P73: opcija A izvedena nad v5 — runtime v6 (939 vrstic; drop 138 vrstic drugega bloka; v5 arhiviran); status REVIEW",
+    "P71: THE v4 CORRECTIONS (issue #13) — (C1) 56 section rows (p83 13 · p84 12 · p85 14 · p86 14 · p88 3) EXCLUDED from the join (P69 sectionClass byte-equal; proven false fusions onto Blatt I polygons — Σ ratio 161 = 235.65×, owner overlap with p11 = 0; the OWNER's decision: the exclude option; the rows stay in the register without geometry; 0 polygons left empty) + (C2) THE P93 REVERSION — the P68 renum 160x→190x REFUTED: the within-page glyph control (r9 = 1609 / r19 = 1619 — the certain 9 with a descender ≠ the middle 6; same scribe; controls p98 '1916' = 9 and 6 in the same number, p92 981–983 verified 9s) + the annotator's annRecords (1601–1619, 'Durch Theilung im 1824', '1870. 8-1117') + the P56 pageMap + P38 pass2; 15 rows base := parzella; PF matches {1603, 1604, 1605} (previously empty polygons got their first rows), 12 dropped (base without a PF polygon — 1601–1620 mostly absent from the modern c.m.); PF 1901–1920 free of p93's false double claims (p98 III remains), PF 1904/1906 dropped from the base set; v5: 1,077 rows / 879 bases / 184 multi-page / 48 cross-Blatt; area median 3.9052 (Δ +8.58 %, control 4.2304); adjacency 652/51.8/25.5×; unchanged rows byte-identical to v4 (1,041 + 33 group-derived); forensics research/issue17/p93-forensics/ (7 crops 8–12×); the script --check PASS; P73: option A executed on top of v5 — the runtime is v6 (939 rows; 138 second-block rows dropped; v5 archived); status REVIEW",
     p71Errors.length === 0,
     p71Errors.length === 0
-      ? `pini v5Delta 56/15/68 · before 1145/878/215/79 · after 1077/879/184/48 · area 3.9052 (+8.58 %) · sosledje 652/51.8/25.5× · corrections 56/15/12/{1603,1604,1605} · ${p71FileDetail}`
+      ? `pini v6Delta 135/137/138 → 939/879/50/48 · v5Delta arhiv 56/15/68 (before 1145/878/215/79) · area 3.8941 (+8.27 %) · sosledje 652/51.8/25.5× · corrections 56/15/12/{1603,1604,1605} · ${p71FileDetail}`
       : p71Errors.join("; "),
   );
 
@@ -5474,14 +5523,17 @@ const p45bErrors: string[] = [];
     if (oa.drop !== 137 || oa.rows !== 939 || oa.bases !== 879 || oa.lost !== 0 || oa.multi !== 50 || oa.cross !== 48)
       p72Errors.push(`pini: optionA ≠ 137/939/879/0/50/48 (${oa.drop}/${oa.rows}/${oa.bases}/${oa.lost}/${oa.multi}/${oa.cross})`);
   }
-  // 2) datoteke + NEODVISEN preracun dual seta iz v5 runtime vrstic (dve obliki po P53/P57/P58;
-  //    v5 runtime in P59 pageAttribution sta berljiva v OBEH oblikah — celovit preracun tudi produkcija)
+  // 2) datoteke + NEODVISEN preracun dual seta (dve obliki po P53/P57/P58;
+  //    P73: dual set se re-izpelje iz dual pack RUNTIME vrstic (274; nespremenjen)
+  //    × P59 pageAttribution — v5 runtime vrstice živijo v zamrznjenem dokazu;
+  //    nova pozitivna kontrola: v6 runtime NE SME vsebovati drop kombinacij (nil-claim))
   let p72FileDetail = "datoteke niso preverjene (readFile ni na voljo) — celovita kontrola teče na /api/qa";
   if (opts.readFile) {
     const rawRt = opts.readFile("src/data/atlas/ps-parcels-geo.json");
     const rawP59 = opts.readFile("src/data/atlas/ps-blatt-headers.json");
     const rawPackRt = opts.readFile("src/data/atlas/ps-dual-occurrence-pack.json");
     const rawPackEv = opts.readFile("research/issue17/ps-dual-occurrence-pack.json");
+    const rawV5ev = opts.readFile("research/issue17/ps-parcels-geo-v5.json");
     if (rawRt === null || rawP59 === null || rawPackRt === null) {
       p72Errors.push("runtime ps-parcels-geo / ps-blatt-headers / ps-dual-occurrence-pack ni berljiv");
     } else {
@@ -5494,10 +5546,15 @@ const p45bErrors: string[] = [];
           kultur?: string | null;
           areaQK: number | null;
         };
-        const rt = JSON.parse(rawRt) as { version?: number; rows: P72Row[] };
+        const rt = JSON.parse(rawRt) as { version?: number; v6Delta?: { splitBases?: number; droppedPairs?: number; droppedRows?: number; after?: { rows?: number; multiPage?: number; crossBlatt?: number } }; join: { ambiguousBases: number; matchedRows: number }; rows: P72Row[] };
         const p59 = JSON.parse(rawP59) as { pageAttribution: Record<string, { blatt?: string | null }> };
-        if (rt.version !== 5) p72Errors.push(`runtime version ≠ 5 (${rt.version})`);
-        if (rt.rows.length !== 1077) p72Errors.push(`runtime vrstic ≠ 1077 (${rt.rows.length})`);
+        const packRt0 = JSON.parse(rawPackRt) as { bases?: Record<string, { rows?: P72Row[] }> };
+        if (rt.version !== 5) {
+          // P73: runtime je v6 — nasledstvo deklarirano (v6Delta == opcija A izvedena)
+          if (!((rt.version ?? 0) >= 6 && rt.v6Delta?.droppedPairs === 137 && rt.v6Delta?.droppedRows === 138 && rt.v6Delta?.splitBases === 135))
+            p72Errors.push(`runtime ni v5 in ne deklarira v6 nasledstva (version ${rt.version}, v6Delta ${JSON.stringify(rt.v6Delta ?? null)})`);
+        }
+        if (rt.rows.length !== 939) p72Errors.push(`runtime vrstic ≠ 939 (${rt.rows.length})`);
         const blattOf72 = (page: number): string | null => p59.pageAttribution[String(page)]?.blatt ?? null;
         const allDisjoint = (sets: Set<string>[]) => {
           for (let i = 0; i < sets.length; i++)
@@ -5505,14 +5562,14 @@ const p45bErrors: string[] = [];
               for (const v of sets[i]) if (sets[j].has(v)) return false;
           return true;
         };
+        // dual pack runtime vrstice (vsi 274 isti-Blatt vrstice; pack je po P73 nespremenjen)
         const byBase = new Map<string, P72Row[]>();
-        for (const r of rt.rows) {
-          const arr = byBase.get(r.base);
-          if (arr) arr.push(r);
-          else byBase.set(r.base, [r]);
+        for (const [b, entry] of Object.entries(packRt0.bases ?? {})) {
+          for (const r of entry.rows ?? []) byBase.set(b, [...(byBase.get(b) ?? []), r]);
         }
         // re-izpeljava dual set (skripta I2/I3/I4/I5 logika — dual = isti-Blatt + disjunktni lastniki;
-        // nearDual = disjunktni tudi brez lastnikov strani — konservativno izključeni)
+        // nearDual = disjunktni tudi brez lastnikov strani — konservativno izključeni; P73: nearDual
+        // vrstice ostanejo v v6, zato se re-izpeljejo iz v6 runtime vrstic)
         const duals = new Map<string, number[]>();
         const nearDuals = new Map<string, number[]>();
         for (const [b, rs] of byBase) {
@@ -5529,30 +5586,53 @@ const p45bErrors: string[] = [];
             if (pgs.size < 2) continue;
             const rs2 = rs.filter((r) => blattOf72(r.page) === bl && pgs.has(r.page));
             const perPage = new Map<number, Set<string>>();
-            const perPageAll = new Map<number, Set<string>>();
             for (const r of rs2) {
               if (r.owner) {
                 const s = perPage.get(r.page);
                 if (s) s.add(r.owner);
                 else perPage.set(r.page, new Set([r.owner]));
               }
-              const sa = perPageAll.get(r.page);
-              if (sa) sa.add(r.owner as string);
-              else perPageAll.set(r.page, new Set([r.owner as string]));
             }
             const pp = [...perPage.values()].filter((s) => s.size > 0);
-            const pall = [...perPageAll.values()].filter((s) => s.size > 0);
             const key = `${b}|${bl}`;
             if (pp.length >= 2 && allDisjoint(pp)) duals.set(key, [...pgs].sort((a, c) => a - c));
-            else if (pall.length >= 2 && allDisjoint(pall)) nearDuals.set(key, [...pgs].sort((a, c) => a - c));
+          }
+        }
+        {
+          const byBase6 = new Map<string, P72Row[]>();
+          for (const r of rt.rows) byBase6.set(r.base, [...(byBase6.get(r.base) ?? []), r]);
+          for (const [b, rs] of byBase6) {
+            if (rs.length < 2) continue;
+            const pagesByBlatt = new Map<string, Set<number>>();
+            for (const r of rs) {
+              const bl = blattOf72(r.page);
+              if (!bl) continue;
+              const s = pagesByBlatt.get(bl);
+              if (s) s.add(r.page);
+              else pagesByBlatt.set(bl, new Set([r.page]));
+            }
+            for (const [bl, pgs] of pagesByBlatt) {
+              if (pgs.size < 2) continue;
+              const rs2 = rs.filter((r) => blattOf72(r.page) === bl && pgs.has(r.page));
+              const perPageAll = new Map<number, Set<string>>();
+              for (const r of rs2) {
+                const sa = perPageAll.get(r.page);
+                if (sa) sa.add(r.owner as string);
+                else perPageAll.set(r.page, new Set([r.owner as string]));
+              }
+              const pall = [...perPageAll.values()].filter((s) => s.size > 0);
+              const key = `${b}|${bl}`;
+              if (pall.length >= 2 && allDisjoint(pall)) nearDuals.set(key, [...pgs].sort((a, c) => a - c));
+            }
           }
         }
         if (duals.size !== 135) p72Errors.push(`preracun: dual base ≠ 135 (${duals.size})`);
         if (nearDuals.size !== 2) p72Errors.push(`preracun: nearDual ≠ 2 (${nearDuals.size})`);
         const nearKeys = [...nearDuals.keys()].map((k) => k.split("|")[0]).sort().join(",");
         if (nearKeys !== "2080,2081") p72Errors.push(`preracun: nearDual ≠ 2080,2081 (${nearKeys})`);
+        const packRows: P72Row[] = [...byBase.values()].flat();
         let rowsIB = 0;
-        for (const r of rt.rows) if (duals.has(`${r.base}|${blattOf72(r.page)}`)) rowsIB += 1;
+        for (const r of packRows) if (duals.has(`${r.base}|${blattOf72(r.page)}`)) rowsIB += 1;
         if (rowsIB !== 274) p72Errors.push(`preracun: isti-Blatt vrstic ≠ 274 (${rowsIB})`);
         let triples = 0;
         for (const pgs of duals.values()) if (pgs.length > 2) triples += 1;
@@ -5620,25 +5700,31 @@ const p45bErrors: string[] = [];
           const m = pgs[0];
           for (const p of pgs) if (p !== m) drop.add(`${p}|${b}`);
         }
-        const rowsA = rt.rows.filter((r) => !drop.has(`${r.page}|${r.base}`));
-        const basesA = new Set(rowsA.map((r) => r.base));
-        const lost = byBase.size - basesA.size;
         if (drop.size !== 137) p72Errors.push(`preracun opcija A: drop ≠ 137 (${drop.size})`);
-        if (rowsA.length !== 939) p72Errors.push(`preracun opcija A: rows ≠ 939 (${rowsA.length})`);
-        if (lost !== 0) p72Errors.push(`preracun opcija A: lost ≠ 0 (${lost})`);
+        // P73: opcija A IZVEDENA (v6) — pozitivna kontrola: v6 runtime NE SME vsebovati drop kombinacij
+        const nilClaim = rt.rows.filter((r) => drop.has(`${r.page}|${r.base}`));
+        if (nilClaim.length !== 0) p72Errors.push(`nil-claim: drop kombinacij še v v6 runtime ≠ 0 (${nilClaim.length})`);
+        // 138 vrstic = drop kombinacij × vrstice v dual pack (1 kombinacija ima 2 vrstici)
+        const droppedRowsPack = packRows.filter((r) => drop.has(`${r.page}|${r.base}`)).length;
+        if (droppedRowsPack !== 138) p72Errors.push(`preracun opcija A: drop vrstic ≠ 138 (${droppedRowsPack})`);
+        // v6 == izvedena opcija A: rows 939, lost 0, multi 50, cross 48 (iz runtime vrstic)
         const byBaseA = new Map<string, Set<number>>();
-        for (const r of rowsA) {
+        for (const r of rt.rows) {
           const s = byBaseA.get(r.base);
           if (s) s.add(r.page);
           else byBaseA.set(r.base, new Set([r.page]));
         }
+        const rowsA = rt.rows.length;
+        const lost = [...byBase.keys()].filter((b) => !byBaseA.has(b)).length;
+        if (rowsA !== 939) p72Errors.push(`preracun opcija A: rows ≠ 939 (${rowsA})`);
+        if (lost !== 0) p72Errors.push(`preracun opcija A: lost ≠ 0 (${lost})`);
         const multiA = [...byBaseA.values()].filter((s) => s.size > 1).length;
         if (multiA !== 50) p72Errors.push(`preracun opcija A: multi ≠ 50 (${multiA})`);
         let crossA = 0;
         for (const [b2, s] of byBaseA) {
           const bls = new Set<string>();
-          for (const r of byBase.get(b2) as P72Row[]) {
-            if (!s.has(r.page)) continue;
+          for (const r of rt.rows) {
+            if (r.base !== b2 || !s.has(r.page)) continue;
             const bl = blattOf72(r.page);
             if (bl) bls.add(bl);
           }
@@ -5721,9 +5807,24 @@ const p45bErrors: string[] = [];
             p72Errors.push(`dokaz bases ≠ 135 (${Object.keys(packEv.bases ?? {}).length})`);
           if (!Array.isArray(packEv.invariants) || packEv.invariants.length !== 9)
             p72Errors.push("dokaz invarianti ≠ 9 (I1–I9)");
-          p72FileDetail = `repo: dokaz == runtime (summary bajtno, runtime bajtna projekcija I7, bases 135, invarianti I1–I9, v5Sha256 ${String(packEv.v5Sha256 ?? "").slice(0, 8)}…) · preracun iz v5 vrstic: dual ${duals.size} + nearDual ${nearDuals.size}, isti-Blatt vrstic ${rowsIB}, triples ${triples}, lastniki ${ownerDisjoint}/135, opcija A drop ${drop.size}/rows ${rowsA.length}/lost ${lost}/multi ${multiA}/cross ${crossA}, Σ areaQK A ${Math.round(sumA)}/B ${Math.round(sumB)}, P70 33 ⊂ dual + p51×p91 ${p51x91.length} + novih ${newUnnoticed}`;
+          p72FileDetail = `repo: dokaz == runtime (summary bajtno, runtime bajtna projekcija I7, bases 135, invarianti I1–I9, v5Sha256 ${String(packEv.v5Sha256 ?? "").slice(0, 8)}…) · preracun iz pack vrstic × P59: dual ${duals.size} + nearDual ${nearDuals.size}, isti-Blatt vrstic ${rowsIB}, triples ${triples}, lastniki ${ownerDisjoint}/135, opcija A drop ${drop.size} = ${droppedRowsPack} vrstic, v6 == izvedba (rows ${rowsA}/lost ${lost}/multi ${multiA}/cross ${crossA}; nil-claim 0), Σ areaQK A ${Math.round(sumA)}/B ${Math.round(sumB)}, P70 33 ⊂ dual + p51×p91 ${p51x91.length} + novih ${newUnnoticed}`;
         } else {
-          p72FileDetail = `produkcija: runtime pack preverjen (135 base, summary == TS konstanta, P70 33 z p70Collision) · preracun iz v5 vrstic: dual ${duals.size} + nearDual ${nearDuals.size}, isti-Blatt vrstic ${rowsIB}, triples ${triples}, lastniki ${ownerDisjoint}/135, opcija A drop ${drop.size}/rows ${rowsA.length}/lost ${lost}/multi ${multiA}/cross ${crossA}, Σ areaQK A ${Math.round(sumA)}/B ${Math.round(sumB)}, P70 33 ⊂ dual + p51×p91 ${p51x91.length} + novih ${newUnnoticed}`;
+          p72FileDetail = `produkcija: runtime pack preverjen (135 base, summary == TS konstanta, P70 33 z p70Collision) · preracun iz pack vrstic × P59: dual ${duals.size} + nearDual ${nearDuals.size}, isti-Blatt vrstic ${rowsIB}, triples ${triples}, lastniki ${ownerDisjoint}/135, opcija A drop ${drop.size} = ${droppedRowsPack} vrstic, v6 == izvedba (rows ${rowsA}/lost ${lost}/multi ${multiA}/cross ${crossA}; nil-claim 0), Σ areaQK A ${Math.round(sumA)}/B ${Math.round(sumB)}, P70 33 ⊂ dual + p51×p91 ${p51x91.length} + novih ${newUnnoticed}`;
+        }
+        // repo dodatek: celoven preracun opcije A nad zamrznjenim v5 dokazom (1077 → 939)
+        if (rawPackEv !== null && rawV5ev !== null) {
+          const v5ev = JSON.parse(rawV5ev) as { version?: number; rowsEvidence?: { page: number; base: string }[] };
+          if (v5ev.version !== 5) p72Errors.push(`v5 dokaz version ≠ 5 (${v5ev.version})`);
+          const v5rows = v5ev.rowsEvidence ?? [];
+          if (v5rows.length !== 1077) p72Errors.push(`v5 dokaz rowsEvidence ≠ 1077 (${v5rows.length})`);
+          const rowsAv5 = v5rows.filter((r) => !drop.has(`${r.page}|${r.base}`));
+          if (rowsAv5.length !== 939) p72Errors.push(`v5 dokaz − drop ≠ 939 (${rowsAv5.length})`);
+          const basesAv5 = new Set(rowsAv5.map((r) => r.base));
+          if (basesAv5.size !== 879) p72Errors.push(`v5 dokaz − drop bases ≠ 879 (${basesAv5.size})`);
+          const keys6 = new Set(rt.rows.map((r) => `${r.page}|${r.base}`));
+          if (!rowsAv5.every((r) => keys6.has(`${r.page}|${r.base}`)))
+            p72Errors.push("v5 dokaz − drop ≠ v6 runtime (ključi niso enaki)");
+          p72FileDetail += ` · v5 dokaz 1077 − drop 138 = 939 == v6 runtime (ključi bajtno)`;
         }
       } catch (e) {
         p72Errors.push(`ps-dual-occurrence-pack datoteke neuspešno: ${String(e).slice(0, 80)}`);
@@ -5732,12 +5833,292 @@ const p45bErrors: string[] = [];
   }
   push(
     "qa-p72-dual-pack",
-    "P72: DVOJNOSTI REGISTRA — 135 ISTI-BLATT DUAL BASE (issue #13) — odločitveni paket za isti-Blatt SPLIT joina (P70 »SPLIT = LASTNIKA«; razširitev P66 cross-Blatt vzorca; deterministično, brez AI ob delovanju; NE odloča namesto lastnika — MERI in DOKAZUJE; v5 runtime join NESPREMENJEN): 135 base z vrsticami na ≥ 2 straneh ISTEGA Blatta ima med straneh DISJUNKTNE lastnike (274 vrstice; 2 tri-zapisni (95,100,101)/(105,106,121) + 2 nearDual z strani brez lastnikov — 2080, 2081); stranski pari delijo iste številčne razpone po P56 pageMap (p23/p24 = 401–420 obe; p51/p91 = 961–980 obe; p103/p118 = 2001–2020 obe …) z odmiki po blokih konsistentnimi (40 × 44 · 15 × 49 · 5 × 29 · 1 × 13; 2 triple gapi 6/16) = DVOJNI ZAPIS iste serije v dveh blokih registra; hišne številke RAZLIČNE 130/135 (5 brez hn; 0 isti); kulture 124 različne / 11 prekrivanj; Σ areaQK blok A 128 125 / blok B 145 057 QK; P70 33 kolizij (p49/89 × 15, p50/90 × 10, p52/92 × 8) = PODMNOŽICA + 11 starih p51×p91 (v2 era) + 91 dozdaj neopaženih; opcija A (drop drugi-blok vrstic po C1 vzorcu): drop 137, 0 base brez vrstic, rows 1077 → 939, multi 184 → 50, cross 48 (nespr.); opcija B (per-page instance) zahteva georef Blattnih kart [~]; opcija C (re-renum) neodločljiva (pageMap razponi prekrivajo); skripta scripts/p72_ps_dual_pack.py (I1–I9, --check bajtno PASS); status REVIEW",
-    "P72: REGISTER DUAL OCCURRENCES — 135 SAME-BLATT DUAL BASES (issue #13) — the decision pack for the same-Blatt SPLIT join (P70 \"SPLIT = OWNER\"; extending the P66 cross-Blatt pattern; deterministic, no AI at runtime; does NOT decide on behalf of the owner — MEASURES and PROVES; the v5 runtime join UNCHANGED): 135 bases with rows on ≥ 2 pages of the SAME Blatt have DISJOINT owners across those pages (274 rows; 2 triples (95,100,101)/(105,106,121) + 2 near-duals with owner-less pages — 2080, 2081); page pairs share the same number ranges per the P56 pageMap (p23/p24 = 401–420 both; p51/p91 = 961–980 both; p103/p118 = 2001–2020 both …) with consistent per-block gaps (40 × 44 · 15 × 49 · 5 × 29 · 1 × 13; 2 triple gaps 6/16) = DUAL ENTRY of the same series in two register blocks; house numbers DIFFERENT 130/135 (5 without a house number; 0 same); cultures 124 different / 11 overlapping; Σ areaQK block A 128 125 / block B 145 057 QK; the P70 33 collisions (p49/89 × 15, p50/90 × 10, p52/92 × 8) are a SUBSET + 11 old p51×p91 (v2 era) + 91 previously unnoticed; option A (drop second-block rows per the C1 pattern): drop 137, 0 bases left empty, rows 1,077 → 939, multi 184 → 50, cross 48 (unchanged); option B (per-page instances) requires georeferenced Blatt sheets [~]; option C (re-numbering) undecidable (the pageMap ranges overlap); the script scripts/p72_ps_dual_pack.py (I1–I9, --check byte-equal PASS); status REVIEW",
+    "P72: DVOJNOSTI REGISTRA — 135 ISTI-BLATT DUAL BASE (issue #13) — odločitveni paket za isti-Blatt SPLIT joina (P70 »SPLIT = LASTNIKA«; razširitev P66 cross-Blatt vzorca; deterministično, brez AI ob delovanju; NE odloča namesto lastnika — MERI in DOKAZUJE; v5 runtime join NESPREMENJEN): 135 base z vrsticami na ≥ 2 straneh ISTEGA Blatta ima med straneh DISJUNKTNE lastnike (274 vrstice; 2 tri-zapisni (95,100,101)/(105,106,121) + 2 nearDual z strani brez lastnikov — 2080, 2081); stranski pari delijo iste številčne razpone po P56 pageMap (p23/p24 = 401–420 obe; p51/p91 = 961–980 obe; p103/p118 = 2001–2020 obe …) z odmiki po blokih konsistentnimi (40 × 44 · 15 × 49 · 5 × 29 · 1 × 13; 2 triple gapi 6/16) = DVOJNI ZAPIS iste serije v dveh blokih registra; hišne številke RAZLIČNE 130/135 (5 brez hn; 0 isti); kulture 124 različne / 11 prekrivanj; Σ areaQK blok A 128 125 / blok B 145 057 QK; P70 33 kolizij (p49/89 × 15, p50/90 × 10, p52/92 × 8) = PODMNOŽICA + 11 starih p51×p91 (v2 era) + 91 dozdaj neopaženih; opcija A (drop drugi-blok vrstic po C1 vzorcu): drop 137, 0 base brez vrstic, rows 1077 → 939, multi 184 → 50, cross 48 (nespr.); opcija B (per-page instance) zahteva georef Blattnih kart [~]; opcija C (re-renum) neodločljiva (pageMap razponi prekrivajo); skripta scripts/p72_ps_dual_pack.py (I1–I9, --check bajtno PASS); P73: opcija A IZVEDENA — v6 (drop 137 kombinacij = 138 vrstic; nil-claim: 0 drop kombinacij v v6 runtime; v6 == izvedba 939/879/50/48); status REVIEW",
+    "P72: REGISTER DUAL OCCURRENCES — 135 SAME-BLATT DUAL BASES (issue #13) — the decision pack for the same-Blatt SPLIT join (P70 \"SPLIT = OWNER\"; extending the P66 cross-Blatt pattern; deterministic, no AI at runtime; does NOT decide on behalf of the owner — MEASURES and PROVES; the v5 runtime join UNCHANGED): 135 bases with rows on ≥ 2 pages of the SAME Blatt have DISJOINT owners across those pages (274 rows; 2 triples (95,100,101)/(105,106,121) + 2 near-duals with owner-less pages — 2080, 2081); page pairs share the same number ranges per the P56 pageMap (p23/p24 = 401–420 both; p51/p91 = 961–980 both; p103/p118 = 2001–2020 both …) with consistent per-block gaps (40 × 44 · 15 × 49 · 5 × 29 · 1 × 13; 2 triple gaps 6/16) = DUAL ENTRY of the same series in two register blocks; house numbers DIFFERENT 130/135 (5 without a house number; 0 same); cultures 124 different / 11 overlapping; Σ areaQK block A 128 125 / block B 145 057 QK; the P70 33 collisions (p49/89 × 15, p50/90 × 10, p52/92 × 8) are a SUBSET + 11 old p51×p91 (v2 era) + 91 previously unnoticed; option A (drop second-block rows per the C1 pattern): drop 137, 0 bases left empty, rows 1,077 → 939, multi 184 → 50, cross 48 (unchanged); option B (per-page instances) requires georeferenced Blatt sheets [~]; option C (re-numbering) undecidable (the pageMap ranges overlap); the script scripts/p72_ps_dual_pack.py (I1–I9, --check byte-equal PASS); P73: option A EXECUTED — v6 (137 combinations = 138 rows dropped; nil-claim: 0 drop combinations in the v6 runtime; v6 == the execution 939/879/50/48); status REVIEW",
     p72Errors.length === 0,
     p72Errors.length === 0
-      ? `pini dual 135 · vrstic 274 · triples 2 · nearDual 2080/2081 · lastniki 135/135 · hn 130/5 · kulture 124/11 · odmiki/pari == pin · P70 33 ⊂ dual + 11 starih + 91 novih · Σ areaQK 128125/145057 · opcija A 137/939/879/0/50/48 · ${p72FileDetail}`
+      ? `pini dual 135 · vrstic 274 · triples 2 · nearDual 2080/2081 · lastniki 135/135 · hn 130/5 · kulture 124/11 · odmiki/pari == pin · P70 33 ⊂ dual + 11 starih + 91 novih · Σ areaQK 128125/145057 · opcija A 137/138/939/0/50/48 · nil-claim 0 · ${p72FileDetail}`
       : p72Errors.join("; "),
+  );
+
+  // ——— qa-p73: isti-Blatt SPLIT opcija A — v6 (pini SPLIT_OPTION_A_P73 + celoven neodvisen
+  //      preracun iz runtime datotek: v6 vrstice × P59 pageAttribution × dual pack runtime) ———
+  const p73 = SPLIT_OPTION_A_P73;
+  const p73Errors: string[] = [];
+  // 1) TS pini (SPLIT_OPTION_A_P73)
+  if (p73.version !== 6) p73Errors.push(`pini: version ≠ 6 (${p73.version})`);
+  if (p73.date !== "2026-10-15") p73Errors.push(`pini: date ≠ 2026-10-15 (${p73.date})`);
+  if (!p73.task.includes("isti-Blatt SPLIT")) p73Errors.push("pini: task ni P73 SPLIT");
+  {
+    const s = p73.summary;
+    if (s.splitBases !== 135 || s.droppedPairs !== 137 || s.droppedRows !== 138)
+      p73Errors.push(`pini: split ≠ 135/137/138 (${s.splitBases}/${s.droppedPairs}/${s.droppedRows})`);
+    if (s.p70Subset !== 33 || s.p70SubsetDist.p89 !== 15 || s.p70SubsetDist.p90 !== 10 || s.p70SubsetDist.p92 !== 8)
+      p73Errors.push(`pini: P70 podmnožica ≠ 33/15/10/8 (${s.p70Subset}/${s.p70SubsetDist.p89}/${s.p70SubsetDist.p90}/${s.p70SubsetDist.p92})`);
+    if (JSON.stringify(s.nearDualKept) !== JSON.stringify(["2080", "2081"]))
+      p73Errors.push(`pini: nearDualKept ≠ 2080,2081 (${s.nearDualKept.join(",")})`);
+    if (s.before.rows !== 1077 || s.before.bases !== 879 || s.before.multiPage !== 184 || s.before.crossBlatt !== 48)
+      p73Errors.push(`pini: before ≠ 1077/879/184/48 (${s.before.rows}/${s.before.bases}/${s.before.multiPage}/${s.before.crossBlatt})`);
+    if (s.after.rows !== 939 || s.after.bases !== 879 || s.after.multiPage !== 50 || s.after.crossBlatt !== 48)
+      p73Errors.push(`pini: after ≠ 939/879/50/48 (${s.after.rows}/${s.after.bases}/${s.after.multiPage}/${s.after.crossBlatt})`);
+    if (s.sharePct !== 34.0) p73Errors.push(`pini: sharePct ≠ 34.0 (${s.sharePct})`);
+    if (s.series.BI !== 26 || s.series.S1 !== 847 || s.series.S2 !== 66)
+      p73Errors.push(`pini: serije ≠ 26/847/66 (${s.series.BI}/${s.series.S1}/${s.series.S2})`);
+    if (s.conf.STRONG !== 174 || s.conf.MEDIUM !== 629 || s.conf.WEAK !== 136)
+      p73Errors.push(`pini: conf ≠ 174/629/136 (${s.conf.STRONG}/${s.conf.MEDIUM}/${s.conf.WEAK})`);
+    if (s.ambBases !== 50 || s.ambRows !== 100 || s.ambiguousTrueToFalse !== 135)
+      p73Errors.push(`pini: dvoumnost ≠ 50/100/135 (${s.ambBases}/${s.ambRows}/${s.ambiguousTrueToFalse})`);
+    if (p72canon(s.removedByPage) !== p72canon({ "8": 1, "24": 2, "73": 3, "89": 15, "90": 10, "91": 11, "92": 8, "100": 14, "101": 16, "106": 2, "114": 3, "118": 18, "119": 18, "121": 12, "123": 1, "135": 4 }))
+      p73Errors.push(`pini: removedByPage ≠ pin (${p72canon(s.removedByPage)})`);
+    if (s.areaMedian !== 3.8941 || s.areaDeltaPct !== 8.27 || s.consecPairs !== 652 || s.consecMedianM !== 51.8 || s.enrichmentX !== 25.5)
+      p73Errors.push(`pini: meritve ≠ 3.8941/8.27/652/51.8/25.5 (${s.areaMedian}/${s.areaDeltaPct}/${s.consecPairs}/${s.consecMedianM}/${s.enrichmentX})`);
+  }
+  {
+    const a = p73.areaProof;
+    if (a.pairsWithArea !== 919 || a.medianRatio !== 3.8941 || a.q25 !== 2.8051 || a.q75 !== 7.5871
+      || a.tightN !== 186 || a.tightShare !== 0.2024 || a.shuffleMedian !== 4.5766
+      || a.shuffleTightShare !== 0.0457 || a.historicalQkM2 !== 3.59665 || a.deltaPct !== 8.27)
+      p73Errors.push(`pini: areaProof ≠ 919/3.8941/2.8051/7.5871/186/0.2024/4.5766/0.0457/3.59665/8.27 (${a.pairsWithArea}/${a.medianRatio}/${a.q25}/${a.q75}/${a.tightN}/${a.tightShare}/${a.shuffleMedian}/${a.shuffleTightShare}/${a.historicalQkM2}/${a.deltaPct})`);
+    const sp = p73.spatialProof;
+    if (sp.consecPairs !== 652 || sp.medianM !== 51.8 || sp.q25M !== 33.0 || sp.q75M !== 87.8
+      || sp.share150 !== 0.9049 || sp.shuffleMedianM !== 1320.7 || sp.shuffleShare150 !== 0.0171 || sp.enrichmentX !== 25.5)
+      p73Errors.push(`pini: spatialProof ≠ 652/51.8/33.0/87.8/0.9049/1320.7/0.0171/25.5 (${sp.consecPairs}/${sp.medianM}/${sp.q25M}/${sp.q75M}/${sp.share150}/${sp.shuffleMedianM}/${sp.shuffleShare150}/${sp.enrichmentX})`);
+  }
+  // 2) datoteke + CELOVIT neodvisen preracun (dve obliki po P53/P57/P58; runtime datoteke
+  //    ps-parcels-geo.json / ps-blatt-headers.json / ps-dual-occurrence-pack.json so v buildu)
+  let p73FileDetail = "datoteke niso preverjene (readFile ni na voljo) — celovita kontrola teče na /api/qa";
+  if (opts.readFile) {
+    const rawRt73 = opts.readFile("src/data/atlas/ps-parcels-geo.json");
+    const rawP5973 = opts.readFile("src/data/atlas/ps-blatt-headers.json");
+    const rawPack73 = opts.readFile("src/data/atlas/ps-dual-occurrence-pack.json");
+    const rawEv73 = opts.readFile("research/issue17/ps-parcels-geo-v6.json");
+    const rawV5ev73 = opts.readFile("research/issue17/ps-parcels-geo-v5.json");
+    if (rawRt73 === null || rawP5973 === null || rawPack73 === null) {
+      p73Errors.push("runtime ps-parcels-geo / ps-blatt-headers / ps-dual-occurrence-pack ni berljiv");
+    } else {
+      try {
+        type P73Row = {
+          page: number;
+          base: string;
+          owner: string | null;
+          ambiguous?: boolean;
+          conf?: string | null;
+          series?: string | null;
+          areaQK?: number | null;
+          areaModern?: number | null;
+          areaSuspect?: boolean;
+        };
+        const rt73 = JSON.parse(rawRt73) as {
+          version?: number;
+          task?: string;
+          statusLine?: string;
+          join: { matchedRows: number; matchedRowsS1S2: number; matchedRowsBI: number; matchedSharePct: number; psPositionedParcels: number; suffixGroups: number; ambiguousBases: number; ambiguousRows: number };
+          v6Delta?: { splitBases?: number; droppedPairs?: number; droppedRows?: number; before?: { rows?: number; bases?: number; multiPage?: number; crossBlatt?: number }; after?: { rows?: number; bases?: number; multiPage?: number; crossBlatt?: number } };
+          spatialProof?: { consecPairs: number };
+          rows: P73Row[];
+        };
+        const p5973 = JSON.parse(rawP5973) as { pageAttribution: Record<string, { blatt?: string | null }> };
+        const pack73 = JSON.parse(rawPack73) as { bases?: Record<string, { rows?: P73Row[] }> };
+        const blattOf73 = (page: number): string | null => p5973.pageAttribution[String(page)]?.blatt ?? null;
+        const allDisjoint73 = (sets: Set<string>[]) => {
+          for (let i = 0; i < sets.length; i++)
+            for (let j = i + 1; j < sets.length; j++)
+              for (const v of sets[i]) if (sets[j].has(v)) return false;
+          return true;
+        };
+        // re-izpeljava dual seta (135) iz dual pack runtime vrstic (274) × P59 — isti pravilo kot P72
+        const byBasePack = new Map<string, P73Row[]>();
+        for (const [b, entry] of Object.entries(pack73.bases ?? {})) {
+          for (const r of entry.rows ?? []) byBasePack.set(b, [...(byBasePack.get(b) ?? []), r]);
+        }
+        const duals73 = new Map<string, number[]>();
+        for (const [b, rs] of byBasePack) {
+          if (rs.length < 2) continue;
+          const pagesByBlatt = new Map<string, Set<number>>();
+          for (const r of rs) {
+            const bl = blattOf73(r.page);
+            if (!bl) continue;
+            const s = pagesByBlatt.get(bl);
+            if (s) s.add(r.page);
+            else pagesByBlatt.set(bl, new Set([r.page]));
+          }
+          for (const [bl, pgs] of pagesByBlatt) {
+            if (pgs.size < 2) continue;
+            const perPage = new Map<number, Set<string>>();
+            for (const r of rs.filter((x) => blattOf73(x.page) === bl && pgs.has(x.page))) {
+              if (r.owner) {
+                const s = perPage.get(r.page);
+                if (s) s.add(r.owner);
+                else perPage.set(r.page, new Set([r.owner]));
+              }
+            }
+            const pp = [...perPage.values()].filter((s) => s.size > 0);
+            if (pp.length >= 2 && allDisjoint73(pp)) duals73.set(`${b}|${bl}`, [...pgs].sort((a, c) => a - c));
+          }
+        }
+        if (duals73.size !== 135) p73Errors.push(`preracun: dual base ≠ 135 (${duals73.size})`);
+        // drop set: drugi blok (keep = min stran) — 137 kombinacij
+        const drop73 = new Set<string>();
+        for (const [key, pgs] of duals73) {
+          const b = key.split("|")[0];
+          for (const p of pgs) if (p !== pgs[0]) drop73.add(`${p}|${b}`);
+        }
+        if (drop73.size !== 137) p73Errors.push(`preracun: drop kombinacij ≠ 137 (${drop73.size})`);
+        // (a) nil-claim: NO v6 row (page, base) v drop setu
+        const nil73 = rt73.rows.filter((r) => drop73.has(`${r.page}|${r.base}`));
+        if (nil73.length !== 0) p73Errors.push(`(a) nil-claim: ${nil73.length} drop kombinacij še v v6`);
+        // (b) v6 rows == 939
+        if (rt73.rows.length !== 939) p73Errors.push(`(b) v6 vrstic ≠ 939 (${rt73.rows.length})`);
+        // (c) 138 dropped == dual vrstice 274 − kept 136 (iz dual pack runtime)
+        const packRows73 = [...byBasePack.values()].flat();
+        const droppedPack73 = packRows73.filter((r) => drop73.has(`${r.page}|${r.base}`)).length;
+        const keptPack73 = packRows73.length - droppedPack73;
+        if (droppedPack73 !== 138 || keptPack73 !== 136)
+          p73Errors.push(`(c) drop vrstic ≠ 138/136 (${droppedPack73}/${keptPack73} od ${packRows73.length})`);
+        // (d) vsaka od 135 dual base ima v dual Blattu natanko 1 stran (min); lost 0
+        const pagesByBase73 = new Map<string, Set<number>>();
+        for (const r of rt73.rows) {
+          const s = pagesByBase73.get(r.base);
+          if (s) s.add(r.page);
+          else pagesByBase73.set(r.base, new Set([r.page]));
+        }
+        let badD = 0;
+        for (const [key, pgs] of duals73) {
+          const b = key.split("|")[0];
+          const bl = key.split("|")[1];
+          const inBlatt = [...(pagesByBase73.get(b) ?? [])].filter((p) => blattOf73(p) === bl);
+          if (inBlatt.length !== 1 || inBlatt[0] !== pgs[0]) badD += 1;
+        }
+        if (badD !== 0) p73Errors.push(`(d) dual base brez natanko 1 (min) strani v dual Blattu ≠ 0 (${badD})`);
+        const lost73 = [...byBasePack.keys()].filter((b) => !pagesByBase73.has(b)).length;
+        if (lost73 !== 0) p73Errors.push(`(d) base brez vrstic po dropu ≠ 0 (${lost73})`);
+        // (e) nearDual 2080/2081 še prisotni s 4 vrsticami
+        const nd73 = rt73.rows.filter((r) => r.base === "2080" || r.base === "2081");
+        if (nd73.length !== 4) p73Errors.push(`(e) nearDual vrstic ≠ 4 (${nd73.length})`);
+        // (f) dvoumnost: preracun == 50/100; vse multi-page vrstice ambiguous == true
+        let ambBases73 = 0;
+        for (const s of pagesByBase73.values()) if (s.size > 1) ambBases73 += 1;
+        const ambRows73 = rt73.rows.filter((r) => (pagesByBase73.get(r.base)?.size ?? 0) > 1);
+        if (ambBases73 !== 50 || ambRows73.length !== 100)
+          p73Errors.push(`(f) dvoumnost preracun ≠ 50/100 (${ambBases73}/${ambRows73.length})`);
+        if (ambRows73.some((r) => !r.ambiguous)) p73Errors.push("(f) multi-page vrstica z ambiguous ≠ true");
+        if (rt73.rows.some((r) => r.ambiguous && (pagesByBase73.get(r.base)?.size ?? 0) === 1))
+          p73Errors.push("(f) single-page vrstica z ambiguous == true");
+        // (g) P70 kolizije (33 vrstic na p89/90/92) vse odsotne
+        const p70Rows73 = rt73.rows.filter((r) => r.page === 89 || r.page === 90 || r.page === 92);
+        if (p70Rows73.length !== 0) p73Errors.push(`(g) P70 vrstic (p89/90/92) v v6 ≠ 0 (${p70Rows73.length})`);
+        // (h) conf 174/629/136, serije 847/66/26, spatialProof consecPairs 652 + area median 3.8941
+        const cc73 = { STRONG: 0, MEDIUM: 0, WEAK: 0 };
+        const sc73 = { BI: 0, S1: 0, S2: 0 };
+        for (const r of rt73.rows) {
+          if (r.conf && r.conf in cc73) cc73[r.conf as keyof typeof cc73] += 1;
+          if (r.series && r.series in sc73) sc73[r.series as keyof typeof sc73] += 1;
+        }
+        if (cc73.STRONG !== 174 || cc73.MEDIUM !== 629 || cc73.WEAK !== 136)
+          p73Errors.push(`(h) conf ${JSON.stringify(cc73)} ≠ 174/629/136`);
+        if (sc73.BI !== 26 || sc73.S1 !== 847 || sc73.S2 !== 66)
+          p73Errors.push(`(h) serije ${JSON.stringify(sc73)} ≠ 26/847/66`);
+        if (rt73.spatialProof?.consecPairs !== 652)
+          p73Errors.push(`(h) spatialProof.consecPairs ≠ 652 (${rt73.spatialProof?.consecPairs})`);
+        const ratios73 = rt73.rows
+          .filter((r) => r.areaQK && r.areaModern && !r.areaSuspect)
+          .map((r) => (r.areaModern as number) / (r.areaQK as number))
+          .sort((a, b) => a - b);
+        const med73 = ratios73.length % 2
+          ? ratios73[(ratios73.length - 1) / 2]
+          : (ratios73[ratios73.length / 2 - 1] + ratios73[ratios73.length / 2]) / 2;
+        if (ratios73.length !== 919 || Math.abs(med73 - 3.8941) > 0.005)
+          p73Errors.push(`(h) area preracun ≠ 919/3.8941 (${ratios73.length}/${med73.toFixed(4)})`);
+        // runtime nasledstvo + join == v6 pini
+        if (rt73.version !== 6) p73Errors.push(`runtime version ≠ 6 (${rt73.version})`);
+        {
+          const d6 = rt73.v6Delta ?? {};
+          if (d6.splitBases !== 135 || d6.droppedPairs !== 137 || d6.droppedRows !== 138)
+            p73Errors.push(`runtime v6Delta ≠ 135/137/138 (${d6.splitBases}/${d6.droppedPairs}/${d6.droppedRows})`);
+          if (d6.before?.rows !== 1077 || d6.before?.bases !== 879 || d6.before?.multiPage !== 184 || d6.before?.crossBlatt !== 48)
+            p73Errors.push(`runtime v6Delta.before ≠ 1077/879/184/48`);
+          if (d6.after?.rows !== 939 || d6.after?.bases !== 879 || d6.after?.multiPage !== 50 || d6.after?.crossBlatt !== 48)
+            p73Errors.push(`runtime v6Delta.after ≠ 939/879/50/48`);
+        }
+        {
+          const j = rt73.join;
+          if (j.matchedRows !== 939 || j.matchedRowsS1S2 !== 913 || j.matchedRowsBI !== 26 || j.matchedSharePct !== 34.0
+            || j.psPositionedParcels !== 879 || j.suffixGroups !== 271 || j.ambiguousBases !== 50 || j.ambiguousRows !== 100)
+            p73Errors.push(`runtime join ≠ 939/913/26/34.0/879/271/50/100 (${j.matchedRows}/${j.matchedRowsS1S2}/${j.matchedRowsBI}/${j.matchedSharePct}/${j.psPositionedParcels}/${j.suffixGroups}/${j.ambiguousBases}/${j.ambiguousRows})`);
+        }
+        if (rawEv73 === null) {
+          p73FileDetail = `produkcija: preracun na runtime datotekah — dual ${duals73.size}, drop ${drop73.size}, nil-claim 0, vrstic ${rt73.rows.length}, drop vrstic ${droppedPack73}/kept ${keptPack73}, dual-base 1-stran ${135 - badD}/135, lost ${lost73}, nearDual ${nd73.length}, dvoumnost ${ambBases73}/${ambRows73.length}, P70 p89/90/92 = 0, conf ${cc73.STRONG}/${cc73.MEDIUM}/${cc73.WEAK}, serije ${sc73.S1}/${sc73.S2}/${sc73.BI}, area ${ratios73.length}/${med73.toFixed(4)}, sosledje ${rt73.spatialProof?.consecPairs}`;
+        } else {
+          // repo dodatki: v6 dokaz — runtime projekcija bajtno + removedRows/C3 pini + v5 nasledstvo
+          const ev73 = JSON.parse(rawEv73) as {
+            version?: number;
+            statusLine?: string;
+            removedRows?: { page: number; base: string }[];
+            corrections?: { C3?: { droppedRows?: { page: number; base: string }[]; evidence?: { droppedPairs?: number; droppedRows?: number } } };
+            rowsEvidence?: Record<string, unknown>[];
+          };
+          if (ev73.version !== 6) p73Errors.push(`dokaz version ≠ 6 (${ev73.version})`);
+          if ((ev73.removedRows ?? []).length !== 138)
+            p73Errors.push(`dokaz removedRows ≠ 138 (${(ev73.removedRows ?? []).length})`);
+          if (ev73.corrections?.C3?.evidence?.droppedPairs !== 137 || ev73.corrections?.C3?.evidence?.droppedRows !== 138)
+            p73Errors.push(`dokaz C3 evidence ≠ 137/138 (${ev73.corrections?.C3?.evidence?.droppedPairs}/${ev73.corrections?.C3?.evidence?.droppedRows})`);
+          if ((ev73.corrections?.C3?.droppedRows ?? []).length !== 138)
+            p73Errors.push(`dokaz C3.droppedRows ≠ 138 (${(ev73.corrections?.C3?.droppedRows ?? []).length})`);
+          const dropKeysEv = new Set((ev73.removedRows ?? []).map((d) => `${d.page}|${d.base}`));
+          if (dropKeysEv.size !== 137 || ![...dropKeysEv].every((k) => drop73.has(k)))
+            p73Errors.push("dokaz removedRows (page,base) set ≠ preracunan drop set (137)");
+          const evRows73 = ev73.rowsEvidence ?? [];
+          if (evRows73.length !== 939) p73Errors.push(`dokaz rowsEvidence ≠ 939 (${evRows73.length})`);
+          const byteEq = rt73.rows.every((rr, i) =>
+            Object.entries(rr).every(([k, v]) => JSON.stringify((evRows73[i] as Record<string, unknown> | undefined)?.[k]) === JSON.stringify(v)));
+          if (!byteEq) p73Errors.push("dokaz v6 ⊉ runtime: vrstice niso bajtno enake");
+          if (ev73.statusLine !== p73.statusLine) p73Errors.push("dokaz statusLine ≠ TS konstanta SPLIT_OPTION_A_P73");
+          // v5 nasledstvo: v5 dokaz (1077) − drop = 939; vrstni red ohranjen; edina sprememba = ambiguous (135 True→False)
+          let succ = "";
+          if (rawV5ev73 !== null) {
+            const v5ev73 = JSON.parse(rawV5ev73) as { version?: number; rowsEvidence?: Record<string, unknown>[] };
+            if (v5ev73.version !== 5) p73Errors.push(`v5 dokaz version ≠ 5 (${v5ev73.version})`);
+            const v5rows = v5ev73.rowsEvidence ?? [];
+            if (v5rows.length !== 1077) p73Errors.push(`v5 dokaz rowsEvidence ≠ 1077 (${v5rows.length})`);
+            const kept5 = v5rows.filter((r) => !drop73.has(`${(r as Record<string, unknown>).page}|${(r as Record<string, unknown>).base}`));
+            if (kept5.length !== 939) p73Errors.push(`v5 dokaz − drop ≠ 939 (${kept5.length})`);
+            let ambChanges = 0;
+            let ambT2F = 0;
+            for (let i = 0; i < kept5.length; i++) {
+              const a5 = kept5[i] as Record<string, unknown>;
+              const b6 = rt73.rows[i] as unknown as Record<string, unknown>;
+              if (a5.page !== b6.page || a5.base !== b6.base) {
+                p73Errors.push(`nasledstvo v5→v6: vrstni red prekinjen @${i}`);
+                break;
+              }
+              for (const k of Object.keys(a5)) {
+                if (JSON.stringify(a5[k]) !== JSON.stringify(b6[k])) {
+                  if (k === "ambiguous") {
+                    ambChanges += 1;
+                    if (a5[k] === true && b6[k] === false) ambT2F += 1;
+                  } else p73Errors.push(`nasledstvo v5→v6: polje ${k} spremenjeno (vrstica ${a5.page}/${a5.base})`);
+                }
+              }
+            }
+            if (ambChanges !== 135 || ambT2F !== 135)
+              p73Errors.push(`nasledstvo v5→v6: ambiguous sprememb ≠ 135 True→False (${ambChanges}/${ambT2F})`);
+            succ = ` · v5 nasledstvo: 1077 − 138 = 939 (vrstni red ohranjen, edina sprememba ambiguous 135 True→False)`;
+          }
+          p73FileDetail = `repo: dokaz v6 == runtime bajtno (939; removedRows 138 == drop set 137 kombinacij; C3 evidence 137/138)${succ} · preracun: dual ${duals73.size}, drop ${drop73.size} = ${droppedPack73} vrstic/kept ${keptPack73}, nil-claim 0, dual-base 1-stran ${135 - badD}/135, lost ${lost73}, nearDual ${nd73.length}, dvoumnost ${ambBases73}/${ambRows73.length}, P70 p89/90/92 = 0, conf ${cc73.STRONG}/${cc73.MEDIUM}/${cc73.WEAK}, serije ${sc73.S1}/${sc73.S2}/${sc73.BI}, area ${ratios73.length}/${med73.toFixed(4)}, sosledje ${rt73.spatialProof?.consecPairs}`;
+        }
+      } catch (e) {
+        p73Errors.push(`ps-parcels-geo v6 datoteke neuspešno: ${String(e).slice(0, 80)}`);
+      }
+    }
+  }
+  push(
+    "qa-p73-v6-split",
+    "P73: ISTI-BLATT SPLIT — OPCIJA A (v6, issue #13) — izvedba C3 iz P72 dual pack (lastniško soglasje 2026-10-15; P70 »SPLIT = LASTNIKA« razširjen na cel register): za 135 base z vrsticami na ≥ 2 straneh ISTEGA Blatta z DISJUNKTNIMI lastniki (274 vrstice; dvojni zapis iste serije v dveh blokih registra) so vrstice drugega bloka izpadle iz joina — drop 137 kombinacij (page, base) = 138 vrstic (1 kombinacija ima 2 vrstici; keep = min stran »glavni tek«); P70 33 kolizij = PODMNOŽICA (p89 × 15, p90 × 10, p92 × 8); v6: 939 vrstic (34.0 %) / 879 base / multi-page 184 → 50 / cross-Blatt 48; serije S1 847 / S2 66 / BI 26; zaupanje 174/629/136; dvoumnost 50 base / 100 vrstic (135 True→False po P55 metodi); area median 3.8941 (Δ +8.27 %, kontrola 4.5766; 919 parov); soslednost 652 parov / 51.8 m / 25.5× (nespremenjena); nearDual 2080/2081 ostanejo (4 vrstice); 0 base brez vrstic; vrstice ostanejo v registru (removedRows 138); v5 arhiviran (v5Delta + v6Delta = zgodovina); skripta scripts/p73_ps_v6_split_a.py (I1–I8, --check bajtno PASS); status REVIEW",
+    "P73: SAME-BLATT SPLIT — OPTION A (v6, issue #13) — the execution of C3 from the P72 dual pack (owner consent 2026-10-15; P70 \"SPLIT = OWNER\" extended to the whole register): for the 135 bases with rows on ≥ 2 pages of the SAME Blatt with DISJOINT owners (274 rows; the dual entry of the same series in two register blocks) the second-block rows are dropped from the join — 137 (page, base) combinations = 138 rows (1 combination holds 2 rows; keep = the min 'main run' page); the P70 33 collisions are a SUBSET (p89 × 15, p90 × 10, p92 × 8); v6: 939 rows (34.0 %) / 879 bases / multi-page 184 → 50 / cross-Blatt 48; series S1 847 / S2 66 / BI 26; confidence 174/629/136; ambiguity 50 bases / 100 rows (135 True→False per the P55 method); area median 3.8941 (Δ +8.27 %, control 4.5766; 919 pairs); adjacency 652 pairs / 51.8 m / 25.5× (unchanged); near-duals 2080/2081 kept (4 rows); 0 bases left empty; the rows stay in the register (removedRows 138); v5 archived (v5Delta + v6Delta = the succession history); the script scripts/p73_ps_v6_split_a.py (I1–I8, --check byte-equal PASS); status REVIEW",
+    p73Errors.length === 0,
+    p73Errors.length === 0
+      ? `pini 135/137/138 · before 1077/879/184/48 → after 939/879/50/48 · P70 33 = 15/10/8 · nearDual 2080/2081 · removedByPage == pin · area 919/3.8941 (Δ +8.27 %) · sosledje 652/51.8 · conf 174/629/136 · serije 847/66/26 · dvoumnost 50/100 · ${p73FileDetail}`
+      : p73Errors.join("; "),
   );
 
   const passed = tests.filter((t) => t.pass).length;  return {
