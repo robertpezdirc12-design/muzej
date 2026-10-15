@@ -1,0 +1,3710 @@
+{
+ "annChecks": {
+  "74": {
+   "annBases": [
+    1135,
+    1136,
+    1138
+   ],
+   "annTrue": [
+    1435,
+    1436,
+    1438
+   ],
+   "crossed": [
+    1435,
+    1436,
+    1438
+   ],
+   "offset": 300,
+   "pass": true
+  },
+  "88": {
+   "annBases": [
+    726,
+    728,
+    729,
+    730,
+    731,
+    736,
+    737,
+    740
+   ],
+   "annTrue": [
+    606,
+    608,
+    609,
+    610,
+    611,
+    616,
+    617,
+    620
+   ],
+   "offset": -120,
+   "pass": true,
+   "range": [
+    601,
+    620
+   ]
+  },
+  "92": {
+   "annBases": [
+    998,
+    999,
+    1000,
+    1001,
+    1002,
+    1003,
+    1004,
+    1005,
+    1006,
+    1007,
+    1008
+   ],
+   "annTrue": [
+    989,
+    990,
+    991,
+    992,
+    993,
+    994,
+    995,
+    996,
+    997,
+    998,
+    999
+   ],
+   "offset": -9,
+   "pass": true,
+   "range": [
+    981,
+    1000
+   ]
+  }
+ },
+ "cardPolysLosingFalseClaims": [
+  160,
+  161,
+  162,
+  163,
+  164,
+  165,
+  166,
+  168,
+  171,
+  173,
+  174,
+  175,
+  176,
+  179,
+  641,
+  642,
+  643,
+  644,
+  646,
+  648,
+  651,
+  652,
+  653,
+  654,
+  655,
+  656,
+  657,
+  659,
+  736,
+  737,
+  738
+ ],
+ "counts": {
+  "crossedInZone": 117,
+  "keyCorrect": 33,
+  "keyWrong": 77,
+  "mainRunPages": 17,
+  "pagesReviewed": 22,
+  "rejoinCandidates": 98,
+  "renumMappings": 77,
+  "sectionPages": 5,
+  "sectionRows": 56,
+  "v3rowsClassified": 166
+ },
+ "date": "2026-10-15",
+ "eyesVerdicts": {
+  "73": {
+   "blatt": "II",
+   "cls": "mainRun",
+   "crossed": [],
+   "note": "v3 3 vrstice (1118-1120) pravilne; karta 1101-20 = 3 poligoni",
+   "true": [
+    1101,
+    1120
+   ]
+  },
+  "74": {
+   "blatt": "II",
+   "cls": "mainRun",
+   "crossed": [
+    1435,
+    1436,
+    1438
+   ],
+   "note": "annRecords 1135/1136/1138 'auf transportirt 1844' = prečrtane 1435/1436/1438 (+300) — neodvisen dokaz zamika",
+   "true": [
+    1421,
+    1440
+   ]
+  },
+  "75": {
+   "blatt": "II",
+   "cls": "mainRun",
+   "crossed": [
+    1443,
+    1444,
+    1446,
+    1451
+   ],
+   "note": "stari passi pravilna; P59 strip 941–960 napačen (odrez); v3 16 vrstic pravilnih",
+   "true": [
+    1441,
+    1460
+   ]
+  },
+  "76": {
+   "blatt": "II",
+   "cls": "mainRun",
+   "crossed": [
+    1463,
+    1468,
+    1469,
+    1471,
+    1472,
+    1473,
+    1474,
+    1475
+   ],
+   "note": "P59 arbitraža (1461–1480) potrjena z očmi; kontinuiteta p75→p76→p77",
+   "true": [
+    1461,
+    1480
+   ]
+  },
+  "77": {
+   "blatt": "II",
+   "cls": "mainRun",
+   "crossed": [],
+   "note": "pass2 pravilen; brez prečrtanj; karta 1481–1500 = 1483, 1486",
+   "true": [
+    1481,
+    1500
+   ]
+  },
+  "78": {
+   "blatt": "II",
+   "cls": "mainRun",
+   "crossed": [
+    1505,
+    1506,
+    1507,
+    1508,
+    1509,
+    1510,
+    1511,
+    1512,
+    1513,
+    1514
+   ],
+   "note": "P68 renum 1601-05→1501-05 izveden (izpad brez poligonov); rejoin 1506–1520 (karta 10 poligonov) NOVO",
+   "true": [
+    1501,
+    1520
+   ]
+  },
+  "79": {
+   "blatt": "II",
+   "cls": "mainRun",
+   "crossed": [
+    1522,
+    1523,
+    1524,
+    1525,
+    1526,
+    1527,
+    1528,
+    1529,
+    1530,
+    1532,
+    1534,
+    1535,
+    1537
+   ],
+   "note": "P59 strip 1621–1640 = 5→6; oba sloja zamenjala isto števko 5; v3 17 vrstic lažno na 1821–1840",
+   "true": [
+    1521,
+    1540
+   ]
+  },
+  "80": {
+   "blatt": "II",
+   "cls": "mainRun",
+   "crossed": [
+    1541,
+    1542,
+    1543,
+    1544,
+    1545,
+    1546,
+    1548,
+    1549,
+    1550,
+    1552,
+    1553,
+    1555
+   ],
+   "note": "P59 strip 1541–1560 pravilen; rdeča marginala 'jetzt … 1853'",
+   "true": [
+    1541,
+    1560
+   ]
+  },
+  "81": {
+   "blatt": "II",
+   "cls": "mainRun",
+   "crossed": [
+    1563,
+    1564,
+    1565,
+    1566,
+    1567,
+    1576
+   ],
+   "note": "P59 strip 161–180 = odrez vodilnih",
+   "true": [
+    1561,
+    1580
+   ]
+  },
+  "82": {
+   "blatt": "II",
+   "cls": "mainRun",
+   "crossed": [],
+   "note": "pass1 PRAVILEN (1581+); join je vzel p2 → p82 vrstice IZGUBLJENE iz v3 (karta 1582–1600 = 13 poligonov brez vrstic)",
+   "true": [
+    1581,
+    1600
+   ]
+  },
+  "83": {
+   "blatt": "II",
+   "cls": "section",
+   "crossed": [
+    162,
+    169
+   ],
+   "note": "DVOJNI BLOK 161–170 ×2 [~] (oči 8×: blok B = 161–169 ponovitev, karta 261–270 prazna izključuje 26x); VLM flattening → 161–181; kulture Dingf./Prunigad; hiše '1 2'",
+   "true": [
+    161,
+    170
+   ]
+  },
+  "84": {
+   "blatt": "II",
+   "cls": "section",
+   "crossed": [
+    169,
+    170,
+    171,
+    172,
+    176,
+    177,
+    180
+   ],
+   "note": "kulture Alm/Wein/Weide; hiše 1–16; lastniki (Schumitsch, Dragosch, Hödle) se ne prekrivajo s p10/p11 (Poidir, Kustitar, Brulca)",
+   "true": [
+    161,
+    180
+   ]
+  },
+  "85": {
+   "blatt": "II",
+   "cls": "section",
+   "crossed": [
+    642,
+    643,
+    644,
+    645,
+    647,
+    648,
+    649,
+    652,
+    653,
+    654,
+    655,
+    657,
+    659,
+    660
+   ],
+   "note": "oči 8×: trimestne (6 z zanko, ne 1) → 641–660 pisano; P59 41–60 = odrez 6; hiše ≠ p35 (r641 Hi16 vs Hi68, r646 Hi22 vs Hi23, r655 Hi7 vs Hi26) = RAZLIČNE parcele; 14/20 prečrtanih",
+   "true": [
+    641,
+    660
+   ]
+  },
+  "86": {
+   "blatt": "II",
+   "cls": "section",
+   "crossed": [
+    161,
+    162,
+    173,
+    174,
+    176,
+    177,
+    178,
+    179
+   ],
+   "note": "tretja 161–180 sekcija (kulture Ainze/Gartengrund); rdeča marginala 'für Grund-St.Reg. f. 1846'",
+   "true": [
+    161,
+    180
+   ]
+  },
+  "87": {
+   "blatt": "II",
+   "cls": "mainRun",
+   "crossed": [],
+   "note": "P67 že rešil (oči 1681–1688); karta 1681–1700 PRAZNA → 0 rejoin kandidatov",
+   "true": [
+    1681,
+    1700
+   ]
+  },
+  "88": {
+   "blatt": "II",
+   "cls": "section",
+   "crossed": [
+    606,
+    608,
+    617,
+    618,
+    620
+   ],
+   "note": "annRecords 726/728/729/730/731/736/737/740 'Aufsufgefüllt 1811/1841/1831' = pisano 606/608/609/610/611/616/617/620 (+120); kulture Alm/Plurig; hiše '1 8'/'1 6'",
+   "true": [
+    601,
+    620
+   ]
+  },
+  "89": {
+   "blatt": "II",
+   "cls": "mainRun",
+   "crossed": [
+    922,
+    923,
+    925,
+    927,
+    933
+   ],
+   "note": "pass1 PRAVILEN (921+); join je vzel p2; Blatt II stolpec + p49–52 = glavni tek 921–1000; 9 dolgi ascender ≠ vodilna 1",
+   "true": [
+    921,
+    940
+   ]
+  },
+  "90": {
+   "blatt": "II",
+   "cls": "mainRun",
+   "crossed": [
+    943
+   ],
+   "note": "pass1 PRAVILEN; isti artefakt kot p89",
+   "true": [
+    941,
+    960
+   ]
+  },
+  "91": {
+   "blatt": "II",
+   "cls": "mainRun",
+   "crossed": [
+    967,
+    970
+   ],
+   "note": "stari passi pravilna; P59 strip 941–960 = podvojitev p90 (napaka); v3 11 vrstic pravilnih; rdeča marginala na r7",
+   "true": [
+    961,
+    980
+   ]
+  },
+  "92": {
+   "blatt": "II",
+   "cls": "mainRun",
+   "crossed": [
+    988,
+    989,
+    990,
+    992,
+    993,
+    995,
+    996,
+    997,
+    999,
+    1000
+   ],
+   "note": "oči 8×: r2–r5 = 982–985 (X8Y vzorec), r20 = 1000 (štirimestna); kontinuiteta p91 (961–80)→p92 (981–1000); P59 arbitraža 1881–1900 = isti 9→19 artefakt kot p89 p2; numerala I·IV @ r2; annRecords 998–1008 = pisano 989–999 (+9)",
+   "true": [
+    981,
+    1000
+   ]
+  },
+  "93": {
+   "blatt": "IV",
+   "cls": "mainRun",
+   "crossed": [
+    1901,
+    1902,
+    1903,
+    1904,
+    1905,
+    1906,
+    1907
+   ],
+   "note": "P68 renum 160x→190x izveden (re-claim 1903/1904/1905); karta 1901–1907 = 7 poligonov; prehod sekcije sredi strani (→1303+); v3 3 vrstice pravilne",
+   "true": [
+    1901,
+    1920
+   ]
+  },
+  "99": {
+   "blatt": "III",
+   "cls": "mainRun",
+   "crossed": [],
+   "note": "ZRCALNI primer p89: oči 4× = 1921–1940 (štirimestne), Blatt III; P59 1921–1940 BIII pravilen; lastniki ≠ p49 (r922 Deutlich vs Dragasch) — v3 p99 vrstice lažno na 921–940",
+   "true": [
+    1921,
+    1940
+   ]
+  }
+ },
+ "inputs": {
+  "oldPassPins": {
+   "ps-073-pass2.json": "efc4747ec87fd7ada68f5dd59860ea0c2e3c3c00aad4203024922c17ca01f9ad",
+   "ps-073.json": "d2c850658da854f52a90e88fd5507c57690a63b8c0a1417cce53a1e2f0ad28d3",
+   "ps-074.json": "94710a77f90927073a558556b641b5168cb6b70b2fde3ddc78fa711586bc665c",
+   "ps-075-pass2.json": "cd72ff5802b8f3f38363f35e92a2b20d726a694d659947e82fc933ff17baac86",
+   "ps-075.json": "00e97e3a8f1b9fa0235b08fed451ab8b27e76a0642b7638b88fd034fafe00f71",
+   "ps-076-pass2.json": "d6787454fe08a936a9dd712cc02c076add3b60247bb163fc61188718f1af6691",
+   "ps-076.json": "c7956cd12cf74dc5bc68c3d6b1bfa08412a92a83bb3175e1f8ef3191679b0029",
+   "ps-077-pass2.json": "59c2772febb594670b967206bd793177437c9053b8ba5fab3d3f642f87f2500b",
+   "ps-077.json": "e50b5fbe0f2e16b9d53d4bacde2870a5e8c4e4dcd574f504216976cbb5d9483a",
+   "ps-078-pass2.json": "37249e79aa551ea1c827b23360832e34d57495dd9aa510849b5c9cf39ffad4ac",
+   "ps-078.json": "4a34bc35c33d747ac9fc8aef7eae82cf99db47d0ce3f3cc69020ec53c27872be",
+   "ps-079-pass2.json": "f57cfc668fe6d907e8b22cebcd85634c0853467874f6dc6728196adcd284ac8e",
+   "ps-079-pass3.json": "9433be75dc197afacd7e3c55706aa9b7bd26861a2582e561136bffe84eefb73a",
+   "ps-079.json": "39360dcb0a300d06dc3bcfe034e6f2726fcc4ccf85f2a36e45b63316e32baec7",
+   "ps-080-pass2.json": "455471bf1f5bdcd9fbd74103420f2f3b863852078c3566d24f234f27503477cd",
+   "ps-080.json": "3da77acfeb204a833af8c466009bfe832fc7c6fa265f676c9bb401fdae3f6d61",
+   "ps-081-pass2.json": "e18d6938f1011e75fea79d4d768dcff802f1264ccc41d616c685bcab956564d7",
+   "ps-081.json": "a930b89f7b9f08702831da4941d1c36f51f9bc83044650570d657d9af3814112",
+   "ps-082-pass2.json": "5183c87725eebc5652820099f3ccc5e69ec0ac5ab79edef43d584063449d6556",
+   "ps-082.json": "120f2319003e308c00a1c317128dce7e71db593b1e45dcbc9790f3655622cff2",
+   "ps-083-pass2.json": "09bd47e67858910ccaa80ad4f4ff0906bfa309af51a9433233cef2e7dff0b483",
+   "ps-083-pass3.json": "ca540ed76a77ef3cb90d7d36806f42ce855b2f4b0a51e36992b344f779d419ff",
+   "ps-083.json": "3a728638d835dbb2f009072681baa52c1cfe8863f61f348ce8302dbfa085d384",
+   "ps-084-pass2.json": "742cfd7a22bdb54eef8220dc6b83aae524468f919db96dc1b9d13e9c6bc6cf6a",
+   "ps-084-pass3.json": "2148f733ce3dd1c0fa7ba84986f78770fcf9ea9c559cb0b600b3c7f430e79707",
+   "ps-084.json": "e45d894e940318fb52f78f488897c6c6febb4acbfc94fe88ef57805c8e77b67d",
+   "ps-085-pass2.json": "29047bc4256a56a8e3372d13ac6000a8ddcbefaeb012374fb692c673082cdb89",
+   "ps-085-pass3.json": "741570d67c7198b9ec55bdc23d28948496a1b88befd5e350b093b0dc03d765a0",
+   "ps-085.json": "02a219a3e71c7f7da1b9b37709f6b519aa79fe0a762a015f6f9b0574594338c1",
+   "ps-086-pass2.json": "72dab9ea69b3caef2799ef33ecc22c3f20efbaa5607658d80b41172ad6bb5dcc",
+   "ps-086-pass3.json": "ae3801a5652a56998f5fcc77cb5f993ca4f1832878815eb226231c9fc1ab160d",
+   "ps-086.json": "48712b382b4ed149999e845f49298eda7d112758dcbc6574eb961d9e5e1e99c7",
+   "ps-087-pass2.json": "ed58996f7c53c7dde087968ce89c9a9ca94400d1117d3be5ce5e80d797ec4a5a",
+   "ps-087-pass3.json": "2dd8c5d73131042a164e2e5ac4d3a27b81d62176ac6b0b30535d655c77eac65d",
+   "ps-087.json": "56d3091fa2453b2f4f1d25d1e4c7d5fcbfd2beef779a339a06f3e5e0d6f50b9f",
+   "ps-088-pass2.json": "ed0a0a95abbbc596cc85a06ec072843bd4aaa9197d59568caa381c1bde79e9f7",
+   "ps-088-pass3.json": "328a43c0010d61b922ee2451e5b0d2876129926b285228105530435f4fc234cc",
+   "ps-088.json": "0f8633873accfb83c2801cc31917ffa99d4666305787a83105f2094da8b1f456",
+   "ps-089-pass2.json": "b7170000f2e87a3c51fa863a7245a0c7336e3df7eee9939a243e06e43e60e687",
+   "ps-089.json": "7ced735199d0ad43bfdb99f26be8436c9f788146dad176d491e0ada06e1344b4",
+   "ps-090-pass2.json": "ce7e499e936490ce58e3da450082087c3b21bf08b021484603bd3d90fd1edc5f",
+   "ps-090.json": "75067fc73ddd89c47c8446ea145d4842a95e03c6f6bc589cd2db03acb2ea349f",
+   "ps-091.json": "12dcc2ce3a7d2080a3558bb95f74fa5ac8e4ba5a7efb93e40e8913506e976e6e",
+   "ps-092-pass2.json": "4f4128b2707f6b5dd18aae2538ce71ad8490e49fb2f258ac1095dc545900575e",
+   "ps-092-pass3.json": "5b1773d853a61fc23c0687225da0e87e803bbf719dbefa147b8d53bc833f1d31",
+   "ps-092.json": "d36998c75efcd7c5eb9a1bd5d937e6274e143cad6f2348ca1fec00d5b2ee4e3b",
+   "ps-093-pass2.json": "e3b60506287552e8490331c1119831aa6b76cd3167032d210feff35a17e3eaf9",
+   "ps-093-pass3.json": "351184d72d0a1dfffbd27f674b94094b6779e05138250532848511f9a7d9abde",
+   "ps-093.json": "617217fa9f4f49ee85f75a816759cdd6c10054b26e8584cb9f6655ac9b65842f",
+   "ps-099-pass2.json": "fd2fa2b3094a6158261d256899a6ec061b1a100e5dabb35b324e9cabac19379a",
+   "ps-099-pass3.json": "7c03bf063dfc5be7f9239b8cc9d1d4aef34811223e24283420142dfc3de6dad2",
+   "ps-099.json": "b69c9df9776b9c2bf6fc0f88354cd3b201988e06cec4823d903e773093b0ca27"
+  },
+  "pins": {
+   "card": "fee91fca736348f40ef11d38b7a5b51d51656a9768cda648f4d737029bb3941f",
+   "p59headers": "650f13dccab1da70a60d04c41ce9f7887ca94eafea8a0a7927c104ca899b76f3",
+   "topology": "2fddc76fb94b69fed55170220fa8dfa3ace4a9466043d264b8b8df788e78a50c",
+   "v3": "4d26aefd4fe89ff47e6c55c3bd48df85ade860c88fb2c649816fd84d311aa033"
+  },
+  "v3Version": 3,
+  "v3rows": 1079
+ },
+ "method": {
+  "eyes": "4× široki izrezi x=0..430 (popravi P59 past odrezanih vodilnih) + 7×–8× zoomi dvomljivih vrstic; p69_fetch_zone.py",
+  "instruments": [
+   "oči",
+   "kontinuiteta",
+   "karta",
+   "annRecords P56",
+   "Blatt stolpec",
+   "hišne številke",
+   "površinska razmerja"
+  ]
+ },
+ "openQuestions": [
+  "p83 blok B: 161–169 ponovitev ali drugi Ried [~] — 8× nebere zanesljivo",
+  "identiteta sekcij p83–p88 (kultura/Ried glave) = P60 moda B",
+  "prave vrstice poligonov 1821–1840, 1644–1655, 1673/1679, 1921–1960, 990–1008 (po renumu prazni): III/IV cona p94+ — naslednji pregled",
+  "p74 1121–1420 vrzel: glavni tek Blatt II ni monotoničen po straneh (per-Ried struktura) — p43–p71 pokritost?"
+ ],
+ "perPage": {
+  "73": {
+   "artifact": null,
+   "blatt": "II",
+   "cardPolysInRange": [
+    1118,
+    1119,
+    1120
+   ],
+   "cls": "mainRun",
+   "crossed": [],
+   "note": "v3 3 vrstice (1118-1120) pravilne; karta 1101-20 = 3 poligoni",
+   "oldPassRanges": {
+    "p1": [
+     1101,
+     1120
+    ],
+    "p2": [
+     1101,
+     1120
+    ]
+   },
+   "p56pageMap": {
+    "numMax": 1120,
+    "numMin": 1101
+   },
+   "rowsClass": [
+    {
+     "base": "1118",
+     "cls": "keyCorrect"
+    },
+    {
+     "base": "1119",
+     "cls": "keyCorrect"
+    },
+    {
+     "base": "1120",
+     "cls": "keyCorrect"
+    }
+   ],
+   "true": [
+    1101,
+    1120
+   ],
+   "v3rows": 3
+  },
+  "74": {
+   "artifact": "4→1 (−300); pass1 edini",
+   "blatt": "II",
+   "cardPolysInRange": [
+    1421,
+    1425,
+    1426,
+    1428,
+    1429,
+    1430,
+    1431,
+    1432,
+    1433,
+    1434,
+    1435,
+    1436,
+    1437,
+    1438,
+    1439,
+    1440
+   ],
+   "cls": "mainRun",
+   "crossed": [
+    1435,
+    1436,
+    1438
+   ],
+   "note": "annRecords 1135/1136/1138 'auf transportirt 1844' = prečrtane 1435/1436/1438 (+300) — neodvisen dokaz zamika",
+   "oldPassRanges": {
+    "p1": [
+     1121,
+     1140
+    ]
+   },
+   "p56pageMap": {
+    "numMax": 1140,
+    "numMin": 1121
+   },
+   "rowsClass": [
+    {
+     "base": "1128",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1131",
+     "cls": "keyWrong"
+    }
+   ],
+   "true": [
+    1421,
+    1440
+   ],
+   "v3rows": 2
+  },
+  "75": {
+   "artifact": null,
+   "blatt": "II",
+   "cardPolysInRange": [
+    1441,
+    1442,
+    1443,
+    1445,
+    1446,
+    1447,
+    1448,
+    1449,
+    1450,
+    1451,
+    1452,
+    1453,
+    1454,
+    1457,
+    1458,
+    1459
+   ],
+   "cls": "mainRun",
+   "crossed": [
+    1443,
+    1444,
+    1446,
+    1451
+   ],
+   "note": "stari passi pravilna; P59 strip 941–960 napačen (odrez); v3 16 vrstic pravilnih",
+   "oldPassRanges": {
+    "p1": [
+     1441,
+     1460
+    ],
+    "p2": [
+     1441,
+     1460
+    ]
+   },
+   "p56pageMap": {
+    "numMax": 1460,
+    "numMin": 1441
+   },
+   "rowsClass": [
+    {
+     "base": "1441",
+     "cls": "keyCorrect"
+    },
+    {
+     "base": "1442",
+     "cls": "keyCorrect"
+    },
+    {
+     "base": "1443",
+     "cls": "keyCorrect"
+    },
+    {
+     "base": "1445",
+     "cls": "keyCorrect"
+    },
+    {
+     "base": "1446",
+     "cls": "keyCorrect"
+    },
+    {
+     "base": "1447",
+     "cls": "keyCorrect"
+    },
+    {
+     "base": "1448",
+     "cls": "keyCorrect"
+    },
+    {
+     "base": "1449",
+     "cls": "keyCorrect"
+    },
+    {
+     "base": "1450",
+     "cls": "keyCorrect"
+    },
+    {
+     "base": "1451",
+     "cls": "keyCorrect"
+    },
+    {
+     "base": "1452",
+     "cls": "keyCorrect"
+    },
+    {
+     "base": "1453",
+     "cls": "keyCorrect"
+    },
+    {
+     "base": "1454",
+     "cls": "keyCorrect"
+    },
+    {
+     "base": "1457",
+     "cls": "keyCorrect"
+    },
+    {
+     "base": "1458",
+     "cls": "keyCorrect"
+    },
+    {
+     "base": "1459",
+     "cls": "keyCorrect"
+    }
+   ],
+   "true": [
+    1441,
+    1460
+   ],
+   "v3rows": 16
+  },
+  "76": {
+   "artifact": "4→1 (−300)",
+   "blatt": "II",
+   "cardPolysInRange": [
+    1461,
+    1462,
+    1463,
+    1464,
+    1465,
+    1466,
+    1467,
+    1468,
+    1470,
+    1471,
+    1472,
+    1473,
+    1474,
+    1475,
+    1477,
+    1478,
+    1479,
+    1480
+   ],
+   "cls": "mainRun",
+   "crossed": [
+    1463,
+    1468,
+    1469,
+    1471,
+    1472,
+    1473,
+    1474,
+    1475
+   ],
+   "note": "P59 arbitraža (1461–1480) potrjena z očmi; kontinuiteta p75→p76→p77",
+   "oldPassRanges": {
+    "p1": [
+     1161,
+     1181
+    ],
+    "p2": [
+     1161,
+     1180
+    ]
+   },
+   "p56pageMap": {
+    "numMax": 1180,
+    "numMin": 1161
+   },
+   "rowsClass": [],
+   "true": [
+    1461,
+    1480
+   ],
+   "v3rows": 0
+  },
+  "77": {
+   "artifact": "4→1 (−300) na p1",
+   "blatt": "II",
+   "cardPolysInRange": [
+    1483,
+    1486
+   ],
+   "cls": "mainRun",
+   "crossed": [],
+   "note": "pass2 pravilen; brez prečrtanj; karta 1481–1500 = 1483, 1486",
+   "oldPassRanges": {
+    "p1": [
+     1181,
+     1200
+    ],
+    "p2": [
+     1481,
+     1500
+    ]
+   },
+   "p56pageMap": {
+    "numMax": 1200,
+    "numMin": 1181
+   },
+   "rowsClass": [],
+   "true": [
+    1481,
+    1500
+   ],
+   "v3rows": 0
+  },
+  "78": {
+   "artifact": "5→6 (+100) — P67 že dokazal",
+   "blatt": "II",
+   "cardPolysInRange": [
+    1506,
+    1508,
+    1509,
+    1510,
+    1513,
+    1514,
+    1515,
+    1516,
+    1517,
+    1520
+   ],
+   "cls": "mainRun",
+   "crossed": [
+    1505,
+    1506,
+    1507,
+    1508,
+    1509,
+    1510,
+    1511,
+    1512,
+    1513,
+    1514
+   ],
+   "note": "P68 renum 1601-05→1501-05 izveden (izpad brez poligonov); rejoin 1506–1520 (karta 10 poligonov) NOVO",
+   "oldPassRanges": {
+    "p1": [
+     1601,
+     1620
+    ],
+    "p2": [
+     1601,
+     1620
+    ]
+   },
+   "p56pageMap": {
+    "numMax": 1620,
+    "numMin": 1601
+   },
+   "rowsClass": [],
+   "true": [
+    1501,
+    1520
+   ],
+   "v3rows": 0
+  },
+  "79": {
+   "artifact": "5→8 (+300)",
+   "blatt": "II",
+   "cardPolysInRange": [
+    1521,
+    1523,
+    1524,
+    1526,
+    1527,
+    1528,
+    1529,
+    1531,
+    1532,
+    1533,
+    1534,
+    1535,
+    1536,
+    1537,
+    1538
+   ],
+   "cls": "mainRun",
+   "crossed": [
+    1522,
+    1523,
+    1524,
+    1525,
+    1526,
+    1527,
+    1528,
+    1529,
+    1530,
+    1532,
+    1534,
+    1535,
+    1537
+   ],
+   "note": "P59 strip 1621–1640 = 5→6; oba sloja zamenjala isto števko 5; v3 17 vrstic lažno na 1821–1840",
+   "oldPassRanges": {
+    "p1": [
+     1821,
+     1842
+    ]
+   },
+   "p56pageMap": {
+    "numMax": 1840,
+    "numMin": 1821
+   },
+   "rowsClass": [
+    {
+     "base": "1821",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1825",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1826",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1827",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1828",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1829",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1830",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1831",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1832",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1833",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1834",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1835",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1836",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1837",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1838",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1839",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1840",
+     "cls": "keyWrong"
+    }
+   ],
+   "true": [
+    1521,
+    1540
+   ],
+   "v3rows": 17
+  },
+  "80": {
+   "artifact": "5→6 (+100) na p2",
+   "blatt": "II",
+   "cardPolysInRange": [
+    1541,
+    1542,
+    1543,
+    1544,
+    1545,
+    1546,
+    1547,
+    1548,
+    1549,
+    1551,
+    1552,
+    1553
+   ],
+   "cls": "mainRun",
+   "crossed": [
+    1541,
+    1542,
+    1543,
+    1544,
+    1545,
+    1546,
+    1548,
+    1549,
+    1550,
+    1552,
+    1553,
+    1555
+   ],
+   "note": "P59 strip 1541–1560 pravilen; rdeča marginala 'jetzt … 1853'",
+   "oldPassRanges": {
+    "p1": [
+     62,
+     81
+    ],
+    "p2": [
+     1644,
+     1663
+    ]
+   },
+   "p56pageMap": {
+    "numMax": 1662,
+    "numMin": 1644
+   },
+   "rowsClass": [
+    {
+     "base": "1644",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1645",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1646",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1647",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1648",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1649",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1650",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1655",
+     "cls": "keyWrong"
+    }
+   ],
+   "true": [
+    1541,
+    1560
+   ],
+   "v3rows": 8
+  },
+  "81": {
+   "artifact": "5→6 (+100) na p2",
+   "blatt": "II",
+   "cardPolysInRange": [
+    1574,
+    1578,
+    1580
+   ],
+   "cls": "mainRun",
+   "crossed": [
+    1563,
+    1564,
+    1565,
+    1566,
+    1567,
+    1576
+   ],
+   "note": "P59 strip 161–180 = odrez vodilnih",
+   "oldPassRanges": {
+    "p1": [
+     164,
+     183
+    ],
+    "p2": [
+     1661,
+     1680
+    ]
+   },
+   "p56pageMap": {
+    "numMax": 1680,
+    "numMin": 1661
+   },
+   "rowsClass": [
+    {
+     "base": "1673",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1679",
+     "cls": "keyWrong"
+    }
+   ],
+   "true": [
+    1561,
+    1580
+   ],
+   "v3rows": 2
+  },
+  "82": {
+   "artifact": "5→6 (+100) na p2",
+   "blatt": "II",
+   "cardPolysInRange": [
+    1582,
+    1583,
+    1584,
+    1585,
+    1586,
+    1587,
+    1588,
+    1589,
+    1590,
+    1591,
+    1592,
+    1593,
+    1594,
+    1598,
+    1599,
+    1600
+   ],
+   "cls": "mainRun",
+   "crossed": [],
+   "note": "pass1 PRAVILEN (1581+); join je vzel p2 → p82 vrstice IZGUBLJENE iz v3 (karta 1582–1600 = 13 poligonov brez vrstic)",
+   "oldPassRanges": {
+    "p1": [
+     1581,
+     1600
+    ],
+    "p2": [
+     1681,
+     1700
+    ]
+   },
+   "p56pageMap": {
+    "numMax": 1700,
+    "numMin": 1681
+   },
+   "rowsClass": [],
+   "true": [
+    1581,
+    1600
+   ],
+   "v3rows": 0
+  },
+  "83": {
+   "artifact": null,
+   "blatt": "II",
+   "cardPolysInRange": [
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    168
+   ],
+   "cls": "section",
+   "crossed": [
+    162,
+    169
+   ],
+   "note": "DVOJNI BLOK 161–170 ×2 [~] (oči 8×: blok B = 161–169 ponovitev, karta 261–270 prazna izključuje 26x); VLM flattening → 161–181; kulture Dingf./Prunigad; hiše '1 2'",
+   "oldPassRanges": {
+    "p1": [
+     161,
+     181
+    ],
+    "p2": [
+     161,
+     180
+    ]
+   },
+   "p56pageMap": {
+    "numMax": 181,
+    "numMin": 161
+   },
+   "rowsClass": [
+    {
+     "base": "161",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "162",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "163",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "164",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "165",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "166",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "168",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "171",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "173",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "174",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "175",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "176",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "179",
+     "cls": "sectionRow"
+    }
+   ],
+   "true": [
+    161,
+    170
+   ],
+   "v3rows": 13
+  },
+  "84": {
+   "artifact": null,
+   "blatt": "II",
+   "cardPolysInRange": [
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    168,
+    171,
+    173,
+    174,
+    175,
+    176,
+    179
+   ],
+   "cls": "section",
+   "crossed": [
+    169,
+    170,
+    171,
+    172,
+    176,
+    177,
+    180
+   ],
+   "note": "kulture Alm/Wein/Weide; hiše 1–16; lastniki (Schumitsch, Dragosch, Hödle) se ne prekrivajo s p10/p11 (Poidir, Kustitar, Brulca)",
+   "oldPassRanges": {
+    "p1": [
+     162,
+     182
+    ],
+    "p2": [
+     162,
+     169
+    ]
+   },
+   "p56pageMap": {
+    "numMax": 182,
+    "numMin": 162
+   },
+   "rowsClass": [
+    {
+     "base": "162",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "163",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "164",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "165",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "166",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "168",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "171",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "173",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "174",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "175",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "176",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "179",
+     "cls": "sectionRow"
+    }
+   ],
+   "true": [
+    161,
+    180
+   ],
+   "v3rows": 12
+  },
+  "85": {
+   "artifact": null,
+   "blatt": "II",
+   "cardPolysInRange": [
+    641,
+    642,
+    643,
+    644,
+    646,
+    648,
+    651,
+    652,
+    653,
+    654,
+    655,
+    656,
+    657,
+    659
+   ],
+   "cls": "section",
+   "crossed": [
+    642,
+    643,
+    644,
+    645,
+    647,
+    648,
+    649,
+    652,
+    653,
+    654,
+    655,
+    657,
+    659,
+    660
+   ],
+   "note": "oči 8×: trimestne (6 z zanko, ne 1) → 641–660 pisano; P59 41–60 = odrez 6; hiše ≠ p35 (r641 Hi16 vs Hi68, r646 Hi22 vs Hi23, r655 Hi7 vs Hi26) = RAZLIČNE parcele; 14/20 prečrtanih",
+   "oldPassRanges": {
+    "p1": [
+     64,
+     64
+    ],
+    "p2": [
+     641,
+     660
+    ]
+   },
+   "p56pageMap": {
+    "numMax": 660,
+    "numMin": 641
+   },
+   "rowsClass": [
+    {
+     "base": "641",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "642",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "643",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "644",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "646",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "648",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "651",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "652",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "653",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "654",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "655",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "656",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "657",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "659",
+     "cls": "sectionRow"
+    }
+   ],
+   "true": [
+    641,
+    660
+   ],
+   "v3rows": 14
+  },
+  "86": {
+   "artifact": null,
+   "blatt": "II",
+   "cardPolysInRange": [
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    168,
+    171,
+    173,
+    174,
+    175,
+    176,
+    179
+   ],
+   "cls": "section",
+   "crossed": [
+    161,
+    162,
+    173,
+    174,
+    176,
+    177,
+    178,
+    179
+   ],
+   "note": "tretja 161–180 sekcija (kulture Ainze/Gartengrund); rdeča marginala 'für Grund-St.Reg. f. 1846'",
+   "oldPassRanges": {
+    "p1": [
+     146,
+     165
+    ],
+    "p2": [
+     160,
+     180
+    ]
+   },
+   "p56pageMap": {
+    "numMax": 180,
+    "numMin": 160
+   },
+   "rowsClass": [
+    {
+     "base": "160",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "161",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "162",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "163",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "164",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "165",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "166",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "168",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "171",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "173",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "174",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "175",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "176",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "179",
+     "cls": "sectionRow"
+    }
+   ],
+   "true": [
+    161,
+    180
+   ],
+   "v3rows": 14
+  },
+  "87": {
+   "artifact": null,
+   "blatt": "II",
+   "cardPolysInRange": [],
+   "cls": "mainRun",
+   "crossed": [],
+   "note": "P67 že rešil (oči 1681–1688); karta 1681–1700 PRAZNA → 0 rejoin kandidatov",
+   "oldPassRanges": {
+    "p1": [
+     661,
+     680
+    ],
+    "p2": [
+     1681,
+     1700
+    ]
+   },
+   "p56pageMap": {
+    "numMax": 680,
+    "numMin": 661
+   },
+   "rowsClass": [],
+   "true": [
+    1681,
+    1700
+   ],
+   "v3rows": 0
+  },
+  "88": {
+   "artifact": "+120 na p2 (celostranski)",
+   "blatt": "II",
+   "cardPolysInRange": [
+    601,
+    602,
+    603,
+    606,
+    607,
+    608,
+    609,
+    610,
+    611,
+    612,
+    613,
+    615,
+    617
+   ],
+   "cls": "section",
+   "crossed": [
+    606,
+    608,
+    617,
+    618,
+    620
+   ],
+   "note": "annRecords 726/728/729/730/731/736/737/740 'Aufsufgefüllt 1811/1841/1831' = pisano 606/608/609/610/611/616/617/620 (+120); kulture Alm/Plurig; hiše '1 8'/'1 6'",
+   "oldPassRanges": {
+    "p1": [
+     1,
+     21
+    ],
+    "p2": [
+     721,
+     740
+    ]
+   },
+   "p56pageMap": {
+    "numMax": 740,
+    "numMin": 721
+   },
+   "rowsClass": [
+    {
+     "base": "736",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "737",
+     "cls": "sectionRow"
+    },
+    {
+     "base": "738",
+     "cls": "sectionRow"
+    }
+   ],
+   "true": [
+    601,
+    620
+   ],
+   "v3rows": 3
+  },
+  "89": {
+   "artifact": "+1000 fantom-1 na p2",
+   "blatt": "II",
+   "cardPolysInRange": [
+    922,
+    923,
+    924,
+    925,
+    926,
+    927,
+    928,
+    929,
+    930,
+    931,
+    934,
+    936,
+    937,
+    938,
+    939
+   ],
+   "cls": "mainRun",
+   "crossed": [
+    922,
+    923,
+    925,
+    927,
+    933
+   ],
+   "note": "pass1 PRAVILEN (921+); join je vzel p2; Blatt II stolpec + p49–52 = glavni tek 921–1000; 9 dolgi ascender ≠ vodilna 1",
+   "oldPassRanges": {
+    "p1": [
+     921,
+     942
+    ],
+    "p2": [
+     1921,
+     1941
+    ]
+   },
+   "p56pageMap": {
+    "numMax": 1941,
+    "numMin": 1921
+   },
+   "rowsClass": [
+    {
+     "base": "1921",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1923",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1925",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1927",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1928",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1932",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1935",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1938",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1939",
+     "cls": "keyWrong"
+    }
+   ],
+   "true": [
+    921,
+    940
+   ],
+   "v3rows": 9
+  },
+  "90": {
+   "artifact": "+1000 fantom-1 na p2",
+   "blatt": "II",
+   "cardPolysInRange": [
+    942,
+    945,
+    946,
+    947,
+    949,
+    951,
+    952,
+    955,
+    959,
+    960
+   ],
+   "cls": "mainRun",
+   "crossed": [
+    943
+   ],
+   "note": "pass1 PRAVILEN; isti artefakt kot p89",
+   "oldPassRanges": {
+    "p1": [
+     941,
+     960
+    ],
+    "p2": [
+     1941,
+     1960
+    ]
+   },
+   "p56pageMap": {
+    "numMax": 1960,
+    "numMin": 1941
+   },
+   "rowsClass": [
+    {
+     "base": "1944",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1945",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1946",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1947",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1948",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1949",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1952",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1953",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1954",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1955",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1956",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1957",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1958",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1959",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1960",
+     "cls": "keyWrong"
+    }
+   ],
+   "true": [
+    941,
+    960
+   ],
+   "v3rows": 15
+  },
+  "91": {
+   "artifact": null,
+   "blatt": "II",
+   "cardPolysInRange": [
+    962,
+    965,
+    966,
+    970,
+    971,
+    972,
+    975,
+    976,
+    977,
+    978,
+    979
+   ],
+   "cls": "mainRun",
+   "crossed": [
+    967,
+    970
+   ],
+   "note": "stari passi pravilna; P59 strip 941–960 = podvojitev p90 (napaka); v3 11 vrstic pravilnih; rdeča marginala na r7",
+   "oldPassRanges": {
+    "p1": [
+     961,
+     980
+    ]
+   },
+   "p56pageMap": {
+    "numMax": 980,
+    "numMin": 961
+   },
+   "rowsClass": [
+    {
+     "base": "962",
+     "cls": "keyCorrect"
+    },
+    {
+     "base": "965",
+     "cls": "keyCorrect"
+    },
+    {
+     "base": "966",
+     "cls": "keyCorrect"
+    },
+    {
+     "base": "970",
+     "cls": "keyCorrect"
+    },
+    {
+     "base": "971",
+     "cls": "keyCorrect"
+    },
+    {
+     "base": "972",
+     "cls": "keyCorrect"
+    },
+    {
+     "base": "975",
+     "cls": "keyCorrect"
+    },
+    {
+     "base": "976",
+     "cls": "keyCorrect"
+    },
+    {
+     "base": "977",
+     "cls": "keyCorrect"
+    },
+    {
+     "base": "978",
+     "cls": "keyCorrect"
+    },
+    {
+     "base": "979",
+     "cls": "keyCorrect"
+    }
+   ],
+   "true": [
+    961,
+    980
+   ],
+   "v3rows": 11
+  },
+  "92": {
+   "artifact": "+9 zamik (celostranski)",
+   "blatt": "II",
+   "cardPolysInRange": [
+    982,
+    983,
+    984,
+    985,
+    986,
+    987,
+    988,
+    989,
+    990,
+    991,
+    992,
+    993,
+    995,
+    996,
+    997,
+    998
+   ],
+   "cls": "mainRun",
+   "crossed": [
+    988,
+    989,
+    990,
+    992,
+    993,
+    995,
+    996,
+    997,
+    999,
+    1000
+   ],
+   "note": "oči 8×: r2–r5 = 982–985 (X8Y vzorec), r20 = 1000 (štirimestna); kontinuiteta p91 (961–80)→p92 (981–1000); P59 arbitraža 1881–1900 = isti 9→19 artefakt kot p89 p2; numerala I·IV @ r2; annRecords 998–1008 = pisano 989–999 (+9)",
+   "oldPassRanges": {
+    "p1": [
+     990,
+     1008
+    ],
+    "p2": [
+     990,
+     1008
+    ]
+   },
+   "p56pageMap": {
+    "numMax": 1008,
+    "numMin": 990
+   },
+   "rowsClass": [
+    {
+     "base": "990",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "991",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "992",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "993",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "995",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "996",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "997",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "998",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "1008",
+     "cls": "keyWrong"
+    }
+   ],
+   "true": [
+    981,
+    1000
+   ],
+   "v3rows": 9
+  },
+  "93": {
+   "artifact": "9→6/9→0 — P67 že dokazal",
+   "blatt": "IV",
+   "cardPolysInRange": [
+    1901,
+    1902,
+    1903,
+    1904,
+    1905,
+    1906,
+    1907,
+    1910,
+    1911,
+    1913,
+    1914,
+    1917,
+    1918,
+    1919,
+    1920
+   ],
+   "cls": "mainRun",
+   "crossed": [
+    1901,
+    1902,
+    1903,
+    1904,
+    1905,
+    1906,
+    1907
+   ],
+   "note": "P68 renum 160x→190x izveden (re-claim 1903/1904/1905); karta 1901–1907 = 7 poligonov; prehod sekcije sredi strani (→1303+); v3 3 vrstice pravilne",
+   "oldPassRanges": {
+    "p1": [
+     1001,
+     1020
+    ],
+    "p2": [
+     1601,
+     1620
+    ]
+   },
+   "p56pageMap": {
+    "numMax": 1620,
+    "numMin": 1601
+   },
+   "rowsClass": [
+    {
+     "base": "1903",
+     "cls": "keyCorrect"
+    },
+    {
+     "base": "1904",
+     "cls": "keyCorrect"
+    },
+    {
+     "base": "1905",
+     "cls": "keyCorrect"
+    }
+   ],
+   "true": [
+    1901,
+    1920
+   ],
+   "v3rows": 3
+  },
+  "99": {
+   "artifact": "−1000 izgubljena vodilna 1",
+   "blatt": "III",
+   "cardPolysInRange": [
+    1921,
+    1923,
+    1925,
+    1927,
+    1928,
+    1932,
+    1935,
+    1938,
+    1939
+   ],
+   "cls": "mainRun",
+   "crossed": [],
+   "note": "ZRCALNI primer p89: oči 4× = 1921–1940 (štirimestne), Blatt III; P59 1921–1940 BIII pravilen; lastniki ≠ p49 (r922 Deutlich vs Dragasch) — v3 p99 vrstice lažno na 921–940",
+   "oldPassRanges": {
+    "p1": [
+     921,
+     940
+    ],
+    "p2": [
+     921,
+     940
+    ]
+   },
+   "p56pageMap": {
+    "numMax": 940,
+    "numMin": 921
+   },
+   "rowsClass": [
+    {
+     "base": "922",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "923",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "924",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "925",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "926",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "927",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "928",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "929",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "930",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "931",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "934",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "936",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "937",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "938",
+     "cls": "keyWrong"
+    },
+    {
+     "base": "939",
+     "cls": "keyWrong"
+    }
+   ],
+   "true": [
+    1921,
+    1940
+   ],
+   "v3rows": 15
+  }
+ },
+ "principle": "Nič ni bilo ugibano: vsi verdikti = meritve (oči na 4×–8× izrezih VAČ, /tmp/p69; kontinuiteta; kartni poligoni; P56 annRecords zamiki; Blatt stolpec; hišne številke; površinska razmerja). Join se NE spreminja v P69 — spec gre k lastniku (P70).",
+ "rejoinSpec": {
+  "73": {
+   "candidates": [],
+   "n": 0,
+   "note": "vrstice iz starega pass branj; ključi po korekciji; izvedba = P70 re-join (P55 metoda)",
+   "source": {
+    "p1": [
+     1101,
+     1120
+    ],
+    "p2": [
+     1101,
+     1120
+    ]
+   },
+   "withCrossed": []
+  },
+  "74": {
+   "candidates": [
+    1421,
+    1425,
+    1426,
+    1429,
+    1430,
+    1432,
+    1433,
+    1434,
+    1435,
+    1436,
+    1437,
+    1438,
+    1439,
+    1440
+   ],
+   "n": 14,
+   "note": "vrstice iz starega pass branj; ključi po korekciji; izvedba = P70 re-join (P55 metoda)",
+   "source": {
+    "p1": [
+     1121,
+     1140
+    ]
+   },
+   "withCrossed": [
+    1435,
+    1436,
+    1438
+   ]
+  },
+  "75": {
+   "candidates": [],
+   "n": 0,
+   "note": "vrstice iz starega pass branj; ključi po korekciji; izvedba = P70 re-join (P55 metoda)",
+   "source": {
+    "p1": [
+     1441,
+     1460
+    ],
+    "p2": [
+     1441,
+     1460
+    ]
+   },
+   "withCrossed": []
+  },
+  "76": {
+   "candidates": [
+    1461,
+    1462,
+    1463,
+    1464,
+    1465,
+    1466,
+    1467,
+    1468,
+    1470,
+    1471,
+    1472,
+    1473,
+    1474,
+    1475,
+    1477,
+    1478,
+    1479,
+    1480
+   ],
+   "n": 18,
+   "note": "vrstice iz starega pass branj; ključi po korekciji; izvedba = P70 re-join (P55 metoda)",
+   "source": {
+    "p1": [
+     1161,
+     1181
+    ],
+    "p2": [
+     1161,
+     1180
+    ]
+   },
+   "withCrossed": [
+    1463,
+    1468,
+    1471,
+    1472,
+    1473,
+    1474,
+    1475
+   ]
+  },
+  "77": {
+   "candidates": [
+    1483,
+    1486
+   ],
+   "n": 2,
+   "note": "vrstice iz starega pass branj; ključi po korekciji; izvedba = P70 re-join (P55 metoda)",
+   "source": {
+    "p1": [
+     1181,
+     1200
+    ],
+    "p2": [
+     1481,
+     1500
+    ]
+   },
+   "withCrossed": []
+  },
+  "78": {
+   "candidates": [
+    1506,
+    1508,
+    1509,
+    1510,
+    1513,
+    1514,
+    1515,
+    1516,
+    1517,
+    1520
+   ],
+   "n": 10,
+   "note": "vrstice iz starega pass branj; ključi po korekciji; izvedba = P70 re-join (P55 metoda)",
+   "source": {
+    "p1": [
+     1601,
+     1620
+    ],
+    "p2": [
+     1601,
+     1620
+    ]
+   },
+   "withCrossed": [
+    1506,
+    1508,
+    1509,
+    1510,
+    1513,
+    1514
+   ]
+  },
+  "79": {
+   "candidates": [
+    1523,
+    1524
+   ],
+   "n": 2,
+   "note": "vrstice iz starega pass branj; ključi po korekciji; izvedba = P70 re-join (P55 metoda)",
+   "source": {
+    "p1": [
+     1821,
+     1842
+    ]
+   },
+   "withCrossed": [
+    1523,
+    1524
+   ]
+  },
+  "80": {
+   "candidates": [
+    1541,
+    1542,
+    1543,
+    1551,
+    1552,
+    1553
+   ],
+   "n": 6,
+   "note": "vrstice iz starega pass branj; ključi po korekciji; izvedba = P70 re-join (P55 metoda)",
+   "source": {
+    "p1": [
+     62,
+     81
+    ],
+    "p2": [
+     1644,
+     1663
+    ]
+   },
+   "withCrossed": [
+    1541,
+    1542,
+    1543,
+    1552,
+    1553
+   ]
+  },
+  "81": {
+   "candidates": [
+    1574,
+    1578,
+    1580
+   ],
+   "n": 3,
+   "note": "vrstice iz starega pass branj; ključi po korekciji; izvedba = P70 re-join (P55 metoda)",
+   "source": {
+    "p1": [
+     164,
+     183
+    ],
+    "p2": [
+     1661,
+     1680
+    ]
+   },
+   "withCrossed": []
+  },
+  "82": {
+   "candidates": [
+    1582,
+    1583,
+    1584,
+    1585,
+    1586,
+    1587,
+    1588,
+    1589,
+    1590,
+    1591,
+    1592,
+    1593,
+    1594,
+    1598,
+    1599,
+    1600
+   ],
+   "n": 16,
+   "note": "vrstice iz starega pass branj; ključi po korekciji; izvedba = P70 re-join (P55 metoda)",
+   "source": {
+    "p1": [
+     1581,
+     1600
+    ],
+    "p2": [
+     1681,
+     1700
+    ]
+   },
+   "withCrossed": []
+  },
+  "87": {
+   "candidates": [],
+   "n": 0,
+   "note": "vrstice iz starega pass branj; ključi po korekciji; izvedba = P70 re-join (P55 metoda)",
+   "source": {
+    "p1": [
+     661,
+     680
+    ],
+    "p2": [
+     1681,
+     1700
+    ]
+   },
+   "withCrossed": []
+  },
+  "89": {
+   "candidates": [
+    922,
+    924,
+    926,
+    929,
+    930,
+    931,
+    934,
+    936,
+    937
+   ],
+   "n": 9,
+   "note": "vrstice iz starega pass branj; ključi po korekciji; izvedba = P70 re-join (P55 metoda)",
+   "source": {
+    "p1": [
+     921,
+     942
+    ],
+    "p2": [
+     1921,
+     1941
+    ]
+   },
+   "withCrossed": [
+    922
+   ]
+  },
+  "90": {
+   "candidates": [
+    942,
+    951
+   ],
+   "n": 2,
+   "note": "vrstice iz starega pass branj; ključi po korekciji; izvedba = P70 re-join (P55 metoda)",
+   "source": {
+    "p1": [
+     941,
+     960
+    ],
+    "p2": [
+     1941,
+     1960
+    ]
+   },
+   "withCrossed": []
+  },
+  "91": {
+   "candidates": [],
+   "n": 0,
+   "note": "vrstice iz starega pass branj; ključi po korekciji; izvedba = P70 re-join (P55 metoda)",
+   "source": {
+    "p1": [
+     961,
+     980
+    ]
+   },
+   "withCrossed": []
+  },
+  "92": {
+   "candidates": [
+    985
+   ],
+   "n": 1,
+   "note": "vrstice iz starega pass branj; ključi po korekciji; izvedba = P70 re-join (P55 metoda)",
+   "source": {
+    "p1": [
+     990,
+     1008
+    ],
+    "p2": [
+     990,
+     1008
+    ]
+   },
+   "withCrossed": []
+  },
+  "93": {
+   "candidates": [
+    1901,
+    1902,
+    1906,
+    1907,
+    1910,
+    1911,
+    1913,
+    1914,
+    1917,
+    1918,
+    1919,
+    1920
+   ],
+   "n": 12,
+   "note": "vrstice iz starega pass branj; ključi po korekciji; izvedba = P70 re-join (P55 metoda)",
+   "source": {
+    "p1": [
+     1001,
+     1020
+    ],
+    "p2": [
+     1601,
+     1620
+    ]
+   },
+   "withCrossed": [
+    1901,
+    1902,
+    1906,
+    1907
+   ]
+  },
+  "99": {
+   "candidates": [
+    1921,
+    1932,
+    1935
+   ],
+   "n": 3,
+   "note": "vrstice iz starega pass branj; ključi po korekciji; izvedba = P70 re-join (P55 metoda)",
+   "source": {
+    "p1": [
+     921,
+     940
+    ],
+    "p2": [
+     921,
+     940
+    ]
+   },
+   "withCrossed": []
+  }
+ },
+ "renumSpec": {
+  "class": "A — mehanski renumber join ključev (stari VLM artefakti; vsi ključi po korekciji v Blatt II/III prostoru z dokazi)",
+  "mappings": [
+   {
+    "crossed": false,
+    "from": "1128",
+    "offset": 300,
+    "owner": "Verbitaker Chufg",
+    "page": 74,
+    "to": "1428"
+   },
+   {
+    "crossed": false,
+    "from": "1131",
+    "offset": 300,
+    "owner": "Verbitaker Matja",
+    "page": 74,
+    "to": "1431"
+   },
+   {
+    "crossed": false,
+    "from": "1821",
+    "offset": -300,
+    "owner": "Pößlrey Peter Bäuer Grübl",
+    "page": 79,
+    "to": "1521"
+   },
+   {
+    "crossed": false,
+    "from": "1825",
+    "offset": -300,
+    "owner": "Schimming Maria",
+    "page": 79,
+    "to": "1525"
+   },
+   {
+    "crossed": false,
+    "from": "1826",
+    "offset": -300,
+    "owner": "Schintz Georg",
+    "page": 79,
+    "to": "1526"
+   },
+   {
+    "crossed": false,
+    "from": "1827",
+    "offset": -300,
+    "owner": "Schimming Johann",
+    "page": 79,
+    "to": "1527"
+   },
+   {
+    "crossed": false,
+    "from": "1828",
+    "offset": -300,
+    "owner": "Aumeier Georg",
+    "page": 79,
+    "to": "1528"
+   },
+   {
+    "crossed": false,
+    "from": "1829",
+    "offset": -300,
+    "owner": "Uebl Anton",
+    "page": 79,
+    "to": "1529"
+   },
+   {
+    "crossed": false,
+    "from": "1830",
+    "offset": -300,
+    "owner": "Schimming Paul",
+    "page": 79,
+    "to": "1530"
+   },
+   {
+    "crossed": false,
+    "from": "1831",
+    "offset": -300,
+    "owner": "Schimming Paul",
+    "page": 79,
+    "to": "1531"
+   },
+   {
+    "crossed": false,
+    "from": "1832",
+    "offset": -300,
+    "owner": "Uebl Thomas",
+    "page": 79,
+    "to": "1532"
+   },
+   {
+    "crossed": false,
+    "from": "1833",
+    "offset": -300,
+    "owner": "Uebl Thomas",
+    "page": 79,
+    "to": "1533"
+   },
+   {
+    "crossed": false,
+    "from": "1834",
+    "offset": -300,
+    "owner": "Schimming Anna",
+    "page": 79,
+    "to": "1534"
+   },
+   {
+    "crossed": false,
+    "from": "1835",
+    "offset": -300,
+    "owner": "Schimming Johann",
+    "page": 79,
+    "to": "1535"
+   },
+   {
+    "crossed": false,
+    "from": "1836",
+    "offset": -300,
+    "owner": "Schimming Magdalena",
+    "page": 79,
+    "to": "1536"
+   },
+   {
+    "crossed": false,
+    "from": "1837",
+    "offset": -300,
+    "owner": "Ueich Georg",
+    "page": 79,
+    "to": "1537"
+   },
+   {
+    "crossed": false,
+    "from": "1838",
+    "offset": -300,
+    "owner": "Ueich Peter",
+    "page": 79,
+    "to": "1538"
+   },
+   {
+    "crossed": false,
+    "from": "1839",
+    "offset": -300,
+    "owner": "Uebl Anton",
+    "page": 79,
+    "to": "1539"
+   },
+   {
+    "crossed": false,
+    "from": "1840",
+    "offset": -300,
+    "owner": "Pößlrey Andreas",
+    "page": 79,
+    "to": "1540"
+   },
+   {
+    "crossed": false,
+    "from": "1644",
+    "offset": -100,
+    "owner": "Krüchan Miß Lorenz Grüble",
+    "page": 80,
+    "to": "1544"
+   },
+   {
+    "crossed": false,
+    "from": "1645",
+    "offset": -100,
+    "owner": "Krüchan Gregor",
+    "page": 80,
+    "to": "1545"
+   },
+   {
+    "crossed": false,
+    "from": "1646",
+    "offset": -100,
+    "owner": "Veitl Simon",
+    "page": 80,
+    "to": "1546"
+   },
+   {
+    "crossed": false,
+    "from": "1647",
+    "offset": -100,
+    "owner": "Scheuring Gregor",
+    "page": 80,
+    "to": "1547"
+   },
+   {
+    "crossed": false,
+    "from": "1648",
+    "offset": -100,
+    "owner": "Drüsch Veitl",
+    "page": 80,
+    "to": "1548"
+   },
+   {
+    "crossed": false,
+    "from": "1649",
+    "offset": -100,
+    "owner": "Krüchan Miß",
+    "page": 80,
+    "to": "1549"
+   },
+   {
+    "crossed": false,
+    "from": "1650",
+    "offset": -100,
+    "owner": "Scheuring Matheg",
+    "page": 80,
+    "to": "1550"
+   },
+   {
+    "crossed": false,
+    "from": "1655",
+    "offset": -100,
+    "owner": "Loparitsch Miß",
+    "page": 80,
+    "to": "1555"
+   },
+   {
+    "crossed": false,
+    "from": "1673",
+    "offset": -100,
+    "owner": "Lukasitsch Matheg",
+    "page": 81,
+    "to": "1573"
+   },
+   {
+    "crossed": false,
+    "from": "1679",
+    "offset": -100,
+    "owner": "Höppner Franz",
+    "page": 81,
+    "to": "1579"
+   },
+   {
+    "crossed": false,
+    "from": "1921",
+    "offset": -1000,
+    "owner": "Lauffstättl Nicol. Mau.",
+    "page": 89,
+    "to": "921"
+   },
+   {
+    "crossed": false,
+    "from": "1923",
+    "offset": -1000,
+    "owner": "Staudt Jho.",
+    "page": 89,
+    "to": "923"
+   },
+   {
+    "crossed": false,
+    "from": "1925",
+    "offset": -1000,
+    "owner": "Noah Moskau",
+    "page": 89,
+    "to": "925"
+   },
+   {
+    "crossed": false,
+    "from": "1927",
+    "offset": -1000,
+    "owner": "Lauffstättl Marlo",
+    "page": 89,
+    "to": "927"
+   },
+   {
+    "crossed": false,
+    "from": "1928",
+    "offset": -1000,
+    "owner": "Löwl Danner",
+    "page": 89,
+    "to": "928"
+   },
+   {
+    "crossed": false,
+    "from": "1932",
+    "offset": -1000,
+    "owner": "Lauffstättl Joham",
+    "page": 89,
+    "to": "932"
+   },
+   {
+    "crossed": false,
+    "from": "1935",
+    "offset": -1000,
+    "owner": "Noah Moskau",
+    "page": 89,
+    "to": "935"
+   },
+   {
+    "crossed": false,
+    "from": "1938",
+    "offset": -1000,
+    "owner": "Noah Moskau",
+    "page": 89,
+    "to": "938"
+   },
+   {
+    "crossed": false,
+    "from": "1939",
+    "offset": -1000,
+    "owner": "Noah Moskau",
+    "page": 89,
+    "to": "939"
+   },
+   {
+    "crossed": false,
+    "from": "1944",
+    "offset": -1000,
+    "owner": "Heinrich Georg",
+    "page": 90,
+    "to": "944"
+   },
+   {
+    "crossed": false,
+    "from": "1945",
+    "offset": -1000,
+    "owner": "Eurich Mädl",
+    "page": 90,
+    "to": "945"
+   },
+   {
+    "crossed": false,
+    "from": "1946",
+    "offset": -1000,
+    "owner": "Pörtschach er Mägd",
+    "page": 90,
+    "to": "946"
+   },
+   {
+    "crossed": false,
+    "from": "1947",
+    "offset": -1000,
+    "owner": "Hönig Mairadl",
+    "page": 90,
+    "to": "947"
+   },
+   {
+    "crossed": false,
+    "from": "1948",
+    "offset": -1000,
+    "owner": "Knieschen Georg",
+    "page": 90,
+    "to": "948"
+   },
+   {
+    "crossed": false,
+    "from": "1949",
+    "offset": -1000,
+    "owner": "Knieschen Mägde",
+    "page": 90,
+    "to": "949"
+   },
+   {
+    "crossed": false,
+    "from": "1952",
+    "offset": -1000,
+    "owner": "Knieschen Mägden",
+    "page": 90,
+    "to": "952"
+   },
+   {
+    "crossed": false,
+    "from": "1953",
+    "offset": -1000,
+    "owner": "Knieschen Mägde",
+    "page": 90,
+    "to": "953"
+   },
+   {
+    "crossed": false,
+    "from": "1954",
+    "offset": -1000,
+    "owner": "Knieschen Mägde",
+    "page": 90,
+    "to": "954"
+   },
+   {
+    "crossed": false,
+    "from": "1955",
+    "offset": -1000,
+    "owner": "Knieschen Mägde",
+    "page": 90,
+    "to": "955"
+   },
+   {
+    "crossed": false,
+    "from": "1956",
+    "offset": -1000,
+    "owner": "Hiebletzh Jhan",
+    "page": 90,
+    "to": "956"
+   },
+   {
+    "crossed": false,
+    "from": "1957",
+    "offset": -1000,
+    "owner": "Hiebletzh Jhan",
+    "page": 90,
+    "to": "957"
+   },
+   {
+    "crossed": false,
+    "from": "1958",
+    "offset": -1000,
+    "owner": "Hiebletzh Jhan",
+    "page": 90,
+    "to": "958"
+   },
+   {
+    "crossed": false,
+    "from": "1959",
+    "offset": -1000,
+    "owner": "Khunertch Mägden",
+    "page": 90,
+    "to": "959"
+   },
+   {
+    "crossed": false,
+    "from": "1960",
+    "offset": -1000,
+    "owner": "Hiebletzh Jhan",
+    "page": 90,
+    "to": "960"
+   },
+   {
+    "crossed": true,
+    "from": "990",
+    "offset": -9,
+    "owner": "Pfaur Georg",
+    "page": 92,
+    "to": "981"
+   },
+   {
+    "crossed": false,
+    "from": "991",
+    "offset": -9,
+    "owner": "Schimeg Maria",
+    "page": 92,
+    "to": "982"
+   },
+   {
+    "crossed": true,
+    "from": "992",
+    "offset": -9,
+    "owner": "Schimeg Maria",
+    "page": 92,
+    "to": "983"
+   },
+   {
+    "crossed": true,
+    "from": "993",
+    "offset": -9,
+    "owner": "Schimeg Maria",
+    "page": 92,
+    "to": "984"
+   },
+   {
+    "crossed": true,
+    "from": "995",
+    "offset": -9,
+    "owner": "Schimeg Johann",
+    "page": 92,
+    "to": "986"
+   },
+   {
+    "crossed": true,
+    "from": "996",
+    "offset": -9,
+    "owner": "Lahmichl Maria",
+    "page": 92,
+    "to": "987"
+   },
+   {
+    "crossed": true,
+    "from": "997",
+    "offset": -9,
+    "owner": "Dlechtitl Maria",
+    "page": 92,
+    "to": "988"
+   },
+   {
+    "crossed": false,
+    "from": "998",
+    "offset": -9,
+    "owner": "Dlechtitl Maria",
+    "page": 92,
+    "to": "989"
+   },
+   {
+    "crossed": false,
+    "from": "1008",
+    "offset": -9,
+    "owner": "Knall Niklo",
+    "page": 92,
+    "to": "999"
+   },
+   {
+    "crossed": false,
+    "from": "922",
+    "offset": 1000,
+    "owner": "Deutlich Michael",
+    "page": 99,
+    "to": "1922"
+   },
+   {
+    "crossed": false,
+    "from": "923",
+    "offset": 1000,
+    "owner": "Deutlich Katharina",
+    "page": 99,
+    "to": "1923"
+   },
+   {
+    "crossed": false,
+    "from": "924",
+    "offset": 1000,
+    "owner": "Deutlich Maria",
+    "page": 99,
+    "to": "1924"
+   },
+   {
+    "crossed": false,
+    "from": "925",
+    "offset": 1000,
+    "owner": "Strauß Georg",
+    "page": 99,
+    "to": "1925"
+   },
+   {
+    "crossed": false,
+    "from": "926",
+    "offset": 1000,
+    "owner": "Strauß Georg",
+    "page": 99,
+    "to": "1926"
+   },
+   {
+    "crossed": false,
+    "from": "927",
+    "offset": 1000,
+    "owner": "Brünig Johann",
+    "page": 99,
+    "to": "1927"
+   },
+   {
+    "crossed": false,
+    "from": "928",
+    "offset": 1000,
+    "owner": "Brünig Michel",
+    "page": 99,
+    "to": "1928"
+   },
+   {
+    "crossed": false,
+    "from": "929",
+    "offset": 1000,
+    "owner": "Brünig Michael",
+    "page": 99,
+    "to": "1929"
+   },
+   {
+    "crossed": false,
+    "from": "930",
+    "offset": 1000,
+    "owner": "Brünig Michel",
+    "page": 99,
+    "to": "1930"
+   },
+   {
+    "crossed": false,
+    "from": "931",
+    "offset": 1000,
+    "owner": "Brünig Johann",
+    "page": 99,
+    "to": "1931"
+   },
+   {
+    "crossed": false,
+    "from": "934",
+    "offset": 1000,
+    "owner": "Brünig Michael",
+    "page": 99,
+    "to": "1934"
+   },
+   {
+    "crossed": false,
+    "from": "936",
+    "offset": 1000,
+    "owner": "Brünig Michel",
+    "page": 99,
+    "to": "1936"
+   },
+   {
+    "crossed": false,
+    "from": "937",
+    "offset": 1000,
+    "owner": "Pößnig Georg",
+    "page": 99,
+    "to": "1937"
+   },
+   {
+    "crossed": false,
+    "from": "938",
+    "offset": 1000,
+    "owner": "Pößnig Georg",
+    "page": 99,
+    "to": "1938"
+   },
+   {
+    "crossed": false,
+    "from": "939",
+    "offset": 1000,
+    "owner": "Pößnig Georg",
+    "page": 99,
+    "to": "1939"
+   }
+  ],
+  "note": "p88 ni v class A (sekcija): opciji 'renumToWritten −120' ali 'exclude' = lastniška odločitev",
+  "offsets": {
+   "74": 300,
+   "79": -300,
+   "80": -100,
+   "81": -100,
+   "89": -1000,
+   "90": -1000,
+   "92": -9,
+   "99": 1000
+  }
+ },
+ "sectionClass": {
+  "decision": "LASTNIK (P70)",
+  "evidence": {
+   "p83_p84_vs_p11": {
+    "claim": "sekciji 161–180 nista parcelah 161–180 Blatt I",
+    "ownerOverlap": 0,
+    "p11_owners_161_168": [],
+    "p83_owners_sample": [
+     "Hlebtzschand",
+     "Stainzldt Wölfl",
+     "Stainzhan Wölfl"
+    ],
+    "p84_owners_sample": [
+     "Schumitsch Matja",
+     "Hödle Schamb",
+     "Dragosch Gregor"
+    ]
+   },
+   "p85_vs_p35_houses": {
+    "p35_641": {
+     "haus": "68",
+     "owner": "Wüürich Maria"
+    },
+    "p35_646_haus": "23",
+    "p35_655_haus": "26",
+    "p85_641_eyes": {
+     "haus": "16",
+     "owner": "Stüllich Mihlo"
+    },
+    "p85_646_eyes_haus": "22",
+    "p85_655_eyes_haus": "7",
+    "verdict": "različne hiše = različne parcele"
+   }
+  },
+  "options": [
+   "exclude iz joina (vrstice ostanejo v registru brez geometrije; dokazano lažne fuzije)",
+   "per-Blatt instance ločeno (P39; potrebuje P60 moda B / PF protokol identiteto sekcij)"
+  ],
+  "pages": [
+   83,
+   84,
+   85,
+   86,
+   88
+  ],
+  "ratios": {
+   "1128": 3.66,
+   "1441": 1.09,
+   "161": 235.65,
+   "162": 31.39,
+   "163": 16.61,
+   "165": 3.26,
+   "168": 9.31,
+   "175": 19.92,
+   "736": 7.83,
+   "990": 8.99
+  },
+  "rows": [
+   {
+    "areaQK": 1103.0,
+    "base": "161",
+    "owner": "Hlebtzschand",
+    "page": 83
+   },
+   {
+    "areaQK": 124.0,
+    "base": "162",
+    "owner": "Hlebtzschand",
+    "page": 83
+   },
+   {
+    "areaQK": 164.0,
+    "base": "163",
+    "owner": "Stainzldt Wölfl",
+    "page": 83
+   },
+   {
+    "areaQK": 39.0,
+    "base": "164",
+    "owner": "Hlebtzschand",
+    "page": 83
+   },
+   {
+    "areaQK": 143.0,
+    "base": "165",
+    "owner": "Stainzldt Wölfl",
+    "page": 83
+   },
+   {
+    "areaQK": 261.0,
+    "base": "166",
+    "owner": "Stainzhan Wölfl",
+    "page": 83
+   },
+   {
+    "areaQK": 527.0,
+    "base": "168",
+    "owner": "Stainzhan Wölfl",
+    "page": 83
+   },
+   {
+    "areaQK": 36.0,
+    "base": "171",
+    "owner": "Stainzldt Wölfl",
+    "page": 83
+   },
+   {
+    "areaQK": 82.0,
+    "base": "173",
+    "owner": "Stainzhan Wölfl",
+    "page": 83
+   },
+   {
+    "areaQK": 538.0,
+    "base": "174",
+    "owner": "Stainzhan Wölfl",
+    "page": 83
+   },
+   {
+    "areaQK": 8.0,
+    "base": "175",
+    "owner": "Stainzldt Wölfl",
+    "page": 83
+   },
+   {
+    "areaQK": 334.0,
+    "base": "176",
+    "owner": "Hlebtzschand",
+    "page": 83
+   },
+   {
+    "areaQK": 349.0,
+    "base": "179",
+    "owner": "Stainzhan Wölfl",
+    "page": 83
+   },
+   {
+    "areaQK": 2624.0,
+    "base": "162",
+    "owner": "Schumitsch Matja",
+    "page": 84
+   },
+   {
+    "areaQK": 337.0,
+    "base": "163",
+    "owner": "Schumitsch Matja",
+    "page": 84
+   },
+   {
+    "areaQK": 630.0,
+    "base": "164",
+    "owner": "Hödle Schamb",
+    "page": 84
+   },
+   {
+    "areaQK": 397.0,
+    "base": "165",
+    "owner": "Dragosch Gregor",
+    "page": 84
+   },
+   {
+    "areaQK": 182.0,
+    "base": "166",
+    "owner": "Schumitsch Matja",
+    "page": 84
+   },
+   {
+    "areaQK": 1213.0,
+    "base": "168",
+    "owner": "Schumitsch Marlo",
+    "page": 84
+   },
+   {
+    "areaQK": 763.0,
+    "base": "171",
+    "owner": "Stuller Mihlo",
+    "page": 84
+   },
+   {
+    "areaQK": 519.0,
+    "base": "173",
+    "owner": "Hödle Schaw",
+    "page": 84
+   },
+   {
+    "areaQK": 1251.0,
+    "base": "174",
+    "owner": "Hödle Schaw",
+    "page": 84
+   },
+   {
+    "areaQK": 1403.0,
+    "base": "175",
+    "owner": "Schumitsch Marlo",
+    "page": 84
+   },
+   {
+    "areaQK": 608.0,
+    "base": "176",
+    "owner": "Schumitsch Marlo",
+    "page": 84
+   },
+   {
+    "areaQK": 346.0,
+    "base": "179",
+    "owner": "Schaffhatsch Matja",
+    "page": 84
+   },
+   {
+    "areaQK": 941.0,
+    "base": "641",
+    "owner": "Stüllich Mihlo",
+    "page": 85
+   },
+   {
+    "areaQK": 296.0,
+    "base": "642",
+    "owner": "Schuster Mihlo",
+    "page": 85
+   },
+   {
+    "areaQK": 706.0,
+    "base": "643",
+    "owner": "Schimeg Mihel",
+    "page": 85
+   },
+   {
+    "areaQK": 759.0,
+    "base": "644",
+    "owner": "Preinig Mihel",
+    "page": 85
+   },
+   {
+    "areaQK": 786.0,
+    "base": "646",
+    "owner": "Milleger Johann",
+    "page": 85
+   },
+   {
+    "areaQK": 700.0,
+    "base": "648",
+    "owner": "Schimeg Mihel",
+    "page": 85
+   },
+   {
+    "areaQK": 783.0,
+    "base": "651",
+    "owner": "Knall Anna",
+    "page": 85
+   },
+   {
+    "areaQK": 710.0,
+    "base": "652",
+    "owner": "Schimeg Barbara",
+    "page": 85
+   },
+   {
+    "areaQK": 708.0,
+    "base": "653",
+    "owner": "Knall Anna",
+    "page": 85
+   },
+   {
+    "areaQK": 762.0,
+    "base": "654",
+    "owner": "Stüllich Mihlo",
+    "page": 85
+   },
+   {
+    "areaQK": 1002.0,
+    "base": "655",
+    "owner": "Lukantsitsch Marla",
+    "page": 85
+   },
+   {
+    "areaQK": 794.0,
+    "base": "656",
+    "owner": "Knall Anna",
+    "page": 85
+   },
+   {
+    "areaQK": 809.0,
+    "base": "657",
+    "owner": "Novakl Martin",
+    "page": 85
+   },
+   {
+    "areaQK": 577.0,
+    "base": "659",
+    "owner": "Kubatschitsch Ja",
+    "page": 85
+   },
+   {
+    "areaQK": 2420.0,
+    "base": "160",
+    "owner": "LahNitschek Hülfse Mann",
+    "page": 86
+   },
+   {
+    "areaQK": 1605.0,
+    "base": "161",
+    "owner": "LahNitschek Waisen",
+    "page": 86
+   },
+   {
+    "areaQK": 705.0,
+    "base": "162",
+    "owner": "Pechir gneis",
+    "page": 86
+   },
+   {
+    "areaQK": 214.0,
+    "base": "163",
+    "owner": "Laune Hülfse",
+    "page": 86
+   },
+   {
+    "areaQK": 432.0,
+    "base": "164",
+    "owner": "Hantel Hlaw",
+    "page": 86
+   },
+   {
+    "areaQK": 343.0,
+    "base": "165",
+    "owner": "LahNitschek Hlaw",
+    "page": 86
+   },
+   {
+    "areaQK": 314.0,
+    "base": "166",
+    "owner": "Schober Hülfse",
+    "page": 86
+   },
+   {
+    "areaQK": 237.0,
+    "base": "168",
+    "owner": "Schober Hülfse",
+    "page": 86
+   },
+   {
+    "areaQK": 33.0,
+    "base": "171",
+    "owner": "Laune Hülfse",
+    "page": 86
+   },
+   {
+    "areaQK": 609.0,
+    "base": "173",
+    "owner": "Noaßl Mande",
+    "page": 86
+   },
+   {
+    "areaQK": 620.0,
+    "base": "174",
+    "owner": "Haindlan Hülfse",
+    "page": 86
+   },
+   {
+    "areaQK": 388.0,
+    "base": "175",
+    "owner": "LahNitschek Hülfse",
+    "page": 86
+   },
+   {
+    "areaQK": 289.0,
+    "base": "176",
+    "owner": "Schimey Patteu",
+    "page": 86
+   },
+   {
+    "areaQK": 1335.0,
+    "base": "179",
+    "owner": "Pechir gneis",
+    "page": 86
+   },
+   {
+    "areaQK": 4447.0,
+    "base": "736",
+    "owner": "Dahofstättlich Malfg",
+    "page": 88
+   },
+   {
+    "areaQK": 56.0,
+    "base": "737",
+    "owner": "Häuslty Ghan",
+    "page": 88
+   },
+   {
+    "areaQK": 156.0,
+    "base": "738",
+    "owner": "Gmuniden",
+    "page": 88
+   }
+  ]
+ },
+ "swapP89P99": {
+  "p89": {
+   "evidence": "oči 921 (3-glyph) + Blatt II + p49–52 glavni tek + karta 922–939 (16)",
+   "offset": -1000,
+   "oldKey": "1921–1939",
+   "true": "921–939"
+  },
+  "p99": {
+   "evidence": "oči 1921 (4-glyph) + Blatt III + P59 BIII + lastniki ≠ p49",
+   "offset": 1000,
+   "oldKey": "921–940",
+   "true": "1921–1940"
+  }
+ },
+ "task": "P69 (issue #13; ps-parcels-geo next — sistemski pregled P38 pass1 slojev p74/p76/p77/p88) — OČESNA FORENZIKA CONE p73–93 + p99"
+}

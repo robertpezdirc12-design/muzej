@@ -84,6 +84,7 @@ import {
   SPLIT_PACK_P66,
   ANOM_FORENSICS_P67,
   V3_RENUMBER_P68,
+  PASS1_LAYERS_P69,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -2403,6 +2404,68 @@ export function MuseumResearch() {
                   {t(
                     "Skok II·IV IZGINE iz joina (lažni fuziji 1603/1604 razpadeta); čez-Blatt lažni pari 661/671 razpadejo (Blatt I instanci ostanejo čisti); per-Blatt instanca 1903/1905 (III vs IV) ostane fuzija v v3 [~] — SPLIT join odločitev ostaja LASTNIKA (P69); veriga re-run P59–P66 s posodobljenimi pini izvedena. Strojno berljivo: research/issue17/ps-parcels-geo-v3.json + runtime src/data/atlas/ps-parcels-geo.json (/api/atlas/ps-parcels-geo).",
                     "The II·IV skip DISSOLVES from the join (the false 1603/1604 fusions collapse); the cross-Blatt false pairs 661/671 collapse (the Blatt I instances stay clean); the per-Blatt instance 1903/1905 (III vs IV) remains fused in v3 [~] — the SPLIT join decision remains the OWNER's (P69); the re-run chain P59–P66 with updated pins realized. Machine-readable: research/issue17/ps-parcels-geo-v3.json + the runtime src/data/atlas/ps-parcels-geo.json (/api/atlas/ps-parcels-geo).",
+                  )}
+                </p>
+              </div>
+            </div>
+
+            {/* P69 — sistemski pregled P38 pass1 slojev (cona p73-93 + p99) */}
+            <div className="min-w-0 rounded-xl border bg-card p-6 shadow-sm">
+              <h3 className="flex flex-wrap items-center gap-2 font-display text-lg font-semibold">
+                <ScrollText className="size-4 text-primary" aria-hidden="true" />
+                {t("Sistemski pregled pass1 slojev — očesna forenzika p73–93 (P69)", "Systematic review of the pass1 layers — ocular forensics p73–93 (P69)")}
+                <StatusBadge status={PASS1_LAYERS_P69.status} />
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                {t(
+                  "Odprta točka P68 next #3 razrešena: stari P38 sloji = sistematski digitalni artefakti (4→1, 5→8, 5→6, +120, +9, fantom-1 ±1000) — dokazano z očmi na 4×–8× izrezih + kontinuiteto + karto + annRecords zamiki + hišne številke.",
+                  "The P68 open point #3 resolved: the old P38 layers = systematic digital artifacts (4→1, 5→8, 5→6, +120, +9, phantom-1 ±1000) — proven by eyes on 4×–8× crops + continuity + the map + annRecords offsets + house numbers.",
+                )}
+              </p>
+              <div className="mt-4 grid gap-2 text-xs sm:grid-cols-2">
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("77 renum preslikav, 0 kolizij", "77 renumber mappings, 0 collisions")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "p74 1121–40→1421–40 (4→1; annRecords = prečrtane 1435/36/38), p79 1821–42→1521–40 (5→8), p80/p81 16xx→15xx (5→6), p89/p90 19xx→9xx (fantom-1), p92 990–1008→981–1000 (+9), p99 921–40→1921–40 (−1000, zrcalni primer p89)",
+                      "p74 1121–40→1421–40 (4→1; annRecords = crossed 1435/36/38), p79 1821–42→1521–40 (5→8), p80/p81 16xx→15xx (5→6), p89/p90 19xx→9xx (phantom-1), p92 990–1008→981–1000 (+9), p99 921–40→1921–40 (−1000, the mirror case of p89)",
+                    )}
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("98 rejoin kandidatov", "98 re-join candidates")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "pisane številke s kartnimi poligoni, izpadle iz v3 (p82 16 — join je vzel napačen pass; p76 18; p74 14; p93 12; p78 10 …); 117 prečrtanih vrstic zabeleženih (rdeči tuš)",
+                      "written numbers with map polygons, dropped from v3 (p82 16 — the join took the wrong pass; p76 18; p74 14; p93 12; p78 10 …); 117 crossed rows recorded (red ink)",
+                    )}
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("5 lokalnih sekcij (56 vrstic)", "5 local sections (56 rows)")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "p83/p84/p86 = 161–180 (×3 strani, različni lastniki), p85 = 641–660, p88 = 601–620 — dokazano različne parcele od Blatt I poligonov (hiše: p85 r641 Hi16 vs p35 Hi68; Σ ratio 161 = 235.65× proti čistim 1.09); opciji exclude / per-Blatt = LASTNIKA",
+                      "p83/p84/p86 = 161–180 (×3 pages, different owners), p85 = 641–660, p88 = 601–620 — proven different parcels from the Blatt I polygons (houses: p85 r641 H16 vs p35 H68; Σ ratio 161 = 235.65× vs the clean 1.09); the options exclude / per-Blatt = OWNER",
+                    )}
+                  </p>
+                </div>
+                <div className="rounded-lg border bg-background p-3">
+                  <p className="font-semibold">{t("p89/p99 zrcalni primer", "The p89/p99 mirror case")}</p>
+                  <p className="mt-1 leading-relaxed text-muted-foreground">
+                    {t(
+                      "p89 (Blatt II) = 921–940 (pass1 pravilen; pass2 1921–1941 = fantom-1); p99 (Blatt III) = 1921–1940 (stari 921–940 = izgubljena vodilna 1) — Blatt stolpec razrešuje; P59 arbitraža p92 (1881–1900) = isti 9→19 artefakt",
+                      "p89 (Blatt II) = 921–940 (pass1 correct; pass2 1921–1941 = phantom-1); p99 (Blatt III) = 1921–1940 (the old 921–940 = lost leading 1) — the Blatt column resolves it; the P59 arbitration of p92 (1881–1900) = the same 9→19 artifact",
+                    )}
+                  </p>
+                </div>
+              </div>
+              <div className="mt-3 rounded-lg border border-emerald-200 bg-emerald-50/60 p-3 dark:border-emerald-900/50 dark:bg-emerald-950/30">
+                <p className="text-[11px] leading-relaxed text-foreground/80">
+                  <span className="font-semibold">{t("Pošten status: ", "Honest status: ")}</span>
+                  {t(
+                    "Join v3 NESPREMENJEN (disciplina P56–P68) — 77 renum + 98 rejoin = SPEC za P70 (izvedba = veriga re-run P59–P68 s posodobljenimi pini); odločitev o 56 sekijskih vrsticah = LASTNIKA. Strojno berljivo: research/issue17/ps-pass1-layers.json + runtime src/data/atlas/ps-pass1-layers.json (/api/atlas/ps-pass1-layers).",
+                    "The v3 join UNCHANGED (P56–P68 discipline) — the 77 renums + 98 rejoins = a SPEC for P70 (the realization = the re-run chain P59–P68 with updated pins); the decision on the 56 section rows = the OWNER's. Machine-readable: research/issue17/ps-pass1-layers.json + the runtime src/data/atlas/ps-pass1-layers.json (/api/atlas/ps-pass1-layers).",
                   )}
                 </p>
               </div>

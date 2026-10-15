@@ -50,6 +50,7 @@ import {
   SPLIT_PACK_P66,
   ANOM_FORENSICS_P67,
   V3_RENUMBER_P68,
+  PASS1_LAYERS_P69,
   PZ_ECONOMY_1825,
   PUA_CONTINUATION,
   PUA_PT_CROSS,
@@ -4977,8 +4978,90 @@ const p45bErrors: string[] = [];
       : p68Errors.join("; "),
   );
 
-  const passed = tests.filter((t) => t.pass).length;
-  return {
+  // ——— qa-p69: P69 pass1 sloji (pini + neodvisen preracun preslikav) ———
+  const r69 = PASS1_LAYERS_P69;
+  const p69Errors: string[] = [];
+  if (r69.summary.pagesReviewed !== 22) p69Errors.push(`pini: pagesReviewed ${r69.summary.pagesReviewed} ≠ 22`);
+  if (r69.summary.renumMappings !== 77) p69Errors.push(`pini: renumMappings ${r69.summary.renumMappings} ≠ 77`);
+  if (r69.summary.sectionRows !== 56) p69Errors.push(`pini: sectionRows ${r69.summary.sectionRows} ≠ 56`);
+  if (r69.summary.rejoinCandidates !== 98) p69Errors.push(`pini: rejoinCandidates ${r69.summary.rejoinCandidates} ≠ 98`);
+  if (r69.summary.keyWrong !== 77 || r69.summary.keyCorrect !== 33)
+    p69Errors.push(`pini: keyWrong/keyCorrect ${r69.summary.keyWrong}/${r69.summary.keyCorrect} ≠ 77/33`);
+  if (JSON.stringify(r69.sections.pages) !== JSON.stringify([83, 84, 85, 86, 88]))
+    p69Errors.push(`pini: sekcije ${JSON.stringify(r69.sections.pages)} ≠ [83,84,85,86,88]`);
+  const offs69 = r69.offsets;
+  for (const [pg, off] of Object.entries(offs69)) {
+    const art = r69.artifacts.find((a) => a.page === Number(pg));
+    if (art && art.offset !== off) p69Errors.push(`pini: p${pg} offset ${art.offset} ≠ ${off}`);
+  }
+  // 2) datoteke + NEODVISEN preracun iz runtime kopije (dve obliki po P53/P57/P58)
+  let p69FileDetail = "datoteke niso preverjene (readFile ni na voljo) — celovita kontrola teče na /api/qa";
+  if (opts.readFile) {
+    const rawRt69 = opts.readFile("src/data/atlas/ps-pass1-layers.json");
+    const rawEv69 = opts.readFile("research/issue17/ps-pass1-layers.json");
+    if (rawRt69 === null) {
+      p69Errors.push("runtime ps-pass1-layers ni berljiv");
+    } else {
+      try {
+        const rt69 = JSON.parse(rawRt69) as {
+          counts?: Record<string, number>;
+          renumSpec?: { mappings?: { page: number; from: string; to: string; offset: number }[] };
+          sectionClass?: { pages?: number[]; rows?: unknown[] };
+          eyesVerdicts?: Record<string, { true?: number[]; cls?: string }>;
+          ratios?: Record<string, number | null>;
+          swapP89P99?: Record<string, { offset?: number }>;
+        };
+        const c = rt69.counts ?? {};
+        for (const k of ["pagesReviewed", "renumMappings", "sectionRows", "rejoinCandidates", "keyWrong", "keyCorrect"] as const) {
+          if (c[k] !== r69.summary[k]) p69Errors.push(`runtime counts.${k} ${c[k]} ≠ pini ${r69.summary[k]}`);
+        }
+        const ms = rt69.renumSpec?.mappings ?? [];
+        if (ms.length !== 77) p69Errors.push(`mappings ${ms.length} ≠ 77`);
+        const seen69 = new Set<string>();
+        for (const m of ms) {
+          if (String(Number(m.from) + m.offset) !== m.to)
+            p69Errors.push(`preslikava p${m.page}: ${m.from}+${m.offset} ≠ ${m.to}`);
+          const k = `${m.page}:${m.to}`;
+          if (seen69.has(k)) p69Errors.push(`kolizija tarče ${k}`);
+          seen69.add(k);
+        }
+        const ev = rt69.eyesVerdicts ?? {};
+        if (Object.keys(ev).length !== 22) p69Errors.push(`eyesVerdicts ${Object.keys(ev).length} ≠ 22`);
+        for (const pg of ["83", "84", "85", "86", "88"]) {
+          if (ev[pg]?.cls !== "section") p69Errors.push(`p${pg} cls ≠ section`);
+        }
+        if ((rt69.sectionClass?.rows ?? []).length !== 56) p69Errors.push("sekijske vrstice ≠ 56");
+        const ra = rt69.ratios ?? {};
+        if (!(Number(ra["161"]) > 10)) p69Errors.push(`ratio 161 = ${ra["161"]} (pričakovano ≫10)`);
+        if (!(Number(ra["1441"]) < 2)) p69Errors.push(`ratio 1441 = ${ra["1441"]} (pričakovano <2)`);
+        if (rt69.swapP89P99?.["p89"]?.offset !== -1000 || rt69.swapP89P99?.["p99"]?.offset !== 1000)
+          p69Errors.push("swap p89/p99 odmiki ≠ −1000/+1000");
+        if (rawEv69 !== null) {
+          const ev69 = JSON.parse(rawEv69) as { counts?: Record<string, number>; annChecks?: Record<string, { pass?: boolean }> };
+          for (const k of ["pagesReviewed", "renumMappings", "sectionRows", "rejoinCandidates"]) {
+            if ((ev69.counts ?? {})[k] !== c[k]) p69Errors.push(`dokaz counts.${k} ≠ runtime`);
+          }
+          for (const pg of ["74", "88", "92"]) {
+            if (ev69.annChecks?.[pg]?.pass !== true) p69Errors.push(`annChecks p${pg} ≠ pass`);
+          }
+          p69FileDetail = "repo: dokaz == runtime (counts + annChecks 74/88/92) · preracun: 77 preslikav (to == from+offset, 0 kolizij), 22 očesnih verdiktov, sekcije [83,84,85,86,88] × 56 vrstic, ratio 161≫10 / 1441<2, swap −1000/+1000";
+        }
+      } catch (e) {
+        p69Errors.push(`ps-pass1-layers datoteke neuspešno: ${String(e).slice(0, 80)}`);
+      }
+    }
+  }
+  push(
+    "qa-p69-pass1-layers",
+    "P69: SISTEMSKI PREGLED P38 PASS1 SLOJEV (issue #13, odprta točka P68 next #3) — očesna forenzika 22 strani (p73–93 + p99) po P67 receptu: 4× široki izrezi x=0..430 (popravi P59 past odrezanih vodilnih) + 7×–8× zoomi + kontinuiteta + kartni poligoni + P56 annRecords zamiki + Blatt stolpec + hišne številke + površinska razmerja; stari sloji = sistematski digitalni artefakti (p74 1121–40=1421–40 4→1, p79 1821–42=1521–40 5→8, p80/p81 16xx=15xx 5→6, p82 1681–1700=1581–1600 — pass1 pravilen, join vzel p2, 16 vrstic izgubljenih, p88 721–740=601–620 +120 celostranski, p89/p90 19xx=9xx fantom-1 ±1000, p92 990–1008=981–1000 +9, p99 921–40=1921–40 −1000 zrcalno); 77 renum preslikav (0 kolizij) + 98 rejoin kandidatov = spec P70; 5 lokalnih sekcij (p83/p84/p86 161–180 ×3, p85 641–660, p88 601–620; 56 vrstic) = dokazane lažne fuzije (hiše p85 r641 Hi16 vs p35 Hi68; Σ ratio 161=235.65×, 162=31.39× proti čistim 1441=1.09; p83 dvojni blok 161–170 ×2 [~]); p89/p99 zrcalni primer razrešen (Blatt stolpec); 117 prečrtanih vrstic; join v3 NESPREMENJEN; status REVIEW",
+    "P69: THE SYSTEMATIC REVIEW OF THE P38 pass1 LAYERS (issue #13, the P68 open point #3) — ocular forensics of 22 pages (p73–93 + p99) by the P67 recipe: 4× wide crops x=0..430 (fixes the P59 clipped-leading-digit trap) + 7×–8× zooms + continuity + map polygons + P56 annRecords offsets + the Blatt column + house numbers + area ratios; the old layers = systematic digital artifacts (p74 1121–40=1421–40 4→1, p79 1821–42=1521–40 5→8, p80/p81 16xx=15xx 5→6, p82 1681–1700=1581–1600 — pass1 correct, the join took p2, 16 rows lost, p88 721–740=601–620 +120 page-wide, p89/p90 19xx=9xx phantom-1 ±1000, p92 990–1008=981–1000 +9, p99 921–40=1921–40 −1000 mirror); 77 renumber mappings (0 collisions) + 98 re-join candidates = the P70 spec; 5 local sections (p83/p84/p86 161–180 ×3, p85 641–660, p88 601–620; 56 rows) = proven false fusions (houses p85 r641 H16 vs p35 H68; Σ ratio 161=235.65×, 162=31.39× vs the clean 1441=1.09; p83 a double block 161–170 ×2 [~]); the p89/p99 mirror case resolved (the Blatt column); 117 crossed rows; the v3 join UNCHANGED; status REVIEW",
+    p69Errors.length === 0,
+    p69Errors.length === 0
+      ? `pini 22 strani / 77 preslikav / 56 sekijskih / 98 rejoin · preslikave to == from+offset, 0 kolizij · ratio 161=235.65× / 1441=1.09 · swap −1000/+1000 · ${p69FileDetail}`
+      : p69Errors.join("; "),
+  );
+
+  const passed = tests.filter((t) => t.pass).length;  return {
     ok: tests.every((t) => t.pass),
     passed,
     failed: tests.length - passed,

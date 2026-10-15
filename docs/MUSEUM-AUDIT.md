@@ -2671,3 +2671,52 @@ posodobljenimi pini); 930 ostaja [~]; strojna forenzika ni dokazni
 vir; join v2 in SHEET_GEOREFS nespremanjeni (lekcija P9); P55–P66
 runtime nespremanjeni (I1 sha pini); očesna verifikacija (strani
 78/87/93) dokumentirana v repovem worklogu (Task 33).
+
+## §46 — P69: sistemski pregled P38 pass1 slojev (cona p73–93 + p99) — 2026-10-15
+
+**Vprašanje (odprta točka P68 next #3):** so preostali P38 pass1 sloji
+(p74/p76/p77 "1121–1200 brez kartnih poligonov [~]"; p88 "721–740 [~]")
+realni ali artefakti?
+
+**Metoda (P67 recept):** očesna forenzika — 4× široki izrezi x=0..430
+(`scripts/p69_fetch_zone.py`, popravi P59 past odrezanih vodilnih
+številk) + 7×–8× zoomi dvomljivih vrstic + kontinuiteta + kartni
+poligoni + P56 annRecords zamiki + Blatt stolpec + hišne številke +
+površinska razmerja. 22 strani (p73–93 + kolizijska p99), 166 v3
+vrstic klasificiranih.
+
+**Ugotovitve:**
+
+- **(A) Stari sloji = sistematski digitalni artefakti** (12 strani):
+  p74 1121–1140 je pravzaprap **1421–1440** (4→1; annRecords
+  "auf transportirt 1844" na 1135/1136/1138 = prečrtane
+  1435/1436/1438 — neodvisen dokaz zamika), p76 1161–1181 = 1461–1480,
+  p77 1181–1200 = 1481–1500 (4→1), p79 1821–1842 = 1521–1540 (5→8),
+  p80/p81 16xx = 15xx (5→6), p82 1681–1700 = 1581–1600 (pass1 je bil
+  PRAVILEN — join je vzel p2 → 16 vrstic z poligoni IZGUBLJENIH),
+  p88 721–740 = 601–620 (+120 celostranski; annRecords
+  "Aufsufgefüllt 1811/1841/1831"), p89/p90 19xx = 9xx (fantom-1
+  ±1000; pass1 pravilen), p92 990–1008 = 981–1000 (+9 zamik; P59
+  arbitraža 1881–1900 = isti 9→19 artefakt), p99 921–940 = 1921–1940
+  (−1000; zrcalni primer p89, Blatt III razrešuje). Kontinuiteta:
+  p73 (1101–20) → p74 (1421–40) → … → p82 (1581–1600); p91 (961–80) →
+  p92 (981–1000); p49–52 = 921–1000.
+- **(B) Lokalne sekcije** (p83, p84, p85, p86, p88; 56 v3 vrstic):
+  pisane številke 161–180 (×3 strani) / 641–660 / 601–620 trčijo z
+  Blatt I KO-globalnimi — dokazano RAZLIČNE parcele (hiše: p85 r641
+  Hi16 vs p35 r641 Hi68; lastniki brez prekrivanja s p10/p11;
+  kulture Alm/Wein/Dingf./Ainze; Σ ratio 161 = 235.65× proti čistim
+  1441 = 1.09; p83 = dvojni blok 161–170 ×2 [~], karta 261–270
+  prazna). 56 vrstic = dokazane lažne fuzije na Blatt I poligone.
+- **(C) Spec P70:** 77 renum preslikav (0 kolizij) + 98 rejoin
+  kandidatov; izvedba = veriga re-run P59–P68 s posodobljenimi pini.
+- **(D) 117 prečrtanih vrstic** (rdeči tuš) zabeleženih; ne
+  izključujejo iz joina (flag).
+
+**Poštenost:** join v3 NESPREMENJEN (disciplina P56–P68); renum/rejoin
+= SPEC (lastniška odločitev + izvedba P70); odločitev o 56 sekijskih
+vrsticah (exclude / per-Blatt instance) = LASTNIKA; p83 blok B ostaja
+[~] (8× nebere zanesljivo); očesni verdikti dokumentirani v repovem
+worklogu (Task 35). Strojno berljivo: research/issue17/ps-pass1-layers.json
++ runtime src/data/atlas/ps-pass1-layers.json (skripta
+scripts/p69_ps_pass1_layers.py, I1–I6, --check bajtno PASS).

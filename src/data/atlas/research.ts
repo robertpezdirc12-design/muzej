@@ -3864,6 +3864,98 @@ export const V3_RENUMBER_P68: {
   ],
 };
 
+// ——— P69 (issue #13): sistemski pregled P38 pass1 slojev, cona p73–93
+// (+p99). Odprta točka P68 next #3 RAZREŠENA z očesno forenziko (P67
+// recept: 4× široki izrezi x=0..430 + 7×–8× zoomi + kontinuiteta + karta
+// + annRecords zamiki + Blatt stolpec + hišne številke + površinska
+// razmerja). Vir: skripta scripts/p69_ps_pass1_layers.py (I1–I6, --check
+// bajtno PASS) → dokaz research/issue17/ps-pass1-layers.json + runtime
+// src/data/atlas/ps-pass1-layers.json. Join v3 NESPREMENJEN.
+export const PASS1_LAYERS_P69: {
+  version: number;
+  series: "PS";
+  source: string;
+  status: ResearchStatus;
+  generatedBy: string;
+  offsets: Record<string, number>;
+  summary: {
+    pagesReviewed: number;
+    mainRunPages: number;
+    sectionPages: number;
+    v3rowsClassified: number;
+    keyCorrect: number;
+    keyWrong: number;
+    sectionRows: number;
+    renumMappings: number;
+    rejoinCandidates: number;
+    crossedInZone: number;
+  };
+  artifacts: { page: number; oldLayer: string; trueLayer: string; offset: number | null }[];
+  sections: { pages: number[]; rows: number; evidence: string };
+  swap: { p89: string; p99: string };
+  statusLine: string;
+  verdictSi: string;
+  verdictEn: string;
+  next: string[];
+} = {
+  version: 1,
+  series: "PS",
+  source:
+    "src/data/atlas/ps-parcels-geo.json (v3, sha256 pin) × research/georef-n83/gurs/parcels-ko1544-merged.json (karta) × research/issue17/ps-register-topology.json (P56 pageMap + annRecords) × research/issue17/ps-blatt-headers.json (P59 pageAttribution) × research/issue17/ps-raw/ps-0NN*.json (stari sloji, pini per datoteko); očesni vir /tmp/p69 (4× široki izrezi p69_fetch_zone.py + 7×–8× zoomi); dokaz research/issue17/ps-pass1-layers.json + runtime src/data/atlas/ps-pass1-layers.json",
+  status: "REVIEW",
+  generatedBy:
+    "scripts/p69_ps_pass1_layers.py (deterministično, brez AI ob delovanju, FAIL ob padu I1–I6; --check bajtno PASS)",
+  offsets: { "74": 300, "79": -300, "80": -100, "81": -100, "89": -1000, "90": -1000, "92": -9, "99": 1000 },
+  summary: {
+    pagesReviewed: 22,
+    mainRunPages: 17,
+    sectionPages: 5,
+    v3rowsClassified: 166,
+    keyCorrect: 33,
+    keyWrong: 77,
+    sectionRows: 56,
+    renumMappings: 77,
+    rejoinCandidates: 98,
+    crossedInZone: 117,
+  },
+  artifacts: [
+    { page: 74, oldLayer: "1121–1140 (pass1)", trueLayer: "1421–1440", offset: 300 },
+    { page: 76, oldLayer: "1161–1181", trueLayer: "1461–1480", offset: 300 },
+    { page: 77, oldLayer: "1181–1200 (pass1)", trueLayer: "1481–1500", offset: 300 },
+    { page: 79, oldLayer: "1821–1842", trueLayer: "1521–1540", offset: -300 },
+    { page: 80, oldLayer: "1644+ (pass2)", trueLayer: "1541–1560", offset: -100 },
+    { page: 81, oldLayer: "1661–1680 (pass2)", trueLayer: "1561–1580", offset: -100 },
+    { page: 82, oldLayer: "1681–1700 (pass2)", trueLayer: "1581–1600", offset: -100 },
+    { page: 88, oldLayer: "721–740 (pass2; sekcija)", trueLayer: "601–620", offset: -120 },
+    { page: 89, oldLayer: "1921–1941 (pass2)", trueLayer: "921–940", offset: -1000 },
+    { page: 90, oldLayer: "1941–1960 (pass2)", trueLayer: "941–960", offset: -1000 },
+    { page: 92, oldLayer: "990–1008 (oba)", trueLayer: "981–1000", offset: -9 },
+    { page: 99, oldLayer: "921–940 (oba)", trueLayer: "1921–1940", offset: 1000 },
+  ],
+  sections: {
+    pages: [83, 84, 85, 86, 88],
+    rows: 56,
+    evidence:
+      "pisane številke 161–180/641–660/601–620 trčijo z Blatt I KO-globalnimi; hiše p85 r641 Hi16 vs p35 r641 Hi68 (646: 22 vs 23; 655: 7 vs 26); lastniki p83/p84 brez prekrivanja s p10/p11; Σ ratio 161=235.65×, 162=31.39×, 990=8.99× proti čistim 1441=1.09; p83 = dvojni blok 161–170 ×2 [~] (karta 261–270 prazna izključuje 26x)",
+  },
+  swap: {
+    p89: "Blatt II = 921–940 (pass1 pravilen; pass2 1921–1941 = fantom-1)",
+    p99: "Blatt III = 1921–1940 (P59 pravilen; stari 921–940 = izgubljena vodilna 1)",
+  },
+  statusLine:
+    "P69 PASS1 SLOJI: stari P38 sloji cone p73–93 = sistematski digitalni artefakti (4→1, 5→8, 5→6, +120, +9, fantom-1 ±1000 — oči+kontinuiteta+karta+annRecords+Blatt+hiše); 77 renum preslikav (0 kolizij) + 98 rejoin kandidatov = spec P70; 5 lokalnih sekcij (p83–86, p88; 56 vrstic) = dokazane lažne fuzije — exclude/per-Blatt = LASTNIKA; p89/p99 zrcalni primer razrešen; join v3 NESPREMENJEN",
+  verdictSi:
+    "P69: SISTEMSKI PREGLED P38 PASS1 SLOJEV (issue #13, odprta točka P68 next #3) — očesna forenzika 22 strani (p73–93 + p99) po P67 receptu: 4× široki izrezi x=0..430 (popravi P59 past odrezanih vodilnih) + 7×–8× zoomi dvomljivih vrstic + kontinuiteta + kartni poligoni + P56 annRecords zamiki + Blatt stolpec + hišne številke + površinska razmerja. (A) STARI SLOJI = DIGITALNI ARTEFAKTI: p74 1121–1140 je pravzaprav 1421–1440 (4→1; annRecords 'auf transportirt 1844' na 1135/1136/1138 = prečrtane 1435/1436/1438 — neodvisen dokaz zamika), p76 1161–1181 = 1461–1480, p77 1181–1200 = 1481–1500 (4→1), p79 1821–1842 = 1521–1540 (5→8; P59 strip 1621–1640 = 5→6 — obe generaciji zamenjali isto števko 5!), p80 1644+ = 1541–1560 (5→6), p81 1661–1680 = 1561–1580 (5→6), p82 1681–1700 = 1581–1600 (5→6; pass1 je bil PRAVILEN — join je vzel p2 → 16 vrstic z kartnimi poligoni IZGUBLJENIH iz v3), p88 721–740 = 601–620 (+120 celostranski; annRecords 'Aufsufgefüllt 1811/1841/1831' na 726/728/736/737/740 = pisane 606/608/616/617/620), p89 1921–1941 = 921–940 (+1000 fantom-1; 9 dolgi ascender ≠ vodilna 1; pass1 pravilen!), p90 1941–1960 = 941–960 (+1000), p92 990–1008 = 981–1000 (+9 zamik; oči: r2–r5 = 982–985, r20 = 1000 štirimestna; kontinuiteta p91 961–80 → p92 981–1000; P59 arbitraža 1881–1900 = ISTI 9→19 artefakt kot p89 p2 — tudi očesna arbitraža je bila tokrat napačna!), p99 921–940 = 1921–1940 (−1000 izgubljena vodilna 1; oči: štirimestne, Blatt III; ZRCALNI primer p89 — Blatt stolpec razrešuje). Kontinuiteta glavnega teka: p73 (1101–20) → p74 (1421–40) → p75 (1441–60) → … → p82 (1581–1600); p89–p92 = 921–1000 (Blatt II; p49–52 = isti prostor — per-Ried struktura). (B) LOKALNE SEKCIJE (p83, p84, p85, p86, p88; 56 v3 vrstic): pisane številke 161–180 (×3 strani!)/641–660/601–620 trčijo z Blatt I KO-globalnimi — dokazano RAZLIČNE parcele: hiše p85 r641 Hi16 vs p35 r641 Hi68, r646 Hi22 vs Hi23, r655 Hi7 vs Hi26; lastniki p83/p84 (Hlebtzschand, Stainzldt, Schumitsch, Dragosch) brez prekrivanja s p10/p11 (Poidir, Kustitar, Brulca, Schimer); kulture Alm/Wein/Dingf./Ainze (posebni seznami); Σ površinski ratio 161=235.65×, 162=31.39×, 175=19.92×, 990=8.99× proti čistim 1441=1.09; p83 = DVOJNI BLOK 161–170 ×2 [~] (8× zoom; karta 261–270 PRAZNA izključuje 26x interpretacijo; VLM flattening → 161–181). 56 vrstic = DOKAZANE lažne fuzije na Blatt I poligone; opciji exclude iz joina / per-Blatt instance = LASTNIŠKA odločitev (P70). (C) SPEC P70: 77 renum preslikav (p74 2× +300, p79 17× −300, p80 8× −100, p81 2× −100, p89 9× −1000, p90 15× −1000, p92 9× −9, p99 15× +1000; 0 kolizij) + 98 rejoin kandidatov (pisane številke s kartnimi poligoni, izpadle iz v3: p74 14, p76 18, p77 2, p78 10, p82 16, p89 9, p93 12 …); izvedba = veriga re-run P59–P68 s posodobljenimi pini. 117 prečrtanih vrstic v coni zabeleženih (rdeči tuš; ne izključujejo iz joina — flag). Join v3 NESPREMENJEN (disciplina P56–P68). Strojno berljivo: research/issue17/ps-pass1-layers.json + runtime src/data/atlas/ps-pass1-layers.json (/api/atlas/ps-pass1-layers).",
+  verdictEn:
+    "P69: SYSTEMATIC REVIEW OF THE P38 pass1 LAYERS (issue #13, the P68 open point #3) — ocular forensics of 22 pages (p73–93 + p99) by the P67 recipe: 4× wide crops x=0..430 (fixes the P59 clipped-leading-digit trap) + 7×–8× zooms of doubtful rows + continuity + map polygons + P56 annRecords offsets + the Blatt column + house numbers + area ratios. (A) THE OLD LAYERS = DIGITAL ARTIFACTS: p74 1121–1140 is actually 1421–1440 (4→1; the annRecords 'auf transportirt 1844' on 1135/1136/1138 = the crossed 1435/1436/1438 — an independent offset proof), p76 1161–1181 = 1461–1480, p77 1181–1200 = 1481–1500 (4→1), p79 1821–1842 = 1521–1540 (5→8; the P59 strip 1621–1640 = 5→6 — both generations substituted the SAME digit 5!), p80 1644+ = 1541–1560 (5→6), p81 1661–1680 = 1561–1580 (5→6), p82 1681–1700 = 1581–1600 (5→6; pass1 was CORRECT — the join took p2 → 16 rows with map polygons LOST from v3), p88 721–740 = 601–620 (+120 page-wide; annRecords 'Aufsufgefüllt 1811/1841/1831' on 726/728/736/737/740 = written 606/608/616/617/620), p89 1921–1941 = 921–940 (+1000 phantom-1; the 9's long ascender ≠ a leading 1; pass1 correct!), p90 1941–1960 = 941–960 (+1000), p92 990–1008 = 981–1000 (+9 shift; eyes: r2–r5 = 982–985, r20 = 1000 four-glyph; continuity p91 961–80 → p92 981–1000; the P59 arbitration 1881–1900 = the SAME 9→19 artifact as p89 p2 — even the ocular arbitration was wrong this time!), p99 921–940 = 1921–1940 (−1000 lost leading 1; eyes: four-glyph, Blatt III; the MIRROR case of p89 — the Blatt column resolves it). Main-run continuity: p73 (1101–20) → p74 (1421–40) → … → p82 (1581–1600); p89–p92 = 921–1000 (Blatt II; p49–52 = the same space — a per-Ried structure). (B) LOCAL SECTIONS (p83, p84, p85, p86, p88; 56 v3 rows): the written numbers 161–180 (×3 pages!)/641–660/601–620 collide with Blatt I KO-global — proven DIFFERENT parcels: houses p85 r641 H16 vs p35 r641 H68, r646 22 vs 23, r655 7 vs 26; owners p83/p84 (Hlebtzschand, Stainzldt, Schumitsch, Dragosch) with zero overlap vs p10/p11 (Poidir, Kustitar, Brulca, Schimer); cultures Alm/Wein/Dingf./Ainze (special lists); Σ area ratio 161=235.65×, 162=31.39×, 175=19.92×, 990=8.99× vs the clean 1441=1.09; p83 = a DOUBLE BLOCK 161–170 ×2 [~] (8× zoom; the map 261–270 EMPTY excludes the 26x interpretation; VLM flattening → 161–181). 56 rows = PROVEN false fusions onto Blatt I polygons; the options exclude-from-join / per-Blatt instances = the OWNER's decision (P70). (C) THE P70 SPEC: 77 renumber mappings (p74 2× +300, p79 17× −300, p80 8× −100, p81 2× −100, p89 9× −1000, p90 15× −1000, p92 9× −9, p99 15× +1000; 0 collisions) + 98 re-join candidates (written numbers with map polygons, dropped from v3: p74 14, p76 18, p77 2, p78 10, p82 16, p89 9, p93 12 …); the realization = the re-run chain P59–P68 with updated pins. 117 crossed rows in the zone recorded (red ink; they do not exclude from the join — flagged). The v3 join UNCHANGED (P56–P68 discipline). Machine-readable: research/issue17/ps-pass1-layers.json + the runtime src/data/atlas/ps-pass1-layers.json (/api/atlas/ps-pass1-layers).",
+  next: [
+    "P70: izvedba sanacije (77 renum + 98 rejoin + odločitev o 56 sekijskih vrsticah: exclude ali per-Blatt instance) — veriga re-run P59–P68 s posodobljenimi pini",
+    "III/IV cona p94+: prave vrstice poligonov 1821–1840, 1644–1655, 1921–1960 (po renumu prazni) — naslednji sistemski pregled",
+    "SPLIT joina (lastniška odločitev, ostaja iz P66/P68)",
+    "930: dokončna atribucija; identiteta sekcij p83–p88 = P60 moda B / PF protokol",
+  ],
+};
+
 export const REGISTER_TOPOLOGY_P56: {
   series: "PS";
   source: string;

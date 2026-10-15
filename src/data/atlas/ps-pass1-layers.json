@@ -1,0 +1,1570 @@
+{
+ "counts": {
+  "crossedInZone": 117,
+  "keyCorrect": 33,
+  "keyWrong": 77,
+  "mainRunPages": 17,
+  "pagesReviewed": 22,
+  "rejoinCandidates": 98,
+  "renumMappings": 77,
+  "sectionPages": 5,
+  "sectionRows": 56,
+  "v3rowsClassified": 166
+ },
+ "date": "2026-10-15",
+ "eyesVerdicts": {
+  "73": {
+   "blatt": "II",
+   "cls": "mainRun",
+   "crossed": [],
+   "note": "v3 3 vrstice (1118-1120) pravilne; karta 1101-20 = 3 poligoni",
+   "true": [
+    1101,
+    1120
+   ]
+  },
+  "74": {
+   "blatt": "II",
+   "cls": "mainRun",
+   "crossed": [
+    1435,
+    1436,
+    1438
+   ],
+   "note": "annRecords 1135/1136/1138 'auf transportirt 1844' = prečrtane 1435/1436/1438 (+300) — neodvisen dokaz zamika",
+   "true": [
+    1421,
+    1440
+   ]
+  },
+  "75": {
+   "blatt": "II",
+   "cls": "mainRun",
+   "crossed": [
+    1443,
+    1444,
+    1446,
+    1451
+   ],
+   "note": "stari passi pravilna; P59 strip 941–960 napačen (odrez); v3 16 vrstic pravilnih",
+   "true": [
+    1441,
+    1460
+   ]
+  },
+  "76": {
+   "blatt": "II",
+   "cls": "mainRun",
+   "crossed": [
+    1463,
+    1468,
+    1469,
+    1471,
+    1472,
+    1473,
+    1474,
+    1475
+   ],
+   "note": "P59 arbitraža (1461–1480) potrjena z očmi; kontinuiteta p75→p76→p77",
+   "true": [
+    1461,
+    1480
+   ]
+  },
+  "77": {
+   "blatt": "II",
+   "cls": "mainRun",
+   "crossed": [],
+   "note": "pass2 pravilen; brez prečrtanj; karta 1481–1500 = 1483, 1486",
+   "true": [
+    1481,
+    1500
+   ]
+  },
+  "78": {
+   "blatt": "II",
+   "cls": "mainRun",
+   "crossed": [
+    1505,
+    1506,
+    1507,
+    1508,
+    1509,
+    1510,
+    1511,
+    1512,
+    1513,
+    1514
+   ],
+   "note": "P68 renum 1601-05→1501-05 izveden (izpad brez poligonov); rejoin 1506–1520 (karta 10 poligonov) NOVO",
+   "true": [
+    1501,
+    1520
+   ]
+  },
+  "79": {
+   "blatt": "II",
+   "cls": "mainRun",
+   "crossed": [
+    1522,
+    1523,
+    1524,
+    1525,
+    1526,
+    1527,
+    1528,
+    1529,
+    1530,
+    1532,
+    1534,
+    1535,
+    1537
+   ],
+   "note": "P59 strip 1621–1640 = 5→6; oba sloja zamenjala isto števko 5; v3 17 vrstic lažno na 1821–1840",
+   "true": [
+    1521,
+    1540
+   ]
+  },
+  "80": {
+   "blatt": "II",
+   "cls": "mainRun",
+   "crossed": [
+    1541,
+    1542,
+    1543,
+    1544,
+    1545,
+    1546,
+    1548,
+    1549,
+    1550,
+    1552,
+    1553,
+    1555
+   ],
+   "note": "P59 strip 1541–1560 pravilen; rdeča marginala 'jetzt … 1853'",
+   "true": [
+    1541,
+    1560
+   ]
+  },
+  "81": {
+   "blatt": "II",
+   "cls": "mainRun",
+   "crossed": [
+    1563,
+    1564,
+    1565,
+    1566,
+    1567,
+    1576
+   ],
+   "note": "P59 strip 161–180 = odrez vodilnih",
+   "true": [
+    1561,
+    1580
+   ]
+  },
+  "82": {
+   "blatt": "II",
+   "cls": "mainRun",
+   "crossed": [],
+   "note": "pass1 PRAVILEN (1581+); join je vzel p2 → p82 vrstice IZGUBLJENE iz v3 (karta 1582–1600 = 13 poligonov brez vrstic)",
+   "true": [
+    1581,
+    1600
+   ]
+  },
+  "83": {
+   "blatt": "II",
+   "cls": "section",
+   "crossed": [
+    162,
+    169
+   ],
+   "note": "DVOJNI BLOK 161–170 ×2 [~] (oči 8×: blok B = 161–169 ponovitev, karta 261–270 prazna izključuje 26x); VLM flattening → 161–181; kulture Dingf./Prunigad; hiše '1 2'",
+   "true": [
+    161,
+    170
+   ]
+  },
+  "84": {
+   "blatt": "II",
+   "cls": "section",
+   "crossed": [
+    169,
+    170,
+    171,
+    172,
+    176,
+    177,
+    180
+   ],
+   "note": "kulture Alm/Wein/Weide; hiše 1–16; lastniki (Schumitsch, Dragosch, Hödle) se ne prekrivajo s p10/p11 (Poidir, Kustitar, Brulca)",
+   "true": [
+    161,
+    180
+   ]
+  },
+  "85": {
+   "blatt": "II",
+   "cls": "section",
+   "crossed": [
+    642,
+    643,
+    644,
+    645,
+    647,
+    648,
+    649,
+    652,
+    653,
+    654,
+    655,
+    657,
+    659,
+    660
+   ],
+   "note": "oči 8×: trimestne (6 z zanko, ne 1) → 641–660 pisano; P59 41–60 = odrez 6; hiše ≠ p35 (r641 Hi16 vs Hi68, r646 Hi22 vs Hi23, r655 Hi7 vs Hi26) = RAZLIČNE parcele; 14/20 prečrtanih",
+   "true": [
+    641,
+    660
+   ]
+  },
+  "86": {
+   "blatt": "II",
+   "cls": "section",
+   "crossed": [
+    161,
+    162,
+    173,
+    174,
+    176,
+    177,
+    178,
+    179
+   ],
+   "note": "tretja 161–180 sekcija (kulture Ainze/Gartengrund); rdeča marginala 'für Grund-St.Reg. f. 1846'",
+   "true": [
+    161,
+    180
+   ]
+  },
+  "87": {
+   "blatt": "II",
+   "cls": "mainRun",
+   "crossed": [],
+   "note": "P67 že rešil (oči 1681–1688); karta 1681–1700 PRAZNA → 0 rejoin kandidatov",
+   "true": [
+    1681,
+    1700
+   ]
+  },
+  "88": {
+   "blatt": "II",
+   "cls": "section",
+   "crossed": [
+    606,
+    608,
+    617,
+    618,
+    620
+   ],
+   "note": "annRecords 726/728/729/730/731/736/737/740 'Aufsufgefüllt 1811/1841/1831' = pisano 606/608/609/610/611/616/617/620 (+120); kulture Alm/Plurig; hiše '1 8'/'1 6'",
+   "true": [
+    601,
+    620
+   ]
+  },
+  "89": {
+   "blatt": "II",
+   "cls": "mainRun",
+   "crossed": [
+    922,
+    923,
+    925,
+    927,
+    933
+   ],
+   "note": "pass1 PRAVILEN (921+); join je vzel p2; Blatt II stolpec + p49–52 = glavni tek 921–1000; 9 dolgi ascender ≠ vodilna 1",
+   "true": [
+    921,
+    940
+   ]
+  },
+  "90": {
+   "blatt": "II",
+   "cls": "mainRun",
+   "crossed": [
+    943
+   ],
+   "note": "pass1 PRAVILEN; isti artefakt kot p89",
+   "true": [
+    941,
+    960
+   ]
+  },
+  "91": {
+   "blatt": "II",
+   "cls": "mainRun",
+   "crossed": [
+    967,
+    970
+   ],
+   "note": "stari passi pravilna; P59 strip 941–960 = podvojitev p90 (napaka); v3 11 vrstic pravilnih; rdeča marginala na r7",
+   "true": [
+    961,
+    980
+   ]
+  },
+  "92": {
+   "blatt": "II",
+   "cls": "mainRun",
+   "crossed": [
+    988,
+    989,
+    990,
+    992,
+    993,
+    995,
+    996,
+    997,
+    999,
+    1000
+   ],
+   "note": "oči 8×: r2–r5 = 982–985 (X8Y vzorec), r20 = 1000 (štirimestna); kontinuiteta p91 (961–80)→p92 (981–1000); P59 arbitraža 1881–1900 = isti 9→19 artefakt kot p89 p2; numerala I·IV @ r2; annRecords 998–1008 = pisano 989–999 (+9)",
+   "true": [
+    981,
+    1000
+   ]
+  },
+  "93": {
+   "blatt": "IV",
+   "cls": "mainRun",
+   "crossed": [
+    1901,
+    1902,
+    1903,
+    1904,
+    1905,
+    1906,
+    1907
+   ],
+   "note": "P68 renum 160x→190x izveden (re-claim 1903/1904/1905); karta 1901–1907 = 7 poligonov; prehod sekcije sredi strani (→1303+); v3 3 vrstice pravilne",
+   "true": [
+    1901,
+    1920
+   ]
+  },
+  "99": {
+   "blatt": "III",
+   "cls": "mainRun",
+   "crossed": [],
+   "note": "ZRCALNI primer p89: oči 4× = 1921–1940 (štirimestne), Blatt III; P59 1921–1940 BIII pravilen; lastniki ≠ p49 (r922 Deutlich vs Dragasch) — v3 p99 vrstice lažno na 921–940",
+   "true": [
+    1921,
+    1940
+   ]
+  }
+ },
+ "generatedBy": "scripts/p69_ps_pass1_layers.py",
+ "openQuestions": [
+  "p83 blok B: 161–169 ponovitev ali drugi Ried [~] — 8× nebere zanesljivo",
+  "identiteta sekcij p83–p88 (kultura/Ried glave) = P60 moda B",
+  "prave vrstice poligonov 1821–1840, 1644–1655, 1673/1679, 1921–1960, 990–1008 (po renumu prazni): III/IV cona p94+ — naslednji pregled",
+  "p74 1121–1420 vrzel: glavni tek Blatt II ni monotoničen po straneh (per-Ried struktura) — p43–p71 pokritost?"
+ ],
+ "ratios": {
+  "1128": 3.66,
+  "1441": 1.09,
+  "161": 235.65,
+  "162": 31.39,
+  "163": 16.61,
+  "165": 3.26,
+  "168": 9.31,
+  "175": 19.92,
+  "736": 7.83,
+  "990": 8.99
+ },
+ "rejoinSpec": {
+  "73": {
+   "candidates": [],
+   "n": 0
+  },
+  "74": {
+   "candidates": [
+    1421,
+    1425,
+    1426,
+    1429,
+    1430,
+    1432,
+    1433,
+    1434,
+    1435,
+    1436,
+    1437,
+    1438,
+    1439,
+    1440
+   ],
+   "n": 14
+  },
+  "75": {
+   "candidates": [],
+   "n": 0
+  },
+  "76": {
+   "candidates": [
+    1461,
+    1462,
+    1463,
+    1464,
+    1465,
+    1466,
+    1467,
+    1468,
+    1470,
+    1471,
+    1472,
+    1473,
+    1474,
+    1475,
+    1477,
+    1478,
+    1479,
+    1480
+   ],
+   "n": 18
+  },
+  "77": {
+   "candidates": [
+    1483,
+    1486
+   ],
+   "n": 2
+  },
+  "78": {
+   "candidates": [
+    1506,
+    1508,
+    1509,
+    1510,
+    1513,
+    1514,
+    1515,
+    1516,
+    1517,
+    1520
+   ],
+   "n": 10
+  },
+  "79": {
+   "candidates": [
+    1523,
+    1524
+   ],
+   "n": 2
+  },
+  "80": {
+   "candidates": [
+    1541,
+    1542,
+    1543,
+    1551,
+    1552,
+    1553
+   ],
+   "n": 6
+  },
+  "81": {
+   "candidates": [
+    1574,
+    1578,
+    1580
+   ],
+   "n": 3
+  },
+  "82": {
+   "candidates": [
+    1582,
+    1583,
+    1584,
+    1585,
+    1586,
+    1587,
+    1588,
+    1589,
+    1590,
+    1591,
+    1592,
+    1593,
+    1594,
+    1598,
+    1599,
+    1600
+   ],
+   "n": 16
+  },
+  "87": {
+   "candidates": [],
+   "n": 0
+  },
+  "89": {
+   "candidates": [
+    922,
+    924,
+    926,
+    929,
+    930,
+    931,
+    934,
+    936,
+    937
+   ],
+   "n": 9
+  },
+  "90": {
+   "candidates": [
+    942,
+    951
+   ],
+   "n": 2
+  },
+  "91": {
+   "candidates": [],
+   "n": 0
+  },
+  "92": {
+   "candidates": [
+    985
+   ],
+   "n": 1
+  },
+  "93": {
+   "candidates": [
+    1901,
+    1902,
+    1906,
+    1907,
+    1910,
+    1911,
+    1913,
+    1914,
+    1917,
+    1918,
+    1919,
+    1920
+   ],
+   "n": 12
+  },
+  "99": {
+   "candidates": [
+    1921,
+    1932,
+    1935
+   ],
+   "n": 3
+  }
+ },
+ "renumSpec": {
+  "mappings": [
+   {
+    "crossed": false,
+    "from": "1128",
+    "offset": 300,
+    "owner": "Verbitaker Chufg",
+    "page": 74,
+    "to": "1428"
+   },
+   {
+    "crossed": false,
+    "from": "1131",
+    "offset": 300,
+    "owner": "Verbitaker Matja",
+    "page": 74,
+    "to": "1431"
+   },
+   {
+    "crossed": false,
+    "from": "1821",
+    "offset": -300,
+    "owner": "Pößlrey Peter Bäuer Grübl",
+    "page": 79,
+    "to": "1521"
+   },
+   {
+    "crossed": false,
+    "from": "1825",
+    "offset": -300,
+    "owner": "Schimming Maria",
+    "page": 79,
+    "to": "1525"
+   },
+   {
+    "crossed": false,
+    "from": "1826",
+    "offset": -300,
+    "owner": "Schintz Georg",
+    "page": 79,
+    "to": "1526"
+   },
+   {
+    "crossed": false,
+    "from": "1827",
+    "offset": -300,
+    "owner": "Schimming Johann",
+    "page": 79,
+    "to": "1527"
+   },
+   {
+    "crossed": false,
+    "from": "1828",
+    "offset": -300,
+    "owner": "Aumeier Georg",
+    "page": 79,
+    "to": "1528"
+   },
+   {
+    "crossed": false,
+    "from": "1829",
+    "offset": -300,
+    "owner": "Uebl Anton",
+    "page": 79,
+    "to": "1529"
+   },
+   {
+    "crossed": false,
+    "from": "1830",
+    "offset": -300,
+    "owner": "Schimming Paul",
+    "page": 79,
+    "to": "1530"
+   },
+   {
+    "crossed": false,
+    "from": "1831",
+    "offset": -300,
+    "owner": "Schimming Paul",
+    "page": 79,
+    "to": "1531"
+   },
+   {
+    "crossed": false,
+    "from": "1832",
+    "offset": -300,
+    "owner": "Uebl Thomas",
+    "page": 79,
+    "to": "1532"
+   },
+   {
+    "crossed": false,
+    "from": "1833",
+    "offset": -300,
+    "owner": "Uebl Thomas",
+    "page": 79,
+    "to": "1533"
+   },
+   {
+    "crossed": false,
+    "from": "1834",
+    "offset": -300,
+    "owner": "Schimming Anna",
+    "page": 79,
+    "to": "1534"
+   },
+   {
+    "crossed": false,
+    "from": "1835",
+    "offset": -300,
+    "owner": "Schimming Johann",
+    "page": 79,
+    "to": "1535"
+   },
+   {
+    "crossed": false,
+    "from": "1836",
+    "offset": -300,
+    "owner": "Schimming Magdalena",
+    "page": 79,
+    "to": "1536"
+   },
+   {
+    "crossed": false,
+    "from": "1837",
+    "offset": -300,
+    "owner": "Ueich Georg",
+    "page": 79,
+    "to": "1537"
+   },
+   {
+    "crossed": false,
+    "from": "1838",
+    "offset": -300,
+    "owner": "Ueich Peter",
+    "page": 79,
+    "to": "1538"
+   },
+   {
+    "crossed": false,
+    "from": "1839",
+    "offset": -300,
+    "owner": "Uebl Anton",
+    "page": 79,
+    "to": "1539"
+   },
+   {
+    "crossed": false,
+    "from": "1840",
+    "offset": -300,
+    "owner": "Pößlrey Andreas",
+    "page": 79,
+    "to": "1540"
+   },
+   {
+    "crossed": false,
+    "from": "1644",
+    "offset": -100,
+    "owner": "Krüchan Miß Lorenz Grüble",
+    "page": 80,
+    "to": "1544"
+   },
+   {
+    "crossed": false,
+    "from": "1645",
+    "offset": -100,
+    "owner": "Krüchan Gregor",
+    "page": 80,
+    "to": "1545"
+   },
+   {
+    "crossed": false,
+    "from": "1646",
+    "offset": -100,
+    "owner": "Veitl Simon",
+    "page": 80,
+    "to": "1546"
+   },
+   {
+    "crossed": false,
+    "from": "1647",
+    "offset": -100,
+    "owner": "Scheuring Gregor",
+    "page": 80,
+    "to": "1547"
+   },
+   {
+    "crossed": false,
+    "from": "1648",
+    "offset": -100,
+    "owner": "Drüsch Veitl",
+    "page": 80,
+    "to": "1548"
+   },
+   {
+    "crossed": false,
+    "from": "1649",
+    "offset": -100,
+    "owner": "Krüchan Miß",
+    "page": 80,
+    "to": "1549"
+   },
+   {
+    "crossed": false,
+    "from": "1650",
+    "offset": -100,
+    "owner": "Scheuring Matheg",
+    "page": 80,
+    "to": "1550"
+   },
+   {
+    "crossed": false,
+    "from": "1655",
+    "offset": -100,
+    "owner": "Loparitsch Miß",
+    "page": 80,
+    "to": "1555"
+   },
+   {
+    "crossed": false,
+    "from": "1673",
+    "offset": -100,
+    "owner": "Lukasitsch Matheg",
+    "page": 81,
+    "to": "1573"
+   },
+   {
+    "crossed": false,
+    "from": "1679",
+    "offset": -100,
+    "owner": "Höppner Franz",
+    "page": 81,
+    "to": "1579"
+   },
+   {
+    "crossed": false,
+    "from": "1921",
+    "offset": -1000,
+    "owner": "Lauffstättl Nicol. Mau.",
+    "page": 89,
+    "to": "921"
+   },
+   {
+    "crossed": false,
+    "from": "1923",
+    "offset": -1000,
+    "owner": "Staudt Jho.",
+    "page": 89,
+    "to": "923"
+   },
+   {
+    "crossed": false,
+    "from": "1925",
+    "offset": -1000,
+    "owner": "Noah Moskau",
+    "page": 89,
+    "to": "925"
+   },
+   {
+    "crossed": false,
+    "from": "1927",
+    "offset": -1000,
+    "owner": "Lauffstättl Marlo",
+    "page": 89,
+    "to": "927"
+   },
+   {
+    "crossed": false,
+    "from": "1928",
+    "offset": -1000,
+    "owner": "Löwl Danner",
+    "page": 89,
+    "to": "928"
+   },
+   {
+    "crossed": false,
+    "from": "1932",
+    "offset": -1000,
+    "owner": "Lauffstättl Joham",
+    "page": 89,
+    "to": "932"
+   },
+   {
+    "crossed": false,
+    "from": "1935",
+    "offset": -1000,
+    "owner": "Noah Moskau",
+    "page": 89,
+    "to": "935"
+   },
+   {
+    "crossed": false,
+    "from": "1938",
+    "offset": -1000,
+    "owner": "Noah Moskau",
+    "page": 89,
+    "to": "938"
+   },
+   {
+    "crossed": false,
+    "from": "1939",
+    "offset": -1000,
+    "owner": "Noah Moskau",
+    "page": 89,
+    "to": "939"
+   },
+   {
+    "crossed": false,
+    "from": "1944",
+    "offset": -1000,
+    "owner": "Heinrich Georg",
+    "page": 90,
+    "to": "944"
+   },
+   {
+    "crossed": false,
+    "from": "1945",
+    "offset": -1000,
+    "owner": "Eurich Mädl",
+    "page": 90,
+    "to": "945"
+   },
+   {
+    "crossed": false,
+    "from": "1946",
+    "offset": -1000,
+    "owner": "Pörtschach er Mägd",
+    "page": 90,
+    "to": "946"
+   },
+   {
+    "crossed": false,
+    "from": "1947",
+    "offset": -1000,
+    "owner": "Hönig Mairadl",
+    "page": 90,
+    "to": "947"
+   },
+   {
+    "crossed": false,
+    "from": "1948",
+    "offset": -1000,
+    "owner": "Knieschen Georg",
+    "page": 90,
+    "to": "948"
+   },
+   {
+    "crossed": false,
+    "from": "1949",
+    "offset": -1000,
+    "owner": "Knieschen Mägde",
+    "page": 90,
+    "to": "949"
+   },
+   {
+    "crossed": false,
+    "from": "1952",
+    "offset": -1000,
+    "owner": "Knieschen Mägden",
+    "page": 90,
+    "to": "952"
+   },
+   {
+    "crossed": false,
+    "from": "1953",
+    "offset": -1000,
+    "owner": "Knieschen Mägde",
+    "page": 90,
+    "to": "953"
+   },
+   {
+    "crossed": false,
+    "from": "1954",
+    "offset": -1000,
+    "owner": "Knieschen Mägde",
+    "page": 90,
+    "to": "954"
+   },
+   {
+    "crossed": false,
+    "from": "1955",
+    "offset": -1000,
+    "owner": "Knieschen Mägde",
+    "page": 90,
+    "to": "955"
+   },
+   {
+    "crossed": false,
+    "from": "1956",
+    "offset": -1000,
+    "owner": "Hiebletzh Jhan",
+    "page": 90,
+    "to": "956"
+   },
+   {
+    "crossed": false,
+    "from": "1957",
+    "offset": -1000,
+    "owner": "Hiebletzh Jhan",
+    "page": 90,
+    "to": "957"
+   },
+   {
+    "crossed": false,
+    "from": "1958",
+    "offset": -1000,
+    "owner": "Hiebletzh Jhan",
+    "page": 90,
+    "to": "958"
+   },
+   {
+    "crossed": false,
+    "from": "1959",
+    "offset": -1000,
+    "owner": "Khunertch Mägden",
+    "page": 90,
+    "to": "959"
+   },
+   {
+    "crossed": false,
+    "from": "1960",
+    "offset": -1000,
+    "owner": "Hiebletzh Jhan",
+    "page": 90,
+    "to": "960"
+   },
+   {
+    "crossed": true,
+    "from": "990",
+    "offset": -9,
+    "owner": "Pfaur Georg",
+    "page": 92,
+    "to": "981"
+   },
+   {
+    "crossed": false,
+    "from": "991",
+    "offset": -9,
+    "owner": "Schimeg Maria",
+    "page": 92,
+    "to": "982"
+   },
+   {
+    "crossed": true,
+    "from": "992",
+    "offset": -9,
+    "owner": "Schimeg Maria",
+    "page": 92,
+    "to": "983"
+   },
+   {
+    "crossed": true,
+    "from": "993",
+    "offset": -9,
+    "owner": "Schimeg Maria",
+    "page": 92,
+    "to": "984"
+   },
+   {
+    "crossed": true,
+    "from": "995",
+    "offset": -9,
+    "owner": "Schimeg Johann",
+    "page": 92,
+    "to": "986"
+   },
+   {
+    "crossed": true,
+    "from": "996",
+    "offset": -9,
+    "owner": "Lahmichl Maria",
+    "page": 92,
+    "to": "987"
+   },
+   {
+    "crossed": true,
+    "from": "997",
+    "offset": -9,
+    "owner": "Dlechtitl Maria",
+    "page": 92,
+    "to": "988"
+   },
+   {
+    "crossed": false,
+    "from": "998",
+    "offset": -9,
+    "owner": "Dlechtitl Maria",
+    "page": 92,
+    "to": "989"
+   },
+   {
+    "crossed": false,
+    "from": "1008",
+    "offset": -9,
+    "owner": "Knall Niklo",
+    "page": 92,
+    "to": "999"
+   },
+   {
+    "crossed": false,
+    "from": "922",
+    "offset": 1000,
+    "owner": "Deutlich Michael",
+    "page": 99,
+    "to": "1922"
+   },
+   {
+    "crossed": false,
+    "from": "923",
+    "offset": 1000,
+    "owner": "Deutlich Katharina",
+    "page": 99,
+    "to": "1923"
+   },
+   {
+    "crossed": false,
+    "from": "924",
+    "offset": 1000,
+    "owner": "Deutlich Maria",
+    "page": 99,
+    "to": "1924"
+   },
+   {
+    "crossed": false,
+    "from": "925",
+    "offset": 1000,
+    "owner": "Strauß Georg",
+    "page": 99,
+    "to": "1925"
+   },
+   {
+    "crossed": false,
+    "from": "926",
+    "offset": 1000,
+    "owner": "Strauß Georg",
+    "page": 99,
+    "to": "1926"
+   },
+   {
+    "crossed": false,
+    "from": "927",
+    "offset": 1000,
+    "owner": "Brünig Johann",
+    "page": 99,
+    "to": "1927"
+   },
+   {
+    "crossed": false,
+    "from": "928",
+    "offset": 1000,
+    "owner": "Brünig Michel",
+    "page": 99,
+    "to": "1928"
+   },
+   {
+    "crossed": false,
+    "from": "929",
+    "offset": 1000,
+    "owner": "Brünig Michael",
+    "page": 99,
+    "to": "1929"
+   },
+   {
+    "crossed": false,
+    "from": "930",
+    "offset": 1000,
+    "owner": "Brünig Michel",
+    "page": 99,
+    "to": "1930"
+   },
+   {
+    "crossed": false,
+    "from": "931",
+    "offset": 1000,
+    "owner": "Brünig Johann",
+    "page": 99,
+    "to": "1931"
+   },
+   {
+    "crossed": false,
+    "from": "934",
+    "offset": 1000,
+    "owner": "Brünig Michael",
+    "page": 99,
+    "to": "1934"
+   },
+   {
+    "crossed": false,
+    "from": "936",
+    "offset": 1000,
+    "owner": "Brünig Michel",
+    "page": 99,
+    "to": "1936"
+   },
+   {
+    "crossed": false,
+    "from": "937",
+    "offset": 1000,
+    "owner": "Pößnig Georg",
+    "page": 99,
+    "to": "1937"
+   },
+   {
+    "crossed": false,
+    "from": "938",
+    "offset": 1000,
+    "owner": "Pößnig Georg",
+    "page": 99,
+    "to": "1938"
+   },
+   {
+    "crossed": false,
+    "from": "939",
+    "offset": 1000,
+    "owner": "Pößnig Georg",
+    "page": 99,
+    "to": "1939"
+   }
+  ],
+  "offsets": {
+   "74": 300,
+   "79": -300,
+   "80": -100,
+   "81": -100,
+   "89": -1000,
+   "90": -1000,
+   "92": -9,
+   "99": 1000
+  }
+ },
+ "sectionClass": {
+  "decision": "LASTNIK (P70)",
+  "n": 56,
+  "options": [
+   "exclude iz joina (vrstice ostanejo v registru brez geometrije; dokazano lažne fuzije)",
+   "per-Blatt instance ločeno (P39; potrebuje P60 moda B / PF protokol identiteto sekcij)"
+  ],
+  "pages": [
+   83,
+   84,
+   85,
+   86,
+   88
+  ],
+  "rows": [
+   {
+    "areaQK": 1103.0,
+    "base": "161",
+    "owner": "Hlebtzschand",
+    "page": 83
+   },
+   {
+    "areaQK": 124.0,
+    "base": "162",
+    "owner": "Hlebtzschand",
+    "page": 83
+   },
+   {
+    "areaQK": 164.0,
+    "base": "163",
+    "owner": "Stainzldt Wölfl",
+    "page": 83
+   },
+   {
+    "areaQK": 39.0,
+    "base": "164",
+    "owner": "Hlebtzschand",
+    "page": 83
+   },
+   {
+    "areaQK": 143.0,
+    "base": "165",
+    "owner": "Stainzldt Wölfl",
+    "page": 83
+   },
+   {
+    "areaQK": 261.0,
+    "base": "166",
+    "owner": "Stainzhan Wölfl",
+    "page": 83
+   },
+   {
+    "areaQK": 527.0,
+    "base": "168",
+    "owner": "Stainzhan Wölfl",
+    "page": 83
+   },
+   {
+    "areaQK": 36.0,
+    "base": "171",
+    "owner": "Stainzldt Wölfl",
+    "page": 83
+   },
+   {
+    "areaQK": 82.0,
+    "base": "173",
+    "owner": "Stainzhan Wölfl",
+    "page": 83
+   },
+   {
+    "areaQK": 538.0,
+    "base": "174",
+    "owner": "Stainzhan Wölfl",
+    "page": 83
+   },
+   {
+    "areaQK": 8.0,
+    "base": "175",
+    "owner": "Stainzldt Wölfl",
+    "page": 83
+   },
+   {
+    "areaQK": 334.0,
+    "base": "176",
+    "owner": "Hlebtzschand",
+    "page": 83
+   },
+   {
+    "areaQK": 349.0,
+    "base": "179",
+    "owner": "Stainzhan Wölfl",
+    "page": 83
+   },
+   {
+    "areaQK": 2624.0,
+    "base": "162",
+    "owner": "Schumitsch Matja",
+    "page": 84
+   },
+   {
+    "areaQK": 337.0,
+    "base": "163",
+    "owner": "Schumitsch Matja",
+    "page": 84
+   },
+   {
+    "areaQK": 630.0,
+    "base": "164",
+    "owner": "Hödle Schamb",
+    "page": 84
+   },
+   {
+    "areaQK": 397.0,
+    "base": "165",
+    "owner": "Dragosch Gregor",
+    "page": 84
+   },
+   {
+    "areaQK": 182.0,
+    "base": "166",
+    "owner": "Schumitsch Matja",
+    "page": 84
+   },
+   {
+    "areaQK": 1213.0,
+    "base": "168",
+    "owner": "Schumitsch Marlo",
+    "page": 84
+   },
+   {
+    "areaQK": 763.0,
+    "base": "171",
+    "owner": "Stuller Mihlo",
+    "page": 84
+   },
+   {
+    "areaQK": 519.0,
+    "base": "173",
+    "owner": "Hödle Schaw",
+    "page": 84
+   },
+   {
+    "areaQK": 1251.0,
+    "base": "174",
+    "owner": "Hödle Schaw",
+    "page": 84
+   },
+   {
+    "areaQK": 1403.0,
+    "base": "175",
+    "owner": "Schumitsch Marlo",
+    "page": 84
+   },
+   {
+    "areaQK": 608.0,
+    "base": "176",
+    "owner": "Schumitsch Marlo",
+    "page": 84
+   },
+   {
+    "areaQK": 346.0,
+    "base": "179",
+    "owner": "Schaffhatsch Matja",
+    "page": 84
+   },
+   {
+    "areaQK": 941.0,
+    "base": "641",
+    "owner": "Stüllich Mihlo",
+    "page": 85
+   },
+   {
+    "areaQK": 296.0,
+    "base": "642",
+    "owner": "Schuster Mihlo",
+    "page": 85
+   },
+   {
+    "areaQK": 706.0,
+    "base": "643",
+    "owner": "Schimeg Mihel",
+    "page": 85
+   },
+   {
+    "areaQK": 759.0,
+    "base": "644",
+    "owner": "Preinig Mihel",
+    "page": 85
+   },
+   {
+    "areaQK": 786.0,
+    "base": "646",
+    "owner": "Milleger Johann",
+    "page": 85
+   },
+   {
+    "areaQK": 700.0,
+    "base": "648",
+    "owner": "Schimeg Mihel",
+    "page": 85
+   },
+   {
+    "areaQK": 783.0,
+    "base": "651",
+    "owner": "Knall Anna",
+    "page": 85
+   },
+   {
+    "areaQK": 710.0,
+    "base": "652",
+    "owner": "Schimeg Barbara",
+    "page": 85
+   },
+   {
+    "areaQK": 708.0,
+    "base": "653",
+    "owner": "Knall Anna",
+    "page": 85
+   },
+   {
+    "areaQK": 762.0,
+    "base": "654",
+    "owner": "Stüllich Mihlo",
+    "page": 85
+   },
+   {
+    "areaQK": 1002.0,
+    "base": "655",
+    "owner": "Lukantsitsch Marla",
+    "page": 85
+   },
+   {
+    "areaQK": 794.0,
+    "base": "656",
+    "owner": "Knall Anna",
+    "page": 85
+   },
+   {
+    "areaQK": 809.0,
+    "base": "657",
+    "owner": "Novakl Martin",
+    "page": 85
+   },
+   {
+    "areaQK": 577.0,
+    "base": "659",
+    "owner": "Kubatschitsch Ja",
+    "page": 85
+   },
+   {
+    "areaQK": 2420.0,
+    "base": "160",
+    "owner": "LahNitschek Hülfse Mann",
+    "page": 86
+   },
+   {
+    "areaQK": 1605.0,
+    "base": "161",
+    "owner": "LahNitschek Waisen",
+    "page": 86
+   },
+   {
+    "areaQK": 705.0,
+    "base": "162",
+    "owner": "Pechir gneis",
+    "page": 86
+   },
+   {
+    "areaQK": 214.0,
+    "base": "163",
+    "owner": "Laune Hülfse",
+    "page": 86
+   },
+   {
+    "areaQK": 432.0,
+    "base": "164",
+    "owner": "Hantel Hlaw",
+    "page": 86
+   },
+   {
+    "areaQK": 343.0,
+    "base": "165",
+    "owner": "LahNitschek Hlaw",
+    "page": 86
+   },
+   {
+    "areaQK": 314.0,
+    "base": "166",
+    "owner": "Schober Hülfse",
+    "page": 86
+   },
+   {
+    "areaQK": 237.0,
+    "base": "168",
+    "owner": "Schober Hülfse",
+    "page": 86
+   },
+   {
+    "areaQK": 33.0,
+    "base": "171",
+    "owner": "Laune Hülfse",
+    "page": 86
+   },
+   {
+    "areaQK": 609.0,
+    "base": "173",
+    "owner": "Noaßl Mande",
+    "page": 86
+   },
+   {
+    "areaQK": 620.0,
+    "base": "174",
+    "owner": "Haindlan Hülfse",
+    "page": 86
+   },
+   {
+    "areaQK": 388.0,
+    "base": "175",
+    "owner": "LahNitschek Hülfse",
+    "page": 86
+   },
+   {
+    "areaQK": 289.0,
+    "base": "176",
+    "owner": "Schimey Patteu",
+    "page": 86
+   },
+   {
+    "areaQK": 1335.0,
+    "base": "179",
+    "owner": "Pechir gneis",
+    "page": 86
+   },
+   {
+    "areaQK": 4447.0,
+    "base": "736",
+    "owner": "Dahofstättlich Malfg",
+    "page": 88
+   },
+   {
+    "areaQK": 56.0,
+    "base": "737",
+    "owner": "Häuslty Ghan",
+    "page": 88
+   },
+   {
+    "areaQK": 156.0,
+    "base": "738",
+    "owner": "Gmuniden",
+    "page": 88
+   }
+  ]
+ },
+ "swapP89P99": {
+  "p89": {
+   "evidence": "oči 921 (3-glyph) + Blatt II + p49–52 glavni tek + karta 922–939 (16)",
+   "offset": -1000,
+   "oldKey": "1921–1939",
+   "true": "921–939"
+  },
+  "p99": {
+   "evidence": "oči 1921 (4-glyph) + Blatt III + P59 BIII + lastniki ≠ p49",
+   "offset": 1000,
+   "oldKey": "921–940",
+   "true": "1921–1940"
+  }
+ },
+ "task": "P69 (issue #13; ps-parcels-geo next — sistemski pregled P38 pass1 slojev p74/p76/p77/p88) — OČESNA FORENZIKA CONE p73–93 + p99",
+ "version": 1
+}
