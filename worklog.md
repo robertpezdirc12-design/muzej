@@ -3874,3 +3874,28 @@ Stage Summary:
 - P73 IZVEDENA (opcija A): isti-Blatt SPLIT po celotnem registru — konec lažnih fuzij 135 dual base (P70 "SPLIT = LASTNIKA" razširjen: 33 kolizij = podmnožica; drop 137 kombinacij = 138 vrstic drugega bloka; keep = min stran); v6 = 939 vrstic / 879 base / multi 50 / cross 48; P9 disciplinarna izvedba (804 vrstic bajtno == v5; 135 ambiguous group-derived; conf 0).
 - QA 76/76 (repo + produkcija); E2E 11/11; GitLab = GitHub = lokalna = 35c2bed; Vercel živ.
 - ⚠ ODPRTIŠKI: ① cross-Blatt SPLIT P66 pack (36 base, deleži [0.5,0.75)) — ločena lastniška odločitev; ② per-Blatt instance sekcij (56; P60 moda B / PF protokol); ③ opcija B (per-page instance za SPLIT) zahteva georef Blattnih kart [~] — ločen podprojekt; ④ GitHub Actions billing (#7, operacijsko).
+
+## Task 42 (2026-10-15)
+
+---
+Task ID: 42 (data 42-a + integracija 42-b)
+Agent: Z.ai Code (glavni agent; data faza 42-a) + full-stack-developer (integracija 42-b)
+Task: P74 — cross-Blatt odločitveni paket (odprta točka P73 ①; P66 vzorec re-izpeljan iz v6 univerzuma; vzorec P72 — paket MERI, NE odloča)
+
+Work Log:
+- Obnova konteksta: repo @ 70d7ae1 (Task 41 worklog; GitLab = GitHub = lokalna); P73 v6 + odpriški ① cross-Blatt SPLIT — lastniško nadaljevanje po vzorcu P72→P73.
+- DATA (42-a): SKRIPTA scripts/p74_ps_cross_blatt_pack.py (deterministično, brez AI; --check bajtno PASS; pini v6 dokaz de13f10b…/v6 runtime 6270b267…/P59 650f13dc…/P56 2fddc76f…/P66 02214eba…/P72 0922a701…; I1–I9) — cross set re-izpeljava iz v6 rowsEvidence (939) × P59 pageAttribution: 48 cross-Blatt base / 96 vrstic, VSAK točno 1 vrstica per Blatt (48/48); blattDist I·II 13 · II·III 16 · III·IV 1 · IV·V 18 (vsi sosednji, skoki 0); lastniki med Blatti DISJUNKTNI 48/48 (0 prekrivanj; P66 v v3: 36/36) — JEDRO paketa; pageMap prekrivanja razponov 48/48 (p11 I 161–183 / p61 II 161–180; p64 II 1821–1840 / p94 III 1821–1841; p110 IV 2141–2160 / p125 V 2141–2160) = dokaz per-Blatt ponovitve numeracije; hn 42 različne · 2 isti (161, 174) · 4 brez (2611–2616); Σ areaQK per Blatt I 1874 / II 11364 / III 18300 / IV 13257 / V 13118 QK; pasovi 8/5/8/27 (P66 kriterij <0.75 bi pokril samo 21); geoShared 48/48; areaSuspect 0; ties 0; series S1 88/S2 8; kulturesShared 5.
+- EVOLUCIJA P66 → v6: 17/36 ostaja · 19 odhaja (C1 sekcije 5 · C3 isti-Blatt drop 13 · C2 p93 reverzija 1 — kategorizacija po odstranjenih vrsticah base, ne po izgubljenih straneh; P70 rejoin je vrstice premikal med stranmi) · 31 novih (že v v5; P66 jih ni pokril po P65 kriteriju dominantShare < 0.75).
+- OPCIJI: A1 (keep DOMINANT Blatt; ties→min Blatt) drop 48 vrstic, 0 base brez vrstic, rows 939 → 891, multi 50 → 2, cross 48 → 0, ambRows 100 → 4; A2 (keep MIN Blatt) enaki števci, keep različen pri 29 base — izbira pravila LASTNIŠKA; opcija B (per-Blatt instance + razdelitev geometrije) zahteva georef Blattnih kart [~].
+- Dokaz research/issue17/ps-cross-blatt-pack.json (151 895 B; statusLine/verdicti Si+En/summary/bases 48 × per-Blatt razčlenitev brez georef polj — I6) + runtime src/data/atlas/ps-cross-blatt-pack.json (150 084 B; bajtna projekcija, version 1) — v6 join NESPREMENJEN (sha pin 6270b267; I9).
+- VERIGA: p60–p67, p70–p73 --check PASS (p68 zamrznjen po C2 — zgodovinsko, dokumentirano); P74 ne spreminja nobenega obstoječega dokaza/runtime-a.
+- INTEGRACIJA (42-b, full-stack-developer): research.ts CROSS_BLATT_P74 (verbatim iz dokaza) + kartica P74 (Prepisi Kurrent, za P73; poštene opombe P70–P73) + qa-p74-cross-blatt (77. kontrola; celoven neodvisen preracun iz runtime packa × P59 runtime pageAttribution × v6 runtime vrstic: cross set 48/96 bajtno · 1-per-Blatt · blattDist · lastniki set-izračun · hn 42/2/4 · Σ areaQK · pasovi · opciji A1/A2 · evolucija P66 17/19/31; dve obliki repo/produkcija — produkcija brez research/ dela iz runtime packa + v6rt) + sources.ts N083PS P74 (Si+En) + audit §51 + README bullet + API komentar (v6 AKTUALNO; PAYLOAD NESPREMENJEN); 3 subagentove popravke med razvojem (inputSha256 lokacija, C3 klasifikacija per-base, P56 pasovi-pin) — končni QA zelen v obeh oblikah.
+- QA 76 → 77/77 (repo dev /api/qa: ok True, passed 77, failed 0, qa-p74 pass True).
+- Verifikacija: tsc 0, ESLint 0, STROGI PROD-SIM BUILD (kill dev → mv research → rm .next → build BUILD 0 → bun start): PROD QA 77/77 (qa-p74 pass True) + /api/atlas/ps-parcels-geo 200 (version 6, rows 939, bases 879 NESPREMENJENO) + / 200 (697 569 B).
+- E2E agent-browser (produkcija): Prepisi Kurrent → kartica P74 8/8 ključnih nizov v DOM (Cross-Blatt dvojnosti, 48 ČEZ-BLATT, disjunktni 48/48, opcija A1, 891, 29 base, 17/36, 161 174) + konzola 0 napak + footer pushed down (bottom 30 437 / docH 54 653) + mobilni 390×844 overflowX false + screenshot (/tmp/p74-prod-card.png). Dev server vrnjen (GET / 200).
+- Higiena: /agent-ctx/ dodan v .gitignore (subagent work docs — nikoli commitani).
+
+Stage Summary:
+- P74 paket IZDELAN (odločitveni, v6 NESPREMENJEN): cross-Blatt univerzum re-izpeljan iz v6 — 48 base / 96 vrstic / 1 vrstica per Blatt / lastniki DISJUNKTNI 48/48 / pageMap prekrivanja 48/48 — ista številka pod dvema sosednjima Blattoma = 2 realni parceli (per-Blatt numeracija); join v6 jih fuzira pod eno geometrijo (geoShared 48/48). Opciji A1/A2 predračunani (drop 48, rows 891, cross 0, lost 0); izbira pravila (dominant vs min Blatt; različen keep pri 29 base) + izvedba = LASTNIŠKA odločitev (P75 po vzorcu P73).
+- QA 77/77 (repo + produkcija); E2E 8/8; tsc 0 / lint 0; v6 runtime bajtno nespremenjen (6270b267).
+- ⚠ LASTNIŠKE ODLOČITVE (P75): ① cross-Blatt SPLIT izvedba — opcija A1 (keep dominant Blatt) / A2 (keep min Blatt; različen keep pri 29) / B (georef Blattnih kart [~]); ② per-Blatt instance sekcij (56; P60 moda B / PF protokol); ③ GitHub Actions billing (#7, operacijsko).
