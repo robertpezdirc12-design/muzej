@@ -92,7 +92,6 @@ npx --yes vercel@latest deploy --prod --yes \
   --scope=robertpezdirc12-designs-projects
 ```
 
-#
 ## ATLAS 1825 (GitLab issue #2)
 
 Zgodovinska katastrska slika vasi (franciscejski kataster, k.o. Griblje št. 83 / Grüble):
@@ -408,13 +407,7 @@ API (statični, brez runtime AI):
   **null 5 → IV +4 / II +1** (II 32 · IV 15); veriga re-run P59→P60→P61
   (`--check` bajtno PASS vsi); QA pine posodobljeni (65/65);
   dokaz+runtime `ps-blatt-headers.json` + `ps-unit-semantics.json`
-  posodobljeni; SHEET_GEOREFS in join v2 nespremanjeni.
-
-## Varnost
-
-Žeton `VERCEL_TOKEN` je shranjen izključno kot šifrirana GitHub Actions
-skrivnost in ni v repozitoriju. Datoteki `.gitignore` in `.vercelignore`
-preprečujeta prenos `.env*` in lokalnih datotek pri deployu.
+  posodobljeni; SHEET_GEOREFS in join v2 nespremenjeni.
 
 - **zaključne strani registra PS — Blatt IIb (P63, issue #13)** — rep
   registra (138–139) paleografsko zaključen s 3 neodvisnimi prehodi (VLM 2×
@@ -429,7 +422,7 @@ preprečujeta prenos `.env*` in lokalnih datotek pri deployu.
   [~]); veriga re-run P59→P60→P61 (`--check` bajtno PASS; I8 pin
   efe39f41…); `scripts/p63_ps_tail_pages.py` (I1–I10, `--check` bajtno) +
   API `/api/atlas/ps-tail-pages` + kartica P63; QA 65 → **66/66**;
-  SHEET_GEOREFS in join v2 nespremanjeni.
+  SHEET_GEOREFS in join v2 nespremenjeni.
 - **razširitev per-Blatt atribucije na 110 čez-Blatt base (P64, issue #13)** —
   odprta točka P60/P62 #7 z merjeno hierarhijo pravil (deterministično, brez
   AI ob delovanju): **R1** pas [0.8, 1.25] = P60 (17 base, bajtno) · **R2a**
@@ -443,7 +436,7 @@ preprečujeta prenos `.env*` in lokalnih datotek pri deployu.
   `scripts/p64_ps_attribution_ext.py` (I1–I8, `--check` bajtno PASS; sha
   pini vhodov po lekciji P9) + dokaz `research/issue17/ps-attribution-ext.json`
   + API `/api/atlas/ps-attribution-ext` + kartica P64; QA 66 → **67/67**;
-  join v2 in SHEET_GEOREFS nespremanjeni.
+  join v2 in SHEET_GEOREFS nespremenjeni.
 - **polna per-Blatt atribucija — 101 single-Blatt več-stranskih base (P65,
   issue #13)** — odprta točka P64 #3 izpolnjena (deterministično, brez AI ob
   delovanju): 101 base, katerih vse vrstice nosijo strani ISTEGA Blatta, dobi
@@ -459,7 +452,7 @@ preprečujeta prenos `.env*` in lokalnih datotek pri deployu.
   bajtno PASS; 5× sha pini vhodov po lekciji P9) + dokaz
   `research/issue17/ps-attribution-full.json` + API
   `/api/atlas/ps-attribution-full` + kartica P65; QA 67 → **68/68**;
-  join v2 in SHEET_GEOREFS nespremanjeni.
+  join v2 in SHEET_GEOREFS nespremenjeni.
 - **split decision pack — 39 split base (P66, issue #13)** — priprava za
   lastniško odločitev o per-Blatt SPLIT joinu (odprta točka P64 #8;
   deterministično, brez AI ob delovanju; NE odloča namesto lastnika —
@@ -476,7 +469,7 @@ preprečujeta prenos `.env*` in lokalnih datotek pri deployu.
   PASS; 3× sha pini vhodov po lekciji P9) + dokaz
   `research/issue17/ps-split-pack.json` + API
   `/api/atlas/ps-split-pack` + kartica P66; QA 68 → **69/69**;
-  join v2 in SHEET_GEOREFS nespremanjeni.
+  join v2 in SHEET_GEOREFS nespremenjeni.
 - **forenzični paket anomalij — skok II·IV, flagi, disjunktnost (P67, issue #13)** — štiri merjena
   dela nad odprtimi točkami P66/P64/P65 (deterministično, brez AI ob delovanju; v2 NESPREMENJEN):
   **(A) skok II·IV = artifakt DVOJNE Kurrent zamenjave** — p78 (Wüstung Pod Grabino) prave
@@ -494,19 +487,56 @@ preprečujeta prenos `.env*` in lokalnih datotek pri deployu.
   `scripts/p67_ps_anomaly_forensics.py` (I1–I8, `--check` bajtno PASS; 28× sha pini vhodov po
   lekciji P9) + dokaz `research/issue17/ps-anomaly-forensics.json` + API
   `/api/atlas/ps-anomaly-forensics` + kartica P67; QA 69 → **70/70**; join v2 in SHEET_GEOREFS
-  nespremanjeni.
+  nespremenjeni.
 - **v3 sanacija številčenja + sistemski pregled pass1 slojev (P68/P69, issue #13)** — P68 je IZVEDEL 17 preslikav P67 specifikacije (p78 160x→150x, p93 160x→190x, p87 661–680→1681–1700; 0 kolizij; re-join: 14 vrstic izpada, p93 3× re-claim 1903/1904/1905) → v3 = 1079 vrstic / 798 base / 199 multi-page / 98 cross-Blatt, join ključi sanirani, registrska branja nespremenjena, veriga re-run P59–P67 s posodobljenimi pini; P69 je nato z OČESNO forenziko (22 strani p73–93 + p99; 4× široki izrezi + 7×–8× zoomi + kontinuiteta + karta + P56 annRecords zamiki + hišne številke + površinska razmerja) razrešil odprto točko P68 #3: stari P38 pass1 sloji = sistematski digitalni artefakti (p74 1121–40 je pravzaprap 1421–40 4→1, p79 1821–42 = 1521–40 5→8, p80/p81 16xx = 15xx 5→6, p82 1681–1700 = 1581–1600 s 16 izgubljenimi vrsticami, p88 721–740 = 601–620 +120, p89/p90 19xx = 9xx fantom-1, p92 990–1008 = 981–1000 +9, p99 921–40 = 1921–40 −1000 zrcalno) — **77 renum preslikav (0 kolizij) + 98 rejoin kandidatov = spec P70**; 5 lokalnih sekcij (p83/p84/p86 161–180 ×3, p85 641–660, p88 601–620; 56 vrstic) = dokazane lažne fuzije na Blatt I poligone (hiše p85 r641 Hi16 vs p35 Hi68; Σ ratio 161 = 235.65×) — exclude/per-Blatt = lastniška odločitev;
-  `scripts/p69_ps_pass1_layers.py` (I1–I6, `--check` bajtno PASS) + dokaz `research/issue17/ps-pass1-layers.json` + API `/api/atlas/ps-pass1-layers` + kartica P69; QA 71 → **72/72**; join v3 nespremanjen (spec čaka izvedbo).
+  `scripts/p69_ps_pass1_layers.py` (I1–I6, `--check` bajtno PASS) + dokaz `research/issue17/ps-pass1-layers.json` + API `/api/atlas/ps-pass1-layers` + kartica P69; QA 71 → **72/72**; join v3 nespremenjen (spec čaka izvedbo).
 - **izvedba P69 specifikacije — v4 sanacija (P70, issue #13)** — P70 je IZVEDEL P69 specifikacijo kot mehanski izvod (deterministično, brez AI ob delovanju): **77 renum preslikav** (bajtno po P69 renumSpec; konec lažnih fuzij cone p73–93/p99: p74 1121–1140→1421–1440 4→1, p76 1161–1180→1461–1480, p79 182x→152x 5→8, p80/p81 16xx→15xx 5→6, p89/p90 19xx→9xx fantom-1 — 9 dolgi ascender ≠ vodilna 1, p92 990–1008→981–999 +9, p99 921–940→1921–1940 Blatt III zrcalno; parzella ostaja originalno branje) **+ 95 rejoin vrstic** iz starih P38 slojev po P55 metodi (sloji po P69: pass1-pravilen p74/82/89/90/91, P38 izbira sicer; 3 kandidati p80 1541–1543 brez vira [~] — p1 odrez blok 62–81) **+ 29 preslikanih izpada** (base brez PF poligona); **33 fuzij isti-Blatt dokumentiranih** (register vsebuje 921–1000 v dveh blokih: p49–52 »glavni tek« + p89–92 »stolpec« — SPLIT join = lastniška odločitev); v4 = **1145 vrstic / 878 base / 215 multi-page / 79 cross-Blatt**; površine median 3.8843 ≈ 1 Wiener QK 3.59665 m² (Δ +8.0 %, kontrola 4.2701); soslednost 654 parov / 52.0 m / 27.6×; zaupanje 188/797/160; **56 sekijskih vrstic (p83–86, p88) nespremenjenih** — exclude ali per-Blatt instance = lastniška odločitev; veriga P59–P67 skript --check PASS (P69 klasifikacija zamrznjena na v3 dokaz);
-- **korekcije v4 — sekcije exclude + p93 reverzija (P71, issue #13)** — C1: 56 sekijskih vrstic (p83–86, p88) EXCLUDE iz joina (P69 dokazane lažne fuzije; lastniška odločitev; 0 poligonov ostane praznih) + C2: P68 renum p93 160x→190x OVRŽEN z notranjo glifno forenziko (r9=1609/r19=1619: 6 ≠ 9; kontrole p98/p92) + annRecords anotatorja (1601–1619) + pageMap — 15 vrstic base := parzella, PF 1603/1604/1605 dobijo prve vrstice, 12 izpadlih; **v5 = 1077 vrstic / 879 base / 184 multi / 48 cross**; area median 3.9052 (Δ +8.58 %); soslednost 652/51.8/25.5×; forenzika research/issue17/p93-forensics/; skripta p71_ps_v5_sections_p93.py --check PASS; veriga P59–P67 PASS, P69 zamrznjen, P70 dokaz bajtno;
-- **dvojnosti registra — 135 isti-Blatt dual base (P72, issue #13)** — odločitveni paket za isti-Blatt SPLIT joina (P70 »SPLIT = LASTNIKA« razširjen na cel register; razširitev P66 cross-Blatt vzorca; NE odloča namesto lastnika — MERI in DOKAZUJE; **v5 join nespremanjen**): base z vrsticami na ≥ 2 straneh ISTEGA Blatta z DISJUNKTNIMI lastniki med straneh — **135 base × 274 vrstic** (2 tri-zapisni; + 2 nearDual 2080/2081 izključeni); stranski pari delijo iste številčne razpone po P56 pageMap (p23/p24 = 401–420 obe, p51/p91 = 961–980 obe, p103/p118 = 2001–2020 obe …) z odmiki po blokih konsistentnimi (**40 × 44 · 15 × 49 · 5 × 29 · 1 × 13**) = **dvojni zapis iste serije v dveh blokih registra**; hišne številke različne 130/135; Σ areaQK blok A 128 125 / blok B 145 057 QK; **P70 33 kolizij = podmnožica** + 11 starih p51×p91 (v2 era) + 91 dozdaj neopaženih; opcija A (drop drugi blok po C1 vzorcu): 137 vrstic izpada, 0 base brez vrstic, rows 1077 → 939, multi 50, cross 48 nespr.; opcija B (per-page instance) zahteva georef Blattnih kart [~]; opcija C (re-renum) neodločljiva; **odločitev LASTNIKA**;
+  `scripts/p70_ps_v4_rejoin.py` (I1–I9, `--check` bajtno PASS) + dokaz `research/issue17/ps-parcels-geo-v4.json` + runtime `src/data/atlas/ps-parcels-geo.json` (version 4) + API `/api/atlas/ps-parcels-geo` + kartica P70; QA 72 → **73/73**; v3 arhiviran (research/issue17/ps-parcels-geo-v3.json).
+- **korekcije v4 — sekcije exclude + p93 reverzija (P71, issue #13)** — C1: 56 sekijskih vrstic (p83–86, p88) EXCLUDE iz joina (P69 dokazane lažne fuzije; lastniška odločitev; 0 poligonov ostane praznih) + C2: P68 renum p93 160x→190x OVRŽEN z notranjo glifno forenziko (r9=1609/r19=1619: 6 ≠ 9; kontrole p98/p92) + annRecords anotatorja (1601–1619) + pageMap — 15 vrstic base := parzella, PF 1603/1604/1605 dobijo prve vrstice, 12 izpadlih; **v5 = 1077 vrstic / 879 base / 184 multi / 48 cross**; area median 3.9052 (Δ +8.58 %); soslednost 652/51.8/25.5×; forenzika research/issue17/p93-forensics/; veriga P59–P67 PASS, P69 zamrznjen, P70 dokaz bajtno;
+  `scripts/p71_ps_v5_sections_p93.py` (I1–I8, `--check` bajtno PASS) + dokaz `research/issue17/ps-parcels-geo-v5.json` + runtime `src/data/atlas/ps-parcels-geo.json` (version 5) + kartica P71; QA 73 → **74/74**; v4 arhiviran (research/issue17/ps-parcels-geo-v4.json).
+- **dvojnosti registra — 135 isti-Blatt dual base (P72, issue #13)** — odločitveni paket za isti-Blatt SPLIT joina (P70 »SPLIT = LASTNIKA« razširjen na cel register; razširitev P66 cross-Blatt vzorca; NE odloča namesto lastnika — MERI in DOKAZUJE; **v5 join nespremenjen**): base z vrsticami na ≥ 2 straneh ISTEGA Blatta z DISJUNKTNIMI lastniki med straneh — **135 base × 274 vrstic** (2 tri-zapisni; + 2 nearDual 2080/2081 izključeni); stranski pari delijo iste številčne razpone po P56 pageMap (p23/p24 = 401–420 obe, p51/p91 = 961–980 obe, p103/p118 = 2001–2020 obe …) z odmiki po blokih konsistentnimi (**40 × 44 · 15 × 49 · 5 × 29 · 1 × 13**) = **dvojni zapis iste serije v dveh blokih registra**; hišne številke različne 130/135; Σ areaQK blok A 128 125 / blok B 145 057 QK; **P70 33 kolizij = podmnožica** + 11 starih p51×p91 (v2 era) + 91 dozdaj neopaženih; opcija A (drop drugi blok po C1 vzorcu): 137 vrstic izpada, 0 base brez vrstic, rows 1077 → 939, multi 50, cross 48 nespr.; opcija B (per-page instance) zahteva georef Blattnih kart [~]; opcija C (re-renum) neodločljiva; **odločitev LASTNIKA**;
   `scripts/p72_ps_dual_pack.py` (I1–I9, `--check` bajtno PASS) + dokaz `research/issue17/ps-dual-occurrence-pack.json` + runtime `src/data/atlas/ps-dual-occurrence-pack.json` + kartica P72; QA 74 → **75/75**; v5 runtime join NESPREMENJEN (sha256 pin I9).
 - **isti-Blatt SPLIT opcija A — v6 (P73, issue #13)** — izvedba C3 iz P72 dual pack (lastniško soglasje 2026-10-15; P70 »SPLIT = LASTNIKA« razširjen na cel register): za **135 dual base** (lastniki med straneh disjunktni 135/135; P70 33 kolizij = podmnožica: p89 × 15, p90 × 10, p92 × 8) so vrstice drugega bloka izpadle iz joina — **drop 137 kombinacij = 138 vrstic** (keep = min stran »glavni tek«; vrstice ostanejo v registru brez geometrije) — **v6 = 939 vrstic (34.0 %) / 879 base / multi 184 → 50 / cross 48**; serije S1 847 / S2 66 / BI 26; zaupanje 174/629/136; dvoumnost 50/100 (135 True→False po P55 metodi); area median **3.8941** (Δ +8.27 %, kontrola 4.5766); soslednost 652/51.8/25.5× nespremenjena; nearDual 2080/2081 ostanejo; 0 base brez vrstic; v5 arhiviran (v5Delta + v6Delta = nasledstvo);
   `scripts/p73_ps_v6_split_a.py` (I1–I8, `--check` bajtno PASS) + dokaz `research/issue17/ps-parcels-geo-v6.json` + runtime `src/data/atlas/ps-parcels-geo.json` (version 6) + kartica P73; QA 75 → **76/76** (nova qa-p73-v6-split: celoven neodvisen preracun + nil-claim).
-- **cross-Blatt dvojnosti registra — 48 čez-Blatt base (P74, issue #13)** — odločitveni paket za cross-Blatt SPLIT joina (odprta točka P73 ①; P66 vzorec re-izpeljan iz v6 univerzuma; NE odloča namesto lastnika — MERI in DOKAZUJE; **v6 join nespremanjen**): 48 base z vrsticami na ≥ 2 RAZLIČNIH **sosednjih** Blattih — **48 base × 96 vrstic, točno 1 vrstica per Blatt 48/48**; pari **I·II 13 · II·III 16 · III·IV 1 · IV·V 18** (sosednji 48, skoki 0); **lastniki med Blatti DISJUNKTNI 48/48** (0 prekrivanj; P66 v v3: 36/36) — jedro paketa; pageMap prekrivanja razponov 48/48 (p11 I 161–183 / p61 II 161–180; p64 II 1821–1840 / p94 III 1821–1841; p110 IV 2141–2160 / p125 V 2141–2160) = dokaz ponovitve numeracije per Blatt; hišne številke **42 različne · 2 isti (161, 174) · 4 brez** (2611–2616); Σ areaQK per Blatt I 1874 / II 11364 / III 18300 / IV 13257 / V 13118 QK; pasovi [0.50,0.60) 8 · [0.60,0.70) 5 · [0.70,0.75) 8 · **≥0.75 27** (P66 kriterij <0.75 bi pokril samo 21); **opcija A1** (keep dominant Blatt): drop 48, rows 939 → 891, multi 2, cross 0, ambRows 4; **opcija A2** (keep min Blatt) enaki števci, različen keep pri 29 — izbira pravila **LASTNIŠKA**; evolucija P66 → v6: **17/36 ostaja · 19 odhaja** (C1 5 · C3 13 · C2 1) · **31 novih**;
+- **cross-Blatt dvojnosti registra — 48 čez-Blatt base (P74, issue #13)** — odločitveni paket za cross-Blatt SPLIT joina (odprta točka P73 ①; P66 vzorec re-izpeljan iz v6 univerzuma; NE odloča namesto lastnika — MERI in DOKAZUJE; **v6 join nespremenjen**): 48 base z vrsticami na ≥ 2 RAZLIČNIH **sosednjih** Blattih — **48 base × 96 vrstic, točno 1 vrstica per Blatt 48/48**; pari **I·II 13 · II·III 16 · III·IV 1 · IV·V 18** (sosednji 48, skoki 0); **lastniki med Blatti DISJUNKTNI 48/48** (0 prekrivanj; P66 v v3: 36/36) — jedro paketa; pageMap prekrivanja razponov 48/48 (p11 I 161–183 / p61 II 161–180; p64 II 1821–1840 / p94 III 1821–1841; p110 IV 2141–2160 / p125 V 2141–2160) = dokaz ponovitve numeracije per Blatt; hišne številke **42 različne · 2 isti (161, 174) · 4 brez** (2611–2616); Σ areaQK per Blatt I 1874 / II 11364 / III 18300 / IV 13257 / V 13118 QK; pasovi [0.50,0.60) 8 · [0.60,0.70) 5 · [0.70,0.75) 8 · **≥0.75 27** (P66 kriterij <0.75 bi pokril samo 21); **opcija A1** (keep dominant Blatt): drop 48, rows 939 → 891, multi 2, cross 0, ambRows 4; **opcija A2** (keep min Blatt) enaki števci, različen keep pri 29 — izbira pravila **LASTNIŠKA**; evolucija P66 → v6: **17/36 ostaja · 19 odhaja** (C1 5 · C3 13 · C2 1) · **31 novih**;
   `scripts/p74_ps_cross_blatt_pack.py` (I1–I9, `--check` bajtno PASS) + dokaz `research/issue17/ps-cross-blatt-pack.json` + runtime `src/data/atlas/ps-cross-blatt-pack.json` + kartica P74; QA 76 → **77/77** (nova qa-p74-cross-blatt: celoven neodvisen preracun cross seta × P59 × P66 pack); v6 runtime join NESPREMENJEN (sha256 pin I9).
 - **cross-Blatt SPLIT opcija A1 → v7 (P75, issue #13)** — izvedba C4 iz P74 odločitvenega paketa (lastniška odločitev 2026-10-15; opcija A1 = privzeta pot — **keep DOMINANT Blatt po Σ areaQK; ties 0**; vzorec P72→P73): za **48 cross base** (vrstice na ≥ 2 sosednjih Blattih; lastniki med Blatti disjunktni 48/48; ista številka pod dvema Blattoma = 2 realni parceli) je vrstica ne-dominantnega Blatta izpadla iz joina — **drop 48 kombinacij = 48 vrstic** — **v7 = 891 vrstic (32.3 %) / 879 base / multi 50 → 2 / cross 48 → 0** (NIL-CLAIM kontrola: cross set na v7 == prazno); dvoumnost 100 → 4 (48 True→False po P55 metodi); zaupanje 172/588/131 (0 sprememb); serije S1 803 / S2 62 / BI 26; area median **3.8102** (Δ **+5.94 %**, kontrola 4.1435; 871 parov); soslednost 652/51.8/25.5× nespremenjena; 0 base brez vrstic; opcija A2 bi pri **29 base** obdržala drugo vrstico; opcija B (per-Blatt instance + razdelitev geometrije) zahteva georef Blattnih kart [~]; vrstice ostanejo v registru brez geometrije (removedRows 48); ohranjene vrstice bajtno == v6 (P9); v6 arhiviran (v5Delta + v6Delta + v7Delta = nasledstvo 1145 → 1077 → 939 → 891);
   `scripts/p75_ps_v7_cross_split_a1.py` (I1–I8, `--check` bajtno PASS; veriga p60–p74 PASS) + dokaz `research/issue17/ps-parcels-geo-v7.json` + runtime `src/data/atlas/ps-parcels-geo.json` (version 7) + kartica P75; QA 77 → **78/78** (nova qa-p75-cross-split: celoven neodvisen preracun + nil-claim + nasledstvo 939 − 48 = 891 + area/sosledje preracun; produkcija veja izmerjena iz v7 runtime).
 - **lokalne sekcije — per-Blatt instance odločitveni paket (P76, issue #13)** — odprta točka P70 ①/P71 C1 (vzorec P72/P74 — paket MERI, NE odloča; **v7 join nespremenjen**): **56 sekcij vrstic** (p83 13 · p84 12 · p85 14 · p86 14 · p88 3; vse **Blatt II** po P59) × **31 base** — identitetno **DISJUNKTNE od counterpartov** (lastniki **0/0** — sekcija×counterpar IN sekcija×sekcija; hišne številke **0 isti / 31 različni**) — dokazano na celotni množici, ne samo na P69 vzorcu; **counterpar v v7 31/31** (Blatt I 23: p10 1 · p11 5 · p35 14 · p40 3 / Blatt II 8: p61 8; lat/lng 31/31); evolucija C4 **13/31 cross** (8 obdržalo II, 5 I) / **18 single**; P56 pageMap ponovitev bandov **5/5** (p83 161–181 ⊆ p11 161–183 + p61 161–180; p85 641–660 == p35; p88 721–740 == p40); P60 moda B **8 base = 12/56 vrstic** z band identiteto, 44 [~] brez (PF protokol = manjkajoči vir); v3 forenzika: geoShared 56/56, ratio absurdni >4.3: **20 (max 134.6786)**, Σ areaQK **38517 QK**; opcije: **A** status quo 891/2/0/4 · **B1** vse 56 → 947/33/23/91 — **KRŠI C4 NIL-CLAIM z base-ključem (23 cross)** → obvezen **per-instanca ključ (base, stran)**: 0/2/4 · **B2** samo P60 band 12 → 903/10/6/24 (+ instance 0/2/4; 44 ostane [~]) · **B3** georef [~] neizvedljivo — **izbira LASTNIŠKA**;
   `scripts/p76_ps_sections_perblatt_pack.py` (I1–I9, `--check` bajtno PASS) + dokaz `research/issue17/ps-sections-perblatt-pack.json` + runtime `src/data/atlas/ps-sections-perblatt-pack.json` + kartica P76; QA 78 → **79/79** (nova qa-p76-sections-perblatt: celoven neodvisen preracun iz P69 sectionClass × v7 runtime × P59 × P60 × pack runtime; opcije re-izpeljane + instance ključ; repo dodaja dokaz == runtime bajtno + P56 dokaz pageMap == pini); v7 runtime join NESPREMENJEN (sha256 pin I9, 4bb40370…).
-  `scripts/p70_ps_v4_rejoin.py` (I1–I9, `--check` bajtno PASS) + dokaz `research/issue17/ps-parcels-geo-v4.json` + runtime `src/data/atlas/ps-parcels-geo.json` (version 4) + API `/api/atlas/ps-parcels-geo` + kartica P70; QA 72 → **73/73**; v3 arhiviran (research/issue17/ps-parcels-geo-v3.json).
+
+## Zadnje stanje raziskave (po P76 · 2026-10-15)
+
+- **Runtime join**: `src/data/atlas/ps-parcels-geo.json` — **version 7**:
+  **891 vrstic (32.3 %) / 879 base / multi 2 / cross 0 / ambRows 4**;
+  soslednost 652 parov / 51.8 m / 25.5×; area median 3.8102 ≈ 1 Wiener QK
+  3.59665 m² (Δ +5.94 %); zaupanje 172/588/131.
+- **Nasledstvo verzij**: v1 1110 → v2 1093 → v3 1079 → v4 1145 → v5 1077 →
+  v6 939 → **v7 891** — vsaka arhivirana v `research/issue17/` z delta
+  dokazom (`v5Delta`/`v6Delta`/`v7Delta`); ohranjene vrstice med verzijami
+  bajtno nespremenjene (lekcija P9).
+- **QA**: **79/79** — repo veja (dokazi v `research/`) + produkcija (brez
+  `research/`, izmerjeno iz runtime datotek); prek `GET /api/qa` na
+  produkciji. Veriga skript `p60–p67 + p70–p75 --check` bajtno PASS
+  (p68 zamrznjen po C2).
+- **Kartice**: P40–P76 vidne v zavihku *Prepisi Kurrent* v muzejskem UI;
+  vsaka vezana na API endpoint + dokaz + skripto.
+- **Zrcaljenje**: GitLab `markec-group1/muzej` = **vir resnice**;
+  GitHub `robertpezdirc12-design/muzej` = zrcalo, ki sproži Vercel deploy.
+  Vsak push gre najprej na GitLab, nato na GitHub (obe z lastnikovo
+  identiteto Robert Pezdirc — past avtorstva spodaj).
+- **Odpri lastniških odločitve (P77+)**:
+  ① opcija lokalnih sekcij iz P76 paketa — **A** status quo (v7, trenutna) /
+  **B1** vse 56 vrstic (obvezen per-instanca ključ (base, stran)) /
+  **B2** samo P60 band 12 / **B3** georef Blattnih kart [~];
+  ② PF protokol kot vir identitete pas-instanc (ni v repu —
+  P60/P61/P63–P68 next);
+  ③ žetoni: VERCEL_TOKEN (samo rezervni ročni deploy) in GitLab PAT —
+  veljavnost spremlja `token-health.yml` / issue #6.
+
+## Varnost
+
+Žeton `VERCEL_TOKEN` je shranjen izključno kot šifrirana GitHub Actions
+skrivnost in ni v repozitoriju. Datoteki `.gitignore` in `.vercelignore`
+preprečujeta prenos `.env*` in lokalnih datotek pri deployu.
+
