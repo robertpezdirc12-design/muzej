@@ -3960,3 +3960,20 @@ Stage Summary:
 - P76 INTEGRACIJA ZAKLJUČENA: per-Blatt instance odločitveni paket (56 vrstic / 31 base; disjunktnost 0/0; hn 31/31 različni; P60 band 12/56; opcije A/B1/B2/B3) vidna na kartici P76 (za P75), dokazan z qa-p76-sections-perblatt — QA 78 → **79/79** (repo + produkcija).
 - v7 runtime join NESPREMENJEN (891/879, sha 4bb40370…); izbira opcije (A/B1/B2/B3) = LASTNIŠKA.
 - Spremenjene datoteke (44-b): research.ts, museum-research.tsx, qa.ts, sources.ts, docs/MUSEUM-AUDIT.md, README.md, api route. NE COMMITANO — commit/push opravi glavni agent.
+
+---
+Task ID: 44 (zaključek — push protokol)
+Agent: Z.ai Code (glavni)
+Task: P76 push protokol — commit (owner identiteta) → GitLab → GitHub → dvojna API verifikacija → Vercel
+
+Work Log:
+- Repo worklog Task 44 zapisan; commit 877c8f166d4c52f6b4aef12caccface76d15bab7 (Robert Pezdirc <robert.pezdirc12@gmail.com>; 11 datotek: P76 skripta + dokaz + runtime pack + integracija + worklog; 4935 insertions).
+- Push GitLab: 73cf117..877c8f1 (1. poskus PASS brez 403) + Push GitHub: 73cf117..877c8f1.
+- Dvojna API verifikacija: GitLab /projects/87462760/repository/commits (WAF 403 2× → retry-loop, 3. poskus PASS) = GitHub /repos/…/commits/main = 877c8f166, author Robert Pezdirc obeh.
+- Vercel: griblje-museum.vercel.app / 200 (701 207 B); /api/qa po deploy cakánju (~90 s) → HTTP 200, ok True, passed **79**, failed 0, qa-p76 True — P76 DEPLOY ŽIV.
+- E2E (glavni agent, dev): kartica P76 13/13 ključnih nizov v DOM (Prepisi Kurrent zavihek), konzola 0 napak, footer pushed down (gap -1 ≈ 0), mobilni 390×844 overflowX false; screenshoti /tmp/p76/final-{mobile,desktop}.png.
+
+Stage Summary:
+- Task 44 (P76) POPOLNOSTI ZAKLJUČEN: GitLab = GitHub = lokalna = 877c8f1; Vercel živ (QA 79/79, qa-p76 True); v7 join NESPREMENJEN (891/879, sha 4bb40370…); veriga p60–p75 --check PASS.
+- P76 = odločitveni paket (56 sekcij vrstic / 31 base): identitetna disjunktnost dokazana na celoti (lastniki 0/0 · hn 31/31 različni); P60 moda B pokrije 12/56; PF protokol = manjkajoči vir.
+- ⚠ NASLEDNJE LASTNIŠKE ODLOČITVE (P77+): ① izbira opcije sekcij — A status quo (v7, trenutna) / B1 vse 56 (obvezen per-instanca ključ; B1 base-ključ KRŠI C4 NIL-CLAIM) / B2 samo P60 band 12 / B3 georef [~]; ② PF protokol kot vir identitete (ni v repu — povezati lastnike pas-instanc s poligoni; P60/P61/P63–P68 next); ③ ŽETONI (issue #6, operacijsko): VERCEL_TOKEN poteče 2026-10-14 ⚠ (deploy trenutno še dela — GitHub integration) + GitLab PAT 2026-11-09.
