@@ -3977,3 +3977,19 @@ Stage Summary:
 - Task 44 (P76) POPOLNOSTI ZAKLJUČEN: GitLab = GitHub = lokalna = 877c8f1; Vercel živ (QA 79/79, qa-p76 True); v7 join NESPREMENJEN (891/879, sha 4bb40370…); veriga p60–p75 --check PASS.
 - P76 = odločitveni paket (56 sekcij vrstic / 31 base): identitetna disjunktnost dokazana na celoti (lastniki 0/0 · hn 31/31 različni); P60 moda B pokrije 12/56; PF protokol = manjkajoči vir.
 - ⚠ NASLEDNJE LASTNIŠKE ODLOČITVE (P77+): ① izbira opcije sekcij — A status quo (v7, trenutna) / B1 vse 56 (obvezen per-instanca ključ; B1 base-ključ KRŠI C4 NIL-CLAIM) / B2 samo P60 band 12 / B3 georef [~]; ② PF protokol kot vir identitete (ni v repu — povezati lastnike pas-instanc s poligoni; P60/P61/P63–P68 next); ③ ŽETONI (issue #6, operacijsko): VERCEL_TOKEN poteče 2026-10-14 ⚠ (deploy trenutno še dela — GitHub integration) + GitLab PAT 2026-11-09.
+
+---
+Task ID: 45 (README ureditev + push protokol)
+Agent: Z.ai Code (glavni)
+Task: Owner ukaz "nadaljuj uredi readme pushaj in nadaljuj" — ureditev README.md → commit (owner identiteta) → GitLab → GitHub → verifikacija
+
+Work Log:
+- Obnova konteksta: repo @ 7248118 (Task 44; drevo čisto; GitLab = GitHub = lokalna); identiteta Robert Pezdirc potrjena.
+- Ugotovljene napake README (512 vrstic): ① osirel P70 rep (scripts/p70_ps_v4_rejoin.py … QA 72 → 73/73; v3 arhiviran) visel kot ZADNJA vrstica datoteke za P76 bulletom; ② ## Varnost sekcija stala sredi ATLAS kronologije (med P62 in P63 bulletom) — P63–P76 bulleti so se prikazovali kot del Varnost sekcije; ③ manjkal povzetek zadnjega stanja; ④ 9 tipkav "nespremanjen(i)" → "nespremenjen(i)"; ⑤ osirel prazen naslov "#" pred "## ATLAS 1825"; ⑥ P71 bullet brez standardnega repa.
+- Popravki: P70 rep pripet na P70 bullet (nadaljevalna vrstica, vzorec P72–P76); P71 rep DODAN (skripta p71_ps_v5_sections_p93.py + dokaz research/issue17/ps-parcels-geo-v5.json + runtime version 5 + kartica P71; QA 73 → 74/74; v4 arhiviran); ## Varnost prestavljen na konec datoteke; NOVA sekcija "## Zadnje stanje raziskave (po P76 · 2026-10-15)" — runtime v7 (891 vrstic / 879 base / multi 2 / cross 0; sosledje 652/51.8/25.5×; area 3.8102 Δ +5.94 %), nasledstvo v1 1110 → v2 1093 → v3 1079 → v4 1145 → v5 1077 → v6 939 → v7 891, QA 79/79 (repo + produkcija; veriga p60–p67 + p70–p75 --check PASS, p68 zamrznjen), kartice P40–P76, zrcaljenje (GitLab = vir resnice, GitHub = zrcalo → Vercel), odpri lastniške odločitve P77+ (① opcije sekcij A/B1/B2/B3; ② PF protokol; ③ žetoni / issue #6); vse tipkave; prazen "#" odstranjen.
+- README: 512 → 543 vrstic; vsebina P-bulletov sicer NESPREMENJENA (samo strukturni premiki + tipkave + dopolnjeni repi P70/P71); struktura naslovov: 1 H1 + 8 H2 + 1 H3, brez osirelih vrstic.
+- Commit 4679c08 (Robert Pezdirc; 1 datoteka, +48/−18); nato worklog commit; push GitLab (vir resnice) → GitHub (zrcalo → Vercel samodejni deploy); dvojna API verifikacija (GitLab projects/87462760 = GitHub repos/…/commits/main = lokalna); Vercel / + /api/qa kontrola.
+
+Stage Summary:
+- README UREJEN: kronologija P40–P76 zdaj neprekinjena v ATLAS sekciji; P70/P71 bulleti celovita; NOVA "Zadnje stanje" sekcija (v7 + QA 79/79 + zrcaljenje + odprte odločitve) — prvi dostopnik lahko iz README bere trenutno stanje brez workloga.
+- Naslednja stopnja (P77): LASTNIŠKA odločitev o opciji sekcij (A status quo / B1 vse 56 z per-instanca ključem / B2 samo P60 band 12 / B3 georef [~]) — paket P76 MERI, NE odloča.
