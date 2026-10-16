@@ -4002,3 +4002,100 @@ Marijo Hrižan; ④ rešitev Pošek/Požek prek poročne 04455 [~].
 **v7 runtime join NESPREMENJEN** (sha256 4bb40370…, statična projekcija;
 disciplina I9). Veriga `p60–p67 + p70–p85 --check` PASS (vse exit 0); tsc 0;
 ESLint 0; /api/qa dev **86/86** (qa-p85 True).
+
+---
+
+## §63 — P86: župnija Podzemelj — krstna knjiga 04105, polno leto 1891 (issue #18) — 2026-10-16
+
+**SAMPLE-TRANSCRIPTION-1891** (MERI, NE odloča; v7 join nespremenjen).
+P85 nextSteps ①: širitev vzorca po letih (P79 1886 → P82 1887 → P83 1888 →
+P84 1889 → P85 1890 → **P86 1891**).
+
+**Okvir**: skeni 49–56 == tiskane strani 48–55 (stran == sken − 1); leto se
+začne na str. 48 row 1 po 1890 rows 78–86; vpisi na skenih 50–54; **glava
+»Leto 1892« na str. 55 row 1** — oznake se ponastavijo na 1, **novela P83
+potrjena 4. leto**; leto 1891 ima **75 zveznih vrstic**; glave mesecev se
+ponavljajo (Avgust 2×, November 2× — vzorec P84 str. 40). Skeni 49–63 v
+delovnem imeniku /tmp/p86 (ročna faza, NI v repu); hi-rez izrezi 2x–4x za
+vse Griblje vrstice (vzorec p85_crops).
+
+**Vsi vpisi z Griblji**: **10 vpisov / 9 imenovanih hiš + 1 neberljiva**
+(r52 prekrita z modrimi pripisi — evidence-only; HOUSE_VITALS 9 zasidranih,
+112 → **121**): **72, 30, 62, 61, 53, 2, 31, 5, 28** — **NOVE hiše 2
+(28, 53)** + 1 neberljiva, **ponovitve 7** (h2 ×3 leta; h30 kontinuiteta;
+h31 ×4; **h5 ČEZ KNJIGE** — mrliška 04894 1886; h61 1887+1897+1891; h62
+1887; h72 1888). Skupaj s P79–P85 vzorec **127 vpisov / 58 hiš čez tri
+knjige in šest let**. **NOVELA (novela P85 potrjena 2. leto): VSI 9
+zasidranih statusov = ¼ ulomek** (zemljak 5, gemžgah 4 — brez bajtarjev/
+obrtnikov na Gribljih, kontrast 1890).
+
+**PT klasifikacija 8/1** — **luknja 41–60: 53 NOVA (r40; forenzika izrez
+4x: jasno 53 — prvi prebir »33« [~], Kurrent 3/5), 14. dokazana številka**
+(atlas.ts PT_GAP_KNOWN + 53).
+
+**SIDRA** — ① **h72** (r6): oče **Matija Straus [~] = ISTI očet kot P83
+1888** (re-read Hraus→Strauš); **mati MENJANA: 1888 Barbara Husič [~] →
+1891 Marija Jakobič [~]**; tri-virska P80 + PUA Strauß Niklo @71 (P81
+0.8571); botra Matija Straucelj. ② **h30** (r21): oče **Janez Milek [~] +
+mati Marjeta Pozdirec [~] = P85 dvojčka rows 51+52 — POPOLNA DVOLETNA
+KONTINUITETA (isti starši + ISTA botra Matija Milek + Katarina Križan)**;
+Milek = P81 near-miss (0.55–0.72). ③ **h61** (r39): oče **Nikolaj
+Pošek/Požek [~] = P82 SIDRO 1887 Miko Požek — ISTA OSEBA po 4 letih**;
+**mati MENJANA: 1887 Bara Filak → 1891 Ana Dragos [~ Dragoš] — PRVI dokaz
+menjave gospodinjstva na zasidrani hiši** (3 krstni vpisi 1887+1897+1891);
+edini vpis brez botre in podpisa; †1/8 91 [~]. ④ **h53** (r40): oče Janez
+Pozdirec [~] × mati Marija Križan [~] — NOVA LUKNJA (glej zgoraj). ⑤ **h2**
+(r43): oče Peter Hlebec [~] — **TROJNA KONTINUITETA P82 1887 + P84 1889 +
+1891, ISTI starši ×3 čez 5 let**. ⑥ **h31** (r50): mati **Marjeta Straus
+[~] — ISTA OSEBA 1887 Margaretha + 1890 + 1891 (3 vpise čez 5 let)**; oče
+1887/1890 Papič [~] → 1891 Tepič [~] (Kurrent P/T [~]); botra Klobučar
+(4. leto). ⑦ **h5** (r51): vsi **TOREC** — ponovitev čez knjige (mrliška
+1886: umrla Barbara Brinec 2 leti → Torec 1891 = menjava gospodinjstva);
+modro ime »Terezija?« [~] vs tmavo »Jožefa«. ⑧ **h28** (r56): oče **Jurij
+Požek [~] — POŽEK VERIGA h79 1888 → h77 1890 → h28 1891 (3. hiša familije
+v 4 letih)**; mati Milkovič [~] = Milek varianta.
+
+**DVE menjavi matere na zasidranih hišah** (h61 Filak→Dragos + h72
+Husič→Jakobič) — nov tip čez-letnega dogodka (druga žena / ponovna poroka /
+re-read [~], MERI). **Šimec 0× — PRVO leto brez najtrajnejše familije**
+(1886: 4 hiše, 1887: 1, 1888: 1, 1889: 3, 1890: 6). Priimki z 1825 pričo v
+1891: **Križan/Hrižan 8× (0.8333 [~] — najmočnejše leto familije)**,
+Milek/Milkovič 4×, Straus/Straucelj 3+1 [~] (0.8571), Požek/Pošek 2× (4.
+leto), Dragoš 1× (1.0), Urh 1× [~] (1.0), Jakobič/Jaklpič 2×; Brinec
+babica 2× (6./7. leto). Duhovniki: Jos. Rauq [~] 7 + Jos. R— 1 + prazna 1;
+**NOV podpis St. Češarek [~] od r68** (sredi decembra 1891 — menjava, 0× na
+Gribljih). Babice: Ana Hrižan 4× (vrnitev po 1889) + Brinec 2× + Marjeta
+Fojter 2× (nova).
+
+**SKRIPTA** `scripts/p86_parish_baptism_1891.py` (deterministični
+verifikator, I1–I10, --check PASS: knjiga 200 + inventar 326, citirani
+skeni 5/5 JPEG 200, okvir + prelom 1892 + ponastavitev oznak, PT 8/1 z
+NOVO 53, sidra h72/h30/h61/h53/h2/h28/h31/h5, čez-letne kontinuitete prek
+dokazov P82/P83/P85, runtime projekcija 9/121, brez »Hraus« v aktivnih
+whatSi) + dokaz `research/issue17/parish-baptism-1891.json`
+(SAMPLE-TRANSCRIPTION-1891; ročna faza — skeni v delovnem imeniku, NI v
+repu). **INTEGRACIJA**: parish.ts HOUSE_VITALS 112 → **121** (9 zasidranih
+1891; vsi DOCUMENTED; komentar P86 z novelo) + qa-parish.ts
+**qa-p86-parish-baptism-1891** (87. kontrola; celoven neodvisen preracun:
+okvir/PT 8/1/sidra h72–h28/kontinuiteta h30 prek 1890 blokov/trojna
+kontinuiteta h2/menjava matere h61 prek 1887 bloka/ponovitve vključno h5
+04894/NOVE hiše brez preteklosti/vitals 121; dve obliki repo/produkcija po
+P53/P57/P58) + atlas.ts PT_GAP_KNOWN **+ 53** + scripts/
+p80_parish_md_books.py I7 P86 scoping (vitals 112 → 121) + p85 skripta I10
+kumulativno (127; klasifikacija v pre-P86 vesolju — h30 ostaja nova za
+P85 dokaz). **LEKCIJE (7. primer pincev lovijo napake)**: ① prvi prebir
+r21 »h40/Mlešič« — izrez 4x: jasno **h30/Milek** (kontinuiteta P85!); ②
+prvi prebir r40 »h33« — izrez 4x: jasno **h53** (nova luknja!); ③ sed
+korupcija `[hn, yr, sig]` for-loop (tsc/tsc-dev ujel); ④ aritmetika
+sampleTotal 126 → **127** (117 + 10). Vse sanirano; veriga p60–p67 +
+p70–p86 --check PASS (vse exit 0; p68 zamrznjen po C2); tsc 0; ESLint 0;
+/api/qa dev **87/87** (qa-p86 True).
+
+**P86 nextSteps**: ① krstna 1892 (skeni 56+, glava na str. 55 row 1 — skeni
+že v /tmp/p86); ② per-hišne kronologije tri-virskih hiš 13/36/71 (issue #18
+najmočnejši mostovni kandidati) — še vedno odprto; ③ mrliška 04894 leta
+1887–1892: smrti prvih žena (h61 Filak? h72 Husič?) kot dokaz menjav
+gospodinjstev; ④ luknja 41–60: 14 dokazanih števil.
+
+**v7 runtime join NESPREMENJEN** (sha256 4bb40370…, statična projekcija;
+disciplina I9).

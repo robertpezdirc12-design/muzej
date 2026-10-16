@@ -1279,4 +1279,105 @@ export const HOUSE_VITALS: HouseVital[] = [
     whatEn: "baptized an unnamed child (»male sex«, Dec 19/17.[crossed out]) — father column »Marija Hrižan [~] half smallholder« ANOMALY, mother Ana Požek [~]; house 35 — THE SAME anomalous pattern as P82 row 93 of 1887 (cross-year confirmation!); godparents EMPTY; midwife Marjeta Šotter; signature empty",
     status: "DOCUMENTED",
   },
+  // ——— P86 razširitev: KRSTNA KNJIGA 04105 — polno leto 1891 (okvir skeni
+  // 49–56 == strani 48–55; leto se začne na str. 48 row 1 po 1890 rows 78–86;
+  // glava »Leto 1892« na str. 55 row 1 — oznake ponastavljene, novela P83
+  // potrjena 4. leto; leto 1891 ima 75 zveznih vrstic) — vpisi z Griblji
+  // (10; 9 zasidranih + 1 prekrita evidence-only r52; 0 nezakonskih; NOVELA:
+  // vsi 9 statusi = ¼ ulomek — novela P85 potrjena 2. leto; DVE menjavi
+  // matere na zasidranih hišah — h61 Filak→Dragos, h72 Husič→Jakobič;
+  // popolna kontinuiteta h30 z P85 dvojčki; PT luknja: 53 NOVA — 14.
+  // dokazana; Šimec 0× — prvo leto brez najtrajnejše familije; NOVE hiše 2
+  // (28, 53) + ponovitve 7 (h5 ČEZ KNJIGE — mrliška 04894 1886; h61
+  // 1887+1897; h62 1887)) ———
+  {
+    houseNo: "72",
+    bookSignature: "04105",
+    year: 1891,
+    scan: 50,
+    page: 49,
+    whatSi: "krščen Janez (30./31. 1.) — oče Matija Straus [~] ¼ zemljak (ISTI očet kot P83 1888 — re-read Hraus→Strauš; mati menjana: 1888 Barbara Husič [~] → 1891 Marija Jakobič [~]), mati Marija Jakobič [~]; hiša 72 (tri-virska P80 + PUA Strauß Niklo @71, P81 0.8571); botra Matija Straucelj [~] + Barbara Oašovie [~]; babica Marija Brinec (6. leto)",
+    whatEn: "baptized Janez (Jan 30/31) — father Matija Straus [~] quarter smallholder (THE SAME father as P83 1888 — re-read Hraus→Strauš; mother changed: 1888 Barbara Husič [~] → 1891 Marija Jakobič [~]), mother Marija Jakobič [~]; house 72 (the three-source P80 + PUA Strauß Niklo @71, P81 0.8571); godparents Matija Straucelj [~] + Barbara Oašovie [~]; midwife Marija Brinec (6th year)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "30",
+    bookSignature: "04105",
+    year: 1891,
+    scan: 51,
+    page: 50,
+    whatSi: "krščena Marija (13./13. 4.) — oče Janez Milek [~] ¼ zemljak, mati Marjeta Pozdirec [~]; hiša 30 (P85 dvojčka rows 51+52 1890 — ISTI starši + ISTA botra Matija Milek + Katarina Križan: popolna dvoletna kontinuiteta; Milek = P81 near-miss); babica Marija Brinec; modri pripis: umrla 5.8.1983 v Gribljih (MNK 1/1983)",
+    whatEn: "baptized Marija (Apr 13/13) — father Janez Milek [~] quarter smallholder, mother Marjeta Pozdirec [~]; house 30 (P85 twins rows 51+52 of 1890 — THE SAME parents + THE SAME godparents Matija Milek + Katarina Križan: complete two-year continuity; Milek = P81 near-miss); midwife Marija Brinec; blue note: died Aug 5, 1983 in Griblje (MNK 1/1983)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "62",
+    bookSignature: "04105",
+    year: 1891,
+    scan: 52,
+    page: 51,
+    whatSi: "krščen Jožef (6./6. 8.) — oče Anton Muern [~] ¼ gemžgah, mati Barbara Hrižan [~]; hiša 62 (PONOVITEV P82 1887 — Križan gospodinjstvo tudi 1887; h63 P85 sidro Nikolaj Križan sosed); botra Matija Milek [~] (2. pojav 1891) + Barbara Brodarič [~]; babica Ana Hrižan [~]; + 19/8 91",
+    whatEn: "baptized Jožef (Aug 6/6) — father Anton Muern [~] quarter smallholder's helper, mother Barbara Hrižan [~]; house 62 (REPEAT of P82 1887 — a Križan household also in 1887; h63 the P85 anchor Nikolaj Križan next door); godparents Matija Milek [~] (2nd appearance 1891) + Barbara Brodarič [~]; midwife Ana Hrižan [~]; died Aug 19, 1891",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "61",
+    bookSignature: "04105",
+    year: 1891,
+    scan: 52,
+    page: 51,
+    whatSi: "krščen Nikolaj (roj. 11., krst 1. avg. [~]) — oče Nikolaj Pošek/Požek [~] ¼ zemljak (P82 SIDRO 1887: oče Miko Požek — ISTA OSEBA po 4 letih), mati Ana Dragos [~ Dragoš] (MENJAVA MATERE: 1887 Bara Filak → 1891 Dragos — prvi dokaz menjave na zasidrani hiši); botra PRAZNA (edini vpis brez botre); babica Ana Hrižan [~]; podpis prazen; + 1/8 91 [~]",
+    whatEn: "baptized Nikolaj (born 11th, baptized Aug 1 [~]) — father Nikolaj Pošek/Požek [~] quarter smallholder (the P82 ANCHOR of 1887: father Miko Požek — THE SAME person 4 years later), mother Ana Dragos [~ Dragoš] (MOTHER CHANGE: 1887 Bara Filak → 1891 Dragos — the first evidence of a household change on an anchored house); godparents EMPTY (the only entry without godparents); midwife Ana Hrižan [~]; signature empty; died Aug 1, 1891 [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "53",
+    bookSignature: "04105",
+    year: 1891,
+    scan: 52,
+    page: 51,
+    whatSi: "krščena Marijeta (14./14. 8. [~]) — oče Janez Pozdirec [~] ¼ zemljak, mati Marija Križan [~]; hiša 53 = PT LUKNJA NOVA (14. dokazana številka!; forenzika izrez 4x: jasno 53 — prvi prebir »33« [~], Kurrent 3/5); botra Anton Podjarič [~] + Ana Križan [~]; babica Ana Križan [~]; modri pripis: umrla 22.4.1958 v Šempetru št. 64",
+    whatEn: "baptized Marijeta (Aug 14/14 [~]) — father Janez Pozdirec [~] quarter smallholder, mother Marija Križan [~]; house 53 = NEW GAP NUMBER (the 14th proven!; 4x crop forensics: clearly 53 — first read »33« [~], Kurrent 3/5); godparents Anton Podjarič [~] + Ana Križan [~]; midwife Ana Križan [~]; blue note: died Apr 22, 1958 in Šempeter no. 64",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "2",
+    bookSignature: "04105",
+    year: 1891,
+    scan: 53,
+    page: 52,
+    whatSi: "krščena Marjeta (30./30. 8.) — oče Peter Hlebec [~] ¼ gemžgah, mati Ana Jaklpič [~]; hiša 2 TROJNA KONTINUITETA (P82 1887 + P84 1889 + 1891 — ISTI starši Peter Hlebec + Ana Jakobič/Jaklpič ×3 čez 5 let); botra Matija Zimnc [~] + Katarina Hlebec [~]; babica Marjeta Fojter [~] (nova); + 19/1 93",
+    whatEn: "baptized Marjeta (Aug 30/30) — father Peter Hlebec [~] quarter smallholder's helper, mother Ana Jaklpič [~]; house 2 TRIPLE CONTINUITY (P82 1887 + P84 1889 + 1891 — THE SAME parents Peter Hlebec + Ana Jakobič/Jaklpič ×3 across 5 years); godparents Matija Zimnc [~] + Katarina Hlebec [~]; midwife Marjeta Fojter [~] (new); died Jan 19, 1893",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "31",
+    bookSignature: "04105",
+    year: 1891,
+    scan: 53,
+    page: 52,
+    whatSi: "krščen Frančišek (11./11. 9.) — oče Martin Tepič [~] ¼ gemžgah (1887/1890 Martin Papič [~] — Kurrent P/T [~]), mati Marjeta Straus [~] (ISTA OSEBA 1887 Margaretha + 1890 + 1891 — 3 vpise čez 5 let, P81 0.8571); hiša 31 (4. vpis); botra Martin Klobučar [~] (4. leto) + Ana Podirec [~]; babica Marjeta Fojter [~] (ISTA kot r43)",
+    whatEn: "baptized Frančišek (Sep 11/11) — father Martin Tepič [~] quarter smallholder's helper (1887/1890 Martin Papič [~] — Kurrent P/T [~]), mother Marjeta Straus [~] (THE SAME person 1887 Margaretha + 1890 + 1891 — 3 entries across 5 years, P81 0.8571); house 31 (4th entry); godparents Martin Klobučar [~] (4th year) + Ana Podirec [~]; midwife Marjeta Fojter [~] (THE SAME as r43)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "5",
+    bookSignature: "04105",
+    year: 1891,
+    scan: 53,
+    page: 52,
+    whatSi: "krščena Jožefa (13./13. 9. [~]) — oče Mihael Torec [~] ¼ gemžgah, mati Ana Torec [~]; hiša 5 (PONOVITEV ČEZ KNJIGE — mrliška 04894 1886: umrla Barbara Brinec [~] 2 leti — Brinec gospodinjstvo 1886 → Torec 1891 = menjava gospodinjstva); botra Janez Torec [~] + Barbara Torec [~]; babica Katarina [~]; modri pripis: umrla 12.8.1984 v Crnem potoku + modro ime »Terezija?« [~] (nasprotuje tmavemu Jožefa)",
+    whatEn: "baptized Jožefa (Sep 13/13 [~]) — father Mihael Torec [~] quarter smallholder's helper, mother Ana Torec [~]; house 5 (CROSS-BOOK REPEAT — mrliška 04894 1886: died Barbara Brinec [~] aged 2 — a Brinec household in 1886 → Torec 1891 = household change); godparents Janez Torec [~] + Barbara Torec [~]; midwife Katarina [~]; blue note: died Aug 12, 1984 in Crni potok + blue name »Terezija?« [~] (contradicts the dark-ink Jožefa)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "28",
+    bookSignature: "04105",
+    year: 1891,
+    scan: 54,
+    page: 53,
+    whatSi: "krščen Anton (25./26. 10.) — oče Jurij Požek [~] ¼ zemljak (POŽEK VERIGA: h79 1888 → h77 1890 → h28 1891 — 3. hiša familije v 4 letih), mati Marjeta Milkovič [~] (= Milek varianta); hiša 28 NOVA; botra Anton Muern [~] (ISTI kot oče h62) + Katarina Milek [~]; babica Ana Hrižan [~]; marginalija: poročen 16.4.1922, + 18.4.1926",
+    whatEn: "baptized Anton (Oct 25/26) — father Jurij Požek [~] quarter smallholder (THE POŽEK CHAIN: h79 1888 → h77 1890 → h28 1891 — the family's 3rd house in 4 years), mother Marjeta Milkovič [~] (= Milek variant); house 28 NEW; godparents Anton Muern [~] (THE SAME as the h62 father) + Katarina Milek [~]; midwife Ana Hrižan [~]; margin: married Apr 16, 1922, died Apr 18, 1926",
+    status: "DOCUMENTED",
+  },
 ];

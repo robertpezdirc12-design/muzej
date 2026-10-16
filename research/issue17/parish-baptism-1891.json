@@ -1,0 +1,377 @@
+{
+  "phase": "P86",
+  "title": "Župnija Podzemelj — krstna knjiga 04105, polno leto 1891 (issue #18)",
+  "type": "SAMPLE-TRANSCRIPTION-1891",
+  "status": "DOCUMENTED",
+  "issuedAt": "2026-10-16",
+  "source": {
+    "provider": "Matricula Online",
+    "url": "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04105/",
+    "signature": "04105",
+    "book": "Krstna knjiga 1886–1919, Nadškofijski arhiv Ljubljana",
+    "inventoryImages": 326,
+    "note": "ročna paleografska faza — skeni 49–63 v delovnem imeniku /tmp/p86 (NI v repu); hi-res izrezi 2x–4x za vse Griblje vrstice + forenzika hišnih številk (r53: jasno 53; r30: jasno 30) + celic očeta/matere/botra"
+  },
+  "method": "MERI, NE odloča (issue #18) — širitev vzorca P79 (1886) → P82 (1887) → P83 (1888) → P84 (1889) → P85 (1890) na leto 1891; v7 runtime join nespremenjen (sha256 4bb40370…); transkripcija [~] negotovo, [?] neberljivo; hišne številke s forenziko izrezov (vzorec P82/P84/P85); statusi ulomki (novela P85)",
+  "frame": {
+    "scanFrom": 49,
+    "scanTo": 56,
+    "pageFrom": 48,
+    "pageTo": 55,
+    "year": 1891,
+    "rowsTotal": 75,
+    "rowsNote": "zvezne vrstice 1–75 (str. 48: 1–3 Januar — nad njimi še 1890 rows 78–86; str. 49: 4–15 Januar/Februar; str. 50: 16–28 Februar/Maj; str. 51: 29–40 Junij/Avgust; str. 52: 41–52 Avgust/September; str. 53: 53–64 Oktobr/November; str. 54: 65–75 November/December)",
+    "monthHeaders": "glave mesecev se ponavljajo znotraj leta (Avgust 2×: str. 51 row 37 + str. 52 row 41; November 2×: str. 53 row 61 + str. 54 row 65) — vzorec ponavljajočih glav (novela P84 str. 40)",
+    "break1892": {
+      "scan": 56,
+      "page": 55,
+      "row": 1,
+      "note": "glava »Leto 1892« + »Januar« na strani 55 row 1; zadnji 1891 vpis row 75 (30./31. 12., Podzemelj 5 Marija); oznake vrstic ponastavljene na 1 — novela P83 POTRJENA 4. leto"
+    }
+  },
+  "entries": [
+    {
+      "row": 6,
+      "year": 1891,
+      "month": "Januar",
+      "born": "30.",
+      "baptized": "31.",
+      "village": "Griblje",
+      "houseNo": "72",
+      "scan": 50,
+      "page": 49,
+      "child": "Janez",
+      "father": "Matija Straus [~] ¼ zemljak",
+      "mother": "Marija Jakobič [~]",
+      "botra": "Matija Straucelj [~] + Barbara Oašovie [~] (¼)",
+      "babica": "Marija Brinec [~]",
+      "priest": "Jos. Rauq [~]",
+      "notes": [
+        "SIDRO — h72 = P83 sidro (1888 row 8: oče ISTI Matija Strauš [~] — re-read P84 »Hraus«→Strauš); mati 1888 »Barbara Husič« [~] → 1891 »Marija Jakobič« [~] — MENJAVA MATERE (2. primer v 1891 poleg h61; druga žena / ponovna poroka — neodločeno, MERI)",
+        "tri-virska hiša (P80 mrliška 04894 + P81 PUA Strauß Niklo @71 0.8571 + krstna)",
+        "botra Matija Straucelj = ista familija kot P84 h57 botra Marija Straucelj (1889); Straus/Straucelj 4. leto v vzorcu (1887–1890)",
+        "babica Marija Brinec — 6. leto zapored (1886–1891)"
+      ]
+    },
+    {
+      "row": 21,
+      "year": 1891,
+      "month": "April",
+      "born": "13.",
+      "baptized": "13.",
+      "village": "Griblje",
+      "houseNo": "30",
+      "scan": 51,
+      "page": 50,
+      "child": "Marija",
+      "father": "Janez Milek [~] ¼ zemljak",
+      "mother": "Marjeta Pozdirec [~]",
+      "botra": "Matija Milek [~] + Katarina Križan [~]",
+      "babica": "Marija Brinec [~]",
+      "priest": "Jos. Rauq [~]",
+      "notes": [
+        "ČEZ-LETNA KONTINUITETA h30: ISTI starši kot P85 dvojčka (rows 51+52 1890: oče Janez Milek [~], mati Marjeta Pendirec [~]) + ISTA botra (Matija Milek + Katarina Križan) — prva popolna dvoletna kontinuiteta pare + botre na isti hiši v vzorcu",
+        "mati varianta Pendirec (1890) → Pozdirec (1891) — ista Kurrent familija Pezdirec/Pendirec/Pozdirec/Podirec",
+        "status očeta ½ (1890) → ¼ (1891)",
+        "Milek = P81 near-miss familija (0.55–0.72); Milek/Milkovič 4 signala v 1891",
+        "modri pripis: umrla dne 5.8.1983 v Gribljih (MNK Griblje 1/1983, str. 125, zop. št. 7; ENSO 130489 1505040, 20.12.1982) — oseba živela do 1983"
+      ]
+    },
+    {
+      "row": 38,
+      "year": 1891,
+      "month": "Avgust",
+      "born": "6.",
+      "baptized": "6.",
+      "village": "Griblje",
+      "houseNo": "62",
+      "scan": 52,
+      "page": 51,
+      "child": "Jožef",
+      "deathPen": "†19/8 91",
+      "father": "Anton Muern [~] ¼ gemžgah",
+      "mother": "Barbara Hrižan [~]",
+      "botra": "Matija Milek [~] + Barbara Brodarič [~] (¼)",
+      "babica": "Ana Hrižan [~]",
+      "priest": "Jos. Rauq [~]",
+      "notes": [
+        "hiša 62 = PONOVITEV P82 1887 (vitals 04105 scan 21) — Križan gospodinjstvo tudi 1887; mati + babica Hrižan [~]; h63 (P85 sidro: oče Nikolaj Križan) sosed",
+        "Križan gospodinjstvo — mati + babica Hrižan [~]; h63 (P85 sidro: oče Nikolaj Križan) sosednja številka",
+        "botra Matija Milek = 2. pojav 1891 (r21); Brodarič = P83 h57/h78 familija",
+        "umrl v istem letu (†19/8 91, star ~2 tedna [~])"
+      ]
+    },
+    {
+      "row": 39,
+      "year": 1891,
+      "month": "Avgust",
+      "born": "11.",
+      "baptized": "1. avg. [~]",
+      "village": "Griblje",
+      "houseNo": "61",
+      "scan": 52,
+      "page": 51,
+      "child": "Nikolaj",
+      "deathPen": "†1/8 91 [~]",
+      "father": "Nikolaj Pošek [~ Požek] ¼ zemljak",
+      "mother": "Ana Dragos [~ Dragoš]",
+      "botra": "—",
+      "babica": "Ana Hrižan [~]",
+      "priest": "—",
+      "notes": [
+        "P82 SIDRO h61 (1887 row 28: oče Miko Požek [~] + mati Bara roj. Filath [~]) — oče ISTA OSEBA (Miko = Nikolaj) po 4 letih",
+        "hiša 61 = PONOVITEV (1887 sidro + 1897 P79 okno + 1891 — 3 krstni vpisi čez 5 let)",
+        "MENJAVA MATERE: 1887 Filak → 1891 Dragos [~ Dragoš] — PRVI dokaz menjave gospodinjstva na zasidrani hiši čez leta v krstnem vzorcu (druga žena / ponovna poroka — neodločeno, MERI); Filak izostanek 1891 (0×) po tej menjava",
+        "Dragoš = P81 1.0 familija; datum krst »1. avg.« čez glavo meseca (rojstva 11. julij [~]); † 1/8 91 — isti dan kot krst [~] (novorojenček)",
+        "botra in podpis prazna (—) — edini Griblje vpis 1891 brez botre"
+      ]
+    },
+    {
+      "row": 40,
+      "year": 1891,
+      "month": "Avgust",
+      "born": "14. [~]",
+      "baptized": "14. [~]",
+      "village": "Griblje",
+      "houseNo": "53",
+      "scan": 52,
+      "page": 51,
+      "child": "Marijeta",
+      "father": "Janez Pozdirec [~] ¼ zemljak",
+      "mother": "Marija Križan [~]",
+      "botra": "Anton Podjarič [~] + Ana Križan [~] (¼ gemž)",
+      "babica": "Ana Križan [~]",
+      "priest": "Jos. Rauq [~]",
+      "notes": [
+        "NOVA hiša v vzorcu + NOVA LUKNJA 41–60 — 14. dokazana številka!",
+        "forenzika številke: izrez 4x = jasno »53« (prvi prebir »33« [~] — Kurrent 3/5; 33 = P84 hiša 1889, toda številka tu ima raven zgornji lok 5)",
+        "Pezdirec/Pozdirec × Križan zveza (oče + mati + botra + babica Križan)",
+        "modri pripisi: umrla dne 22.4.1958 v Šempetru št. 64 + neprepoznan moder pripis nad krajem [~]"
+      ]
+    },
+    {
+      "row": 43,
+      "year": 1891,
+      "month": "Avgust",
+      "born": "30.",
+      "baptized": "30.",
+      "village": "Griblje",
+      "houseNo": "2",
+      "scan": 53,
+      "page": 52,
+      "child": "Marjeta",
+      "deathPen": "†19/1 93",
+      "father": "Peter Hlebec [~] ¼ gemžgah",
+      "mother": "Ana Jaklpič [~]",
+      "botra": "Matija Zimnc [~] + Katarina Hlebec [~] (¼)",
+      "babica": "Marjeta Fojter [~]",
+      "priest": "Jos. Rauq [~]",
+      "notes": [
+        "h2 TROJNA KONTINUITETA: ISTI starši kot P82 row 77 (1887: Peter Hlebec + Ana Jakobič) in P84 row 75 (1889: isti) — 3 vpisi istega para čez 5 let",
+        "mati varianta Jakobič → Jaklpič [~] — ista Kurrent familija",
+        "botra Katarina Hlebec = ista familija kot oče; Zimnc [~] = P82 h35? varianta (evidence)",
+        "babica Marjeta Fojter — NOVA babica (2. pojav r50)"
+      ]
+    },
+    {
+      "row": 50,
+      "year": 1891,
+      "month": "September",
+      "born": "11.",
+      "baptized": "11.",
+      "village": "Griblje",
+      "houseNo": "31",
+      "scan": 53,
+      "page": 52,
+      "child": "Frančišek",
+      "father": "Martin Tepič [~] ¼ gemžgah",
+      "mother": "Marjeta Straus [~]",
+      "botra": "Martin Klobučar [~] + Ana Podirec [~]",
+      "babica": "Marjeta Fojter [~]",
+      "priest": "Jos. Rauq [~]",
+      "notes": [
+        "h31 4. vpis (1887 ×2: rows 55 + 67, 1890 row 14, 1891)",
+        "Straus mati na h31: 1887 row 67 Margaretha Straus + 1890 row 14 Marjeta Straus + 1891 Marjeta Straus [~] — ISTA OSEBA 3 vpise čez 5 let; oče 1887/1890 Martin Papič [~] → 1891 Martin Tepič [~] — Kurrent P/T [~] (morda isti Martin)",
+        "botra Martin Klobučar — Klobučar 4. leto (1887 h47 oče → 1888 h78 botra → 1890 4× → 1891)",
+        "babica Marjeta Fojter 2. pojav 1891 (ISTA kot r43 — dva vpisa 11 dni narazen, h31 + h2)"
+      ]
+    },
+    {
+      "row": 51,
+      "year": 1891,
+      "month": "September",
+      "born": "13. [~]",
+      "baptized": "13. [~]",
+      "village": "Griblje",
+      "houseNo": "5",
+      "scan": 53,
+      "page": 52,
+      "child": "Jožefa",
+      "father": "Mihael Torec [~] ¼ gemžgah",
+      "mother": "Ana Torec [~]",
+      "botra": "Janez Torec [~] + Barbara Torec [~]",
+      "babica": "Katarina [~]",
+      "priest": "Jos. R— [~]",
+      "notes": [
+        "hiša 5 = PONOVITEV ČEZ KNJIGE — mrliška 04894 1886 (P80, scan 3: umrla Barbara Brinec [~], 2 leti) — Brinec gospodinjstvo 1886 → Torec 1891 = MENJAVA GOSPODINJSTVA na h5",
+        "vsi TOREC (oče, mati, botra 2) — familija hiše 5; Torec čez vasi (1890 h13 Primostek oče Nikolaj Torec — ne vzorec)",
+        "modri pripis: umrla dne 12.8.1984 v Crnem potoku (MKU vos. Crni potok 1.1984, str. 369, zop. št. 25; ENSO 130989 1505102) + modro ime »Terezija?« [~] — nasprotuje tiskanemu tmavemu »Jožefa« [~]",
+        "babica Katarina [~] — priimek neberljiv"
+      ]
+    },
+    {
+      "row": 52,
+      "year": 1891,
+      "month": "September",
+      "born": null,
+      "baptized": null,
+      "village": "Griblje",
+      "houseNo": null,
+      "scan": 53,
+      "page": 52,
+      "child": "Katarina",
+      "father": "? Straus [~]",
+      "mother": "Barbara [~]",
+      "botra": "Matija Urh [~] + ?",
+      "babica": "Marija [~]",
+      "priest": null,
+      "notes": [
+        "EVIDENCE-ONLY — hišna št. + datumi prekriti z modrimi pripisi 20. st. (vzorec P84 rows 70/82; P85 rows 31/75/77)",
+        "modri pripis: umrla dne 8.11.1976 v Gribljah (MNK Griblje 1.1976, str. 104, zap. št. 1; ENSO št. 1505102)",
+        "oče »? Straus [~]« — 4. Straus signal 1891 (kršteni prvi imeni neberljiva); mati Barbara [~]",
+        "botra Matija Urh — P81 1.0 familija Urh (1887 h31 oče Matija Urh; 1888 mati/botra h8/h85; 1890 veriga 1887–1890)"
+      ]
+    },
+    {
+      "row": 56,
+      "year": 1891,
+      "month": "Oktobr",
+      "born": "25.",
+      "baptized": "26.",
+      "village": "Griblje",
+      "houseNo": "28",
+      "scan": 54,
+      "page": 53,
+      "child": "Anton",
+      "father": "Jurij Požek [~] ¼ zemljak",
+      "mother": "Marjeta Milkovič [~]",
+      "botra": "Anton Muern [~] + Katarina Milek [~]",
+      "babica": "Ana Hrižan [~]",
+      "priest": "Jos. Rauq [~]",
+      "notes": [
+        "NOVA hiša v vzorcu",
+        "POŽEK VERIGA: h79 (P83 1888: oče Jurij bajtar) → h77 (P85 1890: oče Jurij Pošek/Požek bajtar) → h28 (1891 oče Jurij Požek) — 3. hiša familije v 4 letih",
+        "Milkovič [~] = Milek varianta (Milek/Milkovič 4 signala 1891); botra Katarina Milek",
+        "botra Anton Muern = ISTI kot oče h62 (r38) — botra iz sosednje nove hiše",
+        "marginalija: poročen 16.4.1922, †18.4.1926"
+      ]
+    }
+  ],
+  "stats": {
+    "entries": 10,
+    "distinctHouses": 9,
+    "housesIllegible": 1,
+    "housesWritten": [
+      "2",
+      "5",
+      "28",
+      "30",
+      "31",
+      "53",
+      "61",
+      "62",
+      "72"
+    ],
+    "ptInNabor": [
+      "2",
+      "5",
+      "28",
+      "30",
+      "31",
+      "61",
+      "62",
+      "72"
+    ],
+    "ptGap": [
+      "53"
+    ],
+    "ptGapNew": [
+      "53"
+    ],
+    "ptGapNote": "luknja 41–60: 53 NOVA — 14. dokazana številka čez tri knjige (54/56/57 P79 + 44/59/60 P80 + 47/52/55 P82 + 44 P83 + 58 P84 + 41/47/55/58 P85 + 53 P86)",
+    "newSampleHouses": [
+      "28",
+      "53"
+    ],
+    "repeatHouses": 7,
+    "repeatHousesList": [
+      "2 (1887 + 1889 + 1891 — ISTI starši ×3)",
+      "30 (1890 ×2 + 1891 — ISTI starši + ISTA botra)",
+      "31 (1887 ×2 + 1890 + 1891 — Straus mati ISTA OSEBA ×3)",
+      "5 (1886 mrliška 04894 + 1891 — Torec familija čez knjige)",
+      "61 (1887 sidro + 1897 + 1891 — oče Požek ISTA OSEBA)",
+      "62 (1887 + 1891 — Križan gospodinjstvo)",
+      "72 (1888 + 1891 — ISTI očetje Strauš/Straus)"
+    ],
+    "multiEntryHouses": [],
+    "illegitimate": 0,
+    "illegitimateNote": "0 nezakonskih (očetov stolpec nikoli prazen pri Gribljih 1891); r39 botra prazna — edini vpis brez botre",
+    "twins": null,
+    "priests": "Jos. Rauq [~] 7 + Jos. R— [~] 1 (r51) + prazna 1 (r39) + neberljiva 1 (r52 evidence-only); NOV podpis St. Češarek [~] od r68 (sredi decembra 1891) — 0× na Gribljih (decembrski vpisi brez Gribljev)",
+    "midwives": "Ana Hrižan/Križan [~] 4 (r38, r39, r40, r56 — vrnitev po 1889) + Marija Brinec [~] 2 (r6, r21 — 6./7. leto zapored) + Marjeta Fojter [~] 2 (r43, r50 — NOVA) + Katarina [~] 1 (r51) + Marija [~] 1 (r52)",
+    "statusFractions": "9/9 zasidranih vpisov z ulomkom — VSI »¼« (zemljak 5, gemžgah 4); novela P85 (ulomek, ne »ž«) potrjena 2. leto; brez bajtarjev/obrtnikov na Gribljih 1891 (kontrast 1890)",
+    "surnameSignals": "Križan/Hrižan 8 (0.8333 [~]) + Milek/Milkovič 4 (near-miss) + Straus/Straucelj 3 zasidrani + 1 [~] (0.8571) + Torec 4 (nova, ena hiša) + Hlebec 2 (nova) + Pezdirec/Pendirec/Pozdirec/Podirec 3 + Požek/Pošek 2 (4. leto) + Brinec 2 (babica, 6./7. leto) + Klobučar 1 + Brodarič 1 + Urh 1 [~] (1.0) + Dragoš 1 (1.0, mati h61) + Jakobič/Jaklpič 2; ŠIMEC 0× — PRVO leto brez Šimec v krstnem vzorcu (1886: 4 hiše, 1887: 1, 1888: 1, 1889: 3, 1890: 6)",
+    "sampleTotal": "127 vpisov / 58 hiš čez tri knjige (04105 + 04894 + 04455) in šest let (1886/1887/1888/1889/1890/1891)"
+  },
+  "crossLinks": {
+    "p82_1887": [
+      "h61 row 28 (oče Miko Požek [~] + mati Bara Filath [~]) ↔ 1891 r39 (oče Nikolaj Pošek/Požek — ISTA OSEBA; mati MENJANA → Ana Dragos [~])",
+      "h2 row 77 (Peter Hlebec + Ana Jakobič) ↔ 1891 r43 (ISTI starši)",
+      "h31 row 67 (Martin Papič + Margaretha Straus) ↔ 1890 row 14 (Papič + Marjeta Straus) ↔ 1891 r50 (mati Marjeta Straus — ISTA OSEBA ×3); h31 row 55 (oče Matija Urh) ↔ botra Urh r52 [~]"
+    ],
+    "p83_1888": [
+      "h72 row 8 (oče Matija Strauš [~] — re-read P84) ↔ 1891 r6 (oče ISTI Matija Straus); mati 1888 Barbara Husič [~] → 1891 Marija Jakobič [~] — MENJAVA MATERE"
+    ],
+    "p84_1889": [
+      "h2 row 75 (Peter Hlebec + Ana Jakobič?) ↔ 1891 r43 (ISTI starši ×3)"
+    ],
+    "p85_1890": [
+      "h30 rows 51+52 dvojčka (Janez Milek + Marjeta Pendirec; botra Matija Milek + Katarina Križan) ↔ 1891 r21 (ISTI starši + ISTA botra — popolna kontinuiteta; mati varianta Pendirec→Pozdirec; status ½→¼)",
+      "h63 row 76 (oče Nikolaj Križan) ↔ h62 NOVA (mati Barbara Hrižan + babica Ana Hrižan) — sosednji številki, Križan blok",
+      "h77 (oče Jurij Pošek/Požek bajtar) ↔ h28 NOVA (oče Jurij Požek) — Požek veriga 79→77→28",
+      "h31 row 14 (Martin Papič + Marjeta Straus) ↔ 1891 r50 — mati Straus ISTA OSEBA ×3"
+    ],
+    "p81_nameUniverse": [
+      "Straus/Straucelj 0.8571 — 4 signala 1891",
+      "Križan/Krišan 0.8333 [~] — 8 signalov 1891 (najmočnejše leto familije)",
+      "Milek near-miss (0.55–0.72) — 4 signali 1891 (oče + 3 botre)",
+      "Dragoš 1.0 — mati h61; Urh 1.0 — botra r52 [~]; Jakobič 1.0 — mati h72 + h2 ×2"
+    ]
+  },
+  "findings": [
+    "h53 NOVA LUKNJA 41–60 (14. dokazana številka) — Pezdirec × Križan gospodinjstvo",
+    "popolna dvoletna kontinuiteta h30 (1890 dvojčka → 1891 isti starši + ista botra) — prva v vzorcu",
+    "DVE menjavi matere na zasidranih hišah: h61 (Filak 1887 → Dragos [~] 1891, oče isti Požek) + h72 (Husič [~] 1888 → Jakobič [~] 1891, oče isti Straus) — nov tip čez-letnega dogodka (druga žena / ponovna poroka / re-read [~])",
+    "Požek 3. hiša v 4 letih (79→77→28) — mobilna familija malokmetov (vsi ¼ zemljak)",
+    "Straus 4. leto (3 zasidrani signali + 1 evidence-only [~]) — h72 oče isti 1888+1891, h31 mati ISTA OSEBA 1887+1890+1891 (3 vpise)",
+    "Šimec izostanek: 0× v 1891 — prvo leto brez najtrajnejše familije (6 hiš 1890)",
+    "vsi 9 zasidranih statusov = ¼ ulomek (novela P85 potrjena; 1890 je bilo 15/24 mešano ½/¼)",
+    "dve novi babici poleg Brinec: Ana Hrižan 4× (vrnitev po 1889) + Marjeta Fojter 2×; menjava duhovnikov decembra (Rauq → St. Češarek [~])",
+    "h5 PONOVITEV ČEZ KNJIGE (mrliška 04894 1886 + krstna 1891 — Torec familija; 2. primer čez-knjižne ponovitve po h15)",
+    "h61 3 krstni vpisi čez 5 let (1887 sidro + 1897 + 1891) — oče Požek ISTA OSEBA v 1887 in 1891, mati menjana"
+  ],
+  "honesty": {
+    "scansInRepo": false,
+    "scansNote": "skeni 49–63 v delovnem imeniku /tmp/p86 (ročna faza); dokaz + skripta v repu",
+    "uncertainty": "[~] na vseh Kurrent branjah osebnih imen; hišne številke forenzika z izrezi (r53 jasno 53 — prvi prebir 33 [~]; r30 jasno 30 — prvi prebir 40 [~])",
+    "coveredRow": "r52 evidence-only (hiša + datumi prekriti z modrimi pripisi)",
+    "motherChanges": "menjavi mater h61/h72 = hipoteze (druga žena / ponovna poroka / re-read) — MERI, NE odloča",
+    "nameConflict": "r51 ime tmavo »Jožefa« [~] vs modri pripis »Terezija?« [~] — ohranjeno tmavo, pripis v notes"
+  },
+  "nextSteps": [
+    "① širitev vzorca po letih: P87 = leto 1892 (skeni 56–63+, glava na str. 55 row 1; dovolj skenov že v /tmp/p86)",
+    "② per-hišna kronologija tri-virskih hiš 13/36/71 (issue #18 najmočnejši mostovni kandidati) — še vedno odprto",
+    "③ mrliška knjiga 04894 leta 1887–1892: dopolnitev verig (Filak h61? Milek h30? menjava mater h61/h72 — smrti prvih žena?)",
+    "④ luknja 41–60: 14 dokazanih števil; ostalih 6 (42, 43, 45, 46, 48, 49, 50, 51, ... minus dokazane) še brez krstnih dokazov"
+  ]
+}
