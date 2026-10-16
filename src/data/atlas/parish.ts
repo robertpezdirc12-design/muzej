@@ -1700,4 +1700,162 @@ export const HOUSE_VITALS: HouseVital[] = [
     whatEn: "baptized Janez (Nov 5/5) — father Matija Meh/Mrh? [~] half smallholder (MEASURES: the h32 1889–1892 father Matija Urh [~] — THE SAME mother + THE SAME godparents as 1892 → either the same father with a newly read surname or another husband [~]), mother Marjeta Pegdirec [~] (≈ Margaretha 1892); house 32 (the 4th entry: 1889+1890+1892+1893); godparents Marko Hrižan [~] + Barbara Strauš [~] (THE SAME as 1892); midwife Marjeta Trotter [~]; signature Janez Jelovšek? [~] (2nd)",
     status: "DOCUMENTED",
   },
+  // ——— P89 razširitev: KRSTNA KNJIGA 04105 — polno leto 1894 (okvir skeni
+  // 70–78 == strani 69–76; glava »1894« na str. 69 po 1893 row 83; velike
+  // cifre »1895~« na str. 76 po row 90 — oznake ponastavljene, novela P83
+  // potrjena 7. leto; leto 1894 ima 90 zveznih vrstic) — NOVELA OKVIRA:
+  // sken 73 je PODOVOJEN sken str. 71 (matricula re-scan, prvi v seriji) —
+  // stran == sken − 1 velja do skena 72, od skena 74 naprej − 2; vpisi z
+  // Griblji (14 / 14 hiš — prvo leto brez ponovitev znotraj leta in PRVO
+  // leto z 0 NOVIH hiš — vseh 14 že zasidranih, vzorec se zasiča; NOVELA:
+  // ulomki, novela P85 potrjena 5. leto — ½ zemljak 8 + ¼ zemljak 6; SIDRA:
+  // h2 ŠTIRIKRATNA kontinuiteta (ISTI starši Hlebec × Jakobič 4×: 1887+
+  // 1889+1891+1894 — najdaljša zveza vzorca), h71 ISTA zveza Jurij Strauš ×
+  // Barbara čez 8 let (P77 1886 r83; Strauš na DVEH hišah h71+h72; PUA @71
+  // 0.8571), h36 Križan 2. GENERACIJA (4. vir tri-virske hiše), h31 4. VPIS
+  // (oče Papič/Fapič ISTI + mati Straus ISTA + botra Klobučar), h17 ISTI
+  // oče Kralj ¼ + MATER MENJANA (Jakobič → Firlak? — 5. dokazana), h57 ISTA
+  // botra pa čez 8 let (P77), h60 + h23 ISTA botra pa 2. leto (P88), h12/
+  // h53/h73/h75 ISTA zvezi (2. vpis); duhovnik Jan Jelenuš? 11× (≈ P88
+  // »Jelovšek?«) + Rauq 3× (Feb/Sep/Dec); babica Trotter 11×) ———
+  {
+    houseNo: "12",
+    bookSignature: "04105",
+    year: 1894,
+    scan: 70,
+    page: 69,
+    whatSi: "krščen Frančišek (28./28. 1.) — oče Janez Dragoš [~] ½ zemljak (ISTI oče kot P87 1892 — h12 2. VPIS), mati Barbara Druppovič? [~] (P87 »Civlkovič?« — varianti branja iste matere ali druga žena [~] MERI); hiša 12 (forenzika izrez 5x: jasno 12); botra Janez Jakobčič? [~] + Marija Strauš? [~]; babica Marija Trotter [~]; moder pripis: poročen 24/2. 1949",
+    whatEn: "baptized Frančišek (Jan 28/28) — father Janez Dragoš [~] half smallholder (THE SAME father as P87 1892 — h12 2nd entry), mother Barbara Druppovič? [~] (P87 »Civlkovič?« — reading variants of the same mother or another wife [~]); house 12 (5x crop forensics: clearly 12); godparents Janez Jakobčič? [~] + Marija Strauš? [~]; midwife Marija Trotter [~]; blue note: married Feb 24, 1949",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "2",
+    bookSignature: "04105",
+    year: 1894,
+    scan: 71,
+    page: 70,
+    whatSi: "krščen Matija (23./24. 2.) — oče Peter Hlebec [~] ¼ zemljak, mati Ana Jakobič [~]; hiša 2 (4. VPIS — ŠTIRIKRATNA KONTINUETETA: ISTI starši vseh 4× 1887+1889+1891+1894, 8 let — najdaljša zasidrana zveza vzorca); botra Janez Jakljič? [~] + Katarina? Klobučar [~]; babica Margareta (Margan.) Trotter [~]; moder pripis: mati umrla 2.9.1965? v Novem mestu (HMIC NM 1965, str. 469)",
+    whatEn: "baptized Matija (Feb 23/24) — father Peter Hlebec [~] quarter smallholder, mother Ana Jakobič [~]; house 2 (the 4th entry — QUADRUPLE CONTINUITY: THE SAME parents all 4× 1887+1889+1891+1894, 8 years — the longest anchored couple in the sample); godparents Janez Jakljič? [~] + Katarina? Klobučar [~]; midwife Margareta Trotter [~]; blue note: mother died Sep 2, 1965? in Novo mesto",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "53",
+    bookSignature: "04105",
+    year: 1894,
+    scan: 71,
+    page: 70,
+    whatSi: "krščen Jožef (13./13. 2.) — oče Janez Pegdirec? [~] ¼ zemljak, mati Marija Hrižan? [~] (ISTA ZVEZA kot P86 1891 »Pozdirec × Križan« — Kurrent P/K in K/H variante); hiša 53 = PT LUKNJA (2. vpis; babica Ana Hrižan ISTA kot 1891); botra Anton Brodarič? [~] + Ana Kure [~]; podpis Jos. Rauq",
+    whatEn: "baptized Jožef (Feb 13/13) — father Janez Pegdirec? [~] quarter smallholder, mother Marija Hrižan? [~] (THE SAME COUPLE as P86 1891 »Pozdirec × Križan« — Kurrent P/K and K/H variants); house 53 = the PT GAP (2nd entry; midwife Ana Hrižan THE SAME as 1891); godparents Anton Brodarič? [~] + Ana Kure [~]; signature Jos. Rauq",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "69",
+    bookSignature: "04105",
+    year: 1894,
+    scan: 71,
+    page: 70,
+    whatSi: "krščena Joana (21./21. 2.) — oče Janez Brinec [~] ½ zemljak, mati Ana Kure [~]; hiša 69 NOV krstni vpis (čez knjige: mrliška 04894 1886 P78); botra Janez Muč? [~] + Katarina Požek? [~] (Požek familija botra — 7. leto); babica Marija Trotter [~]",
+    whatEn: "baptized Joana (Feb 21/21) — father Janez Brinec [~] half smallholder, mother Ana Kure [~]; house 69 NEW baptism entry (cross-book: death register 04894 1886 P78); godparents Janez Muč? [~] + Katarina Požek? [~] (the Požek family as godparent — 7th year); midwife Marija Trotter [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "36",
+    bookSignature: "04105",
+    year: 1894,
+    scan: 72,
+    page: 71,
+    whatSi: "krščen Janez (5./5. 5.) — oče Janez Križan? [~] ¼ zemljak, mati Katarina Straucelj? [~]; hiša 36 = TRI-VIRSKA (poroka 04455 1882 Mathias Križan + krstna 1886 ×2 P77 + mrliška 04894 1887) — 4. VIR: KRIŽAN 2. GENERACIJA (Matija 1882/1886 → Janez 1894 — mogoč sin [~] MERI; forenzika izrez 5x: jasno 36); botra Marija Straus? [~] + Marija Pegdirec? [~]; babica Marija Trotter [~]",
+    whatEn: "baptized Janez (May 5/5) — father Janez Križan? [~] quarter smallholder, mother Katarina Straucelj? [~]; house 36 = THREE-SOURCE (the 1882 marriage 04455 Mathias Križan + the 1886 baptisms ×2 P77 + the 1887 death 04894) — a 4th source: KRIŽAN 2nd GENERATION (Matija 1882/1886 → Janez 1894 — possibly the son [~]; 5x crop forensics: clearly 36); godparents Marija Straus? [~] + Marija Pegdirec? [~]; midwife Marija Trotter [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "57",
+    bookSignature: "04105",
+    year: 1894,
+    scan: 74,
+    page: 72,
+    whatSi: "krščen Janez (6./7. 7.) — oče Peter Pegdirec? [~] ½ zemljak [~] (frakcija z zaprto zanko — ½ ali ⅛? [~]), mati Marija Županc? [~]; hiša 57 = PT LUKNJA (2. vpis čez 8 let — P77 1886: starša »Podolivec/Stupanič« = varianti ali drugi [~] MERI); BOTRA PA ISTA čez 8 let (P77 r20: Jurij Brodarič? + Marija Strauš?); babica Marija Trotter [~]; moder: + 2/9. 94?",
+    whatEn: "baptized Janez (Jul 6/7) — father Peter Pegdirec? [~] half smallholder [~] (fraction with a closed loop — ½ or ⅛? [~]), mother Marija Županc? [~]; house 57 = the PT GAP (2nd entry over 8 years — P77 1886 parents »Podolivec/Stupanič« = variants or another couple [~]); THE SAME godparent pair over 8 years (P77 r20: Jurij Brodarič? + Marija Strauš?); midwife Marija Trotter [~]; blue: + Sep 2, 94?",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "73",
+    bookSignature: "04105",
+    year: 1894,
+    scan: 75,
+    page: 73,
+    whatSi: "krščen Mihael (16./16. 7.) — oče Nikolaj Županič? [~] ½ zemljak, mati Katarina? Pegdirec? [~] (ISTA ZVEZA kot P87 1892 »Županič × Pozdirec« — 2. VPIS; botra menjana od 1892); hiša 73 (forenzika izrez 5x: jasno 73); botra Nikol Harasimič? [~] + Marjeta Pegdirec? [~]; babica Marija Trotter [~]; pripisi: roj. 31.3.1942 + umrl 8.1.1968",
+    whatEn: "baptized Mihael (Jul 16/16) — father Nikolaj Županič? [~] half smallholder, mother Katarina? Pegdirec? [~] (THE SAME COUPLE as P87 1892 »Županič × Pozdirec« — 2nd entry; godparents changed since 1892); house 73 (5x crop forensics: clearly 73); godparents Nikol Harasimič? [~] + Marjeta Pegdirec? [~]; midwife Marija Trotter [~]; notes: born Mar 31, 1942 + died Jan 8, 1968",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "31",
+    bookSignature: "04105",
+    year: 1894,
+    scan: 75,
+    page: 73,
+    whatSi: "krščena Joana (25./25. 7.) — oče Martin Fapič? [~] ½ zemljak (ISTI oče: Papič/Fapič/Tepič — Kurrent P/F/T), mati Marjeta Straus? [~] (ISTA vseh 4×); hiša 31 (4. VPIS: 1887+1890+1891+1894 — najbolj popolna trojica oče+mati+botra); botra Marko Klobučar? [~] (ISTI kot 1887) + Marjeta Pegdirec? [~]; babica Marija Trotter [~]; moder: + 29/6. 96",
+    whatEn: "baptized Joana (Jul 25/25) — father Martin Fapič? [~] half smallholder (THE SAME father: Papič/Fapič/Tepič — Kurrent P/F/T), mother Marjeta Straus? [~] (THE SAME all 4×); house 31 (the 4th entry: 1887+1890+1891+1894 — the most complete father+mother+godparent trio); godparents Marko Klobučar? [~] (THE SAME as 1887) + Marjeta Pegdirec? [~]; midwife Marija Trotter [~]; blue: + Jun 29, 96",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "13",
+    bookSignature: "04105",
+    year: 1894,
+    scan: 75,
+    page: 73,
+    whatSi: "krščen Jožef (28./29. 7.) — oče Matija Jakljevič? [~] (ali Jakobčič?) ½ zemljak (ISTI oče ime+status kot P77 1886 »Matija Jakopič? ½« — 2. vpis čez 8 let), mati Marija Pegdirec? [~] (P77 »Podlivc?« — varianta [~] MERI); hiša 13 TRI-VIRSKA (P77 krstna + P78 mrliška 04894); botra Matija Kambič? [~] + Katarina Križan? [~]; babica PRAZNA (druga po P88 r50)",
+    whatEn: "baptized Jožef (Jul 28/29) — father Matija Jakljevič? [~] (or Jakobčič?) half smallholder (THE SAME father's name+status as P77 1886 »Matija Jakopič? ½« — 2nd entry over 8 years), mother Marija Pegdirec? [~] (P77 »Podlivc?« — a variant [~]); house 13 THREE-SOURCE (P77 baptismal + P78 death 04894); godparents Matija Kambič? [~] + Katarina Križan? [~]; midwife EMPTY (the second after P88 r50)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "75",
+    bookSignature: "04105",
+    year: 1894,
+    scan: 76,
+    page: 74,
+    whatSi: "krščen Mihael (3./4. 9.) — oče Janez Jakobič? [~] ½ zemljak, mati Marija Stubljar? [~] (ISTA ZVEZA kot P87 1892 »Jakobčič × Sušljar« — 2. VPIS; Kurrent variante); hiša 75 (forenzika izrez 5x: jasno 75); botra Nikol. Pegdirec? [~] + Barb. Brinec? [~] (ženska botra ISTA 2. leto); babica Marija Hrižan? [~]; moder: + 19/9. 94",
+    whatEn: "baptized Mihael (Sep 3/4) — father Janez Jakobič? [~] half smallholder, mother Marija Stubljar? [~] (THE SAME COUPLE as P87 1892 »Jakobčič × Sušljar« — 2nd entry; Kurrent variants); house 75 (5x crop forensics: clearly 75); godparents Nikol. Pegdirec? [~] + Barb. Brinec? [~] (the female godparent THE SAME 2nd year); midwife Marija Hrižan? [~]; blue: + Sep 19, 94",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "17",
+    bookSignature: "04105",
+    year: 1894,
+    scan: 76,
+    page: 74,
+    whatSi: "krščen Mihael (7./7. 9.) — oče Janez Kralj? [~] ¼ zemljak (ISTI oče ISTA frakcija kot P82 1887 r82), mati Doroteja Firlak? [~] (P82 »Ana Jakobič« → MATER MENJANA — 5. dokazana po h61/h72/h21 — ali druga branja [~] MERI); hiša 17 (2. vpis čez 7 let; forenzika izrez 5x: jasno 17); botra Jurij Straus? [~] + Marija Jakobčič? [~]; babica Marija Trotter [~]; podpis Jos. Rauq",
+    whatEn: "baptized Mihael (Sep 7/7) — father Janez Kralj? [~] quarter smallholder (THE SAME father with THE SAME fraction as P82 1887 r82), mother Doroteja Firlak? [~] (P82 »Ana Jakobič« → MOTHER CHANGED — the 5th documented after h61/h72/h21 — or other readings [~]); house 17 (2nd entry over 7 years; 5x crop forensics: clearly 17); godparents Jurij Straus? [~] + Marija Jakobčič? [~]; midwife Marija Trotter [~]; signature Jos. Rauq",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "71",
+    bookSignature: "04105",
+    year: 1894,
+    scan: 77,
+    page: 75,
+    whatSi: "krščena Barbara (7./7. 10.) — oče Jurij Straus? [~] ¼ zemljak, mati Barbara Jakobčič? [~] (ISTA ZVEZA čez 8 let — P77 1886 r83 »Jurij Strauš ½ × Barbara Jakopič«; status ½→¼); hiša 71 = TRI-VIRSKA (P77 krstna + P78 mrliška ×3) — STRAUŠ na DVEH sosednjih hišah (h71 Jurij + h72 Matija SIDRO 3 vpise; PUA @71 0.8571); botra Janez Kralj? [~] + Marijeta Mue? [~]; babica Marija Trotter [~]",
+    whatEn: "baptized Barbara (Oct 7/7) — father Jurij Straus? [~] quarter smallholder, mother Barbara Jakobčič? [~] (THE SAME COUPLE over 8 years — P77 1886 r83 »Jurij Strauš ½ × Barbara Jakopič«; status ½→¼); house 71 = THREE-SOURCE (P77 baptismal + P78 deaths ×3) — STRAUŠ on TWO adjacent houses (h71 Jurij + h72 Matija, the ANCHOR with 3 entries; PUA @71 0.8571); godparents Janez Kralj? [~] + Marijeta Mue? [~]; midwife Marija Trotter [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "23",
+    bookSignature: "04105",
+    year: 1894,
+    scan: 78,
+    page: 76,
+    whatSi: "krščen Janez (23./24. 11.) — oče Matija Brinec [~] ½ zemljak (ISTI oče kot P88 1893 — 2. VPIS), mati Marija Žehlič? [~] (P88 »Debič?« — varianti ali druga žena [~] MERI); hiša 23 (forenzika izrez 5x: jasno 23); botra Janez Jakljič? [~] + Doroteja Pegdirec? [~] (ISTA BOTRA PA 2. leto — P88 r28); babica Marija Trotter [~]; moder: poročen 28.11.1925",
+    whatEn: "baptized Janez (Nov 23/24) — father Matija Brinec [~] half smallholder (THE SAME father as P88 1893 — 2nd entry), mother Marija Žehlič? [~] (P88 »Debič?« — variants or another wife [~]); house 23 (5x crop forensics: clearly 23); godparents Janez Jakljič? [~] + Doroteja Pegdirec? [~] (THE SAME godparent pair 2nd year — P88 r28); midwife Marija Trotter [~]; blue: married Nov 28, 1925",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "60",
+    bookSignature: "04105",
+    year: 1894,
+    scan: 78,
+    page: 76,
+    whatSi: "krščena Marija (27./28. 12.) — oče Nikolaj Željko [~] ¼ zemljak, mati Marija Brodarič [~] (ISTA ZVEZA kot P88 1893 — h60 2. VPIS; status ½→¼ [~] menjava statusa); ŽELJKO VERIGA: h1 (1888+1892) + h60 (1893+1894) + h91 botra (1893) + h25 botra (1893); hiša 60 (forenzika izrez 5x: jasno 60); botra Marko Pegdirec [~] + Marija Klepec [~] (ISTA BOTRA PA 2. leto); babica Marija Trotter [~]; podpis Jos. Rauq; modri: + 6.3.1939 + grob Celovec",
+    whatEn: "baptized Marija (Dec 27/28) — father Nikolaj Željko [~] quarter smallholder, mother Marija Brodarič [~] (THE SAME COUPLE as P88 1893 — h60 2nd entry; status ½→¼ [~] a status change); THE ŽELJKO CHAIN: h1 (1888+1892) + h60 (1893+1894) + h91 godparent (1893) + h25 godparent (1893); house 60 (5x crop forensics: clearly 60); godparents Marko Pegdirec [~] + Marija Klepec [~] (THE SAME godparent pair 2nd year); midwife Marija Trotter [~]; signature Jos. Rauq; blue: + Mar 6, 1939 + grave Celovec",
+    status: "DOCUMENTED",
+  },
 ];

@@ -4306,3 +4306,139 @@ h21 Brinec→Šimec?; gospodinjstev h30/h24/h25); ④ luknja 41–60: 15 dokazan
 
 **v7 runtime join NESPREMENJEN** (sha256 4bb40370…, statična projekcija;
 disciplina I9).
+
+## §66 — P89: župnija Podzemelj — krstna knjiga 04105, polno leto 1894 (issue #18) — 2026-10-16
+
+**SAMPLE-TRANSCRIPTION-1894** (MERI, NE odloča; v7 join nespremenjen).
+P88 nextSteps ①: širitev vzorca po letih (P79 1886 → P82 1887 → P83 1888 →
+P84 1889 → P85 1890 → P86 1891 → P87 1892 → P88 1893 → **P89 1894**).
+
+**Okvir**: skeni 70–78 == tiskane strani 69–76; glava **»1894« na str. 69**
+po 1893 row 83; vpisi na skenih 70, 71, 72, 74–78. **NOVELA OKVIRA: sken 73
+je PODOVOJEN sken str. 71** (matricula re-scan — prvi v seriji 04105:
+sken 72 == sken 73 == str. 71, vrstice 23–34 v obeh) — **stran == sken − 1
+velja do skena 72, od skena 74 naprej stran == sken − 2**; **velike cifre
+»1895~« na str. 76 po row 90** — oznake se ponastavijo na 1, **novela P83
+potrjena 7. leto**; leto 1894 ima **90 zveznih vrstic** (najdaljše doslej).
+Skeni 70–81 preneseni v /tmp/p89 (70–73 kopirani iz /tmp/p88; ročna faza,
+NI v repu); hi-rez izrezi 2x–5x za vseh 14 Griblje vrstic + forenzika
+hišnih številk 5x (vseh 14 jasno: 12, 2, 53, 69, 36, 57, 73, 31, 13, 75,
+17, 71, 23, 60 — brez popravkov); r74 (»Grišče? 2«) in r58 (Gradac 4) NE
+Griblje — prezrti. Kurrent frakcij: ¼ = prekrižana 4, ½ = zankasta 2
+(r44 »zaprt« lik — ½ ali ⅛? [~]).
+
+**Vzorec 1894**: **14 vpisov / 14 hiš** (drugo leto brez ponovitev znotraj
+leta po P87 NARE): 12, 2, 53, 69, 36, 57, 73, 31, 13, 75, 17, 71, 23, 60.
+**NOVELA VZORCA: 0 NOVIH hiš** — vseh 14 že zasidranih (12 krstnih
+ponovitev P82–P88 + h71/h13/h36/h57 iz P77 1886 + h69/h13/h71 iz mrliške
+04894 P78) — **vzorec Griblje hiš se ZASIČA** (65 hiš naprej). Skupaj s
+P79–P88: **170 vpisov / 65 hiš čez tri knjige in DEVET let**. NOVELA:
+ulomki — **novela P85 potrjena 5. leto** (½ zemljak 8 + ¼ zemljak 6; brez
+bajtarjev/obrtnikov). PT klasifikacija **11/3** (53 + 57 + 60 v luknji
+41–60 — **vse tri PONOVITVE, brez novih**; luknja ostaja 15 dokazanih).
+0 nezakonskih; r50 brez babice (druga po P88 r50); brez dvojčkov letos.
+
+**Sidra**:
+- **h2** — Peter Hlebec [~] ¼ × Ana Jakobič [~]: **ŠTIRIKRATNA
+  KONTINUETETA — ISTI starši vseh 4×** (1887 P82 + 1889 P84 + 1891 P86 +
+  1894) — **najdaljša zasidrana zveza vzorca** (8 let; status ¼ konstanten);
+  moder pripis: mati umrla 2.9.1965? v Novem mestu (HMIC NM 1965, str. 469);
+- **h71** — Jurij Straus? [~] ¼ × Barbara Jakobčič? [~]: **ISTA ZVEZA čez
+  8 let** (P77 1886 r83 »Jurij Strauš ½ × Barbara Jakopič«); status ½→¼;
+  **STRAUŠ na DVEH sosednjih hišah** (h71 Jurij + h72 Matija — SIDRO 3
+  vpise) — **PUA @71 0.8571 (F2) dobi krstno oporo**;
+- **h36** — Janez Križan? [~] ¼ × Katarina Straucelj? [~]: 3. krstni vpis +
+  **4. VIR tri-virske hiše** (poroka 04455 1882 + krstna 1886 ×2 P77 +
+  mrliška 04894 1887 + krstna 1894) — **KRIŽAN 2. GENERACIJA** (Matija
+  Križan 1882/1886 → Janez 1894 — mogoč sin [~] MERI);
+- **h31** — Martin Fapič? [~] ½ × Marjeta Straus? [~]: **4. VPIS**
+  (1887+1890+1891+1894) — oče Papič/Fapič/Tepič (Kurrent P/F/T) **ISTI** +
+  mati Margaretha/Marjeta Straus **ISTA vseh 4×** + botra **Marko Klobučar
+  ISTI kot 1887** (P86 Martin [~]) — najbolj popolna trojica oče+mati+botra;
+- **h17** — Janez Kralj? [~] ¼: **ISTI oče ISTA frakcija** kot P82 1887
+  r82; **MATER MENJANA: Ana Jakobič → Doroteja Firlak? [~]** — **5.
+  dokazana menjava matere** (po h61 1891, h72 1891, h21 1893) ali druga
+  branja [~] MERI; 7-letni razmik; Kralj = 2. signal familije (P88 h30 mati);
+- **h57** — Peter Pegdirec? [~] × Marija Županc? [~]: 2. vpis čez 8 let
+  (P77 1886 r20 starša »Podolivec/Stupanič« = varianti ali drugi [~] MERI);
+  **ISTA BOTRA PA čez 8 let** (Jurij Brodarič? + Marija Strauš? = P77 r20);
+- **h60** — Nikolaj Željko [~] ¼ × Marija Brodarič [~]: **h60 2. VPIS ISTA
+  zveza + ISTA BOTRA PA 2. leto** (P88 r1: Marko Pegdirec + Marija Klepec);
+  status ½→¼ (vzorec h61 P87); **ŽELJKO VERIGA 4 hiše signalov** (h1
+  1888+1892 + h60 1893+1894 + h91 botra + h25 botra);
+- **h23** — Matija Brinec [~] ½: **ISTI oče kot P88 + ISTA BOTRA PA 2.
+  leto** (Janez Jaklič + Doroteja Pegdirec = P88 r28); mati Debič?/Žehlič?
+  varianti ali druga žena [~] MERI;
+- **h12** — Janez Dragoš [~] ½: **ISTI oče kot P87** (»Dragos«), 2. vpis;
+  mati Civlkovič?/Druppovič? varianti;
+- **h53** — Janez Pegdirec? [~] × Marija Hrižan? [~]: **ISTA zveza kot P86
+  1891** (»Pozdirec × Križan« — Kurrent P/K in K/H variante) + babica Ana
+  H/Križan **ISTA**; 2. vpis na luknji;
+- **h73** — Nikolaj Županič? [~] × Katarina Pozdirec/Pegdirec? [~]: **ISTA
+  zveza kot P87 1892**, 2. vpis; botra menjana od 1892;
+- **h75** — Janez Jakobič? [~] × Marija Stubljar? [~]: **ISTA zveza kot
+  P87** (Jakobčič × Sušljar — Kurrent variante); **ženska botra Barb.
+  Brinec ISTA 2. leto**;
+- **h13** — Matija Jakljevič? [~] ½: **ISTI oče ime+status** kot P77 1886
+  r77 (»Jakopič? ½«); tri-virska hiša; **babica PRAZNA**;
+- **h69** — Janez Brinec [~] × Ana Kure [~]: **NOV krstni vpis čez knjige**
+  (mrliška 04894 1886); botra Katarina Požek? — **Požek 7. leto**.
+
+**Pegdirec/Pozdirec familija 7/14 vpisov** (oče h57 + mati h73/h50 + botra
+h24/h47/h49/h64/h88) — najgostejša botrska familija 1894. Menjave statusa
+na zasidranih hišah: h71 ½→¼ (1886→1894), h60 ½→¼ (1893→1894). Duhovniki:
+**Jan Jelenu—? [~] 11×** (verjetno ISTI kot P88 sept. 1893 »Janez
+Jelovšek?« — varianti branja istega podpisa [~] MERI) + **Jos. Rauq? 3×**
+(Februar, September, December — izmenjava NI čista). Babice: **Trotter
+11×** (2. leto dominanta; Kurrent J/T »Jotter«; »Margan.« = Margareta) +
+Ana Hrižan 2× + prazna 1. Modri/svinčnikovi pripisi 20. st. kot genealoški
+vir: 2 poroke (r4 1949, r88 1925) + 3 smrti otrok 1894/1896 + 2 smrti
+staršev (r11 mati 1965, r47) + r90 grob Celovec — evidence-only.
+
+**Integracija**: `research/issue17/parish-baptism-1894.json` (dokaz;
+SAMPLE-TRANSCRIPTION-1894) + `scripts/p89_parish_baptism_1894.py` (I1–I10,
+--check PASS: knjiga 200 + inventar 326, citirani skeni 8/8 JPEG 200 —
+sken 73 NI citiran (podvojen), okvir + prelom 1895 + ponastavitev oznak +
+podvojeni sken novela, PT 11/3 brez novih, sidra h2–h60 (14), čez-letne
+kontinuitete prek dokazov P77/P82–P88 — h2 vsi štirje Hlebec, h31 vsi štirje
+Papič/Papič/Tepič + Klobučar, h53 Pozdirec × Križan + babica, h73/h75/h12
+pini, h17 Kralj + Jakobič→Firlak, h71 P77 Strauš × Jakopič, h36 Križan ×2,
+h57 Podolivec + botra Brodarič × Strauš, h13 Jakopič ½, h23 Brinec + botra,
+h60 Željko × Brodarič + botra, h1 Zeljth, h69 Podec 04894, runtime
+projekcija 14/164, brez »Hraus«) + `parish.ts` HOUSE_VITALS 150 → **164**
+(14 zasidranih 1894; vsi DOCUMENTED; komentar P89 z novelama) +
+**qa-p89-parish-baptism-1894** (90. kontrola; celoven neodvisen preracun:
+okvir z novelo podvojenega skena (stran == sken − 1 / − 2; sken 73 NI
+citiran)/PT 11/3/sidra h2–h60/NOVELA 0 novih hiš (vsaka mora imeti
+prejšnje zasidranje)/kontinuitete 19 pinov/vitals 164; dve obliki
+repo/produkcija) + qa-p86 h53 dovoli 1894 blok + qa-p87 h12/h73/h75 dovolijo
+1894 bloke + qa-p88 h23 dovoli 1894 blok + qa-p86/p87/p88 vitals pini 150 →
+164 + atlas.ts PT_GAP_KNOWN komentar (P89: brez novih) + p80 skripta I7 P89
+scoping (vitals 164) + p85 skripta I10 kumulativno (170; vesolje brez
+1891/1892/1893/1894 blokov) + p86/p87/p88 skripti I10 kumulativno (170;
+hiše 64; vsak z lastnim vesoljem pre87/pre88/pre89 — h53/h12/h73/h75/h23
+ostanejo zgodovinske nove svoje faze). Kartica NI dodana (vzorec P77–P89).
+Lekcije (10. primer): ① I6 prvi prebir — h57 IN h60 sta TUDI v luknji
+41–60 (P88 ptGap je imel 41/46/60) → PT 11/3 (ne 13/1); ② I8 p82_h31 ima
+2 vpisa (r55 Urh + r67 Papič) → any-based pin; ③ p86/p87/p88 I10
+repeat_houses potrebujejo per-fazno vesolje (pre87/pre88/pre89) — 1894
+bloki ne smejo spreminjati zgodovinskih klasifikacij; ④ terminal prikaz
+požira »[h« v for-destrukturiranju — char-code forenzika: `[hn, yr, sig]`
+pravilno; ⑤ sken 73 = podvojen sken str. 71 (matricula re-scan) — prvi
+v seriji: okvirna invarianta I3/I4 dobi eksplicitno preverjanje (73 NI
+citiran; stran == sken − 2 od 74). Veriga p60–p67 + p70–p89 --check PASS
+(27 skript, vse exit 0; p68 zamrznjen po C2; p69 izven verige); tsc 0 /
+lint 0; /api/qa dev **90/90** (qa-p89 True).
+
+**nextSteps**: ① P90 = leto 1895 (prelom str. 76 row 1; skeni 78+ — do 81 že
+v /tmp/p89; POZOR: stran == sken − 2 od skena 74 naprej); ② per-hišna
+kronologija tri-virskih hiš 13/36/71 — h36 zdaj 4 viri, h71 ISTA zveza
+1886+1894, h13 2. krstni vpis; mrliška 04894 1887–1894 poglobiti; ③
+mrliška knjiga 04894 leta 1887–1894: smrti prvih žen (dokaz menjav mater
+h17 Jakobič→Firlak?; gospodinjstev h23/h24/h25/h30/h60); ④ luknja 41–60:
+15 dokazanih; naslednja priložnost v 1895; ⑤ Željko veriga (h1 + h60 + h91
++ h25 botra) in Strauš veriga (h71 + h72): PUA/ATLAS presek naprej; h36
+Križan 2. generacija.
+
+**v7 runtime join NESPREMENJEN** (sha256 4bb40370…, statična projekcija;
+disciplina I9).
