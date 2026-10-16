@@ -1858,4 +1858,172 @@ export const HOUSE_VITALS: HouseVital[] = [
     whatEn: "baptized Marija (Dec 27/28) — father Nikolaj Željko [~] quarter smallholder, mother Marija Brodarič [~] (THE SAME COUPLE as P88 1893 — h60 2nd entry; status ½→¼ [~] a status change); THE ŽELJKO CHAIN: h1 (1888+1892) + h60 (1893+1894) + h91 godparent (1893) + h25 godparent (1893); house 60 (5x crop forensics: clearly 60); godparents Marko Pegdirec [~] + Marija Klepec [~] (THE SAME godparent pair 2nd year); midwife Marija Trotter [~]; signature Jos. Rauq; blue: + Mar 6, 1939 + grave Celovec",
     status: "DOCUMENTED",
   },
+  // ——— P90 razširitev: KRSTNA KNJIGA 04105 — polno leto 1895 (okvir skeni
+  // 78–84 == strani 76–82; stran == sken − 2 ZA CELO LETO — novela P89
+  // potrjena 2. leto; sken 73 podvojen, NI citiran; glava »1895.~« na str. 76
+  // po 1894 row 90; leto 1895 ima 73 zveznih vrstic; prelom 1896 na str. 83 =
+  // sken 85 po row 73 — oznake ponastavljene, novela P83 potrjena 8. leto) —
+  // 15 vpisov / 14 hiš (h24 DVOM 2×: r22 Brime + r48 Toško?/Simec — prva
+  // ponovitev hiše znotraj leta po P87 NARE; 3 NOVE hiše 20/37/87 po P89
+  // »0 novih«; kumulativno 185 vpisov / 68 hiš čez tri knjige in DESET let;
+  // NOVELA BABICA: stolpec babice na VSEH 15 vrsticah PRAZEN — 1894: Trotter
+  // 11× — Trotter žene pa 7× kot BOTRA, vloga prestopila; NOVELA BOTRA: 4×
+  // PRAZNA (r53/r54/r55/r66, september–december); TRIJE duhovniki: Jelenuš 9×
+  // + Rauq 4× (apr–sep) + NOV Franc Klunng 2× (od septembra); MATI PODCELICA
+  // (X × Y) prvič eksplicitno dokumentirana — semantika ODPRTA; SIDRA: h58
+  // 4. VPIS + MATI MENJANA (Dragoš → Kambic?), h32 + h72 5. VPIS — NAJDALJŠI
+  // zvezi vzorca (1889–1895), h69 oče ISTI 5×, h30 3. DRUŽINA (2× menjava —
+  // najbolj nestabilna hiša), h29 MENJAVA (»hiša kuge« → Kuhar? × Klobučar),
+  // h91 oče MENJAN (Novak → Muc), h46/h24/h12/h65 kontinuitete; h87 podcelica
+  // Željko veriga; PEGDIREC prvič STARŠI 2× (h87 + h37)) ———
+  {
+    houseNo: "58",
+    bookSignature: "04105",
+    year: 1895,
+    scan: 79,
+    page: 77,
+    whatSi: "krščena Katarina (28./28. 2.) — oče Janez Požek [~] ½ zemljak (ISTI oče 3. leto zapored: 1890 r22 + 1892 r60 + 1895; 1889 r3 »Franz Požek ¼« = ista oseba [~], status ¼→½), mati Katarina Kambic? [~] (MATI MENJANA: 1889–1892 Ana Dragoš/Dragos → 1895 Kambic? — smrt prve žene ali ločitev, mrliška 04894 bi dokazala; podcelica: Nikol. Požek × Marija Pegdirec — semantika ODPRTA [~]); hiša 58 (4. VPIS); botra Marjka Trotter [~] (Kurrent J/T »Jotter«); babica stolpec PRAZEN; podpis Jan Jelez/Jelenuš?",
+    whatEn: "baptized Katarina (Feb 28/28) — father Janez Požek [~] half smallholder (THE SAME father 3rd year running: 1890 r22 + 1892 r60 + 1895; 1889 r3 »Franz Požek ¼« = the same person [~], status ¼→½), mother Katarina Kambic? [~] (MOTHER CHANGED: 1889–1892 Ana Dragoš/Dragos → 1895 Kambic? — death of the first wife or divorce, the death register 04894 would prove it; sub-cell: Nikol. Požek × Marija Pegdirec — semantics OPEN [~]); house 58 (4th entry); godparent Marjka Trotter [~] (Kurrent J/T »Jotter«); midwife column EMPTY; signature Jan Jelez/Jelenuš?",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "46",
+    bookSignature: "04105",
+    year: 1895,
+    scan: 80,
+    page: 78,
+    whatSi: "krščen Anton (12./13. 3.) — oče Anton Brodarič [~] ¼ zemljak [~] (1893 ½ — status menjava [~] ali napačno), mati Marija Klobučan? [~] (podcelica: Janez Jakobič × Neža Strauš? [~]); hiša 46 = PT LUKNJA (2. VPIS ISTA ZVEZA — P88 1893 r43 Brodarič × Klobučar; 15. dokaz v luknji 41–60, brez novih števil); botra Marjka Trotter [~]; babica PRAZEN; siv/moder pripis: »† 1?. 3. 95« (smrt otroka 1895, datum nejasen [~]); podpis Jan Jelez/Jelenuš?",
+    whatEn: "baptized Anton (Mar 12/13) — father Anton Brodarič [~] quarter smallholder [~] (1893 ½ — a status change [~] or an error), mother Marija Klobučan? [~] (sub-cell: Janez Jakobič × Neža Strauš? [~]); house 46 = the PT GAP (2nd entry THE SAME COUPLE — P88 1893 r43 Brodarič × Klobučar; the 15th proof in the 41–60 gap, no new numbers); godparent Marjka Trotter [~]; midwife EMPTY; grey/blue note: »† Mar 1?, 95« (child death 1895, date unclear [~]); signature Jan Jelez/Jelenuš?",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "87",
+    bookSignature: "04105",
+    year: 1895,
+    scan: 80,
+    page: 78,
+    whatSi: "krščena Ana (22./22. 3.) — oče Marko Pegdirec [~] bajtar, mati Marjeta Pegdirec [~] (podcelica: Nikol. Hrižan × Marija Željko — povezava na h63, oče Hrižan 1887–1892 4×, in Željko verigo [~]); hiša 87 NOVA HIŠA v vzorcu (brez priora P77–P89); PEGDIREC prvič STARŠI (2×: h87 Marko + Marjeta in h37 r49) — familija, ki je do zdaj prevladovala kot botra/matere; botra Marija Hrižan [~]; babica PRAZEN; podpis Jan Jelez/Jelenuš?",
+    whatEn: "baptized Ana (Mar 22/22) — father Marko Pegdirec [~] cottager, mother Marjeta Pegdirec [~] (sub-cell: Nikol. Hrižan × Marija Željko — a link to h63, father Hrižan 1887–1892 4×, and the Željko chain [~]); house 87 NEW HOUSE in the sample (no prior P77–P89); PEGDIREC as PARENTS for the first time (2×: h87 Marko + Marjeta and h37 r49) — the family that until now dominated as godparents/mothers; godparent Marija Hrižan [~]; midwife EMPTY; signature Jan Jelez/Jelenuš?",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "24",
+    bookSignature: "04105",
+    year: 1895,
+    scan: 80,
+    page: 78,
+    whatSi: "krščena Ana (10./10. 4.) — oče Matija Brime [~] ½ zemljak, mati Barbara Jakobič [~] (podcelica: Janez Brime × Marja Jastobec? [~]); hiša 24 (3. VPIS ISTA ZVEZA Brinec/Brime × Jakobec/Jakobič: 1887 + 1893 + 1895; 1892 Jurajevič = menjava gospodinjstva, 1890 ANOMALIJA »Marija Brinec«); botra Marjeta Trotter [~]; babica PRAZEN; moder pripis 20. st.: »poročena 14. 5. 1912« [~]; podpis Jos. Rauq",
+    whatEn: "baptized Ana (Apr 10/10) — father Matija Brime [~] half smallholder, mother Barbara Jakobič [~] (sub-cell: Janez Brime × Marja Jastobec? [~]); house 24 (3rd entry THE SAME COUPLE Brinec/Brime × Jakobec/Jakobič: 1887 + 1893 + 1895; 1892 Jurajevič = household change, 1890 ANOMALY »Marija Brinec«); godparent Marjeta Trotter [~]; midwife EMPTY; blue 20th-century note: »married May 14, 1912« [~]; signature Jos. Rauq",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "12",
+    bookSignature: "04105",
+    year: 1895,
+    scan: 80,
+    page: 78,
+    whatSi: "krščen Janez (29./29. 4.) — oče Janez Dragoš [~] ½ zemljak (Kurrent: Dragov/Dragoš; ISTI oče 3×), mati Barbara Cvitkovič? [~] (P87 »Civlkovič?« + P89 »Druppovič?« — trije bralci iste/nenavadne matere [~] MERI; podcelica: Martin?/Matija? Straus × Marija Jakobič — Straus mreža h71/h72); hiša 12 (3. VPIS); botra Marjeta Trotter [~]; babica PRAZEN; podpis Jos. Rauq",
+    whatEn: "baptized Janez (Apr 29/29) — father Janez Dragoš [~] half smallholder (Kurrent: Dragov/Dragoš; THE SAME father 3×), mother Barbara Cvitkovič? [~] (P87 »Civlkovič?« + P89 »Druppovič?« — three readings of the same/remarkable mother [~]); sub-cell: Martin?/Matija? Straus × Marija Jakobič — the Straus network h71/h72); house 12 (3rd entry); godparent Marjeta Trotter [~]; midwife EMPTY; signature Jos. Rauq",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "30",
+    bookSignature: "04105",
+    year: 1895,
+    scan: 80,
+    page: 78,
+    whatSi: "krščen Nikolaj (4./4. 5.) — oče Nikolaj Šegina? [~] ½ zemljak, mati Marjeta Mihelt [~] (podcelica: Matija? Mihelt × Katarina Hrižan — Mihelt mreža h65/h20 + Hrižan h63 [~]); hiša 30 (3. DRUŽINA v 6 letih — 2× MENJAVA GOSPODINJSTVA: Milek 1890–91 → Jakljevič 1893 → Šegina 1895 — najbolj nestabilna hiša vzorca); botra Ana Krajan? [~]; babica PRAZEN; pripis: »† 9. 95« [~] (smrt otroka); podpis Jan Jelez/Jelenuš?",
+    whatEn: "baptized Nikolaj (May 4/4) — father Nikolaj Šegina? [~] half smallholder, mother Marjeta Mihelt [~] (sub-cell: Matija? Mihelt × Katarina Hrižan — the Mihelt network h65/h20 + Hrižan h63 [~]); house 30 (the 3rd FAMILY in 6 years — 2× HOUSEHOLD CHANGE: Milek 1890–91 → Jakljevič 1893 → Šegina 1895 — the most unstable house in the sample); godparent Ana Krajan? [~]; midwife EMPTY; note: »† Sep 95« [~] (child death); signature Jan Jelez/Jelenuš?",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "20",
+    bookSignature: "04105",
+    year: 1895,
+    scan: 82,
+    page: 80,
+    whatSi: "krščen Matija (6./6. 8.) — oče Peter Pezdirec? [~] ¼ zemljak, mati Doroteja Šlepec [~] (podcelica: Matija Mihelt × Ana? Požek — zelo blizu starševskega para h65 r43: Mihelt oče z dvema ženama? ali napaka [~] MERI); hiša 20 NOVA HIŠA v vzorcu (brez priora P77–P89); ANOMALIJA: isti oče »Peter Pezdirec ¼« tudi na h37 (r49, 3,5 tedna kasneje, druga žena!) — dva istoimenska moža (oče+sin?) ali napaka [~]; botra Marjeta Trotter [~]; babica PRAZEN; pripis: »† 1896« [~] (datum nejasen); podpis Jan Jelez/Jelenuš?",
+    whatEn: "baptized Matija (Aug 6/6) — father Peter Pezdirec? [~] quarter smallholder, mother Doroteja Šlepec [~] (sub-cell: Matija Mihelt × Ana? Požek — very close to the h65 r43 parent pair: a Mihelt father with two wives? or an error [~]); house 20 NEW HOUSE in the sample (no prior P77–P89); ANOMALY: the same father »Peter Pezdirec ¼« also at h37 (r49, 3.5 weeks later, another wife!) — two namesake men (father+son?) or an error [~]; godparent Marjeta Trotter [~]; midwife EMPTY; note: »† 1896« [~] (date unclear); signature Jan Jelez/Jelenuš?",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "65",
+    bookSignature: "04105",
+    year: 1895,
+    scan: 82,
+    page: 80,
+    whatSi: "krščena Neža (15./15. 8.) — oče Matija Mihelt [~] ½ zemljak (1887–1893 branec »Milek« — Kurrent varianta istega priimka [~]), mati Katarina Požek [~] (ISTA 2×: 1887 + 1895; podcelica: Peter Pezdirec? × Barbara ? [~]); hiša 65 (4. VPIS: 1887 + 1889 + 1893 + 1895 — mati Katarina Požek 2× enaka); botra Barbara Adlešič? [~]; babica PRAZEN; podpis Jos. Rauq",
+    whatEn: "baptized Neža (Aug 15/15) — father Matija Mihelt [~] half smallholder (1887–1893 read as »Milek« — a Kurrent variant of the same surname [~]), mother Katarina Požek [~] (THE SAME 2×: 1887 + 1895; sub-cell: Peter Pezdirec? × Barbara ? [~]); house 65 (4th entry: 1887 + 1889 + 1893 + 1895 — mother Katarina Požek THE SAME twice); godparent Barbara Adlešič? [~]; midwife EMPTY; signature Jos. Rauq",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "32",
+    bookSignature: "04105",
+    year: 1895,
+    scan: 82,
+    page: 80,
+    whatSi: "krščena Marjeta (23./25. 8.) — oče Matija Urh [~] ½ zemljak, mati Marjeta Pegdirec [~] (podcelica: Jurij Straus × Barbara Straus — Straus mreža, h71 1894 oče Jurij Straus! [~] MERI); hiša 32 (5. VPIS — NAJDALJŠA ZVEZA VZORCA: Urh × Pegdirec/Pendirec/Margaretha ISTA 5× 1889–1895, statusi ¼/½/¼/½/½ [~]); botra Marjeta Trotter [~]; babica PRAZEN; moder pripis 20. st. nad vrstico: »umrla dne 3. 8. 1977« [~]; podpis Jan Jelez/Jelenuš?",
+    whatEn: "baptized Marjeta (Aug 23/25) — father Matija Urh [~] half smallholder, mother Marjeta Pegdirec [~] (sub-cell: Jurij Straus × Barbara Straus — the Straus network; h71 1894 father Jurij Straus! [~]); house 32 (5th entry — THE LONGEST COUPLE IN THE SAMPLE: Urh × Pegdirec/Pendirec/Margaretha THE SAME 5× 1889–1895, statuses ¼/½/¼/½/½ [~]); godparent Marjeta Trotter [~]; midwife EMPTY; blue 20th-century note above the line: »died Aug 3, 1977« [~]; signature Jan Jelez/Jelenuš?",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "24",
+    bookSignature: "04105",
+    year: 1895,
+    scan: 82,
+    page: 80,
+    whatSi: "krščena Neža (28./28. 8.) — oče Janez Toško? [~] ½ zemljak, mati Ana Simec [~] (podcelica: Janez Kustec? × Ana Simec [~]); hiša 24 DVOM — forenzika izrezov 8–10× vztraja »24« (kot r22!), a DVE različni zvezi na isti hiši v 4 mesecih je anormalno; alternative: 21 (Požek hiša, P82) ali 27 [~] MERI, NE odloča — prva ponovitev hiše znotraj leta v vzorcu (P87 NARE); botra Marjeta Trotter [~]; babica PRAZEN; podpis Jan Jelez/Jelenuš?",
+    whatEn: "baptized Neža (Aug 28/28) — father Janez Toško? [~] half smallholder, mother Ana Simec [~] (sub-cell: Janez Kustec? × Ana Simec [~]); house 24 DOUBTFUL — 8–10× crop forensics insist on »24« (as r22!), yet TWO different couples at the same house within 4 months is abnormal; alternatives: 21 (the Požek house, P82) or 27 [~] MEASURE, do not decide — the first within-year house repeat in the sample (P87 NARE); godparent Marjeta Trotter [~]; midwife EMPTY; signature Jan Jelez/Jelenuš?",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "37",
+    bookSignature: "04105",
+    year: 1895,
+    scan: 82,
+    page: 80,
+    whatSi: "krščena Ana (29./30. 8.) — oče Peter Pezdirec [~] ¼ zemljak (ANOMALIJA: isto ime+status kot h20 oče r40, druga žena! [~] MERI), mati Marija Lužanič? [~] (podcelica: Nikolaj Šelfo?/Željko? × Marija Šimec — Šelfo/Željko varianta? Simec mreža [~]); hiša 37 NOVA HIŠA v vzorcu (brez priora P77–P89); botra Marija Muh? [~]; babica PRAZEN; moder pripis matičarja 20. st.; podpis Jan Jelez/Jelenuš?",
+    whatEn: "baptized Ana (Aug 29/30) — father Peter Pezdirec [~] quarter smallholder (ANOMALY: the same name+status as the h20 father r40, another wife! [~]), mother Marija Lužanič? [~] (sub-cell: Nikolaj Šelfo?/Željko? × Marija Šimec — a Šelfo/Željko variant? the Simec network [~]); house 37 NEW HOUSE in the sample (no prior P77–P89); godparent Marija Muh? [~]; midwife EMPTY; blue 20th-century registrar note; signature Jan Jelez/Jelenuš?",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "69",
+    bookSignature: "04105",
+    year: 1895,
+    scan: 83,
+    page: 81,
+    whatSi: "krščen Nikolaj (8./9. 9.) — oče Janez Brimec/Brinec [~] ½ zemljak (ISTI oče vseh 5×: 1888+1889+1890+1894+1895), mati Ana Mure? [~] (5. različno branje matere: Strauš → Strauš → Straus → Kure → Mure? — verjetno variante 1–2 pravih imen [~] MERI; podcelica: Janez Muc novac × Katarina Požek — Muc mreža r55/h91!); hiša 69 (5. VPIS); BOTRA PRAZNA (prva od 4 praznih botr septembra–decembra); babica PRAZEN; podpis Jan Jelez/Jelenuš?",
+    whatEn: "baptized Nikolaj (Sep 8/9) — father Janez Brimec/Brinec [~] half smallholder (THE SAME father all 5×: 1888+1889+1890+1894+1895), mother Ana Mure? [~] (the 5th different reading of the mother: Strauš → Strauš → Straus → Kure → Mure? — probably variants of 1–2 real names [~]); sub-cell: Janez Muc novac × Katarina Požek — the Muc network r55/h91!); house 69 (5th entry); GODPARENT EMPTY (the first of 4 empty godparents Sep–Dec); midwife EMPTY; signature Jan Jelez/Jelenuš?",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "72",
+    bookSignature: "04105",
+    year: 1895,
+    scan: 83,
+    page: 81,
+    whatSi: "krščen Mihael (13./13. 9.) — oče Matija Straus [~] ½ zemljak, mati Marija Jakobič [~] (ISTA ZVEZA — 5. VPIS: 1889+1891+1893+1895; 1888 »Barbara Husič?« = varianta [~]; podcelica: Matija Straus × Barbara Jakobič — okolščno ujema očetovo ime: ali podcelica = starši očeta? semantika ODPRTA [~] MERI); hiša 72 — Straus veriga h71/h72; BOTRA PRAZNA; babica PRAZEN; moder pripis matičarja 20. st.; podpis Jos. Rauq",
+    whatEn: "baptized Mihael (Sep 13/13) — father Matija Straus [~] half smallholder, mother Marija Jakobič [~] (THE SAME COUPLE — 5th entry: 1889+1891+1893+1895; 1888 »Barbara Husič?« = a variant [~]); sub-cell: Matija Straus × Barbara Jakobič — curiously matches the father's name: is the sub-cell the father's parents? semantics OPEN [~]); house 72 — the Straus chain h71/h72; GODPARENT EMPTY; midwife EMPTY; blue 20th-century registrar note; signature Jos. Rauq",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "91",
+    bookSignature: "04105",
+    year: 1895,
+    scan: 83,
+    page: 81,
+    whatSi: "krščen Janez (25./26. 9.) — oče Janez Muc [~] (stan: »mlinar in kovač?« [~]; OČE MENJAN: Novak 1893 → Muc 1895 — ponovna poroka ali napaka branja [~] MERI), mati Ana Kure [~] (ISTA kot 1893; podcelica: Jožef Željko × Katarina Kure — ŽELJKO VERIGA: h1 1892 Željko × Kure + h60 1894 Nikolaj Željko + podcelica h87 [~]); hiša 91 (2. VPIS); BOTRA PRAZNA; babica PRAZEN; podpis Franc Klunng? (NOV duhovnik od septembra — Klunnq/Klunng variante)",
+    whatEn: "baptized Janez (Sep 25/26) — father Janez Muc [~] (occupation: »miller and smith?« [~]; FATHER CHANGED: Novak 1893 → Muc 1895 — remarriage or a reading error [~]), mother Ana Kure [~] (THE SAME as 1893; sub-cell: Jožef Željko × Katarina Kure — THE ŽELJKO CHAIN: h1 1892 Željko × Kure + h60 1894 Nikolaj Željko + the h87 sub-cell [~]); house 91 (2nd entry); GODPARENT EMPTY; midwife EMPTY; signature Franc Klunng? (a NEW priest from September — Klunnq/Klunng variants)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "29",
+    bookSignature: "04105",
+    year: 1895,
+    scan: 84,
+    page: 82,
+    whatSi: "krščena Marija (1./1. 12.) — oče Janez Kuhar?/Kuklar? [~] ½ zemljak (Kurrent K/H), mati Katarina Klobučar [~] (podcelica: Janez Požek × Barbara Kure — ISTI »Janez Požek« kot h58 oče r15! Požek × Kure mreža (h21 1887: Janez Požek × Marija Brinec) [~] MERI); hiša 29 (MENJAVA GOSPODINJSTVA — hiša epidemije 1886 (Mileh ×3, P78) + »hiša kuge« Milek × Križan 1888+1892 → povsem nova zveza Kuhar? × Klobučar; epidemija popolnoma prekinjena); BOTRA PRAZNA; babica PRAZEN; podpis Franc Klunng?",
+    whatEn: "baptized Marija (Dec 1/1) — father Janez Kuhar?/Kuklar? [~] half smallholder (Kurrent K/H), mother Katarina Klobučar [~] (sub-cell: Janez Požek × Barbara Kure — THE SAME »Janez Požek« as the h58 father r15! the Požek × Kure network (h21 1887: Janez Požek × Marija Brinec) [~]); house 29 (HOUSEHOLD CHANGE — the 1886 epidemic house (Mileh ×3, P78) + the »plague house« Milek × Križan 1888+1892 → a brand-new couple Kuhar? × Klobučar; the epidemic fully broken); GODPARENT EMPTY; midwife EMPTY; signature Franc Klunng?",
+    status: "DOCUMENTED",
+  },
 ];

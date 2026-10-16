@@ -4305,3 +4305,38 @@ Stage Summary:
 - P89 REPO STANJE POPOLNO: local == GitLab (vir resnice) == GitHub == 49b5af8; dev QA 90/90 (qa-p89 True); produkcija zdrava na P88 (89/89) — ZASTARELA, bo sledila ob resetu Vercel rate limita
 - NASLEDNJA SEJA (obvezno prvi korak): preveri https://griblje-museum.vercel.app/api/qa → 90/90 + qa-p89 True; če ŠE VEDNO rate limited → nov prazen nudge commit + push oba; produkcija mora dojeti 49b5af8 (P89 + vitals 164)
 - LASTNIŠKA opcija (če se ne sprosti samodejno): Vercel dashboard → Deployments → ročni redeploy zadnjega commita (ali preveriti limite: Hobby 100 deploy/dan)
+---
+Task ID: 59-c (sinhronizacija potrjena)
+Agent: Z.ai Code (glavna seja)
+Task: P89 sinhronizacija — preverjanje GitLab + produkcija po rate limitu
+
+Work Log:
+- git ls-remote origin main: try 1 = 403 (tranzitorno, kot ob P87), try 2 = 26831a4 PASS → GitLab == GitHub == lokalni HEAD == 26831a4 (P89 popolnoma sinhroniziran na vseh treh)
+- Produkcija https://griblje-museum.vercel.app/api/qa → HTTP 200, 89/89 (še P88 dda4a35) — ZASTARELA
+- GitHub API commit statusi: f2c2da8 (18:24:42Z) + 49b5af8 (18:49:03Z) + 26831a4 (18:51:42Z) vsi "Vercel failure | Deployment rate limited — retry in 24 hours" → okno poteče ~2026-10-17 18:24 UTC; nudge prej je brezploden
+- Nadaljevanje raziskave (P90 = krstna 1895) med čakanjem na reset; produkcija mora dojeti 26831a4 po resetu
+
+Stage Summary:
+- Repo stanje POPOLNO: lokalni == GitLab (vir resnice) == GitHub == 26831a4; produkcija zdrava na P88 (89/89), bo sledila ob resetu rate limita (~18:24 UTC 17. 10.)
+- NASLEDNJI obvezen korak produkcije: po 2026-10-17 18:24 UTC nudge prazen commit + push oba remote-a → preveriti https://griblje-museum.vercel.app/api/qa = 91/91 + qa-p89 True (ali več, če P90 vmes gre gor)
+- Raziskava se nadaljuje: P90 = krstna knjiga 04105, polno leto 1895 (prelom str. 76 row 1; skeni 78+; stran == sken − 2 od skena 74 naprej)
+---
+Task ID: 60
+Agent: Z.ai Code (glavna seja)
+Task: P90 — župnija Podzemelj: krstna knjiga 04105, polno leto 1895 (issue #18); nadaljevanje po P89 sinhronizaciji (Task 59-c)
+
+Work Log:
+- Seja nadaljevala pri HEAD 26831a4 (P89); GitHub == lokalni == 26831a4; GitLab ls-remote try 1 = 403 (tranzitorno, kot doslej); produkcija še 89/89 (P88) — Vercel rate limit do ~2026-10-17 18:24 UTC
+- P90 osnutek iz prejšnje medfaze (evidence JSON 15 vpisov + skeni 78–88 v /tmp/p90) pregledan in DOKONČAN: ① PT klasifikacija osnutka (9/5) neustreza verigi chain-full-pt-ps → dejansko 12/2 (46+58 v luknji; 20/30/37/87/91 vse v naboru) — dokaz popravljen (ptInNabor/ptGap/ptGapNew/ptGapNote); ② števec duhovnikov osnutka (8+3+2=13) neustreza 15 vpisom → neodvisen preracun 9+4+2 (Rauq april–september, ne februar) — dokaz + findings popravljeni
+- parish.ts: HOUSE_VITALS 164 → 179 (+15 blokov 1895, vsi DOCUMENTED, komentar P90 z novelama: stran == sken − 2 2. leto; babica 0×; 4× prazna botra; TRIJE duhovniki; MATI PODCELICA prvič dokumentirana)
+- scripts/p90_parish_baptism_1895.py (nova, I1–I10): inventar 326 + citirani skeni [79,80,82,83,84] JPEG probe (78/81 brez Gribljev; 73 podvojen ni citiran) + okvir/prelom 1896 {scan 85, page 83} + rowsTotal 73 + NOVELA babica 15 praznih + 4× prazna botra (r53/r54/r55/r66) + PT 12/2 + sidra h58 (4. VPIS + MATI MENJANA)/h46/h87/h24×2 (DVOM)/h12/h30 (3. DRUŽINA)/h20/h65/h32 (5. VPIS NAJDALJŠA ZVEZA)/h37/h69 (5. VPIS)/h72 (5. VPIS)/h91 (oče MENJAN)/h29 (MENJAVA) + I8 čez-letne kontinuitete prek P77–P89 (26 podpogojev; p85_h30 2 vpisa → all-based pin) + I9 runtime 15/179 + I10 kumulativ 185 vpisov / 68 hiš (67 vitals + EV-only »65 [~]«) — --check PASS (vse invariantine)
+- qa-parish.ts: qa-p90-parish-baptism-1895 (91. kontrola; okvir z novelo/NOVELA babica/PT 12/2/sidra h58–h29 + DVOM r48/NOVE hiše 20+37+87 brez priora/kontinuitete 26 pinov/vitals 179) + qa-p85 h30 allow +1895 + qa-p87 h12 allow +1895 + qa-p88 h46/h91 allow +1895 + qa-p86/p87/p88/p89 vitals pini 164 → 179
+- Upstream pini: p80 (vitals 179) + p85/p86/p87/p88/p89 (EXPECTED_VITALS_TOTAL 179; kumulativ 185; hiše 67; vesolja pre86/pre87/pre88/pre89 izključujejo 1895)
+- Veriga p60–p67 + p70–p90 --check PASS (28 skript, vse exit 0; p68 zamrznjen po C2; p69 izven verige); tsc 0 / lint 0; /api/qa dev 91/91 (qa-p90 True)
+- Dokumentacija: MUSEUM-AUDIT §67 (vključno z lekcijami 11. primer: PT osnutek 9/5 → 12/2 veriga ujela; duhovniki 8+3+2 → 9+4+2; p85 h30 all-based) + README (P90 bullet + stanje po P90 + QA 91/91 + p60–p70 28 skript + qa-p90 na seznamu + P77–P90 brez kartic) + atlas.ts PT_GAP_KNOWN komentar (P90: brez novih)
+
+Stage Summary:
+- P90 = krstna 1895: 15 vpisov / 14 hiš (h24 DVOM 2× — prva ponovitev znotraj leta po P87 NARE); 3 NOVE hiše (20, 37, 87); kumulativ 185 vpisov / 68 hiš čez tri knjige in DESET LET; NOVELI: babica 0× (Trotter žene 7× kot botra) + 4× prazna botra; TRIJE duhovniki (Jelenuš 9× + Rauq 4× + NOV Klunng 2× od sept.); MATI PODCELICA prvič eksplicitno dokumentirana; sidra h58 MATI MENJANA (Dragoš → Kambic?), h32+h72 5. VPIS NAJDALJŠI zvezi, h69 oče ISTI 5×, h30 3. DRUŽINA, h29 MENJAVA, h91 oče MENJAN
+- QA dev 91/91; tsc/lint 0; v7 NESPREMENJEN (sha256 4bb40370…); kartica NI dodana (vzorec P77–P90)
+- Commit + push: GitLab (vir resnice, retry ob 403) → GitHub (zrcalo) → produkcija sledi prek Vercel GitHub App (rate limit do ~2026-10-17 18:24 UTC; produkcija mora dojeti P90 commit — QA 91/91)
+- NASLEDNJA FAZA: P91 = krstna 1896 (prelom str. 83 row 1; skeni 85+; 85–88 že v /tmp/p90; stran == sken − 2); alternativa: mrliška 04894 1887–1896 (smrti prvih žen — dokaz menjav h58/h91)
