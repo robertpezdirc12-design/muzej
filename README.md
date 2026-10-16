@@ -166,7 +166,7 @@ Zgodovinska katastrska slika vasi (franciscejski kataster, k.o. Griblje št. 83 
   (P47: 9.8 m); **A05 Fučkovci 26/95, residual 10.1 m**; A04/cg 0 on-symbol
   (sodobne stavbe na paši WEIDENDORF so novejše); kontinuiteta A02: 37 parov
   tloris↔stavba (36 strong), **136/156 tlorisov 1825 brez naslednika**
-  (razpršena zidanica — vinice/hambi na zahodnih pobočjih) — nadgradja P16
+  (razpršena zidanica — vinice/hambi na zahodnih pobočjih) — nadgradnja P16
   present.json; **Blatt X (str. 138–139): direktna referenca na register 1825
   REFRIRANA** (0/37 identičnih površin; površine vrstic mediana 6.3 J vs
   dvorišča 0.28 J) — kvantitativna poprava P42 interpretacije; 12 dokaznih
@@ -208,7 +208,7 @@ Zgodovinska katastrska slika vasi (franciscejski kataster, k.o. Griblje št. 83 
   (SHEET_TRUTH — zgodovinski neodvisni dokaz; runtime georef od P50 neatline);
   GitLab linija P38–P51 ostaja avtoritativna za georef in spravo. QA 52 → **57**
   testov (5 GitHub-unique testov adaptiranih na spojeno stanje).
-- **globa povezava** `?atlas=hiša-75` (hiša št. 73 — demonstracijska veriga do MVG-010).
+- **globinska povezava** `?atlas=hiša-75` (hiša št. 73 — demonstracijska veriga do MVG-010).
 
 API (statični, brez runtime AI):
 
