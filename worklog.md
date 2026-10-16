@@ -4376,3 +4376,17 @@ Stage Summary:
 - P91 = krstna 1896: 14 vpisov / 14 hiš NARE (3. leto); 3 NOVE hiše (9, 14, 45); NOVA LUKNJA ŠTEVILKA 45 (16. — prva nova od P88); kumulativ 199 vpisov / 71 hiš čez tri knjige in ENAJST LET; sidra h1 Željko × Kure 3. VPIS (botra = starši priimki; Željko veriga 8 signalov), h63 oče ISTI 5×, h30 ISTA zveza 2. leto, h41 4. VPIS, h15/h36/h53 kontinuitete, h31 MENJAVA, h25 KLEPEC NAZAJ, h26 selitev 75→26 [~], h14 neimenovan otrok
 - QA dev 92/92; tsc/lint 0; v7 NESPREMENJEN (sha256 4bb40370…)
 - NASLEDNJA FAZA: P92 = krstna 1897 (prelom str. 91 row 1; skeni 93+; stran == sken − 2) ali mrliška 04894 1887–1896 (smrti prvih žen — dokaz menjav h58/h91/h31/h46)
+---
+Task ID: 61-b (sinhronizacija potrjena)
+Agent: Z.ai Code (glavna seja)
+Task: P91 push — GitLab + GitHub + trojna sinhronizacija + produkcija
+
+Work Log:
+- Commit a7101c7 (P91: krstna 1896); GitLab push 403 na 1. poskus, OK na 2. (retry po 12 s — tranzitorni vzorec kot doslej); GitHub push OK
+- TROJNA SINHRONIZACIJA: lokalni == GitLab (vir resnice) == GitHub == a7101c7 (P90 902a0b9 + P91 a7101c7 čakata na deploy)
+- Produkcija /: HTTP 200; /api/qa = 89/89 (še P88 dda4a35) — Vercel deploy rate limit do ~2026-10-17 18:24 UTC; po resetu produkcija mora dojeti a7101c7 → QA 92/92 + qa-p90 True + qa-p91 True
+
+Stage Summary:
+- Repo stanje POPOLNO: lokalni == GitLab == GitHub == a7101c7 (P91 + vitals 193 + QA 92/92 dev; 199 vpisov / 71 hiš / 16 dokazanih luknj)
+- Produkcija ZASTARELA (89/89, P88) — sledi ob resetu (~18:24 UTC 17. 10.); NASLEDNJA SEJA (obvezni prvi korak): preveriti https://griblje-museum.vercel.app/api/qa = 92/92 (qa-p90 + qa-p91 True); če zastarela → nudge prazen commit + push oba
+- Raziskava: P79–P91 = 1886–1896 (ENAJST polnih let); NASLEDNJA FAZA: P92 = krstna 1897 (prelom str. 91 row 1; skeni 93+; 93 že v /tmp/p91) ali mrliška 04894 1887–1896 (smrti prvih žen — dokaz menjav h58/h91/h31/h46)
