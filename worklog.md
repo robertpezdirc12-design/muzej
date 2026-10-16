@@ -4288,3 +4288,20 @@ Work Log:
 Stage Summary:
 - P89 ZAKLJUČEN: vzorec razširjen na polno leto 1894 (14 vpisov / 14 hiš — 0 NOVIH hiš, vzorec se zasiča; skupaj 170 vpisov / 65 hiš čez tri knjige in devet let); NOVELA OKVIRA — sken 73 podvojen sken str. 71 (prvi v seriji; stran == sken − 2 od 74); novela P83 potrjena 7. leto; dokaz parish-baptism-1894.json + verifikator p89 (I1–I10 PASS); HOUSE_VITALS 150 → 164; qa-p89 (90. kontrola) + pini; PT 11/3 brez novih; SIDRA — h2 ŠTIRIKRATNA kontinuiteta (najdaljša zveza), h71 ISTA zveza čez 8 let (Strauš na h71+h72; PUA @71), h36 Križan 2. generacija (4. vir), h31 4. VPIS (oče+mati+botra vsi ISTI), h17 mati menjana (5.), h57 ISTA botra pa čez 8 let, h60/h23 ISTA botra pa 2. leto, h12/h53/h73/h75 ISTA zvezi, h69 nov krstni čez knjige; Pegdirec 7/14; Trotter 11×; QA 90/90
 - Odprto (issue #18 naslednje faze): krstna 1895 (prelom str. 76 row 1; skeni 78+ — do 81 v /tmp/p89; stran == sken − 2 od 74!); per-hišne kronologije tri-virskih hiš 13/36/71 (h36 4 viri; h71 ISTA zveza 1886+1894); mrliška 04894 1887–1894 (smrti prvih žen — dokaz menjav mater h17 Jakobič→Firlak?); luknja 41–60 (15 dokazanih); Željko (4 signali) + Strauš (h71+h72) verige PUA/ATLAS presek
+
+---
+Task ID: 59-b (deploy opomba)
+Agent: Z.ai Code (glavna seja)
+Task: P89 sinhronizacija — Vercel deployment blokada (rate limit)
+
+Work Log:
+- commit f2c2da8 (P89) push GitLab 18:20 + GitHub 18:23 — ls-remote oba == local (f2c2da8) PASS
+- produkcija še 89/89 (P88) po 25 min — zgodovinski izstreliki ~80 s (P87 16:21→16:22, P88 17:05→17:06)
+- DIAGNOZA prek GitHub API: deployments endpoint — ZADNJI deploy še dda4a35 (17:06); commit status za f2c2da8/49b5af8: **Vercel | failure | "Deployment rate limited — retry in 24 hours."**
+- nudge prazen commit 49b5af8 push (GitLab + GitHub PASS) — tudi rate limited (isti status)
+- kontekst P78: VERCEL_TOKEN potekel 2026-10-14 (rezervni kanal mrtev); GitHub Actions blokirani (billing — sync check-run failure); primarni kanal = Vercel GitHub App — zdaj rate limited (dnešni deployi 14:20/14:33/15:30/16:22/17:06 + zgodnejši faze)
+
+Stage Summary:
+- P89 REPO STANJE POPOLNO: local == GitLab (vir resnice) == GitHub == 49b5af8; dev QA 90/90 (qa-p89 True); produkcija zdrava na P88 (89/89) — ZASTARELA, bo sledila ob resetu Vercel rate limita
+- NASLEDNJA SEJA (obvezno prvi korak): preveri https://griblje-museum.vercel.app/api/qa → 90/90 + qa-p89 True; če ŠE VEDNO rate limited → nov prazen nudge commit + push oba; produkcija mora dojeti 49b5af8 (P89 + vitals 164)
+- LASTNIŠKA opcija (če se ne sprosti samodejno): Vercel dashboard → Deployments → ročni redeploy zadnjega commita (ali preveriti limite: Hobby 100 deploy/dan)
