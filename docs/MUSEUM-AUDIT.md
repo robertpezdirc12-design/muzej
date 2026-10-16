@@ -3802,3 +3802,97 @@ OBSERVACIJA, ne dokaz istovetnosti stavbe (issue #18).
 **v7 runtime join NESPREMENJEN** (sha256 4bb40370…, statična projekcija;
 disciplina I9). Veriga `p60–p67 + p70–p83 --check` PASS (p77 prehoden HTTP
 000 — retry PASS); tsc 0; ESLint 0; /api/qa dev **84/84** (qa-p83 True).
+
+**P84 RE-READ NOVELA (§61, 2026-10-16):** »HRAUS/HRAUCELJ« iz te sekcije je
+STRAUŠ/STRAUCELJ — Kurrent ſt (S+t) brana kot H; familija JE v vesolju 1825
+(P81 0.8571); trditev »dve novi familiji po 1825« → ENOVA nova (Požek);
+podrobno v §61.
+
+## §61 — P84: župnija Podzemelj — krstna knjiga 04105, polno leto 1889 (issue #18) — 2026-10-16
+
+**Okvir:** širitev vzorca P79 (1886) → P82 (1887) → P83 (1888) na polno leto
+**1889**: skeni **35–43 == tiskane strani 34–42** (stran == sken − 1; vpisi na
+skenih 35–42; 8 citiranih skenov vse JPEG 200). Prelom **1890**: glava
+»Leto 1890« + »1890« v letni celici na str. 42 (sk. 43), prvi vpis 1890 =
+row 1 (11./11. 1., Kemelj 17); oznake vrstic se ponastavijo na 1 (novela P83
+potrjena 2. leto); leto 1889 ima **106 zveznih vrstic** (str. 34: 1–14;
+str. 35: 15–28; str. 36: 29–41; str. 37: 42–54; str. 38: 55–67; str. 39:
+68–80; str. 40: 81–93; str. 41: 94–106). Prvi 1890 Griblje vpis = row 6
+(h27 Anton, oče Janez Kukhar [~]) — izven vzorca 1889.
+
+**Novela P84 ① — številčenje str. 40:** duhovnikove pisane oznake vrstic so
+**PONOVLJENE 68–8x** (napaka — prepis začetka str. 39); kasnejša roka (modri
+svinčnik) popravi z **zvezno 81–93** v datumskih celicah (pari hi-res:
+label 68 ↔ svinčnik 81; label 69 ↔ 82 …); str. 41 nadaljuje **94–106 zvezno**
+— neodvisna potrditev, da so svinčnikove številke pravilne (93 + 1 = 94).
+P82 »row 107« = zvezno štetje — konvencija ohranjena.
+
+**Novela P84 ② — RE-READ P83:** »**HRAUS/HRAUCELJ**« je pravzaprap
+»**STRAUŠ/STRAUCELJ**« — v isti p83 vrstici (sk. 28, row 8) babica jasno
+**»Neža Straucelj«**; Kurrent **ſt (S+t) brana kot H**; dokazana z 1889
+ponovitvijo istih oseb (h72 oče Matija Strauš 1888 = 1889 P84 row 64; h57
+botra Marija Straucelj 1888 = 1889 P84 row 55; babica Neža Straucelj h72).
+Posledica: familija **JE v vesolju 1825** (P81 0.8571 — Strauß @45/71/72 +
+ATLAS 76/79/81–84/92) — P83 trditev »dve novi familiji po 1825« se popravi na
+**ENOVO novo (Požek)**; P83 dokaz + HOUSE_VITALS + qa-p83 narativi popavljeni
+vidno (z zgodovino branja ohranjeno, ne tiho).
+
+**Vsi vpisi z Griblji 1889: 19 vpisov / 16 imenovanih hiš + 2 neberljivi**
+(row 70 hišna št. obrabljena — sledi »///«; row 82 prekrita z imenom »Marjeta«
++ modro marginalijo — evidence-only, ne projicirana v HOUSE_VITALS):
+58, 33, 3 [~], 64 ×2, 35, 69, 59 [~], 63, 57, 32, 72, 2, 8 [~], 83 [~], 65,
+26 [~]. **Nove hiše 5** (58, 33, 3, 32, 64) + 2 neberljivi, **ponovitve 11**;
+skupaj s P79/P80/P82/P83 vzorec **93 vpisov / 50 hiš** čez tri knjige in
+štiri leta (1886–1889).
+
+**PT klasifikacija 13/3:** v naboru 13 (2, 3, 8, 26, 32, 33, 35, 63, 64, 65,
+69, 72, 83); luknja 41–60: **58 NOVA** (row 3 — dve zaprti zanki = 8, vzorec
+forenzike P82 75→78) + **59 POTRDITEV** (P80; row 33 [~]) + **57 POTRDITEV**
+(P79; row 55) — luknja zdaj **12 dokazanih števil** čez tri knjige.
+
+**Nezakonski 1/19 + anomalija:** row 33 (h59 [~]) mati Katarina Podirec [~]
+(»a samka?«), očeta stolpec PRAZEN; **ANOMALIJA row 70**: mati Marija Šimec
+[~] »**samka hči**« × oče Janez Jakobič [~] »**šefur**« (služabnik) — povezava
+dveh gospodinjstev; otrok »Ožbolt?« [~]; hiša neberljiva.
+
+**Sidra:** ① **hiša 63** (row 53, sk. 38): botr **Janez Šimec [~]** — hiša 63 =
+ATLAS 1825 Šimec @63 + PT lastnik »Šimec Ripane« @63 (P81 pack) → **neposredna
+1825↔1889 imenska + hišna povezava**; ② **row 82**: babica **Ana Filak [~]** —
+P81 1.0 priča (PT 69/71 + PUA Fillah 16/34/36/61); ③ **row 89 = h8**: botr
+**Janez Dragoš [~]** — P81 1.0 (PT Dragosch 3/4/5); mati Marija Urh [~] ISTA
+kot 1888 (h8 2. leto); ④ **h72 re-read veriga**: oče Matija Strauš 1888 + 1889.
+**Šimec najtrajnejša familija**: mati row 70 (samka) + botr row 53 (h63 =
+ATLAS hiša!) + botra row 75 (h2) — 3 pojavi; priimki z 1825 pričo v 1889:
+Dragoš 2× (1.0), Strauš/Straucelj 6× (0.8571 + re-read), Šimec 3× (1.0),
+Brinec 9× (0.8333 [~]), Filak 1× (1.0), Hrižan/Križan [~] 4× (0.8333 — babica
+z naslovom hiše: »Ana Hrižan, Griblje št. 63« — 4. pojav!), Jakobič 4× (veriga
+h13), Milek 2× (near-miss Mileh). Duhovniki: Griebel [~] 7 + Povmij [~] 8 +
+neberljivo 4 (raztrganine); babice: Brinec 7× + Ana Hrižan [~] 4× + Sotter 2×
++ Kure/Tržan/Filak po 1×.
+
+**Integracija:** `parish.ts` HOUSE_VITALS 74 → **91** (17 zasidranih 1889;
+2 neberljivi evidence-only; vsi DOCUMENTED; komentar P84 z novelama) +
+**RE-READ popravki 3 P83 whatSi/whatEn** (h72/h69/h85 Hraus→Strauš z
+zgodovino); `src/lib/atlas.ts` PT_GAP_KNOWN += **58**; **qa-parish.ts**
+nova kontrola `qa-p84-parish-baptism-1889` (85. kontrola; celoven neodvisen
+preracun: okvir/skeni/strani, PT 13/3, sidra h63 Šimec=ATLAS/h8 Dragoš/h72
+re-read, multi-vpisna h64, nezakonski h59, ponovitve 11 prek vitals; dve
+obliki repo/produkcija po P53/P57/P58) + qa-p83 narativi (re-read novela) —
+QA 84 → **85/85**; `scripts/p80_parish_md_books.py` I7 P84 scoping (vitals
+74 → 91); dokaz `research/issue17/parish-baptism-1889.json`
+(SAMPLE-TRANSCRIPTION-1889; ročna faza — skeni v delovnem imeniku, NI v
+repu); P83 dokaz `research/issue17/parish-baptism-1888.json` RE-READ blok
+(provenienca); p81 pack NESPREMENJEN (vzorec 1886); kartica NI dodana
+(vzorec P77–P83).
+
+**Poštenost:** prepis je VZOREC (polno leto 1889 + dokaz preloma 1890 + dokaz
+številčenja str. 40), ne celotne knjige (326 skenov). 2 vpisa brez hišne
+številke (neberljivi) — evidence-only; row 93 datumi pod trakom (november po
+kontekstu); row 18 hiša dvoumna (»mölüo?/3« + »Tomma Vrh'möz« [~]); Kurrent
+branja imen nosijo [~] (Požek, Dragoš, Strauš, Županič?, Cojmar?, Hrigian?,
+Vehbiščar?, Bahorič?, Hengan?, Žefran?, Trojžif?, Radovič …); re-read P83
+dokumentiran z novelo + provenienco, ne tiho; MERI, NE odloča (issue #18).
+
+**v7 runtime join NESPREMENJEN** (sha256 4bb40370…, statična projekcija;
+disciplina I9). Veriga `p60–p67 + p70–p84 --check` PASS (p77 prehoden HTTP
+000 — retry PASS); tsc 0; ESLint 0; /api/qa dev **85/85** (qa-p84 True).

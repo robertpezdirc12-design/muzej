@@ -26,12 +26,20 @@
     "year": 1888,
     "rowsTotal": 92,
     "rowsNote": "pisane oznake 1–92 (str. 26: 1–2; str. 27: 3–15; str. 28: 16–28; str. 29: 29–41; str. 30: 42–54; str. 31: 55–67; str. 32: 68–80; str. 33: 81–92)",
-    "break1889": { "scan": 35, "page": 34, "row": 1, "note": "glava »1 8 8 9« velikimi ciframi na str. 34 (sk. 35); prvi vpis 1889 = row 1 (3./3. 1., Gradac 8)" },
+    "break1889": {
+      "scan": 35,
+      "page": 34,
+      "row": 1,
+      "note": "glava »1 8 8 9« velikimi ciframi na str. 34 (sk. 35); prvi vpis 1889 = row 1 (3./3. 1., Gradac 8)"
+    },
     "rowRestart1888": {
       "proof": "str. 27 (sk. 28) se začne z oznako 3 (Januar 16., Griblje 1) — merjeni izrez",
       "p82ReRead": "P82 »row 107« za prvi vpis 1888 (Gradac 26) je zvezno štetje 106+1; pisana oznaka 1 [~] pod raztrganino"
     },
-    "entriesScanRange": [28, 34]
+    "entriesScanRange": [
+      28,
+      34
+    ]
   },
   "entries": [
     {
@@ -69,18 +77,18 @@
       "scan": 28,
       "page": 27,
       "child": "Marija",
-      "father": "Matija Hraus [~] ½ zemljišt",
+      "father": "Matija Strauš [~] ½ zemljišt (P84 RE-READ: prej »Hraus« — Kurrent ſt brana kot H)",
       "mother": "Barbara Husič [~]",
-      "botra": "Matija Hraus [~] (ali Hraucij) + Barbara Bahorič [~] (¼)",
-      "babica": "Neža Hraucelj [~]",
+      "botra": "Matija Strauš? [~] (ali Straucelj; P84 RE-READ) + Barbara Bahorič [~] (¼)",
+      "babica": "Neža Straucelj [~] (P84 RE-READ: v isti vrstici jasno ſt — prej »Hraucelj«)",
       "priest": "Andrej Grieblj [~]",
       "notes": [
         "marginalija: »+ 3/9. 1888« — umrla kot dojenček",
-        "HRAUS — NOVA familija: NI v vesolju 1825; v 1888 tri hiše (69, 72, 85) + babica Hraucelj",
+        "P84 RE-READ NOVELA: »Hraus/Hraucelj« → STRAUŠ/STRAUCELJ — Kurrent ſt (S+t) brana kot H; babica v ISTI vrstici jasno »Neža Straucelj«; familija JE v vesolju 1825 (P81 0.8571 Strauß) — »nova familija Hraus« ODPADA; oče 1889 h72 = ISTI Matija Strauš (P84 row 64)",
         "hiša 72 — prva pojavitev v vzorcu"
       ],
-      "whatSi": "krščena Marija (31. 1.) — oče Matija Hraus [~] ½ zemljišt, mati Barbara Husič [~]; babica Neža Hraucelj [~]; + 3. 9. 1888",
-      "whatEn": "baptized Marija (Jan 31) — father Matija Hraus [~] half-farmer, mother Barbara Husič [~]; midwife Neža Hraucelj [~]; died Sep 3, 1888"
+      "whatSi": "krščena Marija (31. 1.) — oče Matija Strauš [~] ½ zemljišt (P84 re-read: prej »Hraus«), mati Barbara Husič [~]; babica Neža Straucelj [~]; + 3. 9. 1888",
+      "whatEn": "baptized Marija (Jan 31) — father Matija Strauš [~] half-farmer (P84 re-read: earlier read »Hraus«), mother Barbara Husič [~]; midwife Neža Straucelj [~]; died Sep 3, 1888"
     },
     {
       "row": 12,
@@ -117,16 +125,16 @@
       "page": 27,
       "child": "Marija",
       "father": "Janez Brinec [~] ½ zemljišt",
-      "mother": "Katarina Hraus [~]",
+      "mother": "Katarina Strauš [~] (P84 RE-READ: prej »Hraus«)",
       "botra": "Marko Križan [~] (¼) + Marija Adlešič [~] (¼ zemlj., samata hič [~])",
       "babica": "Marija Brinec",
       "priest": "Jos. P— [~] (podpis peč, delno neberljiv; morda Povmij)",
       "notes": [
         "hiša 69 že v vzorcu (P80 mrliška 1886); 1888 oče Janez BRINEC — Brinec hub (babica Marija Brinec 10× v 1888)",
-        "mati Katarina HRAUS — familija Hraus (h72 oče Matija Hraus)"
+        "mati Katarina STRAUŠ [~] (P84 re-read) — familija Strauš (h72 oče Matija Strauš)"
       ],
-      "whatSi": "krščena Marija (28. 2.) — oče Janez Brinec [~] ½ zemljišt, mati Katarina Hraus [~]; botra Marko Križan + Marija Adlešič",
-      "whatEn": "baptized Marija (Feb 28) — father Janez Brinec [~] half-farmer, mother Katarina Hraus [~]; godparents Marko Križan + Marija Adlešič"
+      "whatSi": "krščena Marija (28. 2.) — oče Janez Brinec [~] ½ zemljišt, mati Katarina Strauš [~] (P84 re-read: prej »Hraus«); botra Marko Križan [~] + Marija Adlešič [~]",
+      "whatEn": "baptized Marija (Feb 28) — father Janez Brinec [~] half-farmer, mother Katarina Strauš [~] (P84 re-read: earlier read »Hraus«); godparents Marko Križan + Marija Adlešič"
     },
     {
       "row": 17,
@@ -141,15 +149,15 @@
       "child": "Marija",
       "father": "Peter Pezdirec [~] ¼ zemljišt",
       "mother": "Marija Borjanc [~]",
-      "botra": "Jurij Brodarič [~] (½) + Marija Hraucelj [~] (¼)",
+      "botra": "Jurij Brodarič [~] (½) + Marija Straucelj [~] (¼; P84 RE-READ: prej »Hraucelj« — ista oseba kot 1889 botra row 55)",
       "babica": "Ana Brinec",
       "priest": "Andrej Grieblj [~]",
       "notes": [
         "hiša 57 v PT luknji 41–60 — že dokazana (P79 1886); 1888 krstni vpis potrjuje št.",
         "menjava družine: 1886 h57 = Peter Podolivec × Marija Stupanič (P79); 1888 = Peter Pezdirec × Marija Borjanc"
       ],
-      "whatSi": "krščena Marija (29. 2.) — oče Peter Pezdirec [~] ¼ zemljišt, mati Marija Borjanc [~]; hiša 57 v PT luknji (1886 Podolivec/Stupanič — menjava)",
-      "whatEn": "baptized Marija (Feb 29) — father Peter Pezdirec [~] quarter-farmer, mother Marija Borjanc [~]; house 57 in the PT gap (1886 Podolivec/Stupanič — family change)"
+      "whatSi": "krščena Marija (29. 2.) — oče Peter Pezdirec [~] ¼ zemljišt, mati Marija Borjanc [~]; botra Jurij Brodarič [~] + Marija Straucelj [~] (P84 re-read: prej »Hraucelj«); babica Ana Brinec",
+      "whatEn": "baptized Marija (Feb 29) — father Peter Pezdirec [~] quarter smallholder, mother Marija Borjanc [~]; godparents Jurij Brodarič [~] + Marija Straucelj [~] (P84 re-read: earlier read »Hraucelj«); midwife Ana Brinec"
     },
     {
       "row": 24,
@@ -237,17 +245,17 @@
       "page": 29,
       "child": "Janez",
       "father": "Marko Križan [~] ½ zemljišt",
-      "mother": "Marija Hraus [~]",
+      "mother": "Marija Strauš [~] (P84 RE-READ: prej »Hraus«)",
       "botra": "Matija Urh [~] + Ana Brinec [~] (¼)",
       "babica": "Marija Brinec",
       "priest": "Andrej Grieblj [~]",
       "notes": [
         "marginalija: »+ 9/12. 889« [~] — 879/889 forenzika (1889)",
         "hiša 85 — PRVA pojavitev v vzorcu",
-        "familija Hraus (h69 mati, h72 oče) — tretja hiša"
+        "familija Strauš (P84 re-read: h69 mati, h72 oče) — tretja hiša"
       ],
-      "whatSi": "krščen Janez (21. 5.) — oče Marko Križan [~] ½ zemljišt, mati Marija Hraus [~]; botra Matija Urh + Ana Brinec; hiša 85 NOVA; + 9. 12. 1889 [~]",
-      "whatEn": "baptized Janez (May 21) — father Marko Križan [~] half-farmer, mother Marija Hraus [~]; godparents Matija Urh + Ana Brinec; house 85 NEW; died Dec 9, 1889 [~]"
+      "whatSi": "krščen Janez (21. 5.) — oče Marko Križan [~] ½ zemljišt, mati Marija Strauš [~] (P84 re-read: prej »Hraus«); botra Matija Urh [~] + Ana Brinec [~]; hiša 85 NOVA; + 9. 12. 1889 [~]",
+      "whatEn": "baptized Janez (May 21) — father Marko Križan [~] half-farmer, mother Marija Strauš [~] (P84 re-read: earlier read »Hraus«); godparents Matija Urh + Ana Brinec; house 85 NEW; died Dec 9, 1889 [~]"
     },
     {
       "row": 39,
@@ -398,15 +406,70 @@
   "stats": {
     "entries": 15,
     "distinctHouses": 15,
-    "housesWritten": ["1", "8", "13", "21", "24", "29", "44", "56", "57", "69", "72", "78", "79", "83", "85"],
-    "ptInNabor": ["1", "8", "13", "21", "24", "29", "69", "72", "78", "79", "83", "85"],
-    "ptGap": ["44", "56", "57"],
+    "housesWritten": [
+      "1",
+      "8",
+      "13",
+      "21",
+      "24",
+      "29",
+      "44",
+      "56",
+      "57",
+      "69",
+      "72",
+      "78",
+      "79",
+      "83",
+      "85"
+    ],
+    "ptInNabor": [
+      "1",
+      "8",
+      "13",
+      "21",
+      "24",
+      "29",
+      "69",
+      "72",
+      "78",
+      "79",
+      "83",
+      "85"
+    ],
+    "ptGap": [
+      "44",
+      "56",
+      "57"
+    ],
     "ptGapNew": [],
     "ptGapNote": "vse tri luknjane hiše (44 P80, 56 P80, 57 P79) že dokazane — 1888 jih POTRJUJE (0 novih števil, 3 potrditve)",
-    "newSampleHouses": ["1", "72", "79", "83", "85"],
-    "repeatHouses": ["8", "13", "21", "24", "29", "44", "56", "57", "69", "78"],
+    "newSampleHouses": [
+      "1",
+      "72",
+      "79",
+      "83",
+      "85"
+    ],
+    "repeatHouses": [
+      "8",
+      "13",
+      "21",
+      "24",
+      "29",
+      "44",
+      "56",
+      "57",
+      "69",
+      "78"
+    ],
     "illegitimate": 3,
-    "priests": { "Andrej Grieblj [~]": 12, "Jos. Povmij [~]": 1, "neberljiv (Jos. P—)": 1, "prazen (r80)": 1 },
+    "priests": {
+      "Andrej Grieblj [~]": 12,
+      "Jos. Povmij [~]": 1,
+      "neberljiv (Jos. P—)": 1,
+      "prazen (r80)": 1
+    },
     "midwifeBrinec": 10,
     "multiEntryHouses": {},
     "rowRestart": true
@@ -468,20 +531,31 @@
     }
   ],
   "honesty": [
-    "paleografska faza ročna — skeni v delovnem imeniku (NI v repu); prepis z [~] za vsako negotovost; izrezi slike za dvoumne priimke (Zeljth, Hraus/Husič, Hlevič/Nera, Jatkobčič, Poxan/Hardeium, Radovič/Mrgaič, Melith, Deblič, Jatkebčič)",
+    "paleografska faza ročna — skeni v delovnem imeniku (NI v repu); prepis z [~] za vsako negotovost; izrezi slike za dvoumne priimke (Zeljth, Strauš [re-read P84; prej Hraus]/Husič, Hlevič/Nera, Jatkobčič, Poxan/Hardeium, Radovič/Mrgaič, Melith, Deblič, Jatkebčič)",
     "hiša 78 [~] — številka v zavihku/raztrganini knjige (delno neberljiva); zasidrana prek 1886 P79 sidra (»75«→78 re-read) in 1887 P82 zapisa iste hiše",
     "pisana oznaka prve 1888 vrstice (str. 26) pod raztrganino — ponastavitev številčenja dokazana INDIREKTNO (str. 27 = oznaka 3)",
     "marginalije »+ …« z letnicami pred rojstvom (h1 »+ 1878«, h79 »+ 1/9. 18??«) — 7/8 forenzika, nasprotja dokumentirana, ne reševana",
     "spol otroka h56 (»Alex«) — kolone [~] proti modri marginaliji »Umrla« [~]; nasprotje dokumentirano",
     "priimki Zeljth, Hraus, Husič, Hlevič, Poxan, Hardeium, Radovič, Mrgaič, Mettovič, Melith, Borjanc, Jatkebčič — vsi [~]; nekatere kombinacije morda isti rod z različnimi zapisi",
     "botra h83 in h8 prazna — dokumentirano kot zapisano; babica h1 »Marjeta Jeta« [~] negotova",
-    "Gradac/Krasinec/Primostek/Otok/… vpisi NISO preneseni (izven k.o. Griblje po konvenciji P79/P80/P82)"
+    "Gradac/Krasinec/Primostek/Otok/… vpisi NISO preneseni (izven k.o. Griblje po konvenciji P79/P80/P82)",
+    "P84 RE-READ NOVELA (2026-10-16): »Hraus/Hraucelj« v tej fazi prebrana kot STRAUŠ/STRAUCELJ — Kurrent ſt (S+t) brana kot H; dokazana z 1889 ponovitvijo istih oseb (h72 oče, h57 botra, babica Neža); popravljeni vhodi ohranjajo zgodovino branja"
   ],
   "nextSteps": [
     "krstna 1889+ (skeni 35+ — polno leto 1889; začetek: str. 34 row 1, Gradac 8, 3./3. 1.)",
     "per-hišna kronološka veriga hiše 13 (najmočnejši kandidat — prva imenska veriga): polni prepis 1885–1888 + PT 1825 lastnik",
     "rešitev dvoumnosti P82 row 78 (52 → 04 → 15) prek PUA primerjave [~] (odprto od P82)",
-    "sledenje familiji Hraus/Hraucelj nazaj (1885–1887 skeni 2–27 + poročna/mrliška) — kdaj prišli?",
+    "REŠENO (P84 re-read): sledenje familiji »Hraus« — familija je STRAUŠ/STRAUCELJ, v vesolju 1825 (P81 0.8571)",
     "še dve priči per-hišne kontinuitete: h78 (Jakobič→oskrbar Poxan) in h29 (Mileh→Milek) — polna leta 1889–1890 bi dali tretjo"
-  ]
+  ],
+  "reRead": {
+    "by": "P84 (parish-baptism-1889.json; 2026-10-16)",
+    "novela": "HRAUS/HRAUCELJ → STRAUŠ/STRAUCELJ — Kurrent ſt (S+t) brana kot H; dokaz: p83 sk. 28 row 8 babica jasno »Neža Straucelj« + 1889 istovetnost oseb (h72 oče Matija Strauš P84 row 64; h57 botra Marija Straucelj P84 row 55)",
+    "affected": [
+      "row 8 (h72 oče/botrа/babica)",
+      "row 15 (h69 mati)",
+      "row 17 (h57 botra)",
+      "row 36 (h85 mati)"
+    ]
+  }
 }
