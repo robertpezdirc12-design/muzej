@@ -4416,3 +4416,18 @@ Stage Summary:
 - QA dev 93/93; tsc/lint 0; v7 NESPREMENJEN (sha256 4bb40370…)
 - Produkcija: 89/89 (rate limit do ~2026-10-17 18:24 UTC) — po resetu dohiti P90+P91+P92 → 93/93 (qa-p90 + qa-p91 + qa-p92 True)
 - NASLEDNJA FAZA: P93 = krstna 1898 (prelom str. 98 row 1 = sken 101; skeni 102+; stran == sken − 3 do naslednjega duplikata) ali mrliška 04894 1887–1896 (smrti prvih žen — dokaz menjav h58/h91/h31/h46) ali poročna 04455 Straus × Spudič (potrditev h45 popravka)
+
+---
+Task ID: 62-b (sinhronizacija potrjena)
+Agent: Z.ai Code (glavna seja)
+Task: P92 push — GitLab + GitHub + trojna sinhronizacija + produkcija
+
+Work Log:
+- Commit 19c1449 (P92: krstna 1897); GitLab push 1. poskus OK (c183c04..19c1449); GitHub push OK (403 je bil na odvečnem ponovnem poskusu — brez vpliva)
+- TROJNA SINHRONIZACIJA: lokalni == GitLab (vir resnice) == GitHub == 19c1449 (ls-remote potrjena oba)
+- Produkcija /api/qa = 89/89 (še P88 dda4a35) — Vercel deploy rate limit do ~2026-10-17 18:24 UTC; po resetu produkcija mora dojeti 19c1449 → QA 93/93 + qa-p90 + qa-p91 + qa-p92 True
+
+Stage Summary:
+- Repo stanje POPOLNO: lokalni == GitLab == GitHub == 19c1449 (P92 + vitals 211 + QA 93/93 dev; 217 vpisov / 74 hiš / 17 dokazanih luknj / DVANAEST let)
+- Produkcija ZASTARELA (89/89, P88) — sledi ob resetu (~18:24 UTC 17. 10.); NASLEDNJA SEJA (obvezni prvi korak): preveriti https://griblje-museum.vercel.app/api/qa = 93/93 (qa-p90 + qa-p91 + qa-p92 True); če ŠE VEDNO zastarela → nov prazen nudge commit + push oba
+- Raziskava: P79–P92 = 1886–1897 (DVANAEST polnih let); NASLEDNJA FAZA: P93 = krstna 1898 (prelom str. 98 row 1 = sken 101; skeni 102+; stran == sken − 3 do naslednjega duplikata) ali mrliška 04894 1887–1896 (smrti prvih žen — dokaz menjav h58/h91/h31/h46) ali poročna 04455 Straus × Spudič (potrditev h45 popravka)
