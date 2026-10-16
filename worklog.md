@@ -4471,3 +4471,17 @@ Stage Summary:
 - Repo stanje POPOLNO: lokalni == GitLab == GitHub == 39de7cc (P93 + vitals 223 + QA 94/94 dev; 229 vpisov / 77 hiš / 18 dokazanih luknj / TRINAJST let)
 - Produkcija ZASTARELA (89/89, P88) — sledi ob resetu (~18:24 UTC 17. 10.); NASLEDNJA SEJA (obvezni prvi korak): preveriti https://griblje-museum.vercel.app/api/qa = 94/94 (qa-p90 + qa-p91 + qa-p92 + qa-p93 True); če ŠE VEDNO zastarela → nov prazen nudge commit + push oba
 - Raziskava: P79–P93 = 1886–1898 (TRINAJST polnih let); NASLEDNJA FAZA: P94 = krstna 1899 (prelom str. 106 row 1 = sken 109; skeni 110–113 že v /tmp/p93; 1899 row 1 = Griblje 12!) ali mrliška 04894 1887–1896 (smrti prvih žen — dokaz menjav h69/h33/h40/h48/h90) ali poročna 04455 (Straus × Spudič ali Berkopne × Klobučar)
+
+---
+Task ID: 63-c (produkcija dohitla — POPRAVEK 63-b)
+Agent: Z.ai Code (glavna seja)
+Task: Vercel produkcija preverjena — 94/94 že v trenutku P93 push-a (rate limit reset prej od napovedi)
+
+Work Log:
+- Produkcija https://griblje-museum.vercel.app/api/qa = **94/94** (napovedana okna do ~2026-10-17 18:24 UTC se ni obnesla — deployi so se izvedeli že ob pushu 39de7cc/e97339c)
+- Verificirane kontrole: qa-p90 True + qa-p91 True + qa-p92 True + qa-p93 True — produkcija je ZAKLJUČENA (dohitela P90+P91+P92+P93)
+- Napaka v napovedi 63-b: »produkcija 89/89, sledi ob resetu« — zastarela že v trenutku zapisa; produkcija je bila medtem že na 94/94
+
+Stage Summary:
+- TRIJE VRTI POPOLNI: lokalni == GitLab (vir resnice) == GitHub == e97339c + produkcija 94/94 (P90–P93 vse True)
+- Repo P93 zaključen breh odprtih vprašanj; NASLEDNJA FAZA: P94 = krstna 1899 (prelom str. 106 row 1 = sken 109; skeni 110–113 že v /tmp/p93; 1899 row 1 = Griblje 12!) ali mrliška 04894 1887–1896 ali poročna 04455
