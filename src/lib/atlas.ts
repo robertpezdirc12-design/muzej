@@ -831,10 +831,11 @@ export function checkIntegrity(): IntegrityReport {
   //     P80 sanitacija regresije P79: hiše v PT luknji 41–60 (44, 54, 56, 57, 59, 60)
   //     ZAKONITO ne obstajajo v ATLAS_HOUSES (PT 1825 nabor = 1–40 + 61–99;
   //     luknja = dokaz številčne evolucije, P79/P80) — kontrola jih klasificira
-  //     namesto da bi jih zavrnila; vse ostale neznane številke ostanejo napaka
+  //     namesto da bi jih zavrnila; vse ostale neznane ostanejo napaka.
+  //     P82: nove luknje 47, 52 (izvirno row 78) in 55 iz krstne 1887.
   const housesNoSet = new Set(ATLAS_HOUSES.filter((h) => h.no !== "—").map((h) => h.no));
   const ptGapHouses = HOUSE_VITALS.filter((v) => !housesNoSet.has(v.houseNo)).map((v) => v.houseNo);
-  const PT_GAP_KNOWN = new Set(["44", "54", "56", "57", "59", "60"]);
+  const PT_GAP_KNOWN = new Set(["44", "47", "52", "54", "55", "56", "57", "59", "60"]);
   const vitalsOk = HOUSE_VITALS.every(
     (v) =>
       (housesNoSet.has(v.houseNo) || PT_GAP_KNOWN.has(v.houseNo)) &&

@@ -63,7 +63,7 @@ DEATH_1886_ENTRIES = 13
 DEATH_1887_ANCHORS = 2
 MARR_1886_ENTRIES = 7
 MARR_ANCHORS = {"1882": 1, "1885": 1, "1887": 2}
-PT_GAP_HOUSES = {"44", "54", "56", "57", "59", "60"}
+PT_GAP_HOUSES = {"44", "47", "52", "54", "55", "56", "57", "59", "60"}  # P82: + 47, 52 (row 78 izvirno), 55
 TRI_SOURCE_HOUSES = {"13", "36", "71"}
 
 
@@ -209,8 +209,18 @@ def verify():
         and all(1873 <= int(e["year"]) <= 1922 for e in entries if e["bookSignature"] == "04455")
     )
 
-    # I7 — PT usklajenost celotnega vzorca (krstna+mrliška+poročna == parish.ts)
-    houses = {v["houseNo"] for v in vitals}
+    # I7 — PT usklajenost celotnega P79/P80 vzorca (krstna+mrliška+poročna ==
+    # parish.ts); P82: vzorec omejen na 04105 1886 ∪ 1897 ∪ sidri 61/78
+    # (1887 okvir ima svojo skripto p82); HOUSE_VITALS skupaj 59 (41 − 2 stara
+    # sidra 61/75 + 20 celotnega okvira 1887, vključno s popravljena 61/78)
+    sample = [
+        v for v in vitals
+        if v["bookSignature"] in ("04894", "04455")
+        or (v["bookSignature"] == "04105"
+            and (v["year"] == 1886 or v["year"] == 1897
+                 or (v["year"] == 1887 and v["houseNo"] in ("61", "78"))))
+    ]
+    houses = {v["houseNo"] for v in sample}
     pts = pt_house_set()
     gap = sorted(houses & PT_GAP_HOUSES, key=int)
     inset = sorted(houses - PT_GAP_HOUSES, key=lambda x: int(float(x)))
@@ -219,8 +229,8 @@ def verify():
         and len(gap) == 6
         and all((float(h) <= 40 or float(h) >= 61) or ("½" in h) for h in inset)
         and all(41 <= float(h) <= 60 for h in gap)
-        and all(h in houses for h in (v["houseNo"] for v in vitals))
-        and len(vitals) == 41
+        and all(h in houses for h in (v["houseNo"] for v in sample))
+        and len(vitals) == 59
         and len(houses) == 25
         and set(inset) <= pts
     )

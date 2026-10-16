@@ -3626,3 +3626,83 @@ nečitljivo); PUA/ATLAS številčenja ≠ PT številčenje [~] — isto-hišne u
 
 **v7 runtime join NESPREMENJEN** (891/879; disciplina I9). Veriga `p60–p67
 + p70–p81 --check` PASS; tsc 0; ESLint 0; /api/qa dev 82/82 (qa-p81 True).
+
+
+## §59 — P82: župnija Podzemelj — krstna knjiga 04105, polno leto 1887 (issue #18) — 2026-10-16
+
+**Sprožilec:** owner ukaz »odlicno nadaljuj sinhroniziraj readme kode gitlab
+github vercel in nadaljuj« — sinhronizacija potrjena (lokal = GitLab = GitHub
+= ab52498; Vercel produkcija QA 82/82), P82 = P81 nextSteps ①: širitev
+vzorca po letih — krstna 1887.
+
+**Vir:** Matricula Online, krstna knjiga **04105** (1886–1919, 326 skenov);
+**okvir 1887: skeni 16–27 == tiskane strani 15–26** (stran == sken − 1);
+glava »Leto 18_87« na strani 15 (sken 16); **leto 1888 se začne NA STRANI 26
+(sken 27) po vrstici 106 z velikimi ciframi »1 8 8 8«** — zadnji vpis 1887 =
+row 106 (29./30. 12., Krasinec 7), prvi 1888 = row 107 (9./11. 1., Gradac 26).
+
+**Metoda (paleografska faza + deterministična verifikacija):** skeni 16–30
+prenešeni v delovni imenik (NI v repu); Kurrent branje z [~]; hišne številke
+preverjene z izrezi (row 78 trojna korekcija, row 12 kodrasti 2, row 26
+5-vs-8 forenzika); deterministični verifikator `scripts/
+p82_parish_baptism_1887.py` (**I1–I10**, `--check` PASS): knjiga HTTP 200 +
+inventar 326, citirani skeni 8/8 JPEG 200 (strani 15, 17, 18, 21 prebrane
+brez Gribljev), okvir + prelom 1888, PT klasifikacija iz verige, sidro,
+križne povezave, runtime projekcija.
+
+**Rezultat: 20 vpisov / 19 različnih hiš** (2, 15, 17, 21, 24, 26 [~], 27,
+31×2, 34, 35, 47, 52→04→15 [~], 55, 61, 62, 63, 65, 66, 78) — skupaj s
+P79/P80 vzorec zdaj 59 vpisov / 42 hiš čez tri knjige in dve leti.
+
+**Ugotovitve:**
+1. **NOVI PT LUKNJI 47 in 55** (+ 52 izvirno row 78): luknja 41–60 v krstnih
+   vpisih zdaj 54/56/57 (P79) + 44/59/60 (P80) + 47/52/55 (P82) = **9
+   dokazanih števil**; row 78 = **TROJNA KOREKCIJA hišne št. 52 → 04 → 15**
+   [~] — izvirno v luknji, končna v naboru; obe klasifikaciji dokumentirani.
+2. **P79 RE-READ KOREKCIJA: hiša »75« = 78** — P79 sidro (Janez, 16. 4.,
+   Janez Jakobič × Marija roj. Stubler) je ISTA vrstica kot P82 row 26;
+   izrez Kurrent: dve zaprti zanki = 8 (isti vzorec forenzike kot P80
+   3-vs-5); starši/otrok/datum potrjeni, hišna št. popravljena v parish.ts.
+3. **P79 SIDRO hiša 61 re-verificirano** (row 28, sken 20): oče zdaj »Miko
+   Požek« [~] (prej »Miha P.—«/»Miko Jože H.?« — oba branji ohranjena v
+   whatSi); mati Bara roj. Filath [~].
+4. **NEZAKONSKI vpisi 2** (row 78 hiša 52: mati Marija Muc [~]; row 80 hiša
+   55: mati Ana Smič [~] — očeta stolpca PRAZNA); **ANOMALIJA ZAPISA row 93**
+   (hiša 35: v očetovem stolpcu »Marija Hrižan ½ zemljašt.«, v materinem
+   »Ana Požek« — dve interpretaciji [~]).
+5. **Križna povezava dveh knjig — hiša 31:** mrliška 1886 (Katarina Marh,
+   P80) + krstna 1887 ×2 (Ana 1./2. 8. Urh/Brodarič + Janez 6. 9. Papič/
+   Straus) — edina multi-vpisna hiša leta 1887; priimki čez leta: Šimec
+   (1886: 36/39/56/88 → 1887: **34** — NOVA hiša), Straus (mati Margaretha
+   @31 + botra Katarina @47), Filak/Filath (mati Bara @61 + babica @52),
+   Stubler (mati @78), Požek (očeta @61/@21 + botra @27).
+6. **Troi duhovniki 1887:** kapljan Andrej Griebel [~] (14 gribeljskih
+   vpisov), župnik Franjo Dovgan (1), **»Jos. Povmij« [~] (4 — nov podpis**);
+   babica **Marija Brinec 9×** (gost porekla Brinec: mati 2×, očetje 1×,
+   botre/babice).
+
+**Integracija:** `parish.ts` HOUSE_VITALS 41 → **59** (20 celotnega okvira
+1887: 19 novih + posodobljeni 61 + re-read 75→78; vsi DOCUMENTED; komentar
+P82); **qa-parish.ts**: vzorca qa-p79/qa-p80 ožje opredeljena (P82 scoping —
+04105 1886 ∪ 1897 ∪ sidri 61/78; pin P79_PT_IN_SET 75 → 78) + nova kontrola
+`qa-p82-parish-baptism-1887` (83. kontrola; celoven neodvisen preracun iz
+HOUSE_VITALS × PARISH_BOOKS: okvir/strani, PT 16/3, sidro 61, nezakonski 2,
+trojna korekcija, anomalija, multi 31, križna povezava 04894; dve obliki
+repo/produkcija po P53/P57/P58) — QA 82 → **83/83**; `atlas.ts` PT_GAP_KNOWN
++ 47/52/55; **p81 pack REGENERIRAN**: CURATED hiša 75 → 78 (sidra proti
+popravljenemu whatSi; statistika nespremenjena — 25 hiš, 10/38, isto-hiša 2)
++ `scripts/p80_parish_md_books.py` I7 P82 scoping (vzorec 41/25; vitals 59)
++ `scripts/p82_parish_baptism_1887.py`; dokaz
+`research/issue17/parish-baptism-1887.json` (SAMPLE-TRANSCRIPTION-1887;
+ročna faza); kartica NI dodana (vzorec P77–P81).
+
+**Poštenost:** prepis je VZOREC (polno leto 1887 + dokaz preloma 1888), ne
+celotne knjige (326 skenov). Kurrent branja imen nosijo [~]; hišna št. row
+78 = trojna korekcija 52→04→15 [~]; row 12 = 26 [~]; row 26 = 78 (P79 je
+prebral 75 — re-read z izrezom); row 93 = anomalija zapisa z dvema
+interpretacijama; April 31 (row 28) = zapis kot v knjigi [sic]. Modri pripisi
+20. st. dokumentirani ločeno. Številčna usklajenost s PT je OBSERVACIJA, ne
+dokaz istovetnosti stavbe (issue #18).
+
+**v7 runtime join NESPREMENJEN** (891/879; disciplina I9). Veriga `p60–p67
++ p70–p82 --check` PASS; tsc 0; ESLint 0; /api/qa dev 83/83 (qa-p82 True).

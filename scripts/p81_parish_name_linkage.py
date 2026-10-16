@@ -318,8 +318,11 @@ CURATED = {
            {"s": "Straus", "role": "poroka-ženin", "book": "04455", "year": 1887, "anchor": "ženin Mathias Straus [~]", "src": "parish"},
            {"s": "Dragoš", "role": "poroka-starši-ženina", "book": "04455", "year": 1887, "anchor": "Katharina née Dragoš [~]", "src": "parish"}],
     "74": [{"s": "Hambeč", "role": "smrt", "book": "04894", "year": 1886, "anchor": "Jožef Hambeč [~]", "src": "parish"}],
-    "75": [{"s": "Jakobič", "role": "rojstvo-oče", "book": "04105", "year": 1886, "anchor": "Janez Jakobič? [~]", "src": "parish"},
-           {"s": "Stubler", "role": "rojstvo-mati", "book": "04105", "year": 1886, "anchor": "Marija roj. Stubler", "src": "parish"}],
+    # P82 RE-READ KOREKCIJA: hiša »75« (P79 sidro) je pravzaprav 78 — izrez
+    # Kurrent: dve zaprti zanki = 8 (vzorec forenzike P80 3-vs-5); sidra
+    # verificirana proti corrected whatSi (parish.ts).
+    "78": [{"s": "Jakobič", "role": "rojstvo-oče", "book": "04105", "year": 1887, "anchor": "Janez Jakobič ½ zemg.", "src": "parish"},
+           {"s": "Stubler", "role": "rojstvo-mati", "book": "04105", "year": 1887, "anchor": "Marija roj. Stubler", "src": "parish"}],
     "88": [{"s": "Šimer", "role": "smrt", "book": "04894", "year": 1886, "anchor": "Matija Šimer [~]", "src": "parish"}],
     "94": [{"s": "Rambič", "role": "rojstvo-oče", "book": "04105", "year": 1886, "anchor": "Matija Rambič? [~]", "src": "parish"},
            {"s": "Podlivc", "role": "rojstvo-mati", "book": "04105", "year": 1886, "anchor": "Ana roj. Podlivc", "src": "parish"},

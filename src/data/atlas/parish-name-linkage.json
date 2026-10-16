@@ -4069,9 +4069,9 @@
    "sameNumberAny": false
   },
   {
-   "houseNo": "75",
+   "houseNo": "78",
    "ptIn1825": true,
-   "ptOwner1825": "Drulak Peter",
+   "ptOwner1825": "Dikobutar Marko",
    "sameHouse": {
     "pt": null,
     "atlas": null,
@@ -4082,15 +4082,15 @@
      "surname": "Jakobič",
      "role": "rojstvo-oče",
      "book": "04105",
-     "year": 1886,
-     "anchor": "Janez Jakobič? [~]",
+     "year": 1887,
+     "anchor": "Janez Jakobič ½ zemg.",
      "src": "parish"
     },
     {
      "surname": "Stubler",
      "role": "rojstvo-mati",
      "book": "04105",
-     "year": 1886,
+     "year": 1887,
      "anchor": "Marija roj. Stubler",
      "src": "parish"
     }

@@ -96,6 +96,19 @@ export const PARISH_BOOKS: ParishBook[] = [
  * Maria Brinec, katere mati je roj. Miletch [~]).
  * Dokaz: research/issue17/parish-md-transcription.json; verifikator:
  * scripts/p80_parish_md_books.py --check (I1–I10).
+ * P82 (issue #18, 2026-10-16): ŠIRITEV VZORCA NA LETO 1887 — krstna 04105
+ * skeni 16–27 == strani 15–26 (glava »Leto 18_87« na str. 15; leto 1888 se
+ * začne na str. 26 po row 106 z velikimi ciframi »1 8 8 8«): vsi vpisi z
+ * Griblji = 20 vpisov / 19 različnih hiš (2, 15, 17, 21, 24, 26 [~], 27,
+ * 31×2, 34, 35, 47, 52→04→15 [~], 55, 61, 62, 63, 65, 66, 78) — NOVI
+ * luknji 47 in 55 (52 izvirno row 78; trojna korekcija); P79 SIDRA hiša 61
+ * re-verificirana (row 28, oče zdaj »Miko Požek« [~]) in hiša 78 P82 RE-READ
+ * KOREKCIJA (P79 je prebral »75« — izrez: dve zaprti zanki = 8, isti vzorec
+ * forenzike kot P80 3-vs-5); NEZAKONSKI vpisi 2
+ * (52, 55 — očeta stolpec prazen); ANOMALIJA row 93 (žensko ime v očetovem
+ * stolpcu); trije duhovniki 1887 (Griebel [~] 14×, Dovgan, »Jos. Povmij« [~]);
+ * babica Marija Brinec 9×. Dokaz: research/issue17/parish-baptism-1887.json;
+ * verifikator: scripts/p82_parish_baptism_1887.py --check (I1–I10).
  */
 export interface HouseVital {
   houseNo: string;
@@ -231,24 +244,29 @@ export const HOUSE_VITALS: HouseVital[] = [
     status: "DOCUMENTED",
   },
   // ——— P79 sidro 1887 (isti postopek, dodatni dokaz) ———
+  // ——— P79 sidro (verifikacija obstoječega zapisa hiše »75«); P82 RE-READ
+  // KOREKCIJA: hiša 78, ne 75 — izrez Kurrent: dve zaprti zanki = 8 (ist
+  // vzorec kot P80 forenzika 3 vs 5); starši/otrok/datum == P79 branje ———
   {
-    houseNo: "75",
+    houseNo: "78",
     bookSignature: "04105",
     year: 1887,
     scan: 20,
     page: 19,
-    whatSi: "krščen Janez (16. 4.) — oče Janez Jakobič? [~] ½ zemg., mati Marija roj. Stubler",
-    whatEn: "baptized Janez (Apr 16) — father Janez Jakobič? [~] half-farmer, mother Marija née Stubler",
+    whatSi: "krščen Janez (16. 4.) — oče Janez Jakobič ½ zemg., mati Marija roj. Stubler; botra Miha Brodnec [~] + Marija Jakobič [~]; hišna št. 78 (P82 RE-READ: ne 75 — izrez: dve zaprti zanki = 8)",
+    whatEn: "baptized Janez (Apr 16) — father Janez Jakobič half-farmer, mother Marija née Stubler; godparents Miha Brodnec [~] + Marija Jakobič [~]; house no. 78 (P82 RE-READ: not 75 — the crop: two closed loops = 8)",
     status: "DOCUMENTED",
   },
-  // ——— pred P79 (hiša 61; P79 ponovno prebral in potrdil sken 20) ———
+  // ——— pred P79 (hiša 61; P79 ponovno prebral in potrdil sken 20; P82 izrez:
+  // oče = »Miko Požek« [~] — prej branje »Miha P.—« ohranjeno kot zgodovina) ———
   {
     houseNo: "61",
     bookSignature: "04105",
     year: 1887,
     scan: 20,
-    whatSi: "krščena Katarina — oče Miha P.— (priimek v Kurrentu negotovo: P—žar/P—žt)",
-    whatEn: "baptized Katarina — father Miha P.— (surname in Kurrent uncertain)",
+    page: 19,
+    whatSi: "krščena Katarina (31. 4. [sic]) — oče Miha P.— (priimek v Kurrentu negotovo: P—žar/P—žt; P82 izrez: Miko Požek [~]), mati Bara roj. Filath [~]; botra Matija Meh + Ana Pezdirc",
+    whatEn: "baptized Katarina (Apr 31 [sic]) — father Miha P.— (surname in Kurrent uncertain; P82 crop: Miko Požek [~]), mother Bara née Filath [~]; godparents Matija Meh + Ana Pezdirc",
     status: "DOCUMENTED",
   },
   {
@@ -523,6 +541,189 @@ export const HOUSE_VITALS: HouseVital[] = [
     page: 65,
     whatSi: "poroka (6. 2. 1887, vpis 4) — ženin Johann Šambie [~], Leinweber, 23, GRIBLJE 15 × Maria Brinec [~], 26, GRIBLJE 29 (starši: Mathias Brinec + Maria née Miletch [~] — družina umrlih otrok hiše 29); sidro",
     whatEn: "marriage (Feb 6, 1887, entry 4) — groom Johann Šambie [~], linen weaver, 23, GRIBLJE 15 × Maria Brinec [~], 26, GRIBLJE 29 (parents: Mathias Brinec + Maria née Miletch [~] — the family of the house-29 dead children); anchor",
+    status: "DOCUMENTED",
+  },
+  // ——— P82 razširitev: KRSTNA KNJIGA 04105 — polno leto 1887 (skeni 16–27 ==
+  // strani 15–26; glava »Leto 18_87« na str. 15; leto 1888 se začne na str. 26
+  // po row 106 z velikimi ciframi »1 8 8 8«) — vsi vpisi z Griblji (20) ———
+  {
+    houseNo: "63",
+    bookSignature: "04105",
+    year: 1887,
+    scan: 17,
+    page: 16,
+    whatSi: "krščena Katarina (20./21. 1.) — oče Nikolaj Prižan [~] ½ zemlj., mati Barbara roj. Pezdirec [~]; botra Matve Pezdirec + Barbara Brodarič [~]",
+    whatEn: "baptized Katarina (Jan 20/21) — father Nikolaj Prižan [~] half-farmer, mother Barbara née Pezdirec [~]; godparents Matve Pezdirec + Barbara Brodarič [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "26",
+    bookSignature: "04105",
+    year: 1887,
+    scan: 17,
+    page: 16,
+    whatSi: "krščena Marija (1./3. 3.) — oče Jurc Briuc [~] (ali Brine) ¼ zemlj., mati Katarina roj. Jakobič; hišna št. 26 [~] (isti kodrasti 2 kot hiša 2 na str. 24)",
+    whatEn: "baptized Marija (Mar 1/3) — father Jurc Briuc [~] (or Brine) quarter-farmer, mother Katarina née Jakobič; house no. 26 [~] (the same curly 2 as house 2 on p. 24)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "62",
+    bookSignature: "04105",
+    year: 1887,
+    scan: 21,
+    page: 20,
+    whatSi: "krščena Marjeta (13. 5.) — oče Anton Kure [~] ½ zemlj., mati Barbara roj. Hrižan [~]; botra Matija Milek + Bara Brodarič [~]; poznejši pripis: umrla 4. 7. 1958",
+    whatEn: "baptized Marjeta (May 13) — father Anton Kure [~] half-farmer, mother Barbara née Hrižan [~]; godparents Matija Milek + Bara Brodarič [~]; later note: died Jul 4, 1958",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "27",
+    bookSignature: "04105",
+    year: 1887,
+    scan: 23,
+    page: 22,
+    whatSi: "krščena Katarina (20. 7.) — oče Janez Kukar [~] (ali Kuhar) ½ zemljašt., mati Katarina Klobučar [~]; botra Janez Požek + Marija Anie [~]",
+    whatEn: "baptized Katarina (Jul 20) — father Janez Kukar [~] (or Kuhar) half-smallholder, mother Katarina Klobučar [~]; godparents Janez Požek + Marija Anie [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "31",
+    bookSignature: "04105",
+    year: 1887,
+    scan: 23,
+    page: 22,
+    whatSi: "krščena Ana (1./2. 8.) — oče Matija Urh [~] ½ zemljašt., mati Marija Brodarič; botra Jurij Pezdirc + Ana Hrižan [~]; drugi vpis na hiši 31 v 1887 (mrliška 1886: Katarina Marh — P80)",
+    whatEn: "baptized Ana (Aug 1/2) — father Matija Urh [~] half-smallholder, mother Marija Brodarič; godparents Jurij Pezdirc + Ana Hrižan [~]; the second entry at house 31 in 1887 (death register 1886: Katarina Marh — P80)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "66",
+    bookSignature: "04105",
+    year: 1887,
+    scan: 24,
+    page: 23,
+    whatSi: "krščena Ana (2. 9.) — oče Janez Hrižan ¼ zemlj., mati Katarina Milek [~]; botra Janez Brinec + Katarina Pezdirc [~]; babica Marija Brinec; poznejši pripis: umrla 7. 5. 1957 [~]",
+    whatEn: "baptized Ana (Sep 2) — father Janez Hrižan quarter-farmer, mother Katarina Milek [~]; godparents Janez Brinec + Katarina Pezdirc [~]; midwife Marija Brinec; later note: died May 7, 1957 [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "31",
+    bookSignature: "04105",
+    year: 1887,
+    scan: 24,
+    page: 23,
+    whatSi: "krščen Janez (6. 9.) — oče Martin Papič [~] ½ zemljašt., mati Margaretha Straus; botra Marko Klobučar + Marija Jakobič [~]; babica Marija Brinec; drugi vpis na hiši 31 v 1887",
+    whatEn: "baptized Janez (Sep 6) — father Martin Papič [~] half-smallholder, mother Margaretha Straus; godparents Marko Klobučar + Marija Jakobič [~]; midwife Marija Brinec; the second entry at house 31 in 1887",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "65",
+    bookSignature: "04105",
+    year: 1887,
+    scan: 25,
+    page: 24,
+    whatSi: "krščena Katarina (25. 9.) — oče Matija Milek ½ zemljašt., mati Katarina Požek; botra Peter Pezdirc + Barbara Adlešič; babica Marija Brinec",
+    whatEn: "baptized Katarina (Sep 25) — father Matija Milek half-smallholder, mother Katarina Požek; godparents Peter Pezdirc + Barbara Adlešič; midwife Marija Brinec",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "2",
+    bookSignature: "04105",
+    year: 1887,
+    scan: 25,
+    page: 24,
+    whatSi: "krščen Nikolaj (3./4. 10.) — oče Peter Hlebec ¼ zemljašt., mati Ana Jakobič; botra Janez Klobučar + Katarina Zumri [~]; babica Marija Brinec; pripisa: umrl 4. 9. 1961 v Gribljah št. 2 + poročen 18. 5. 1919",
+    whatEn: "baptized Nikolaj (Oct 3/4) — father Peter Hlebec quarter-smallholder, mother Ana Jakobič; godparents Janez Klobučar + Katarina Zumri [~]; midwife Marija Brinec; notes: died Sep 4, 1961 in Griblje no. 2 + married May 18, 1919",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "52",
+    bookSignature: "04105",
+    year: 1887,
+    scan: 25,
+    page: 24,
+    whatSi: "krščena Terezija (12. 10.) — očeta stolpec PRAZEN (nezakonska), mati Marija Muc [~]; TROJNA KOREKCIJA hišne št. 52 → 04 → 15 [~] (izvirno 52 v luknji, končna 15 v naboru — obe klasifikaciji); botra Janez Jakobič + Katarina Kure [~]; babica Marija Filath [~]",
+    whatEn: "baptized Terezija (Oct 12) — father's column EMPTY (illegitimate), mother Marija Muc [~]; TRIPLE CORRECTION of house no. 52 → 04 → 15 [~] (the original 52 in the gap, the final 15 in the set — both classifications); godparents Janez Jakobič + Katarina Kure [~]; midwife Marija Filath [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "55",
+    bookSignature: "04105",
+    year: 1887,
+    scan: 25,
+    page: 24,
+    whatSi: "krščena Eva (13./14. 10.) — očeta stolpec PRAZEN (nezakonska), mati Ana Smič [~] ¼ zemlj.; botra Janez Vrbiščar [~] + Marg. Pezolivec [~]; hiša 55 v PT luknji 41–60 (nova luknja)",
+    whatEn: "baptized Eva (Oct 13/14) — father's column EMPTY (illegitimate), mother Ana Smič [~] quarter-farmer; godparents Janez Vrbiščar [~] + Marg. Pezolivec [~]; house 55 in the PT 41–60 gap (a new gap house)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "17",
+    bookSignature: "04105",
+    year: 1887,
+    scan: 25,
+    page: 24,
+    whatSi: "krščen Jožef (14./15. 10.) — oče Janez Kralj ¼ zemlj., mati Ana Jakobič; botra Janez Pezdirc + Marija Jakofčič; babica Marija Brinec",
+    whatEn: "baptized Jožef (Oct 14/15) — father Janez Kralj quarter-farmer, mother Ana Jakobič; godparents Janez Pezdirc + Marija Jakofčič; midwife Marija Brinec",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "34",
+    bookSignature: "04105",
+    year: 1887,
+    scan: 26,
+    page: 25,
+    whatSi: "krščen Janez (1./2. 11.) — oče Janez Šimec ½ zemlj., mati Ana Šmucelj [~]; botra Anton Brodarič [~] + Barbara Lozar; modri pripisi 20. st.",
+    whatEn: "baptized Janez (Nov 1/2) — father Janez Šimec half-farmer, mother Ana Šmucelj [~]; godparents Anton Brodarič [~] + Barbara Lozar; blue 20th-century notes",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "15",
+    bookSignature: "04105",
+    year: 1887,
+    scan: 26,
+    page: 25,
+    whatSi: "krščena Marija (7./8. 11.) — oče Janez Jakšič [~] ½ zemlj., mati Marija Brinec; botra Janez Adlešič [~] + Katarina Klobučar [~]; babica Marija Brinec; pripis »+ ½ 88«(?) [~]",
+    whatEn: "baptized Marija (Nov 7/8) — father Janez Jakšič [~] half-farmer, mother Marija Brinec; godparents Janez Adlešič [~] + Katarina Klobučar [~]; midwife Marija Brinec; note »+ ½ 88«(?) [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "35",
+    bookSignature: "04105",
+    year: 1887,
+    scan: 26,
+    page: 25,
+    whatSi: "krščen Janez (18. 11.) — ANOMALIJA ZAPISA: v očetovem stolpcu »Marija Hrižan ½ zemljašt.«, v materinem »Ana Požek« [~] (možno mati Marija Hrižan roj. Požek); botra prazna; pripis »+ ½ 93« [~]",
+    whatEn: "baptized Janez (Nov 18) — RECORDING ANOMALY: the father's column holds »Marija Hrižan ½ zemljašt.«, the mother's »Ana Požek« [~] (possibly mother Marija Hrižan née Požek, split across columns); godparents empty; note »+ ½ 93« [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "47",
+    bookSignature: "04105",
+    year: 1887,
+    scan: 26,
+    page: 25,
+    whatSi: "krščena Barbara (18. 11.) — oče Peter Klobučar [~] ½ zemljašt., mati Marija Filath [~]; botra Janez Lasič + Katarina Straus; babica Marija Brinec; hiša 47 v PT luknji 41–60 (nova luknja)",
+    whatEn: "baptized Barbara (Nov 18) — father Peter Klobučar [~] half-smallholder, mother Marija Filath [~]; godparents Janez Lasič + Katarina Straus; midwife Marija Brinec; house 47 in the PT 41–60 gap (a new gap house)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "21",
+    bookSignature: "04105",
+    year: 1887,
+    scan: 27,
+    page: 26,
+    whatSi: "krščen Nikolaj (18. 12.) — oče Janez Požek ½ zemlj., mati Marija Brinec; botra Anton Brodarič [~] + Katarina Kuhtar [~]; babica Marija Brinec; pripis »+ 4/6. …« [~]",
+    whatEn: "baptized Nikolaj (Dec 18) — father Janez Požek half-farmer, mother Marija Brinec; godparents Anton Brodarič [~] + Katarina Kuhtar [~]; midwife Marija Brinec; note »+ 4/6. …« [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "24",
+    bookSignature: "04105",
+    year: 1887,
+    scan: 27,
+    page: 26,
+    whatSi: "krščena Marija (29. 12.) — oče Matija Brinec ½ zemljašt., mati Barbara Jakobec [~]; botra Peter Pezdirc [~] + Marija Milek [~]; babica Marija Brinec",
+    whatEn: "baptized Marija (Dec 29) — father Matija Brinec half-smallholder, mother Barbara Jakobec [~]; godparents Peter Pezdirc [~] + Marija Milek [~]; midwife Marija Brinec",
     status: "DOCUMENTED",
   },
 ];
