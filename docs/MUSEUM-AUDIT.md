@@ -3468,3 +3468,90 @@ zapisani.
 
 **v7 runtime join NESPREMENJEN** (sha256 4bb40370…). Veriga `p60–p67 +
 p70–p79 --check` PASS; tsc 0; ESLint 0.
+
+## §57 — P80: župnija Podzemelj — razširitev vzorca na mrliško in poročno knjigo (issue #18) — 2026-10-16
+
+**Sprožilec:** owner ukaz »nadaljuj« — P79 nextSteps: »razširitev vzorca:
+poročne in mrliške knjige za rojstva/poroke/smrti istih hiš« (isti vzorec
+kriterijev kot P79: okvir 1886 v obeh knjigah + sidra čez leta).
+
+**Vira:** Matricula Online, **mrliška knjiga 04894** (1886–1924, 256 skenov)
+in **poročna knjiga 04455** (1873–1922, 192 skenov), Nadškofijski arhiv
+Ljubljana, župnija Podzemelj — obe knjigi že v PARISH_BOOKS (issue #6).
+Prosto dostopni; slike prek base64-kodiranih URL-jev v JSON `files`.
+
+**Metoda (paleografska faza + deterministična verifikacija):**
+- **mrliški okvir 1886:** skeni 2–6 == tiskane strani 1–5 == celotno leto
+  1886 (46 vrstic; **stran == sken − 1**; leto 1887 se začne NA STRANI 5
+  pri prelomu »Januarj 1887« — zadnji gribeljski vpis 1886 je Katarina
+  vdova Podec hiša 69 (11. 12.), prvi vpis 1887 Matija Šproch hiša 44,
+  1. 1.) — **13 Griblje vpisov / 11 hiš** (5 · 13 · 15 · 16 · 29×3 · 31 ·
+  59 · 69 · 71 · 74 · 88) **+ sidro 1887** (sken 6: hiša 44 — prvi vpis
+  leta, dokaz preloma; hiša 36 — Ana Šimec neza., povezava z materjo
+  Barbaro Šimec iz krsta Jun 1886);
+- **poročni okvir 1886:** skeni 61–65 == Pag. 60–64 (vpisi 1–24; **Pag. ==
+  sken − 1 v zveznem razponu 61–66**; ročno številčenje Pag. ni zvezno skozi
+  celo knjigo — sken 50 == Pag. 44, vendar 61–66 == 60–65; okvir uporablja
+  le zvezni razpon) — **7 Griblje vpisov / 10 hiš** (31 · 36 · 60 · 63 ·
+  15 · 25 · 71) **+ sidra** (Nov 1885 sken 61: hiša 13 ženin Janez Jakobič,
+  starši == pari krsta hiše 13 Nov 1886; Nov 1882 sken 50 Pag. 44: hiša 36
+  Mathias Križan = oče krsta Dec 1886; 1887 sken 66: hiša 71 Mathias
+  Straus + hiša 15/29 Johann Šambie × Maria Brinec);
+- branje: skeni prenešeni v delovni imenik (NI v repu); Kurrent z [~];
+  hišna številka 23. 5. 1886 verificirana z **izrezom števk** (Kurrent 3 vs
+  5: glajena zgornja krivulja + zaprta zanka = 5) → **hiša 59, ne 39**;
+- deterministična verifikacija: `scripts/p80_parish_md_books.py`
+  (**I1–I10**, `--check` PASS): knjigi HTTP 200 (inventarja 256 + 192),
+  citirani skeni 13/13 JPEG 200, okviri/sidra, obdobja knjig == PARISH_BOOKS,
+  PT usklajenost celotnega vzorca (branje chain-full-pt-ps.json), križne
+  povezave, P80 re-read, celovitost polj.
+
+**Rezultat — skupaj s krstno (P79): 41 vpisov / 25 različnih hiš** (nad
+merili issue #18 — vzorec 5 hiš; doseženo 25).
+
+**Ugotovitve:**
+1. **Križne povezave treh virov:** hiše **13**, **36** in **71**
+   dokumentirane v VSEH treh knjigah (krstna 04105 + mrliška 04894 +
+   poročna 04455): 13 = Jakopič/Podlirc (krst == starši ženina 1885 ==
+   smrt otroka 1886); 36 = Šimec/Križan (2 poroki 1882/1886 + krsta 2× +
+   smrt 1887); 71 = Strauš (krst + smrt vdove + 2 poroki — priimek Strauš
+   v vseh treh knjigah).
+2. **Dokaz epidemije — hiša 29:** trije otroci (Janez 8, Katarina 9, Ana
+   11 — priimek Mileh [~]) umrli v 4 dneh (10.–13. 10. 1886) z istim
+   vzrokom »Kolera i. morbas« [~]; februarja 1887 se na isti hiši poroki
+   Maria Brinec, katere mati je roj. Miletch [~] — veriga družine.
+3. **P80 RE-READ KOREKCIJA P79:** hiša 56 mati = **»Dora roj. Perdinec«**
+   (prvotno P79 branje »Podžire« NAPAČNO) — dokaz: poročna 04455 sk. 62
+   vpis 4/1886 (Johann Šimec × Dorothea Perdinec = isti par kot krst Nov
+   1886 hiše 56); izrez krstne celice kaže »P—dirc« (drugo/tretje malo
+   pismo = e, ne o).
+4. **PT klasifikacija celotnega vzorca 25 hiš:** **19 v naboru PT 1825
+   (1–40 + 61–99) + 6 v luknji 41–60** (44, 54, 56, 57, 59, 60) — hiši 59
+   (mrliška) in 60 (poročna) sta NOVA dokaza luknje v dodatnih knjigah;
+   številčna usklajenost ≠ identiteta stavbe (opozorilo PUA/PT ostaja).
+5. **Dva duhovnika 1886:** kapljan Andrej Griebel/Glibelj [~] (gribeljski
+   vpisi) in župnik Franjo Dovgan (ostale vasi); zavzet podpis »Griebel«
+   ne sme biti povezan z vasjo Griblje brez dodatnih virov [~].
+
+**Integracija:** `parish.ts` HOUSE_VITALS 15 → **41** (mrliška 15 + poročna
+11 + krstna 15; vsi DOCUMENTED; komentar P80; re-read hiša 56); **qa.ts →
+qa-parish.ts izvleček** (telo runQA je preseglo prag TS control flow
+analysis; kontrole bajtno enake, vzorec ločevanja modulov) + nova kontrola
+`qa-p80-parish-md-books` (celovit runtime preracun iz HOUSE_VITALS ×
+PARISH_BOOKS + pini okvirjev in PT klasifikacije 19/6; dve obliki
+repo/produkcija po P53/P57/P58) — QA 80 → **81/81**; `atlas.ts`
+checkIntegrity **sanitacija regresije P79**: hiše v PT luknji 41–60 (44,
+54, 56, 57, 59, 60) ZAKONITO ne obstajajo v ATLAS_HOUSES (PT 1825 nabor =
+1–40 + 61–99; luknja = dokaz številčne evolucije) — kontrola jih
+klasificira namesto da bi jih zavrnila, vse ostale neznane številke
+ostanejo napaka; kartica NI dodana (vzorec P77/P79).
+
+**Poštenost:** prepis je VZOREC (okvir 1886 mrliške + poročne + sidra), ne
+celotni knjigi (256 + 192 skenov). Kurrent branja imen nosijo [~]; hišne
+številke preverjene z izrezi (hiša 59: izrecna primerjava števk 3 vs 5).
+Nemški poklicni izrazi (Gasthausmeister, Leinweber, Dienstmagd …) dobri
+kandidati za uredniški prevod. Številčna usklajenost s PT je OBSERVACIJA,
+ne dokaz istovetnosti stavbe (povezava prek lastniških imen ostaja odprta).
+
+**v7 runtime join NESPREMENJEN** (891/879; disciplina I9). Veriga `p60–p67
++ p70–p80 --check` PASS; tsc 0; ESLint 0; /api/qa dev 81/81 (qa-p80 True).

@@ -828,12 +828,22 @@ export function checkIntegrity(): IntegrityReport {
   });
 
   // 11. hišni vpisi iz matrik se nanašajo na obstoječe hiše (issue #6)
+  //     P80 sanitacija regresije P79: hiše v PT luknji 41–60 (44, 54, 56, 57, 59, 60)
+  //     ZAKONITO ne obstajajo v ATLAS_HOUSES (PT 1825 nabor = 1–40 + 61–99;
+  //     luknja = dokaz številčne evolucije, P79/P80) — kontrola jih klasificira
+  //     namesto da bi jih zavrnila; vse ostale neznane številke ostanejo napaka
   const housesNoSet = new Set(ATLAS_HOUSES.filter((h) => h.no !== "—").map((h) => h.no));
-  const vitalsOk = HOUSE_VITALS.every((v) => housesNoSet.has(v.houseNo) && PARISH_BOOKS.some((b) => b.signature === v.bookSignature));
+  const ptGapHouses = HOUSE_VITALS.filter((v) => !housesNoSet.has(v.houseNo)).map((v) => v.houseNo);
+  const PT_GAP_KNOWN = new Set(["44", "54", "56", "57", "59", "60"]);
+  const vitalsOk = HOUSE_VITALS.every(
+    (v) =>
+      (housesNoSet.has(v.houseNo) || PT_GAP_KNOWN.has(v.houseNo)) &&
+      PARISH_BOOKS.some((b) => b.signature === v.bookSignature),
+  );
   checks.push({
     name: "matrični vpisi → obstoječe hiše in knjige (issue #6)",
     pass: vitalsOk,
-    detail: `${HOUSE_VITALS.length} vpisov; vsi se nanašajo na hiše PT in knjige ${[...new Set(HOUSE_VITALS.map((v) => v.bookSignature))].join(", ")}`,
+    detail: `${HOUSE_VITALS.length} vpisov; vsi se nanašajo na hiše PT ali dokumentirano luknjo 41–60 (izven nabora: ${ptGapHouses.join(", ") || "—"}) in knjige ${[...new Set(HOUSE_VITALS.map((v) => v.bookSignature))].join(", ")}`,
   });
 
   return { ok: checks.every((c) => c.pass), checks };
