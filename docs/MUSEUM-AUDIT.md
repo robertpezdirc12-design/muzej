@@ -3555,3 +3555,74 @@ ne dokaz istovetnosti stavbe (povezava prek lastniških imen ostaja odprta).
 
 **v7 runtime join NESPREMENJEN** (891/879; disciplina I9). Veriga `p60–p67
 + p70–p80 --check` PASS; tsc 0; ESLint 0; /api/qa dev 81/81 (qa-p80 True).
+
+
+## §58 — P81: župnija Podzemelj — povezava lastniških imen 1825 (PT/PUA) ↔ matrični priimki 1886 (issue #18) — 2026-10-16
+
+**Sprožilec:** owner ukaz »nadaljuj« — P80 nextSteps: povezava vzorca P79/P80
+(25 hiš) z lastniki 1825 na IMENSKI ravni — test ali številčna usklajenost s
+PT/PUA nosi tudi imensko kontinuiteto (odprto vprašanje issue #18 od P56).
+
+**Vesolje 1825 (232 imen, trije sloji):** PT 84 hišnih lastnikov iz
+`research/issue13/chain-full-pt-ps.json` [pin, repo-verificiran I3] + PUA 101
+vrstic str. 3–49 (`PUA_CONTINUATION`, bundle) + ATLAS 26 lastnikov str. A–B
+(`ATLAS_OWNERS`, bundle); **vzorec 1886:** 25 hiš P79/P80 (19 v naboru PT
+1–40 + 61–99, 6 v luknji 41–60), 40 različnih gospodinjskih priimkov.
+
+**Metoda (deterministična, brez AI ob delovanju):** normalizacija pass1
+(male črke + de-diacritika) in pass2 (+ nemška Kurrent Schreibung sch→s);
+Levenshtein razmerje 1 − d/max; **prag priče ≥ 0.72** (ponovna uporaba praga
+P43 W-most); kratki priimki < 5 znakov LE natančna enakost žetona; žetoni
+imen ≥ 4 znake (unija obeh passov); **stoplist krstnih imen** (Gregor, Johann
+itn. — brez nje bi priimek Gregorič lažno ujel krstno ime Gregor 0.75) +
+uredniški žetoni (rokopis/alternative); sorted tie-break. Trojni determinizem:
+Python skripta ↔ TS `name-matcher.ts` ↔ QA runtime; izvedba neodvisna od
+packa (istovetnost verificirana).
+
+**Rezultati (NAME-LINKAGE-PACK):**
+1. **ISTO-HIŠNA kontinuiteta vs PT 1825: 0/19 (NIL-CLAIM)** — pri VSEH hiš z
+   PT lastnikom je 1886 gospodinjski priimek različen od 1825 lastnika (prag
+   0.72); gospodinjska zamenjava na ravni hišnih števil ALI divergenca
+   prepisa [~].
+2. **Isto-hišne ujeme po PUA lastnem številčenju: 2** — hiša 36 Križan ↔ PUA
+   Krischan @36 (0.8333 via sch→s) in hiša 71 Straus ↔ PUA Strauß Niklo @71
+   (0.8571) — PUA ≠ PT številčenje, zato usklajenost dveh sistemov, NE dokaz
+   istovetnosti stavbe.
+3. **CENZUS priimkov: 10/38 eligible (26.32 %) ima pričo 1825** — Dragoš=1.0,
+   Filak=1.0 (PT 69/71 + PUA Fillah), Stubler=1.0, Šimec=1.0 (najtrajnejša:
+   PUA 5 zapisov + ATLAS 5 → 1886 hiše 36/39/56/88), Šimer=1.0 [~],
+   Strauš/Straus=0.8571, Brinec=0.8333 [~] (PUA @43 — št. V LUKNJANI 41–60),
+   Filatk=0.8333 [~], Križan=0.8333; preživetje na ravni PRIIMKA, ne hiše;
+   17 priimkov brez priče (Meh, Muc izključena po dolžinskem pravilu).
+4. **NEAR-MISS pas [0.55, 0.72): 11 priimkov** (Gilatk 0.667, Mileh/Milavec ~
+   Milleg, Stupanič ~ Stepanitsch, Šilah ~ Fillah, Klepec ~ Kleppetz, Poddirec
+   ~ Poldiŕg …) — poročano, NE šteto kot priče.
+5. **Luknja 41–60:** PUA ohranja 16 vrstic v območju (P4); 0 isto-številnih
+   ujem ≥ 0.72 z 1886 (najbližje @56 Schumetz vs Šimec 0.667 [~]).
+6. **Tri-virske hiše 13/36/71: 0/3 isto-hišnih imenskih ujem z 1825** —
+   niti najmočnejše križne povezave P80 nimajo imenske kontinuitete na isti
+   hišni številki 60 let kasneje.
+
+**Implikacija za issue #18:** imenska raven POTRJUJE opozorilo — številčna
+usklajenost ≠ identiteta stavbe ≠ identiteta družine; most zahteva per-hišne
+kronološke verige (poln prepis po letih = lastniška prioriteta).
+
+**Integracija:** runtime `src/data/atlas/parish-name-linkage.json` (bajtna
+projekcija dokaza) + `src/lib/name-matcher.ts` (zrcalna TS izvedba — P81
+prag/token/stoplist; vsaka sprememba zrcaljena v Python, I5) + nova kontrola
+`qa-p81-parish-name-linkage` v `qa-parish.ts` (82. kontrola; celoven
+neodvisen preracun: isto-hiša PT/ATLAS/PUA + cenzus + PUA 41–60 + 57 sidr
+src==parish proti bundled `parish.ts`; preostala 4 sidra — 1 p80 + 3 p79 —
+verificirana le v repo skripti, produkcija ne bere research/; dve obliki
+repo/produkcija po P53/P57/P58) — QA 81 → **82/82**; kartica NI dodana
+(vzorec P77/P79/P80).
+
+**Poštenost:** paket MERI, NE odloča. Ujemanje priimkov je hevristika z
+merjenimi razmerji: prag 0.72 nekonservativen za Kurrent [~]; kratki priimki
+(Meh, Muc) izključeni iz cenza; dvoumni vpisi izključeni (hiša 61 oče »Miha
+P.—«/»Miko Jože H.?«; nevestini starši @31 Straus/Stabek — bivališče
+nečitljivo); PUA/ATLAS številčenja ≠ PT številčenje [~] — isto-hišne ujeme
+2 sta usklajenost sistemov, ne dokaz.
+
+**v7 runtime join NESPREMENJEN** (891/879; disciplina I9). Veriga `p60–p67
++ p70–p81 --check` PASS; tsc 0; ESLint 0; /api/qa dev 82/82 (qa-p81 True).

@@ -7,6 +7,15 @@
 // --check (I1–I10). Produkcija ne bere research/ (P53/P57/P58) — pini živijo tu.
 
 import { HOUSE_VITALS, PARISH_BOOKS } from "@/data/atlas/parish";
+import { PUA_CONTINUATION } from "@/data/atlas/research";
+import { ATLAS_OWNERS } from "@/data/atlas/model";
+import namePack from "@/data/atlas/parish-name-linkage.json";
+import {
+  P81_THRESHOLD,
+  P81_NEAR_MISS,
+  p81BestMatch,
+  p81Norm,
+} from "@/lib/name-matcher";
 
 type Push = (id: string, nameSi: string, nameEn: string, pass: boolean, detail: string) => void;
 
@@ -141,6 +150,196 @@ push(
   p80Errors.length === 0
     ? `mrliška 15 vpisov / 11 hiš (1886 okvir 13, skeni 2–6, stran == sken−1; sidro 1887 sken 6 ×2) · poročna 11 vpisov / 10 hiš (1886 okvir 7, skeni 61–65; sidra 1882 sk.50 · 1885 sk.61 · 1887 sk.66 ×2) · 25 hiš skupaj: 19 nabor + 6 luknja (44/54/56/57/59/60) · tri-virske 13/36/71 · re-read hiša 56 Perdinec · hiša 29 epidemija 3 otroci`
     : p80Errors.join("; "),
+);
+
+// ——— qa-p81: povezava lastniških imen 1825 (PT/PUA) ↔ matrični priimki 1886
+//      (issue #18; NAME-LINKAGE-PACK; celoven neodvisen preracun ujemanja iz
+//      bundled virov: pack runtime + PUA_CONTINUATION + ATLAS_OWNERS +
+//      HOUSE_VITALS; PT lastniki iz pack.universe1825 = pini, ki jih repo
+//      skripta p81 --check verificira proti chain-full-pt-ps.json (I3);
+//      anchors src=="parish" verificirani tukaj (bundled parish.ts), src
+//      p79/p80 pa samo v repo skripti — produkcija ne bere research/) ———
+const p81Errors: string[] = [];
+const P81_PT_GAP = ["44", "54", "56", "57", "59", "60"];
+type P81NameRec = { src: string; loc: string; house: string | string[]; name: string };
+// vesolje 1825: PUA + ATLAS (bundle, neodvisno) + chain iz packa (pin, repo-verificiran)
+const p81Universe: P81NameRec[] = [
+  ...namePack.universe1825.names
+    .filter((n) => n.src === "chain")
+    .map((n) => ({ src: n.src, loc: n.loc, house: n.house as string | string[], name: n.name })),
+  ...PUA_CONTINUATION.rows.map((r) => ({
+    src: "pua",
+    loc: `p${r.page}r${r.row}`,
+    house: (r.houseNos ?? []) as string[],
+    name: r.nameAsWritten,
+  })),
+  ...ATLAS_OWNERS.map((o) => ({
+    src: "atlas",
+    loc: o.id,
+    house: o.houseRefs as string[],
+    name: o.nameAsWritten,
+  })),
+];
+if (p81Universe.length !== namePack.universe1825.totalNames)
+  p81Errors.push(`vesolje 1825 ≠ ${namePack.universe1825.totalNames} (${p81Universe.length}; chain pin + PUA ${PUA_CONTINUATION.rows.length} + ATLAS ${ATLAS_OWNERS.length})`);
+// pack struktura: 25 hiš, 19 nabor / 6 luknja, PT owner == pin (luknja hiše brez)
+const p81Houses = namePack.houses as Array<{
+  houseNo: string;
+  ptIn1825: boolean;
+  ptOwner1825: string | null;
+  sameHouse: { pt: Record<string, unknown> | null; atlas: Record<string, unknown> | null; pua: Record<string, unknown> | null };
+  parish1886: Array<{ surname: string; role: string; anchor: string; src: string; anchorHouse?: string }>;
+  surnameWitnesses: Array<{ surname: string; best: number | null; witnesses: Array<{ src: string; loc: string; score: number }>; nearMisses: Array<{ src: string; loc: string; score: number }>; survives: boolean }>;
+  surnameSurvives: boolean;
+  sameNumberAny: boolean;
+}>;
+if (p81Houses.length !== 25) p81Errors.push(`pack hiš ≠ 25 (${p81Houses.length})`);
+const p81InNabor = p81Houses.filter((h) => h.ptIn1825);
+const p81Gap = p81Houses.filter((h) => !h.ptIn1825);
+if (p81InNabor.length !== 19 || p81Gap.length !== 6)
+  p81Errors.push(`PT klasifikacija ≠ 19/6 (${p81InNabor.length}/${p81Gap.length})`);
+if (p81Gap.some((h) => !P81_PT_GAP.includes(h.houseNo)) || p81Gap.length !== new Set(p81Gap.map((h) => h.houseNo)).size)
+  p81Errors.push("luknjane hiše ≠ {44, 54, 56, 57, 59, 60}");
+if (p81Gap.some((h) => h.ptOwner1825 !== null) || p81InNabor.some((h) => !h.ptOwner1825))
+  p81Errors.push("ptOwner1825 == null samo za luknjane hiše (in obratno)");
+// NEODVISEN preracun: isto-hiša (PT/ATLAS/PUA, ≥ prag) == pack.sameHouse
+const near = (a: number, b: number) => Math.abs(a - b) <= 1e-4;
+let p81SameAny = 0;
+let p81SamePT = 0;
+for (const h of p81Houses) {
+  const surnames = [...new Set(h.parish1886.map((r) => r.surname))].sort();
+  const bestOf = (nm: string) => {
+    let best: { surname: string; score: number } | null = null;
+    for (const s of surnames) {
+      const m = p81BestMatch(s, nm);
+      if (m && m.score >= P81_THRESHOLD && (!best || m.score > best.score)) best = { surname: s, score: m.score };
+    }
+    return best;
+  };
+  const recs: Array<"pt" | "atlas" | "pua"> = [];
+  if (h.ptOwner1825) {
+    const b = bestOf(h.ptOwner1825);
+    const e = h.sameHouse.pt as { surname?: string; score?: number } | null;
+    if ((b === null) !== (e === null)) p81Errors.push(`isto-hiša PT hiša ${h.houseNo}: prisotnost ≠ pack`);
+    if (b && e && (b.surname !== e.surname || !near(b.score, e.score ?? -1)))
+      p81Errors.push(`isto-hiša PT hiša ${h.houseNo}: ${b.surname}/${b.score} ≠ pack ${e.surname}/${e.score}`);
+    if (b) recs.push("pt");
+  }
+  const atlasHits = ATLAS_OWNERS.filter((o) => o.houseRefs.includes(h.houseNo));
+  let atlasBest: { surname: string; score: number; id: string } | null = null;
+  for (const o of atlasHits) {
+    const b = bestOf(o.nameAsWritten);
+    if (b && (!atlasBest || b.score > atlasBest.score)) atlasBest = { ...b, id: o.id };
+  }
+  const ea = h.sameHouse.atlas as { surname?: string; score?: number; id?: string } | null;
+  if ((atlasBest === null) !== (ea === null)) p81Errors.push(`isto-hiša ATLAS hiša ${h.houseNo}: prisotnost ≠ pack`);
+  if (atlasBest && ea && (atlasBest.surname !== ea.surname || atlasBest.id !== ea.id || !near(atlasBest.score, ea.score ?? -1)))
+    p81Errors.push(`isto-hiša ATLAS hiša ${h.houseNo}: neujema s pack`);
+  if (atlasBest) recs.push("atlas");
+  const puaHits = PUA_CONTINUATION.rows.filter((r) => (r.houseNos ?? []).includes(h.houseNo));
+  let puaBest: { surname: string; score: number; loc: string } | null = null;
+  for (const r of puaHits) {
+    const b = bestOf(r.nameAsWritten);
+    if (b && (!puaBest || b.score > puaBest.score)) puaBest = { ...b, loc: `p${r.page}r${r.row}` };
+  }
+  const ep = h.sameHouse.pua as { surname?: string; score?: number } | null;
+  if ((puaBest === null) !== (ep === null)) p81Errors.push(`isto-hiša PUA hiša ${h.houseNo}: prisotnost ≠ pack`);
+  if (puaBest && ep && (puaBest.surname !== ep.surname || !near(puaBest.score, ep.score ?? -1)))
+    p81Errors.push(`isto-hiša PUA hiša ${h.houseNo}: ${puaBest.surname}/${puaBest.score} ≠ pack ${ep.surname}/${ep.score}`);
+  if (puaBest) recs.push("pua");
+  if (recs.length > 0) p81SameAny += 1;
+  if (recs.includes("pt")) p81SamePT += 1;
+}
+if (p81SameAny !== namePack.stats.sameHouseAnyCount)
+  p81Errors.push(`isto-hišnih ujem ≠ ${namePack.stats.sameHouseAnyCount} (${p81SameAny})`);
+if (p81SamePT !== namePack.stats.sameHousePTCount || p81SamePT !== 0)
+  p81Errors.push(`isto-hišnih PT ujem ≠ 0 (${p81SamePT}) — NIL-CLAIM P81`);
+// NEODVISEN preracun cenza: priče priimkov po vesolju → witnessed seznam == pack
+const p81Eligible = [...new Set(p81Houses.flatMap((h) => h.parish1886.map((r) => r.surname)))]
+  .filter((s) => {
+    for (const german of [false, true]) {
+      const n = p81Norm(s, german);
+      if (n.length >= 4) return true;
+    }
+    return false;
+  })
+  .sort();
+const p81Scores = new Map<string, number>();
+for (const h of p81Houses) {
+  for (const s of new Set(h.parish1886.map((r) => r.surname))) {
+    let best = p81Scores.get(s) ?? 0;
+    for (const u of p81Universe) {
+      const m = p81BestMatch(s, u.name);
+      if (m && m.score > best) best = m.score;
+    }
+    p81Scores.set(s, best);
+  }
+}
+const p81Witnessed = p81Eligible
+  .filter((s) => (p81Scores.get(s) ?? 0) >= P81_THRESHOLD)
+  .sort((a, b) => (p81Scores.get(b) ?? 0) - (p81Scores.get(a) ?? 0) || (a < b ? -1 : a > b ? 1 : 0));
+const p81NearMiss = p81Eligible.filter((s) => (p81Scores.get(s) ?? 0) >= P81_NEAR_MISS && (p81Scores.get(s) ?? 0) < P81_THRESHOLD);
+if (p81Witnessed.length !== namePack.stats.witnessedSurnames)
+  p81Errors.push(`prič prvimkov ≠ ${namePack.stats.witnessedSurnames} (${p81Witnessed.length})`);
+if (p81Witnessed.join("|") !== (namePack.stats.witnessedSurnamesList as string[]).join("|"))
+  p81Errors.push(`seznam prič ≠ pack (${p81Witnessed.join(",")} vs ${(namePack.stats.witnessedSurnamesList as string[]).join(",")})`);
+if (Math.abs(100 * p81Witnessed.length / p81Eligible.length - namePack.stats.witnessedSurnamesPct) > 0.01)
+  p81Errors.push("delež prič ≠ pack");
+for (const s of p81Eligible) {
+  const pk = (namePack.stats.surnameBestScores as Record<string, number>)[s] ?? 0;
+  if (!near(pk, p81Scores.get(s) ?? 0))
+    p81Errors.push(`najboljše razmerje ${s}: ${p81Scores.get(s)} ≠ pack ${pk}`);
+}
+if (p81NearMiss.length !== namePack.stats.nearMissSurnames)
+  p81Errors.push(`near-miss ≠ ${namePack.stats.nearMissSurnames} (${p81NearMiss.length})`);
+// PUA 41–60 podtabela: neodvisno iz bundle PUA == pack
+const p81GapRows = PUA_CONTINUATION.rows
+  .map((r) => ({ r, g: (r.houseNos ?? []).filter((x) => /^\d+$/.test(x) && Number(x) >= 41 && Number(x) <= 60) }))
+  .filter((x) => x.g.length > 0)
+  .sort((a, b) => Number(a.g[0]) - Number(b.g[0]) || a.r.page - b.r.page || a.r.row - b.r.row);
+if (p81GapRows.length !== (namePack.puaGap4160 as Array<{ houseNo: string }>).length)
+  p81Errors.push(`PUA 41–60 ≠ ${namePack.puaGap4160.length} (${p81GapRows.length})`);
+for (let i = 0; i < Math.min(p81GapRows.length, (namePack.puaGap4160 as Array<Record<string, unknown>>).length); i++) {
+  const pk = (namePack.puaGap4160 as Array<{ houseNo: string; page: number; row: number; vs1886: Array<{ surname: string; score: number; threshold: boolean }> }>)[i];
+  const rc = p81GapRows[i];
+  if (pk.houseNo !== rc.g[0] || pk.page !== rc.r.page || pk.row !== rc.r.row)
+    p81Errors.push(`PUA 41–60 [${i}]: ${pk.houseNo}/p${pk.page}r${pk.row} ≠ ${rc.g[0]}/p${rc.r.page}r${rc.r.row}`);
+  const hh = p81Houses.find((h) => h.houseNo === rc.g[0]);
+  let best: { surname: string; score: number } | null = null;
+  if (hh) {
+    for (const s of [...new Set(hh.parish1886.map((r) => r.surname))].sort()) {
+      const m = p81BestMatch(s, rc.r.nameAsWritten);
+      if (m && (!best || m.score > best.score)) best = { surname: s, score: m.score };
+    }
+  }
+  const ev = pk.vs1886[0] ?? null;
+  if ((best === null) !== (ev === null)) p81Errors.push(`PUA 41–60 ${rc.g[0]} vs1886: prisotnost ≠ pack`);
+  if (best && ev && (best.surname !== ev.surname || !near(best.score, ev.score)))
+    p81Errors.push(`PUA 41–60 ${rc.g[0]} vs1886: ${best.surname}/${best.score} ≠ pack ${ev.surname}/${ev.score}`);
+}
+// sidra src=="parish": anchor mora biti v bundled HOUSE_VITALS whatSi te hiše
+// (ali anchorHouse); src p79/p80 — samo repo skripta (produkcija ne bere research/)
+const p81ParishText = (houseNo: string) =>
+  HOUSE_VITALS.filter((v) => v.houseNo === houseNo).map((v) => v.whatSi).join(" || ");
+let p81Anchors = 0;
+for (const h of p81Houses) {
+  for (const row of h.parish1886) {
+    if (row.src !== "parish") continue;
+    p81Anchors += 1;
+    const ah = row.anchorHouse && row.anchorHouse !== h.houseNo ? row.anchorHouse : h.houseNo;
+    if (!p81ParishText(ah).includes(row.anchor))
+      p81Errors.push(`sidro hiša ${h.houseNo} ${row.surname} ni v parish.ts (${ah}): ${row.anchor}`);
+  }
+}
+if (p81Anchors !== 57) p81Errors.push(`sidr src==parish ≠ 57 (${p81Anchors})`);
+push(
+  "qa-p81-parish-name-linkage",
+  "P81: ŽUPNIJA PODZEMELJ — POVEZAVA LASTNIŠKIH IMEN 1825 (PT/PUA) ↔ MATRIČNI PRIIMKI 1886 (issue #18; NAME-LINKAGE-PACK; deterministično, brez AI ob delovanju): vzorec P79/P80 (25 hiš: 19 v naboru PT 1–40+61–99, 6 v luknji 41–60) × vesolje 1825 (PT 84 hišnih lastnikov iz chain-full-pt-ps.json [pin] + PUA 101 vrstic str. 3–49 + ATLAS 26 lastnikov str. A–B — 232 imen); ujemanje = normalizacija (pass1 de-diacritika + pass2 nem. Kurrent sch→s), Levenshtein razmerje, prag priče ≥ 0.72 (P43 W-most), kratki priimki < 5 znakov le natančna enakost, stoplist krstnih imen (Gregor itn. — brez nje bi priimek Gregorič lažno ujel krstno ime Gregor 0.75) + uredniški žetoni (rokopis/alternative); REZULTATI — ① ISTO-HIŠNA kontinuiteta vs PT 1825: 0/19 (NIL-CLAIM: vsaka hiša z PT lastnikom ima 1886 drugačen gospodinjski priimek, prag 0.72) ② isto-hišne ujeme po PUA lastnem številčenju [~]: 2 — hiša 36 Križan ↔ PUA Krischan @36 (0.8333 via sch→s) in hiša 71 Straus ↔ PUA Strauß Niklo @71 (0.8571) — PUA ≠ PT številčenje, usklajenost dveh sistemov, ne dokaz istovetnosti ③ CENZUS priimkov: 10/38 eligible (26.32 %) ima pričo 1825 — Dragoš=1.0 (Dragosch 3/4/5), Filak=1.0 (PT 69/71 + PUA Fillah 16/34/36/61), Stubler=1.0 (Stübler @30), Šimec=1.0 (ATLAS 3/4/63/64/66 + PUA Schimcz/Schimey/Schimer/Schimetz/Schumetz), Šimer=1.0 [~] (Schimer @38 via sch→s), Strauš/Straus=0.8571 (PUA 45/71/72 + ATLAS 76/79/81–84/92), Brinec=0.8333 [~] (PUA »Brinc« alternativa @43 — št. V LUKNJANI 41–60), Filatk=0.8333 [~] (PT filak), Križan=0.8333 (PT/ATLAS Krišan @29–30) ④ near-miss pas [0.55, 0.72) — 11 priimkov (Gilatk 0.667, Mileh/Milavec ~ Milleg 0.667/0.571, Stupanič ~ Stepanitsch 0.667, Šilah ~ Fillah 0.667, Klepec ~ Kleppetz 0.625, Poddirec ~ Poldiŕg 0.625 …) ⑤ PUA ohranja 16 vrstic v luknji 41–60 (P4) — 0 isto-številnih ujem ≥ 0.72 z 1886 (najbližje @56 Schumetz vs Šimec 0.667 [~]) ⑥ tri-virske hiše 13/36/71: 0/3 isto-hišnih imenskih ujem z 1825; IMPLIKACIJA: imenska raven POTRJUJE opozorilo issue #18 — številčna usklajenost ≠ identiteta stavbe ≠ identiteta družine; most zahteva per-hišne kronološke verige (poln prepis = lastniška prioriteta); sidra: 57 src==parish verificiranih proti bundled parish.ts (preostala 4 — 1 p80 + 3 p79 — v repo skripti); celoven neodvisen preracun: isto-hiša PT/ATLAS/PUA + cenzus + PUA 41–60 + sidra iz pack runtime × PUA_CONTINUATION × ATLAS_OWNERS × HOUSE_VITALS; live verifikator scripts/p81_parish_name_linkage.py (I1–I10, --check PASS, trojni determinizem); status NAME-LINKAGE-PACK",
+  "P81: PARISH OF PODZEMELJ — LINKING 1825 OWNER NAMES (PT/PUA) ↔ 1886 PARISH SURNAMEs (issue #18; NAME-LINKAGE-PACK; deterministic, no AI at runtime): the P79/P80 sample (25 houses: 19 in the PT set 1–40+61–99, 6 in the 41–60 gap) × the 1825 universe (PT 84 house owners from chain-full-pt-ps.json [pin] + PUA 101 rows pp. 3–49 + ATLAS 26 owners pp. A–B — 232 names); matching = normalization (pass1 de-diacritics + pass2 German Kurrent sch→s), Levenshtein ratio, witness threshold ≥ 0.72 (the P43 W-most), short surnames < 5 chars exact-token-only, a given-name stoplist (Gregor etc. — without it the surname Gregorič would falsely match the given name Gregor at 0.75) + editorial tokens (rokopis/alternative); RESULTS — ① same-number continuity vs the PT 1825 owner: 0/19 (NIL-CLAIM: every house with a PT owner has a different household surname in 1886, threshold 0.72) ② same-number matches via PUA's own numbering [~]: 2 — house 36 Križan ↔ PUA Krischan @36 (0.8333 via sch→s) and house 71 Straus ↔ PUA Strauß Niklo @71 (0.8571) — PUA ≠ PT numbering, a consistency of two systems, not building identity ③ SURNAME CENSUS: 10/38 eligible (26.32 %) have an 1825 witness — Dragoš=1.0 (Dragosch 3/4/5), Filak=1.0 (PT 69/71 + PUA Fillah 16/34/36/61), Stubler=1.0 (Stübler @30), Šimec=1.0 (ATLAS 3/4/63/64/66 + PUA Schimcz/Schimey/Schimer/Schimetz/Schumetz), Šimer=1.0 [~] (Schimer @38 via sch→s), Strauš/Straus=0.8571 (PUA 45/71/72 + ATLAS 76/79/81–84/92), Brinec=0.8333 [~] (PUA »Brinc« alternative @43 — a number INSIDE the 41–60 gap), Filatk=0.8333 [~] (PT filak), Križan=0.8333 (PT/ATLAS Krišan @29–30) ④ near-miss band [0.55, 0.72) — 11 surnames (Gilatk 0.667, Mileh/Milavec ~ Milleg 0.667/0.571, Stupanič ~ Stepanitsch 0.667, Šilah ~ Fillah 0.667, Klepec ~ Kleppetz 0.625, Poddirec ~ Poldiŕg 0.625 …) ⑤ PUA keeps 16 rows in the 41–60 gap (P4) — 0 same-number matches ≥ 0.72 with 1886 (the nearest @56 Schumetz vs Šimec 0.667 [~]) ⑥ the three-source houses 13/36/71: 0/3 same-number name matches with 1825; IMPLICATION: the name level CONFIRMS the issue #18 warning — numeric consistency ≠ building identity ≠ family identity; the bridge requires per-house chronological chains (full transcription = owner priority); anchors: 57 src==parish verified against the bundled parish.ts (the other 4 — 1 p80 + 3 p79 — in the repo script); full independent recompute: same-house PT/ATLAS/PUA + census + PUA 41–60 + anchors from the pack runtime × PUA_CONTINUATION × ATLAS_OWNERS × HOUSE_VITALS; live verifier scripts/p81_parish_name_linkage.py (I1–I10, --check PASS, triple determinism); status NAME-LINKAGE-PACK",
+  p81Errors.length === 0,
+  p81Errors.length === 0
+    ? `25 hiš (19 nabor / 6 luknja) × 232 imen 1825 · isto-hiša PT 0/19 (NIL-CLAIM) · isto-hiša PUA 2 (@36 Križan–Krischan 0.8333 · @71 Straus–Strauß 0.8571) · cenzus 10/38 = 26.32 % prič · near-miss 11 · PUA 41–60: 16 vrstic, 0 ujem · sidra 57/57 (+4 repo) · tri-virske 13/36/71: 0/3`
+    : p81Errors.join("; "),
 );
 
 }

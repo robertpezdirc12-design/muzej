@@ -1,0 +1,4689 @@
+{
+ "phase": "P81",
+ "title": "Povezava lastniških imen 1825 (PT/PUA) ↔ matrični priimki 1886 (vzorec P79/P80, 25 hiš)",
+ "type": "NAME-LINKAGE-PACK",
+ "status": "REVIEW",
+ "issuedAt": "2026-10-16",
+ "source": {
+  "krstna": "Matricula Online 04105 (1886–1919), s P79",
+  "mrliška": "Matricula Online 04894 (1886–1924), s P80",
+  "poročna": "Matricula Online 04455 (1873–1922), s P80",
+  "pt": "research/issue13/chain-full-pt-ps.json (105 PT vrstic: 84 hiš + 21 parcelnih; lastniki 1825)",
+  "pua": "src/data/atlas/research.ts PUA_CONTINUATION (str. 3–49, 101 vrstic) + src/data/atlas/model.ts ATLAS_OWNERS (str. A–B)",
+  "parish": "src/data/atlas/parish.ts HOUSE_VITALS (41 vpisov, bundled — produkcija)"
+ },
+ "method": {
+  "normalizacija": "pass1: male črke + de-diacritika (Š→s, Ž→z, Č/ć→c, ß→ss, ü→u, ŕ→r, NFD); pass2: pass1 + nemška Kurrent Schreibung sch→s (Schimek→Simek)",
+  "ujemanje": "Levenshtein razmerje 1 − d/max; prag priče ≥ 0.72 (ponovna uporaba praga P43 W-most); kratki priimki < 5 znakov LE natančna enakost žetona; žetoni 1825 imen ≥ 4 znake (unija obeh passov)",
+  "dimenzije": "① ISTA HIŠA: PT owner / ATLAS houseRefs / PUA houseNos — vsaka ločeno (PT in PUA = RAZLIČNI številčni sistemi [~]); ② PRIIMEK DRUGJE: priča 1825 na katerikoli hiši; ③ PRIIMEK NOV",
+  "nearMiss": "pas [0.55, 0.72) poročan, NE štet kot priča",
+  "stoplist": "krstna imena izključena iz žetonov 1825 nizov (51 žetonov — npr. Gregor, Georg, Johann, Miho …); brez njih bi priimek Gregorič lažno ujel krstno ime Gregor (0.75)",
+  "ročnaFaza": "le kurirana tabela gospodinjskih priimkov 1886 z verbatim sidri (CURATED) — vsako sidro verificirano proti bundled parish.ts / dokazom P79/P80; vse ostalo deterministično"
+ },
+ "universe1825": {
+  "chainHouseOwners": 84,
+  "chainParcelRows": 21,
+  "chainAllRows": 105,
+  "puaRows": 101,
+  "atlasOwners": 26,
+  "totalNames": 232,
+  "names": [
+   {
+    "src": "chain",
+    "loc": "hiša-1",
+    "house": "1",
+    "name": "Veith (H.) [~]"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-2",
+    "house": "2",
+    "name": "Veith (St.?) [~]"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-3",
+    "house": "3",
+    "name": "Šimec Jakob"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-4",
+    "house": "4",
+    "name": "Šimec Matija"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-5",
+    "house": "5",
+    "name": "Knavc Janez"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-6",
+    "house": "6",
+    "name": "Tilel Miho"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-6b",
+    "house": "7",
+    "name": "Lebing/Lebring Mädl. [~]"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-7",
+    "house": "7½",
+    "name": "Bödig mündl. [~]"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-8",
+    "house": "8",
+    "name": "Lebing/Lebring Mädl. [~]"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-9",
+    "house": "8½",
+    "name": "Bödig mündl. [~]"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-10",
+    "house": "9",
+    "name": "Stalhutstetisch Miho"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-11",
+    "house": "10",
+    "name": "Stalhutstetisch Miho"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-12",
+    "house": "11",
+    "name": "Stalhutstetisch Marko"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-13",
+    "house": "12",
+    "name": "Stalhutstetisch Marko"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-14",
+    "house": "13",
+    "name": "Stalhutstetisch Ruard"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-15",
+    "house": "14",
+    "name": "Stalhutstetisch Jhan (Ivan)"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-16",
+    "house": "15",
+    "name": "Stalhutstetisch Jhan (Hrovatic Jhan)"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-17",
+    "house": "16",
+    "name": "Stautschel Jhan"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-18",
+    "house": "17",
+    "name": "Stalhutsch Marko"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-19",
+    "house": "18",
+    "name": "Hrovat Jhan"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-20",
+    "house": "19",
+    "name": "Krudelen Matija"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-21",
+    "house": "20",
+    "name": "Krištan/Kraihan Mäfa [~]"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-22",
+    "house": "21",
+    "name": "Šture Majzel"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-23",
+    "house": "22",
+    "name": "Šture Majzel"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-24",
+    "house": "23",
+    "name": "Ludvig Gregor"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-25",
+    "house": "24",
+    "name": "Štunidat Mufa"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-26",
+    "house": "25",
+    "name": "Štunidat Mufa"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-27",
+    "house": "26",
+    "name": "Hlebetz Jan"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-28",
+    "house": "27",
+    "name": "Jožef Miko"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-29",
+    "house": "28",
+    "name": "Jožef Miko"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-30",
+    "house": "29",
+    "name": "Krišan Gregor"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-31",
+    "house": "30",
+    "name": "Krišan Gregor"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-32",
+    "house": "31",
+    "name": "Bring Marko"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-33",
+    "house": "32",
+    "name": "Bring Marko"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-34",
+    "house": "33",
+    "name": "Varbutek Mufa"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-35",
+    "house": "34",
+    "name": "Milleg Hans [~]"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-36",
+    "house": "34 (prečrtana dvojnica)",
+    "name": "Milleg Hans [~]"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-37",
+    "house": "35",
+    "name": "Brinig Magnus [~]"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-38",
+    "house": "36",
+    "name": "Milleg Hans [~]"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-39",
+    "house": "37",
+    "name": "Brinig Malfa [~]"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-40",
+    "house": "38",
+    "name": "Brinig Malfa [~]"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-41",
+    "house": "39",
+    "name": "Brinig Miklo [~]"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-42",
+    "house": "40",
+    "name": "Brinig Malfa [~]"
+   },
+   {
+    "src": "chain",
+    "loc": "parcela-41",
+    "house": "—",
+    "name": "Jörg Georg"
+   },
+   {
+    "src": "chain",
+    "loc": "parcela-42",
+    "house": "—",
+    "name": "Glan Georg"
+   },
+   {
+    "src": "chain",
+    "loc": "parcela-43",
+    "house": "—",
+    "name": "Glan Matthäus"
+   },
+   {
+    "src": "chain",
+    "loc": "parcela-44",
+    "house": "—",
+    "name": "Malfs Mathäus"
+   },
+   {
+    "src": "chain",
+    "loc": "parcela-45",
+    "house": "—",
+    "name": "Mals Georg"
+   },
+   {
+    "src": "chain",
+    "loc": "parcela-46",
+    "house": "—",
+    "name": "Grög Michael"
+   },
+   {
+    "src": "chain",
+    "loc": "parcela-47",
+    "house": "—",
+    "name": "Greg Michael"
+   },
+   {
+    "src": "chain",
+    "loc": "parcela-48",
+    "house": "—",
+    "name": "Greg Michael"
+   },
+   {
+    "src": "chain",
+    "loc": "parcela-49",
+    "house": "—",
+    "name": "Malt Simon"
+   },
+   {
+    "src": "chain",
+    "loc": "parcela-50",
+    "house": "—",
+    "name": "Joger Schello"
+   },
+   {
+    "src": "chain",
+    "loc": "parcela-51",
+    "house": "—",
+    "name": "Joger Schello"
+   },
+   {
+    "src": "chain",
+    "loc": "parcela-52",
+    "house": "—",
+    "name": "Meßle Michael"
+   },
+   {
+    "src": "chain",
+    "loc": "parcela-52b",
+    "house": "—",
+    "name": "Malt Simon D."
+   },
+   {
+    "src": "chain",
+    "loc": "parcela-53",
+    "house": "—",
+    "name": "Marlo Michael"
+   },
+   {
+    "src": "chain",
+    "loc": "parcela-54",
+    "house": "—",
+    "name": "Greg Ulrich"
+   },
+   {
+    "src": "chain",
+    "loc": "parcela-55",
+    "house": "—",
+    "name": "Joger Schello"
+   },
+   {
+    "src": "chain",
+    "loc": "parcela-56",
+    "house": "—",
+    "name": "Malt Ulrich"
+   },
+   {
+    "src": "chain",
+    "loc": "parcela-57",
+    "house": "—",
+    "name": "Piberig Ulrich"
+   },
+   {
+    "src": "chain",
+    "loc": "parcela-58",
+    "house": "—",
+    "name": "Greg Ulrich"
+   },
+   {
+    "src": "chain",
+    "loc": "parcela-59",
+    "house": "—",
+    "name": "Leder Simon"
+   },
+   {
+    "src": "chain",
+    "loc": "parcela-60",
+    "house": "—",
+    "name": "Glan Simonz"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-63",
+    "house": "61",
+    "name": "Peutinger Jhan"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-64",
+    "house": "62",
+    "name": "Lappanig Miho"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-65",
+    "house": "63",
+    "name": "Šimec Ripane"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-66",
+    "house": "64",
+    "name": "Šimec Jhan"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-67",
+    "house": "65",
+    "name": "Peutinger Jhan"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-68",
+    "house": "66",
+    "name": "Šimec Jhan"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-69",
+    "house": "67",
+    "name": "Lappanig Miho"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-70",
+    "house": "68",
+    "name": "Dikobutar Rupre"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-71",
+    "house": "69",
+    "name": "Filak Peter"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-72",
+    "house": "70",
+    "name": "Filak Peter"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-73",
+    "house": "71",
+    "name": "Filak Mihel"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-73b",
+    "house": "71½",
+    "name": "Stettner [~] (prečrtana)"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-74",
+    "house": "72",
+    "name": "Dikobutar Mihelo"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-75",
+    "house": "73",
+    "name": "Peutinger Mihel"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-76",
+    "house": "74",
+    "name": "Drulak Jhan"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-77",
+    "house": "75",
+    "name": "Drulak Peter"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-78",
+    "house": "76",
+    "name": "Strauß Georg [~]"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-78b",
+    "house": "76½",
+    "name": "Hufschmied [~] (rdeči vpis, prečrtana)"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-79",
+    "house": "77",
+    "name": "Dikobutar Mihlo"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-80",
+    "house": "78",
+    "name": "Dikobutar Marko"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-81",
+    "house": "79",
+    "name": "Strauß Georg [~] (vrstica rdeče prečrtana)"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-82",
+    "house": "80",
+    "name": "Dikobutar Marko"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-83",
+    "house": "81",
+    "name": "Strauß Georg [Groy] [~]"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-84",
+    "house": "82",
+    "name": "Strauß Georg [Groy] [~]"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-85",
+    "house": "83",
+    "name": "Strauß Georg [Groy] [~]"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-86",
+    "house": "84",
+    "name": "Strauß Georg [Groy] [~]"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-87",
+    "house": "85",
+    "name": "Peta Krištof (Krischan)"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-88",
+    "house": "86",
+    "name": "Matja Krištof"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-89",
+    "house": "87",
+    "name": "Heurisch Marko"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-90",
+    "house": "88",
+    "name": "Matja Krištof"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-91",
+    "house": "89",
+    "name": "Heurisch Marko"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-92",
+    "house": "90",
+    "name": "Kuncelj Miha [?] — branja divergirajo"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-93",
+    "house": "91",
+    "name": "Heurisch Marko"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-94",
+    "house": "92",
+    "name": "Groy Feidig"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-95",
+    "house": "93",
+    "name": "Matja Feidig"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-96",
+    "house": "94",
+    "name": "Matja Feidig"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-97",
+    "house": "95",
+    "name": "Schmerz Marko"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-98",
+    "house": "96",
+    "name": "Ihmeyer Manko [~]"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-99",
+    "house": "97",
+    "name": "Schmerz Marko"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-100",
+    "house": "98",
+    "name": "k.k. Zollamt (ärarial) [~] — institucija"
+   },
+   {
+    "src": "chain",
+    "loc": "hiša-101",
+    "house": "99",
+    "name": "[prazna vrstica — zaključek str. 7]"
+   },
+   {
+    "src": "pua",
+    "loc": "p3r1",
+    "house": "1",
+    "name": "Hölloschitsch Wufa Luina hau Dragosche [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p3r2",
+    "house": "20 ali 23",
+    "name": "Bringz Wufa Luina hau Grüble [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p3r0",
+    "house": [],
+    "name": "Baron Abfalterer [~] (institucija)"
+   },
+   {
+    "src": "pua",
+    "loc": "p4r3",
+    "house": "24",
+    "name": "Bring Migan/Michael Bauern hiesig Grübln [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p4r4",
+    "house": "25",
+    "name": "Bring Miß/Martin Bauern hiesig Grübln [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p5r5",
+    "house": "26",
+    "name": "Bring Johann Bräun [~] houlg."
+   },
+   {
+    "src": "pua",
+    "loc": "p5r6",
+    "house": "28",
+    "name": "Bring Mäda/Manda [~] (Magdalena) Brünn [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p6r7",
+    "house": "43",
+    "name": "Brulla Mako/Matho Bünnhaußgübl [~] (alternative: Brinig, Brinc)"
+   },
+   {
+    "src": "pua",
+    "loc": "p6r8",
+    "house": "63",
+    "name": "Bring Manda Brinahug [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p6r9",
+    "house": "0",
+    "name": "Commenda Vachernebel [~] (institucija — komenda)"
+   },
+   {
+    "src": "pua",
+    "loc": "p7r10",
+    "house": "33",
+    "name": "Decklitsch Matthäus Bürger hiesig [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p7r11",
+    "house": "3",
+    "name": "Dragosch Johann Bürger hiesig, Gemeinde Deschitz [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p8r12",
+    "house": "4",
+    "name": "Dragosch Mavroslawitsch hiesig Dragosche, Gemeinde Molestitch [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p8r13",
+    "house": "5",
+    "name": "Dragosch Georglawitsch zu Dragosche [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p9r14",
+    "house": "16",
+    "name": "Fillah Michael Mühldörfler haußgübl [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p9r15",
+    "house": "34",
+    "name": "Fillah Maria [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p10r16",
+    "house": "36",
+    "name": "Fillah Jetter [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p10r17",
+    "house": "61",
+    "name": "Fillah Miho [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p11r18",
+    "house": "2",
+    "name": "Hlebety Johann, Bauer hiesig zu Grüble [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p11r19",
+    "house": "14",
+    "name": "Huditsch Musto, Häusler hiesig [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p11r20",
+    "house": [],
+    "name": "Husitsch Baron von Gradatz [~] (plemiška/institucionalna lastnina)"
+   },
+   {
+    "src": "pua",
+    "loc": "p11r21",
+    "house": "8",
+    "name": "Hutweiz Johann, Bauer zu Waldendorf [~] (lastnik iz sosednje vasi)"
+   },
+   {
+    "src": "pua",
+    "loc": "p12r22",
+    "house": "6",
+    "name": "Höflehner Johann [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p12r23",
+    "house": "8",
+    "name": "Höflehner Mathäus [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p13r24",
+    "house": "9",
+    "name": "Jakobstitzsch Johann [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p13r25",
+    "house": "13",
+    "name": "Jakobstitzsch Nicolauß [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p14r26",
+    "house": "7",
+    "name": "Jankovitsche Muffl bauernhow Zerguische [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p14r27",
+    "house": "26",
+    "name": "Jankowitsche Juran bauernhow Zerguische [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p15r28",
+    "house": "21",
+    "name": "Janko vitnik [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p15r29",
+    "house": "3",
+    "name": "Janko vity [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p16r30",
+    "house": "3",
+    "name": "Kristan Mäusel buaß hulgäßl [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p16r31",
+    "house": "10",
+    "name": "Lure Mäusel buaß hulgäßl [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p17r32",
+    "house": "15",
+    "name": "Loral Miko bauers hof Gsübln [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p17r33",
+    "house": "17",
+    "name": "Loral Thoma bauers hof Gsübln [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p18r34",
+    "house": "31",
+    "name": "Krischan Mandschurischka / Griblje [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p18r35",
+    "house": "36",
+    "name": "Krischan Malfs Leurschkau / Griblje [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p19r36",
+    "house": "37",
+    "name": "Krischan Patta Buirshofgäubla [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p19r37",
+    "house": "57",
+    "name": "Krischan Halfa Buirshofgäubla [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p20r38",
+    "house": "62",
+    "name": "Kosirhan Mäda Bauer zu Griblje [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p20r39",
+    "house": "46",
+    "name": "Schloßthaler Jätten Bauer zu Gribljen [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p21r40",
+    "house": "63",
+    "name": "Nikolaus Grönig bauer und Gailb. [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p21r41",
+    "house": "66",
+    "name": "Nikolaus Grönig bauer und Gailb. [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p22r42",
+    "house": "47",
+    "name": "Matthäus Wundsch [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p22r43",
+    "house": "69",
+    "name": "Kristan Matjaž Bučar [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p22r44",
+    "house": "0",
+    "name": "Kirche H. Veith [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p23r45",
+    "house": "48",
+    "name": "Hlobutschar Georg baur hiesig geb. [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p23r46",
+    "house": "2",
+    "name": "Kleppetz Georg büuerl hiesig Gemeinde: Hie Leusthal [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p24r47",
+    "house": "7",
+    "name": "Lukentitz Matho [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p24r48",
+    "house": "12",
+    "name": "Lukentitz Wolf [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p25r49",
+    "house": "54",
+    "name": "Rappar Nicolaus bau Gsöbln [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p25r50",
+    "house": "22",
+    "name": "Millea Johann bau Gsöbln [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p26r51",
+    "house": "27",
+    "name": "Mallestitak [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p26r52",
+    "house": "29",
+    "name": "Millej [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p27r53",
+    "house": "4",
+    "name": "Noah Mandl bauer zu Griblje [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p27r54",
+    "house": "11",
+    "name": "Georg Grangl bauer zu Griblje [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p28r55",
+    "house": "14",
+    "name": "Poldiŕg Mufa/buͤrſn/zu Gribla [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p28r56",
+    "house": "20",
+    "name": "Polcig Michael buͤrſn/zu/gribla [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p29r57",
+    "house": "21",
+    "name": "Jožeg Muhč Bauer houlgübl [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p29r58",
+    "house": "40",
+    "name": "Peterig Muhč Bauer houlgäble [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p30r59",
+    "house": "41",
+    "name": "Georg Leiner [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p30r60",
+    "house": "42",
+    "name": "Matthäus Leiner [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p31r61",
+    "house": "60",
+    "name": "Georg Rußa Bauer zu Griblje [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p31r62",
+    "house": "62",
+    "name": "Georg Juttner Bauer zu Griblje [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p32r63",
+    "house": "53",
+    "name": "Peter Jhan Buidl / Buidlgübln [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p32r64",
+    "house": "67",
+    "name": "Joseph Gnoy Buida / Buidlgübln [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p33r65",
+    "house": "4",
+    "name": "Pasticz Georg Bauernholds gemuth [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p33r66",
+    "house": "6",
+    "name": "Pacharistche Michl bauernholds gemüth [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p34r67",
+    "house": "7",
+    "name": "Prodoritche Miho Bauernholds Gremium [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p34r68",
+    "house": "59",
+    "name": "Pfister Blaž Bauernholds Güble [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p35r69",
+    "house": "1",
+    "name": "Gemeinde Malfz Brandhofgässl [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p35r70",
+    "house": "31",
+    "name": "Gemeinde Malfz Brandhof Smibuche [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p36r71",
+    "house": "17",
+    "name": "Starašinutsh Gura Leurakau Zgorsche [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p36r72",
+    "house": "3",
+    "name": "Strutz Jh. Bauernhof Grüble [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p36r73",
+    "house": "3",
+    "name": "Hansitsch Jürgen Bäurin von Wiedendorf [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p37r74",
+    "house": "18",
+    "name": "Schimcz [~] Gutta Bauernhofgütl"
+   },
+   {
+    "src": "pua",
+    "loc": "p37r75",
+    "house": "19",
+    "name": "Schimcz Maffa Bauernhofgütl [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p38r76",
+    "house": "30",
+    "name": "Stübler Muffl Bauer zu Griblje [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p38r77",
+    "house": "38",
+    "name": "Schimer Georg Bauer zu Griblje [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p39r78",
+    "house": "29",
+    "name": "Schimey Maro baua haußgäbla [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p39r79",
+    "house": "45",
+    "name": "Strauß Georg baua haußgübla [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p40r80",
+    "house": [],
+    "name": "Schimetz Michael Baunthofgäbln [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p40r81",
+    "house": "55",
+    "name": "Schimetz Hanß Baunthofgübln [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p41r82",
+    "house": "56",
+    "name": "Schumetz Juttan [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p41r83",
+    "house": "58",
+    "name": "Stepanitsch Jakob Laurentzhow Gütte [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p41r84",
+    "house": "31",
+    "name": "Schimey Stoffe Lorenz how Gribatsche [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p42r85",
+    "house": "60",
+    "name": "Schello Georg Bauer/b zu Gribla [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p42r86",
+    "house": "71",
+    "name": "Strauß Niklo Bauer/b zu Gribla [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p43r87",
+    "house": "72",
+    "name": "Strauß Mariz' baur/kaufgäbl [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p43r88",
+    "house": "32",
+    "name": "Urlich Georg baur/kauf/gübln [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p44r89",
+    "house": "31",
+    "name": "Ulrich Pitter Bauer zu Gribla [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p44r90",
+    "house": "68",
+    "name": "Ulrich Mida Bauer zu Gribla [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p44r91",
+    "house": [],
+    "name": "Uebersprungene Parzellen=Numern. [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p44r92",
+    "house": "6",
+    "name": "Waisenkinder [~] von Weixelbaum"
+   },
+   {
+    "src": "pua",
+    "loc": "p45r93",
+    "house": "64",
+    "name": "Verbitzcher Mathä bau[er]haußgütl [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p45r94",
+    "house": "1",
+    "name": "Wardian Mathä bau[er]haußgütlein [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p46r95",
+    "house": "6",
+    "name": "Waschitzste M. mit Braut von Weidendorf [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p46r96",
+    "house": "7",
+    "name": "Wentschitsch M. Pfgl. Baur. b. Weidendorf [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p47r97",
+    "house": "70",
+    "name": "Zollamt S. L. Aversarial in Gribla [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p48r98",
+    "house": [],
+    "name": "Wge mit der Gemeinde Gribla [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p48r99",
+    "house": [],
+    "name": " [~]"
+   },
+   {
+    "src": "pua",
+    "loc": "p49r100",
+    "house": [],
+    "name": "J. Lipovšek zu Griblje [~]"
+   },
+   {
+    "src": "atlas",
+    "loc": "lastnik-bring-weygandt",
+    "house": [
+     "24",
+     "31",
+     "32",
+     "35",
+     "37",
+     "38",
+     "40"
+    ],
+    "name": "Bring. Weygandt Bauern von Grüblen [PT rokopis: Brinig — Magnus/Malfa/Miklo ~]"
+   },
+   {
+    "src": "atlas",
+    "loc": "lastnik-bring-math",
+    "house": [
+     "25"
+    ],
+    "name": "Bring. Math. Bauern von Grüblen"
+   },
+   {
+    "src": "atlas",
+    "loc": "lastnik-veith",
+    "house": [
+     "1",
+     "2"
+    ],
+    "name": "Veith (H., St.?) [~]"
+   },
+   {
+    "src": "atlas",
+    "loc": "lastnik-simec",
+    "house": [
+     "3",
+     "4",
+     "63",
+     "64",
+     "66"
+    ],
+    "name": "Schimek / Šimec"
+   },
+   {
+    "src": "atlas",
+    "loc": "lastnik-lebing",
+    "house": [
+     "7",
+     "8"
+    ],
+    "name": "Lebing/Lebring Mädl. [~]"
+   },
+   {
+    "src": "atlas",
+    "loc": "lastnik-bödig",
+    "house": [
+     "7½",
+     "8½"
+    ],
+    "name": "Bödig mündl. [~]"
+   },
+   {
+    "src": "atlas",
+    "loc": "lastnik-hrovat",
+    "house": [
+     "18",
+     "15"
+    ],
+    "name": "Hrovat Jhan"
+   },
+   {
+    "src": "atlas",
+    "loc": "lastnik-krisan",
+    "house": [
+     "29",
+     "30"
+    ],
+    "name": "Krišan Gregor"
+   },
+   {
+    "src": "atlas",
+    "loc": "lastnik-milleg",
+    "house": [
+     "34",
+     "36"
+    ],
+    "name": "Milleg Hans (Jan) [~]"
+   },
+   {
+    "src": "atlas",
+    "loc": "lastnik-glan",
+    "house": [
+     "—"
+    ],
+    "name": "Glan (Georg, Matthäus, Simonz)"
+   },
+   {
+    "src": "atlas",
+    "loc": "lastnik-greg",
+    "house": [
+     "—"
+    ],
+    "name": "Greg/Grög (Michael, Ulrich)"
+   },
+   {
+    "src": "atlas",
+    "loc": "lastnik-filak",
+    "house": [
+     "69",
+     "70",
+     "71"
+    ],
+    "name": "Filak (Peter, Mihel)"
+   },
+   {
+    "src": "atlas",
+    "loc": "lastnik-dikobutar",
+    "house": [
+     "68",
+     "72",
+     "77",
+     "78",
+     "80"
+    ],
+    "name": "Dikobutar (Rupre, Mihelo, Mihlo, Marko)"
+   },
+   {
+    "src": "atlas",
+    "loc": "lastnik-peutinger",
+    "house": [
+     "61",
+     "65",
+     "73"
+    ],
+    "name": "Peutinger (Jhan, Mihel)"
+   },
+   {
+    "src": "atlas",
+    "loc": "lastnik-drulak",
+    "house": [
+     "74",
+     "75"
+    ],
+    "name": "Drulak (Jhan, Peter)"
+   },
+   {
+    "src": "atlas",
+    "loc": "lastnik-stenopfs",
+    "house": [
+     "76",
+     "79"
+    ],
+    "name": "Strauß Georg [~]"
+   },
+   {
+    "src": "atlas",
+    "loc": "lastnik-groy",
+    "house": [
+     "81",
+     "82",
+     "83",
+     "84",
+     "92"
+    ],
+    "name": "Strauß Georg [Groy] [~]"
+   },
+   {
+    "src": "atlas",
+    "loc": "lastnik-ihmeyer",
+    "house": [
+     "96"
+    ],
+    "name": "Ihmeyer (Manko, Georg?) [~]"
+   },
+   {
+    "src": "atlas",
+    "loc": "lastnik-heurisch",
+    "house": [
+     "87",
+     "89",
+     "91"
+    ],
+    "name": "Heurisch Marko"
+   },
+   {
+    "src": "atlas",
+    "loc": "lastnik-kuncelj",
+    "house": [
+     "90"
+    ],
+    "name": "hiša 90: brania divergirajo [?]"
+   },
+   {
+    "src": "atlas",
+    "loc": "lastnik-schmerz",
+    "house": [
+     "95",
+     "97"
+    ],
+    "name": "Schmerz Marko"
+   },
+   {
+    "src": "atlas",
+    "loc": "lastnik-adlolschitz",
+    "house": [
+     "1"
+    ],
+    "name": "Adlolschitz, Wulff Ludwig (von)"
+   },
+   {
+    "src": "atlas",
+    "loc": "lastnik-ludvig",
+    "house": [
+     "23"
+    ],
+    "name": "Ludvig Gregor"
+   },
+   {
+    "src": "atlas",
+    "loc": "lastnik-zollnerd",
+    "house": [
+     "98"
+    ],
+    "name": "k.k. Zollamt (ärarial) [~] — institucija"
+   },
+   {
+    "src": "atlas",
+    "loc": "lastnik-stettner",
+    "house": [
+     "71½"
+    ],
+    "name": "Stettner [~] (prečrtana vrstica 71½)"
+   },
+   {
+    "src": "atlas",
+    "loc": "lastnik-hufschmied",
+    "house": [
+     "76½"
+    ],
+    "name": "Hufschmied [~] (rdeči vpis, prečrtana 76½)"
+   }
+  ]
+ },
+ "houses": [
+  {
+   "houseNo": "5",
+   "ptIn1825": true,
+   "ptOwner1825": "Knavc Janez",
+   "sameHouse": {
+    "pt": null,
+    "atlas": null,
+    "pua": null
+   },
+   "parish1886": [
+    {
+     "surname": "Brinec",
+     "role": "smrt",
+     "book": "04894",
+     "year": 1886,
+     "anchor": "Barbara Brinec [~]",
+     "src": "parish"
+    }
+   ],
+   "surnameWitnesses": [
+    {
+     "surname": "Brinec",
+     "best": 0.8333,
+     "witnesses": [
+      {
+       "src": "pua",
+       "loc": "p6r7",
+       "house": "43",
+       "name": "Brulla Mako/Matho Bünnhaußgübl [~] (alternative: Brinig, Brinc)",
+       "score": 0.8333,
+       "pass": 1,
+       "token": "brinc"
+      }
+     ],
+     "nearMisses": [
+      {
+       "src": "atlas",
+       "loc": "lastnik-bring-math",
+       "house": [
+        "25"
+       ],
+       "name": "Bring. Math. Bauern von Grüblen",
+       "score": 0.6667,
+       "pass": 1,
+       "token": "bring"
+      },
+      {
+       "src": "atlas",
+       "loc": "lastnik-bring-weygandt",
+       "house": [
+        "24",
+        "31",
+        "32",
+        "35",
+        "37",
+        "38",
+        "40"
+       ],
+       "name": "Bring. Weygandt Bauern von Grüblen [PT rokopis: Brinig — Magnus/Malfa/Miklo ~]",
+       "score": 0.6667,
+       "pass": 1,
+       "token": "bring"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-32",
+       "house": "31",
+       "name": "Bring Marko",
+       "score": 0.6667,
+       "pass": 1,
+       "token": "bring"
+      }
+     ],
+     "survives": true
+    }
+   ],
+   "surnameSurvives": true,
+   "sameNumberAny": false
+  },
+  {
+   "houseNo": "8",
+   "ptIn1825": true,
+   "ptOwner1825": "Lebing/Lebring Mädl. [~]",
+   "sameHouse": {
+    "pt": null,
+    "atlas": null,
+    "pua": null
+   },
+   "parish1886": [
+    {
+     "surname": "Jakofčič",
+     "role": "rojstvo-oče",
+     "book": "04105",
+     "year": 1886,
+     "anchor": "Janez Jakofčič [~]",
+     "src": "parish"
+    },
+    {
+     "surname": "Meh",
+     "role": "rojstvo-mati",
+     "book": "04105",
+     "year": 1886,
+     "anchor": "Marija roj. Meh [~]",
+     "src": "parish"
+    }
+   ],
+   "surnameWitnesses": [
+    {
+     "surname": "Jakofčič",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [],
+     "survives": false
+    },
+    {
+     "surname": "Meh",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [],
+     "survives": false
+    }
+   ],
+   "surnameSurvives": false,
+   "sameNumberAny": false
+  },
+  {
+   "houseNo": "11",
+   "ptIn1825": true,
+   "ptOwner1825": "Stalhutstetisch Marko",
+   "sameHouse": {
+    "pt": null,
+    "atlas": null,
+    "pua": null
+   },
+   "parish1886": [
+    {
+     "surname": "Kurnič",
+     "role": "rojstvo-oče",
+     "book": "04105",
+     "year": 1886,
+     "anchor": "Matija Kurnič [~]",
+     "src": "parish"
+    },
+    {
+     "surname": "Dragoš",
+     "role": "rojstvo-mati",
+     "book": "04105",
+     "year": 1886,
+     "anchor": "Katarina roj. Dragoš",
+     "src": "parish"
+    }
+   ],
+   "surnameWitnesses": [
+    {
+     "surname": "Dragoš",
+     "best": 1.0,
+     "witnesses": [
+      {
+       "src": "pua",
+       "loc": "p7r11",
+       "house": "3",
+       "name": "Dragosch Johann Bürger hiesig, Gemeinde Deschitz [~]",
+       "score": 1.0,
+       "pass": 1,
+       "token": "dragos"
+      },
+      {
+       "src": "pua",
+       "loc": "p8r12",
+       "house": "4",
+       "name": "Dragosch Mavroslawitsch hiesig Dragosche, Gemeinde Molestitch [~]",
+       "score": 1.0,
+       "pass": 1,
+       "token": "dragos"
+      },
+      {
+       "src": "pua",
+       "loc": "p8r13",
+       "house": "5",
+       "name": "Dragosch Georglawitsch zu Dragosche [~]",
+       "score": 1.0,
+       "pass": 1,
+       "token": "dragos"
+      },
+      {
+       "src": "pua",
+       "loc": "p3r1",
+       "house": "1",
+       "name": "Hölloschitsch Wufa Luina hau Dragosche [~]",
+       "score": 0.8571,
+       "pass": 1,
+       "token": "dragose"
+      }
+     ],
+     "nearMisses": [],
+     "survives": true
+    },
+    {
+     "surname": "Kurnič",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [],
+     "survives": false
+    }
+   ],
+   "surnameSurvives": true,
+   "sameNumberAny": false
+  },
+  {
+   "houseNo": "13",
+   "ptIn1825": true,
+   "ptOwner1825": "Stalhutstetisch Ruard",
+   "sameHouse": {
+    "pt": null,
+    "atlas": null,
+    "pua": null
+   },
+   "parish1886": [
+    {
+     "surname": "Jakopič",
+     "role": "rojstvo-oče",
+     "book": "04105",
+     "year": 1886,
+     "anchor": "Matija Jakopič? [~]",
+     "src": "parish"
+    },
+    {
+     "surname": "Podlivc",
+     "role": "rojstvo-mati",
+     "book": "04105",
+     "year": 1886,
+     "anchor": "Marija roj. Podlivc? [~]",
+     "src": "parish"
+    },
+    {
+     "surname": "Jakobuč",
+     "role": "smrt",
+     "book": "04894",
+     "year": 1886,
+     "anchor": "Ana Jakobuč [~]",
+     "src": "parish"
+    },
+    {
+     "surname": "Jakobič",
+     "role": "poroka-ženin",
+     "book": "04455",
+     "year": 1885,
+     "anchor": "ženin Janez Jakobič [~]",
+     "src": "parish"
+    },
+    {
+     "surname": "Podlirec",
+     "role": "poroka-starši-ženina",
+     "book": "04455",
+     "year": 1885,
+     "anchor": "Maria née Podlirec [~]",
+     "src": "parish"
+    }
+   ],
+   "surnameWitnesses": [
+    {
+     "surname": "Jakobič",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [],
+     "survives": false
+    },
+    {
+     "surname": "Jakobuč",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [],
+     "survives": false
+    },
+    {
+     "surname": "Jakopič",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [],
+     "survives": false
+    },
+    {
+     "surname": "Podlirec",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [],
+     "survives": false
+    },
+    {
+     "surname": "Podlivc",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [],
+     "survives": false
+    }
+   ],
+   "surnameSurvives": false,
+   "sameNumberAny": false
+  },
+  {
+   "houseNo": "15",
+   "ptIn1825": true,
+   "ptOwner1825": "Stalhutstetisch Jhan (Hrovatic Jhan)",
+   "sameHouse": {
+    "pt": null,
+    "atlas": null,
+    "pua": null
+   },
+   "parish1886": [
+    {
+     "surname": "Muc",
+     "role": "smrt",
+     "book": "04894",
+     "year": 1886,
+     "anchor": "Nikolaj Muc [~]",
+     "src": "parish"
+    },
+    {
+     "surname": "Filak",
+     "role": "poroka-nevesta",
+     "book": "04455",
+     "year": 1886,
+     "anchor": "nevesta Ana Filak [~]",
+     "src": "parish"
+    },
+    {
+     "surname": "Gregorič",
+     "role": "poroka-starši-neveste",
+     "book": "04455",
+     "year": 1886,
+     "anchor": "Anna née Gregorič [~]",
+     "src": "parish"
+    },
+    {
+     "surname": "Šambie",
+     "role": "poroka-ženin",
+     "book": "04455",
+     "year": 1887,
+     "anchor": "ženin Johann Šambie [~]",
+     "src": "parish"
+    }
+   ],
+   "surnameWitnesses": [
+    {
+     "surname": "Filak",
+     "best": 1.0,
+     "witnesses": [
+      {
+       "src": "atlas",
+       "loc": "lastnik-filak",
+       "house": [
+        "69",
+        "70",
+        "71"
+       ],
+       "name": "Filak (Peter, Mihel)",
+       "score": 1.0,
+       "pass": 1,
+       "token": "filak"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-71",
+       "house": "69",
+       "name": "Filak Peter",
+       "score": 1.0,
+       "pass": 1,
+       "token": "filak"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-72",
+       "house": "70",
+       "name": "Filak Peter",
+       "score": 1.0,
+       "pass": 1,
+       "token": "filak"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-73",
+       "house": "71",
+       "name": "Filak Mihel",
+       "score": 1.0,
+       "pass": 1,
+       "token": "filak"
+      }
+     ],
+     "nearMisses": [
+      {
+       "src": "pua",
+       "loc": "p10r16",
+       "house": "36",
+       "name": "Fillah Jetter [~]",
+       "score": 0.6667,
+       "pass": 1,
+       "token": "fillah"
+      },
+      {
+       "src": "pua",
+       "loc": "p10r17",
+       "house": "61",
+       "name": "Fillah Miho [~]",
+       "score": 0.6667,
+       "pass": 1,
+       "token": "fillah"
+      },
+      {
+       "src": "pua",
+       "loc": "p9r14",
+       "house": "16",
+       "name": "Fillah Michael Mühldörfler haußgübl [~]",
+       "score": 0.6667,
+       "pass": 1,
+       "token": "fillah"
+      }
+     ],
+     "survives": true
+    },
+    {
+     "surname": "Gregorič",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [],
+     "survives": false
+    },
+    {
+     "surname": "Muc",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [],
+     "survives": false
+    },
+    {
+     "surname": "Šambie",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [],
+     "survives": false
+    }
+   ],
+   "surnameSurvives": true,
+   "sameNumberAny": false
+  },
+  {
+   "houseNo": "16",
+   "ptIn1825": true,
+   "ptOwner1825": "Stautschel Jhan",
+   "sameHouse": {
+    "pt": null,
+    "atlas": null,
+    "pua": null
+   },
+   "parish1886": [
+    {
+     "surname": "Plebučar",
+     "role": "rojstvo-oče",
+     "book": "04105",
+     "year": 1886,
+     "anchor": "Matija Plebučar? [~]",
+     "src": "parish"
+    },
+    {
+     "surname": "Meh",
+     "role": "rojstvo-mati",
+     "book": "04105",
+     "year": 1886,
+     "anchor": "Katarina rojena Meh",
+     "src": "parish"
+    },
+    {
+     "surname": "Šilah",
+     "role": "smrt",
+     "book": "04894",
+     "year": 1886,
+     "anchor": "Marija Šilah [~]",
+     "src": "parish"
+    }
+   ],
+   "surnameWitnesses": [
+    {
+     "surname": "Meh",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [],
+     "survives": false
+    },
+    {
+     "surname": "Plebučar",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [
+      {
+       "src": "pua",
+       "loc": "p22r43",
+       "house": "69",
+       "name": "Kristan Matjaž Bučar [~]",
+       "score": 0.625,
+       "pass": 1,
+       "token": "bucar"
+      },
+      {
+       "src": "pua",
+       "loc": "p23r45",
+       "house": "48",
+       "name": "Hlobutschar Georg baur hiesig geb. [~]",
+       "score": 0.5556,
+       "pass": 1,
+       "token": "hlobutsar"
+      }
+     ],
+     "survives": false
+    },
+    {
+     "surname": "Šilah",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [
+      {
+       "src": "pua",
+       "loc": "p10r16",
+       "house": "36",
+       "name": "Fillah Jetter [~]",
+       "score": 0.6667,
+       "pass": 1,
+       "token": "fillah"
+      },
+      {
+       "src": "pua",
+       "loc": "p10r17",
+       "house": "61",
+       "name": "Fillah Miho [~]",
+       "score": 0.6667,
+       "pass": 1,
+       "token": "fillah"
+      },
+      {
+       "src": "pua",
+       "loc": "p9r14",
+       "house": "16",
+       "name": "Fillah Michael Mühldörfler haußgübl [~]",
+       "score": 0.6667,
+       "pass": 1,
+       "token": "fillah"
+      }
+     ],
+     "survives": false
+    }
+   ],
+   "surnameSurvives": false,
+   "sameNumberAny": false
+  },
+  {
+   "houseNo": "25",
+   "ptIn1825": true,
+   "ptOwner1825": "Štunidat Mufa",
+   "sameHouse": {
+    "pt": null,
+    "atlas": null,
+    "pua": null
+   },
+   "parish1886": [
+    {
+     "surname": "Klepec",
+     "role": "poroka-ženin",
+     "book": "04455",
+     "year": 1886,
+     "anchor": "ženin Jurij Klepec [~]",
+     "src": "parish"
+    },
+    {
+     "surname": "Stubler",
+     "role": "poroka-nevesta",
+     "book": "04455",
+     "year": 1885,
+     "anchor": "Marija Stubler [~], 21, GRIBLJE 25",
+     "src": "p80",
+     "anchorHouse": "13"
+    }
+   ],
+   "surnameWitnesses": [
+    {
+     "surname": "Klepec",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [
+      {
+       "src": "pua",
+       "loc": "p23r46",
+       "house": "2",
+       "name": "Kleppetz Georg büuerl hiesig Gemeinde: Hie Leusthal [~]",
+       "score": 0.625,
+       "pass": 1,
+       "token": "kleppetz"
+      }
+     ],
+     "survives": false
+    },
+    {
+     "surname": "Stubler",
+     "best": 1.0,
+     "witnesses": [
+      {
+       "src": "pua",
+       "loc": "p38r76",
+       "house": "30",
+       "name": "Stübler Muffl Bauer zu Griblje [~]",
+       "score": 1.0,
+       "pass": 1,
+       "token": "stubler"
+      }
+     ],
+     "nearMisses": [
+      {
+       "src": "atlas",
+       "loc": "lastnik-bring-math",
+       "house": [
+        "25"
+       ],
+       "name": "Bring. Math. Bauern von Grüblen",
+       "score": 0.5714,
+       "pass": 1,
+       "token": "grublen"
+      },
+      {
+       "src": "atlas",
+       "loc": "lastnik-bring-weygandt",
+       "house": [
+        "24",
+        "31",
+        "32",
+        "35",
+        "37",
+        "38",
+        "40"
+       ],
+       "name": "Bring. Weygandt Bauern von Grüblen [PT rokopis: Brinig — Magnus/Malfa/Miklo ~]",
+       "score": 0.5714,
+       "pass": 1,
+       "token": "grublen"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-22",
+       "house": "21",
+       "name": "Šture Majzel",
+       "score": 0.5714,
+       "pass": 1,
+       "token": "sture"
+      }
+     ],
+     "survives": true
+    }
+   ],
+   "surnameSurvives": true,
+   "sameNumberAny": false
+  },
+  {
+   "houseNo": "29",
+   "ptIn1825": true,
+   "ptOwner1825": "Krišan Gregor",
+   "sameHouse": {
+    "pt": null,
+    "atlas": null,
+    "pua": null
+   },
+   "parish1886": [
+    {
+     "surname": "Mileh",
+     "role": "smrt",
+     "book": "04894",
+     "year": 1886,
+     "anchor": "Janez Mileh [~]",
+     "src": "parish"
+    },
+    {
+     "surname": "Brinec",
+     "role": "poroka-nevesta",
+     "book": "04455",
+     "year": 1887,
+     "anchor": "Maria Brinec",
+     "src": "parish"
+    },
+    {
+     "surname": "Miletch",
+     "role": "poroka-starši-neveste",
+     "book": "04455",
+     "year": 1887,
+     "anchor": "roj. Miletch",
+     "src": "parish"
+    }
+   ],
+   "surnameWitnesses": [
+    {
+     "surname": "Brinec",
+     "best": 0.8333,
+     "witnesses": [
+      {
+       "src": "pua",
+       "loc": "p6r7",
+       "house": "43",
+       "name": "Brulla Mako/Matho Bünnhaußgübl [~] (alternative: Brinig, Brinc)",
+       "score": 0.8333,
+       "pass": 1,
+       "token": "brinc"
+      }
+     ],
+     "nearMisses": [
+      {
+       "src": "atlas",
+       "loc": "lastnik-bring-math",
+       "house": [
+        "25"
+       ],
+       "name": "Bring. Math. Bauern von Grüblen",
+       "score": 0.6667,
+       "pass": 1,
+       "token": "bring"
+      },
+      {
+       "src": "atlas",
+       "loc": "lastnik-bring-weygandt",
+       "house": [
+        "24",
+        "31",
+        "32",
+        "35",
+        "37",
+        "38",
+        "40"
+       ],
+       "name": "Bring. Weygandt Bauern von Grüblen [PT rokopis: Brinig — Magnus/Malfa/Miklo ~]",
+       "score": 0.6667,
+       "pass": 1,
+       "token": "bring"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-32",
+       "house": "31",
+       "name": "Bring Marko",
+       "score": 0.6667,
+       "pass": 1,
+       "token": "bring"
+      }
+     ],
+     "survives": true
+    },
+    {
+     "surname": "Mileh",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [
+      {
+       "src": "atlas",
+       "loc": "lastnik-milleg",
+       "house": [
+        "34",
+        "36"
+       ],
+       "name": "Milleg Hans (Jan) [~]",
+       "score": 0.6667,
+       "pass": 1,
+       "token": "milleg"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-35",
+       "house": "34",
+       "name": "Milleg Hans [~]",
+       "score": 0.6667,
+       "pass": 1,
+       "token": "milleg"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-36",
+       "house": "34 (prečrtana dvojnica)",
+       "name": "Milleg Hans [~]",
+       "score": 0.6667,
+       "pass": 1,
+       "token": "milleg"
+      }
+     ],
+     "survives": false
+    },
+    {
+     "surname": "Miletch",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [
+      {
+       "src": "pua",
+       "loc": "p8r12",
+       "house": "4",
+       "name": "Dragosch Mavroslawitsch hiesig Dragosche, Gemeinde Molestitch [~]",
+       "score": 0.6,
+       "pass": 1,
+       "token": "molestitch"
+      }
+     ],
+     "survives": false
+    }
+   ],
+   "surnameSurvives": true,
+   "sameNumberAny": false
+  },
+  {
+   "houseNo": "31",
+   "ptIn1825": true,
+   "ptOwner1825": "Bring Marko",
+   "sameHouse": {
+    "pt": null,
+    "atlas": null,
+    "pua": null
+   },
+   "parish1886": [
+    {
+     "surname": "Marh",
+     "role": "smrt",
+     "book": "04894",
+     "year": 1886,
+     "anchor": "Katarina Marh [~]",
+     "src": "parish"
+    },
+    {
+     "surname": "Pavie",
+     "role": "poroka-ženin",
+     "book": "04455",
+     "year": 1886,
+     "anchor": "ženin Martin Pavie [~]",
+     "src": "parish"
+    }
+   ],
+   "surnameWitnesses": [
+    {
+     "surname": "Marh",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [],
+     "survives": false
+    },
+    {
+     "surname": "Pavie",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [],
+     "survives": false
+    }
+   ],
+   "surnameSurvives": false,
+   "sameNumberAny": false
+  },
+  {
+   "houseNo": "36",
+   "ptIn1825": true,
+   "ptOwner1825": "Milleg Hans [~]",
+   "sameHouse": {
+    "pt": null,
+    "atlas": null,
+    "pua": {
+     "surname": "Križan",
+     "name": "Krischan Malfs Leurschkau / Griblje [~]",
+     "page": 18,
+     "row": 35,
+     "score": 0.8333,
+     "pass": 1,
+     "token": "krisan"
+    }
+   },
+   "parish1886": [
+    {
+     "surname": "Šimec",
+     "role": "rojstvo-mati",
+     "book": "04105",
+     "year": 1886,
+     "anchor": "Barbara Šimec",
+     "src": "parish"
+    },
+    {
+     "surname": "Križan",
+     "role": "rojstvo-oče",
+     "book": "04105",
+     "year": 1886,
+     "anchor": "Matija Križan ½ zemg.",
+     "src": "parish"
+    },
+    {
+     "surname": "Milavec",
+     "role": "rojstvo-mati",
+     "book": "04105",
+     "year": 1886,
+     "anchor": "Ana roj. Milavec",
+     "src": "parish"
+    },
+    {
+     "surname": "Šimec",
+     "role": "poroka-ženin",
+     "book": "04455",
+     "year": 1886,
+     "anchor": "ženin Johann Šimec [~]",
+     "src": "parish"
+    },
+    {
+     "surname": "Jakobič",
+     "role": "poroka-starši-ženina",
+     "book": "04455",
+     "year": 1886,
+     "anchor": "Maria née Jakobič [~]",
+     "src": "parish"
+    },
+    {
+     "surname": "Šimec",
+     "role": "smrt",
+     "book": "04894",
+     "year": 1887,
+     "anchor": "Ana Šimec [~]",
+     "src": "parish"
+    }
+   ],
+   "surnameWitnesses": [
+    {
+     "surname": "Jakobič",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [],
+     "survives": false
+    },
+    {
+     "surname": "Križan",
+     "best": 0.8333,
+     "witnesses": [
+      {
+       "src": "atlas",
+       "loc": "lastnik-krisan",
+       "house": [
+        "29",
+        "30"
+       ],
+       "name": "Krišan Gregor",
+       "score": 0.8333,
+       "pass": 1,
+       "token": "krisan"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-30",
+       "house": "29",
+       "name": "Krišan Gregor",
+       "score": 0.8333,
+       "pass": 1,
+       "token": "krisan"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-31",
+       "house": "30",
+       "name": "Krišan Gregor",
+       "score": 0.8333,
+       "pass": 1,
+       "token": "krisan"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-87",
+       "house": "85",
+       "name": "Peta Krištof (Krischan)",
+       "score": 0.8333,
+       "pass": 1,
+       "token": "krisan"
+      },
+      {
+       "src": "pua",
+       "loc": "p18r34",
+       "house": "31",
+       "name": "Krischan Mandschurischka / Griblje [~]",
+       "score": 0.8333,
+       "pass": 1,
+       "token": "krisan"
+      },
+      {
+       "src": "pua",
+       "loc": "p18r35",
+       "house": "36",
+       "name": "Krischan Malfs Leurschkau / Griblje [~]",
+       "score": 0.8333,
+       "pass": 1,
+       "token": "krisan"
+      }
+     ],
+     "nearMisses": [
+      {
+       "src": "chain",
+       "loc": "hiša-21",
+       "house": "20",
+       "name": "Krištan/Kraihan Mäfa [~]",
+       "score": 0.7143,
+       "pass": 1,
+       "token": "kraihan"
+      },
+      {
+       "src": "pua",
+       "loc": "p16r30",
+       "house": "3",
+       "name": "Kristan Mäusel buaß hulgäßl [~]",
+       "score": 0.7143,
+       "pass": 1,
+       "token": "kristan"
+      },
+      {
+       "src": "pua",
+       "loc": "p22r43",
+       "house": "69",
+       "name": "Kristan Matjaž Bučar [~]",
+       "score": 0.7143,
+       "pass": 1,
+       "token": "kristan"
+      }
+     ],
+     "survives": true
+    },
+    {
+     "surname": "Milavec",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [
+      {
+       "src": "atlas",
+       "loc": "lastnik-milleg",
+       "house": [
+        "34",
+        "36"
+       ],
+       "name": "Milleg Hans (Jan) [~]",
+       "score": 0.5714,
+       "pass": 1,
+       "token": "milleg"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-35",
+       "house": "34",
+       "name": "Milleg Hans [~]",
+       "score": 0.5714,
+       "pass": 1,
+       "token": "milleg"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-36",
+       "house": "34 (prečrtana dvojnica)",
+       "name": "Milleg Hans [~]",
+       "score": 0.5714,
+       "pass": 1,
+       "token": "milleg"
+      }
+     ],
+     "survives": false
+    },
+    {
+     "surname": "Šimec",
+     "best": 1.0,
+     "witnesses": [
+      {
+       "src": "atlas",
+       "loc": "lastnik-simec",
+       "house": [
+        "3",
+        "4",
+        "63",
+        "64",
+        "66"
+       ],
+       "name": "Schimek / Šimec",
+       "score": 1.0,
+       "pass": 1,
+       "token": "simec"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-3",
+       "house": "3",
+       "name": "Šimec Jakob",
+       "score": 1.0,
+       "pass": 1,
+       "token": "simec"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-4",
+       "house": "4",
+       "name": "Šimec Matija",
+       "score": 1.0,
+       "pass": 1,
+       "token": "simec"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-65",
+       "house": "63",
+       "name": "Šimec Ripane",
+       "score": 1.0,
+       "pass": 1,
+       "token": "simec"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-66",
+       "house": "64",
+       "name": "Šimec Jhan",
+       "score": 1.0,
+       "pass": 1,
+       "token": "simec"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-68",
+       "house": "66",
+       "name": "Šimec Jhan",
+       "score": 1.0,
+       "pass": 1,
+       "token": "simec"
+      }
+     ],
+     "nearMisses": [
+      {
+       "src": "pua",
+       "loc": "p40r80",
+       "house": [],
+       "name": "Schimetz Michael Baunthofgäbln [~]",
+       "score": 0.6667,
+       "pass": 1,
+       "token": "simetz"
+      },
+      {
+       "src": "pua",
+       "loc": "p40r81",
+       "house": "55",
+       "name": "Schimetz Hanß Baunthofgübln [~]",
+       "score": 0.6667,
+       "pass": 1,
+       "token": "simetz"
+      },
+      {
+       "src": "chain",
+       "loc": "parcela-49",
+       "house": "—",
+       "name": "Malt Simon",
+       "score": 0.6,
+       "pass": 1,
+       "token": "simon"
+      }
+     ],
+     "survives": true
+    }
+   ],
+   "surnameSurvives": true,
+   "sameNumberAny": true
+  },
+  {
+   "houseNo": "39",
+   "ptIn1825": true,
+   "ptOwner1825": "Brinig Miklo [~]",
+   "sameHouse": {
+    "pt": null,
+    "atlas": null,
+    "pua": null
+   },
+   "parish1886": [
+    {
+     "surname": "Šimec",
+     "role": "rojstvo-oče",
+     "book": "04105",
+     "year": 1886,
+     "anchor": "Nikolaj Šimec ½ zemg.",
+     "src": "parish"
+    },
+    {
+     "surname": "Jakopič",
+     "role": "rojstvo-mati",
+     "book": "04105",
+     "year": 1886,
+     "anchor": "Barbara roj. Jakopič",
+     "src": "parish"
+    }
+   ],
+   "surnameWitnesses": [
+    {
+     "surname": "Jakopič",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [],
+     "survives": false
+    },
+    {
+     "surname": "Šimec",
+     "best": 1.0,
+     "witnesses": [
+      {
+       "src": "atlas",
+       "loc": "lastnik-simec",
+       "house": [
+        "3",
+        "4",
+        "63",
+        "64",
+        "66"
+       ],
+       "name": "Schimek / Šimec",
+       "score": 1.0,
+       "pass": 1,
+       "token": "simec"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-3",
+       "house": "3",
+       "name": "Šimec Jakob",
+       "score": 1.0,
+       "pass": 1,
+       "token": "simec"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-4",
+       "house": "4",
+       "name": "Šimec Matija",
+       "score": 1.0,
+       "pass": 1,
+       "token": "simec"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-65",
+       "house": "63",
+       "name": "Šimec Ripane",
+       "score": 1.0,
+       "pass": 1,
+       "token": "simec"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-66",
+       "house": "64",
+       "name": "Šimec Jhan",
+       "score": 1.0,
+       "pass": 1,
+       "token": "simec"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-68",
+       "house": "66",
+       "name": "Šimec Jhan",
+       "score": 1.0,
+       "pass": 1,
+       "token": "simec"
+      }
+     ],
+     "nearMisses": [
+      {
+       "src": "pua",
+       "loc": "p40r80",
+       "house": [],
+       "name": "Schimetz Michael Baunthofgäbln [~]",
+       "score": 0.6667,
+       "pass": 1,
+       "token": "simetz"
+      },
+      {
+       "src": "pua",
+       "loc": "p40r81",
+       "house": "55",
+       "name": "Schimetz Hanß Baunthofgübln [~]",
+       "score": 0.6667,
+       "pass": 1,
+       "token": "simetz"
+      },
+      {
+       "src": "chain",
+       "loc": "parcela-49",
+       "house": "—",
+       "name": "Malt Simon",
+       "score": 0.6,
+       "pass": 1,
+       "token": "simon"
+      }
+     ],
+     "survives": true
+    }
+   ],
+   "surnameSurvives": true,
+   "sameNumberAny": false
+  },
+  {
+   "houseNo": "44",
+   "ptIn1825": false,
+   "ptOwner1825": null,
+   "sameHouse": {
+    "pt": null,
+    "atlas": null,
+    "pua": null
+   },
+   "parish1886": [
+    {
+     "surname": "Šproch",
+     "role": "smrt",
+     "book": "04894",
+     "year": 1887,
+     "anchor": "Matija Šproch [~]",
+     "src": "parish"
+    }
+   ],
+   "surnameWitnesses": [
+    {
+     "surname": "Šproch",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [],
+     "survives": false
+    }
+   ],
+   "surnameSurvives": false,
+   "sameNumberAny": false
+  },
+  {
+   "houseNo": "54",
+   "ptIn1825": false,
+   "ptOwner1825": null,
+   "sameHouse": {
+    "pt": null,
+    "atlas": null,
+    "pua": null
+   },
+   "parish1886": [
+    {
+     "surname": "Pintec",
+     "role": "rojstvo-oče",
+     "book": "04105",
+     "year": 1886,
+     "anchor": "Janez Pintec? [~]",
+     "src": "parish"
+    },
+    {
+     "surname": "Strauš",
+     "role": "rojstvo-mati",
+     "book": "04105",
+     "year": 1886,
+     "anchor": "Ana roj. Strauš [~]",
+     "src": "parish"
+    }
+   ],
+   "surnameWitnesses": [
+    {
+     "surname": "Pintec",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [
+      {
+       "src": "pua",
+       "loc": "p34r68",
+       "house": "59",
+       "name": "Pfister Blaž Bauernholds Güble [~]",
+       "score": 0.5714,
+       "pass": 1,
+       "token": "pfister"
+      }
+     ],
+     "survives": false
+    },
+    {
+     "surname": "Strauš",
+     "best": 0.8571,
+     "witnesses": [
+      {
+       "src": "atlas",
+       "loc": "lastnik-groy",
+       "house": [
+        "81",
+        "82",
+        "83",
+        "84",
+        "92"
+       ],
+       "name": "Strauß Georg [Groy] [~]",
+       "score": 0.8571,
+       "pass": 1,
+       "token": "strauss"
+      },
+      {
+       "src": "atlas",
+       "loc": "lastnik-stenopfs",
+       "house": [
+        "76",
+        "79"
+       ],
+       "name": "Strauß Georg [~]",
+       "score": 0.8571,
+       "pass": 1,
+       "token": "strauss"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-78",
+       "house": "76",
+       "name": "Strauß Georg [~]",
+       "score": 0.8571,
+       "pass": 1,
+       "token": "strauss"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-81",
+       "house": "79",
+       "name": "Strauß Georg [~] (vrstica rdeče prečrtana)",
+       "score": 0.8571,
+       "pass": 1,
+       "token": "strauss"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-83",
+       "house": "81",
+       "name": "Strauß Georg [Groy] [~]",
+       "score": 0.8571,
+       "pass": 1,
+       "token": "strauss"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-84",
+       "house": "82",
+       "name": "Strauß Georg [Groy] [~]",
+       "score": 0.8571,
+       "pass": 1,
+       "token": "strauss"
+      }
+     ],
+     "nearMisses": [
+      {
+       "src": "chain",
+       "loc": "parcela-44",
+       "house": "—",
+       "name": "Malfs Mathäus",
+       "score": 0.5714,
+       "pass": 1,
+       "token": "mathaus"
+      },
+      {
+       "src": "pua",
+       "loc": "p12r23",
+       "house": "8",
+       "name": "Höflehner Mathäus [~]",
+       "score": 0.5714,
+       "pass": 1,
+       "token": "mathaus"
+      }
+     ],
+     "survives": true
+    }
+   ],
+   "surnameSurvives": true,
+   "sameNumberAny": false
+  },
+  {
+   "houseNo": "56",
+   "ptIn1825": false,
+   "ptOwner1825": null,
+   "sameHouse": {
+    "pt": null,
+    "atlas": null,
+    "pua": null
+   },
+   "parish1886": [
+    {
+     "surname": "Šimec",
+     "role": "rojstvo-oče",
+     "book": "04105",
+     "year": 1886,
+     "anchor": "oče Janez Šimec",
+     "src": "parish"
+    },
+    {
+     "surname": "Perdinec",
+     "role": "rojstvo-mati",
+     "book": "04105",
+     "year": 1886,
+     "anchor": "roj. Perdinec",
+     "src": "parish"
+    }
+   ],
+   "surnameWitnesses": [
+    {
+     "surname": "Perdinec",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [
+      {
+       "src": "atlas",
+       "loc": "lastnik-peutinger",
+       "house": [
+        "61",
+        "65",
+        "73"
+       ],
+       "name": "Peutinger (Jhan, Mihel)",
+       "score": 0.5556,
+       "pass": 1,
+       "token": "peutinger"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-63",
+       "house": "61",
+       "name": "Peutinger Jhan",
+       "score": 0.5556,
+       "pass": 1,
+       "token": "peutinger"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-67",
+       "house": "65",
+       "name": "Peutinger Jhan",
+       "score": 0.5556,
+       "pass": 1,
+       "token": "peutinger"
+      }
+     ],
+     "survives": false
+    },
+    {
+     "surname": "Šimec",
+     "best": 1.0,
+     "witnesses": [
+      {
+       "src": "atlas",
+       "loc": "lastnik-simec",
+       "house": [
+        "3",
+        "4",
+        "63",
+        "64",
+        "66"
+       ],
+       "name": "Schimek / Šimec",
+       "score": 1.0,
+       "pass": 1,
+       "token": "simec"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-3",
+       "house": "3",
+       "name": "Šimec Jakob",
+       "score": 1.0,
+       "pass": 1,
+       "token": "simec"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-4",
+       "house": "4",
+       "name": "Šimec Matija",
+       "score": 1.0,
+       "pass": 1,
+       "token": "simec"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-65",
+       "house": "63",
+       "name": "Šimec Ripane",
+       "score": 1.0,
+       "pass": 1,
+       "token": "simec"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-66",
+       "house": "64",
+       "name": "Šimec Jhan",
+       "score": 1.0,
+       "pass": 1,
+       "token": "simec"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-68",
+       "house": "66",
+       "name": "Šimec Jhan",
+       "score": 1.0,
+       "pass": 1,
+       "token": "simec"
+      }
+     ],
+     "nearMisses": [
+      {
+       "src": "pua",
+       "loc": "p40r80",
+       "house": [],
+       "name": "Schimetz Michael Baunthofgäbln [~]",
+       "score": 0.6667,
+       "pass": 1,
+       "token": "simetz"
+      },
+      {
+       "src": "pua",
+       "loc": "p40r81",
+       "house": "55",
+       "name": "Schimetz Hanß Baunthofgübln [~]",
+       "score": 0.6667,
+       "pass": 1,
+       "token": "simetz"
+      },
+      {
+       "src": "chain",
+       "loc": "parcela-49",
+       "house": "—",
+       "name": "Malt Simon",
+       "score": 0.6,
+       "pass": 1,
+       "token": "simon"
+      }
+     ],
+     "survives": true
+    }
+   ],
+   "surnameSurvives": true,
+   "sameNumberAny": false
+  },
+  {
+   "houseNo": "57",
+   "ptIn1825": false,
+   "ptOwner1825": null,
+   "sameHouse": {
+    "pt": null,
+    "atlas": null,
+    "pua": null
+   },
+   "parish1886": [
+    {
+     "surname": "Podolivec",
+     "role": "rojstvo-oče",
+     "book": "04105",
+     "year": 1886,
+     "anchor": "Peter Podolivec",
+     "src": "parish"
+    },
+    {
+     "surname": "Stupanič",
+     "role": "rojstvo-mati",
+     "book": "04105",
+     "year": 1886,
+     "anchor": "Marija roj. Stupanič",
+     "src": "parish"
+    }
+   ],
+   "surnameWitnesses": [
+    {
+     "surname": "Podolivec",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [],
+     "survives": false
+    },
+    {
+     "surname": "Stupanič",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [
+      {
+       "src": "pua",
+       "loc": "p41r83",
+       "house": "58",
+       "name": "Stepanitsch Jakob Laurentzhow Gütte [~]",
+       "score": 0.6667,
+       "pass": 1,
+       "token": "stepanits"
+      }
+     ],
+     "survives": false
+    }
+   ],
+   "surnameSurvives": false,
+   "sameNumberAny": false
+  },
+  {
+   "houseNo": "59",
+   "ptIn1825": false,
+   "ptOwner1825": null,
+   "sameHouse": {
+    "pt": null,
+    "atlas": null,
+    "pua": null
+   },
+   "parish1886": [
+    {
+     "surname": "Podlirec",
+     "role": "smrt",
+     "book": "04894",
+     "year": 1886,
+     "anchor": "Marija Podlirec [~]",
+     "src": "parish"
+    }
+   ],
+   "surnameWitnesses": [
+    {
+     "surname": "Podlirec",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [],
+     "survives": false
+    }
+   ],
+   "surnameSurvives": false,
+   "sameNumberAny": false
+  },
+  {
+   "houseNo": "60",
+   "ptIn1825": false,
+   "ptOwner1825": null,
+   "sameHouse": {
+    "pt": null,
+    "atlas": null,
+    "pua": null
+   },
+   "parish1886": [
+    {
+     "surname": "Bohor",
+     "role": "poroka-nevesta",
+     "book": "04455",
+     "year": 1886,
+     "anchor": "Maria Bohor [~]",
+     "src": "parish"
+    },
+    {
+     "surname": "Križan",
+     "role": "poroka-starši-neveste",
+     "book": "04455",
+     "year": 1886,
+     "anchor": "Katharina née Križan [~]",
+     "src": "parish"
+    }
+   ],
+   "surnameWitnesses": [
+    {
+     "surname": "Bohor",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [],
+     "survives": false
+    },
+    {
+     "surname": "Križan",
+     "best": 0.8333,
+     "witnesses": [
+      {
+       "src": "atlas",
+       "loc": "lastnik-krisan",
+       "house": [
+        "29",
+        "30"
+       ],
+       "name": "Krišan Gregor",
+       "score": 0.8333,
+       "pass": 1,
+       "token": "krisan"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-30",
+       "house": "29",
+       "name": "Krišan Gregor",
+       "score": 0.8333,
+       "pass": 1,
+       "token": "krisan"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-31",
+       "house": "30",
+       "name": "Krišan Gregor",
+       "score": 0.8333,
+       "pass": 1,
+       "token": "krisan"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-87",
+       "house": "85",
+       "name": "Peta Krištof (Krischan)",
+       "score": 0.8333,
+       "pass": 1,
+       "token": "krisan"
+      },
+      {
+       "src": "pua",
+       "loc": "p18r34",
+       "house": "31",
+       "name": "Krischan Mandschurischka / Griblje [~]",
+       "score": 0.8333,
+       "pass": 1,
+       "token": "krisan"
+      },
+      {
+       "src": "pua",
+       "loc": "p18r35",
+       "house": "36",
+       "name": "Krischan Malfs Leurschkau / Griblje [~]",
+       "score": 0.8333,
+       "pass": 1,
+       "token": "krisan"
+      }
+     ],
+     "nearMisses": [
+      {
+       "src": "chain",
+       "loc": "hiša-21",
+       "house": "20",
+       "name": "Krištan/Kraihan Mäfa [~]",
+       "score": 0.7143,
+       "pass": 1,
+       "token": "kraihan"
+      },
+      {
+       "src": "pua",
+       "loc": "p16r30",
+       "house": "3",
+       "name": "Kristan Mäusel buaß hulgäßl [~]",
+       "score": 0.7143,
+       "pass": 1,
+       "token": "kristan"
+      },
+      {
+       "src": "pua",
+       "loc": "p22r43",
+       "house": "69",
+       "name": "Kristan Matjaž Bučar [~]",
+       "score": 0.7143,
+       "pass": 1,
+       "token": "kristan"
+      }
+     ],
+     "survives": true
+    }
+   ],
+   "surnameSurvives": true,
+   "sameNumberAny": false
+  },
+  {
+   "houseNo": "61",
+   "ptIn1825": true,
+   "ptOwner1825": "Peutinger Jhan",
+   "sameHouse": {
+    "pt": null,
+    "atlas": null,
+    "pua": null
+   },
+   "parish1886": [
+    {
+     "surname": "Gilatk",
+     "role": "rojstvo-mati",
+     "book": "04105",
+     "year": 1887,
+     "anchor": "Bara roj. Gilatk/Filatk [~]",
+     "src": "p79"
+    },
+    {
+     "surname": "Filatk",
+     "role": "rojstvo-mati",
+     "book": "04105",
+     "year": 1887,
+     "anchor": "Bara roj. Gilatk/Filatk [~]",
+     "src": "p79"
+    }
+   ],
+   "surnameWitnesses": [
+    {
+     "surname": "Filatk",
+     "best": 0.8333,
+     "witnesses": [
+      {
+       "src": "atlas",
+       "loc": "lastnik-filak",
+       "house": [
+        "69",
+        "70",
+        "71"
+       ],
+       "name": "Filak (Peter, Mihel)",
+       "score": 0.8333,
+       "pass": 1,
+       "token": "filak"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-71",
+       "house": "69",
+       "name": "Filak Peter",
+       "score": 0.8333,
+       "pass": 1,
+       "token": "filak"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-72",
+       "house": "70",
+       "name": "Filak Peter",
+       "score": 0.8333,
+       "pass": 1,
+       "token": "filak"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-73",
+       "house": "71",
+       "name": "Filak Mihel",
+       "score": 0.8333,
+       "pass": 1,
+       "token": "filak"
+      }
+     ],
+     "nearMisses": [],
+     "survives": true
+    },
+    {
+     "surname": "Gilatk",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [
+      {
+       "src": "atlas",
+       "loc": "lastnik-filak",
+       "house": [
+        "69",
+        "70",
+        "71"
+       ],
+       "name": "Filak (Peter, Mihel)",
+       "score": 0.6667,
+       "pass": 1,
+       "token": "filak"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-71",
+       "house": "69",
+       "name": "Filak Peter",
+       "score": 0.6667,
+       "pass": 1,
+       "token": "filak"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-72",
+       "house": "70",
+       "name": "Filak Peter",
+       "score": 0.6667,
+       "pass": 1,
+       "token": "filak"
+      }
+     ],
+     "survives": false
+    }
+   ],
+   "surnameSurvives": true,
+   "sameNumberAny": false
+  },
+  {
+   "houseNo": "63",
+   "ptIn1825": true,
+   "ptOwner1825": "Šimec Ripane",
+   "sameHouse": {
+    "pt": null,
+    "atlas": null,
+    "pua": null
+   },
+   "parish1886": [
+    {
+     "surname": "Mileh",
+     "role": "poroka-ženin",
+     "book": "04455",
+     "year": 1886,
+     "anchor": "ženin Mathias Mileh [~]",
+     "src": "parish"
+    }
+   ],
+   "surnameWitnesses": [
+    {
+     "surname": "Mileh",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [
+      {
+       "src": "atlas",
+       "loc": "lastnik-milleg",
+       "house": [
+        "34",
+        "36"
+       ],
+       "name": "Milleg Hans (Jan) [~]",
+       "score": 0.6667,
+       "pass": 1,
+       "token": "milleg"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-35",
+       "house": "34",
+       "name": "Milleg Hans [~]",
+       "score": 0.6667,
+       "pass": 1,
+       "token": "milleg"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-36",
+       "house": "34 (prečrtana dvojnica)",
+       "name": "Milleg Hans [~]",
+       "score": 0.6667,
+       "pass": 1,
+       "token": "milleg"
+      }
+     ],
+     "survives": false
+    }
+   ],
+   "surnameSurvives": false,
+   "sameNumberAny": false
+  },
+  {
+   "houseNo": "69",
+   "ptIn1825": true,
+   "ptOwner1825": "Filak Peter",
+   "sameHouse": {
+    "pt": null,
+    "atlas": null,
+    "pua": null
+   },
+   "parish1886": [
+    {
+     "surname": "Podec",
+     "role": "smrt",
+     "book": "04894",
+     "year": 1886,
+     "anchor": "vdova Podec [~]",
+     "src": "parish"
+    }
+   ],
+   "surnameWitnesses": [
+    {
+     "surname": "Podec",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [],
+     "survives": false
+    }
+   ],
+   "surnameSurvives": false,
+   "sameNumberAny": false
+  },
+  {
+   "houseNo": "71",
+   "ptIn1825": true,
+   "ptOwner1825": "Filak Mihel",
+   "sameHouse": {
+    "pt": null,
+    "atlas": null,
+    "pua": {
+     "surname": "Straus",
+     "name": "Strauß Niklo Bauer/b zu Gribla [~]",
+     "page": 42,
+     "row": 86,
+     "score": 0.8571,
+     "pass": 1,
+     "token": "strauss"
+    }
+   },
+   "parish1886": [
+    {
+     "surname": "Strauš",
+     "role": "rojstvo-oče",
+     "book": "04105",
+     "year": 1886,
+     "anchor": "Jurij Strauš ½ zemg.",
+     "src": "parish"
+    },
+    {
+     "surname": "Jakopič",
+     "role": "rojstvo-mati",
+     "book": "04105",
+     "year": 1886,
+     "anchor": "Barbara roj. Jakopič",
+     "src": "parish"
+    },
+    {
+     "surname": "Straus",
+     "role": "smrt",
+     "book": "04894",
+     "year": 1886,
+     "anchor": "Ana Straus [~]",
+     "src": "parish"
+    },
+    {
+     "surname": "Križan",
+     "role": "smrt-pripis",
+     "book": "04894",
+     "year": 1886,
+     "anchor": "v drugo omožena Križan",
+     "src": "parish"
+    },
+    {
+     "surname": "Straus",
+     "role": "poroka-nevesta",
+     "book": "04455",
+     "year": 1886,
+     "anchor": "Maria Straus [~], Leinwweber, 34, GRIBLJE 71",
+     "src": "parish"
+    },
+    {
+     "surname": "Stubler",
+     "role": "poroka-starši-neveste",
+     "book": "04455",
+     "year": 1886,
+     "anchor": "Anna née Stubler [~]",
+     "src": "parish"
+    },
+    {
+     "surname": "Straus",
+     "role": "poroka-ženin",
+     "book": "04455",
+     "year": 1887,
+     "anchor": "ženin Mathias Straus [~]",
+     "src": "parish"
+    },
+    {
+     "surname": "Dragoš",
+     "role": "poroka-starši-ženina",
+     "book": "04455",
+     "year": 1887,
+     "anchor": "Katharina née Dragoš [~]",
+     "src": "parish"
+    }
+   ],
+   "surnameWitnesses": [
+    {
+     "surname": "Dragoš",
+     "best": 1.0,
+     "witnesses": [
+      {
+       "src": "pua",
+       "loc": "p7r11",
+       "house": "3",
+       "name": "Dragosch Johann Bürger hiesig, Gemeinde Deschitz [~]",
+       "score": 1.0,
+       "pass": 1,
+       "token": "dragos"
+      },
+      {
+       "src": "pua",
+       "loc": "p8r12",
+       "house": "4",
+       "name": "Dragosch Mavroslawitsch hiesig Dragosche, Gemeinde Molestitch [~]",
+       "score": 1.0,
+       "pass": 1,
+       "token": "dragos"
+      },
+      {
+       "src": "pua",
+       "loc": "p8r13",
+       "house": "5",
+       "name": "Dragosch Georglawitsch zu Dragosche [~]",
+       "score": 1.0,
+       "pass": 1,
+       "token": "dragos"
+      },
+      {
+       "src": "pua",
+       "loc": "p3r1",
+       "house": "1",
+       "name": "Hölloschitsch Wufa Luina hau Dragosche [~]",
+       "score": 0.8571,
+       "pass": 1,
+       "token": "dragose"
+      }
+     ],
+     "nearMisses": [],
+     "survives": true
+    },
+    {
+     "surname": "Jakopič",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [],
+     "survives": false
+    },
+    {
+     "surname": "Križan",
+     "best": 0.8333,
+     "witnesses": [
+      {
+       "src": "atlas",
+       "loc": "lastnik-krisan",
+       "house": [
+        "29",
+        "30"
+       ],
+       "name": "Krišan Gregor",
+       "score": 0.8333,
+       "pass": 1,
+       "token": "krisan"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-30",
+       "house": "29",
+       "name": "Krišan Gregor",
+       "score": 0.8333,
+       "pass": 1,
+       "token": "krisan"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-31",
+       "house": "30",
+       "name": "Krišan Gregor",
+       "score": 0.8333,
+       "pass": 1,
+       "token": "krisan"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-87",
+       "house": "85",
+       "name": "Peta Krištof (Krischan)",
+       "score": 0.8333,
+       "pass": 1,
+       "token": "krisan"
+      },
+      {
+       "src": "pua",
+       "loc": "p18r34",
+       "house": "31",
+       "name": "Krischan Mandschurischka / Griblje [~]",
+       "score": 0.8333,
+       "pass": 1,
+       "token": "krisan"
+      },
+      {
+       "src": "pua",
+       "loc": "p18r35",
+       "house": "36",
+       "name": "Krischan Malfs Leurschkau / Griblje [~]",
+       "score": 0.8333,
+       "pass": 1,
+       "token": "krisan"
+      }
+     ],
+     "nearMisses": [
+      {
+       "src": "chain",
+       "loc": "hiša-21",
+       "house": "20",
+       "name": "Krištan/Kraihan Mäfa [~]",
+       "score": 0.7143,
+       "pass": 1,
+       "token": "kraihan"
+      },
+      {
+       "src": "pua",
+       "loc": "p16r30",
+       "house": "3",
+       "name": "Kristan Mäusel buaß hulgäßl [~]",
+       "score": 0.7143,
+       "pass": 1,
+       "token": "kristan"
+      },
+      {
+       "src": "pua",
+       "loc": "p22r43",
+       "house": "69",
+       "name": "Kristan Matjaž Bučar [~]",
+       "score": 0.7143,
+       "pass": 1,
+       "token": "kristan"
+      }
+     ],
+     "survives": true
+    },
+    {
+     "surname": "Straus",
+     "best": 0.8571,
+     "witnesses": [
+      {
+       "src": "atlas",
+       "loc": "lastnik-groy",
+       "house": [
+        "81",
+        "82",
+        "83",
+        "84",
+        "92"
+       ],
+       "name": "Strauß Georg [Groy] [~]",
+       "score": 0.8571,
+       "pass": 1,
+       "token": "strauss"
+      },
+      {
+       "src": "atlas",
+       "loc": "lastnik-stenopfs",
+       "house": [
+        "76",
+        "79"
+       ],
+       "name": "Strauß Georg [~]",
+       "score": 0.8571,
+       "pass": 1,
+       "token": "strauss"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-78",
+       "house": "76",
+       "name": "Strauß Georg [~]",
+       "score": 0.8571,
+       "pass": 1,
+       "token": "strauss"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-81",
+       "house": "79",
+       "name": "Strauß Georg [~] (vrstica rdeče prečrtana)",
+       "score": 0.8571,
+       "pass": 1,
+       "token": "strauss"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-83",
+       "house": "81",
+       "name": "Strauß Georg [Groy] [~]",
+       "score": 0.8571,
+       "pass": 1,
+       "token": "strauss"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-84",
+       "house": "82",
+       "name": "Strauß Georg [Groy] [~]",
+       "score": 0.8571,
+       "pass": 1,
+       "token": "strauss"
+      }
+     ],
+     "nearMisses": [
+      {
+       "src": "chain",
+       "loc": "parcela-44",
+       "house": "—",
+       "name": "Malfs Mathäus",
+       "score": 0.5714,
+       "pass": 1,
+       "token": "mathaus"
+      },
+      {
+       "src": "pua",
+       "loc": "p12r23",
+       "house": "8",
+       "name": "Höflehner Mathäus [~]",
+       "score": 0.5714,
+       "pass": 1,
+       "token": "mathaus"
+      }
+     ],
+     "survives": true
+    },
+    {
+     "surname": "Strauš",
+     "best": 0.8571,
+     "witnesses": [
+      {
+       "src": "atlas",
+       "loc": "lastnik-groy",
+       "house": [
+        "81",
+        "82",
+        "83",
+        "84",
+        "92"
+       ],
+       "name": "Strauß Georg [Groy] [~]",
+       "score": 0.8571,
+       "pass": 1,
+       "token": "strauss"
+      },
+      {
+       "src": "atlas",
+       "loc": "lastnik-stenopfs",
+       "house": [
+        "76",
+        "79"
+       ],
+       "name": "Strauß Georg [~]",
+       "score": 0.8571,
+       "pass": 1,
+       "token": "strauss"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-78",
+       "house": "76",
+       "name": "Strauß Georg [~]",
+       "score": 0.8571,
+       "pass": 1,
+       "token": "strauss"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-81",
+       "house": "79",
+       "name": "Strauß Georg [~] (vrstica rdeče prečrtana)",
+       "score": 0.8571,
+       "pass": 1,
+       "token": "strauss"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-83",
+       "house": "81",
+       "name": "Strauß Georg [Groy] [~]",
+       "score": 0.8571,
+       "pass": 1,
+       "token": "strauss"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-84",
+       "house": "82",
+       "name": "Strauß Georg [Groy] [~]",
+       "score": 0.8571,
+       "pass": 1,
+       "token": "strauss"
+      }
+     ],
+     "nearMisses": [
+      {
+       "src": "chain",
+       "loc": "parcela-44",
+       "house": "—",
+       "name": "Malfs Mathäus",
+       "score": 0.5714,
+       "pass": 1,
+       "token": "mathaus"
+      },
+      {
+       "src": "pua",
+       "loc": "p12r23",
+       "house": "8",
+       "name": "Höflehner Mathäus [~]",
+       "score": 0.5714,
+       "pass": 1,
+       "token": "mathaus"
+      }
+     ],
+     "survives": true
+    },
+    {
+     "surname": "Stubler",
+     "best": 1.0,
+     "witnesses": [
+      {
+       "src": "pua",
+       "loc": "p38r76",
+       "house": "30",
+       "name": "Stübler Muffl Bauer zu Griblje [~]",
+       "score": 1.0,
+       "pass": 1,
+       "token": "stubler"
+      }
+     ],
+     "nearMisses": [
+      {
+       "src": "atlas",
+       "loc": "lastnik-bring-math",
+       "house": [
+        "25"
+       ],
+       "name": "Bring. Math. Bauern von Grüblen",
+       "score": 0.5714,
+       "pass": 1,
+       "token": "grublen"
+      },
+      {
+       "src": "atlas",
+       "loc": "lastnik-bring-weygandt",
+       "house": [
+        "24",
+        "31",
+        "32",
+        "35",
+        "37",
+        "38",
+        "40"
+       ],
+       "name": "Bring. Weygandt Bauern von Grüblen [PT rokopis: Brinig — Magnus/Malfa/Miklo ~]",
+       "score": 0.5714,
+       "pass": 1,
+       "token": "grublen"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-22",
+       "house": "21",
+       "name": "Šture Majzel",
+       "score": 0.5714,
+       "pass": 1,
+       "token": "sture"
+      }
+     ],
+     "survives": true
+    }
+   ],
+   "surnameSurvives": true,
+   "sameNumberAny": true
+  },
+  {
+   "houseNo": "74",
+   "ptIn1825": true,
+   "ptOwner1825": "Drulak Jhan",
+   "sameHouse": {
+    "pt": null,
+    "atlas": null,
+    "pua": null
+   },
+   "parish1886": [
+    {
+     "surname": "Hambeč",
+     "role": "smrt",
+     "book": "04894",
+     "year": 1886,
+     "anchor": "Jožef Hambeč [~]",
+     "src": "parish"
+    }
+   ],
+   "surnameWitnesses": [
+    {
+     "surname": "Hambeč",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [],
+     "survives": false
+    }
+   ],
+   "surnameSurvives": false,
+   "sameNumberAny": false
+  },
+  {
+   "houseNo": "75",
+   "ptIn1825": true,
+   "ptOwner1825": "Drulak Peter",
+   "sameHouse": {
+    "pt": null,
+    "atlas": null,
+    "pua": null
+   },
+   "parish1886": [
+    {
+     "surname": "Jakobič",
+     "role": "rojstvo-oče",
+     "book": "04105",
+     "year": 1886,
+     "anchor": "Janez Jakobič? [~]",
+     "src": "parish"
+    },
+    {
+     "surname": "Stubler",
+     "role": "rojstvo-mati",
+     "book": "04105",
+     "year": 1886,
+     "anchor": "Marija roj. Stubler",
+     "src": "parish"
+    }
+   ],
+   "surnameWitnesses": [
+    {
+     "surname": "Jakobič",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [],
+     "survives": false
+    },
+    {
+     "surname": "Stubler",
+     "best": 1.0,
+     "witnesses": [
+      {
+       "src": "pua",
+       "loc": "p38r76",
+       "house": "30",
+       "name": "Stübler Muffl Bauer zu Griblje [~]",
+       "score": 1.0,
+       "pass": 1,
+       "token": "stubler"
+      }
+     ],
+     "nearMisses": [
+      {
+       "src": "atlas",
+       "loc": "lastnik-bring-math",
+       "house": [
+        "25"
+       ],
+       "name": "Bring. Math. Bauern von Grüblen",
+       "score": 0.5714,
+       "pass": 1,
+       "token": "grublen"
+      },
+      {
+       "src": "atlas",
+       "loc": "lastnik-bring-weygandt",
+       "house": [
+        "24",
+        "31",
+        "32",
+        "35",
+        "37",
+        "38",
+        "40"
+       ],
+       "name": "Bring. Weygandt Bauern von Grüblen [PT rokopis: Brinig — Magnus/Malfa/Miklo ~]",
+       "score": 0.5714,
+       "pass": 1,
+       "token": "grublen"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-22",
+       "house": "21",
+       "name": "Šture Majzel",
+       "score": 0.5714,
+       "pass": 1,
+       "token": "sture"
+      }
+     ],
+     "survives": true
+    }
+   ],
+   "surnameSurvives": true,
+   "sameNumberAny": false
+  },
+  {
+   "houseNo": "88",
+   "ptIn1825": true,
+   "ptOwner1825": "Matja Krištof",
+   "sameHouse": {
+    "pt": null,
+    "atlas": null,
+    "pua": null
+   },
+   "parish1886": [
+    {
+     "surname": "Šimer",
+     "role": "smrt",
+     "book": "04894",
+     "year": 1886,
+     "anchor": "Matija Šimer [~]",
+     "src": "parish"
+    }
+   ],
+   "surnameWitnesses": [
+    {
+     "surname": "Šimer",
+     "best": 1.0,
+     "witnesses": [
+      {
+       "src": "pua",
+       "loc": "p38r77",
+       "house": "38",
+       "name": "Schimer Georg Bauer zu Griblje [~]",
+       "score": 1.0,
+       "pass": 1,
+       "token": "simer"
+      },
+      {
+       "src": "atlas",
+       "loc": "lastnik-simec",
+       "house": [
+        "3",
+        "4",
+        "63",
+        "64",
+        "66"
+       ],
+       "name": "Schimek / Šimec",
+       "score": 0.8,
+       "pass": 1,
+       "token": "simec"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-3",
+       "house": "3",
+       "name": "Šimec Jakob",
+       "score": 0.8,
+       "pass": 1,
+       "token": "simec"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-4",
+       "house": "4",
+       "name": "Šimec Matija",
+       "score": 0.8,
+       "pass": 1,
+       "token": "simec"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-65",
+       "house": "63",
+       "name": "Šimec Ripane",
+       "score": 0.8,
+       "pass": 1,
+       "token": "simec"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-66",
+       "house": "64",
+       "name": "Šimec Jhan",
+       "score": 0.8,
+       "pass": 1,
+       "token": "simec"
+      }
+     ],
+     "nearMisses": [
+      {
+       "src": "pua",
+       "loc": "p40r80",
+       "house": [],
+       "name": "Schimetz Michael Baunthofgäbln [~]",
+       "score": 0.6667,
+       "pass": 1,
+       "token": "simetz"
+      },
+      {
+       "src": "pua",
+       "loc": "p40r81",
+       "house": "55",
+       "name": "Schimetz Hanß Baunthofgübln [~]",
+       "score": 0.6667,
+       "pass": 1,
+       "token": "simetz"
+      },
+      {
+       "src": "atlas",
+       "loc": "lastnik-schmerz",
+       "house": [
+        "95",
+        "97"
+       ],
+       "name": "Schmerz Marko",
+       "score": 0.6,
+       "pass": 1,
+       "token": "smerz"
+      }
+     ],
+     "survives": true
+    }
+   ],
+   "surnameSurvives": true,
+   "sameNumberAny": false
+  },
+  {
+   "houseNo": "94",
+   "ptIn1825": true,
+   "ptOwner1825": "Matja Feidig",
+   "sameHouse": {
+    "pt": null,
+    "atlas": null,
+    "pua": null
+   },
+   "parish1886": [
+    {
+     "surname": "Rambič",
+     "role": "rojstvo-oče",
+     "book": "04105",
+     "year": 1886,
+     "anchor": "Matija Rambič? [~]",
+     "src": "parish"
+    },
+    {
+     "surname": "Podlivc",
+     "role": "rojstvo-mati",
+     "book": "04105",
+     "year": 1886,
+     "anchor": "Ana roj. Podlivc",
+     "src": "parish"
+    },
+    {
+     "surname": "Poddirec",
+     "role": "rojstvo-mati",
+     "book": "04105",
+     "year": 1886,
+     "anchor": "roj. Podlivc/Poddirec",
+     "src": "p79"
+    }
+   ],
+   "surnameWitnesses": [
+    {
+     "surname": "Poddirec",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [
+      {
+       "src": "pua",
+       "loc": "p28r55",
+       "house": "14",
+       "name": "Poldiŕg Mufa/buͤrſn/zu Gribla [~]",
+       "score": 0.625,
+       "pass": 1,
+       "token": "poldirg"
+      }
+     ],
+     "survives": false
+    },
+    {
+     "surname": "Podlivc",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [],
+     "survives": false
+    },
+    {
+     "surname": "Rambič",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [],
+     "survives": false
+    }
+   ],
+   "surnameSurvives": false,
+   "sameNumberAny": false
+  }
+ ],
+ "puaGap4160": [
+  {
+   "houseNo": "41",
+   "page": 30,
+   "row": 59,
+   "name": "Georg Leiner [~]",
+   "vs1886": []
+  },
+  {
+   "houseNo": "42",
+   "page": 30,
+   "row": 60,
+   "name": "Matthäus Leiner [~]",
+   "vs1886": []
+  },
+  {
+   "houseNo": "43",
+   "page": 6,
+   "row": 7,
+   "name": "Brulla Mako/Matho Bünnhaußgübl [~] (alternative: Brinig, Brinc)",
+   "vs1886": []
+  },
+  {
+   "houseNo": "45",
+   "page": 39,
+   "row": 79,
+   "name": "Strauß Georg baua haußgübla [~]",
+   "vs1886": []
+  },
+  {
+   "houseNo": "46",
+   "page": 20,
+   "row": 39,
+   "name": "Schloßthaler Jätten Bauer zu Gribljen [~]",
+   "vs1886": []
+  },
+  {
+   "houseNo": "47",
+   "page": 22,
+   "row": 42,
+   "name": "Matthäus Wundsch [~]",
+   "vs1886": []
+  },
+  {
+   "houseNo": "48",
+   "page": 23,
+   "row": 45,
+   "name": "Hlobutschar Georg baur hiesig geb. [~]",
+   "vs1886": []
+  },
+  {
+   "houseNo": "53",
+   "page": 32,
+   "row": 63,
+   "name": "Peter Jhan Buidl / Buidlgübln [~]",
+   "vs1886": []
+  },
+  {
+   "houseNo": "54",
+   "page": 25,
+   "row": 49,
+   "name": "Rappar Nicolaus bau Gsöbln [~]",
+   "vs1886": [
+    {
+     "surname": "Pintec",
+     "score": 0.0,
+     "pass": 1,
+     "threshold": false
+    }
+   ]
+  },
+  {
+   "houseNo": "55",
+   "page": 40,
+   "row": 81,
+   "name": "Schimetz Hanß Baunthofgübln [~]",
+   "vs1886": []
+  },
+  {
+   "houseNo": "56",
+   "page": 41,
+   "row": 82,
+   "name": "Schumetz Juttan [~]",
+   "vs1886": [
+    {
+     "surname": "Šimec",
+     "score": 0.5,
+     "pass": 1,
+     "threshold": false
+    }
+   ]
+  },
+  {
+   "houseNo": "57",
+   "page": 19,
+   "row": 37,
+   "name": "Krischan Halfa Buirshofgäubla [~]",
+   "vs1886": [
+    {
+     "surname": "Stupanič",
+     "score": 0.25,
+     "pass": 1,
+     "threshold": false
+    }
+   ]
+  },
+  {
+   "houseNo": "58",
+   "page": 41,
+   "row": 83,
+   "name": "Stepanitsch Jakob Laurentzhow Gütte [~]",
+   "vs1886": []
+  },
+  {
+   "houseNo": "59",
+   "page": 34,
+   "row": 68,
+   "name": "Pfister Blaž Bauernholds Güble [~]",
+   "vs1886": [
+    {
+     "surname": "Podlirec",
+     "score": 0.25,
+     "pass": 1,
+     "threshold": false
+    }
+   ]
+  },
+  {
+   "houseNo": "60",
+   "page": 31,
+   "row": 61,
+   "name": "Georg Rußa Bauer zu Griblje [~]",
+   "vs1886": [
+    {
+     "surname": "Bohor",
+     "score": 0.4,
+     "pass": 1,
+     "threshold": false
+    }
+   ]
+  },
+  {
+   "houseNo": "60",
+   "page": 42,
+   "row": 85,
+   "name": "Schello Georg Bauer/b zu Gribla [~]",
+   "vs1886": [
+    {
+     "surname": "Bohor",
+     "score": 0.4,
+     "pass": 1,
+     "threshold": false
+    }
+   ]
+  }
+ ],
+ "stats": {
+  "sampleHouses": 25,
+  "ptInNabor": 19,
+  "ptGap": 6,
+  "distinctSurnames1886": 40,
+  "eligibleSurnames": 38,
+  "witnessedSurnames": 10,
+  "witnessedSurnamesPct": 26.3158,
+  "nearMissSurnames": 11,
+  "unwitnessedSurnames": 17,
+  "sameHouseAny1825": [
+   {
+    "houseNo": "36",
+    "src": "pua",
+    "detail": {
+     "surname": "Križan",
+     "name": "Krischan Malfs Leurschkau / Griblje [~]",
+     "page": 18,
+     "row": 35,
+     "score": 0.8333,
+     "pass": 1,
+     "token": "krisan"
+    }
+   },
+   {
+    "houseNo": "71",
+    "src": "pua",
+    "detail": {
+     "surname": "Straus",
+     "name": "Strauß Niklo Bauer/b zu Gribla [~]",
+     "page": 42,
+     "row": 86,
+     "score": 0.8571,
+     "pass": 1,
+     "token": "strauss"
+    }
+   }
+  ],
+  "sameHouseAnyCount": 2,
+  "sameHousePTCount": 0,
+  "witnessedSurnamesList": [
+   "Dragoš",
+   "Filak",
+   "Stubler",
+   "Šimec",
+   "Šimer",
+   "Straus",
+   "Strauš",
+   "Brinec",
+   "Filatk",
+   "Križan"
+  ],
+  "nearMissSurnamesList": [
+   "Gilatk",
+   "Mileh",
+   "Stupanič",
+   "Šilah",
+   "Klepec",
+   "Plebučar",
+   "Poddirec",
+   "Miletch",
+   "Milavec",
+   "Pintec",
+   "Perdinec"
+  ],
+  "unwitnessedSurnamesList": [
+   "Bohor",
+   "Gregorič",
+   "Hambeč",
+   "Jakobič",
+   "Jakobuč",
+   "Jakofčič",
+   "Jakopič",
+   "Kurnič",
+   "Marh",
+   "Pavie",
+   "Podec",
+   "Podlirec",
+   "Podlivc",
+   "Podolivec",
+   "Rambič",
+   "Šambie",
+   "Šproch"
+  ],
+  "surnameBestScores": {
+   "Bohor": 0.4,
+   "Brinec": 0.8333,
+   "Dragoš": 1.0,
+   "Filak": 1.0,
+   "Filatk": 0.8333,
+   "Gilatk": 0.6667,
+   "Gregorič": 0.5,
+   "Hambeč": 0.5,
+   "Jakobič": 0.5455,
+   "Jakobuč": 0.4615,
+   "Jakofčič": 0.4615,
+   "Jakopič": 0.5,
+   "Klepec": 0.625,
+   "Križan": 0.8333,
+   "Kurnič": 0.5,
+   "Marh": 0.0,
+   "Milavec": 0.5714,
+   "Mileh": 0.6667,
+   "Miletch": 0.6,
+   "Pavie": 0.4286,
+   "Perdinec": 0.5556,
+   "Pintec": 0.5714,
+   "Plebučar": 0.625,
+   "Poddirec": 0.625,
+   "Podec": 0.4286,
+   "Podlirec": 0.5,
+   "Podlivc": 0.4545,
+   "Podolivec": 0.4545,
+   "Rambič": 0.4286,
+   "Straus": 0.8571,
+   "Strauš": 0.8571,
+   "Stubler": 1.0,
+   "Stupanič": 0.6667,
+   "Šambie": 0.4286,
+   "Šilah": 0.6667,
+   "Šimec": 1.0,
+   "Šimer": 1.0,
+   "Šproch": 0.5
+  }
+ },
+ "findings": [
+  {
+   "id": "F1-isto-hisa-pt-nic",
+   "si": "ISTO-HIŠNA kontinuiteta imen vs PT 1825: 0/19 nabor hiš — pri VSEH hišah z PT lastnikom je 1886 gospodinjski priimek različen od 1825 lastnika (prag 0.72). Gospodinjska zamenjava na ravni hišnih števil ALI divergentno številčenje že znotraj nabora — paket MERI, ne odloča.",
+   "en": "Same-number name continuity vs the PT 1825 owner: 0/19 in-set houses — every house with a PT owner has a different household surname in 1886 (threshold 0.72). Household turnover at the number level OR divergent numbering already within the set — the pack MEASURES, does not decide."
+  },
+  {
+   "id": "F2-isto-hisa-pua",
+   "si": "ISTO-HIŠNE ujeme po PUA lastnem številčenju: hiša 36 pua 0.8333; hiša 71 pua 0.8571 — PUA ≠ PT številčenje [~], zato je to usklajenost dveh različnih sistemov, ne dokaz istovetnosti stavbe.",
+   "en": "Same-number matches via PUA's own numbering: house 36 pua 0.8333; house 71 pua 0.8571 — PUA ≠ PT numbering [~], so this is a consistency of two different systems, not building identity."
+  },
+  {
+   "id": "F3-priimek-prezivi",
+   "si": "CENZUS priimkov: 10/38 eligible 1886 gospodinjskih priimkov ima pričo 1825 (26.3158 %): Dragoš, Filak, Stubler, Šimec, Šimer, Straus, Strauš, Brinec, Filatk, Križan. Preživetje na ravni PRIIMKA, ne na ravni hiše.",
+   "en": "Surname census: 10/38 eligible 1886 household surnames have an 1825 witness (26.3158 %): Dragoš, Filak, Stubler, Šimec, Šimer, Straus, Strauš, Brinec, Filatk, Križan. Survival at the SURNAME level, not the house level."
+  },
+  {
+   "id": "F4-simec-najtrajnejsa",
+   "si": "Šimec najtrajnejša družina vzorca: PUA 1825 Schimcz 18/19 · Schimey 29/31 · Schimer 38 · Schimetz 55 · Schumetz 56 + ATLAS Šimec 3/4/63/64/66 → 1886: hiše 36 (2× + poroki 1882/1886) · 39 · 56 · 88 (Šimer [~]); PT owner hiše 63 »Šimec Ripane« — 1886 na 63 pa Mileh.",
+   "en": "Šimec the most persistent family of the sample: PUA 1825 Schimcz 18/19 · Schimey 29/31 · Schimer 38 · Schimetz 55 · Schumetz 56 + ATLAS Šimec 3/4/63/64/66 → 1886: houses 36 (2× + marriages 1882/1886) · 39 · 56 · 88 (Šimer [~]); the PT owner of house 63 »Šimec Ripane« — 1886 at 63 is Mileh."
+  },
+  {
+   "id": "F5-luknja-pua",
+   "si": "LUKNJA 41–60: PUA ohranja 16 vrstic v območju (P4); 0 isto-številnih ujem ≥ 0.72 z 1886 gospodinjstvi vzorca; najbližje @56 Schumetz vs Šimec = 0.667 [~] (nemško Schreibung — pod pragom). PUA 41–60 lastniki (Leiner, Rußa, Schello, Pfister, Rappar, Krischan, Stepanitsch …) se NE ujemajo z 1886 priimki istih števil — tudi PUA številčenje je med 1825 in 1886 evoluiralo [~].",
+   "en": "THE GAP 41–60: PUA keeps 16 rows in the range (P4); 0 same-number matches ≥ 0.72 with the 1886 households of the sample; the nearest @56 Schumetz vs Šimec = 0.667 [~] (German spelling — below threshold). The PUA 41–60 owners (Leiner, Rußa, Schello, Pfister, Rappar, Krischan, Stepanitsch …) do NOT match the 1886 surnames of the same numbers — PUA numbering also evolved between 1825 and 1886 [~]."
+  },
+  {
+   "id": "F6-najmocnejse-povezave",
+   "si": "NAJMOČNEJŠE POVEZAVE [~]: ① hiša 71 — Strauš/Straus v VSEH treh knjigah 1886 ↔ PUA Strauß Niklo @71 (0.857, isto št. v PUA št.) + ATLAS Strauß 76/79/81–84/92; ② Filak — PT 69/71 + PUA Fillah 16/34/36/61 → 1886 nevesta Ana Filak @15 (starši Mathias Filak) + mati hiše 61 »roj. Gilatk/Filatk« [~] (0.833 via PT »filak«; PUA @61 »fillah« 0.667 pod pragom — isto št. v PUA št.!); ③ Brinec 1886 @5/@29 ↔ PUA »Brinc« (alternativa v Brulla vrstici) @43 — PUA št. V LUKNJANI 41–60; ④ Križan 1886 @36/@60/@71 ↔ PT/ATLAS Krišan @29–30 (0.833) — sosednje številke; PUA Krischan @36 (0.625 pod pragom).",
+   "en": "STRONGEST LINKS [~]: ① house 71 — Strauš/Straus in ALL three 1886 registers ↔ PUA Strauß Niklo @71 (0.857, same no. in PUA numbering) + ATLAS Strauß 76/79/81–84/92; ② Filak — PT 69/71 + PUA Fillah 16/34/36/61 → 1886 bride Ana Filak @15 (parents Mathias Filak) + mother of house 61 »née Gilatk/Filatk« [~] (0.833 via PT »filak«; PUA @61 »fillah« 0.667 below threshold — same no. in PUA numbering!); ③ Brinec 1886 @5/@29 ↔ PUA »Brinc« (alternative in the Brulla row) @43 — a PUA number INSIDE the 41–60 gap; ④ Križan 1886 @36/@60/@71 ↔ PT/ATLAS Krišan @29–30 (0.833) — adjacent numbers; PUA Krischan @36 (0.625 below threshold)."
+  },
+  {
+   "id": "F7-near-miss",
+   "si": "NEAR-MISS pas [0.55, 0.72) — poročano, NE šteto: Gilatk 0.6667, Mileh 0.6667, Stupanič 0.6667, Šilah 0.6667, Klepec 0.6250, Plebučar 0.6250, Poddirec 0.6250, Miletch 0.6000, Milavec 0.5714, Pintec 0.5714, Perdinec 0.5556. Nemške Schreibung (Schimetz/Schumetz), drugače ista jedra — dokumentirano, brez pretiravanja.",
+   "en": "NEAR-MISS band [0.55, 0.72) — reported, NOT counted: Gilatk 0.6667, Mileh 0.6667, Stupanič 0.6667, Šilah 0.6667, Klepec 0.6250, Plebučar 0.6250, Poddirec 0.6250, Miletch 0.6000, Milavec 0.5714, Pintec 0.5714, Perdinec 0.5556. German spellings (Schimetz/Schumetz) of the same cores — documented, without overclaiming."
+  },
+  {
+   "id": "F8-implikacija",
+   "si": "IMPLIKACIJA za issue #18: imenska raven POTRJUJE opozorilo — številčna usklajenost ≠ identiteta stavbe ≠ identiteta družine; most do identitete stavbe zahteva per-hišne kronološke verige (poln prepis po letih = lastniška prioriteta). Tri-virske hiše 13/36/71: 0/3 isto-hišnih imenskih ujem z 1825 — tudi najmočnejši kandidati ne preživijo na ravni številke.",
+   "en": "IMPLICATION for issue #18: the name level CONFIRMS the warning — numeric consistency ≠ building identity ≠ family identity; the bridge to building identity requires per-house chronological chains (full transcription by year = owner priority). The three-source houses 13/36/71: 0/3 same-number name matches with 1825 — even the strongest candidates do not survive at the number level."
+  }
+ ],
+ "honesty": "Paket MERI, NE odloča. Ujemanje priimkov je HEVristika z merjenimi razmerji: prag 0.72 je ponovna uporaba P43 W-most praga (nekonservativen za Kurrent [~]); kratki priimki (< 5 znakov: Meh, Muc — izključeni iz cenza po dolžinski pravilu) in dvoumni vpisi (hiša 61 oče »Miha P.—«/»Miko Jože H.?« [~] — izključen iz cenza; nevestini starši @31 Straus/Stabek — bivališče nečitljivo, izključeni) so dokumentirano izključeni. PUA in PT sta RAZLIČNA številčna sistema (P4) — isto-številne ujeme po PUA so usklajenost sistemov, ne dokaz istovetnosti. 1825 lastnik ≠ 1886 obvezno isti družinski ″posest″ — gospodinjska zamenjava je pričakovana v 61 letih; MERJENA izreka je odsotnost kontinuitete na ravni številke in delno preživetje na ravni priimka. Vse klasifikacije [~].",
+ "nextSteps": [
+  "krstna 1887 (skeni 16+) — širitev vzorca po letih (issue #18)",
+  "per-hišne kronološke verige: 1825 PT/PUA lastnik → matrike po letih → 20. st. pripisi (tri-virske hiše 13/36/71 najmočnejši kandidati)",
+  "poln prepis po letih = lastniška prioriteta (izven vzorca)"
+ ]
+}
