@@ -835,7 +835,7 @@ export function checkIntegrity(): IntegrityReport {
   //     P82: nove luknje 47, 52 (izvirno row 78) in 55 iz krstne 1887.
   const housesNoSet = new Set(ATLAS_HOUSES.filter((h) => h.no !== "—").map((h) => h.no));
   const ptGapHouses = HOUSE_VITALS.filter((v) => !housesNoSet.has(v.houseNo)).map((v) => v.houseNo);
-  const PT_GAP_KNOWN = new Set(["44", "47", "52", "54", "55", "56", "57", "58", "59", "60"]); // P84: + 58 (krstna 1889, row 3)
+  const PT_GAP_KNOWN = new Set(["41", "44", "47", "52", "54", "55", "56", "57", "58", "59", "60"]); // P85: + 41 (krstna 1890, rows 71+72 — 2 vpisa!); P84: + 58
   const vitalsOk = HOUSE_VITALS.every(
     (v) =>
       (housesNoSet.has(v.houseNo) || PT_GAP_KNOWN.has(v.houseNo)) &&

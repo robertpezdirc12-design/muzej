@@ -3896,3 +3896,109 @@ dokumentiran z novelo + provenienco, ne tiho; MERI, NE odloča (issue #18).
 **v7 runtime join NESPREMENJEN** (sha256 4bb40370…, statična projekcija;
 disciplina I9). Veriga `p60–p67 + p70–p84 --check` PASS (p77 prehoden HTTP
 000 — retry PASS); tsc 0; ESLint 0; /api/qa dev **85/85** (qa-p84 True).
+
+## §62 — P85: župnija Podzemelj — krstna knjiga 04105, polno leto 1890 (issue #18) — 2026-10-16
+
+**Faza**: P85 (SAMPLE-TRANSCRIPTION-1890; MERI, NE odloča; v7 join nespremenjen).
+**Sprožilec**: P84 nextSteps ① — širitev vzorca po letih (krstna 1890).
+**Vir**: Matricula Online, krstna knjiga **04105 1886–1919** (Nadškofijski arhiv
+Ljubljana; 326 skenov). Paleografska faza ročna: skeni 43–53 v delovnem
+imeniku `/tmp/p85` (NI v repu); hi-res izrezi 2× za vseh 24 Griblje vrstic
+(L+R) + tarčna forenzika hišnih številk, statusov, mesec-stolpca (7 strani z
+autocontrast) in podpisov.
+
+**Okvir leta 1890**: skeni **43–49 == tiskane strani 42–48** (stran == sken − 1;
+vpisi na skenih 43–49). **Prelom 1891**: velike cifre **»1891.« + podčrtaj +
+»Januarj« na str. 48, row 1 po row 86** — zadnji 1890 vpis row 86 (23./24. 12.,
+Podremelj 4 Jožef); prvi 1891 vpis row 1 (11./11. 1., Krasinec 28 Anton).
+Oznake vrstic ponastavljene na 1 — **novela P83 POTRJENA 3. leto**. Leto 1890
+ima **86 zveznih vrstic** (str. 42: 1–12; 43: 13–25; 44: 26–38; 45: 39–52;
+46: 53–64; 47: 65–77; 48: 78–86). Glave mesecev se ponavljajo (Marec 2×, April
+2×, Junij 2×) — vzorec ponavljajočih glav (novela P84 str. 40).
+
+**NOVELA P85 — STATUS = ULOMEK**: Kurrent znak pred »zemljak«, ki so ga P79–P84
+brale kot »ž zemljaf/zemljak«, je z jasnimi hi-res izrezi 1890 **ulomek ½ (ali
+¼)** — **15/24 vpisov**; isti znak, ki ga je P84 row 3 brala »¼ zemljišč«.
+Socio-ekonomska slika 1890: malokmetje (ulomki) + **bajtarja** (r47, r71) +
+**čevljar** (r42 Miha Lozar — prvi obrtnik v vzorcu) + **učitelj** (r79 — šolska
+hiša 90) + **mežnar iz Adlešič** (r54 — zunanji prihajnik).
+
+**Vsi vpisi z Griblji: 24 / 19 imenovanih hiš + 3 neberljive** (r31 + r75
+prekriti z modrimi pripisi 20. st.; r77 na rezanem robu str. 47 — evidence-only;
+HOUSE_VITALS **21 zasidranih**): 27, 31, 47, 24, 58, 71, 38, 15, 77, **30 ×2
+(DVOJČKA — prvi v vzorcu!)**, 7, 69, 55, 32, 11, **41 ×2 (multi-vpisna — dve
+različni družini)**, 63, 90, 35. Nove hiše **6** (7, 30, 38, 41, 77, 90);
+ponovitve 13. Skupaj s P79–P84 vzorec **117 vpisov / 56 hiš čez tri knjige in
+pet let** (konvencija verige P82–P84; zasidrani-only: 112 vpisov / 55 hiš).
+
+**PT klasifikacija 15/4** — luknja 41–60: **41 NOVA** (rows 71+72 — prvi dokaz
+št. 41 v vzorcu!) **+ 47/55/58 POTRDITVI** — dokazanih števil luknje skupaj
+**13**. Vseh 4 luknjane številke 1890 ima zakonske družine (41 Muc bajtar +
+Hrušič ½; 47 Klobučar×Filak; 55 **Šimec**×Pendirec; 58 Pošek/Požek×Dragoš).
+
+**Ugotovitve ①–⑨**:
+
+1. **24 vpisov / 19 hiš + 3 evidence-only**; skupaj 117/56.
+2. PT 15/4; luknja 13 dokazanih števil (41 NOVA).
+3. Nove hiše 6; multi-vpisni **h30 (dvojčka Milek)** + **h41 (dve različni
+   družini — 3. primer po h36 1886, h64 1889)**.
+4. **SIDRA**: **h77** — oče **Jurij Pošek/Požek bajtar = P83 sidro h79 oče
+   (1888)** + botra **Barbara Požek = P83 h79 botra** → Požek veriga 79→77
+   (bajtar na drugi št.; 3. leto familije); **h71** — oče **Jurij Straus** (tri-
+   virska hiša P80 + PUA Strauß Niklo @71, P81 0.8571 — 1890 živ oče); **h63** —
+   oče **Nikolaj Križan** (prvi KRIŽAN hišni oče v vzorcu; na P84 Šimec ATLAS
+   sidru — 4. gospodinjstvo na 63); **h55** — oče **Nikolaj Šimec** (Šimec
+   zdaj tudi na luknji 55 — 6. hiša najtrajnejše familije).
+5. **ČEZ-LETNA POTRDITEV ANOMALIJE**: r85 (h35, 19. 12.) = **isti vzorec kot
+   P82 row 93 (1887)** — očetov stolpec »Marija Hrižan ½ zemljak« × materin
+   »Ana Požek« na isti hiši 35 v obeh letih; 1890 otrok brez imena (»N. moškega
+   spola«), krst 17. prečrtan. + r19 (h24): očetov stolpec »Marija Brinec ½
+   zemljak« — druga anomalija istega tipa.
+6. **Dvojčka h30** (rows 51+52, 13./13. 6., Janez + Marija Milek): r52 †19/6/90
+   (6 dni), r51 †2/6/93; Milek rod h29 (1886 epidemija, P80; 1888 sidro P83) →
+   h30 (1890).
+7. **Priimki z 1825 pričo v 1890**: Strauš **7×** (0.8571), Šimec **4×** (1.0),
+   Križan/Hrižan **6×** (0.8333 [~]), Dragoš 2× (1.0), Brinec 3× gospodinjsko +
+   babica 11× (0.8333 [~]), Filak 1× (1.0), Milek 2× (near-miss), Klobučar 4×,
+   Urh 2×, Požek 7× (nova familija 1888 — 3. leto), Pendirec/Pegdirec 9×.
+8. **Duhovniki**: Jos. Rauq [~] 19 (isti tip pisave, ki ga je P84 brala
+   »Griebel/Povmij« [~] — Kurrent podpis na ločljivosti skena) + Jos. G— [~] 1 +
+   **C. g. Jurcan Šašelj, župr v D. Lazič** [~] 1 (obiskni — edini popolnoma
+   berljiv podpis) + prazna 2. Babice: **Marija Brinec 11×** (4. leto zapored) +
+   Šotter 6× + Ana Križan 2×.
+9. **RE-READ P84 okvir note**: oče r6 = **»Janez Stubhar«** [~] (P84 »Janez
+   Kukhar« [~]) — isti vpis; Kurrent St/K. Mesec r6 = JANUAR (P84 »6./7. 1.«
+   pravilno; potrjeno z mesec-stolpcem: februar glava šele str. 43 row 13).
+
+**Skripta** `scripts/p85_parish_baptism_1890.py` (deterministični verifikator,
+I1–I10, **--check PASS**: knjiga 200 + inventar 326, citirani skeni 7/7 JPEG
+200, okvir + prelom 1891 + ponastavitev oznak, PT 15/4 z NOVO 41, sidra
+h77/h71/h63/h55 + anomaliji h24/h35 == P82 row 93, dvojčka h30 + multi h41,
+13 ponovitev + 6 novih prek vitals, sampleTotal 117/56, runtime projekcija 21/
+112, brez »Hraus« v aktivnih whatSi) + **dokaz**
+`research/issue17/parish-baptism-1890.json` (SAMPLE-TRANSCRIPTION-1890; ročna
+faza — skeni v delovnem imeniku, NI v repu).
+
+**Integracija**: parish.ts HOUSE_VITALS 91 → **112** (21 zasidranih 1890 + 0
+re-readov; vsi DOCUMENTED; komentar P85 z novelo) + qa-parish.ts
+**qa-p85-parish-baptism-1890** (86. kontrola; celoven neodvisen preracun:
+okvir/prelom/ponastavitev, PT 15/4, sidra h77 Požek = P83 h79/h71 PUA @71/h63
+ATLAS/h55 luknja, dvojčka h30, multi h41, anomaliji h24+h35 == P82 row 93,
+13 ponovitev, NOVE hiše brez preteklosti; dve obliki repo/produkcija po
+P53/P57/P58) + atlas.ts PT_GAP_KNOWN **+ 41** + scripts/p80_parish_md_books.py
+I7 P85 scoping (vitals 91 → 112). **LEKCIJE (6. primer pincev lovijo napake)**:
+① pin P85_PT_IN_SET brez hiše 71 (71 JE v PT naboru 1–40+61–99!) — ujel
+qa-p85 runtime (»PT ≠ 15/4 (15/4)« — pogoj in sporočilo desinhronizirana);
+② ponovitev h15 1886 pripisana 04105 namesto mrliški 04894 (P80) — ujel pin
+ponovitev; tsc ujel zaključni `}` funkcije parishChecks po prilimanju bloka.
+Vse sanirano.
+
+**P85 nextSteps**: ① krstna 1891 (skeni 49+, str. 48 row 1 = prvi 1891 vpis);
+② h63 deep-dive (ATLAS/PT/PUA 63/64/66 + krstni vpisi — polna per-hišna veriga
+najmočnejšega sidra); ③ per-hišne verige h77/h79 Požek, h29/h30 Milek, h71
+Strauš, h8/h32 Urh; anomalija h35 — preveriti 1885 (poročna) in 1891 za
+Marijo Hrižan; ④ rešitev Pošek/Požek prek poročne 04455 [~].
+
+**v7 runtime join NESPREMENJEN** (sha256 4bb40370…, statična projekcija;
+disciplina I9). Veriga `p60–p67 + p70–p85 --check` PASS (vse exit 0); tsc 0;
+ESLint 0; /api/qa dev **86/86** (qa-p85 True).

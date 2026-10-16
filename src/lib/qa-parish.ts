@@ -557,4 +557,90 @@ push(
     ? `19 vpisov / 16 imenovanih hiš + 2 neberljivi (17 zasidranih v vitals) · okvir 1889 skeni 35–42 (stran == sken−1; prelom 1890 str. 42 row 1; 106 zveznih vrstic) · noveli: str. 40 svinčnik 81–93 + RE-READ P83 Hraus→Strauš · PT 13/3 (58 NOVA, 59/57 potrditvi) · sidra h63 Šimec=ATLAS / row 82 Filak / row 89 Dragoš / h72 re-read · nezakonski 1 + anomalija samka×šefur`
     : p84Errors.join("; "),
 );
+// ——— qa-p85: p85 krstna 1890 — širitev vzorca na leto 1890 (issue #18;
+//      SAMPLE-TRANSCRIPTION-1890; celoven neodvisen preracun iz bundled
+//      virov: HOUSE_VITALS × PARISH_BOOKS; PT klasifikacija iz pinov;
+//      sidra: h77 Požek bajtar = P83 h79, h71 Strauš oče (PUA @71), h63
+//      Križan na P84 Šimec ATLAS sidru, h55 Šimec na luknji; NOVELA: status
+//      = ulomek ½/¼ (prej brano »ž«); anomalija h35 == P82 row 93 (čez-letna
+//      potrditev); paleografska faza v research/issue17/parish-baptism-1890.json,
+//      live verifikator scripts/p85_parish_baptism_1890.py --check I1–I10) ———
+const p85Hv = HOUSE_VITALS.filter((h) => h.bookSignature === "04105" && h.year === 1890);
+const p85Errors: string[] = [];
+const P85_PT_IN_SET = ["7", "11", "15", "24", "27", "30", "31", "32", "35", "38", "63", "69", "71", "77", "90"];
+const P85_PT_GAP = ["41", "47", "55", "58"];
+if (p85Hv.length !== 21)
+  p85Errors.push(`vpisov 1890 (04105, zasidrani) ≠ 21 (${p85Hv.length}) — dokaz 24, 3 evidence-only`);
+const p85Houses = new Set(p85Hv.map((h) => h.houseNo));
+if (p85Houses.size !== 19)
+  p85Errors.push(`različnih hiš ≠ 19 (${p85Houses.size}: ${[...p85Houses].sort((a, b) => Number(a) - Number(b)).join(",")})`);
+const p85Bad = p85Hv.filter((h) => h.status !== "DOCUMENTED" || !h.scan || !h.page || h.page !== h.scan - 1 || h.scan < 43 || h.scan > 49);
+if (p85Bad.length > 0)
+  p85Errors.push(`okvir 1890: skeni 43–49 ali stran ≠ sken − 1 krščeno pri ${p85Bad.length}`);
+// sidro 1: hiša 77 — Jurij Pošek bajtar (= P83 h79 oče 1888) + botra Barbara Požek
+const p85H77 = p85Hv.find((h) => h.houseNo === "77" && h.scan === 46);
+if (!p85H77 || !p85H77.whatSi.includes("BAJTAR") || !p85H77.whatSi.includes("h79"))
+  p85Errors.push("sidro hiša 77: whatSi ≠ P85 (Jurij Pošek/Požek BAJTAR = P83 sidro h79)");
+// sidro 2: hiša 71 — oče Jurij Straus (tri-virska P80 + PUA Strauß Niklo @71)
+const p85H71 = p85Hv.find((h) => h.houseNo === "71" && h.scan === 44);
+if (!p85H71 || !p85H71.whatSi.includes("Jurij Straus") || !p85H71.whatSi.includes("PUA"))
+  p85Errors.push("sidro hiša 71: whatSi ≠ P85 (oče Jurij Straus [~], PUA Strauß Niklo @71)");
+// sidro 3: hiša 63 — Križan × Pendirec na P84 Šimec ATLAS sidru (4. gospodinjstvo)
+const p85H63 = p85Hv.find((h) => h.houseNo === "63" && h.scan === 48);
+if (!p85H63 || !p85H63.whatSi.includes("Nikolaj Križan") || !p85H63.whatSi.includes("ATLAS"))
+  p85Errors.push("sidro hiša 63: whatSi ≠ P85 (Nikolaj Križan [~], P84 Šimec ATLAS sidro)");
+// sidro 4: hiša 55 — oče Nikolaj Šimec (Šimec na luknji 55)
+const p85H55 = p85Hv.find((h) => h.houseNo === "55" && h.scan === 48);
+if (!p85H55 || !p85H55.whatSi.includes("Nikolaj Šimec") || !p85H55.whatSi.includes("luknji 55"))
+  p85Errors.push("sidro hiša 55: whatSi ≠ P85 (oče Nikolaj Šimec [~], Šimec na luknji 55)");
+// PT klasifikacija == pin: 14 v naboru + 4 v luknji (41 NOVA + 47/55/58 potrditvi)
+const p85InSet = [...p85Houses].filter((h) => P85_PT_IN_SET.includes(h));
+const p85Gap = [...p85Houses].filter((h) => P85_PT_GAP.includes(h));
+if (p85InSet.length !== 15 || p85Gap.length !== 4)
+  p85Errors.push(`PT klasifikacija ≠ 15/4 (${p85InSet.length}/${p85Gap.length})`);
+if (p85Gap.some((h) => !(Number(h) >= 41 && Number(h) <= 60)))
+  p85Errors.push("luknjane hiše izven 41–60");
+if (!p85Hv.some((h) => h.houseNo === "41"))
+  p85Errors.push("NOVA luknjana hiša 41 (P85 rows 71+72) manjka");
+// multi-vpisni: h30 (dvojčka, 2 vpisa isti sken 46) + h41 (2 vpisa, 2 različni
+// gospodinjstvi — vzorec h36 1886/h64 1889)
+const p85H30 = p85Hv.filter((h) => h.houseNo === "30");
+if (p85H30.length !== 2 || !p85H30.every((h) => h.scan === 46))
+  p85Errors.push(`hiša 30 ×2 (dvojčka) ≠ 2 vpisa na skenu 46 (${p85H30.map((h) => h.scan).join("/")})`);
+const p85H41 = p85Hv.filter((h) => h.houseNo === "41");
+if (p85H41.length !== 2 || !p85H41.every((h) => h.scan === 48))
+  p85Errors.push(`hiša 41 ×2 (dve družini) ≠ 2 vpisa na skenu 48 (${p85H41.map((h) => h.scan).join("/")})`);
+// anomaliji z ženskim imenom v očetovem stolpcu (r19 h24 + r85 h35 == P82 row 93)
+const p85Anom = p85Hv.filter((h) => h.whatSi.includes("ANOMALIJA"));
+if (p85Anom.length !== 2 || !p85Anom.some((h) => h.houseNo === "35") || !p85Anom.some((h) => h.houseNo === "24"))
+  p85Errors.push(`anomaliji (h24 + h35) ≠ 2 (${p85Anom.map((h) => h.houseNo).join("/")})`);
+const p85H35 = p85Anom.find((h) => h.houseNo === "35");
+if (!p85H35 || !p85H35.whatSi.includes("Marija Hrižan") || !p85H35.whatSi.includes("P82 row 93"))
+  p85Errors.push("čez-letna anomalija h35: whatSi ≠ P85 (Marija Hrižan [~] == P82 row 93)");
+// ponovitve prek HOUSE_VITALS (13 ponovljenih hiš 1890; h15 1886 iz mrliške 04894 — P80)
+const p85Prev = (hn: string, yr: number, sig: string = "04105") =>
+  HOUSE_VITALS.some((v) => v.houseNo === hn && v.bookSignature === sig && v.year === yr);
+for (const [hn, yr, sig] of [
+  ["27", 1887, "04105"], ["31", 1887, "04105"], ["47", 1887, "04105"], ["24", 1887, "04105"],
+  ["58", 1889, "04105"], ["71", 1886, "04105"], ["15", 1886, "04894"], ["69", 1888, "04105"],
+  ["55", 1887, "04105"], ["32", 1889, "04105"], ["11", 1886, "04105"], ["63", 1889, "04105"],
+  ["35", 1887, "04105"],
+] as const) {
+  if (!p85Prev(hn, yr, sig))
+    p85Errors.push(`ponovitev hiša ${hn} (${yr}, ${sig}) manjka v HOUSE_VITALS`);
+}
+// NOVE hiše 1890 (7, 38, 77, 90, 30, 41) — ne obstajajo v nobenem prejšnjem letu
+for (const hn of ["7", "30", "38", "41", "77", "90"]) {
+  if (HOUSE_VITALS.some((v) => v.houseNo === hn && !(v.bookSignature === "04105" && v.year === 1890)))
+    p85Errors.push(`NOVA hiša ${hn} (P85) že obstaja v prejšnjem letu — pini neskladni`);
+}
+push(
+  "qa-p85-parish-baptism-1890",
+  "P85: ŽUPNIJA PODZEMELJ — KRSTNA KNJIGA 04105, POLNO LETO 1890 (issue #18; SAMPLE-TRANSCRIPTION-1890; MERI, NE odloča; v7 join nespremenjen): širitev vzorca P79 (1886) → P82 (1887) → P83 (1888) → P84 (1889) na leto 1890 — okvir: skeni 43–49 == tiskane strani 42–48 (stran == sken − 1; vpisi na skenih 43–49; prelom 1891 velike cifre »1891.« na str. 48 row 1 po row 86 — oznake se ponastavijo na 1, novela P83 potrjena 3. leto; 1890 ima 86 zveznih vrstic; glave mesecev se ponavljajo — Marec 2×, April 2×, Junij 2×); NOVELA P85: STATUS = ULOMEK — Kurrent znak pred »zemljak« (P79–P84 brana »ž zemljaf«) je z jasnimi izrezi 1890 ULOMEK ½ (ali ¼) — 15/24 vpisov; isti znak kot P84 row 3 »¼ zemljišč« — VSI vpisi z Griblji: 24 vpisov / 19 imenovanih hiš + 3 NEBERLJIVI (r31 + r75 prekriti z modrimi pripisi, r77 rez strani — evidence-only; HOUSE_VITALS 21 zasidranih): 27, 31, 47, 24, 58, 71, 38, 15, 77, 30 ×2 (DVOJČKA — prvi v vzorcu!), 7, 69, 55, 32, 11, 41 ×2 (multi-vpisna, dve različni družini — vzorec h36/h64), 63, 90, 35 — NOVE hiše 6 (7, 30, 38, 41, 77, 90) + 3 neberljive, ponovitve 13; skupaj s P79–P84 vzorec 117 vpisov / 56 hiš čez tri knjige in pet let; PT klasifikacija 15/4 (41, 47, 55, 58 v luknji 41–60 — 41 NOVA z 2 vpisoma, 47/55/58 POTRDITVI; luknja zdaj 13 dokazanih števil); 0 čistih nezakonskih, 2 ANOMALIJI z ženskim imenom v očetovem stolpcu (r19 h24 »Marija Brinec ½ zemljak«; r85 h35 »Marija Hrižan ½ zemljak« × Ana Požek = ČEZ-LETNA POTRDITEV P82 row 93 — isti nepravilni vpis na isti hiši 1887 IN 1890) + r85 otrok brez imena (»N. moškega spola«); SIDRA: h77 (oče Jurij Pošek/Požek BAJTAR = P83 sidro h79 oče 1888 + botra Barbara Požek = P83 h79 botra — Požek veriga 79→77, 3. leto), h71 (oče Jurij Straus — tri-virska P80 + PUA Strauß Niklo @71, P81 0.8571), h63 (oče Nikolaj KRIŽAN — prvi Križan hišni oče; na P84 Šimec ATLAS sidru — 4. gospodinjstvo), h55 (oče Nikolaj ŠIMEC — Šimec zdaj tudi na luknji 55, 6. hiša najtrajnejše familije); priimki z 1825 pričo v 1890: Strauš 7× (0.8571), Šimec 4× (1.0), Križan/Hrižan 6× (0.8333 [~]), Dragoš 2× (1.0), Brinec 3× gospodinjsko + babica 11× (0.8333 [~]), Filak 1× (1.0), Milek 2× (near-miss), Klobučar 4×, Urh 2×, Požek 7× (nova familija 1888 — 3. leto), Pendirec/Pegdirec 9×; DUHOVNIKI: Jos. Rauq [~] 19 (isti tip pisave kot P84 »Griebel/Povmij« [~]) + Jos. G— [~] 1 + C. g. Jurcan Šašelj, župr v D. Lazič [~] 1 (obiskni — edini popolnoma berljiv) + prazna 2; babice: Brinec 11× (4. leto) + Šotter 6× + Ana Križan 2×; statusi: 15× ulomek ½/¼ + bajtarja 2 + čevljar + učitelj (šolska hiša 90) + mežnar iz Adlešič; live verifikacija: knjiga HTTP 200 (inventar 326), citirani skeni 7/7 JPEG 200; skripta scripts/p85_parish_baptism_1890.py (I1–I10, --check PASS); status SAMPLE-TRANSCRIPTION-1890",
+  "P85: PARISH OF PODZEMELJ — BAPTISM REGISTER 04105, THE FULL YEAR 1890 (issue #18; SAMPLE-TRANSCRIPTION-1890; MEASURES, does not decide; the v7 join unchanged): extending the P79 (1886) → P82 (1887) → P83 (1888) → P84 (1889) sample to 1890 — the frame: scans 43–49 == printed pages 42–48 (page == scan − 1; entries on scans 43–49; the 1891 break big digits »1891.« on p. 48 row 1 after row 86 — the labels restart at 1, the P83 novel confirmed for the 3rd year; 1890 has 86 continuous rows; month headers repeat — March 2×, April 2×, June 2×); the P85 NOVEL: STATUS = A FRACTION — the Kurrent mark before »zemljak« (read »ž« in P79–P84) is, with clear crops in 1890, a FRACTION ½ (or ¼) — 15/24 entries; the same mark as the P84 row 3 »¼«; ALL Griblje entries: 24 entries / 19 named houses + 3 ILLEGIBLE (r31 + r75 covered by blue notes, r77 page-edge cut — evidence-only; HOUSE_VITALS 21 anchored): 27, 31, 47, 24, 58, 71, 38, 15, 77, 30 ×2 (TWINS — the first in the sample!), 7, 69, 55, 32, 11, 41 ×2 (multi-entry, two different families — the h36/h64 pattern), 63, 90, 35 — 6 NEW houses (7, 30, 38, 41, 77, 90) + 3 illegible, 13 repeats; with P79–P84 the sample totals 117 entries / 56 houses across three books and five years; the PT classification 15/4 (41, 47, 55, 58 in the 41–60 gap — 41 NEW with 2 entries, 47/55/58 CONFIRMATIONS; the gap now has 13 proven numbers); 0 clean illegitimates, 2 ANOMALIES with a female name in the father column (r19 h24 »Marija Brinec ½«; r85 h35 »Marija Hrižan ½« × Ana Požek = the CROSS-YEAR CONFIRMATION of P82 row 93 — the same irregular entry on the same house in 1887 AND 1890) + r85 an unnamed child (»male sex«); ANCHORS: h77 (father Jurij Pošek/Požek cottager = the P83 h79 anchor father of 1888 + godmother Barbara Požek = the P83 h79 godmother — the Požek chain 79→77, 3rd year), h71 (father Jurij Straus — the three-source P80 house + PUA Strauß Niklo @71, P81 0.8571), h63 (father Nikolaj KRIŽAN — the first Križan house-father; on the P84 Šimec ATLAS anchor — the 4th household), h55 (father Nikolaj ŠIMEC — Šimec now also on gap 55, the 6th house of the most persistent family); surnames with 1825 evidence in 1890: Strauš 7× (0.8571), Šimec 4× (1.0), Križan/Hrižan 6× (0.8333 [~]), Dragoš 2× (1.0), Brinec 3× household + midwife 11× (0.8333 [~]), Filak 1× (1.0), Milek 2× (near-miss), Klobučar 4×, Urh 2×, Požek 7× (the 1888 new family — 3rd year), Pendirec/Pegdirec 9×; PRIESTS: Jos. Rauq [~] 19 (the same hand type as the P84 »Griebel/Povmij« [~]) + Jos. G— [~] 1 + C. g. Jurcan Šašelj, priest in D. Lazič [~] 1 (visiting — the only fully legible) + empty 2; midwives: Brinec 11× (4th year) + Šotter 6× + Ana Križan 2×; statuses: 15× fraction ½/¼ + 2 cottagers + shoemaker + teacher (school house 90) + sexton from Adlešič; live verification: the book HTTP 200 (inventory 326), cited scans 7/7 JPEG 200; the script scripts/p85_parish_baptism_1890.py (I1–I10, --check PASS); status SAMPLE-TRANSCRIPTION-1890",
+  p85Errors.length === 0,
+  p85Errors.length === 0
+    ? `24 vpisov / 19 imenovanih hiš + 3 neberljive (21 zasidranih v vitals) · okvir 1890 skeni 43–49 (stran == sken−1; prelom 1891 str. 48 row 1 po row 86; 86 zveznih vrstic) · NOVELA: status = ulomek ½/¼ (15/24) · PT 15/4 (41 NOVA ×2, 47/55/58 potrditvi) · dvojčka h30 (prvi v vzorcu) + multi h41 (dve družini) · sidra h77 Požek bajtar = P83 h79 / h71 Strauš oče = PUA @71 / h63 Križan na Šimec ATLAS sidru / h55 Šimec · anomalija h35 == P82 row 93 (čez-letno!)`
+    : p85Errors.join("; "),
+);
 }
