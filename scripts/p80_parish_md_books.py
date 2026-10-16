@@ -211,8 +211,8 @@ def verify():
 
     # I7 — PT usklajenost celotnega P79/P80 vzorca (krstna+mrliška+poročna ==
     # parish.ts); P82: vzorec omejen na 04105 1886 ∪ 1897 ∪ sidri 61/78
-    # (1887 okvir ima svojo skripto p82); HOUSE_VITALS skupaj 59 (41 − 2 stara
-    # sidra 61/75 + 20 celotnega okvira 1887, vključno s popravljena 61/78)
+    # (1887 okvir ima svojo skripto p82); P83: 1888 okvir ima svojo skripto
+    # p83; HOUSE_VITALS skupaj 74 (59 + 15 celotnega okvira 1888)
     sample = [
         v for v in vitals
         if v["bookSignature"] in ("04894", "04455")
@@ -230,7 +230,7 @@ def verify():
         and all((float(h) <= 40 or float(h) >= 61) or ("½" in h) for h in inset)
         and all(41 <= float(h) <= 60 for h in gap)
         and all(h in houses for h in (v["houseNo"] for v in sample))
-        and len(vitals) == 59
+        and len(vitals) == 74
         and len(houses) == 25
         and set(inset) <= pts
     )

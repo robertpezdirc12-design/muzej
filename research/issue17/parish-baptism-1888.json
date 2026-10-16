@@ -1,0 +1,487 @@
+{
+  "phase": "P83",
+  "title": "župnija Podzemelj — krstna knjiga 04105, polno leto 1888 (issue #18)",
+  "type": "SAMPLE-TRANSCRIPTION-1888",
+  "status": "issued",
+  "issuedAt": "2026-10-16",
+  "source": {
+    "book": "Krstna knjiga (Rojstna in krstna knjiga) 04105, župnija Podzemelj 1886–1919",
+    "url": "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04105/",
+    "signature": "04105",
+    "expectedImages": 326,
+    "workingDir": "skeni v delovnem imeniku (NI v repu) — inventar 326 URL + skeni 27–43 preneseni",
+    "paleographicPhase": "ročna (ta seja); ta dokaz je ročna faza, skripta scripts/p83_parish_baptism_1888.py je deterministični verifikator (brez AI ob delovanju)"
+  },
+  "method": {
+    "frame": "polno leto 1888 — VSI vpisi z Griblji (rojni kraj == Griblje); Gradac/Krasinec/Primostek/Otok/… izključeni po isti konvenciji kot P79/P82",
+    "reading": "Kurrent s [~] za vsako negotovost; izrezi slike za dvoumne priimke in števk forenziko (7 vs 8 po vzorcu P80/P82)",
+    "rowNumbering": "PISANE OZNAKE VRSTIC SE PRI PRELOMU LETA PONASTAVIJO NA 1 — dokaz: stran 27 (sk. 28) se začne z oznako 3, stran 34 (sk. 35, leto 1889) z oznako 1; oznaki str. 26 (prvi dve 1888 vrstici) pod raztrganino [~]",
+    "p82Note": "P82 »prvi 1888 row 107« = zvezno štetje 106+1 (konvencija), NE pisana oznaka"
+  },
+  "frame": {
+    "scanFrom": 27,
+    "scanTo": 35,
+    "pageFrom": 26,
+    "pageTo": 34,
+    "year": 1888,
+    "rowsTotal": 92,
+    "rowsNote": "pisane oznake 1–92 (str. 26: 1–2; str. 27: 3–15; str. 28: 16–28; str. 29: 29–41; str. 30: 42–54; str. 31: 55–67; str. 32: 68–80; str. 33: 81–92)",
+    "break1889": { "scan": 35, "page": 34, "row": 1, "note": "glava »1 8 8 9« velikimi ciframi na str. 34 (sk. 35); prvi vpis 1889 = row 1 (3./3. 1., Gradac 8)" },
+    "rowRestart1888": {
+      "proof": "str. 27 (sk. 28) se začne z oznako 3 (Januar 16., Griblje 1) — merjeni izrez",
+      "p82ReRead": "P82 »row 107« za prvi vpis 1888 (Gradac 26) je zvezno štetje 106+1; pisana oznaka 1 [~] pod raztrganino"
+    },
+    "entriesScanRange": [28, 34]
+  },
+  "entries": [
+    {
+      "row": 3,
+      "year": 1888,
+      "month": "Januar",
+      "born": "16.",
+      "baptized": "17.",
+      "village": "Griblje",
+      "houseNo": "1",
+      "scan": 28,
+      "page": 27,
+      "child": "Anton",
+      "father": "Nikolaj Zeljth [~] ½ zemljišt",
+      "mother": "Katarina Kure [~]",
+      "botra": "Jurij Zeljth [~] + Katarina Kure [~] (½ zemlj.)",
+      "babica": "Marjeta Jeta [~] (morda Sotter — primerjaj h13)",
+      "priest": "Andrej Grieblj [~]",
+      "notes": [
+        "marginalija pod imenom: »+ 1878« [~] — 7/8 forenzika (morda 1888 — dojenček); ali poznejši pripis »1978«; nasprotje z letom rojstva 1888 dokumentirano",
+        "priimek Zeljth NI v vesolju 1825 (232 imen) — prihod po 1825",
+        "Kure: botra Katarina — 1887 h62 oče Anton Kure (P82), h79 botra Anton Kure (P83)"
+      ],
+      "whatSi": "krščen Anton (16./17. 1.) — oče Nikolaj Zeljth [~] ½ zemljišt, mati Katarina Kure [~]; botra Jurij Zeljth + Katarina Kure; marginalija »+ 1878« [~]",
+      "whatEn": "baptized Anton (Jan 16/17) — father Nikolaj Zeljth [~] half-farmer, mother Katarina Kure [~]; godparents Jurij Zeljth + Katarina Kure; margin note »+ 1878« [~]"
+    },
+    {
+      "row": 8,
+      "year": 1888,
+      "month": "Januar",
+      "born": "31.",
+      "baptized": "31.",
+      "village": "Griblje",
+      "houseNo": "72",
+      "scan": 28,
+      "page": 27,
+      "child": "Marija",
+      "father": "Matija Hraus [~] ½ zemljišt",
+      "mother": "Barbara Husič [~]",
+      "botra": "Matija Hraus [~] (ali Hraucij) + Barbara Bahorič [~] (¼)",
+      "babica": "Neža Hraucelj [~]",
+      "priest": "Andrej Grieblj [~]",
+      "notes": [
+        "marginalija: »+ 3/9. 1888« — umrla kot dojenček",
+        "HRAUS — NOVA familija: NI v vesolju 1825; v 1888 tri hiše (69, 72, 85) + babica Hraucelj",
+        "hiša 72 — prva pojavitev v vzorcu"
+      ],
+      "whatSi": "krščena Marija (31. 1.) — oče Matija Hraus [~] ½ zemljišt, mati Barbara Husič [~]; babica Neža Hraucelj [~]; + 3. 9. 1888",
+      "whatEn": "baptized Marija (Jan 31) — father Matija Hraus [~] half-farmer, mother Barbara Husič [~]; midwife Neža Hraucelj [~]; died Sep 3, 1888"
+    },
+    {
+      "row": 12,
+      "year": 1888,
+      "month": "Februar",
+      "born": "23.",
+      "baptized": "24.",
+      "village": "Griblje",
+      "houseNo": "44",
+      "scan": 28,
+      "page": 27,
+      "child": "Katarina",
+      "father": "Matija Hlevič [~] ¼ zemljišt",
+      "mother": "Nera Hlevič [~] (ali Nexa)",
+      "botra": "Janez Jatkobčič [~] (ali Jatkobeič) ¼ + žena Marija",
+      "babica": "Marija Brinec",
+      "priest": "Andrej Grieblj [~]",
+      "notes": [
+        "hiša 44 v PT luknji 41–60 — že dokazana (P80 mrliško sidro 1887, sk. 6); 1888 krstni vpis potrjuje št.",
+        "starša oba priimek Hlevič (ist priimek — možna sorodstvena vez)"
+      ],
+      "whatSi": "krščena Katarina (23./24. 2.) — oče Matija Hlevič [~] ¼ zemljišt, mati Nera Hlevič [~]; hiša 44 v PT luknji 41–60 (P80 sidro 1887)",
+      "whatEn": "baptized Katarina (Feb 23/24) — father Matija Hlevič [~] quarter-farmer, mother Nera Hlevič [~]; house 44 in the PT 41–60 gap (P80 anchor 1887)"
+    },
+    {
+      "row": 15,
+      "year": 1888,
+      "month": "Februar",
+      "born": "28.",
+      "baptized": "28.",
+      "village": "Griblje",
+      "houseNo": "69",
+      "scan": 28,
+      "page": 27,
+      "child": "Marija",
+      "father": "Janez Brinec [~] ½ zemljišt",
+      "mother": "Katarina Hraus [~]",
+      "botra": "Marko Križan [~] (¼) + Marija Adlešič [~] (¼ zemlj., samata hič [~])",
+      "babica": "Marija Brinec",
+      "priest": "Jos. P— [~] (podpis peč, delno neberljiv; morda Povmij)",
+      "notes": [
+        "hiša 69 že v vzorcu (P80 mrliška 1886); 1888 oče Janez BRINEC — Brinec hub (babica Marija Brinec 10× v 1888)",
+        "mati Katarina HRAUS — familija Hraus (h72 oče Matija Hraus)"
+      ],
+      "whatSi": "krščena Marija (28. 2.) — oče Janez Brinec [~] ½ zemljišt, mati Katarina Hraus [~]; botra Marko Križan + Marija Adlešič",
+      "whatEn": "baptized Marija (Feb 28) — father Janez Brinec [~] half-farmer, mother Katarina Hraus [~]; godparents Marko Križan + Marija Adlešič"
+    },
+    {
+      "row": 17,
+      "year": 1888,
+      "month": "Februar",
+      "born": "29.",
+      "baptized": "29.",
+      "village": "Griblje",
+      "houseNo": "57",
+      "scan": 29,
+      "page": 28,
+      "child": "Marija",
+      "father": "Peter Pezdirec [~] ¼ zemljišt",
+      "mother": "Marija Borjanc [~]",
+      "botra": "Jurij Brodarič [~] (½) + Marija Hraucelj [~] (¼)",
+      "babica": "Ana Brinec",
+      "priest": "Andrej Grieblj [~]",
+      "notes": [
+        "hiša 57 v PT luknji 41–60 — že dokazana (P79 1886); 1888 krstni vpis potrjuje št.",
+        "menjava družine: 1886 h57 = Peter Podolivec × Marija Stupanič (P79); 1888 = Peter Pezdirec × Marija Borjanc"
+      ],
+      "whatSi": "krščena Marija (29. 2.) — oče Peter Pezdirec [~] ¼ zemljišt, mati Marija Borjanc [~]; hiša 57 v PT luknji (1886 Podolivec/Stupanič — menjava)",
+      "whatEn": "baptized Marija (Feb 29) — father Peter Pezdirec [~] quarter-farmer, mother Marija Borjanc [~]; house 57 in the PT gap (1886 Podolivec/Stupanič — family change)"
+    },
+    {
+      "row": 24,
+      "year": 1888,
+      "month": "Martius",
+      "born": "29.",
+      "baptized": "29.",
+      "village": "Griblje",
+      "houseNo": "78",
+      "scan": 29,
+      "page": 28,
+      "child": "Jozefa",
+      "father": "Mihail Poxan [~] (ali Pozan) — oskrbar, opomba o prevzemu [~]",
+      "mother": "Barbara Hardeium [~] (ali Hardiun)",
+      "botra": "Dolon [~] (ali Čolon) Brodarič [~] (½) + Barbara Klobučar [~] (¼)",
+      "babica": "Marija Brinec",
+      "priest": "Andrej Grieblj [~]",
+      "notes": [
+        "marginalija: »+ 2/9. 93« [~]",
+        "hiša 78 [~] — številka v zavihku/raztrganini knjige, delno neberljiva; isti zapis kot 1886 (P79 sidro row 26, »75«→78 re-read) in 1887 (P82 row 26)",
+        "OSKRBAR: 1886/1887 oče gospodinjstva Janez Jakobič (mati Marija roj. Stubler); 1888 oče = Mihail Poxan »oskrbar« — socio-ekonomska motnja gospodinjstva dokumentirana"
+      ],
+      "whatSi": "krščena Jozefa (29. 3.) — oče Mihail Poxan [~] — OSKRBAR (opomba o prevzemu [~]), mati Barbara Hardeium [~]; hiša 78 [~] (v zavihku); 1886/1887 Jakobič → 1888 oskrbar Poxan",
+      "whatEn": "baptized Jozefa (Mar 29) — father Mihail Poxan [~] — the farm's CARETAKER (oskrbar, a takeover note [~]), mother Barbara Hardeium [~]; house 78 [~] (in the gutter); 1886/1887 Jakobič → 1888 caretaker Poxan"
+    },
+    {
+      "row": 27,
+      "year": 1888,
+      "month": "April",
+      "born": "18.",
+      "baptized": "—",
+      "village": "Griblje",
+      "houseNo": "83",
+      "scan": 29,
+      "page": 28,
+      "child": "Marija",
+      "father": "Jurij Radovič [~] Mrgaič [~] (dvodelni priimek)",
+      "mother": "Katarina Mettovič [~]",
+      "botra": "— (stolpec prazen)",
+      "babica": "Marija Brinec",
+      "priest": "Andrej Grieblj [~]",
+      "notes": [
+        "marginalija: »+ 1/7. 1889« — umrla pri ~14 mesecih",
+        "DVODELNI PRIIMEK »Radovič Mrgaič« — vzporednica P81 »Šture Majzel« v vesolju 1825",
+        "hiša 83 — PRVA pojavitev v vzorcu (PT nabor 61–99)",
+        "botra stolpec PRAZEN (samo babica)"
+      ],
+      "whatSi": "krščena Marija (18. 4.) — oče Jurij Radovič [~] Mrgaič [~] (dvodelni priimek), mati Katarina Mettovič [~]; botra prazna; + 1. 7. 1889; hiša 83 NOVA",
+      "whatEn": "baptized Marija (Apr 18) — father Jurij Radovič [~] Mrgaič [~] (a double surname), mother Katarina Mettovič [~]; godparents EMPTY; died Jul 1, 1889; house 83 NEW"
+    },
+    {
+      "row": 33,
+      "year": 1888,
+      "month": "Maij",
+      "born": "11.",
+      "baptized": "12.",
+      "village": "Griblje",
+      "houseNo": "79",
+      "scan": 30,
+      "page": 29,
+      "child": "Barbara",
+      "father": "Jurij Požek [~] bajtar",
+      "mother": "Katarina Križan [~]",
+      "botra": "Anton Kure [~] (ali Hure) (½) + Barbara Požek [~] (¼)",
+      "babica": "Marija Brinec",
+      "priest": "Andrej Grieblj [~]",
+      "notes": [
+        "marginalija: »+ 1/9. 18??« [~] — 7/8 forenzika (1888/1889?) ali 1978",
+        "hiša 79 — PRVA pojavitev v vzorcu",
+        "POŽEK NI v vesolju 1825 (prihod po 1825); bajtar status (ni ½/¼ zemljišt)",
+        "KRIŽAN — 1825 priča: Krišan Gregor, Krischan @36 (P81 isto-hiša 0.8333)"
+      ],
+      "whatSi": "krščena Barbara (11./12. 5.) — oče Jurij Požek [~] bajtar, mati Katarina Križan [~]; botra Anton Kure + Barbara Požek; hiša 79 NOVA; Požek NI v vesolju 1825",
+      "whatEn": "baptized Barbara (May 11/12) — father Jurij Požek [~] cottager, mother Katarina Križan [~]; godparents Anton Kure + Barbara Požek; house 79 NEW; Požek NOT in the 1825 universe"
+    },
+    {
+      "row": 36,
+      "year": 1888,
+      "month": "Maij",
+      "born": "21.",
+      "baptized": "21.",
+      "village": "Griblje",
+      "houseNo": "85",
+      "scan": 30,
+      "page": 29,
+      "child": "Janez",
+      "father": "Marko Križan [~] ½ zemljišt",
+      "mother": "Marija Hraus [~]",
+      "botra": "Matija Urh [~] + Ana Brinec [~] (¼)",
+      "babica": "Marija Brinec",
+      "priest": "Andrej Grieblj [~]",
+      "notes": [
+        "marginalija: »+ 9/12. 889« [~] — 879/889 forenzika (1889)",
+        "hiša 85 — PRVA pojavitev v vzorcu",
+        "familija Hraus (h69 mati, h72 oče) — tretja hiša"
+      ],
+      "whatSi": "krščen Janez (21. 5.) — oče Marko Križan [~] ½ zemljišt, mati Marija Hraus [~]; botra Matija Urh + Ana Brinec; hiša 85 NOVA; + 9. 12. 1889 [~]",
+      "whatEn": "baptized Janez (May 21) — father Marko Križan [~] half-farmer, mother Marija Hraus [~]; godparents Matija Urh + Ana Brinec; house 85 NEW; died Dec 9, 1889 [~]"
+    },
+    {
+      "row": 39,
+      "year": 1888,
+      "month": "Maij",
+      "born": "2.",
+      "baptized": "3.",
+      "village": "Griblje",
+      "houseNo": "24",
+      "scan": 30,
+      "page": 29,
+      "child": "Musca [~] (neobičajno ime)",
+      "father": "— (očeta stolpec PRAZEN — nezakonska)",
+      "mother": "Barbara Melith [~] (ali Melik/Melič) — samata [~], ¼ zemljatka hič(a) [~]",
+      "botra": "Barbara Adlešič [~] (¼ zemlj. žena)",
+      "babica": "Marija Križan [~] (prejšnji zapis prečrtan)",
+      "priest": "Andrej Grieblj [~]",
+      "notes": [
+        "NEZAKONSKI vpis (očeta stolpec prazen) — 1/3 v 1888",
+        "1887 h24 = Marija (oče Matija Brinec — P82); 1888 nezakonska Barbara Melith — menjava"
+      ],
+      "whatSi": "krščena Musca [~] (2./3. 6.) — očeta stolpec PRAZEN (nezakonska), mati Barbara Melith [~] — samata, ¼ zemljatka; babica Marija Križan [~]",
+      "whatEn": "baptized Musca [~] (Jun 2/3) — father's column EMPTY (illegitimate), mother Barbara Melith [~] — unmarried, quarter smallholder; midwife Marija Križan [~]"
+    },
+    {
+      "row": 51,
+      "year": 1888,
+      "month": "Juni",
+      "born": "27.",
+      "baptized": "28.",
+      "village": "Griblje",
+      "houseNo": "56",
+      "scan": 31,
+      "page": 30,
+      "child": "Alex [~] (ali Aleš/Alles)",
+      "father": "— (očeta stolpec PRAZEN — nezakonski)",
+      "mother": "Ana Šimec [~] — samostojna, ½ zemlj., nova hiča",
+      "botra": "Marija Deblič [~] (ali Debelak) (½ zemlj.) + Marija Pezdirec [~] (dodatek »osemenica« [~] neberljiv)",
+      "babica": "Marija Brinec",
+      "priest": "Andrej Grieblj [~]",
+      "notes": [
+        "NEZAKONSKI vpis — 2/3 v 1888",
+        "modra marginalija: »Umrla dne 25. 5. 1965 Gradac, dne 16. 5.« [~] + »matična …« — UMRLA (žensko) proti kolonam moški [~] — nasprotje dokumentirano",
+        "hiša 56 v PT luknji 41–60 — Šimec ZNOVA na 56 (1886 mrliška mati roj. Perdinec + P81 near-miss Schumetz @56; 1888 mati Ana Šimec)",
+        "ŠIMEC čez leta: 1886: 36/39/56/88 → 1887: 34 → 1888: 56 (mati, nezakonski)"
+      ],
+      "whatSi": "krščen Alex [~] (27./28. 6.) — očeta stolpec PRAZEN (nezakonski), mati Ana Šimec [~] — samostojna, ½ zemlj. nova hiča; hiša 56 v PT luknji; modra marginalija »Umrla 25. 5. 1965« [~] (žensko) proti kolonam moški — nasprotje",
+      "whatEn": "baptized Alex [~] (Jun 27/28) — father's column EMPTY (illegitimate), mother Ana Šimec [~] — unmarried, half smallholder of the new cottage; house 56 in the PT gap; the blue margin note »Umrla May 25, 1965« [~] (feminine) against the male columns — a documented contradiction"
+    },
+    {
+      "row": 53,
+      "year": 1888,
+      "month": "Juni",
+      "born": "2.",
+      "baptized": "2.",
+      "village": "Griblje",
+      "houseNo": "13",
+      "scan": 31,
+      "page": 30,
+      "child": "Barbara",
+      "father": "Matija Jakobič [~] (ali Jakopič) ½ zemljišt",
+      "mother": "Marija Perdinec [~]",
+      "botra": "Peter Križan [~] (¼) + Marija Deblič [~] (½)",
+      "babica": "Marjeta Sotter [~]",
+      "priest": "Andrej Grieblj [~]",
+      "notes": [
+        "modra marginalija: »Umrla 26. 7. 1979 v Ljubljani« [~]",
+        "TRI-VIRSKA HIŠA — 4. vpis čez knjige: 1885 poročna sidro (ženin Janez Jakobič — P80), 1886 krstna (04105) + mrliška (04894 — P80), 1888 krstna (04105)",
+        "PER-HIŠNA IMENSKA VERIGA (prva!): 1885 ženin Janez JAKOBIČ → 1888 oče Matija JAKOBIČ — isti priimek na isti hiši čez 3 leta (1825 PT: kontinuiteta 0/19 — 1885↔1888 pa [~])"
+      ],
+      "whatSi": "krščena Barbara (2. 6.) — oče Matija Jakobič [~] ½ zemljišt, mati Marija Perdinec [~]; TRI-VIRSKA hiša (1885 poročna + 1886 krst/mrliška + 1888 krst); Jakobič/Jakopič čez leta — prva per-hišna imenska veriga",
+      "whatEn": "baptized Barbara (Jun 2) — father Matija Jakobič [~] half-farmer, mother Marija Perdinec [~]; the THREE-SOURCE house (1885 marriage + 1886 baptism/death + 1888 baptism); Jakobič/Jakopič across years — the first per-house name chain"
+    },
+    {
+      "row": 68,
+      "year": 1888,
+      "month": "September",
+      "born": "9.",
+      "baptized": "11.",
+      "village": "Griblje",
+      "houseNo": "21",
+      "scan": 33,
+      "page": 32,
+      "child": "»Kaxmarp« [~] (neobičajno ime; morda Kasimir [~])",
+      "father": "— (očeta stolpec PRAZEN — nezakonski)",
+      "mother": "Marija Požek [~] — samata, ¼ zemljatka hič",
+      "botra": "Katarina Križan [~] (½ zemlj. žena)",
+      "babica": "Marija Miscke [~]",
+      "priest": "Jos. Povmij [~] (ali Rauny)",
+      "notes": [
+        "NEZAKONSKI vpis — 3/3 v 1888 (moški otrok po kolonah)",
+        "ANOMALIJA IMENA: »Kaxmarp« [~] — neberljivo/neobičajno; najbolj podobno Kasimir [~]",
+        "1887 h21 oče Janez Požek (P82); 1888 nezakonska mati Marija POŽEK — priimek ist, status spremenjen",
+        "POŽEK NI v vesolju 1825"
+      ],
+      "whatSi": "krščen »Kaxmarp« [~] (9./11. 9.; morda Kasimir [~]) — očeta stolpec PRAZEN (nezakonski), mati Marija Požek [~] — samata, ¼ zemljatka; 1887 oče Janez Požek → 1888 nezakonska mati istega priimka",
+      "whatEn": "baptized »Kaxmarp« [~] (Sep 9/11; possibly Kasimir [~]) — father's column EMPTY (illegitimate), mother Marija Požek [~] — unmarried, quarter smallholder; 1887 house father Janez Požek → 1888 unmarried mother of the same surname"
+    },
+    {
+      "row": 80,
+      "year": 1888,
+      "month": "Oktober",
+      "born": "20.",
+      "baptized": "—",
+      "village": "Griblje",
+      "houseNo": "8",
+      "scan": 33,
+      "page": 32,
+      "child": "Martin",
+      "father": "Jang [~] (morda Janez) Jatkebčič [~] (ali Jastobčič) ½ zemljišt",
+      "mother": "Marija Urh [~]",
+      "botra": "— (stolpec prazen)",
+      "babica": "Marija Brinec",
+      "priest": "— (podpis prazen/trak čez polje)",
+      "notes": [
+        "marginalija: »+ 29/10. 88« — umrl 9 dni po rojstvu (rojen 20. 10.)",
+        "hiša 8 — PRVA pojavitev v vzorcu; 1886 h8 = Janez Jakofčič × Marija Meh (P79) — menjava",
+        "URH: mati Marija (1887 h31 oče Matija Urh, 1888 botra h85 Matija Urh)"
+      ],
+      "whatSi": "krščen Martin (20. 10.) — oče Jang [~] Jatkebčič [~] ½ zemljišt, mati Marija Urh [~]; + 29. 10. 1888 (9 dni); hiša 8 NOVA (1886 Jakofčič/Meh — menjava)",
+      "whatEn": "baptized Martin (Oct 20) — father Jang [~] Jatkebčič [~] half-farmer, mother Marija Urh [~]; died Oct 29, 1888 (9 days); house 8 NEW (1886 Jakofčič/Meh — family change)"
+    },
+    {
+      "row": 85,
+      "year": 1888,
+      "month": "November",
+      "born": "4.",
+      "baptized": "4.",
+      "village": "Griblje",
+      "houseNo": "29",
+      "scan": 34,
+      "page": 33,
+      "child": "Marjeta",
+      "father": "Peter Milek [~] ½ zemljišt",
+      "mother": "Ana Križan [~]",
+      "botra": "Janez Adlešič [~] (½ zemlj.) + Barbara njegova žena",
+      "babica": "Marija Brinec",
+      "priest": "Andrej Grieblj [~]",
+      "notes": [
+        "poročna marginalija: »poročena v Hamurri? 7. 2. 1914« [~]",
+        "hiša epidemije 1886: trije otroci MILEH umrli v 4 dneh (kolera — P80); 1888 oče Peter MILEK — isti rod čez leta (Mileh/Milek = bralni varianti)",
+        "KRIŽAN: mati Ana — 6. priča priimka Križan v 1888"
+      ],
+      "whatSi": "krščena Marjeta (4. 11.) — oče Peter Milek [~] ½ zemljišt, mati Ana Križan [~]; hiša epidemije 1886 (Mileh ×3) → 1888 Milek — isti rod; poročena 7. 2. 1914 [~]",
+      "whatEn": "baptized Marjeta (Nov 4) — father Peter Milek [~] half-farmer, mother Ana Križan [~]; the 1886 epidemic house (Mileh ×3) → 1888 Milek — the same kin across years; married Feb 7, 1914 [~]"
+    }
+  ],
+  "stats": {
+    "entries": 15,
+    "distinctHouses": 15,
+    "housesWritten": ["1", "8", "13", "21", "24", "29", "44", "56", "57", "69", "72", "78", "79", "83", "85"],
+    "ptInNabor": ["1", "8", "13", "21", "24", "29", "69", "72", "78", "79", "83", "85"],
+    "ptGap": ["44", "56", "57"],
+    "ptGapNew": [],
+    "ptGapNote": "vse tri luknjane hiše (44 P80, 56 P80, 57 P79) že dokazane — 1888 jih POTRJUJE (0 novih števil, 3 potrditve)",
+    "newSampleHouses": ["1", "72", "79", "83", "85"],
+    "repeatHouses": ["8", "13", "21", "24", "29", "44", "56", "57", "69", "78"],
+    "illegitimate": 3,
+    "priests": { "Andrej Grieblj [~]": 12, "Jos. Povmij [~]": 1, "neberljiv (Jos. P—)": 1, "prazen (r80)": 1 },
+    "midwifeBrinec": 10,
+    "multiEntryHouses": {},
+    "rowRestart": true
+  },
+  "crossLinks": {
+    "surnamesAcrossYears": {
+      "Šimec": "1886: 36/39/56/88 (P79/P80) → 1887: 34 (P82) → 1888: 56 (mati Ana Šimec, nezakonski) — hiša 56 ZNOVA",
+      "Križan/Krišan": "1888: 6 prič (oče h85 Marko, matere h79 Katarina + h29 Ana, botre h69 Marko + h13 Peter + h21 Katarina, babica h24 Marija) — 1825: Krišan Gregor + Krischan @36 (P81 0.8333) — najgostejši priimek 1888",
+      "Hraus/Hraucelj": "1888 NOVA familija: oče h72, matere h69/h85, botra h57, babica h72 — NI v vesolju 1825 (prihod po 1825)",
+      "Požek": "1888: oče h79 Jurij + mati h21 Marija (nezakonska) + botra h79 Barbara — NI v vesolju 1825; 1887: očeta h61/h21 + botra h27 (P82)",
+      "Brinec": "1888: oče h69 Janez + babica 10× (Marija 9 + Ana 1) — 1825 priča [~] (PUA »Brinc« @43 — P81)",
+      "Mileh/Milek": "1886 h29: 3× Mileh (epidemija, P80) → 1888 h29: oče Peter Milek — isti rod čez leta",
+      "Jakobič/Jakopič": "1885 h13 ženin Janez Jakobič (P80 sidro) → 1888 h13 oče Matija Jakobič — PRVA per-hišna imenska veriga čez leta",
+      "Urh": "1887 h31 oče Matija (P82) → 1888: mati h8 Marija + botra h85 Matija",
+      "Kure": "1887 h62 oče Anton (P82) → 1888: mati h1 Katarina + botra h79 Anton",
+      "Pezdirec/Perdinec": "1888: oče h57 Peter Pezdirec + botra h56 Marija Pezdirec + mati h13 Marija Perdinec",
+      "Adlešič": "1888 botre: h29 Janez+Barbara, h24 Barbara, h69 Marija",
+      "Klobučar": "1888 botra h78 Barbara (1887 h47 oče Peter — P82)",
+      "Brodarič": "1888 botre: h57 Jurij, h78 Dolon/Čolon (+1887 h63 — P82)"
+    },
+    "house78Oskrbar": "1886 Jakobič (P79 sidro) → 1887 Jakobič (P82) → 1888 OSKRBAR Mihail Poxan — socio-ekonomska motnja gospodinjstva",
+    "house13Chain": "hiša 13: 1885 poročna sidro + 1886 krst + 1886 mrliška + 1888 krst — Jakobič/Jakopič priimek čez vse — najmočnejši kandidat za per-hišno kronološko verigo (issue #18)"
+  },
+  "findings": [
+    {
+      "id": "F1-row-restart",
+      "si": "PISANE OZNAKE VRSTIC SE PRI PRELOMU LETA PONASTAVIJO NA 1: str. 27 (sk. 28) se začne z oznako 3, str. 34 (sk. 35, »1 8 8 9«) z oznako 1 — P82 »prvi 1888 row 107« = zvezno štetje 106+1 (konvencija), ne pisana oznaka (oznaka pod raztrganino [~])",
+      "en": "THE WRITTEN ROW LABELS RESTART AT 1 AT THE YEAR BREAK: p. 27 (scan 28) starts with label 3, p. 34 (scan 35, »1 8 8 9«) with label 1 — the P82 »first 1888 row 107« is the continuous count 106+1 (a convention), not the written label (hidden by a tear [~])"
+    },
+    {
+      "id": "F2-novel-surnames",
+      "si": "DVE NOVI familiji prihoda po 1825: HRAUS/HRAUCELJ (3 hiše 69/72/85 + babica — najgostejši nov priimek 1888) in POŽEK (oče h79 + nezakonska mati h21 + botra h79) — nobeden NI v vesolju 1825 (232 imen); nasprotje: KRIŽAN (6 prič 1888) SE povezuje s 1825 (Krišan Gregor, Krischan @36)",
+      "en": "TWO NEW post-1825 surname arrivals: HRAUS/HRAUCELJ (3 houses 69/72/85 + the midwife — the densest new 1888 surname) and POŽEK (father h79 + the unmarried mother h21 + godmother h79) — neither is in the 1825 universe (232 names); contrast: KRIŽAN (6 witnesses in 1888) DOES connect to 1825 (Krišan Gregor, Krischan @36)"
+    },
+    {
+      "id": "F3-oskrbar",
+      "si": "hiša 78: 1886/1887 oče Janez Jakobič → 1888 oče Mihail Poxan »OSKRBAR« (opomba o prevzemu) — direktni dokaz socio-ekonomske motnje gospodinjstva med vzorčnimi leti (issue #18: hiša ≠ družina)",
+      "en": "house 78: 1886/1887 head Janez Jakobič → 1888 head Mihail Poxan the »CARETAKER« (oskrbar, a takeover note) — direct evidence of household socio-economic disruption between sample years (issue #18: house ≠ family)"
+    },
+    {
+      "id": "F4-first-name-chain",
+      "si": "PRVA per-hišna imenska veriga: hiša 13 — 1885 ženin Janez JAKOBIČ (poročna sidro, P80) → 1888 oče Matija JAKOBIČ (krstna) — isti priimek, ista hiša, čez 3 leta; hiša 13 postane najmočnejši kandidat za per-hišno kronološko verigo (1825→1886→1888)",
+      "en": "the FIRST per-house name chain: house 13 — 1885 groom Janez JAKOBIČ (the marriage anchor, P80) → 1888 father Matija JAKOBIČ (the baptism register) — the same surname, the same house, 3 years apart; house 13 becomes the strongest candidate for a per-house chronological chain (1825→1886→1888)"
+    },
+    {
+      "id": "F5-gap-confirmation",
+      "si": "luknja 41–60: 0 novih števil, 3 POTRDITVE (44, 56, 57) — številčna evolucija med 1825 in 1888 konsistentna z P79/P80/P82; SKUPNO: 11 dokazanih števil luknje čez tri knjige (54/56/57 P79 + 44/59/60 P80 + 47/52/55 P82 + 3 potrditve P83)",
+      "en": "the 41–60 gap: 0 new numbers, 3 CONFIRMATIONS (44, 56, 57) — the numeric evolution between 1825 and 1888 is consistent with P79/P80/P82; IN TOTAL: 11 proven gap numbers across the three books (54/56/57 P79 + 44/59/60 P80 + 47/52/55 P82 + 3 confirmations P83)"
+    },
+    {
+      "id": "F6-illegitimate",
+      "si": "NEZAKONSKI vpisi 3/15 (20 %): h24 (mati Barbara Melith [~]), h56 (mati Ana Šimec [~] — Šimec ZNOVA na 56), h21 (mati Marija Požek [~] — priimek ist kot 1887 hišni oče) — vsi na hišah z drugačnim gospodinjskim priimkom prejšnjega leta",
+      "en": "ILLEGITIMATE entries 3/15 (20 %): h24 (mother Barbara Melith [~]), h56 (mother Ana Šimec [~] — Šimec AGAIN on 56), h21 (mother Marija Požek [~] — the surname identical to the 1887 house father) — all on houses with a different household surname the previous year"
+    },
+    {
+      "id": "F7-anomalies",
+      "si": "ANOMALIJE: otrok »Kaxmarp« [~] (h21 — morda Kasimir); otrok »Musca« [~] (h24); otrok »Alex« [~] (h56) z nasprotjem spola (kolone moški [~], marginalija »Umrla« [~]); dvodelni priimek »Radovič Mrgaič« [~] (h83 — vzporednica 1825 »Šture Majzel«); prazna botra/polja (h83, h8); marginalije »+ 1878« (h1) pred letom rojstva — 7/8 forenzika",
+      "en": "ANOMALIES: the child »Kaxmarp« [~] (h21 — possibly Kasimir); the child »Musca« [~] (h24); the child »Alex« [~] (h56) with a gender contradiction (male columns [~], the margin note »Umrla« [~]); the double surname »Radovič Mrgaič« [~] (h83 — a parallel to the 1825 »Šture Majzel«); empty godparent/fields (h83, h8); margin notes »+ 1878« (h1) preceding the birth year — the 7/8 forensics"
+    }
+  ],
+  "honesty": [
+    "paleografska faza ročna — skeni v delovnem imeniku (NI v repu); prepis z [~] za vsako negotovost; izrezi slike za dvoumne priimke (Zeljth, Hraus/Husič, Hlevič/Nera, Jatkobčič, Poxan/Hardeium, Radovič/Mrgaič, Melith, Deblič, Jatkebčič)",
+    "hiša 78 [~] — številka v zavihku/raztrganini knjige (delno neberljiva); zasidrana prek 1886 P79 sidra (»75«→78 re-read) in 1887 P82 zapisa iste hiše",
+    "pisana oznaka prve 1888 vrstice (str. 26) pod raztrganino — ponastavitev številčenja dokazana INDIREKTNO (str. 27 = oznaka 3)",
+    "marginalije »+ …« z letnicami pred rojstvom (h1 »+ 1878«, h79 »+ 1/9. 18??«) — 7/8 forenzika, nasprotja dokumentirana, ne reševana",
+    "spol otroka h56 (»Alex«) — kolone [~] proti modri marginaliji »Umrla« [~]; nasprotje dokumentirano",
+    "priimki Zeljth, Hraus, Husič, Hlevič, Poxan, Hardeium, Radovič, Mrgaič, Mettovič, Melith, Borjanc, Jatkebčič — vsi [~]; nekatere kombinacije morda isti rod z različnimi zapisi",
+    "botra h83 in h8 prazna — dokumentirano kot zapisano; babica h1 »Marjeta Jeta« [~] negotova",
+    "Gradac/Krasinec/Primostek/Otok/… vpisi NISO preneseni (izven k.o. Griblje po konvenciji P79/P80/P82)"
+  ],
+  "nextSteps": [
+    "krstna 1889+ (skeni 35+ — polno leto 1889; začetek: str. 34 row 1, Gradac 8, 3./3. 1.)",
+    "per-hišna kronološka veriga hiše 13 (najmočnejši kandidat — prva imenska veriga): polni prepis 1885–1888 + PT 1825 lastnik",
+    "rešitev dvoumnosti P82 row 78 (52 → 04 → 15) prek PUA primerjave [~] (odprto od P82)",
+    "sledenje familiji Hraus/Hraucelj nazaj (1885–1887 skeni 2–27 + poročna/mrliška) — kdaj prišli?",
+    "še dve priči per-hišne kontinuitete: h78 (Jakobič→oskrbar Poxan) in h29 (Mileh→Milek) — polna leta 1889–1890 bi dali tretjo"
+  ]
+}

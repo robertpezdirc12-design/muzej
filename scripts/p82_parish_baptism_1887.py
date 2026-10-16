@@ -127,7 +127,10 @@ def verify():
         for e in entries
     )
     ok4 = ok4 and dokaz["frame"]["scanFrom"] == 16 and dokaz["frame"]["scanTo"] == 27
-    ok4 = ok4 and dokaz["frame"]["break1888"] == BREAK_1888
+    b = dokaz["frame"]["break1888"]
+    ok4 = ok4 and b.get("scan") == BREAK_1888["scan"] and b.get("page") == BREAK_1888["page"] \
+        and b.get("row") == BREAK_1888["row"]  # row 107 = zvezno štetje 106+1 (P83: pisane
+        # oznake se pri prelomu leta ponastavijo na 1 — str. 27 = oznaka 3; rowNote v dokazu)
     inv["I4_frame_and_break"] = ok4
 
     # I5 — merila issue #18: ≥ 5 hiš; pričakovano 20 vpisov / 19 različnih hiš

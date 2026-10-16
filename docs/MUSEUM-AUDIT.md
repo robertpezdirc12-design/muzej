@@ -3706,3 +3706,99 @@ dokaz istovetnosti stavbe (issue #18).
 
 **v7 runtime join NESPREMENJEN** (891/879; disciplina I9). Veriga `p60–p67
 + p70–p82 --check` PASS; tsc 0; ESLint 0; /api/qa dev 83/83 (qa-p82 True).
+
+## §60 — P83: župnija Podzemelj — krstna knjiga 04105, polno leto 1888 (issue #18) — 2026-10-16
+
+**Okvir (P82 nextSteps ①: širitev vzorca po letih):** krstna knjiga 04105,
+polno leto 1888 = skeni 27–35 == tiskane strani 26–34 (stran == sken − 1);
+vpisi z Griblji na skenih 28–34 (str. 27–33); **prelom 1889**: glava
+»1 8 8 9« velikimi ciframi na str. 34 (sk. 35), prvi vpis 1889 = row 1
+(3./3. 1., Gradac 8) — leto 1888 ima **92 pisanih vrstic**.
+
+**NOVELA P83 (dokazana metodološka ugotovitev):** **pisane oznake vrstic se
+pri prelomu leta ponastavijo na 1.** Dokaz: str. 27 (sk. 28) se začne z
+oznako **3** (Januar 16., Griblje 1); str. 34 (sk. 35) z oznako **1**.
+Posledica: P82 zapis »prvi 1888 row 107« je **zvezno štetje 106+1**
+(konvencija), ne pisana oznaka — pisana oznaka prve 1888 vrstice (Gradac 26)
+leži pod raztrganino [~]. Narativi qa-p82 + skripta p82 (tolerantna
+primerjava break1888) + P82 dokaz (rowNote) usklajeni; podatki P82 (vrstice
+1–106 za 1887) nespremenjeni.
+
+**Vsi vpisi z Griblji 1888: 15 vpisov / 15 različnih hiš** — 1, 8, 13, 21,
+24, 29, 44, 56, 57, 69, 72, 78 [~], 79, 83, 85 (hiša 78 v zavihku knjige —
+zasidrana prek P79 sidra »75«→78 in P82 zapisa). Skupaj s P79/P80/P82:
+**74 vpisov / 45 različnih hiš** čez tri knjige in tri leta. Nove hiše v
+vzorcu **5** (1, 72, 79, 83, 85), ponovitve 10. PT klasifikacija **12/3**:
+luknja 41–60 = 44/56/57 — **VSE POTRDITVE, 0 novih števil** (44 P80, 56 P80,
+57 P79); skupno 11 dokazanih števil luknje čez tri knjige.
+
+**Ugotovitve ①–⑦:**
+1. **Ponastavitev številčenja vrstic** pri prelomu leta (zgoraj) — P82
+   »row 107« reinterpreted kot konvencija zveznega štetja.
+2. **Dve NOVI familiji prihoda po 1825:** **HRAUS/HRAUCELJ** (oče h72 Matija,
+   matere h69 Katarina + h85 Marija, botra h57 Marija Hraucelj, babica Neža
+   — 3 hiše v enem letu; NI v vesolju 1825) in **POŽEK** (oče h79 Jurij
+   *bajtar* + nezakonska mati h21 Marija + botra h79 Barbara; NI v vesolju
+   1825; 1887 hišni oče h21 Janez Požek). Nasprotje: **KRIŽAN — 6 prič 1888**
+   (oče h85 Marko, matere h79 Katarina + h29 Ana, botre h69 Marko + h13
+   Peter + h21 Katarina, babica h24 Marija) **SE povezuje s 1825** (Krišan
+   Gregor, Krischan @36 — P81 isto-hiša 0.8333).
+3. **hiša 78 — OSKRBAR:** 1886 (P79 sidro) in 1887 (P82) oče gospodinjstva
+   Janez Jakobič → 1888 oče **Mihail Poxan [~] »oskrbar«** (opomba o
+   prevzemu) — direktni dokaz socio-ekonomske motnje gospodinjstva med
+   vzorčnimi leti (issue #18: hiša ≠ družina).
+4. **PRVA per-hišna imenska veriga — hiša 13:** 1885 ženin Janez **Jakobič**
+   (poročna sidro 04455 sk. 61, P80) → 1886 krstna (04105) + mrliška (04894)
+   → 1888 oče Matija **Jakobič** (krstna) — isti priimek na isti hiši čez 3
+   leta; hiša 13 postane najmočnejši kandidat za 1825→1886→1888 kronološko
+   verigo (P81 NIL-CLAIM velja za 1825↔1886, ne za notranje verige).
+5. **NEZAKONSKI vpisi 3/15 (20 %):** h24 (mati Barbara **Melith** [~],
+   samata), h56 (mati Ana **Šimec** [~] — Šimec ZNOVA na 56: 1886 mrliška +
+   P81 near-miss Schumetz @56 → 1888), h21 (mati Marija **Požek** [~] —
+   priimek ist kot 1887 hišni oče Janez Požek). Vsi na hišah z drugačnim
+   gospodinjskim priimkom prejšnjega leta.
+6. **Kontinuiteta rodov čez leta:** h29 — hiša epidemije 1886 (3 otroci
+   **Mileh** umrli v 4 dneh, kolera; P80) → 1888 oče Peter **Milek** (isti
+   rod, bralni varianti); h57 — menjava: 1886 Podolivec/Stupanič (P79) →
+   1888 Pezdirec/Borjanc; h8 — menjava: 1886 Jakofčič/Meh → 1888 Jang
+   Jatkebčič/Marija **Urh** (Urh = 1887 h31 oče + 1888 botra h85); Kure
+   (botri h1/h79), Adlešič (botre h29/h24/h69), Brodarič (h57/h78),
+   Klobučar (h78 — 1887 h47 oče), Pezdirec (h57 oče + h56 botra; Perdinec
+   h13 mati), Deblič (h56/h13 botre).
+7. **Anomalije:** otrok **»Kaxmarp«** [~] (h21, moški, nezakonski — morda
+   Kasimir); otrok **»Musca«** [~] (h24, nezakonska); otrok **»Alex«** [~]
+   (h56, nezakonski) s **nasprotjem spola** (kolone moški [~] proti modri
+   marginaliji »Umrla dne 25. 5. 1965« [~]); **dvodelni priimek**
+   »Radovič Mrgaič« [~] (h83 — vzporednica 1825 »Šture Majzel« iz P81
+   vesolja); botra/polja prazna (h83, h8); marginalije »+ 1878« (h1) pred
+   letom rojstva — 7/8 forenzika (morda 1888/1978). Duhovniki: Grieblj [~]
+   12 + Povmij [~] 1 + neberljiv »Jos. P—« 1 + prazen 1; babica **Brinec
+   10×** (Marija 9 + Ana 1).
+
+**Integracija:** `parish.ts` HOUSE_VITALS 59 → **74** (15 novih 1888; vsi
+DOCUMENTED; komentar P83 z novo o ponastavitvi številčenja); **qa-parish.ts**
+nova kontrola `qa-p83-parish-baptism-1888` (84. kontrola; celoven neodvisen
+preracun iz HOUSE_VITALS × PARISH_BOOKS: okvir/strani, PT 12/3, sidra h13
+veriga/h78 oskrbar/h29 Milek, nezakonski 3, veriga hiše 13 čez tri knjige;
+dve obliki repo/produkcija po P53/P57/P58) — QA 83 → **84/84**;
+`scripts/p80_parish_md_books.py` I7 P83 scoping (vitals 59 → 74);
+`scripts/p82_parish_baptism_1887.py` I4 tolerantna primerjava break1888 +
+`research/issue17/parish-baptism-1887.json` rowNote; dokaz
+`research/issue17/parish-baptism-1888.json` (SAMPLE-TRANSCRIPTION-1888;
+ročna faza — skeni v delovnem imeniku, NI v repu); atlas.ts NESPREMENJEN
+(PT_GAP_KNOWN že vsebuje 44/56/57); p81 pack NESPREMENJEN (vzorec 1886); 
+kartica NI dodana (vzorec P77–P82).
+
+**Poštenost:** prepis je VZOREC (polno leto 1888 + dokaz preloma 1889 + dokaz
+ponastavitve številčenja), ne celotne knjige (326 skenov). Kurrent branja
+imen nosijo [~] (Zeljth, Hraus/Husič, Hlevič/Nera, Jatkobčič, Poxan/
+Hardeium, Radovič Mrgaič, Mettovič, Melith, Borjanc, Jatkebčič, Deblič);
+hiša 78 [~] v zavihku; pisana oznaka prve 1888 vrstice pod raztrganino
+(ponastavitev dokazana indirektno); nasprotje spola h56 dokumentirano, ne
+reševano; marginalije »+ …« z letnicami pred rojstvom (h1/h79) — 7/8
+forenzika, obe interpretaciji dokumentirani. Številčna usklajenost s PT je
+OBSERVACIJA, ne dokaz istovetnosti stavbe (issue #18).
+
+**v7 runtime join NESPREMENJEN** (sha256 4bb40370…, statična projekcija;
+disciplina I9). Veriga `p60–p67 + p70–p83 --check` PASS (p77 prehoden HTTP
+000 — retry PASS); tsc 0; ESLint 0; /api/qa dev **84/84** (qa-p83 True).
