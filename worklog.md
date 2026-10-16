@@ -4356,3 +4356,23 @@ Stage Summary:
 - Repo stanje POPOLNO: lokalni == GitLab == GitHub == 902a0b9 (P90 + vitals 179 + QA 91/91 dev)
 - Produkcija ZASTARELA (89/89, P88) — bo sledila ob resetu Vercel rate limita (~18:24 UTC 17. 10.); NASLEDNJA SEJA (obvezni prvi korak): preveriti https://griblje-museum.vercel.app/api/qa = 91/91 + qa-p90 True; če ŠE VEDNO zastarela → nov prazen nudge commit + push oba
 - Raziskava se nadaljuje: P91 = krstna 1896 (prelom str. 83 row 1; skeni 85+; 85–88 že v /tmp/p90; stran == sken − 2) ali mrliška 04894 1887–1896 (smrti prvih žen — dokaz menjav h58/h91)
+---
+Task ID: 61
+Agent: Z.ai Code (glavna seja)
+Task: P91 — župnija Podzemelj: krstna knjiga 04105, polno leto 1896 (issue #18); raziskava med čakanjem na Vercel rate limit reset (po P90 sinhronizaciji Task 60-b)
+
+Work Log:
+- Skeni 85–94 preneseni v /tmp/p91 (85–88 kopija iz /tmp/p90; p91_fetch po vzoru p90_fetch)
+- Ročna paleografska faza: pregled skenov 85–93 (str. 83–91); Griblje vrstice identificirane; izrezi 2x (L/R) + hišne forenzike 5x–10x za vseh 14 vrstic; referenčna primerjava (Gradac 25, r34 isti pisar) za Kurrent 5/6; prelom 1897 potrjen na skenu 93 (str. 91) po row 94
+- Forenzika Kurrent: r25 »26« → jasno 25 (referenčna primerjava; skladno s Klepec familijo h25 po poroki 04455!); r31 »16« → jasno 46 (3. dokaz luknje); r92 »25« → jasno 30 (Šegina × Mihelt = h30 1895); r13 »37?« → jasno 31; r70 »Marija« → Martin; r46 »Jožef« → Anton
+- Dokaz research/issue17/parish-baptism-1896.json (14 vpisov / 14 hiš NARE; 3 nove 9/14/45; NOVA luknja 45 — 16. dokazana; babica 14/14 PRAZNO 2. leto; duhovniki Fr. Šuvar? 9 + Rauq 4 + r5 prazno; ½ ×12 + bajtar ×2 — prvo leto brez ¼; kumulativ 199/71)
+- scripts/p91_parish_baptism_1896.py (I1–I10) — popravki: I5 inline next() (gnezdena def senči), I8 h75 Kurrent variante (Jakobčič/Sušljar 1892) — --check PASS
+- parish.ts: 179 → 193 (+14 blokov 1896; LEKCIJA: Python vstavljanje pustilo ] namesto ]; — p81 regex ujela, popravljeno)
+- atlas.ts PT_GAP_KNOWN + 45 (16. dokazana); qa-parish.ts qa-p91 (92. kontrola) + pini 179→193 + allow h30/h41 (p85), h53 (p86), h46 (p88) +1896; p80 I7 193; p85–p90 kumulativ 199/70 + vesolja +1896
+- Veriga p60–p67 + p70–p91 --check PASS (29 skript; p80/p81 samo z --check — brez njiju exit 1 po zasnovi); tsc 0 / lint 0; /api/qa dev 92/92 (qa-p91 True)
+- Dokumentacija: MUSEUM-AUDIT §68 + README (P91 bullet + stanje po P91 + 92/92 + 29 skript + qa-p91) + worklog Task 61
+
+Stage Summary:
+- P91 = krstna 1896: 14 vpisov / 14 hiš NARE (3. leto); 3 NOVE hiše (9, 14, 45); NOVA LUKNJA ŠTEVILKA 45 (16. — prva nova od P88); kumulativ 199 vpisov / 71 hiš čez tri knjige in ENAJST LET; sidra h1 Željko × Kure 3. VPIS (botra = starši priimki; Željko veriga 8 signalov), h63 oče ISTI 5×, h30 ISTA zveza 2. leto, h41 4. VPIS, h15/h36/h53 kontinuitete, h31 MENJAVA, h25 KLEPEC NAZAJ, h26 selitev 75→26 [~], h14 neimenovan otrok
+- QA dev 92/92; tsc/lint 0; v7 NESPREMENJEN (sha256 4bb40370…)
+- NASLEDNJA FAZA: P92 = krstna 1897 (prelom str. 91 row 1; skeni 93+; stran == sken − 2) ali mrliška 04894 1887–1896 (smrti prvih žen — dokaz menjav h58/h91/h31/h46)

@@ -2,18 +2,18 @@
   "phase": "P78",
   "title": "Produkcija & žetoni: operativni zdravstveni audit (issue #6)",
   "status": "OPERATIONAL-AUDIT",
-  "issuedAt": "2026-10-15T21:36:20Z",
+  "issuedAt": "2026-10-16T20:25:40Z",
   "vercel": {
     "home": {
       "http": 200,
-      "bytes": 707102
+      "bytes": 745763
     },
     "qa": {
       "http": 200,
       "ok": true,
-      "passed": 80,
+      "passed": 89,
       "failed": 0,
-      "tests": 80,
+      "tests": 89,
       "qaP76Pass": true
     },
     "geo": {
@@ -60,9 +60,9 @@
     }
   },
   "mirrors": {
-    "gitlabMain": "54c1d3e3ca75282422bd243bacdeceefda8f1e81",
-    "githubMain": "54c1d3e3ca75282422bd243bacdeceefda8f1e81",
-    "localHead": "54c1d3e3ca75282422bd243bacdeceefda8f1e81",
+    "gitlabMain": "f163971f086895a401e7e35611734bde6e86d385",
+    "githubMain": "f163971f086895a401e7e35611734bde6e86d385",
+    "localHead": "f163971f086895a401e7e35611734bde6e86d385",
     "method": "git ls-remote (GitHub REST GET /commits/main vrne 404 neavtentificirano — repozitorij zaseben; ls-remote z žetonom iz remote URL)"
   },
   "workflowsPresent": {
@@ -76,8 +76,8 @@
       "billingBlocked": true,
       "annotation": "The job was not started because recent account payments have failed or your spending limit needs to be increased. Please check the 'Billing & plans' section in your settings",
       "syncLatest": {
-        "runId": 38810765778,
-        "createdAt": "2026-10-15T21:33:23Z",
+        "runId": 38958537114,
+        "createdAt": "2026-10-16T19:56:03Z",
         "event": "push",
         "conclusion": "failure",
         "jobConclusion": "failure",
@@ -86,9 +86,9 @@
         "annotation": "The job was not started because recent account payments have failed or your spending limit needs to be increased. Please check the 'Billing & plans' section in your settings"
       },
       "tokenHealthLatest": {
-        "runId": 38805695856,
-        "createdAt": "2026-10-15T20:54:19Z",
-        "event": "workflow_dispatch",
+        "runId": 38893034910,
+        "createdAt": "2026-10-16T11:19:42Z",
+        "event": "schedule",
         "conclusion": "failure",
         "jobConclusion": "failure",
         "steps": 0,
