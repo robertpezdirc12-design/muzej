@@ -4390,3 +4390,29 @@ Stage Summary:
 - Repo stanje POPOLNO: lokalni == GitLab == GitHub == a7101c7 (P91 + vitals 193 + QA 92/92 dev; 199 vpisov / 71 hiš / 16 dokazanih luknj)
 - Produkcija ZASTARELA (89/89, P88) — sledi ob resetu (~18:24 UTC 17. 10.); NASLEDNJA SEJA (obvezni prvi korak): preveriti https://griblje-museum.vercel.app/api/qa = 92/92 (qa-p90 + qa-p91 True); če zastarela → nudge prazen commit + push oba
 - Raziskava: P79–P91 = 1886–1896 (ENAJST polnih let); NASLEDNJA FAZA: P92 = krstna 1897 (prelom str. 91 row 1; skeni 93+; 93 že v /tmp/p91) ali mrliška 04894 1887–1896 (smrti prvih žen — dokaz menjav h58/h91/h31/h46)
+
+---
+Task ID: 62
+Agent: Z.ai Code (glavna seja)
+Task: P92 — župnija Podzemelj: krstna knjiga 04105, polno leto 1897 (issue #18); produkcija preverjena (89/89 — rate limit še veljaven), trojna sinhronizacija potrjena (c183c04)
+
+Work Log:
+- Produkcija preverjena: /api/qa = 89/89 (še P88 dda4a35 — Vercel rate limit do ~2026-10-17 18:24 UTC, dohitelj bo P90+P91+P92 → 93/93); trojna sinhronizacija: lokalni == GitLab == GitHub == c183c04 (GitLab 403 tranzitorni — retry OK)
+- Skeni 93–104 preneseni v /tmp/p92 (93 kopija iz /tmp/p91; p92_fetch po vzoru p91)
+- Ročna paleografska faza: pregled skenov 93–101 (str. 91–98); 20 kandidatov → 19 potrjenih Griblje vrstic (2 izključeni: s93 r11 »Grisice«, s99 r65 »Otok 6«); izrezi 2x (L/R) + hišne forenzike 5x (H5 pas popravljen x 520–645) + datumski izrezi 5x–8x + stolpec zaporednih številk 6x
+- NOVELA P92: sken 97 = PODVOJEN (duplikat s96 = str. 94 — 2. znani duplikat po skenu 73) — stran == sken − 2 samo do skena 96, od skena 98 stran == sken − 3 (artefakt duplikata); leto 1897 = 85 vrstic; prelom 1898 str. 98 = sken 101 row 86
+- ČEZ-FAZNA POTRDITEV h61: P79-era placeholder (»Anton, oče Miha P.—«, stran 49 stara predpostavka) združen s P92 5x forenziko (Janez Muc bajtar × Ana Kure, stran 97) — ne dupliran
+- Forenzika 6 popravkov: h23/h24 dve Brinec hiši (r21=24, r38=23); Grisice≠Griblje; Otok≠Griblje; h16≠10; row 59/62/64 (Kurrent 5/6, kontinuiteta s98→s99); h45 mati = Barbara Spudič (POPRAVEK P91 »Doroteja?«)
+- Dokaz research/issue17/parish-baptism-1897.json (19 Griblje + 1 izključen; 217/74 kumulativ; duhovniki Klun 11 + Rauq 8; † 7/19; matičar pripisi 6)
+- scripts/p92_parish_baptism_1897.py (I1–I10) — popravki: frame.duplicateScan, I7 startswith (Doroteja v oklepaju popravka), I8 P82 za h2 prior, I9 multiset (h31 ×2), I6 217 — --check PASS
+- parish.ts: 193 → 211 (+18 blokov 1897 + sidro h61 združeno; komentar P92) — ugotovljeno: P79-era placeholder je bil že v 193, zato +18 ne +19
+- atlas.ts PT_GAP_KNOWN + 43 (17. dokazana); qa-parish.ts qa-p92 (93. kontrola) + vitals pini 193→211 (6 testov) + dovoljenja 1897: qa-p87 h12, qa-p88 h23+h46, qa-p90 h20/h37 (allow mehanizem), qa-p91 h45 + qa-p79/p80 filtri scoperani (1897 samo h61 — originalni P79 vzorec)
+- Skripte p80/p85–p91: EXPECTED_VITALS_TOTAL 211 + kumulativ 217 + hiše 73 + EV-only 6
+- Veriga p60–p67 + p70–p92 --check PASS (30 skript, vse exit 0; p68 zamrznjen; p69 izven; p80/p81 samo --check); tsc 0 / lint 0; /api/qa dev 93/93 (qa-p92 True)
+- Dokumentacija: MUSEUM-AUDIT §69 + README (P92 bullet + stanje po P92 + 93/93 + 30 skript + qa-p92) + worklog Task 62
+
+Stage Summary:
+- P92 = krstna 1897: 19 vpisov / 18 hiš NARE (4. leto); h31 ×2 (Straus kompleks: 1894 Fapič?×Straus → 1896 Pendirec?×Žugelj → 1897 obe nazaj); 3 NOVE hiše (10, 40, 43); NOVA LUKNJA ŠTEVILKA 43 (17.); kumulativ 217 vpisov / 74 hiš / DVANAEST let; PRVI NEZAKONSKI od P90 (r31 sama mati Pozdirec); babica 3. leto 19/19; dojenčijska umrljivost 7/19 NAJVIŠJE; Šuvar izgine (Klun 11 + Rauq 8, mešano leto); sidra h45 2. VPIS ISTA ZVEZA + POPRAVEK Spudič, h46 4. VPIS + mati 3. varianta (Harašimovič?), h61 botra = h1 PAR (Željko × Kure), h63 IZGINE (konec 5-letne serije)
+- QA dev 93/93; tsc/lint 0; v7 NESPREMENJEN (sha256 4bb40370…)
+- Produkcija: 89/89 (rate limit do ~2026-10-17 18:24 UTC) — po resetu dohiti P90+P91+P92 → 93/93 (qa-p90 + qa-p91 + qa-p92 True)
+- NASLEDNJA FAZA: P93 = krstna 1898 (prelom str. 98 row 1 = sken 101; skeni 102+; stran == sken − 3 do naslednjega duplikata) ali mrliška 04894 1887–1896 (smrti prvih žen — dokaz menjav h58/h91/h31/h46) ali poročna 04455 Straus × Spudič (potrditev h45 popravka)

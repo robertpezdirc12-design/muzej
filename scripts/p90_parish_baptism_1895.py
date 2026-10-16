@@ -57,7 +57,7 @@ PT_GAP_NEW = []                 # luknja 41–60: h46 ponovitev — brez novih �
 EXPECTED_NEW_HOUSES = ["20", "37", "87"]
 EXPECTED_REPEATS = 11           # 14 − 3 nove
 EXPECTED_HOUSES_VITALS = 15     # 15 vpisov (h24 2 bloka)
-EXPECTED_VITALS_TOTAL = 193     # HOUSE_VITALS 179 + 15 (p80 I7 pin); P91: + 14 (1896)
+EXPECTED_VITALS_TOTAL = 211     # HOUSE_VITALS 179 + 15 (p80 I7 pin); P91: + 14 (1896); P92: + 19 (1897)
 EV_ONLY_TOTAL = 6               # P84: 2 + P85: 3 + P86: 1 (P77–P83, P87–P90: 0)
 EV_ONLY_HOUSE_STRINGS = {"65 [~]"}  # P85 r?? — edina EV-only hiša z imenom (None × 4)
 # sidra/pins P90:
@@ -425,8 +425,8 @@ def verify():
         and len(intra) == 1 and intra[0]["houseNo"] == "24"
         and sorted(intra[0]["rows"]) == [22, 48]
         and n_entries_total == EXPECTED_VITALS_TOTAL
-        and n_entries_total + EV_ONLY_TOTAL == 199  # kumulativno po P91 (193 + 6)
-        and n_houses_total == 70  # P90: 67; P91: + 3 (9, 14, 45)
+        and n_entries_total + EV_ONLY_TOTAL == 217  # kumulativno po P92 (211 + 6)
+        and n_houses_total == 73  # P91: 70; P92: + 3 (10, 40, 43)
         and ev_only_houses == EV_ONLY_HOUSE_STRINGS
         and cumulative["entries"] == 185
         and cumulative["houses"] == 68  # 67 vitals + 1 EV-only »65 [~]«

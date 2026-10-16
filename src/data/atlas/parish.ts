@@ -274,9 +274,9 @@ export const HOUSE_VITALS: HouseVital[] = [
     bookSignature: "04105",
     year: 1897,
     scan: 100,
-    page: 49,
-    whatSi: "krščen Anton — oče Miha P.—",
-    whatEn: "baptized Anton — father Miha P.—",
+    page: 97,
+    whatSi: "krščen Anton (20./20. 11.) — oče Janez Muc [~] bajtar (P79-era placeholder je bral »Miha P.—« [~] pri strani 49 po stari predpostavki — P92 5x forenzika: jasno Janez Muc bajtar; stran == sken − 3 po noveli P92), mati Ana Kure [~]; hišna 61 forenzika: jasno 61 — 5. pin (1887 sidro + 1891 + 1892 + 1897); botra Nikolaj Željko [~] + Katarina Kure [~] = h1 PAR KOT BOTRA (ŽELJKO × KURE — začarani krog familije kot P91 h1); pripis 20. st.: »Zakonca Mihelk Katarina umrla 26.5.1979 (MMK Griblje 1.1979)« + EHS ČG 2012894500081; babica PRAZNA; podpis Fr. Klun [~] (P92 sidro — blok posodobljen in združen s P92 razširitvijo)",
+    whatEn: "baptized Anton (Nov 20/20) — father Janez Muc [~] cottager (the P79-era placeholder read »Miha P.—« [~] at page 49 under the old assumption — P92 5x forensics: clearly Janez Muc cottager; page == scan − 3 per the P92 novel), mother Ana Kure [~]; house no. 61 (forensics: clearly 61) — the 5th pin (1887 anchor + 1891 + 1892 + 1897); godparents Nikolaj Željko [~] + Katarina Kure [~] = THE h1 COUPLE AS GODPARENTS (ŽELJKO × KURE — the family's closed circle like P91 h1); 20th-c. notes: »the spouse Mihelk Katarina died May 26, 1979 (MMK Griblje 1.1979)« + EHS ČG 2012894500081; midwife EMPTY; signature Fr. Klun [~] (P92 anchor — the block updated and merged with the P92 extension)",
     status: "DOCUMENTED",
   },
   // ——— P80 razširitev: MRLIŠKA KNJIGA 04894 1886–1924 — okvir 1886 (skeni 2–6 == strani 1–5; leto 1887 se začne na strani 5 pri »Januarj 1887«) ———
@@ -2184,6 +2184,209 @@ export const HOUSE_VITALS: HouseVital[] = [
     page: 90,
     whatSi: "krščena Katarina (14./16. 12.) — oče Nikolaj Šegina? [~] ½ zemljak, mati Marjeta Mihelt? [~]; hiša 30 (forenzika 10x: jasno 30 — PRVI PREBIR 25 NAPAČEN, podolgovata zanka 0 ne kljukasta 5; starša Šegina × Mihelt = h30 familija 1895 to potrdita) — ISTA ZVEZA 2. leto (P90 1895 r27 — 3. DRUŽINA se je UNESELILA, po 2 menjavah končno kontinuiteta 1895+1896); botra Nikolaj Hrižan? [~] (h63 oče familija) + Katarina Mehle? [~]; babica PRAZNA; moder: umrla 16.11.1971 v Komorah; podpis Jos. Rauq",
     whatEn: "baptized Katarina (Dec 14/16) — father Nikolaj Šegina? [~] half smallholder, mother Marjeta Mihelt? [~]; house 30 (10x forensics: clearly 30 — THE FIRST READ 25 WRONG, an elongated closed loop 0 not a hooked 5; the parents Šegina × Mihelt = the h30 family of 1895 confirm it) — THE SAME COUPLE 2nd year (P90 1895 r27 — the 3rd FAMILY has SETTLED, after 2 changes finally continuity 1895+1896); godparents Nikolaj Hrižan? [~] (the h63 father family) + Katarina Mehle? [~]; midwife EMPTY; blue: died Nov 16, 1971 in Komore; signature Jos. Rauq",
+    status: "DOCUMENTED",
+  },
+
+  // ——— P92 razširitev: KRSTNA KNJIGA 04105 — polno leto 1897 (okvir skeni
+  // 93–101 == strani 91–98; NOVELA P92: sken 97 = PODVOJEN (duplikat s96 =
+  // str. 94, 2. znani duplikat po skenu 73) — NOVELA P89 (stran == sken − 2)
+  // velja samo do skena 96, od skena 98 stran == sken − 3 (artefakt
+  // duplikata, ne nova številčenja); glava »Leto 1897« na str. 91 po 1896 row
+  // 94; leto 1897 ima 85 vrstic; prelom 1898 na str. 98 = sken 101 po row 85
+  // — oznake ponastavljene, novela P83 potrjena 10. leto) — 19 vpisov / 18
+  // hiš — NARE (4. leto po P87/P89/P91; 0 neberljivih; h31 2 vpisa v enem
+  // letu; kumulativno 217 vpisov / 74 hiš čez tri knjige in DVANAEST LET
+  // (h61 sidro združeno s P79-era placeholderjem — ne dupliran); 3
+  // NOVE hiše 10/40/43; NOVA LUKNJA ŠTEVILKA 43 — 17. dokazana v 41–60;
+  // NOVELA babica 3. leto — 19/19 PRAZNO; DUHOVNIKI: Šuvar IZGINE, Klun 11×
+  // + Rauq 8× — mešano leto; PRVI NEZAKONSKI vpis od P90: r31 sama mati
+  // Pozdirec; DOJENČIJSKA UMRLJIVOST 7/19 — najvišje doslej; KURRENT
+  // FORENZIKA 6 popravkov: h23/h24 dve hiši, Grisice≠Griblje (r11
+  // izključen), Otok≠Griblje (r65 izključen), h16≠10, row 59/62/64, h45 mati
+  // Spudič = POPRAVEK P91 prebira »Doroteja?«; SIDRA: h45 Straus × Spudič
+  // 2. VPIS ISTA ZVEZA (1896+1897), h46 Brodarič 4. VPIS + mati 3. varianta
+  // (Klobučar → Kramarič? → Harašimovič?), h31 Straus kompleks (1894 Fapič?×
+  // Straus + 1896 Pendirec?×Žugelj + 1897 obe nazaj), h60 Željko 4. dokaz
+  // luknje, h61 botra = h1 PAR (Željko × Kure — ŽELJKO VERIGA), h63 IZGINE
+  // (konec 5-letne serije istega očeta), botra Hrižan 3× po izgini h63) ———
+  {
+    houseNo: "12",
+    bookSignature: "04105",
+    year: 1897,
+    scan: 93,
+    page: 91,
+    whatSi: "krščen Anton (22./22. 1.) — oče Janez Dragar [~] ½ zemljak, mati Barbara Divkovič [~]; hišna 12 forenzika 5x: jasno 12; botra Marija Straus [~] + Marija Jakobič [~] (Straus veriga); babica PRAZNA; podpis Fr. Klun [~]",
+    whatEn: "baptized Anton (Jan 22/22) — father Janez Dragar [~] half smallholder, mother Barbara Divkovič [~]; house no. 12 (5x forensics: clearly 12); godparents Marija Straus [~] + Marija Jakobič [~] (the Straus chain); midwife EMPTY; signature Fr. Klun [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "32",
+    bookSignature: "04105",
+    year: 1897,
+    scan: 94,
+    page: 92,
+    whatSi: "krščena Marija (3./4. 2.) — oče Matija Perdune [~] ½ zemljak, mati Ana Jakobič [~]; hišna 32 forenzika 5x: jasno 32; botra Anton Pozdarič [~] + Katarina Hrižan [~]; pripis »† 24/1. 98« [~] — smrt ~11-mesečne (dojenčijska umrljivost 1/7); babica PRAZNA; podpis Jos. Rauq [~]",
+    whatEn: "baptized Marija (Feb 3/4) — father Matija Perdune [~] half smallholder, mother Ana Jakobič [~]; house no. 32 (5x forensics: clearly 32); godparents Anton Pozdarič [~] + Katarina Hrižan [~]; note »† Jan 24, 98« [~] — death at ~11 months (infant mortality 1/7); midwife EMPTY; signature Jos. Rauq [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "10",
+    bookSignature: "04105",
+    year: 1897,
+    scan: 94,
+    page: 92,
+    whatSi: "krščen Jožef (3./3. 3.) — oče Janez Brinec [~] ½ zemljak, mati Marija Perdune [~]; hiša 10 NOVA HIŠA v vzorcu (brez priora P77–P91; PT hiša hiša-11 v atlasu) — forenzika 5x: jasno 10; botra Martin Hrižan [~] + Katarina Požek [~]; pripis »† 5/9. 97« [~] — smrt ~6-mesečnega (2/7); babica PRAZNA; podpis Fr. Klun [~]",
+    whatEn: "baptized Jožef (Mar 3/3) — father Janez Brinec [~] half smallholder, mother Marija Perdune [~]; house 10 A NEW HOUSE in the sample (no prior P77–P91; a PT house, hiša-11 in the atlas) — 5x forensics: clearly 10; godparents Martin Hrižan [~] + Katarina Požek [~]; note »† Sep 5, 97« [~] — death at ~6 months (2/7); midwife EMPTY; signature Fr. Klun [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "24",
+    bookSignature: "04105",
+    year: 1897,
+    scan: 94,
+    page: 92,
+    whatSi: "krščena Marjeta (10./10. 3.) — oče Matija Brinec [~] ½ zemljak, mati Barbara Jakobič [~]; hišna 24 forenzika 5x: jasno 24 — KRITIČNO: vzporedna r38 = jasno 23, DVE RAZLIČNI Brinec hiši (prvi prebir »oba 23« napačen); botra Janez Brinec + Marija Jakobič (ISTI priimki kot starši); babica PRAZNA; podpis Fr. Klun [~]",
+    whatEn: "baptized Marjeta (Mar 10/10) — father Matija Brinec [~] half smallholder, mother Barbara Jakobič [~]; house no. 24 (5x forensics: clearly 24 — CRITICAL: the parallel r38 = clearly 23, TWO DIFFERENT Brinec houses; the first read »both 23« wrong); godparents Janez Brinec + Marija Jakobič (THE SAME surnames as the parents); midwife EMPTY; signature Fr. Klun [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "37",
+    bookSignature: "04105",
+    year: 1897,
+    scan: 95,
+    page: 93,
+    whatSi: "krščena Marta (15./16. 4.) — oče Matko Pendirec [~] ½ zemljak (ime delno raztrgano), mati Katarina Zugelj [~]; hišna 37 forenzika 5x: jasno 37 (odprta zanka 3, ne 8); botra Nikolaj Željko [~] (ŽELJKO VERIGA — botra signal) + Katarina Hrižan [~]; pripis »† 17/9. 97« [~] (3/7); babica PRAZNA; podpis Fr. Klun [~]",
+    whatEn: "baptized Marta (Apr 15/16) — father Matko Pendirec [~] half smallholder (name partly torn), mother Katarina Zugelj [~]; house no. 37 (5x forensics: clearly 37 — an open loop 3, not 8); godparents Nikolaj Željko [~] (THE ŽELJKO CHAIN — godparent signal) + Katarina Hrižan [~]; note »† Sep 17, 97« [~] (3/7); midwife EMPTY; signature Fr. Klun [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "54",
+    bookSignature: "04105",
+    year: 1897,
+    scan: 95,
+    page: 93,
+    whatSi: "krščena Marija (21./22. 4.) — oče Anton Brinec [~] ½ zemljak, mati Ana Šutala [~]; hiša 54 = PT LUKNJA (forenzika 5x: jasno 54) — 2. DOKAZ LUKNJE po P79 1886; botra Janez Požek? [~] + Katarina Hrižan [~] (Hrižan botra 3× v letu); babica PRAZNA; podpis Fr. Klun [~]",
+    whatEn: "baptized Marija (Apr 21/22) — father Anton Brinec [~] half smallholder, mother Ana Šutala [~]; house 54 = the PT GAP (5x forensics: clearly 54) — the 2nd PROOF OF THE GAP after P79 1886; godparents Janez Požek? [~] + Katarina Hrižan [~] (Hrižan godmother 3× in the year); midwife EMPTY; signature Fr. Klun [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "60",
+    bookSignature: "04105",
+    year: 1897,
+    scan: 95,
+    page: 93,
+    whatSi: "krščena Ana (26./26. 4.) — oče Nikolaj Željko [~] ½ zemljak, mati Marija Brodarič [~]; hiša 60 = PT LUKNJA — 4. DOKAZ (P87+P89+P91+1897); ISTA ZVEZA Željko × Brodarič; botra Marta Pozdirec [~] + Marija Plepec [~]; pripis »† 16/2. 98« [~] (4/7); babica PRAZNA; podpis Jos. Rauq [~]",
+    whatEn: "baptized Ana (Apr 26/26) — father Nikolaj Željko [~] half smallholder, mother Marija Brodarič [~]; house 60 = the PT GAP — the 4th PROOF (P87+P89+P91+1897); THE SAME COUPLE Željko × Brodarič; godparents Marta Pozdirec [~] + Marija Plepec [~]; note »† Feb 16, 98« [~] (4/7); midwife EMPTY; signature Jos. Rauq [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "2",
+    bookSignature: "04105",
+    year: 1897,
+    scan: 95,
+    page: 93,
+    whatSi: "krščen Peter (29./29. 4.) — oče Miha Vhebec? [~] ½ zemljak (Vehovec/Vrbec? — Kurrent V/H), mati Ana Jakobič [~]; hiša 2 (5. pin; s93 r11 »Grisice 2 Marija« je DRUGA vas — forenzika: jasno ne-Griblje, izključen); botra Janez Botkovec [~] + Ana Žumič? [~]; pripis »† 7/6. 97« — smrt ~5-tedenskega (5/7); babica PRAZNA; podpis Fr. Klun [~]",
+    whatEn: "baptized Peter (Apr 29/29) — father Miha Vhebec? [~] half smallholder (Vehovec/Vrbec? — Kurrent V/H), mother Ana Jakobič [~]; house 2 (the 5th pin; s93 r11 »Grisice 2 Marija« is ANOTHER village — forensics: clearly not-Griblje, excluded); godparents Janez Botkovec [~] + Ana Žumič? [~]; note »† Jun 7, 97« — death at ~5 weeks (5/7); midwife EMPTY; signature Fr. Klun [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "43",
+    bookSignature: "04105",
+    year: 1897,
+    scan: 95,
+    page: 93,
+    whatSi: "krščen Florijan (4./4. 5.) — OČE PRAZEN (NEZAKONSKI VPIS — prvi od P90!), mati Katarina Pozdirec [~] SAMA MATI ¼ zemljatva; hiša 43 = NOVA LUKNJA ŠTEVILKA (17. dokazana v 41–60 — prva dokumentacija; forenzika 5x: jasno 43 [~] NA RAZPOKI); botra Nikolaj Požek [~] + Marija Veh? [~]; pripis 20. st.: »Doučena, due 9. julij 1949« + EHS ČG 0605891505079 (20.12.1982); babica PRAZNA; podpis Fr. Klun [~]",
+    whatEn: "baptized Florijan (May 4/4) — FATHER EMPTY (AN ILLEGITIMATE ENTRY — the first since P90!), mother Katarina Pozdirec [~] SOLO MOTHER ¼ land; house 43 = A NEW GAP NUMBER (the 17th proven in 41–60 — the first documentation; 5x forensics: clearly 43 [~] ON THE CREASE); godparents Nikolaj Požek [~] + Marija Veh? [~]; 20th-c. note: »Doučena, due Jul 9, 1949« + EHS ČG 0605891505079 (Dec 20, 1982); midwife EMPTY; signature Fr. Klun [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "23",
+    bookSignature: "04105",
+    year: 1897,
+    scan: 96,
+    page: 94,
+    whatSi: "krščen Peter (24./24. 6.) — oče Matija Brinec [~] ½ zemljak, mati Marija Petrlie? [~]; hišna 23 forenzika 5x: jasno 23 — vzporedna r21 = jasno 24, DVE RAZLIČNI Brinec hiši (desni rob str. 94 raztrgan — starši brani iz duplikata s97); botra Janez Jaklič [~] + Katarina Pozdirec [~]; pripis »† 3/9. 99« [~] — smrt ~2-letnega (6/7); babica PRAZNA; podpis Jos. Rauq [~]",
+    whatEn: "baptized Peter (Jun 24/24) — father Matija Brinec [~] half smallholder, mother Marija Petrlie? [~]; house no. 23 (5x forensics: clearly 23 — the parallel r21 = clearly 24, TWO DIFFERENT Brinec houses; the right edge of p. 94 torn — the parents read from the s97 duplicate); godparents Janez Jaklič [~] + Katarina Pozdirec [~]; note »† Sep 3, 99« [~] — death at ~2 years (6/7); midwife EMPTY; signature Jos. Rauq [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "46",
+    bookSignature: "04105",
+    year: 1897,
+    scan: 96,
+    page: 94,
+    whatSi: "krščena Ana (26./27. 6.) — oče Anton Brodarič [~] ½ zemljak, mati Ana Harašimovič? [~] (5x forenzika: jasno H- — NE Kramarič; 3. VARIANTA MATERE: 1893+1895 Klobučar/Klobučan? → 1896 Kramarič? → 1897 Harašimovič?); hiša 46 = PT LUKNJA — 4. VPIS Brodarič (P88+P90+P91+1897); botra Nikolaj Željko [~] (ŽELJKO VERIGA) + Neža Struclj? [~]; pripis »† 15.3.1931« (odrasla, matičar); babica PRAZNA; podpis Jos. Rauq [~]",
+    whatEn: "baptized Ana (Jun 26/27) — father Anton Brodarič [~] half smallholder, mother Ana Harašimovič? [~] (5x forensics: clearly H- — NOT Kramarič; the 3rd MOTHER VARIANT: 1893+1895 Klobučar/Klobučan? → 1896 Kramarič? → 1897 Harašimovič?); house 46 = the PT GAP — the 4th ENTRY Brodarič (P88+P90+P91+1897); godparents Nikolaj Željko [~] (THE ŽELJKO CHAIN) + Neža Struclj? [~]; note »† Mar 15, 1931« (an adult, the registrar); midwife EMPTY; signature Jos. Rauq [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "31",
+    bookSignature: "04105",
+    year: 1897,
+    scan: 98,
+    page: 95,
+    whatSi: "krščena Marija (9./10. 9.) — oče Martin Sapič? [~] ½ zemljak (S/F Kurrent varianta — P89 1894 »Fapič × Straus« ista zveza!), mati Margareta Straus [~]; hišna 31 forenzika 5x: jasno 31 — STRAUS KOMPLEKS: 1894 Fapič?×Straus → 1896 Pendirec?×Žugelj (menjava) → 1897 OBÉ nazaj (2 vpisa v enem letu!); botra Marko Klobučar [~] + Katarina Pozdirec [~]; pripis 20. st.: »Umrla 14.4.1953 v Gribljah« + MMK Novo mesto 1932; babica PRAZNA; podpis Jos. Rauq [~]",
+    whatEn: "baptized Marija (Sep 9/10) — father Martin Sapič? [~] half smallholder (an S/F Kurrent variant — P89 1894 »Fapič × Straus« the same couple!), mother Margareta Straus [~]; house no. 31 (5x forensics: clearly 31) — THE STRAUS COMPLEX: 1894 Fapič?×Straus → 1896 Pendirec?×Žugelj (a change) → 1897 BOTH back (2 entries in one year!); godparents Marko Klobučar [~] + Katarina Pozdirec [~]; 20th-c. note: »Died Apr 14, 1953 in Griblje« + MMK Novo mesto 1932; midwife EMPTY; signature Jos. Rauq [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "16",
+    bookSignature: "04105",
+    year: 1897,
+    scan: 98,
+    page: 95,
+    whatSi: "krščena Barbara (12./13. 9.) — oče Janez Jaklič? [~] ½ zemljak, mati Marija Brinec [~]; hišna 16 forenzika 5x: jasno 16 (PRVI PREBIR »10« NAPAČEN) — 3. pin; botra Matija Brinec [~] + Barb. Adlešič? [~]; pripis 20. st.: »poročena 19/9. 1919« + »Umrla 22.7.1981 v Gradcu (MMU Gradec 1.1981, str. 87)«; babica PRAZNA; podpis Jos. Rauq? [~] (pega)",
+    whatEn: "baptized Barbara (Sep 12/13) — father Janez Jaklič? [~] half smallholder, mother Marija Brinec [~]; house no. 16 (5x forensics: clearly 16 — THE FIRST READ »10« WRONG) — the 3rd pin; godparents Matija Brinec [~] + Barb. Adlešič? [~]; 20th-c. notes: »married Sep 19, 1919« + »died Jul 22, 1981 in Gradec (MMU Gradec 1.1981, p. 87)«; midwife EMPTY; signature Jos. Rauq? [~] (a stain)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "40",
+    bookSignature: "04105",
+    year: 1897,
+    scan: 99,
+    page: 96,
+    whatSi: "krščen Janez (12./12. 10.) — oče Janez Berkovec? [~] ½ zemljak (Botkovec/Barkovec? — Kurrent o/a + r/t), mati Katarina Klobučar [~]; hiša 40 NOVA HIŠA v vzorcu (brez priora P77–P91; PT hiša v atlasu) — forenzika 5x: jasno 40; row 59 (Kurrent 5/6 — prej prebir 60; kontinuiteta s98 51–58 → s99 59); botra Nik. Brodarič [~] + Ana Klobučar [~]; pripis »† 3/9. 98« [~] (7/7); babica PRAZNA; podpis Jos. Rauq [~]",
+    whatEn: "baptized Janez (Oct 12/12) — father Janez Berkovec? [~] half smallholder (Botkovec/Barkovec? — Kurrent o/a + r/t), mother Katarina Klobučar [~]; house 40 A NEW HOUSE in the sample (no prior P77–P91; a PT house in the atlas) — 5x forensics: clearly 40; row 59 (Kurrent 5/6 — first read 60; the continuity s98 51–58 → s99 59); godparents Nik. Brodarič [~] + Ana Klobučar [~]; note »† Sep 3, 98« [~] (7/7); midwife EMPTY; signature Jos. Rauq [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "20",
+    bookSignature: "04105",
+    year: 1897,
+    scan: 99,
+    page: 96,
+    whatSi: "krščena Marija (18./19. 10.) — oče Peter Pendirec [~] ½ zemljak, mati Doroteja Klepec? [~] (Kurrent D/P); hišna 20 forenzika 5x: jasno 20 — 2. pin; row 62; botra Martin Mihelč? [~] + Marija Požek? [~]; pripis 20. st.: »Umrla 2.1.1980 v Gribljah (MMK Griblje 1.1980, str. 115)«; babica PRAZNA; podpis Fr. Klun [~]",
+    whatEn: "baptized Marija (Oct 18/19) — father Peter Pendirec [~] half smallholder, mother Doroteja Klepec? [~] (Kurrent D/P); house no. 20 (5x forensics: clearly 20) — the 2nd pin; row 62; godparents Martin Mihelč? [~] + Marija Požek? [~]; 20th-c. note: »died Jan 2, 1980 in Griblje (MMK Griblje 1.1980, p. 115)«; midwife EMPTY; signature Fr. Klun [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "31",
+    bookSignature: "04105",
+    year: 1897,
+    scan: 99,
+    page: 96,
+    whatSi: "krščena Ana (25./26. 10.) — oče Janez Straus? [~] ½ zemljak, mati Barbara Jakobič [~]; hiša 31 — 2. VPIS NA h31 V ENEM LETU (r51 Sapič?×Straus + r64 Straus?×Jakobič — dve družini Straus kompleksa; forenzika 5x: jasno 31; datum forenzika 8x: roj 25, krst 26 — krsta NI prazno!); row 64; botra Matija Ula? [~] + Doroteja Ule? [~] (Vla? — Kurrent U/V); pripis 20. st.: »poročena 29.1.1934«; babica PRAZNA; podpis Fr. Klun [~]",
+    whatEn: "baptized Ana (Oct 25/26) — father Janez Straus? [~] half smallholder, mother Barbara Jakobič [~]; house 31 — the 2nd ENTRY ON h31 IN ONE YEAR (r51 Sapič?×Straus + r64 Straus?×Jakobič — two families of the Straus complex; 5x forensics: clearly 31; 8x date forensics: born 25, baptized 26 — the baptism is NOT empty!); row 64; godparents Matija Ula? [~] + Doroteja Ule? [~] (Vla? — Kurrent U/V); 20th-c. note: »married Jan 29, 1934«; midwife EMPTY; signature Fr. Klun [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "65",
+    bookSignature: "04105",
+    year: 1897,
+    scan: 100,
+    page: 97,
+    whatSi: "krščen Nikolaj (24./25. 11.) — oče Matija Mihek? [~] ½ zemljak (Mihelk/Mihk), mati Katarina Šošt? [~]; hišna 65 forenzika: jasno 65 — 5. pin (P87+P89+P90+P91 priori); botra Janez Adlešič? [~] + Doroteja Pozdirec [~]; pripis 20. st.: »Umrl 14.05.1989 v Gribljah (MMU Griblje 2.1989, št. 21)« + EHS ČG; babica PRAZNA; podpis Jos. Rauq [~]",
+    whatEn: "baptized Nikolaj (Nov 24/25) — father Matija Mihek? [~] half smallholder (Mihelk/Mihk), mother Katarina Šošt? [~]; house no. 65 (forensics: clearly 65) — the 5th pin (P87+P89+P90+P91 priors); godparents Janez Adlešič? [~] + Doroteja Pozdirec [~]; 20th-c. notes: »died May 14, 1989 in Griblje (MMU Griblje 2.1989, no. 21)« + EHS ČG; midwife EMPTY; signature Jos. Rauq [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "45",
+    bookSignature: "04105",
+    year: 1897,
+    scan: 101,
+    page: 98,
+    whatSi: "krščena Marija (30./30. 12.) — oče Martin Straus [~] bajtar, mati Barbara Spudič [~] (5x: jasno Spudič — POPRAVEK P91 prebira »Doroteja? [~]«); hiša 45 = PT LUKNJA — 2. VPIS ISTA ZVEZA (P91 1896 r70 + 1897) — Straus × Spudič; ZADNJA Griblje vrstica leta 1897 (pred prelomom 1898 row 86); botra Matija Brinec [~] + Ana Brinec [~] (h16/h23/h24 familija); babica PRAZNA; podpis Fr. Klun [~]",
+    whatEn: "baptized Marija (Dec 30/30) — father Martin Straus [~] cottager, mother Barbara Spudič [~] (5x: clearly Spudič — CORRECTING the P91 read »Doroteja? [~]«); house 45 = the PT GAP — the 2nd ENTRY THE SAME COUPLE (P91 1896 r70 + 1897) — Straus × Spudič; the LAST Griblje row of 1897 (before the 1898 break at row 86); godparents Matija Brinec [~] + Ana Brinec [~] (the h16/h23/h24 family); midwife EMPTY; signature Fr. Klun [~]",
     status: "DOCUMENTED",
   },
 ];

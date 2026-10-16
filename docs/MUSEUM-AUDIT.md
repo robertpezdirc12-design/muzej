@@ -4672,3 +4672,116 @@ Podzemelj — župniki/kaplani 1896) [~].
 
 **v7 runtime join NESPREMENJEN** (sha256 4bb40370…, statična projekcija;
 disciplina I9).
+
+## §69 — P92: župnija Podzemelj — krstna knjiga 04105, polno leto 1897 (issue #18) — 2026-10-16
+
+**SAMPLE-TRANSCRIPTION-1897** (MERI, NE odloča; v7 join nespremenjen).
+§68 nextSteps ①: širitev vzorca po letih (P79 1886 → … → P91 1896 →
+**P92 1897**).
+
+**Okvir**: skeni 93–101 == tiskane strani 91–98. **NOVELA P92 — SKEN 97 =
+PODVOJEN (duplikat s96 = str. 94; 2. znani duplikat po skenu 73)** —
+NOVELA P89 (stran == sken − 2) velja **samo do skena 96**, od skena 98
+stran == sken − 3; **premik offseta je ARTEFAKT DUPLIKATA, ne nova
+številčenja**. Glava **»Leto 1897« na str. 91** po 1896 row 94; leto 1897
+ima **85 vrstic**; **prelom 1898 na str. 98 = sken 101 row 86** — oznake
+se ponastavijo na 1, **novela P83 potrjena 10. leto**. Skeni 93–104
+preneseni v /tmp/p92 (93 kopiran iz /tmp/p91; p92_fetch po vzoru p91; ročna
+faza, NI v repu); izrezi 2x (L/R) + hišne forenzike 5x (pas popravljen na
+x 520–645) + datumski izrezi 5x–8x + stolpec zaporednih številk 6x (s99
+raztrgan — rešen s kontinuiteto s98 51–58 → s99 59); 20 kandidatov →
+**19 potrjenih Griblje** (2 izključena: s93 r11 »Grisice« — forenzika jasno
+ne-Griblje; s99 r65 »Otok 6«).
+
+**Vzorec 1897**: **19 vpisov / 18 hiš — NARE (4. leto** po P87 1892/P89
+1894/P91 1896): 12, 32, 10, 24, 37, 54, 60, 2, 43, 23, 46, 31, 16, 40, 20,
+31, 61, 65, 45 — **h31 2 VPISA V ENEM LETU** (r51 Sapič? × Straus + r64
+Straus? × Jakobič — **STRAUS KOMPLEKS**: 1894 Fapič?×Straus → 1896
+Pendirec?×Žugelj menjava → 1897 obe nazaj); **3 NOVE hiše (10, 40, 43)**;
+**NOVA LUKNJA ŠTEVILKA 43 (17. dokazana v 41–60** — PT_GAP_KNOWN dobi +43;
+h43 številka NA RAZPOKI [~]) + h54 2. dokaz + h60 4. dokaz + h45/h46
+luknji; kumulativ **217 vpisov / 74 hiš** čez tri knjige in **DVANAEST
+LET** (193 + 18 = 211 vitals; h61 sidro ZDRUŽENO s P79-era placeholderjem
+— ne dupliran).
+
+**ČEZ-FAZNA POTRDITEV h61**: izvirna prepis hiše 61 (issue #17, prej P79)
+je imela minimalen placeholder »krščen Anton — oče Miha P.—« (scan 100,
+stran 49 po stari predpostavki); P92 5x forenzika dopolni: **Janez Muc
+bajtar × Ana Kure, stran 97 po noveli** — blok združen v P79 sekciji.
+
+**PRVI NEZAKONSKI VPIS OD P90**: r31 Florijan (h43) — **OČE PRAZEN, mati
+Katarina Pozdirec SAMA MATI ¼ zemljatva** (novela P85 ulomek, 8. leto).
+
+**NOVELA babica POTRJENA 3. LETO**: 19/19 PRAZNO (1895: 15; 1896: 14) —
+Trotter žene 0× 3. leto.
+
+**DOJENČIJSKA UMRLJIVOST 7/19 — NAJVIŠJE doslej** (P91: 4/14): † r12
+(24/1.98?), r15 (5/9.97?), r25 (17/9.97?), r28 (16/2.98?), r29 (7/6.97),
+r38 (3/9.99?), r59 (3/9.98?).
+
+**Duhovniki**: Šuvar (1896 dominant, 9×) **IZGINE** — **Klun 11×
+(dominanta) + Rauq 8× — MEŠANO LETO** (preplet skozi vse mesece, ne
+pol-sezonsko).
+
+**Statusi**: ½ × 16 + bajtar × 2 (r79 Muc + r84 Straus) + ¼ × 1 (sama
+mati).
+
+**KURRENT FORENZIKA 6 POPRAVKOV**: ① h23/h24 (r21 jasno 24 + r38 jasno 23
+— DVE RAZLIČNI Brinec hiši, prvi prebir »oba 23« napačen) ② s93 r11
+»Grablje?« → jasno GRISICE (druga vas — izključena; isto št. 2 kot Griblje
+r29!) ③ s99 r65/66 »Griblje 11?« → jasno OTOK (izključena) ④ s98 r53
+»Griblje 10?« → jasno 16 ⑤ row številke s99 59/62/64 (Kurrent 5/6) ⑥ h45
+mati = **Barbara Spudič** (5x — **POPRAVEK P91 prebira »Doroteja? [~]«**).
+
+**Matičar pripisi 20. st. 6 vpisov** (najgostejše doslej): r41 † 15.3.1931,
+r52 poroka 1919 + † 22.7.1981, r62 † 2.1.1980, r64 poroka 29.1.1934, r79
+zakonca Mihelk Katarina † 26.5.1979 + EHS ČG, r80 † 14.5.1989 + EHS ČG.
+
+**Sidra**: h45 (Straus bajtar × Spudič — **2. VPIS ISTA ZVEZA** 1896+1897 +
+POPRAVEK matere), h46 (Brodarič **4. VPIS** + **mati 3. VARIANTA**: Klobučar
+1893/95 → Kramarič? 1896 → Harašimovič? 1897 [~]; botra Željko = veriga),
+h31 (Straus kompleks 2 vpisa), h60 (Željko × Brodarič ISTA zveza — 4. dokaz
+luknje), h61 (Muc bajtar × Kure; **botra Nikolaj Željko + Katarina Kure =
+h1 PAR KOT BOTRA** — ŽELJKO VERIGA, začarani krog kot P91 h1), h24/h23
+(dve Brinec hiši — 8. pin h24), h63 **IZGINE** (oče konstanten 5× 1887–96 —
+konec serije; botra Hrižan 3× v letu po izgini), h2 5. pin, h12 4. pin,
+h65 5. pin. Željko veriga zdaj 10 signalov.
+
+**Dokaz** research/issue17/parish-baptism-1897.json (SAMPLE-TRANSCRIPTION-
+1897; ročna faza — skeni v /tmp/p92, NI v repu; delovni p92_fetch/p92_crops
+v scripts/tmp).
+
+**Skripta** scripts/p92_parish_baptism_1897.py (deterministični
+verifikator, I1–I10, --check PASS: knjiga 200 + inventar 326, citirani
+skeni 8/8 JPEG 200 (97 podvojen ni citiran), okvir + piecewise page_of_scan
+(− 2 do 96 / − 3 od 98) + rowsTotal 85 + duplikat 97 + prelom 1898 + NOVELA
+babica 19 praznih + NEZAKONSKI r31 + PT 13/5 (43 NOVA — I6 preverja tudi
+PT_GAP_KNOWN v atlas.ts) + sidra 19 + I8 čez-letne kontinuitete (h45/h46/
+h31/h60/h2/h12/h24/h32/h61/h65/h16/h20/h23/h37/h54 — scan-pini) + runtime
+projekcija 19/211 + kumulativ 217/74 + duhovniki (11, 8) + † 7).
+
+**Integracija**: parish.ts HOUSE_VITALS 193 → 211 (18 novih 1897 blokov +
+sidro h61 združeno; vsi DOCUMENTED; komentar P92 z novelama P92/P83) +
+qa-parish.ts qa-p92 (93. kontrola; celoven neodvisen preracun; dve obliki
+repo/produkcija) + atlas.ts PT_GAP_KNOWN + 43 (17. dokazana; komentar P92)
++ qa-p79/p80 filtri scoperani na originalni P79 vzorec (1897 samo h61 —
+polno leto = qa-p92) + qa-p87 h12 / qa-p88 h23+h46 / qa-p90 h20+h37 /
+qa-p91 h45 dovolijo 1897 bloke + qa-p85–p91 vitals pini 193 → 211 + p80
+skripta I7 211 + p85–p91 skripti kumulativno (217; hiše 73; EV-only 6).
+Veriga p60–p67 + p70–p92 --check PASS (30 skript, vse exit 0; p68
+zamrznjen po C2; p69 izven verige; p80/p81 samo z --check); tsc 0 / lint 0;
+/api/qa dev **93/93** (qa-p92 True).
+
+**v7 runtime join NESPREMENJEN** (sha256 4bb40370…, statična projekcija;
+disciplina I9).
+
+**nextSteps**: ① P93 = leto 1898 (prelom str. 98 row 1 = sken 101; skeni
+102+; stran == sken − 3 do naslednjega duplikata); ② mrliška knjiga 04894
+1887–1896: smrti prvih žen — dokaz menjav h58 (Dragoš → Kambic?), h91
+(Novak → Muc), h31 (Fapič → Pendirec → Sapič?), h46 (Klobučar → Kramarič?
+→ Harašimovič?); ③ h45 Straus × Spudič: POPRAVEK P91 — preveriti poroko v
+04455 (04455 1896? Straus × Spudič); ④ h26/h75 selitvena hipoteza naprej;
+⑤ luknja 41–60: 17 dokazanih (43 NOVA) — 41–60 ima 20 števil, 3 manjkajo
+(42, 48, 49, 50, 51 manjkajo? — preveriti PT_GAP_KNOWN vs 41–60: 41, 43,
+44, 45, 46, 47, 52–60 = 15 + 2?); ⑥ Željko veriga 10 signalov; ⑦ Fr. Klun
+identifikacija (župnijski arhiv Podzemelj) [~].

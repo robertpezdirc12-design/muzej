@@ -55,7 +55,7 @@ PT_GAP_NEW = []                 # brez novih (ostaja 15 dokazanih)
 EXPECTED_NEW_HOUSES = []        # NOVELA: prvo leto z 0 novih hiš
 EXPECTED_REPEATS = 14
 EXPECTED_HOUSES_VITALS = 14     # 14 vpisov, vsi zasidrani (runtime projekcija)
-EXPECTED_VITALS_TOTAL = 193     # HOUSE_VITALS 179 + 14 (p80 I7 pin); P90: + 15 (1895); P91: + 14 (1896)
+EXPECTED_VITALS_TOTAL = 211     # HOUSE_VITALS 179 + 14 (p80 I7 pin); P90: + 15 (1895); P91: + 14 (1896); P92: + 19 (1897)
 EV_ONLY_TOTAL = 6               # P84: 2 + P85: 3 + P86: 1 (P87–P89: 0)
 # sidra/pins P89:
 H2_ROW = {"row": 11, "scan": 71, "fatherPin": "Hlebec"}
@@ -369,8 +369,8 @@ def verify():
         len(repeat_houses) == dokaz["stats"]["repeatHouses"] == EXPECTED_REPEATS
         and new_houses == dokaz["stats"]["newSampleHouses"] == EXPECTED_NEW_HOUSES
         and n_entries_total == EXPECTED_VITALS_TOTAL
-        and n_entries_total + EV_ONLY_TOTAL == 199  # kumulativno po P91 (193 + 6)
-        and n_houses_total == 70  # P90: 67; P91: + 3 (9, 14, 45)
+        and n_entries_total + EV_ONLY_TOTAL == 217  # kumulativno po P92 (211 + 6)
+        and n_houses_total == 73  # P91: 70; P92: + 3 (10, 40, 43)
         and dokaz["stats"]["sampleTotal"] == "170 vpisov / 65 hiš čez tri knjige (04105 + 04894 + 04455) in DEVET let (1886/1887/1888/1889/1890/1891/1892/1893/1894)"
         and dokaz["stats"]["entries"] == EXPECTED_ENTRIES
         and dokaz["stats"]["distinctHouses"] == EXPECTED_DISTINCT

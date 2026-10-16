@@ -1,0 +1,650 @@
+{
+  "phase": "P92",
+  "title": "Župnija Podzemelj — krstna knjiga 04105, polno leto 1897 (issue #18; SAMPLE-TRANSCRIPTION-1897; MERI, NE odloča; v7 join nespremenjen)",
+  "type": "SAMPLE-TRANSCRIPTION",
+  "status": "MERI",
+  "issuedAt": "2026-10-16",
+  "source": {
+    "book": "04105 — Rojstna in krstna knjiga, župnija Podzemelj (matricula-online.eu)",
+    "url": "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04105/",
+    "scans": [
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101
+    ],
+    "citedScans": [
+      93,
+      94,
+      95,
+      96,
+      98,
+      99,
+      100,
+      101
+    ],
+    "duplicateScan": {
+      "scan": 97,
+      "duplicateOf": 96,
+      "page": 94,
+      "note": "2. znani podvojen sken po skenu 73 (P89); boljša svetloba desne strani; NI citiran v vpisih"
+    }
+  },
+  "method": "ročna paleografska faza: pregled skenov 93–101 (str. 91–98); Griblje vrstice identificirane iz celih strani; izrezi 2x (L/R) + hišne forenzike 5x (x 520–645, popravljen pas) + datumski izrezi 5x–8x + imenske forenzike 5x–8x za kritične vpise; 20 kandidatov → 19 potrjenih Griblje (2 izključena: s93 r11 »Grisice«, s99 r65 »Otok«)",
+  "frame": {
+    "yearStart": {
+      "scan": 93,
+      "page": 91,
+      "row": 1,
+      "note": "glava »Leto 1897« + »Januar«; oznake se ponastavijo na 1 po 1896 row 94 (P91)"
+    },
+    "yearEnd": {
+      "scan": 101,
+      "page": 98,
+      "row": 85,
+      "note": "zadnja vrstica 1897 = row 85 (30./30. December, Podzemelj 2 Ivana); nato glava »1898.« + Januar row 1 (Primostek 3 Terezija)"
+    },
+    "rowsTotal": 85,
+    "pageOfScan": "sken − 2 do skena 96 (93→91 … 96→94); sken 97 = podvojen (duplikat s96, str. 94); od skena 98 stran == sken − 3 (98→95, 99→96, 100→97, 101→98) — premik offseta je artefakt podvojenega skena, NE nove številčenja; NOVELA P89 (stran == sken − 2) zato velja samo do skena 96",
+    "nextYearBreak": {
+      "scan": 101,
+      "page": 98,
+      "row": 86,
+      "year": 1898
+    },
+    "duplicateScan": {
+      "scan": 97,
+      "duplicateOf": 96,
+      "page": 94,
+      "note": "2. znani podvojen sken po skenu 73 (P89); duplikat s96 = str. 94 z boljšo svetlobbo desne strani; NI citiran v vpisih"
+    }
+  },
+  "entries": [
+    {
+      "row": 8,
+      "year": 1897,
+      "month": "Januar",
+      "born": "22.",
+      "baptized": "22.",
+      "village": "Griblje",
+      "houseNo": "12",
+      "scan": 93,
+      "page": 91,
+      "child": "Anton",
+      "father": "Janez Dragar [~] ½ zemljak",
+      "mother": "Barbara Divkovič [~]",
+      "botra": "Marija Straus [~] + Marija Jakobič [~]",
+      "babica": "— (stolpec prazen)",
+      "priest": "Fr. Klun [~]",
+      "notes": [
+        "hišna 12 forenzika 5x: jasno 12",
+        "pripis nad vrstico (r7): »por. 3/5 1910, poročena 24.2.1941« (20. st. matičar za r7 Gim 28)",
+        "botra Straus = h31/h45 familija (Straus veriga)",
+        "Željko veriga: ne"
+      ]
+    },
+    {
+      "row": 12,
+      "year": 1897,
+      "month": "Februar",
+      "born": "3.",
+      "baptized": "4.",
+      "village": "Griblje",
+      "houseNo": "32",
+      "scan": 94,
+      "page": 92,
+      "child": "Marija",
+      "father": "Matija Perdune [~] ½ zemljak",
+      "mother": "Ana Jakobič [~]",
+      "botra": "Anton Pozdarič [~] + Katarina Hrižan [~]",
+      "babica": "— (stolpec prazen)",
+      "priest": "Jos. Rauq [~]",
+      "notes": [
+        "hišna 32 forenzika 5x: jasno 32",
+        "pripis pod imenom: »† 24/1. 98« [~] — smrt ~11-mesečne 24. 1. 1898",
+        "h32 = Perdune/Pendirec familija (P87 1892 h32 sidro)"
+      ]
+    },
+    {
+      "row": 15,
+      "year": 1897,
+      "month": "Marec",
+      "born": "3.",
+      "baptized": "3.",
+      "village": "Griblje",
+      "houseNo": "10",
+      "scan": 94,
+      "page": 92,
+      "child": "Jožef",
+      "father": "Janez Brinec [~] ½ zemljak",
+      "mother": "Marija Perdune [~]",
+      "botra": "Martin Hrižan [~] + Katarina Požek [~]",
+      "babica": "— (stolpec prazen)",
+      "priest": "Fr. Klun [~]",
+      "notes": [
+        "hišna 10 forenzika 5x: jasno 10",
+        "pripis pod imenom: »† 5/9. 97« [~] — smrt ~6-mesečnega 5. 9. 1897",
+        "h10 NOVA HIŠA v vzorcu (brez priora P77–P91; PT hiša hiša-11 v atlasu)",
+        "pripis nad vrstico (r14): »† 3/9. 97« (Dobrava 25 Jožef)"
+      ]
+    },
+    {
+      "row": 21,
+      "year": 1897,
+      "month": "Marec",
+      "born": "10.",
+      "baptized": "10.",
+      "village": "Griblje",
+      "houseNo": "24",
+      "scan": 94,
+      "page": 92,
+      "child": "Marjeta",
+      "father": "Matija Brinec [~] ½ zemljak",
+      "mother": "Barbara Jakobič [~]",
+      "botra": "Janez Brinec [~] + Marija Jakobič [~]",
+      "babica": "— (stolpec prazen)",
+      "priest": "Fr. Klun [~]",
+      "notes": [
+        "hišna 24 forenzika 5x: jasno 24 — kritično! (vzporedna r38 = jasno 23; dve RAZLIČNI Brinec hiši)",
+        "h24 = Brinec hiša (P87 1892 h24 menjave; 7. pin do 1897)",
+        "botra = ISTI priimki kot starši (Brinec + Jakobič)"
+      ]
+    },
+    {
+      "row": 25,
+      "year": 1897,
+      "month": "April",
+      "born": "15.",
+      "baptized": "16.",
+      "village": "Griblje",
+      "houseNo": "37",
+      "scan": 95,
+      "page": 93,
+      "child": "Marta",
+      "father": "Matko Pendirec [~] ½ zemljak (ime delno raztrgano)",
+      "mother": "Katarina Zugelj [~]",
+      "botra": "Nikolaj Željko [~] + Katarina Hrižan [~]",
+      "babica": "— (stolpec prazen)",
+      "priest": "Fr. Klun [~]",
+      "notes": [
+        "hišna 37 forenzika 5x: jasno 37 (3 z odprto zanko, ne 8)",
+        "pripis pod imenom: »† 17/9. 97« [~] — smrt ~5-mesečne",
+        "h37 2. pin (P86 1891 prior?); botra Željko = ŽELJKO VERIGA (9. signal: h1×3 + h60 + h61-botra + h37-botra + h46-botra)",
+        "Hrižan kot botra tretjič v tem letu (r12, r25, r26)"
+      ]
+    },
+    {
+      "row": 26,
+      "year": 1897,
+      "month": "April",
+      "born": "21.",
+      "baptized": "22.",
+      "village": "Griblje",
+      "houseNo": "54",
+      "scan": 95,
+      "page": 93,
+      "child": "Marija",
+      "father": "Anton Brinec [~] ½ zemljak",
+      "mother": "Ana Šutala [~]",
+      "botra": "Janez Požek? [~] + Katarina Hrižan [~]",
+      "babica": "— (stolpec prazen)",
+      "priest": "Fr. Klun [~]",
+      "notes": [
+        "hišna 54 forenzika 5x: jasno 54",
+        "h54 = luknja hiša (PT_GAP 54, 2. dokaz po P79 1886)",
+        "pripis pod vrstico (r27): »Murka, due 24.4.1973 v Gribljah (MMK Griblje …, 1973, str. 107, zap. št. 5)« — 20. st. matičar"
+      ]
+    },
+    {
+      "row": 28,
+      "year": 1897,
+      "month": "April",
+      "born": "26.",
+      "baptized": "26.",
+      "village": "Griblje",
+      "houseNo": "60",
+      "scan": 95,
+      "page": 93,
+      "child": "Ana",
+      "father": "Nikolaj Željko [~] ½ zemljak",
+      "mother": "Marija Brodarič [~]",
+      "botra": "Marta Pozdirec [~] + Marija Plepec [~]",
+      "babica": "— (stolpec prazen)",
+      "priest": "Jos. Rauq [~]",
+      "notes": [
+        "hišna 60 forenzika: jasno 60",
+        "pripis pod imenom: »† 16/2. 98« [~] — smrt ~10-mesečne",
+        "h60 = luknja hiša (PT_GAP 60, 4. dokaz: P87+P89+P91+1897)",
+        "ŽELJKO VERIGA: h60 oče (3. vpis ISTA zveza Željko × Brodarič: P87? + P89? + 1897)"
+      ]
+    },
+    {
+      "row": 29,
+      "year": 1897,
+      "month": "April",
+      "born": "29.",
+      "baptized": "29.",
+      "village": "Griblje",
+      "houseNo": "2",
+      "scan": 95,
+      "page": 93,
+      "child": "Peter",
+      "father": "Miha Vhebec? [~] ½ zemljak (Vehovec/Vrbec? — Kurrent V/H)",
+      "mother": "Ana Jakobič [~]",
+      "botra": "Janez Botkovec [~] + Ana Žumič? [~]",
+      "babica": "— (stolpec prazen)",
+      "priest": "Fr. Klun [~]",
+      "notes": [
+        "hišna 2 forenzika: jasno 2",
+        "pripis pod imenom: »† 7/6. 97« — smrt ~5-tedenskega",
+        "h2 5. pin (P83–P86 priori)",
+        "s93 r11 (»Grisice 2 Marija«) je DRUGA vas — NI Griblje (forenzika: jasno Grisice); h2 zato samo r29 v 1897"
+      ]
+    },
+    {
+      "row": 31,
+      "year": 1897,
+      "month": "Maj",
+      "born": "4.",
+      "baptized": "4.",
+      "village": "Griblje",
+      "houseNo": "43",
+      "scan": 95,
+      "page": 93,
+      "child": "Florijan",
+      "father": "— (OČE PRAZEN — nezakonski vpis)",
+      "mother": "Katarina Pozdirec [~] — SAMA MATI ¼ zemljatva",
+      "botra": "Nikolaj Požek [~] + Marija Veh? [~]",
+      "babica": "— (stolpec prazen)",
+      "priest": "Fr. Klun [~]",
+      "notes": [
+        "hišna 43 forenzika 5x: jasno 43 [~] (NA RAZPOKI — crease crossing; 4 + 3)",
+        "h43 = NOVA LUKNJA ŠTEVILKA (17. dokazana v 41–60 — prva dokumentacija)",
+        "PRVI NEZAKONSKI vpis v vzorcu od P90 (1896: 0; P91: 0) — »sama mati« izrecno zapisano",
+        "pripis pod vrstico: »Doučena, due 9. julij 1949 v Ljubljani?« (EHS CG: 0605891505079, 20.12.1982, Šimović Nuša) — 20. st. matičar"
+      ]
+    },
+    {
+      "row": 38,
+      "year": 1897,
+      "month": "Junij",
+      "born": "24.",
+      "baptized": "24.",
+      "village": "Griblje",
+      "houseNo": "23",
+      "scan": 96,
+      "page": 94,
+      "child": "Peter",
+      "father": "Matija Brinec [~] ½ zemljak",
+      "mother": "Marija Petrlie? [~]",
+      "botra": "Janez Jaklič [~] + Katarina Pozdirec [~]",
+      "babica": "— (stolpec prazen)",
+      "priest": "Jos. Rauq [~]",
+      "notes": [
+        "hišna 23 forenzika 5x: jasno 23 — dve različni Brinec hiši (r21 = 24, r38 = 23)",
+        "pripis pod imenom: »† 3/9. 99« [~] — smrt ~2-letnega 3. 9. 1899",
+        "desni rob str. 94 raztrgan — starši delno skriti, R izrez iz s96/s97 duplikata (boljša svetloba)"
+      ]
+    },
+    {
+      "row": 41,
+      "year": 1897,
+      "month": "Junij",
+      "born": "26.",
+      "baptized": "27.",
+      "village": "Griblje",
+      "houseNo": "46",
+      "scan": 96,
+      "page": 94,
+      "child": "Ana",
+      "father": "Anton Brodarič [~] ½ zemljak",
+      "mother": "Ana Harašimovič? [~] (5x forenzika: jasno H- — NE Kramarič; 3. varianta matere: 1893+1895 Klobučar/Klobučan? → 1896 Kramarič? → 1897 Harašimovič?)",
+      "botra": "Nikolaj Željko [~] + Neža Struclj? [~]",
+      "babica": "— (stolpec prazen)",
+      "priest": "Jos. Rauq [~]",
+      "notes": [
+        "hišna 46 forenzika: jasno 46",
+        "pripis pod imenom: »† 15.3.1931« (ozn. F) — odrasla smrt 1931 (matičar)",
+        "h46 = luknja hiša, 4. VPIS Brodarič (P88 1893 + P90 1895 + P91 1896 + 1897)",
+        "botra Željko = ŽELJKO VERIGA (10. signal)"
+      ]
+    },
+    {
+      "row": 51,
+      "year": 1897,
+      "month": "September",
+      "born": "9.",
+      "baptized": "10.",
+      "village": "Griblje",
+      "houseNo": "31",
+      "scan": 98,
+      "page": 95,
+      "child": "Marija",
+      "father": "Martin Sapič? [~] ½ zemljak (S/F Kurrent varianta — P89 1894 »Fapič × Straus« ista zveza!)",
+      "mother": "Margareta Straus [~]",
+      "botra": "Marko Klobučar [~] + Katarina Pozdirec [~]",
+      "babica": "— (stolpec prazen)",
+      "priest": "Jos. Rauq [~]",
+      "notes": [
+        "hišna 31 forenzika 5x: jasno 31",
+        "h31 = Straus kompleks: 1894 Fapič?×Straus → 1896 Pendirec?×Žugelj (menjava) → 1897 OBÉ nazaj (2 vpisa v enem letu!) — selitveni krož",
+        "pripis pod imenom: »Murka, due 14.4.1953 v Gribljah; Murka, da 14.10.1932 v Noršem mestu (MMK Novo mesto 1.1932, str. 137, zap. št. 6)« — 20. st. matičar"
+      ]
+    },
+    {
+      "row": 52,
+      "year": 1897,
+      "month": "September",
+      "born": "12.",
+      "baptized": "13.",
+      "village": "Griblje",
+      "houseNo": "16",
+      "scan": 98,
+      "page": 95,
+      "child": "Barbara",
+      "father": "Janez Jaklič? [~] ½ zemljak",
+      "mother": "Marija Brinec [~]",
+      "botra": "Matija Brinec [~] + Barb. Adlešič? [~]",
+      "babica": "— (stolpec prazen)",
+      "priest": "Jos. Rauq [~]",
+      "notes": [
+        "hišna 16 forenzika 5x: jasno 16 (PRVI prebir »10« NAPAČEN)",
+        "h16 3. pin (P79 1886 + P89? priori)",
+        "pripis: »poročena 19/9. 1919« + »Umrla, dne 22.7.1981 v Gradcu (MMU Gradec 1.1981, str. 87, zap. št. 4); gradec, 18.1972« — 20. st. matičar"
+      ]
+    },
+    {
+      "row": 59,
+      "year": 1897,
+      "month": "Oktober",
+      "born": "12.",
+      "baptized": "12.",
+      "village": "Griblje",
+      "houseNo": "40",
+      "scan": 99,
+      "page": 96,
+      "child": "Janez",
+      "father": "Janez Berkovec? [~] ½ zemljak (Botkovec/Barkovec? — Kurrent o/a + r/t)",
+      "mother": "Katarina Klobučar [~]",
+      "botra": "Nik. Brodarič [~] + Ana Klobučar [~]",
+      "babica": "— (stolpec prazen)",
+      "priest": "Jos. Rauq [~]",
+      "notes": [
+        "hišna 40 forenzika 5x: jasno 40",
+        "pripis pod imenom: »† 3/9. 98« [~] — smrt ~1-letnega",
+        "h40 NOVA HIŠA v vzorcu (brez priora P77–P91; PT hiša v atlasu)",
+        "zaporedna številka row 59 (Kurrent 5/6 — prej prebir 60; kontinuiteta s98 51–58 → s99 59 potrdi 59)"
+      ]
+    },
+    {
+      "row": 62,
+      "year": 1897,
+      "month": "Oktober",
+      "born": "18.",
+      "baptized": "19.",
+      "village": "Griblje",
+      "houseNo": "20",
+      "scan": 99,
+      "page": 96,
+      "child": "Marija",
+      "father": "Peter Pendirec [~] ½ zemljak",
+      "mother": "Doroteja Klepec? [~] (Kurrent D/P)",
+      "botra": "Martin Mihelč? [~] + Marija Požek? [~]",
+      "babica": "— (stolpec prazen)",
+      "priest": "Fr. Klun [~]",
+      "notes": [
+        "hišna 20 forenzika 5x: jasno 20",
+        "h20 2. pin",
+        "pripis: »Umrla, dne 2.1.1980 v Gribljah (MMK Griblje 1.1980, str. 115, zap. št. 1); gradac, 21.1.1980« — 20. st. matičar",
+        "zaporedna številka row 62"
+      ]
+    },
+    {
+      "row": 64,
+      "year": 1897,
+      "month": "Oktober",
+      "born": "25.",
+      "baptized": "26.",
+      "village": "Griblje",
+      "houseNo": "31",
+      "scan": 99,
+      "page": 96,
+      "child": "Ana",
+      "father": "Janez Straus? [~] ½ zemljak",
+      "mother": "Barbara Jakobič [~]",
+      "botra": "Matija Ula? [~] + Doroteja Ule? [~] (Vla? — Kurrent U/V)",
+      "babica": "— (stolpec prazen)",
+      "priest": "Fr. Klun [~]",
+      "notes": [
+        "hišna 31 forenzika 5x: jasno 31 — 2. vpis na h31 v enem letu (r51 Sapič?×Straus + r64 Straus?×Jakobič — dve družini ali sorodstvo Straus)",
+        "pripis: »poročena 29.1.1934« — 20. st. matičar",
+        "zaporedna številka row 64 (datum forenzika 8x: roj 25, krst 26 — krsta NI prazno!)"
+      ]
+    },
+    {
+      "row": 79,
+      "year": 1897,
+      "month": "November",
+      "born": "20.",
+      "baptized": "20.",
+      "village": "Griblje",
+      "houseNo": "61",
+      "scan": 100,
+      "page": 97,
+      "child": "Anton",
+      "father": "Janez Muc [~] bajtar",
+      "mother": "Ana Kure [~]",
+      "botra": "Nikolaj Željko [~] + Katarina Kure [~] (h1 PAR kot botra — ŽELJKO × KURE)",
+      "babica": "— (stolpec prazen)",
+      "priest": "Fr. Klun [~]",
+      "notes": [
+        "hišna 61 forenzika: jasno 61",
+        "h61 5. pin (P86+P87 sidra + P89? priori)",
+        "pripis: »Zakonca Mihelk Katarina umrla, dne 26.5.1979 v Gribljah (MMK Griblje 1.1979, str. 112, zap. št. 3)« + »EHS ČG: 2012894500081, 20.12.1982, Šimović Nuša« — 20. st. matičar (Mihelk Katarina = mati? [~])"
+      ]
+    },
+    {
+      "row": 80,
+      "year": 1897,
+      "month": "November",
+      "born": "24.",
+      "baptized": "25.",
+      "village": "Griblje",
+      "houseNo": "65",
+      "scan": 100,
+      "page": 97,
+      "child": "Nikolaj",
+      "father": "Matija Mihek? [~] ½ zemljak (Mihelk/Mihk)",
+      "mother": "Katarina Šošt? [~]",
+      "botra": "Janez Adlešič? [~] + Doroteja Pozdirec [~]",
+      "babica": "— (stolpec prazen)",
+      "priest": "Jos. Rauq [~]",
+      "notes": [
+        "hišna 65 forenzika: jasno 65",
+        "h65 5. pin (P87 1892 + P89 1894 + P90 1895 + P91 1896 priori)",
+        "pripis: »Umrl, dne 14.05.1989 v Gribljah. MMU Griblje 2.1989, št. 21, EUN 2.1989, str. 41; Metličan 2.1989, str. 61; gradac, h6 1959 22.03.1989, Šimović Nuša« — 20. st. matičar"
+      ]
+    },
+    {
+      "row": 84,
+      "year": 1897,
+      "month": "December",
+      "born": "30.",
+      "baptized": "30.",
+      "village": "Griblje",
+      "houseNo": "45",
+      "scan": 101,
+      "page": 98,
+      "child": "Marija",
+      "father": "Martin Straus [~] bajtar",
+      "mother": "Barbara Spudič [~] (5x: jasno Spudič — POPRAVEK P91 prebira »Doroteja? [~]«)",
+      "botra": "Matija Brinec [~] + Ana Brinec [~]",
+      "babica": "— (stolpec prazen)",
+      "priest": "Fr. Klun [~]",
+      "notes": [
+        "hišna 45 forenzika: jasno 45",
+        "h45 = luknja hiša, 2. VPIS ISTA ZVEZA (P91 1896 + 1897) — Straus × Spudič",
+        "ZADNJA Griblje vrstica leta 1897 (pred prelomom 1898 row 86)",
+        "botra Brinec = h16/h23/h24 familija"
+      ]
+    },
+    {
+      "row": 11,
+      "year": 1897,
+      "month": "Februar",
+      "born": "3.",
+      "baptized": "3.",
+      "village": "Grisice",
+      "houseNo": "2",
+      "scan": 93,
+      "page": 91,
+      "child": "Marija",
+      "father": "Michael Sapič? [~] ½ zemljak",
+      "mother": "Ana Zugelj [~]",
+      "botra": "Martin Tome [~] ½ zemlj. + Marija Straus [~] bajtara",
+      "babica": "—",
+      "priest": "Fr. Klun [~]",
+      "notes": [
+        "IZKLJUČEN IZ VZORCA — vas = »Grisice« (forenzika: jasno ne-Griblje); PRVI prebir »Grablje« NAPAČEN",
+        "dokumentiran kot negativen kontrolni primer (isto številka 2 kot Griblje r29!)"
+      ]
+    }
+  ],
+  "stats": {
+    "entries": 19,
+    "distinctHouses": 18,
+    "housesIllegible": 0,
+    "housesWritten": [
+      "2",
+      "10",
+      "12",
+      "16",
+      "20",
+      "23",
+      "24",
+      "31",
+      "32",
+      "37",
+      "40",
+      "43",
+      "45",
+      "46",
+      "54",
+      "60",
+      "61",
+      "65"
+    ],
+    "intraYearRepeats": [
+      {
+        "houseNo": "31",
+        "rows": [
+          51,
+          64
+        ],
+        "note": "2 vpisa v enem letu — Sapič?×Straus + Straus?×Jakobič (dve družini Straus kompleksa)"
+      }
+    ],
+    "newSampleHouses": [
+      "10",
+      "40",
+      "43"
+    ],
+    "newSampleHousesNote": "h10 + h40 + h43 brez priora P77–P91; h43 = NOVA LUKNJA ŠTEVILKA (17. dokazana v 41–60); h10 + h40 = PT hiši s prvim vitals",
+    "ptInNabor": [
+      "2",
+      "10",
+      "12",
+      "16",
+      "20",
+      "23",
+      "24",
+      "31",
+      "32",
+      "37",
+      "40",
+      "61",
+      "65"
+    ],
+    "ptGap": [
+      "43",
+      "45",
+      "46",
+      "54",
+      "60"
+    ],
+    "statusi": {
+      "½ zemljak": 16,
+      "bajtar": 2,
+      "¼ zemljatva (sama mati)": 1
+    },
+    "illegitimate": 1,
+    "priests": {
+      "Fr. Klun [~]": 11,
+      "Jos. Rauq [~]": 8
+    },
+    "priestsNote": "Šuvar (1896 dominant, 9×) IZGINE; Klun 11× dominanta + Rauq 8× (r52 podpis [~] — skrit za pego); preplet skozi VSE leto (mešano leto, ne pol-sezonsko)",
+    "infantDeaths": [
+      "r12 † 24/1.98? [~]",
+      "r15 † 5/9.97? [~]",
+      "r25 † 17/9.97? [~]",
+      "r28 † 16/2.98? [~]",
+      "r29 † 7/6.97",
+      "r38 † 3/9.99? [~]",
+      "r59 † 3/9.98? [~]"
+    ],
+    "infantDeathsNote": "7/19 z † pripisom — NAJVIŠJE doslej (P91: 4/14; P90: 15/…); dojenčijska smrtnost 1897 = 37%",
+    "matiharNotes": [
+      "r41 † 15.3.1931 (odrasla)",
+      "r52 poročena 19/9.1919 + Umrla 22.7.1981",
+      "r62 Umrla 2.1.1980",
+      "r64 poročena 29.1.1934",
+      "r79 Zakonca Mihelk Katarina † 26.5.1979 + EHS ČG",
+      "r80 Umrl 14.5.1989 + EHS ČG"
+    ],
+    "cumulative": {
+      "entries": 217,
+      "houses": 74,
+      "note": "P79–P92: 199 + 18 = 217 vpisov (h61 Anton = P79-era placeholder, ZDRUŽEN — ne dupliran); vitals hiše 70 + 3 (10, 40, 43) = 73; + 1 EV-only »65 [~]« = 74 hiš"
+    }
+  },
+  "crossLinks": [
+    "h45 Straus × Spudič — 2. VPIS ISTA ZVEZA (P91 1896 r70 + P92 1897 r84); POPRAVEK: mati = Barbara Spudič (ne »Doroteja?«)",
+    "h46 Brodarič — 4. VPIS (P88+P90+P91+P92); mati 3. varianta (Klobučar → Kramarič? → Harašimovič?)",
+    "h31 — 2 vpisa 1897 (r51+r64); Straus kompleks: 1894 Fapič?×Straus + 1896 Pendirec?×Žugelj + 1897 obe nazaj",
+    "h60 Željko × Brodarič — luknja 60 4. dokaz; ŽELJKO VERIGA: oče h60 + botra h37/h46 + h1 par kot botra h61",
+    "h61 botra Željko + Kure = h1 PAR (začarani krog familije kot P91 h1)",
+    "h23/h24 — dve RAZLIČNI Brinec hiši (forenzika 5x; prvi prebir »oba 23« napačen)",
+    "h63 IZGINE 1897 (oče konstanten 5× 1887–96 — konec serije); h1 izgine (3 VPISI konec); h30/h41/h15/h36/h53/h25/h26/h9/h14 ni v 1897",
+    "botra Hrižan 3× (r12, r25, r26) — h63 familija kot botre po izgini lastnih vpisov"
+  ],
+  "findings": [
+    "NOVELA P92 — PODVOJEN SKEN 97 (duplikat s96, str. 94): 2. znani duplikat po skenu 73; od tod stran == sken − 3 za s98–s101; NOVELA P89 (stran == sken − 2) velja samo do skena 96 — offsetni premik je artefakt duplikata, ne nove številčenja",
+    "PRELOM 1898: str. 98 = sken 101 row 86 (1897 ima 85 vrstic); oznake ponastavljene na 1 — novela P83 potrjena 10. leto",
+    "19 vpisov / 18 hiš — NARE 4. leto (po P87 1892/P89 1894/P91 1896); kumulativ P79–P92 = 218 vpisov / 74 hiš",
+    "3 NOVE hiše (10, 40, 43); NOVA LUKNJA ŠTEVILKA 43 (17. dokazana v 41–60 — PT_GAP_KNOWN dobi +43)",
+    "PRVI NEZAKONSKI vpis od P90: r31 Florijan — SAMA MATI Katarina Pozdirec ¼ zemljatva, oče prazen",
+    "NOVELA babica POTRJENA 3. LETO: 19/19 PRAZNO (1895: 15; 1896: 14) — Trotter žene 0× 3. leto",
+    "DOJENČIJSKA UMRLJIVOST 7/19 — NAJVIŠJE doslej (P91: 4/14): † r12, r15, r25, r28, r29, r38, r59",
+    "DUHOVNIKI: Šuvar izgine; Klun 12× (dominanta) + Rauq 7× — preplet skozi vse leto",
+    "KURRENT FORENZIKA 6 popravkov: h23/h24 (dve hiši), Grisice≠Griblje (r11 izključen), Otok≠Griblje (r65 izključen), h16≠10 (r52), row 59/62/64 (premik −1), h45 mati Spudič (POPRAVEK P91)",
+    "MATIČAR PRIPISI 20. st.: 6 vpisov z datumih porok/umrtj/EHS CG (r41, r52, r62, r64, r79, r80) — najgostejše dozdaj"
+  ],
+  "honesty": [
+    "vsi datumi/name z [~] so negotovi prebiri (Kurrent variante) — MERI, NE odloča",
+    "h43 številka NA RAZPOKI (crease) — prebir 43 [~], alternativa 45/48 izključena po forenziki 5x",
+    "r25 oče »Matko Pendirec« — ime delno raztrgano [~]",
+    "s96 desni rob raztrgan — starši r38/r41 brani iz duplikata s97 (boljša svetloba)",
+    "row številke s99 (59/62/64) iz 6x stolpnih izrezov — Kurrent 5/6 razrešen s kontinuiteto s98 (51–58) → s99",
+    "r31 hišna 43 [~]: sama mati Pozdirec — ali je h43 prava hiša ali zgolj vpisni kraj? MERI",
+    "† datumi (7 pripisov) delno legibilni — vsi z [~] razen r29 (7/6.97 jasen)"
+  ],
+  "nextSteps": [
+    "P93 = krstna 1898 (prelom str. 98 row 1 = sken 101; skeni 102+; stran == sken − 3 do naslednjega duplikata) ali mrliška 04894 1887–1896 (smrti prvih žen — dokaz menjav h58/h91/h31/h46)",
+    "tri-virska hiša 13/36/71 letnostna veriga (P80–P92 vzorec ima 218 vpisov)"
+  ]
+}
