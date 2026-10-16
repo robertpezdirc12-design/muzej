@@ -4431,3 +4431,28 @@ Stage Summary:
 - Repo stanje POPOLNO: lokalni == GitLab == GitHub == 19c1449 (P92 + vitals 211 + QA 93/93 dev; 217 vpisov / 74 hiš / 17 dokazanih luknj / DVANAEST let)
 - Produkcija ZASTARELA (89/89, P88) — sledi ob resetu (~18:24 UTC 17. 10.); NASLEDNJA SEJA (obvezni prvi korak): preveriti https://griblje-museum.vercel.app/api/qa = 93/93 (qa-p90 + qa-p91 + qa-p92 True); če ŠE VEDNO zastarela → nov prazen nudge commit + push oba
 - Raziskava: P79–P92 = 1886–1897 (DVANAEST polnih let); NASLEDNJA FAZA: P93 = krstna 1898 (prelom str. 98 row 1 = sken 101; skeni 102+; stran == sken − 3 do naslednjega duplikata) ali mrliška 04894 1887–1896 (smrti prvih žen — dokaz menjav h58/h91/h31/h46) ali poročna 04455 Straus × Spudič (potrditev h45 popravka)
+
+---
+Task ID: 63
+Agent: Z.ai Code (glavna seja)
+Task: P93 — župnija Podzemelj: krstna knjiga 04105, polno leto 1898 (issue #18); sinhronizacija potrjena (af84c85); produkcija 89/89 (rate limit do ~2026-10-17 18:24 UTC)
+
+Work Log:
+- Seja odprta: trojna sinhronizacija POTRJENA (lokalni == GitLab == GitHub == af84c85; GitLab 403 tranzitorni — 3/5 poskusov OK); produkcija /api/qa = 89/89 (še P88 — Vercel rate limit do ~2026-10-17 18:24 UTC; dohiti P90–P93 → 94/94 ob resetu)
+- Skeni 101–113 preneseni v /tmp/p93 (101 kopija iz /tmp/p92; p93_fetch po vzoru p92)
+- Ročna paleografska faza: pregled skenov 101–109 (str. 98–106); 15 kandidatov → 12 potrjenih Griblje vrstic (3 izključeni: s101 r5 »Grišiniče 33«, s107 r76 »Šriglje?«, s102 r20 levi del UNIČEN — desni preživel: Jurij Straus × Marija Jakofin); izrezi 2x (L/R) + hišne forenzike 5x–6x (10 re-cropov po odklonih) + imenske forenzike 4x–6x
+- Okvir: 1898 = sken 101 row 86 (str. 98) … sken 109 row 96 (str. 106); 96 vrstic; stran == sken − 3 ZA CELO LETO (novela P92 potrjena, brez duplikatov); prelom 1899 = sken 109 row 97→1; 1899 row 1 = Griblje 12
+- Forenzika 6 popravkov: r5 Griblje 39? → GRIŠINIČE 33 (izključena); r76 → ŠRIGLJE? (izključena); r72 40? → jasno 48 (6x, dvojna zanka); r63 56? → jasno 36 (5x); r22 → 69 + r30 → 89 (Kurrent 9 z repom); r20 uničen levi del (neštet)
+- Ključne najdbe: VRNITEV h63 (oče Nikolaj Hrižan ISTI 6× — P92 »konec serije« POPRAVLJEN); NOVA LUKNJA h48 (18. dokazana); h52 prvi TRDNI pin; 4 rotacije gospodinjstev (h69 Brinec→Straus, h33 Brinec→Dehlič z Brincem kot botrom, Berkopne h40→h48, Brodarič h46→h40 [~]); h90 tretji učitelj (Kopitar → Vetročnik × Schmelzer, botr učitelj Vrhovec); Rauq 8× + Šturm 3× (Klun izgine); babica 4. leto 12/12; † 1/12 (+ r37 [~]); matičar pripisi 9/12
+- Dokaz research/issue17/parish-baptism-1898.json (12 Griblje + 3 izključeni; 229/77 kumulativ)
+- scripts/p93_parish_baptism_1898.py (I1–I10) — popravki: duplicateScan v source (ne frame), cited scans 7 (101 brez Griblje + 105 brez Griblje), PT 9/3 (18/89 v PT verigi 1825; gap = 48/52/53), r72 SELITEV pin (ejaan SELITEV, ne SELISTEV) — --check PASS
+- parish.ts: 211 → 223 (+12 blokov 1898; komentar P93); atlas.ts PT_GAP_KNOWN + 48; qa-parish.ts qa-p93 (94. kontrola) + vitals pini 211→223 (7 testov) + dovoljenja 1898: qa-p85 h90, qa-p86 h53, qa-p92 h40 (allow) + qa-p93 prestavljen v funkcijo (push scope)
+- POPRAVI ZASTARELIH SKRIPT (regresije po P92, odkrite ob verigi): p80 I7 (PT_GAP_HOUSES +43/45/46/48 + scoping 38 hiš/9 luknj + vitals 223); p85–p92 filtri vesolja lastnega leta (poznejši bloki ne smejo spreminjati zgodovinske klasifikacije novih hiš: p85/p86/p87/p88 +1897/98, p89 +1895–98, p90 +1896–98 + None-varna repeatHouses, p91 +1897/98 + kumulativ POPRAVLJEN na lastni JSON 199/71, p92 +1898) — vzrok: P92 je posodobil kumulative, NE pa filtrov vesolja (h40/h20/h45/h53 so postali »ponovitve« v prejšnjih letih)
+- Veriga: 14/14 skript p80–p93 --check PASS (exit 0); tsc 0 / lint 0; /api/qa dev 94/94 (qa-p93 True); v7 NESPREMENJEN (sha256 4bb40370…)
+- Dokumentacija: MUSEUM-AUDIT §70 + README (P93 bullet + stanje po P93 + 94/94 + 14 skript p80–p93) + worklog Task 63
+
+Stage Summary:
+- P93 = krstna 1898: 12 vpisov / 12 hiš NARE (5. leto); 3 NOVE hiše (18, 48, 89); NOVA LUKNJA ŠTEVILKA 48 (18.); h52 prvi trdni pin; kumulativ 229 vpisov / 77 hiš / TRINAJST let; VRNITEV h63 (oče 6×); 4 rotacije gospodinjstev; šolska h90 tretji učitelj; r20 uničen vpis (Straus × Jakofin) neštet
+- QA dev 94/94; tsc/lint 0; 14/14 skript PASS; v7 NESPREMENJEN
+- Produkcija: 89/89 (rate limit do ~2026-10-17 18:24 UTC) — po resetu dohiti P90+P91+P92+P93 → 94/94 (qa-p90 + qa-p91 + qa-p92 + qa-p93 True)
+- NASLEDNJA FAZA: P94 = krstna 1899 (prelom str. 106 row 1 = sken 109; skeni 110–113 že v /tmp/p93; 1899 row 1 = Griblje 12!) ali mrliška 04894 1887–1896 (dokaz menjav h69/h33/h40/h48/h90) ali poročna 04455 (Straus × Spudič ali Berkopne × Klobučar)

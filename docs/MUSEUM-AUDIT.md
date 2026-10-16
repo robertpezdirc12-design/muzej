@@ -4785,3 +4785,112 @@ disciplina I9).
 (42, 48, 49, 50, 51 manjkajo? — preveriti PT_GAP_KNOWN vs 41–60: 41, 43,
 44, 45, 46, 47, 52–60 = 15 + 2?); ⑥ Željko veriga 10 signalov; ⑦ Fr. Klun
 identifikacija (župnijski arhiv Podzemelj) [~].
+
+## §70 — P93: župnija Podzemelj — krstna knjiga 04105, polno leto 1898 (issue #18) — 2026-10-16
+
+**SAMPLE-TRANSCRIPTION-1898** (MERI, NE odloča; v7 join nespremenjen).
+§69 nextSteps ①: širitev vzorca po letih (P79 1886 → … → P92 1897 →
+**P93 1898**).
+
+**Okvir**: skeni 101–109 == tiskane strani 98–106. **NOVELA P92 POTRJENA**:
+stran == sken − 3 **ZA CELO LETO** (brez novih duplikatov; sken 105 =
+str. 102 **brez Griblje vrstic** — pregledan, ni citiran; sken 101 = str. 98
+brez potrjenih Griblje — r5 je Grišiniče). Glava **»1898.« na str. 98** po
+1897 row 85; leto 1898 ima **96 vrstic**; **prelom 1899 na str. 106 =
+sken 109 row 97→1** — oznake se ponastavijo, **novela P83 potrjena 11.
+leto**; **1899 row 1 = Griblje 12 Marija — novo leto se začne z Griblji**.
+Skeni 101–113 preneseni v /tmp/p93 (101 kopiran iz /tmp/p92; p93_fetch po
+vzoru p92; ročna faza, NI v repu); izrezi 2x (L/R) + hišne forenzike 5x–6x
+(pasovi popravljeni — r20/r30/r37/r42/r63/r76/r78/r79/r89/r96 re-crop po
+odklonih) + imenske forenzike 4x–6x (Hrigar/Hrižan, Podrinc/Pendirec,
+Šbrodarič/Brodarič, Vetročnik, Vrhovec) + datumski fragmenti; **15
+kandidatov → 12 potrjenih Griblje** (3 izključeni: s101 r5 »Grišiniče 33«,
+s107 r76 »Šriglje?«, s102 r20 **LEVI DEL UNIČEN** — desni del preživel:
+Jurij Straus × Marija Jakofin, botra Matija Straucel × Barbara Jakofin;
+verjetno Griblje [~], NEŠTET).
+
+**Vzorec 1898**: **12 vpisov / 12 hiš — NARE (5. leto** po P87/P89/P91/P92):
+40, 69, 89, 18, 32, 36, 33, 48, 63, 52, 53, 90 — **3 NOVE hiše (18, 48, 89)**
++ 9 ponovitev; kumulativ **229 vpisov / 77 hiš** čez tri knjige in
+**TRINAJST let**.
+
+**NOVA LUKNJA ŠTEVILKA: h48 (18. dokazana v 41–60** — PT_GAP_KNOWN dobi
++48; forenzika 6x: jasno 48, ne 40 — **dvojna zanka = 8**; prvi prebir
+»40« napačen) + **h52 PRVI TRDNI PIN** (1887 block [~] preživel trojno
+korekcijo 52→04→15; 1898 forenzika 5x: jasno 52) — luknja zdaj **18
+dokazanih**. h18/h89 = NOVI številki izven luknje (18/89 v PT verigi 1825;
+Kurrent 9 z dolgim repom γ-oblika pri 69/89).
+
+**VRNITEV h63**: oče **Nikolaj Hrižan [Križan/Prižan] ISTI 6×** (1887 +
+1889 + 1890 + 1892 + 1896 + 1898, brez 1897) — **P92 zaključek »h63
+IZGINE — konec serije« POPRAVLJEN**; najbolj konstanten oče vzorca;
+dojenček Jožef **† 6/6.1900** (dojenčijska umrljivost 1/12 potrjena + r37
+[~] možna — najnižja po P92 7/19).
+
+**NAJGOSTEJŠE GIBANJE GOSPODINJSTEV V VZORCU (4 rotacije v enem letu)**:
+① h69 **MENJAVA** — Brinec (5 vpisov 1888–95) → **Nikolaj Straus × Marija
+Jakobšič** (Straus na 4. hiši h71/h72/h45/h69; otrok Alojzij † 6.1.1983
+»v Gribljah« po matičarjem pripisu — register sam potrjuje vas); ② h33
+**MENJAVA** — Brinec (1889) → Dehlič × Rožek (**stari h33 oče Matija
+Brinec zdaj BOTRA**); ③ **SELITEV Berkopne × Klobučar h40 (1897) → h48
+(1898)** — ISTA ZVEZA, druga hiša; ④ h40 **MENJAVA** → **Anton Brodarič ×
+Marija Milek** (= h46 oče 1893–97 — rotacija [~]; **očetovo ime PREČRTANO
+v izvirniku** brez vidne zamenjave).
+
+**ŠOLSKA HIŠA h90**: **TRETJI UČITELJ** — Kopitar (1890 + 1892) → **Alojzij
+Vetročnik [~] UČITELJ × Leopolda Schmelzer** (nemški priimek); botr učitelj
+**Ivan Vrhovec [~ Arhovec]** + Apolonija Majnik [~] — tretja učiteljska
+generacija (1890 botra Janez Barle, 1892 nadučitelj botra). Zadnja Griblje
+vrstica leta (24./29. 12.).
+
+**Duhovniki**: **Rauq (Jos.) 8×** dominant (nadaljuje iz 1897) + **Šturm
+(Fr.) 3×** + 1 neberljiv (r42) — **Klun (11× 1897) IZGINE**. **NOVELA
+babica POTRJENA 4. LETO**: 12/12 PRAZNO (Trotter 0×). Statusi: ½ zemljak
+× 10 + ¼ × 2 (r22 Straus, r72 Berkopne) + učitelj × 2. **0 nezakonskih**
+med Griblji (r29 Obveca z praznima staršema = druga vas). **Matičar
+pripisi 20./21. st. v 9 od 12 vpisov** (EMŠO blok 1982–83, † 1951/1963/
+1974?/1975/1981/1983, poroke 1921/1922/1924/1928/1929) — najgostejša
+pokritost doslej.
+
+**KURRENT FORENZIKA 6 popravkov/odločitev**: ① s101 r5 »Griblje 39?« →
+jasno **GRIŠINIČE 33** (druga vas — izključena); ② s107 r76 »Griblje?« →
+jasno **ŠRIGLJE?** (druga vas — izključena); ③ s102 r20 **LEVI DEL
+UNIČEN** (modri matičar pripisi 1971–83 + raztrgana meja); ④ s107 r72
+»40?« → jasno **48** (6x); ⑤ s106 r63 »56?« → jasno **36** (5x); ⑥ s103
+r22 »2?« → jasno **69** + r30 »81/31?« → jasno **89** (Kurrent 9 z repom).
+Priimki: **Hrigar/Hrigovc = Hrižan/Križan cluster [~]** (po P91/P92),
+**Podrinc = Pendirec cluster [~]** (po P86–P92), **Urk = Urh cluster [~]**
+(po P87–P92). **ŽELJKO VERIGA 2 nova signala** (r14 botra Marija Željko +
+r30 botra Nikolaj Željko — skupaj 12); **Kure signal** (r89 botra Ana
+Kure — h1 familija); **Šimec**: r37 oče Matija Šimec = r89 botra (ista
+oseba oče + botra v enem letu); Podrinc/Pendirec cluster 6 pojavitev
+(r30 oče Marko = r78 botra).
+
+**Integracija**: parish.ts HOUSE_VITALS **211 → 223** (+12 blokov 1898,
+vsi DOCUMENTED; komentar P93 z okvirjem); atlas.ts PT_GAP_KNOWN **+48**
+(18. dokazana); qa-parish.ts **qa-p93** (94. kontrola; celoven neodvisen
+preracun: okvir − 3/brez duplikatov/NOVELA babica 12 praznih/NOVA LUKNJA
+48 pin + SELITEV/VRNITEV h63/h52 TRDNI pin/sidra 12/PT 9/3/NOVE hiše 18/
+48/89/kontinuitete 22 pinov (scan-pini)/vitals 223); dovoljenja 1898:
+qa-p85 h90, qa-p86 h53, qa-p92 h40 (allow mehanizem); vitals pini 211 →
+223 (7 testov); **POPRAVI ZASTARELIH SKRIPT (regresije po P92)**: p80
+I7 (PT_GAP_HOUSES posodobljen +43/45/46/48 + scoping 38/9 + vitals 223),
+p85–p92 (filtri vesolja lastnega leta — poznejši bloki 1897/1898 ne
+spreminjajo zgodovinske klasifikacije novih hiš: p85 + 1897/1898, p86 +
+1897/1898, p87 + 1897/1898, p88 + 1897/1898, p89 + 1895–1898 filter,
+p90 + 1896–1898 filter + None-varna repeatHouses, p91 + 1897/1898 filter
++ kumulativ 199/71 POPRAVLJEN nazaj na lastni JSON, p92 + 1898 filter);
+vseh 14 skript p80–p93 --check **PASS** (exit 0). Kartica NI dodana
+(vzorec P77–P93). tsc 0 / lint 0; **/api/qa dev 94/94** (qa-p93 True);
+v7 NESPREMENJEN.
+
+**nextSteps**: ① **P94 = leto 1899** (prelom str. 106 row 1 = sken 109;
+skeni 110–113 že v /tmp/p93; 1899 row 1 = Griblje 12 Marija!); ② mrliška
+knjiga 04894 1887–1896: smrti prvih žen — dokaz menjav h69 (Brinec →
+Straus 1898!), h33 (Brinec → Dehlič), h40/h48 (Berkopne selitev), h90
+(Kopitar → Vetročnik); ③ poročna 04455: Straus × Spudič (potrditev h45
+popravka) ali Berkopne × Klobučar; ④ Željko veriga 12 signalov; ⑤ luknja
+41–60: 18 dokazanih (48 NOVA) — manjkajo še 42, 49, 50, 51 (in 41–60 = 20
+števil; preveriti PT_GAP_KNOWN: 41, 43–48, 52–60 = 16); ⑥ produkcija
+Vercel: po rate-limit resetu (~2026-10-17 18:24 UTC) dohiti P90–P93 →
+QA 94/94.

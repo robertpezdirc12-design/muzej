@@ -60,7 +60,7 @@ PT_GAP_NEW = ["45"]             # h45 = NOVA luknja številka (16. dokazana)
 EXPECTED_NEW_HOUSES = ["9", "14", "45"]
 EXPECTED_REPEATS = 11           # 14 − 3 nove
 EXPECTED_HOUSES_VITALS = 14
-EXPECTED_VITALS_TOTAL = 211     # HOUSE_VITALS 179 + 14 (p80 I7 pin)
+EXPECTED_VITALS_TOTAL = 223     # HOUSE_VITALS 179 + 14 (p80 I7 pin); P92: + 19 (1897); P93: + 12 (1898)
 EV_ONLY_TOTAL = 6               # P84: 2 + P85: 3 + P86: 1 (P77–P83, P87–P91: 0)
 EV_ONLY_HOUSE_STRINGS = {"65 [~]"}  # P85 — edina imenovana EV-only hiša (None × 4)
 # sidra/pins P91:
@@ -396,10 +396,16 @@ def verify():
     # I10 — statistika dokaza == neodvisen preracun: 11 ponovitev + 3 nove
     # (9/14/45); kumulativ 193 + 6 EV-only == 199; hiše vitals 70 (67 + 3) —
     # dokaz 71 = 70 + EV-only »65 [~]«
+    # klasifikacija v vesolju lastnega leta — poznejši bloki (04105 > 1896)
+    # ne smejo spreminjati zgodovinske klasifikacije novih/ponovljenih hiš (h45: 1897 ponovitev)
+    vitals_pre97 = [
+        v for v in vitals_all
+        if not (v["bookSignature"] == BOOK_SIGNATURE and v["year"] in (1897, 1898))
+    ]
     repeat_houses = [h for h in houses if any(
         v["houseNo"] == h and v["bookSignature"] == BOOK_SIGNATURE and v["year"] != 1896
         or v["houseNo"] == h and v["bookSignature"] != BOOK_SIGNATURE
-        for v in vitals_all
+        for v in vitals_pre97
     )]
     new_houses = sorted(houses - set(repeat_houses), key=int)
     n_entries_total = len(vitals_all)
@@ -423,11 +429,11 @@ def verify():
         and new_houses == dokaz["stats"]["newSampleHouses"] == EXPECTED_NEW_HOUSES
         and len(dokaz["stats"]["intraYearRepeats"]) == 0  # NARE
         and n_entries_total == EXPECTED_VITALS_TOTAL
-        and n_entries_total + EV_ONLY_TOTAL == 217  # kumulativno po P92 (211 + 6)
-        and n_houses_total == 73  # P91: 70; P92: + 3 (10, 40, 43)
+        and n_entries_total + EV_ONLY_TOTAL == 229  # kumulativno po P93 (223 + 6)
+        and n_houses_total == 76  # P92: 73; P93: + 3 (18, 48, 89)
         and ev_only_houses == EV_ONLY_HOUSE_STRINGS
-        and cumulative["entries"] == 217
-        and cumulative["houses"] == 74  # 73 vitals + 1 EV-only »65 [~]«
+        and cumulative["entries"] == 199  # P91 JSON — lastni kumulativ (P92 vrne 217/74 v p92 skripti)
+        and cumulative["houses"] == 71  # 70 vitals + 1 EV-only »65 [~]«
         and dokaz["stats"]["entries"] == EXPECTED_ENTRIES
         and dokaz["stats"]["distinctHouses"] == EXPECTED_DISTINCT
         and dokaz["stats"]["housesIllegible"] == 0

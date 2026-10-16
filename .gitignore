@@ -69,3 +69,4 @@ tool-results/
 
 # agent work context (subagent worklogs — not source)
 /agent-ctx/
+__pycache__/

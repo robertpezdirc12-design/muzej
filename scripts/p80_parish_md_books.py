@@ -63,7 +63,7 @@ DEATH_1886_ENTRIES = 13
 DEATH_1887_ANCHORS = 2
 MARR_1886_ENTRIES = 7
 MARR_ANCHORS = {"1882": 1, "1885": 1, "1887": 2}
-PT_GAP_HOUSES = {"44", "47", "52", "54", "55", "56", "57", "59", "60"}  # P82: + 47, 52 (row 78 izvirno), 55
+PT_GAP_HOUSES = {"43", "44", "45", "46", "47", "48", "52", "53", "54", "55", "56", "57", "58", "59", "60"}  # P82: + 47, 52 (row 78 izvirno), 55; P85: + 41 (izven vzorca); P86: + 53; P88: + 46; P91: + 45; P92: + 43; P93: + 48
 TRI_SOURCE_HOUSES = {"13", "36", "71"}
 
 
@@ -230,12 +230,12 @@ def verify():
     inset = sorted(houses - PT_GAP_HOUSES, key=lambda x: int(float(x)))
     inv["I7_pt_consistency"] = (
         houses == (set(inset) | set(gap))
-        and len(gap) == 6
+        and len(gap) == 9  # P92 scoping: 1897 bloki vnesejo 43/45/46/54/60 — 6 → 9
         and all((float(h) <= 40 or float(h) >= 61) or ("½" in h) for h in inset)
         and all(41 <= float(h) <= 60 for h in gap)
         and all(h in houses for h in (v["houseNo"] for v in sample))
-        and len(vitals) == 211
-        and len(houses) == 25
+        and len(vitals) == 223  # P92: 211; P93: + 12 (krstna 1898)
+        and len(houses) == 38  # P92 scoping: 25 → 38 (1897 okvir)
         and set(inset) <= pts
     )
 
