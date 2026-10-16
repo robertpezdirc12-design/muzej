@@ -633,7 +633,7 @@ for (const [hn, yr, sig] of [
 // letu; h30: P86 kontinuiteta dovoli tudi blok 1891 (isti starši + botra);
 // h90: P87 kontinuiteta dovoli tudi blok 1892 (učitelj ISTA družina)
 for (const hn of ["7", "30", "38", "41", "77", "90"]) {
-  const allow = hn === "30" ? [1890, 1891] : hn === "90" ? [1890, 1892] : [1890];
+  const allow = hn === "30" ? [1890, 1891, 1893] : hn === "90" ? [1890, 1892] : hn === "41" ? [1890, 1893] : [1890];
   if (HOUSE_VITALS.some((v) => v.houseNo === hn && !(v.bookSignature === "04105" && allow.includes(v.year))))
     p85Errors.push(`NOVA hiša ${hn} (P85) že obstaja v prejšnjem letu — pini neskladni`);
 }
@@ -737,9 +737,9 @@ for (const hn of ["28", "53"]) {
   if (HOUSE_VITALS.some((v) => v.houseNo === hn && !(v.bookSignature === "04105" && v.year === 1891)))
     p86Errors.push(`NOVA hiša ${hn} (P86) že obstaja v prejšnjem letu — pini neskladni`);
 }
-// vitals skupaj 133 (P86: 121 + 12)
-if (HOUSE_VITALS.length !== 133)
-  p86Errors.push(`HOUSE_VITALS ≠ 133 (${HOUSE_VITALS.length})`);
+// vitals skupaj 150 (P87: 133 + 17)
+if (HOUSE_VITALS.length !== 150)
+  p86Errors.push(`HOUSE_VITALS ≠ 150 (${HOUSE_VITALS.length})`);
 push(
   "qa-p86-parish-baptism-1891",
   "P86: ŽUPNIJA PODZEMELJ — KRSTNA KNJIGA 04105, POLNO LETO 1891 (issue #18; SAMPLE-TRANSCRIPTION-1891; MERI, NE odloča; v7 join nespremenjen): širitev vzorca P79 (1886) → P82 (1887) → P83 (1888) → P84 (1889) → P85 (1890) na leto 1891 — okvir: skeni 49–56 == tiskane strani 48–55 (stran == sken − 1; leto se začne na str. 48 row 1 po 1890 rows 78–86; vpisi na skenih 50–54; glava »Leto 1892« na str. 55 row 1 — oznake se ponastavijo na 1, novela P83 potrjena 4. leto; 1891 ima 75 zveznih vrstic; glave mesecev se ponavljajo — Avgust 2×, November 2×) — VSI vpisi z Griblji: 10 vpisov / 9 imenovanih hiš + 1 NEBERLJIVA (r52 prekrita z modrimi pripisi — evidence-only; HOUSE_VITALS 9 zasidranih): 72, 30, 62, 61, 53, 2, 31, 5, 28 — NOVE hiše 2 (28, 53) + 1 neberljiva, ponovitve 7 (h2 ×3 leta; h30 kontinuiteta; h31 ×4; h5 ČEZ KNJIGE — mrliška 04894 1886; h61 1887+1897+1891 — oče Požek ISTA OSEBA; h62 1887 — Križan tudi 1887; h72 1888); skupaj s P79–P85 vzorec 127 vpisov / 58 hiš čez tri knjige in šest let; NOVELA (novela P85 potrjena 2. leto): VSI 9 zasidranih statusov = ¼ ulomek (zemljak 5, gemžgah 4 — brez bajtarjev/obrtnikov na Gribljih, kontrast 1890); PT klasifikacija 8/1 (53 v luknji 41–60 — NOVA, 14. dokazana številka; luknja zdaj 14 dokazanih); 0 nezakonskih; r39 h61 edini vpis brez botre + brez podpisa; SIDRA: h72 (oče Matija Straus [~] = ISTI očet kot P83 1888 — re-read Hraus→Strauš; mati MENJANA: 1888 Husič [~] → 1891 Jakobič [~]; tri-virska P80 + PUA @71 0.8571; botra Straucelj), h30 (oče Janez Milek [~] = P85 dvojčka rows 51+52 — POPOLNA KONTINUITETA: isti starši + ISTA botra Matija Milek + Katarina Križan; Milek = P81 near-miss), h61 (oče Nikolaj Pošek/Požek [~] = P82 SIDRO 1887 Miko Požek — ISTA OSEBA po 4 letih; mati MENJANA: 1887 Bara Filak → 1891 Ana Dragos [~ Dragoš] — PRVI dokaz menjave gospodinjstva na zasidrani hiši), h53 (oče Janez Pozdirec [~] + mati Marija Križan [~] — NOVA LUKNJA 14.; forenzika izrez 4x: jasno 53, prvi prebir »33« [~] Kurrent 3/5), h62 (mati Barbara Hrižan [~] + babica Ana Hrižan — Križan gospodinjstvo PONOVITEV P82 1887), h2 (oče Peter Hlebec [~] — TROJNA KONTINUITETA P82 1887 + P84 1889 + 1891, ISTI starši ×3 čez 5 let), h31 (mati Marjeta Straus [~] — ISTA OSEBA 1887 Margaretha + 1890 + 1891, 3 vpise čez 5 let; oče 1887/1890 Papič [~] → 1891 Tepič [~] Kurrent P/T; botra Klobučar 4. leto), h5 (vsi TOREC — PONOVITEV ČEZ KNJIGE: mrliška 04894 1886 + krstna 1891, familija hiše; modro ime »Terezija?« [~] vs tmavo »Jožefa«), h28 (oče Jurij Požek [~] — POŽEK VERIGA h79 1888 → h77 1890 → h28 1891, 3. hiša familije v 4 letih; mati Milkovič [~] = Milek varianta; botra Muern = oče h62); DVE menjavi matere na zasidranih hišah (h61 Filak→Dragos + h72 Husič→Jakobič — druga žena / ponovna poroka / re-read [~], MERI); priimki z 1825 pričo v 1891: Križan/Hrižan 8× (0.8333 [~] — najmočnejše leto), Milek/Milkovič 4× (near-miss), Straus/Straucelj 3+1 [~] (0.8571), Požek/Pošek 2× (4. leto), Dragoš 1× (1.0), Urh 1× [~] (1.0), Jakobič/Jaklpič 2×, Brinec babica 2× (6./7. leto), Klobučar 1×, Brodarič 1×; ŠIMEC 0× — PRVO leto brez najtrajnejše familije (1886: 4 hiše, 1887: 1, 1888: 1, 1889: 3, 1890: 6); babice: Ana Hrižan 4× (vrnitev po 1889) + Brinec 2× + Marjeta Fojter 2× (nova) + Katarina [~] 1; DUHOVNIKI: Jos. Rauq [~] 7 + Jos. R— [~] 1 + prazna 1 + neberljiva 1; NOV podpis St. Češarek [~] od r68 (sredi decembra 1891) — 0× na Gribljih; live verifikacija: knjiga HTTP 200 (inventar 326), citirani skeni 5/5 JPEG 200; skripta scripts/p86_parish_baptism_1891.py (I1–I10, --check PASS); status SAMPLE-TRANSCRIPTION-1891",
@@ -831,9 +831,9 @@ for (const hn of ["12", "73", "75"]) {
   if (HOUSE_VITALS.some((v) => v.houseNo === hn && !(v.bookSignature === "04105" && v.year === 1892)))
     p87Errors.push(`NOVA hiša ${hn} (P87) že obstaja v prejšnjem letu — pini neskladni`);
 }
-// vitals skupaj 133 (P86: 121 + 12)
-if (HOUSE_VITALS.length !== 133)
-  p87Errors.push(`HOUSE_VITALS ≠ 133 (${HOUSE_VITALS.length})`);
+// vitals skupaj 150 (P87: 133 + 17)
+if (HOUSE_VITALS.length !== 150)
+  p87Errors.push(`HOUSE_VITALS ≠ 150 (${HOUSE_VITALS.length})`);
 push(
   "qa-p87-parish-baptism-1892",
   "P87: ŽUPNIJA PODZEMELJ — KRSTNA KNJIGA 04105, POLNO LETO 1892 (issue #18; SAMPLE-TRANSCRIPTION-1892; MERI, NE odloča; v7 join nespremenjen): širitev vzorca P79 (1886) → P82 (1887) → P83 (1888) → P84 (1889) → P85 (1890) → P86 (1891) na leto 1892 — okvir: skeni 56–63 == tiskane strani 55–62 (stran == sken − 1; glava »Leto 1892« na str. 55 row 1 po 1891 rows 65–75; vpisi na skenih 56, 57, 60, 61, 62 — 58/59 brez Gribljev; velike cifre »1893~« na str. 62 po row 82 — oznake se ponastavijo na 1, novela P83 potrjena 5. leto; 1892 ima 82 zveznih vrstic; glave mesecev se ponavljajo — Avgust 2×, November 2×) — VSI vpisi z Griblji: 12 vpisov / 12 hiš — NARE (prvo leto brez ponovitev znotraj leta; 0 neberljivih; HOUSE_VITALS 12 zasidranih): 75, 29, 73, 12, 27, 1, 32, 58, 90, 63, 61, 24 — NOVE hiše 3 (12, 73, 75) + ponovitve 9 (h1 1888+1892 ISTA zveza; h24 MENJAVA GOSPODINJSTVA Brinec → Jurajevič, 4. vpis; h27 MENJAVA GOSPODINJSTVA Kukar/Stubhar → Pozdirec; h29 ISTA zveza Milek × Križan 1888+1892; h32 ISTI oče Urh 3× 1889+1890+1892; h58 3. leto Požek × Dragos; h61 1891+1892 kontinuiteta sidra; h63 oče ISTI 4×; h90 učitelj 1890+1892); skupaj s P79–P86 vzorec 139 vpisov / 61 hiš čez tri knjige in sedem let; NOVELA (novela P85 potrjena 3. leto): vsi statusi ulomki ali poklici — ½ zemljak 5 + ¼ zemljak 4 + bajtar 2 (vrnitev po 1891: 0) + učitelj 1; PT klasifikacija 11/1 (58 v luknji 41–60 — že dokazana P84/P85; luknja ostaja 14 dokazanih, brez novih); 0 nezakonskih; r70 h61 edini vpis brez botre + brez podpisa (ISTI vzorec kot 1891 r39 na ISTI hiši!); SIDRA: h58 (oče Janez Požek [~] × mati Ana Dragos [~] — POŽEK × DRAGOS 3. LETO 1889+1890+1892, najdaljša zasidrana zveza familije; forenzika izrez: jasno 58, prvi prebir 53 [~] Kurrent 3/5), h61 (oče Nikolaj Požek [~] ½ × mati Ana Dragos [~] — KONTINUITETA SIDRA 2. LETO: P86 1891 ISTA zveza + ISTI vzorec brez botre/podpisa; status ¼→½ [~] — menjava statusa na zasidrani hiši [~]; P82 sidro 1887 + 1897 + 1891 + 1892), h63 (oče Nikolaj Hrižan [~] ¼ — ISTI OČE ime+priimek 4×: 1887 Prižan [Križan] + 1889 Hrigian? [nezakonska] + 1890 Križan ½ + 1892 Hrižan; P85 SIDRO potrjeno; Kurrent K/H varianta; mati Pegdirec [~] ≈ 1889 Pezdirec [~]), h1 (oče Nikolaj Željko [~] ¼ × mati Katarina Kure [~] — ISTA ZVEZA P83 1888 »Zeljth« [~] + 1892, re-read; NAJNIŽJA hišna številka v vzorcu; botra Jurij Željko + Katarina Kure = ISTA priimka kot starši), h32 (oče Matija Urh [~] ¼ — ISTI OČE 3×: 1889 + 1890 + 1892; mati Pezdirec/Pegdirec vseh 3 let — ISTA žena? [~]; Urh veriga 1887–1892, 6 let; PUA urh 1.0), h90 (oče Franc Kopitac [~] učitelj × Marija Schweizer [~] — ISTA UČITELJSKA DRUŽINA 1890+1892; ŠOLSKA HIŠA; botra Janez Barle NADUČITELJ — prvi v vzorcu), h24 (oče Martin Jurajevič [~] bajtar — MENJAVA GOSPODINJSTVA: Brinec gospodinjstvo 1887 + anomalija 1890 → Jurajevič 1892, 4. vpis; forenzika 4x: kraj jasno Griblje, modri pripisi so mrliški), h27 (oče Marko Pozdirec [~] bajtar — MENJAVA GOSPODINJSTVA: oče 1887 Kukar [~] = 1890 Stubhar [~] ISTI (re-read) → 1892 Pozdirec, 3. vpis), h29 (oče Peter Milek [~] × mati Ana Križan [~] — ISTA ZVEZA 1888+1892: P84 1888 Peter Milek ½ × Ana Križan »hiša epidemije«; status ½→¼ [~]; mrliška 04894 1886: trije Mileh [~] otroci v koleri), h75/h73/h12 NOVE (prvi dokaz čez tri knjige); Dragos/Dragoš 2. hiša familije (h58+h61 mati + h12 oče Janez Dragos); ŠIMEC 0× — 2. leto zapored brez najtrajnejše familije (1886: 4, 1887: 1, 1888: 1, 1889: 3, 1890: 6, 1891: 0, 1892: 0); babice: Marija Brinec 4× (8.–10. leto) + Ana Križan 3× + Marjeta Trotter 2× (nova) + Ana Krajnovec 1×; DUHOVNIKI: Fr./St. Češarek [~] 8 (Jan–Sep) + Jos. Rauq [~] 3 (Feb!, Okt–Dec) + prazna 1 — oba SOČASNO aktivna 1892 (menjava P86 decembra 1891 NI dokončna); r13 podpis celo ime »Franc Češarek« [~]; live verifikacija: knjiga HTTP 200 (inventar 326), citirani skeni 5/5 JPEG 200; skripta scripts/p87_parish_baptism_1892.py (I1–I10, --check PASS); status SAMPLE-TRANSCRIPTION-1892",
@@ -842,5 +842,113 @@ push(
   p87Errors.length === 0
     ? `12 vpisov / 12 hiš — NARE (0 neberljivih; 12 zasidranih v vitals) · okvir 1892 skeni 56–63 (vpisi 56–62; prelom 1893 str. 62; 82 zveznih vrstic) · NOVELA: statusi ulomki, novela P85 potrjena 3. leto (½ 5 + ¼ 4 + bajtar 2 + učitelj 1) · PT 11/1 (58 — brez novih luknjanih) · nove hiše 3 (12, 73, 75) + ponovitve 9 · sidra h58 Požek × Dragos 3. leto / h61 kontinuiteta sidra 1891+1892 (isti vzorec brez botre/podpisa; status ¼→½) / h63 oče ISTI 4× / h1 Željko × Kure 1888+1892 / h29 Milek × Križan 1888+1892 / h32 Urh 3× 1889+1890+1892 / h90 šolska (učitelj 1890+1892; nadučitelj botra) / h24 + h27 menjavi gospodinjstva · Šimec 0× 2. leto · Češarek 8× + Rauq 3× (sočasno)`
     : p87Errors.join("; "),
+);
+
+// ——— qa-p88: p88 krstna 1893 — širitev vzorca na leto 1893 (issue #18;
+//      SAMPLE-TRANSCRIPTION-1893; celoven neodvisen preracun iz bundled
+//      virov: HOUSE_VITALS × PARISH_BOOKS; PT klasifikacija iz pinov;
+//      sidra: h72 Strauš SIDRO 3. VPIS (oče ISTI 3×: 1888+1891+1893), h65
+//      Milek oče ISTI 3× (1887+1889+1893), h27 DVOJČICI (Antonija † + Ivana,
+//      vertikalni pripis; oče Stukar/Stubhar, ISTA mati Klobučar), h21
+//      ŠIMEC NAZAJ (mati Ana Šimec + botra Janez Šimec — prvič od 1890;
+//      oče Požek ISTI, MATI MENJANA Brinec→Šimec — 3. menjava matere),
+//      h24 ISTA zveza Brinec × Jakobec 1887+1893 (5. vpis; izmenjava
+//      Brinec↔Jurajevič), h30 MENJAVA GOSPODINJSTVA (Milek → Jakljevič),
+//      h41 ISTA zveza 1890+1893, h15 ISTA zveza 1887+1893 (Jakšič/Jaklič),
+//      h60 NOVA (Željko 2. hiša), h91 NOVA (botra Željko + Kure); paleografska
+//      faza v research/issue17/parish-baptism-1893.json, live verifikator
+//      scripts/p88_parish_baptism_1893.py --check I1–I10) ———
+const p88Hv = HOUSE_VITALS.filter((h) => h.bookSignature === "04105" && h.year === 1893);
+const p88Errors: string[] = [];
+const P88_PT_IN_SET = ["15", "21", "23", "24", "25", "27", "30", "32", "65", "70", "72", "74", "91"];
+const P88_PT_GAP = ["41", "46", "60"];
+if (p88Hv.length !== 17)
+  p88Errors.push(`vpisov 1893 (04105, zasidrani) ≠ 17 (${p88Hv.length})`);
+const p88Houses = new Set(p88Hv.map((h) => h.houseNo));
+if (p88Houses.size !== 16)
+  p88Errors.push(`različnih hiš ≠ 16 (${p88Houses.size}: ${[...p88Houses].sort((a, b) => Number(a) - Number(b)).join(",")})`);
+const p88Bad = p88Hv.filter((h) => h.status !== "DOCUMENTED" || !h.scan || !h.page || h.page !== h.scan - 1 || h.scan < 63 || h.scan > 69);
+if (p88Bad.length > 0)
+  p88Errors.push(`okvir 1893: skeni 63–69 ali stran ≠ sken − 1 krščeno pri ${p88Bad.length}`);
+// sidro 1: hiša 72 — SIDRO 3. VPIS (oče Matija Strauš ISTI 3×)
+const p88H72 = p88Hv.find((h) => h.houseNo === "72" && h.scan === 66);
+if (!p88H72 || !p88H72.whatSi.includes("Matija Strauš") || !p88H72.whatSi.includes("3. VPIS"))
+  p88Errors.push("sidro hiša 72: whatSi ≠ P88 (Matija Strauš [~], SIDRO 3. VPIS — oče ISTI 3×)");
+// sidro 2: hiša 65 — oče Matija Milek ISTI 3× (1887+1889+1893)
+const p88H65 = p88Hv.find((h) => h.houseNo === "65" && h.scan === 64);
+if (!p88H65 || !p88H65.whatSi.includes("Matija Milek") || !p88H65.whatSi.includes("3×"))
+  p88Errors.push("sidro hiša 65: whatSi ≠ P88 (Matija Milek [~], oče ISTI 3×)");
+// sidro 3: hiša 27 — DVOJČICI (Stukar/Stubhar; ISTA mati Klobučar)
+const p88H27 = p88Hv.filter((h) => h.houseNo === "27" && h.scan === 65);
+if (p88H27.length !== 2 || !p88H27.every((h) => h.whatSi.includes("DVOJČICA") && h.whatSi.includes("Klobučar")))
+  p88Errors.push("sidro hiša 27: dvojčici ≠ 2 bloka z DVOJČICA + Klobučar");
+// sidro 4: hiša 21 — ŠIMEC NAZAJ (mati menjana Brinec → Šimec)
+const p88H21 = p88Hv.find((h) => h.houseNo === "21" && h.scan === 68);
+if (!p88H21 || !p88H21.whatSi.includes("Šimec") || !p88H21.whatSi.includes("Požek") || !p88H21.whatSi.includes("MENJANA"))
+  p88Errors.push("sidro hiša 21: whatSi ≠ P88 (Janez Požek [~] × Ana Šimec [~], mati menjana; Šimec nazaj)");
+// sidro 5: hiša 24 — ISTA zveza Brinec × Jakobec (5. vpis)
+const p88H24 = p88Hv.find((h) => h.houseNo === "24" && h.scan === 67);
+if (!p88H24 || !p88H24.whatSi.includes("Matija Brinec") || !p88H24.whatSi.includes("ISTA ZVEZA"))
+  p88Errors.push("sidro hiša 24: whatSi ≠ P88 (Matija Brinec [~] × Barbara Jakobčič [~], ISTA zveza 1887+1893)");
+// sidro 6: hiša 30 — MENJAVA GOSPODINJSTVA (Milek → Jakljevič)
+const p88H30 = p88Hv.find((h) => h.houseNo === "30" && h.scan === 67);
+if (!p88H30 || !p88H30.whatSi.includes("Jakljevič") || !p88H30.whatSi.includes("MENJAVA GOSPODINJSTVA"))
+  p88Errors.push("sidro hiša 30: whatSi ≠ P88 (Peter Jakljevič [~], menjava Milek → Jakljevič)");
+// sidro 7: hiša 41 — ISTA zveza 1890+1893 (luknja)
+const p88H41 = p88Hv.find((h) => h.houseNo === "41" && h.scan === 64);
+if (!p88H41 || !p88H41.whatSi.includes("Hušič") || !p88H41.whatSi.includes("ISTA ZVEZA"))
+  p88Errors.push("sidro hiša 41: whatSi ≠ P88 (Matija Hušič? [~], ISTA zveza 1890+1893)");
+// sidro 8: hiša 15 — ISTA zveza 1887+1893 (Jakšič/Jaklič × Brinec)
+const p88H15 = p88Hv.find((h) => h.houseNo === "15" && h.scan === 66);
+if (!p88H15 || !p88H15.whatSi.includes("Jaklič") || !p88H15.whatSi.includes("ISTA ZVEZA"))
+  p88Errors.push("sidro hiša 15: whatSi ≠ P88 (Janez Jaklič [~] × Marija Brinec [~], ISTA zveza)");
+// sidro 9: hiša 60 — NOVA (Željko 2. hiša)
+const p88H60 = p88Hv.find((h) => h.houseNo === "60" && h.scan === 63);
+if (!p88H60 || !p88H60.whatSi.includes("Željko") || !p88H60.whatSi.includes("2. HIŠA"))
+  p88Errors.push("sidro hiša 60: whatSi ≠ P88 (Nikolaj Željko [~], Željko 2. hiša h1 → h60)");
+// sidro 10: hiša 91 — NOVA (botra Željko + Kure)
+const p88H91 = p88Hv.find((h) => h.houseNo === "91" && h.scan === 65);
+if (!p88H91 || !p88H91.whatSi.includes("91 NOVA") || !p88H91.whatSi.includes("Željko"))
+  p88Errors.push("sidro hiša 91: whatSi ≠ P88 (h91 NOVA, botra Željko + Kure)");
+// PT klasifikacija == pin: 13 v naboru + 3 v luknji (46 NOVA — 15. dokazana; 41/60 že znani)
+const p88InSet = [...p88Houses].filter((h) => P88_PT_IN_SET.includes(h));
+const p88Gap = [...p88Houses].filter((h) => P88_PT_GAP.includes(h));
+if (p88InSet.length !== 13 || p88Gap.length !== 3)
+  p88Errors.push(`PT klasifikacija ≠ 13/3 (${p88InSet.length}/${p88Gap.length})`);
+if (p88Gap.some((h) => !(Number(h) >= 41 && Number(h) <= 60)))
+  p88Errors.push("luknjane hiše izven 41–60");
+// kontinuitete čez leta prek HOUSE_VITALS
+for (const [hn, yr, sig, pin] of [
+  ["72", 1888, "04105", "Strauš"], ["72", 1891, "04105", "Straus"], ["65", 1887, "04105", "Milek"],
+  ["65", 1889, "04105", "Milek"], ["27", 1887, "04105", "Kukar"], ["15", 1887, "04105", "Jakšič"],
+  ["21", 1887, "04105", "Požek"], ["41", 1890, "04105", "Hrušič"], ["30", 1890, "04105", "Milek"],
+  ["24", 1892, "04105", "Jurajevič"], ["32", 1892, "04105", "Urh"], ["1", 1888, "04105", "Zeljth"],
+  ["74", 1886, "04894", "Hambeč"], ["25", 1886, "04455", "Klepec"],
+] as const) {
+  const blk = HOUSE_VITALS.find((v) => v.houseNo === hn && v.bookSignature === sig && v.year === yr);
+  const anyBlk = HOUSE_VITALS.some((v) => v.houseNo === hn && v.bookSignature === sig && v.year === yr && v.whatSi.includes(pin));
+  if (!blk || !anyBlk)
+    p88Errors.push(`kontinuiteta hiša ${hn} (${yr}, ${sig}, pin ${pin}) manjka ali pin ne ustreza`);
+}
+// NOVE hiše 1893 (23, 46, 60, 70, 91) — ne obstajajo v nobenem prejšnjem letu/knjigi
+for (const hn of ["23", "46", "70", "91"]) {
+  if (HOUSE_VITALS.some((v) => v.houseNo === hn && !(v.bookSignature === "04105" && v.year === 1893)))
+    p88Errors.push(`NOVA hiša ${hn} (P88) že obstaja v prejšnjem letu — pini neskladni`);
+}
+// h60: NOVA krstna — ponovitev čez knjige (poroka 04455 1886 GRIBLJE 60)
+const p88H60b = HOUSE_VITALS.find((v) => v.houseNo === "60" && v.bookSignature === "04455" && v.year === 1886);
+if (!p88H60b || !p88H60b.whatSi.includes("GRIBLJE 60"))
+  p88Errors.push("kontinuiteta hiša 60 (1886, 04455, pin GRIBLJE 60) manjka");
+// vitals skupaj 150 (P87: 133 + 17)
+if (HOUSE_VITALS.length !== 150)
+  p88Errors.push(`HOUSE_VITALS ≠ 150 (${HOUSE_VITALS.length})`);
+push(
+  "qa-p88-parish-baptism-1893",
+  "P88: ŽUPNIJA PODZEMELJ — KRSTNA KNJIGA 04105, POLNO LETO 1893 (issue #18; SAMPLE-TRANSCRIPTION-1893; MERI, NE odloča; v7 join nespremenjen): širitev vzorca P79 (1886) → P82 (1887) → P83 (1888) → P84 (1889) → P85 (1890) → P86 (1891) → P87 (1892) na leto 1893 — okvir: skeni 63–70 == tiskane strani 62–69 (stran == sken − 1; glava »1893~« na str. 62 po 1892 row 82; vpisi na skenih 63–68; velike cifre »1894« na str. 69 po row 83 — oznake se ponastavijo na 1, novela P83 potrjena 6. leto; 1893 ima 83 zveznih vrstic) — VSI vpisi z Griblji: 17 vpisov / 16 hiš (h27 DVOJČICI!): 60, 65, 41, 70, 23, 91, 27 ×2, 15, 46, 72, 30, 24, 74, 21, 25, 32 — NOVE hiše 4 (23, 46, 70, 91) + ponovitve 12 (h60 nova krstna — poroka 04455 1886) — skupaj s P79–P87 vzorec 156 vpisov / 66 hiš čez tri knjige in OSEM LET; NOVELA (novela P85 potrjena 4. leto): vsi statusi ulomki — ½ zemljak 13 + ¼ zemljak 4 (brez bajtarjev/obrtnikov); PT klasifikacija 13/3 (46 v luknji 41–60 — NOVA, 15. dokazana številka; 41 že dokazana P85, 60 P80; luknja zdaj 15 dokazanih); 0 nezakonskih; r50 brez babice (edini); r34 vsi starševski stolpci »isto« (ditto); SIDRA: h72 (oče Matija Strauš [~] — SIDRO 3. VPIS: ISTI oče 3× čez 6 let 1888+1891+1893; mati 1891+1893 ISTA Jakobič; botra Straucelj ISTA 2×; tri-virska P80 + PUA @71 0.8571 — najmočnejša veriga vzorca), h65 (oče Matija Milek [~] — ISTI 3×: 1887+1889+1893; Milek = P81 near-miss), h27 (DVOJČICI Antonija †13/9.93 + Ivana — vertikalni pripis »dvojčice«, 2. dvojčki v vzorcu po P85 h30; oče Janez Stukar/Stubhar [~] = 1887 Kukar + 1890 Stubhar ISTI; ISTA mati Katarina Klobučar — 3.+4. vpis; forenzika 5x: jasno 27, prvi prebir 24 [~]), h21 (oče Janez Požek [~] ISTI 1887+1893; MATI MENJANA: 1887 Brinec → 1893 Ana Šimec — 3. dokazana menjava matere po h61/h72; ŠIMEC NAZAJ NA GRIBLJIH — mati + botra Janez Šimec prvič od 1890; Požek 6. leto), h24 (Matija Brinec [~] × Barbara Jakobčič [~] — ISTA ZVEZA kot 1887; 5. VPIS; gospodinjstvi Brinec ↔ Jurajevič se izmenjujeta 1887→1892→1893), h30 (Peter Jakljevič [~] × Marija Kralj [~] — MENJAVA GOSPODINJSTVA Milek → Jakljevič; babica PRAZNA; podpis obiskni G. Ambrož? m.p.), h41 (Matija Hušič? [~] × Neža Jakobič [~] — ISTA ZVEZA kot 1890 Hrušič × Jakobčič; 3. vpis na luknji), h15 (Janez Jaklič [~] × Marija Brinec [~] — ISTA ZVEZA kot 1887 Jakšič × Brinec), h60 (NOVA — oče Nikolaj Željko [~] = h1 oče 1888+1892 — ŽELJKO 2. HIŠA: h1 → h60), h91 (NOVA — botra Nikolaj Željko + Katarina Kure = h1 starši priimki — Željko signal 3. hiša), h74 (mrliška 04894 1886 Hambeč [~] → Kambič? [~] — čez knjige varianta), h25 (poroka 04455 1886 Klepec GRIBLJE 25 → 1893 Matija Hrižan × Ana Požek — menjava gospodinjstva; 2. Hrižan oče), h32 (oče Matija Meh/Mrh? [~] — MERI: ISTA mati Pegdirec + ISTA botra Hrižan/Strauš kot 1892 Urh — isti oče z novo brano priimko ali drug mož); ŽELJKO VERIGA 3 hiše (h1 + h60 + h91 botra); ŠIMEC nazaj (2 signala); babice: Trotter 9× (dominanta) + Ana Hrižan 3× + Barbara Adlešič 2× + Ana Križan 1× + Ana Klepec 1× + prazna 1; DUHOVNIKI: Jos. Rauq [~] 14 (Jan–Avg) + NOV Janez Jelovšek? [~] 2 (od septembra) + G. Ambrož? m.p. 1 (obiskni); live verifikacija: knjiga HTTP 200 (inventar 326), citirani skeni 6/6 JPEG 200; skripta scripts/p88_parish_baptism_1893.py (I1–I10, --check PASS); status SAMPLE-TRANSCRIPTION-1893",
+  "P88: PARISH OF PODZEMELJ — BAPTISM REGISTER 04105, THE FULL YEAR 1893 (issue #18; SAMPLE-TRANSCRIPTION-1893; MEASURES, does not decide; the v7 join unchanged): extending the P79 (1886) → P82 (1887) → P83 (1888) → P84 (1889) → P85 (1890) → P86 (1891) → P87 (1892) sample to 1893 — the frame: scans 63–70 == printed pages 62–69 (page == scan − 1; the »1893~« heading on p. 62 after the 1892 row 82; entries on scans 63–68; the large figures »1894« on p. 69 after row 83 — the labels restart at 1, the P83 novel confirmed for the 6th year; 1893 has 83 continuous rows); ALL Griblje entries: 17 entries / 16 houses (h27 TWINS!): 60, 65, 41, 70, 23, 91, 27 ×2, 15, 46, 72, 30, 24, 74, 21, 25, 32 — 4 NEW houses (23, 46, 70, 91) + 12 repeats (h60 a new baptism — the 1886 marriage 04455) — with P79–P87 the sample totals 156 entries / 66 houses across three books and EIGHT years; NOVEL (the P85 novel confirmed for the 4th year): all statuses fractions — ½ smallholder 13 + ¼ smallholder 4 (no cottagers/craftsmen); the PT classification 13/3 (46 in the 41–60 gap — NEW, the 15th proven number; 41 already proven P85, 60 P80; the gap now has 15 proven); 0 illegitimates; r50 without a midwife (the only one); r34 all parent columns »isto« (ditto); ANCHORS: h72 (father Matija Strauš [~] — the ANCHOR'S 3rd ENTRY: THE SAME father 3× across 6 years 1888+1891+1893; the mother 1891+1893 THE SAME Jakobič; godmother Straucelj THE SAME 2×; the three-source P80 + PUA @71 0.8571 — the strongest chain of the sample), h65 (father Matija Milek [~] — THE SAME 3×: 1887+1889+1893; Milek = the P81 near-miss), h27 (TWINS Antonija † + Ivana — the vertical note »dvojčice«, the 2nd twins in the sample after the P85 h30; father Janez Stukar/Stubhar [~] = 1887 Kukar + 1890 Stubhar THE SAME; THE SAME mother Katarina Klobučar — the 3rd+4th entries; 5x forensics: clearly 27, first read 24 [~]), h21 (father Janez Požek [~] THE SAME 1887+1893; MOTHER CHANGE: 1887 Brinec → 1893 Ana Šimec — the 3rd proven mother change after h61/h72; ŠIMEC BACK IN GRIBLJE — mother + godfather Janez Šimec for the first time since 1890; Požek the 6th year), h24 (Matija Brinec [~] × Barbara Jakobčič [~] — THE SAME COUPLE as 1887; the 5th ENTRY; the Brinec ↔ Jurajevič households alternate 1887→1892→1893), h30 (Peter Jakljevič [~] × Marija Kralj [~] — HOUSEHOLD CHANGE Milek → Jakljevič; midwife EMPTY; visiting signature G. Ambrož? m.p.), h41 (Matija Hušič? [~] × Neža Jakobič [~] — THE SAME COUPLE as 1890 Hrušič × Jakobčič; the 3rd entry on the gap), h15 (Janez Jaklič [~] × Marija Brinec [~] — THE SAME COUPLE as 1887 Jakšič × Brinec), h60 (NEW — father Nikolaj Željko [~] = the h1 father 1888+1892 — ŽELJKO'S 2nd HOUSE: h1 → h60), h91 (NEW — godparents Nikolaj Željko + Katarina Kure = the h1 parents' surnames — the Željko signal, a 3rd house), h74 (mrliška 04894 1886 Hambeč [~] → Kambič? [~] — the cross-book variant), h25 (the 1886 marriage 04455 Klepec GRIBLJE 25 → 1893 Matija Hrižan × Ana Požek — a household change; the 2nd Hrižan father), h32 (father Matija Meh/Mrh? [~] — MEASURES: THE SAME mother Pegdirec + THE SAME godparents Hrižan/Strauš as the 1892 Urh — either the same father with a newly read surname or another husband); THE ŽELJKO CHAIN of 3 houses (h1 + h60 + h91 godparents); ŠIMEC back (2 signals); midwives: Trotter 9× (the dominant) + Ana Hrižan 3× + Barbara Adlešič 2× + Ana Križan 1× + Ana Klepec 1× + empty 1; PRIESTS: Jos. Rauq [~] 14 (Jan–Aug) + NEW Janez Jelovšek? [~] 2 (from September) + G. Ambrož? m.p. 1 (visiting); live verification: the book HTTP 200 (inventory 326), cited scans 6/6 JPEG 200; the script scripts/p88_parish_baptism_1893.py (I1–I10, --check PASS); status SAMPLE-TRANSCRIPTION-1893",
+  p88Errors.length === 0,
+  p88Errors.length === 0
+    ? `17 vpisov / 16 hiš — h27 DVOJČICI (0 neberljivih; 17 zasidranih v vitals) · okvir 1893 skeni 63–70 (vpisi 63–68; prelom 1894 str. 69; 83 zveznih vrstic) · NOVELA: ulomki, novela P85 potrjena 4. leto (½ 13 + ¼ 4) · PT 13/3 (46 NOVA — 15. dokazana luknja; 41/60 že znani) · nove hiše 4 (23, 46, 70, 91) + ponovitve 12 (h60 nova krstna) · sidra h72 Strauš SIDRO 3. VPIS (oče ISTI 3×) / h65 Milek oče ISTI 3× / h27 dvojčici (oče ISTI, ISTA mati) / h21 Šimec nazaj + mati menjana / h24 ISTA zveza 1887+1893 / h30 menjava Milek → Jakljevič / h41 ISTA zveza / h15 ISTA zveza / h60 Željko 2. hiša / h91 NOVA botra Željko · Željko veriga 3 hiše · Šimec nazaj · Rauq 14× + NOV Jelovšek? od sept.`
+    : p88Errors.join("; "),
 );
 }

@@ -4198,3 +4198,111 @@ per-hišna kronologija tri-virskih hiš 13/36/71; ③ mrliška 04894 1887–1892
 
 **v7 runtime join NESPREMENJEN** (sha256 4bb40370…, statična projekcija;
 disciplina I9).
+
+## §65 — P88: župnija Podzemelj — krstna knjiga 04105, polno leto 1893 (issue #18) — 2026-10-16
+
+**SAMPLE-TRANSCRIPTION-1893** (MERI, NE odloča; v7 join nespremenjen).
+P87 nextSteps ①: širitev vzorca po letih (P79 1886 → P82 1887 → P83 1888 →
+P84 1889 → P85 1890 → P86 1891 → P87 1892 → **P88 1893**).
+
+**Okvir**: skeni 63–70 == tiskane strani 62–69 (stran == sken − 1); glava
+**»1893~« na str. 62** po 1892 row 82; vpisi na skenih 63–68; **velike
+cifre »1894« na str. 69 po row 83** — oznake se ponastavijo na 1, **novela
+P83 potrjena 6. leto**; leto 1893 ima **83 zveznih vrstic**. Skeni 64–73
+preneseni v delovni imenik /tmp/p88 (63 kopiran iz /tmp/p86; ročna faza, NI
+v repu); hi-rez izrezi 2x–5x za vseh 17 Griblje vrstic + forenzika hišnih
+številk 5x (r15 jasno **65** — prvi prebir 60 [~]; r33/r34 jasno **27** —
+prvi prebir 24 [~]; vertikalni pripis **»dvojčice«** med r33/r34).
+
+**Vzorec 1893**: **17 vpisov / 16 hiš** (h27 DVOJČICI — Antonija †13/9.93 +
+Ivana, vsi starševski stolpci r34 »isto«; 2. dvojčki v vzorcu po P85 h30,
+prvi z eksplicitnim pripisom): 60, 65, 41, 70, 23, 91, 27 ×2, 15, 46, 72,
+30, 24, 74, 21, 25, 32. NOVE hiše 4 (**23, 46, 70, 91**) + ponovitve 12
+(h60 nova krstna — poroka 04455 1886 Maria Bohor GRIBLJE 60). Skupaj s
+P79–P87: **156 vpisov / 65 hiš čez tri knjige in osem let**. NOVELA:
+ulomki — **novela P85 potrjena 4. leto** (½ zemljak 13 + ¼ zemljak 4; brez
+bajtarjev/obrtnikov). PT klasifikacija **13/3** — **46 NOVA (15. dokazana
+številka luknje!)**; 41 že dokazana (P85; 1893 3. vpis), 60 že dokazana
+(P80 poroka; 1893 prvi krstni vpis). 0 nezakonskih; r50 brez babice
+(edini); r34 ditto.
+
+**Sidra**:
+- **h72** — oče Matija Strauš [~]: **SIDRO 3. VPIS — ISTI oče 3× čez 6
+  let** (1888 P83 sidro + 1891 P86 + 1893); mati 1891+1893 ISTA Marija
+  Jakobič (1888 Husič menjana); botra Straucelj ISTA 2×; tri-virska hiša
+  P80 + PUA Strauß Niklo @71 (P81 0.8571) — **najmočnejša veriga vzorca**;
+- **h65** — oče Matija Milek [~]: **ISTI 3×** (1887+1889+1893; mati
+  variante Požek/Trojžif?/Jožek? [~]); Milek = P81 near-miss;
+- **h27** — **DVOJČICI** (vertikalni pripis); oče Janez Stukar/Stubhar [~]
+  = 1887 Kukar + 1890 Stubhar **ISTI** (Kurrent varianta); ISTA mati
+  Katarina Klobučar — 3.+4. vpis; forenzika 5x jasno 27;
+- **h21** — oče Janez Požek [~] **ISTI** 1887+1893; **MATI MENJANA** (1887
+  Marija Brinec → 1893 **Ana Šimec** — 3. dokazana menjava matere po
+  h61/h72); **ŠIMEC NAZAJ NA GRIBLJIH** — mati + botra Janez Šimec prvič
+  od 1890 (Gerišče 1893 oče Janez Šimec = ISTI? [~]); Požek 6. leto;
+- **h24** — Matija Brinec [~] × Barbara Jakobčič [~]: **ISTA ZVEZA kot
+  1887**; **5. VPIS** — gospodinjstvi Brinec ↔ Jurajevič se izmenjujeta
+  (1887 → 1892 → 1893);
+- **h30** — Peter Jakljevič [~] × Marija Kralj [~]: **MENJAVA
+  GOSPODINJSTVA** (Milek 1890 dvojčka + 1891 → 1893); babica PRAZNA;
+  podpis obiskni G. Ambrož? [~] m.p.;
+- **h41** — Matija Hušič? [~] × Neža Jakobič [~]: **ISTA ZVEZA kot 1890**
+  (Hrušič × Jakobčič); 3. vpis na luknji;
+- **h15** — Janez Jaklič [~] × Marija Brinec [~]: **ISTA ZVEZA kot 1887**
+  (Jakšič [~] × Brinec);
+- **h60** — **NOVA krstna**: oče Nikolaj Željko [~] = **h1 oče (1888+1892)
+  — ŽELJKO 2. HIŠA** (h1 → h60);
+- **h91** — **NOVA**: botra **Nikolaj Željko + Katarina Kure** = h1
+  starši priimki — **Željko signal 3 hiš** (h1, h60, h91);
+- **h74** — mrliška 04894 1886 **Hambeč** [~] → 1893 **Kambič?** [~] —
+  čez knjige varianta gospodinjstva;
+- **h25** — poroka 04455 1886 (ženin Jurij Klepec GRIBLJE 25) → 1893
+  Matija Hrižan [~] × Ana Požek [~] — menjava gospodinjstva; **2. Hrižan
+  oče** (poleg h63 Nikolaj);
+- **h32** — oče **Matija Meh/Mrh? [~]** — **MERI**: ISTA mati (Marjeta/
+  Margaretha Pegdirec) + ISTA botra (Marko Hrižan + Barbara Strauš) kot
+  1892 (Urh) — ali isti oče z novo brano priimko ali drug mož [~]; 4. vpis.
+
+**Željko veriga 3 hiš** (h1 + h60 + h91 botra); Šimec nazaj (2 signala).
+Babice: **Marjeta/Marija Trotter 9×** (nova dominanta) + Ana Hrižan 3× +
+Barbara Adlešič 2× + Ana Križan 1× + Ana Klepec 1× + prazna 1. Duhovniki:
+**Jos. Rauq 14× (Jan–Avg) + NOV Janez Jelovšek? [~] 2× (od septembra) +
+obiskni G. Ambrož? m.p. 1×** — druga menjava v 3 letih. Modri pripisi 20.
+st. kot genealoški vir: 6 smrti + 1 poroka + Italijani 1941 — evidence-only.
+
+**Integracija**: `research/issue17/parish-baptism-1893.json` (dokaz;
+SAMPLE-TRANSCRIPTION-1893) + `scripts/p88_parish_baptism_1893.py` (I1–I10,
+--check PASS: knjiga 200 + inventar 326, citirani skeni 6/6 JPEG 200, okvir
++ prelom 1894 + ponastavitev oznak, PT 13/3 z NOVO 46, sidra h72/h65/h27/
+h21/h24/h30/h41/h15/h60/h91, čez-letne kontinuitete prek dokazov P82–P87 —
+h72 vsi trije Strauš, h65 vsi trije Milek, h27 Kukar + Klobučar, h15
+Jakšič + Brinec, h21 Požek + Brinec→Šimec, h41 Hrušič, h30 Milek dvojčka,
+h24 Jurajevič→Brinec izmenjava, h32 Urh + Pegdirec + botra, h1 Zeljth,
+h74 Hambeč 04894, h25 Klepec 04455, runtime projekcija 17/150, brez
+»Hraus«) + `parish.ts` HOUSE_VITALS 133 → **150** (17 zasidranih 1893; vsi
+DOCUMENTED; komentar P88) + **qa-p88-parish-baptism-1893** (89. kontrola;
+celoven neodvisen preracun: okvir/PT 13/3/sidra h72–h91/kontinuitete 14
+pinov + h60 04455 poroka + h41 any-blok pin/NOVE hiše/vitals 150; dve
+obliki repo/produkcija) + qa-p86/p87 vitals pini 133 → 150 + qa-p85 h30/h41
+dovolita 1893 blok (P88 kontinuiteta) + atlas.ts **PT_GAP_KNOWN + 46** (15.
+dokazana!) + p80 skripta I7 P88 scoping (vitals 150) + p85 skripta I10
+kumulativno (156; vesolje brez 1891/1892/1893 blokov) + p86/p87 skripti
+I10 kumulativno (156; hiše 64). Kartica NI dodana (vzorec P77–P88).
+Lekcije (9. primer): ① kontekstni ±okvir grep še enkrat zavajal (prvi
+h24/h27 prebir) → neposreden parser; ② h46/h60 NISTA v PT chain naboru →
+46 NOVA luknja (15.) + atlas PT_GAP_KNOWN + 46; h60 mehanično ponovitev
+(04455) — dokaz newSampleHouses usklajen z neodvisnim preracunom; ③ qa-p88
+h41 pin — prvi 1890 blok je Muc bajtar (ne Hrušič) → any-blok pin (vzorec
+`; ④ r33 hišna »24« → 5x jasno 27 (dvojčici na isti hiši!); ⑤ r15 hišna
+»60« → 5x jasno 65 (oče Milek 3× veriga). Veriga p60–p67 + p70–p88 --check
+PASS (26 skript, vse exit 0; p68 zamrznjen po C2); tsc 0 / lint 0; /api/qa
+dev **89/89** (qa-p88 True).
+
+**nextSteps**: ① P89 = leto 1894 (prelom str. 69 row 1; skeni 70+ — do 73 že
+v /tmp/p88); ② per-hišna kronologija tri-virskih hiš 13/36/71 (h72 zdaj 3
+vpise); ③ mrliška 04894 1887–1893 (smrti prvih žen — dokaz menjav mater
+h21 Brinec→Šimec?; gospodinjstev h30/h24/h25); ④ luknja 41–60: 15 dokazanih
+(46 NOVA); ⑤ h1/h60/h91 Željko veriga: PUA/ATLAS presek.
+
+**v7 runtime join NESPREMENJEN** (sha256 4bb40370…, statična projekcija;
+disciplina I9).
