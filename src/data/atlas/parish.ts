@@ -2837,4 +2837,118 @@ export const HOUSE_VITALS: HouseVital[] = [
     whatEn: "baptized Nikolaj (Nov 17/17) — father Martin Straus [~] (a cotter), mother Barbara Spudič [~]; h45 = the 3rd PIN of the same couple Martin Straus × Barbara Spudič (1896+1897+1900) — the 04455 MARRIAGE LEAD: the same couple christened 3× CONFIRMED — look for the marriage in 04455; note: † Feb 9, 1903 — the child † ~15 months (Feb 9, 1903); godparents Matija Urh [~] + Marija Urh [~] (half smallholder) — Urh = the h32/h90 web; midwife Marjeta Fottre [~]; signature Janez R. Klunček? [~]",
     status: "DOCUMENTED",
   },
+  // ——— P96: polno leto 1901 (vsi Griblje vpisi, str. 122–129 = skeni 125–135) ———
+  // NOVELA P96: TRIJE podvojeni skeni (127/128, 129/130, 133/134); sken 128 =
+  // str. 124 z nalepkama PREPOGNJENIMA (r32/r33 rešeni); stran == sken − 3
+  // (125–127) / − 4 (129–130) / − 5 (131–132) / − 6 (135). 10 vpisov / 9 hiš —
+  // h12 ×2 = PRVA PONOVITEV znotraj leta po 1893 (NARE 1894–1900 prekinjeno;
+  // r1 Juvan? × Cvetkovič vs r36 Straus × Jakobič — več-družinska hiša).
+  // NOVA HIŠA h19 (prvi matrični dokaz; PT nabor; oče bajtar). h44 + h54 v PT
+  // luknji (že v PT_GAP_KNOWN). Meseci: r65–r69 NOVEMBER (EMŠO r66/r68),
+  // December od r70; r36 »Jurij«? = JUNI. Duhovniki: Kulbinek? 7× (= P95
+  // »Klunček?«) + Rauq 2× + NOV podpis Fran. Dostál. Babica Toter 6×.
+  // Excluded: r35 (Griblje [~], hiša pod trakom), r47 (nalepka 26.01.1989).
+  // Dokaz: research/issue17/parish-baptism-1901.json;
+  // verifikator: scripts/p96_parish_baptism_1901.py --check (I1–I10).
+  {
+    houseNo: "12",
+    bookSignature: "04105",
+    year: 1901,
+    scan: 125,
+    page: 122,
+    whatSi: "krščen Peter (3./4. 1.) — oče Gregor Juvan? [~] ½ zemljak, mati Barbura Cvetkovič [~]; glava-vrstica 1901 (r1 pod veliko glavo); h12 = 6. VPIS (1892 Dragoš, 1894, 1895, 1897, 1899); pripomba † 14.12.1970 v Gribljah (MMK) + modra imenska varianta [~]; botra Peter Toter + Marija Straus [~]; babica Marjeta Toter; podpis Janez R. Kulbinek? [~]",
+    whatEn: "baptized Peter (Jan 3/4) — father Gregor Juvan? [~] half smallholder, mother Barbura Cvetkovič [~]; the header row of 1901 (r1 under the large heading); h12 = the 6th ENTRY (1892 Dragoš, 1894, 1895, 1897, 1899); note † Dec 14, 1970 in Griblje (MMK) + a blue name variant [~]; godparents Peter Toter + Marija Straus [~]; midwife Marjeta Toter; signature Janez R. Kulbinek? [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "12",
+    bookSignature: "04105",
+    year: 1901,
+    scan: 129,
+    page: 125,
+    whatSi: "krščen Alojzij (17./17. 6.) — oče Matija Straus [~] ½ zemljak, mati Marija Jakobič [~]; h12 = 7. VPIS — PRVA PONOVITEV znotraj leta po 1893 (NARE 1894–1900 prekinjeno po 8 letih); ISTA hiša kot r1 z RAZLIČNIMA starševskima paroma (več-družinska hiša/menjava); mesec »Jurij«? [~] = JUNI (sekvence r39 July 10); pripis † 17/6.02 — dojenček; botra Matija Straus + Barbura Jakobič; babica Marjeta Toter; podpis Kulbinek? [~]",
+    whatEn: "baptized Alojzij (Jun 17/17) — father Matija Straus [~] half smallholder, mother Marija Jakobič [~]; h12 = the 7th ENTRY — the FIRST within-year repeat since 1893 (the NARE run 1894–1900 broken after 8 years); the SAME house as r1 with a DIFFERENT parent couple (a multi-family house/change); the month »Jurij«? [~] = JUNE (the sequence r39 July 10); note † Jun 17, 1902 — an infant; godparents Matija Straus + Barbura Jakobič; midwife Marjeta Toter; signature Kulbinek? [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "7",
+    bookSignature: "04105",
+    year: 1901,
+    scan: 131,
+    page: 126,
+    whatSi: "krščena Marija (21./28. 7.) — oče Jakob Toter [~] ½ zemljak, mati Katarina Jakobšič [~]; h7 = 2. VPIS (1890 prvi); EMŠO pripomba 2107901505598 → 21.07.1901 (sidro); hišna Kurrent 2/7 dvom [~], kraj Griblje berljiv pod pripombo; babica Marjeta Toter (oče Jakob = njena rodbina — 6× babica 1901); poročena 21.11.1927, † 16.10.1967 Črnomelj; matičar Simonović Nuša 15.12.1987; podpis Kulbinek? [~]",
+    whatEn: "baptized Marija (Jul 21/28) — father Jakob Toter [~] half smallholder, mother Katarina Jakobšič [~]; h7 = the 2nd ENTRY (1890 the first); EMŠO note 2107901505598 → Jul 21, 1901 (an anchor); the house number Kurrent 2/7 doubt [~], the village Griblje legible under the note; midwife Marjeta Toter (the father Jakob = her family — 6× midwife 1901); married Nov 21, 1927, † Oct 16, 1967 Črnomelj; registrar Simonović Nuša Dec 15, 1987; signature Kulbinek? [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "54",
+    bookSignature: "04105",
+    year: 1901,
+    scan: 131,
+    page: 126,
+    whatSi: "krščen Anton (13./13. 8.) — oče Peter Gruzec? [~] žajfar, mati Ana Butala [~]; h54 = 4. VPIS (1886, 1897, 1900) — hiša v PT luknji (PT_GAP_KNOWN vsebuje 54 — brez nove številke); babica Marija Tolar? [~]; podpis Kulbinek? [~]",
+    whatEn: "baptized Anton (Aug 13/13) — father Peter Gruzec? [~] a linen-weaver, mother Ana Butala [~]; h54 = the 4th ENTRY (1886, 1897, 1900) — the house in the PT gap (PT_GAP_KNOWN already contains 54 — no new number); midwife Marija Tolar? [~]; signature Kulbinek? [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "2",
+    bookSignature: "04105",
+    year: 1901,
+    scan: 131,
+    page: 126,
+    whatSi: "krščen Nikolaj (17./17. 8.) — oče Nikolaj Tome [~] ½ zemljak, mati Barbura Jurajevič [~]; h2 = 6. VPIS (1887, 1889, 1891, 1894, 1897); pripis † 17/3.03 — dojenček; babica Barbura Tome; podpis Kulbinek? [~]",
+    whatEn: "baptized Nikolaj (Aug 17/17) — father Nikolaj Tome [~] half smallholder, mother Barbura Jurajevič [~]; h2 = the 6th ENTRY (1887, 1889, 1891, 1894, 1897); note † Mar 17, 1903 — an infant; midwife Barbura Tome; signature Kulbinek? [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "17",
+    bookSignature: "04105",
+    year: 1901,
+    scan: 131,
+    page: 126,
+    whatSi: "krščen Anton (11./11. 9.) — oče Janez Kralj [~] ½ zemljak, mati Doroteja Finlak? [~]; h17 = 3. VPIS (1887, 1894); botra Jurij Straus [~] + Marija Mikl [~]; babica Marjeta Toter; † 2.2.1976 Metlika (MMK l. 1976 str. 374 zap. št. 51); poročen 21.10.1950; podpis Kulbinek? [~]",
+    whatEn: "baptized Anton (Sep 11/11) — father Janez Kralj [~] half smallholder, mother Doroteja Finlak? [~]; h17 = the 3rd ENTRY (1887, 1894); godparents Jurij Straus [~] + Marija Mikl [~]; midwife Marjeta Toter; † Feb 2, 1976 Metlika (MMK 1976 p. 374 no. 51); married Oct 21, 1950; signature Kulbinek? [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "65",
+    bookSignature: "04105",
+    year: 1901,
+    scan: 131,
+    page: 126,
+    whatSi: "krščena Doroteja (11./12. 10.) — oče Matija Mitek? [Mrtek?] ½ zemljak, mati Katarina Pošek? [~]; h65 = 7. VPIS (1887, 1889, 1893, 1895, 1897, 1900); EMŠO pripomba 1110901503024 → 11.10.1901 (sidro); babica Marija Mikl; poročena 6.6.1932, † 9.11.1991; matičar Simonović Nuša 13.12.1982; podpis Kulbinek? [~]",
+    whatEn: "baptized Doroteja (Oct 11/12) — father Matija Mitek? [Mrtek?] half smallholder, mother Katarina Pošek? [~]; h65 = the 7th ENTRY (1887, 1889, 1893, 1895, 1897, 1900); EMŠO note 1110901503024 → Oct 11, 1901 (an anchor); midwife Marija Mikl; married Jun 6, 1932, † Nov 9, 1991; registrar Simonović Nuša Dec 13, 1982; signature Kulbinek? [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "24",
+    bookSignature: "04105",
+    year: 1901,
+    scan: 132,
+    page: 127,
+    whatSi: "krščena Ivana (5./5. 11.) — oče Janez Božek? [~] ½ zemljak, mati Ana Finec? [Simec? — F/S dvom]; h24 = 9. VPIS (1887, 1888, 1890, 1892, 1893, 1895 ×2, 1897); pripis »Umrła 11.10.1946 griblje št 24« SAMOPOTRJUJE hišo; babica Marjeta Toter; podpis Jos. Rauq",
+    whatEn: "baptized Ivana (Nov 5/5) — father Janez Božek? [~] half smallholder, mother Ana Finec? [Simec? — F/S doubt]; h24 = the 9th ENTRY (1887, 1888, 1890, 1892, 1893, 1895 ×2, 1897); the note »Umrła 11.10.1946 griblje št 24« SELF-CONFIRMS the house; midwife Marjeta Toter; signature Jos. Rauq",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "19",
+    bookSignature: "04105",
+    year: 1901,
+    scan: 132,
+    page: 127,
+    whatSi: "krščena Katarina (21./21. 11.) — oče Nikolaj Hriče? [~] bajtar, mati Cecilija Hvalica? [~]; h19 = NOVA HIŠA — PRVI MATRIČNI DOKAZ (81. hiša v vitals; hiša v PT naboru 1825); oče bajtar (najemnik kmeta); botra pod madežem [~]; babica Marjeta Toter; podpis Jos. Rauq",
+    whatEn: "baptized Katarina (Nov 21/21) — father Nikolaj Hriče? [~] a cotter, mother Cecilija Hvalica? [~]; h19 = A NEW HOUSE — THE FIRST REGISTRY PROOF (the 81st house in vitals; the house in the 1825 PT nabor); the father a cotter; godparents under a stain [~]; midwife Marjeta Toter; signature Jos. Rauq",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "44",
+    bookSignature: "04105",
+    year: 1901,
+    scan: 134,
+    page: 128,
+    whatSi: "krščen Francišek (13./14. 12.) — oče Martin Jurajevič [~] bajtar, mati Marjana Krašovec [~]; h44 = 3. VPIS (1887, 1888) — hiša v PT luknji (PT_GAP_KNOWN vsebuje 44 — brez nove številke); kraj z dodatnim koncem »v Mašperar?« [~ — neberljiv mikrotoponim]; NOV DUHOVNIK podpis Fran. Dostál (češko — tudi ne-Griblje r63/r67/r70/r71/r80/r83); botra Danijel Murn (trgovec) + Ana Krambič; babica Ana Mavrefič; † 6.11.1969 Novo mesto",
+    whatEn: "baptized Francišek (Dec 13/14) — father Martin Jurajevič [~] a cotter, mother Marjana Krašovec [~]; h44 = the 3rd ENTRY (1887, 1888) — the house in the PT gap (PT_GAP_KNOWN already contains 44 — no new number); the village carries an extra ending »v Mašperar?« [~ — an illegible microtoponym]; A NEW PRIEST signature Fran. Dostál (Czech — also non-Griblje r63/r67/r70/r71/r80/r83); godparents Danijel Murn (a merchant) + Ana Krambič; midwife Ana Mavrefič; † Nov 6, 1969 Novo mesto",
+    status: "DOCUMENTED",
+  },
+
 ];

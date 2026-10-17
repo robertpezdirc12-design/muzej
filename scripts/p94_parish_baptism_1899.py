@@ -64,7 +64,7 @@ PT_GAP_NEW = ["49"]             # h49 = NOVA luknja številka (19. dokazana)
 EXPECTED_NEW_HOUSES = ["22", "49"]
 EXPECTED_REPEATS = 13           # 15 hiš − 2 novi
 EXPECTED_HOUSES_VITALS = 15
-EXPECTED_VITALS_TOTAL = 254     # HOUSE_VITALS 223 + 15 (P94: krstna 1899); P95: + 16 (1900)
+EXPECTED_VITALS_TOTAL = 264     # HOUSE_VITALS 223 + 15 (P94: krstna 1899); P95: + 16 (1900)
 EV_ONLY_TOTAL = 6               # P84: 2 + P85: 3 + P86: 1 (P77–P83, P87–P94: 0)
 EV_ONLY_HOUSE_STRINGS = {"65 [~]"}  # P85 — edina imenovana EV-only hiša
 EXPECTED_PRIESTS = (6, 4)       # (Šturm, Rauq) + Klun 2 + 3 neberljivih
@@ -367,14 +367,17 @@ def verify():
     # I10 — statistika dokaza == neodvisen preracun: 13 ponovitev + 2 novi
     # (22/49); kumulativ 254 + 6 EV-only == 260; hiše vitals 79; duhovniki
     # (Šturm, Rauq) = (6, 4) + Klun 2 + 3 neberljivih; dojenčijska umrljivost 3
-    # klasifikacija v P94 vesolju — kasnejši bloki NE obstajajo (P94 = zadnja
-    # faza); zgodovinske klasifikacije novih hiš 1886–1898 so zamrznjene v
-    # lastnih skriptah (filtri vesolja)
+    # klasifikacija v P94 vesolju — kasnejši bloki (1900 P95 + 1901 P96) NE
+    # smejo spreminjati zgodovinske klasifikacije leta 1899 (filtri vesolja)
+    vitals_pre1900 = [
+        v for v in vitals_all
+        if not (v["bookSignature"] == BOOK_SIGNATURE and v["year"] in (1900, 1901))
+    ]
     repeat_houses = sorted(
         (h for h in set(houses) if any(
             (v["houseNo"] == h and v["bookSignature"] == BOOK_SIGNATURE and v["year"] != 1899)
             or (v["houseNo"] == h and v["bookSignature"] != BOOK_SIGNATURE)
-            for v in vitals_all
+            for v in vitals_pre1900
         )), key=int)
     new_houses = sorted(set(houses) - set(repeat_houses), key=int)
     n_entries_total = len(vitals_all)
@@ -396,11 +399,11 @@ def verify():
         len(repeat_houses) == EXPECTED_REPEATS
         and new_houses == EXPECTED_NEW_HOUSES == dokaz["stats"]["newSampleHouses"]
         and n_entries_total == EXPECTED_VITALS_TOTAL
-        and n_entries_total + EV_ONLY_TOTAL == 260  # kumulativno po P95 (254 + 6)
-        and n_houses_total == 79  # P94: 78; P95: + 1 (67)
+        and n_entries_total + EV_ONLY_TOTAL == 270  # kumulativno po P95 (254 + 6)
+        and n_houses_total == 80  # P94: 78; P95: + 1 (67)
         and ev_only_houses == EV_ONLY_HOUSE_STRINGS
         and cumulative["entries"] == 244
-        and cumulative["houses"] == 79  # 78 vitals + 1 EV-only »65 [~]«
+        and cumulative["houses"] == 79  # 78 vitals + 1 EV-only »65 [~]« (zamrznjeno P94)
         and dokaz["stats"]["entries"] == EXPECTED_ENTRIES
         and dokaz["stats"]["distinctHouses"] == EXPECTED_DISTINCT
         and dokaz["stats"]["housesIllegible"] == 0

@@ -5103,3 +5103,103 @@ POTRJENA — najti poroko: datum + hiši) ali Berkopne × Klobučar; ④ h51/
 h42/h50 v mrliški 04894 + poročni 04455 (luknja 42/50/51); ⑤ Željko
 veriga 15 signalov + Segina veriga 4 signali; ⑥ produkcija Vercel:
 dohiti P95 → QA 96/96.
+
+## §72 — P96: župnija Podzemelj — krstna knjiga 04105, polno leto 1901 (issue #18) — 2026-10-17
+
+**SAMPLE-TRANSCRIPTION-1901** (MERI, NE odloča; v7 join nespremenjen).
+§71 nextSteps ①: širitev vzorca po letih (P79 1886 → … → P95 1900 →
+**P96 1901**).
+
+**Okvir**: glava **»1901.« na sredini str. 122** (sken 125, P95 dokazano)
+– **row 87 na str. 129** (sken 135; **glava »1902« na dnu iste strani**)
+== tiskane strani **122–129** (**87 vrstic**). **NOVELA P96 — TRIJE
+podvojeni skeni**: **127/128** (str. 124: sken 127 z dvema belima
+matičarskima nalepkama čez r32/r33; sken 128 = ISTA stran z nalepkama
+**PREPOGNJENIMA** na levi rob → **r32/r33 REŠENI**: Juni 1/2 Primostek 2
+Anton EMŠO 01.06.1901 + Gradac 32?/33? Jožef EMŠO 01.06.1901; nalepki
+1989 = † Zagreb/† Črnomelj), **129/130** (str. 125), **133/134** (str.
+128). Stran == sken **− 3** (125–127) / **− 4** (129–130 → 125) /
+**− 5** (131–132 → 126–127) / **− 6** (135 → 129).
+
+**NOVELA formata**: od str. 125 (sken 129) skeni = **celo-spread**
+fotografije — LEVA stran = podatkovna tabela (Zaporedna št./Mesec in dan/
+Rojstni kraj/Hiša/Ime/Vera/Spola/Stan), DESNA stran = Roditelja + Botra +
+Babica pomočnica + Podpis mašnika krščevalca; vrstični pasovi sovpadajo
+po y (isti fizični list). **NOVELA mesecev**: **r65–r69 NOVEMBER**
+(EMŠO r66 08.11.1901 + r68 16.11.1901) — zgodnje branje »December« za
+r65–r69 NAPAČNO; December se začne na r70 (marker + EMŠO r83 18.12.1901);
+**r36 »Jurij«? = JUNI** (sekvence r38 29/29 Juni → r39 »July 10/10«
+vsiljuje).
+
+**VSI vpisi z Griblji: 10 vpisov / 9 hiš**: 12, 12, 7, 54, 2, 17, 65,
+24, 19, 44 — **h12 ×2 = PRVA PONOVITEV znotraj leta po 1893** (NARE
+zaporedje 1894–1900 prekinjeno po 8 letih; r1 Peter 3./4. Januar Gregor
+Juvan? × Barbura Cvetkovič vs r36 Alojzij 17./17. Juni **Matija Straus ×
+Marija Jakobič** — več-družinska hiša/menjava; pripis † 17/6.02 —
+dojenček) — **1 NOVA hiša (19) + 8 ponovitev**; skupaj s P79–P95 vzorec
+**270 vpisov / 81 hiš čez tri knjige in ŠESTNAJST LET** (264 vitals).
+
+**NOVA HIŠA h19** (prvi matrični dokaz; hiša v PT naboru 1825 — brez
+spremembe atlas.ts; **81. hiša vzorca**): oče **Nikolaj Hriče? [~]
+bajtar** (najemnik kmeta) × Cecilija Hvalica? [~]; Katarina (21./21.
+November); botra pod madežem [~]; podpis Jos. Rauq. h24 pripis »Umrła
+11.10.1946 griblje št 24« **SAMOPOTRJUJE hišo** (Ivana, Janez Božek? ×
+Ana Finec? [Simec? — F/S dvom]; 9. VPIS). h7 Kurrent 2/7 dvom [~] —
+**EMŠO 2107901505598 = 21.07.1901 sidro** (Marija, Jakob Toter ×
+Katarina Jakobšič — oče = rodbina babice Marjeta Toter!). h65 **EMŠO
+1110901503024 = 11.10.1901 sidro** (Doroteja, Matija Mitek? [Mrtek?] ×
+Katarina Pošek?; 7. VPIS ISTI OČE Milek 1887–1900). **PT 7/2** — h44
+(3. VPIS: Francišek, Martin Jurajevič bajtar × Marjana Krašovec) + h54
+(4. VPIS: Anton, Peter Gruzec? žajfar × Ana Butala) v luknji — **oba že
+v PT_GAP_KNOWN → brez novih številk**; **luknja 42/50/51
+NESPREMENJENA** (19 dokazanih).
+
+**DUHOVNIKI: Kulbinek? 7×** (= P95 »Klunček?« — isti podpis, **boljše
+branje na spread formatu**) + **Jos. Rauq 2×** + **NOV podpis Fran.
+Dostál 1×** (češko priimek; tudi ne-Griblje r63/r67/r70/r71/r80/r83).
+**NOVELA babica 2. leto izpolnjeno**: **Toter 6×** (r1/r36/r48/r57/r65/
+r69 — oče r48 Jakob Toter = rodbina babice!) + **Mavrefič** (r81) +
+**Mikl** (r59) + **Tolar?** (r51) + **Tome** (r52) — **10/10
+imenovanih**. Nezakonski 0 (okvir r54 mati »samska dekla« — Cerkvišče
+31, ne-Griblje). **DOJENČIJSKA UMRLJIVOST 2/10** (r36 † 17/6.02, r52 †
+17/3.03; okvir še r79 † 11/2.02 — ne-Griblje). **EXCLUDED**: r35
+(Griblje [~], ime Anton [~], hiša pod prosojnim trakom + spodnji rob
+odtrgan — neuporabno za vitals; **odprt lead**: konflikt h24 r65 — ista
+hiša ne more imeti dveh dojenčkov Jun+Nov iste matere; starši Jožef?
+Hrušov? × Marija Javhnik?) + r47 (bela matičarska nalepka 26.01.1989 —
+† Novo mesto; ime Neža [~]; starši **Jurij Straus × Barbura Jakobič**,
+botra Janez Kralj + Marija Urh — **MOŽEN Griblje vpis** (Straus mreža),
+hiša nedokazljiva; za str. 125 NI podvojenega skena z odprtimi
+nalepkami).
+
+**Integracija**: parish.ts HOUSE_VITALS **254 → 264** (+10 blokov 1901,
+vsi DOCUMENTED; komentar P96 z okvirjem + novelami); atlas.ts
+PT_GAP_KNOWN **NESPREMENJEN** (P96: brez novih — 44/54 že vsebovani;
+luknja 42/50/51 ostaja); qa-parish.ts **qa-p96** (97. kontrola;
+celoven neodvisen preracun: trije dup pari + stran == sken − 3/− 4/
+− 5/− 6/NOVELA formata spread/NOVELA mesecev November/NOVA HIŠA 19 +
+81. hiša + bajtar/h12 ×2 PRVA ponovitev po 1893/sidra EMŠO
+2107901505598 + 1110901503024/babica 10/10 + Toter 6×/duhovniki
+Kulbinek? 7× + Rauq 2× + Dostál 1×/PT 7/2/NOVA hiša 19 brez
+priora/kontinuitete 8 pinov/vitals 264); dovoljenja 1901: qa-p85 h7
+([1890, 1901]), qa-p87 h12 ([1892…1899, 1901]) (allow mehanizem);
+vitals pini 254 → 264 (10 testov); **POPRAVI ZASTARELIH SKRIPT
+(regresije po P95)**: p80 I7 (vitals 264), p85–p92 (filtri vesolja +
+1901; vitals 264 + kumulativ 270 + hiše 80), p93 (vitals 264 +
+kumulativ 270 + hiše 80), p94/p95 (filtri vesolja izključujejo 1901/
+1900+1901 — zgodovinske klasifikacije zamrznjene); vseh **17 skript
+p80–p96** --check **PASS** (exit 0). Kartica NI dodana (vzorec
+P77–P96). tsc 0 / lint 0; **/api/qa dev 97/97** (qa-p96 True); v7
+NESPREMENJEN (p76 --check PASS). QA popravki po prvi oceni: qa-p96
+whatSi babica tokeni (h7 »babice« → »babica«, h65 + h44 babica
+manjkala) + qa-p85/qa-p87 allow liste (+ 1901 bloki).
+
+**nextSteps**: ① **P97 = leto 1902** (glava »1902« na dnu str. 129 =
+sken 135; skeni 135–140 že v /tmp/p96 — 6 strani; pričakovano ~10–15
+novih skenov); ② mrliška knjiga 04894 1887–1896: smrti prvih žen — dokaz
+menjav h1/h10/h16/h58/h9 + dojenčki † iz krstnih (r36/r52 1901); ③
+poročna 04455: **Straus × Spudič** (krstno 3× POTRJENA — najti poroko:
+datum + hiši) ali **Straus × Jakobič** (h12 r36 — nova zveza 1901); ④
+h51/h42/h50 v mrliški 04894 + poročni 04455 (luknja 42/50/51); ⑤ r35
+lead: hiša pod trakom (sken 127/128 ponovni pregled z novim
+obdelovalnim pasom); ⑥ produkcija Vercel: dohiti P96 → QA 97/97.

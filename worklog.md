@@ -4609,3 +4609,23 @@ Work Log:
 Stage Summary:
 - GitHub PAT OBNOVLJEN — dvorogi sync (GitLab vir resnice + GitHub zrcalo) popolnoma DELOUJEM again; P95 = krstna 1900 (16 vpisov / 16 hiš / 80. hiša 67 / NOVELA babica) je zdaj tudi produkcija-rešen
 - NASLEDNJA FAZA: P96 = krstna 1901 (glava str. 122 = sken 125; skeni 125–128 že v /tmp/p95; 1900 row 77 = zadnja vrstica 1900) ali mrliška 04894 1887–1896 ali poročna 04455 (Straus × Spudič)
+
+---
+Task ID: 67 (P96 = krstna 1901 — forenzika + integracija + QA + docs)
+Agent: Z.ai Code (glavna seja)
+Task: P96 — župnija Podzemelj, krstna knjiga 04105, polno leto 1901 (issue #18; §71 nextSteps ①)
+
+Work Log:
+- Forenzika skeni 125–140 (/tmp/p96; p96_fetch po vzoru P95): transkripcija vseh 87 vrstic leta 1901; zoom 2×–3.2× (27 sklopov A/B + 8 mikro-zoomov); starši poravnani po y-pasovih (spread format)
+- NOVELA P96: TRIJE podvojeni skeni (127/128, 129/130, 133/134) — sken 128 = str. 124 z nalepkama PREPOGNJENIMA → r32/r33 REŠENI (Primostek 2 Anton + Gradac 32?/33? Jožef, oba EMŠO 01.06.1901); stran == sken − 3/− 4/− 5/− 6 (stiri pasove); NOVELA formata: od str. 125 celo-spread (leva podatkovna + desna roditelja/boter/babica/podpis); NOVELA mesecev: r65–r69 NOVEMBER (EMŠO r66/r68), December od r70; r36 »Jurij«? = JUNI (sekvence)
+- 10 vpisov / 9 hiš Griblje: 12, 12, 7, 54, 2, 17, 65, 24, 19, 44 — h12 ×2 = PRVA znotraj-letna ponovitev po 1893 (NARE 1894–1900 prekinjeno; dva para staršev — več-družinska hiša); NOVA HIŠA 19 (81. hiša; oče bajtar); h44/h54 v PT luknji (že v PT_GAP_KNOWN); EXCLUDED r35 (hiša pod trakom) + r47 (nalepka 1989)
+- Dokaz research/issue17/parish-baptism-1901.json (SAMPLE-TRANSCRIPTION-1901) + verifikator scripts/p96_parish_baptism_1901.py (I1–I10, --check PASS)
+- Integracija: parish.ts HOUSE_VITALS 254 → 264 (10 blokov 1901, DOCUMENTED); atlas.ts PT_GAP_KNOWN NESPREMENJEN (44/54 že vsebovani); qa-parish.ts qa-p96 (97. kontrola, celoven preracun) + allow liste qa-p85 h7 + qa-p87 h12 (+ 1901 bloki) + vitals pini 254 → 264
+- POPRAVI ZASTARELIH SKRIPT (regresije po P95): p80 I7 (vitals 264), p85–p92 filtri vesolja + 1901 + kumulativ 270 + hiše 80, p93 isto, p94/p95 filtri izključujejo 1901 (zgodovinske klasifikacije zamrznjene)
+- QA popravki po prvi oceni: qa-p96 whatSi babica tokeni (h7 »babice« → »babica«; h65 + h44 babica dopisana — Marija Mikl / Ana Mavrefič; push potreboval nameEn argument) + qa-p85/qa-p87 allow liste
+- Veriga p80–p96 --check: 13/13 PASS (exit 0); tsc 0 / lint 0; /api/qa dev 97/97 (qa-p96 True); v7 NESPREMENJEN
+- Docs: MUSEUM-AUDIT.md §72 (P96) + README P96 bullet + Zadnje stanje po P96 (QA 97/97, 17 skript, P77–P96)
+
+Stage Summary:
+- P96 = krstna 1901 REPO-KOMPLETEN: dokaz + verifikator + parish.ts (264 vitals) + qa-p96 (97/97) + 13/13 skript PASS + docs; kumulativ 270 vpisov / 81 hiš / ŠESTNAJST let; nov duhovnik Dostál; babica Toter 6× (rodbina h7)
+- NASLEDNJA FAZA: P97 = krstna 1902 (glava »1902« dno str. 129 = sken 135; skeni 135–140 že v /tmp/p96) ali mrliška 04894 ali poročna 04455 (Straus × Spudič ali Straus × Jakobič)

@@ -1,0 +1,310 @@
+{
+  "phase": "P96",
+  "type": "parish-baptism-full-year",
+  "status": "MERI",
+  "issuedAt": "2026-02-14",
+  "source": {
+    "book": "župnija Podzemelj — krstna knjiga 04105 (matricula-online.eu)",
+    "signature": "04105",
+    "scans": [125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135],
+    "pages": [122, 123, 124, 124, 125, 125, 126, 127, 128, 128, 129],
+    "url": "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04105/"
+  },
+  "method": "ročna paleografska faza: preneseni skeni 125–140 (p96_fetch po vzoru P90–P95); CELOSTRANSKI pregled vseh 87 vrstic leta 1901 (rows 1–87); zoom forenzika 2×–3.2× (27 sklopov A/B + 8 mikro-zoomov); poravnava starševskih vrstic po y-pasovih (leva/desna stran istega lista); EMŠO forenzika (r48 21.07.1901, r50 11.08.1901, r59 11.10.1901, r66 08.11.1901, r68 16.11.1901, r72 01.12.1901?, r83 18.12.1901); NOVELA podvojenih skenov: 127/128 (str. 124 — nalepki prepognjeni na skenu 128, r32/r33 berljivi), 129/130 (str. 125), 133/134 (str. 128); NOVELA formata: od str. 125 (sken 129) celo-spread fotografije — leva stran = podatkovna tabela, desna = Roditelja/Botra/Babica/Podpis; NOVELA sekvence mesecev: r65–r69 = NOVEMBER (EMŠO r66 08.11 + r68 16.11), December se začne na r70; strani opremljene z rokopisnimi »Stran N« zapisi (122–129) — potrjene header-zoomi",
+  "frame": {
+    "yearStart": {
+      "scan": 125,
+      "page": 122,
+      "row": 1,
+      "note": "glava »1901.« veliko na sredini str. 122 (sken 125) po 1900 row 77 (P95 dokazano); r1 = Griblje 12 Peter (3./4. Januar); stran == sken − 3 za skene 125–127"
+    },
+    "yearEnd": {
+      "scan": 135,
+      "page": 129,
+      "row": 87,
+      "note": "zadnja vrstica 1901 = row 87 (Kloster 37 Janez, 29./31. December); glava »1902« (podčrtana) na dnu str. 129 (sken 135); stran == sken − 6 od skena 135"
+    },
+    "rowsTotal": 87,
+    "duplicateScans": {
+      "note": "NOVELA P96 — trije podvojeni pari: 127/128 (str. 124: sken 127 z dvema belima matičarskima nalepkama čez r32/r33; sken 128 = ISTA stran z nalepkama PREPOGNJENIMA na levi rob → r32/r33 berljiva), 129/130 (str. 125), 133/134 (str. 128); stran == sken − 3 (125–127), == sken − 4 (129–130 → str. 125), == sken − 5 (131–132 → str. 126–127), == sken − 6 (135 → str. 129)",
+      "pairs": [[127, 128], [129, 130], [133, 134]]
+    },
+    "formatNovela": {
+      "note": "od str. 125 (sken 129) skeni = celo-spread: LEVA stran = podatkovna tabela (Zaporedna št./Mesec in dan/Rojstni kraj/Hiša/Ime/Vera/Spola/Stan), DESNA stran = Roditelja (oče/matere) + Botra + Babica pomočnica + Podpis mašnika krščevalca; vrstični pasovi sovpadajo po y (isti fizični list)"
+    },
+    "monthSequence": "r1 Januarius (3./4.) · r2–r11 Januar · r12–r15 Februarius (19.–23.) · r16 Marcij (4.) · r17–r21 Marec (12.–26.) · r22–r23 Marec (31.) · r24 April (24.) · r25 April 30 → 2 maja · r26–r35 Maj/Juni (5.–17.) · r32 Juni 1/2 (Primostek 2) · r36–r39 Juni (17.–29.) → r39 July 10 · r40–r46 July (10.–26.) · r48–r53 Juli/Avgust (21.–23.) · r54 Avgust 31 → 1. sept · r55–r57 September (3.–11.) · r58–r63 Oktober (1.–24.) · r64–r69 November (1.–21.) · r70–r87 December (1.–31.)",
+    "monthSequenceNote": "NOVELA: mesec »Jurij«? [~] pri r36 je dejansko JUNI (sekvence r39 »July 10« po r38 29/29 ni mogoče drugače rešiti); NOVELA: r65–r69 = NOVEMBER (EMŠO r66 08.11.1901 + r68 16.11.1901) — zgodnje branje »December« za r65–r69 NAPAČNO; December se začne na r70 (marker »December« + EMŠO r83 18.12.1901)"
+  },
+  "entries": [
+    {
+      "row": 1,
+      "year": 1901,
+      "month": "Januar",
+      "born": "3.",
+      "baptized": "4.",
+      "village": "Griblje",
+      "houseNo": "12",
+      "scan": 125,
+      "page": 122,
+      "child": "Peter",
+      "father": "Gregor Juvan? [~] ½ zemljak",
+      "mother": "Barbura Cvetkovič [~]",
+      "botra": "Peter Toter (½ zemljak) + Marija Straus [~]",
+      "babica": "Marjeta Toter",
+      "priest": "Janez R. Kulbinek? [~]",
+      "notes": [
+        "glava-vrstica 1901 (prva vrstica pod veliko glavo »1901.« na sredini str. 122)",
+        "h12 = 6. VPIS (1892 Dragoš, 1894, 1895, 1897, 1899); v 1901 dva vpisa (r1 + r36) z RAZLIČNIMA starševskima paroma — več-družinska hiša ali menjava",
+        "črna pripomba: »Umrł 14.12.1970 v Gribljah (MMK …)« + druga vrstica neberljiva [~]; modra pripomba z imensko varianto nad imenom [neberljivo]"
+      ]
+    },
+    {
+      "row": 36,
+      "year": 1901,
+      "month": "Juni",
+      "born": "17.",
+      "baptized": "17.",
+      "village": "Griblje",
+      "houseNo": "12",
+      "scan": 129,
+      "page": 125,
+      "child": "Alojzij",
+      "father": "Matija Straus [~] ½ zemljak",
+      "mother": "Marija Jakobič [~]",
+      "botra": "Matija Straus [~] + Barbura Jakobič [~]",
+      "babica": "Marjeta Toter",
+      "priest": "Janez R. Kulbinek? [~]",
+      "notes": [
+        "h12 = 7. VPIS — PRVA PONOVITEV znotraj leta po 1893 (NARE zaporedje 1894–1900 prekinjeno po 8 letih); ista hiša kot r1 z RAZLIČNIMA staršema (Gregor Juvan? × Barbura Cvetkovič vs Matija Straus × Marija Jakobič)",
+        "mesec zapisan kot »Jurij«? [~] — sekvence (r38 29/29 Juni → r39 »July 10/10«) vsiljuje JUNI 17/17",
+        "marginalija: »† 17/6.02« [~] — dojenček † pri ~1 letu"
+      ]
+    },
+    {
+      "row": 48,
+      "year": 1901,
+      "month": "Juli",
+      "born": "21.",
+      "baptized": "28.",
+      "village": "Griblje",
+      "houseNo": "7 [~ — Kurrent 2/7 dvom]",
+      "scan": 131,
+      "page": 126,
+      "child": "Marija",
+      "father": "Jakob Toter [~] ½ zemljak",
+      "mother": "Katarina Jakobšič [~]",
+      "botra": "Matija Francej? [~] + Barbura Dragoš [~]",
+      "babica": "Marjeta Toter",
+      "priest": "Janez R. Kulbinek? [~]",
+      "notes": [
+        "EMŠO pripomba: »2107901505598« → roj. 21.07.1901 (sidro datuma)",
+        "h7 = 2. VPIS (1890 prvi); kraj »Griblje« berljiv pod modro pripombo, hišna Kurrent 2/7 dvom [~]",
+        "oče Jakob Toter — rodbina babice Marjeta Toter (6× babica v Griblje vpisih 1901)",
+        "† 16.10.1967 Črnomelj (NKU NO Črnomelj); poročena 21.11.1927; matičar Simonović Nuša 15.12.1987"
+      ]
+    },
+    {
+      "row": 51,
+      "year": 1901,
+      "month": "Avgust",
+      "born": "13.",
+      "baptized": "13.",
+      "village": "Griblje",
+      "houseNo": "54",
+      "scan": 131,
+      "page": 126,
+      "child": "Anton",
+      "father": "Peter Gruzec? [~] žajfar",
+      "mother": "Ana Butala [~]",
+      "botra": "Marko Grabrijan? [~] + Marija Brmc? [~]",
+      "babica": "Marija Tolar? [~]",
+      "priest": "Janez R. Kulbinek? [~]",
+      "notes": ["h54 = 4. VPIS (1886, 1897, 1900)"]
+    },
+    {
+      "row": 52,
+      "year": 1901,
+      "month": "Avgust",
+      "born": "17.",
+      "baptized": "17.",
+      "village": "Griblje",
+      "houseNo": "2",
+      "scan": 131,
+      "page": 126,
+      "child": "Nikolaj",
+      "father": "Nikolaj Tome [~] ½ zemljak",
+      "mother": "Barbura Jurajevič [~]",
+      "botra": "Matija Tome [~] + Marija Kure? [~]",
+      "babica": "Barbura Tome",
+      "priest": "Janez R. Kulbinek? [~]",
+      "notes": [
+        "h2 = 6. VPIS (1887, 1889, 1891, 1894, 1897)",
+        "marginalija: »† 17/3.03« [~] — dojenček"
+      ]
+    },
+    {
+      "row": 57,
+      "year": 1901,
+      "month": "September",
+      "born": "11.",
+      "baptized": "11.",
+      "village": "Griblje",
+      "houseNo": "17",
+      "scan": 131,
+      "page": 126,
+      "child": "Anton",
+      "father": "Janez Kralj [~] ½ zemljak",
+      "mother": "Doroteja Finlak? [~]",
+      "botra": "Jurij Straus [~] + Marija Mikl [~]",
+      "babica": "Marjeta Toter",
+      "priest": "Janez R. Kulbinek? [~]",
+      "notes": [
+        "h17 = 3. VPIS (1887, 1894)",
+        "† 2.2.1976 Metlika (MMK Metlika l. 1976, str. 374, zap. št. 51); poročen 21.10.1950; matičar Simonović Nuša 14.11.1991 [~]"
+      ]
+    },
+    {
+      "row": 59,
+      "year": 1901,
+      "month": "Oktober",
+      "born": "11.",
+      "baptized": "12.",
+      "village": "Griblje",
+      "houseNo": "65",
+      "scan": 131,
+      "page": 126,
+      "child": "Doroteja",
+      "father": "Matija Mitek? [Mrtek?] ½ zemljak",
+      "mother": "Katarina Pošek? [~]",
+      "botra": "Peter Pevdrec? [~] + Bara Adlešič [~]",
+      "babica": "Marija Mikl",
+      "priest": "Janez R. Kulbinek? [~]",
+      "notes": [
+        "EMŠO pripomba: »1110901503024« → roj. 11.10.1901 (sidro datuma)",
+        "h65 = 7. VPIS (1887, 1889, 1893, 1895, 1897, 1900)",
+        "† 9.11.1991 [kraj neberljiv ~]; poročena 6.6.1932; matičar Simonović Nuša 13.12.1982"
+      ]
+    },
+    {
+      "row": 65,
+      "year": 1901,
+      "month": "November",
+      "born": "5.",
+      "baptized": "5.",
+      "village": "Griblje",
+      "houseNo": "24",
+      "scan": 132,
+      "page": 127,
+      "child": "Ivana",
+      "father": "Janez Božek? [~] ½ zemljak",
+      "mother": "Ana Finec? [Simec? — Kurrent F/S dvom]",
+      "botra": "Janez Kučar? [~] + Marija Finec? [~]",
+      "babica": "Marjeta Toter",
+      "priest": "Jos. Rauq",
+      "notes": [
+        "h24 = 9. VPIS (1887, 1888, 1890, 1892, 1893, 1895 ×2, 1897)",
+        "pripomba: »Umrła 11.10.1946 griblje št 24« — pripis SAMOPOTRJUJE hišo 24"
+      ]
+    },
+    {
+      "row": 69,
+      "year": 1901,
+      "month": "November",
+      "born": "21.",
+      "baptized": "21.",
+      "village": "Griblje",
+      "houseNo": "19",
+      "scan": 132,
+      "page": 127,
+      "child": "Katarina",
+      "father": "Nikolaj Hriče? [~] bajtar",
+      "mother": "Cecilija Hvalica? [~]",
+      "botra": "Jakob? Ivanc? [~ pod madežem] + Marija Ivanc? [~]",
+      "babica": "Marjeta Toter",
+      "priest": "Jos. Rauq",
+      "notes": [
+        "h19 = NOVA HIŠA — PRVI MATRIČNI DOKAZ (81. hiša v vitals; hiša v PT naboru 1825)",
+        "oče bajtar (najemnik kmeta) — hiša 19 v 1901 naseljena z bajtarjem"
+      ]
+    },
+    {
+      "row": 81,
+      "year": 1901,
+      "month": "December",
+      "born": "13.",
+      "baptized": "14.",
+      "village": "Griblje",
+      "houseNo": "44",
+      "scan": 134,
+      "page": 128,
+      "child": "Francišek",
+      "father": "Martin Jurajevič [~] bajtar",
+      "mother": "Marjana Krašovec [~]",
+      "botra": "Danijel Murn [~] (trgovec) + Ana Krambič [~]",
+      "babica": "Ana Mavrefič",
+      "priest": "Fran. Dostál [NOV DUHOVNIK — podpis »Dostál«]",
+      "notes": [
+        "h44 = 3. VPIS (1887, 1888) — h44 v PT luknji (PT_GAP_KNOWN že vsebuje 44 — brez nove številke)",
+        "kraj nosi dodaten konec »v Mašperar?« [~ — neberljiv mikrotoponim]",
+        "† 6.11.1969 Novo mesto (MMK Novo mesto 8.1969, zap. št. 157 [~])"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "row": 35,
+      "scan": 128,
+      "page": 124,
+      "village": "Griblje [~]",
+      "houseNo": "[neberljivo — pod trakom]",
+      "reason": "kraj zelo verjetno GRIBLJE (dvoje neodvisnih branj), ime Anton [~], vendar HIŠNA ŠT. pod prosojnim trakom neberljiva in dnevi na odtrganem spodnjem robu str. 124 — neuporabno za vitals; odprt lead za prihodnjo fazo (konflikt h24 r65 — ista hiša ne more imeti dveh dojenčkov Jun+Nov iste matere)",
+      "notes": ["starši (sken 128 desna stran, pas r35): Jožef? Hrušov? [~] × Marija Javhnik? [~]"]
+    },
+    {
+      "row": 47,
+      "scan": 130,
+      "page": 125,
+      "village": "[pod belo nalepko]",
+      "houseNo": "[neberljivo]",
+      "reason": "bela matičarska nalepka (»Umrła dne 26.01.1989 v Novem mestu, NKU NO Novo m. 1.1989, zap. št. 4, 10.03.1989, Matičar: Simonović Nuša«) pokriva kraj/hišno/datum; ime Neža [~]; starši Jurij Straus × Barbura Jakobič, botra Janez Kralj + Marija Urh, babica Marjeta Toter — MOŽEN Griblje vpis (Straus mreža), hiša nedokazljiva → excluded",
+      "notes": ["nalepka je ISTI tip kot nalepki r32/r33 na str. 124 (sken 127) — tam so bile prepognjene na skenu 128; za str. 125 ni podvojenega skena z odprtimi nalepkami"]
+    }
+  ],
+  "stats": {
+    "entries": 10,
+    "distinctHouses": 9,
+    "housesIllegible": 0,
+    "housesWritten": [12, 12, 7, 54, 2, 17, 65, 24, 19, 44],
+    "intraYearRepeats": 1,
+    "intraYearRepeatsNote": "h12 ×2 (r1 Peter + r36 Alojzij) — PRVA znotraj-letna ponovitev po 1893: NARE zaporedje 1894–1900 (7 let) PREKINJENO; r1 in r36 = RAZLIČNA starševska para na isti hiši",
+    "newSampleHouses": 1,
+    "newSampleHousesNote": "h19 NOVA (prvi matrični dokaz; hiša v PT naboru 1825) — oče Nikolaj Hriče? bajtar; 81. hiša v vitals",
+    "ptInNabor": 7,
+    "ptInNaborClean": 7,
+    "ptGap": ["44", "54"],
+    "ptGapNote": "h44 (3. VPIS) + h54 (4. VPIS) — oba že v PT_GAP_KNOWN → brez novih številk; luknja 42/50/51 NESPREMENJENA (19 dokazanih)",
+    "newGapCount": 19,
+    "cumulative": {
+      "entries": 270,
+      "houses": 81
+    },
+    "cumulativeNote": "254 vitals + 10 (P96) = 264 vitals blocks + 6 EV-only (P84–P86) = 270; hiše 80 + 1 (h19) = 81; ŠESTNAEST polnih let (1886–1901)",
+    "infantDeaths": 2,
+    "infantDeathsNote": "v Griblje vpisih: r36 † 17/6.02 + r52 † 17/3.03; (v okvirju še r79 † 11/2.02 — ne-Griblje, ni v entries)",
+    "illegitimate": 0,
+    "illegitimateFrame": 1,
+    "illegitimateFrameNote": "r54 = mati Marija Hrašimič »samska dekla«, brez očeta (Cerkvišče 31) — ne-Griblje",
+    "midwifeEmpty": 0,
+    "midwifeNamed": 10,
+    "midwifeNamedNote": "Toter 6× (r1, r36, r48, r57, r65, r69) + Mavrefič 1× (r81) + Mikl 1× (r59) + Tolar? 1× (r51) + Tome 1× (r52) — vseh 10 Griblje vpisov z imenovano babico",
+    "priests": {
+      "Kulbinek": 7,
+      "Rauq": 2,
+      "Dostál": 1,
+      "neberljivi": 0
+    },
+    "priestsNote": "NOVELA: »Kulbinek?« [~] = verjetno ISTI duhovnik kot P95 »Klunček?« (zdaj boljše branje na spread formatu); NOV podpis »Fran. Dostál« (r81; tudi ne-Griblje r63, r67, r70, r71, r80, r83) — češko priimek; Jos. Rauq 2× (r65, r69)",
+    "torn": 2,
+    "tornNote": "r35 hiša pod trakom + spodnji rob odtrgan (Griblje [~] — excluded); r47 kraj/hiša pod matičarsko nalepko (excluded); nalepke r32/r33 REŠENE s podvojenim skenom 128 (nalepki prepognjeni)"
+  }
+}
