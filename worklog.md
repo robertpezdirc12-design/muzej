@@ -4554,3 +4554,25 @@ Stage Summary:
 - P95 okvir + 14 kandidatov dokumentiranih; skeni 119–128 v /tmp/p95 (read/ izrezi pripravljeni)
 - NASLEDNJA FAZA (P95 full): forenzika 14 kandidatov (hišne 5x–10x + datumi + starši/botre/duhovniki) → dokaz parish-baptism-1900.json → scripts/p95_parish_baptism_1900.py → integracija (parish.ts + qa-parish.ts + atlas.ts PT_GAP_KNOWN + 51) → QA veriga p80–p95 → docs → commit + push
 - OPAZKA: h51 bi bila 20. dokazana luknja (manjkale bi še 42 + 50); h1/h14/h20/h23/h45/h65/h67/h90 = 8 ponovitev znanih hiš v prvih 77 vrsticah
+
+---
+Task ID: 65
+Agent: Z.ai Code (glavna seja)
+Task: P95 — župnija Podzemelj: krstna knjiga 04105, polno leto 1900 (issue #18); integracija + QA veriga + docs; push + sinhronizacija (GitLab + GitHub) + produkcija
+
+Work Log:
+- Seja odprta: trojna sinhronizacija POTRJENA (lokalni == GitLab == GitHub == e318862); produkcija /api/qa = 95/95 (P93+P94 True)
+- P95 rekonstrukcija (Task 64-c) imela že okvir + 16 vpisov / 16 hiš v dokazu (status MERI; scoping 14 kandidatov → forenzika: + 4 izpuščene vrstice, r5→r3, r8→r6, r27→r28…r30→r31) — nadaljevanje: diagnoza skripte p95 (I4/I6/I7/I8 FAIL)
+- Diagnoza + popravki dokaza: I6 — h58 NI v PT verigi (PT_GAP_KNOWN že vsebuje 58): stats ptInNabor 14 → 13, ptGap ['45','54'] → ['45','54','58'] (vsi trije že dokazani prej); r29 opomba P90 → P91 (1896 = P91; 1896 oče NI »neberljiv« ampak MERI dvom »ali drug Janez Brinec?« — po 1896 P91 opombi); r19 opomba P91 → P88 (1893 = P88)
+- Popravki skripte p95: I4 r45–56 → r45–r56 + SREDINI → sredini (velike/male črke); I6 EXPECTED_PT_IN_SET brez 58 (13) + EXPECTED_PT_GAP ['45','54','58']; I7 »DEHLIČ« → »Brinec × Dehlič« + REŠUJE P90 → REŠUJE P91; I8 zamik P-x ↔ leto popravljen (h45 p90/p91 → p91/p92; h90 p82 → p85; h32 p91 → p88; h14 p90 → p91 (Brinec, ne neimenovan); h9 p90 → p91) — I1–I10 vseh 10 PASS (vitals 254, hiše 79, kumulativ 260/80)
+- parish.ts: 238 → 254 (+16 blokov 1900; komentar P95 z okvirjem: sken 121 = 2 podatkovna panela, sken 122 = 2 starševska panela, r51–56 RAZTRGANE)
+- qa-parish.ts: qa-p95 (96. kontrola; sidra 16 + PT 13/3 + kontinuitete 28 pinov + NOVELA babica 6 praznih + 8 imenovanih + NOVA HIŠA 67) + vitals pini 238 → 254 (9 testov) + dovoljenja 1900 (allow mehanizem): qa-p85 h90 (4. PIN šolska), qa-p88 h23 (4. PIN — Debič REŠENO), qa-p90 h20 (3. PIN), qa-p91 h9/h14/h45 (menjava/2. VPIS/3. PIN), qa-p92 h10 (menjava) + p95 kontinuiteta h31 1897 pin Papič → Straus (Kurrent Sapič? 1897)
+- atlas.ts: PT_GAP_KNOWN NESPREMENJEN + komentar P95 (brez novih — scopingov h51 ZAVRŽEN: r49 = Primostek 5; luknja 42/50/51 ostaja)
+- POPRAVI ZASTARELIH SKRIPT (regresije po P94): p80 I7 (vitals 254); p85–p92 filtri vesolja + 1900 (nabori); p85–p94 vitals 254 + kumulativ 260 + hiše 79
+- Veriga: 16/16 skript p80–p95 --check PASS (exit 0); tsc 0 / lint 0; /api/qa dev 96/96 (qa-p95 True); v7 NESPREMENJEN (p76 --check PASS)
+- Dokumentacija: MUSEUM-AUDIT §72 + README (P95 bullet + stanje po P95 + 96/96 + 16 skript p80–p95) + worklog Task 65
+
+Stage Summary:
+- P95 = krstna 1900: 16 vpisov / 16 hiš NARE (7. leto; 2. leto brez ponovitev); 1 NOVA hiša (67 — Straus gumbar, 80. hiša); luknja 42/50/51 NESPREMENJENA (19 dokazanih; scopingov h51 lead ZAVRŽEN — Primostek 5); NOVELA babica PRVIČ izpolnjena po 15 letih (Fottre 7× + Hrižan); Šturm 0× PRVIČ; h1 ŽELJKO VRNITEV (boter 1888 → oče); h31 6. PIN (najdaljša zveza); h45 3. PIN Straus × Spudič (04455 lead 3× krstno); h90 4. PIN šolska (Leopoldina po materi); h23 4. PIN + Debič REŠENO; h14 REŠUJE P91; h58 PRVA MENJAVA ŽENE; h54 starši RAZTRGANI; kumulativ 260 vpisov / 80 hiš / PETNAEST let (254 vitals)
+- QA dev 96/96; tsc/lint 0; 16/16 skript PASS; v7 NESPREMENJEN
+- NASLEDNJA FAZA: P96 = krstna 1901 (glava str. 122 = sken 125; skeni 125–128 že v /tmp/p95) ali mrliška 04894 1887–1896 (menjave h1/h10/h16/h58/h9 + »Okljuka?« mikrotoponim) ali poročna 04455 (Straus × Spudič — 3× krstno POTRJENO; najti poroko)

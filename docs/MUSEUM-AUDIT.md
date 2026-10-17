@@ -4996,3 +4996,110 @@ začne z drugo vasjo; potrebni skeni 119–125+); ② mrliška knjiga 04894
 ali Berkopne × Klobučar; ④ Željko veriga 14 signalov + Segina veriga 3
 signali v enem letu; ⑤ luknja 41–60: 19 dokazanih (49 NOVA) — manjkajo še
 42, 50, 51; ⑥ produkcija Vercel: dohiti P94 → QA 95/95.
+
+## §72 — P95: župnija Podzemelj — krstna knjiga 04105, polno leto 1900 (issue #18) — 2026-10-17
+
+**SAMPLE-TRANSCRIPTION-1900** (MERI, NE odloča; v7 join nespremenjen).
+§71 nextSteps ①: širitev vzorca po letih (P79 1886 → … → P94 1899 →
+**P95 1900**).
+
+**Okvir**: skeni 118 row 105 (SREDINA str. 115 — P94 dokazano) – 124
+row 77 == tiskane strani 115–121. **NOVELA P92 POTRJENA**: stran ==
+sken − 3 **ZA CELO LETO** (118→115 … 124→121; brez novih duplikatov).
+**1900 r1 = Krasinec Matija (2./2. Januar)** — **PRVIČ se novo leto začne
+z DRUGO VASJO** (ne Griblji); leto 1900 ima **77 vrstic**; sken 121 =
+**DVA podatkovna panela** (r33–44 levo + r45–56 desno), sken 122 = DVA
+starševska panela (citiran v dokazu za starše r45/r46, brez data vpisov);
+skeni **r51–56 FIZIČNO RAZTRGANE** (podatki izgubljeni, starši znani);
+sken 125 = str. 122 = glava 1901 (samo okvir).
+
+**VSI vpisi z Griblji: 16 vpisov / 16 hiš — NARE (7. leto)** po
+P87/P89/P91/P92/P93/P94 — in **2. LETO BREZ znotraj-letnih ponovitev**:
+1, 67, 10, 32, 65, 20, 14, 90, 23, 9, 54, 16, 58, 31, 25, 45 — **1 NOVA
+hiša** + 15 ponovitev; skupaj s P79–P94 vzorec **260 vpisov / 80 hiš čez
+tri knjige in PETNAEST LET** (254 vitals).
+
+**NOVA HIŠA h67** (prvi matrični dokaz; hiša v PT naboru 1825 —
+ATLAS_HOUSES vsebuje 67 v bloku 61–99; **80. hiša vzorca**): oče **Nikolaj
+Straus [~] gumbar** (status »2 gumbar« ali »½ gumbar« — Kurrent 2/½ dvom)
+× **Marija Jakopič** — **STRAUS gumbar mreža** (h45 Martin Straus, h31
+mati Straus, botri Straus na h58/h32/h28); EMŠO matičarja
+1002900505074 = roj. 10.02.1900 (ujema se z vrstico!); podpis v raztrganem
+robu — neberljiv.
+
+**SCOPING POPRAVKI 1900** (celostranski pregled): r5→r3 + r8→r6 (margini
+str. 115 raztrgani — 8 vrstic, SEKVENCA BREZ ANOMALIJE; scopingova
+hipoteza o 2 nenumeriranih vrsticah **ZAVRŽENA**: Barbara = r7, Jožef =
+r8); r27→r28…r30→r31 (scoping izpustil r27 Otok 8); **4 IZPUŠČENE vrstice
+najdene** (r45 h16, r46 h58, r59 h31, r63 h25); **scopingov r49 »Griblje
+51 NOVA LUKNJA« ZAVRŽEN** — vrstica bere **Primostek 5** — **luknja
+42/50/51 NESPREMENJENA** (19 dokazanih v 41–60). **PT 13/3** (45/54/58 v
+luknji — vsi trije že dokazani prej; **58 NI v PT verigi** — PT_GAP_KNOWN
+že vsebuje 58).
+
+**NOVELA babica: stolpec PRVIČ IZPOLNJEN po 15 letih** (1886–99 prazen!):
+**Fottre/Foča 7× + Hrižan 1×** + 6 praznih + 2 neberljiv/raztrgan.
+**DUHOVNIKI: Šturm 0× — PRVIČ V VZORCU** (po 6× v 1899) + Rauq 9× +
+**Perg 4× + Klunček 2× (nov duhovnik)** + 1 neberljiv.
+
+**Ključne kontinuitete**: h1 **ŽELJKO VRNITEV**: 1888–96 Nikolaj Željko ×
+Katarina Kure → 1899 Segina → 1900 **Jurij Željko × Barbara Kure** —
+Jurij Željko = **BOTER h1 1888 → OČE 1900** (**ŽELJKO signal 15**); h31
+**6. PIN ISTA ZVEZA Martin Papič × Marjeta Straus** (1887+1890+1891+1894+
+1897+1900 — **najdaljša zaporedna zveza vzorca**; 11. vpis); h45 **3. PIN
+ISTA ZVEZA Martin Straus × Barbara Spudič** (1896+1897+1900) — **04455
+POROČNI LEAD: krstno 3× POTRJENA ista zveza — iskati poroko v 04455**;
+h90 **ŠOLSKA HIŠA 4. PIN**: ISTA UČITELJSKA DRUŽINA Vetročnik × Schmelzer
+(1898 r27 Alojzij) — hči **Leopoldina po materi Leopoldi!**; učitelji:
+Kopitar (1890–92) → Vetročnik (1898–1900); **KONFLIKT DATUMA r30**:
+vrstica »40 jun« [~] vs matičarjev EMŠO 2405900505109 = roj. 24.05.1900 —
+MERI: EMŠO avtoritativno (matičar je bral civilni register); h23 **4. PIN
+ISTA ZVEZA Brinec × Dehlič** (1893+1894+1897+1900) — **P88 1893 »Debič?«
+= Dehlič REŠENO** z 1900 forenziko; h14 2. VPIS — **1896 (P91) oče MERI
+dvom (»ali drug Janez Brinec?«) → 1900 forenzika REŠUJE P91**; h58 **5.
+PIN + PRVA MENJAVA ŽENE** na h58 (1889–95 Ana Dragoš → 1900 **Katarina
+Kranbič**); h32 **8. PIN** — 1893 (P88) »Meh/Mrh?« **POTRJENO** z 1900
+»Meh« (KURRENT U/M varianta istega priimka ALI prava menjava — MERI);
+h65 **6. VPIS ISTI OČE** Matija [Milek] (1887–1900) + 5. varianta matere
+(Tožek?); h20 **3. PIN** Pendirec × Klepec (1897+1900); **MENJAVE
+GOSPODINJSTEV**: h10 (Brinec/Perdune 1897 → **Grabrijan × Pozdirec** —
+scoping »Gmajrjan?« POPRAVLJENO), h9 (Jakobič/Žumič 1896 → **Muc × Kure**
+— Kure = h1 mati rodbina, križni sklic; svinčnik »Štumer?«), h16
+(Jaklič/Brinec 1897 → **Novak × Šilak** — **ŠILAK križni sklic** z h16
+1886 mrliško), h25 (Klepec/Tome 1896 → **Brinec × Segina** — **SEGINA
+signal 4**: mati Katarina Segina + boter Leopold Šegina). **h54 starši
+RAZTRGANI** (sken 122 levo fizično odtrgan — **edina izguba staršev med
+Griblje vpisi 1900**); r19 dnevi RAZTRGANI + mati IME PREČRTANO; pripis
+»Umrla dne 14.3.1954« pripisnost r30/r31 dvomna (MERI: po položaju črte
+r31, dvom v honesty). **DOJENČIJSKA UMRLJIVOST 5/16** (r3 † 1907 ~7 let,
+r23 † 2/6.00 ~1 mesec, r45 † 7/11.02, r46 † 8/5.03, r69 † 9/2.03 ~15
+mesecev). **EMŠO blok matičarja** (r6/r28/r31 — vsi ujemajo z vrsticami!).
+Matičar pripisi v 13/16 vpisov († 1954/1955/1965/1969?/1977/1980/1982/
+1984/1985/1991, poroke 1921/1933/19??).
+
+**Integracija**: parish.ts HOUSE_VITALS **238 → 254** (+16 blokov 1900,
+vsi DOCUMENTED; komentar P95 z okvirjem); atlas.ts PT_GAP_KNOWN
+**NESPREMENJEN** (P95: brez novih — scopingov h51 ZAVRŽEN; luknja
+42/50/51 ostaja; 45/54/58 = ponovitve že dokazanih); qa-parish.ts
+**qa-p95** (96. kontrola; celoven neodvisen preracun: okvir − 3/brez
+duplikatov/sken 122 starševska/NOVELA babica 6+8/NOVA HIŠA 67 + prvi
+matrični dokaz + 80. hiša + gumbar/h1 ŽELJKO VRNITEV + BOTER h1 1888/h31
+6. PIN + najdaljša zveza/h45 3. PIN + 04455/h90 ŠOLSKA HIŠA 4. PIN +
+Leopoldina/h23 4. PIN + REŠENO/h58 5. PIN + MENJAVA ŽENE + Kranbič/sidra
+16/PT 13/3/NOVA hiša 67 brez priora/kontinuitete 28 pinov/vitals 254);
+dovoljenja 1900: qa-p85 h90, qa-p88 h23, qa-p90 h20, qa-p91 h9 + h14 +
+h45, qa-p92 h10 (allow mehanizem); vitals pini 238 → 254 (9 testov);
+**POPRAVI ZASTARELIH SKRIPT (regresije po P94)**: p80 I7 (vitals 254),
+p85–p92 (filtri vesolja + 1900: nabori + 1900), p85–p94 (vitals 254 +
+kumulativ 260 + hiše 79); vseh 16 skript p80–p95 --check **PASS**
+(exit 0). Kartica NI dodana (vzorec P77–P95). tsc 0 / lint 0; **/api/qa
+dev 96/96** (qa-p95 True); v7 NESPREMENJEN (p76 --check PASS).
+
+**nextSteps**: ① **P96 = leto 1901** (glava na str. 122 = sken 125; skeni
+125–128 že v /tmp/p95); ② mrliška knjiga 04894 1887–1896: smrti prvih
+žen — dokaz menjav h1/h10/h16/h58/h9 + »Okljuka?« mikrotoponim (r15) v
+zemljevidih 1825/1870; ③ poročna 04455: **Straus × Spudič** (krstno 3×
+POTRJENA — najti poroko: datum + hiši) ali Berkopne × Klobučar; ④ h51/
+h42/h50 v mrliški 04894 + poročni 04455 (luknja 42/50/51); ⑤ Željko
+veriga 15 signalov + Segina veriga 4 signali; ⑥ produkcija Vercel:
+dohiti P95 → QA 96/96.
