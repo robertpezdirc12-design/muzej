@@ -4510,3 +4510,47 @@ Stage Summary:
 - QA dev 95/95; tsc/lint 0; 15/15 skript PASS; v7 NESPREMENJEN
 - Produkcija: 94/94 (P93) — po pushu dohiti P94 → 95/95
 - NASLEDNJA FAZA: P95 = krstna 1900 (prelom str. 115 row 105 = sken 118; skeni 119–120 že v /tmp/p94; 1900 row 1 = Krasinec — prvič druga vas!) ali mrliška 04894 1887–1896 ali poročna 04455 (Straus × Spudič krstno POTRJENA — najti poroko)
+
+---
+Task ID: 64-b (sinhronizacija + produkcija)
+Agent: Z.ai Code (glavna seja)
+Task: P94 push — GitLab + GitHub + trojna sinhronizacija + produkcija
+
+Work Log:
+- Commit 87b6894 (P94: krstna 1899 + popravki zastarelih skript p80–p93); GitLab push OK (7990637..87b6894); GitHub push OK
+- TROJNA SINHRONIZACIJA: lokalni == GitLab (vir resnice) == GitHub == 87b6894 (ls-remote potrjena oba; GitLab 403 tranzitorni — 2. poskus OK)
+- Produkcija /api/qa = **95/95** (qa-p93 True + qa-p94 True) — Vercel deploy potekel že ob pushu (brez rate limit okna)
+
+Stage Summary:
+- Repo stanje POPOLNO: lokalni == GitLab == GitHub == 87b6894 (P94 + vitals 238 + QA 95/95 dev+produkcija; 244 vpisov / 79 hiš / 19 dokazanih luknj / ŠTIRNAJST let)
+- Produkcija dohitela P94 takoj; NASLEDNJA FAZA: P95 = krstna 1900 (prelom str. 115 row 105 = sken 118; skeni 119–120 že v /tmp/p94; 1900 row 1 = Krasinec — prvič druga vas!) ali mrliška 04894 1887–1896 ali poročna 04455 (Straus × Spudič krstno POTRJENA — najti poroko)
+
+---
+Task ID: 64-c (P95 rekonstrukcija)
+Agent: Z.ai Code (glavna seja)
+Task: P95 = krstna 1900 — začetna rekonstrukcija (okvir + kandidati)
+
+Work Log:
+- Skeni 119–128 preneseni v /tmp/p95 (p95_fetch po vzoru p94; 119–120 kopiji iz /tmp/p94 + sken 118)
+- OKVIR: leto 1900 = rows 1–77 (77 vrstic): r1 = str. 115 row 105 (NA SREDINI strani — P94 dokazano), r77 = str. 121 row 77 (24–29. December; sken 125 = str. 122 = glava 1901); str. 115 (rows 1–8) + str. 116 = rows 9–19 + str. 117 = rows 20–31 + str. 118–121 naprej; stran == sken − 3 (novela P92)
+- KANDIDATI Griblje (14 — čakanje na forenziko v P95 fazi):
+  ① r5? str. 115 (sken 118): Griblje 1, Jan 16/17, ime šumno (»Sinec/Ana«), † 6/.1907(?) — h1 (Segina veriga!)
+  ② r8 str. 115 (sken 118): Griblje 67, Feb 10/10, »Jožla?« + matičar † 2.1.1984 Novo mesto
+  ③ r10 str. 116 (sken 119): Griblje 10?, Feb 28, Marija († 27.8.1977 v Gribljah; por. 24/7.1921)
+  ④ r15 str. 116 (sken 119): KRAJ SKRIT pod vojaškim pripisom, Marjeta, ~marec, 7.7.1932 — forenzika
+  ⑤ r19 str. 116 (sken 119): Griblje 32, Apr 28, Alojzij
+  ⑥ r23 str. 117 (sken 120): Griblje 65, Maj 3/4, Marija, † 2/6.00
+  ⑦ r27 str. 117 (sken 120): Griblje 20, Maj 17, »Jerin?« († 2.11.1985; por. 20.2.1933)
+  ⑧ r28 str. 117 (sken 120): Griblje 14, Maj 26, Marija († 5.7.1991 Žužemberk)
+  ⑨ r29 str. 117 (sken 120): Griblje 90 = ŠOLSKA HIŠA!, Jun 10, Leopoldina (EMŠO 2405900505109)
+  ⑩ r30 str. 117 (sken 120): Griblje 23, Jun 28, Katarina († 17.11.1984 Bukovec)
+  ⑪ r34 str. 118 (sken 121): Griblje 9?, Jun 18, Marija († 15.4.1955 Karlovac?)
+  ⑫ r43 str. 118 (sken 121): Griblje 54, Aug 21/22, Ana († 29.11.1965 v Gribljah)
+  ⑬ r49 str. 120 (sken 123): Griblje 51 — NOVA LUKNJA ŠTEVILKA (20. dokazana!), Aug 19, Alojzij († 23.11.1958 Trst)
+  ⑭ r69 str. 121 (sken 124): Griblje 45, Nov 17/17, Nikolaj († 9/2.03)
+- sken 122 = DVE starševski strani (podatkovna stran izpuščena — starši za rows 37–44 na levem panelu + 45–52 na desnem)
+
+Stage Summary:
+- P95 okvir + 14 kandidatov dokumentiranih; skeni 119–128 v /tmp/p95 (read/ izrezi pripravljeni)
+- NASLEDNJA FAZA (P95 full): forenzika 14 kandidatov (hišne 5x–10x + datumi + starši/botre/duhovniki) → dokaz parish-baptism-1900.json → scripts/p95_parish_baptism_1900.py → integracija (parish.ts + qa-parish.ts + atlas.ts PT_GAP_KNOWN + 51) → QA veriga p80–p95 → docs → commit + push
+- OPAZKA: h51 bi bila 20. dokazana luknja (manjkale bi še 42 + 50); h1/h14/h20/h23/h45/h65/h67/h90 = 8 ponovitev znanih hiš v prvih 77 vrsticah
