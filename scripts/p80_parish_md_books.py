@@ -234,7 +234,7 @@ def verify():
         and all((float(h) <= 40 or float(h) >= 61) or ("½" in h) for h in inset)
         and all(41 <= float(h) <= 60 for h in gap)
         and all(h in houses for h in (v["houseNo"] for v in sample))
-        and len(vitals) == 276  # P97: 264 + 12 (krstna 1902)
+        and len(vitals) == 288  # P98: 276 + 12 (krstna 1903)
         and len(houses) == 38  # P92 scoping: 25 → 38 (1897 okvir)
         and set(inset) <= pts
     )

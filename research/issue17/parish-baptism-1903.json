@@ -1,0 +1,481 @@
+{
+  "phase": "P98",
+  "type": "parish-baptism-full-year",
+  "status": "MERI",
+  "issuedAt": "2026-10-17",
+  "source": {
+    "book": "župnija Podzemelj — krstna knjiga 04105 (matricula-online.eu)",
+    "signature": "04105",
+    "scans": [
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152
+    ],
+    "pages": [
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      140,
+      141,
+      142,
+      143
+    ],
+    "url": "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04105/"
+  },
+  "method": "ročna paleografska faza: preneseni skeni 141–170 (p98_fetch po vzoru P85–P97); CELOSTRANSKI pregled vseh 82 vrstic leta 1903 (rows 1–82); mrežna forenzika (grid overlay 50px) za preslikavo sken→vrstica na vsaki strani (sistematični drift vrstic zaradi pregiba knjige); zoom forenzika 2.2×–4.5× (fold-region r1–r9 — trak + trganje, r20 hiša, r22 ime/hša pod pripisom, r49 naknadni krst, r51/r69 mrtvorojena, r56/r72/r80 EMŠO, r80 prestopni krst, r81/r82 hiši); EMŠO forenzika (r7 0902903505416, r22 0104903505041, r56 0310903505116, r59 2010903505047, r65 0611903505124, r72 2811903500562, r80 2512903500066); glava »1903.« NA SREDINI str. 136 (sken 144, P97 dokazano) — 1903 r1 = Griblje 24; glava »1904« na str. 143 (sken 152) pod r82 — 1904 r1 = Krasinec 37 (P99 lead)",
+  "frame": {
+    "yearStart": {
+      "scan": 144,
+      "page": 136,
+      "row": 1,
+      "note": "glava »1903.« (podčrtana) NA SREDINI str. 136 (sken 144, P97 dokazano); nad njo še 1902 r80–r81; r1 = Griblje 24 (4./5. Januar, Jožef); stran == sken − 8 (143–152)"
+    },
+    "yearEnd": {
+      "scan": 152,
+      "page": 143,
+      "row": 82,
+      "note": "zadnja vrstica 1903 = row 82 (Dragoše [~], 26./27. December, Janez; hiša pod modrim pripisom o razvezi — neberljiva); glava »1904« (podčrtana) na str. 143 pod r82; 1904 r1 = Krasinec 37 (5./5. Januar, Ana — P99 lead)"
+    },
+    "rowsTotal": 82,
+    "duplicateScans": {
+      "note": "NOVELA P98 — en podvojen par: 148/149 (str. 140, rows 46–57; s149 bolj čitljiv); stran == sken − 8 (141–148) / − 9 (150–152 — premik za dup par)",
+      "pairs": [
+        [
+          148,
+          149
+        ]
+      ]
+    },
+    "formatNovela": {
+      "note": "format 1903 = NOVA TISKANA knjiga (kot 1902 — vse kolone na eni strani, naslov »Rojstna in krstna knjiga.«, predtiskano »Leto 18__« + rokopisno »03« na vsaki strani; str. 140 z »Leto 18|03« jasno)"
+    },
+    "monthSequence": "r1 Januarij (4./5.) · r2–r3 Januar (5., 22./22.) · r4–r5 Januar (26./27., 27./28.) · r6–r9 Februar (4./4.–16./16.) · r10–r11 Februar (20./20., 25./26.) · r12–r21 Marec (1./1.–27./27.) · r22–r24 April (1./2.–29./29.) · r25–r33 Maj (1./1.–3./3. Junij [~]) · r34–r38 Junij (11./11.–1./1. Julij) · r39–r43 Julij (1./1.–31./31.) · r44–r49 Avgust (2./3.–31.) · r50–r54 September (3./3.–18./18.) · r55–r58 Oktober (3./4.–13./13.) · r59 Oktober (20./21.) · r60 Oktober (29./29.) · r61–r65 November (2./2.–6./7.) · r66 November (6./7.) · r67–r68 November (14./15.) · r69 November (16./16., mrtvorojena) · r70–r74 December (19./19.–2./2.) · r75–r79 December (6./6.–16./16.) · r80 December (23. [~], krsta 2. januar 1904!) · r81–r82 December (25./26., 26./27.)",
+    "monthSequenceNote": "meseci r6–r9 po sekvenci (r6 »Februar« jasno); EMŠO sidra: r7 (0902903505416 → 09.02.1903 ♂), r22 (0104903505041 → 01.04.1903 ♀), r56 (0310903505116 → 03.10.1903 ♀), r59 (2010903505047 → 20.10.1903 ♀), r65 (0611903505124 → 06.11.1903 ♀), r72 (2811903500562 → 28.11.1903 ♂), r80 (2512903500066 → 25.12.1903 ♂); r80 = PRESTOPNI KRST (roj. 23./25. December, krščen 2. januar 1904 — edini prestopni v register do 1903); r72 EMŠO anomalija (28.11. vs pisano 22./22. December); r80 EMŠO anomalija (25.12. vs pisano 23.12.)"
+  },
+  "entries": [
+    {
+      "row": 1,
+      "year": 1903,
+      "month": "Januarij",
+      "born": "4.",
+      "baptized": "5.",
+      "village": "Griblje",
+      "houseNo": "24",
+      "scan": 144,
+      "page": 136,
+      "child": "Jožef [~ (svinčnik »Matijo?« nad imenom — MERI)]",
+      "father": "Matevž Juvančič? [~ (ime+priimek pod trakom — branje »…vež Jucajveč/Juvanjveč«); stan neberljiv]",
+      "mother": "Marijana Krašovec",
+      "botra": "Danijel Muen [~ (stan: kmetunar?/Argovec?)] + Ana Kambič",
+      "babica": "Ana Mavretič",
+      "priest": "Jos. Ravq [~]",
+      "notes": [
+        "h24 = 10. VPIS (1887, 1888, 1890, 1892, 1893, 1895×2, 1897, 1901) — najbolj vpisovana gibriljska hiša registra",
+        "marginalija (modro, delno neberljivo): »Zakonec Juvarič? Jožef umrl dne 28.9.1976 v … (MMK … l.1976, črn. 26, zop. št. 15); Gradac 15.11.1976; Velencič Jože 15.12.1982« [~]"
+      ]
+    },
+    {
+      "row": 2,
+      "year": 1903,
+      "month": "Januar",
+      "born": "5.",
+      "baptized": "5.",
+      "village": "Griblje",
+      "houseNo": "5",
+      "scan": 144,
+      "page": 136,
+      "child": "Matija",
+      "father": "Matija Štrucelj? [~ (branja »Švrucej/Švagelj« — Kurrent), ½ zemljak? (stan pod trakom)]",
+      "mother": "Marija Mehle? [~]",
+      "botra": "Janez Dragoš + Katarina Toter (½ zemljak)",
+      "babica": "Marjeta Toter",
+      "priest": "Jos. Ravq [~]",
+      "notes": [
+        "h5 = 2. VPIS (1891 — P86); fold-damage str. 136 (lepilni trak) — očetova celica pod njim",
+        "boter Janez Dragoš = h12 oče 1892–93 (DRAGOS signal 7)"
+      ]
+    },
+    {
+      "row": 3,
+      "year": 1903,
+      "month": "Januar",
+      "born": "22.",
+      "baptized": "22.",
+      "village": "Griblje",
+      "houseNo": "12",
+      "scan": 144,
+      "page": 136,
+      "child": "Marija",
+      "father": "Dragoš [ime pod trakom; ~ Janez — h12 1892/93 oče Janez Dragos ½ zemljak], ½ zemljašt.",
+      "mother": "Barbara [rodčina pod trakom; ~ Držibovič?/Kržibomič?]",
+      "botra": "Matija Špas [~ + Katarina Toter",
+      "babica": "Marjeta Toter",
+      "priest": "Dostál [~]",
+      "notes": [
+        "h12 = 8. VPIS (1892, 1894, 1895, 1897, 1899, 1901×2); DRAGOS signal 7 (1902/03 botra/boter Janez Dragoš ×2)",
+        "marginalija: »† 22/1.03« [~] — dojenček (živel ~14 dni)"
+      ]
+    },
+    {
+      "row": 14,
+      "year": 1903,
+      "month": "Marec",
+      "born": "8.",
+      "baptized": "9.",
+      "village": "Griblje",
+      "houseNo": "32",
+      "scan": 145,
+      "page": 137,
+      "child": "Jožef",
+      "father": "Matija Urh? [~ (branja »Uleh/Udih/Urh« — Kurrent)], ½ zemljak",
+      "mother": "Marjeta Perdinec",
+      "botra": "Janez Požek + Marija Mih (½ zemljak)",
+      "babica": "Marjeta Toter",
+      "priest": "Jos. Ravq",
+      "notes": [
+        "h32 = 8. VPIS (1889, 1890, 1892, 1893, 1895, 1897, 1898, 1900)",
+        "† umrl 6.10.1963 v Novem mestu (MMK Novo mesto 2.1963, št. 702, joh. št. 1929), 13.10.1963; poročen 17.11.1930; maticar Vrabič? Plec? [~]"
+      ]
+    },
+    {
+      "row": 25,
+      "year": 1903,
+      "month": "Maj",
+      "born": "1.",
+      "baptized": "1.",
+      "village": "Griblje",
+      "houseNo": "35",
+      "scan": 146,
+      "page": 138,
+      "child": "Marija",
+      "father": "[ime pod trakom — brez berljivega dela], stan neberljiv",
+      "mother": "Ana Kušar? [~]",
+      "botra": "Peter Švigan? [~ (½ zemljak) + Ana Mir (bajtarica?)]",
+      "babica": "Marjeta Toter",
+      "priest": "Jos. Ravq",
+      "notes": [
+        "h35 = 4. VPIS (1887, 1889, 1890)",
+        "† umrla 10.5.1979 v Gribljah (MMK … l.1979, št. 14, 20.9., št. 2), Gradac 21.5.1979, maticar Šimec Nina [~]"
+      ]
+    },
+    {
+      "row": 43,
+      "year": 1903,
+      "month": "Julij",
+      "born": "31.",
+      "baptized": "31.",
+      "village": "Griblje",
+      "houseNo": "23",
+      "scan": 147,
+      "page": 139,
+      "child": "Jaroslav? [~]",
+      "father": "[? Kerbanec/Herbanec [~ — ime pod razivom], ¼ zemljak",
+      "mother": "Ana Južna [~]",
+      "botra": "Matija Novak (bajtar) + Barbara Južna (bajtarica)",
+      "babica": "Alojzija Delak",
+      "priest": "Jos. Ravq",
+      "notes": [
+        "h23 = 5. VPIS (1893, 1894, 1897, 1900)",
+        "† 18.09.1990 v Šmarju? (AlJo … 1.1990, zop. št. 14), deleževalec 18.01.1991; poročen 14.11.1931; modri pripisi delno neberljivi (MMK … št. 1874 [~])"
+      ]
+    },
+    {
+      "row": 44,
+      "year": 1903,
+      "month": "Avgust",
+      "born": "2.",
+      "baptized": "3.",
+      "village": "Griblje",
+      "houseNo": "63",
+      "scan": 147,
+      "page": 139,
+      "child": "Ana",
+      "father": "Nikolaj Uhr? [~ (ime pod razivom)], ½ zemljak",
+      "mother": "Marija Lehniyer? [~]",
+      "botra": "Matija Jakljič? [~ + Ana Jakljič? [~ (½ zemljak)]",
+      "babica": "Ana Mavretič",
+      "priest": "Dostál [~]",
+      "notes": [
+        "h63 = 7. VPIS (1887, 1889, 1890, 1892, 1896, 1898)",
+        "† umrl 30.11.1972 v Raki?/Ravni gori (MMK Rama gora? l.1972, št. 10), 14.12.1972; poročen 28.6.1975 [~ (ali 1935 — Kurrent 3/5)"
+      ]
+    },
+    {
+      "row": 47,
+      "year": 1903,
+      "month": "Avgust",
+      "born": "13. [~ (delno pod pečatom)]",
+      "baptized": "1. [~]",
+      "village": "Griblje",
+      "houseNo": "34",
+      "scan": 149,
+      "page": 140,
+      "child": "Katarina",
+      "father": "Nikolaj Žilak? [~], ½ zemljak?",
+      "mother": "Katarina Klobučar? [~]",
+      "botra": "Nikol Segina + Katarina Hrižan (½ zemljak)",
+      "babica": "Marija Mih",
+      "priest": "Stanislav Dostál",
+      "notes": [
+        "h34 = 3. VPIS (1887, 1899)",
+        "SEGINA signal 7 (boter Nikol Segina — isti kot h30 oče 1902 r16; HRIŽAN signal — botrinja Katarina Hrižan)",
+        "marginalija: nalepka »umrla dne 04.03.1991 v Ptuju. MKU NO Ptuj, kšt. 1991, nbr. 190, zop. št. 290. Matičar, nam. Adamič drug« [~] — † 24.9.03? [~ svinčnik tudi]"
+      ]
+    },
+    {
+      "row": 55,
+      "year": 1903,
+      "month": "Oktober",
+      "born": "3.",
+      "baptized": "4.",
+      "village": "Griblje",
+      "houseNo": "58",
+      "scan": 149,
+      "page": 140,
+      "child": "Neža",
+      "father": "Janez Požek, ¾ zemljak",
+      "mother": "Katarina Kambič",
+      "botra": "Marko Hlebec + Marija Kambič (½ zemljak)",
+      "babica": "Marjeta Toter",
+      "priest": "Dostál",
+      "notes": [
+        "h58 = 7. VPIS (1889, 1890, 1892, 1895, 1900, 1902)",
+        "REŠITEV P97 MERI: 1902 r8 oče »Janez Povk? × Katarina Hambič?« = ISTI PAR kot 1903 »Janez Požek × Katarina Kambič« (Kurrent varianta — NI menjava družine); 1892 Požek × Dragos → menjava žene pred 1900 ostaja potrjena"
+      ]
+    },
+    {
+      "row": 59,
+      "year": 1903,
+      "month": "Oktober",
+      "born": "20.",
+      "baptized": "21.",
+      "village": "Griblje",
+      "houseNo": "20",
+      "scan": 150,
+      "page": 141,
+      "child": "Ana",
+      "father": "Peter Perdinec, ¾ zemljak",
+      "mother": "Doroteja Klepec",
+      "botra": "Matija Milek + Katarina Perdinec (½ zemljak)",
+      "babica": "Katarina Perdinec",
+      "priest": "Dostál",
+      "notes": [
+        "h20 = 4. VPIS (1895, 1897, 1900)",
+        "EMŠO Ž: 2010903505047 → 20.10.1903 (SIDRO; izdano 26.10.1982, Šumovič Nina); † umrla 12.08.1995 v Gribljah? (MKU NO Črnomelj l.1995, št. 55), 08.03.2001 [~]; poročen 17.5.1931 [~]"
+      ]
+    },
+    {
+      "row": 76,
+      "year": 1903,
+      "month": "December",
+      "born": "9.",
+      "baptized": "9.",
+      "village": "Griblje",
+      "houseNo": "30",
+      "scan": 151,
+      "page": 142,
+      "child": "Alojzij",
+      "father": "Nikolaj Segina, ½ zemljak",
+      "mother": "Katarina Brinec",
+      "botra": "Matija Mitek? [~ + Marija Križan (½ zemljak)]",
+      "babica": "Marija Mih",
+      "priest": "Jos. Ravq",
+      "notes": [
+        "h30 = 2. VPIS ZAPORED (1902 r16 + 1903 r76 — oče ISTI: Nikolaj Segina; MENJAVA ŽENE: Marjeta Milek (1902) → Katarina Brinec (1903) — MERI)",
+        "SEGINA signal 8 (h30 + h34 v istem letu: r47 boter Nikol Segina)",
+        "† 3.3.1944 (modri pripis: »dne 3.3.1944 padel …« [~ — neberljivo]); poročen 16.7.1939"
+      ]
+    },
+    {
+      "row": 81,
+      "year": 1903,
+      "month": "December",
+      "born": "25.",
+      "baptized": "26.",
+      "village": "Griblje",
+      "houseNo": "83",
+      "scan": 151,
+      "page": 142,
+      "child": "Neža",
+      "father": "Jožef Željko [~ (ime/priimek obrnjen — branjc »Željko Jožef«)], ½ zemljak?",
+      "mother": "Nina Gorše? [~]",
+      "botra": "Nikolaj Željko [~ + Marija Željko [~]",
+      "babica": "Marjeta Toter",
+      "priest": "Dostál [~]",
+      "notes": [
+        "h83 = 3. VPIS (1888, 1889) — LUKNJA 1890–1902 (13 let) zaplodana s 1903!",
+        "ŽELJKO signal 21 (boter Nikolaj Željko — 1903: r27 Janez Željko, r48 Nikol Željko, r74 Janez Željko, r81 Nikolaj Željko = 4× boter)"
+      ]
+    }
+  ],
+  "excluded": [],
+  "excludedNote": "1903: NI izključenih gibriljskih vrstic (vse 12 čitljivih; r82 hiša neberljiva, a r82 = Dragoše, ne Griblje — gre v anomalije)",
+  "anomalies": [
+    {
+      "row": 7,
+      "type": "fizična-poškodba",
+      "note": "str. 136 (sken 144): r7 kraj/hiša/ime pod trganjem+plastiko — kraj »Gošenovec?«, hiša »4?«, ime »Vlahtin?« vse [~]; oče »Morvet/Morvat [~], gendarmer.« (edini žandar v register do 1903!); mati »Augusta Ressler? [~«; botra »Marija Gossler, logarjeva hči? [~«"
+    },
+    {
+      "row": 45,
+      "type": "fizična-poškodba",
+      "note": "str. 139 (sken 147) dno: r45 Otok 8 Nikolaj — desna stran strani FIZIČNO ODRGANA (oče/matère/botra/podpis odrezani; ohranjen »…anj ½ zemljak« [~)"
+    },
+    {
+      "row": 22,
+      "type": "pod-pripisom",
+      "note": "r22 Gradac [76? [~]: ime pokrito z veliko modro pripiso († 10.09.1988 v Zagrebu, MKU NO Zagreb, l.1988, zop. št. 1947?); ime neberljivo (ženski spola — EMŠO 01.04.1903 ♀); hiša 76 [~ po grid-preberu"
+    },
+    {
+      "row": 48,
+      "type": "pod-pripisom",
+      "note": "r48 [village neberljivo] 2 [~]: kraj+datum pokriti z veliko poročno pripiso (»Družii poročena 14.8.1971 s Ferdinandom … SCHMIRMAVL« [~]); ime »Ana/Marija?« — dvom; R: oče Nikol Brodarič (½ zemljak) × Marija Mitek; botra Nikol Željko + Katarina Berkopeck (ŽELJKO signal 19)"
+    },
+    {
+      "row": 49,
+      "type": "naknadni-krst",
+      "note": "NOVELA P98 — r49 Geršiči? [~ 2 Marija: roj. 31.8., krščena 1.5.1944 (naknadni vpis krsta po ~41 letih!), † 19.9.1944 [~ (svinčnik »folker. krst 1.5.1944« [~]); edini naknadni krst v register do 1903"
+    },
+    {
+      "row": 51,
+      "type": "mrtvorojena",
+      "note": "NOVELA P98 — r51 Žemelj 18: »I. mrtvorojena žensk. spola« (jasno zapisano); brez datumov, brez botre (— —), brez podpisa; prvi potrjeni mrtvorojeni vpis v register do 1903"
+    },
+    {
+      "row": 69,
+      "type": "mrtvorojena",
+      "note": "r69 Vranoviče 9: »I. mrtvorojena« [~ (ženski spola)]; oče Matevž? Petrovčič? [~ × Marija Žumčič? [~ (¾ zemljak); botra PRAZNA; podpis odrezan; drugi mrtvorojeni vpis 1903"
+    },
+    {
+      "row": 54,
+      "type": "nezakonski",
+      "note": "r54 Gradac 68 Francišek? [~]: očetova celica PRAZNA; mati »Marija Rak, samska bajtanjeva hči« — NEZAKONSKI vpis (edini potrjeni do 1903); botra Julij Maxelle + Jožefa Maxelle"
+    },
+    {
+      "row": 57,
+      "type": "velik-zapis",
+      "note": "r57 Dobravice 43: R celice prekrite z obsežnim podčrtanim zapisom (priznanje očetovstva? — »… očeta je forcal … Katarina Kurer? vdova Krajišnik? gostilničarka, roj. Kravovec … dne 22/4 1924 …« [~ — MERI); mati vdova gostilničarka; botra Ana Novak"
+    },
+    {
+      "row": 80,
+      "type": "prestopni-krst",
+      "note": "NOVELA P98 — r80 Gradac 13 Julij: roj. 23.12. [~] (EMŠO 2512903500066 → 25.12.1903 ♂ — anomalija 23 vs 25), krščen 2.1.1904 (PRESTOPNI KRST — edini do 1903); EMŠO izdano 27.01.1956 Gradac, maticar Adamič Ana"
+    },
+    {
+      "row": 82,
+      "type": "razveza",
+      "note": "NOVELA P98 — r82 Dragoše Janez: modri pripis »Združbe okrožnega sodišča v Novem mestu št. P111/60 z dne 8/…-1960 je bila zakonska zveza razvezana.« — PRVI DOKAZ RAZVEZE v register do 1903; hiša pod pripisom (neberljiva); † umrl 29.3.1966 v Dragoših (MMK Dragotuši l.1966)"
+    },
+    {
+      "row": 52,
+      "type": "prazna-babica",
+      "note": "r52 Dobravice 14 Barbara: babica »—« (prazna); R: Martin Nemanič (½ zemljak) × Katarina Šojinič?; botra Nikolaj Ries + Ana Ries (RIES par)"
+    },
+    {
+      "row": 53,
+      "type": "prazna-babica",
+      "note": "r53 Gemov? 29 Marjan: babica »—« (prazna); R: Nikolaj Kure (¾ zemljak) × Marija Torno; botra Janez Kure + Barbara Kure"
+    }
+  ],
+  "stats": {
+    "entries": 12,
+    "distinctHouses": 12,
+    "housesWritten": [
+      "24",
+      "5",
+      "12",
+      "32",
+      "35",
+      "23",
+      "63",
+      "34",
+      "58",
+      "20",
+      "30",
+      "83"
+    ],
+    "housesIllegible": 0,
+    "intraYearRepeats": 0,
+    "intraYearRepeatsNote": "NARE — 9. leto (vsaka hiša 1×; 1901 edini prelom z h12 ×2)",
+    "newSampleHouses": 0,
+    "newSampleHousesNote": "DRUGO LETO ZAPORED BREZ NOVIH HIŠ (vse 12 že v vitals; h83 luknja 1890–1902 zaplodana)",
+    "villageTally": {
+      "Griblje": 12,
+      "Gradac": 12,
+      "Krasinec": 6,
+      "Cerkvišče": 5,
+      "Otok": 4,
+      "Primostek": 4,
+      "Dobravice": 4,
+      "Prilozje": 3,
+      "Podzemelj": 3,
+      "Žemelj": 3,
+      "Krvoglavce": 3,
+      "Vranoviče/Vranovice": 3,
+      "Geršiči? [~]": 3,
+      "Zastava": 2,
+      "Boršt": 2,
+      "Klošter": 2,
+      "Dragoše": 2,
+      "Gemov? [~]": 2,
+      "Kapljišče": 1,
+      "Škrilje? [~]": 1,
+      "Boginja vas? [~]": 1,
+      "Pučane? [~]": 1,
+      "Gošenovec? [~]": 1,
+      "[neberljivo — pod pripiso]": 1
+    },
+    "rowsTotal": 82,
+    "midwifeNamed": 76,
+    "midwifeEmpty": 2,
+    "midwifeNote": "prazni: r52 + r53 (»—«); r51/r69 mrtvorojena brez babice (ne štejeta kot krst); r45/r57 odrezani [~]",
+    "illegitimate": 1,
+    "illegitimateNote": "r54 (mati samska, očetova celica prazna); r57 sum (vdova gostilničarka + velik zapis) — MERI",
+    "infantDeaths": 6,
+    "infantDeathsNote": "r3 †22/1.03 + r29 †1/9.03 + r45 †7/9.03? + r67 †16/1.03 + r68 †9/1.04 + r71 †25/9.04",
+    "stillborn": 2,
+    "priests": {
+      "Dostál": 44,
+      "Ravq": 32,
+      "Levic? [~]": 1,
+      "manjkajoči/odrezani": 5
+    },
+    "priestsNote": "manjkajoči: r21?, r30?, r33?, r45 (odtrgan), r57; r51/r69 mrtvorojena brez podpisa (ne štejeta)",
+    "zeljkoSignals": "botra Željko 1903: r27 (Janez), r48 (Nikol), r74 (Janez), r81 (Nikolaj) = 4× (signals 18–21; P97: 16–17)",
+    "seginaSignals": "r47 boter Nikol Segina (signal 7) + r76 oče Nikolaj Segina h30 (signal 8) — 2. hiša Segina zapored (h30 1902+1903)",
+    "dragosSignals": "r2 boter Janez Dragoš (signal 7) — h12 oče 1892–93",
+    "emsoAnchors": [
+      "r7 0902903505416→09.02.1903 ♂",
+      "r22 0104903505041→01.04.1903 ♀",
+      "r56 0310903505116→03.10.1903 ♀",
+      "r59 2010903505047→20.10.1903 ♀",
+      "r65 0611903505124→06.11.1903 ♀",
+      "r72 2811903500562→28.11.1903 ♂",
+      "r80 2512903500066→25.12.1903 ♂"
+    ],
+    "cumulative": {
+      "entries": 294,
+      "houses": 81
+    },
+    "cumulativeNote": "282 (po P97) + 12 (P98) = 294 vpisov; 81 hiš (+0 novih — drugo leto zapored); OSEMNAJST let (1886–1903)",
+    "ptInNabor": 11,
+    "ptGap": [
+      "58"
+    ],
+    "ptNote": "h58 v PT luknji (že v PT_GAP_KNOWN od P95); ostalih 11 v naboru"
+  }
+}

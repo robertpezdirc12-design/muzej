@@ -4666,3 +4666,24 @@ Work Log:
 Stage Summary:
 - DVOROGI STATUS: lokalni == GitHub (zrcalo) == fd2c81c; GitLab (vir resnice) ZASTAREL na b5a25d7 + push BLOKIRAN (403 — žeton izgubljen s peskovniškim resetom — owner action: git remote set-url origin https://<user>:<GITLAB_TOKEN>@gitlab.com/markec-group1/muzej.git → git push origin main)
 - Produkcija Vercel: deploy sprožen prek GitHub pusha; pričakovano 98/98 (qa-p97 True)
+
+---
+Task ID: 69
+Agent: Z.ai Code (glavna seja)
+Task: P98 = krstna 1903 (issue #18) — dokaz + verifikator + parish.ts + qa-p98 + regresije + docs + sinhronizacija (GitLab žeton)
+
+Work Log:
+- SINHRONIZACIJA: uporabnik posredoval NOV GitLab PAT; `git remote set-url origin` + `git ls-remote` OK — GitLab main ŽE na 718f2f6 (lokalni == GitHub == GitLab; push kanal potrjen "Everything up-to-date")
+- P98 dokaz: research/issue17/parish-baptism-1903.json (SAMPLE-TRANSCRIPTION-1903; MERI, NE odloča) — 12 vpisov / 12 hiš (24, 5, 12, 32, 35, 23, 63, 34, 58, 20, 30, 83); okvir skeni 141–152 == strani 133–143 (82 vrstic); glava »1903.« NA SREDINI str. 136 (sken 144, P97 dokazano); glava »1904« pod r82 (1904 r1 = Krasinec 37 — P99 lead); NOVELA: EN dup par (148/149 = str. 140); stran == sken − 8 (141–148) / − 9 (150–152) — PREMIK offseta za dup par; 0 excluded (r82 = Dragoše → anomalija razveza); 13 anomalij (r7 gendarmer Morvet — edini žandar do 1903; r45 Otok 8 odrgana; r49 naknadni krst 1944; r51/r69 mrtvorojena; r54 nezakonski; r80 prestopni krst 2.1.1904; r82 razveza; r52/r53 prazna babica); celo-leto statistika (Dostál 44 + Ravq 32; babica 76/2; † 6; mrtvorojena 2)
+- Verifikator scripts/p98_parish_baptism_1903.py (I1–I10, --check) — network probe (326 slik) + frame + counts + PT + 12 sidor + 12 kontinuitet + vitals projekcija + neodvisen preracun; POPRAVI med razvojem: priests.get("Kulbinek", 0) (JSON brez 0-ključa) + page_of_scan offset premik (148/149 → 140; 150–152 → − 9)
+- parish.ts: + 12 blokov HOUSE_VITALS 1903 (276 → 288) s P98 sekcijo-komentarjem; vsi status DOCUMENTED
+- qa-parish.ts: + qa-p98-parish-baptism-1903 (99. kontrola; okvir pageOfScan + NARE + 4 sidra-hiše + 12 kontinuitetnih pinov + vitals 288 + babica 12/12 + Toter 6× + duhovniki 6/1/6/0 + signali ŽELJKO 21/SEGINA 7+8/DRAGOS 7 + REŠITEV P97 MERI + EMŠO r59); vitals pini 276 → 288 v 12 starih kontrolah (p86–p97) + labele normalizirane; allow liste + 1903: qa-p85 h30, qa-p87 h12, qa-p88 h23, qa-p90 h20; p98PageOfScan offset premik; kontinuitetni pin h5 TOREC → Torec (blok 1891 rabi »Mihael Torec«)
+- Regresije skript: p85–p97 EXPECTED_VITALS_TOTAL 276 → 288 (13 skript; komentar + P98: + 12) + kumulativni assert 282 → 294 (12 skript, vklj. p85 lowercase ev_only_total); p80 I7 vitals 276 → 288; p85/p87/p88/p90 izključitvene terke poznejših let + 1903 (zgodovinske klasifikacije novih hiš zamrznjene — I10 debug-transformacija v /tmp je lokalizirala 4 FAIL-e na repeat/new preracun)
+- Veriga p79–p98 --check: VSE PASS (p79 I-vrsta, p80 SKUPAJ PASS, p81 PASS, p82–p98 invarianti True = 17/17)
+- QA: tsc 0 / lint 0; /api/qa dev **99/99, 0 failed** (qa-p98 True; 5 začasnih FAIL-ov — 4 allow liste + qa-p98 offset/pin — popravljeni v enem iteracijskem krogu)
+- atlas.ts PT_GAP_KNOWN NESPREMENJEN (58 že vsebovan; 42/50/51 ostajajo); v7 runtime join nespremenjen
+- Docs: README + P98 odstavek (opis + integracija + lekcije) + »Zadnje stanje raziskave (po P98 · 2026-10-17)« (QA 99/99; p60–p67 + p70–p98; p80–p98 = 19 skript; qa lista + qa-p98; P77–P98 brez kartic)
+
+Stage Summary:
+- P98 = krstna 1903 REPO-KOMPLETEN: dokaz + verifikator (I1–I10 PASS) + parish.ts (288 vitals) + qa-p98 (**99/99**) + 19 skript PASS + docs; kumulativ **294 vpisov / 81 hiš / OSEMNAJST let** (1886–1903); NARE 9. leto; DRUGO LETO ZAPORED brez novih hiš (h83 luknja 13 let zaplodana); REŠITEV P97 MERI (Povk?×Hambič? = Požek×Kambič — ISTI PAR); h24 = najbolj vpisovana hiša registra (10. VPIS); trosinhronizacija OBNOVLJENA z novim GitLab žetonom (lokal == GitLab == GitHub)
+- NASLEDNJA FAZA: P99 = krstna 1904 (glava »1904« pod r82 str. 143 = sken 152; 1904 r1 = Krasinec 37 5./5. Januar; skeni 152+ prenesti) ALI mrliška 04894 nadaljevanje ALI poročna 04455 (Straus × Spudič — 5× krstno potrjen lead)

@@ -70,7 +70,7 @@ EXPECTED_PT_GAP = ["44", "54"]  # oba že v PT_GAP_KNOWN — brez novih številk
 EXPECTED_NEW_HOUSES = ["19"]    # h19 NOVA (PT nabor 1825)
 EXPECTED_REPEATS = 8            # 9 hiš − 1 nova
 EXPECTED_HOUSES_VITALS = 10
-EXPECTED_VITALS_TOTAL = 276     # HOUSE_VITALS 254 + 10 (P96: krstna 1901)
+EXPECTED_VITALS_TOTAL = 288     # HOUSE_VITALS 254 + 10 (P96: krstna 1901); P98: + 12 (1903)
 EV_ONLY_TOTAL = 6               # P84: 2 + P85: 3 + P86: 1 (P77–P83, P87–P96: 0)
 EV_ONLY_HOUSE_STRINGS = {"65 [~]"}  # P85 — edina imenovana EV-only hiša
 EXPECTED_PRIESTS = (7, 2)       # (Kulbinek?, Rauq) + Dostál 1
@@ -374,7 +374,7 @@ def verify():
         and new_houses == EXPECTED_NEW_HOUSES
         and dokaz["stats"]["newSampleHouses"] == 1
         and n_entries_total == EXPECTED_VITALS_TOTAL
-        and n_entries_total + EV_ONLY_TOTAL == 282  # kumulativno po P96 (264 + 6)
+        and n_entries_total + EV_ONLY_TOTAL == 294  # kumulativno po P98 (288 + 6)
         and n_houses_total == 80  # P95: 79 vitals; P96: + 1 (19)
         and ev_only_houses == EV_ONLY_HOUSE_STRINGS
         and cumulative["entries"] == 270

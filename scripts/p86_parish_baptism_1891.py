@@ -44,7 +44,7 @@ EXPECTED_PT_IN_SET = {"2", "5", "28", "30", "31", "61", "62", "72"}
 EXPECTED_PT_GAP = {"53"}
 PT_GAP_NEW = ["53"]
 EXPECTED_HOUSES_VITALS = 9      # 10 vpisov − 1 evidence-only (runtime projekcija)
-EXPECTED_VITALS_TOTAL = 276     # HOUSE_VITALS 121 + 12 (p80 I7 pin); P87: + 12 (1892); P88: + 17 (1893); P89: + 14 (1894); P90: + 15 (1895); P91: + 14 (1896); P92: + 19 (1897); P93: + 12 (1898); P94: + 15 (1899); P95: + 16 (1900)
+EXPECTED_VITALS_TOTAL = 288     # HOUSE_VITALS 121 + 12 (p80 I7 pin); P87: + 12 (1892); P88: + 17 (1893); P89: + 14 (1894); P90: + 15 (1895); P91: + 14 (1896); P92: + 19 (1897); P93: + 12 (1898); P94: + 15 (1899); P95: + 16 (1900); P98: + 12 (1903)
 EV_ONLY_TOTAL = 6               # P84: 2 + P85: 3 + P86: 1
 # sidra/pins P86:
 H72_ROW = {"row": 6, "scan": 50, "fatherPin": "Straus"}
@@ -285,7 +285,7 @@ def verify():
         len(repeat_houses) == dokaz["stats"]["repeatHouses"] == 7
         and new_houses == dokaz["stats"]["newSampleHouses"]
         and n_entries_total == EXPECTED_VITALS_TOTAL
-        and n_entries_total + EV_ONLY_TOTAL == 282  # kumulativno po P95 (254 + 6)
+        and n_entries_total + EV_ONLY_TOTAL == 294  # kumulativno po P98 (288 + 6)
         and n_houses_total == 80  # P94: 78; P95: + 1 (67)
         and p85_ev_named == ["65 [~]"]
         and dokaz["stats"]["sampleTotal"] == "127 vpisov / 58 hiš čez tri knjige (04105 + 04894 + 04455) in šest let (1886/1887/1888/1889/1890/1891)"

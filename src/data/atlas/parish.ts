@@ -3086,4 +3086,146 @@ export const HOUSE_VITALS: HouseVital[] = [
     status: "DOCUMENTED",
   },
 
+  // ——— P98: polno leto 1903 (vsi Griblje vpisi, str. 136 sredina – 143 = skeni 141–152) ———
+  // NOVELA P98: EN podvojen par skenov (148/149 = str. 140, rows 46–57;
+  // s149 bolj čitljiv); stran == sken − 8 (141–148) / − 9 (150–152 — premik za dup par). Format 1903 = NOVA
+  // TISKANA knjiga (kot 1902 — »Rojstna in krstna knjiga.«, predtiskano
+  // »Leto 18|03«). Okvir: glava »1903.« NA SREDINI str. 136 (sken 144, P97
+  // dokazano; r1 = Griblje 24 4./5. Januar) – row 82 na str. 143 (sken 152;
+  // glava »1904« pod r82 — 1904 r1 = Krasinec 37, P99 lead); 82 vrstic.
+  // 12 vpisov / 12 hiš — NARE 9. leto (vsaka hiša 1×; 1901 edini prelom z
+  // h12 ×2) + DRUGO LETO ZAPORED BREZ NOVIH HIŠ (h83 luknja 1890–1902
+  // zaplodana — 3. VPIS; vse 12 že v vitals). PT 11/1 (h58 v luknji — že v
+  // PT_GAP_KNOWN). Duhovniki (celo leto): Dostál 44× + Jos. Ravq 32× +
+  // Levic? 1× + manjkajoči 5×; na Gribljih: Dostál 6× (Stanislav jasno 1×)
+  // + Ravq 6×; Kulbinek 0×. Babica (celo leto): 76 imenovanih / 2 prazni
+  // (r52+r53); na Gribljih: Toter 6× + Mavretič 2× + Mih 2× + Perdinec 1×
+  // + Delak 1× (12/12). Sidra: r1 h24 10. VPIS (najbolj vpisovana hiša);
+  // r55 REŠITEV P97 MERI (»Povk? × Hambič?« = »Požek × Kambič« — ISTI PAR);
+  // r76 h30 2. VPIS ZAPORED (menjava žene Milek → Brinec — MERI); SEGINA
+  // signali 7+8; ŽELJKO signali 18–21 (4× botra); DRAGOS signal 7. Excluded:
+  // NI (vse 12 čitljive; r82 = Dragoše → anomalija razveza).
+  // Dokaz: research/issue17/parish-baptism-1903.json;
+  // verifikator: scripts/p98_parish_baptism_1903.py --check (I1–I10).
+  {
+    houseNo: "24",
+    bookSignature: "04105",
+    year: 1903,
+    scan: 144,
+    page: 136,
+    whatSi: "krščen Jožef (4./5. 1. — svinčnik »Matijo?« nad imenom — MERI) — oče Matevž Juvančič? [~ (ime+priimek pod trakom — branje »…vež Jucajveč/Juvanjveč«); stan neberljiv], mati Marijana Krašovec; h24 = 10. VPIS (1887, 1888, 1890, 1892, 1893, 1895×2, 1897, 1901) — NAJBOLJ VPISOVANA gibriljska hiša registra; botra Danijel Muen [~ (stan: kmetunar?/Argovec?)] + Ana Kambič; babica Ana Mavretič; podpis Jos. Ravq [~]; marginalija (modro, delno neberljivo): »Zakonec Juvarič? Jožef umrl dne 28.9.1976 (MMK … l.1976, črn. 26, zop. št. 15); Gradac 15.11.1976; Velencič Jože 15.12.1982« [~]",
+    whatEn: "baptized Jožef (Jan 4/5 — the pencil 'Matijo?' above the name — MERI) — father Matevž Juvančič? [~ (the name+surname under a strip — the reading '…vež Jucajveč/Juvanjveč'); the status illegible], mother Marijana Krašovec; h24 = the 10th ENTRY (1887, 1888, 1890, 1892, 1893, 1895×2, 1897, 1901) — THE MOST-ENTERED Griblje house of the register; godparents Danijel Muen [~ (the status: a farmhand?/Argovec?)] + Ana Kambič; midwife Ana Mavretič; signature Jos. Ravq [~]; a blue marginalia (partly illegible): 'The spouse Juvarič? Jožef died Sep 28, 1976 (MMK … 1976, no. 26, ref. 15); Gradac Nov 15, 1976; Velencič Jože Dec 15, 1982' [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "5",
+    bookSignature: "04105",
+    year: 1903,
+    scan: 144,
+    page: 136,
+    whatSi: "krščen Matija (5./5. 1.) — oče Matija Štrucelj? [~ (branja »Švrucej/Švagelj« — Kurrent), ½ zemljak? (stan pod trakom)], mati Marija Mehle? [~]; h5 = 2. VPIS (1891 — P86); fold-damage str. 136 (lepilni trak) — očetova celica pod njim; boter Janez Dragoš + Katarina Toter (½ zemljak) — DRAGOS signal 7 (boter = h12 oče 1892–93); babica Marjeta Toter; podpis Jos. Ravq [~]",
+    whatEn: "baptized Matija (Jan 5/5) — father Matija Štrucelj? [~ (the readings 'Švrucej/Švagelj' — Kurrent), a half smallholder? (the status under a strip)], mother Marija Mehle? [~]; h5 = the 2nd ENTRY (1891 — P86); the fold damage of p. 136 (adhesive tape) — the father's cell beneath it; godparents Janez Dragoš + Katarina Toter (half smallholder) — the DRAGOS signal 7 (the godfather = the h12 father 1892–93); midwife Marjeta Toter; signature Jos. Ravq [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "12",
+    bookSignature: "04105",
+    year: 1903,
+    scan: 144,
+    page: 136,
+    whatSi: "krščena Marija (22./22. 1.) — oče Dragoš [ime pod trakom; ~ Janez — h12 1892/93 oče Janez Dragos ½ zemljak], ½ zemljašt., mati Barbara [rodčina pod trakom; ~ Držibovič?/Kržibomič?]; h12 = 8. VPIS (1892, 1894, 1895, 1897, 1899, 1901×2); DRAGOS signal 7 (1902/03 botra/boter Janez Dragoš ×2); botra Matija Špas [~] + Katarina Toter; babica Marjeta Toter; podpis Dostál [~]; marginalija: »† 22/1.03« [~] — dojenček (živel ~14 dni)",
+    whatEn: "baptized Marija (Jan 22/22) — father Dragoš [the name under a strip; ~ Janez — the h12 1892/93 father Janez Dragos a half smallholder], a half smallholder's son, mother Barbara [the surname under a strip; ~ Držibovič?/Kržibomič?]; h12 = the 8th ENTRY (1892, 1894, 1895, 1897, 1899, 1901×2); the DRAGOS signal 7 (1902/03 the godparent Janez Dragoš ×2); godparents Matija Špas [~] + Katarina Toter; midwife Marjeta Toter; signature Dostál [~]; the marginalia: '† Jan 22, 1903' [~] — an infant (lived ~14 days)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "32",
+    bookSignature: "04105",
+    year: 1903,
+    scan: 145,
+    page: 137,
+    whatSi: "krščen Jožef (8./9. 3.) — oče Matija Urh? [~ (branja »Uleh/Udih/Urh« — Kurrent)], ½ zemljak, mati Marjeta Perdinec; h32 = 8. VPIS (1889, 1890, 1892, 1893, 1895, 1897, 1898, 1900); botra Janez Požek + Marija Mih (½ zemljak); babica Marjeta Toter; podpis Jos. Ravq; pripis: † 6.10.1963 Novo mesto (MMK Novo mesto 2.1963, št. 702, joh. 1929), 13.10.1963; poročen 17.11.1930; maticar Vrabič? Plec? [~]",
+    whatEn: "baptized Jožef (Mar 8/9) — father Matija Urh? [~ (the readings 'Uleh/Udih/Urh' — Kurrent)], a half smallholder, mother Marjeta Perdinec; h32 = the 8th ENTRY (1889, 1890, 1892, 1893, 1895, 1897, 1898, 1900); godparents Janez Požek + Marija Mih (half smallholder); midwife Marjeta Toter; signature Jos. Ravq; the note: † Oct 6, 1963 Novo mesto (MMK Novo mesto 2.1963, no. 702, ref. 1929), Oct 13, 1963; married Nov 17, 1930; the registrar Vrabič? Plec? [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "35",
+    bookSignature: "04105",
+    year: 1903,
+    scan: 146,
+    page: 138,
+    whatSi: "krščena Marija (1./1. 5.) — oče [ime pod trakom — brez berljivega dela], stan neberljiv, mati Ana Kušar? [~]; h35 = 4. VPIS (1887, 1889, 1890); botra Peter Švigan? [~ (½ zemljak)] + Ana Mir (bajtarica?); babica Marjeta Toter; podpis Jos. Ravq; pripis: † 10.5.1979 Griblje (MMK … l.1979, št. 14, 20.9., št. 2), Gradac 21.5.1979, maticar Šimec Nina [~]",
+    whatEn: "baptized Marija (May 1/1) — the father [the name under a strip — no legible part], the status illegible, mother Ana Kušar? [~]; h35 = the 4th ENTRY (1887, 1889, 1890); godparents Peter Švigan? [~ (a half smallholder)] + Ana Mir (a cotteress?); midwife Marjeta Toter; signature Jos. Ravq; the note: † May 10, 1979 Griblje (MMK … 1979, no. 14, Sep 20, no. 2), Gradac May 21, 1979, the registrar Šimec Nina [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "23",
+    bookSignature: "04105",
+    year: 1903,
+    scan: 147,
+    page: 139,
+    whatSi: "krščen Jaroslav? [~] (31./31. 7.) — oče [? Kerbanec/Herbanec [~ — ime pod razivom], ¼ zemljak, mati Ana Južna [~]; h23 = 5. VPIS (1893, 1894, 1897, 1900); botra Matija Novak (bajtar) + Barbara Južna (bajtarica); babica Alojzija Delak; podpis Jos. Ravq; pripis: † 18.09.1990 Šmarje? (AlJo … 1.1990, zop. št. 14), deleževalec 18.01.1991; poročen 14.11.1931; modri pripisi delno neberljivi (MMK … št. 1874 [~])",
+    whatEn: "baptized Jaroslav? [~] (Jul 31/31) — the father [? Kerbanec/Herbanec [~ — the name under a wrinkle], a quarter smallholder, mother Ana Južna [~]; h23 = the 5th ENTRY (1893, 1894, 1897, 1900); godparents Matija Novak (a cotter) + Barbara Južna (a cotteress); midwife Alojzija Delak; signature Jos. Ravq; the note: † Sep 18, 1990 Šmarje? (AlJo … 1.1990, ref. 14), the heir Jan 18, 1991; married Nov 14, 1931; the blue notes partly illegible (MMK … no. 1874 [~])",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "63",
+    bookSignature: "04105",
+    year: 1903,
+    scan: 147,
+    page: 139,
+    whatSi: "krščena Ana (2./3. 8.) — oče Nikolaj Uhr? [~ (ime pod razivom)], ½ zemljak, mati Marija Lehniyer? [~]; h63 = 7. VPIS (1887, 1889, 1890, 1892, 1896, 1898); botra Matija Jakljič? [~] + Ana Jakljič? [~ (½ zemljak)]; babica Ana Mavretič; podpis Dostál [~]; pripis: † 30.11.1972 Rake?/Ravna gora (MMK Rama gora? l.1972, št. 10), 14.12.1972; poročen 28.6.1975 [~ (ali 1935 — Kurrent 3/5)]",
+    whatEn: "baptized Ana (Aug 2/3) — father Nikolaj Uhr? [~ (the name under a wrinkle)], a half smallholder, mother Marija Lehniyer? [~]; h63 = the 7th ENTRY (1887, 1889, 1890, 1892, 1896, 1898); godparents Matija Jakljič? [~] + Ana Jakljič? [~ (a half smallholder)]; midwife Ana Mavretič; signature Dostál [~]; the note: † Nov 30, 1972 Rake?/Ravna gora (MMK Rama gora? 1972, no. 10), Dec 14, 1972; married Jun 28, 1975 [~ (or 1935 — the Kurrent 3/5)]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "34",
+    bookSignature: "04105",
+    year: 1903,
+    scan: 149,
+    page: 140,
+    whatSi: "krščena Katarina (13. [~ (delno pod pečatom)]/1. [~] 8.) — oče Nikolaj Žilak? [~], ½ zemljak?, mati Katarina Klobučar? [~]; h34 = 3. VPIS (1887, 1899); SEGINA signal 7 (boter Nikol Segina — isti kot h30 oče 1902 r16; HRIŽAN signal — botrinja Katarina Hrižan, ½ zemljak); babica Marija Mih; podpis Stanislav Dostál (jasno!); marginalija: nalepka »umrla dne 04.03.1991 v Ptuju. MKU NO Ptuj, kšt. 1991, nbr. 190, zop. št. 290. Matičar, nam. Adamič drug« [~] — † 24.9.03? [~ svinčnik tudi]",
+    whatEn: "baptized Katarina (Aug 13 [~ (partly under the stamp)]/1 [~]) — father Nikolaj Žilak? [~], a half smallholder?, mother Katarina Klobučar? [~]; h34 = the 3rd ENTRY (1887, 1899); the SEGINA signal 7 (the godfather Nikol Segina — the same as the h30 father 1902 r16; the HRIŽAN signal — the godmother Katarina Hrižan, a half smallholder); midwife Marija Mih; the signature Stanislav Dostál (clear!); the marginalia: a slip 'she died Mar 4, 1991 in Ptuj. MKU NO Ptuj, 1991, no. 190, ref. 290. The registrar, named Adamič' [~] — † Sep 24, 1903? [~ a pencil note too]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "58",
+    bookSignature: "04105",
+    year: 1903,
+    scan: 149,
+    page: 140,
+    whatSi: "krščena Neža (3./4. 10.) — oče Janez Požek ¾ zemljak, mati Katarina Kambič; h58 = 7. VPIS (1889, 1890, 1892, 1895, 1900, 1902); REŠITEV P97 MERI: 1902 r8 oče »Janez Povk? × Katarina Hambič?« = ISTI PAR kot 1903 »Janez Požek × Katarina Kambič« (Kurrent varianta — NI menjava družine); 1892 Požek × Dragos → menjava žene pred 1900 ostaja potrjena; botra Marko Hlebec + Marija Kambič (½ zemljak); babica Marjeta Toter; podpis Dostál",
+    whatEn: "baptized Neža (Oct 3/4) — father Janez Požek a three-quarter smallholder, mother Katarina Kambič; h58 = the 7th ENTRY (1889, 1890, 1892, 1895, 1900, 1902); THE RESOLUTION OF THE P97 MERI: the 1902 r8 father 'Janez Povk? × Katarina Hambič?' = THE SAME COUPLE as the 1903 'Janez Požek × Katarina Kambič' (a Kurrent variant — NOT a family change); the 1892 Požek × Dragos → the wife change before 1900 remains confirmed; godparents Marko Hlebec + Marija Kambič (half smallholder); midwife Marjeta Toter; signature Dostál",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "20",
+    bookSignature: "04105",
+    year: 1903,
+    scan: 150,
+    page: 141,
+    whatSi: "krščena Ana (20./21. 10.) — oče Peter Perdinec ¾ zemljak, mati Doroteja Klepec; h20 = 4. VPIS (1895, 1897, 1900); EMŠO Ž: 2010903505047 → 20.10.1903 (SIDRO; izdano 26.10.1982, Šumovič Nina); botra Matija Milek + Katarina Perdinec (½ zemljak); babica Katarina Perdinec; podpis Dostál; pripis: † 12.08.1995 Griblje? (MKU NO Črnomelj l.1995, št. 55), 08.03.2001 [~]; poročen 17.5.1931 [~]",
+    whatEn: "baptized Ana (Oct 20/21) — father Peter Perdinec a three-quarter smallholder, mother Doroteja Klepec; h20 = the 4th ENTRY (1895, 1897, 1900); the personal ID: 2010903505047 → Oct 20, 1903 (AN ANCHOR; issued Oct 26, 1982, Šumovič Nina); godparents Matija Milek + Katarina Perdinec (half smallholder); midwife Katarina Perdinec; signature Dostál; the note: † Aug 12, 1995 Griblje? (MKU NO Črnomelj 1995, no. 55), Mar 8, 2001 [~]; married May 17, 1931 [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "30",
+    bookSignature: "04105",
+    year: 1903,
+    scan: 151,
+    page: 142,
+    whatSi: "krščen Alojzij (9./9. 12.) — oče Nikolaj Segina ½ zemljak, mati Katarina Brinec; h30 = 2. VPIS ZAPORED (1902 r16 + 1903 r76 — oče ISTI: Nikolaj Segina; MENJAVA ŽENE: Marjeta Milek (1902) → Katarina Brinec (1903) — MERI); SEGINA signal 8 (h30 + h34 v istem letu: r47 boter Nikol Segina); botra Matija Mitek? [~] + Marija Križan (½ zemljak); babica Marija Mih; podpis Jos. Ravq; pripis: † 3.3.1944 (modri pripis: »dne 3.3.1944 padel …« [~ — neberljivo]); poročen 16.7.1939",
+    whatEn: "baptized Alojzij (Dec 9/9) — father Nikolaj Segina a half smallholder, mother Katarina Brinec; h30 = the 2nd CONSECUTIVE ENTRY (the 1902 r16 + the 1903 r76 — the father THE SAME: Nikolaj Segina; THE WIFE CHANGE: Marjeta Milek (1902) → Katarina Brinec (1903) — MERI); the SEGINA signal 8 (h30 + h34 in the same year: the r47 godfather Nikol Segina); godparents Matija Mitek? [~] + Marija Križan (half smallholder); midwife Marija Mih; signature Jos. Ravq; the note: † Mar 3, 1944 (the blue note: 'on Mar 3, 1944 fell …' [~ — illegible]); married Jul 16, 1939",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "83",
+    bookSignature: "04105",
+    year: 1903,
+    scan: 151,
+    page: 142,
+    whatSi: "krščena Neža (25./26. 12.) — oče Jožef Željko [~ (ime/priimek obrnjen — branje »Željko Jožef«)], ½ zemljak?, mati Nina Gorše? [~]; h83 = 3. VPIS (1888, 1889) — LUKNJA 1890–1902 (13 let) zaplodana s 1903!; ŽELJKO signal 21 (boter Nikolaj Željko — 1903 botra Željko 4×: r27 Janez, r48 Nikol, r74 Janez, r81 Nikolaj = signali 18–21); botra Nikolaj + Marija Željko [~]; babica Marjeta Toter; podpis Dostál [~]",
+    whatEn: "baptized Neža (Dec 25/26) — father Jožef Željko [~ (the name/surname reversed — the reading 'Željko Jožef')], a half smallholder?, mother Nina Gorše? [~]; h83 = the 3rd ENTRY (1888, 1889) — THE GAP 1890–1902 (13 years) filled with 1903!; the ŽELJKO signal 21 (the godfather Nikolaj Željko — in 1903 the Željko godparents 4×: r27 Janez, r48 Nikol, r74 Janez, r81 Nikolaj = the signals 18–21); godparents Nikolaj + Marija Željko [~]; midwife Marjeta Toter; signature Dostál [~]",
+    status: "DOCUMENTED",
+  },
+
 ];
