@@ -4745,3 +4745,16 @@ Work Log:
 Stage Summary:
 - P100 = krstna 1905 REPO-KOMPLETEN: dokaz + verifikator (I1–I10 PASS) + parish.ts (323 vitals, 16 celovitih blokov) + qa-p100 (101/101 — 101. kontrola) + 22/22 skript PASS + docs; kumulativ 329 vpisov / 84 hiš / DVAJSET let (1886–1905); NARE PRELOM (h12 ×2: Neža + Ana — 2. intra-letna ponovitev po 1901); 0 NOVIH hiš (drugo leto zapored); MENJAVA DRUŽINE h42 (Štraus → Perdinec/Pezdirec); LETO VELIKIH VRZELI (h39 18 let — NAJDALJŠA v vzorcu; h11 15 let); RAZVELJAVITEV ZAKONA h12 (Novo mesto 23.5.1949 — 1. gribeljska v krstni knjigi); h6 2. VPIS ZAPORED (ISTA botra Željko+Klepec + vijolični sodni pripis + EMŠO NESKLADJE SPOLA 0607905500076); h58 8. VPIS (Požek × Kambič — P98 rešitev 3. POTRDITEV); h25 Brinec × Šegina 3. dokumentacija; Hengsfeld 54× DOMINANT (celo leto); babica Toter 12× (16/16 na Gribljih); EMŠO kampanja 17 sidr; vstavljen vpis r8 (2. primer po P99 r19)
 - NASLEDNJA FAZA: P101 = krstna 1906 (glava »1906« str. 158 = sken 170/171; 1906 r1 = »Gorn?« 34 Jožef 1./1.; skeni 170+ prenesti) ALI mrliška 04894 1887–1896 (r69 h58 † 26.2.1906 lead!) ALI poročna 04455 (Straus × Spudič)
+
+---
+Task ID: 71-b (sinhronizacija — GitHub + GitLab + produkcija VSE OK)
+Agent: Z.ai Code (glavna seja)
+Task: P100 push — GitHub + GitLab + produkcija
+
+Work Log:
+- Commit ab1a4eb (P100: krstna 1905 + regresije + docs); git push github main OK (8f28773..ab1a4eb) — Vercel deploy sprožen
+- git push origin main OK (8f28773..ab1a4eb) — GitLab žeton (glpat-ae7rth4dK…) SPET DEJAVEN; blokada 403 iz Task 70-b REŠENA brez lastniške akcije (nov žeton v remote URL)
+- Produkcija Vercel (griblje-museum.vercel.app): GET /api/qa → **101/101, 0 failed** (qa-p100 True) — deploy že opravljen
+
+Stage Summary:
+- TROJSINHRONIZACIJA OBNOVLJENA: lokalni == GitHub == GitLab == ab1a4eb; produkcija 101/101 (dohitela repo)
