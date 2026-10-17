@@ -5402,3 +5402,84 @@ sken 160; 1905 r1 = Gradac 45? Antonija 2./7.? Januar; skeni 160+ prenesti);
 r78 — 2. osebi istega leta!); ④ h51 (ZADNJA nedokazana številka luknje
 41–60!); ⑤ r19 lead: EMŠO 0303904505822 (moški 1904) + pripis 2007 razkrije
 vstavljen vpis; ⑥ produkcija Vercel: dohiti P99 → QA 100/100.
+
+
+## §75 · P100 — župnija Podzemelj, krstna knjiga 04105, polno leto 1905 (issue #18; 2026-10-18)
+
+**Okvir (forenzika skenov 160–169, /tmp/p100)**: glava »1905« POD r90 na
+str. 150 (sken 160 — P99 dokazano; 1905 r1 = Gradac 45 Antonija 2./7.
+Januar — P99 lead POTRJEN) – row 87 na str. 157 (sken 169; glava »1906«
+na str. 158 = sken 170/171; 1906 r1 = »Gorn?« 34 Jožef 1./1. — P101 lead)
+== tiskane strani 150–157, **87 vrstic**. **NOVELA P100**: DVA podvojena
+para skenov (164/165 = str. 154, rows 40–51 + 168/169 = str. 157, rows
+76–87) + dup par 170/171 (str. 158) = ŽE leto 1906; **stran == sken
+− 10 (160–164) / − 11 (165–168) / − 12 (169–170) / − 13 (171+)** — premik
+offseta za vsak dup par (vzorec P97 −6/−7/−8, P98 −8/−9, P99 −9/−10).
+Format = **spread** (levo data, desno Roditelja/Botra/Babica; naslov
+razporejen čez obe strani).
+
+**Vzorec (vsi vpisi z Griblji)**: **16 vpisov / 15 hiš**: 1, 5, 6, 7, 11,
+12×2, 22, 23, 25, 34, 39, 42, 48, 58, 66 — **NARE PRELOM** (h12 ×2: r4
+Neža + r15 Ana — 2. intra-letna ponovitev po 1901; več-družinska hiša).
+**0 NOVIH hiš** (vse 15 že dokumentirane; drugo leto zapored brez novih).
+h42 (NOVA 1904) ponovitev že 1905 — **MENJAVA DRUŽINE** (Štraus →
+Perdinec/Pezdirec). **LETO VELIKIH VRZELI**: h39 **18 let** (1886→1905 —
+NAJDALJŠA v vzorcu!), h11 15 let (1890→1905), h1 4 leta (1900→1905), h66
+17 let (1887→1904). Kumulativ **329 vpisov / 84 hiš čez tri knjige in
+DVAJSET let** (323 vitals). PT **12/3** (42/48/58 v luknji — vsi
+ponovitve; luknja 41–60 ostaja SAMO pri h51).
+
+**Sidra**: r4 h12 9. VPIS + **RAZVELJAVITEV ZAKONA** (sodišče Novo mesto
+23.5.1949 — 1. gribeljska razveljavitev v krstni knjigi!) + EMŠO
+1201905505202; r49 h6 **2. VPIS ZAPORED** (ISTA botra Nikolaj Željko +
+Marija Klepec kot 1904! + vijolični pripis »Po odloči Okrajnega sodišča v
+Črnomelju« + **EMŠO NESKLADJE SPOLA** — 0607905500076 ženski znak, ime
+Janez moški); r69 h58 **8. VPIS** (ISTI PAR Janez Požek × Katarina Kambič —
+P98 rešitev 3. POTRDITEV; † 26.2.1906 dojenček); r66 h25 5. VPIS (Brinec ×
+Šegina — 3. dokumentacija); r62 h22 4. VPIS (Nikolaj Milek 1904 oče + botra
+Ana Požek — POŽEK signal); r82 h66 3. VPIS (Hrižan signal; † 1944 — 2.
+svetovna vojna); r50 h7 3. VPIS (Jakob Toter × Katarina Jakobšič — 1901
+par); r14 h5 3. VPIS (Matija Štrucelj = 1903 oče); r19 h34 4. VPIS (SEGINA
+signal — boter Nikolaj Šegina); r28/r29/r31/r42/r57/r65 (vrzeli in
+kontinuitete).
+
+**Duhovniki (celo leto 87)**: **Hengsfeld 54× DOMINANT** + Ravq 26 +
+Dostál 1 [~] + neberljivo 5 (odrezani) — na Gribljih Hengsfeld 8 + Ravq 7
++ odrezan 1 (r15). **Babica (celo leto)**: 78 imenovanih / 5 praznih / 3
+neberljive — na Gribljih **16/16: Toter 12× + Mih 3× (r19 = varianta
+»Mih [~ Muh] Marija«) + Kambič [~] 1×**. **EMŠO kampanja 1982–84**: 17
+sidr celo knjigo; 4 na Gribljih (r4/r14/r19/r49; r49 neskladje spola).
+
+**Anomalije**: r8 Gradac 55 **VSTAVLJEN vpis 03.09.2007** (2. primer po
+P99 r19; non-Griblje); r49 vijolični sodni pripis + neskladje spola;
+r71/r72 Boršt 19 **dvojčka** (ditto vrstica); r85 Gradac **žandar
+Wachtmeister** (2. po 1903 Morvet); r76/r79/r84 **»Hudorovac samska
+ciganka«** nezakonski + legitimizacija 1915; r73 razveza Zagreb; †
+dojenčka r66 + r69. EXCLUDED: 4 (r2 pripis pokrije kraj/hišo, r3 + r27
+odrezani v skenih, r40 bela nalepka).
+
+**Integracija**: parish.ts + 16 blokov HOUSE_VITALS 1905 (307 → 323; vsi
+status DOCUMENTED, spread pageOfScan novela) + qa-p100-parish-baptism-1905
+(**101. kontrola** — okvir + NARE PRELOM + 0 novih hiš + VRZELI 18/15 let +
+RAZVELJAVITEV ZAKONA + h6 2. ZAPORED + h58 Požek×Kambič + h25 Brinec×Šegina
++ 15 kontinuitetnih pinov + babica 16/16 (Toter 12 + Mih 3 vklj. varianta
+»Mih [~ Muh] Marija« + Kambič [~]) + duhovniki Ravq 7/Hengsfeld 8/Kulbinek
+0× + EMŠO 4 sidra) + qa-p85 h7 / qa-p87 h12 / qa-p88 h23 / qa-p93 h48 /
+qa-p94 h22 dovolijo 1905 bloke (allow mehanizem) + qa-p86–p99 vitals pini
+307 → 323 + **POPRAVI ZASTARELIH SKRIPT (regresije po P99)**: p80 (vitals
+323), p85–p99 vitals 323 + kumulativ 329 + hiše vitals 83, p85/p87/p88/
+p91/p92/p94/p95 horizon filtri + 1905 (+ 1903/1904 kjer manjkalo), p96
+inline terka + 1905, p93/p97/p98/p99 NOVI vesoljni filtri (vitals_pre99/
+pre1903/pre1904/pre1905), p95/p96/p97/p98 I6 PT_GAP_KNOWN asercije 42/50
+`not in` → `in` (zastarele od P99 — skrite za I10 FAIL-i) — vseh **22
+skript p79–p100** `--check` PASS (exit 0). Kartica NI dodana (vzorec
+P77–P100). tsc 0 / lint 0; **/api/qa dev 101/101** (qa-p100 True); v7
+NESPREMENJEN.
+
+**nextSteps**: ① **P101 = leto 1906** (glava »1906« na str. 158 = sken
+170/171; 1906 r1 = »Gorn?« 34 Jožef 1./1.; skeni 170+ prenesti); ② mrliška
+knjiga 04894 1887–1896: smrti prvih žen + dojenčki † iz krstnih (r69 h58
+† 26.2.1906 lead!); ③ poročna 04455: **Straus × Spudič** (krstno 5×; 1904
+ŠTRAUS r90 + SPUDIČ r78 — 2. osebi istega leta); ④ h51 (ZADNJA nedokazana
+številka luknje 41–60!); ⑤ produkcija Vercel: dohiti P100 → QA 101/101;
+⑥ EMŠO neskladje r49 (0607905500076) — obravnava kot P99 r19.

@@ -4723,3 +4723,25 @@ Work Log:
 Stage Summary:
 - DVOROGI STATUS: lokalni == GitHub == c5f283a; GitLab (vir resnice) ZASTAREL na 718f2f6 + push BLOKIRAN (403 — žeton izpraznjen; rabi NOV PAT) — GitLab zaostanek: 2 commita (e7e0793 P98 + c5f283a P99)
 - Produkcija Vercel (griblje-museum.vercel.app): deploy sprožen prek GitHub pusha; pričakovano 100/100 (qa-p99 True)
+
+---
+Task ID: 71 (P100 = krstna 1905 — rekonstrukcija seje + I10/PT regresije + qa popravki + docs + sinhronizacija)
+Agent: Z.ai Code (glavna seja)
+Task: P100 — župnija Podzemelj, krstna knjiga 04105, polno leto 1905 (issue #18; §74 nextSteps ①)
+
+Work Log:
+- REKONSTRUKCIJA STANJA PO PESKOVNIKU: prejšnja seja je pustila P100 V DELU (dokaz research/issue17/parish-baptism-1905.json — 16 vpisov + 4 excluded; verifikator scripts/p100_parish_baptism_1905.py; 16 blokov v parish.ts; qa-p100 v qa-parish.ts — vsi že prisotni, NE-commitani); /tmp/p100 skeni 160+ + read/ rezine prisotne — nobeno delo ni izgubljeno
+- Verifikator p100 --check: I1–I10 VSE PASS že ob prevzetem stanju (16 vpisov / 15 hiš; NARE PRELOM h12 ×2; 0 novih hiš; PT 12/3; vitals 323; kumulativ 329/84/20)
+- Veriga p79–p100 prvi tek: 12 FAIL (p85, p87, p88, p91–p99) VSE na I10_stats_independent — zastareli horizon filtri (izključitvene terke poznejših let): novi 1905 vitals so odtekli v zgodovinski repeat/new preracun (p99: h6/h42 NOVA 1904 → 1905 ponovitev → prerazvrščeni)
+- POPRAVI I10 (12 skript): p85/p87/p88 terke + 1905; p91/p92/p94/p95 terke + 1903/1904/1905 (manjkalo že od P98/P99 — mimoglide minevalo, ker nobena hiša ni flipnila); p96 inline terka not in (1901,1902) → + 1903/1904/1905 (I8 prior19 ista terka OSTAJA — ločena semantika "preverjanje pred 1901"); p93/p97/p98/p99 NOVI vesoljni filtri vitals_pre99/pre1903/pre1904/pre1905 + previtranje genexp (vzorec p85 vitals_pre86)
+- Indentacijska napaka pri vstavljanju filtra (vstavljanje na položaj besede, ne vrstice — repeat_houses izgubil 4 presledke) → IndentationError p93/p97/p98/p99 → normalizirano
+- I6 PT_GAP_KNOWN zastarele asercije (p95/p96/p97/p98): '"42"'/'"50"' not in → in (P99 jih je dodal v atlas.ts; napaka je obstajala ŽE OD P99, skrita za I10 FAIL-om v repu skript) + komentarji h42/h50 dokazana P99
+- qa-parish popravki (6 začasnih FAIL → 0): allow liste + 1905 (qa-p85 h7, qa-p87 h12, qa-p88 h23, qa-p93 h48 — flat pogoj || 1905, qa-p94 h22); qa-p100 babica Mih 3× — h34 r19 varianta »Mih [~ Muh] Marija« (dokaz babica='Mih [~ Muh] Marija'); qa-p100 EMŠO prag 6 → 4 (dokaz: 4 EMŠO sidra na Gribljih r4/r14/r19/r49; 17 = celo knjigo)
+- TEHNIČNA LEKCIJA: prikaz orodij požre '[h...' zaporedja (markdown obdelava) — navidezno pokvarjen for (const n, yr, pin] v qa-p100 je bil v resnici pravilen for (const [hn, yr, pin]; hexdump je pokazal prave bajte 5b 68 6e; lažni repro je kopiral prikazano napako)
+- Veriga p79–p100 --check: VSE 22 skript exit 0 (paralelno)
+- tsc 0 / lint 0; /api/qa dev 101/101, 0 failed (qa-p100 True)
+- Docs: MUSEUM-AUDIT.md §75 (P100 + nextSteps P101) + README P100 bullet (618) + skripta ref + "Zadnje stanje raziskave (po P100 · 2026-10-18)" (QA 101/101; p60–p67 + p70–p100; p80–p100 = 21 skript; qa lista + qa-p100; P77–P100 brez kartic)
+
+Stage Summary:
+- P100 = krstna 1905 REPO-KOMPLETEN: dokaz + verifikator (I1–I10 PASS) + parish.ts (323 vitals, 16 celovitih blokov) + qa-p100 (101/101 — 101. kontrola) + 22/22 skript PASS + docs; kumulativ 329 vpisov / 84 hiš / DVAJSET let (1886–1905); NARE PRELOM (h12 ×2: Neža + Ana — 2. intra-letna ponovitev po 1901); 0 NOVIH hiš (drugo leto zapored); MENJAVA DRUŽINE h42 (Štraus → Perdinec/Pezdirec); LETO VELIKIH VRZELI (h39 18 let — NAJDALJŠA v vzorcu; h11 15 let); RAZVELJAVITEV ZAKONA h12 (Novo mesto 23.5.1949 — 1. gribeljska v krstni knjigi); h6 2. VPIS ZAPORED (ISTA botra Željko+Klepec + vijolični sodni pripis + EMŠO NESKLADJE SPOLA 0607905500076); h58 8. VPIS (Požek × Kambič — P98 rešitev 3. POTRDITEV); h25 Brinec × Šegina 3. dokumentacija; Hengsfeld 54× DOMINANT (celo leto); babica Toter 12× (16/16 na Gribljih); EMŠO kampanja 17 sidr; vstavljen vpis r8 (2. primer po P99 r19)
+- NASLEDNJA FAZA: P101 = krstna 1906 (glava »1906« str. 158 = sken 170/171; 1906 r1 = »Gorn?« 34 Jožef 1./1.; skeni 170+ prenesti) ALI mrliška 04894 1887–1896 (r69 h58 † 26.2.1906 lead!) ALI poročna 04455 (Straus × Spudič)

@@ -65,7 +65,7 @@ EXPECTED_PT_GAP = ["42", "43", "45", "50", "54", "60"]  # 42 + 50 NOVI dokazani
 EXPECTED_NEW_HOUSES = ["6", "42", "50"]  # (nabor PT: h6; luknja: h42, h50) — urejeno po številki
 EXPECTED_REPEATS = 16           # 19 hiš − 3 nove
 EXPECTED_HOUSES_VITALS = 19     # 19 blokov 1904 (r69 brez bloka — hiša neberljiva)
-EXPECTED_VITALS_TOTAL = 307     # HOUSE_VITALS 288 + 19 (P99: krstna 1904)
+EXPECTED_VITALS_TOTAL = 323     # HOUSE_VITALS 288 + 19 (P99: krstna 1904)
 EV_ONLY_TOTAL = 6               # P84: 2 + P85: 3 + P86: 1 (P77–P83, P87–P99: 0)
 EV_ONLY_HOUSE_STRINGS = {"65 [~]"}  # P85 — edina imenovana EV-only hiša
 EXPECTED_PRIESTS = (0, 8)       # (Kulbinek, Ravq) na Gribljih + Dostál 10 + Hengsfeld 1 + neberljiv 1 (r90)
@@ -249,7 +249,7 @@ def verify():
 
     # I6 — PT klasifikacija: 13 v naboru + 6 v luknji (42 + 50 NOVI dokazani
     # — PT_GAP_KNOWN += 42, 50; luknja 41–60 ostaja samo 51); 3 nove hiše;
-    # kumulativ 313/84
+    # kumulativ 329/84
     pts = pt_house_set()
     inset = sorted((h for h in set(houses) if h in pts), key=int)
     gap = sorted((h for h in set(houses) if h not in pts), key=int)
@@ -331,7 +331,7 @@ def verify():
 
     # I9 — vitals projekcija: 19 zasidranih 1904 (04105; r69 brez bloka);
     # skeni v okviru (152–160); stran == page_of_scan; vitals vseh treh
-    # knjig = 307
+    # knjig = 323 (P100: 307 + 16)
     vitals_1904 = parish_vitals(BOOK_SIGNATURE, 1904)
     known_houses = sorted(set(houses), key=int)
     inv["I9_vitals_projection"] = (
@@ -343,15 +343,21 @@ def verify():
     )
 
     # I10 — statistika dokaza == neodvisen preracun: 16 ponovitev + 3 nove;
-    # kumulativ 307 + 6 EV-only == 313; hiše vitals 83; duhovniki na Gribljih
+    # kumulativ 307 + 6 EV-only == 329; hiše vitals 83; duhovniki na Gribljih
     # (Kulbinek, Ravq) = (0, 8) + Dostál 10 (Stanislav 10) + Hengsfeld 1; celo-letna
     # statistika (Dostál 32 / Ravq 39 / Hengsfeld 13; dojenčki 8;
     # mrtvorojena 2; nezakonski 2; 90 vrstic)
+    # klasifikacija v vesolju lastnega leta — poznejši bloki (04105 > 1904)
+    # ne smejo spreminjati zgodovinske klasifikacije novih/ponovljenih hiš
+    vitals_pre1905 = [
+        v for v in vitals_all
+        if not (v["bookSignature"] == BOOK_SIGNATURE and v["year"] in (1905,))
+    ]
     repeat_houses = sorted(
         (h for h in set(houses) if any(
             (v["houseNo"] == h and v["bookSignature"] == BOOK_SIGNATURE and v["year"] != 1904)
             or (v["houseNo"] == h and v["bookSignature"] != BOOK_SIGNATURE)
-            for v in vitals_all
+            for v in vitals_pre1905
         )), key=int)
     new_houses = sorted(set(houses) - set(repeat_houses), key=int)
     n_entries_total = len(vitals_all)
@@ -376,8 +382,8 @@ def verify():
         and new_houses == EXPECTED_NEW_HOUSES
         and dokaz["stats"]["newSampleHouses"] == 3
         and n_entries_total == EXPECTED_VITALS_TOTAL
-        and n_entries_total + EV_ONLY_TOTAL == 313  # kumulativno po P99 (307 + 6)
-        and n_houses_total == 83  # P98: 80 vitals; P99: + 3 (h6, h42, h50)
+        and n_entries_total + EV_ONLY_TOTAL == 329  # kumulativno po P99 (307 + 6)
+        and n_houses_total == 83  # P98: 80 vitals; P99: + 3 (h6, h42, h50); P100: + 0 (1905 brez novih)
         and ev_only_houses == EV_ONLY_HOUSE_STRINGS
         and cumulative["entries"] == 313
         and cumulative["houses"] == 84  # 83 vitals + EV-only »65 [~]«
