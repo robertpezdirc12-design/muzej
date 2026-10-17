@@ -16,7 +16,7 @@ lestvica zanesljivosti, odprti podatki in časovnica od prve omembe vasi leta **
   [register PS — parcelna rekonstrukcija (P54–P76)](#register-ps--parcelna-rekonstrukcija-p54p76) ·
   [arhivska forenzika + žetoni (P77–P78)](#arhivska-forenzika-in-žetoni-p77p78) ·
   [župnija Podzemelj — matične knjige (P79–P99)](#župnija-podzemelj--matične-knjige-p79p99)
-- [Zadnje stanje raziskave](#zadnje-stanje-raziskave-po-p100--2026-10-18) · [Varnost](#varnost)
+- [Zadnje stanje raziskave](#zadnje-stanje-raziskave-po-p102--2026-10-18) · [Varnost](#varnost)
 
 ## Značilnosti
 
@@ -623,7 +623,11 @@ Do konca P99: **313 vpisov / 84 hiš / devetnajst let** (1886–1904), QA **100/
 
   `scripts/p101_parish_baptism_1906.py` (**I1–I10**, `--check` PASS) + dokaz `research/issue17/parish-baptism-1906.json` (SAMPLE-TRANSCRIPTION-1906; MERI, NE odloča).
 
-## Zadnje stanje raziskave (po P101 · 2026-10-18)
+- **župnija Podzemelj — krstna knjiga 04105, polno leto 1907 (P102, issue #18)** — §76 nextSteps ①: širitev vzorca po letih (MERI, NE odloča; **v7 join nespremenjen**): vir **Matricula Online**, krstna **04105 1886–1919**; **okvir 1907: glava »1907« POD r87 str. 165 = skeni 178/179 (dup par že P101; 1907 r1 = Dobravice 27 Ivanka 5./5. Januar, podpis Anton Dostál — P101 lead POTRJEN) – row 90 str. 172 (sken 188; glava »1908« str. 173 = sken 189; 1908 r1 = Krasinec 58 August — P103 lead) == strani 165–172 (90 vrstic)**; **NOVELA P102 — DVA nova dup para skenov** (180/181 = str. 166 + 183/184 = str. 168); **stran == sken − 16 (184–189) / − 15 (181–183) / − 14 (179–180)** — **VSI vpisi z Griblji: 16 vpisov / 14 hiš + 1 NEBERLJIVA (r4 — strglek + modri pripisi; hiša pričevanje-samo brez bloka)** — **NARE PRELOM: h10 ×2** (r85+r86 dvojčka Jožef+Anton, Janez Brinec × Ana Klepec — **BRINEC POVRAT** 1897 familije z drugo ženo; oba dojenčka † december 1907 — 19.12. + 25.12. božič; 1. intra-letna ponovitev po 1905 h12 ×2) — **0 NOVIH hiš** (vzorec 1905–1907: 0/1/0) — skupaj s P79–P101 vzorec **363 vpisov / 85 hiš čez tri knjige in DVAINDVAJSET LET** (356 vitals); **PT 12/2** (48+49 v luknji — ponovitve; **luknja 41–60 ostaja samo h51**); **SIDRA**: r4 ŽELJKO×KURE krog (mati **Barbara Kure** — NE h1 par; EMŠO 1101907505283), r11 h11 4. VPIS ISTA familija (Žumič; kraj »Grišlje« = Griblje **genetsko**), r48 h3 3. VPIS ISTA (Papič — Kurrent P/T), r52 h7 4. VPIS ISTA (**JAKOB TOTER hišni oče**; EMŠO; VPIS popravljen v matični register 13.11.2007), r53 h12 11. VPIS **Dragoš POVRAT** po Štraus/Šimec interludu (EMŠO; istega dne kot r52), r60 h5 4. VPIS ISTA (Štrucelj×Meh) + **NOV KAPLAN Gregor Pecar** (prvi podpis 17./18. 9.), r61 h18 3. VPIS MENJAVA Šimec → **Peter Brinec × Ana Butala**, r64 h48 3. VPIS MENJAVA Pezdirec → **Janez Kure bajtar** (EMŠO), r67 h6 3. VPIS MENJAVA Jakobič → Kapucina?×Moravec, r69 h49 3. VPIS Brodarič + dojenček † 17.11., r73 h27 9. VPIS Pozdirec + **ISTA BOTRA 2. leto** (hiša »8y« = Kurrent »27« genetsko!; EMŠO), r76 h13 6. VPIS VRZEL 13 LET + MENJAVA Jakopič → **ŠIMEC×KAMBIČ (SELITEV h18→h13** — ista zveza kot h18 1906!), r80 h83 4. VPIS ISTA Željko družina kot 1903, r88 h62 3. VPIS **VRZEL 16 LET** (2. najdaljša vzorca; Kure×Požek; BRINEC 4/4); **DUHOVNIKI: NOV KAPLAN Gregor Pecar 10× + PARALELNI Rauq (r73 Pecar Nov 5 / r76 Rauq Nov 12!) + P. Janez Kmetij? (r4, branje negotovo)**; **BABICA: MIH 0× — PRVIČ OD 1902? + Šotter 7×/Toter 1× = ISTA Marjeta (DVE ČRKOVANJI v istem dvojčkem paru r85/r86!)**; **EMŠO 6 sidr na Gribljih — VSI SKLADNI**; ANOMALIJE: 4 para dvojčkov non-Griblje, r61 pripisno neskladje († 1941 + poroka 1950?), dva Janez Kure očetja, 6 menjav družin, matični vpisi 20. stol., duhovniški pripis na krstni vrstici (r9), kraj forenzika r5 Zemelj + r58 Grišiče; EXCLUDED 6;
+
+  `scripts/p102_parish_baptism_1907.py` (**I1–I10**, `--check` PASS) + dokaz `research/issue17/parish-baptism-1907.json` (SAMPLE-TRANSCRIPTION-1907; MERI, NE odloča).
+
+## Zadnje stanje raziskave (po P102 · 2026-10-18)
 
 - **Runtime join**: `src/data/atlas/ps-parcels-geo.json` — **version 7**:
   **891 vrstic (32.3 %) / 879 base / multi 2 / cross 0 / ambRows 4**;
@@ -633,14 +637,14 @@ Do konca P99: **313 vpisov / 84 hiš / devetnajst let** (1886–1904), QA **100/
   v6 939 → **v7 891** — vsaka arhivirana v `research/issue17/` z delta
   dokazom (`v5Delta`/`v6Delta`/`v7Delta`); ohranjene vrstice med verzijami
   bajtno nespremenjene (lekcija P9).
-- **QA**: **102/102** — repo veja (dokazi v `research/`) + produkcija (brez
+- **QA**: **103/103** — repo veja (dokazi v `research/`) + produkcija (brez
   `research/`, izmerjeno iz runtime datotek); prek `GET /api/qa` na
-  produkciji. Veriga skript `p60–p67 + p70–p101 --check` bajtno PASS (p68 zamrznjen po C2;
-  p80–p101 = 22 župnijskih skript --check PASS). Matrične kontrole župnije (qa-p79/qa-p80/qa-p81/
-  qa-p82/qa-p83/qa-p84/qa-p85/qa-p86/qa-p87/qa-p88/qa-p89/qa-p90/qa-p91/qa-p92/qa-p93/qa-p94/qa-p95/qa-p96/qa-p97/qa-p98/qa-p99/qa-p100/qa-p101) v ločenem modulu `src/lib/qa-parish.ts` (P80: runQA telo
+  produkciji. Veriga skript `p60–p67 + p70–p102 --check` bajtno PASS (p68 zamrznjen po C2;
+  p80–p102 = 23 župnijskih skript --check PASS). Matrične kontrole župnije (qa-p79/qa-p80/qa-p81/
+  qa-p82/qa-p83/qa-p84/qa-p85/qa-p86/qa-p87/qa-p88/qa-p89/qa-p90/qa-p91/qa-p92/qa-p93/qa-p94/qa-p95/qa-p96/qa-p97/qa-p98/qa-p99/qa-p100/qa-p101/qa-p102) v ločenem modulu `src/lib/qa-parish.ts` (P80: runQA telo
   preseglo prag TS control flow analysis).
 - **Kartice**: P40–P76 vidne v zavihku *Prepisi Kurrent* v muzejskem UI;
-  vsaka vezana na API endpoint + dokaz + skripto. P77–P101 brez kartic
+  vsaka vezana na API endpoint + dokaz + skripto. P77–P102 brez kartic
   (inventarni/operativni/paleografski/imenski dokazi raziskovalne linije — strojno
   berljivi prek dokazov).
 - **Zrcaljenje**: GitLab `markec-group1/muzej` = **vir resnice**;

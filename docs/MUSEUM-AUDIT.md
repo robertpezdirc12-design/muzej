@@ -5574,3 +5574,86 @@ r66 h69 † 9.2.07 lead!); ③ poročna 04455: **Straus × Spudič** (krstno 5×
 1906 2. Štrausov par h15 [MERI] — poročna razreši); ④ h51 (ZADNJA nedokazana
 številka luknje 41–60!); ⑤ produkcija Vercel: dohiti P101 → QA 102/102;
 ⑥ babica Vötter = Toter? (isti zapis Marjeta — MERI čez leta 1889–1906).
+
+## §77 · P102 — župnija Podzemelj, krstna knjiga 04105, polno leto 1907 (issue #18; 2026-10-18)
+
+**Okvir**: glava »1907« POD r87 na str. 165 = skeni 178/179 (dup par že P101);
+1907 r1 = Dobravice 27 Ivanka (5./5. Januar, podpis Anton Dostál) — P101 lead
+POTRJEN; row 90 na str. 172 (sken 188) = zadnja vrstica; glava »1908« na
+str. 173 = sken 189 (1908 r1 = Krasinec 58 August — **P103 lead**). 90
+oštevilčenih vrstic (str. 165–172). **NOVELA P102 — DVA nova dup para
+skenov**: 180/181 = str. 166 (rows 9–20) + 183/184 = str. 168 (rows 33–44);
+stran == sken − 16 (184–189) / − 15 (181–183) / − 14 (179–180).
+
+**Vzorec**: 16 vpisov z Griblji / 14 hiš + **1 neberljiva** (r4 — strglek +
+modri pripisi; hiša pričevanje-samo brez vitals bloka) + 6 excluded (r5
+Zemelj, r9 nalepka, r43 mrtvorojena, r44 strglek, r58 Grišiče, r90 Otok).
+**NARE PRELOM**: h10 ×2 (r85+r86 dvojčka Jožef+Anton, Janez Brinec × Ana
+Klepec — BRINEC POVRAT 1897 familije z drugo ženo; oba dojenčka † december
+1907: 19.12. + 25.12. božič) — 1. intra-letna ponovitev po 1905 (h12 ×2);
+1906 je bil 18/18. **0 NOVIH hiš** (vzorec 1905–1907: 0/1/0). PT 12/2 (48+49
+v luknji 41–60 — ponovitve; luknja ostaja samo h51). **Kumulativ 363 vpisov
+/ 85 hiš / DVAINDVAJSET let** (1886–1907; 356 vitals).
+
+**Sidra**: r4 ŽELJKO×KURE krog (oče Željko? + mati **Barbara Kure** + boter
+Jožef Željko + babica Katarina Željko — NE h1 par; EMŠO 1101907505283);
+r11 h11 4. VPIS ISTA familija (Žumič — 1905 »Žume/Žunič«; kraj forenzika
+»Grišlje« = Griblje **genetsko**); r48 h3 3. VPIS ISTA (Papič — Kurrent
+P/T »Tapič«); r52 h7 4. VPIS ISTA (**JAKOB TOTER kot hišni oče** —
+babica-priimek na hišni vlogi; EMŠO sidro; VPIS popravljen v matični
+register 13.11.2007); r53 h12 11. VPIS — Dragoš×Cvitkovič **POVRAT** po
+1901/05 Štraus/Šimec interludu (več-družinska h12; EMŠO sidro; istega dne
+kot r52); r60 h5 4. VPIS ISTA (Štrucelj×Meh) + **NOV KAPLAN Gregor Pecar**
+(prvi podpis 17./18. 9. 1907; EMŠO sidro); r61 h18 3. VPIS — MENJAVA Šimec →
+**Peter Brinec × Ana Butala** (BRINEC signal 1/4); r64 h48 3. VPIS — MENJAVA
+Pezdirec → **Janez Kure bajtar** (EMŠO sidro); r67 h6 3. VPIS — MENJAVA
+Jakobič → Kapucina?×Moravec (branje negotovo); r69 h49 3. VPIS — Brodarič
+(mati Milek/Miheč [MERI]) + dojenček † 17.11.1907; r73 h27 9. VPIS —
+Pozdirec 2. leto + **ISTA BOTRA 2. leto** (Željko+Hrižan; hiša »8y« =
+Kurrent »27« — genetska potrditev!; EMŠO sidro); r76 h13 6. VPIS — VRZEL 13
+LET + MENJAVA Jakopič → **ŠIMEC×KAMBIČ (SELITEV h18→h13** — ista zveza kot
+h18 1906!); r80 h83 4. VPIS — ISTA Željko družina kot 1903 (mati Peruš?/
+Gorše? [MERI]); r88 h62 3. VPIS — **VRZEL 16 LET** (2. najdaljša vzorca za
+h39 18; Kure × Požek; BRINEC signal 4/4 — boter = oče r85/86!).
+
+**Duhovniki** (16/16): NOV KAPLAN **Gregor Pecar 10×** (prvi podpis r60 =
+17./18. 9. 1907; **PARALELNI podpisi Rauq+Pecar Sep–Nov** — r73 Pecar Nov 5
+/ r76 Rauq Nov 12!) + Jos. Ravq 5× + P. Janez Kmetij? 1× (r4 januar —
+trovrstični podpis, branje negotovo). **Babice** (16/16): **MIH 0× — prvič
+od 1902?** (dominantna 1904–06: 19/16/10)!; Vötter 0× → **Šotter 7× + Toter
+1× (ISTA Marjeta — DVE ČRKOVANJI v istem dvojčkem paru r85/r86!)** + Meh 3 +
+Željko/Papič?/Muc/Klepec/Urh po 1. **EMŠO kampanja: 6 sidr na Gribljih**
+(r4/r52/r53/r60/r64/r73) — VSI SKLADNI z rojstnimi datumi. **Anomalije**: 4
+para dvojčkov non-Griblje (r2/r3 Gradac 9, r33/r34 Gradac 55, r35/r36
+Dobravice 11, r54/r55 Krasinec 18), r61 pripisno neskladje († 31.5.1941 +
+poroka 21.5.1950?), dva Janez Kure očetja (h48+h62) [MERI], 6 menjav
+družin, matični vpisi 20. stol. (r52 2007 + r71/r72 2001), duhovniški
+pripis na krstni vrstici (r9: »otok umrl 17.8.1985 … duhovnik«), kraj
+forenzika r5 Zemelj + r58 Grišiče.
+
+**Integracija**: dokaz research/issue17/parish-baptism-1907.json (16 entries
++ 6 excluded + 16 anomalij + canonical stats); verifikator
+scripts/p102_parish_baptism_1907.py (**I1–I10 PASS**; kontinuitete
+h3/h5/h6/h7/h10/h11/h12/h13/h18/h27/h48/h49/h62/h83); parish.ts **15 novih
+blokov** (vitals 341 → **356**); qa-parish.ts **qa-p102-parish-baptism-1907**
+(103. kontrola; okvir − 16/− 15/− 14 + TRI dup pari; NARE PRELOM h10 ×2;
+0 novih; PT 12/2; 12 sidra-pini; 14 kontinuitetnih pinov; babica Mih 0×
++ Šotter 7/Toter 1; duhovniki Pecar 10/Ravq 5; EMŠO 5 blokov sidra) +
+allow liste + 1907 (qa-p85 h7, qa-p87 h12, qa-p92 h10, qa-p93 h18+h48,
+qa-p94 h49) + vitals 356 + **regresije**: p80 (vitals 356), p85–p99 vitals
+356 + kumulativ 363 + EV_ONLY 7 (r4!) + horizon filtri + 1907 (p85–p95
+terke — p86/p89/p90 mimicogride dopolnjene 1903/04/05 + p96 inline + p99
+terka (1905, 1906) → (1905, 1906, 1907)), p100/p101 BLOCKS_04105 315 →
+330 — vseh **24 skript p79–p102** `--check` PASS (exit 0). Kartica NI
+dodana (vzorec P77–P102). tsc 0 / lint 0; **/api/qa dev 103/103** (qa-p102
+True); v7 NESPREMENJEN.
+
+**nextSteps**: ① **P103 = leto 1908** (glava »1908« na str. 173 = sken 189;
+1908 r1 = Krasinec 58 August, 1./1. Januar; skeni 190+ prenesti); ② mrliška
+knjiga 04894 1887–1896: smrti prvih žen + dojenčki † iz krstnih (r69 h49 †
+17.11.1907 + r86 h10 † 19.12.1907 + r85 h10 † 25.12.1907 lead!); ③ poročna
+04455: **Straus × Spudič** (krstno 5×; 1906 2. Štrausov par h15 [MERI] —
+poročna razreši); ④ h51 (ZADNJA nedokazana številka luknje 41–60!); ⑤
+produkcija Vercel: dohiti P102 → QA 103/103; ⑥ babica Šotter = Toter =
+Vötter (ISTA Marjeta — trije zapisi, MERI čez leta 1889–1907); ⑦ P. Janez
+Kmetij? (r4 podpis januar 1907 — kdo je? cf. matrikulacija).
