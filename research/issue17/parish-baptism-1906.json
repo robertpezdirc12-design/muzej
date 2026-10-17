@@ -1,0 +1,779 @@
+{
+  "phase": "P101",
+  "type": "SAMPLE-TRANSCRIPTION",
+  "status": "MERI, NE odloča",
+  "issuedAt": "2026-10-18",
+  "source": {
+    "book": "župnija Podzemelj — krstna knjiga 04105 (matricula-online.eu)",
+    "signature": "04105",
+    "scans": [
+      170,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178
+    ],
+    "pages": [
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165
+    ],
+    "url": "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04105/"
+  },
+  "method": "5–10× izrezi na skenih 170–181; dvokratno branje vseh 18 gibriljskih vrstic (levi podatkovni blok + desni Roditelja/Botra/Babica/Podpis); hišne številke vsaj 3× forenzika; EMŠO kontrola datumov",
+  "frame": {
+    "yearStart": {
+      "scan": 170,
+      "page": 158,
+      "row": 1,
+      "note": "glava »1906« (podčrtana) na str. 158 = sken 170/171 (DUP PAR, P100 dokazano); r1 = »Gorn?« 34 Jožef (1./1. Januar, H. Hengsfeld) — P100 lead POTRJEN"
+    },
+    "yearEnd": {
+      "scan": 178,
+      "page": 165,
+      "row": 87,
+      "note": "zadnja vrstica 1906 = row 87 (Grm 25 Ana, 23./24. December — kraj Grm, EXCLUDED); glava »1907« (podčrtana) na str. 165 POD r87; 1907 r1 = Dobravice 27 Ivanka (podpis Anton Dostál) — P102 lead"
+    },
+    "rowsTotal": 87,
+    "pages": "str. 158–165 (8 strani)",
+    "pageOfScan": "stran == sken − 13 (172–178); NOVELA P101 — EN podvojen par skenov: 178/179 = str. 165 (rows 85–87); stran == sken − 14 (180+); dup par 170/171 = str. 158 (že P100)",
+    "frameScans": [
+      170,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178
+    ],
+    "framePages": [
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165
+    ],
+    "duplicatedScans": [
+      [
+        170,
+        171
+      ],
+      [
+        178,
+        179
+      ]
+    ],
+    "scan170Row8": "r8 = Griblje 16 Leopold (21./22. Januar) — prvi gibriljski vpis leta 1906",
+    "duplicateScans": {
+      "count": 2,
+      "pairs": [
+        {
+          "scans": [
+            170,
+            171
+          ],
+          "page": 158,
+          "note": "dup par že P100 (glava 1906)"
+        },
+        {
+          "scans": [
+            178,
+            179
+          ],
+          "page": 165,
+          "note": "NOVELA P101 — rows 85–87"
+        }
+      ]
+    }
+  },
+  "entries": [
+    {
+      "row": 8,
+      "year": 1906,
+      "month": "Januarij",
+      "born": "21.",
+      "baptized": "22.",
+      "village": "Griblje",
+      "houseNo": "16",
+      "scan": 170,
+      "page": 158,
+      "child": "Leopold",
+      "father": "Mihael Jakofčič, ½ zemljak",
+      "mother": "Marija Mihelič [~]",
+      "botra": "Jožef Dragoš + Marija Jakofčič, ¾ zemlj",
+      "babica": "Marija Mihelič [~ Mih? — mati in babica imata isti zapis; babica verjetno Marija Mih (dominantna 1906)]",
+      "priest": "Jos. Ravq",
+      "notes": [
+        "h16 = 7. VPIS (1886, 1897, 1900, 1902 STRAUS×SPUDIČ, 1904 Ivec×Kočevar → 1906) — NOVA DRUŽINA Jakofčič",
+        "svinčnik: »Umrl 16. II. 1944« — 2. svetovna vojna",
+        "Vere/Spola/Stanu = 1/1/1"
+      ]
+    },
+    {
+      "row": 16,
+      "year": 1906,
+      "month": "Februar",
+      "born": "24.",
+      "baptized": "25.",
+      "village": "Griblje",
+      "houseNo": "49",
+      "scan": 172,
+      "page": 159,
+      "child": "Jožef",
+      "father": "Nikolaj Brodarič, ½ zemljak",
+      "mother": "Marija Miheč [~]",
+      "botra": "Nikolaj Željko [~ Želko] + Katarina Pendijeva [~], ½ zemlj",
+      "babica": "Marija Mih",
+      "priest": "Hugo Hengsfeld",
+      "notes": [
+        "h49 = 2. VPIS (1899 Brodarič × Milek → 1906 Brodarič × Miheč — MENJAVA ŽENE [MERI])",
+        "BRODARIČ ↔ ŽELJKO IZMENA: r16 boter Željko + r19 boter Brodarič (h49/h60 križno)",
+        "EMŠO ž: 2102906500234 (21.2.1906, moški znak 500 — skladno; sidro)",
+        "modri pripisi: poročen 12.2.1937 v Beogradom(?); umrl(?), dne 4.12.1999(?); Metlika 15.4.1983, Simonič Nara(?); 15.11.1982"
+      ]
+    },
+    {
+      "row": 18,
+      "year": 1906,
+      "month": "Februar",
+      "born": "27.",
+      "baptized": "28.",
+      "village": "Griblje",
+      "houseNo": "34",
+      "scan": 172,
+      "page": 159,
+      "child": "Nikolaj",
+      "father": "Janez Simec, ½ zemljak",
+      "mother": "Marija Kere [~ Kerec?]",
+      "botra": "Janez Fožič [~ Božič?] + Marija Mih, ½ zemlj",
+      "babica": "Marija Mih",
+      "priest": "Jos. Ravq",
+      "notes": [
+        "h34 = 5. VPIS (1887 Šimec×Šmucelj, 1899/1903/1905 Šilak/Šulak×Klobučar → 1906) — MENJAVA DRUŽINE 2×: Šimec POVRAT (isti priimek kot 1887, druga žena: Šmucelj 1887 → Kere 1906) [MERI]",
+        "svinčnik: »+ 1.7.1942«; poročen 5.5.1933(?)/3.3.1933(?)"
+      ]
+    },
+    {
+      "row": 19,
+      "year": 1906,
+      "month": "Februar",
+      "born": "27.",
+      "baptized": "28.",
+      "village": "Griblje",
+      "houseNo": "60",
+      "scan": 172,
+      "page": 159,
+      "child": "Jožefa",
+      "father": "Nikolaj Željko, ½ zemljak",
+      "mother": "Marija Brodarič",
+      "botra": "Nikol. Brodarič + Marija Klepec, ½ zemlj",
+      "babica": "Marija Mih",
+      "priest": "Jos. Ravq",
+      "notes": [
+        "h60 = 7. VPIS (1893+1894+1897+1899 ISTI PAR Željko×Brodarič; 1904 Novak×Frlah → 1906 PAR POVRAT) — 5. OTROK ISTEGA PARA (ŽELJKO KONTINUITETA, 22 let po 1. vpisu)",
+        "botra Marija Klepec = 3. ista botrinja tega para (1893+1894 → 1906; boter menjal Marko Pegdirec → Nikol. Brodarič)",
+        "datumi pod prozornim trakom (27./28. potrjeno čez robove traku)",
+        "modri pripisi: umrla, dne 17.5.1974 v Prilogju(?), 20.5.1974, Matičar Metka Šlutt; z dvorim(?) 7.11.1932; poleg poročena 28.3.1947 Jesena Francička(?) + španja"
+      ]
+    },
+    {
+      "row": 35,
+      "year": 1906,
+      "month": "April",
+      "born": "10.",
+      "baptized": "11.",
+      "village": "Griblje",
+      "houseNo": "19",
+      "scan": 173,
+      "page": 160,
+      "child": "Janez",
+      "father": null,
+      "mother": "Ana Kovač [~], samostojna, (dela?) ¼ zemlja, krava hir? [~]",
+      "botra": "Alojzij Novak + Ana Simec, bajfarja",
+      "babica": "Marjeta Vötter [~]",
+      "priest": "Hugo Hengsfeld",
+      "notes": [
+        "NEZAKONSKI — očetova kolona PRAZNA (eden redkih v vzorcu)",
+        "h19 = 2. VPIS (1901 Katarina — prvi dokaz h19 → 1906)",
+        "babica Vötter = NOV ZAPIS (Sotter 1889 h69 → Toter 1901–1905 → Vötter 1906)",
+        "babica varianta: Sotter 1889 (h69) → Toter 1901–05 → Vötter 1906 — ista Marjeta? [MERI]"
+      ]
+    },
+    {
+      "row": 40,
+      "year": 1906,
+      "month": "Mai",
+      "born": "16.",
+      "baptized": "17.",
+      "village": "Griblje",
+      "houseNo": "44",
+      "scan": 174,
+      "page": 161,
+      "child": "Anton [~ — ime pod modrim pripisom; moški obrazci umrl/poročen]",
+      "father": "Jožef Štrucelj, ½ zemljak",
+      "mother": "Barbara Urvne [~]",
+      "botra": "Janez Hrižan + Doroteja Jevršovič [~], ¼ zemlj",
+      "babica": "Marjeta Vötter",
+      "priest": "J. R. Kulbinek, o.t.cap.",
+      "notes": [
+        "h44 = 3. VPIS (1888, 1901 → 1906)",
+        "ŠTRUCELJ signal (oče; še r51 mati + r86 boter)",
+        "HRIŽAN signal (boter)",
+        "KULBINEK = NOV KAPLAN (o.t.cap.) — prvi podpis r38 = 12.5.1906; menjava/širitev kaplanov (ob Rauq)",
+        "modri pripis: umrl, dne 27.1.1974 v Ljubljani, l. 1974, str. 417, zap. št. 194(?), 24.6.1974; poročen na št. Videm pri Griblj(?)"
+      ]
+    },
+    {
+      "row": 43,
+      "year": 1906,
+      "month": "Junij",
+      "born": "4.",
+      "baptized": "4.",
+      "village": "Griblje",
+      "houseNo": "30",
+      "scan": 174,
+      "page": 161,
+      "child": "Ana",
+      "father": "Matija Brinec, ½ zemljak",
+      "mother": "Marija Grabrijan",
+      "botra": "Janez Brinec + Katarina Brinec, ¼ zemlj",
+      "babica": "Marija Adlešič",
+      "priest": "Jos. Ravq",
+      "notes": [
+        "h30 = 10. VPIS (1890×2, 1891, 1893, 1895, 1896, 1899, 1902, 1903 → 1906) — MENJAVA DRUŽINE: Segina → Brinec",
+        "BRINEC signal (oče + boter + botrinja; še r62)",
+        "modri pripisi: umrla, dne 17.10.1964 v Novem mestu (str. 51, zap. št. 117), gradec, dne 21.10.1964; poročena 15.2.1943"
+      ]
+    },
+    {
+      "row": 48,
+      "year": 1906,
+      "month": "Julij",
+      "born": "15.",
+      "baptized": "15.",
+      "village": "Griblje",
+      "houseNo": "21",
+      "scan": 174,
+      "page": 161,
+      "child": "Alois",
+      "father": "Janez Požek, ½ zemljak",
+      "mother": "Ana Šimec",
+      "botra": "Janez Kukar + Maria Šimec, ½ zemljak",
+      "babica": "Marija Burek [~]",
+      "priest": "J. R. Kulbinek, o.t.cap.",
+      "notes": [
+        "h21 = 6. VPIS (1887, 1888, 1893, 1899, 1904 → 1906)",
+        "POŽEK signal — oče Janez Požek = h58 oče 1903 + 1905 (Požek×Kambič) — tu z drugo ženo Ana Šimec [MERI: isti Janez ali soimenjak?]",
+        "svinčnik: † 29.1.1907 (dojenček)"
+      ]
+    },
+    {
+      "row": 51,
+      "year": 1906,
+      "month": "Julij",
+      "born": "31.",
+      "baptized": "31.",
+      "village": "Griblje",
+      "houseNo": "4",
+      "scan": 175,
+      "page": 162,
+      "child": "Ana",
+      "father": "Janez Hrižan, ¼ zemljak",
+      "mother": "Katarina Štrucel",
+      "botra": "Matija Štraus + Doroteja Jerčimovič [~], ¼ zemlj",
+      "babica": "Marjeta Vötter",
+      "priest": "Jos. Ravq",
+      "notes": [
+        "h4 = NOVA HIŠA — prvi dokaz (85. hiša v vitals; po dveh letih 1904+1905 brez novih)",
+        "HRIŽAN signal (oče)",
+        "ŠTRUCELJ signal (mati)",
+        "ŠTRAUS signal (boter Matija Štraus = h42 oče 1904 + h16 oče 1902 + h15 oče 1906)",
+        "EMŠO ž: 3107906505454 (31.7.1906, ženski znak 505 — skladno; sidro)",
+        "modri pripisi: Jože(?) umrl, dne 11.3.1994 v Črnomlju, NKU MO Črnomelj l. 1994, zap. št. 087; Metlika 24.9.1994; umrla, dne 25.3.2004, MKU l. 2004, vr. 215, zap. št. 1221, 16.4.2004; poročena 26.9.1934(?); 15.11.1982 Simonič Miri — DVOJNI pripis na eni vrstici"
+      ]
+    },
+    {
+      "row": 52,
+      "year": 1906,
+      "month": "August",
+      "born": "2.",
+      "baptized": "3.",
+      "village": "Griblje",
+      "houseNo": "18",
+      "scan": 175,
+      "page": 162,
+      "child": "Alojzij",
+      "father": "Matija Simec, ½ zemljak",
+      "mother": "Marija Kambič",
+      "botra": "Janez Muc, bajtar + Marija Kambič, ¼ zemlj",
+      "babica": "Marjeta Vötter",
+      "priest": "J. R. Kulbinek, o.t.cap.",
+      "notes": [
+        "h18 = 2. VPIS (1898 → 1906) — VRZEL 8 LET",
+        "svinčnik: † 24.12.06 (dojenček — umrl božični večer 1906)"
+      ]
+    },
+    {
+      "row": 54,
+      "year": 1906,
+      "month": "August",
+      "born": "10.",
+      "baptized": "10.",
+      "village": "Griblje",
+      "houseNo": "20",
+      "scan": 175,
+      "page": 162,
+      "child": "Katarina",
+      "father": "Peter Pozdirec [~ Pezdirec/Perdinec], ½ zemljak",
+      "mother": "Doroteja Klepec",
+      "botra": "Jurij Pozdirec + Marija Milek, ¼ zemlj",
+      "babica": "Marija Mih",
+      "priest": "Jos. Ravq",
+      "notes": [
+        "h20 = 5. VPIS (1895, 1897, 1900, 1903 Perdinec×Klepec → 1906 Pozdirec×Klepec — ISTA DRUŽINA, kurrent priimka; 1903 EMŠO 20.10.1903 + babica Katarina Perdinec)",
+        "PEZDIREC/POZDIREC/PERDINEC kurrent signali (oče + boter; še r56 + r79 + r85 očetje)",
+        "svinčnik: † 23.11.08"
+      ]
+    },
+    {
+      "row": 56,
+      "year": 1906,
+      "month": "August",
+      "born": "20.",
+      "baptized": "20.",
+      "village": "Griblje",
+      "houseNo": "42",
+      "scan": 175,
+      "page": 162,
+      "child": "Julij",
+      "father": "Jožef Pozdirec [~ Pezdirec], ½ zemljak",
+      "mother": "Katarina Jurasovič [~ Jurajevič]",
+      "botra": "Matija Mih + Katarina Pozdirec, ¼ zemlj",
+      "babica": "Marija Mih",
+      "priest": "J. R. Kulbinek, o.t.cap.",
+      "notes": [
+        "h42 = 3. VPIS ZAPORED (1904 NOVA Štraus → 1905 Perdinec/Pezdirec Jurij×Katarina Jurajevič → 1906 Jožef Pozdirec×Katarina Jurasovič — ISTA DRUŽINA 2. leto; Jožef 1906 = brat Jurija 1905? [MERI])",
+        "PEZDIREC signal (oče + botrinja Katarina Pozdirec)",
+        "svinčnik/tekst: »26.3.1938 na Traki(?)«"
+      ]
+    },
+    {
+      "row": 62,
+      "year": 1906,
+      "month": "September",
+      "born": "6.",
+      "baptized": "7.",
+      "village": "Griblje",
+      "houseNo": "24",
+      "scan": 176,
+      "page": 163,
+      "child": "Janez",
+      "father": "Janez Brinec, ½ zemljak",
+      "mother": "Ana Mitek [~ Mih]",
+      "botra": "Matija Brinec + Marija Brinec, ¼ zemlj",
+      "babica": "Katarina Dragoš",
+      "priest": "Jos. Ravq",
+      "notes": [
+        "h24 = 12. VPIS — ŠE VEDNO najbolj vpisovana hiša registra (1887–1904: 11 vpisov → 1906)",
+        "MENJAVA: Jurajevič×Krašovec 1904 → Janez Brinec 1906 — POVRAT BRINCeve hiše (1887–1897 Brinec; Janez Brinec = h69 oče 1888–1895! [MERI: soimenjaki/isti?])",
+        "EMŠO m: 0609906500161 (6.9.1906, moški znak 500 — skladno; sidro)",
+        "BRINEC signal ×3 (r43 oče + r62 oče + boter)",
+        "modri pripisi: Črnomelj 1.1997(?), št. 210, zap. št. 92; Metlika, 30.12.1997; poročen 4.6.1939; 15.11.1982 Simonič Miri"
+      ]
+    },
+    {
+      "row": 66,
+      "year": 1906,
+      "month": "September",
+      "born": "18.",
+      "baptized": "18.",
+      "village": "Griblje",
+      "houseNo": "69",
+      "scan": 176,
+      "page": 163,
+      "child": "Anton",
+      "father": "Janez Željko, bajtar",
+      "mother": "Marjeta Zamec [~ Žumič/Ženič]",
+      "botra": "Janez Dragoš + Marija Kralj, ¾ zemlj",
+      "babica": "Marjeta Vötter",
+      "priest": "J. R. Kulbinek, o.t.cap.",
+      "notes": [
+        "h69 = 9. VPIS (1888–1904: 8 vpisov → 1906)",
+        "ISTI OČE kot 1904 (Janez Željko bajtar — mati variante: Žumič 1904 → Zamec 1906 [~])",
+        "svinčnik: † 9.2.07 (dojenček)"
+      ]
+    },
+    {
+      "row": 71,
+      "year": 1906,
+      "month": "Oktober",
+      "born": "13.",
+      "baptized": "14.",
+      "village": "Griblje",
+      "houseNo": "26",
+      "scan": 176,
+      "page": 163,
+      "child": "Barbara",
+      "father": "Nikolaj Šegina, ½ zemljak",
+      "mother": "Katarina Brinec",
+      "botra": "Nikolaj Hrižan + Marija Malok [~], ½ zemlj",
+      "babica": "Marija Mih",
+      "priest": "Kulbinek [bleda — podpis izblidla; ~]",
+      "notes": [
+        "h26 = 4. VPIS (1887, 1889, 1896 → 1906) — VRZEL 10 LET",
+        "ŠEGINA signal — oče Nikolaj Šegina = h30 oče 1902 + 1903 (SEGINA kampanja)",
+        "HRIŽAN signal (boter)",
+        "modri pripis: umrla 23.5.1969 v Metliki, l. 1969, št. 197, zap. št. 157, 21.7.1969; poročena 5.10.1935(?)"
+      ]
+    },
+    {
+      "row": 79,
+      "year": 1906,
+      "month": "November",
+      "born": "24.",
+      "baptized": "25.",
+      "village": "Griblje",
+      "houseNo": "27",
+      "scan": 177,
+      "page": 164,
+      "child": "Barbara",
+      "father": "Marko Pozdirec [~ Pezdirec], bajtar",
+      "mother": "Katarina Žugelj",
+      "botra": "Nikol. Željko + Katar. Hrižan, ¼ zemlj",
+      "babica": "Marija Mih",
+      "priest": "P. Kazimir Škrabec, coop.",
+      "notes": [
+        "h27 = 8. VPIS (1887–1902: 7 vpisov → 1906)",
+        "HRIŽAN signal — botrinja Katarina Hrižan = h34 botrinja 1903",
+        "PEZDIREC signal (oče)",
+        "ŠKRABEC = NOV DUHOVNIK (coop.) — podpisi r76–r79 + r85–r87 (menjava ob koncu leta)",
+        "svinčnik: † 9.1.07 (dojenček)",
+        "modri pripisi: 15.11.1982 Simonič Miri, 10.1.1983"
+      ]
+    },
+    {
+      "row": 85,
+      "year": 1906,
+      "month": "December",
+      "born": "13.",
+      "baptized": "19.",
+      "village": "Griblje",
+      "houseNo": "35",
+      "scan": 178,
+      "page": 165,
+      "child": "Marija",
+      "father": "Jožef Pozdirec [~ Pezdirec], ½ zemljak",
+      "mother": "Ana Hrižan",
+      "botra": "Matija Mih + Marija Hrižan, ¼ zemlj",
+      "babica": "Marija Mih",
+      "priest": "P. Kazimir Škrabec, coop.",
+      "notes": [
+        "h35 = 5. VPIS (1887, 1889, 1890, 1903 → 1906)",
+        "HRIŽAN signal ×2 (mati + botrinja)",
+        "PEZDIREC signal (oče)",
+        "modri pripis: umrla 1.6.1959 v Gribljih št. 26(?), l. 1959, št. 37(?), ref. št. 3; matičar Kam. Špriciar(?); poročena"
+      ]
+    },
+    {
+      "row": 86,
+      "year": 1906,
+      "month": "December",
+      "born": "22.",
+      "baptized": "22.",
+      "village": "Griblje",
+      "houseNo": "15",
+      "scan": 178,
+      "page": 165,
+      "child": "Francišek",
+      "father": "Matija Štraus, ½ zemljak",
+      "mother": "Marjeta Simec",
+      "botra": "Jožef Štrucel + Barb. Jakobeč, ¾ zemlj",
+      "babica": "Marija Mih",
+      "priest": "P. Kazimir Škrabec, coop.",
+      "notes": [
+        "h15 = 6. VPIS (1887, 1890, 1893, 1896, 1904 → 1906)",
+        "ŠTRAUS signal — oče Matija Štraus: Straus/Spudič poročni lead 04455 na 4. hiši (h45→h40→h16→h15); VENDAR mati = Marjeta Simec, NE Barbura Spudič — 2. Štrausov par [MERI]",
+        "ŠTRUCELJ signal (boter Jožef Štrucel = r40 oče)",
+        "svinčnik: † 1945? [~]"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "row": 11,
+      "scan": 170,
+      "page": 158,
+      "village": "Gradac",
+      "houseNo": "65",
+      "child": "Jožef",
+      "reason": "kraj Gradac + nalepka (»razglašen a umrtvoga dne 28. Februar 1962«; nalepka: Umrl, dne 4.1.1987 v Črnomlju, NKU MO Črnomelj l. 1987, str. 1, Matičar Simonič Nada)"
+    },
+    {
+      "row": 12,
+      "scan": 170,
+      "page": 158,
+      "reason": "vrstica POD nalepko (neberljiva)"
+    },
+    {
+      "row": 21,
+      "scan": 172,
+      "page": 159,
+      "village": "Gradac",
+      "houseNo": "28",
+      "child": "mrtvorojen",
+      "reason": "mrtvorojen (oče Janez Zupančič, mati Ana Vardjan)"
+    },
+    {
+      "row": 22,
+      "scan": 172,
+      "page": 159,
+      "village": "Gradac",
+      "houseNo": "33",
+      "child": "mrtvorojena",
+      "reason": "mrtvorojena (mati Ana Mihelič, samska dekla)"
+    },
+    {
+      "row": 26,
+      "scan": 173,
+      "page": 160,
+      "village": "Zemelj",
+      "houseNo": "18",
+      "child": "mrtvorojen",
+      "reason": "mrtvorojen (»J B mrtvorojen«)"
+    },
+    {
+      "row": 29,
+      "scan": 173,
+      "page": 160,
+      "village": "Dragoša",
+      "houseNo": "1",
+      "child": "mrtvorojen",
+      "reason": "mrtvorojen (oče Janez Adamič, mati Neža Zame)"
+    },
+    {
+      "row": 31,
+      "scan": 173,
+      "page": 160,
+      "village": "Dobravice",
+      "houseNo": "48",
+      "child": "Rudolf",
+      "reason": "mati Marija Huderova, ciganka (Hudorovac pattern — cf. P100 r76/r79/r84); † 14.3.1930"
+    },
+    {
+      "row": 39,
+      "scan": 174,
+      "page": 161,
+      "village": "Otok",
+      "houseNo": "20",
+      "child": "Neža",
+      "reason": "kraj OTOK, ne Griblje (5× forenzika: O-t-o-k) — r39 zamenjan z Griblje 20 v prvem branju, revidiran; EMŠO ž: 1305906505192 (13.5.1906 — skladno); oče Nikolaj Hrižan × Ana Željko (HRIŽAN, a ne-Griblje)"
+    },
+    {
+      "row": 73,
+      "scan": 177,
+      "page": 164,
+      "village": "Prilozje",
+      "houseNo": "25",
+      "child": "Martin",
+      "reason": "kraj PRILOZJE, ne Griblje (prvo branje »Griblje 25« revidirano); poročen 23.2.1936; umrl 5.11.1976 v Prilozju"
+    },
+    {
+      "row": 87,
+      "scan": 178,
+      "page": 165,
+      "village": "Grm",
+      "houseNo": "25",
+      "child": "Ana",
+      "reason": "kraj GRM (pri Metliki), ne Griblje; † 1/6.08(?)"
+    }
+  ],
+  "anomalies": [
+    "r8 h16 † 16.2.1944 (2. svetovna vojna)",
+    "r11 Gradac 65 »razglašen a umrtvoga dne 28. Februar 1962« — deklariran mrtev + nalepka",
+    "r21/r22/r26/r29 — 4 mrtvorojeni (Gradac 28, Gradac 33, Zemelj 18, Dragoša 1); podpisi PRAZNI",
+    "r30 DUALNI PODPIS: Hengsfeld + Dostál »citori« (edini)",
+    "r31 Dobravice 48 mati ciganka (Marija Huderova)",
+    "r35 h19 NEZAKONSKI — očetova kolona prazna; mati Ana Kovač [~] samostojna",
+    "r38 Gradac 10 podpis Kulbinek — PRVI KULBINEK (12.5.1906) — menjava kaplanov",
+    "r39 Otok 20 (EMŠO skladno ž) — r39↔r54 kraj forenzika: Otok 20 vs Griblje 20",
+    "r40 h44 ime pod modrim pripisom (moški obrazci umrl/poročen)",
+    "r51 h4 DVOJNI modri pripis (umrl 1994 + umrla 2004)",
+    "r71 podpis izblidla (Kulbinek [~])",
+    "r81/r82 Krasinec 18 DVOJČKA (Anton + Matija — isti oče Nikolaj Zupančič × Ana Brodarič, ditto botra Klepec)",
+    "r87 Grm 25 — četrti kraj brez Griblje v letu (Gradac/Dobravice/Grm/Prilozje/...)",
+    "dojenčki † na Gribljih: r48 (29.1.1907), r52 (24.12.06), r54 (23.11.08), r66 (9.2.07), r79 (9.1.07) — 5 svinčnikov"
+  ],
+  "stats": {
+    "entries": 18,
+    "distinctHouses": 18,
+    "newHouses": 1,
+    "newHouseNos": [
+      "4"
+    ],
+    "nare": "NARE — vsaka hiša 1× (18/18; po 1905 prelomu spet brez intra-letne ponovitve)",
+    "pt": {
+      "inGap": 4,
+      "inGapHouses": [
+        "42",
+        "44",
+        "49",
+        "60"
+      ],
+      "newGapNos": [],
+      "note": "vsi 4 ponovitve že dokazanih (42/44/45/48/49/50/54/58/60); luknja 41–60 ostaja SAMO h51"
+    },
+    "vitals": 315,
+    "kumulativ": {
+      "entries": 347,
+      "houses": 85,
+      "years": 21
+    },
+    "babica": {
+      "celoLeto": "83 imenovanih / 1 prazna (r34) / 2 neberljivi (r11+r12 nalepka) / 1 odrezana (r10)",
+      "griblje": "18/18: Mih (+Mihelič[~]) 10 + Vötter 5 + Adlešič 1 + Burek[~] 1 + Dragoš 1",
+      "novela": "TOTER 0× — prvič v vzorcu (1886–1906); Marjeta Vötter 5× (Sotter 1889 → Toter 1901–05 → Vötter 1906 — ista Marjeta? [MERI])"
+    },
+    "duhovniki": {
+      "celoLeto": "Rauq 39 + Kulbinek (o.t.cap.) 20 + Hengsfeld 17 + Škrabec (coop.) 7 + Dostál 1 (dual r30) + prazni 4 (mrtvorojeni)",
+      "griblje": "18/18: Rauq 7 + Kulbinek 6 + Škrabec 3 + Hengsfeld 2",
+      "novela": "J. R. Kulbinek (o.t.cap.) prvi podpis r38 = 12.5.1906; P. Kazimir Škrabec (coop.) r76–r79 + r85–r87 — menjava kaplanov/koperaterjev"
+    },
+    "emso": "3 sidra na Gribljih (r16 2102906500234, r51 3107906505454, r62 0609906500161) + celo knjigo (r39 Otok, r42 Bušinja vas, r49 Otok?, r61, r70, r78 Krasinec...)",
+    "vrzeli": "h26 10 let (1896→1906), h18 8 let (1898→1906), h49 7 let (1899→1906), h44 5 let (1901→1906)",
+    "housesIllegible": 0,
+    "housesWritten": [
+      "4",
+      "15",
+      "16",
+      "18",
+      "19",
+      "20",
+      "21",
+      "24",
+      "26",
+      "27",
+      "30",
+      "34",
+      "35",
+      "42",
+      "44",
+      "49",
+      "60",
+      "69"
+    ],
+    "intraYearRepeats": 0,
+    "intraYearRepeatsNote": "NARE ponovno: vsaka hiša 1× (18/18) — po 1905 prelomu (h12 ×2) spet brez intra-letne ponovitve; r39 Otok 20 + r54 Griblje 20 = ločena hiši (kraj forenzika)",
+    "newSampleHouses": 1,
+    "newSampleHousesNote": "h4 = NOVA HIŠA (85. hiša v vitals) — 1. nova po dveh letih 1904+1905 (0+0); h4 JE v PT naboru (nabor hiša, brez krstnih vpisov do 1906); luknja 41–60 ostaja samo h51 nedokazana",
+    "villageTally": {
+      "Griblje": 18
+    },
+    "midwifeNamed": 83,
+    "midwifeEmpty": 1,
+    "midwifeEmptyNote": "prazna (»—«): r34 Krasinec 30; neberljive/odrezane: r10 (trak), r11 + r12 (nalepka)",
+    "midwifeGribljeNote": "18/18 izpolnjeno (5. leto zapored): Mih (+Mihelič[~]) 10 + Vötter 5 + Adlešič 1 + Burek[~] 1 + Dragoš 1 — TOTER 0× (prvič v vzorcu 1886–1906!)",
+    "midwifeGriblje": {
+      "Mih Marija (+Mihelič[~])": 10,
+      "Vötter Marjeta [~]": 5,
+      "Adlešič Marija": 1,
+      "Burek Marija [~]": 1,
+      "Dragoš Katarina": 1
+    },
+    "priests": {
+      "Ravq": 39,
+      "Kulbinek (o.t.cap.)": 20,
+      "Hengsfeld": 17,
+      "Škrabec (coop.)": 7,
+      "Dostál [~ dual r30]": 1,
+      "prazni (mrtvorojeni)": 4
+    },
+    "priestsNote": "celo leto 87 vrstic: Jos. Ravq 39 + NOV KAPLAN J. R. Kulbinek (o.t.cap.) 20 (prvi podpis r38 = 12.5.1906) + Hugo Hengsfeld 17 (samo Januar–April) + NOV coop. P. Kazimir Škrabec 7 (r76–r79 + r85–r87) + Dostál 1 (dual r30) + prazni 4 (mrtvorojeni r21/r22/r26/r29); na Gribljih 18/18: Rauq 7 + Kulbinek 6 + Škrabec 3 + Hengsfeld 2",
+    "infantDeaths": 5,
+    "infantDeathsNote": "svinčniki na Gribljih: r48 h21 † 29.1.1907, r52 h18 † 24.12.06, r54 h20 † 23.11.08, r66 h69 † 9.2.07, r79 h27 † 9.1.07",
+    "stillborn": 4,
+    "stillbornNote": "r21 Gradac 28 + r22 Gradac 33 + r26 Zemelj 18 + r29 Dragoša 1 (vsi non-Griblje, podpisi prazni)",
+    "illegitimate": 1,
+    "illegitimateNote": "r35 h19 Janez — očetova kolona PRAZNA, mati Ana Kovač [~] samostojna (edini gibriljski nezakonski v letu; non-Griblje: r31 Dobravice ciganka, r83 Cerkvišče samska dekla)",
+    "emsoAnchors": 8,
+    "emsoNote": "kampanja 1982–84 nadaljevanje: na Gribljih r16 2102906500234 + r51 3107906505454 + r62 0609906500161 (vsi skladni); non-Griblje: r39 Otok 1305906505192, r42 Bušinja vas 0106906500046, r49 Otok 2607906500113[~], r61 Krasinec 0609906505134[~], r70 Krasinec 0510906505013, r78 Krasinec 1211906500056",
+    "ptInNabor": 14,
+    "ptGap": [
+      "42",
+      "44",
+      "49",
+      "60"
+    ],
+    "ptGapNote": "PT 14/4 — 42 (P99) + 44 (1888/1901) + 49 (P92) + 60 (P84) v luknji 41–60 (vsi ponovitve že dokazanih); luknja 41–60 ostaja samo h51 nedokazana",
+    "cumulative": {
+      "entries": 347,
+      "houses": 85,
+      "years": 21
+    },
+    "rowsTotal": 87,
+    "excluded": 10,
+    "anomaliesCount": 14,
+    "vpisOrdinals": {
+      "h4": "1. VPIS — NOVA HIŠA (85. v vitals)",
+      "h15": "6. VPIS (1904; ŠTRAUS)",
+      "h16": "7. VPIS (1904; nova družina Jakofčič)",
+      "h18": "2. VPIS (VRZEL 8 LET od 1898)",
+      "h19": "2. VPIS (1901; NEZAKONSKI)",
+      "h20": "5. VPIS (1903; ista družina Perdinec/Pozdirec × Klepec)",
+      "h21": "6. VPIS (1904; POŽEK)",
+      "h24": "12. VPIS — najbolj vpisovana hiša registra (1904)",
+      "h26": "4. VPIS (VRZEL 10 LET od 1896; ŠEGINA)",
+      "h27": "8. VPIS (1902)",
+      "h30": "10. VPIS (1903; menjava Segina → Brinec)",
+      "h34": "5. VPIS (1905; MENJAVA DRUŽINE 2× — Šimec povrat)",
+      "h35": "5. VPIS (1903)",
+      "h42": "3. VPIS ZAPORED (1905)",
+      "h44": "3. VPIS (VRZEL 5 LET od 1901)",
+      "h49": "2. VPIS (VRZEL 7 LET od 1899)",
+      "h60": "7. VPIS (1904; par Željko×Brodarič povrat — 5. otrok istega para)",
+      "h69": "9. VPIS (1904; isti oče Janez Željko bajtar)"
+    },
+    "longestGaps": "h26 10 let (1896→1906) > h18 8 let (1898→1906) > h49 7 let (1899→1906)",
+    "priestCountsGriblje": {
+      "Ravq": 7,
+      "Kulbinek (o.t.cap.)": 6,
+      "Škrabec (coop.)": 3,
+      "Hengsfeld": 2
+    },
+    "crossChecks": [
+      "h42 1906 == h42 1905: ISTA DRUŽINA (Perdinec/Pezdirec × Jurajevič/Jurasovič) — 3. VPIS ZAPORED; oče Jurij 1905 → Jožef 1906 [MERI: brata?]",
+      "h60 1906 == h60 1893+1894+1897+1899: ISTI PAR (Nikolaj Željko × Marija Brodarič) POVRAT po 1904 intermezzu — 5. otrok istega para; botrinja Marija Klepec 3.×",
+      "h24 1906 == 12. VPIS: MENJAVA (Jurajevič/Krašovec 1904 → Janez Brinec — POVRAT Brincove hiše 1887–1897)",
+      "h69 1906 == h69 1904: ISTI oče Janez Željko bajtar (mati varianta Žumič → Zamec [~])",
+      "h34 1906: MENJAVA DRUŽINE 2× (Šimec 1887 → Šilak/Šulak 1899–1905 → Šimec 1906, druga žena)",
+      "h20 1906 == h20 1903: ISTA DRUŽINA (Perdinec/Pozdirec × Klepec) — kurrent priimka",
+      "h21 1906: oče Janez Požek = h58 oče 1903+1905 (POŽEK signal)",
+      "h15 1906: oče Matija Štraus — Straus/Spudič lead 04455 na 4. hiši, VENDAR mati Marjeta Simec (2. Štrausov par [MERI])",
+      "h30 1906: MENJAVA (Segina 1902/1903 → Matija Brinec)",
+      "h4 1906: NOVA HIŠA — prvi krstni vpis (oče Janez Hrižan, mati Katarina Štrucel)"
+    ]
+  },
+  "crossChecks": {
+    "h42Streak": "1904 NOVA (Štraus) → 1905 Perdinec/Pezdirec Jurij → 1906 Jožef Pozdirec — 3. VPIS ZAPORED (ista družina 2. leto)",
+    "h24MostEntered": "12. VPIS — še vedno najbolj vpisovana hiša (1887, 1888, 1890, 1892, 1893, 1895×2, 1897, 1901, 1903, 1904 → 1906)",
+    "h60Couple": "Željko × Brodarič: 1893+1894+1897+1899+1906 = 5 otrok istega para (1904 Novak×Frlah intermezzo)",
+    "straus4houses": "Straus/Spudič lead 04455: h45 (1896/97/1900) → h40 (1899) → h16 (1902) → h15 (1906 — Matija Štraus × Marjeta Simec, drug par [MERI])",
+    "brodaricZeljkoExchange": "r16 h49 boter Nikolaj Željko; r19 h60 boter Nikol. Brodarič — križna izmena med h49 in h60",
+    "hrizanCampaign": "HRIŽAN signali 1906 (Griblje vrstice): r40 boter Janez + r51 oče Janez + r71 boter Nikolaj + r79 botrinja Katarina + r85 mati Ana + botrinja Marija = 6 (plus r39 Otok oče)",
+    "struceljSignals": "ŠTRUCELJ signali 1906: r40 oče Jožef + r51 mati Katarina + r86 boter Jožef = 3",
+    "pezdirecFathers": "PEZDIREC/POZDIREC očetje 1906: r54 Peter + r56 Jožef + r79 Marko + r85 Jožef = 4 Griblje vrstice (kurrent Perdinec)",
+    "infantDeaths": "5 svinčnikov † na Gribljih (r48, r52, r54, r66, r79) — 2 v decembru 1906/januarju 1907",
+    "scan170row8": "prvi gibriljski vpis 1906 = r8 (Leopold, 21./22. Januar, † 16.2.1944)"
+  }
+}

@@ -4758,3 +4758,28 @@ Work Log:
 
 Stage Summary:
 - TROJSINHRONIZACIJA OBNOVLJENA: lokalni == GitHub == GitLab == ab1a4eb; produkcija 101/101 (dohitela repo)
+
+---
+Task ID: 72 (P101 = krstna 1906 — transkripcija + dokaz + verifikator + parish.ts + qa-p101 + regresije + docs + sinhronizacija)
+Agent: Z.ai Code (glavna seja)
+Task: P101 — župnija Podzemelj, krstna knjiga 04105, polno leto 1906 (issue #18; §75 nextSteps ①)
+
+Work Log:
+- SINHRONIZACIJA OB PREVZETEMU: lokalni == GitHub == GitLab == 199455a (P100 + Task 71-b); README je že vseboval P100 bullet + »Zadnje stanje po P100« — brez sprememb; Vercel produkcija 101/101 (po Task 71-b)
+- P101 MATERIJAL: skeni 170–181 že v /tmp/p100 (+ kopija v /tmp/p101); izrezi read/s{170..181}-A/B.png; branje 12 strani (spread format kot 1905)
+- OKVIR 1906: glava »1906« str. 158 = sken 170/171 (dup par, P100 dokazano); 1906 r1 = »Gorn?« 34 Jožef 1./1. Januar — **P100 lead POTRJEN**; row 87 = str. 165 (skeni 178/179); glava »1907« POD r87 (1907 r1 = Dobravice 27 Ivanka, podpis Anton Dostál = P102 lead); 87 vrstic; **NOVELA: EN dup par 178/179 = str. 165 (rows 85–87)** — stran == sken − 13 (172–178) / − 14 (180+)
+- TRANSKRIPCIJA 18 gibriljskih vrstic (r8, r16, r18, r19, r35, r40, r43, r48, r51, r52, r54, r56, r62, r66, r71, r79, r85, r86) — vsaka 2× (levi podatkovni blok + desni Roditelja/Botra/Babica/Podpis); hišne številke ≥ 3× forenzika
+- **KRAJ FORENZIKA (ključni popravki prvega branja)**: r39 = **Otok 20** (NI Griblje! prvo branje revidirano — sicer bi NARE prelomil; r39 Otok 20 + r54 Griblje 20 = ločena hiši), r73 = **Prilozje 25** (prvo branje »Griblje 25«), r87 = **Grm 25**; r56 hiša = **42** (ne 45! — Pezdirec ista družina); r62 ime = **Janez** (ne Anton); r43 ime = **Ana** (ne Ivan); r73 oče = Jožef Klepec + mati Ana Kralj (prvo branje revidirano)
+- DOKAZ research/issue17/parish-baptism-1906.json: 18 entries + 10 excluded + 14 anomalij + canonical stats (midwife 83/1; duhovniki Rauq 39 + Kulbinek 20 + Hengsfeld 17 + Škrabec 7 + Dostál dual 1; PT 14/4; kumulativ 347/85/21)
+- Verifikator scripts/p101_parish_baptism_1906.py (I1–I10): prvi tek 3 FAIL (I4 dup-par primerjava tuples + I5 Toter v opombi r35 babice + I9 parish.ts še brez blokov) — popravljeno; **I1–I10 VSE PASS**
+- parish.ts: 18 blokov 1906 (vitals 323 → **341**; vse celovito whatSi+whatEn+status DOCUMENTED); pripis »Jos. Rauq« (korpusna konvencija Ravq — prvi poskus je po nesreči preimenoval 108 pojavitev tudi v starih blokih → git checkout + re-insert SAMO v 1906 blokih; stari bloki bajtno nespremenjeni — preverjeno!)
+- qa-parish.ts: qa-p101-parish-baptism-1906 (102. kontrola) — okvir (pageOfScan − 13/− 14 + dup 178/179), 18/18 NARE ponovno, 1 NOVA hiša h4, PT 14/4, sidra h4 NOVA + h42 3. ZAPORED + h24 12. VPIS + h69 9. + h34 MENJAVA 2× + h60 PAR POVRAT + h19 NEZAKONSKI + h15 ŠTRAUS + h21 POŽEK + h26 ŠEGINA, 17 kontinuitetnih pinov, babica Toter 0×/Mih 10/Vötter 5, duhovniki Ravq 7/Kulbinek 6/Škrabec 3/Hengsfeld 2, EMŠO 3 sidra; vitals pini p85–p100 323 → 341
+- Regresije python: p80 (vitals 341), p85–p100 vitals 341 + kumulativ 347 + hiše vitals 84, horizon filtri + 1906 (p85–p95 terke + p96 inline + p99 (1905,) → (1905, 1906)), p100 BLOCKS_04105 297 → 315
+- Veriga p79–p101 --check: prvi tek p99 I10 FAIL (terka (1905,) regex ni zadela) + p100 I9 FAIL (BLOCKS_04105) — popravljeno; **vseh 23 skript p79–p101 PASS** (p81 posebej potrjen)
+- qa-parish iteracija: 6 začasnih FAIL → 0 (allow liste + 1906: qa-p85 h30 + qa-p90 h20 + qa-p93 h18 + qa-p94 h49 + qa-p96 h19; qa-p101 EMŠO pin prek »(sidro)« markerja — r54 omenja EMŠO 1903 v zgodovinskem kontekstu)
+- tsc 0 / lint 0; **/api/qa dev 102/102, 0 failed** (qa-p101 True)
+- Docs: MUSEUM-AUDIT.md §76 (P101 + nextSteps P102) + README P101 bullet + »Zadnje stanje raziskave (po P101 · 2026-10-18)« (QA 102/102; p60–p67 + p70–p101; p80–p101 = 22 skript; qa lista + qa-p101; P77–P101 brez kartic)
+
+Stage Summary:
+- P101 = krstna 1906 REPO-KOMPLETEN: dokaz + verifikator (I1–I10 PASS) + parish.ts (341 vitals, 18 celovitih blokov) + qa-p101 (**102/102**) + 23/23 skript PASS + docs; kumulativ **347 vpisov / 85 hiš / ENAINDVajset let** (1886–1906); NARE ponovno (18/18); 1 NOVA hiša h4 (85. vitals); KRAJ FORENZIKA (Otok 20 / Prilozje 25 / Grm 25 — tri revidirane); h42 3. VPIS ZAPORED (Pezdirec); h24 12. VPIS (najbolj vpisovana); h34 MENJAVA 2× (Šimec povrat); h60 PAR Željko × Brodarič POVRAT (5. otrok); h19 NEZAKONSKI; h15 ŠTRAUS 2. par; NOVI DUHOVNIKI Kulbinek (o.t.cap.) + Škrabec (coop.) + Dostál dual; BABICA TOTER 0× PRVIČ + Vötter 5× (Sotter→Toter→Vötter — ista Marjeta? MERI); 5 dojenčkov †
+- NASLEDNJA FAZA: P102 = krstna 1907 (glava »1907« pod r87 str. 165 = skeni 178/179; 1907 r1 = Dobravice 27 Ivanka, podpis Anton Dostál; skeni 179+ prenesti) ALI mrliška 04894 1887–1896 (dojenčki † r48/r52/r66/r79 lead!) ALI poročna 04455 (Straus × Spudič — 1906 2. Štrausov par h15 razreši MERI)

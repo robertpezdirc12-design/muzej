@@ -5483,3 +5483,94 @@ knjiga 04894 1887–1896: smrti prvih žen + dojenčki † iz krstnih (r69 h58
 ŠTRAUS r90 + SPUDIČ r78 — 2. osebi istega leta); ④ h51 (ZADNJA nedokazana
 številka luknje 41–60!); ⑤ produkcija Vercel: dohiti P100 → QA 101/101;
 ⑥ EMŠO neskladje r49 (0607905500076) — obravnava kot P99 r19.
+
+## §76 · P101 — župnija Podzemelj, krstna knjiga 04105, polno leto 1906 (issue #18; 2026-10-18)
+
+**Okvir 1906**: glava »1906« na str. 158 = sken 170/171 (dup par, P100
+dokazano; 1906 r1 = »Gorn?« 34 Jožef, 1./1. Januar, H. Hengsfeld — **P100
+lead POTRJEN**) – row 87 na str. 165 (skeni **178/179**; glava »1907« POD
+r87; 1907 r1 = Dobravice 27 Ivanka, podpis Anton Dostál — **P102 lead**) ==
+tiskane strani **158–165 (87 vrstic)**.
+
+**NOVELA P101 — EN podvojen par skenov v okviru leta**: 178/179 = str. 165
+(rows 85–87). Stran == sken **− 13 (172–178) / − 14 (180+)**; dup par
+170/171 = str. 158. Format = spread (kot 1905).
+
+**VSI vpisi z Griblji: 18 vpisov / 18 hiš — NARE ponovno** (vsaka hiša 1×;
+po 1905 prelomu h12 ×2 spet brez intra-letne ponovitve): 4, 15, 16, 18, 19,
+20, 21, 24, 26, 27, 30, 34, 35, 42, 44, 49, 60, 69. **KRAJ FORENZIKA
+NOVELA**: r39 = **Otok 20** (prvo branje »Griblje 20« revidirano — r39 Otok
+≠ r54 Griblje 20!), r73 = **Prilozje 25**, r87 = **Grm 25** — tri
+ne-gibriljske vrstice z gibriljskimi številkami. **1 NOVA hiša: h4** (85.
+vitals; prva po dveh letih 1904+1905 brez novih; h4 JE v PT naboru). PT
+**14/4** (42+44+49+60 v luknji 41–60 — vsi ponovitve; luknja ostaja samo
+h51). Kumulativ **347 vpisov / 85 hiš / ENAINDVajset let** (1886–1906; 341
+vitals).
+
+**Sidra**: r8 h16 7. VPIS (nova družina Jakofčič; **† 16.2.1944** — 2.
+svetovna vojna); r16 h49 2. VPIS (menjava žene Milek → Miheč [MERI]; EMŠO
+2102906500234 sidro; **BRODARIČ↔ŽELJKO izmena** z r19); r18 h34 5. VPIS —
+**MENJAVA DRUŽINE 2×** (Šimec 1887 → Šilak/Šulak 1899–1905 → Šimec 1906
+POVRAT, druga žena Kere); r19 h60 7. VPIS — **PAR Željko × Brodarič POVRAT**
+po 1904 intermezzu (**5. otrok istega para**: 1893+1894+1897+1899 → 1906;
+botrinja Marija Klepec 3.×); r35 h19 2. VPIS — **NEZAKONSKI** (očetova
+kolona PRAZNA, mati Ana Kovač [~] samostojna); r40 h44 3. VPIS (ŠTRUCELJ +
+HRIŽAN signali; **PRVI KULBINEK podpis**); r43 h30 10. VPIS (menjava Segina
+→ Brinec); r48 h21 6. VPIS (**POŽEK signal** — oče Janez Požek = h58 oče
+1903+1905!); r51 h4 NOVA HIŠA (HRIŽAN oče + ŠTRUCELJ mati + **ŠTRAUS boter**
+= h42 oče 1904 + h16 oče 1902 + h15 oče 1906; EMŠO 3107906505454 sidro;
+DVOJNI modri pripis umrl 1994 + umrla 2004); r52 h18 2. VPIS (vrzel 8 let; †
+24.12.06 — božični večer); r54 h20 5. VPIS (ISTA družina Perdinec/Pozdirec ×
+Klepec kot 1903 — kurrent priimka); r56 h42 **3. VPIS ZAPORED** (Pezdirec ×
+Jurajevič/Jurasovič — ista družina 2. leto); r62 h24 **12. VPIS** — še vedno
+najbolj vpisovana hiša registra (povrat Brincove hiše 1887–1897; EMŠO
+0609906500161 sidro); r66 h69 9. VPIS (isti oče Janez Željko bajtar); r71
+h26 4. VPIS (vrzel 10 let; **ŠEGINA signal** — oče = h30 oče 1902/1903;
+podpis izblidla); r79 h27 8. VPIS (HRIŽAN botrinja Katarina = h34 botrinja
+1903; PEZDIREC oče); r85 h35 5. VPIS (HRIŽAN ×2; PEZDIREC oče); r86 h15 6.
+VPIS (**ŠTRAUS signal** — lead 04455 na 4. hiši h45→h40→h16→h15, VENDAR mati
+Marjeta Simec NE Barbura Spudič — 2. Štrausov par [MERI]; ŠTRUCELJ boter).
+
+**DUHOVNIKI NOVELA (celo leto 87)**: Jos. Rauq 39 + **NOV KAPLAN J. R.
+Kulbinek (o.t.cap.) 20** (prvi podpis r38 = 12.5.1906!) + Hugo Hengsfeld 17
+(samo Januar–April) + **NOV coop. P. Kazimir Škrabec 7** (r76–r79 + r85–r87)
++ **Dostál 1 (DUALNI podpis r30!)** + prazni 4 (mrtvorojeni); na Gribljih
+18/18: Ravq 7 + Kulbinek 6 + Škrabec 3 + Hengsfeld 2.
+
+**BABICA NOVELA: TOTER 0× — PRVIČ v vzorcu (1886–1906)!!**; **Marjeta Vötter
+5×** na Gribljih (zapisi Sotter 1889 → Toter 1901–05 → Vötter 1906 — ista
+Marjeta? [MERI]); na Gribljih 18/18: Mih (+Mihelič[~]) 10 + Vötter 5 +
+Adlešič 1 + Burek[~] 1 + Dragoš 1; celo leto 83 imenovanih / 1 prazna (r34)
+/ 3 neberljive (r10 trak, r11+r12 nalepka). **HRIŽAN kampanja 1906**: 6
+signalov na gibriljskih vrsticah; **PEZDIREC/POZDIREC očetje ×4**; ŠTRUCELJ
+signali ×3; **5 dojenčkov † na Gribljih** (svinčniki r48/r52/r54/r66/r79);
+EMŠO kampanja: 3 sidra na Gribljih (vsi skladni). Anomalije: 4 mrtvorojeni
+(r21/r22/r26/r29 — podpisi prazni), dualni podpis r30 (Hengsfeld + Dostál),
+ciganka mati r31 (Dobravice — Hudorovac pattern), nezakonski r35, izblidla
+podpis r71, dvojčka r81/r82 (Krasinec 18). Excluded: **10**.
+
+Integracija: dokaz `research/issue17/parish-baptism-1906.json`
+(SAMPLE-TRANSCRIPTION-1906) + verifikator `scripts/p101_parish_baptism_1906.py`
+(I1–I10, --check PASS) + `parish.ts` HOUSE_VITALS 323 → **341** (18 novih
+1906 blokov, vsi whatSi+whatEn+status DOCUMENTED) + QA 101 → **102/102**
+(nova qa-p101-parish-baptism-1906: okvir + NARE ponovno + 1 nova hiša + PT
+14/4 + 20 kontinuitetnih pinov + signali ŠTRAUS/POŽEK/ŠEGINA/HRIŽAN/PEZDIREC/
+ŠTRUCELJ + babica Toter 0×/Vötter 5×/Mih 10× + duhovniki Ravq 7/Kulbinek
+6/Škrabec 3/Hengsfeld 2 + vitals 341) + atlas.ts PT_GAP_KNOWN NESPREMENJEN
+(luknja ostaja samo h51) + allow liste + 1906 (qa-p85 h30, qa-p90 h20, qa-p93
+h18, qa-p94 h49, qa-p96 h19) + qa-p101 EMŠO pin prek »(sidro)« markerja (r54
+omenja EMŠO 1903 v zgodovinskem kontekstu) + **regresije**: p80 (vitals 341),
+p85–p99 vitals 341 + kumulativ 347 + hiše vitals 84 + horizon filtri + 1906
+(p85–p95 vesoljni filtri + p96 inline terka + p99 terka (1905,) → (1905,
+1906)), p100 BLOCKS_04105 297 → 315 — vseh **23 skript p79–p101** `--check`
+PASS (exit 0). Kartica NI dodana (vzorec P77–P101). tsc 0 / lint 0;
+**/api/qa dev 102/102** (qa-p101 True); v7 NESPREMENJEN.
+
+**nextSteps**: ① **P102 = leto 1907** (glava »1907« POD r87 na str. 165 =
+skeni 178/179; 1907 r1 = Dobravice 27 Ivanka, podpis Anton Dostál; skeni
+179+ prenesti); ② mrliška knjiga 04894 1887–1896: smrti prvih žen + dojenčki
+† iz krstnih (r48 h21 † 29.1.1907 + r52 h18 † 24.12.06 + r79 h27 † 9.1.07 +
+r66 h69 † 9.2.07 lead!); ③ poročna 04455: **Straus × Spudič** (krstno 5×;
+1906 2. Štrausov par h15 [MERI] — poročna razreši); ④ h51 (ZADNJA nedokazana
+številka luknje 41–60!); ⑤ produkcija Vercel: dohiti P101 → QA 102/102;
+⑥ babica Vötter = Toter? (isti zapis Marjeta — MERI čez leta 1889–1906).

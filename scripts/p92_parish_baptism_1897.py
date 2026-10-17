@@ -61,7 +61,7 @@ PT_GAP_NEW = ["43"]             # h43 = NOVA luknja številka (17. dokazana)
 EXPECTED_NEW_HOUSES = ["10", "40", "43"]
 EXPECTED_REPEATS = 15           # 18 hiš − 3 nove (z notranjo ponovitvijo h31)
 EXPECTED_HOUSES_VITALS = 19
-EXPECTED_VITALS_TOTAL = 323     # HOUSE_VITALS 211 + 12 (P93: krstna 1898); h61 sidro = P79-era placeholder ZDRUŽEN, ne dupliran; P94: + 15 (1899); P95: + 16 (1900); P98: + 12 (1903); P99: + 19 (1904)
+EXPECTED_VITALS_TOTAL = 341     # HOUSE_VITALS 211 + 12 (P93: krstna 1898); h61 sidro = P79-era placeholder ZDRUŽEN, ne dupliran; P94: + 15 (1899); P95: + 16 (1900); P98: + 12 (1903); P99: + 19 (1904); P101: + 18 (1906)
 EV_ONLY_TOTAL = 6               # P84: 2 + P85: 3 + P86: 1 (P77–P83, P87–P92: 0)
 EV_ONLY_HOUSE_STRINGS = {"65 [~]"}  # P85 — edina imenovana EV-only hiša (None × 4)
 EXPECTED_PRIESTS = (11, 8)      # (Klun, Rauq) — mešano leto; Šuvar izgine
@@ -323,7 +323,7 @@ def verify():
     # zgodovinske klasifikacije leta 1897 (h40: 1898 MENJAVA — Brodarič)
     vitals_pre98 = [
         v for v in vitals_all
-        if not (v["bookSignature"] == BOOK_SIGNATURE and v["year"] in (1898, 1899, 1900, 1901, 1902, 1903, 1904, 1905))
+        if not (v["bookSignature"] == BOOK_SIGNATURE and v["year"] in (1898, 1899, 1900, 1901, 1902, 1903, 1904, 1905, 1906))
     ]
     repeat_houses = sorted(
         (h for h in set(houses) if any(
@@ -352,8 +352,8 @@ def verify():
         and new_houses == EXPECTED_NEW_HOUSES == dokaz["stats"]["newSampleHouses"]
         and len(intra) == EXPECTED_INTRA_REPEATS
         and n_entries_total == EXPECTED_VITALS_TOTAL
-        and n_entries_total + EV_ONLY_TOTAL == 329  # kumulativno po P99 (307 + 6)
-        and n_houses_total == 83  # P98: 80 vitals; P99: + 3 (h6, h42, h50); P100: + 0 (1905 brez novih)
+        and n_entries_total + EV_ONLY_TOTAL == 347  # kumulativno po P101 (341 + 6)
+        and n_houses_total == 84  # P98: 80 vitals; P99: + 3 (h6, h42, h50); P100: + 0 (1905 brez novih); P101: + 1 (h4)
         and ev_only_houses == EV_ONLY_HOUSE_STRINGS
         and cumulative["entries"] == 217
         and cumulative["houses"] == 74  # 73 vitals + 1 EV-only »65 [~]«

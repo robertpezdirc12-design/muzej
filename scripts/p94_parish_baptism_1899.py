@@ -64,7 +64,7 @@ PT_GAP_NEW = ["49"]             # h49 = NOVA luknja številka (19. dokazana)
 EXPECTED_NEW_HOUSES = ["22", "49"]
 EXPECTED_REPEATS = 13           # 15 hiš − 2 novi
 EXPECTED_HOUSES_VITALS = 15
-EXPECTED_VITALS_TOTAL = 323     # HOUSE_VITALS 223 + 15 (P94: krstna 1899); P95: + 16 (1900); P98: + 12 (1903); P99: + 19 (1904)
+EXPECTED_VITALS_TOTAL = 341     # HOUSE_VITALS 223 + 15 (P94: krstna 1899); P95: + 16 (1900); P98: + 12 (1903); P99: + 19 (1904); P101: + 18 (1906)
 EV_ONLY_TOTAL = 6               # P84: 2 + P85: 3 + P86: 1 (P77–P83, P87–P94: 0)
 EV_ONLY_HOUSE_STRINGS = {"65 [~]"}  # P85 — edina imenovana EV-only hiša
 EXPECTED_PRIESTS = (6, 4)       # (Šturm, Rauq) + Klun 2 + 3 neberljivih
@@ -371,7 +371,7 @@ def verify():
     # smejo spreminjati zgodovinske klasifikacije leta 1899 (filtri vesolja)
     vitals_pre1900 = [
         v for v in vitals_all
-        if not (v["bookSignature"] == BOOK_SIGNATURE and v["year"] in (1900, 1901, 1902, 1903, 1904, 1905))
+        if not (v["bookSignature"] == BOOK_SIGNATURE and v["year"] in (1900, 1901, 1902, 1903, 1904, 1905, 1906))
     ]
     repeat_houses = sorted(
         (h for h in set(houses) if any(
@@ -399,8 +399,8 @@ def verify():
         len(repeat_houses) == EXPECTED_REPEATS
         and new_houses == EXPECTED_NEW_HOUSES == dokaz["stats"]["newSampleHouses"]
         and n_entries_total == EXPECTED_VITALS_TOTAL
-        and n_entries_total + EV_ONLY_TOTAL == 329  # kumulativno po P99 (307 + 6)
-        and n_houses_total == 83  # P98: 80 vitals; P99: + 3 (h6, h42, h50); P100: + 0 (1905 brez novih)
+        and n_entries_total + EV_ONLY_TOTAL == 347  # kumulativno po P101 (341 + 6)
+        and n_houses_total == 84  # P98: 80 vitals; P99: + 3 (h6, h42, h50); P100: + 0 (1905 brez novih); P101: + 1 (h4)
         and ev_only_houses == EV_ONLY_HOUSE_STRINGS
         and cumulative["entries"] == 244
         and cumulative["houses"] == 79  # 78 vitals + 1 EV-only »65 [~]« (zamrznjeno P94)
