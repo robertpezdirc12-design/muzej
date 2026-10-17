@@ -4652,3 +4652,17 @@ Work Log:
 Stage Summary:
 - P97 = krstna 1902 REPO-KOMPLETEN: dokaz + verifikator + parish.ts (276 vitals) + qa-p97 (98/98) + 14/14 skript PASS + docs; kumulativ 282 vpisov / 81 hiš / SEDEMNAJST let; PRVO LETO brez novih hiš; NARE 8. leto; NOVA TISKANA knjiga od 1902; peskovnik reset BREZ IZGUBE (dvorogi push)
 - NASLEDNJA FAZA: P98 = krstna 1903 (glava SREDINA str. 136 = sken 144; 1903 r1 = Griblje 24; skeni 141–152 prenešeni) ali mrliška 04894 ali poročna 04455 (Straus × Spudič — krstno 5× na treh hišah)
+
+---
+Task ID: 68-b (sinhronizacija — GitHub OK; GitLab BLOKIRAN)
+Agent: Z.ai Code (glavna seja)
+Task: P97 push — GitHub + GitLab + produkcija
+
+Work Log:
+- Commit fd2c81c (P97: krstna 1902 + regresije + docs); git push github main OK na 1. poskus (b5a25d7..fd2c81c) — Vercel deploy sprožen
+- git push origin main FAIL 403: GitLab žeton je bil VGRAJEN v remote URL v IZBRISANEM peskovniku (/home/z/muzej reset) — klon iz GitHub zrcala ima origin BREZ kredencial; lokalno NI obnovljivega GitLab žetona
+- GitHub remote je ohranil PAT v URL (obnovljen iz konteksta seje) → GitHub == fd2c81c
+
+Stage Summary:
+- DVOROGI STATUS: lokalni == GitHub (zrcalo) == fd2c81c; GitLab (vir resnice) ZASTAREL na b5a25d7 + push BLOKIRAN (403 — žeton izgubljen s peskovniškim resetom — owner action: git remote set-url origin https://<user>:<GITLAB_TOKEN>@gitlab.com/markec-group1/muzej.git → git push origin main)
+- Produkcija Vercel: deploy sprožen prek GitHub pusha; pričakovano 98/98 (qa-p97 True)
