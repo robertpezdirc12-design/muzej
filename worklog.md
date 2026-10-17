@@ -4709,3 +4709,17 @@ Work Log:
 Stage Summary:
 - P99 = krstna 1904 REPO-KOMPLETEN: dokaz + verifikator (I1–I10 PASS) + parish.ts (307 vitals, 19 celovitih blokov) + qa-p99 (**100/100** — 100. kontrola!) + 21/21 skript PASS + docs; kumulativ **313 vpisov / 84 hiš / DEVETNAJST let** (1886–1904); NARE 10. leto; 3 NOVE HIŠE (h6 nabor + h42/h50 = 20./21. dokazana luknja 41–60 — ostaja SAMO h51); NOV KAPLAN Hugo Hengsfeld (menjava sredi 1904); h24 11. VPIS + edini 29.2. vpis; MUC kontinuiteta potrjena; ŠTRAUS + SPUDIČ signali (poročna 04455 lead)
 - NASLEDNJA FAZA: P100 = krstna 1905 (glava »1905« pod r90 str. 150 = sken 160; 1905 r1 = Gradac 45? Antonija; skeni 160+ prenesti) ALI mrliška 04894 1887–1896 ALI poročna 04455 (Straus × Spudič — 1904 dobi 2. in 3. osebo)
+
+---
+Task ID: 70-b (sinhronizacija — GitHub OK; GitLab BLOKIRAN 403)
+Agent: Z.ai Code (glavna seja)
+Task: P99 push — GitHub + GitLab + produkcija
+
+Work Log:
+- Commit c5f283a (P99: krstna 1904 + regresije + docs); git push github main OK (e7e0793..c5f283a) — Vercel deploy sprožen
+- git push origin main FAIL 403: GitLab žeton (glpat-…MQpvOjEKdTpwb285NQ) NEVELJAVEN/EXPIRAN — `git ls-remote origin` tudi 403; žeton je deloval v P98 seji (push 718f2f6 potrjen) — znani vzorec izpraznitve žetona med sejami (cf. Task 68-b)
+- Owner action (isti kot P98): git remote set-url origin https://oauth2:<NOV_GITLAB_PAT>@gitlab.com/markec-group1/muzej.git && git push origin main
+
+Stage Summary:
+- DVOROGI STATUS: lokalni == GitHub == c5f283a; GitLab (vir resnice) ZASTAREL na 718f2f6 + push BLOKIRAN (403 — žeton izpraznjen; rabi NOV PAT) — GitLab zaostanek: 2 commita (e7e0793 P98 + c5f283a P99)
+- Produkcija Vercel (griblje-museum.vercel.app): deploy sprožen prek GitHub pusha; pričakovano 100/100 (qa-p99 True)
