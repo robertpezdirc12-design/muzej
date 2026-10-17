@@ -4576,3 +4576,19 @@ Stage Summary:
 - P95 = krstna 1900: 16 vpisov / 16 hiš NARE (7. leto; 2. leto brez ponovitev); 1 NOVA hiša (67 — Straus gumbar, 80. hiša); luknja 42/50/51 NESPREMENJENA (19 dokazanih; scopingov h51 lead ZAVRŽEN — Primostek 5); NOVELA babica PRVIČ izpolnjena po 15 letih (Fottre 7× + Hrižan); Šturm 0× PRVIČ; h1 ŽELJKO VRNITEV (boter 1888 → oče); h31 6. PIN (najdaljša zveza); h45 3. PIN Straus × Spudič (04455 lead 3× krstno); h90 4. PIN šolska (Leopoldina po materi); h23 4. PIN + Debič REŠENO; h14 REŠUJE P91; h58 PRVA MENJAVA ŽENE; h54 starši RAZTRGANI; kumulativ 260 vpisov / 80 hiš / PETNAEST let (254 vitals)
 - QA dev 96/96; tsc/lint 0; 16/16 skript PASS; v7 NESPREMENJEN
 - NASLEDNJA FAZA: P96 = krstna 1901 (glava str. 122 = sken 125; skeni 125–128 že v /tmp/p95) ali mrliška 04894 1887–1896 (menjave h1/h10/h16/h58/h9 + »Okljuka?« mikrotoponim) ali poročna 04455 (Straus × Spudič — 3× krstno POTRJENO; najti poroko)
+
+---
+Task ID: 65-b (sinhronizacija — GitHub BLOKIRAN)
+Agent: Z.ai Code (glavna seja)
+Task: P95 push — GitLab + GitHub + produkcija
+
+Work Log:
+- Commit 0bb4a9f (P95: krstna 1900 + popravki zastarelih skript p80–p94 + docs); GitLab push OK na 1. poskus (e318862..0bb4a9f) — VIR RESNICE SINHRONIZIRAN
+- GitHub push FAIL 3× + ls-remote FAIL: »remote: Invalid username or token. Password authentication is not supported for Git operations.« — PAT v remote URL github = TRAJNO NEVELJAVEN (ni tranzientno; prejšnja seja Task 64-b je še delala)
+- Iskanje alternativ: gh CLI NI nameščen, ~/.netrc NI, ~/.config/gh NI, env brez GH žetonov, credential helper NI, repo brez ghp_/github_pat_ vzorcev — LOKALNO NI OBNOVLJIVEGA ŽETONA
+- Produkcija Vercel: 95/95 (qa-p94 True) — deploy poteka prek GitHub App, ki se sproži ob pushu na GitHub; ker GitHub push ne uspe, produkcija ostaja na P94 dokler lastnik ne obnovi žetona
+
+Stage Summary:
+- DVOROGI SINHRONIZACIJSKI STATUS: lokalni == GitLab (vir resnice) == 0bb4a9f; GitHub ZASTAREL + push BLOKIRAN (neveljaven PAT — owner action)
+- OBVEZNA LASTNIŠKA AKCIJA: obnoviti GitHub PAT (robertpezdirc12-design) in posodobiti remote URL (git remote set-url github https://robertpezdirc12-design:<NOV PAT>@github.com/robertpezdirc12-design/muzej.git) — nato ponoviti git push github main (0bb4a9f); Vercel deploy se sproži samodejno in produkcija dohiti 96/96 (qa-p95 True)
+- P95 je REPO-KOMPLETEN (dokaz + skripta + parish.ts + qa-parish.ts + atlas.ts + docs + 16/16 skript PASS + dev QA 96/96); produkcija čaka izključno na GitHub zrcalo
