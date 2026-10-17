@@ -4485,3 +4485,28 @@ Work Log:
 Stage Summary:
 - TRIJE VRTI POPOLNI: lokalni == GitLab (vir resnice) == GitHub == e97339c + produkcija 94/94 (P90–P93 vse True)
 - Repo P93 zaključen breh odprtih vprašanj; NASLEDNJA FAZA: P94 = krstna 1899 (prelom str. 106 row 1 = sken 109; skeni 110–113 že v /tmp/p93; 1899 row 1 = Griblje 12!) ali mrliška 04894 1887–1896 ali poročna 04455
+
+---
+Task ID: 64
+Agent: Z.ai Code (glavna seja)
+Task: P94 — župnija Podzemelj: krstna knjiga 04105, polno leto 1899 (issue #18); push + sinhronizacija (GitLab + GitHub) + produkcija 94/94 preverjena
+
+Work Log:
+- Seja odprta: trojna sinhronizacija POTRJENA (lokalni == GitLab == GitHub == 7990637); produkcija /api/qa = **94/94** (qa-p90 + qa-p91 + qa-p92 + qa-p93 True — Task 63-c potrjen; nič zastarelega)
+- Skeni 114–120 preneseni v /tmp/p94 (110–113 kopije iz /tmp/p93; p94_fetch po vzoru p93)
+- Ročna paleografska faza: pregled skenov 109–118 (str. 106–115); 17 kandidatov → 15 potrjenih Griblje vrstic (r25 NEŠTET — matičar črno nadpisal kraj+hišno; r27 Berkoviše + r93 »Germ« izključeni); izrezi 2x (L/R) + hišne forenzike 5x–10x + kanalna forenzika (r13 hišna pod modrim pripisom — temen »…o 6o«) + imenske forenzike 4x–10x
+- Okvir: 1899 = sken 109 row 97 (str. 106) … sken 118 row 104 (str. 115); 104 vrstic; stran == sken − 3 ZA CELO LETO (brez duplikatov); **prelom 1900 NA SREDINI str. 115 = sken 118 row 105 — PRVIČ se novo leto NE začne na novi strani**; 1900 row 1 = Krasinec (prvič druga vas); novela P83 potrjena 12. leto
+- 15 vpisov / 15 hiš — NARE 6. leto, PRVO LETO BREZ znotraj-letnih ponovitev; 2 NOVI hiši: h22 (PT nabor; Milek × Klepec nova zveza — mati [~ ista oseba kot botra h60 Klepac: botra 13.3. + mati 20.3. v 1 tednu]) + h49 (NOVA LUKNJA — 19. dokazana v 41–60; Brodarič × Milek nova zveza; Nikolaj Brodarič = botra h48 1898 → oče h49); luknja zdaj 42/50/51
+- Ključne najdbe: h60 TRDNI PIN (4. VPIS ISTA ZVEZA Željko × Brodarič + 3. ISTA BOTRA PARA Pendirec × Klepac — kanalna + strukturna forenzika); h40 TRETJA DRUŽINA v 3 letih (Berkopne → Brodarič → **Straus × Spudič bajtar** — POTRDITEV poročnega lead-a 04455); menjave h1 (Željko → Segina; SEGINA VERIGA h70→h30→h1 — 3 hiše / 6 let) + h30 (4. družina → Županič; ŽUPANIČ CLUSTER 3 signali) + h34 (2. družina → Šilak × Klobučar) + h57 (oče Peter → Miha Pozdirec); h46 5. VPIS (4. varianta matere Škaradinič? — potrjena pri Krasinec 32); h27 6. VPIS (oče 2. branje Knekar?; botra h21 Knekar = KRIŽNI SKLIC); h41 4. / h21 2. / h75 3. VPIS ISTA ZVEZA; h12 mati MENJAVA [~] (Straus → Cvitkovič); ŽELJKO 13.+14. signal; dojenčijska umrljivost 3/15; duhovniki Šturm 6× + Rauq 4× + Klun 2× VRNITEV + 3 neberljivih; babica 5. leto 15/15
+- Dokaz research/issue17/parish-baptism-1899.json (15 Griblje + 3 izključeni; 244/79 kumulativ)
+- scripts/p94_parish_baptism_1899.py (I1–I10) — popravki: I8 file↔leto preslikava (P87=1892/P90=1895/P91=1896) + P83 h1 »Zeljth« + h59 1889 NEZAKONSKA Marinka (mati Podirec — NE Rudolf/Pezdirec; popravljen tudi parish.ts h59 blok) — --check PASS (11/11)
+- parish.ts: 223 → 238 (+15 blokov 1899; komentar P94); atlas.ts PT_GAP_KNOWN + 49; qa-parish.ts qa-p94 (95. kontrola) + vitals pini 223→238 (8 testov) + dovoljenja 1899: qa-p85 h30+h41, qa-p87 h12+h75, qa-p88 h46, qa-p92 h40 (allow mehanizem) + kontinuitetni pini (h75 1892 Jakobčič; h1 1888 Zeljth; h59 1889 Podirec)
+- POPRAVI ZASTARELIH SKRIPT (regresije po P93): p80 I7 (vitals 238); p85–p92 filtri vesolja + 1899 (p85–p91 nabori, p92 (1898, 1899)); p85–p93 vitals 238 + kumulativ 244 + hiše 78
+- Veriga: 15/15 skript p80–p94 --check PASS (exit 0); tsc 0 / lint 0; /api/qa dev 95/95 (qa-p94 True); v7 NESPREMENJEN (p76 --check PASS)
+- Dokumentacija: MUSEUM-AUDIT §71 + worklog Task 64 + README (P94 bullet + stanje po P94 + 95/95 + 15 skript p80–p94)
+
+Stage Summary:
+- P94 = krstna 1899: 15 vpisov / 15 hiš NARE (6. leto; brez ponovitev); 2 NOVI hiši (22 PT nabor + 49 NOVA LUKNJA — 19.); h60 TRDNI PIN; h40 TRETJA DRUŽINA + Straus × Spudič (04455 lead POTRJEN); menjave h1/h30/h34/h57; kumulativ 244 vpisov / 79 hiš / ŠTIRNAJST let (238 vitals)
+- QA dev 95/95; tsc/lint 0; 15/15 skript PASS; v7 NESPREMENJEN
+- Produkcija: 94/94 (P93) — po pushu dohiti P94 → 95/95
+- NASLEDNJA FAZA: P95 = krstna 1900 (prelom str. 115 row 105 = sken 118; skeni 119–120 že v /tmp/p94; 1900 row 1 = Krasinec — prvič druga vas!) ali mrliška 04894 1887–1896 ali poročna 04455 (Straus × Spudič krstno POTRJENA — najti poroko)

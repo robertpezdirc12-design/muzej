@@ -55,7 +55,7 @@ PT_GAP_NEW = []                 # brez novih (ostaja 15 dokazanih)
 EXPECTED_NEW_HOUSES = []        # NOVELA: prvo leto z 0 novih hiš
 EXPECTED_REPEATS = 14
 EXPECTED_HOUSES_VITALS = 14     # 14 vpisov, vsi zasidrani (runtime projekcija)
-EXPECTED_VITALS_TOTAL = 223     # HOUSE_VITALS 179 + 14 (p80 I7 pin); P90: + 15 (1895); P91: + 14 (1896); P92: + 19 (1897); P93: + 12 (1898)
+EXPECTED_VITALS_TOTAL = 238     # HOUSE_VITALS 179 + 14 (p80 I7 pin); P90: + 15 (1895); P91: + 14 (1896); P92: + 19 (1897); P93: + 12 (1898); P94: + 15 (1899)
 EV_ONLY_TOTAL = 6               # P84: 2 + P85: 3 + P86: 1 (P87–P89: 0)
 # sidra/pins P89:
 H2_ROW = {"row": 11, "scan": 71, "fatherPin": "Hlebec"}
@@ -361,7 +361,7 @@ def verify():
     # ne smejo spreminjati zgodovinske klasifikacije novih/ponovljenih hiš
     vitals_pre95 = [
         v for v in vitals_all
-        if not (v["bookSignature"] == BOOK_SIGNATURE and v["year"] in (1895, 1896, 1897, 1898))
+        if not (v["bookSignature"] == BOOK_SIGNATURE and v["year"] in (1895, 1896, 1897, 1898, 1899))
     ]
     repeat_houses = [h for h in houses if any(
         v["houseNo"] == h and v["bookSignature"] == BOOK_SIGNATURE and v["year"] != 1894
@@ -375,8 +375,8 @@ def verify():
         len(repeat_houses) == dokaz["stats"]["repeatHouses"] == EXPECTED_REPEATS
         and new_houses == dokaz["stats"]["newSampleHouses"] == EXPECTED_NEW_HOUSES
         and n_entries_total == EXPECTED_VITALS_TOTAL
-        and n_entries_total + EV_ONLY_TOTAL == 229  # kumulativno po P93 (223 + 6)
-        and n_houses_total == 76  # P92: 73; P93: + 3 (18, 48, 89)
+        and n_entries_total + EV_ONLY_TOTAL == 244  # kumulativno po P94 (238 + 6)
+        and n_houses_total == 78  # P93: 76; P94: + 2 (22, 49)
         and dokaz["stats"]["sampleTotal"] == "170 vpisov / 65 hiš čez tri knjige (04105 + 04894 + 04455) in DEVET let (1886/1887/1888/1889/1890/1891/1892/1893/1894)"
         and dokaz["stats"]["entries"] == EXPECTED_ENTRIES
         and dokaz["stats"]["distinctHouses"] == EXPECTED_DISTINCT

@@ -4894,3 +4894,105 @@ popravka) ali Berkopne × Klobučar; ④ Željko veriga 12 signalov; ⑤ luknja
 števil; preveriti PT_GAP_KNOWN: 41, 43–48, 52–60 = 16); ⑥ produkcija
 Vercel: po rate-limit resetu (~2026-10-17 18:24 UTC) dohiti P90–P93 →
 QA 94/94.
+
+## §71 — P94: župnija Podzemelj — krstna knjiga 04105, polno leto 1899 (issue #18) — 2026-10-17
+
+**SAMPLE-TRANSCRIPTION-1899** (MERI, NE odloča; v7 join nespremenjen).
+§70 nextSteps ①: širitev vzorca po letih (P79 1886 → … → P93 1898 →
+**P94 1899**).
+
+**Okvir**: skeni 109 row 97 – 118 row 104 == tiskane strani 106–115.
+**NOVELA P92 POTRJENA**: stran == sken − 3 **ZA CELO LETO** (brez novih
+duplikatov; sken 118 = str. 115 **samo okvir** — ni citiran za vpise).
+**1899 r1 = Griblje 12 Marija na str. 106** (P93 napoved — novo leto se
+začne z Griblji); leto 1899 ima **104 vrstic**; **prelom 1900 NA SREDINI
+str. 115 = sken 118 row 105** — **PRVIČ V VZORCU** se novo leto NE začne
+na novi strani (prazne vrstice + glava »1900.«); 1900 row 1 = Krasinec —
+**prvič z drugo vasjo**; **novela P83 potrjena 12. leto**.
+
+**VSI vpisi z Griblji: 15 vpisov / 15 hiš — NARE (6. leto)** po
+P87/P89/P91/P92/P93 — in **PRVO LETO BREZ znotraj-letnih ponovitev**
+(vsaka hiša 1×): 12, 46, 27, 60, 59, 22, 41, 21, 40, 1, 30, 75, 57, 49,
+34 — **2 NOVI hiši** + 13 ponovitev; skupaj s P79–P93 vzorec **244 vpisov
+/ 79 hiš čez tri knjige in ŠTIRNAJST LET** (238 vitals).
+
+**NOVA ŠTEVILKA h22** (v PT naboru 1825 — ATLAS_HOUSES že vsebuje 22;
+prvi matrični dokaz; forenzika 7x: jasno 22): oče **Nikolaj Milek [~] ×
+Marija Klepec** — NOVA ZVEZA (Milek cluster h65/h29/h30/h70 brez tega
+para; mati [~ ista oseba kot botra h60 Marija Klepac — botra 13.3. +
+mati 20.3. v 1 tednu]; † 2/[5-6].99 — dojenčnica). **NOVA LUKNJA ŠTEVILKA
+h49 — 19. dokazana v 41–60** (PT_GAP_KNOWN +49; forenzika 8x: jasno 49;
+**luknja zdaj 42/50/51**): oče **Nikolaj Brodarič × Marjeta Milek** — NOVA
+ZVEZA (Nikolaj Brodarič = **botra h48 1898 → oče h49 1899**); botra
+Nikolaj [S]Žegina? [Segina?] + Katarina Berkopeč [Berkopne?] (¼);
+dojenčnica **† 24/6.1900** (~7 mesecev).
+
+**h60 TRDNI PIN**: 4. VPIS ISTA ZVEZA **Željko × Brodarič**
+(1893+1894+1897+1899) + **3. ISTA BOTRA PARA Pendirec × Klepac**
+(1893+1894+1899) — hišna št. **pod modrim pripisom**: kanalna forenzika
+(temen sloj »…o 6o«) + **STRUKTURNA POTRDITEV** (oče = h60 oče + botra
+para = h60). **ŽELJKO VERIGA 13.+14. signal** (oče h60 + botra h57
+Nikolaj Željko). **SEGINA VERIGA 3 signali v enem letu** (oče h1 r61 +
+botra h49 r94 + botra h34 r100 Nikolaj Segina).
+
+**h40 TRETJA DRUŽINA V TRIH LETIH** (najgostejša rotacija vzorca):
+Berkopne (1897) → Brodarič (1898 [~]) → **Martin Straus bajtar × Barbara
+Spudič** (1899) — **STRAUS × SPUDIČ = POTRDITEV poročnega lead-a 04455**
+(§70 nextSteps ③). **MENJAVE GOSPODINJSTEV 1899**: h1 **Željko
+(1888–96) → Nikolaj Segina × Marjeta Milek** (**SEGINA VERIGA: h70 1893 →
+h30 1895 → h1 1899 — 3 hiše / 6 let**; kraj »Griblja« varianta — smrtna
+opomba POTRJUJE Griblje: † 31.3.1975 v Gribljah); h30 **4. DRUŽINA v 9
+letih** (Milek → Jakljevič 1893 → Šegina 1895 → **Janez Županič 1899** —
+**ŽUPANIČ CLUSTER 3 signali**: h73 1894 + h30 + botra Ana Županič);
+h34 **2. DRUŽINA** (Šimec 1887 → **Nikolaj Šilak? × Katarina Klobučar**);
+h57 **OČE MENJAVA** Peter Pezdirec (1888–94) → **Miha Pozdirec** (brata?
+sin?; Miha = botra h41 1896).
+
+**Kontinuitete**: h46 **5. VPIS ISTA ZVEZA** očeta (4. varianta matere:
+Klobučar? → Kramarič? → Harašimovič? → **Škaradinič?** — priimek potrjen
+pri Krasinec 32); h27 **6. VPIS** (oče 2. branje: Stukar/Stubhar 1893 →
+**Knekar? 1899**; botra h21 Janez Knekar = **KRIŽNI SKLIC** z očetom
+h27); h41 **4. VPIS ISTA ZVEZA** (Kušič × Jakobič); h21 4. vpis — 2. VPIS
+ISTA ZVEZA Požek × Šimec; h75 **3. VPIS ISTA ZVEZA** (Jakobič × Stubljar
+— 4. pisavska varianta priimka matere); h59 2. vpis (1889 NEZAKONSKA
+Marinka — 1899 PRVI imenovani oče: Simič × Kure); h12 **mati MENJAVA [~]**
+(Straus 1897 → Cvitkovič 1899; botra 1899 = 1897 mati?! — možna zamenjava
+celic P92). 0 nezakonskih; **NOVELA babica POTRJENA 5. LETO: 15/15
+PRAZNO/poškodovano**; **DOJENČIJSKA UMRLJIVOST 3/15** (r1 † 25/6.99 [~],
+r26 † 2/[5-6].99 [~], r94 † 24/6.00) — višja kot P93 1/12. **DUHOVNIKI**:
+Šturm (Fr.) 6× + Rauq (Jos.) 4× + **Klun (Fr.) 2× VRNITEV** iz 1897 + 3
+neberljivih (r71 raztrgan, r94/r100 »Jos. Kergo?«). Statusi: ½ zemljak
+× 14 + **bajtar × 1** (r43 Straus). **KURRENT FORENZIKA**: r13 hišna pod
+pripisom (kanalna + strukturna — 60 TRDNO); r89 **datum UNIČEN**
+(raztrgan rob str. 113 — ~november po sosedi r90); r71 datum popravek
+(»23« + »2« nad — verjetno 2.10. + krst 3.10.); r94 jasno 49 (ne 34 —
+dvojna forenzika z r100); r25 **NEŠTET** (matičar ČRNO nadpisal kraj +
+hišno — ime Jožef; po vzoru P93 r20); r27 Berkoviše + r93 »Germ«
+izključeni (drugi vasi). Matičar pripisi 20./21. st. v večini vpisov
+(† 1964/1965/1969/1975/1984, poroke 1921/1926/1930, EMŠO blok).
+
+**Integracija**: parish.ts HOUSE_VITALS **223 → 238** (+15 blokov 1899,
+vsi DOCUMENTED; komentar P94 z okvirjem; h59 blok popravljen — 1889
+Marinka nezakonska, NE Rudolf/Pezdirec); atlas.ts PT_GAP_KNOWN **+49**
+(19. dokazana); qa-parish.ts **qa-p94** (95. kontrola; celoven neodvisen
+preracun: okvir − 3/brez duplikatov/prelom 1900 NA SREDINI strani/NOVELA
+babica 15/NOVA LUKNJA 49 + 19. dokazana/h60 TRDNI PIN + 4. VPIS + 3.
+BOTRA PARA/h40 STRAUS × SPUDIČ + TRETJA DRUŽINA + bajtar/sidra 13/PT 9/6/
+NOVI hiši 22+49 brez priora/kontinuitete 27 pinov/vitals 238); dovoljenja
+1899: qa-p85 h30 + h41, qa-p87 h12 + h75, qa-p88 h46, qa-p92 h40 (allow
+mehanizem); vitals pini 223 → 238 (8 testov); **POPRAVI ZASTARELIH
+SKRIPT (regresije po P93)**: p80 I7 (vitals 238), p85–p92 (filtri
+vesolja + 1899: p85/p86/p87/p88/p89/p90/p91 nabori + 1899, p92 filter
+1898 → (1898, 1899)), p85–p93 (vitals 238 + kumulativ 244 + hiše 78);
+vseh 15 skript p80–p94 --check **PASS** (exit 0). Kartica NI dodana
+(vzorec P77–P94). tsc 0 / lint 0; **/api/qa dev 95/95** (qa-p94 True);
+v7 NESPREMENJEN (p76 --check PASS).
+
+**nextSteps**: ① **P95 = leto 1900** (prelom str. 115 row 105 = sken 118;
+skeni 119–120 že v /tmp/p94; 1900 row 1 = Krasinec — novo leto prvič
+začne z drugo vasjo; potrebni skeni 119–125+); ② mrliška knjiga 04894
+1887–1896: smrti prvih žen — dokaz menjav h69/h33/h40/h48/h90; ③ poročna
+04455: **Straus × Spudič** (krstno POTRJENA — najti poroko: datum + hiši)
+ali Berkopne × Klobučar; ④ Željko veriga 14 signalov + Segina veriga 3
+signali v enem letu; ⑤ luknja 41–60: 19 dokazanih (49 NOVA) — manjkajo še
+42, 50, 51; ⑥ produkcija Vercel: dohiti P94 → QA 95/95.
