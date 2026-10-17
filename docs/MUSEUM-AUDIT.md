@@ -5306,3 +5306,99 @@ Spudič** (krstno 5× na treh hišah! — najti poroko: datum + hiši); ④ h51/
 h42/h50 (luknja 42/50/51); ⑤ r33 lead: civilni register (zap. št. 4524/1
 MMK Novo mesto 1981) razkrije hišo; ⑥ produkcija Vercel: dohiti P97 → QA
 98/98.
+
+## §74 · P99 — župnija Podzemelj, krstna knjiga 04105, polno leto 1904 (issue #18; 2026-10-18)
+
+**Okvir (forenzika skenov 152–160, /tmp/p99)**: glava »1904« (podčrtana) POD
+r82 na str. 143 (sken 152 — P98 dokazano; 1904 r1 = Krasinec 37 Ana 5./5.
+Januar — P98 lead POTRJEN) – row 90 na str. 150 (sken 160; glava »1905«
+podčrtana pod r90; 1905 r1 = Gradac 45? Antonija 2./7.? Januar — P100 lead)
+== tiskane strani 143–150, **90 vrstic — NAJDALJŠE leto registra doslej**
+(prej 1894: 90 tudi? NE — 1894 = 90; izenačeno). **NOVELA P99**: EN podvojen
+par skenov (155/156 = str. 146, rows 35–46; s156 jasnejši); **stran == sken
+− 9 (152–155) / − 10 (157–160)** — premik offseta za dup par (vzorec P98
+− 8/− 9); format = NOVA TISKANA knjiga (kot 1902–1903, predtisk
+»Leto 18|04«).
+
+**Vzorec (vsi vpisi z Griblji)**: **20 vpisov / 19 hiš + 1 NEBERLJIVA** (r69
+hiša pod modrim pripisom matičarke + poševno prečrtana — brez vitals bloka):
+22, 87, 15, 88, 24, 54, 16, 60, 36, 6, 66, 43, 21, 50, 65, 45, 91, 69, 42 —
+**NARE 10. leto** (vsaka znana hiša 1×; 1901 edini prelom z h12 ×2).
+**3 NOVE HIŠE po dveh letih brez novih**: h6 (nabor PT 1–40 — prvi vpis) +
+h42 in h50 (**20. in 21. dokazana številka luknje 41–60 — luknja ostaja SAMO
+pri h51!**); h88 = prvi KRSTNI vpis (hiša že v mrliški 04894/1886). Kumulativ
+**313 vpisov / 84 hiš čez tri knjige in DEVETNAJST let** (307 vitals). PT
+13/6 (42/43/45/50/54/60 v luknji — 42 + 50 NOVI, 43/45/54/60 že dokazani;
+luknja zdaj 21 dokazanih).
+
+**Sidra**: r2 h22 3. VPIS (**POŽEK signal** — boter Janez Požek = h30 oče
+1902/03; oče Nikolaj Milek = 1902 ISTI); r14 h87 3. VPIS (oče Marko Podrinec
+bajtar — KURRENT ISTI oče Pegdirec/Perdinec → Podrinec, NI menjava — P97
+lekcija); r15 h15 8. VPIS (**BRINEC signal** — mati Marija Brinec); r16 h88
+PRVI KRSTNI VPIS (oče Peter Brinec? + boter Janez Brinec? — 2. in 3. Brinec
+oseba); r18 h24 **11. VPIS — ŠE VEDNO najbolj vpisovana gibriljska hiša
+registra** + **29. FEBRUAR (prestopno leto 1904 — edini 29.2. vpis do 1904)**
++ pripis razveljavitve zakonske zveze 25.11.1947/29.12.1948 + † 30.1.1983
+Zagreb; r31 h16 6. VPIS (Strausova/Spudičeva hiša — poročna 04455 lead); r38
+h36 10. VPIS; r46 h6 NOVA (**ŽELJKO signal** — boter Nikol Željko); r65 h50
+NOVA (**ŠTRUCELJ signal** — mati Doroteja Štrucelj = h22 rod 1902; boter
+Matija Pozdirec); r90 h42 NOVA (**ŠTRAUS signal** — oče Matija Štraus, 2.
+Strausova oseba 1904; ZADNJA vrstica leta); r78 h45 4. VPIS (**SPUDIČ
+signal** — mati Barbara Spudič; **EMŠO 2610904505164 = 26.10.1904**; †
+14.10.2003 Metlika — **98 let, najdaljše življenje letnika 1904**); r80 h91
+4. VPIS (**MUC KONTINUITETA potrjena** — oče Janez Muc bajtar; 1895 Muc +
+1902 Murov? [~] ISTA žena Kure); r82 h69 8. VPIS (ŽELJKO signal — oče Janez
+Željko bajtar). MILEK signali (r2 h22 oče + r73 h65 oče Matija Milek [1901
+Mitek? KURRENT] + r57 h21 boter Matija Milek); MIH signal r69 (mati in
+babica ISTA — Marija Mih). **EMŠO kampanja 1982–84** (pripisi »Šimonič Miri«
++ datumi 20.12.1982/28.12.1982/30.12.1982/12.6.1984) — sidra celo leto: r8
+21.01., r45 28.06., r48 20.07., r77 25.10., r78 26.10., r79 28.10., r89
+20.12.1904 (+ r19 EXCLUDED 2007).
+
+**Duhovniki (celo leto)**: Jos. Ravq 38× + Dostál 32× (Stanislav 29× —
+januar z naslovom »Kaplan«; Flavi? 3× [~]) + **NOV KAPLAN Hugo Hengsfeld 13×
+(od r67; »Kapp.«) — MENJAVA KAPLANOV sredi leta** + neberljivi 5× +
+mrtvorojena 2×; Kulbinek 0×. Na Gribljih: Dostál 10 (vsi Stanislav) + Ravq 8
++ Hengsfeld 1 (r80) + neberljiv 1 (r90). **Babica (celo leto) 85 imenovanih /
+5 praznih** (r24, r54, r55, r83, r86 »—«) — na Gribljih: **Toter 10×** + Mih
+4× + Mavretič 3× + Delak 1× + Aleksič 1× + pod trakom 1× (r16; 20/20
+izpolnjeno).
+
+**Anomalije**: r19 (**VSTAVLJEN vpis brez kraja/hiše** — pripis matičarke
+Vesne Šimonič 15.05.2007; EMŠO 0303904505822 = 3.3.1904 moški (5) —
+NESKLADJE z ženskim imenom Jožefa; **EXCLUDED**); r24 (Mlake »preh. dvor«
+Marko — oče PRAZEN, mati »Marija Hudorovič cigarka«, babica »—« — najbolj
+obrobni vpis); r25/r26 + r36/r37 (**DVOJČKI** — oba para † dojenčka: r25 4
+dni + r26 8 dni; r36+r37 † 9.3.1905 ~9 mes.); r41 + r84 (**MRTVOROJENA
+»Z.mrtvorajen«, krsta »—«**; r41 z botri + podpisom Ravq, r84 popolnoma
+prazen); r42 (TRETJI otrok Ane Jurajevič v 26 dneh — oče »Jožef
+Kržan/Krožan« NESKLADJE z r36/37); r45 (isti Martin Žugelj × DVE ženi < 6
+mes. — MERI); r69 (hiša neberljiva — edini 1904 vpis brez hiše); r40 (†
+9.11.1918 — **dan pred premirjem**, 14 let). Umrljivost dojenčkov 8 +
+mrtvorojena 2 + nezakonski 2.
+
+**Integracija**: dokaz `research/issue17/parish-baptism-1904.json`
+(SAMPLE-TRANSCRIPTION-1904; MERI, NE odloča) + verifikator
+`scripts/p99_parish_baptism_1904.py` (**I1–I10**, `--check` PASS) +
+`parish.ts` HOUSE_VITALS 288 → **307** (19 novih 1904 blokov; vsi z
+whatEn + status) + QA 99 → **100/100** (nova qa-p99-parish-baptism-1904:
+100. kontrola — okvir + NARE 10. leto + 3 NOVE hiše + PT 13/6 + 15
+kontinuitetnih pinov + signali POŽEK 2×/ŽELJKO 2×/BRINEC 2×/ŠTRUCELJ/ŠTRAUS/
+SPUDIČ/MUC + babica 19/19 + Toter 10× + duhovniki Dostál 10 (vsi Stanislav)
++ Ravq 7 v blokih + Hengsfeld 1 + Kulbinek 0× + vitals 307) +
+**atlas.ts PT_GAP_KNOWN + 42 + 50** (21. dokazani — luknja ostaja samo h51)
++ qa-p88 h91 / qa-p90 h87 / qa-p91 h45 / qa-p92 h43 / qa-p94 h22 dovolijo
+1904 bloke (allow mehanizem) + qa-p86–p98 vitals pini 288 → 307 +
+**POPRAVI ZASTARELIH SKRIPT (regresije po P98)**: p80 (vitals 307), p85–p98
+vitals 307 + kumulativ 313 + hiše vitals 83, p85/p87/p88/p90 izključitvene
+terke + 1904 — vseh **21 skript p79–p99** `--check` PASS (exit 0). Kartica
+NI dodana (vzorec P77–P99). tsc 0 / lint 0; **/api/qa dev 100/100** (qa-p99
+True); v7 NESPREMENJEN.
+
+**nextSteps**: ① **P100 = leto 1905** (glava »1905« pod r90 na str. 150 =
+sken 160; 1905 r1 = Gradac 45? Antonija 2./7.? Januar; skeni 160+ prenesti);
+② mrliška knjiga 04894 1887–1896: smrti prvih žen + dojenčki † iz krstnih;
+③ poročna 04455: **Straus × Spudič** (krstno 5× + 1904 ŠTRAUS r90 + SPUDIČ
+r78 — 2. osebi istega leta!); ④ h51 (ZADNJA nedokazana številka luknje
+41–60!); ⑤ r19 lead: EMŠO 0303904505822 (moški 1904) + pripis 2007 razkrije
+vstavljen vpis; ⑥ produkcija Vercel: dohiti P99 → QA 100/100.

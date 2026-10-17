@@ -57,7 +57,7 @@ PT_GAP_NEW = []                 # luknja 41–60: h46 ponovitev — brez novih �
 EXPECTED_NEW_HOUSES = ["20", "37", "87"]
 EXPECTED_REPEATS = 11           # 14 − 3 nove
 EXPECTED_HOUSES_VITALS = 15     # 15 vpisov (h24 2 bloka)
-EXPECTED_VITALS_TOTAL = 288     # HOUSE_VITALS 179 + 15 (p80 I7 pin); P91: + 14 (1896); P92: + 19 (1897); P93: + 12 (1898); P94: + 15 (1899); P95: + 16 (1900); P98: + 12 (1903)
+EXPECTED_VITALS_TOTAL = 307     # HOUSE_VITALS 179 + 15 (p80 I7 pin); P91: + 14 (1896); P92: + 19 (1897); P93: + 12 (1898); P94: + 15 (1899); P95: + 16 (1900); P98: + 12 (1903); P99: + 19 (1904)
 EV_ONLY_TOTAL = 6               # P84: 2 + P85: 3 + P86: 1 (P77–P83, P87–P90: 0)
 EV_ONLY_HOUSE_STRINGS = {"65 [~]"}  # P85 r?? — edina EV-only hiša z imenom (None × 4)
 # sidra/pins P90:
@@ -403,7 +403,7 @@ def verify():
     # ne smejo spreminjati zgodovinske klasifikacije novih/ponovljenih hiš (h20: 1897 ponovitev)
     vitals_pre96 = [
         v for v in vitals_all
-        if not (v["bookSignature"] == BOOK_SIGNATURE and v["year"] in (1896, 1897, 1898, 1899, 1900, 1901, 1902, 1903))
+        if not (v["bookSignature"] == BOOK_SIGNATURE and v["year"] in (1896, 1897, 1898, 1899, 1900, 1901, 1902, 1903, 1904))
     ]
     repeat_houses = [h for h in houses if any(
         v["houseNo"] == h and v["bookSignature"] == BOOK_SIGNATURE and v["year"] != 1895
@@ -431,8 +431,8 @@ def verify():
         and len(intra) == 1 and intra[0]["houseNo"] == "24"
         and sorted(intra[0]["rows"]) == [22, 48]
         and n_entries_total == EXPECTED_VITALS_TOTAL
-        and n_entries_total + EV_ONLY_TOTAL == 294  # kumulativno po P98 (288 + 6)
-        and n_houses_total == 80  # P94: 78; P95: + 1 (67)
+        and n_entries_total + EV_ONLY_TOTAL == 313  # kumulativno po P99 (307 + 6)
+        and n_houses_total == 83  # P98: 80 vitals; P99: + 3 (h6, h42, h50)
         and ev_only_houses == EV_ONLY_HOUSE_STRINGS
         and cumulative["entries"] == 185
         and cumulative["houses"] == 68  # 67 vitals + 1 EV-only »65 [~]«

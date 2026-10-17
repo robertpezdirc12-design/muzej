@@ -59,7 +59,7 @@ EXPECTED_PT_GAP = ["58"]        # že v PT_GAP_KNOWN — brez novih številk
 EXPECTED_NEW_HOUSES = []        # DRUGO LETO ZAPORED BREZ NOVIH HIŠ
 EXPECTED_REPEATS = 12           # 12 hiš − 0 novih
 EXPECTED_HOUSES_VITALS = 12
-EXPECTED_VITALS_TOTAL = 288     # HOUSE_VITALS 276 + 12 (P98: krstna 1903)
+EXPECTED_VITALS_TOTAL = 307     # HOUSE_VITALS 276 + 12 (P98: krstna 1903); P99: + 19 (1904)
 EV_ONLY_TOTAL = 6               # P84: 2 + P85: 3 + P86: 1 (P77–P83, P87–P98: 0)
 EV_ONLY_HOUSE_STRINGS = {"65 [~]"}  # P85 — edina imenovana EV-only hiša
 EXPECTED_PRIESTS = (0, 6)       # (Kulbinek, Ravq) na Gribljih + Dostál 6
@@ -329,7 +329,7 @@ def verify():
     )
 
     # I10 — statistika dokaza == neodvisen preracun: 12 ponovitev + 0 novih;
-    # kumulativ 288 + 6 EV-only == 294; hiše vitals 80; duhovniki na Gribljih
+    # kumulativ 307 + 6 EV-only == 313; hiše vitals 83; duhovniki na Gribljih
     # (Kulbinek, Ravq) = (0, 6) + Dostál 6 (Stanislav 1); † 1; nezakonski 0;
     # celo-letna statistika (Dostál 44 / Ravq 32; † 6; mrtvorojena 2)
     repeat_houses = sorted(
@@ -361,8 +361,8 @@ def verify():
         and new_houses == EXPECTED_NEW_HOUSES
         and dokaz["stats"]["newSampleHouses"] == 0
         and n_entries_total == EXPECTED_VITALS_TOTAL
-        and n_entries_total + EV_ONLY_TOTAL == 294  # kumulativno po P98 (288 + 6)
-        and n_houses_total == 80  # P97: 80 vitals; P98: + 0 (drugo leto brez novih)
+        and n_entries_total + EV_ONLY_TOTAL == 313  # kumulativno po P99 (307 + 6)
+        and n_houses_total == 83  # P98: 80 vitals; P99: + 3 (h6, h42, h50)
         and ev_only_houses == EV_ONLY_HOUSE_STRINGS
         and cumulative["entries"] == 294
         and cumulative["houses"] == 81  # 80 vitals + EV-only »65 [~]«

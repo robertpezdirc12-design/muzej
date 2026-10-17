@@ -4687,3 +4687,25 @@ Work Log:
 Stage Summary:
 - P98 = krstna 1903 REPO-KOMPLETEN: dokaz + verifikator (I1–I10 PASS) + parish.ts (288 vitals) + qa-p98 (**99/99**) + 19 skript PASS + docs; kumulativ **294 vpisov / 81 hiš / OSEMNAJST let** (1886–1903); NARE 9. leto; DRUGO LETO ZAPORED brez novih hiš (h83 luknja 13 let zaplodana); REŠITEV P97 MERI (Povk?×Hambič? = Požek×Kambič — ISTI PAR); h24 = najbolj vpisovana hiša registra (10. VPIS); trosinhronizacija OBNOVLJENA z novim GitLab žetonom (lokal == GitLab == GitHub)
 - NASLEDNJA FAZA: P99 = krstna 1904 (glava »1904« pod r82 str. 143 = sken 152; 1904 r1 = Krasinec 37 5./5. Januar; skeni 152+ prenesti) ALI mrliška 04894 nadaljevanje ALI poročna 04455 (Straus × Spudič — 5× krstno potrjen lead)
+
+---
+Task ID: 70 (P99 = krstna 1904 — rekonstrukcija seje + integracija + qa-p99 + regresije + docs + sinhronizacija)
+Agent: Z.ai Code (glavna seja)
+Task: P99 — župnija Podzemelj, krstna knjiga 04105, polno leto 1904 (issue #18; §74 nextSteps ①)
+
+Work Log:
+- REKONSTRUKCIJA STANJA PO PESKOVNIKU: prejšnja seja je pustila P99 V DELU (dokaz parish-baptism-1904.json + verifikator p99 + 19 blokov v parish.ts + qa-parish pini 307 + allow liste — vsi že prisotni, NE-commitani); /tmp/p99 skeni 152–160 + read/ rezine ŠE VEDNO prisotne — nobeno delo ni izgubljeno
+- Verifikator scripts/p99_parish_baptism_1904.py --check: I1–I10 VSE PASS že ob prevzetem stanju (vitals 307, hiše 83, kumulativ 313/84/19, NARE 10. leto, 3 nove hiše h6/h42/h50, duhovniki (0, 8) + Dostál 10 Stanislav 10 + Hengsfeld 1, babica 85/5 Toter 10×)
+- POPRAVEK p99 stale komentarja I10 (Kulbinek/Ravq = (0, 11) + Dostál 8 → (0, 8) + Dostál 10 Stanislav 10)
+- parish.ts: 19 blokov 1904 DOPOPOLNJENIH — whatEn dodan vsem 19 (TS zahteva) + status: "DOCUMENTED" (python inserter po whatEn v P99 sekciji) + manjkajoči podatki iz dokaza: h24 babica Ana Mavretič + podpis Stanislav Dostál, h88 babica [pod trakom] + podpis Dostál [~], podpisi še 14 blokov (Dostál/Ravq/Hengsfeld/neberljiv), h6 + (ŽELJKO signal), h88 + (BRINEC signal) — vsi bloki zdaj celoviti
+- qa-parish.ts: qa-p99-parish-baptism-1904 (100. kontrola) — okvir pageOfScan (sken − 9 / − 10 po dup paru 155/156), 19/19 NARE, PT 13/6, 3 NOVE hiše + oznake NOVA HIŠA, sidra h24 11. VPIS + PRESTOPNI/h88 PRVI KRSTNI/h16 6. VPIS Strausova-hiša/h36 10./h45 SPUDIČ + EMŠO 2610904505164 + 98 let/h91 MUC KONTINUITETA/h42 ŠTRAUS/h50 ŠTRUCELJ/h22 KAPLAN, signali POŽEK 2× (h22 boter + h21 botrinja) + ŽELJKO 2× + BRINEC 2×, 15 kontinuitetnih pinov (15/16/21/22/24/36/43/45/54/60/65/66/69/87/91), vitals 307, babica 19/19 + Toter 10× + Mavretič 3× + babica-Mih 3× (4. = r69 brez bloka) + Delak + Aleksič, duhovniki Dostál 10 (vsi Stanislav) + Ravq 7 v blokih (8. = r69 brez bloka) + Hengsfeld 1 + Kulbinek 0×
+- qa-parish.ts POPRAVKI po prvi oceni (2 FAIL → 0): qa-p92 h43 allow + 1904 (2. VPIS) + qa-p99 POŽEK 1× → 2× (h21 »MILEK + POŽEK signal« podstring) + babica Mih prek »babica Marija Mih« (h45 botrinja Marija Mih je lažni pozitiv)
+- qa-parish.ts STRUKTURNI popravki: parishChecks(push) je se zaprl na `);}` že po qa-p98 — qa-p99 blok je bil ZUNAJ funkcije (TS2304 push); `}` prestavljena na konec za qa-p99 push
+- Regresije (sed batch): p85–p98 EXPECTED_VITALS_TOTAL 288 → 307 (+ komentar P99: + 19 (1904)) + kumulativ 294 → 313 (307 + 6) + hiše vitals 80 → 83 (+ 3 h6/h42/h50); p80 I7 vitals 288 → 307; p85/p87/p88/p90 izključitvene terke + 1904; p98 komentar kumulativ
+- Veriga p79–p99 --check: VSE 21 skript exit 0 (paralelno)
+- tsc 0 / lint 0; /api/qa dev **100/100, 0 failed** (qa-p99 True)
+- Docs: MUSEUM-AUDIT.md §74 (P99 + nextSteps P100) + README P99 bullet (2 vrstici) + »Zadnje stanje raziskave (po P99 · 2026-10-18)« (QA 100/100; p60–p67 + p70–p99; p80–p99 = 20 skript; qa lista + qa-p99; P77–P99 brez kartic)
+
+Stage Summary:
+- P99 = krstna 1904 REPO-KOMPLETEN: dokaz + verifikator (I1–I10 PASS) + parish.ts (307 vitals, 19 celovitih blokov) + qa-p99 (**100/100** — 100. kontrola!) + 21/21 skript PASS + docs; kumulativ **313 vpisov / 84 hiš / DEVETNAJST let** (1886–1904); NARE 10. leto; 3 NOVE HIŠE (h6 nabor + h42/h50 = 20./21. dokazana luknja 41–60 — ostaja SAMO h51); NOV KAPLAN Hugo Hengsfeld (menjava sredi 1904); h24 11. VPIS + edini 29.2. vpis; MUC kontinuiteta potrjena; ŠTRAUS + SPUDIČ signali (poročna 04455 lead)
+- NASLEDNJA FAZA: P100 = krstna 1905 (glava »1905« pod r90 str. 150 = sken 160; 1905 r1 = Gradac 45? Antonija; skeni 160+ prenesti) ALI mrliška 04894 1887–1896 ALI poročna 04455 (Straus × Spudič — 1904 dobi 2. in 3. osebo)
