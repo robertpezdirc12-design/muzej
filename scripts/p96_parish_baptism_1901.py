@@ -70,7 +70,7 @@ EXPECTED_PT_GAP = ["44", "54"]  # oba že v PT_GAP_KNOWN — brez novih številk
 EXPECTED_NEW_HOUSES = ["19"]    # h19 NOVA (PT nabor 1825)
 EXPECTED_REPEATS = 8            # 9 hiš − 1 nova
 EXPECTED_HOUSES_VITALS = 10
-EXPECTED_VITALS_TOTAL = 264     # HOUSE_VITALS 254 + 10 (P96: krstna 1901)
+EXPECTED_VITALS_TOTAL = 276     # HOUSE_VITALS 254 + 10 (P96: krstna 1901)
 EV_ONLY_TOTAL = 6               # P84: 2 + P85: 3 + P86: 1 (P77–P83, P87–P96: 0)
 EV_ONLY_HOUSE_STRINGS = {"65 [~]"}  # P85 — edina imenovana EV-only hiša
 EXPECTED_PRIESTS = (7, 2)       # (Kulbinek?, Rauq) + Dostál 1
@@ -324,7 +324,7 @@ def verify():
         if not prior or max(v["year"] for v in prior) != last_year:
             ok8 = False
     prior19 = [v for v in vitals_all if v["houseNo"] == "19"
-               and (v["bookSignature"] != BOOK_SIGNATURE or v["year"] != 1901)]
+               and (v["bookSignature"] != BOOK_SIGNATURE or v["year"] not in (1901, 1902))]
     inv["I8_continuity"] = (
         ok8
         and len(prior19) == 0                       # h19 NOVA — brez predhodnikov
@@ -349,7 +349,7 @@ def verify():
     # (Kulbinek, Rauq) = (7, 2) + Dostál 1; † 2; nezakonski 0
     repeat_houses = sorted(
         (h for h in set(houses) if any(
-            (v["houseNo"] == h and v["bookSignature"] == BOOK_SIGNATURE and v["year"] != 1901)
+            (v["houseNo"] == h and v["bookSignature"] == BOOK_SIGNATURE and v["year"] not in (1901, 1902))
             or (v["houseNo"] == h and v["bookSignature"] != BOOK_SIGNATURE)
             for v in vitals_all
         )), key=int)
@@ -374,7 +374,7 @@ def verify():
         and new_houses == EXPECTED_NEW_HOUSES
         and dokaz["stats"]["newSampleHouses"] == 1
         and n_entries_total == EXPECTED_VITALS_TOTAL
-        and n_entries_total + EV_ONLY_TOTAL == 270  # kumulativno po P96 (264 + 6)
+        and n_entries_total + EV_ONLY_TOTAL == 282  # kumulativno po P96 (264 + 6)
         and n_houses_total == 80  # P95: 79 vitals; P96: + 1 (19)
         and ev_only_houses == EV_ONLY_HOUSE_STRINGS
         and cumulative["entries"] == 270

@@ -2951,4 +2951,139 @@ export const HOUSE_VITALS: HouseVital[] = [
     status: "DOCUMENTED",
   },
 
+  // ——— P97: polno leto 1902 (vsi Griblje vpisi, str. 129 dno – 136 = skeni 135–144) ———
+  // NOVELA P97: 1902 = NOVA TISKANA knjiga (»Rojstna in krstna knjiga.« — vse
+  // kolone na ENI strani, predtisk »Leto 18|02«); DVA dup para (137/138 = str.
+  // 131, 141/142 = str. 134); stran == sken − 6 (135–137) / − 7 (139–141) /
+  // − 8 (143–144). 12 vpisov / 12 hiš — NARE se nadaljuje (8. leto) + PRVO
+  // LETO BREZ NOVIH HIŠ (h3 = 1889, h87 = 1895 — že v vitals). PT 11/1 (h58
+  // že v PT_GAP_KNOWN). Duhovniki: Dostál 8× (»Stanislav Dostál« jasno 3×;
+  // P96 »Fran. Dostál« — isti z dvema zapisoma ALI dva — MERI) + Rauq 4×;
+  // Kulbinek 0×. Babica Toter 9× (12/12). ŽELJKO signali 16+17 (r12 botra
+  // Marija Željko, r50 boter Nikolaj Željko?); SEGINA vrnitev h30 (r16 —
+  // signal 5) + h25 (r59 — 5+6); STRAUS × SPUDIČ h16 (r46 — 3. hiša istega
+  // para; 04455 lead 5× krstno). Excluded: r33 (hiša pod zapisom), r62
+  // (nalepka). Dokaz: research/issue17/parish-baptism-1902.json;
+  // verifikator: scripts/p97_parish_baptism_1902.py --check (I1–I10).
+  {
+    houseNo: "58",
+    bookSignature: "04105",
+    year: 1902,
+    scan: 136,
+    page: 130,
+    whatSi: "krščena Ivana (27./27. 1.) — oče Janez Povk? [~] ½ zemljak, mati Katarina Hambič? [~]; h58 = 6. VPIS (1889, 1890, 1892, 1895, 1900; 1900 P95 menjava žene Dragoš → Kranbič) — 1902 NOVA branja očeta »Povk?« (ali menjava družine — MERI, odprt); pripis † 13/1.04 [~] — otrok; botra Marko Hlebce + Marija Hambič? (½ zemljak); babica Barbura Adamič? [~]; podpis Jos. Rauq [~]",
+    whatEn: "baptized Ivana (Jan 27/27) — father Janez Povk? [~] half smallholder, mother Katarina Hambič? [~]; h58 = the 6th ENTRY (1889, 1890, 1892, 1895, 1900; the 1900 P95 wife change Dragoš → Kranbič) — 1902 a NEW reading of the father »Povk?« (or a family change — MERI, open); note † Jan 13, 1904 [~] — a child; godparents Marko Hlebce + Marija Hambič? (half smallholder); midwife Barbura Adamič? [~]; signature Jos. Rauq [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "87",
+    bookSignature: "04105",
+    year: 1902,
+    scan: 136,
+    page: 130,
+    whatSi: "krščen Anton (9./10. 3.) — oče Marko Perdinec? [~] bajtar, mati Katarina Žugelj; h87 = 2. VPIS (1895 oče Marko Pegdirec? [~] bajtar — P90) → 1902 oče Marko Perdinec? [= Pegdirec? — KURRENT varianta ISTEGA očeta — MERI]; boter Martin Čapič? [~] bajtar + botra Marija Željko (½ zemljak — ŽELJKO signal 16; 1895 podcelica že Nikol. Hrižan × Marija Željko!); babica Marjeta Toter [Tota? ~]; podpis Dostál [~]",
+    whatEn: "baptized Anton (Mar 9/10) — father Marko Perdinec? [~] a cotter, mother Katarina Žugelj; h87 = the 2nd ENTRY (the 1895 father Marko Pegdirec? [~] a cotter — P90) → 1902 the father Marko Perdinec? [= Pegdirec? — a KURRENT variant of the SAME father — MERI]; godfather Martin Čapič? [~] a cotter + godmother Marija Željko (half smallholder — the ŽELJKO signal 16; the 1895 sub-cell already Nikol. Hrižan × Marija Željko!); midwife Marjeta Toter [Tota? ~]; signature Dostál [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "30",
+    bookSignature: "04105",
+    year: 1902,
+    scan: 136,
+    page: 130,
+    whatSi: "krščen Jožef (18./18. 3.) — oče Nikolaj Segina [~] ½ zemljak, mati Marjeta Milek [~]; h30 = 5. DRUŽINA — SEGINA VRNITEV (1895 mati Katarina Segina → 1902 oče Nikolaj Segina — SEGINA veriga h70 1893 → h30 1895 → h1 1899 → h30 1902, signal 5); hišna forenzika 4×: jasno 30 (ne 36!); botra Janez + Katarina Vrižan? [~]; babica Marija Adamič? [~]; podpis Dostál [~]; † 8/2.03 [~]",
+    whatEn: "baptized Jožef (Mar 18/18) — father Nikolaj Segina [~] half smallholder, mother Marjeta Milek [~]; h30 = the 5th FAMILY — THE SEGINA RETURN (1895 the mother Katarina Segina → 1902 the father Nikolaj Segina — the SEGINA chain h70 1893 → h30 1895 → h1 1899 → h30 1902, the signal 5); the house forensics 4×: clearly 30 (not 36!); godparents Janez + Katarina Vrižan? [~]; midwife Marija Adamič? [~]; signature Dostál [~]; † Feb 8, 1903 [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "22",
+    bookSignature: "04105",
+    year: 1902,
+    scan: 137,
+    page: 131,
+    whatSi: "krščen Alojzij (17./18. 5.) — oče Nikolaj Milek ½ zemljak, mati Ana Žurrič? [~]; h22 = 2. VPIS (1899 prvi — P94 NOVA HIŠA, oče Nikolaj Milek × Marija Klepec) → 1902 MENJAVA ŽENE (Klepec → Žurrič?) ALI druga branja — MERI; ime otroka pod modrimi matičarskimi zapisi (temno črnilo: »Alojzij« — 4× zoom); botra Janez + Marija Brinec (½ zemljak); babica Marjeta Toter [~]; podpis Stanislav Dostál [~]; matičar † 7.12.1961 + poročen 15.2.1943",
+    whatEn: "baptized Alojzij (May 17/18) — father Nikolaj Milek half smallholder, mother Ana Žurrič? [~]; h22 = the 2nd ENTRY (1899 the first — the P94 NEW HOUSE, father Nikolaj Milek × Marija Klepec) → 1902 a WIFE CHANGE (Klepec → Žurrič?) OR other readings — MERI; the child's name under the blue registrar's notes (dark ink: »Alojzij« — a 4× zoom); godparents Janez + Marija Brinec (half smallholder); midwife Marjeta Toter [~]; signature Stanislav Dostál [~]; the registrar † Dec 7, 1961 + married Feb 15, 1943",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "3",
+    bookSignature: "04105",
+    year: 1902,
+    scan: 139,
+    page: 132,
+    whatSi: "krščen Janez (3./3. 6.) — oče Matija Papič? [~] ½ zemljak, mati Katarina Novak; h3 = 2. VPIS (1889 oče Nikolaj Županič? × Katarina Pezdirec — P84) → 1902 MENJAVA družine (Papič? × Novak); botra Jožef + Katarina Žudmič? [~] (½ zemljak); babica Marija Papič? [~]; podpis Dostál [~]; † 25/8.1912 [~] — otrok † pri 10 letih",
+    whatEn: "baptized Janez (Jun 3/3) — father Matija Papič? [~] half smallholder, mother Katarina Novak; h3 = the 2nd ENTRY (the 1889 father Nikolaj Županič? × Katarina Pezdirec — P84) → 1902 a FAMILY CHANGE (Papič? × Novak); godparents Jožef + Katarina Žudmič? [~] (half smallholder); midwife Marija Papič? [~]; signature Dostál [~]; † Aug 25, 1912 [~] — the child † at 10 years",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "27",
+    bookSignature: "04105",
+    year: 1902,
+    scan: 139,
+    page: 132,
+    whatSi: "krščen Alojzij (3./3. 7.) — oče Janez Šimec ½ zemljak, mati Marija Kure; h27 = 7. VPIS (1887, 1890, 1892, 1893 ×2, 1899 — Knekar?/Stukar? menjava branja) → 1902 NOVA DRUŽINA Šimec × Kure (ŠIMEC križni sklic h34 1887; KURE mreža h1/h9/h59); EMŠO pripomba 0307902505120 [~ — sredina raztrgana] → 03.07.1902 (sidro); botra Janez Pček? [~] + Ana Brinec (½ zemljak); babica Marjeta Toter; podpis Stanislav Dostál [~]; † 10.8.1976 Črnomelj, poročen 16.11.1930",
+    whatEn: "baptized Alojzij (Jul 3/3) — father Janez Šimec half smallholder, mother Marija Kure; h27 = the 7th ENTRY (1887, 1890, 1892, 1893 ×2, 1899 — the Knekar?/Stukar? reading change) → 1902 A NEW FAMILY Šimec × Kure (the ŠIMEC cross-link h34 1887; the KURE web h1/h9/h59); the EMŠO note 0307902505120 [~ — the middle torn] → Jul 3, 1902 (an anchor); godparents Janez Pček? [~] + Ana Brinec (half smallholder); midwife Marjeta Toter; signature Stanislav Dostál [~]; † Aug 10, 1976 Črnomelj, married Nov 16, 1930",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "77",
+    bookSignature: "04105",
+    year: 1902,
+    scan: 140,
+    page: 133,
+    whatSi: "krščen Alojzij (29./29. 7.) — oče Nikolaj Cindrič cevljar, mati Marija Maovar? [~]; h77 = 2. VPIS (1890 prvi — P85: oče Jurij Pošek bajtar) → 1902 MENJAVA družine (Pošek → Cindrič); botra Matija Milek + Marjeta Šorek? [~] (½ zemljak); babica Marjeta Toter; podpis Jos. Rauq; matičar † 14.2.1968 Črnomelj (MMK ČB 1968)",
+    whatEn: "baptized Alojzij (Jul 29/29) — father Nikolaj Cindrič a shoemaker, mother Marija Maovar? [~]; h77 = the 2nd ENTRY (1890 the first — the P85: father Jurij Pošek a cotter) → 1902 a FAMILY CHANGE (Pošek → Cindrič); godparents Matija Milek + Marjeta Šorek? [~] (half smallholder); midwife Marjeta Toter; signature Jos. Rauq; the registrar † Feb 14, 1968 Črnomelj (MMK ČB 1968)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "16",
+    bookSignature: "04105",
+    year: 1902,
+    scan: 140,
+    page: 133,
+    whatSi: "krščen Alojzij (7./8. 8.) — oče Martin Straus bajtar, mati Barbura Spudič; h16 = 4. VPIS (1886, 1897, 1900 — 1900 Novak × Šilak) → 1902 STRAUS × SPUDIČ — ISTA ZVEZA kot h45 (1896+1897+1900) + h40 (1899): zdaj na TRETJI hiši (h45 → h40 → h16); 04455 POROČNI LEAD krstno 5× POTRJEN; botra Matija Ule + Amalija? [~] Šimec (½ zemljak); babica Marjeta Toter; podpis Jos. Rauq; † 1/9.03 [~]",
+    whatEn: "baptized Alojzij (Aug 7/8) — father Martin Straus a cotter, mother Barbura Spudič; h16 = the 4th ENTRY (1886, 1897, 1900 — the 1900 Novak × Šilak) → 1902 STRAUS × SPUDIČ — THE SAME COUPLE as h45 (1896+1897+1900) + h40 (1899): now at the THIRD house (h45 → h40 → h16); the 04455 MARRIAGE LEAD christened 5× CONFIRMED; godparents Matija Ule + Amalija? [~] Šimec (half smallholder); midwife Marjeta Toter; signature Jos. Rauq; † Sep 1, 1903 [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "91",
+    bookSignature: "04105",
+    year: 1902,
+    scan: 140,
+    page: 133,
+    whatSi: "krščen Matija (26./26. 8.) — oče Janez Murov? [Muc? ~ — 1895 Janez Muc mlinar/kovač] kovač? [~], mati Ana Kure; h91 = 3. VPIS (1893 Novak, 1895 Muc — OČE MENJAN) → 1902 Muc?/Murov? × Kure — 1895+1902 VERJETNO ISTA ZVEZA (MERI); boter Nikolaj Željko? [~] + botra Marija Jakofčič? [~] (½ zemljak) — ŽELJKO signal 17 (h1 rodbina; boter Željko že 1893!); babica Marjeta Toter; podpis Stanislav Dostál [~]; matičar žig »dne 03.09.2007 Matičar-ka: Belopavlonič«",
+    whatEn: "baptized Matija (Aug 26/26) — father Janez Murov? [Muc? ~ — the 1895 Janez Muc a miller/smith] a smith? [~], mother Ana Kure; h91 = the 3rd ENTRY (1893 Novak, 1895 Muc — the father CHANGED) → 1902 Muc?/Murov? × Kure — 1895+1902 PROBABLY THE SAME COUPLE (MERI); godfather Nikolaj Željko? [~] + godmother Marija Jakofčič? [~] (half smallholder) — the ŽELJKO signal 17 (the h1 family; the godfather Željko already 1893!); midwife Marjeta Toter; signature Stanislav Dostál [~]; the registrar stamp »Sep 3, 2007 registrar: Belopavlonič«",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "36",
+    bookSignature: "04105",
+    year: 1902,
+    scan: 140,
+    page: 133,
+    whatSi: "krščena Frančiška (27./27. 8.) — oče Janez Vrižan? [Križan? ~] ½ zemljak, mati Katarina Straus; h36 = 6. VPIS (1886 ×2, 1894, 1896, 1898) — 1902 Vrižan? × Straus (botri Straus par!); botra Matija + Amalija? [Doroteja? ~] Straus (½ zemljak); babica Marjeta Toter; podpis Jos. Rauq; † 1/5.03 [~]",
+    whatEn: "baptized Frančiška (Aug 27/27) — father Janez Vrižan? [Križan? ~] half smallholder, mother Katarina Straus; h36 = the 6th ENTRY (1886 ×2, 1894, 1896, 1898) — the 1902 Vrižan? × Straus (the Straus godparent couple!); godparents Matija + Amalija? [Doroteja? ~] Straus (half smallholder); midwife Marjeta Toter; signature Jos. Rauq; † May 1, 1903 [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "25",
+    bookSignature: "04105",
+    year: 1902,
+    scan: 141,
+    page: 134,
+    whatSi: "krščen Jožef (1./2. 10.) — oče Matija Brinec ½ zemljak, mati Katarina Segina; h25 = 4. VPIS (1893, 1896, 1900) — 1900+1902 ISTA ZVEZA Brinec × Segina (SEGINA signal 4 = P95) — 1902 signali 5+6: mati Katarina Segina + boter Danijel Segina + botra Marija Brinec (½ zemljak); babica Marjeta Toter; podpis Stanislav Dostál (jasno!); pripis poročen 27.4.1929 [~]",
+    whatEn: "baptized Jožef (Oct 1/2) — father Matija Brinec half smallholder, mother Katarina Segina; h25 = the 4th ENTRY (1893, 1896, 1900) — 1900+1902 the SAME COUPLE Brinec × Segina (the SEGINA signal 4 = P95) — 1902 the signals 5+6: the mother Katarina Segina + the godfather Danijel Segina + the godmother Marija Brinec (half smallholder); midwife Marjeta Toter; the signature Stanislav Dostál (clear!); the note married Apr 27, 1929 [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "14",
+    bookSignature: "04105",
+    year: 1902,
+    scan: 143,
+    page: 135,
+    whatSi: "krščena Ana (13./13. 12.) — oče Janez Brinec ½ zemljak, mati Marija Podirec; h14 = 3. VPIS (1896, 1900) — oče Janez Brinec (1896 dvom P91 → 1900 REŠENO → 1902 potrjeno); botra Marko + Marija Hrižan (½ zemljak); babica Marjeta Toter; podpis Stanislav Dostál [~]; matičar Umrła dne 15.5.1984 Hodošan (MMK nas. Hodošan 1984, št. 29, zap. št. 1)",
+    whatEn: "baptized Ana (Dec 13/13) — father Janez Brinec half smallholder, mother Marija Podirec; h14 = the 3rd ENTRY (1896, 1900) — the father Janez Brinec (the 1896 doubt P91 → the 1900 RESOLVED → the 1902 confirmed); godparents Marko + Marija Hrižan (half smallholder); midwife Marjeta Toter; signature Stanislav Dostál [~]; the registrar † May 15, 1984 Hodošan (MMK nas. Hodošan 1984, no. 29, entry 1)",
+    status: "DOCUMENTED",
+  },
+
 ];

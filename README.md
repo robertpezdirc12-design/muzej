@@ -568,7 +568,9 @@ API (statični, brez runtime AI):
   `scripts/p96_parish_baptism_1901.py` (**I1–I10**, `--check` PASS) + dokaz `research/issue17/parish-baptism-1901.json` (SAMPLE-TRANSCRIPTION-1901) + `parish.ts` HOUSE_VITALS 254 → **264** (10 novih 1901 blokov) + QA 96 → **97/97** (nova qa-p96-parish-baptism-1901: celoven neodvisen preracun trije dup pari + stran == sken − 3/− 4/− 5/− 6/NOVELA formata spread/NOVELA mesecev November/NOVA HIŠA 19 + 81. hiša + bajtar/h12 ×2 PRVA ponovitev po 1893/EMŠO sidri r48 + r59/babica 10/10 + Toter 6×/duhovniki Kulbinek? 7× + Rauq 2× + Dostál 1×/PT 7/2/NOVA hiša 19 brez priora/kontinuitete 8 pinov/vitals 264) + **atlas.ts PT_GAP_KNOWN NESPREMENJEN** (44/54 že vsebovani; luknja 42/50/51 ostaja) + qa-p85 h7 / qa-p87 h12 dovolita 1901 bloka (allow mehanizem) + qa-p86–p95 vitals pini 254 → 264 + **POPRAVI ZASTARELIH SKRIPT (regresije po P95)**: p80 I7 (vitals 264), p85–p92 filtri vesolja + 1901 (nabori), p93 vitals 264 + kumulativ 270 + hiše 80, p94/p95 filtri vesolja izključujejo 1901 (zgodovinske klasifikacije zamrznjene) — vseh 17 skript p80–p96 `--check` PASS (exit 0); kartica NI dodana (vzorec P77–P96); tsc 0 / lint 0; v7 runtime join NESPREMENJEN (sha256 4bb40370…). Lekcije: matičarske nalepke (1989) pokrijejo izvorno vrstico — podvojeni skeni z PREPOGNJENIMI nalepkami jih rešijo (127/128); format spread (od 1901) omogoča starše/botro na istem listu — poravnava po y-pasovih; znotraj-letna ponovitev (h12 ×2) po 8 letih NARE pomeni več-družinsko hišo (dva para staršev); prvotne QA napake: whatSi mora vsebovati literal »babica Ime Priimek« (ne samo sklanjeno) in NOVA-hiša allow liste zahtevajo + leto bloka;
 
 
-## Zadnje stanje raziskave (po P96 · 2026-10-17)
+  `scripts/p97_parish_baptism_1902.py` (**I1–I10**, `--check` PASS) + dokaz `research/issue17/parish-baptism-1902.json` (SAMPLE-TRANSCRIPTION-1902) + `parish.ts` HOUSE_VITALS 264 → **276** (12 novih 1902 blokov) + QA 97 → **98/98** (nova qa-p97-parish-baptism-1902: celoven neodvisen preracun dva dup para + stran == sken − 6/− 7/− 8/NOVELA formata NOVA TISKANA/NARE 0 ponovitev/PRVO LETO brez novih hiš/SEGINA VRNITEV h30 + STRAUS×SPUDIČ h16/ŽELJKO signali 16+17/babica 12/12 + Toter 9×/duhovniki Dostál 8× + Stanislav 5× + Rauq 4× + Kulbinek 0×/kontinuitete 12 pinov/vitals 276) + **atlas.ts PT_GAP_KNOWN NESPREMENJEN** (58 že vsebovan; luknja 42/50/51 ostaja) + qa-p85 h30+h77 / qa-p88 h91 / qa-p90 h87 / qa-p91 h14 / qa-p94 h22 dovolijo 1902 bloke (allow mehanizem) + qa-p86–p96 vitals pini 264 → 276 + **POPRAVI ZASTARELIH SKRIPT (regresije po P96)**: p80 (vitals 276), p85–p92 filtri vesolja + 1902 (nabori), p93 vitals 276 + kumulativ 282, p94/p95/p96 filtri izključujejo 1902 (zgodovinske klasifikacije zamrznjene) — vseh 18 skript p80–p97 `--check` PASS (exit 0); kartica NI dodana (vzorec P77–P97); tsc 0 / lint 0; v7 runtime join NESPREMENJEN. Lekcije: 1902 = NOVA TISKANA knjiga (vse kolone na eni strani; predtisk »Leto 18|02« — konec spread-formata); PRVO LETO brez novih hiš (h3/h87 že dokazani) — NARE 8. leto; KURRENT variante istega očeta (1895 Pegdirec? = 1902 Perdinec?) NE menjava družine — preveri zadnji vpis hiše pred interpretacijo menjave; peskovnik reset med fazo — dvorogi push po vsaki fazi reši vsa dela (repo obnovljen iz zrcala b5a25d7, artefakti rekonstruirani);
+
+## Zadnje stanje raziskave (po P97 · 2026-10-17)
 
 - **Runtime join**: `src/data/atlas/ps-parcels-geo.json` — **version 7**:
   **891 vrstic (32.3 %) / 879 base / multi 2 / cross 0 / ambRows 4**;
@@ -578,14 +580,14 @@ API (statični, brez runtime AI):
   v6 939 → **v7 891** — vsaka arhivirana v `research/issue17/` z delta
   dokazom (`v5Delta`/`v6Delta`/`v7Delta`); ohranjene vrstice med verzijami
   bajtno nespremenjene (lekcija P9).
-- **QA**: **97/97** — repo veja (dokazi v `research/`) + produkcija (brez
+- **QA**: **98/98** — repo veja (dokazi v `research/`) + produkcija (brez
   `research/`, izmerjeno iz runtime datotek); prek `GET /api/qa` na
-  produkciji. Veriga skript `p60–p67 + p70–p96 --check` bajtno PASS (p68 zamrznjen po C2;
-  p80–p96 = 17 župnijskih skript --check PASS). Matrične kontrole župnije (qa-p79/qa-p80/qa-p81/
-  qa-p82/qa-p83/qa-p84/qa-p85/qa-p86/qa-p87/qa-p88/qa-p89/qa-p90/qa-p91/qa-p92/qa-p93/qa-p94/qa-p95/qa-p96) v ločenem modulu `src/lib/qa-parish.ts` (P80: runQA telo
+  produkciji. Veriga skript `p60–p67 + p70–p97 --check` bajtno PASS (p68 zamrznjen po C2;
+  p80–p97 = 18 župnijskih skript --check PASS). Matrične kontrole župnije (qa-p79/qa-p80/qa-p81/
+  qa-p82/qa-p83/qa-p84/qa-p85/qa-p86/qa-p87/qa-p88/qa-p89/qa-p90/qa-p91/qa-p92/qa-p93/qa-p94/qa-p95/qa-p96/qa-p97) v ločenem modulu `src/lib/qa-parish.ts` (P80: runQA telo
   preseglo prag TS control flow analysis).
 - **Kartice**: P40–P76 vidne v zavihku *Prepisi Kurrent* v muzejskem UI;
-  vsaka vezana na API endpoint + dokaz + skripto. P77–P96 brez kartic
+  vsaka vezana na API endpoint + dokaz + skripto. P77–P97 brez kartic
   (inventarni/operativni/paleografski/imenski dokazi raziskovalne linije — strojno
   berljivi prek dokazov).
 - **Zrcaljenje**: GitLab `markec-group1/muzej` = **vir resnice**;

@@ -5203,3 +5203,106 @@ datum + hiši) ali **Straus × Jakobič** (h12 r36 — nova zveza 1901); ④
 h51/h42/h50 v mrliški 04894 + poročni 04455 (luknja 42/50/51); ⑤ r35
 lead: hiša pod trakom (sken 127/128 ponovni pregled z novim
 obdelovalnim pasom); ⑥ produkcija Vercel: dohiti P96 → QA 97/97.
+
+## §73 — P97: župnija Podzemelj — krstna knjiga 04105, polno leto 1902 (issue #18) — 2026-10-17
+
+**SAMPLE-TRANSCRIPTION-1902** (MERI, NE odloča; v7 join nespremenjen).
+§72 nextSteps ①: širitev vzorca po letih (P79 1886 → … → P96 1901 →
+**P97 1902**).
+
+**Okvir**: glava **»1902« (podčrtana) na dnu str. 129** (sken 135, P96
+dokazano; r1 = Podzemelj 6 Marija 1./1. Januar; **rows 1–7 na dnu str. 129**,
+r7 v pregibu) – **row 81 na str. 136** (sken 144; **glava »1903.« NA SREDINI
+str. 136** — kot prelom 1900 NA SREDINI str. 115 (P94); **1903 r1 = Griblje
+24** 4./5. Januar — novo leto spet začne Griblje; P98 lead) == tiskane
+strani **129–136** (**81 vrstic**). Stran == sken **− 6** (135–137) /
+**− 7** (139–141) / **− 8** (143–144). **NOVELA P97 — DVA podvojena para
+skenov**: **137/138** (str. 131) in **141/142** (str. 134).
+
+**NOVELA formata**: 1902 = **NOVA TISKANA knjiga** — naslov »Rojstna in
+krstna knjiga.«, **predtiskan okvir z vsemi kolonami na ENI strani** (podatki
++ Roditelja + Botra + Babica + Podpis — KONEC spread-formata 1901), predtiskano
+**»Leto 18|02«** (duhovnik dopisal »02« v 19.-stoletno formo).
+
+**VSI vpisi z Griblji: 12 vpisov / 12 hiš**: 58, 87, 30, 22, 3, 27, 77, 16,
+91, 36, 25, 14 — **NARE se nadaljuje (8. leto)** po prekinitvi 1901 (h12 ×2)
+in **PRVO LETO VZORCA BREZ NOVIH HIŠ** (1886–1901 je vsako leto dodalo vsaj
+eno; **h3 = 1889, h87 = 1895 — obe že v vitals**); skupaj s P79–P96 vzorec
+**282 vpisov / 81 hiš čez tri knjige in SEDEMNAJST LET** (276 vitals).
+
+**PT 11/1** — h58 v luknji 41–60 (že v PT_GAP_KNOWN — brez novih številk);
+**luknja 42/50/51 NESPREMENJENA** (19 dokazanih). Sidra: h30 **SEGINA
+VRNITEV** (r16 oče **Nikolaj Segina [~] × Marjeta Milek [~]** — hišna
+forenzika 4× **jasno 30, NE 36!** — SEGINA veriga h70 1893 → h30 1895 →
+h1 1899 → h30 1902, **signal 5**); h25 (r59 **4. VPIS — 1900+1902 ISTA
+ZVEZA Matija Brinec × Katarina Segina** + boter **Danijel Segina** — signali
+5+6; EMŠO sidro **r39 0307902505120 → 03.07.1902** na h27); h16 (r46
+**STRAUS × SPUDIČ — TRETJA hiša istega para: h45 1896/1897/1900 → h40 1899 →
+h16 1902** — **04455 POROČNI LEAD krstno 5× POTRJEN**).
+
+**MENJAVE/BRANJA DRUŽIN**: h87 (r12 — **1895 Marko Pegdirec? = 1902 »Perdinec?«
+KURRENT — VERJETNO ISTI oče**; botra **Marija Željko** — ŽELJKO signal 16;
+1895 podcelica že Nikol. Hrižan × Marija Željko!), h77 (Pošek 1890 →
+**Nikolaj Cindrič cevljar** 1902), h27 (**7. VPIS** — Knekar?/Stukar? →
+**Janez Šimec × Marija Kure** — ŠIMEC križni sklic h34 1887), h22 (r28 —
+žena **Klepec 1899 → Ana Žurrič? 1902** — MERI; ime otroka pod modrimi
+matičarskimi zapisi — temno črnilo »Alojzij«, 4× zoom), h3 (1889 Nikolaj
+Županič? → **Matija Papič? × Katarina Novak**), h58 (r8 — oče **»Janez
+Povk?«** — nova branja po 1900 Kranbič ženi), h91 (r50 — **»Murov?« = Muc?**
+— 1895 Janez Muc mlinar/kovač, **ISTA žena Ana Kure**), h36 (r51 — **6. VPIS
+— Janez Vrižan? [Križan?] × Katarina Straus**, botri **Straus par**).
+
+**DUHOVNIKI: Dostál 8×** (podpis **»Stanislav Dostál«** v 5/8 vpisov:
+r28/r39/r50/r59/r75; P96 1901 **»Fran. Dostál«** — isti duhovnik z dvema
+zapisoma imena ALI dva — MERI, odprt) + **Jos. Rauq 4×** — **Kulbinek 0×**
+(po 7× v 1901!) + **Šturm 0×**. **NOVELA babica 3. leto izpolnjeno**:
+**Toter 9×** + Adamič? 2× (r8 Barbura, r16 Marija) + Papič? 1× (r32) —
+**12/12 imenovanih**. **ŽELJKO signali 16+17** (r12 botra Marija Željko na
+h87 + r50 boter Nikolaj Željko? na h91 — h1 rodbina).
+
+**DOJENČIJSKA UMRLJIVOST 3/12** (r16 † 8/2.03, r46 † 1/9.03, r51 † 1/5.03;
+okvir: r4 Primostek 14 † 2/11.02 — ne-Griblje; r8 † 13/1.04 otrok ~1 leto +
+r32 † 25/8.1912 otrok 10 let — ne šteta med dojenčke). Nezakonski 0 (okvir:
+r34 Podgomej? nezakonski + r37 Zamaj? **mrtvorojen** nezakonski — bež,
+ne-Griblje). **Okvirna anomalija: r72/r73 Boršt — BRATA, oba † 15/6.1918
+(prva svetovna vojna!)**. **EXCLUDED**: r33 (Griblje [~] Ana, **hiša pod
+modrim matičarskim zapisom »zap. št. 4524/1«** — kanalna filtracija ni
+pokazala temnega črnila; starši Matija Hrišič? × Nina? Jakobšič?, botra
+Jakob + Katarina Toter; † 19.10.1981 Novo mesto — **odprt lead**: civilni
+register bi razkril hišo) + r62 (bela matičarska nalepka 15.01.1995 Piran —
+vas/hiša nedokazljiva; Žugelj botra = možen Griblje signal).
+
+**Peskovnik-nadomestilo (novost P97)**: med fazo je sandbox ponastavil
+/home/z/muzej + /tmp — repo obnovljen iz GitHub zrcala (b5a25d7 = P96, PAT
+avtoriteta; GitLab vir resnice == b5a25d7, potrjeno prejšnjo sejo), /tmp/p97
+skeni ponovno prenešeni (p97_fetch), P97 artefakti rekonstruirani iz sejine
+forenzike (vse transkripcije ostale v seji). Lekcija: dvorogi push PO vsaki
+fazi je rešil vsa dela (nič ni bilo izgubljeno).
+
+**Integracija**: parish.ts HOUSE_VITALS **264 → 276** (+12 blokov 1902, vsi
+DOCUMENTED; komentar P97 z okvirjem + novelami); atlas.ts PT_GAP_KNOWN
+**NESPREMENJEN** (58 že vsebovan; luknja 42/50/51 ostaja); qa-parish.ts
+**qa-p97** (98. kontrola; celoven neodvisen preracun: dva dup pari + stran ==
+sken − 6/− 7/− 8/NOVELA formata NOVA TISKANA/NARE 0 ponovitev/PRVO LETO brez
+novih hiš/SEGINA VRNITEV h30 + STRAUS×SPUDIČ h16/ŽELJKO signali
+16+17/babica 12/12 + Toter 9×/duhovniki Dostál 8× + Stanislav 5× + Rauq 4× +
+Kulbinek 0×/kontinuitete 12 pinov/vitals 276); dovoljenja 1902: qa-p85 h30 +
+h77, qa-p88 h91, qa-p90 h87, qa-p91 h14, qa-p94 h22 (allow mehanizem);
+vitals pini 264 → 276 (11 testov); **POPRAVI ZASTARELIH SKRIPT (regresije po
+P96)**: p80 (vitals 276), p85–p92 (filtri vesolja + 1902), p93 (vitals 276 +
+kumulativ 282), p94/p95/p96 (filtri izključujejo 1902 — zgodovinske
+klasifikacije zamrznjene); vseh **18 skript p80–p97** --check **PASS**
+(exit 0). Kartica NI dodana (vzorec P77–P97). tsc 0 / lint 0; **/api/qa dev
+98/98** (qa-p97 True); v7 NESPREMENJEN. QA popravki po prvi oceni: qa-p97
+babica literal (h87 »Marjeta Tota« → »Marjeta Toter«, h22 »Toter (Marjeta)«
+→ »Marjeta Toter«) + Stanislav Dostál 5× (ne 6×) + †-števec na »dojenček«
+ključko (matičarske † zapisе vsebujejo tudi †).
+
+**nextSteps**: ① **P98 = leto 1903** (glava »1903.« SREDINA str. 136 = sken
+144; 1903 r1 = Griblje 24; skeni 141–152 že prenešeni — stran == sken − 8 do
+naslednjega dup para); ② mrliška knjiga 04894 1887–1896: smrti prvih žen +
+dojenčki † iz krstnih (r16/r46/r51 1902); ③ poročna 04455: **Straus ×
+Spudič** (krstno 5× na treh hišah! — najti poroko: datum + hiši); ④ h51/
+h42/h50 (luknja 42/50/51); ⑤ r33 lead: civilni register (zap. št. 4524/1
+MMK Novo mesto 1981) razkrije hišo; ⑥ produkcija Vercel: dohiti P97 → QA
+98/98.

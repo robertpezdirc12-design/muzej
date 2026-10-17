@@ -61,7 +61,7 @@ PT_GAP_NEW = ["43"]             # h43 = NOVA luknja številka (17. dokazana)
 EXPECTED_NEW_HOUSES = ["10", "40", "43"]
 EXPECTED_REPEATS = 15           # 18 hiš − 3 nove (z notranjo ponovitvijo h31)
 EXPECTED_HOUSES_VITALS = 19
-EXPECTED_VITALS_TOTAL = 264     # HOUSE_VITALS 211 + 12 (P93: krstna 1898); h61 sidro = P79-era placeholder ZDRUŽEN, ne dupliran; P94: + 15 (1899); P95: + 16 (1900)
+EXPECTED_VITALS_TOTAL = 276     # HOUSE_VITALS 211 + 12 (P93: krstna 1898); h61 sidro = P79-era placeholder ZDRUŽEN, ne dupliran; P94: + 15 (1899); P95: + 16 (1900)
 EV_ONLY_TOTAL = 6               # P84: 2 + P85: 3 + P86: 1 (P77–P83, P87–P92: 0)
 EV_ONLY_HOUSE_STRINGS = {"65 [~]"}  # P85 — edina imenovana EV-only hiša (None × 4)
 EXPECTED_PRIESTS = (11, 8)      # (Klun, Rauq) — mešano leto; Šuvar izgine
@@ -323,7 +323,7 @@ def verify():
     # zgodovinske klasifikacije leta 1897 (h40: 1898 MENJAVA — Brodarič)
     vitals_pre98 = [
         v for v in vitals_all
-        if not (v["bookSignature"] == BOOK_SIGNATURE and v["year"] in (1898, 1899, 1900, 1901))
+        if not (v["bookSignature"] == BOOK_SIGNATURE and v["year"] in (1898, 1899, 1900, 1901, 1902))
     ]
     repeat_houses = sorted(
         (h for h in set(houses) if any(
@@ -352,7 +352,7 @@ def verify():
         and new_houses == EXPECTED_NEW_HOUSES == dokaz["stats"]["newSampleHouses"]
         and len(intra) == EXPECTED_INTRA_REPEATS
         and n_entries_total == EXPECTED_VITALS_TOTAL
-        and n_entries_total + EV_ONLY_TOTAL == 270  # kumulativno po P95 (254 + 6)
+        and n_entries_total + EV_ONLY_TOTAL == 282  # kumulativno po P95 (254 + 6)
         and n_houses_total == 80  # P94: 78; P95: + 1 (67)
         and ev_only_houses == EV_ONLY_HOUSE_STRINGS
         and cumulative["entries"] == 217

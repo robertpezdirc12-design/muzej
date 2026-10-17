@@ -4629,3 +4629,26 @@ Work Log:
 Stage Summary:
 - P96 = krstna 1901 REPO-KOMPLETEN: dokaz + verifikator + parish.ts (264 vitals) + qa-p96 (97/97) + 13/13 skript PASS + docs; kumulativ 270 vpisov / 81 hiš / ŠESTNAJST let; nov duhovnik Dostál; babica Toter 6× (rodbina h7)
 - NASLEDNJA FAZA: P97 = krstna 1902 (glava »1902« dno str. 129 = sken 135; skeni 135–140 že v /tmp/p96) ali mrliška 04894 ali poročna 04455 (Straus × Spudič ali Straus × Jakobič)
+
+---
+Task ID: 68 (P97 = krstna 1902 — forenzika + PESKOVNIK RESET + rekonstrukcija + integracija + QA + docs)
+Agent: Z.ai Code (glavna seja)
+Task: P97 — župnija Podzemelj, krstna knjiga 04105, polno leto 1902 (issue #18; §72 nextSteps ①)
+
+Work Log:
+- Forenzika skeni 135–152 (/tmp/p97; p97_fetch po vzoru P96): transkripcija vseh 81 vrstic leta 1902; zoom 2×–4.5× (r8, r12, r16+hišna 4×, r28+ime+mati 4×, r32, r33+kanalna filtracija, r34, r39, r44, r46, r50, r51, r56, r59, r75)
+- NOVELA P97: 1902 = NOVA TISKANA knjiga (»Rojstna in krstna knjiga.« — vse kolone na ENI strani, predtisk »Leto 18|02«; konec spread-formata); DVA dup para (137/138, 141/142); stran == sken − 6/− 7/− 8; glava »1903.« NA SREDINI str. 136 (1903 r1 = Griblje 24 — P98 lead)
+- 12 vpisov / 12 hiš Griblje: 58, 87, 30, 22, 3, 27, 77, 16, 91, 36, 25, 14 — NARE 8. leto + PRVO LETO BREZ NOVIH HIŠ; PT 11/1 (h58 že v PT_GAP_KNOWN); sidra: SEGINA VRNITEV h30 (r16 — signal 5; hišna forenzika 30 ne 36!), h25 ISTA ZVEZA Brinec × Segina (4. VPIS — signali 5+6), STRAUS × SPUDIČ h16 (r46 — TRETJA hiša istega para; 04455 lead 5×), EMŠO r39 03.07.1902; ŽELJKO signali 16+17
+- KONTINUITETE (ključne lekcije): h87 1895 Pegdirec? = 1902 Perdinec? (KURRENT ISTI oče — NI menjava!); h91 1895 Muc = 1902 Murov? (ISTA žena Kure); h77 Pošek → Cindrič (prava menjava); h22 žena Klepec → Žurrič?; h3 Županič? → Papič?; h36 6. VPIS, h16 4. VPIS, h14 3. VPIS, h25 4. VPIS (popravljeni VPIS števci po dejanskih letih v parish.ts)
+- DUHOVNIKI: Dostál 8× (Stanislav v 5/8) + Rauq 4× + Kulbinek 0×; babica Toter 9× (12/12); † 3/12; okvirna anomalija r72/r73 Boršt brata † 15/6.1918 (WWI); excluded r33 (hiša pod zapisom — kanalna filtracija) + r62 (nalepka Piran)
+- *** PESKOVNIK RESET sredine faze ***: /home/z/muzej + /tmp IZGINILA; repo OBNOVLJEN iz GitHub zrcala (b5a25d7 = P96; PAT auth); GitLab vir resnice == b5a25d7 (potrjeno prejšnjo sejo); /tmp/p97 skeni ponovno prenešeni (p97_fetch rekonstruiran); P97 artefakti rekonstruirani iz sejine forenzike — NIČ NI IZGUBLJENO (dvorogi push po vsaki fazi se je obrestoval)
+- Dokaz research/issue17/parish-baptism-1902.json (SAMPLE-TRANSCRIPTION-1902; reconstructionNote) + verifikator scripts/p97_parish_baptism_1902.py (I1–I10, --check PASS)
+- Integracija: parish.ts HOUSE_VITALS 264 → 276 (12 blokov 1902); atlas.ts PT_GAP_KNOWN NESPREMENJEN; qa-parish.ts qa-p97 (98. kontrola) + allow liste qa-p85 h30+h77, qa-p88 h91, qa-p90 h87, qa-p91 h14, qa-p94 h22 (+ 1902 bloki) + vitals pini 264 → 276
+- Regresije: p80 (vitals 276), p85–p92 filtri + 1902, p93 (vitals 276 + kumulativ 282), p94/p95/p96 filtri izključujejo 1902
+- QA popravki po prvi oceni: qa-p97 babica literal (h87/h22 → »Marjeta Toter«) + Stanislav Dostál 5× (ne 6×) + †-števec na »dojenček« ključko
+- Veriga p80–p97 --check: 14/14 PASS; tsc 0 / lint 0; /api/qa dev 98/98 (qa-p97 True); v7 NESPREMENJEN
+- Docs: MUSEUM-AUDIT.md §73 (P97 + peskovnik-nadomestilo) + README P97 bullet + Zadnje stanje po P97 (QA 98/98, 18 skript, P77–P97)
+
+Stage Summary:
+- P97 = krstna 1902 REPO-KOMPLETEN: dokaz + verifikator + parish.ts (276 vitals) + qa-p97 (98/98) + 14/14 skript PASS + docs; kumulativ 282 vpisov / 81 hiš / SEDEMNAJST let; PRVO LETO brez novih hiš; NARE 8. leto; NOVA TISKANA knjiga od 1902; peskovnik reset BREZ IZGUBE (dvorogi push)
+- NASLEDNJA FAZA: P98 = krstna 1903 (glava SREDINA str. 136 = sken 144; 1903 r1 = Griblje 24; skeni 141–152 prenešeni) ali mrliška 04894 ali poročna 04455 (Straus × Spudič — krstno 5× na treh hišah)
