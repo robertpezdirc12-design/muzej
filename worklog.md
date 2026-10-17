@@ -4592,3 +4592,20 @@ Stage Summary:
 - DVOROGI SINHRONIZACIJSKI STATUS: lokalni == GitLab (vir resnice) == 0bb4a9f; GitHub ZASTAREL + push BLOKIRAN (neveljaven PAT — owner action)
 - OBVEZNA LASTNIŠKA AKCIJA: obnoviti GitHub PAT (robertpezdirc12-design) in posodobiti remote URL (git remote set-url github https://robertpezdirc12-design:<NOV PAT>@github.com/robertpezdirc12-design/muzej.git) — nato ponoviti git push github main (0bb4a9f); Vercel deploy se sproži samodejno in produkcija dohiti 96/96 (qa-p95 True)
 - P95 je REPO-KOMPLETEN (dokaz + skripta + parish.ts + qa-parish.ts + atlas.ts + docs + 16/16 skript PASS + dev QA 96/96); produkcija čaka izključno na GitHub zrcalo
+
+---
+Task ID: 66-a (sinhronizacija — GitHub OBNOVLJEN)
+Agent: Z.ai Code (glavna seja)
+Task: P95 push zaključek — nov GitHub PAT + dvorogi push + trojna sinhronizacija + produkcija
+
+Work Log:
+- Lastnik dobavil NOV GitHub PAT (robertpezdirc12-design); remote URL posodobljen: git remote set-url github https://robertpezdirc12-design:<NOV PAT>@github.com/robertpezdirc12-design/muzej.git
+- git ls-remote github main: OK na 1. poskus (auth POTRJENA; GitHub je bil na e318862 = P94)
+- git push github main: OK (e318862..53f2578) — GitHub dohitel 2 commita (0bb4a9f P95 + 53f2578 worklog 65-b)
+- GitLab ls-remote: 403 tranzitorni na 1. poskusu, OK na 2. poskusu (znan tranzitorni vzorec) — GitLab == 53f2578 (53f2578 je bil v prejšnji seji že pushan na GitLab)
+- TROJNA SINHRONIZACIJA POTRJENA: lokalni == GitLab (vir resnice) == GitHub == 53f2578
+- Vercel deploy se je sprožil ob GitHub pushu; produkcija čaka na potrditev 96/96 (qa-p95 True)
+
+Stage Summary:
+- GitHub PAT OBNOVLJEN — dvorogi sync (GitLab vir resnice + GitHub zrcalo) popolnoma DELOUJEM again; P95 = krstna 1900 (16 vpisov / 16 hiš / 80. hiša 67 / NOVELA babica) je zdaj tudi produkcija-rešen
+- NASLEDNJA FAZA: P96 = krstna 1901 (glava str. 122 = sken 125; skeni 125–128 že v /tmp/p95; 1900 row 77 = zadnja vrstica 1900) ali mrliška 04894 1887–1896 ali poročna 04455 (Straus × Spudič)
