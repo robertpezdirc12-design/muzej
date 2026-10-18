@@ -6069,3 +6069,97 @@ cf. Matični register Metlika); ⑦ **PAPIČ forenzika** (h33 Martin + h3 Matija
 h84 Gapič?/Papič? — trije Papič-ji v 1911: bratje? oče+sini?); ⑧ r38 »Grišice«
 35 selitev (Martinkovič × Šimec = h30 1909 — kam so se preselili? cf. franciscejski
 kataster + Griče vas?); ⑨ r46 Otok 23 nujni krst (botra + podpis PRAZNA).
+
+## §82 · P107 — župnija Podzemelj, krstna knjiga 04105, polno leto 1912 (issue #18; 2026-10-18)
+
+**Sprožilec:** owner ukaz »nadaljuj kjer si ostal« — §81 nextSteps ①: P107 = leto
+1912. Pred fazo trojsinhronizacija P106 potrjena (lokalni == GitHub == GitLab ==
+6631c57; produkcija Vercel 107/107 = qa-p106 PASS).
+
+**Vir:** Matricula Online, krstna knjiga 04105 (1886–1919); skeni 229–242 v
+/tmp/p107 (p107_fetch; inventar 326 ✓). Izrezi read/s{N}-A/B.png (s229–s240) +
+zoomi 3–8× (številke, imena, EMŠO pripisi, trakovi).
+
+**OKVIR 1912:** glava »1912« INLINE na str. 202 = sken 229 (pod 1911 r89); 1912
+r1 = **Griblje 70 Alojzij** 2./2. Januar, **EMŠO 0201912500174 — P106 lead
+POTRJEN hiša+starši, lead EMŠO POPRAVLJEN** (0101912500294 → 0201912500174;
+3. zapored napačen EMŠO v leadu!); row 88 = str. 209 (sken 239/240 DUP; Gradac 1
+Minka 31.12.1912/1.1.1913 krsta); **glava »1913« INLINE na str. 209 DNO = s239/
+s240 (pod r88!)** — 1913 r1 = Cerkvišče 31? Marija 4./10., EMŠO 0401913505350 —
+**Januar 1913 IMA vpise na str. 209 dnu (P108 lead)**; **88 vrstic**; **NOVELA:
+ŠTIRI dup pari** — 231/232 = str. 204 + 235/236 = str. 207 + 237/238 = str. 208 +
+239/240 = str. 209 (2. največ po P104 ×5); stran == sken − 27 (229–232) / − 28
+(233–236) / − 29 (237–238) / − 30 (239–240).
+
+**TRANSKRIPCIJA 20 gibriljskih vrstic — NARE 20/20** (8. čisto leto). **1 NOVA
+hiša h86 (r75) — PRVA po 1909** (0/1/0/0/0/0/0/0/1 — prelom 8-letne suše!).
+
+**GENETSKE FORENZIKE (ključne):** ① r1 h70 **SELIJA h10 → h70** — 1909 h10 par
+(Matija Brinec × Marija Grabrijan) zdaj v h70 — **2. selitev vzorca** (cf. h30→h10
+1909); ② r70 h33 **GENETSKA VAS ×2: »Grišice« → GRIBLJE 33** (cf. P106 r37; ISTI
+oče Martin Papič + ISTA hiša 33 — 2. potrjena »Grišice«; village v dokazu
+normaliziran na Griblje, surovo branje v opombi); ③ r42 h22 oče **Miko Alek —
+MLINAR** (potrjen 1913 r2 Kranjak 15 »Miko Alek mlinar« — P108 lead!); ④ r32 h18
+**OČETOVA KOLONA ŽENSKO IME** (»Marija Tomec« — 1. primer vzorca!); ⑤ r6/r7
+h45+h46 **DVOJČKI v DVEH sosednjih hišah** (Anton + Jožefa — ISTI starši/botra;
+2/2 hiši — kampanja?); ⑥ r75 h86 NOVA: celotna botra+babica = OČEVA familija
+(**Brinec ×3** — Janez + Doroteja + Barbara).
+
+**SIDRA:** r1 h70 2. VPIS — VRZEL 19 LET + SELIJA; r8 h8 3. VPIS — **VRZEL 23
+LET NOV REKORD** (prej 21!); r12 h90 7. VPIS (KALAN učiteljska; **RAZVEZAL zakon
+15.1.1953 Ljubljana**; beli trak † 14.4.2003); r23 h12 13. VPIS (**† 14.9.1987
+TRUPOLI = TRIPOLI!**); r42 h22 6. VPIS (EMŠO 1106912505630 — MOŽEN DATUMSKI
+POPRAVEK mesec 06 vs register 05 [~]); r45 h24 **16. VPIS NOV REKORD HIŠE**
+(prej 15; ZAPORED 2. leto); r53 h48 6. VPIS (ZAPORED 2. leto; hiša 48/43 [~]);
+r70 h33 5. VPIS (ZAPORED 2. leto); r75 h86 1. VPIS NOVA (poroka 1946 Koprivnica
+priimek Sprem); r87 h5 6. VPIS (**MATI + BOTRINJA = MEH ×2**; oče »je ženit« —
+nezakonski signal; dojenček † +18.1.1913 [~]).
+
+**DUHOVNIKI/PODPISI:** »Paulin Bitnar« **13** + »Jos. Rauq« 7 — **13+7 = 20 =
+vsi vpisi** (nadaljevanje blokovske P105/P106; stats + verifikator sprva 11 —
+popravljeno na 13 po pregledu vseh 13 blokov). **BABICA: 19/20 imenovanih —
+MEH 12/20 DOMINANTA** (vse Marija!) + Adlešič 2 + Barbara Brinec 1 (r75 očeva
+familija!) + Marija Jakofčič 1 + Marija Pletoj? 1 + 1 nejasna (r45).
+
+**KAMPANJE:** **EMŠO 5 sidr** (3 SKLADNA — r1/r46/r53 + 1 MOŽEN popravek r42 + 1
+[~] r75; bloki dobili marker »— SIDRO« po konvenciji P106); 6 dojenčkov/otrok †
+(r2/r4/r6/r7/r15/r87); VRZELI 23+19+18+13+8; dvojčki ×3 (r6/r7 Griblje + r49/r50
++ r85/r86 non-Griblje); 2 razveljavitvi zakona (r12 1953 Ljubljana + r86
+1956/57 Varaždin); **ANOMALIJE: sub divo mrtvorojen (r47 Klojter — 1. v vzorci!)**
++ (V?)mpohranca/-gina s prazno krsto (r9+r44) + November glava skrita pod trakom
+(r79) + r36 skrita pod trakom + DVE IMENI (r63) + **nezakonska učiteljica (r88
+Gradac 1**; podpis spovednik Miklavž Belševič?) + h85 DVA VPISA v 1912 (r51+r74
+— non-Griblje). Excluded: 69.
+
+**DOKAZ research/issue17/parish-baptism-1912.json**: 20 entries + 69 excluded +
+anomalije + stats + crossChecks. **Verifikator scripts/p107_parish_baptism_1912.py
+(I1–I12 + I3b/I9b): 15/15 PASS** (popravki: stats podpis.bitnar 11 → 13 + literal
+v I9 + GRIBLJE_BITNAR 13; r70 village »Grišice« → Griblje po P106 konvenciji).
+
+**parish.ts**: 20 blokov 1912 (vitals 429 → **449**; vse celovito whatSi+whatEn+
+status DOCUMENTED; 4 EMŠO bloki dobili »— SIDRO« marker; h5 blok dopolnjen z
+**P108 lead** — glava 1913 INLINE str. 209 dno). **qa-parish.ts**:
+qa-p107-parish-baptism-1912 (108. kontrola) — okvir (pageOfScan − 27/− 28/− 29/− 30
++ dup ×4), NARE 20/20, 1 nova hiša ["86"], PT 16/4, 51 sidra-pinov, babica Meh 12
++ [PRAZNA] r42 + MEH ×2 r87, podpisa Bitnar 13/Rauq 7, EMŠO 5 sidr, genetska vas
+h33, P108 lead v h5; **allow liste + 1912 (qa-p88 h70 / qa-p91 h45+h18 / qa-p93
+h18+h48 / qa-p96 h19) + pogoji IN sporočila starih kontrol 429 → 449**.
+
+**Regresije python**: p80 (vitals 449), p85–p99 vitals 449 + kumulativ 457 +
+horizon filtri + 1912 (terke p85–p99) + **n_houses_total 84 → 85 (h86!)** +
+**letna filtra + 1912** (p87/p88/p91/p92/p93/p94/p96) + p96 prior19 + 1912;
+p100–p106 BLOCKS_04105 403 → 423 — vseh **29 skript p79–p107** `--check` PASS
+(exit 0). Kartica NI dodana (vzorec P77–P107). tsc 0 / lint 0; **/api/qa dev
+108/108** (qa-p107 pass=True); v7 NESPREMENJEN.
+
+**nextSteps**: ① **P108 = leto 1913** (glava »1913« INLINE str. 209 DNO = s239/
+240; 1913 r1 = Cerkvišče 31? Marija 4./10., EMŠO 0401913505350 — Januar 1913
+ima vpise na str. 209 dnu!; skeni 239–242 že v /tmp/p107); ② mrliška knjiga
+04894 1887–1896 (dojenčki † lead); ③ poročna 04455 (Straus × Spudič + KLEPEC
+22.1.1933); ④ h51 (ZADNJA nedokazana luknja 41–60!); ⑤ produkcija Vercel:
+dohiti P107 → QA 108/108; ⑥ **podpis-dilema Bitnar** (kaplan ALI maticarka);
+⑦ **PAPIČ forenzika** (h33 Martin 1911/12 + h3 Matija 1911 + h31 Gapič? 1911);
+⑧ **h45/h46 dvojčki v dveh hišah** (ISTI starši/botra 1912 — bratski pari?
+cf. franciscejski kataster); ⑨ **sub divo mrtvorojen r47** (1. primer vzorca —
+liturgična praksa?); ⑩ **h86 Brinec NOVA hiša** (od kod prihod 1912? bajtar
+Peter Brinec — cf. h77/h49 bajtarske rotacije).
