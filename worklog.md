@@ -4943,3 +4943,20 @@ Work Log:
 Stage Summary:
 - P107 = krstna 1912 REPO-KOMPLETEN: dokaz + verifikator (I1–I12 + I3b/I9b, 15/15 PASS) + parish.ts (449 vitals, 20 celovitih blokov) + qa-p107 (**108/108**) + 29/29 skript PASS + docs; kumulativ **457 vpisov / 86 hiš / 27 let** (1886–1912); NARE 20/20 (8. čisto leto); **1 NOVA hiša h86 — PRVA po 1909 (prelom 8-letne suše!)**; ŠTIRI dup pari (2. največ po P104); **SELIJA h10→h70 (Brinec 1909 par — 2. selitev vzorca)** + **VRZEL 23 LET NOV REKORD (h8)** + **16. VPIS NOV REKORD HIŠE (h24)** + **GENETSKA VAS ×2 »Grišice« → Griblje 33** + **Miko Alek MLINAR (P108 lead)** + **OČETOVA KOLONA ŽENSKO IME (r32 — 1. primer vzorca!)** + DVOJČKI v DVEH sosednjih hišah (h45+h46) + **sub divo mrtvorojen (1. v vzorci!)** + 2 razveljavitvi + Bitnar 13 + Rauq 7 (= 20 vsi vpisi) + MEH 12/20 DOMINANTA + Brinec ×3 (h86 botra+babica) + EMŠO 5 sidr; P107 lead EMŠO POPRAVLJEN (0101912500294 → 0201912500174 — 3. napačen lead EMŠO!)
 - NASLEDNJA FAZA: P108 = krstna 1913 (glava »1913« INLINE str. 209 DNO = s239/240; 1913 r1 = Cerkvišče 31? Marija 4./10. Januar, EMŠO 0401913505350 — Januar 1913 IMA vpise na str. 209 dnu!; skeni 239–242 že v /tmp/p107) ALI mrliška 04894 1887–1896 ALI poročna 04455
+
+---
+Task ID: 78-b (P107 push GitLab + GitHub BLOCKED + Vercel produkcija prek direktnega API file-upload deployja)
+Agent: Z.ai Code (glavna seja)
+Task: push P107 (fe9416b) na GitLab + GitHub; poushaj na Vercel (owner: »nadaljuj uredi readme pushaj kode github gitlab in nadaljuj poushaj na vercel« / »nadaljuj kjer si ostal«)
+
+Work Log:
+- COMMIT fe9416b (P107: krstna 1912 + regresije + docs) — 30 datotek, +2118/−153
+- git push origin main (GitLab): 1. poskus 403 (tranzitorni lažni alarm) → **2. poskus OK: 6631c57..fe9416b**; ls-remote potrjuje lokalni == origin/main == fe9416b
+- **GITHUB PUSH BLOKIRAN: PAT neveljaven** — `ghp_vARO…` → API /user + /repos = **401 Bad credentials** (tudi prek git push z x-access-token in username:token formatom; token potekel/preklican); alternativnih poverilnic ni (brez gh CLI / SSH / credential helper / env žetonov) — GitHub main ostaja na 6631c57 (P106) do svežega žetona; GitLab = vir resnice, sinhroniziran
+- VERCEL: žeton vcp_… validiran (v9/projects → griblje-museum); **CLI 64.5.0 NEZDUŽLJIV z novim tipom žetona** (whoami → »User not found«, v2/user 404) — rešitev: **direkten API file-upload deploy** (obide GitHub!): ① POST /v2/files × 526 datotek (49.6 MB; .vercelignore upoštevan — brez research/, db, mini-services; glave x-now-digest sha1 + x-now-size — CLI reverse-engineering: metoda POST + x-now-* glave, NE PUT/x-vercel-digest!) ② POST /v13/deployments {name: griblje-museum, target: production, files: [{file, size, sha}], projectSettings: {framework: nextjs}} → **dpl_HAZneToFbjEzEtyJdQmbhppSXem8 READY (478 s)**
+- **PRODUKCIJA Vercel (griblje-museum.vercel.app): GET /api/qa → 200, ok: True, passed: 108, failed: 0 — qa-p107-parish-baptism-1912 pass=True** ✓
+
+Stage Summary:
+- **TROJSINHRONIZACIJA P107: lokalni == GitLab == fe9416b; GITHUB BLOKIRAN (mrtv PAT — potreben svež žeton od ownerja); Vercel produkcija = P107: 108/108, 0 napak**
+- NOVA METODA (P108+): kadar GitHub push ni dosegljiv, produkcija gre prek direktnega API file-upload deployja (POST /v2/files z x-now-digest + POST /v13/deployments) — neodvisno od GitHub zrcala
+- NASLEDNJA FAZA: P108 = krstna 1913 (glava »1913« INLINE str. 209 DNO = s239/240; r1 = Cerkvišče 31? Marija 4./10., EMŠO 0401913505350; Januar 1913 IMA vpise na str. 209 dnu; skeni 239–242 že v /tmp/p107)
