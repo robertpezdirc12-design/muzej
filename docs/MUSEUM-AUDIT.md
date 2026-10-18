@@ -5749,3 +5749,111 @@ prvih žen + dojenčki † iz krstnih (r41 h85 † 29.5.1908 lead!); ③ poročn
 QA 104/104; ⑥ babica Šotter = Toter = Vötter (ISTA Marjeta — štirje zapisi 1889–1908,
 MERI); ⑦ Jos. Dami (nov duhovnik 1908 — kdo je? cf. matrikulacija); ⑧ »FRIEDMANN« žig
 na str. 179 (moderni rešerš — kdo?).
+
+## §79 · P104 — župnija Podzemelj, krstna knjiga 04105, polno leto 1909 (issue #18; 2026-10-18)
+
+**Vir:** Matricula Online, krstna knjiga 04105 (1886–1919); skeni 199–212 prenešeni v
+/tmp/p104 (p104_fetch po vzoru P103; inventar 326 ✓). Izrezi read/s{N}-A/B.png +
+~90 forenzičnih zoomov (2.6–8×) + sveži izrezi r17/r28/r30/r32/r35/r40/r57/r58/
+r60–r65/r72.
+
+**Okvir 1909:** glava »1909 / Januarij« INLINE na str. 180 = skeni **199/200** (dup
+par — P103 lead POTRJEN; 1909 r1 = Dobraviče 26 Anton, 7./7. Januar, EMŠO
+0701909500220 pripis). **NOVELA — P103 ocava »sken 200 = str. 181« POPRAVLJENA:**
+s200 = str. 180 (dup!), str. 181 = s201; r89 1908 (beli trak v s199) berljiv SAMO na
+s200 (Gradac 43 Milan, EMŠO 1309095500642). Row 81 = str. 187 (sken 211); **glava
+»1910« INLINE** (1910 r1 = Cerkvišče 2 Anton, 3./4. Januar — **P105 lead**; prva
+Griblje vrstica 1910 = **r3 Griblje 5 Jožefa, Matija Štrucelj × Marija Meh**).
+81 vrstic (str. 180–187) — **NAJKRAJŠE leto vzorca** (1908 = 90). **NOVELA P104 —
+PET dup parov:** 199/200 = str. 180 + 202/203 = str. 182 + 204/205 = str. 183 +
+207/208 = str. 185 + 209/210 = str. 186 — največ v enem letu doslej; stran == sken
+− 19 (199/200) / − 20 (201–202) / − 21 (203–205) / − 22 (206–207) / − 23 (208–210)
+/ − 24 (211).
+
+**VSI vpisi z Griblji: 18 vpisov / 17 hiš (h34 ×2 = DVOJČKI)** — NARE PRELOM (1.
+intra-letna ponovitev po 1908 NARE 18/18); **0 NOVIH hiš** (5. leto: 1905 0 / 1906 1
+/ 1907 0 / 1908 0 / 1909 0 — VSE 17 hiš že zasidrane); PT 14/3 (42+48+54 v luknji
+41–60 — ponovitve; luknja ostaja samo h51); kumulativ **400 vpisov / 85 hiš / 24
+let** (1886–1909; 392 vitals).
+
+**SIDRA (izbor):** r6 h77 **3. VPIS — POŽEK POVRAT po 19 LETIH** (1890 Jurij Požek
+bajtar → 1902 MENJAVA Cindrič cevljar → 1909 ISTI oče z NOVO ženo Veselič?;
+najdaljša hišna vrzel 1909); r9 h10 **6. VPIS — SELITEV h30→h10** (Matija Brinec ×
+Marija Grabrijan = **ISTA ZVEZA kot h30 1906!**; h10 = TRIJE Brincovi možje zapored
+1907/08/09; EMŠO 3001909500735); r17 h42 4. VPIS — **ISTA ZVEZA 1905 VRNE** (Jurij
+Pezdirec × Katarina Jurajevič; poročena 20.11.1938; mož † 1943; † 26.4.1982);
+r20+r21 h34 **DVOJČKI** (ISTA botra Segina+Šuštar; Matija **† 18/4.09 ISTI DAN!**;
+Nikolaj † 3/10.09 — **2. dvojčki-par z obema smrtma** po 1907 h10; ŠIMEC/ŠULAK
+karusela); r28 h72 6. VPIS — **STRAUŠ POVRAČNICA po 14 LETIH** (1888–95 Matija
+Strauš v h72 → 1904 h42 interlude → 1909 DOMA; **h42↔h72 ŠTRAUS↔PEZDIREC
+KARUSELJA** — obe familiji 1909 v svoji hiši!; EMŠO 020609500254; botra = ISTI PAR
+kot h42 1904); r30 h33 3. VPIS — **»VPIS PRENESEN V MRLIŠKI REGISTER«** (MENJAVA #3
+Papič?; VRZEL 11 LET; EMŠO 0306095050335; botra ISTI PRIIMEK; podpis **»Gregor
+Cerar coop.«**); r32 h63 9. VPIS — **MATI »Katarina Križan, SAMKA ½ zemljaka«**
+(MOŽEN NEZAKONSKI; VRZEL 6 LET); r35 h54 6. VPIS — **ŠIMEC NOVA DRUŽINA** (Janez
+Šimec × Marija Kure?; boter Ivan Požek; VRZEL 5 LET); r37 h1 7. VPIS ISTA ZVEZA
+(Jurij Željko × Barbara Kure = 1900+1905; **† 5.5.1925 pri 15 letih!**); r40 h6 4.
+VPIS — **HIŠNA CELICA POKRITA, HIŠA GENETSKO** (ISTA ZVEZA 1904/05 + botrinja
+Marija Klepec ISTA; 1907 Kapucina? menjava → 1909 POV RAT; EMŠO 120809505944 [~]);
+r44 h24 **14. VPIS ZAPORED — ŠE VEDNO najbolj vpisovana** (Brincova; **PONESREČI
+UMRLA 23.10.1965 pri božjani s šolskim kolektivom** + 2. pripis 1988 — DVOJNI);
+r57 h30 12. VPIS — **7. DRUŽINA** (Martinovič? kovač × Šimec; forenzika 30 na
+OBOJIH dup); r58 h12 12. VPIS — **ISTA ZVEZA** (1907 Dragoš × Cvitkovič = 1909
+Drgoš × Cvitkovič; **VÖTTER DVOJNO** — babica Marjeta + botrinja Katarina); r60
+h35 6. VPIS — **MATI BREZ PRIIMKA** (»Ana« — genetsko = **Ana Hrižan**, ISTA 1906!);
+r61 h32 10. VPIS ISTA ZVEZA (Meh × Pezdirec = 1889–95 ISTI par; **maticarka Paulin
+Bitenc v koloni Podpis — NOVELA!**); r64 h48 4. VPIS — **EMŠO = KRSTNI datum**
+(1910909505186; rojstvo 18.10 — edinski primer!; poročin 22.1.1933 KLEPEC — MOŽ
+UMRL); r72 h66 4. VPIS (Jakob Bohte × Katarina Križan; **forenzika 66 — DVE
+ŠESTERKI**, prva branja 22/72 NAPAČNA; 1905 ISTI oče Jakob Bohle? + mati menjava;
+boter Nikolaj Brodarič = ISTI kot r64 CROSS-ROW; EMŠO 051090505628 [~]).
+
+**DUHOVNIKI NOVELA:** Gregor Cerar 10 (Januar–Junij; vključno r30 **»coop.«** —
+edini coop. 1909!) + Jos. Rauq 6 (Avgust–Oktober: r40–r64) + **2 podpisa MATICARKE
+Paulin Bitenc v koloni Podpis** (r61/r72 — NOVELA: od r61 dalje maticarka
+podpisuje ob smrtnih pripisih 1950s–60s; izvirni duhovniški podpisi pokriti).
+
+**BABICA NOVELA:** 18/18 imenovanih — **MEH 12/18 DOMINANTA 1909** + Adlešič 1 +
+Štraus 1 + Mavrenič 1 + Uri? 1 + Novak 1 + Vötter 1 (DVOJNO z botrinjo); **MUC 0×
+(po 6× 1908!)**.
+
+**EMŠO kampanja:** 7 sidr na Gribljih (6 + 1 anomalija r64 = krstni datum!) — VSI
+SKLADNI z rojstvi (r64 = krsta).
+
+**Anomalije:** r5 **»Decembar 16./16.« POD glavo 1909** (kronološka kršitev —
+decembrski vpis 1908 za glavo!) + r91 = aprilski vpis 1908 nad glavo; h42↔h72
+karusela; POŽEK 19 let; selitev h30→h10; dvojčki z obema smrtma; mati samka (r32);
+mati brez priimka (r60); EMŠO=krsta (r64); maticarka v podpis-koloni (r61+);
+PONESREČI UMRLA (r44 1965!); **2 RAZVELJAVITVI zakona** (r73 Okr. sodišče Krško
+52/195-3 + r76); **TRGOGRAD pripis** (r19 Gradac — RŠNZ št. 13-546/65 z dne
+6.4.1965 — najbolj eksotična lokacija vzorca!); **»vzet v matični register
+13.02.200X«** (r65 Vranovče 51 — matičarka); Podzemelj 6 vpis (r63 — redko!); mejni
+vpis r81 (31.12.1909/1.1.1910); kraj **»Gornej?« ×4** (r12/r22/r47/r76 — vedno z
+Muc/Pezdirec familijami, nerazrešeno [~]); CROSS-ROW ×4 (r64+r72 boter Nikolaj
+Brodarič; r35 boter Ivan Požek ↔ r6 oče; r57 mati Šimec ↔ r35 oče; r32+r72 mati
+Križan); EXCLUDED 22.
+
+**Pipeline:** dokaz research/issue17/parish-baptism-1909.json (18 entries + 22
+excluded + 20 anomalij + stats + crossChecks); verifikator
+scripts/p104_parish_baptism_1909.py (I1–I10 — prvi tek 4 FAIL: notes-list join +
+anchors PRENESEN/nezakonski + h6 kontinuiteta 1907 + cited dup skeni — popravljeno;
+**I1–I10 VSE PASS**); parish.ts 18 blokov 1909 (vitals 374 → **392**; genetske
+obogatitve med vstavljanjem: h34 Šimec/Šulak karusela + h12 ISTA ZVEZA Dragoš +
+h35 mati = Ana Hrižan + h66 ISTI oče Bohle/Bohte); qa-parish.ts qa-p104 (105.
+kontrola) + allow liste + 1909 (qa-p85 h30+h77 / qa-p87 h12 / qa-p92 h10 / qa-p93
+h48) + vitals 392 (pogoji IN sporočila starih kontrol 341/374 → 392) + **regresije**:
+p80 (vitals 392), p85–p99 vitals 392 + kumulativ 400 + horizon filtri + 1909 (terke
+p85–p99), p100–p103 BLOCKS_04105 348 → 366 — vseh **26 skript p79–p104** `--check`
+PASS (exit 0). Kartica NI dodana (vzorec P77–P104). tsc 0 / lint 0; **/api/qa dev
+105/105** (qa-p104 True); v7 NESPREMENJEN.
+
+**nextSteps**: ① **P105 = leto 1910** (glava »1910« INLINE str. 187 = sken 211; 1910
+r1 = Cerkvišče 2 Anton, 3./4. Januar; prva Griblje vrstica = r3 Griblje 5 Jožefa,
+Matija Štrucelj × Marija Meh — sken 212 = str. 188 že v /tmp/p104); ② mrliška
+knjiga 04894 1887–1896: dojenčki † iz krstnih (r20/r21 h34 dvojčka † + r41 h85 †
+29.5.1908 lead!); ③ poročna 04455: Straus × Spudič + **r64 KLEPEC poroka 22.1.1933
+(mož umrl!)**; ④ h51 (ZADNJA nedokazana luknja 41–60!); ⑤ produkcija Vercel: dohiti
+P104 → QA 105/105; ⑥ kraj »Gornej?« (4× v 1909 z Muc/Pezdirec — razrešiti prek
+franciscejskega katastra); ⑦ maticarka **Paulin(a) Bitenc** (podpisi 1950s–60s —
+kdo? cf. Matični register Metlika); ⑧ r44 DVOJNI smrtni pripisi (1965 božjana vs
+1988 Celovec — kateri je pravi?)
