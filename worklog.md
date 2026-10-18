@@ -4960,3 +4960,19 @@ Stage Summary:
 - **TROJSINHRONIZACIJA P107: lokalni == GitLab == fe9416b; GITHUB BLOKIRAN (mrtv PAT — potreben svež žeton od ownerja); Vercel produkcija = P107: 108/108, 0 napak**
 - NOVA METODA (P108+): kadar GitHub push ni dosegljiv, produkcija gre prek direktnega API file-upload deployja (POST /v2/files z x-now-digest + POST /v13/deployments) — neodvisno od GitHub zrcala
 - NASLEDNJA FAZA: P108 = krstna 1913 (glava »1913« INLINE str. 209 DNO = s239/240; r1 = Cerkvišče 31? Marija 4./10., EMŠO 0401913505350; Januar 1913 IMA vpise na str. 209 dnu; skeni 239–242 že v /tmp/p107)
+
+---
+Task ID: 79 (P108 = krstna 1913 — okvir + celotna surova transkripcija 105 vrstic; forenzika + integracija = NASLEDNJA FAZA)
+Agent: Z.ai Code (glavna seja)
+Task: P108 — župnija Podzemelj, krstna knjiga 04105, polno leto 1913 (issue #18; §82 nextSteps ①); faza: fetch skenov + okvir + surova transkripcija vseh vrstic (bez forenzičnih zoomov) — zapis v research/issue17/parish-baptism-1913-notes.md
+
+Work Log:
+- OKVIR 1913: glava »1913« INLINE str. 209 DNO = s239/240 (dup par; pod 1912 r88) — P107 lead POTRJEN: 1913 r1 = Cerkvišče 31? Marija, 4./10. Januar, EMŠO 0401913505350; **leto ima 105 VRSTIC — NAJVEČ v vzorcu** (prej rekord 1908 = 90!) — str. 209–218 == skeni 239–256
+- DUP PARI: 239/240 (str. 209) + 241/242 (str. 210) + 243/244 (str. 211) + **str. 212 = ŠEST skenov (245/246/247/248/249/250 — re-scan serija, največ doslej!)**; stran == sken − 30 / − 31 / − 32 / DUP / − 38 (251+)
+- TRANSKRIPCIJA r1–r105 (surova, [~] kjer dvom): **17 Griblje vpisov / 16 hiš** — r10 (h31 Vida) + r13 (h9 Marija [~ oče]) + r19 (h6 Barbura) + r28 (h8 Marija) + r32 (h28 Anton — EMŠO 1004913500031) + r35 (h44[98?] Anton — Štrucelj SKLADNO + PAPIRNI VSTAVEK!) + r39 (h72 Stanislav — Matija Štraus × Marjeta Šimec, 8. VPIS) + r44 (h59 Marija — Jaklič kontinuiteta) + r49 (h34 Anton) + r63 (h13 Ivana [~ oče "Marija"→Matija?]) + r70 (h31 Julij — **h31 ×2 = NARE PRELOM**) + r72 (h36 Angela — EMŠO 2008913505094) + r75 (h86 Janez — **2. VPIS nove hiše**) + r80 (h76 Vilhelmina) + r87 (h46 Frančišek — EMŠO 2809913500032) + r88 (h60 Nikolaj) + r95 (h47 Marija — EMŠO 0411913500028)
+- NOVELI (kandidati, za potrditev): **PAPIRNI VSTAVEK "Pozamanitev"** (r35: Kosec Jakob pocigan × Katarina Hudovirac ciganka — otrok Leopold — podpis župnik Štefanič Martin + kaplan; potniška družina!) + **2 KAROLINI zapored** (r37 Zemelj 18 VPIS PRENEŠEN 14.04.2004 + r38 Gradac 77, EMŠO 0105913505308) + **2 para DVOJČKOV** (r29/r30 Dobraviče 40 + r57/r58 Dragoče 5 — identični starši/botra!) + **3 NEZAKONSKI** (r8 Barbara Mlek + r9 Štefancva Šrajgar — zapored + r45 Jožefa Šparovec z trakom župnika) + nujni krst signal (r22 Podkraj 10: botra + podpis PRAZNA) + **poznejši vpis r85 "Rajmund na Tolminskem" št. 3437** + vas "Klojter" ×4 (r26/r83/r96/r98 — cf. P107 r47 sub divo) + VPIS PRENEŠEN ×6 + žensko ime v očetovi koloni (r47/r63 — verjetno Matija, cf. r39 rešitev) + **EMŠO kampanja ~30 sidr** (največja doslej!) + h31 NARE PRELOM (prva ponovitev od P104!)
+- **P109 lead: glava »1914« INLINE str. 218 = s256 (pod r105); 1914 r1 = ? 17 Terezija, 1./1., EMŠO 01019141505225; 1914 r5 = Griblje 4? Anton [~]**
+- Zapis: research/issue17/parish-baptism-1913-notes.md (surova transkripcija + vse [~] dvome + naslednji koraki); skeni 239–262 v /tmp/p108 (read/ izrezi + zoomi)
+
+Stage Summary:
+- P108 okvir + surova transkripcija 105 vrstic ZAKLJUČENA (brez forenzike); **17 Griblje vpisov / 16 hiš / 0 novih**; dokumentirani novi signali (papirni vstavek, 2 Karolini, 2 para dvojčkov, 3 nezakonski, Klojter ×4, ~30 EMŠO); NASLEDNJA FAZA: forenzični zoomi 17 Griblje vrstic + r51 »Grišice« 44 odločitev + r1 hiša + r5/r6 → evidence JSON → verifier p108 → parish.ts (17 blokov, vitals 449 → 466) → qa-p108 (109. kontrola) → regresije (n_houses_total == 85; letna filtra + 1913; BLOCKS_04105 423 → 440) → audit §83 + README → push + Vercel
