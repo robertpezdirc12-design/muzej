@@ -1,0 +1,712 @@
+{
+ "phase": "P103",
+ "type": "SAMPLE-TRANSCRIPTION",
+ "status": "MERI, NE odloča",
+ "issuedAt": "2026-10-18",
+ "source": {
+  "book": "krstna knjiga 04105 (Rojstna in krstna knjiga), župnija Podzemelj",
+  "signature": "04105",
+  "scans": [
+   189,
+   191,
+   192,
+   193,
+   195,
+   196,
+   197,
+   199
+  ],
+  "pages": [
+   173,
+   174,
+   175,
+   176,
+   177,
+   178,
+   179,
+   180
+  ],
+  "url": "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04105/"
+ },
+ "method": "2.4–8× izrezi na skenih 189–199 (read/s{N}-A/B.png + pasovi p17x-left/right + hišne forenzike); dvokratno branje vseh 18 berljivih gibriljskih vrstic + r84 neberljiva (levi podatkovni blok + desni Roditelja/Botra/Babica/Podpis); hišne številke ≥ 2× (dup pari 189/190, 193/194, 197/198) + genetske korelacije prek parish.ts prior-blokov; EMŠO sidra na 6 gibriljskih vrsticah",
+ "frame": {
+  "yearStart": {
+   "scan": 189,
+   "page": 173,
+   "row": 1,
+   "note": "glava »Leto 18 1908« + r1 = Krasinec 38(?) August 1./1. Januar — P102 lead POTRJEN (hiša na 189 jasno »38«; P102 lead je pisal »58« — prvi vpis leta forenzika: 38 [~]; EXCLUDED vrstica — ne Griblje); sken 189 je dup par 189/190 = str. 173"
+  },
+  "yearEnd": {
+   "scan": 199,
+   "page": 180,
+   "row": 90,
+   "note": "zadnja vrstica 1908 = row 90 (Griblje 10 Matija, 28./29. December); glava »1909« INLINE na r91 = sken 199 (velike cifre »1909« + »Januar« na isti vrstici; 1909 r1 = Dobraviče 26 Anton, 7./7. Januar, EMŠO 0701909500220 pripis) — P104 lead"
+  },
+  "rowsTotal": 90,
+  "pages": "str. 173–180 (8 strani)",
+  "pageOfScan": "stran == sken − 16 (189) / − 17 (190–193) / − 18 (194–197) / − 19 (198–199); TRI dup pari: 189/190 = str. 173 + 193/194 = str. 176 + 197/198 = str. 179",
+  "frameScans": [
+   189,
+   191,
+   192,
+   193,
+   195,
+   196,
+   197,
+   199
+  ],
+  "framePages": [
+   173,
+   174,
+   175,
+   176,
+   177,
+   178,
+   179,
+   180
+  ],
+  "duplicatedScans": [
+   [
+    189,
+    190
+   ],
+   [
+    193,
+    194
+   ],
+   [
+    197,
+    198
+   ]
+  ],
+  "scan189Row1": "r1 = Krasinec 38(?) August (1./1. Januar) — prvi vpis leta 1908; P102 lead POTRJEN (village+ime; hiša 38 vs lead 58 — forenzika na 189/190)",
+  "duplicateScans": {
+   "count": 3,
+   "pairs": [
+    {
+     "scans": [
+      189,
+      190
+     ],
+     "page": 173,
+     "note": "NOV dup par P103 — str. 173 (glava 1908 + rows 1–12); 190 pokaže r6 (Gradac 28 Antonija) jasneje pod trakom Zagreb-1989"
+    },
+    {
+     "scans": [
+      193,
+      194
+     ],
+     "page": 176,
+     "note": "NOV dup par P103 — str. 176 (rows 37–48); na 193 je r47 pod trakom (Novo mesto 1949 pripis), 194 pokaže r47 = Griblje 44 Ana jasno"
+    },
+    {
+     "scans": [
+      197,
+      198
+     ],
+     "page": 179,
+     "note": "NOV dup par P103 — str. 179 (rows 73–84); na 197 je r79 pod belo nalepko, 198 pokaže Griblje 90 jasno; r84 = postrgan rob na OBOJIH (neberljivo)"
+    }
+   ]
+  },
+  "stamp": "str. 179: moder žig »FRIEDMANN« (nad r83; moderni arhivski/rešeršni žig — NI del vnosa); žig »Zgodovinski arhiv … Metlika« (r79/s197)",
+  "glava1909": {
+   "scan": 199,
+   "page": 180,
+   "note": "glava »1909« INLINE na r91 (velike cifre + »Januar«; 1909 r1 = Dobraviče 26 Anton 7./7. Januar) — P104 lead; sken 199 = zadnji v naboru 189–200 (200 = str. 181, 1909 rows 6+)"
+  }
+ },
+ "entries": [
+  {
+   "row": 16,
+   "year": 1908,
+   "month": "Februar",
+   "born": "16.",
+   "baptized": "16.",
+   "village": "Griblje",
+   "houseNo": "14",
+   "scan": 191,
+   "page": 174,
+   "child": "Marija",
+   "father": "Janez Brinec, ¼ zemljak (+ gost pripis o posestvu na očetovi celici: »… zemljak po s… piše … Bajuk Jož. Nabelio? … oreh … obdrati vse … rajši posestvo …« [~ — nerazumljivo v celoti])",
+   "mother": "Doroteja Perdinec? [~ — ali Pezdirec/Pozdinec cf. 1900/02 mati Marija Pegdinec?/Podirec]",
+   "botra": "Barbara Adlešič, ½ zemlj. hiša",
+   "babica": "Barbara Adlešič",
+   "priest": "Gregor Cerar",
+   "notes": [
+    "h14 = 4. VPIS ISTA familija — BRINEC (1900 Janez Brinec ½ × Marija Pegdinec?, 1902 Janez Brinec ½ × Marija Podirec; 1896 neimenovani pod trakom)",
+    "mati menjava (Marija P… 1900/02 → Doroteja P… 1908) [MERI]",
+    "botra = babica ISTA oseba (Barbara Adlešič ×2 v isti vrstici)",
+    "dojenček † 9/11.1911 (svinčnik)",
+    "Vere/Spola/Stanu = 1/1/1"
+   ]
+  },
+  {
+   "row": 22,
+   "year": 1908,
+   "month": "Februar",
+   "born": "29.",
+   "baptized": "29.",
+   "village": "Griblje",
+   "houseNo": "60",
+   "scan": 191,
+   "page": 174,
+   "child": "Katarina",
+   "father": "Nikolaj Željko, ¼ zemljak",
+   "mother": "Marija Brodarič? [~ — pisano »Prodarvič/Šrodarvič«; genetsko h60 = Željko × Brodarič 1888+1894+1897+1899+1906]",
+   "botra": "Nikol. Brodarič? [~ — isti zapis kot mati] + Marija Klepec, ¼ zemlj",
+   "babica": "Marija Muc",
+   "priest": "Gregor Cerar",
+   "notes": [
+    "h60 = 8. VPIS ISTA ZVEZA — Željko × Brodarič (5. OTROK istega para: 1893+1894+1897+1899 → 1906 7. VPIS → 1908; prestopni 29. 2. 1908!)",
+    "botrinja Marija Klepec — 4.× na h60 (P101 r19: 3.× 1906)",
+    "status očeta ½ → ¼ (1893–1906 ½/¼ izmenjava)",
+    "dojenček † 30.9.1922 (svinčnik; matičar pripis Simonič)",
+    "Vere/Spola/Stanu = 1/1/1"
+   ]
+  },
+  {
+   "row": 23,
+   "year": 1908,
+   "month": "Marec",
+   "born": "16.",
+   "baptized": "? [~ — krsta skrita pod modrim pripisom »umrla dne 21.10.1986 v Goranji?, gradac, 03.11.1986«]",
+   "village": "Griblje",
+   "houseNo": "24",
+   "scan": 191,
+   "page": 174,
+   "child": "Marija",
+   "father": "Janez Brinec, ¼ zemljak",
+   "mother": "Ana Milek? [~ — cf. 1906 mati Ana Mitek? — morda ista Ana]",
+   "botra": "Matija Brinec + Marija Brinec, ¼ zemlj",
+   "babica": "Barbara Adlešič",
+   "priest": "Jos. Dami [~ — morda Damiš/Damijan; NOV DUHOVNIK — prvi podpis na Gribljih 1908]",
+   "notes": [
+    "h24 = 13. VPIS — ŠE VEDNO najbolj vpisovana hiša registra (POVRAT Brincove hiše: 1906 Janez Brinec ½ × Ana Mitek? → 1908 Janez Brinec ¼ × Ana Milek?)",
+    "NOV DUHOVNIK Jos. Dami — 2. podpis v letu (r18 Otok, r23 Griblje); paralelni Cerar/Ravq/Dami",
+    "matični pripis 20. stol.: umrla 21.10.1986 (pripis krije krstno celico)",
+    "Vere/Spola/Stanu = 1/1/1"
+   ]
+  },
+  {
+   "row": 27,
+   "year": 1908,
+   "month": "Marec",
+   "born": "30.",
+   "baptized": "30.",
+   "village": "Griblje",
+   "houseNo": "16",
+   "scan": 192,
+   "page": 175,
+   "child": "Amalija",
+   "father": "Narciz? [~ — branje negotovo: »…vziž/Narciz«] Novak, bajtar",
+   "mother": "Marija Tilak? [~ — ali Šilak cf. 1900 mati Marija Šilak]",
+   "botra": "Janez Muc, kovač (= r31 h91 oče!) + Marija Jakofčič, ¼ zemlj",
+   "babica": "Marija Muc",
+   "priest": "Jos. Dami [~]",
+   "notes": [
+    "h16 = 8. VPIS — NOVAK bajtar POVRAT cf. 1900 (Alojzij Novak bajtar × Marija Šilak); h16 = več-družinska hiša: Plebučar 1886 → Jaklič 1897 → Novak 1900 → Straus 1902 → Ivec 1904 → Jakofčič 1906 → Novak 1908 (7 menjav)",
+    "CROSS-ROW LINK: boter Janez Muc kovač = r31 h91 oče (bajtar) — ista oseba pod dvema stanoma [MERI]",
+    "modri pripis: poročena 23.12.1946 v Brežjah (Kristina Kočevar?) + matičar Simonič Ivān",
+    "Vere/Spola/Stanu = 1/1/1"
+   ]
+  },
+  {
+   "row": 31,
+   "year": 1908,
+   "month": "April",
+   "born": "22.",
+   "baptized": "23.",
+   "village": "Griblje",
+   "houseNo": "91",
+   "scan": 192,
+   "page": 175,
+   "child": "Jožef",
+   "father": "Janez Muc, bajtar",
+   "mother": "Ana Kure",
+   "botra": "Marija Šimco? [~ — cf. Šimec] + Marija Jakofčič? [~ — ali Jatiščič], ¼ zemlj",
+   "babica": "Marija Meh",
+   "priest": "Gregor Cerar",
+   "notes": [
+    "h91 = 5. VPIS ISTA — Muc bajtar × Ana Kure (1895/1902/1904/1908 — MUC KONTINUITETA potrjena)",
+    "EMŠO č.: 2204908500557 (22.04.1908 m — SKLADNO s rojstvom 22.4., krsta 23.4.) — 1. od 6 EMŠO sidr na Gribljih 1908",
+    "nerazumljiv pripis pod krajem: »… dvahican … Šhulac Štucora? [~]« (morda hišno/vzdeveno poimenovanje)",
+    "pripisno neskladje poroke: modri »poročen 6.10.1938 v Karlovci« vs zeleni »Poročen dne 16.3.1938 … [~]« (cf. r61/1907 neskladje)",
+    "umrl 04.02.1990 v Novem mestu (modri pripis)",
+    "Vere/Spola/Stanu = 1/1/1"
+   ]
+  },
+  {
+   "row": 41,
+   "year": 1908,
+   "month": "Maj",
+   "born": "24.",
+   "baptized": "24.",
+   "village": "Griblje",
+   "houseNo": "85",
+   "scan": 193,
+   "page": 176,
+   "child": "Jožef",
+   "father": "Jožef Pezdirec, ¼ zemljak",
+   "mother": "Ana Kržan? [~ — Križan/Kržan]",
+   "botra": "— (PRAZNO — črtica; NUJNI KRST)",
+   "babica": "Marija Muc",
+   "priest": "— (PRAZNO — črtica; NUJNI KRST)",
+   "notes": [
+    "h85 = 2. VPIS — VRZEL 20 LET (1888 Marko Križan × Marija Strauš → 1908 NOVA DRUŽINA Pezdirec × Kržan)",
+    "NUJNI KRST: pripis pod imenom »v sili krščen? [~ — ali klican]«; botra in podpis PRAZNA (črti); babica Marija Muc kot krstiteljica",
+    "dojenček † 29/5.08 (svinčnik — 5 dni)",
+    "dup par 193/194: r41 berljiv na OBOJIH (identično)",
+    "Vere/Spola/Stanu = 1/1/1"
+   ]
+  },
+  {
+   "row": 46,
+   "year": 1908,
+   "month": "Junij",
+   "born": "23.",
+   "baptized": "24.",
+   "village": "Griblje",
+   "houseNo": "52",
+   "scan": 193,
+   "page": 176,
+   "child": "Janez",
+   "father": "Matija Pezdirec, ¼ zemljak",
+   "mother": "Ana Jakobčič",
+   "botra": "Anton Brodarič? + Katarina Kržan?, ½ zemlj",
+   "babica": "Marija Muc",
+   "priest": "Gregor Cerar",
+   "notes": [
+    "h52 = 3. VPIS — ISTA ZVEZA čez 10 LET (1898 Matija Podrinc [Pendirec] × Ana Jakobič = 1908 Pezdirec × Jakobčič — Kurrent variante ISTEGA para; VRZEL 1899–1907)",
+    "hišna forenzika: jasno 52 (3 pogledi)",
+    "Vere/Spola/Stanu = 1/1/1"
+   ]
+  },
+  {
+   "row": 47,
+   "year": 1908,
+   "month": "Julij",
+   "born": "7.",
+   "baptized": "8.",
+   "village": "Griblje",
+   "houseNo": "44",
+   "scan": 193,
+   "page": 176,
+   "child": "Ana",
+   "father": "Jožef Štrucelj, ½ zemljak",
+   "mother": "Barbara Šome [~ — 1906 mati »Barbara Urvne?« — morda ISTA Barbara]",
+   "botra": "Janez Križan? [~ — Hrižan?] + Doroteja Jerčinovič? [~ — Jereinovič; = r69 mati roj. Štrucelj!], ¼ zemlj",
+   "babica": "Marija Muc",
+   "priest": "Gregor Cerar",
+   "notes": [
+    "h44 = 5. VPIS (1888 Hlevič → 1901 Jurajevič → 1906 Štrucelj → 1908 Štrucelj ISTA OČE)",
+    "na skenu 193 je r47 pod trakom (Novo mesto 1949) — forenzika na dup skenu 194 (jasnejši)",
+    "r47 botrinja Doroteja (Jerčinovič?) = r69 mati Doroteja Štrucelj — CROSS-ROW LINK [MERI]",
+    "Vere/Spola/Stanu = 1/1/1"
+   ]
+  },
+  {
+   "row": 55,
+   "year": 1908,
+   "month": "Avgust",
+   "born": "11.",
+   "baptized": "12.",
+   "village": "Griblje",
+   "houseNo": "23",
+   "scan": 195,
+   "page": 177,
+   "child": "Amalija",
+   "father": "Brinec? [~ — očetova celica RAZTRGANA (vertikalni strgljek); konec »-inec/-njak«; cf. h23 = Brincova hiša (Matija Brinec 1893–1905)]",
+   "mother": "Marija Dehlič",
+   "botra": "Tomaž Dehlič + Katarina Dehlič, ¼ zemlj",
+   "babica": "Marija Meh",
+   "priest": "Gregor Cerar",
+   "notes": [
+    "h23 = 7. VPIS — ISTA ZVEZA čez 8 LET (1900 Matija Brinec × Marija Dehlič = 1908 [Brinec?] × Marija Dehlič — MATI ISTA!)",
+    "DEHLIČ ×3 v eni vrstici (mati + boter + botrinja)",
+    "očetova celica pocepana — branje Brinec? po genetski opori (h23 = Brinec 1893/1894/1897/1900/1905)",
+    "Vere/Spola/Stanu = 1/1/1"
+   ]
+  },
+  {
+   "row": 57,
+   "year": 1908,
+   "month": "Avgust",
+   "born": "20.",
+   "baptized": "20.",
+   "village": "Griblje",
+   "houseNo": "65",
+   "scan": 195,
+   "page": 177,
+   "child": "Marija",
+   "father": "Matija Milek, ¼ zemljak (MILEK kontinuiteta — Kurrent variante Milek/Mihelt/Mihek/Mitek 1887–1904)",
+   "mother": "Marija Hevič? [~ — cf. 1904 mati Marija Hrišič? — morda ISTA]",
+   "botra": "Peter Pezdirec + Katarina Hevič?, ¼ zemlj",
+   "babica": "Barbara Adlešič",
+   "priest": "Gregor Cerar",
+   "notes": [
+    "h65 = 9. VPIS — MILEK 1887–1908 (8 priorov; mati menjava: Katarina Požek/Trojžif/Jožek/Šošt/Tožek/Pošek 1887–1901 → Marija Hrišič? 1904 → Marija Hevič? 1908)",
+    "boter Peter Pezdirec ISTA kot 1887 — 21 LET kasneje!",
+    "babica Barbara Adlešič = botrinja 1887 (h65 1887: botra Peter Pezdirc + Barbara Adlešič)",
+    "dojenček † 4/9.1919 (svinčnik)",
+    "Vere/Spola/Stanu = 1/1/1"
+   ]
+  },
+  {
+   "row": 65,
+   "year": 1908,
+   "month": "Oktober",
+   "born": "3.",
+   "baptized": "4.",
+   "village": "Griblje",
+   "houseNo": "46",
+   "scan": 196,
+   "page": 178,
+   "child": "Alojzij",
+   "father": "Anton Brodarič, ¼ zemljak",
+   "mother": "Katarina Milek",
+   "botra": "Nikolaj Željko + Ana Pezdirec, ¼ zemlj",
+   "babica": "Marija Adlešič",
+   "priest": "Jos. Ravq",
+   "notes": [
+    "h46 = 6. VPIS — ISTA OČE Anton Brodarič cf. 1893–1899 (VRZEL 9 LET 1900–1907; 6. mati? Katarina Milek NOVA)",
+    "EMŠO č.: 0310908500848 (3.10.1908 ž — SKLADNO s rojstvom 3.10., krsta 4.10.) — 2. od 6 sidr",
+    "boter Nikolaj Željko (ŽELJKO signal cf. h60/h83)",
+    "poročen 16.9.1939 (modri pripis)",
+    "Vere/Spola/Stanu = 1/1/1"
+   ]
+  },
+  {
+   "row": 66,
+   "year": 1908,
+   "month": "Oktober",
+   "born": "4.",
+   "baptized": "5.",
+   "village": "Griblje",
+   "houseNo": "30",
+   "scan": 196,
+   "page": 178,
+   "child": "Leopold",
+   "father": "Nikolaj Segina, ¼ zemljak",
+   "mother": "Katarina Brinec",
+   "botra": "Marija Milek + Katarina Kržan?, ¼ zemlj",
+   "babica": "Barbara Adlešič",
+   "priest": "Gregor Cerar",
+   "notes": [
+    "h30 = 11. VPIS — SEGINA POVRAT po 1906 Brinec interludu (1895/96 Nikolaj Šegina? → 1902/03 Nikolaj Segina → 1906 Matija Brinec → 1908 Nikolaj Segina!)",
+    "mati Katarina Brinec ISTA kot 1903 (h30 1903: Nikolaj Segina × Katarina Brinec) — par POVRAT 2. leto skupaj po 5 letih",
+    "EMŠO č.: 0410908500444 (4.10.1908 m — SKLADNO s rojstvom 4.10., krsta 5.10.) — 3. od 6 sidr",
+    "poročen 18.10.1951 [~ — modri pripis]",
+    "Vere/Spola/Stanu = 1/1/1"
+   ]
+  },
+  {
+   "row": 68,
+   "year": 1908,
+   "month": "Oktober",
+   "born": "8.",
+   "baptized": "9.",
+   "village": "Griblje",
+   "houseNo": "49",
+   "scan": 196,
+   "page": 178,
+   "child": "Barbara",
+   "father": "Nikolaj Brodarič, ½ zemljak",
+   "mother": "Marija Milek? [~ — 1906 mati Marija Miheč?, 1907 Ana Milek? — variante]",
+   "botra": "Jurij Pezdirec + Katarina Boble? [~], ¼ zemlj",
+   "babica": "Marija Muc",
+   "priest": "Jos. Ravq",
+   "notes": [
+    "h49 = 4. VPIS ISTA — Brodarič kontinuiteta (1899 Nikolaj Brodarič × Marjeta Milek → 1906/1907 → 1908; 1907 dojenček † 17.11.)",
+    "EMŠO č.: 0810908505763 (8.10.1908 ž — SKLADNO s rojstvom 8.10., krsta 9.10.) — 4. od 6 sidr",
+    "poročena 13.3.1936 + umrla 16.9.1987 v Gribljah (modri pripisi)",
+    "boter Jurij Pezdirec — 1. od 3 pojavitev v 1908 (r68+r69+r79)",
+    "Vere/Spola/Stanu = 1/1/1"
+   ]
+  },
+  {
+   "row": 69,
+   "year": 1908,
+   "month": "Oktober",
+   "born": "17.",
+   "baptized": "17.",
+   "village": "Griblje",
+   "houseNo": "56",
+   "scan": 196,
+   "page": 178,
+   "child": "Danijel",
+   "father": "Janez Jerčinovič? [~ — Jereinovič/Jercimovič], ¼ zemljak",
+   "mother": "Doroteja Štrucelj",
+   "botra": "Jurij Pezdirec + Katarina Kržan?, ¼ zemlj",
+   "babica": "Barbara Adlešič",
+   "priest": "Gregor Cerar",
+   "notes": [
+    "h56 = 3. VPIS — VRZEL 20 LET (1886 Janez Šimec × Dora Perdinec → 1888 nezakonski Ana Šimec → 1908 NOVA DRUŽINA Jerčinovič? × Štrucelj)",
+    "mati Doroteja Štrucelj = r47 botrinja (CROSS-ROW LINK; r47 botra Janez Križan + Doroteja — ena+družina)",
+    "boter Jurij Pezdirec — 2. od 3 pojavitev v 1908 (ISTI boter 2. dan zapored r68+r69)",
+    "poročen 13.5.1934; umrl 12.3.1976 v Novem mestu (modri pripisi)",
+    "Vere/Spola/Stanu = 1/1/1"
+   ]
+  },
+  {
+   "row": 70,
+   "year": 1908,
+   "month": "Oktober",
+   "born": "21.",
+   "baptized": "21.",
+   "village": "Griblje",
+   "houseNo": "36",
+   "scan": 196,
+   "page": 178,
+   "child": "Amalija",
+   "father": "Janez Križan, ¼ zemljak",
+   "mother": "Katarina Štrucelj [~ — 1894–1902 mati Katarina Straucelj/Straus — ISTA]",
+   "botra": "Matija Štraus + Marija Perdinec? [Pezdirec?], ¼ zemlj",
+   "babica": "Barbara Adlešič",
+   "priest": "Gregor Cerar",
+   "notes": [
+    "h36 = 11. VPIS — KRIŽAN POVRAT (1894/1896/1898/1902 Janez Križan × Katarina Straucelj → 1904 Miše interlud → 1908 ISTA ZVEZA vrne)",
+    "boter Matija Štraus — ŠTRAUS kampanja (cf. 04455 Straus × Spudič lead)",
+    "poznejši pripis [~ — + 1961?]",
+    "Vere/Spola/Stanu = 1/1/1"
+   ]
+  },
+  {
+   "row": 79,
+   "year": 1908,
+   "month": "November",
+   "born": "20.",
+   "baptized": "? [~ — pokrita s pripisom »Žena umrla dne 23.08.2001 …«]",
+   "village": "Griblje",
+   "houseNo": "90",
+   "scan": 197,
+   "page": 179,
+   "child": "Frančišek",
+   "father": "Franjo Kalan, učitelj [~ — »Fran. Kalan«]",
+   "mother": "Marija Verhovnik? [~]",
+   "botra": "Jurij Pezdirec + Marija Županič, ¼ zemlj",
+   "babica": "Ana Mavrenič",
+   "priest": "Jos. Ravq",
+   "notes": [
+    "h90 = 5. VPIS — TRETJA UČITELJSKA DRUŽINA (1890/92 Franc Kopitar uč. → 1898/1900 Alojzij Vetročnik uč. → 1908 Franjo Kalan uč.! — hiša = učiteljski stan)",
+    "VRZEL 8 LET (1900 → 1908)",
+    "hišna forenzika: jasno 90 na OBOJIH dup skenih (na 197 pod belo nalepko leveje)",
+    "boter Jurij Pezdirec — 3. pojavitev v 1908 (r68+r69+r79)",
+    "poročen 28.11.1940 v Subotici? [~]; žena umrla 23.08.2001 v slapšicah; žig FRIEDMANN + Krauj 2001 pripisi (moderni)",
+    "Vere/Spola/Stanu = 1/1/1"
+   ]
+  },
+  {
+   "row": 84,
+   "year": 1908,
+   "month": "December",
+   "born": "3. [~]",
+   "baptized": "? [~ — postrgano]",
+   "village": "Griblje",
+   "houseNo": "?",
+   "scan": 197,
+   "page": 179,
+   "child": "Jožef",
+   "father": "?gar Jožek [~ — morda Žagar/Star; postrgano], ½ zemljak",
+   "mother": "Katarina Kure",
+   "botra": "Janez Kukan? [~] + Marija Šimec, ¼ zemlj",
+   "babica": "Mehrič? [~ — ali Meh; celica na postrganem robu]",
+   "priest": "Jos. Ravq",
+   "notes": [
+    "HIŠA NEBERLJIVO — spodnji rob str. 179 POSTRGAN (papir fizično manjka na OBOJIH dup skenih 197+198); vas Griblje berljiva na obeh",
+    "pričevanje-samo: brez vitals bloka po P84/P102 (r4) konvenciji — EV_ONLY",
+    "KURE signal: mati Katarina Kure (cf. r90 mati Ana Kure + ŽELJKO×KURE krog P102 r4)",
+    "žig FRIEDMANN nad r83/r84 (moderni)",
+    "Vere/Spola/Stanu = 1/1/1 [~]"
+   ]
+  },
+  {
+   "row": 88,
+   "year": 1908,
+   "month": "December",
+   "born": "26.",
+   "baptized": "27.",
+   "village": "Griblje",
+   "houseNo": "11",
+   "scan": 199,
+   "page": 180,
+   "child": "Janez",
+   "father": "Janez Žumič, ¼ zemljak",
+   "mother": "Marija Jakobčič [~ — 1905 mati Marija Jakofčič? — ISTA]",
+   "botra": "Janez Adlešič + Neža Adlešič, ½ zemlj",
+   "babica": "Marjeta Vötter",
+   "priest": "Gregor Cerar",
+   "notes": [
+    "h11 = 5. VPIS ISTA familija — ŽUMIČ (1890 Zumik, 1905 Žumě?, 1907 Žumič; mati ISTA Marija Jakobčič/Jakofčič cf. 1905)",
+    "babica Marjeta Vötter — VRNITEV (1907: Vötter 0× na Gribljih; spelling Sotter 1889 → Toter 1901–05 → Vötter 1906 → Vötter 1908)",
+    "EMŠO č.: 2612908500224 (26.12.1908 m — SKLADNO s rojstvom 26.12., krsta 27.12.) — 5. od 6 sidr",
+    "poročen 3.2.1931 (modri pripis)",
+    "Vere/Spola/Stanu = 1/1/1"
+   ]
+  },
+  {
+   "row": 90,
+   "year": 1908,
+   "month": "December",
+   "born": "28.",
+   "baptized": "29.",
+   "village": "Griblje",
+   "houseNo": "10",
+   "scan": 199,
+   "page": 180,
+   "child": "Matija",
+   "father": "Janez Brinec, ¼ zemljak",
+   "mother": "Ana Kure [~ — 1907 mati Ana Klepec? — MATI MENJAVA]",
+   "botra": "Janez Muc, bajtar (= r31 h91 oče; 2. CROSS-ROW pojav v 1908!) + Marija Kure, ¼ zemlj",
+   "babica": "Barbara Adlešič",
+   "priest": "Gregor Cerar",
+   "notes": [
+    "h10 = 4. VPIS — BRINEC ISTA (1897 Janez Brinec × Marija Perdune → 1900 Grabrijan interlud → 1907 Janez Brinec × Ana Klepec dvojčka → 1908 Janez Brinec ¼ × Ana Kure)",
+    "ZADNJA vrstica 1908 (glava 1909 INLINE na r91 = ista str. 180)",
+    "EMŠO č.: 2812908500042 (28.12.1908 m — SKLADNO s rojstvom 28.12., krsta 29.12.) — 6. od 6 sidr",
+    "botra Janez Muc bajtar + Marija Kure = ISTI BOTER PAR kot 1907 r85 (Janez Muc kovač + Katarina Kure)",
+    "boter Janez Muc bajtar = r31 h91 oče (CROSS-ROW LINK 2×; cf. r27 boter Janez Muc kovač)",
+    "poročen 14.5.1933 + umrl 20.04.1986 v Novem mestu (modri pripisi)",
+    "Vere/Spola/Stanu = 1/1/1"
+   ]
+  }
+ ],
+ "excluded": [
+  {
+   "row": 1,
+   "reason": "Krasinec 38(?) August — P102 lead hiša »58« revidirana na 38 [~]; ne Griblje",
+   "note": "prvi vpis leta 1908 (1./1. Januar); pripis †1949.08 [~]"
+  },
+  {
+   "row": 28,
+   "reason": "Prilozje? [~ — pisano »Pri-loxje« cf. r71 Prilozje iste strani] 28 Alojzij — NE Griblje",
+   "note": "oče Jurij Segina ¼ × Marija Černič; prvo branje »Griblje« revidirano (kraj forenzika — cf. P101 r73 Prilozje 25)"
+  },
+  {
+   "row": 42,
+   "reason": "Škrilje 24 Avguštin — NE Griblje (cf. P93 »Škrilje? [~]«)",
+   "note": "oče Martin Jurajevič × Marijana; dup par 193/194 oba jasna; † 23/10.08"
+  },
+  {
+   "row": 44,
+   "reason": "Goršt? [~] 19 Mrtvorojen — mrtvorojeni (brez podpisa)",
+   "note": "20./20. Junij; cf. P101/P102 mrtvorojeni excluded"
+  },
+  {
+   "row": 59,
+   "reason": "Štriglje? [~ — vas NI v matičnem območju seznama; branje jasno Štriglje] 2 Angela — NE Griblje",
+   "note": "modri pripis: umrla 11.2.1905 v Gribljah št. 65? [~ — cf. h65]; poročena 13.5.1934"
+  },
+  {
+   "row": 74,
+   "reason": "Prilozje 25 Alojzij — NE Griblje (ISTA hiša kot P102 r73 Prilozje 25!)",
+   "note": "pripis: »Posestvo pridruženo s sklepom Temeljnega sodišča Novega mesta … z dne 21.5.1981 … l. 1991, str. 24, zap. št. 25«; hišna celica = 25 (originalen črnil)"
+  },
+  {
+   "row": 89,
+   "reason": "NEBERLJIVO — bel trak (Metlika 1996 matični pripis) krije celoten podatkovni blok",
+   "note": "B-stran berljiva: oče Matija Muc ½ × mati Marija Gregorič, botra Martin + Marija Perdinec ¼ zemljak, babica Ana Muc, podpis Gregor Cerar — vas/hiša/ime ostajajo skriti [pričevanje]"
+  }
+ ],
+ "anomalies": [
+  "r41 NUJNI KRST — »v sili krščen?«; botra + podpis PRAZNA (črti); babica Marija Muc; dojenček † 29.5.1908 (5 dni) — edini prazen duhovnik na Gribljih 1908",
+  "r84 HIŠA NEBERLJIVA — postrgan rob str. 179 (papir manjka); pričevanje-samo; EV_ONLY",
+  "r89 pod trakom — Metlika 1996 matični pripis krije A-blok; B-stran: Matija Muc × Marija Gregorič",
+  "r31 pripisno neskladje poroke (modri 6.10.1938 vs zeleni 16.3.1938 [~]) — cf. r61/1907",
+  "r23 krsta skrita pod matičnim pripisom (umrla 21.10.1986)",
+  "r55 očetova celica RAZTRGANA (vertikalni strgljek) — branje Brinec? po genetski opori",
+  "r79 krsta pokrita s pripisom (žena umrla 2001)",
+  "r79/r90 UČITELJSKA hiša h90 — tretja učiteljska družina (Kopitar 1890/92 → Vetročnik 1898/1900 → Kalan 1908)",
+  "r27 + r90 CROSS-ROW: boter Janez Muc (kovač/bajtar) = r31 h91 oče — 2× boter v istem letu",
+  "r68+r69 ISTI boter Jurij Pezdirec 2. dan zapored; r68+r69+r79 3× skupaj",
+  "r47↔r69 CROSS-ROW: botrinja Doroteja (Jerčinovič?) = mati Doroteja Štrucelj",
+  "r57 boter Peter Pezdirec ISTA kot 1887 — 21 LET (najdaljša botrska kontinuiteta v vzorcu?)",
+  "žig »FRIEDMANN« str. 179 (moderni; nad r83) + žig Zgodovinski arhiv Metlika (r79)",
+  "prestopni 29. 2. 1908 (r22 Griblje 60!)",
+  "TRI dup pari (189/190, 193/194, 197/198) — vsi TRIJE z berljivimi dopolnitvami (r6 na 190, r47 na 194, r79 na 198)",
+  "EMŠO kampanja: 6 sidr na Gribljih — VSI SKLADNI",
+  "NARE 18/18 — po 1907 prelomu (h10 ×2) spet brez ponovitev",
+  "0 NOVIH hiš — 4. leto v vzorcu 1905–1908 (0/1/0/0)",
+  "h24 = 13. VPIS — najbolj vpisovana hiša še naprej",
+  "r91/1909: glava 1909 INLINE (ne ločena stran) — 1909 r1 = Dobraviče 26 Anton; podpis »P. Gregor Cerar coop.« na 1909 r1 (NE na Gribljih)"
+ ],
+ "stats": {
+  "entries": 19,
+  "distinctHouses": 18,
+  "housesWritten": [
+   "10",
+   "11",
+   "14",
+   "16",
+   "23",
+   "24",
+   "30",
+   "36",
+   "44",
+   "46",
+   "49",
+   "52",
+   "56",
+   "60",
+   "65",
+   "85",
+   "90",
+   "91"
+  ],
+  "housesIllegible": 1,
+  "newSampleHouses": 0,
+  "newHouseNos": [],
+  "intraYearRepeats": 0,
+  "intraYearRepeatsNote": "NARE 18/18 — po 1907 prelomu (h10 ×2) spet brez intra-letne ponovitve (1908: 18 vpisov / 18 hiš)",
+  "pt": {
+   "inNabor": 12,
+   "inGap": 6,
+   "inGapHouses": [
+    "44",
+    "46",
+    "49",
+    "52",
+    "56",
+    "60"
+   ]
+  },
+  "vitals": 374,
+  "cumulative": {
+   "entries": 382,
+   "houses": 85,
+   "years": 23
+  },
+  "babica": {
+   "griblje": "18/18 imenovanih (brez praznih)",
+   "muc": "6 (r22/r27/r41/r46/r47/r68)",
+   "barbaraAdlesic": "7 (r16/r23/r57/r66/r69/r70/r90)",
+   "meh": "2 (r31/r55)",
+   "anaMavrenic": "1 (r79)",
+   "marjetaVotter": "1 (r88 — VRNITEV po 0× 1907)",
+   "mehric": "1 (r84 — postrgano [~])"
+  },
+  "duhovniki": {
+   "griblje": "Gregor Cerar 12 + Jos. Dami 1 (NOV DUHOVNIK; r23 — 2. podpis v letu z r18) + Jos. Ravq 4 (r65/r68/r79/r84) + prazna 1 (r41 NUJNI KRST)",
+   "celoLeto": "Gregor Cerar dominantni (Januar–December) + Jos. Ravq paralelen (Oktober–December + r87) + NOV Jos. Dami (Marec ×2) + r91/1909 P. Gregor Cerar coop. (dual/coop žig na 1909 r1)"
+  }
+ },
+ "crossChecks": {
+  "nare": "18/18 — brez ponovitev (1907 prełom h10 ×2 popravljen)",
+  "brinecKampanja": "h14 r16 + h24 r23 + h30 r66 mati + h10 r90 + r55 Brinec? — 5 signalov; h24 13. VPIS Brincova hiša",
+  "kureKampanja": "r84 mati Katarina Kure + r90 mati Ana Kure + r90 botrinja Marija Kure + h91 mati Ana Kure — 4 signali",
+  "pezdirecKampanja": "r41 oče + r46 oče + r65 botrinja Ana + r68/r69/r79 boter Jurij ×3 + r57 boter Peter (21 LET!) + r70 botrinja — 8 signalov",
+  "milekKampanja": "r23 mati + r57 oče Matija + r65 mati Katarina + r66 botra + r68 mati — 5 signalov (h65 Milek 9. VPIS)",
+  "krizanKampanja": "r41 mati Ana Kržan? + r46 botrinja + r66 botrinja + r70 oče Janez Križan — 4 signali",
+  "struceljKampanja": "r47 oče + r69 mati Doroteja + r70 mati Katarina — 3 signali (cf. 1906/1907 h44/h5)",
+  "zeljkoKampanja": "r22 oče Nikolaj (h60 8. VPIS) + r65 boter Nikolaj — 2 signali",
+  "seginiaPovrat": "r66 h30 Nikolaj Segina POVRAT (1902/03 → 1906 Brinec → 1908); mati Katarina Brinec ISTA 1903",
+  "h90Uciteljska": "r79 Kalan uč. — 3. učiteljska družina (Kopitar → Vetročnik → Kalan)",
+  "h52Hlevic10Let": "r46 ISTA ZVEZA čez 10 let (Podrinc/Pendirec ≈ Pezdirec + Jakobič ≈ Jakobčič)",
+  "h56H85Vrzeli20Let": "r69 h56 + r41 h85 — obe VRZEL 20 LET (1888 → 1908)",
+  "h23Dehlic8Let": "r55 mati Marija Dehlič ISTA kot 1900 (Brinec × Dehlič)",
+  "nujniKrst": "r41 — edini v vzorcu P79–P103? (botra+podpis prazna, pripis »v sili krščen?«)",
+  "emsoSkladnost": "6 sidr (r31/r65/r66/r68/r88/r90) — VSI SKLADNI z rojstnimi datumi (+krsta +1 dan)",
+  "votterVrnitev": "babica Marjeta Vötter r88 (1907: 0×; Sotter 1889 → Toter 1901–05 → Vötter 1906 → Vötter 1908 — ISTA Marjeta? MERI)",
+  "glava1909": "INLINE r91 = sken 199 (1909 r1 = Dobraviče 26 Anton 7./7. Januar, EMŠO 0701909500220) — P104 lead"
+ }
+}

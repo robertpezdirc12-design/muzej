@@ -5657,3 +5657,95 @@ poročna razreši); ④ h51 (ZADNJA nedokazana številka luknje 41–60!); ⑤
 produkcija Vercel: dohiti P102 → QA 103/103; ⑥ babica Šotter = Toter =
 Vötter (ISTA Marjeta — trije zapisi, MERI čez leta 1889–1907); ⑦ P. Janez
 Kmetij? (r4 podpis januar 1907 — kdo je? cf. matrikulacija).
+
+## §78 · P103 — župnija Podzemelj, krstna knjiga 04105, polno leto 1908 (issue #18; 2026-10-18)
+
+**Vir:** Matricula Online, krstna knjiga 04105 (1886–1919); skeni 189–200 preneseni v
+/tmp/p103 (p103_fetch po vzoru P102; inventar 326 ✓). Izrezi read/s{N}-A/B.png +
+pasovi p17x-left/right + hišne forenzike 3.2–8×.
+
+**Okvir 1908:** glava »Leto 18 1908« na str. 173 = skeni **189/190** (dup par — P102
+lead POTRJEN; 1908 r1 = Krasinec 38(?) August, 1./1. Januar — hiša forenzika **38** vs
+lead 58); row 90 = str. 180 (sken 199); **glava »1909« INLINE na r91** (= isti sken;
+1909 r1 = Dobraviče 26 Anton, 7./7. Januar, EMŠO 0701909500220 pripis — **P104 lead**).
+90 vrstic (str. 173–180). **NOVELA P103 — TRIJE novi dup pari:** 189/190 = str. 173 +
+193/194 = str. 176 + 197/198 = str. 179 — vsi trije z berljivimi dopolnitvami (r6
+Gradac 28 na 190, r47 na 194 — na 193 pod trakom, r79 na 198 — na 197 pod nalepko);
+stran == sken − 16 (189) / − 17 (190–193) / − 18 (194–197) / − 19 (198–199).
+
+**VSI vpisi z Griblji: 19 vpisov / 18 hiš + 1 neberljiva** — NARE 18/18 (po 1907
+prelomu h10 ×2 spet brez intra-letne ponovitve); **0 NOVIH hiš** (4. leto: 1905 0 /
+1906 1 / 1907 0 / 1908 0 — VSE 18 hiš že zasidrane); PT 12/6 (44+46+49+52+56+60 v
+luknji 41–60 — ponovitve; luknja ostaja samo h51); kumulativ **382 vpisov / 85 hiš /
+DVAINDVAJSET+ENO let** (1886–1908; 374 vitals).
+
+**SIDRA (izbor):** r16 h14 **4. VPIS ISTA familija** (Brinec; botra = babica ISTA
+Barbara Adlešič ×2!); r22 h60 **8. VPIS ISTA ZVEZA** (Željko × Brodarič — 5. OTROK;
+**PRESTOPNI 29. 2. 1908!**; botrinja Marija Klepec 4.×); r23 h24 **13. VPIS — ŠE VEDNO
+najbolj vpisovana hiša registra** (Brincova hiša POVRAT); r27 h16 8. VPIS (**NOVAK
+bajtar POVRAT** cf. 1900; več-družinska hiša 7 menjav; **CROSS-ROW boter Janez Muc
+kovač = r31 h91 oče!**); r31 h91 5. VPIS ISTA (Muc bajtar × Ana Kure; EMŠO
+2204908500557; pripisno neskladje poroke modri 6.10.1938 vs zeleni 16.3.1938); r41
+h85 2. VPIS — **NUJNI KRST** (»v sili krščen?«; botra + podpis PRAZNA — črti; babica
+Marija Muc krstiteljica; **VRZEL 20 LET**; dojenček † 29.5.1908, 5 dni); r46 h52 3.
+VPIS — **ISTA ZVEZA čez 10 LET** (1898 Podrinc/Pendirec × Jakobič = 1908 Pezdirec ×
+Jakobčič — Kurrent variante ISTEGA para); r47 h44 5. VPIS (Štrucelj ISTA oče cf.
+1906; botrinja Doroteja = r69 mati CROSS-ROW); r55 h23 7. VPIS — **ISTA ZVEZA čez 8
+LET** (Brinec? × Marija Dehlič — MATI ISTA kot 1900; očetova celica RAZTRGANA —
+branje po genetski opori; DEHLIČ ×3 v vrstici); r57 h65 **9. VPIS — MILEK 1887–1908**
+(boter Peter Pezdirec ISTA kot 1887 — **21 LET kasneje!**; babica Barbara Adlešič =
+botrinja 1887); r65 h46 6. VPIS (ISTA OČE Anton Brodarič cf. 1893–99 — VRZEL 9 LET;
+EMŠO 0310908500848); r66 h30 11. VPIS — **SEGINA POVRAT** (1902/03 → 1906 Brinec
+interlud → 1908; mati Katarina Brinec ISTA kot 1903; EMŠO 0410908500444); r68 h49 4.
+VPIS ISTA (Brodarič; EMŠO 0810908505763; boter Jurij Pezdirec 1./3); r69 h56 3. VPIS
+— **VRZEL 20 LET** (NOVA družina Jerčinovič? × Štrucelj; boter Jurij Pezdirec 2./3 —
+2. dan zapored); r70 h36 11. VPIS — **KRIŽAN POVRAT** (ISTA zveza cf. 1894–1902; boter
+Matija Štraus); r79 h90 5. VPIS — **TRETJA UČITELJSKA DRUŽINA** (Kopitar uč. 1890/92 →
+Vetročnik uč. 1898/1900 → **Kalan uč. 1908**; boter Jurij Pezdirec 3./3); r88 h11 5.
+VPIS ISTA familija (Žumič; babica Marjeta Vötter **VRNITEV** po 1907 0×; EMŠO
+2612908500224); r90 h10 4. VPIS — **BRINEC ISTA** (mati menjava Ana Klepec? → Ana
+Kure; botra Janez Muc bajtar + Marija Kure = **ISTI BOTER PAR** kot 1907 r85; EMŠO
+2812908500042; ZADNJA vrstica 1908).
+
+**DUHOVNIKI NOVELA (na Gribljih 18 berljivih + r84):** Gregor Cerar 12 + **NOV
+DUHOVNIK Jos. Dami** 1 (r23 — marec; 2. podpis v letu = r18 Otok; paralelni
+Cerar/Ravq/Dami!) + Jos. Ravq 4 (r65/r68/r79/r84) + PRAZEN 1 (r41 NUJNI KRST); na
+1909 r1 podpis »P. Gregor Cerar coop.« (dual/coop žig — NE na Gribljih; cf. Škrabec
+coop. 1906).
+
+**BABICA NOVELA:** 18/18 imenovanih — Muc 6 + Adlešič 8 (Barbara 7 + Marija 1) + Meh
+2 + **Vötter 1 (VRNITEV: Sotter 1889 → Toter 1901–05 → Vötter 1906/1908 — ISTA
+Marjeta? MERI)** + Ana Mavrenič 1 + Mehrič? [~] 1; **MIH 0× (2. leto zapored!)**.
+
+**EMŠO kampanja:** 6 sidr na Gribljih (r31/r65/r66/r68/r88/r90) — **VSI SKLADNI**
+(+1 dan na krsti).
+
+**Anomalije:** r41 NUJNI KRST (edini v vzorcu P79–P103?); r84 **POSTRGAN rob str. 179**
+(papir fizično manjka na obojih dup skenih — hiša neberljiva, pričevanje-samo); r89 pod
+trakom (B-stran: Matija Muc × Marija Gregorič); r55 raztrgana očetova celica; r31/r23/
+r79 pokrite/pripisne celice; CROSS-ROW ×3 (r27+r90 boter Janez Muc = r31 h91 oče; r47
+botrinja = r69 mati; r68+r69 isti boter 2. dneva); žig »FRIEDMANN« str. 179 (moderni);
+kraj forenzika **r28 Prilozje?** (»Pri-loxje« cf. r71) + **r42 Škrilje** (cf. P93) +
+**r59 Štriglje?** + **r74 Prilozje 25** (ISTA hiša kot P102 r73!) — štiri revidirana
+prva branja; EXCLUDED 7.
+
+**Pipeline:** dokaz research/issue17/parish-baptism-1908.json (19 entries + 7
+excluded + 20 anomalij + canonical stats); verifikator scripts/p103_parish_baptism_1908.py
+(I1–I10 — prvi tek 3 FAIL: JSON babica objekt + I6 houses_numeric int/str + I7 r90
+pini — popravljeno; **I1–I10 VSE PASS**); parish.ts 18 blokov 1908 (vitals 356 →
+**374**); qa-parish.ts qa-p103 (104. kontrola) + allow liste + 1908 (qa-p85 h30+h90 /
+qa-p88 h23+h46+h91 / qa-p91 h14 / qa-p92 h10 / qa-p94 h49) + vitals 374 + **regresije**:
+p80 (vitals 374), p85–p99 vitals 374 + kumulativ 382 + EV_ONLY 7 → 8 (r84!) + horizon
+filtri + 1908 (p85–p99 terke), p100/p101/p102 BLOCKS_04105 330 → 348 — vseh **25
+skript p79–p103** `--check` PASS (exit 0). Kartica NI dodana (vzorec P77–P103). tsc 0
+/ lint 0; **/api/qa dev 104/104** (qa-p103 True); v7 NESPREMENJEN.
+
+**nextSteps**: ① **P104 = leto 1909** (glava »1909« INLINE na r91 = sken 199; 1909 r1
+= Dobraviče 26 Anton, 7./7. Januar; podpis »P. Gregor Cerar coop.«; skeni 200+
+prenesti — s200 = str. 181 že v /tmp/p103); ② mrliška knjiga 04894 1887–1896: smrti
+prvih žen + dojenčki † iz krstnih (r41 h85 † 29.5.1908 lead!); ③ poročna 04455:
+**Straus × Spudič** (krstno 5×; 1906 2. Štrausov par h15 [MERI] — poročna razreši);
+④ h51 (ZADNJA nedokazana številka luknje 41–60!); ⑤ produkcija Vercel: dohiti P103 →
+QA 104/104; ⑥ babica Šotter = Toter = Vötter (ISTA Marjeta — štirje zapisi 1889–1908,
+MERI); ⑦ Jos. Dami (nov duhovnik 1908 — kdo je? cf. matrikulacija); ⑧ »FRIEDMANN« žig
+na str. 179 (moderni rešerš — kdo?).

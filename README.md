@@ -16,7 +16,7 @@ lestvica zanesljivosti, odprti podatki in časovnica od prve omembe vasi leta **
   [register PS — parcelna rekonstrukcija (P54–P76)](#register-ps--parcelna-rekonstrukcija-p54p76) ·
   [arhivska forenzika + žetoni (P77–P78)](#arhivska-forenzika-in-žetoni-p77p78) ·
   [župnija Podzemelj — matične knjige (P79–P99)](#župnija-podzemelj--matične-knjige-p79p99)
-- [Zadnje stanje raziskave](#zadnje-stanje-raziskave-po-p102--2026-10-18) · [Varnost](#varnost)
+- [Zadnje stanje raziskave](#zadnje-stanje-raziskave-po-p103--2026-10-18) · [Varnost](#varnost)
 
 ## Značilnosti
 
@@ -627,7 +627,10 @@ Do konca P99: **313 vpisov / 84 hiš / devetnajst let** (1886–1904), QA **100/
 
   `scripts/p102_parish_baptism_1907.py` (**I1–I10**, `--check` PASS) + dokaz `research/issue17/parish-baptism-1907.json` (SAMPLE-TRANSCRIPTION-1907; MERI, NE odloča).
 
-## Zadnje stanje raziskave (po P102 · 2026-10-18)
+
+- **župnija Podzemelj — krstna knjiga 04105, polno leto 1908 (P103, issue #18)** — §77 nextSteps ①: širitev vzorca po letih (MERI, NE odloča; **v7 join nespremenjen**): vir **Matricula Online**, krstna **04105 1886–1919**; **okvir 1908: glava »Leto 18 1908« na str. 173 = skeni 189/190 (dup par — P102 lead POTRJEN; 1908 r1 = Krasinec 38(?) August 1./1. Januar — hiša forenzika 38 vs lead 58) – row 90 str. 180 (sken 199; glava »1909« INLINE na r91 = isti sken; 1909 r1 = Dobraviče 26 Anton — P104 lead) == strani 173–180 (90 vrstic)**; **NOVELA P103 — TRIJE novi dup pari skenov** (189/190 = str. 173 + 193/194 = str. 176 + 197/198 = str. 179 — vsi trije z berljivimi dopolnitvami: r6 na 190, r47 na 194, r79 na 198); **stran == sken − 16 (189) / − 17 (190–193) / − 18 (194–197) / − 19 (198–199)** — **VSI vpisi z Griblji: 19 vpisov / 18 hiš + 1 NEBERLJIVA (r84 — POSTRGAN rob str. 179, papir fizično manjka; pričevanje-samo)** — **NARE 18/18** (po 1907 prelomu spet brez intra-letne ponovitve) — **0 NOVIH hiš** (4. leto: 0/1/0/0 — VSE 18 hiš že zasidrane) — skupaj s P79–P102 vzorec **382 vpisov / 85 hiš čez tri knjige in DVAINDVAJSET+ENO LET** (374 vitals); **PT 12/6** (44+46+49+52+56+60 v luknji — ponovitve; **luknja 41–60 ostaja samo h51**); **SIDRA**: r16 h14 4. VPIS ISTA familija (Brinec; **botra = babica ISTA Barbara Adlešič ×2**), r22 h60 **8. VPIS ISTA ZVEZA** (Željko × Brodarič — 5. otrok; **PRESTOPNI 29. 2. 1908!**; Klepec botrinja 4.×), r23 h24 **13. VPIS — najbolj vpisovana hiša še naprej** (Brincova hiša povrat; **NOV DUHOVNIK Jos. Dami** — prvi podpis na Gribljih!), r27 h16 8. VPIS (**NOVAK bajtar POVRAT** cf. 1900; **CROSS-ROW boter Janez Muc kovač = r31 h91 oče**), r31 h91 5. VPIS ISTA (**Muc bajtar × Ana Kure**; EMŠO 2204908500557; pripisno neskladje poroke), r41 h85 2. VPIS — **NUJNI KRST** (»v sili krščen?«; **botra + podpis PRAZNA** — črti; babica Marija Muc krstiteljica; **VRZEL 20 LET**; dojenček † 29.5.), r46 h52 3. VPIS (**ISTA ZVEZA čez 10 LET** — Podrinc/Pendirec ≈ Pezdirec + Jakobič ≈ Jakobčič), r47 h44 5. VPIS (Štrucelj ISTA oče; **botrinja Doroteja = r69 mati CROSS-ROW**; forenzika na dup skenu 194), r55 h23 7. VPIS (**ISTA ZVEZA čez 8 LET** — Brinec? × Marija Dehlič ISTA mati kot 1900; celica RAZTRGANA; DEHLIČ ×3), r57 h65 **9. VPIS — MILEK 1887–1908** (boter Peter Pezdirec ISTA kot 1887 — **21 LET!**; babica = botrinja 1887), r65 h46 6. VPIS (ISTA oče Brodarič — VRZEL 9 LET; EMŠO; boter Nikolaj Željko), r66 h30 **11. VPIS SEGINA POVRAT** (mati Katarina Brinec ISTA kot 1903; EMŠO 0410908500444), r68 h49 4. VPIS ISTA (Brodarič; EMŠO; boter Jurij Pezdirec 1./3), r69 h56 3. VPIS **VRZEL 20 LET** (nova družina Jerčinovič? × Štrucelj; boter Jurij Pezdirec 2./3 — 2. dan zapored), r70 h36 11. VPIS (**KRIŽAN POVRAT** — ISTA zveza cf. 1894–1902; boter Matija Štraus), r79 h90 5. VPIS (**TRETJA UČITELJSKA DRUŽINA**: Kopitar 1890/92 → Vetročnik 1898/1900 → **Kalan 1908**; boter Jurij Pezdirec 3./3), r88 h11 5. VPIS ISTA familija (Žumič; **babica Vötter VRNITEV** po 1907 0×; EMŠO 2612908500224), r90 h10 4. VPIS (**BRINEC ISTA**; mati menjava Ana Klepec? → Ana Kure; botra Janez Muc + Marija Kure = **ISTI BOTER PAR kot 1907 r85**; EMŠO 2812908500042; ZADNJA vrstica 1908); **DUHOVNIKI: NOV Jos. Dami (r23!; 2. podpis v letu) + Cerar 12 + Ravq 4 + PRAZEN 1 (r41 nujni krst); na 1909 r1 »P. Gregor Cerar coop.«**; **BABICA: 18/18 imenovanih — Muc 6 + Adlešič 8 + Meh 2 + Vötter 1 (VRNITEV; Sotter→Toter→Vötter ISTA Marjeta?) + Mavrenič 1 + Mehrič? 1; MIH 0× 2. leto zapored**; **EMŠO 6 sidr na Gribljih — VSI SKLADNI (+1 dan)**; ANOMALIJE: nujni krst r41, postrgan rob r84, r89 pod trakom (B-stran Muc × Gregorič), CROSS-ROW ×3, žig »FRIEDMANN« str. 179, kraj forenzika r28 Prilozje? + r42 Škrilje + r59 Štriglje? + r74 Prilozje 25 (ISTA hiša kot P102 r73!); EXCLUDED 7;
+
+## Zadnje stanje raziskave (po P103 · 2026-10-18)
 
 - **Runtime join**: `src/data/atlas/ps-parcels-geo.json` — **version 7**:
   **891 vrstic (32.3 %) / 879 base / multi 2 / cross 0 / ambRows 4**;
@@ -637,14 +640,14 @@ Do konca P99: **313 vpisov / 84 hiš / devetnajst let** (1886–1904), QA **100/
   v6 939 → **v7 891** — vsaka arhivirana v `research/issue17/` z delta
   dokazom (`v5Delta`/`v6Delta`/`v7Delta`); ohranjene vrstice med verzijami
   bajtno nespremenjene (lekcija P9).
-- **QA**: **103/103** — repo veja (dokazi v `research/`) + produkcija (brez
+- **QA**: **104/104** — repo veja (dokazi v `research/`) + produkcija (brez
   `research/`, izmerjeno iz runtime datotek); prek `GET /api/qa` na
-  produkciji. Veriga skript `p60–p67 + p70–p102 --check` bajtno PASS (p68 zamrznjen po C2;
-  p80–p102 = 23 župnijskih skript --check PASS). Matrične kontrole župnije (qa-p79/qa-p80/qa-p81/
-  qa-p82/qa-p83/qa-p84/qa-p85/qa-p86/qa-p87/qa-p88/qa-p89/qa-p90/qa-p91/qa-p92/qa-p93/qa-p94/qa-p95/qa-p96/qa-p97/qa-p98/qa-p99/qa-p100/qa-p101/qa-p102) v ločenem modulu `src/lib/qa-parish.ts` (P80: runQA telo
+  produkciji. Veriga skript `p60–p67 + p70–p103 --check` bajtno PASS (p68 zamrznjen po C2;
+  p80–p103 = 24 župnijskih skript --check PASS). Matrične kontrole župnije (qa-p79/qa-p80/qa-p81/
+  qa-p82/qa-p83/qa-p84/qa-p85/qa-p86/qa-p87/qa-p88/qa-p89/qa-p90/qa-p91/qa-p92/qa-p93/qa-p94/qa-p95/qa-p96/qa-p97/qa-p98/qa-p99/qa-p100/qa-p101/qa-p102/qa-p103) v ločenem modulu `src/lib/qa-parish.ts` (P80: runQA telo
   preseglo prag TS control flow analysis).
 - **Kartice**: P40–P76 vidne v zavihku *Prepisi Kurrent* v muzejskem UI;
-  vsaka vezana na API endpoint + dokaz + skripto. P77–P102 brez kartic
+  vsaka vezana na API endpoint + dokaz + skripto. P77–P103 brez kartic
   (inventarni/operativni/paleografski/imenski dokazi raziskovalne linije — strojno
   berljivi prek dokazov).
 - **Zrcaljenje**: GitLab `markec-group1/muzej` = **vir resnice**;
