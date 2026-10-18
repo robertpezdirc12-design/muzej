@@ -70,7 +70,7 @@ EXPECTED_PT_GAP = ["44", "54"]  # oba že v PT_GAP_KNOWN — brez novih številk
 EXPECTED_NEW_HOUSES = ["19"]    # h19 NOVA (PT nabor 1825)
 EXPECTED_REPEATS = 8            # 9 hiš − 1 nova
 EXPECTED_HOUSES_VITALS = 10
-EXPECTED_VITALS_TOTAL = 392     # HOUSE_VITALS 254 + 10 (P96: krstna 1901); P98: + 12 (1903); P99: + 19 (1904); P101: + 18 (1906); P102: + 15 (1907); P103: + 18 (1908); P104: + 18 (1909)
+EXPECTED_VITALS_TOTAL = 412     # HOUSE_VITALS 254 + 10 (P96: krstna 1901); P98: + 12 (1903); P99: + 19 (1904); P101: + 18 (1906); P102: + 15 (1907); P103: + 18 (1908); P104: + 18 (1909); P105: + 20 (1910)
 EV_ONLY_TOTAL = 8               # P84: 2 + P85: 3 + P86: 1 + P102: r4 (1) + P103: r84 (1) (P77–P83, P87–P96: 0)
 EV_ONLY_HOUSE_STRINGS = {"65 [~]"}  # P85 — edina imenovana EV-only hiša
 EXPECTED_PRIESTS = (7, 2)       # (Kulbinek?, Rauq) + Dostál 1
@@ -350,7 +350,7 @@ def verify():
     # (Kulbinek, Rauq) = (7, 2) + Dostál 1; † 2; nezakonski 0
     repeat_houses = sorted(
         (h for h in set(houses) if any(
-            (v["houseNo"] == h and v["bookSignature"] == BOOK_SIGNATURE and v["year"] not in (1901, 1902, 1903, 1904, 1905, 1906, 1907, 1908, 1909))
+            (v["houseNo"] == h and v["bookSignature"] == BOOK_SIGNATURE and v["year"] not in (1901, 1902, 1903, 1904, 1905, 1906, 1907, 1908, 1909, 1910))
             or (v["houseNo"] == h and v["bookSignature"] != BOOK_SIGNATURE)
             for v in vitals_all
         )), key=int)
@@ -375,7 +375,7 @@ def verify():
         and new_houses == EXPECTED_NEW_HOUSES
         and dokaz["stats"]["newSampleHouses"] == 1
         and n_entries_total == EXPECTED_VITALS_TOTAL
-        and n_entries_total + EV_ONLY_TOTAL == 400  # kumulativno po P104 (392 + 8)
+        and n_entries_total + EV_ONLY_TOTAL == 420  # kumulativno po P105 (412 + 8)
         and n_houses_total == 84  # P98: 80 vitals; P99: + 3 (h6, h42, h50); P100: + 0 (1905 brez novih); P101: + 1 (h4)
         and ev_only_houses == EV_ONLY_HOUSE_STRINGS
         and cumulative["entries"] == 270

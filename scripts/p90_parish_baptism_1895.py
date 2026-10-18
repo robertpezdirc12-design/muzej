@@ -57,7 +57,7 @@ PT_GAP_NEW = []                 # luknja 41–60: h46 ponovitev — brez novih �
 EXPECTED_NEW_HOUSES = ["20", "37", "87"]
 EXPECTED_REPEATS = 11           # 14 − 3 nove
 EXPECTED_HOUSES_VITALS = 15     # 15 vpisov (h24 2 bloka)
-EXPECTED_VITALS_TOTAL = 392     # HOUSE_VITALS 179 + 15 (p80 I7 pin); P91: + 14 (1896); P92: + 19 (1897); P93: + 12 (1898); P94: + 15 (1899); P95: + 16 (1900); P98: + 12 (1903); P99: + 19 (1904); P101: + 18 (1906); P102: + 15 (1907); P103: + 18 (1908); P104: + 18 (1909)
+EXPECTED_VITALS_TOTAL = 412     # HOUSE_VITALS 179 + 15 (p80 I7 pin); P91: + 14 (1896); P92: + 19 (1897); P93: + 12 (1898); P94: + 15 (1899); P95: + 16 (1900); P98: + 12 (1903); P99: + 19 (1904); P101: + 18 (1906); P102: + 15 (1907); P103: + 18 (1908); P104: + 18 (1909); P105: + 20 (1910)
 EV_ONLY_TOTAL = 8               # P84: 2 + P85: 3 + P86: 1 + P102: r4 (1) + P103: r84 (1) (P77–P83, P87–P90: 0)
 EV_ONLY_HOUSE_STRINGS = {"65 [~]"}  # P85 r?? — edina EV-only hiša z imenom (None × 4)
 # sidra/pins P90:
@@ -403,7 +403,7 @@ def verify():
     # ne smejo spreminjati zgodovinske klasifikacije novih/ponovljenih hiš (h20: 1897 ponovitev)
     vitals_pre96 = [
         v for v in vitals_all
-        if not (v["bookSignature"] == BOOK_SIGNATURE and v["year"] in (1896, 1897, 1898, 1899, 1900, 1901, 1902, 1903, 1904, 1905, 1906, 1907, 1908, 1909))
+        if not (v["bookSignature"] == BOOK_SIGNATURE and v["year"] in (1896, 1897, 1898, 1899, 1900, 1901, 1902, 1903, 1904, 1905, 1906, 1907, 1908, 1909, 1910))
     ]
     repeat_houses = [h for h in houses if any(
         v["houseNo"] == h and v["bookSignature"] == BOOK_SIGNATURE and v["year"] != 1895
@@ -431,7 +431,7 @@ def verify():
         and len(intra) == 1 and intra[0]["houseNo"] == "24"
         and sorted(intra[0]["rows"]) == [22, 48]
         and n_entries_total == EXPECTED_VITALS_TOTAL
-        and n_entries_total + EV_ONLY_TOTAL == 400  # kumulativno po P104 (392 + 8)
+        and n_entries_total + EV_ONLY_TOTAL == 420  # kumulativno po P105 (412 + 8)
         and n_houses_total == 84  # P98: 80 vitals; P99: + 3 (h6, h42, h50); P100: + 0 (1905 brez novih); P101: + 1 (h4)
         and ev_only_houses == EV_ONLY_HOUSE_STRINGS
         and cumulative["entries"] == 185
