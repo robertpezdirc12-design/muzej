@@ -64,7 +64,7 @@ PT_GAP_NEW = ["49"]             # h49 = NOVA luknja številka (19. dokazana)
 EXPECTED_NEW_HOUSES = ["22", "49"]
 EXPECTED_REPEATS = 13           # 15 hiš − 2 novi
 EXPECTED_HOUSES_VITALS = 15
-EXPECTED_VITALS_TOTAL = 412     # HOUSE_VITALS 223 + 15 (P94: krstna 1899); P95: + 16 (1900); P98: + 12 (1903); P99: + 19 (1904); P101: + 18 (1906); P102: + 15 (1907); P103: + 18 (1908); P104: + 18 (1909); P105: + 20 (1910)
+EXPECTED_VITALS_TOTAL = 429     # HOUSE_VITALS 223 + 15 (P94: krstna 1899); P95: + 16 (1900); P98: + 12 (1903); P99: + 19 (1904); P101: + 18 (1906); P102: + 15 (1907); P103: + 18 (1908); P104: + 18 (1909); P105: + 20 (1910)
 EV_ONLY_TOTAL = 8               # P84: 2 + P85: 3 + P86: 1 + P102: r4 (1) + P103: r84 (1) (P77–P83, P87–P94: 0)
 EV_ONLY_HOUSE_STRINGS = {"65 [~]"}  # P85 — edina imenovana EV-only hiša
 EXPECTED_PRIESTS = (6, 4)       # (Šturm, Rauq) + Klun 2 + 3 neberljivih
@@ -371,7 +371,7 @@ def verify():
     # smejo spreminjati zgodovinske klasifikacije leta 1899 (filtri vesolja)
     vitals_pre1900 = [
         v for v in vitals_all
-        if not (v["bookSignature"] == BOOK_SIGNATURE and v["year"] in (1900, 1901, 1902, 1903, 1904, 1905, 1906, 1907, 1908, 1909, 1910))
+        if not (v["bookSignature"] == BOOK_SIGNATURE and v["year"] in (1900, 1901, 1902, 1903, 1904, 1905, 1906, 1907, 1908, 1909, 1910, 1911))
     ]
     repeat_houses = sorted(
         (h for h in set(houses) if any(
@@ -399,7 +399,7 @@ def verify():
         len(repeat_houses) == EXPECTED_REPEATS
         and new_houses == EXPECTED_NEW_HOUSES == dokaz["stats"]["newSampleHouses"]
         and n_entries_total == EXPECTED_VITALS_TOTAL
-        and n_entries_total + EV_ONLY_TOTAL == 420  # kumulativno po P105 (412 + 8)
+        and n_entries_total + EV_ONLY_TOTAL == 437  # kumulativno po P106 (429 + 8)
         and n_houses_total == 84  # P98: 80 vitals; P99: + 3 (h6, h42, h50); P100: + 0 (1905 brez novih); P101: + 1 (h4)
         and ev_only_houses == EV_ONLY_HOUSE_STRINGS
         and cumulative["entries"] == 244

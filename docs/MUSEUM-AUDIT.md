@@ -5954,3 +5954,118 @@ lead); ③ poročna 04455: Straus × Spudič + r64 KLEPEC poroka 22.1.1933; ④ 
 register Metlika + P104 r61/r72); ⑦ h28 VRZEL 19 LET (1891 Jurij Požek? → 1910
 Sodek samota — kdo je oče Marjete?); ⑧ r64 »opatovina?« (vas — razrešiti prek
 franciscejskega katastra).
+
+## §81 · P106 — župnija Podzemelj, krstna knjiga 04105, polno leto 1911 (issue #18; 2026-10-18)
+
+**Sprožilec:** owner ukaz »nadaljuj uredi readme pushaj kode github gitlab in nadaljuj
+poushaj na vercel« — P105 nextSteps ①: širitev vzorca po letih + ⑤ produkcija Vercel.
+Pred fazo trojsinhronizacija potrjena (lokalni == GitHub == GitLab == 19c9e2a P105;
+produkcija Vercel 106/106 = qa-p105 PASS).
+
+**Vir:** Matricula Online, krstna knjiga 04105 (1886–1919); skeni 219–231 prenešeni v
+/tmp/p106 (p106_fetch; inventar 326 ✓). Izrezi read/s{N}-A/B.png (s219–s231) +
+**levokolonski trakovi 2.5× za VSE 10 strani** (metoda P106: št+meseci+kraj+hiša v
+enem traku — rešila sistematiko numeracije!) + full-row zoomi 3–8× za Griblje
+vrstice + hiše 6–8× + EMŠO pripisi 6–7×.
+
+**OKVIR 1911:** glava »1911 / Januarij« INLINE na str. 194 = sken 219 (pod 1910
+r84; 1911 r1 = Begunja vas 14 Anton 8./9. Januar, EMŠO 0801911500623 — P105 lead
+POTRJEN); row 89 = str. 201 (skena 227/228 DUP); glava »1912« INLINE na str. 202
+= sken 229 (1912 r1 = **Griblje 70 Alojzij** — P107 lead; oče Matija Brinec? ×
+Marija Grabrijan?); **89 vrstic** (2. največ po 1908 = 90; 1909 = 81, 1910 = 84);
+**NOVELA: DVA dup para** — 225/226 = str. 200 + 227/228 = str. 201 (največ od
+P104); stran == sken − 25 (219–224) / DUP 225+226 == 200 / DUP 227+228 == 201 /
+− 27 (229+); meseci: Januar r1, Februar r15, Marec r20, April r30, Maj r35,
+Junij r41, Juli r48, Avgust r55, September r63, Oktobar r67, November r77,
+December ~r85.
+
+**TRANSKRIPCIJA 17 gibriljskih vrstic** — vsaka z levokolonskim trakom + full-row
+zoomom; **NARE 17/17** (6. čisto leto). **NUMERACIJSKA FORENZIKA:** trakovi so
+rešili premik +1 na s222–s224 (prva branja brez trakov: r31→r32, r48→r49,
+r52→r53, r53→r54, r55 Avgust) + popravke vasi (r44 Gradac 59, r60 Gradac 18,
+r61 Krasinec 21, r64 Garn 35, r85 Garn 26, r72/r77 Primorček, r75 Dobraviče 26,
+r76 Zemelj 21, r49 Cerkvišče 36).
+
+**GENETSKE REŠITVE (ključne):** ① **»Grišice« = Griblje GENETSKO ×2** — r37 →
+**h33** (Martin Papič = 1909 ISTI oče + botri ISTI PRIIMEK Papič + hiša 33) +
+r67 → **h3** (hiša 3 = h3 Papič hiša 1889/1902/1907; oče Matija Papič) —
+**PAPIČ 2 hiši v 1911** (cf. P102 r11 »Grišlje«); r38 »Grišice« 35 = h30 1909
+družina (France Martinkovič × Katarina Šimec) — selitev iz vzorca ali druga vas
+NEODLOČENO (EXCLUDED; hiša 35 jasno ≠ 30); ② **P105 lead »h34 TRETJE leto«
+NAPAČEN** — r3 = **h24** (6× forenzika; oče Janez Brinec = h24 Brinčeva
+SKLADNO; 2. zapored napačen lead po P104 »Jožefa«); ③ **SEGINA POVRAT (r80
+h30)**: 1906 menjava Segina→Brinec REŠENA — 1911 oče Nikolaj Segina × mati
+Katarina Brinec = kombinacija obeh familij!; ④ **h13 MENJAVA #2** (r36: 1907
+Šimec × Kambič → 1911 Jakofič par; botri KAMBIČ PAR = povezava s prejšnjo
+familijo!); ⑤ **h21 MENJAVA OČETA Z ISTO MATI** (r68: 1910 »…mir« Požek ×
+Katarina Kure → 1911 Janez Trček × ISTA Katarina Kure! — 2. primer cf. h1
+1910); ⑥ h6 = **Jakobič SKLADNO 3. leto ZAPORED** (r74: 1909/10/11; oče Jurij?
+[1. branje Janez]); ⑦ h72 = ISTA ZVEZA Strauš × Šimec kot 1909 (r53); ⑧ h49 =
+Brodarič kontinuiteta ZAPORED (r73: 1910 Nikolaj → 1911 Anton; botrinja
+Marjana Bohte).
+
+**SIDRA:** r3 h24 15. VPIS (najbolj vpisovana; babica Barbara Adlešič ISTA kot
+1910 h65!); r33 h36 9. VPIS (oče Janez Hrižan = KRIŽAN hiša SKLADNO; botrinja
+Marjeta Štraus?; **EMŠO 1704911305004 — DATUMSKI POPRAVEK 17.4 vs register
+14.4.** — 3. popravek vzorca); r36 h13 (EMŠO 0405911500574 SKLADNO); r49 h47 3.
+VPIS — **VRZEL 21 LET NOV REKORD** (prej 19!; oče Janez Požek bajtar = h77
+familija — brata?; botrinja Ana Milek = r3 mati ISTA OSEBA CROSS-ROW!); r53 h72
+7. VPIS; r55 h55 3. VPIS — **VRZEL 21 LET REKORD IZENAČEN (DVA 21-letna
+rekorda isto leto!)** (KRALJ familija NOVA v vzorcu; EMŠO 0308911500935
+SKLADNO; P104 lead »vas pokrita« POPRAVLJEN); r67 h3 4. VPIS (**BABICA = MATI
+ISTA OSEBA** — Katarina Novak; cf. P103 r16!); r68 h21 8. VPIS ZAPORED; r69
+h74 2. VPIS — VRZEL 18 LET (EMŠO 1310911500879 SKLADNO; VPIS PRENEŠEN 25.5.1999?);
+r73 h49 6. VPIS ZAPORED; r74 h6 6. VPIS — ZAPORED 3. leto (botrinja Marija
+Klepec = **KLEPEC 4.× v 2 letih**!); r80 h30 13. VPIS (VPIS PRENEŠEN
+25.11.2007); r82 h40 4. VPIS — VRZEL 12 LET (botri HRIŽAN PAR; EMŠO
+2311911505307 — dan 23 vs register 22 [~]; dojenček † 7/10.1914); r84 h31 10.
+VPIS — VRZEL 11 LET (oče Gapič?/Papič? kolizija — 3. Papič hiša?; mati Katarina
+Hrižan; VPIS PRENEŠEN 19.11.2007).
+
+**DUHOVNIKI/PODPISI:** »Paulin/Laulin Bitnar« 13 + »Jos. Rauq« 4 (nadaljevanje
+blokovske P105). **BABICA: 16/17 imenovanih — MEH 12/17 DOMINANTA** (11× Marija
++ 1× Marjeta r68) + Barbara Adlešič 1 + Ana Mavrenič 1 + Marija Pletić? 1 +
+**Katarina Novak 1 (BABICA = MATI ISTA!)** + 1 prazna (r41).
+
+**KAMPANJE:** **VRZELI 21+21+18+12+11 LET — REKORDNO LETO** (h47 NOV rekord 21!
++ h55 izenačen + h74/h40/h31); **HRIŽAN kampanja 5 signalov** (r33 oče + r80
+botrinja + r82 botri PAR + r84 mati + botrinja); **MILEK kontinuiteta 5
+signalov** (r3 mati Ana Milek + r49 botrinja Ana Milek ISTA CROSS-ROW! + r69/r73
+mati Marija Milek + r80 botrinja); **EMŠO kampanja: 5 sidr** (2 SKLADNA + 2
+datumski popravki + 1 [~]); 6 dojenčkov/otrok † (r32/r37/r53/r67/r73/r82); VPIS
+PRENEŠEN ×3 (r69?/r80/r84); PAPIČ kolizija (r84); dvojčki ×2 (r22/r23 Dobraviče
+16 + r88/r89 Gradac 1 — non-Griblje); razveljavitev zakona (r77 Primorček); **nujni
+krst signal (r46 Otok 23: botra + podpis PRAZNA — 2. v vzorcu po 1908 h85!)**;
+Vranoviče 10 ×2 (r11 + r81 — DVE DRUŽINI). Excluded: 72.
+
+**DOKAZ research/issue17/parish-baptism-1911.json**: 17 entries + 72 excluded +
+24 anomalij + stats + crossChecks (15 ključev). **Verifikator
+scripts/p106_parish_baptism_1911.py (I1–I12): 14/14 PASS** (prvi tek 8/14 —
+I4 int/string konvencija + I11 tri knjige + PT gap h48 + podpisi 13/4 +
+EXPECTED_CITED brez 220/221 — popravljeno).
+
+**parish.ts**: 17 blokov 1911 (vitals 412 → **429**; vse celovito whatSi+whatEn+
+status DOCUMENTED). **qa-parish.ts**: qa-p106-parish-baptism-1911 (107. kontrola)
+— okvir (pageOfScan − 25 / DUP ×2 / − 27), NARE 17/17, 0 novih hiš, PT 13/4, 43
+sidra-pinov, babica Meh 11 blokov (+Marjeta r68 = 12) + BABICA = MATI + babica
+PRAZNA r41, podpisa Bitnar 13/Rauq 4, EMŠO 5 sidr, genetski vasi h33+h3;
+**allow liste + 1911 (qa-p85 h30 / qa-p91 h14 / qa-p92 h40 / qa-p93 h48 /
+qa-p94 h49) + pogoji IN sporočila starih kontrol 412 → 429 (63×)**.
+
+**Regresije python**: p80 (vitals 429), p85–p99 vitals 429 + kumulativ 437 +
+horizon filtri + 1911 (terke p85–p99), p100–p105 BLOCKS_04105 386 → 403 — vseh
+**28 skript p79–p106** `--check` PASS (exit 0). Kartica NI dodana (vzorec
+P77–P106). tsc 0 / lint 0; **/api/qa dev 107/107** (qa-p106 pass=True); v7
+NESPREMENJEN.
+
+**nextSteps**: ① **P107 = leto 1912** (glava »1912« INLINE str. 202 = sken 229;
+1912 r1 = Griblje 70 Alojzij, 2./2. Januar, EMŠO 0101912500294; oče Matija
+Brinec? × Marija Grabrijan? — cf. h10 1909 selitev h30→h10 Brinec!; skeni
+229–231 že v /tmp/p106); ② mrliška knjiga 04894 1887–1896 (dojenčki † + r83
+MESEC PO POROKI lead); ③ poročna 04455: Straus × Spudič + r64 KLEPEC poroka
+22.1.1933; ④ h51 (ZADNJA nedokazana luknja 41–60!); ⑤ produkcija Vercel:
+dohiti P106 → QA 107/107; ⑥ **podpis-dilema Bitnar** (kaplan ALI maticarka?
+cf. Matični register Metlika); ⑦ **PAPIČ forenzika** (h33 Martin + h3 Matija +
+h84 Gapič?/Papič? — trije Papič-ji v 1911: bratje? oče+sini?); ⑧ r38 »Grišice«
+35 selitev (Martinkovič × Šimec = h30 1909 — kam so se preselili? cf. franciscejski
+kataster + Griče vas?); ⑨ r46 Otok 23 nujni krst (botra + podpis PRAZNA).

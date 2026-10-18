@@ -1,0 +1,1207 @@
+{
+ "phase": "P106",
+ "type": "sample-transcription",
+ "status": "SAMPLE-TRANSCRIPTION-1911",
+ "issuedAt": "2026-10-18",
+ "source": {
+  "book": "krstna knjiga 04105 (Matricula Online, župnija Podzemelj, 1886–1919)",
+  "url": "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04105/",
+  "scans": "219–229 (lokalno /tmp/p106: scan-219.jpg … scan-231.jpg; 229 = glava 1912)"
+ },
+ "method": "forenzična transkripcija: leva kolona (št+meseci+kraj+hiša) 2.5× trakovi za VSE vrstice + full-row zoomi 3–8× za Griblje vrstice + EMŠO pripisi 6–7×; vsaka ključna celica ≥2 neodvisna branja",
+ "frame": {
+  "yearStart": {
+   "scan": 219,
+   "page": 194,
+   "row": 1,
+   "note": "glava »1911 / Januarij« INLINE na str. 194 = sken 219 (pod 1910 r84); 1911 r1 = Begunja vas 14 Anton 8./9. Januar, EMŠO 0801911500623 — P105 lead POTRJEN; prva Griblje vrstica 1911 = r3 Griblje 24 Antonija, Janez Brinec × Ana Milek — P105 lead »h34 TRETJE leto« NAPAČEN (hiša 24, ne 34!)"
+  },
+  "yearEnd": {
+   "scan": 227,
+   "dup": 228,
+   "page": 201,
+   "row": 89,
+   "note": "zadnja vrstica 1911 = r89 (Gradac 1 Hilda, 28./28. December); glava »1912« INLINE na str. 202 = sken 229; 1912 r1 = Griblje 70 Alojzij, 2./2. Januar (oče Matija Brinec? × Marija Grabrijan? — P107 lead, forenzika P107); EMŠO 0101912500294"
+  },
+  "rowsTotal": 89,
+  "pages": "str. 194–201 (8 strani; 194 deljena s 1910 — glava inline; 202 = glava 1912)",
+  "dupPairs": [
+   [
+    225,
+    226
+   ],
+   [
+    227,
+    228
+   ]
+  ],
+  "pageOfScan": "stran == sken − 25 (219–224) / DUP 225+226 == str. 200 / DUP 227+228 == str. 201 / − 27 (229+: s229 = str. 202)",
+  "months": {
+   "Januar": 1,
+   "Februar": 15,
+   "Marec": 20,
+   "April": 30,
+   "Maj": 35,
+   "Junij": 41,
+   "Juli": 48,
+   "Avgust": 55,
+   "September": 63,
+   "Oktobar": 67,
+   "November": 77,
+   "December": "~85"
+  },
+  "rowDistribution": {
+   "194": "r1–r6",
+   "195": "r7–r18",
+   "196": "r19–r30",
+   "197": "r31–r42",
+   "198": "r43–r54",
+   "199": "r55–r66",
+   "200": "r67–r78 (dup 225/226)",
+   "201": "r79–r89 (dup 227/228)"
+  }
+ },
+ "entries": [
+  {
+   "row": 3,
+   "year": 1911,
+   "month": "Januar",
+   "born": "10.",
+   "baptized": "11.",
+   "village": "Griblje",
+   "houseNo": "24",
+   "scan": 219,
+   "page": 194,
+   "child": "Antonija",
+   "father": "Janez Brinec, ¾ zemljak",
+   "mother": "Ana Milek",
+   "botra": "Marija Brinec + Marija Hribel? [~]",
+   "babica": "Barbara Adlešič",
+   "priest": "Paulin Bitnar",
+   "notes": [
+    "h24 = 15. VPIS (1887–1909 — najbolj vpisovana hiša registra); VRZEL 1 LETO (1910 brez)",
+    "P105 lead »h34 TRETJE leto« NAPAČEN — hiša 24 (6× forenzika, ne 34!); genetsko SKLADNO: oče Janez Brinec = h24 Brinčeva familija",
+    "botrinja Marija Brinec (ISTI PRIIMEK = familija) + Marija Hribel? [~]",
+    "babica Barbara Adlešič = ISTA kot 1910 r66 h65!",
+    "modri pripisi: »Umrła, dne 18.10.1973 v Dragatušu (LMMK nas. Dragatuš, vas št. 32, zap. 25.10.1973)« + »poročena 27.11.1933« + »tvr. poročena dne 25.9.1941 št. Rundtić? ohična v Radovljici?«"
+   ]
+  },
+  {
+   "row": 32,
+   "year": 1911,
+   "month": "April",
+   "born": "12.",
+   "baptized": "13.",
+   "village": "Griblje",
+   "houseNo": "48",
+   "scan": 222,
+   "page": 197,
+   "child": "Vida (+16/7.1911 — dojenček †)",
+   "father": "Jurij Podravec? [~ — 1. branje »Janez«], ¾ zemljak",
+   "mother": "Katarina Bedelarič? [~ Bedernivec?]",
+   "botra": "Nikolaj Brodarič + Doroteja Podravec, ¾ zemnj",
+   "babica": "Marija Pletić? [~ Piletič?]",
+   "priest": "Paulin Bitnar",
+   "notes": [
+    "h48 = 5. VPIS (1909 4. VPIS EMŠO=krsta, 1908, 1904, 1897 → 1911); VRZEL 1 LETO",
+    "dojenček †: +16/7.1911 (3 dni po krsti 13.4.)",
+    "modri pripis: »umrla dne 01.05.2003 v Novem mestu? (NKU NO 1.2003, št. 46, zap. št. 10, Metlika 22.08.2005, Matičarka nam. Tesnie Šimonič)« + »Drežljanka to Republike Slovenije, Upravna enota Črnomelj, class 201-2015/103 z dne 27.06.2013«"
+   ]
+  },
+  {
+   "row": 33,
+   "year": 1911,
+   "month": "April",
+   "born": "14.",
+   "baptized": "14.",
+   "village": "Griblje",
+   "houseNo": "36",
+   "scan": 222,
+   "page": 197,
+   "child": "Terezija",
+   "father": "Janez Hrižan, ¾ zemljak",
+   "mother": "Katarina Štrucelj",
+   "botra": "Matija Podravec? [~ Pecdrnec] + Marjeta Štraus? [~ Straov], ¾ zemnj",
+   "babica": "Marija Meh",
+   "priest": "Paulin Bitnar",
+   "notes": [
+    "h36 = 9. VPIS (1886–1908); VRZEL 2 LETI",
+    "genetika SKLADNO: h36 = HRIŽAN/KRIŽAN hiša (1908 »KRIŽAN POVRAT«) — oče Janez Hrižan!",
+    "botrinja Marjeta Štraus? [~] = ŠTRAUS signal (1908 boter Štraus)",
+    "EMŠO ž 1704911305004 — DATUMSKI POPRAVEK: EMŠO 17.4. vs register 14.4.! (3. popravek vzorca cf. P105 r22/r66)",
+    "modri pripis: »umrla dne 01.05.2003 v Novem mestu? (NKU NO, št. 46, zap. št. 10, Metlika 22.08.2005)«"
+   ]
+  },
+  {
+   "row": 36,
+   "year": 1911,
+   "month": "Maj",
+   "born": "4.",
+   "baptized": "5.",
+   "village": "Griblje",
+   "houseNo": "13",
+   "scan": 222,
+   "page": 197,
+   "child": "Anton",
+   "father": "Matija Jakofič, ¾ zemnjak",
+   "mother": "Marija Jakofič",
+   "botra": "Janez Kambič + Marija Kambič, ¾ zemnj",
+   "babica": "Marija Meh",
+   "priest": "Jos. Rauq?",
+   "notes": [
+    "h13 = 5. VPIS (1886, 1888, 1894, 1907 → 1911); VRZEL 4 LETI",
+    "MENJAVA #2: 1907 Šimec × Kambič (selitev h18→h13) → 1911 Jakofič par",
+    "botri KAMBIČ PAR = povezava s prejšnjo h13 familijo (Šimec × Kambič 1907)!",
+    "EMŠO mo 0405911500574 — SKLADNO — SIDRO (04.05.911, 10. števka 0 = moški)",
+    "modri pripisi: »umrl dne 9.4.1934 v Novem mestu (obč. nosič 1.1934, št. 385 od 12.2.)« + »(devec nosič 1.1934, št. 856 od 14.03)«"
+   ]
+  },
+  {
+   "row": 37,
+   "year": 1911,
+   "month": "Maj",
+   "born": "23.",
+   "baptized": "24.",
+   "village": "Griblje",
+   "houseNo": "33",
+   "scan": 222,
+   "page": 197,
+   "child": "Marija (+9/9.1911 — dojenček †)",
+   "father": "Martin Papič? [~ Tapič], ¾ zemnjak",
+   "mother": "Marija Plet? [~ Mlut? — 1909 branje]",
+   "botra": "Mihal Papič? + Katarina Papič?, ¾ zemnj — ISTI PRIIMEK",
+   "babica": "Ana Mavrenič",
+   "priest": "Paulin Bitnar",
+   "notes": [
+    "GENETSKA REŠITEV vasi: napisano »Grišice« — genetsko GRIBLJE 33! (oče Martin Papič = ISTI oče kot h33 1909; botri ISTI PRIIMEK Papič; hiša 33 = h33) — cf. P102 r11 »Grišlje« = Griblje genetsko",
+    "h33 = 4. VPIS (1889, 1898, 1909 → 1911); VRZEL 1 LETO — praktično ZAPORED",
+    "dojenček †: +9/9.1911 (3.5 meseca)",
+    "mati menjava? (1909 »Marija Mlut?« → 1911 »Marija Plet?« — morda ISTA oseba, slaba prva branja)"
+   ]
+  },
+  {
+   "row": 41,
+   "year": 1911,
+   "month": "Junij",
+   "born": "3.",
+   "baptized": "4.",
+   "village": "Griblje",
+   "houseNo": "14",
+   "scan": 222,
+   "page": 197,
+   "child": "Neža [ime pod anotacijami — strip branje]",
+   "father": "Ivan Brinec? [~ Brine], ¾ zemnjak",
+   "mother": "Doroteja Pezdirec? [~ Podrinc/Podrtec]",
+   "botra": "Matija Brinec, ¾ zemnj + Bara Adlešič",
+   "babica": "[PRAZNO — babica brez vnosa]",
+   "priest": "Paulin Bitnar",
+   "notes": [
+    "h14 = 5. VPIS (1896, 1900, 1902, 1908 → 1911); VRZEL 3 LETI",
+    "babica PRAZNA (edina v 1911)",
+    "botrinja Bara Adlešič = h24 babica r3 ISTA OSEBA CROSS-ROW!",
+    "oče Brinec? = BRINEC familija signal (h24!); mati Doroteja Pezdirec? [~] = PEZDIREC signal",
+    "modri pripisi: »umrla dne 16.?11.?/22.11.? ... (dok. KO Gradec?, zap. št. 169)« + »Neža 18.01.1991?« — težko berljivo"
+   ]
+  },
+  {
+   "row": 49,
+   "year": 1911,
+   "month": "Julij",
+   "born": "16.",
+   "baptized": "16.",
+   "village": "Griblje",
+   "houseNo": "47",
+   "scan": 223,
+   "page": 198,
+   "child": "Janez",
+   "father": "Janez Požek, bajtar",
+   "mother": "Katarina Veselič",
+   "botra": "Marija Šimec + Ana Milek",
+   "babica": "Marija Meh",
+   "priest": "Paulin Bitnar",
+   "notes": [
+    "h47 = 3. VPIS (1887, 1890 → 1911); **VRZEL 21 LET — NOV REKORD!** (prej 19 = h77 1909 + h28 1910)",
+    "oče POŽEK bajtar = ISTA familija kot h77 (Jurij Požek bajtar 1890/1909!) — brata?",
+    "botrinja Ana Milek = r3 mati ISTA OSEBA CROSS-ROW! + botra Marija Šimec",
+    "modri pripisi: »umrl dne 18.1.1978 v Novem mestu (NT&K Novo mesto 1.1978, zap. št. 29)« + »poročen 14.6.1947« + »Gradec 27.2.1978«"
+   ]
+  },
+  {
+   "row": 53,
+   "year": 1911,
+   "month": "Avgust",
+   "born": "24.",
+   "baptized": "25.",
+   "village": "Griblje",
+   "houseNo": "72",
+   "scan": 223,
+   "page": 198,
+   "child": "Julij (+2/6.1912? — dojenček †)",
+   "father": "Matija Strauš? [~ Straov], ¾ zemnjak",
+   "mother": "Marjeta Šimec",
+   "botra": "Mika? Jakofič? [~] + Barbara Šmuc? [~ Šmejc?], ¾ zemnj",
+   "babica": "Marija Meh",
+   "priest": "Paulin Bitnar",
+   "notes": [
+    "h72 = 7. VPIS (1888–1909); VRZEL 1 LETO",
+    "ISTA ZVEZA Strauš × Šimec kot 1909 (POVRAČNICA) — ŠTRAUS kontinuiteta SKLADNO!",
+    "mati Marjeta Šimec = Šimec familija (1909 menjava #3 ISTA)",
+    "dojenček †: +2/6.1912?"
+   ]
+  },
+  {
+   "row": 55,
+   "year": 1911,
+   "month": "Avgust",
+   "born": "3.",
+   "baptized": "4.",
+   "village": "Griblje",
+   "houseNo": "55",
+   "scan": 224,
+   "page": 199,
+   "child": "Matevž",
+   "father": "Matevž Kralj, ¾ zemnjak",
+   "mother": "Barbara Škržan? [~ Šteran?]",
+   "botra": "Nikolaj Kralj + Ana Kralj, ¾ zemnj — ISTI PRIIMEK",
+   "babica": "Marija Meh",
+   "priest": "Paulin Bitnar",
+   "notes": [
+    "h55 = 3. VPIS (1887, 1890 → 1911); **VRZEL 21 LET — REKORD IZENAČEN z r49 h47 (DVA 21-letna rekorda isto leto!)**",
+    "KRALJ familija NOVA v vzorcu (oče + botri ISTI PRIIMEK)",
+    "vas Griblje jasna pod modro anotacijo (P104 lead »vas pokrita« POPRAVLJEN)",
+    "EMŠO mo 0308911500935 — SKLADNO — SIDRO (03.08.911, 10. števka 0 = moški)",
+    "modri pripisi: »Žena, Kvalj? Ronja? umrla dne 31.1.1984 v Novem mestu (NKU Novo mesto 1.1984, št. 179, zap. št. 66, Simonič Nina 12.3.1984)« + »umrl dne 26.04.1986 v gmiljah? (NKU št. 1956, št. 151, zap. št. 2, Gradac 19.05.1986, Matičar: Obriž? dna?)« + »Gradac, 12/3-1984« + »poročen 19.2.1935?«"
+   ]
+  },
+  {
+   "row": 67,
+   "year": 1911,
+   "month": "Oktobar",
+   "born": "1.",
+   "baptized": "2.",
+   "village": "Griblje",
+   "houseNo": "3",
+   "scan": 225,
+   "page": 200,
+   "child": "Nikolaj (+25/4.1919 — dojenček †)",
+   "father": "Matija Papič, ¾ zemnjak",
+   "mother": "Katarina Novak",
+   "botra": "Nikolaj Novak + Ana Novak, ¾ zemnj — ISTI PRIIMEK",
+   "babica": "Katarina Novak — BABICA = MATI ISTA OSEBA!",
+   "priest": "Jos. Rauq?",
+   "notes": [
+    "GENETSKA REŠITEV vasi: napisano »Grišice« — genetsko GRIBLJE 3! (hiša 3 = h3 Papič hiša 1889/1902/1907; oče Papič) — 2. »Grišice« rešitev (cf. r37 h33)!",
+    "h3 = 4. VPIS; VRZEL 4 LETI",
+    "BABICA = MATI ISTA OSEBA (Katarina Novak) — cf. P103 r16 »babica ISTA oseba«!",
+    "dojenček †: +25/4.1919",
+    "PAPIČ 2 hiši v 1911 (h33 Martin + h3 Matija — brata?)"
+   ]
+  },
+  {
+   "row": 68,
+   "year": 1911,
+   "month": "Oktobar",
+   "born": "5.",
+   "baptized": "5.",
+   "village": "Griblje",
+   "houseNo": "21",
+   "scan": 225,
+   "page": 200,
+   "child": "Jurij",
+   "father": "Janez Trček, ¾ zemnjak",
+   "mother": "Katarina Kure",
+   "botra": "Janez Brinec? [~] + Marija Šimec",
+   "babica": "Marjeta Meh",
+   "priest": "Paulin Bitnar",
+   "notes": [
+    "h21 = 8. VPIS (1887–1910); ZAPORED — 2. leto!",
+    "MENJAVA OČETA Z ISTO MATI: 1910 »…mir« Požek × Katarina Kure → 1911 Janez Trček × ISTA Katarina Kure! (Požek 7 vpisov konec; cf. h1 1910 oče menjava Željko→Trome z ISTO mati Meh)",
+    "boter Janez Brinec? [~] = h24 oče r3 CROSS-ROW! + botrinja Marija Šimec"
+   ]
+  },
+  {
+   "row": 69,
+   "year": 1911,
+   "month": "Oktobar",
+   "born": "13.",
+   "baptized": "14.",
+   "village": "Griblje",
+   "houseNo": "74",
+   "scan": 225,
+   "page": 200,
+   "child": "Janez",
+   "father": "Janez Kambič, ¾ zemnjak",
+   "mother": "Marija Milek",
+   "botra": "Matija Šimec + Katarina Požek, ¾ zemnj",
+   "babica": "Marija Meh",
+   "priest": "Paulin Bitnar",
+   "notes": [
+    "h74 = 2. VPIS (1893 → 1911); **VRZEL 18 LET** (2. najdaljša v 1911)",
+    "oče KAMBIČ (h74 nova familija signal); mati MARIJA MILEK = MILEK kontinuiteta",
+    "boter Matija Šimec + botrinja Katarina Požek = POŽEK signal (h47 r49!)",
+    "EMŠO mo 1310911500879 — SKLADNO — SIDRO (13.10.911, 10. števka 0 = moški)",
+    "VPIS PRENEŠEN 25.5.1999? [~] — Matičarka Šimonič Nina",
+    "modri pripisi: »žena umrla dne 04.08.1987 v gmiljah? (NKU NO št. 1987, št. 16, zap. št. 52, Metlika 10.08.1987)« + »umrl dne 02.05.1999 v Metliki (MOKNOK 1.1999, št. 21, zap. št. 40, Metlika 03.05.1999)«"
+   ]
+  },
+  {
+   "row": 73,
+   "year": 1911,
+   "month": "November",
+   "born": "24.",
+   "baptized": "24.",
+   "village": "Griblje",
+   "houseNo": "49",
+   "scan": 225,
+   "page": 200,
+   "child": "Frančišek (+27/5.1913 — dojenček †)",
+   "father": "Anton Brodarič, ¾ zemnjak",
+   "mother": "Marija Milek",
+   "botra": "Jurij Podravec? [~ Pecdnivec] + Marjana Bohte, ¾ zemnj",
+   "babica": "Marija Meh",
+   "priest": "Jos. Rauq?",
+   "notes": [
+    "h49 = 6. VPIS (1899–1910); ZAPORED — 2. leto!",
+    "BRODARIČ kontinuiteta: 1910 r67 h49 Nikolaj Brodarič → 1911 Anton Brodarič (ISTA familija — oče menjava ali brat)",
+    "botrinja Marjana Bohte = Bohte signal (1910 boter Jakop Bohte h49!)",
+    "dojenček †: +27/5.1913",
+    "modri pripisi: »umrl/a dne 20.9.1987 v Črnomlju (NU KO Črnomelj 1.1987, št. 22, zap. št. 43)« + »umrla 1993 v Črnomlju (1.1993, št. 252, 6.01.1995)« + »poročena 5.2.1931« + »poročen 15.4.1935«"
+   ]
+  },
+  {
+   "row": 74,
+   "year": 1911,
+   "month": "November",
+   "born": "28.",
+   "baptized": "29.",
+   "village": "Griblje",
+   "houseNo": "6",
+   "scan": 225,
+   "page": 200,
+   "child": "Neža",
+   "father": "Jurij? Jakobič [~ — 1. branje »Janez«], ¾ zemnjak",
+   "mother": "Katarina Jakobič",
+   "botra": "Jožef Željko + Marija Klepec, ¾ zemnj",
+   "babica": "Marija Meh",
+   "priest": "Paulin Bitnar",
+   "notes": [
+    "h6 = 6. VPIS (1904, 1905, 1907, 1909, 1910 → 1911); **ZAPORED — 3. leto!** (1909/10/11)",
+    "JAKOBIČ genetsko SKLADNO (h6 = Jakobič 1904/05) — oče Jurij? [1. branje »Janez«]",
+    "boter Jožef Željko = ŽELJKO signal (h1/h60!) + botrinja Marija Klepec = KLEPEC 4.× v 2 letih (1910 r32/r78/r83 → 1911 r74)!",
+    "EMŠO ž 2810911505907? [~ — mesec 11/10 na meji] (28.11.911, 10. števka 5 = ženska)",
+    "modri pripisi: »umrl/a dne 20.3.1944 v 8-vojnci? (NU KO Novo mesto, št. 1995, zap. št. 13)« + »poročena 9.2.1947?« + »poročen 31.8.1935?«"
+   ]
+  },
+  {
+   "row": 80,
+   "year": 1911,
+   "month": "November",
+   "born": "14.",
+   "baptized": "14.",
+   "village": "Griblje",
+   "houseNo": "30",
+   "scan": 227,
+   "page": 201,
+   "child": "Marija",
+   "father": "Nikolaj Segina, ¾ zemljak",
+   "mother": "Katarina Brinec",
+   "botra": "Marija Milek + Katarina Hrižan, ¾ zemnj",
+   "babica": "Marija Meh",
+   "priest": "Jos. Rauq?",
+   "notes": [
+    "h30 = 13. VPIS (1890–1909); VRZEL 1 LETO",
+    "**SEGINA POVRAT — 1906 MENJAVA REŠENA**: 1906 h30 »Segina → Brinec« menjava → 1911 oče Nikolaj Segina × mati Katarina Brinec = KOMBINACIJA obeh familij (Brinčeva žena v Seginovi hiši!)",
+    "botrinji Marija Milek (r69 mati ISTA?) + Katarina Hrižan = HRIŽAN signal",
+    "VPIS PRENEŠEN v matični register dne 25.11.2007 Matičarka [Bebjanek? ~]",
+    "modri pripisi: »umrl/a dne 15.12.1999 v Grintofcu? (dokt. KO št. 1.1997, št. 204, zap. st. 22)« + »poročena 14.6.1937« + »Šimenc 31.2.1935.Osilnica?«"
+   ]
+  },
+  {
+   "row": 82,
+   "year": 1911,
+   "month": "November",
+   "born": "22.",
+   "baptized": "22.",
+   "village": "Griblje",
+   "houseNo": "40",
+   "scan": 227,
+   "page": 201,
+   "child": "Marija (+7/10.1914 — dojenček †)",
+   "father": "Nikolaj Podravec? [~ Tecdrnec/Podrnec], ¾ zemnjak",
+   "mother": "Ana Žuran? [~]",
+   "botra": "Matija Hrižan + Katarina Hrižan, ¾ zemnj — ISTI PRIIMEK",
+   "babica": "Marija Meh",
+   "priest": "Paulin Bitnar",
+   "notes": [
+    "h40 = 4. VPIS (1897, 1898, 1899 → 1911); **VRZEL 12 LET!**",
+    "oče PODRAVEC? = familija (h48 r32!); botri HRIŽAN PAR",
+    "EMŠO ž 2311911505307 — 10. števka 5 = ženska SKLADNO; dan 23 vs register 22 — MOŽEN DATUMSKI POPRAVEK [~ dan]",
+    "dojenček †: +7/10.1914",
+    "modri pripisi: »Alen? umrl/a dne 09.03.1983 v Zagrebu (1918 Vojvodina?, cerke 1982)« + »umrl/a dne 19.8.1975 v Kandijah?«"
+   ]
+  },
+  {
+   "row": 84,
+   "year": 1911,
+   "month": "December",
+   "born": "2.",
+   "baptized": "2.",
+   "village": "Griblje",
+   "houseNo": "31",
+   "scan": 227,
+   "page": 201,
+   "child": "Amalija",
+   "father": "Janez Gapič? [~ Papič?], ¾ zemnjak",
+   "mother": "Katarina Hrižan",
+   "botra": "Janez Jaklič? [~ »Jaklič Janez«] + Barbara Hrižan, ¾ zemnj",
+   "babica": "Marija Meh",
+   "priest": "Paulin Bitnar",
+   "notes": [
+    "h31 = 10. VPIS (1887–1900); **VRZEL 11 LET!**",
+    "mati Katarina Hrižan + botrinja Barbara Hrižan = HRIŽAN kampanja",
+    "oče Gapič?/Papič? kolizija — PAPIČ 3. hiša v 1911? (h33 Martin + h3 Matija + h31 Janez G/P?) — genetska dilema",
+    "VPIS PRENEŠEN v matični register 19.11.2007 Matičarka Belojaunik? [~ Belofanovič?]",
+    "modri pripisi: »umrla dne 19.8.1973 (MMK Ljubljana-center)« + »Gradec 31.12.1973«"
+   ]
+  }
+ ],
+ "excluded": [
+  {
+   "row": 1,
+   "village": "Begunja vas",
+   "houseNo": "14",
+   "child": "Anton",
+   "note": "P106 lead POTRJEN (8./9. Januar; EMŠO 0801911500623); oče Peter Hvale?/Kvale × mati Ana/Marija?; botra Marija Hvale?; podpis Jos. Rauq?"
+  },
+  {
+   "row": 2,
+   "village": "Gradac",
+   "houseNo": "75",
+   "child": "Ver[onika?]?",
+   "note": "+13.6.1982? pripis"
+  },
+  {
+   "row": 4,
+   "village": "Dobraviče",
+   "houseNo": "23",
+   "child": "Neža",
+   "note": "VPIS PRENEŠEN v matični register 28.12.2006 Matičarka Šimovič + »Mioz? umrl dne 6.9.1968 v Podturnu«"
+  },
+  {
+   "row": 5,
+   "village": "Vranoviče",
+   "houseNo": "4",
+   "child": "Alojzij",
+   "note": "EMŠO 101911350029? Metlika 17.06.1987 + »zemlja umrla dne 26.04.?«"
+  },
+  {
+   "row": 6,
+   "village": "Gradac",
+   "houseNo": "40",
+   "child": "Antonija?",
+   "note": "poročena 19.4.1935?"
+  },
+  {
+   "row": 7,
+   "village": "Vranovče",
+   "houseNo": "21",
+   "child": "Frančišek (+22/11.1911)",
+   "note": "oče Janez Hvale? × Ana Kambič; botra Janez Bučka? + babica Marija Malešič"
+  },
+  {
+   "row": 8,
+   "village": "Zemelj",
+   "houseNo": "18",
+   "child": "Neža (+2/6.1911)",
+   "note": "oče Nikolaj Janežič? kustos? × Ana Podhrnec?; botra PRAZNA + podpis PRAZEN"
+  },
+  {
+   "row": 9,
+   "village": "Krvoglavec",
+   "houseNo": "29",
+   "child": "Jožefina?",
+   "note": "oče Janez Hvale? × Terezija Meh; botra PRAZNA; babica M. Vavričev?"
+  },
+  {
+   "row": 10,
+   "village": "Gradac",
+   "houseNo": "35",
+   "child": "Pavlina",
+   "note": "oče Leopold? Frveger? kamervuk? × Ana Vrbca/Vrbar"
+  },
+  {
+   "row": 11,
+   "village": "Vranoviče",
+   "houseNo": "10",
+   "child": "Jožef (+28.2.1968 v Gradencu?...)",
+   "note": "oče Jožef Flambič? × Ana Ščerbavec — 1. VPIS hiše v 1911 (r81 = 2.! dve družini)"
+  },
+  {
+   "row": 12,
+   "village": "Cerkvišče",
+   "houseNo": "35",
+   "child": "Barbana (+3/7.1911)",
+   "note": "oče Nikolaj Justavič? bajtar × Ana Jakobič"
+  },
+  {
+   "row": 13,
+   "village": "Gradec",
+   "houseNo": "23",
+   "child": "Jožef",
+   "note": "EMŠO 3001911500153 + umr. 18.10.1985 + Umr. 15.2.1943?"
+  },
+  {
+   "row": 14,
+   "village": "Otok",
+   "houseNo": "1",
+   "child": "Alojzij",
+   "note": "EMŠO 3601911500057 + poročen 19.2.1935; oče Jožef Podrnejc × Marija Trome"
+  },
+  {
+   "row": 15,
+   "village": "Dragoče?",
+   "houseNo": "5",
+   "child": "Neža (+9/10.1911)",
+   "note": "oče Mihail? Dragotš? × Katarina Podrnejc"
+  },
+  {
+   "row": 16,
+   "village": "Podzemelj",
+   "houseNo": "15",
+   "child": "Jožef",
+   "note": "EMŠO 1402911500146 + umr. 14.08.1989 Medvode"
+  },
+  {
+   "row": 17,
+   "village": "Perni?",
+   "houseNo": "2",
+   "child": "Neža",
+   "note": "EMŠO 2002911505169 + umr. 12.08.1990 Črnomelj"
+  },
+  {
+   "row": 18,
+   "village": "Zalozje?",
+   "houseNo": "25",
+   "child": "Anton",
+   "note": "umrl 14.5.1920 v Vrhnici?"
+  },
+  {
+   "row": 19,
+   "village": "Cerkvišče",
+   "houseNo": "25",
+   "child": "Jule?/Jure? (+4/17.1917)",
+   "note": "oče Anton Stražišnik? × Ana Lučania?"
+  },
+  {
+   "row": 20,
+   "village": "Škrilje",
+   "houseNo": "24",
+   "child": "Jožefa",
+   "note": "»bobence v Bohševi?« anotacija; oče Matevž Jurcajevič? čajdar?"
+  },
+  {
+   "row": 21,
+   "village": "Cerkvišče",
+   "houseNo": "7",
+   "child": "Jožefa (+9.4.1911)",
+   "note": "oče Jožef Dragotš? × Terezina Vlahovič?"
+  },
+  {
+   "row": 22,
+   "village": "Dobraviče",
+   "houseNo": "16",
+   "child": "Martin (+4/13.1911)",
+   "note": "DVOJČEK 1/2 (oče Martin Matkovič? × Ana Trome)"
+  },
+  {
+   "row": 23,
+   "village": "Dobraviče",
+   "houseNo": "16",
+   "child": "Janez (+4/13.1911)",
+   "note": "DVOJČEK 2/2 (isti starši, isti dan)"
+  },
+  {
+   "row": 24,
+   "village": "Krasinec",
+   "houseNo": "18",
+   "child": "Anda",
+   "note": "EMŠO 1603941505234 + VPIS PRENEŠEN 15.3.2007 Matičarka"
+  },
+  {
+   "row": 25,
+   "village": "Otok",
+   "houseNo": "16",
+   "child": "Nikolaj (+20.12.1946)",
+   "note": "oče Nikolaj Novak × Ana Podravec?"
+  },
+  {
+   "row": 26,
+   "village": "Gradac",
+   "houseNo": "64",
+   "child": "Antonič?/Antonca?",
+   "note": "umr. 1.9.1981 Zagradec? + poročen 19.4.1933; oče Fran Šovačič? bajtar × Marija Plet"
+  },
+  {
+   "row": 27,
+   "village": "Vranoviče",
+   "houseNo": "3",
+   "child": "Terezija",
+   "note": "EMŠO 2403941505139 + umr. 25.06.1990 Črnomelj"
+  },
+  {
+   "row": 28,
+   "village": "Gradac",
+   "houseNo": "57",
+   "child": "Jožefa",
+   "note": "oče Jožef Mavrenič? × Ana Haracovnič?"
+  },
+  {
+   "row": 29,
+   "village": "Krasinec",
+   "houseNo": "15",
+   "child": "Helena",
+   "note": "EMŠO 2403941505304 + umrša 26.07.1982 Ivančani?"
+  },
+  {
+   "row": 30,
+   "village": "Otok?",
+   "houseNo": "21?",
+   "child": "Marija",
+   "note": "VAS POD ANOTACIJO (neberljiva); April glava; poročena 19.11.1938 v Metliki"
+  },
+  {
+   "row": 31,
+   "village": "Dragoče?",
+   "houseNo": "1",
+   "child": "Frančišek",
+   "note": "umr. 31.10.1988 Novo mesto; oče Janez Adlešič? × Marija ?umič?"
+  },
+  {
+   "row": 34,
+   "village": "Otok",
+   "houseNo": "30",
+   "child": "Jožef",
+   "note": "EMŠO 2504941500188 + poročen 10.11.1972; oče Nikolaj Žurman? × Ana Željko"
+  },
+  {
+   "row": 35,
+   "village": "Zemelj",
+   "houseNo": "20",
+   "child": "Marija",
+   "note": "umrla 25.4.1964 Novo mesto; oče Matija Fišlak? × Ana Jaklič"
+  },
+  {
+   "row": 38,
+   "village": "Grišice? [~]",
+   "houseNo": "35",
+   "child": "Alojzij (+2.9.1944 Konjce?)",
+   "note": "FORENZIKA: France Martinkovič? × Katarina Šimec = h30 1909 DRUŽINA! — selitev h30→»Grišice« 35 ali druga vas (neodločeno); hiša 35 jasno ≠ 30"
+  },
+  {
+   "row": 39,
+   "village": "Otok",
+   "houseNo": "21",
+   "child": "Janez",
+   "note": "umr. 19.01.1995 + poročena 13.3.1941?"
+  },
+  {
+   "row": 40,
+   "village": "Krasvinec?",
+   "houseNo": "4",
+   "child": "Marjeta",
+   "note": "EMŠO 2805941505148 + Alen? umrl 09.01.1991 v Ljubljani? št. 467"
+  },
+  {
+   "row": 42,
+   "village": "Primorček",
+   "houseNo": "9",
+   "child": "Terezija (+3.1949?)",
+   "note": "oče Anton Meh × Marija Sinec?"
+  },
+  {
+   "row": 43,
+   "village": "Gornji Kot?",
+   "houseNo": "15",
+   "child": "Marija",
+   "note": "»Marija dne 27. oktobra 1955 v Broduut?« (modri); oče Matija Jakfič? × Ana Novak"
+  },
+  {
+   "row": 44,
+   "village": "Gradac",
+   "houseNo": "59",
+   "child": "Anton",
+   "note": "oče Anton Kovačič? gradac × Marija Škek?"
+  },
+  {
+   "row": 45,
+   "village": "Gradec",
+   "houseNo": "13?",
+   "child": "Hedviga",
+   "note": "EMŠO 0606941505284; poročena 20.3.1948 Kamniku; umr. 15.04.1945 v gozdu NOB!; oče Alojzij Dim? gostilnonec? × Herma Prijatelj"
+  },
+  {
+   "row": 46,
+   "village": "Otok",
+   "houseNo": "23",
+   "child": "Ivana (+15/6.1911)",
+   "note": "botra PRAZNA + podpis PRAZEN — NUJNI KRST signal (2. v vzorcu po 1908 h85!); oče Martin Lazič? × Barbara Mavrenič"
+  },
+  {
+   "row": 47,
+   "village": "Gradac",
+   "houseNo": "31",
+   "child": "Julij",
+   "note": "EMŠO 0907941500103 + umr. 25.6.1934 Gradec NU KO št. 1543"
+  },
+  {
+   "row": 48,
+   "village": "Gradac",
+   "houseNo": "31",
+   "child": "Jožef",
+   "note": "isti mesec Juli; oče Julej? Beličič? × Marija Podravec?"
+  },
+  {
+   "row": 50,
+   "village": "Cerkvišče",
+   "houseNo": "36",
+   "child": "Ana",
+   "note": "umrša 28.8.1981 Beograd (št. 2534); oče Jožef Šušfar? bajtar × Marija Škal?"
+  },
+  {
+   "row": 51,
+   "village": "Krasinec",
+   "houseNo": "48",
+   "child": "Ana (+2.11.1913)",
+   "note": "oče Peter Haracovnik? × Marija Arberšnik? št. k.lupanica?"
+  },
+  {
+   "row": 52,
+   "village": "Primorček",
+   "houseNo": "8",
+   "child": "Janez",
+   "note": "EMŠO 2207941340004 + umrl 14.08.1988 Novo mesto; oče Janez Meh × Ana ?en?"
+  },
+  {
+   "row": 54,
+   "village": "Krvaviče?",
+   "houseNo": "5",
+   "child": "Martin (+)",
+   "note": "oče Anton Mavrenič × Ana Krašovec?"
+  },
+  {
+   "row": 56,
+   "village": "Gradac",
+   "houseNo": "10",
+   "child": "Albin (+20/3.1912?)",
+   "note": "oče Anton Jakšič? bajtar × Ana Županc?"
+  },
+  {
+   "row": 57,
+   "village": "Krvoglavec",
+   "houseNo": "31",
+   "child": "Alojzij",
+   "note": "F. 10.2.1947; oče Peter Žvanič? × Marija Serec?"
+  },
+  {
+   "row": 58,
+   "village": "Prilozje",
+   "houseNo": "29",
+   "child": "Anton",
+   "note": "umr. 29.1.1969 Zagreb (MMK 1.1969, zap. št. 112); oče Janez Nemanič? bajtar × Ana Kämpič?"
+  },
+  {
+   "row": 59,
+   "village": "Gradac",
+   "houseNo": "53",
+   "child": "Milan (+20/1.1912)",
+   "note": "oče Danijel Jaklia? mlinar × Marcela? Županc?"
+  },
+  {
+   "row": 60,
+   "village": "Gradac",
+   "houseNo": "18",
+   "child": "Francišek",
+   "note": "EMŠO 2308941500274 + umr. 03.05.1980 Ajdovščina?; rojen 27.3.1938?"
+  },
+  {
+   "row": 61,
+   "village": "Podzemelj",
+   "houseNo": "4",
+   "child": "Angela",
+   "note": "EMŠO 2708941550534 Metlika 18.09.1987 + Helen. pohor.? porez V Obrah Antonom 21.4.1942 + umrla 6.12.1991 Gradec"
+  },
+  {
+   "row": 62,
+   "village": "Krasinec",
+   "houseNo": "21",
+   "child": "Jožef",
+   "note": "EMŠO 2908941505476 + umrša 15.09.2002 (št. 57)"
+  },
+  {
+   "row": 63,
+   "village": "Podzemelj",
+   "houseNo": "28",
+   "child": "Katarina (+18/9.1911)",
+   "note": "September glava; oče Janez Skala? × Katarina Marčka?"
+  },
+  {
+   "row": 64,
+   "village": "Garn",
+   "houseNo": "35",
+   "child": "Ana",
+   "note": "Poročena 9.11.1957 v Zagrebu s Pavolič Štefanom + umrla 15.11.1973 Zagreb; oče Janez Kure bajtar × Barbara Šolajc?"
+  },
+  {
+   "row": 65,
+   "village": "Garn",
+   "houseNo": "29",
+   "child": "Martin",
+   "note": "umrl 8.4.1975 Novo mesto (št. 748); oče Janez Podravec? × Marjeta Meh?"
+  },
+  {
+   "row": 66,
+   "village": "Klanšek?/Planšek?",
+   "houseNo": "33?",
+   "child": "Marija",
+   "note": "DELNO na robu skena; krsta 2.okt? (zamujena!)"
+  },
+  {
+   "row": 70,
+   "village": "Krasinec",
+   "houseNo": "34",
+   "child": "Marija Neža",
+   "note": "EMŠO 1810941505253? [~] + umrša 19.03.1985 Crvste?; oče Jure Klepec × Marija Šimec"
+  },
+  {
+   "row": 71,
+   "village": "Boršt",
+   "houseNo": "10?/19",
+   "child": "Nikolaj",
+   "note": "EMŠO 1910941500124 + umrša 17.09.1938 Novo mesto + Trevacedina dva pohranj 1892 + Terezijana Beljajeva"
+  },
+  {
+   "row": 72,
+   "village": "Primorček",
+   "houseNo": "19",
+   "child": "Anton?/Antonija?",
+   "note": "EMŠO 2210941500064 + žena umrla 01.12.1999 Ljubljana + VPIS PRENEŠEN 16.11.2007 Matičarka Beblojanović?; vas »Primorček« (ne Gradac!)"
+  },
+  {
+   "row": 75,
+   "village": "Dobraviče",
+   "houseNo": "26",
+   "child": "Barbana (+30/4.1914?)",
+   "note": "oče Matija Res? × Barbara Vogrin"
+  },
+  {
+   "row": 76,
+   "village": "Zemelj",
+   "houseNo": "21",
+   "child": "Anton (+19/9.1912?)",
+   "note": "oče Janez Melc? × Marija Keljermik?"
+  },
+  {
+   "row": 77,
+   "village": "Primorček",
+   "houseNo": "22",
+   "child": "Neža",
+   "note": "RAZVELJAVITEV zakona (modri: »zakonoma razo porazbana s velje okrož. sodišče v Zagrebu št. 11 P6/19..«) + umrša 31.5.1980 Zagreb; očeJulijana? Praper? Sošin? (morda nezakonski!)"
+  },
+  {
+   "row": 78,
+   "village": "Dobraviče",
+   "houseNo": "19?",
+   "child": "Barbana",
+   "note": "EMŠO 0411941505162 + umrla 20.05.1958 + poročena 6.2.1938 v Čemšenjk?; oče Janez Žugef? × Marija Plet"
+  },
+  {
+   "row": 79,
+   "village": "Krasinec",
+   "houseNo": "41",
+   "child": "Marija",
+   "note": "EMŠO 0811941505152 + umrl/a 15.12.1999 Grintofec? + VPIS PRENEŠEN 25.11.2007 + poročena 14.6.1937; November glava; oče Jožef Šmuc? × Barbara Trome?"
+  },
+  {
+   "row": 81,
+   "village": "Vranoviče",
+   "houseNo": "10",
+   "child": "Ana",
+   "note": "EMŠO 2011941505605 + poročena 05.11.1930 Podzemelj + umrl 24.12.1998 Gradec + VPIS PRENEŠEN 05.06.2007 Matičarka — 2. VPIS hiše v 1911 (r11 = 1.; DVE DRUŽINI!)"
+  },
+  {
+   "row": 83,
+   "village": "Kremna? [~]",
+   "houseNo": "51",
+   "child": "Terezina",
+   "note": "umr/a 09.03.1983 Zagreb + 19.8.1975 Kandijah?; oče Janez Haracinč? bajtar × Marija Mavrenič"
+  },
+  {
+   "row": 85,
+   "village": "Garn",
+   "houseNo": "26",
+   "child": "Angela",
+   "note": "EMŠO 1112941505254? [~] + VPIS PRENEŠEN 19.11.2007 Matičarka + umrl/a 14.03.1946 + poročena 25.10.1942; oče Jožef Molet? [~ Možel?] × Marija ?; botri Nikolaj Kure + Marija ?"
+  },
+  {
+   "row": 86,
+   "village": "Klojter?",
+   "houseNo": "69",
+   "child": "Marija",
+   "note": "oče Janez Petrovč? bajtar × Neža Krsžance?"
+  },
+  {
+   "row": 87,
+   "village": "Lanče?/Lavče?",
+   "houseNo": "2",
+   "child": "Zofija",
+   "note": "poročen/a (9.32)? + F. 19.3.1941; oče Nikolaj Tame? × Barbara Jurejovič?"
+  },
+  {
+   "row": 88,
+   "village": "Gradac",
+   "houseNo": "1",
+   "child": "Vincencij",
+   "note": "DVOJČEK 1/2 (oče France Belčič? v voj. stražiljonista? × Marija Lestak?)"
+  },
+  {
+   "row": 89,
+   "village": "Gradac",
+   "houseNo": "1",
+   "child": "Hilda",
+   "note": "DVOJČEK 2/2 + Poročena 30.9.1957 v Predvoru s Štrukljam? + umrla 05.04.1995 + RAZVELJAVITEV? pripis"
+  }
+ ],
+ "anomalies": [
+  {
+   "id": "A1",
+   "row": 3,
+   "type": "LEAD POPRAVEK",
+   "what": "P105 lead »h34 TRETJE leto« NAPAČEN — hiša 24 (6× forenzika); genetsko SKLADNO z Janez Brinec (h24 Brinčeva)"
+  },
+  {
+   "id": "A2",
+   "row": 33,
+   "type": "DATUMSKI POPRAVEK",
+   "what": "EMŠO 1704911305004 = 17.4. vs register 14.4. — 3. popravek vzorca (cf. P105 r22/r66)"
+  },
+  {
+   "id": "A3",
+   "row": 37,
+   "type": "GENETSKA VAS",
+   "what": "»Grišice« = genetsko GRIBLJE 33 (Martin Papič = 1909 ISTI oče + botri ISTI PRIIMEK + hiša 33) — cf. P102 »Grišlje«"
+  },
+  {
+   "id": "A4",
+   "row": 67,
+   "type": "GENETSKA VAS",
+   "what": "»Grišice« = genetsko GRIBLJE 3 (hiša 3 = h3 Papič hiša; oče Matija Papič) — PAPIČ 2 hiši v 1911"
+  },
+  {
+   "id": "A5",
+   "row": 38,
+   "type": "FORENZIKA VAS/SELITEV",
+   "what": "»Grišice« 35: France Martinkovič × Katarina Šimec = h30 1909 družina — selitev iz vzorca ali druga vas (neodločeno — EXCLUDED)"
+  },
+  {
+   "id": "A6",
+   "row": 41,
+   "type": "PRAZNA BABICA",
+   "what": "h14: babica brez vnosa (edina v 1911)"
+  },
+  {
+   "id": "A7",
+   "row": 46,
+   "type": "NUJNI KRST SIGNAL",
+   "what": "Otok 23: botra + podpis PRAZNA (2. v vzorcu po 1908 h85) — non-Griblje"
+  },
+  {
+   "id": "A8",
+   "row": 49,
+   "type": "VRZEL REKORD",
+   "what": "h47: VRZEL 21 LET (1890 → 1911) — NOV REKORD (prej 19)"
+  },
+  {
+   "id": "A9",
+   "row": 55,
+   "type": "VRZEL REKORD",
+   "what": "h55: VRZEL 21 LET (1890 → 1911) — REKORD IZENAČEN (dva 21-letna rekorda isto leto!)"
+  },
+  {
+   "id": "A10",
+   "row": 67,
+   "type": "BABICA = MATI",
+   "what": "babica Katarina Novak = mati ISTA OSEBA (cf. P103 r16)"
+  },
+  {
+   "id": "A11",
+   "row": 68,
+   "type": "OČE MENJAVA ISTA MATI",
+   "what": "h21: 1910 »…mir« Požek × Katarina Kure → 1911 Janez Trček × ISTA Katarina Kure! (cf. h1 1910)"
+  },
+  {
+   "id": "A12",
+   "row": 69,
+   "type": "VRZEL 18 LET",
+   "what": "h74: 1893 → 1911 (2. najdaljša v 1911)"
+  },
+  {
+   "id": "A13",
+   "row": 80,
+   "type": "SEGINA POVRAT",
+   "what": "1906 menjava Segina→Brinec REŠENA: 1911 oče Nikolaj Segina × mati Katarina Brinec (kombinacija obeh familij)"
+  },
+  {
+   "id": "A14",
+   "row": 82,
+   "type": "DATUMSKI POPRAVEK?",
+   "what": "EMŠO 2311911505307 = 23.11 vs register 22.11 [~ dan]"
+  },
+  {
+   "id": "A15",
+   "row": 84,
+   "type": "PAPIČ KOLIZIJA",
+   "what": "oče Gapič?/Papič? — 3. Papič hiša v 1911? + h31 VRZEL 11 LET"
+  },
+  {
+   "id": "A16",
+   "row": 82,
+   "type": "VRZEL 12 LET",
+   "what": "h40: 1899 → 1911"
+  },
+  {
+   "id": "A17",
+   "row": 22,
+   "type": "DVOJČKI",
+   "what": "r22/r23 Dobraviče 16 (Martin+Janez) + r88/r89 Gradac 1 (Vincencij+Hilda) — DVA para (non-Griblje)"
+  },
+  {
+   "id": "A18",
+   "row": 77,
+   "type": "RAZVELJAVITEV",
+   "what": "Primorček 22: zakon razveljavljen (Zagreb št. 11 P6/19..) — non-Griblje"
+  },
+  {
+   "id": "A19",
+   "row": 33,
+   "type": "HRIŽAN KAMPAÑA",
+   "what": "5 signalov 1911: r33 oče Janez Hrižan + r80 botrinja Katarina + r82 botri PAR + r84 mati Katarina + botrinja Barbara"
+  },
+  {
+   "id": "A20",
+   "row": 81,
+   "type": "INTRA-LETNI REPEAT (vas)",
+   "what": "Vranoviče 10 ×2 (r11 Jožef + r81 Ana — DVE DRUŽINI)"
+  },
+  {
+   "id": "A21",
+   "row": 69,
+   "type": "VPIS PRENEŠEN ×3",
+   "what": "r69? (25.5.1999) + r80 (25.11.2007) + r84 (19.11.2007)"
+  },
+  {
+   "id": "A22",
+   "row": 3,
+   "type": "MILEK KONTINUITETA",
+   "what": "r3 mati Ana Milek + r49 botrinja Ana Milek ISTA + r69 mati Marija Milek + r73 mati Marija Milek + r80 botrinja Marija Milek"
+  },
+  {
+   "id": "A23",
+   "row": 32,
+   "type": "NEBERLJIVO",
+   "what": "mati »Katarina Bedelarič?« [~ Bedernivec?]"
+  },
+  {
+   "id": "A24",
+   "row": 32,
+   "type": "DOJENČKI †",
+   "what": "6 dojenčkov/otrok †: r32 (+16/7.1911), r37 (+9/9.1911), r53 (+2/6.1912?), r67 (+25/4.1919), r73 (+27/5.1913), r82 (+7/10.1914)"
+  }
+ ],
+ "stats": {
+  "entries": 17,
+  "distinctHouses": 17,
+  "housesWritten": [
+   "3",
+   "6",
+   "13",
+   "14",
+   "21",
+   "24",
+   "30",
+   "31",
+   "33",
+   "36",
+   "40",
+   "47",
+   "49",
+   "55",
+   "72",
+   "74",
+   "48"
+  ],
+  "housesIllegible": 0,
+  "geneticHouses": [
+   "33 (r37 — napisano »Grišice«)",
+   "3 (r67 — napisano »Grišice«)",
+   "24 (r3 — P105 lead »34« NAPAČEN)"
+  ],
+  "newSampleHouses": 0,
+  "newHouseNos": [],
+  "intraYearRepeats": 0,
+  "intraYearRepeatsNote": "NARE 17/17 — brez intra-letnih ponovitev (6. čisto leto zapored: P100–P106 0/0/1/0/0/0/0); na vasi raven: Vranoviče 10 ×2 (r11+r81 — DVE DRUŽINI!)",
+  "pt": {
+   "inNabor": 13,
+   "inGap": 4,
+   "inGapHouses": [
+    "47",
+    "48",
+    "49",
+    "55"
+   ]
+  },
+  "vitals": 429,
+  "cumulative": {
+   "entries": 437,
+   "houses": 85,
+   "years": 26
+  },
+  "babica": {
+   "griblje": "16/17 imenovanih (1 prazna r41)",
+   "meh": "12 (11× Marija + 1× Marjeta r68 — DOMINANTA 1911)",
+   "adlesic": "1 (r3 Barbara)",
+   "pletic": "1 (r32 [~])",
+   "mavrenic": "1 (r37 Ana)",
+   "novakMati": "1 (r67 Katarina — BABICA = MATI ISTA!)"
+  },
+  "podpis": {
+   "bitnar": "13",
+   "rauq": "4",
+   "alternacija": "nad*aljevanje blokovske P105; Rauq = Maj–Junij + November–December bloki"
+  },
+  "emso": {
+   "anchors": 4,
+   "popravki": "2 (r33: 17.4 vs 14.4; r82: 23.11 vs 22.11 [~])"
+  },
+  "dojencckiUmrl": 6,
+  "nezakonski": 0,
+  "botraPrazna": 1,
+  "vpisPrenesen": 3
+ },
+ "crossChecks": {
+  "nare": "17/17 — 6. čisto leto",
+  "dupPar": "DVA (225/226 = str. 200 + 227/228 = str. 201) — največ od P104 (P102 ×2, P103 ×3, P104 ×5, P105 ×1)",
+  "leadNapacen": "P105 lead h34 NAPAČEN → h24 (r3); 2. zapored napačen lead (P104 h5 »Jožefa« → P105)",
+  "grisiceGenetska": "r37 → h33 + r67 → h3 (Papič 2 hiši; »Grišice« = sloppy Griblje)",
+  "grisiceNeodlocen": "r38 »Grišice« 35 = h30 1909 družina (Martinkovič × Šimec) — selitev ali druga vas",
+  "seginaPovrat": "1906 menjava Segina→Brinec rešena 1911 (oče Segina × mati Brinec)",
+  "vrzeliRekord": "21 + 21 + 18 + 12 + 11 let (h47/h55/h74/h40/h31) — rekordno leto; NOV rekord 21 (prej 19)",
+  "oceMenjavaIstaMati": "r68 h21 (Požek → Trček, ISTA Katarina Kure) — 2. primer cf. h1 1910",
+  "h6TretjeLeto": "r74 h6 ZAPORED 3. leto (1909/10/11)",
+  "h49DrugoLeto": "r73 h49 ZAPORED (Brodarič kontinuiteta, oče menjava Nikolaj→Anton?)",
+  "babicaMatiIsta": "r67 babica = mati Katarina Novak (cf. P103 r16)",
+  "milekKontinuiteta": "r3 + r49 (ISTA Ana Milek CROSS-ROW!) + r69 + r73 + r80",
+  "hrizanKampanja": "5 signalov (r33/r80/r82/r84×2)",
+  "klepecBotrina": "r74 Marija Klepec — 4.× v 2 letih",
+  "priorVitals": 412
+ }
+}

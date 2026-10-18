@@ -49,7 +49,7 @@ PT_GAP_NEW = ["46"]             # 46 NOVA — 15. dokazana; 41/60 že znana
 EXPECTED_NEW_HOUSES = ["23", "46", "70", "91"]
 EXPECTED_REPEATS = 12
 EXPECTED_HOUSES_VITALS = 17     # 17 vpisov, vsi zasidrani (runtime projekcija)
-EXPECTED_VITALS_TOTAL = 412     # HOUSE_VITALS 133 + 17 (p80 I7 pin); P89: + 14 (1894); P90: + 15 (1895); P91: + 14 (1896); P92: + 19 (1897); P93: + 12 (1898); P94: + 15 (1899); P95: + 16 (1900); P98: + 12 (1903); P99: + 19 (1904); P101: + 18 (1906); P102: + 15 (1907); P103: + 18 (1908); P104: + 18 (1909); P105: + 20 (1910)
+EXPECTED_VITALS_TOTAL = 429     # HOUSE_VITALS 133 + 17 (p80 I7 pin); P89: + 14 (1894); P90: + 15 (1895); P91: + 14 (1896); P92: + 19 (1897); P93: + 12 (1898); P94: + 15 (1899); P95: + 16 (1900); P98: + 12 (1903); P99: + 19 (1904); P101: + 18 (1906); P102: + 15 (1907); P103: + 18 (1908); P104: + 18 (1909); P105: + 20 (1910)
 EV_ONLY_TOTAL = 8               # P84: 2 + P85: 3 + P86: 1 + P102: r4 (1) + P103: r84 (1) (P87/P88: 0)
 # sidra/pins P88:
 H72_ROW = {"row": 46, "scan": 66, "fatherPin": "Strauš"}
@@ -328,7 +328,7 @@ def verify():
     # leta 1893 — h23 je 1894 ponovitev, toda za P88 dokaz ostaja nova)
     vitals_pre89 = [
         v for v in vitals_all
-        if not (v["bookSignature"] == BOOK_SIGNATURE and v["year"] in (1894, 1895, 1896, 1897, 1898, 1899, 1900, 1901, 1902, 1903, 1904, 1905, 1906, 1907, 1908, 1909, 1910))
+        if not (v["bookSignature"] == BOOK_SIGNATURE and v["year"] in (1894, 1895, 1896, 1897, 1898, 1899, 1900, 1901, 1902, 1903, 1904, 1905, 1906, 1907, 1908, 1909, 1910, 1911))
     ]
     repeat_houses = [h for h in houses if any(
         v["houseNo"] == h and v["bookSignature"] == BOOK_SIGNATURE and v["year"] != 1893
@@ -344,7 +344,7 @@ def verify():
         len(repeat_houses) == dokaz["stats"]["repeatHouses"] == EXPECTED_REPEATS
         and new_houses == dokaz["stats"]["newSampleHouses"] == EXPECTED_NEW_HOUSES
         and n_entries_total == EXPECTED_VITALS_TOTAL
-        and n_entries_total + EV_ONLY_TOTAL == 420  # kumulativno po P105 (412 + 8)
+        and n_entries_total + EV_ONLY_TOTAL == 437  # kumulativno po P106 (429 + 8)
         and n_houses_total == 84  # P98: 80 vitals; P99: + 3 (h6, h42, h50); P100: + 0 (1905 brez novih); P101: + 1 (h4)
         and p85_ev_named == ["65 [~]"]
         and dokaz["stats"]["sampleTotal"] == "156 vpisov / 65 hiš čez tri knjige (04105 + 04894 + 04455) in osem let (1886/1887/1888/1889/1890/1891/1892/1893)"

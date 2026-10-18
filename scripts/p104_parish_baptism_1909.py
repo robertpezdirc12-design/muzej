@@ -85,8 +85,8 @@ EXPECTED_PT_IN_SET = ["1", "6", "10", "12", "24", "30", "32", "33", "34", "35", 
 EXPECTED_PT_GAP = ["42", "48", "54"]  # ponovitve v luknji 41–60 (h42/h48/h54 že dokazane)
 EXPECTED_REPEATS = 1            # NARE PRELOM — h34 ×2 (dvojčka)
 EXPECTED_NEW_HOUSES = 0         # 5. leto z 0 novih
-EXPECTED_VITALS_TOTAL = 412     # 374 + 18 (P104)
-BLOCKS_04105 = 386              # 348 + 18
+EXPECTED_VITALS_TOTAL = 429     # 412 + 17 (P106)
+BLOCKS_04105 = 403              # 386 + 17 (P106)
 KUMULATIV_ENTRIES = 400         # 382 + 18
 KUMULATIV_HOUSES = 85
 KUMULATIV_YEARS = 24            # 1886–1909
@@ -394,7 +394,7 @@ def verify():
     inv["I8_continuity"] = all(prior.get(h) == y for h, y in CONTINUITY.items())
 
     # I9 — vitals projekcija: 04105 blokov 366 (348 + 18); 1909 bloki == 18;
-    # SKUPNI HOUSE_VITALS (vse 3 knjige) == 412
+    # SKUPNI HOUSE_VITALS (vse 3 knjige) == 429
     blocks_1909 = [v for v in vitals if v["year"] == 1909]
     all_src = open(PARISH_TS, encoding="utf-8").read()
     total_blocks = len(re.findall(r"\{[^{}]*?bookSignature:\s*\"(04105|04894|04455)\"[^{}]*?\}", all_src, re.S))
