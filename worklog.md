@@ -5172,3 +5172,20 @@ Stage Summary:
 - **P112 = krstna 1917 ZAKLJUČEN: 12 vpisov / 11 hiš — NARE 12/12 (12. čisto leto!) + 0 NOVIH hiš (3. zapored!) + DVOJČKA h24 (r26+r27; EMŠO 2805 popreavljen!) + 2. par Otok 14 (oba †!) + h88 ZAPORED 3. LETO (1. trojno!) + h62 VRZEL 10 LET + 55 vpisov = ODBOJKA (+34%) + 3 mrtvorojeni/v-sili (r40 ime PRAZNO + babica »tudi krstila«!) + 3 RAZGLAŠENI (rekord; »K.B.g.«!) + BEGUNCI Renče št. 296 (Soška fronta — 1. protokol!) + POSTHUMNO r39 + 4 pečati VPIS PRENEŠEN + »ČUVAJ MEČA 34« + CIGANKA mati (1. etnična označba!) + EMŠO 21 ✓ (2 popravka) + ŠIFRA M=500/F=505 + oče 58 + Paulinus Bitnar jasno + glava »jamarija«**
 - kumulativ 594 vpisov / 88 hiš / 32 let (1886–1917); vitals 508; runQA 113/113; verifier 14/14
 - NASLEDNJA FAZA (P113): krstna 1918 — glava velika ročna VRH str. 254 = s300 (s300–s302 že lokalno!); **1918 r1 = Boršt 49 Ana (Karlovci marg!) + r2 = GRIBLJE 86 Marija + r3 = POKRITA z belim listom (4. pokrita!) + r5 Krasinec 19 Neža (EMŠO 1918 kampanja!) + r6 Vranoviče Helena (5. pečat!)**; cross-ref r20 → str. 264 = s310 = P114 lead; fetch s303+ potreben (/tmp/p113)
+
+---
+Task ID: 85-b (P112 push GitLab + GitHub OK (5f9975e) + Vercel produkcija 113/113 prek GitHub App auto-deployja — TROJSINHRONIZACIJA POLNA)
+Agent: Z.ai Code (glavna seja)
+Task: push 5f9975e na GitLab + GitHub; Vercel deploy + verifikacija 113/113
+
+Work Log:
+- git push origin main (GitLab): **f2ebc24..5f9975e OK**; git push github main: **f2ebc24..5f9975e OK**; ls-remote potrjuje lokalni == GitLab == GitHub == 5f9975e (P112 ZAKLJUČEN)
+- VERCEL REZERVNA POT MRTVA: inkrementalni API file-upload (4. uporaba poskus) → **403 "Not authorized: … scope robertpezdirc12-designs-projects … re-authenticate"**; diagnostika: **GET /v2/user → {"error":"not_found","message":"User not found."}** + GET /v2/teams → 403 = **VERCEL TOKEN VELEN/REVOVAN** (deloval še v Task 83-b/84-b isti dan!) → API file-upload deploy NI mogoč brez novega žetona
+- **PRIMARNA POT DELUJE BREZ ŽETONA: GitHub App auto-deploy** (audit P78: "primary = Vercel GitHub App — vsak push na main samodejno gradi produkcijo; NEODVISEN od poteka VERCEL_TOKEN") — push 5f9975e na GitHub main je sprožil samodejni deploy!
+- **VERIFIKACIJA PRODUKCIJE (griblje-museum.vercel.app): GET /api/qa → ok:True, passed:113, failed:0 — qa-p112 LIVE** ✓ (qa-p112 obstaja samo v 5f9975e = dokaz novega deployja!) + **homepage 200 (908 926 B)** ✓
+- README: razdelek »Zrcaljenje (aktualno)« POPRAVLJEN — primarna pot = GitHub App auto-deploy (potrjeno 85-b); rezervna API pot MRTVA do novega žetona (uporabnikova rotacija)
+
+Stage Summary:
+- **TROJSINHRONIZACIJA POLNA: lokalni == GitLab == GitHub == 5f9975e (P112); Vercel produkcija = 113/113 (qa-p112 PASS) prek GitHub App auto-deployja — brez API žetona!**
+- **VERCEL_TOKEN velen (85-b): rezervna API file-upload pot mrtva; future deploys = push na GitHub (primarna pot) ali NOV žeton (uporabnik)**
+- NASLEDNJA FAZA (P113): krstna 1918 — glava velika ročna VRH str. 254 = s300 (s300–s302 že lokalno v /tmp/p112); **1918 r1 = Boršt 49 Ana (Karlovci marg — 2. povezava cf. P110 A12!) + r2 = GRIBLJE 86 Marija + r3 = POKRITA z belim listom (4. pokrita vrstica vzorca! marg. na listu: umrla 30.11.1997 Jesenice) + r4 = Grm 26 Jožef (+31.7.1921) + r5 = Krasinec 19 Neža (EMŠO 1401918505189 — 1918 kampanja!) + r6 = Vranoviče Helena (VPIS PRENEŠEN 14.1.2006 = 5. pečat!)**; cross-ref r20 1917 → str. 264 = s310 = P114 lead; fetch s303+ potreben (/tmp/p113)
