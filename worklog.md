@@ -4976,3 +4976,25 @@ Work Log:
 
 Stage Summary:
 - P108 okvir + surova transkripcija 105 vrstic ZAKLJUČENA (brez forenzike); **17 Griblje vpisov / 16 hiš / 0 novih**; dokumentirani novi signali (papirni vstavek, 2 Karolini, 2 para dvojčkov, 3 nezakonski, Klojter ×4, ~30 EMŠO); NASLEDNJA FAZA: forenzični zoomi 17 Griblje vrstic + r51 »Grišice« 44 odločitev + r1 hiša + r5/r6 → evidence JSON → verifier p108 → parish.ts (17 blokov, vitals 449 → 466) → qa-p108 (109. kontrola) → regresije (n_houses_total == 85; letna filtra + 1913; BLOCKS_04105 423 → 440) → audit §83 + README → push + Vercel
+
+---
+Task ID: 80 (P108 = krstna 1913 — forenzika + dokaz + verifikator + parish.ts + qa-p108 + regresije + docs + sinhronizacija + Vercel)
+Agent: Z.ai Code (glavna seja)
+Task: P108 faza 2 — forenzični zoomi 17+ Griblje vrstic (krstna 1913) + dokaz + verifikator + parish.ts + qa-p108 + regresije + audit §83 + README + push + Vercel (owner: »odlicno nadaljuj« / »odlicno nadaljuj kjer si ostal«; pred tem push/GitHub diagnostika)
+
+Work Log:
+- SINHRONIZACIJA OB PREVZETEMU: lokalni == GitLab == 7b67291 (P108 faza 1); GitHub zaostaja 2 commita — PAT `ghp_vARO…` MRTEV (API /user = 401 Bad credentials; žeton v remote URL = isti mrtvi) → GitHub push OSTAJA BLOKIRAN do svežega žetona; Vercel žeton vcp_… VALIDIRAN (v9/projects = 200); GitLab = vir resnice
+- FORENZIKA (faza 2): A+B polstrani izrezi s241/s243/s245/s251/s252/s253/s254/s255 + s239/s240 dno + s256 + 11 očetovih celic 4× + dup s240/s247/s249; NOV CALIBR: skeni nagnjeni — desni stolpci ~1 vrstico nižje pri x>0.40 (gutter curl) → desne celice brane s polnostranskimi B-izrezi + 3-vrstičnimi okni
+- KLJUČNE REŠITVE: **r15 VRNJEN** (faza-1 ga je izpustila! s241-A: Griblje 65 + oče Matija Milek SKLADNO s h65 MILEK → 18 vpisov ne 17!) + r63 oče REŠEN (»Marija→Matija?« = Matija Jakofčič 4×) + **SELIJA h36→h86** (P107 h36 par Marko Hrižan × Katarina Štraus zdaj v h86 — 3. selitev vzorca!) + MENJAVA h34 (Krambič × Milek? — mati familija obstane) + MENJAVA h47 (Požek→Timec?) + h28 oče Lozar razrešeno (1910 nezakonska!) + **h76 NOVA HIŠA VZORCA** (prvi vpis v vseh treh knjigah — faza-1 »0 novih« NAPAČNO!) + r2 = 2. POZNEJŠI VPIS (rojen 10.3.1891, »vpisan pozneje na ukaz št. 136/1919« — faza-1 ni videla!) + r1 hiša POPRAVLJENA 31?→21 + r3 EMŠO POPRAVLJEN ...5196→5496 + r5 vas Zemelj + EMŠO 2501913505466 (s240) + r13 † 1.1.1917 (faza-1 1913 NAPAČNO) + NOVI PODPIS »R. Ozlob? Polak, kap.« (blok r82–r87) + babica JAKOFČIČ 8/18 DOMINANTA (prvič ne-Meh; MEH padec 12/20→1/18!) + EMŠO kampanja ~30 (največja!)
+- DOKAZ research/issue17/parish-baptism-1913.json: 18 entries + 87 excluded + 20 anomalij + vstavek + stats + crossChecks + continuityLast04105
+- Verifikator scripts/p108_parish_baptism_1913.py (I1–I12 + I3b/I5b/I9b): prvi tek 13/15 — I4 (hv1913 dup h31 → sorted(EXPECTED+[31])) + I9 (stats.podpis.polak string) — popravljeno; **15/15 PASS**
+- parish.ts: 18 blokov 1913 (vitals 449 → **467**; vse celovito whatSi+whatEn+status DOCUMENTED; P109 lead v h47 bloku)
+- qa-parish.ts: qa-p108 (109. kontrola; 35 pinov + NARE PRELOM h31 + NOVA h76 + babica statistika + podpisi 6/11/1 + 5 EMŠO sidr + SELIJA h36→h86 + P109 lead) + allow liste + 1913 (qa-p86 h28 / qa-p88 h46 / qa-p91 h9) + p107 prior `year < 1912` + pogoji IN sporočila starih kontrol 449 → 467 (22×) + vitals pini 449 → 467
+- Regresije python: p80 (vitals 467) + p85–p99 vitals 467 + kumulativ 475 + letna filtra + 1913 (p85/p87/p88/p91–p94/p96) + p100–p107 BLOCKS_04105 423 → 441 — **vseh 30 skript p79–p108 PASS** (exit 0)
+- tsc 0 / lint 0; **/api/qa dev (port 3011) 109/109, 0 failed** (qa-p108 True; prvi tek 4 FAIL allow-liste → popravljeno → 109/109)
+- Docs: docs/MUSEUM-AUDIT.md §83 (P108 + nextSteps P109) + README P108 bullet + »Zadnje stanje raziskave (po P108 · 2026-10-18)« (QA 109/109; p79–p108 = 30 skript; qa lista + qa-p108; P77–P108 brez kartic) + TOC anchor popravljen (po P106 → po P108 — P107 ga je izpustil!)
+
+Stage Summary:
+- P108 = krstna 1913 REPO-KOMPLETEN: dokaz + verifikator (15/15 PASS) + parish.ts (467 vitals, 18 celovitih blokov) + qa-p108 (**109/109**) + 30/30 skript PASS + docs; kumulativ **475 vpisov / 87 hiš / 28 let** (1886–1913); **NARE PRELOM: h31 ×2 + DVE FAMILIJI v isti hiši isto leto** (1. ponovitev od P104!); **1 NOVA hiša h76 (2. ZAPORED leto: h86→h76!)**; **SELIJA h36→h86 (3. selitev!)** + MENJAVA h34 (Milek obstane!) + h47 + **r15 VRNJEN (faza-1 izpust!)** + r63 Matija REŠENO + h28 očakovsko razrešeno + **2 POZNEJŠA VPISA (r2 rojen 1891!)** + vstavek Pozamanitev + 3 duhovniki (Polak NOVI!) + babica JAKOFČIČ 8/18 DOMINANTA (prvič ne-Meh; MEH padec!) + EMŠO ~30 (največja!) + 2 † 1944; P109 lead pripravljen
+- GITHUB ŠE VEDNO BLOKIRAN (mrtv PAT) — GitLab = vir resnice; Vercel produkcija prek direktnega API deployja
+- NASLEDNJA FAZA: P109 = krstna 1914 (glava »1914« INLINE str. 218 DNO = s256; 1914 r1 = [vas] 17 Terezija 1./1., EMŠO 01019141505225, VPIS PRENEŠEN 16.10.2002; 1914 r5 = Griblje 1?/4? Anton (+9/2.1915) [~]; PRVO VOJNO leto!) ALI mrliška 04894 1887–1896 ALI poročna 04455

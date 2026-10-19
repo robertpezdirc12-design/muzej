@@ -6163,3 +6163,97 @@ dohiti P107 → QA 108/108; ⑥ **podpis-dilema Bitnar** (kaplan ALI maticarka);
 cf. franciscejski kataster); ⑨ **sub divo mrtvorojen r47** (1. primer vzorca —
 liturgična praksa?); ⑩ **h86 Brinec NOVA hiša** (od kod prihod 1912? bajtar
 Peter Brinec — cf. h77/h49 bajtarske rotacije).
+## §83 · P108 — župnija Podzemelj, krstna knjiga 04105, polno leto 1913 (issue #18; 2026-10-18)
+
+**Sprožilec:** nadaljevanje seje — §82 nextSteps ①: P108 = leto 1913 (glava
+»1913« INLINE str. 209 DNO; faza 1 = surova transkripcija 105 vrstic že v
+commitu 7b67291; ta faza = forenzični zoomi + dokaz + verifikator + parish.ts
++ qa-p108 + regresije + sinhronizacija).
+
+**Okvir:** glava »1913« INLINE str. 209 DNO = s239/240 (P107 lead POTRJEN —
+1913 r1 = Cerkvišče **21** Marija 4./10., EMŠO 0401913505350; hiša POPRAVLJENA
+31? → 21 forenziko s239/240-A + s240); row 105 = str. 218 (Boršt 21 Alojzij);
+**glava »1914« INLINE str. 218 DNO = s256** (P109 lead: 1914 r1 = [vas] 17
+Terezija 1./1., EMŠO 01019141505225, VPIS PRENEŠEN 16.10.2002; 1914 r5 =
+Griblje 1?/4? Anton [~]). **105 vrstic — NAJVEČ v vzorcu** (prej rekord 1908 =
+90). Dup bloki: 239/240 + 241/242 + 243/244 + **245–250 = str. 212 (ŠEST
+skenov iste strani — re-scan serija, največ doslej!)**; stran == sken − 30 /
+− 31 / − 32 / DUP / − 38.
+
+**Metoda (faza 2):** forenzični A+B polstrani izrezi za s241/s243/s245/s251/
+s252/s253/s254/s255 + s239/s240 dno + s256 + 11 očetovih celic 4× (curl-
+kalibracija: desni stolpci ~1 vrstico nižje pri x>0.40 — vse desne celice
+brane s 3-vrstičnimi okni) + dup s240/s247/s249 za vstavek/r5/r6.
+
+**Vpisov z Griblji: 18 / 17 hiš** — NARE PRELOM (h31 ×2 = r10+r70 — 1.
+ponovitev od P104!) + **DVE RAZLIČNI FAMILIJI v h31 isto leto** (r10 Teprič? ×
+Šrajgar? + r70 Černič × Počelf?). **1 NOVA hiša h76** (r80 — prvi vpis v vseh
+treh knjigah! 2. ZAPORED leto z novo hišo: 0/1/0/0/0/0/0/0/1/1). PT 12/5 (h44
+NOVO v gap-listi 41–60; h76 v naboru SKLADNO). Kumulativ **475 vpisov / 87
+hiš / 28 let** (1886–1913; 467 vitals).
+
+**Ključne rešitve forenzike:** ① **r15 VRNJEN V SEZNAM** (faza-1 surova
+transkripcija je r15 IZPUSTILA, navajajoč 17 vpisov — s241-A: vas Griblje +
+hiša 65 + oče Matija Milek SKLADNO s h65 MILEK kontinuiteto → 18 vpisov!); ②
+r63 oče **REŠEN**: »Marija→Matija?« = **Matija Jakofčič** (4× forenzika; cf.
+P107 r32 žensko-ime signal); ③ **SELIJA h36 → h86**: P107 h36 par (Marko
+Hrižan × Katarina Štraus) zdaj v h86 (r75) — **3. selitev vzorca** (cf. h30→
+h10 1909 + h10→h70 1912); ④ r49 **MENJAVA h34** (Brinec × Milek → Krambič ×
+Milek? — mati familija MILEK obstane!); ⑤ r95 **MENJAVA h47** (Požek → Timec?);
+⑥ r32 h28 očakovsko razrešeno (1910 nezakonska → 1913 oče Anton Lozar); ⑦
+P108 lead POPRAVLJEN ×3 (r1 hiša 31? → 21; r3 EMŠO ...5196 → 1501913505496;
+r5 vas Zemelj + EMŠO 280... → 2501913505466 — s240); ⑧ r2 = **2. POZNEJŠI
+VPIS** (rojen 10.3.1891 — 22 let pred vpisom; »vpisan pozneje na ukaz št.
+136/1919«; kolar Kojnič-Hrvaško — faza-1 tega ni videla!); ⑨ r13 † popravek
+(1.1.1917, faza-1 »1.1.1913?« NAPAČNO); ⑩ r6 (28./29., EMŠO 2801913505160,
+vas pod rušo) + r16 (vas pod nalepko, umrla »v kraju Griblje« 2004, hiša 23 —
+dilema h23) — oba EXCLUDED.
+
+**Podpisi (3 duhovniki!):** »Paulin Bitnar« 6 + »Jos. Rauq« 11 + **»R. Ozlob?
+Polak, kap.« 1 — NOVI 3. duhovnik** (blok r82–r87 s254!) = 18 vsi; + Ivan
+Nemanič, umirovljen župnik (r67/r77 non-Griblje). **Babica: 18/18
+imenovanih — VSI!** — **MARIJA JAKOFČIČ 8/18 DOMINANTA (prvič ne-Meh
+dominanta!)** + Pleščič 4 + Adlešič 3 + Mavrenič 2 + **Meh 1 (MEH padec z
+12/20 na 1/18 — konec 28-letne dominance!)**.
+
+**EMŠO kampanja: ~30 marginalij — NAJVEČJA doslej!** 5 Griblje sidr (4
+SKLADNA — r32/r72/r75/r87 + 1 MOŽEN popravek r95 sex-digit 02 = moški vs
+ženska; konvencija 11.–12. števka 00–49 moški / 50–99 ženske).
+
+**Anomalije (20):** papirni vstavek »Pozamanitev« čez r35 (Kosec pocigan? ×
+Hudovirac ciganka — otrok Leopold — potujoča družina — unikat vzorca!); 2
+Karolini zapored (r37+r38); 2 para dvojčkov (r29/r30 + r57/r58); 3 nezakonski
+(r8+r9 ZAPORED + r45 s trakom župnika Štefaniča); nujni krst r22 (botra +
+podpis PRAZNA — 3. signal!); vas »Klojter« ×4; žensko ime v očetovi koloni ×3
+(r47/r79/r98); **2 smrtna signala 2. svetovne vojne** (r88 h60 ⚰ 29.12.1944 +
+r8 razglašen za mrtvega 13.12.1944); h9 VRZEL 13 LET (najdaljša 1913); h36
+ZAPORED 3. leto; h72 Strauš × Šimec 3. skupaj (1909+1911+1913); r51 »Grišice«
+44 Kraf × Štraus NEODLOČENO (hišna kolizija z r35 — EXCLUDED); VPIS PRENEŠEN
+×6. Excluded: 87 (+ vstavek).
+
+**Verifikacija:** dokaz research/issue17/parish-baptism-1913.json (18 entries
++ 87 excluded + 20 anomalij + vstavek + stats + crossChecks + continuity);
+verifikator scripts/p108_parish_baptism_1913.py (I1–I12 + I3b/I5b/I9b) —
+**15/15 PASS**; parish.ts +18 blokov 1913 (vitals 449 → **467**); qa-p108
+(109. kontrola) + allow liste + 1913 (qa-p86 h28 / qa-p88 h46 / qa-p91 h9) +
+p107 prior `year < 1912` + pogoji IN sporočila starih kontrol 449 → 467
+(22×) + vitals pini 449 → 467; regresije: p80 vitals 467 + p85–p99 vitals
+467 + kumulativ 475 + letna filtra + 1913 (p85/p87/p88/p91–p94/p96) +
+p100–p107 BLOCKS_04105 423 → 441 — vseh **30 skript p79–p108** `--check` PASS
+(exit 0). Kartica NI dodana (vzorec P77–P108). tsc 0 / lint 0; **/api/qa dev
+109/109** (qa-p108 pass=True); v7 NESPREMENJEN.
+
+**nextSteps**: ① **P109 = leto 1914** (glava »1914« INLINE str. 218 DNO =
+s256; 1914 r1 = [vas] 17 Terezija 1./1., EMŠO 01019141505225, VPIS PRENEŠEN
+16.10.2002; 1914 r5 = Griblje 1?/4? Anton (+9/2.1915) [~ — ZOOM!]; sken 256
+že v /tmp/p108; 1914 = PRVO VOJNO leto — pričakovati selitve/od absence);
+② mrliška knjiga 04894 1887–1896 (dojenčki † lead); ③ poročna 04455 (Straus ×
+Spudič + KLEPEC 22.1.1933); ④ h51 (ZADNJA nedokazana luknja 41–60!); ⑤
+**h31 DVE FAMILIJI forenzika** (Teprič?/Šrajgar? + Černič/Počelf? — hišna
+delitev? selitev? — cf. franciscejski kataster Griblje 31); ⑥ **r16 dilema
+h23** (umrla v Griblju 2004, hiša 23 pod nalepko — cf. kataster + mrliška);
+⑦ **podpis Polak forenzika** (R. Ozlob? — kaplan 1913 — cf. pastoralni
+slovar/škofija Novo mesto); ⑧ **h76 NOVA hiša** (od kod prihod 1913? oče
+šoždar? — cf. kataster + 04455 poroke); ⑨ **Bitnar/Pleščič/Jakofčič babica
+rotacija** (zakaj padec MEH 1913?); ⑩ produkcija Vercel: dohiti P108 → QA
+109/109.

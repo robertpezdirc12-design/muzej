@@ -67,11 +67,11 @@ EXPECTED_PT_IN_SET = ["1", "5", "6", "7", "11", "12", "22", "23", "25", "34", "3
 EXPECTED_PT_GAP = ["42", "48", "58"]  # ponovitve že dokazanih (42 P99, 48 P93, 58 P84) — vse v luknji 41–60
 EXPECTED_REPEATS = 15           # 16 vpisov − 1 intra-letni ponovitev (h12)
 EXPECTED_NEW_HOUSES = 0         # TRETJIKRAT v vzorcu 0 novih (po 1903–1904 mešano)
-EXPECTED_VITALS_TOTAL = 449     # HOUSE_VITALS 307 + 16 (P100: krstna 1905); P101: + 18 (1906); P102: + 15 (1907)
+EXPECTED_VITALS_TOTAL = 467     # HOUSE_VITALS 307 + 16 (P100: krstna 1905); P101: + 18 (1906); P102: + 15 (1907)
 KUMULATIV_ENTRIES = 329         # 313 + 16
 KUMULATIV_HOUSES = 84
 KUMULATIV_YEARS = 20            # 1886–1905
-BLOCKS_04105 = 423              # 386 + 17 (P106: krstna 1911)
+BLOCKS_04105 = 441              # 386 + 17 (P106: krstna 1911)
 # kontinuitete (hiša → zadnje krstno leto pred 1905 v 04105, iz parish.ts)
 CONTINUITY = {
     "1": 1900, "5": 1903, "6": 1904, "7": 1901, "11": 1890, "12": 1903,
