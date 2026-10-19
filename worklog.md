@@ -5149,3 +5149,26 @@ Work Log:
 Stage Summary:
 - **TROJSINHRONIZACIJA POLNA: lokalni == GitLab == GitHub == b0e5398 (P111); Vercel produkcija = 112/112 (qa-p111 PASS), dpl_BmVGzRGwWGRnDN4tiR2foJ6PthKX READY (72 s)**
 - NASLEDNJA FAZA (P112): krstna 1917 — glava ročno »917« VRH str. 245 = s291 (s283–s302 že lokalno); **1917 r1 = GRIBLJE 45 Karol Feliks** (razvezana zveza 1956! 2. poroka marg!) + r3 = GRIBLJE 62 Marija (‡18/1) + r5 Dragoše 1 + r6 Grm 36; NOVI podpis »Rabus? Šajner?« [~]; fetch s303+ potreben (/tmp/p112)
+
+---
+Task ID: 85 (P112 ZAKLJUČEN — krstna 1917 faza 1+2 + evidence + parish.ts + qa-p112 + README + push + Vercel)
+Agent: Z.ai Code (glavna seja)
+Task: odlicno nadaljuj (owner) — P112 (krstna 1917): faza 1 (okvir + surova transkripcija r1–r55) + faza 2 (forenzika + evidence + verifier + parish.ts + qa-p112 + regresije) + README + notes + push + Vercel
+
+Work Log:
+- SINHRONIZACIJA: trojsinhronizacija že polna (f2ebc24 — nič za push); P111 lead potrjen → nadaljevanje = P112 (krstna 1917); skeni s291–s302 že v /tmp/p111 (fetch protokol Task 84)
+- P112 FAZA 1: A/B izrezi s291–s300 → **1917 = 55 vpisov (r1–r55) čez str. 245–253 == s291–s299 (9 skenov; str == sken − 46)**; glava tiskana + velika ročna »1917« VRH s291-A (P111 lead POTRJEN — r1 = GRIBLJE 45 Karol Feliks!); zaključna opomba »Š t. 55 je zaključno število porodov oziroma krstov v l. 1917« + podpis O. M. Učak? ord. tout. [~]; 1917 se zaključi ENOstransko (nič prekoračitve!)
+- P112 FAZA 2 — FORENZIKA (60 zoomov 3× + 31 zoomov 5× + 3 popravki pozicij): **DVOJČKA r26+r27 h24** (isti dan 28.5., identične celice; **EMŠO POPRAVEK 2803→2805 ZOOM 5×!**; 7./8. par vzorca) + DVOJČKI #2 r24+r25 Otok 14 (**OBA † JUNIJ 1917!**) + **r37 mati Mara Hudorovac CIGANKA = 1. ETNIČNA OZNAČBA** (oče PRAZNO + brez boter; **EMŠO POPRAVEK 2204→2207!**) + **r54 BEGUNEC Renče št. 296 na Goriškem** (zidar. mojster + boter begunec-posestnik — SOŠKA FRONTA; družina VRNJENA na Goriško — poroka 1933 v Renčah, smrti Volčja Draga/Bukovica) + **r39 POSTHUMNO** (oče † 13.5.1917, 3 mesece pred rojstvom) + **r40 »v sili« IME PRAZNO + babica »tudi krstila«** (1. dokaz!) + **r45 mesec POPRAVEK september→oktober** (1. tak!) + **glava »jamarija«** (nova idiosinkrazija!) + marecij ×2 + majnik + **r1 RAZVEZANA ZVEZA 1956** (sodba 9.309/356) + **r7 hiša »ČUVAJ MEČA 34«** (žel. čuvajnica — nov tip!) + žel. tema ×5 + ŽUPAN botri ×3 (Željko ×2 + Stipanič) + ŽUPAN priimek kolizija (r22) + **VPIS PRENEŠEN ×4 pečati** (r18 1966 Ivana Šimunič + r36 MRB 2005 + r43/r52 2007) + **RAZGLAŠENI ×3 = REKORD** (r30/r50/r55; r55 »kot član K.B.g. [~] ni preživel« 15.5.1946!) + **r52 MOŽ † WWII 26.3.1945** + r20 CROSS-REF »glej strani 264« (= s310 = P114 lead!) + **Paulinus Bitnar kaplan JASNO** (r49/r53–r55!) + ornatni dvojnik [~] + **EMŠO 21 datumski ✓ 21/21 + ŠIFRA M=500/F=505 ANOMALIJA** (12 F z liho 8. št.!) + oče 58 let (Bohte 1859) + † 13/55 = 23.6% + BRINC ×5 + Ožbald Jakofčič 3 vloge
+- EVIDENCE JSON: 12 entries + 43 excluded + **21 anomalij (A1–A21)** + frame (55/0/0 dup, − 46) + stats (vitals 508; kumulativ **594 vpisov / 88 hiš / 32 let**) + 30 crossChecks (21 EMŠO ✓) + continuity (vseh 11 hiš obstoječih = 0 novih 3. zapored!) + p113Lead
+- VERIFIER: scripts/p112_parish_baptism_1917.py (I1–I12 + I5b) — **14/14 PASS** (popravki: excluded why polje, intra-repeats [24], pin .some za dvojčka, PT gap [45,46] = luknja 41–60 PT_GAP_KNOWN)
+- PARISH.TS: +12 blokov 1917 (h45/h62/h14/h31/h24×2/h46/h5/h88/h77/h9/h37) — vitals 496 → **508**; bloki 04105 470 → **482**
+- QA: src/lib/qa-parish.ts + qa-p112 (**113. kontrola**; 34 pini + NARE 12/12 + 0 novih + intra-repeats [24] + dvojčka pini + mrtvorojen h14 + h88 ZAPORED 3. + pečati + EMŠO sidra); REGRESIJE: vitals 496→508 **×26** + allow-liste h77 (P85) + h46 (P88) + h37 (P90) + h45/h14/h9 (P91) + 1917
+- QA CHAIN: **runQA 113/113 PASS** (ok: true); lint PASS
+- README: P112 bullet ZAKLJUČEN (dolg + povzetek) + »Zadnje stanje (po P112)« + TOC anchor + QA 113/113 (p79–p112 = 34 skript; qa-p112 v seznamu)
+- NOTES: parish-baptism-1917-notes.md — FAZA 2 KONČANA sekcija
+- Commit + push + Vercel: glej Task 85-b
+
+Stage Summary:
+- **P112 = krstna 1917 ZAKLJUČEN: 12 vpisov / 11 hiš — NARE 12/12 (12. čisto leto!) + 0 NOVIH hiš (3. zapored!) + DVOJČKA h24 (r26+r27; EMŠO 2805 popreavljen!) + 2. par Otok 14 (oba †!) + h88 ZAPORED 3. LETO (1. trojno!) + h62 VRZEL 10 LET + 55 vpisov = ODBOJKA (+34%) + 3 mrtvorojeni/v-sili (r40 ime PRAZNO + babica »tudi krstila«!) + 3 RAZGLAŠENI (rekord; »K.B.g.«!) + BEGUNCI Renče št. 296 (Soška fronta — 1. protokol!) + POSTHUMNO r39 + 4 pečati VPIS PRENEŠEN + »ČUVAJ MEČA 34« + CIGANKA mati (1. etnična označba!) + EMŠO 21 ✓ (2 popravka) + ŠIFRA M=500/F=505 + oče 58 + Paulinus Bitnar jasno + glava »jamarija«**
+- kumulativ 594 vpisov / 88 hiš / 32 let (1886–1917); vitals 508; runQA 113/113; verifier 14/14
+- NASLEDNJA FAZA (P113): krstna 1918 — glava velika ročna VRH str. 254 = s300 (s300–s302 že lokalno!); **1918 r1 = Boršt 49 Ana (Karlovci marg!) + r2 = GRIBLJE 86 Marija + r3 = POKRITA z belim listom (4. pokrita!) + r5 Krasinec 19 Neža (EMŠO 1918 kampanja!) + r6 Vranoviče Helena (5. pečat!)**; cross-ref r20 → str. 264 = s310 = P114 lead; fetch s303+ potreben (/tmp/p113)

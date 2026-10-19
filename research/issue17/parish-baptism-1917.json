@@ -1,0 +1,925 @@
+{
+  "phase": "faza 2 (forenzika: 12 Griblje zoomov 3–5× + EMŠO kampanja 21 zoomov 5× (r26 2805!, r37 2207!, r54 0412) + podpisna forenzika 6× (Paulinus Bitnar jasno r49/r53–r55 + ornatni dvojnik [~]) + razglašeni ×3 + begunci Renče + jamarija/majnik/marecij glave + 4× »Vpis prenešen« + r20 cross-ref str. 264)",
+  "type": "krstna knjiga 04105 — polno leto 1917",
+  "status": "DOKAZANO (12/12 Griblje vpisov forenzično; EMŠO datumski crossCheck 21/21; zaključna opomba »Š t. 55« ✓; 2 dvojčka para; 3 mrtvorojeni/krščeni-v-sili protokoli; 3 razglašeni = rekord)",
+  "issuedAt": "2026-10-19",
+  "source": {
+    "provider": "Matricula Online — https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04105/",
+    "book": "Krstna knjiga 04105, župnija Podzemelj (od 1898 Griblje), 1886–1919",
+    "scans": "s291–s299 (str. 245–253; str. == sken − 46; fetch /tmp/p111 + /tmp/p112; matscan.py protokol AES-256-ECB(MD5)+csrf, worklog Task 84)"
+  },
+  "method": "A/B polstrani 2× (10 skenov s291–s300) + 60 zoomov 3× + 31 zoomov 5× (EMŠO/podpisi/r40 v sili/r45 mesec/r55 marg/zaključna) + 3 popravki pozicij (r26/r37/r54 EMŠO). Faza 1: 41→55 vpisov odkritje čez 9 skenov (nič prekoračitve leta — 1917 ENOstransko zaključen!). Faza 2: forenzika r1/r2/r7/r8/r10–r15/r18/r20/r22/r23/r25–r28/r30/r31/r34–r37/r39/r40/r41/r43–r46/r49–r52/r53–r55 + zaključna opomba + P113 lead s300.",
+  "frame": {
+    "yearStart": 1917,
+    "yearEnd": 1917,
+    "rowsTotal": 55,
+    "rowsStruck": 0,
+    "rowsNote": "r1–r55; NIČ prekoračitve leta (1916 se je zaključila r41 na str. 244; 1917 se zaključi r55 na str. 253 z opombo »Š t. 55 je zaključno število porodov oziroma krstov v l. 1917« — ENAKA formula kot 1916; prazna polovica str. 253)",
+    "pages": [
+      245,
+      253
+    ],
+    "scans": [
+      291,
+      299
+    ],
+    "dupPari": 0,
+    "dupNote": "NIČ dup parov — 2. leto zapored (od P106/P107 prekinitve: P110 2 + P111 0 + P112 0)"
+  },
+  "entries": [
+    {
+      "row": 1,
+      "year": 1917,
+      "month": "Januar (glava »jamarija« — NOVA idiosinkrazija!)",
+      "born": "4.",
+      "baptized": "6.",
+      "village": "Griblje",
+      "houseNo": "45",
+      "scan": 291,
+      "page": 245,
+      "child": "Karol Feliks",
+      "father": "Franc Rajmer [~ Rajhner?], CEVLJAR (nov poklic v Gribljih!), roj. 3.12.1882",
+      "mother": "Ivana roj. Tadej, 13.3.1886",
+      "botra": "Ožbald Jakofčič posestnik + Katarina Pezdire posest. žena",
+      "babica": "Marentič izpr. (brez imena)",
+      "priest": "ornatni podpis »C?dinus Šibar?« [~ — najverjetneje = Paulinus Bitnar, ornatna roka; cf. jasni Paulinus Bitnar r25/r49/r53–r55]",
+      "notes": [
+        "**1. GRIBLJE vrstica 1917!**; h45 = 7. VPIS vzorca (1896, 1897, 1900, 1904, 1912, 1915 → 1917) — VRZEL 2 LETA",
+        "mesec glava »jamarija« = **NOVA IDIOSINKRAZIJA** (za januar! cf. marecij/majnik)",
+        "marg.: **»Zakonska zveza razvezana s pravomočno odločbo sodišča v Ljubljani št. 9.309/356«** (letnica 1956 v št. vloge!) + »ov. poročen 13.5.1946 z Anico [~]« = **RAZVEZANA ZVEZA 1956 — 2. PRIMER v vzorcu (po P112 lead napovedi; cf. P110 A12 razveljavljen zakon Karlovci 1965)**",
+        "marg.: Umrl dne 05.06.1989 v Jesenicah, NKU NO Jesenice 1.1989, str. 236, zap. št. 221; 08.08.1989 matičar Šimunič Minka"
+      ]
+    },
+    {
+      "row": 3,
+      "year": 1917,
+      "month": "Januar",
+      "born": "9.",
+      "baptized": "9.",
+      "village": "Griblje",
+      "houseNo": "62",
+      "scan": 291,
+      "page": 245,
+      "child": "Marija",
+      "father": "Janez Kure k.ž. posestnik roj. 8.12.1884",
+      "mother": "Marija roj. Požek, 13.6.1882 (poroka 26.11.1906)",
+      "botra": "Ivan Brinc posestnik Griblje 10 + Ana Brinc pos. žena",
+      "babica": "Katarina Uak? [~] nah. izpr.",
+      "priest": "ornatni Paulinus Bitnar [~] / Curbina Bitnar? [~]",
+      "notes": [
+        "**2. GRIBLJE vrstica 1917!**; h62 = 4. VPIS (1887, 1891, 1907 → 1917) — **VRZEL 10 LET** (najdaljša aktivna vrzel 1917, 2. najdaljša vzorca za h78 27!) — 3. čisto novorojenec januarja",
+        "marg. rdeče-svinčenik: **»‡ 18/1 1917«** = umrla pri 9 dneh!"
+      ]
+    },
+    {
+      "row": 14,
+      "year": 1917,
+      "month": "Marec",
+      "born": "21.",
+      "baptized": "—",
+      "village": "Griblje",
+      "houseNo": "14",
+      "scan": 293,
+      "page": 247,
+      "child": "mrtvorojen",
+      "father": "Janez Brinec k.ž. posestnik roj. 20.3.1862 (star 55!)",
+      "mother": "Dorotija Pezdire r. 1.10.1881 (poroka 25.10.1908)",
+      "botra": "— (črtica)",
+      "babica": "— (črtica)",
+      "priest": "— (črtica)",
+      "notes": [
+        "**3. GRIBLJE vrstica 1917!**; h14 = 7. VPIS (1896, 1900, 1902, 1908, 1911, 1914 → 1917) — VRZEL 3 LETA",
+        "**MRTVOROJENI PROTOCOL enovrstični** (kot P111 r41): krsta »—« + botra/babica/podpis VSI »—« = nihče ne krsti mrtvorojenega; spola MOŠKEGA ✓",
+        "1. od 3 mrtvorojenih/krščenih-v-sili 1917 (r14 + r38 + r40)"
+      ]
+    },
+    {
+      "row": 18,
+      "year": 1917,
+      "month": "April",
+      "born": "12.",
+      "baptized": "13.",
+      "village": "Griblje",
+      "houseNo": "31",
+      "scan": 293,
+      "page": 247,
+      "child": "Ana",
+      "father": "Janez Papič **mali posebnik in kolar?** [~ holar/Kolar; dvom: poklic ali priimek], roj. 6.9.1887",
+      "mother": "Katarina roj. Križan, 20.1.1887 (poroka 20.1.1911)",
+      "botra": "Miko Brodanič? [~ Brodnik/Brodarič?] kmeč. posestnik + Bara Lozar posestnikova žena",
+      "babica": "Marija Jakofčič neizpr.",
+      "priest": "Valerijan Učak ord. tout.",
+      "notes": [
+        "**4. GRIBLJE vrstica 1917!**; h31 = 10. VPIS (1887–1913) — VRZEL 4 LETA",
+        "EMŠO je: **1204917505096** → 12.4.1917 ✓ (8. št. = 5 = »moška« šifra pri ŽENSKEM imenu — sistematična napaka matičarke, cf. anomalija A10)",
+        "marg.: **pečat »VPIS PRENEŠEN V MATIČNI REGISTER, dne 23.08.1966, Matičarka: Ivana Šimunič«** = **1. od 4 prenosov 1917 (NOVELA — kampanja prenosov!)**",
+        "marg.: poročena 24.11.1941 + »živ. por. 24.5.1947 z [~ Kovačičevim?]«",
+        "4.10.1982 Šimunič Nada"
+      ]
+    },
+    {
+      "row": 26,
+      "year": 1917,
+      "month": "Majnik (maj)",
+      "born": "28.",
+      "baptized": "29.",
+      "village": "Griblje",
+      "houseNo": "24",
+      "scan": 295,
+      "page": 249,
+      "child": "Anton",
+      "father": "Janez Brinec posestnik roj. 22.11.1880",
+      "mother": "Ana roj. Milek, 25.9.1889 (poroka 22.5.1905)",
+      "botra": "Miko Šegina [~ Segina] posestnik + Marija Brinec posest. žena",
+      "babica": "Bara Adlešič neizpr.",
+      "priest": "P. Valerijan Učak ord. taut.",
+      "notes": [
+        "**5. GRIBLJE vrstica 1917!**; h24 = 16. VPIS (1887–1912 — največkrat vpisana gribljska hiša do 1917!) — VRZEL 5 LET",
+        "EMŠO je: **2805917500040** → 28.5.1917 ✓ (ZOOM 5× jasno: **2805**, faza-1 »2803« POPRAVLJENO!) — mesec se sklada z majnik glavo ✓",
+        "**DVOJČEK #1 (a)** — r26 + r27: ista hiša 24, isti rojstni dan 28.5.1917 (EMŠO oba 2805917!), isti krstni dan 29.5., ISTI starši (identična celica, poroka 22.5.1905 obe), ISTI botri (Miko Šegina + Marija Brinec), ISTA babica (Bara Adlešič) — **2. dvojčki par 1917, 7. par vzorca (po P110 ×2 — 3. leto z dvojčki!)**"
+      ]
+    },
+    {
+      "row": 27,
+      "year": 1917,
+      "month": "Majnik (maj)",
+      "born": "28.",
+      "baptized": "29.",
+      "village": "Griblje",
+      "houseNo": "24",
+      "scan": 295,
+      "page": 249,
+      "child": "Ivana",
+      "father": "Janez Brinec posestnik roj. 22.11.1880 (identično r26)",
+      "mother": "Ana roj. Milek, 25.9.1889 (identično r26)",
+      "botra": "Miko Šegina [~ Segina] posestnik + Marija Brinec posest. žena (identično r26)",
+      "babica": "Bara Adlešič neizpr.",
+      "priest": "P. Valerijan Učak ord. taut.",
+      "notes": [
+        "**6. GRIBLJE vrstica 1917!**",
+        "EMŠO je: **2805917505115** → 28.5.1917 ✓ (»505« ženska šifra — cf. A10)",
+        "**DVOJČICA #1 (b)** — r26 + r27 DVOJČKA na h24! (INTRA-LETNA PONOVITEV hiše 24 = edina 1917; NARE ostaja: vseh 11 hiš obstoječih)"
+      ]
+    },
+    {
+      "row": 35,
+      "year": 1917,
+      "month": "Julij",
+      "born": "21.",
+      "baptized": "21.",
+      "village": "Griblje",
+      "houseNo": "46",
+      "scan": 296,
+      "page": 250,
+      "child": "Julij",
+      "father": "Anton Brodarič [~ Brodarić/Brodanič?] posestnik roj. 14.11.1859 (star 57–58!)",
+      "mother": "Katarina Milek roj. 1.8.1876 (poroka 7.11.1904)",
+      "botra": "Nikolaj Željko POSEST. IN ŽUPAN + Ana Pezdire posestnikova žena",
+      "babica": "Marija Jakofčič neizpr.",
+      "priest": "Valerijan Učak ord. tout.",
+      "notes": [
+        "**7. GRIBLJE vrstica 1917!**; h46 = 10. VPIS (1893–1915) — VRZEL 2 LETA",
+        "oče star 57–58 = **najstarejši oče 1917 kandidat #2** (za r29 Bohte 1859!); mati Milek (cf. r26/r27 ana Milek)",
+        "boter **ŽUPAN** (Nikolaj Željko, 2. funkcija župan v 1917 — cf. r32 + r44 Stipanič)!",
+        "marg.: **»+ 16.7.1928«** = umrl pri 11 letih (1928!)"
+      ]
+    },
+    {
+      "row": 37,
+      "year": 1917,
+      "month": "Julij",
+      "born": "22.",
+      "baptized": "24.",
+      "village": "Griblje",
+      "houseNo": "5",
+      "scan": 296,
+      "page": 250,
+      "child": "Jakob",
+      "father": "— (PRAZNO — nezakonski)",
+      "mother": "Mara Hudorovac **CIGANKA** (Romnja!) — edina etnična označba v vzorcu doslej!",
+      "botra": "— (črtice — nihče)",
+      "babica": "— (pokrito s trakom)",
+      "priest": "— (pokrito s trakom)",
+      "notes": [
+        "**8. GRIBLJE vrstica 1917!**; h5 = 8. VPIS (1891–1914) — VRZEL 3 LETA",
+        "EMŠO je: **2207917500054** → 22.7.1917 ✓ (ZOOM 5× jasno: **2207**, faza-1 »2204« POPRAVLJENO!)",
+        "**MARA HUDOROVAC CIGANKA = ROMNJA — 1. EKSPlicitNA ETNIČNA OZNAČBA VZORCA!** (socialna zgodovina Belaje krajine 1917); nezakonski + brez boter = popolna socialna izolacija vpisa",
+        "marg.: poročen 24.11.1941 + domači poročen dne 8.5.1951 v [Gradacu? ~ Maronam? ~] župlji [~] + Umrl dne 25.12.2004 v [Zemelju? ~ Metlika ~], NKU NO Metlika 1.2004, matičarka Vesna Šimunič [~]"
+      ]
+    },
+    {
+      "row": 41,
+      "year": 1917,
+      "month": "September",
+      "born": "1.",
+      "baptized": "2.",
+      "village": "Griblje",
+      "houseNo": "88",
+      "scan": 297,
+      "page": 251,
+      "child": "Katarina",
+      "father": "Peter Brinc MALI POSESTNIK roj. 28.9.1860 (star 57!)",
+      "mother": "Katarina Bahorič roj. 18.10.1888 (poroka 12.11.1916 — 1. otrok po 8 mesecih!)",
+      "botra": "Ožbald Jakofčič posestnik + Magda Bahorič pos. žena",
+      "babica": "Marija Jakofčič",
+      "priest": "Valerijan Učak ord. teat",
+      "notes": [
+        "**9. GRIBLJE vrstica 1917!**",
+        "**h88 ZAPORED 3. LETO!** (P110 r8 1915 + P111 r26 1916 + P112 r41 1917 = 3 zaporedna leta — 1. hiša s 3-zaporedjem v vojnih letih!); h88 = 5. VPIS (1904, 1910, 1915–17)",
+        "marg.: **»† 9.11.1918«** = umrla pri 14 mesecih — **TEDEN DO KONCA VOJNE!** (predaja 11.11.1918)"
+      ]
+    },
+    {
+      "row": 43,
+      "year": 1917,
+      "month": "September",
+      "born": "12.",
+      "baptized": "13.",
+      "village": "Griblje",
+      "houseNo": "77",
+      "scan": 297,
+      "page": 251,
+      "child": "Katarina",
+      "father": "Jurij Sočik? [~ Socik/Sočih] mali posestnik roj. 6.5.1883",
+      "mother": "Katarina Veselič roj. 12.4.1885 (poroka 12.5.1907)",
+      "botra": "Matija Šimec posestnik + Ana Mlekh posest. žena",
+      "babica": "Marija Jakofčič",
+      "priest": "Valerijan Učak ord. tout.",
+      "notes": [
+        "**10. GRIBLJE vrstica 1917!**; h77 = 5. VPIS (1890, 1902, 1909, 1914 → 1917) — VRZEL 3 LETA",
+        "EMŠO je: 1209917505071 [~] → 12.9.1917 ✓",
+        "marg.: **pečat »VPIS PRENEŠEN V MATIČNI REGISTER dne 14.11.2007« (2. tak pečat 1917!)** + Vročena? dne 26.11.1944 z Ambrož? Avguštinom [~] + Mož umrl dne 10.08.1987 v Ljubljani, NKU NO Ljubljana-center 1987, str. 128, zap. št. 2276, matičar Šimunič Minka 16.12.1987 + 4.10.1982 Šimunič Nada"
+      ]
+    },
+    {
+      "row": 48,
+      "year": 1917,
+      "month": "Oktober",
+      "born": "24.",
+      "baptized": "25.",
+      "village": "Griblje",
+      "houseNo": "9",
+      "scan": 298,
+      "page": 252,
+      "child": "Janez",
+      "father": "Ožbald Jakobčič [~ Jakofčič — ortografija variira!] posestnik roj. 3.8.1889",
+      "mother": "Terezija roj. Klepec, 21.6.1890 (poroka 6.2.1911)",
+      "botra": "Anton Marentič posestnik + Marija Žunič posest. žena",
+      "babica": "Marija Jakobčič",
+      "priest": "Valerijan Učak ord. tout.",
+      "notes": [
+        "**11. GRIBLJE vrstica 1917!**; h9 = 5. VPIS (1896, 1900, 1913, 1915 → 1917) — VRZEL 2 LETA",
+        "oče Ožbald Jakobčič roj. 3.8.1889 = **ISTI OŽBALD JAKOFČIČ, ki je BOTER r1 (Karol Feliks!) + r41 (Katarina h88!) — 3. vloga v enem letu (2× boter + 1× oče!)**"
+      ]
+    },
+    {
+      "row": 52,
+      "year": 1917,
+      "month": "December",
+      "born": "8.",
+      "baptized": "9.",
+      "village": "Griblje",
+      "houseNo": "37",
+      "scan": 298,
+      "page": 252,
+      "child": "Marija",
+      "father": "Marko Stublar [~ Stubljar] posestnik roj. 30.5.1898 [popravki: prečrtano + pripis »30.« + »89→98«]",
+      "mother": "Ivana roj. Kukar, 7.5.1893 (poroka 27.2.1916)",
+      "botra": "Matija Šimec posestnik + Katarina Križan posestnikova žena",
+      "babica": "Marija Piletič",
+      "priest": "Valerijan Učak o.t.",
+      "notes": [
+        "**12. GRIBLJE vrstica 1917!**; h37 = 5. VPIS (1895, 1897, 1916 mrtvorojen → 1917) — h37 NADALJUJE po P111 mrtvorojencu (vrzel 19 let zaključena)",
+        "EMŠO je: **0812917505459** → 8.12.1917 ✓",
+        "marg.: **pečat »VPIS PRENEŠEN V MATIČNI REGISTER, dne 14.11.2007, matičarka [B~l~lončič? ~]«** (3. pečat 1917; r18 1966, r43 2007, r52 2007, + r36 MRB 2005) + **Zakonec [Lipovec?] Jože umrl 26.3.1945 v [Zejcih? ~]** (**MOŽ † WWII!** — cf. P109 vojne smrti) + Sklenila zakonsko zvezo dne 03.11.1940 z [Lipovec?] Jožefom [v Kočevju? ~], PPK Kočevje [~], rep. št. 25 + 14.4.1983 Šimunič Nada"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "row": 2,
+      "village": "Primostek",
+      "houseNo": "12",
+      "child": "Angela Karolina",
+      "why": "izven Gribljih; EMŠO 0401917505130 (505); poročena 20.2.1938; umrla 15.12.1999 Novo mesto; glava jamarija"
+    },
+    {
+      "row": 4,
+      "village": "Krasinec",
+      "houseNo": "13",
+      "child": "Anton",
+      "why": "izven Gribljih; ‡ 30.6.1917"
+    },
+    {
+      "row": 5,
+      "village": "Dragoše",
+      "houseNo": "1",
+      "child": "Angela",
+      "why": "izven Gribljih; + 7/12 1918; EMŠO 2201917500098 [~]"
+    },
+    {
+      "row": 6,
+      "village": "Grm",
+      "houseNo": "36",
+      "child": "Martin",
+      "why": "izven Gribljih; poročen 23.VII 1946 v Celju; žena † 22.07.1994; umrl 26.01.2005"
+    },
+    {
+      "row": 7,
+      "village": "Grišiče",
+      "houseNo": "čuvaj meča 34.",
+      "child": "Olga",
+      "why": "izven Gribljih; **hiša = železniška čuvaj-meča 34!**; oče Franc Černigoj želez. čuvaj + boter Janez Pleš želez. uslužbenec"
+    },
+    {
+      "row": 8,
+      "village": "Gradac",
+      "houseNo": "23",
+      "child": "Alojzij Bogomir",
+      "why": "izven Gribljih; rojstva »8. jan.« (prečrtan '8' + prepis; EMŠO ✓ 8.1.1917); krsta »/ feb.« = čez-mesec jan→feb; EMŠO 0801917500099; oče Alojzij Ancik? [~] žel. uslužbenec v Solkanu; sklenil zakonsko zvezo 19.06.1948 v Solkanu (vpisano na podlagi obvestila Gorica 2.1948 št. 59; datum vpisa 28.03.1948? [dvom 4/8]); umrl 01.09.1988 Nova Gorica"
+    },
+    {
+      "row": 9,
+      "village": "Vranoviče",
+      "houseNo": "1",
+      "child": "Jožef",
+      "why": "izven Gribljih; EMŠO 1602917500154; se je preselil z Bukovce 3.11.1951; umrl 08.10.1988 Novo mesto"
+    },
+    {
+      "row": 10,
+      "village": "Zemelj",
+      "houseNo": "20",
+      "child": "Amalija",
+      "why": "izven Gribljih; EMŠO [8/0?]05026 dvom 8. št. — edina »soda« ženska šifra!; deklica 24.08.1985"
+    },
+    {
+      "row": 11,
+      "village": "Kaplišče",
+      "houseNo": "9",
+      "child": "Marija",
+      "why": "izven Gribljih; EMŠO 0503917505472 (505); domači poročena 16.6.1958 [~]; umrla 16.04.1988"
+    },
+    {
+      "row": 12,
+      "village": "Klošter",
+      "houseNo": "76",
+      "child": "Ana Franciška",
+      "why": "izven Gribljih; **NEZAKONSKA (oče prazen!)**; mati Ana Spacapan jamska hči posest-begunca [~]; **KLOŠTER = nova vas vzorca? (2. vpis r33!)**; Vpis prenešen v matični register 13.11.2007; zakonec umrl 5.6.1976 Ajdovščina"
+    },
+    {
+      "row": 13,
+      "village": "Cerkvišče",
+      "houseNo": "2",
+      "child": "Ivana",
+      "why": "izven Gribljih; EMŠO 2303917505063 (505); umrla 22.10.19?6 [~ datum knjige kolizija]"
+    },
+    {
+      "row": 15,
+      "village": "Gradac",
+      "houseNo": "95",
+      "child": "Anton",
+      "why": "izven Gribljih; **meseci marca→april** (rojstva 25.3., krsta 3.4. — čez-mesec!); EMŠO 2503917500135; oče Franc Bizjak žel. uslužbenec; žena † 06.02.1951; umrl 4.10.1982 [~ Boršprgin? Grobnik?]"
+    },
+    {
+      "row": 16,
+      "village": "Grišiče",
+      "houseNo": "1",
+      "child": "Alojzij",
+      "why": "izven Gribljih; oče Miho Judnič k.ž. posestnik roj. 3.10.1866 (50!); boter Janez Rakkan? čevljarski mojster; se je poročil 11.8.1951; umrl 29.10.1992 Jesenice"
+    },
+    {
+      "row": 17,
+      "village": "Cerkvišče",
+      "houseNo": "15",
+      "child": "Anton",
+      "why": "izven Gribljih; ‡ 11.6.1917"
+    },
+    {
+      "row": 19,
+      "village": "Mlake",
+      "houseNo": "10",
+      "child": "Ana",
+      "why": "izven Gribljih; **MLAKE = vas vzorca? (cf. P111 Zastava 9)**; EMŠO 2504917505026 (505); poročena 19.9.1952 Gornja Radgona; umrla 15.08.2003 Hruška Sobota"
+    },
+    {
+      "row": 20,
+      "village": "Gradac",
+      "houseNo": "63",
+      "child": "Janez",
+      "why": "izven Gribljih; mesec »majnik«; † 6/2 1920; **marg. »Glede naknadnega vpisa [r patra? ~] glej strani 264« = CROSS-REF → str. 264 = s310 (P114 lead!)**"
+    },
+    {
+      "row": 21,
+      "village": "Gradac",
+      "houseNo": "28",
+      "child": "Angela Draga",
+      "why": "izven Gribljih; ‡ 22.10.1917; poroka staršev 7.11.1916"
+    },
+    {
+      "row": 22,
+      "village": "Vranoviče",
+      "houseNo": "33",
+      "child": "Alojzija",
+      "why": "izven Gribljih; EMŠO 2105917505067 (505); oče Janez Curžnar? železniški delavec + boter Jožef Župan železniški čuvaj (**železniška tema!**); umrla 21.01.1997"
+    },
+    {
+      "row": 23,
+      "village": "Gradac",
+      "houseNo": "39",
+      "child": "Vida",
+      "why": "izven Gribljih; **NEZAKONSKA (oče prazen!)** — mati Klara Klepec samostka roj. 2.8.1892; sklenila zakonsko zvezo 26.08.1950 v Metliki z Kraševec Janezom; umrla 28.08.2001 Novo mesto; matičarka Vesna Šimunič"
+    },
+    {
+      "row": 24,
+      "village": "Otok",
+      "houseNo": "14",
+      "child": "Viktor",
+      "why": "izven Gribljih; **DVOJČEK #2 (a)** (r24+r25 Otok 14!); ‡ 6.6.1917"
+    },
+    {
+      "row": 25,
+      "village": "Otok",
+      "houseNo": "14",
+      "child": "Janez",
+      "why": "izven Gribljih; **DVOJČEK #2 (b)**; ‡ 7.6.1917 — **OBA DVOJČKA † V JUNIJU 1917 (vojna dojenčka smrtnost!)**; starši Janez Novak × Jožefa Križan (por. 4.II.1907)"
+    },
+    {
+      "row": 28,
+      "village": "Kaplišče",
+      "houseNo": "5",
+      "child": "Barbara",
+      "why": "izven Gribljih; oče Anton Marentič posestnik; umrla 21.03.1998 Ljubljana"
+    },
+    {
+      "row": 29,
+      "village": "Zastava",
+      "houseNo": "9",
+      "child": "Alojzija",
+      "why": "izven Gribljih; oče Janez Bohte posest. k.ž. **roj. 10.4.1859 (STAR 58 — najstarejši oče 1917!)**; zakonec [Kristof? ~] Franca umrl 27.2.1977; umrla 19.08.2000"
+    },
+    {
+      "row": 30,
+      "village": "Primostek",
+      "houseNo": "8",
+      "child": "Franc",
+      "why": "izven Gribljih; **RAZGLAŠEN za mrtvega** (sklep Okr. sod. Črnomelj št. Pnp. 135/74-10 z dne 30.9.1971; »razglašen, dne 11.11.1971«) = razglašeni #1/3 1917"
+    },
+    {
+      "row": 31,
+      "village": "Grm",
+      "houseNo": "28",
+      "child": "Franc",
+      "why": "izven Gribljih; EMŠO 0807917500006 (julij ✓); oče Nikolaj Pezdirc pred. k. zemlj.; **marg. »Sprejet? Pezdirc ... priznanje? ... z dne 24.07.1940? [~ — očetovstvo/priznanje? cf. P110 A3]«**; svim poročen 25.12.1946; umrl 14.10.1980"
+    },
+    {
+      "row": 32,
+      "village": "Dragoše",
+      "houseNo": "2",
+      "child": "Franc",
+      "why": "izven Gribljih; oče Janez Klepec posestnik; boter Nikolaj Željko posest. in ŽUPAN; umrl 12.05.1985"
+    },
+    {
+      "row": 33,
+      "village": "Klošter",
+      "houseNo": "37",
+      "child": "Maksimilijan",
+      "why": "izven Gribljih; **2. KLOŠTER vpis (potrditev vasi!)**; oče Julij Kočevar posestnik"
+    },
+    {
+      "row": 34,
+      "village": "Dobravice",
+      "houseNo": "26",
+      "child": "Ana",
+      "why": "izven Gribljih; ‡ 15.12.1917; **DOBRAVICE = vas vzorca?**"
+    },
+    {
+      "row": 36,
+      "village": "Krivoglavice",
+      "houseNo": "29",
+      "child": "Marija",
+      "why": "izven Gribljih; EMŠO 2107917505027 (505); **pečat »Vpis prenešen v MRB dne 01.06.2005« (4. prenos!)**; mož umrl 01.03.1986 na Krivoglavicah; poročena 19.11.1939"
+    },
+    {
+      "row": 38,
+      "village": "Dobravice",
+      "houseNo": "?",
+      "child": "mrtvorojen",
+      "why": "izven Gribljih; **MRTVOROJEN #2 (avgust, rojstva 1., krsta —)**; mesec »august«"
+    },
+    {
+      "row": 39,
+      "village": "Gradac",
+      "houseNo": "2",
+      "child": "Ivana",
+      "why": "izven Gribljih; **OČE † PRED ROJSTVOM: Janez Novak posestnik roj. 16.6.1890, † 13.5.1917 — 3 mesece pred rojstvom (POSTHUMNA rojstva — vojna! cf. P110 A1); hči roj. 13.8.1917**; boter Janez Jakša posestnik-mizar; ‡ 26.8.1917"
+    },
+    {
+      "row": 40,
+      "village": "Cerkvišče",
+      "houseNo": "25",
+      "child": "(IME PRAZNO!)",
+      "why": "izven Gribljih; **KRŠČENA V SILI — krsta »14. v sili«, ime PRAZNO, botra prazna, podpis prazen, babica Marija Piletič »tudi krstila«; ‡ 14.8.1917 (isti dan!)** = mrtvorojeni/protokol #3"
+    },
+    {
+      "row": 42,
+      "village": "Krasinec",
+      "houseNo": "51",
+      "child": "Amalija",
+      "why": "izven Gribljih; oče Janez Starašinič mali posestnik roj. 18.3.1863 (54!)"
+    },
+    {
+      "row": 44,
+      "village": "Gradac",
+      "houseNo": "39",
+      "child": "Katarina",
+      "why": "izven Gribljih; oče **Ludovik Schuriger? [~ NEMŠKI priimek!] Kamnovek? [~]** roj. 17.7.1876; boter Jakob Stipanič ŽUPAN in posestnik; ‡ 1/10 1917; 2. vpis h39 isto leto (r23 nezakonska + r44 — hišna delitev? cf. h31 P111)"
+    },
+    {
+      "row": 45,
+      "village": "Otok",
+      "houseNo": "10",
+      "child": "Katarina",
+      "why": "izven Gribljih; **NEZAKONSKA — mati Ana Rožman sam. dekle roj. 5.5.1887**; mesec popravek »september→oktober«"
+    },
+    {
+      "row": 46,
+      "village": "Gradac",
+      "houseNo": "[prekrito ~]",
+      "child": "Leopold",
+      "why": "izven Gribljih; **GOSTA PREKRITA marginalia** (»glasam? tukejše smrtne knjige ... Marija Anžir? Gruca? ... poročila dne 26. sept 1932« [~ — izjava priče 1932?]); oče Vincenc Tomažič? [~] žel. čuvaj? [~]; mati Marija Omej? [~] vdova roj. ~1878; umrl 19.5.1971 v [Kamna Gorici? ~]"
+    },
+    {
+      "row": 47,
+      "village": "Vranoviče",
+      "houseNo": "4",
+      "child": "Martin",
+      "why": "izven Gribljih; oče Jožef Plut posestnik; umrl 22.11.1995 [Šempeter pri Gorici? ~]"
+    },
+    {
+      "row": 49,
+      "village": "Gradac",
+      "houseNo": "49",
+      "child": "Frančiška",
+      "why": "izven Gribljih; boter Franc Graf **LONČARSKI MOJSTER** in posestnik; podpis **Paulinus Bitnar kaplan** (jasno!); umrla 15.1.1977 v [Zutrim? ~]"
+    },
+    {
+      "row": 50,
+      "village": "Zemelj",
+      "houseNo": "15",
+      "child": "Ana",
+      "why": "izven Gribljih; **RAZGLAŠENA za mrtvo** z odločbo mr. sodnišča? v Metliki št. 18 12/52-c, z dne 24.9.1952 = razglašeni #2/3"
+    },
+    {
+      "row": 51,
+      "village": "Krasinec",
+      "houseNo": "8",
+      "child": "Terezija",
+      "why": "izven Gribljih; EMŠO 3011917505028 (505); oče Matija Cajnar posestnik (**cf. P111 r29 Cajnar krščena v sili — ista hiša Krasinec 8!**); domači poročena 28.3.1954 v [Vojdovec-Reparoj? ~] župlji; babica PRAZNO (trak)"
+    },
+    {
+      "row": 53,
+      "village": "Grm",
+      "houseNo": "24",
+      "child": "Janez",
+      "why": "izven Gribljih; EMŠO 1212917500089; oče Janez Pezdirec posestnik roj. 23.12.1866 (50!); umrl 18.02.2005 Ljubljana"
+    },
+    {
+      "row": 54,
+      "village": "Trilorje? [~ — dvom ime vasi!]",
+      "houseNo": "16",
+      "child": "Marija",
+      "why": "izven Gribljih; **BEGUNCI — oče Jakob Obročan? [~] ZIDAR. MOJSTER, BEGUNEC IZ RENČ(E) št. 296 na Goriškem (Soška fronta!) + boter Jožef Nemec BEGUNEC-POSESTNIK = 1. begunski protokol vzorca!**; EMŠO 0412917505086; poročena 26.02.1933 v Renčah; birmann 11.7.1933 v Renčah; mož umrl 05.11.1989 + ona 29.12.2001 v Volčji Dragi/Bukovica (družina SE VRNILA na Goriško!); EMŠO rojstva 4.12 → urejenost po KRSTI ✓ (cf. A15 P110)"
+    },
+    {
+      "row": 55,
+      "village": "Otok",
+      "houseNo": "11",
+      "child": "Anton",
+      "why": "izven Gribljih; **RAZGLAŠEN za mrtvega** (sklep okr. sod. Črnomelj št. Pnp. 135/75 z dne 31.12.1975; določen 15.5.1946; **kot član K.B.g. [~] ni preživel**) = razglašeni #3/3; mati Marija Pezdirec roj. 25.1.1885"
+    }
+  ],
+  "excludedCount": 43,
+  "anomalies": [
+    {
+      "id": "A1",
+      "summary": "**DVOJČKI ×2 V ENEM LETU — 7. IN 8. PAR VZORCA (4. leto z dvojčki: P108/P109/P110/P112!)** — (a) r24+r25 OTOK 14 (Viktor + Janez, roj. 24.5.1917, krsta 25.5., starši Janez Novak × Jožefa Križan identična celica, botri Matija + Barbara Križan) — **OBA † V JUNIJU 1917 (‡ 6.6. + ‡ 7.6. = VOJNA DOJENČKOV SMRTNOST — oba dvojčka umrla v 2 tednih!)**; (b) r26+r27 GRIBLJE 24 (Anton + Ivana, roj. 28.5.1917 EMŠO oba 2805917 ✓ ZOOM 5×, krsta 29.5., starši Janez Brinec × Ana Milek identična celica + poroka 22.5.1905 obe [faza-1 »1915« POPRAVLJENO], botri Miko Šegina + Marija Brinec) — **1. INTRA-LETNA PONOVITEV hiše 1917 (edina; NARE ostaja 11/11)**",
+      "evidence": "s294B r24/r25 identični starši + s295A/B r26/r27 + EMŠO zoom 5× 2805917500040/2805917505115"
+    },
+    {
+      "id": "A2",
+      "summary": "**MRTVOROJENI / KRŠČENI-V-SILI PROTOKOLI ×3 (1916: 2 modela → 1917: 3 primeri!)** — (a) r14 GRIBLJE 14 mrtvorojen (21./— 3.; botra/babica/podpis VSI »—« enovrstični protokol kot P111 r41); (b) r38 Dobravice mrtvorojen (1./— 8.); (c) r40 Cerkvišče 25 **»v sili«** (14. / 14. »v sili« 8.; **IME PRAZNO!** — otrok umrl pred imenovanjem; botra prazna + podpis prazen + babica Marija Piletič **»tudi krstila«** = **BABICA KOT NUJNA KRSTNICA — prvi eksplicitni dokaz v vzorcu!**; ‡ 14.8.1917 isti dan)",
+      "evidence": "s293 r14 + s296 r38 + s297 r40 zoom 5× (»v sili« + »tudi krstila«)"
+    },
+    {
+      "id": "A3",
+      "summary": "**RAZGLAŠENI ZA MRTVE ×3 V ENEM LETU = REKORD VZORCA!** (P110: 1 razglašen + P111: 1 razglašena → 1917: 3!) — (a) r30 Franc Primostek 8 (sklep Okr. sod. Črnomelj Pnp. 135/74-10, 30.9.1971; »razglašen, dne 11.11.1971«); (b) r50 Ana Zemelj 15 (**RAZGLAŠENA** — odločba mr. sodnišča? Metlika št. 18 12/52-c, 24.9.1952 — 2. ženska po P111 r35); (c) r55 Anton Otok 11 (sklep Okr. sod. Črnomelj Pnp. 135/75, 31.12.1975; določen 15.5.1946; **»kot član K.B.g. [~] ni preživel«** — vojna/vojna doba smrt 1946!)",
+      "evidence": "s295A r30 + s298A r50 (modri svinčnik) + s299A r55 zoom 3× (5 vrstic marginalia)"
+    },
+    {
+      "id": "A4",
+      "summary": "**BEGUNCI — SOŠKA FRONTA PROTOKOL (1. V VZORCU!)** — r54 Trilorje? 16: oče **Jakob Obročan? [~], ZIDAR. MOJSTER, BEGUNEC IZ RENČ(E) ŠT. 296 NA GORIŠKEM** (begunska številka!) + boter **Jožef Nemec BEGUNEC-POSESTNIK**; mati Eugenija Šnidarčič; **družina se po vojni VRNILA na Goriško** (r54 marg.: poročena 26.02.1933 **v Renčah** + birmann 11.7.1933 v Renčah + mož † 5.11.1989 + ona † 29.12.2001 **v Volčji Dragi/Bukovica** = vasi ob Renčah!) — **1. DOKAZ BEGUNSKEGA TOKA 1915–17 (Isonzo) v Belo krajino**; podpis Paulinus Bitnar",
+      "evidence": "s299A/B r54 zoom 3×/5× — »begunec iz Renč št.296 na Goriškem« + »begunec-posestnik«"
+    },
+    {
+      "id": "A5",
+      "summary": "**POSTHUMNO ROJSTVO (2. V VZORCU, po P110 A1)** — r39 Gradac 2 Ivana: oče **Janez Novak posestnik roj. 16.6.1890, † 13.5.1917** († zapis v očetovem stolpcu!) — hči roj. **13.8.1917 = 3 MESECE PO OČETOVI SMRTI** (vojni čas! vzrok neznana — vojna služba?); mati Marija roj. Jakša 7.12.1891 (por. 5.2.1912); boter Janez Jakša **posestnik-mizar**; hči ‡ 26.8.1917 (13 dni!)",
+      "evidence": "s297B r39 zoom 3× — »† Janez Novak ... † 13.5.1917«"
+    },
+    {
+      "id": "A6",
+      "summary": "**VPIS PRENEŠEN V MATIČNI REGISTER — KAMPANJA PEČATOV ×4 (NOVELA!)** — (a) r18 Griblje 31 Ana: pečat »VPIS PRENEŠEN V MATIČNI REGISTER, dne 23.08.1966, Matičarka: Ivana Šimunič«; (b) r36 Krivoglavice 29: »VPIS PRENEŠEN V MRB dne 01.06.2005« (MRB = matični register rojenih!); (c) r43 Griblje 77: »VPIS PRENEŠEN ... dne 14.11.2007«; (d) r52 Griblje 37: »VPIS PRENEŠEN ... dne 14.11.2007, matičarka [B~l~lončič? ~]« — **1. sistemska pečatna kampanja v vzorcu** (3 matičarke: Ivana Šimunič 1966 + Vesna Šimunič 2005? + [B~l~lončič?] 2007)",
+      "evidence": "s293A r18 + s296A r36 + s297A r43 + s298A r52 pečati"
+    },
+    {
+      "id": "A7",
+      "summary": "**GLAVE MESECEV — 3 IDIOSINKRAZIJE + 1 POPRAVEK** — (a) r1 **»jamarija«** = NOVA idiosinkrazija za januar (cf. marecij P111 r12); (b) **»marecij« ×2** (r11 + r13) = latinska oblika (ponovitev P111!); (c) **»majnik«** (r20 + s295A nadaljevanje) = idiosinkrazija za maj (ponovitev P111 r22!); (d) r45 **»september→oktober« POPRAVEK** (mesec zapisan napačno, popravljen — 1. tak popravek meseca v vzorcu!); + marca (r15 rojstva) + april (r15 krsta čez-mesec + r16/r19)",
+      "evidence": "s291A r1 »jamarija« + s292A »marecij« + s294A »majnik« + s297A r45 zoom 5× (september/oktober)"
+    },
+    {
+      "id": "A8",
+      "summary": "**»ČUVAJ MEČA 34« — ŽELEZNIŠKA ČUVAJNIČNA KOT HIŠA (nov tip hišne številke!)** — r7 Grišiče: hišna štev. kolona = **»čuvaj meča 34.«** = železniška čuvajnica (»čuvaj me« znak!) z najvišjo št. 34; oče **Franc Černigoj ŽELEZ. ČUVAJ** + boter **Janez Pleš ŽELEZNIŠKI USLUŽBENEC**",
+      "evidence": "s292A r7 zoom 3× — »čuvaj meča 34.«"
+    },
+    {
+      "id": "A9",
+      "summary": "**ŽELEZNIŠKA TEMA ×5 (najmočnejša do sedaj!)** — r7 (oče žel. čuvaj + boter žel. uslužbenec + hiša čuvaj-meča!), r8 (oče Alojzij Ancik? [~] **žel. uslužbenec v Solkanu** — sklenil zakonsko zvezo 19.06.1948 **v Solkanu**!), r15 (oče Franc Bizjak žel. uslužbenec), r22 (oče Janez Curžnar? **železniški delavec** + boter Jožef Župan **železniški čuvaj** — poroka staršev 21.11.1915, 6 mesecev pred rojstvom!), r46 (oče Vincenc Tomažič? [~] žel. čuvaj? [~]) — **vozniško/čuvajno okolje proge (Videm–Metlika?) kot socialno mikrorazredje 1917**",
+      "evidence": "s292A/B + s293A + s294B + s298B"
+    },
+    {
+      "id": "A10",
+      "summary": "**EMŠO KAMPANJA 1917 — 21 VPISOV (2. največja; datumski crossCheck 21/21 ✓ po 2 POPRAVKIH faze-1!)** + **SPOLNA ŠIFRA ANOMALIJA: M = »500« / F = »505«** (12 ženskih vpisov z 8. št. = 5 = LIHA = formalno MOŠKA šifra!; edina dvom: r10 »[8/0?]05026« — morda edina veljavna soda); popravki: r26/r27 **2805** (ne 2803 — majnik mesec ✓), r37 **2207** (ne 2204 — julij ✓); r54 0412 ✓ (urejenost po KRSTI ✓ = potrjuje A15 P110!); r8 krsta »feb.« (čez-mesec jan→feb ✓); label »EMŠO je:« (= »je« slovensko) — kampanja matičarke Nade Šimunič 1982–83 (P111: 12 → P112: 21)",
+      "evidence": "21 EMŠO zoomov 5×; M: r8/r9/r15/r26/r31/r37/r53 = 500 ✓; F: r11/r12/r13/r18/r19/r22/r23/r27/r36/r43/r51/r52/r54 = 505"
+    },
+    {
+      "id": "A11",
+      "summary": "**PODPISNA FORENZIKA — PAULINUS BITNAR KAPLAN (jasno!) + ORNATNI DVOJNIK [~] + zaključna »O. M. Učak?«** — (a) r49/r53/r54/r55 podpis **»Paulinus Bitnar (kaplan)«** ZOOM 5× JASNO — prvi popolnoma berljivi Bitnar podpisi (P110/P111 »Kapl. Bitnar« samo); (b) **ornatni podpis »C?dinus Šibar?« [~]** (r1/r6/r19/r20/r22/r24 + ...) = najverjetneje isti Paulinus Bitnar v ornatni roki [~ dvom — morda 2. duhovnik]; (c) zaključna opomba podpis **»O. M. Učak? ord. tout.«** [~ — ista uganka kot P111 »O. Mučah?«]; (d) Učak ~37 podpisov (dominanta ostaja); r31 podpis »S. Šamlm? Bitnar? [~ dvom]",
+      "evidence": "sig1–sig7 zoomi 5–6× + x_zaklj_podpis 5×"
+    },
+    {
+      "id": "A12",
+      "summary": "**NEZAKONSKI ×4 (2. največ za P107!)** — r12 Klošter (Ana Spacapan **jamska hči posest-begunca? [~]** — oče PRAZEN), r23 Gradac 39 (Klara Klepec samostka — oče PRAZEN), **r37 GRIBLJE 5 (Mara Hudorovac CIGANKA — oče PRAZEN + brez boter = 1. eksplicitna ETNIČNA označba vzorca!)**, r45 Otok 10 (Ana Rožman sam. dekle) — 4/55 = 7.3%; + h39 ×2 isto leto (r23 nezakonska + r44 Schuriger? — hišna delitev? cf. h31 P111)",
+      "evidence": "s292B r12 + s294B r23 + s296B r37 (»Mara Hudorovac ciganka« zoom) + s297B r45"
+    },
+    {
+      "id": "A13",
+      "summary": "**ŽUPAN KOT BOTER ×3 + ŽUPAN(SKA) PRIIMEK-KOLIZIJA** — (a) r32 boter **Nikolaj Željko POSEST. IN ŽUPAN** + r35 ISTI (2× v enem letu!); (b) r44 boter **Jakob Stipanič ŽUPAN IN POSESTNIK**; (c) r22 boter **Jožef ŽUPAN železniški čuvaj** = ŽUPAN kot PRIIMEK (kolizija funkcija/priimek v isti knjigi!) — **3 botri-župani v enem letu = politično-socialna integracija župnije**",
+      "evidence": "s296B r32/r35 + s297B r44 + s295B r22"
+    },
+    {
+      "id": "A14",
+      "summary": "**NOVI POKLICI V GRIBLJIH/ŽUPLNIJI 1917** — oče r1 **Franc Rajmer CEVLJAR** (1. čevljar-oče vzorca!); boter r16 Janez Rakkan? **ČEVLJARSKI MOJSTER**; boter r49 Franc Graf **LONČARSKI MOJSTER** (poternica!); oče r54 Jakob Obročan? **ZIDAR. MOJSTER** (begunec); oče r18 Janez Papič **mali posebnik in kolar? [~ holar/Kolar — poklic ali priimek dvom]** — **vojna 1917 = obrtniška diverzifikacija** (cf. P111 tesarski mojster)",
+      "evidence": "s291B r1 + s293B r16/r18 + s298B r49 + s299B r54"
+    },
+    {
+      "id": "A15",
+      "summary": "**STAROST OČETOV 1917 — EKSTREMI** — (a) r29 oče Janez Bohte roj. 10.4.1859 = **STAR 58 — NAJSTAREJŠI OČE 1917** (2. najstarejši vzorca za P109 59!); (b) r35 oče Anton Brodarič roj. 14.11.1859 (57–58!); (c) r41 oče Peter Brinc roj. 28.9.1860 (57! — 1. otrok po poroki 12.11.1916); (d) r14 oče Janez Brinec roj. 20.3.1862 (55! — mrtvorojenec); (e) r53 oče Janez Pezdirec roj. 23.12.1866 (50) + r16 oče Miho Judnič roj. 3.10.1866 (50) — **5 očetov 50+ = vojna generacija očetov**",
+      "evidence": "s295B r29 + s296B r35 + s297B r41 + s293B r14 + s299B r53"
+    },
+    {
+      "id": "A16",
+      "summary": "**† OTROCI 1917 — 11 ZAPISOV (24%) + 3 mrtvorojeni/protokoli** — r3 ‡18/1 (9 dni!), r4 ‡30.6, r5 +7/12 1918, r17 ‡11.6, r21 ‡22.10, r24 ‡6.6 + r25 ‡7.6 (DVOJČKA!), r34 ‡15.12, r39 ‡26.8 (13 dni!), r40 ‡14.8 (krščena v sili), r44 ‡1/10, + r41 **† 9.11.1918 = TEDEN DO KONCA VOJNE!** + r20 † 6/2 1920 + r35 +16.7.1928 (11 let!) — **13/55 = 23.6% vojna smrtnost** (nižja od 1916 ~44% a še vedno visoka; 2. leto zapored † ~20%+)",
+      "evidence": "marginalia ‡ r3/r4/r5/r17/r21/r24/r25/r34/r39/r40/r41/r44 + r20/r35"
+    },
+    {
+      "id": "A17",
+      "summary": "**CROSS-REF »GLEJ STRANI 264« (1. notranja referenca vzorca!)** — r20 Gradac 63 Janez: marg. **»Glede naknadnega vpisa [r patra? ~] glej strani 264 [~ + 'G.b.'?]«** = str. 264 = **s310 = P114 ozemlje (1919!)** — naknadni vpis povezan z r20/jegovim očetom Janezom Korbavecem; **P114 LEAD: pri transkripciji str. 264 iskati naknadni vpis!**",
+      "evidence": "s294A r20 zoom 3×"
+    },
+    {
+      "id": "A18",
+      "summary": "**UREJENOST PO KRSTI — 2. POTRDITEV (A15 P110!)** — r54 Trilorje? rojstva **4.12.** (EMŠO 0412917 ✓) zapisan PO r53 (rojstva 12.12.) = odstopanje po rojstvu, vendar krsta 16.12 > 13.12 = **UREJENO PO DATUMU KRSTE** ✓; + r8 krsta »feb.« (28. jan./1. feb.) + r15 marca→april = protokoli čez-mesec konsistentni",
+      "evidence": "s299A r53/r54 + EMŠO zoom"
+    },
+    {
+      "id": "A19",
+      "summary": "**FAMILIJA BRINC/BRINEC — 5 VLOG V ENEM LETU** — r3 boter **Ivan Brinc posestnik Griblje 10**; r14 starš **Janez Brinec roj. 20.3.1862** (Griblje 14!); r26/r27 starš **Janez Brinec roj. 22.11.1880** (Griblje 24 — DVOJČKA!) + botra **Marija Brinec**; r22 mati Ana roj. **Brinec**; r41 starš **Peter Brinc** (Griblje 88!) — **5 hiš Brinčev (G10/G14/G24/G88 + Poraba) + 3 generacije (1860/1862/1880)** = največja familija 1917",
+      "evidence": "s291B r3 + s293B r14 + s295B r26/r27 + s295B r22 mati + s297B r41"
+    },
+    {
+      "id": "A20",
+      "summary": "**OŽBALD JAKOFČIČ — 3 VLOGE V ENEM LETU (2× boter + 1× oče!)** — boter r1 (Karol Feliks h45!) + boter r41 (Katarina h88!) + **oče r48 (Janez h9, Ožbald Jakobčič roj. 3.8.1889)** — ortografija variira (Jakofčič/Jakobčič); cf. P110 A18 familija JAKOBČIČ",
+      "evidence": "s291B r1 + s297B r41 + s298B r48"
+    },
+    {
+      "id": "A21",
+      "summary": "**MOŽ † WWII (r52 Griblje 37)** — Marija h37: marg. **»Zakonec [Lipovec?] Jože umrl 26.3.1945 v [Zejcih? ~]« + »Sklenila zakonsko zvezo dne 03.11.1940 z [Lipovec?] Jožefom, PPK Kočevje [~]«** = mož umrl **26.3.1945** (vojni čas! Kočevje region — nemška okupacijska ofenziva?) — 1. eksplicitna WWII vdova-marg v krstni 1917 (cf. P109 mrliška vojne smrti)",
+      "evidence": "s298A r52 zoom 3×"
+    }
+  ],
+  "stats": {
+    "entries": 12,
+    "distinctHouses": 11,
+    "housesWritten": 11,
+    "housesIllegible": 0,
+    "geneticHouses": 12,
+    "newSampleHouses": 0,
+    "newHouseNos": [],
+    "intraYearRepeats": [
+      "24 (r26+r27 dvojčka!)"
+    ],
+    "gribljeRows": 12,
+    "nare": "12/12 (vse hiše obstoječe — NARE čisto leto #12!)",
+    "twins": 2,
+    "stillbirthProtocols": 3,
+    "nezakonski": 4,
+    "razglaseni": 3,
+    "vpisPrenešen": 4,
+    "emsoCampaign": 21,
+    "pileticBabica": "~26/55",
+    "ucakPodpis": "~37",
+    "bitnarPodpis": "jasnih 4 + ornatnih ~8",
+    "kumulativ": "594 vpisov / 88 hiš / 32 let (1886–1917)",
+    "pt": "9/2 (h45 + h46 v luknji 41–60 — obe dokazani v PT_GAP_KNOWN!)",
+    "cumulative": "594 vpisov / 88 hiš / 32 let (1886–1917)",
+    "vitals": 508,
+    "deadInfants": "13/55 = 23.6% († 11 + 2 mrtvorojena; r40 v-sili protokol; nižje od 1916 ~44%, še vedno vojno)",
+    "rowsTotalYear": 55
+  },
+  "crossChecks": [
+    "r1 glava »jamarija« + r1 Karol Feliks h45 ✓ (P112 lead potrjen!)",
+    "r8 EMŠO 0801917500099 → 8.1.1917 = rojstva 8. jan. ✓ (prečrtan '8' + prepis; krsta »/ feb.« = 1. feb.? [~] = čez-mesec jan→feb ✓ = A18) — datum vpisa poroke 28.03.1948/1988 [dvom 4/8]",
+    "r9 EMŠO 1602917500154 → 16.2.1917 = datuma 16./18. ✓ (februarij)",
+    "r10 EMŠO 2702917[8/0]05026 → 27.2.1917 = 27./28. ✓ (8. št. dvom 8/0 — edina »soda« ženska šifra!)",
+    "r11 EMŠO 0503917505472 → 5.3.1917 = 5./6. ✓ (marecij)",
+    "r12 EMŠO 1303917505108 → 13.3.1917 = 13./15. ✓",
+    "r13 EMŠO 2303917505063 → 23.3.1917 = 23./25. ✓",
+    "r15 EMŠO 2503917500135 → 25.3.1917 = rojstva 25. ✓ (marca/april čez-mesec!)",
+    "r18 EMŠO 1204917505096 → 12.4.1917 = 12./13. ✓",
+    "r19 EMŠO 2504917505026 → 25.4.1917 = 25./27. ✓",
+    "r22 EMŠO 2105917505067 → 21.5.1917 = 21./23. ✓ (majnik)",
+    "r23 EMŠO 2205917505509 → 22.5.1917 = 22./23. ✓",
+    "r26 EMŠO **2805917500040** → 28.5.1917 = 28./29. ✓ (**POPRAVEK faze-1: 2803→2805!**; majnik mesec se sklada)",
+    "r27 EMŠO 2805917505115 → 28.5.1917 = DVOJČICA ✓ (isti dan kot r26!)",
+    "r31 EMŠO 0807917500006 → 8.7.1917 = 8./9. ✓ (julij; faza-1 mesec dvom rešen!)",
+    "r36 EMŠO 2107917505027 → 21.7.1917 = 21./22. ✓",
+    "r37 EMŠO **2207917500054** → 22.7.1917 = 22./24. ✓ (**POPRAVEK faze-1: 2204→2207!**)",
+    "r43 EMŠO 1209917505071 [~] → 12.9.1917 = 12./13. ✓",
+    "r51 EMŠO 3011917505028 → 30.11.1917 = 30./30. ✓ (november)",
+    "r52 EMŠO 0812917505459 → 8.12.1917 = 8./9. ✓ (december)",
+    "r53 EMŠO 1212917500089 → 12.12.1917 = 12./13. ✓",
+    "r54 EMŠO 0412917505086 → 4.12.1917 = rojstva 4. ✓ (krsta 16. > r53 krsta 13 = **UREJENOST PO KRSTI ✓ = A15 P110 potrjena!**)",
+    "urejenost r1–r8 po KRSTI: 6./8./9./15./21./24./25./1. feb. ✓ (rojstva 4./4./9./6./20./22./19./28. — r4 rojstva 6. < r3 rojstva 9, a krsta 15. > 9 = urejeno po KRSTI ✓ = A18)",
+    "r28+r29 Zastava 9 (Janez Bohte roj. 1859!) + r30 Primostek razglašen — brez EMŠO, urejenost po krsti ✓",
+    "zaključna opomba: **»Š t. 55 je zaključno število porodov oziroma krstov v l. 1917« + podpis O. M. Učak? ord. tout. [~]** = r55 ZAKLJUČEN ✓ (55/55!)",
+    "str. == sken − 46 ✓ (245–253 == s291–s299)",
+    "kontinuiteta hiš: vseh 11 hiš obstoječih (h45/h62/h14/h31/h24/h46/h5/h88/h77/h9/h37) — 0 novih = **3. leto zapored z 0 novih hiš!**",
+    "h88 ZAPORED 3. LETO (1915 P110 r8 + 1916 P111 r26 + 1917 r41) — 1. 3-zaporedje!",
+    "h37: 1916 mrtvorojen (P111 r41) → 1917 Marija (r52) = nadaljevanje po 19-letni vrzeli",
+    "P111 lead r1 = GRIBLJE 45 Karol Feliks ✓ TOČNO (razvezana zveza 1956 potrjena!); r3 = GRIBLJE 62 Marija ‡18/1 ✓; r5 Dragoše 1 ✓; r6 Grm 36 ✓"
+  ],
+  "continuityLast04105": {
+    "45": {
+      "prior": [
+        1896,
+        1897,
+        1900,
+        1904,
+        1912,
+        1915
+      ],
+      "now": 1917,
+      "gap": 2
+    },
+    "62": {
+      "prior": [
+        1887,
+        1891,
+        1907
+      ],
+      "now": 1917,
+      "gap": 10,
+      "note": "**VRZEL 10 LET — najdaljša aktivna 1917!**"
+    },
+    "14": {
+      "prior": [
+        1896,
+        1900,
+        1902,
+        1908,
+        1911,
+        1914
+      ],
+      "now": 1917,
+      "gap": 3,
+      "note": "mrtvorojen"
+    },
+    "31": {
+      "prior": [
+        1887,
+        1890,
+        1891,
+        1894,
+        1896,
+        1897,
+        1900,
+        1911,
+        1913
+      ],
+      "now": 1917,
+      "gap": 4
+    },
+    "24": {
+      "prior": [
+        1887,
+        1888,
+        1890,
+        1892,
+        1893,
+        1895,
+        1897,
+        1901,
+        1903,
+        1904,
+        1906,
+        1908,
+        1909,
+        1911,
+        1912
+      ],
+      "now": 1917,
+      "gap": 5,
+      "note": "×2 (dvojčka) — 16. vpis = največkrat vpisana hiša!"
+    },
+    "46": {
+      "prior": [
+        1893,
+        1895,
+        1896,
+        1897,
+        1899,
+        1908,
+        1910,
+        1912,
+        1913,
+        1915
+      ],
+      "now": 1917,
+      "gap": 2
+    },
+    "5": {
+      "prior": [
+        1891,
+        1903,
+        1905,
+        1907,
+        1910,
+        1912,
+        1914
+      ],
+      "now": 1917,
+      "gap": 3,
+      "note": "ciganka mati!"
+    },
+    "88": {
+      "prior": [
+        1904,
+        1910,
+        1915,
+        1916
+      ],
+      "now": 1917,
+      "gap": 0,
+      "note": "**ZAPORED 3. LETO!**"
+    },
+    "77": {
+      "prior": [
+        1890,
+        1902,
+        1909,
+        1914
+      ],
+      "now": 1917,
+      "gap": 3
+    },
+    "9": {
+      "prior": [
+        1896,
+        1900,
+        1913,
+        1915
+      ],
+      "now": 1917,
+      "gap": 2
+    },
+    "37": {
+      "prior": [
+        1895,
+        1897,
+        1916
+      ],
+      "now": 1917,
+      "gap": 0,
+      "note": "2. leto (1916 mrtvorojen)"
+    }
+  },
+  "p113Lead": {
+    "glava1918": "ročno zapisana **1918** (velika številka nad glavo!) VRH str. 254 = s300; s300+ fetch potreben (s300–s302 že lokalno v /tmp/p112!)",
+    "r1": "BORŠT 49 Ana (5./7. 1. 1918; glava »januar«; marg.: »Ov. dne 1. julija 1950 [Šimunič Šuškom?] v Karlovci ... prijavčel k Špričič? Bobri ... 30.5.1940 [~]« + poročena 25.6.1934 + žup. urad Otočec (Skuravnica 15/3c?) [~] + Umrla dne 11.11.1975 v Karlovci (MMK Karlovci 1.1975, zap. št. 519), Gradac 22.12.1975 matičarka Valentič Mica — **KARLOVCI = 2. povezava (cf. P110 A12 razveljavljen zakon Karlovci!)**)",
+    "r2": "GRIBLJE 86 Marija (11./12. 1. 1918) — marg. Umrla dne 16.9.1974 v [Grižah? ~] (MMK Zagorje 1.1979, str. 100, zap. št. 5), 24.11.1974",
+    "r3": "**POKRITO Z BELIM LISTOM!** (lepljen čez celo vrstico r3 — marg. na listu: »Umrla dne 30.11.1997 v Jesenicah, NKU NO Jesenice 1.1998, str. 282, zap. št. 489, Metlika 30.12.1997 matičarka Šimunič Minka«; rdeči žig »7« ob levem robu) = **4. POKRITO VRSTICO VZORCA (po P110 r13/r30 dup pari!) — P113 mora odkriti skozi dup/ prenose!**",
+    "r4": "GRM 26 Jožef (12./13. 1. 1918; + 31.7.1921; marg. »Kupni? uyd Ubonaj? dne 5. marca 19?? z Ana Cegar? [~]«)",
+    "r5": "KRASINEC 19 Neža (14./14. 1. 1918; EMŠO je: **1401918505189** [~ — 1918 kampanja!]; marg. Sakenace? Jakofčič? A.stoff umrl 20.7.1977 [~] + Bimek? Pehu? 10.9.1988 [~])",
+    "r6": "VRANOVIČE Helena (16. 1. 1918; EMŠO 1601918505?? [~]; **»VPIS PRENEŠEN V MATIČNI REGISTER dne 14.1.2006 vstavljanja: Šimunič Janka [~]« = 5. pečat (1918)!**; zakonec Štrus? Frančišek? umrl 4.3.1980 Novo mesto, Gradac 14.4.1980)",
+    "note": "P113 = krstna 1918: glava s300 (str. 254); pričakovati NADALJEVANJE vojne (1918 = zadnje vojno leto — † kampanja!), 1918 EMŠO kampanja (8. št. = 0? r5 14019185... = »85«?? [~ dvom]), pokrita r3, P114 lead: cross-ref r20 → str. 264 (s310, 1919); fetch s303+ potreben"
+  }
+}
