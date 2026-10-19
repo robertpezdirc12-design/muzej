@@ -5015,3 +5015,24 @@ Stage Summary:
 - **TROJSINHRONIZACIJA P108 (najboljša možna): lokalni == GitLab == 0eb7231; GITHUB BLOKIRAN (mrtv PAT — potreben svež žeton od ownerja); Vercel produkcija = P108: 109/109, 0 napak**
 - NOVA METODA (P108+): chunked API file-upload (stanje v /tmp/deploy_state.json, serije ~130 datotek) — odporno na umiranje ozadjskih procesov
 - NASLEDNJA FAZA (P109 lead pripravljen): krstna 1914 — glava »1914« INLINE str. 218 DNO = s256; r1 = [vas] 17 Terezija 1./1., EMŠO 01019141505225 (VPIS PRENEŠEN 16.10.2002); r5 = Griblje 1?/4? Anton (+9/2.1915) [~] — PRVO VOJNO leto; skeni 256+ že v /tmp/p108
+
+---
+Task ID: 81 (P109 faza 1 — traki s263–s272 + okvir zaključen + README sync + push GitLab + Vercel produkcija; GitHub blokiran)
+Agent: Z.ai Code (glavna seja)
+Task: nadaljevanje po prekinitvi (owner: »odlicno nadaljuj« prej »nadaljuj uredi readme pushaj kode github gitlab in nadaljuj poushaj na vercel«): ① uredi README + push GitHub/GitLab; ② poushaj na Vercel; ③ P109 faza 1 — preberi trakove s263–s272 (glava 1915 = konec 1914) + transkripcija
+
+Work Log:
+- SINHRONIZACIJA OB PREVZETEMU: lokalni == GitLab == 1501670 (P109 faza 1 napredek); GitHub zaostajal 7 commitov — **GitHub PAT `ghp_vARO…` MRTEV (API /user = 401 Bad credentials)**; testirani VSI trije znani žetoni (ghp_QSn0/ghp_pKV9/ghp_vARO — vsi 401; gh CLI/SSH/credential helper/env NIČ) → **GITHUB PUSH OSTAJA BLOKIRAN do svežega žetona od ownerja**; GitLab = vir resnice
+- README SINHRONIZIRAN do P109 faza 1: P109 bullet (FAZA 1 V TEKU) + »Zadnje stanje raziskave (po P109 faza 1 · 2026-10-19)« + TOC anchor (po P108 → po P109 faza 1) + blok »Zrcaljenje (aktualno)« (GitHub PAT mrtva / GitLab vir resnice / Vercel prek direktnega API deployja) — COMMIT 380397a + **push origin main OK: 1501670..380397a**
+- VERCEL PRODUKCIJA: chunked API file-upload (POST /v2/files × 527 datotek — seznam regeneriran prek `git ls-files -z` + .vercelignore; izpadli next-env.d.ts/.pyc/tsbuildinfo ostanki; 5 serij po 130 v ospredju — peskovnik ubija ozadjske procese) + POST /v13/deployments {gitlabCommit: 380397a} → **dpl_9smKy8oYqzY8NzSnPK4vAFe6nQmS READY (94 s)**; **produkcija /api/qa → ok:True, passed:109, failed:0; homepage 200** ✓
+- P109 FAZA 1 NADALJEVANJE — traki s263–s272 prebrani (t-s263…t-s272, 10 levokolonskih trakov 2.5×): **LETO 1914 ZAKLJUČENO — 78 veljavnih vrstic + r79 PREČRTANA** (23./23. Otok 10 Marija — izbrisani vpis!) + opomba »št. 78 konec poro[da?]« [~] na dnu str. 224
+- **OKVIR P109 KONČAN**: strani 218–224 == skeni 256–268 (13 skenov / 7 strani); **ŠEST dup parov — NOV REKORD!** (256/257 + 258/259 + **260/261** [s261 »Stran 2?0« + r28 »1 maj Griblje 44« SKLADNO] + 263/264 + 265/266 + 267/268; enojni samo s262 = str. 221); razporeditev: 218=r1–r7 / 219=r8–r18 / 220=r19–r31 / 221=r32–r43 / 222=r44–r55 / 223=r56–r68 / 224=r69–r79; **glava 1915 na VRHU str. 225 = s269** (NI INLINE na dnu 224!)
+- **5 NOVIH GRIBLJE VRSTIC (skupaj 10 za 1914!)**: r38 Griblje **77** Anton (15./16. VI; umrl 1.9.1950 Šempolje?) + r42 Griblje **21** Danica (30. VI./1. VII; EMŠO 3006914500518; por. 29.11.1947 Gradec) + r45 Griblje **90** Ivanka (4./9. VII; † 7/7 1915) + r53 Griblje **18** Barbara (26.; EMŠO 2108914500174) + r62 Griblje **8** Jožefa (11./12. IX; EMŠO 2210914505196); h77 = kandidat NOVA hiša (preveri parish.ts)
+- MESEČNE GLAVE INLINE: August (str. 222, s264 viden / s263 pod trakom!) + Oktober + November (str. 223) + December (str. 224); r58 VELIKA VOJNA MARGINALIA (Anton Viši(č)? vojni invalid — vpisan v matično knjigo v Podrečjah 25.11.1917!); r78 »J. mrtvoroj[en]?« (24./– Cerkvišče 7 — 2. mrtvorojen signal!); r54 dvom Griblje 48? vs Zemelj 9? (ZOOM); **EMŠO kampanja ~20 kandidatov** (največja!)
+- **P110 LEAD: glava 1915 = str. 225 VRH = s269** (r1 = Škrilje 1 Janez 1./2.; **r8 = GRIBLJE 88 Ivana** 20./22.); str. 226–227 == s270/271 DUP + s272 okvirno prebrana (1915 r17 = Griblje 78 Jožef †10.9.1916)
+- Zapis: research/issue17/parish-baptism-1914-notes.md (sekcija »OKVIR KONČAN«)
+
+Stage Summary:
+- **TROJSINHRONIZACIJA NAJBOLJŠA MOŽNA: lokalni == GitLab == 380397a; GITHUB BLOKIRAN (vsi PAT-i mrtvi 401 — potreben svež žeton od ownerja); Vercel produkcija = 109/109 (dpl_9smKy8oYqzY8NzSnPK4vAFe6nQmS)**
+- P109 OKVIR 100 %: leto 1914 = 78 vrstic (r79 prečrtana) čez str. 218–224 == s256–s268; **6 dup parov = NOV REKORD**; **10 Griblje vrstic** (r5/r13/r17/r21/r28/r38/r42/r45/r53/r62); glava 1915 = s269 VRH (P110 lead)
+- NASLEDNJA FAZA (P109 faza 2): forenzični zoomi 10 Griblje vrstic (A/B izrezi + očetove celice 4× + r54 dvom + r79 + r5 hiša 1?/4?) → evidence JSON (78 + 1 struck) → verifier p109 → parish.ts (vitals 467 → +N) → qa-p109 (110. kontrola) → regresije → audit §84 + README → push + Vercel → P110 (krstna 1915, glava s269 VRH)
