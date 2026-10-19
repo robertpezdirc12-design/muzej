@@ -5060,3 +5060,18 @@ Stage Summary:
 - kumulativ 487 vpisov / 87 hiš / 29 let (1886–1914); vitals 479; runQA 110/110; verifier 14/14
 - **GITHUB ZRCALO OBNOVLJENO (nov PAT) — trojsinhronizacija spet možna**
 - NASLEDNJA FAZA (P110): krstna 1915 — glava na VRHU str. 225 = s269 (skeni 269–272 že v /tmp/p109; fetch s273+ potreben); 1915 r8 = GRIBLJE 88 Ivana (lead); r17 = Griblje 78? Jožef † 10.9.1916 (okvirno)
+
+---
+Task ID: 82-b (P109 faza 2 push GitLab + GitHub OK + Vercel produkcija 110/110 — TROJSINHRONIZACIJA POLNA)
+Agent: Z.ai Code (glavna seja)
+Task: push f9ea166 na GitLab + GitHub; poushaj na Vercel (owner: »nadaljuj kjer si ostal« z novima žetonoma)
+
+Work Log:
+- git push origin main (GitLab): **3c03e2e..f9ea166 OK**; git push github main: **3c03e2e..f9ea166 OK** (nov žeton ghp_YnmS…); ls-remote potrjuje **lokalni == GitLab == GitHub == f9ea166** — TROJSINHRONIZACIJA POLNA (GitHub zaostanek P106→P109 faza 1 saniran v Task 82, zdaj še faza 2)
+- VERCEL: direkten API file-upload deploy po INKREMENTALNI metodi (prvič!): manifest obnovljen iz `git ls-files -z` + .vercelignore → 528 datotek; **samo 4 spremenjene datoteke re-uploadane** (README.md + scripts/p109_parish_baptism_1914.py + src/data/atlas/parish.ts + src/lib/qa-parish.ts; ostale 524 ponovljene iz prejšnjega manifest prek sha-dedup) → POST /v13/deployments {gitlabCommit: f9ea166} → **dpl_5K7naLWf6PEmS5fFtFcyU4NgbWWk READY (79 s)**
+- **PRODUKCIJA Vercel (griblje-museum.vercel.app): GET /api/qa → ok: True, passed: 110, failed: 0 — qa-p109 live** ✓; homepage 200 ✓
+
+Stage Summary:
+- **TROJSINHRONIZACIJA POLNA: lokalni == GitLab == GitHub == f9ea166 (P109 faza 2); Vercel produkcija = 110/110 (qa-p109 PASS), dpl_5K7naLWf6PEmS5fFtFcyU4NgbWWk READY**
+- NOVA METODA (P109 faza 2+): **inkrementalni API file-upload** (samo spremenjene datoteke; manifest obnovljen vsakič) — hitreje od polnega chunked uploada (79 s vs ~4–5 min)
+- NASLEDNJA FAZA (P110): krstna 1915 — glava na VRHU str. 225 = s269 (NI INLINE); skeni 269–272 že v /tmp/p109 (fetch s273+ potreben); **1915 r8 = GRIBLJE 88 Ivana (lead)**; r17 = Griblje 78? Jožef † 10.9.1916 (okvirno); pričakovati nizko rodnost 1915 (vojna!) + † marginalia 1915/16 kampanja
