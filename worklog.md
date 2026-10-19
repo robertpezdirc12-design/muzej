@@ -5110,3 +5110,28 @@ Stage Summary:
 - **TROJSINHRONIZACIJA POLNA: lokalni == GitLab == GitHub == df74397 (P110); Vercel produkcija = 111/111 (qa-p110 PASS), dpl_CbbrPvRbQr8PJU13hK1WENtuoziN READY (113 s)**
 - METODA POPRAVLJENA: file-upload = **POST /v2/files** (PUT vrne 415); inkrementalno (samo spremenjene datoteke iz sha-dedup manifest)
 - NASLEDNJA FAZA (P111): krstna 1916 — glava ročno INLINE str. 237 = s283 + tiskana VRH str. 238 = s284; **1916 r1 = Grišiče 3 Julija** (9./11. Januar; oče Matija Šapič? [~] × Katarina); r4 = Zemelj 17 Alojzij (Jurij Klepec mer. × Ana Kralj; botra Bara Marentič babica!); skeni s284+ fetch potreben (/tmp/p111); pričakovati še nižjo rodnost (vojna 1916!) + † marginalia kampanja
+
+---
+Task ID: 84 (P111 ZAKLJUČEN — krstna 1916 faza 1+2 + evidence + parish.ts + qa-p111 + README + push + Vercel)
+Agent: Z.ai Code (glavna seja)
+Task: nadaljuj pushaj github gitlab uredi readme kode in nadaljuj (owner) — P111 (krstna 1916): faza 1 (okvir + surova transkripcija r1–r41) + faza 2 (forenzika + evidence + verifier + parish.ts + qa-p111 + regresije) + README + push + Vercel
+
+Work Log:
+- SINHRONIZACIJA: trojsinhronizacija že polna (6b14b19 — nič za push); README že po P110 → nadaljevanje = P111 (krstna 1916)
+- **MATRICULA FETCH PROTOKOL RAZKRIT** (prvič!): thumbnail /image/{b64}/ URL-jev 302/404/403 → viewer JS forenzika (matricula-imageview-compiled.js): **URL = https://img.data.matricula-online.eu/image/{b64}/?csrf={token}&ctrl={AES-256-ECB(MD5(path)).hex()}** + **Cookie: shared_csrftoken** — AES-256 ključ v konstruktorju MatriculaDocView: »pG58&Qj$?.d=(<.[v!kJkm_XNbsa6e.f« (32 znakov); Mt = standard MD5; Tc = SlowAES ECB; POTRJENO: fetch s284 == byte-identičen obstoječemu scan-284.jpg (423457 B)! → **fetcher /home/z/.p110tmp/matscan.py** → fetch s289–s302 (14 skenov; s283–s288 že v /tmp/p110)
+- P111 FAZA 1: A/B izrezi s283–s302 (20 skenov) → **1916 = 41 vpisov (r1–r41) čez str. 237–244 == s283–s290** (str. == sken − 46); **NIČ DUP PAROV** (prvo leto od P106!); glava 1916 ročno INLINE s283-B + tiskana s284-A; glava 1917 = VRH str. 245 = s291 (P112 lead!); notes + commit 9443076 + push GitLab (403 transient → retry OK) + GitHub
+- P111 FAZA 2 — FORENZIKA (11 + 3 zoom izrezi 4–5×): **r22 h82 = NOVA HIŠA** (dvom 82/32 ZAVRŽENO; oče Vrebec? TESARSKI MOJ.; mesec glava **»majnik«** = idiosinkrazija za maj — NOVELA; prečrtan false start!) + **r41 GRIBLJE 37 Marko mrtvorojen** (krsta kolona **»krščena v sili in utero m.« = NUJNI KRST V MATERNICI — PRVI V VZORCU!**; h37 VRZEL 19 LET = 2. najdaljša!) + **r28+r29 DVOJNI VPIS odkrit** (r28 »Mrtvorojena« + r29 »Neža Cajnar« »krščena v sili« = ISTA OSEBA — 2. protokol!; številčenje r30–r41 RAZREŠENO — zap. 30 jasno, 41 = zaključna opomba ✓) + r23 EMŠO 2205916500023 ✓ + umrl **1983** POPRAVLJENO + ŠTRAUS botrinja + **r12 glava »marcij«** (latinsko — NOVELA!) + EMŠO POPRAVLJENO + r18 EMŠO rešitev (rojstva 12.4., faza-1 »19./20.« POPRAVLJENO) + r26/r10/r21 potrjene
+- EVIDENCE JSON: 6 entries + 35 excluded + 14 anomalij (A1–A14) + frame (41/0/0 dup, − 46) + stats (vitals 496; kumulativ **539 vpisov / 88 hiš / 31 let**) + 11 crossChecks (7 EMŠO ✓) + continuity (h82 None = nova) + p112Lead
+- VERIFIER: scripts/p111_parish_baptism_1916.py (I1–I12 + I5b) — **14/14 PASS** (popravki: case-insensitive pini; Učak 4)
+- PARISH.TS: +6 blokov 1916 (h34/h12/h82 NOVA/h36/h88/h37) — vitals 490 → **496**; bloki 04105 464 → **470**
+- QA: src/lib/qa-parish.ts + qa-p111 (**112. kontrola**; 22 pini + NARE 6/6 + 1 nova h82 točno + 0 dup + mrtvorojeni protokoli + majnik/marcij + EMŠO + zaključna opomba); REGRESIJE: 490→496 ×25 + allow-liste h12 (p87) + h37 (p90); podvojen zaključni `}` fix
+- QA CHAIN: **runQA 112/112 PASS** (ok: true); lint PASS
+- README: P111 bullet ZAKLJUČEN (dolg + povzetek) + »Zadnje stanje (po P111)« + TOC anchor + QA 112/112 (p79–p111 = 33 skript; qa-p111 v seznamu; P77–P111)
+- NOTES: parish-baptism-1916-notes.md — FAZA 2 KONČANA sekcija
+- Commit + push + Vercel: glej Task 84-b
+
+Stage Summary:
+- **P111 = krstna 1916 ZAKLJUČEN: 6 vpisov / 6 hiš — NARE 6/6 (11. čisto leto!) + 1 NOVA hiša h82 (tesarski moj.! prekinjena 0-seriji) + h88 ZAPORED 2. leto (Brinec ×3!) + h37 VRZEL 19 LET (edini vpis MRTVOROJEN!) + 41 vpisov = NAJNIŽE (vojna!) + NIČ dup parov (prvo leto od P106!) + 2 PROTOKOLA mrtvorojenih (r28+r29 dvojni vpis NOV + r41 in-utero krst PRVI V VZORCU!) + dvojna hiša 25/32 + dvojno ime + železniška tema ×3 (poroka ISTO LETO!) + glavi »marcij« + »majnik« + † ~44% EKSTREMUM + podpisna uganka Mučah/Muh 07**
+- kumulativ 539 vpisov / 88 hiš / 31 let (1886–1916); vitals 496; runQA 112/112; verifier 14/14
+- **MATRICULA FETCH PROTOKOL dokumentiran (AES-256-ECB+MD5+csrf) — fetch s289–s302 uspešen**
+- NASLEDNJA FAZA (P112): krstna 1917 — glava ročno »917« VRH str. 245 = s291 (s283–s302 že lokalno!); **1917 r1 = GRIBLJE 45 Karol Feliks** (razvezana zveza 1956! 2. poroka marg!) + r3 = GRIBLJE 62 Marija (‡18/1) + r5 Dragoše 1 + r6 Grm 36; NOVI podpis »Rabus? Šajner?« [~]; fetch s303+ potreben

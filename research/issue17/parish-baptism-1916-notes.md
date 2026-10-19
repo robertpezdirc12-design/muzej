@@ -6,12 +6,12 @@ Seja: 2026-10-19 · glava 1916 ročno »1916.« INLINE sredi str. 237 = s283-B (
 - **1916 = 41 vpisov (r1–r41)** čez **str. 237–244 == skeni s283–s290** (8 skenov / 8 strani)
 - **NIČ DUP PAROV** (prvo leto z 0 od P106! — vsi »Stran NNN« zapored: 237–245!) — po rekordih P108 (4+6 rescan) / P109 (6) / P110 (2)
 - **ZAKLJUČNA OPOMBA**: »I številko 41 zaključeno število porodov oz. krstov v l. 1916.« (velika pisava, desna polovica str. 244) + podpis **O. Mučah? / ozd. leut? [~ ZOOM]** (matičar? — NE duhovnik!)
-- razporeditev: 237=r1–r3 (pod glavo 1916) / 238=r4–r9 / 239=r10–r15 / 240=r16–r21 / 241=r22–r26 / 242=r27–r31 / 243=r32–r37 / 244=r38–r41 + zaključna opomba + prečrtana diagonala
+- razporeditev: 237=r1–r3 (pod glavo 1916) / 238=r4–r9 / 239=r10–r15 / 240=r16–r21 / 241=r22–r26 / 242=r27–r31 / 243=r32–r37 / 244=r38–r41 + zaključna opomba + prečrtana diagonala — **r28/r29 = DVOJNI VPIS istega mrtvorojenega otroka (Krasinec 8 Cajnar)!**
 - **str. == sken − 46** (237=283−46 … 245=291−46)
-- **P112 LEAD: glava 1917 = VRH str. 245 = s291** (ročno »917« prek tiskane »18__«); 1917 r1 = **GRIBLJE 45 Karol Feliks** (4./6. Januar; oče Franc Rajmer čevljar × Ivana Tadej; † 5.6.1989 marg; **zakonska zveza razvezana sodba 1956** — 2. razveljavljeni zakon!); r2 = Primostek 12 Angela Karolina; **r3 = GRIBLJE 62 Marija** (9./9.; ‡18/1 1917!); r5 = Dragoše 1 Angela; r6 = **Grm 36** Martin (Grm še enkrat!)
+- **P112 LEAD: glava 1917 = VRH str. 245 = s291** (ročno »917« prek tiskane »18__«); 1917 r1 = **GRIBLJE 45 Karol Feliks** (4./6. Januar; oče Franc Rajmer čevljar × Ivana Tadej; † 5.6.1989 marg; **zakonska zveza razvezana sodba 1956** — 3. razveljavljeni zakon!); r2 = Primostek 12 Angela Karolina; **r3 = GRIBLJE 62 Marija** (9./9.; ‡18/1 1917!); r5 = Dragoše 1 Angela; r6 = **Grm 36** Martin (Grm še enkrat!)
 
 ## Meseci (inline glave)
-Januar (r1) · Februar (r4, r10) · Marec [~ NI VIDEN — med r11/r12? ZOOM] · April (r16) · maj [»majnik?« ZOOM] (r22) · junij (r24, r27) · julij (r28) · September (r31) · Oktober (r33) · November (r37) · December (r40) — meja nov/dec = r40 (30.11. rojstva / 3.12. krsta!)
+Januar (r1) · Februar (r4, r10) · Marec [~ NI VIDEN — med r11/r12? ZOOM] · April (r16) · maj [»majnik?« ZOOM] (r22) · junij (r24, r27) · julij (r28) · September (r31) · Oktober (r33) · November (r37) · December (r40) — meja nov/dec = r40 (30.13. rojstva / 3.12. krsta!)
 
 ## Surova transkripcija (r1–r41; [~] = dvom, ZOOM v fazi 2)
 
@@ -42,23 +42,24 @@ Januar (r1) · Februar (r4, r10) · Marec [~ NI VIDEN — med r11/r12? ZOOM] · 
 - r25: 3./4. — Dobravice 8 — Terezija — EMŠO ž. 0306916505096 (4.10.1983); marg Zakonska? Porčuna? 21.4.1910 + gradec 16.4.1970 + Vpis prenešen 16.11.1997 — oče Martin Štefanič? posest ½ ž. roj. 19.2.1870 × Marija roj. Muc 18.2.1874; por. 10.2.1896; botra Jakob Štefanič? posestnik + Ana Štefanič? posest žena; babica (PRAZNO); podpis Valerijan Učak
 - r26: 21./23. — **GRIBLJE 88 — Neža** — marg **+ 9/7 1916** († dojenček!) — oče Peter Brinec **bajtar** roj. 28.9.1860 × Ana r. Butala roj. 22.12.1879; por. 25.9.1892?; botra Janez Brinec posest ½ ž. + Doroteja Brinec tega žena; babica Marija Muc neizp.; podpis Valerijan Učak — **5. GRIBLJE vrstica!** (h88 ZAPORED 2. leto — 1915 Ivana + 1916 Neža, ISTA starša Brinec × Butala!)
 - r27 (s288-A, str. 242): 26./26. junij — **Dragoše? [~ ZOOM — vas!] 5** — Barbara — spola 2! — marg **‡ 17.8. 1916** (†!) — oče Miha Dragoš? **bajtar** + gou? posest? roj. 31.7.1869 × Katarina r. Pezdirec 5.6.1872; por. 23.11.1891; botra Ivan Dragoš? posestnik + Barbara Dragoš? tega žena; babica Neža Adlešič? neizp.; podpis Valerijan Muh? 07
-- r28: 11./– (krsta PRAZNO!) julij — Krasinec 8 — **Mrtvorojena (Neža Cajnar)** — marg + 1/3? [ZOOM] 1916 — oče Matija Cajnar? ½ ž. posest roj. 12.7.1879 × Ana r. Brodarič 8.12.1885; por. 12.7.1914; botra/babica/podpis PRAZNO (črtice; šibko P?h?us Bitnar? [~ ZOOM]) — **1. MRTVOROJENA 1916 — namenska vrstica!**
+- r28: 11./– (krsta PRAZNO!) julij — Krasinec 8 — **Mrtvorojena** — oče/babra kolone (PRAZNO); podpis PRAZNO — **1. MRTVOROJEN vpis 1916!**
+- r29: julij — Krasinec 8 — **Neža Cajnar** — krsta kolona: **»krščena v sili«** (NUJNI KRST — 2. vrstica ISTEGA otroka!; ZOOM 4× jasno) — marg »+ 1/3? [ZOOM 8?] 1916« — oče Matija Cajnar? ½ ž. posest roj. 12.7.1879 × Ana r. Brodarič 8.12.1885; por. 12.7.1914; botra (prazno?); podpis [~] — **DVOJNI VPIS: r28 mrtvorojen + r29 krščena v sili = ISTA OSEBA (nov protokol — cf. r41 enovrstični model!)**
 - r29 (s288-B): 24./25. — Krasinec 35 — Anton — EMŠO ž. 2407916500002 (15.04.1985 Otočec?); marg poročen 23.11.1940 + Jože? Pinas? Karl? Slavka? Metlika? 5.7.1946 — oče Anton Brodarič ¼ ž. posest roj. 2.7.1895 × Bara roj. Šegina 25.9.1895; por. 22.8.1915; botra Matija Cajnar posestnik + Marija Šegina samska hči posest; babica Ana Marentič izp.; podpis Panhms Bitnar
-- r30: 3. **September** (inline glava!) — Vranoviče **25/32 (DVOJNA hiša št.! ZOOM)** — **Alojzij Franc (DVOJNO ime!)** — 1/1/1 — marg (modra) Zorožan? 31.10.1955 lesnic? + 28.12.1908.1.1998? plebiscit? Metlika [~ ZOOM] — oče Franc Kok **žel. usluž.** roj. 22.8.1880 × Marija roj. Bore? 17.9.1880; por. 27.4.1907; botra Anton Županič posestnik ½ ž. + Marija Županič tega žena; babica Marija Piletič; podpis Valerijan Muh? 07 — **ŽELEZNIŠKA TEMA + DVOJNA HIŠA + DVOJNO IME = TRIJE UNIKATI V ENI VRSTICI!**
-- r31 (s289-A, str. 243): 12./17. September — Vranoviče 30 — Frančiška — marg (modra) se poročila 2.10.1937 z Jürka? Lovrencom? v Šmarju? + vpis v matični register 9.8.2001 (Matičarka Gjurokhi?) — oče Jožef **Schweiger** ½ ž. posestnik roj. 31.1.1879 × Katarina Režman? 2.9.1888; por. 17.2.1908; botra Anton Štrugar posestnik-bivši? kovač + Marija Štrugar tega žena; babica Marija Piletič; podpis Valerijan Muh? 07 — (Schweiger cf. P110 A11 plemiški!)
-- r32: 8./10. **Oktober** (inline glava!) — Gradac 2 — Karol — marg (modra) izvržbe? 1942 pri Šmarju? [~ ZOOM] — oče Martin Kovačič **mizar** roj. 29.8.1884 × Antonija Županc? roj. 4.1.1883?; por. 30.9.1907; botra Franc Kovačič mizar; babica Marija Piletič; podpis Valerijan Muh? 07
-- r33 (s289-B): 18./19. — Klojter 85 — Amalija — EMŠO ž. 1810916505049; marg **VPIS PRENEŠEN 21.06.2007** (Matičarka Vrsa? Štuhec!) + poročena 24.2.1936 z Klosom? Božidar? radiotelegrafistom PWK Podrečje? + em poročena 8.9.1968 v Črnomlju — oče Janez Berkopeč? poust ½ ž. roj. 2.7.1873 [~ ZOOM] × Ivana roj. Župančič? 10.10.1874; por. 4.2.1898; botra [Janez?] Kambič? posestnik + Marija Šober Kolarjina? žena; babica Marija Piletič; podpis Valerijan Muh? 07
-- r34: 24./26. — Gradac 46 — Danijela — EMŠO ž. 2410916505114; marg umrla 27.12.1990 Gradec? + MKO 05.01.1991 + **RAZGLAŠENA? marg (modra) — odločba sodišča [~ ZOOM]** — **NEZAKONSKA: oče (PRAZEN), mati Marjeta Stipanič sam. hči po. roj. 15.6.1898 [4.? ZOOM]** — botra Jakob Petrovčič poust. sam. sin + Antonija Petrovčič poust. sam. hči; babica Marija Piletič; podpis Valerijan Muh? 07
-- r35: 30. okt./1. nov. (mesec meja!) — Boršt 19 — Martin — marg umrl 25.04.1976 Metlika + em poročen 18.12.1948 + Jubilee? [~] — oče Jurij Božman? poust ½ ž. roj. 27.9.1869 × Ana roj. Cvetič? 2.3.1876; por. 4.2.1901; botra Jožef Palčič poust + Ana Palčič tega žena; babica Ana Marentič; podpis Valerijan Muh? 07
-- r36: 16./19. **November** (inline glava!) — Vranoviče 2 — Franc — marg **+ 28/10 1917** (†) — oče Franc Škravara? **žel. delavec** roj. 30.9.1888 × Katarina Schweiger roj. 22.2.1882; por. **11.6.1916 (ISTO LETO!)**; botra Edvard Župančič **žel. delavec-samski** + Marija Pela? samska; babica Marija Piletič; podpis Panhms Bitnar — **ŽELEZNIŠKA TEMA ×2!**
-- r37 (s290-A, str. 244): 25./27. November — vas [prečrtano + **Hrast?** — ZOOM!] 32 — Franc — marg + 4/10 1917 (†) — oče Anton Štegetič? kovač? [~ ZOOM] × Ana r. Novak 2.8.1884; botra Miko Novak posestnik + Ana Novak tega žena; babica Marija Piletič; podpis Panhms Bitnar
-- r38: 26./28. — Dobravice 24 — Franc — marg + 2/6 1919 (†) — oče Anton Nomanič? [~ Nemanič!] posestnik ½ zemlj. roj. 11/5-1872 × Katarina roj. Piruš? 25/11-1880; por. 17.10.1897; botra Franc Martinšonič? posestnik + Katarina Martinšonič? tega žena; babica Marija Pus? neizp.; podpis Panhms Bitnar
-- r39: **30. nov./3. dec. (MESEČNA MEJA!)** — Zemelj 46 — Jožefa — marg + 9/6 1910?? [ZOOM — 1918?] — oče Matija Jurjevčič? kaf? knj.? 27.2.1880 [~ ZOOM] × Marija roj. Macele? 7.9.??; por. 27.1.1913; botra Janez Jurjevčič? posestnik + Marija Gurazinič? samska hči; babica Marija Piletič; podpis Sankfims Bifnas
-- r40 (s290-B): 29./29. December — **GRIBLJE 37 — Marko MRTVOROJEN** — zap. št. 41! — »krščena a siti in utero m.« (**NUJNI KRST V MATERNICI!**) — oče Marko Hubljan? posestnik roj. 30.7.1889 × Ivana roj. Hukan? 7.5.1893; por. 22.2.1916; botra (PRAZNO — črta); babica Ana Marentič žp.?; podpis (PRAZNO — črta) — **6. GRIBLJE vrstica + 2. MRTVOROJEN 1916!**
+- r31: 3. **September** (inline glava!) — Vranoviče **25/32 (DVOJNA hiša št.! ZOOM)** — **Alojzij Franc (DVOJNO ime!)** — 1/1/1 — marg (modra) Zorožan? 31.10.1955 lesnic? + 28.12.1908.1.1998? plebiscit? Metlika [~ ZOOM] — oče Franc Kok **žel. usluž.** roj. 22.8.1880 × Marija roj. Bore? 17.9.1880; por. 27.4.1907; botra Anton Županič posestnik ½ ž. + Marija Županič tega žena; babica Marija Piletič; podpis Valerijan Muh? 07 — **ŽELEZNIŠKA TEMA + DVOJNA HIŠA + DVOJNO IME = TRIJE UNIKATI V ENI VRSTICI!**
+- r32 (s289-A, str. 243): 12./17. September — Vranoviče 30 — Frančiška — marg (modra) se poročila 2.10.1937 z Jürka? Lovrencom? v Šmarju? + vpis v matični register 9.8.2001 (Matičarka Gjurokhi?) — oče Jožef **Schweiger** ½ ž. posestnik roj. 31.1.1879 × Katarina Režman? 2.9.1888; por. 17.2.1908; botra Anton Štrugar posestnik-bivši? kovač + Marija Štrugar tega žena; babica Marija Piletič; podpis Valerijan Muh? 07 — (Schweiger cf. P110 A11 plemiški!)
+- r33: 8./10. **Oktober** (inline glava!) — Gradac 2 — Karol — marg (modra) izvržbe? 1942 pri Šmarju? [~ ZOOM] — oče Martin Kovačič **mizar** roj. 29.8.1884 × Antonija Županc? roj. 4.1.1883?; por. 30.9.1907; botra Franc Kovačič mizar; babica Marija Piletič; podpis Valerijan Muh? 07
+- r34 (s289-B): 18./19. — Klojter 85 — Amalija — EMŠO ž. 1810916505049; marg **VPIS PRENEŠEN 21.06.2007** (Matičarka Vrsa? Štuhec!) + poročena 24.2.1936 z Klosom? Božidar? radiotelegrafistom PWK Podrečje? + em poročena 8.9.1968 v Črnomlju — oče Janez Berkopeč? poust ½ ž. roj. 2.7.1873 [~ ZOOM] × Ivana roj. Župančič? 10.10.1874; por. 4.2.1898; botra [Janez?] Kambič? posestnik + Marija Šober Kolarjina? žena; babica Marija Piletič; podpis Valerijan Muh? 07
+- r35: 24./26. — Gradac 46 — Danijela — EMŠO ž. 2410916505114; marg umrla 27.12.1990 Gradec? + MKO 05.01.1991 + **RAZGLAŠENA? marg (modra) — odločba sodišča [~ ZOOM]** — **NEZAKONSKA: oče (PRAZEN), mati Marjeta Stipanič sam. hči po. roj. 15.6.1898 [4.? ZOOM]** — botra Jakob Petrovčič poust. sam. sin + Antonija Petrovčič poust. sam. hči; babica Marija Piletič; podpis Valerijan Muh? 07
+- r36: 30. okt./1. nov. (mesec meja!) — Boršt 19 — Martin — marg umrl 25.04.1976 Metlika + em poročen 18.12.1948 + Jubilee? [~] — oče Jurij Božman? poust ½ ž. roj. 27.9.1869 × Ana roj. Cvetič? 2.3.1876; por. 4.2.1901; botra Jožef Palčič poust + Ana Palčič tega žena; babica Ana Marentič; podpis Valerijan Muh? 07
+- r37: 16./19. **November** (inline glava!) — Vranoviče 2 — Franc — marg **+ 28/10 1917** (†) — oče Franc Škravara? **žel. delavec** roj. 30.9.1888 × Katarina Schweiger roj. 22.2.1882; por. **11.6.1916 (ISTO LETO!)**; botra Edvard Župančič **žel. delavec-samski** + Marija Pela? samska; babica Marija Piletič; podpis Panhms Bitnar — **ŽELEZNIŠKA TEMA ×2!**
+- r38 (s290-A, str. 244): 25./27. November — vas [prečrtano + **Hrast?** — ZOOM!] 32 — Franc — marg + 4/10 1917 (†) — oče Anton Štegetič? kovač? [~ ZOOM] × Ana r. Novak 2.8.1884; botra Miko Novak posestnik + Ana Novak tega žena; babica Marija Piletič; podpis Panhms Bitnar
+- r39: 26./28. — Dobravice 24 — Franc — marg + 2/6 1919 (†) — oče Anton Nomanič? [~ Nemanič!] posestnik ½ zemlj. roj. 11/5-1872 × Katarina roj. Piruš? 25/11-1880; por. 17.10.1897; botra Franc Martinšonič? posestnik + Katarina Martinšonič? tega žena; babica Marija Pus? neizp.; podpis Panhms Bitnar
+- r40: **30. nov./3. dec. (MESEČNA MEJA!)** — Zemelj 46 — Jožefa — marg + 9/6 1910?? [ZOOM — 1918?] — oče Matija Jurjevčič? kaf? knj.? 27.2.1880 [~ ZOOM] × Marija roj. Macele? 7.9.??; por. 27.1.1913; botra Janez Jurjevčič? posestnik + Marija Gurazinič? samska hči; babica Marija Piletič; podpis Sankfims Bifnas
+- r41 (s290-B): 29./29. December — **GRIBLJE 37 — Marko MRTVOROJEN** — zap. št. 41! — »krščena a siti in utero m.« (**NUJNI KRST V MATERNICI!**) — oče Marko Hubljan? posestnik roj. 30.7.1889 × Ivana roj. Hukan? 7.5.1893; por. 22.2.1916; botra (PRAZNO — črta); babica Ana Marentič žp.?; podpis (PRAZNO — črta) — **6. GRIBLJE vrstica + 2. MRTVOROJEN 1916!**
 - **ZAKLJUČNA OPOMBA (str. 244 desno)**: »I številko 41 zaključeno število porodov oz. krstov v l. 1916.« + podpis O. Mučah? / ozd. leut? [~ ZOOM] + prečrtana diagonala čez prazen prostor
 
 ## NOVELI (kandidati za potrditev v fazi 2)
-- **2 MRTVOROJENA 1916: r28 (Krasinec 8 Neža Cajnar — namenska vrstica, krsta/botra/podpis PRAZNO!) + r41 (GRIBLJE 37 Marko — »krščena a siti in utero m.« = NUJNI KRST V MATERNICI — prvi tak signal v vzorcu!!)** — skupaj 4 mrtvorojeni signali (P108 r78, P109 r78, P110 marg ×2, P111 ×2)
+- **MRTVOROJENI PROTOCOL 1916 — 2 MODELA: (a) r28+r29 DVOJNI VPIS (Krasinec 8: r28 »Mrtvorojena« brez krsta + r29 »Neža Cajnar« »krščena v sili« = ISTA OSEBA, 2 zaporedni zap. št.! — NOV VZOREC) + (b) r41 ENOVRSIČNI (GRIBLJE 37 Marko mrtvorojen + krsta kolona »krščena v sili in utero m.« = NUJNI KRST V MATERNICI v isti vrstici!)** — r41 in-utero = prvi tak signal v vzorcu!; skupaj 5. + 6. mrtvorojeni signali (po P108 r78, P109 r78, P110 marg ×2)
 - **6 GRIBLJE vrstic: r10 h34 + r21 h12 + r22 h82 + r23 h36 + r26 h88 + r41 h37 (mrtvorojen!)** — h82 + h37 = 2 NOVI hiši (h88 ZAPORED 2. leto — Brinec × Butala 1915 Ivana + 1916 Neža!; h36 ZAPORED cf. 1913)
 - **NIČ DUP PAROV (prvo leto od P106!)** — 8 zaporednih strani 237–244 vsak svoj sken
 - **ŽELEZNIŠKA TEMA ×3**: r30 Kok žel. usluž. + r36 Škravara žel. delavec + boter Edvard Župančič žel. delavec-samski (+ botra Marija Pela? samska — 2 sam. botra!) — starši r36 poročeni 11.6.1916 = ISTO LETO kot krst!
@@ -75,27 +76,28 @@ Januar (r1) · Februar (r4, r10) · Marec [~ NI VIDEN — med r11/r12? ZOOM] · 
 
 ## DVOMI ZA FAZO 2 (forenzični zoomi)
 1. r1 podpis + babica (P110 lead »Ana Kočevar« — faza 1 vidi Novak ×2!) — ZOOM
-2. r2 očetovstvo marg 25.6.1945 + vas Make — ZOOM
-3. r6 oče roj. 1832 (star 84!?) + vas Zemelj 15 — ZOOM
-4. r10 oče Silak/Bilak + hiša 34 — ZOOM (1. Griblje!)
-5. r12 mesec MAREC glava (med r11/r12 — NI videna!) — ZOOM
-6. r15 rojstva datum + por. 30.2.1891 (nemogoče!) + vas Dobravice 2 — ZOOM
-7. r16 krsta »2.« vs »7.« — ZOOM
-8. r17 krsta »1.« vs »10.« + »stomilva« — ZOOM
-9. r18 ime Janez vs Jana (marg umrla = ženska!) + oče Hubla? — ZOOM
-10. r19 oče roj. 1859?? + datuma 12./16. vs 22./26. — ZOOM
-11. r20 datuma 16./18. vs 26./28. + podpis — ZOOM
-12. r21 oče Dragos? + hiša 12 — ZOOM (2. Griblje!)
-13. r22 hiša 82/32 + glava »majnik« + prečrtano pod vasjo — ZOOM (3. Griblje!)
-14. r26 hiša 88 + datumi 21./23. — ZOOM (5. Griblje!)
-15. r27 vas Dragoše + oče Dragoš? bajtar — ZOOM
-16. r28 marg + 1/3? 1916 + šibek podpis — ZOOM (mrtvorojena!)
-17. r30 hiša 25/32 DVOJNA + modra marg — ZOOM
-18. r33 oče Berkopeč? + botra — ZOOM
-19. r34 RAZGLAŠENA marg (modra) — ZOOM
-20. r37 vas [prečrtano + Hrast?] — ZOOM
-21. r39 oče kaf? knj.? + marg + 9/6 1910?? — ZOOM
-22. r41 oče Hubljan? + hiša 37 + »a siti in utero« — ZOOM (6. Griblje, mrtvorojen!)
+3. r29 marg »+ 1/3? 1916« (8/3 Kurent dvom — julij rojstvo!) + r29 botra — ZOOM
+3. r2 očetovstvo marg 25.6.1945 + vas Make — ZOOM
+4. r6 oče roj. 1832 (star 84!?) + vas Zemelj 15 — ZOOM
+5. r10 oče Silak/Bilak + hiša 34 — ZOOM (1. Griblje!)
+6. r12 mesec MAREC glava (med r11/r12 — NI videna!) — ZOOM
+7. r15 rojstva datum + por. 30.2.1891 (nemogoče!) + vas Dobravice 2 — ZOOM
+8. r16 krsta »2.« vs »7.« — ZOOM
+9. r17 krsta »1.« vs »10.« + »stomilva« — ZOOM
+10. r18 ime Janez vs Jana (marg umrla = ženska!) + oče Hubla? — ZOOM
+11. r19 oče roj. 1859?? + datuma 12./16. vs 22./26. — ZOOM
+13. r20 datuma 16./18. vs 26./28. + podpis — ZOOM
+14. r21 oče Dragos? + hiša 12 — ZOOM (2. Griblje!)
+15. r22 hiša 82/32 + glava »majnik« + prečrtano pod vasjo — ZOOM (3. Griblje!)
+16. r26 hiša 88 + datumi 21./23. — ZOOM (5. Griblje!)
+17. r27 vas Dragoše + oče Dragoš? bajtar — ZOOM
+18. r28 marg + 1/3? 1916 + šibek podpis — ZOOM (mrtvorojena!)
+19. r30 hiša 25/32 DVOJNA + modra marg — ZOOM
+110. r33 oče Berkopeč? + botra — ZOOM
+20. r34 RAZGLAŠENA marg (modra) — ZOOM
+21. r37 vas [prečrtano + Hrast?] — ZOOM
+23. r39 oče kaf? knj.? + marg + 9/6 1910?? — ZOOM
+24. r41 oče Hubljan? + hiša 37 + »a siti in utero« — ZOOM (6. Griblje, mrtvorojen!)
 23. podpisi: »Muh 07« vs Učak + zaključni »O. Mučah / ozd. leut« — ZOOM ×3
 24. meseci: Marec glava (r12) + »majnik« (r22) — ZOOM
 
@@ -105,5 +107,22 @@ Januar (r1) · Februar (r4, r10) · Marec [~ NI VIDEN — med r11/r12? ZOOM] · 
 3. verifier scripts/p111_parish_baptism_1916.py (I1–I12)
 4. parish.ts bloki 1916 (6 Griblje; vitals 490 → 490+N; BLOCKS_04105 464 → 464+N)
 5. qa-p111 (112. kontrola; pini + NARE + 2 mrtvorojena + in-utero krst + dvojna hiša 25/32 + železniška tema + Grm/Zastava/Dragoše + 0 dup parov)
-6. regresije (490→490+N ×23 + allow-liste + 1916 filtri)
+7. regresije (490→490+N ×23 + allow-liste + 1916 filtri)
 7. audit §86 + README + notes + worklog → push GitLab+GitHub → Vercel → P112 (krstna 1917, glava VRH str. 245 = s291, r1 = Griblje 45 Karol Feliks)
+
+## FAZA 2 KONČANA (2026-10-19)
+- **forenzični zoomi 6 Griblje vrstic + ključni dvomi rešeni** — 14 anomalij A1–A14 v evidence JSON (ključne rešitve):
+  - **r22 h82 = NOVA HIŠA** (ZOOM 4× — dvom 82/32 ZAVRŽENO; 1. vpis v vseh treh knjigah; oče Peter Vrebec? TESARSKI MOJ. — nov poklic; mesec glava »majnik« = idiosinkrazija za MAJ — NOVELA; prečrtan false start v vas koloni!)
+  - **r41 GRIBLJE 37 Marko mrtvorojen** (ZOOM 4× — krsta kolona »krščena v sili in utero m.« = NUJNI KRST V MATERNICI — PRVI V VZORCU!; h37 VRZEL 19 LET = 2. najdaljša; zap. 41 = zadnja)
+  - **r28+r29 DVOJNI VPIS odkritje** (ZOOM 4× s288A-dno + s288B-vrh: r28 »Mrtvorojena« brez krsta + r29 »Neža Cajnar« »krščena v sili« = ISTA OSEBA, 2 zaporedni zap. št.! — 2. protokol mrtvorojenih poleg enovrstičnega r41!)
+  - **ŠTEVILČENJE RAZREŠENO**: zap. 30 (Anton) jasno → preštevanje r30–r41 potrdilo 41 = zaključna opomba ✓ (faza-1 pomik r33–r40 POPRAVLJEN)
+  - **r23 EMŠO 2205916500023** (ZOOM 4.5× jasno → 22.5.1916 ✓ datumi) + **umrl 19.12.1983** (faza-1 »1980« POPRAVLJENO!) + botrinja Marjeta ŠTRAUS (h36 familija cf. P107!)
+  - **r12 mesec glava »marcij«** (ZOOM 4× — latinska oblika — NOVELA!) + EMŠO 0303916500049 (faza-1 »0302916500093« POPRAVLJENO!) + mati roj. 5.9.1890
+  - **r18 EMŠO 1204916505046 → rojstva 12.4.** (faza-1 »19./20.« POPRAVLJENO — urejenost po krsti!)
+  - r26 h88 (ZOOM 4× — 21./23. jasno; ZAPORED 2. leto Brinec × Butala) + r10 h34 (ZOOM — february glava + 27./28.) + r21 h12 (Toter botrinja)
+- **evidence JSON**: research/issue17/parish-baptism-1916.json — 6 entries + 35 excluded + 14 anomalij (A1–A14) + frame (41 vrstic, 0 prečrtanih, **0 dup parov**, str. 237–244 == s283–s290, − 46) + stats (vitals 496; kumulativ 539/88/31) + 11 crossChecks (7 EMŠO ✓) + continuityLast04105 (h82 None = nova!) + p112Lead
+- **verifier**: scripts/p111_parish_baptism_1916.py (I1–I12 + I5b) — **14/14 PASS** (popravki: case-insensitive pini, Učak 4)
+- **parish.ts**: +6 blokov 1916 (r10 h34, r21 h12, r22 h82 NOVA, r23 h36, r26 h88, r41 h37) — vitals 490 → **496**; bloki 04105 464 → **470**; P112 lead v blokih
+- **qa-p111**: 112. kontrola (6 vpisov / 6 hiš NARE 6/6 + 1 nova h82 točno + 0 dup parov + mrtvorojeni protokoli ×2 + majnik/marcij + EMŠO sidro + zaključna opomba 41) — **runQA 112/112 PASS**; regresije 490→496 ×25 + allow-liste h12 (p87) + h37 (p90) + 1916
+- **README**: P111 bullet ZAKLJUČEN + »Zadnje stanje (po P111)« + TOC anchor + QA 112/112
+- **P112 LEAD**: krstna 1917 — glava ročno »917« prek tiskane »18__« VRH str. 245 = s291 (NI INLINE); **1917 r1 = GRIBLJE 45 Karol Feliks** (4./6. Januar; oče Franc Rajmer čevljar; † 5.6.1989; **zakonska zveza razvezana sodba 8/59/562, 9.3.1956 — 2.!**; NOVI podpis »Rabus? Šajner?« [~]) + r3 = GRIBLJE 62 Marija (‡18/1 1917!) + r5 = Dragoše 1 + r6 = Grm 36
