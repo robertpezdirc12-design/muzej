@@ -5189,3 +5189,25 @@ Stage Summary:
 - **TROJSINHRONIZACIJA POLNA: lokalni == GitLab == GitHub == 5f9975e (P112); Vercel produkcija = 113/113 (qa-p112 PASS) prek GitHub App auto-deployja — brez API žetona!**
 - **VERCEL_TOKEN velen (85-b): rezervna API file-upload pot mrtva; future deploys = push na GitHub (primarna pot) ali NOV žeton (uporabnik)**
 - NASLEDNJA FAZA (P113): krstna 1918 — glava velika ročna VRH str. 254 = s300 (s300–s302 že lokalno v /tmp/p112); **1918 r1 = Boršt 49 Ana (Karlovci marg — 2. povezava cf. P110 A12!) + r2 = GRIBLJE 86 Marija + r3 = POKRITA z belim listom (4. pokrita vrstica vzorca! marg. na listu: umrla 30.11.1997 Jesenice) + r4 = Grm 26 Jožef (+31.7.1921) + r5 = Krasinec 19 Neža (EMŠO 1401918505189 — 1918 kampanja!) + r6 = Vranoviče Helena (VPIS PRENEŠEN 14.1.2006 = 5. pečat!)**; cross-ref r20 1917 → str. 264 = s310 = P114 lead; fetch s303+ potreben (/tmp/p113)
+
+---
+Task ID: 86
+Agent: Z.ai Code (glavni)
+Task: P113 — krstna knjiga 04105, polno leto 1918 (faza 1 fetch+forenzika nadaljevanje + faza 2 transkripcija/evidence/verifier/parish/qa/README/notes + push + produkcija)
+
+Work Log:
+- Prevzem po Task 85-b (P112 trojsinhroniziran, 113/113; P113 lead pripravljen); /tmp/p113 že poln (scan-300–312 + 170+ izrezov; del n-zoomov ČRN — n16/n21/n29/n30/n60 bug meja) → sveži ciljani cropi (t/u/v/w/x30–x33/y/z3x/q + stan-bandov 860–1160 px).
+- BRANJE 52 vrstic (r1–r52, str. 254–262 = s300–s310): potrjen **DUP ×2** (s301 = dup str. 254 — r3 razkrita [Gradac, Antonija, 8./12. 1., EMŠO 0801918505108 ✓; legitimacijska marg 1920/1949/1945/1976]; s306 = dup str. 258 — r25 razkrita [Gradac 80?/20, Ivana, EMŠO 1007918505011 DVOM]; bela listina vrh str. 258 = 2 smrti + žig »PODZEMLJ 1918/25«? [~]).
+- **NOVA metodoločka potrditev**: »Malke«=MLAKE, »Priloxje«=PRILOZJE, »Cerkovišče«=CERKVIŠČE, »Gradec/Gradac«=GRADAC, »Kremelj«=ZEEMELJ r26 (Zemelj 17!) — vsi v matičnem območju (parish.ts line 36); NARE izračun prek (year<1918, houseNo) izvlečka.
+- **Transkripcija 52/52**: 9 Griblje (r2 h86, r16 h34, r24 h21, r28 h53, r37 h45, r38 h30, r39 h14, r45 »sub dioe.«, r46 h44) + 43 excluded; **NOVELE**: CIGANI ×5 (Hudorovac ×3 + Brajdič oče + Ludmila ∞ Hudorovac 1966); **NEMŠKA MARG r10** (Laibach 18.8.1918 Zl. 24828 + Möttling 21.5.1918 P 41/18-1 — BRAJDIČ po 2 sodbi; garnizona Podzemelj; žup. grad Podzemelj 31.8.1918); sub dioe. ×4; mrtvorojena IZPIPANA ×2 (r18 Vranoviči 1 + r42 Otok 24?); **4 DUHOVNIKI** (Učak + Bitnar r16/r17/r27 + **Kolbezen žup. upr. r24** + Lopar r37/r43/r46–r49); 2. razveljavitev (r31 Novo mesto P 592/64-5, 13.9.1964); 2 preimenovanji (r44 11.12.1979 + r51 »vpisujem Zora« 9.8.1982); Balorda-Recurt (r15; † po 3 mes.); Švedska (r11 Vällingby 1988); Rusija (r50 1964); VPIS PRENEŠEN ×9 = REKORD; NEZAKONSKI ×5 = REKORD; EMŠO 30/28 (18✓ + 8 dvomov + anomala r44 »128« + korekcijski PAR r46 0611→1011!); železniška ×6; Grm 1→25; † 17.3%; KARLOVCI r1; BREZ zaključne opombe!
+- evidence JSON: research/issue17/parish-baptism-1918.json (9+43+20 anomalij+30 crossChecks+kontinuitete+p114Lead) — build skripta /home/z/.p113tmp/build_json.py.
+- verifier: scripts/p113_parish_baptism_1918.py — I1–I13 **16/16 PASS --check --live** (knjiga 200 + inventar 326 + skeni 13; offline 14/14).
+- parish.ts: +9 blokov 1918 (whatSi pini za qa); vitals 508 → **517**; bloki 04105 482 → **491**.
+- qa-parish.ts: vitals 508→517 ×27; **qa-p113** (114. kontrola: 9 vpisov/9 hiš NARE 8/8 + 1 sub dioe. + 0 repeats + dup-novela s301/s306 + 30 pinov + 4 duhovniki + nezakonska r24 + EMŠO dvom + regresije h88-KONEC/h24-pavza/h45-čevljar/h14); **allow-liste**: P85 h30 +1918, P86 h53 +1918, P91 h45/h14 +1918; Lopar živ threshold 2/9; **runQA 114/114** (produkcija + repo); tsc 0; lint 0.
+- README: P113 bullet ZAKLJUČEN (§87) + »Zadnje stanje (po P113)« + P113 povzetek + QA **114/114** (p79–p113 = 35 skript) + P113 v seznam.
+- notes: research/issue17/parish-baptism-1918-notes.md (faza 1 + faza 2 + P114 LEAD).
+- **P114 LEAD**: glava 1919 = velika ročna (»Avstrija 1919«? [~]) VRH str. 263 = s311 — **ZADNJE leto knjige 04105 (1886–1919)!**; r1 = Krasinec 3 Anton (EMŠO 010119**500**191? [~ — milenijska št. 1919 vprašanje!]); r5 = **KRASNOGLAVICE 29** Ana (pečat 21.11.2003) — nova vas!; r6 = Grišiče 5 Stanislav; s311/s312 lokalno; fetch s313+ (/tmp/p114).
+- Commit + push + produkcija: **P114 (krstna 1919) je NASLEDNJA — zaključek krstne linije!**
+
+Stage Summary:
+- P113 ZAKLJUČEN: trojsinhronizacija + produkcija 114/114; krstna linija tik pred zaključkom (1919 = zadnje leto!); novi rekordi: 4 duhovniki, VPIS PRENEŠEN ×9, NEZAKONSKI ×5, EMŠO 30/28, NARE 4. čisto leto; prvi korekcijski EMŠO PAR; prva nemška marg; 2 preimenovanji; CIGANI ×5 tema.
