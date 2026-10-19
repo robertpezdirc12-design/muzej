@@ -4998,3 +4998,20 @@ Stage Summary:
 - P108 = krstna 1913 REPO-KOMPLETEN: dokaz + verifikator (15/15 PASS) + parish.ts (467 vitals, 18 celovitih blokov) + qa-p108 (**109/109**) + 30/30 skript PASS + docs; kumulativ **475 vpisov / 87 hiš / 28 let** (1886–1913); **NARE PRELOM: h31 ×2 + DVE FAMILIJI v isti hiši isto leto** (1. ponovitev od P104!); **1 NOVA hiša h76 (2. ZAPORED leto: h86→h76!)**; **SELIJA h36→h86 (3. selitev!)** + MENJAVA h34 (Milek obstane!) + h47 + **r15 VRNJEN (faza-1 izpust!)** + r63 Matija REŠENO + h28 očakovsko razrešeno + **2 POZNEJŠA VPISA (r2 rojen 1891!)** + vstavek Pozamanitev + 3 duhovniki (Polak NOVI!) + babica JAKOFČIČ 8/18 DOMINANTA (prvič ne-Meh; MEH padec!) + EMŠO ~30 (največja!) + 2 † 1944; P109 lead pripravljen
 - GITHUB ŠE VEDNO BLOKIRAN (mrtv PAT) — GitLab = vir resnice; Vercel produkcija prek direktnega API deployja
 - NASLEDNJA FAZA: P109 = krstna 1914 (glava »1914« INLINE str. 218 DNO = s256; 1914 r1 = [vas] 17 Terezija 1./1., EMŠO 01019141505225, VPIS PRENEŠEN 16.10.2002; 1914 r5 = Griblje 1?/4? Anton (+9/2.1915) [~]; PRVO VOJNO leto!) ALI mrliška 04894 1887–1896 ALI poročna 04455
+
+---
+Task ID: 80-b (P108 push GitLab OK + GitHub BLOCKED + Vercel produkcija 109/109 prek direktnega API file-upload deployja)
+Agent: Z.ai Code (glavna seja)
+Task: push P108 (0eb7231) na GitLab + GitHub; poushaj na Vercel (owner: »odlicno nadaljuj« / »odlicno nadaljuj kjer si ostal«)
+
+Work Log:
+- COMMIT 0eb7231 (P108: krstna 1913 forenzika + dokaz + parish.ts + qa-p108 + regresije + docs) — 31 datotek, +2183/−112
+- git push origin main (GitLab): 2× 403 (tranzitorni lažni alarm) → **3. poskus po 20 s OK: 7b67291..0eb7231**; ls-remote potrjuje lokalni == origin/main == 0eb7231; API potrjuje group_access 50 (owner)
+- **GITHUB PUSH ŠE VEDNO BLOKIRAN: PAT `ghp_vARO…` mrtva** (API /user = 401 Bad credentials — isti žeton kot Task 78-b; tudi v remote URL) — GitHub main ostaja na 6631c57 (P106) do svežega žetona od ownerja
+- VERCEL: CLI nezdužljiv z vcp_ žetonom (kot P107) → **direkten API file-upload deploy po DELIH** (ozadjski procesi umirajo v peskovniku → chunked uploader /tmp/deploy_chunked.py s stanjem): ① POST /v2/files × 530 datotek (x-now-digest + x-now-size; .vercelignore upoštevan — brez research/db/mini-services; 4 serije × ~90–135 s) ② POST /v13/deployments {name: griblje-museum, target: production, files, gitlabCommit: 0eb7231} → **dpl_8pK6sCBpUKi7jaESU1wTbgD1gns6 READY (~4–5 min)**
+- **PRODUKCIJA Vercel (griblje-museum.vercel.app): GET /api/qa → ok: True, passed: 109, failed: 0 — qa-p108-parish-baptism-1913 pass=True** ✓; homepage 200
+
+Stage Summary:
+- **TROJSINHRONIZACIJA P108 (najboljša možna): lokalni == GitLab == 0eb7231; GITHUB BLOKIRAN (mrtv PAT — potreben svež žeton od ownerja); Vercel produkcija = P108: 109/109, 0 napak**
+- NOVA METODA (P108+): chunked API file-upload (stanje v /tmp/deploy_state.json, serije ~130 datotek) — odporno na umiranje ozadjskih procesov
+- NASLEDNJA FAZA (P109 lead pripravljen): krstna 1914 — glava »1914« INLINE str. 218 DNO = s256; r1 = [vas] 17 Terezija 1./1., EMŠO 01019141505225 (VPIS PRENEŠEN 16.10.2002); r5 = Griblje 1?/4? Anton (+9/2.1915) [~] — PRVO VOJNO leto; skeni 256+ že v /tmp/p108
