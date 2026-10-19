@@ -6,15 +6,20 @@
 
 ## Okvir (doslej)
 - **s257 = DUP str. 218** (nov dup par 256/257 na meji leta — cf. P104×5/P108 ŠEST)
+- **s259 = DUP str. 219** (par 258/259 — drugi dup par P109!)
 - str. 218 = s256/257: 1913 r102–r105 + glava »1914« + **1914 r1–r7** (r6 = 22./22. Zemelj 26; r7 = Januar 3.? Vranovice 1?, EMŠO ž. 0102914505242? — r7 je nadaljevanje na str. 218 dno!)
-- str. 219 = s258: 1914 r8–r17(+r18?): r8 (3./3. Krasinec 22) … r13 (**Griblje 14**) … r17 (**Griblje 53**, nalepka † 16.05.2000 Nm MKU Nm 8.2000 str. 359 zap. 301)
-- stran == sken: −38 (s258 == 219)! — dup par 256/257 izjema (DUP == 218)
-- EMŠO marginalia 1914 (kandidati): r1 01019141505225 + r2 0401914505263? + r3 0401914505249? + r7 0102914505242? + r9 0902914505155 + r11 1502914505034? + r14 2302914505163 + r15 2602914500890? — kampanja se nadaljuje
+- str. 219 = s258/259: 1914 r8–r18: r8 (3./3. Krasinec 22), r9 (nalepka † 14.04.2000 Metlika; EMŠO 0902914505155), r10 (13./13. Otok 9? + r9b Boršt 14? — POZOR: s259 kaže r10 = Boršt 14 z marginalio zakonec Ferdinand Jože? † 20.?1943; MOŽNO odmik številčenja — ZOOM!), r11 (16./16. Otok 9?/Zimovišče 9? — kolizija — ZOOM), r12 (24./7.? Podzemelj 4? — umrla v Nemčiji 1979; »19.X/Julian«?), r13 (**Griblje 14**), r14 (23./24. Dobraviče 10, EMŠO 2302914505163, † 25.04.1945 taborišče — 2. svetovna!), r15 (26./26. Derhovce?/Verhovce? 16, EMŠO 2602914500890), r16 (28./28. Otok 30), r17 (**Griblje 53**, nalepka † 16.05.2000 Nm MKU Nm 8.2000 str. 359 zap. 301), r18 (Primostek 10?, EMŠO ž. 1003914505235)
+- str. 220 = s260: 1914 r19–r31?: r19 (Marec 17./17. Otok 2?), r20 (19./18. Primostek 2?, EMŠO 1703914500061?, † 15.09.1997 Metlika), r21 (**GRIBLJE** — hiša skrita za zavihkom strani — ZOOM!; EMŠO ž. 1803914505878 = 18.3.1914; vnuka marginalia MKU MO Črnomelj 10.03.19..), r22 (18./18. Krasinec 12?), r23 (April 5./6. Gradac 6?), r24 (?/9. Gradac 2?), r25 (poročena 26.9.1953; EMŠO 1304914505758 = 13.4.; mož † 28.05.1997 Črnomelj), r26 (27. Tribovje?), r27 (nalepki mož † 19.01.1999 Maribor + umrla 27.?2002 Maribor; EMŠO 0?050?1450528?), r28 (**1. maj GRIBLJE 44?** — nalepka † 11.04.2001 v GRIBLJAH MKU MO Črnomelj zap. 20!), r29 (nalepka † 15.10.1992 Ljubljana), r30+ (pod nalepkami)
+- stran == sken: −38 (s258/259 == 219; s260 == 220)! — dup para 256/257 + 258/259 izjemi (DUP == 218 / == 219)
+- EMŠO marginalia 1914 (kandidati): r1 01019141505225 + r2 0401914505263? + r3 0401914505249? + r7 0102914505242? + r9 0902914505155 + r11 1502914505034? + r14 2302914505163 + r15 2602914500890? + r18 1003914505235 + r20 1703914500061? + r21 1803914505878 + r25 1304914505758 — kampanja se nadaljuje
 
 ## Griblje vrstice (doslej — ZA POTRDITEV s B-strani/zoomi)
-- r13: Februar 20./21. — **Griblje 14** — (ime?) — h14 = PRVI VPIS V VZORCU? (preveri parish.ts — h14 = P91 1896 nova!) → kontinuiteta 1896 → 1914 = VRZEL 18 LET?
-- r17: Marec 3.? — **Griblje 53** — (ime? nalepka † 16.05.2000 Nm; MKU Nm 8.2000, str. 359, zap. 301) — h53 = P93 1898 nova → kontinuiteta 1898 → 1914 = VRZEL 16 LET?
 - r5 (str. 218!): 18./19. Januar — **Griblje 1?/4?** — Anton (+9/2.1915) [~] — »Vpisano na podlagi odločbe Občine Metlika št. 208-311/95 dne 07.09.1995; Metlika 21.05.1994« (POZNEJŠI VPIS signal!) + marginalia mož † 31.01.1987 Nm (MKU Nm 8.1987, str. 15, zap. 53) + umrla 10.10.2001 Turjak (MKU MO Črnomelj; maticarka Vera Šimonič 30.11.2001) + EMŠO ž. 0101914505242?? [kolizija r3/r5 marginalij — ZOOM] — **r5 vas = Griblje (s257 jasno!) + hiša 1. ALI 4 — ZOOM!**
+- r13 (str. 219): Februar 20./21. — **Griblje 14** — h14 = 1896 (P91 nova!) → **VRZEL 18 LET?** (preveri parish.ts: h14 leta 1896/1900/1902/1908/1911 — zadnji 1911 → vrzel 3 leta! POPRAVI ob transkripciji)
+- r17 (str. 219): Marec 3.? — **Griblje 53** — h53 = 1898 (P93 nova!) → kontinuiteta: 1898/1903? → vrzel? (h53 leta v parish.ts: 1898+ — preveri!) — nalepka † 16.05.2000 Nm
+- r21 (str. 220): Marec 18./18. — **Griblje [hiša pod zavihkom — ZOOM!]** — EMŠO 1803914505878
+- r28 (str. 220): 1. maj — **Griblje 44?** — nalepka † 11.04.2001 v GRIBLJAH (MKU MO Črnomelj 1.2001, zap. 20) — h44 = Štrucelj (1913 r35!) → kontinuiteta
+- ZA ISKANJE: s261–s272 (str. 221–227?) — preostali Griblji + glava 1915 = konec 1914
 
 ## VOJNA KONTEKST (1914 = 1. svetovna vojna!)
 - r14 Dobraviče 10: marginalia o smrti 25.04.1945 v taborišču (2. svetovna!) + »vinjake? v Davčniščici 26.6.1945« — vojne opombe se nadaljujejo
