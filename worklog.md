@@ -5135,3 +5135,17 @@ Stage Summary:
 - kumulativ 539 vpisov / 88 hiš / 31 let (1886–1916); vitals 496; runQA 112/112; verifier 14/14
 - **MATRICULA FETCH PROTOKOL dokumentiran (AES-256-ECB+MD5+csrf) — fetch s289–s302 uspešen**
 - NASLEDNJA FAZA (P112): krstna 1917 — glava ročno »917« VRH str. 245 = s291 (s283–s302 že lokalno!); **1917 r1 = GRIBLJE 45 Karol Feliks** (razvezana zveza 1956! 2. poroka marg!) + r3 = GRIBLJE 62 Marija (‡18/1) + r5 Dragoše 1 + r6 Grm 36; NOVI podpis »Rabus? Šajner?« [~]; fetch s303+ potreben
+
+---
+Task ID: 84-b (P111 push GitLab + GitHub OK (b0e5398) + Vercel produkcija 112/112 — TROJSINHRONIZACIJA POLNA)
+Agent: Z.ai Code (glavna seja)
+Task: push b0e5398 na GitLab + GitHub; poushaj na Vercel (inkrementalni API file-upload, 3. uporaba)
+
+Work Log:
+- git push origin main (GitLab): **9443076..b0e5398 OK**; git push github main: **9443076..b0e5398 OK**; ls-remote potrjuje lokalni == GitLab == GitHub == b0e5398
+- VERCEL: inkrementalni API file-upload (3. uporaba): manifest → **533 datotek / 5 spremenjenih** (README + parish.ts + qa-parish.ts + p111 ×3; research/ + worklog ignorirana) → uploads 7 s → POST /v13/deployments {gitlabCommit: b0e5398} → **dpl_BmVGzRGwWGRnDN4tiR2foJ6PthKX READY (72 s)**
+- **PRODUKCIJA Vercel (griblje-museum.vercel.app): GET /api/qa → ok:True, passed:112, failed:0 — qa-p111 live** ✓; homepage 200 ✓; nov manifest state → /home/z/.p110tmp/deploy_state3.json (533)
+
+Stage Summary:
+- **TROJSINHRONIZACIJA POLNA: lokalni == GitLab == GitHub == b0e5398 (P111); Vercel produkcija = 112/112 (qa-p111 PASS), dpl_BmVGzRGwWGRnDN4tiR2foJ6PthKX READY (72 s)**
+- NASLEDNJA FAZA (P112): krstna 1917 — glava ročno »917« VRH str. 245 = s291 (s283–s302 že lokalno); **1917 r1 = GRIBLJE 45 Karol Feliks** (razvezana zveza 1956! 2. poroka marg!) + r3 = GRIBLJE 62 Marija (‡18/1) + r5 Dragoše 1 + r6 Grm 36; NOVI podpis »Rabus? Šajner?« [~]; fetch s303+ potreben (/tmp/p112)
