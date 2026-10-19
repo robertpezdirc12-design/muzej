@@ -5222,3 +5222,19 @@ Work Log:
 - Vercel produkcija (griblje-museum.vercel.app) = ŠE VEDNO P112 (113/113); commit status 80dc73a: **Vercel → failure** (target = troubleshoot-project-collaboration); 3b79292/5f9975e = success (17:52/17:44Z).
 - Stari token vcp_4gHSy…: GET /v6/deployments → **»Not authorized: Trying to access resource under scope »robertpezdirc12-designs-projects«. You must re-authenticate to this scope … saml:true«**; /v2/user → »User not found« — token ni več v team scope-u (razlika od Task 85-b!).
 - ukrep: prazen trigger commit (ta vpis) → push github → če znova FAILED = sistemsko (potreben človeški re-auth Vercel team/GitHub App ali nov žeton v team scope-u); rezervna ročna pot deploy.yml mrtva (isti token).
+
+---
+Task ID: 86-c
+Agent: Z.ai Code (glavni)
+Task: diagnoza Vercel produkcija P113 (deploy FAILED ×2) + lokalni build dokaz + dokumentacija blokade
+
+Work Log:
+- cc7dd8d trigger commit → Vercel deploy ustvarjen (ID 7hZLvfVgjpFDBQXT8jDvq9TPskNB) a FAILED; 80dc73a failure = »troubleshoot-project-collaboration« (auth), cc7dd8d failure = deployment stran (build/infra).
+- **LOKALNI `bun run build` = PASS** (celoten route izpis, 0 napak) → P113 NI vzrok; Vercel platforma/auth.
+- Stari žeton: GET /v6/deployments → »Not authorized: scope »robertpezdirc12-designs-projects« … saml:true«; /v13/deployments/<id> + x-vercel-team-slug → »Deployment not found«; /v2/user → »User not found« — žeton izgubil team scope med 17:52Z (P112 SUCCESS) in 21:01Z (P113 FAILED).
+- Druge poti pregledane: ~/.vercel/config.json prazen; deploy.yml (ročni) = isti mrtev žeton; Actions »sync« workflow = failure (ločen GitLab<->GitHub sinhronizacijski problem, ne Vercel).
+- dev server po buildu ponovno zagnan → **114/114 lokalno** ✓.
+- README Zrcaljenje: GitHub App pot ZABLOKIRANA od Task 86-b + diagnoza (auth, ni koda) + potreben re-auth/nov žeton.
+
+Stage Summary:
+- P113 = KODA/dokazi/README/notes/worklog: TROJSINHRONIZACIJA POPOLNA (GitLab == GitHub == lokalni @ cc7dd8d + 80dc73a vsebina); produkcija = še P112 (113/113) — **EDINA odprta točka: Vercel team auth (človeški re-auth / nov žeton s scope-om »robertpezdirc12-designs-projects« / GitHub App re-authorization); ko blokade ne bo, bo naslednji push sprožil produkcijo 114/114 samodejno.**
