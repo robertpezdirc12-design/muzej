@@ -5036,3 +5036,27 @@ Stage Summary:
 - **TROJSINHRONIZACIJA NAJBOLJŠA MOŽNA: lokalni == GitLab == 380397a; GITHUB BLOKIRAN (vsi PAT-i mrtvi 401 — potreben svež žeton od ownerja); Vercel produkcija = 109/109 (dpl_9smKy8oYqzY8NzSnPK4vAFe6nQmS)**
 - P109 OKVIR 100 %: leto 1914 = 78 vrstic (r79 prečrtana) čez str. 218–224 == s256–s268; **6 dup parov = NOV REKORD**; **10 Griblje vrstic** (r5/r13/r17/r21/r28/r38/r42/r45/r53/r62); glava 1915 = s269 VRH (P110 lead)
 - NASLEDNJA FAZA (P109 faza 2): forenzični zoomi 10 Griblje vrstic (A/B izrezi + očetove celice 4× + r54 dvom + r79 + r5 hiša 1?/4?) → evidence JSON (78 + 1 struck) → verifier p109 → parish.ts (vitals 467 → +N) → qa-p109 (110. kontrola) → regresije → audit §84 + README → push + Vercel → P110 (krstna 1915, glava s269 VRH)
+
+---
+Task ID: 82 (P109 faza 2 ZAKLJUČEN — forenzika + evidence JSON + parish.ts + qa-p109 + regresije + README; GitHub OBNOVLJEN z novim PAT: 6631c57 → 3c03e2e)
+Agent: Z.ai Code (glavna seja)
+Task: nadaljuj kjer si ostal (owner: nov GitHub + GitLab žeton) — ① push GitHub/GitLab (GitHub je bil blokiran — mrtv PAT); ② P109 faza 2: forenzični zoomi 10 Griblje vrstic + transkripcija + evidence JSON + verifier + parish.ts + qa-p109 + regresije + README
+
+Work Log:
+- SINHRONIZACIJA OB PREVZETEMU: lokalni == GitLab == 3c03e2e (P109 faza 1); **GitHub zaostajal na P106 (6631c57) — NOV žeton ghp_YnmS… obnovljen v remote URL → PUSH USPEŠEN: 6631c57..3c03e2e (zaostanek 7 commitov saniran!)**; GitLab "Everything up-to-date"; ls-remote potrjuje oba heads == 3c03e2e
+- P109 FAZA 2 — KALIBRACIJA: track-scale bug odkrit (prikazane slike ×2.392 manjše → vse faza-1 y-ocene za ~60 % prenižke!) → **pasovi 0.95×** za vsako stran (12 berb) → nato celice 3–6×: L (vas+hiša), S (starši), R (botra/babica/podpis) — 55+ izrezov
+- FORENZIKA (ključne rešitve): **r5 = ANA + hiša 1** (4.5×; faza-1 »Anton« + »1?/4?« POPRAVLJENO; † 9.2.1915); **r21 hiša 11** (na OBEH dupih s260+s261 4.5×; faza-1 »pod zavihkom« ZAVRŽENO); **r28 hiša 44** (prečrtano-vidno; band-dvom »34« ZAVRŽEN) + starši POD NALEPKAMI (celica »Marija Štrucel + Marija Meh« = r29!); **r29 NOVA VRSTICA VZORCA** (Griblje 5 Janez; EMŠO 0405914505481; oče-kolona »Marija Štrucel« = ŽENSKO IME 1./3!; faza-1 izpustila); **r54 DVOM REŠEN** (Griblje 48 — začetnica »G« skozi prozoren trak 5×; h48 = 7. VPIS); r38 Anfons + oče ŠAHTAR († 1950 Šempolje?) + babica Pleščič; r42 starši Papič × Krixan (faza-1 »Lavca × Tome« = BOTRA Anton + Barbara Lozar!); r45 oče Ernest Šušteršič LJUDSKI UČITELJ; r53 mati Katarina Brinec + babica Ana Mavrenič + Bitnar; r62 botra Štrucel + Potter (ne Hrovat); **EMŠO 2210914505196 → r63 (22./22. OKTOBER — Oktober glava med r62/r63!); r75 Kapitolina (oče PRAZEN); r10 Aloizija + nalepka »10.«; nalepka † 2000 = r18 (ne r17)**
+- DOKAZ: research/issue17/parish-baptism-1914.json — 12 entries + 66 excluded + frame (78 + r79 struck + 6 dup parov + pageOfScan) + 13 anomalij + stats + crossChecks + continuityLast04105 + p110Lead
+- VERIFIER: scripts/p109_parish_baptism_1914.py (I1–I12; popravki: PT gap = h44+h48+h53 — h53 tudi v luknji!; r62 reassign-preverjanje prek »NE r62«) — **--check 14/14 PASS**
+- PARISH.TS: +12 blokov 1914 (r5 h1, r13 h14, r17 h53, r21 h11, r28 h44, r29 h5, r38 h77, r42 h21, r45 h90, r53 h18, r54 h48, r62 h8) — vitals 467 → **479**; bloki 04105 441 → **453**; P110 lead v h8 bloku (glava 1915 = s269 + »78 konec porodov«)
+- QA: src/lib/qa-parish.ts + qa-p109 (**110. kontrola**; 29 pinov + NARE 12/12 + 0 novih hiš + ŠEST dup parov + EMŠO 4 sidra + Polak/Dostál + žensko ime ×3 + 1. svetovna † ×7+); REGRESIJE: 467→479 ×23 + allow-liste 1914 (h77/h90 P85 + h53 P86 + h14 P91 + h18/h48 P93) + QAštetje (110/110; p79–p109 = 31 skript; P77–P109 brez kartic)
+- QA CHAIN: parishChecks **31/31 PASS**; runQA **110/110 PASS** (ok: true); lint PASS
+- NOTES: parish-baptism-1914-notes.md — sekcija »FAZA 2 KONČANA« (metoda pasov + x-kolone + vse rešitve)
+- README: P109 bullet ZAKLJUČEN + »Zadnje stanje (po P109)« + TOC anchor + Zrcaljenje (GitHub obnovljen!) + QA 110/110
+
+Stage Summary:
+- **P109 = krstna 1914 ZAKLJUČEN: 12 vpisov / 12 hiš — NARE 12/12 (9. čisto leto!) + 0 NOVIH hiš (prvič po 1912/13!) + ŠEST dup parov = NOV REKORD (2. leto!) + r79 PREČRTANA + »78 konec porodov l. 1914« + glava 1915 na VRHU str. 225 = s269**
+- 2 NOVI Griblje vrstici (r29 + r54) + 8 POPRAVKOV faze 1 (r5 Ana, r21 h11, r28 h44, r38 Anfons/Pleščič, r42 Papič×Krixan, r75 Kapitolina, r10 Aloizija, EMŠO→r63)
+- kumulativ 487 vpisov / 87 hiš / 29 let (1886–1914); vitals 479; runQA 110/110; verifier 14/14
+- **GITHUB ZRCALO OBNOVLJENO (nov PAT) — trojsinhronizacija spet možna**
+- NASLEDNJA FAZA (P110): krstna 1915 — glava na VRHU str. 225 = s269 (skeni 269–272 že v /tmp/p109; fetch s273+ potreben); 1915 r8 = GRIBLJE 88 Ivana (lead); r17 = Griblje 78? Jožef † 10.9.1916 (okvirno)

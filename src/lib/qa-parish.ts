@@ -639,7 +639,7 @@ for (const [hn, yr, sig] of [
 // h30: P90 kontinuiteta dovoli tudi blok 1895 (3. družina Šegina);
 // h30/h41: P91 kontinuiteta dovoli bloka 1896 (ISTA zvezi)
 for (const hn of ["7", "30", "38", "41", "77", "90"]) {
-  const allow = hn === "30" ? [1890, 1891, 1893, 1895, 1896, 1899, 1902, 1903, 1906, 1908, 1909, 1911] : hn === "90" ? [1890, 1892, 1898, 1900, 1908, 1910, 1912] : hn === "41" ? [1890, 1893, 1896, 1899] : hn === "7" ? [1890, 1901, 1905, 1907] : hn === "77" ? [1890, 1902, 1909] : [1890]; // P94: + 1899 bloka (h30 4. družina Županič; h41 4. VPIS ISTA ZVEZA); P95: + 1900 blok h90; P96: + 1901 blok h7 (2. VPIS); P97: + 1902 bloka h30 (5. DRUŽINA — SEGINA VRNITEV) + h77 (2. VPIS — MENJAVA Pošek → Cindrič); P98: + 1903 blok h30 (2. VPIS ZAPORED — Segina); P100: + 1905 blok h7 (3. VPIS — Jakob Toter, 1901 par); P101: + 1906 blok h30 (10. VPIS — MENJAVA Segina → Brinec); P102: + 1907 blok h7 (4. VPIS — ISTA Toter družina); P103: + 1908 bloka h30 (11. VPIS — SEGINA POVRAT) + h90 (5. VPIS — TRETJA učiteljska); P104: + 1909 bloka h30 (12. VPIS — 7. DRUŽINA Martinovič?) + h77 (3. VPIS — POŽEK POVRAT); P105: + 1910 blok h90 (6. VPIS — 2. Kalan, 4. učiteljska); P106: + 1911 blok h30 (13. VPIS — SEGINA POVRAT) P107: + 1912 blok h90 (7. VPIS — Kalan + RAZVEZAL 1953)
+  const allow = hn === "30" ? [1890, 1891, 1893, 1895, 1896, 1899, 1902, 1903, 1906, 1908, 1909, 1911] : hn === "90" ? [1890, 1892, 1898, 1900, 1908, 1910, 1912, 1914] : hn === "41" ? [1890, 1893, 1896, 1899] : hn === "7" ? [1890, 1901, 1905, 1907] : hn === "77" ? [1890, 1902, 1909, 1914] : [1890]; // P94: + 1899 bloka (h30 4. družina Županič; h41 4. VPIS ISTA ZVEZA); P95: + 1900 blok h90; P96: + 1901 blok h7 (2. VPIS); P97: + 1902 bloka h30 (5. DRUŽINA — SEGINA VRNITEV) + h77 (2. VPIS — MENJAVA Pošek → Cindrič); P98: + 1903 blok h30 (2. VPIS ZAPORED — Segina); P100: + 1905 blok h7 (3. VPIS — Jakob Toter, 1901 par); P101: + 1906 blok h30 (10. VPIS — MENJAVA Segina → Brinec); P102: + 1907 blok h7 (4. VPIS — ISTA Toter družina); P103: + 1908 bloka h30 (11. VPIS — SEGINA POVRAT) + h90 (5. VPIS — TRETJA učiteljska); P104: + 1909 bloka h30 (12. VPIS — 7. DRUŽINA Martinovič?) + h77 (3. VPIS — POŽEK POVRAT); P105: + 1910 blok h90 (6. VPIS — 2. Kalan, 4. učiteljska); P106: + 1911 blok h30 (13. VPIS — SEGINA POVRAT) P107: + 1912 blok h90 (7. VPIS — Kalan + RAZVEZAL 1953); P109: + 1914 bloka h77 (4. VPIS — ŠAHTAR!) + h90 (8. VPIS — Ernest Šušteršič UČITELJ)
   if (HOUSE_VITALS.some((v) => v.houseNo === hn && !(v.bookSignature === "04105" && allow.includes(v.year))))
     p85Errors.push(`NOVA hiša ${hn} (P85) že obstaja v prejšnjem letu — pini neskladni`);
 }
@@ -740,14 +740,14 @@ for (const [hn, yr, sig] of [
 }
 // NOVE hiše 1891 (28, 53) — ne obstajajo v nobenem prejšnjem letu/knjigi;
 // h53: P89 kontinuiteta dovoli tudi blok 1894 + P91 blok 1896 (ISTA zveza variante);
-// h53: P93 kontinuiteta dovoli tudi blok 1898 (4. VPIS ISTA ZVEZA)
+// h53: P93 kontinuiteta dovoli tudi blok 1898 (4. VPIS ISTA ZVEZA); P109: + 1914 blok h53 (5. VPIS — VRZEL 16 LET!)
 for (const hn of ["28", "53"]) {
-  const allow = hn === "53" ? [1891, 1894, 1896, 1898] : hn === "28" ? [1891, 1910, 1913] : [1891]; // P105: + 1910 blok h28 (2. VPIS — VRZEL 19 LET, NEZAKONSKA) P108: + 1913 blok h28 (3. VPIS — oče Lozar razrešeno!)
+  const allow = hn === "53" ? [1891, 1894, 1896, 1898, 1914] : hn === "28" ? [1891, 1910, 1913] : [1891]; // P105: + 1910 blok h28 (2. VPIS — VRZEL 19 LET, NEZAKONSKA) P108: + 1913 blok h28 (3. VPIS — oče Lozar razrešeno!)
   if (HOUSE_VITALS.some((v) => v.houseNo === hn && !(v.bookSignature === "04105" && allow.includes(v.year))))
     p86Errors.push(`NOVA hiša ${hn} (P86) že obstaja v prejšnjem letu — pini neskladni`);
 }
 // vitals skupaj 449 (po P106: 429 + 20; krstna 1911)
-if (HOUSE_VITALS.length !== 467)
+if (HOUSE_VITALS.length !== 479)
   p86Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 push(
   "qa-p86-parish-baptism-1891",
@@ -846,7 +846,7 @@ for (const hn of ["12", "73", "75"]) {
     p87Errors.push(`NOVA hiša ${hn} (P87) že obstaja v prejšnjem letu — pini neskladni`);
 }
 // vitals skupaj 449 (po P106: 429 + 20; krstna 1911)
-if (HOUSE_VITALS.length !== 467)
+if (HOUSE_VITALS.length !== 479)
   p87Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 push(
   "qa-p87-parish-baptism-1892",
@@ -960,7 +960,7 @@ const p88H60b = HOUSE_VITALS.find((v) => v.houseNo === "60" && v.bookSignature =
 if (!p88H60b || !p88H60b.whatSi.includes("GRIBLJE 60"))
   p88Errors.push("kontinuiteta hiša 60 (1886, 04455, pin GRIBLJE 60) manjka");
 // vitals skupaj 449 (po P106: 429 + 20; krstna 1911)
-if (HOUSE_VITALS.length !== 467)
+if (HOUSE_VITALS.length !== 479)
   p88Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 push(
   "qa-p88-parish-baptism-1893",
@@ -1070,7 +1070,7 @@ for (const [hn, yr, sig, pin] of [
     p89Errors.push(`kontinuiteta hiša ${hn} (${yr}, ${sig}, pin ${pin}) manjka ali pin ne ustreza`);
 }
 // vitals skupaj 449 (po P106: 429 + 20; krstna 1911)
-if (HOUSE_VITALS.length !== 467)
+if (HOUSE_VITALS.length !== 479)
   p89Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 push(
   "qa-p89-parish-baptism-1894",
@@ -1180,7 +1180,7 @@ for (const [hn, yr, sig, pin] of [
     p90Errors.push(`kontinuiteta hiša ${hn} (${yr}, ${sig}, pin ${pin}) manjka ali pin ne ustreza`);
 }
 // vitals skupaj 449 (po P106: 429 + 20; krstna 1911)
-if (HOUSE_VITALS.length !== 467)
+if (HOUSE_VITALS.length !== 479)
   p90Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 push(
   "qa-p90-parish-baptism-1895",
@@ -1263,7 +1263,7 @@ if (p91Gap.some((h) => !(Number(h) >= 41 && Number(h) <= 60)))
 // h45: P92 dovoli blok 1897 (2. VPIS ISTA ZVEZA Straus × Spudič — POPRAVEK matere);
 // h9/h14/h45: P95 kontinuiteta dovoli bloke 1900 (menjava h9; 2. VPIS h14 — REŠUJE P91; 3. PIN h45 — 04455)
 for (const hn of ["9", "14", "45"]) {
-  const allow = hn === "45" ? [1896, 1897, 1900, 1904, 1912] : hn === "14" ? [1896, 1900, 1902, 1908, 1911] : hn === "18" ? [1896, 1900, 1910, 1912] : [1896, 1900, 1913]; // P105: + 1910 blok h18 (4. VPIS — POVRAT Šimec × Kambič); P106: + 1911 blok h48 (5. VPIS) // P95: + 1900 bloki; P97: + 1902 blok h14 (3. VPIS — oče potrjen); P99: + 1904 blok h45 (4. VPIS — SPUDIČ signal, mati Barbara Spudič) P107: + 1912 blok h45 (5. VPIS — DVOJČKI r6/r7) P107: + 1912 blok h18 (5. VPIS — ANOMALIJA žensko ime v koloni očeta) P108: + 1913 blok h9 (3. VPIS — VRZEL 13 LET!)
+  const allow = hn === "45" ? [1896, 1897, 1900, 1904, 1912] : hn === "14" ? [1896, 1900, 1902, 1908, 1911, 1914] : hn === "18" ? [1896, 1900, 1910, 1912] : [1896, 1900, 1913]; // P105: + 1910 blok h18 (4. VPIS — POVRAT Šimec × Kambič); P106: + 1911 blok h48 (5. VPIS) // P95: + 1900 bloki; P97: + 1902 blok h14 (3. VPIS — oče potrjen); P99: + 1904 blok h45 (4. VPIS — SPUDIČ signal, mati Barbara Spudič) P107: + 1912 blok h45 (5. VPIS — DVOJČKI r6/r7) P107: + 1912 blok h18 (5. VPIS — ANOMALIJA žensko ime v koloni očeta) P108: + 1913 blok h9 (3. VPIS — VRZEL 13 LET!); P109: + 1914 blok h14 (6. VPIS — VRZEL 3 LETA POPRAVLJENO)
   if (HOUSE_VITALS.some((v) => v.houseNo === hn && !(v.bookSignature === "04105" && allow.includes(v.year))))
     p91Errors.push(`NOVA hiša ${hn} (P91) že obstaja v prejšnjem letu — pini neskladni`);
 }
@@ -1288,7 +1288,7 @@ for (const [hn, yr, sig, pin] of [
     p91Errors.push(`kontinuiteta hiša ${hn} (${yr}, ${sig}, pin ${pin}) manjka ali pin ne ustreza`);
 }
 // vitals skupaj 449 (po P106: 429 + 20; krstna 1911)
-if (HOUSE_VITALS.length !== 467)
+if (HOUSE_VITALS.length !== 479)
   p91Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 push(
   "qa-p91-parish-baptism-1896",
@@ -1409,7 +1409,7 @@ for (const [hn, yr, sig, pin, sc] of [
     p92Errors.push(`kontinuiteta hiša ${hn} (${yr}, ${sig}, pin ${pin || `sk ${sc}`}) manjka ali pin ne ustreza`);
 }
 // vitals skupaj 449 (po P106: 429 + 20; krstna 1911)
-if (HOUSE_VITALS.length !== 467)
+if (HOUSE_VITALS.length !== 479)
   p92Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 push(
   "qa-p92-parish-baptism-1897",
@@ -1501,8 +1501,8 @@ if (p93Gap.some((h) => !(Number(h) >= 41 && Number(h) <= 60)))
 // NOVE hiše 1898 (18, 48, 89) — ne obstajajo v nobenem prejšnjem letu/knjigi;
 // h53: P93 kontinuiteta ni nova (1891/1894/1896 priori); h40: MENJAVA (1897 prior)
 for (const hn of ["18", "48", "89"]) {
-  // P100: + 1905 blok h48 (2. VPIS — VRZEL 7 LET, 1898→1905); P101: + 1906 blok h18 (2. VPIS — VRZEL 8 LET); P102: + 1907 bloka h18 (3. VPIS — MENJAVA Šimec → Brinec) + h48 (3. VPIS — MENJAVA Pezdirec → Kure); P104: + 1909 blok h48 (4. VPIS — EMŠO = KRSTNI datum); P105: + 1910 blok h18 (4. VPIS — POVRAT Šimec × Kambič); P106: + 1911 blok h48 (5. VPIS); P107: + 1912 bloka h18 (5. VPIS — ANOMALIJA) + h48 (6. VPIS — ZAPORED)
-  if (HOUSE_VITALS.some((v) => v.houseNo === hn && !(v.bookSignature === "04105" && (v.year === 1898 || v.year === 1905 || v.year === 1906 || v.year === 1907 || v.year === 1909 || v.year === 1910 || v.year === 1911 || v.year === 1912))))
+  // P100: + 1905 blok h48 (2. VPIS — VRZEL 7 LET, 1898→1905); P101: + 1906 blok h18 (2. VPIS — VRZEL 8 LET); P102: + 1907 bloka h18 (3. VPIS — MENJAVA Šimec → Brinec) + h48 (3. VPIS — MENJAVA Pezdirec → Kure); P104: + 1909 blok h48 (4. VPIS — EMŠO = KRSTNI datum); P105: + 1910 blok h18 (4. VPIS — POVRAT Šimec × Kambič); P106: + 1911 blok h48 (5. VPIS); P107: + 1912 bloka h18 (5. VPIS — ANOMALIJA) + h48 (6. VPIS — ZAPORED); P109: + 1914 bloka h18 (6. VPIS) + h48 (7. VPIS — DVOM REŠEN, 12. VPIS VZORCA!)
+  if (HOUSE_VITALS.some((v) => v.houseNo === hn && !(v.bookSignature === "04105" && (v.year === 1898 || v.year === 1905 || v.year === 1906 || v.year === 1907 || v.year === 1909 || v.year === 1910 || v.year === 1911 || v.year === 1912 || v.year === 1914))))
     p93Errors.push(`NOVA hiša ${hn} (P93) že obstaja v prejšnjem letu — pini neskladni`);
 }
 // kontinuitete čez leta prek HOUSE_VITALS (klasifikacija zgodovinska —
@@ -1530,7 +1530,7 @@ for (const [hn, yr, sig, pin, sc] of [
     p93Errors.push(`kontinuiteta hiša ${hn} (${yr}, ${sig}, pin ${pin || `sk ${sc}`}) manjka ali pin ne ustreza`);
 }
 // vitals skupaj 449 (po P106: 429 + 20; krstna 1911)
-if (HOUSE_VITALS.length !== 467)
+if (HOUSE_VITALS.length !== 479)
   p93Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 push(
   "qa-p93-parish-baptism-1898",
@@ -1650,7 +1650,7 @@ for (const [hn, yr, sig, pin, sc] of P94_CONTINUITY) {
     p94Errors.push(`kontinuiteta hiša ${hn} (${yr}, ${sig}, pin ${pin || `sk ${sc}`}) manjka ali pin ne ustreza`);
 }
 // vitals skupaj 449 (po P106: 429 + 20; krstna 1911)
-if (HOUSE_VITALS.length !== 467)
+if (HOUSE_VITALS.length !== 479)
   p94Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 push(
   "qa-p94-parish-baptism-1899",
@@ -1797,7 +1797,7 @@ for (const [hn, yr, sig, pin, sc] of P95_CONTINUITY) {
     p95Errors.push(`kontinuiteta hiša ${hn} (${yr}, ${sig}, pin ${pin || `sk ${sc}`}) manjka ali pin ne ustreza`);
 }
 // vitals skupaj 449 (po P106: 429 + 20; krstna 1911)
-if (HOUSE_VITALS.length !== 467)
+if (HOUSE_VITALS.length !== 479)
   p95Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 push(
   "qa-p95-parish-baptism-1900",
@@ -1879,7 +1879,7 @@ for (const [hn, yr, pin] of p96Pins) {
 if (HOUSE_VITALS.some((h) => h.houseNo === "19" && (h.bookSignature !== "04105" || (h.year !== 1901 && h.year !== 1906 && h.year !== 1912))))
   p96Errors.push("NOVA hiša 19 že obstaja v prejšnjem letu — pini neskladni");
 // vitals skupaj 449 (po P106: 429 + 20; krstna 1911)
-if (HOUSE_VITALS.length !== 467)
+if (HOUSE_VITALS.length !== 479)
   p96Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 // babica: 10/10 imenovanih; Toter 6×
 if (p96Hv.filter((h) => h.whatSi.includes("babica")).length !== 10)
@@ -1990,7 +1990,7 @@ for (const [hn, yr, pin] of p97Pins) {
     p97Errors.push(`kontinuiteta hiša ${hn} (${yr}, pin ${pin}) ne ustreza`);
 }
 // vitals skupaj 449 (po P106: 429 + 20; krstna 1911)
-if (HOUSE_VITALS.length !== 467)
+if (HOUSE_VITALS.length !== 479)
   p97Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 // babica: 12/12 imenovanih; Toter 9×
 if (p97Hv.filter((h) => h.whatSi.includes("babica")).length !== 12)
@@ -2107,7 +2107,7 @@ for (const [hn, yr, pin] of p98Pins) {
     p98Errors.push(`kontinuiteta hiša ${hn} (${yr}, pin ${pin}) ne ustreza`);
 }
 // vitals skupaj 449 (po P106: 429 + 20; krstna 1911)
-if (HOUSE_VITALS.length !== 467)
+if (HOUSE_VITALS.length !== 479)
   p98Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 // babica: 12/12 imenovanih; Toter 6×
 if (p98Hv.filter((h) => h.whatSi.includes("babica")).length !== 12)
@@ -2298,7 +2298,7 @@ for (const [hn, yr, pin] of p99Pins) {
     p99Errors.push(`kontinuiteta hiša ${hn} (${yr}, pin ${pin}) ne ustreza`);
 }
 // vitals skupaj 307 (P99: 288 + 19; krstna 1904; r69 hiša neberljiva brez bloka)
-if (HOUSE_VITALS.length !== 467)
+if (HOUSE_VITALS.length !== 479)
   p99Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 // babica: 19/19 blokov (h88 = pod trakom); Toter 10× + Mavretič 3× + Mih 3×
 // (4. Mih = r69 vrstica — hiša neberljiva, brez bloka) + Delak + Aleksič
@@ -2432,7 +2432,7 @@ for (const [hn, yr, pin] of p100Pins) {
     p100Errors.push(`kontinuiteta hiša ${hn} (${yr}, pin ${pin}) ne ustreza`);
 }
 // vitals skupaj 449 (po P106: 429 + 20; krstna 1911)
-if (HOUSE_VITALS.length !== 467)
+if (HOUSE_VITALS.length !== 479)
   p100Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 // babica: 16/16 blokov; Toter 12× + Mih 3× + Kambič 1×
 if (p100Hv.filter((h) => h.whatSi.includes("babica")).length !== 16)
@@ -2565,7 +2565,7 @@ for (const [hn, yr, pin] of p101Pins) {
     p101Errors.push(`kontinuiteta hiša ${hn} (${yr}, pin ${pin}) ne ustreza`);
 }
 // vitals skupaj 449 (po P106: 429 + 20; krstna 1911)
-if (HOUSE_VITALS.length !== 467)
+if (HOUSE_VITALS.length !== 479)
   p101Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 // babica: 18/18 blokov; Toter 0× (NOVELA — prvič!) + Mih 10× + Vötter 5×
 if (p101Hv.filter((h) => h.whatSi.includes("babica")).length !== 18)
@@ -2701,7 +2701,7 @@ for (const [hn, yr, pin] of p102Pins) {
     p102Errors.push(`kontinuiteta hiša ${hn} (${yr}, pin ${pin}) ne ustreza`);
 }
 // vitals skupaj 449 (P106: 429 + 20; krstna 1911; r43 neberljiva brez bloka)
-if (HOUSE_VITALS.length !== 467)
+if (HOUSE_VITALS.length !== 479)
   p102Errors.push(`HOUSE_VITALS ≠ 374 (${HOUSE_VITALS.length})`);
 // babica: 15/15 blokov; Mih 0× (NOVELA) + Vötter 0× + Šotter 7× + Toter 1×
 if (p102Hv.filter((h) => h.whatSi.includes("babica")).length !== 15)
@@ -2834,7 +2834,7 @@ for (const [hn, yr, pin] of p103Pins) {
     p103Errors.push(`kontinuiteta hiša ${hn} (${yr}, pin ${pin}) ne ustreza`);
 }
 // vitals skupaj 449 (P106: 429 + 20; krstna 1911; r43 neberljiva brez bloka)
-if (HOUSE_VITALS.length !== 467)
+if (HOUSE_VITALS.length !== 479)
   p103Errors.push(`HOUSE_VITALS ≠ 374 (${HOUSE_VITALS.length})`);
 // babica: 18/18 blokov; Vötter 1× (VRNITEV po 1907 0×!) + Muc 6 + Adlešič 8 + Meh 2
 if (p103Hv.filter((h) => h.whatSi.includes("babica")).length !== 18)
@@ -2988,7 +2988,7 @@ for (const [hn, yr, pin] of p104Pins) {
     p104Errors.push(`kontinuiteta hiša ${hn} (${yr}, pin ${pin}) ne ustreza`);
 }
 // vitals skupaj 449 (P106: 429 + 20; krstna 1911)
-if (HOUSE_VITALS.length !== 467)
+if (HOUSE_VITALS.length !== 479)
   p104Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 // babica: 18/18 blokov; Meh 12 (DOMINANTA 1909) + Vötter 1 (DVOJNO z botrinjo)
 if (p104Hv.filter((h) => h.whatSi.includes("babica")).length !== 18)
@@ -3134,7 +3134,7 @@ for (const [hn, yr, pin] of p105Cont) {
     p105Errors.push(`kontinuiteta hiša ${hn} (${yr}, pin ${pin}) ne ustreza`);
 }
 // vitals skupaj 449 (po P106: 429 + 20; krstna 1911)
-if (HOUSE_VITALS.length !== 467)
+if (HOUSE_VITALS.length !== 479)
   p105Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 // babica: 20/20 whatSi; Meh 15 (DOMINANTA 1910; r7 samo priimek + r83 Ana Meh)
 if (p105Hv.filter((h) => h.whatSi.includes("babica")).length !== 20)
@@ -3234,7 +3234,7 @@ for (const [hn, pin] of p106Pins) {
     p106Errors.push(`pin hiša ${hn} (${pin}) manjka`);
 }
 // vitals skupaj 449 (po P107: 429 + 20; krstna 1912)
-if (HOUSE_VITALS.length !== 467)
+if (HOUSE_VITALS.length !== 479)
   p106Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 // babica: 16/17 whatSi; Meh 12 (11× Marija + 1× Marjeta r68 — DOMINANTA 1911)
 // + babica = mati ISTA (r67 Katarina Novak)
@@ -3339,7 +3339,7 @@ for (const [n, pin] of p107Pins) {
     p107Errors.push(`pin hiša ${n} (${pin}) manjka`);
 }
 // vitals skupaj 449 (po P107: 429 + 20; krstna 1912)
-if (HOUSE_VITALS.length !== 467)
+if (HOUSE_VITALS.length !== 479)
   p107Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 // babica: 19/20 whatSi; Meh 12 (vse Marija — DOMINANTA 1912) + MEH ×2 r87
 if (p107Hv.filter((h) => h.whatSi.includes("babica")).length !== 20)
@@ -3439,7 +3439,7 @@ for (const [n, pin] of p108Pins) {
     p108Errors.push(`pin hiša ${n} (${pin}) manjka`);
 }
 // vitals skupaj 467 (po P108: 449 + 18; krstna 1913)
-if (HOUSE_VITALS.length !== 467)
+if (HOUSE_VITALS.length !== 479)
   p108Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 // babica: 18/18 imenovanih; Jakofčič 8 DOMINANTA (prvič ne-Meh!) + Pleščič 4 + Adlešič 3 + Mavrenič 2 + Meh 1
 if (p108Hv.filter((h) => h.whatSi.includes("babica")).length !== 18)
@@ -3488,5 +3488,96 @@ push(
   p108Errors.length === 0
     ? `18 vpisov / 17 hiš — NARE PRELOM (h31 ×2 — 1. ponovitev od P104 + DVE FAMILIJI!) · okvir 1913 skeni 239–256 (glava INLINE str. 209 DNO; **105 vrstic — NAJVEČ!**) – row 105 + **glava 1914 INLINE str. 218 DNO (P109 lead: 1914 r1 Terezija EMŠO 01019141505225; r5 Griblje Anton [~])** · NOVELA: ŠTIRI dup bloki (239/240 + 241/242 + 243/244 + **245–250 ŠEST skenov str. 212!**) · stran == sken − 30/− 31/− 32/DUP/− 38 · **1 NOVA hiša h76 (vse tri knjige! 2. ZAPORED leto)** · PT 12/5 (h44 NOVO v gap) · SELIJA h36→h86 (Hrižan × Štraus — 3. selitev!) · MENJAVA h34 (Milek obstane!) + h47 (Požek→Timec?) · h28 oče Lozar razrešeno · r63 Matija REŠENO · **r15 VRNJEN (faza-1 izpust!)** · h72 Strauš × Šimec 3. skupaj · Bitnar 6 + Rauq 11 + **Polak 1 (3. duhovnik!)** · babica **JAKOFČIČ 8/18 DOMINANTA (prvič ne-Meh!)** + Meh 1 (padec!) · EMŠO ~30 marginalij (največ!) · 5 sidr · vstavek Pozamanitev (r35) · 2 poznejša vpisa (r2 rojen 1891! + r85) · 2 Karolini · 2 para dvojčkov · 3 nezakonski · nujni krst r22 · Klojter ×4 · žensko ime v očetovi koloni ×3 · 2 † 1944 · h9 VRZEL 13 LET · EXCLUDED 87 · vitals 467 · kumulativ 475/87 28 let`
     : p108Errors.join("; "),
+);
+
+// ——— qa-p109: župnija Podzemelj — krstna 1914 (P109; issue #18) ———
+const p109PageOfScan = (s: number) =>
+  ({ 256: 218, 257: 218, 258: 219, 259: 219, 260: 220, 261: 220, 262: 221, 263: 222, 264: 222, 265: 223, 266: 223, 267: 224, 268: 224 } as Record<number, number>)[s] ?? -1;
+const p109Hv = HOUSE_VITALS.filter((h) => h.bookSignature === "04105" && h.year === 1914);
+const p109Errors: string[] = [];
+if (p109Hv.length !== 12)
+  p109Errors.push(`vpisov 1914 (04105, zasidrani) ≠ 12 (${p109Hv.length})`);
+const p109Houses = new Set(p109Hv.map((h) => h.houseNo));
+if (p109Houses.size !== 12)
+  p109Errors.push(`različnih hiš ≠ 12 (${p109Houses.size}: ${[...p109Houses].sort((a, b) => Number(a) - Number(b)).join(",")}) — NARE 12/12!`);
+// NARE 12/12 — brez ponovitev (9. čisto leto)
+const p109RepeatHouses = [...p109Hv.map((h) => h.houseNo)].filter((hn, i, arr) => arr.indexOf(hn) !== i);
+if (p109RepeatHouses.length !== 0)
+  p109Errors.push(`intra-letne ponovitve 1914 morajo biti PRAZNE (NARE 12/12) — najdeno: ${p109RepeatHouses.join(",")}`);
+// okvir: ŠEST dup parov (256/257 + 258/259 + 260/261 + 263/264 + 265/266 + 267/268; enojni s262)
+const p109BadPage = p109Hv.filter(
+  (h) => h.status !== "DOCUMENTED" || !h.scan || !h.page
+    || h.page !== p109PageOfScan(h.scan)
+    || h.scan < 256 || h.scan > 266,
+);
+if (p109BadPage.length > 0)
+  p109Errors.push(`scan/page ne ustreza P109 noveli (ŠEST dup parov; enojni s262): ${p109BadPage.map((h) => `${h.houseNo}@${h.scan}`).join(",")}`);
+// 0 novih hiš (prvič po 1912/13!)
+const p109PriorHouses = new Set(
+  HOUSE_VITALS.filter((h) => h.bookSignature === "04105" && h.year !== 1914).map((h) => h.houseNo),
+);
+const p109New = [...p109Houses].filter((hn) => !p109PriorHouses.has(hn));
+if (p109New.length !== 0)
+  p109Errors.push(`nove hiše 1914 morajo biti PRAZNE (0 — prvič po 1912/13!) — najdeno: ${p109New.join(",")}`);
+// sidra: r29 NOVA VRSTICA + žensko ime; r54 dvom REŠEN; r21/r28 hiši; r38 šahtar; r42 botra Lozar; r45 učitelj; r62 ZAPORED
+const p109Pins: Array<[string, string]> = [
+  ["1", "ANA"], ["1", "Štrucel"], ["1", "Polak"],
+  ["14", "Brinec"], ["14", "VRZEL 3 LETA"],
+  ["53", "VRZEL 16 LET"], ["53", "Perdivec"],
+  ["11", "1803914505878"], ["11", "ZAVRŽENO"],
+  ["44", "ZAVRŽEN"], ["44", "11.04.2001"], ["44", "ŠTRUCELJ"],
+  ["5", "NOVA VRSTICA VZORCA"], ["5", "Štrucel"], ["5", "0405914505481"], ["5", "ŽENSKO IME"],
+  ["77", "ŠAHTAR"], ["77", "Anfons"],
+  ["21", "3006914500518"], ["21", "Anton Lozar + Barbara Lozar"],
+  ["90", "učitelj"], ["90", "Štrucel"],
+  ["18", "2108914500174"], ["18", "Brinec"],
+  ["48", "REŠEN"], ["48", "12. VPIS"],
+  ["8", "ZAPORED"], ["8", "Matija Štrucel + Katarina Potter"], ["8", "P110"],
+];
+for (const [n, pin] of p109Pins) {
+  const cur = p109Hv.find((h) => h.houseNo === n);
+  if (!cur) {
+    p109Errors.push(`pin ${n} (${pin}) — hiša ${n} ni v 1914 blokih`);
+    continue;
+  }
+  if (!cur.whatSi.includes(pin))
+    p109Errors.push(`pin hiša ${n} (${pin}) manjka`);
+}
+// EMŠO reassign: 2210914505196 = r63 (v h8 bloku kot »NE r62«!)
+if (!p109Hv.some((h) => h.houseNo === "8" && h.whatSi.includes("NE r62")))
+  p109Errors.push("EMŠO reassign (2210914505196 → r63) manjka v h8 bloku");
+// vitals skupaj 479 (po P109: 467 + 12; krstna 1914)
+if (HOUSE_VITALS.length !== 479)
+  p109Errors.push(`HOUSE_VITALS ≠ 479 (${HOUSE_VITALS.length})`);
+// babica: 12/12 imenovanih; Jakofčič 4 DOMINANTA (2. leto zapored)
+if (p109Hv.filter((h) => h.whatSi.includes("babica")).length !== 12)
+  p109Errors.push(`babica ni v vseh 12 whatSi (${p109Hv.filter((h) => h.whatSi.includes("babica")).length})`);
+const p109Jakofcic = p109Hv.filter((h) => h.whatSi.includes("babica Marija Jakofčič")).length;
+if (p109Jakofcic !== 4)
+  p109Errors.push(`babica Marija Jakofčič ≠ 4× (${p109Jakofcic} — DOMINANTA 1914!)`);
+// podpisi (jasni): Rauq ≥4 (r13/r29/r38/r45) + Bitnar ≥2 (r53/r62) + Polak 1 (r5)
+if (p109Hv.filter((h) => h.whatSi.includes("podpis Jos. Rauq")).length < 4)
+  p109Errors.push(`podpis Jos. Rauq < 4× (${p109Hv.filter((h) => h.whatSi.includes("podpis Jos. Rauq")).length})`);
+if (p109Hv.filter((h) => h.whatSi.includes("Pavlin Bitnar")).length < 2)
+  p109Errors.push(`podpis Pavlin Bitnar < 2× (${p109Hv.filter((h) => h.whatSi.includes("Pavlin Bitnar")).length})`);
+if (p109Hv.filter((h) => h.whatSi.includes("Polak")).length !== 1)
+  p109Errors.push(`podpis Polak (kap.) ≠ 1× (${p109Hv.filter((h) => h.whatSi.includes("Polak")).length} — r5!)`);
+// EMŠO sidra v blokih: 4 SKLADNA (r21/r29/r42/r53) + r28/r54 [~]
+const p109Emso = ["1803914505878", "0405914505481", "3006914500518", "2108914500174"];
+for (const emso of p109Emso) {
+  if (!p109Hv.some((h) => h.whatSi.includes(emso)))
+    p109Errors.push(`EMŠO sidro ${emso} manjka`);
+}
+// P110 lead: glava 1915 = VRH str. 225 = s269 (NI INLINE!) + r8 Griblje 88 + konec porodov
+if (!p109Hv.some((h) => h.houseNo === "8" && h.whatSi.includes("s269") && h.whatSi.includes("78 konec porodov")))
+  p109Errors.push("P110 lead (glava 1915 s269 + konec porodov) manjka v h8 bloku");
+push(
+  "qa-p109-parish-baptism-1914",
+  "P109: ŽUPNIJA PODZEMELJ — KRSTNA KNJIGA 04105, POLNO LETO 1914 (issue #18; SAMPLE-TRANSCRIPTION-1914; MERI, NE odloča; v7 join nespremenjen): širitev vzorca P79 (1886) → … → P106 (1911) → P107 (1912) → P108 (1913) na leto 1914 — **PRVO VOJNO leto!** — okvir: glava »1914« INLINE na str. 218 (pod 1913 r105 = s256/257; 1914 r1 = [vas pod marg.] 17 Terezija 1./1. Januar, EMŠO 01019141505225, VPIS PRENEŠEN 16.10.2002 — P108 lead POTRJEN!) – row 79 na str. 224 (**r79 PREČRTANA** — diagonalni udarci čez vse celice: Otok 10 Marija, Peter Kure? bajtar × Ana Kržan?, botra Miko? + Ana Kržan?, babica Marija Plešič?, podpis Bitnar!) + opomba na dnu str. 224: **»78 konec porodov l. 1914«** (3.5× POTRJENO!); **glava 1915 NI INLINE na dnu str. 224 — je na VRHU str. 225 = s269** (ročno dopisan »1915.« nad tiskano glavo — P110 lead!) == tiskane strani 218–224 (78 veljavnih vrstic + 1 prečrtana); NOVELA P109: **ŠEST dup parov skenov — NOV REKORD (2. leto zapored!)** — 256/257 + 258/259 + 260/261 + 263/264 + 265/266 + 267/268 (enojni samo s262 = str. 221); VSI vpisi z Griblji: **12 vpisov / 12 hiš — NARE 12/12 (9. čisto leto!)** + **0 NOVIH hiš (prvič po 1912/13 — h86 1912 + h76 1913!)**; PT 9/3 (h44 + h48 + h53 v luknji 41–60 — vse tri dokazane!); kumulativ **487 vpisov / 87 hiš** čez tri knjige in **29 let** (1886–1914; 479 vitals); SIDRA: **r29 Griblje 5 NOVA VRSTICA VZORCA** (faza-1 je r29 izpustila — nalepka blok; Janez, EMŠO 0405914505481 SKLADNO, oče-kolona »Marija Štrucel« — ŽENSKO IME!) + **r54 Griblje 48 DVOM FAZE 1 REŠEN** (začetnica »G« jasna skozi prozoren trak 5×! → 12. vpis) + r5 hiša **1** POTRJENA (4.5×; faza-1 »1?/4?« + »Anton« POPRAVLJENA → **ANA**, † 9.2.1915!) + r21 hiša **11** POTRJENA (na OBEH dupih 4.5×; faza-1 »pod zavihkom« ZAVRŽENO!) + r28 hiša **44** POTRJENA (band-dvom »34« ZAVRŽEN) + r17 h53 **VRZEL 16 LET** (najdaljša 1914!) + r13 h14 **VRZEL 3 LETA** (faza-1 »18« POPRAVLJENO — h14 = 1896/1900/1902/1908/1911!) + r42 starši **Papič × Krixan** (faza-1 zamenjava: »Anton Lavca + Ana Tome« = BOTRA **Anton + Barbara Lozar**!) + r45 oče **Ernest Šušteršič, ljudski učitelj** + r38 oče **Janez Božič? ŠAHTAR (rudar — edinstven poklic!)** + r62 botra **Štrucel + Potter** (faza-1 »Hrovat« POPRAVLJENO) + **EMŠO 2210914505196 = r63 Zemelj 20 (22./22. OKTOBER) — faza-1 pripis r62 POPRAVLJEN** (Oktober glava med r62/r63!); DUHOVNIKI/PODPISI: Rauq ~6 + Bitnar ~3 + **Polak 1 (r5!)** + **»Dostál« 1 (r22 — NOVI 4. duhovnik!)** + Koziga? 1 [~]; BABICA: 12/12 imenovanih — **MARIJA JAKOFČIČ 4/12 DOMINANTA (2. leto zapored!)** + Pleščič 2? + Adlešič 2? + Mavrenič 2 + Jakobčič 1? + Karevič 1?; EMŠO kampanja ~20 marginalij — 4 SKLADNA sidra (r21 + r29 + r42 + r53) + 2 [~]; ANOMALIJE: **r78 MRTVOROJEN »J. mrtvorojeno«** (24./— Cerkvišče 7: Jožef Dragos? ½ zemlj. × Katarina raj. Bahorič; krsta/botra/podpis PRAZNO — 2. sub divo signal!) + **žensko ime v očetovi koloni ×3 = izenačeno s rekordom P108** (r29 Štrucel + r39 Križan + r63 Šilah) + **mesečne glave PODOBLJENE na meji strani** (September ×2 str. 222/223 + November ×2 str. 223/224!) + **1. SVETOVNA VOJNA — † marginalia ×7+** (r10 Jože 30.7.1915 + r16 Matija 17.7.1916 + r61 Frančišek 19.1.1916 + r68 Martin 12.7.1916 + r69 Jožef 14.7.1916 + r75 Kapitolina 12.1916? + r50 vojak BOLOGNA 25.3.1919 + r58 VELIKA vojno-invalidska marginalia Podrečje 25.11.1917) + **4/12 Griblje otrok † 1914/15 = 33%** (r5 Ana + r21 Jožefa + r45 Ivanka + r62 Jožefa!) + r75 **Kapitolina** (faza-1 »Jožef« POPRAVLJENO; oče-kolona PRAZNA!) + r10 **Aloizija** (faza-1 »Flavijana« POPRAVLJENO; nalepka z oznako »10.«) + r16/r18 nalepka-razrešitev († 2000 = r18, NE r17) + r60 ime spremenjeno (odločba 1999) + vpisi prenešeni 2002–2007 (r1/r14/r60/r63) + h44 + h8 **ZAPORED 2. leto** (Štrucelj + Jakobčič!); ŠTRUCEL mreža 1914: r5 boter + r29 mati? + r45 botri ×2 + r62 boter (h44 familija = 5 vez!); EXCLUDED: 66 (+ r79 prečrtana); skripta scripts/p109_parish_baptism_1914.py (I1–I12, --check 14/14 PASS); status SAMPLE-TRANSCRIPTION-1914",
+  "P109: PARISH OF PODZEMELJ — BAPTISM REGISTER 04105, THE FULL YEAR 1914 (issue #18; SAMPLE-TRANSCRIPTION-1914; MEASURES, does not decide; the v7 join unchanged): extending the sample P79 (1886) → … → P108 (1913) to the year 1914 — **the FIRST WAR YEAR!** — the frame: the 1914 heading INLINE on p. 218 (below the 1913 r105 = s256/257; the 1914 r1 = [village under the marg.] 17 Terezija Jan 1/1, personal ID 01019141505225, the entry transferred Oct 16, 2002 — the P108 lead CONFIRMED!) – row 79 on p. 224 (**r79 STRUCK THROUGH** — diagonal strokes across all cells: Otok 10 Marija, Peter Kure? cottager × Ana Kržan?, godparents Miko? + Ana Kržan?, midwife Marija Plešič?, signature Bitnar!) + the note at the bottom of p. 224: **»78 konec porodov l. 1914«** (»78 the end of births year 1914« — CONFIRMED at 3.5×!); **the 1915 heading NOT INLINE at the bottom of p. 224 — it is at the TOP of p. 225 = s269** (»1915.« manually added above the printed heading — the P110 lead!) == printed pages 218–224 (78 valid rows + 1 struck); THE P109 NOVEL: **SIX dup pairs of scans — A NEW RECORD (the 2nd consecutive year!)** — 256/257 + 258/259 + 260/261 + 263/264 + 265/266 + 267/268 (single only s262 = p. 221); ALL Griblje entries: **12 entries / 12 houses — NARE 12/12 (the 9th clean year!)** + **0 NEW houses (the first time since 1912/13 — h86 1912 + h76 1913!)**; the PT 9/3 (h44 + h48 + h53 in the 41–60 gap — all three proven!); the cumulative **487 entries / 87 houses** across three books and **29 years** (1886–1914; 479 vitals); ANCHORS: **r29 Griblje 5 A NEW ROW OF THE SAMPLE** (the phase-1 omitted r29 — the label block; Janez, the personal ID 0405914505481 CONSISTENT, the father column »Marija Štrucel« — A WOMAN'S NAME!) + **r54 Griblje 48 THE PHASE-1 DOUBT RESOLVED** (the initial »G« clear through the transparent strip at 5×! → the 12th entry) + r5 house **1** CONFIRMED (4.5×; the phase-1 »1?/4?« + »Anton« CORRECTED → **ANA**, died Feb 9, 1915!) + r21 house **11** CONFIRMED (on BOTH duplicates at 4.5×; the phase-1 »under the page corner« REJECTED!) + r28 house **44** CONFIRMED (the band-doubt »34« REJECTED) + r17 h53 a **16-YEAR GAP** (the longest of 1914!) + r13 h14 a **3-YEAR GAP** (the phase-1 »18« CORRECTED — h14 = 1896/1900/1902/1908/1911!) + r42 the parents **Papič × Krixan** (the phase-1 swap: »Anton Lavca + Ana Tome« = the GODPARENTS **Anton + Barbara Lozar**!) + r45 the father **Ernest Šušteršič, a people's teacher** + r38 the father **Janez Božič? A MINER (a unique trade!)** + r62 the godparents **Štrucel + Potter** (the phase-1 »Hrovat« CORRECTED) + **the personal ID 2210914505196 = r63 Zemelj 20 (Oct 22/22) — the phase-1 attribution to r62 CORRECTED** (the October heading between r62/r63!); PRIESTS/SIGNATURES: Rauq ~6 + Bitnar ~3 + **Polak 1 (r5!)** + **»Dostál« 1 (r22 — A NEW 4th priest!)** + Koziga? 1 [~]; MIDWIFE: 12/12 named — **MARIJA JAKOFČIČ 4/12 THE DOMINANT (the 2nd consecutive year!)** + Pleščič 2? + Adlešič 2? + Mavrenič 2 + Jakobčič 1? + Karevič 1?; the personal-ID campaign ~20 marginalia — 4 CONSISTENT anchors (r21 + r29 + r42 + r53) + 2 [~]; ANOMALIES: **r78 A STILLBIRTH »J. mrtvorojeno«** (Dec 24/— Cerkvišče 7: Jožef Dragos? half smallholder × Katarina née Bahorič; the baptism/godparents/signature EMPTY — the 2nd sub divo signal!) + **a woman's name in the father column ×3 = tied with the P108 record** (r29 Štrucel + r39 Križan + r63 Šilah) + **the monthly headings DOUBLED at the page boundary** (September ×2 pp. 222/223 + November ×2 pp. 223/224!) + **WWI — death marginalia ×7+** (r10 Jože Jul 30, 1915 + r16 Matija Jul 17, 1916 + r61 Frančišek Jan 19, 1916 + r68 Martin Jul 12, 1916 + r69 Jožef Jul 14, 1916 + r75 Kapitolina Dec 1916? + r50 a soldier BOLOGNA Mar 25, 1919 + r58 a LARGE war-invalid marginalia Podrečje Nov 25, 1917) + **4/12 Griblje infants died 1914/15 = 33%** (r5 Ana + r21 Jožefa + r45 Ivanka + r62 Jožefa!) + r75 **Kapitolina** (the phase-1 »Jožef« CORRECTED; the father column EMPTY!) + r10 **Aloizija** (the phase-1 »Flavijana« CORRECTED; the label marked »10.«) + the r16/r18 label-resolution (died 2000 = r18, NOT r17) + r60 the name changed (the 1999 decree) + entries transferred 2002–2007 (r1/r14/r60/r63) + h44 + h8 **CONSECUTIVE the 2nd year** (Štrucelj + Jakobčič!); the ŠTRUCEL network 1914: the r5 godfather + r29 the mother? + the r45 godparents ×2 + the r62 godfather (the h44 family = 5 ties!); EXCLUDED: 66 (+ r79 struck); the script scripts/p109_parish_baptism_1914.py (I1–I12, --check 14/14 PASS); status SAMPLE-TRANSCRIPTION-1914",
+  p109Errors.length === 0,
+  p109Errors.length === 0
+    ? `12 vpisov / 12 hiš — NARE 12/12 (9. čisto leto!) · **0 NOVIH hiš (prvič po 1912/13!)** · okvir 1914 skeni 256–268 (glava INLINE str. 218; 78 vrstic + r79 PREČRTANA + »78 konec porodov l. 1914«!) – row 79 + **glava 1915 na VRHU str. 225 = s269 (NI INLINE — P110 lead: 1915 r8 = GRIBLJE 88 Ivana!)** · NOVELA: **ŠEST dup parov = NOV REKORD (2. leto zapored)** · PT 9/3 (h44+h48+h53 dokazane) · **r29 NOVA VRSTICA (faza-1 izpust! žensko ime Štrucel v očetovi koloni!)** · **r54 dvom REŠEN (Griblje 48 skozi trak!)** · r5 ANA + hiša 1 (POPRAVEK) · r21 hiša 11 (ZAVRŽENO »zavihkom«) · r28 hiša 44 (ZAVRŽEN »34«) · h53 VRZEL 16 LET · h14 VRZEL 3 (POPRAVLJENO) · r42 Papič × Krixan (Lozar = botra!) · r45 oče UČITELJ Šušteršič · r38 oče ŠAHTAR · r62 botra Štrucel + Potter · **EMŠO 2210914505196 → r63 OKTOBER (POPRAVLJEN pripis!)** · Rauq ~6 + Bitnar ~3 + Polak 1 + **Dostál NOVI 4. duhovnik** · babica JAKOFČIČ 4/12 (2. leto!) · EMŠO 4 sidra SKLADNA · r78 mrtvorojen (vse PRAZNO) · žensko ime v očetovi koloni ×3 (= rekord P108!) · mesečne glave PODOBLJENE ×2 · **1. svetovna † ×7+ (Bologna 1919! Podrečje 1917!)** · **4/12 otrok † = 33%** · r75 Kapitolina (oče PRAZEN) · r10 Aloizija · ZAPORED h44+h8 · Štrucel mreža 5 vez · EXCLUDED 66 · vitals 479 · kumulativ 487/87 29 let`
+    : p109Errors.join("; "),
 );
 }
