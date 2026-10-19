@@ -5075,3 +5075,23 @@ Stage Summary:
 - **TROJSINHRONIZACIJA POLNA: lokalni == GitLab == GitHub == f9ea166 (P109 faza 2); Vercel produkcija = 110/110 (qa-p109 PASS), dpl_5K7naLWf6PEmS5fFtFcyU4NgbWWk READY**
 - NOVA METODA (P109 faza 2+): **inkrementalni API file-upload** (samo spremenjene datoteke; manifest obnovljen vsakič) — hitreje od polnega chunked uploada (79 s vs ~4–5 min)
 - NASLEDNJA FAZA (P110): krstna 1915 — glava na VRHU str. 225 = s269 (NI INLINE); skeni 269–272 že v /tmp/p109 (fetch s273+ potreben); **1915 r8 = GRIBLJE 88 Ivana (lead)**; r17 = Griblje 78? Jožef † 10.9.1916 (okvirno); pričakovati nizko rodnost 1915 (vojna!) + † marginalia 1915/16 kampanja
+
+---
+Task ID: 83 (P110 ZAKLJUČEN — krstna 1915 faza 2 forenzika + evidence + parish.ts + qa-p110 + README + notes)
+Agent: Z.ai Code (glavna seja)
+Task: nadaljuj kjer si ostal (owner: »nadaljuj kjer si ostal«) — P110 (krstna 1915): dokončanje faze 2 (forenzika + evidence JSON + verifier + parish.ts + qa-p110 + regresije) + README sync + QA chain + push + Vercel
+
+Work Log:
+- SINHRONIZACIJA OB PREVZETEMU: lokalni == GitLab == GitHub == f949240 (P109 faza 2 + worklog Task 82-b); ugotovljeno, da je P110 faza 1 (surova transkripcija r1–r81) že opravljena v prejšnji seji (notes + /tmp/p110 material), faza 2 pa v TEKU (evidence JSON 11 entries že sestavljen, verifier 14/14, parish.ts +11 blokov, qa-p110 v kodi, regresije p80–p109) — preostanek: QA chain + README + notes + worklog + commit + push + Vercel
+- DEV SERVER: zombie next dev instanca (lock .next/dev/lock) → pkill + rm lock + ponoven zagon → Ready; **GET /api/qa → ok:True, passed:111, failed:0 — qa-p110 lokalno LIVE**
+- LINT: bun run lint PASS (samo BABEL note qa-parish.ts/qa.ts > 500KB — znano)
+- EVIDENCE JSON VERIFIKACIJA: research/issue17/parish-baptism-1915.json — 11 entries / 70 excluded / 18 anomalij (A1–A18) / frame (str. 225–237 == s269–s283, 81 vrstic, 0 prečrtanih, dup 270/271 + 273/274) / stats (vitals 490, kumulativ 498 vpisov / 87 hiš / 30 let) / 22 EMŠO crossChecks ✓ / continuityLast04105 / p111Lead — POPOLN
+- README SINHRONIZIRAN do P110: dolg kronološki bullet 1915 (ZAKLJUČEN — okvir + NARE 11/11 + 2 dvojčka para + 3 očetovstva + protestant + razglašen + razveljavljen zakon + vrzel 27 + GRM/Boginja vas + EMŠO ~38 = največja kampanja + PILETIČ babica domina ~40/81 + Učak ~59 podpisov) + povzetek bullet v »Zadnje stanje« + TOC anchor (po P109 → po P110) + QA blok (110/110 → **111/111**; p70–p110; p79–p110 = 32 skript; qa-p110 v seznamu; P77–P110 brez kartic) + Zrcaljenje (trojsinhronizacija polna + inkrementalni Vercel deploy); podvojen bullet med urejanjem odstranjen (sed -i 645d)
+- NOTES: parish-baptism-1915-notes.md — sekcija »FAZA 2 KONČANA« (18 anomalij povzetih + evidence + verifier + parish.ts + qa-p110 + P111 lead)
+- PARISH.TS REGRESIJE POTRJENE: 11 blokov year:1915 (r8 h88 / r15 h45 / r16 h70 / r17 h78 / r48 h13 / r66 h40 / r67 h32 / r69 h46 / r72 h9 / r74 h22 / r78 h53); vitals 479 → 490; BLOCKS_04105 453 → 464 (verifier I11 + I12 PASS)
+- Commit + push GitLab + GitHub + Vercel deploy: glej Task 83-b
+
+Stage Summary:
+- **P110 = krstna 1915 ZAKLJUČEN: 11 vpisov / 11 hiš — NARE 11/11 (10. čisto leto!) + 0 novih hiš (2. zapored!) + 2 dup para (270/271 + 273/274 — oba razkrivata pokrito vrstico!) + 2 para dvojčkov (3. leto!) + 3 očetovstva marginalie + protestant + razglašen za mrtvega + PRVI razveljavljen zakon + VRZEL 27 LET rekord + NOVI vasi GRM + Boginja vas + EMŠO kampanja ~38 = največja + PILETIČ babica domina ~40/81 + VOJNA smrtnost otrok ~20+ od 81**
+- kumulativ 498 vpisov / 87 hiš / 30 let (1886–1915); vitals 490; runQA 111/111; verifier 14/14
+- NASLEDNJA FAZA (P111): krstna 1916 — glava ročno INLINE str. 237 = s283 + tiskana VRH str. 238 = s284; 1916 r1 = Grišiče 3 Julija; skeni s284+ fetch potreben

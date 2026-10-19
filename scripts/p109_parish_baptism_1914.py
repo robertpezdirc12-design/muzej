@@ -72,9 +72,11 @@ EXPECTED_VITALS_HOUSES = EXPECTED_HOUSES
 EXPECTED_PT_IN_SET = ["1", "5", "8", "11", "14", "18", "21", "77", "90"]
 EXPECTED_PT_GAP = ["44", "48", "53"]  # v luknji 41–60 (vse dokazane!)
 EXPECTED_NEW_HOUSES = 0         # PRVIČ po 1912/13!
-EXPECTED_VITALS_TOTAL = 479     # 467 + 12 (P109)
-BLOCKS_04105 = 453              # 441 + 12
-KUMULATIV_ENTRIES = 487         # 475 + 12
+EXPECTED_VITALS_TOTAL = 479     # P109 lastno (467 + 12) — dokaz stats.vitals
+BLOCKS_04105_P109 = 453         # P109 lastno (441 + 12)
+VITALS_TOTAL_NOW = 490          # P110: 479 + 11 (skupno stanje parish.ts)
+BLOCKS_04105 = 464              # 453 + 11 (P110)
+KUMULATIV_ENTRIES = 487         # 475 + 12 (P109 lastno kumulativno stanje)
 KUMULATIV_HOUSES = 87           # + 0
 KUMULATIV_YEARS = 29            # 1886–1914
 # kontinuitete (hiša → zadnje krstno leto pred 1914 v 04105, iz parish.ts)
@@ -245,8 +247,8 @@ def verify():
         and gap == sorted(EXPECTED_PT_GAP, key=int)
         and dokaz["stats"]["pt"] == "9/3 (h44 + h48 + h53 v luknji 41–60 — vse tri dokazane v PT_GAP_KNOWN!)"
         and dokaz["stats"]["newHouseNos"] == []
-        and dokaz["stats"]["cumulative"] == "487 vpisov / 87 hiš / 29 let (1886–1914)"
-        and dokaz["stats"]["vitals"] == EXPECTED_VITALS_TOTAL
+        and dokaz["stats"]["cumulative"] in ("487 vpisov / 87 hiš / 29 let (1886–1914)", "498 vpisov / 87 hiš / 30 let (1886–1915)")
+        and dokaz["stats"]["vitals"] == EXPECTED_VITALS_TOTAL  # P109 lastno
         and all(f'"{x}"' in pt_gap_set for x in ("44", "48", "53"))
     )
 
@@ -351,7 +353,7 @@ def verify():
     # vitals skupaj 479 (467 + 12; vse tri knjige 04105+04894+04455)
     src_all = open(PARISH_TS, encoding="utf-8").read()
     total_blocks = len(re.findall(r"\{[^{}]*?bookSignature:\s*\"(04105|04894|04455)\"[^{}]*?\}", src_all, re.S))
-    inv["I11_vitals_total"] = total_blocks == EXPECTED_VITALS_TOTAL
+    inv["I11_vitals_total"] = total_blocks == VITALS_TOTAL_NOW
     inv["I12_blocks_04105"] = len(hv) == BLOCKS_04105
 
     passed = sum(1 for v in inv.values() if v)

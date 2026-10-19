@@ -72,9 +72,9 @@ EXPECTED_PT_IN_SET = ["6", "8", "9", "13", "28", "31", "34", "36", "65", "72", "
 EXPECTED_PT_GAP = ["44", "46", "47", "59", "60"]   # v luknji 41–60 (h44 NOVO!)
 EXPECTED_REPEATS = 1            # h31 ×2 — NARE PRELOM (1. ponovitev od P104)
 EXPECTED_NEW_HOUSES = 1         # h76 — 2. ZAPORED leto z novo hišo (h86 1912)
-EXPECTED_VITALS_TOTAL = 467     # 449 + 18 (P108)
-BLOCKS_04105 = 441              # 423 + 18
-KUMULATIV_ENTRIES = 475         # 457 + 18
+EXPECTED_VITALS_TOTAL = 490     # 449 + 18 (P108)
+BLOCKS_04105 = 464              # 423 + 18
+KUMULATIV_ENTRIES = 475         # 457 + 18 (P108 lastno kumulativno stanje)
 KUMULATIV_HOUSES = 87           # 86 + 1 (h76)
 KUMULATIV_YEARS = 28            # 1886–1913
 # kontinuitete (hiša → zadnje krstno leto pred 1913 v 04105, iz parish.ts)

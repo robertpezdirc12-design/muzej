@@ -71,8 +71,8 @@ EXPECTED_PT_IN_SET = ["5", "8", "11", "12", "18", "19", "22", "24", "26", "33", 
 EXPECTED_PT_GAP = ["45", "46", "48", "59"]   # v luknji 41–60 (vsi že znani — ponovitve)
 EXPECTED_REPEATS = 0            # NARE 20/20
 EXPECTED_NEW_HOUSES = 1         # h86 — prva po 1909
-EXPECTED_VITALS_TOTAL = 467     # 429 + 20 (P107)
-BLOCKS_04105 = 441              # 403 + 20
+EXPECTED_VITALS_TOTAL = 490     # 429 + 20 (P107)
+BLOCKS_04105 = 464              # 403 + 20
 KUMULATIV_ENTRIES = 457         # 437 + 20
 KUMULATIV_HOUSES = 86           # 85 + 1 (h86)
 KUMULATIV_YEARS = 27            # 1886–1912
@@ -247,7 +247,7 @@ def verify():
 
     # I5b — h86 NOVA: brez predhodnih let
     ys86 = [b["year"] for b in hv if b["houseNo"] == "86"]
-    inv["I5b_new_house_86"] = ys86 == [1912]
+    inv["I5b_new_house_86"] = ys86 == [1912, 1913]  # P108: + 1913 (SELIJA h36→h86); P110: h86 brez 1915
 
     # I6 — PT klasifikacija: 16 v naboru + 4 v luknji (45+46+48+59 — ponovitve);
     # 1 nova hiša (h86); luknja 51 ostaja; kumulativ 457/86/27
