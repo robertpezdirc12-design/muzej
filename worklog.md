@@ -5095,3 +5095,18 @@ Stage Summary:
 - **P110 = krstna 1915 ZAKLJUČEN: 11 vpisov / 11 hiš — NARE 11/11 (10. čisto leto!) + 0 novih hiš (2. zapored!) + 2 dup para (270/271 + 273/274 — oba razkrivata pokrito vrstico!) + 2 para dvojčkov (3. leto!) + 3 očetovstva marginalie + protestant + razglašen za mrtvega + PRVI razveljavljen zakon + VRZEL 27 LET rekord + NOVI vasi GRM + Boginja vas + EMŠO kampanja ~38 = največja + PILETIČ babica domina ~40/81 + VOJNA smrtnost otrok ~20+ od 81**
 - kumulativ 498 vpisov / 87 hiš / 30 let (1886–1915); vitals 490; runQA 111/111; verifier 14/14
 - NASLEDNJA FAZA (P111): krstna 1916 — glava ročno INLINE str. 237 = s283 + tiskana VRH str. 238 = s284; 1916 r1 = Grišiče 3 Julija; skeni s284+ fetch potreben
+
+---
+Task ID: 83-b (P110 push GitLab + GitHub OK (df74397) + Vercel produkcija 111/111 — TROJSINHRONIZACIJA POLNA)
+Agent: Z.ai Code (glavna seja)
+Task: push df74397 na GitLab + GitHub; poushaj na Vercel (inkrementalni API file-upload)
+
+Work Log:
+- git push origin main (GitLab): **f949240..df74397 OK**; git push github main: **f949240..df74397 OK** — oba remota na df74397 (P110 ZAKLJUČEN)
+- VERCEL: inkrementalni API file-upload (2. uporaba metode): manifest regeneriran iz `git ls-files -z` + .vercelignore → **531 datotek / 32 spremenjenih re-uploadanih** (README + 26 skript p80–p110 + parish.ts + qa-parish.ts + p110 ×3; research/ + worklog ignorirana); **BUG FIX metode: PUT /v2/files → 415 Unsupported Media Type — pravilna metoda je POST** (worklog Task 81 je že zapisal POST!) → uploads 26 s → POST /v13/deployments {gitlabCommit: df74397} → **dpl_CbbrPvRbQr8PJU13hK1WENtuoziN READY (113 s)**
+- **PRODUKCIJA Vercel (griblje-museum.vercel.app): GET /api/qa → ok:True, passed:111, failed:0 — qa-p110 live** ✓; homepage 200 ✓; nov manifest state → /home/z/.p110tmp/deploy_state3.json (531 datotek)
+
+Stage Summary:
+- **TROJSINHRONIZACIJA POLNA: lokalni == GitLab == GitHub == df74397 (P110); Vercel produkcija = 111/111 (qa-p110 PASS), dpl_CbbrPvRbQr8PJU13hK1WENtuoziN READY (113 s)**
+- METODA POPRAVLJENA: file-upload = **POST /v2/files** (PUT vrne 415); inkrementalno (samo spremenjene datoteke iz sha-dedup manifest)
+- NASLEDNJA FAZA (P111): krstna 1916 — glava ročno INLINE str. 237 = s283 + tiskana VRH str. 238 = s284; **1916 r1 = Grišiče 3 Julija** (9./11. Januar; oče Matija Šapič? [~] × Katarina); r4 = Zemelj 17 Alojzij (Jurij Klepec mer. × Ana Kralj; botra Bara Marentič babica!); skeni s284+ fetch potreben (/tmp/p111); pričakovati še nižjo rodnost (vojna 1916!) + † marginalia kampanja
