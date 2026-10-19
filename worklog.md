@@ -5211,3 +5211,14 @@ Work Log:
 
 Stage Summary:
 - P113 ZAKLJUČEN: trojsinhronizacija + produkcija 114/114; krstna linija tik pred zaključkom (1919 = zadnje leto!); novi rekordi: 4 duhovniki, VPIS PRENEŠEN ×9, NEZAKONSKI ×5, EMŠO 30/28, NARE 4. čisto leto; prvi korekcijski EMŠO PAR; prva nemška marg; 2 preimenovanji; CIGANI ×5 tema.
+
+---
+Task ID: 86-b
+Agent: Z.ai Code (glavni)
+Task: push GitLab+GitHub OK (80dc73a) + Vercel produkcija P113 — GitHub App deploy FAILED (collaboration/SAML-scope, 21:01Z; P112 je bil 17:52Z še SUCCESS!) + sprožilne akcije
+
+Work Log:
+- git push origin main → 3b79292..80dc73a ✓; git push github main → 3b79292..80dc73a ✓ (ls-remote 403 = trenoten; ponovno OK).
+- Vercel produkcija (griblje-museum.vercel.app) = ŠE VEDNO P112 (113/113); commit status 80dc73a: **Vercel → failure** (target = troubleshoot-project-collaboration); 3b79292/5f9975e = success (17:52/17:44Z).
+- Stari token vcp_4gHSy…: GET /v6/deployments → **»Not authorized: Trying to access resource under scope »robertpezdirc12-designs-projects«. You must re-authenticate to this scope … saml:true«**; /v2/user → »User not found« — token ni več v team scope-u (razlika od Task 85-b!).
+- ukrep: prazen trigger commit (ta vpis) → push github → če znova FAILED = sistemsko (potreben človeški re-auth Vercel team/GitHub App ali nov žeton v team scope-u); rezervna ročna pot deploy.yml mrtva (isti token).
