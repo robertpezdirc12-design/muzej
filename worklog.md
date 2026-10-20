@@ -5258,3 +5258,19 @@ Stage Summary:
 - **P114 ZAKLJUČEN = KRSTNA LINIJA issue #18 KONČANA: knjiga 04105 dokazana do konca (1886–1919, 34 let, kumulativ 614 vpisov / 88 hiš); vitals 528; bloki 04105 502; QA 115/115; verifier 37/37 PASS live.**
 - 1919 ključno: 11 vpisov / 11 hiš Griblje, NARE 10/11 (h81 NOVA — čisto leto se konča pri 4!); prilepen dopis ordinariata (s325, Jakob Košec 14.4.1917); bela listina = legitimizacijsko pismo Šponiček Fiume 1915; EMŠO kampanja 32 = REKORD; 4 razveljavitve = REKORD; 5 duhovnikov = REKORD; VPIS PRENEŠEN ×19 = REKORD; l78 † 30.1.1945 bombardiranje = ZADNJI VPIS KNJIGE; s326 platnica »Podzemelj R 1886–1919«.
 - **P115 LEAD: krstna linija KONČANA — naslednja poročne/smrtne knjige 04xxx župnije Podzemelj.**
+
+---
+Task ID: 87-b
+Agent: Z.ai Code (glavni)
+Task: push GitLab+GitHub OK (b691b56) + Vercel produkcija P114 — App deploy ZNOVA FAILED (isti auth blok kot 86-b/86-c); produkcija ostaja P112 113/113
+
+Work Log:
+- git push origin main → 074d25a..b691b56 ✓; git push github main → 074d25a..b691b56 ✓; ls-remote potrjuje **lokalni == GitLab == GitHub == b691b56 (P114 ZAKLJUČEN)**.
+- Vercel produkcija: GitHub commit status b691b56 → **Vercel → failure** (Adw71FF5SGCF6) = ISTA blokada kot 80dc73a/cc7dd8d (troubleshoot-project-collaboration / SAML-scope, človeški re-auth potreben).
+- Rezervna API pot ZNOVA preverjena: GET /v2/user s starim žetonom → **{"error":"not_found","message":"User not found."}** = žeton še vedno izven team scope-a.
+- Produkcija griblje-museum.vercel.app: **GET /api/qa → 113/113** (qa-p114 ne obstaja v produkciji = produkcija je še vedno build P112).
+- LOKALNO vse zeleno: **runQA 115/115**, verifier p114 **37/37 PASS live**, lint 0, dev server 200.
+
+Stage Summary:
+- **P114 TROJSINHRONIZIRAN (b691b56 GitLab == GitHub == lokalni); produkcija = ŠE VEDNO P112 (113/113) — EDINA odprta točka ostaja Vercel team auth (človeški re-auth GitHub App/team SAML ALI nov žeton s scope-om »robertpezdirc12-designs-projects«); ko blokade ne bo, bo NASLEDNJI push sprožil produkcijo 115/115 samodejno.**
+- KRSTNA LINIJA issue #18 (1886–1919) DOKAZANA DO KONCA — P115 lead: poročne/smrtne knjige 04xxx.
