@@ -5312,3 +5312,17 @@ Work Log:
 Stage Summary:
 - **P115 FAZA 2 DOKAZANA: 24/24 vpisov obojestransko + P80 popravki ×11 (3 hišne številke + vas Priložje + 6 priimkov + 1 Mündel-timeline) + 2 sestrska dvojna poroka + duhovnik Dovgan dokumentiran (9/24, 16 praznih) — poročna linija 04455 odprta z najgostejšo forenziko doslej.**
 - QA **116/116** (qa-p115 = 116.) + verifier **45/45** + vitals **528 nespremenjen** + bloki 04455 = 11; P116 LEAD: **poročna 1887** (glava Pag. 65 = s66; sidra h71 Straus + h15 Jaklič × Brinec že pinned).
+
+---
+Task ID: 89-b
+Agent: Z.ai Code (glavni)
+Task: P115 push GitLab+GitHub + trojsinhronizacija + Vercel produkcija kontrola + README Zrcaljenje svežina
+
+Work Log:
+- Commit **30230ba** (P115 faza 2: 11 datotek — parish.ts 8 blokov + qa-parish qa-p115 + qa-p81 sidra + pack/dokaz/runtime 1:1 + p80/p81 skripti + evidence JSON + verifier + notes + README + worklog).
+- Push: GitLab origin `43796ef..30230ba` ✓ + GitHub `43796ef..30230ba` ✓ → **trojsinhronizacija POTRJENA** (lokalni == ls-remote origin == ls-remote github == 30230ba2a51a8410a6de7f152df74554d270bb18).
+- Vercel produkcija: GitHub commit status 30230ba → **state: failure (Vercel)** = isti SAML/team auth blok kot od Task 86-b (ponovno potrjen 2026-10-20); API žeton mrtev (/v2/user → User not found, Task 87-b); **produkcija ostaja P112 113/113** — ko bo človeški re-auth, naslednji push samodejno gradi 116/116.
+- README »Zrcaljenje (aktualno)« posodobljen (30230ba + failure dokaz + obljuba 116/116 po re-authu).
+
+Stage Summary:
+- **P115 TROJSINHRONIZIRAN (30230ba); lokalno 116/116 + verifier 45/45 + p80/p81 --check PASS; Vercel blokada človeška (nezmanjana) — nič nove kode ne more odpreti produkcije.**
