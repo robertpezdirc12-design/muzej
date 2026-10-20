@@ -5459,3 +5459,17 @@ Stage Summary:
 - **P119 DOKAZAN: poročna 04455 leto 1890 = 16/16 vpisov obojestransko (največje leto linije!) + dvojni poročni vikend 23–24.11. ×4 + prekrižana poroka HVALJ × HARASIMIČ + 2 dispensaciji (№ 1840 + № 2619) + Zugelj bratski par + nevesta 45 (rekord) + Bulovec 4. duhovnik + h53 NOVA HIŠA — poročna linija 5 let globoko (1886–1890).**
 - **KRITIČEN BUG REŠEN: 17 dupliciranih blokov (tail-paste 21 097 B) kirurško odstranjenih — HOUSE_VITALS 565 → 548, 0 duplikatov.**
 - QA **120/120** (qa-p119 = 120.) + verifier **70/70** + vitals **548** + bloki 04455 = **31** + p80 hiše **46** + PT luknja **10** (p80 skripta) / 7 (qa-p80 seznam); P120 LEAD: **poročna 1891** (s80 = Pag. 79, v1–4 orisani — pričakovane Muc-krstne!).
+
+---
+Task ID: 94-b
+Agent: Z.ai Code (glavni)
+Task: P119 push GitLab+GitHub + trojsinhronizacija + Vercel produkcija kontrola + README Zrcaljenje svežina
+
+Work Log:
+- Commit **7eda9a4** (P119: 13 datotek — parish.ts 4 novi bloki 1890 + KRITIČNO brisanje 17 dupliciranih blokov 1915/1916 (tail-paste 21 097 B!) + qa-parish qa-p119 + sinhr. regresij (p80 sidra 24 + PT-luknja 7 + p86/p88/p92 izjeme + p80 skripta gap 10/hiše 46 + p118 vzorec + I10 ×4) + evidence JSON + verifier p119 + notes + README + worklog).
+- Push: GitLab origin `dc705c3..7eda9a4` ✓ + GitHub `dc705c3..7eda9a4` ✓ → **trojsinhronizacija POTRJENA** (lokalni == GitLab ls-remote == GitHub ls-remote == 7eda9a418fa8ffc3f8fdd55e127523f6fa079874; **GitLab ls-remote read-API tokrat DELOVAL — 1:1 na obeh**, brez prejšnje 403 motnje).
+- Vercel produkcija: GitHub commit status 7eda9a4 → **state: failure »Deployment was blocked« (Vercel)** = ISTI SAML/team auth blok kot Task 86-b/87-b/89-b/90-b/92-b/93-b (6. potrditev, 2026-10-20T20:08Z); produkcija griblje-museum.vercel.app = HTTP 200 (STARI P112 build 113/113); **ko bo človeški re-auth, naslednji push samodejno gradi 120/120**.
+- README »Zrcaljenje (aktualno)« posodobljen (7eda9a4 + ls-remote 1:1 na obeh + 6. potrditev blokade + obljuba 120/120 po re-authu).
+
+Stage Summary:
+- **P119 TROJSINHRONIZIRAN (7eda9a4); lokalno 120/120 + verifier p119 70/70 + p80/p79/p81/p83/p114/p115/p116/p117/p118 --check PASS; Vercel blokada človeška (6. potrditev) — produkcija ostaja P112 dokler re-auth.**
