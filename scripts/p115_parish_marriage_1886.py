@@ -57,8 +57,8 @@ EXPECTED_WIDOWS = 4
 EXPECTED_DISPENSATIONS = 6
 EXPECTED_SIGNED = 9
 EXPECTED_UNSIGNED = 15
-EXPECTED_VITALS = 528           # nespremenjen (poročni bloki od P80)
-BLOCKS_04455 = 11               # 7 okvir 1886 + sidra 1882/1885/1887×2
+EXPECTED_VITALS = 533           # P116: 528 + 5 novih poročnih blokov (h23/h37/h69/h3/h10)
+BLOCKS_04455 = 16               # 7 okvir 1886 + sidra 1882/1885/1887×2 (P115) + 5 blokov 1887 (P116: h23/h37/h69/h3/h10)
 DATE_COUNTS = {"januar": 2, "februar": 10, "marec": 3, "april": 0, "maj": 1,
                "junij": 1, "julij": 0, "avgust": 2, "september": 0, "oktober": 0,
                "november": 5, "december": 0}
@@ -168,8 +168,8 @@ def main() -> int:
     check("I5b dispensacije=6", st.get("dispensations") == EXPECTED_DISPENSATIONS, str(st.get("dispensations")))
     check("I5c Dovgan podpisi=9", st.get("priestSigned") == EXPECTED_SIGNED, str(st.get("priestSigned")))
     check("I5d brez podpisa=15", st.get("priestUnsigned") == EXPECTED_UNSIGNED, str(st.get("priestUnsigned")))
-    check("I5e vitals=528", st.get("vitals") == EXPECTED_VITALS, str(st.get("vitals")))
-    check("I5f bloki 04455=11", st.get("blocks04455") == BLOCKS_04455, str(st.get("blocks04455")))
+    check("I5e vitals=528 (P115 dokaz; P116 533)", st.get("vitals") == 528, str(st.get("vitals")))
+    check("I5f bloki 04455=11 (P115 dokaz; P116 +5 → 16)", st.get("blocks04455") == 11, str(st.get("blocks04455")))
     check("I5g popravki P80=8", st.get("p80BlocksCorrected") == 8, str(st.get("p80BlocksCorrected")))
 
     # ---------- I6: anomalije A1–A15 ----------
@@ -191,12 +191,12 @@ def main() -> int:
     # ---------- I8: parish.ts bloki 04455 ----------
     ts = open(PARISH_TS).read()
     blocks_m = re.findall(r'houseNo:\s*"([^"]*)",\s*bookSignature:\s*"04455",\s*year:\s*(\d{4}),\s*scan:\s*(\d+)', ts)
-    check("I8 bloki 04455 = 11", len(blocks_m) == BLOCKS_04455, str(len(blocks_m)))
+    check("I8 bloki 04455 = 16 (P116 +5)", len(blocks_m) == BLOCKS_04455, str(len(blocks_m)))
     h1886 = sorted((h for h, y, _ in blocks_m if y == "1886"), key=int)
     check("I8b hiše 1886 = [16,25,31,56,60,65,71]", ",".join(h1886) == GRIBLJE_HOUSES_TS, ",".join(h1886))
     anchors = [(h, y, s) for h, y, s in blocks_m if y != "1886"]
-    check("I8c sidra 4 (1882 sk50 · 1885 · 1887×2)",
-          len(anchors) == 4 and sorted((y for _, y, _ in anchors)) == ["1882", "1885", "1887", "1887"]
+    check("I8c sidra 9 (1882 sk50 · 1885 · 1887×7 — P116 +5 blokov 1887)",
+          len(anchors) == 9 and sorted((y for _, y, _ in anchors)) == ["1882", "1885"] + ["1887"] * 7
           and any(s == "50" for _, y, s in anchors if y == "1882"),
           str(anchors))
     # pini novih brani
@@ -219,7 +219,7 @@ def main() -> int:
     check("I9 qa-p115", '"qa-p115-parish-marriage-1886"' in qa)
     check("I9b qa-p115 hiše 1886", "16,25,31,56,60,65,71" in qa)
     # vitals 528 regresijska zaščita v qa-p115
-    check("I9c vitals 528 zaščita", "HOUSE_VITALS.length !== 528" in qa[qa.index("const p115Marr"):])
+    check("I9c vitals 533 zaščita (P116)", "HOUSE_VITALS.length !== 533" in qa[qa.index("const p115Marr"):])
 
     # ---------- I10: README + notes ----------
     rd = open("README.md").read()

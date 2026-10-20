@@ -276,7 +276,7 @@ CURATED = {
     "15": [{"s": "Muc", "role": "smrt", "book": "04894", "year": 1886, "anchor": "Nikolaj Muc [~]", "src": "parish"},
            {"s": "Filak", "role": "poroka-nevesta", "book": "04455", "year": 1886, "anchor": "nevesta Ana Filak, Lavřin", "src": "parish", "anchorHouse": "16"},
            {"s": "Gregorič", "role": "poroka-starši-neveste", "book": "04455", "year": 1886, "anchor": "Anna née Gregorič ✓", "src": "parish", "anchorHouse": "16"},
-           {"s": "Šambie", "role": "poroka-ženin", "book": "04455", "year": 1887, "anchor": "ženin Johann Šambie [~]", "src": "parish"}],
+           {"s": "Fablić", "role": "poroka-ženin", "book": "04455", "year": 1887, "anchor": "ženin Johann FABLIĆ, Leinweber, 23", "src": "parish"}],
     "16": [{"s": "Plebučar", "role": "rojstvo-oče", "book": "04105", "year": 1886, "anchor": "Matija Plebučar? [~]", "src": "parish"},
            {"s": "Meh", "role": "rojstvo-mati", "book": "04105", "year": 1886, "anchor": "Katarina rojena Meh", "src": "parish"},
            {"s": "Šilah", "role": "smrt", "book": "04894", "year": 1886, "anchor": "Marija Šilah [~]", "src": "parish"}],
@@ -284,7 +284,7 @@ CURATED = {
            {"s": "Stubler", "role": "poroka-nevesta", "book": "04455", "year": 1885, "anchor": "Marija Stubler [~], 21, GRIBLJE 25", "src": "p80", "anchorHouse": "13"}],
     "29": [{"s": "Mileh", "role": "smrt", "book": "04894", "year": 1886, "anchor": "Janez Mileh [~]", "src": "parish"},
            {"s": "Brinec", "role": "poroka-nevesta", "book": "04455", "year": 1887, "anchor": "Maria Brinec", "src": "parish"},
-           {"s": "Miletch", "role": "poroka-starši-neveste", "book": "04455", "year": 1887, "anchor": "roj. Miletch", "src": "parish"}],
+           {"s": "Milek", "role": "poroka-starši-neveste", "book": "04455", "year": 1887, "anchor": "mati neveste roj. Milek [~] = povezava z to družino", "src": "parish"}],
     "31": [{"s": "Marh", "role": "smrt", "book": "04894", "year": 1886, "anchor": "Katarina Marh [~]", "src": "parish"},
            {"s": "Pavie", "role": "poroka-ženin", "book": "04455", "year": 1886, "anchor": "ženin Martin Papič", "src": "parish"}],
     "36": [{"s": "Šimec", "role": "rojstvo-mati", "book": "04105", "year": 1886, "anchor": "Barbara Šimec", "src": "parish"},
@@ -315,8 +315,8 @@ CURATED = {
            {"s": "Križan", "role": "smrt-pripis", "book": "04894", "year": 1886, "anchor": "v drugo omožena Križan", "src": "parish"},
            {"s": "Straus", "role": "poroka-nevesta", "book": "04455", "year": 1886, "anchor": "Maria Straus, Lavřin + MÜNDEL (varovanka!), 34, GRIBLJE 71", "src": "parish"},
            {"s": "Stubler", "role": "poroka-starši-neveste", "book": "04455", "year": 1886, "anchor": "Anna née Stubler ✓", "src": "parish"},
-           {"s": "Straus", "role": "poroka-ženin", "book": "04455", "year": 1887, "anchor": "ženin Mathias Straus [~]", "src": "parish"},
-           {"s": "Dragoš", "role": "poroka-starši-ženina", "book": "04455", "year": 1887, "anchor": "Katharina née Dragoš [~]", "src": "parish"}],
+           {"s": "Straus", "role": "poroka-ženin", "book": "04455", "year": 1887, "anchor": "ženin Mathias Straus, Leinweber, 24", "src": "parish"},
+           {"s": "Dragoš", "role": "poroka-starši-ženina", "book": "04455", "year": 1887, "anchor": "Katharina née Dragoš ✓", "src": "parish"}],
     "74": [{"s": "Hambeč", "role": "smrt", "book": "04894", "year": 1886, "anchor": "Jožef Hambeč [~]", "src": "parish"}],
     # P82 RE-READ KOREKCIJA: hiša »75« (P79 sidro) je pravzaprav 78 — izrez
     # Kurrent: dve zaprti zanki = 8 (vzorec forenzike P80 3-vs-5); sidra
@@ -621,6 +621,19 @@ def fill_narrative(pack):
         "per-hišne kronološke verige: 1825 PT/PUA lastnik → matrike po letih → 20. st. pripisi (tri-virske hiše 13/36/71 najmočnejši kandidati)",
         "poln prepis po letih = lastniška prioriteta (izven vzorca)",
     ]
+    pack["p115ReReadNote"] = (
+        "P115 (faza 2, 2026-10-20): 13 sidrov posodobljenih na P115 re-read branja "
+        "(anchor stringi + anchorHouse preusmeritve 15→16, 36→56, 63→65); polja surname "
+        "NESPREMENJENA = zamrznjen P81 cenzus snapshot"
+    )
+    pack["p116ReReadNote"] = (
+        "P116 (faza 2, 2026-10-20): 4 sidri P80/poročna 1887 posodobljena na P116 re-read branja — "
+        "h15 ženin »Johann Šambie [~]« → Johann FABLIĆ (P80 popravek; BRATA Fablić, vpisa 1+4/1887), "
+        "h29 »roj. Miletch« → mati neveste roj. Milek [~] (povezava z umrlimi otroki h29), "
+        "h71 »ženin Mathias Straus [~]« → potrjeno brez dvoma (vpis 3/1887), "
+        "h71 »Katharina née Dragoš [~]« → née Dragoš ✓ (potrjeno); sidra iz parish.ts HOUSE_VITALS "
+        "(poročna 04455 1887 bloki h15/h23/h71)"
+    )
     return pack
 
 

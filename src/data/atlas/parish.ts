@@ -92,8 +92,9 @@ export const PARISH_BOOKS: ParishBook[] = [
  * treh knjigah). P80 RE-READ: hiša 56 mati = Perdinec (ne »Podžire«)
  * — poročna 04455 sk. 62 vpis 4/1886, isti par. Dramatika vzorca: hiša
  * 29 — trije otroci (Mileh [~]) umrli v 4 dneh oktobra 1886, isti vzrok
- * »Kolera i. morbas« [~] (epidemija; februar 1887 se na hiši 29 poroki
- * Maria Brinec, katere mati je roj. Miletch [~]).
+ * »Kolera i. morbas« [~] (epidemija; feb. 1887 se poroki Maria Brinec —
+ * P116 re-read: iz GRIBLJE 23, ne 29; povezava z h29 ostaja pri materi
+ * roj. Milek [~]).
  * Dokaz: research/issue17/parish-md-transcription.json; verifikator:
  * scripts/p80_parish_md_books.py --check (I1–I10).
  * P82 (issue #18, 2026-10-16): ŠIRITEV VZORCA NA LETO 1887 — krstna 04105
@@ -396,8 +397,8 @@ export const HOUSE_VITALS: HouseVital[] = [
     year: 1886,
     scan: 5,
     page: 4,
-    whatSi: "umrla Ana Mileh [~], ½ zemlj. hči, 11 let (13. 10., pokop 15. 10.) — Kolera i. morbas [~]; TRETJI od trejeh — januarja 1887 se na hiši 29 poroki Maria Brinec, katere mati je roj. Miletch [~]",
-    whatEn: "died Ana Mileh [~], half-farmer's daughter, 11 years (Oct 13, buried Oct 15) — cholera infantum [~]; THIRD of the three — in January 1887 Maria Brinec (mother née Miletch [~]) marries from house 29",
+    whatSi: "umrla Ana Mileh [~], ½ zemlj. hči, 11 let (13. 10., pokop 15. 10.) — Kolera i. morbas [~]; TRETJI od trejeh — feb. 1887 se poroki Maria Brinec (P116 re-read: iz GRIBLJE 23, ne 29 — poročna hiša; mati neveste roj. Milek [~] = povezava z to družino)",
+    whatEn: "died Ana Mileh [~], half-farmer's daughter, 11 years (Oct 13, buried Oct 15) — cholera infantum [~]; THIRD of the three — in February 1887 Maria Brinec marries (the P116 re-read: from GRIBLJE 23, not 29 — the marriage house; the bride's née-Milek mother [~] = the link to this family)",
     status: "DOCUMENTED",
   },
   {
@@ -531,8 +532,8 @@ export const HOUSE_VITALS: HouseVital[] = [
     year: 1887,
     scan: 66,
     page: 65,
-    whatSi: "poroka (31. 1. 1887, vpis 3) — ženin Mathias Straus [~], Leinweber, 24, GRIBLJE 71 (starši: Mathias Straus + Katharina née Dragoš [~]) × Barbara Rusié [~], 21, GRIBLJE 37 (starši: Michael Rusié + Katharina née Šambiè [~]); sidro po okvirju 1886",
-    whatEn: "marriage (Jan 31, 1887, entry 3) — groom Mathias Straus [~], linen weaver, 24, GRIBLJE 71 (parents: Mathias Straus + Katharina née Dragoš [~]) × Barbara Rusié [~], 21, GRIBLJE 37 (parents: Michael Rusié + Katharina née Šambiè [~]); anchor after the 1886 frame",
+    whatSi: "poroka (31. 1. 1887, vpis 3) — ženin Mathias Straus, Leinweber, 24, GRIBLJE 71 (starši: Mathias Straus + Katharina née Dragoš ✓) × Barbara Rusić? [~], 21, GRIBLJE 37 (starši: Michael Rusić × Katharina née KAMBIČ — P116 re-read: ne »Šambiè«!); duhovnik franz Dovgan; Befünden: Ehenichtschild Griblje 31.1.1887 + »Mütterl. …«? [~]; sidro po okvirju 1886 (P116 POTRJEN 1:1); Straus-mreža h71: krst Jurij + smrt Ane vdove + Maria Mündel 21.11.1886 + Mathias 31.1. + Katharina 20.2.1887 (vpis 11!) = 5 dokazov",
+    whatEn: "marriage (Jan 31, 1887, entry 3) — groom Mathias Straus, linen weaver, 24, GRIBLJE 71 (parents: Mathias Straus + Katharina née Dragoš ✓) × Barbara Rusić? [~], 21, GRIBLJE 37 (parents: Michael Rusić × Katharina née KAMBIČ — the P116 re-read: not »Šambiè«!); priest franz Dovgan; Befunden: Ehenichtschild Griblje Jan 31, 1887 + »Mütterl. …«? [~]; anchor after the 1886 frame (P116 CONFIRMED 1:1); the Straus network h71: the Jurij baptism + the widow Ana's death + Maria Mündel Nov 21, 1886 + Mathias Jan 31 + Katharina Feb 20, 1887 (entry 11!) = 5 pieces of evidence",
     status: "DOCUMENTED",
   },
   {
@@ -541,8 +542,58 @@ export const HOUSE_VITALS: HouseVital[] = [
     year: 1887,
     scan: 66,
     page: 65,
-    whatSi: "poroka (6. 2. 1887, vpis 4) — ženin Johann Šambie [~], Leinweber, 23, GRIBLJE 15 × Maria Brinec [~], 26, GRIBLJE 29 (starši: Mathias Brinec + Maria née Miletch [~] — družina umrlih otrok hiše 29); sidro",
-    whatEn: "marriage (Feb 6, 1887, entry 4) — groom Johann Šambie [~], linen weaver, 23, GRIBLJE 15 × Maria Brinec [~], 26, GRIBLJE 29 (parents: Mathias Brinec + Maria née Miletch [~] — the family of the house-29 dead children); anchor",
+    whatSi: "poroka (6. 2. 1887, vpis 4) — ženin Johann FABLIĆ, Leinweber, 23, GRIBLJE 15 (starši: Nikolaus Fablić × Maria geb. Kambič — P116 re-read: ne »Šambie«! = BRAT Mathiasa Fablića vpisa 1/1887, Boršt 44!) × Maria Brinec, 26, GRIBLJE 23 (P116 re-read: ne »29«!; starši: Mathias Brinec + Maria geb. Milek — povezava z umrlimi otroki h29 ostaja pri materi roj. Milek); duhovnik franz Dovgan; Befünden: Ehenichtschild Griblje 6.2. + Großjährigkeits-Schein k.k. Bez.-Ger. 31.1.; sidro (P116)",
+    whatEn: "marriage (Feb 6, 1887, entry 4) — groom Johann FABLIĆ, linen weaver, 23, GRIBLJE 15 (parents: Nikolaus Fablić × Maria née Kambič — the P116 re-read: not »Šambie«! = the BROTHER of Mathias Fablić, entry 1/1887, Boršt 44!) × Maria Brinec, 26, GRIBLJE 23 (the P116 re-read: not »29«!; parents: Mathias Brinec + Maria née Milek — the link to the house-29 dead children stays with the née-Milek mother); priest franz Dovgan; Befunden: Ehenichtschild Griblje Feb 6 + Großjährigkeits-Schein k.k. district court Jan 31; anchor (P116)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "23",
+    bookSignature: "04455",
+    year: 1887,
+    scan: 66,
+    page: 65,
+    whatSi: "poroka (6. 2. 1887, vpis 4) — NEVESTA Maria Brinec, 26, GRIBLJE 23 (P116 re-read: NOVA hiša — P80 branje »29« = popravljen na 23; max zoom: jasno »23«; starši: Mathias Brinec + Maria geb. Milek) × Johann Fablić, Leinweber, 23, GRIBLJE 15; duhovnik franz Dovgan; Befstände h23 = Mathias Milek (¼ G. — dedek po materi?); povezava: mati roj. Milek = družina umrlih otrok h29 (mrliška okt. 1886); crossCheck: Michael BRINE (Brinec) iz GRIBLJE 23 poročen 30.1.1888 (glava 1888) = Brinec-družina na h23 potrjena ×2",
+    whatEn: "marriage (Feb 6, 1887, entry 4) — the BRIDE Maria Brinec, 26, GRIBLJE 23 (the P116 re-read: A NEW house — the P80 »GRIBLJE 29« corrected to 23; max zoom: clearly »23«; parents: Mathias Brinec + Maria née Milek) × Johann Fablić, linen weaver, 23, GRIBLJE 15; priest franz Dovgan; Befstände h23 = Mathias Milek (¼ G. — the maternal grandfather?); the link: the née-Milek mother = the family of the house-29 dead children (death register Oct 1886); cross-check: Michael BRINE (Brinec) from GRIBLJE 23 married Jan 30, 1888 (the 1888 header) = the Brinec family at h23 confirmed ×2",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "37",
+    bookSignature: "04455",
+    year: 1887,
+    scan: 66,
+    page: 65,
+    whatSi: "poroka (31. 1. 1887, vpis 3) — NEVESTA Barbara Rusić? [~], 21, GRIBLJE 37 (NOVA hiša; starši: Michael Rusić × Katharina née Kambič — P116 re-read: ne »Šambiè«) × Mathias Straus, Leinweber, 24, GRIBLJE 71; duhovnik franz Dovgan; status neveste = »Fraus-murd«? [~] (neprepoznana oznaka »…frau.«)",
+    whatEn: "marriage (Jan 31, 1887, entry 3) — the BRIDE Barbara Rusić? [~], 21, GRIBLJE 37 (A NEW house; parents: Michael Rusić × Katharina née Kambič — the P116 re-read: not »Šambiè«) × Mathias Straus, linen weaver, 24, GRIBLJE 71; priest franz Dovgan; the bride's status = »Fraus-murd«? [~] (an unrecognized »…frau.« label)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "69",
+    bookSignature: "04455",
+    year: 1887,
+    scan: 68,
+    page: 67,
+    whatSi: "poroka (20. 2. 1887, vpis 11) — ženin Johann Brine? [~ Brinec?], Leinweber, 22, GRIBLJE 69 (P116 re-read: NOVA hiša — max zoom jasno »69« z repkom; faza 1 »64« = NAPAKA, h64 ostaja P115 vpis 12/1886 nevesta Požek!) × Katharina Straus, 19, GRIBLJE 71 (2. Straus-poroka h71 v letu!); duhovnik franz Dovgan; Befünden: Ehenichtschild Griblje 20.2. + Großjährigkeits-Schein; datum 20. (ne 21. — faza 1 popravka)",
+    whatEn: "marriage (Feb 20, 1887, entry 11) — groom Johann Brine? [~ Brinec?], linen weaver, 22, GRIBLJE 69 (the P116 re-read: A NEW house — the max zoom clearly »69« with a tail; the faza-1 »64« = WRONG, h64 remains the P115 entry 12/1886 bride Požek!) × Katharina Straus, 19, GRIBLJE 71 (the 2nd Straus marriage at h71 in the year!); priest franz Dovgan; Befunden: Ehenichtschild Griblje Feb 20 + Großjährigkeits-Schein; the date 20 (not 21 — the faza-1 correction)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "3",
+    bookSignature: "04455",
+    year: 1887,
+    scan: 70,
+    page: 69,
+    whatSi: "poroka (4. 9. 1887, vpis 20) — ženin Peter Križan? [Vrižan? ~], ¼ Gütler, 40 (najstarejši Griblje-ženin 1887!), GRIBLJE 3 (NOVA hiša) × Catharina Križe, ¼ Gütlerstochter, 27, GRIBLJE 10 (NOVA hiša); duhovnik Jos. Rouy [~]; starši: Peter Križan (¼ Gübler) × Ana Deblič | Janez Hriže/Križe (½ Güblersohn) × Katharina Jaklič? [~]; Befünden: Ehenichtschild Griblje 27.8.1887 št. 16; KRIŽAN × KRIŽE = istoimenska mreža (cf. P115 Martin KRIŽAN Krasinec 9 + h36 Križan 1882!)",
+    whatEn: "marriage (Sep 4, 1887, entry 20) — groom Peter Križan? [Vrižan? ~], ¼ smallholder, 40 (the oldest Griblje groom of 1887!), GRIBLJE 3 (A NEW house) × Catharina Križe, ¼ smallholder's daughter, 27, GRIBLJE 10 (A NEW house); priest Jos. Rouy [~]; parents: Peter Križan × Ana Deblič | Janez Križe (½ smallholder's son) × Katharina Jaklič? [~]; Befunden: Ehenichtschild Griblje Aug 27, 1887 no. 16; KRIŽAN × KRIŽE = the same-root network (cf. the P115 Martin KRIŽAN Krasinec 9 + the h36 Križan 1882!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "10",
+    bookSignature: "04455",
+    year: 1887,
+    scan: 70,
+    page: 69,
+    whatSi: "poroka (4. 9. 1887, vpis 20) — NEVESTA Catharina Križe, ¼ Gütlerstochter, 27, GRIBLJE 10 (P116 re-read: NOVA hiša — faza 1 »19« = 10 popravka, max zoom čista ovalna 0) × Peter Križan? [~], ¼ Gütler, 40, GRIBLJE 3; duhovnik Jos. Rouy [~]; starši neveste: Janez Hriže/Križe (½ Güblersohn) × Katharina Jaklič? [~]; Befstände h10 = Jakob Hriže/Križe (½ Gübler)",
+    whatEn: "marriage (Sep 4, 1887, entry 20) — the BRIDE Catharina Križe, ¼ smallholder's daughter, 27, GRIBLJE 10 (the P116 re-read: A NEW house — the faza-1 »19« corrected to 10, the max zoom's clean oval 0) × Peter Križan? [~], ¼ smallholder, 40, GRIBLJE 3; priest Jos. Rouy [~]; the bride's parents: Janez Križe (½ smallholder's son) × Katharina Jaklič? [~]; Befstände h10 = Jakob Križe (½ smallholder)",
     status: "DOCUMENTED",
   },
   // ——— P82 razširitev: KRSTNA KNJIGA 04105 — polno leto 1887 (skeni 16–27 ==

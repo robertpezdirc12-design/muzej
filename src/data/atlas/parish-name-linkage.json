@@ -1844,15 +1844,22 @@
      "anchorHouse": "16"
     },
     {
-     "surname": "Šambie",
+     "surname": "Fablić",
      "role": "poroka-ženin",
      "book": "04455",
      "year": 1887,
-     "anchor": "ženin Johann Šambie [~]",
+     "anchor": "ženin Johann FABLIĆ, Leinweber, 23",
      "src": "parish"
     }
    ],
    "surnameWitnesses": [
+    {
+     "surname": "Fablić",
+     "best": null,
+     "witnesses": [],
+     "nearMisses": [],
+     "survives": false
+    },
     {
      "surname": "Filak",
      "best": 1.0,
@@ -1938,13 +1945,6 @@
     },
     {
      "surname": "Muc",
-     "best": null,
-     "witnesses": [],
-     "nearMisses": [],
-     "survives": false
-    },
-    {
-     "surname": "Šambie",
      "best": null,
      "witnesses": [],
      "nearMisses": [],
@@ -2194,11 +2194,11 @@
      "src": "parish"
     },
     {
-     "surname": "Miletch",
+     "surname": "Milek",
      "role": "poroka-starši-neveste",
      "book": "04455",
      "year": 1887,
-     "anchor": "roj. Miletch",
+     "anchor": "mati neveste roj. Milek [~] = povezava z to družino",
      "src": "parish"
     }
    ],
@@ -2297,18 +2297,39 @@
      "survives": false
     },
     {
-     "surname": "Miletch",
+     "surname": "Milek",
      "best": null,
      "witnesses": [],
      "nearMisses": [
       {
-       "src": "pua",
-       "loc": "p8r12",
-       "house": "4",
-       "name": "Dragosch Mavroslawitsch hiesig Dragosche, Gemeinde Molestitch [~]",
-       "score": 0.6,
+       "src": "atlas",
+       "loc": "lastnik-milleg",
+       "house": [
+        "34",
+        "36"
+       ],
+       "name": "Milleg Hans (Jan) [~]",
+       "score": 0.6667,
        "pass": 1,
-       "token": "molestitch"
+       "token": "milleg"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-35",
+       "house": "34",
+       "name": "Milleg Hans [~]",
+       "score": 0.6667,
+       "pass": 1,
+       "token": "milleg"
+      },
+      {
+       "src": "chain",
+       "loc": "hiša-36",
+       "house": "34 (prečrtana dvojnica)",
+       "name": "Milleg Hans [~]",
+       "score": 0.6667,
+       "pass": 1,
+       "token": "milleg"
       }
      ],
      "survives": false
@@ -3646,7 +3667,7 @@
      "role": "poroka-ženin",
      "book": "04455",
      "year": 1887,
-     "anchor": "ženin Mathias Straus [~]",
+     "anchor": "ženin Mathias Straus, Leinweber, 24",
      "src": "parish"
     },
     {
@@ -3654,7 +3675,7 @@
      "role": "poroka-starši-ženina",
      "book": "04455",
      "year": 1887,
-     "anchor": "Katharina née Dragoš [~]",
+     "anchor": "Katharina née Dragoš ✓",
      "src": "parish"
     }
    ],
@@ -4573,18 +4594,19 @@
   "nearMissSurnamesList": [
    "Gilatk",
    "Mileh",
+   "Milek",
    "Stupanič",
    "Šilah",
    "Klepec",
    "Plebučar",
    "Poddirec",
-   "Miletch",
    "Milavec",
    "Pintec",
    "Perdinec"
   ],
   "unwitnessedSurnamesList": [
    "Bohor",
+   "Fablić",
    "Gregorič",
    "Hambeč",
    "Jakobič",
@@ -4599,13 +4621,13 @@
    "Podlivc",
    "Podolivec",
    "Rambič",
-   "Šambie",
    "Šproch"
   ],
   "surnameBestScores": {
    "Bohor": 0.4,
    "Brinec": 0.8333,
    "Dragoš": 1.0,
+   "Fablić": 0.4286,
    "Filak": 1.0,
    "Filatk": 0.8333,
    "Gilatk": 0.6667,
@@ -4621,7 +4643,7 @@
    "Marh": 0.0,
    "Milavec": 0.5714,
    "Mileh": 0.6667,
-   "Miletch": 0.6,
+   "Milek": 0.6667,
    "Pavie": 0.4286,
    "Perdinec": 0.5556,
    "Pintec": 0.5714,
@@ -4636,7 +4658,6 @@
    "Strauš": 0.8571,
    "Stubler": 1.0,
    "Stupanič": 0.6667,
-   "Šambie": 0.4286,
    "Šilah": 0.6667,
    "Šimec": 1.0,
    "Šimer": 1.0,
@@ -4676,8 +4697,8 @@
   },
   {
    "id": "F7-near-miss",
-   "si": "NEAR-MISS pas [0.55, 0.72) — poročano, NE šteto: Gilatk 0.6667, Mileh 0.6667, Stupanič 0.6667, Šilah 0.6667, Klepec 0.6250, Plebučar 0.6250, Poddirec 0.6250, Miletch 0.6000, Milavec 0.5714, Pintec 0.5714, Perdinec 0.5556. Nemške Schreibung (Schimetz/Schumetz), drugače ista jedra — dokumentirano, brez pretiravanja.",
-   "en": "NEAR-MISS band [0.55, 0.72) — reported, NOT counted: Gilatk 0.6667, Mileh 0.6667, Stupanič 0.6667, Šilah 0.6667, Klepec 0.6250, Plebučar 0.6250, Poddirec 0.6250, Miletch 0.6000, Milavec 0.5714, Pintec 0.5714, Perdinec 0.5556. German spellings (Schimetz/Schumetz) of the same cores — documented, without overclaiming."
+   "si": "NEAR-MISS pas [0.55, 0.72) — poročano, NE šteto: Gilatk 0.6667, Mileh 0.6667, Milek 0.6667, Stupanič 0.6667, Šilah 0.6667, Klepec 0.6250, Plebučar 0.6250, Poddirec 0.6250, Milavec 0.5714, Pintec 0.5714, Perdinec 0.5556. Nemške Schreibung (Schimetz/Schumetz), drugače ista jedra — dokumentirano, brez pretiravanja.",
+   "en": "NEAR-MISS band [0.55, 0.72) — reported, NOT counted: Gilatk 0.6667, Mileh 0.6667, Milek 0.6667, Stupanič 0.6667, Šilah 0.6667, Klepec 0.6250, Plebučar 0.6250, Poddirec 0.6250, Milavec 0.5714, Pintec 0.5714, Perdinec 0.5556. German spellings (Schimetz/Schumetz) of the same cores — documented, without overclaiming."
   },
   {
    "id": "F8-implikacija",
@@ -4691,5 +4712,6 @@
   "per-hišne kronološke verige: 1825 PT/PUA lastnik → matrike po letih → 20. st. pripisi (tri-virske hiše 13/36/71 najmočnejši kandidati)",
   "poln prepis po letih = lastniška prioriteta (izven vzorca)"
  ],
- "p115ReReadNote": "P115 (faza 2, 2026-10-20): 13 sidrov posodobljenih na P115 re-read branja (anchor stringi + anchorHouse preusmeritve 15→16, 36→56, 63→65); polja surname NESPREMENJENA = zamrznjen P81 cenzus snapshot"
+ "p115ReReadNote": "P115 (faza 2, 2026-10-20): 13 sidrov posodobljenih na P115 re-read branja (anchor stringi + anchorHouse preusmeritve 15→16, 36→56, 63→65); polja surname NESPREMENJENA = zamrznjen P81 cenzus snapshot",
+ "p116ReReadNote": "P116 (faza 2, 2026-10-20): 4 sidri P80/poročna 1887 posodobljena na P116 re-read branja — h15 ženin »Johann Šambie [~]« → Johann FABLIĆ (P80 popravek; BRATA Fablić, vpisa 1+4/1887), h29 »roj. Miletch« → mati neveste roj. Milek [~] (povezava z umrlimi otroki h29), h71 »ženin Mathias Straus [~]« → potrjeno brez dvoma (vpis 3/1887), h71 »Katharina née Dragoš [~]« → née Dragoš ✓ (potrjeno); sidra iz parish.ts HOUSE_VITALS (poročna 04455 1887 bloki h15/h23/h71)"
 }
