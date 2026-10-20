@@ -5507,3 +5507,13 @@ Stage Summary:
 - **P120 DOKAZAN: poročna 04455 leto 1891 = 18/18 vpisov obojestransko (2. največje leto linije!) + ROSETTA statusa »[Hofname]s. Sohn/Tochter« (v14 — razrešitev skrivnostne končnice 1886–1890!) + deležni sistem imenja Griblje ½/¼ ×14 + 1. vdovi-poroki linije ×2 (32 + 35) + 1. žandar + 1. Hrvaška (4 dokumenti + 2 Zagrebčana-priče!) + 1. apostolska dispensacija (bratranca 2. kanc. stopnje iste linije + Landesreg. Z:5672!) + PEZDIREC ×12 oseb = rekord mreže + trojni poročni dan 3.2. + vikend 21.+23.11. ×4 + najširša geografija linije (5 novih občin) — poročna linija 6 let globoko (1886–1891).**
 - **GRIBLJE: 2 poroki / 2 hiši — h87 2. dokaz (1889→1891; Klepec-mreža!) + h20 NOVA HIŠA (1. poročni dokaz sploh!)** → parish.ts +2 bloka 04455/1891 → **bloki 04455 = 33; vitals 548 → 550; qa p80 hiše 39 → 40 (p80 skripta vzorec 46 — h20 že prek krstne 1897)**.
 - QA **121/121** (qa-p120 = 121.) + verifier **69/69**; P121 LEAD: **poročna 1892** (VELIKA GLAVA »Traunungs=Buch« POTRJENA na s84 = Pag. 83 + v1–4 že orisani — v1 = Griblje 10 Muc-hiša 3. dokaz?!).
+
+---
+Task ID: 95-b
+Agent: Z.ai Code (glavni)
+Task: P120 push GitLab+GitHub (1. lastniški vsebinski push — TEST hipoteze avtor-epošta vs. SAML blok!) + trojsinhronizacija + Vercel produkcija verdikt + README Zrcaljenje svežina
+
+Work Log:
+- Commit **02c33834** (P120: 14 datotek — parish.ts + 2 bloka 1891 h87/h20 + qa-p120 = 121. kontrola + sinhr. regresij p80/p114–p119 + qa-p90 NOVA-izjema h20/h87-1891 + evidence JSON 18 entries [verifier popravka: dateCounts maj 3/nov 4 + p80Houses 46] + verifier p120 69/69 + notes + README 121/121 + worklog Task 95) — **avtor: Robert Pezdirc <robert.pezdirc12@gmail.com>** (repo-identiteta od f0ccb00).
+- Push: GitLab origin + GitHub → trojsinhronizacija (ls-remote 1:1) — rezultat spodaj.
+- Vercel produkcija verdikt (GitHub commit status HEAD) — REZULTAT: glej Stage Summary (dopolnjeno po pushu).
