@@ -5392,3 +5392,16 @@ Work Log:
 Stage Summary:
 - **P117 FAZA 2 DOKAZANA: poročna 04455 leto 1888 = 20/20 vpisov obojestransko + duhovnik Rauy provisor ×20 + v9 najbogatejši Befunden (6 dokumentov + dispensacija) + sestri Cernič + brata Brinec + Straus-veja h32 + Kottlin-priča + faza-1 popravki ×11 — poročna linija 3 leta globoko.**
 - QA **118/118** (qa-p117 = 118.) + verifier **57/57** + vitals **537** + bloki 04455 = **20**; P118 LEAD: **poročna 1889** (s75 brez velike glave [~]; vpisi 1–10 orisani; h30 NOVA ženin 60!).
+
+---
+Task ID: 92-b
+Agent: Z.ai Code (glavni)
+Task: P117 push GitLab+GitHub + trojsinhronizacija + Vercel produkcija kontrola
+
+Work Log:
+- Commit **c33e192** (P117 faza 2: 11 datotek — parish.ts 4 novi bloki + h23 popravek + qa-parish qa-p117 + sinhr. p80/p88/p114/p115/p116 + p116 push-call sintaksa + evidence JSON + verifier + notes + README + worklog).
+- Push: GitLab origin `3f9b040..c33e192` ✓ + GitHub `3f9b040..c33e192` ✓ → **trojsinhronizacija POTRJENA** (lokalni == GitHub ls-remote == c33e192485c2b68e363cfd15ed81fa7f51cd1032; GitLab ls-remote 403 = trenotna motnja read-API, push dokazan s push-outputom — kot Task 87-b vzorec).
+- Vercel produkcija: GitHub commit status c33e192 → **state: failure »Deployment was blocked« (Vercel)** = ISTI SAML/team auth blok kot Task 86-b/87-b/89-b/90-b (4. potrditev 2026-10-21); produkcija griblje-museum.vercel.app = HTTP 200 (STARI P112 build 113/113); **ko bo človeški re-auth, naslednji push samodejno gradi 118/118**.
+
+Stage Summary:
+- **P117 TROJSINHRONIZIRAN (c33e192); lokalno 118/118 + verifier p117 57/57 + p80/p79/p81/p83/p114/p115/p116 --check PASS; Vercel blokada človeška (4. potrditev) — produkcija ostaja P112 dokler re-auth.**
