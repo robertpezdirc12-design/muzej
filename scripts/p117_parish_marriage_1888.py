@@ -68,7 +68,7 @@ GRIBLJE_MARRIAGES = 4
 GRIBLJE_HOUSES_TS = "23,32,33,64"   # hiše z 1888 bloki v parish.ts
 EXPECTED_VITALS = 537           # P117 dokaz lastna kumulativa (533 + 4 bloki); trenutna = 544 (P118)
 BLOCKS_04455 = 20               # P117 dokaz lastna kumulativa
-BLOCKS_04455_TS = 27            # parish.ts zdaj = 27 (P118 +7 blokov 1889)
+BLOCKS_04455_TS = 31            # parish.ts zdaj = 31 (P118 +7 blokov 1889 + P119 +4 blokov 1890)
 DATE_COUNTS = {"januar": 2, "februar": 3, "marec": 0, "april": 1, "maj": 2,
                "junij": 1, "julij": 1, "avgust": 2, "september": 1, "oktober": 2,
                "november": 5, "december": 0}
@@ -266,14 +266,14 @@ def main() -> int:
     # ---------- I9: qa-parish ----------
     qa = open(QA_TS).read()
     check("I9 qa-p117", '"qa-p117-parish-marriage-1888"' in qa)
-    check("I9b qa-p116 bloki 27", "poročni bloki (04455) ≠ 27" in qa)
-    check("I9c p80 bloki 27", "poročni vpisi (04455) ≠ 27" in qa)
+    check("I9b qa-p116 bloki 31", "poročni bloki (04455) ≠ 31" in qa)
+    check("I9c p80 bloki 31", "poročni vpisi (04455) ≠ 31" in qa)
     # vitals 544 regresijska zaščita v qa-p117
-    check("I9d vitals 544 zaščita", "HOUSE_VITALS.length !== 544" in qa[qa.index("const p117Marr"):] if "const p117Marr" in qa else False)
+    check("I9d vitals 548 zaščita (P119)", "HOUSE_VITALS.length !== 548" in qa[qa.index("const p117Marr"):] if "const p117Marr" in qa else False)
 
     # ---------- I10: README + notes ----------
     rd = open("README.md").read()
-    check("I10 README po P117", "P117" in rd and ("118/118" in rd or "po P117" in rd))
+    check("I10 README po P117", "P117" in rd and ("120/120" in rd or "po P119" in rd))
     nt = open("research/issue17/parish-marriage-1888-notes.md").read()
     check("I10b notes faza 2", "FAZA 2" in nt and "BRINEC" in nt.upper())
 

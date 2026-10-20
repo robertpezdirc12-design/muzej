@@ -710,6 +710,71 @@ export const HOUSE_VITALS: HouseVital[] = [
     whatEn: "marriage (Oct 14, 1889, entry 8) — the BRIDE Margareth PERDINEC, half smallholder's daughter, 23, GRIBLJE 87 (the 1st marriage evidence of h87 — THE HIGHEST house of the marriage line!; the baptism register 04105 already ×3; parents: MARCUS Perdinec, ⅓ smallholder [a new fraction], × Margareth Klejpec) × Johann Milek, half smallholder, 60, GRIBLJE 30; priest Ambrosij Gliha coop. [~]; Befunden ×3 (the announcement no. 26 + the court Genehm. Z: 8062); PERDINEC ×3 in 1889 — the year's biggest network!",
     status: "DOCUMENTED",
   },
+  // ——— P119 razširitev: POROČNA KNJIGA 04455 — polno leto 1890 (skeni 77–79 ==
+  // strani 76–78; velika glava »Traunungs=Buch« na Pag. 76; 16 vpisov =
+  // NAJVEČJE LETO LINIJE! 1886:7 → 1887:21 → 1888:20 → 1889:10 → 1890:16) —
+  // vpisi z Griblji (3 poroke / 4 hiše: h91+h10 v1, h53 v6 NOVA, h61 v15):
+  // h91 2. familia (krstna 1887 Novak/Kure!), h10 2. poročni dokaz (1887 v20),
+  // h53 = NOVA hiša (1. dokaz sploh!), h61 2. familia (krstna 1887 Anton Muc —
+  // anomalija A11 Muc-vs-Požek!); NOVELE: dvojni poročni vikend 23–24.11. ×4
+  // (v13–v16!) + PREKRIŽANA POROKA HVALJ × HARASIMIČ (v13↔v16) + 2
+  // sorodstveni dispensaciji (v11 3. st. bratranca Ord. Laibach № 1840 + v14
+  // 4. st. № 2619!) + Zugelj bratski par (v10+v11 Dobravice 11, isti starši!)
+  // + nevesta 45 (v5 Ana Agnič = rekord linije!) + simetrija 41=41 (v4) +
+  // lomek 19¾ (v7) + Inwohnerin-nevesta (v3) + Vormund-v-očetovem-stolpcu
+  // (v3) + Kürschner-poklic (v5) + Wirt-priča (v10) + ¾ Gütl (v14) + 4.
+  // duhovnik MICHAEL BULOVEC pro t. deleg. Semič (v4!) + Ordinariat Laibach
+  // številke ×3 (Z:132/№ 1840/№ 2619) + mladoletnost 6/16 = 37.5% (edino
+  // mütterl. soglasje v2!) + zgłasnice 16/16 (Podzemelj ×8 + Gradac ×4 +
+  // Griblje ×4; Griblje 1→16→36→39 + Gradac 11→16 časovno 1:1!) + Metlika
+  // ×2 (Mößling 22+24!) + Pf. Borovnica migracija (v9 rojen Zavrh 41!);
+  // mreže: PERDINEC/PEGDIREC ×8 + MARENTIČ ×5 + ŠURAJEVČIČ ×5 + ZUGELJ ×6 +
+  // MUC ×5 + BRINEC ×4 + POŽEK ×5 + TOME ×5 + HRIŽAN ×5 + JAKŠA ×4 + STRAUS
+  // ×4; faza-1 oris popravki ×12 (v13 »Haaspić/Wolf« → Cerkvišče 9/Hvalj! +
+  // v16 »Nov 27/Kokoljič« → Nov 24/Harasimič!); glava 1891 = Pag. 79 = s80
+  // (v1–4 orisani) = P120 LEAD. Dokaz: research/issue17/parish-marriage-
+  // 1890.json; verifikator: scripts/p119_parish_marriage_1890.py --check
+  // (I1–I11).
+  {
+    houseNo: "91",
+    bookSignature: "04455",
+    year: 1890,
+    scan: 77,
+    page: 76,
+    whatSi: "poroka (27. 1. 1890, vpis 1) — ženin Johann MUC, ¼ Gütlar(s)sohn? [~] (+ »und Vgornjed?« [~]), 23, GRIBLJE 91 (2. familia v hiši po krstni 1887 Alojzija = Janez Novak × Ana Kure!; faza-1 oris »Nuc« = popravek → MUC po očetu Nicolaus Muc!; MUC-mreža: Janez Muc bajtar h61 + †1886 Nikolaj + v2 mati Katharina!) × Anna KURE, ¼ Gütl.Tochter und Magd (= »hči in dekla« — Kurrent »Wayd« = Magd, cf. P118 ×2!), 23, GRIBLJE 10 (2. poročni dokaz h10 po 1887 v20 Catharina Križe!; KURE ×3: nevesta + oče Marcus + krstna mati Ana Kure!); priče: Math. Japplič? [~] + Nicol. Zeliško? [~] (¼ Gribljah); duhovnik Jos. Rauy; Befünden: traut. zglasnica občine Griblje 11/1. 1890 st: 1 + [Grofsjäftig?-Knitt? ~] ×2 sodna ddo 19. + 22.1.1890 (Bez. Ger. Černomelj, f. Braut + f. Bräutigam!)",
+    whatEn: "marriage (Jan 27, 1890, entry 1) — groom Johann MUC, quarter smallholder's son? [~] (+ »und Vgornjed?« [~]), 23, GRIBLJE 91 (the 2nd family in the house after the 1887 baptism of Alojzija = Janez Novak × Ana Kure!; the faza-1 outline »Nuc« = a correction → MUC after the father Nicolaus Muc!; the MUC network: Janez Muc cottager h61 + †1886 Nikolaj + the v2 bride's mother Katharina!) × Anna KURE, ¼ smallholder's daughter and MAID (Kurrent »Wayd« = Magd, cf. P118 ×2!), 23, GRIBLJE 10 (the 2nd marriage evidence of h10 after 1887 v20 Catharina Križe!; the KURE network ×3: the bride + father Marcus + the baptism mother Ana Kure!); witnesses: Math. Japplič? [~] + Nicol. Zeliško? [~] (¼ Gribljah); priest Jos. Rauy; Befunden: the traut. announcement of the Griblje commune Jan 11, 1890 no. 1 + [Grofsjäftig?-Knitt? ~] ×2 court docs ddo Jan 19 + 22, 1890 (Bez. Ger. Černomelj, for the bride + for the groom!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "10",
+    bookSignature: "04455",
+    year: 1890,
+    scan: 77,
+    page: 76,
+    whatSi: "poroka (27. 1. 1890, vpis 1) — NEVESTA Anna KURE, ¼ Gütl.Tochter und Magd, 23, GRIBLJE 10 (2. poročni dokaz h10 po 1887 v20!; oče Marcus Kure ¼ × Anna Špala) × Johann Muc, ¼ Gütlar(s)sohn?, 23, GRIBLJE 91; duhovnik Jos. Rauy; Befünden: zglasnica Griblje 11/1. 1890 st: 1 + ×2 sodna Bez. Ger. Černomelj 19./22.1.; odprtje leta 1890 pod veliko glavo Traunungs=Buch (5. potrditev Pag. == sken − 1)",
+    whatEn: "marriage (Jan 27, 1890, entry 1) — the BRIDE Anna KURE, quarter smallholder's daughter and maid, 23, GRIBLJE 10 (the 2nd marriage evidence of h10 after 1887 v20!; father Marcus Kure ¼ × Anna Špala) × Johann Muc, quarter smallholder's son?, 23, GRIBLJE 91; priest Jos. Rauy; Befunden: the announcement of Griblje Jan 11, 1890 no. 1 + ×2 court docs Bez. Ger. Černomelj Jan 19/22; the opening of 1890 under the big Traunungs=Buch header (the 5th confirmation of Pag. == scan − 1)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "53",
+    bookSignature: "04455",
+    year: 1890,
+    scan: 77,
+    page: 76,
+    whatSi: "poroka (11. 5. 1890, vpis 6) — ženin Johann PERDINEC/PEGD. [~ — kurent variira, cf. 1888 »Pegdirec« ×9], ¼ [Gribljah], 51 LET (najstarejši Griblje-ženin 1890 — cf. 1887 Peter Križan 40!), GRIBLJE 53 (NOVA HIŠA — 1. dokaz sploh v vzorcu!) × Maria HRIŽAN, ¼ Gütlarstochter, 29, Otok 20 (HRIŽAN ×3: 1888 v9 + v4 mati + v12!; oče Peter Hrižan ¼ × Margareth Rižman? [~]); priče: Nic. Novak (½ Gribljah) + Anton Brodarič (½ Gribljah); duhovnik Jos. Rauy; Befünden: zglasnica občine Griblje 30. 4. 1890 št. 16; PERDINEC/PEGDIREC ×8 v 1890 — največja mreža leta (2 pisavi!)",
+    whatEn: "marriage (May 11, 1890, entry 6) — groom Johann PERDINEC/PEGD. [~ — the Kurrent varies, cf. 1888 »Pegdirec« ×9], ¼ [Gribljah], 51 YEARS (the oldest Griblje groom of 1890 — cf. 1887 Peter Križan 40!), GRIBLJE 53 (A NEW HOUSE — the 1st evidence ever in the sample!) × Maria HRIŽAN, quarter smallholder's daughter, 29, Otok 20 (the HRIŽAN network ×3: 1888 v9 + the v4 mother + v12!; father Peter Hrižan ¼ × Margareth Rižman? [~]); witnesses: Nic. Novak (½ Gribljah) + Anton Brodarič (½ Gribljah); priest Jos. Rauy; Befunden: the announcement of the Griblje commune Apr 30, 1890 no. 16; PERDINEC/PEGDIREC ×8 in 1890 — the year's biggest network (2 spellings!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "61",
+    bookSignature: "04455",
+    year: 1890,
+    scan: 79,
+    page: 78,
+    whatSi: "poroka (24. 11. 1890, vpis 15) — ženin Nicolaus POŽEK, ¼ [Gribljah], 29, GRIBLJE 61 (2. familia v hiši — krstna 1887 Anton = Janez Muc bajtar h61!; anomalija A11 Muc-vs-Požek: 2 familiji ali menjava najemnika!; POŽEK ×5 po 1889 ×3!) × Ana DRAGOŠ, ¼ Gütlarstochter, 26, Dragoše? 5 [~] (DRAGOŠ ×3: 1887 v17 + 1889 mati Barbara + 1890!; oče Nicolaus Dragoš ¼ × Catharina STRAUS — STRAUS ×4!); priče: Math. Straus (¼ Gribljah) + Joh. Pegdirec/Perdinec (¼ Gribljah); duhovnik Jos. Rauy; Befünden: zgłas. občine Griblje 24/11. 1890 št. 39 (Griblje številčenje 1→16→36→39 časovno 1:1!); BRINEC ×4 (mati Anna cf. 1887/1888!)",
+    whatEn: "marriage (Nov 24, 1890, entry 15) — groom Nicolaus POŽEK, ¼ [Gribljah], 29, GRIBLJE 61 (the 2nd family in the house — the 1887 baptism of Anton = Janez Muc cottager h61!; the anomaly A11 Muc-vs-Požek: 2 families or a tenant change!; POŽEK ×5 after 1889 ×3!) × Ana DRAGOŠ, quarter smallholder's daughter, 26, Dragoše? 5 [~] (the DRAGOŠ network ×3: 1887 v17 + the 1889 mother Barbara + 1890!; father Nicolaus Dragoš ¼ × Catharina STRAUS — STRAUS ×4!); witnesses: Math. Straus (¼ Gribljah) + Joh. Pegdirec/Perdinec (¼ Gribljah); priest Jos. Rauy; Befunden: the announcement of the Griblje commune Nov 24, 1890 no. 39 (the Griblje numbering 1→16→36→39 chronological 1:1!); BRINEC ×4 (the mother Anna cf. 1887/1888!)",
+    status: "DOCUMENTED",
+  },
   // ——— P82 razširitev: KRSTNA KNJIGA 04105 — polno leto 1887 (skeni 16–27 ==
   // strani 15–26; glava »Leto 18_87« na str. 15; leto 1888 se začne na str. 26
   // po row 106 z velikimi ciframi »1 8 8 8«) — vsi vpisi z Griblji (20) ———

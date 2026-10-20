@@ -220,9 +220,10 @@ def main() -> int:
     blocks_04105 = len(re.findall(r'bookSignature:\s*"04105"', ts))
     check("I9 bloki 04105 ≥ 502", blocks_04105 >= BLOCKS_04105, str(blocks_04105))
     qa_ts = open("src/lib/qa-parish.ts").read()
+    n548 = qa_ts.count("HOUSE_VITALS.length !== 548")
     n544 = qa_ts.count("HOUSE_VITALS.length !== 544")
     n537 = qa_ts.count("HOUSE_VITALS.length !== 537")
-    check("I9b vitals 544 (qa ×33, brez 537/517 — P118 +7 blokov)", n544 >= 32 and n537 == 0, f"544×{n544} 537×{n537}")
+    check("I9b vitals 548 (qa ×34, brez 544/537/517 — P119 +4 blokov)", n548 >= 33 and n544 == 0 and n537 == 0, f"548×{n548} 544×{n544} 537×{n537}")
     # vsi 11 blokov 1919 prisotni
     y1919 = re.findall(r'bookSignature:\s*"04105",\s*year:\s*1919', ts)
     check("I9c blokov 1919 ≥ 11", len(y1919) >= 11, str(len(y1919)))
