@@ -5548,3 +5548,21 @@ Stage Summary:
 - **P121 DOKAZAN: poročna 1892 = 15/15 obojestransko — DRUBEL-GRIBLJE poroke ×3 = REKORD LINIJE (h60×h49 + h17×h34 + h36×h44!) + deleži ¼/½/¾ ×21 (¾ PRVIČ) + 1. AMERIŠKI KONSULAT (Philadelphia Z:3074) + MUC-priimek z deležem imenja + sestrski dvozakon isti dan + 4 poroke 22.2. = rekord dneva + rekord ženin 56 / nevesta 17 + Wittwen-dispensa Z:9123 + Laipšl ×5 — poročna linija 7 let globoko (1886–1892).**
 - **GRIBLJE: 3 poroke / 4 poročna bloka / 7 hiš — h60 2. dokaz (ŽELJKO-hiša!) + h30 (Pozdirec oče=priča!) + h17 NOVA HIŠA (Kralj 48!) + h36 (Segina-mreža!)** → parish.ts +4 bloka → **bloki 04455 = 37; vitals 550 → 554; p80 hiše 40 → 41**.
 - QA **122/122** (qa-p121 = 122.) + verifier **74/74**; P122 LEAD: **poročna 1893** (rokopisna glava »1893« na s87 = Pag. 86 + v1–6 orisani + s88 = Pag. 87 v7–11; v2 = Jakobič-mreža nadaljevana?).
+
+---
+Task ID: 96-b
+Agent: Z.ai Code (glavni)
+Task: P121 push GitLab+GitHub (2. lastniški vsebinski push) + trojsinhronizacija (rebase na lastnikov a67f96d) + Vercel verdikt + produkcija ŽIV P121 122/122 + README Zrcaljenje svežina
+
+Work Log:
+- Commit **83992e9** (P121: 15 datotek — parish.ts 4 novi bloki 1892 h60/h30/h17/h36 + qa-parish qa-p121 + qa-p85 izjema h30-1892 + sinhr. regresij 35× vitals 554 + blokov 37 + sidra 30 + p80 hiše 41 + evidence JSON + verifier p121 74/74 + notes + README + worklog).
+- Push non-fast-forward → **rebase na lastnikov commit a67f96d** (»chore: add .gitlab-ci.yml for GitLab CI verification«) → čista linearna zgodovina; **P121 commit po rebaseu = 9b9469c**.
+- Push: GitHub `a67f96d..9b9469c main -> main` ✓ 1. poskus; GitLab ob prvem poskusu 403-block (IP-block vzorec Task 87-b/92-b), 3. poskus → **»Everything up-to-date«**; ls-remote po cooldownu: **GitLab origin/main = 9b9469c 1:1 POTRJEN** + GitHub = 9b9469c 1:1 → **trojsinhronizacija POTRJENA**.
+- **VERCEL VERDIKT**: GitHub commit status 9b9469c → **`Vercel → success | Deployment has completed`** — **2. lastniški push zapored = 2. potrditev hipoteze avtor-epošte (Task 94-c); SAML-blok ostaja preseglen**.
+- **PRODUKCIJA PREVERJENA**: `GET https://griblje-museum.vercel.app/api/qa` → **122/122, failed 0, qa-p121 = True** + homepage HTTP 200 — **produkcija ŽIV P121 (P120 121/121 → P121 122/122)!**
+- README »Zrcaljenje (aktualno)«: Task 96 segment (9b9469c + rebase a67f96d + Vercel success + produkcija 122/122).
+
+Stage Summary:
+- **P121 TROJSINHRONIZIRAN (9b9469c) IN PRODUKCIJSKO ŽIV: /api/qa 122/122 na griblje-museum.vercel.app!**
+- **Vercel: 2. zaporedni lastniški push = success (repo-identiteta Robert Pezdirc <robert.pezdirc12@gmail.com> ostaja ključ).**
+- Lokalno 122/122 + verifier p121 74/74 + p80/p79/p83/p114–p120 --check PASS + lint 0; **P122 LEAD: poročna 1893** (rokopisna glava s87 = Pag. 86 + s88 = Pag. 87; v2 Jakobič-mreža?).
