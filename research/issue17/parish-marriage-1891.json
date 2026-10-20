@@ -1,0 +1,906 @@
+{
+ "register": "04455",
+ "registerName": "Traunungs=Buch župnije Podzemelj (poročna knjiga)",
+ "year": 1891,
+ "source": "Matricula Online — https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04455/",
+ "transcriptionDate": "2026-10-23",
+ "phase": "faza 2 (polna obojestranska transkripcija 18/18 vpisov)",
+ "frame": {
+  "scans": [
+   80,
+   81,
+   82,
+   83
+  ],
+  "pages": [
+   79,
+   80,
+   81,
+   82
+  ],
+  "pagRule": "Pag. == sken − 1 (6. potrditev; velja v 71–83)",
+  "geometry": "landscape ~2499–2515×1800; levi list (x 0–1250) = par, desni (x 1300–konec) = starši/priče/Befunden/duhovnik; vrstica 1 = y≈280 po letni glavi",
+  "bigHeader": "s80 = Pag. 79 = letna glava 1891 BREZ velike glave (»Traunungs=Buch« je na s84 = Pag. 83 za leto 1892 — cikel velike glave vsako leto potrjen: 1887 s66? + 1890 s77 + 1892 s84!)",
+  "rows": {
+   "s80": "v1–4 (y 280–1450; v1 280–590, v2 560–860, v3 830–1110, v4 1080–1450)",
+   "s81": "v5–10 (y 280–1790; v5 280–490, v6 475–710, v7 695–950, v8 935–1160, v9 1145–1450, v10 1430–1790)",
+   "s82": "v11–14 (y 285–1550; dejanske meje crrt 283/945/1214/1463 — 4 vrstice, crop-premiki ±1 vpis dokumentirani)",
+   "s83": "v15–18 (y 282–1550; meje 282/717/942/1160)"
+  },
+  "method": "crop L/R ×2 LANCZOS (crop_rows_120.py, 36 row-crops) + ~70 mikro-zoomov ×4–10 (z120_*/zz120_*); vsak vpis prebran obojestransko"
+ },
+ "entries": [
+  {
+   "row": 1,
+   "date": "25.1.1891",
+   "scan": 80,
+   "page": 79,
+   "groom": {
+    "name": "Martin Pezdirec",
+    "age": 24,
+    "village": "Podzemelj",
+    "houseNo": 3,
+    "stand": "Piščar? [~ — 2. vrstica stanu]",
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Barbara Juran",
+    "age": 25,
+    "village": "Primostek",
+    "houseNo": 5,
+    "stand": "Laipšl(er)s. Tocht.? [~ — »Laipšlottauff«; končnica ≈ »tochter«, cf. v14 rosetta]",
+    "status": "ledig"
+   },
+   "parentsGroom": "Georg Pezdirec (½ Griblje) × Maria Jakljič",
+   "parentsBride": "Martin Juran (Laipšl? [~ — isti Hofname kot nevesta]) × Katharina Hlobodnit",
+   "witnesses": [
+    "Nicolaus Jakljič",
+    "Georg Hlobodnit (oba } ½ gbl. [~])"
+   ],
+   "urkunden": "ženitovanjsko zglas. občine Podzemelj od 15/1. 1891 №: 1",
+   "priest": "Jos. Rauy (provisor)",
+   "griblje": false,
+   "notes": "ODPIRALEC LETA; PEZDIREC ×12 oseb v 1891 (rekord mreže!); Primostek 5; Hofname »Laipšl(ot)« [~] = istoimenski status neveste + očeta; brez privolitvenih dokumentov (24/25 odrasla — ABGB večina 24 let ✓); priča ½ gbl. zapis »½ šibln?« = Kurrent »gbl.«"
+  },
+  {
+   "row": 2,
+   "date": "26.1.1891",
+   "scan": 80,
+   "page": 79,
+   "groom": {
+    "name": "Peter Stampahar",
+    "age": 22,
+    "village": "Cerkvišče",
+    "houseNo": 19,
+    "stand": "½ Gribler",
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Maria Jurajevič",
+    "age": 19,
+    "village": "Kapljišče",
+    "houseNo": 6,
+    "stand": "¼ Griblers. Tocht.? [~]",
+    "status": "ledig"
+   },
+   "parentsGroom": "Michael Stampahar (½ Gribler) × Catharina Pezdirec",
+   "parentsBride": "Georg Jurajevič (¼ Gribler) × Agnes Tome",
+   "witnesses": [
+    "Johan Tome",
+    "Nicol. Galovec? [~] (} ½ gbl.)"
+   ],
+   "urkunden": "ženitov. zglas. občine Podzemelj od 23/1. 1891 st: 4 [Graf.? ~] + [Groß?]jährigkeits-Erklärung für den mj. Bräutigam vom Bez. Ger. Möttling (Metlika) ddo 17. Jän. 1890, bewilligt von der k.k. Landesregierung ddo 11/5. 1890 №: 5549 + väterliche mündl. Einverständniß für die mj. Braut in Gegenwart ihrer Mutter dslf. Hände (3 dokumenti!)",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "notes": "MLADOLETEN ŽENIN 22 (2. v liniji po P118-novelah) z dvojnim dokumentom (sodna 17.1.1890 — 12+ mesecev vnaprej! + Landesreg. Laibach № 5549); mati ženina = PEZDIREC (mreža z v1!); Kapljišče 6 = 1. dokaz vasi (krstna 1915/1919 poznata Kapljišče 5+6!); »Gribler« = nosilec DELEŽA imenja Griblje (½/¼ sistem — glavna ekonomska novela leta!)"
+  },
+  {
+   "row": 3,
+   "date": "26.1.1891",
+   "scan": 80,
+   "page": 79,
+   "groom": {
+    "name": "Marcus Kočevar",
+    "age": 30,
+    "village": "Dragomlja vas? [~ — »Dragumljo«]",
+    "houseNo": 25,
+    "stand": "Lončar? [~ — poklic = lončar/sutejar]",
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Catharina Jurajevič",
+    "age": 22,
+    "village": "Otok",
+    "houseNo": 11,
+    "stand": "½ Griblers. Toht.? [~]",
+    "status": "ledig"
+   },
+   "parentsGroom": "Marcus Kočevar (Lončar? [~]) × Barbara Kramarič? [~]",
+   "parentsBride": "Georg Jurajevič (½ Gribln) × Catharina Tome",
+   "witnesses": [
+    "Marcus Jurajevič",
+    "Mathias Jurajevič (} ½ gbl.)"
+   ],
+   "urkunden": "ženitovanjska zglas. občine Šuhor od 25/1. 1891 st: 6 + Obervormundschaftl. Bewilligung für die mj. Braut vom Bez. Ger. Möttling ddo 18/1. 1891 + Ankündigung von Pfarramt Šuhor vom 25/1. 1891 (3 dokumenti)",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "notes": "PF. ŠUHOR = NOVA župnija linije; 2. Jurajevič-nevesta ISTI DAN (v2 Maria 19 + v3 Catharina 22 — 2 Georga Jurajevič z različnima deležema ¼/½ + 2 Tome-ženi Agnes/Catharina — brata? [~]); Otok 11 (cf. v17 Otok ×2!); mladoletna 22 → Obervormundschaftl. Bewilligung"
+  },
+  {
+   "row": 4,
+   "date": "26.1.1891",
+   "scan": 80,
+   "page": 79,
+   "groom": {
+    "name": "Johann Nemamič? [~ — cf. v3 mati »Kemamič« = ista familija?]",
+    "age": 26,
+    "village": "Sveržaki? [~]",
+    "houseNo": 10,
+    "stand": "¼ Gribler? [~ — »ir/in Griblje«]",
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Catharina Tome",
+    "age": 23,
+    "village": "Primostek",
+    "houseNo": 14,
+    "stand": "¼ Griblers. Toht.? [~]",
+    "status": "ledig"
+   },
+   "parentsGroom": "Martin Nemamič? [~] (¼ Gribler) × Catharina Glanec? [~]",
+   "parentsBride": "Michael Tome (¼ Gribler) × Catharina Škala",
+   "witnesses": [
+    "Martin Pezdirec",
+    "Martin Glanec? [~] (} ½ gbl.)"
+   ],
+   "urkunden": "ženitov. zglas. občine Božjakovo-Rozalnice od 21/1. 1891 + Oznamni list farnega urada v Metliki od 25/1. 1891 + Obervormundschaftl. Bewilligung für die mj. Braut vom Bez. Ger. Möttling ddo 18/1. 1891 (3 dokumenti)",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "notes": "26.1. = TROJNO poročni dan (v2+v3+v4)!; PF. METLIKA (2. dokaz župnije z v9); Primostek 14 = NOVA hiša; TOME ×5 (bride + oče + v2 priča Johan + v2/v3 materi Agnes/Catharina); občina Božjakovo-Rozalnice = NOVA (Metlika-katastri); mladoletna 23 → sodna privolitev"
+  },
+  {
+   "row": 5,
+   "date": "3.2.1891",
+   "scan": 81,
+   "page": 80,
+   "groom": {
+    "name": "Johann Stravs? [~]",
+    "age": 25,
+    "village": "Podzemelj",
+    "houseNo": 12,
+    "stand": "¼ Griblers. Sohn? [~]",
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Barbara Kure",
+    "age": 24,
+    "village": "Đerm? [~ — »Germ«]",
+    "houseNo": 19,
+    "stand": "½ Griblers. Toht.? [~]",
+    "status": "ledig"
+   },
+   "parentsGroom": "Michael Stravs (¼ Gribler) × Maria Jakša",
+   "parentsBride": "Nicolaus Kure (½ Gribler) × Barbara Bajuk",
+   "witnesses": [
+    "Johan Križan? [~ — »Hrižan«]",
+    "Johan Schwinger? [~] (} ½ gbl.)"
+   ],
+   "urkunden": "ženitovanjska zgl. občine Podzemelj od 17/1. 1891 štev: 2",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "notes": "BREZ privolitev (25/24 — mejni primer ABGB točno 24!) ✓ konsistentnost pravila; KURE-mreža (cf. P119 v1 Ana Kure h91×h10 — Nicolaus Kure ½ Gribler!); Đerm = NOVA vas (kataster pri Semiču?); STRAVS (cf. v18 mati Catharina Stravs!); JAKŠA mati (cf. v12 Jakša×Jakša!)"
+  },
+  {
+   "row": 6,
+   "date": "3.2.1891",
+   "scan": 81,
+   "page": 80,
+   "groom": {
+    "name": "Marcus Pezdirec",
+    "age": 29,
+    "village": "Griblje",
+    "houseNo": 87,
+    "stand": "¼ Griblers. Sohn",
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Anna Željko",
+    "age": 20,
+    "village": "Griblje",
+    "houseNo": 60,
+    "stand": "¼ Griblers. Toht.? [~]",
+    "status": "ledig"
+   },
+   "parentsGroom": "Marcus Pezdirec (½ Gribler) × Margaret Klepec",
+   "parentsBride": "Georg Željko (¼ Gribler) × Catharina Hrižan? [~]",
+   "witnesses": [
+    "Johann Milek",
+    "Nicolaus Željko (} ¼ gbl.)"
+   ],
+   "urkunden": "ženitov. zglas. občine Griblje od 23/1. 1891 št: 5 und mündliche väterliche Einwilligung für die mj. Braut in Gegenwart obigen Befände",
+   "priest": "Jos. Rauy",
+   "griblje": true,
+   "notes": "GRIBLJE 87 = 2. POROČNI DOKAZ (1889 v8 Milek×Klejpec — KLEPEC mati Margaret = 1889 nevesta Klejpec → ista hiša, menjava/možnosti [~ cf. P118 »najbolj napačen oris«]; 2. dokaz hiše v 2 letih!); h60 = NOVA hiša poročnega vzorca (krstna 1886 poroka Maria Bohor! cf. p80); PEZDIREC-groom; ŽELJKO ×3 (h1/h60/h91 cf. krstna 1887 botra!); MILEK-priča (1887 h23 + 1889 h30 mreža!); 3.2. = TROJNO dan (v5+v6+v7!)"
+  },
+  {
+   "row": 7,
+   "date": "3.2.1891",
+   "scan": 81,
+   "page": 80,
+   "groom": {
+    "name": "Peter Pezdirec",
+    "age": 24,
+    "village": "Griblje",
+    "houseNo": 20,
+    "stand": "¼ Griblers. Sohn",
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Dorothea Klepec",
+    "age": 20,
+    "village": "Krasinec",
+    "houseNo": 37,
+    "stand": "½ Griblers. Toht.? [~]",
+    "status": "ledig"
+   },
+   "parentsGroom": "Peter Pezdirec (½ Gribler) × Catharina Deblič? [~]",
+   "parentsBride": "Peter Klepec (½ Gribler) × Anna Marasinič? [~]",
+   "witnesses": [
+    "Johan Marasinič",
+    "Anton Brodarič? [~] (} ½ gbl.)"
+   ],
+   "urkunden": "ženitov. zglas. občine Griblje od 2/2. 1891 st: 7 und mündl. väterliche Einwilligung für die mj. Braut in Gegenwart obigen Befände",
+   "priest": "Jos. Rauy",
+   "griblje": true,
+   "notes": "GRIBLJE 20 = NOVA HIŠA (1. poročni dokaz sploh!); PEZDIREC ×2 isti dan (v6 Marcus 29 + v7 Peter 24 — brata? [~]; skupaj z očetoma 4 Pezdirci!); KLEPEC ×2 isti dan (v6 mati Margaret + v7 nevesta Dorothea z očetom Petrom!); Marasinič (cf. v7 priča + v8 + v17!); Brodarič (cf. P119 v6 priča Anton Brodarič!)"
+  },
+  {
+   "row": 8,
+   "date": "8.2.1891",
+   "scan": 81,
+   "page": 80,
+   "groom": {
+    "name": "Mathias Vranešič? [~]",
+    "age": 39,
+    "village": "Krasinec",
+    "houseNo": 41,
+    "stand": "Einwohner, wird Vrbiče? [~ — »Vribuee«] Pf. Adlešiči",
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Ana Jakofčič? [~]",
+    "age": 29,
+    "village": "Cerkvišče",
+    "houseNo": 8,
+    "stand": "Laipflonin? [~ — Hofname »Laipfl/Laipšl«]",
+    "status": "ledig"
+   },
+   "parentsGroom": "Peter Vranešič (½ Gribler) × Maria Prijanovič? [~]",
+   "parentsBride": "Peter Hudoblar? [~] (½ Gribler) × Maria Černe",
+   "witnesses": [
+    "Johann Marasinič (Laipflon? [~])",
+    "Nicol. Vranešič (} ½ gbl.)"
+   ],
+   "urkunden": "ženitov. zglas. občine [V]rbiče/Trbovce? [~] od 26/1. 1891 št: 6 + oznamni list župnega urada v Adlešičih od 20/1. 1891 št: 19 (2 dokumenti)",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "notes": "NAJSTAREJŠI ŽENIN LETA (39; par 39×29 — 10-letna razlika!); brez privolitev (39/29 ✓); ženin = EINWOHNER (najemnik!) z bodočim bivališčem v Pf. Adlešiči (banns iz župn. urada Adlešiči!); Cerkvišče 8 NOVA hiša; Hofname »Laipfl« pri nevesti IN priči Marasinič (mreža Hofnamena!); Hudoblar? [~] NOV priimek; Černe (cf. 1887 Černe? mreža)"
+  },
+  {
+   "row": 9,
+   "date": "8.2.1891",
+   "scan": 81,
+   "page": 80,
+   "groom": {
+    "name": "Franc Dovgan? [~]",
+    "age": 32,
+    "village": "Metlika",
+    "houseNo": 2,
+    "stand": "½ Griblers. Sohn? [~]; wird Zembije? [~] iz/hz P. Trnovo? [~]",
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Maria Pezdirec",
+    "age": 20,
+    "village": "Podzemelj",
+    "houseNo": 10,
+    "stand": "¼ Griblers. Toht.? [~]",
+    "status": "ledig"
+   },
+   "parentsGroom": "Andreas Dovgan (½ Gribler) × Anna Knafelj? [~]",
+   "parentsBride": "Andreas Pezdirec (¼ Gribler) × Anna Majič? [~]",
+   "witnesses": [
+    "Georg Pezdirec (¼ gbl.)",
+    "Martin Jurajevič (Laipfflw? [~])"
+   ],
+   "urkunden": "ženitov. zglas. občine Knežak? [~] od 5/1. 1891 st: 2 + oznamni list župnega urada v Metliki od 8/2. 1891 + oznamni list župnega urada v Trnovem? [~] od 5/1. 1891 št: 15 (3 dokumenti!)",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "notes": "PEZDIREC-nevesta (4. v letu!); občina KNEŽAK = NOVA (kataster JV Metlike?); banns iz DVEH župnij (Metlika + Trnovo — bodoče bivališče ženina »wird Zembije P. Trnovo« = NOVA registrska praksa!); priča Martin Jurajevič z Hofnamenom Laipfflw (= v1 Juran-mreža!); 8.2. = DVOJNO dan (v8+v9)"
+  },
+  {
+   "row": 10,
+   "date": "3.5.1891",
+   "scan": 81,
+   "page": 80,
+   "groom": {
+    "name": "Martin Ramuta? [~]",
+    "age": 25,
+    "village": "Metlika",
+    "houseNo": 186,
+    "stand": "Hafner? [~ — pečar?]",
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Katharina Mihelič",
+    "age": 23,
+    "village": "Kloster? [~ — kataster pri Metliki]",
+    "houseNo": 38,
+    "stand": "G?nstor-sto(h)cht.? [~]",
+    "status": "ledig"
+   },
+   "parentsGroom": "Martin Ramuta? [~] (Löhner? [~]) × Maria Krašovec",
+   "parentsBride": "Georg Mihelič (G?nst?l? [~]) × Ana Kohanič? [~]",
+   "witnesses": [
+    "Franc Mihelič",
+    "Georg Krašovec (} Löhnerja? [~])"
+   ],
+   "urkunden": "ženitov. zglasnica občine Metlika od 20/4. 1891 st: 125 + Obervormundschaftl. Bewilligung vom Bez. Gerichte Möttling ddo 20/4. 1891 + Anzeige f. d. Bräutig. vom Pfarramt v. Möttling vom 3. Mai 1891 (3 dokumenti)",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "notes": "ZIMSKA-POLETNA VRZEL 8.2. → 3.5. (2. najdaljša po P118 3.5→23.9?; spomladanska pausa); Metlika 186 (najvišja št. hiše linije doslej!); Kloster? = NOVA (katastrsko ime pri Metliki — Pavlinski samostan?); MIHELIČ ×3 (bride + oče + priča Franc); mladoletna 23 → Obervormundschaftl.; Krašovec (cf. v10 mati + P119 Krašovec? mreža)"
+  },
+  {
+   "row": 11,
+   "date": "25.5.1891",
+   "scan": 82,
+   "page": 81,
+   "groom": {
+    "name": "Nicolaus Klepec",
+    "age": 34,
+    "village": "Krasinec",
+    "houseNo": 36,
+    "stand": "½ Gribler",
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Catharina Segina? [~]",
+    "age": 21,
+    "village": "Tril?je [~ — »Tribxje«]",
+    "houseNo": 44,
+    "stand": "¼ Griblers. Toht. + Ana? [~]",
+    "status": "ledig"
+   },
+   "parentsGroom": "Nicolaus Klepec (½ Gribler) × Catharina Segina? [~]",
+   "parentsBride": "Peter Segina? [~] (¼ Gribler) × Catharina Suštarič? [~]",
+   "witnesses": [
+    "Peter Jakljevič",
+    "Peter Klepec (} ½ gbl.)"
+   ],
+   "urkunden": "ženitov. zgl. občine Podzemelj od 24/5. 1891 št: 7 + APOSTOLISCHE DISPENS vom 2. canon. Grade gleicher Linie der Blutsverwandtschaft ddo 19/1. 1891 + königl. Dispens von Seite der k.k. Landesregierung vom 4. biny.? Obv.? ddo 13/5. 1891 Z: 5672 + mündliche väterl. Einwilligung für die mj. Braut in Gegenwart obigen Befände (4 dokumenti!)",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "notes": "SORODSTVENI PAR = BRATRANCA (2. kanonska stopnja ISTE linije = prvi bratranci!): apostolska dispensacija 19/1.1891 (1. APOSTOLSKA v liniji!) + k.k. Landesreg. Z: 5672 13/5.1891; veriga: mati ženina Catharina Segina [~] = sestra? očeta neveste Petra Segina [~] (cf. P119 v11 matere Zugelj sestri!); KLEPEC-groom (34 — 3. Klepec leto!); mladoletna 21; Tril?je 44 [~] NOVA vas; JAKLJEVIČ-priča"
+  },
+  {
+   "row": 12,
+   "date": "25.5.1891",
+   "scan": 82,
+   "page": 81,
+   "groom": {
+    "name": "Josef Jakša",
+    "age": 23,
+    "village": "Vranoviči? [~ — »Josef Vranovič« 19]",
+    "houseNo": 19,
+    "stand": "½ Griblers. Toft.? [~]",
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Ana Jakša",
+    "age": 21,
+    "village": "Vranoviče? [~]",
+    "houseNo": 2,
+    "stand": "½ Griblers. Toht.ra? [~]",
+    "status": "ledig"
+   },
+   "parentsGroom": "Josef Jakša (½ Gribler) × Catharina MUC",
+   "parentsBride": "Stefan Jakša (½ Gribler) × Ana Plut/Plet? [~]",
+   "witnesses": [
+    "Martin Zugelj",
+    "Nicol. Muc (} ½ gbl.)"
+   ],
+   "urkunden": "ženitov. zglasnica občine Gradac od 24/5. 1891 štev: 20 und väterl. mündl. Einwilligung für die mj. Bräutlin in Gegenwart obigen Befände",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "notes": "JAKŠA × JAKŠA — ISTI PRIIMEK + ISTA vas (Vranoviči 19 × 2) BREZ dispensacije (nepovezani Jakša-i?); MUC mati + MUC-priča (h91/h10 mreža cf. P119 v1!) + ZUGELJ-priča (P119 v10/v11 Dobravice 11!); občina Gradac; mladoleten ženin 23 ✓; Vranoviči = NOVA vas (krstna 1919 seznam!); 25.5. = DVOJNO dan (v11+v12)"
+  },
+  {
+   "row": 13,
+   "date": "23.8.1891",
+   "scan": 82,
+   "page": 81,
+   "groom": {
+    "name": "Franz Velkavrh? [~]",
+    "age": 30,
+    "village": "Gradac",
+    "houseNo": 25,
+    "stand": "Zimmermann, geb. in Bistra pri Vrhniki? [~]",
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Anna Mavrič/Mavencic? [~]",
+    "age": 21,
+    "village": "Gradac",
+    "houseNo": 60,
+    "stand": "½ Griblers. Toht.ra? [~]",
+    "status": "ledig"
+   },
+   "parentsGroom": "Bartholom(äus) Velkavrh (Einwohner) × Maria Merlak? [~]",
+   "parentsBride": "Franz Mavrič? [~] (½ Gribler) × Margaret Schweiger? [~]",
+   "witnesses": [
+    "Franz Wagner",
+    "Johan Mavrič? [~] (} Löhner? [~])"
+   ],
+   "urkunden": "ženitov. zglas. občine Verblika? [~] od dne 11. avg. 1891 št: 27 und väterl. mündl. Einwilligung für die mj. Braut in Gegenwart obigen Befände",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "notes": "ZIMMERMANN = 3. pojav v liniji (P118 ×2!); ROD. BISTRA PRI VRHNIKI = NAJDALJŠI ROD-IZVOR LINIJE (~60 km — nota o rojstvu!) + oče EINWOHNER; poletna vrzel 25.5. → 23.8. (3 mes.!); Gradac 60 = cf. v6 h60 Griblje (različni Gradac!); občina Verblika? [~] NOVA (kataster Vrhovskega Gradca?); WAGNER-priča; Schweiger? [~] NOV priimek"
+  },
+  {
+   "row": 14,
+   "date": "7.9.1891",
+   "scan": 82,
+   "page": 81,
+   "groom": {
+    "name": "Mathias Plut",
+    "age": 25,
+    "village": "Vranoviče? [~]",
+    "houseNo": 4,
+    "stand": "½ Griblers. Sohn (ROSETTA!)",
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Anna Šimonič, geb. Konda",
+    "age": 32,
+    "village": "Vino(r)rh? [~]",
+    "houseNo": 3,
+    "stand": "VD-OVA; ½ gbl.",
+    "status": "vdova (geb. Konda)"
+   },
+   "parentsGroom": "Mathias Plut (½ Gribler) × Catharina Škala",
+   "parentsBride": "Jakob Konda (¼ Gribler) × Maria Malnarič? [~]",
+   "witnesses": [
+    "Johann Mihelič",
+    "Josef Grabek? [~] (} Löhnerja? [~])"
+   ],
+   "urkunden": "ženitov. zglasmica občine Gradac od 1.9. 1891 št: 3 + Anzeige der Braut vom Pfarramt Semič 1.9.1891 + [dok.] vom selben Pfarramte ddo 1.9.1891",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "notes": "1. VD-OVA POROKA LINIJE (1886–1890: 0!): nevesta 32, roj. KONDA, vdova po Šimoniču; ROSETTA STATUSA: »½ Griblers. Sohn« eksplicitno = razrešitev skrivnostne končnice »-stoff/-tauff/-toftn« 1886–1890 (P115–P119) = »[Hofname]s. Sohn/Tochter«!; Plut (cf. v12 mati Ana Plut/Plet? — mreža!); Pf. Semič (2. dokaz po P119 v4 Bulovec); Škala (cf. v4 mati Catharina Škala!); Vino(r)rh? [~] NOVA vas"
+  },
+  {
+   "row": 15,
+   "date": "21.11.1891",
+   "scan": 83,
+   "page": 82,
+   "groom": {
+    "name": "Mirko Pintar",
+    "age": 26,
+    "village": "Gradac",
+    "houseNo": 1,
+    "stand": "ŽANDAR, rod. in Dolenja Pušica [Pušća?] № 3, HRVAŠKA",
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Anna (v L: »Kunovič, vdovna Žepar« [~ — roj. Žepar/Žišpan? [~])",
+    "age": 35,
+    "village": "Gradac",
+    "houseNo": 41,
+    "stand": "VD-OVA [~]",
+    "status": "vdova"
+   },
+   "parentsGroom": "Peter Pintar (Löhner? [~]) × Jela geb. Pintar? [~]",
+   "parentsBride": "Franz Žepar/Žišpan? [~] × Ana Pite(t)lič? [~]",
+   "witnesses": [
+    "Jacob Novak (Zagrebčan!)",
+    "Martin Škala (Zagrebčan!)"
+   ],
+   "urkunden": "Uvjerenje? [~] (potrdilo) des Bräutig. vom Pfarramt Pušica od 1. travnja 1890 Br. 86–493 + Ankündigung des Bräutl. vom Pfarr. in Zagreb ddo 15. Nov. 1891 Br. 636 + Totenschein? [~] des Kunovič vom Pfarramt St. Mari in Zagreb v. 10. rujna 1891 + dovoljenje Kr. Notarske oblasti v Zagrebu dne 7. rujna 1891 Br. 6582/891 (4 HRVAŠKA dokumenta!)",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "notes": "1. ŽANDAR LINIJE = državni uradnik (četa v Zagrebu!) + 1. HRVAŠKA povezava: rojen Dolenja Pušća № 3 (Zagrebska županija!) + 4 dokumenti hrvaške uprave (Pušća + Zagreb ×3) = 1. TUJA-ADMINISTRACIJA linije!; 2. VD-OVA (35 — najstarejša nevesta leta); priča = 2 Zagrebčana (kolega žandarji!); brez slovenske zglasnice (samo hrvaški dokumenti — anomalija); Pintar + rod. Pintar starša (sorodstvo? [~]); Novak-priča (cf. 1887 h91 Novak!)"
+  },
+  {
+   "row": 16,
+   "date": "23.11.1891",
+   "scan": 83,
+   "page": 82,
+   "groom": {
+    "name": "Anton Lukarič/Lukarnič? [~]",
+    "age": 24,
+    "village": "Gradac",
+    "houseNo": 74,
+    "stand": "¼ Griblers. Sohn",
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Anna Pompello? [~]",
+    "age": 29,
+    "village": "Vojna vas? [~]",
+    "houseNo": null,
+    "stand": "Kürschner?st. Toht.? [~ — oče »Kürschner? u. Wirth«]",
+    "status": "ledig",
+    "parish": "Pf. Črnomelj"
+   },
+   "parentsGroom": "Mathias Lukarič (¼ Gribler) × Maria Šimonič",
+   "parentsBride": "Valentin Pompello? [~] (Kürschner? u. Wirth [~ — cf. P119 v5 Kürschner + v10 Wirt!]) × Anna Kuhar",
+   "witnesses": [
+    "Johann Šimonič",
+    "Mihael Agnič (} ½ gbl.)"
+   ],
+   "urkunden": "ženitov. zglas. občine Gradac od 20/11. 1891 + Ankündigung des Braut vom Pfarr. amte Črnomelj ddo 21/11. 1891 Z 621 (2 dokumenti)",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "notes": "23.11. = TRIPLO dan začetek (v16+v17+v18!) — cf. P119 23–24.11. vikend; Vojna vas? [~] Pf. Črnomelj = NOVA vas; Kürschner-u.-Wirth oče (združeni poklici!); ŠIMONIČ ×2 (mati + priča — cf. v14 bride Šimonič!); AGNIČ = 3. pojav (P119 v5+v10!); brez privolitev (24/29 ✓); Gradac 74"
+  },
+  {
+   "row": 17,
+   "date": "23.11.1891",
+   "scan": 83,
+   "page": 82,
+   "groom": {
+    "name": "Martin Vlašič",
+    "age": 25,
+    "village": "Otok",
+    "houseNo": 23,
+    "stand": "¼ Griblers. Sohn",
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Barbara Mavrič/Marentič? [~]",
+    "age": 20,
+    "village": "Otok",
+    "houseNo": 2,
+    "stand": "½ Griblers. Toht.? [~]",
+    "status": "ledig"
+   },
+   "parentsGroom": "Josef Vlašič (½ Gribler) × Ana Verhovec? [~]",
+   "parentsBride": "Jacob Marentič? [~] (½ Gribler) × Barbara Marasinič",
+   "witnesses": [
+    "Johan Križan",
+    "Johan Marasinič (} ½ gbl.)"
+   ],
+   "urkunden": "ženitov. zglas. občine Podzemelj od 15/11. 1891 st: 9 und mündl. väterl. Einwilligung für die mj. Braut in Gegenwart obigen Befände",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "notes": "OTOK ×3 leto (v3 Otok 11 + v17 Otok 23 × Otok 2 — istovaski par!); priča DVOJKA iz v5 (Johan Križan) + Marasinič ×3 (v7 priča + v8 priča + v17 mati+priča!); Verhovec? [~] NOV priimek; Marentič? [~] (cf. P119 MARENTIČ ×5!); mladoletna 20 ✓"
+  },
+  {
+   "row": 18,
+   "date": "23.11.1891",
+   "scan": 83,
+   "page": 82,
+   "groom": {
+    "name": "Michael Dragoš",
+    "age": 22,
+    "village": "Dragoše/Dragoša? [~]",
+    "houseNo": 5,
+    "stand": "½ Griblers. Sohn? [~]",
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Catharina Pezdirec",
+    "age": 19,
+    "village": "Krasinec",
+    "houseNo": 3,
+    "stand": "½ Griblers. Toht.(ana)? [~]",
+    "status": "ledig"
+   },
+   "parentsGroom": "Nicolaus Dragoš (½ Gribler) × Catharina Stravs",
+   "parentsBride": "Michael Pezdirec (½ Gribler) × Maria Jakljevič",
+   "witnesses": [
+    "Nicol. Požek",
+    "Nicol. Jakljevič (} ½ gbl.)"
+   ],
+   "urkunden": "ženitov. zglasmica občine Adlešiče od 20/11. 1891 št: 262 + Bewilligung von der k.k. Landesregierung in Laibach vom 1/10. 1891 Z: 11825 + väterliche Einwilligung für die mj. Bräutigam und mündl. väterl. Einwilligung für die mj. Braut in Gegenwart obigen Befände (4 dokumenti!)",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "notes": "ZAKLJUČEK LETA na 23.11. (v16+v17+v18 — triplo!; vikend 21.+23.11. = 4 poroke cf. P119!); 5. PEZDIREC (nevesta 19 — najmlajša nevesta leta; skupaj 12 Pezdirec-oseb!); DRAGOŠ + POŽEK mreža (P119 v15 h61 Požek×Dragoš — naslednja generacija očetov!); STRAVS mati (cf. v5 groom Johann Stravs!); JAKLJEVIČ mati + priča (v1 mreža!); mladoleten PAR 22/19 z Landesreg. Laibach Z: 11825; občina Adlešiče št: 262 (najvišja zglasnica-št. linije!)"
+  }
+ ],
+ "excluded": [],
+ "anomalies": [
+  {
+   "id": "A1",
+   "entry": null,
+   "type": "ROSETTA-STATUS",
+   "text": "v14 groom stand »½ Griblers. Sohn« EKSPLICITNO = razrešitev skrivnostne končnice statusov 1886–1890 (P115–P119: »Gufsslor«, »Guvlášofn«, »?toftn«, »Laipšlottauff«...) = »[Hofname/Imenje]s. Sohn/Tochter« — Griblje imenje razdeljeno na ½/¼ deleži med familije; dopustna regresivna ponovna razlaga P119 v10 »?toftn« = »Griblers. Toht.?« [~]"
+  },
+  {
+   "id": "A2",
+   "entry": null,
+   "type": "HOFNAME-LAIPŠL",
+   "text": "Hofname »Laipšl/Laipfl/Laipšlot« [~]: v1 nevesta »Laipšlottauff« + njen oče Martin Juran + v8 nevesta »Laipflonin« + v8 priča Marasinič »Laipflon« + v9 priča Martin Jurajevič »Laipfflw« — družinsko/hišno ime vezano na Primostek 5 + Marasinič; končna razlaga odprta"
+  },
+  {
+   "id": "A3",
+   "entry": 2,
+   "type": "DOKUMENT-GRAF",
+   "text": "v2 zglasnica »st: 4. Graf.? [~]« — neznana označba za številko 4 (mogoče »Gr.« = Großenhain? ali del naslednjega besedila)"
+  },
+  {
+   "id": "A4",
+   "entry": 8,
+   "type": "OBČINA-DVOMNA",
+   "text": "v8 zglasnica »občine [V]rbiče/Trbovce? [~]« — groom-status »wird Vribuee Pf. Adlešiče« — vas v Pf. Adlešiči ne berljiva zanesljivo; NOVA občina [~]"
+  },
+  {
+   "id": "A5",
+   "entry": 9,
+   "type": "BODOČE-BIVALIŠČE",
+   "text": "v9 groom »wird Zembije? hz P. Trnovo?« — registracija BODOČEGA bivališča + banns iz bodoče župnije (Trnovo št: 15) = nova praktika; vas Zembije? [~] ne identificirana"
+  },
+  {
+   "id": "A6",
+   "entry": 13,
+   "type": "OBČINA-VERBLIKA",
+   "text": "v13 zglasnica »občine Verblika? [~]« — nova občinska oznaka (kataster Gradac?); groom rod. Bistra pri Vrhniki = najdaljši migracijski lok linije (~60 km)"
+  },
+  {
+   "id": "A7",
+   "entry": 15,
+   "type": "BREZ-ZGLASNICE",
+   "text": "v15 BREZ slovenske zglasnice — samo 4 hrvaški dokumenti (Pušća + Zagreb ×3); lastnost tuje administracije ali izpust"
+  },
+  {
+   "id": "A8",
+   "entry": 15,
+   "type": "VDOVA-IME",
+   "text": "v15 nevesta: L-vpis »Anna Kunovič, vdovna Žepar« [~] vs oče »Franz Žepar/Žišpan?« vs Totenschein »des Kunovič« 10.9.1891 — tangle rojstno-ime/vdovsko-ime (1. mož Kunovič? ali Žepar?) — zapis ohranjen z [~]"
+  },
+  {
+   "id": "A9",
+   "entry": 16,
+   "type": "KÜRSCHNER-WIRTH",
+   "text": "v16 oče neveste »Mürzmann? u. Wirth« = verjetno »Kürschner u. Wirth« (cf. P119 v5 Kürschner-poklic + v10 Wirt-priča!) — združeni poklici krznar-gostilnar"
+  },
+  {
+   "id": "A10",
+   "entry": 16,
+   "type": "VAS-DVOMNA",
+   "text": "v16 bride vas »Vojna vas? [~] Pf. Črnomelj« — ime vasi dvomno (mogoče drugo »?ojna vas«); Pf. Črnomelj potrjen z banns Z: 621"
+  },
+  {
+   "id": "A11",
+   "entry": 11,
+   "type": "STATUS-ANA",
+   "text": "v11 (in v18) bride-status zaključek »...Toht. + Ana?« — dvomni pripis »Ana« za statusom (mogoče drugo ime/oznaka)"
+  },
+  {
+   "id": "A12",
+   "entry": 5,
+   "type": "VAS-ĐERM",
+   "text": "v5 nevesta vas »Đerm/Germ? 19« — nova vas (kataster Đerm pri Semiču?); zapis [~]"
+  },
+  {
+   "id": "A13",
+   "entry": 6,
+   "type": "H87-KLEPEC",
+   "text": "h87 2. dokaz: 1889 v8 groom »Milek« × nevesta Margaret KLEJPEC; 1891 v6 groom Marcus Pezdirec × mati Margaret KLEPEC — isti?-drugi?-delek imenja, dve pisavi Klepec/Klejpec; cf. P118 »najbolj napačen oris« [~]"
+  },
+  {
+   "id": "A14",
+   "entry": 4,
+   "type": "VAS-SVERŽAKI",
+   "text": "v4 groom vas »Sveržaki? 10 Pf. Metlika« [~] — nova vas, ime dvomno (mogoče »Svržaki/Gveržaki«)"
+  }
+ ],
+ "crossChecks": [
+  {
+   "id": "C1",
+   "type": "PEZDIREC",
+   "text": "PEZDIREC ×12 OSEB v 1891 = REKORD MREŽE LINIJE (prej 1888 »Pegdirec« ×9!): v1 groom Martin + v2 mati Catharina + v4 priča Martin + v6 groom Marcus + oče Marcus + v7 groom Peter + oče Peter + v9 bride Maria + oče Andreas + priča Georg + v18 bride Catharina + oče Michael — 6 porok med sabo povezanih; ½/¼ deleži imenja"
+  },
+  {
+   "id": "C2",
+   "type": "JURAJEVIČ",
+   "text": "JURAJEVIČ ×7: v2 bride Maria (oče Georg ¼) + v3 bride Catharina (oče Georg ½) + priče Marcus + Mathias + v9 priča Martin — DVE nevesti isti dan 26.1. + DVA Georga (¼/½ deleža = brata? [~]) × 2 Tome-ženi (Agnes + Catharina)"
+  },
+  {
+   "id": "C3",
+   "type": "KLEPEC",
+   "text": "KLEPEC ×5: v6 mati Margaret (= 1889 v8 nevesta Klejpec h87!) + v7 bride Dorothea (oče Peter ½) + v11 groom Nicolaus 34 (oče Nicolaus ½) + priča Peter — mesh 1889→1891 prek h87"
+  },
+  {
+   "id": "C4",
+   "type": "JAKŠA",
+   "text": "JAKŠA ×6: v5 mati Maria + v12 groom Josef 23 (oče Josef ½ + mati MUC) + bride Ana 21 (oče Stefan ½) — ISTI PRIIMEK + ISTA vas Vranoviči brez dispensacije; mati Ana Plut? (cf. v14 groom Plut!)"
+  },
+  {
+   "id": "C5",
+   "type": "TOME",
+   "text": "TOME ×5: v2 priča Johan + mati Agnes + v3 mati Catharina + v4 bride Catharina (oče Michael ¼) — Tome = »hči-izvoz« v Primostek 14 + Jurajevič-moža"
+  },
+  {
+   "id": "C6",
+   "type": "MARASINIČ",
+   "text": "MARASINIČ ×5: v7 mati Anna + priča Johan + v8 priča Johann (Laipflon!) + v17 mati Barbara + priča Johan — največkratna priča leta (Johan ×3!) + Hofname Laipfl"
+  },
+  {
+   "id": "C7",
+   "type": "MUC-ZUGELJ",
+   "text": "MUC ×3 (v12 mati Catharina + priča Nicol. + cf. h91/h10 P119!) + ZUGELJ priča Martin (P119 v10/v11 bratski par!) — Griblje 91-mreža nadaljevana v pričah 1891"
+  },
+  {
+   "id": "C8",
+   "type": "MIHELIČ-ŠIMONIČ",
+   "text": "MIHELIČ ×4 (v10 bride Katharina + oče Georg + priča Franc + v14 priča Johann) + ŠIMONIČ ×3 (v14 bride/roj. Konda + v16 mati Maria + priča Johann) — dve mreži leta"
+  },
+  {
+   "id": "C9",
+   "type": "DRAGOŠ-POŽEK",
+   "text": "DRAGOŠ ×3 (v18 groom Michael + oče Nicolaus ½ + cf. P119 v15 Ana Dragoš h61!) + POŽEK priča Nicol. (P119 v15 groom h61!) — 1890→1891 naslednja generacija istih familij"
+  },
+  {
+   "id": "C10",
+   "type": "AGNIČ",
+   "text": "AGNIČ = 3. pojav (P119 v5+v10 → 1891 v16 priča Mihael) — mreža iz P119 nadaljevana"
+  },
+  {
+   "id": "C11",
+   "type": "KURE",
+   "text": "KURE (v5 bride Barbara, oče Nicolaus ½ Gribler — cf. P119 v1 Anna Kure h10 + krstna 1887 Ana Kure h91) — Kure = ½-Gribler-familija"
+  },
+  {
+   "id": "C12",
+   "type": "STRAVS",
+   "text": "STRAVS ×2 (v5 groom Johann + v18 mati Catharina — cf. 1887/1889 Straus-mreža P119!) — 2 pisavi Stravs/Straus"
+  },
+  {
+   "id": "C13",
+   "type": "JAKLJIČ-JAKLJEVIČ",
+   "text": "JAKLJIČ/JAKLJEVIČ ×5 (v1 mati Maria + priča Nicolaus + v11 priča Peter Jakljevič + v18 mati Maria Jakljevič + priča Nicol. Jakljevič) — 2 pisavi, v1↔v18 zrcalni okvir leta"
+  },
+  {
+   "id": "C14",
+   "type": "DELEŽI-GRIBLJE",
+   "text": "IMENJE GRIBLJE deležni sistem: ½/¼ Griblers. Sohn/Tochter status ×14 oseb (v5 ¼+½, v6 ¼+¼, v7 ¼+½, v9 ½+¼, v11 ½+¼, v12 ½+½, v14 ½, v16 ¼, v17 ¼+½, v18 ½+½) + »½ gbl.« pri pričah ×13 + ½/¼ Gribler pri očetih — celotna ekonomska struktura razdelitve imenja dokumentirana prvič v takšni globini"
+  },
+  {
+   "id": "C15",
+   "type": "H87-H20",
+   "text": "GRIBLJE poroke 1891: h87 (v6 — 2. dokaz po 1889 v8!) + h20 (v7 — 1. dokaz sploh!) = 2 poroke / 2 hiši; vitals 548 → 550 (+2 bloki); bloki 04455 = 31 → 33; p80 hiše 46 → 47 (h20 nov; h87 že)"
+  },
+  {
+   "id": "C16",
+   "type": "ZIMMERMANN",
+   "text": "ZIMMERMANN = 3. pojav v liniji (P118 v6+v9 → 1891 v13 groom sam Zimmermann!) — poklicno mreženje 1889→1891"
+  },
+  {
+   "id": "C17",
+   "type": "VDOVE",
+   "text": "VD-OVE ×2 = 1. VD-OVI POROKI LINIJE (1886–1890: 0!): v14 Anna Šimonič geb. Konda 32 + v15 Anna 35 (1. mož umrl 10.9.1891 Zagreb — samo 2+ mes. pred poroko!)"
+  },
+  {
+   "id": "C18",
+   "type": "SORODSTVO",
+   "text": "SORODSTVENA DISPENSACIJA v11: apostolska (2. kanc. stopnja iste linije = prvi bratranci!) 19/1.1891 + k.k. Landesreg. Z: 5672 13/5.1891 = 1. APOSTOLSKA dispensacija linije (prej samo Ordinariat Laibach P119 ×2!)"
+  },
+  {
+   "id": "C19",
+   "type": "HRVAŠKA",
+   "text": "HRVAŠKA v15: groom rod. Dolenja Pušća № 3 (žandar!) + 4 dokumenti (Pfarramt Pušća 1.4.1890 Br. 86–493 + Pfarr. Zagreb 15.11.1891 Br. 636 + Pfarr. St. Mari Zagreb 10.9.1891 + Kr. Notarska oblast Zagreb 7.9.1891 Br. 6582/891) + 2 Zagrebčana-priče = 1. tuja država v dokumentaciji linije"
+  },
+  {
+   "id": "C20",
+   "type": "ŽANDAR",
+   "text": "ŽANDAR v15 = 1. državni uradnik linije (gendarme — poklicna nova; cf. P118 Zimmermann ×2 = obrtniki); WAGNER-priča v13 (obrtniški priimek cf. P119 Wirt)"
+  },
+  {
+   "id": "C21",
+   "type": "OBCINE",
+   "text": "zglasnice 17/18 (v15 brez — anomalija A7): Podzemelj ×5 (v1 №1 + v2 st:4 + v5 štev:2 + v11 št:7 + v17 st:9) + Griblje ×2 (v6 št:5 + v7 st:7) + Gradac ×3 (v12 štev:20 + v14 št:3 + v16) + Šuhor (v3 st:6) + Božjakovo-Rozalnice (v4) + Vrbiče? (v8) + Knežak? (v9 st:2) + Metlika (v10 st:125) + Verblika? (v13 št:27) + Adlešiče (v18 št:262 — najvišja št.!); NOVE občine ×5 (Šuhor, Božjakovo-Rozalnice, Knežak?, Verblika?, Vrbiče?)"
+  },
+  {
+   "id": "C22",
+   "type": "LANDESREG",
+   "text": "k.k. LANDESREGIERUNG Laibach številke ×3: № 5549 (v2 — 11/5.1890) + Z: 5672 (v11 — 13/5.1891) + Z: 11825 (v18 — 1/10.1891) — cf. P118 Z:6758 + P119 Z:132/1840/2619; Landesreg. = najvišja civilna instanca linije"
+  },
+  {
+   "id": "C23",
+   "type": "DNEVI",
+   "text": "DNEVNE GRUČE ×5: 26.1. ×3 (v2+v3+v4!) + 3.2. ×3 (v5+v6+v7!) + 8.2. ×2 (v8+v9) + 25.5. ×2 (v11+v12) + 21.+23.11. = 4 poroke vikend (v15 + v16+v17+v18!); januar+februar = 9 porok (mrzlični začetek — cf. P119 1. datum 27.1.)"
+  },
+  {
+   "id": "C24",
+   "type": "ZUPLJIJE",
+   "text": "TUJE ŽUPNIJE ×6: Pf. Šuhor (v3 — NOVA) + Pf. Metlika ×2 (v4 Sveržaki? + v9) + Pf. Adlešiči ×2 (v8 banns + v18) + Pf. Črnomelj (v16 banns Z:621) + Pf. Semič (v14) + Pf. Trnovo? (v9 banns — bodoče!) + hrvaške (v15) — najširša geografska mreža linije"
+  },
+  {
+   "id": "C25",
+   "type": "MLADOLETNOST",
+   "text": "MLADOLETNOST: bride <24 v 12/18 + groom <24 v 3/18 (v2 22 + v12 23 + v18 22) — dokumenti 100% konsistentni (13× privolitve/dispensacija; brez dokumentov pri 24+ parih v1/v5/v8/v16 ✓ + vdovi v14/v15) — ABGB večina 24 let = pravilo linije POTRJENO tretje leto"
+  },
+  {
+   "id": "C26",
+   "type": "DUHOVNIKI",
+   "text": "DUHOVNIKI: Jos. Rauy ×18/18 (monopol nadaljevan — 1886 Dovgan? → 1887+ Rauy; Gliha 1889 ×1 + Bulovec 1890 ×1 izostala); vse podpise »Jos. Rauy [M.]« (označba M.? [~] — cf. P116 provisor)"
+  },
+  {
+   "id": "C27",
+   "type": "STAROSTI",
+   "text": "STAROSTI: ženini 22–39 (avg 26.9; najstarejši Vranešič 39 v8 — par 39×29); neveste 19–35 (avg 23.5; najstarejša v15 vdova 35, najmlajša v18 Pezdirec 19); brez lomkov letos (P119 19¾ izostal)"
+  }
+ ],
+ "stats": {
+  "entries": 18,
+  "excluded": 0,
+  "anomalies": 14,
+  "crossChecks": 27,
+  "gribljeMarriages": 2,
+  "gribljeHouses": [
+   20,
+   87
+  ],
+  "vitals": 550,
+  "blocks04455": 33,
+  "p80Houses": 46,
+  "dateCounts": {
+   "januar": 4,
+   "februar": 5,
+   "marec": 0,
+   "april": 0,
+   "maj": 3,
+   "junij": 0,
+   "julij": 0,
+   "avgust": 1,
+   "september": 1,
+   "oktober": 0,
+   "november": 4,
+   "december": 0
+  },
+  "priests": {
+   "Jos. Rauy": 18
+  },
+  "ageGrooms": {
+   "min": 22,
+   "max": 39,
+   "avg": 26.9
+  },
+  "ageBrides": {
+   "min": 19,
+   "max": 35,
+   "avg": 23.5
+  },
+  "underageBrides": 12,
+  "underageGrooms": 3,
+  "widows": 2,
+  "dispensations": 2,
+  "foreignDocuments": {
+   "Hrvaška": 4
+  },
+  "novelTypes": [
+   "Rosetta-statusa »[Hofname]s. Sohn/Tochter« (v14 — razrešitev 1886–1890!)",
+   "1. VD-OVI poroki linije ×2 (v14 roj. Konda 32 + v15 35)",
+   "1. ŽANDAR + 1. HRVAŠKA povezava (v15 Dolenja Pušća + 4 hrvaška dokumenta + 2 Zagrebčana-priče)",
+   "1. APOSTOLSKA dispensacija (v11 2. kanc. stopnja iste linije = prvi bratranci!)",
+   "k.k. Landesreg. Laibach ×3 (№ 5549 + Z:5672 + Z:11825)",
+   "Kürschner-u.-Wirth oče (v16 — združena poklica)",
+   "Zimmermann 3. pojav + rod. Bistra pri Vrhniki (v13 — najdaljši migracijski lok)",
+   "Hafner? (v10) + Lončar? (v3) + Löhner? (v10/v14/v15) = obrtniški poklici",
+   "Hofname Laipšl/Laipfl ×5 (v1+v8+v9 — mrežni ulomek)",
+   "bodoče-bivališče »wird...« ×2 (v8 + v9 z banns bodoče župnije!)",
+   "banns iz 2 župnij (v9 Metlika+Trnovo)",
+   "občine NOVE ×5 (Šuhor, Božjakovo-Rozalnice, Knežak?, Verblika?, Vrbiče?)",
+   "h87 2. dokaz (1889→1891) + h20 NOVA hiša",
+   "triplo poročni dan ×2 (26.1. + 3.2. + 23.11!) + vikend 21.+23.11. ×4",
+   "12 Pezdirec-oseb = rekord mreže linije",
+   "Jakša × Jakša isti-priimek-ista-vas brez dispensacije (v12)"
+  ]
+ },
+ "lead": {
+  "next": "P121 = poročna 04455 leto 1892",
+  "frame": "glava 1892 = Pag. 83 = s84 — VELIKA GLAVA »Traunungs=Buch« POTRJENA na s84 (cikel: velika glava vsako leto; 1891 brez = izjema ali slab zapis [~]) + v1–4 že orisani",
+  "note": "1892 v1 = Griblje 10 × Griblje 14?! (Muc-hiša! — Nicolaus Ložkar? [~] × Maria Brodnič? [~] iz Dobravice ½?); v2 = Krasinec 32 × Otok 5; v3 = Vranoviče 6 × Krasinec 32; v4 = Nov 22 rod. »na Hrvaškem«?! (2. hrvaška leta zapored!); krstne 1891 Muc-familije h61/h91 pričakovane (P119 lead)"
+ }
+}

@@ -775,6 +775,39 @@ export const HOUSE_VITALS: HouseVital[] = [
     whatEn: "marriage (Nov 24, 1890, entry 15) — groom Nicolaus POŽEK, ¼ [Gribljah], 29, GRIBLJE 61 (the 2nd family in the house — the 1887 baptism of Anton = Janez Muc cottager h61!; the anomaly A11 Muc-vs-Požek: 2 families or a tenant change!; POŽEK ×5 after 1889 ×3!) × Ana DRAGOŠ, quarter smallholder's daughter, 26, Dragoše? 5 [~] (the DRAGOŠ network ×3: 1887 v17 + the 1889 mother Barbara + 1890!; father Nicolaus Dragoš ¼ × Catharina STRAUS — STRAUS ×4!); witnesses: Math. Straus (¼ Gribljah) + Joh. Pegdirec/Perdinec (¼ Gribljah); priest Jos. Rauy; Befunden: the announcement of the Griblje commune Nov 24, 1890 no. 39 (the Griblje numbering 1→16→36→39 chronological 1:1!); BRINEC ×4 (the mother Anna cf. 1887/1888!)",
     status: "DOCUMENTED",
   },
+  // ——— P120 razširitev: POROČNA KNJIGA 04455 — polno leto 1891 (skeni 80–83 ==
+  // strani 79–82; letna glava 1891 brez velike glave; 18 vpisov = 2. največje
+  // leto: 1886:7 → 1887:21 → 1888:20 → 1889:10 → 1890:16 → 1891:18!) — vpisi z
+  // Griblji (2 poroki / 2 hiši: h87 v6 2. DOKAZ po 1889 v8 + h20 v7 NOVA):
+  // NOVELE: ROSETTA statusa »[Hofname]s. Sohn/Tochter« (v14 — razrešitev
+  // skrivnostne končnice 1886–1890!) + deležni sistem imenja Griblje (½/¼ ×14
+  // oseb!) + 1. VD-OVI POROKI LINIJE ×2 (v14 Šimonič geb. Konda 32 + v15 35!)
+  // + 1. ŽANDAR + 1. HRVAŠKA (v15 Pintar rod. Dolenja Pušća 3 + 4 hrvaška
+  // dokumenta + 2 Zagrebčana-priče!) + 1. APOSTOLSKA dispensacija (v11
+  // bratranca 2. kanc. stopnje iste linije + Landesreg. Z:5672!) + PEZDIREC
+  // ×12 oseb = rekord mreže! + dnevne gruče 26.1.×3 / 3.2.×3 / 21.+23.11.×4!
+  // Dokaz: research/issue17/parish-marriage-1891.json; verifikator:
+  // scripts/p120_parish_marriage_1891.py --check (I1–I11).
+  {
+    houseNo: "87",
+    bookSignature: "04455",
+    year: 1891,
+    scan: 81,
+    page: 80,
+    whatSi: "poroka (3. 2. 1891, vpis 6) — ženin Marcus PEZDIREC, ¼ Griblers. Sohn, 29, GRIBLJE 87 (2. POROČNI DOKAZ h87 po 1889 v8 Milek×Klejpec — v 2 letih!; oče Marcus Pezdirec ½ Gribler × Margaret KLEPEC = 1889 nevesta Klejpec → Klepec-mreža h87!) × Anna ŽELJKO, ¼ Griblers. Toht.? [~], 20, GRIBLJE 60 (NOVA hiša poročnega vzorca — krstna 1886 poroka Maria Bohor!; ŽELJKO ×3 h1/h60/h91 cf. krstna 1887!); priče: Johann MILEK (1887 h23 + 1889 h30 mreža!) + Nicolaus Željko (} ¼ gbl. — brat neveste?); duhovnik Jos. Rauy; Befünden: zglasnica občine Griblje 23/1. 1891 št: 5 + mündl. väterl. Einwilligung f. d. mj. Braut; PEZDIREC ×12 = rekord mreže linije",
+    whatEn: "marriage (Feb 3, 1891, entry 6) — groom Marcus PEZDIREC, quarter smallholder's son, 29, GRIBLJE 87 (the 2nd MARRIAGE EVIDENCE of h87 after 1889 v8 Milek×Klejpec — within 2 years!; father Marcus Pezdirec ½ Gribler × Margaret KLEPEC = the 1889 bride Klejpec → the Klepec network of h87!) × Anna ŽELJKO, quarter smallholder's daughter? [~], 20, GRIBLJE 60 (A NEW house of the marriage sample — the 1886 baptism marriage Maria Bohor!; ŽELJKO ×3 h1/h60/h91 cf. the 1887 baptism!); witnesses: Johann MILEK (the 1887 h23 + 1889 h30 network!) + Nicolaus Željko (} ¼ gbl. — the bride's brother?); priest Jos. Rauy; Befünden: the announcement of the Griblje commune Jan 23, 1891 no. 5 + the verbal paternal consent for the minor bride; PEZDIREC ×12 = the record network of the line",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "20",
+    bookSignature: "04455",
+    year: 1891,
+    scan: 81,
+    page: 80,
+    whatSi: "poroka (3. 2. 1891, vpis 7) — ženin Peter PEZDIREC, ¼ Griblers. Sohn, 24, GRIBLJE 20 (NOVA HIŠA — 1. poročni dokaz sploh!; oče Peter Pezdirec ½ Gribler × Catharina Deblič? [~]; PEZDIREC ×2 ISTI DAN z v6 Marcus 29 — brata? [~]!) × Dorothea KLEPEC, ½ Griblers. Toht.? [~], 20, Krasinec 37 (KLEPEC ×2 isti dan z v6 mati Margaret!; oče Peter Klepec ½ Gribler × Anna Marasinič?); priče: Johan Marasinič + Anton Brodarič? [~] (} ½ gbl.); duhovnik Jos. Rauy; Befünden: zglasnica občine Griblje 2/2. 1891 st: 7 + mündl. väterl. Einwilligung f. d. mj. Braut; 3.2. = TROJNO poročni dan (v5+v6+v7!)",
+    whatEn: "marriage (Feb 3, 1891, entry 7) — groom Peter PEZDIREC, quarter smallholder's son, 24, GRIBLJE 20 (A NEW HOUSE — the 1st marriage evidence ever!; father Peter Pezdirec ½ Gribler × Catharina Deblič? [~]; PEZDIREC ×2 the SAME DAY with v6 Marcus 29 — brothers? [~]!) × Dorothea KLEPEC, half smallholder's daughter? [~], 20, Krasinec 37 (KLEPEC ×2 the same day with the v6 mother Margaret!; father Peter Klepec ½ Gribler × Anna Marasinič?); witnesses: Johan Marasinič + Anton Brodarič? [~] (} ½ gbl.); priest Jos. Rauy; Befünden: the announcement of the Griblje commune Feb 2, 1891 no. 7 + the verbal paternal consent for the minor bride; Feb 3 = a TRIPLE wedding day (v5+v6+v7!)",
+    status: "DOCUMENTED",
+  },
   // ——— P82 razširitev: KRSTNA KNJIGA 04105 — polno leto 1887 (skeni 16–27 ==
   // strani 15–26; glava »Leto 18_87« na str. 15; leto 1888 se začne na str. 26
   // po row 106 z velikimi ciframi »1 8 8 8«) — vsi vpisi z Griblji (20) ———
