@@ -5425,3 +5425,17 @@ Work Log:
 Stage Summary:
 - **P118 DOKAZAN: poročna 04455 leto 1889 = 10/10 vpisov obojestransko + 66-letni ženin (rekord vsega časa!) + 1. nezakonska par (oba očeta prazna!) + v7 podpis varuha (brez duhovnika) + 2. duhovnik Gliha + ⅓ Gütl + Magd ×2 + mladoletnost-novela 7/10 + zgłasnica ×10/10 — poročna linija 4 leta globoko (1886–1889).**
 - QA **119/119** (qa-p118 = 119.) + verifier **67/67** + vitals **544** + bloki 04455 = **27** + p80 hiše **44**; P119 LEAD: **poročna 1890** (s77 = Pag. 76 glava + v1–6; s78 = v7–11; s79 = v12–16 — ≥ 16 vpisov = največje leto!; glava 1891 = s80).
+
+---
+Task ID: 93-b
+Agent: Z.ai Code (glavni)
+Task: P118 push GitLab+GitHub + trojsinhronizacija + Vercel produkcija kontrola + README Zrcaljenje svežina
+
+Work Log:
+- Commit **f7f025b** (P118: 12 datotek — parish.ts 7 novih blokov 1889 + qa-parish qa-p118 + sinhr. regresij ×32 (vitals 544 + blokov 27 + p85/p90/p92 NOVA-izjeme) + p80/p114/p115/p116/p117 skripte + evidence JSON + verifier p118 + notes + README + worklog).
+- Push: GitLab origin `3bf076b..f7f025b` ✓ + GitHub `3bf076b..f7f025b` ✓ → **trojsinhronizacija POTRJENA** (lokalni == GitLab API HEAD == GitHub ls-remote == f7f025bda3b81e3e71b2b870d9a615c2c659ba47; GitLab ls-remote 403 = trenotna read-API motnja, push dokazan s push-outputom + API — kot Task 87-b/92-b vzorec).
+- Vercel produkcija: GitHub commit status f7f025b → **state: failure »Deployment was blocked« (Vercel)** = ISTI SAML/team auth blok kot Task 86-b/87-b/89-b/90-b/92-b (5. potrditev 2026-10-22); produkcija griblje-museum.vercel.app = HTTP 200 (STARI P112 build 113/113); **ko bo človeški re-auth, naslednji push samodejno gradi 119/119**.
+- README »Zrcaljenje (aktualno)« posodobljen (f7f025b + 5. potrditev blokade + obljuba 119/119 po re-authu).
+
+Stage Summary:
+- **P118 TROJSINHRONIZIRAN (f7f025b); lokalno 119/119 + verifier p118 67/67 + p80/p79/p81/p83/p114/p115/p116/p117 --check PASS; Vercel blokada človeška (5. potrditev) — produkcija ostaja P112 dokler re-auth.**
