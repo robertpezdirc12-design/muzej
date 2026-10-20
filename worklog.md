@@ -5473,3 +5473,18 @@ Work Log:
 
 Stage Summary:
 - **P119 TROJSINHRONIZIRAN (7eda9a4); lokalno 120/120 + verifier p119 70/70 + p80/p79/p81/p83/p114/p115/p116/p117/p118 --check PASS; Vercel blokada človeška (6. potrditev) — produkcija ostaja P112 dokler re-auth.**
+
+---
+Task ID: 94-c
+Agent: Z.ai Code (glavni)
+Task: POPRAVEK GIT IDENTITETE na ravni repoja (user.email = robert.pezdirc12@gmail.com — lastnikova identiteta, Vercel-past avtorstva) + popravljen push GitLab+GitHub + Vercel kontrola
+
+Work Log:
+- Lastnikova navodila: nastavi git config user.email robert.pezdirc12@gmail.com **na ravni repoja, ne globalno** — Vercel blokada verjetno zaradi avtorja commita, ki ni lastnikov naslov (Vercel GitHub App pripisuje deployment avtorju HEAD commita).
+- `git config user.email "robert.pezdirc12@gmail.com"` + `git config user.name "Robert Pezdirc"` — **repo-level** (/home/z/muzej/.git/config); globalna identiteta (z@container) ohranjena nedotaknjena za druge repoje.
+- Preverjeno: `git config --local user.email` = robert.pezdirc12@gmail.com; `git config user.name` = Robert Pezdirc; global = z@container (spremenjen).
+- Zgodovina (P1–P119, z@container) ostaja nespremenjena — ni rewrite-a (vsi dokazani hashi v worklogu/README ostanejo veljavni); **od tega commita naprej vsak commit v muzeju nosi lastnikovo identiteto**; Vercel ocenjuje avtorja HEAD commita vsakega pusha → naslednji push je test hipoteze (avtor-epošta vs. SAML/team auth blok).
+- Ta commit = 1. commit z lastnikovo identiteto → push GitLab origin + GitHub (ls-remote 1:1) → GitHub commit status = Vercel verdikt.
+
+Stage Summary:
+- **Repo-level git identiteta = Robert Pezdirc <robert.pezdirc12@gmail.com> (ne globalno); vsi prihodnji pushi lastniški; 1. lastniški push poslan — Vercel verdikt v Task 95-b.**
