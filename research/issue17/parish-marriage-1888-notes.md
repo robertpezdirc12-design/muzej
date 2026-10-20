@@ -1,6 +1,6 @@
 # Poročna knjiga 04455 — polno leto 1888 (P117) — faza 1: okvir + enumeracija
 
-**Status:** FAZA 1 DOKAZANA — okvir potrjen (Pag. == sken − 1 v 71–76), 20/20 vpisov 1888 orisanih, glava 1889 najdena
+**Status:** FAZA 1+2 DOKAZANA — okvir potrjen + **20/20 vpisov obojestransko transkribiranih** (faza 2; evidence JSON + verifier + parish.ts + qa-p117)
 **Metoda:** 10 skenov (s71–s80; s71–s73 že iz P116, s74–s80 fetch 2026-10-20) + celostenska branja 5 skenov (s72–s76); zoom-crops = FAZA 2
 **Kontekst:** issue #18 — poročna linija 04455, leto 3 (P115 = 1886 → P116 = 1887 → P117 = 1888); fetch pot = base64 → hosted-images (kot P115/P116)
 
@@ -80,7 +80,63 @@
 13. **Duhovnik**: majhne signature zdesna (»Jos. Rauy«? [~] / »J. Rauy«?) — faza 2 (P115: Jos. Rauq/Rouy!)
 14. **Brez velike glave 1889** [~] = novela-kandidat (faza 2 zoom)
 
-## FAZA 2 — NAČRT (naslednja seja)
+
+## FAZA 2 — REZULTATI (20/20 obojestransko; 2026-10-21)
+
+### Popravki faza-1 orisa (×11)
+
+| vpis | faza 1 [~] | faza 2 (potrjeno) |
+|---|---|---|
+| 1 | ženinova vas »Logitsch? 5« + nevesta »Ana Krajovce« | **Zajčji vrh? 5 / Pfarre Toplice? [~]** (tuja župnija!) + nevesta **Ana HRASOVEC** (1. dokaz priimka) |
+| 2 | ženin »Michael Brine« | **Mathias BRINEC** (BRAT neveste 1887 v4!) |
+| 3 | ženin »Mimovec?«, nevesta »Ana Petrík?«, starost 53 | **Georg MRAVINEC? [~]** + **Ana POŽEK? [~]** + **58 LET!** (h21 = 1. dokaz) |
+| 4 | ženin »Mecne?«, nevestina vas »Štilke? 25« | **Nicolaus KNURE? [~]** + vas **Škrilje? [~]** |
+| 5 | ženin »Kouantič?«, nevesta »Hovnić?« | **Josef MARENTIČ? [~]** + **Maria STAJNIĆ? [~]**; status neveste neprepoznan |
+| 6 | datum »30.1.«? | **~~März~~ → APRIL 30** (30.4.1888); ženin **Johan FILAK?** (ne »Šoltar«) |
+| 7 | ženin »Kravce?«, nevesta »Maria Josefa, Krajovce? 43« | **Mathias STRAUS** (h32!) + **Maria JAKOŠ? [~]**, Krasinec 43 |
+| 8 | ženin »Josejc?« | **Mathias JAKLIČ? [~]** (oče Nicolaus × Maria Kambič; nevesta Kambič × **Brinec**!) |
+| 9 | datum »9.6.?« | **17.6.** + najbogatejši Befunden linije (6 dokumentov) |
+| 10 | »Gomec? 63«, »13.7.«, »Perko«, »Lesoš« | **ČRNOMELJ 63** (1. mesto!) + **18.7.** + **Perie? [~]** + **Lasič** |
+| 13 | ženin »Mathias Zugelj«, nevesta »Jaklič« | **MARTIN Zugelj** + **Katharina JAKŠA? [~]**; oče Georg Zugel × Anna Nemanič; mati neveste **Anna PLUT** |
+| 14 | »Murr 53«, vas »Gradec 22«, nevesta »Lieslt?« | **MURN 58** (2. 58-letnik!) + **Gradac 12? [~]** + **Ana SUSTEK** |
+| 15 | »Vosnar?«, vas »Žernelj? 13« | **Michail VRBANEK? [~]** + **Bubnjarci/Pf. Žakanje 11** (najbolj oddaljena župnija!) + nevesta iz **Zemelj? 17** |
+| 16 | ženin »Šupanca?« | **Georg SAJHNER?/Sayhnec? [~]** |
+| 17 | ženin »Novik?«, »gemeinde 35?« | **Johann KOŠIR? [~]**, Gradec 25 (+ 2. naslov [~]); nevesta **POVŠE 17**, Gradac 85 + **Verden? 9, Pf. Toplice** |
+| 18 | ženin »Javnič«, nevesta »Hrasović?« | **Nicolaus TASIČ? [~]** (oče Peter Tasič!) + **Maria HARASIMIČ? [~]** |
+| 19 | ženin »Javkič?«, vas »Krasec?« | **Mathias JAKLIČ? [~]** + **Zemelj? 25** (oče Nicolaus Jaklič × Katharina FILAK!) |
+| 20 | ženin »Kokoljič?«, vas »Cetvrtje?«, starost 23 | **Peter KOHAMIČ? [~]** + **Cerkvišče 22** + **28 LET** |
+| 12 | hiša »GRIBLJE 32 NOVA« (vpis 7) + »26 [~]« (vpis 12) | h32 potrjena (vpis 7); vpis 12 = **GRIBLJE 64** (P82 »26« dvom REŠEN!) |
+| 11 | ženin »Plet?/Pleč?«, nevesta »vdova Klevcev?« | **Josef PLUT** (oče Martin × Catharina Mala) + **Catharina GREGORIČ, VDOVA 24**, Vimorle? [~]/Pf. Semič + **MRTVAŠKI LIST Semič** |
+
+### Griblje poroke 1888 (faza 2): 4 poroke / 5 hiš
+- vpis 2: **h23 × h33** (BRATA Brinec!; h33 NOVA)
+- vpis 3: **Tribuče 9 × h21** (h21 = 1. poročni dokaz; 1889 v3 ženin h21 znova!)
+- vpis 7: **h32 × Krasinec 43** (h32 NOVA — Straus-veja, oče Marcus!)
+- vpis 12: **h64 × Cerkvišče 29** (h64 = 2. dokaz po 1886 v12)
+
+### Velike Novele faza 2
+1. **DUHOVNIK 1888 = JOS. RAUY PROVISOR ×20/20** (nov status; cf. P116 »Rouy« pisec slovenskih vpisov = ISTA oseba? [~])
+2. **NAJBOGATEJŠI BEFUNDEN LINIJE** (v9, 17.6.): zglasnica + Verzeichnis? k.k. Landkrayin 2.6. Z: 5752 + RGBl № 153 (6.4.1882) + DISPENS 3. stopnje (Ordinariat 12.6. Z: 1109) + k.k. Bez.-Hauptmannschaft 14.6. Z: 4574 + Ordin. Laibach 17.6. № 1143 + mündliche Einwilligung = poroka ISTI dan
+3. **SESTRI CERNIČ POTRJENE** (v6 Katharina + v16 Maria, isti starši Nicolaus Cernič × Katharina Štribljar?/Šribljan?, obe h42)
+4. **KOTTLIN-PRIČA** (v17 = 1887 v21 ženin, 61-letnik — 1. cross-link ženin→priča med leti!)
+5. **TASIČ popravek** (v18 oris »Javnič« napačen — oče Peter Tasič × Anna Harasimič; cf. 1887 v1 Peter × Anna Starašinič = 2. Peter Tasič? [~])
+6. **JAKLIČ ×4 + FILAK ×4 + PLUT ×3 + KAMBIČ ×4 + PEGDIREC ×9+** — mrežni priimki 1888
+7. **TAUF-NOVELA ×3** (v10 48-letnik Taufsohn? + v14 Ana Sustek 43 Taufstochter? + v15 Vrbanek 24)
+8. **NOVI DOKUMENTNI TIPI**: mrtvaški list (v11) + Communalzettel Gradac (v14, 21.10. št. 5) + Nedelovna svjedodžba proglašenstva (v15, broj 2979) + virna izjava sodnije Metlika/polnoletnost + §102 (v19) + Wehrmannsschein? (v11) — slovensko-nemške mešane vrste
+9. **2× 58-LETNI ŽENIN** (v3 Mravinec + v14 Murn — rekord linije ostaja 61/1887)
+10. **NEVESTA 17** (v17 Povše — prag 1887 ponovljen); žena starejša ×2 (v18: 34×25; v20: 37×28)
+11. **GEOGRAFIJA**: Pf. Toplice? ×2 (v1 + v17) + Pf. Adlešiče (v3) + Pf. Semič (v11) + **Pf. Žakanje** (v15, ~45 km!) + mesto **Črnomelj** (v10) + Borovnica ×2 + Rudolfswert (Novo mesto, k.k. Bez.Ger. 27.10. št. 13101)
+12. **3 DVOJNI DNEVI** (6.2. ×2, 12.11. ×2, 19.11. ×2 — faza 1 potrjena) + zimska vrzel 20.11.→11.2.
+13. **mati ženina PRAZNA** (v14 Sustek — pika namesto matere!)
+14. **statusi-neznank ×6** (A3: Gütlbauer?/Gütlvestlar?/Schwiegersohn?-kompleks/Gütlstar?/Bef?-tor? — novela-kandidat statusnega leksikona)
+
+### Artefakti faza 2
+- evidence `research/issue17/parish-marriage-1888.json` (20 entries + 10 excluded + 16 anomalij A1–A16 + 26 crossChecks + stats vitals 537 + P118 lead)
+- verifier `scripts/p117_parish_marriage_1888.py` (I1–I11, --check)
+- parish.ts: 4 NOVI bloki 04455/1888 (h23-1888/h32/h33/h64-1888) + h23-1887 popravek »Michael« → Mathias Brinec → **bloki 04455 = 20; vitals 537**
+- qa-p117 = **118. kontrola** (+ sinhr. regresij: p80/p114/p115/p116 konstante + p80 hiše 38 → 40)
+
+## FAZA 2 — NAČRT (arhiv — izvedeno zgoraj)
 
 1. zoom-crops s71–s76 (L/R, ×2–5 LANCZOS) — ROWS dict 20 vpisov 1888 (s71: y-vrstice 1–7, s72: 8–10, s73: 11–16, s74: 17–20) + 1889 lead vrstice (s75: 1–6, s76: 7–10)
 2. transkripcija 20/20 vpisov obojestransko (starši/Befstände/Befunden/duhovnik)

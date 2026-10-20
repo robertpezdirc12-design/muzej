@@ -58,7 +58,7 @@ EXPECTED_DISPENSATIONS = 6
 EXPECTED_SIGNED = 9
 EXPECTED_UNSIGNED = 15
 EXPECTED_VITALS = 533           # P116: 528 + 5 novih poročnih blokov (h23/h37/h69/h3/h10)
-BLOCKS_04455 = 16               # 7 okvir 1886 + sidra 1882/1885/1887×2 (P115) + 5 blokov 1887 (P116: h23/h37/h69/h3/h10)
+BLOCKS_04455 = 20               # 7 okvir 1886 + sidra (P115) + 5 blokov 1887 (P116) + 4 bloki 1888 (P117: h23-1888/h32/h33/h64-1888)
 DATE_COUNTS = {"januar": 2, "februar": 10, "marec": 3, "april": 0, "maj": 1,
                "junij": 1, "julij": 0, "avgust": 2, "september": 0, "oktober": 0,
                "november": 5, "december": 0}
@@ -191,12 +191,12 @@ def main() -> int:
     # ---------- I8: parish.ts bloki 04455 ----------
     ts = open(PARISH_TS).read()
     blocks_m = re.findall(r'houseNo:\s*"([^"]*)",\s*bookSignature:\s*"04455",\s*year:\s*(\d{4}),\s*scan:\s*(\d+)', ts)
-    check("I8 bloki 04455 = 16 (P116 +5)", len(blocks_m) == BLOCKS_04455, str(len(blocks_m)))
+    check("I8 bloki 04455 = 20 (P116 +5, P117 +4)", len(blocks_m) == BLOCKS_04455, str(len(blocks_m)))
     h1886 = sorted((h for h, y, _ in blocks_m if y == "1886"), key=int)
     check("I8b hiše 1886 = [16,25,31,56,60,65,71]", ",".join(h1886) == GRIBLJE_HOUSES_TS, ",".join(h1886))
     anchors = [(h, y, s) for h, y, s in blocks_m if y != "1886"]
-    check("I8c sidra 9 (1882 sk50 · 1885 · 1887×7 — P116 +5 blokov 1887)",
-          len(anchors) == 9 and sorted((y for _, y, _ in anchors)) == ["1882", "1885"] + ["1887"] * 7
+    check("I8c sidra 13 (1882 sk50 · 1885 · 1887×7 · 1888×4 — P116 +5, P117 +4)",
+          len(anchors) == 13 and sorted((y for _, y, _ in anchors)) == ["1882", "1885"] + ["1887"] * 7 + ["1888"] * 4
           and any(s == "50" for _, y, s in anchors if y == "1882"),
           str(anchors))
     # pini novih brani
@@ -219,7 +219,7 @@ def main() -> int:
     check("I9 qa-p115", '"qa-p115-parish-marriage-1886"' in qa)
     check("I9b qa-p115 hiše 1886", "16,25,31,56,60,65,71" in qa)
     # vitals 528 regresijska zaščita v qa-p115
-    check("I9c vitals 533 zaščita (P116)", "HOUSE_VITALS.length !== 533" in qa[qa.index("const p115Marr"):])
+    check("I9c vitals 537 zaščita (P117)", "HOUSE_VITALS.length !== 537" in qa[qa.index("const p115Marr"):])
 
     # ---------- I10: README + notes ----------
     rd = open("README.md").read()
