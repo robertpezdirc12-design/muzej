@@ -5358,3 +5358,19 @@ Work Log:
 
 Stage Summary:
 - **P116 TROJSINHRONIZIRAN (c52d3f1); lokalno 117/117 + verifier p116 51/51 + p81/p80/p79/p115/p114 --check PASS; Vercel blokada človeška (3. potrditev) — produkcija ostaja P112 dokler re-auth.**
+
+---
+Task ID: 91
+Agent: Z.ai Code (glavni)
+Task: P117 faza 1 — poročna 04455 leto 1888: fetch s74–s80 + okvir (Pag. == sken−1 v 71–76) + enumeracija 20/20 vpisov 1888 + glava 1889 (s75, brez velike glave!) + 1889 vpisi 1–10 orisani + notes + README
+
+Work Log:
+- Fetch: 7 skenov s74–s80 (200 JPEG, delujoča pot base64 → hosted-images; inventory 192 URL nespremenjen); na zalogi zdaj s71–s80 (10 skenov).
+- **OKVIR POTRJEN**: 1888 = **skeni 71–74 == Pag. 70–73**; Pag. == sken − 1 v 71–76 (s73=72, s74=73, s75=74, s76=75 brane 1:1); s72 label na prvi izdaji zgledal »91« [~] = fancy 7 (sekvenci 72/73 dokazujeta 71 — zoom v fazi 2); **vpisi 1–20** (razpored 7+3+6+4); vpisi 1–7 = P116 excluded X1–X8 (s71/Pag. 70 pod glavo 1888).
+- **GLAVA 1889 = Pag. 74 = s75**: BREZ velike glave [~] (novela-kandidat — 1. tak začetnik leta v liniji; letništvo v datumskem stolpcu vsake vrstice); **vrstice se ponastavijo na 1** = 3. potrditev novele P83; 1889 vpisi 1–6 (s75) + 7–10 (s76 = Pag. 75) orisani.
+- **Enumeracija 20/20 vpisov 1888** (oris): 2 × Griblje poroki — **vpis 2 = Michael Brine GRIBLJE 23 × Maria Dohlić GRIBLJE 33** (h23 = 2. poročni dokaz, Brinec-družina 2 generaciji!) + **vpis 7 = Mathias Kravce? h32 NOVA [~]**; TUJCI 15+ vasi (Gradec ×5, Boršt ×2, Gern, Otok 15!...); statusi vse ulomki »¼ ždelar?« [~] + **TAUFBEWERKER ×2 + TAUFBEWERTOCHTER (v10 Perko 48 + v14 Ana 43 + v14 Murr 53!) = NOV STATUS LINIJE**; vdova 24 (v11); 3 mlade neveste (17/17 [~]/19); dvojni dnevi ×3 (12.11. ×2, 19.11. ×2, 11.2.1889 ×2); JAVNIČ/JAVKIČ isti dan (možna brata [~]); Boginja vas 42 CERNIČ ×2 (sestri? [~]); PRILOŽJE 18 (cf. P115) + OTOK 15 (cf. P95); **GRIBLJE 26** (v12 — P82 krstna dvom »26 [~]« rešen s poročnim dokazom!); zimska vrzel Dec–Jan (20. → 11.2.).
+- 1889 oris: v2 = **h32 ×2 v 2 letih × h16** (P115 re-read Lavřin!), v3 = **h21 × h24** (2 krstni hiši), v4 = nevesta h7? [~], v8 = **h30 NOVA × h31, ženin 60 LET**, v9 = TOME nadaljevanje (Gern); P118 LEAD: poročna 1889 (s77+ za konec leta).
+- Artefakti: notes `research/issue17/parish-marriage-1888-notes.md` (okvir + tabela 20 vpisov + 1889 lead + 14 novel + faza 2 načrt) + README P117 bullet (naslov → po P117 faza 1) + fetch skripta /home/z/.p116tmp/p117_fetch.py.
+
+Stage Summary:
+- **P117 FAZA 1 DOKAZANA: poročna 04455, leto 1888 = okvir 1–20 potrjen (s71–s74), glava 1889 najdena (s75, brez velike glave — novela-kandidat), 2 Griblje poroki (h23 ×2 dokaz + h32 NOVA), TAUFBEWERKER-novel, P82 dvom h26 rešen; FAZA 2 (transkripcija + evidence + verifier + parish.ts + qa-p117) = NASLEDNJA.**
