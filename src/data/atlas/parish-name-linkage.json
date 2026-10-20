@@ -1755,7 +1755,7 @@
      "role": "poroka-ženin",
      "book": "04455",
      "year": 1885,
-     "anchor": "ženin Janez Jakobič [~]",
+     "anchor": "ženin Janez Jakobič, Leinweber",
      "src": "parish"
     },
     {
@@ -1763,7 +1763,7 @@
      "role": "poroka-starši-ženina",
      "book": "04455",
      "year": 1885,
-     "anchor": "Maria née Podlirec [~]",
+     "anchor": "Maria née PEGDIREC",
      "src": "parish"
     }
    ],
@@ -1830,16 +1830,18 @@
      "role": "poroka-nevesta",
      "book": "04455",
      "year": 1886,
-     "anchor": "nevesta Ana Filak [~]",
-     "src": "parish"
+     "anchor": "nevesta Ana Filak, Lavřin",
+     "src": "parish",
+     "anchorHouse": "16"
     },
     {
      "surname": "Gregorič",
      "role": "poroka-starši-neveste",
      "book": "04455",
      "year": 1886,
-     "anchor": "Anna née Gregorič [~]",
-     "src": "parish"
+     "anchor": "Anna née Gregorič ✓",
+     "src": "parish",
+     "anchorHouse": "16"
     },
     {
      "surname": "Šambie",
@@ -2075,7 +2077,7 @@
      "role": "poroka-ženin",
      "book": "04455",
      "year": 1886,
-     "anchor": "ženin Jurij Klepec [~]",
+     "anchor": "ženin Jurij Klepec, ½ zemlj. sin",
      "src": "parish"
     },
     {
@@ -2338,7 +2340,7 @@
      "role": "poroka-ženin",
      "book": "04455",
      "year": 1886,
-     "anchor": "ženin Martin Pavie [~]",
+     "anchor": "ženin Martin Papič",
      "src": "parish"
     }
    ],
@@ -2408,16 +2410,18 @@
      "role": "poroka-ženin",
      "book": "04455",
      "year": 1886,
-     "anchor": "ženin Johann Šimec [~]",
-     "src": "parish"
+     "anchor": "ženin Johann Šimec, Lavřin",
+     "src": "parish",
+     "anchorHouse": "56"
     },
     {
      "surname": "Jakobič",
      "role": "poroka-starši-ženina",
      "book": "04455",
      "year": 1886,
-     "anchor": "Maria née Jakobič [~]",
-     "src": "parish"
+     "anchor": "Maria née Jakobič)",
+     "src": "parish",
+     "anchorHouse": "56"
     },
     {
      "surname": "Šimec",
@@ -3241,7 +3245,7 @@
      "role": "poroka-nevesta",
      "book": "04455",
      "year": 1886,
-     "anchor": "Maria Bohor [~]",
+     "anchor": "nevesta Maria Bohor, LandwirthsTochter",
      "src": "parish"
     },
     {
@@ -3249,7 +3253,7 @@
      "role": "poroka-starši-neveste",
      "book": "04455",
      "year": 1886,
-     "anchor": "Katharina née Križan [~]",
+     "anchor": "Katharina née Križan ✓",
      "src": "parish"
     }
    ],
@@ -3492,8 +3496,9 @@
      "role": "poroka-ženin",
      "book": "04455",
      "year": 1886,
-     "anchor": "ženin Mathias Mileh [~]",
-     "src": "parish"
+     "anchor": "ženin Mathias Milek",
+     "src": "parish",
+     "anchorHouse": "65"
     }
    ],
    "surnameWitnesses": [
@@ -3625,7 +3630,7 @@
      "role": "poroka-nevesta",
      "book": "04455",
      "year": 1886,
-     "anchor": "Maria Straus [~], Leinwweber, 34, GRIBLJE 71",
+     "anchor": "Maria Straus, Lavřin + MÜNDEL (varovanka!), 34, GRIBLJE 71",
      "src": "parish"
     },
     {
@@ -3633,7 +3638,7 @@
      "role": "poroka-starši-neveste",
      "book": "04455",
      "year": 1886,
-     "anchor": "Anna née Stubler [~]",
+     "anchor": "Anna née Stubler ✓",
      "src": "parish"
     },
     {
@@ -4685,5 +4690,6 @@
   "krstna 1887 (skeni 16+) — širitev vzorca po letih (issue #18)",
   "per-hišne kronološke verige: 1825 PT/PUA lastnik → matrike po letih → 20. st. pripisi (tri-virske hiše 13/36/71 najmočnejši kandidati)",
   "poln prepis po letih = lastniška prioriteta (izven vzorca)"
- ]
+ ],
+ "p115ReReadNote": "P115 (faza 2, 2026-10-20): 13 sidrov posodobljenih na P115 re-read branja (anchor stringi + anchorHouse preusmeritve 15→16, 36→56, 63→65); polja surname NESPREMENJENA = zamrznjen P81 cenzus snapshot"
 }

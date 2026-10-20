@@ -4012,4 +4012,67 @@ push(
     : p114Errors.join("; "),
 );
 
+// ——— qa-p115: župnija Podzemelj — poročna knjiga 04455, polno leto 1886 (P115; NOVA linija po zaključku krstne 04105!) ———
+const p115Marr = HOUSE_VITALS.filter((h) => h.bookSignature === "04455");
+const p115Errors: string[] = [];
+if (p115Marr.length !== 11)
+  p115Errors.push(`poročni bloki (04455) ≠ 11 (${p115Marr.length})`);
+const p115M1886 = p115Marr.filter((h) => h.year === 1886);
+const p115Houses1886 = p115M1886.map((h) => h.houseNo).sort();
+if (p115Houses1886.join(",") !== "16,25,31,56,60,65,71")
+  p115Errors.push(`hiše 1886 (04455) ≠ [16,25,31,56,60,65,71] — najdeno: ${p115Houses1886.join(",")} (P115 popravki: 36→56, 63→65, 15→16!)`);
+// P115 re-read sidra (nove brane v whatSi)
+const p115Pins: Array<[string, string]> = [
+  ["31", "STRAUS"], ["31", "Papič"], ["31", "franz Dovgan"],
+  ["56", "PEGDIREC"], ["56", "SESTRIN+BRAT"], ["56", "BREZ PODPISA"],
+  ["60", "KLEPEC"], ["60", "BREZ PODPISA"],
+  ["65", "POŽEK"], ["65", "GRIBLJE 64"], ["65", "BREZ PODPISA"],
+  ["16", "GRIBLJE 16"], ["16", "h15 še vedno sidro 1887"], ["16", "BREZ PODPISA"],
+  ["25", "PRILOŽJE 25"], ["25", "Klepec"], ["25", "TOMEC"],
+  ["71", "Martin KRIŽAN"], ["71", "MÜNDEL"], ["71", "Landwirth"],
+];
+for (const [hn, pin] of p115Pins) {
+  const blk = p115M1886.filter((h) => h.houseNo === hn);
+  if (blk.length === 0) {
+    p115Errors.push(`pin ${hn} (${pin}) — hiša ${hn} ni med 1886 bloki`);
+    continue;
+  }
+  if (!blk.some((cur) => cur.whatSi.toLowerCase().includes(pin.toLowerCase())))
+    p115Errors.push(`pin hiša ${hn} (${pin}) manjka`);
+}
+// stara P80 branja IZTEKLA (natančni stari fragmenti — popravna opomba sme citirati kratek »staro«)
+const p115OldReadings = [
+  "Dorothea Perdinec", "Perdinec [~], 30, Krasinec 38", "Mathias Kukec",
+  "Katharina Peršić", "Marko Perzan [~]", "Martin Pavie", "Gasthausmeister [~]",
+  "Vinica 9;", "Vinica 10 rad.", "Maria née Podlirec", "née Stabek",
+  "bivališče neveste nečitljivo", "GRIBLJE 63", "GRIBLJE 36 (starši",
+];
+for (const old of p115OldReadings) {
+  if (p115Marr.some((h) => h.whatSi.includes(old)))
+    p115Errors.push(`staro P80 branje še v bloku 04455: »${old}«`);
+}
+// duhovnik: Dovgan podpisal 3/7 blokov 1886 (h31, h25, h71) — 4 BREZ PODPISA (h56, h60, h65, h16)
+const p115Dovgan = p115M1886.filter((h) => h.whatSi.includes("Dovgan")).length;
+if (p115Dovgan !== 3)
+  p115Errors.push(`Dovgan podpisi 1886 ≠ 3 (${p115Dovgan} — h31/h25/h71)`);
+const p115Unsigned = p115M1886.filter((h) => h.whatSi.includes("BREZ PODPISA")).length;
+if (p115Unsigned !== 4)
+  p115Errors.push(`BREZ PODPISA 1886 ≠ 4 (${p115Unsigned} — h56/h60/h65/h16; vpisi 4–19 neodpisani!)`);
+// sidro 1885: Pegdirec (P115 popravek »Podlirec«)
+const p115Anchor = p115Marr.find((h) => h.houseNo === "13" && h.year === 1885);
+if (!p115Anchor || !p115Anchor.whatSi.includes("PEGDIREC") || p115Anchor.whatSi.includes("née Podlirec"))
+  p115Errors.push("sidro 1885 (h13): mati ženina ≠ PEGDIREC ali staro »Podlirec« še prisotno");
+// kumulativ: krstna + poročna — vitals 528 nespremenjen (poročni bloki so že v 528 od P80)
+if (HOUSE_VITALS.length !== 528)
+  p115Errors.push(`HOUSE_VITALS ≠ 528 (${HOUSE_VITALS.length} — poročni popravki ne smejo spreminjati vitals!)`);
+push(
+  "qa-p115-parish-marriage-1886",
+  "P115: ŽUPNIJA PODZEMELJ — POROČNA KNJIGA 04455 (1873–1922), POLNO LETO 1886 (issue #18; SAMPLE-TRANSCRIPTION-M1886; NOVA linija po zaključku krstne 04105!): okvir P80 POTRJEN 1:1 (skeni 61–65 == Pag. 60–64; Pag. == sken − 1 v 61–66; **24 vpisov** = 3+5+7+5+4; meja na Pag. 60: vpis 22/1885 (Griblje 13 × 25 = P80 sidro h13) pod ločilnico »1 8 8 6«; glava 1887 Pag. 65) — **FAZA 2: 24/24 vpisov transkribiranih OBOJESTRANSKO (starši/priče/Urkunden/duhovnik!)**; **P80 RE-READ POPRAVKI ×11** (max zoom + 1:1 primerjava števk): **h36→h56** (vpis 4 — Johann Šimec × Dorothea PEGDIREC, Krasinec 28) + **h63→h65** (vpis 12 — Mathias Milek ½ Gütler × Katharina POŽEK, **GRIBLJE 64 = NOVA hiša okvira**!) + **h15→h16** (vpis 17 — Ana Filak Lavřin; h15 OSTAJA sidro 1887!) + **h25→PRILOŽJE 25** (vpis 20 — Jurij Klepec; IZBRISAN zapis pod vasjo; hiša 25 Griblje brez poročnega dokaza!) + priimki: Klepec (11, ne »Kukec«) + Tomec (20, ne »Gomec«) + Požek (12, ne »Peršić«) + Pegdirec (4/5/12/1885, ne »Perdinec«/»Podlirec«) + **Martin KRIŽAN, Landwirth, Krasinec 9** (23, ne »Marko Perzan, Vinica 9«) + Straus (2, ne »Špelcer«); **VELIKE NOVELE 1886: 6 POROK NA ISTI DAN 15.2. (vpisi 3–8 = pustna masa!)** + **DVA SESTRSKA DVOJNA POROKA** (vpis 4+5 = Pegdirec sestra+brat ISTEGA DNE z ISTIMI starši; vpis 9+21 = Musié sestri Anna 19 + Dorothea 31, 9 mesecev narazen!) + **VDOVE 4 (+1 dvom)** (vpis 7 = 23-letna »Witwe Schweiger«!) + **vpis 19 = OBADVA LEDIGA pri 43/42** (faza 1 »2 vdova« NAPAKA; 1. POLICIST vzorca — Polizeidiener straža № 56 »St. Greina«?; »Podze-meč« = sicerptova pisava Podzemelj!) + **MÜNDEL-TIMELINE (vpis 23)**: Maria Straus (34, h71) poročena kot varovanka — mati Ana Strauš † 7.9.1886 (mrliška!) → kronologija 1:1; skrbnik = verjetno ženin vpis 22 (**Vormund**, 23!) + **PREČRTANO (vpis 24)**: ~~Josef~~ pod Antonom (oče Josef Bufala!; rod = Butala cf. vpis 18) + **DUHOVNIK franz Dovgan = 9 podpisov** (vpisi 1–3 + 20–24 + 1885; **VPISI 4–19 (16!) PRAZEN STOLPEC** — masovna poroka + poletje!) + **DISPENSACIJE ×6** (2./3./3./4. kan. stopnja; Hochfürstl. Konsensi; k.k. Kreisgericht Metlika/Črnomelj) + **EHEVERLAGS-CONTRACT vpis 22** (poročna pogodba pred notarjem 21.11.1886; faza 1 »Villach« = misread »verlags«!) + **»Krasi-nec« = PRELOM besede Krasinec** (faza 1 »Vinica 9/10« popravljeno!) + PEGDIREC-mreža ×7 = najgostejša družina + priča vpis 10 = ženinov oče kot VAISENVORMUND (skrbnik otrok neveste-vdove!) + statusi-novosti (Müllner, Gürtler, Zimmermann, Gasthaus-Wirth, Vormund, Mündel, Polizeidiener, Bürger von Tschernembl, ¼ Gütler) + zunanji (vpis 1 neznana vas [~], vpis 18 Vidošice? 8 pf. Metlika, priča 9 Črnomelj mestan); vitals **528 nespremenjen** (poročni bloki že od P80); bloki 04455 = **11** (7 okvir 1886 + sidra 1882/1885/1887×2); **P116 LEAD: poročna 1887** (glava Pag. 65 = s66, vpisi 1–4/1887; sidra h71 Mathias Straus + h15 Jaklič × Brinec že pinned); EXCLUDED: 5 (sidro 1885 + 4× glava 1887); skripta scripts/p115_parish_marriage_1886.py (I1–I10); status SAMPLE-TRANSCRIPTION-M1886",
+  "P115: PARISH OF PODZEMELJ — MARRIAGE REGISTER 04455 (1873–1922), THE FULL YEAR 1886 (issue #18; SAMPLE-TRANSCRIPTION-M1886; a NEW line after the baptism 04105 was finished!): the P80 frame CONFIRMED 1:1 (scans 61–65 == pages 60–64; page == scan − 1 in 61–66; **24 entries** = 3+5+7+5+4; the boundary on p. 60: entry 22/1885 (Griblje 13 × 25 = the P80 h13 anchor) under the separator »1 8 8 6«; the 1887 header on p. 65) — **FAZA 2: 24/24 entries transcribed BOTH-SIDES (parents/witnesses/Urkunden/priest!)**; **THE P80 RE-READ CORRECTIONS ×11** (max zoom + 1:1 digit comparison): **h36→h56** (entry 4 — Johann Šimec × Dorothea PEGDIREC, Krasinec 28) + **h63→h65** (entry 12 — Mathias Milek ½ Gütler × Katharina POŽEK, **GRIBLJE 64 = A NEW house of the frame**!) + **h15→h16** (entry 17 — Ana Filak Lavřin; h15 REMAINS the 1887 anchor!) + **h25→PRILOŽJE 25** (entry 20 — Jurij Klepec; an ERASED entry under the village; house 25 Griblje without a marriage proof!) + surnames: Klepec (11, not »Kukec«) + Tomec (20, not »Gomec«) + Požek (12, not »Peršić«) + Pegdirec (4/5/12/1885, not »Perdinec«/»Podlirec«) + **Martin KRIŽAN, a full farmer, Krasinec 9** (23, not »Marko Perzan, Vinica 9«) + Straus (2, not »Špelcer«); **THE BIG 1886 NOVELS: 6 WEDDINGS ON THE SAME DAY FEB 15 (entries 3–8 = the carnival mass!)** + **TWO SIBLING DOUBLE WEDDINGS** (entries 4+5 = the Pegdirec sister+brother THE SAME DAY with THE SAME parents; entries 9+21 = the Musié sisters Anna 19 + Dorothea 31, 9 months apart!) + **WIDOWS 4 (+1 doubt)** (entry 7 = the 23-year-old »Witwe Schweiger«!) + **entry 19 = BOTH SINGLE at 43/42** (the faza-1 »2 widows« WRONG; the 1st POLICEMAN of the sample — Polizeidiener, post № 56 »St. Greina«?; »Podze-meč« = the scribe's odd writing of Podzemelj!) + **THE WARD TIMELINE (entry 23)**: Maria Straus (34, h71) married as a ward — the mother Ana Strauš † Sep 7, 1886 (death register!) → a 1:1 chronology; the guardian = probably the groom of entry 22 (a **Vormund**, 23!) + **THE STRUCK-OUT NAME (entry 24)**: ~~Josef~~ under Anton (the father Josef Bufala!; the kin = Butala cf. entry 18) + **THE PRIEST franz Dovgan = 9 signatures** (entries 1–3 + 20–24 + 1885; **ENTRIES 4–19 (16!) EMPTY COLUMN** — the mass wedding + the summer!) + **DISPENSATIONS ×6** (the 2nd/3rd/3rd/4th canonical degrees; the princely consents; the k.k. Kreisgericht Metlika/Črnomelj) + **THE EHEVERLAGS-CONTRACT entry 22** (a marriage property contract before a notary Nov 21, 1886; the faza-1 »Villach« = a misread of »verlags«!) + **»Krasi-nec« = the LINE-BREAK of Krasinec** (the faza-1 »Vinica 9/10« corrected!) + the PEGDIREC network ×7 = the densest family + the witness of entry 10 = the groom's father as the ORPHANS' GUARDIAN (probably of the widow-bride's children!) + status novelties (Müllner, Gürtler, Zimmermann, innkeeper, Vormund, Mündel, Polizeidiener, a burgher of Tschernembl, ¼ Gütler) + the externals (entry 1 an unknown village [~], entry 18 Vidošice? 8 parish Metlika, witness 9 a burgher of Črnomelj); vitals **528 unchanged** (the marriage blocks counted since P80); the 04455 blocks = **11** (7 of the 1886 frame + the anchors 1882/1885/1887×2); **the P116 LEAD: the marriages of 1887** (the header p. 65 = s66, entries 1–4/1887; the anchors h71 Mathias Straus + h15 Jaklič × Brinec already pinned); EXCLUDED: 5; the script scripts/p115_parish_marriage_1886.py (I1–I10); status SAMPLE-TRANSCRIPTION-M1886",
+  p115Errors.length === 0,
+  p115Errors.length === 0
+    ? `24 vpisov (okvir P80 potrjen 1:1) · **P80 popravki ×11 (h56/h65/h16/Priložje + 6 priimkov!)** · **6 porok 15.2. + 2 sestrska dvojna poroka (Pegdirec isti dan + Musié 9 mesecev)** · vdove 4+1 (najmlajša 23!) · vpis 19 obadva lediga 43/42 (1. policist!) · Mündel-timeline h71 (mati † 7.9. → hči 21.11.) · prečrtano ~~Josef~~ (vpis 24) · **franz Dovgan 9 podpisov, 16 vpisov brez** · dispensacije ×6 + Eheverlags-Contract · vitals 528 · bloki 04455 = 11 · **P116 LEAD: poročna 1887**`
+    : p115Errors.join("; "),
+);
+
 }

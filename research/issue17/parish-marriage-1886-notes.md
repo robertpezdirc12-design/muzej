@@ -61,8 +61,41 @@
 8. Starostne skrajnosti: ženin 48 (vpis 21) / nevesta 17 (vpis 3); wesenograd Poroka per status: girtlbr/½/¼ + Lavrin + Dienstmagd + Wirth
 9. **Dispensacije** (Vermerke): vpisi 7, 8, 9, 13, 15, 18 — kanonične ovire (velika raznolikost: Bezirksgericht Črnomelj, gospoška Grabel, Villach Ehevertrag!)
 
-## Faza 2 (NASLEDNJA)
+## FAZA 2 — ZAKLJUČENA (polna transkripcija + forenzika)
 
-- polna transkripcija 24 vpisov (obe strani formatnika) → evidence JSON `research/issue17/parish-marriage-1886.json`
-- verifier `scripts/p115_parish_marriage_1886.py` → parish.ts (bloki 04455 1886) → qa-p115 → README/worklog
-- potreben zoom: vpis 12 (hiša 63/65), vpis 19 (vas), vpis 24 (prečrtano ime), duhovnik (Dorgun?)
+**24/24 vpisov transkribiranih OBOJESTRANSKO** (leva: par, desna: starši/priče/Urkunden/duhovnik) → `parish-marriage-1886.json` + verifier `scripts/p115_parish_marriage_1886.py` + parish.ts (P80 bloki popravljeni) + qa-p115 (116. kontrola).
+
+### P80 popravki ×11 (max zoom, 1:1 primerjava števk)
+
+| P80 staro | P115 novo | dokaz |
+|---|---|---|
+| h36 (vpis 4) | **h56** | številka »56« — 5 z zastavico, primerjano z znano »65« |
+| h63 [~] (vpis 12) | **h65** | jasno »65«; faza-1 dvom 63/65 rešen |
+| h15 (vpis 17) | **h16** | številka »6« brez zastavice; 1:1 primerjava; h15 OSTAJA sidro 1887 (Jaklič × Brinec) |
+| »GRIBLJE 25« (vpis 20) | **PRILOŽJE 25** | max zoom: »Priložje« + IZBRISAN zapis pod vasjo! |
+| Kukec (vpis 11) | **Klepec** | jasno K-l-e-p-e-c |
+| Gomec (vpis 20) | **Tomec** | T, ne G |
+| Peršić (vpis 12) | **Požek** | ž z strešico; oče tudi Požek (2×) |
+| Perdinec (vpis 4/5) | **Pegdirec** | ×3 samostojno (4, 5, 1885-mati, 12-mati); krstna h53 1891/1894 piše Pozdirec/Pegdirec |
+| Marko Perzan, Vinica 9 (vpis 23) | **Martin Križan, Landwirth, Krasinec 9** | jasno M-a-r-t-i-n K-r-i-ž-a-n |
+| Špelcer (vpis 2 nevesta) | **Straus** | oče Martin Straus ½ Gütler + priča Nikolaus Straus; levi »Arbras« = misread St-ligature |
+| Podlirec (1885 mati ženina h13) | **Pegdirec** | max zoom |
+
+### Rešene faza-1 naloge (»potreben zoom«)
+
+1. **vpis 12 hiša** → 65 ✓ + nevesta Požek iz **Griblje 64** (NOVA hiša okvira!)
+2. **vpis 19 vas** → »Podze-meč« = sicerptova pisava **Podzemelj** (oba!); ženin = policist (straža № 56 »St. Greina«? [~])
+3. **vpis 24 prečrtano ime** → prečrtan je 2. krstni ime **~~Josef~~** (oče Josef Bufala!); ženin = **Anton Bufala** (rod Butala, cf. vpis 18)
+4. **duhovnik** → **franz Dovgan** (9 podpisov: vpisi 1–3, 20–24 + 1885/22); **vpisi 4–19 (16!) = PRAZEN stolpec**
+
+### NOVELE faza 2 (nad faza 1)
+
+- **DVA SESTRSKA DVOJNA POROKA** (faza 1 ni videla!): vpis 4+5 = Pegdirec (sestra Dorothea 30 + brat Peter 25, isti dan, isti starši!); vpis 9+21 = Musié sestri (Anna 19 + Dorothea 31, isti starši, Krasinec 10)
+- **VDOVE 4 (+1 dvom)**: 6 (28), 7 (23! Witwe Schweiger), 10 (31, Wwe. Šure?), 21 (31, Wwe. Maren?) + dvom 24 (»Lavřin-Wittwe jun.?«, 23); faza 1 je štela 3 (in napačno vpis 19)
+- **vpis 19 = OBADVA LEDIGA** pri 43/42 (marg stolpca »/«) — faza 1 »2 vdova« NAPAKA; najstarejši samski par + 1. policist vzorca
+- **MÜNDEL-timeline (vpis 23)**: Maria Straus (34, h71) poročena kot **Mündel** — mati † 7.9.1886 (mrliška!) → kronologija 1:1; skrbnik = verjetno ženin vpis 22 (**Vormund**, 23!)
+- **Eheverlags-Contract (vpis 22)** = poročna lastninska pogodba 21.11.1886; faza 1 »Villach« = misread »verlags«
+- **»Krasi-nec«** (vpisa 21+23) = PRELOM besede Krasinec, ne beseda »nec.« → faza 1 »Vinica 9/10« napaki popravljeni
+- **Priča vpis 10 = ženinov oče kot VAISENVORMUND** (skrbnik sirot — verjetno otrok neveste-vdove)
+- **Statusi-novosti**: Müllner (mlinar!), Gürtler (sedlar), Zimmermann, Gasthaus u. Wirth (1. gostilnar!), Vormund, Mündel, Polizeidiener, Bürger von Tschernembl, ¼ Gütler
+- **Zunanji**: vpis 1 (neznana vas [~]), vpis 18 (Vidošice? 8, pf. Metlika), vpis 19 (policij), priča 9 (Črnomelj mestan)
