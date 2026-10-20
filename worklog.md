@@ -5238,3 +5238,23 @@ Work Log:
 
 Stage Summary:
 - P113 = KODA/dokazi/README/notes/worklog: TROJSINHRONIZACIJA POPOLNA (GitLab == GitHub == lokalni @ cc7dd8d + 80dc73a vsebina); produkcija = še P112 (113/113) — **EDINA odprta točka: Vercel team auth (človeški re-auth / nov žeton s scope-om »robertpezdirc12-designs-projects« / GitHub App re-authorization); ko blokade ne bo, bo naslednji push sprožil produkcijo 114/114 samodejno.**
+
+---
+Task ID: 87
+Agent: Z.ai Code (glavni)
+Task: P114 — krstna knjiga 04105, polno leto 1919 = ZADNJE leto knjige (dokončanje faze 2: verifier fix + allow-liste + qa-p114 duhovniki + live verifikacija + push + produkcija)
+
+Work Log:
+- Prevzem po Task 86-c: P114 faza 2 artefakti že lokalno (evidence JSON + notes + verifier + parish.ts + qa-p114 + README) — NISO bili commitani; verifier 34/35 (1 FAIL).
+- **VERIFIER FIX I3**: tip-mismatch — JSON houseNo = STRINGI ('5','6','8','40','46','47','48','81','82','88','90'), EXPECTED_NUMERIC_HOUSES = INT listi → `[int(h) for h in houses] == EXPECTED` → **35/35 PASS** (--check) → **37/37 PASS** (--live: knjiga HTTP 200 + slike 326!).
+- **QA REGRESIJE ×4 POPRAVLJENE** (novi 1919 bloki h90/h46/h40/h48 trčijo v allow-liste starih kontrol — vzorec »P113: + 1918« nadaljevanje »P114: + 1919«): qa-p85 h90 + 1919 (9. VPIS — 1. učitelj-oče na Gribljih!), qa-p88 h46 + 1919 (12. VPIS — VRZEL 2 LETI), qa-p92 h40 + 1919 (7. VPIS — BRINC mreža h88+h40!), qa-p93 h48 + 1919 (8. VPIS — DRŽAVLJANKA RS!).
+- **qa-p114 DUHOVNIKI preoblikovani** (forenzično utemeljeno): Rogar (l62–67, l70) + Učak (l2) + Katanov (l27) podpišejo SAMO NE-Gribljske vrstice → v HOUSE_VITALS ne morejo biti → preverjanje spremeni v DOKUMENTIRANO ODSOTNOST (Rogar/Učak = 0 v Gribljih, evidence A7); Lopar okrepljen ≥1 → ≥2 (l40 h82 + l75 h5; +l15 h47 Logar = DVOJNI PODPIS); Cerar ≥8 ostane.
+- **/api/qa LOKALNO: 115/115 PASS** (110+5 FAIL → popravki → 115/0); lint 0; tsc skozi QA build.
+- Live verifikacija Matricula: knjiga 04105 HTTP 200, inventar 326 slik — verifier 37/37 PASS.
+- Stanje artefaktov (iz prejšnjih faz, zajeto v ta commit): evidence JSON research/issue17/parish-baptism-1919.json (11 entries + 70 excluded + 18 anomalij + 33 crossChecks + p115Lead); notes parish-baptism-1919-notes.md (faza 1 + faza 2 + P115 lead); parish.ts +11 blokov 1919 (vitals 517 → **528**; bloki 04105 491 → **502**); qa-parish.ts qa-p114 (115. kontrola) + regresije 517→528 ×29; README (P114 bullet §88 + »po P114« + QA 115/115 + p79–p114 = 36 skript).
+- Commit + push GitLab + GitHub (glej Task 87-b za hashe/preverjanja) + Vercel produkcija (blokada iz 86-b/86-c — ponovni poskus po pushu).
+
+Stage Summary:
+- **P114 ZAKLJUČEN = KRSTNA LINIJA issue #18 KONČANA: knjiga 04105 dokazana do konca (1886–1919, 34 let, kumulativ 614 vpisov / 88 hiš); vitals 528; bloki 04105 502; QA 115/115; verifier 37/37 PASS live.**
+- 1919 ključno: 11 vpisov / 11 hiš Griblje, NARE 10/11 (h81 NOVA — čisto leto se konča pri 4!); prilepen dopis ordinariata (s325, Jakob Košec 14.4.1917); bela listina = legitimizacijsko pismo Šponiček Fiume 1915; EMŠO kampanja 32 = REKORD; 4 razveljavitve = REKORD; 5 duhovnikov = REKORD; VPIS PRENEŠEN ×19 = REKORD; l78 † 30.1.1945 bombardiranje = ZADNJI VPIS KNJIGE; s326 platnica »Podzemelj R 1886–1919«.
+- **P115 LEAD: krstna linija KONČANA — naslednja poročne/smrtne knjige 04xxx župnije Podzemelj.**
