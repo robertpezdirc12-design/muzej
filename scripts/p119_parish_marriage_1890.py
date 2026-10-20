@@ -73,7 +73,7 @@ GRIBLJE_MARRIAGES = 3
 GRIBLJE_HOUSES_TS = "10,53,61,91"   # hiše z 1890 bloki v parish.ts
 EXPECTED_VITALS = 548               # P119 dokaz lastna kumulativa (544 + 4 bloki)
 BLOCKS_04455 = 31                   # 27 (P118) + 4 novih blokov 1890 (P119)
-BLOCKS_04455_TS = 33                # parish.ts zdaj = 33 (P120 + 2 bloki 1891)
+BLOCKS_04455_TS = 37                # parish.ts zdaj = 33 (P120 + 2 bloki 1891)
 P80_HOUSES = 46                     # 44 (P118) + h91 + h53 NOVI v vzorcu (h10/h61 že)
 DATE_COUNTS = {"januar": 1, "februar": 2, "marec": 0, "april": 1, "maj": 3,
                "junij": 1, "julij": 1, "avgust": 3, "september": 0, "oktober": 0,
@@ -336,16 +336,16 @@ def main() -> int:
     # ---------- I9: qa-parish ----------
     qa = open(QA_TS).read()
     check("I9 qa-p119", '"qa-p119-parish-marriage-1890"' in qa)
-    check("I9b qa-p115 bloki 33", "poročni bloki (04455) ≠ 33" in qa)
-    check("I9c p80 bloki 33", "poročni vpisi (04455) ≠ 33" in qa)
-    check("I9d p80 sidra 26 (1891×2!)", "poročna sidra ≠ 26" in qa)
+    check("I9b qa-p115 bloki 37", "poročni bloki (04455) ≠ 37" in qa)
+    check("I9c p80 bloki 37", "poročni vpisi (04455) ≠ 37" in qa)
+    check("I9d p80 sidra 30 (1892×4!)", "poročna sidra ≠ 30" in qa)
     # vitals 550 regresijska zaščita v qa-p119
-    check("I9e vitals 550 zaščita (P120)", "HOUSE_VITALS.length !== 550" in qa[qa.index("const p119Marr"):] if "const p119Marr" in qa else False)
+    check("I9e vitals 554 zaščita (P121)", "HOUSE_VITALS.length !== 554" in qa[qa.index("const p119Marr"):] if "const p119Marr" in qa else False)
     check("I9f stari 537/544 iztekla", "HOUSE_VITALS.length !== 537" not in qa and "HOUSE_VITALS.length !== 544" not in qa)
 
     # ---------- I10: README + notes ----------
     rd = open("README.md").read()
-    check("I10 README po P119", "P119" in rd and ("121/121" in rd or "po P120" in rd))
+    check("I10 README po P119", "P119" in rd and ("122/122" in rd or "po P121" in rd))
     nt = open("research/issue17/parish-marriage-1890-notes.md").read()
     check("I10b notes faza 2 + prekrižana", "FAZA 2" in nt and "PREKRIŽANA" in nt.upper())
 

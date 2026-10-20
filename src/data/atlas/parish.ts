@@ -808,6 +808,61 @@ export const HOUSE_VITALS: HouseVital[] = [
     whatEn: "marriage (Feb 3, 1891, entry 7) — groom Peter PEZDIREC, quarter smallholder's son, 24, GRIBLJE 20 (A NEW HOUSE — the 1st marriage evidence ever!; father Peter Pezdirec ½ Gribler × Catharina Deblič? [~]; PEZDIREC ×2 the SAME DAY with v6 Marcus 29 — brothers? [~]!) × Dorothea KLEPEC, half smallholder's daughter? [~], 20, Krasinec 37 (KLEPEC ×2 the same day with the v6 mother Margaret!; father Peter Klepec ½ Gribler × Anna Marasinič?); witnesses: Johan Marasinič + Anton Brodarič? [~] (} ½ gbl.); priest Jos. Rauy; Befünden: the announcement of the Griblje commune Feb 2, 1891 no. 7 + the verbal paternal consent for the minor bride; Feb 3 = a TRIPLE wedding day (v5+v6+v7!)",
     status: "DOCUMENTED",
   },
+  // ——— P121 razširitev: POROČNA KNJIGA 04455 — polno leto 1892 (skeni 84–86 ==
+  // strani 83–85; VELIKA GLAVA »Traunungs=Buch« 1892 na s84 = Pag. 83 POTRJENA!
+  // 15 vpisov: 1886:7 → 1887:21 → 1888:20 → 1889:10 → 1890:16 → 1891:18 →
+  // 1892:15 = 6+4+5) — vpisi z Griblji (3 poroke / 4 poročna bloka: h60 v1
+  // 2. DOKAZ po 1886 + h49 dokumentiran + h30 v5 nevesta + h17 v10 NOVA +
+  // h34 dokumentiran + h36 v15 + h44 NOVA dokumentirana): NOVELE: DRUBEL-
+  // GRIBLJE poroke ×3 = REKORD LINIJE! + deležni sistem ¼/½/¾ ×21 oseb = rekord
+  // (¾ prvič!) + Griblers=Sohn/Tochter ROSETTA ×9 + 1. AMERIŠKI KONSULAT
+  // (v11 Philadelphia Z:3074!) + 1. KNECHT ×2 (v6+v12) + 1. MUC-priimek z
+  // deležem (v12 oče ½ Gribler!) + SESTRSKI DVOZAKON isti dan (v2+v3!) + 4
+  // poroke 22.2. = rekord dneva + ženin 56 NOV rekord + nevesta 17 NOV rekord
+  // + Wittwen-dispensa Z:9123 (v13) + Laipšl ×5 + BezHauptm. Črnomelj ×3 +
+  // Bez. Ger. Möttling (Metlika!) ×2. Dokaz:
+  // research/issue17/parish-marriage-1892.json; verifikator:
+  // scripts/p121_parish_marriage_1892.py --check (I1–I11).
+  {
+    houseNo: "60",
+    bookSignature: "04455",
+    year: 1892,
+    scan: 84,
+    page: 83,
+    whatSi: "poroka (15. 2. 1892, vpis 1) — ženin Nicolaus ŽELJKO, ¼ Gribler, 24, GRIBLJE 60 (2. POROČNI DOKAZ h60 po 1886 v? — ŽELJKO-hiša cf. P120 v6 nevesta Anna h60!; oče Gregor Željko ¼ Gribler × Catharina KRIŽAN) × Maria BRODARIČ, ½ Griblers=tochter [~], 17 = NAJMLAJŠA nevesta linije (NOV rekord mladosti — prej 19!), GRIBLJE 49 (NOVA hiša poročnega vzorca; oče Anton Brodarič ½ Gribler × Barbara POZDIREC = PEZDIREC-pisava!); DRUBEL-GRIBLJE poroka #1 (h60 × h49) = rekord linije!; priče: Nicol. Požek + Josef Dragos (} ½ gbl.); trojni poročni dan 15.2. (v1+v2+v3!); duhovnik Jos. Rauy; Befünden: ženitovanjska zglasnica občine Griblje 14/2. 1892 št: 6 + missigl. Rathsbeschluss f. d. mj. Braut in Gegenwart obigen Befände",
+    whatEn: "marriage (Feb 15, 1892, entry 1) — groom Nicolaus ŽELJKO, quarter smallholder, 24, GRIBLJE 60 (the 2nd MARRIAGE EVIDENCE of h60 after 1886 — the ŽELJKO house cf. the P120 v6 bride Anna h60!; father Gregor Željko ¼ Gribler × Catharina KRIŽAN) × Maria BRODARIČ, half smallholder's daughter [~], 17 = THE YOUNGEST BRIDE OF THE LINE (a new youth record — previously 19!), GRIBLJE 49 (A NEW house of the marriage sample; father Anton Brodarič ½ Gribler × Barbara POZDIREC = the PEZDIREC spelling!); the DOUBLE-GRIBLJE marriage #1 (h60 × h49) = the line record!; witnesses: Nicol. Požek + Josef Dragos (} ½ gbl.); the triple wedding day Feb 15 (v1+v2+v3!); priest Jos. Rauy; Befünden: the marriage announcement of the Griblje commune Feb 14, 1892 no. 6 + the minor-bride council consent in the presence of the above findings",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "30",
+    bookSignature: "04455",
+    year: 1892,
+    scan: 84,
+    page: 83,
+    whatSi: "poroka (22. 2. 1892, vpis 5) — ženin Nicolaus SEGINA, ½ Griblers=[S]ohn [~] (»Jofs«), 33, Trilje 28 (SEGINA-mreža cf. v15 mati Anna Segina!; oče Johann Segina ½ Gribler × Dorothea KRIŽAN) × Margareth MILEK, ¼ Griblerin, 26, GRIBLJE 30 (blok; oče Marcus POZDIREC ½ Gribler = OČE IN PRIČA ISTI MOŽ! × Margarett KLEPEC = h87-Klepec-mreža); priče: Marcus Pozdirec (oče!) + Math. Marasinič (¾ gribler? [~]); k.k. Bez. Hauptmannschaft Črnomelj d.d. 25/1. 1892 Z: 798 (Bescheid!); duhovnik Jos. Rauy; Befünden: ženitovanjska zglasnica občine Griblje 14/2. 1892 št: 7 + bezüglich des Bescheides der k.k. Bez.Hauptmannsch.",
+    whatEn: "marriage (Feb 22, 1892, entry 5) — groom Nicolaus SEGINA, half smallholder's son [~], 33, Trilje 28 (the SEGINA network cf. the v15 bride-mother Anna Segina!; father Johann Segina ½ Gribler × Dorothea KRIŽAN) × Margareth MILEK, quarter smallholder's daughter, 26, GRIBLJE 30 (block; father Marcus POZDIREC ½ Gribler = THE FATHER AND WITNESS THE SAME MAN! × Margarett KLEPEC = the h87-Klepec network); witnesses: Marcus Pozdirec (the father!) + Math. Marasinič (¾ gribler? [~]); the k.k. Bez. Hauptmannschaft Črnomelj Jan 25, 1892 Z: 798 (the official decision!); priest Jos. Rauy; Befünden: the marriage announcement of the Griblje commune Feb 14, 1892 no. 7 + regarding the decision of the k.k. district headquarters",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "17",
+    bookSignature: "04455",
+    year: 1892,
+    scan: 85,
+    page: 84,
+    whatSi: "poroka (18. 9. 1892, vpis 10) — ženin Johann KRALJ, ¼ Gribler, 48, GRIBLJE 17 (NOVA HIŠA — 1. poročni dokaz sploh!; oče Johann Kralj ¼ Gribler × Margareth JAKŠA; KRALJ ×2 v letu cf. v6!) × Dorothea FILAK, ¼ Griblers=todter + Ans [~], 24, GRIBLJE 34 (oče Johann FILAK ½ Gribler × Anna Deblinč? [~] — 1. FILAK poročni dokazi; v6 priča Matthias Filak — brat?); DRUBEL-GRIBLJE poroka #2 (h17 × h34)!; najstarejši ženin 1892 (48); priče: Nicol. Požek (v1 isti!) + Georg Kralj (} ½ gbl.); duhovnik Jos. Rauy; Befünden: ženitov. zglasmica občine Griblje-vke 18. 9. 1892 št: 2",
+    whatEn: "marriage (Sep 18, 1892, entry 10) — groom Johann KRALJ, quarter smallholder, 48, GRIBLJE 17 (A NEW HOUSE — the 1st marriage evidence ever!; father Johann Kralj ¼ Gribler × Margareth JAKŠA; KRALJ ×2 in the year cf. v6!) × Dorothea FILAK, quarter smallholder's daughter + Ans [~], 24, GRIBLJE 34 (father Johann FILAK ½ Gribler × Anna Deblinč? [~] — the 1st FILAK marriage evidences; the v6 witness Matthias Filak — a brother?); the DOUBLE-GRIBLJE marriage #2 (h17 × h34)!; the oldest groom of 1892 (48); witnesses: Nicol. Požek (the same as v1!) + Georg Kralj (} ½ gbl.); priest Jos. Rauy; Befünden: the marriage announcement of the Griblje-vke commune Sep 18, 1892 no. 2",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "36",
+    bookSignature: "04455",
+    year: 1892,
+    scan: 86,
+    page: 85,
+    whatSi: "poroka (21. 11. 1892, vpis 15) — ženin Johann KRIŽAN, ¼ Gribler, 31, GRIBLJE 36 (blok; h36 krstna 1882/1886/1887-mreža!; oče Marcus Križan ¼ Gribler × Anna SEGINA — SEGINA ×2 cf. v5!) × Catharina STRUNCELJ [~], ½ Griblers=Tochter, 18 (mladoletna — mj. Braut!), GRIBLJE 44 (NOVA hiša poročnega vzorca; oče Mathias Struncelj ½ Gribler × Agnes KLOBUČAR = v6 mati-mreža!); DRUBEL-GRIBLJE poroka #3 (h36 × h44) = 3. drubel poroka v enem letu = REKORD LINIJE!; KRIŽAN ×3 v letu (v1 mati + v2 + ženin!); priče: Nic. Klepec (½ gbl.) + Marcus Klobučar (¼ gribler); duhovnik Jos. Rauy; Befünden: ženitovanjska zglasnica občine Griblje 21. 11. 1892 št: 2 + Rathsbeschluss f. d. mj. Braut",
+    whatEn: "marriage (Nov 21, 1892, entry 15) — groom Johann KRIŽAN, quarter smallholder, 31, GRIBLJE 36 (block; the h36 baptism 1882/1886/1887 network!; father Marcus Križan ¼ Gribler × Anna SEGINA — SEGINA ×2 cf. v5!) × Catharina STRUNCELJ [~], half smallholder's daughter, 18 (a minor — the mj. Braut!), GRIBLJE 44 (A NEW house of the marriage sample; father Mathias Struncelj ½ Gribler × Agnes KLOBUČAR = the v6 mother network!); the DOUBLE-GRIBLJE marriage #3 (h36 × h44) = the 3rd double-Griblje marriage in one year = THE LINE RECORD!; KRIŽAN ×3 in the year (the v1 mother + v2 + the groom!); witnesses: Nic. Klepec (½ gbl.) + Marcus Klobučar (¼ gribler); priest Jos. Rauy; Befünden: the marriage announcement of the Griblje commune Nov 21, 1892 no. 2 + the council consent for the minor bride",
+    status: "DOCUMENTED",
+  },
   // ——— P82 razširitev: KRSTNA KNJIGA 04105 — polno leto 1887 (skeni 16–27 ==
   // strani 15–26; glava »Leto 18_87« na str. 15; leto 1888 se začne na str. 26
   // po row 106 z velikimi ciframi »1 8 8 8«) — vsi vpisi z Griblji (20) ———

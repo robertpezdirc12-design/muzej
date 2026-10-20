@@ -58,7 +58,7 @@ GRIBLJE_MARRIAGES = 2
 GRIBLJE_HOUSES_TS = "20,87"         # hiše z 1891 bloki v parish.ts
 EXPECTED_VITALS = 550               # P120 dokaz lastna kumulativa (548 + 2 bloki)
 BLOCKS_04455 = 33                   # 31 (P119) + 2 novih blokov 1891 (P120)
-BLOCKS_04455_TS = 33                # parish.ts zdaj = 33 (P119: 31 + P120: 2)
+BLOCKS_04455_TS = 37                # parish.ts zdaj = 33 (P119: 31 + P120: 2)
 P80_HOUSES = 46                     # 46 (P119) nespremenjeno — h20 ŽE v vzorcu (krstna 1897!); h87 že od 1889
 DATE_COUNTS = {"januar": 4, "februar": 5, "marec": 0, "april": 0, "maj": 3,
                "junij": 0, "julij": 0, "avgust": 1, "september": 1, "oktober": 0,
@@ -317,17 +317,17 @@ def main() -> int:
     # ---------- I9: qa-parish ----------
     qa = open(QA_TS).read()
     check("I9 qa-p120", '"qa-p120-parish-marriage-1891"' in qa)
-    check("I9b p80 bloki 33", "poročni vpisi (04455) ≠ 33" in qa)
-    check("I9c p80 sidra 26 (1891×2!)", "poročna sidra ≠ 26" in qa)
+    check("I9b p80 bloki 37", "poročni vpisi (04455) ≠ 37" in qa)
+    check("I9c p80 sidra 30 (1892×4!)", "poročna sidra ≠ 30" in qa)
     # vitals 550 regresijska zaščita v qa-p120
-    check("I9d vitals 550 zaščita (P120)", "HOUSE_VITALS.length !== 550" in qa[qa.index("const p120Marr"):] if "const p120Marr" in qa else False)
+    check("I9d vitals 554 zaščita (P121)", "HOUSE_VITALS.length !== 554" in qa[qa.index("const p120Marr"):] if "const p120Marr" in qa else False)
     check("I9e stari 537/544/548 iztekla",
           "HOUSE_VITALS.length !== 537" not in qa and "HOUSE_VITALS.length !== 544" not in qa
           and "HOUSE_VITALS.length !== 548" not in qa)
 
     # ---------- I10: README + notes ----------
     rd = open("README.md").read()
-    check("I10 README po P120", "P120" in rd and ("121/121" in rd or "po P120" in rd))
+    check("I10 README po P120", "P120" in rd and ("122/122" in rd or "po P121" in rd))
     nt = open("research/issue17/parish-marriage-1891-notes.md").read()
     check("I10b notes faza 2 + ROSETTA", "FAZA 2" in nt and "ROSETTA" in nt.upper())
 
