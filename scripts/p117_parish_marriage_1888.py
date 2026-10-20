@@ -39,7 +39,7 @@ virna izjava sodnije Metlika/polnoletnost + §102 + Wehrmannsschein?) +
 
 NOVE GRIBLJE HIŠE: h33 (v2) + h32 Straus (v7) — NOVE; h23-1888 (Brinec
 brata) + h64-1888 (2. dokaz po P115) — ponovitve; **bloki 04455 = 20;
-vitals 537**. Skripta scripts/p117_parish_marriage_1888.py (I1–I11, --check
+vitals 544**. Skripta scripts/p117_parish_marriage_1888.py (I1–I11, --check
 izpiše PASS/FAIL in vrne exit code; --live omogoči HTTP preverjanje
 knjige/inventarja).
 """
@@ -66,8 +66,9 @@ EXPECTED_CROSSCHECKS = 26
 GRIBLJE_ROWS = [2, 3, 7, 12]
 GRIBLJE_MARRIAGES = 4
 GRIBLJE_HOUSES_TS = "23,32,33,64"   # hiše z 1888 bloki v parish.ts
-EXPECTED_VITALS = 537           # 533 (P116) + 4 novi poročni bloki P117 (h23-1888/h32/h33/h64-1888)
-BLOCKS_04455 = 20               # 16 (P116) + 4 novi bloki 1888
+EXPECTED_VITALS = 537           # P117 dokaz lastna kumulativa (533 + 4 bloki); trenutna = 544 (P118)
+BLOCKS_04455 = 20               # P117 dokaz lastna kumulativa
+BLOCKS_04455_TS = 27            # parish.ts zdaj = 27 (P118 +7 blokov 1889)
 DATE_COUNTS = {"januar": 2, "februar": 3, "marec": 0, "april": 1, "maj": 2,
                "junij": 1, "julij": 1, "avgust": 2, "september": 1, "oktober": 2,
                "november": 5, "december": 0}
@@ -201,8 +202,8 @@ def main() -> int:
     pr = st.get("priests", {})
     check("I5 duhovnik RauyProvisor ×20", pr.get("RauyProvisor") == 20, str(pr))
     check("I5b dispensacije=1", st.get("dispensations") == 1, str(st.get("dispensations")))
-    check("I5c vitals=537 (533 + 4 P117)", st.get("vitals") == EXPECTED_VITALS, str(st.get("vitals")))
-    check("I5d bloki 04455=20", st.get("blocks04455") == BLOCKS_04455, str(st.get("blocks04455")))
+    check("I5c vitals=537 (P117 lastna kumulativa; trenutna 544)", st.get("vitals") == EXPECTED_VITALS, str(st.get("vitals")))
+    check("I5d bloki 04455=20 (P117 lastna; parish.ts 27)", st.get("blocks04455") == BLOCKS_04455, str(st.get("blocks04455")))
     check("I5e novi bloki=4", st.get("newBlocks") == 4, str(st.get("newBlocks")))
     check("I5f najstarejši ženin=58 (×2)", st.get("oldestGroom") == 58, str(st.get("oldestGroom")))
     check("I5g najmlajša nevesta=17", st.get("youngestBride") == 17, str(st.get("youngestBride")))
@@ -240,7 +241,7 @@ def main() -> int:
     # ---------- I8: parish.ts bloki 04455 ----------
     ts = open(PARISH_TS).read()
     blocks_m = re.findall(r'houseNo:\s*"([^"]*)",\s*bookSignature:\s*"04455",\s*year:\s*(\d{4}),\s*scan:\s*(\d+)', ts)
-    check("I8 bloki 04455 = 20", len(blocks_m) == BLOCKS_04455, str(len(blocks_m)))
+    check("I8 bloki 04455 = 27 (P118 +7)", len(blocks_m) == BLOCKS_04455_TS, str(len(blocks_m)))
     h1888 = sorted((h for h, y, _ in blocks_m if y == "1888"), key=int)
     check("I8b hiše 1888 = [23,32,33,64]", ",".join(h1888) == GRIBLJE_HOUSES_TS, ",".join(h1888))
     h1887 = sorted((h for h, y, _ in blocks_m if y == "1887"), key=int)
@@ -265,10 +266,10 @@ def main() -> int:
     # ---------- I9: qa-parish ----------
     qa = open(QA_TS).read()
     check("I9 qa-p117", '"qa-p117-parish-marriage-1888"' in qa)
-    check("I9b qa-p116 bloki 20", "poročni bloki (04455) ≠ 20" in qa)
-    check("I9c p80 bloki 20", "poročni vpisi (04455) ≠ 20" in qa)
-    # vitals 537 regresijska zaščita v qa-p117
-    check("I9d vitals 537 zaščita", "HOUSE_VITALS.length !== 537" in qa[qa.index("const p117Marr"):] if "const p117Marr" in qa else False)
+    check("I9b qa-p116 bloki 27", "poročni bloki (04455) ≠ 27" in qa)
+    check("I9c p80 bloki 27", "poročni vpisi (04455) ≠ 27" in qa)
+    # vitals 544 regresijska zaščita v qa-p117
+    check("I9d vitals 544 zaščita", "HOUSE_VITALS.length !== 544" in qa[qa.index("const p117Marr"):] if "const p117Marr" in qa else False)
 
     # ---------- I10: README + notes ----------
     rd = open("README.md").read()
