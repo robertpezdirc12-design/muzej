@@ -5274,3 +5274,23 @@ Work Log:
 Stage Summary:
 - **P114 TROJSINHRONIZIRAN (b691b56 GitLab == GitHub == lokalni); produkcija = ŠE VEDNO P112 (113/113) — EDINA odprta točka ostaja Vercel team auth (človeški re-auth GitHub App/team SAML ALI nov žeton s scope-om »robertpezdirc12-designs-projects«); ko blokade ne bo, bo NASLEDNJI push sprožil produkcijo 115/115 samodejno.**
 - KRSTNA LINIJA issue #18 (1886–1919) DOKAZANA DO KONCA — P115 lead: poročne/smrtne knjige 04xxx.
+
+---
+Task ID: 88
+Agent: Z.ai Code (glavni)
+Task: P115 faza 1 — poročna knjiga 04455, polno leto 1886 (nova linija po zaključku krstne 04105; inventar fonda + fetch + strukturna rekonstrukcija + enumeracija 24 vpisov) + sinhronizacijska kontrola (GitLab 403 transient + Vercel blokada ponovno potrjena) + README Zrcaljenje svežina
+
+Work Log:
+- **SINHRONIZACIJSKA KONTROLA**: lokalni == GitHub == 275ab51; GitLab ls-remote → 403 (trenoten, isti pojav kot Task 85-b) → **GitLab API v4 dokazal 275ab51** (commits: 275ab519 + b691b56b) = trojsinhronizacija POTRJENA. Vercel: stari žeton ZNOVA preverjen (/v2/user → »User not found«; /v2/teams → forbidden; /v9/projects + /v6/deployments z x-vercel-team-slug → »Not authorized … saml:true«) + GitHub commit status 275ab51 → **Vercel → failure »Deployment was blocked«** = obe poti (rezervna API + App) še vedno ZABLOKIRANI (človeški re-auth potreben).
+- README: razdelek »Zrcaljenje (aktualno)« posodobljen s svežimi dokazi (275ab51 + b691b56 App blocked, token probe ×3 endpointa, GitLab API dokaz, obljuba: naslednji push po re-authu samodejno gradi produkcijo 115/115).
+- **P115 FAZA 1 — NOVA RAZISKOVALNA LINIJA**: krstna 04105 KONČANA (P79–P114) → **poročna knjiga 04455 (1873–1922, 192 skenov) = P115**, polno leto **1886** (isto leto kot krstna P79!); alternativi dokumentirane: mrliška 04894 (1886–1924) = prihodnost.
+- Inventar fonda Podzemelj razčlenjen (21 knjig: krstne 11 + mrliške 6 + poročne 4) → /tmp/p115_fond.html + notes.
+- Fetch: book.html + **11 skenov s58–s68** (velikanska rešitev: Matricula /image/ proxy → 403; **delujoča pot = dekodiran base64 → hosted-images.matricula-online.eu direktno** — vzorec iz /tmp/p114/p114_fetch.py).
+- **STRUKTURA POTRJENA (P80 okvir 1:1)**: Pag. == sken − 1 (s61–s66); 1886 = skeni 61–65 == Pag. 60–64; **vpisi 1–24** (3+5+7+5+4); Pag. 60 VRH = vpis 22/**1885** (22.11.1885 Griblje 13 × Griblje 25 = P80 sidro h13 ✓) šele pod njim ločilnica »1 8 8 6«; **glava 1887 na Pag. 65** (vpisi 1–4; vpis 3 = Griblje 71 Straus = h71/1887 ✓, vpis 4 = Griblje 15 Jaklič × Brinec = h15/1887 ✓).
+- **Enumeracija 24/24 vpisov** (datum + Wohnort + Haus-Nr + imena + starosti); **7 Griblje porok (vpisi 2, 4, 11, 12, 17, 20, 23) == P80 vseh 7 pinned blocks 1:1** ✓✓.
+- **NOVELE faza 1**: 6 POROK NA ISTI DAN 15.2.1886 (vpisi 3–8!); 3 WITVE (10: 31, 19: 42, 21: 31) + vpis 19 = 2 vdova isti dan; vpis 9 = Jän 24 ZUNAJ vrstnega reda (2. tak v vzorcu, cf. P110 A15); PREČRTANO + prepopravljeno ženinovo ime (vpis 24); duhovnik **»franz Dorgun«? [~]** = NOVO ime (poročna linija); vpis 12 hiša 63/65 dvom (P80 h63 [~] vs sken »65«); zimska koncentracija 15/24 (62.5%); dispensacije ×6 (Črnomelj + Grabel + Villach!).
+- Notes: research/issue17/parish-marriage-1886-notes.md (faza 1 polna + faza 2 načrt).
+
+Stage Summary:
+- **P115 FAZA 1 DOKAZANA: poročna 04455, leto 1886 = okvir 1–24 potrjen, P80 kontinuiteta 7/7 ✓, 9 novih novel; faza 2 (polna transkripcija 24 vpisov + evidence JSON + verifier + qa-p115 + parish.ts + README) = NASLEDNJA.**
+- Sinhronizacija: trojna potrjena (GitLab prek API); Vercel produkcija še vedno P112 (113/113) — blokada človeška, nič nove kode ne more odpreti.
