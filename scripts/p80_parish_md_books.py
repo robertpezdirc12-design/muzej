@@ -63,7 +63,7 @@ DEATH_1886_ENTRIES = 13
 DEATH_1887_ANCHORS = 2
 MARR_1886_ENTRIES = 7
 MARR_ANCHORS = {"1882": 1, "1885": 1, "1887": 2}
-PT_GAP_HOUSES = {"43", "44", "45", "46", "47", "48", "52", "53", "54", "55", "56", "57", "58", "59", "60"}  # P82: + 47, 52 (row 78 izvirno), 55; P85: + 41 (izven vzorca); P86: + 53; P88: + 46; P91: + 45; P92: + 43; P93: + 48
+PT_GAP_HOUSES = {"43", "44", "45", "46", "47", "48", "52", "53", "54", "55", "56", "57", "58", "59", "60", "42"}  # P82: + 47, 52 (row 78 izvirno), 55; P85: + 41 (izven vzorca); P86: + 53; P88: + 46; P91: + 45; P92: + 43; P93: + 48; P123: + 42 (CERNIČ-hiša — krstni dokazi izven vzorca!)
 TRI_SOURCE_HOUSES = {"13", "36", "71"}
 
 
@@ -230,12 +230,12 @@ def verify():
     inset = sorted(houses - PT_GAP_HOUSES, key=lambda x: int(float(x)))
     inv["I7_pt_consistency"] = (
         houses == (set(inset) | set(gap))
-        and len(gap) == 10  # P92 scoping: 1897 bloki vnesejo 43/45/46/54/60 — 6 → 9; P119: h53 NOVI dokaz v luknji 41–60 → 9 → 10
+        and len(gap) == 12  # P92 scoping: 1897 bloki vnesejo 43/45/46/54/60 — 6 → 9; P119: h53 NOVI dokaz v luknji 41–60 → 9 → 10; P122/P123: h58 (Požek v16!) + h42 (CERNIČ-hiša) NOVA dokaza v luknji → 10 → 12
         and all((float(h) <= 40 or float(h) >= 61) or ("½" in h) for h in inset)
         and all(41 <= float(h) <= 60 for h in gap)
         and all(h in houses for h in (v["houseNo"] for v in sample))
-        and len(vitals) == 554  # P120: 550; P121: +4 bloki 1892 (h60/h30/h17/h36) → 554
-        and len(houses) == 47  # P120: 46; P121: + h17 (04455/1892 v10 — krstni bloki 1887/1894/1901 izven vzorca!) → 47
+        and len(vitals) == 563  # P121: 554; P122: +5 blokov 1893 (h26/h58/h62/h69/h74) + P123: +4 bloki 1894 (h9/h11/h27/h42) → 563
+        and len(houses) == 53  # P121: 47; P122+P123: +6 NOVIH hiš v vzorcu (9, 26, 27, 42, 58, 62 — h69/h74 že prek mrliške!) → 53
         and set(inset) <= pts
     )
 

@@ -808,6 +808,130 @@ export const HOUSE_VITALS: HouseVital[] = [
     whatEn: "marriage (Feb 3, 1891, entry 7) — groom Peter PEZDIREC, quarter smallholder's son, 24, GRIBLJE 20 (A NEW HOUSE — the 1st marriage evidence ever!; father Peter Pezdirec ½ Gribler × Catharina Deblič? [~]; PEZDIREC ×2 the SAME DAY with v6 Marcus 29 — brothers? [~]!) × Dorothea KLEPEC, half smallholder's daughter? [~], 20, Krasinec 37 (KLEPEC ×2 the same day with the v6 mother Margaret!; father Peter Klepec ½ Gribler × Anna Marasinič?); witnesses: Johan Marasinič + Anton Brodarič? [~] (} ½ gbl.); priest Jos. Rauy; Befünden: the announcement of the Griblje commune Feb 2, 1891 no. 7 + the verbal paternal consent for the minor bride; Feb 3 = a TRIPLE wedding day (v5+v6+v7!)",
     status: "DOCUMENTED",
   },
+  // ——— P123 razširitev: POROČNA KNJIGA 04455 — polno leto 1894 (skeni 91–93 ==
+  // strani 90–92; VELIKA GLAVA »Traunungs=Buch« + rokopisno »1894« na s91 =
+  // Pag. 90 POTRJENA — P123 lead!; 15 vpisov: 1886:7 → 1887:21 → 1888:20 →
+  // 1889:10 → 1890:16 → 1891:18 → 1892:15 → 1893:20 → 1894:15; razpored 6+5+4)
+  // — vpisi z Griblji (2 poroke / 4 poročna bloka: h27 v3 ženin × h42 v3
+  // nevesta CERNIČ-hiša! + h9 v11 ženin × h11 v11 nevesta): NOVELE: ★ REKORD-PAR
+  // VSEH ČASOV v5 (64+48 = 112 let skupaj!) + REKORD nevesta 56 (v1 Tasič!) +
+  // ★ 1. PREČRTANI PRIČA linije (v12 Vojka→Justin zasebnik) + ★ PFARRAMT IDRIA
+  // (v12 = najdaljši župnijski lok ~110 km!) + ★ VOJSKA Infanterie-Regiments-
+  // Colonel №267 (v9 — ženin aktivni vojak!) + ★ DISPENS 3. stopnje №2680
+  // (v14 ZUGELJ × TOME) + ★ LANDSREGIERUNG Laibach Ž8667 (v11 — 1. v liniji;
+  // datirana 9/9. = 3 tedne PO poroki [~]!) + ENAČNOPRIIMEŠKI poroki ×2 (v3 +
+  // v6 Tome×Tome) + ZURAJOVIČ očetovski cross-link 1893→1894 (Zemelj 18!) +
+  // »1« namesto ulomka (v12 — 2. primer!) + občina Orašče [~] neznanka +
+  // Laipšl-mreža 4. leto ×5 + PEZDIREC-cluster ×10 (3 pisave).
+  // Dokaz: research/issue17/parish-marriage-1894.json; verifikator:
+  // scripts/p123_parish_marriage_1894.py --check (I1–I11).
+  {
+    houseNo: "27",
+    bookSignature: "04455",
+    year: 1894,
+    scan: 91,
+    page: 90,
+    whatSi: "poroka (5. 2. 1894, vpis 3) — ženin Marcus PERDINEC, ¼ Gribler, 33, GRIBLJE 27 (2. poročni dokaz h27; oče Marcus Perdinec ¼ Gribler × Margareth KLEPSEC) × Margareth PERDINEC, ¼ Griblers=tochter + Ans. [~], 27, GRIBLJE 42 (CERNIČ-hiša P117 v6+v16 — 3. dokaz hiše, 1. poročni!; oče Georg Perdinec ¼ Gribler × Catharina MARASINIČ) — ★ ENAČNOPRIIMEŠKA POROKA Perdinec × Perdinec (različna starša — bratranci/sorojenci? [~]); priče: Marcus Hlebec + Michael Segina (} ¼ gbl. — cf. P122 v3 ženin Peter Segina!); duhovnik Jos. Rauy (»M.!« [~]); Befünden: zemljšov. zglašnica občine Griblje od 4. februarja št: 1",
+    whatEn: "marriage (Feb 5, 1894, entry 3) — groom Marcus PERDINEC, quarter smallholder, 33, GRIBLJE 27 (the 2nd marriage evidence of h27; father Marcus Perdinec quarter smallholder × Margareth KLEPSEC) × Margareth PERDINEC, quarter smallholder's daughter + Ans. [~], 27, GRIBLJE 42 (the CERNIČ house of P117 v6+v16 — the 3rd house evidence, the 1st marriage one!; father Georg Perdinec quarter smallholder × Catharina MARASINIČ) — ★ the SAME-SURNAME MARRIAGE Perdinec × Perdinec (different parents — cousins/siblings? [~]); witnesses: Marcus Hlebec + Michael Segina (} ¼ gbl. — cf. P122 v3 groom Peter Segina!); priest Jos. Rauy (»M.!« [~]); Befünden: the land registry certificate of the Griblje commune from Feb 4 no. 1",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "42",
+    bookSignature: "04455",
+    year: 1894,
+    scan: 91,
+    page: 90,
+    whatSi: "poroka (5. 2. 1894, vpis 3) — nevesta Margareth PERDINEC, ¼ Griblers=tochter + Ans. [~], 27, GRIBLJE 42 (CERNIČ-hiša: P117 v6+v16 sestre ČERNIČ obe h42! — 3. dokaz h42, 1. POROČNI; h42 = Perdinec-gospodinjstvo 1894) × Marcus PERDINEC, ¼ Gribler, 33, GRIBLJE 27 (enačnopriimeška poroka!); oče Georg Perdinec ¼ Gribler × Catharina MARASINIČ (MARASINIČ cf. P121 v2+v3 sestrski dvozakon!); duhovnik Jos. Rauy (»M.!« [~]); Befünden: zglašnica občine GRIBLJE 4. 2. št: 1",
+    whatEn: "marriage (Feb 5, 1894, entry 3) — bride Margareth PERDINEC, quarter smallholder's daughter + Ans. [~], 27, GRIBLJE 42 (the CERNIČ house: P117 v6+v16 the ČERNIČ sisters both h42! — the 3rd h42 evidence, the 1st MARRIAGE one; h42 = the Perdinec household in 1894) × Marcus PERDINEC, quarter smallholder, 33, GRIBLJE 27 (the same-surname marriage!); father Georg Perdinec quarter smallholder × Catharina MARASINIČ (MARASINIČ cf. P121 v2+v3 the sister double-wedding!); Befünden: the certificate of the GRIBLJE commune Feb 4 no. 1",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "9",
+    bookSignature: "04455",
+    year: 1894,
+    scan: 92,
+    page: 91,
+    whatSi: "poroka (19. 8. 1894, vpis 11) — ženin Georg JAKOBČIČ, ¼ Gribler, 22 (mladoleten!), GRIBLJE 9 (2. poročni dokaz h9; oče Johann Jakobčič ½ Gribler × Maria JAKOBČIČ) × Maria ZURNIČ [~], ½ Griblers=tochter, 25, GRIBLJE 11 (oče Mathias Zurnič [~] ½ Gribler × Catharina DRAGOŠ); ★ 1. LANDSREGIERUNG-dokument poročne linije: »amtliche Genehmigung von der k.k. Landesregierung in Laibach vom 9/9. 1894 Ž 8667« [~ — datirana 3 TEDNE PO poroki — retro-vpis?] + Großjährigkeitserklärung ženina Bez.Ger. Črnomelj 9.8. №5642 (10 dni pred!); priče: Nicol. Požek (cf. P118!) + Johann Dragoš (} ¼ gbl.); duhovnik Jos. Rauy; Befünden: zglašnica občine Gribelj-ske od 13/8. 94 št: 1; ob robu tiskar »Laibach. Druck u. Verlag v. Möttling.«!",
+    whatEn: "marriage (Aug 19, 1894, entry 11) — groom Georg JAKOBČIČ, quarter smallholder, 22 (a minor!), GRIBLJE 9 (the 2nd marriage evidence of h9; father Johann Jakobčič half smallholder × Maria JAKOBČIČ) × Maria ZURNIČ [~], half smallholder's daughter, 25, GRIBLJE 11 (father Mathias Zurnič [~] half smallholder × Catharina DRAGOŠ); ★ the 1st LANDSREGIERUNG document of the marriage line: »the official approval of the k.k. Landesregierung in Laibach from Sep 9, 1894 Ž 8667« [~ — dated 3 WEEKS AFTER the wedding — a retro-entry?] + the groom's coming-of-age declaration Bez.Ger. Črnomelj Aug 9 №5642 (10 days before!); witnesses: Nicol. Požek (cf. P118!) + Johann Dragoš (} ¼ gbl.); priest Jos. Rauy; Befünden: the certificate of the Gribelj-ske commune from Aug 13, 94 no. 1; the printer »Laibach. Druck u. Verlag v. Möttling.« at the page edge!",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "11",
+    bookSignature: "04455",
+    year: 1894,
+    scan: 92,
+    page: 91,
+    whatSi: "poroka (19. 8. 1894, vpis 11) — nevesta Maria ZURNIČ [~], ½ Griblers=tochter, 25, GRIBLJE 11 (2. poročni dokaz h11; h11 = Zurnič-gospodinjstvo 1894) × Georg JAKOBČIČ, ¼ Gribler, 22 (mladoleten), GRIBLJE 9 (2. GRIBLJE poroka 1894 — h9 × h11!); oče Mathias Zurnič [~] ½ Gribler × Catharina DRAGOŠ (DRAGOŠ cf. P117 Jaklič-mreža!); ★ Landesregierung Laibach Ž8667 (1. v liniji!); duhovnik Jos. Rauy; Befünden: zglašnica občine Gribelj-ske 13/8. 94 št: 1",
+    whatEn: "marriage (Aug 19, 1894, entry 11) — bride Maria ZURNIČ [~], half smallholder's daughter, 25, GRIBLJE 11 (the 2nd marriage evidence of h11; h11 = the Zurnič household in 1894) × Georg JAKOBČIČ, quarter smallholder, 22 (a minor), GRIBLJE 9 (the 2nd GRIBLJE marriage of 1894 — h9 × h11!); father Mathias Zurnič [~] half smallholder × Catharina DRAGOŠ (DRAGOŠ cf. the P117 Jaklič network!); ★ the Landesregierung Laibach Ž8667 (the 1st in the line!); Befünden: the certificate of the Gribelj-ske commune Aug 13, 94 no. 1",
+    status: "DOCUMENTED",
+  },
+  // ——— P122 razširitev: POROČNA KNJIGA 04455 — polno leto 1893 (skeni 87–90 ==
+  // strani 86–89; VELIKA GLAVA »Traunungs=Buch« + rokopisno »1893« na s87 =
+  // Pag. 86 POTRJENA — P122 lead!; 20 vpisov: 1886:7 → 1887:21 → 1888:20 →
+  // 1889:10 → 1890:16 → 1891:18 → 1892:15 → 1893:20 = 2. največje leto
+  // linije; razpored 6+5+5+4) — vpisi z Griblji (3 poroke / 5 poročnih blokov:
+  // h26 v10 nevesta NOVA + h69 v15 ženin 2. dokaz 04455 + h62 v15 nevesta +
+  // h58 v16 ženin + h74 v16 nevesta NOVA): NOVELE: 7 porok na isti dan 6.2. =
+  // REKORD VSEH ČASOV! + BRAT-SESTRA PERDINEC dvozakon isti dan (v4+v6 — isti
+  // starša!) + ★ RENOVACIJA ZAKONA 8.9.1898 (v8 latinski blok — dispensacija
+  // 3. st. + Jeglič [~] + priči Maur + Skala = NOV DOKUMENT-TIP) + ★ 2.
+  // DUHOVNIK LINIJE Michael Klemenčič Coop. ×2 (konec Rauy-monopola!) + ★ 1.
+  // dokument občine GRIBLJE (v15!) + ★ INHABER nov status (v19) + ★ VOJSKA
+  // nadvarstveno dovoljenje okrožja RUDOLFOVO=Novo mesto + proxy-zastopstvo
+  // (v12!) + ★ DISPENS 3. kan. stopnje №1661 (v16 — starša oba BRINC!) +
+  // deleži ¼/½ ×32 oseb + nevesta 17 tied-rekord + ženin 58 + Laipšl ×8.
+  // Dokaz: research/issue17/parish-marriage-1893.json; verifikator:
+  // scripts/p122_parish_marriage_1893.py --check (I1–I11).
+  {
+    houseNo: "26",
+    bookSignature: "04455",
+    year: 1893,
+    scan: 88,
+    page: 87,
+    whatSi: "poroka (30. 4. 1893, vpis 10) — ženin Nicolaus KRALJ, ½ Gribler, 49, Fučkovec 14 pf. Adlešič [~ — nova vas poročnega vzorca] (oče Nicolaus Kralj ½ Gribler × Catharina KRALJ; KRALJ ×3 1893 cf. v7 ženin Georg + P121 v10!) × Catharina BRINEC, ¼ Griblerin, 37, GRIBLJE 26 (NOVA HIŠA poročnega vzorca — P122 lead popravka 26 NE 36!; krstna 1887 »Jurc Briuc [~] ali Brine« + 1889/1896/1906/1912 — h26 krstna vrzel 1889–1896 povezana s poroko!; oče Georg JAKOBIČ ¼ Gribler × Catharina Lukanič? [~]); priče: Georg Straus (STRAUS-mreža) + Math. Jankovič (} ½ gbl.); ★ 2. DUHOVNIK LINIJE: Michael KLEMENČIČ Coop. (1. podpis — konec Rauy-monopola od P117!); Befünden: zemljiška zglednica občine Adlešič od 27. aprila 1893 + oblični [~] list GJUPNIJSKEGA urada v Adlešičih od 30/4. 1893 št: 34 (slovenskojezični + hrvaška oblika »gjupnijski!«)",
+    whatEn: "marriage (Apr 30, 1893, entry 10) — groom Nicolaus KRALJ, half smallholder, 49, Fučkovec 14 pf. Adlešič [~ — a new village of the marriage sample] (father Nicolaus Kralj ½ Gribler × Catharina KRALJ; KRALJ ×3 in 1893 cf. the v7 groom Georg + P121 v10!) × Catharina BRINEC, quarter smallholderess, 37, GRIBLJE 26 (A NEW HOUSE of the marriage sample — the P122 lead correction: 26 NOT 36!; the 1887 baptism »Jurc Briuc [~] or Brine« + 1889/1896/1906/1912 — the h26 baptism gap 1889–1896 is connected by the marriage!; father Georg JAKOBIČ quarter smallholder × Catharina Lukanič? [~]); witnesses: Georg Straus (the STRAUS network) + Math. Jankovič (} ½ gbl.); ★ the 2nd PRIEST OF THE LINE: Michael KLEMENČIČ Coop. (the 1st signature — the end of the Rauy monopoly since P117!); Befünden: the land registry certificate of the Adlešič commune from Apr 27, 1893 + the [marriage] list of the PARISH office (the Croatian form »gjupnijski«!) in Adlešiči from Apr 30, 1893 no. 34 (Slovenian-language!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "69",
+    bookSignature: "04455",
+    year: 1893,
+    scan: 89,
+    page: 88,
+    whatSi: "poroka (12. 6. 1893, vpis 15) — ženin Johann BRINEC, ½ Gribler, 29, GRIBLJE 69 (2. poročni dokaz h69 04455 po 1887!; h69 = Brinec-gospodinjstvo krstna 1888–95 (P93: 5 vpisov) z menjavo na Straus 1898 — poroka = razlog menjave [~]; oče Johann Brinec ½ Gribler × Catharina ADLEŠIČ) × Anna KURE, ½ Griblers=tochft. + Ans [~], 24, GRIBLJE 62 (oče Anton KURE ½ Gribler × Anna KRIŽAN — KURE ×3 1893 cf. v7!); ★ DRUBEL-GRIBLJE poroka #1 (h69 × h62)!; ★ 1. dokument občine GRIBLJE v poročni liniji (dotlej vse druge občine!); priče: Johan Adlešič + Georg Perdinec (} ¼ gbl. — v4 ženin ISTI dan!); duhovnik Jos. Rauy; Befünden: zemljovanjska zglednica občine Griblje od 11/6. 1893 št: 1",
+    whatEn: "marriage (Jun 12, 1893, entry 15) — groom Johann BRINEC, half smallholder, 29, GRIBLJE 69 (the 2nd marriage evidence of h69 in 04455 after 1887!; h69 = the Brinec household of the baptisms 1888–95 (P93: 5 entries) with the 1898 change to Straus — the marriage is the reason for the household change [~]; father Johann Brinec ½ Gribler × Catharina ADLEŠIČ) × Anna KURE, half smallholder's daughter + Ans [~], 24, GRIBLJE 62 (father Anton KURE half smallholder × Anna KRIŽAN — KURE ×3 in 1893 cf. v7!); ★ the DOUBLE-GRIBLJE marriage #1 (h69 × h62)!; ★ the 1st document of the GRIBLJE commune in the marriage line (so far always other communes!); witnesses: Johan Adlešič + Georg Perdinec (} ¼ gbl. — the v4 groom the same day!); priest Jos. Rauy; Befünden: the land registry certificate of the GRIBLJE commune from Jun 11, 1893 no. 1",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "62",
+    bookSignature: "04455",
+    year: 1893,
+    scan: 89,
+    page: 88,
+    whatSi: "poroka (12. 6. 1893, vpis 15) — nevesta Anna KURE, ½ Griblers=tochft. + Ans [~], 24, GRIBLJE 62 (NOVA hiša poročnega vzorca; h62 = Kure-hiša: krstna 1887 Marjeta oče Anton KURE = v15 oče ISTI! + 1891 + 1907/1917 — krstna vrzel 1891→1907 povezana s poroko!) × Johann BRINEC, ½ Gribler, 29, GRIBLJE 69 (drubel poroka!); oče neveste Anton Kure ½ Gribler × Anna KRIŽAN (KRIŽAN ×3 1893!); duhovnik Jos. Rauy; Befünden: zglednica občine GRIBLJE 11/6. 1893 št: 1",
+    whatEn: "marriage (Jun 12, 1893, entry 15) — bride Anna KURE, half smallholder's daughter + Ans [~], 24, GRIBLJE 62 (A NEW house of the marriage sample; h62 = the Kure house: the 1887 baptism Marjeta with father Anton KURE = the same as the v15 father! + 1891 + 1907/1917 — the baptism gap 1891→1907 is connected by the marriage!) × Johann BRINEC, half smallholder, 29, GRIBLJE 69 (the double-Griblje marriage!); the bride's father Anton Kure ½ Gribler × Anna KRIŽAN (KRIŽAN ×3 in 1893!); Befünden: the certificate of the GRIBLJE commune Jun 11, 1893 no. 1",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "58",
+    bookSignature: "04455",
+    year: 1893,
+    scan: 89,
+    page: 88,
+    whatSi: "poroka (23. 7. 1893, vpis 16) — ženin Johann POŽEK, ¼ Gribler, 36, GRIBLJE 58 (1. POROČNI DOKAZ h58 sploh!; krstna 1889–1905 gosta = POŽEK/Požek-vrzel; P122 lead popravka: POŽEK ne »Joreh«!; oče Marcus Požek ¼ Gribler × Anna BRINEC — BRINC-mreža!) × Catharina KAMBIČ, ¼ Griblers=tochft, 22 (mladoletna!), GRIBLJE 74 (NOVA hiša poročnega vzorca — krstna 1893 + 1911 — ISTO LETO v obeh knjigah!); ★ DRUBEL-GRIBLJE poroka #2 (h58 × h74)!; ★ DISPENSACIJA 3. kanonične stopnje: Fürstbischöfl. Ordinariat Laibach delto 17.7.1893 №: 1661 (6 dni pred poroko!) — oče+mati neveste: Mathias Kambič × Catharina BRINEC → OBA MATERI BRINC = sorodstvo skozi Brinc-line!; priče: Nicol Požek (P121 v1 priča ISTI!) + Johan Kambič (} ½ gbl.); duhovnik Jos. Rauy; Befünden: zglasnica občine Griblje od 13/7. 1893 + dispens №1661 + mündl. freiwilligg f. d. mj. Braut",
+    whatEn: "marriage (Jul 23, 1893, entry 16) — groom Johann POŽEK, quarter smallholder, 36, GRIBLJE 58 (the 1st MARRIAGE EVIDENCE of h58 ever!; the dense baptisms 1889–1905 = the POŽEK/Požek gap; the P122 lead correction: POŽEK not »Joreh«!; father Marcus Požek ¼ Gribler × Anna BRINEC — the BRINC network!) × Catharina KAMBIČ, quarter smallholder's daughter, 22 (a minor!), GRIBLJE 74 (A NEW house of the marriage sample — the baptisms 1893 + 1911 — the SAME YEAR in both books!); ★ the DOUBLE-GRIBLJE marriage #2 (h58 × h74)!; ★ the DISPENSATION of the 3rd canonical degree: the Prince-Bishop's Ordinariat Laibach dated Jul 17, 1893 №: 1661 (6 days before the wedding!) — the bride's parents: Mathias Kambič × Catharina BRINEC → BOTH MOTHERS BRINC = the kinship through the Brinc line!; witnesses: Nicol Požek (the P121 v1 witness the same!) + Johan Kambič (} ½ gbl.); priest Jos. Rauy; Befünden: the certificate of the Griblje commune from Jul 13, 1893 + the dispensation №1661 + the verbal consent for the minor bride",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "74",
+    bookSignature: "04455",
+    year: 1893,
+    scan: 89,
+    page: 88,
+    whatSi: "poroka (23. 7. 1893, vpis 16) — nevesta Catharina KAMBIČ, ¼ Griblers=tochft, 22 (mladoletna), GRIBLJE 74 (NOVA hiša poročnega vzorca; krstna 1893 + 1911 = poročna-krstna sovpadnost isto leto!) × Johann POŽEK, ¼ Gribler, 36, GRIBLJE 58 (drubel poroka!); oče Mathias Kambič ¼ Gribler × Catharina BRINEC (mati = Brinc → dispens 3. stopnje №1661!); KAMBIČ ×5 1893 = najmočnejši priimek (v2 priča + v3 nevesta + v13 ženin + v16 + v19); duhovnik Jos. Rauy",
+    whatEn: "marriage (Jul 23, 1893, entry 16) — bride Catharina KAMBIČ, quarter smallholder's daughter, 22 (a minor), GRIBLJE 74 (A NEW house of the marriage sample; the baptisms 1893 + 1911 = the marriage-baptism coincidence in the same year!) × Johann POŽEK, quarter smallholder, 36, GRIBLJE 58 (the double-Griblje marriage!); father Mathias Kambič quarter smallholder × Catharina BRINEC (the mother = Brinc → the 3rd-degree dispensation №1661!); KAMBIČ ×5 in 1893 = the strongest surname (the v2 witness + v3 bride + v13 groom + v16 + v19)",
+    status: "DOCUMENTED",
+  },
   // ——— P121 razširitev: POROČNA KNJIGA 04455 — polno leto 1892 (skeni 84–86 ==
   // strani 83–85; VELIKA GLAVA »Traunungs=Buch« 1892 na s84 = Pag. 83 POTRJENA!
   // 15 vpisov: 1886:7 → 1887:21 → 1888:20 → 1889:10 → 1890:16 → 1891:18 →

@@ -5566,3 +5566,38 @@ Stage Summary:
 - **P121 TROJSINHRONIZIRAN (9b9469c) IN PRODUKCIJSKO ŽIV: /api/qa 122/122 na griblje-museum.vercel.app!**
 - **Vercel: 2. zaporedni lastniški push = success (repo-identiteta Robert Pezdirc <robert.pezdirc12@gmail.com> ostaja ključ).**
 - Lokalno 122/122 + verifier p121 74/74 + p80/p79/p83/p114–p120 --check PASS + lint 0; **P122 LEAD: poročna 1893** (rokopisna glava s87 = Pag. 86 + s88 = Pag. 87; v2 Jakobič-mreža?).
+
+---
+Task ID: 97
+Agent: Z.ai Code (glavni)
+Task: P122 — poročna knjiga 04455, polno leto 1893: zaključek od prekinitve (evidence JSON + notes + parish.ts 5 blokov + qa-p122 že v delovnem drevesu) — verifier p122 sinhronizacija (77/77) + qa-popravki (p80 hiše 47 + PT luknja 9) + README + commit
+
+Work Log:
+- **NADALJEVANJE**: working tree je vseboval P122 faza 1+2 delo (evidence JSON 20 entries + notes + parish.ts 5 blokov 1893 h26/h69/h62/h58/h74 + qa-p122 + sinhr. regresij p114–p121) — brez verifier zagona, README, workloga, commita.
+- **VERIFIER p122** (I1–I11, --check): 72/77 → 5 sinhronizacij → **77/77 PASS**: (a) I8 BLOCKS_04455_TS 42 → **46** (P123 bloki že v drevesu); (b) I4 DATE_COUNTS april 2→**3** / avgust 3→**2** (v9 = 23.4. — konstanta nasprotuje lastnemu dokazu!); (c) I3n Tribuče case-insensitive (JSON: TRIBUČE); (d) I4c alternativna akceptacija »17. Juli 1893« (JSON oblika) + odstranjen fus .replace; (e) I5d/I9d p80 hiše 41 → **44** (POPRAVEK: h26/h58/h62 so VSEENO NOVE v p80 vzorcu — prejšnja trditev »vseh 5 že v vzorci« NAPAČNA; h69/h74 že prek 1887 poročne/mrliške).
+- **qa-parish popravki**: qa-p80 hiše 41 → **47** (+P122 h26/h58/h62 + P123 h9/h27/h42; h69/h74/h11 že) + P80_PT_GAP +h42/+h58 → **9** + qa-p122 Rauy-števec »Rauy« → **»Jos. Rauy«** (podpis-oblika — h26 fraza »konec Rauy-monopola« ne šteje kot podpis!).
+- **parish.ts popravki**: 4 nevesti-strani bloki brez duhovnika → + »duhovnik Jos. Rauy« (h62 + h74 1893; h42 + h11 1894) — vsi 9 poročnih blokov zdaj nosijo podpis duhovnika (vzorec prejšnjih let).
+- **evidence JSON**: stats.p80Houses 41 → **44** + p80HousesNote (POŠTENOST: popravek napačne trditve).
+- Regresije: p114 35/35 + p115 45/45 + p116 51/51 + p117 57/57 + p118 67/67 + p119 70/70 + p120 69/69 + p121 74/74 + p80/p81/p83 PASS + **/api/qa 124/124** + homepage 200 + tsc 0 + lint 0.
+
+Stage Summary:
+- **P122 DOKAZAN: poročna 1893 = 20/20 vpisov obojestransko (2. največje leto linije!) + 7 POROK NA ISTI DAN 6.2. = REKORD VSEH ČASOV + DRUBEL-GRIBLJE poroke ×2 (h69×h62 + h58×h74) + brat-sestra PERDINEC dvozakon isti dan + RENOVACIJA ZAKONA 8.9.1898 (Jeglič [~]!) + 2. duhovnik linije KLEMENČIČ ×2 + 1. dokument občine GRIBLJE + INHABER + dispens №1661 (obe materi BRINC!) — poročna linija 8 let globoko (1886–1893).**
+- **GRIBLJE: 3 poroke / 5 poročnih blokov (h26 NOVA + h62 NOVA + h58 1. DOKAZ SPLOH! + h74 NOVA + h69 2. dokaz)** → parish.ts +5 blokov → **bloki 04455 = 42; vitals 554 → 559; p80 hiše 41 → 44**.
+
+---
+Task ID: 98
+Agent: Z.ai Code (glavni)
+Task: P123 — poročna knjiga 04455, polno leto 1894: zaključek od prekinitve (evidence JSON + notes + parish.ts 4 bloki + qa-p123 že v delovnem drevesu) — verifier p123 sinhronizacija (79/79) + qa-p123 bug popravka (sort niz + Rauy podpis) + README + commit
+
+Work Log:
+- **NADALJEVANJE**: working tree je vseboval P123 faza 1+2 delo (evidence JSON 15 entries + notes + parish.ts 4 bloki 1894 h27/h42/h9/h11 + qa-p123 + sinhr. regresij) — brez verifier zagona, README, workloga, commita.
+- **VERIFIER p123** (I1–I11, --check): 76/79 → 3 sinhronizacije → **79/79 PASS**: (a) I3p iskanje »Zaipfler« → **»aipfler«** (pokrije obe pisavi Laipfler v1/v2 + Zaipfler v5/v8/v10 — Laipšl-mreža 4. leto!); (b) I6d »Idria« case-insensitive (JSON: IDRIA velike); (c) I5d/I9d p80 hiše 41 → **47** (POPRAVEK: h9/h27/h42 NOVE v vzorcu — h11 že prek krstne).
+- **qa-parish popravki**: qa-p123 Rauy-števec »Rauy« → **»Jos. Rauy«** (podpis-oblika) + **BUG: p123Houses pričakovani niz »11,27,42,9« (string-sort) → »9,11,27,42« (numerical sort — napačen literal v pričakovanju!)** + qa-p91 NOVA-izjema: h9 dovoljen kot 04455/1894 poročni blok (vzorec qa-p85 h30 / qa-p90 h20/h87).
+- **evidence JSON**: stats.p80Houses 41 → **47** + p80HousesNote.
+- Regresije: p114–p123 VSI PASS (35/45/51/57/67/70/69/74/77/79) + p80/p81/p83 PASS + **/api/qa 124/124** (qa-p122 = 123. kontrola, qa-p123 = 124.) + homepage 200 + tsc 0 + lint 0.
+- README: sekcija »Zadnje stanje« → **po P123 faza 2** + P123 + P122 bulleta (dvig QA 122 → **124/124**); verifierji p115–p123 I10 vsi PASS.
+
+Stage Summary:
+- **P123 DOKAZAN: poročna 1894 = 15/15 vpisov obojestransko + REKORD-PAR VSEH ČASOV (v5: 64 + 48 = 112 let!) + REKORD nevesta 56 (v1 Tasič) + 1. PREČRTANI PRIČA linije (Vojka→Justin) + PFARRAMT IDRIA ~110 km + VOJSKA Inf.-Reg. №267 + DISPENS №2680 + 1. LANDSREGIERUNG Laibach Ž8667 (3 TEDNE PO poroki [~]!) + enačnopriimeška poroka Perdinec × Perdinec + Tome × Tome + ZURAJOVIČ očetovski cross-link 1893→1894 — poročna linija 9 let globoko (1886–1894).**
+- **GRIBLJE: 2 poroki / 4 poročna bloka (h27 2. dokaz × h42 CERNIČ 1. POROČNI + h9 2. dokaz × h11 2. dokaz)** → parish.ts +4 bloka → **bloki 04455 = 46; vitals 559 → 563; p80 hiše 44 → 47; PT luknja 7 → 9 (+h58 Požek +h42 CERNIČ)**.
+- **QA 122 → 124/124**; P124 LEAD: **poročna 1895** (glava 1895 = s94 = Pag. 93 + skeni 94–96 prenešeni).

@@ -74,7 +74,7 @@ GRIBLJE_MARRIAGES = 4
 GRIBLJE_HOUSES_TS = "7,21,30,32,40,54,87"   # hiše z 1889 bloki v parish.ts
 EXPECTED_VITALS = 544           # P118 dokaz lastna kumulativa (537 + 7 bloki); trenutna = 548 (P119)
 BLOCKS_04455 = 27               # P118 dokaz lastna kumulativa (20 + 7)
-BLOCKS_04455_TS = 37            # parish.ts zdaj = 33 (P118 +7 blokov 1889 + P119 +4 blokov 1890 + P120 +2 bloki 1891)
+BLOCKS_04455_TS = 46            # parish.ts zdaj = 46 (P121 +4 bloki 1892 + P122 +5 bloki 1893 + P123 +4 bloki 1894)
 P80_HOUSES = 44                 # p118 JSON lastna vrednost (vzorčni podnabor p80; trenutna = 46 P119)
 DATE_COUNTS = {"januar": 0, "februar": 5, "marec": 0, "april": 0, "maj": 0,
                "junij": 1, "julij": 0, "avgust": 0, "september": 1, "oktober": 1,
@@ -274,7 +274,7 @@ def main() -> int:
     # ---------- I8: parish.ts bloki 04455 ----------
     ts = open(PARISH_TS).read()
     blocks_m = re.findall(r'houseNo:\s*"([^"]*)",\s*bookSignature:\s*"04455",\s*year:\s*(\d{4}),\s*scan:\s*(\d+)', ts)
-    check("I8 bloki 04455 = 33 (P119 +4, P120 +2)", len(blocks_m) == BLOCKS_04455_TS, str(len(blocks_m)))
+    check("I8 bloki 04455 = 46 (P121 +4, P122 +5, P123 +4)", len(blocks_m) == BLOCKS_04455_TS, str(len(blocks_m)))
     h1889 = sorted((h for h, y, _ in blocks_m if y == "1889"), key=int)
     check("I8b hiše 1889 = [7,21,30,32,40,54,87]", ",".join(h1889) == GRIBLJE_HOUSES_TS, ",".join(h1889))
     h1888 = sorted((h for h, y, _ in blocks_m if y == "1888"), key=int)
@@ -317,15 +317,15 @@ def main() -> int:
     # ---------- I9: qa-parish ----------
     qa = open(QA_TS).read()
     check("I9 qa-p118", '"qa-p118-parish-marriage-1889"' in qa)
-    check("I9b qa-p116 bloki 37", "poročni bloki (04455) ≠ 37" in qa)
-    check("I9c p80 bloki 37", "poročni vpisi (04455) ≠ 37" in qa)
+    check("I9b qa-p116 bloki 46", "poročni bloki (04455) ≠ 46" in qa)
+    check("I9c p80 bloki 46", "poročni vpisi (04455) ≠ 46" in qa)
     # vitals 544 regresijska zaščita v qa-p118
-    check("I9d vitals 554 zaščita (P121)", "HOUSE_VITALS.length !== 554" in qa[qa.index("const p118Marr"):] if "const p118Marr" in qa else False)
+    check("I9d vitals 563 zaščita (P123)", "HOUSE_VITALS.length !== 563" in qa[qa.index("const p118Marr"):] if "const p118Marr" in qa else False)
     check("I9e stara številka 537 iztekla", "HOUSE_VITALS.length !== 537" not in qa)
 
     # ---------- I10: README + notes ----------
     rd = open("README.md").read()
-    check("I10 README po P118", "P118" in rd and ("122/122" in rd or "po P121" in rd))
+    check("I10 README po P118", "P118" in rd and ("124/124" in rd or "po P123" in rd))
     nt = open("research/issue17/parish-marriage-1889-notes.md").read()
     check("I10b notes faza 2", "FAZA 2" in nt and "NEZAKONSKA" in nt.upper())
 
