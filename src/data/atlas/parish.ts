@@ -914,6 +914,57 @@ export const HOUSE_VITALS: HouseVital[] = [
     whatEn: "marriage (May 26, 1895, entry 13) — groom Mathias PERDINEC, half smallholder's son [~], 26, GRIBLJE 52 (a NEW house of the sample — in the PT gap 41–60!; father Johann Perdinec half smallholder × Maria Novak) × Anna JAKOBIČ, ½ smallholder + »Žugffan« [~ — house nickname?], 21, Cerkvišče 26 (father Nicolaus Jakobič half smallholder × Anna Mušič); PERDINEC ×2 in the year 1895 (v11 f. Marcus + v13 f. Johann — two branches!); a short form row (575–700); witnesses: Nicol. Novak + Math. Jakobič (} ¼ gbl [~]); priest Jos. Rauy (»M.!« [~]); Befünden: the certificate of the Griblje commune from May 20, 95 no. 3 + mündl. väterl. fürwellig für die ml. Braut in Ungarn ward [~] obigen šti. Närnk [~]",
     status: "DOCUMENTED",
   },
+  // ——— P125 razširitev: POROČNA KNJIGA 04455 — dopolnitev 1895 (s97 = Pag. 96:
+  // v17–v19!) + polno leto 1896 (s98–s101 == Pag. 97–100; Pag. == sken − 1,
+  // 11. potrditev; velja v 61–100). ROKOPISNA GLAVA »1896.« na s98 POTRJENA +
+  // rokopisna glava »1897« + v1/1897 ŽE na s101 (P126 lead!).
+  // 1895 = 19 vpisov (16 P124 + 3 P125 ext: okt 29 + nov 10 + nov 28!);
+  // 1896 = 15 vpisov (razpored feb 5 + apr 1 + maj 4 + avg 2 + okt 2 + nov 1).
+  // NOVELE: ★ ⅓ GRIBLAR = NOV ULOMEK LINIJE (v6 Kolih + v10 Jakofčič — oče+sin
+  // oba ⅓!) + 1 GRIBLAR (v2) + ★ 1. NEZAKONSKI ŽENIN POROČNE LINIJE (v14:
+  // starši [—] + »ledige Magd«!) + ★ 3. duhovnik linije Franz Herms coop.
+  // (v12 — edina prekinitev Rauy-monopola 17/18!) + ★ 2. ŽANDAR (v4 Eduard
+  // (Hubert [~]) Röthl) + k.k. Beamte oče (1.!) + Rudolfswert/Gottschee/
+  // Adelsberg/Laibach + »Indifferenz« + ★ ŽAKANJE = HRVAŠKA (v11 — slovensko
+  // »otlični list«!) + ★ »hoc« = hic commorans REŠEN ×7 + ★ mütterl. fürwellig
+  // (v7 — 1. MATICA!) + »in Ungarn« ×4 (isti števec kot P124!) + GROSSJÄHRIGKEIT
+  // za ženina (v3 — 1.!) + DISPENS №2906 (v17-1895) + №293 (v3) + ★ MUC 3.
+  // dokaz (v1 oče = P121 v12 ISTA!) + ★ 2. REKORD-PAR (v18-1895: 59+50 = 109!)
+  // + občinske kontinuitete Griblje št:4 / Gradac 21→22→23 / Podzemelj 4→121[~]
+  // + h14 CROSS-LINK (v17 par = krstna 1896 ISTI PAR!).
+  // GRIBLJE: 2 poroke / 3 poročna bloka (h24 + h14 NOVA poročna × h18 NOVA!).
+  // Dokaz: research/issue17/parish-marriage-1896.json; verifikator:
+  // scripts/p125_parish_marriage_1896.py --check (I1–I11).
+  {
+    houseNo: "24",
+    bookSignature: "04455",
+    year: 1895,
+    scan: 97,
+    page: 96,
+    whatSi: "poroka (29. 10. 1895, vpis 17 — DOPOLNITEV P124: 1895 ima 19 vpisov!) — ženin Johann BRINSEC [~ Brinec], ½ Griblarš Sohn [~], 33, GRIBLJE 24 (1. POROČNI DOKAZ h24 — krstna 1887–1893 gosta = Brinec × Jakobec familija!; oče Peter Brinsec ½ Griblar × Anna STRAOS [~]) × Maria PERDINEC [~ Pexdinec], ½ Gbl. Tojfter [~], 28, GRIBLJE 14 (oče Michaël Perdinec ¼ Griblar × Anna Brinsec — OBE MATI/NEVESTA BRINSEC = sorodstvo!); ★ GRIBLJE × GRIBLJE (h24 × h14) + ★ DISPENS №2906: 3. stopnja krvnega sorodstva lineae collat. 2ti gradus [~], f.b. Ordinariat Laibach 7/10. 1895 (3 tedna pred poroko!); ★ h14 CROSS-LINK: ISTI PAR kot krstna 04105 s85 h14 1896 (oče Janez Brinec × mati Marija Pendirec) — ženin oženj v nevestino hišo (vzorec h56-1886!); občina Griblje št: 4 = ZAPOREDNA kontinuiteta (P124 št:1-3 maj → št:4 okt!); priče: Mathias Sakljič [~] + Mathias Brinsec (obe imeni v ISTI celici!) + gändlbr [~] ¼ Griblar; duhovnik Jos. Rauy",
+    whatEn: "marriage (Oct 29, 1895, entry 17 — the P124 SUPPLEMENT: 1895 has 19 entries!) — groom Johann BRINSEC [~ Brinec], half smallholder's son [~], 33, GRIBLJE 24 (the 1st MARRIAGE evidence of h24 — the baptisms 1887–1893 host = the Brinec × Jakobec family!; father Peter Brinsec half smallholder × Anna STRAOS [~]) × Maria PERDINEC [~ Pexdinec], half smallholder's daughter [~], 28, GRIBLJE 14 (father Michaël Perdinec quarter smallholder × Anna Brinsec — BOTH the mother/bride BRINSEC = kinship!); ★ GRIBLJE × GRIBLJE (h24 × h14) + ★ DISPENSATION №2906: the 3rd degree of consanguinity lineae collat. 2ti gradus [~], the f.b. Ordinariat Laibach Oct 7, 1895 (3 weeks before the wedding!); ★ the h14 CROSS-LINK: the SAME couple as the baptism 04105 s85 h14 1896 (father Janez Brinec × mother Marija Pendirec) — the groom married INTO the bride's house (the h56-1886 pattern!); the Griblje commune no. 4 = a SEQUENTIAL continuity (the P124 nos. 1-3 May → no. 4 Oct!); witnesses: Mathias Sakljič [~] + Mathias Brinsec (both names in the SAME cell!) + gändlbr [~] quarter smallholder; priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "14",
+    bookSignature: "04455",
+    year: 1895,
+    scan: 97,
+    page: 96,
+    whatSi: "poroka (29. 10. 1895, vpis 17) — nevesta Maria PERDINEC [~], ½ Gbl. Tojfter [~], 28, GRIBLJE 14 (1. POROČNI DOKAZ h14 — krstna 1896 h14 NOVA HIŠA vzorca!; oče Michaël Perdinec ¼ Griblar × Anna BRINSEC) × Johann BRINSEC [~], ½ Griblarš Sohn [~], 33, GRIBLJE 24 (drubel poroka — oba bloka!); ★ KRSTNI CROSS-LINK 1896: h14 krst (04105 s85) = oče Janez Brinec × mati Marija Pendirec = ISTI PAR — 1. otrok h14 po poroki!; dispens №2906 (3. st. krvno — mati neveste Anna Brinsec × ženinova familija Brinec h24!); duhovnik Jos. Rauy",
+    whatEn: "marriage (Oct 29, 1895, entry 17) — bride Maria PERDINEC [~], half smallholder's daughter [~], 28, GRIBLJE 14 (the 1st MARRIAGE evidence of h14 — the baptism 1896 h14 NEW HOUSE of the sample!; father Michaël Perdinec quarter smallholder × Anna BRINSEC) × Johann BRINSEC [~], half smallholder's son [~], 33, GRIBLJE 24 (a double-Griblje marriage — both blocks!); ★ THE BAPTISM CROSS-LINK 1896: the h14 baptism (04105 s85) = father Janez Brinec × mother Marija Pendirec = the SAME couple — the 1st child of h14 after the wedding!; dispensation №2906 (3rd degree consanguinity — the bride's mother Anna Brinsec × the groom's Brinec family h24!); priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "18",
+    bookSignature: "04455",
+    year: 1896,
+    scan: 101,
+    page: 100,
+    whatSi: "poroka (23. 11. 1896, vpis 15) — nevesta Catharina KLOBUČAR [~], ½ Griblaršdojft. + hoc [hic commorans], 21 (mladoletna — GROSSJÄHRIGKEITS-ERKÄRUNG vom k.k. Bez.G. Črnomelj 12/11. 1896 ko 8364 [~]!), GRIBLJE 18 (1. POROČNI DOKAZ h18 — krstna 1898 h18 NOVA ŠTEVILKA (Matija Šimec × Ana Kukar — IZMENA gospodinjstva?!); oče Johann Klobučar ¼ Griblar × Barbara PERDINEC) × Johann BERKOVEC [~], ½ Griblarššohn [~], 28, Lomelj [~] 14 (oče Marcus Berkovec ½ Griblar × Catharina KLEPEC — KLEPEC ×3 v letu!); edina GRIBLJE poroka 1896; priče: Peter Perdinec + Juri(j) Klepec (} ½ Gbl.); duhovnik Jos. Rauy (»M.!« [~]); Befünden: zglašnica občine Podzemelj nov. 1896 št: 121 [~]",
+    whatEn: "marriage (Nov 23, 1896, entry 15) — bride Catharina KLOBUČAR [~], half smallholder's daughter + hoc [hic commorans], 21 (a minor — the COMING-OF-AGE DECLARATION of the k.k. district court Črnomelj Nov 12, 1896 ko 8364 [~]!), GRIBLJE 18 (the 1st MARRIAGE evidence of h18 — the baptism 1898 h18 A NEW NUMBER (Matija Šimec × Ana Kukar — a HOUSEHOLD CHANGE?!); father Johann Klobučar quarter smallholder × Barbara PERDINEC) × Johann BERKOVEC [~], half smallholder's son [~], 28, Lomelj [~] 14 (father Marcus Berkovec half smallholder × Catharina KLEPEC — KLEPEC ×3 in the year!); the only GRIBLJE marriage of 1896; witnesses: Peter Perdinec + Juri(j) Klepec (} ½ Gbl.); priest Jos. Rauy (»M.!« [~]); Befünden: the certificate of the Podzemelj commune Nov 1896 no. 121 [~]",
+    status: "DOCUMENTED",
+  },
   // ——— P122 razširitev: POROČNA KNJIGA 04455 — polno leto 1893 (skeni 87–90 ==
   // strani 86–89; VELIKA GLAVA »Traunungs=Buch« + rokopisno »1893« na s87 =
   // Pag. 86 POTRJENA — P122 lead!; 20 vpisov: 1886:7 → 1887:21 → 1888:20 →

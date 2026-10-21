@@ -117,14 +117,14 @@ if (p80Death1887.length !== 2 || p80Death1887.some((h) => h.scan !== 6))
 // poročna: okvir 1886 = 7 vpisov (skeni 61–65, Pag. == sken − 1) + sidra = 4 (1885 sk.61 · 1882 sk.50 Pag.44 · 1887 sk.66 ×2)
 const p80Marr1886 = p80Marr.filter((h) => h.year === 1886);
 const p80MarrAnchors = p80Marr.filter((h) => h.year !== 1886);
-if (p80Marr.length !== 49)
-  p80Errors.push(`poročni vpisi (04455) ≠ 49 (${p80Marr.length} — P121: + 4 bloki 1892; P122: + 5 bloki 1893; P123: + 4 bloki 1894; P124: + 3 bloki 1895!)`);
+if (p80Marr.length !== 52)
+  p80Errors.push(`poročni vpisi (04455) ≠ 52 (${p80Marr.length} — P121: + 4 bloki 1892; P122: + 5 bloki 1893; P123: + 4 bloki 1894; P124: + 3 bloki 1895; P125: + 3 bloki (h24+h14-1895ext + h18-1896)!)`);
 if (p80Marr1886.length !== 7)
   p80Errors.push(`poročni okvir 1886 ≠ 7 vpisov (${p80Marr1886.length})`);
 if (p80Marr1886.some((h) => !h.scan || h.scan < 61 || h.scan > 65 || h.page !== h.scan - 1))
   p80Errors.push("poročni okvir 1886: sken izven 61–65 ali Pag. ≠ sken − 1");
 if (
-  p80MarrAnchors.length !== 42 ||
+  p80MarrAnchors.length !== 45 ||
   p80MarrAnchors.filter((h) => h.year === 1882).length !== 1 ||
   p80MarrAnchors.filter((h) => h.year === 1885).length !== 1 ||
   p80MarrAnchors.filter((h) => h.year === 1887).length !== 7 ||
@@ -135,9 +135,15 @@ if (
   p80MarrAnchors.filter((h) => h.year === 1892).length !== 4 ||
   p80MarrAnchors.filter((h) => h.year === 1893).length !== 5 ||
   p80MarrAnchors.filter((h) => h.year === 1894).length !== 4 ||
-  p80MarrAnchors.filter((h) => h.year === 1895).length !== 3
+  p80MarrAnchors.filter((h) => h.year === 1895).length !== 5 ||
+  p80MarrAnchors.filter((h) => h.year === 1896).length !== 1
 )
-  p80Errors.push("poročna sidra ≠ 42 (1882:1 · 1885:1 · 1887:7 · 1888:4 · 1889:7 · 1890:4 · 1891:2 · 1892:4 · 1893:5 · 1894:4 · 1895:3 — P116 +5, P117 +4, P118 +7, P119 +4, P120 +2, P121 +4, P122 +5, P123 +4, P124 +3 bloki)");
+  p80Errors.push("poročna sidra ≠ 45 (1882:1 · 1885:1 · 1887:7 · 1888:4 · 1889:7 · 1890:4 · 1891:2 · 1892:4 · 1893:5 · 1894:4 · 1895:5 · 1896:1 — P116 +5, P117 +4, P118 +7, P119 +4, P120 +2, P121 +4, P122 +5, P123 +4, P124 +3, P125 +3 bloki)");
+
+// P125: hiša 1896 (04455) = [18]
+const p125Marr = HOUSE_VITALS.filter((h) => h.bookSignature === "04455" && h.year === 1896);
+if (p125Marr.map((h) => h.houseNo).sort().join(",") !== "18")
+  p80Errors.push(`hiša 1896 (04455) ≠ [18] — najdeno: ${p125Marr.map((h) => h.houseNo).join(",")} (P125: v15 h18 Klobučar — edina GRIBLJE poroka 1896!)`);
 if (p80MarrAnchors.some((h) => h.year === 1882 && h.scan !== 50))
   p80Errors.push("poročno sidro 1882: sken ≠ 50 (Pag. 44)");
 // celovitost polj + obdobja knjig
@@ -152,8 +158,8 @@ if (p80Bad.length > 0)
 const p80Houses = new Set(p80All.map((h) => h.houseNo));
 const P80_PT_GAP = ["44", "53", "54", "56", "57", "59", "60", "42", "58", "52"]; // P119: + h53 (poročna 1890 v6 Johann Perdinec — NOVI dokaz v luknji!); P122/P123: + h58 (poročna 1893 v16 Johann Požek) + h42 (poročna 1894 v3 — CERNIČ-hiša) — NOVA dokaza v luknji!; P124: + h52 (poročna 1895 v13 Mathias Perdinec — NOV dokaz v luknji!)
 const p80Gap = [...p80Houses].filter((h) => P80_PT_GAP.includes(h));
-if (p80Houses.size !== 48)
-  p80Errors.push(`različnih hiš (vse tri knjige) ≠ 48 (${p80Houses.size} — P117: +h32/h33/h64; P118: +h7/h30/h40/h54/h87; P119: +h91/h53; P120: +h20; P121: +h17; P122: +h26/h58/h62 (h69/h74 že v vzorci); P123: +h9/h27/h42 (h11 že v vzorci); P124: +h52 (h16 že v mrliškem vzorci))`);
+if (p80Houses.size !== 51)
+  p80Errors.push(`različnih hiš (vse tri knjige) ≠ 51 (${p80Houses.size} — P117: +h32/h33/h64; P118: +h7/h30/h40/h54/h87; P119: +h91/h53; P120: +h20; P121: +h17; P122: +h26/h58/h62 (h69/h74 že v vzorci); P123: +h9/h27/h42 (h11 že v vzorci); P124: +h52 (h16 že v mrliškem vzorci); P125: +h24/h14/h18 (poročna 1895/1896 — krstni bloki teh hiš so v 1896/1898, IZVEN p80 vzorca))`);
 if (p80Gap.length !== 10)
   p80Errors.push(`PT luknja ≠ 10 hiš (${p80Gap.length}: ${p80Gap.sort().join(",")})`);
 // križne povezave: hiše 13, 36, 71 v VSEH treh knjigah
@@ -755,7 +761,7 @@ for (const hn of ["28", "53"]) {
     p86Errors.push(`NOVA hiša ${hn} (P86) že obstaja v prejšnjem letu — pini neskladni`);
 }
 // vitals skupaj 449 (po P106: 429 + 20; krstna 1911)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p86Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 push(
   "qa-p86-parish-baptism-1891",
@@ -854,7 +860,7 @@ for (const hn of ["12", "73", "75"]) {
     p87Errors.push(`NOVA hiša ${hn} (P87) že obstaja v prejšnjem letu — pini neskladni`);
 }
 // vitals skupaj 449 (po P106: 429 + 20; krstna 1911)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p87Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 push(
   "qa-p87-parish-baptism-1892",
@@ -970,7 +976,7 @@ const p88H60b = HOUSE_VITALS.find((v) => v.houseNo === "60" && v.bookSignature =
 if (!p88H60b || !p88H60b.whatSi.includes("GRIBLJE 60"))
   p88Errors.push("kontinuiteta hiša 60 (1886, 04455, pin GRIBLJE 60) manjka");
 // vitals skupaj 449 (po P106: 429 + 20; krstna 1911)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p88Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 push(
   "qa-p88-parish-baptism-1893",
@@ -1080,7 +1086,7 @@ for (const [hn, yr, sig, pin] of [
     p89Errors.push(`kontinuiteta hiša ${hn} (${yr}, ${sig}, pin ${pin}) manjka ali pin ne ustreza`);
 }
 // vitals skupaj 449 (po P106: 429 + 20; krstna 1911)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p89Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 push(
   "qa-p89-parish-baptism-1894",
@@ -1192,7 +1198,7 @@ for (const [hn, yr, sig, pin] of [
     p90Errors.push(`kontinuiteta hiša ${hn} (${yr}, ${sig}, pin ${pin}) manjka ali pin ne ustreza`);
 }
 // vitals skupaj 449 (po P106: 429 + 20; krstna 1911)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p90Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 push(
   "qa-p90-parish-baptism-1895",
@@ -1277,7 +1283,7 @@ if (p91Gap.some((h) => !(Number(h) >= 41 && Number(h) <= 60)))
 // h9: P123 dovoli poročni blok 04455/1894 (v11 Georg Jakobčič GRIBLJE 9 — 2. poročni dokaz h9)
 for (const hn of ["9", "14", "45"]) {
   const allow = hn === "45" ? [1896, 1897, 1900, 1904, 1912, 1915, 1917, 1918] : hn === "14" ? [1896, 1900, 1902, 1908, 1911, 1914, 1917, 1918] : hn === "18" ? [1896, 1900, 1910, 1912] : [1896, 1900, 1913, 1915, 1917]; // P113: + 1918 bloka h45 (8. VPIS — ZAPORED 2. LETO!) + h14 (9. VPIS — ZAPORED 2. LETO!) // P105: + 1910 blok h18 (4. VPIS — POVRAT Šimec × Kambič); P106: + 1911 blok h48 (5. VPIS) // P95: + 1900 bloki; P97: + 1902 blok h14 (3. VPIS — oče potrjen); P99: + 1904 blok h45 (4. VPIS — SPUDIČ signal, mati Barbara Spudič) P107: + 1912 blok h45 (5. VPIS — DVOJČKI r6/r7) P107: + 1912 blok h18 (5. VPIS — ANOMALIJA žensko ime v koloni očeta) P108: + 1913 blok h9 (3. VPIS — VRZEL 13 LET!); P109: + 1914 blok h14 (6. VPIS — VRZEL 3 LETA POPRAVLJENO); P112: + 1917 bloka h45 (7. VPIS — P111 lead Karol Feliks!) + h14 (7. VPIS — MRTVOROJEN!) + h9 (5. VPIS — Ožbald oče!); P113: + 1918 bloka h45 (8. VPIS — ZAPORED 2. LETO, ČEVLJAR 2. leto!) + h14 (9. VPIS — ZAPORED 2. LETO!)
-  if (HOUSE_VITALS.some((v) => v.houseNo === hn && !(v.bookSignature === "04105" && allow.includes(v.year)) && !(v.bookSignature === "04455" && v.year === 1894)))
+  if (HOUSE_VITALS.some((v) => v.houseNo === hn && !(v.bookSignature === "04105" && allow.includes(v.year)) && !(v.bookSignature === "04455" && v.year === 1894) && !(v.bookSignature === "04455" && hn === "14" && v.year === 1895)))
     p91Errors.push(`NOVA hiša ${hn} (P91) že obstaja v prejšnjem letu — pini neskladni`);
 }
 // kontinuitete čez leta prek HOUSE_VITALS
@@ -1301,7 +1307,7 @@ for (const [hn, yr, sig, pin] of [
     p91Errors.push(`kontinuiteta hiša ${hn} (${yr}, ${sig}, pin ${pin}) manjka ali pin ne ustreza`);
 }
 // vitals skupaj 449 (po P106: 429 + 20; krstna 1911)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p91Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 push(
   "qa-p91-parish-baptism-1896",
@@ -1424,7 +1430,7 @@ for (const [hn, yr, sig, pin, sc] of [
     p92Errors.push(`kontinuiteta hiša ${hn} (${yr}, ${sig}, pin ${pin || `sk ${sc}`}) manjka ali pin ne ustreza`);
 }
 // vitals skupaj 449 (po P106: 429 + 20; krstna 1911)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p92Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 push(
   "qa-p92-parish-baptism-1897",
@@ -1517,7 +1523,7 @@ if (p93Gap.some((h) => !(Number(h) >= 41 && Number(h) <= 60)))
 // h53: P93 kontinuiteta ni nova (1891/1894/1896 priori); h40: MENJAVA (1897 prior)
 for (const hn of ["18", "48", "89"]) {
   // P100: + 1905 blok h48 (2. VPIS — VRZEL 7 LET, 1898→1905); P101: + 1906 blok h18 (2. VPIS — VRZEL 8 LET); P102: + 1907 bloka h18 (3. VPIS — MENJAVA Šimec → Brinec) + h48 (3. VPIS — MENJAVA Pezdirec → Kure); P104: + 1909 blok h48 (4. VPIS — EMŠO = KRSTNI datum); P105: + 1910 blok h18 (4. VPIS — POVRAT Šimec × Kambič); P106: + 1911 blok h48 (5. VPIS); P107: + 1912 bloka h18 (5. VPIS — ANOMALIJA) + h48 (6. VPIS — ZAPORED); P109: + 1914 bloka h18 (6. VPIS) + h48 (7. VPIS — DVOM REŠEN, 12. VPIS VZORCA!); P114: + 1919 blok h48 (8. VPIS — DRŽAVLJANKA RS!)
-  if (HOUSE_VITALS.some((v) => v.houseNo === hn && !(v.bookSignature === "04105" && (v.year === 1898 || v.year === 1905 || v.year === 1906 || v.year === 1907 || v.year === 1909 || v.year === 1910 || v.year === 1911 || v.year === 1912 || v.year === 1914 || v.year === 1919))))
+  if (HOUSE_VITALS.some((v) => v.houseNo === hn && !(v.bookSignature === "04105" && (v.year === 1898 || v.year === 1905 || v.year === 1906 || v.year === 1907 || v.year === 1909 || v.year === 1910 || v.year === 1911 || v.year === 1912 || v.year === 1914 || v.year === 1919)) && !(v.bookSignature === "04455" && hn === "18" && v.year === 1896)))
     p93Errors.push(`NOVA hiša ${hn} (P93) že obstaja v prejšnjem letu — pini neskladni`);
 }
 // kontinuitete čez leta prek HOUSE_VITALS (klasifikacija zgodovinska —
@@ -1545,7 +1551,7 @@ for (const [hn, yr, sig, pin, sc] of [
     p93Errors.push(`kontinuiteta hiša ${hn} (${yr}, ${sig}, pin ${pin || `sk ${sc}`}) manjka ali pin ne ustreza`);
 }
 // vitals skupaj 449 (po P106: 429 + 20; krstna 1911)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p93Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 push(
   "qa-p93-parish-baptism-1898",
@@ -1665,7 +1671,7 @@ for (const [hn, yr, sig, pin, sc] of P94_CONTINUITY) {
     p94Errors.push(`kontinuiteta hiša ${hn} (${yr}, ${sig}, pin ${pin || `sk ${sc}`}) manjka ali pin ne ustreza`);
 }
 // vitals skupaj 449 (po P106: 429 + 20; krstna 1911)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p94Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 push(
   "qa-p94-parish-baptism-1899",
@@ -1812,7 +1818,7 @@ for (const [hn, yr, sig, pin, sc] of P95_CONTINUITY) {
     p95Errors.push(`kontinuiteta hiša ${hn} (${yr}, ${sig}, pin ${pin || `sk ${sc}`}) manjka ali pin ne ustreza`);
 }
 // vitals skupaj 449 (po P106: 429 + 20; krstna 1911)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p95Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 push(
   "qa-p95-parish-baptism-1900",
@@ -1894,7 +1900,7 @@ for (const [hn, yr, pin] of p96Pins) {
 if (HOUSE_VITALS.some((h) => h.houseNo === "19" && (h.bookSignature !== "04105" || (h.year !== 1901 && h.year !== 1906 && h.year !== 1912))))
   p96Errors.push("NOVA hiša 19 že obstaja v prejšnjem letu — pini neskladni");
 // vitals skupaj 449 (po P106: 429 + 20; krstna 1911)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p96Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 // babica: 10/10 imenovanih; Toter 6×
 if (p96Hv.filter((h) => h.whatSi.includes("babica")).length !== 10)
@@ -2005,7 +2011,7 @@ for (const [hn, yr, pin] of p97Pins) {
     p97Errors.push(`kontinuiteta hiša ${hn} (${yr}, pin ${pin}) ne ustreza`);
 }
 // vitals skupaj 449 (po P106: 429 + 20; krstna 1911)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p97Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 // babica: 12/12 imenovanih; Toter 9×
 if (p97Hv.filter((h) => h.whatSi.includes("babica")).length !== 12)
@@ -2122,7 +2128,7 @@ for (const [hn, yr, pin] of p98Pins) {
     p98Errors.push(`kontinuiteta hiša ${hn} (${yr}, pin ${pin}) ne ustreza`);
 }
 // vitals skupaj 449 (po P106: 429 + 20; krstna 1911)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p98Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 // babica: 12/12 imenovanih; Toter 6×
 if (p98Hv.filter((h) => h.whatSi.includes("babica")).length !== 12)
@@ -2313,7 +2319,7 @@ for (const [hn, yr, pin] of p99Pins) {
     p99Errors.push(`kontinuiteta hiša ${hn} (${yr}, pin ${pin}) ne ustreza`);
 }
 // vitals skupaj 307 (P99: 288 + 19; krstna 1904; r69 hiša neberljiva brez bloka)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p99Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 // babica: 19/19 blokov (h88 = pod trakom); Toter 10× + Mavretič 3× + Mih 3×
 // (4. Mih = r69 vrstica — hiša neberljiva, brez bloka) + Delak + Aleksič
@@ -2447,7 +2453,7 @@ for (const [hn, yr, pin] of p100Pins) {
     p100Errors.push(`kontinuiteta hiša ${hn} (${yr}, pin ${pin}) ne ustreza`);
 }
 // vitals skupaj 449 (po P106: 429 + 20; krstna 1911)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p100Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 // babica: 16/16 blokov; Toter 12× + Mih 3× + Kambič 1×
 if (p100Hv.filter((h) => h.whatSi.includes("babica")).length !== 16)
@@ -2580,7 +2586,7 @@ for (const [hn, yr, pin] of p101Pins) {
     p101Errors.push(`kontinuiteta hiša ${hn} (${yr}, pin ${pin}) ne ustreza`);
 }
 // vitals skupaj 449 (po P106: 429 + 20; krstna 1911)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p101Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 // babica: 18/18 blokov; Toter 0× (NOVELA — prvič!) + Mih 10× + Vötter 5×
 if (p101Hv.filter((h) => h.whatSi.includes("babica")).length !== 18)
@@ -2716,7 +2722,7 @@ for (const [hn, yr, pin] of p102Pins) {
     p102Errors.push(`kontinuiteta hiša ${hn} (${yr}, pin ${pin}) ne ustreza`);
 }
 // vitals skupaj 449 (P106: 429 + 20; krstna 1911; r43 neberljiva brez bloka)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p102Errors.push(`HOUSE_VITALS ≠ 374 (${HOUSE_VITALS.length})`);
 // babica: 15/15 blokov; Mih 0× (NOVELA) + Vötter 0× + Šotter 7× + Toter 1×
 if (p102Hv.filter((h) => h.whatSi.includes("babica")).length !== 15)
@@ -2849,7 +2855,7 @@ for (const [hn, yr, pin] of p103Pins) {
     p103Errors.push(`kontinuiteta hiša ${hn} (${yr}, pin ${pin}) ne ustreza`);
 }
 // vitals skupaj 449 (P106: 429 + 20; krstna 1911; r43 neberljiva brez bloka)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p103Errors.push(`HOUSE_VITALS ≠ 374 (${HOUSE_VITALS.length})`);
 // babica: 18/18 blokov; Vötter 1× (VRNITEV po 1907 0×!) + Muc 6 + Adlešič 8 + Meh 2
 if (p103Hv.filter((h) => h.whatSi.includes("babica")).length !== 18)
@@ -3003,7 +3009,7 @@ for (const [hn, yr, pin] of p104Pins) {
     p104Errors.push(`kontinuiteta hiša ${hn} (${yr}, pin ${pin}) ne ustreza`);
 }
 // vitals skupaj 449 (P106: 429 + 20; krstna 1911)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p104Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 // babica: 18/18 blokov; Meh 12 (DOMINANTA 1909) + Vötter 1 (DVOJNO z botrinjo)
 if (p104Hv.filter((h) => h.whatSi.includes("babica")).length !== 18)
@@ -3149,7 +3155,7 @@ for (const [hn, yr, pin] of p105Cont) {
     p105Errors.push(`kontinuiteta hiša ${hn} (${yr}, pin ${pin}) ne ustreza`);
 }
 // vitals skupaj 449 (po P106: 429 + 20; krstna 1911)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p105Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 // babica: 20/20 whatSi; Meh 15 (DOMINANTA 1910; r7 samo priimek + r83 Ana Meh)
 if (p105Hv.filter((h) => h.whatSi.includes("babica")).length !== 20)
@@ -3249,7 +3255,7 @@ for (const [hn, pin] of p106Pins) {
     p106Errors.push(`pin hiša ${hn} (${pin}) manjka`);
 }
 // vitals skupaj 449 (po P107: 429 + 20; krstna 1912)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p106Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 // babica: 16/17 whatSi; Meh 12 (11× Marija + 1× Marjeta r68 — DOMINANTA 1911)
 // + babica = mati ISTA (r67 Katarina Novak)
@@ -3354,7 +3360,7 @@ for (const [n, pin] of p107Pins) {
     p107Errors.push(`pin hiša ${n} (${pin}) manjka`);
 }
 // vitals skupaj 449 (po P107: 429 + 20; krstna 1912)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p107Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 // babica: 19/20 whatSi; Meh 12 (vse Marija — DOMINANTA 1912) + MEH ×2 r87
 if (p107Hv.filter((h) => h.whatSi.includes("babica")).length !== 20)
@@ -3454,7 +3460,7 @@ for (const [n, pin] of p108Pins) {
     p108Errors.push(`pin hiša ${n} (${pin}) manjka`);
 }
 // vitals skupaj 467 (po P108: 449 + 18; krstna 1913)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p108Errors.push(`HOUSE_VITALS ≠ 467 (${HOUSE_VITALS.length})`);
 // babica: 18/18 imenovanih; Jakofčič 8 DOMINANTA (prvič ne-Meh!) + Pleščič 4 + Adlešič 3 + Mavrenič 2 + Meh 1
 if (p108Hv.filter((h) => h.whatSi.includes("babica")).length !== 18)
@@ -3562,7 +3568,7 @@ for (const [n, pin] of p109Pins) {
 if (!p109Hv.some((h) => h.houseNo === "8" && h.whatSi.includes("NE r62")))
   p109Errors.push("EMŠO reassign (2210914505196 → r63) manjka v h8 bloku");
 // vitals skupaj 490 (po P110: 479 + 11; krstna 1915)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p109Errors.push(`HOUSE_VITALS ≠ 479 (${HOUSE_VITALS.length})`);
 // babica: 12/12 imenovanih; Jakofčič 4 DOMINANTA (2. leto zapored)
 if (p109Hv.filter((h) => h.whatSi.includes("babica")).length !== 12)
@@ -3649,7 +3655,7 @@ for (const [n, pin] of p110Pins) {
     p110Errors.push(`pin hiša ${n} (${pin}) manjka`);
 }
 // vitals skupaj 490 (po P110: 479 + 11; krstna 1915)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p110Errors.push(`HOUSE_VITALS ≠ 490 (${HOUSE_VITALS.length})`);
 // babica: 11/11 imenovanih; Jakofčič 10/11 (r72 Jakobčič!)
 if (p110Hv.filter((h) => h.whatSi.includes("babica")).length !== 11)
@@ -3728,7 +3734,7 @@ for (const [n, pin] of p111Pins) {
     p111Errors.push(`pin hiša ${n} (${pin}) manjka`);
 }
 // vitals skupaj 496 (po P111: 490 + 6; krstna 1916)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p111Errors.push(`HOUSE_VITALS ≠ 496 (${HOUSE_VITALS.length})`);
 // babice 6/6 imenovanih: Jakofčič ×2 (r22/r23) + Adlešič ×2 + Muc + Marentič
 if (p111Hv.filter((h) => h.whatSi.includes("babica")).length !== 6)
@@ -3811,7 +3817,7 @@ for (const [n, pin] of p112Pins) {
     p112Errors.push(`pin hiša ${n} (${pin}) manjka`);
 }
 // vitals skupaj 508 (po P112: 496 + 12)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p112Errors.push(`HOUSE_VITALS ≠ 533 (${HOUSE_VITALS.length})`);
 // babice: Jakofčič ×4 (r18/r35/r41/r43) + Adlešič ×2 (r26/r27) + Piletič 1 (r52)
 const p112Jakofcic = p112Hv.filter((h) => h.whatSi.includes("babica Marija Jakofčič")).length;
@@ -3894,7 +3900,7 @@ for (const [n, pin] of p113Pins) {
     p113Errors.push(`pin hiša ${n} (${pin}) manjka`);
 }
 // vitals skupaj 517 (po P113: 508 + 9)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p113Errors.push(`HOUSE_VITALS ≠ 533 (${HOUSE_VITALS.length})`);
 // duhovniki 1918 (4 = REKORD!): Učak ≥3, Lopar ≥3, Bitnar ≥1, Kolbezen ≥1
 if (p113Hv.filter((h) => h.whatSi.includes("Učak")).length < 3)
@@ -3990,7 +3996,7 @@ for (const [n, pin] of p114Pins) {
     p114Errors.push(`pin hiša ${n} (${pin}) manjka`);
 }
 // vitals skupaj 528 (po P114: 517 + 11)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p114Errors.push(`HOUSE_VITALS ≠ 533 (${HOUSE_VITALS.length})`);
 // duhovniki 1919 (5 = REKORD!): Cerar župnik ≥8 (Griblje), Lopar ≥2 (l40+l75; +l15 Logar = DVOJNI PODPIS);
 // Rogar (l62–67, l70) + Učak (l2) + Katanov (l27) = SAMO IZVEN Gribljih → v vitals blokah morajo biti PRAZNI
@@ -4030,8 +4036,8 @@ push(
 // ——— qa-p115: župnija Podzemelj — poročna knjiga 04455, polno leto 1886 (P115; NOVA linija po zaključku krstne 04105!) ———
 const p115Marr = HOUSE_VITALS.filter((h) => h.bookSignature === "04455");
 const p115Errors: string[] = [];
-if (p115Marr.length !== 49)
-  p115Errors.push(`poročni bloki (04455) ≠ 49 (${p115Marr.length} — P121: + 4 bloki 1892; P122: + 5 bloki 1893; P123: + 4 bloki 1894; P124: + 3 bloki 1895!)`);
+if (p115Marr.length !== 52)
+  p115Errors.push(`poročni bloki (04455) ≠ 52 (${p115Marr.length} — P121: + 4 bloki 1892; P122: + 5 bloki 1893; P123: + 4 bloki 1894; P124: + 3 bloki 1895; P125: + 3 bloki (h24+h14-1895ext + h18-1896)!)`);
 const p115M1886 = p115Marr.filter((h) => h.year === 1886);
 const p115Houses1886 = p115M1886.map((h) => h.houseNo).sort();
 if (p115Houses1886.join(",") !== "16,25,31,56,60,65,71")
@@ -4080,7 +4086,7 @@ const p115Anchor = p115Marr.find((h) => h.houseNo === "13" && h.year === 1885);
 if (!p115Anchor || !p115Anchor.whatSi.includes("PEGDIREC") || p115Anchor.whatSi.includes("née Podlirec"))
   p115Errors.push("sidro 1885 (h13): mati ženina ≠ PEGDIREC ali staro »Podlirec« še prisotno");
 // kumulativ (ob P115): vitals 528 nespremenjen (poročni bloki že od P80); P116: + 5 → 533
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p115Errors.push(`HOUSE_VITALS ≠ 533 (${HOUSE_VITALS.length} — P116: 528 + 5 novih poročnih blokov (h23/h37/h69/h3/h10) = 533!)`);
 push(
   "qa-p115-parish-marriage-1886",
@@ -4095,8 +4101,8 @@ push(
 // ——— qa-p116: župnija Podzemelj — poročna knjiga 04455, polno leto 1887 (P116; nadaljevanje poročne linije P115!) ———
 const p116Marr = HOUSE_VITALS.filter((h) => h.bookSignature === "04455");
 const p116Errors: string[] = [];
-if (p116Marr.length !== 49)
-  p116Errors.push(`poročni bloki (04455) ≠ 49 (${p116Marr.length} — P121: + 4 bloki 1892; P122: + 5 bloki 1893; P123: + 4 bloki 1894; P124: + 3 bloki 1895!)`);
+if (p116Marr.length !== 52)
+  p116Errors.push(`poročni bloki (04455) ≠ 52 (${p116Marr.length} — P121: + 4 bloki 1892; P122: + 5 bloki 1893; P123: + 4 bloki 1894; P124: + 3 bloki 1895; P125: + 3 bloki (h24+h14-1895ext + h18-1896)!)`);
 const p116M1887 = p116Marr.filter((h) => h.year === 1887);
 const p116Houses1887 = p116M1887.map((h) => h.houseNo).sort((a, b) => Number(a) - Number(b));
 if (p116Houses1887.join(",") !== "3,10,15,23,37,69,71")
@@ -4138,7 +4144,7 @@ const p116Nova = p116M1887.filter((h) => h.whatSi.includes("NOVA")).map((h) => h
 if (p116Nova.join(",") !== "3,10,23,37,69")
   p116Errors.push(`NOVA hiše ≠ [3,10,23,37,69] (${p116Nova.join(",")})`);
 // kumulativ: vitals 528 → 533 → 537 (P117: + 4 novih poročnih blokov h23-1888/h32/h33/h64-1888)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p116Errors.push(`HOUSE_VITALS ≠ 537 (${HOUSE_VITALS.length} — P116: 528 + 5 = 533; P117: + 4 novih poročnih blokov (h23-1888/h32/h33/h64-1888) = 537!)`);
 push(
   "qa-p116-parish-marriage-1887",
@@ -4189,10 +4195,10 @@ for (const old of p117Old) {
     p117Errors.push(`staro branje še v 1888 blokih: »${old}«`);
 }
 // kumulativ: vitals 533 → 537 (P117: + 4 novih poročnih blokov h23-1888/h32/h33/h64-1888)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p117Errors.push(`HOUSE_VITALS ≠ 554 (${HOUSE_VITALS.length} — P117: 537; P118: 544; P119: 548; P120: 550; P121: + 4 novih poročnih blokov 1892 = 554!)`);
 // kumulativ blokov 04455 = 20 (p116Marr = filter 04455 brez leta)
-if (p116Marr.length !== 49)
+if (p116Marr.length !== 52)
   p117Errors.push(`bloki 04455 skupaj ≠ 37 (${p116Marr.length} — P120: + 2 bloki 1891; P121: + 4 bloki 1892!)`);
 push(
   "qa-p117-parish-marriage-1888",
@@ -4264,10 +4270,10 @@ if (!p118Marr.some((h) => h.houseNo === "21" && h.whatSi.includes("2. poročni d
 if (!p118Marr.some((h) => h.houseNo === "32" && h.whatSi.includes("2. poročni dokaz h32")))
   p118Errors.push("h32-1889: oznaka »2. poročni dokaz h32« manjka");
 // kumulativ: vitals 537 → 544 (P118: + 7 novih poročnih blokov 1889)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p118Errors.push(`HOUSE_VITALS ≠ 554 (${HOUSE_VITALS.length} — P118: 544; P119: 548; P120: 550; P121: + 4 novih poročnih blokov 1892 = 554!)`);
 // kumulativ blokov 04455 = 27
-if (p116Marr.length !== 49)
+if (p116Marr.length !== 52)
   p118Errors.push(`bloki 04455 skupaj ≠ 37 (${p116Marr.length} — P121: + 4 bloki 1892!)`);
 push(
   "qa-p118-parish-marriage-1889",
@@ -4317,10 +4323,10 @@ if (!p119Marr.some((h) => h.houseNo === "91" && h.whatSi.includes("2. familia"))
 if (!p119Marr.some((h) => h.houseNo === "61" && h.whatSi.includes("2. familia")))
   p119Errors.push("h61-1890: oznaka »2. familia« manjka");
 // kumulativ: vitals 544 → 550 (P119: + 4 blokov 1890; P120: + 2 bloki 1891)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p119Errors.push(`HOUSE_VITALS ≠ 554 (${HOUSE_VITALS.length} — P118: 544; P119: 548; P120: 550; P121: + 4 novih poročnih blokov 1892 = 554!)`);
 // kumulativ blokov 04455 = 33 (P119: 31; P120: + 2 bloki 1891)
-if (p116Marr.length !== 49)
+if (p116Marr.length !== 52)
   p119Errors.push(`bloki 04455 skupaj ≠ 37 (${p116Marr.length} — P121: + 4 bloki 1892!)`);
 push(
   "qa-p119-parish-marriage-1890",
@@ -4364,10 +4370,10 @@ if (!p120Marr.some((h) => h.houseNo === "20" && h.whatSi.includes("NOVA HIŠA"))
 if (!p120Marr.some((h) => h.houseNo === "87" && h.whatSi.includes("2. POROČNI DOKAZ h87")))
   p120Errors.push("h87-1891: oznaka »2. POROČNI DOKAZ h87« manjka");
 // kumulativ: vitals 548 → 550 (P120: + 2 novih poročnih blokov 1891)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p120Errors.push(`HOUSE_VITALS ≠ 554 (${HOUSE_VITALS.length} — P119: 548; P120: 550; P121: + 4 novih poročnih blokov 1892 = 554!)`);
 // kumulativ blokov 04455 = 33 (P119: 31; P120: + 2 bloki 1891)
-if (p116Marr.length !== 49)
+if (p116Marr.length !== 52)
   p120Errors.push(`bloki 04455 skupaj ≠ 37 (${p116Marr.length} — P121: + 4 bloki 1892!)`);
 push(
   "qa-p120-parish-marriage-1891",
@@ -4413,10 +4419,10 @@ if (!p121Marr.some((h) => h.houseNo === "17" && h.whatSi.includes("NOVA HIŠA"))
 if (!p121Marr.some((h) => h.houseNo === "60" && h.whatSi.includes("2. POROČNI DOKAZ h60")))
   p121Errors.push("h60-1892: oznaka »2. POROČNI DOKAZ h60« manjka");
 // kumulativ: vitals 550 → 554 (P121: + 4 novih poročnih blokov 1892)
-if (HOUSE_VITALS.length !== 566)
+if (HOUSE_VITALS.length !== 569)
   p121Errors.push(`HOUSE_VITALS ≠ 554 (${HOUSE_VITALS.length} — P120: 550; P121: + 4 novih poročnih blokov (h60/h30/h17/h36-1892) = 554!)`);
 // kumulativ blokov 04455 = 37 (P120: 33; P121: + 4 bloki 1892)
-if (p116Marr.length !== 49)
+if (p116Marr.length !== 52)
   p121Errors.push(`bloki 04455 skupaj ≠ 37 (${p116Marr.length} — P121: + 4 bloki 1892!)`);
 push(
   "qa-p121-parish-marriage-1892",
@@ -4466,11 +4472,11 @@ push(
   if (!p122Marr.some((h) => h.houseNo === "26" && h.whatSi.includes("NOVA HIŠA")))
     p122Errors.push("h26-1893: oznaka »NOVA HIŠA« manjka");
   // kumulativ: vitals 554 → 566 (P122: + 5 novih poročnih blokov 1893; P123: + 4 bloki 1894; P124: + 3 bloki 1895)
-  if (HOUSE_VITALS.length !== 566)
-    p122Errors.push(`HOUSE_VITALS ≠ 566 (${HOUSE_VITALS.length} — P121: 554; P122: + 5 novih poročnih blokov (h26/h69/h62/h58/h74-1893); P123: + 4 bloki 1894; P124: + 3 bloki 1895 = 566!)`);
+  if (HOUSE_VITALS.length !== 569)
+    p122Errors.push(`HOUSE_VITALS ≠ 569 (${HOUSE_VITALS.length} — P121: 554; P122: + 5 novih poročnih blokov (h26/h69/h62/h58/h74-1893); P123: + 4 bloki 1894; P124: + 3 bloki 1895; P125: + 3 bloki (h24+h14-1895ext + h18-1896) = 569!)`);
   // kumulativ blokov 04455 = 46 (P121: 37; P122: + 5 bloki 1893; P123: + 4 bloki 1894)
-  if (p116Marr.length !== 49)
-    p122Errors.push(`bloki 04455 skupaj ≠ 49 (${p116Marr.length} — P122: + 5 bloki 1893; P123: + 4 bloki 1894!)`);
+  if (p116Marr.length !== 52)
+    p122Errors.push(`bloki 04455 skupaj ≠ 52 (${p116Marr.length} — P122: + 5 bloki 1893; P123: + 4 bloki 1894!)`);
   push(
     "qa-p122-parish-marriage-1893",
     "P122: ŽUPNIJA PODZEMELJ — POROČNA KNJIGA 04455, POLNO LETO 1893 (issue #18; SAMPLE-TRANSCRIPTION-M1893; 8. leto poročne linije P115 = 1886 → … → P122 = 1893): okvir POTRJEN — skeni 87–90 == Pag. 86–89 (Pag. == sken − 1, 8. potrditev; LANDSCAPE ~2512–2524×1800) — **20 vpisov** (1886:7 → … → 1892:15 → 1893:20 = 2. največje leto!) = 6+5+5+4; **VELIKA GLAVA »Traunungs=Buch« + rokopisno »1893« POTRJENA na s87** (P122 lead!); **20/20 OBOJESTRANSKO**; **VELIKE NOVELE 1893**: **7 POROK NA ISTI DAN 6.2. = REKORD VSEH ČASOV LINIJE** (prej 4 — P121!) + **DRUBEL-GRIBLJE poroke ×2** (v15 h69×h62 + v16 h58×h74) + v10 nevesta **GRIBLJE 26 NOVA HIŠA** = 3 poroke / 5 hiš + **BRAT-SESTRA PERDINEC DVOZAKON ISTI DAN** (v4+v6 — isti starša!) + **★ RENOVACIJA ZAKONA 8.9.1898** (v8 latinski blok — Jeglič [~] + priči Maur + Skala = NOV DOKUMENT-TIP) + **★ 2. DUHOVNIK LINIJE Michael KLEMENČIČ Coop. ×2** (konec Rauy-monopola!) + **★ 1. DOKUMENT OBČINE GRIBLJE** (v15) + občina Tribuče NOVA (v20) + **★ INHABER = NOV STATUS** (v19 Murn) + **★ VOJSKA** Rudolfovo + proxy-zastopstvo (v12) + **★ DISPENS 3. kan. stopnje №1661** (v16 — oba materi BRINC!) + deleži ¼/½ ×32 oseb + »1« ulomek-anomala (v5) + ženin 58 + nevesta 17 tied-rekord + Laipšl ×8 (3. leto!) + KAMBIČ ×5 + BRINC ×5 + PEZDIREC-cluster ×6 (3 pisave!); **GRIBLJE: 3 poroke / 5 poročnih blokov (h26 NOVA + h69 2. dokaz + h62 NOVA + h58 1. DOKAZ SPLOH! + h74 NOVA)**; anomalije ×8; vitals **554 → 559** (+ 5 blokov 1893); bloki 04455 = **42**; p80 hiše **41** (vseh 5 že v vzorci!); **P123 LEAD: poročna 1894** (glava 1894 = s91 = Pag. 90 + v1–6 orisani; s94 = glava 1895); EXCLUDED: 0; skripta scripts/p122_parish_marriage_1893.py (I1–I11); status SAMPLE-TRANSCRIPTION-M1893",
@@ -4517,11 +4523,11 @@ push(
   if (!p123Marr.some((h) => h.houseNo === "9" && h.whatSi.includes("2. poročni dokaz h9")))
     p123Errors.push("h9-1894: oznaka »2. poročni dokaz h9« manjka");
   // kumulativ: vitals 559 → 566 (P123: + 4 novih poročnih blokov 1894; P124: + 3 bloki 1895)
-  if (HOUSE_VITALS.length !== 566)
-    p123Errors.push(`HOUSE_VITALS ≠ 566 (${HOUSE_VITALS.length} — P122: 559; P123: + 4 novih poročnih blokov (h27/h42/h9/h11-1894); P124: + 3 bloki 1895 (h16/h27/h52) = 566!)`);
+  if (HOUSE_VITALS.length !== 569)
+    p123Errors.push(`HOUSE_VITALS ≠ 569 (${HOUSE_VITALS.length} — P122: 559; P123: + 4 novih poročnih blokov (h27/h42/h9/h11-1894); P124: + 3 bloki 1895 (h16/h27/h52); P125: + 3 bloki (h24+h14-1895ext + h18-1896) = 569!)`);
   // kumulativ blokov 04455 = 49 (P122: 42; P123: + 4 bloki 1894; P124: + 3 bloki 1895)
-  if (p116Marr.length !== 49)
-    p123Errors.push(`bloki 04455 skupaj ≠ 49 (${p116Marr.length} — P123: + 4 bloki 1894; P124: + 3 bloki 1895!)`);
+  if (p116Marr.length !== 52)
+    p123Errors.push(`bloki 04455 skupaj ≠ 52 (${p116Marr.length} — P123: + 4 bloki 1894; P124: + 3 bloki 1895; P125: + 3 bloki (h24+h14-1895ext + h18-1896)!)`);
   push(
     "qa-p123-parish-marriage-1894",
     "P123: ŽUPNIJA PODZEMELJ — POROČNA KNJIGA 04455, POLNO LETO 1894 (issue #18; SAMPLE-TRANSCRIPTION-M1894; 9. leto poročne linije P115 = 1886 → … → P123 = 1894): okvir POTRJEN — skeni 91–93 == Pag. 90–92 (Pag. == sken − 1, 9. potrditev; LANDSCAPE 2524/2517/2509×1800; tiskar »Laibach. Druck u. Verlag v. Möttling.« na s92!) — **15 vpisov** (1886:7 → … → 1893:20 → 1894:15) = 6+5+4; **VELIKA GLAVA »Traunungs=Buch« + rokopisno »1894« POTRJENA na s91** (P123 lead!; 5. velika glava linije); **15/15 OBOJESTRANSKO**; **VELIKE NOVELE 1894**: **★ REKORD-PAR VSEH ČASOV v5** (ženin 64 + nevesta 48 = 112 let skupaj!) + **REKORD nevesta 56** (v1 Tasič — prej 45 P119!) + **★ 1. PREČRTANI PRIČA linije** (v12 Đur. Andreas Vojka → Franc Justin zasebnik junior!) + **★ PFARRAMT IDRIA** (v12 = najdaljši župnijski lok ~110 km!) + **★ VOJSKA** (v9 k.k. Infanterie-Regiments-Colonel 15/5.94 №267 — ženin aktivni vojak!) + **★ DISPENS 3. stopnje №2680** (v14 Ordinariat Laibach 25/9. — ZUGELJ × TOME) + **★ LANDSREGIERUNG Laibach Ž8667** (v11 — 1. v poročni liniji; datirana 9/9. = 3 TEDNE PO poroki [~]!) + **ENAČNOPRIIMEŠKI poroki ×2** (v3 Perdinec × Perdinec h27×h42 + v6 Tome × Tome) + **ZURAJOVIČ očetovski cross-link 1893→1894** (v2 ženin = sin P122 v6 ženina — Zemelj 18!) + **»1« namesto ulomka** (v12 — 2. primer!) + **občina Orašče [~]** (v15 = 1. neznanka-občina) + **Laipšl-mreža 4. leto** ×5 oseb + **PEZDIREC-cluster ×10** (3 pisave) + Rauy-monopol nazaj **×15/15** (podpisi »M.!« [~] ×13 + »Pf.!« [~] ×2) + mladoletnost 9/30 (gj.-Erkl. ×4 + mamini privolitvi ×3 + obsvorm. ×1) + status-neznanki ×14 (Ans. ×3 + Immosfrss + Wrony Knagge + Wfurj + Göriunas + Kirnšina + hf. + Hoffmann + föd. + naka in + Gistler + Valur/Pofn + zasebnik + Krasb); **GRIBLJE: 2 poroke / 4 poročna bloka (h27 2. dokaz × h42 CERNIČ 1. POROČNI! + h9 2. dokaz × h11 2. dokaz)**; anomalije ×8; vitals **559 → 563** (+ 4 blokov 1894); bloki 04455 = **46**; p80 hiše **41** (vseh 4 že v vzorci!); **P124 LEAD: poročna 1895** (glava 1895 = s94 = Pag. 93 + skeni 94–96 prenešeni); EXCLUDED: 0; skripta scripts/p123_parish_marriage_1894.py (I1–I11); status SAMPLE-TRANSCRIPTION-M1894",
@@ -4534,16 +4540,18 @@ push(
   // ——— qa-p124: POROČNA KNJIGA 04455 — polno leto 1895 (P124; 10. leto poročne linije)
   const p124Marr = HOUSE_VITALS.filter((h) => h.bookSignature === "04455" && h.year === 1895);
   const p124Errors: string[] = [];
-  if (p124Marr.length !== 3)
-    p124Errors.push(`poročni bloki 1895 (04455) ≠ 3 (${p124Marr.length})`);
+  if (p124Marr.length !== 5)
+    p124Errors.push(`poročni bloki 1895 (04455) ≠ 5 (${p124Marr.length} — P124: 3 + P125 dopolnitev: + 2 (h24/h14 — s97 v17–v19, 1895 ima 19 vpisov!))`);
   const p124Houses = p124Marr.map((h) => h.houseNo).sort((a, b) => Number(a) - Number(b));
-  if (p124Houses.join(",") !== "16,27,52")
-    p124Errors.push(`hiše 1895 (04455) ≠ [16,27,52] — najdeno: ${p124Houses.join(",")} (P124: v10 h16 Brodarič NOVA HIŠA × v11 h27 Perdinec HOMONIM 3. dokaz × v13 h52 Perdinec NOVA v PT-luknji!)`);
-  // P124 pini (1895 bloki)
+  if (p124Houses.join(",") !== "14,16,24,27,52")
+    p124Errors.push(`hiše 1895 (04455) ≠ [14,16,24,27,52] — najdeno: ${p124Houses.join(",")} (P124: v10 h16 Brodarič NOVA HIŠA × v11 h27 Perdinec HOMONIM 3. dokaz × v13 h52 Perdinec NOVA v PT-luknji! + P125: v17 h24 × h14 GRIBLJE × GRIBLJE!)`);
+  // P124 pini (1895 bloki; P125 + h14/h24)
   const p124Pins: Array<[string, string]> = [
     ["16", "NOVA HIŠA"], ["16", "BRODARIČ"], ["16", "občine Griblje"],
     ["27", "3. poročni dokaz"], ["27", "HOMONIM"], ["27", "ZUGELJ"], ["27", "KLEPEC"],
     ["52", "NOVA HIŠA"], ["52", "PERDINEC"], ["52", "JAKOBIČ"], ["52", "PT-luknji"],
+    ["24", "1. POROČNI DOKAZ h24"], ["24", "DISPENS"], ["24", "GRIBLJE × GRIBLJE"],
+    ["14", "1. POROČNI DOKAZ h14"], ["14", "CROSS-LINK"],
   ];
   for (const [n, pin] of p124Pins) {
     const blk = p124Marr.filter((h) => h.houseNo === n);
@@ -4554,10 +4562,10 @@ push(
     if (!blk.some((cur) => cur.whatSi.toLowerCase().includes(pin.toLowerCase())))
       p124Errors.push(`pin hiša ${n} (${pin}) manjka`);
   }
-  // duhovniki 1895 (bloki): Rauy ×3
+  // duhovniki 1895 (bloki): Rauy ×5 (P124 3 + P125 2)
   const p124Rauy = p124Marr.filter((h) => h.whatSi.includes("Jos. Rauy")).length;
-  if (p124Rauy !== 3)
-    p124Errors.push(`Rauy podpisi 1895 blokov ≠ 3 (${p124Rauy})`);
+  if (p124Rauy !== 5)
+    p124Errors.push(`Rauy podpisi 1895 blokov ≠ 5 (${p124Rauy} — P124: 3 + P125 dopolnitev: + 2)`);
   // oznake dokazov 1895: h16/h52 NOVA HIŠA + h27 3. poročni dokaz
   if (!p124Marr.some((h) => h.houseNo === "16" && h.whatSi.includes("NOVA HIŠA")))
     p124Errors.push("h16-1895: oznaka »NOVA HIŠA« manjka");
@@ -4565,17 +4573,66 @@ push(
     p124Errors.push("h52-1895: oznaka »NOVA HIŠA« manjka");
   if (!p124Marr.some((h) => h.houseNo === "27" && h.whatSi.includes("3. poročni dokaz")))
     p124Errors.push("h27-1895: oznaka »3. poročni dokaz« manjka");
-  // kumulativ: vitals 563 → 566 (P124: + 3 novih poročnih blokov 1895)
-  if (HOUSE_VITALS.length !== 566)
-    p124Errors.push(`HOUSE_VITALS ≠ 566 (${HOUSE_VITALS.length} — P123: 563; P124: + 3 novih poročnih blokov (h16/h27/h52-1895) = 566!)`);
+  // kumulativ: vitals 563 → 566 → 569 (P124: + 3 novih poročnih blokov 1895)
+  if (HOUSE_VITALS.length !== 569)
+    p124Errors.push(`HOUSE_VITALS ≠ 569 (${HOUSE_VITALS.length} — P123: 563; P124: + 3 novih poročnih blokov (h16/h27/h52-1895; + P125 h24/h14-1895ext + h18-1896) = 569!)`);
   push(
     "qa-p124-parish-marriage-1895",
-    "P124: ŽUPNIJA PODZEMELJ — POROČNA KNJIGA 04455, POLNO LETO 1895 (issue #18; SAMPLE-TRANSCRIPTION-M1895; 10. leto poročne linije P115 = 1886 → … → P124 = 1895): okvir POTRJEN — skeni 94–96 == Pag. 93–95 (Pag. == sken − 1, 10. potrditev; velja v 61–96; LANDSCAPE 2510/2511/2521×1800; tiskar »Laibach. Druck u. Verlag v. Möttlig.« na s96!) — **16 vpisov** (1886:7 → … → 1894:15 → 1895:16) = 6+5+5; **VELIKA GLAVA »Trauungs=Buch« + rokopisno »1895« POTRJENA na s94** (P124 lead!; 6. velika glava linije); **16/16 OBOJESTRANSKO**; **VELIKE NOVELE 1895**: **★ 1. ČASTNIK linije** (v15 ženin Herr Andreas Stal, OBERLEUTNANT [~], Metlika 38 × Francisca Logar, hči Offizierja [~], 18 — priča Josef Avanzo k.k. HAUPTMANN + Richard Megušar [~]; **Garnisons-Propstei zū Metlika** 17.6. + mestna občina Metlika št: 150!) + **★ 1. hrvaški dokumenti linije** (v6: ženin Peter Gerdinovac, Krasinec 1 — »zi Pämbig nach Kalchs in Croalien« [~] + smrtni list dekanate v Lipniku [~] od 16/2. + proglasnica občine Griblje **Broj 485** — hrvaško »Broj«!) + **★ POPRAVEK STAROSTI 40→54** (v6 — prečrtana 40; vdovec!) + **★ DISPENS-REKORD ×4** (v7 №504 3. st. krvno + v8 №613 2. st. svarstvo + v12 Ž/L:4994 »Wittwenschaft« [~] — ~2 TEDNA PO poroki! + v16 3.[u2.?] lineae collateralis) + **★ 2. LANDSREGIERUNG Laibach №181** (v8 Beglaubigung 6.2. — cf. P123 Ž8667!) + **★ »Möttling« = nemško ime METLIKE** (k.k. Bez. Ger. Möttling ×4: v2/v8/v9/v14) + **★ HOMONIMA** (v11 Marcus Perdinec f. Marcus ≠ P123 v3 f. Michaël — isto hiša 27! + v8/v14 Johann Starasinič — Krasinec 32 vs 51!) + **★ DVA PRIČA ISTO IME** (v4 Peter Jakofčič ×2 — vzorec P123 v5!) + **3 poroke 11.2. + 3 poroke 19.5. + 2 poroki 26.5.** (8 od 16 vpisov v 3 dnevih; 11.2. = 2. največ za rekordom P122!) + ZUGELJ ×3 + MAYD/MAGD ×2 + Großjährigkeits-Erklärung ×3 (mladoletne 17/20/23!) + formula »in Ungarn … Närnk« [~] ×4 + Kralj ×6 + Marentič ×5 + Jakša ×5 + PERDINEC 5. leto + MUC (cf. P121!) + Rauy-monopol **×16/16** (»M.!« ×7); **GRIBLJE: 3 poroke / 3 poročna bloka (h16 NOVA! + h27 3. dokaz HOMONIM! + h52 NOVA v PT-luknji!)**; anomalije ×8; vitals **563 → 566** (+ 3 blokov 1895); bloki 04455 = **49**; p80 hiše **47 → 48** (+h52; h16 že v mrliškem vzorci!); PT luknja **9 → 10** (+h52); **P125 LEAD: poročna 1896** (pričakovana glava = s97 = Pag. 96); EXCLUDED: 0; skripta scripts/p124_parish_marriage_1895.py (I1–I11); status SAMPLE-TRANSCRIPTION-M1895",
-    "P124: PARISH OF PODZEMELJ — MARRIAGE REGISTER 04455, THE FULL YEAR 1895 (issue #18; SAMPLE-TRANSCRIPTION-M1895; the 10th year of the marriage line): the frame CONFIRMED — scans 94–96 == pages 93–95 (page == scan − 1, the 10th confirmation; valid in 61–96; LANDSCAPE 2510/2511/2521×1800; the printer »Laibach. Druck u. Verlag v. Möttlig.« on s96!) — **16 entries** (1886:7 → … → 1895:16) = 6+5+5; **THE BIG HEADING »Trauungs=Buch« + handwritten »1895« CONFIRMED on s94** (the P124 lead!; the 6th big heading of the line); **16/16 BOTH-SIDES**; **THE BIG 1895 NOVELS**: **★ the 1st OFFICER of the line** (v15 groom Herr Andreas Stal, LIEUTENANT [~], Metlika 38 × Francisca Logar, an officer's daughter [~], 18 — witness Josef Avanzo k.k. CAPTAIN + Richard Megušar [~]; the **Garrison-Provost of Metlika** Jun 17 + the town municipality of Metlika no. 150!) + **★ the 1st CROATIAN documents of the line** (v6: groom Peter Gerdinovac, Krasinec 1 — »zi Pämbig nach Kalchs in Croalien« [~] + the death certificate of the deanship in Lipniku [~] from Feb 16 + the announcement of the Griblje commune **Broj 485** — Croatian »Broj«!) + **★ the AGE CORRECTION 40→54** (v6 — crossed-out 40; a widower!) + **★ the DISPENSATION RECORD ×4** (v7 №504 3rd degree consanguinity + v8 №613 2nd degree affinity + v12 Ž/L:4994 »widowhood« [~] — ~2 WEEKS AFTER the wedding! + v16 3rd[u2.?] lineae collateralis) + **★ the 2nd LANDSREGIERUNG Laibach №181** (v8 certification Feb 6 — cf. P123 Ž8667!) + **★ »Möttling« = the German name of METLIKA** (the k.k. district court Möttling ×4: v2/v8/v9/v14) + **★ TWO HOMONYMS** (v11 Marcus Perdinec f. Marcus ≠ P123 v3 f. Michaël — the same house 27! + v8/v14 Johann Starasinič — Krasinec 32 vs 51!) + **★ TWO WITNESSES OF THE SAME NAME** (v4 Peter Jakofčič ×2 — the P123 v5 pattern!) + **3 weddings Feb 11 + 3 weddings May 19 + 2 weddings May 26** (8 of 16 entries in 3 days; Feb 11 = the 2nd most after the P122 record!) + ZUGELJ ×3 + MAYD ×2 + the coming-of-age declarations ×3 (minors 17/20/23!) + the »in Ungarn … Närnk« formula [~] ×4 + Kralj ×6 + Marentič ×5 + Jakša ×5 + PERDINEC the 5th year + Rauy monopoly **×16/16** (»M.!« ×7); **GRIBLJE: 3 marriages / 3 marriage blocks (h16 NEW! + h27 the 3rd evidence HOMONYM! + h52 NEW in the PT gap!)**; anomalies ×8; vitals **563 → 566**; the 04455 blocks = **49**; the p80 houses **47 → 48** (+h52); the PT gap **9 → 10** (+h52); **THE P125 LEAD: the marriages of 1896** (the expected heading = s97 = p. 96); EXCLUDED: 0; the script scripts/p124_parish_marriage_1895.py (I1–I11); status SAMPLE-TRANSCRIPTION-M1895",
+    "P124: ŽUPNIJA PODZEMELJ — POROČNA KNJIGA 04455, POLNO LETO 1895 (issue #18; SAMPLE-TRANSCRIPTION-M1895; 10. leto poročne linije P115 = 1886 → … → P124 = 1895): okvir POTRJEN — skeni 94–96 == Pag. 93–95 (Pag. == sken − 1, 10. potrditev; velja v 61–96; LANDSCAPE 2510/2511/2521×1800; tiskar »Laibach. Druck u. Verlag v. Möttlig.« na s96!) — **16 vpisov** (1886:7 → … → 1894:15 → 1895:16) = 6+5+5; **VELIKA GLAVA »Trauungs=Buch« + rokopisno »1895« POTRJENA na s94** (P124 lead!; 6. velika glava linije); **16/16 OBOJESTRANSKO**; **VELIKE NOVELE 1895**: **★ 1. ČASTNIK linije** (v15 ženin Herr Andreas Stal, OBERLEUTNANT [~], Metlika 38 × Francisca Logar, hči Offizierja [~], 18 — priča Josef Avanzo k.k. HAUPTMANN + Richard Megušar [~]; **Garnisons-Propstei zū Metlika** 17.6. + mestna občina Metlika št: 150!) + **★ 1. hrvaški dokumenti linije** (v6: ženin Peter Gerdinovac, Krasinec 1 — »zi Pämbig nach Kalchs in Croalien« [~] + smrtni list dekanate v Lipniku [~] od 16/2. + proglasnica občine Griblje **Broj 485** — hrvaško »Broj«!) + **★ POPRAVEK STAROSTI 40→54** (v6 — prečrtana 40; vdovec!) + **★ DISPENS-REKORD ×4** (v7 №504 3. st. krvno + v8 №613 2. st. svarstvo + v12 Ž/L:4994 »Wittwenschaft« [~] — ~2 TEDNA PO poroki! + v16 3.[u2.?] lineae collateralis) + **★ 2. LANDSREGIERUNG Laibach №181** (v8 Beglaubigung 6.2. — cf. P123 Ž8667!) + **★ »Möttling« = nemško ime METLIKE** (k.k. Bez. Ger. Möttling ×4: v2/v8/v9/v14) + **★ HOMONIMA** (v11 Marcus Perdinec f. Marcus ≠ P123 v3 f. Michaël — isto hiša 27! + v8/v14 Johann Starasinič — Krasinec 32 vs 51!) + **★ DVA PRIČA ISTO IME** (v4 Peter Jakofčič ×2 — vzorec P123 v5!) + **3 poroke 11.2. + 3 poroke 19.5. + 2 poroki 26.5.** (8 od 16 vpisov v 3 dnevih; 11.2. = 2. največ za rekordom P122!) + ZUGELJ ×3 + MAYD/MAGD ×2 + Großjährigkeits-Erklärung ×3 (mladoletne 17/20/23!) + formula »in Ungarn … Närnk« [~] ×4 + Kralj ×6 + Marentič ×5 + Jakša ×5 + PERDINEC 5. leto + MUC (cf. P121!) + Rauy-monopol **×16/16** (»M.!« ×7); **GRIBLJE: 3 poroke / 3 poročna bloka (h16 NOVA! + h27 3. dokaz HOMONIM! + h52 NOVA v PT-luknji!)**; anomalije ×8; vitals **563 → 566 → 569** (+ 3 blokov 1895); bloki 04455 = **49 → 52**; p80 hiše **47 → 48** (+h52; h16 že v mrliškem vzorci!); PT luknja **9 → 10** (+h52); **P125 DOKAZAN (dopolnitev 1895 s97: v17–v19 — 1895 = 19 vpisov! + 1896)**; EXCLUDED: 0; skripta scripts/p124_parish_marriage_1895.py (I1–I11); status SAMPLE-TRANSCRIPTION-M1895",
+    "P124: PARISH OF PODZEMELJ — MARRIAGE REGISTER 04455, THE FULL YEAR 1895 (issue #18; SAMPLE-TRANSCRIPTION-M1895; the 10th year of the marriage line): the frame CONFIRMED — scans 94–96 == pages 93–95 (page == scan − 1, the 10th confirmation; valid in 61–96; LANDSCAPE 2510/2511/2521×1800; the printer »Laibach. Druck u. Verlag v. Möttlig.« on s96!) — **16 entries** (1886:7 → … → 1895:16) = 6+5+5; **THE BIG HEADING »Trauungs=Buch« + handwritten »1895« CONFIRMED on s94** (the P124 lead!; the 6th big heading of the line); **16/16 BOTH-SIDES**; **THE BIG 1895 NOVELS**: **★ the 1st OFFICER of the line** (v15 groom Herr Andreas Stal, LIEUTENANT [~], Metlika 38 × Francisca Logar, an officer's daughter [~], 18 — witness Josef Avanzo k.k. CAPTAIN + Richard Megušar [~]; the **Garrison-Provost of Metlika** Jun 17 + the town municipality of Metlika no. 150!) + **★ the 1st CROATIAN documents of the line** (v6: groom Peter Gerdinovac, Krasinec 1 — »zi Pämbig nach Kalchs in Croalien« [~] + the death certificate of the deanship in Lipniku [~] from Feb 16 + the announcement of the Griblje commune **Broj 485** — Croatian »Broj«!) + **★ the AGE CORRECTION 40→54** (v6 — crossed-out 40; a widower!) + **★ the DISPENSATION RECORD ×4** (v7 №504 3rd degree consanguinity + v8 №613 2nd degree affinity + v12 Ž/L:4994 »widowhood« [~] — ~2 WEEKS AFTER the wedding! + v16 3rd[u2.?] lineae collateralis) + **★ the 2nd LANDSREGIERUNG Laibach №181** (v8 certification Feb 6 — cf. P123 Ž8667!) + **★ »Möttling« = the German name of METLIKA** (the k.k. district court Möttling ×4: v2/v8/v9/v14) + **★ TWO HOMONYMS** (v11 Marcus Perdinec f. Marcus ≠ P123 v3 f. Michaël — the same house 27! + v8/v14 Johann Starasinič — Krasinec 32 vs 51!) + **★ TWO WITNESSES OF THE SAME NAME** (v4 Peter Jakofčič ×2 — the P123 v5 pattern!) + **3 weddings Feb 11 + 3 weddings May 19 + 2 weddings May 26** (8 of 16 entries in 3 days; Feb 11 = the 2nd most after the P122 record!) + ZUGELJ ×3 + MAYD ×2 + the coming-of-age declarations ×3 (minors 17/20/23!) + the »in Ungarn … Närnk« formula [~] ×4 + Kralj ×6 + Marentič ×5 + Jakša ×5 + PERDINEC the 5th year + Rauy monopoly **×16/16** (»M.!« ×7); **GRIBLJE: 3 marriages / 3 marriage blocks (h16 NEW! + h27 the 3rd evidence HOMONYM! + h52 NEW in the PT gap!)**; anomalies ×8; vitals **563 → 566 → 569**; the 04455 blocks = **49 → 52**; the p80 houses **47 → 48** (+h52); the PT gap **9 → 10** (+h52); **P125 PROVEN (the 1895 supplement s97: v17–v19 — 1895 has 19 entries! + 1896)**; EXCLUDED: 0; the script scripts/p124_parish_marriage_1895.py (I1–I11); status SAMPLE-TRANSCRIPTION-M1895",
     p124Errors.length === 0,
     p124Errors.length === 0
-      ? `16 vpisov (s94–s96 == Pag. 93–95; VELIKA GLAVA + »1895« POTRJENA s94!) · **★ 1. ČASTNIK (Oberleutnant Stal + k.k. Hauptmann priča + Garnisons-Propstei Metlika!) · ★ 1. hrvaški dokumenti (in Croalien + Broj 485!) · ★ POPRAVEK 40→54 (vdovec!) · ★ DISPENS ×4 (REKORD!) · ★ 2. LANDSREGIERUNG №181 · ★ Möttling = Metlika (×4!) · ★ homonima Perdinec/Starasinič · ★ priča Jakofčič ×2 · 3+3+2 poroke na 3 dneve · GRIBLJE 3 poroke (h16 NOVA + h27 3. dokaz + h52 NOVA — PT luknja 10!) · vitals 566 · bloki 49 · p80 hiše 48`
+      ? `16 vpisov (s94–s96 == Pag. 93–95; VELIKA GLAVA + »1895« POTRJENA s94!) · **★ 1. ČASTNIK (Oberleutnant Stal + k.k. Hauptmann priča + Garnisons-Propstei Metlika!) · ★ 1. hrvaški dokumenti (in Croalien + Broj 485!) · ★ POPRAVEK 40→54 (vdovec!) · ★ DISPENS ×4 (REKORD!) · ★ 2. LANDSREGIERUNG №181 · ★ Möttling = Metlika (×4!) · ★ homonima Perdinec/Starasinič · ★ priča Jakofčič ×2 · 3+3+2 poroke na 3 dneve · GRIBLJE 3 poroke (h16 NOVA + h27 3. dokaz + h52 NOVA — PT luknja 10!) · vitals 569 · bloki 52 · p80 hiše 48`
       : p124Errors.join("; "),
+  );
+
+  // ——— qa-p125: POROČNA KNJIGA 04455 — dopolnitev 1895 (s97) + polno leto 1896 (P125; 11. leto poročne linije)
+  const p125Errors: string[] = [];
+  // bloki 1896 = 1 (h18) — že preverjeno v qa-p80 sidra-section (hiša 1896 ≠ [18])
+  // P125 pini (1896 blok h18)
+  const p125Pins: Array<[string, string]> = [
+    ["18", "1. POROČNI DOKAZ h18"], ["18", "KLOBUČAR"], ["18", "GROSSJÄHRIGKEITS"], ["18", "KLEPEC"],
+  ];
+  for (const [n, pin] of p125Pins) {
+    const blk = p125Marr.filter((h) => h.houseNo === n);
+    if (blk.length === 0) {
+      p125Errors.push(`pin ${n} (${pin}) — hiša ${n} ni med 1896 bloki`);
+      continue;
+    }
+    if (!blk.some((cur) => cur.whatSi.toLowerCase().includes(pin.toLowerCase())))
+      p125Errors.push(`pin hiša ${n} (${pin}) manjka`);
+  }
+  // P125 pini (1895-ext bloka h24/h14)
+  const p125Pins1895: Array<[string, string]> = [
+    ["24", "1. POROČNI DOKAZ h24"], ["24", "GRIBLJE × GRIBLJE"], ["24", "DISPENS"],
+    ["14", "1. POROČNI DOKAZ h14"], ["14", "CROSS-LINK"],
+  ];
+  for (const [n, pin] of p125Pins1895) {
+    const blk = p124Marr.filter((h) => h.houseNo === n);
+    if (blk.length === 0) {
+      p125Errors.push(`pin 1895 ${n} (${pin}) — hiša ${n} ni med 1895 bloki`);
+      continue;
+    }
+    if (!blk.some((cur) => cur.whatSi.toLowerCase().includes(pin.toLowerCase())))
+      p125Errors.push(`pin 1895 hiša ${n} (${pin}) manjka`);
+  }
+  // duhovniki 1896: Rauy 1 blok (h18) — Herms coop. ni blok (v12 ni griblje poroka)
+  const p125Rauy = p125Marr.filter((h) => h.whatSi.includes("Jos. Rauy")).length;
+  if (p125Rauy !== 1)
+    p125Errors.push(`Rauy podpisi 1896 blokov ≠ 1 (${p125Rauy})`);
+  // kumulativ: vitals 566 → 569 (P125: + 3 novih poročnih blokov)
+  if (HOUSE_VITALS.length !== 569)
+    p125Errors.push(`HOUSE_VITALS ≠ 569 (${HOUSE_VITALS.length} — P124: 566; P125: + 3 novih poročnih blokov (h24+h14-1895ext + h18-1896) = 569!)`);
+  if (HOUSE_VITALS.filter((h) => h.bookSignature === "04455").length !== 52)
+    p125Errors.push(`bloki 04455 ≠ 52 (${HOUSE_VITALS.filter((h) => h.bookSignature === "04455").length} — P124: 49; P125: + 3 = 52!)`);
+  push(
+    "qa-p125-parish-marriage-1896",
+    "P125: ŽUPNIJA PODZEMELJ — POROČNA KNJIGA 04455, DOPOLNITEV 1895 (s97) + POLNO LETO 1896 (issue #18; SAMPLE-TRANSCRIPTION-M1896; 11. leto poročne linije P115 = 1886 → … → P125 = 1896): okvir POTRJEN — s97 = Pag. 96 = NADALJEVANJE 1895 (tiskana podglava; 3 zadnja vpisa 1895!) + s98–s101 == Pag. 97–100 (Pag. == sken − 1, **11. potrditev**; velja v 61–100); **ROKOPISNA GLAVA »1896.« POTRJENA na s98** (cal/s98_year) + **rokopisna glava »1897« + v1/1897 ŽE na s101** (P126 lead!) + s103 = Pag. 102 VELIKA TISKANA GLAVA + v11/1897 (Griblje 40 Nikolaus Perdinec ½ Griblar 22 × Griblje 39 Maria Simic [~] 17!); **1895 = 19 vpisov (P124 16 + P125 ext 3: okt 29 + nov 10 + nov 28)**; **1896 = 15 vpisov** (1886:7 → … → 1895:19 → 1896:15) = feb 5 + apr 1 + maj 4 + avg 2 + okt 2 + nov 1; **18/18 OBOJESTRANSKO**; **VELIKE NOVELE P125**: **★ ⅓ GRIBLAR = NOV ULOMEK LINIJE** (v6 Kolih oče+sin + v10 Jakofčič oče+sin = 4 osebe!; P121: ¼/½/¾) + **1 GRIBLAR** (v2 Marenfič — cel gospodar!) + **★ 1. NEZAKONSKI ŽENIN POROČNE LINIJE** (v14 Peter Grabel: starši [—] + »ledige Magd«!) + **★ 3. duhovnik linije Franz Herms coop.** (v12 — edina prekinitev Rauy-monopola **17/18**, 4. leto zapored!) + **★ 2. ŽANDAR linije** (v4 Eduard (Hubert [~]) Röthl, 24) + **k.k. Beamte oče (1.!)** + rojen **Rudolfswert** (Novo mesto!) + dokumenti **Gottschee + Adelsberg + Laibach** + pravni termin **»Indifferenz«** + ime neveste »Hanna Elisabeth« vs vpis »Anna (Victoria)« (A4!) + **★ ŽAKANJE = HRVAŠKA** (v11: ženin iz Brod b. Žakanje + SLOVENŠČINA »otlični list župnega urada v Zakanjah« — 3. hrvaška povezava!) + **★ »hoc« = hic commorans REŠEN** (×7: v5/v7/v8/v9/v11/v14/v15!) + **★ »mütterl. fürwellig«** (v7 — 1. MATICA daje privoljenje; P124: väterl. ×4!) + formula **»in Ungarn« ×4** (ISTI ŠTEVEC kot P124!) + **★ GROSSJÄHRIGKEIT za ŽENINA** (v3: 22 — 1. za mladoletnega ženina!; + v15 nevesta 21) + **★ DISPENS ×2** (v17-1895 №2906 + v3 №293 — ISTA formulacija 3. st. krvno!) + **★ MUC 3. dokaz** (v1 oče Nicolaus Muc ½ Griblar = P121 v12 ISTA OSEBA + nevesta Maria Muc!) + **★ 2. REKORD-PAR LINIJE** (v18-1895: 59+50 = **109 SKUPAJ**!; v11: 54+47 = 101 = 3.) + ženin 54 (rekord skupaj s P124 v6) + nevesta 47 + **★ v17 = GRIBLJE × GRIBLJE** (h24 Brinsec × h14 Perdinec) + **občinske kontinuitete**: Griblje št:1-3→**4** · Gradac št:21→**22**→**23** · Podzemelj 4→6+8→10→11→121[~] + **h14 CROSS-LINK** (v17 par = krstna 1896 ISTI PAR — ženin oženj v nevestino hišo!) + STRAOS ×4 + PERDINEC ×11 (6. leto!) + KLEPEC ×4 + ZUGELJ ×3 + JAKOFČIČ ×4 (P124 priča ×2!) + Marasinič ×3 (P121!) + JAKŠA ×3 + Kralj ×3 + Butala ×4 + Möttling = Metlika (3. leto!) + Taglöhner ×2 + **Tischlermeister** priča (1. obrtniški mojster!) + Boginja vas ×2; anomalije ×10; vitals **566 → 569** (+ 3 blokov); bloki 04455 = **49 → 52**; p80 hiše **48 → 51 (+h24/h14/h18 — poročna 1895/1896; krstni bloki teh hiš so v 1896/1898, izven p80 vzorca!; p80 POPRAVKI: sidra-skupaj 42→45)**; PT luknja **10 (nespremenjeno)**; **P126 LEAD: poročna 1897** (glava + v1 že na s101 + s103 velika glava + v11 GRIBLJE poroka h40 × h39!); EXCLUDED: 0; skripta scripts/p125_parish_marriage_1896.py (I1–I11); status SAMPLE-TRANSCRIPTION-M1896",
+    "P125: PARISH OF PODZEMELJ — MARRIAGE REGISTER 04455, THE 1895 SUPPLEMENT (s97) + THE FULL YEAR 1896 (issue #18; SAMPLE-TRANSCRIPTION-M1896; the 11th year of the marriage line): the frame CONFIRMED — s97 = p. 96 = the 1895 CONTINUATION (the printed sub-header; the 3 last 1895 entries!) + s98–s101 == pages 97–100 (page == scan − 1, the **11th confirmation**; valid in 61–100); **THE HANDWRITTEN HEADING »1896.« CONFIRMED on s98** + **the handwritten heading »1897« + v1/1897 ALREADY on s101** (the P126 lead!) + s103 = p. 102 the BIG PRINTED HEADING + v11/1897; **1895 = 19 entries (P124 16 + P125 ext 3)**; **1896 = 15 entries** = Feb 5 + Apr 1 + May 4 + Aug 2 + Oct 2 + Nov 1; **18/18 BOTH-SIDES**; **THE BIG P125 NOVELS**: **★ ⅓ GRIBLAR = A NEW FRACTION OF THE LINE** (v6 Kolih father+son + v10 Jakofčič father+son = 4 persons!) + **1 GRIBLAR** (v2 — a full farmer!) + **★ the 1st ILLEGITIMATE GROOM of the marriage line** (v14: parents [—] + »ledige Magd«!) + **★ the 3rd priest of the line Franz Herms coop.** (v12 — the only break of the Rauy monopoly **17/18**) + **★ the 2nd GENDARM of the line** (v4 Eduard (Hubert [~]) Röthl) + **a k.k. OFFICIAL father (the 1st!)** + born in **Rudolfswert** (Novo mesto!) + documents from **Gottschee + Adelsberg + Laibach** + the legal term **»Indifferenz«** + the bride's name »Hanna Elisabeth« vs the entry »Anna (Victoria)« (A4!) + **★ ŽAKANJE = CROATIA** (v11 — SLOVENIAN »otlični list« — the 3rd Croatian link!) + **★ »hoc« = hic commorans SOLVED** (×7!) + **★ »mütterl. fürwellig«** (v7 — the 1st MOTHER giving consent!) + the formula **»in Ungarn« ×4** (the SAME count as P124!) + **★ the COMING-OF-AGE for the GROOM** (v3: 22 — the 1st for an underage groom!) + **★ DISPENSATIONS ×2** (№2906 + №293 — the SAME formulation!) + **★ MUC the 3rd evidence** (v1 father Nicolaus Muc = the P121 v12 SAME PERSON + bride Maria Muc!) + **★ the 2nd RECORD COUPLE of the line** (v18-1895: 59+50 = **109 TOGETHER**!) + **★ v17 = GRIBLJE × GRIBLJE** (h24 × h14) + **the municipal numberings**: Griblje 1-3→**4** · Gradac 21→**22**→**23** · Podzemelj 4→121[~] + **the h14 CROSS-LINK** (the v17 couple = the 1896 baptism SAME COUPLE!) + STRAOS ×4 + PERDINEC ×11 + KLEPEC ×4 + ZUGELJ ×3 + JAKOFČIČ ×4 + Marasinič ×3 + JAKŠA ×3 + the **Tischlermeister** witness; anomalies ×10; vitals **566 → 569**; the 04455 blocks = **49 → 52**; the p80 houses **48 → 51 (+h24/h14/h18 — marriages 1895/1896; their baptism blocks (1896/1898) are outside the p80 sample!)**; the PT gap **10 (unchanged)**; **THE P126 LEAD: the marriages of 1897** (the heading + v1 already on s101 + s103 the big heading + v11 the GRIBLJE marriage h40 × h39!); EXCLUDED: 0; the script scripts/p125_parish_marriage_1896.py (I1–I11); status SAMPLE-TRANSCRIPTION-M1896",
+    p125Errors.length === 0,
+    p125Errors.length === 0
+      ? `18 vpisov obojestransko (3× 1895-ext s97 + 15× 1896 s98–s101; Pag. == sken − 1, 11. potrditev!) · **★ ⅓ GRIBLAR (nov ulomek!) · ★ 1. NEZAKONSKI ženin (v14!) · ★ 3. duhovnik Herms coop. (Rauy 17/18) · ★ 2. ŽANDAR + k.k. Beamte oče + Rudolfswert/Gottschee/Adelsberg/Laibach + Indifferenz · ★ Žakanje = HR + slovensko »otlični list« · ★ hoc = hic commorans ×7 · ★ mütterl. fürwellig (1. MATICA!) · ★ in Ungarn ×4 (= P124!) · ★ MUC 3. dokaz · ★ 2. rekord-par 109 · GRIBLJE 2 poroke (h24×h14 + h18!) · kontinuitete Griblje 4 / Gradac 21→22→23 · vitals 569 · bloki 52`
+      : p125Errors.join("; "),
   );
 }
 }
