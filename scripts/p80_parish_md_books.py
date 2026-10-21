@@ -230,12 +230,12 @@ def verify():
     inset = sorted(houses - PT_GAP_HOUSES, key=lambda x: int(float(x)))
     inv["I7_pt_consistency"] = (
         houses == (set(inset) | set(gap))
-        and len(gap) == 12  # P92 scoping: 1897 bloki vnesejo 43/45/46/54/60 — 6 → 9; P119: h53 NOVI dokaz v luknji 41–60 → 9 → 10; P122/P123: h58 (Požek v16!) + h42 (CERNIČ-hiša) NOVA dokaza v luknji → 10 → 12
+        and len(gap) == 13  # P92 scoping: 1897 bloki vnesejo 43/45/46/54/60 — 6 → 9; P119: h53 NOVI dokaz v luknji 41–60 → 9 → 10; P122/P123: h58 (Požek v16!) + h42 (CERNIČ-hiša) NOVA dokaza v luknji → 10 → 12; P124: h52 (Mathias Perdinec v13-1895!) NOV dokaz v luknji → 12 → 13
         and all((float(h) <= 40 or float(h) >= 61) or ("½" in h) for h in inset)
         and all(41 <= float(h) <= 60 for h in gap)
         and all(h in houses for h in (v["houseNo"] for v in sample))
-        and len(vitals) == 563  # P121: 554; P122: +5 blokov 1893 (h26/h58/h62/h69/h74) + P123: +4 bloki 1894 (h9/h11/h27/h42) → 563
-        and len(houses) == 53  # P121: 47; P122+P123: +6 NOVIH hiš v vzorcu (9, 26, 27, 42, 58, 62 — h69/h74 že prek mrliške!) → 53
+        and len(vitals) == 566  # P121: 554; P122: +5 blokov 1893 (h26/h58/h62/h69/h74) + P123: +4 bloki 1894 (h9/h11/h27/h42) + P124: +3 bloki 1895 (h16/h27/h52) → 566
+        and len(houses) == 54  # P121: 47; P122+P123: +6 NOVIH hiš v vzorcu (9, 26, 27, 42, 58, 62 — h69/h74 že prek mrliške!) → 53; P124: +h52 NOVA (h16 že prek mrliške!) → 54
         and set(inset) <= pts
     )
 

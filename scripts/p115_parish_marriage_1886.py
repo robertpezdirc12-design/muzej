@@ -58,7 +58,7 @@ EXPECTED_DISPENSATIONS = 6
 EXPECTED_SIGNED = 9
 EXPECTED_UNSIGNED = 15
 EXPECTED_VITALS = 533           # P116: 528 + 5 novih poročnih blokov (h23/h37/h69/h3/h10)
-BLOCKS_04455 = 46               # 7 okvir 1886 + sidra (P115) + … + 4 bloki 1892 (P121) + 5 bloki 1893 (P122) + 4 bloki 1894 (P123)
+BLOCKS_04455 = 49               # 7 okvir 1886 + sidra (P115) + … + 4 bloki 1892 (P121) + 5 bloki 1893 (P122) + 4 bloki 1894 (P123) + 3 bloki 1895 (P124)
 DATE_COUNTS = {"januar": 2, "februar": 10, "marec": 3, "april": 0, "maj": 1,
                "junij": 1, "julij": 0, "avgust": 2, "september": 0, "oktober": 0,
                "november": 5, "december": 0}
@@ -191,12 +191,12 @@ def main() -> int:
     # ---------- I8: parish.ts bloki 04455 ----------
     ts = open(PARISH_TS).read()
     blocks_m = re.findall(r'houseNo:\s*"([^"]*)",\s*bookSignature:\s*"04455",\s*year:\s*(\d{4}),\s*scan:\s*(\d+)', ts)
-    check("I8 bloki 04455 = 33 (P116 +5, P117 +4, P118 +7, P119 +4, P120 +2)", len(blocks_m) == BLOCKS_04455, str(len(blocks_m)))
+    check("I8 bloki 04455 = 49 (P116 +5, P117 +4, P118 +7, P119 +4, P120 +2 + P123 +4 + P124 +3)", len(blocks_m) == BLOCKS_04455, str(len(blocks_m)))
     h1886 = sorted((h for h, y, _ in blocks_m if y == "1886"), key=int)
     check("I8b hiše 1886 = [16,25,31,56,60,65,71]", ",".join(h1886) == GRIBLJE_HOUSES_TS, ",".join(h1886))
     anchors = [(h, y, s) for h, y, s in blocks_m if y != "1886"]
-    check("I8c sidra 39 (1882 sk50 · 1885 · 1887×7 · 1888×4 · 1889×7 · 1890×4 · 1891×2 · 1892×4 · 1893×5 · 1894×4 — P122 +5 + P123 +4)",
-          len(anchors) == 39 and sorted((y for _, y, _ in anchors)) == ["1882", "1885"] + ["1887"] * 7 + ["1888"] * 4 + ["1889"] * 7 + ["1890"] * 4 + ["1891"] * 2 + ["1892"] * 4 + ["1893"] * 5 + ["1894"] * 4
+    check("I8c sidra 42 (1882 sk50 · 1885 · 1887×7 · 1888×4 · 1889×7 · 1890×4 · 1891×2 · 1892×4 · 1893×5 · 1894×4 · 1895×3 — P123 +4 + P124 +3)",
+          len(anchors) == 42 and sorted((y for _, y, _ in anchors)) == ["1882", "1885"] + ["1887"] * 7 + ["1888"] * 4 + ["1889"] * 7 + ["1890"] * 4 + ["1891"] * 2 + ["1892"] * 4 + ["1893"] * 5 + ["1894"] * 4 + ["1895"] * 3
           and any(s == "50" for _, y, s in anchors if y == "1882"),
           str(anchors))
     # pini novih brani
@@ -219,7 +219,7 @@ def main() -> int:
     check("I9 qa-p115", '"qa-p115-parish-marriage-1886"' in qa)
     check("I9b qa-p115 hiše 1886", "16,25,31,56,60,65,71" in qa)
     # vitals 528 regresijska zaščita v qa-p115
-    check("I9c vitals 563 zaščita (P123)", "HOUSE_VITALS.length !== 563" in qa[qa.index("const p115Marr"):])
+    check("I9c vitals 566 zaščita (P124)", "HOUSE_VITALS.length !== 566" in qa[qa.index("const p115Marr"):])
 
     # ---------- I10: README + notes ----------
     rd = open("README.md").read()

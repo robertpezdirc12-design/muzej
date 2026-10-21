@@ -865,6 +865,55 @@ export const HOUSE_VITALS: HouseVital[] = [
     whatEn: "marriage (Aug 19, 1894, entry 11) — bride Maria ZURNIČ [~], half smallholder's daughter, 25, GRIBLJE 11 (the 2nd marriage evidence of h11; h11 = the Zurnič household in 1894) × Georg JAKOBČIČ, quarter smallholder, 22 (a minor), GRIBLJE 9 (the 2nd GRIBLJE marriage of 1894 — h9 × h11!); father Mathias Zurnič [~] half smallholder × Catharina DRAGOŠ (DRAGOŠ cf. the P117 Jaklič network!); ★ the Landesregierung Laibach Ž8667 (the 1st in the line!); Befünden: the certificate of the Gribelj-ske commune Aug 13, 94 no. 1",
     status: "DOCUMENTED",
   },
+  // ——— P124 razširitev: POROČNA KNJIGA 04455 — polno leto 1895 (skeni 94–96 ==
+  // strani 93–95; Pag. == sken − 1, 10. potrditev; velja v 61–96). VELIKA GLAVA
+  // »Trauungs=Buch« + rokopisno »1895« na s94 (P124 lead POTRJEN).
+  // 16 vpisov (1886:7 → … → 1893:20 → 1894:15 → 1895:16; razpored 6+5+5) —
+  // vpisi z Griblji (3 poroke / 3 poročni bloki: h16 v10 ženin NOVA HIŠA +
+  // h27 v11 ženin 3. poročni dokaz + h52 v13 ženin NOVA v PT-luknji 41–60!):
+  // NOVELE: ★ 1. ČASTNIK linije — Oberleutnant Stal + priča k.k. Hauptmann +
+  // Garnisons-Propstei Metlika (v15) + ★ 1. hrvaški dokumenti (v6: in Croalien
+  // + smrtni list dekanate v Lipniku [~] + Broj 485 občine Griblje!) + ★
+  // POPRAVEK STAROSTI 40→54 (v6 vdovec!) + ★ DISPENS-REKORD ×4 (v7 №504 3. st.
+  // krvno + v8 №613 2. st. svarstvo + v12 Ž/L:4994 »Wittwenschaft« [~] — PO
+  // poroki! + v16 3.[u2.?] lineae collateralis) + ★ 2. LANDSREGIERUNG Laibach
+  // №181 (v8) + ★ »Möttling« = nemško ime METLIKE (Bez. Ger. ×4!) + ★ homonima
+  // Marcus Perdinec (v11 ≠ P123 v3) + Johann Starasinič (v8 ≠ v14) + ★ dva
+  // priča isto ime Peter Jakofčič ×2 (v4!) + ZUGELJ ×3 + MAYD ×2 + Großjährig-
+  // keits-Erklärung ×3 + formula »in Ungarn … Närnk« [~] ×4 + Kralj ×6 +
+  // Marentič ×5 + Jakša ×5 + Rauy 16/16 (»M.!« ×7).
+  // Dokaz: research/issue17/parish-marriage-1895.json; verifikator:
+  // scripts/p124_parish_marriage_1895.py --check (I1–I11).
+  {
+    houseNo: "16",
+    bookSignature: "04455",
+    year: 1895,
+    scan: 95,
+    page: 94,
+    whatSi: "poroka (19. 5. 1895, vpis 10) — ženin Anton BRODARIČ, ½ Griblar, 35, GRIBLJE 16 (NOVA HIŠA vzorca! — h16 že v mrliškem vzorcu 1886; oče Michaël Brodarič ½ Griblar × Anna ADAM) × Anna HARASINIČ, ½ Griblarjstochter [~], 25, Krasinec 23 (oče Mathias Harasinič ½ Griblar × Anna Harasinič — oče in mati ISTI PRIIMEK!); priče: Johan Brodarič (Pofn- [~] — hišni vzdevek, cf. P123 Valur/Pofn!) + Michael Harasinič (} ½ gbl.); duhovnik Jos. Rauy; Befünden: zemljšov. zglašnica občine Griblje od 18/5. 1895 №: 1 (1. od DVEH zaporednih dokumentov občine Griblje isti dan — cf. v11 št: 2!)",
+    whatEn: "marriage (May 19, 1895, entry 10) — groom Anton BRODARIČ, half smallholder, 35, GRIBLJE 16 (a NEW house of the sample! — h16 already in the 1886 death sample; father Michaël Brodarič half smallholder × Anna ADAM) × Anna HARASINIČ, half smallholder's daughter [~], 25, Krasinec 23 (father Mathias Harasinič half smallholder × Anna Harasinič — father and mother the SAME SURNAME!); witnesses: Johan Brodarič (Pofn- [~] — house nickname, cf. P123 Valur/Pofn!) + Michael Harasinič (} ½ gbl.); priest Jos. Rauy; Befünden: the land registry certificate of the Griblje commune from May 18, 1895 no. 1 (the 1st of TWO consecutive Griblje-commune documents the same day — cf. v11 no. 2!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "27",
+    bookSignature: "04455",
+    year: 1895,
+    scan: 95,
+    page: 94,
+    whatSi: "poroka (19. 5. 1895, vpis 11) — ženin Marcus PERDINEC, ½ Griblar, 34, GRIBLJE 27 (3. poročni dokaz h27!; oče Marcus Perdinec ¼ Griblar × Margareth KLEPEC) × Catharina ZUGELJ, ¼ Griblarjš. + »Aleffon« [~ — hišni vzdevek?], 25, Otok 22 (oče Michaël Zugelj ¼ Griblar × Catharina Kramarič); ★ HOMONIM: ta Marcus Perdinec (f. Marcus, ½ Griblar) ≠ P123 v3 Marcus Perdinec (f. Michaël, 33, ¼ Gribler × Margareth PERDINEC) — dva različna moška z istim imenom in ISTO HIŠO 27!; ZUGELJ ×3 v letu (cf. v8 nevesta »geb. Zugelj«!); priče: Johan Jurajevič + Nikol. Križan (} ½ gbl.); duhovnik Jos. Rauy (»M.!« [~]); Befünden: zglašnica občine Griblje dado 18/5. 1895 št: 2",
+    whatEn: "marriage (May 19, 1895, entry 11) — groom Marcus PERDINEC, half smallholder, 34, GRIBLJE 27 (the 3rd marriage evidence of h27!; father Marcus Perdinec quarter smallholder × Margareth KLEPEC) × Catharina ZUGELJ, quarter smallholder's + »Aleffon« [~ — house nickname?], 25, Otok 22 (father Michaël Zugelj quarter smallholder × Catharina Kramarič); ★ HOMONYM: this Marcus Perdinec (f. Marcus, ½ smallholder) ≠ the P123 v3 Marcus Perdinec (f. Michaël, 33, ¼ smallholder × Margareth PERDINEC) — two different men with the same name and the SAME HOUSE 27!; ZUGELJ ×3 in the year (cf. v8 bride »geb. Zugelj«!); witnesses: Johan Jurajevič + Nikol. Križan (} ½ gbl.); priest Jos. Rauy (»M.!« [~]); Befünden: the certificate of the Griblje commune dated May 18, 1895 no. 2",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "52",
+    bookSignature: "04455",
+    year: 1895,
+    scan: 96,
+    page: 95,
+    whatSi: "poroka (26. 5. 1895, vpis 13) — ženin Mathias PERDINEC, ½ Griblarjsohn [~], 26, GRIBLJE 52 (NOVA HIŠA vzorca — v PT-luknji 41–60!; oče Johann Perdinec ½ Griblar × Maria Novak) × Anna JAKOBIČ, ½ gbl + »Žugffan« [~ — hišni vzdevek?], 21, Cerkvišče 26 (oče Nicolaus Jakobič ½ Griblar × Anna Mušič); PERDINEC ×2 v letu 1895 (v11 f. Marcus + v13 f. Johann — dve veji!); kratka vrstica formularja (575–700); priče: Nicol. Novak + Math. Jakobič (} ¼ gbl [~]); duhovnik Jos. Rauy (»M.!« [~]); Befünden: zglašnica občine Griblje od 20/5. 95 št: 3 + mündl. väterl. fürwellig für die ml. Braut in Ungarn ward [~] obigen šti. Närnk [~]",
+    whatEn: "marriage (May 26, 1895, entry 13) — groom Mathias PERDINEC, half smallholder's son [~], 26, GRIBLJE 52 (a NEW house of the sample — in the PT gap 41–60!; father Johann Perdinec half smallholder × Maria Novak) × Anna JAKOBIČ, ½ smallholder + »Žugffan« [~ — house nickname?], 21, Cerkvišče 26 (father Nicolaus Jakobič half smallholder × Anna Mušič); PERDINEC ×2 in the year 1895 (v11 f. Marcus + v13 f. Johann — two branches!); a short form row (575–700); witnesses: Nicol. Novak + Math. Jakobič (} ¼ gbl [~]); priest Jos. Rauy (»M.!« [~]); Befünden: the certificate of the Griblje commune from May 20, 95 no. 3 + mündl. väterl. fürwellig für die ml. Braut in Ungarn ward [~] obigen šti. Närnk [~]",
+    status: "DOCUMENTED",
+  },
   // ——— P122 razširitev: POROČNA KNJIGA 04455 — polno leto 1893 (skeni 87–90 ==
   // strani 86–89; VELIKA GLAVA »Traunungs=Buch« + rokopisno »1893« na s87 =
   // Pag. 86 POTRJENA — P122 lead!; 20 vpisov: 1886:7 → 1887:21 → 1888:20 →

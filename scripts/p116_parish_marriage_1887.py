@@ -57,7 +57,7 @@ GRIBLJE_ROWS = [3, 4, 11, 20]
 GRIBLJE_MARRIAGES = 4
 GRIBLJE_HOUSES_TS = "3,10,15,23,37,69,71"
 EXPECTED_VITALS = 533           # 528 (P114/P115) + 5 novih poročnih blokov P116 (zgodovinsko — P117 dokaz gre na 537)
-BLOCKS_04455 = 46               # 11 (P115) + … + 4 bloki 1892 (P121) + 5 bloki 1893 (P122) + 4 bloki 1894 (P123)
+BLOCKS_04455 = 49               # 11 (P115) + … + 4 bloki 1892 (P121) + 5 bloki 1893 (P122) + 4 bloki 1894 (P123)
 DATE_COUNTS = {"januar": 3, "februar": 8, "marec": 0, "april": 0, "maj": 5,
                "junij": 0, "julij": 1, "avgust": 2, "september": 1, "oktober": 1,
                "november": 0, "december": 0}
@@ -212,7 +212,7 @@ def main() -> int:
     # ---------- I8: parish.ts bloki 04455 ----------
     ts = open(PARISH_TS).read()
     blocks_m = re.findall(r'houseNo:\s*"([^"]*)",\s*bookSignature:\s*"04455",\s*year:\s*(\d{4}),\s*scan:\s*(\d+)', ts)
-    check("I8 bloki 04455 = 46 (P122 +5, P123 +4)", len(blocks_m) == BLOCKS_04455, str(len(blocks_m)))
+    check("I8 bloki 04455 = 49 (P122 +5, P123 +4 + P124 +3)", len(blocks_m) == BLOCKS_04455, str(len(blocks_m)))
     h1887 = sorted((h for h, y, _ in blocks_m if y == "1887"), key=int)
     check("I8b hiše 1887 = [3,10,15,23,37,69,71]", ",".join(h1887) == GRIBLJE_HOUSES_TS, ",".join(h1887))
     h1886 = sorted((h for h, y, _ in blocks_m if y == "1886"), key=int)
@@ -236,9 +236,9 @@ def main() -> int:
     qa = open(QA_TS).read()
     check("I9 qa-p116", '"qa-p116-parish-marriage-1887"' in qa)
     check("I9b qa-p115 bloki 46", "poročni bloki (04455) ≠ 46" in qa)
-    check("I9c p80 bloki 46", "poročni vpisi (04455) ≠ 46" in qa)
+    check("I9c p80 bloki 46", "poročni vpisi (04455) ≠ 49" in qa)
     # vitals 528 regresijska zaščita v qa-p116
-    check("I9d vitals 563 zaščita (P123)", "HOUSE_VITALS.length !== 563" in qa[qa.index("const p116Marr"):] if "const p116Marr" in qa else False)
+    check("I9d vitals 566 zaščita (P124)", "HOUSE_VITALS.length !== 566" in qa[qa.index("const p116Marr"):] if "const p116Marr" in qa else False)
 
     # ---------- I10: README + notes ----------
     rd = open("README.md").read()
