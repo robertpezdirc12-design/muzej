@@ -234,8 +234,8 @@ def verify():
         and all((float(h) <= 40 or float(h) >= 61) or ("½" in h) for h in inset)
         and all(41 <= float(h) <= 60 for h in gap)
         and all(h in houses for h in (v["houseNo"] for v in sample))
-        and len(vitals) == 566  # P121: 554; P122: +5 blokov 1893 (h26/h58/h62/h69/h74) + P123: +4 bloki 1894 (h9/h11/h27/h42) + P124: +3 bloki 1895 (h16/h27/h52) → 566
-        and len(houses) == 54  # P121: 47; P122+P123: +6 NOVIH hiš v vzorcu (9, 26, 27, 42, 58, 62 — h69/h74 že prek mrliške!) → 53; P124: +h52 NOVA (h16 že prek mrliške!) → 54
+        and len(vitals) == 578  # P124: 566; P125: +3 bloki (h24/h14-1895ext + h18-1896) → 569; P126: +9 blokov 1897 → 578
+        and len(houses) == 57  # P124: 53; P125: +h14/h18/h52 (h24 že v vzorci) → 56; P126: +h28 EDINA NOVA (h8/h39 že 04105-1886, h29 že mrliška, h33 že 04455-1888) → 57
         and set(inset) <= pts
     )
 

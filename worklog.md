@@ -5618,3 +5618,23 @@ Work Log:
 Stage Summary:
 - **Task 97+98 (P122+P123) POPOLNOSTI ZAKLJUČENA: GitLab (push dokazan) = GitHub = lokalna = 588dbc0; Vercel ŽIV 124/124; QA 122 → 124/124; veriga p114–p123 + p80/p81/p83 --check VSE PASS.**
 - ⚠ NASLEDNJA FAZA (P124): **poročna 1895** (glava 1895 = s94 = Pag. 93, rokopisna; skeni 94–96 že prenešeni v /home/z/.p116tmp; v1–6 še neorisani) — vzorec P122/P123: fetch → faza 1 okvir → faza 2 transkripcija → evidence + verifier + parish.ts bloki + qa-p124 (125. kontrola) + sinhr. regresij + README + push.
+
+---
+Task ID: 101 (P126 — continuatio; glavni agent; repo /home/z/muzej @ b123cd9)
+Agent: Z.ai Code (glavni)
+Task: "nadaljuj kjer si ostal" — P126 poročna knjiga 04455 polno leto 1897 (s101–s104): zaključek nekompletnega dela prejšnje seje (9. blok + verifier + qa-p126 + sinhr. regresij + README + push + produkcija)
+
+Work Log:
+- OBNOVA KONTEKSTA: delovno drevo je vsebovalo NE-commitan P126 faza 1+2 delo (evidence JSON 18 entries + notes + parish.ts 8/9 blokov + qa-parish delne sinhr.) — pogovorni povzetek ("P117 faza 2, v18_R2, v19/v20, 5 obrezkov") ZASTAREL (4.×).
+- POPRAVEK PODATKOV: parish.ts manjkajoči **9. blok 1897** (h40 v11 ženin Nikolaus PREDANIC [~ — oče Johann PERDINEC! varianta A7], ½ Griblar, 22, GRIBLJE 40 — A6: 2. ženin h40 v letu (v9 Brodarič!); obe mati JAKOBČIČ; »in UNGARN« 8. instanca; zglasmica Griblje št:2 (PRED št:3!) + Ž:3584) → **vitals 577 → 578; bloki 04455 60 → 61**.
+- qa-parish.ts POPRAVKI prejšnje seje: ① p126 hiše-check string-sort "18,27,28,29,33,39,40,40" → **"18,27,28,29,33,39,40,40,8"** (string-sort lekcija p123Houses!); ② p80Houses 54 → **52** (prejšnja seja NAPAČNO pričakovala 54 — h28 EDINA nova: h8/h39 že v 04105-1886 P79, h29 že v mrliški 04894 ×3, h33 že v 04455-1888!); ③ NOVA-hiša izjeme: qa-p86 h28 + qa-p92 h40 (×2!) + qa-p93 h18 (P126 poročni bloki 1897); ④ qa-p115 izjema »GRIBLJE 29« (legitimen h29-1897 blok — ban veljal le za h15 sidro re-read); ⑤ 10 stale pogojev bloki 52/37 → **61** (p115–p125) + sporočila z P126 zgodovino.
+- qa-p126 (**127. kontrola**): 9 blokov + hiše [8,18,27,28,29,33,39,40,40] + 21 pinov + Rauy 1897 ×9 + vitals 578 + bloki 61 → **/api/qa 126 → 127/127**.
+- VERIFIER: scripts/p126_parish_marriage_1897.py (I1–I11, vzorec p125; I2h razpored 3+**7**+**5**+3 — notes s102=v4–10/s103=v11–15; I3n »in UNGARN« case-insensitive (v4 [Fayerswart? = Ungarn?]; I7g C21 MEGA; I5h courtDocs ×5) → **94/94 PASS**.
+- SINHR. REGRESIJ (13 skript): p114 I9b vitals 569→**578** (brez 569/566/563/554/550/548/544/537); p115 I8 52→61 + I8c sidra 45→**54** (1897×9) + I9c vitals; p116–p123 BLOCKS_04455_TS 52→**61** + I9b/I9c "≠ 61" + p119–p123 sidra 45→**54** + p121–p123 hiše 51→**52** (+h28 EDINA!); p124 BLOCKS_04455_TS 52→61 + I8 "P126 9"; p125 dvokonstantni vzorec (BLOCKS_04455=52 dokaz + BLOCKS_04455_TS=**61** TS) + sidra 54 + hiše 52; **p80_parish_md_books I7: vitals 566→578 + hiše 54→57 (P125: +h14/h18/h52 (h24 že) → 56; P126: +h28 → 57!)**; p80/p81/p83 --check **PASS**.
+- REGRESIJE: **p114 35/35 + p115 45/45 + p116 51/51 + p117 57/57 + p118 67/67 + p119 70/70 + p120 69/69 + p121 74/74 + p122 77/77 + p123 79/79 + p124 84/84 + p125 105/105 + p126 94/94** + p80/p81/p83 PASS + **/api/qa dev 127/127 ok:True (qa-p126 True)** + homepage 200 (1 019 702 B) + tsc 0 + lint 0.
+- README: TOC anchor + "Zadnje stanje (po P126 faza 2 · 2026-10-21)" + P126 bullet (127/127; 12. leto linije; GRIBLJE ×5 REKORD; Hofstetter Adelsberg; FOTOGRAF-priča; MEGA CROSS-LINK v10; dvojna sodna polnoletnost v15; samski list v16; nadoarstveno v12; mütterlich v10; in Ungarn ×8; ženin 55½ NEZAKONSKI v3; Podzemelj MEŠANI vrstni red 2–6; Griblje 1→2→3→4 POPOLNA; vitals 578; P127 LEAD).
+- E2E agent-browser: P126/1897/GRIBLJE poroke/FOTOGRAF/CROSS-LINK/Hofstetter/578 v DOM ✓, footer ✓, mobilni 390px overflowX false ✓, konzola 0 napak ✓.
+
+Stage Summary:
+- **P126 POPOLNOSTI ZAKLJUČEN: 18/18 vpisov obojestransko; poročna linija 12 let globoko (1886–1897); GRIBLJE poroke ×5 = REKORD LINIJE (9 blokov: h8 + h40×2 + h29 + h18 MEGA + h27 + h39 + h33 + h28); vitals 578; bloki 04455 = 61; p80 hiše 52; PT luknja 10; QA 127/127.**
+- ⚠ P127 LEAD: **poročna 1898** — rokopisna glava »1898.« + v1/1898 (Jänner 25, Gradec 32? Anton Jane? [~] × Vrhtar? 21 Maria Hovcar [~] 19½) že na s104; skeni 105–109 že v /home/z/.p126tmp; vzorec P126.

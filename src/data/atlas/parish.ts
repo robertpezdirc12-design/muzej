@@ -965,6 +965,122 @@ export const HOUSE_VITALS: HouseVital[] = [
     whatEn: "marriage (Nov 23, 1896, entry 15) — bride Catharina KLOBUČAR [~], half smallholder's daughter + hoc [hic commorans], 21 (a minor — the COMING-OF-AGE DECLARATION of the k.k. district court Črnomelj Nov 12, 1896 ko 8364 [~]!), GRIBLJE 18 (the 1st MARRIAGE evidence of h18 — the baptism 1898 h18 A NEW NUMBER (Matija Šimec × Ana Kukar — a HOUSEHOLD CHANGE?!); father Johann Klobučar quarter smallholder × Barbara PERDINEC) × Johann BERKOVEC [~], half smallholder's son [~], 28, Lomelj [~] 14 (father Marcus Berkovec half smallholder × Catharina KLEPEC — KLEPEC ×3 in the year!); the only GRIBLJE marriage of 1896; witnesses: Peter Perdinec + Juri(j) Klepec (} ½ Gbl.); priest Jos. Rauy (»M.!« [~]); Befünden: the certificate of the Podzemelj commune Nov 1896 no. 121 [~]",
     status: "DOCUMENTED",
   },
+  // ——— P126 razširitev: POROČNA KNJIGA 04455 — polno leto 1897 (s101–s104 ==
+  // Pag. 100–103; Pag. == sken − 1, 12. potrditev; velja v 61–104). Rokopisna
+  // glava »1897« na s101 + rokopisna glava »1898.« + v1/1898 ŽE na s104
+  // (P127 lead!). 1897 = 18 vpisov (razpored jan 1 + feb 8 + maj 2 + jul 2 +
+  // avg 2 + okt 2 + nov 1; 15.2. ×5 = 2. največji dan linije!).
+  // NOVELE: ★ GRIBLJE poroke ×5 = REKORD LINIJE (prej 3 P121!) + ★ 2.
+  // prekinitev Rauy-monopola: v1 Johann Hofstetter [~], Dechant? in
+  // ADELSBERG, per deleg. (poroka verjetno v Postojni — nevestin oče k.k.
+  // pension. Förster!) + ★ 1. FOTOGRAF-PRIČA (v1 Pfüllkojf? [~] Photograph!)
+  // + ★ MEGA CROSS-LINK v10: Mathias Simec h18 × Anna Kuchar h27 = PAR iz
+  // krstne 04105 1898 h18 (»izmena gospodinjstva« P125 bloka REŠENA!) + ★
+  // DVOJNA SODNA POLNOLETNOST (v15: Rudolfovo 23/8. + Metlika 22/8.!) + ★
+  // SAMSKI LIST (v16: »Upričevalo samskiga stana«, Dragatus 23/9. št:405!) +
+  // ★ NADOARSTVENO dovoljenje (v12 Metlika 1/7. št:103 — slov. Vormundschaft)
+  // + ★ SLOVENSKA sodna polnoletnost (v5 Črnomelj Ž:1307) + ★ 1. MÜTTERLICH
+  // sodna privolitev (v10 Ž:3791) + ★ »in Ungarn« ×8 = REKORD (v6/v7/v8/
+  // v11-ženin/v14/v16-ženin/v17 + v4[~]) + ženin 55½ NEZAKONSKI (v3 — 2.
+  // nezakonski ženin, mati ledig.!) + DVOJNI status (v13 »½ gbl. Sohn und
+  // Zimmermann«) + DVA ženina h40 (v9 Brodarič + v11 Predanic — A6!) +
+  // Predanic/Perdinec varianta (v11!) + občinske vrste: Podzemelj 1→2–6
+  // (MEŠANI vrstni red 12/2.!)→9→10 | Griblje 1→2→3→4 POPOLNA | Gradac
+  // 26→8?[~]→27 (A5) | Smihel? Škofjič? 46.
+  // GRIBLJE: 5 porok / 9 poročnih blokov (h8 NOVA + h40 ×2 NOVA + h29 NOVA +
+  // h18 2. dokaz MEGA + h27 + h39 NOVA + h33 NOVA + h28 NOVA).
+  // Dokaz: research/issue17/parish-marriage-1897.json; verifikator:
+  // scripts/p126_parish_marriage_1897.py --check (I1–I11).
+  {
+    houseNo: "8",
+    bookSignature: "04455",
+    year: 1897,
+    scan: 102,
+    page: 101,
+    whatSi: "poroka (15. 2. 1897, vpis 5 — 1. od 5 porok 15.2. = 2. največji dan linije!) — nevesta Maria JAKOBČIČ [~], ⅓? Griblarš-toyftn [~], 23, GRIBLJE 8 (1. POROČNI DOKAZ h8 — Jakobčič-hiša!; oče Johann Jakobčič ¼ Griblar × Anna BRODARIČ) × Nicolaus Zupanič [~], ⅓? Griblarš-Jofn [~], 31, Krasinec 18 (oče Mathias Zupanič ½? Griblar [~] × Catharina STARASINIČ — cf. P124!); ★ 1. GRIBLJE poroka 1897 (REKORD-leto!); ★ SLOVENSKA sodna polnoletnost: »Ml. nevesta pol. veljetna sprozana od c.k. okr. sodisča v Črnomlju? z dnom 6. febr. 1897. Ž:1307«; priče Georg Štarasinič? + Johan Brodarič (obe ⅓ gbl [~]); duhovnik Jos. Rauy; Befünden: zglasmica občine Podzemelj od 12/2. št:3",
+    whatEn: "marriage (Feb 15, 1897, entry 5 — the 1st of 5 weddings on Feb 15 = the 2nd largest day of the line!) — bride Maria JAKOBČIČ [~], ⅓? smallholder's daughter [~], 23, GRIBLJE 8 (the 1st MARRIAGE evidence of h8 — the Jakobčič house!; father Johann Jakobčič quarter smallholder × Anna BRODARIČ) × Nicolaus Zupanič [~], ⅓? smallholder's son [~], 31, Krasinec 18 (father Mathias Zupanič ½? smallholder [~] × Catharina STARASINIČ — cf. P124!); ★ the 1st GRIBLJE marriage of 1897 (the RECORD year!); ★ the SLOVENE coming-of-age: »Ml. nevesta pol. veljetna sprozana od c.k. okr. sodisča v Črnomlju? z dnom 6. febr. 1897. Ž:1307«; witnesses Georg Štarasinič? + Johan Brodarič (both ⅓ gbl [~]); priest Jos. Rauy; Befünden: the Podzemelj commune certificate Feb 12 no. 3",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "40",
+    bookSignature: "04455",
+    year: 1897,
+    scan: 102,
+    page: 101,
+    whatSi: "poroka (22. 2. 1897, vpis 9) — ženin Nicolaus BRODARIČ, ½ Griblar, 31, GRIBLJE 40 (1. POROČNI DOKAZ h40; oče Anton Brodarič ½ Griblar × Barbara PERDINEC) × Maria MILEK, ½ Griblarš-tojš? [~], 24, GRIBLJE 29 (1. POROČNI DOKAZ h29; oče Peter Milek ½ Griblar × Anna KRIŽAN); ★ GRIBLJE × GRIBLJE (h40 × h29) + ★ A6: h40 ima ŠE drugega ženina istega leta (v11 Predanic!); priče Nicolaus Željko? [~ — cf. P120 ŽELJKO-hiša!] + Mathias Brinec (½ göbl); duhovnik Jos. Rauy; Befünden: zglasmica občine GRIBLJE od 20/2. štev:1 (1. Griblje zglasmica 1897!)",
+    whatEn: "marriage (Feb 22, 1897, entry 9) — groom Nicolaus BRODARIČ, half smallholder, 31, GRIBLJE 40 (the 1st MARRIAGE evidence of h40; father Anton Brodarič half smallholder × Barbara PERDINEC) × Maria MILEK, half smallholder's daughter? [~], 24, GRIBLJE 29 (the 1st MARRIAGE evidence of h29; father Peter Milek half smallholder × Anna KRIŽAN); ★ GRIBLJE × GRIBLJE (h40 × h29) + ★ A6: h40 has ANOTHER groom the same year (v11 Predanic!); witnesses Nicolaus Željko? [~ — cf. the P120 ŽELJKO house!] + Mathias Brinec (½ göbl); priest Jos. Rauy; Befünden: the GRIBLJE commune certificate Feb 20 no:1 (the 1st Griblje certificate of 1897!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "29",
+    bookSignature: "04455",
+    year: 1897,
+    scan: 102,
+    page: 101,
+    whatSi: "poroka (22. 2. 1897, vpis 9) — nevesta Maria MILEK, ½ Griblarš-tojš? [~], 24, GRIBLJE 29 (1. POROČNI DOKAZ h29; oče Peter Milek ½ Griblar × Anna KRIŽAN — KRIŽAN cf. v8/v10!) × Nicolaus BRODARIČ, ½ Griblar, 31, GRIBLJE 40 (drubel poroka — oba bloka!); ★ 2. GRIBLJE poroka 1897; Milek cf. v7 mati ženina + v17 mati neveste (×3 leta!); duhovnik Jos. Rauy",
+    whatEn: "marriage (Feb 22, 1897, entry 9) — bride Maria MILEK, half smallholder's daughter? [~], 24, GRIBLJE 29 (the 1st MARRIAGE evidence of h29; father Peter Milek half smallholder × Anna KRIŽAN — KRIŽAN cf. v8/v10!) × Nicolaus BRODARIČ, half smallholder, 31, GRIBLJE 40 (a double-Griblje marriage — both blocks!); ★ the 2nd GRIBLJE marriage of 1897; Milek cf. the v7 groom's mother + the v17 bride's mother (×3 in the year!); priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "18",
+    bookSignature: "04455",
+    year: 1897,
+    scan: 102,
+    page: 101,
+    whatSi: "poroka (31. 5. 1897, vpis 10) — ženin Mathias SIMEC, ½ Griblar, 23, GRIBLJE 18 (2. POROČNI DOKAZ h18 — MEGA CROSS-LINK: par iz krstne 04105 1898 h18 (oče Matija Šimec × mati Ana Kukar) = TOČNO TA PAR — »izmena gospodinjstva« iz P125 bloka h18 REŠENA: Klobučar-hči se 1896 poroči ven (Berkovec), Simec×Kuchar preživi h18 od 1897!; oče Georg Simec ¼? Griblar [~] × Theresia KLEPEC) × Anna KUCHAR [~ Kučar], ½ Griblarš-tojštno, 16 (MLADOLETNA!; oče Jacob Kuchar ½? Griblar [~] × Anna KRIŽAN); ★ GRIBLJE × GRIBLJE (h18 × h27); ★ 1. MÜTTERLICH sodna privolitev linije: »mütterlich fürwillig für mj. Braut vom k.k. Bez. Ger. Črnomelj ddto 7/5.1897 Ž:3791« + väterl. mündl. für Bräutigam; priče Mathias Klepec + Johann Perdinec (½ göbl); duhovnik Jos. Rauy; Befünden: zglasmica občine Griblje od 30/5. št:3",
+    whatEn: "marriage (May 31, 1897, entry 10) — groom Mathias SIMEC, half smallholder, 23, GRIBLJE 18 (the 2nd MARRIAGE evidence of h18 — MEGA CROSS-LINK: the couple from the 1898 baptism 04105 h18 (father Matija Šimec × mother Ana Kukar) = EXACTLY THIS COUPLE — the »household change« from the P125 h18 block SOLVED: the Klobučar daughter married out 1896 (Berkovec), Simec×Kuchar occupy h18 from 1897!; father Georg Simec ¼? smallholder [~] × Theresia KLEPEC) × Anna KUCHAR [~ Kučar], half smallholder's daughter, 16 (A MINOR!; father Jacob Kuchar ½? smallholder [~] × Anna KRIŽAN); ★ GRIBLJE × GRIBLJE (h18 × h27); ★ the 1st MÜTTERLICH court consent of the line: »mütterlich fürwillig für mj. Braut vom k.k. Bez. Ger. Črnomelj ddto 7/5.1897 Ž:3791« + väterl. mündl. for the groom; witnesses Mathias Klepec + Johann Perdinec (½ göbl); priest Jos. Rauy; Befünden: the Griblje commune certificate May 30 no. 3",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "27",
+    bookSignature: "04455",
+    year: 1897,
+    scan: 102,
+    page: 101,
+    whatSi: "poroka (31. 5. 1897, vpis 10) — nevesta Anna KUCHAR [~ Kučar], ½ Griblarš-tojštno, 16 (MLADOLETNA — mütterl. sodna privolitev Ž:3791!), GRIBLJE 27 (oče Jacob Kuchar ½? Griblar [~] × Anna KRIŽAN) × Mathias SIMEC, ½ Griblar, 23, GRIBLJE 18 (drubel poroka — h18 MEGA cross-link!); ★ Simec ×2 v 2 dnevih (cf. v11 nevesta Maria Simec h39!); KRIŽAN ×2 (cf. v8/v9); duhovnik Jos. Rauy",
+    whatEn: "marriage (May 31, 1897, entry 10) — bride Anna KUCHAR [~ Kučar], half smallholder's daughter, 16 (A MINOR — the mütterl. court consent Ž:3791!), GRIBLJE 27 (father Jacob Kuchar ½? smallholder [~] × Anna KRIŽAN) × Mathias SIMEC, half smallholder, 23, GRIBLJE 18 (a double-Griblje marriage — the h18 MEGA cross-link!); ★ Simec ×2 in 2 days (cf. the v11 bride Maria Simec h39!); KRIŽAN ×2 (cf. v8/v9); priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "39",
+    bookSignature: "04455",
+    year: 1897,
+    scan: 103,
+    page: 102,
+    whatSi: "poroka (31. 5. 1897, vpis 11) — nevesta Maria SIMEC, ½ Griblarš-tojšt, 17 (MLADOLETNA — väterl. sodna privolitev Ž:3584!), GRIBLJE 39 (1. POROČNI DOKAZ h39; oče Nicolaus Simec ¼ Griblar × Catharina JAKOBČIČ) × Nikolaus PREDANIC [~ — oče Johann PERDINEC! varianta A7], ½ Griblar, 22, GRIBLJE 40 (A6: 2. ženin h40 v letu!; oče Johann Perdinec ¼ Griblar × Anna JAKOBČIČ — OBE MATI JAKOBČIČ!); ★ 2. GRIBLJE poroka ISTI DAN (31/5. — cf. v10!); ★ »in Ungarn« formula za ženina (8. instanca!); Griblje št:2 (izdano 29/5. — PRED št:3!); priče Mathias [Mrh.?] [~] + Mathias Simec (¼ göbl); duhovnik Jos. Rauy; Befünden: zglasmica občine Griblje od 29/5. št:2 + k.k. Bez.Ger. Črnomelj Ž:3584",
+    whatEn: "marriage (May 31, 1897, entry 11) — bride Maria SIMEC, half smallholder's daughter, 17 (A MINOR — the väterl. court consent Ž:3584!), GRIBLJE 39 (the 1st MARRIAGE evidence of h39; father Nicolaus Simec quarter smallholder × Catharina JAKOBČIČ) × Nikolaus PREDANIC [~ — the father Johann PERDINEC! variant A7], half smallholder, 22, GRIBLJE 40 (A6: the 2nd groom of h40 in the year!; father Johann Perdinec quarter smallholder × Anna JAKOBČIČ — BOTH MOTHERS JAKOBČIČ!); ★ the 2nd GRIBLJE marriage the SAME DAY (May 31 — cf. v10!); ★ the »in Ungarn« formula for the groom (the 8th instance!); Griblje no:2 (issued May 29 — BEFORE no:3!); witnesses Mathias [Mrh.?] [~] + Mathias Simec (¼ göbl); priest Jos. Rauy; Befünden: the Griblje commune certificate May 29 no:2 + k.k. Bez.Ger. Črnomelj Ž:3584",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "40",
+    bookSignature: "04455",
+    year: 1897,
+    scan: 103,
+    page: 102,
+    whatSi: "poroka (31. 5. 1897, vpis 11) — ženin Nikolaus PREDANIC [~ — oče Johann PERDINEC! varianta A7], ½ Griblar, 22, GRIBLJE 40 (A6: 2. ženin h40 v letu — v9 Brodarič!; oče Johann Perdinec ¼ Griblar × Anna JAKOBČIČ — obe mati JAKOBČIČ z nevestino!) × Maria SIMEC, ½ Griblarš-tojšt, 17 (MLADOLETNA), GRIBLJE 39 (drubel poroka — oba bloka!); ★ 2. GRIBLJE poroka ISTI DAN (31/5. — cf. v10!) + ★ »in Ungarn« formula za ženina (8. instanca!); priče Mathias [Mrh.?] [~] + Mathias Simec (¼ göbl); duhovnik Jos. Rauy; Befünden: zglasmica občine Griblje od 29/5. št:2 (izdana PRED št:3!) + väterl. mündl. fürwillig za ženina in UNGARN + väterl. privolitev za nevesto k.k. Bez.Ger. Črnomelj Ž:3584",
+    whatEn: "marriage (May 31, 1897, entry 11) — groom Nikolaus PREDANIC [~ — the father Johann PERDINEC! variant A7], half smallholder, 22, GRIBLJE 40 (A6: the 2nd groom of h40 in the year — v9 Brodarič!; father Johann Perdinec quarter smallholder × Anna JAKOBČIČ — BOTH mothers JAKOBČIČ with the bride's side!) × Maria SIMEC, half smallholder's daughter, 17 (A MINOR), GRIBLJE 39 (a double-Griblje marriage — both blocks!); ★ the 2nd GRIBLJE marriage the SAME DAY (May 31 — cf. v10!) + ★ the »in Ungarn« formula for the groom (the 8th instance!); witnesses Mathias [Mrh.?] [~] + Mathias Simec (¼ göbl); priest Jos. Rauy; Befünden: the Griblje commune certificate May 29 no:2 (issued BEFORE no:3!) + väterl. mündl. fürwillig for the groom in UNGARN + the väterl. consent for the bride k.k. Bez.Ger. Črnomelj Ž:3584",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "33",
+    bookSignature: "04455",
+    year: 1897,
+    scan: 104,
+    page: 103,
+    whatSi: "poroka (22. 11. 1897, vpis 18) — ženin Mathias DEBLIČ? [~ Teblič], ½ griblarš? Jofm [~], 25, GRIBLJE 33 (1. POROČNI DOKAZ h33; oče Mathias Deblič? [~] ½ Griblar × Maria Hrsič? [~]) × Maria POŽEK? [~ Ložek], ½ gbl. Tochkr [~], 22, GRIBLJE 28 (1. POROČNI DOKAZ h28; oče Georg Ložek? [~] ¼? Griblar [~] × Margareth Mihovič? [~]); ★ GRIBLJE × GRIBLJE (h33 × h28) — 5. in ZADNJA GRIBLJE poroka 1897 = REKORD LINIJE!; priče Mathias Brinec (BRINEC ×2 = v9!) + Johann Kučar? [~] (½ gbl); duhovnik Jos. Rauy; Befünden: zglasmica občine Griblje od 21/11. št:4 (vrsta ZAKLJUČENA 1→2→3→4!) + elterlich? fürwillig za nevesto od 8/9.1897",
+    whatEn: "marriage (Nov 22, 1897, entry 18) — groom Mathias DEBLIČ? [~ Teblič], ½ smallholder's? Jofm [~], 25, GRIBLJE 33 (the 1st MARRIAGE evidence of h33; father Mathias Deblič? [~] half smallholder × Maria Hrsič? [~]) × Maria POŽEK? [~ Ložek], ½ gbl. Tochkr [~], 22, GRIBLJE 28 (the 1st MARRIAGE evidence of h28; father Georg Ložek? [~] ¼? smallholder [~] × Margareth Mihovič? [~]); ★ GRIBLJE × GRIBLJE (h33 × h28) — the 5th and LAST GRIBLJE marriage of 1897 = the RECORD of the line!; witnesses Mathias Brinec (BRINEC ×2 = v9!) + Johann Kučar? [~] (½ gbl); priest Jos. Rauy; Befünden: the Griblje commune certificate Nov 21 no:4 (the series CLOSED 1→2→3→4!) + elterlich? consent for the bride from Sep 8, 1897",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "28",
+    bookSignature: "04455",
+    year: 1897,
+    scan: 104,
+    page: 103,
+    whatSi: "poroka (22. 11. 1897, vpis 18) — nevesta Maria POŽEK? [~ Ložek], ½ gbl. Tochkr [~], 22, GRIBLJE 28 (1. POROČNI DOKAZ h28; oče Georg Ložek? [~] ¼? Griblar [~] × Margareth Mihovič? [~]) × Mathias DEBLIČ? [~ Teblič], ½ griblarš? Jofm [~], 25, GRIBLJE 33 (drubel poroka — oba bloka!); ★ ZADNJA GRIBLJE poroka rekordnega leta; duhovnik Jos. Rauy",
+    whatEn: "marriage (Nov 22, 1897, entry 18) — bride Maria POŽEK? [~ Ložek], ½ gbl. Tochkr [~], 22, GRIBLJE 28 (the 1st MARRIAGE evidence of h28; father Georg Ložek? [~] ¼? smallholder [~] × Margareth Mihovič? [~]) × Mathias DEBLIČ? [~ Teblič], ½ smallholder's? Jofm [~], 25, GRIBLJE 33 (a double-Griblje marriage — both blocks!); ★ the LAST GRIBLJE marriage of the record year; priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
   // ——— P122 razširitev: POROČNA KNJIGA 04455 — polno leto 1893 (skeni 87–90 ==
   // strani 86–89; VELIKA GLAVA »Traunungs=Buch« + rokopisno »1893« na s87 =
   // Pag. 86 POTRJENA — P122 lead!; 20 vpisov: 1886:7 → 1887:21 → 1888:20 →
