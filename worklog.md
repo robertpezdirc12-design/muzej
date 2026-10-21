@@ -5601,3 +5601,20 @@ Stage Summary:
 - **P123 DOKAZAN: poročna 1894 = 15/15 vpisov obojestransko + REKORD-PAR VSEH ČASOV (v5: 64 + 48 = 112 let!) + REKORD nevesta 56 (v1 Tasič) + 1. PREČRTANI PRIČA linije (Vojka→Justin) + PFARRAMT IDRIA ~110 km + VOJSKA Inf.-Reg. №267 + DISPENS №2680 + 1. LANDSREGIERUNG Laibach Ž8667 (3 TEDNE PO poroki [~]!) + enačnopriimeška poroka Perdinec × Perdinec + Tome × Tome + ZURAJOVIČ očetovski cross-link 1893→1894 — poročna linija 9 let globoko (1886–1894).**
 - **GRIBLJE: 2 poroki / 4 poročna bloka (h27 2. dokaz × h42 CERNIČ 1. POROČNI + h9 2. dokaz × h11 2. dokaz)** → parish.ts +4 bloka → **bloki 04455 = 46; vitals 559 → 563; p80 hiše 44 → 47; PT luknja 7 → 9 (+h58 Požek +h42 CERNIČ)**.
 - **QA 122 → 124/124**; P124 LEAD: **poročna 1895** (glava 1895 = s94 = Pag. 93 + skeni 94–96 prenešeni).
+
+---
+Task ID: 98-b (zaključek — push protokol)
+Agent: Z.ai Code (glavni)
+Task: P122+P123 push protokol — commit (lastniška identiteta) → GitLab → GitHub → dvojna verifikacija → Vercel verdikt → produkcija
+
+Work Log:
+- Commit **588dbc0** (Robert Pezdirc <robert.pezdirc12@gmail.com>; 19 datotek: parish.ts +9 blokov 1893/1894 + qa-parish qa-p122/qa-p123 + popravki Rauy-podpis/sort-bug/p80-hiše-47/PT-luknja-9/qa-p91-izjema + verifierja p122/p123 + sinhr. regresij p114–p121+p80 + evidence JSON ×2 + notes ×2 + README + worklog Task 97/98).
+- Push GitLab origin `9eb13c7..588dbc0 main -> main` ✓ **1. poskus brez 403**; push GitHub `9eb13c7..588dbc0 main -> main` ✓ 1. poskus.
+- Verifikacija: GitHub ls-remote = **588dbc0 1:1** ✓; GitLab ls-remote/API read → WAF 403 (»Blocked« CF-stran, tudi z PRIVATE-TOKEN + browser UA = trenoten read-blok; **push sam je dokaz** — vzorec Task 87-b/92-b).
+- **VERCEL VERDIKT**: GitHub commit status 588dbc0 → **`Vercel → success | Deployment has completed`** (pending → success ~2 min; **3. zaporedni lastniški push = 3. potrditev hipoteze avtor-epošte Task 94-c**).
+- **PRODUKCIJA PREVERJENA**: `GET https://griblje-museum.vercel.app/api/qa` → **124/124, ok True, 0 fails** + homepage HTTP 200 (964 737 B) — **produkcija ŽIV P122+P123 (P121 122/122 → 124/124 v enem deployu)!**
+- README »Zrcaljenje (aktualno)«: Task 97+98 segment (588dbc0 + Vercel success + produkcija 124/124).
+
+Stage Summary:
+- **Task 97+98 (P122+P123) POPOLNOSTI ZAKLJUČENA: GitLab (push dokazan) = GitHub = lokalna = 588dbc0; Vercel ŽIV 124/124; QA 122 → 124/124; veriga p114–p123 + p80/p81/p83 --check VSE PASS.**
+- ⚠ NASLEDNJA FAZA (P124): **poročna 1895** (glava 1895 = s94 = Pag. 93, rokopisna; skeni 94–96 že prenešeni v /home/z/.p116tmp; v1–6 še neorisani) — vzorec P122/P123: fetch → faza 1 okvir → faza 2 transkripcija → evidence + verifier + parish.ts bloki + qa-p124 (125. kontrola) + sinhr. regresij + README + push.
