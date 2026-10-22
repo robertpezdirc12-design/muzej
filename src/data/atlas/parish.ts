@@ -1198,6 +1198,86 @@ export const HOUSE_VITALS: HouseVital[] = [
     whatEn: "marriage (Oct 17, 1898, entry 20) — the bride Catharina KLOBUČAR, ½ smallholder's daughter, 21 (A MINOR!), GRIBLJE 46 (the 1st MARRIAGE evidence of h46 — A NEW HOUSE!; parents Marcus Klobučar half smallholder × Catharina Milek) × Nicolaus Filak, 20 (A MINOR), GRIBLJE 34 (a double marriage — both blocks!); ★ the k.k. Landesregierung Laibach Z:12527 (Aug 28, 1898) for BOTH + Griblje no:4; priest Jos. Rauy",
     status: "DOCUMENTED",
   },
+  // ——— P128 razširitev: POROČNA KNJIGA 04455 — polno leto 1899 (skeni 110–111 ==
+  // Pag. 109–110; Pag. = sken − 1, 14. potrditev; glava »1899.« na s110 potrjena;
+  // glava »1900.« na s112 = P129 lead — v1/1900 Krasinec 18 ŽUPANIČ!) —
+  // 9 vpisov obojestransko = 2. najmanjše leto linije (min 1886:7; −18 po
+  // rekordnem 1898:27!) — vpisi z Griblji (3 poroke / 6 poročnih blokov:
+  // h34 v1 2. dokaz + h44 v1 NOVA + h1 v3 NOVA NAJNIŽJA + h10 v3 3. dokaz +
+  // h20 v4 2. dokaz + h16 v4 3. dokaz): NOVELE: ★ NAJSTAREJŠI PAR LINIJE
+  // (v1: 66 + 68 = 134, OBA status 1!) + ★ ¾ GIBLAR (v7 oče+hči — NOVI
+  // NAJVIŠJI ulomek, prej ½!) + ★ 1. ženin izven sistema (v9 Pf. St. Michel
+  // b. Rudolfswerth = Novo mesto!) + ★ zglasmica-PENTAGON 5 občin (Griblje
+  // 2/3/5 · Podzemelj 1/3/4 · Gradac 57 · na Gori? 2 · Šmihel-Štopriče? 65) +
+  // ★ DUHOVNIKI: Novak 5/9 dominanta (1898 Rauy 25/27!) + 1. dokaz Franz
+  // STURM Coop. ×2 (v4+v6!) + ★ oče kot priča v istem vpisu (v3 Željko!) +
+  // ★ CROSS-ENTRY v1→v4 (ženin Žibak priča 4 dni po poroki!) + priča-link
+  // v6→v9 Županič + ★ KURE/MUC kompleks (v3 == h10 1890!) + ŽURAJEVIČ ×4 +
+  // ★ VRANOVIČE 5 hiš čez 1898–99 (h2/h4/h9/h27/h28) + ★ SODRAŽICA Pfarramt
+  // (v8) + ★ dispens № 2319 fb. Ord. Laibach (v7) + LAIFSKLAR/LAIFFLER ×5
+  // (cf. P127 Zaiflner — identiteta? odprto).
+  // Dokaz: research/issue17/parish-marriage-1899.json; verifikator:
+  // scripts/p128_parish_marriage_1899.py --check (I1–I11).
+  {
+    houseNo: "34",
+    bookSignature: "04455",
+    year: 1899,
+    scan: 110,
+    page: 109,
+    whatSi: "poroka (9. 1. 1899, vpis 1) — ženin Johann ŽIBAK? [~ — 6×: Ž/J z zavihkom + descender + zanka b; NI F/l! glej honesty], Štrigžingtar? [~ — poklic, m. forma; 1887 brez zadetka], 66 (status 1!), GRIBLJE 34 (2. POROČNI DOKAZ h34 po 1898 v20 Nicolaus FILAK — tension priimkov!) × Maria [Ś/H]rudej? [~], Štrigžingtarin? [~ — ž. forma ISTEGA termina → poklic], 68 (status 1!) = ★ NAJSTAREJŠI PAR LINIJE (134 let skupaj, OBA 1. poroka!); starši: Mathias Žibak ½ griblar × Catharina Pendirec / Mathias Klobučar ¼ griblar × Anna Horvat; priči Marcus KLOBUČAR (= oče neveste v20/1898 h46 — cross-link!) + Johann Hrbalj? [~] ½ griblar [~]; Befünden: ženitovanjska zglasmica občine Griblje d° 9/1. 1899 št: 2; duhovnik Jos. Novak (P.f.) — 1899 NOVA DOMINANTA (5/9; 1898: Rauy 25/27!)",
+    whatEn: "marriage (Jan 9, 1899, entry 1) — the groom Johann ŽIBAK? [~ — 6×: Ž/J with a hook + descender + b with a bowl; NOT F/l! see honesty], Štrigžingtar? [~ — an occupation, the masculine form; no match in 1887], 66 (status 1!), GRIBLJE 34 (the 2nd MARRIAGE evidence of h34 after the 1898 v20 Nicolaus FILAK — a surname tension!) × Maria [Ś/H]rudej? [~], Štrigžingtarin? [~ — the feminine form of the SAME term → an occupation], 68 (status 1!) = ★ THE OLDEST COUPLE OF THE LINE (134 years together, BOTH 1st marriages!); parents: Mathias Žibak ½ smallholder × Catharina Pendirec / Mathias Klobučar ¼ smallholder × Anna Horvat; witnesses Marcus KLOBUČAR (= the father of the 1898 v20 bride, h46 — a cross-link!) + Johann Hrbalj? [~] ½ smallholder [~]; Befünden: the Griblje commune marriage certificate Jan 9, 1899 no: 2; priest Jos. Novak (P.f.) — the NEW 1899 DOMINANT (5/9; 1898: Rauy 25/27!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "44",
+    bookSignature: "04455",
+    year: 1899,
+    scan: 110,
+    page: 109,
+    whatSi: "poroka (9. 1. 1899, vpis 1) — nevesta Maria [Ś/H]rudej? [~], Štrigžingtarin? [~], 68 (status 1 — 1. poroka pri 68 letih = LINIJSKI REKORD!), GRIBLJE 44 (1. POROČNI DOKAZ h44 — NOVA poročna!; hiša že v mrliški 04894-1887 + krstni 04105-1888+) × Johann Žibak? [~], 66, GRIBLJE 34 (2. dokaz h34); starši neveste: Mathias KLOBUČAR ¼ griblar × Anna Horvat (DRUGA Klobučar-veja kot h46 Marcus ½!); priči Marcus Klobučar + Johann Hrbalj? [~]; zglasmica Griblje št: 2; duhovnik Jos. Novak (P.f.)",
+    whatEn: "marriage (Jan 9, 1899, entry 1) — the bride Maria [Ś/H]rudej? [~], Štrigžingtarin? [~], 68 (status 1 — a FIRST marriage at 68 = the LINE RECORD!), GRIBLJE 44 (the 1st MARRIAGE evidence of h44 — NEW!; the house already in the death register 04894-1887 + the baptism 04105-1888+) × Johann Žibak? [~], 66, GRIBLJE 34 (the 2nd h34 evidence); the bride's parents: Mathias KLOBUČAR ¼ smallholder × Anna Horvat (a DIFFERENT Klobučar branch than the h46 Marcus ½!); witnesses Marcus Klobučar + Johann Hrbalj? [~]; the Griblje certificate no: 2; priest Jos. Novak (P.f.)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "1",
+    bookSignature: "04455",
+    year: 1899,
+    scan: 110,
+    page: 109,
+    whatSi: "poroka (30. 1. 1899, vpis 3) — ženin Georg ŽELJKO, ½ gbl. [B/P]ohu? [~ — kratka pripomba za ulomkom, 3× v vpisu], 31, GRIBLJE 1 (1. POROČNI DOKAZ h1 — NAJNIŽJA hišna številka poročne linije!; hiša že v krstni 04105 9× 1888–1914: P87 sidro h1 oče Nikolaj Željko ¼ × Katarina Kure!) × Barbara KURE, ½ gbl. [K]allan? [~], 27, GRIBLJE 10 (3. poročni dokaz h10 — 1887 Križe + 1890 Anna KURE!); starši: Nicolaus Željko ½ gbl [B/P]ohu? × Anna Jakobič / Marcus Kure ¼ griblar × Anna Škala [~ — h10 1890 branje »Špala«, varianta!]; ★ priči Nicolaus ŽELJKO (OČE ženina KOT PRIČA v istem vpisu — 1. tak dokaz linije!) + Johann MUC [Piharnik? ~] (= h10 1890 ŽENIN! + P92 h61 Muc × Ana Kure 1897!); zglasmica Griblje od dne 29/1. št: 3; duhovnik Jos. Rauy",
+    whatEn: "marriage (Jan 30, 1899, entry 3) — the groom Georg ŽELJKO, ½ sml. [B/P]ohu? [~ — a short annotation after the fraction, 3× in the entry], 31, GRIBLJE 1 (the 1st MARRIAGE evidence of h1 — the LOWEST house number of the marriage line!; the house already in the baptism 04105 9× 1888–1914: the P87 h1 anchor father Nikolaj Željko ¼ × Katarina Kure!) × Barbara KURE, ½ sml. [K]allan? [~], 27, GRIBLJE 10 (the 3rd marriage evidence of h10 — 1887 Križe + 1890 Anna KURE!); parents: Nicolaus Željko ½ sml [B/P]ohu? × Anna Jakobič / Marcus Kure ¼ smallholder × Anna Škala [~ — the h10 1890 reading »Špala«, a variant!]; ★ witnesses Nicolaus ŽELJKO (the groom's FATHER AS WITNESS in the same entry — the 1st such proof of the line!) + Johann MUC [Piharnik? ~] (= the h10 1890 GROOM! + P92 h61 Muc × Ana Kure 1897!); the Griblje certificate Jan 29 no: 3; priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "10",
+    bookSignature: "04455",
+    year: 1899,
+    scan: 110,
+    page: 109,
+    whatSi: "poroka (30. 1. 1899, vpis 3) — nevesta Barbara KURE, ½ gbl. [K]allan? [~], 27, GRIBLJE 10 (3. poročni dokaz h10!) × Georg Željko, 31, GRIBLJE 1 (1. dokaz h1!); ★ KURE SESTRI?: Anna Kure (1890 v1, 23, ¼ Gütlstochter) + Barbara (1899, 27) — OBA oče Marcus Kure ¼ griblar, mati Anna Špala/Škala [~ varianta]; priča Johann MUC = h10 1890 ŽENIN (MUC×KURE kompleks: P92 h61 Muc × Ana Kure 1897!); zglasmica Griblje št: 3; duhovnik Jos. Rauy",
+    whatEn: "marriage (Jan 30, 1899, entry 3) — the bride Barbara KURE, ½ sml. [K]allan? [~], 27, GRIBLJE 10 (the 3rd marriage evidence of h10!) × Georg Željko, 31, GRIBLJE 1 (the 1st h1 evidence!); ★ the KURE SISTERS?: Anna Kure (1890 v1, 23, ¼ smallholder's daughter) + Barbara (1899, 27) — BOTH father Marcus Kure ¼ smallholder, mother Anna Špala/Škala [~ a variant]; the witness Johann MUC = the h10 1890 GROOM (the MUC×KURE complex: P92 h61 Muc × Ana Kure 1897!); the Griblje certificate no: 3; priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "20",
+    bookSignature: "04455",
+    year: 1899,
+    scan: 110,
+    page: 109,
+    whatSi: "poroka (13. 2. 1899, vpis 4) — ženin Alois NOVAK, Zimmermannsmeister, 24, geb: in Toplice No 50 [~ — rojstna župnija Toplice!], GRIBLJE 20 (2. POROČNI DOKAZ h20 po 1891 v7 Peter Pezdirec!) × Maria ŽIBAK? [~ — cf. v1; Filak-varianta?], ½ gbl. Tochter, 19, GRIBLJE 16 (3. poročni dokaz h16 — 1886 Ana FILAK + 1895 Anton Brodarič!); starši: Joseph Novak [Inwohner? ~] × Maria Pircel? [~] / Mathias Žibak ½ griblar × Anna Numanic? [~]; ★ priči Johann ŽIBAK Štrigžingar (= v1 ŽENIN — CROSS-ENTRY, 4 dni po lastni poroki!) + Matthias SIMEC Laifsklar? [~] (= h54 1898 ženin Johann Simec familija + h18 oče!); Befünden: ženitovanjska zglasmica Griblje od 12/2. št: 5 + dovoljenje iz sodnišča o Černomlju z dne 1. feb. 1899 + jamstvo list za ženina [pregelnega srada? ~] na Toplica z dnem 22/1. 1899 (3 dokumenti!); duhovnik Franz STURM Coop. (1. dokaz — ×2 v 1899!)",
+    whatEn: "marriage (Feb 13, 1899, entry 4) — the groom Alois NOVAK, a master carpenter, 24, born in Toplice No 50 [~ — the birth parish Toplice!], GRIBLJE 20 (the 2nd MARRIAGE evidence of h20 after the 1891 v7 Peter Pezdirec!) × Maria ŽIBAK? [~ — cf. v1; a Filak variant?], ½ smallholder's daughter, 19, GRIBLJE 16 (the 3rd marriage evidence of h16 — 1886 Ana FILAK + 1895 Anton Brodarič!); parents: Joseph Novak [an Inwohner? ~] × Maria Pircel? [~] / Mathias Žibak ½ smallholder × Anna Numanic? [~]; ★ witnesses Johann ŽIBAK Štrigžingar (= the v1 GROOM — a CROSS-ENTRY, 4 days after his own wedding!) + Matthias SIMEC Laifsklar? [~] (= the h54 1898 groom Johann Simec family + the h18 father!); Befünden: the Griblje marriage certificate Feb 12 no: 5 + the permission from the court at Tschernomel Feb 1, 1899 + the guarantee letter for the groom re Toplice Jan 22, 1899 (3 documents!); priest Franz STURM Coop. (the 1st proof — ×2 in 1899!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "16",
+    bookSignature: "04455",
+    year: 1899,
+    scan: 110,
+    page: 109,
+    whatSi: "poroka (13. 2. 1899, vpis 4) — nevesta Maria ŽIBAK? [~], ½ gbl. Tochter, 19, GRIBLJE 16 (3. poročni dokaz h16!) × Alois Novak, Zimmermannsmeister, 24, GRIBLJE 20 (2. dokaz h20!); ★ ŽIBAK veriga [~ hipoteza]: v1 ženin Johann Žibak 66 (oče Mathias ½ × Pendirec) → sin? Mathias Žibak ½ × Numanic → Maria 19 — oče IME = v1 ženinov oče! (Filak-tension: h16 1886 Ana FILAK oče Mathias!); priča Matthias SIMEC + Johann Žibak (= v1 ženin!); zglasmica Griblje št: 5 + sodišče Črnomelj 1.2. + jamstvo Toplice 22/1.; duhovnik Franz Sturm Coop.",
+    whatEn: "marriage (Feb 13, 1899, entry 4) — the bride Maria ŽIBAK? [~], ½ smallholder's daughter, 19, GRIBLJE 16 (the 3rd marriage evidence of h16!) × Alois Novak, a master carpenter, 24, GRIBLJE 20 (the 2nd h20 evidence!); ★ the ŽIBAK chain [~ a hypothesis]: the v1 groom Johann Žibak 66 (father Mathias ½ × Pendirec) → son? Mathias Žibak ½ × Numanic → Maria 19 — the father's NAME = the v1 groom's father! (the Filak tension: h16 1886 Ana FILAK father Mathias!); witnesses Matthias SIMEC + Johann Žibak (= the v1 groom!); the Griblje certificate no: 5 + the Tschernomel court Feb 1 + the Toplice guarantee Jan 22; priest Franz Sturm Coop.",
+    status: "DOCUMENTED",
+  },
   // ——— P122 razširitev: POROČNA KNJIGA 04455 — polno leto 1893 (skeni 87–90 ==
   // strani 86–89; VELIKA GLAVA »Traunungs=Buch« + rokopisno »1893« na s87 =
   // Pag. 86 POTRJENA — P122 lead!; 20 vpisov: 1886:7 → 1887:21 → 1888:20 →

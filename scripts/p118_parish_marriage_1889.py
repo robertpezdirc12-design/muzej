@@ -74,7 +74,7 @@ GRIBLJE_MARRIAGES = 4
 GRIBLJE_HOUSES_TS = "7,21,30,32,40,54,87"   # hiše z 1889 bloki v parish.ts
 EXPECTED_VITALS = 544           # P118 dokaz lastna kumulativa (537 + 7 bloki); trenutna = 548 (P119)
 BLOCKS_04455 = 27               # P118 dokaz lastna kumulativa (20 + 7)
-BLOCKS_04455_TS = 70              # P126: + 9 blokov 1897 (52 + 9)            # parish.ts zdaj = 49 (P121 +4 bloki 1892 + P122 +5 bloki 1893 + P123 +4 bloki 1894 + P124 +3 bloki 1895)
+BLOCKS_04455_TS = 76              # P126: + 9 blokov 1897 (52 + 9)            # parish.ts zdaj = 49 (P121 +4 bloki 1892 + P122 +5 bloki 1893 + P123 +4 bloki 1894 + P124 +3 bloki 1895)
 P80_HOUSES = 44                 # p118 JSON lastna vrednost (vzorčni podnabor p80; trenutna = 46 P119)
 DATE_COUNTS = {"januar": 0, "februar": 5, "marec": 0, "april": 0, "maj": 0,
                "junij": 1, "julij": 0, "avgust": 0, "september": 1, "oktober": 1,
@@ -274,7 +274,7 @@ def main() -> int:
     # ---------- I8: parish.ts bloki 04455 ----------
     ts = open(PARISH_TS).read()
     blocks_m = re.findall(r'houseNo:\s*"([^"]*)",\s*bookSignature:\s*"04455",\s*year:\s*(\d{4}),\s*scan:\s*(\d+)', ts)
-    check("I8 bloki 04455 = 70 (P121 +4, P122 +5, P123 +4 + P124 +3 + P125 +3 + P126 +9 + P127 +9!)", len(blocks_m) == BLOCKS_04455_TS, str(len(blocks_m)))
+    check("I8 bloki 04455 = 76 (P121 +4, P122 +5, P123 +4 + P124 +3 + P125 +3 + P126 +9 + P127 +9 + P128 +6!)", len(blocks_m) == BLOCKS_04455_TS, str(len(blocks_m)))
     h1889 = sorted((h for h, y, _ in blocks_m if y == "1889"), key=int)
     check("I8b hiše 1889 = [7,21,30,32,40,54,87]", ",".join(h1889) == GRIBLJE_HOUSES_TS, ",".join(h1889))
     h1888 = sorted((h for h, y, _ in blocks_m if y == "1888"), key=int)
@@ -320,7 +320,7 @@ def main() -> int:
     check("I9b qa-p116 bloki 70", "poročni bloki (04455) ≠ 70" in qa)
     check("I9c p80 bloki 70", "poročni vpisi (04455) ≠ 70" in qa)
     # vitals 544 regresijska zaščita v qa-p118
-    check("I9d vitals 587 zaščita (P127)", "HOUSE_VITALS.length !== 587" in qa[qa.index("const p118Marr"):] if "const p118Marr" in qa else False)
+    check("I9d vitals 593 zaščita (P128)", "HOUSE_VITALS.length !== 593" in qa[qa.index("const p118Marr"):] if "const p118Marr" in qa else False)
     check("I9e stara številka 537 iztekla", "HOUSE_VITALS.length !== 537" not in qa)
 
     # ---------- I10: README + notes ----------

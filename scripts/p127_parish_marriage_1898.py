@@ -60,8 +60,8 @@ RAUY_COUNT = 25                # 25/27 — v13+v14 Franz Herms (coop. + coad., �
 GREGWART_FORMULA = 7           # DE ×5 (v10/v15/v19/v20/v27) + SLO ×2 (v11/v12)
 ZAIFLNER = 6
 MOTTILING = 6
-VITALS = 587                   # 578 (P126) + 9 blokov 1898
-BLOCKS_04455 = 70              # 61 (P126) + 9
+VITALS = 593                   # 587 (P127) + 6 blokov 1899 (P128)
+BLOCKS_04455 = 76              # 61 (P126) + 9
 P80_HOUSES = 58                # 52 (P126) + 6 NOVIH v vzorcu (h48/h22/h67/h70/h34/h46 prek 04455-1898!)
 P80_PT_GAP = 12                # 10 + h46 + h48 (v luknji 41–60!)
 SIDRA_TS = 63                  # 70 − 7 okvir 1886 (pass-1 »60« = POPRAVEK)
@@ -296,9 +296,9 @@ def main() -> int:
     check("I5g p80 hiše 58 (6 NOVIH v vzorcu prek 04455-1898!)", st.get("p80Houses") == P80_HOUSES
           and d.get("honesty", {}).get("noNewHouses"), f'{st.get("p80Houses")}; {str(st.get("p80HousesNote"))[:40]}')
     check("I5h PT luknja 12 (+h46/h48!)", st.get("ptGap") == P80_PT_GAP, str(st.get("ptGap")))
-    check("I5i vitalsTS=587 + blocks04455TS=70 + sidraTS=63 (pass-1 »60« POPRAVLJENO)",
-          st.get("vitalsTS") == VITALS and st.get("blocks04455TS") == BLOCKS_04455
-          and st.get("sidraTS") == SIDRA_TS,
+    check("I5i vitalsTS=587 + blocks04455TS=70 + sidraTS=63 (P127 ZGODOVINSKI — P128 +6/76/69 po tem)",
+          st.get("vitalsTS") == 587 and st.get("blocks04455TS") == 70
+          and st.get("sidraTS") == 63,
           f'v{st.get("vitalsTS")} b{st.get("blocks04455TS")} s{st.get("sidraTS")}')
 
     # ---------- I6: anomalije A1–A11 ----------
@@ -328,7 +328,7 @@ def main() -> int:
     # ---------- I8: parish.ts bloki 04455 ----------
     ts = open(PARISH_TS).read()
     blocks_m = re.findall(r'houseNo:\s*"([^"]*)",\s*bookSignature:\s*"04455",\s*year:\s*(\d{4}),\s*scan:\s*(\d+)', ts)
-    check("I8 bloki 04455 = 70 (P126 61 + P127 9)", len(blocks_m) == BLOCKS_04455, str(len(blocks_m)))
+    check("I8 bloki 04455 = 76 (P126 61 + P127 9)", len(blocks_m) == BLOCKS_04455, str(len(blocks_m)))
     h1898 = sorted((h for h, y, _ in blocks_m if y == "1898"), key=int)
     check("I8b hiše 1898 = [22,22,34,46,48,54,62,67,70] (h22 ×2!)",
           ",".join(h1898) == "22,22,34,46,48,54,62,67,70", ",".join(h1898))
@@ -351,18 +351,18 @@ def main() -> int:
                   for m in re.finditer(r'houseNo:\s*"([^"]*)",\s*bookSignature:\s*"04455",\s*year:\s*1897,[^}]*?whatSi:\s*"((?:[^"\\]|\\.)*)"', ts, re.S))
     check("I8e regresija P126: h40-1897 BRODARIČ", p126_ok, "h40-1897 pin")
     vitals_n = len(re.findall(r'houseNo:\s*"', ts))
-    check("I8f HOUSE_VITALS = 587 (578 + 9)", vitals_n == VITALS, str(vitals_n))
+    check("I8f HOUSE_VITALS = 593 (587 + 6)", vitals_n == VITALS, str(vitals_n))
 
     # ---------- I9: qa-parish ----------
     qa = open(QA_TS).read()
     check("I9 qa-p127", '"qa-p127-parish-marriage-1898"' in qa)
     check("I9b p80 bloki 70", "poročni vpisi (04455) ≠ 70" in qa)
-    check("I9c p80 sidra 63 (1898×9)", "poročna sidra ≠ 63" in qa)
+    check("I9c p80 sidra 69 (1898×9 · 1899×6)", "poročna sidra ≠ 69" in qa)
     check("I9d p80 hiše 1898 = [22×2,34,46,48,54,62,67,70]",
           "hiše 1898 (04455) ≠ [22×2,34,46,48,54,62,67,70]" in qa)
     check("I9e p80 hiše 58", "različnih hiš (vse tri knjige) ≠ 58" in qa)
     check("I9f PT luknja 12", "PT luknja ≠ 12 hiš" in qa)
-    check("I9g vitals 587 zaščita (P127)", "HOUSE_VITALS.length !== 587" in qa)
+    check("I9g vitals 593 zaščita (P128)", "HOUSE_VITALS.length !== 593" in qa)
     check("I9h Rauy 1898 bloki ×9 zaščita", "Rauy podpisi 1898 blokov ≠ 9" in qa)
     check("I9i stari 537/544/548/550/554/559/563/566/569/578 iztekla",
           "HOUSE_VITALS.length !== 537" not in qa and "HOUSE_VITALS.length !== 544" not in qa

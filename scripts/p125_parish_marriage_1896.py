@@ -55,7 +55,7 @@ GRIBLJE_MARRIAGES_STR = "2 (v17-1895: h24 × h14"
 GRIBLJE_HOUSES = [14, 24, 18]
 EXPECTED_VITALS = 569          # 566 (P124) + 3 bloki (h24 + h14-1895ext + h18-1896)
 BLOCKS_04455 = 52              # P125 dokaz lastna kumulativa (49 + 3)
-BLOCKS_04455_TS = 70           # parish.ts zdaj = 61 + 9 blokov 1898 (P127)
+BLOCKS_04455_TS = 76           # parish.ts zdaj = 61 + 9 blokov 1898 (P127)
 P80_HOUSES = 51                # 48 (P124) + 3 (h24/h14/h18 — krstni bloki teh hiš izven p80 vzorca!) — dokaz-const (JSON P125)
 P80_PT_GAP = 10                # nespremenjeno
 RAZPORED = {97: 3, 98: 4, 99: 5, 100: 5, 101: 1}  # v17-19 + v1-4 + v5-9 + v10-14 + v15
@@ -377,7 +377,7 @@ def main() -> int:
     # ---------- I8: parish.ts bloki 04455 ----------
     ts = open(PARISH_TS).read()
     blocks_m = re.findall(r'houseNo:\s*"([^"]*)",\s*bookSignature:\s*"04455",\s*year:\s*(\d{4}),\s*scan:\s*(\d+)', ts)
-    check("I8 bloki 04455 = 70 (P126 61 + P127 9)", len(blocks_m) == BLOCKS_04455_TS, str(len(blocks_m)))
+    check("I8 bloki 04455 = 76 (P126 61 + P127 9)", len(blocks_m) == BLOCKS_04455_TS, str(len(blocks_m)))
     h1895 = sorted((h for h, y, _ in blocks_m if y == "1895"), key=int)
     check("I8b hiše 1895 = [14,16,24,27,52] (P125 +h14/h24!)", ",".join(h1895) == "14,16,24,27,52", ",".join(h1895))
     h1896 = sorted((h for h, y, _ in blocks_m if y == "1896"), key=int)
@@ -405,12 +405,12 @@ def main() -> int:
     qa = open(QA_TS).read()
     check("I9 qa-p125", '"qa-p125-parish-marriage-1896"' in qa)
     check("I9b p80 bloki 70", "poročni vpisi (04455) ≠ 70" in qa)
-    check("I9c p80 sidra 63 (1895×5 + 1896×1 + 1897×9 + 1898×9)", "poročna sidra ≠ 63" in qa)
+    check("I9c p80 sidra 69 (1895×5 + 1896×1 + 1897×9 + 1898×9 · 1899×6)", "poročna sidra ≠ 69" in qa)
     check("I9d p80 hiša 1896 = [18]", "hiša 1896 (04455) ≠ [18]" in qa)
     check("I9e p80 hiše 58", "različnih hiš (vse tri knjige) ≠ 58" in qa)
     check("I9f PT luknja 12 (+h46/h48 — P127!)", "PT luknja ≠ 12 hiš" in qa)
     tail = qa[qa.index("const p125Marr"):] if "const p125Marr" in qa else ""
-    check("I9g vitals 587 zaščita (P127)", "HOUSE_VITALS.length !== 587" in tail, "p125Marr blok")
+    check("I9g vitals 593 zaščita (P128)", "HOUSE_VITALS.length !== 593" in tail, "p125Marr blok")
     check("I9h Rauy 1895 bloki ×5 zaščita (P124 + P125 dopolnitev)", "Rauy podpisi 1895 blokov ≠ 5" in qa)
     check("I9i stari 537/544/548/550/554/559/563/566 iztekla",
           "HOUSE_VITALS.length !== 537" not in qa and "HOUSE_VITALS.length !== 544" not in qa

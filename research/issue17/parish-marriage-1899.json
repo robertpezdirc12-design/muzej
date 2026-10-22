@@ -1,0 +1,418 @@
+{
+  "source": {
+    "book": "Poročna knjiga (Trauungs-Buch) župnije Griblje, podpis 04455",
+    "years": "1899 (polno leto)",
+    "scans": "matricula-online.eu, hosted-images, scan-110..scan-111 (landscape ~2516–2522×1800)",
+    "pages": "Pag. 109–110 (Pag. == sken − 1, 14. potrditev; velja 61–110); s112 = rokopisna glava »1900.« + v1/1900 (P129 lead — ženin Krasinec 18 = ŽUPANIČ hiša P127 v8/v13!)",
+    "calibration": "s110 = rokopisna glava »1899.« + v1–5; s111 = v6–9 (zadnji vpis 30.10.) + rep; s112 = dvopodčrtana glava »1900.« pod tiskanimi stolpci (Jahr/Monat/Tag der Trauung · Wohnort · Haus-Nr. · Taufname, Familien-Name und Stand · Religion katholisch · Alters-Jahr · Ledig/Wittwer) — glava potrjena max-zoom 3× (P128 faza 2)"
+  },
+  "frame": {
+    "method": "faza 1: 18 rows128 L/R cropov (2× LANCZOS; ROWS y-koordinate po vizualnem branju — s110: v1 405–585, v2 575–755, v3 745–935, v4 925–1270, v5 1260–1620; s111: v6 290–525, v7 510–925, v8 915–1150, v9 1140–1650) + faza 2: ~100 zoom128 (3–6×) + 30 mikro-zoomov zoom128b/c/d (4–8× LANCZOS, direktno iz scan-110/111)",
+    "convention": "[~] = neberljivo/nedomnevano (konvencija P95); MERI-stolpci; Pag. == sken − 1",
+    "counts": {
+      "entries": 9,
+      "excluded": 0,
+      "bothSides": 9
+    },
+    "bigHeader": "rokopisna glava »1899.« na s110 (potrjena) + rokopisna glava »1900.« na s112 (potrjena — P129 lead)",
+    "distribution": "s110: v1–v5 · s111: v6–v9",
+    "dateCounts1899": {
+      "januar": 3,
+      "februar": 1,
+      "marec": 0,
+      "april": 0,
+      "maj": 1,
+      "junij": 1,
+      "julij": 0,
+      "avgust": 1,
+      "september": 1,
+      "oktober": 1,
+      "november": 0,
+      "december": 0
+    },
+    "sameDay": {
+      "30.1.1899": [
+        2,
+        3
+      ]
+    }
+  },
+  "lead": "P128 — poročna knjiga 04455, polno leto 1899: 9 vpisov obojestransko = 2. NAJMANJŠE leto linije (min 1886:7; strmo −18 po rekordnem 1898:27!); ★ NAJSTAREJŠI PAR LINIJE (v1: ženin 66 + nevesta 68 = 134 let skupaj, OBA status 1 = 1. poroka!) + ★ ¾ GIBLAR = NOVI NAJVIŠJI ULOMEK LINIJE (v7 nevesta Anna Žugelj ¾ griblars-tochter + oče Nicolaus Žugelj ¾ griblar; prej najvišji ½, najnižji ⅛ P127 v23!) + ★ 1. ŽENIN POPOLNOMA IZVEN SISTEMA (v9: Franc Darovic, Idrišina? 1, Pf. St. Michel b. RUDOLFSWERTH = Novo mesto — Knecht 36!) + ★ ZGLASMICA-PENTAGON: 5 različnih občin (Griblje št 2/3/5 · Podzemelj št 1/3/4 · Gradac št 57 · na Gori? št 2 · Šmihel-Štopriče? št 65) + ★ DUHOVNIŠKA MENJAVA: Novak 5/9 DOMINANTA (1898: Rauy 25/27!) + Rauy 2/9 + 1. dokaz FRANZ STURM Coop. (×2: v4 + v6 — naslednik Herms 1898!) + ★ OČE KOT PRIČA (v3: Nicolaus Željko — isti vpis kot ženinov oče!) + ★ CROSS-ENTRY v4: priča Johann Žibak Štrigžingar = v1 ŽENIN (4 dni po lastni poroki!) + ★ GLYPH-FAMILIJA ŠILAK/ŽIBAK/FILAK (krstna 1899 h34 »Šilak?« + krstna 1900 h16 »Šilak« + mrliška 1886 + poročna 1898 »Filak« — P128 »Žibak« = 3. branje ISTEGA glyph-a [~]) + ★ ŠTURM rešitev (krstna 1898 P93 »Šturm 3×« — P127 poročna »Herms coop./coad.« možen Šturm-misread [~ Kurrent H/Št]!) + ★ PRIČA-LINK v6→v9: Johann Županič ½ gbl (Jun + Okt; cf. P127 v8/v13 Županič Krasinec 18!) + ★ ŽURAJEVIČ mreža ×4 (v2 nevesta Barbara + v5 nevesta Maria + v5 priča Michael + v7 mati Maria) + ★ KURE/MUC kompleks (v3 nevesta Barbara Kure h10 = sestra? Anna Kure h10 1890 — ISTI oče Marcus Kure ¼!; priča Johann Muc = h10 1890 ŽENIN!) + ★ VRANOVIČE? [~ k/v] = potrjena vas linije z 5 hišami čez 1898–99 (1898: h4 + h2; 1899: h9 + h27 + h28) + ★ PFARRAMT SODRAŽICA (v8 Tauf- und Ledigkeitsschein!) + ★ dispens consanguinitatis v7 (fb. Ord. Laibach 21/4. 1899 № 2319 — prvi redni dispens-številčni dokaz linije) + ★ P128 LEAD NAPREJ: glava »1900.« + v1/1900 Krasinec 18 (Županič!) že na s112",
+  "entries": [
+    {
+      "row": 1,
+      "date": "9. januar 1899",
+      "scan": 110,
+      "page": 109,
+      "groom": {
+        "name": "Johann Žibak? [~ — Kurrent-glyph familija ŠILAK/ŽIBAK/FILAK [~ — ISTI glyph, 3 branja]: krstna 1899 h34 oče »Nikolaj Šilak?« (P94) + krstna 1900 h16 mati »Šilak« (P95 = ISTA poroka kot v4!) + mrliška 1886 »Šilak« + poročna 1898 h34 »Nicolaus FILAK« (P127 v20) + poročna 1886 h16 »Ana FILAK« — P128 6× črka Ž+b z zavihkom Ž/J]",
+        "place": "GRIBLJE 34",
+        "stand": "Štrigžingtar [~ — poklic, m. forma; 1887 vzorec brez zadetka]",
+        "age": 66
+      },
+      "bride": {
+        "name": "Maria [Ś/H]rudej? [~]",
+        "place": "GRIBLJE 44",
+        "stand": "Štrigžingtarin [~ — ž. forma ISTEGA termina → poklic, ne status]",
+        "age": 68
+      },
+      "parentsGroom": "Mathias Žibak ½ griblar × Catharina Pendirec (Perdinec-varianta)",
+      "parentsBride": "Mathias Klobučar ¼ griblar × Anna Horvat",
+      "witnesses": "Marcus Klobučar (= oče neveste v20/1898 h46! cross-link) + Johann Hrbalj? [~ Irbalj?] ½ griblar [~]",
+      "urkunden": "Ženitovanjska zglasmica občine Griblje d° 9/1. 1899 št: 2",
+      "priest": "Jos. Novak (P.f.)",
+      "griblje": {
+        "house": "34",
+        "side": "groom",
+        "house2": "44",
+        "side2": "bride"
+      },
+      "novelty": "★ NAJSTAREJŠI PAR LINIJE (66+68 = 134; OBA status 1!) + h34 2. dokaz (1898 v20 »Filak« = ISTI glyph-familija Šilak/Žibak/Filak [~]!) + h44 1. POROČNI DOKAZ (NOVA poročna!) + Štrigžingtar/-in poklicni par + Marcus Klobučar cross-link"
+    },
+    {
+      "row": 2,
+      "date": "30. januar 1899",
+      "scan": 110,
+      "page": 109,
+      "groom": {
+        "name": "Nicolaus Tome",
+        "place": "Smilje? 2 [~ — toponim nova; cf. P127 Tomič ⅛ v23?]",
+        "stand": "½ griblar",
+        "age": 27
+      },
+      "bride": {
+        "name": "Barbara Žurajevič",
+        "place": "Otok? 14 [~ — toponim nova; isti termin kot v7!]",
+        "stand": "½ griblarka",
+        "age": 27
+      },
+      "parentsGroom": "Nicolaus Tome ½ griblar × Barbara Kermesec? [~]",
+      "parentsBride": "Georg Žurajevič ½ griblar × Anna Županič? [~]",
+      "witnesses": "Michael Tome + Nicolaus Novak ½ griblar [~]",
+      "urkunden": "Ženitovanjska zglasmica občine Podzemelj d° 29/1. 1899 št: 1",
+      "priest": "Jos. Novak (P.f.)",
+      "griblje": null,
+      "novelty": "Smilje? + Otok? NOVI toponimi; ŽURAJEVIČ signal 1/4 (cf. v5 + v7 mati!); TOME cf. P127 v23 Tomič ⅛"
+    },
+    {
+      "row": 3,
+      "date": "30. januar 1899",
+      "scan": 110,
+      "page": 109,
+      "groom": {
+        "name": "Georg Željko",
+        "place": "GRIBLJE 1",
+        "stand": "½ gbl. [B/P]ohu? [~ — kratka pripomba za ulomkom, 3× v vpisu]",
+        "age": 31
+      },
+      "bride": {
+        "name": "Barbara Kure",
+        "place": "GRIBLJE 10",
+        "stand": "½ gbl. [K]allan? [~]",
+        "age": 27
+      },
+      "parentsGroom": "Nicolaus Željko ½ gbl [B/P]ohu? × Anna Jakobič",
+      "parentsBride": "Marcus Kure ¼ griblar × Anna Škala [~ — h10 1890 branje »Špala«; varianta!]",
+      "witnesses": "Nicolaus Željko (½ gbl [B/P]ohu? — OČE ŽENINA KOT PRIČA, isti vpis!) + Johann Muc [Piharnik? ~] (= h10 1890 ŽENIN Johann Muc! + P92 h61 Muc × Ana Kure 1897!)",
+      "urkunden": "Ženitovanjska zglasmica občine Griblje od dne 29/1. 1899 št: 3",
+      "priest": "Jos. Rauy",
+      "griblje": {
+        "house": "1",
+        "side": "groom",
+        "house2": "10",
+        "side2": "bride"
+      },
+      "novelty": "★ h1 1. POROČNI DOKAZ (NAJNIŽJA hišna številka poročne linije!) + h10 3. dokaz + KURE sestri? (Anna 1890 + Barbara 1899, isti oče Marcus ¼) + MUC×KURE kompleks + oče-kot-priča"
+    },
+    {
+      "row": 4,
+      "date": "13. februar 1899",
+      "scan": 110,
+      "page": 109,
+      "groom": {
+        "name": "Alois Novak",
+        "place": "GRIBLJE 20, geb: in Toplice No 50 [~ — rojstna župnija Toplice!]",
+        "stand": "Zimmermannsmeister",
+        "age": 24
+      },
+      "bride": {
+        "name": "Maria Žibak? [~ — ISTA glyph-familija: krstna 1900 h16 mati »Šilak« = ISTA poroka (Novak × Šilak/Žibak)!]",
+        "place": "GRIBLJE 16",
+        "stand": "½ gbl. Tochter",
+        "age": 19
+      },
+      "parentsGroom": "Joseph Novak [Inwohner? ~] × Maria Pircel? [~]",
+      "parentsBride": "Mathias Žibak ½ griblar × Anna Numanic? [~]",
+      "witnesses": "Johann Žibak Štrigžingar (= v1 ŽENIN — CROSS-ENTRY, 4 dni po lastni poroki!) + Matthias Simec Laifsklar? [~] (SIMEC: h54 ženin 1898 + h18 oče 1897/98!)",
+      "urkunden": "Ženitovanjska zglasmica občine Griblje od 12/2. 1899 št: 5 + dovoljenje iz sodnišča o Černomlju z dne 1. feb. 1899 + jamstvo list za ženina [pregelnega srada? ~] na Toplica z dnem 22/1. 1899 (rojstna!)",
+      "priest": "Franz Sturm Coop.",
+      "griblje": {
+        "house": "20",
+        "side": "groom",
+        "house2": "16",
+        "side2": "bride"
+      },
+      "novelty": "★ CROSS-ENTRY v1→v4 (ženin kot priča!) + h20 2. dokaz (1891 Pezdirec!) + h16 3. dokaz (1886 Ana Filak + 1895 Brodarič!) + 1. STURM Coop. poročna (krstna 1898 Šturm 3× — P127 »Herms« možen Šturm-misread [~]!) + 3 dokumenti + ŽIBAK/ŠILAK veriga"
+    },
+    {
+      "row": 5,
+      "date": "8. maj 1899",
+      "scan": 110,
+      "page": 109,
+      "groom": {
+        "name": "Nikola Brodarič [~ b/p]",
+        "place": "Krasinec 15",
+        "stand": "½ griblarsohn",
+        "age": 23
+      },
+      "bride": {
+        "name": "Maria Žurajevič",
+        "place": "Krasinec 21",
+        "stand": null,
+        "age": 18
+      },
+      "parentsGroom": "Georg Brodarič ½ griblar × Anna Brodarič",
+      "parentsBride": "Mathias Žurajevič ½ griblar × Maria Simec (SIMEC cf. v4 priča!)",
+      "witnesses": "Nicol. Galovec + Michael Žurajevič (obadva ½ griblar — skupni oklepaj)",
+      "urkunden": "Ženit. zglasmica občine Podzemelj od 11. maja 1899 št: 3 & kr. okrajno sodišča o Metliki: soglasje ženina [posebnoletnim? ~] z dnem 21. jul. 1898 [vs nevedla? ~] z dne 16. aprila 1899",
+      "priest": "Jos. Novak (P.f.)",
+      "griblje": null,
+      "novelty": "MLADOLETNA nevesta 18 → sodišče Metlika ×2 datuma (21.7.1898 + 16.4.1899!) + ŽURAJEVIČ signal 2/4 + BRODARIČ (h16 1895 Anton!) + SIMEC materinski"
+    },
+    {
+      "row": 6,
+      "date": "26. junij 1899",
+      "scan": 111,
+      "page": 110,
+      "groom": {
+        "name": "Johann Kakar [~]",
+        "place": "Kloster 52 [~ — Kloster znana vasa; hiša 52 NOVA]",
+        "stand": "Laifsklarsohn? [~] & [V/P]sriščar? [~]",
+        "age": 23
+      },
+      "bride": {
+        "name": "Anna Starašinič",
+        "place": "Krasinec 44",
+        "stand": "½ griblarske? ros? [~ — verjetno »½ griblarskega rodu« dialekt]",
+        "age": 30
+      },
+      "parentsGroom": "Johann Kakar, Laifsklar? [~] × Katharina Simonič",
+      "parentsBride": "Peter Starašinič ½ griblar × Maria Kambič",
+      "witnesses": "Johann Simonič + Johann Županič (½ griblar — cf. P127 v8 Županič Krasinec 18 + v9 ista priča!)",
+      "urkunden": "Ženitovanjska zglasmica občine Gradac od 10. junija 1899 št: 57 + [nadomestno? ~] dovoljenje za ml. ženino? od kr. sodišča v Metliki od 9/6. 1899",
+      "priest": "Franz Sturm Coop.",
+      "griblje": null,
+      "novelty": "STURM ×2 + občina GRADAC št 57 (visoka številka!) + nevesta 30 > ženin 23 + KAKAR nova familija + KLOSTER 52 nova hiša + Županič priča 1/2"
+    },
+    {
+      "row": 7,
+      "date": "5. avgust 1899",
+      "scan": 111,
+      "page": 110,
+      "groom": {
+        "name": "Nicolaus Rues? [~]",
+        "place": "Dobravice 20 [~ — cf. P127 Dobravice 15?]",
+        "stand": "½ griblarsohn",
+        "age": 24
+      },
+      "bride": {
+        "name": "Anna Žugelj",
+        "place": "Otok? 9 [~ — ISTI toponim kot v2!]",
+        "stand": "¾ griblars-tochter",
+        "age": 20
+      },
+      "parentsGroom": "Nicolaus Rues? ½ griblar × Maria Žugelj",
+      "parentsBride": "Nicolaus Žugelj ¾ griblar × Maria Žurajevič",
+      "witnesses": "Martin Matkovič + Nicolaus Križan (obadva ½ gbl — skupni oklepaj)",
+      "urkunden": "Ženitovanjska zglasmica občine Podzemelj od 30/4. 1899 št: 4 + Dispens vom 3ter tang? [~] 2. gradum consand. vom fb. Ord. Laibach dato 21/4. 1899 № 2319 [~ 2310/2319] und [väterliche? ~] würkl. Einwilligg für die mlj. Braut in [?]art ob. žup. [K/V]rištörta [~]",
+      "priest": "Jos. Novak (P.f.)",
+      "griblje": null,
+      "novelty": "★ ¾ GIBLAR = NOVI NAJVIŠJI ULOMEK (oče + hči!) + dispens consang. (fb. Ord. Laibach № 2319!) + mlj. Braut 20 + ŽUGELJ (P92 Straus-kompleks!) + ŽURAJEVIČ mati 3/4 + kronologija: dispens 21/4 → zglasmica 30/4 → poroka 5.8."
+    },
+    {
+      "row": 8,
+      "date": "18. september 1899",
+      "scan": 111,
+      "page": 110,
+      "groom": {
+        "name": "Anton Sile? [~]",
+        "place": "Vranoviče? 9 [~ k/v — ISTI toponim kot 1898 v3 h4 + v10 h2!], geb: in Herzjet? [~] b. Sodrašič [= Sodražica]",
+        "stand": "½ griblarsohn und Zimmermann",
+        "age": 36
+      },
+      "bride": {
+        "name": "Anna Mische? [~]",
+        "place": "VRANOVIČE? 27 [~ k/v]",
+        "stand": "griblar[to]chter? [~ — bralno »gäöblarvotojft«; vzorec v4 »½ gbl. Tochter«]",
+        "age": 29
+      },
+      "parentsGroom": "Anton Sile? ½ griblar × Margareth [H/K/V]erže? [~]",
+      "parentsBride": "Johann Mische? ½ griblar × Maria [Z]ahor? [~]",
+      "witnesses": "Carl Bele ½ griblar + Michael Kramarič [~], Laifsklar? [~]",
+      "urkunden": "Ženitovanjska zglasmica občine na Gori? od 9. sept. 1899 št: 2 + Tauf- und Ledigkeitsschein der [Verlobten? ~] vom Pfarramte Sodražica dato 17. aug. 1899",
+      "priest": "Jos. Novak (P.f.)",
+      "griblje": null,
+      "novelty": "★ VRANOVIČE = vas linije z 5 hišami čez 1898–99 (1898: h4 v3 + h2 v10; 1899: h9 + h27 + h28!) + Pfarramt SODRAŽICA (1. dokaz!) + občina »na Gori?« + ženin 36 + dvojni status (½ griblarsohn UND Zimmermann — vzorec P126 v13!)"
+    },
+    {
+      "row": 9,
+      "date": "30. oktober 1899",
+      "scan": 111,
+      "page": 110,
+      "groom": {
+        "name": "Franc Darovic [~ Darovec?]",
+        "place": "Idrišina? 1, Pf. St. Michel b. Rudolfswerth [~ — NOVO MESTO!]",
+        "stand": "Knecht",
+        "age": 36
+      },
+      "bride": {
+        "name": "Josepha Grahek",
+        "place": "VRANOVIČE? 28 [~ k/v]",
+        "stand": "Laifflerin? [~ — ž. forma Laifsklar/Laiffler]",
+        "age": 23
+      },
+      "parentsGroom": "Jacob Darovic, Laiffler? [~] × Anna Lukšič",
+      "parentsBride": "Gregor Jakša, [R/P]iščar? [~] × Catharina [F/P]laminec? [~]",
+      "witnesses": "Johann Županič ½ gbl (= v6 PRIČA — link Jun→Okt!) + Franz Čentalič? [~], [J/Z]modrman? [~]",
+      "urkunden": "Ženitovanjska zglasmica občine Šmihel-Štopriče? [~] od 14. Okt. 1899 št: 65 + Jamski list ženinov od župnega urada v Sth. [pričak? ~ — verj. župn. St. Michel!] od 14/10. 1899 + oklicni list od župnega urada v Šmihelu od 29. okt. 1899 št: 173 + sodniško dovoljenje za ml. nevesto [gibetlike? ~] z dne 16. oktobra 1899",
+      "priest": "Jos. Rauy",
+      "griblje": null,
+      "novelty": "★ 1. ŽENIN IZVEN SISTEMA (Pf. St. Michel b. Rudolfswerth = Novo mesto!) + 4 dokumenti (zglasmica št 65 + jamski + oklicni št 173 + sodno) + VRANOVIČE h28 (3. hiša 1899 / 5. skupaj!) + Županič priča 2/2 + LAIFFLER/LAIFSKLAR ×3"
+    }
+  ],
+  "excluded": [],
+  "stats": {
+    "entries": 9,
+    "scans": [
+      110,
+      111
+    ],
+    "pages": [
+      109,
+      110
+    ],
+    "pagRule": "Pag. == sken − 1 (14. potrditev; velja 61–110; s112 = glava 1900 = P129 lead)",
+    "recordYear": "9 vpisov = 2. najmanjše leto linije (1886:7 → 1887:21 → 1888:20 → 1889:10 → 1890:16 → 1891:18 → 1892:15 → 1893:20 → 1894:15 → 1895:19 → 1896:15 → 1897:18 → 1898:27 REKORD → 1899:9 = −18!); zadnje leto z <10 vpisi do 1900 [~]",
+    "gribljeMarriages": 3,
+    "gribljeBlocks": 6,
+    "priests": {
+      "Jos. Novak": 5,
+      "Jos. Rauy": 2,
+      "Franz Sturm Coop.": 2
+    },
+    "zglasmiceByObcina": {
+      "Griblje": "št 2 (9/1.) → 3 (29/1.) → 5 (12/2.) — 1 in 4 = drugi civilni akti (manjkata)",
+      "Podzemelj": "št 1 (29/1.) → 3 (11.5.) → 4 (30/4. — IZVEN VRSTNEGA REDA: dispens 21/4 → zglasmica 30/4 → poroka 5.8.!)",
+      "Gradac": "št 57 (10.6.)",
+      "na Gori? [~]": "št 2 (9.9.)",
+      "Šmihel-Štopriče? [~]": "št 65 (14.10.)"
+    }
+  },
+  "anomalies": [
+    {
+      "id": "A1",
+      "what": "2. najmanjše leto linije (9; min 1886:7) — strmo padanje −18 po rekordnem 1898:27"
+    },
+    {
+      "id": "A2",
+      "what": "★ NAJSTAREJŠI PAR LINIJE: v1 ženin 66 + nevesta 68 = 134 let, OBA status 1 (1. poroka!)"
+    },
+    {
+      "id": "A3",
+      "what": "★ ¾ griblar (v7 oče + hči) = NOVI NAJVIŠJI ulomek linije (prej ½; najnižji ⅛ P127 v23)"
+    },
+    {
+      "id": "A4",
+      "what": "★ 1. ženin popolnoma izven sistema (v9 Pf. St. Michel b. Rudolfswerth = Novo mesto)"
+    },
+    {
+      "id": "A5",
+      "what": "★ zglasmica-pentagon: 5 občin (Griblje/Podzemelj/Gradac/na Gori?/Šmihel-Štopriče?) — maksimalna fragmentacija civilne jurisdikcije"
+    },
+    {
+      "id": "A6",
+      "what": "★ duhovniška menjava: Novak 5/9 dominanta (1898: Rauy 25/27!) + Rauy 2/9 + ŠTURM Coop. 2/9 (krstna 1898 Šturm 3× + 1899 krstna 6× — P127 »Herms« možen misread [~]; 1900 Šturm 0× = konec obdobja)"
+    },
+    {
+      "id": "A7",
+      "what": "★ VRANOVIČE? [~ k/v] = vas z 5 hišami čez 1898–99 (1898: h4 v3 + h2 v10; 1899: h9 + h27 + h28) + Pfarramt SODRAŽICA dokument (v8)"
+    },
+    {
+      "id": "A8",
+      "what": "★ mladoletne neveste ×2 (v5: 18 sodišče Metlika ×2 datuma; v7: 20 Vormundschaft + fb. Ord. Laibach dispens № 2319)"
+    },
+    {
+      "id": "A9",
+      "what": "★ oče kot priča v ISTEM vpisu (v3 Nicolaus Željko — ženinov oče)"
+    }
+  ],
+  "crossChecks": [
+    {
+      "id": "C1",
+      "what": "v4 priča Johann Žibak Štrigžingar == v1 ŽENIN (isto ime + isti poklic Štrigžingar; 4 dni: 9.1. → 13.2.) — 1. cross-entry 1899 ✓✓"
+    },
+    {
+      "id": "C2",
+      "what": "v6 priča Johann Županič ½ gbl == v9 priča Johann Županič ½ gbl (Jun → Okt); cf. P127 v8/v13 Županič, Krasinec 18 + v1/1900 Krasinec 18!"
+    },
+    {
+      "id": "C3",
+      "what": "ŽURAJEVIČ ×4: v2 nevesta Barbara (oče Georg ½) + v5 nevesta Maria (oče Mathias ½) + v5 priča Michael ½ + v7 mati Maria — dve veji? [~]"
+    },
+    {
+      "id": "C4",
+      "what": "ŽIBAK ×3: v1 ženin Johann 66 (oče Mathias ½ × Pendirec) + v4 nevesta Maria 19 (oče Mathias ½ × Numanic) + v4 priča Johann — hipoteza: Johann → sin Mathias → Maria [~]; Filak-tension (h34 1898 + h16 1886!) glej honesty"
+    },
+    {
+      "id": "C5",
+      "what": "SIMEC ×3: v4 priča Matthias (Laifsklar?) + v5 mati Maria Simec + cf. P127 h54 ženin Johann Simec 1898 + P125/126 h18"
+    },
+    {
+      "id": "C6",
+      "what": "KURE × MUC: v3 nevesta Barbara Kure h10 (oče Marcus ¼ × Škala) == h10 1890 nevesta Anna Kure (isti oče Marcus ¼ × »Špala« [~ varianta]) — SESTRI?; v3 priča Johann Muc == h10 1890 ŽENIN Johann Muc! + P92 h61 Muc × Ana Kure 1897"
+    },
+    {
+      "id": "C7",
+      "what": "30.1. dvojna poroka (v2 + v3) — 1. dvojni dan 1899; Griblje zglasmica št 2 (9/1) → 3 (29/1) → 5 (12/2): št 1 + 4 manjkata = drugi civilni akti občine"
+    },
+    {
+      "id": "C8",
+      "what": "Pag. == sken − 1: 109 = 110−1 ✓ + 110 = 111−1 ✓ (14. potrditev; s112 glava 1900 naprej)"
+    },
+    {
+      "id": "C9",
+      "what": "LAIFSKLAR/LAIFFLER ×4: v6 ženin + v6 oče + v8 priča Kramarič + v9 nevesta Grahek (Laifflerin) + v9 oče Darovic (Laiffler) — poklic ali status; cf. P127 »Zaiflner ×5–6« — identiteta termina? [~ odprto vprašanje]"
+    },
+    {
+      "id": "C10",
+      "what": "VRANOVIČE: 1898 v3 (h4) + v10 (h2) == 1899 v8 (h9 + h27) + v9 (h28) — K/V Kurrent dvoumnost razrešena s kontekstom (isti toponim, 5 hiš, 2 leti)! P128 faza-1 »Kranoviče« = faza-2 korekcija"
+    },
+    {
+      "id": "C11",
+      "what": "GLYPH-FAMILIJA ŠILAK/ŽIBAK/FILAK: h34 1899 krstna »Nikolaj Šilak?« (P94) == h34 1898 poročna »Nicolaus Filak« (P127 v20) == h34 1899 poročna v1 »Johann Žibak?« (P128) — ISTI glyph; h16 1900 krstna »Novak × Šilak« == v4 poročna »Alois Novak × Maria Žibak?« (P128) — ISTA POROKA 2 branja!; mrliška 1886 »Šilak« — 6 dokazov enega priimka"
+    },
+    {
+      "id": "C12",
+      "what": "ŠTURM: poročna 1899 v4+v6 »Franz Sturm Coop.« == krstna 1898 P93 »Šturm 3×« == krstna 1899 P94 »Šturm 6×« — → P127 poročna 1898 »Herms coop. + coad.« (v13/v14) možen ŠTURM-MISREAD [~ Kurrent H/Št dvoumnost]; krstna 1900 P95 »Šturm 0× PRVIČ« = konec Šturm-obdobja"
+    }
+  ],
+  "honesty": {
+    "uncertain": [
+      "priimki: Žibak [~ — Ž/J z zavihkom + zanka b; NI Filak po črkah, a h34 1898 v20 Filak + h16 1886 Ana Filak = tension; max-zoom primerjava s108 potreben] · [Ś/H]rudej? (v1 nevesta) · Tome (v2 — cf. Tomič P127 v23) · Kermesec? (v2 mati) · Željko (v3 — cf. krstna Željko veriga!) · Kure ✓ (h10 1890 Anna Kure) · Škala/Špala [~ varianta h10 1890!] · Jakobič · Žibak (v4 — cf. v1) · Numanic? · Pircel? · Brodarič [~ b/p; h16 1895 Brodarič ✓] · Galovec? · Kakar? (v6 — nova) · Starašinič ✓ (P126 ŠTARASINIČ ×4!) · Kambič ✓ · Simonič · Rues? (v7) · Žugelj ✓ (P92!) · Matkovič? · Križan ✓ · Sile? (v8) · Mische? · [H/K/V]erže? · [Z]ahor? · Kramarič? · Bele · Darovic? [~ Darovec?] · Lukšič · Jakša · [R/P]iščar? · [F/P]laminec? · Čentalič? · Grahek ✓",
+      "toponimi: Smilje? 2 (v2 — nova) · Otok? 14 + 9 (v2/v7 — ISTI termin, 2 hiši; nova) · Toplice No 50 (v4 — rojstna; cf. jamški list Toplice!) · Dobravice 20 (v7 — cf. P127 Dobravice 15?) · Otok? 9 · Vranoviče? [~ k/v] 9/27/28 (v8/v9 — cf. 1898 h4/h2; ISTI toponim) · Herzjet? b. Sodrašič = Sodražica (v8 rojstna) · Idrišina? 1 Pf. St. Michel b. Rudolfswerth = Novo mesto (v9) · Kloster 52 (v6 — hiša nova; vas P127 znana 37/43/69/85) · Krasinec 15/21/44/18/52",
+      "občine/dokumenti: »na Gori?« št 2 (v8 [~]) · Šmihel-Štopriče? št 65 (v9 [~]) · v Sth. pričak? = verj. župn. St. Michel (v9 [~]) · oklicni list št 173 (v9 ✓ termin jasen!) · sodniško dovoljenje »gibetlike?« (v9 [~]) · soglasje »posebnoletnim?« + »vs nevedla?« (v5 [~]) · dispens »vom 3ter tang?« (v7 [~ — formula nepopolna]) · № 2319/2310 [~] · »väterliche? würkl. Einwilligg« (v7 [~]) · žup. [K/V]rištörta? (v7 [~]) · »nadomestno?« dovoljenje (v6 [~])",
+      "poklici/statusi: Štrigžingtar/-tarin (v1 — poklicni par, 1887 brez zadetka) · ½ gbl. [B/P]ohu? (v3, 3× v vpisu) · ½ gbl. [K]allan? (v3) · Laifsklar/Laifsklarsohn/Laifflerin (v6/v8/v9 — cf. P127 Zaiflner ×5–6: ISTI termin? odprto!) · [V/P]sriščar? (v6 2. status) · »½ griblarske ros?« (v6 nevesta — verj. »½ griblarskega rodu«) · griblar[to]chter? = bralno »gäöblarvotojft« (v8) · Knecht (v9) · Zimmermann/Zimmermannsmeister (v4/v8) · [J/Z]modrman? (v9 priča) · Inwohner? (v4 oče) · Piharnik? (v3 priča)",
+      "glyph-familija: Šilak/Žibak/Filak [~ — 3 branja ISTEGA priimka čez krstno/mrliško/poročno: h34 1898 Filak vs 1899 Žibak/Šilak; h16 1886 Filak vs 1900 Šilak; rešitev potrebna s primerjavo ISTIH rok (s108 v20 vs s110 v1 — isti pisar?)]",
+      "duhovnik: Herms (P127 poročna 1898 ×2) vs Šturm (P93 krstna 1898 3× + P128 poročna 1899 2× jasno »Sturm«) — možen P127 Kurrent-misread H/Št [~]; P128 potrjuje Šturm-pretežno branje"
+    ]
+  },
+  "nextSteps": [
+    "P129 LEAD: poročna 1900 — rokopisna glava »1900.« POTRJENA na s112 + v1/1900 (Jänner 2, Krasinec 18 = ŽUPANIČ hiša!) že na s112; skeni 112–116 že v .p126tmp; nadaljnji prenesti (vzorec P127/P128)",
+    "prihodnja faza: max-zoom primerjava s108 v20 »Filak« vs s110 v1 »Žibak« — rešitev imenske tension na h34 (isti tip pisma, 2 leti razlike)",
+    "prihodnji item: identiteta terminov Zaiflner (P127) ↔ Laifsklar/Laiffler (P128) — isti poklic/status?",
+    "prihodnji item: Kurrent-razlaga »½ gbl. Bohu« (v3, 3×) in »[K]allan« (v3) — kratke pripombe za ulomki",
+    "prihodnji item: v7 dispens-formula »vom 3ter tang. 2. gradum consand.« — popolna razlaga (3.+2.? 3.+4.? tang=?)",
+    "toponimi: Otok? 14/9 + Smilje? 2 + Vranoviče? 9/27/28 (k/v!) + Idrišina? 1 + Herzjet? — lokalizacija (Gazetteer / PT 1825)",
+    "prihodnji item: ŠTURM-vs-HERMS rešitev (P127 v13/v14 coop./coad. — max-zoom s107; če Šturm → P127 opomba korekcije + duhovniški dominanti 1898/1899 združeni)"
+  ]
+}
