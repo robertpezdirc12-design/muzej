@@ -5775,3 +5775,19 @@ Stage Summary:
 - **GRIBLJE: 1 poroka / 2 poročna bloka (h7+h8 NOVA — 1. poročna dokaza!) → parish.ts +2 → bloki 04455 = 78; vitals 595; sidra 71.**
 - **QA 129 → 130/130 (qa-p129 True); P130 LEAD: poročna 1901 — glava »1901.« na s114 + v1 Otok 14×21; min 10 vpisov (s114–s116); P131 LEAD: velika glava 1902 = s117 (7.!) + v4–v6/1902; skeni 112–120 v .p126tmp.**
 - LEKCIJA: TS/ts stale-pogoji — sinhronizacija stringov NI dovolj; pogoji s literali (Marr.length !== N + filter.length !== N) se morajo zamenjati LOČ; clean rebuild (rm .next) obvezen za QA-merge.
+
+---
+Task ID: 105-b (P129 push protokol; glavni agent; repo /home/z/muzej @ 33bf2ba)
+Agent: Z.ai Code (glavni)
+Task: P129 push GitHub + Vercel poll + GitLab test
+
+Work Log:
+- COMMIT **33bf2ba** (P129: 12 datotek — evidence JSON + notes + parish.ts +2 bloka + qa-parish.ts qa-p129 + stale-sinhronizacija + verifier p129 + 15 regresijskih skript + README + worklog).
+- **GitHub push 19b7d7a..33bf2ba ✓ 1. poskus + ls-remote origin main = 33bf2ba 1:1** ✓ (žeton ghp_l614 stabilen).
+- **Vercel produkcija poll**: commit status pending → success (2× poll 80 s) — **griblje-museum.vercel.app = ŽIV P129: /api/qa 130/130 ok:True + qa-p129-parish-marriage-1900 True (1. poll!) + homepage 200 (997 343 B) + P130-lead marker »poročna 1901« v DOM** — **8. zaporedni lastniški push = 8. potrditev hipoteze avtor-epošte!**
+- GitLab push poskus (zaostanek e35796e → 33bf2ba = 2 commita): žeton gl_api.py glpat-h-Frbk… → **HTTP Basic Access denied (401)** — GitLab mirror ostaja BLOKIRAN (akcija za lastnika: PAT rotacija; GitHub zdaj primarni remote).
+
+Stage Summary:
+- **P129 POLNOMOČNO SINHRONIZIRAN: lokalni == GitHub == Vercel produkcija (33bf2ba; 130/130 ok:True + qa-p129 True + homepage 200) — 15 let poročne linije (1886–1900) ŽIV na produkciji.**
+- **GitLab mirror zaostanek 2 commita (e35796e → 33bf2ba) — žeton mrtva (401); akcija za lastnika: GitLab PAT rotacija.**
+- NASLEDNJA FAZA (P130): **poročna 1901** — glava »1901.« na s114 + v1 Jänner 18 Otok 14 × Otok 21; min 10 vpisov (s114–s116); skeni 112–120 že v .p126tmp; nato P131 (velika glava 1902 = s117!).
