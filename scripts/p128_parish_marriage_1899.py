@@ -136,7 +136,7 @@ def main():
     n70 = qa.count("bloki 04455 ≠ 70")
     check("I6 vitals pini 595", n593 >= 44, str(n593))
     check("I6b brez stale 587 asercij", n587 == 0, str(n587))
-    check("I6c bloki pini 78", n76 == 5, str(n76))  # p125 + p126 + p127 + p128
+    check("I6c bloki pini 78", n76 == 6, str(n76))  # p125 + p126 + p127 + p128 + p130
     check("I6d brez stale ≠ 70 asercij", n70 == 0, str(n70))
     check("I6e sidra 71 + 1900:2", "poročna sidra ≠ 71" in qa and
           "h.year === 1900).length !== 2" in qa)

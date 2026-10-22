@@ -1,0 +1,530 @@
+{
+ "source": {
+  "register": "Poročna knjiga (Trauungs-Buch) 04455, župnija Podzemelj — matricula-online https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04455/",
+  "scans": [
+   114,
+   115,
+   116
+  ],
+  "pages": "Pag. 113–115 (Pag. == sken − 1, 16. zaporedna potrditev; velja 61–115)",
+  "method": "PONOVNA REKONSTRUKCIJA OKOLJA po resetu: inventory.txt 192 URL-jev rekonstruiran iz matricula MatriculaDocView konfiguracije (/image/base64 → hosted-images.matricula-online.eu), fetch130.py (UA + backoff + JPEG-magika, recept fetch128), crop_rows_130.py (L 0–1250 + R 1300–W, 2× LANCZOS, recept P128/P129); branje z lastnimi očmi na 18 obrezkih + 25 pod-zoomih (4–8×)."
+ },
+ "frame": {
+  "year": 1901,
+  "headingSi": "ROKOPISNA GLAVA »1901.« POTRJENA na s114 (Pag. 113) — podčrtana, nad vpisom 1 (P129-lead potrjen!)",
+  "range": "11 vpisov obojestransko: v1–v4 na s114, v5–v9 na s115, v10–v11 na s116",
+  "count": 11,
+  "countNote": "10. najmanjše leto linije — min 1886:7 → 1900:8 → 1899:9 → 1901:11 (zaporedje najmanjših: 1886, 1900, 1899, 1901)",
+  "dateSpread": "1× Jan 28 + 1× Feb 4 + ★ 6× Febr 11! + 1× Jul 29 + 2× Nov (4+11)",
+  "griblje": 0,
+  "gribljeNote": "★ 1901 = 1. leto poročne linije 1886–1901 (16 let) BREZ VSAKE omembe Griblje (0/11 vpisov — noben domicil, starš, priča ali Weißstand iz Griblje; cf. krstna 1901 P96 = VSI vpisi Griblje!) — poročna/krstna ASIMETRIJA 1901!"
+ },
+ "lead": {
+  "p130LeadPotrjen": "glava »1901.« na s114 + v1 — POTRJENO",
+  "korekcije": [
+   "P130-lead KOREKCIJA #1: datum v1 »Jänner 18« → mikro-berljivo »Jänner 28«!",
+   "P130-lead KOREKCIJA #2: ženinov domicil »Otok 14« → »Otok 34«!",
+   "P130-lead KOREKCIJA #3: ženin »Joseph Kurjan?« → »Joseph KRIŽAN« (mreža: v4 mati neveste Anna Križan!)",
+   "P130-lead KOREKCIJA #4: nevesta »Barbara Pačaj?« → »Barbara PALČIČ« (mreža: v2+v10 Weißstand Anton Palčič, Schmiedmeister!)"
+  ],
+  "p131LeadKorekcija": "P131-lead KOREKCIJA: rokopisna glava »1902.« (dvopodčrtana) je ŽE na s116 (Pag. 115) — NE na s117 kot P129-lead predpostavljal (»velika tiskana glava s117« = standardna tiskana stolpčna glava, brez letnice); s117 (Pag. 116) = nadaljevanje 1902 (v4–v6); P131 v2 že kaže možno DRUBEL-GRIBLJE poroko [~ — »[G]pbyke? 5« × »Griblje 31«]!"
+ },
+ "entries": [
+  {
+   "row": 1,
+   "date": "28. januar 1901",
+   "dateNote": "P130-lead korekcija: »Jänner 18« → »Jänner 28« (mikro-zoom)",
+   "scan": 114,
+   "page": 113,
+   "groom": {
+    "name": "Joseph Križan [~ — P130-lead korekcija iz »Kurjan?«]",
+    "place": "Otok 34 [~ — P130-lead korekcija iz »Otok 14«]",
+    "stand": "½ küblastofsju? [~ — cf. Rosetta 1891 »-stoff = [Hofname]s Sohn« + z güblarštofa 1898/1900 ×6 = sin (K)üblerja/griblarja]",
+    "age": 23,
+    "status": "1 (J.)"
+   },
+   "bride": {
+    "name": "Barbara Palčič [~ — P130-lead korekcija iz »Pačaj?«; cf. Weißstand Anton Palčič v2+v10!]",
+    "place": "Otok 21",
+    "stand": "½ Küblwirthschaft? [~ — »½ güblwot. schaft«; poses/degel, ne osebni status?]",
+    "age": 23,
+    "status": "1 (J.)"
+   },
+   "parentsGroom": "Johann Križan ½ (K)übler [= griblar] × Maria Bajuk",
+   "parentsBride": "Michael Palčič ½ (K)übler × Maria Rus",
+   "witnesses": [
+    "Nicolaus Bajuk ½ [griblar]",
+    "Martin Škala ¼"
+   ],
+   "urkunden": "ženitovna zglasnica občine Podzemelj od 27. jan. 1901 št.bl 1; nevesta polnoletna priznana od c. k. sodišča [v] Metliki 12/10. 1897; [ško]fovs? [~] dovoljenje za ml. ženina v priči zvernjih? [~ = vernih?] svedokov; Dispens vom Str Grade? [~] Jamgens? 2. dum? del Anverwantschaft vom fb. Ordinariate Laibach ddo 15/1. 1901 [~] No 138 [~]",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "novelty": "★ 1. DISPENS AFINOSTI LINIJE (Anverwandtschaft = poročno sorodstvo/švakarstvo — 2. dum/stopnja?) — do zdaj samo consanguinitas (P128 v7: 3.+4. gradum № 2319; v8/1901: 4. kolena krvinske št 236!) + 1. datirani Laibach-dispens LINIJE (15/1. 1901 — 9 dni pred poroko; P128 v7 21/4. 1899) + nevesta polnoletna SODNO priznana 1897 (4 leta pred poroko — najzgodnejši sodni dokument linije [~]) + Križan-mreža 1/2"
+  },
+  {
+   "row": 2,
+   "date": "4. februar 1901",
+   "dateNote": "",
+   "scan": 114,
+   "page": 113,
+   "groom": {
+    "name": "Georg Rožman? [~ — oče ISTEGA imena!]",
+    "place": "Borit? [~ — morda Boršt/Dvori; NOVA vas?] 19",
+    "stand": "½ z gübler [~ — cf. z güblarštofa]",
+    "age": 31,
+    "status": "1 (J.)"
+   },
+   "bride": {
+    "name": "Anna Cvetič [~ — Cvetić/Cvetko-tension]",
+    "place": "Hast? [~ — morda Hrast; NOVA vas?] 11",
+    "stand": "z güblastof.? hči? [~]",
+    "age": 24,
+    "status": "1 (J.)"
+   },
+   "parentsGroom": "Georg Rožman ½ gübler × Anna Marainič? [~]",
+   "parentsBride": "Michael Cvetič ½ gübler × Anna Klefame? [~]",
+   "witnesses": [
+    "Michael Novak ½ gübler",
+    "Anton Palčič?, Schmiedmeister [~ — ISTI Weißstand kot v10! kovaški mojster — 1. obrtniški poklic Weißstanda? [~]]"
+   ],
+   "urkunden": "ženitovna zglasnica občine Podzemelj od 3. feb. 1901 št: 3; [pričev]anje svobodnega stanu [~]; oklici bez? nevestin od [ž]upnega mesta na Vimci? [~ — nova krajna omemba?] od 3. feb. 1901 št: 29",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "novelty": "oče = ženin po imenu (Georg × Georg — 1./2. v 1901!) + Schmiedmeister-Weißstand (×2 v letu z v10!) + 2 nove vasi? [~]"
+  },
+  {
+   "row": 3,
+   "date": "11. februar 1901",
+   "dateNote": "1. od 6 porok MASE 11.2.! (zoom potrjeno)",
+   "scan": 114,
+   "page": 113,
+   "groom": {
+    "name": "Mathias Marasinič? [~ — M/H-dvom; oče ISTEGA imena]",
+    "place": "Krasinec 23 (2. hiša Krasinca linije po 18 P129!)",
+    "stand": "½ gbl. Sohn [~ — EKSPlicitna Rosetta-forma! == 1891 »½ Griblers. Sohn«]",
+    "age": 28,
+    "status": "1 (J.)"
+   },
+   "bride": {
+    "name": "Barbara Žimec? [~ — J/Ž]",
+    "place": "Grišiče? [~ — NOVA vas?] 35",
+    "stand": "½ gbl. Tochter [~ — eksplicitna forma! == 1900 »Küblers-Toch«]",
+    "age": 22,
+    "status": "1 (J.)"
+   },
+   "parentsGroom": "Mathias Marasinič? ½ gübler × Anna Marasinič? [~]",
+   "parentsBride": "Johann (J/Ž)imec? ½ gübler × Maria Marinič? [~]",
+   "witnesses": [
+    "Martin Brodarič? [~]",
+    "Mathias Marinič? [~] ½ gbl"
+   ],
+   "urkunden": "ženitovna zglasnica občine Podzemelj od 11/2. 1901 št: 5; [Verpflich]tung? [~] für die mj. Braut in Gegenwart? [~] oblig.? [~] Schriftände? [~ — obveznost za mladoletno nevesto (22 < 24!)]",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "novelty": "EKSPlicitna Rosetta ×2 (»½ gbl. Sohn« + »½ gbl. Tochter« — prvi par z OBAJEMA eksplicitnima formama!) + Žimec-mreža 1/2 (v6 mati Catharina Žimec!)"
+  },
+  {
+   "row": 4,
+   "date": "11. februar 1901",
+   "dateNote": "2. od 6 porok MASE 11.2.! (P130-lead napaka »19« = hišna št., ne dan)",
+   "scan": 114,
+   "page": 113,
+   "groom": {
+    "name": "Peter Kambič (✓ checkmark)",
+    "place": "Krasinec 19 (3. hiša Krasinca linije!)",
+    "stand": "½ gübler [= griblar]",
+    "age": 21,
+    "status": "1 (J.)"
+   },
+   "bride": {
+    "name": "Maria Jurajevič? [~ — cf. ŽURAJEVIČ mreža P128 ×4!]",
+    "place": "Otok 11",
+    "stand": "½ gbl. Tochter",
+    "age": 18,
+    "status": "1 (J.)"
+   },
+   "parentsGroom": "Johann Kambič ½ gübler × Anna KRIŽAN (★ Križan-mreža 2/2 — cf. v1 ženinova familija Otok 34 [~ sorodstvo?]! == 1893 Math. Kambič ½ z gibl familija!)",
+   "parentsBride": "Georg Jurajevič? ½ gübler × Maria Hočevar? [~ — == 1898 v1 nevesta familija!]",
+   "witnesses": [
+    "Marcus Jurajevič? ½ gbl",
+    "Nicolaus Kambič ½"
+   ],
+   "urkunden": "občine Podzemelj od 11/2. 1901 štev 9; dovoljenje c. k. deželne vlade št. [?] 2 dve? [~] 31. jan. 1901 štev 1786 za ml. nevesto; od c. k. okrajnega sodišča v Metliki z dnem 22. januarja 1901 IV 218/89 [~] = priznanje polnoletnosti za ŽENINA (21 < 24!) od c. k. okr. sodišča v Metliki od 9. junija 1900 b 41/98",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "novelty": "★ 1. POLNOLETNOST ZA ŽENINA LINIJE (21 let, sodno priznanje ×2 datuma: 9.6.1900 + 22.1.1901!) — prej dokumenti samo za neveste (P129 5/8; P128 v4 sodno dovoljenje + jamški list) + deželna vlada-št 1786 (1. deželno-vladni dokument linije?) + Kambič (1893!) + Hočevar (1898!) + Jurajevič ×3 (cf. Žurajevič P128!)"
+  },
+  {
+   "row": 5,
+   "date": "11. februar 1901",
+   "dateNote": "3. od 6 porok MASE 11.2.! zglasnica že 8.2. št 34",
+   "scan": 115,
+   "page": 114,
+   "groom": {
+    "name": "Franz Simonič (cf. 1893 Johann Simonič ¼ z gibl + 1900 Anna Simonič!)",
+    "place": "Gradac 20",
+    "stand": "½ gbl. Sohn",
+    "age": 24,
+    "status": "1 (J.)"
+   },
+   "bride": {
+    "name": "Maria Jakša? [~ — cf. 1900 JAKŠA ×2 mreža!]",
+    "place": "Gradac 77 (mikro-zoom potrjeno 77, ne 44!)",
+    "stand": "Küblwirthschafts-tochter? [~ — »…nüblonštbaftsont«; cf. v1 nevesta Küblwirthschaft?]",
+    "age": 21,
+    "status": "1 (J.)"
+   },
+   "parentsGroom": "Johann Simonič ½ gübler × Anna Biličič? [~ — == 1893 Anna Bilič [~]!]",
+   "parentsBride": "Johann Jakša? gübler? [~] × Maria Marevič? [~]",
+   "witnesses": [
+    "Johann Novak ½ gbl (cf. duhovnik-dominanta Novak P128!)",
+    "Martin Novačič? ¼ gübler (== v11 Weißstand! ×2 v letu!)"
+   ],
+   "urkunden": "ženitovna zglasnica občine Gradac od 8/2. 1901 štev: 34 in pismeno očetovo dovoljenje za ml. nevesto od 29/1. 1901",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "novelty": "očetovo PISMENO dovoljenje (29.1. — 13 dni pred poroko; vzorec P129 »pismeno«?) + Jakša-mreža 1/2 (v11 mati Catharina Jakša!) + Simonič 3. dokaz familije (1893+1900+1901)"
+  },
+  {
+   "row": 6,
+   "date": "11. februar 1901",
+   "dateNote": "4. od 6 porok MASE 11.2.!",
+   "scan": 115,
+   "page": 114,
+   "groom": {
+    "name": "Georg Jakobčič? [~ — Jakobič/Jakobčič/Jakljevič-tension; cf. P80 h13!]",
+    "place": "Cerkvišče? [~ — NOVA vas?] 26",
+    "stand": "½ gübler (✓)",
+    "age": 34,
+    "status": "1 (J.)"
+   },
+   "bride": {
+    "name": "Barbara Štubljar? [~]",
+    "place": "Cerkvišče 1",
+    "stand": "½ gbl. Tochter",
+    "age": 34,
+    "status": "1 (J.)"
+   },
+   "parentsGroom": "Nicolaus Jakobčič? ½ gübler × Anna Kusič? [~]",
+   "parentsBride": "Georg Štubljar? ½ gübler × Catharina Žimec? [~ — ★ Žimec-mreža 2/2 = v3 oče neveste Johann (J/Ž)imec!]",
+   "witnesses": [
+    "Peter Jakljevič? [~ — == 1898 v2 ŽENIN Peter Jakljevič!]",
+    "Johan Pušek? [~] ½ gbl"
+   ],
+   "urkunden": "ženitovna zglasnica občine Podzemelj od 2X.? [~ — mesec/dan delno neberljiva] 1901 štev: 2",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "novelty": "par 34 × 34 = najstarejši ENAKOSTAROSTEN par linije? [~ — nevesta 34 = 2. najstarejša po 1899 v1 68!] + Žimec-link v3↔v6 + Jakljevič čez-faza link (1898 ženin → 1901 Weißstand!)"
+  },
+  {
+   "row": 7,
+   "date": "11. februar 1901",
+   "dateNote": "5. od 6 porok MASE 11.2.! zglasnica že 18/1. (arhivar št 180) + oklici 9.2.",
+   "scan": 115,
+   "page": 114,
+   "groom": {
+    "name": "Conrad Bartle [3. vrstica »kajžan?« ~ — nerazložen status] (✓)",
+    "place": "Metlika 38 (Möttling — 7. dokaz linije? [~ cf. 1898 A6 »Möttling 6. dokaz«])",
+    "stand": "[?] — brez izrecnega stan-glagola? [~]",
+    "age": 25,
+    "status": "1 (J.)"
+   },
+   "bride": {
+    "name": "Engelbetha Prevec",
+    "place": "Primostek 1 [NOVA vas linije!]",
+    "stand": "¾ gbl. Tochter [★ 2. dokaz ¾ ulomka linije — == P128 v7 Anna Žugelj vzorec!]",
+    "age": 18,
+    "status": "1 (J.)"
+   },
+   "parentsGroom": "Johann Bartle [Ubankafer? ~ — nerazložen dodatek] × Johanna Černiša? [~]",
+   "parentsBride": "Ignac Prevec ¾ griblar [★ oče ¾!] × Juliana Škrem? [~]",
+   "witnesses": [
+    "Theodulair? [~] Lejihař, c. k. poštni asistent [★ 1. državni činovnik-priča linije!]",
+    "+ robni zapis: Janko Bartle, arhivar in protokolist nadškof.? [~] pisarne v Zagreba? [~ — Zagreb!] [★ 1. tuje-mestni arhivist-priča!]"
+   ],
+   "urkunden": "ženitovna zglasnica mestne občine Metlika rd 18/1. 1901 arhivar štev: 180 in oklicni [izve]sti? [~] od župnega mesta v Metliki od 9. feb. 1901 ter ustno dovoljenje očetovo za ml. nevesto v priči zvernjih? svedokov",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "novelty": "★ ¾ griblar ×2 (oče Ignac + hči Engelbetha — 2. oče+hči par po P128 v7 Žugelj!) + ★ 1. državni činovniki kot priče (c.k. poštni asistent + zagrebški nadškofijski arhivar-protokolist — ROBNI ZAPIS 1.! cf. notestate delegata v8) + 1. mestna občina Metlika zglasnica (še 1898 Möttling vzorec) + Primostek NOVA vas ×2 (v7+v8!)"
+  },
+  {
+   "row": 8,
+   "date": "11. februar 1901",
+   "dateNote": "6. (ZADNJA) od 6 porok MASE 11.2.! zglasnica 3/2. št 4 + dispens 22.1. št 236",
+   "scan": 115,
+   "page": 114,
+   "groom": {
+    "name": "Martin Štefanič [~]",
+    "place": "Podzemelj 6",
+    "stand": "½ gbl. Sohn",
+    "age": 23,
+    "status": "1 (J.)"
+   },
+   "bride": {
+    "name": "Anna Muc [★ MUC-mreža 1/3! cf. P128 Kure/Muc kompleks]",
+    "place": "Primostek 4",
+    "stand": "½ gbl. Tochter",
+    "age": 23,
+    "status": "1 (J.)"
+   },
+   "parentsGroom": "Jacobus Štefanič ½ gübl. × Barbara ŽUGELJ [★ Žugelj-link = P128 v7 nevesta Anna Žugelj ¾ + oče Nicolaus ¾ familija!]",
+   "parentsBride": "Nicolaus Muc ½ gübler [★ == P128 v3 priča Johann Muc familija = h10 1890 ženin!] × Maria PERDINEC [★ == P128 v1 mati neveste Catharina Perdinec familija!]",
+   "witnesses": [
+    "Martin Perdinec? [~ — Perdinec-mreža!]",
+    "Mathias [G]onc? [~] ½ gbl"
+   ],
+   "urkunden": "ženitovna zglasnica občine Podzemelj od 3/2. 1901 štev: 4; ustno dovoljenje za ml. ženina in ml. nevesto od strani očetov v priči zvernjih? svedokov; in dispensa od sorodstva v 4. kolena dotikajočega se 3. kolena krvinske? [~] vrste od visok. c. k. šk. ordinarijata dato 22. jan. 1901 št: 236; robno: potestate delegata",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "novelty": "★ 2. DISPENS 1901 — CONSANGUINITAS 4. kolena (dotikajoč 3.) št 236 (cf. P128 v7 № 2319 3.+4.!; številčni razpon 236 << 2319 [~ čista štetja?]) + robni latinski zapis POTESTATE DELEGATA (1. ekspl.) + ustno dovoljenje OBEH očetov + Žugelj+Perdinec+Muc triple-link na P128!"
+  },
+  {
+   "row": 9,
+   "date": "29. julij 1901",
+   "dateNote": "edina poletna poroka 1901 — 139-dnevna vrzel po 11.2.!",
+   "scan": 115,
+   "page": 114,
+   "groom": {
+    "name": "Mathias Marentič? [~ — morda Marovtič]",
+    "place": "Gradac 11",
+    "stand": "¼ gübler",
+    "age": 36,
+    "status": "1 (J.)"
+   },
+   "bride": {
+    "name": "Maria Žumič? [~]",
+    "place": "Zastava 10 [NOVA vas linije?]",
+    "stand": "½ gbl. Tochter",
+    "age": 30,
+    "status": "1 (J.)"
+   },
+   "parentsGroom": "Joseph Marentič? ½ gübler × Anna ŠTRUCELJ? [~ — == 1900 v2 mati Margareth Strucelj? familija!]",
+   "parentsBride": "Mathias Žumič? ½ gübler × Anna Jurjevič? [~]",
+   "witnesses": [
+    "Johan Marentič? [~]",
+    "Peter Tomšek? [~] ¼ gbl"
+   ],
+   "urkunden": "ženitovna zglasnica občine Gradac od dne 29/?. [~ — mesec neberljiv; poroka 29.7.] 1901 štev: 45",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "novelty": "ženin 36 = najstarejši ženin 1901 + nevesta 30 (najstarejša nevesta 1901) + ¼ ×2 (ženin + Weißstand Tomšek) + Štrucelj čez-faza link (1900!) + Zastava NOVA vas"
+  },
+  {
+   "row": 10,
+   "date": "4. november 1901",
+   "dateNote": "",
+   "scan": 116,
+   "page": 115,
+   "groom": {
+    "name": "Johann Skerbavec? [~ — Š/K-dvom]",
+    "place": "Gradac 63",
+    "stand": "½ güblar?-štofa? [~ — cf. z güblarštofa] (✓)",
+    "age": 24,
+    "status": "1 (J.)"
+   },
+   "bride": {
+    "name": "Anna Zučna? [~]",
+    "place": "Dobraviče? [~ — NOVA vas?] 15",
+    "stand": "z güblarštof.-hči? [~]",
+    "age": 19,
+    "status": "1 (J.)"
+   },
+   "parentsGroom": "Jacobus Skerbavec? ½ gübler × Maria Novak",
+   "parentsBride": "Marcus Zučna? gübler? [~] × Catharina KLEPEC [cf. 1900 KLEPEC mreža!]",
+   "witnesses": [
+    "Anton Palčič?, Schmiedmeister [~ — == v2! ×2 v letu!]",
+    "Georg Klepec ¼ gübler"
+   ],
+   "urkunden": "ženitovna zglasnica občine Gradac z dne 3. nov. 1901 štev: 20 und mündlich väterlich Einwilligung für die mj. Braut in Gegenwart beider? Bräutigande? [~]",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "novelty": "nemško-makedonska formula »und mündlich väterlich Einwilligung« (1. izrecno nemška!) + Klepec ×2 (mati + Weißstand Georg — cf. 1900!) + Palčič-Schmiedmeister ×2 (v2!)"
+  },
+  {
+   "row": 11,
+   "date": "11. november 1901",
+   "dateNote": "zadnji vpis 1901; 7 dni po v10!",
+   "scan": 116,
+   "page": 115,
+   "groom": {
+    "name": "Anton Gibelič? [~ — Gebelko/Gibelko/Gibelič-tension]",
+    "place": "Gradac 53",
+    "stand": "z güblarštofa? [~]",
+    "age": 23,
+    "status": "1 (J.)"
+   },
+   "bride": {
+    "name": "Maria Muc [★ MUC-mreža 2/3!]",
+    "place": "Vranoviče 8 [★ 6. hiša VRANOVIČE — 1898: h4+h2, 1899: h9+h27+h28, 1901: h8! faza-1 K/V-korekcija potrjena]",
+    "stand": "½ güblastofa? [~]",
+    "age": 21,
+    "status": "1 (J.)"
+   },
+   "parentsGroom": "Joseph Gibelič? [~] gübler × Maria Novačič? [~]",
+   "parentsBride": "Martin Muc ½ gübler × Catharina JAKŠA? [~ — ★ Jakša-mreža 2/2 = v5 nevesta Maria Jakša!]",
+   "witnesses": [
+    "Johan Muc ½ gübler [★ == P128 v3 PRIČA Johann Muc = h10 1890 ŽENIN — 3. vloga ISTEGA Muc-a!]",
+    "Martin Novačič? gübler [~ — == v5 Weißstand! ×2 v letu!]"
+   ],
+   "urkunden": "ženitovna zglasnica občine Gradac z dne 10. novembra 1901 št: 210 polnoletno priznanje za ml. ŽENINA in ml. NEVESTO od c. k. okrajnega sodišča v Metliki z dnem [—] oktobra 1901 [~ — dan odrezan/nevpisan!]",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "novelty": "★ POLNOLETNOST ZA OBA (ženin 23 + nevesta 21 — oba < 24!) = 2. primer za ženina (po v4!) + Vranoviče 8 = 6. hiša vasi + Muc ×2 v VPISIH + Johan Muc triple-vloga (priča 1899 → Weißstand 1901?) + zglasnica 10.11. = DAN PRED poroko (najkrajša vrzel linije [~]!)"
+  }
+ ],
+ "excluded": [],
+ "stats": {
+  "entries": 11,
+  "bothSides": "11/11 obojestransko",
+  "gribljeMentions": 0,
+  "gribljeNote": "1. leto linije 1886–1901 BREZ omembe Griblje (cf. krstna 1901 P96 = 100% Griblje)",
+  "priests": "Jos. Rauy 11/11 = 100% [★ NOVI ABSOLUTNI REKORD DOMINANCE — prej 8/8 P129; Rauy linija 1886–1901: 25/27+5/9+8/8+11/11 = 49/55!]",
+  "ages": {
+   "groomMin": 21,
+   "groomMax": 36,
+   "brideMin": 18,
+   "brideMax": 34,
+   "note": "najstarejši ženin 36 (v9) + nevesta 34 (v6 — 2. najstarejša linije po 68!); 6 × nevesta < 24 (mj.); 9 × ženin < 24? [~ — 21/23/23/23/24/24/25/28/31/34/36 → 8 < 24]"
+  },
+  "fractions": "¾ ×2 (v7 oče+hči — 2. dokaz!) · ½ ×13 · ¼ ×4 · z güblarštofa-familija ×6 [~] · najnižji še ¼",
+  "massDay": "★ 11. februar 1901 = 6 POROK ISTI DAN (v3–v8) = 2. največji dan linije (rekord 1893: 7 — 6.2.!; 3× P129-rekord 2/dan; od 1894 naprej NOVI REKORD!) + dvojni dan Nov 4+11 ne obstaja (2 ločena novembra)",
+  "dispenss": "×2 (v1 AFINOST Anverwandtschaft 2. dum? Laibach 15/1. № 138 [~] — 1. afinost!; v8 CONSANGUINITAS 4. kolena krvinske št 236 22.1. potestate delegata) — cf. P128 v7 № 2319",
+  "communes": "zglasnice: Podzemelj ×6 (št 1/3/5/9/2?/4) · Gradac ×4 (št 34/45/20/210) · Metlika(mestna) ×1 (št 180) = 3 občine (pentagon 1900 → trikotnik 1901)",
+  "majorityDocs": "polnoletnost/mj.-dokumenti 7/11 vpisov (v1 sodna 1897! + v3 + v4 ŽENIN ×2 datuma + v5 očetovo pismeno + v7 ustno + v8 ustno obeh + v10 mündlich väterlich + v11 OBA)",
+  "witnessNotables": "c. k. poštni asistent (v7) + arhivar-protokolist nadškof. pisarne Zagreb (v7 robno) + Schmiedmeister ×2 (v2+v10) — 1. obrtnik/činovnik-priče linije",
+  "villages": "Otok ×3 (21/34/11) · Gradac ×5 (20/77/11/63/53) · Krasinec ×2 (23/19 — 3 hiše skupaj z 18!) · Podzemelj ×1 (6) · Metlika ×1 (38) · Primostek ×2 (1/4) · Cerkvišče ×2 (26/1) · Vranoviče ×1 (8) + nove? [~]: Borit?/Hast?/Grišiče?/Zastava/Dobraviče? — vsaj 4–6 NOVIH vasi",
+  "parentSameName": "×2 (v2 Georg Rožman oč. Georg; v3 Mathias Marasinič oč. Mathias)",
+  "crossPhase": "Jakljevič (1898 ženin → 1901 Weißstand) · Štrucelj (1900 mati → 1901 mati) · Kambič (1893) · Simonič (1893+1900) · Kure/Muc (P128 → Muc ×3!) · Žugelj+Perdinec (P128 → v8 starši!) · Klepec (1900 → v10 ×2) · Jakša (1900 ×2 → v5+v11) · Novačič (v5+v11) · Palčič (v2+v10)"
+ },
+ "anomalies": [
+  {
+   "id": "A1",
+   "what": "P130-lead korekcije ×4 (Jan 18→28 · Otok 14→34 · Kurjan?→KRIŽAN · Pačaj?→PALČIČ)"
+  },
+  {
+   "id": "A2",
+   "what": "P131-lead korekcija: glava »1902.« ŽE na s116 (dvopodčrtana; Pag. 115) — s117 brez glave (nadaljevanje v4–v6); P129-lead »velika tiskana glava s117« = standardni tiskani stolpci brez letnice [~]"
+  },
+  {
+   "id": "A3",
+   "what": "v9 zglasnica »od dne 29/?. 1901« — mesec neberljiv [~] (poroka 29.7.; verjetno jul/jun)"
+  },
+  {
+   "id": "A4",
+   "what": "v1 stan-glagola »½ küblastofsju?« + »½ Küblwirthschaft?« — dolgi nerazloženi termini [~; Rosetta-okvir]"
+  },
+  {
+   "id": "A5",
+   "what": "v5 nevesta stan »…nüblonštbaftsont« [~ — morda Küblwirthschafts-tochter]"
+  },
+  {
+   "id": "A6",
+   "what": "v7 ženin 3. vrstica + očetov dodatek (»kajžan?«/»Ubankafer?«) — nerazložena statusa [~]"
+  },
+  {
+   "id": "A7",
+   "what": "v2 domačiji »Borit? 19« + »Hast? 11« — k/v-dvomi novih vasi [~]"
+  },
+  {
+   "id": "A8",
+   "what": "v11 polnoletnost »z dnem [—] oktobra 1901« — DAN odrezan/nevpisan [~]"
+  },
+  {
+   "id": "A9",
+   "what": "v1 dispens »Str Grade? Jamgens? 2. dum?« + »No 138« — nerazloženi deli [~]"
+  },
+  {
+   "id": "A10",
+   "what": "v10 »beider Bräutigande?« — neobičajna množinska forma [~]"
+  },
+  {
+   "id": "A11",
+   "what": "v6 zglasnica »od 2X.? 1901 štev: 2« — datum delno neberljiv [~]"
+  }
+ ],
+ "crossChecks": [
+  {
+   "id": "C1",
+   "what": "Pag. == sken − 1: s114→113, s115→114, s116→115 — 16. zaporedna potrditev (velja 61–115)"
+  },
+  {
+   "id": "C2",
+   "what": "RAUY 11/11 = 100% — novi absolutni rekord (P129 8/8; P128 Novak 5/9; karierna linija Rauy 49/55 [~])"
+  },
+  {
+   "id": "C3",
+   "what": "11 vpisov = 10. najmanjše leto (1886:7 · 1900:8 · 1899:9 · 1901:11)"
+  },
+  {
+   "id": "C4",
+   "what": "6 porok 11.2. == 2. največji dan (rekord 1893: 7 na 6.2. — P122)"
+  },
+  {
+   "id": "C5",
+   "what": "¾ griblar v7 (oče Ignac + hči Engelbetha) == P128 v7 vzorec (Nicolaus + Anna Žugelj)"
+  },
+  {
+   "id": "C6",
+   "what": "Muc ×3 (v8 Anna + v11 Maria + Weißstand Johan == P128 v3 priča/h10-1890-ženin) — Kure/Muc kompleks nadaljevanje"
+  },
+  {
+   "id": "C7",
+   "what": "Perdinec (v8 mati Maria + Weißstand Martin) == P128 v1 mati Catharina familija"
+  },
+  {
+   "id": "C8",
+   "what": "Žugelj (v8 mati Barbara) == P128 v7 familija (¾!)"
+  },
+  {
+   "id": "C9",
+   "what": "Križan ×2 (v1 ženin Otok 34 + v4 mati Anna) — Otok-mreža [~ sorodstvo]"
+  },
+  {
+   "id": "C10",
+   "what": "Jakljevič (v6 Weißstand Peter) == 1898 v2 ženin"
+  },
+  {
+   "id": "C11",
+   "what": "Kambič (v4) == 1893 Math. Kambič ½ z gibl"
+  },
+  {
+   "id": "C12",
+   "what": "Simonič (v5) == 1893 Johann ¼ + 1900 Anna (mati v1)"
+  },
+  {
+   "id": "C13",
+   "what": "Štrucelj (v9 mati Anna) == 1900 v2 mati Margareth"
+  },
+  {
+   "id": "C14",
+   "what": "Hočevar (v4 mati neveste Maria) == 1898 v1 nevesta familija"
+  },
+  {
+   "id": "C15",
+   "what": "Vranoviče 8 = 6. hiša (1898 h4+h2; 1899 h9+h27+h28) — K/V-korekcija faza-1 potrjena"
+  },
+  {
+   "id": "C16",
+   "what": "glava 1902 na s116 == P131 lead KOREKCIJA (s117 → s116!)"
+  },
+  {
+   "id": "C17",
+   "what": "krstna 1901 (P96: vsi Griblje) vs poročna 1901 (0 Griblje) — ASIMETRIJA 1901"
+  },
+  {
+   "id": "C18",
+   "what": "Krasinec hiše 18 (P129) + 19 + 23 (1901) = 3 hiše vasi linije"
+  }
+ ],
+ "honesty": {
+  "uncertain": "[~] na ×30 imenih/terminih — dolgi stan-glagoli (küblastofsju/Küblwirthschaft/nüblonštbaftsont), nove vasi (Borit/Hast/Grišiče/Zastava/Dobraviče/Cerkvišče), priimki (Marasinič/Žimec/Skerbavec/Gibelič/Marentič/Žumič/Jakobčič/Štubljar), v7 statusa, dispens-dele (A9)",
+  "strong": "datumi ×11 (zoom-potrjeni), starosti ×22, Rauy 11/11, masa 11.2. (6× — zoom ×6), ¾ ×2, Rosetta-forme eksplicitne (gbl. Sohn/Tochter), zglasnice + številke (1/3/5/9/4/34/45/20/210/180), dispensi št 138?/236, hiše (34/21/19/11/23/20/77/26/1/38/6/4/11/10/63/15/53/8)",
+  "notRead": "nižje plasti črkovanja priimkov brez vpliva na strukturo; v7 robni zapis končnica »v Zagreba[?]«",
+  "environment": "delo po environment-resetu — .p126tmp + /home/z/muzej rekonstruirana iz GitHub-mirror 14b47f5 (Task 105-b); inventory rekonstruiran iz matricula-konfiguracije; P128/P129 izhodi NISO ponovno brani (zaupanje v obstoječe dokaze)"
+ },
+ "nextSteps": [
+  "P131: poročna 1902 — glava »1902.« ŽE na s116 (v1–v3/1902 tam!) + v4–v6 na s117; min 6 vpisov; v2 [G]pbyke? 5 × Griblje 31 = možna 2. DRUBEL-GRIBLJE [~]; v4 Griblje 30 × Griblje 24 = DRUBEL!; skeni 117–120 že v .p126tmp",
+  "GitLab mirror: zaostanek 3 commiti (P128+P129+P130) — oba žetona mrtva (401/403); akcija lastnika: PAT rotacija",
+  "primerjava krstna 1901 (P96) ↔ poročna 1901: asimetrija Griblje — ločene župnijske populacije? [~]"
+ ]
+}

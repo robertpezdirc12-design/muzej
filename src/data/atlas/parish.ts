@@ -1280,7 +1280,9 @@ export const HOUSE_VITALS: HouseVital[] = [
   },
   // ——— P129 razširitev: POROČNA KNJIGA 04455 — polno leto 1900 (skeni 112–113 ==
   // Pag. 111–112; Pag. = sken − 1, 15. potrditev; glava »1900.« na s112 potrjena;
-  // glava »1901.« na s114 = P130 lead — v1/1901 Otok 14 × Otok 21!) —
+  // glava »1901.« na s114 = P130 lead POTRJEN — v1/1901 Jänner 28 Otok 34 Joseph
+  // KRIŽAN × Otok 21 Barbara PALČIČ — P130-lead KOREKCIJE ×4 (Jan 18→28 ·
+  // Otok 14→34 · Kurjan?→Križan · Pačaj?→Palčič!) —
   // 8 vpisov obojestransko = 2. najmanjše leto linije (min 1886:7 → 1900:8 →
   // 1899:9 padne na 3.!) — EDINA GRIBLJE poroka (2 poročna bloka: h7 v2 NOVA +
   // h8 v2 NOVA — 1. POROČNA DOKAZA OBEH HIŠ!): NOVELE: ★ ŽUPANIČ KONTINUUM
@@ -1314,6 +1316,31 @@ export const HOUSE_VITALS: HouseVital[] = [
     whatEn: "marriage (Feb 12, 1900, entry 2) — the bride Catharina JAKOBČIČ? [~], half smallholder's Točla? [~], 21, GRIBLJE 8 (the 1st MARRIAGE evidence of h8!) × Jacobus Töller? [~], half smallholder, 37, GRIBLJE 7 (the 1st MARRIAGE evidence of h7!); ★ the ONLY Griblje wedding of 1900 (the fewest since P115!) + the majority certificate of the Griblje commune (the 1st such for a 21-year-old bride!) + the Jakobčič/Jakobič tension (P80 h13!)",
     status: "DOCUMENTED",
   },
+  // ——— P130 razširitev: POROČNA KNJIGA 04455 — polno leto 1901 (skeni 114–116 ==
+  // strani 113–115; Pag. == sken − 1, 16. potrditev; rokopisna glava »1901.« na
+  // s114 potrjena — P130-lead KOREKCIJE ×4: Jan 18→28 · Otok 14→34 · Kurjan?→
+  // KRIŽAN · Pačaj?→PALČIČ!; rokopisna glava »1902.« ŽE na s116 = P131-lead
+  // KOREKCIJA — s117 je samo nadaljevanje!). 11 vpisov obojestransko = 4.
+  // najmanjše leto linije (min 1886:7 → 1900:8 → 1899:9 → 1901:11) — razpored
+  // 4+5+2) — ★ 1901 = 1. leto poročne linije 1886–1901 BREZ VSAKE omembe
+  // Griblje (0/11! — cf. krstna 1901 P96 = vsi vpisi Griblje = ASIMETRIJA!) →
+  // 0 novih blokov (vitals 595, bloki 04455 = 78, sidra 71, p80 hiše 58, PT
+  // luknja 12 VSE NESPREMENJENE). NOVELE: ★ 6 POROK NA 11.2.1901 (v3–v8 = 2.
+  // največji dan linije — rekord 1893:7 6.2. P122!; 3× P129-rekord!) + ★ RAUY
+  // 11/11 = 100% ABSOLUTNI REKORD (P129 8/8!) + ★ ¾ griblar 2. dokaz (v7 oče
+  // Ignac Prevec + hči Engelbetha, Primostek 1 — vzorec P128 v7 Žugelj!) + ★
+  // 1. DISPENS AFINOSTI linije (v1 Anverwandtschaft 2. dum? № 138? Laibach
+  // 15/1.!; v8 consanguinitas 4. kolena št 236 + potestate delegata) + ★
+  // POLNOLETNOST ZA ŽENINA (v4 21! Metlika IV 218/89 + deželna vlada št 1786;
+  // v11 za OBA!) + ★ MUC ×3 (P128 v3 priča Johann Muc == v11 Weißstand!) + ★
+  // Vranoviče 8 = 6. hiša vasi + ★ 1. činovniki-priče (c.k. poštni asistent +
+  // zagrebški arhivar-protokolist robno!) + ★ nove vasi? (Primostek ×2 ·
+  // Cerkvišče ×2 · Zastava · Dobraviče? · Borit? · Hast? · Grišiče?) + mreže:
+  // Palčič ×3 · Muc ×3 · Jurajevič ×3 · Križan ×2 · Žimec ×2 · Jakša ×2 ·
+  // Novačič ×2 + čez-faze: Jakljevič 1898→1901 · Štrucelj 1900→1901 · Kambič
+  // 1893→1901 · Simonič 1893+1900→1901 · Hočevar 1898→1901.
+  // Dokaz: research/issue17/parish-marriage-1901.json; verifikator:
+  // scripts/p130_parish_marriage_1901.py --check (I1–I11).
   // ——— P122 razširitev: POROČNA KNJIGA 04455 — polno leto 1893 (skeni 87–90 ==
   // strani 86–89; VELIKA GLAVA »Traunungs=Buch« + rokopisno »1893« na s87 =
   // Pag. 86 POTRJENA — P122 lead!; 20 vpisov: 1886:7 → 1887:21 → 1888:20 →
