@@ -5638,3 +5638,57 @@ Work Log:
 Stage Summary:
 - **P126 POPOLNOSTI ZAKLJUČEN: 18/18 vpisov obojestransko; poročna linija 12 let globoko (1886–1897); GRIBLJE poroke ×5 = REKORD LINIJE (9 blokov: h8 + h40×2 + h29 + h18 MEGA + h27 + h39 + h33 + h28); vitals 578; bloki 04455 = 61; p80 hiše 52; PT luknja 10; QA 127/127.**
 - ⚠ P127 LEAD: **poročna 1898** — rokopisna glava »1898.« + v1/1898 (Jänner 25, Gradec 32? Anton Jane? [~] × Vrhtar? 21 Maria Hovcar [~] 19½) že na s104; skeni 105–109 že v /home/z/.p126tmp; vzorec P126.
+
+---
+Task ID: 102 (P127 — continuatio; glavni agent; repo /home/z/muzej @ 99fd4a7)
+Agent: Z.ai Code (glavni)
+Task: "nadaljuj kjer si ostal" — P127 poročna knjiga 04455, polno leto 1898 (s104–s109 == Pag. 103–108): faza 1 okvir
+
+Work Log:
+- OBNOVA KONTEKSTA: pogovorni povzetek ("P117 faza 2, v18_R2, v19/v20, 5 obrezkov") ZASTAREL (5.× potrjeno) — P117 faza 2 davno dokazan (p117 57/57); rep na 99fd4a7 (P126 produkcjsko živ 127/127). P127 LEAD iz P126: poročna 1898, glava + v1 že na s104; skeni 104–111 v /home/z/.p126tmp; rows127 crops v1–v25 + zoom127 (ledger 1–7) že izrezani.
+- FAZA 1: prebrani preglede ov-104…ov-111 (6 + 2) → Pag.103–108 = 1898 blok; glava »1899.« na Pag.109 (s110, P128 lead).
+- FAZA 1: prebrani vrstični cropi rows127: s104_v1 + s105_v2–v7 (crop=ledger) + s106_v8–v13, s107_v13–v16, s108_v17–v20, s109_v21–v24 (crop=ledger−1!) → 27/27 vpisov obojestransko na nivoju okvirja.
+- FAZA 1: prebrani zoomi zoom127 (v2_wohn, v4_wohn, v5_wohn, v6_fullL/R, v7_wohn, v7_bname, v3_bname) → razrešeno: v7 domačija »Nikolaus 22« Griblje; v6 oče Martin Krasavec 3/16 griblar (najnižji ulomek linije!), mati Margaret Kres, starost ženina 51; v3 mati Plut (ne Plet).
+- ★ REŠITEV KURRENT-FORMULE: »in Gegenwart obiger Beystände« (ne »in Ungarnwärts obige Varpända«!) ×4 (v10, v15, v19, v27) — Kurrent »Gegenwart« ≈ »Ungarnwärts«, »Beystände« ≈ »Voipända/Boipända«. ⚠ Prihodnji zoom-audit P126 »in Ungarn« ×8 (v4–v17) predlagan (P126 ostaja nedotaknjen).
+- notes: research/issue17/parish-marriage-1898-notes.md (faza 1: okvir 27 vpisov + tabele + hiše + anomalije + zoom-list)
+
+Stage Summary:
+- **P127 FAZA 1 ZAKLJUČENA: 1898 = 27 vpisov = REKORD LINIJE (prej 21 — P122-1887); Nov 21 ×6 porok (v22–v27) = 2. največji dan linije (rekord 7 P122); Herms ×2 zapored (v13 coop. + v14 coad.) — Rauy 25/27; 3/16 griblar = najnižji ulomek (v6); v20 OBA mladoletna + k.k. Landesregierung Laibach Z:12527 (28.8.1898); v17 madžarska ženitbena dozvola br. 3363 (Marceu?); v21 Rudolfswert/Metlika + Decanatsamt Rudolfswert + Bischofs-Akt L:275; v23 vdovec 41 geb. Črni Vrh ob Idrijci?; v13 55×35 + v17 54×40 + v6 51×25 starostni rekordi; hiše: Griblje 22×2 isti dan (v7+v9, 20.2.), Gradac 31×2, Krasinec 18×2; »Kloster« nova vas/zaselek (37, 43, 69, 85).**
+- ⚠ P128 LEAD: poročna 1899 — glava »1899.« + v1–5/1899 že na s110 (Pag. 109); skeni 110–111 v .p126tmp; NOVI skeni 112+ prenesti (vzorec P126).
+
+---
+Task ID: 102-b (P127 zoom pass 1; glavni agent; repo /home/z/muzej @ 99fd4a7, delovno drevo: notes)
+Agent: Z.ai Code (glavni)
+Task: P127 faza 2 — zoom pass 1 (vasi/hiše/formule iz skenov 105–109)
+
+Work Log:
+- c/d-cropi prejšnje seje prebrani: v9 Griblje 22 ✓, v10 »Dobravine? 15«, v12 »Jakopič?«, v13 robna opomba »1898 22/76«
+- Novi izrezi (PIL, /home/z/.p126tmp/z127/): v2_vas, v6_vas, v10_docs, v15_16_wohn/vas, v18_row/bwohn, v19_wohn, v21_wohn, v22_wohn, v23_wohn/roj, v25_wohn
+- POPRAVEK: v21 nevesta Gradac 31 → **Gradac 71** (Alosia Novak)
+- POTRDITVE: v21 Rudolfswerth 257 = Metlika; v19 Šumanja vas №19/Vavta vas + Kloster 85; v14 pf. Vavta vas + Dobravice 7 (»y«=7); v22 Dolenja vas pf. Črnomelj 19; v23 geb. Črni Vrh ob Idria(ci) + Holzarbeiter-Aufseher + Podzemelj 28; v25 geb. Zavrh pf. Borovnica + Zimmermannsgeselle + Vranoviče 9×11; v10 »väterliche … in Gegenwart obiger Beystände« (Kurrent: descender-G + st-ligatura!) ×4 potrjeno; v6 B. Suhor? + 3/16 griblar ✓; v2 ½ griblarški sohn ✓
+- notes: research/issue17/parish-marriage-1898-notes.md dopolnjen (FAZA 2 ZOOM PASS 1 + OSTAJOČI [~] ITEMI seznam 1–5)
+
+Stage Summary:
+- **P127 zoom pass 1: vasi/hiše/dokumentne formule razrešene; edini podatkovni POPRAVEK = v21 Gradac 71; »in Gegenwart obiger Beystande« formula potrjena (P126-»in Ungarn« audit ostaja prihodnji item); ostalo: ~25 [~] imen/standov + 5 vasi za pass 2.**
+
+---
+Task ID: 102-c (P127 zaključek — verifier + qa-p127 + sinhr. regresij + README; glavni agent; repo /home/z/muzej @ 99fd4a7)
+Agent: Z.ai Code (glavni)
+Task: P127 poročna 1898 — zaključek nekompletnega dela prejšnjih sej (verifier p127 + qa-p127 + sinhr. regresij p114–p126 + README + poštenost-popravki)
+
+Work Log:
+- OBNOVA KONTEKSTA: pogovorni povzetek ("P117 faza 2, v18_R2, v19/v20, 5 obrezkov") ZASTAREL (6.× potrjeno) — P117 faza 2 davno dokazan (p117 57/57); rep na 99fd4a7; delovno drevo vsebuje P127 faza 1+2 (27 vpisov evidence + notes + parish.ts +9 blokov + qa-parish delno).
+- ★ STALE-PIN POPRAVKI prejšnje seje (qa-parish.ts): ① p80MarrAnchors 60 → **63** + 1898:6 → **1898:9** (9 blokov, ne 6 porok — aritmetika 70 − 7 okvir!); ② 5× stale sporočilo "= 61!" → "= 70!"; ③ qa-p126 OK sporočilo "bloki 61" → 70.
+- qa-p127 (**128. kontrola**): 9 blokov + hiše-check "22,22,34,46,48,54,62,67,70" + 19 pinov + Rauy ×9 + vitals 587 + bloki 70 → **/api/qa 127 → 128/128 ok:True**.
+- VERIFIER: scripts/p127_parish_marriage_1898.py (I1–I11, vzorec p126; ključne kontrole: 27 entries + 0 excluded + 11 anomalij + 14 crossChecks; Griblje [2,7,9,11,15,20] ×6 REKORD + 9 blokov; Rauy 25 + Herms ×2; formula DE ×5 + SLO ×2 = 7; v20 Landesreg. Z:12527 OBA mladoletna; v21 Rudolfswert/Metlika/Krasinec/L:275/Decanatsamt; v23 ⅛ + umrtveni list prve žene; 21.11. ×6; razpored 1+6+6+5+4+5; P126-dokaz regresija + parish.ts 70 blokov + 19 pinov + qa-stringi) → **83/83 PASS**.
+- ★ POŠTENOST-POPRAVKI evidence JSON: ① **gregwartFormula 4 → 7** (»in Gegenwart obiger Beystände« DE ×5 v10/v15/v19/v20/v27 — v20 za OBA mladoletna! + SLOV. ekvivalent »v navzočnosti [zgornjih prič]« ×2 v11/v12) — pass-1 podcenitev; ② **sidraTS 60 → 63**; ③ **distribution s107: v14–19 → v14–18** (v19 je na s108!); ④ **p80Houses 52 → 58 + ptGap 10 → 12** (6 NOVIH hiš v p80 vzorcu prek poročne 04455-1898 — vseh 6 že v krstni 04105, a 04105-vzorec restriktiven; h46/h48 v PT luknji 41–60!).
+- ★ QA STALE-PINI IZ /api/qa (prejšnja seja NI pognala qa — vzorec Task 101!): ① qa-p80 hiše 52 → **58** (+h48/h22/h67/h70/h34/h46 — 6 NOVIH prek 04455-1898!) + PT luknja 10 → **12** (+h46/h48 v P80_PT_GAP); ② NOVA-hiša izjeme: qa-p88 +h46-1898/h70-1898 (poročna PO krsti 1893), qa-p93 +h48-1898 (isto leto!), qa-p94 +h22-1898 ×2 (PRED krsto 1899 — vzorec qa-p91 h14), qa-p95 +h67-1898 (PRED krsto 1900).
+- SINHR. REGRESIJ (13 skript): p114 vitals 578→**587** (qa ×42 zaščita + stale-iztek 578); p115 bloki 61→**70** + sidra 54→**63** (1898×9) + vitals; p116–p123 BLOCKS(_TS) 61→**70** + p80-bloki/bloki-p115/p116-stringi 61→**70** + sidra 54→**63** + vitals 578→**587**; p124/p125/p126 dokaz-konstante + p80-hiše-stringi 52→**58** + PT-luknja-stringi 10→**12**; p125 P80_HOUSES 51 ostaja (dokaz-const JSON!). VSE 14 skript: **p114 35/35 + p115 45/45 + p116 51/51 + p117 57/57 + p118 67/67 + p119 70/70 + p120 69/69 + p121 74/74 + p122 77/77 + p123 79/79 + p124 84/84 + p125 105/105 + p126 94/94 + p127 83/83 PASS**.
+- README: TOC anchor + »Zadnje stanje« → po P127 faza 2 · 2026-10-22 + P127 bullet (128/128) + POPRAVKI POŠTENOSTI segment.
+- Verifikacije: tsc 0 + lint 0 + homepage dev 200 (1 026 168 B) + **/api/qa dev 128/128 ok:True (qa-p127 True)** + **E2E agent-browser: P127/1898/ŽUPANIČ/KLOBUČAR/P128/Rauy v DOM ✓, footer ✓, mobilni 390px overflowX false ✓, namizni 1440px overflowX false ✓, konzola 0 napak ✓**. Lekcija: TS paren-edit multi-line replace — preveri število zaklepajev (P93 `))` → `)))` — TS1005 + 500 runtime).
+
+Stage Summary:
+- **P127 DOKAZAN IN SINHRONIZIRAN: poročna 1898 = 27/27 vpisov obojestransko = REKORD LINIJE; 6 GRIBLJE porok = NOVI REKORD (9 blokov); brat/sestra ŽUPANIČ cross-entry; ⅛ griblar; Landesreg. Z:12527 za OBA mladoletna; Möttling 5.–6. dokaz; formula 7 (DE 5 + SLO 2); Herms ×2; umrtveni list prve žene; jamški list Borovnica — poročna linija 13 let globoko (1886–1898).**
+- **GRIBLJE: 6 porok / 9 poročnih blokov (h48 + h22×2 A6 + h67 + h54 SIMEC + h62 + h70 + h34 + h46) → parish.ts +9 blokov → bloki 04455 = 70; vitals 587; p80 hiše 58; PT luknja 12 (+h46/h48).**
+- **QA 127 → 128/128 (qa-p127 True); P128 LEAD: poročna 1899 — glava »1899.« + v1–5/1899 že na s110 (Pag. 109); skeni 110–111 v .p126tmp; novi skeni 112+ prenesti (vzorec P127).**
+- PUSH PROTIKOL (Task 102-d): commit → GitLab + GitHub (ls-remote 1:1) → Vercel produkcija poll (/api/qa 128/128 + qa-p127 True + homepage 200).

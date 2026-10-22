@@ -1081,6 +1081,123 @@ export const HOUSE_VITALS: HouseVital[] = [
     whatEn: "marriage (Nov 22, 1897, entry 18) — bride Maria POŽEK? [~ Ložek], ½ gbl. Tochkr [~], 22, GRIBLJE 28 (the 1st MARRIAGE evidence of h28; father Georg Ložek? [~] ¼? smallholder [~] × Margareth Mihovič? [~]) × Mathias DEBLIČ? [~ Teblič], ½ smallholder's? Jofm [~], 25, GRIBLJE 33 (a double-Griblje marriage — both blocks!); ★ the LAST GRIBLJE marriage of the record year; priest Jos. Rauy",
     status: "DOCUMENTED",
   },
+  // ——— P127 razširitev: POROČNA KNJIGA 04455 — polno leto 1898 (s104–s109 ==
+  // Pag. 103–108; Pag. == sken − 1, 13. potrditev; velja 61–108). Rokopisna
+  // glava »1898.« na s104 + glava »1899.« + v1–5/1899 ŽE na s110 (P128
+  // lead!). 1898 = 27 vpisov = REKORD LINIJE (prej 21 P122!) — razpored jan 2
+  // + feb 8 + maj 4 + jun 3 + jul 2 + okt 1 + nov 7 (21.11. ×6 = 2. največji
+  // dan linije!).
+  // NOVELE: ★ GRIBLJE poroke ×6 = NOVI REKORD (prej 5 P126!) — 9 poročnih
+  // blokov (h48 NOVA + h22 ×2 ISTI DAN A6 + h67 NOVA + h54 2. dokaz SIMEC +
+  // h62 NOVA + h70 NOVA + h34 1. dokaz + h46 NOVA) + ★ BRAT/SESTRA ŽUPANIČ
+  // cross-entry (v8 ženin Johann + v13 nevesta Dorothea = otroci Mathiasa
+  // Županiča ½ griblar + Catharine Šaradinič, Krasinec 18!) + ★ ⅛ griblar
+  // (v23 — NOVI najnižji ulomek, prej 3/16!) + ★ k.k. LANDESREGIERUNG Laibach
+  // Z:12527 (28.8.1898) za OBA mladoletna (v20 »Braut und mlj. Bräutigam«!) +
+  // ★ MÖTTLING = nemško Metlika 5.–6. dokaz (v9 k.k. Bez.Ger. + v17 [?]amte +
+  // tiskar »Bindig in Möttlig.«) + ★ SLOV. EKVIVALENT formule »v navzočnosti
+  // [zgornjih prič]« (v11/v12) = »in Gegenwart obiger Beystände« ×5 (v10/v15/
+  // v19/v20/v27) — skupaj 7 + ★ Herms ×2 ZAPORED (v13 coop. + v14 coad.) — Rauy 25/27 + ★
+  // Umrtveni list prve žene ženinove (v23, Sv. Vid pri Žatičmi?) + ★
+  // Decanatsamt Rudolfswert + Bischofs-Akt L:275 (v21) + ★ Jamški list
+  // BOROVNICA (v25) + ★ 1. NEZAKONSKI ženin 1898 (v16 prazna očetova celica +
+  // Taglöhnerin mati!) + ★ vdovec 41 Holzarbeiter-Aufseher geb. ČRNI VRH OB
+  // IDRIJI (v23) + ★ Zaiflner stand ×5–6 + ★ PLUT familija ×3 + ★ Pedirec/
+  // Perdinec varianta ×7 + občinske vrste: Podzemelj 7→8→9→10→12→14 | Griblje
+  // 1→2→4 | Gradac 31→32→33→34→35 POPOLNA | Smihel-Dopine? 29→39 | Krasinec
+  // 13 | Črni Vrh 15 | Suho 2.
+  // Dokaz: research/issue17/parish-marriage-1898.json; verifikator:
+  // scripts/p127_parish_marriage_1898.py --check (I1–I11).
+  {
+    houseNo: "48",
+    bookSignature: "04455",
+    year: 1898,
+    scan: 105,
+    page: 104,
+    whatSi: "poroka (30. 1. 1898, vpis 2) — nevesta Anna KLOBUČAR, 19, GRIBLJE 48 (1. POROČNI DOKAZ h48 — NOVA HIŠA!) × Peter Jakljevič? [~], »z güblarštofa« [~], 25, Pniloxje? 30 [~ — toponim neznana, oblika 6× potrjena; kandidat Ponikve?]; ženin ½ griblarški sohn ✓; duhovnik Jos. Rauy",
+    whatEn: "marriage (Jan 30, 1898, entry 2) — the bride Anna KLOBUČAR, 19, GRIBLJE 48 (the 1st MARRIAGE evidence of h48 — A NEW HOUSE!) × Peter Jakljevič? [~], »z güblarštofa« [~], 25, Pniloxje? 30 [~ — an unresolved toponym, shape 6× confirmed; candidate Ponikve?]; the groom a half-smallholder's son ✓; priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "22",
+    bookSignature: "04455",
+    year: 1898,
+    scan: 105,
+    page: 104,
+    whatSi: "poroka (20. 2. 1898, vpis 7) — ženin Nicolaus STRAUS, 26, GRIBLJE 22 (1. POROČNI DOKAZ h22 — domačija »Nikolaus« ✓ pass 1!; oče ¼ Griblar [~]) × Maria Jakofčič, 30, GRIBLJE 67 (1. POROČNI DOKAZ h67 — NOVA!); ★ A6: h22 ×2 ženina ISTI DAN (cf. v9 Milek — vzorec P126 h40!) + št. zglasmic Griblje 1; duhovnik Jos. Rauy",
+    whatEn: "marriage (Feb 20, 1898, entry 7) — the groom Nicolaus STRAUS, 26, GRIBLJE 22 (the 1st MARRIAGE evidence of h22 — the homestead »Nikolaus« ✓ pass 1!; father a quarter smallholder [~]) × Maria Jakofčič, 30, GRIBLJE 67 (the 1st MARRIAGE evidence of h67 — NEW!); ★ A6: h22 has TWO grooms THE SAME DAY (cf. v9 Milek — the P126 h40 pattern!) + the Griblje certificate no. 1; priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "67",
+    bookSignature: "04455",
+    year: 1898,
+    scan: 105,
+    page: 104,
+    whatSi: "poroka (20. 2. 1898, vpis 7) — nevesta Maria JAKOFČIČ, 30, GRIBLJE 67 (1. POROČNI DOKAZ h67 — NOVA HIŠA!) × Nicolaus Straus, 26, GRIBLJE 22 (drubel poroka — h22 ×2 isti dan!); duhovnik Jos. Rauy",
+    whatEn: "marriage (Feb 20, 1898, entry 7) — the bride Maria JAKOFČIČ, 30, GRIBLJE 67 (the 1st MARRIAGE evidence of h67 — A NEW HOUSE!) × Nicolaus Straus, 26, GRIBLJE 22 (a double marriage — h22 ×2 the same day!); priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "22",
+    bookSignature: "04455",
+    year: 1898,
+    scan: 106,
+    page: 105,
+    whatSi: "poroka (20. 2. 1898, vpis 9) — ženin Nicolaus MILEK, »z güblarštofa« [~], 28, GRIBLJE 22 (A6: 2. ženin h22 ISTI DAN — 2. blok h22!; oče Johann Milek × Maria KRIŽAN) × Maria Klepec, 22, Horst? 21 [~ a/o — usklajeno Hrast pri Vinici] (oče Georg Klepec × Barbara KRIŽAN — OBE MATI KRIŽAN!); Befünden: zglasmica občine Griblje d° 19/2. št:2 + »Erklärung für die mlj. Braut vom k.k. Bez. Ger. MÖTTLING d. 9/2. 1898« (★ Möttling = nemško METLIKA — 6. dokaz linije!); duhovnik Jos. Rauy",
+    whatEn: "marriage (Feb 20, 1898, entry 9) — the groom Nicolaus MILEK, »z güblarštofa« [~], 28, GRIBLJE 22 (A6: the 2nd groom of h22 THE SAME DAY — the 2nd h22 block!; father Johann Milek × Maria KRIŽAN) × Maria Klepec, 22, Horst? 21 [~ a/o — aligned with Hrast pri Vinici] (father Georg Klepec × Barbara KRIŽAN — BOTH MOTHERS KRIŽAN!); Befünden: the Griblje commune certificate Feb 19 no:2 + »Erklärung für die mlj. Braut vom k.k. Bez. Ger. MÖTTLING d. 9/2. 1898« (★ Möttling = German METLIKA — the 6th proof of the line!); priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "54",
+    bookSignature: "04455",
+    year: 1898,
+    scan: 106,
+    page: 105,
+    whatSi: "poroka (9. 5. 1898, vpis 11) — ženin Johann SIMEC, 39, GRIBLJE 54 (2. POROČNI DOKAZ h54 — 1889 nevesta Anna SIMEC ¼ Gütlstochter: SIMEC-familija hiša!; starši Peter Jakobrič? ½ griblar × Catharina Brodarič) × Maria Kure, 29, GRIBLJE 62 (1. POROČNI DOKAZ h62 poroko!; starši Nicolaus Klepec ½ griblar × Barbara Tome); priči Mathias Grabus? [~] ½ griblar + Josef PEDIREC ¾ gbl (¾ ulomek + Perdinec-varianta!); Befünden: zglasnica občine Podzemelj od 1.5. št:9 + proglasenje od c. kr. sodišča v Metliki 23/4. + dovoljenje za ml. nevesto »v navzočnosti [zgornjih prič]« (★ SLOV. EKVIVALENT »in Gegenwart obiger Beystände«!); duhovnik Jos. Rauy",
+    whatEn: "marriage (May 9, 1898, entry 11) — the groom Johann SIMEC, 39, GRIBLJE 54 (the 2nd MARRIAGE evidence of h54 — 1889 bride Anna SIMEC: the SIMEC-family house!; parents Peter Jakobrič? half smallholder × Catharina Brodarič) × Maria Kure, 29, GRIBLJE 62 (the 1st MARRIAGE evidence of h62!; parents Nicolaus Klepec half smallholder × Barbara Tome); witnesses Mathias Grabus? [~] half smallholder + Josef PEDIREC ¾ gbl (a ¾ fraction + the Perdinec variant!); Befünden: the Podzemelj commune certificate May 1 no:9 + the announcement by the Metlika court Apr 23 + the consent for the minor bride »v navzočnosti [zgornjih prič]« (★ the SLOVENE EQUIVALENT of »in Gegenwart obiger Beystände«!); priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "62",
+    bookSignature: "04455",
+    year: 1898,
+    scan: 106,
+    page: 105,
+    whatSi: "poroka (9. 5. 1898, vpis 11) — nevesta Maria KURE, 29, GRIBLJE 62 (1. POROČNI DOKAZ h62; starši Nicolaus Klepec ½ griblar × Barbara Tome) × Johann Simec, 39, GRIBLJE 54 (2. dokaz h54 — SIMEC-familija!); KURE cf. P91 h1 botra Katarina Kure; duhovnik Jos. Rauy",
+    whatEn: "marriage (May 9, 1898, entry 11) — the bride Maria KURE, 29, GRIBLJE 62 (the 1st MARRIAGE evidence of h62; parents Nicolaus Klepec half smallholder × Barbara Tome) × Johann Simec, 39, GRIBLJE 54 (the 2nd h54 evidence — the SIMEC family!); KURE cf. the P91 h1 godmother Katarina Kure; priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "70",
+    bookSignature: "04455",
+    year: 1898,
+    scan: 107,
+    page: 106,
+    whatSi: "poroka (6. 6. 1898, vpis 15) — nevesta Maria PERDINEC, 21, GRIBLJE 70 (1. POROČNI DOKAZ h70 — NOVA HIŠA!; starši Mathias PEDRINEC ½ griblar × Dorothea Jakofčič — Perdinec-varianta!) × Marcus Grabrijan, 29, Cerkvišče? 31 [~] (starši Georg Grabrijan ½ griblar × Maria Mavrin); priči Nicolaus Kraij? [~] + Johann Stuhljar? [~] (½ gbl); Befünden: [izkaznica?] občine Podzemelj d° 30/5. + mündl. väterl. fürwillig für die mlj. Braut in Gegenwart obiger Beystände ✓; duhovnik Jos. Rauy",
+    whatEn: "marriage (Jun 6, 1898, entry 15) — the bride Maria PERDINEC, 21, GRIBLJE 70 (the 1st MARRIAGE evidence of h70 — A NEW HOUSE!; parents Mathias PEDRINEC half smallholder × Dorothea Jakofčič — the Perdinec variant!) × Marcus Grabrijan, 29, Cerkvišče? 31 [~] (parents Georg Grabrijan half smallholder × Maria Mavrin); witnesses Nicolaus Kraij? [~] + Johann Stuhljar? [~] (½ gbl); Befünden: the [ID card?] of the Podzemelj commune May 30 + the mündl. väterl. fürwillig for the minor bride in Gegenwart obiger Beystände ✓; priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "34",
+    bookSignature: "04455",
+    year: 1898,
+    scan: 108,
+    page: 107,
+    whatSi: "poroka (17. 10. 1898, vpis 20) — ženin Nicolaus FILAK, ½ güblnšsohn, 20 (MLADOLETEN!), GRIBLJE 34 (1. POROČNI DOKAZ h34!; starši Johann Filak ½ griblar × Anna Dehlič? [~]) × Catharina Klobučar, ½ güblnštocht, 21 (MLADOLETNA!), GRIBLJE 46 (1. POROČNI DOKAZ h46 — NOVA!; starši Marcus Klobučar ½ griblar × Catharina MILEK — cf. v9 Milek h22!); ★ GRIBLJE × GRIBLJE »isti-vasi« + ★ OBA mladoletna: formula »mündlich väterlich fürwillig für die mlj. Braut UND mlj. Bräutigam« + k.k. LANDESREGIERUNG IN LAIBACH ddo 28. August 1898 Z: 12527 (2. Landesregierung-dokument linije!) + zglasmica občine GRIBLJE od 16/10. št:4; priči Nicolaus Joček? [~] + Joseph Brucel? [~]; duhovnik Jos. Rauy",
+    whatEn: "marriage (Oct 17, 1898, entry 20) — the groom Nicolaus FILAK, ½ smallholder's son, 20 (A MINOR!), GRIBLJE 34 (the 1st MARRIAGE evidence of h34!; parents Johann Filak half smallholder × Anna Dehlič? [~]) × Catharina Klobučar, ½ smallholder's daughter, 21 (A MINOR!), GRIBLJE 46 (the 1st MARRIAGE evidence of h46 — NEW!; parents Marcus Klobučar half smallholder × Catharina MILEK — cf. v9 Milek h22!); ★ GRIBLJE × GRIBLJE »same-village« + ★ BOTH minors: the formula »mündlich väterlich fürwillig für die mlj. Braut UND mlj. Bräutigam« + the k.k. LANDESREGIERUNG IN LAIBACH ddo Aug 28, 1898 Z: 12527 (the 2nd Landesregierung document of the line!) + the Griblje commune certificate Oct 16 no:4; witnesses Nicolaus Joček? [~] + Joseph Brucel? [~]; priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "46",
+    bookSignature: "04455",
+    year: 1898,
+    scan: 108,
+    page: 107,
+    whatSi: "poroka (17. 10. 1898, vpis 20) — nevesta Catharina KLOBUČAR, ½ güblnštocht, 21 (MLADOLETNA!), GRIBLJE 46 (1. POROČNI DOKAZ h46 — NOVA HIŠA!; starši Marcus Klobučar ½ griblar × Catharina Milek) × Nicolaus Filak, 20 (MLADOLETEN), GRIBLJE 34 (drubel poroka — oba bloka!); ★ k.k. Landesregierung Laibach Z:12527 (28.8.1898) za OBA + Griblje št:4; duhovnik Jos. Rauy",
+    whatEn: "marriage (Oct 17, 1898, entry 20) — the bride Catharina KLOBUČAR, ½ smallholder's daughter, 21 (A MINOR!), GRIBLJE 46 (the 1st MARRIAGE evidence of h46 — A NEW HOUSE!; parents Marcus Klobučar half smallholder × Catharina Milek) × Nicolaus Filak, 20 (A MINOR), GRIBLJE 34 (a double marriage — both blocks!); ★ the k.k. Landesregierung Laibach Z:12527 (Aug 28, 1898) for BOTH + Griblje no:4; priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
   // ——— P122 razširitev: POROČNA KNJIGA 04455 — polno leto 1893 (skeni 87–90 ==
   // strani 86–89; VELIKA GLAVA »Traunungs=Buch« + rokopisno »1893« na s87 =
   // Pag. 86 POTRJENA — P122 lead!; 20 vpisov: 1886:7 → 1887:21 → 1888:20 →

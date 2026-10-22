@@ -59,7 +59,7 @@ GRIBLJE_HOUSES = [60, 49, 30, 17, 34, 36, 44]
 GRIBLJE_HOUSES_TS = "17,30,36,60"   # hiše z 1892 bloki v parish.ts (v1 h60 + v5 h30 + v10 h17 + v15 h36)
 EXPECTED_VITALS = 554               # P121 dokaz lastna kumulativa (550 + 4 bloki)
 BLOCKS_04455 = 37                   # 33 (P120) + 4 novih blokov 1892 (P121)
-BLOCKS_04455_TS = 61              # P126: + 9 blokov 1897 (52 + 9)                # parish.ts zdaj = 49 (P121: 37 + P122: 5 + P123: 4 + P124: 3)
+BLOCKS_04455_TS = 70              # P126: + 9 blokov 1897 (52 + 9)                # parish.ts zdaj = 49 (P121: 37 + P122: 5 + P123: 4 + P124: 3)
 P80_HOUSES = 41                     # 40 (P120) + h17 (1892 v10 ženin — krstni bloki 1887/1894/1901 izven vzorca!)
 DATE_COUNTS = {"januar": 0, "februar": 8, "marec": 0, "april": 0, "maj": 0,
                "junij": 0, "julij": 0, "avgust": 0, "september": 3, "oktober": 2,
@@ -292,7 +292,7 @@ def main() -> int:
     # ---------- I8: parish.ts bloki 04455 ----------
     ts = open(PARISH_TS).read()
     blocks_m = re.findall(r'houseNo:\s*"([^"]*)",\s*bookSignature:\s*"04455",\s*year:\s*(\d{4}),\s*scan:\s*(\d+)', ts)
-    check("I8 bloki 04455 = 61 (P122 +5, P123 +4 + P124 +3 + P125 +3 + P126 +9!)", len(blocks_m) == BLOCKS_04455_TS, str(len(blocks_m)))
+    check("I8 bloki 04455 = 70 (P122 +5, P123 +4 + P124 +3 + P125 +3 + P126 +9 + P127 +9!)", len(blocks_m) == BLOCKS_04455_TS, str(len(blocks_m)))
     h1892 = sorted((h for h, y, _ in blocks_m if y == "1892"), key=int)
     check("I8b hiše 1892 = [17,30,36,60]", ",".join(h1892) == GRIBLJE_HOUSES_TS, ",".join(h1892))
     h1891 = sorted((h for h, y, _ in blocks_m if y == "1891"), key=int)
@@ -332,11 +332,11 @@ def main() -> int:
     # ---------- I9: qa-parish ----------
     qa = open(QA_TS).read()
     check("I9 qa-p121", '"qa-p121-parish-marriage-1892"' in qa)
-    check("I9b p80 bloki 61", "poročni vpisi (04455) ≠ 61" in qa)
-    check("I9c p80 sidra 54 (1897×9!)", "poročna sidra ≠ 54" in qa)
-    check("I9d p80 hiše 52 (qa kumulativa — …; P125: +h24/h14/h18; P126: +h28 EDINA!)", "različnih hiš (vse tri knjige) ≠ 52" in qa)
+    check("I9b p80 bloki 70", "poročni vpisi (04455) ≠ 70" in qa)
+    check("I9c p80 sidra 63 (1898×9!)", "poročna sidra ≠ 63" in qa)
+    check("I9d p80 hiše 58 (qa kumulativa — …; P127: +6 NOVIH!)", "različnih hiš (vse tri knjige) ≠ 58" in qa)
     # vitals 554 regresijska zaščita v qa-p121
-    check("I9e vitals 578 zaščita (P126)", "HOUSE_VITALS.length !== 578" in qa[qa.index("const p121Marr"):] if "const p121Marr" in qa else False)
+    check("I9e vitals 587 zaščita (P127)", "HOUSE_VITALS.length !== 587" in qa[qa.index("const p121Marr"):] if "const p121Marr" in qa else False)
     check("I9f stari 537/544/548/550/554 iztekla",
           "HOUSE_VITALS.length !== 537" not in qa and "HOUSE_VITALS.length !== 544" not in qa
           and "HOUSE_VITALS.length !== 548" not in qa and "HOUSE_VITALS.length !== 550" not in qa
