@@ -51,7 +51,7 @@ GRIBLJE_ROWS = [1, 3, 4]
 GRIBLJE_MARRIAGES = 3
 GRIBLJE_BLOCKS = 6              # h34 + h44 + h1 + h10 + h20 + h16
 GRIBLJE_HOUSES = ["1", "10", "16", "20", "34", "44"]
-VITALS_TOTAL = 593              # 587 + 6
+VITALS_TOTAL = 595              # 587 + 6 + 2 (P129)
 BLOKI_04455 = 76                # 70 + 6
 SIDRA_TOTAL = 69                # 63 + 6 (1899:6)
 NOVAK_COUNT = 5                 # Jos. Novak v vseh 9 vpisih
@@ -130,16 +130,16 @@ def main():
 
     # ---------- I6: qa-parish pini ----------
     qa = open(QA_TS).read()
-    n593 = qa.count("HOUSE_VITALS.length !== 593")
+    n593 = qa.count("HOUSE_VITALS.length !== 595")
     n587 = qa.count("HOUSE_VITALS.length !== 587")
-    n76 = qa.count("bloki 04455 ≠ 76")
+    n76 = qa.count("bloki 04455 ≠ 78")
     n70 = qa.count("bloki 04455 ≠ 70")
-    check("I6 vitals pini 593", n593 >= 42, str(n593))
+    check("I6 vitals pini 595", n593 >= 44, str(n593))
     check("I6b brez stale 587 asercij", n587 == 0, str(n587))
-    check("I6c bloki pini 76", n76 == 4, str(n76))  # p125 + p126 + p127 + p128
+    check("I6c bloki pini 78", n76 == 5, str(n76))  # p125 + p126 + p127 + p128
     check("I6d brez stale ≠ 70 asercij", n70 == 0, str(n70))
-    check("I6e sidra 69 + 1899:6", "poročna sidra ≠ 69" in qa and
-          "h.year === 1899).length !== 6" in qa)
+    check("I6e sidra 71 + 1900:2", "poročna sidra ≠ 71" in qa and
+          "h.year === 1900).length !== 2" in qa)
     check("I6f p128Marr hiše", '"1,10,16,20,34,44"' in qa)
     check("I6g qa-p128 test", "qa-p128-parish-marriage-1899" in qa)
 
@@ -165,7 +165,7 @@ def main():
 
     # ---------- I10: README + notes ----------
     rd = open(README).read()
-    check("I10 README po P128", "P128" in rd and "593" in rd and "76" in rd)
+    check("I10 README po P129", "P129" in rd and "595" in rd and "78" in rd)
     nt = open(NOTES).read()
     check("I10b notes faza 2 + glyph + Šturm", "FAZA 2" in nt and "glyph-familija" in nt and "ŠTURM" in nt)
 

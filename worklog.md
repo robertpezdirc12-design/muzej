@@ -5752,3 +5752,26 @@ Stage Summary:
 - **GitLab mirror zaostanek 1 commit (e35796e → a154965) — oba GitLab žetona mrtva (401/403); akcija za lastnika: GitLab PAT rotacija.**
 - **README po P128 poln (TOC anchor p128 + Zrcaljenje Task 103); kode tsc 0 + lint 0.**
 - NASLEDNJA FAZA (P129 LEAD): **poročna 1900** — rokopisna glava »1900.« POTRJENA na s112 + **v1/1900 Jänner 2 Krasinec 18 = ŽUPANIČ hiša** (P127 v8/v13 cross-link že vrh s112!); skeni 112–116 že v /home/z/.p126tmp (5 skenov ≈ Pag. 111–115); novi skeni 117+ prenesti (vzorec P127/P128: faza 1 okvir → faza 2 transkripcija → evidence + verifier + parish.ts + qa-p129 + sinhr. regresij + README + push).
+
+---
+Task ID: 105 (P129; glavni agent; repo /home/z/muzej @ 19b7d7a → P129 commit)
+Agent: Z.ai Code (glavni)
+Task: P129 — poročna knjiga 04455, polno leto 1900 (s112–s113 == Pag. 111–112): faza 1 okvir + faza 2 transkripcija + evidence + verifier + parish.ts +2 bloka + qa-p129 + sinhr. regresij 16 skript + README + push (uporabnik: »nadaljuj«)
+
+Work Log:
+- FAZA 1 (okvir): preneseni skeni 117–120 (vzorec: UA + JPEG magika ffd8); struktura 1900–1902 razrešena: s112 = glava »1900.« + v1–v5 · s113 = v6–v8 + PRAZNE vrstice → **KONEC 1900 = 8 vpisov** · s114 = glava »1901.« (P130 lead: v1 Jänner 18 Otok 14 × Otok 21) · s115–s116 = 1901 nadaljevanje (v3 Febr 11 + v10 Nov 4 = min 10 vpisov) · s117 = VELIKA TISKANA glava (7.!) = 1902 (v4–v6 že tam) · s118 = glava 1903.
+- FAZA 2 (transkripcija): crop_rows_129.py (ROWS y: s112 v1 340–560, v2 590–810, v3 830–1050, v4 1070–1290, v5 1310–1560; s113 v6 260–500, v7 470–690, v8 680–910) → 16 L/R cropov 2× LANCZOS + 8 mikro-zoomov (z129).
+- ★ P128-lead KOREKCIJE ×2: v1 datum **Febr 12** (ne »Jänner 2«!) + priimek **Županič** (ne »Žugajnič?« — k/v korekcija, vzorec Vranoviče P128!) — mikro-zoomi z129_v1_date + z129_v1_groom_name3 (4×) jasna.
+- ★ KLJUČNI DOKAZI: ŽUPANIČ KONTINUUM (v1 ženin Nicolaus Županič ¼, Krasinec 18 = ISTA HIŠA P127 v8/v13 — 3. poročni dokaz; v3 priča Johann Županič ½ = P127 v8 ženin — 7 dni po lastni poroki!) + 3 DVOJNA DNEVA = NOVI REKORD (Febr 12 + Febr 19 + Nov 5) + RAUY 8/8 = 100% dominanta (povratek!) + 1. NEZAKONSKA NEVESTA (v7 oče = ČRTA!) + KLOSTER ×3 hiše (69/40/76) + GRADAC 18 ×2 ženina + v7 nevesta (A6!) + pentagon 5 občin (+Adlešič + Sveti-Jurzej NOVA!) + SAMSKI LIST v8 + nadvarstveno ×2 + polnoletnost 5/8 nevest + PEZDIREC ×4 (8. leto!) + oče-kot-priča čez vpisa (v5 priča Georg = v1 oče!).
+- parish.ts **+2 bloka 04455/1900** (v2 GRIBLJE h7 NOVA 1. dokaz Töller? + h8 NOVA 1. dokaz Jakobčič? — EDINA GRIBLJE poroka 1900) — vitals 593 → **595**; bloki 04455 76 → **78**; sidra 69 → **71** (+1900:2); p80 hiše 59 + PT luknja 12 nespremenjena.
+- qa-p129 (**130. kontrola**): 2 bloka + hiše-check "7,8" + 4 pini + Rauy 2/2 GRIBLJE + vitals 595 + bloki 78 → **/api/qa 130/130 ok:True** (po 3 rebuildi — stale pogoji: Marr.length !== 76 ×10 + filter-76 ×4 + p80MarrAnchors.length !== 69 + vitals-587 pogoji).
+- SINHR. REGRESIJ (15 skript + qa-parish.ts): p114 vitals 593→**595** (prag 40→44); p115 bloki 76→**78** + sidra 69→**71** (+["1900"]*2) + vitals; p116–p126 BLOCKS_04455(_TS) 76→**78** + sidra-stringi + vitals + stale-zaščitne kontrole ≠70→**≠78** + p80-hiše 58→**59**; p127 VITALS 593→**595** + BLOCKS 76→78 + I8/I8f; p128 I6 pini (n593≥44 + n76==5 + sidra ≠71 + 1900:2) + VITALS 595 + I10 README; qa-parish.ts: vitals 593→595 ×44 + bloki ≠76→**≠78** ×15 + sidra-string ≠71 + 1900:2 + p129Marr filter + qa-p85 izjema +h7-1900 + qa-p80 total 69→**71** + P128-lead stale korekcije (Feb 12 + 3rd smallest).
+- **p114 35/35 + p115 45/45 + p116 51/51 + p117 57/57 + p118 67/67 + p119 70/70 + p120 69/69 + p121 74/74 + p122 77/77 + p123 79/79 + p124 84/84 + p125 105/105 + p126 94/94 + p127 83/83 + p128 38/38 + p129 37/37 PASS** + tsc 0 + lint 0 + clean build (rm .next — stale-build-lekcija: pogoji spremenjeni brez rebuilda = stari QA!) + **/api/qa 130/130 ok:True + qa-p129 True + homepage 200 (997 343 B)**.
+- README: »Zadnje stanje« → po P129 · 2026-10-22 + TOC anchor + P129 bullet + P128 korekcijska note.
+- PUSH PROTIKOL: commit → GitHub origin main + ls-remote 1:1 → Vercel produkcija poll (/api/qa 130/130 + qa-p129 True + homepage 200). GitLab še vedno zaostan (žeton mrtva).
+
+Stage Summary:
+- **P129 DOKAZAN: poročna 1900 = 8/8 vpisov obojestransko = 2. najmanjše leto linije (1899 → 3.!); ŽUPANIČ kontinuum (3. dokaz Krasinec 18 + priča-po-poroki!); 3 dvojna dneva = NOVI REKORD; Rauy 8/8 = 100% (povratek); 1. nezakonska nevesta (oče = črta!); Kloster ×3 hiše; Gradac 18 ×2 ženina + nevesta (A6); pentagon 5 občin (+Adlešič + Sveti-Jurzej); samski list v8; nadvarstveno ×2; polnoletnost 5/8 nevest; Pezdirec ×4 (8. leto) — poročna linija 15 let globoko (1886–1900).**
+- **GRIBLJE: 1 poroka / 2 poročna bloka (h7+h8 NOVA — 1. poročna dokaza!) → parish.ts +2 → bloki 04455 = 78; vitals 595; sidra 71.**
+- **QA 129 → 130/130 (qa-p129 True); P130 LEAD: poročna 1901 — glava »1901.« na s114 + v1 Otok 14×21; min 10 vpisov (s114–s116); P131 LEAD: velika glava 1902 = s117 (7.!) + v4–v6/1902; skeni 112–120 v .p126tmp.**
+- LEKCIJA: TS/ts stale-pogoji — sinhronizacija stringov NI dovolj; pogoji s literali (Marr.length !== N + filter.length !== N) se morajo zamenjati LOČ; clean rebuild (rm .next) obvezen za QA-merge.

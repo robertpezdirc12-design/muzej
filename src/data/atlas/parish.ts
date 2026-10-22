@@ -1278,6 +1278,42 @@ export const HOUSE_VITALS: HouseVital[] = [
     whatEn: "marriage (Feb 13, 1899, entry 4) — the bride Maria ŽIBAK? [~], ½ smallholder's daughter, 19, GRIBLJE 16 (the 3rd marriage evidence of h16!) × Alois Novak, a master carpenter, 24, GRIBLJE 20 (the 2nd h20 evidence!); ★ the ŽIBAK chain [~ a hypothesis]: the v1 groom Johann Žibak 66 (father Mathias ½ × Pendirec) → son? Mathias Žibak ½ × Numanic → Maria 19 — the father's NAME = the v1 groom's father! (the Filak tension: h16 1886 Ana FILAK father Mathias!); witnesses Matthias SIMEC + Johann Žibak (= the v1 groom!); the Griblje certificate no: 5 + the Tschernomel court Feb 1 + the Toplice guarantee Jan 22; priest Franz Sturm Coop.",
     status: "DOCUMENTED",
   },
+  // ——— P129 razširitev: POROČNA KNJIGA 04455 — polno leto 1900 (skeni 112–113 ==
+  // Pag. 111–112; Pag. = sken − 1, 15. potrditev; glava »1900.« na s112 potrjena;
+  // glava »1901.« na s114 = P130 lead — v1/1901 Otok 14 × Otok 21!) —
+  // 8 vpisov obojestransko = 2. najmanjše leto linije (min 1886:7 → 1900:8 →
+  // 1899:9 padne na 3.!) — EDINA GRIBLJE poroka (2 poročna bloka: h7 v2 NOVA +
+  // h8 v2 NOVA — 1. POROČNA DOKAZA OBEH HIŠ!): NOVELE: ★ ŽUPANIČ KONTINUUM
+  // (v1 ženin Nicolaus Županič ¼ Krasinec 18 = ISTA HIŠA P127 v8/v13 — 3.
+  // poročni dokaz! + v3 priča Johann Županič ½ = P127 v8 ženin — priča 7 dni
+  // po lastni poroki!) + ★ 3 DVOJNA DNEVA = NOVI REKORD (Febr 12 ×2 + Febr
+  // 19 ×2 + Nov 5 ×2; prej 1 P128!) + ★ RAUY 8/8 = 100% dominanta (povratek
+  // P127-vzorca; P128 Novak 5/9!) + ★ 1. NEZAKONSKA NEVESTA? (v7 oče = ČRTA!)
+  // + ★ KLOSTER ×3 hiše (69+40+76!) + ★ GRADAC 18 ×2 ženina + v7 nevesta
+  // (vzorec A6!) + ★ pentagon 5 občin (+Adlešič + SVETI-JURZEJ NOVA!) + ★
+  // SAMSKI LIST izrecno (v8!) + nadvarstveno ×2 + PEZDIREC ×4 (8. leto mreže!).
+  // Dokaz: research/issue17/parish-marriage-1900.json; verifikator:
+  // scripts/p129_parish_marriage_1900.py --check (I1–I11).
+  {
+    houseNo: "7",
+    bookSignature: "04455",
+    year: 1900,
+    scan: 112,
+    page: 111,
+    whatSi: "poroka (12. 2. 1900, vpis 2) — ženin Jacobus TÖLLER? [~ — cf. Teller/Döller; P127 v23 Tomič familija-vprašanje odprto], ½ griblar, 37, GRIBLJE 7 (1. POROČNI DOKAZ h7!) × Catharina Jakobčič? [~ — cf. P80 hiša 13 Jakobič priimek-tension!], ½ gbl. Točla? [~], 21, GRIBLJE 8 (1. POROČNI DOKAZ h8!) = EDINA GRIBLJE poroka 1900 (2 bloka!); starši: Andrea Töller ½ × Margareth Strucelj? [~] / Johann Jakobčič ¼ × Maria Met? [~]; priči Martin Veršinič? [~] + Anton Brodanič? [~]; zglasmica občine Griblje 1/2. 1900 št: 1 (polnoletnost za nevesto — 21!); dvojni dan #1 (Febr 12 ×2!); duhovnik Jos. Rauy — 1900 RAUY 8/8 = 100% DOMINANTA!",
+    whatEn: "marriage (Feb 12, 1900, entry 2) — the groom Jacobus TÖLLER? [~ — cf. Teller/Döller; the P127 v23 Tomič family question open], half smallholder, 37, GRIBLJE 7 (the 1st MARRIAGE evidence of h7!) × Catharina Jakobčič? [~ — cf. P80 house 13 Jakobič surname-tension!], half smallholder's Točla? [~], 21, GRIBLJE 8 (the 1st MARRIAGE evidence of h8!) = the ONLY Griblje wedding of 1900 (2 blocks!); parents: Andrea Töller ½ × Margareth Strucelj? [~] / Johann Jakobčič ¼ × Maria Met? [~]; witnesses Martin Veršinič? [~] + Anton Brodanič? [~]; the Griblje commune certificate Feb 1, 1900 no: 1 (the majority for the 21-year-old bride!); the double day #1 (Feb 12 ×2!); priest Jos. Rauy — 1900 RAUY 8/8 = the 100% DOMINANT!",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "8",
+    bookSignature: "04455",
+    year: 1900,
+    scan: 112,
+    page: 111,
+    whatSi: "poroka (12. 2. 1900, vpis 2) — nevesta Catharina JAKOBČIČ? [~], ½ gbl. Točla? [~], 21, GRIBLJE 8 (1. POROČNI DOKAZ h8!) × Jacobus Töller? [~], ½ griblar, 37, GRIBLJE 7 (1. POROČNI DOKAZ h7!); ★ EDINA GRIBLJE poroka 1900 (najmanj od P115!) + zglasmica polnoletnosti občine Griblje (1. tak za nevesto 21!) + Jakobčič/Jakobič tension (P80 h13!); duhovnik Jos. Rauy",
+    whatEn: "marriage (Feb 12, 1900, entry 2) — the bride Catharina JAKOBČIČ? [~], half smallholder's Točla? [~], 21, GRIBLJE 8 (the 1st MARRIAGE evidence of h8!) × Jacobus Töller? [~], half smallholder, 37, GRIBLJE 7 (the 1st MARRIAGE evidence of h7!); ★ the ONLY Griblje wedding of 1900 (the fewest since P115!) + the majority certificate of the Griblje commune (the 1st such for a 21-year-old bride!) + the Jakobčič/Jakobič tension (P80 h13!)",
+    status: "DOCUMENTED",
+  },
   // ——— P122 razširitev: POROČNA KNJIGA 04455 — polno leto 1893 (skeni 87–90 ==
   // strani 86–89; VELIKA GLAVA »Traunungs=Buch« + rokopisno »1893« na s87 =
   // Pag. 86 POTRJENA — P122 lead!; 20 vpisov: 1886:7 → 1887:21 → 1888:20 →
