@@ -5834,3 +5834,44 @@ Stage Summary:
 - **GRIBLJE: 2 poroki / 4 poročna bloka (h5+h31+h30+h24) → parish.ts +4 → bloki 04455 = 82; vitals 599; sidra 75.**
 - **QA 131 → 132/132 (qa-p131 True); P132 LEAD: poročna 1903 — glava »1903.« na s118 + v1 Febr 3 Dragatuš? 1 × GRIBLJE 11 (3. Griblje poroka v vrsti!) + v2–v5 (Febr 9 ×3 + Febr 16); min 5 vpisov s118–s119; skeni 118–120 v .p126tmp.**
 - LEKCIJE: L/R strani ločeni listi z zamaknjenimi vrsticami (crop recept razširjen); qa-p85 NOVA-hiša check potrebuje izjemo za vsak nov 04455 blok stare hiše; stale-sinhronizacija 599/82/75 čez 16 skript + qa.
+
+---
+Task ID: 108 (push protokol P131 + uredi kode/readme; glavni agent; repo /home/z/muzej @ ac4b590)
+Agent: Z.ai Code (glavni)
+Task: Push GitHub + GitLab + Vercel + uredi kode + sinhroniziraj README (uporabnik: »odlicno nadaljuj pushaj github gitlab vercel uredi kode readme in nadaljuj«)
+
+Work Log:
+- STANJE po resetu potrjeno: /home/z/muzej ŽIV @ ac4b590 (P131) — P128–P131 lokalno ZAKLJUČENI v prejšnjih sejah; git status čist; node_modules OK.
+- GITHUB: git push origin main → »Everything up-to-date« + ls-remote 1:1 (ac4b590433d256e953d78cfdfbf14d4df43d63a4 = lokalna glava) — P131 ŽE pushan v prejšnji seji (žeton ghp_l614 dela).
+- VERCEL PRODUKCIJA poll (direktno): **griblje-museum.vercel.app = ŽIV P131 — /api/qa 132/132 ok:True (passed:132, failed:0) + qa-p131-parish-marriage-1902 True + homepage 200 (1 010 724 B)** — auto-deploy iz GitHuba = **9. zaporedna potrditev hipoteze avtor-epošte**.
+- GITLAB: žeton gl_api.py (glpat-h-Frbk…) 401 + .bak žeton (glpat-PkgTD…) 403 — OBA MRTVA (potrjeno 2× API klicema); anonimni ls-remote ne dela (privatni repo, brez credential prompta). **Zaostanek 5 commitov (a154965 P128 · 33bf2ba P129 · 14b47f5 Task 105-b · 5e43672 P130 · ac4b590 P131) — ostaja AKCIJA LASTNIKA: PAT rotacija.**
+- UREDI KODE: tsc --noEmit → 0 napak; eslint . → 0 napak (samo 3 znane BABEL >500KB opombe: parish.ts / qa-parish.ts / qa.ts — dokumentirane).
+- README sinhronizacija: ŽE aktualen — »Zadnje stanje raziskave (po P131 · 2026-10-22)« + TOC anchor #zadnje-stanje-raziskave-po-p131--2026-10-22 + poln P131 bullet (brez sprememb potrebnih).
+
+Stage Summary:
+- **P131 TROJSINHRONIZACIJA: GitHub ac4b590 1:1 + Vercel produkcija ŽIV (132/132 + qa-p131 True + homepage 200) = 9. potrditev avtor-epošte; GitLab blokada 5 commitov (mrtva žetona — akcija lastnika).**
+- Koda čista (tsc 0 + lint 0) + README že po P131 — ni sprememb.
+- NASLEDNJE: P132 — poročna 04455, polno leto 1903 (s118–s119 == Pag. 117–118; glava »1903.« potrjena na s118; v1 Febr 3 Dragatuš? 1 × GRIBLJE 11 Agnes Žunjič? = 3. GRIBLJE poroka v vrsti!; min 5 vpisov; skeni 118–120 v .p126tmp).
+
+---
+Task ID: 109 (P132; glavni agent; repo /home/z/muzej @ ac4b590 → P132 commit)
+Agent: Z.ai Code (glavni)
+Task: P132 — poročna knjiga 04455, polno leto 1903 (s118–s121 == Pag. 117–120): faza 0 rekonstrukcija + faza 1 okvir (2× razširjen!) + faza 2 transkripcija 20/20 + evidence + verifier + parish.ts +12 blokov + qa-p132 + sinhr. regresij 18 skript + README + push (uporabnik: »odlicno nadaljuj pushaj github gitlab vercel uredi kode readme in nadaljuj«)
+
+Work Log:
+- FAZA 0 (push protokol Task 108): GitHub ac4b590 1:1 (»Everything up-to-date«) + Vercel produkcija ŽIV P131 (/api/qa 132/132 ok:True + qa-p131 True + homepage 200 = 9. potrditev avtor-epošte!) + GitLab OBA žetona mrtva (401/403 — zaostanek 5 commitov, akcija lastnika) + tsc 0 + lint 0 + README že po P131.
+- FAZA 1 (okvir 2× razširjen): s118 = glava »1903.« + v1–v5 · s119 = v6–v10 (1. razširitev: min 5 → 10) · **s120 = v11–v15 (2. razširitev: 10 → 15!)** · s121 = v16–v20 + prazne · **s122 = VELIKA TISKANA GLAVA »1904.« = P133 LEAD** — **1903 = 20 vpisov = P131-lead »min 5« 4× POCENJENO (največja lead-napaka linije!)**. Preneseni s121–s123 (fetch131-recept, 3/3 OK). Pag. == sken−1 = 18. potrditev.
+- FAZA 2 (transkripcija 20/20 + ~30 mikro-zoomov 4–10×): v1 Febr 3 Johann Adamič 25⅔ (Dragoše? 1, ½ güblarštofn) × **GRIBLJE 11** Agnes ŽUNIČ 20⅔ (lead »Žunjič?« KOREKCIJA!) · v2–v4 Febr 9 ×3 (Štefanič Dobravice 8 × Mavec **Sodji vrh 11 pf. SEMIČ**; Mück Griblje 65 × Huestič Griblje 41 = DRUBEL; Muc Primostek 9 × Šimec Grišiče? 35) · v5–v8 Febr 16 ×4 (Gustarič Bilonje? 32 ¼ zervljak? × **Tomc** Primostek 3 [P131-lead POTRJEN]; Žunič Zastava 8 pf. Črnomelj × Kralj Boginja vas 14; **Harašinič Krasinec 23 × Harašinič 17 = DRUBEL + ISTI PRIIMEK ×6**; Županič **Krasinec 18 = 4. dokaz hiše** × Jakofčič Cerkvišče? 17) · v9–v10 Febr 23 ×2 (**»März«-prevarda ZAVRNJENA zoom 8× — ponedeljkovski vzorec!**; Bohte Zastava 9 ½ gbl. **Kofre** [~] × Križan **GRIBLJE 46 2. dokaz**; Jopič? Gradac 19 × Jakofčič Cerkvišče 16) · v11 Jun 7 **Georg Kralj 61⅔ × Dorothea Šimec 47⅔ (h56, par 108 let = 2. rekord!) + ★ DVOJNI DISPENS 1. STOPNJE SCHWÄGERSCHAFT (Ordinariat št: 2244 + deželna vlada št: 4444 — linijski rekord!)** · v12–v13 Jun 22 ×2 (**Žunič Griblje 11 = BRAT v1-neveste! × Jakofčič Griblje 9 = DRUBEL + priči = v1-ženin+v1-priča [CROSS-ENTRY!]**; Butala? Gradac 24 × Kambič Vranoviče 10) · v14 Jul 6 **Jakobčič Griblje 6 × Jakobčič Cerkvišče 16 = DRUBEL + ISTI PRIIMEK ×5** · v15 Jul 27 Rus? Dobravice 12 Kofre [~] × Vogrin 19⅔ (očetovo ustno dovoljenje) · v16 Avg 3 **Kozjan? BOŽAKOVO 43 pf. Metlika ¾ GRIBLAR NOVI NAJVIŠJI ULOMEK × Jurajevčič Otok 10** · v17 Avg 17 **Pezdirec Griblje 20 × Berkoprec? Griblje 48 = DRUBEL; PEZDIREC ×3 v enem vpisu; priča = v11-ženin Kralj [CROSS-ENTRY #3!]** · v18 Sept 13 **Mische Vranoviče 27 (4. NEZAKONSKI ženin — oče ni vpisan!) × Adamič Vranoviče 29 (1. HÄUSLERIN!) + Dostál kaplan (2. dokaz, Rauy 19/20!)** · v19 Okt 12 **Kambič Vranoviče 10 = BRAT v13-neveste × Kerbavec Kloster 40; priča = v13-ženin Butala [CROSS-ENTRY #4!]** · v20 Nov 23 **Jerčinovič? Griblje 50 INVOHNER 1. dokaz × Štrucelj Griblje 44 2. dokaz = DRUBEL; Štrivnik? [~] oklicni list**.
+- ★ REŠITVE: v9/v10 datum Febr 23 (ne März!) · Tomc-predikcija potrjena · v18 nezakonski-po-strukturi (brez opombe) · v20 priče-layout [~] · '?edovna …vje dočba?' [~] ×2 NEREŠENO.
+- IZHODI: evidence research/issue17/parish-marriage-1903.json (20 entries + 0 excluded + 14 anomalij + 23 crossChecks) + notes parish-marriage-1903-notes.md + parish.ts P132-sekcija **+12 blokov 04455/1903** (h11×2 + h65/h41 + h46 + **h56** + h9 + h6 + h20/h48 + h50/h44) — vitals 599 → **611**; bloki 04455 82 → **94**; sidra 75 → **87** (+1903:12); p80 hiše 58 + PT luknja 12 NESPREMENJENA.
+- QA: qa-p132 (**133. kontrola**) — 12 blokov + hiše-check "11,11,20,41,44,46,48,50,56,6,65,9" + 20 pinov + Rauy 12/12 GRIBLJE blokov + vitals 611 + bloki 94 + **qa-p85 izjema +h41-1903** (NOVA-hiša check — v3 doda poročni blok!); sidra-pin +1903:12; hiše-pin p132Marr.
+- SINHR. REGRESIJ (18 skript + qa-parish.ts 47×611 + 8×94 + sidra 87): p114–p131 stale-sinhronizacija (BLOCKS_04455(_TS) 82/93→94 · VITALS 599/610→611 · SIDRA 75/86→87 · qa-besedilni pini »≠ 82/93«→»≠ 94« · verige »= 82!)«→»= 94!)« · p131 I6b/I6f/I10b) — **p114 35/35 + p115 45/45 + p116 51/51 + p117 57/57 + p118 67/67 + p119 70/70 + p120 69/69 + p121 74/74 + p122 77/77 + p123 79/79 + p124 84/84 + p125 105/105 + p126 94/94 + p127 83/83 + p128 38/38 + p129 37/37 + p130 28/28 + p131 43/43 + p132 48/48 = 1196/1196 PASS**.
+- README: »Zadnje stanje« → po P132 · 2026-10-23 + TOC anchor + P132 bullet (8 porok / 12 blokov · 611/94/87).
+- Verifikacije: tsc 0 + lint 0 (znane BABEL >500KB opombe ×3) + verifier p132 48/48.
+- PUSH PROTIKOL: commit → GitHub origin main + ls-remote 1:1 → Vercel produkcija poll (/api/qa 133/133 + qa-p132 True + homepage 200). GitLab ostaja zaostan (mrtva žetona — akcija lastnika).
+
+Stage Summary:
+- **P132 DOKAZAN: poročna 1903 = 20/20 vpisov obojestransko (P131-lead 4× pocenjen!); 8 GRIBLJE porok / 12 blokov (h11×2 BRAT-SESTRA! + 4 DRUBEL + h46/h44 2. dokaza + h56 DVOJNI-DISPENS + h6 NAJNIŽJA); ★ DVOJNI DISPENS 1. st. Schwägerschaft (2244+4444); ★ ¾ griblar novi ulomek; ★ CROSS-ENTRY ×4; par 61×47 = 108 (2. rekord); Rauy 19/20 + Dostál 2. dokaz; poročna linija 18 let globoko (1886–1903).**
+- **GRIBLJE: 8 porok / 12 poročnih blokov → parish.ts +12 → bloki 04455 = 94; vitals 611; sidra 87.**
+- **QA 132 → 133/133 (qa-p132 True); P133 LEAD: poročna 1904 — VELIKA TISKANA GLAVA na s122 + v1–v5 = Febr 8 ×5 MASA + v2 Griblje 41 Perdinec? + v5 Griblje 30 × Griblje 32 Šimec DRUBEL že vidni; min 5 vpisov s122–s123 (LEKCIJA P132: preveriti s123+ za mejo!); skeni 122–123 v .p126tmp.**
+- LEKCIJE: (1) okvir vedno 2 skenika NAPREJ preveriti (P132: lead 4× pocenjen!); (2) status-term vaha güblar/griblar G/H systematicen [~]; (3) ponedeljkovski poročni dnevi (Febr 9/16/23 1903); (4) stale-sinhronizacija zdaj 18 skript (611/94/87).

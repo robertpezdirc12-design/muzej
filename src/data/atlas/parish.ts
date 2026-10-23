@@ -1424,6 +1424,159 @@ export const HOUSE_VITALS: HouseVital[] = [
     whatEn: "marriage (May 12, 1902, entry 4) — the bride Catharina BRIŠEC? [~], half smallholder's daughter, 20, GRIBLJE 24 (the 2nd marriage evidence of h24 after 1895 P124 — a 7-year gap!) × Nicolaus Legina? [~], quarter smallholder, 43, GRIBLJE 30 (the 3rd MARRIAGE EVIDENCE!) = the DOUBLE-GRIBLJE wedding; father Mathias Brišec ½ smallholder × Barbara Jakobič? [~] — the BRIŠEC/BRINEC-tension (the P122 h26 Catharina BRINEC father Georg JAKOBIČ — the same Jakobič circle? open!); the guardianship permission of the district court of Črnomelj (May 1, 1902 — for the 20-year-old bride!); priest Jos. Rauy",
     status: "DOCUMENTED",
   },
+  // ——— P132 razširitev: POROČNA KNJIGA 04455 — polno leto 1903 (skeni 118–121 ==
+  // strani 117–120; Pag. == sken − 1, 18. potrditev; rokopisna glava »1903.« na
+  // s118 potrjena — P131-lead!) — P132-lead KOREKCIJA ×2: »min 5 vpisov
+  // s118–s119« → **20 vpisov s118–s121** (4× podcenjeno — največja lead-napaka
+  // linije!) + v1 nevesta »Žunjič?« → Žunič [~ Žumič]. VELIKA TISKANA GLAVA
+  // »1904.« na s122 = P133 LEAD (v1–v5 = Febr 8 ×5 = MASA!). 20 vpisov
+  // obojestransko = Febr 3 + Febr 9 ×3 + Febr 16 ×4 + Febr 23 ×2 (v9/v10
+  // »März«-prevarda zavrnjena z zoomom 8× — ponedeljkovski vzorec!) + Jun 7 +
+  // Jun 22 ×2 + Jul 6 + Jul 27 + Avg 3 + Avg 17 + Sept 13 + Okt 12 + Nov 23.
+  // 8 GRIBLJE porok / 12 poročnih blokov (h11 v1 1. POROČNI DOKAZ + h65/h41 v3
+  // DRUBEL 1. dokaza + h46 v9 2. dokaz + h56 v11 1. dokaz [DVOJNI DISPENS!] +
+  // h11 v12 2. blok + h9 v12 1. dokaz + h6 v14 1. dokaz + h20/h48 v17 DRUBEL
+  // 1. dokaza + h50 v20 1. dokaz + h44 v20 2. dokaz) — vitals 599 → **611**;
+  // bloki 04455 82 → **94**; sidra 75 → **87** (+1903:12); p80 hiše 58 + PT
+  // luknja 12 NESPREMENJENA. NOVELE: ★ v11 DVOJNI
+  // DISPENS 1. STOPNJE SCHWÄGERSCHAFT (fb. Ordinariat Laibach št: 2244 + deželna
+  // vlada št: 4444 — linijski rekord!) + ★ ¾ GRIBLAR NOVI NAJVIŠJI ULOMEK (v16
+  // Kozjan Božakovo 43 — oče+tan!) + ★ CROSS-ENTRY ×4 (v1-ženin priča v12 ·
+  // v1-priča priča v12 · v11-ženin priča v17 · v13-ženin priča v19!) + ★
+  // BRAT-SESTRA ×2 (v12 ženin = brat v1-neveste h11! · v19 ženin = brat
+  // v13-neveste Vranoviče 10!) + ★ 4. NEZAKONSKI ženin (v18 Mische — oče ni
+  // vpisan!) + ★ 1. HÄUSLERIN (v18 Adamič!) + ★ nove vasi/fare: Božakovo 43 pf.
+  // Metlika · Sodji vrh 11 pf. SEMIČ · Boginja vas 14 · Bilonje? 32 · Mavhe? 10
+  // · občina LOKA · Zastava 8+9 · Grišiče? 35 · Vranoviče 10+27+29 + ★ oklicni
+  // list ×5 + deželna vlada ×2 (št: 3254 + 4444!) + ★ status-vaha güblar/griblar
+  // + Hübler/Gübler G/H ×7 + 'Kofre' [~] ×4 + zervljak? [~] + güblark. [~] +
+  // Invohner 1. dokaz + mreže: HARAŠINIČ ×10 · JAKOFČIČ/JAKOBČIČ ×10 (dve
+  // pisavi!) · PEZDIREC ×7 (8. leto!) · ŽUNIČ ×5 · KAMBIČ ×6 · JURAJEVČIČ ×5 ·
+  // MÜCK/MILEK ×6 · KRIŽAN ×4 · ŠTRUCELJ 3. leto · DRAGOŠ 11. leto · KLEPEC 17.
+  // leto · ŽUPANIČ Krasinec 18 4. dokaz hiše + NOVI priimki ×20+. Rauy 19/20 +
+  // Dostál kaplan 1/20 (v18 — 2. dokaz!).
+  // Dokaz: research/issue17/parish-marriage-1903.json; verifikator:
+  // scripts/p132_parish_marriage_1903.py --check (I1–I11).
+  {
+    houseNo: "11",
+    bookSignature: "04455",
+    year: 1903,
+    scan: 118,
+    page: 117,
+    whatSi: "poroka (3. 2. 1903, vpis 1) — nevesta Agnes ŽUNIČ [~ Žumič; P131-lead »Žunjič?« KOREKCIJA — brez j!], ½ gbl. Tochter, 20, GRIBLJE 11 (1. POROČNI DOKAZ h11!) × Johann Adamič, ½ güblarštofn [~ — cf. status-vaha G/H/ü/i], 25, Dragoše [~ Dragatuš?] 1; starši neveste: Matthias Žunič ¼ Hübler [~ Gübler] × Catharina DRAGOŠ (DRAGOŠ 11. leto mreže 1886–1903!); starši ženina: Johann Adamič ½ griblar × Barbara Milek [~ Mück]; priče: Marcus KLOBUČAR [~ '?äußer' — morda Häusler] + Georg Žunič ½ griblar; zglasmica občine Adlešič od 20/1. 1903 št: 33 + mündlich väterliche Einwilligung; duhovnik Jos. Rauy — ★ P132-ODPRTA GRIBLJE-poroka (h11 = tudi v12-ženinova hiša — BRAT-SESTRA!)",
+    whatEn: "marriage (Feb 3, 1903, entry 1) — the bride Agnes ŽUNIČ [~ Žumič; the P131-lead »Žunjič?« CORRECTION — without j!], half smallholder's daughter, 20, GRIBLJE 11 (the 1st MARRIAGE EVIDENCE of h11!) × Johann Adamič, half güblar-hold [~ — cf. the status-vowel G/H/ü/i], 25, Dragoše [~ Dragatuš?] 1; the bride's parents: Matthias Žunič ¼ Hübler [~ Gübler] × Catharina DRAGOŠ (DRAGOŠ the 11th year of the network 1886–1903!); the groom's parents: Johann Adamič ½ smallholder × Barbara Milek [~ Mück]; witnesses: Marcus KLOBUČAR [~ '?äußer' — perhaps Häusler] + Georg Žunič ½ smallholder; certificate of the Adlešič commune from Jan 20, 1903 no: 33 + verbal paternal consent; priest Jos. Rauy — ★ the P132-OPENING GRIBLJE-wedding (h11 = also the v12 groom's house — BROTHER-SISTER!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "65",
+    bookSignature: "04455",
+    year: 1903,
+    scan: 118,
+    page: 117,
+    whatSi: "poroka (9. 2. 1903, vpis 3) — ženin Matthias MÜCK [~ Milek], ½ griblarštofa, 25, GRIBLJE 65 (1. POROČNI DOKAZ h65!) × Maria Huestič [~ Hrustič/Husič], ½ griblarštofa, 20, GRIBLJE 41 (1. POROČNI DOKAZ h41!) = ★ DRUBEL-GRIBLJE poroka; starši: Matthias Mück ½ griblar × Catharina HARAŠINIČ [~ G/Š] / Matthias Huestič ¼ griblar × Agnes Jakobčič; priče: Matthias Harašinič + Michael PEZDIREC ½ griblar (8. leto mreže!); ★ 1. občina-GRIBLJE zglašnica (od 1/2. 1903 štev: 24) + mündlich väterlich fürwilligt; duhovnik Jos. Rauy",
+    whatEn: "marriage (Feb 9, 1903, entry 3) — the groom Matthias MÜCK [~ Milek], half smallholder-hold, 25, GRIBLJE 65 (the 1st MARRIAGE EVIDENCE of h65!) × Maria Huestič [~ Hrustič/Husič], half smallholder-hold, 20, GRIBLJE 41 (the 1st MARRIAGE EVIDENCE of h41!) = ★ the DOUBLE-GRIBLJE wedding; parents: Matthias Mück ½ smallholder × Catharina HARAŠINIČ [~ G/Š] / Matthias Huestič ¼ smallholder × Agnes Jakobčič; witnesses: Matthias Harašinič + Michael PEZDIREC ½ smallholder (the 8th year of the network!); ★ the 1st GRIBLJE-commune certificate (from Feb 1, 1903 no: 24) + verbally paternally consented; priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "41",
+    bookSignature: "04455",
+    year: 1903,
+    scan: 118,
+    page: 117,
+    whatSi: "poroka (9. 2. 1903, vpis 3) — nevesta Maria HUESTIČ [~ Hrustič/Husič], ½ griblarštofa, 20, GRIBLJE 41 (1. POROČNI DOKAZ h41!; h41 že v krstnem vzorcu 1890 P85 — 13 let čakanja!) × Matthias Mück [~ Milek], ½ griblarštofa, 25, GRIBLJE 65 (1. POROČNI DOKAZ!) = DRUBEL-GRIBLJE poroka; oče Matthias Huestič ¼ griblar × Agnes Jakobčič (JAKOBČIČ-oblika vs JAKOFČIČ v5/v8/v10!); zglasmica občine Griblje 1/2. štev: 24; duhovnik Jos. Rauy — h41 tudi P133-lead v2/1904 ženinova hiša (Georg Perdinec?)",
+    whatEn: "marriage (Feb 9, 1903, entry 3) — the bride Maria HUESTIČ [~ Hrustič/Husič], half smallholder-hold, 20, GRIBLJE 41 (the 1st MARRIAGE EVIDENCE of h41!; h41 already in the 1890 baptism sample P85 — 13 years of waiting!) × Matthias Mück [~ Milek], half smallholder-hold, 25, GRIBLJE 65 (the 1st MARRIAGE EVIDENCE!) = the DOUBLE-GRIBLJE wedding; father Matthias Huestič ¼ smallholder × Agnes Jakobčič (the JAKOBČIČ-form vs JAKOFČIČ in v5/v8/v10!); the Griblje commune certificate Feb 1 no: 24; priest Jos. Rauy — h41 also the P133-lead v2/1904 groom's house (Georg Perdinec?)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "46",
+    bookSignature: "04455",
+    year: 1903,
+    scan: 119,
+    page: 118,
+    whatSi: "poroka (23. 2. 1903, vpis 9) — nevesta Catharina KRIŽAN, ½ gbl. Tochter, 28, GRIBLJE 46 (2. poročni dokaz h46 po 1898 P127 v20 — 5 let vrzel!) × Jakob Bohte, ½ gbl. Kofre [~ NEREŠENO kvalifikator ×4!], 24, Zastava 9; starši: Jakob Bohte ¼ griblar × Agnes Majerle? [~] / Johann Križan ¼ gübler [~] × Catharina Mück [~ Milek]; priče: Nicol. BRODARIČ (2. dokaz v letu — tudi v5!) + Georg Mavec ½ gbl.; zglasmica občine Loka (NOVA občina!) od 15. febr. št: 50; duhovnik Jos. Rauy",
+    whatEn: "marriage (Feb 23, 1903, entry 9) — the bride Catharina KRIŽAN, half smallholder's daughter, 28, GRIBLJE 46 (the 2nd marriage evidence of h46 after 1898 P127 v20 — a 5-year gap!) × Jakob Bohte, half gbl. Kofre [~ UNRESOLVED qualifier ×4!], 24, Zastava 9; parents: Jakob Bohte ¼ smallholder × Agnes Majerle? [~] / Johann Križan ¼ gübler [~] × Catharina Mück [~ Milek]; witnesses: Nicol. BRODARIČ (the 2nd evidence in the year — also v5!) + Georg Mavec ½ gbl.; certificate of the Loka commune (A NEW commune!) from Feb 15 no: 50; priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "11",
+    bookSignature: "04455",
+    year: 1903,
+    scan: 120,
+    page: 119,
+    whatSi: "poroka (22. 6. 1903, vpis 12) — ženin Johann ŽUNIČ, ½ griblar, 25, GRIBLJE 11 (2. POROČNI DOKAZ h11 — 2. poroka hiše v ENELETU!) × Maria Jakofčič, ½ gbl. Tochter, 23, GRIBLJE 9 (1. POROČNI DOKAZ h9!) = ★ DRUBEL-GRIBLJE poroka; starši ženina: Matthias Žunič ½ gübler [~ status-varianca vs v1 ¼ Hübler!] × Catharina DRAGOŠ (×2 v letu — v1 mati!) = ★ ženin = BRAT v1-neveste Agnes Žunič!; starši neveste: Johann Jakofčič ½ gbl. × Maria Jakofčič; ★ priči: Johann ADAMIČ ½ [= v1-ŽENIN kot priča!] + Georg ŽUNIČ ½ gbl. [= v1-PRIČA ponovno!] — CROSS-ENTRY REPEAT (vzorec P128 v1→v4!); zglasmica občine Gribelj? [~ varianta!] od 22. junija št: 77 + polnoletnost neveste (sodišče Črnomelj 27. maja); duhovnik Jos. Rauy",
+    whatEn: "marriage (Jun 22, 1903, entry 12) — the groom Johann ŽUNIČ, half smallholder, 25, GRIBLJE 11 (the 2nd MARRIAGE EVIDENCE of h11 — the house's 2nd wedding IN ONE YEAR!) × Maria Jakofčič, half smallholder's daughter, 23, GRIBLJE 9 (the 1st MARRIAGE EVIDENCE of h9!) = ★ the DOUBLE-GRIBLJE wedding; the groom's parents: Matthias Žunič ½ gübler [~ status-variance vs v1 ¼ Hübler!] × Catharina DRAGOŠ (×2 in the year — the v1 mother!) = ★ the groom = the BROTHER of the v1-bride Agnes Žunič!; the bride's parents: Johann Jakofčič ½ gbl. × Maria Jakofčič; ★ witnesses: Johann ADAMIČ ½ [= the v1-GROOM as witness!] + Georg ŽUNIČ ½ gbl. [= the v1-WITNESS again!] — the CROSS-ENTRY REPEAT (the P128 v1→v4 pattern!); certificate of the Gribelj? [~ variant!] commune from Jun 22 no: 77 + the bride's majority (the Črnomelj court May 27); priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "9",
+    bookSignature: "04455",
+    year: 1903,
+    scan: 120,
+    page: 119,
+    whatSi: "poroka (22. 6. 1903, vpis 12) — nevesta Maria JAKOFČIČ, ½ gbl. Tochter, 23, GRIBLJE 9 (1. POROČNI DOKAZ h9!) × Johann Žunič, ½ griblar, 25, GRIBLJE 11 (2. POROČNI DOKAZ!) = DRUBEL-GRIBLJE poroka; starši neveste: Johann Jakofčič ½ gbl. × Maria Jakofčič (obe ISTI priimek!); zglasmica občine Gribelj? od 22. junija št: 77; duhovnik Jos. Rauy",
+    whatEn: "marriage (Jun 22, 1903, entry 12) — the bride Maria JAKOFČIČ, half smallholder's daughter, 23, GRIBLJE 9 (the 1st MARRIAGE EVIDENCE of h9!) × Johann Žunič, half smallholder, 25, GRIBLJE 11 (the 2nd MARRIAGE EVIDENCE!) = the DOUBLE-GRIBLJE wedding; the bride's parents: Johann Jakofčič ½ gbl. × Maria Jakofčič (both the SAME surname!); the Gribelj? commune certificate Jun 22 no: 77; priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "6",
+    bookSignature: "04455",
+    year: 1903,
+    scan: 120,
+    page: 119,
+    whatSi: "poroka (6. 7. 1903, vpis 14) — ženin Georg JAKOBČIČ [~], ¼ gübler [~], 24, GRIBLJE 6 (1. POROČNI DOKAZ h6 — NAJNIŽJA hišna št. 1903!) × Catharina Jakobčič [~], ¼ gbl. Tocht., 22, Cerkvišče? 16 = ★ ISTI PRIIMEK-par (cf. v7 Harašinič!) + JAKOBČIČ ×5 v enem vpisu; starši: Matthias Jakobčič ½ gübler × Ana Željko? [~ Želiko] / Peter Jakobčič ¼ gübler × Anna Mihelčič; priče: Josef Željko? [~] + Mathias LOPAVEC ½ gübler (NOV!); zglasmica občine Griblje 5. julija št: 86 + očetovo ustno dovoljenje; duhovnik Jos. Rauy — nevestina hiša Cerkvišče 16 = 2. poroka iz iste hiše v letu (v10 — RAZLIČNA očeta!)",
+    whatEn: "marriage (Jul 6, 1903, entry 14) — the groom Georg JAKOBČIČ [~], quarter gübler [~], 24, GRIBLJE 6 (the 1st MARRIAGE EVIDENCE of h6 — the LOWEST house number of 1903!) × Catharina Jakobčič [~], quarter gbl. daughter, 22, Cerkvišče? 16 = ★ the SAME-SURNAME couple (cf. v7 Harašinič!) + JAKOBČIČ ×5 in one entry; parents: Matthias Jakobčič ½ gübler × Ana Željko? [~ Želiko] / Peter Jakobčič ¼ gübler × Anna Mihelčič; witnesses: Josef Željko? [~] + Mathias LOPAVEC ½ gübler (NEW!); the Griblje commune certificate Jul 5 no: 86 + the father's verbal consent; priest Jos. Rauy — the bride's house Cerkvišče 16 = the house's 2nd wedding in the year (v10 — DIFFERENT fathers!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "20",
+    bookSignature: "04455",
+    year: 1903,
+    scan: 121,
+    page: 120,
+    whatSi: "poroka (17. 8. 1903, vpis 17) — ženin Georg PEZDIREC, ½ griblarštofa Kofre [~], 30, GRIBLJE 20 (1. POROČNI DOKAZ h20!; h20 = 2. poročni dokaz 1899 P128 v4!) × Catharina Berkoprec? [~ Verkoprec], ¼ griblarin, 27, GRIBLJE 48 (1. POROČNI DOKAZ h48!; h48 že v poročnem okvirju 1898 P127 v2!) = ★ DRUBEL-GRIBLJE poroka; ★ PEZDIREC ×3 v enem vpisu (ženin + oba starša: Peter Pezdirec ½ griblar × Cathar. Debelec? [~]) / Johann KLOBUČAR ¼ gübler × Barbara Pezdirec; priče: Peter JAKLJEVIČ (P130-mreža!) + Georg KRALJ ¼ griblar [= v11-ŽENIN kot priča — cross-entry #3!]; zglasmica občine Griblje 16. avgusta št: 87; duhovnik Jos. Rauy",
+    whatEn: "marriage (Aug 17, 1903, entry 17) — the groom Georg PEZDIREC, half smallholder-hold Kofre [~], 30, GRIBLJE 20 (the 1st MARRIAGE EVIDENCE of h20!; h20 = the 2nd marriage evidence 1899 P128 v4!) × Catharina Berkoprec? [~ Verkoprec], quarter smallholderess, 27, GRIBLJE 48 (the 1st MARRIAGE EVIDENCE of h48!; h48 already in the 1898 marriage frame P127 v2!) = ★ the DOUBLE-GRIBLJE wedding; ★ PEZDIREC ×3 in one entry (the groom + both parents: Peter Pezdirec ½ smallholder × Cathar. Debelec? [~]) / Johann KLOBUČAR ¼ gübler × Barbara Pezdirec; witnesses: Peter JAKLJEVIČ (the P130 network!) + Georg KRALJ ¼ smallholder [= the v11-GROOM as witness — cross-entry #3!]; the Griblje commune certificate Aug 16 no: 87; priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "48",
+    bookSignature: "04455",
+    year: 1903,
+    scan: 121,
+    page: 120,
+    whatSi: "poroka (17. 8. 1903, vpis 17) — nevesta Catharina BERKOPREC? [~ Verkoprec — NOV priimek!], ¼ griblarin, 27, GRIBLJE 48 (1. POROČNI DOKAZ h48!) × Georg Pezdirec, ½ griblarštofa Kofre [~], 30, GRIBLJE 20 (1. POROČNI DOKAZ!) = DRUBEL-GRIBLJE poroka; oče neveste: Johann Klobučar ¼ gübler × Barbara PEZDIREC (PEZDIREC ×3!); zglasmica občine Griblje 16. avgusta št: 87; duhovnik Jos. Rauy",
+    whatEn: "marriage (Aug 17, 1903, entry 17) — the bride Catharina BERKOPREC? [~ Verkoprec — a NEW surname!], quarter smallholderess, 27, GRIBLJE 48 (the 1st MARRIAGE EVIDENCE of h48!) × Georg Pezdirec, half smallholder-hold Kofre [~], 30, GRIBLJE 20 (the 1st MARRIAGE EVIDENCE!) = the DOUBLE-GRIBLJE wedding; the bride's father: Johann Klobučar ¼ gübler × Barbara PEZDIREC (PEZDIREC ×3!); the Griblje commune certificate Aug 16 no: 87; priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "50",
+    bookSignature: "04455",
+    year: 1903,
+    scan: 121,
+    page: 120,
+    whatSi: "poroka (23. 11. 1903, vpis 20) — ženin Bartholomäus JERČINOVIČ? [~ — NOV priimek!], Invohner [1. dokaz statusa linije!], 27, GRIBLJE 50 (1. POROČNI DOKAZ h50!) × Dorothea ŠTRUCELJ, ½ güblark. Tochter [~ ženska forma!], 24, GRIBLJE 44 (2. poročni dokaz h44 po 1898 P127 v1!) = ★ DRUBEL-GRIBLJE poroka; starši: Matthias Jerčinovič Besitzer? [~] × Maria Sopec? [~] / Matthias Štrucelj ½ griblar × Agnes Klobučar; priče: Klobučar Fabian? [~ Marcus?] + Jerčinovič Inwohner?/Besitzer? [~ — morda oče kot priča]; zglasmica: Štrivnik? [~ NEREŠENO mesto] od 20/11. št: [—] + oklicni list za ženina od župnega urada v Štrivniku? od 22/11. (5. dokaz!); duhovnik Jos. Rauy",
+    whatEn: "marriage (Nov 23, 1903, entry 20) — the groom Bartholomäus JERČINOVIČ? [~ — a NEW surname!], lodger [the 1st evidence of the status in the line!], 27, GRIBLJE 50 (the 1st MARRIAGE EVIDENCE of h50!) × Dorothea ŠTRUCELJ, half güblark daughter [~ the female form!], 24, GRIBLJE 44 (the 2nd marriage evidence of h44 after 1898 P127 v1!) = ★ the DOUBLE-GRIBLJE wedding; parents: Matthias Jerčinovič Besitzer? [~] × Maria Sopec? [~] / Matthias Štrucelj ½ smallholder × Agnes Klobučar; witnesses: Klobučar Fabian? [~ Marcus?] + Jerčinovič Inwohner?/Besitzer? [~ — perhaps the father as witness]; certificate: Štrivnik? [~ UNRESOLVED place] from Nov 20 no: [—] + the groom's banns list from the parish office in Štrivnik? from Nov 22 (the 5th evidence!); priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "44",
+    bookSignature: "04455",
+    year: 1903,
+    scan: 121,
+    page: 120,
+    whatSi: "poroka (23. 11. 1903, vpis 20) — nevesta Dorothea ŠTRUCELJ, ½ güblark. Tochter [~], 24, GRIBLJE 44 (2. poročni dokaz h44 po 1898 P127 v1 — 5 let vrzel!) × Bartholomäus Jerčinovič? [~], Invohner, 27, GRIBLJE 50 (1. POROČNI DOKAZ!) = DRUBEL-GRIBLJE poroka; ŠTRUCELJ 3. leto mreže (P130 mati 1900→1901 → 1903!); starši neveste: Matthias Štrucelj ½ griblar × Agnes Klobučar (KLOBUČAR ×3 v letu — v1 priča + v17 oče + v20!); duhovnik Jos. Rauy",
+    whatEn: "marriage (Nov 23, 1903, entry 20) — the bride Dorothea ŠTRUCELJ, half güblark daughter [~], 24, GRIBLJE 44 (the 2nd marriage evidence of h44 after 1898 P127 v1 — a 5-year gap!) × Bartholomäus Jerčinovič? [~], lodger, 27, GRIBLJE 50 (the 1st MARRIAGE EVIDENCE!) = the DOUBLE-GRIBLJE wedding; ŠTRUCELJ the 3rd year of the network (P130 mother 1900→1901 → 1903!); the bride's parents: Matthias Štrucelj ½ smallholder × Agnes Klobučar (KLOBUČAR ×3 in the year — the v1 witness + the v17 father + v20!); priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "56",
+    bookSignature: "04455",
+    year: 1903,
+    scan: 120,
+    page: 119,
+    whatSi: "poroka (7. 6. 1903, vpis 11) — nevesta Dorothea ŠIMEC, ¼ griblarin, 47, GRIBLJE 56 (1. POROČNI DOKAZ h56!) × Georg Kralj [~], ½ griblar, 61 (2. najstarejši ženin linije za 66 P128 v1!), Mavhe? 10 [~ NOVA VAS?] = ★ DVOJNI DISPENS 1. STOPNJE SCHWÄGERSCHAFT (fb. Ordinariat Laibach ddo 3/6. 1903 št: 2244 + k. k. Landesregierung ddo 27/2. 1903 št: 4444 — NAJBLIŽJA stopnja + 2. dispens afinosti linije [P130 v1 2. stopnje!] = linijski rekord dispensev!); starši: Georg Kralj ½ gübler × Anna Yaklič? [~ Jaklič] / Peter PEZDIREC ¼ griblar × Anna Mück [~ Milek]; priče: Peter Kralj + Peter PEZDIREC ½ griblar [= OČE NEVESTE kot priča!]; zglasmica občine Podzemelj od 1/6. štev: 11; duhovnik Jos. Rauy — par 61×47 = 108 let = 2. rekord-par linije (za 134 P128 v1!); ŠIMEC-mreža (v4 nevesta + cf. P127 h54!)",
+    whatEn: "marriage (Jun 7, 1903, entry 11) — the bride Dorothea ŠIMEC, quarter smallholderess, 47, GRIBLJE 56 (the 1st MARRIAGE EVIDENCE of h56!) × Georg Kralj [~], half smallholder, 61 (the 2nd oldest groom of the line after 66 P128 v1!), Mavhe? 10 [~ A NEW VILLAGE?] = ★ the DOUBLE DISPENSATION of the 1st DEGREE OF AFFINITY (the Laibach ordinariate ddo Jun 3, 1903 no: 2244 + the k. k. provincial government ddo Feb 27, 1903 no: 4444 — the CLOSEST degree + the 2nd affinity dispensation of the line [P130 v1 2nd degree!] = the line record of dispensations!); parents: Georg Kralj ½ gübler × Anna Yaklič? [~ Jaklič] / Peter PEZDIREC ¼ smallholder × Anna Mück [~ Milek]; witnesses: Peter Kralj + Peter PEZDIREC ½ smallholder [= the BRIDE'S FATHER as witness!]; certificate of the Podzemelj commune from Jun 1 no: 11; priest Jos. Rauy — the couple 61×47 = 108 years = the 2nd record couple of the line (after 134 P128 v1!); the ŠIMEC network (the v4 bride + cf. P127 h54!)",
+    status: "DOCUMENTED",
+  },
   // ——— P122 razširitev: POROČNA KNJIGA 04455 — polno leto 1893 (skeni 87–90 ==
   // strani 86–89; VELIKA GLAVA »Traunungs=Buch« + rokopisno »1893« na s87 =
   // Pag. 86 POTRJENA — P122 lead!; 20 vpisov: 1886:7 → 1887:21 → 1888:20 →

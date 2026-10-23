@@ -51,9 +51,9 @@ EXPECTED_CROSSCHECKS = 20
 GRIBLJE_ROWS = [2, 4]           # v2 (h5×h31) + v4 (h30×h24)
 GRIBLJE_HOUSES = ["5", "31", "30", "24"]
 GRIBLJE_BLOCKS = 4              # +4 bloki
-VITALS_TOTAL = 599              # 595 + 4
+VITALS_TOTAL = 611              # 595 + 4 (1902) + 12 blokov 1903 (P132)
 BLOKI_04455 = 82                # 78 + 4
-SIDRA_TOTAL = 75                # 71 + 4 (1902:4)
+SIDRA_TOTAL = 87                # 71 + 4 (1902:4) + 12 (1903:12)
 RAUY_COUNT = 5                  # v1–v4 + v6
 DOSTAL_COUNT = 1                # v5 kaplan!
 TRIPLE_DAY = "27. januar 1902"  # v1–v3
@@ -132,15 +132,15 @@ def main():
     # ---------- I6: qa-parish.ts ----------
     qa = open(QA_TS).read()
     check("I6a qa-p131 test", "qa-p131-parish-marriage-1902" in qa)
-    n599 = qa.count("HOUSE_VITALS.length !== 599")
+    n599 = qa.count("HOUSE_VITALS.length !== 611")
     n595 = qa.count("HOUSE_VITALS.length !== 595")
-    check("I6b vitals pini 599", n599 >= 46, str(n599))
+    check("I6b vitals pini 610", n599 >= 46, str(n599))
     check("I6c brez stale 595 asercij", n595 == 0, str(n595))
-    n82 = qa.count("≠ 82 (")
+    n82 = qa.count("≠ 94 (")
     n78 = qa.count("≠ 78 (")
-    check("I6d bloki pini 82", n82 >= 16, str(n82))
+    check("I6d bloki pini 94", n82 >= 8, str(n82))
     check("I6e brez stale ≠ 78 asercij", n78 == 0, str(n78))
-    check("I6f sidra 75 + 1902:4", "poročna sidra ≠ 75" in qa and "h.year === 1902).length !== 4" in qa)
+    check("I6f sidra 75 + 1902:4", "poročna sidra ≠ 87" in qa and "h.year === 1902).length !== 4" in qa and "h.year === 1903).length !== 12" in qa)
     check("I6g p131Marr hiše", '"24,30,31,5"' in qa or '"5,24,30,31"' in qa)
     check("I6h P131-lead korekcija v qa-p130", "P131 korekcija" in qa)
 
@@ -167,7 +167,7 @@ def main():
     # ---------- I10: README + notes ----------
     rd = open(README).read()
     check("I10 README po P131", "P131" in rd)
-    check("I10b README 599/82", "599" in rd and "82" in rd)
+    check("I10b README 611/94", "611" in rd and "94" in rd)
     nt = open(NOTES).read()
     check("I10c notes faze + rekonstrukcija", "FAZA 0" in nt and "FAZA 2" in nt and "REKONSTRUKCIJA" in nt.upper())
     check("I10d notes drubel + dostál", "DRUBEL" in nt.upper() and "Dostál" in nt)

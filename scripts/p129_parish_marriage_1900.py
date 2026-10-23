@@ -52,9 +52,9 @@ GRIBLJE_ROWS = [2]
 GRIBLJE_MARRIAGES = 1
 GRIBLJE_BLOCKS = 2              # h7 + h8
 GRIBLJE_HOUSES = ["7", "8"]
-VITALS_TOTAL = 599              # 593 + 2
+VITALS_TOTAL = 611              # 593 + 2 + 12 (P132)
 BLOKI_04455 = 82                # 76 + 2
-SIDRA_TOTAL = 75                # 69 + 2 (1900:2)
+SIDRA_TOTAL = 87                # 69 + 2 (1900:2) + 12 (1903:12)
 RAUY_COUNT = 8                  # Jos. Rauy v vseh 8 vpisih = 100%!
 DOUBLE_DAYS = {"12.2.1900": [1, 2], "19.2.1900": [3, 4], "5.11.1900": [7, 8]}
 
@@ -129,15 +129,15 @@ def main():
 
     # ---------- I6: qa-parish pini ----------
     qa = open(QA_TS).read()
-    n595 = qa.count("HOUSE_VITALS.length !== 599")
+    n595 = qa.count("HOUSE_VITALS.length !== 611")
     n593 = qa.count("HOUSE_VITALS.length !== 593")
-    n78 = qa.count("≠ 82 (")
+    n78 = qa.count("≠ 94 (")
     n76 = qa.count("≠ 76 (")
     check("I6 vitals pini 595", n595 >= 44, str(n595))
     check("I6b brez stale 593 asercij", n593 == 0, str(n593))
-    check("I6c bloki pini 78", n78 >= 5, str(n78))
+    check("I6c bloki pini 94", n78 >= 8, str(n78))
     check("I6d brez stale ≠ 76 asercij", n76 == 0, str(n76))
-    check("I6e sidra 71 + 1900:2", "poročna sidra ≠ 75" in qa and
+    check("I6e sidra 71 + 1900:2", "poročna sidra ≠ 87" in qa and
           "h.year === 1900).length !== 2" in qa and
           "h.year === 1902).length !== 4" in qa)
     check("I6f p129Marr hiše", '"7,8"' in qa)

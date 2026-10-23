@@ -220,7 +220,7 @@ def main() -> int:
     blocks_04105 = len(re.findall(r'bookSignature:\s*"04105"', ts))
     check("I9 bloki 04105 ≥ 502", blocks_04105 >= BLOCKS_04105, str(blocks_04105))
     qa_ts = open("src/lib/qa-parish.ts").read()
-    n587 = qa_ts.count("HOUSE_VITALS.length !== 599")
+    n587 = qa_ts.count("HOUSE_VITALS.length !== 611")
     n578x = qa_ts.count("HOUSE_VITALS.length !== 578")
     n569 = qa_ts.count("HOUSE_VITALS.length !== 569")
     n544 = qa_ts.count("HOUSE_VITALS.length !== 544")
