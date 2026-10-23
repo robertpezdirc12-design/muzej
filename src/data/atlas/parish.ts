@@ -1847,6 +1847,91 @@ export const HOUSE_VITALS: HouseVital[] = [
     whatEn: "marriage (Aug 7, 1905, entry 17) — the bride Barbara ŽELJKO, half smallholder's daughter, 21, GRIBLJE 1 (the 3rd marriage evidence of h1 — the 2nd THIS YEAR: v15 Maria + v17 Barbara; ⚠️ 2 different fathers Nicolaus Željko [½ × Maria Križan / ¼ × Catharina Kure] — father+son?) × Mathias Kukar [~], 21, quarter smallholder-hold-Hofsa? [~], GRIBLJE 27 (the 4th evidence — ★ KUČAR/KUKAR 1897→05 8 years!) = ★ the DOUBLE; parents: Nicolaus Željko ¼ smallholder × Catharina KURE / Johann Kukar ¼ smallholder × Catharina Klobučar; witnesses Nicolaus Željko + Georg Harašinič; the Griblje commune certificate Aug 6, 1905 no: 7 + the provincial government no: 12937 + the majority for BOTH; priest Jos. Rauy — ŽELJKO ×3 in the year (2 brides + 1 witness Georg in v15!)",
     status: "DOCUMENTED",
   },
+  // ——— P135 razširitev: POROČNA KNJIGA 04455 — polno leto 1906 (skeni 129–131 ==
+  // strani 128–130; ROKOPISNA GLAVA »1906« na s129 POTRJENA — P134 lead! (pod njo
+  // še 1905-vpis 17); velike tiskane glave na s130/s131; rokopisna glava »1907«
+  // na s132 = P136 LEAD; 12 vpisov obojestransko = P135-lead »min 4 vpisov
+  // s129« 3× pocenjen; razpored 4+5+3 — ★ 1. NEOSTEVCEN vpis (Mai 27, med v8
+  // in v9!) — vpisi z Griblji (3 poroke / 5 poročnih blokov: h73 v8 ženin 1.
+  // DOKAZ = ★ NOVI MAKSIMUM h65→h73! + h31 v9 ženin 3. dokaz × h35 v9 nevesta
+  // 2. dokaz DRUBEL + h62 v11 ženin 4. dokaz KURE × h21 v11 nevesta 2. poročni
+  // dokaz [1887→06 = 19-letna luknja!] DRUBEL): NOVELE: ★ 62-LETNI ŽENIN =
+  // NAJSTAREJŠI LINIJE (v10 Hüblar? — prej Kralj 61⅔ P132!) + ★ 1. GOSTUJOČI
+  // DUHOVNIK »pro delegato« (v9m: Hx.? Herr? Jacobus Pavlovič?, Phluser? [~],
+  // SUHOR — RAUY 11/12!) + ★ DVOJNI-IZMENJAVNI DRUBEL 29.1. (v2+v3: Krasinec
+  // 35 Brodarič × Krasinec 18 Županič in obratno — 2 NIKOLAUSA; ⚠️ 2 različna
+  // Brodarič-očeta v h35 [Johann×Vorne? / Nicolaus×Tome]!) + ★ 1. HIŠA Z 3
+  // BLOKI V ENEM LETU = NOVI REKORD (h18 Županič v2+v3+v6 — ISTI starši
+  // Mathias × Catharina Harašinič!) + ★ SPREGLED DVEH OKLICEV (v9m ord.
+  // Ljubljana № 2170 = NOV dokument-tip!) + ★ 2 NEDELJSKI POROKI (27.5. +
+  // 10.6. — P134 je bilo 11/11 pon!) + ★ sodno dovoljenje »za voj.
+  // neveljavnost?« (v3 [~]) + ★ 17-letna nevesta Perušič (v7 — izenači P134
+  // Milek 17; 1. mladoletniško sodno dovoljenje za NEVESTO pri 17!) + ★
+  // deželna vlada Ljubljana № 23993 = NOVI NAJVIŠJI št. (prej 22190 P133!) +
+  // ★ 1. IZOSTANI nevestin konsent (v1 — samo ženinova stran Krašić/HRVAŠKA!)
+  // + ★ ISTI-DNEVNI konsent (v9: 10/6 = dan poroke!) + TOME-MREŽA ×5 (v3/v4/
+  // v5/v7 matere + v8 nevesta!) + HÜBLER-mreža ×7 (status kot priimek!) +
+  // KURE 4. dokaz (3 osebe v v11!) + NOVE VASI/HIŠE: Lahinja 5 pf. Črnomelj
+  // (NOVA VAS!) + Griblje 73+21 + Kloster 16 + Krasinec 48 + Zemelj 15 +
+  // Grišiče? 35 [~ P132!] + Đeleković? 1, plane? Krašić? u Croatiën [~] +
+  // nazaj: Zemelj 13 (12 let!) · Primostek 18 (13!) · Podzemelj 32 (10!) ·
+  // Germ 28 (8!) · Otok 14 · Gradac 6 · Boginja vas 14 · Griblje 31/35/62 +
+  // NOVI PRIIMKI: Perušič · Paprič? [~] · Jaklič? [~] · Seidrisper? [~] ·
+  // Šuparnič?/Šiparnič? [~ dve pisavi] · Delijanec? [~] + statusi: ½
+  // griblarst?-Sohn [~] ×5 + Hausbesitzerin u. Wittwe (1. kombinacija!) +
+  // MASA 12.2 ×3 + formula »v navzočnosti zgornjih prič« ×2 + Pag. == sken−1
+  // 21. potrditev (128–130). Dokaz: research/issue17/parish-marriage-1906.json;
+  // verifikator: scripts/p135_parish_marriage_1906.py --check (I1–I11).
+  {
+    houseNo: "73",
+    bookSignature: "04455",
+    year: 1906,
+    scan: 130,
+    page: 129,
+    whatSi: "poroka (19. 2. 1906, vpis 8) — ženin Johann Šuparnič? [~ Šiparnič? — dve pisavi cf. v6!], ½ griblarst?-Sohn [~], 26, GRIBLJE 73 (★ 1. POROČNI DOKAZ h73 = NOVA HIŠA = NOVI MAKSIMUM LINIJE h65→h73!) × Helena TOME, ½ griblarstocha? [~], 21, Primostek 18 (1893→06 — 13-letna luknja!); starši: Nicolaus Šuparnič? ½ griblar × Catharina PERDINEC / Martin Tome ½ griblar × Margareth KAMBIČ (h34/35-mreža!); priči: Johann Šuparnič? (½ Hübler) + Mathias Delijanec? [~] (1 Hübler [~ »ein Hübler«] — ločena statusa!); zglasmnica občine Griblje 19/2. 1906 št: 1 + proglas polnoletnosti za nevesto (okrajno sodišče Metlika 18/4. 1905); duhovnik Jos. Rauy — TOME-mreža 5/5 (v8 nevesta + matere v3/v4/v5/v7!)",
+    whatEn: "marriage (Feb 19, 1906, entry 8) — the groom Johann Šuparnič? [~ Šiparnič? — two spellings cf. v6!], half smallholder's?-son [~], 26, GRIBLJE 73 (★ the 1st MARRIAGE EVIDENCE of h73 = A NEW HOUSE = THE NEW MAXIMUM of the line h65→h73!) × Helena TOME, half smallholder's daughter? [~], 21, Primostek 18 (1893→06 — a 13-year gap!); parents: Nicolaus Šuparnič? ½ smallholder × Catharina PERDINEC / Martin Tome ½ smallholder × Margareth KAMBIČ (the h34/35 network!); witnesses: Johann Šuparnič? (½ Hübler) + Mathias Delijanec? [~] (1 Hübler [~ »ein Hübler«] — separate statuses!); the Griblje commune certificate Feb 19, 1906 no: 1 + the majority certificate for the bride (the Metlika district court Apr 18, 1905); priest Jos. Rauy — the TOME network 5/5 (the v8 bride + mothers in v3/v4/v5/v7!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "31",
+    bookSignature: "04455",
+    year: 1906,
+    scan: 131,
+    page: 130,
+    whatSi: "poroka (10. 6. 1906, vpis 9 — ★ NEDELJA!) — ženin Martin PAPRIČ? [~ — NOV PRIIMEK], Wagner (poklic!), 49, WITWER?, GRIBLJE 31 (3. poročni dokaz h31 — 1901×2 → 06!) × Barbara SIMEC, ½ Hüblers-Tochter (explicitno!), 48, GRIBLJE 35 (2. dokaz h35 — 1905→06!) = ★ DRUBEL-GRIBLJE; starši: Georg Paprič? ½ Hübler × Margareth ŽUGELJ (P128-mreža!) / Johann Simec ½ Hübler × Maria JAKOFČIČ (P132 dve pisavi!); priči: Martin Škala + Marko PEZDIREC? [~ — slavna družina!] ({ ¼ Hübler? [~]); zglasmnica občine Griblje x dne 10/6. 1906 št: 48 (★ ISTI DAN kot poroka!); duhovnik Jos. Rauy — ★ 2. NEDELJSKI porok leta (9 dni za v9m!)",
+    whatEn: "marriage (Jun 10, 1906, entry 9 — ★ SUNDAY!) — the groom Martin PAPRIČ? [~ — A NEW SURNAME], Wagner (a craft!), 49, a widower?, GRIBLJE 31 (the 3rd marriage evidence of h31 — 1901×2 → 06!) × Barbara SIMEC, half Hübler's daughter (explicit!), 48, GRIBLJE 35 (the 2nd evidence of h35 — 1905→06!) = ★ the DOUBLE-GRIBLJE wedding; parents: Georg Paprič? ½ Hübler × Margareth ŽUGELJ (the P128 network!) / Johann Simec ½ Hübler × Maria JAKOFČIČ (the P132 two spellings!); witnesses: Martin Škala + Marko PEZDIREC? [~ — the famous family!] ({ ¼ Hübler? [~]); the Griblje commune certificate ON Jun 10, 1906 no: 48 (★ the SAME DAY as the wedding!); priest Jos. Rauy — ★ the 2nd SUNDAY wedding of the year (9 days after v9m!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "35",
+    bookSignature: "04455",
+    year: 1906,
+    scan: 131,
+    page: 130,
+    whatSi: "poroka (10. 6. 1906, vpis 9) — nevesta Barbara SIMEC, ½ Hüblers-Tochter, 48, GRIBLJE 35 (2. poročni dokaz h35 — 1905 P134 nevesta Anna KRIŽAN → 1906!) × Martin PAPRIČ? [~], Wagner, 49, WITWER?, GRIBLJE 31 (3. dokaz) = ★ DRUBEL; starši: Johann Simec ½ Hübler × Maria Jakofčič / Georg Paprič? ½ Hübler × Margareth Žugelj; priči Martin Škala + Marko Pezdirec? [~]; zglasmnica občine Griblje 10/6. 1906 št: 48 (isti dan!); duhovnik Jos. Rauy — ★ nevesta 48 × ženin 49 = 2. najstarejša poročna kombinacija linije (cf. v10 62×24!); SIMEC ×2 v letu (v1 nevesta-vdova + v9!)",
+    whatEn: "marriage (Jun 10, 1906, entry 9) — the bride Barbara SIMEC, half Hübler's daughter, 48, GRIBLJE 35 (the 2nd marriage evidence of h35 — 1905 P134 the bride Anna KRIŽAN → 1906!) × Martin PAPRIČ? [~], Wagner, 49, a widower?, GRIBLJE 31 (the 3rd evidence) = ★ the DOUBLE; parents: Johann Simec ½ Hübler × Maria Jakofčič / Georg Paprič? ½ Hübler × Margareth Žugelj; witnesses Martin Škala + Marko Pezdirec? [~]; the Griblje commune certificate Jun 10, 1906 no: 48 (the same day!); priest Jos. Rauy — ★ the bride 48 × the groom 49 = the 2nd oldest marriage combination of the line (cf. v10 62×24!); SIMEC ×2 in the year (the v1 widow-bride + v9!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "62",
+    bookSignature: "04455",
+    year: 1906,
+    scan: 131,
+    page: 130,
+    whatSi: "poroka (26. 11. 1906, vpis 11) — ženin Johan KURE, ½ griblarsh-Sohn? [~], 22, GRIBLJE 62 (★ 4. poročni dokaz h62 — 1893 + 1898 + 1904 P133 → 1906 = 13-letna KURE-kontinuiteta; 3 KURE-osebe v enem vpisu!) × Maria Požek? [~ Poček?], ½ griblarsh-Hofstochter? [~ »½ griblarsh-Hoftar?« cf. P134 griblarst.Hofe?], 24, GRIBLJE 21 (2. poročni dokaz h21 — 1887 Ana Petrík → 06 = 19-LETNA LUKNJA poročne linije! + 1914-krstna marginalia Danica!) = ★ DRUBEL; starši: Anton Kure ½ Hübler × Barbara KRIŽAN / Johan Požek? ¼ Hübler × Maria Brinec? [~]; priči: Nicolaus Kure (= ženinova družina!) + Johann DRAGOŠ (11.+ leto mreže!) ({ skupni ½ Hübler; zglasmnica občine Griblje 26. 11. 1906 št: 3 + Hofmeister? [~] sodno dovoljenje za ml. ženina v navzočnosti zgornjih prič (formula!) + dovoljenje c. kr. dežel. predsedstva? v Ljubljani 24. 11. 1906 № 23993 (★ NOVI NAJVIŠJI št. — prej 22190 P133!); duhovnik Jos. Rauy",
+    whatEn: "marriage (Nov 26, 1906, entry 11) — the groom Johan KURE, half smallholder's-son? [~], 22, GRIBLJE 62 (★ the 4th marriage evidence of h62 — 1893 + 1898 + 1904 P133 → 1906 = a 13-year KURE continuity; 3 KURE persons in one entry!) × Maria Požek? [~ Poček?], half smallholder's-hold-daughter? [~], 24, GRIBLJE 21 (the 2nd marriage evidence of h21 — 1887 Ana Petrík → 06 = a 19-YEAR GAP of the marriage line! + the 1914 baptism marginalia Danica!) = ★ the DOUBLE; parents: Anton Kure ½ Hübler × Barbara KRIŽAN / Johan Požek? ¼ Hübler × Maria Brinec? [~]; witnesses: Nicolaus Kure (= the groom's family!) + Johann DRAGOŠ (the 11th+ year of the network!) ({ the shared ½ Hübler; the Griblje commune certificate Nov 26, 1906 no: 3 + Hofmeister? [~] the court permission for the young groom in the presence of the above witnesses (the formula!) + the permission of the k.k. provincial presidency? in Ljubljana Nov 24, 1906 no: 23993 (★ THE NEW HIGHEST no. — previously 22190 P133!); priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "21",
+    bookSignature: "04455",
+    year: 1906,
+    scan: 131,
+    page: 130,
+    whatSi: "poroka (26. 11. 1906, vpis 11) — nevesta Maria POŽEK? [~ Poček?], ½ griblarsh-Hofstochter? [~], 24, GRIBLJE 21 (2. poročni dokaz h21 — 1887 P116 v3 nevesta Ana PETRÍK 44 → 1906 = 19-LETNA LUKNJA poročne linije!; 1914-krstna marginalia: Danica, poročena 1947 v Gradcu!) × Johan KURE, 22, ½ griblarsh-Sohn? [~], GRIBLJE 62 (4. dokaz KURE!) = ★ DRUBEL; starši: Johan Požek? ¼ Hübler × Maria Brinec? [~] / Anton Kure ½ Hübler × Barbara Križan; priči Nicolaus Kure + Johann Dragoš; zglasmnica občine Griblje 26. 11. 1906 št: 3 + deželna vlada Ljubljana № 23993; duhovnik Jos. Rauy — POŽEK ×3 v letu (v5 mati + v11 nevesta+oče!)",
+    whatEn: "marriage (Nov 26, 1906, entry 11) — the bride Maria POŽEK? [~ Poček?], half smallholder's-hold-daughter? [~], 24, GRIBLJE 21 (the 2nd marriage evidence of h21 — 1887 P116 v3 the bride Ana PETRÍK 44 → 1906 = a 19-YEAR GAP of the marriage line!; the 1914 baptism marginalia: Danica, married 1947 in Gradec!) × Johan KURE, 22, half smallholder's-son? [~], GRIBLJE 62 (the 4th KURE evidence!) = ★ the DOUBLE; parents: Johan Požek? ¼ Hübler × Maria Brinec? [~] / Anton Kure ½ Hübler × Barbara Križan; witnesses Nicolaus Kure + Johann Dragoš; the Griblje commune certificate Nov 26, 1906 no: 3 + the provincial government Ljubljana no: 23993; priest Jos. Rauy — POŽEK ×3 in the year (the v5 mother + the v11 bride+father!)",
+    status: "DOCUMENTED",
+  },
 
   // ——— P122 razširitev: POROČNA KNJIGA 04455 — polno leto 1893 (skeni 87–90 ==
   // strani 86–89; VELIKA GLAVA »Traunungs=Buch« + rokopisno »1893« na s87 =

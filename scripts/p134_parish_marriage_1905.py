@@ -153,11 +153,11 @@ def main():
     # ---------- I6: qa-parish.ts ----------
     qa = open(QA_TS).read()
     check("I6a qa-p134 id", "qa-p134-parish-marriage-1905" in qa)
-    n632 = qa.count("HOUSE_VITALS.length !== 632")
-    check("I6b vitals pini 632", n632 >= 46, str(n632))
-    n115 = qa.count("bloki 04455 ≠ 115")
-    check("I6c bloki pini 115", n115 >= 8, str(n115))
-    check("I6d sidra 108 + 1905:13", "poročna sidra ≠ 108" in qa and "h.year === 1905).length !== 13" in qa)
+    n637 = qa.count("HOUSE_VITALS.length !== 637")
+    check("I6b vitals pini 637", n637 >= 46, str(n637))
+    n120 = qa.count("bloki 04455 ≠ 120")
+    check("I6c bloki pini 120", n120 >= 8, str(n120))
+    check("I6d sidra 108 + 1905:13", "poročna sidra ≠ 113" in qa and "h.year === 1905).length !== 13" in qa)
     check("I6e hiše 1905 pin", "1,1,10,18,24,24,27,30,34,34,35,44,65" in qa)
     check("I6f ostanki 619/102/95", "!== 619" not in qa and "≠ 102" not in qa and "sidra ≠ 95" not in qa, "stale pini!")
 
@@ -186,7 +186,7 @@ def main():
 
     # ---------- I10: README ----------
     rd = open(README).read()
-    check("I10a README P134 bullet", "po P134" in rd)
+    check("I10a README P134 bullet", "**P134 (poročna 04455, polno leto 1905" in rd)
     check("I10b README 632/115", "632" in rd and "115" in rd)
     check("I10c README P135 lead", "P135" in rd)
 

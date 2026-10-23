@@ -1,0 +1,692 @@
+{
+ "source": "Matricula Online — SI-LNSA/.matricula, Podzemelj, Poročne knjige, P Podzemelj 1873-1922 (04455), skeni 129–131 (hosted-images.matricula-online.eu)",
+ "frame": {
+  "year": 1906,
+  "scans": [
+   129,
+   130,
+   131
+  ],
+  "pages": [
+   128,
+   129,
+   130
+  ],
+  "pageEqualsScanMinus1": true,
+  "confirmationNo": 21,
+  "heading": "rokopisna glava »1906« na s129 (P134-lead POTRJENA; pod njo še 1905-vpis 17) + velika tiskana glava »Traunungs=Buč.« na s130/s131 + rokopisna glava »1907« na s132 (P136 LEAD)",
+  "distribution": "s129: v1–v4 (4) · s130: v5–v8 + neostevecen vpis (5) · s131: v9–v11 (3)"
+ },
+ "lead": {
+  "predicted": "min 4 vpisov s129 (v1 Jän 15 Djelonia? 1 u Kroatien Frana Martinkovič? × Gajiče 35 Catharina Simec + v2 Jän 29 Krasinec 25 Brodnič? 49 + v3 Županič × Vrdomari? WTW + v2 Margaretha WTW = 2 VDOVI v 2 dneh; mejo preveriti s130+s131!)",
+  "actual": 12,
+  "corrections": [
+   "min 4 vpisov → 12 vpisov s129–s131 (3× podcenjeno)",
+   "v2 Krasinec 25 → Krasinec 35 (h35 = 2. dokaz!); v2 Brodnič? → BRODARIČ",
+   "v2 Margaretha Šurbaern? wtw → Margareth ŽUPANIČ LEDIG (33) — ni vdova!",
+   "v3 Vrdomari? → Anna BRODARIČ (LEDIG 23) — ni vdova; WTW = v3 ŽENIN Nicolaus Županič 40 WITWER!",
+   "2 VDOVI v 2 dneh → 2 WITWERJA (v2+v3) + 1 mlada WITWA (v1 Catharina Simec 24!)",
+   "v4 Ojerm? 23 → Germ 28 (1898-v22 isti h28!)",
+   "★ NEOSTEVCEN vpis Mai 27 med v8 in v9 (1. v poročni liniji!) — skupaj 12 vpisov (11 št. + 1 brez)"
+  ]
+ },
+ "entries": [
+  {
+   "row": 1,
+   "date": "15. januar 1906 (ponedeljek)",
+   "scan": 129,
+   "page": 128,
+   "groom": {
+    "name": "Franza? Martinkovič [~ Franca/Frano]",
+    "place": "Đeleković? 1, plane? [pf.?] Krašić? in Croatiën [~ — 3. hrvaški vpis linije!]",
+    "stand": "Besitzerssohn",
+    "age": 31,
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Catharina SIMEC (roj. KAMBIČ? [~ — vdovski priimek!])",
+    "place": "Grišiče? 35 [~ — cf. P132 Grišiče? 35!]",
+    "stand": "½ Hüblerin",
+    "age": 24,
+    "status": "WITWE — mlada vdova!"
+   },
+   "groomParents": {
+    "father": "Mihael Martinkovič, Besitzer",
+    "mother": "Maria Čipurič? [~ Lipurič?]"
+   },
+   "brideParents": {
+    "father": "Matthias KAMBIČ, ½ griblar",
+    "mother": "Maria Pavličič"
+   },
+   "witnesses": [
+    "Anton Nemanič? [~]",
+    "Mathias Pavličič"
+   ],
+   "witnessStatus": "{ skupni status obe priči ½ Hübler (2. skupni status linije — cf. P134 v2!)",
+   "urkunden": "Sodedba? [~ nejasen dokument-tip] občine Krašič? [~ Kvašič?] (HRVAŠKA — ženinova občina!) z dne 2/1? 1906 br. 29. Jamški? [~ jamstveni list?] + oklicni list od reč. tega sveta v Krašič? od 2/1 in 11/1. 1906 št: 5",
+   "priest": "Jos. Rauy",
+   "anomalies": [
+    "★ 1. vpis z IZOSTANIM nevestinim konsentom (samo ženinova stran Krašić — nevesta lokalna vdova?)",
+    "nevesta = vdova z roj. priimkom KAMBIČ (oče Matthias KAMBIČ!) — poročena pod vdovskim priimkom SIMEC; pokojni mož = SIMEC [~ morda h35-družina cf. v9!]"
+   ]
+  },
+  {
+   "row": 2,
+   "date": "29. januar 1906 (ponedeljek)",
+   "scan": 129,
+   "page": 128,
+   "groom": {
+    "name": "Nicolaus BRODARIČ",
+    "place": "Krasinec 35 (lead 25 → KOREKCIJA)",
+    "stand": "½ griblar",
+    "age": 49,
+    "status": "WITWER"
+   },
+   "bride": {
+    "name": "Margareth ŽUPANIČ (lead Šurbaern? → KOREKCIJA)",
+    "place": "Krasinec 18",
+    "stand": "½ griblarin? [~]",
+    "age": 33,
+    "status": "ledig"
+   },
+   "groomParents": {
+    "father": "Johann Brodarič, ½ griblar",
+    "mother": "Ana Vorne? [~ Tome?]"
+   },
+   "brideParents": {
+    "father": "Mathias Županič, ½ griblar",
+    "mother": "Catharina Harašinič"
+   },
+   "witnesses": [
+    "Joseph Dragoš",
+    "Peter Perdinec"
+   ],
+   "witnessStatus": "{ skupni status obe priči ½ Hübler",
+   "urkunden": "Ženitovanjsko zvoljenica občine Podzemelj od 28/1. 1906 št: 3",
+   "priest": "Jos. Rauy",
+   "anomalies": [
+    "★ DVOJNI-IZMENJAVNI DRUBEL 1/2 (cf. v3!): h35 Brodarič-ženin × h18 Županič-nevesta",
+    "⚠️ 2 različna Brodarič-očeta v h35 (Johann×Vorne v2 / Nicolaus×Tome v3) = 2 družini v eni hiši? [~ brata!]"
+   ]
+  },
+  {
+   "row": 3,
+   "date": "29. januar 1906 (ponedeljek)",
+   "scan": 129,
+   "page": 128,
+   "groom": {
+    "name": "Nicolaus ŽUPANIČ",
+    "place": "Krasinec 18",
+    "stand": "½ griblar",
+    "age": 40,
+    "status": "WITWER (lead WTW = žENIN, ne nevesta!)"
+   },
+   "bride": {
+    "name": "Anna BRODARIČ (lead Vrdomari? → KOREKCIJA)",
+    "place": "Krasinec 35",
+    "stand": "½ griblarstocha? [~ »½ griblarstof.?«]",
+    "age": 23,
+    "status": "ledig"
+   },
+   "groomParents": {
+    "father": "Mathias Županič, ½ griblar",
+    "mother": "Catharina Harašinič"
+   },
+   "brideParents": {
+    "father": "Nicolaus Brodarič, ½ griblar",
+    "mother": "Anna Tome"
+   },
+   "witnesses": [
+    "Joseph Dragoš",
+    "Peter Perdinec"
+   ],
+   "witnessStatus": "{ skupni ½ Hübler (isti priči kot v2 — isti dan!)",
+   "urkunden": "Ženitovanjsko zvoljenica občine Podzemelj od 28/1. 1906 št: 2 + ustrmeno? sodno dovoljenje za voj. neveljavnost? zgornjih prič [~ — NOV razlog: vojaška neveljavnost?]",
+   "priest": "Jos. Rauy",
+   "anomalies": [
+    "★ DVOJNI-IZMENJAVNI DRUBEL 2/2: h18 Županič-ženin × h35 Brodarič-nevesta (v2+v3 = dve poroki dveh hiš, ki si izmenjata po sina in hči — 1. tak vzorec linije!)",
+    "v2-nevesta + v3-ženin = BRAT-SESTRA Županič (isti starši!)"
+   ]
+  },
+  {
+   "row": 4,
+   "date": "12. februar 1906 (ponedeljek — MASA ×3!)",
+   "scan": 129,
+   "page": 128,
+   "groom": {
+    "name": "Nicolaus PERDINEC",
+    "place": "Germ 28 (lead Ojerm? 23 → KOREKCIJA; 1898 v22 isti h28!)",
+    "stand": "½ griblarst?-Sohn [~]",
+    "age": 24,
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Maria Krasievič? [~ Krastevič?]",
+    "place": "Gradac 6 (1905→06 nazaj!)",
+    "stand": "½ Laifstarš? [~ nejasni status — cf. oče Laifstar?]",
+    "age": 24,
+    "status": "ledig"
+   },
+   "groomParents": {
+    "father": "Anton Perdinec, ½ griblar",
+    "mother": "Anna Tome"
+   },
+   "brideParents": {
+    "father": "Johann Krasievič?, Laifstar? [~]",
+    "mother": "Maria BUTALA"
+   },
+   "witnesses": [
+    "Johan Novak",
+    "Martin Perdinec"
+   ],
+   "witnessStatus": "{ skupni ½ Hübler",
+   "urkunden": "Ženitovanjska zvoljenica občine Gradac od 8/2. 1906 štev: 6",
+   "priest": "Jos. Rauy",
+   "anomalies": [
+    "MASA 12.2. ×3 (v4+v5+v6 — 2. največji dan leta)"
+   ]
+  },
+  {
+   "row": 5,
+   "date": "12. februar 1906 (ponedeljek — MASA ×3!)",
+   "scan": 130,
+   "page": 129,
+   "groom": {
+    "name": "Peter Hvalič? [~ Hvala?]",
+    "place": "Boginja vas 14 (P132 kontinuiteta!)",
+    "stand": "½ griblarst?-Sohn [~]",
+    "age": 26,
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Anna Berkopec?",
+    "place": "Zemelj 13 (1894→06 — 12-letna luknja!)",
+    "stand": "½ griblarstocha? [~]",
+    "age": 20,
+    "status": "ledig"
+   },
+   "groomParents": {
+    "father": "Johann Hvalič?, ½ griblar",
+    "mother": "Maria Požek? [~ Poček?]"
+   },
+   "brideParents": {
+    "father": "Mathias Berkopec?, ½ griblar",
+    "mother": "Barbara Tome"
+   },
+   "witnesses": [
+    "Georg Klepec (18.+ leto mreže!)",
+    "Georg Žnidaršič? [~]"
+   ],
+   "witnessStatus": "{ skupni ½ Hübler",
+   "urkunden": "Ženitovanjsko zvoljenica občine Podzemelj od 10/2. 1906 št: 5 + sodno? ustno? dovoljenje za ml. nevesto v navzočnosti zgornjih prič (formula P134!)",
+   "priest": "Jos. Rauy"
+  },
+  {
+   "row": 6,
+   "date": "12. februar 1906 (ponedeljek — MASA ×3!)",
+   "scan": 130,
+   "page": 129,
+   "groom": {
+    "name": "Franz ŠUPARNIČ? [~ Šiparnič? — dve pisavi cf. v8!]",
+    "place": "Kloster 16 (NOVA hiša Klostra!)",
+    "stand": "½ güblarst?-Sohn [~]",
+    "age": 24,
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Barbara ŽUPANIČ",
+    "place": "Krasinec 18",
+    "stand": "½ griblarstocha? [~]",
+    "age": 24,
+    "status": "ledig"
+   },
+   "groomParents": {
+    "father": "Franz Šuparnič?, ½ griblar",
+    "mother": "Margareth JAKŠA (P130 mreža!)"
+   },
+   "brideParents": {
+    "father": "Mathias Županič, ½ griblar",
+    "mother": "Catharina Harašinič (= v2/v3! — ★ 3. SOROJENEC!)"
+   },
+   "witnesses": [
+    "Jakob Šuparnič?",
+    "Johann BUTALA (cf. v4 mati!)"
+   ],
+   "witnessStatus": "{ skupni ½ Hübler",
+   "urkunden": "Ženitovanjska zvoljenica občine Gradac od 9/2. 1906 št: 29 (Kloster ∈ občina Gradac? [~]) — nevestin konsent [~ izostanek/cut]",
+   "priest": "Jos. Rauy",
+   "anomalies": [
+    "★ 3. ŽUPANIČ-sorojenec h18 v ENEM LETU (v2 Margareth + v3 Nicolaus + v6 Barbara — isti starši Mathias × Catharina Harašinič = 1. HIŠA Z 3 BLOKI V ENEM LETU = NOVI REKORD linije — prej 2!)"
+   ]
+  },
+  {
+   "row": 7,
+   "date": "19. februar 1906 (ponedeljek)",
+   "scan": 130,
+   "page": 129,
+   "groom": {
+    "name": "Mathias NOVAK",
+    "place": "Otok 14 (1900/01→06!)",
+    "stand": "½ griblarst?-Sohn [~]",
+    "age": 24,
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Catharina PERUŠIČ (NOV PRIIMEK!)",
+    "place": "Lahinja 5 pf. Črnomelj (NOVA VAS!)",
+    "stand": "Bauernstochter",
+    "age": 17,
+    "status": "ledig"
+   },
+   "groomParents": {
+    "father": "Nicolaus Novak, ½ griblar",
+    "mother": "Catharina Tome"
+   },
+   "brideParents": {
+    "father": "Martin Perušič, Bauer",
+    "mother": "Catharina Judnič? [~]"
+   },
+   "witnesses": [
+    "Johann KRIŽAN (½ Hübler)",
+    "Peter Klavec? [~ Plavec?] (½ Hübler? [~ ½ Bauer?])"
+   ],
+   "witnessStatus": "vsak svoj status (NE skupni — edina takšna med 1906 paricami!)",
+   "urkunden": "Ženitovanjska zvoljenica občine Podzemelj od 17/2. 1906 št: 7 + javni? zvok? in oklicni list od župnjega urada v Črnomlju od 15/2. 1906 št: 102 + sodno dovoljenje za ml. nevesto od okrajnega sodišča v Črnomlju od 15/2. 1906 (mladoletna 17!)",
+   "priest": "Jos. Rauy",
+   "anomalies": [
+    "★ 17-letna nevesta = 2. najmlajša linije (izenači P134 v12 Milek 17!) + 1. dokaz mladoletniškega sodnega dovoljenja za NEVESTO pri 17"
+   ]
+  },
+  {
+   "row": 8,
+   "date": "19. februar 1906 (ponedeljek)",
+   "scan": 130,
+   "page": 129,
+   "groom": {
+    "name": "Johann ŠUPARNIČ? [~ Šiparnič? — 2. pisava]",
+    "place": "GRIBLJE 73 (★ NOVA HIŠA = NOVI MAKSIMUM LINIJE h65→h73!)",
+    "stand": "½ griblarst?-Sohn [~]",
+    "age": 26,
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Helena TOME (TOME-mreža 5/5!)",
+    "place": "Primostek 18 (1893→06 — 13-letna luknja!)",
+    "stand": "½ griblarstocha? [~]",
+    "age": 21,
+    "status": "ledig"
+   },
+   "groomParents": {
+    "father": "Nicolaus Šuparnič?, ½ griblar",
+    "mother": "Catharina PERDINEC"
+   },
+   "brideParents": {
+    "father": "Martin Tome, ½ griblar",
+    "mother": "Margareth KAMBIČ (h34/35-mreža!)"
+   },
+   "witnesses": [
+    "Johann Šuparnič? (½ Hübler)",
+    "Mathias Delijanec? [~] (1 Hübler [~ »ein Hübler«])"
+   ],
+   "witnessStatus": "ločena statusa (½ + 1)",
+   "urkunden": "Ženitovanjska zvoljenica občine Griblje od 19/2. 1906 št: 1 + proglas polnoletnosti za nevesto od okrajnega sodišča v Metliki x dne 18/4. 1905",
+   "priest": "Jos. Rauy"
+  },
+  {
+   "row": "neostevecen (med 8 in 9!)",
+   "date": "27. maj 1906 (★ NEDELJA!)",
+   "scan": 130,
+   "page": 129,
+   "groom": {
+    "name": "Johann Plut? [~ Plet? — cf. P134 Plut!]",
+    "place": "Primostek 1 (P130 Prevec-hiša — menjava? [~])",
+    "stand": "½ Hüblers-Sohn (explicitno!)",
+    "age": 43,
+    "status": "ledig?"
+   },
+   "bride": {
+    "name": "Maria Seidrisper? [~ Seidenspinner? — NOV PRIIMEK?]",
+    "place": "Podzemelj 32 (1896→06!)",
+    "stand": "Hausbesitzerin u. Wittwe (★ 1. kombinacija hišna-gospodarica + vdova!)",
+    "age": 48,
+    "status": "WITWE"
+   },
+   "groomParents": {
+    "father": "Martin Plut?, ½ Hübler",
+    "mother": "Maria PALČIČ (P130 mreža!)"
+   },
+   "brideParents": {
+    "father": "Mathias Hübler, ½ Hübler",
+    "mother": "Maria PERKO"
+   },
+   "witnesses": [
+    "Josef Plut?",
+    "Johan Škala"
+   ],
+   "witnessStatus": "{ skupni ½ Hübler",
+   "urkunden": "Ženitovanjsko zvoljenica občine Podzemelj od 16/5. 1906 št: 8 + ★ SPREGLED DVEH OKLICEV od župnjega ordinarijata v Ljubljani x dne 3/5. 1906 št: 2170 (NOV dokument-tip — dispensa dveh razglasov!) + sodno? okrajnega glavarstva v Črnomlju z dne tožencem? 12/5. 1906 št: 14130 [~]",
+   "priest": "★ Hx.? Herr? Jacobus Pavlovič?, Phluser? [~], SUHOR, PRO DELEGATO (1. gostujoči duhovnik poročne linije!) + tiskani vertikalni vtis »Satzbach? Druck u. Verlag v. Schichl.« [~]",
+   "anomalies": [
+    "★ 1. VPIS BREZ ŠTEVILKE poročne linije (med 8 in 9 — duhovnik je pozabil oštevilčiti; naslednji vpis = 9!)",
+    "★ NEDELJSKI porok (27.5.!) — cf. P134 11/11 ponedeljkov!",
+    "★ 1. GOSTUJOČI duhovnik »pro delegato« iz SUHORja",
+    "★ spregled dveh oklicev = NOV dokument-tip"
+   ]
+  },
+  {
+   "row": 9,
+   "date": "10. junij 1906 (★ NEDELJA!)",
+   "scan": 131,
+   "page": 130,
+   "groom": {
+    "name": "Martin PAPRIČ? [~ — NOV PRIIMEK]",
+    "place": "GRIBLJE 31 (1901×2→06!)",
+    "stand": "Wagner (poklic — cf. P131 Wagnermeister!)",
+    "age": 49,
+    "status": "witwer? [~ marks ·1]"
+   },
+   "bride": {
+    "name": "Barbara SIMEC",
+    "place": "GRIBLJE 35 (1905→06 — 2. dokaz h35!)",
+    "stand": "½ Hüblers-Tochter (explicitno!)",
+    "age": 48,
+    "status": "ledig? [~]"
+   },
+   "groomParents": {
+    "father": "Georg Paprič?, ½ Hübler",
+    "mother": "Margareth ŽUGELJ (P128 v7-mreža!)"
+   },
+   "brideParents": {
+    "father": "Johann SIMEC, ½ Hübler",
+    "mother": "Maria JAKOFČIČ (P132 dve pisavi!)"
+   },
+   "witnesses": [
+    "Martin Škala",
+    "Marko PEZDIREC? [~ — slavna družina!]"
+   ],
+   "witnessStatus": "{ ¼ Hübler? [~] skupni?",
+   "urkunden": "Ženitovanjska zvoljenica občine Griblje x dne 10/6. 1906 št: 48 (★ ISTI DAN kot poroka!)",
+   "priest": "Jos. Rauy",
+   "anomalies": [
+    "★ 2. NEDELJSKI porok leta (10.6.!) — 9 dni za v9m",
+    "★ ISTI-DNEVNI konsent (10/6 = dan poroke!)"
+   ]
+  },
+  {
+   "row": 10,
+   "date": "2. julij 1906 (ponedeljek)",
+   "scan": 131,
+   "page": 130,
+   "groom": {
+    "name": "Johann HÜBLAR? [~ Hubljar?]",
+    "place": "Krasinec 48 (NOVA hiša!)",
+    "stand": "Gübler? [~ status-vaha cf. P132!]",
+    "age": 62,
+    "status": "WITWER"
+   },
+   "bride": {
+    "name": "Maria Jaklič? [~ — NOV PRIIMEK]",
+    "place": "Zemelj 15 (NOVA hiša poročne linije!)",
+    "stand": "½ gbl. Tochter",
+    "age": 24,
+    "status": "ledig"
+   },
+   "groomParents": {
+    "father": "Georg Hüblar?, ¼ Hübler",
+    "mother": "Margareth Marertič? [~]"
+   },
+   "brideParents": {
+    "father": "Nicolaus Jaklič?, ½ Hübler",
+    "mother": "Maria KRALJ (P132 61⅔-mreža!)"
+   },
+   "witnesses": [
+    "Mathias Jaklič? (= oče neveste?)",
+    "Mathias HARAŠINIČ"
+   ],
+   "witnessStatus": "{ skupni ¼ Hübler",
+   "urkunden": "Ženitovanjska zvoljenica občine Podzemelj z dne 30/6. 1906 št: 9",
+   "priest": "Jos. Rauy",
+   "anomalies": [
+    "★ 62-LETNI ŽENIN = NAJSTAREJŠI POROČNE LINIJE 1886–1906 (rekord! prej Georg Kralj 61⅔ P132 v16!) — 38-letna razlika z nevesto (24)!"
+   ]
+  },
+  {
+   "row": 11,
+   "date": "26. november 1906 (ponedeljek)",
+   "scan": 131,
+   "page": 130,
+   "groom": {
+    "name": "Johan KURE",
+    "place": "GRIBLJE 62 (★ KURE-kontinuiteta 4. poročni dokaz — 1893 + 1898 + 1904 → 1906!)",
+    "stand": "½ griblarsh-Sohn? [~]",
+    "age": 22,
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Maria Požek? [~ Poček?]",
+    "place": "GRIBLJE 21 (1887→06 = 19-letna luknja poročne linije! + 1914-krstna marginalia Danica!)",
+    "stand": "½ griblarsh-Hofstochter? [~ »½ griblarsh-Hoftar?« cf. P134 griblarst.Hofe?]",
+    "age": 24,
+    "status": "ledig"
+   },
+   "groomParents": {
+    "father": "Anton Kure, ½ Hübler",
+    "mother": "Barbara KRIŽAN"
+   },
+   "brideParents": {
+    "father": "Johan Požek?, ¼ Hübler",
+    "mother": "Maria Brinec? [~]"
+   },
+   "witnesses": [
+    "Nicolaus Kure (= ženinova družina h62!)",
+    "Johann DRAGOŠ (11.+ leto mreže!)"
+   ],
+   "witnessStatus": "{ skupni ½ Hübler",
+   "urkunden": "Ženitovanjska zvoljenica občine Griblje z dne 26. nov. 1906 št: 3 + Hofmeister? [~ nejasen dokument-tip] sodno dovoljenje za ml. ženina v navzočnosti zgornjih prič (formula!) + dovoljenje c. kr. dežel. predsedstva? v Ljubljani z dne 24. novembra 1906 št: 23993 (★ NOVI NAJVIŠJI št. — prej 22190 P133!)",
+   "priest": "Jos. Rauy"
+  }
+ ],
+ "excluded": [],
+ "stats": {
+  "entries": 12,
+  "numbered": 11,
+  "unnumbered": 1,
+  "gribljeWeddings": 3,
+  "gribljeBlocks": 6,
+  "houses": [
+   "73 (NOVA — nov maksimum!)",
+   "31 (3. dokaz)",
+   "35 (2. dokaz)",
+   "62 (4. dokaz KURE)",
+   "21 (2. poročni dokaz — 1887→06!)"
+  ],
+  "mondays": "10/12",
+  "sundays": 2,
+  "rauy": "11/12 + 1 gost (Jacobus Pavlovič? pro delegato, Suhor)",
+  "vitals": "632 → 637",
+  "blocks": "115 → 121",
+  "p80Houses": "64 → 65 (+h73; h21 že od 1887!)",
+  "ptGap": 12,
+  "gribljeMarriages": 3,
+  "gribljeMarriageRows": [
+   8,
+   9,
+   11
+  ],
+  "gribljeHouses": [
+   "73",
+   "31",
+   "35",
+   "62",
+   "21"
+  ],
+  "gribljeBlocksNew": 5,
+  "gribljeHousesNewFirst": [
+   "73",
+   "21"
+  ],
+  "gribljeRepeat": [
+   "31 (1901×2→06)",
+   "35 (1905→06)",
+   "62 (1893+98+04→06)"
+  ],
+  "dates": "15.1 + 29.1 ×2 + 12.2 ×3 (MASA!) + 19.2 ×2 + 27.5 (ned.) + 10.6 (ned.) + 2.7 + 26.11",
+  "weekdays": "10/12 PONEDELJKOV + 2 NEDELJI (27.5.! + 10.6.! — P134 je imelo 11/11!)",
+  "priests": {
+   "Jos. Rauy": 11,
+   "Hx.? Herr? Jacobus Pavlovič? (pro delegato, Suhor) [~]": 1
+  },
+  "housesNew": [
+   "Lahinja 5 pf. Črnomelj (NOVA VAS!)",
+   "Griblje 73 (NOVI MAKSIMUM!)",
+   "Griblje 21 (1887→06)",
+   "Kloster 16",
+   "Krasinec 48",
+   "Zemelj 15"
+  ],
+  "surnamesNew": [
+   "Perušič",
+   "Paprič? [~]",
+   "Jaklič? [~]",
+   "Seidrisper? [~]",
+   "Šuparnič?/Šiparnič? [~]",
+   "Delijanec? [~]",
+   "Marertič? [~]",
+   "Judnič? [~]",
+   "PAVLOVIČ? (duhovnik!)"
+  ],
+  "surnamesRepeat": [
+   "TOME ×5",
+   "HÜBLER ×7",
+   "KURE ×3 (1 vpis!)",
+   "PERDINEC ×4",
+   "POŽEK ×3",
+   "HARAŠINIČ ×3",
+   "KAMBIČ ×3",
+   "ŠUPARNIČ ×4",
+   "BRODARIČ ×5",
+   "SIMEC ×2",
+   "BUTALA ×2",
+   "KRIŽAN ×2",
+   "DRAGOŠ 11.+",
+   "KLEPEC 18.+",
+   "PEZDIREC [~]",
+   "PALČIČ",
+   "ŽUGELJ",
+   "JAKŠA",
+   "KRALJ",
+   "JAKOFČIČ"
+  ],
+  "bloki04455": "115 → 120",
+  "sidra": "108 → 113 (+1906:5)"
+ },
+ "crossChecks": [
+  "v2+v3: isti priči (Dragoš+Perdinec) + isti dan 29.1. + consenta 28/1 št.3 in št.2 = zaporedna številka istega dne (dve poroki, dve soglasji, en občinski register!)",
+  "v2-nevesta + v3-ženin + v6-nevesta = trije ŽUPANIČ sorocjeniki h18 (Mathias Županič × Catharina Harašinič = starši na VSI TRIH R-vegetacijah!)",
+  "v6 consent občine Gradac = 1. dokaz, da je Kloster v občini Gradac [~]",
+  "v1 KAMBIČ-oče (Grišiče?) × v8 mati KAMBIČ (Primostek-Tome) × P134 h34 KAMBIČ = KAMBIČ-mreža 1906 ×3",
+  "TOME-mreža ×5: v3 mati-neveste (Brodarič) + v4 mati-ženina (Perdinec) + v5 mati-neveste (Berkopec) + v7 mati-ženina (Novak) + v8 NEVESTA (Primostek) — matere TOME v 4 različnih družinah + 1 nevesta!",
+  "KURE: v11 ženin h62 (4. dokaz) + priča Nicolaus Kure + oče Anton Kure — h62-družina 3 osebe v 1 vpisu",
+  "BUTALA ×2: v4 mati-neveste Maria Butala + v6 priča Johann Butala",
+  "v9 ½ Hüblers-Tochter nevesta (oče Johann Simec ½ Hübler) × v1 vdova Catharina SIMEC (½ Hüblerin — pokojni mož SIMEC?) = SIMEC-mreža 1906 ×2 [~]",
+  "v10 Hüblar-ženin (62) × v9m Hübler-oče neveste × Hübler-statusi ×6 = HÜBLER-mreža 1906 (status kot priimek!)",
+  "v7 oklicni list župnjega urada Črnomelj št: 102 = Lahinja ∈ pf. Črnomelj (1. pf.-Črnomelj oklicni list linije!)",
+  "v9m ord. Ljubljana №2170 (3/5) × v11 deželna vlada №23993 (24/11) = LJUBLJANA-mreža 1906 ×2 (cf. P134 »Liubljani«!)"
+ ],
+ "anomalies": [
+  "★ 1. NEOSTEVCEN vpis poročne linije (v9m Mai 27 — številko 9 dobi šele naslednji vpis)",
+  "★ 1. GOSTUJOČI DUHOVNIK »pro delegato« (Jacobus Pavlovič?, Suhor — v9m)",
+  "★ 2 NEDELJSKI POROKI (27.5. + 10.6.) — P134 je imel 11/11 ponedeljkov!",
+  "★ 1. IZOSTANI nevestin konsent (v1 — samo Krašić/ženinova stran)",
+  "★ 62-letni ženin = rekord linije (v10)",
+  "★ h73 = nov maksimum hišnih številk (v8)",
+  "★ 1. hiša z 3 bloki v enem letu (h18 Županič: v2+v3+v6 — NOVI REKORD, prej 2!)",
+  "★ 2 WITWERJA + 1 mlada WITWA v januarju (v1 Simec 24! + v2 Brodarič 49 + v3 Županič 40) — lead »2 VDOVI« popravljeno",
+  "★ sodno dovoljenje »za voj. neveljavnost?« (v3 — NOV razlog [~])",
+  "★ spregled dveh oklicev (v9m — NOV dokument-tip)",
+  "★ isti-dnevni konsent (v9: 10/6 = poroka)",
+  "★ Hofmeister? [~] nejasen dokument-tip (v11)",
+  "17-letna nevesta z mladoletniškim sodnim dovoljenjem (v7 — 2. v liniji za P134 v12!)"
+ ],
+ "honesty": {
+  "uncertainReadings": [
+   "v1 ženinovo rojstno ime »Franza?« [~] (Franca/Frano) in vas »Đeleković? 1, plane? Krašić?« [~] — hrvaška vas nezanesljiva",
+   "v1 nevestina vas »Grišiče? 35« [~] — cf. P132 »Grišiče? 35«; konsent-občina »Krašič?/Kvašič?« [~]",
+   "v1 dokument-tip »Sodedba?« [~] — nejasen (Sodba? Sorodstvena?)",
+   "v2 mati ženina »Ana Vorne?« [~] — morda Tome (cf. v3!)",
+   "v3 status neveste »½ griblarstocha?« [~] — beseda nejasna (»½ griblarstof.?«)",
+   "v4 priimek neveste »Krasievič?/Krastevič?« [~] + status »½ Laifstarš?« [~] + očetov poklic »Laifstar?« [~] — NE rešeno",
+   "v5 priimek ženina »Hvalič?/Hvala?« [~] + priimek neveste »Berkopec?« [~] + mati »Požek?/Poček?« [~]",
+   "v6/v8 priimek »Šuparnič?/Šiparnič?« [~] — dve pisavi, ne rešeno katera osnovna",
+   "v7 priča2 »Peter Klavec?/Plavec?« [~] + status »½ Hübler?/½ Bauer?« [~] + mati neveste »Judnič?« [~]",
+   "v9m priimek ženina »Plut?/Plet?« [~] + priimek neveste »Seidrisper?/Seidenspinner?« [~] + gost. duhovnik »Hx.? Herr? Jacobus Pavlovič?, Phluser?« [~]",
+   "v9 priimek ženina »Paprič?« [~] (≠ Palčič — pisava jasno drugačna od v9m-mati!) + priča2 »Marko Pezdirec?« [~]",
+   "v10 priimek ženina »Hüblar?/Hubljar?« [~] + status »Gübler?« [~] + mati ženina »Marertič?« [~] + priimek neveste »Jaklič?« [~]",
+   "v11 status neveste »½ griblarsh-Hofstochter?« [~] + mati neveste »Brinec?« [~] + konsent-dokument »Hofmeister?« [~]",
+   "v9m tiskani vtis »Satzbach? Druck u. Verlag v. Schichl.« [~ — založba forme]",
+   "v11 deželni urad »c. kr. dežel. predsedstva?« [~] — vrsta urada nejasna",
+   "v1 ženin »Franza?« [~]",
+   "v1 vas »Đeleković? 1« [~]",
+   "v1 »plane? Krašić?« [~]",
+   "v1 mati ženina »Čipurič?/Lipurič?« [~]",
+   "v1 priča1 »Nemanič?« [~]",
+   "v2 mati ženina »Vorne?/Tome?« [~]",
+   "v2 status neveste »griblarin?« [~]",
+   "v3 status neveste »griblarstocha?« [~]",
+   "v4 priimek neveste »Krasievič?/Krastevič?« [~]",
+   "v4 očetov poklic »Laifstar?« [~]",
+   "v4 status neveste »½ Laifstarš?« [~]",
+   "v5 priimek ženina »Hvalič?/Hvala?« [~]",
+   "v5 priimek neveste »Berkopec?« [~]",
+   "v5 mati »Požek?/Poček?« [~]",
+   "v5 priča2 »Žnidaršič?« [~]",
+   "v6 priimek »Šuparnič?/Šiparnič?« [~]",
+   "v6 status »güblarst?-Sohn« [~]",
+   "v6 nevestin konsent [~ izostanek/cut]",
+   "v7 priča2 »Klavec?/Plavec?« [~]",
+   "v7 priča2 status »½ Hübler?/½ Bauer?« [~]",
+   "v7 mati neveste »Judnič?« [~]",
+   "v7 »javni? zvok?« [~]",
+   "v8 priimek »Šuparnič?/Šiparnič?« [~]",
+   "v8 status »griblarst?-Sohn« [~]",
+   "v8 priča2 »Delijanec?« [~]",
+   "v9m priimek ženina »Plut?/Plet?« [~]",
+   "v9m priimek neveste »Seidrisper?/Seidenspinner?« [~]",
+   "v9m gost. duhovnik »Hx.? Herr?« [~]",
+   "v9m »Phluser?« [~]",
+   "v9m tiskani vtis »Satzbach?« [~]",
+   "v9m »sod. okrajnega glavarstva za sledega?« [~]",
+   "v9 priimek ženina »Paprič?« [~]",
+   "v9 priča2 »Pezdirec?« [~]",
+   "v9 priči status »¼ Hübler?« [~]",
+   "v10 priimek ženina »Hüblar?/Hubljar?« [~]",
+   "v10 status ženina »Gübler?« [~]",
+   "v10 mati ženina »Marertič?« [~]",
+   "v10 priimek neveste »Jaklič?« [~]",
+   "v11 status neveste »griblarsh-Hofstochter?« [~]",
+   "v11 mati neveste »Brinec?« [~]",
+   "v11 konsent »Hofmeister?« [~]",
+   "v11 »dežel. predsedstva?« [~]",
+   "v11 status ženina »griblarsh-Sohn?« [~]",
+   "v1 dokument »Sodedba?« [~]",
+   "v1 »Jamški?« [~]",
+   "v3 »ustrmeno?« [~]",
+   "v3 »voj. neveljavnost?« [~]",
+   "v8 status priča2 »1 Hübler« [~]",
+   "v9 status ženina »witwer?« [~]",
+   "v9 status neveste »ledig?« [~]",
+   "v2 status neveste »ledig« (33!)",
+   "v10 status ženina »WITWER« (62!)",
+   "v9m status neveste »WITWE« (48, Hausbesitzerin!)",
+   "v1 marks »·1« = WITWE (kalibracija P134 v16!)",
+   "v2 marks »1·« = LEDIG (»/« = pohitela 1!)"
+  ],
+  "crossedOutWords": [],
+  "layoutNotes": [
+   "s129: R-stran zamaknjena ~1 celico navzdol (R-celica v4 = L-v3!) — vsebina dodeljena po konsentih/starših, ne po y",
+   "s129: glava »1906« MED v17-1905 in v1 (edini primer glave sredi strani doslej!)",
+   "s130: neostevecen vpis med v8 in v9 (številka 9 = Juni-vpis!)",
+   "s131: samo 3 vpisi + velika praznina (konec leta); glava »1907« šele na s132"
+  ]
+ }
+}
