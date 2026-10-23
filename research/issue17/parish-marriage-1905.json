@@ -1,0 +1,889 @@
+{
+ "source": "Matricula Online — SI-LNSA/.matricula, Podzemelj, Poročne knjige, P Podzemelj 1873-1922 (04455), skeni 125–129 (hosted-images.matricula-online.eu)",
+ "frame": {
+  "year": 1905,
+  "scans": [
+   125,
+   126,
+   127,
+   128,
+   129
+  ],
+  "pages": [
+   124,
+   125,
+   126,
+   127,
+   128
+  ],
+  "pageEqualsScanMinus1": true,
+  "confirmationNo": 20,
+  "heading": "rokopisna glava »1905.« na s125 (P133-lead POTRJENA) + velike tiskane glave »Traunungs=Buč.« na s126/s127/s128/s129",
+  "distribution": "s125: v1–v3 (3) · s126: v4–v7 (4) · s127: v8–v11 (4) · s128: v12–v16 (5) · s129: v17 (1)"
+ },
+ "lead": {
+  "predicted": "min 5 vpisov s125–s126 + v2 Griblje 39 Markočič? [~]",
+  "actual": 17,
+  "corrections": [
+   "min 5 vpisov → 17 vpisov s125–s129 (3× podcenjeno)",
+   "v2 Griblje 39 Markočič? → v2 = Griblje 34 Johann KAMBIČ (lead-v2 je bil v resnici v4 = Griblje 24 Mathias BRNC!)"
+  ]
+ },
+ "entries": [
+  {
+   "row": 1,
+   "date": "16. januar 1905",
+   "scan": 125,
+   "page": 124,
+   "groom": {
+    "name": "Joseph Muek [~ Mück/Milek]",
+    "place": "Germ 26 [~ vas nezanesljiva — morda 'Gern'/'Gerrn']",
+    "stand": "¼ griblar",
+    "age": 22,
+    "status": "1"
+   },
+   "bride": {
+    "name": "Maria Mue [~ Mück]",
+    "place": "Primostek 8",
+    "stand": "½ griblastdochter",
+    "age": 23,
+    "status": "1"
+   },
+   "parentsGroom": "Mathias Muek ¼ griblar × Maria Foras [~]",
+   "parentsBride": "Nicolaus Mue ½ griblar × Catharina Kastelic [~ Kaselic]",
+   "witnesses": [
+    "Johann Muek",
+    "Mathias Jakša"
+   ],
+   "witnessStatus": "{ ½ griblar (skupni?)",
+   "befunden": "ženitovanjska zglasmnica občine Podzemelj 9/1. 1905 št: 1; proglas polnoletnosti za ženina IN nevesto (c.k. sodišče Metlika 30/8 1904); dovoljenje c.k. deželne vlade v Laibachy 29. sept. 1904 № 13664",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "notes": "MUEK × MUE = isti priimek 2 pisavi (Mück/Milek-mreža P132!); P134-lead POTRJEN (v1 Jän 16 Muek × Muek); polnoletnost ZA OBA (22+23 < 24!)"
+  },
+  {
+   "row": 2,
+   "date": "20. februar 1905",
+   "scan": 125,
+   "page": 124,
+   "groom": {
+    "name": "Johann Kambič",
+    "place": "Griblje 34",
+    "stand": "¼ griblar",
+    "age": 27,
+    "status": "1"
+   },
+   "bride": {
+    "name": "Maria Dragoš",
+    "place": "Cerkvišče 4",
+    "stand": "½ gbl. Tochter",
+    "age": 19,
+    "status": "1"
+   },
+   "parentsGroom": "Mathias Kambič ¼ griblar × Catharina Brnc",
+   "parentsBride": "Joseph Dragoš ½ griblar × Dorotha Brodarič",
+   "witnesses": [
+    "Johan Požek [~ Poček?]",
+    "Mathias Muek [~]"
+   ],
+   "witnessStatus": "{ ½ Hübler [~ — skupni status obe priči!]",
+   "befunden": "ženitovanjska zglasnica občine Griblje 19/2. 1905 št: 1 + očetovo ustno dovoljenje za ml. nevesto v navzočnosti zgornjih prič",
+   "priest": "Jos. Rauy",
+   "griblje": true,
+   "notes": "GRIBLJE 34 = 3. poročni dokaz (1898 FILAK + 1899) = ★ MENJAVA FILAK/ŠILAK → KAMBIČ; DRAGOŠ-mreža; BRODARIČ-mreža; POŽEK (cf. v12-mati Catharina Požek!); ★ 1. SKUPNI STATUS PRIČ (½ Hübler za oba!)"
+  },
+  {
+   "row": 3,
+   "date": "20. februar 1905",
+   "scan": 125,
+   "page": 124,
+   "groom": {
+    "name": "Johann Schweiger",
+    "place": "Zastava 7 pf. Črnomelj",
+    "stand": "½ griblar",
+    "age": 35,
+    "status": "1"
+   },
+   "bride": {
+    "name": "Agnes Jakša",
+    "place": "Vranoviče 14",
+    "stand": "½ gbl. Tochter",
+    "age": 22,
+    "status": "1"
+   },
+   "parentsGroom": "Jakob Schweiger ½ griblar × Catharina Županič",
+   "parentsBride": "Joseph Jakša ½ griblar × Catharina Mue [~ Mück]",
+   "witnesses": [
+    "Johann Županič",
+    "Anton Schweiger"
+   ],
+   "witnessStatus": "{ ¼ griblar",
+   "befunden": "ženitovanjska zglasmnica občine Loka 9/2. 1905 št: 40; oklicni+samski+krstni list ženinov od župnega urada v Črnomelju 19/2 1905 št: 111; očetovo ustno dovoljenje za ml. nevesto v navzočnosti zgornjih prič",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "notes": "ZASTAVA 7 = nova hiša (P132: 8+9!); VRANOVIČE 14 = nova hiša (P132: 10+27+29!); JAKŠA-mreža (P130 ×2); ŽUPANIČ-mreža; formula »v navzočnosti zgornjih prič« = REŠITEV v2-formule!; občina Loka 2. dokaz"
+  },
+  {
+   "row": 4,
+   "date": "27. februar 1905",
+   "scan": 126,
+   "page": 125,
+   "groom": {
+    "name": "Mathias Brnce [~ Brnc]",
+    "place": "Griblje 24",
+    "stand": "¼ gbl.Pofu? [~ — sistematski nejasni status, cf. v14!]",
+    "age": 21,
+    "status": "1"
+   },
+   "bride": {
+    "name": "Maria Grabrijan",
+    "place": "Griblje 30",
+    "stand": "güblerin [~ güblerin/griblerin vaha]",
+    "age": 28,
+    "status": "1"
+   },
+   "parentsGroom": "Mathias Brnce ¼ griblar × Barbara Jakobič (= starši v12!)",
+   "parentsBride": "Mathias Perdinec gübler × Dorotha Jakobič",
+   "witnesses": [
+    "Marcus Perdinec gübler",
+    "Mathias Jakofčič"
+   ],
+   "witnessStatus": "{ ¼/½ griblar [~]",
+   "befunden": "ženitovanjska zglasnica občine Griblje 26/2. 1905 št: 2; proglas polnoletnosti za ženina (sodišče Črnomelj 28/1. 1905); dovoljenje c.kr. deželne vlade v Liubljani 20/2. 1905 № 3360",
+   "priest": "Jos. Rauy",
+   "griblje": true,
+   "notes": "★ DRUBEL 24+30 (2. poroka parice po 1902!); h24 = 3. dokaz (1895 + 1902 Brišec? = MENJAVA!); h30 = 4. dokaz (1889+1892+1902 LEGINA = MENJAVA!); ★ BRATA BRNC (v12!); ★ 1. pisava »Liubljani« za Laibach; starost 21 POTRJENA zoom 8× (ne 31!)"
+  },
+  {
+   "row": 5,
+   "date": "27. februar 1905",
+   "scan": 126,
+   "page": 125,
+   "groom": {
+    "name": "Joseph Štrucelj",
+    "place": "Griblje 44",
+    "stand": "½ griblar",
+    "age": 22,
+    "status": "1"
+   },
+   "bride": {
+    "name": "Barbara Černe",
+    "place": "Škrilje? 1 [~ NOVA VAS?]",
+    "stand": "½ gbl. Tochter",
+    "age": 21,
+    "status": "1"
+   },
+   "parentsGroom": "Mathias Štrucelj ½ griblar × Agnes Klobučar",
+   "parentsBride": "Johann Černe ½ griblar × Barbara Malevič [~ Maletič?]",
+   "witnesses": [
+    "Jakob Jötter? [~]",
+    "Marcus Šešak"
+   ],
+   "witnessStatus": "¼ griblar + ½ griblar",
+   "befunden": "ženitovanjska zglasnica občine Griblje 26/2. 1905 št: 3; proglas polnoletnosti za ženina (Črnomelj 28/1. 1905 — ISTI DAN kot v4!); očetovo ustno dovoljenje za ml. nevesto",
+   "priest": "Jos. Rauy",
+   "griblje": true,
+   "notes": "h44 = 3. dokaz = ★ ŠTRUCELJ-kontinuiteta (1903 P132 nevesta Dorothea!); KLOBUČAR (cf. P128 v1-priča!); ČERNE (cf. P131 v6 nezakonski!); ŠKRILJE? [~] nova vas?"
+  },
+  {
+   "row": 6,
+   "date": "6. marec 1905",
+   "scan": 126,
+   "page": 125,
+   "groom": {
+    "name": "Anton Slobodnik",
+    "place": "Metlika 36 (mesto!)",
+    "stand": "Besitzerssohn",
+    "age": 21,
+    "status": "1"
+   },
+   "bride": {
+    "name": "Maria Matkovič",
+    "place": "Dobravice 16",
+    "stand": "¼ griblastochf [pisar -tochf/sohf? cf. P133-lesson!]",
+    "age": 21,
+    "status": "1"
+   },
+   "parentsGroom": "Joseph Slobodnik Besitzer × Barbara Ramuta [~]",
+   "parentsBride": "Matija Matkovič ¼ griblar × Maria Hojrič [~]",
+   "witnesses": [
+    "Leopold Weis",
+    "Marcus Matkovič"
+   ],
+   "witnessStatus": "{ Besitzer",
+   "befunden": "ženitovanjska zglasnica mestne občine Metlika 2/3 1905 № 217; proglas polnoletnosti za ženina (sodnija Metlika 16/1. 1905); deželna vlada Liubljana 3/2. 1905 № 3881; oklicni+samski list župnija Metlika 4/3 1905; upravno-sicelbo? [~] dovoljenje za ml. nevesto",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "notes": "★ 1. MESTNI ŽENIN z naslovom (Metlika 36!); SLOBODNIK = NOVI PRIIMEK (prej 'Skobernik?' misread!); ¼ griblar IZVEN Griblje (Dobravice — vzorec P130 v6 Kocjan!); MESTNA METLIKA zglasmnica (cf. P133 fare!)"
+  },
+  {
+   "row": 7,
+   "date": "6. marec 1905",
+   "scan": 126,
+   "page": 125,
+   "groom": {
+    "name": "Peter Kure",
+    "place": "Kapljiše? 4 [~ vas]",
+    "stand": "¼ griblarst.Hofe? [~]",
+    "age": 31,
+    "status": "1"
+   },
+   "bride": {
+    "name": "Margareth Križan",
+    "place": "Otok 20",
+    "stand": "¼ griblarst.Hofsa? [~]",
+    "age": 30,
+    "status": "1"
+   },
+   "parentsGroom": "Johann Kure ½ griblar × Maria Perdinec",
+   "parentsBride": "Peter Križan ¼ griblar × Anna Novak",
+   "witnesses": [
+    "Nicolaus Novak",
+    "Marcus Kure"
+   ],
+   "witnessStatus": "{ ¼ griblar",
+   "befunden": "ženitovanjska zglasmnica občine Podzemelj 3/3 1905 št: 2; ★ DISPENSA krvnega sodstva 3. KOLENA — k.n. št.ofordinarijata (Liubljana) 28. jan. 1905 № 342",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "notes": "★ 1. DISPENSA 3. KOLENA 1905 (№ 342 — vzorec P130 4.kol №236 + P133 3.kol №2063!); KURE-mreža (cf. h62!); KRIŽAN-mreža; KAPLJIŠE? [~] vas nezanesljiva (cf. v9!)"
+  },
+  {
+   "row": 8,
+   "date": "8. maj 1905",
+   "scan": 127,
+   "page": 126,
+   "groom": {
+    "name": "Johann Jurajevič",
+    "place": "Otok 11",
+    "stand": "½ griblar",
+    "age": 27,
+    "status": "1"
+   },
+   "bride": {
+    "name": "Maria Perdinec",
+    "place": "Primostek 17",
+    "stand": "½ griblastochf",
+    "age": 18,
+    "status": "1"
+   },
+   "parentsGroom": "Georg Jurajevič ½ griblar × Maria Hočevar [~ Hočivar]",
+   "parentsBride": "Mathias Perdinec ¼ griblar × Barbara FILAK",
+   "witnesses": [
+    "Georg Prus",
+    "Marcus Jurajevič"
+   ],
+   "witnessStatus": "{ ½ griblar",
+   "befunden": "★ ŽENIN JE AMERIŠKI DRŽAVLJAN — od konzula za Združene države v Trstu sporočilo, da ni denarnega zadržka za ženitev, 27. marca 1905; očetovo ustno dovoljenje za ml. nevesto v navzočnosti zgornjih prič",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "notes": "★ 1. AMERIŠKI DRŽAVLJAN LINIJE (konzul ZDA Trst 27.3.1905!); FILAK (h34-mreža — cf. v2 menjava!); JURAJEVČIČ #1 od 3 (v8/v9/v11 maj!); PERDINEC-mreža"
+  },
+  {
+   "row": 9,
+   "date": "15. maj 1905",
+   "scan": 127,
+   "page": 126,
+   "groom": {
+    "name": "Johann Jurajevič",
+    "place": "Kapljiše? 6 [~ vas — cf. v7!]",
+    "stand": "¼ griblar",
+    "age": 28,
+    "status": "1"
+   },
+   "bride": {
+    "name": "Maria Sodja? [~ Godja?]",
+    "place": "Priložje 26",
+    "stand": "¼ griblasn?-Hofsar [~]",
+    "age": 19,
+    "status": "1"
+   },
+   "parentsGroom": "Georg Jurajevič ¼ griblar × Anna Homa [~ Loma?]",
+   "parentsBride": "Georg Sodja? ¼ griblar × Maria Brodarič",
+   "witnesses": [
+    "Mathias Homa",
+    "Johann Mue"
+   ],
+   "witnessStatus": "{ ½ griblar",
+   "befunden": "ženitovanjska zglasmnica občine Polže? [~] 14/5. 1905 št: 3; ★ DISPENSA od krvnega porodstva v 3. kolenu enake stranske vrste — ordinariat 9/5. 1905 № 1816; očetovo ustno dovoljenje za ml. nevesto",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "notes": "★ 2. DISPENSA 3. KOLENA 1905 (№ 1816 — 6 dni pred poroko!); JURAJEVČIČ #2 — ⚠️ isti oče Georg kot v8 ampak druga mati (Hočevar/Homa) — polbrata ALI 2 Georga?; PRILOŽJE 26 = nova hiša (P133: 25!); MUE (Mück-mreža!)"
+  },
+  {
+   "row": 10,
+   "date": "15. maj 1905",
+   "scan": 127,
+   "page": 126,
+   "groom": {
+    "name": "Joseph Kapuršinič? [~ Kapurinič]",
+    "place": "Gakova? 3. draga, Virodina? [~], u Croatien",
+    "stand": "Bauernsohn",
+    "age": 34,
+    "status": "1"
+   },
+   "bride": {
+    "name": "Barbara Moravec",
+    "place": "Krasinec 22",
+    "stand": "¼ griblarin",
+    "age": 25,
+    "status": "1"
+   },
+   "parentsGroom": "Nicolaus Kapuršinič? Bauer × Maria Urbanek (hrvaški!)",
+   "parentsBride": "Johann Harašinič? [~ Marašinič] ¼ griblar × Anna Marantič? [~] ⚠️ NEPOROJENOST s priimkom hčere!",
+   "witnesses": [
+    "Nicolaus Harašinič",
+    "Jacobus Vergane? [~]"
+   ],
+   "witnessStatus": "{ ¼ griblar",
+   "befunden": "svedočba občine Virodina 8/5 1905; samski + oklicni list od župnega urada na Virodini 14. maja 1905 № 20",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "notes": "★ 2. HRVAŠKI VPIS 1905 (v10!); VIRODINA potrjena ×2 (vas + župnija!) [~ identifikacija]; KRASINEC 22 = nova hiša; ★ griblarin = ženska forma ¼; ⚠️ ANOMALIJA: oče Harašinič? ≠ hči Moravec; HARAŠINIČ-mreža (P132 ×10!)"
+  },
+  {
+   "row": 11,
+   "date": "22. maj 1905",
+   "scan": 127,
+   "page": 126,
+   "groom": {
+    "name": "Michael Jurajevič",
+    "place": "Krasinec 21? [~]",
+    "stand": "½ griblar",
+    "age": 27,
+    "status": "1"
+   },
+   "bride": {
+    "name": "Maria Zahorič? [~ Zahorie]",
+    "place": "Krasinec 6",
+    "stand": "½ griblastochf? [~]",
+    "age": 18,
+    "status": "1"
+   },
+   "parentsGroom": "Mathias Jurajevič ½ griblar × Maria Simec",
+   "parentsBride": "Mathias Zahorič? ½ griblar × Barbara Strauss",
+   "witnesses": [
+    "Mathias Strauss (¼ griblar)",
+    "Nicolaus Brodarič (½ griblar)"
+   ],
+   "witnessStatus": "posamezna",
+   "befunden": "ženitovanjska zglasmnica občine Podzemelj 24/5? [~ 22/5?] 1905 št: 4; NADVARSTVENO dovoljenje za ml. nevesto od c.kr. okrajnega sodišča v Metliki 13/5. 1905",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "notes": "JURAJEVČIČ #3 (3 ženińi v 3 tednih maja!); KRASINEC 6 + 21? = novi hiši; STRAUSS-mreža; NADVARSTVENO dovoljenje (vzorec P130/P131!); SIMEC (mati — cf. v13!)"
+  },
+  {
+   "row": 12,
+   "date": "22. maj 1905",
+   "scan": 128,
+   "page": 127,
+   "groom": {
+    "name": "Johann Brnce [~]",
+    "place": "Griblje 24",
+    "stand": "½ griblar",
+    "age": 24,
+    "status": "1"
+   },
+   "bride": {
+    "name": "Catharina Milek",
+    "place": "Griblje 65",
+    "stand": "½ griblarß-tochter [~]",
+    "age": 17,
+    "status": "1"
+   },
+   "parentsGroom": "Mathias Brnce ½ griblar × Barbara Jakobič (= v4!)",
+   "parentsBride": "Mathias Milek ½ griblar × Catharina Požek",
+   "witnesses": [
+    "Nicolaus Segna? [~] (¼ griblar)",
+    "Marcus Klobučar (gbl-žiglb? [~])"
+   ],
+   "witnessStatus": "posamezna",
+   "befunden": "ženitovanjska zglasmnica občine Griblje 24/5. 1905 št: 4; očetovo ustno dovoljenje za ml. nevesto; ★ VMET (nem.): »Auf Folge-Erlasses der k.k. Landesregierung für Krain vom 26/4. 1905 Z: 15129 wird angemerkt, dass der Taufname des Brunc richtig Anna lautet« [~]",
+   "priest": "Jos. Rauy",
+   "griblje": true,
+   "notes": "★ BRATA BRNC (v4 Mathias 21 + v12 Johann 24 — isti starši, h24 2 bloka v letu!); h65 = 3. dokaz = ★ MÜCK/MILEK-kontinuiteta (1903!); POŽEK (= v2-priča!); KLOBUČAR; ★ 1. NEMŠKI VMET poročne linije (k.k. Landesregierung № 15129) [~ vsebina] = DRUBEL"
+  },
+  {
+   "row": 13,
+   "date": "29. maj 1905",
+   "scan": 128,
+   "page": 127,
+   "groom": {
+    "name": "Mathias Simec",
+    "place": "Griblje 18",
+    "stand": "¼ griblar",
+    "age": 31,
+    "status": "1"
+   },
+   "bride": {
+    "name": "Maria Kambic",
+    "place": "Griblje 34",
+    "stand": "¼ gbl. Tochter",
+    "age": 30,
+    "status": "1"
+   },
+   "parentsGroom": "Georg Simec ¼ griblar × Anna Milek",
+   "parentsBride": "Mathias Kambic ¼ griblar × Catharina Brnce (= v2!)",
+   "witnesses": [
+    "Joseph Dragoš (= v2-nevestin priimek!)",
+    "Mathias Klepec ½ griblar"
+   ],
+   "witnessStatus": "{ ½ griblar",
+   "befunden": "ženitovanjska zglasnica občine Griblje 28/5. 1905 št: 5",
+   "priest": "Jos. Rauy",
+   "griblje": true,
+   "notes": "★ SESTRA v2-ženina (h34 2 bloka v letu = BRAT-SESTRA vzorec P132 h11!); h18 = 3. dokaz = ★ SIMEC-kontinuiteta 8 LET + isto ime Mathias (1897!); MILEK (mati — 2. v letu!); DRAGOŠ cross-entry = DRUBEL"
+  },
+  {
+   "row": 14,
+   "date": "29. maj 1905",
+   "scan": 128,
+   "page": 127,
+   "groom": {
+    "name": "Joseph Perdinec",
+    "place": "Griblje 10",
+    "stand": "¼ gbl.Pofu? [~ — 2. dokaz statusa!]",
+    "age": 25,
+    "status": "1"
+   },
+   "bride": {
+    "name": "Anna Križan",
+    "place": "Griblje 35 (★ korekcija 34 PREČRTANO → 35 v vpisu!)",
+    "stand": "¼ gbl. Tochter",
+    "age": 34,
+    "status": "1"
+   },
+   "parentsGroom": "Johann Perdinec ¼ griblar × Anna Jakobič",
+   "parentsBride": "Johann Križan ¼ gbl × Anna Strauss",
+   "witnesses": [
+    "Mathias Muek? [~ Muh]",
+    "Mathias Jakobič (¼ griblar)"
+   ],
+   "witnessStatus": "{ ¼ griblar",
+   "befunden": "ženitovanjska zglasnica občine Griblje 28/5. 1905 št: 6",
+   "priest": "Jos. Rauy",
+   "griblje": true,
+   "notes": "★ h35 = 1. POROČNI DOKAZ — EDINA nova hiša 1905 + KOREKCIJA 34→35 V VPISU (zoom 7×!)!; h10 = 4. dokaz = MENJAVA KURE→PERDINEC; KRIŽAN ×2 nevesti v letu; STRAUSS-mreža = DRUBEL"
+  },
+  {
+   "row": 15,
+   "date": "3. julij 1905",
+   "scan": 128,
+   "page": 127,
+   "groom": {
+    "name": "Michael Jakofčič",
+    "place": "Cerkvišče 9",
+    "stand": "¼ griblar",
+    "age": 19,
+    "status": "1"
+   },
+   "bride": {
+    "name": "Maria Željko",
+    "place": "Griblje 1",
+    "stand": "½ griblarst.Hofsa? [~]",
+    "age": 25,
+    "status": "1"
+   },
+   "parentsGroom": "Michael Jakofčič ¼ griblar × Maria Žunič",
+   "parentsBride": "Nicolaus Željko ½ griblar × Maria Križan",
+   "witnesses": [
+    "Johan Grabrijan (= v4-priimek!)",
+    "Georg Željko (¼ griblar)"
+   ],
+   "witnessStatus": "{ ¼ griblar",
+   "befunden": "ženitovanjska zglasmnica občine Podzemelj 3/7. 1905 št: 5; dovoljenje deželne vlade v Liubljani 15. junija 1905 № 11955; očetovo ustno dovoljenje za ml. ŽENINA (19!) v navzočnosti zgornjih prič",
+   "priest": "Jos. Rauy",
+   "griblje": true,
+   "notes": "h1 = 2. dokaz = ★ ŽELJKO-kontinuiteta 6 let (1899 Georg!); ŽUNIČ-mreža; GRABRIJAN cross-entry; deželna vlada № 11955; dovoljenje za ml. ŽENINA (redko!)"
+  },
+  {
+   "row": 16,
+   "date": "31. julij 1905",
+   "scan": 128,
+   "page": 127,
+   "groom": {
+    "name": "Anton Strugar",
+    "place": "Črnomelj 158 (mesto!)",
+    "stand": "Schmied-Meister",
+    "age": 24,
+    "status": "1"
+   },
+   "bride": {
+    "name": "Maria Pabič? [~ Babič]",
+    "place": "Gradac 27",
+    "stand": "Schmiedmeisters-witwe (VDOVA!)",
+    "age": 25,
+    "status": "1"
+   },
+   "parentsGroom": "Jakob Strugar Wagner-Meister × Maria Štonic? [~]",
+   "parentsBride": "Johann Plut Besitzer × Agnes Grabek? [~]",
+   "witnesses": [
+    "Anton Štonic? [~] (B?/Besitzer [~])",
+    "Nicolaus Gregorič (B?/Besitzer [~])"
+   ],
+   "witnessStatus": "{ Besitzer",
+   "befunden": "ženitovanjska zglasmnica mestne občine Črnomelj 29/7. 1905 št: 2; krstni+samski+oklicni list župnija Črnomelj 29/7 № 337; odločbo dovoljenje za nevesto od c.kr. okrajnega glavarstva? [~ nadvarstva?] v Črnomlju 21/7. 1905 № 8594",
+   "priest": "Jos. Rauy",
+   "griblje": false,
+   "notes": "★ 1. SCHMIEDMEISTER-ŽENIN × 1. SCHMIEDMEISTERS-WITWE (obrtniški par — kovač × kovačeva vdova!); WAGNER-MEISTER oče = 2. dokaz (P130!); ČRNOMELJ 158 = najvišja mestna hiša; GRADAC 27 = nova hiša; PLUT + Strugar = novi priimki"
+  },
+  {
+   "row": 17,
+   "date": "7. avgust 1905",
+   "scan": 129,
+   "page": 128,
+   "groom": {
+    "name": "Mathias Kukar [~ Hukav]",
+    "place": "Griblje 27",
+    "stand": "¼ griblasd-Hofsa? [~]",
+    "age": 21,
+    "status": "1"
+   },
+   "bride": {
+    "name": "Barbara Željko",
+    "place": "Griblje 1",
+    "stand": "½ griblastochf",
+    "age": 21,
+    "status": "1"
+   },
+   "parentsGroom": "Johann Kukar ¼ griblar × Catharina Klobučar",
+   "parentsBride": "Nicolaus Željko ¼ griblar × Catharina Kure ⚠️ (= v15-oče Nicolaus ½ × Maria Križan? 2 različna Nicolaus!)",
+   "witnesses": [
+    "Nicolaus Željko (= oče neveste?)",
+    "Georg Harašinič"
+   ],
+   "witnessStatus": "{ ¼ griblar",
+   "befunden": "ženitovanjska zglasnica občine Griblje 6/8. 1905 št: 7; dovoljenje deželne vlade 4/7. 1905 № 12937; proglas polnoletnosti za OBA (okrajna sodnija Črnomelj 17. maja 1905)",
+   "priest": "Jos. Rauy",
+   "griblje": true,
+   "notes": "h27 = 4. dokaz = ★ KUČAR/KUKAR-kontinuiteta 8 LET (1897 Anna KUCHAR!) — KUKAR 2. dokaz priimka (P133 v11 mati); h1 = 3. dokaz = 2. ŽELJKO-nevesta v letu ⚠️ 2 Nicolaus-očeta!; KLOBUČAR (cf. v5!); KURE (mati); HARAŠINIČ (3. dokaz v letu); ZADNJA poroka 1905 = DRUBEL"
+  }
+ ],
+ "excluded": [],
+ "stats": {
+  "entries": 17,
+  "gribljeMarriages": 8,
+  "gribljeMarriageRows": [
+   2,
+   4,
+   5,
+   12,
+   13,
+   14,
+   15,
+   17
+  ],
+  "gribljeHouses": [
+   "34",
+   "24",
+   "30",
+   "44",
+   "24",
+   "65",
+   "18",
+   "34",
+   "10",
+   "35",
+   "1",
+   "27",
+   "1"
+  ],
+  "gribljeBlocksNew": 13,
+  "gribljeHousesNewFirst": [
+   "35"
+  ],
+  "gribljeRepeat": "h34 3.+4. dokaz (1898 FILAK + 1899 → 1905 KAMBIČ ×2 = ★ MENJAVA!) · h24 3.+4. dokaz (1895 + 1902 Brišec? → 1905 BRNC ×2 = ★ MENJAVA!) · h30 4. dokaz (1889+1892+1902 LEGINA → 1905 Grabrijan = MENJAVA!) · h44 3. dokaz (★ ŠTRUCELJ 1903!) · h65 3. dokaz (★ MÜCK/MILEK 1903!) · h18 3. dokaz (★ SIMEC 1897 8 LET!) · h10 4. dokaz (KURE → PERDINEC = MENJAVA!) · h35 1. DOKAZ (korekcija 34→35!) · h1 2.+3. dokaz (★ ŽELJKO 1899 ×2!) · h27 4. dokaz (★ KUČAR/KUKAR 1897 8 LET, dve pisavi!) — 6 kontinuitet + 4 menjave!",
+  "vitals": "619 → 632",
+  "bloki04455": "102 → 115",
+  "sidra": "95 → 108 (+1905:13)",
+  "priests": {
+   "Jos. Rauy": 17
+  },
+  "dates": [
+   "16. januar",
+   "20. februar ×2",
+   "27. februar ×2",
+   "6. marec ×2",
+   "8. maj",
+   "15. maj ×2",
+   "22. maj ×2",
+   "29. maj ×2",
+   "3. julij",
+   "31. julij",
+   "7. avgust"
+  ],
+  "weekdays": "11/11 PONEDELJKOV = 100% (1. popolno leto linije!)",
+  "housesNew": [
+   "Škrilje? 1 [~]",
+   "Kapljiše? 4+6 [~]",
+   "Gakova? 3 draga Virodina? u Croatien [~]",
+   "Metlika 36",
+   "Črnomelj 158",
+   "Gradac 27",
+   "Otok 11",
+   "Otok 20",
+   "Krasinec 21?",
+   "Krasinec 22",
+   "Krasinec 6",
+   "Dobravice 16",
+   "Zastava 7",
+   "Vranoviče 14",
+   "Priložje 26",
+   "Primostek 8",
+   "Primostek 17",
+   "Cerkvišče 4",
+   "Cerkvišče 9"
+  ],
+  "surnamesNew": [
+   "SLOBODNIK",
+   "Strugar",
+   "Plut",
+   "Urbanek",
+   "Kapuršinič? [~]",
+   "Pabič? [~]",
+   "Šešak",
+   "Jötter? [~]",
+   "Segna? [~]",
+   "Ramuta [~]",
+   "Hojrič [~]",
+   "Malevič [~]",
+   "Marantič? [~]",
+   "Vergane? [~]",
+   "Grabek? [~]",
+   "Štonic? [~]",
+   "Zahorič? [~]",
+   "Sodja? [~]"
+  ],
+  "surnamesRepeat": [
+   "KUKAR (2. dokaz — P133 v11 mati → zdaj družina h27!)",
+   "MILEK ×3",
+   "KLOBUČAR ×2",
+   "KRIŽAN ×3",
+   "HARAŠINIČ ×3",
+   "JURAJEVČIČ ×3",
+   "POŽEK ×2",
+   "DRAGOŠ ×2",
+   "STRAUSS ×3",
+   "ŽELJKO ×3",
+   "GRABRIJAN ×2",
+   "BRNC ×4",
+   "KAMBIČ ×4",
+   "PERDINEC ×6",
+   "KURE ×3"
+  ]
+ },
+ "anomalies": [
+  {
+   "id": "A1",
+   "what": "P134-lead korekcije: »min 5 vpisov s125–s126« → 17 vpisov s125–s129 (3× podcenjeno); »v2 Griblje 39 Markočič?« → v2 = Griblje 34 Johann KAMBIČ + v4 = Griblje 24 Mathias BRNC (lead-v2 je bil v resnici v4!)"
+  },
+  {
+   "id": "A2",
+   "what": "v1 ženinova vas »Germ 26« [~] — nezanesljivo branje (morda 'Gern'/'Gerrn'); vas neujemljiva z znanimi korpus-vasmi"
+  },
+  {
+   "id": "A3",
+   "what": "★ 3 HIŠE Z 2 BLOKI V ENEM LETU = NOVI REKORD: h24 (BRATA Brnc v4+v12, isti starši!) · h34 (BRAT-SESTRA Kambič v2+v13, isti starši!) · h1 (2 nevesti Željko v15+v17 — ⚠️ 2 različna Nicolaus-očeta [½×Maria Križan / ¼×Catharina Kure] — oče+sin?)"
+  },
+  {
+   "id": "A4",
+   "what": "★ 3 JURAJEVČIČ-ženińi v 3 tednih maja (v8 Johann 27 Otok 11 oče Georg×Hočevar + v9 Johann 28 Kapljiše? 6 oče Georg×Homa + v11 Michael 27 Krasinec 21? oče Mathias×Simec) — ⚠️ v8/v9 isti oče Georg ampak različni materi = polbrata ALI 2 Georga?"
+  },
+  {
+   "id": "A5",
+   "what": "v10: ⚠️ oče Johann Harašinič? [~ Marašinič] ≠ hči Barbara MORAVEC — neporojenost priimkov (možen step-oče / napaka / 2. zakon matere)"
+  },
+  {
+   "id": "A6",
+   "what": "★ v12 VMET (nem.): k.k. Landesregierung für Krain 26/4.1905 № 15129 — »dass der Taufname des Brunc richtig Anna lautet« [~] — 1. nemški vmet poročne linije; NEJASNO koga se nanaša (krstno ime v družini Brunc? mati Barbara→Anna?)"
+  },
+  {
+   "id": "A7",
+   "what": "★ v14 KOREKCIJA V VPISU: hiša 34 PREČRTANO → 35 (zoom 7×) — h34 bi sicer imel 3 poroke v letu! h35 = 1. poročni dokaz"
+  },
+  {
+   "id": "A8",
+   "what": "status »¼ gbl.Pofu?« [~] ×2 (v4 + v14) + cf. P135-lead v4 — sistematski nejasni status (morda 'Pfgn'/'Pögen'?); h10/h24"
+  },
+  {
+   "id": "A9",
+   "what": "statusa »griblarst.Hofe/Hofsa?« [~] ×4 (v7 groom+bride, v15, v17) — P133-lesson -hofsohn [~] se nadaljuje"
+  },
+  {
+   "id": "A10",
+   "what": "v2: ★ 1. SKUPNI STATUS PRIČ ({ ½ Hübler za OBE priče [~]) — nov formalni vzorec"
+  },
+  {
+   "id": "A11",
+   "what": "h10 MENJAVA: KURE (1890 + 1899 Barbara Kure) → PERDINEC (1905 Joseph) [~]; cf. h22 STRAUS→MILEK 1904!"
+  },
+  {
+   "id": "A12",
+   "what": "v11 zglasmnica Podzemelj 24/5? [~ 22/5?] št: 4 = ISTA številka kot v12 (Griblje 24/5 št: 4) — različni občini, isti dan/št.? [~]"
+  },
+  {
+   "id": "A13",
+   "what": "v17 ⚠️ 2 različna Nicolaus ŽELJKO (v15-oče ½ × Maria Križan; v17-oče ¼ × Catharina Kure) — oče+sin ALI 2 moška z istim imenom?"
+  }
+ ],
+ "crossChecks": [
+  {
+   "id": "C1",
+   "what": "Pag. == sken − 1: s125→124, s126→125, s127→126, s128→127, s129→128 — 20. zaporedna potrditev (velja 61–128)"
+  },
+  {
+   "id": "C2",
+   "what": "ROKOPISNA GLAVA »1905.« na s125 POTRJENA (P133-lead) + glave »1906« na s129 (P135-lead)"
+  },
+  {
+   "id": "C3",
+   "what": "★ 11/11 poročnih dni = PONEDELJKI (16.1. + 20.2.×2 + 27.2.×2 + 6.3.×2 + 8.5. + 15.5.×2 + 22.5.×2 + 29.5.×2 + 3.7. + 31.7. + 7.8.) — 1. POPOLNO leto linije (P133 13/15!)"
+  },
+  {
+   "id": "C4",
+   "what": "RAUY 17/17 = 100% (3. popolno leto za P129 8/8 + P130 11/11; kariera ≈ 66/72)"
+  },
+  {
+   "id": "C5",
+   "what": "★ v4+v12 BRATA BRNC: isti starši (Mathias Brnce × Barbara Jakobič) v obeh vpisih — hiša 24 2 bloka v letu"
+  },
+  {
+   "id": "C6",
+   "what": "★ v2+v13 BRAT-SESTRA KAMBIČ: isti starši (Mathias Kambič × Catharina Brnc) — hiša 34 2 bloka v letu (vzorec P132 h11!)"
+  },
+  {
+   "id": "C7",
+   "what": "★ kontinuiteta h18: 1897 P126 ženin Mathias SIMEC = 1905 v13 ženin Mathias Simec — 8 let + isto ime"
+  },
+  {
+   "id": "C8",
+   "what": "★ kontinuiteta h27: 1897 P126 nevesta Anna KUCHAR [~ Kučar] = 1905 v17 ženin Mathias KUKAR — 8 let, dve pisavi"
+  },
+  {
+   "id": "C9",
+   "what": "★ kontinuiteta h65: 1903 P132 ženin Matthias MÜCK = 1905 v12 nevesta Catharina MILEK — dve pisavi istega priimka"
+  },
+  {
+   "id": "C10",
+   "what": "★ kontinuiteta h44: 1903 P132 nevesta Dorothea ŠTRUCELJ = 1905 v5 ženin Joseph Štrucelj (mati Agnes KLOBUČAR)"
+  },
+  {
+   "id": "C11",
+   "what": "★ kontinuiteta h1: 1899 P128 ženin Georg ŽELJKO = 1905 v15+v17 nevesti Maria+Barbara Željko — 6 let"
+  },
+  {
+   "id": "C12",
+   "what": "MENJAVE DRUŽIN ×4: h24 Brišec?→BRNC · h30 LEGINA→Grabrijan · h34 FILAK/ŠILAK→KAMBIČ · h10 KURE→PERDINEC (vzorec h22 STRAUS→MILEK 1904!)"
+  },
+  {
+   "id": "C13",
+   "what": "★ v8 = 1. AMERIŠKI DRŽAVLJAN: konzul ZDA v Trstu 27.3.1905 »ni denarnega zadržka« — nov dokument-tip (konzularno sporočilo!)"
+  },
+  {
+   "id": "C14",
+   "what": "★ 2 DISPENSI 3. KOLENA: v7 № 342 (28.1.) + v9 № 1816 (9.5.) — obe ordinariat Liubljana (vzorec 1890: 2 dispensaciji!)"
+  },
+  {
+   "id": "C15",
+   "what": "★ v16: Schmiedmeister ženin × Schmiedmeisters-witwe nevesta — 1. obrtniški par; oče Wagner-Meister (2. dokaz P130)"
+  },
+  {
+   "id": "C16",
+   "what": "VIRODINA [~] ×2 (vas + župnija) = 2. hrvaški vpis 1905 (v10; cf. 1906-lead v1 »u Kroatien«!)"
+  },
+  {
+   "id": "C17",
+   "what": "deželna vlada številke: № 13664 (v1) + № 3360 (v4) + № 3881 (v6) + № 11955 (v15) + № 12937 (v17) — 5× (cf. P133 № 22190 NAJVIŠJA)"
+  },
+  {
+   "id": "C18",
+   "what": "polnoletnost proglas ×5 (v1 ZA OBA + v4 + v5 + v6 + v17 ZA OBA) — vzorec P130 (v4/v11)"
+  },
+  {
+   "id": "C19",
+   "what": "★ v2 skupni status prič ({ ½ Hübler) = nov formalni vzorec; v15 dovoljenje za ml. ŽENINA (19!) = redka forma"
+  },
+  {
+   "id": "C20",
+   "what": "MILEK-mreža ×3 (v1 Muek/Mue + v12 Catharina + v13 Anna) + KLOBUČAR ×2 (v5 + v17) + KRIŽAN ×3 (v7 + v14 + v15-mati) + HARAŠINIČ ×3 (v10 ×2 + v17)"
+  },
+  {
+   "id": "C21",
+   "what": "zglasmnice občin: Podzemelj ×4 (št: 1/2/4/5) + Griblje ×6 (št: 1/2/3/4/5/6/7) + mestna Metlika № 217 + mestna Črnomelj № 2 + Loka št: 40 + Polže? [~] št: 3"
+  },
+  {
+   "id": "C22",
+   "what": "P135-lead cross-check: 1906 v1 Catharina Simec »¼ Mückbrin« = MILEK-mreža (v1 Muek!) + v2 Krasinec 25 Brodnič? 49 NAJSTAREJŠI ženin od 1902-Legina 43"
+  }
+ ],
+ "honesty": {
+  "uncertainReadings": [
+   "v1 ženinova vas »Germ 26« [~] — 5×+8× zoom; morda 'Gern'/'Gerrn'; neujemljiva s korpusom",
+   "v1 mati neveste »Catharina Kastelic« [~ Kaselic?]",
+   "v1 mati ženina »Maria Foras« [~]",
+   "v2 priča »Johan Požek« [~ Poček?]",
+   "v2 status prič »{ ½ Hübler« [~ — skupni status za obe?]",
+   "v3 mati neveste »Catharina Mue« [~]",
+   "v4 status ženina »¼ gbl.Pofu« [~ Pfgn/Pögen?]",
+   "v4 hiša neveste 30 (zoom 6× — ne 50!)",
+   "v4 status neveste »güblerin« [~ griblerin vaha]",
+   "v4 priči statusi ({ ¼/½ griblar [~])",
+   "v5 vas neveste »Škrilje? 1« [~ nova vas?]",
+   "v5 mati neveste »Barbara Malevič« [~ Maletič?]",
+   "v5 priča 1 »Jakob Jötter?« [~]",
+   "v5 priča 2 »Marcus Šešak« [~ Šešok?]",
+   "v6 mati ženina »Barbara Ramuta« [~]",
+   "v6 mati neveste »Maria Hojrič« [~]",
+   "v6 status neveste »¼ griblastochf« [pisar -tochf/sohf? cf. P133-lesson!]",
+   "v6 Befunden »upravno-sicelbo? dovoljenje« [~]",
+   "v7 vas ženina »Kapljiše? 4« [~ — cf. v9 '6']",
+   "v7 statusa »¼ griblarst.Hofe/Hofsa?« [~ oba]",
+   "v7 zglasmnica Podzemelj 3/3 št: 2 [~ dan]",
+   "v8 mati ženina »Maria Hočevar« [~ Hočivar]",
+   "v8 Befunden »da ni denarnega zadržka« [~ 'namnilo?']",
+   "v9 vas ženina »Kapljiše? 6« [~ — cf. v7 '4']",
+   "v9 priimek neveste »Sodja?« [~ Godja?]",
+   "v9 mati ženina »Anna Homa« [~ Loma?]",
+   "v9 občina zglasmnice »Polže?« [~]",
+   "v9 status neveste »¼ griblasn?-Hofsar« [~]",
+   "v10 vas ženina »Gakova? 3. draga, Virodina?« [~ — hrvaška, potrjena ×2 v Befunden!]",
+   "v10 priimek ženina »Kapuršinič?« [~ Kapurinič]",
+   "v10 priimek očeta neveste »Harašinič?« [~ Marašinič — ⚠️ ≠ hči Moravec!]",
+   "v10 mati neveste »Anna Marantič?« [~]",
+   "v10 priča 2 »Jacobus Vergane?« [~]",
+   "v11 hiša ženina »Krasinec 21?« [~ — morda 23?]",
+   "v11 priimek neveste »Zahorič?« [~ Zahorie]",
+   "v11 status neveste »½ griblastochf?« [~]",
+   "v11 zglasmnica dan »24/5?« [~ 22/5?]",
+   "v12 priča 1 »Nicolaus Segna?« [~]",
+   "v12 status priča 2 »gbl-žiglb?« [~]",
+   "v12 vmet »Taufname des Brunc richtig Anna lautet« [~ — kdo?]",
+   "v13 hiša ženina 18 (2. dokaz 1897!) [~]",
+   "v14 hiša neveste 35 (34 PREČRTANO → 35!) [~ 8? — vzorec 35]",
+   "v14 priča 1 »Mathias Muek?« [~ Muh]",
+   "v15 status neveste »½ griblarst.Hofsa?« [~]",
+   "v15 Befunden »15. junija 1905« [~ dan]",
+   "v16 priimek neveste »Pabič?« [~ Babič]",
+   "v16 mati ženina »Maria Štonic?« [~]",
+   "v16 mati neveste »Agnes Grabek?« [~]",
+   "v16 priča 1 »Anton Štonic?« [~]",
+   "v16 status prič »B?/Besitzer« [~]",
+   "v16 Befunden »okrajnega glavarstva?« [~ nadvarstva?]",
+   "v17 priimek ženina »Kukar« [~ Hukav — zoom 7×: K!]",
+   "v17 status ženina »¼ griblasd-Hofsa?« [~]",
+   "v17 oče neveste »Nicolaus Željko ¼« ⚠️ [~ — ≠ v15-oče ½?]"
+  ],
+  "crossedOutWords": [
+   "v14 hiša 34 → 35 (34 prečrtano, 35 zapisano — zoom 7×!)"
+  ],
+  "layoutNotes": "s125 = nadaljevanje (brez tiskane glave): rokopisna glava »1905.« med v15-1904 in v1; s126/s127/s128 = velika tiskana glava »Traunungs=Buč.«; s129 = v17 + rokopisna glava »1906« + 1906 v1–v4 (P135-lead!); L/R strani poravnane ±10px (vzorec P133); v12 = 1. nemški vmet v starostnem stolpcu"
+ },
+ "nextSteps": [
+  "P135: poročna 1906 — rokopisna glava + v1–v4 ŽE na s129 (Pag. 128)!",
+  "P135-lead: v1 Jän 15 Djelonia? 1 u Kroatien (3. hrvaški vpis!) — Frana Martinkovič? Beizgerssohn? 31 × Gajiče 35 Catharina Simec ¼ Mückbrin 24",
+  "P135-lead: v2 Jän 29 Krasinec 25 Nicolaus Brodnič? 49 (NAJSTAREJŠI ženin od 1902-Legina 43!) × Krasinec 12? Margaretha Šurbaern? ¼ gblsttohsf? wtw 33 (VDOVA!)",
+  "P135-lead: v3 Jän 29 Krasinec 18 Nicolaus Županič 40 × Krasinec 35 Anna Vrdomari? wtw 23 (2. VDOVA — 2 v 2 dneh!)",
+  "P135-lead: v4 Febr 12 Ojerm? 23 Nicolaus Perdinec? ¼ griblendst-Pöfn? [~ — cf. v4/v14 status Pofu!] × Gradac 6 Maria Kreivelin? 24",
+  "MEJA: preveriti s130 + s131 (lekcija P132/P133: 2 skenika naprej!); skeni 129–130 v .p126tmp",
+  "status »¼ gbl.Pofu?« [~] — poskusiti rešiti s primerjavo z 1906-v4 (isti vzorec!)"
+ ]
+}

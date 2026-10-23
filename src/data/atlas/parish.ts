@@ -1678,6 +1678,176 @@ export const HOUSE_VITALS: HouseVital[] = [
     whatEn: "marriage (Nov 7, 1904, entry 14) — the bride Catharina MILEK [~ Mück], half smallholder-farm daughter [~], 28, GRIBLJE 22 (the 3rd marriage evidence of h22 — 1898 P127 ×2 Nicolaus STRAUS = the family change STRAUS → MILEK!) × Anton Brodarič [~], quarter smallholder, 44, GRIBLJE 46 (the 3rd evidence — the 3rd year in a row!) = ★ the DOUBLE wedding; parents: Johann Milek ½ smallholder × Maria PERDINEC (5th of 5!) / Michael Brodarič ¼ smallholder × Anna Adam; witnesses Nikol. Križan + Martin Brodarič; the Griblje commune certificate Nov 6, 1904 no: 2 + the banns list at Radovica Nov 6, 1904; priest Jos. Rauy — MILEK/MÜCK two spellings (cf. P132 Mück/Milek!)",
     status: "DOCUMENTED",
   },
+  // ——— P134 razširitev: POROČNA KNJIGA 04455 — polno leto 1905 (skeni 125–129 ==
+  // strani 124–128; ROKOPISNA GLAVA »1905.« na s125 POTRJENA — P133 lead!;
+  // velika tiskana glava »Traunungs=Buč.« na s126/s127/s128; rokopisna glava
+  // »1906« na s129 = P135 LEAD; 17 vpisov obojestransko = P134-lead »min 5
+  // s125–s126« 3× pocenjen; razpored 3+4+4+5+1) — vpisi z Griblji (8 porok /
+  // 13 poročnih blokov: h34 v2 ženin 3. dokaz + h24 v4 ženin 3. dokaz × h30
+  // v4 nevesta 4. dokaz DRUBEL + h44 v5 ženin 3. dokaz + h24 v12 ženin 4. dokaz
+  // = ★ BRATA BRNC! × h65 v12 nevesta 3. dokaz DRUBEL + h18 v13 ženin 3. dokaz
+  // + h34 v13 nevesta 4. dokaz = ★ SESTRA v2! DRUBEL + h10 v14 ženin 4. dokaz
+  // × h35 v14 nevesta 1. DOKAZ [korekcija 34→35!] DRUBEL + h1 v15 nevesta 2.
+  // dokaz + h27 v17 ženin 4. dokaz × h1 v17 nevesta 3. dokaz DRUBEL = 4
+  // DRUBEL!): NOVELE: ★ 11/11 PONEDELJKOV = 100% (1. popolno leto!) + ★ RAUY
+  // 17/17 = 100% (3. popolno leto: P129 8/8, P130 11/11!) + ★ 3 HIŠE Z 2 BLOKI
+  // V ENEM LETU (h24 BRATA Brnc v4+v12! · h34 BRAT-SESTRA Kambič v2+v13! ·
+  // h1 2 nevesti Željko v15+v17 — ⚠️ 2 različna Nicolaus-očeta!) = NOVI
+  // REKORD + ★ 3 JURAJEVČIČ-ženińi v 3 tednih maja (v8 Johann 27 Otok 11 + v9
+  // Johann 28 Kapljiše? 6 + v11 Michael 27 Krasinec 21) + ★ 1. AMERIŠKI
+  // DRŽAVLJAN LINIJE (v8 — konzul ZDA v Trstu: »ni denarnega zadržka« 27.3.!)+
+  // ★ 2 DISPENSI 3. KOLENA (v7 № 342 + v9 № 1816 — vzorec 1890!) + ★ 1.
+  // SCHMIEDMEISTER-ŽENIN × 1. SCHMIEDMEISTERS-WITWE (v16 obrtniški par; oče
+  // Wagner-Meister = 2. dokaz P131!) + ★ VMET nem. k.k. Landesregierung Krain
+  // № 15129 (v12 — »Taufname des Brunc richtig Anna lautet« [~] = 1. nemški
+  // vmet poročne linije!) + ★ 6 KONTINUITET (h18 SIMEC 1897→05 8 let + isto
+  // ime! · h27 KUČAR/KUKAR 1897→05 8 let dve pisavi! · h44 ŠTRUCELJ 1903→05 ·
+  // h65 MÜCK/MILEK 1903→05 dve pisavi! · h1 ŽELJKO 1899→05 ×2! · h30 4. dokaz)
+  // + 4 MENJAVE DRUŽIN (h24 Brišec?→BRNC ×2! · h30 LEGINA→Grabrijan · h34
+  // FILAK/ŠILAK→KAMBIČ ×2! · h10 KURE→PERDINEC) + NOVE VASI/HIŠE: Škrilje? 1
+  // [~] + Kapljiše? 4+6 [~] + Gakova? 3 draga Virodina? u Croatien [~ — 2.
+  // hrvaški vpis!] + Metlika 36 (mesto!) + Črnomelj 158 (mesto!) + Gradac 27 +
+  // Otok 11/20 + Krasinec 21?/22/6 + Dobravice 16 + Zastava 7 + Vranoviče 14 +
+  // Priložje 26 + Primostek 8/17 + Cerkvišče 4/9 + NOVI PRIIMKI: SLOBODNIK ·
+  // Strugar · Plut · Urbanek (hrvaški) · Kapuršinič? [~] · Pabič? [~] · Šešak
+  // · Jötter? [~] + KUKAR 2. dokaz (P133 v11 mati — zdaj družina h27!) +
+  // MILEK-mreža ×3 + KLOBUČAR ×2 + KRIŽAN ×3 + HARAŠINIČ ×3 + ŽUNIČ + statusi:
+  // ¼ gbl.Pofu? [~] ×2 + griblarst.Hofe/Hofsa? [~] ×4 + griblarin + ½ Hübler
+  // skupni status prič (v2!) + polnoletnost ×5 (2× ZA OBA!) + nadvarstveno ×2
+  // + 1. pisava »Liubljani« za Laibach (v4!) + Pag. == sken−1 20. potrditev
+  // (124–128). Dokaz: research/issue17/parish-marriage-1905.json; verifikator:
+  // scripts/p134_parish_marriage_1905.py --check (I1–I11).
+  {
+    houseNo: "34",
+    bookSignature: "04455",
+    year: 1905,
+    scan: 125,
+    page: 124,
+    whatSi: "poroka (20. 2. 1905, vpis 2) — ženin Johann Kambič, ¼ griblar, 27, GRIBLJE 34 (3. poročni dokaz h34 — 1898 P127 ženin Nicolaus FILAK + 1899 P128 2. dokaz = ★ MENJAVA FILAK/ŠILAK → KAMBIČ!) × Maria Dragoš, ½ gbl. Tochter, 19, Cerkvišče 4; starši: Mathias Kambič ¼ griblar × Catharina Brnc (= starši v13-neveste — ★ BRAT-SESTRA!) / Joseph Dragoš ½ griblar × Dorotha Brodarič (DRAGOŠ-mreža + BRODARIČ!); priče: Johann Požek [~] + Mathias Muek [~] ({ skupni status obe priči ½ Hübler [~] — 1. SKUPNI STATUS PRIČ LINIJE!); zglasmnica občine Griblje 19/2. 1905 št: 1 + očetovo ustno dovoljenje za ml. nevesto v navzočnosti zgornjih prič (formula rešena cf. v3!); duhovnik Jos. Rauy — P134-lead KOREKCIJA: »v2 Griblje 39 Markočič?« → h34 + KAMBIČ (lead-v2 je bil v resnici v4!)",
+    whatEn: "marriage (Feb 20, 1905, entry 2) — the groom Johann Kambič, quarter smallholder, 27, GRIBLJE 34 (the 3rd marriage evidence of h34 — 1898 P127 the groom Nicolaus FILAK + 1899 P128 the 2nd = ★ the FAMILY CHANGE FILAK/ŠILAK → KAMBIČ!) × Maria Dragoš, half smallholder's daughter, 19, Cerkvišče 4; parents: Mathias Kambič ¼ smallholder × Catharina Brnc (= the v13 bride's parents — ★ BROTHER-SISTER!) / Joseph Dragoš ½ smallholder × Dorotha Brodarič (the DRAGOŠ network + BRODARIČ!); witnesses: Johann Požek [~] + Mathias Muek [~] ({ the SHARED status both witnesses ½ Hübler [~] — the 1st SHARED WITNESS STATUS of the line!); the Griblje commune certificate Feb 19, 1905 no: 1 + the father's verbal consent for the young bride in the presence of the above witnesses (the formula solved cf. v3!); priest Jos. Rauy — the P134-lead CORRECTION: »v2 Griblje 39 Markočič?« → h34 + KAMBIČ (the lead-v2 was in fact v4!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "24",
+    bookSignature: "04455",
+    year: 1905,
+    scan: 126,
+    page: 125,
+    whatSi: "poroka (27. 2. 1905, vpis 4) — ženin Mathias Brnce [~ Brnc], 21, ¼ gbl.Pofu? [~ — sistematski nejasni status, cf. v14 + P135-lead v4!], GRIBLJE 24 (3. poročni dokaz h24 — 1895 P124 + 1902 nevesta Catharina BRIŠEC? [~] = menjava družine!) × Maria Grabrijan, güblerin [~ güblerin/griblerin vaha], 28, GRIBLJE 30 (4. poročni dokaz h30 — 1889 + 1892 + 1902 ženin Nicolaus LEGINA 43 = menjava družine!) = ★ DRUBEL-GRIBLJE (2. poroka hišne parice 24+30 po 1902!); starši: Mathias Brnce ¼ griblar × Barbara Jakobič (= starši v12-ženina — ★ BRATA BRNC V ENEM LETU!) / Mathias Perdinec gübler × Dorotha Jakobič; priče: Marcus Perdinec gübler + Mathias Jakofčič (¼ griblar [~]); zglasmnica občine Griblje 26/2. 1905 št: 2 + proglas polnoletnosti za ženina (sodišče Črnomelj 28/1. 1905 — ženin 21!) + dovoljenje c.kr. deželne vlade v LIUBLJANI 20/2. 1905 št: 3360 (1. pisava »Liubljani« za Laibach!); duhovnik Jos. Rauy",
+    whatEn: "marriage (Feb 27, 1905, entry 4) — the groom Mathias Brnce [~ Brnc], 21, quarter smallholder-Pofu? [~ — a systematic unclear status, cf. v14 + the P135-lead v4!], GRIBLJE 24 (the 3rd marriage evidence of h24 — 1895 P124 + 1902 the bride Catharina BRIŠEC? [~] = a family change!) × Maria Grabrijan, güblerin [~ güblerin/griblerin vaha], 28, GRIBLJE 30 (the 4th marriage evidence of h30 — 1889 + 1892 + 1902 the groom Nicolaus LEGINA 43 = a family change!) = ★ the DOUBLE-GRIBLJE wedding (the 2nd wedding of the house pair 24+30 after 1902!); parents: Mathias Brnce ¼ smallholder × Barbara Jakobič (= the v12 groom's parents — ★ THE BRNC BROTHERS IN ONE YEAR!) / Mathias Perdinec gübler × Dorotha Jakobič; witnesses: Marcus Perdinec gübler + Mathias Jakofčič (¼ smallholder [~]); the Griblje commune certificate Feb 26, 1905 no: 2 + the majority certificate for the groom (the Črnomelj court Jan 28, 1905 — the groom 21!) + the permission of the k.k. provincial government in LIUBLJANA Feb 20, 1905 no: 3360 (the 1st spelling »Liubljani« for Laibach!); priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "30",
+    bookSignature: "04455",
+    year: 1905,
+    scan: 126,
+    page: 125,
+    whatSi: "poroka (27. 2. 1905, vpis 4) — nevesta Maria GRABRIJAN, güblerin [~], 28, GRIBLJE 30 (4. poročni dokaz h30 — 1889 + 1892 + 1902 LEGINA 43 najstarejši = MENJAVA DRUŽINE Legina → Grabrijan!) × Mathias Brnce [~], 21, ¼ gbl.Pofu? [~], GRIBLJE 24 (3. dokaz) = ★ DRUBEL; starši: Mathias Perdinec gübler × Dorotha Jakobič / Mathias Brnce ¼ griblar × Barbara Jakobič (= starši v12!); priči Marcus Perdinec gübler + Mathias Jakofčič; zglasmnica občine Griblje 26/2. 1905 št: 2 + polnoletnost za ženina (Črnomelj 28/1. 1905) + deželna vlada Liubljani 20/2. 1905 № 3360; duhovnik Jos. Rauy — GRABRIJAN nov priimek h30 (cf. v15-priča Johann Grabrijan!)",
+    whatEn: "marriage (Feb 27, 1905, entry 4) — the bride Maria GRABRIJAN, güblerin [~], 28, GRIBLJE 30 (the 4th marriage evidence of h30 — 1889 + 1892 + 1902 LEGINA 43 the oldest = the FAMILY CHANGE Legina → Grabrijan!) × Mathias Brnce [~], 21, quarter smallholder-Pofu? [~], GRIBLJE 24 (the 3rd evidence) = ★ the DOUBLE; parents: Mathias Perdinec gübler × Dorotha Jakobič / Mathias Brnce ¼ smallholder × Barbara Jakobič (= the v12 parents!); witnesses Marcus Perdinec gübler + Mathias Jakofčič; the Griblje commune certificate Feb 26, 1905 no: 2 + the majority for the groom (Črnomelj Jan 28, 1905) + the provincial government Liubljana Feb 20, 1905 no: 3360; priest Jos. Rauy — GRABRIJAN a new h30 surname (cf. the v15 witness Johann Grabrijan!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "44",
+    bookSignature: "04455",
+    year: 1905,
+    scan: 126,
+    page: 125,
+    whatSi: "poroka (27. 2. 1905, vpis 5) — ženin Joseph Štrucelj, ½ griblar, 22, GRIBLJE 44 (3. poročni dokaz h44 — 1899 P128 1. dokaz + 1903 P132 nevesta Dorothea ŠTRUCELJ = ★ ŠTRUCELJ-kontinuiteta!) × Barbara Černe, ½ gbl. Tochter, 21, Škrilje? 1 [~ NOVA VAS?]; starši: Mathias Štrucelj ½ griblar × Agnes KLOBUČAR (h44-družina — cf. P128 v1-priča Marcus Klobučar!) / Johann Černe ½ griblar × Barbara Malevič [~]; priče: Jakob Jötter? [~] ¼ griblar + Marcus Šešak ½ griblar; zglasmnica občine Griblje 26/2. 1905 št: 3 + proglas polnoletnosti za ženina (sodišče Črnomelj 28/1. 1905 — ISTI DAN kot v4!) + očetovo ustno dovoljenje za ml. nevesto v navzočnosti zgornjih prič; duhovnik Jos. Rauy — ČERNE (cf. P131 v6 ženin Thomas Černe nezakonski!)",
+    whatEn: "marriage (Feb 27, 1905, entry 5) — the groom Joseph Štrucelj, half smallholder, 22, GRIBLJE 44 (the 3rd marriage evidence of h44 — 1899 P128 the 1st + 1903 P132 the bride Dorothea ŠTRUCELJ = ★ the ŠTRUCELJ continuity!) × Barbara Černe, half smallholder's daughter, 21, Škrilje? 1 [~ A NEW VILLAGE?]; parents: Mathias Štrucelj ½ smallholder × Agnes KLOBUČAR (the h44 family — cf. the P128 v1 witness Marcus Klobučar!) / Johann Černe ½ smallholder × Barbara Malevič [~]; witnesses: Jakob Jötter? [~] ¼ smallholder + Marcus Šešak ½ smallholder; the Griblje commune certificate Feb 26, 1905 no: 3 + the majority certificate for the groom (the Črnomelj court Jan 28, 1905 — the SAME DAY as v4!) + the father's verbal consent for the young bride in the presence of the above witnesses; priest Jos. Rauy — ČERNE (cf. P131 v6 the illegitimate groom Thomas Černe!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "24",
+    bookSignature: "04455",
+    year: 1905,
+    scan: 128,
+    page: 127,
+    whatSi: "poroka (22. 5. 1905, vpis 12) — ženin Johann Brnce [~], 24, ½ griblar, GRIBLJE 24 (4. poročni dokaz h24 — 2. V TEM LETU = ★ BRATA BRNC v4 Mathias 21 + v12 Johann 24, isti starši Mathias Brnce × Barbara Jakobič — 3. hiša z 2 bloki v enem letu [h11-1903, h38-1904!]!) × Catharina Milek, ½ griblarß-tochter [~], 17, GRIBLJE 65 (3. poročni dokaz h65 — 1903 ženin Matthias MÜCK [~ Milek] = ★ MÜCK/MILEK-kontinuiteta, dve pisavi!) = ★ DRUBEL; starši: Mathias Brnce ½ griblar × Barbara Jakobič (= v4!) / Mathias Milek ½ griblar × Catharina POŽEK (POŽEK = v2-priča!); priči: Nicolaus Segna? [~] ¼ griblar + Marcus KLOBUČAR (gbl-žiglb? [~]); zglasmnica občine Griblje 24/5. 1905 št: 4 + očetovo ustno dovoljenje za ml. nevesto; ★ VMET (nem.): »Auf Folge-Erlasses der k.k. Landesregierung für Krain vom 26/4. 1905 Z: 15129 wird angemerkt, dass der Taufname des Brunc richtig Anna lautet« [~ — 1. NEMŠKI VMET poročne linije; kdo? morda krstno ime v družini Brunc!]; duhovnik Jos. Rauy",
+    whatEn: "marriage (May 22, 1905, entry 12) — the groom Johann Brnce [~], 24, half smallholder, GRIBLJE 24 (the 4th marriage evidence of h24 — the 2nd THIS YEAR = ★ THE BRNC BROTHERS v4 Mathias 21 + v12 Johann 24, the same parents Mathias Brnce × Barbara Jakobič — the 3rd house with 2 blocks in one year [h11-1903, h38-1904!]!) × Catharina Milek, half smallholder's daughter [~], 17, GRIBLJE 65 (the 3rd marriage evidence of h65 — 1903 the groom Matthias MÜCK [~ Milek] = ★ the MÜCK/MILEK continuity, two spellings!) = ★ the DOUBLE; parents: Mathias Brnce ½ smallholder × Barbara Jakobič (= v4!) / Mathias Milek ½ smallholder × Catharina POŽEK (POŽEK = the v2 witness!); witnesses: Nicolaus Segna? [~] ¼ smallholder + Marcus KLOBUČAR (gbl-žiglb? [~]); the Griblje commune certificate May 24, 1905 no: 4 + the father's verbal consent for the young bride; ★ INSERT (Ger.): »Auf Folge-Erlasses der k.k. Landesregierung für Krain vom 26/4. 1905 Z: 15129 wird angemerkt, dass der Taufname des Brunc richtig Anna lautet« [~ — the 1st GERMAN INSERT of the marriage line; who? perhaps a baptismal name in the Brunc family!]; priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "65",
+    bookSignature: "04455",
+    year: 1905,
+    scan: 128,
+    page: 127,
+    whatSi: "poroka (22. 5. 1905, vpis 12) — nevesta Catharina MILEK, ½ griblarß-tochter [~], 17, GRIBLJE 65 (3. poročni dokaz h65 — 1903 P132 v3 ženin Matthias MÜCK [~ Milek] = ★ MÜCK/MILEK-kontinuiteta 2 leti, dve pisavi!) × Johann Brnce [~], 24, ½ griblar, GRIBLJE 24 (4. dokaz — ★ BRAT v4!) = ★ DRUBEL; starši: Mathias Milek ½ griblar × Catharina Požek / Mathias Brnce ½ griblar × Barbara Jakobič (= v4!); priči Nicolaus Segna? [~] + Marcus Klobučar; zglasmnica občine Griblje 24/5. 1905 št: 4 + nemški vmet k.k. Landesregierung für Krain № 15129 [~]; duhovnik Jos. Rauy — MILEK ×2 v letu (v12-nevesta + v13-mati Anna Milek!)",
+    whatEn: "marriage (May 22, 1905, entry 12) — the bride Catharina MILEK, half smallholder's daughter [~], 17, GRIBLJE 65 (the 3rd marriage evidence of h65 — 1903 P132 v3 the groom Matthias MÜCK [~ Milek] = ★ the MÜCK/MILEK continuity of 2 years, two spellings!) × Johann Brnce [~], 24, half smallholder, GRIBLJE 24 (the 4th evidence — ★ the v4 BROTHER!) = ★ the DOUBLE; parents: Mathias Milek ½ smallholder × Catharina Požek / Mathias Brnce ½ smallholder × Barbara Jakobič (= v4!); witnesses Nicolaus Segna? [~] + Marcus Klobučar; the Griblje commune certificate May 24, 1905 no: 4 + the German insert k.k. Landesregierung für Krain no: 15129 [~]; priest Jos. Rauy — MILEK ×2 in the year (the v12 bride + the v13 mother Anna Milek!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "18",
+    bookSignature: "04455",
+    year: 1905,
+    scan: 128,
+    page: 127,
+    whatSi: "poroka (29. 5. 1905, vpis 13) — ženin Mathias Simec, ¼ griblar, 31, GRIBLJE 18 (3. poročni dokaz h18 — 1897 P126 ženin Mathias SIMEC ½ = ★ SIMEC-kontinuiteta 8 LET + ISTO IME Mathias!) × Maria Kambic, ¼ gbl. Tochter, 30, GRIBLJE 34 (4. poročni dokaz h34 — 2. V TEM LETU = ★ SESTRA v2-ženina Johann KAMBIČ, isti starši Mathias Kambič × Catharina Brnc — vzorec BRAT-SESTRA P132 h11!) = ★ DRUBEL; starši: Georg Simec ¼ griblar × Anna MILEK (MILEK 2. dokaz v letu!) / Mathias Kambic ¼ griblar × Catharina Brnce (= v2!); priči: Joseph Dragoš (= v2-nevestin priimek!) + Mathias Klepec ½ griblar (KLEPEC-mreža!); zglasmnica občine Griblje 28/5. 1905 št: 5; duhovnik Jos. Rauy",
+    whatEn: "marriage (May 29, 1905, entry 13) — the groom Mathias Simec, quarter smallholder, 31, GRIBLJE 18 (the 3rd marriage evidence of h18 — 1897 P126 the groom Mathias SIMEC ½ = ★ the SIMEC continuity of 8 YEARS + the SAME NAME Mathias!) × Maria Kambic, quarter smallholder's daughter, 30, GRIBLJE 34 (the 4th marriage evidence of h34 — the 2nd THIS YEAR = ★ the SISTER of the v2 groom Johann KAMBIČ, the same parents Mathias Kambič × Catharina Brnc — the BROTHER-SISTER pattern P132 h11!) = ★ the DOUBLE; parents: Georg Simec ¼ smallholder × Anna MILEK (the 2nd MILEK of the year!) / Mathias Kambic ¼ smallholder × Catharina Brnce (= v2!); witnesses: Joseph Dragoš (= the v2 bride's surname!) + Mathias Klepec ½ smallholder (the KLEPEC network!); the Griblje commune certificate May 28, 1905 no: 5; priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "34",
+    bookSignature: "04455",
+    year: 1905,
+    scan: 128,
+    page: 127,
+    whatSi: "poroka (29. 5. 1905, vpis 13) — nevesta Maria KAMBIC, ¼ gbl. Tochter, 30, GRIBLJE 34 (4. poročni dokaz h34 — 2. V TEM LETU = ★ SESTRA v2-ženina Johann, isti starši = ★ BRAT-SESTRA vzorec P132 h11!) × Mathias Simec, ¼ griblar, 31, GRIBLJE 18 (3. dokaz — ★ SIMEC 1897→05 8 let!) = ★ DRUBEL; starši: Mathias Kambic ¼ griblar × Catharina Brnce (= v2!) / Georg Simec ¼ griblar × Anna Milek; priči Joseph Dragoš + Mathias Klepec; zglasmnica občine Griblje 28/5. 1905 št: 5; duhovnik Jos. Rauy — h34 MENJAVA: FILAK/ŠILAK (1898–99) → KAMBIČ (1905 ×2!)",
+    whatEn: "marriage (May 29, 1905, entry 13) — the bride Maria KAMBIC, quarter smallholder's daughter, 30, GRIBLJE 34 (the 4th marriage evidence of h34 — the 2nd THIS YEAR = ★ the SISTER of the v2 groom Johann, the same parents = ★ the BROTHER-SISTER pattern P132 h11!) × Mathias Simec, quarter smallholder, 31, GRIBLJE 18 (the 3rd evidence — ★ SIMEC 1897→05 8 years!) = ★ the DOUBLE; parents: Mathias Kambic ¼ smallholder × Catharina Brnce (= v2!) / Georg Simec ¼ smallholder × Anna Milek; witnesses Joseph Dragoš + Mathias Klepec; the Griblje commune certificate May 28, 1905 no: 5; priest Jos. Rauy — the h34 CHANGE: FILAK/ŠILAK (1898–99) → KAMBIČ (1905 ×2!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "10",
+    bookSignature: "04455",
+    year: 1905,
+    scan: 128,
+    page: 127,
+    whatSi: "poroka (29. 5. 1905, vpis 14) — ženin Joseph Perdinec, 25, ¼ gbl.Pofu? [~ — 2. dokaz statusa cf. v4!], GRIBLJE 10 (4. poročni dokaz h10 — 1890 + 1899 nevesta Barbara KURE = ★ MENJAVA KURE → PERDINEC [~ vzorec menjav!]) × Anna Križan, ¼ gbl. Tochter, 34, GRIBLJE 35 (★ 1. POROČNI DOKAZ h35 — hiša 34 PREČRTANO → 35 popravljeno V VPISU! EDINA nova poročna hiša 1905; cf. krstne h35 ×7!) = ★ DRUBEL; starši: Johann Perdinec ¼ griblar × Anna Jakobič / Johann Križan ¼ gbl × Anna STRAUSS (STRAUSS-mreža!); priči: Mathias Muek? [~ Muh] + Mathias Jakobič (¼ griblar); zglasmnica občine Griblje 28/5. 1905 št: 6; duhovnik Jos. Rauy — KRIŽAN ×2 v letu (v7-nevesta Margareth + v14-nevesta Anna!)",
+    whatEn: "marriage (May 29, 1905, entry 14) — the groom Joseph Perdinec, 25, quarter smallholder-Pofu? [~ — the 2nd status evidence cf. v4!], GRIBLJE 10 (the 4th marriage evidence of h10 — 1890 + 1899 the bride Barbara KURE = ★ the CHANGE KURE → PERDINEC [~ the change pattern!]) × Anna Križan, quarter smallholder's daughter, 34, GRIBLJE 35 (★ the 1st MARRIAGE EVIDENCE of h35 — house 34 CROSSED OUT → 35 corrected IN THE ENTRY! the ONLY new marriage house of 1905; cf. the h35 baptisms ×7!) = ★ the DOUBLE; parents: Johann Perdinec ¼ smallholder × Anna Jakobič / Johann Križan ¼ smallholder × Anna STRAUSS (the STRAUSS network!); witnesses: Mathias Muek? [~ Muh] + Mathias Jakobič (¼ smallholder); the Griblje commune certificate May 28, 1905 no: 6; priest Jos. Rauy — KRIŽAN ×2 in the year (the v7 bride Margareth + the v14 bride Anna!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "35",
+    bookSignature: "04455",
+    year: 1905,
+    scan: 128,
+    page: 127,
+    whatSi: "poroka (29. 5. 1905, vpis 14) — nevesta Anna KRIŽAN, ¼ gbl. Tochter, 34, GRIBLJE 35 (★ 1. POROČNI DOKAZ h35 — hiša 34 PREČRTANO → 35 popravljeno v vpisu! EDINA nova poročna hiša 1905) × Joseph Perdinec, 25, ¼ gbl.Pofu? [~], GRIBLJE 10 (4. dokaz — menjava KURE→PERDINEC) = ★ DRUBEL; starši: Johann Križan ¼ gbl × Anna Strauss / Johann Perdinec ¼ griblar × Anna Jakobič; priči Mathias Muek? [~] + Mathias Jakobič; zglasmnica občine Griblje 28/5. 1905 št: 6; duhovnik Jos. Rauy — KRIŽAN ×3 v letu (v7-nevesta + v14-nevesta + v15-mati Maria Križan!)",
+    whatEn: "marriage (May 29, 1905, entry 14) — the bride Anna KRIŽAN, quarter smallholder's daughter, 34, GRIBLJE 35 (★ the 1st MARRIAGE EVIDENCE of h35 — house 34 CROSSED OUT → 35 corrected in the entry! the ONLY new marriage house of 1905) × Joseph Perdinec, 25, quarter smallholder-Pofu? [~], GRIBLJE 10 (the 4th evidence — the change KURE→PERDINEC) = ★ the DOUBLE; parents: Johann Križan ¼ smallholder × Anna Strauss / Johann Perdinec ¼ smallholder × Anna Jakobič; witnesses Mathias Muek? [~] + Mathias Jakobič; the Griblje commune certificate May 28, 1905 no: 6; priest Jos. Rauy — KRIŽAN ×3 in the year (the v7 bride + the v14 bride + the v15 mother Maria Križan!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "1",
+    bookSignature: "04455",
+    year: 1905,
+    scan: 128,
+    page: 127,
+    whatSi: "poroka (3. 7. 1905, vpis 15) — nevesta Maria Željko, ½ griblarst.Hofsa? [~ ženska pisava cf. v7/v17!], 25, GRIBLJE 1 (2. poročni dokaz h1 — 1899 P128 ženin Georg ŽELJKO ½ = ★ ŽELJKO-kontinuiteta 6 let!) × Michael Jakofčič, ¼ griblar, 19, Cerkvišče 9 (= P119 v13 Johann HVALJ-hiša? [~ menjava!]); starši: Nicolaus Željko ½ griblar × Maria KRIŽAN (⚠️ cf. v17-oče Nicolaus ¼ × Catharina Kure — 2 različna Nicolaus!) / Michael Jakofčič ¼ griblar × Maria ŽUNIČ (ŽUNIČ-mreža!); priči: Johann Grabrijan (= v4-nevestin priimek!) + Georg Željko ¼ griblar (= priimek neveste — brat/oče?); zglasmnica občine Podzemelj 3/7. 1905 št: 5 + dovoljenje deželne vlade v Liubljani 15. 6. 1905 št: 11955 + očetovo ustno dovoljenje za ml. ŽENINA (19!) v navzočnosti zgornjih prič; duhovnik Jos. Rauy",
+    whatEn: "marriage (Jul 3, 1905, entry 15) — the bride Maria Željko, half smallholder-hold-Hofsa? [~ a female spelling cf. v7/v17!], 25, GRIBLJE 1 (the 2nd marriage evidence of h1 — 1899 P128 the groom Georg ŽELJKO ½ = ★ the ŽELJKO continuity of 6 years!) × Michael Jakofčič, quarter smallholder, 19, Cerkvišče 9 (= the P119 v13 Johann HVALJ house? [~ a change!]); parents: Nicolaus Željko ½ smallholder × Maria KRIŽAN (⚠️ cf. the v17 father Nicolaus ¼ × Catharina Kure — 2 different Nicolaus!) / Michael Jakofčič ¼ smallholder × Maria ŽUNIČ (the ŽUNIČ network!); witnesses: Johann Grabrijan (= the v4 bride's surname!) + Georg Željko ¼ smallholder (= the bride's surname — a brother/father?); the Podzemelj commune certificate Jul 3, 1905 no: 5 + the permission of the provincial government in Liubljana Jun 15, 1905 no: 11955 + the father's verbal consent for the young GROOM (19!) in the presence of the above witnesses; priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "27",
+    bookSignature: "04455",
+    year: 1905,
+    scan: 129,
+    page: 128,
+    whatSi: "poroka (7. 8. 1905, vpis 17) — ženin Mathias Kukar [~ Hukav], 21, ¼ griblasd-Hofsa? [~], GRIBLJE 27 (4. poročni dokaz h27 — 1897 P126 nevesta Anna KUCHAR [~ Kučar] = ★ KUČAR/KUKAR-kontinuiteta 8 LET, dve pisavi!) × Barbara Željko, ½ griblastochf, 21, GRIBLJE 1 (3. poročni dokaz h1 — 2. V TEM LETU = 2. ŽELJKO-nevesta (v15 Maria!); ⚠️ 2 različna očeta Nicolaus Željko [½ × Maria Križan / ¼ × Catharina Kure] — oče+sin?) = ★ DRUBEL; starši: Johann KUKAR ¼ griblar × Catharina KLOBUČAR (KLOBUČAR = v5-mati Agnes! h44-mreža!) / Nicolaus Željko ¼ griblar × Catharina KURE; priči: Nicolaus Željko (= oče neveste?) + Georg Harašinič (HARAŠINIČ = v10 oče+priča — 3. dokaz!); zglasmnica občine Griblje 6/8. 1905 št: 7 + dovoljenje deželne vlade 4/7. 1905 № 12937 + proglas polnoletnosti za OBA (okrajna sodnija Črnomelj 17. 5. 1905); duhovnik Jos. Rauy — ZADNJA poroka 1905",
+    whatEn: "marriage (Aug 7, 1905, entry 17) — the groom Mathias Kukar [~ Hukav], 21, quarter smallholder-hold-Hofsa? [~], GRIBLJE 27 (the 4th marriage evidence of h27 — 1897 P126 the bride Anna KUCHAR [~ Kučar] = ★ the KUČAR/KUKAR continuity of 8 YEARS, two spellings!) × Barbara Željko, half smallholder's daughter, 21, GRIBLJE 1 (the 3rd marriage evidence of h1 — the 2nd THIS YEAR = the 2nd ŽELJKO bride (v15 Maria!); ⚠️ 2 different fathers Nicolaus Željko [½ × Maria Križan / ¼ × Catharina Kure] — father+son?) = ★ the DOUBLE; parents: Johann KUKAR ¼ smallholder × Catharina KLOBUČAR (KLOBUČAR = the v5 mother Agnes! the h44 network!) / Nicolaus Željko ¼ smallholder × Catharina KURE; witnesses: Nicolaus Željko (= the bride's father?) + Georg Harašinič (HARAŠINIČ = v10 father+witness — the 3rd evidence!); the Griblje commune certificate Aug 6, 1905 no: 7 + the permission of the provincial government Jul 4, 1905 no: 12937 + the majority certificate for BOTH (the Črnomelj district court May 17, 1905); priest Jos. Rauy — the LAST wedding of 1905",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "1",
+    bookSignature: "04455",
+    year: 1905,
+    scan: 129,
+    page: 128,
+    whatSi: "poroka (7. 8. 1905, vpis 17) — nevesta Barbara ŽELJKO, ½ griblastochf, 21, GRIBLJE 1 (3. poročni dokaz h1 — 2. V TEM LETU: v15 Maria + v17 Barbara; ⚠️ 2 različna Nicolaus Željko-očeta [½ × Maria Križan / ¼ × Catharina Kure] — oče+sin?) × Mathias Kukar [~], 21, ¼ griblasd-Hofsa? [~], GRIBLJE 27 (4. dokaz — ★ KUČAR/KUKAR 1897→05 8 let!) = ★ DRUBEL; starši: Nicolaus Željko ¼ griblar × Catharina KURE / Johann Kukar ¼ griblar × Catharina Klobučar; priči Nicolaus Željko + Georg Harašinič; zglasmnica občine Griblje 6/8. 1905 št: 7 + deželna vlada № 12937 + polnoletnost za OBA; duhovnik Jos. Rauy — ŽELJKO ×3 v letu (2 nevesti + 1 priča Georg v15!)",
+    whatEn: "marriage (Aug 7, 1905, entry 17) — the bride Barbara ŽELJKO, half smallholder's daughter, 21, GRIBLJE 1 (the 3rd marriage evidence of h1 — the 2nd THIS YEAR: v15 Maria + v17 Barbara; ⚠️ 2 different fathers Nicolaus Željko [½ × Maria Križan / ¼ × Catharina Kure] — father+son?) × Mathias Kukar [~], 21, quarter smallholder-hold-Hofsa? [~], GRIBLJE 27 (the 4th evidence — ★ KUČAR/KUKAR 1897→05 8 years!) = ★ the DOUBLE; parents: Nicolaus Željko ¼ smallholder × Catharina KURE / Johann Kukar ¼ smallholder × Catharina Klobučar; witnesses Nicolaus Željko + Georg Harašinič; the Griblje commune certificate Aug 6, 1905 no: 7 + the provincial government no: 12937 + the majority for BOTH; priest Jos. Rauy — ŽELJKO ×3 in the year (2 brides + 1 witness Georg in v15!)",
+    status: "DOCUMENTED",
+  },
+
   // ——— P122 razširitev: POROČNA KNJIGA 04455 — polno leto 1893 (skeni 87–90 ==
   // strani 86–89; VELIKA GLAVA »Traunungs=Buch« + rokopisno »1893« na s87 =
   // Pag. 86 POTRJENA — P122 lead!; 20 vpisov: 1886:7 → 1887:21 → 1888:20 →

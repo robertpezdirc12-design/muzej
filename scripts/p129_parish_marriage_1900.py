@@ -129,15 +129,15 @@ def main():
 
     # ---------- I6: qa-parish pini ----------
     qa = open(QA_TS).read()
-    n595 = qa.count("HOUSE_VITALS.length !== 619")
+    n595 = qa.count("HOUSE_VITALS.length !== 632")
     n593 = qa.count("HOUSE_VITALS.length !== 593")
-    n78 = qa.count("≠ 102 (")
+    n78 = qa.count("≠ 115 (")
     n76 = qa.count("≠ 76 (")
     check("I6 vitals pini 595", n595 >= 44, str(n595))
     check("I6b brez stale 593 asercij", n593 == 0, str(n593))
     check("I6c bloki pini 94", n78 >= 8, str(n78))
     check("I6d brez stale ≠ 76 asercij", n76 == 0, str(n76))
-    check("I6e sidra 71 + 1900:2", "poročna sidra ≠ 95" in qa and
+    check("I6e sidra 71 + 1900:2", "poročna sidra ≠ 108" in qa and
           "h.year === 1900).length !== 2" in qa and
           "h.year === 1902).length !== 4" in qa)
     check("I6f p129Marr hiše", '"7,8"' in qa)
