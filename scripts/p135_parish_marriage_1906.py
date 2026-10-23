@@ -56,9 +56,9 @@ EXPECTED_CROSSCHECKS = 11
 GRIBLJE_ROWS = [8, 9, 11]
 GRIBLJE_HOUSES = ["73", "31", "35", "62", "21"]
 GRIBLJE_BLOCKS = 5              # +5 blokov
-VITALS_TOTAL = 637              # 632 + 5
-BLOKI_04455 = 120               # 115 + 5
-SIDRA_TOTAL = 113               # 108 + 5 (1906:5)
+VITALS_TOTAL = 642              # 632 + 5
+BLOKI_04455 = 125               # 115 + 5
+SIDRA_TOTAL = 118               # 108 + 5 (1906:5)
 RAUY_COUNT = 11                 # 11/12 + 1 gost pro delegato!
 FEB12_ROWS = [4, 5, 6]          # masa 3 (v4–v6)
 FEB19_ROWS = [7, 8]             # masa 2
@@ -155,11 +155,11 @@ def main():
     # ---------- I6: qa-parish.ts ----------
     qa = open(QA_TS).read()
     check("I6a qa-p135 id", "qa-p135-parish-marriage-1906" in qa)
-    n638 = qa.count("HOUSE_VITALS.length !== 637")
+    n638 = qa.count("HOUSE_VITALS.length !== 642")
     check("I6b vitals pini 637", n638 >= 46, str(n638))
-    n121 = qa.count("bloki 04455 ≠ 120")
+    n121 = qa.count("bloki 04455 ≠ 125")
     check("I6c bloki pini 120", n121 >= 8, str(n121))
-    check("I6d sidra 113 + 1906:5", "poročna sidra ≠ 113" in qa and "h.year === 1906).length !== 5" in qa)
+    check("I6d sidra 113 + 1906:5", "poročna sidra ≠ 118" in qa and "h.year === 1906).length !== 5" in qa)
     check("I6e hiše 1906 pin", "21,31,35,62,73" in qa)
     check("I6f ostanki 632/115/108", "!== 632" not in qa and "bloki 04455 ≠ 115" not in qa and "sidra ≠ 108" not in qa, "stale pini!")
 

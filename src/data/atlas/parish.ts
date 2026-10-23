@@ -1933,6 +1933,65 @@ export const HOUSE_VITALS: HouseVital[] = [
     status: "DOCUMENTED",
   },
 
+  // ——— P136 razširitev: POROČNA KNJIGA 04455 — polno leto 1907 (skeni 132–134 ==
+  // Pag. 131–133; glava »1907« na s132 + »1908« na s134 = P137 lead) — 12 vpisov
+  // (P136-lead »min 5« 2,4× podcenjen — 22. leto zapored!); ★ 12/12 PONEDELJKOV =
+  // 2. popolno ponedeljkovsko leto (po P134 11/11!); ★ DISPENSA 2. kolena stranske
+  // vrste (ordinariat Ljubljana 28/8. 1907 — v11!); ★ 2 KOVAČ-družini na h6 (Nicolaus
+  // + Georg!) = 2 bloka hiše v letu; ★ 20-LETNA LUKNJA h3; ★ NOVA hiša h19; ★
+  // PEZDIREC-mreža ×5 + MUC ×3 + NOVAK ×3; ★ 1. ne-Rauy podpis [~ Pavlič?] (v7);
+  // pokojni oče Žugelj † (v12); zglašnica št. 119 (občina Dobliče? [~]) ———
+  {
+    houseNo: "19",
+    bookSignature: "04455",
+    year: 1907,
+    scan: 132,
+    page: 131,
+    whatSi: "poroka (18. 2. 1907, vpis 4) — ženin Nikolaus HRANC [~ Hranč? — nov priimek!], ¼ griblar, 22 (mladoleten — proglas polnoletnosti!), GRIBLJE 19 (★ 1. POROČNI DOKAZ h19 = NOVA HIŠA = 66. poročna hiša korpusa!) × Catharina KLEPEC, ¼ griblarjeva hči, 18 (mladoletna!), Krasinec 36; starši: Nicolaus Hranc ½ Hübler × Maria KRALJ / Nicolaus Klepec ½ Hübler × Barbara DORN [~ Dornik? — cf. P127-v23 popravek Dornik→DOMUŠEK!]; priči Peter STRAUS [~ — STRAUS-mreža h32/h46/h22!] + Joseph PEZDIREC ½ Hübler; zglašnica občine Podzemelj [20/1?] 1907 št. 4 + proglas polnoletnosti za ženina od okrajnega sodišča v Metliki [15/1?] 1907; duhovnik Jos. Rauy — OBA mladoletna!",
+    whatEn: "marriage (Feb 18, 1907, entry 4) — the groom Nikolaus HRANC [~ Hranc? — a new surname!], quarter smallholder, 22 (a minor — the majority declaration!), GRIBLJE 19 (★ the 1st MARRIAGE EVIDENCE of h19 = A NEW HOUSE = the 66th marriage house of the corpus!) × Catharina KLEPEC, quarter smallholder's daughter, 18 (a minor!), Krasinec 36; parents: Nicolaus Hranc ½ Hübler × Maria KRALJ / Nicolaus Klepec ½ Hübler × Barbara DORN [~ Dornik? — cf. the P127-v23 correction Dornik→DOMUŠEK!]; witnesses Peter STRAUS [~ — the STRAUS network h32/h46/h22!] + Joseph PEZDIREC ½ Hübler; the Podzemelj commune certificate [Jan 20?] 1907 no. 4 + the majority declaration for the groom from the Metlika district court [Jan 15?] 1907; priest Jos. Rauy — BOTH minors!",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "6",
+    bookSignature: "04455",
+    year: 1907,
+    scan: 132,
+    page: 131,
+    whatSi: "poroka (25. 2. 1907, vpis 5) — ženin Franz KOVAČ, ½ griblar, [24? — starost neberljiva!], GRIBLJE 6 (2. poročni dokaz h6 — 1903 P132 v14 Jakobčič!) × Theresia KRIŽAN, ½ griblarjeva hči, [24?], GRIBLJE 7 (3. poročni dokaz h7 — 1889 Totter + 1900 Töller!) = ★ DRUBEL sosednjih hiš (6×7 — 1. drubel po P135!); starši: Nicolaus Kovač ½ Hübler × Catharina DORN [~] (★ ≠ v11-oče Georg — DVE Kovač-družini na h6!) / Johann Križan ½ Hübler × Maria BAJUK; priči Martin PEZDIREC + Johann [~]; zglašnica občine Podzemelj [30/1?] 1907 št. 3; duhovnik Jos. Rauy",
+    whatEn: "marriage (Feb 25, 1907, entry 5) — the groom Franz KOVAČ, half smallholder, [24? — the age illegible!], GRIBLJE 6 (the 2nd marriage evidence of h6 — 1903 P132 v14 Jakobčič!) × Theresia KRIŽAN, half smallholder's daughter, [24?], GRIBLJE 7 (the 3rd marriage evidence of h7 — 1889 Totter + 1900 Töller!) = ★ the DOUBLE of the neighboring houses (6×7 — the 1st double since P135!); parents: Nicolaus Kovač ½ Hübler × Catharina DORN [~] (★ ≠ the v11 father Georg — TWO Kovač families at h6!) / Johann Križan ½ Hübler × Maria BAJUK; witnesses Martin PEZDIREC + Johann [~]; the Podzemelj commune certificate [Jan 30?] 1907 no. 3; priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "7",
+    bookSignature: "04455",
+    year: 1907,
+    scan: 132,
+    page: 131,
+    whatSi: "poroka (25. 2. 1907, vpis 5) — nevesta Theresia KRIŽAN, ½ griblarjeva hči, [24?], GRIBLJE 7 (3. poročni dokaz h7 — 1889 P118 v4 Totter + 1900 P129 v2 Töller? + 1907 = 7-letna vrzel!) × Franz KOVAČ, GRIBLJE 6 = ★ DRUBEL sosednjih hiš; starši: Johann Križan ½ Hübler × Maria BAJUK (BAJUK-mreža!) / Nicolaus Kovač ½ Hübler × Catharina Dorn [~]; priči Martin Pezdirec + Johann [~]; zglašnica občine Podzemelj [30/1?] 1907 št. 3; duhovnik Jos. Rauy — KRIŽAN ×2 v letu (v5-nevesta + v1-mati Županič!)",
+    whatEn: "marriage (Feb 25, 1907, entry 5) — the bride Theresia KRIŽAN, half smallholder's daughter, [24?], GRIBLJE 7 (the 3rd marriage evidence of h7 — 1889 P118 v4 Totter + 1900 P129 v2 Töller? + 1907 = a 7-year gap!) × Franz KOVAČ, GRIBLJE 6 = ★ the DOUBLE of the neighboring houses; parents: Johann Križan ½ Hübler × Maria BAJUK (the BAJUK network!) / Nicolaus Kovač ½ Hübler × Catharina Dorn [~]; witnesses Martin Pezdirec + Johann [~]; the Podzemelj commune certificate [Jan 30?] 1907 no. 3; priest Jos. Rauy — KRIŽAN ×2 in the year (the v5 bride + the v1 Županič mother!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "3",
+    bookSignature: "04455",
+    year: 1907,
+    scan: 133,
+    page: 132,
+    whatSi: "poroka (3. 6. 1907, vpis 9) — ženin Johann PEZDIREC, ½ griblarjev sin, 29, GRIBLJE 3 (2. poročni dokaz h3 — 1887 P116 → 1907 = ★ 20-LETNA LUKNJA poročne linije, 2. najdaljša po h21 [19 let]!; PEZDIREC-družina doslej Griblje 20 [P132 v17] — NOVA veja!) × Magdalena HLEBEC, 25, Vranoviče 5; starši: Michael Pezdirec ½ Hübler × Maria JAKŠEVIĆ [~ Jakšew? — 1. -ić-priimek po Đeleković 1906!] / Johann Hlebec ½ Hübler × Ana ŠIKORNY [~ — nov priimek!]; priči Nicolaus ŠIKORNY [~ — brat matere?] + Georg [~]; zglašnica občine DOBLIČE? [~] z dne 2/6. 1907 št: 119 (★ najvišja številka dokumenta leta!) + list od župnega urada [~]; duhovnik Jos. Rauy — PEZDIREC-mreža ×5 v letu (v3-mati + v5-priča + v6/v7-nevesti + v9-ženin!)",
+    whatEn: "marriage (Jun 3, 1907, entry 9) — the groom Johann PEZDIREC, half smallholder's son, 29, GRIBLJE 3 (the 2nd marriage evidence of h3 — 1887 P116 → 1907 = ★ a 20-YEAR GAP of the marriage line, the 2nd longest after h21 [19 years]!; the PEZDIREC family previously Griblje 20 [P132 v17] — A NEW branch!) × Magdalena HLEBEC, 25, Vranoviče 5; parents: Michael Pezdirec ½ Hübler × Maria JAKŠEVIĆ [~ Jakšew? — the 1st -ić surname after Đeleković 1906!] / Johann Hlebec ½ Hübler × Ana ŠIKORNY [~ — a new surname!]; witnesses Nicolaus ŠIKORNY [~ — the mother's brother?] + Georg [~]; the DOBLIČE? [~] commune certificate of Jun 2, 1907 no: 119 (★ the highest document number of the year!) + a sheet from the parish office [~]; priest Jos. Rauy — the PEZDIREC network ×5 in the year (the v3 mother + the v5 witness + the v6/v7 brides + the v9 groom!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "6",
+    bookSignature: "04455",
+    year: 1907,
+    scan: 134,
+    page: 133,
+    whatSi: "poroka (16. 9. 1907, vpis 11) — nevesta Barbara KOVAČ, ¼ griblarjeva hči, 21, GRIBLJE 6 (3. poročni dokaz h6 — 1903 Jakobčič + v5 Franz ISTEM LETU = ★ 2. BLOK hiše v letu, edini leta!) × Mathäus ŽUGELJ, ¼ griblar, 24, Krasinec 4 [~]; ★ DISPENSA OD KRVNEGA SORODSTVA V 2. KOLENU STRANSKE VRSTE od knj. čh. ordinarijata v LJUBLJANI od 28/8. 1907 (1. dispensa po P134-1905! — bratranci!); starši: Mathias Žugelj ¼ Hübler × Anna Justarič? [~ Lustari?] / Georg Kovač ½ Hübler (★ ≠ v5-oče Nicolaus — DVE Kovač-družini na h6, brata?!) × Anna JAKOFČIČ (Jakofčič-mreža h9/h16!); priči Nicolaus Vodlovnič? [~] ½ Hübler + Anton [~]; zglašnica [mestne?] občine Podzemelj od 14/9. 1907 št. 10; duhovnik Jos. Rauy — ŽUGELJ ×2 v 2 tednih (v11-ženin + v12-nevesta!)",
+    whatEn: "marriage (Sep 16, 1907, entry 11) — the bride Barbara KOVAČ, quarter smallholder's daughter, 21, GRIBLJE 6 (the 3rd marriage evidence of h6 — 1903 Jakobčič + the v5 Franz THE SAME YEAR = ★ the 2ND BLOCK of the house in the year, the only one of the year!) × Mathäus ŽUGELJ, quarter smallholder, 24, Krasinec 4 [~]; ★ THE DISPENSATION FROM THE BLOOD RELATIONSHIP IN THE 2ND DEGREE OF THE COLLATERAL LINE from the episcopal ordinariate in LJUBLJANA of Aug 28, 1907 (the 1st dispensation since P134-1905! — cousins!); parents: Mathias Žugelj ¼ Hübler × Anna Justarič? [~ Lustari?] / Georg Kovač ½ Hübler (★ ≠ the v5 father Nicolaus — TWO Kovač families at h6, brothers?!) × Anna JAKOFČIČ (the Jakofčič network h9/h16!); witnesses Nicolaus Vodlovnič? [~] ½ Hübler + Anton [~]; the [town?] Podzemelj commune certificate of Sep 14, 1907 no. 10; priest Jos. Rauy — ŽUGELJ ×2 in 2 weeks (the v11 groom + the v12 bride!)",
+    status: "DOCUMENTED",
+  },
+
   // ——— P122 razširitev: POROČNA KNJIGA 04455 — polno leto 1893 (skeni 87–90 ==
   // strani 86–89; VELIKA GLAVA »Traunungs=Buch« + rokopisno »1893« na s87 =
   // Pag. 86 POTRJENA — P122 lead!; 20 vpisov: 1886:7 → 1887:21 → 1888:20 →
