@@ -1341,6 +1341,89 @@ export const HOUSE_VITALS: HouseVital[] = [
   // 1893→1901 · Simonič 1893+1900→1901 · Hočevar 1898→1901.
   // Dokaz: research/issue17/parish-marriage-1901.json; verifikator:
   // scripts/p130_parish_marriage_1901.py --check (I1–I11).
+  // ——— P131 razširitev: POROČNA KNJIGA 04455 — polno leto 1902 (skeni 116–117 ==
+  // strani 115–116; Pag. == sken − 1, 17. potrditev; rokopisna glava »1902.« na
+  // s116 potrjena ŽE od P130-lead — P131-lead KOREKCIJE ×2: [G]pbyke?→GRIBLJE 5!
+  // (v2 ženinova vas = Griblje, NE nova vas!) + v6 datum Sept 15 (P129-lead
+  // napaka »April 15«!) — glava »1903.« POTRJENA na s118 (r1 = 1903 Febr 3
+  // Dragatuš? 1 × GRIBLJE 11 Agnes Žunjič? = P132 LEAD, 3. GRIBLJE poroka v
+  // vrsti!). 6 vpisov obojestransko = NAJMANJŠE LETO POROČNE LINIJE 1886–1902
+  // (prej min 1900:8 po skupnih vpisih / 1886:7 po okvirni konvenciji P128–P130
+  // — 6 < 7 < 8 = NOVI MINIMUM V OBEH MERAH!; opomba: »min 1886:7« konvencija
+  // meri GRIBLJE okvir 1886, skupni vpisi 1886 = 24 po P115 json — odprta
+  // terminološka vprašanja linije) = Jänner 27 ×3 (v1–v3) + Mai 12 + Mai 26 +
+  // Sept 15. 2 GRIBLJE poroke / 4 poročna bloka (h5 v2 1. POROČNI DOKAZ +
+  // h31 v2 1. POROČNI DOKAZ = DRUBEL poroka! + h30 v4 3. dokaz po 1889+1892 +
+  // h24 v4 2. dokaz po 1895 = DRUBEL poroka!) — vitals 595 → **599**; bloki
+  // 04455 78 → **82**; sidra 71 → **75** (+1902:4); p80 hiše 58 + PT luknja 12
+  // NESPREMENJENA (h5/h24/h30/h31 že v vzorci). NOVELE: ★ NAJMANJŠE LETO
+  // LINIJE (6!) + ★ 2. DUHOVNIŠKA MENJAVA 1902: Hanislav DOSTÁL kaplan v5
+  // (1. DOSTÁL linije — Rauy 5/6!) + ★ 2. NEZAKONSKI ŽENIN Z IZRECNO opombo
+  // (v6 Thomas Černe: oče = črta + mati Ursula Černe »lediga? Ehe.« — 1.
+  // IZRECNA nezakonska-opomba v poročni liniji!) + ★ 2 ženina IZVEN župnije v
+  // enem letu (v6 Črnomelj 134 mesto + v6 nevesta Bukoraj? pf. Črnomelj 1 —
+  // NOVA VAS? + očina PLANINA št: 10 NOVA!) + ★ priče činovniki (v6: vojak
+  // Eugen Sorbea? 12 R. Leu. Bor'zd. off'Anwt. [~] + železniški Johann
+  // Peterly? k.k. Bahndienst [~] — vzorec P130!) + ★ ženitovanjska zglašnica
+  // = REŠITEV SERIJSKE FORMULE (prej »Porifovanjška/žerifovanjška« P128–P130
+  // [~] — semantična rešitev: Trauungs-Anzeige!) + ★ ŠTRUPEC = NOVI PRIIMEK
+  // LINIJE ×3 (v2 ženin Mathias + oče Johann + v6 nevestina mati Maria
+  // Strupec!) + ★ LEGINA NOVI ×3 (v4 ženin + oče + priča Georg!) + ★ KOCJAN
+  // NOVI (v6 nevesta + oče Peter ¼ griblar — griblar-status IZVEN Griblje!) +
+  // ★ DRUBEL-GRIBLJE poroki ×2 v enem letu (v2 h5×h31 + v4 h30×h24 — 3. leto
+  // z ≥2 po P121 ×3 + P122 ×2 + P127 ×3!) + PEZDIREC ×3 povratek (7. leto
+  // mreže po 1901-pavzi!) + DRAGOŠ priča v2 (10. leto mreže 1886–1902!) +
+  // MUC ×3 (v1 nevesta Terezia + v3 priča Johann == P128 v3 priča! + v5 mati
+  // Maria) + ŽUPANIČ 4. leto (v3 mati neveste — pavza 1901!) + KLEPEC 16.+
+  // leto + BRODARIČ 14.+ leto + ŠKALA 4. leto + ČERNE 3. leto + KRALJ 7.+
+  // leto + STRAVS/Straus 3. leto + TOMC/Tomič 3.+ leto (P132-lead Barbara
+  // Tomc!) + nadvarstveno dovoljenje ×3 (v4 sodišče Črnomelj P62/99 18. [~] +
+  // v5 okrajno sodišče Metlika 13. maja + za ml. nevesto!) + Wagnermeister
+  // (v3 — 1. v poročni liniji!) + Fabriksarbeiter (v3 oče — 1.!) + Besitzer
+  // (v6 — 1.!). P131-lead stale: »min 6 vpisov« → točno 6; »[G]pbyke?« →
+  // GRIBLJE 5 (korekcija!).
+  // Dokaz: research/issue17/parish-marriage-1902.json; verifikator:
+  // scripts/p131_parish_marriage_1902.py --check (I1–I11).
+  {
+    houseNo: "5",
+    bookSignature: "04455",
+    year: 1902,
+    scan: 116,
+    page: 115,
+    whatSi: "poroka (27. 1. 1902, vpis 2) — ženin Mathias ŠTRUPEC? [~ — 1. NASTOP priimka v poročni liniji!], ¼ griblar, 29, GRIBLJE 5 (1. POROČNI DOKAZ h5!; h5 že v mrliškem okvirju 1886 P80!) × Maria MULH? [~ — cf. Mula/Muh; branje odprto], ½ gbl. Tochter, 20, GRIBLJE 31 (1. POROČNI DOKAZ h31!; h31 že v poročnem okvirju 1886 P80!) = ★ DRUBEL-GRIBLJE poroka (h5 × h31 — 1. poroka 1902; P131-lead KOREKCIJA: [G]pbyke?→GRIBLJE 5!); starši: Johann Štrupec ¼ griblar × Maria Harasinič? [~] / Mathias Mulh? ½ griblar × Maria Brodarič (BRODARIČ 14.+ leto mreže!); priče: Jacob Jetter? [~] (¼) + Jos. Dragoš? [~] (½) griblar — DRAGOŠ 10.+ leto (1886–1895, 1900, 1902!); zglasmica: ženitovanjska zglašnica očine Griblje od 26/1. št: 23, mit väterlichen mündl. Einwilligung für die mi. Braut in Gegenwart obiger Beifügenden [~ — vzorec P122 v16!]; TRIPLO-DATUM (Jänner 27 ×3 = v1+v2+v3!); duhovnik Jos. Rauy",
+    whatEn: "marriage (Jan 27, 1902, entry 2) — the groom Mathias ŠTRUPEC? [~ — the 1st APPEARANCE of the surname in the marriage line!], quarter smallholder, 29, GRIBLJE 5 (the 1st MARRIAGE EVIDENCE of h5!; h5 already in the 1886 death frame P80!) × Maria MULH? [~ — cf. Mula/Muh; the reading open], half smallholder's daughter, 20, GRIBLJE 31 (the 1st MARRIAGE EVIDENCE of h31!; h31 already in the 1886 marriage frame P80!) = ★ the DOUBLE-GRIBLJE wedding (h5 × h31 — the 1st wedding of 1902; the P131-lead CORRECTION: [G]pbyke?→GRIBLJE 5!); parents: Johann Štrupec ¼ smallholder × Maria Harasinič? [~] / Mathias Mulh? ½ smallholder × Maria Brodarič (BRODARIČ the 14th+ year of the network!); witnesses: Jacob Jetter? [~] (¼) + Jos. Dragoš? [~] (½) smallholder — DRAGOŠ the 10th+ year (1886–1895, 1900, 1902!); certificate: the marriage banns (ženitovanjska zglašnica) of the Griblje commune from Jan 26 no: 23, with the verbal paternal consent for the minor bride in the presence of the above-attached [~ — the P122 v16 pattern!]; the TRIPLE DATE (Jan 27 ×3 = v1+v2+v3!); priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "31",
+    bookSignature: "04455",
+    year: 1902,
+    scan: 116,
+    page: 115,
+    whatSi: "poroka (27. 1. 1902, vpis 2) — nevesta Maria MULH? [~], ½ gbl. Tochter, 20, GRIBLJE 31 (1. POROČNI DOKAZ h31! — h31 v poročnem okvirju 1886 ženinova [P80], 16 let čakanja na lasten dokaz!) × Mathias Štrupec? [~], ¼ griblar, 29, GRIBLJE 5 (1. POROČNI DOKAZ h5!) = DRUBEL-GRIBLJE poroka; oče Mathias Mulh? ½ griblar × Maria Brodarič (BRODARIČ ×14+!); zglasmica občine Griblje 26/1. št: 23 + väterliche mündl. Einwilligung (nevesta 20 = »mi.« [~ mladoletna-po-obliki, ne po starosti? vprašanje odprto]); duhovnik Jos. Rauy",
+    whatEn: "marriage (Jan 27, 1902, entry 2) — the bride Maria MULH? [~], half smallholder's daughter, 20, GRIBLJE 31 (the 1st MARRIAGE EVIDENCE of h31! — h31 in the 1886 marriage frame as a groom's [P80], 16 years of waiting for its own evidence!) × Mathias Štrupec? [~], quarter smallholder, 29, GRIBLJE 5 (the 1st MARRIAGE EVIDENCE of h5!) = the DOUBLE-GRIBLJE wedding; father Mathias Mulh? ½ smallholder × Maria Brodarič (BRODARIČ ×14+!); the Griblje commune certificate Jan 26 no: 23 + the verbal paternal consent (the bride 20 = »mi.« [~ a minor-by-form, not by age? the question open]); priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "30",
+    bookSignature: "04455",
+    year: 1902,
+    scan: 117,
+    page: 116,
+    whatSi: "poroka (12. 5. 1902, vpis 4) — ženin Nicolaus LEGINA? [~ — 1. NASTOP priimka v poročni liniji!], ¼ griblar, 43 (najstarejši ženin leta!), GRIBLJE 30 (3. POROČNI DOKAZ h30 po 1889 P118 + 1892 P121 v5!) × Catharina BRIŠEC? [~ — cf. BRINEC-tension P122 h26!], ½ gbl. Tochter, 20, GRIBLJE 24 (2. poročni dokaz h24 po 1895 P124!) = ★ DRUBEL-GRIBLJE poroka (h30 × h24); starši: Johann Legina ¼ griblar × Dorothea Hrižan? [~] / Mathias Brišec ½ griblar × Barbara Jakobič? [~ — JAKOBIČ-link na P122 h26 starša Georg Jakobič!]; priče: Johan Brišec + Georg Legina ¼ griblar; nadvarstveno dovoljenje: ženitovanjska zglašnica očine Griblje-ske z dne 17.5.1902 štev: 2, po nadvarstveno dovoljenje && uml. rovetja [~] od c. kr. okr. sodišča Črnomelj od 1. maja 1902 P62/99 18. [~ — sodna odločba 11 dni pred poroko!]; duhovnik Jos. Rauy",
+    whatEn: "marriage (May 12, 1902, entry 4) — the groom Nicolaus LEGINA? [~ — the 1st APPEARANCE of the surname in the marriage line!], quarter smallholder, 43 (the oldest groom of the year!), GRIBLJE 30 (the 3rd MARRIAGE EVIDENCE of h30 after 1889 P118 + 1892 P121 v5!) × Catharina BRIŠEC? [~ — cf. the BRINEC-tension P122 h26!], half smallholder's daughter, 20, GRIBLJE 24 (the 2nd marriage evidence of h24 after 1895 P124!) = ★ the DOUBLE-GRIBLJE wedding (h30 × h24); parents: Johann Legina ¼ smallholder × Dorothea Hrižan? [~] / Mathias Brišec ½ smallholder × Barbara Jakobič? [~ — the JAKOBIČ-link to the P122 h26 parent Georg Jakobič!]; witnesses: Johan Brišec + Georg Legina ¼ smallholder; the guardianship permission: the marriage banns of the Griblje commune May 17, 1902 no: 2, by the guardianship permission && uml. rovetja [~] from the c.k. district court of Črnomelj from May 1, 1902 P62/99 18. [~ — the court decision 11 days before the wedding!]; priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "24",
+    bookSignature: "04455",
+    year: 1902,
+    scan: 117,
+    page: 116,
+    whatSi: "poroka (12. 5. 1902, vpis 4) — nevesta Catharina BRIŠEC? [~], ½ gbl. Tochter, 20, GRIBLJE 24 (2. poročni dokaz h24 po 1895 P124 — 7 let vrzel!) × Nicolaus Legina? [~], ¼ griblar, 43, GRIBLJE 30 (3. POROČNI DOKAZ!) = DRUBEL-GRIBLJE poroka; oče Mathias Brišec ½ griblar × Barbara Jakobič? [~] — BRIŠEC/BRINEC-tension (P122 h26 Catharina BRINEC oče Georg JAKOBIČ — isti Jakobič-krog? odprto!); nadvarstveno dovoljenje okrajnega sodišča Črnomelj (1. maja 1902 — za nevesto 20!); duhovnik Jos. Rauy",
+    whatEn: "marriage (May 12, 1902, entry 4) — the bride Catharina BRIŠEC? [~], half smallholder's daughter, 20, GRIBLJE 24 (the 2nd marriage evidence of h24 after 1895 P124 — a 7-year gap!) × Nicolaus Legina? [~], quarter smallholder, 43, GRIBLJE 30 (the 3rd MARRIAGE EVIDENCE!) = the DOUBLE-GRIBLJE wedding; father Mathias Brišec ½ smallholder × Barbara Jakobič? [~] — the BRIŠEC/BRINEC-tension (the P122 h26 Catharina BRINEC father Georg JAKOBIČ — the same Jakobič circle? open!); the guardianship permission of the district court of Črnomelj (May 1, 1902 — for the 20-year-old bride!); priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
   // ——— P122 razširitev: POROČNA KNJIGA 04455 — polno leto 1893 (skeni 87–90 ==
   // strani 86–89; VELIKA GLAVA »Traunungs=Buch« + rokopisno »1893« na s87 =
   // Pag. 86 POTRJENA — P122 lead!; 20 vpisov: 1886:7 → 1887:21 → 1888:20 →

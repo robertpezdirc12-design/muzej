@@ -1,0 +1,374 @@
+{
+ "source": "Matricula Online — SI-LNSA, P Podzemelj 1873-1922 (poročna knjiga 04455), skeni 116–117 == strani 115–116",
+ "frame": {
+  "year": 1902,
+  "scans": [
+   116,
+   117
+  ],
+  "pages": [
+   115,
+   116
+  ],
+  "pageRule": "Pag. == sken − 1 (17. potrditev; velja 61–116)",
+  "entriesTotal": 6,
+  "razpored": "s116 (Pag. 115): v1–v3 pod rokopisno glavo »1902.« (dvopodčrtana; L-stran 900–1500, R-stran 1000–1560 — listi NISO poravnani!); s117 (Pag. 116): v4–v6 (L 300–1030, R 325–1070) + prazne vrstice; glava »1903.« na s118 = P132 LEAD (r1 = 1903 Febr 3 Dragatuš? 1 × GRIBLJE 11 Agnes Žunjič? [~] — 3. GRIBLJE poroka v vrsti!)",
+  "lead": "P130-lead potrjen (glava 1902 ŽE s116; v4–v6 na s117); P131-lead KOREKCIJE ×2: [G]pbyke?→GRIBLJE 5 + v6 datum Sept 15 (ne »April 15« iz P129-lead); P129-lead 's118 = glava 1903' POTRJEN",
+  "yearsRank": "min 1900:8 (po skupnih vpisih) / 1886:7 (okvirna konvencija P128–P130) → 1902:6 = NAJMANJŠE leto linije v OBEH merah; opomba: 1886 = 24 skupnih vpisov po P115 json — konvencija 'min 1886:7' meri GRIBLJE okvir (odprto terminološko vprašanje)"
+ },
+ "lead": "P131 — poročna knjiga 04455, polno leto 1902: 6 vpisov obojestransko; 2 GRIBLJE poroki / 4 poročna bloka (h5+h31 1. dokaza DRUBEL + h30 3. dokaz × h24 2. dokaz DRUBEL); vitals 595→599; bloki 04455 78→82; sidra 71→75",
+ "entries": [
+  {
+   "row": 1,
+   "date": "27. januar 1902",
+   "scan": 116,
+   "page": 115,
+   "groom": {
+    "name": "Martin Tomc",
+    "place": "Primostek 19",
+    "stand": "½ küblastofsju? [~ — cf. Rosetta-termini P130]",
+    "age": 34,
+    "status": "1 (J.)"
+   },
+   "bride": {
+    "name": "Terezia Muc",
+    "place": "Primostek 21",
+    "stand": "½ gžüblwin? [~ — griblarin-forma? branje odprto]",
+    "age": 30,
+    "status": "1 (J.)"
+   },
+   "parentsGroom": "Georg Tomc ½ griblar × Anna Klepec",
+   "parentsBride": "Johann Klanec ½ griblar × Maria Škof",
+   "witnesses": [
+    "Ignac Brem? [~]",
+    "Peter Klepec ½ griblar"
+   ],
+   "befunden": "ženitovanjska zglašnica očine Podzemelj od 27/1. 1902 štev: 48.",
+   "priest": "Jos. Rauy pf.",
+   "griblje": false,
+   "notes": "MUC ×1 (nevesta); KLEPEC ×2 (mati ženina + priča ½); Tomc/Tomič-linija; Klanec NOVI; Škof NOVI"
+  },
+  {
+   "row": 2,
+   "date": "27. januar 1902",
+   "scan": 116,
+   "page": 115,
+   "groom": {
+    "name": "Mathias Štrupec? [~ — 1. NASTOP priimka v liniji!]",
+    "place": "GRIBLJE 5",
+    "stand": "¼ griblar",
+    "age": 29,
+    "status": "1 (J.)"
+   },
+   "bride": {
+    "name": "Maria Mulh? [~ — cf. Mula/Muh]",
+    "place": "GRIBLJE 31",
+    "stand": "½ gbl. Tochter",
+    "age": 20,
+    "status": "1 (J.)"
+   },
+   "parentsGroom": "Johann Štrupec ¼ griblar × Maria Harasinič? [~]",
+   "parentsBride": "Mathias Mulh? ½ griblar × Maria Brodarič (14.+ leto mreže!)",
+   "witnesses": [
+    "Jacob Jetter? [~] (¼)",
+    "Jos. Dragoš? [~] (½) griblar — 10.+ leto mreže (1886–1895, 1900, 1902!)"
+   ],
+   "befunden": "ženitovanjska zglašnica očine Griblje od 26/1. št: 23, mit väterlichen mündl. Einwilligung für die mi. Braut in Gegenwart obiger Beifügenden [~ — vzorec P122 v16!]",
+   "priest": "Jos. Rauy pf.",
+   "griblje": true,
+   "houseNoGroom": "5",
+   "houseNoBride": "31",
+   "novelty": "★ 1. POROČNI DOKAZ h5 + 1. POROČNI DOKAZ h31 = DRUBEL-GRIBLJE poroka; P131-lead KOREKCIJA: [G]pbyke? → GRIBLJE 5; TRIPLO-DATUM (Jänner 27 ×3)"
+  },
+  {
+   "row": 3,
+   "date": "27. januar 1902",
+   "scan": 116,
+   "page": 115,
+   "groom": {
+    "name": "Franz Sober? [~ — 1. NASTOP!]",
+    "place": "Kloster 35",
+    "stand": "Wagnermeister (1. v poročni liniji!)",
+    "age": 26,
+    "status": "1 (J.)"
+   },
+   "bride": {
+    "name": "Maria Škala",
+    "place": "Podzemelj 5",
+    "stand": "½ gžüblastofš.? [~]",
+    "age": 23,
+    "status": "1 (J.)"
+   },
+   "parentsGroom": "Jacob Sober? [~] Fabriksarbeiter (1.!) × Maria Županič (ŽUPANIČ 4. leto — pavza 1901!)",
+   "parentsBride": "Martin Škala ½ griblar × Margareth Rižman? [~] (ŠKALA 4. leto: 1891, 1899, 1901, 1902)",
+   "witnesses": [
+    "Johann Muc (½) — == P128 v3 PRIČA + P130 v11 Weißstand!",
+    "Franz Berkovec? [~] (¼)"
+   ],
+   "befunden": "ženitovanjska zglašnica očine Gradac od 27/1. 1902 štev: 4 und väterliche mündl. Einwilligung für die mi. Braut in Gegenwart obiger Beifügende [~]",
+   "priest": "Jos. Rauy pf.",
+   "griblje": false,
+   "notes": "TRIPLO-DATUM (Jänner 27 ×3); nevestina očina = Gradac (Wohnort Podzemelj 5!); MUC ×2 (nevesta v1 + priča v3)"
+  },
+  {
+   "row": 4,
+   "date": "12. maj 1902",
+   "scan": 117,
+   "page": 116,
+   "groom": {
+    "name": "Nicolaus Legina? [~ — 1. NASTOP!]",
+    "place": "GRIBLJE 30",
+    "stand": "¼ griblar",
+    "age": 43,
+    "status": "1 (J.)"
+   },
+   "bride": {
+    "name": "Catharina Brišec? [~ — cf. BRINEC-tension P122 h26!]",
+    "place": "GRIBLJE 24",
+    "stand": "½ gbl. Tochter",
+    "age": 20,
+    "status": "1 (J.)"
+   },
+   "parentsGroom": "Johann Legina ¼ griblar × Dorothea Hrižan? [~]",
+   "parentsBride": "Mathias Brišec ½ griblar × Barbara Jakobič? [~ — JAKOBIČ-link P122 h26!]",
+   "witnesses": [
+    "Johan Brišec",
+    "Georg Legina ¼ griblar"
+   ],
+   "befunden": "ženitovanjska zglašnica očine Griblje-ske z dne 17.5.1902 štev: 2, po nadvarstveno dovoljenje && uml. rovetja [~] od c. kr. okr. sodišča Črnomelj od 1. maja 1902 P62/99 18. [~ — sodna odločba 11 dni pred poroko!]",
+   "priest": "Jos. Rauy pf.",
+   "griblje": true,
+   "houseNoGroom": "30",
+   "houseNoBride": "24",
+   "novelty": "★ 3. POROČNI DOKAZ h30 (po 1889 P118 + 1892 P121 v5!) + 2. dokaz h24 (po 1895 P124 — 7 let vrzel!) = DRUBEL-GRIBLJE poroka; najstarejši ženin leta (43!); nadvarstveno dovoljenje okrajnega sodišča Črnomelj"
+  },
+  {
+   "row": 5,
+   "date": "26. maj 1902",
+   "scan": 117,
+   "page": 116,
+   "groom": {
+    "name": "Michael Pezdirec",
+    "place": "Boršt 23",
+    "stand": "¼ griblar (status IZVEN Griblje!)",
+    "age": 28,
+    "status": "1 (J.)"
+   },
+   "bride": {
+    "name": "Marija Stravs",
+    "place": "Boršt 17",
+    "stand": "½ gžüblastofš.? [~]",
+    "age": 23,
+    "status": "1 (J.)"
+   },
+   "parentsGroom": "Michael Pezdirec ½ griblar × Maria Muc (MUC ×1!)",
+   "parentsBride": "Nicolaus Stravs ½ griblar × Maria Kralj (KRALJ 7.+ leto!; STRAVS/Straus 3. leto)",
+   "witnesses": [
+    "Georg Pezdirec",
+    "Martin Pajrič? [~] ¼ gbl."
+   ],
+   "befunden": "ženitovanjska zglašnica očine Podzemelj-ske z dne 13.5.1902, po nadvarstveno dovoljenje za ml. nevesto od c. kr. okrajnega sodišča v Metliki z dne 13. maja 1902 [~]",
+   "priest": "★ Hanislav Dostál, kaplan (1. DOSTÁL LINIJE — 1. nov duhovnik od P128-Sturm!)",
+   "griblje": false,
+   "notes": "PEZDIREC ×3 (7. leto mreže — povratek po 1901-pavzi!; ženin + oče + priča Georg)"
+  },
+  {
+   "row": 6,
+   "date": "15. september 1902",
+   "scan": 117,
+   "page": 116,
+   "groom": {
+    "name": "Thomas Černe, Besitzer (1.!)",
+    "place": "Črnomelj 134 (mesto!; znak ~ v Wohnort-koloni [~])",
+    "stand": "¼ Grafskant? [~ — branje odprto]",
+    "age": 38,
+    "status": "1 (J.)"
+   },
+   "bride": {
+    "name": "Margareth Kocjan? [~ — 1. NASTOP!]",
+    "place": "Bukoraj? [~ — NOVA VAS?] pf. Črnomelj 1",
+    "stand": "¼ gbl. Tochter",
+    "age": 35,
+    "status": "1 (J.)"
+   },
+   "parentsGroom": "ČRTA (oče — nezakonski!) × Ursula Černe (»lediga? Ehe.« [~ — 1. IZRECNA nezakonska-opomba v poročni liniji!])",
+   "parentsBride": "Peter Kocjan ¼ griblar (status IZVEN Griblje!) × Maria Strupec (ŠTRUPEC ×3 — link v2!)",
+   "witnesses": [
+    "Eugen Sorbea? [~] — 12 R., Leu. Bor'zd., off'Anwt. [~] (vojak!)",
+    "Johann Peterly? [~] — k.k. Bahndienst [~], aufžínoad? [~] (železniški!)"
+   ],
+   "befunden": "ženitovanjska zglašnica očine Planina št: 10 z dne 5. sept. 1902 (očina PLANINA NOVA!)",
+   "priest": "Jos. Rauy pf., za odlega. himoim. [~ — cf. potestate delegata P130!]",
+   "griblje": false,
+   "notes": "P129-lead napaka »April 15« KOREKCIJA → Sept 15; 2. izven-župnijski par v enem vpisu (ženin mesto Črnomelj + nevesta pf. Črnomelj); ČERNE 3. leto (1887, 1891, 1902)"
+  }
+ ],
+ "excluded": [],
+ "stats": {
+  "entries": 6,
+  "gribljeMarriages": 2,
+  "gribljeMarriageRows": [
+   2,
+   4
+  ],
+  "gribljeHouses": [
+   "5",
+   "31",
+   "30",
+   "24"
+  ],
+  "gribljeBlocksNew": 4,
+  "vitals": "595 → 599",
+  "bloki04455": "78 → 82",
+  "sidra": "71 → 75 (+1902:4)",
+  "priests": {
+   "Jos. Rauy": 5,
+   "Hanislav Dostál kaplan": 1
+  },
+  "dates": [
+   "27. januar ×3",
+   "12. maj",
+   "26. maj",
+   "15. september"
+  ]
+ },
+ "anomalies": [
+  {
+   "id": "A1",
+   "what": "P131-lead KOREKCIJA: [G]pbyke? → GRIBLJE 5 (v2 ženinova vas — ne nova vas!)"
+  },
+  {
+   "id": "A2",
+   "what": "P129-lead napaka »April 15« za v6 → KOREKCIJA Sept 15 (mikro-zoom)"
+  },
+  {
+   "id": "A3",
+   "what": "v6 znak »~« v Wohnort-koloni ženina (pred Črnomelj 134) — branje odprto [~]"
+  },
+  {
+   "id": "A4",
+   "what": "v4 »po nadvarstveno dovoljenje && uml. rovetja« — srednji del [~] (sodišče Črnomelj P62/99 18. jasno)"
+  },
+  {
+   "id": "A5",
+   "what": "v6 priče: vojak + železniški činovnik z »aufžínoad?« [~] — tujka branja odprta"
+  },
+  {
+   "id": "A6",
+   "what": "v6 podpis »Jos. Rauj pf. za odlega. himoim.« [~] — formulacija cf. potestate delegata P130"
+  },
+  {
+   "id": "A7",
+   "what": "konvencija »min 1886:7« (P128–P130) meri GRIBLJE okvir — skupni vpisi 1886 = 24 (P115 json); 1902 = 6 = minimum v OBEH merah"
+  }
+ ],
+ "crossChecks": [
+  {
+   "id": "C1",
+   "what": "Pag. == sken − 1: s116→115, s117→116 — 17. zaporedna potrditev (velja 61–116)"
+  },
+  {
+   "id": "C2",
+   "what": "h5 = 1. POROČNI DOKAZ (prej samo mrliški okvir 1886 P80); h31 = 1. POROČNI DOKAZ (prej samo poročni okvir 1886 ženinova P80)"
+  },
+  {
+   "id": "C3",
+   "what": "h30 = 3. poročni dokaz (1889 P118 + 1892 P121 v5 + 1902 v4); h24 = 2. (1895 P124 + 1902 v4)"
+  },
+  {
+   "id": "C4",
+   "what": "ŠTRUPEC = 1. nastop priimka v poročni liniji (0 v P115–P130!) ×3 (v2 ženin + oče + v6 mati Maria Strupec)"
+  },
+  {
+   "id": "C5",
+   "what": "LEGINA = 1. nastop ×3 (v4 ženin + oče Johann + priča Georg); KOCJAN = 1. nastop (v6 nevesta + oče Peter ¼ griblar IZVEN Griblje)"
+  },
+  {
+   "id": "C6",
+   "what": "MUC ×3: v1 nevesta Terezia (Primostek 21!) + v3 priča Johann (½) == P128 v3 PRIČA + P130 v11 Weißstand (3. vloga!) + v5 mati Maria"
+  },
+  {
+   "id": "C7",
+   "what": "PEZDIREC ×3 (7. leto mreže: 1886, 1891, 1892, 1895, 1899, 1900, 1902 — povratek po 1901-pavzi!)"
+  },
+  {
+   "id": "C8",
+   "what": "DRAGOš: priča Jos. Dragoš? v2 — 10.+ leto mreže (1886–1895, 1900, 1902)"
+  },
+  {
+   "id": "C9",
+   "what": "ŽUPANIČ 4. leto (1898–1900 + 1902 v3 mati Maria Županič — pavza 1901!)"
+  },
+  {
+   "id": "C10",
+   "what": "BRODARIČ 14.+ leto (1886–1902 vsako leto!; Brodarič/Brodanič-varianta P129 v2 priča!)"
+  },
+  {
+   "id": "C11",
+   "what": "KLEPEC 16.+ leto (v1 mati ženina Anna + priča Peter ½); ŠKALA 4. leto (v3 nevesta + oče Martin); ČERNE 3. leto (v6 ×2!); KRALJ 7.+ (v5 mati); STRAVS 3. (v5 ×2); TOMC 3.+ (v1 ×2 + P132-lead Barbara Tomc!)"
+  },
+  {
+   "id": "C12",
+   "what": "BRIŠEC/BRINEC-tension: v4 Catharina Brišec (oče Mathias Brišec + mati Barbara JAKOBIČ) — cf. P122 h26 Catharina BRINEC (oče Georg JAKOBIČ!) — isti Jakobič-krog? odprto"
+  },
+  {
+   "id": "C13",
+   "what": "★ ženitovanjska zglašnica = rešitev serijske formule (P128–P130 »Porifovanjška/žerifovanjška« [~] → Trauungs-Anzeige)"
+  },
+  {
+   "id": "C14",
+   "what": "★ 1. Hanislav DOSTÁL kaplan (v5) — 5./6. duhovnik linije (Rauy, Klemenčič P122, Novak P128, Sturm P128/130, Herms? P127, Dostál); Rauy 5/6 1902"
+  },
+  {
+   "id": "C15",
+   "what": "★ 1. IZRECNA nezakonska-opomba: v6 oče = črta + mati Ursula Černe »lediga? Ehe.« [~] — 3. nezakonski ženin (P126 v3, P127 v16, P131 v6)"
+  },
+  {
+   "id": "C16",
+   "what": "★ P132 LEAD: glava »1903.« na s118 + r1 = 1903 Febr 3 Dragatuš? 1 × GRIBLJE 11 Agnes Žunjič? [~] — 3. GRIBLJE poroka v vrsti (1899 → 1902 v2/v4 → 1903 v1!); s118 v2–v5: Febr 9 ×3 + Febr 16 — min 5 vpisov 1903"
+  },
+  {
+   "id": "C17",
+   "what": "NADVARSTVENO ×3: v4 sodišče Črnomelj (1. maja, P62/99 18. [~]) + v5 okrajno sodišče Metlika (13. maja, za ml. nevesto) — vzorec P126 v12/P129"
+  },
+  {
+   "id": "C18",
+   "what": "NOVI statusi/poklici: Wagnermeister (v3) · Fabriksarbeiter (v3 oče Jacob Sober) · Besitzer (v6) · ¼ Grafskant? [~] (v6) · Küblastofsju/küblwin-termini [~] (v1)"
+  },
+  {
+   "id": "C19",
+   "what": "TRIPLO-DATUM Jänner 27 ×3 (v1–v3) — 4. triplo-dan linije po 1886 (2×!), 1891 (3×!), 1892, 1895, 1896, 1898"
+  },
+  {
+   "id": "C20",
+   "what": "NAJMANJŠE LETO LINIJE: 1902 = 6 vpisov (prej min 1900:8 skupni / 1886:7 okvirna konvencija) — NOVI MINIMUM V OBEH MERAH!"
+  }
+ ],
+ "honesty": {
+  "uncertainReadings": [
+   "Mulh? [~ Mula/Muh]",
+   "Harasinič? [~]",
+   "Hrižan? [~ Hržan]",
+   "Jetter? [~]",
+   "Dragoš? [~]",
+   "Sober? [~]",
+   "Rižman? [~ Rižan]",
+   "Berkovec? [~]",
+   "Pajrič? [~]",
+   "Sorbea? [~]",
+   "Peterly? [~]",
+   "Bukoraj? [~]",
+   "Grafskant? [~]",
+   "aufžínoad? [~]",
+   "Brem? [~]",
+   "Küblastofsju/žüblwin [~ termini]",
+   "za odlega. himoim. [~]"
+  ],
+  "zoomProtocol": "vsak vpis 2× LANCZOS L/R ločeno (listi NISO poravnani — L/R zamaknjene vrstice!) + mikro-zoomi 4–8× za imena/frakcije/datume/underpise; frakcije ¼/½ zoom-potrjene (v4/v5)",
+  "leadCorrections": "P131-lead [G]pbyke?→GRIBLJE 5 + P129-lead v6 datum → Sept 15"
+ },
+ "nextSteps": [
+  "P132: poročna 1903 — glava s118 + v1 Febr 3 Dragatuš? 1 × GRIBLJE 11 (3. Griblje poroka v vrsti!) + v2–v5 (Febr 9 ×3 + Febr 16); min 5 vpisov s118–s119",
+  "prenesti skene 121+ po potrebi (s119–s120 že v .p126tmp)"
+ ]
+}

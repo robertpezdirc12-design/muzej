@@ -51,9 +51,9 @@ GRIBLJE_ROWS = [1, 3, 4]
 GRIBLJE_MARRIAGES = 3
 GRIBLJE_BLOCKS = 6              # h34 + h44 + h1 + h10 + h20 + h16
 GRIBLJE_HOUSES = ["1", "10", "16", "20", "34", "44"]
-VITALS_TOTAL = 595              # 587 + 6 + 2 (P129)
-BLOKI_04455 = 76                # 70 + 6
-SIDRA_TOTAL = 69                # 63 + 6 (1899:6)
+VITALS_TOTAL = 599              # 587 + 6 + 2 (P129)
+BLOKI_04455 = 82                # 70 + 6
+SIDRA_TOTAL = 75                # 63 + 6 (1899:6)
 NOVAK_COUNT = 5                 # Jos. Novak v vseh 9 vpisih
 RAUY_COUNT = 2                  # Jos. Rauy (v3 + v9)
 STURM_COUNT = 2                 # Franz Sturm Coop. (v4 + v6)
@@ -130,16 +130,17 @@ def main():
 
     # ---------- I6: qa-parish pini ----------
     qa = open(QA_TS).read()
-    n593 = qa.count("HOUSE_VITALS.length !== 595")
+    n593 = qa.count("HOUSE_VITALS.length !== 599")
     n587 = qa.count("HOUSE_VITALS.length !== 587")
-    n76 = qa.count("bloki 04455 ≠ 78")
+    n76 = qa.count("bloki 04455 ≠ 82")
     n70 = qa.count("bloki 04455 ≠ 70")
     check("I6 vitals pini 595", n593 >= 44, str(n593))
     check("I6b brez stale 587 asercij", n587 == 0, str(n587))
-    check("I6c bloki pini 78", n76 == 6, str(n76))  # p125 + p126 + p127 + p128 + p130
+    check("I6c bloki pini 82", n76 == 7, str(n76))  # p125 + p126 + p127 + p128 + p129 + p130 + p131
     check("I6d brez stale ≠ 70 asercij", n70 == 0, str(n70))
-    check("I6e sidra 71 + 1900:2", "poročna sidra ≠ 71" in qa and
-          "h.year === 1900).length !== 2" in qa)
+    check("I6e sidra 71 + 1900:2", "poročna sidra ≠ 75" in qa and
+          "h.year === 1900).length !== 2" in qa and
+          "h.year === 1902).length !== 4" in qa)
     check("I6f p128Marr hiše", '"1,10,16,20,34,44"' in qa)
     check("I6g qa-p128 test", "qa-p128-parish-marriage-1899" in qa)
 
