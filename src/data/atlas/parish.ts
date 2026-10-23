@@ -1577,6 +1577,107 @@ export const HOUSE_VITALS: HouseVital[] = [
     whatEn: "marriage (Jun 7, 1903, entry 11) — the bride Dorothea ŠIMEC, quarter smallholderess, 47, GRIBLJE 56 (the 1st MARRIAGE EVIDENCE of h56!) × Georg Kralj [~], half smallholder, 61 (the 2nd oldest groom of the line after 66 P128 v1!), Mavhe? 10 [~ A NEW VILLAGE?] = ★ the DOUBLE DISPENSATION of the 1st DEGREE OF AFFINITY (the Laibach ordinariate ddo Jun 3, 1903 no: 2244 + the k. k. provincial government ddo Feb 27, 1903 no: 4444 — the CLOSEST degree + the 2nd affinity dispensation of the line [P130 v1 2nd degree!] = the line record of dispensations!); parents: Georg Kralj ½ gübler × Anna Yaklič? [~ Jaklič] / Peter PEZDIREC ¼ smallholder × Anna Mück [~ Milek]; witnesses: Peter Kralj + Peter PEZDIREC ½ smallholder [= the BRIDE'S FATHER as witness!]; certificate of the Podzemelj commune from Jun 1 no: 11; priest Jos. Rauy — the couple 61×47 = 108 years = the 2nd record couple of the line (after 134 P128 v1!); the ŠIMEC network (the v4 bride + cf. P127 h54!)",
     status: "DOCUMENTED",
   },
+  // ——— P133 razširitev: POROČNA KNJIGA 04455 — polno leto 1904 (skeni 122–125 ==
+  // strani 121–124; VELIKA TISKANA GLAVA »1904.« na s122 POTRJENA — P132 lead!;
+  // rokopisna glava »1905.« na s125 = P134 LEAD; 15 vpisov obojestransko =
+  // P133-lead »min 5 s122–s123« 3× pocenjen; razpored 5+4+5+1) — vpisi z
+  // Griblji (5 porok / 8 poročnih blokov: h42 v2 ženin 2. dokaz + h32 v5 ženin
+  // 3. dokaz + h38 v5 nevesta 1. DOKAZ + h38 v8 ženin 2. blok = BRAT-SESTRA +
+  // h39 v8 nevesta 2. dokaz + h62 v13 ženin 3. dokaz + h46 v14 ženin 3. dokaz
+  // + h22 v14 nevesta 3. dokaz = 3 DRUBEL!): NOVELE: ★ ⅜ NOVI ULOMEK LINIJE
+  // (v13 nevesta+oče!) + ★ NAJMLAJŠI ŽENIN LINIJE 18 (v2!) + ★ MASA-REKORD 5
+  // porok 8.2. + ★ DVOJNA KRVNA DISPENSA (v6: 2. koleno №697 + 4. koleno
+  // №2814!) + 2. krvna dispensa (v10 3. koleno №2063) + ★ 6 DRUŽINSKIH
+  // KONTINUITET (h42 PERDINEC 1894→04 · h32 STRAUS 1888→ŠRAUS 04 · h39 SIMEC
+  // 1897→04 · h62 KURE 1893+98→04 · h46 2. leto · h22 STRAUS 98→MILEK 04!) +
+  // CROSS-ENTRY ×2 (v5-ženin Šraus priča v8 · v2-priča Kure = v13-oče!) +
+  // NOVE VASI: Zemelj 17 + Vojna vas 18 pf. Črnomelj + Sirnica 4 pf. Črnomelj
+  // + Boršt 18 + Prilozje 25 (4. hiša) + NOVE FARE: Dragatuš + Radovica
+  // (oklicni) + mestna občina Metlika + občina Loka 2. + Vode? [~] + 1. ne-Rauy
+  // duhovnik 1904 (Stan. Costal [~ Dostal?] v12) + deželna vlada №1992/1993
+  // zapored + №22190 NAJVIŠJA + 1. TRGOVEC + 2 mrtvaška lista + Invohner-priče
+  // ×2 + polnoletnost-glasila ×2. Dokaz: research/issue17/parish-marriage-1904.json;
+  // verifikator: scripts/p133_parish_marriage_1904.py --check (I1–I11).
+  {
+    houseNo: "42",
+    bookSignature: "04455",
+    year: 1904,
+    scan: 122,
+    page: 121,
+    whatSi: "poroka (8. 2. 1904, vpis 2) — ženin Georg Perdinec, ¼ gübler, 18 (★ NAJMLAJŠI ŽENIN LINIJE 1886–1904 — prej min 20!), GRIBLJE 42 (2. poročni dokaz h42 — 1894 P123 nevesta Margareth PERDINEC = ★ PERDINEC-kontinuiteta 10 let!) × Catharina Jurajevčič, ½ güblerštoft [~], 20, Krasinec 21; starši: Georg Perdinec ¼ gübler × Dorothea KRIŽAN / Matthias Jurajevčič ½ gübler × Maria Šimec; priče: Anton KURE [= v13-oče! CROSS-ENTRY] + Mich. Jurajevčič ½ gübler; zglasmica občine Griblje od 4/2. 04 št: 1 + zemljno dovolilje za zemljo (sodišče Črnomelj 13/1. 04 + deželna vlada Laibach 26/1. 1904 št: 1992 — cf. v3 № 1993 zapored!) + ustno očetovo dovoljenje (mlada nevesta); duhovnik Jos. Rauy — P132-lead KOREKCIJA h41 → h42 + Perdinec POTRJEN",
+    whatEn: "marriage (Feb 8, 1904, entry 2) — the groom Georg Perdinec, quarter smallholder, 18 (★ the YOUNGEST GROOM of the line 1886–1904 — previously min 20!), GRIBLJE 42 (the 2nd marriage evidence of h42 — 1894 P123 the bride Margareth PERDINEC = ★ the PERDINEC continuity of 10 years!) × Catharina Jurajevčič, half smallholder-hold [~], 20, Krasinec 21; parents: Georg Perdinec ¼ smallholder × Dorothea KRIŽAN / Matthias Jurajevčič ½ smallholder × Maria Šimec; witnesses: Anton KURE [= the v13 father! CROSS-ENTRY] + Mich. Jurajevčič ½ smallholder; certificate of the Griblje commune from Feb 4, 1904 no: 1 + the land permission (the Črnomelj court Jan 13, 1904 + the Laibach provincial government Jan 26, 1904 no: 1992 — cf. v3 no: 1993 consecutive!) + the father's verbal consent (the young bride); priest Jos. Rauy — the P132-lead CORRECTION h41 → h42 + Perdinec CONFIRMED",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "32",
+    bookSignature: "04455",
+    year: 1904,
+    scan: 122,
+    page: 121,
+    whatSi: "poroka (8. 2. 1904, vpis 5) — ženin Matthias ŠRAUS [~ Straus], ¼ gübler, 42, GRIBLJE 32 (3. poročni dokaz h32 — 1888 P117 Mathias STRAUS + 1889 P118 Mathias Urb = ★ STRAUS/ŠRAUS-kontinuiteta 16 let, dve pisavi!) × Margareth Šimec, Gänslerhofstochter [~ pisava 'hofstoftn'], 28, GRIBLJE 38 (1. POROČNI DOKAZ h38 = GANSLER-hiša!) = ★ DRUBEL-GRIBLJE; starši: Marcus Šraus ¼ gübler × Catharina DRAGOŠ (DRAGOŠ 12. leto!) / Georg Šimec gänsler × Anna KRIŽAN (= v8 BRAT-SESTRA!); priče: Johann Dragoš ½ gübler + Nicol(aus) Željko [~] ¼ gbl (= v8-priča!); zglasmica občine Griblje od 1/2. 1904 št: 2; duhovnik Jos. Rauy — P132-lead KOREKCIJA: nevesta h30 → h38 + ženin 'Šimec' → ŠRAUS",
+    whatEn: "marriage (Feb 8, 1904, entry 5) — the groom Matthias ŠRAUS [~ Straus], quarter smallholder, 42, GRIBLJE 32 (the 3rd marriage evidence of h32 — 1888 P117 Mathias STRAUS + 1889 P118 Mathias Urb = ★ the STRAUS/ŠRAUS continuity of 16 years, two spellings!) × Margareth Šimec, the Gänsler-farm daughter [~ spelling 'hofstoftn'], 28, GRIBLJE 38 (the 1st MARRIAGE EVIDENCE of h38 = the GANSLER farm!) = ★ the DOUBLE-GRIBLJE wedding; parents: Marcus Šraus ¼ smallholder × Catharina DRAGOŠ (DRAGOŠ the 12th year!) / Georg Šimec gänsler × Anna KRIŽAN (= the v8 BROTHER-SISTER!); witnesses: Johann Dragoš ½ smallholder + Nicol(aus) Željko [~] ¼ smallholder (= the v8 witness!); certificate of the Griblje commune from Feb 1, 1904 no: 2; priest Jos. Rauy — the P132-lead CORRECTION: the bride h30 → h38 + the groom 'Šimec' → ŠRAUS",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "38",
+    bookSignature: "04455",
+    year: 1904,
+    scan: 122,
+    page: 121,
+    whatSi: "poroka (8. 2. 1904, vpis 5) — nevesta Margareth ŠIMEC, Gänslerhofstochter [~], 28, GRIBLJE 38 (1. POROČNI DOKAZ h38 — GANSLER-hiša: oče Georg Šimec gänsler!) × Matthias Šraus [~], ¼ gübler, 42, GRIBLJE 32 (3. dokaz) = ★ DRUBEL; starši: Georg Šimec gänsler × Anna KRIŽAN (= starši v8-ženina — BRAT-SESTRA!) / Marcus Šraus ¼ gübler × Catharina Dragoš; priče Johann Dragoš + Nicol. Željko; zglasmica občine Griblje 1/2. 1904 št: 2; duhovnik Jos. Rauy — h38 = edina NOVA poročna hiša 1904, a takoj 2 bloka (v5 + v8)!",
+    whatEn: "marriage (Feb 8, 1904, entry 5) — the bride Margareth ŠIMEC, the Gänsler-farm daughter [~], 28, GRIBLJE 38 (the 1st MARRIAGE EVIDENCE of h38 — the GANSLER farm: the father Georg Šimec gänsler!) × Matthias Šraus [~], quarter smallholder, 42, GRIBLJE 32 (the 3rd evidence) = ★ the DOUBLE wedding; parents: Georg Šimec gänsler × Anna KRIŽAN (= the v8 groom's parents — BROTHER-SISTER!) / Marcus Šraus ¼ smallholder × Catharina Dragoš; witnesses Johann Dragoš + Nicol. Željko; the Griblje commune certificate Feb 1, 1904 no: 2; priest Jos. Rauy — h38 = the only NEW marriage house of 1904, yet immediately 2 blocks (v5 + v8)!",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "38",
+    bookSignature: "04455",
+    year: 1904,
+    scan: 123,
+    page: 122,
+    whatSi: "poroka (30. 5. 1904, vpis 8) — ženin Georg Šimec, gänsler, 22, GRIBLJE 38 (2. poročni dokaz h38 v ISTEM LETU = ★ BRAT-SESTRA v5/v8 — ista starša Georg Šimec gänsler × Anna KRIŽAN!) × Anna Šimec, ¼ güblers. Tochter [~], 21, GRIBLJE 39 (2. poročni dokaz h39 — 1897 P126 nevesta Maria SIMEC 17! = ★ ŠIMEC-kontinuiteta 7 let!) = DRUBEL + ISTI PRIIMEK Šimec ×4; starši: Georg Šimec gänsler × Anna Križan / Nicolaus Šimec ¼ gübler × Catharina Jakobčič; priče: Nicolaus ŽELJKO ¼ gbl (= v5-priča — 2×!) + Matthias ŠRAUS ¼ gbl (= v5-ŽENIN! CROSS-ENTRY — vzorec P128 v1→v4!); zglasmica občine Gribeljske [~] od 29. maja 1904 št: 6 + Br. glas polnoletnosti za OBOJE (okrajno sodišče Črnomelj 27/4. + 5/5. 1904!); duhovnik Jos. Rauy",
+    whatEn: "marriage (May 30, 1904, entry 8) — the groom Georg Šimec, gänsler, 22, GRIBLJE 38 (the 2nd marriage evidence of h38 IN THE SAME YEAR = ★ BROTHER-SISTER v5/v8 — the same parents Georg Šimec gänsler × Anna KRIŽAN!) × Anna Šimec, quarter smallholder's daughter [~], 21, GRIBLJE 39 (the 2nd marriage evidence of h39 — 1897 P126 the bride Maria SIMEC 17! = ★ the ŠIMEC continuity of 7 years!) = DOUBLE + the SAME SURNAME Šimec ×4; parents: Georg Šimec gänsler × Anna Križan / Nicolaus Šimec ¼ smallholder × Catharina Jakobčič; witnesses: Nicolaus ŽELJKO ¼ smallholder (= the v5 witness — 2×!) + Matthias ŠRAUS ¼ smallholder (= the v5 GROOM! CROSS-ENTRY — the P128 v1→v4 pattern!); the Griblje commune certificate from May 29, 1904 no: 6 + the majority certificates for BOTH (the Črnomelj district court Apr 27 + May 5, 1904!); priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "39",
+    bookSignature: "04455",
+    year: 1904,
+    scan: 123,
+    page: 122,
+    whatSi: "poroka (30. 5. 1904, vpis 8) — nevesta Anna ŠIMEC, ¼ güblers. Tochter [~], 21, GRIBLJE 39 (2. poročni dokaz h39 — 1897 P126 nevesta Maria SIMEC = ★ ŠIMEC-kontinuiteta 7 let!) × Georg Šimec, gänsler, 22, GRIBLJE 38 (2. dokaz — BRAT-SESTRA v5!) = DRUBEL + ISTI PRIIMEK; starši: Nicolaus Šimec ¼ gübler × Catharina JAKOBČIČ / Georg Šimec gänsler × Anna Križan; priče Nicolaus Željko + Matthias Šraus (= v5-ženin!); zglasmica občine Gribeljske 29. maja 1904 št: 6 + glas polnoletnosti za nevesto (sodišče Črnomelj 5/5. 1904); duhovnik Jos. Rauy — h39 tudi P134-lead (v2/1905 ženinova hiša Johann Markočič?)",
+    whatEn: "marriage (May 30, 1904, entry 8) — the bride Anna ŠIMEC, quarter smallholder's daughter [~], 21, GRIBLJE 39 (the 2nd marriage evidence of h39 — 1897 P126 the bride Maria SIMEC = ★ the ŠIMEC continuity of 7 years!) × Georg Šimec, gänsler, 22, GRIBLJE 38 (the 2nd evidence — the v5 BROTHER-SISTER!) = DOUBLE + the SAME SURNAME; parents: Nicolaus Šimec ¼ smallholder × Catharina JAKOBČIČ / Georg Šimec gänsler × Anna Križan; witnesses Nicolaus Željko + Matthias Šraus (= the v5 groom!); the Griblje commune certificate May 29, 1904 no: 6 + the majority certificate for the bride (the Črnomelj court May 5, 1904); priest Jos. Rauy — h39 also the P134-lead (the v2/1905 groom's house Johann Markočič?)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "62",
+    bookSignature: "04455",
+    year: 1904,
+    scan: 124,
+    page: 123,
+    whatSi: "poroka (3. 10. 1904, vpis 13) — ženin Nikolaus Kure [~], ¼ güblerssohn, 28, GRIBLJE 62 (3. poročni dokaz h62 — 1893 P122 nevesta Anna KURE + 1898 P127 Maria KURE = ★ KURE-kontinuiteta 11 let!) × Anna Štefanič [~], ★ ⅜ güblers-hofsohn [~ ženska oblika — NOVI ULOMEK LINIJE!], 21, Otok 10 (= P132 v16-nevestina hiša Jurajevčič — 2. poroka hiše, drug priimek!); starši: Anton KURE ¼ gübler [= v2-PRIČA! CROSS-ENTRY] × Barbara KRIŽAN / Georg Štefanič ⅜ gübler × Marija Medoš [~]; priče: Nicolaus Kure ½ gbl + Georg Vlasič [~]; zglasmica občine Griblje od 2/10. 1904 št: 1 + zapustki? [~ 'Zamski'] in oklicni list nevestin od župnega vrada v DRAGATUŠU 2/10. 1904 št: 190 (NOVA FARNA REF.!) + očetovo ustno dovoljenje; duhovnik Jos. Rauy — KURE ×3 v vpisu (ženin + oče + priča!)",
+    whatEn: "marriage (Oct 3, 1904, entry 13) — the groom Nikolaus Kure [~], quarter smallholder's son, 28, GRIBLJE 62 (the 3rd marriage evidence of h62 — 1893 P122 the bride Anna KURE + 1898 P127 Maria KURE = ★ the KURE continuity of 11 years!) × Anna Štefanič [~], ★ ⅜ smallholder-hold-son [~ female form — the NEW FRACTION of the line!], 21, Otok 10 (= the P132 v16 bride's house Jurajevčič — the house's 2nd wedding, a different surname!); parents: Anton KURE ¼ smallholder [= the v2 WITNESS! CROSS-ENTRY] × Barbara KRIŽAN / Georg Štefanič ⅜ smallholder × Marija Medoš [~]; witnesses: Nicolaus Kure ½ smallholder + Georg Vlasič [~]; the Griblje commune certificate from Oct 2, 1904 no: 1 + the inheritance? [~ 'Zamski'] and banns list of the bride from the Dragatuš parish office Oct 2, 1904 no: 190 (A NEW PARISH REFERENCE!) + the father's verbal consent; priest Jos. Rauy — KURE ×3 in the entry (the groom + father + witness!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "46",
+    bookSignature: "04455",
+    year: 1904,
+    scan: 124,
+    page: 123,
+    whatSi: "poroka (7. 11. 1904, vpis 14) — ženin Anton Brodarič [~], ¼ gübler, 44, GRIBLJE 46 (3. POROČNI DOKAZ h46 — P127 1898 + P132 v9 1903: 3. leto zapored!) × Catharina Milek [~ Mück], ½ güblershofstochter [~], 28, GRIBLJE 22 (3. poročni dokaz h22 — 1898 P127 ×2: ženin Nicolaus STRAUS! = ★ STRAUS-hiša → zdaj MILEK, menjava družine!) = ★ DRUBEL-GRIBLJE; starši: Michael Brodarič ¼ gübler × Anna Adam (NOVI!) / Johann Milek ½ gübler × Maria PERDINEC; priče: Nikol. KRIŽAN + Martin Brodarič (½ gbl [~]) (= BRODARIČ ×3 v vpisu!); zglasmica občine Griblje od 6/11. 1904 št: 2 + oklicni list župnega vrada na RADOVICI 6/11. 1904 za nevesto (NOVA FARNA REF.!); duhovnik Jos. Rauy — BRODARIČ-mreža: cf. v9-mati Catharina Brodarič!",
+    whatEn: "marriage (Nov 7, 1904, entry 14) — the groom Anton Brodarič [~], quarter smallholder, 44, GRIBLJE 46 (the 3rd MARRIAGE EVIDENCE of h46 — P127 1898 + P132 v9 1903: the 3rd year in a row!) × Catharina Milek [~ Mück], half smallholder-farm daughter [~], 28, GRIBLJE 22 (the 3rd marriage evidence of h22 — 1898 P127 ×2: the groom Nicolaus STRAUS! = ★ the STRAUS house → now MILEK, a family change!) = ★ the DOUBLE-GRIBLJE wedding; parents: Michael Brodarič ¼ smallholder × Anna Adam (NEW!) / Johann Milek ½ smallholder × Maria PERDINEC; witnesses: Nikol. KRIŽAN + Martin Brodarič (½ smallholder [~]) (= BRODARIČ ×3 in the entry!); the Griblje commune certificate from Nov 6, 1904 no: 2 + the banns list of the parish office at RADOVICA Nov 6, 1904 for the bride (A NEW PARISH REFERENCE!); priest Jos. Rauy — the BRODARIČ network: cf. the v9 mother Catharina Brodarič!",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "22",
+    bookSignature: "04455",
+    year: 1904,
+    scan: 124,
+    page: 123,
+    whatSi: "poroka (7. 11. 1904, vpis 14) — nevesta Catharina MILEK [~ Mück], ½ güblershofstochter [~], 28, GRIBLJE 22 (3. poročni dokaz h22 — 1898 P127 ×2 Nicolaus STRAUS = menjava družine STRAUS → MILEK!) × Anton Brodarič [~], ¼ gübler, 44, GRIBLJE 46 (3. dokaz — 3. leto zapored!) = ★ DRUBEL; starši: Johann Milek ½ gübler × Maria PERDINEC (5./5!) / Michael Brodarič ¼ gübler × Anna Adam; priče Nikol. Križan + Martin Brodarič; zglasmica občine Griblje 6/11. 1904 št: 2 + oklicni list na Radovici 6/11. 1904; duhovnik Jos. Rauy — MILEK/MÜCK dve pisavi (cf. P132 Mück/Milek!)",
+    whatEn: "marriage (Nov 7, 1904, entry 14) — the bride Catharina MILEK [~ Mück], half smallholder-farm daughter [~], 28, GRIBLJE 22 (the 3rd marriage evidence of h22 — 1898 P127 ×2 Nicolaus STRAUS = the family change STRAUS → MILEK!) × Anton Brodarič [~], quarter smallholder, 44, GRIBLJE 46 (the 3rd evidence — the 3rd year in a row!) = ★ the DOUBLE wedding; parents: Johann Milek ½ smallholder × Maria PERDINEC (5th of 5!) / Michael Brodarič ¼ smallholder × Anna Adam; witnesses Nikol. Križan + Martin Brodarič; the Griblje commune certificate Nov 6, 1904 no: 2 + the banns list at Radovica Nov 6, 1904; priest Jos. Rauy — MILEK/MÜCK two spellings (cf. P132 Mück/Milek!)",
+    status: "DOCUMENTED",
+  },
   // ——— P122 razširitev: POROČNA KNJIGA 04455 — polno leto 1893 (skeni 87–90 ==
   // strani 86–89; VELIKA GLAVA »Traunungs=Buch« + rokopisno »1893« na s87 =
   // Pag. 86 POTRJENA — P122 lead!; 20 vpisov: 1886:7 → 1887:21 → 1888:20 →

@@ -74,7 +74,7 @@ GRIBLJE_MARRIAGES = 4
 GRIBLJE_HOUSES_TS = "7,21,30,32,40,54,87"   # hiše z 1889 bloki v parish.ts
 EXPECTED_VITALS = 544           # P118 dokaz lastna kumulativa (537 + 7 bloki); trenutna = 548 (P119)
 BLOCKS_04455 = 27               # P118 dokaz lastna kumulativa (20 + 7)
-BLOCKS_04455_TS = 94              # P126: + 9 blokov 1897 (52 + 9)            # parish.ts zdaj = 49 (P121 +4 bloki 1892 + P122 +5 bloki 1893 + P123 +4 bloki 1894 + P124 +3 bloki 1895)
+BLOCKS_04455_TS = 102              # P126: + 9 blokov 1897 (52 + 9)            # parish.ts zdaj = 49 (P121 +4 bloki 1892 + P122 +5 bloki 1893 + P123 +4 bloki 1894 + P124 +3 bloki 1895)
 P80_HOUSES = 44                 # p118 JSON lastna vrednost (vzorčni podnabor p80; trenutna = 46 P119)
 DATE_COUNTS = {"januar": 0, "februar": 5, "marec": 0, "april": 0, "maj": 0,
                "junij": 1, "julij": 0, "avgust": 0, "september": 1, "oktober": 1,
@@ -317,10 +317,10 @@ def main() -> int:
     # ---------- I9: qa-parish ----------
     qa = open(QA_TS).read()
     check("I9 qa-p118", '"qa-p118-parish-marriage-1889"' in qa)
-    check("I9b qa-p116 bloki 78", "poročni bloki (04455) ≠ 93" in qa)
-    check("I9c p80 bloki 78", "poročni vpisi (04455) ≠ 93" in qa)
+    check("I9b qa-p116 bloki 78", "poročni bloki (04455) ≠ 102" in qa)
+    check("I9c p80 bloki 78", "poročni vpisi (04455) ≠ 102" in qa)
     # vitals 544 regresijska zaščita v qa-p118
-    check("I9d vitals 595 zaščita (P128)", "HOUSE_VITALS.length !== 611" in qa[qa.index("const p118Marr"):] if "const p118Marr" in qa else False)
+    check("I9d vitals 595 zaščita (P128)", "HOUSE_VITALS.length !== 619" in qa[qa.index("const p118Marr"):] if "const p118Marr" in qa else False)
     check("I9e stara številka 537 iztekla", "HOUSE_VITALS.length !== 537" not in qa)
 
     # ---------- I10: README + notes ----------

@@ -132,15 +132,15 @@ def main():
     # ---------- I6: qa-parish.ts ----------
     qa = open(QA_TS).read()
     check("I6a qa-p131 test", "qa-p131-parish-marriage-1902" in qa)
-    n599 = qa.count("HOUSE_VITALS.length !== 611")
+    n599 = qa.count("HOUSE_VITALS.length !== 619")
     n595 = qa.count("HOUSE_VITALS.length !== 595")
     check("I6b vitals pini 610", n599 >= 46, str(n599))
     check("I6c brez stale 595 asercij", n595 == 0, str(n595))
-    n82 = qa.count("≠ 94 (")
+    n82 = qa.count("≠ 102 (")
     n78 = qa.count("≠ 78 (")
     check("I6d bloki pini 94", n82 >= 8, str(n82))
     check("I6e brez stale ≠ 78 asercij", n78 == 0, str(n78))
-    check("I6f sidra 75 + 1902:4", "poročna sidra ≠ 87" in qa and "h.year === 1902).length !== 4" in qa and "h.year === 1903).length !== 12" in qa)
+    check("I6f sidra 75 + 1902:4", "poročna sidra ≠ 95" in qa and "h.year === 1902).length !== 4" in qa and "h.year === 1903).length !== 12" in qa)
     check("I6g p131Marr hiše", '"24,30,31,5"' in qa or '"5,24,30,31"' in qa)
     check("I6h P131-lead korekcija v qa-p130", "P131 korekcija" in qa)
 

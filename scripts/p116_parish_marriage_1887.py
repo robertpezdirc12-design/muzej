@@ -57,7 +57,7 @@ GRIBLJE_ROWS = [3, 4, 11, 20]
 GRIBLJE_MARRIAGES = 4
 GRIBLJE_HOUSES_TS = "3,10,15,23,37,69,71"
 EXPECTED_VITALS = 533           # 528 (P114/P115) + 5 novih poročnih blokov P116 (zgodovinsko — P117 dokaz gre na 537)
-BLOCKS_04455 = 94               # 11 (P115) + … + 4 bloki 1892 (P121) + 5 bloki 1893 (P122) + 4 bloki 1894 (P123) + 2 bloka 1900 (P129)
+BLOCKS_04455 = 102               # 11 (P115) + … + 4 bloki 1892 (P121) + 5 bloki 1893 (P122) + 4 bloki 1894 (P123) + 2 bloka 1900 (P129)
 DATE_COUNTS = {"januar": 3, "februar": 8, "marec": 0, "april": 0, "maj": 5,
                "junij": 0, "julij": 1, "avgust": 2, "september": 1, "oktober": 1,
                "november": 0, "december": 0}
@@ -235,10 +235,10 @@ def main() -> int:
     # ---------- I9: qa-parish ----------
     qa = open(QA_TS).read()
     check("I9 qa-p116", '"qa-p116-parish-marriage-1887"' in qa)
-    check("I9b qa-p115 bloki 78", "poročni bloki (04455) ≠ 93" in qa)
-    check("I9c p80 bloki 78", "poročni vpisi (04455) ≠ 93" in qa)
+    check("I9b qa-p115 bloki 78", "poročni bloki (04455) ≠ 102" in qa)
+    check("I9c p80 bloki 78", "poročni vpisi (04455) ≠ 102" in qa)
     # vitals 528 regresijska zaščita v qa-p116
-    check("I9d vitals 595 zaščita (P128)", "HOUSE_VITALS.length !== 611" in qa[qa.index("const p116Marr"):] if "const p116Marr" in qa else False)
+    check("I9d vitals 595 zaščita (P128)", "HOUSE_VITALS.length !== 619" in qa[qa.index("const p116Marr"):] if "const p116Marr" in qa else False)
 
     # ---------- I10: README + notes ----------
     rd = open("README.md").read()
