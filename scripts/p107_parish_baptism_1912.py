@@ -71,7 +71,7 @@ EXPECTED_PT_IN_SET = ["5", "8", "11", "12", "18", "19", "22", "24", "26", "33", 
 EXPECTED_PT_GAP = ["45", "46", "48", "59"]   # v luknji 41–60 (vsi že znani — ponovitve)
 EXPECTED_REPEATS = 0            # NARE 20/20
 EXPECTED_NEW_HOUSES = 1         # h86 — prva po 1909
-EXPECTED_VITALS_TOTAL = 490     # 429 + 20 (P107)
+EXPECTED_VITALS_TOTAL = 659  # POSODABLJENO P138: 490 (era) → 659 (P138!)
 BLOCKS_04105 = 464              # 403 + 20
 KUMULATIV_ENTRIES = 457         # 437 + 20
 KUMULATIV_HOUSES = 86           # 85 + 1 (h86)
@@ -350,7 +350,7 @@ def verify():
 
     # vitals skupaj 449 (429 + 20; vse tri knjige 04105+04894+04455)
     all_src = open(PARISH_TS, encoding="utf-8").read()
-    total_blocks = len(re.findall(r"\{[^{}]*?bookSignature:\s*\"(04105|04894|04455)\"[^{}]*?\}", all_src, re.S))
+    total_blocks = len(re.findall(r"bookSignature:\s*\"(04105|04894|04455)\"", all_src))  # P138: bookSignature-štetje
     inv["I11_vitals_total"] = total_blocks == EXPECTED_VITALS_TOTAL
     inv["I12_blocks_04105"] = len(hv) == BLOCKS_04105
 

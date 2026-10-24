@@ -6005,3 +6005,31 @@ Stage Summary:
 - **TROJNA SINHRONIZACIJA 1:1 (GitHub bfbb01b + GitLab bfbb01b + Vercel 138/138 ŽIV).**
 - NEREŠENO: ~35 [~ VERIF] podrobnosti (2. VLM krog — izrezi v .p126tmp/verif/; 429-rate-limit). Ključne: datumi v4/v17 (mesec!), priimki Krudl/Dauovič/Jopčič/Lasič/Vovkman, vasi Trbeneč?/Krieglavce?, starši v3/v11/v12/v13/v15/v16, listine v4/v5/v6/v8/v10/v13/v14/v15/v17, duhovniki v3/v4/v10/v14/v15.
 - NASLEDNJI KORAK: P138 — poročna 1909 (glava s138 y≈600 + v1 Jän 25 + v2 Febr 8 + v3 März 15 + v4 Febr 21 — min 4; mejo s139+s140 — skena ŽE prenesena!; knjiga 04455 sega do 1922 — ~14 let linije).
+
+---
+Task ID: 6
+Agent: Z.ai Code (glavni)
+Task: P138 — nadaljevanje po blokadi 429: samodejni oziralnik + strukturna analiza brez VLM (uporabnik: »odlično nadaljuj, mogoče se že VLM zbudil«)
+
+Work Log:
+- Preveril VLM ob 10:05–10:36: VSE končne točke (vision + chat) in VSI modeli (glm-5v-turbo/4v-flash/4-flash …) ŠE VEDNO 429 — blokada traja neprekinjeno ~6,7 ure (od ~03:54).
+- Namestil VZDRŽLJIVI OZIRALNIK watch138.sh (nohup v ozadju, 7-urni horizont): ping vsakih 110 s → ob odblokadi SAMODEJNO strelja: FAZA 1 (overview s139/s140/s141 + ruler R s139/s140) → FAZA 1b (ruler L s139/s140) → FAZA 2 (vrstična branjа 30 izrezov rows138-read.sh, 1. krog); vse z beleženjem v ratelimit.log / go138.log / rows138-read.log.
+- STRUKTURNA ANALIZA izboljšana (lines138b prag 0,35 + ASCII-umetnost, brez VLM):
+  * s139 L: močne črte ~112/710/929/1277/1660; besedilo: v5 138–264 · v6 312–430 (praznina 430–690 znotraj vrstice!) · v7 714–792 · v8 948–1100 · v9 1302–1462; DNO (1660–1770) PRAZNO — zunanje črte so table-navpičnice + noga strani, NE besedilo → s139 L = 5 vrstic (ne 6!).
+  * s140 L: močne črte ~115/466/790/1012/1364/1592; besedilo: v10 124–280 · v11 328–455 · v12 532–660 · v13 838–1010 · v14 1072–1236 · v15 1406–1546 (pas 1364–1592 = ENA vrstica, ne dve); dno (1592–1770) prazno.
+  * R-strani: odmik od L ~+15–30 px; s139 R 12 črt, s140 R 14 črt — vrstični pasi konsistentni z L.
+  * SKLEP: **1909 = 15 vpisov** (s138: v1–v4 + s139: v5–v9 + s140: v10–v15) — znotraj pričakovanega 14–17.
+- Popravljal crop_rows_138.py (številčenje v10–v15 na s140, ne v11–v16; odstranjena namišljena vrstica s139-v10) → 30 izrezov (15 × L+R) + kontrola gostote črnila: VSI OK.
+- Zgradil FORENZIČNI INDEKS korpusa (.p126tmp/forenz138/): corpus-index.json (651 blokov z whatSi) + surnames-04455.json (493 priimkov/imen) za hitra navzkrižna preverjanja 1909.
+- Re-verificiral regresijo na čistem 9b759f5: 24 skript p114–p137 = 1452/1452 PASS (zelena baza pred produkcijo P138).
+- Ugotovil: verif/ (137 datotek) = P137 2.-krožni zaostanki (P137 zaključen s korpus-forenziko) — za P138 niso potrebni.
+- Preveril s138-overview iz prejšnje seje: № stolpec na s138 = 13 (1908-v17!), nato 1–4 (1909) — letno štetje 1909 se začne z №1; »row« v evidence = letna številka (v1–v15).
+- ANOMALIJA v3/v4 (»März 15« pred »Febr 21«?) — nova hipoteza: VLM je verjetno ZAMENJAL meseca (res bi bilo v3 = Febr 21, v4 = März 15 → kronološko!). Ultra-droben ASCII izpis meseca v3 kaže obliko podobno znanemu »Febr« iz v2 (4 črkovne skupine, ozek začetnik — ne širok M!). Pripravljeno 5 datumskih zoom-izrezov (zoom138/date-s138-v1..4 + v34-full, 4×) + dates138-read.sh — SAMODEJNO v toku oziralnika kot FAZA 1c.
+- Oziralnik nadgrajen na v4 (samo-obnovljiv: po 7 h se samodejno znova zažene — teče dokler transkripcija Faze 2 ni zaključena).
+
+Stage Summary:
+- **P138 PRIPRAVA POPOLNA; transkripcija ŠE VEDNO BLOKIRANA na platformi 429 (6,7+ ure, vsi modeli/končne točke).**
+- Samodejni oziralnik watch138 v2 živi v ozadju: ob odblokadi bo v ~40 min samodejno izvedel 37 branj (3 overview + 4 ruler + 30 vrstičnih) — brez človeškega posredovanja.
+- NOVO SPoznanje: 1909 = 15 vpisov (ne 14–17) — s139 dno PRAZNO (popravek strukturne analize iz Task 5), s140 = 6 vrstic.
+- 30 izrezov vrstic pripravljenih in preverjenih; forenzični indeks korpusa zgrajen; regresija 1452/1450 PASS.
+- NEREŠENO: (1) VLM odblokada — platforma; (2) po transkripciji: 2. krog zoom branj + korpus-forenzika + produkcija (evidence + notes + parish.ts +9/+6 blokov + qa-p138 139. kontrola + skripta p138 + README + verifier) + commit + trojna sinhronizacija (POTREBUJE ŽETONA GitHub+GitLab od lastnika!).

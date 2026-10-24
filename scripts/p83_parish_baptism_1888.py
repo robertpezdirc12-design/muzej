@@ -88,7 +88,7 @@ def parish_vitals(signature):
     """Izvleči (houseNo, year, scan, page) za vse vpise dane signature iz parish.ts."""
     src = open(PARISH_TS, encoding="utf-8").read()
     out = []
-    pat = r"\{[^{}]*?bookSignature:\s*\"" + signature + r"\"[^{}]*?\}"
+    pat = r"\n  \{[^{]*?bookSignature:\s*\"" + signature + r"\".*?\n  \},"  # P138: strukturno zasidran vzorec (zaviti oklepaji v besedilu ne motijo!)
     for m in re.finditer(pat, src, re.S):
         block = m.group(0)
         g = lambda k: (re.search(rf'{k}:\s*"([^"]*)"', block) or re.search(rf"{k}:\s*(\d+)", block))  # noqa: E731

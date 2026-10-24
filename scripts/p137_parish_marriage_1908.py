@@ -53,9 +53,9 @@ EXPECTED_CROSSCHECKS = 20
 GRIBLJE_ROWS = [1, 5, 9, 10, 14, 17]
 GRIBLJE_HOUSES = ["14", "21", "28", "33", "39", "43", "44", "62"]
 GRIBLJE_BLOCKS = 9              # +9 blokov (h14 ×2 — INTRA-HIŠNA!)
-VITALS_TOTAL = 651              # 642 + 9
-BLOKI_04455 = 134               # 125 + 9
-SIDRA_TOTAL = 127               # 118 + 9 (1908:9)
+VITALS_TOTAL = 659              # 642 + 9
+BLOKI_04455 = 142               # 125 + 9
+SIDRA_TOTAL = 135               # 118 + 9 (1908:9)
 RAUY_COUNT = 7                  # 7/9 blokov (v10 dvema [Dami? ~])
 EXPECTED_MONDAYS = 11           # 11 ponedeljkov + 4–5 nedelj
 
@@ -156,11 +156,11 @@ def main():
     # ---------- I6: qa-parish.ts ----------
     qa = open(QA_TS).read()
     check("I6a qa-p137 id", "qa-p137-parish-marriage-1908" in qa)
-    n651 = qa.count("HOUSE_VITALS.length !== 651")
+    n651 = qa.count("HOUSE_VITALS.length !== 659")
     check("I6b vitals pini 651", n651 >= 51, str(n651))
-    n134 = qa.count("≠ 134")
+    n134 = qa.count("≠ 142")
     check("I6c bloki pini 134", n134 >= 20, str(n134))
-    check("I6d sidra 127 + 1908:9", "poročna sidra ≠ 127" in qa and "h.year === 1908).length !== 9" in qa)
+    check("I6d sidra 127 + 1908:9", "poročna sidra ≠ 135" in qa and "h.year === 1908).length !== 9" in qa)
     check("I6e hiše 1908 pin", '"14,14,21,28,33,39,43,44,62"' in qa)
     check("I6f ostanki 642/125/118", "!== 642" not in qa and "≠ 125" not in qa and "sidra ≠ 118" not in qa, "stale pini!")
     check("I6g NOVA-hiša izjeme (P86+P91+P92)", 'v.year === 1908 && hn === "28"' in qa and 'hn === "14" && v.year === 1908' in qa and 'v.year === 1908 && hn === "43"' in qa)
@@ -194,7 +194,7 @@ def main():
 
     # ---------- I10: README ----------
     rd = open(README).read()
-    check("I10a README P137 bullet", "po P137" in rd)
+    check("I10a README P137 bullet", "po P138" in rd)
     check("I10b README 651/134", "651" in rd and "134" in rd)
     check("I10c README P138 lead", "P138" in rd)
 

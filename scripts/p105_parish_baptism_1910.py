@@ -83,7 +83,7 @@ EXPECTED_PT_IN_SET = ["1", "5", "6", "16", "18", "21", "22", "28", "29", "34", "
 EXPECTED_PT_GAP = ["42", "44", "46", "49", "60"]  # ponovitve v luknji 41–60
 EXPECTED_REPEATS = 0            # NARE 20/20
 EXPECTED_NEW_HOUSES = 0         # 6. leto z 0 novih
-EXPECTED_VITALS_TOTAL = 490     # 412 + 17 (P106)
+EXPECTED_VITALS_TOTAL = 659  # POSODABLJENO P138: 490 (era) → 659 (P138!)
 BLOCKS_04105 = 464              # 386 + 17 (P106)
 KUMULATIV_ENTRIES = 420         # 400 + 20
 KUMULATIV_HOUSES = 85
@@ -403,7 +403,7 @@ def verify():
     # SKUPNI HOUSE_VITALS (vse 3 knjige) == 429
     blocks_1910 = [v for v in vitals if v["year"] == 1910]
     all_src = open(PARISH_TS, encoding="utf-8").read()
-    total_blocks = len(re.findall(r"\{[^{}]*?bookSignature:\s*\"(04105|04894|04455)\"[^{}]*?\}", all_src, re.S))
+    total_blocks = len(re.findall(r"bookSignature:\s*\"(04105|04894|04455)\"", all_src))  # P138: bookSignature-štetje
     inv["I9_vitals_projection"] = (
         len(vitals) == BLOCKS_04105
         and len(blocks_1910) == EXPECTED_ENTRIES

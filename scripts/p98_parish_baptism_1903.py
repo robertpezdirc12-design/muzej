@@ -59,7 +59,7 @@ EXPECTED_PT_GAP = ["58"]        # že v PT_GAP_KNOWN — brez novih številk
 EXPECTED_NEW_HOUSES = []        # DRUGO LETO ZAPORED BREZ NOVIH HIŠ
 EXPECTED_REPEATS = 12           # 12 hiš − 0 novih
 EXPECTED_HOUSES_VITALS = 12
-EXPECTED_VITALS_TOTAL = 490     # HOUSE_VITALS 276 + 12 (P98: krstna 1903); P99: + 19 (1904); P101: + 18 (1906); P102: + 15 (1907); P103: + 18 (1908); P104: + 18 (1909); P105: + 20 (1910)
+EXPECTED_VITALS_TOTAL = 659  # POSODABLJENO P138: 490 (era P105/106) → 651 (P137) → 659 (P138: + 8 poročnih blokov 1909!)
 EV_ONLY_TOTAL = 8               # P84: 2 + P85: 3 + P86: 1 + P102: r4 (1) + P103: r84 (1) (P77–P83, P87–P98: 0)
 EV_ONLY_HOUSE_STRINGS = {"65 [~]"}  # P85 — edina imenovana EV-only hiša
 EXPECTED_PRIESTS = (0, 6)       # (Kulbinek, Ravq) na Gribljih + Dostál 6
@@ -133,7 +133,7 @@ def pt_house_set():
 def parish_vitals(signature, year=None):
     src = open(PARISH_TS, encoding="utf-8").read()
     out = []
-    pat = r"\{[^{}]*?bookSignature:\s*\"" + signature + r"\"[^{}]*?\}"
+    pat = r"\n  \{[^{]*?bookSignature:\s*\"" + signature + r"\".*?\n  \},"  # P138: strukturno zasidran vzorec (zaviti oklepaji v besedilu ne motijo!)
     for m in re.finditer(pat, src, re.S):
         block = m.group(0)
         g = lambda k: (re.search(rf'{k}:\s*"([^"]*)"', block) or re.search(rf"{k}:\s*(\d+)", block))  # noqa: E731
@@ -368,8 +368,8 @@ def verify():
         and new_houses == EXPECTED_NEW_HOUSES
         and dokaz["stats"]["newSampleHouses"] == 0
         and n_entries_total == EXPECTED_VITALS_TOTAL
-        and n_entries_total + EV_ONLY_TOTAL == 498  # kumulativno po P110 (490 + 8)
-        and n_houses_total == 85  # P98: 80 vitals; P99: + 3 (h6, h42, h50); P100: + 0 (1905 brez novih); P101: + 1 (h4); P107: + 1 (h86)
+        and n_entries_total + EV_ONLY_TOTAL == 667  # POSODABLJENO P138: 659 + 8 (bilo 498 po P110!)
+        and n_houses_total == 89  # POSODABLJENO P138 (bilo 85)  # P98: 80 vitals; P99: + 3 (h6, h42, h50); P100: + 0 (1905 brez novih); P101: + 1 (h4); P107: + 1 (h86)
         and ev_only_houses == EV_ONLY_HOUSE_STRINGS
         and cumulative["entries"] == 294
         and cumulative["houses"] == 81  # 80 vitals + EV-only »65 [~]«

@@ -45,7 +45,7 @@ PT_GAP_NEW = []                 # 58 že dokazana (P84/P85) — brez novih
 EXPECTED_NEW_HOUSES = ["12", "73", "75"]
 EXPECTED_REPEATS = 9
 EXPECTED_HOUSES_VITALS = 12     # 12 vpisov, vsi zasidrani (runtime projekcija)
-EXPECTED_VITALS_TOTAL = 490     # HOUSE_VITALS 121 + 12 (p80 I7 pin); P88: + 17 (1893); P89: + 14 (1894); P90: + 15 (1895); P91: + 14 (1896); P92: + 19 (1897); P93: + 12 (1898); P94: + 15 (1899); P95: + 16 (1900); P98: + 12 (1903); P99: + 19 (1904); P101: + 18 (1906); P102: + 15 (1907); P103: + 18 (1908); P104: + 18 (1909); P105: + 20 (1910)
+EXPECTED_VITALS_TOTAL = 659  # POSODABLJENO P138: 490 (era P105/106) → 651 (P137) → 659 (P138: + 8 poročnih blokov 1909!)
 EV_ONLY_TOTAL = 8               # P84: 2 + P85: 3 + P86: 1 + P102: r4 (1) + P103: r84 (1) (P87: 0)
 # sidra/pins P87:
 H58_ROW = {"row": 60, "scan": 61, "fatherPin": "Požek"}
@@ -98,7 +98,7 @@ def pt_house_set():
 def parish_vitals(signature, year=None):
     src = open(PARISH_TS, encoding="utf-8").read()
     out = []
-    pat = r"\{[^{}]*?bookSignature:\s*\"" + signature + r"\"[^{}]*?\}"
+    pat = r"\n  \{[^{]*?bookSignature:\s*\"" + signature + r"\".*?\n  \},"  # P138: strukturno zasidran vzorec (zaviti oklepaji v besedilu ne motijo!)
     for m in re.finditer(pat, src, re.S):
         block = m.group(0)
         g = lambda k: (re.search(rf'{k}:\s*"([^"]*)"', block) or re.search(rf"{k}:\s*(\d+)", block))  # noqa: E731
@@ -326,8 +326,8 @@ def verify():
         len(repeat_houses) == dokaz["stats"]["repeatHouses"] == EXPECTED_REPEATS
         and new_houses == dokaz["stats"]["newSampleHouses"] == EXPECTED_NEW_HOUSES
         and n_entries_total == EXPECTED_VITALS_TOTAL
-        and n_entries_total + EV_ONLY_TOTAL == 498  # kumulativno po P110 (490 + 8)
-        and n_houses_total == 85  # P98: 80 vitals; P99: + 3 (h6, h42, h50); P100: + 0 (1905 brez novih); P101: + 1 (h4); P107: + 1 (h86)
+        and n_entries_total + EV_ONLY_TOTAL == 667  # POSODABLJENO P138: 659 + 8 (bilo 498 po P110!)
+        and n_houses_total == 89  # POSODABLJENO P138 (bilo 85)  # P98: 80 vitals; P99: + 3 (h6, h42, h50); P100: + 0 (1905 brez novih); P101: + 1 (h4); P107: + 1 (h86)
         and p85_ev_named == ["65 [~]"]
         and dokaz["stats"]["sampleTotal"] == "139 vpisov / 61 hiš čez tri knjige (04105 + 04894 + 04455) in sedem let (1886/1887/1888/1889/1890/1891/1892)"
         and dokaz["stats"]["entries"] == EXPECTED_ENTRIES

@@ -2097,6 +2097,103 @@ export const HOUSE_VITALS: HouseVital[] = [
     status: "DOCUMENTED",
   },
 
+  // ——— P138 razširitev: POROČNA KNJIGA 04455 — polno leto 1909 (skeni 138–141 ==
+  // Pag. 137–140; letnica 1909 se PIŠE V VSAKEM VPISU — NI letne glave (P137-lead
+  // »glava s138« = prvi vpis!); 15 vpisov (№1–4 s138 + №5–8 s139 + NEŠTEVILČEN
+  // 5. 7. + №8–12 s140 + №13–14 s141; P138-lead »min 4« 3,75× podcenjen — 24. leto
+  // zapored!); ★★★ INTRA-HIŠNA POROKA h46 × h46 + DISPENSA 3. KOLENA (№11 — 2. v 2
+  // letih po h14×h14!); ★★★ SPREGLED 1. KOLENA + SODNO DOVOLJENJE (№14 ordinariat
+  // št. 4786 + deželno sodišče št. 27036 — dvojna zapreka!); ★★ SPREGLED 3. KOLENA
+  // dotikajočega se 2. kolena (№13 TOME×TOME — ordinariat št. 4995); ★★ 14
+  // PONEDDELJKOV + 1 NEDELJA = 93% PON (REKORD linije!); ★★ NEŠTEVILČEN VPIS =
+  // VOJAŠKA POROKA Z DELEGACIJO (5. 7. — k.k. pehotni polk št. 9 št. 2045 +
+  // delegacija 4/7 Z. 200 — poroka po pooblaščencu!); ★★ 2 GENDARMSKI POROKI (№7
+  // Titular-Wachtmeister + №9); ★ NOVA HIŠA h57 (68. poročna hiša! Pezdirec 3.
+  // hiša h20+h87+h57); ★ №4 ženin LEDIG 63 + nevesta 58 = par 121 let; ★ NOVE
+  // OBLASTI: Videm + Dobrepolje + Rudolfštat/Novo mesto; ★ ~27 NOVIH PRIIMKOV;
+  // ★ NOVI DUHOVNIKI Gregor Petar? + Pavlič? + Danijel; 1910 se začne na s141
+  // (№1 Jakobčič × Jakobčič — intra-priimek lead P139!) ———
+  {
+    houseNo: "17",
+    bookSignature: "04455",
+    year: 1909,
+    scan: 138,
+    page: 137,
+    whatSi: "poroka (25. 1. 1909, vpis 1 — PONEDELJEK) — nevesta Maria KRALJ, ¼ griblarjeva hči, 27, GRIBLJE 17 (2. poročni dokaz h17 — 1892-v10 Johann Kralj ¼ griblar 48 h17 → 1909 Maria 27 = oče→hči [~ VERIF]; 17-LETNA LUKNJA h17!) × Joseph STABJAN, hišar, 23, CERKVIŠČE 36 (★ NOV PRIIMEK za korpus — 1. pojav v 24 letih linije!); starši: Joseph Stübljan [~ Stabjan sr.] hišar × Barbara geb. Stübljan [~ — ista priimka?! VERIF] / Johan Kalj [~ Kralj? VERIF] Hübler × Anna Jakobčič; priči Georg Gnaubrijan? [~] + Georg Straus Hübler (STRARUS-korpus h32 1888!); zglašnica Podzemelj + očetovo ustno privoljenje; duhovnik Jos. Rauy P.P.",
+    whatEn: "marriage (Jan 25, 1909, entry 1 — MONDAY) — the bride Maria KRALJ, quarter smallholder's daughter, 27, GRIBLJE 17 (the 2nd marriage evidence of h17 — the 1892-v10 Johann Kralj quarter smallholder 48 of h17 → the 1909 Maria 27 = father→daughter [~ VERIF]; a 17-YEAR GAP of h17!) × Joseph STABJAN, cottager, 23, CERKVIŠČE 36 (★ a NEW SURNAME for the corpus — the 1st appearance in 24 years of the line!); parents: Joseph Stübljan [~ Stabjan sr.] cottager × Barbara née Stübljan [~ — the same surname?! VERIF] / Johan Kalj [~ Kralj? VERIF] Hübler × Anna Jakobčič; witnesses Georg Gnaubrijan? [~] + Georg Straus Hübler (the STRAUS corpus h32 1888!); the Podzemelj certificate + the father's oral consent; priest Jos. Rauy P.P.",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "74",
+    bookSignature: "04455",
+    year: 1909,
+    scan: 139,
+    page: 138,
+    whatSi: "poroka (14. 6. 1909, vpis 6 — PONEDELJEK) — ženin Johann KAMBIČ, ¼ griblar, 32, GRIBLJE 74 (2. poročni dokaz h74 — 1893-v16 nevesta Catharina Kambič 22 h74 → 1909 Johann 32 = ISTA HIŠA-DRUŽINA po 16 letih!) × Maria MLEK [~ Milek — pisateljska varianta!], ¼ griblarjeva hči, 18, GRIBLJE 30 (3. poročni dokaz h30 — 1889-v8 Johann Milek 60 h30 → 1909 oče Johann Milek ¼ Hübler — MILEK-kontinuiteta 20 let!); ★ GRIBLJE × GRIBLJE poroka (h74 × h30 — 2. medsebojna v letu!); ★ 4 MREŽE v enem vpisu: Kambič + Milek + BRINEC (ženitova mati Catharina geb. Brinec!) + PEZDIREC (nevestina mati Margareta geb. Pezdirec!); starši: Mathias Kambič ¼ Hübler (1893-v16 sorodnik? [~]) × Catharina geb. Brinec / Johann Milek ¼ Hübler × Margareta geb. Pezdirec; priči [~ VERIF]; zglašnica OBČINE GRIBLJE 11. 6. 1909 št. 49 + sodno dovoljenje za ml. nevesto (okrajno sodišče Črnomelj 27. 5. 1909); duhovnik Jos. Rauy P.P.",
+    whatEn: "marriage (Jun 14, 1909, entry 6 — MONDAY) — the groom Johann KAMBIČ, quarter smallholder, 32, GRIBLJE 74 (the 2nd marriage evidence of h74 — the 1893-v16 bride Catharina Kambič 22 of h74 → the 1909 Johann 32 = THE SAME HOUSE-FAMILY after 16 years!) × Maria MLEK [~ Milek — a scribal variant!], quarter smallholder's daughter, 18, GRIBLJE 30 (the 3rd marriage evidence of h30 — the 1889-v8 Johann Milek 60 of h30 → the 1909 father Johann Milek — a MILEK continuity of 20 years!); ★ a GRIBLJE × GRIBLJE wedding (h74 × h30 — the 2nd mutual one of the year!); ★ 4 NETWORKS in one entry: Kambič + Milek + BRINEC (the groom's mother née Brinec!) + PEZDIREC (the bride's mother née Pezdirec!); parents: Mathias Kambič ¼ Hübler (a 1893-v16 relative? [~]) × Catharina née Brinec / Johann Milek ¼ Hübler × Margareta née Pezdirec; witnesses [~ VERIF]; the GRIBLJE COMMUNE certificate Jun 11, 1909 no. 49 + the court permit for the minor bride (the district court of Črnomelj May 27, 1909); priest Jos. Rauy P.P.",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "30",
+    bookSignature: "04455",
+    year: 1909,
+    scan: 139,
+    page: 138,
+    whatSi: "poroka (14. 6. 1909, vpis 6 — nevesta) — Maria MLEK [~ Milek], ¼ griblarjeva hči, 18, GRIBLJE 30 (3. poročni dokaz h30 — MILEK-kontinuiteta 1889→1909 = 20 let!; sestrska hiša h29 [1897-v9 Maria Milek] — obe Milek-hiši!) × Johann KAMBIČ, 32, GRIBLJE 74 (2. poročni dokaz h74 — KAMBIČ-hiša 1893→1909!); starši: Johann Milek ¼ Hübler × Margareta geb. Pezdirec (PEZDIREC-mreža!) / Mathias Kambič ¼ Hübler × Catharina geb. Brinec (BRINEC-mreža!); zglašnica Griblje št. 49 + sodišče Črnomelj 27. 5.; duhovnik Jos. Rauy — ★ GRIBLJE × GRIBLJE (h74 × h30!)",
+    whatEn: "marriage (Jun 14, 1909, entry 6 — the bride) — Maria MLEK [~ Milek], quarter smallholder's daughter, 18, GRIBLJE 30 (the 3rd marriage evidence of h30 — a MILEK continuity 1889→1909 = 20 years!; the sister house h29 [the 1897-v9 Maria Milek] — both Milek houses!) × Johann KAMBIČ, 32, GRIBLJE 74 (the 2nd marriage evidence of h74 — the KAMBIČ house 1893→1909!); parents: Johann Milek ¼ Hübler × Margareta née Pezdirec (the PEZDIREC network!) / Mathias Kambič ¼ Hübler × Catharina née Brinec (the BRINEC network!); the Griblje certificate no. 49 + the Črnomelj court May 27; priest Jos. Rauy — ★ a GRIBLJE × GRIBLJE wedding (h74 × h30!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "57",
+    bookSignature: "04455",
+    year: 1909,
+    scan: 140,
+    page: 139,
+    whatSi: "poroka (19. 7. 1909, vpis 8 — PONEDELJEK) — nevesta Maria PEZDIREC, hišarjeva hči [~ VERIF stand], 24, GRIBLJE 57 (★ 1. POROČNI DOKAZ h57 — ZOOM-potrjeno 57 ≠ 87; ★★ h57 = PEZDIREC-HIŠA s krstmi 1888–1901: 1888 Marija (Peter Podolivec? [~ Pezdirec!] × Marija Borjanc) + 1889 Rudolf + 1894 Janez + 1899 Alojzij (VSI oče Peter Pezdirec [~ Pegdirec], mati Marija Županič [~]!) → 1909 poroka hčere = 20-LETNA PEZDIREC-kontinuiteta h57!; ★ starši poroke = ISTA starša kot krsti 1889–1899 (Peter Pezdirec × Maria Županič)!; [h20 1891-v7 ženin Peter Pezdirec = DRUGI Peter? ~ VERIF — glej h57-kriste!]) × Mathias MAVRETIČ [~ — 4 branjа: Klaventio/Marentič/Haverstic; ZOOM-potrjeno Mavretič!], ½ griblar, 39, GRADAC 15 (oče Mathias Mavretič sr. ½ Hübler — ista imeni!); starši: Mathias Mavretič sr. ½ Hübler × Maria geb. Novak / Peter Pezdirec Hübler (1891-v7!) × Maria geb. Županič; priči Nicolaus Lupanič? [~] + Anton Pezdirec (družinski priča!); zglašnica občine GRADAC 19/4 1909 št. 11; duhovnik Gregor Petar? [~ O.T. coop. — NOV DUHOVNIK? VERIF]",
+    whatEn: "marriage (Jul 19, 1909, entry 8 — MONDAY) — the bride Maria PEZDIREC, cottager's daughter [~ VERIF status], 24, GRIBLJE 57 (★ the 1st MARRIAGE EVIDENCE of h57 — zoom-confirmed 57 ≠ 87; ★★ h57 = the PEZDIREC HOUSE with baptisms 1888–1901: the 1888 Marija (Peter Podolivec? [~ Pezdirec!] × Marija Borjanc) + the 1889 Rudolf + the 1894 Janez + the 1899 Alojzij (ALL the father Peter Pezdirec [~ Pegdirec], the mother Marija Županič [~]!) → the 1909 marriage of the daughter = a 20-YEAR PEZDIREC continuity of h57!; ★ the marriage parents = THE SAME parents as the 1889–1899 baptisms (Peter Pezdirec × Maria Županič)!; [the h20 1891-v7 groom Peter Pezdirec = ANOTHER Peter? ~ VERIF — see the h57 baptisms!]) × Mathias MAVRETIČ [~ — 4 readings: Klaventio/Marentič/Haverstic; zoom-confirmed Mavretič!], half smallholder, 39, GRADAC 15 (the father Mathias Mavretič sr. ½ Hübler — the same names!); parents: Mathias Mavretič sr. ½ Hübler × Maria née Novak / Peter Pezdirec Hübler (the 1891-v7!) × Maria née Županič; witnesses Nicolaus Lupanič? [~] + Anton Pezdirec (a family witness!); the GRADAC commune certificate Apr 19, 1909 no. 11; priest Gregor Petar? [~ O.T. coop. — a NEW PRIEST? VERIF]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "46",
+    bookSignature: "04455",
+    year: 1909,
+    scan: 140,
+    page: 139,
+    whatSi: "poroka (8. 11. 1909, vpis 11 — PONEDELJEK) — ženin Johan ŽUGELJ [~ Zugel], ¼ griblarjev sin, 24, GRIBLJE 46 (2. poročni dokaz h46 — 1898-v20 Klobučar + Filak h46 → 1909 Žugelj — hiša ZAMENJA družino!; ŽUGELJ-mreža ×3 v letu: №5 Otok 9 + №10 Dobravice 21 + №11 h46!) × Agnes KLOBUČAR, ¼ griblarjeva hči, 23, GRIBLJE 46 (★★ INTRA-HIŠNA POROKA h46 × h46 — 2. v 2 letih po h14×h14 [1908-v17]!; KLOBUČAR-h46 kontinuiteta: 1898-v20 Catharina Klobučar 21 h46 [oče Markus?] → 1909 Agnes 23 = ISTA DRUŽINA po 11 letih!); ★★ DISPENSA 3. KOLENA enake stranske stopnje (šk. ordinariat Ljubljana 12. 10. 1909 št. 4571 — sorodstvo znotraj hiše!); starši: Mathias Žugelj ¼ Hübler × Ana geb. Kalj / Markus Klobučar ¼ Hübler (1898-v20 oče! [~ VERIF]) × Catharina geb. Milek (MILEK-mreža ×3 v letu!); priči Nicolaus FILAK (= 1898-v20 ženin h46 — 11-letna priča-kontinuiteta!) + Johann Kalj ½ Hübler (ženitova mati geb. Kalj!); zglašnica Podzemelj 4. 11. 1909 št. 8 + dispensa + očetovo dovoljenje; duhovnik Jos. Rauy",
+    whatEn: "marriage (Nov 8, 1909, entry 11 — MONDAY) — the groom Johan ŽUGELJ [~ Zugel], quarter smallholder's son, 24, GRIBLJE 46 (the 2nd marriage evidence of h46 — the 1898-v20 Klobučar + Filak of h46 → the 1909 Žugelj — the house CHANGES family!; the ŽUGELJ network ×3 of the year: №5 Otok 9 + №10 Dobravice 21 + №11 h46!) × Agnes KLOBUČAR, quarter smallholder's daughter, 23, GRIBLJE 46 (★★ the INTRA-HOUSE WEDDING h46 × h46 — the 2nd in 2 years after h14×h14 [1908-v17]!; the KLOBUČAR-h46 continuity: the 1898-v20 Catharina Klobučar 21 of h46 [father Markus?] → the 1909 Agnes 23 = THE SAME FAMILY after 11 years!); ★★ the DISPENSATION of the 3rd DEGREE of the equal lateral line (the episcopal ordinariate of Ljubljana Oct 12, 1909 no. 4571 — kinship within the house!); parents: Mathias Žugelj ¼ Hübler × Ana née Kalj / Markus Klobučar ¼ Hübler (the 1898-v20 father! [~ VERIF]) × Catharina née Milek (the MILEK network ×3 of the year!); witnesses Nicolaus FILAK (= the 1898-v20 groom of h46 — an 11-year witness continuity!) + Johann Kalj ½ Hübler (the groom's mother née Kalj!); the Podzemelj certificate Nov 4, 1909 no. 8 + the dispensation + the father's permit; priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "46",
+    bookSignature: "04455",
+    year: 1909,
+    scan: 140,
+    page: 139,
+    whatSi: "poroka (8. 11. 1909, vpis 11 — nevesta) — Agnes KLOBUČAR, ¼ griblarjeva hči, 23, GRIBLJE 46 (★★ INTRA-HIŠNA POROKA h46 × h46 — 2. po h14×h14 1908!; KLOBUČAR-kontinuiteta h46: 1898-v20 Catharina → 1909 Agnes = 11 let!) × Johan ŽUGELJ, 24, GRIBLJE 46 (ŽUGELJ ×3 v letu + priča Filak = 1898-v20 ženin ISTA hiša!); ★★ DISPENSA 3. KOLENA (ordinariat Ljubljana 12/10 1909 št. 4571); starši: Markus Klobučar ¼ Hübler × Catharina geb. Milek (MILEK-mreža!) / Mathias Žugelj ¼ Hübler × Ana geb. Kalj (KALJ-mreža ×4 leta!); priči Nicolaus Filak + Johann Kalj; zglašnica št. 8; duhovnik Jos. Rauy",
+    whatEn: "marriage (Nov 8, 1909, entry 11 — the bride) — Agnes KLOBUČAR, quarter smallholder's daughter, 23, GRIBLJE 46 (★★ the INTRA-HOUSE WEDDING h46 × h46 — the 2nd after the 1908 h14×h14!; the KLOBUČAR continuity of h46: the 1898-v20 Catharina → the 1909 Agnes = 11 years!) × Johan ŽUGELJ, 24, GRIBLJE 46 (the ŽUGELJ ×3 of the year + the witness Filak = the 1998-v20 groom of the SAME house!); ★★ the DISPENSATION of the 3rd DEGREE (the ordinariate of Ljubljana Oct 12, 1909 no. 4571); parents: Markus Klobučar ¼ Hübler × Catharina née Milek (the MILEK network!) / Mathias Žugelj ¼ Hübler × Ana née Kalj (the KALJ network ×4 of the year!); witnesses Nicolaus Filak + Johann Kalj; the certificate no. 8; priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "1",
+    bookSignature: "04455",
+    year: 1909,
+    scan: 141,
+    page: 140,
+    whatSi: "poroka (22. 11. 1909, vpis 13 — PONEDELJEK, isti dan kot №14!) — ženin Johann TOME [~ Toma — nov priimek 04455], ½ griblarjev sin, 29, GRIBLJE 1 (★ 3. poročni dokaz h1 — 1899-v3 Barbara Kure 27 h1 × Georg Željko → 1909 Johann Tome — hiša KURE/ŽELJKO/TOME!; 10-letna luknja h1) × Maria KURE, ½ griblarjeva hči, 18, GRIBLJE 29 (★ 3. poročni dokaz h29 — 1897-v9 Maria Milek 24 h29 (sestrska Milek-hiša h30!) → 1909 Maria Kure — hiša zamenja družino MILEK→KURE!; KURE-mreža 20 zadetkov 04455: h62 + h10 + zdaj h29!); ★ GRIBLJE × GRIBLJE (h1 × h29 — 3. medsebojna leta!); ★★ SPREGLED 3. KOLENA dotikajočega se 2. kolena (šk. ordinariat Ljubljana 9. 11. 1909 št. 4995 — ženin TOME × nevestina mati geb. TOME: sorodstvo po krvi IN afiniteta!); ★ priči = ENAKA PRIIMKA KOT ZAKONCA (Michael Tome ½ Hübler + Johan Kure ¼ Hübler — obe družini!); starši: Johann Tome sr. ½ Hübler × Barbara geb. Malevič [~ VERIF] / Nicolaus Kure ½ Hübler × Maria geb. Tome (★ ženinov priimek = nevestina mati!); zglašnica Podzemelj št. 11 d.d. 21. 11. 1909 + spregled + ustno dovoljenje za ml. nevesto; duhovnik Jos. Pavlič? [~ branje »Jos. Paul« — VERIF]",
+    whatEn: "marriage (Nov 22, 1909, entry 13 — MONDAY, the same day as №14!) — the groom Johann TOME [~ Toma — a new surname of 04455], half smallholder's son, 29, GRIBLJE 1 (★ the 3rd marriage evidence of h1 — the 1899-v3 Barbara Kure 27 of h1 × Georg Željko → the 1909 Johann Tome — the house of KURE/ŽELJKO/TOME!; a 10-year gap of h1) × Maria KURE, half smallholder's daughter, 18, GRIBLJE 29 (★ the 3rd marriage evidence of h29 — the 1897-v9 Maria Milek 24 of h29 (the sister Milek house h30!) → the 1909 Maria Kure — the house changes family MILEK→KURE!; the KURE network 20 hits of 04455: h62 + h10 + now h29!); ★ a GRIBLJE × GRIBLJE wedding (h1 × h29 — the 3rd mutual one of the year!); ★★ the DISPENSATION of the 3rd DEGREE touching the 2nd degree (the ordinariate of Ljubljana Nov 9, 1909 no. 4995 — the groom TOME × the bride's mother née TOME: consanguinity AND affinity!); ★ the witnesses = THE SAME SURNAMES AS THE COUPLE (Michael Tome ½ Hübler + Johan Kure ¼ Hübler — both families!); parents: Johann Tome sr. ½ Hübler × Barbara née Malevič [~ VERIF] / Nicolaus Kure ½ Hübler × Maria née Tome (★ the groom's surname = the bride's mother!); the Podzemelj certificate no. 11 of Nov 21, 1909 + the dispensation + the minor bride's oral permit; priest Jos. Pavlič? [~ read »Jos. Paul« — VERIF]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "29",
+    bookSignature: "04455",
+    year: 1909,
+    scan: 141,
+    page: 140,
+    whatSi: "poroka (22. 11. 1909, vpis 13 — nevesta) — Maria KURE, ½ griblarjeva hči, 18, GRIBLJE 29 (★ 3. poročni dokaz h29 — 1897-v9 Milek → 1909 Kure: hiša zamenja družino!; KURE-mreža h62+h10+h29) × Johann TOME, 29, GRIBLJE 1 (★ 3. poročni dokaz h1 — 1899-v3 Kure×Željko → 1909 Tome; 10 let!); ★★ SPREGLED 3. KOLENA + 2. KOLENO (ordinariat Ljubljana 9/11 1909 št. 4995 — mati geb. TOME = ženinov priimek!); starši: Nicolaus Kure ½ Hübler × Maria geb. Tome / Johann Tome sr. ½ Hübler × Barbara geb. Malevič? [~]; priči Michael Tome + Johan Kure (družinski!); zglašnica št. 11; duhovnik Jos. Pavlič? [~] — ★ GRIBLJE × GRIBLJE h1 × h29!",
+    whatEn: "marriage (Nov 22, 1909, entry 13 — the bride) — Maria KURE, half smallholder's daughter, 18, GRIBLJE 29 (★ the 3rd marriage evidence of h29 — the 1897-v9 Milek → the 1909 Kure: the house changes family!; the KURE network h62+h10+h29) × Johann TOME, 29, GRIBLJE 1 (★ the 3rd marriage evidence of h1 — the 1899-v3 Kure×Željko → the 1909 Tome; 10 years!); ★★ the DISPENSATION of the 3rd + the 2nd DEGREE (the ordinariate of Ljubljana Nov 9, 1909 no. 4995 — the mother née TOME = the groom's surname!); parents: Nicolaus Kure ½ Hübler × Maria née Tome / Johann Tome sr. ½ Hübler × Barbara née Malevič? [~]; witnesses Michael Tome + Johan Kure (family!); the certificate no. 11; priest Jos. Pavlič? [~] — ★ a GRIBLJE × GRIBLJE wedding h1 × h29!",
+    status: "DOCUMENTED",
+  },
+
   // ——— P122 razširitev: POROČNA KNJIGA 04455 — polno leto 1893 (skeni 87–90 ==
   // strani 86–89; VELIKA GLAVA »Traunungs=Buch« + rokopisno »1893« na s87 =
   // Pag. 86 POTRJENA — P122 lead!; 20 vpisov: 1886:7 → 1887:21 → 1888:20 →

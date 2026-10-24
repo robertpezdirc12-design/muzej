@@ -48,7 +48,7 @@ EXPECTED_PT_IN_SET = {"7", "11", "15", "24", "27", "30", "31", "32", "35", "38",
 EXPECTED_PT_GAP = {"41", "47", "55", "58"}
 PT_GAP_NEW = ["41"]
 EXPECTED_HOUSES_VITALS = 21     # 24 vpisov − 3 evidence-only (runtime projekcija)
-EXPECTED_VITALS_TOTAL = 490     # HOUSE_VITALS 91 + 21 (p80 I7 pin); P86: + 9 (1891); P87: + 12 (1892); P88: + 17 (1893); P89: + 14 (1894); P90: + 15 (1895); P91: + 14 (1896); P92: + 19 (1897); P93: + 12 (1898); P94: + 15 (1899); P95: + 16 (1900); P98: + 12 (1903); P99: + 19 (1904); P101: + 18 (1906); P102: + 15 (1907); P103: + 18 (1908); P104: + 18 (1909); P105: + 20 (1910)
+EXPECTED_VITALS_TOTAL = 659  # POSODABLJENO P138: 490 (era P105/106) → 651 (P137) → 659 (P138: + 8 poročnih blokov 1909!)
 # sidra/pins P85:
 H77_ROW = {"row": 47, "scan": 46, "fatherPin": "Jurij Pošek", "status": "bajtar"}
 H71_ROW = {"row": 23, "scan": 44, "fatherPin": "Jurij Straus"}
@@ -102,7 +102,7 @@ def parish_vitals(signature, year=None):
     """Izvleči (houseNo, year, scan, page) za vpise dane signature iz parish.ts."""
     src = open(PARISH_TS, encoding="utf-8").read()
     out = []
-    pat = r"\{[^{}]*?bookSignature:\s*\"" + signature + r"\"[^{}]*?\}"
+    pat = r"\n  \{[^{]*?bookSignature:\s*\"" + signature + r"\".*?\n  \},"  # P138: strukturno zasidran vzorec (zaviti oklepaji v besedilu ne motijo!)
     for m in re.finditer(pat, src, re.S):
         block = m.group(0)
         g = lambda k: (re.search(rf'{k}:\s*"([^"]*)"', block) or re.search(rf"{k}:\s*(\d+)", block))  # noqa: E731
@@ -281,8 +281,8 @@ def verify():
         len(repeat_houses) == dokaz["stats"]["repeatHouses"] == 13
         and new_houses == dokaz["stats"]["newSampleHouses"]
         and n_entries_total == EXPECTED_VITALS_TOTAL
-        and n_entries_total + ev_only_total == 498  # kumulativno po P110 (490 + 8)
-        and n_houses_total == 85  # P98: 80 vitals; P99: + 3 (h6, h42, h50); P100: + 0 (1905 brez novih); P101: + 1 (h4); P107: + 1 (h86)
+        and n_entries_total + ev_only_total == 667  # POSODABLJENO P138: 659 + 8 (bilo 498 po P110!)
+        and n_houses_total == 89  # POSODABLJENO P138 (bilo 85)  # P98: 80 vitals; P99: + 3 (h6, h42, h50); P100: + 0 (1905 brez novih); P101: + 1 (h4); P107: + 1 (h86)
         and dokaz["stats"]["sampleTotal"] == "117 vpisov / 56 hiš čez tri knjige (04105 + 04894 + 04455) in pet let (1886/1887/1888/1889/1890)"  # zgodovinski P85 dokaz
         and dokaz["stats"]["entries"] == EXPECTED_ENTRIES
         and dokaz["stats"]["distinctHouses"] == EXPECTED_DISTINCT

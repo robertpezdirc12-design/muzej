@@ -83,8 +83,8 @@ EXPECTED_PT_IN_SET = ["4", "15", "16", "18", "19", "20", "21", "24", "26", "27",
 EXPECTED_PT_GAP = ["42", "44", "49", "60"]  # ponovitve že dokazanih (42 P99, 44 1888/1901, 49 P92, 60 P84)
 EXPECTED_REPEATS = 0            # NARE ponovno — 0 intra-letnih ponovitev
 EXPECTED_NEW_HOUSES = 1         # h4 (85. hiša v vitals; 1. nova po dveh letih 0+0)
-EXPECTED_VITALS_TOTAL = 490     # HOUSE_VITALS 323 + 18 (P101: krstna 1906)
-BLOCKS_04105 = 441              # 297 + 18
+EXPECTED_VITALS_TOTAL = 659     # HOUSE_VITALS 323 + 18 (P101: krstna 1906)  # POSODABLJENO P138: 490 (era P106) → 651 (P137) → 659 (P138: + 8 poročnih blokov 1909!)
+BLOCKS_04105 = 502              # 297 + 18  # POSODABLJENO P138: 441 (era P106) → 502 (krstna knjiga zrasla P107–P114!)
 KUMULATIV_ENTRIES = 347         # 329 + 18
 KUMULATIV_HOUSES = 85
 KUMULATIV_YEARS = 21            # 1886–1906
@@ -331,7 +331,7 @@ def verify():
     # SKUPNI HOUSE_VITALS (vse 3 knjige) == 341 (323 + 18)
     blocks_1906 = [v for v in vitals if v["year"] == 1906]
     all_src = open(PARISH_TS, encoding="utf-8").read()
-    total_blocks = len(re.findall(r"\{[^{}]*?bookSignature:\s*\"(04105|04894|04455)\"[^{}]*?\}", all_src, re.S))
+    total_blocks = len(re.findall(r"bookSignature:\s*\"(04105|04894|04455)\"", all_src))  # P138: metoda bookSignature-štetja (stara {}-regex preskakovala bloke z zavitimi oklepaji!)
     inv["I9_vitals_projection"] = (
         len(vitals) == BLOCKS_04105
         and len(blocks_1906) == EXPECTED_ENTRIES
