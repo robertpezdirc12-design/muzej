@@ -5966,3 +5966,20 @@ Stage Summary:
 - **P137 LEAD: poročna 1908 — ROKOPISNA GLAVA na s134 (y≈1020) + 1908-v1 Jän 26 (y≈1080) + v2 [Jän/Febr?] 26 (y≈1230) že vidna — min 2 vpisa s134; LEKCIJA: mejo preveriti s135+s136 (knjiga sega do 1922!); skeni 132–134 ostanejo v .p126tmp; za P137 prenesti s135+s136.**
 - LEKCIJE: (1) lead-datumi so INDICIJI, nikoli dejstva — P136-lead je imel VSE datume napačne (»Jän 13/24, Febr 14, Mär 9, Okt 6« → Jän 28, Febr 4–25, Mär 4)!; (2) VLM-branja zahtevajo NEODVISNE preverbe — priimki/vasi so rešljivi samo s primerjalno forenziko (znani zapisi istega duhovnika!) ali korpusom; (3) imenske celice imajo RAZLIČEN vrstni red vrstic (stan/ime/priimek ni standarden!); (4) R-stran s132 je zamaknjena do +245px — vsebinska dodelitev obvezna; (5) matricula-online prenos: Playwright (žetoni csrf+ctrl), ne curl; (6) objektivno testiranje na čistem HEAD razkrije skrite zaostanke sinhronizacije (p131/p114!).
 - PUSH: commit pripravljen lokalno; NOV SVEŽ SANDBOX BREZ ŽETONOV (GitHub/GitLab poverilnice niso prenesene!) — **AKCIJA LASTNIKA: zagotoviti žeton za push (GitHub PAT) ali prenesti repo v okolje s poverilnicami**; po pushu: Vercel se samodejno namesti prek GitHuba (avtor-epošta hipoteza — 13. potrditev čaka).
+
+---
+Task ID: 114
+Agent: Z.ai Code (glavni)
+Task: P136 push — sinhronizacija GitHub + Vercel z novim GitHub žetonom uporabnika (uporabnik: »nadaljuj kjer si ostal« + PAT ghp_…)
+
+Work Log:
+- UPORABNIK POSREDOVAL GitHub PAT (ghp_UMH5…): validiran prek API (200; repo javen, id 1408702950); push izveden 116477d..b33903e main → main.
+- GITHUB 1:1 POTRJEN: ls-remote refs/heads/main = b33903e4 = lokalni main; fetch origin → 0/0 ahead/behind.
+- VERCEL PRODUKCIJA ŽIV P136 (poll ~60 s po pushu): /api/qa ok:True · passed:137 · failed:0 + qa-p136-parish-marriage-1907 True (137. kontrola!) + homepage 200 (1 042 632 B) = **13. POTRDITEV avtor-epošte** (z@container → samodejni deploy prek GitHuba).
+- GITLAB: anonimni ls-remote https://gitlab.com/robert.pezdirc12/muzej.git = 403 (privatni repo); GitLab žetona (glpat-0-3p8… iz P134/P135 seje) NI v tem sandboxu — zaostanek 1 commit (b33903e); AKCIJA LASTNIKA: posredovati veljaven GitLab PAT.
+- Worklog-sekcija dodana + commit + push (ta commit).
+
+Stage Summary:
+- **TROJNA SINHRONIZACIJA: GitHub b33903e 1:1 + Vercel produkcija 137/137 ŽIV (qa-p136 True); GitLab zaostanek 1 commit (blokiran — PAT ni v sandboxu, akcija lastnika).**
+- **P136 POLNO ZAKLJUČEN: poročna 1907 = 12/12 vpisov (22. leto linije 1886–1907); vitals 642 · bloki 04455 125 · sidra 118 · p80 hiše 66; QA 137/137; 23 skript 1384/1384.**
+- NASLEDNJI KORAK: P137 — poročna 1908 (rokopisna glava na s134 y≈1020 + 1908-v1 Jän 26 + v2 vidna — min 2 vpisa; LEKCIJA: mejo preveriti s135+s136!; prenesti skena s135+s136; knjiga 04455 sega do 1922 — še ~15 let linije).
