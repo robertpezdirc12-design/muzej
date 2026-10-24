@@ -1992,6 +1992,111 @@ export const HOUSE_VITALS: HouseVital[] = [
     status: "DOCUMENTED",
   },
 
+  // ——— P137 razširitev: POROČNA KNJIGA 04455 — polno leto 1908 (skeni 134–138 ==
+  // Pag. 133–137; glava »1908« na s134 dno (y≈980) POTRJENA + glava »1909« na
+  // s138 (y≈600) = P138 lead) — 17 vpisov (P137-lead »min 2« 8,5× podcenjen —
+  // 23. leto zapored!); ★★ 73-LETNI ŽENIN (v16) = NOVI REKORD LINIJE (prej 62
+  // P135!); ★★★ INTRA-HIŠNA POROKA h14 × h14 (v17 — 1. v 23 letih!); ★★★
+  // AFINITETNA DISPENSA 1. KOLENA (v17: ženin × SESTRA pokojne žene! — hčerka
+  // krščena 16. 2. 1908, 9 mesecev PRED poroko!); ★★ 4 DISPENZE v letu (v3 št.
+  // 265 + v5 + v15 št. 4208 + v17 — vs 1 v 1907!); ★★ 1. RAZVEZANI ŽENIN (v5 —
+  // modri zapis o sodbi!); ★ RECIPROČNA poroka Požek×Kure po Kure×Požek 1906
+  // (v1); ★ GRIBLJE-DRUBEL h39 × h44 (v10); ★ NOVA hiša h43 (v9 — 67. poročna
+  // hiša korpusa); ★ MASA 10. 2. ×3 (v5+v6+v7); ★ 4 NEDELJSKE poroke (v1+v2 isti
+  // dan 26. 1. + v15 + v16); ★ DEHLIČ × DEHLIČ istopriimčna (v14); NOVI DUHOVNIK
+  // Jos. Dami [~] (krstna linija 1908!) + NOVE VASI (Mehovce pf. Podgrad ·
+  // Drašiči · Vranoviče 28/30 · Cerkvišče 35/10 povrat · Kapljišče?) ———
+  {
+    houseNo: "21",
+    bookSignature: "04455",
+    year: 1908,
+    scan: 134,
+    page: 133,
+    whatSi: "poroka (26. 1. 1908, vpis 1 — NEDELJA) — ženin Johann POŽEK, ¼ griblar, 58, GRIBLJE 21 (3. poročni dokaz h21 — 1888 v3 + 1889 v3 → 1908 = 19-LETNA LUKNJA; ★ ženin = ISTI KOT 1889-v3 (starši ISTI Johann Požek × Barbara Dragoš!; 39 → 58 let) — 2. poroka po 19 letih; 1. žena Anna Simec h54 †) × Catharina KURE, ¼ griblarjeva hči [~], 28, GRIBLJE 62 (5. poročni dokaz h62 — 1893+1898+1904+1906+1908!; sestra 1906-v11 ženina Johana Kure!) = ★ RECIPROČNA poroka po 1906-v11 (Kure × Požek h62×h21 → zrcalni h21×h62!); starši: Johann Požek ¼ Hübler × Barbara Dragoš (DRAGOŠ-mreža 13.+ leto!) / Anton Kure ½ Hübler × Barbara Križan (= 1906-v11 starši ISTI!); priči Johann Dragoš + Johann Brinovec [~ Brinec?] Hübler; zglašnica občine Griblje od 25/1. 1908 št. 1; duhovnik Jos. Rauy p.f.",
+    whatEn: "marriage (Jan 26, 1908, entry 1 — SUNDAY) — the groom Johann POŽEK, quarter smallholder, 58, GRIBLJE 21 (the 3rd marriage evidence of h21 — 1888 v3 + 1889 v3 → 1908 = a 19-YEAR GAP; ★ the groom = THE SAME as 1889-v3 (the parents the same Johann Požek × Barbara Dragoš!; 39 → 58 years) — the 2nd marriage after 19 years; the 1st wife Anna Simec of h54 †) × Catharina KURE, quarter smallholder's daughter [~], 28, GRIBLJE 62 (the 5th marriage evidence of h62 — 1893+1898+1904+1906+1908!; the sister of the 1906-v11 groom Johan Kure!) = ★ the RECIPROCAL marriage after 1906-v11 (Kure × Požek h62×h21 → the mirror h21×h62!); parents: Johann Požek ¼ Hübler × Barbara Dragoš (the 13th+ year of the DRAGOŠ network!) / Anton Kure ½ Hübler × Barbara Križan (= the 1906-v11 parents the same!); witnesses Johann Dragoš + Johann Brinovec [~ Brinec?] Hübler; the Griblje commune certificate of Jan 25, 1908 no. 1; priest Jos. Rauy p.f.",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "62",
+    bookSignature: "04455",
+    year: 1908,
+    scan: 134,
+    page: 133,
+    whatSi: "poroka (26. 1. 1908, vpis 1 — nevesta) — Catharina KURE, ¼ griblarjeva hči [~], 28, GRIBLJE 62 (5. poročni dokaz h62 — KURE-kontinuiteta 15 let!; krstna h62 1887+1891+1907 → poroka 1908 [Kure × Požek!] — 3. knjiga povezuje!) × Johann POŽEK, 58, GRIBLJE 21 (★ = 1889-v3 ženin ISTI — druga poroka!); starši: Anton Kure ½ Hübler × Barbara Križan (ISTA kot 1906-v11!) / Johann Požek ¼ Hübler × Barbara Dragoš (ISTA kot 1889!); priči Johann Dragoš + Johann Brinovec [~]; zglašnica Griblje 25/1. 1908 št. 1; duhovnik Jos. Rauy — ★ RECIPROČNI par z 1906-v11 (h62×h21 ↔ h21×h62)!",
+    whatEn: "marriage (Jan 26, 1908, entry 1 — the bride) — Catharina KURE, quarter smallholder's daughter [~], 28, GRIBLJE 62 (the 5th marriage evidence of h62 — a 15-year KURE continuity!; the h62 baptisms 1887+1891+1907 → the 1908 marriage [Kure × Požek!] — the 3rd book connects!) × Johann POŽEK, 58, GRIBLJE 21 (★ = the 1889-v3 groom the same — a second marriage!); parents: Anton Kure ½ Hübler × Barbara Križan (the same as 1906-v11!) / Johann Požek ¼ Hübler × Barbara Dragoš (the same as 1889!); witnesses Johann Dragoš + Johann Brinovec [~]; the Griblje certificate Jan 25, 1908 no. 1; priest Jos. Rauy — ★ the RECIPROCAL pair with 1906-v11 (h62×h21 ↔ h21×h62)!",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "28",
+    bookSignature: "04455",
+    year: 1908,
+    scan: 135,
+    page: 134,
+    whatSi: "poroka (10. 2. 1908, vpis 5 — ponedeljek, 1. od 3 porok dne = MASA!) — nevesta Catharina POŽEK, ¼ griblarjeva hči, 24, GRIBLJE 28 (★ 1. POROČNI DOKAZ h28 v poročni knjigi — h28 = POŽEK-VERIGA krstne (h79 1888 → h77 1890 → h28 1891); 17-letna poročna luknja po krstu 1891!) × Georg ŽARKOVIČ [~ — nov priimek!], ¾ griblar, 26, [Trbeneč? ~ pf. Adlešiči]; ★ MODRI ZAPIS ŽENINA: 1. zakon RAZVEZAN (sodba [okrajnega sodišča v Novem mestu? ~] — ★★ 1. RAZVEZA LINIJE 1886–1908!); starši: Georg [Jurij] Požek Hübler × Margareth [Marjeta] Milkovič (= 1891-krst h28 starša ISTA — Milkovič = Milek-varianta!) / Georg Žarkovič Hübler × Ana Škalič [~]; priči Joseph Kostelič [~] + Johann Černič [~] (Hübler); zglašnica občine [Vrbičice? ~] od 8/2. 1908 št. 32 + [oklicni list?] od oblasti v Adlešičih 9/2. 1908 št. 33 + ★ DISPENSA [v 3. kolenu? ~] od kr. šk. ordinarijata (2. od 4-ih leta!); duhovnik Jos. Rauy",
+    whatEn: "marriage (Feb 10, 1908, entry 5 — Monday, the 1st of 3 weddings of the day = the MASS!) — the bride Catharina POŽEK, quarter smallholder's daughter, 24, GRIBLJE 28 (★ the 1st MARRIAGE EVIDENCE of h28 in the marriage book — h28 = the baptismal POŽEK CHAIN (h79 1888 → h77 1890 → h28 1891); a 17-year marriage gap after the 1891 baptism!) × Georg ŽARKOVIČ [~ — a new surname!], three-quarter smallholder, 26, [Trbeneč? ~ pf. Adlešiči]; ★ the groom's BLUE NOTE: the 1st marriage DISSOLVED (a judgment [of the Novo mesto district court? ~] — ★★ the 1st DIVORCE of the line 1886–1908!); parents: Georg [Jurij] Požek Hübler × Margareth [Marjeta] Milkovič (= the 1891 baptism h28 parents the same — Milkovič = a Milek variant!) / Georg Žarkovič Hübler × Ana Škalič [~]; witnesses Joseph Kostelič [~] + Johann Černič [~] (Hübler); the [Vrbičice? ~] commune certificate of Feb 8, 1908 no. 32 + [a banns list?] of the Adlešiči authority Feb 9, 1908 no. 33 + ★ a DISPENSATION [in the 3rd degree? ~] of the episcopal ordinariate (the 2nd of 4 of the year!); priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "43",
+    bookSignature: "04455",
+    year: 1908,
+    scan: 136,
+    page: 135,
+    whatSi: "poroka (17. 2. 1908, vpis 9 — ponedeljek) — nevesta Maria LASIČ [~ Losic? — LASIč: boter h47 1887!], 29, GRIBLJE 43 (★ 1. POROČNI DOKAZ h43 = NOVA HIŠA = 67. poročna hiša korpusa! PT luknja 41–60!) × Michael ŽUPANIČ, ¼ griblarjev sin, 30, Krasinec 18 (POVRAT hiše po 1897 — brat 1897-v5 ženina Nicolusa Županiča!) — ★ 2. POROČNA NEDOBLJENEGA RAZMERJA: nevesta Griblje × ženin Krasinec (medsebojni vzorec 1908!); starši: Johan Lasič [~] ¼ Hübler × Maria Vrčul [~] / Matija Županič ¼ Hübler (= 1897-v5 oče Mathias ISTI!) × Catharina Kramarič [~ — 1897-mati Štarasinič/Šaradinič? 2. žena? MERI!] (KRAMARIČ korpus ×10!); priči Nicolaus Brodarič (BRODARIČ ×2 leta!) + Peter Fiebler [~] ¼ Hübler; zglašnica občine Podzemelj od 16/2. [1908]; duhovnik Jos. Rauy — ŽUPANIČ ×2 leta (v1-nevesta Županič 1907 + v9-ženin!)",
+    whatEn: "marriage (Feb 17, 1908, entry 9 — Monday) — the bride Maria LASIČ [~ Losic? — LASIč: an h47 godfather 1887!], 29, GRIBLJE 43 (★ the 1st MARRIAGE EVIDENCE of h43 = A NEW HOUSE = the 67th marriage house of the corpus! a PT gap house 41–60!) × Michael ŽUPANIČ, quarter smallholder's son, 30, Krasinec 18 (the house RETURNS after 1897 — the brother of the 1897-v5 groom Nicolaus Županič!); parents: Johan Lasič [~] ¼ Hübler × Maria Vrčul [~] / Matija Županič ¼ Hübler (= the 1897-v5 father Mathias the same!) × Catharina Kramarič [~ — the 1897 mother Štarasinič/Šaradinič? a 2nd wife? MERI!] (KRAMARIČ in the corpus ×10!); witnesses Nicolaus Brodarič (BRODARIČ ×2 in the year!) + Peter Fiebler [~] ¼ Hübler; the Podzemelj commune certificate of Feb 16 [1908]; priest Jos. Rauy — ŽUPANIČ ×2 in the year (the 1907 v1 bride Županič + the v9 groom!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "39",
+    bookSignature: "04455",
+    year: 1908,
+    scan: 136,
+    page: 135,
+    whatSi: "poroka (2. 3. 1908, vpis 10 — ponedeljek) — ženin Johann ŠIMEC, ¼ griblarjev sin, 21, GRIBLJE 39 (2. poročni dokaz h39 — 1897-v11 nevesta Maria Simec = Sestra!; starši ISTI!) × Barbara KLOBUČAR, ¼ griblarjeva hči [~], 20 (mladoletna — vlada!), GRIBLJE 44 = ★ GRIBLJE-DRUBEL h39 × h44 (2. drubel zapored po h6×h7 1907!); ★ Barbara = 1887-krst h47 ISTA (Peter Klobučar × Marija Filath/Tilak — 20. november 1887 → poročena 2. 3. 1908!); starši: Nikolaus Šimec ¼ Hübler × Catharina Jakobčič (= 1897-v11 starši ISTI!) / Peter Klobučar (= 1887-krst oče!) × Maria Tilak [~ Filath/Filak/Šilak — 3 pisave!]; priči [Mathias Hušić? ~] + [Mathias Moh? ~] ¼ Hübler; zglašnica občine Griblje [13/1?] 1908 št. 2 + [prijava ženina ~ Mihael? Drenovlje?] od 13/12. 1907 št. 3 + ★ DOVOLJENJE c. kr. vlade v Ljubljani od 19/2. 1908 št. 4167 (mladoletna nevesta!); duhovnik [Jos. Dami? ~ — novi kaplan 1908!]",
+    whatEn: "marriage (Mar 2, 1908, entry 10 — Monday) — the groom Johann ŠIMEC, quarter smallholder's son, 21, GRIBLJE 39 (the 2nd marriage evidence of h39 — the 1897-v11 bride Maria Simec = his sister!; the parents the same!) × Barbara KLOBUČAR, quarter smallholder's daughter [~], 20 (a minor — the government!), GRIBLJE 44 = ★ the DOUBLE-GRIBLJE h39 × h44 (the 2nd double in a row after h6×h7 of 1907!); ★ Barbara = the 1887 baptism h47 the same (Peter Klobučar × Marija Filath/Tilak — Nov 20, 1887 → married Mar 2, 1908!); parents: Nikolaus Šimec ¼ Hübler × Catharina Jakobčič (= the 1897-v11 parents the same!) / Peter Klobučar (= the 1887-baptism father!) × Maria Tilak [~ Filath/Filak/Šilak — 3 spellings!]; witnesses [Mathias Hušić? ~] + [Mathias Moh? ~] ¼ Hübler; the Griblje commune certificate [Jan 13?] 1908 no. 2 + [the groom's application ~ Mihael? Drenovlje?] of Dec 13, 1907 no. 3 + ★ the GOVERNMENT permission of the k.k. government in Ljubljana of Feb 19, 1908 no. 4167 (an underage bride!); priest [Jos. Dami? ~ — the new curate of 1908!]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "44",
+    bookSignature: "04455",
+    year: 1908,
+    scan: 136,
+    page: 135,
+    whatSi: "poroka (2. 3. 1908, vpis 10 — nevesta) — Barbara KLOBUČAR, ¼ griblarjeva hči [~], 20 (mladoletna!), GRIBLJE 44 (3. poročni dokaz h44 — 1899-v1 Mathias Klobučar-hiša + 1903-v20 Štrucelj — ★ KLOBUČAR POVRAT na hišo!; Barbara rojena na h47 (krst 1887) — poročena s h44!) × Johann ŠIMEC, 21, GRIBLJE 39 = ★ DRUBEL h44 × h39; starši: Peter Klobučar (= h47-krst 1887!) × Maria Tilak [~ Filath!] / Nikolaus Šimec × Catharina Jakobčič (= h39 ISTA družina!); priči [~]; zglašnica Griblje št. 2 + vlada-dovoljenje št. 4167 (19/2. 1908!); duhovnik [Jos. Dami? ~] — KLOBUČAR ×2 leta (v10-nevesta + priča?)",
+    whatEn: "marriage (Mar 2, 1908, entry 10 — the bride) — Barbara KLOBUČAR, quarter smallholder's daughter [~], 20 (a minor!), GRIBLJE 44 (the 3rd marriage evidence of h44 — the 1899-v1 Mathias Klobučar house + the 1903-v20 Štrucelj — ★ a KLOBUČAR RETURN to the house!; Barbara born at h47 (the 1887 baptism) — married from h44!) × Johann ŠIMEC, 21, GRIBLJE 39 = ★ the DOUBLE h44 × h39; parents: Peter Klobučar (= the h47 baptism 1887!) × Maria Tilak [~ Filath!] / Nikolaus Šimec × Catharina Jakobčič (= the h39 same family!); witnesses [~]; the Griblje certificate no. 2 + the government permission no. 4167 (Feb 19, 1908!); priest [Jos. Dami? ~] — KLOBUČAR ×2 in the year (the v10 bride + a witness?)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "33",
+    bookSignature: "04455",
+    year: 1908,
+    scan: 137,
+    page: 136,
+    whatSi: "poroka (22. 6. 1908, vpis 14 — ponedeljek) — nevesta Catharina DEHLIČ, ½ griblarjeva hči, 24, GRIBLJE 33 (2. poročni dokaz h33 — 1888-v2 Maria Dehlič (23) → 1908 Catharina (24) = ★ ISTA DRUŽINA Mathias Dehlič × Maria Husič po 20 LETIH — 2. najdaljša hišna kontinuiteta poročne linije!) × Thomas DEHLIČ, lastnik, 49, Krasinec 53 (★ DEHLIČ × DEHLIČ — 1. istopriimčna poroka po P135-v2/v3!; sorodstvo? — BREZ dispensa-zapisa [~]); starši: Matthias Dehlič ½ Hübler × Marica Hušič (= 1888-v2 starša ISTA!) / Thomas Dehlič kmet [~] × Rosa Vurnas [~]; priči Johann Vurnas [~] + Matthias Brinsec [~] ¼ Hübler (BRINEC-mreža!); [uradna? svetba? ~ Poglavarstva občine v Ribnici? ~ — NOV TIP DOKUMENTA? ~] dne [14.?] 1908 br. 1555; duhovnik [Jos. Rauy P.f.? ~]",
+    whatEn: "marriage (Jun 22, 1908, entry 14 — Monday) — the bride Catharina DEHLIČ, half smallholder's daughter, 24, GRIBLJE 33 (the 2nd marriage evidence of h33 — the 1888-v2 Maria Dehlič (23) → the 1908 Catharina (24) = ★ the SAME FAMILY Mathias Dehlič × Maria Husič after 20 YEARS — the 2nd longest house continuity of the marriage line!) × Thomas DEHLIČ, owner, 49, Krasinec 53 (★ DEHLIČ × DEHLIČ — the 1st same-surname wedding after P135-v2/v3!; kinship? — WITHOUT a dispensation note [~]); parents: Matthias Dehlič ½ Hübler × Marica Hušič (= the 1888-v2 parents the same!) / Thomas Dehlič a peasant [~] × Rosa Vurnas [~]; witnesses Johann Vurnas [~] + Matthias Brinsec [~] ¼ Hübler (the BRINEC network!); [an official certificate? ~ of the municipality of Ribnica? ~ — a NEW document type? ~] of [the 14th?] 1908 no. 1555; priest [Jos. Rauy P.f.? ~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "14",
+    bookSignature: "04455",
+    year: 1908,
+    scan: 138,
+    page: 137,
+    whatSi: "poroka ([25. 11.?] 1908, vpis 17 — ZADNJI 1908) — ženin Johann BRINEC, ¼ griblar, 46 (vdovec!), GRIBLJE 14 (2. poročni dokaz h14 — ★ ženin = 1895-v17 ISTI (33 → 46 let; starši Peter Brinec × Anna Štraus ISTI!) — oženil se je v nevestino hišo h14 1895, žena Maria Pezdirec †, ŽE 9 MESECEV ZAČETEK Z Dorotheo!) × Dorothea PEZDIREC, ¼ griblarjeva hči, 27, GRIBLJE 14 (★★ ISTA HIŠA kot ženin — 1. INTRA-HIŠNA POROKA LINIJE 1886–1908 (h14 × h14)!; ★★ hčerka krščena 16. 2. 1908 na h14 (oče Janez Brinec × Doroteja Perdinec — P103! — 9 mesecev PRED poroko!); sestra pokojne ženinove 1. žene Marije!); ★★ DISPENSA V 1. KOLENU [AFINITETE? — ženin × SESTRA pokojne žene = sororate! — najhujša sorodstvena zapreka linije!] od knj. šk. ordinarijata v Ljubljani [22. okt. 1908 št. 10.350? ~] + [dovoljenje c. kr. vlade? ~]; zglašnica občine Griblje od 15. okt. 1908 št. 1; starši: Peter Brinec ½ Hiebler × Anna Štraus (ISTA 1895!) / Michael Pezdirec ¼ Hiebler × Anna Brinec (= 1895 nevestina starša ISTA! — mati roj. Brinec!); priči Martin Gregorič [~] + Simončič [~] (Häusler); duhovnik Jos. Rauy pf. — 4. dispensa leta 1908!",
+    whatEn: "marriage ([Nov 25?] 1908, entry 17 — the LAST of 1908) — the groom Johann BRINEC, quarter smallholder, 46 (a widower!), GRIBLJE 14 (the 2nd marriage evidence of h14 — ★ the groom = the 1895-v17 same (33 → 46 years; the parents Peter Brinec × Anna Štraus the same!) — he married into the bride's house h14 in 1895, the wife Maria Pezdirec †, ALREADY 9 MONTHS WITH Dorothea!) × Dorothea PEZDIREC, quarter smallholder's daughter, 27, GRIBLJE 14 (★★ the SAME HOUSE as the groom — the 1st INTRA-HOUSE WEDDING of the line 1886–1908 (h14 × h14)!; ★★ a daughter baptized Feb 16, 1908 at h14 (father Janez Brinec × Doroteja Perdinec — P103! — 9 months BEFORE the wedding!); the sister of the groom's deceased 1st wife Maria!); ★★ the DISPENSATION in the 1st degree [of AFFINITY? — the groom × the SISTER of the deceased wife = sororate! — the gravest impediment of the line!] of the episcopal ordinariate in Ljubljana [Oct 22, 1908 no. 10.350? ~] + [a k.k. government permission? ~]; the Griblje commune certificate of Oct 15, 1908 no. 1; parents: Peter Brinec ½ Hiebler × Anna Štraus (the same as 1895!) / Michael Pezdirec ¼ Hiebler × Anna Brinec (= the 1895 bride's parents the same! — the mother née Brinec!); witnesses Martin Gregorič [~] + Simončič [~] (Häusler); priest Jos. Rauy pf. — the 4th dispensation of the year 1908!",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "14",
+    bookSignature: "04455",
+    year: 1908,
+    scan: 138,
+    page: 137,
+    whatSi: "poroka ([25. 11.?] 1908, vpis 17 — nevesta) — Dorothea PEZDIREC, ¼ griblarjeva hči, 27, GRIBLJE 14 (★★ 1. INTRA-HIŠNA POROKA (h14 × h14 — ista hiša obakrat!); h14 = PEZDIREC-hiša: 1895-v17 sestra Maria (28) poročila Johanna Brineca → † → 1908 Dorothea (27) poroči ISTEGA moža!; krst h14 16. 2. 1908 [P103]: oče Janez Brinec × Doroteja Perdinec — hčerka rojena PRED poroko!) × Johann BRINEC, 46 (vdovec), GRIBLJE 14; ★★ AFINITETNA DISPENSA 1. KOLENA (sestra pokojne žene!) + zglašnica Griblje 15/10 št. 1 + [vlada? ~]; starši: Michael Pezdirec ¼ Hiebler × Anna Brinec (ISTA 1895!) / Peter Brinec × Anna Štraus (ISTA 1895!); priči [~]; duhovnik Jos. Rauy pf. — PEZDIREC-mreža 1907 ×5 → 1908 ×2 (v15-nevesta Drašiči + v17!)",
+    whatEn: "marriage ([Nov 25?] 1908, entry 17 — the bride) — Dorothea PEZDIREC, quarter smallholder's daughter, 27, GRIBLJE 14 (★★ the 1st INTRA-HOUSE WEDDING (h14 × h14 — the same house both times!); h14 = the PEZDIREC house: the 1895-v17 sister Maria (28) married Johann Brinec → † → in 1908 Dorothea (27) marries the SAME man!; the h14 baptism Feb 16, 1908 [P103]: father Janez Brinec × Doroteja Perdinec — a daughter born BEFORE the wedding!) × Johann BRINEC, 46 (a widower), GRIBLJE 14; ★★ the AFFINITY DISPENSATION of the 1st degree (the sister of the deceased wife!) + the Griblje certificate Oct 15 no. 1 + [the government? ~]; parents: Michael Pezdirec ¼ Hiebler × Anna Brinec (the same as 1895!) / Peter Brinec × Anna Štraus (the same as 1895!); witnesses [~]; priest Jos. Rauy pf. — the PEZDIREC network 1907 ×5 → 1908 ×2 (the v15 bride of Drašiči + v17!)",
+    status: "DOCUMENTED",
+  },
+
   // ——— P122 razširitev: POROČNA KNJIGA 04455 — polno leto 1893 (skeni 87–90 ==
   // strani 86–89; VELIKA GLAVA »Traunungs=Buch« + rokopisno »1893« na s87 =
   // Pag. 86 POTRJENA — P122 lead!; 20 vpisov: 1886:7 → 1887:21 → 1888:20 →
