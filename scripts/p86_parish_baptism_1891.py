@@ -44,7 +44,7 @@ EXPECTED_PT_IN_SET = {"2", "5", "28", "30", "31", "61", "62", "72"}
 EXPECTED_PT_GAP = {"53"}
 PT_GAP_NEW = ["53"]
 EXPECTED_HOUSES_VITALS = 9      # 10 vpisov − 1 evidence-only (runtime projekcija)
-EXPECTED_VITALS_TOTAL = 659  # POSODABLJENO P138: 490 (era P105/106) → 651 (P137) → 659 (P138: + 8 poročnih blokov 1909!)
+EXPECTED_VITALS_TOTAL = 664  # POSODABLJENO P138: 490 (era P105/106) → 651 (P137) → 659 (P138: + 8 poročnih blokov 1909!)
 EV_ONLY_TOTAL = 8               # P84: 2 + P85: 3 + P86: 1 + P102: r4 (1) + P103: r84 (1)
 # sidra/pins P86:
 H72_ROW = {"row": 6, "scan": 50, "fatherPin": "Straus"}

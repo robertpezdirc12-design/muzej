@@ -61,8 +61,9 @@ SUB_DIOE = "sub dioe."
 def is_sub(h: str) -> bool:
     return h.startswith("sub dioe.")
 EXPECTED_NEW_HOUSES = 0         # 4. zapored z 0 novih numeričnih!
-EXPECTED_VITALS_TOTAL = 517     # 508 + 9 (P113)
-BLOCKS_04105 = 491              # 482 + 9
+EXPECTED_VITALS_TOTAL = 664     # POSODABLJENO P139: 517 (era) → 664 (živi korpus!)
+STATS_VITALS_P113 = 517       # era-vrednost p113 dokaza (stats.vitals)
+BLOCKS_04105 = 502              # POSODABLJENO P139: 491 (era) → 502 (živi korpus!)
 KUMULATIV_ENTRIES = 603         # 594 + 9
 KUMULATIV_HOUSES = 88           # + 0
 KUMULATIV_YEARS = 33            # 1886–1918
@@ -289,7 +290,7 @@ def main():
     inv["I9_stats"] = (
         stats["entries"] == 9
         and stats["kumulativ"].startswith("603")
-        and stats["vitals"] == EXPECTED_VITALS_TOTAL
+        and stats["vitals"] == STATS_VITALS_P113
         and "Lopar" in stats["duhovniki"] and "Kolbezen" in stats["duhovniki"] and "Bitnar" in stats["duhovniki"]
         and stats["mrtvorojeni"] == 2
         and stats["subDioe"] == 4

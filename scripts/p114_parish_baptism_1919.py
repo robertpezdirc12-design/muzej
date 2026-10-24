@@ -220,7 +220,7 @@ def main() -> int:
     blocks_04105 = len(re.findall(r'bookSignature:\s*"04105"', ts))
     check("I9 bloki 04105 ≥ 502", blocks_04105 >= BLOCKS_04105, str(blocks_04105))
     qa_ts = open("src/lib/qa-parish.ts").read()
-    n587 = qa_ts.count("HOUSE_VITALS.length !== 659")
+    n587 = qa_ts.count("HOUSE_VITALS.length !== 664")
     n578x = qa_ts.count("HOUSE_VITALS.length !== 578")
     n569 = qa_ts.count("HOUSE_VITALS.length !== 569")
     n544 = qa_ts.count("HOUSE_VITALS.length !== 544")
@@ -230,7 +230,7 @@ def main() -> int:
     n563x = qa_ts.count("HOUSE_VITALS.length !== 563")
     n566x = qa_ts.count("HOUSE_VITALS.length !== 566")
     n587stale = qa_ts.count("HOUSE_VITALS.length !== 587")
-    check("I9b vitals 659 (qa ×46+, brez 587/578/569/566/563/554/550/548/544/537/595 — P131 +4 bloka = 599)", n587 >= 44 and n587stale == 0 and n578x == 0 and n569 == 0 and n566x == 0 and n563x == 0 and n554x == 0 and n548x == 0 and n544 == 0 and n537 == 0, f"587×{n587} 578×{n578x} 569×{n569} 566×{n566x} 563×{n563x} 554×{n554x} 550×{n548x} 544×{n544} 537×{n537}")
+    check("I9b vitals 664 (qa ×46+, brez 587/578/569/566/563/554/550/548/544/537/595/659 — P139 +5 blokov = 664)", n587 >= 44 and n587stale == 0 and n578x == 0 and n569 == 0 and n566x == 0 and n563x == 0 and n554x == 0 and n548x == 0 and n544 == 0 and n537 == 0, f"587×{n587} 578×{n578x} 569×{n569} 566×{n566x} 563×{n563x} 554×{n554x} 550×{n548x} 544×{n544} 537×{n537}")
     # vsi 11 blokov 1919 prisotni
     y1919 = re.findall(r'bookSignature:\s*"04105",\s*year:\s*1919', ts)
     check("I9c blokov 1919 ≥ 11", len(y1919) >= 11, str(len(y1919)))

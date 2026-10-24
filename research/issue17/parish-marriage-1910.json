@@ -1,0 +1,893 @@
+{
+  "source": {
+    "book": "04455 (ženitovanske knjige — Trauungsbuch, župnija Podzemelj)",
+    "url": "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04455/",
+    "year": 1910,
+    "scans": "s141–s145 == Pag. 140–144 (Pag. == sken − 1, 25. potrditev; velja 61–146)",
+    "framework": "LETNICA 1910 SE PIŠE V VSAKEM VPISU — NI letne glave (nadaljevanje lekcije P138; P139-lead »rokopisna glava 1910« = ni potrebna)"
+  },
+  "lead": {
+    "claim": "P138-lead: »P139 — poročna 1910 (№1 na s141: Mathias JAKOBČIČ? × Marija JAKOBČIČ? — INTRA-PRIIMEK + mati PEZDIREC + mati ŽELJKO + dispenza 3. kolena ordinariat 13/1 1910 št. 159)«",
+    "correction": "19 vpisov (P138-lead je navajal le №1 — podcenjen kot običajno, 25. leto zaporedne podcenjenosti; P138-lead podatki №1 VSI POTRJENI: Mathias Jakobčič × Marija Jakobčič + mati Pezdirec + mati Željko + dispenza 3. kolena ordinariat 13/1 [št. 159 [~]])",
+    "boundary": "meja 1909/1910 na s141 (1909 №13 y280–420 + №14 y580–720; 1910 №1 y1100–1320 — P138-crop №1 y580–950 POPRAVLJEN na 1100–1320!); meja 1910/1911 na s146 = 1911 №1–7 (30.1.–19.6. 1911) → P140 LEAD"
+  },
+  "entries": [
+    {
+      "row": 1,
+      "date": "23. januar 1910 (nedelja)",
+      "scan": 141,
+      "page": 140,
+      "groom": {
+        "name": "Mathias Jakobčič",
+        "place": "GRIBLJE 13 (2. poročni dokaz h13 — 1885 Janez Jakobič Leinweber 25 [starža Mathias Jakobič × Maria née PEZDIREC — ISTA STARŠA KOT №1 ŽENIN!] = 25-LETNA KONTINUITETA!)",
+        "stand": "½ Hüller",
+        "age": 53,
+        "status": "ledig"
+      },
+      "bride": {
+        "name": "Marija Jakobčič",
+        "place": "GRIBLJE 6 (4. poročni dokaz h6 — 1903 Georg Jakobčič 24 + 1907 Kovač ×2; krsti 1904/05 Jurij Jakobič × Katarina Jakobič + botra ŽELJKO ×2!)",
+        "stand": "¼ Hüblerstochter",
+        "age": 32,
+        "status": "ledig"
+      },
+      "groomParents": {
+        "father": "Mathias Jakobčič, ½ Hübler (h13 — isti par kot 1885 starša Janeza Jakobiča!)",
+        "mother": "Maria geb. Pezdirec"
+      },
+      "brideParents": {
+        "father": "Mathias Jakobčič, ¼ Hübler (h6 — DRUGI Mathias Jakobčič!)",
+        "mother": "Anna geb. Željko"
+      },
+      "witnesses": [
+        "Mathias Pezdirec (nevestini stric? — mati geb. Pezdirec)",
+        "Joseph Željko, ¼ Hübler (nevestin stric? — mati geb. Željko — STRICEVSKI DVOJČEK matere!)"
+      ],
+      "witnessStatus": "Pezdirec + Željko ¼ Hübler",
+      "urkunden": "ženitovanska zglašnica občine Griblje od 22. januarja 1910 št. 1 + DISPENSA od krvnega sorodstva v 3. kolenu enake stranske vrste — ord. škofija Ljubljana 13. 1. 1910 št. 159 [~ — štiri branjа 159/359/138/239; zaporednost z №7-št. 158 isto-dnevnih ordinariatskih številk govori za 159]",
+      "priest": "Jos. Rauy",
+      "anomalies": [
+        "★★★ INTRA-GRIBLJE INTRA-PRIIMEK POROKA h13 × h6 — obe družini JAKOBČIČ!",
+        "★★★ STARŠA-OČETE ISTA IMENA: Mathias Jakobčič ½ × Mathias Jakobčič ¼ — DVA RAZLIČNA Mathiasa Jakobčiča [~ VERIF ali sorodnika?]",
+        "★★ DISPENSA 3. KOLENA (sorodstvo po krvi — bratranci?) + priči = strica OBEH mater (Pezdirec + Željko)",
+        "★ ženin 53 + nevesta 32 = poroka v zrelih letih (nenavadno za prve poroke)"
+      ]
+    },
+    {
+      "row": 2,
+      "date": "24. januar 1910 (ponedeljek)",
+      "scan": 142,
+      "page": 141,
+      "groom": {
+        "name": "Franz Graf [~ 9× zoom POTRJEN G-r-a-f; 2 nizke ločljivosti branjí »Gneuf« NAPAČNA]",
+        "place": "GRADAC 44",
+        "stand": "Knecht [~ — ali ¼-status? vrstično branje »1/4«]",
+        "age": 22,
+        "status": "ledig"
+      },
+      "bride": {
+        "name": "Aloisia Kovačič",
+        "place": "GRADAC 55",
+        "stand": "[?]",
+        "age": 28,
+        "status": "[?]"
+      },
+      "groomParents": {
+        "father": "Franz Graf, Besitzer (SIN OČETA ISTEGA IMENA — Graf ml. + Graf st.!)",
+        "mother": "Helena geb. [Radan? ~]"
+      },
+      "brideParents": {
+        "father": "Mathias Mihelič, ¼ Hübler",
+        "mother": "Maria geb. Pakar"
+      },
+      "witnesses": [
+        "Nicolaus Gregorič",
+        "Joseph Želenič [~] ½ Hübler"
+      ],
+      "witnessStatus": "Gregorič + Želenič ½ Hübler",
+      "urkunden": "krstni in vaški list ženina od župnega urada ŠKOFLE PRI BREŽICAH na Štajerskem od 26. dec. 1909 št. 264 in 268 + prošnja za popust ženitnine [~]",
+      "priest": "Jos. Rauy",
+      "anomalies": [
+        "★ NOVA OBLAST: Škofle pri Brežicah (Štajerska!) — dve listini št. 264+268 (ženin iz Štajerske)",
+        "★ №16 = ISTI HIŠI Gradac 44 × 55 v istem letu (Graf × Mihelič drugič — bratje/sestre para? [~])"
+      ]
+    },
+    {
+      "row": 3,
+      "date": "24. januar 1910 (ponedeljek)",
+      "scan": 142,
+      "page": 141,
+      "groom": {
+        "name": "Joseph Dragoš",
+        "place": "KRASINEC 6",
+        "stand": "Perkušec [~ — NOV POKLIC: perkar! zoom »Perkušice« ~]",
+        "age": 26,
+        "status": "ledig"
+      },
+      "bride": {
+        "name": "Catharina Žaborič [~]",
+        "place": "[Krasinec? ~ — branje okrnjeno]",
+        "stand": "[?]",
+        "age": 21,
+        "status": "ledig [~]"
+      },
+      "groomParents": {
+        "father": "Joseph Dragoš, ½ Hübler (DRAGOŠ-družina: 10. leto v liniji 1886–1902+!)",
+        "mother": "Dorothea geb. Brodarič"
+      },
+      "brideParents": {
+        "father": "Mathias Žaboric, ½ Hübler",
+        "mother": "Barbara geb. Straus (STRAUS-mreža — №14 nevesta Straus!)"
+      },
+      "witnesses": [
+        "Mathias Uleh [~ — ULEH korpus priimek]"
+      ],
+      "witnessStatus": "Uleh ¼ Hübler [~]",
+      "urkunden": "ženitovanska zglašnica občine [Gorde? ~ — branje »Gode. mejod«] 23. 1. 1910 št. 2 + proglas prebran + ustno dovoljenje za nevesto od obeh staršev v Metliki 4. 1. 1910",
+      "priest": "Jos. Rauy",
+      "anomalies": [
+        "★ DVOJNA POROKA DRAGOŠ: №3 ženin + №4 nevesta = SOROJENCA (ista starša Joseph Dragoš × Dorothea Brodarič!), oba poročena ISTI DAN 24. 1.!",
+        "★ NOV POKLIC: Perkušec (perkar) — 1. pojav v korpusu"
+      ]
+    },
+    {
+      "row": 4,
+      "date": "24. januar 1910 (ponedeljek)",
+      "scan": 142,
+      "page": 141,
+      "groom": {
+        "name": "Georg Martin [~ — oče Johann MAURIN! ženinov priimek ≠ očetov — nezakonski rojen ali posvojitev?]",
+        "place": "CERKVIŠČE 15",
+        "stand": "[?]",
+        "age": 28,
+        "status": "ledig"
+      },
+      "bride": {
+        "name": "Dorothea Dragoš",
+        "place": "CERKVIŠČE 4",
+        "stand": "½ Hüblerstochter",
+        "age": 18,
+        "status": "ledig"
+      },
+      "groomParents": {
+        "father": "Johann MAURIN, ¼ Hübler (6× zoom: M-a-u-r-i-n z zgornjo zanko u — NE Martin! MAURIN = №13 mati Catharina geb. Maurin — 2. pojav!)",
+        "mother": "Anna geb. Jurajevič [~ branjа Jurjevic/Jurajevič — korpus h42 mati Katarina Jurajevič!]"
+      },
+      "brideParents": {
+        "father": "Joseph Dragoš, ½ Hübler (ISTA STARŠA KOT №3 ženin — DVOJNA POROKA SOROJENCEV!)",
+        "mother": "Dorothea geb. Brodarič"
+      },
+      "witnesses": [
+        "Danijel [Maurin?] [~]",
+        "[Regina? Lebrina?] ¼ Hübler [~ VERIF]"
+      ],
+      "witnessStatus": "[~]",
+      "urkunden": "ženitovanska zglašnica občine Podzemelj od 23. januarja 1910 št. 3 [~ — eno branje št. 30] + oklicno ustno dovoljenje za ml. nevesto",
+      "priest": "Jos. Rauy",
+      "anomalies": [
+        "★★ DVOJNA POROKA SOROJENCEV DRAGOŠ isti dan (№3 + №4) — starša Joseph Dragoš × Dorothea Brodarič pri OBEH!",
+        "★★ ženin MARTIN z očetom MAURIN — priimka se ne ujemata (nezakonski rojen? [~ VERIF])",
+        "★ nevesta 18 let — ustno dovoljenje (mladoletna nevesta ob poroki!)",
+        "★ branjа starosti neveste 14 → 8× zoom POPRAVLJENO na 18 (1+8 zaprti zanki!)"
+      ]
+    },
+    {
+      "row": 5,
+      "date": "24. januar 1910 (ponedeljek)",
+      "scan": 142,
+      "page": 141,
+      "groom": {
+        "name": "Nikolaus Jakobčič",
+        "place": "CERKVIŠČE 16 (2. JAKOBČIČ-ženin dneva! №1 Griblje + №5 Cerkvišče)",
+        "stand": "¼ [Hübler]",
+        "age": 26,
+        "status": "ledig"
+      },
+      "bride": {
+        "name": "Maria Butala",
+        "place": "VRANOVIČI 3 (BUTALA ×3 v letu: №5 nevesta + №8 ženin + №10 ženin — vsi Vranoviči/Božičova vas!)",
+        "stand": "[?]",
+        "age": 21,
+        "status": "ledig [~]"
+      },
+      "groomParents": {
+        "father": "Peter Jakobčič, ¼ Hübler",
+        "mother": "Ana geb. Mihelič"
+      },
+      "brideParents": {
+        "father": "Anton Butala, ½ Hübler",
+        "mother": "Barbara geb. Kambič (KAMBIČ-mreža: №18 nevesta Kambič + №13 mati Kambič!)"
+      },
+      "witnesses": [
+        "Mathias Kambič (MATI-VEZA: nevestina mati geb. Kambič!)",
+        "Johanna [?] [~]"
+      ],
+      "witnessStatus": "Kambič + [~] Hübler",
+      "urkunden": "ženitovanska zglašnica občine Podzemelj od 22. januarja 1910 št. 1 [~ št.] + proglas [protokolarni na nevesto od okr. sodišča? ~]",
+      "priest": "Jos. Rauy",
+      "anomalies": [
+        "★ 3. Jakobčič-poroka leta (№1 INTRA + №5 + №17) — Jakobčič ×3 ženini!",
+        "★ priča Kambič = nevestina materina družina"
+      ]
+    },
+    {
+      "row": 6,
+      "date": "24. januar 1910 (ponedeljek)",
+      "scan": 142,
+      "page": 141,
+      "groom": {
+        "name": "Julius Žiličič [~ — ŽILIČ = korpus priimek h?]",
+        "place": "GRADAC 31",
+        "stand": "Kmet [~ — ali Bauer?]",
+        "age": 24,
+        "status": "ledig"
+      },
+      "bride": {
+        "name": "Maria Puček [~]",
+        "place": "GRADAC 25",
+        "stand": "[?]",
+        "age": 21,
+        "status": "ledig [~]"
+      },
+      "groomParents": {
+        "father": "Mathias Žiličič, ¼ Hübler",
+        "mother": "Frančiška geb. [Puček? Petrovič? ~ — priimek nevestine družine?]"
+      },
+      "brideParents": {
+        "father": "[oče?] [~ — branje okrnjeno]",
+        "mother": "Maria geb. Wagner"
+      },
+      "witnesses": [
+        "Jakob Španič [~ Šipanič?]",
+        "Joseph Marenfič [~ Marenčič?]"
+      ],
+      "witnessStatus": "[~]",
+      "urkunden": "ženitovanska zglašnica občine Gradac od 23. januarja 1910 št. 12 + proglas poročenih za moža in ženo od okrožnega sodišča v Metliki 8. januarja 1910",
+      "priest": "Jos. Rauy",
+      "anomalies": [
+        "★ 24. 1. ×5 = MASA-DAN (№2–№6 VSE na 24. januar!) — rekord linije za število porok na en dan"
+      ]
+    },
+    {
+      "row": 7,
+      "date": "31. januar 1910 (ponedeljek)",
+      "scan": 143,
+      "page": 142,
+      "groom": {
+        "name": "Mathias Filak",
+        "place": "ZEMELJ 20 (FILAK-veja: 1898-v20 ženin h46 Griblje — 12-letna kontinuiteta!)",
+        "stand": "½ Hüblersohn",
+        "age": 24,
+        "status": "ledig"
+      },
+      "bride": {
+        "name": "Anna Jaklič [~]",
+        "place": "ZEMELJ 25",
+        "stand": "½ Hüblerstochter",
+        "age": 21,
+        "status": "ledig"
+      },
+      "groomParents": {
+        "father": "Johann Filak, ½ Hübler [~ branjа Žilak — FILAK po sinovem priimku]",
+        "mother": "Anna geb. Jurisevič [~ branjа Zurojevič/Vrbovšek]"
+      },
+      "brideParents": {
+        "father": "Nicolaus Jaklič, ½ Hübler [~ branjа Pavlič — JAKLIČ po hčerinem priimku]",
+        "mother": "Anna geb. Zugelj [~ branjа Bugel/Jugel — ZUGELJ korpus]"
+      },
+      "witnesses": [
+        "Johann [Zugelj? ~]",
+        "Mathias [Düc? Oves? ~ VERIF]"
+      ],
+      "witnessStatus": "[~] ½ Hübler",
+      "urkunden": "ženitovanska zglašnica občine Podzemelj od 24. januarja 1910 št. 4 + ★★ DISPENSA od krvnega sorodstva 4. kolena dotikajočega se 3. kolena [pravne/stranske ~ vrste] — ord. škofija Ljubljana 13. 1. 1910 št. 158 [~ eno invertno branje 758] + proglas [za nevesto od podpisanih mladičev?] 8. 1. 1910",
+      "priest": "Jos. Rauy",
+      "anomalies": [
+        "★★★ DVE DISPENZE ISTI DAN (№1 št. 159 + №7 št. 158 — ordinariat Ljubljana 13. 1. 1910 — ZAPOREDNI ŠTEVILKI!) + №14 spregled 24. 5. = TRI sorodstvene zapreke v letu",
+        "★★ dispenza 4. kolena dotikajočega se 3. kolena — ena najglobljih v liniji (P138 №11 3. koleno enake stranske vrste)",
+        "★ JAKLIČ × JAKLJEVIČ × JAKLIČEVIČ — trije zapisi istega priimka v letu (№7 nevesta + №12 nevesta + №17 nevesta — [~ ali različni priimki?])"
+      ]
+    },
+    {
+      "row": 8,
+      "date": "31. januar 1910 (ponedeljek)",
+      "scan": 143,
+      "page": 142,
+      "groom": {
+        "name": "Joseph Butala",
+        "place": "BOŽIČOVA VAS 5 [~ branje »Božičevh 5 (Podzemelj)«]",
+        "stand": "½ [Hübler]",
+        "age": 23,
+        "status": "ledig"
+      },
+      "bride": {
+        "name": "Anna Pezdirec",
+        "place": "PODZEMELJ 3 (PEZDIREC-mreža: №1 mati + №8 nevesta + №11 nevesta — velika družina)",
+        "stand": "½ Hüblerstochter",
+        "age": 18,
+        "status": "ledig"
+      },
+      "groomParents": {
+        "father": "Joseph Butala, ½ Hübler",
+        "mother": "Maria geb. Hagar"
+      },
+      "brideParents": {
+        "father": "Georg Pezdirec, ½ Hübler",
+        "mother": "Margareth geb. PEZDIREC (INTRA-PEZDIREC starša — sorodstvo znotraj priimka!)"
+      },
+      "witnesses": [
+        "Nicolaus Milek (MILEK-korpus h30!)",
+        "Mathias Štrucelj? [~ — ŠTRUCELJ korpus h5!]"
+      ],
+      "witnessStatus": "Milek + Štrucelj [~]",
+      "urkunden": "ženitovanska zglašnica občine Črnomelj od 14. januarja 1910 št. 12 + vaški in oklični list župnega urada Črnomelj 30. januarja št. 20 + proglas sodišča Črnomelj 12. januarja + očetovsko dovoljenje [~]",
+      "priest": "Jos. Rauy",
+      "anomalies": [
+        "★ starša Georg Pezdirec × Margareth geb. Pezdirec — INTRA-PRIIMEK starša (sorodstvo v rodu Pezdirec!)",
+        "★ nevesta 18 let iz Podzemelj 3 — zglašnica iz ČRNOMLJA (ne Podzemelj!) — druga občina"
+      ]
+    },
+    {
+      "row": 9,
+      "date": "31. januar 1910 (ponedeljek)",
+      "scan": 143,
+      "page": 142,
+      "groom": {
+        "name": "Dominicus Schmidt",
+        "place": "VRHOVSKA VAS 24 [~ grid-branjа: Vrhovska vas — 1. pojav vasi; nizko-loč. branjá »Schwaiger«/»Vr[?]evsko« NAPAČNA]",
+        "stand": "Besitzersohn und SCHUSTER (šoštar — 2. poklic v zapisu!)",
+        "age": 26,
+        "status": "ledig"
+      },
+      "bride": {
+        "name": "Maria Rauch",
+        "place": "GRADAC 58",
+        "stand": "¼ Hüllerstochter",
+        "age": 24,
+        "status": "ledig"
+      },
+      "groomParents": {
+        "father": "Anton Schmidt, Besitzer",
+        "mother": "Agnes geb. Likosek"
+      },
+      "brideParents": {
+        "father": "Mathias Rauch, ¼ [Hübler]",
+        "mother": "Anna geb. Debeljak"
+      },
+      "witnesses": [
+        "Anton Jakovčič? [~]",
+        "[?] [~]"
+      ],
+      "witnessStatus": "[~]",
+      "urkunden": "krstni in vaški list ženina od župnega urada [Podpeč? na Štajerskem ~] 13. januarja št. 9 [~]",
+      "priest": "★ DANIJEL (2. pojav po 1909 №9! — NE Rauy)",
+      "anomalies": [
+        "★ duhovnik DANIJEL — 2. zabeleženi podpis (1909 №9 + 1910 №9 — obe št. 9!)",
+        "★ NOVA VAS: Vrhovska vas 24 (1. pojav v korpusu)",
+        "★ SCHMIDT Besitzersohn + Schuster — dvojna statuska oznaka"
+      ]
+    },
+    {
+      "row": 10,
+      "date": "1. maj 1910 (nedelja)",
+      "scan": 143,
+      "page": 142,
+      "groom": {
+        "name": "ALFONS Butala (8× zoom A-l-f-o-n-s POTRJENO — NE Andreas/Christof!)",
+        "place": "VRANOVIČI 3 (ISTA HIŠA KOT №5 nevesta Maria Butala — oče→hči? [~ VERIF])",
+        "stand": "½ Hübler",
+        "age": 46,
+        "status": "ledig"
+      },
+      "bride": {
+        "name": "Jeremija Kralj",
+        "place": "VRANOVIČI 4 (sosednja hiša!)",
+        "stand": "per Gorič Hauslerin (VDOWA — vdova po Gorič!)",
+        "age": 38,
+        "status": "witwe"
+      },
+      "groomParents": {
+        "father": "Josef Butala, ½ Hübler",
+        "mother": "Maria geb. Jonec"
+      },
+      "brideParents": {
+        "father": "Andreas Gorsič, Taglöhner (GORSIČ = oče po prvi poroki neveste)",
+        "mother": "Teresia geb. Anžlovar"
+      },
+      "witnesses": [
+        "Mathias Krami(c)ž? [~]",
+        "Nikolaus Jakšič? [~]"
+      ],
+      "witnessStatus": "[~]",
+      "urkunden": "ženitovanska zglašnica občine Gradac od 29. aprila 1910 št. 16",
+      "priest": "Jos. Rauy",
+      "anomalies": [
+        "★ 46-letni ALFONS ledig × 38-letna vdova — Vranoviči 3 × 4 (sosednji hiši!)",
+        "★ BUTALA Vranoviči 3 ×2 v letu (№5 nevesta 21 + №10 ženin 46 — oče in hči? [~])",
+        "★ KRALJ-VDOWA per Gorič — 1. vdova nevesta leta"
+      ]
+    },
+    {
+      "row": 11,
+      "date": "9. maj 1910 (ponedeljek)",
+      "scan": 144,
+      "page": 143,
+      "groom": {
+        "name": "Johann Bajuk",
+        "place": "PRIMOSTEK 2",
+        "stand": "½ [Hübler]",
+        "age": 35,
+        "status": "[ledig ~]"
+      },
+      "bride": {
+        "name": "Theresia Pezdirec",
+        "place": "KRASINEC 3 (PEZDIREC ×3 v letu: №1 mati + №8 nevesta + №11 nevesta)",
+        "stand": "½ [Hüblerstochter]",
+        "age": 18,
+        "status": "ledig"
+      },
+      "groomParents": {
+        "father": "Nikolaus Bajuk, ½ Hübler",
+        "mother": "Agnes geb. Kostelec (KOSTELEC korpus)"
+      },
+      "brideParents": {
+        "father": "Mihael [~ Micheil] Pezdirec, [½] Hübler",
+        "mother": "Ana geb. Jakobčič (JAKOBČIČ-mreža tudi pri Pezdirecovih!)"
+      },
+      "witnesses": [
+        "Johann Pečarič? [~]",
+        "Nikolaus [?] ½ Hübla"
+      ],
+      "witnessStatus": "Pečarič? + Nikolaus [~]",
+      "urkunden": "ženitovanska zglašnica občine Podzemelj od 8. maja 1910 št. 5 + osebno ustno dovoljenje očeta za mlado nevesto",
+      "priest": "Jos. Rauy",
+      "anomalies": [
+        "★ BAJUK ×2 v letu (№11 + №12 — bratja? [~ VERIF])"
+      ]
+    },
+    {
+      "row": 12,
+      "date": "30. maj 1910 (ponedeljek)",
+      "scan": 144,
+      "page": 143,
+      "groom": {
+        "name": "Mathias Bajuk",
+        "place": "BOŽJAKOVO 26 [~ Metlika?]",
+        "stand": "½ [~]",
+        "age": 30,
+        "status": "[ledig ~]"
+      },
+      "bride": {
+        "name": "Barbara Jakličevič? [~ — branjа Jakličevič/Fakhlevič/Jakljevič — VERIF]",
+        "place": "KRASINEC 13",
+        "stand": "¼ [Hüblerstochter ~]",
+        "age": 21,
+        "status": "ledig [~]"
+      },
+      "groomParents": {
+        "father": "Anton Bajuk, ½ Hübler (BAJUK 2. par v letu — druga družina kot №11 Nikolaus!)",
+        "mother": "Barbara geb. Nemanic (NEMANIČ-mreža: №18 ženin Nemanic!)"
+      },
+      "brideParents": {
+        "father": "[oče Jakobčič? Jakličevič? ~]",
+        "mother": "Ana geb. Križan (KRIŽAN-mreža: №14 ženin + №12 mati!)"
+      },
+      "witnesses": [
+        "Nikolaus KRIZAN (KRIŽAN priča = mati-nevestina veza!)",
+        "Anton [Bajuk?]"
+      ],
+      "witnessStatus": "Krizan + Bajuk?",
+      "urkunden": "ženitovanska zglašnica občine Podzemelj od 24. maja 1910 št. 4 + javni oklični list [~]",
+      "priest": "Jos. Rauy",
+      "anomalies": [
+        "★ BAJUK ×2 (№11 Primostek + №12 Božjakovo — dve družini Bajuk v 3 tednih!)",
+        "★ mati geb. Križan + priča Krizan — KRIŽAN-križ med družinami"
+      ]
+    },
+    {
+      "row": 13,
+      "date": "3. julij 1910 (nedelja)",
+      "scan": 144,
+      "page": 143,
+      "groom": {
+        "name": "Johann Zupanič",
+        "place": "PRIMOSTEK 18 (ZUPANIČ korpus: 1895 mati Marija Županič h57!)",
+        "stand": "½ [Hübler]",
+        "age": 30,
+        "status": "[ledig ~]"
+      },
+      "bride": {
+        "name": "Margaretha Tome",
+        "place": "PRIMOSTEK 18 (ISTA HIŠA KOT ŽENIN — poroka iz hiše 18!) — TOME ×2 v letu (№13 + №19)",
+        "stand": "½ [Hüblerstochter]",
+        "age": 30,
+        "status": "[ledig ~]"
+      },
+      "groomParents": {
+        "father": "Nikolaus Zupanič, HUFSCHMIED (kovač konj — poklic!)",
+        "mother": "Catharina geb. MAURIN (MAURIN 2. pojav — №4 oče Johann Maurin!)"
+      },
+      "brideParents": {
+        "father": "Nikolaus Tome",
+        "mother": "Margaretha geb. Kambič (KAMBIČ-mreža ×3: №5 mati + №13 mati + №18 nevesta)"
+      },
+      "witnesses": [
+        "Franz Štefanič, ½ [Spiller? ~ — poklic]",
+        "Jakob Zugelj (ZUGELJ korpus)"
+      ],
+      "witnessStatus": "Štefanič ½ + Zugelj",
+      "urkunden": "izpravna zglašnica občine PODPEČ od 29. junija 1910 št. 7 + quid pro aetate [~ — dokazilo starosti]",
+      "priest": "Jos. [Rauy ~ — podpis J...]",
+      "anomalies": [
+        "★ ženin + nevesta IZ ISTE HIŠE Primostek 18 (delivci? sorodnika? — niso sorodni po priimku)",
+        "★ MATI geb. MAURIN — povezava z №4 očetom Johannom Maurinom (družina Maurin v 2 vpisih)"
+      ]
+    },
+    {
+      "row": 14,
+      "date": "4. julij 1910 (ponedeljek)",
+      "scan": 144,
+      "page": 143,
+      "groom": {
+        "name": "Marcus Križan [~ branjа Kipžan/Kiprian/Kripian — KRIŽAN po črko-za-črko zoomu + korpus]",
+        "place": "GRIBLJE 86 (★★ h86 = NOVA POROČNA HIŠA korpusa 67 → 68! Grid-definitivno: 8 = dve zaprti zanki + 6 = ascender+zanka; prejšnja branjа 36/85/17 NAPAČNA — 85 = 1/4-ulomek, 36 = korpus-prior!; h86 prvi korpusni dokaz PREDAJ 1912-krstom Brinec!) — sin Marka Križana × Marije Strauš (h85 1888!) [~]",
+        "stand": "¼ Hübler",
+        "age": 24,
+        "status": "ledig"
+      },
+      "bride": {
+        "name": "Catharina Straus",
+        "place": "GRIBLJE 31 (4. poročni dokaz h31 — 1886 Martin Papič × Margareth Straus + 1902 + 1906; krst 1897 Janez Straus × Barbara Jakobič = №14 STARŠA!)",
+        "stand": "¼ Hüblerstochter",
+        "age": 18,
+        "status": "ledig"
+      },
+      "groomParents": {
+        "father": "Marcus [Marko] Križan [~ branje »Mareus«] — h85 1888 krst Janeza (Marko Križan ½ zemlj. × Marija Strauš)! sin ~1886 = №14 ženin! [~ VERIF]",
+        "mother": "Maria geb. [Strauš? ~] — h85 žena"
+      },
+      "brideParents": {
+        "father": "[Johann/Janez? Georg? ~] Straus — h31 1897 krst Janeza (Janez Straus ½ × Barbara Jakobič) [~ VERIF ime]",
+        "mother": "Barbara geb. [Jakobič? ~] — h31 1897"
+      },
+      "witnesses": [
+        "Mihelič, [mesnar?/mesar? ~ Mesner?]"
+      ],
+      "witnessStatus": "Mihelič [~]",
+      "urkunden": "[dispenza/spregled ~] od [šk. ordinarijata Ljubljana?] 24. maja 1910 št. 2058 + spregled [od deželnega sodišča?] 25. junija 1910 št. 12448 + ženitovanska zglašnica občine Griblje od 3. julija 1910 št. 2 [vse ~ VERIF tip listin]",
+      "priest": "Jos. [Rauy? ~]",
+      "anomalies": [
+        "★★★ GRIBLJE × GRIBLJE POROKA h86 × h31 (2. intra-vasična leta po №1!) + DVOJNA sorodstvena zapreka: ordinariat št. 2058 + sodišče št. 12448 (spregled!)",
+        "★★★ h86 = NOVA POROČNA HIŠA (67 → 68) — in PRVI korpusni dokaz h86 SPREDAJ 1912 Brinec-krstom (nov dom Križan-Strauš iz h85?)",
+        "★★ KRIŽAN × STRAUS DRUŽINSKI DVOJČEK: ženinov oče Marko Križan × mati Marija Strauš (h85) + nevesta Straus — ženin se poroči z MOSKO priimkovno-dvojnico svoje matere!",
+        "★ nevesta 18 let iz h31 — 2. poroka mladoletne neveste leta (№4 18 + №11 18 + №17 16!)"
+      ]
+    },
+    {
+      "row": 15,
+      "date": "24. julij 1910 (nedelja)",
+      "scan": 145,
+      "page": 144,
+      "groom": {
+        "name": "Franz Štrugar",
+        "place": "KLOSTER 37 (izvor: LOKA 45 [~ — zglašnica Loka])",
+        "stand": "SCHMIEDMEISTER (kovaški mojster!)",
+        "age": 24,
+        "status": "ledig"
+      },
+      "bride": {
+        "name": "Anna Kosevar",
+        "place": "KLOSTER 34 (5× zoom: Kloster + 3-zanke + 4-prečka)",
+        "stand": "½ Hüblerstochter",
+        "age": 25,
+        "status": "ledig"
+      },
+      "groomParents": {
+        "father": "Jakob Štrugar, WAGENMEISTER (voznik/vagner — oče sin poklic kovač!) — ŠTRUGAR KOVAŠKA DINASTIJA",
+        "mother": "Maria geb. Honič"
+      },
+      "brideParents": {
+        "father": "Josef Kosevar, zu Hübler",
+        "mother": "Agnes geb. Plut (PLUT korpus ×2: №15 mati + №18 mati)"
+      },
+      "witnesses": [
+        "Anton Ivek? [~]",
+        "Anton Štengar? [~] (Schmiedmeister — kolega kovač!)"
+      ],
+      "witnessStatus": "Ivek? + Štengar? [~]",
+      "urkunden": "ženitovanska zglašnica občine LOKA od 30. junija 1910 št. 253 (★★ NOVA OBLAST: Loka št. 253!) + oklični list ženinov od župnega sodca [v Loka? ~]",
+      "priest": "Jos. Rauy",
+      "anomalies": [
+        "★ ŠTRUGAR kovaška dinastija (oče Wagenmeister + sin Schmiedmeister + priča Štengar Schmied!)",
+        "★ NOVA OBLAST: Loka (zglašnica št. 253 — velika številka!) — 24. 7. ×2 ISTI DAN (№15 + №16)"
+      ]
+    },
+    {
+      "row": 16,
+      "date": "24. julij 1910 (nedelja)",
+      "scan": 145,
+      "page": 144,
+      "groom": {
+        "name": "Franz Pavlenič",
+        "place": "GRADAC 44 (ISTA HIŠA KOT №2 ženin Franz Graf!) — PAVLENIČ NOV PRIIMEK",
+        "stand": "Söllnergeselle? [~ — najemniški hlapec?]",
+        "age": 26,
+        "status": "ledig"
+      },
+      "bride": {
+        "name": "Franciska Mihelič",
+        "place": "GRADAC 55 (ISTA HIŠA KOT №2 nevesta Aloisia Kovačič [Miheličeva hči!] — MIHELIČ ×3 v letu: №2 mati + №5 mati + №16 nevesta!)",
+        "stand": "¼ [Hüblerstochter]",
+        "age": 24,
+        "status": "ledig"
+      },
+      "groomParents": {
+        "father": "Josef Pavlenič, ½ Hübler",
+        "mother": "Agnes geb. Mathies"
+      },
+      "brideParents": {
+        "father": "Mihov Mihelič, ¼ Hübler",
+        "mother": "Marija geb. [Johann?] Pakar (PAKAR ×2: №2 mati + №16 mati — ISTA PRIIMKA!)"
+      },
+      "witnesses": [
+        "Johann Lopatič (LOPATIČ korpus)",
+        "Franz GRAF (priča = №2 ŽENIN iz ISTE hiše Gradac 44? — [~ VERIF] )"
+      ],
+      "witnessStatus": "Lopatič + Graf",
+      "urkunden": "ženitovanska zglašnica občine SV. JERNEJ od 20. junija 1910 št. 15 (★ NOVA OBLAST: sv. Jernej!) + [rojenstveni? in potni? ~] list ženinov od [duhovnega župada ~] v sv. Jerneju",
+      "priest": "Jos. Rauy",
+      "anomalies": [
+        "★★ №16 = ISTI HIŠI KOT №2 (Gradac 44 × 55 — DRUGI par iz istih hiš v istem letu! Graf 22×Kovačič januar → Pavlenič 26×Mihelič julij)",
+        "★ priča Franz Graf = ženin №2 [~] — sosed kot priča 6 mesecev kasneje"
+      ]
+    },
+    {
+      "row": 17,
+      "date": "8. avgust 1910 (ponedeljek)",
+      "scan": 145,
+      "page": 144,
+      "groom": {
+        "name": "Johann Jakobčič",
+        "place": "GRIBLJE 8 (3. poročni dokaz h8 — 1897 Maria Jakobčič + 1900 Catharina Jakobčič; 1912 krst Janez Jakofčič × Neza JAKLJEVIČ = nevestin priimek!) — grid-definitivno: 8 = dve zaprti zanki (NE 7!)",
+        "stand": "¼ Hübler",
+        "age": 20,
+        "status": "ledig"
+      },
+      "bride": {
+        "name": "Agnes Jakljevič",
+        "place": "PRILOZJE 30",
+        "stand": "¼ Hüblerstochter",
+        "age": 16,
+        "status": "ledig"
+      },
+      "groomParents": {
+        "father": "Johann Jakobčič, ¼ Hübler",
+        "mother": "Maria geb. [Luh? Lut? ~ VERIF — branja Luh/Lut]"
+      },
+      "brideParents": {
+        "father": "Peter Jakljevič, ¼ Hübler",
+        "mother": "Maria geb. [Kralj? Kalj? ~ — KRALJ korpus h17!]"
+      },
+      "witnesses": [
+        "Johann [Dragoš? ~]",
+        "Nicolaus [Jaklič? ~]"
+      ],
+      "witnessStatus": "[~]",
+      "urkunden": "ženitovanska zglašnica občine [Griblje? ~ — branje »Gorenje«??] od 7. avgusta 1910 št. 3 + ★★ DOVOLJENJE CESARSKE KRALJEVSKE DEŽELNE VLADE V LJUBLJANI od 1. avgusta 1910 št. 18796 (★ MLADOLETNOST NEVESTE 16 LET!) + proglas [sodišče Črnomelj 22/2? ~ — datum VERIF] + lastno ustno dovoljenje",
+      "priest": "Jos. Rauy",
+      "anomalies": [
+        "★★★ NEVESTA 16 LET (!!) — 2. najmlajša nevesta linije (P135 15-letna?) + deželna vlada dovoljenje št. 18796",
+        "★★ 3. GRIBLJE poroka leta (№1 INTRA h13×h6 + №14 h86×h31 + №17 h8) = 3. največ v letu (1908: 2)",
+        "★ ženin 20 let — mlad par (20 + 16 = 36 skupaj!)"
+      ]
+    },
+    {
+      "row": 18,
+      "date": "30. oktober 1910 (nedelja)",
+      "scan": 145,
+      "page": 144,
+      "groom": {
+        "name": "Johann Nemanic [~ Nemanič]",
+        "place": "KRASINEC 30 (grid: Krasinec + 30 — prejšnja branjа »Giložje 29«=NEVESTA!) — NEMANIČ-mreža (№12 mati Barbara geb. Nemanic!)",
+        "stand": "EINWOHNER (prebivalec — status brez zemlje!)",
+        "age": 69,
+        "status": "ledig"
+      },
+      "bride": {
+        "name": "Anna Kambič",
+        "place": "FILOVJE 29 (KAMBIČ ×3 v letu: №5 mati + №13 mati + №18 nevesta)",
+        "stand": "[?]",
+        "age": 34,
+        "status": "ledig [~]"
+      },
+      "groomParents": {
+        "father": "Martin Nemanic, ¼ Hübler",
+        "mother": "Catharina geb. Plut (PLUT ×2: №15 + №18 mati!)"
+      },
+      "brideParents": {
+        "father": "Jacob Kambic, ¼ Hübler",
+        "mother": "Anna geb. Harasinić? [~]"
+      },
+      "witnesses": [
+        "Georg Harasinić [~]",
+        "Nicolaus Harasinić [~] (DRUŽINSKI DVOJČEK prič — MATINA DRUŽINA Harasinić!)"
+      ],
+      "witnessStatus": "Harasinić + Harasinić [~]",
+      "urkunden": "ženitovanska zglašnica občine Podzemelj št. 9 od 29. oktobra 1910",
+      "priest": "Jos. R[auy ~]",
+      "anomalies": [
+        "★★ 69-LETNI ŽENIN LEDIG — 2. najstarejši ženin linije (po 1908-v16 73-letnem!) + 35-letna razlika z nevesto",
+        "★ priči Harasinić ×2 = nevestina materina družina (geb. Harasinić)"
+      ]
+    },
+    {
+      "row": 19,
+      "date": "21. november 1910 (ponedeljek)",
+      "scan": 145,
+      "page": 144,
+      "groom": {
+        "name": "Nikola Žephar [~ — branjа Žephar/Zepohar/Hefsthar — 19-Rp2 zoom: Ž-e-p-h-a-r čisto]",
+        "place": "DRAGOŠI 34 (DRAGOŠI-vas = priimek Dragoš! №3+№4 Dragoš istega dne januarja)",
+        "stand": "½ Hüller",
+        "age": 41,
+        "status": "ledig"
+      },
+      "bride": {
+        "name": "Marija Tome",
+        "place": "PRIMOSTEK 14 (TOME ×2 v letu: №13 nevesta Primostek 18 + №19 Primostek 14 — TOME-vas!) — ½ [Hüblerstochter]",
+        "stand": "½ [Hüblerstochter]",
+        "age": 24,
+        "status": "ledig"
+      },
+      "groomParents": {
+        "father": "Mathias Žephar, ½ Hüller (ŽEPHAR NOV PRIIMEK korpusa)",
+        "mother": "Anna geb. Petrašič"
+      },
+      "brideParents": {
+        "father": "Mathias Tome, ½ Hübler",
+        "mother": "geb. [Simonič? ~ VERIF]"
+      },
+      "witnesses": [
+        "Marcus Rubman? [~] ¼ [Hbl]",
+        "Martin Štefanič ½ Hübl (ŠTEFANIČ ×2: №13 priča + №19 priča)"
+      ],
+      "witnessStatus": "Rubman? ¼ + Štefanič ½",
+      "urkunden": "ženitovanska zglašnica občine [Dragoši? ~] od 20. novembra 1910 št. 2 + vojaški list ženinov od dušnega pastirstva v Metliki 20. novembra 1910 [~]",
+      "priest": "Jos. Rauy",
+      "anomalies": [
+        "★ ZADNJI VPIS LETA 21. 11. — ADVENTNI VZOREC (1909: zadnji 22. 11. ×2; advent = poroke mirujejo)",
+        "★ TOME ×2 v letu — obe Primostek (№13 18 + №19 14)",
+        "★ VOJAŠKI LIST ženina — 41-letni mož pred vojaško obveznostjo? [~]"
+      ]
+    }
+  ],
+  "excluded": [],
+  "stats": {
+    "entries": 19,
+    "gribljeMarriages": 3,
+    "gribljeRows": [1, 14, 17],
+    "gribljeHouses": ["13", "6", "86", "31", "8"],
+    "gribljeBlocks": 5,
+    "mondays": 13,
+    "sundays": 6,
+    "newHouses": ["86"],
+    "dispensas": 3,
+    "unnumbered": 0,
+    "priests": "Jos. Rauy dominant (17–18/19) + Jos. Danijel (№9)",
+    "vitalsTotal": 664,
+    "blocks04455": 147,
+    "sidraTotal": 140,
+    "p80Houses": 68
+  },
+  "crossChecks": [
+    {
+      "claim": "№1 ženin Mathias Jakobčič h13 (53) = DRUGI sin Mathiasa Jakobčiča × Marije Pezdirec (h13) — brat Janeza Jakobiča (1885 ženin h13, 25)",
+      "via": "parish.ts 04455/1885 h13 (Janez Jakobič Leinweber 25, starža Mathias Jakobič + Maria née Pezdirec — ISTA STARŠA!) + №1 1910 starost 53 (rojen ~1857, brat ~2 leti mlajši od Janeza?) — 25-LETNA KONTINUITETA h13"
+    },
+    {
+      "claim": "№1 nevesta Marija Jakobčič h6 (32) = hčerka/starsivo družine Georg/Jurij Jakobčič (h6: 1903 ženin Georg 24 + krsti 1904/05)",
+      "via": "parish.ts h6 1903 (Georg Jakobčič ¼ gübler 24 GRIBLJE 6) + h6 krsti 1904/05 (oče Jurij Jakobič ½ × mati Katarina Jakobič) + botra Nikol Željko + Marija Željko (№1 nevestina MATI = Anna geb. ŽELJKO — Željko-veja na h6!)"
+    },
+    {
+      "claim": "№14 ženin Marcus Križan h86 = sin Marka Križana × Marije Strauš (h85, krst Janeza 1888)",
+      "via": "parish.ts 04105/1888 h85 (Marko Križan ½ zemljišt × Marija Strauš, krščen Janez) + №14 ženin 24 (rojen ~1886 — PRED Janezom 1888!) + №14 starša-branje »Mareus, Maria« = Marko × Marija — SIN NA NOVI HIŠI h86!"
+    },
+    {
+      "claim": "№14 nevesta Catharina Straus h31 (18) = hčerka Janeza Strausa × Barbare Jakobič (h31, krst Ane 1897)",
+      "via": "parish.ts 04105/1897 h31 (Janez Straus ½ × Barbara Jakobič, krščena Ana) + №14 nevesta rojena ~1892 (med njunimi hčermi) + №14 starša-branje »[Johann/Georg] Straus × Barbara« — DRUGA STRAUS-DRUŽINA NA h31 (ob Papič × Straus 1886-1900!)"
+    },
+    {
+      "claim": "№17 ženin Johann Jakobčič h8 = družina h8 Jakobčič (1886 Janez Jakofčič × Marija Meh; 1897/1900 nevesti Jakobčič)",
+      "via": "parish.ts h8 04455 1897 (Maria Jakobčič 23 GRIBLJE 8) + 1900 (Catharina Jakobčič 21 GRIBLJE 8) + 04105/1912 h8 (Janez Jakofčič ¾ × Neza JAKLJEVIČ — nevestin priimek ŽE v h8-družini 1912!)"
+    },
+    {
+      "claim": "№10 ženin Alfons Butala Vranoviči 3 (46) in №5 nevesta Maria Butala Vranoviči 3 (21) — ISTA HIŠA istega leta",
+      "via": "№5 24.1. (Maria 21, oče Anton Butala ½) + №10 1.5. (Alfons 46, oče Josef Butala ½) — oče Anton vs. Josef = DVE RAZLIČNI družini Butala na Vranovičih 3 [~ ali bratje?]"
+    },
+    {
+      "claim": "№16 nevesta Franciska Mihelič Gradac 55 = hči Mihova Miheliča × Marije geb. Pakar — ISTA STARŠA KOT №2 nevesta Aloisia Kovačič (Mathias Mihelič × Maria Pakar)!",
+      "via": "№2 (24.1.: Aloisia Kovačič 28, starža Mathias Mihelič ¼ × Maria Pakar) + №16 (24.7.: Franciska Mihelič 24, starža Mihov Mihelič ¼ × Marija geb. Pakar) — SESTRI (Kovačič poročena 28 + Mihelič 24) IZ ISTE HIŠE Gradac 55! + №16 priča Franz Graf = №2 ženin!"
+    },
+    {
+      "claim": "№4 nevesta Dorothea Dragoš in №3 ženin Joseph Dragoš = SOROJENCA (ista starša Joseph Dragoš ½ × Dorothea Brodarič) — DVOJNA POROKA 24.1.",
+      "via": "№3 R-stran (Joseph Dragoš ½ Hübler × Dorothea Brodarič) = №4 R-stran (ISTA) — oba vpisa isti dan, dve DRAGOŠ-poroki ene družine! (Brodarič: h46-korpus 1893/95!)"
+    },
+    {
+      "claim": "№13 mati Catharina geb. MAURIN ↔ №4 oče Johann MAURIN — družina Maurin v dveh vpisih leta",
+      "via": "№13 (Zupanič: mati geb. Maurin — MAURIN 1. pojav v 04455-korpusu) + №4 (Martin/Maurin: oče Johann Maurin ¼ Hübler) — [~ povezava VERIF]"
+    },
+    {
+      "claim": "№12 priča Nikolaus KRIZAN + №12 mati Ana geb. Križan + №14 ženin Marcus Križan — KRIŽAN-mreža ×3",
+      "via": "№12 (Krasinec 13: mati geb. Križan + priča Krizan) + №14 (Griblje 86 ženin Križan) + h36/h85 korpus Križan-družine — KRIŽAN v 3 vpisih leta"
+    },
+    {
+      "claim": "№18 nevesta Anna Kambič Filovje 29 + №13 mati Margaretha geb. Kambič + №5 mati Barbara geb. Kambič — KAMBIČ-mreža ×3",
+      "via": "№18 (oče Jacob Kambic ¼) + №13 (Tome: mati geb. Kambič) + №5 (Butala: mati geb. Kambič + priča Mathias Kambič!) — KAMBIČ v 3 vpisih"
+    },
+    {
+      "claim": "№19 nevesta Marija Tome Primostek 14 + №13 nevesta Margaretha Tome Primostek 18 — TOME-vas ×2",
+      "via": "№13 (oče Nikolaus Tome) + №19 (oče Mathias Tome ½) — DVE TOME-DRUŽINI na Primostku, obe z nevestami v 1910"
+    },
+    {
+      "claim": "№7 dispenza št. 158 + №1 dispenza št. 159 — ZAPOREDNI številki ordinarijata Ljubljana ISTI DAN 13. 1. 1910",
+      "via": "№7 (št. 158 [~ eno branje 758]) + №1 (št. 159 [~ branjа 159/359/138/239]) — ordinariat izda dve dispenzi zapored na isti dan [~ št. VERIF]"
+    },
+    {
+      "claim": "№15 Štrugar oče Jakob Wagenmeister × sin Franz Schmiedmeister — kovaška dinastija + priča Štengar [Schmied]",
+      "via": "№15 (oče Wagenmeister + ženin Schmiedmeister + priča Anton Štengar? [Schmied] — TRJEZNOSTNI POKLICI v eni poroki!)"
+    },
+    {
+      "claim": "24. 1. ×5 = MASA-DAN — REKORD LINIJE (največ porok na en dan)",
+      "via": "№2–№6 VSE 24.1.1910 (PON) — prejšnji rekordi: 1908 10.2. ×3 + 26.1. ×2; 1907 15.2. ×2 — 5 NA DAN = NOVI REKORD 1886–1910!"
+    },
+    {
+      "claim": "13 PON + 6 NED = SAMO ponedeljki in nedelje (19/19!) — 100% VIKEND-POROKE",
+      "via": "datumi: PON 24.1.×5, 31.1.×3, 9.5, 30.5, 4.7, 8.8, 21.11 (12) + NED 23.1, 1.5, 3.7, 24.7.×2, 30.10 (7) — NITI ENA poroka na drug dan! (1909: 14 PON + 1 NED; 1910: popolna polarizacija)"
+    },
+    {
+      "claim": "№17 deželna vlada Ljubljana št. 18796 (1.8.1910) — dovoljenje za mladoletno nevesto 16 let",
+      "via": "№17 urkunden (ck deželna vlada v Ljubljani 1/8 1910 št. 18796 — 1. pojav DEŽELNE VLADE kot oblasti v 04455-liniji! [P138 №14 je imel deželno SODIŠČE št. 27036])"
+    },
+    {
+      "claim": "№2 listini Škofle pri Brežicah št. 264+268 (26.12.1909) — ŠTAJERSKI ženin",
+      "via": "№2 urkunden (krstni in vaški list od župnega urada ŠKOFLE PRI BREŽICAH NA ŠTAJERSKEM — NOVA OBLAST: čez deželno mejo!) — [~ Graf = štajerska družina?]"
+    },
+    {
+      "claim": "h86 = NOVA POROČNA HIŠA korpusa (67 → 68) — prvi dokumentirani prebivalec h86 v 04455",
+      "via": "corpus-index: h86 04455 blokov 0 → №14 doda 1.; h86 v 04105 (krstna) šele od 1912 (Brinec × Butala + 1913 Hrižan × Štraus SEUSER h36→h86!) — №14 Marcus Križan (sin h85-družine!) = PRVI na h86, 2 leti pred Hrižanovo selitvijo!"
+    },
+    {
+      "claim": "№9 duhovnik DANIJEL = ISTI kot 1909 №9 (2. podpis v liniji po Rauyu)",
+      "via": "1909 №9 (Danijel — 1. pojav) + 1910 №9 (Danijel — 2. pojav, OPET št. 9!) — [~ vzorec naključja ali kaplanska menjava]"
+    }
+  ],
+  "anomalies": [
+    "★★★ №1 INTRA-GRIBLJE INTRA-PRIIMEK h13 × h6 (2 × Jakobčič!) + DISPENSA 3. KOLENA (ordinariat 13.1.1910 št. 159 [~]) + priči = strica OBEH mater (Pezdirec + Željko) + STARŠA-DVOJČEK Mathias Jakobčič ½ × Mathias Jakobčič ¼ [~]",
+    "★★★ №14 GRIBLJE × GRIBLJE h86 × h31 + DVOJNA ZAPREKA (ordinariat št. 2058 + spregled sodišče št. 12448) + h86 NOVA POROČNA HIŠA (67→68) + ženin = sin h85-družine (Marko Križan × Marija Strauš 1888) na novi hiši",
+    "★★★ 24. 1. ×5 = MASA-DAN — REKORD LINIJE 1886–1910 (prej 3 na dan!)",
+    "★★★ 13 PON + 6 NED = 100% vikend-poroke (19/19 — nitfedeljek! polarizacija po 1909 93% PON)",
+    "★★ №17 NEVESTA 16 LET + deželna vlada Ljubljana št. 18796 (1. dovoljenje deželne vlade v liniji!) + ženin 20 — par 36 let skupaj",
+    "★★ №3+№4 DVOJNA POROKA SOROJENCEV DRAGOŠ isti dan (24.1. — ista starša pri obeh!)",
+    "★★ №4 ženin MARTIN z očetom MAURIN (priimka se ne ujemata — nezakonski/posvojen? [~])",
+    "★★ №18 69-LETNI ŽENIN LEDIG (2. najstarejši po 1908-v16 73!) × 34-letna nevesta = 35 let razlike",
+    "★★ 3 GRIBLJE poroke v letu (№1 + №14 + №17) = skupaj z 1909 rekord (1909: 1; 1908: 2)",
+    "★ TRIJE sorodstveni dokumenti v letu (№1 dispenza 159 [~] + №7 dispenza 158 [~] + №14 spregled 2058/12448) — po 1909 (3) NADALJEVANJE visoke frekvence",
+    "★ JAKOBČIČ ×3 ženini (№1 h13 Griblje + №5 Cerkvišče 16 + №17 h8 Griblje) — najmočnejši priimek leta",
+    "★ BUTALA ×3 (№5 nevesta + №8 ženin + №10 ženin) + TOME ×2 + BAJUK ×2 + PEZDIREC ×3 (mreža) + KAMBIČ ×3 (mreža) + KRIŽAN ×3 (mreža)",
+    "★ NOVE OBLASTI: Škofle pri Brežicah (Štajerska! št. 264+268) + sv. Jernej (št. 15) + Loka (št. 253) + deželna vlada Ljubljana (št. 18796) + vrhovska vas (nova vas)",
+    "★ NOVI POKLICI: Perkušec (perkar №3) + Schmiedmeister (№15) + Einwohner (№18) + Söllnergeselle? (№16) + Hufschmied (№13 oče) + Knecht (№2)",
+    "★ NOVI PRIIMKI: Žephar + Pavlenič + Štrugar + Kosevar + Schmidt + Rauch + Žiličič + Puček + Kovačič + Graf + Žaborič + Hagar + Likosek + Debeljak + Jonec + Anžlovar + Gorsič + Kostelec + Marenfič? + Španič? + Harasinić + Rubman? + Petrašič + Honič + Mathies + Ivek? + Štengar? + Uleh + Želenič? + Gregorič + Hübler-vasi",
+    "★ duhovnik DANIJEL 2. pojav (№9 1909 + №9 1910 — obe št. 9!)",
+    "★ №13 ženin + nevesta IZ ISTE HIŠE Primostek 18 (brez skupnega priimka — sošolca/delivca?)",
+    "★ P140 LEAD: 1911 №1–7 na s146 (30.1.–19.6. 1911) — 1911 se nadaljuje!"
+  ],
+  "honesty": [
+    "VERIF-oznake [~]: ~40 odprtih podrobnosti čaka na morebitni 3. krog — ključne: №1 dispenza št. (159/359/138/239 — štiri nasprotujoča branjа!), №7 dispenza št. (158 vs 758), №14 tip listin št. 2058/12448 ([ordinariat? vicedoma?] + [sodišče?]), №4 priči (Danijel/Regina?), №17 zglašnica občina (Griblje? branje »Gorenje«) + proglas datum (22/2?), №2 ženin poklic (Knecht vs ¼), №3 nevestina vas + zglašnica občina (Gorde?), №9 listina občina (Podpeč na Štajerskem?), №10 priči (Kramčič?/Jakšič?), №12 nevestin priimek (Jakličevič?/Fakhlevič?), №15 priči (Ivek?/Štengar?), №18 priimek mati (Harasinić?), №19 mati (Simonič?)",
+    "METODA: 38 vrstičnih VLM branj (19 × L+R) + 8 zoom-1 branj + 55+ fini branj 2. kroga (multi-render orig/invert/kontrast; GRID-tehnika za prostorsko preslikavo — preboj pri hišnih številkah!) — skupaj 100+ VLM branj",
+    "LEKCIJA-GEOMETRIJA: rezidenca (vas + hiša) je PRED imenom v vsakem bloku! Prva generacija izrezov (x 330–650) je ujela STAROST/ULOMEK namesto hišne številke → grid-overlay tehnika (rdeče navpične črte z oznakami) je razrešila vse hišne številke",
+    "LEKCIJA-ŠTEVLKE: Kurrent 3/5/8/9 + 6/0 ostaja glavni vir napak — Vsako ključno številko preveriti z ≥2 neodvisnima branjema + oblikoslovno analizo (zaprte/zanke odprte krivulje + ascender + prečka) + korpus-prior!",
+    "POPRAVKI 2. kroga: №4 starost neveste 14 → 18 (1+8!) · №10 ženin Andreas → ALFONS (A-l-f-o-n-s) · №14 ženinova hiša 36/85/17 → 86 (grid) · №14 nevestina hiša 11/21/41/14 → 31 (grid + korpus Janez Straus × Barbara Jakobič h31 1897!) · №9 vas »Schwaiger« → VRHOVSKA VAS · №18 ženinova vas Filovje → KRASINEC 30 (Filovje 29 = NEVESTA!) · №2 priimek »Gneuf« → GRAF (9× zoom)",
+    "meja 1910/1911: s146 = 1911 №1–7 (30.1.–19.6.) → P140 lead pripravljen; 1910 leto ZAPRTO (19 vpisov, vse strani prebrane)",
+    "h86 NOVA hiša: odločitev temelji na grid-branju (8=zaprti zanki, 6=ascender) — h85-korpus-prior (Marko Križan × Marija Strauš) je STARŠA hiša, sin na h86 = nov dom [~ družinska selitev pred 1912 Hrižanovo]"
+  ]
+}

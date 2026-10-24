@@ -61,7 +61,7 @@ PT_GAP_NEW = ["43"]             # h43 = NOVA luknja številka (17. dokazana)
 EXPECTED_NEW_HOUSES = ["10", "40", "43"]
 EXPECTED_REPEATS = 15           # 18 hiš − 3 nove (z notranjo ponovitvijo h31)
 EXPECTED_HOUSES_VITALS = 19
-EXPECTED_VITALS_TOTAL = 659  # POSODABLJENO P138: 490 (era P105/106) → 651 (P137) → 659 (P138: + 8 poročnih blokov 1909!)
+EXPECTED_VITALS_TOTAL = 664  # POSODABLJENO P138: 490 (era P105/106) → 651 (P137) → 659 (P138: + 8 poročnih blokov 1909!)
 EV_ONLY_TOTAL = 8               # P84: 2 + P85: 3 + P86: 1 + P102: r4 (1) + P103: r84 (1) (P77–P83, P87–P92: 0)
 EV_ONLY_HOUSE_STRINGS = {"65 [~]"}  # P85 — edina imenovana EV-only hiša (None × 4)
 EXPECTED_PRIESTS = (11, 8)      # (Klun, Rauq) — mešano leto; Šuvar izgine

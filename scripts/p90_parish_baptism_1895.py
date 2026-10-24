@@ -57,7 +57,7 @@ PT_GAP_NEW = []                 # luknja 41–60: h46 ponovitev — brez novih �
 EXPECTED_NEW_HOUSES = ["20", "37", "87"]
 EXPECTED_REPEATS = 11           # 14 − 3 nove
 EXPECTED_HOUSES_VITALS = 15     # 15 vpisov (h24 2 bloka)
-EXPECTED_VITALS_TOTAL = 659  # POSODABLJENO P138: 490 (era P105/106) → 651 (P137) → 659 (P138: + 8 poročnih blokov 1909!)
+EXPECTED_VITALS_TOTAL = 664  # POSODABLJENO P138: 490 (era P105/106) → 651 (P137) → 659 (P138: + 8 poročnih blokov 1909!)
 EV_ONLY_TOTAL = 8               # P84: 2 + P85: 3 + P86: 1 + P102: r4 (1) + P103: r84 (1) (P77–P83, P87–P90: 0)
 EV_ONLY_HOUSE_STRINGS = {"65 [~]"}  # P85 r?? — edina EV-only hiša z imenom (None × 4)
 # sidra/pins P90:

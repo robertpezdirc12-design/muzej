@@ -55,7 +55,7 @@ PT_GAP_NEW = []                 # brez novih (ostaja 15 dokazanih)
 EXPECTED_NEW_HOUSES = []        # NOVELA: prvo leto z 0 novih hiš
 EXPECTED_REPEATS = 14
 EXPECTED_HOUSES_VITALS = 14     # 14 vpisov, vsi zasidrani (runtime projekcija)
-EXPECTED_VITALS_TOTAL = 659  # POSODABLJENO P138: 490 (era P105/106) → 651 (P137) → 659 (P138: + 8 poročnih blokov 1909!)
+EXPECTED_VITALS_TOTAL = 664  # POSODABLJENO P138: 490 (era P105/106) → 651 (P137) → 659 (P138: + 8 poročnih blokov 1909!)
 EV_ONLY_TOTAL = 8               # P84: 2 + P85: 3 + P86: 1 + P102: r4 (1) + P103: r84 (1) (P87–P89: 0)
 # sidra/pins P89:
 H2_ROW = {"row": 11, "scan": 71, "fatherPin": "Hlebec"}

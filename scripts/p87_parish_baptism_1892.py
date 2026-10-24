@@ -45,7 +45,7 @@ PT_GAP_NEW = []                 # 58 že dokazana (P84/P85) — brez novih
 EXPECTED_NEW_HOUSES = ["12", "73", "75"]
 EXPECTED_REPEATS = 9
 EXPECTED_HOUSES_VITALS = 12     # 12 vpisov, vsi zasidrani (runtime projekcija)
-EXPECTED_VITALS_TOTAL = 659  # POSODABLJENO P138: 490 (era P105/106) → 651 (P137) → 659 (P138: + 8 poročnih blokov 1909!)
+EXPECTED_VITALS_TOTAL = 664  # POSODABLJENO P138: 490 (era P105/106) → 651 (P137) → 659 (P138: + 8 poročnih blokov 1909!)
 EV_ONLY_TOTAL = 8               # P84: 2 + P85: 3 + P86: 1 + P102: r4 (1) + P103: r84 (1) (P87: 0)
 # sidra/pins P87:
 H58_ROW = {"row": 60, "scan": 61, "fatherPin": "Požek"}

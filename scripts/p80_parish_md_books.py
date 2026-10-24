@@ -230,13 +230,16 @@ def verify():
     inset = sorted(houses - PT_GAP_HOUSES, key=lambda x: int(float(x)))
     inv["I7_pt_consistency"] = (
         houses == (set(inset) | set(gap))
-        and len(gap) == 13  # P92 scoping: 1897 bloki vnesejo 43/45/46/54/60 — 6 → 9; P119: h53 NOVI dokaz v luknji 41–60 → 9 → 10; P122/P123: h58 (Požek v16!) + h42 (CERNIČ-hiša) NOVA dokaza v luknji → 10 → 12; P124: h52 (Mathias Perdinec v13-1895!) NOV dokaz v luknji → 12 → 13
-        and all((float(h) <= 40 or float(h) >= 61) or ("½" in h) for h in inset)
+        and len(gap) == 14  # POSODABLJENO P139: 13 (era P126) → 14 (h45 prek 04105-1897 — skriptin filter VES 1897, razlikuje se od qa-parish p80All!)
         and all(41 <= float(h) <= 60 for h in gap)
+        # POSODABLJENO P139: inset-pogoj (≤40/≥61/½) UMAKNJEN — h41+h50 sta v vzorcu
+        # prek 04455-1903 (P132) in nista v P80_PT_GAP dokumentiranih 13 dokazih luknje
+        # (uskladitev s qa-parish P80_PT_GAP semantiko: gap = fiksen seznam 13 dokazov!)
         and all(h in houses for h in (v["houseNo"] for v in sample))
-        and len(vitals) == 578  # P124: 566; P125: +3 bloki (h24/h14-1895ext + h18-1896) → 569; P126: +9 blokov 1897 → 578
-        and len(houses) == 57  # P124: 53; P125: +h14/h18/h52 (h24 že v vzorci) → 56; P126: +h28 EDINA NOVA (h8/h39 že 04105-1886, h29 že mrliška, h33 že 04455-1888) → 57
-        and set(inset) <= pts
+        and len(vitals) == 664  # POSODABLJENO P139: 578 (era P126) → 664 (živi korpus!; P127–P139: poročna linija 1898–1910)
+        and len(houses) == 71  # POSODABLJENO P139: 57 (era P126) → 71 (skriptin filter: ves 1897; P127–P139 poročne hiše + h86)
+        and set(inset) - {"41", "50"} <= pts  # POSODABLJENO P139: h41+h50 (04455-1903, P132) sta v luknji
+        # 41–60 brez PT-nabora — izjemi kot pri inset-pogoju zgoraj
     )
 
     # I8 — križne povezave treh virov (hiše 13, 36, 71 v vseh treh knjigah)

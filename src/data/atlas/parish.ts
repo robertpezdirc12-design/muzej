@@ -2194,6 +2194,81 @@ export const HOUSE_VITALS: HouseVital[] = [
     status: "DOCUMENTED",
   },
 
+  // ——— P139 razširitev: POROČNA KNJIGA 04455 — polno leto 1910 (skeni
+  // s141–s145 == Pag. 140–144; letnica V VSAKEM vpisu — brez letne glave
+  // [nadaljevanje lekcije P138]; 25. leto poročne linije P115=1886 → P139=1910)
+  // — 19 vpisov (№1 s141 + №2–6 s142 + №7–10 s143 + №11–14 s144 + №15–19
+  // s145; №-stolpci pasovno potrjeni): ★★★ №1 INTRA-GRIBLJE INTRA-PRIIMEK
+  // h13 × h6 (2 × JAKOBČIČ + DISPENSA 3. KOLENA ordinariat 13/1 1910 št. 159
+  // [~] + starši-dvojček Mathias Jakobčič ½ × Mathias Jakobčič ¼ + priči =
+  // strica obeh mater Pezdirec + Željko!) + ★★★ №14 GRIBLJE × GRIBLJE h86 ×
+  // h31 + DVOJNA ZAPREKA (ordinariat št. 2058 [~] + spregled sodišče št. 12448
+  // [~]) + h86 NOVA POROČNA HIŠA (67 → 68 — sin h85-družine Marko Križan ×
+  // Marija Strauš 1888 na novi hiši!) + ★★★ 24. 1. ×5 = MASA-DAN REKORD
+  // linije 1886–1910 + ★★ 12 PON + 7 NED = 100% vikend-poroke (19/19!) +
+  // ★★ №17 NEVESTA 16 LET + deželna vlada Ljubljana št. 18796 (1. deželna
+  // vlada v liniji!) + ★★ №3+№4 DVOJNA POROKA SOROJENCEV DRAGOŠ isti dan +
+  // ★★ №18 69-LETNI ŽENIN LEDIG (2. po 1908-v16 73!) + ★ Jakobčič ×3 ženini
+  // + Butala ×3 + Tome ×2 + Bajuk ×2 + trije sorodstveni dokumenti (št. 159
+  // [~] + 158 [~] zaporedni isti dan!) + nove oblasti (Škofle pri Brežicah
+  // na Štajerskem! + sv. Jernej + Loka + deželna vlada + Vrhovska vas) +
+  // novi poklici (Perkušec/perkar! + Schmiedmeister + Einwohner +
+  // Hufschmied) + ~25 novih priimkov + DANIJEL 2. pojav (№9 1909 + №9 1910!)
+  // — vpisi z Griblji (3 poroke / 5 poročnih blokov: h13 №1 ženin 2. dokaz +
+  // h6 №1 nevesta 4. dokaz + h86 №14 ženin NOVA + h31 №14 nevesta 4. dokaz +
+  // h8 №17 ženin 3. dokaz). Dokaz: research/issue17/parish-marriage-1910.json;
+  // verifikator: scripts/p139_parish_marriage_1910.py --check (I1–I11).
+  {
+    houseNo: "13",
+    bookSignature: "04455",
+    year: 1910,
+    scan: 141,
+    page: 140,
+    whatSi: "poroka (23. 1. 1910, vpis 1 — NEDELJA) — ženin Mathias JAKOBČIČ, ½ hüller, 53, ledig, GRIBLJE 13 (2. poročni dokaz h13 — 1885 Janez Jakobič Leinweber 25 [starša Mathias Jakobič × Maria née PEZDIREC — ISTA STARŠA KOT 1910 ŽENIN!] = 25-LETNA KONTINUITETA!; P139-lead №1 VSE POTRJENO) × Marija JAKOBČIČ, ¼ hüllerjeva hči, 32, ledig, GRIBLJE 6 (4. poročni dokaz h6 — 1903 Georg Jakobčič 24 + 1907 Kovač ×2 + krsti 1904/05 Jurij × Katarina Jakobič z botroma ŽELJKO ×2 = nevestina mati Anna geb. Željko — ŽELJKO-veja na h6!); ★★★ INTRA-GRIBLJE INTRA-PRIIMEK POROKA h13 × h6 (obe družini JAKOBČIČ — 1. takšna v 25 letih linije!); ★★ DISPENSA od krvnega sorodstva v 3. kolenu enake stranske vrste (šk. ordinariat Ljubljana 13. 1. 1910 št. 159 [~ — štiri branjа 159/359/138/239; zaporednost z №7-št. 158 isto-dnevna govori za 159]); ★ starši-dvojček: Mathias Jakobčič ½ Hübler (h13!) × Mathias Jakobčič ¼ Hübler (h6!) — DVA Mathiasa Jakobčiča [~ ali sorodnika?]; mati Maria geb. Pezdirec / Anna geb. Željko; ★ priči = strica OBEH mater (Mathias Pezdirec + Joseph Željko ¼ Hübler — STRICEVSKI DVOJČEK!); ženin 53 + nevesta 32 = pozni prvi poroki; zglašnica občine Griblje 22. 1. 1910 št. 1 + dispensa; duhovnik Jos. Rauy P.P.",
+    whatEn: "marriage (Jan 23, 1910, entry 1 — SUNDAY) — the groom Mathias JAKOBČIČ, half smallholder, 53, single, GRIBLJE 13 (the 2nd marriage evidence of h13 — the 1885 Janez Jakobič Linenweaver 25 [parents Mathias Jakobič × Maria née PEZDIREC — THE SAME PARENTS AS THE 1910 GROOM!] = a 25-YEAR CONTINUITY!) × Marija JAKOBČIČ, quarter smallholder's daughter, 32, single, GRIBLJE 6 (the 4th marriage evidence of h6 — the 1903 Georg Jakobčič 24 + the 1907 Kovač ×2 + the baptisms 1904/05 Jurij × Katarina Jakobič with the godparents ŽELJKO ×2 = the bride's mother Anna née Željko — the ŽELJKO branch at h6!); ★★★ the INTRA-GRIBLJE INTRA-SURNAME WEDDING h13 × h6 (both families JAKOBČIČ — the 1st such in 25 years of the line!); ★★ the DISPENSATION of consanguinity in the 3rd degree of the equal lateral line (the episcopal ordinariate of Ljubljana Jan 13, 1910 no. 159 [~ — four readings 159/359/138/239; the same-day sequence with №7's no. 158 points to 159]); ★ the parents-twin: Mathias Jakobčič ½ Hübler (h13!) × Mathias Jakobčič ¼ Hübler (h6!) — TWO Mathias Jakobčičes [~ or relatives?]; the mothers Maria née Pezdirec / Anna née Željko; ★ the witnesses = the maternal uncles of BOTH (Mathias Pezdirec + Joseph Željko ¼ Hübler — an UNCULAR TWIN!); the groom 53 + the bride 32 = late first marriages; the Griblje commune certificate Jan 22, 1910 no. 1 + the dispensation; priest Jos. Rauy P.P.",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "6",
+    bookSignature: "04455",
+    year: 1910,
+    scan: 141,
+    page: 140,
+    whatSi: "poroka (23. 1. 1910, vpis 1 — nevesta) — Marija JAKOBČIČ, ¼ hüllerjeva hči, 32, ledig, GRIBLJE 6 (4. poročni dokaz h6 — 1903 Georg Jakobčič + krsti 1904/05 + 1907 Kovač ×2; Željko-botri na h6 = nevestina mati Željko!) × Mathias JAKOBČIČ, ½ hüller, 53, ledig, GRIBLJE 13 (2. dokaz h13 — 1885 brat Janez, ISTA starša!); ★★★ INTRA-GRIBLJE INTRA-PRIIMEK h13 × h6 — obe družini JAKOBČIČ; ★★ DISPENSA 3. KOLENA (ordinariat Ljubljana 13/1 1910 št. 159 [~]); starši: Mathias Jakobčič ¼ Hübler (h6) × Anna geb. Željko / Mathias Jakobčič ½ Hübler (h13) × Maria geb. Pezdirec (STARŠI-DVOJČEK po imenu očeta!); priči Mathias Pezdirec + Joseph Željko ¼ Hübler (strica obeh mater!); zglašnica Griblje št. 1 + dispensa; duhovnik Jos. Rauy — ★ ženin 53 + nevesta 32 = par 85 let!",
+    whatEn: "marriage (Jan 23, 1910, entry 1 — the bride) — Marija JAKOBČIČ, quarter smallholder's daughter, 32, single, GRIBLJE 6 (the 4th marriage evidence of h6 — the 1903 Georg Jakobčič + the baptisms 1904/05 + the 1907 Kovač ×2; the Željko godparents at h6 = the bride's mother Željko!) × Mathias JAKOBČIČ, half smallholder, 53, single, GRIBLJE 13 (the 2nd evidence of h13 — the 1885 brother Janez, THE SAME parents!); ★★★ the INTRA-GRIBLJE INTRA-SURNAME h13 × h6 — both families JAKOBČIČ; ★★ the DISPENSATION of the 3rd DEGREE (the ordinariate of Ljubljana Jan 13, 1910 no. 159 [~]); parents: Mathias Jakobčič ¼ Hübler (h6) × Anna née Željko / Mathias Jakobčič ½ Hübler (h13) × Maria née Pezdirec (a PARENTS-TWIN by the father's name!); witnesses Mathias Pezdirec + Joseph Željko ¼ Hübler (the maternal uncles!); the Griblje certificate no. 1 + the dispensation; priest Jos. Rauy — ★ the groom 53 + the bride 32 = an 85-year couple!",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "86",
+    bookSignature: "04455",
+    year: 1910,
+    scan: 144,
+    page: 143,
+    whatSi: "poroka (4. 7. 1910, vpis 14 — PONEDELJEK) — ženin Marcus KRIŽAN [~ branjа Kipžan/Kiprian/Kripian — KRIŽAN po črko-za-črko zoomu + korpus], ¼ griblarjev sin, 24, ledig, GRIBLJE 86 (★★ h86 = NOVA POROČNA HIŠA korpusa — 67. → 68.! GRID-definitivno: 8 = dve zaprti zanki + 6 = ascender z zanko; prejšnja branjа 36/85/17 NAPAČNA — 85 = 1/4-ulomek zamenjan za številko, 36 = korpus-prior!; h86 prvi korpusni dokaz 2 LETI PRED 1912 Brinec-krstom — sin Marka Križana × Marije Strauš h85 [krst Janeza 1888!] = ROD 1886, na novi hiši ~1908? [~ VERIF selitev]) × Catharina STRAUS, ¼ griblarjeva hči, 18, ledig, GRIBLJE 31 (4. poročni dokaz h31 — 1886 Papič × Straus + 1902 + 1906 + krst 1897 Janez Straus × Barbara Jakobič = №14 STARŠA!); ★★ GRIBLJE × GRIBLJE poroka h86 × h31 (2. intra-vasična leta po №1!); ★★ DVOJNA SORODSTVENA ZAPREKA: [dispenza ~ ordinariat?] 24. 5. 1910 št. 2058 + SPREGLED [deželno sodišče?] 25. 6. 1910 št. 12448 [~ tipa listin VERIF] + zglašnica občine Griblje 3. 7. 1910 št. 2; ★★ KRIŽAN × STRAUS DRUŽINSKI DVOJČEK: ženinov oče Marko Križan × mati Marija Strauš (h85 1888!) + nevesta Straus — ženin se poroči z MOSKO DVOJNICO priimka svoje matere!; starši: Marcus [Marko] Križan [~ branje »Mareus«] × Maria geb. [Strauš? ~] / [Johann/Janez? ~] Straus × Barbara geb. [Jakobič? ~] (h31 1897!); priča Mihelič [mesnar?/mesar? ~]; nevesta 18 let — 3. mladoletna nevesta leta (№4 18 + №11 18 + №17 16!); duhovnik Jos. [Rauy ~]",
+    whatEn: "marriage (Jul 4, 1910, entry 14 — MONDAY) — the groom Marcus KRIŽAN [~ readings Kipžan/Kiprian/Kripian — KRIŽAN by the letter-by-letter zoom + corpus], quarter smallholder's son, 24, single, GRIBLJE 86 (★★ h86 = A NEW MARRIAGE HOUSE of the corpus — the 67th → 68th! GRID-definitive: 8 = two closed loops + 6 = ascender with a loop; the earlier readings 36/85/17 WRONG — 85 = the 1/4 fraction mistaken for a number, 36 = a corpus-prior!; the first corpus evidence of h86 TWO YEARS BEFORE the 1912 Brinec baptism — the son of Marko Križan × Marija Strauš of h85 [the baptism of Janez 1888!] = born 1886, at the new house ~1908? [~ VERIF the move]) × Catharina STRAUS, quarter smallholder's daughter, 18, single, GRIBLJE 31 (the 4th marriage evidence of h31 — the 1886 Papič × Straus + 1902 + 1906 + the baptism 1897 Janez Straus × Barbara Jakobič = THE 1910 №14 PARENTS!); ★★ a GRIBLJE × GRIBLJE wedding h86 × h31 (the 2nd intra-village of the year after №1!); ★★ a DOUBLE IMPEDIMENT: [a dispensation ~ ordinariate?] May 24, 1910 no. 2058 + the OVERSIGHT [a provincial court?] Jun 25, 1910 no. 12448 [~ the document types VERIF] + the Griblje commune certificate Jul 3, 1910 no. 2; ★★ the KRIŽAN × STRAUS FAMILY TWIN: the groom's father Marko Križan × mother Marija Strauš (h85 1888!) + the bride Straus — the groom marries the FEMALE TWIN of his mother's surname!; parents: Marcus [Marko] Križan [~ the reading »Mareus«] × Maria née [Strauš? ~] / [Johann/Janez? ~] Straus × Barbara née [Jakobič? ~] (h31 1897!); the witness Mihelič [a sexton?/butcher? ~]; the bride 18 — the 3rd minor bride of the year (№4 18 + №11 18 + №17 16!); priest Jos. [Rauy ~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "31",
+    bookSignature: "04455",
+    year: 1910,
+    scan: 144,
+    page: 143,
+    whatSi: "poroka (4. 7. 1910, vpis 14 — nevesta) — Catharina STRAUS, ¼ griblarjeva hči, 18, ledig, GRIBLJE 31 (4. poročni dokaz h31 — 1886 Martin Papič × Margareth Straus [1. dokaz] + 1902 Maria Mulh? + 1906 Martin Paprič WITWER + krsti 1887–1900 Papič × Straus; 1897 krst Janez Straus × Barbara Jakobič = 2. STRAUS-DRUŽINA na h31 — №14 starša!) × Marcus KRIŽAN, ¼ griblarjev sin, 24, ledig, GRIBLJE 86 (★★ NOVA POROČNA HIŠA 67→68 — sin h85-družine Marko Križan × Marija Strauš!); ★★ GRIBLJE × GRIBLJE h86 × h31 + DVOJNA ZAPREKA (št. 2058 + spregled št. 12448 [~]); starši: [Johann/Janez? ~] Straus ½ [Hübler] × Barbara geb. [Jakobič? ~] (h31 1897!) / Marcus [Marko] Križan × Maria geb. [Strauš? ~] (h85 1888 — MATERIN PRIIMEK = NEVESTIN!); priča Mihelič [~]; zglašnica Griblje 3. 7. 1910 št. 2 + [dva sorodstvena lista ~]; duhovnik Jos. [Rauy ~] — ★ STRAUS-h31 kontinuiteta 1886 → 1910 = 24 let!",
+    whatEn: "marriage (Jul 4, 1910, entry 14 — the bride) — Catharina STRAUS, quarter smallholder's daughter, 18, single, GRIBLJE 31 (the 4th marriage evidence of h31 — the 1886 Martin Papič × Margareth Straus [the 1st evidence] + the 1902 Maria Mulh? + the 1906 Martin Paprič WIDOWER + the baptisms 1887–1900 Papič × Straus; the 1897 baptism Janez Straus × Barbara Jakobič = the 2nd STRAUS FAMILY at h31 — the 1910 №14 parents!) × Marcus KRIŽAN, quarter smallholder's son, 24, single, GRIBLJE 86 (★★ A NEW MARRIAGE HOUSE 67→68 — the son of the h85 family Marko Križan × Marija Strauš!); ★★ a GRIBLJE × GRIBLJE h86 × h31 + a DOUBLE IMPEDIMENT (no. 2058 + the oversight no. 12448 [~]); parents: [Johann/Janez? ~] Straus ½ [Hübler] × Barbara née [Jakobič? ~] (h31 1897!) / Marcus [Marko] Križan × Maria née [Strauš? ~] (h85 1888 — THE MOTHER'S SURNAME = THE BRIDE'S!); the witness Mihelič [~]; the Griblje certificate Jul 3, 1910 no. 2 + [two kinship documents ~]; priest Jos. [Rauy ~] — ★ the STRAUS-h31 continuity 1886 → 1910 = 24 years!",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "8",
+    bookSignature: "04455",
+    year: 1910,
+    scan: 145,
+    page: 144,
+    whatSi: "poroka (8. 8. 1910, vpis 17 — PONEDELJEK) — ženin Johann JAKOBČIČ, ¼ griblarjev sin, 20, ledig, GRIBLJE 8 (3. poročni dokaz h8 — 1897 Maria Jakobčič 23 [1. dokaz] + 1900 Catharina Jakobčič 21 [2.]; krstna h8 1886–89 Janez/Anton Jakobič; 1912 krst Janez Jakofčič ¾ × Neza JAKLJEVIČ = NEVESTIN PRIIMEK ŽE na h8-družini!; GRID-definitivno: 8 = dve zaprti zanki — NE 7 [~ prejšnja branjа]!) × Agnes JAKLJEVIČ, ¼ hüllerjeva hči, 16 (!!), ledig, PRILOZJE 30 (★★ NEVESTA 16 LET — 2. najmlajša linije! + DOVOLJENJE CESARSKE KRALJEVSKE DEŽELNE VLADE V LJUBLJANI 1. 8. 1910 št. 18796 = 1. deželna vlada v 04455-liniji! [P138 №14 = deželno SODIŠČE št. 27036]); par 20 + 16 = 36 let skupaj — NAJMLAJŠI PAR linije? [~]; 3. GRIBLJE poroka leta (№1 INTRA + №14 + №17 — največ z 1909!); JAKOBČIČ ×3 ženini leta (№1 h13 + №5 Cerkvišče + №17 h8!); starši: Johann Jakobčič ¼ Hübler (h8!) × Maria geb. [Luh? Lut? ~ VERIF] / Peter Jakljevič ¼ Hübler × Maria geb. [Kralj? Kalj? ~ — KRALJ korpus h17!]; priči Johann [Dragoš? ~] + Nicolaus [Jaklič? ~]; zglašnica [Griblje? ~ branjе »Gorenje«??] 7. 8. 1910 št. 3 + deželna vlada št. 18796 + proglas [Črnomelj 22/2? ~ VERIF] + lastno ustno dovoljenje; duhovnik Jos. Rauy",
+    whatEn: "marriage (Aug 8, 1910, entry 17 — MONDAY) — the groom Johann JAKOBČIČ, quarter smallholder's son, 20, single, GRIBLJE 8 (the 3rd marriage evidence of h8 — the 1897 Maria Jakobčič 23 [the 1st evidence] + the 1900 Catharina Jakobčič 21 [the 2nd]; the baptisms of h8 1886–89 Janez/Anton Jakobič; the 1912 baptism Janez Jakofčič ¾ × Neza JAKLJEVIČ = THE BRIDE'S SURNAME ALREADY in the h8 family!; GRID-definitive: 8 = two closed loops — NOT 7 [~ earlier readings]!) × Agnes JAKLJEVIČ, quarter smallholder's daughter, 16 (!!), single, PRILOZJE 30 (★★ THE BRIDE 16 YEARS — the 2nd youngest of the line! + the PERMIT OF THE IMPERIAL ROYAL PROVINCIAL GOVERNMENT OF LJUBLJANA Aug 1, 1910 no. 18796 = the 1st provincial government in the 04455 line! [P138 №14 = a provincial COURT no. 27036]); the couple 20 + 16 = 36 years together — THE YOUNGEST COUPLE of the line? [~]; the 3rd GRIBLJE wedding of the year (№1 INTRA + №14 + №17 — the most with 1909!); the JAKOBČIČ ×3 grooms of the year (№1 h13 + №5 Cerkvišče + №17 h8!); parents: Johann Jakobčič ¼ Hübler (h8!) × Maria née [Luh? Lut? ~ VERIF] / Peter Jakljevič ¼ Hübler × Maria née [Kralj? Kalj? ~ — the KRALJ corpus h17!]; witnesses Johann [Dragoš? ~] + Nicolaus [Jaklič? ~]; the certificate [Griblje? ~ the reading »Gorenje«??] Aug 7, 1910 no. 3 + the provincial government no. 18796 + the banns [Črnomelj Feb 22? ~ VERIF] + the personal oral permit; priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+
   // ——— P122 razširitev: POROČNA KNJIGA 04455 — polno leto 1893 (skeni 87–90 ==
   // strani 86–89; VELIKA GLAVA »Traunungs=Buch« + rokopisno »1893« na s87 =
   // Pag. 86 POTRJENA — P122 lead!; 20 vpisov: 1886:7 → 1887:21 → 1888:20 →
