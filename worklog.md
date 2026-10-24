@@ -5983,3 +5983,25 @@ Stage Summary:
 - **TROJNA SINHRONIZACIJA: GitHub b33903e 1:1 + Vercel produkcija 137/137 ŽIV (qa-p136 True); GitLab zaostanek 1 commit (blokiran — PAT ni v sandboxu, akcija lastnika).**
 - **P136 POLNO ZAKLJUČEN: poročna 1907 = 12/12 vpisov (22. leto linije 1886–1907); vitals 642 · bloki 04455 125 · sidra 118 · p80 hiše 66; QA 137/137; 23 skript 1384/1384.**
 - NASLEDNJI KORAK: P137 — poročna 1908 (rokopisna glava na s134 y≈1020 + 1908-v1 Jän 26 + v2 vidna — min 2 vpisa; LEKCIJA: mejo preveriti s135+s136!; prenesti skena s135+s136; knjiga 04455 sega do 1922 — še ~15 let linije).
+
+---
+Task ID: 115
+Agent: Z.ai Code (glavni)
+Task: P137 — poročna knjiga 04455, polno leto 1908 (s134–s138 == Pag. 133–137): dokončanje od prejšnje prekinjene seje (VLM-branja + rate-limit) + produkcija + trojna sinhronizacija z NOVIM GitLab žetonom uporabnika (uporabnik: »odlično nadaljuj« + »glpat-… nadaljuj kjer si ostal«)
+
+Work Log:
+- FAZA 0: odkril obsežno P137 delo prejšnje seje (skeni s134–s140 že preneseni; rows137/ izrezi v1–v17 + forenz137/finz137.py + ~130 VLM JSON); prebral VSA branjа (L/R/f/z) + 22 verifikacijska.
+- ★ GITLAB-PORAVNAVA P136: nov žeton glpat-eKysz4… (uporabnik robert.pezdirc12, lastnik/50) validiran; zaostanek 2 commitov (b33903e + e26c95e) poravnan — GitLab 1:1.
+- ★ KORPUS-FORENZIKA (glavno orodje — VLM je padel na 429 rate-limit po razpočetju 114 branj!): v1-ženin = 1889-v3 ISTI (Johann Požek 39→58, starši ISTI!) · v1-nevesta = sestra 1906-v11 ženina (Kure h62!) · v5-nevesta h28 = POŽEK-VERIGA 1991 (Georg Požek × Margareth Milkovič ISTA!) · v9-ženin = brat 1897-v5 (Krasinec 18 Županič!) · v9-mati Kramarič = korpus ×10 (1897-mati Šaradinič? 2. žena? MERI) · v10-ženin = brat 1897-v11 neveste (h39 Šimec starši ISTI!) · v10-nevesta = 1887-krst h47 ISTA (Peter Klobučar × Marija Tilak/Filath!) · v14-nevesta = 1888-v2 ISTA DRUŽINA po 20 letih (Mathias Dehlič × Maria Husič h33!) · v17-ženin = 1895-v17 ISTI (Peter Brinec × Anna Štraus; ženil v h14 → vdovec) · v17-nevesta = 1895-starša ISTA (Michael Pezdirec × Anna Brinec) + ★★ hčerka P103 16. 2. 1908 na h14 (Janez Brinec × Doroteja Perdinec — mati menjava [MERI]!) = 9 mesecev PRED poroko! · duhovnik: novi kaplan Jos. DAMI [~] (krstna P103 1908 — vse »Danijel?/Wandl?/Ludl?« = verjetno Dami!).
+- FAZA 1: okvir 1908 = 17 vpisov (lead »min 2« 8,5× POCENJEN — 23. leto!); glava »1908« dno s134 (y≈980) + glave s135–s138 + ★ glava »1909« na s138 (y≈600) = P138 LEAD (v1 Jän 25 + v2 Febr 8 + v3 März 15 + v4 Febr 21 vidni); Pag. == sken − 1 = 23. potrditev (133–137).
+- FAZA 2: 11 ponedeljkov + 4–5 nedelj (v1+v2 ISTI DAN 26. 1.!); MASA 10. 2. ×3; s135R 5-vrstični zamik rešen VSEBINSKO (zglasnica-avtoritete: Gradac→v3 · Šmihel-Štopriče?+Podgrad→v4 · Adlešiči→v5 · Podzemelj→v6).
+- PRODUKCIJA: evidence parish-marriage-1908.json (17 entries + 0 excluded + 21 anomalij + 20 crossChecks + honesty 10 [~ VERIF: ~35 odprtih podrobnosti — 2. VLM krog čaka v .p126tmp/verif/ — 429!]) + notes + parish.ts P137-sekcija +9 blokov (h21 + h62 + h28 + h43 NOVA + h39 + h44 + h33 + h14 ×2 = 1. INTRA-HIŠNA!) → 651/134/127/67 + qa-p137 (138. kontrola; pini "14,14,21,28,33,39,43,44,62") + sidra 127 (+1908:9) + p80 67 (+h43) + PT 13 (+h43) + NOVA-hiša izjeme ×3 (P86-h28-1908 + P91-h14-1908 ×2 + P92-h43-1908).
+- SINHR. REGRESIJ: 24 skript (p114–p137) — pini 642→651 ×51 · 125→134 (→23 sporočil) · sidra 118→127 · p80 66→67 · PT 12→13 · BLOCKS 125→134 · p115 sidra-seznam +1908×9 · p128 n76 12→13 — VSE 1452/1452 PASS!
+- VERIFIKACIJE: tsc 0 + eslint 0 (3 znane BABEL opombe) + runQA 138/138 ok:TRUE (prek bun) + verifier p137 68/68 PASS.
+- COMMIT bfbb01b (28 datotek, +1498/−202) → PUSH GitHub (1:1) + GitLab (1:1 — 403 prehoden!) + VERCEL DEPLOY ŽIV (~60 s: /api/qa ok:TRUE 138/138 + qa-p137 True + homepage 200 [1 049 264 B] = 14. potrditev avtor-epošte!).
+
+Stage Summary:
+- **P137 ZAKLJUČEN: 17/17 vpisov; ★★★ 1. INTRA-HIŠNA POROKA h14 × h14 (1. v 23 letih — ženin × SESTRA pokojne žene z afinitetno disposo 1. kolena + hčerka 9 mesecev PRED poroko!); ★★ 73-letni ženin (REKORD +11 let!); ★★ 4 dispenze; ★★ 1. razveza; ★ reciprčna + drubel h39×h44 + Dehlič×Dehlič + NOVA h43; korpus 651/134/127/67/PT13; QA 138/138; 24 skript 1452/1452.**
+- **TROJNA SINHRONIZACIJA 1:1 (GitHub bfbb01b + GitLab bfbb01b + Vercel 138/138 ŽIV).**
+- NEREŠENO: ~35 [~ VERIF] podrobnosti (2. VLM krog — izrezi v .p126tmp/verif/; 429-rate-limit). Ključne: datumi v4/v17 (mesec!), priimki Krudl/Dauovič/Jopčič/Lasič/Vovkman, vasi Trbeneč?/Krieglavce?, starši v3/v11/v12/v13/v15/v16, listine v4/v5/v6/v8/v10/v13/v14/v15/v17, duhovniki v3/v4/v10/v14/v15.
+- NASLEDNJI KORAK: P138 — poročna 1909 (glava s138 y≈600 + v1 Jän 25 + v2 Febr 8 + v3 März 15 + v4 Febr 21 — min 4; mejo s139+s140 — skena ŽE prenesena!; knjiga 04455 sega do 1922 — ~14 let linije).
