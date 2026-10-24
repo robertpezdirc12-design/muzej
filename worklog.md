@@ -6057,3 +6057,25 @@ Stage Summary:
 - **TROJNA SINHRONIZACIJA 1:1: GitHub 9d0a65d + GitLab 9d0a65d + Vercel 139/139 ŽIV (qa-p138 True — 15. potrditev).**
 - NEREŠENO (zgodovinski dolg, rdeči ŽE PRED P138, izven obsega): p85–p99 (I10 era-kalibracija repeat/new-hiše) + p105–p113 (I11/I12 era-pini) + p80 samostojni (I7) — delno izboljšano (vitals 659 + vzorec), polna sanacija = kandidat za ločeno nalogo.
 - NASLEDNJI KORAK: P139 — poročna 1910 (№1 na s141: Mathias JAKOBČIČ? [~] × Marija JAKOBČIČ? [~] — INTRA-PRIIMEK + mati PEZDIREC + mati ŽELJKO + dispenza 3. kolena ordinariat 13/1 1910 št. 159 + zglašnica [Okriblo?] št. 81!; prenesti s142+; PON-dominanca verjetno nadaljuje!).
+
+---
+Task ID: 118
+Agent: Z.ai Code (glavni)
+Task: Uskladitev README po 17 fazah zaostanka + p78 re-izdaja za novo operativno stanje (uporabnik: »odlično ushaj uredi readme in nadaljuj«)
+
+Work Log:
+- Ugotovljeno: odstavek QA v »Zadnje stanje« je obstal na P121-era (122/122, veriga p79–p120, kartice P77–P116, naslov odseka P79–P99) — 17 faz (P122–P138) brez osvežitve; Task 108 je sinhroniziral le naslov + fazne bullet-e.
+- README usklajen: QA **139/139** + veriga `p60–p67 + p70–p138` (p68 zamrznjen po C2, p69 izven verige, p78 re-izdan — Task 118) + qa-seznam kompaktno (qa-p79 vzorec + qa-p80/81 knjige/ime + qa-p82…p114 krstna 1887–1919 + qa-p115…p138 poročna 1886–1909 = 60 kontrol); kartice P77–P138; naslov odseka + kazalo sidro P79–P138; župnijski uvod dopolnjen (poročna linija 1886–1909, korpus 659/142/135/67/13); zrcaljenje-aktualno dopolnjeno s Tasks 104–118 (P129–P134 GitLab zaostanek ~8 commitov → Task 112 žetona → P135–P138 trojna 1:1 = 15. potrditev).
+- p78 RE-IZDAJA — dve veliki novi stanji odkriti z live-probo:
+  * ① GitLab mirror PREMAKNJEN: markec-group1/muzej (87462760) umaknjen (API 404) → robert.pezdirc12/muzej (87313303, main = 4a88006, dostopen prek PAT #4; sync.yml zelen na novi poti).
+  * ② GitHub Actions BLOKADA RAZREŠENA (~2026-10-24, lastniška sanacija Billing & plans): sync.yml uspešen na pushu 4a88006 (run 40124290195, 8 korakov) + token-health.yml watchdog uspešen (run 40087832112) — P78-era opozorilo o mrtem watchdogu UMIKA.
+- p78 popravki kode: gh_token()/gitlab_pat() credential-store fallback (postavitev Task 103+: origin = github brez žetona v URL-ju; regex ghp_/glpat- + ~/.git-credentials), ls_remote_url po eksplicitnih URL-jih (GIT_TERMINAL_PROMPT=0), I5 pini na PAT #4 »sdarg« (id 28762432, rok 2026-11-23), I6 → 87313303, verdict/impact/ownerActions/timeline usklajeni (billing ✅ IZPOLNJENO; edina odprta točka = VERCEL_TOKEN rezerva), stable_core: + pop runnerId (nova doba Actions ŽIV — vsak push nov sync run; vzorec lekcije b24b173).
+- eslint ignore .p126tmp (gitignored delovni imenik s fetch-skriptami je onesnaževal lint z 11 napakami/952 opozorili; bun run lint ponovno exit 0, 3 znane BABEL opombe).
+- Verifikacije: runQA 139/139 ok:True + veriga 76 skript --check PASS (p60–p78 = 16 + p79–p138 = 60; p79 exit 0 z lastnim formatom izpisa) + tsc 0 + lint 0 + p78 --check PASS (tudi čez push — dokaz iz 4a88006 drži na 01cf55f!).
+- Commit 01cf55f (4 datoteke, +149/−95) → GitHub push (4a88006..01cf55f) + GitLab push (4a88006..01cf55f, prvi poskus; ls-remote 403 = prehoden WAF — API potrdil main = 01cf55f) + Vercel: success (Deployment has completed) + produkcija /api/qa 139/139 ok:True + qa-p138 True = **16. potrditev avtor-epošte**.
+
+Stage Summary:
+- **README POLNO USKLAJEN po 17 fazah (QA 139/139, veriga p60–p138 = 76 PASS, kartice P77–P138, odsek P79–P138, zrcaljenje Tasks 104–118); p78 re-izdan z novim stanjem (GitLab mirror robert.pezdirc12/muzej 87313303 + Actions RAZREŠEN — sync + watchdog zeleni!).**
+- **TROJNA SINHRONIZACIJA 1:1: GitHub 01cf55f + GitLab 01cf55f (API) + Vercel success (16. potrditev).**
+- ODPRTO: VERCEL_TOKEN (rezerva deploy, potekel 2026-10-14) — edina preostala lastniška akcija; GITLAB_TOKEN skrivnost v Actions še drži PAT #3 (rok 2026-11-14 — ob rotaciji osvežiti, ni nujno dokler Actions sync deluje z njo).
+- NASLEDNJI KORAK: P139 — poročna 1910 (№1 na s141: JAKOBČIČ? × JAKOBČIČ? INTRA-PRIIMEK + mati PEZDIREC + mati ŽELJKO + dispenza 3. kolena ordinariat 13/1 1910 št. 159 + zglašnica št. 81!; prenesti s142+).

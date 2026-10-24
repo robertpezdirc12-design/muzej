@@ -456,6 +456,11 @@ def stable_core(d):
             p.pop("runId", None)
             p.pop("createdAt", None)
             p.pop("event", None)
+            # runnerId = metapodatek RUN-a (nova doba: Actions ŽIV od 2026-10-24,
+            # vsak push sproži nov sync run z novim runnerjem — vzorec lekcije
+            # b24b173 za sha pin: jedro pina ZDRAVJE (conclusion/steps), ne
+            # identiteto posameznega zagona)
+            p.pop("runnerId", None)
     m = d2.get("mirrors")
     if isinstance(m, dict):
         g, h, l = m.get("gitlabMain"), m.get("githubMain"), m.get("localHead")
