@@ -2,18 +2,18 @@
   "phase": "P78",
   "title": "Produkcija & žetoni: operativni zdravstveni audit (issue #6)",
   "status": "OPERATIONAL-AUDIT",
-  "issuedAt": "2026-10-16T20:25:40Z",
+  "issuedAt": "2026-10-24T19:56:39Z",
   "vercel": {
     "home": {
       "http": 200,
-      "bytes": 745763
+      "bytes": 1055035
     },
     "qa": {
       "http": 200,
       "ok": true,
-      "passed": 89,
+      "passed": 139,
       "failed": 0,
-      "tests": 89,
+      "tests": 139,
       "qaP76Pass": true
     },
     "geo": {
@@ -23,17 +23,17 @@
     },
     "deployArchitecture": {
       "primary": "Vercel GitHub App (brez žetona) — vsak push na main samodejno gradi produkcijo; NEODVISEN od poteka VERCEL_TOKEN",
-      "reserve": "deploy.yml (workflow_dispatch, VERCEL_TOKEN) — trenutno MRTV: žeton potekel 2026-10-14 + Actions blokada računa"
+      "reserve": "deploy.yml (workflow_dispatch, VERCEL_TOKEN) — žeton potekel 2026-10-14 (Actions blokada računa RAZREŠENA 2026-10-24; rezerva čaka le še na nov VERCEL_TOKEN)"
     }
   },
   "gitlab": {
     "pat": {
       "http": 200,
-      "id": 28471532,
-      "name": "dsfsd",
+      "id": 28762432,
+      "name": "sdarg",
       "active": true,
       "revoked": false,
-      "expiresAt": "2026-11-14",
+      "expiresAt": "2026-11-23",
       "scopes": [
         "ai_features",
         "api",
@@ -55,15 +55,15 @@
     },
     "project": {
       "http": 200,
-      "id": 87462760,
-      "pathWithNamespace": "markec-group1/muzej"
+      "id": 87313303,
+      "pathWithNamespace": "robert.pezdirc12/muzej"
     }
   },
   "mirrors": {
-    "gitlabMain": "f163971f086895a401e7e35611734bde6e86d385",
-    "githubMain": "f163971f086895a401e7e35611734bde6e86d385",
-    "localHead": "f163971f086895a401e7e35611734bde6e86d385",
-    "method": "git ls-remote (GitHub REST GET /commits/main vrne 404 neavtentificirano — repozitorij zaseben; ls-remote z žetonom iz remote URL)"
+    "gitlabMain": "4a88006018a7b343ee70472bf101a744f0024627",
+    "githubMain": "4a88006018a7b343ee70472bf101a744f0024627",
+    "localHead": "4a88006018a7b343ee70472bf101a744f0024627",
+    "method": "git ls-remote po eksplicitnem URL-ju (Task 103+: origin = github brez žetona v URL-ju, žetona iz credential store; GitHub REST GET /commits/main vrne 404 neavtentificirano — repozitorij zaseben)"
   },
   "workflowsPresent": {
     "build-check.yml": true,
@@ -73,41 +73,39 @@
   },
   "actions": {
     "probes": {
-      "billingBlocked": true,
-      "annotation": "The job was not started because recent account payments have failed or your spending limit needs to be increased. Please check the 'Billing & plans' section in your settings",
+      "billingBlocked": false,
+      "annotation": null,
       "syncLatest": {
-        "runId": 38958537114,
-        "createdAt": "2026-10-16T19:56:03Z",
+        "runId": 40124290195,
+        "createdAt": "2026-10-24T19:13:14Z",
         "event": "push",
-        "conclusion": "failure",
-        "jobConclusion": "failure",
-        "steps": 0,
-        "runnerId": 0,
-        "annotation": "The job was not started because recent account payments have failed or your spending limit needs to be increased. Please check the 'Billing & plans' section in your settings"
+        "conclusion": "success",
+        "jobConclusion": "success",
+        "steps": 8,
+        "runnerId": 1000002806
       },
       "tokenHealthLatest": {
-        "runId": 38893034910,
-        "createdAt": "2026-10-16T11:19:42Z",
+        "runId": 40087832112,
+        "createdAt": "2026-10-24T10:55:35Z",
         "event": "schedule",
-        "conclusion": "failure",
-        "jobConclusion": "failure",
-        "steps": 0,
-        "runnerId": 0,
-        "annotation": "The job was not started because recent account payments have failed or your spending limit needs to be increased. Please check the 'Billing & plans' section in your settings"
+        "conclusion": "success",
+        "jobConclusion": "success",
+        "steps": 5,
+        "runnerId": 1000002786
       }
     },
-    "billingBlocked": true,
-    "authoritativeAnnotation": "The job was not started because recent account payments have failed or your spending limit needs to be increased. Please check the 'Billing & plans' section in your settings",
+    "billingBlocked": false,
+    "authoritativeAnnotation": null,
     "timeline": {
-      "syncLastSuccess": "2026-10-11T06:23:19Z",
+      "syncLastSuccess": "2026-10-24T19:13Z (run 40124290195, push 4a88006 — prvi zeleni po sanaciji billinga)",
       "watchdogLastBotAlert": "2026-10-11T17:21:20Z (issue #6)",
-      "watchdogBlindFrom": "~2026-10-13 (od takrat naprej jobi brez korakov — opozoril 10-13/14/15 NI bilo, četudi je VERCEL_TOKEN potekel 2026-10-14)",
+      "watchdogBlindFrom": "~2026-10-13 do ~2026-10-24 (jobi brez korakov — opozoril 10-13/14/15 NI bilo, četudi je VERCEL_TOKEN potekel 2026-10-14; od sanacije billinga 2026-10-24 watchdog spet zelen — run 40087832112)",
       "deployReserveLastSuccess": "2026-10-11T06:12:27Z"
     },
     "impact": {
-      "sync.yml": "dvosmerna sinhronizacija (mreža varnosti) mrtva — operativno neškodljivo, dokler glavni agent puša na OBE strani (P21 disciplina)",
-      "token-health.yml": "dnevni watchdog žetonov mrtav — mehka točka; ročni audit P78 jo nadomešča do sanacije",
-      "deploy.yml": "rezervni deploy mrtav (dvojni razlog: žeton potekel + blokada) — primarna pot NEODVISNA"
+      "sync.yml": "dvosmerna sinhronizacija (mreža varnosti) — ✅ ZELENA od sanacije billinga 2026-10-24 (prej mrtva; P21 disciplina obeh strani je meditem pokrivala ročna pusha)",
+      "token-health.yml": "dnevni watchdog žetonov — ✅ ZELEN od 2026-10-24 (prej mrtva točka; ročni audit P78/Task 118 jo je medtem nadomeščal)",
+      "deploy.yml": "rezervni deploy mrtav (žeton VERCEL_TOKEN potekel 2026-10-14; blokada računa RAZREŠENA) — primarna pot NEODVISNA"
     }
   },
   "repair": {
@@ -123,7 +121,7 @@
   "ownerActions": [
     {
       "priority": 1,
-      "action": "GitHub → Settings → Billing & plans: plačilna metoda / spending limit (avtoritativna anotacija GitHub; brez admin:billing scope API ne more)",
+      "action": "GitHub → Settings → Billing & plans: plačilna metoda / spending limit — ✅ IZPOLNJENO ~2026-10-24 (sync.yml + token-health.yml zeleni; Task 118 potrditev)",
       "restores": "sync.yml (mreža varnosti) + token-health.yml (watchdog) + deploy.yml (rezerva)"
     },
     {
@@ -137,14 +135,14 @@
       "restores": "raziskovalna nadaljevanja P79+"
     }
   ],
-  "verdict": "PRODUKCIJA ZDRAVA in AKTUALNA (velikost odgovora == zadnji deploy; QA zelena — ok, 0 napak, ≥ 79 kontrol, qa-p76 True); zrcala bajtno identična (GitLab = GitHub = lokalna); GitLab PAT #3 AKTIVEN (rok AVTORITATIVNO 2026-11-14 — prej navajan 2026-11-09 v naslovu issue #6 je bil stari žeton). GitHub Actions NA RAČUNU BLOKIRAN (billing) — trajna lastniška akcija; skrivnost GITLAB_TOKEN sanirana v P78; VERCEL_TOKEN potekel (rezerva).",
+  "verdict": "PRODUKCIJA ZDRAVA in AKTUALNA (velikost odgovora == zadnji deploy; QA zelena — ok, 0 napak, ≥ 79 kontrol, qa-p76 True); zrcala bajtno identična (GitLab = GitHub = lokalna); GitLab PAT #4 »sdarg« AKTIVEN (rok 2026-11-23; rotacija po P128 — PAT #3 »dsfsd« rok 2026-11-14 umirjen; Task 112); GitLab mirror PREMAKNJEN (Task 118): markec-group1/muzej (87462760) umaknjen → robert.pezdirc12/muzej (87313303) — sync.yml zelen na novi poti; GitHub Actions BLOKADA RAZREŠENA (~2026-10-24, lastniška sanacija Billing & plans): sync.yml uspešen na pushu 4a88006 (run 40124290195, 8 korakov) + token-health.yml watchdog uspešen — P78-era opozorilo o mrtem watchdogu umika; skrivnost GITLAB_TOKEN sanirana v P78 na PAT #3 (deluje, dokler ne preteče 2026-11-14 — ob rotaciji osvežiti); VERCEL_TOKEN potekel (rezerva).",
   "invariants": {
     "I1_vercel_200": true,
     "I2_qa_green": true,
     "I3_qa_p76_pass": true,
     "I4_geo_v7_891": true,
     "I5_pat_active": true,
-    "I6_project_87462760": true,
+    "I6_project_87313303": true,
     "I7_mirrors_identical": true,
     "I8_actions_state_consistent": true,
     "I9_workflows_present": true

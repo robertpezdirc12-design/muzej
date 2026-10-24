@@ -44,6 +44,7 @@
 
 import json
 import os
+import re
 import subprocess
 import sys
 import time
@@ -65,15 +66,15 @@ GH_REPO = "robertpezdirc12-design/muzej"
 EXPECTED_QA_MIN_PASSED = 79
 QA_P76_ID = "qa-p76-sections-perblatt"
 EXPECTED_GEO = {"version": 7, "rows": 891}
-EXPECTED_PAT_ID = 28471532
-EXPECTED_PAT_NAME = "dsfsd"
-EXPECTED_PAT_EXPIRES = "2026-11-14"
+EXPECTED_PAT_ID = 28762432
+EXPECTED_PAT_NAME = "sdarg"
+EXPECTED_PAT_EXPIRES = "2026-11-23"
 EXPECTED_SCOPES = {"api", "write_repository", "read_repository", "self_rotate"}
-PROJECT_ID = 87462760
-PROJECT_PATH = "markec-group1/muzej"
+PROJECT_ID = 87313303
+PROJECT_PATH = "robert.pezdirc12/muzej"
 BILLING_TOKEN = "recent account payments have failed or your spending limit"
 WORKFLOWS = ["build-check.yml", "deploy.yml", "sync.yml", "token-health.yml"]
-SYNC_LAST_SUCCESS = "2026-10-11T06:23:19Z"
+SYNC_LAST_SUCCESS = "2026-10-24T19:13Z (run 40124290195, push 4a88006 — prvi zeleni po sanaciji billinga)"
 
 # sanacija skrivnosti GITLAB_TOKEN (P78, enkratna akcija — NE del --check)
 REPAIR = {
@@ -97,18 +98,46 @@ REPAIR = {
 }
 
 
+GITHUB_GIT_URL = "https://github.com/robertpezdirc12-design/muzej.git"
+GITLAB_GIT_URL = "https://gitlab.com/robert.pezdirc12/muzej.git"
+
+
+def _cred_store_token(host):
+    """Žeton iz ~/.git-credentials (credential.helper=store; postavitev
+    Task 103+/112: origin = github BREZ žetona v URL-ju, remote 'github'
+    ne obstaja več — žetona živita v credential store)."""
+    path = os.path.expanduser("~/.git-credentials")
+    try:
+        for line in open(path, encoding="utf-8"):
+            line = line.strip()
+            if host in line and "://" in line and "@" in line:
+                cred = line.split("://", 1)[1]
+                return cred.split(":", 1)[1].split("@", 1)[0]
+    except OSError:
+        pass
+    return ""
+
+
 def gh_token():
+    # 1. stara postavitev (≤ Task 102): žeton v URL-ju remote-a 'github'
     url = subprocess.run(["git", "remote", "get-url", "github"],
                          cwd=REPO, capture_output=True, text=True).stdout
-    return url.split(":")[-1].split("@")[0]
+    m = re.search(r"ghp_[A-Za-z0-9]+", url)
+    if m:
+        return m.group(0)
+    # 2. nova postavitev (Task 103+): credential store
+    return _cred_store_token("github.com")
 
 
 def gitlab_pat():
+    # 1. stara postavitev (≤ Task 102): žeton v URL-ju remote-a 'origin'
     url = subprocess.run(["git", "remote", "get-url", "origin"],
                          cwd=REPO, capture_output=True, text=True).stdout
-    i = url.find("glpat-")
-    j = url.find("@", i)
-    return url[i:j]
+    m = re.search(r"glpat-[A-Za-z0-9_.-]+", url)
+    if m:
+        return m.group(0)
+    # 2. nova postavitev: credential store
+    return _cred_store_token("gitlab.com")
 
 
 def http_get(url, headers, tries=5):
@@ -133,11 +162,15 @@ def http_get(url, headers, tries=5):
     return last
 
 
-def ls_remote(remote, ref="main"):
-    """ls-remote z retry (transport lahko stohastično pade, kot GitLab WAF)."""
+def ls_remote_url(url, ref="main"):
+    """ls-remote po eksplicitnem URL-ju (Task 103+: origin = github,
+    remote 'gitlab' ne obstaja — žeton prek credential helperja store;
+    GIT_TERMINAL_PROMPT=0: brez interaktivnega obeska ob napaki)."""
+    env = dict(os.environ, GIT_TERMINAL_PROMPT="0")
     for i in range(4):
-        out = subprocess.run(["git", "ls-remote", remote, ref],
-                             cwd=REPO, capture_output=True, text=True)
+        out = subprocess.run(["git", "ls-remote", url, ref],
+                             cwd=REPO, capture_output=True, text=True,
+                             env=env)
         if out.stdout.strip():
             return out.stdout.split()[0]
         time.sleep(4 * (i + 1))
@@ -259,12 +292,14 @@ def build_dokaz():
     home, qa, geo = probe_vercel()
     pat, project = probe_gitlab()
     actions = probe_actions()
-    mirrors = {"gitlabMain": ls_remote("origin"),
-               "githubMain": ls_remote("github"),
+    mirrors = {"gitlabMain": ls_remote_url(GITLAB_GIT_URL),
+               "githubMain": ls_remote_url(GITHUB_GIT_URL),
                "localHead": head_sha(),
-               "method": ("git ls-remote (GitHub REST GET /commits/main "
+               "method": ("git ls-remote po eksplicitnem URL-ju (Task 103+: "
+                          "origin = github brez žetona v URL-ju, žetona iz "
+                          "credential store; GitHub REST GET /commits/main "
                           "vrne 404 neavtentificirano — repozitorij "
-                          "zaseben; ls-remote z žetonom iz remote URL)")}
+                          "zaseben)")}
     wf_present = {w: os.path.exists(
         os.path.join(REPO, ".github", "workflows", w)) for w in WORKFLOWS}
 
@@ -282,8 +317,9 @@ def build_dokaz():
                             "na main samodejno gradi produkcijo; NEODVISEN "
                             "od poteka VERCEL_TOKEN"),
                 "reserve": ("deploy.yml (workflow_dispatch, VERCEL_TOKEN) "
-                            "— trenutno MRTV: žeton potekel 2026-10-14 + "
-                            "Actions blokada računa"),
+                            "— žeton potekel 2026-10-14 (Actions blokada "
+                            "računa RAZREŠENA 2026-10-24; rezerva čaka le še "
+                            "na nov VERCEL_TOKEN)"),
             },
         },
         "gitlab": {"pat": pat, "project": project},
@@ -296,29 +332,35 @@ def build_dokaz():
             "timeline": {
                 "syncLastSuccess": SYNC_LAST_SUCCESS,
                 "watchdogLastBotAlert": "2026-10-11T17:21:20Z (issue #6)",
-                "watchdogBlindFrom": ("~2026-10-13 (od takrat naprej jobi brez "
-                                      "korakov — opozoril 10-13/14/15 NI bilo, "
-                                      "četudi je VERCEL_TOKEN potekel "
-                                      "2026-10-14)"),
+                "watchdogBlindFrom": ("~2026-10-13 do ~2026-10-24 (jobi "
+                                      "brez korakov — opozoril 10-13/14/15 "
+                                      "NI bilo, četudi je VERCEL_TOKEN "
+                                      "potekel 2026-10-14; od sanacije "
+                                      "billinga 2026-10-24 watchdog spet "
+                                      "zelen — run 40087832112)"),
                 "deployReserveLastSuccess": "2026-10-11T06:12:27Z",
             },
             "impact": {
-                "sync.yml": ("dvosmerna sinhronizacija (mreža varnosti) mrtva "
-                             "— operativno neškodljivo, dokler glavni agent "
-                             "puša na OBE strani (P21 disciplina)"),
-                "token-health.yml": ("dnevni watchdog žetonov mrtav — mehka "
-                                     "točka; ročni audit P78 jo nadomešča "
-                                     "do sanacije"),
-                "deploy.yml": ("rezervni deploy mrtav (dvojni razlog: žeton "
-                               "potekel + blokada) — primarna pot NEODVISNA"),
+                "sync.yml": ("dvosmerna sinhronizacija (mreža varnosti) "
+                             "— ✅ ZELENA od sanacije billinga 2026-10-24 "
+                             "(prej mrtva; P21 disciplina obeh strani je "
+                             "meditem pokrivala ročna pusha)"),
+                "token-health.yml": ("dnevni watchdog žetonov — ✅ ZELEN "
+                                     "od 2026-10-24 (prej mrtva točka; ročni "
+                                     "audit P78/Task 118 jo je medtem "
+                                     "nadomeščal)"),
+                "deploy.yml": ("rezervni deploy mrtav (žeton VERCEL_TOKEN "
+                               "potekel 2026-10-14; blokada računa "
+                               "RAZREŠENA) — primarna pot NEODVISNA"),
             },
         },
         "repair": REPAIR,
         "ownerActions": [
             {"priority": 1,
              "action": ("GitHub → Settings → Billing & plans: plačilna "
-                        "metoda / spending limit (avtoritativna anotacija "
-                        "GitHub; brez admin:billing scope API ne more)"),
+                        "metoda / spending limit — ✅ IZPOLNJENO "
+                        "~2026-10-24 (sync.yml + token-health.yml zeleni; "
+                        "Task 118 potrditev)"),
              "restores": ("sync.yml (mreža varnosti) + token-health.yml "
                           "(watchdog) + deploy.yml (rezerva)")},
             {"priority": 2,
@@ -337,11 +379,18 @@ def build_dokaz():
                     "deploy; QA zelena — ok, 0 napak, ≥ "
                     f"{EXPECTED_QA_MIN_PASSED} kontrol, qa-p76 True); zrcala "
                     "bajtno identična (GitLab = GitHub = lokalna); GitLab "
-                    "PAT #3 AKTIVEN (rok AVTORITATIVNO 2026-11-14 — prej "
-                    "navajan 2026-11-09 v naslovu issue #6 je bil stari "
-                    "žeton). GitHub Actions NA RAČUNU BLOKIRAN (billing) — "
-                    "trajna lastniška akcija; skrivnost GITLAB_TOKEN "
-                    "sanirana v P78; VERCEL_TOKEN potekel (rezerva)."),
+                    "PAT #4 »sdarg« AKTIVEN (rok 2026-11-23; rotacija po "
+                    "P128 — PAT #3 »dsfsd« rok 2026-11-14 umirjen; Task "
+                    "112); GitLab mirror PREMAKNJEN (Task 118): "
+                    "markec-group1/muzej (87462760) umaknjen → robert.pezdirc12/"
+                    "muzej (87313303) — sync.yml zelen na novi poti; "
+                    "GitHub Actions BLOKADA RAZREŠENA (~2026-10-24, lastniška "
+                    "sanacija Billing & plans): sync.yml uspešen na pushu "
+                    "4a88006 (run 40124290195, 8 korakov) + token-health.yml "
+                    "watchdog uspešen — P78-era opozorilo o mrtem watchdogu "
+                    "umika; skrivnost GITLAB_TOKEN sanirana v P78 na PAT #3 "
+                    "(deluje, dokler ne preteče 2026-11-14 — ob rotaciji "
+                    "osvežiti); VERCEL_TOKEN potekel (rezerva)."),
         "invariants": {},
     }
 
@@ -363,7 +412,7 @@ def build_dokaz():
                           and pat.get("name") == EXPECTED_PAT_NAME
                           and pat.get("expiresAt") == EXPECTED_PAT_EXPIRES
                           and EXPECTED_SCOPES.issubset(set(pat.get("scopes", [])))),
-        "I6_project_87462760": (project.get("http") == 200
+        "I6_project_87313303": (project.get("http") == 200
                                 and project.get("id") == PROJECT_ID
                                 and project.get("pathWithNamespace")
                                 == PROJECT_PATH),
