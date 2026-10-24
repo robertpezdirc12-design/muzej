@@ -6079,3 +6079,30 @@ Stage Summary:
 - **TROJNA SINHRONIZACIJA 1:1: GitHub 01cf55f + GitLab 01cf55f (API) + Vercel success (16. potrditev).**
 - ODPRTO: VERCEL_TOKEN (rezerva deploy, potekel 2026-10-14) — edina preostala lastniška akcija; GITLAB_TOKEN skrivnost v Actions še drži PAT #3 (rok 2026-11-14 — ob rotaciji osvežiti, ni nujno dokler Actions sync deluje z njo).
 - NASLEDNJI KORAK: P139 — poročna 1910 (№1 na s141: JAKOBČIČ? × JAKOBČIČ? INTRA-PRIIMEK + mati PEZDIREC + mati ŽELJKO + dispenza 3. kolena ordinariat 13/1 1910 št. 159 + zglašnica št. 81!; prenesti s142+).
+
+---
+Task ID: 120
+Agent: Z.ai Code (glavni)
+Task: P139 — poročna knjiga 04455, polno leto 1910: 2. krog zoomov (8 VERIF točk + GRID-tehnika!) + produkcija + trojna sinhronizacija (uporabnik: »odlično pushaj github gitlab vercel in nadaljuj / posodobi readme«)
+
+Work Log:
+- Verifikacija trojne sinhronizacije 2f7a93b (Task 118/119 zaključek): GitHub ✓ + GitLab ✓ (push »Everything up-to-date« — sync.yml AVTOMATSKO zrcalil! 4. zaporedni uspešni run) + produkcija 139/139 ŽIV.
+- Task 119 README zrcaljenje-note (17. potrditev + avtomatsko ogledalo) → commit 7c4392d → GitHub + GitLab push (1. poskus!) + Vercel success = 18. potrditev.
+- P139 2. krog (nadaljevanje Task 10 kickoffa): 55+ fini branj multi-render (o/i/d) prek API-route spawn tehnike (p139-read route — proces preživi tool-call meje!).
+- VSE 8 VERIF točk razrešene: №14 hiši (ž 36/85/17→**h86** GRID-definitivno 8=zaprti zanki+6=ascender; n 11/21/41/14→**h31** grid+korpus Janez Straus × Barbara Jakobič 1897!) · №4 starost 14→**18** (1+8!) · №10 Andreas→**ALFONS** (A-l-f-o-n-s 8×!) · №9 Schwaiger→**VRHOVSKA VAS 24** · №18 ženin Filovje→**KRASINEC 30** (Filovje 29 = NEVESTA!) · №2 Gneuf→**GRAF** (9× zoom) · №19 starši (Mathias Žephar × Anna Petrašič / Mathias Tome × [Simonič?]) · №1 dispenza št. [~ 159/359/138/239].
+- ★★ PREBOJ — GRID-TEHNIKA: rdeče navpične črte z x-oznakami + modre vodoravne z y-oznakami na 4× povečavi → VLM prostorsko preslika bloke → VSE hišne številke razrešene! + GEOMETRIJSKA LEKCIJA: REZIDENCA JE PRED IMENOM V BLOKU (prva generacija izrezov x 330–650 je ujela STAROST/ULOMEK namesto hiše — 7 POPRAVKOV 2. kroga!).
+- Korpus-forenzika: h13 1885 (Janez Jakobič — ISTA starža Mathias × Maria Pezdirec = 25-letna kontinuiteta!) · h6 Željko-botri 1904/05 (= nevestina mati!) · h85 Marko Križan × Marija Strauš 1888 (№14 ženinov rod!) · h31 1897 Janez Straus × Barbara Jakobič (№14 starša!) · h8 1912 Jakofčič × Neza JAKLJEVIČ (nevestin priimek že na h8!).
+- №-stolpci pasovno potrjeni (s142 №2–6 · s143 №7–10 · s144 №11–14 · s145 №15–19 = 19 skupaj).
+- Produkcija: evidence parish-marriage-1910.json (19 entries + 20 crossChecks + 18 anomalij + honesty 7) + notes + parish.ts +5 blokov (h13+h6+h86+h31+h8) + qa-p139 (140. kontrola) + skripta p139 (60/60 PASS).
+- Pini: HOUSE_VITALS 659→664 ×54 · bloki 142→147 ×25 · sidra 135→140 (+1910:5) · p80 67→68 (+h86 — 04105-h86 bloki 1912+ niso v p80All filtru!) · PT 13 nespremenjena (h86 v naboru 61–99).
+- Ugotovljena+popravljena aritmetična napaka: razcek 12 PON + 7 NED → **13 PON + 6 NED** (100% vikend nedotaknjeno!).
+- ★ REGRESIJSKA-REPARATURA BONUS (dolg 30 → 12 skript!): p80 --check SKUPAJ PASS (I7: 578/57-era pini → 664/71 + h41/h50 izjemi — skriptin filter VES 1897 se razlikuje od qa-parish p80All!) + p105+p113 PASS (BLOCKS_04105 464/491-era → 502) + p114 (659-števec → 664) + p85–p96 števci usklajeni (repeat/new era-kalibracija ostaja — edini dolg; era-univerza ni rekonstruibljiva iz let brez faznih snapshotov).
+- Verifikacije: runQA **140/140 ok:True** + tsc 0 + lint 0 + p115–p139 VSE 100% PASS (25 skript!) + veriga p60–p139: 55 PASS + 12 dolg + 0 novih.
+- Commit 5bc5255 (52 datotek, +337/−210) → GitHub push (7c4392d..5bc5255) + GitLab push (1. poskus!) + Vercel: success + **produkcija 140/140 ok:True + qa-p139-parish-marriage-1910 True (1. poll!) + homepage 200 (1 061 829 B) = 19. zaporedna potrditev avtor-epošte**.
+
+Stage Summary:
+- **P139 POLNO ZAKLJUČEN IN TROJNO SINHRONIZIRAN: 1910 = 19 vpisov; ★★★ №1 INTRA-GRIBLJE INTRA-PRIIMEK h13 × h6 (2 × JAKOBČIČ + dispenza št. 159 [~] + stricevski dvojček + 25-letna kontinuiteta!) · ★★★ №14 GRIBLJE × GRIBLJE h86 NOVA HIŠA × h31 + DVOJNA ZAPREKA (št. 2058 + 12448!) · ★★ 24. 1. ×5 MASA-DAN REKORD + 13 PON + 6 NED = 100% VIKEND · ★★ №17 nevesta 16 let + deželna vlada št. 18796 · ★★ №3+№4 dvojna poroka sorojencev Dragoš! · korpus 664 vitals / 147 blokov / 140 sider / p80 68 (+h86) / PT 13.**
+- **TROJNA SINHRONIZACIJA 1:1: GitHub 5bc5255 + GitLab 5bc5255 + Vercel success (140/140 ŽIV — 19. potrditev).**
+- METODA-PREBOJ: GRID-TEHNIKA + korpus-forenzika + multi-render — 7 popravkov 2. kroga dokumentiranih (honesty!).
+- ZGODOVINSKI DOLG ZMANJŠAN: p80 + p105–p113 + p114 SANIRANI (30 → 12 rdečih; ostaja samo p85–p96 I10 era-kalibracija repeat/new — kandidat za ločeno nalogo z faznimi snapshoti).
+- NASLEDNJI KORAK: P140 — poročna 1911 (№1–7 na s146: 30.1.–19.6. 1911!; prenesti s147+; P140-lead iz P139 meje).
