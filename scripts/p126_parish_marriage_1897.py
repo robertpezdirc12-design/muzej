@@ -56,7 +56,7 @@ GRIBLJE_BLOCKS = 9             # h8 + h40×2 + h29 + h18 + h27 + h39 + h33 + h28
 RAUY_COUNT = 17                # 17/18 — v1 Hofstetter (2. prekinitev)
 UNGARN_COUNT = 8               # REKORD (P124/P125: ×4)
 VITALS = 587                   # 578 (P126) + 9 blokov 1898
-BLOCKS_04455 = 147               # 61 (P126) + 9 blokov 1898 (P127) + 2 bloka 1900 (P129)
+BLOCKS_04455 = 153               # 61 (P126) + 9 blokov 1898 (P127) + 2 bloka 1900 (P129)
 P80_HOUSES = 52                # 51 (P125) + h28 EDINA NOVA
 P80_PT_GAP = 10                # nespremenjeno
 RAZPORED = {101: 3, 102: 7, 103: 5, 104: 3}
@@ -360,12 +360,12 @@ def main() -> int:
     qa = open(QA_TS).read()
     check("I9 qa-p126", '"qa-p126-parish-marriage-1897"' in qa)
     check("I9b p80 bloki 78", "poročni vpisi (04455) ≠ 142" in qa)
-    check("I9c p80 sidra 71 (1897×9 + 1898×9 · 1899×6 · 1900×2)", "poročna sidra ≠ 140" in qa)
+    check("I9c p80 sidra 71 (1897×9 + 1898×9 · 1899×6 · 1900×2)", "poročna sidra ≠ 146" in qa)
     check("I9d p80 hiše 1897 = [8,18,27,28,29,33,39,40×2]",
           "hiše 1897 (04455) ≠ [8,18,27,28,29,33,39,40×2]" in qa)
-    check("I9e p80 hiše 58 (+6 NOVIH 1898 — P127!)", "različnih hiš (vse tri knjige) ≠ 68" in qa)
+    check("I9e p80 hiše 58 (+6 NOVIH 1898 — P127!)", "različnih hiš (vse tri knjige) ≠ 69" in qa)
     check("I9f PT luknja 12 (+h46/h48 — P127!)", "PT luknja ≠ 13 hiš" in qa)
-    check("I9g vitals 637 zaščita (P128)", "HOUSE_VITALS.length !== 664" in qa)
+    check("I9g vitals 637 zaščita (P128)", "HOUSE_VITALS.length !== 670" in qa)
     check("I9h Rauy 1897 bloki ×9 zaščita", "Rauy podpisi 1897 blokov ≠ 9" in qa)
     check("I9i stari 537/544/548/550/554/559/563/566/569 iztekla",
           "HOUSE_VITALS.length !== 537" not in qa and "HOUSE_VITALS.length !== 544" not in qa

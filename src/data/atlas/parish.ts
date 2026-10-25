@@ -2269,6 +2269,97 @@ export const HOUSE_VITALS: HouseVital[] = [
     status: "DOCUMENTED",
   },
 
+  // ——— P140 razširitev: POROČNA KNJIGA 04455 — polno leto 1911 (skeni
+  // s146–s148 == Pag. 145–147; letnica V VSAKEM vpisu — brez letne glave
+  // [3. leto lekcije]; 26. leto poročne linije P115=1886 → P140=1911)
+  // — 13 vpisov (№1–6 s146 + №7–11 s147 + №12–13 s148; štetje potrjeno s
+  // STRIP-tehniko [celi datumski stolpec] + zaporednimi branjí + GRID-№):
+  // ★★★ №7 ZGODOVINSKA DUNAJSKA POROKA: Julius BETETTO k.k. Hofopern-Sänger
+  // (25, Wien IV/8 Wallergasse 3/11) × Irma-Maria STUKELY (19, Rudolfsheim
+  // 132) — 4. 7. 1911 TOR (EDINA nevikend leta: 8 PON + 4 NED + 1 TOR!) +
+  // listine pri Standesamt Rudolfsheim + RAUY PER DELEGATIONEM (1. podpis
+  // po delegaciji!) + mati Julia SKRBEC (slovenske korenine dunajskega
+  // zvezdnika!) + ★★★ ISTA-HIŠA REKORD ×3 (№6 Podzemelj 2 + №8 Vranoviči 3 +
+  // №11 Gradac 3 — prejšnji maks 1/leto!) + ★★ INTRA-GRIBLJE ×2 (№1 h31 × h63
+  // + №2 h15 × h34 — rekord z 1910) + ★★ №1 REHABILITACIJSKA (Katarina
+  // Križan 'samka' h63-1909 → poroka 30. 1. 1911) + №1 dvojno zunanje sidro
+  // (krst h31-1887 Janez + EMŠO-1919 'Katarina r. Herian por. 30/1 1911'!) +
+  // №8 BUTALA-SESTRI (Anna 1911 = sestra Marije 1910!) + №12 VDOVEC +
+  // korpus-sinhronizacija (krst Terezije 1912 Martin Papič × Ana Tomc h33) +
+  // №12 'Giriči' = GRIBLJE (genetska-vas 3. pojav) + MASA-DAN 6. 2. ×3 +
+  // POSTNA VRZEL 6.2.→15.5. ('15. März' zavrnjeno — sredina posta!) + novi
+  // poklici (Hofopern-Sänger! + Zuckermeister + Köppersohn + Knecht +
+  // Gemeinde-Beamter + Doltar-kovaška dinastija oče+sin) + ~20 novih
+  // priimkov (Betetto, Stukely, Skrbec, Millner, Doltar, Filetič, Malovič,
+  // Petrowic, Marovič, Zadravec, Berkopec...) + nove oblasti (Standesamt
+  // Rudolfsheim Dunaj! + župni urad Črnomelj št. 316 + ordinariat Ljubljana
+  // 7. 11. 1911 [~] + županstvo Gradac) — vpisi z Griblji (4 poroke / 6
+  // poročnih blokov: h31 №1 ženin 5. dokaz + h63 №1 nevesta NOVA 68.→69. +
+  // h15 №2 ženin + h34 №2 nevesta Kambič-dinastija + h9 №3 ženin 4.
+  // Jakobčič-hiša + h33 №12 ženin vdovec). Dokaz:
+  // research/issue17/parish-marriage-1911.json; verifikator:
+  // scripts/p140_parish_marriage_1911.py --check (I1–I11).
+  {
+    houseNo: "31",
+    bookSignature: "04455",
+    year: 1911,
+    scan: 146,
+    page: 145,
+    whatSi: "poroka (30. 1. 1911, vpis 1 — PONEDELJEK) — ženin Johann (Janez) PAPIČ, ¼ hübler, 23, ledig, GRIBLJE 31 (5. poročni dokaz h31 — 1886 Martin Papič × Margareth Straus [1.] + 1902 Maria Mulh [2.] + 1906 Paprič-WITWER × Barbara Simec [3.] + 1910 №14 nevesta Straus [4.] → 1911 ŽENIN IZ h31!; ★★ ŽENINOV KRST V KORPUSU: h31-04105 6. 9. 1887 Janez — oče Martin Papič ½ zemlj. × Margaretha Straus = starost 23 ✓ 25-LETNA KONTINUITETA STRAUS-h31!) × Catharina (Katarina) KRIŽAN [~ branjа Hrižan/Škrixan — KRIŽAN po očetu Nikolaju + h63-1909 'Katarina Križan samka' + 1919-EMŠO 'Katarina r. Herian (2.2.1887; por. 30/1 1911)' = TROJNO neodvisno sidro!], ¼ hüblerjeva hči, 23, ledig, GRIBLJE 63 (★★ h63 = NOVA POROČNA HIŠA korpusa — 68. → 69.!; 1. poročni dokaz h63; 04105-h63 1887–1909 krsti — 1909 Jožefa (12. 6.) mati 'Katarina Križan SAMKA ½ zemljaka' = NEVESTA SAMA 19 mesecev prej!); ★★ GRIBLJE × GRIBLJE poroka h31 × h63 (3. leto ZAPORED z intra-poroko: 1910 №1 h13 × h6 + №14 h86 × h31 → 1911 №1!); ★★★ REHABILITACIJSKA POROKA? [~ očetovstvo VERIF]: nevesta je 1909 kot samka vpisala hčer Jožefo — poroči se 30. 1. 1911 z Janezom Papičem; starši ženina: Martin Papič [zemljak/Wagner ~ 'foretnik?' branjе] × Margaretha geb. Straus [~ R-branjе 'Škrixan' — kontradikcija s 1886-Straus; korpus pravi Straus]; starši neveste: Nikolaus Križan ¼ Hübler (h63!) × Catharina geb. [Pečinek? ~]; priči [~ VERIF — branjе 'Joseph Branc?']; zglašnica [Griblje?] od 29. 1. 1911 [št. ~]; duhovnik Jos. Rauy",
+    whatEn: "marriage (Jan 30, 1911, entry 1 — MONDAY) — the groom Johann (Janez) PAPIČ, quarter smallholder, 23, single, GRIBLJE 31 (the 5th marriage evidence of h31 — the 1886 Martin Papič × Margareth Straus [1st] + the 1902 Maria Mulh [2nd] + the 1906 Paprič-WIDOWER × Barbara Simec [3rd] + the 1910 №14 bride Straus [4th] → 1911 A GROOM FROM h31!; ★★ THE GROOM'S BAPTISM IN THE CORPUS: h31-04105 Sep 6, 1887 Janez — the father Martin Papiç ½ smallholder × Margaretha Straus = the age 23 ✓ a 25-YEAR STRAUS-h31 CONTINUITY!) × Catharina (Katarina) KRIŽAN [~ readings Hrižan/Škrixan — KRIŽAN by the father Nikolaus + the h63-1909 'Katarina Križan a single mother' + the 1919 personal-ID 'Katarina née Herian (Feb 2, 1887; m. Jan 30, 1911)' = a TRIPLE independent anchor!], quarter smallholder's daughter, 23, single, GRIBLJE 63 (★★ h63 = A NEW MARRIAGE HOUSE of the corpus — the 68th → 69th!; the 1st marriage evidence of h63; the 04105-h63 1887–1909 baptisms — the 1909 Jožefa (Jun 12) by 'Katarina Križan A SINGLE MOTHER ½ smallholder' = THE BRIDE HERSELF 19 months earlier!); ★★ a GRIBLJE × GRIBLJE wedding h31 × h63 (the 3rd consecutive year with an intra-wedding: 1910 №1 h13 × h6 + №14 h86 × h31 → 1911 №1!); ★★★ a REHABILITATION WEDDING? [~ paternity VERIF]: the bride registered a daughter Jožefa as a single mother in 1909 — she marries Janez Papič on Jan 30, 1911; the groom's parents: Martin Papič [a smallholder/Wagner ~ the 'foretnik?' reading] × Margaretha née Straus [~ the R-reading 'Škrixan' — a contradiction with the 1886-Straus; the corpus says Straus]; the bride's parents: Nikolaus Križan ¼ Hübler (h63!) × Catharina née [Pečinek? ~]; the witnesses [~ VERIF — the reading 'Joseph Branc?']; the banns [Griblje?] of Jan 29, 1911 [no. ~]; priest Jos. Rauy",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "63",
+    bookSignature: "04455",
+    year: 1911,
+    scan: 146,
+    page: 145,
+    whatSi: "poroka (30. 1. 1911, vpis 1 — nevesta) — Catharina KRIŽAN [~ Hrižan/Škrixan branjа; KRIŽAN po očetu + h63-1909-samka + EMŠO-1919 trojno sidro], ¼ hüblerjeva hči, 23, ledig, GRIBLJE 63 (★★ NOVA POROČNA HIŠA korpusa — 68. → 69.! 1. poročni dokaz h63; 04105-h63: 1887/1889/1890/1892/1896/1898/1903/1909 krsti — 8 blokov IZVEN p80-filtra → h63 vstopi v p80 šele s to poroko!; 1909 'Katarina Križan samka' hči Jožefa 12. 6. 1909 = REHABILITACIJSKA poroka 19 mesecev pozneje!) × Johann (Janez) PAPIČ, ¼ hübler, 23, ledig, GRIBLJE 31 (ženinov krst h31-1887 v korpusu!); ★★ GRIBLJE × GRIBLJE h31 × h63; starši neveste: Nikolaus Križan ¼ Hübler (h63) × Catharina geb. [Pečinek? ~]; zglašnica 29. 1. 1911; duhovnik Jos. Rauy — ★ KRIŽAN-ženska mreža: №1 nevesta h63 + 1912 №1 Barbara Križan h63 (sestri? [~ P141 VERIF]) + 1905 Anna Križan h35 + 1910 №14 Marcus Križan h86!",
+    whatEn: "marriage (Jan 30, 1911, entry 1 — the bride) — Catharina KRIŽAN [~ the Hrižan/Škrixan readings; KRIŽAN by the father + the h63-1909-single-mother + the 1919 personal-ID triple anchor], quarter smallholder's daughter, 23, single, GRIBLJE 63 (★★ A NEW MARRIAGE HOUSE of the corpus — the 68th → 69th! The 1st marriage evidence of h63; the 04105-h63: the 1887/1889/1890/1892/1896/1898/1903/1909 baptisms — 8 blocks OUTSIDE the p80 filter → h63 enters p80 only through this wedding!; the 1909 'Katarina Križan a single mother' with the daughter Jožefa of Jun 12, 1909 = a REHABILITATION wedding 19 months later!) × Johann (Janez) PAPIČ, quarter smallholder, 23, single, GRIBLJE 31 (the groom's h31-1887 baptism in the corpus!); ★★ a GRIBLJE × GRIBLJE h31 × h63; the bride's parents: Nikolaus Križan ¼ Hübler (h63) × Catharina née [Pečinek? ~]; the banns of Jan 29, 1911; priest Jos. Rauy — ★ the KRIŽAN female network: the 1911 №1 bride h63 + the 1912 №1 Barbara Križan h63 (sisters? [~ P141 VERIF]) + the 1905 Anna Križan h35 + the 1910 №14 Marcus Križan h86!",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "15",
+    bookSignature: "04455",
+    year: 1911,
+    scan: 146,
+    page: 145,
+    whatSi: "poroka (6. 2. 1911, vpis 2 — PONEDELJEK, 1. od masovnega dne 6. 2. ×3!) — ženin Johann JAKLIČ [~ 1. JAKLIČ-ŽENIN v liniji; ali Jaklič/Jakljevič ista družina 1910 №7+№12?], ¼ [Hübler ~], 26, [ledig ~], GRIBLJE 15 [~ hiša 15 ali 16 — VERIF; h15 že v mrliškem vzorcu 1886 + poročni 1887] × Anna KAMBIČ, 30, GRIBLJE 34 (★★ KAMBIČ-DINASTIJA h34: 1905 №13 nevesta Maria Kambič 30 h34 + sestra isto leto → Anna 30 v 1911 = 3. KAMBIČ-NEVESTA iz h34 v 6 letih! [~ sorodstvo VERIF]); ★★ GRIBLJE × GRIBLJE poroka h15 × h34 (2. intra-vasična leta — ob №1 rekord 2 INTRA!); starši [~ vse VERIF — zmedeni branjä]: [Matthias Jaklič Wirth × Maria geb. Simec?] / [Matthias Kambič Wirth × Maria geb. Krinec/Križanec?]; priči [~ VERIF]; zglašnica občine GRIBLJE od 5. 2. 1911 št. 2; duhovnik Jos. Rauy [~]",
+    whatEn: "marriage (Feb 6, 1911, entry 2 — MONDAY, the 1st of the mass-day Feb 6 ×3!) — the groom Johann JAKLIČ [~ the 1st JAKLIČ-GROOM of the line; or the Jaklič/Jakljevič the same family as 1910 №7+№12?], quarter [smallholder ~], 26, [single ~], GRIBLJE 15 [~ house 15 or 16 — VERIF; h15 already in the 1886 death sample + the 1887 marriage] × Anna KAMBIČ, 30, GRIBLJE 34 (★★ the KAMBIČ DYNASTY h34: the 1905 №13 bride Maria Kambič 30 h34 + a sister the same year → Anna 30 in 1911 = the 3rd KAMBIČ BRIDE from h34 in 6 years! [~ kinship VERIF]); ★★ a GRIBLJE × GRIBLJE wedding h15 × h34 (the 2nd intra-village of the year — with №1 a record of 2 INTRA!); the parents [~ all VERIF — confused readings]: [Matthias Jaklič a farmer × Maria née Simec?] / [Matthias Kambič a farmer × Maria née Krinec/Križanec?]; the witnesses [~ VERIF]; the Griblje commune certificate of Feb 5, 1911 no. 2; priest Jos. Rauy [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "34",
+    bookSignature: "04455",
+    year: 1911,
+    scan: 146,
+    page: 145,
+    whatSi: "poroka (6. 2. 1911, vpis 2 — nevesta) — Anna KAMBIČ, 30, GRIBLJE 34 (★★ KAMBIČ-DINASTIJA: 1905 №13 Maria Kambič 30 + sestra isto leto → 1911 Anna 30 = 3. Kambič-nevesta iz h34 v 6 letih! h34 poročni dokazi: 1893 №16 nevesta Catharina Kambič [mati Brinc → dispens №1661!] + 1903 h34 + 1905 ×2 → 1911 = 6. poročni dokaz h34!) × Johann JAKLIČ, 26, GRIBLJE 15; ★★ GRIBLJE × GRIBLJE h15 × h34 (2. intra leta!); zglašnica Griblje 5. 2. 1911 št. 2; duhovnik Jos. Rauy — ★ KAMBIČ-ženske mreže leta: №2 nevesta h34 + №8 mati Barbara Kambič (Butala!) + [№8 mati ženina Kambič? ~] = 3 omembe!",
+    whatEn: "marriage (Feb 6, 1911, entry 2 — the bride) — Anna KAMBIČ, 30, GRIBLJE 34 (★★ the KAMBIČ DYNASTY: the 1905 №13 Maria Kambič 30 + a sister the same year → the 1911 Anna 30 = the 3rd Kambič bride from h34 in 6 years! The h34 marriage evidences: the 1893 №16 bride Catharina Kambič [the mother Brinc → the dispensation no. 1661!] + the 1903 h34 + the 1905 ×2 → 1911 = the 6th marriage evidence of h34!) × Johann JAKLIČ, 26, GRIBLJE 15; ★★ a GRIBLJE × GRIBLJE h15 × h34 (the 2nd intra of the year!); the Griblje certificate Feb 5, 1911 no. 2; priest Jos. Rauy — ★ the KAMBIČ female networks of the year: the №2 bride h34 + the №8 mother Barbara Kambič (Butala!) + [the №8 groom's mother Kambič? ~] = 3 mentions!",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "9",
+    bookSignature: "04455",
+    year: 1911,
+    scan: 146,
+    page: 145,
+    whatSi: "poroka (6. 2. 1911, vpis 3 — PONEDELJEK, 2. od masovnega dne 6. 2. ×3!) — ženin Leopold JAKOBČIČ, ¼ hüller, 25 [~ ali 21 — VERIF], ledig, GRIBLJE 9 (h9 poročni dokazi: 1894 + 1903 → 1911 = [3.-4.] dokaz h9; 4. JAKOBČIČ-hiša korpusa po h13/h6/h8 — JAKOBČIČ kontinuiteta 1885 → 1911 = 26 LET!) × Terezija KLEPEC, ½ hüblerjeva hči, 20, ledig, KRASINEC 20 [~ ali 37 — VERIF] (KLEPEC-mreža: 1886 Priložje-Jurij + 1889 Milek×Klejpec h87 + №13-1911 mati Ana Klepec = priimkovna mreža leta!); ★★ JAKOBČIČ-TROJNA MREŽA v enem vpisu: ženin Leopold + priča Michael Jakobčič + nevestina mati Marija geb. JAKOBČIČ!; starši: Georg Jakobčič ½ Hüller (h9?) × Marija geb. [Kurnik? ~ branjе 'Kurnig'] / Peter Klepec ½ Hüller (Krasinec) × Marija geb. Jakobčič; priči: Michael Jakobčič + Mathäus [Motnikov? ~ VERIF]; zglašnica [Griblje?] od 5. 2. 1911 [št. 33? ~] + [potrditev za ženina od Škoflj? ~ — cf. 1910 №2 Škofle pri Brežicah!]; duhovnik Jos. Rauy — ★ KLEPEC ×2 v letu (№3 nevesta + №13 mati ženina)",
+    whatEn: "marriage (Feb 6, 1911, entry 3 — MONDAY, the 2nd of the mass-day Feb 6 ×3!) — the groom Leopold JAKOBČIČ, quarter smallholder, 25 [~ or 21 — VERIF], single, GRIBLJE 9 (the h9 marriage evidences: the 1894 + the 1903 → 1911 = the [3rd-4th] evidence of h9; the 4th JAKOBČIČ house of the corpus after h13/h6/h8 — a JAKOBČIČ continuity 1885 → 1911 = 26 YEARS!) × Terezija KLEPEC, half smallholder's daughter, 20, single, KRASINEC 20 [~ or 37 — VERIF] (the KLEPEC network: the 1886 Priložje-Jurij + the 1889 Milek×Klejpec h87 + the 1911 №13 mother Ana Klepec = the surname network of the year!); ★★ a JAKOBČIČ TRIPLE NETWORK in one entry: the groom Leopold + the witness Michael Jakobčič + the bride's mother Marija née JAKOBČIČ!; parents: Georg Jakobčič ½ Hüller (h9?) × Marija née [Kurnik? ~ the 'Kurnig' reading] / Peter Klepec ½ Hüller (Krasinec) × Marija née Jakobčič; the witnesses: Michael Jakobčič + Mathäus [Motnikov? ~ VERIF]; the banns [Griblje?] of Feb 5, 1911 [no. 33? ~] + [a confirmation for the groom from Škoflje? ~ — cf. the 1910 №2 Škofle pri Brežicah!]; priest Jos. Rauy — ★ KLEPEC ×2 in the year (the №3 bride + the №13 groom's mother)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "33",
+    bookSignature: "04455",
+    year: 1911,
+    scan: 148,
+    page: 147,
+    whatSi: "poroka (5. 11. 1911, vpis 12 — NEDELJA) — ženin Martin PAPIČ, Knecht (hlapec!), ~42 [b. ~1869], WITWER (★★★ VDOVEC — 1. vdovec po 1910-№18!), GRIBLJE 33 (★ 'Giriči 33' branjе = GENETSKA-GRIBLJE lekcija 3. pojav [04105-1911 'Grišice'→Griblje 3]!; h33-DEHLIČ era 1888/1897/1908 poroke → PAPIČ-družina na h33 od ~1909; 4. poročni dokaz h33) × Ana TOMEC, ~23 [b. ~1888], ledig, KRIVOGLAVE 30 [~ branjа Krivoglavice/Hrušovlje — VERIF; 1. vpis vasi Krivoglave v poročni knjigi!]; ★★★ KORPUS-SINHRONIZACIJA: 04105-h33 krst Terezije 5. 10. 1912 — oče Martin Papič ¾ zemljak × mati ANA TOMC = PAR POTRDJEN z neodvisnim krstom 11 mesecev po poroki!; ★★ VDOVČEV PRVI ZAKON: Marija Mlut [~ branjа Milek/Mlut/Mut/Muh — 04105-h33 mati 1909+1911] — hčeri Katarina (3. 6. 1909) + Marija († 9 dni, 23. 5. 1911!) → poroči se 5. 11. 1911, 5+ mesecev po smrti prve žene!; ★ PAPIČ ×2 v letu (№1 Janez h31 + №12 Martin h33 [~ sorodstvo VERIF]); starši [zapis 'Martin Papič foretnik? × Marija Milek' ~ — VERIF ali oče-sin ali prvi-zakon zapis]; nevestini starši: Martin TOMEC × Marija geb. ŽUGELJ (ŽUGELJ ×3 leta!); priči: Peter POŽEK (Požek-mreža 1890+1893!) + Jurij [? ~]; zglašnica [županstva Podzemelj] od 5. 11. 1911 [št. ~]; duhovnik Jos. Rauy — ★ starostna razlika 42 × 23 = 19 let",
+    whatEn: "marriage (Nov 5, 1911, entry 12 — SUNDAY) — the groom Martin PAPIČ, a farmhand (Knecht!), ~42 [b. ~1869], A WIDOWER (★★★ the 1st widower after the 2010 №18!), GRIBLJE 33 (★ the 'Giriči 33' reading = the GENETIC-GRIBLJE lesson's 3rd appearance [the 04105-1911 'Grišice'→Griblje 3]!; the h33-DEHLIČ era 1888/1897/1908 weddings → the PAPIČ family at h33 from ~1909; the 4th marriage evidence of h33) × Ana TOMEC, ~23 [b. ~1888], single, KRIVOGLAVE 30 [~ the Krivoglavice/Hrušovlje readings — VERIF; the 1st entry of the Krivoglave village in the marriage book!]; ★★★ a CORPUS SYNCHRONIZATION: the 04105-h33 baptism of Terezija Oct 5, 1912 — the father Martin Papič ¾ smallholder × the mother ANA TOMC = THE COUPLE CONFIRMED by an independent baptism 11 months after the wedding!; ★★ the WIDOWER'S FIRST MARRIAGE: Marija Mlut [~ the Milek/Mlut/Mut/Muh readings — the 04105-h33 mother 1909+1911] — the daughters Katarina (Jun 3, 1909) + Marija († 9 days, May 23, 1911!) → he marries on Nov 5, 1911, 5+ months after his first wife's death!; ★ PAPIČ ×2 in the year (the №1 Janez h31 + the №12 Martin h33 [~ kinship VERIF]); the parents [the entry 'Martin Papič foretnik? × Marija Milek' ~ — VERIF whether a father-son or a first-marriage note]; the bride's parents: Martin TOMEC × Marija née ŽUGELJ (ŽUGELJ ×3 of the year!); the witnesses: Peter POŽEK (the Požek network 1890+1893!) + Jurij [? ~]; the banns [of the Podzemelj commune] of Nov 5, 1911 [no. ~]; priest Jos. Rauy — ★ the age gap 42 × 23 = 19 years",
+    status: "DOCUMENTED",
+  },
+
   // ——— P122 razširitev: POROČNA KNJIGA 04455 — polno leto 1893 (skeni 87–90 ==
   // strani 86–89; VELIKA GLAVA »Traunungs=Buch« + rokopisno »1893« na s87 =
   // Pag. 86 POTRJENA — P122 lead!; 20 vpisov: 1886:7 → 1887:21 → 1888:20 →

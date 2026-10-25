@@ -1,0 +1,643 @@
+{
+  "source": {
+    "book": "04455 (ženitovanske knjige — Trauungsbuch, župnija Podzemelj)",
+    "url": "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04455/",
+    "year": 1911,
+    "scans": "s146–s148 == Pag. 145–147 (Pag. == sken − 1, 26. potrditev; velja 61–148)",
+    "framework": "LETNICA 1911 SE PIŠE V VSAKEM VPISU — brez letne glave (3. leto zapored: 1909/1910/1911). 1911 = 13 VPISOV: №1–№6 s146 + №7–№11 s147 + №12–№13 s148. ŠTEVLJENJE POTRDJENO s 3 neodvisnimi viri: zaporedna branjа (№1–6 / №7–11 / №12–13) + datumski stolpci-strip (s146: 6 datumov 30.1.–19.6.; s147: 5 datumov 4.7.–29.10.; s148: 5.11. + 20.11. + 1912 №1) + GRID-№ branjа. MEJA 1911/1912 = s148: zadnji 1911 = 20. 11. (№13), prvi 1912 = 16. 1. 1912 (№1 Anton Lozar Griblje 78 × Barbara Križan Griblje 63 — P141 LEAD!). POSTNA VRZEL: 6. 2. → 15. 5. (pepelnica 1. 3. – velika noč 16. 4. 1911; 3. leto zapored: 1909 februar → marec?, 1910 31.1. → 1.5., 1911 6.2. → 15.5.) — №5 '15. März' branjе ZAVRNJENO (sredina posta nemogoča + P138-lekcija März/Mai zmeda)."
+  },
+  "lead": {
+    "claim": "P139-lead: »P140 — poročna 1911 (№1–7 na s146: 30.1.–19.6. 1911)«",
+    "correction": "13 vpisov, NE 7 na s146 — s146 ima SAMO №1–6 (30.1. + 6.2.×3 + 15.5. + 19.6.); '№7' iz P139-lead okvira je bila PODVOJENA VRSTICA v overview-branju (r7full zoom = PRAZNA!). Skupaj s147 (№7–11) + s148 (№12–13) = 13. P139-lead datumi №1–6 VSI POTRJENI; betettovska №7 = 4. 7. 1911 (TOR — dunajska izjema!)."
+  },
+  "entries": [
+    {
+      "row": 1,
+      "date": "30. januar 1911 (ponedeljek)",
+      "scan": 146,
+      "page": 145,
+      "groom": {
+        "name": "Johann (Janez) Papič",
+        "place": "GRIBLJE 31 (5. poročni dokaz h31 — 1886 Papič × Straus [1.] + 1902 Mulh [2.] + 1906 Paprič-witwer [3.] + 1910 №14 Straus-nevesta [4.] → 1911 ŽENIN IZ h31!; ★ ŽENINOV KRST V KORPUSU: h31 6. 9. 1887 Janez — oče Martin Papič ½ zemlj., mati Margaretha Straus!)",
+        "stand": "¼ Hübler",
+        "age": 23,
+        "status": "ledig"
+      },
+      "bride": {
+        "name": "Catharina (Katarina) Križan [~ branja Hrižan/Škrixan — KRIŽAN po očetu Nikolaju + h63-1909 'Katarina Križan samka' + 1919-EMŠO 'Katarina r. Herian (2.2.1887; por. 30/1 1911)' = 3 neodvisna sidra!]",
+        "place": "GRIBLJE 63 (★★ h63 = NOVA POROČNA HIŠA korpusa — p80 68. → 69.!; 1. korpusna omemba te hiše v poročni knjigi; 04105-h63: 1887–1909 krsti — 1909 Jožefa (12.6.) 'samka ½ zemljaka' Katarina Križan = NEVESTA SAMA pred poroko!)",
+        "stand": "¼ Hüblerin",
+        "age": 23,
+        "status": "ledig"
+      },
+      "groomParents": {
+        "father": "Martin Papič, ½ zemljak/Wagner [~ branje 'foretnik?' — VERIF] (h31 — 1886 ženin, 2006 witwer-poroča Barbara Simec)",
+        "mother": "Margaretha geb. Straus [~ R-branjе 'Margaretha Škrixan' — KONTRADIKCIJA s 1886-Straus (P115 re-read + oče Martin Straus + priča Nikolaus Straus!); najverjetneje Škrixan = zmotno branje Straus — VERIF]"
+      },
+      "brideParents": {
+        "father": "Nikolaus Križan, ¼ Hübler (h63 — 04105-krsti 1887–1909: družina na h63!)",
+        "mother": "Catharina geb. [Pečinek? ~ branje 'Pechinec' — VERIF: kandidati Pečinek/Perhinek/Pezdirec?]"
+      },
+      "witnesses": ["[~ branje 'Joseph Branc?' — VERIF]", "[~ — VERIF]"],
+      "witnessStatus": "[~ obe priči VERIF]",
+      "urkunden": "zglašnica [občine Griblje?] od 29. 1. 1911 [št. ~ — VERIF] [~ morebitna listina o prejšnjem nezakonskem otroku?]",
+      "priest": "Jos. Rauy",
+      "anomalies": [
+        "★★ GRIBLJE × GRIBLJE poroka h31 × h63 (3. leto ZAPORED z INTRA-GRIBLJE poroko: 1910 №1 h13 × h6 + №14 h86 × h31 → 1911 №1 h31 × h63!)",
+        "★★★ REHABILITACIJSKA POROKA?: nevesta Katarina Križan je 1909 na h63 kot 'SAMKA' (neporočena mati) vpisala hčer Jožefo (12. 6. 1909) — 19. mesecev pozneje se poroči z Janezom Papičem [~ ali je Papič oče Jožefe? starši vpisa ne povedo — VERIF 04105-1909 očetovski zapis]",
+        "★★ ŽENINOV KRST V KORPUSU (h31 1887 Janez) + NEVESTIN EMŠO-SIDRO 1919 (Katarina r. Herian, roj. 2.2.1887, por. 30/1 1911) — dvojni zunanji zasidranji enega vpisa!",
+        "★ PAPIČ ×2 v letu (№1 ženin + №12 ženin — sorodstvo? [~ №12 = h33-družina, №1 = h31 — VERIF]",
+        "★ mati ženina Margaretha Straus — STRAUS-h31 kontinuiteta 1886 → 1911 = 25 let!"
+      ]
+    },
+    {
+      "row": 2,
+      "date": "6. februar 1911 (ponedeljek)",
+      "scan": 146,
+      "page": 145,
+      "groom": {
+        "name": "Johann Jaklič",
+        "place": "GRIBLJE 15 (h15 že v mrliškem vzorcu 1886 + poročni 1887 [h15 v naboru]; Jaklič-družina [~ hiša VERIF: 15 ali 16?])",
+        "stand": "¼ Hübler [~]",
+        "age": 26,
+        "status": "[ledig ~]"
+      },
+      "bride": {
+        "name": "Anna Kambič",
+        "place": "GRIBLJE 34 (★★ KAMBIČ-HIŠA! 1905 №13 nevesta Maria Kambič 30 h34 + sestra isto leto — Anna 30 v 1911 = 3. KAMBIČ-NEVESTA iz h34 v 6 letih! [~ sorodstvo VERIF])",
+        "stand": "[~]",
+        "age": 30,
+        "status": "[~]"
+      },
+      "groomParents": {
+        "father": "[Matthias Jaklič, Wirth ~ — VERIF (prebrani del R-vrstice z zmedo)]",
+        "mother": "[Maria geb. Simec? ~ — VERIF]"
+      },
+      "brideParents": {
+        "father": "[Matthias Kambič, Wirth ~ — VERIF]",
+        "mother": "[Maria geb. Krinec/Križanec? ~ — VERIF]"
+      },
+      "witnesses": ["[~ VERIF]", "[~ VERIF]"],
+      "witnessStatus": "[~]",
+      "urkunden": "ženitovanska zglašnica občine GRIBLJE od 5. 2. 1911 št. 2",
+      "priest": "Jos. Rauy [~]",
+      "anomalies": [
+        "★★ GRIBLJE × GRIBLJE poroka h15 × h34 (2. INTRA-GRIBLJE leta — ob №1! 1911 = 2 INTRA-vasični poroki, REKORD skupaj s 1910!)",
+        "★★ KAMBIČ-h34 DINASTIJA: 1905 ×2 + 1911 = 3 neveste iz iste hiše v 6 letih!",
+        "★ JAKLIČ-prva-poroka-priimek [~ ali Jaklič/Jakljevič ista družina kot 1910 №7+№12?]"
+      ]
+    },
+    {
+      "row": 3,
+      "date": "6. februar 1911 (ponedeljek)",
+      "scan": 146,
+      "page": 145,
+      "groom": {
+        "name": "Leopold Jakobčič",
+        "place": "GRIBLJE 9 (h9 že v naboru: 1894 + 1903; 4. JAKOBČIČ-hiša korpusa po h13/h6/h8!)",
+        "stand": "¼ Hüller",
+        "age": 25,
+        "status": "ledig"
+      },
+      "bride": {
+        "name": "Terezija Klepec",
+        "place": "KRASINEC 20 [~ branja 20/37 — VERIF] (Klepec-mreža: 1886 Priložje + 1889 Milek×Klejpec h87 + 1911 №13 mati Ana Klepec!)",
+        "stand": "½ Hüblerstochter",
+        "age": 20,
+        "status": "ledig"
+      },
+      "groomParents": {
+        "father": "Georg Jakobčič, ½ Hüller (h9? [~ — VERIF])",
+        "mother": "Marija geb. [Kurnik? ~ branje 'Kurnig' — VERIF]"
+      },
+      "brideParents": {
+        "father": "Peter Klepec, ½ Hüller (Krasinec)",
+        "mother": "Marija geb. Jakobčič (★ INTRA-JAKOBČIČ: nevestina mati = Jakobčičeva!)",
+        "note": "★★ JAKOBČIČ ×3 v enem vpisu: ženin + priča Michael + nevestina mati!"
+      },
+      "witnesses": ["Michael Jakobčič", "Mathäus [Motnikov? ~ — VERIF]"],
+      "witnessStatus": "[~]",
+      "urkunden": "zglašnica [Griblje?] od 5. 2. 1911 [št. 33? ~ — VERIF] + potrditev za ženina [od Škoflj? ~ 'Škofljansko potrditveno' — VERIF; cf. 1910 №2 Škofle pri Brežicah!]",
+      "priest": "Jos. Rauy",
+      "anomalies": [
+        "★★ JAKOBČIČ-TROJNA MREŽA v enem vpisu (ženin + priča + nevestina mati) — Jakobčič kontinuiteta 1885 → 1911 (h13: 1885 + 1910 №1!)",
+        "★ KLEPEC ×2 v letu (№3 nevesta + №13 mati ženina)",
+        "★ MASA-DAN 6. 2. ×3 (№2+№3+№4)"
+      ]
+    },
+    {
+      "row": 4,
+      "date": "6. februar 1911 (ponedeljek)",
+      "scan": 146,
+      "page": 145,
+      "groom": {
+        "name": "Franz Filetič",
+        "place": "GRADAC 18 (h18 = 1. vpis Gradac 18 v poročni knjigi [~ prejšnje omembe VERIF])",
+        "stand": "Köppersohn (bakrokovčev sin! — NOV POKLIC korpusa!)",
+        "age": 24,
+        "status": "ledig"
+      },
+      "bride": {
+        "name": "Maria Malovič [Malowitsch]",
+        "place": "GRADAC 11 (1. vpis Gradac 11 v poročni knjigi)",
+        "stand": "[~]",
+        "age": 23,
+        "status": "[~]"
+      },
+      "groomParents": {
+        "father": "Joseph Filetič [~ — VERIF] (iz Podzemlja? [~])",
+        "mother": "Marie geb. [? ~ — VERIF]"
+      },
+      "brideParents": {
+        "father": "Gabrijel Malovič (Gradac)",
+        "mother": "Gabriele geb. [Vidol? ~ — VERIF: Vidol/Vidmar/Metlika]"
+      },
+      "witnesses": ["[Mathias Jakljevič? ~ — VERIF]", "[Stukelj? ~ — VERIF (kontaminacija tveganja!) — priča z Dunaja sorodnik №7-STUKELY?]"],
+      "witnessStatus": "[~]",
+      "urkunden": "[~ zglašnica + ustne priče — VERIF ('Zemljiška knjiga' branjе = verjetno zglašnica)]",
+      "priest": "Jos. Rauy [~]",
+      "anomalies": [
+        "★ GRADAC ×2 poroki leta (№4 h18 × h11 + №11 Gradac 3 ×2 — 3. Gradac-povzetek leta)",
+        "★ KÖPPERSONH — 1. bakrokovški poklic v 26 letih linije!",
+        "★ MALOVIČ/Malowitsch — novo priimek (nemško zapisano -witsch!)"
+      ]
+    },
+    {
+      "row": 5,
+      "date": "15. maj 1911 (ponedeljek)",
+      "scan": 146,
+      "page": 145,
+      "groom": {
+        "name": "Martin Petrowic (Petrovič)",
+        "place": "BORŠT 10 (1. korpusna omemba Boršt 10 v poročni knjigi; PETROWIC = NOV PRIIMEK korpusa [~ ali Petrunič/Petrovec?])",
+        "stand": "¼ Hüller",
+        "age": 24,
+        "status": "ledig"
+      },
+      "bride": {
+        "name": "Catharina Tome",
+        "place": "PRIMOSTEK 13 (1. vpis Primostek 13 — sosednja hiša TOME-vdove 1910 №19 (Primostek 14)! TOME ×2 v letu + 1910 ×2!)",
+        "stand": "¼ Hüblerin",
+        "age": 20,
+        "status": "ledig (★ mladoletna — ustno dovoljenje!)"
+      },
+      "groomParents": {
+        "father": "[~ VERIF — v5R branjе zmedeno ('Martin Petrowic Häusler'?) — najverjetneje [oče Petrowic iz Boršta — VERIF]]",
+        "mother": "[~ VERIF]"
+      },
+      "brideParents": {
+        "father": "Mathias Tome [~ — VERIF (preminuli? 'Häusler' branjе?)]",
+        "mother": "[Marija? vdova? geb. ~ — VERIF (branjе 'BERKOPEC?' tvegana — kontaminacija!)]"
+      },
+      "witnesses": ["Nikolaus Gregorič (★ GREGORIČ ×2 v letu — №5 + №6!)", "[Gabriela? Levak? ~ — VERIF (ženska priča?)]"],
+      "witnessStatus": "[~]",
+      "urkunden": "zglašnica od 14. 5. 1911 [št. 19? ~] + USTNO DOVOLJENJE za MLADOLETNO nevesto (20 let!) [od očeta? 16. 5. 1911 — VERIF podpisnika]",
+      "priest": "Jos. Rauy",
+      "anomalies": [
+        "★★ POSTNA VRZEL 6. 2. → 15. 5. (pepelnica 1. 3. – velika noč 16. 4. 1911) — №5 '15. März' branjе ZAVRNJENO (sredina posta + P138-lekcija März-zmede!)",
+        "★ TOME ×2 v letu (№5 nevesta Primostek 13 + №12 nevesta Tomec — 4. TOME-omemba v 2 letih!)",
+        "★ mladoletna nevesta 20 let s ustnim dovoljenjem (3. mladoletna v 3 letih: 1910 №17 16 let!, 1911 №5 20)",
+        "★ BORŠT-vas prvič v poročni knjigi z hišo 10 (+ №9 Boršt 9!)"
+      ]
+    },
+    {
+      "row": 6,
+      "date": "19. junij 1911 (ponedeljek)",
+      "scan": 146,
+      "page": 145,
+      "groom": {
+        "name": "Mathias Kralj",
+        "place": "PODZEMELJ 2 (1. vpis Podzemelj 2 v poročni knjigi)",
+        "stand": "¼ Hueller",
+        "age": 30,
+        "status": "ledig"
+      },
+      "bride": {
+        "name": "Catharina Brodarič",
+        "place": "PODZEMELJ 2 (★★★ ISTA HIŠA KOT ŽENIN — Podzemelj 2 ×2! 1. od 3 ista-hiša porok leta — REKORD!)",
+        "stand": "½ Hüblerstochter",
+        "age": 20,
+        "status": "ledig"
+      },
+      "groomParents": {
+        "father": "Georg Kralj, ½ Hübler (★ KRALJ-hišna mreža: h17 Griblje 1892+1909!)",
+        "mother": "Anna geb. Pezdirec (★★ PEZDIREC-velika mreža — 25+ let!) [~ branje 'Anna Pezdirec' — VERIF]"
+      },
+      "brideParents": {
+        "father": "Georg Brodarič, ½ Hübler (BRODARIČ-mreža: 1895 Anton h16 + 1902 Maria mati h31 + 1912№1 priča Nikolaj!)",
+        "mother": "Maria geb. Žugelj (★ ŽUGELJ ×3 v letu: №6 mati + №10 nevesta + №12 mati!)"
+      },
+      "witnesses": ["Michael Gregorič", "Johann Kralj (★ priča = ženinov sorodnik Kralj!)"],
+      "witnessStatus": "[~]",
+      "urkunden": "zglašnica občine PODZEMELJ z dne [26.? ~]. 1911 št. 3 + ustno dovoljenje [~ — VERIF]",
+      "priest": "Jos. Rauy",
+      "anomalies": [
+        "★★★ ISTA-HIŠA POROKA Podzemelj 2 ×2 (ženin in nevesta iz iste hiše — delavsko-gospodinjstvo? ali sorodstvo? [~ VERIF]) — 1. od 3 leta!",
+        "★★ KRALJ ×2 v letu (№6 Podzemelj 2 + №13 Kapljišče 8 — [~ sorodstvo VERIF])",
+        "★ GREGORIČ ×2 priči (№5 + №6)",
+        "★ Kralj × Pezdirec starši — mreža 1886–1911"
+      ]
+    },
+    {
+      "row": 7,
+      "date": "4. julij 1911 (torek — ★★★ EDINA NEVIKEND POROKA LETA!)",
+      "scan": 147,
+      "page": 146,
+      "groom": {
+        "name": "Julius Betetto",
+        "place": "WIEN IV/8, WALLERGASSE 3/11 (DUNAJ! — 4. dunajsko-okrožje, Wieden!) [~ naslov VERIF]",
+        "stand": "k. k. HOFOPERN-SÄNGER (dvorni operni pevec cesarske opere na Dunaju!!)",
+        "age": 25,
+        "status": "ledig"
+      },
+      "bride": {
+        "name": "Irma-Maria Stukely",
+        "place": "RUDOLFSHEIM 132 (Dunaj — 15. okrožje!) [~ hiša VERIF]",
+        "stand": "[~]",
+        "age": 19,
+        "status": "ledig (★ najmlajša nevesta leta — 19!)"
+      },
+      "groomParents": {
+        "father": "Eugen Betetto, Kaufmann (trgovec)",
+        "mother": "Julia geb. Skrbec (★★ SLOVENSKA MATI — SKRBEC [~ branje Skrobič/Skrbec — VERIF]: dunajski operni pevec s slovenskimi koreninami!) [~]"
+      },
+      "brideParents": {
+        "father": "Leopold Stukely, Gemeinde-[Beamter? ~ — VERIF] (občinski uslužbenec)",
+        "mother": "Maria geb. Millner [~ — VERIF]"
+      },
+      "witnesses": ["[Apotheker ~ — lekarnar z Dunaja: 'Drgomont'?/Dugman? — VERIF]", "[Buchhändler ~ — knjigotržec: 'M.harnut'?/Millner? — VERIF]"],
+      "witnessStatus": "dunajski meščanski priči (lekarnar + knjigotržec!)",
+      "urkunden": "listine se nahajajo pri STANDESAMT RUDOLFSHEIM (Dunaj) — matični urad Rudolfsheim!",
+      "priest": "Jos. Rauy, PFR. PER DELEGATIONEM (župnik PO DELEGACIJI — posebno pooblastilo za dunajski par!)",
+      "anomalies": [
+        "★★★ ZGODOVINSKA POROKA: k. k. HOFOPERN-SÄNGER (pevec dunajske dvorne opere — elita tedanjega sveta!) se poroči v vaški fari Podzemelj! Prvi umetniški poklic + prvi dunajski naslovi (Wallergasse! Rudolfsheim!) v 26 letih linije!",
+        "★★★ TOR-POROKA = EDINA izven PON/NED celga leta (12/13 vikendskih! — dunajska izjema potuje na deželo)",
+        "★★ PER DELEGATIONEM — prvi podpis po delegaciji v liniji (Rauy kot pooblaščenec!)",
+        "★★ SLOVENSKA MATI Julia Skrbec — razlaga, zakaj dunajski zvezdnik prihaja v Podzemelj (slovenske korenine!)",
+        "★ nevesta 19 let — najmlajša leta (3. zapored leto z najmlajšo ≤19: 1910 №17 16!, 1911 №7 19)",
+        "★ STUKELY ×2 v letu ([~ №4 priča Stukelj? — VERIF kontaminacija])"
+      ]
+    },
+    {
+      "row": 8,
+      "date": "10. september 1911 (nedelja)",
+      "scan": 147,
+      "page": 146,
+      "groom": {
+        "name": "Johann Doltar",
+        "place": "VRANOVIČI 3 (BUTALA-hiša! — 1910 №5 nevesta Maria Butala Vranoviči 3 = hiša nevestine družine!)",
+        "stand": "Schmiedmeister (kovaški mojster! — 2. kovaška dinastija po Štrugar-1910!) [~ ali Schmied? VERIF]",
+        "age": 25,
+        "status": "[ledig ~]"
+      },
+      "bride": {
+        "name": "Anna Butala",
+        "place": "VRANOVIČI 3 (★★★ ISTA HIŠA ×2 — druga ista-hiša poroka leta!)",
+        "stand": "½ Hüblerin",
+        "age": 20,
+        "status": "ledig (★ mladoletna — ustno očetovo dovoljenje!)"
+      },
+      "groomParents": {
+        "father": "Johann Doltar, Schmiedmeister (★ DOLTAR-KOVAŠKA DINASTIJA — oče in sin kovaška mojstra!)",
+        "mother": "Catharina geb. [Kambič? ~ branje 'Hambic' — VERIF: K/H zmeda]"
+      },
+      "brideParents": {
+        "father": "Anton Butala, ½ Hübler (VRANOVIČI 3 — ISTA STARŠA kot 1910 №5!)",
+        "mother": "Barbara geb. Kambič (★★ 1910 №5 ISTA PARA — Anna = SESTRA Marije Butala 1910!) [~ VERIF]"
+      },
+      "witnesses": ["Jacobus [Stipanič? ~ — VERIF]", "Tomaz [Colovit? ~ — VERIF]"],
+      "witnessStatus": "[~]",
+      "urkunden": "ženitovanska zglašnica občine PODZEMELJ od 9. 9. 1911 št. 18 + USTNO OČETOVO DOVOLJENJE (nevesta 20 = mladoletna!)",
+      "priest": "Jos. Rauy",
+      "anomalies": [
+        "★★★ BUTALA-SESTRI DVE LETI ZAPORED: Anna 1911 №8 = SESTRA Marije Butala 1910 №5 (ista starša Anton Butala × Barbara Kambič + ista hiša Vranoviči 3!)",
+        "★★ ISTA-HIŠA poroka Vranoviči 3 ×2 (2. leta — ženin se poroči IZ hiše nevestine družine!)",
+        "★ DOLTAR kovaška dinastija (oče + sin Schmiedmeister)",
+        "★ KAMBIČ-ženske mreže: morebitna mati ženina Kambič + mati neveste Kambič + №2 nevesta Kambič — 3 omembe leta!"
+      ]
+    },
+    {
+      "row": 9,
+      "date": "2. oktober 1911 (ponedeljek)",
+      "scan": 147,
+      "page": 146,
+      "groom": {
+        "name": "Mathias Marovič [~ branjа Mavsar/Mavzpič/Marovitz — MAROVIČ po očetu Marovitz (nemško -itz = -ič!); NOV PRIIMEK korpusa]",
+        "place": "BORŠT 9 [~ hiša 9 VERIF — sosed №5 Boršt 10!]",
+        "stand": "[~]",
+        "age": 41,
+        "status": "[~ — VERIF (41? ledig/witwer?)]"
+      },
+      "bride": {
+        "name": "Anna Straus",
+        "place": "PODZEMELJ 23 (1. vpis Podzemelj 23 v poročni knjigi)",
+        "stand": "½ Hüttlerin",
+        "age": 30,
+        "status": "[~]"
+      },
+      "groomParents": {
+        "father": "Mathäus Marovič [Marovitz], Hübler (★ OČE-SIN ISTO IME Mathias!)",
+        "mother": "Maria geb. Novak (★ NOVAK-ženske mreže: №9 mati + №11 nevesta!)"
+      },
+      "brideParents": {
+        "father": "[Nikolaus? Arand? ~ — VERIF (nejasno; STRAUS-družina h31/h32 kandidat?)]",
+        "mother": "[Maria geb. Kalz? ~ — VERIF]"
+      },
+      "witnesses": ["Anton Zadravec (ZADRAVEC = nov priimek korpusa)", "Georg [Arbauer? ~ — VERIF]"],
+      "witnessStatus": "[~]",
+      "urkunden": "ženitovanska zglašnica občine GRADAC [št. ~] + [listina od uprave?] od 1. 10. 1911 št. 228 [~ — VERIF]",
+      "priest": "Jos. Rauy",
+      "anomalies": [
+        "★★ OČE-SIN DVOJČEK Mathias Marovič × Mathias Marovič (4. oče-sin ime-dvojček linije!)",
+        "★ STRAUS-ženska mreža [~ sorodstvo s h31/h32 Strausi VERIF — 1910 №14 nevesta Catharina Straus h31!]",
+        "★ BORŠT ×2 leta (№5 hiša 10 + №9 hiša 9 — sosednji hiši!)",
+        "★ MAROVIČ — novo priimek z nemškim zapisom Marovitz"
+      ]
+    },
+    {
+      "row": 10,
+      "date": "8. oktober 1911 (nedelja)",
+      "scan": 147,
+      "page": 146,
+      "groom": {
+        "name": "Joseph Simec",
+        "place": "ZEMELJ 45 (1. vpis Zemelj 45)",
+        "stand": "ZUCKERMEISTER (sladar/sladkorni mojster! — NOV POKLIC korpusa!)",
+        "age": 23,
+        "status": "ledig"
+      },
+      "bride": {
+        "name": "Anna Žugelj [~ nemško zapisano 'Zigely' — ŽUGELJ po očetu Johann Zugelj!]",
+        "place": "ZEMELJ 43 (sosednja hiša ženinu — Zemelj 43 × 45!)",
+        "stand": "[~]",
+        "age": 22,
+        "status": "ledig"
+      },
+      "groomParents": {
+        "father": "Franz Simec, [½?] Hübler (SIMEC-mreža 35 blokov: h18/h54/h56...)",
+        "mother": "Maria geb. [Stojnič? ~ — VERIF]"
+      },
+      "brideParents": {
+        "father": "Johann Žugelj (ŽUGELJ-mreža 1886→!)",
+        "mother": "Maria geb. Škala (ŠKALA ×2 leta — №10 mati + №11 priča Martin Škala!)"
+      },
+      "witnesses": ["[~ — VERIF]", "[~ — VERIF]"],
+      "witnessStatus": "[~]",
+      "urkunden": "zglašnice PODZEMELJ od 6. 10. 1911 št. 5 + OKLIČNI LIST ženinov od župnega urada v ČRNOMLJU od 6. 10. 1911 št. 316 + [Brautlaubschein-listine od 25. 4. 1911 in za nevesto od 23. 10.? ~ — VERIF]",
+      "priest": "Jos. Rauy",
+      "anomalies": [
+        "★★ ZUCKERMEISTER — 1. sladkorni poklic korpusa (4. mojstrski naziv po Schmiedmeister/Hufschmied/Wagner!)",
+        "★ ŽUGELJ ×3 v letu (№6 mati + №10 nevesta + №12 mati) — 3. leto zapored z Žugelj-mrežo",
+        "★ Zemelj 43 × 45 — sosednji hiši (skoraj ista-hiša!)",
+        "★ OKLIČNI LIST iz Črnomlja št. 316 — 2. črnomaljska oblast (po 1910 №8!)",
+        "★ SIMEC-velika mreža (35 blokov) — prvi Simec-ženin od 1905!"
+      ]
+    },
+    {
+      "row": 11,
+      "date": "29. oktober 1911 (nedelja)",
+      "scan": 147,
+      "page": 146,
+      "groom": {
+        "name": "Josef Lozar",
+        "place": "GRADAC 3 (★★ ISTA HIŠA ×2 — 3. ista-hiša poroka leta = REKORD LINIJE 3 v enem letu!)",
+        "stand": "¼ [kath]",
+        "age": 28,
+        "status": "ledig"
+      },
+      "bride": {
+        "name": "Marija Novak",
+        "place": "GRADAC 3 (ISTA HIŠA — Gradac 3 ×2!)",
+        "stand": "¼ [kath]",
+        "age": 28,
+        "status": "ledig [~ 26? VERIF]"
+      },
+      "groomParents": {
+        "father": "Jakob Lozar, [Kovač? ~ branje 'Hocar' — VERIF: H/K zmeda!]",
+        "mother": "Ana geb. Plut (PLUT-mreža 1886→!)"
+      },
+      "brideParents": {
+        "father": "Anton Novak, [Kovač? ~ — VERIF]",
+        "mother": "[Marela? geb. Novak? ~ — VERIF (INTRA-Novak?)]"
+      },
+      "witnesses": ["Martin Škala (★ ŠKALA ×2 leta — №10 mati + priča!)", "Jakob Jakobčič (★ JAKOBČIČ-priča — 4. Jakobčič-omemba leta!)"],
+      "witnessStatus": "[~]",
+      "urkunden": "ženitovanska zglašnica ŽUPANSTVA GRADAC",
+      "priest": "Jos. Rauy",
+      "anomalies": [
+        "★★★ ISTA-HIŠA POROBA Gradac 3 ×2 — 3. ista-hiša LETA (№6 + №8 + №11) = REKORD LINIJE (prej max 1/leto: 1910 №13 Primostek 18)!",
+        "★★ LOZAR-NASLOVNICA ZA P141: 1912 №1 = Anton Lozar Griblje 78 × Barbara Križan Griblje 63 (16. 1. 1912!) — LOZAR ×2 v 3 mesecih + 04105-1915 krst na h78 = LOZAR-hiša!",
+        "★ dve Kovaški starša ([~ Hocar=Kovač? VERIF]) + priča Jakobčič + Škala"
+      ]
+    },
+    {
+      "row": 12,
+      "date": "5. november 1911 (nedelja)",
+      "scan": 148,
+      "page": 147,
+      "groom": {
+        "name": "Martin Papič",
+        "place": "GRIBLJE 33 (★ 'Giriči 33' branjе = GENETSKA-Griblje lekcija (04105-1911 'Grišice'→Griblje 3!); h33-DEHLIČ 1888/1897/1908 poroke → PAPIČ-družina pride ~1909)",
+        "stand": "Knecht (hlapec!)",
+        "age": 42,
+        "status": "WITWER (★★★ VDOVEC — prvi potopljeni vdovec od 1910 №18 (69)!)"
+      },
+      "bride": {
+        "name": "Ana Tomec",
+        "place": "KRIVOGLAVE 30 [~ branje Krivoglavice/Hrušovlje 30/36 — VERIF] (1. vpis Krivoglave v poročni knjigi)",
+        "stand": "[~]",
+        "age": 23,
+        "status": "ledig"
+      },
+      "groomParents": {
+        "father": "[zapis 'Martin Papič, foretnik?' ~ — VERIF: ali je to OČE (Martin Papič starejši) ali PRVA ŽENA-zapis? Najverjetneje: vdovčev prvi zakon — Martin Papič × Marija Mlut [~ branje Milek/Mlut — 04105-krsti 1909+1911 mati 'Marija Mlut/Mut/Muh'!] ]",
+        "mother": "[Marija Mlut ~ — prva žena ženina († ~1911); 04105-h33: Katarina 1909 + Marija †9 dni 23.5.1911!]"
+      },
+      "brideParents": {
+        "father": "Martin Tomec, [~ — VERIF]",
+        "mother": "Marija geb. Žugelj (★★ ŽUGELJ ×3 leta — №6 mati + №10 nevesta + №12 mati!)"
+      },
+      "witnesses": ["Peter Požek (★ POŽEK-mreža: 1890 Nicolaus h61!)", "Jurij [? ~ — VERIF]"],
+      "witnessStatus": "[~]",
+      "urkunden": "[1.] ženitovanska zglašnica [županstva PODZEMELJ] od 5. 11. 1911 [št. ~ — VERIF]",
+      "priest": "Jos. Rauy",
+      "anomalies": [
+        "★★★ KORPUS-SINHRONIZACIJA: 04105-h33 krst Terezije 5. 10. 1912 — oče Martin Papič ¾ zemljak × mati ANA TOMC = PAR POTRDJEN z neodvisnim krstom 11 mesecev po poroki!",
+        "★★ VDOVEC Martin Papič (42) — prvi zakon z Marijo Mlut: h33-krsti Katarina 1909 + Marija † 23. 5. 1911 (9 dni!) — poroči se 5. 11. 1911, 5+ mesecev po smrti prve žene!",
+        "★★ PAPIČ ×2 v letu (№1 Janez h31 + №12 Martin h33 — [~ sorodstvo VERIF; oba Martin Papič kot oče/ženi v 04105!]",
+        "★ 'Giriči' = Griblje (genetska-vas lekcija 3. pojav!) + Krivoglave-nova vas",
+        "★ starostna razlika 42 × 23 = 19 let"
+      ]
+    },
+    {
+      "row": 13,
+      "date": "20. november 1911 (ponedeljek)",
+      "scan": 148,
+      "page": 147,
+      "groom": {
+        "name": "Matija Kralj",
+        "place": "KAPLJIŠČE 8 (1. vpis Kapljišče 8 v poročni knjigi)",
+        "stand": "¼ Hueller, r.k.",
+        "age": 25,
+        "status": "ledig (★ ROJSTNI DATUM V KORPUSU-ZAPISU: b. 5. 5. 1886!)"
+      },
+      "bride": {
+        "name": "Marija Berkopec",
+        "place": "ZEMELJ 14 (1. vpis Zemelj 14; BERKOPEC — sorodnik KLEPEC? [~ VERIF])",
+        "stand": "tovarnaška hči (TÖCHTER — uslužbenka tovarne? 'Fabrikskind' — [~ VERIF: 'tovarnaška' branjе])",
+        "age": 22,
+        "status": "ledig"
+      },
+      "groomParents": {
+        "father": "Matija Kralj, [Gsellner? ~ branje 'Jaestniz' — VERIF] (★ OČE-SIN ISTO IME Matija — 2. ime-dvojček leta po №9!)",
+        "mother": "Ana geb. Klepec (★★ KLEPEC ×2 leta — №3 nevesta + №13 mati!)"
+      },
+      "brideParents": {
+        "father": "Miha Berkopec, [kmet? ~ branje 'Muc' — VERIF: Muc=kmet ali priimek Muc?]",
+        "mother": "[~ branje 'Joestnik' — VERIF]"
+      },
+      "witnesses": ["Jurij Klepec (★★ KLEPEC ×3 leta — №3 nevesta + №13 mati + №13 priča!)", "Janez Muc (★ MUC-mreža 1886→!)"],
+      "witnessStatus": "[~ oba 'Joestnik'? — VERIF poklica (gozdnik?)]",
+      "urkunden": "1. ženitovanska zglašnica županstva PODZEMELJ od 16. 11. 1911 [št. ~ — VERIF] + 2. [SPREJETA PROŠNJA? ordinarijata] v LJUBLJANI od 7. 11. 1911 [~ — VERIF: dispensa? Brautlaubschein?]",
+      "priest": "Jos. Rauy",
+      "anomalies": [
+        "★★ KRALJ ×2 v letu (№6 Mathias Podzemelj 2 + №13 Matija Kapljišče 8 — [~ sorodstvo VERIF prek Georga/Matije Kralja])",
+        "★★ KLEPEC-TROJNA MREŽA leta (№3 nevesta Terezija + №13 mati Ana + priča Jurij!)",
+        "★ ORDINARIJAT-LJUBLJANA listina 7. 11. 1911 [~ tip VERIF] — 3. ordinariatni dokument v 3 letih (1910 dispenzi št. 158+159!)",
+        "★ Matija-dvojček oče-sin + rojen 5. 5. 1886 zapisan (redki popolni rojstni datum!)",
+        "★ BERKOPEC × KLEPEC priimkovna zveza [~ VERIF]"
+      ]
+    }
+  ],
+  "excluded": [],
+  "stats": {
+    "entries": 13,
+    "gribljeMarriages": 4,
+    "gribljeRows": [1, 2, 3, 12],
+    "gribljeHouses": ["31", "63", "15", "34", "9", "33"],
+    "gribljeIntra": 2,
+    "gribljeBlocks": 6,
+    "sameHouseRows": [6, 8, 11],
+    "sameHouseCount": 3,
+    "mondays": 8,
+    "sundays": 4,
+    "tuesday": 1,
+    "newHouses": ["63"],
+    "newSurnames": ["Betetto", "Stukely", "Skrbec", "Millner", "Doltar", "Filetič", "Malovič", "Petrowic", "Marovič", "Zadravec", "Berkopec", "Križan(ženska)", "Tomec(ženska)", "Mavsar?/Marovič"],
+    "newOccupations": ["k.k. Hofopern-Sänger", "Zuckermeister", "Köppersohn", "Knecht", "Schmiedmeister(dinastija)", "Gemeinde-Beamter"],
+    "dispensas": 1,
+    "unnumbered": 0,
+    "priests": "Jos. Rauy 13/13 (№7 PER DELEGATIONEM!)",
+    "vitalsTotal": 670,
+    "blocks04455": 153,
+    "sidraTotal": 146,
+    "p80Houses": 69
+  },
+  "crossChecks": [
+    {
+      "claim": "№1 ženin Janez Papič = krščen 6. 9. 1887 na h31 (oče Martin Papič ½ zemlj. × Margaretha Straus — 1886 zakonec!) — starost 23 let 30. 1. 1911 ✓",
+      "via": "04105-h31-1887 blok v korpusu (krst Janez 6.9.1887) + 04455-1886-h31 poroka (Martin Papič × Margareth Straus) + №1 1911 starost 23 (rojen 6. 9. → 23 let 4 mesece januarja ✓)"
+    },
+    {
+      "claim": "№1 nevesta Katarina Križan = EMŠO-zasidrana 1919: 'Katarina r. Herian (2. 2. 1887; por. 30/1 1911)' — hčer Nikolaja Križana s h63",
+      "via": "04105-h81-1919 blok (EMŠO 0909919505271: oče Janez Papič kolar roj. 6. 9. 1889 [~1887?], mati Katarina r. Herian 2. 2. 1887 por. 30/1 1911) + №1 R-branjе oče Nikolav Križan ¼ Hübler + h63-1909 'Katarina Križan samka'"
+    },
+    {
+      "claim": "№1 h63 = 8. 04105-blok hiše (1887–1909) — 1. POROČNI dokaz h63 → p80 68. → 69. hiša",
+      "via": "HOUSE_VITALS 04105-h63: 1887/1889/1890/1892/1896/1898/1903/1909 (vse izven p80-filtra!) + nov 04455-h63-1911 blok"
+    },
+    {
+      "claim": "№8 nevesta Anna Butala = SESTRA Marije Butala (1910 №5) — ISTA starša Anton Butala × Barbara Kambič + ISTA hiša Vranoviči 3",
+      "via": "P139-evidence №5 (Maria Butala 21 Vranoviči 3, starši Anton Butala ½ × Barbara Kambič) + №8 1911 R-branjе (Anton Butala × Barbara Kambič v. Hibler) + hiši obe Vranoviči 3"
+    },
+    {
+      "claim": "№12 par Martin Papič × Ana Tomc POTRJEN z 04105-h33 krstom Terezije 5. 10. 1912",
+      "via": "04105-h33-1912 blok: 'krščena Terezija — oče Martin Papič [Papič/Tapič/Caprič] ¾ zemljak, mati Ana Tomc' — 11 mesecev po poroki 5. 11. 1911"
+    },
+    {
+      "claim": "№12 ženin vdovec Martin Papič h33 — prva žena Marija Mlut [~Milek/Mut/Muh] + hčeri Katarina (1909) + Marija († 9 dni, 23. 5. 1911)",
+      "via": "04105-h33-1909 (Katarina 3./4. 6., mati Marija Mlut? [Mut/Muh?]) + 04105-h33-1911 (Marija +9/9.1911, 23./24. 5. — mati Marija Plet? [Mlut?]) + №12 STAN: vdovec (v12-st zoom)"
+    },
+    {
+      "claim": "№2 nevesta Anna Kambič h34 = 3. Kambič-nevesta iz h34 (1905 ×2 + 1911)",
+      "via": "04455-h34-1905 blok (Maria Kambic 30 h34 '4. poročni dokaz h34 — 2. V TEM LETU = SESTRA') + №2 1911 h34 + 30 let"
+    },
+    {
+      "claim": "№11 Lozar → P141-lead: 1912 №1 Anton Lozar Griblje 78 × Barbara Križan Griblje 63 (16. 1. 1912) + Lozar-h78 potvrjena s 04105-1915 krstom",
+      "via": "s148 1912№1 zapis (R-branjе: starša Mihail Lozar ¼ × Barbara Šarašinič [HARASINIĆ!] / Nikolaj Kugan? × Katarina Perdihar?) + 04105-h78-1915 blok"
+    },
+    {
+      "claim": "№7 Julius Betetto — dunajski k.k. Hofopern-Sänger s slovensko matere (Julia Skrbec [~]) — zgodovinsko preverljiv lik dunajske operne scene ~1911",
+      "via": "№7 zapis (k.k. Hofopern-Sänger + Wien IV/8 Wallergasse + Standesamt Rudolfsheim + Rauy per delegationem) [~ zunanjega vira v korpusu ni — VERIF ostaja odprt]"
+    },
+    {
+      "claim": "Postna vrzel 1911: 6. 2. → 15. 5. (pepelnica 1. 3. – velika noč 16. 4.) — 3. leto zapored s poročno pavzo med postom",
+      "via": "koledar 1911 (velika noč 16. 4.) + datumska strip-branjа (s146: 30.1., 6.2.×3, 15.5., 19.6.) + 1910 (31.1. → 1.5.) + 1909 (januar/februar → marec)"
+    },
+    {
+      "claim": "ISTA-HIŠA REKORD: 3 poroke leta iz iste hiše (№6 Podzemelj 2, №8 Vranoviči 3, №11 Gradac 3) — prejšnji maksimum 1/leto (1910 №13 Primostek 18)",
+      "via": "v6-bride2 + v8-bride + v11 zapisi (ob partnerja ista hiša) + P139-evidence (1 ista-hiša 1910)"
+    },
+    {
+      "claim": "MASA-DAN 6. 2. ×3 (№2+№3+№4) — 3. trojni-dan linije (1886 27.1.×3 + 1908 26.1.×3 + 1910 24.1.×5)",
+      "via": "datumski strip s146 (3× '6. Febr 1911') + P130/P136/P139 masovni dnevi"
+    },
+    {
+      "claim": "PAG == sken − 1: s146 == Pag. 145, s147 == Pag. 146, s148 == Pag. 147 (26. potrditev; velja 61–148)",
+      "via": "vlm-p140 overview branjа (številke strani na skenih) + №-zaporedja"
+    },
+    {
+      "claim": "GRIBLJE ×2 INTRA-poroki leta (№1 h31 × h63 + №2 h15 × h34) — 1911 = leto z največ INTRA-GRIBLJE (1910: 2 — №1 + №14)",
+      "via": "№1 (Griblje 31 × Griblje 63) + №2 (Griblje 15 × Griblje 34) zapisi + P139-evidence"
+    },
+    {
+      "claim": "meja 1911/1912 = s148: zadnji 1911 vpis 20. 11. (№13), prvi 1912 = 16. 1. 1912 — adventni vzorec (1910: 21. 11.; 1909: 22. 11.)",
+      "via": "datumski strip s148 (5.11. + 20.11. + 16.1.1912) + P138/P139 zaključki"
+    },
+    {
+      "claim": "№9 oče-sin Mathias Marovič × Mathäus Marovič [Marovitz] — nemški zapis -itz = slovenski -ič",
+      "via": "№9 R-branjе (Mathäus Marovitz v. Hübler × Maria Novak) + №9 L-branjе (Mathias Mavzpič?) [~ priimek ostaja VERIF: Marovič/Mavsar]"
+    },
+    {
+      "claim": "№6 ženinovi starši Georg Kralj ½ Hübler × Anna geb. Pezdirec — Pezdirec-ženska mreža 1886→1911",
+      "via": "№6 R-branjе (v6R-par zoom) + PEZDIREC-korpus (h87, h20, 1909 №8, 1910 №1 mati, №8 mati, №11 nevesta...)"
+    },
+    {
+      "claim": "ŽUGELJ ×3 leta (№6 mati neveste Maria Žugelj + №10 nevesta Anna Žugelj [Zigely] + №12 mati neveste Marija Žugelj) — nemški 'Zigely' = Žugelj",
+      "via": "№6/№10/№12 zapisi + ŽUGELJ-korpus (1886→, P128-mreža)"
+    },
+    {
+      "claim": "13 vpisov = 8 PON + 4 NED + 1 TOR (№7 Dunaj!) — 12/13 vikendskih (1910: 19/19; 1909: 14/15)",
+      "via": "koledar 1911 (30.1. pon!, 6.2. pon ×3, 15.5. pon, 19.6. pon, 4.7. TOR, 10.9. ned, 2.10. pon, 8.10. ned, 29.10. ned, 5.11. ned, 20.11. pon)"
+    },
+    {
+      "claim": "1912-lead: №1 16. 1. 1912 Anton Lozar 21 Griblje 78 × Barbara Križan 22 Griblje 63 — h78 = LOZAR-hiša (04105-1915), h63 = №1-nevestina hiša (Barbara = [~ sestra Katarine? VERIF])",
+      "via": "s148 zapis (L + R branjа) + 04105-h78-1915 + №1 1911 h63"
+    }
+  ],
+  "anomalies": [
+    "★★★ №7 ZGODOVINSKA DUNAJSKA POROKA: Julius BETETTO k.k. Hofopern-Sänger (25, Wien IV/8 Wallergasse 3/11) × Irma-Maria STUKELY (19, Rudolfsheim 132) — 4. 7. 1911 TOR (edina nevikend!) + listine pri Standesamt Rudolfsheim + Rauy PER DELEGATIONEM + mati Julia SKRBEC (slovenske korenine!) + dunajski meščanski priči (lekarnar + knjigotržec)",
+    "★★★ ISTA-HIŠA REKORD ×3: №6 Podzemelj 2 ×2 + №8 Vranoviči 3 ×2 + №11 Gradac 3 ×2 (prejšnji maks 1/leto!)",
+    "★★★ №1 REHABILITACIJSKA POROKA?: Katarina Križan 'samka' h63-1909 (hči Jožefa 12. 6. 1909) se 30. 1. 1911 poroči z Janezom Papičem h31 [~ očetovstvo VERIF]",
+    "★★ №1 + №2 DVOJNA INTRA-GRIBLJE (h31 × h63 + h15 × h34) — 2 INTRA-poroki v enem letu = rekord z 1910",
+    "★★ №8 BUTALA-SESTRI (Anna 1911 = sestra Marije 1910 — ista starša + hiša)",
+    "★★ №12 VDOVEC + KORPUS-SINHRONIZACIJA (krst Terezije 1912 Martin Papič × Ana Tomc h33) + prva žena Marija Mlut (hčeri 1909 + †1911)",
+    "★★ №12 'Giriči 33' = GRIBLJE 33 (genetska-vas 3. pojav) + Krivoglave 30 nova vas",
+    "★★ MASA-DAN 6. 2. ×3 (№2+№3+№4)",
+    "★ №13 KRALJ ×2 leta + KLEPEC-trojna mreža (nevesta №3 + mati + priča №13) + ordinariat-listina 7. 11. 1911 [~ VERIF]",
+    "★ №6 Kralj × Pezdirec starši + priča Johann Kralj; №9 Marovič oče-sin dvojček; №13 Matija oče-sin dvojček",
+    "★ POSTNA VRZEL 6.2.→15.5. ('15. März' zavrnjeno!); adventni zaključek 20. 11.",
+    "★ NOVI POKLICI: Hofopern-Sänger!, Zuckermeister, Köppersohn, Knecht, Gemeinde-Beamter, Schmiedmeister-dinastija (Doltar oče+sin)",
+    "★ NOVE OBLASTI/KRAJI: Standesamt Rudolfsheim (Dunaj!), župni urad Črnomelj št. 316, ordinariat Ljubljana (№13), občina Gradac, Boršt 9+10, Wien IV/8, Rudolfsheim 132, Podzemelj 2+23, Zemelj 43/45, Kapljišče 8, Krivoglave 30, Primostek 13, Vranoviči 3, Gradac 3/11/18, Krasinec 20",
+    "★ ~20 NOVIH PRIIMKOV: Betetto, Stukely, Skrbec, Millner, Doltar, Filetič, Malovič, Petrowic, Marovič, Zadravec, Berkopec, Pechinec?, Kurnik?, Motnikov?, Stipanič?, Colovit?, Arbauer?, Levak?, Stojnič?, Vidol?, Jaklič(ženin), Tomec(ženska), Križan(ženska-h63)"
+  ],
+  "honesty": [
+    "VERIF-oznake [~]: ~45 odprtih podrobnosti — najpomembnejše: №1 mati ženina (Straus vs 'Škrixan' branjе — 1886-korpus pravi Straus), №4 priči (Stukelj?=kontaminacija!), №5 starši obeh (v5R zmedeno), №9 nevestini starši + priimek ženina (Marovič/Mavsar), №10 priči, №11 mati neveste, №12 'foretnik' poklic + zglašnica št., №13 'Jaestnik'/'Joestnik' poklici + tip ordinariat-listine",
+    "№7 BETETTO zunanjega zgodovinskega vira ni v korpusu — identiteta dunajskega pevca ostaja odprta za zgodovinsko verifikacijo (ime+leti se ujemajo z znanim slovenskim tenorjem [~ izven korpusa])",
+    "№2/№3 hiše [~]: №2 h15 (ali 16?), №3 nevesta Krasinec 20 (ali 37?) — dve branjä vsako",
+    "№11 nevestina starost 28 [~ ali 26]",
+    "№9 ženinova hiša Boršt 9 [~] in starost 41 [~], stan nejasen",
+    "Datum №7 potrjen 4.7. (ne 14.7.) z '4 števke' zoomom; №11 potrjen 29.10. (ne 22.10.)",
+    "Vsi duhovniki Rauy (13/13) — №7 podpis 'per delegationem' [~ Rann/Rauy zmeda rešena v korpus-branju]"
+  ]
+}
