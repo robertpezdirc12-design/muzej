@@ -59,7 +59,7 @@ GRIBLJE_HOUSES = [60, 49, 30, 17, 34, 36, 44]
 GRIBLJE_HOUSES_TS = "17,30,36,60"   # hiše z 1892 bloki v parish.ts (v1 h60 + v5 h30 + v10 h17 + v15 h36)
 EXPECTED_VITALS = 554               # P121 dokaz lastna kumulativa (550 + 4 bloki)
 BLOCKS_04455 = 37                    # 33 (P120) + 4 novih blokov 1892 (P121)
-BLOCKS_04455_TS = 153   # P140: + 6 blokov 1911               # P126: + 9 blokov 1897 (52 + 9)                # parish.ts zdaj = 49 (P121: 37 + P122: 5 + P123: 4 + P124: 3)
+BLOCKS_04455_TS = 158   # P140: + 6 blokov 1911               # P126: + 9 blokov 1897 (52 + 9)                # parish.ts zdaj = 49 (P121: 37 + P122: 5 + P123: 4 + P124: 3)
 P80_HOUSES = 41                     # 40 (P120) + h17 (1892 v10 ženin — krstni bloki 1887/1894/1901 izven vzorca!)
 DATE_COUNTS = {"januar": 0, "februar": 8, "marec": 0, "april": 0, "maj": 0,
                "junij": 0, "julij": 0, "avgust": 0, "september": 3, "oktober": 2,
@@ -332,11 +332,11 @@ def main() -> int:
     # ---------- I9: qa-parish ----------
     qa = open(QA_TS).read()
     check("I9 qa-p121", '"qa-p121-parish-marriage-1892"' in qa)
-    check("I9b p80 bloki 78", "poročni vpisi (04455) ≠ 142" in qa)
-    check("I9c p80 sidra 71 (1898×9 · 1899×6 · 1900×2!)", "poročna sidra ≠ 146" in qa)
-    check("I9d p80 hiše 58 (qa kumulativa — …; P127: +6 NOVIH!)", "različnih hiš (vse tri knjige) ≠ 69" in qa)
+    check("I9b p80 bloki 78", "poročni vpisi (04455) ≠ 158" in qa)
+    check("I9c p80 sidra 71 (1898×9 · 1899×6 · 1900×2!)", "poročna sidra ≠ 151" in qa)
+    check("I9d p80 hiše 58 (qa kumulativa — …; P127: +6 NOVIH!)", "različnih hiš (vse tri knjige) ≠ 70" in qa)
     # vitals 554 regresijska zaščita v qa-p121
-    check("I9e vitals 637 zaščita (P128)", "HOUSE_VITALS.length !== 670" in qa[qa.index("const p121Marr"):] if "const p121Marr" in qa else False)
+    check("I9e vitals 637 zaščita (P128)", "HOUSE_VITALS.length !== 675" in qa[qa.index("const p121Marr"):] if "const p121Marr" in qa else False)
     check("I9f stari 537/544/548/550/554 iztekla",
           "HOUSE_VITALS.length !== 537" not in qa and "HOUSE_VITALS.length !== 544" not in qa
           and "HOUSE_VITALS.length !== 548" not in qa and "HOUSE_VITALS.length !== 550" not in qa

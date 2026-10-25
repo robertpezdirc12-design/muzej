@@ -155,11 +155,11 @@ def main():
     # ---------- I6: qa-parish.ts ----------
     qa = open(QA_TS).read()
     check("I6a qa-p135 id", "qa-p135-parish-marriage-1906" in qa)
-    n638 = qa.count("HOUSE_VITALS.length !== 670")
+    n638 = qa.count("HOUSE_VITALS.length !== 675")
     check("I6b vitals pini 637", n638 >= 46, str(n638))
     n121 = qa.count("bloki 04455 ≠ 142")
     check("I6c bloki pini 120", n121 >= 8, str(n121))
-    check("I6d sidra 113 + 1906:5", "poročna sidra ≠ 146" in qa and "h.year === 1906).length !== 5" in qa)
+    check("I6d sidra 113 + 1906:5", "poročna sidra ≠ 151" in qa and "h.year === 1906).length !== 5" in qa)
     check("I6e hiše 1906 pin", "21,31,35,62,73" in qa)
     check("I6f ostanki 632/115/108", "!== 632" not in qa and "bloki 04455 ≠ 115" not in qa and "sidra ≠ 108" not in qa, "stale pini!")
 
@@ -190,7 +190,7 @@ def main():
 
     # ---------- I10: README ----------
     rd = open(README).read()
-    check("I10a README P135 bullet", "po P140" in rd)
+    check("I10a README P135 bullet", "po P141" in rd)
     check("I10b README 638/121", "638" in rd and "121" in rd)
     check("I10c README P136 lead", "P136" in rd)
 

@@ -74,7 +74,7 @@ GRIBLJE_BLOCKS = 6              # №1 2 (INTRA!) + №2 2 (INTRA!) + №3 1 + �
 GRIBLJE_INTRA = 2
 VITALS_TOTAL = 670              # 664 + 6
 BLOKI_04455 = 153               # 147 + 6
-SIDRA_TOTAL = 146               # 140 + 6 (+1911:6)
+SIDRA_TOTAL = 146               # 140 + 6 (+1911:6) — ERA-PIN P140 (dokaz nespremenjen!)
 RAUY_COUNT = 13                 # 13/13 — №7 per delegationem!
 EXPECTED_MONDAYS = 8            # + 4 nedelj + 1 TOR (BETETTO Dunaj!)
 EXPECTED_SUNDAYS = 4
@@ -186,14 +186,14 @@ def main():
     # ---------- I6: qa-parish.ts ----------
     qa = open(QA_TS).read()
     check("I6a qa-p140 id", "qa-p140-parish-marriage-1911" in qa)
-    n670 = qa.count("HOUSE_VITALS.length !== 670")
+    n670 = qa.count("HOUSE_VITALS.length !== 675")
     check("I6b vitals pini 670", n670 >= 54, str(n670))
-    n153 = qa.count('.length !== 153')
-    check("I6c bloki pini 153", n153 >= 25, str(n153))
-    check("I6d sidra 146 + 1911:6", "poročna sidra ≠ 146" in qa and "h.year === 1911).length !== 6" in qa)
+    n153 = qa.count('.length !== 158')
+    check("I6c bloki pini 158", n153 >= 25, str(n153))
+    check("I6d sidra 163 + 1911:6", "poročna sidra ≠ 151" in qa and "h.year === 1911).length !== 6" in qa)
     check("I6e hiše 1911 pin", '"9,15,31,33,34,63"' in qa)
     check("I6f ostanki 664/147/140", "!== 664" not in qa and ".length !== 147" not in qa and "sidra ≠ 140" not in qa, "stare pini!")
-    check("I6g p80 hiše 69 (+h63!)", "p80Houses.size !== 69" in qa, "")
+    check("I6g p80 hiše 70 (+h63!)", "p80Houses.size !== 70" in qa, "")
     check("I6h PT luknja 13 nespremenjena (h63 v naboru!)", "p80Gap.length !== 13" in qa, "")
 
     # ---------- I7: duhovniki + dnevi ----------
@@ -213,7 +213,7 @@ def main():
     check("I8e stats gribljeBlocks 6", st.get("gribljeBlocks") == GRIBLJE_BLOCKS, str(st.get("gribljeBlocks")))
     check("I8f stats newHouses [63]", st.get("newHouses") == ["63"], str(st.get("newHouses")))
     check("I8g stats gribljeIntra 2 (REKORD!)", st.get("gribljeIntra") == GRIBLJE_INTRA, str(st.get("gribljeIntra")))
-    check("I8h stats p80Houses 69 (+h63!)", st.get("p80Houses") == 69, str(st.get("p80Houses")))
+    check("I8h stats p80Houses 69 (+h63! — ERA-PIN P140)", st.get("p80Houses") == 69, str(st.get("p80Houses")))
     check("I8i stats unnumbered 0", st.get("unnumbered") == 0, str(st.get("unnumbered")))
 
     # ---------- I9: anomalije + crossChecks + notes ----------
@@ -225,7 +225,7 @@ def main():
 
     # ---------- I10: README ----------
     rd = open(README).read()
-    check("I10a README P140 bullet", "po P140" in rd)
+    check("I10a README P140 bullet", "po P141" in rd)
     check("I10b README 670/153", "670" in rd and "153" in rd)
     check("I10c README P141 lead", "P141" in rd)
 

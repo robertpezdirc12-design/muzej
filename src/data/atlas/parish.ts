@@ -2359,6 +2359,93 @@ export const HOUSE_VITALS: HouseVital[] = [
     whatEn: "marriage (Nov 5, 1911, entry 12 — SUNDAY) — the groom Martin PAPIČ, a farmhand (Knecht!), ~42 [b. ~1869], A WIDOWER (★★★ the 1st widower after the 2010 №18!), GRIBLJE 33 (★ the 'Giriči 33' reading = the GENETIC-GRIBLJE lesson's 3rd appearance [the 04105-1911 'Grišice'→Griblje 3]!; the h33-DEHLIČ era 1888/1897/1908 weddings → the PAPIČ family at h33 from ~1909; the 4th marriage evidence of h33) × Ana TOMEC, ~23 [b. ~1888], single, KRIVOGLAVE 30 [~ the Krivoglavice/Hrušovlje readings — VERIF; the 1st entry of the Krivoglave village in the marriage book!]; ★★★ a CORPUS SYNCHRONIZATION: the 04105-h33 baptism of Terezija Oct 5, 1912 — the father Martin Papič ¾ smallholder × the mother ANA TOMC = THE COUPLE CONFIRMED by an independent baptism 11 months after the wedding!; ★★ the WIDOWER'S FIRST MARRIAGE: Marija Mlut [~ the Milek/Mlut/Mut/Muh readings — the 04105-h33 mother 1909+1911] — the daughters Katarina (Jun 3, 1909) + Marija († 9 days, May 23, 1911!) → he marries on Nov 5, 1911, 5+ months after his first wife's death!; ★ PAPIČ ×2 in the year (the №1 Janez h31 + the №12 Martin h33 [~ kinship VERIF]); the parents [the entry 'Martin Papič foretnik? × Marija Milek' ~ — VERIF whether a father-son or a first-marriage note]; the bride's parents: Martin TOMEC × Marija née ŽUGELJ (ŽUGELJ ×3 of the year!); the witnesses: Peter POŽEK (the Požek network 1890+1893!) + Jurij [? ~]; the banns [of the Podzemelj commune] of Nov 5, 1911 [no. ~]; priest Jos. Rauy — ★ the age gap 42 × 23 = 19 years",
     status: "DOCUMENTED",
   },
+  // ——— P141 razširitev: POROČNA KNJIGA 04455 — polno leto 1912 (skeni
+  // s148-dno + s149–s151 == Pag. 147–150; s152 = ŽE 1913 = P142-lead!;
+  // letnica V VSAKEM vpisu; 27. leto poročne linije P115=1886 → P141=1912)
+  // — 17 vpisov (№1 s148-dno + №2–6 s149 + №7–11 s150 + №12–17 s151;
+  // štetje potrjeno s STRIP-tehniko [celi datumski stolpci s148–s151] +
+  // s152-1913-mejo!): ★★★ RECIPROČNI DVOJNI PAR SOROJENCEV (№11+№12,
+  // 20. 5. 1912: Muc-sorojenca Primostek 10 × Jakljevič-sorojenca
+  // Krasinec 13 — KRIŽNO-IZMENJČNE HIŠE = 1. tak primer v celotni liniji
+  // 1886–1912!) + ★★★ INTRA-PRIIMEK ×2 V ENEM LETU (№7 PEZDIREC ×
+  // PEZDIREC [Mihaelova vs Matijeva linija — zrcalo 1910 №1 Jakobčič!] +
+  // №14 ŽUGELJ × ŽUGELJ [Jakobova vs Matijeva] = 3 intra-priimek poroke
+  // linije, 2 v samem 1912 = REKORD!) + ★★★ SESTRI KRIŽAN h63 V
+  // ZAPOREDNIH JANUARJIH (1911 №1 Katarina Papič + 1912 №1 Barbara Lozar
+  // — obe hčereti Nikolaja Križana!; P140-lead 'sestri?' POTRJENO s
+  // korpusom) + ★★★ DVOJNA KORPUS-SINHRONIZACIJA №8 (OBA STARŠA-PARA
+  // ženina in neveste sta že v poročnem korpusu: 1891 №12 Jakša × Jakša
+  // + 1890 №2 Schweiger × Jakša — 1. tak primer!) + ★★ №9 NEVESTA 46 LET
+  // (Barbara Straus bajtarica — 2. po 1886-v1 56; par 31+46; h46 =
+  // 3. poročni dokaz [1909 №11 INTRA-h46!]) + ★★ №17 KORPUS-SINHRO 1913
+  // (sin Julij krst 8. 8. 1913 h31 Griblje Černič × Požek — par + selitev
+  // potrjena!) + ★★ №4+№6 JAKOFČIČ DVOJČEK (brat ženin + sestra nevesta —
+  // otroka Petra Jakofčiča Čerkvišče 16/17!) + ★★ HRAŠINOVIČ-DVOJČEK
+  // (№6 Nikolaj 24 + №16 Nikolaj 49, očeta Anton + Janez + №1 mati geb.
+  // Harasinč = 3. pojav!) + ★★ ŠTRAVS-MREŽA ×4 (№9+№10+№15 neveste +
+  // priča = 3 Straus-neveste leta = REKORD!) + ★ MASA-DNEVI ×3 (29. 1.
+  // №2+№3+№4 + 12. 2. №6+№7 + 20. 5. №11+№12) + ★ NOVE OBLASTI (sodišče
+  // Črnomelj №17 1. v liniji! + vojaško oblastno poveljstvo №8 + deželna
+  // vlada №5 + Radovica-listine №13 + ordinariat št. 5473 [~]) + ★ №13
+  // ALFRED trgovski pomočnik [~] Podzemelj 11 (1. latinsko ime!) + ★
+  // KRIVOGLAVCI 3. pojav (1898+1911+1912 №14!) + ★ h78 1. poročni dokaz (№1
+  // Lozar — nova v 04455, ŽE v p80 prek 1887-sidra → hiše 69 nespremenjene!) + GENETSKA-VAS
+  // 'Girišice' = Griblje 3. pojav (№15) + METODE: ~190 VLM branj v 6
+  // krogih + STRIP + GRID-geometrija (REZIDENCA JE PRED IMENOM!) +
+  // multi-render pasovi (o/i/d) — 1912 = SLOVENŠČINA + najhitrejša pisava
+  // linije! Dokaz: research/issue17/parish-marriage-1912.json;
+  // verifikator: scripts/p141_parish_marriage_1912.py --check (I1–I12).
+  {
+    houseNo: "78",
+    bookSignature: "04455",
+    year: 1912,
+    scan: 148,
+    page: 147,
+    whatSi: "poroka (16. 1. 1912, vpis 1 — TOREK, izjema!) — ženin Anton LOZAR, [1/2 ~] zemljak, 21, ledig, GRIBLJE 78 (★ h78 = 1. POROČNI DOKAZ — NOVA v poročni knjigi 04455, a ŽE V p80-korpusu prek 04105-1887-sidra [P79/P80-era] → p80 hiše 69 NESPREMENJENE (razlika od h63/h86 P140/P139: njuni 04105-bloki IZVEN p80-filtra!); ★ KORPUS-KRST: rojen 5. 5. 1890 Griblje h38 — oče Miha(el) Lozar ČEVLJAR × Barbara geb. Harasinč [korpus 1890!] → starost 21 ✓; ★ KORPUS-1915: krst hči Jožefe 22. 3. 1915 na h78 ['Anton Ložar ½ × Barbara roj. Križan r. 20/6 1889'] = PAR + NOVA HIŠA POTRJENA!) × Barbara KRIŽAN, [1/4 ~] zemljakova hči, 22, ledig, GRIBLJE 63 (2. poročni dokaz h63; ★ KORPUS-KRST: rojena 20. 6. 1889 h63 — oče Nikolaj Križan ¼ × Katarina geb. Pezdirec → starost 22 ✓); ★★★ SESTRI KRIŽAN h63 V ZAPOREDNIH JANUARJIH: 1911 №1 Katarina (r. 20. 1. 1887, × Janez Papič h31) + 1912 №1 Barbara = obe hčereti Nikolaja Križana × Katarina geb. Pezdirec — P140-lead 'sestri? [~ P141 VERIF]' → POTRJENO S KORPUSOM!; ★ GRIBLJE × GRIBLJE h78 × h63 (2. intra-vasična zapored po 1911 №1!); starši ženina: Mihael Lozar čevljar × Barbara geb. Harasinč; starši neveste: Nikolaj Križan ¼ (h63) × Katarina geb. Pezdirec; zglašnica županstva [Metlika ~] 15/1. 1912 št. [1 ~]; duhovnik [Jos. Rauy ~]",
+    whatEn: "marriage (Jan 16, 1912, entry 1 — TUESDAY, an exception!) — the groom Anton LOZAR, [half ~] a smallholder, 21, single, GRIBLJE 78 (★ h78 = the 1st MARRIAGE EVIDENCE — new in the marriage book 04455, but ALREADY IN the p80 corpus through the 04105-1887 anchor [the P79/P80 era] → the p80 houses 69 UNCHANGED (unlike h63/h86 of P140/P139: their 04105 blocks OUTSIDE the p80 filter!); ★ a CORPUS BAPTISM: born May 5, 1890 in Griblje h38 — the father Miha(el) Lozar a COBBLER × Barbara née Harasinč [the 1890 corpus!] → the age 21 ✓; ★ the 1915 CORPUS: the baptism of the daughter Jožefa Mar 22, 1915 at h78 ['Anton Ložar ½ × Barbara née Križan b. Jun 20, 1889'] = THE COUPLE + THE NEW HOUSE CONFIRMED!) × Barbara KRIŽAN, [a quarter ~] a smallholder's daughter, 22, single, GRIBLJE 63 (the 2nd marriage evidence of h63; ★ a CORPUS BAPTISM: born Jun 20, 1889 at h63 — the father Nikolaj Križan ¼ × Katarina née Pezdirec → the age 22 ✓); ★★★ THE KRIŽAN SISTERS OF h63 IN CONSECUTIVE JANUARIES: the 1911 №1 Katarina (b. Jan 20, 1887, × Janez Papič h31) + the 1912 №1 Barbara = both daughters of Nikolaj Križan × Katarina née Pezdirec — the P140-lead 'sisters?' → CONFIRMED BY THE CORPUS!; ★ a GRIBLJE × GRIBLJE wedding h78 × h63 (the 2nd consecutive intra-village after the 1911 №1!); the groom's parents: Mihael Lozar a cobbler × Barbara née Harasinč; the bride's parents: Nikolaj Križan ¼ (h63) × Katarina née Pezdirec; the banns of the [Metlika ~] commune Jan 15, 1912 no. [1 ~]; priest [Jos. Rauy ~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "63",
+    bookSignature: "04455",
+    year: 1912,
+    scan: 148,
+    page: 147,
+    whatSi: "poroka (16. 1. 1912, vpis 1 — nevesta) — Barbara KRIŽAN, [1/4 ~], 22, ledig, GRIBLJE 63 (2. poročni dokaz h63; krst 20. 6. 1889 h63 — starost 22 ✓; ★★★ SESTRI KRIŽAN h63 V ZAPOREDNIH JANUARJIH (1911 №1 Katarina + 1912 №1 Barbara!); ★★ SESTRA 1911-№1 Katarine [ista starša Nikolaj × Katarina geb. Pezdirec] — 2. hčerka h63 v 2 letih poročena!; 04105-h63 1887–1909: 8 krstnih blokov [Katarina 1887 + Barbara 1889 + Marjeta 1890 + Nikolaj 1892 + Ana 1896 + Jožef 1898 + Ana 1903 + Jožefa-samka 1909]) × Anton LOZAR, 21, GRIBLJE 78 (1. poročni dokaz h78 — nova v 04455, ŽE v p80 (1887-sidro!); oče Mihael čevljar × Barbara geb. Harasinč; krst h38 1890); ★ GRIBLJE × GRIBLJE h63 × h78; duhovnik [Jos. Rauy ~] — ★ KRIŽAN-ženska mreža: 1911 №1 Katarina h63 + 1912 №1 Barbara h63 (SESTRI!) + 1905 Anna h35 + 1910 №14 Marcus h86!",
+    whatEn: "marriage (Jan 16, 1912, entry 1 — the bride) — Barbara KRIŽAN, [a quarter ~], 22, single, GRIBLJE 63 (the 2nd marriage evidence of h63; the baptism Jun 20, 1889 at h63 — the age 22 ✓; ★★★ THE KRIŽAN SISTERS OF h63 IN CONSECUTIVE JANUARIES (the 1911 №1 Katarina + the 1912 №1 Barbara!); ★★ THE SISTER of the 1911 №1 Katarina [the same parents Nikolaj × Katarina née Pezdirec] — the 2nd daughter of h63 married within 2 years!; the 04105-h63 1887–1909: 8 baptism blocks [Katarina 1887 + Barbara 1889 + Marjeta 1890 + Nikolaj 1892 + Ana 1896 + Jožef 1898 + Ana 1903 + Jožefa-single 1909]) × Anton LOZAR, 21, GRIBLJE 78 (the 1st marriage evidence of h78 — new in 04455, ALREADY in p80 [the 1887 anchor!]; the father Mihael a cobbler × Barbara née Harasinč; the h38 baptism 1890); ★ a GRIBLJE × GRIBLJE h63 × h78; priest [Jos. Rauy ~] — ★ the KRIŽAN female network: the 1911 №1 Katarina h63 + the 1912 №1 Barbara h63 (SISTERS!) + the 1905 Anna h35 + the 1910 №14 Marcus h86!",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "46",
+    bookSignature: "04455",
+    year: 1912,
+    scan: 150,
+    page: 149,
+    whatSi: "poroka (15. 4. 1912, vpis 9 — PONEDELJEK) — nevesta Barbara STRAUS [~ branjа 'Wurba ou Strovs' = Štrovs/STRAUS], bajtarica [~], 46, [ledig/vdova ~ VERIF], GRIBLJE 46 (★ 3. poročni dokaz h46 — 1909 №11 INTRA-h46 Žugelj × Klobučar + krstna 1885–1898; ★★ NAJSTAREJŠA NEVESTA LINIJE PO 1886-v1 (56)! Par 31+46 = 77 let; bajtar/bajtarica obe strani!) × Vincencij [SPUDIČ? ~ 7 variant branj — VERIF], bajtar, 31, ledig, GRADAC 80 (oče [Janez Spudič? drvinar ~]); ★ h46-ŽUGELJ veza (№14 Žugelj-ženin isto leto!) + ŠTRAVS-mreža ×4 leta (№9+№10+№15 neveste + priča Jožef = 3 Straus-neveste 1912 = REKORD!); zglašnica županstva Gradac 15. 4. 1912 št. 25; duhovnik [~]",
+    whatEn: "marriage (Apr 15, 1912, entry 9 — MONDAY) — the bride Barbara STRAUS [~ the readings 'Wurba ou Strovs' = Štrovs/STRAUS], a cottager [~], 46, [single/widow ~ VERIF], GRIBLJE 46 (★ the 3rd marriage evidence of h46 — the 1909 №11 the INTRA-h46 Žugelj × Klobučar + the baptisms 1885–1898; ★★ THE OLDEST BRIDE OF THE LINE AFTER THE 1886-v1 (56)! The couple 31+46 = 77 years; a cottager/cottageress on both sides!) × Vincencij [SPUDIČ? ~ 7 reading variants — VERIF], a cottager, 31, single, GRADAC 80 (the father [Janez Spudič? a woodcutter ~]); ★ the h46-ŽUGELJ link (the №14 Žugelj groom the same year!) + the ŠTRAVS network ×4 of the year (the №9+№10+№15 brides + the witness Jožef = 3 Straus brides of 1912 = A RECORD!); the banns of the Gradac commune Apr 15, 1912 no. 25; priest [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "44",
+    bookSignature: "04455",
+    year: 1912,
+    scan: 151,
+    page: 150,
+    whatSi: "poroka (9. 9. 1912, vpis 15 — PONEDELJEK, STRIP-9.9. NE 29.9.!) — nevesta Marija ŠTRAVS [~Straus], [bajtajeva? ~], 26, ledig, GRIBLJE 44 (~ branjа 'Girišice 44' = GENETSKA-VAS Griblje 3. pojav [1911 №12 'Giriči' + 04105-1911 'Grišice' + 1912 'Girišice']!; 1. poročni dokaz h44) × Marko KRALJ [~ branjа 'Hvalj'/'Žužeklj' — KRALJ po očetu Janezu + korpus], ½ zemljak, 28, ledig, [BOGINJA ~ 14 — korpus-vas 1896 №8 Brodarič 'Boginja vas 15'; branjа 'Griblje vas/Begunja' VERIF]; ★★ mati neveste = Marija geb. PAPIČ [~ 'Gapič' — h31 Papič × Straus 1886 = 25-LETNA STRAUS-PAPIČ VEZA!]; starši neveste: Peter Štravs/Straus bajtar × Marija geb. Papič; starši ženina: Janez Kralj ½ × Marija geb. [Ložek? ~]; priči: Jožef Štravs + Jurij Klepec (KLEPEC ×3 leta: №2+№15-priča+№16!); zglašnica [Podzemelj ~ 23/8. 1912 št. 9 — prekrivanje z №14 VERIF]; duhovnik [~]; ★ KRALJ-mreža leta (№10 mati geb. Kralj + №14 mati geb. Kralj + №15 ženin Kralj!)",
+    whatEn: "marriage (Sep 9, 1912, entry 15 — MONDAY, the STRIP-9.9. NOT 29.9.!) — the bride Marija ŠTRAVS [~Straus], [a cottager's? ~], 26, single, GRIBLJE 44 (~ the reading 'Girišice 44' = the GENETIC-VILLAGE Griblje the 3rd appearance [the 1911 №12 'Giriči' + the 04105-1911 'Grišice' + the 1912 'Girišice']!; the 1st marriage evidence of h44) × Marko KRALJ [~ the readings 'Hvalj'/'Žužeklj' — KRALJ by the father Janez + the corpus], a half smallholder, 28, single, [BOGINJA ~ 14 — the corpus village of the 1896 №8 Brodarič 'Boginja vas 15'; the readings 'Griblje vas/Begunja' VERIF]; ★★ the bride's mother = Marija née PAPIČ [~ 'Gapič' — the h31 Papič × Straus 1886 = a 25-YEAR STRAUS-PAPIČ LINK!]; the bride's parents: Peter Štravs/Straus a cottager × Marija née Papič; the groom's parents: Janez Kralj ½ × Marija née [Ložek? ~]; the witnesses: Jožef Štravs + Jurij Klepec (KLEPEC ×3 of the year: №2 + the №15 witness + №16!); the banns [Podzemelj ~ Aug 23, 1912 no. 9 — an overlap with №14 VERIF]; priest [~]; ★ the KRALJ network of the year (the №10 mother née Kralj + the №14 mother née Kralj + the №15 groom Kralj!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "21",
+    bookSignature: "04455",
+    year: 1912,
+    scan: 151,
+    page: 150,
+    whatSi: "poroka (4. 11. 1912 [~ branjа 24./28.11. — STRIP 4.11. PON ✓], vpis 17 — PONEDELJEK) — nevesta Ana POŽEK [korpus ×3: krst 3. 4. 1890 'Janez Pošek/Požek ½ × Ana Šimec' → starost 22 ✓ + 1913-krst 'Ana Počelf' + 1908 №5 'Catharina Požek GRIBLJE 28'!; POŽEK = MEŽNARJI: 1890 'Miha Požek mežnar iz Adlešič'!], ¼ zemljakova hči, 22, ledig, GRIBLJE 21 (1. poročni dokaz h21 [~ VERIF hiša — branjа 'Griblje 21' 2×]) × Jožef ČERNIČ [korpus-1913: 'Jožef Černič ¼ zemljak' — par POTRJEN!], ¼ zemljak, 23, ledig, [ADLEŠIČI ~ 28 — band-branjе + listina 's Adlešičih 3. 11. 1912 št. 1278'!; alternativno Griblje 21 — VERIF; korpus-1913: par na GRIBLJE h31 = preselitev!]; ★★ KORPUS-SINHRONIZACIJA 1913: sin JULIJ krščen 8. 8. 1913 Griblje h31 ('Jožef Černič ¼ × Ana Počelf [=Požek]') = PAR + PRESELITEV [Adlešič?/Griblje 21 → h31] POTRJENA!; starši ženina: Matija Černič ¼ × Marija geb. Škalič [~ NOV PRIIMEK]; starši neveste: Janez Požek ½ [~ branjа 'Ložar/Barich' — korpus POŽEK!] × Ana geb. Šimec [korpus 1890 ✓]; priči: Janez DRAGOŠ [korpus-družina 1910 №3+№4!] + Janez [Bohle? ~ VERIF — NOV PRIIMEK]; ★ PROGLAS POLNOLETNOSTI za ženina — SODIŠČE ČRNOMELJ 10. 11. 1912 (1. Črnomelj-sodišče v liniji!) + za nevesto [3/11. 1912 ~] + zglašnica občine [Stari Trg ~ 'Stribudje'] št. [124 ~] + list iz Adlešič [št. 1278 ~]; duhovnik [~ 'Jož. Lamut']",
+    whatEn: "marriage (Nov 4, 1912 [~ the readings 24./28.11. — the STRIP Nov 4 MON ✓], entry 17 — MONDAY) — the bride Ana POŽEK [the corpus ×3: the baptism Apr 3, 1890 'Janez Pošek/Požek ½ × Ana Šimec' → the age 22 ✓ + the 1913 baptism 'Ana Počelf' + the 1908 №5 'Catharina Požek GRIBLJE 28'!; the POŽEKS = SEXTONS: the 1890 'Miha Požek a sexton from Adlešiči'!], a quarter smallholder's daughter, 22, single, GRIBLJE 21 (the 1st marriage evidence of h21 [~ the house VERIF — the reading 'Griblje 21' twice]) × Jožef ČERNIČ [the 1913 corpus: 'Jožef Černič a quarter smallholder' — THE COUPLE CONFIRMED!], a quarter smallholder, 23, single, [ADLEŠIČI ~ 28 — a band reading + the document 'from Adlešiči Nov 3, 1912 no. 1278'!; alternatively Griblje 21 — VERIF; the 1913 corpus: the couple at GRIBLJE h31 = a move!]; ★★ a CORPUS SYNCHRONIZATION of 1913: the son JULIJ baptized Aug 8, 1913 in Griblje h31 ('Jožef Černič ¼ × Ana Počelf [=Požek]') = THE COUPLE + THE MOVE [Adlešič?/Griblje 21 → h31] CONFIRMED!; the groom's parents: Matija Černič ¼ × Marija née Škalič [~ a NEW SURNAME]; the bride's parents: Janez Požek ½ [~ the readings 'Ložar/Barich' — the corpus POŽEK!] × Ana née Šimec [the 1890 corpus ✓]; the witnesses: Janez DRAGOŠ [the corpus family of the 1910 №3+№4!] + Janez [Bohle? ~ VERIF — a NEW SURNAME]; ★ a MAJORITY DECLARATION for the groom — the ČRNOMELJ COURT Nov 10, 1912 (the 1st Črnomelj court of the line!) + for the bride [Nov 3, 1912 ~] + the banns of the [Stari Trg ~ 'Stribudje'] commune no. [124 ~] + a document from Adlešiči [no. 1278 ~]; priest [~ 'Jož. Lamut']",
+    status: "DOCUMENTED",
+  },
+
 
   // ——— P122 razširitev: POROČNA KNJIGA 04455 — polno leto 1893 (skeni 87–90 ==
   // strani 86–89; VELIKA GLAVA »Traunungs=Buch« + rokopisno »1893« na s87 =

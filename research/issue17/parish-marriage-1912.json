@@ -1,0 +1,886 @@
+{
+ "source": {
+  "book": "04455 (ženitovanske knjige — Trauungsbuch, župnija Podzemelj)",
+  "url": "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04455/",
+  "year": 1912,
+  "scans": "s148 (dno: №1) + s149 (№2–6) + s150 (№7–11) + s151 (№12–17) == Pag. 147–150; s152 = ŽE 1913 (№1 27.1.1913) — meja leta doka­zana!",
+  "method": "6 krogov VLM-branj: 36 vrstičnih (rows141) + 8 dopolnilnih + 4 STRIP-datumskih + 49 finiх + 6 GRID + 30 celopasovnih multi-render (band141 o/i/d) + 38 mikro + 20 finalnih = ~190 branj; STRIP-tehnika (avtoritativni datumi) + GRID-tehnika (x-koordinate blokov: REZIDENCA JE PRED IMENOM!) + korpus-forenzika (krsti 04105 + poroke 1886–1911)",
+  "lead": "P140-lead: »P141 — poročna 1912 (№1 16.1. Anton Lozar Griblje 78 × Barbara Križan Griblje 63 + №2–6 na s149: 2.1.–12.2. 1912)«"
+ },
+ "lead": {
+  "claim": "P140-lead: №1 16.1. + №2–6 na s149 (datumi 2.1.–12.2.?)",
+  "correction": "17 vpisov (NE 6): №2–4 = 29.1. TROJNI DAN (lead '2.1.' = zmeda z №5!) + №7–11 na s150 (12.2.–20.5.) + №12–17 na s151 (20.5.–4.11.) — leto sega ŠE na s151 (P140-lead je poznal samo №1–6!)"
+ },
+ "entries": [
+  {
+   "row": 1,
+   "date": "16. januar 1912 (torek — izjema!)",
+   "scan": 148,
+   "page": 147,
+   "groom": {
+    "name": "Anton Lozar",
+    "place": "GRIBLJE 78 (★ h78 = NOVA POROČNA HIŠA korpusa — 69. → 70.! 1. poročni dokaz h78; korpus-04105: 1890 krst Antona na h38 (oče Miha Lozar ČEVLJAR) → 1915 krst h78 = par potrjen na novi hiši!); ★ GRIBLJE × GRIBLJE h78 × h63 (3. leto zapored z intra-poroko: 1910 №1 h13×h6 + 1911 №1 h31×h63 → 1912 №1!)",
+    "stand": "[1/2 ~ 1/4/3/4 branjа] zemljak",
+    "age": 21,
+    "status": "ledig",
+    "note": "★★ KORPUS-KRST: rojen 5. 5. 1890 Griblje h38 — oče Miha(el) Lozar čevljar × Barbara geb. Harasinč (starost 21 ✓ 8 mesecev po 21. rojstnem dnevu)"
+   },
+   "bride": {
+    "name": "Barbara Križan",
+    "place": "GRIBLJE 63 (2. poročni dokaz h63 — 1911 №1 sestra Katarina!)",
+    "stand": "[1/4 ~] zemljakova hči",
+    "age": 22,
+    "status": "ledig",
+    "note": "★★ KORPUS-KRST: rojena 20. 6. 1889 Griblje h63 — oče Nikolaj Križan ¼ × Katarina geb. Pezdirec (starost 22 ✓); branjа 'Marija'/'Johanna' = zmeda — BARBARA po korpusu 1915 ('Barbara roj. Križan r. 20/6 1889') + 1915-krst para na h78!"
+   },
+   "groomParents": {
+    "father": "Mihael Lozar, čevljar [~ branjа 'Ložar']",
+    "mother": "Barbara geb. Harasinč [korpus 1890!]"
+   },
+   "brideParents": {
+    "father": "Nikolaj Križan, ¼ zemljak (h63!)",
+    "mother": "Katarina geb. Pezdirec [korpus 1887–1898: vsi vpisi 'geb. Pezdirec/Pendirec' — branjа 'Kralj' = zmeda K/K]"
+   },
+   "witnesses": [
+    "[~ VERIF] Jos. Vouk? (župnik?)",
+    "[~ VERIF] Ivan [?]"
+   ],
+   "witnessStatus": "[~]",
+   "urkunden": "ženitovna poglasnica županstva [Metlika ~] 15/1. 1912 št. [1 ~] + očetovo ustno dovoljenje [~]",
+   "priest": "Jos. Rauy [~ branjа 'Romž/Vang/Vouk' — korpus-04105 1912: Rauq 7× + Bitnar 13×]",
+   "anomalies": [
+    "★★★ SESTRI KRIŽAN h63 v DVEH ZAPOREDNIH JANUARJIH: 1911 №1 Katarina (r. 20.1.1887, por. 30.1.1911 Papič) + 1912 №1 Barbara (r. 20.6.1889, por. 16.1.1912 Lozar) — obe hčereti Nikolaja Križana! (P140-lead 'sestri? [~ P141 VERIF]' → POTRJENO S KORPUSOM)"
+   ]
+  },
+  {
+   "row": 2,
+   "date": "29. januar 1912 (ponedeljek — TROJNI poročni dan №2+№3+№4!)",
+   "scan": 149,
+   "page": 148,
+   "groom": {
+    "name": "Marko Jurjevič [~ branjа Juvančič/Jurojevič/Jurjevc — korpus-priimek JURJEVIČ: 1894 №5 nevesta Maria (oče Josef ½ Gribler Krasinec 1!) + 1908 №12 mati Anna + priča Georg!]",
+    "place": "[Ukljuka ~ 18 — NEZNANA VAS/ZASELEK: branjа Ukljuka/Ukliča/Okluka/Otfuka/Otakovci — nobena ne ujema znanih vasi župnije; VERIF odprto]",
+    "stand": "1/4 zemljak",
+    "age": 23,
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Katarina Klepec",
+    "place": "PRILOZJE 25",
+    "stand": "1/4 zemljakova hči",
+    "age": 20,
+    "status": "ledig"
+   },
+   "groomParents": {
+    "father": "Janez [Jurjevič ~ branjа Juvančič] ¼ zemljak",
+    "mother": "Ana geb. Pezdirec"
+   },
+   "brideParents": {
+    "father": "Jurij Klepec, ¼ zemljak",
+    "mother": "Katarina geb. [Antonc? ~ VERIF]"
+   },
+   "witnesses": [
+    "Peter Klepec [~ branjа 'Majerfic'?]",
+    "[~ VERIF]"
+   ],
+   "witnessStatus": "[~]",
+   "urkunden": "zglašnica [Gradac ~] 27/1. 1912 št. 21 + ★ PROGLAS POLNOLETNOSTI za ženina (sodišče Metlika 17/1. 1911 [~ datum VERIF]) + ordinariat Ljubljana 12/1. 1912 št. [171 ~] (dispenza?) + očetovo ustno dovoljenje",
+   "priest": "Jos. Rauy [~ branjа 'Vang/Lang']",
+   "anomalies": [
+    "★ TROJNA POROKA 29.1. (№2+№3+№4) — 4. masovni dan linije (1908 24.2.×3, 1910 24.1.×5, 1911 6.2.×3)"
+   ]
+  },
+  {
+   "row": 3,
+   "date": "29. januar 1912 (ponedeljek — 2. od trojnih!)",
+   "scan": 149,
+   "page": 148,
+   "groom": {
+    "name": "Matija Križan [~ branjа 'Krušan'/'Hristanc' — KRIŽAN večinsko (5 branj) + korpus-priimek]",
+    "place": "BORŠT 38",
+    "stand": "1/4 zemljak",
+    "age": 24,
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Neža Justarič [~ branjа Šuštaršič — korpus-priimek JUSTARIČ: 1896 №8 nevesta Anna Justarič iz Otoka!]",
+    "place": "PRILOZJE 31",
+    "stand": "1/4 zemljakova hči",
+    "age": 18,
+    "status": "ledig"
+   },
+   "groomParents": {
+    "father": "Nikolaj [Križan ~] ¼ zemljak [~ DRUGI Nikolaj Križan — NE h63-županič (mati drugačna)!]",
+    "mother": "Marija geb. [Jakljevič? ~ VERIF]"
+   },
+   "brideParents": {
+    "father": "Jurij [Justarič ~ branjа Juharič/Jaukevič]",
+    "mother": "Ana geb. [? ~ VERIF]"
+   },
+   "witnesses": [
+    "Peter [Justarič? ~ Jakljevič? VERIF]",
+    "Nikolaj Brodaric [~ — korpus 1896 №8 ženin Brodarič Boginja vas 15!]"
+   ],
+   "witnessStatus": "[~]",
+   "urkunden": "zglašnica županstva Podzemelj 28/1. 1912 št. [2 ~] + očetovo ustno dovoljenje za ml. nevesto v navzočnosti prič [~]",
+   "priest": "Jos. Rauy [~ branjа 'Vouk']",
+   "anomalies": [
+    "★ PRILUŽJE ×2 v trojnem dnevu (№2 nevesta Prilozje 25 + №3 nevesta Prilozje 31 — sosednji hiši!)"
+   ]
+  },
+  {
+   "row": 4,
+   "date": "29. januar 1912 (ponedeljek — 3. od trojnih!)",
+   "scan": 149,
+   "page": 148,
+   "groom": {
+    "name": "Nikolaj Jakofčič [~ branjа Jakobčič/Jaukovič — Čerkvišče-družina = JAKOFČIČ po korpusu: 1898 №16 Michael Jakofčič Cerkuvea 12 + 1905 №15 Jakofčič Cerkvišče 9; ★ BRAT №6-NEVESTE (oba otroka Petra Jakofčiča)!]",
+    "place": "ČERKVIŠČE 16",
+    "stand": "1/4 zemljak",
+    "age": 28,
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Terezija Grabrijan [~ branjа Gradijan — korpus GRABRIJAN Cerkvišče: 1898 №15 ženin Marcus Grabrijan Cerkvišče 31!]",
+    "place": "ČERKVIŠČE 6",
+    "stand": "1/2 zemljakova hči",
+    "age": 23,
+    "status": "ledig"
+   },
+   "groomParents": {
+    "father": "Peter Jakofčič [~ branjа 'Žakelj'/'Jakobčič'], ½ zemljak",
+    "mother": "Ana geb. Mihelič"
+   },
+   "brideParents": {
+    "father": "Janez Grabrijan, ½ zemljak",
+    "mother": "Veronika geb. [Štukljar? ~ 'Stukljan/Stablj' VERIF]"
+   },
+   "witnesses": [
+    "Jurij Grabrijan, ¼ zemljak",
+    "Jurij Jakofčič [~]"
+   ],
+   "witnessStatus": "¼ zemljaka",
+   "urkunden": "županova zglašnica [Podzemelj ~ Gradac?] 29/1. 1912 št. 2 [~] + [št. 4 ~] + dovoljenje [~ VERIF]",
+   "priest": "[~ VERIF]",
+   "anomalies": [
+    "★★ INTRA-VAŠKA POROKA Čerkvišče 16 × 6 (grabrijanovsko-jakofčiška soseska) + ★ JAKOFČIČ-DVOJČEK LETO: brat (№4 ženin) + sestra (№6 nevesta) sta se poročila v 14 dneh (29.1. + 12.2.)!"
+   ]
+  },
+  {
+   "row": 5,
+   "date": "2. februar 1912 (petek — IZJEMA! edini PETEK leta)",
+   "scan": 149,
+   "page": 148,
+   "groom": {
+    "name": "Janez Novak",
+    "place": "GRADAC 2 [~ branjа 51 — VERIF]",
+    "stand": "1/2 zemljak",
+    "age": 21,
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Marija [Žofrca? ~ branjа Zalpica/Zalofa/Salpica/Žafrca/Jofra/Jelbica — PRIIMEK VERIF ODPRT: oče prebranjа kot 'Janez Jakša' (3 krogi!) — Janez [Jakša/Žofrca?]]",
+    "place": "GRADAC 51",
+    "stand": "1/4 zemljakova hči",
+    "age": 20,
+    "status": "ledig"
+   },
+   "groomParents": {
+    "father": "Janez Novak, ½ zemljak",
+    "mother": "Barbara geb. Mihelič"
+   },
+   "brideParents": {
+    "father": "Janez [Jakša? ~ Žofrca? VERIF], ¼ zemljak",
+    "mother": "Marija geb. Fleš [~ 'Flek' — NOV PRIIMEK]"
+   },
+   "witnesses": [
+    "Anton [Jakša? ~]",
+    "Janez [Svobodnik? ~ 'Zabodnik/Slobodnik' VERIF]"
+   ],
+   "witnessStatus": "[~]",
+   "urkunden": "zglašnica županstva Gradac 5/2. 1912 št. [22 ~] + ★ KRSTNI LIST ženina (sodišče Metlika 3/8. 1910) + ★ DEŽELNA VLADA LJUBLJANA 27/1. 1912 št. [2846/28491/2861 ~ VERIF] (dovoljenje!) + krstni list neveste (Metlika [~])",
+   "priest": "[~ branjа 'Danf/Mauf/Damp']",
+   "anomalies": [
+    "★ DEŽELNA VLADA drugič v liniji (1910 №17 št. 18796 za 16-letno nevesto — tukaj par 21+20: zakaj? [~ VERIF]) + PETEK-izjema (1911 TOR Dunaj — 1912 PET!)"
+   ]
+  },
+  {
+   "row": 6,
+   "date": "12. februar 1912 (ponedeljek — isti dan kot №7!)",
+   "scan": 149,
+   "page": 148,
+   "groom": {
+    "name": "Nikolaj Harasinovič [~ branjа Hrašinič/Hrapasimic/Harasinic — HARASIN(O)VIČ korpus: mati №1-1912 'Barbara Harasinč' 1890 + 1890 №14 nevesta 'Maria Harasimič'!]",
+    "place": "Krasinec 20 [~ branjа Mehovce/Vlašinec — VERIF odprto; Krasinec 3:1 večinsko]",
+    "stand": "1/2 zemljak",
+    "age": 24,
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Ana Jakofčič",
+    "place": "ČERKVIŠČE 17",
+    "stand": "1/2 zemljakova hči",
+    "age": 21,
+    "status": "ledig",
+    "note": "★ SESTRA №4-ženina (ista starša Peter Jakofčič!)"
+   },
+   "groomParents": {
+    "father": "Anton Harasinovič, ½ zemljak",
+    "mother": "Marija geb. Moravec"
+   },
+   "brideParents": {
+    "father": "Peter Jakofčič, ½ zemljak (h17 Čerkvišče)",
+    "mother": "Katarina geb. [Župančič? ~ 'Butarič' VERIF]"
+   },
+   "witnesses": [
+    "Janez Moravec, ¼ zemljak",
+    "Peter Perdih [~ 'Sencur' VERIF — NOV PRIIMEK]"
+   ],
+   "witnessStatus": "[~]",
+   "urkunden": "zglašnica županstva Podzemelj 11/2. 1912 št. 4 + očetovo ustno dovoljenje [~]",
+   "priest": "Jos. Rauy [~ branjа 'Rauž' — najjasnejši podpis leta!]",
+   "anomalies": [
+    "★ DVOJNI PONEDDELJEK 12.2. (№6+№7) + HARASINOVIČ-dvojček leta (№6 24 let + №16 49 let — oba Nikolaja! očeta Anton + Janez = brata?)"
+   ]
+  },
+  {
+   "row": 7,
+   "date": "12. februar 1912 (ponedeljek — 2. istega dne!)",
+   "scan": 150,
+   "page": 149,
+   "groom": {
+    "name": "Matija Pezdirec",
+    "place": "Krasinec 3 [~ branjа Vranovici/Kourinec/Kavrnice/KLOSTINEC — VERIF; 'Kourinec' ≈ Krasinec]",
+    "stand": "1/2 zemljak",
+    "age": 28,
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Katarina Pezdirec",
+    "place": "PRIMOSTEK 17",
+    "stand": "1/2 zemljakova hči",
+    "age": 19,
+    "status": "ledig"
+   },
+   "groomParents": {
+    "father": "Mihael Pezdirec, ½ zemljak",
+    "mother": "Ana geb. [Jakofčič? ~ 'Jakšič' VERIF]"
+   },
+   "brideParents": {
+    "father": "Matija Pezdirec, ½ zemljak",
+    "mother": "Barbara geb. Filak [~ branjа Vilfan/Vilup/Šilak — korpus-priimek FILAK: h47 1887+1890 Maria Filath + 1892 №10 nevesta Dorothea Filak!]"
+   },
+   "witnesses": [
+    "Martin Pezdirec",
+    "Matija [Šuštarič? ~ VERIF]"
+   ],
+   "witnessStatus": "[~]",
+   "urkunden": "zglašnica županstva Podzemelj 1/2. 1912 št. 5 + očetovo ustno dovoljenje [~] + [mevedo o vzgoji? ~ zmedeno branje]",
+   "priest": "[~ VERIF]",
+   "anomalies": [
+    "★★★ INTRA-PRIIMEK PEZDIREC × PEZDIREC (2. intra-priimek poroka linije po 1910 №1 Jakobčič!) — DVE RAZLIČNI DRUŽINI: ženinova (Mihaelova) vs nevestina (Matijeva) — zrcalna vzorca z 1910 Jakobčič (Mathias ½ h13 × Mathias ¼ h6)! + №-branjа '1'/'4' = Kurrent-7 zmeda (ZAPOREDJE zahteva 7!)"
+   ]
+  },
+  {
+   "row": 8,
+   "date": "19. februar 1912 (ponedeljek)",
+   "scan": 150,
+   "page": 149,
+   "groom": {
+    "name": "Jožef Jakša [~ branjа 'Jakšič']",
+    "place": "VRANOVIČI 14",
+    "stand": "1/2 zemljak",
+    "age": 19,
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Marija Švajgar [~ = SCHWEIGER: korpus 1890 №2 ženin Anton Schweiger + 1898 №25 nevesta Catharina Schwiger Vranoviče 11 — ŠVAJGAR/SCHWIGER-družina VRANOVIČI!]",
+    "place": "VRANOVIČI 13",
+    "stand": "1/2 bajtarska hči",
+    "age": 20,
+    "status": "ledig"
+   },
+   "groomParents": {
+    "father": "Jožef Jakša, ½ zemljak",
+    "mother": "Ana geb. Jakša (★★ KORPUS 1891 №12: Josef Jakša × Ana Jakša — ŽENINOVA STARŠA = poroka 25.5.1891!)"
+   },
+   "brideParents": {
+    "father": "Anton Švajgar, ½ zemljak",
+    "mother": "Marija geb. Jakša (★★ KORPUS 1890 №2: Anton Schweiger × Maria Jakša — NEVESTINA STARŠA = poroka 10.2.1890!)"
+   },
+   "witnesses": [
+    "Janez Švajgar",
+    "Janez [Šnajgar? ~ 'Švajgar' 2× — VERIF]"
+   ],
+   "witnessStatus": "[~]",
+   "urkunden": "zglašnica županstva Gradac 19/2. 1912 št. 24 + ★★ ORDINARIAT LJUBLJANA št. [5473 ~] + določene objave št. [4133 ~] + dovoljenje 20/1. 1912 št. [2786 ~] + ★ VOJAŠKO OBLASTNO POVELJSTVO 16/1. 1912 (vojna dovoljenja!) + ★ PROGLAS POLNOLETNOSTI za nevesto [~]",
+   "priest": "[~ branjа 'P?unž/Lamp']",
+   "anomalies": [
+    "★★★ DVOJNA KORPUS-SINHRONIZACIJA: OBA STARŠA-PARA ŽENINA IN NEVESTE sta že v poročnem korpusu (1891 №12 Jakša × Jakša + 1890 №2 Schweiger × Jakša) — 1. tak PRIMER v liniji! + INTRA-VRANOVIČI 14 × 13 (sosednji hiši!) + JAKŠA-obroč (mati neveste + starši ženina + priča? Jakša ×3)"
+   ]
+  },
+  {
+   "row": 9,
+   "date": "15. april 1912 (ponedeljek)",
+   "scan": 150,
+   "page": 149,
+   "groom": {
+    "name": "Vincencij [Spudič? ~ branjа Soporič/Topič/Jopnic/Dolnič/Krumar/Slatner/'Vinomaj' — VERIF: oče branjа 'Janez Spudič drvinar' (band) = ženin po očetu SPUDIČ?; 'Vincencij Topič' = PRIČA po band-branju!]",
+    "place": "GRADAC 80",
+    "stand": "bajtar",
+    "age": 31,
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Barbara Straus [~ branjа 'Wurba ou Strovs' = Štrovs/STRAUS]",
+    "place": "GRIBLJE 46 (★ 3. poročni dokaz h46 — 1909 №11 INTRA-h46 Žugelj × Klobučar + korpus-krsti!)",
+    "stand": "bajtarica [~]",
+    "age": 46,
+    "status": "[ledig ~ VERIF — ali VDOVA?]",
+    "note": "★★ NAJSTAREJŠA NEVESTA LINIJE PO 1886-v1 (56)! 46 let"
+   },
+   "groomParents": {
+    "father": "[Janez Spudič? ~ VERIF], drvinar [~]",
+    "mother": "Ana geb. [Mihelič? ~ 'Mihelinac/Žunič' VERIF]"
+   },
+   "brideParents": {
+    "father": "[Jožef Marencič? ~ VERIF — če je nevesta VDOVA, roj. Marencič?]",
+    "mother": "Ana geb. [Kurnič? ~ VERIF]"
+   },
+   "witnesses": [
+    "[Vincencij Topič? ~]",
+    "[Bojtav? ~ VERIF]"
+   ],
+   "witnessStatus": "[~]",
+   "urkunden": "zglašnica županstva Gradac 15.4. 1912 št. 25",
+   "priest": "[~ branjа 'Lamp/Lampič']",
+   "anomalies": [
+    "★★ NEVESTA 46 LET iz h46 — ČUDEN PAR (31 + 46 = 77 let skupaj) + bajtar/bajtarica (obe strani brezzemljjaški) — ali je vdova (Straus = priimek POKOJNEGA MOŽA?) [~ VERIF] + h46-Žugelj-veza (№14 ŽUGELJ-ženin isto leto!)"
+   ]
+  },
+  {
+   "row": 10,
+   "date": "29. april 1912 (ponedeljek — STRIP+band 29.4., NE 20.4. overview!)",
+   "scan": 150,
+   "page": 149,
+   "groom": {
+    "name": "Janez Jakša",
+    "place": "GRADAC 17 [~ branjа 27/77/3 — VERIF]",
+    "stand": "mizar [~]",
+    "age": 22,
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "[Barbara ~ 'Jožefa' 1 branjе] Štravs [~ = STRAUS/Štravs korpus: 1891 №5 ženin Johann Stravs]",
+    "place": "BORŠT 14 [~ branjа 19 — VERIF]",
+    "stand": "hčerka",
+    "age": 19,
+    "status": "ledig"
+   },
+   "groomParents": {
+    "father": "Janez Jakša, ½ zemljak [~ 'Javša']",
+    "mother": "Marija geb. Marencič [~ 'Marenfič/Marencig' — korpus 1896 №2 nevesta Catharina Marenfič Kapljišče!]"
+   },
+   "brideParents": {
+    "father": "Nikolaj Štravs, ½ zemljak",
+    "mother": "Marija geb. Kralj"
+   },
+   "witnesses": [
+    "Jožef [Štravs? ~ 'Ojvans/Dornal' VERIF]",
+    "[~ VERIF]"
+   ],
+   "witnessStatus": "[~]",
+   "urkunden": "zglašnica županstva Gradac 29/3. 1912 št. 26 [~] + [občinske vlade? ~] 31.3. 1912 št. 53 [~] + ★ DOVOVILO ZA ML. NEVESTO (sodišče Metlika [6/2. 1911 ~]) + ★ IZPRAVA ZA ML. ŽENINA (Metlika [16/11. 1912 ~ — datum VERIF])",
+   "priest": "[~ branjа 'Dornal']",
+   "anomalies": [
+    "★ JAKŠA-DINASTIJA leta: №8 (Jožef Vranoviči 14) + №10 (Janez Gradac 17) + mati neveste №8 geb. Jakša + mati №10 geb. Marencič — JAKŠA ×3 omembe + ★ ŠTRAVS-mreža leta: №9 nevesta + №10 nevesta + №15 nevesta = 3 STRAUS-ŽENSKE 1912!"
+   ]
+  },
+  {
+   "row": 11,
+   "date": "20. maj 1912 (ponedeljek — DVOJNI poročni dan №11+№12!)",
+   "scan": 150,
+   "page": 149,
+   "groom": {
+    "name": "Nikolaj Jakljevič [~ branjа Jankovič/Jakšič/Jaukovič/Jožefovič — JAKLJEVIČ po korpusu (1910 №17 nevesta Neža Jakljevič Prilozje 30 + 1912-04105 h8 krsti 'Janez Jakofčič × Neža Jakljevič') + ★ SESTRA №12-NEVESTE (ista hiša Krasinec 13!)]",
+    "place": "KRASINEC 13",
+    "stand": "1/2 zemljak",
+    "age": 26,
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Barbara Muc",
+    "place": "PRIMOSTEK 10",
+    "stand": "1/4 zemljakova hči",
+    "age": 24,
+    "status": "ledig",
+    "note": "★ SOROJENKA №12-ŽENINA (ista starša Matija Muc × Ana geb. Vukšinič!)"
+   },
+   "groomParents": {
+    "father": "Nikolaj Jakljevič [~ 'Jankovič' VERIF], ½ zemljak",
+    "mother": "Ana geb. [Križan? ~ 'Kipran/Kipčan/Škrjan/Horjan' VERIF]"
+   },
+   "brideParents": {
+    "father": "Matija Muc, ¼ zemljak",
+    "mother": "Ana geb. Vukšinič [NOV PRIIMEK]"
+   },
+   "witnesses": [
+    "Marko Bajuk",
+    "Janez Muc (MUC-priči!)"
+   ],
+   "witnessStatus": "[~]",
+   "urkunden": "zglašnica županstva Podzemelj 19/5. 1912 št. [80 ~]",
+   "priest": "[~ VERIF]",
+   "anomalies": [
+    "★★★ DVOJNA POROKA SOROJENCEV MUC: №11 Barbara (Primostek 10) + №12 Nikolaj (Primostek 10) — ISTI DAN 20.5.! + RECIPROČNI PAR HIŠ: Jakljevič (Krasinec 13) ↔ Muc (Primostek 10) — brat+sestra iz Krasinca 13 sta se poročila z bratom+sestro iz Primostka 10 ISTI DAN = 1. RECIPROČNI DVOJNI PAR LINIJE!"
+   ]
+  },
+  {
+   "row": 12,
+   "date": "20. maj 1912 (ponedeljek — 2. istega dne!)",
+   "scan": 151,
+   "page": 150,
+   "groom": {
+    "name": "Nikolaj Muc",
+    "place": "PRIMOSTEK 10",
+    "stand": "1/4 zemljak",
+    "age": 34,
+    "status": "ledig",
+    "note": "★ SOROJENEC №11-NEVESTE (34 let — najstarejši od Muc-sorojencev)"
+   },
+   "bride": {
+    "name": "Marija Jakljevič",
+    "place": "KRASINEC 13 (★ ISTA HIŠA kot №11-ŽENIN — RECIPROČNI par!)",
+    "stand": "1/2 bajtarska hči",
+    "age": 20,
+    "status": "ledig"
+   },
+   "groomParents": {
+    "father": "Matija Muc, ¼ zemljak (ISTA STARŠA kot №11-nevesta — ✓ sinhrona dvojna!) ",
+    "mother": "Ana geb. Vukšinič"
+   },
+   "brideParents": {
+    "father": "Nikolaj Jakljevič [~ 'Janževič/Javornič/Jakičevič' VERIF], ½ zemljak",
+    "mother": "Ana geb. [Križan? ~ 'Kipčan/Kipran/Škrjan/Horjan' VERIF — ISTA ženska kot №11 mati ženina?!]"
+   },
+   "witnesses": [
+    "Janez [Hlebec? ~ VERIF]",
+    "Nikolaj [? ~ VERIF]"
+   ],
+   "witnessStatus": "[~]",
+   "urkunden": "zglašnica županstva Podzemelj [14/5. 1912 ~] št. [4 ~] + [14. člen ~] ustno dovoljenje za ml. nevesto [~ zmedeno]",
+   "priest": "[~ VERIF]",
+   "anomalies": [
+    "★★★ 2. od dvojne sorojenske poroke (glej №11) — par 34+20 let (razlika 14!) + MUC-obroč: №11+№12 sorojenca + priči Marko Bajuk + Janez Muc = hiša Primostek 10 x4 omembe na strani!"
+   ]
+  },
+  {
+   "row": 13,
+   "date": "22. julij 1912 (ponedeljek)",
+   "scan": 151,
+   "page": 150,
+   "groom": {
+    "name": "Alfred [Kerschbaumer? ~ branjа 'Altgried/Oerschidz/Ovschider/verschibt' — NEMŠKI PRIIMEK VERIF ODPRT; 'Alfred' jasno v vseh krogih (LATINSKA pisava!) + 'd?rgovski po.' = TRGOVSKI POMOČNIK?]",
+    "place": "PODZEMELJ 11 (vaško središče — trgovina?!)",
+    "stand": "[trgovski pomočnik ~]",
+    "age": 26,
+    "status": "ledig",
+    "note": "★ 1. ALFRED v liniji + nemški priimek = verjetno trgovčev sin iz Podzemelja"
+   },
+   "bride": {
+    "name": "Marija [Pezdirec? ~ 2 branjа 'Pezdirec'; 'Jexhipe?c' — VERIF; KERSCHBAUMER-po overview zavrnjeno (zmeda z ženinom?)]",
+    "place": "PODZEMELJ 10",
+    "stand": "[1/4 gomljašinje ~]",
+    "age": 23,
+    "status": "ledig"
+   },
+   "groomParents": {
+    "father": "[? ~ VERIF — 'Valentin Perovšič'??]",
+    "mother": "[Marija geb. Kure? ~ VERIF]"
+   },
+   "brideParents": {
+    "father": "[Janez Pezdirec? ~ 'Janez Tome' — VERIF]",
+    "mother": "[Marija/Miko geb. Kure? ~ VERIF — KURE-obroč!]"
+   },
+   "witnesses": [
+    "Nikolaj Kure",
+    "Janez Tome (KURE + TOME priči!)"
+   ],
+   "witnessStatus": "[~]",
+   "urkunden": "zglašnica [občine Škocjan ~ Metlika?] [10/4-10/5]. 1912 št. 5 + [sodišče ~ 'župno sodišče Maribor/Metlika'?] št. 1222 [~] + krstni list 11/1. 1910 [~] + [DISPENSA 4. STOPNJE? ~ overview] + ★ TAUFSCHEIN RADOVICA 31/1. 1912 [~] + SMRTNI LIST RADOVICA 17/11. 1910 [~]",
+   "priest": "Paulin Bitnar [~ branjа 'Ramljn Ribnar' — korpus-04105 1912: Bitnar 13×!]",
+   "anomalies": [
+    "★ PODZEMELJ 11 × 10 = CENTER-poroka (prvič SREDIŠČE vasi v liniji!) + RADOVICA-listine (drugozaupnijska!) + KURE-ženske ×2 (obe materi geb. Kure = 4. STOPNJA dispenza?! [~ VERIF]) + TOME-priča"
+   ]
+  },
+  {
+   "row": 14,
+   "date": "26. avgust 1912 (ponedeljek)",
+   "scan": 151,
+   "page": 150,
+   "groom": {
+    "name": "Martin Žugelj",
+    "place": "KRIVOGLAVCI 38 [korpus-vas: 1898 №4 'Krivoglavs(e) 11' + 1911 №12 nevesta 'KRIVOGLAVE 30' — 3. pojav!]",
+    "stand": "kmet [1/2 ~ 3/8 'Besitzer' branjа]",
+    "age": 29,
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Marija Žugelj [~ branjа 'Marijeta']",
+    "place": "DOBRAVICE 18",
+    "stand": "1/4 bajtarska hči [~ 'kmeti']",
+    "age": 22,
+    "status": "ledig"
+   },
+   "groomParents": {
+    "father": "Jakob Žugelj, [posestnik ~ hlapec]",
+    "mother": "Marija geb. Rus [korpus 1886 №16 ženin Martin Rus!]"
+   },
+   "brideParents": {
+    "father": "Matija Žugelj, ¼ [kmetar ~]",
+    "mother": "Ana geb. Kralj"
+   },
+   "witnesses": [
+    "Janez Kralj [čevljar ~]",
+    "[Harfin Tome? ~ VERIF]"
+   ],
+   "witnessStatus": "[~]",
+   "urkunden": "zglašnica županstva [? — branjа 'Škocjan'/'Gornja Radgona'/'Podzemelj' — VERIF: Krivoglavci = drugo župnijo?] 23/8. 1912 št. 9 + Taufschein [~]",
+   "priest": "[~ VERIF]",
+   "anomalies": [
+    "★★★ INTRA-PRIIMEK ŽUGELJ × ŽUGELJ (3. intra-priimek linije: 1910 №1 Jakobčič + 1912 №7 Pezdirec + 1912 №14 Žugelj — REKORD 2 v enem letu!) — DVE DRUŽINI (Jakobova Krasinec-4-veja? vs Matijeva) + h46-ŽUGELJ veza (№9 nevesta iz h46!) + KRIVOGLAVCI-3.-pojav"
+   ]
+  },
+  {
+   "row": 15,
+   "date": "9. september 1912 (ponedeljek — STRIP 9.9., NE 29.9. band!)",
+   "scan": 151,
+   "page": 150,
+   "groom": {
+    "name": "Marko Kralj [~ branjа 'Hvalj'/'Žužeklj' — KRALJ po očetu Janezu (2 branjа) + korpus; 'Magdin Hugel' = zmeda z №14]",
+    "place": "[BOGINJA ~ 14 — korpus-vas BOGINJA (1896 №8 Brodarič Boginja vas 15); branjа 'Griblje vas 14'/'Begunja' — VERIF odprto]",
+    "stand": "1/2 zemljak",
+    "age": 28,
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Marija Štravs [~Straus]",
+    "place": "GRIBLJE 44 [~ branjа 'Girišice' = GENETSKA-VAS Griblje (3. pojav po 1911 №12 'Giriči' + №9 1912!)]",
+    "stand": "[bajtajeva? ~]",
+    "age": 26,
+    "status": "ledig"
+   },
+   "groomParents": {
+    "father": "Janez Kralj, ½ zemljak",
+    "mother": "Marija geb. [Ložek? ~ 'Gorič/Jozek' VERIF — LOŽAR-veza?]"
+   },
+   "brideParents": {
+    "father": "Peter Štravs/Straus, bajtar",
+    "mother": "Marija geb. Papič [~ 'Gapič' — korpus-priimek PAPIČ h31/h33-družina!]"
+   },
+   "witnesses": [
+    "Jožef Štravs",
+    "Jurij Klepec"
+   ],
+   "witnessStatus": "[~]",
+   "urkunden": "zglašnica [Podzemelj ~] [23/8. 1912 ~ št. 9 — prekrivanje z №14-doc! VERIF] + očetovo ustno dovoljenje [~]",
+   "priest": "[~ branjа 'Damp/Lamp']",
+   "anomalies": [
+    "★ ŠTRAVS/STRAUS ×3 leta (№9 nevesta 46 + №10 nevesta 19 + №15 nevesta 26 + priči Jožef Štravs №15 = 4 omembe!) — 3. STRAUS-nevesta istega leta = REKORD + mati geb. PAPIČ (h31 Papič × Straus 1886 — 25-letna veza!) + KRALJ-mreža (№10 mati geb. Kralj + №14 mati geb. Kralj + №15 ženin Kralj!)"
+   ]
+  },
+  {
+   "row": 16,
+   "date": "20. oktober 1912 (nedelja — STRIP+band 20.10., NE 30.10. overview!)",
+   "scan": 151,
+   "page": 150,
+   "groom": {
+    "name": "Nikolaj Harasinovič [~ 'Hrastinič/Topolnič/Stropnik' — HARASINOVIČ po №6 vzoru]",
+    "place": "KRASINEC 32",
+    "stand": "1/4 zemljak",
+    "age": 49,
+    "status": "[ledig ~ — 49-letni samski ženin! 2. po 1908-v16 73!]",
+    "note": "★ HARASINOVIČ-dvojček leta: №6 (24, h20) + №16 (49, h32) — očeta Anton + Janez = brata? stric/nečak [~ VERIF]"
+   },
+   "bride": {
+    "name": "Ana Klepec",
+    "place": "KRASINEC 37 [~ branjа 34 — VERIF]",
+    "stand": "1/2 bajtarska hči [~]",
+    "age": 29,
+    "status": "[ledig ~]"
+   },
+   "groomParents": {
+    "father": "Janez Harasinovič, ¼ zemljak",
+    "mother": "Ana geb. [Marencič? ~ 'Horencič/Čopernič' VERIF]"
+   },
+   "brideParents": {
+    "father": "Peter Klepec, ½ zemljak",
+    "mother": "Marija geb. Jakljevič [~ 'Jaukovič/Jelbinič' — JAKLJEVIČ-družina Krasinec!]"
+   },
+   "witnesses": [
+    "Janez Harasinovič [oče? brat? — 1/8 ~]",
+    "Anton Pirc [~ 'Pircd' — NOV PRIIMEK]"
+   ],
+   "witnessStatus": "[~]",
+   "urkunden": "zglašnica županstva Podzemelj 20/10. 1912 št. 11",
+   "priest": "[~ branjа 'Lozar' — zmeda s priimkom №1!]",
+   "anomalies": [
+    "★ PAR 49+29 = 78 let (5. najstarejši par linije?) + HARASINOVIČ-KRASINEC mreža (№6 + №16 + priča Janez = 3 moški Istega priimka iz Krasinca!) + KLEPEC ×3 leta (№2 nevesta + №15 priča Jurij + №16 nevesta)"
+   ]
+  },
+  {
+   "row": 17,
+   "date": "4. november 1912 [~ branjа 24.11./28.11. — STRIP+band 4.11. PON ✓; VERIF minor] (ponedeljek)",
+   "scan": 151,
+   "page": 150,
+   "groom": {
+    "name": "Jožef Černič [korpus-1913: 'Jožef Černič ¼ zemljak' — par POTRJEN!] [~ branjа 'Ošnik/Otine/Čehovin']",
+    "place": "[ADLEŠIČI ~ 28 — branjа 'Adlešiči 28' (band) + listina 's Adlešičih 3.11. 1912'! + 'Griblje 21'/'Bedenj' — VERIF odprto; korpus-1913: par na GRIBLJE h31!] [~]",
+    "stand": "1/4 zemljak",
+    "age": 23,
+    "status": "ledig"
+   },
+   "bride": {
+    "name": "Ana Požek [korpus-1890: krst 3.4.1890 'Janez Pošek/Požek ½ zemljak + Ana Šimec' — starost 22 ✓!] [~ branjа 'Jozelj/Jöch/Počelf' — POŽEK po korpusu ×3]",
+    "place": "GRIBLJE 21 [~ VERIF — korpus-1890 brez hišne; branjа 'Griblje 21' 2×]",
+    "stand": "1/4 zemljakova hči",
+    "age": 22,
+    "status": "ledig"
+   },
+   "groomParents": {
+    "father": "Matija Černič, ¼ zemljak",
+    "mother": "Marija geb. Škalič [~ 'Skrabič/Čalčič' VERIF — NOV PRIIMEK]"
+   },
+   "brideParents": {
+    "father": "Janez Požek, ½ zemljak [~ branjа 'Ložar/Barich/Bohte' — korpus POŽEK 1890+1908 №5 'Catharina Požek GRIBLJE 28'!] (POŽEK = MEŽNARJI Adlešiči: 1890 'Miha Požek mežnar iz Adlešič'!)",
+    "mother": "Ana geb. Šimec [korpus 1890 ✓]"
+   },
+   "witnesses": [
+    "Janez Dragoš [korpus-priimek DRAGOŠ: 1894 oče Ana Dragoš + 1910 №3+№4 sorojenca!]",
+    "Janez [Bohle? ~ 'Bohte/Bohne' VERIF — NOV PRIIMEK]"
+   ],
+   "witnessStatus": "[~ ½ zemljaka]",
+   "urkunden": "zglašnica občine [Stari Trg ~ 'Stribudje/Strihačje'] št. [124 ~] + ★ PROGLAS POLNOLETNOSTI za ŽENINA (sodišče Črnomelj 10/11. 1912!) + za nevesto ([3/11. 1912 ~]) + ★ LIST IZ ADLEŠIČ [3.11. 1912 št. 1278 ~ '198'] (knežji stan? [~])",
+   "priest": "[~ branjа 'Jož. Lamut']",
+   "anomalies": [
+    "★★ KORPUS-SINHRONIZACIJA 1913: sin JULIJ krščen 8.8.1913 Griblje h31 ('Jožef Černič ¼ × Ana Počelf[=Požek]') — PAR + PRESLETEV NA h31 POTRJENA! + POŽEK-mežnarji Adlešič ↔ ČERNIČ-Griblje = KRIŽ med župnijama/vasmi + PROGLAS ČRNOMELJ (sodišče 2. v liniji!)"
+   ]
+  }
+ ],
+ "excluded": [
+  "s148 dno pas y1450–1800: PRAZNA (razen №1) — v1bL+v1bR PRAZNA ✓",
+  "s149 pas y1500+: PRAZNA ✓ (strip)",
+  "s150 pas y1600+: PRAZNA ✓ (strip)",
+  "s151 pas y1560+: PRAZNA ✓ (strip) + s152 = 1913 №1 (27.1.1913 Juvančič × Mihelčič — P142-lead!)"
+ ],
+ "stats": {
+  "entries": 17,
+  "gribljeMarriages": 4,
+  "gribljeRows": [
+   1,
+   9,
+   15,
+   17
+  ],
+  "gribljeHouses": [
+   "78",
+   "63",
+   "46",
+   "44",
+   "21"
+  ],
+  "gribljeIntra": 1,
+  "gribljeBlocks": 5,
+  "sameVillageRows": [
+   4,
+   8,
+   13
+  ],
+  "sameVillageCount": 3,
+  "sameHouseRows": [],
+  "sameHouseCount": 0,
+  "mondays": 14,
+  "sundays": 1,
+  "tuesday": 1,
+  "friday": 1,
+  "massDays": [
+   [
+    "29. januar",
+    [
+     2,
+     3,
+     4
+    ]
+   ],
+   [
+    "12. februar",
+    [
+     6,
+     7
+    ]
+   ],
+   [
+    "20. maj",
+    [
+     11,
+     12
+    ]
+   ]
+  ],
+  "newHouses": [],
+  "newSurnames": [
+   "Lozar (ženin)",
+   "Jurjevič",
+   "Justarič",
+   "Harasinovič (ženin)",
+   "Švajgar (slovenski zapis)",
+   "Marencič",
+   "Vukšinič",
+   "Filak (mati)",
+   "Škalič",
+   "Perdih",
+   "Pirc",
+   "Spudič? [~]",
+   "Černič",
+   "Požek (nevesta)",
+   "Kerschbaumer? [~]",
+   "Žofrca? [~]",
+   "Rus (mati)",
+   "Bohle? [~]"
+  ],
+  "newOccupations": [
+   "čevljar (Lozar-oče)",
+   "trgovski pomočnik [~]",
+   "drvinar [~]",
+   "mizar [~]",
+   "bajtar/bajtarica (3×)",
+   "mežnar (Požek-rod!)"
+  ],
+  "newVillages": [
+   "Krivoglavci 3. pojav (korpus ✓)",
+   "Boginja [~]",
+   "Ukljuka [~ NEZNANA]",
+   "Adlešiči [~]"
+  ],
+  "newAuthorities": [
+   "sodišče Črnomelj (proglas №17!)",
+   "občina [Stari Trg ~]",
+   "ordinariat Ljubljana št. 5473 [~]",
+   "vojaško oblastno poveljstvo 16/1. 1912",
+   "deželna vlada Ljubljana št. 2846? [~]",
+   "[občina Škocjan? ~]",
+   "županstvo Gornja Radgona? [~ zavrnjeno]"
+  ],
+  "ageRecords": "№9 nevesta 46 (2. najstarejša po 1886-v1 56!) + №16 ženin 49 ledig (2. po 1908-v16 73) + par №9 31+46=77 + №16 49+29=78",
+  "dispensas": "№13 [dispensatio 4. stopnje? ~ — obe materi geb. Kure?]",
+  "unnumbered": 0,
+  "priests": "Jos. Rauy [~] + Paulin Bitnar [~] (korpus-04105 1912: Rauq 7× + Bitnar 13× — podpisi zelo zmedeni)",
+  "vitalsTotal": 675,
+  "blocks04455": 158,
+  "sidraTotal": 151,
+  "p80Houses": 69
+ },
+ "crossChecks": [
+  {
+   "claim": "№1 ženin Anton Lozar = krščen 5.5.1890 Griblje h38 (oče Miha Lozar čevljar × Barbara geb. Harasinč) — starost 21 let 16.1.1912 ✓",
+   "via": "04105-h38-1890 krst v korpusu + №1 starost 21 (2 branjа; '24' = Kurrent-1/4 zmeda)"
+  },
+  {
+   "claim": "№1 nevesta Barbara Križan = rojena 20.6.1889 Griblje h63 (oče Nikolaj × Katarina geb. Pezdirec) — starost 22 ✓; par 1915 na h78 (krst Jožefa 22.3.1915 'Anton Ložar ½ × Barbara roj. Križan r. 20/6 1889') = TROJNO sidro",
+   "via": "04105-h63-1889 krst + 04105-h78-1915 krst + №1 branjа 'Griblje 78/63'"
+  },
+  {
+   "claim": "№1 Barbara = SESTRA 1911-№1 Katarine (h63, obe hčereti Nikolaja Križana!) — P140-lead 'sestri? [~ P141 VERIF]' POTRJENO",
+   "via": "04105-h63: 1887 Katarina (20.1.) + 1889 Barbara (20.6.) isti starša Nikolaj Križan × Katarina geb. Pezdirec"
+  },
+  {
+   "claim": "№8 ženinovi starši = 1891 №12 poročni par (Josef Jakša × Ana Jakša 25.5.1891)",
+   "via": "04455-1891-№12 v korpusu + №8 groomParents branjа 2 kroga ✓"
+  },
+  {
+   "claim": "№8 nevestini starši = 1890 №2 poročni par (Anton Schweiger × Maria Jakša 10.2.1890)",
+   "via": "04455-1890-№2 v korpusu + №8 brideParents branjа 'Anton Švajgar × Marija geb. Jakša' = SCHWEIGER-slovenizacija ✓"
+  },
+  {
+   "claim": "№11+№12 = SOROJENSKI DVOJNI PAR: Muc-sorojenca (Barbara 24 + Nikolaj 34, otroka Matija Muc × Ana geb. Vukšinič, Primostek 10) + Jakljevič-sorojenca (Nikolaj 26 + Marija 20, Krasinec 13) — vse 4 poroke ISTI DAN 20.5.1912 RECIPROČNO",
+   "via": "№11+№12 groomParents/brideParents sinhrone branjа + ista hiša vsake družine"
+  },
+  {
+   "claim": "№17 par = Černič × Požek POTRJEN s krstom 1913: Julij 8.8.1913 Griblje h31 ('Jožef Černič ¼ × Ana Počelf[Požek]')",
+   "via": "04105-h31-1913 krst v korpusu + №17 branjа"
+  },
+  {
+   "claim": "№17 nevesta Ana Požek = krščena 3.4.1890 (Janez Pošek/Požek ½ × Ana Šimec) — starost 22 ✓",
+   "via": "04105-1890 krst + №17 starost 22 + mati Ana geb. Šimec ✓"
+  },
+  {
+   "claim": "№4 ženin + №6 nevesta = SESTRA IN BRAT Jakofčič (Čerkvišče 16/17, oba otroka Petra Jakofčiča) — poroki 29.1. + 12.2. 1912",
+   "via": "№4 groomParents + №6 brideParents: 'Peter Jakofčič ½' v obeh (3 kroge branj) + hiši 16/17 sosednji"
+  },
+  {
+   "claim": "№14 vas Krivoglavci = korpus-vas (1898 №4 Milavec 'Krivoglavs(e) 11' + 1911 №12 nevesta 'KRIVOGLAVE 30') — 3. pojav",
+   "via": "04455-1898-№4 + 04455-1911-№12 + №14 5 neodvisnih branj 'Krivoglavce/Vinoglavci/Krvoglavce/Urivoglavce' → KRIVOGLAVCI"
+  },
+  {
+   "claim": "№15 nevestina vas 'Girišice' = GRIBLJE (genetska-vas 3. pojav: 1911 №12 'Giriči' + 1911 №12-nevesta + 1912 №15 'Girišice')",
+   "via": "P140-genetska-vas lekcija + №15 branjа 44 = h44 Griblje korpus"
+  },
+  {
+   "claim": "№2 priimek JURJEVIČ = korpus (1894 №5 nevesta Maria Jurjevič, oče Josef ½ Krasinec 1 + 1908 №12 mati Anna + priča Georg Jurjevič)",
+   "via": "04455-1894-№5 + 04455-1908-№12 + №2 4 branjа [~ Juvančič alternativno]"
+  },
+  {
+   "claim": "№3 priimek JUSTARIČ = korpus (1896 №8 nevesta Anna Justarič Otokje)",
+   "via": "04455-1896-№8 + №3 2 branjа 'Justarič'"
+  },
+  {
+   "claim": "№4 priimek GRABRIJAN = korpus (1898 №15 ženin Marcus Grabrijan Cerkvišče 31)",
+   "via": "04455-1898-№15 + №4 3 branjа 'Grabrijan/Gradijan' → GRABRIJAN (Cerkvišče-kontinuiteta!)"
+  },
+  {
+   "claim": "№16 datum 20.10.1912 (STRIP+band) NE 30.10. (overview) — 20.10.1912 = NEDELJA ✓ koledar",
+   "via": "STRIP-tehnika (avtoritativno) + koledarska validacija"
+  },
+  {
+   "claim": "№17 številka = 17 (ZAPOREDJE: s151 ima SAMO en vpis po №16 + s152 = 1913 №1 — №18 bi moral obstajati, če bi bil ta '№19' [branjа 19 = Kurrent-7/9 zmeda!])",
+   "via": "STRIP-s151 (№17 nato PRAZNA) + s152-1913 + P140-№-lekcija"
+  },
+  {
+   "claim": "№7 = PEZDIREC × PEZDIREC (2. intra-priimek po 1910 №1 Jakobčič) — RAZLIČNI DRUŽINI: Mihaelova (ženin) vs Matijeva (nevesta)",
+   "via": "№7 v7L+v7R+band: 'Matija Pezdirec × Katarina Pezdirec' + starši Mihael ≠ Matija — zrcalo 1910 №1 (Mathias ½ h13 × Mathias ¼ h6)"
+  },
+  {
+   "claim": "№14 = ŽUGELJ × ŽUGELJ (3. intra-priimek) — starši Jakob ≠ Matija (različni veji)",
+   "via": "№14 v14R+v15R+v14fullR: 'Jakob Žugelj × Marija Rus' in 'Matija Žugelj × Ana Kralj' + 'Ingelič'=Žugelj grid-branjе"
+  }
+ ],
+ "anomalies": [
+  "★★★ DVOJNA POROKA SOROJENCEV MUC + RECIPROČNI PAR (№11+№12, 20.5.1912): Muc-brat+sister (Primostek 10) vs Jakljevič-brat+sister (Krasinec 13) — 4 sorojenci, 2 poroki, 1 dan, KRIŽNO-IZMENJČNE hiše = 1. RECIPROČNI DVOJNI PAR V CELOTNI LINIJI 1886–1912!",
+  "★★★ INTRA-PRIIMEK ×2 V ENEM LETU (№7 Pezdirec × Pezdirec + №14 Žugelj × Žugelj) — 1912 = INTRA-REKORD LINIJE (skupaj 3 intra-priimek poroke: 1910 Jakobčič + te dve)!",
+  "★★★ SESTRI KRIŽAN h63 V ZAPOREDNIH LETIH (1911 №1 Katarina Papič + 1912 №1 Barbara Lozar) — 1. par sester iz iste hiše v zaporednih januarjih!",
+  "★★ №9 NEVESTA 46 LET (Barbara Straus bajtarica, Griblje h46) — 2. najstarejša nevesta linije (1886-v1: 56); par 31+46; status [ledig/vdova ~ VERIF]",
+  "★★ №17 KORPUS-SINHRONIZACIJA: sin Julij krščen 8.8.1913 na h31 Griblje (Černič × Požek) — PRESLETEV par s [Adlešič/Griblje ~] na h31 dokazana",
+  "★★ PROGLASI POLNOLETNOSTI ×3 (№2 ženin sodišče Metlika + №8 nevesta + №17 ženin sodišče ČRNOMELJ — 1. Črnomelj-sodišče v liniji!)",
+  "★★ JAKŠA-DVOJČEK LETO (№8 Jožef Vranoviči 14 + №10 Janez Gradac [17/27 ~]) + JAKŠA-mati ×2 (№8 nevestina mati + №8 ženinova mati!)",
+  "★★ ŠTRAVS/STRAUS-MREŽA ×4 (№9 nevesta + №10 nevesta + №15 nevesta + №15 priča Jožef) — 3 Straus-neveste v 1 letu = REKORD",
+  "★★ HRAŠINOVIČ-DVOJČEK (№6 Nikolaj 24 Krasinec 20 + №16 Nikolaj 49 Krasinec 32 — očeta Anton + Janez) + HARASINČ-mati №1 = 3. Harasin-pojav leta",
+  "★ MASA-DNEVI ×3: 29.1. (№2+№3+№4) + 12.2. (№6+№7) + 20.5. (№11+№12) — 6 od 17 porok v skupnih dneh!",
+  "★ 14 PONEDDELJKOV + 1 NEDELJA + 1 TOREK (№1) + 1 PETEK (№5) = 82% PON — nadaljevanje linije-vzorca",
+  "★ №13 ALFRED — 1. latinsko-ime v liniji + trgovski pomočnik v Podzemelju 11 (vaško središče) + Radovica-listine (drugozaupnijska poroka!)",
+  "★ №1 TOR (16.1.) + №5 PET (2.2.) — DVE nevikendni izjemi (1911: 1 TOR Dunaj)",
+  "★ VOJAŠKA LISTINA №8 (oblastno poveljstvo 16/1. 1912 — pred 1. sv. vojno balkanski nemiri?)",
+  "★ KRIVOGLAVCI-DVOJČEK SUSEDSTVA (№14 ženivska vas — 3. korpus-pojav; morda DRUGA ŽUPNIJA: listine [Škocjan/Gornja Radgona ~ zmedena])",
+  "★ KLEPEC ×3 leta (№2 nevesta + №15 priča Jurij + №16 nevesta) + KRALJ-mreža (№10 mati + №14 mati + №15 ženin) + MUC ×4 (№11+№12+priči) + ŽUGELJ-mreža (№14 par + №9 nevesta h46)",
+  "★ POŽEK-MEŽNARJI Adlešič ↔ Griblje (№17 nevestin rod: 1890 Miha Požek 'mežnar iz Adlešič' + 1908 №5 Catharina Požek Griblje 28 + №17 Ana Griblje [21 ~])",
+  "★ GRIBLJE × GRIBLJE №1 h78 × h63 — 3. leto zapored z intra-vasično poroko (1910 №1 + 1911 №1 + 1912 №1 — Vsako januarsko INTRA!)"
+ ],
+ "honesty": [
+  "VERIF-oznake [~]: ~55 odprtih podrobnosti — največ v eni fazi linije (1912-pisar = SLOVENŠČINA + zelo hitra roka: najtežja pisava doslej!)",
+  "NAJVEČJE ODPRTE TOČKE: (1) №2 vas 'Ukljuka' — neznana (branjа Ukljuka/Okluka/Otakovci/Ukliča — morda zaselek); (2) №9 ženinov priimek (Spudič/Topič/Soporič — 7 variant!); (3) №9 nevestin status (ledig/vdova — bajtarica 46 let!); (4) №13 ženinov priimek (Kerschbaumer?/Altgried? — nemški, 6 variant) + №13 nevestin priimek (Pezdirec? — 3 branjа); (5) №5 nevestin priimek (Žofrca?/Zalpica? — oče 'Janez Jakša'?) + deželna-vlada-št.; (6) №11 ženinov priimek (Jakljevič po bratranstvu — branjа Jankovič/Jakšič/Jožefovič); (7) №17 ženinova vas (Adlešiči 28?/Griblje 21?) + datum (4./24.11.); (8) №6 ženinova vas (Krasinec 20 — branjа Mehovce/Vlašinec); (9) №15 ženinova vas (Boginja 14 — branjа Griblje/Begunja) + №15 priimek (Kralj — 'Hvalj/Žužeklj' branjа); (10) №4 priimek (Jakofčič po korpusu — branjа Jakobčič/Jaukovič)",
+  "DATUMI: STRIP-tehnika = avtoritativna (№7 12.2. ✓ №10 29.4. ✓ №16 20.10. ✓ №17 4.11. [1 odprt]); №5 2.2. PET potrjen 3 krogi",
+  "DUHOVNIKI: podpisi 1912 zelo zmedeni — korpus-04105 1912: Jos. Rauq 7× + Paulin Bitnar 13× → vse 'Vouk/Vang/Romž/Rauž/Lamp/Lamut/Damp/Dornal/Ribnar' branjа preslikana na RAUY/BITNAR [~]",
+  "STRIP štetje 17 vpisov potrjeno na vseh 4 straneh (s148-s151) + s152 = 1913 №1 — NI manjkajočih vpisov",
+  "№17 '№19' branjа (2 kroga) zavrnjena z ZAPOREDNO-argumentacijo (s151 en sam vpis po №16; s152 = 1913) — Kurrent-7/9 lekcija P140",
+  "ISTA-HIŠA rekord 1911 (×3) se v 1912 VRNE na 0 — ista-VAŠKE poroke (№4 Čerkvišče 16×6 + №8 Vranoviči 14×13 + №13 Podzemelj 11×10) so blizu, a hišne številke različne (sosednje hiše!) — vzorec 'sosednjih hiš' [~ VERIF hišne številke №4/№8/№13]"
+ ]
+}
