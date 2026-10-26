@@ -405,7 +405,7 @@ def main() -> int:
     qa = open(QA_TS).read()
     check("I9 qa-p125", '"qa-p125-parish-marriage-1896"' in qa)
     check("I9b p80 bloki 78", "poročni vpisi (04455) ≠ 158" in qa)
-    check("I9c p80 sidra 71 (1895×5 + 1896×1 + 1897×9 + 1898×9 · 1899×6 · 1900×2)", "poročna sidra ≠ 157" in qa)
+    check("I9c p80 sidra 71 (1895×5 + 1896×1 + 1897×9 + 1898×9 · 1899×6 · 1900×2)", "poročna sidra ≠ 161" in qa)
     check("I9d p80 hiša 1896 = [18]", "hiša 1896 (04455) ≠ [18]" in qa)
     check("I9e p80 hiše 58", "različnih hiš (vse tri knjige) ≠ 70" in qa)
     check("I9f PT luknja 12 (+h46/h48 — P127!)", "PT luknja ≠ 13 hiš" in qa)

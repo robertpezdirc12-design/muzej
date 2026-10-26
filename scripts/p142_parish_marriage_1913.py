@@ -64,9 +64,9 @@ GRIBLJE_ROWS = [2, 3, 6, 10, 11]
 GRIBLJE_HOUSES = ["1", "25", "35", "53", "76", "91"]
 GRIBLJE_BLOCKS = 6              # №2 1 + №3 1 + №6 1 + №10 2 (INTRA!) + №11 1
 GRIBLJE_INTRA = 1
-VITALS_TOTAL = 681              # 675 + 6
-BLOKI_04455 = 164               # 158 + 6
-SIDRA_TOTAL = 157               # 151 + 6 blokov (+1913:6)
+VITALS_TOTAL = 681              # 675 + 6 (ZAMRNJEN 1913-evidence pin — NE posodabljati v kaskadi!; tekoči korpus = 685 od P143)
+BLOKI_04455 = 164               # 158 + 6 (ZAMRNJEN 1913-evidence pin; tekoči = 168 od P143)
+SIDRA_TOTAL = 157               # 151 + 6 blokov (+1913:6) (ZAMRNJEN 1913-evidence pin; tekoči = 161 od P143)
 EXPECTED_MONDAYS = 9            # + 4 nedelje = 13/13 VIKENDI!
 EXPECTED_SUNDAYS = 4
 
@@ -179,15 +179,15 @@ def main():
     # ---------- I6: qa-parish.ts ----------
     qa = open(QA_TS).read()
     check("I6a qa-p142 id", "qa-p142-parish-marriage-1913" in qa)
-    n681 = qa.count("HOUSE_VITALS.length !== 681")
-    check("I6b vitals pini 681", n681 >= 57, str(n681))
-    n164 = qa.count('.length !== 164')
+    n685 = qa.count("HOUSE_VITALS.length !== 685")
+    check("I6b vitals pini 685", n685 >= 57, str(n685))
+    n164 = qa.count('.length !== 168')
     check("I6c bloki pini 164", n164 >= 2, str(n164))
-    check("I6d sidra 157 + 1913:6", "poročna sidra ≠ 157" in qa and "p142Marr.length !== 6" in qa, "")
+    check("I6d sidra 157 + 1913:6", "poročna sidra ≠ 161" in qa and "p142Marr.length !== 6" in qa, "")
     check("I6e hiše 1913 pin", '"1,25,35,53,76,91"' in qa, "")
-    check("I6f ostanki 675/158/151/69", "HOUSE_VITALS.length !== 675" not in qa and ".length !== 158" not in qa
-          and "p80MarrAnchors.length !== 151" not in qa and "p80Houses.size !== 69" not in qa, "stare pini!")
-    check("I6g p80 hiše 70 (+h76!)", "p80Houses.size !== 70" in qa, "")
+    check("I6f ostanki 681/164/157/70", "HOUSE_VITALS.length !== 681" not in qa and ".length !== 164" not in qa
+          and "p80MarrAnchors.length !== 157" not in qa and "p80Houses.size !== 70" not in qa, "stare pini! (posodobljeno P143)")
+    check("I6g p80 hiše 70 (+h76!)", "p80Houses.size !== 71" in qa, "")
     check("I6h PT luknja 13 nespremenjena", "p80Gap.length !== 13" in qa, "")
 
     # ---------- I7: dnevi ----------

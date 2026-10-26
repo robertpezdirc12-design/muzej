@@ -1,0 +1,387 @@
+{
+ "source": {
+  "book": "04455 (ženitovanske knjige — Trauungsbuch, župnija Podzemelj)",
+  "url": "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04455/",
+  "year": 1914,
+  "scans": "s154 (dno: №1–3) + s155 (№4–7) == Pag. 153–154; meja 1914/1915: s155 dno = PRAZNA pasova + diagonala + s156 = letna glava »1915« (skena s155-dno + s156-top preverjena!)",
+  "method": "5 krogov VLM-branj (Faza-1 overviewji + STRIP iz P142 + 14 full-row 3× + 12 mikro + 31 hiper-zoom multi-render o/i/d) + korpus-forenzika (04105-krsti 1885–1919 + 04455-poroke 1886–1913) — 1914 = isti slovenski pisar kot 1912/1913 + NOVINA: ROJSTNI DATUMI v blokih (№7!) + sistemske zmede S/J/L-inicial (Segina/Jegliča/Legina), M-priimki (Muc/Milek/Mlak/Mih/Mikc!) in F/P (Požek/Fojek, Fojek/Holbec)",
+  "lead": "P142-lead: »1914 №1 = 9.2. Jožef Pajzar Hlošča 54 × Ana Lipovec GRIBLJE 46 + 3–4 INTRA-GRIBLJE poroke — rekordno leto!« (Hlošča = KLOSTER; 'Lipovec' = napačno branje Segina!)"
+ },
+ "lead": {
+  "claim": "P142-lead: 1914 №1 9.2.1914 Jožef Pajzar × Ana Lipovec GRIBLJE 46 + №2–3 s154 + №4–7 s155 = 3–4 INTRA-GRIBLJE",
+  "correction": "7 vpisov (№1–3 s154-dno + №4–7 s155); 3 INTRA-GRIBLJE (№3 h91×h68 + №4 h68×h68 ISTA HIŠA! + №5 h65×h31) = IZENAČEN REKORD 1911 (2) PRESEŽEN; lead-ime neveste №1 = 'Segina' ne 'Lipovec' [~]; 6/7 vikendov (№7 = TOR-izjema!); WWI-luknja po 7.7.1914!"
+ },
+ "entries": [
+  {
+   "row": 1,
+   "date": "9. februar 1914 (ponedeljek)",
+   "scan": 154,
+   "page": 153,
+   "groom": {
+    "name": "Jožef Pajzar [~ branjа Pajser/Japsar — P/J-zmeda]",
+    "place": "KLOSTER 54 [★ 'Hlošča' 4× = KLOSTER (2. pojav po 1913 №12 'Kloster 82' — ista H/K-zmeda!); ž. Gradac-listina?]",
+    "stand": "kmet [~]",
+    "age": 36,
+    "status": "samski"
+   },
+   "bride": {
+    "name": "Ana Segina [~★ branjа Lipovec/Straus/Jegliča/Legina/Seginec — S/J/L-INITIAL CONFUSION (5 variant!); SEGINA po očetu Nikolaju ×3 + korpus-priimek h70/h30!]",
+    "place": "GRIBLJE 46 [~ 14?; ★ dekle/služabnica [~] na Brodarič-evi hiši h46 (korpus 1893–1919!) + '(ž.) Adlešiči' [~ — župnija Adlešiči = drugo-župnijska nevesta!]",
+    "stand": "kmetica [~]",
+    "age": 19,
+    "status": "samska (mladoletna — avstrijska polnoletnost 24! → 'dovoljenje za ml. nevesto' ✓)"
+   },
+   "groomParents": {
+    "father": "Tomaž Pajzar [~ Japsar], kmet",
+    "mother": "Eliza [~ Olga?] geb. Blatnik"
+   },
+   "brideParents": {
+    "father": "Nikolaj Segina [~], 1/1 zemljak",
+    "mother": "Ana geb. [Šikornja? ~ — branjа Šifonija/Likozar; korpus-Segina ženi: Marjeta geb. Milek + Katarina geb. Brinec — NE UJEMA → verjetno adlešiška veja! ~]"
+   },
+   "witnesses": [
+    "Jožef Vranešič [~ — korpus-ženin 1913 №10!]",
+    "Franc Müller [~], finančni spravnik [~]"
+   ],
+   "witnessStatus": "kočečnik [~ horešnik/hosed?] + finančni spravnik [~]",
+   "urkunden": "ženitovanjska zglašnica županstva [Žerica? ~ / 'na temelju'? ~ — VERIF] od 27.1. 1914 št. [659/159 ~] + dovoljenje za mladoletno nevesto — okrajno glavarstvo Črnomelj 29.1. 1914 + [dispensa? ~ 'od lj. oklica'] + krstni list neveste [od župnega urada ~]",
+   "priest": "Jos. [Hamf? ~ — Rant/Raml-družina podpisov]",
+   "anomalies": "★★ NOV duhovnik-podpis vzorec 1914 (Jos. Hamf/Leopold/Jos. Povl/Lamp — vsi [~]); nevesta = drugo-župnijska (Adlešiči [~]) kot dekle na Gribljah [~]; priča Jožef Vranešič = №10-1913 ženin (sosedska vez!)"
+  },
+  {
+   "row": 2,
+   "date": "16. februar 1914 (ponedeljek)",
+   "scan": 154,
+   "page": 153,
+   "groom": {
+    "name": "Jožef Holbec [★★ potrjeno ×3 hiper-zoom H-o-l-b-e-c; branjа Fojek/Votovec = F/H/V-INITIAL CONFUSION]",
+    "place": "OTOK 15 [~ branjа 'Loka' — Loka/Otek dvojezična variant!]",
+    "stand": "posestnik [~ 1/?]",
+    "age": 34,
+    "status": "vdovec [~]"
+   },
+   "bride": {
+    "name": "Terezija Jakša [~ branjа Jaušiča/Javšica/Janša/Jamšek/Zemljič/Zamljca — J-priimek po očetu Štefanu Jakši ×3!]",
+    "place": "VRANOVIČI 2 [~ branjа Vinovice/Visnovice]",
+    "stand": "½ zemljakova hči",
+    "age": 23,
+    "status": "samska"
+   },
+   "groomParents": {
+    "father": "Franc Holbec, hlapec [~ hovstnik/hosebnik?]",
+    "mother": "Ana geb. [Jerman? ~ Zerman/Fevar]"
+   },
+   "brideParents": {
+    "father": "Štefan Jakša [~], ½ zemljak",
+    "mother": "Ana geb. Plut [~ Elut — P/E-zmeda; korpus Plut(7)!]"
+   },
+   "witnesses": [
+    "Jožef Jakša [~ Jauša] ½ zemljak [★ verjetno BRAT neveste!]",
+    "Janez Malešič [~ Malerič], posestnik in gostilničar"
+   ],
+   "witnessStatus": "½ zemljak + posestnik in gostilničar",
+   "urkunden": "zglašnica županstva [v Hrastu? ~] 14/2. 1914 št. 102 + vojaški list ženinov — župno sodišče Črnomelj 15/2. 1914 št. 69 + spregled okrajnega glavarstva Črnomelj 5/2. 1914 + [od dekline? ~ o Adlešičih?] 12/2. 1914",
+   "priest": "★ LEOPOLD [Holbec? ~] »župni upravitelj« [v Črnomlju?] — NOV PODPIS/delegacija 1914 [~ VERIF — ista iniciala kot ženin?!]",
+   "anomalies": "★★ NOV PODPIS: 'Leopold … župni upravitelj' (1913: Jos. Rant/Raml/Benk/Polak!) — prva 'Leopold'-podpis v liniji [~]; priča gostilničar; ženin vdovec 34 (2. zakon)"
+  },
+  {
+   "row": 3,
+   "date": "22. februar 1914 (nedelja)",
+   "scan": 154,
+   "page": 153,
+   "groom": {
+    "name": "Janez Muc [~ branjа Mikc — M-priimek Muc/Milek/Mlak/Mih/Mikc = 5-variantska zmeda leta!]",
+    "place": "GRIBLJE 91 (★ korpus Muc-družina h91: Janez Muc × Ana Kure, otroci 1893–1908 [Muc→'Mlec' 1913 №10!] — a 47-letni Janez = PREDKORPUSNA generacija [roj. ~1867!])",
+    "stand": "¼ zemljak, kovač [~ — poklic ali hišno ime 'Kovač'?]",
+    "age": 47,
+    "status": "samski [~]"
+   },
+   "bride": {
+    "name": "Marija Mlakova [★★ hiper-zoom ×3: M-l-a-k-o-v-a (NE Milekova, NE Mihova!) + VDOVA: NE (2. krog popravek!) — hči Janeza Mlaka]",
+    "place": "GRIBLJE 68 (★★ 1. KORPUSNI POJAV hiše 68 — NOVA p80-hiša 70. → 71.!; prej 0 zapisov 1885–1913!)",
+    "stand": "[kmetica? ~]",
+    "age": 44,
+    "status": "samska [~ — '1.' = prvi zakon]",
+    "note": "★★★ INTRA-GRIBLJE h91 × h68 (1. od 3 v letu — REKORD!) + ★★ MLAJKOVA-MREŽA: oče Janez Mlak h68 + №6-nevesta 'Mlakova vdova' (Dobravice 5) = 2 Mlakovi ženski v 1 letu [~ sorodstvo VERIF]"
+   },
+   "groomParents": {
+    "father": "Nikolaj Muc, ¼ zemlj.",
+    "mother": "Marija geb. Jakšič [~ Jakša-družina!]"
+   },
+   "brideParents": {
+    "father": "Janez Mlak, 1/8 [~ 'kmetovali'?]",
+    "mother": "Marija geb. Žitav [★ korpus: ŽITAV = Zemelj-42 družina (1913 №12 nevesta Ana Žitav, oče Franc Žitav bajtar!) — 2. pojav priimka!]"
+   },
+   "witnesses": [
+    "Nikolaj Željko, ¼ zemlj.",
+    "Janez Jakšič [~], ¼ zemlj."
+   ],
+   "witnessStatus": "oba ¼ zemljaka",
+   "urkunden": "zglašnica županstva V GRIBLJAH od 21/2. 1914 št. 11 [~ 1/117 — 1. 'županstvo Griblje' listina po 1903?]",
+   "priest": "Jos. [Punc?/Bauež?/Rant ~]",
+   "anomalies": "★ pozna poroka ženina 47 (b. ~1867 — pred korpusom!) + nevesta 44 = najstarejši 'samski' par leta (91 let skupaj — 2. po №4!)"
+  },
+  {
+   "row": 4,
+   "date": "3. maj 1914 (nedelja)",
+   "scan": 155,
+   "page": 154,
+   "groom": {
+    "name": "Ivan Mih [★★★ potrjen ×3 hiper-zoom 95 % — 'Hafner' IZKLJUČEN (1. napačno branje!)]; [vdovec? ~]",
+    "place": "GRIBLJE 68 (h68 = 2. pojav leta — hiša Mlak/Mih!)",
+    "stand": "¼ zemljak",
+    "age": 71,
+    "status": "[ženin/vdovec? ~]"
+   },
+   "bride": {
+    "name": "Katarina geb. Požek, MILEKOVA VDOVA [★ hiper-zoom ×3: M-i-l-e-k-o-v-a + VDOVA 'da' ×2/3 — vdova MATIJE MILEKA ST. s h65!]",
+    "place": "GRIBLJE 68 [~ hiša '1'? — poroči se NA hišo ženina!]",
+    "stand": "[kmetica? ~]",
+    "age": 48,
+    "status": "vdova",
+    "note": "★★★ ISTA-HIŠA poroka h68 × h68 (1. take v CELI liniji 1886–1914!) + ★★★ KATARINA = MATI №5-ŽENINA (Antona Mileka! — mati se poroči 3.5., sin 11.5. = 8 DNI NARAZEN!) + ★★ kronologija razrešena: M1903 №3 Milek-poroka (25-letni ženin!) = SIN → Katarina (48, r. ~1866, mati 1887–1901) je lahko živa 1914 [~ VERIF]"
+   },
+   "groomParents": {
+    "father": "Marko Mih [~ Muh], ¼ zemljak",
+    "mother": "Marija geb. [Horvatini?/Kapušinič? ~]"
+   },
+   "brideParents": {
+    "father": "Matija Požek, ¼ zemljak [~ Fojek — F/P-zmeda!]",
+    "mother": "Marija geb. Pezdirec [~ Povšič — PEZDIREC-MREŽA nadalje!]"
+   },
+   "witnesses": [
+    "Janez Primožič [~ Primož], ¼ zemljak",
+    "Matija [?] [~]"
+   ],
+   "witnessStatus": "¼ zemljaka [~]",
+   "urkunden": "pregled prošnje v 2. kol. [~ — dispensa?] — [škof/ordinariat Ljubljana 20/4. 1914 št. 2004] + deželna vlada [Ljubljana] 23/4. 1914 št. [12648/2498 ~]",
+   "priest": "Jos. [Tomc?/Bamp? ~]",
+   "anomalies": "★★★ ženin 71 = NAJSTAREJŠI ŽENIN CELE LINIJE (prej 66 = 1913 №12!) + 71 × 48 vdovski par + ISTA HIŠA h68 + mati-in-sin isto-mesečna poroka"
+  },
+  {
+   "row": 5,
+   "date": "11. maj 1914 (ponedeljek) [~ branjа '18.5.' — hiper-zoom '11' + PON (18.5. = PON tudi!) — VERIF minor]",
+   "scan": 155,
+   "page": 154,
+   "groom": {
+    "name": "Anton Milek [korpus-krst 1893 h65 'Matija Milek ½ × Katarina Požek' — starost 21 ✓!]",
+    "place": "GRIBLJE 65 (korpus-hiša Milek 1887–1913!)",
+    "stand": "½ [~ 'gomljahovšin'? — zemljak-sina formula]",
+    "age": 21,
+    "status": "samski (mladoletnik!)"
+   },
+   "bride": {
+    "name": "Barbara Straus [korpus-krst 1894 h71 'Jurij Straus ¼ × Barbara Jakobčič' — starost 19 ✓!]",
+    "place": "GRIBLJE 31 [★ hiper-zoom ×6: hiša 31 (NE 71!) — korpus-krst na h71 = SEJEM SELITEV Strausovih h71 → h31 (1911 №1 Papič h31!) ~]",
+    "stand": "¼ [zemljakova hči]",
+    "age": 19,
+    "status": "samska (mladoletna!)",
+    "note": "★★★ INTRA-GRIBLJE h65 × h31 (3. v letu — REKORD!) + ★★★ DVOTERNA KORPUS-SINHRONIZACIJA (OBE strani krščeni v korpusu: Anton 1893 h65 + Barbara 1894 h71 — 2. 'dvoterna' po 1913 №3!) + ★ ženinova mati Katarina geb. Požek = №4-nevesta (8 dni prej!)"
+   },
+   "groomParents": {
+    "father": "Matija Milek [~ pokojni?], ½ zemljak",
+    "mother": "Katarina geb. Požek [★ = №4-NEVESTA! ~ branje 'Gojek' — G/P-zmeda]"
+   },
+   "brideParents": {
+    "father": "Jurij Straus, ¼ zemljak [korpus ✓]",
+    "mother": "Barbara geb. Jakobčič [korpus ✓ — Jakobčič-mreža!]"
+   },
+   "witnesses": [
+    "Matija Hrižan [~ Hričan]",
+    "Janez Jakša [~ Žakšič/Jakšič — 3. Jakša-pojav leta!]"
+   ],
+   "witnessStatus": "[~]",
+   "urkunden": "zglašnica županstva V DOBRAVICAH [~ 'o Deželah'!] 10/5. 1914 št. 3 + proglaš polnoletnosti [za nevesto? obe? ~] — sodišče Črnomelj + [škof Ljubljana 10/5 1914 št. 3 ~]",
+   "priest": "Jos. [Pavl/Povl ~]",
+   "anomalies": "★★★ MATI-IN-SIN poročna tedna (№4 3.5. + №5 11.5. — Katarina geb. Požek kot №4-nevesta IN №5-mati!) + selitev Straus h71 → h31 + mladoletna nevesta (proglaš!)"
+  },
+  {
+   "row": 6,
+   "date": "14. junij 1914 (nedelja)",
+   "scan": 155,
+   "page": 154,
+   "groom": {
+    "name": "Janez Željko [korpus-župnijski priimek (Željko 6×) — 1. v poročni knjigi!]",
+    "place": "DOBRAVICE 18 [~ — drugo-župnijska vas!]",
+    "stand": "[~]",
+    "age": 42,
+    "status": "[samski? ~]"
+   },
+   "bride": {
+    "name": "Marija geb. Jakobčič, MLAKOVA VDOVA [★★ hiper-zoom: M-l-a-k-o-v-a + 'vdova' ×2/3; roj. Jakobčičeva!]",
+    "place": "DOBRAVICE 5 [~ 'Dolprišice' — Dobravice-garble]",
+    "stand": "[~]",
+    "age": 55,
+    "status": "vdova [~ '1.'?]",
+    "note": "★★ MLAJKOVA-MREŽA 2/2: №3 nevesta Mlakova (hčer Janeza Mlaka h68) + №6 nevesta Mlakova VDOVA (55!) — mož [Janez Mlak? ~ brat? VERIF] + 42 × 55 (13-letna razlika)"
+   },
+   "groomParents": {
+    "father": "Jurij Željko [~ branjа Leliko/Zalha — L/Z-initial confusion!]",
+    "mother": "Marija geb. Schweiger [~ Švajger — korpus Schweiger(5)!]"
+   },
+   "brideParents": {
+    "father": "Janez Jakobčič [korpus-družina!]",
+    "mother": "Ana geb. Dragoš [korpus-družina (Dragoš 7×)!]"
+   },
+   "witnesses": [
+    "Nikolaj Hrižan [~ Hržan]",
+    "Peter Kolančič [~]"
+   ],
+   "witnessStatus": "[~]",
+   "urkunden": "zglašnica županstva [Črnomelj?/Dobravlje? ~] 12/6. 1914 št. 124 [~ 294]",
+   "priest": "Jos. [Lamp? ~]",
+   "anomalies": "★★ nevesta 55 (3. najstarejša linije?) + vdovska 2/3 leta + obe strani Dobravice (drugo-župnijska vas — svatbina na našo župnijo!) + starši obeh = korpus-družine (Jakobčič + Dragoš + Schweiger!)"
+  },
+  {
+   "row": 7,
+   "date": "7. julij 1914 (TOREK — IZJEMA!) [~★ STRIP '12.7.' + ov '8.7.' — HIPER-ZOOM ×4: '7 z zastavico, NE 12, NE 8' (10× povečava!) — 1. TOR po 1912 №1 (16.1.); nedeljska 12.7. bi podprla vikend-vzorec a hiper-zoom je enoglasen]",
+   "scan": 155,
+   "page": 154,
+   "groom": {
+    "name": "Matija Cajnar [~ Cajmar]",
+    "place": "KRASINEC 8",
+    "stand": "[~]",
+    "age": 35,
+    "status": "[samski? ~]",
+    "note": "★★ NOVINA PISARJA: ROJSTNI DATUM v bloku — '12. VII. 1879' → poroka NA 35. ROJSTNI DAN (7.7.1914 minus 12.7.1879 = 35.0!!)"
+   },
+   "bride": {
+    "name": "Ana Brodarič [korpus-priimek (Brodarič 11×)!]",
+    "place": "KRASINEC 7 (sosednja hiša ženinu!)",
+    "stand": "[~]",
+    "age": 29,
+    "status": "samska",
+    "note": "★ rojstni datum v bloku '8. XII. 1885' (2. NOVINA!) + INTRA-KRASINEC h8 × h7"
+   },
+   "groomParents": {
+    "father": "Anton Cajmar [~], ½ zemljak",
+    "mother": "Katarina geb. Zupančič"
+   },
+   "brideParents": {
+    "father": "Janez Brodarič [~ — Griblje h46-Brodariči sorodniki? VERIF]",
+    "mother": "Katarina geb. [Mlh? ~]"
+   },
+   "witnesses": [
+    "Matija [Mlh?/Mrh? ~], ¼ zemljan",
+    "Janez [Tavčer?/Tomer? ~]"
+   ],
+   "witnessStatus": "¼ zemljan + [~]",
+   "urkunden": "dekanija [Metlika] ured v Metliki 10. VII. 1914 št. 148 [★ 1. 'dekanija'-listina linije!] + okrajno glavarstvo Črnomelj 1914 št. 10845 + izjava [?] VI. 1914 št. 25 [~]",
+   "priest": "Jos. [?]",
+   "anomalies": "★★★ ZADNJA POROKA PRED VOJNO (7.7.1914 — Avstrija napove vojno Srbiji 28.7.1914 = 3 tedne kasneje!) → nato 10-MESEČNA VRZEL do 1915 №1 (2.5.1915, s156) = VOJNA LUKNJA + ★ TOR-izjema + rojstni-datum-novini + sosednji hiši h8 × h7"
+  }
+ ],
+ "excluded": [],
+ "stats": {
+  "entries": 7,
+  "gribljeMarriages": 4,
+  "gribljeRows": [
+   1,
+   3,
+   4,
+   5
+  ],
+  "gribljeHouses": [
+   "31",
+   "46",
+   "65",
+   "68",
+   "91"
+  ],
+  "gribljeIntra": 3,
+  "gribljeBlocks": 4,
+  "sameVillageRows": [
+   3,
+   4,
+   5,
+   7
+  ],
+  "mondays": 3,
+  "sundays": 3,
+  "tuesdays": 1,
+  "weekendPct": "6/7 = 86 % (3 PON + 3 NED + 1 TOR №7 7.7.1914 — 1. TOR po 1912 №1!)",
+  "lentGap": "22.2. → 3.5. (post 25.2.–11.4. — 4. potrjena postna vrzel po 1911/1912/1913)",
+  "yearHeading": "DA — '1914' na s154 y≈780 (iz P142) + '1915' na s156 (meja DOKAZANA s155-dno: 2 prazna pasova + diagonala!)",
+  "massDays": 0,
+  "intraSurname": 0,
+  "warGap": "7.7.1914 → 2.5.1915 (s156 №1) = 10-mesečna VRZEL = 1. svetovna vojna (Avstrija-Srbija 28.7.1914) — 1. tak zlom linije!",
+  "newP80House": "h68 (70. → 71.)",
+  "newSurnames": [
+   "Pajzar [~ Pajser]",
+   "Holbec [~]",
+   "Mih [~]",
+   "Mlak",
+   "Cajnar [~ Cajmar]",
+   "Željko (1. v poročni — korpus-krstni 1888+)"
+  ],
+  "newOccupations": [
+   "finančni spravnik [~]",
+   "gostilničar",
+   "kovač [~]",
+   "župni upravitelj v Črnomlju (podpis!)"
+  ],
+  "authorities": [
+   "županstvo Griblje (21/2. 1914 št. 11)",
+   "županstvo [Hrast? ~] (14/2. št. 102)",
+   "županstvo Dobravice [~] (10/5. št. 3)",
+   "županstvo Črnomelj (12/6. št. 124)",
+   "DEKANIJA METLIKA (10.VII. št. 148 — 1.!)",
+   "okrajno glavarstvo Črnomelj (29.1. + 5.2. + št. 10845)",
+   "škof Ljubljana (10/5. št. 3)",
+   "škof/ordinariat Ljubljana (20/4. št. 2004)",
+   "deželna vlada Ljubljana (23/4. št. [12648 ~])",
+   "župno sodišče Črnomelj (15/2. št. 69)"
+  ],
+  "widowMarriages": 3,
+  "priests": "Jos. [Hamf?/Rant-family ~] + №2 LEOPOLD [?] 'župni upravitelj' [~ NOV!] + Jos. [Pavl/Povl/Lamp/Tomc ~] — vsi [~] razen patterna",
+  "vitalsTotal": 685,
+  "blocks04455": 168,
+  "sidraTotal": 161,
+  "newHouses": [
+   "68"
+  ],
+  "p80Houses": 71,
+  "unnumbered": 0,
+  "sameVillageCount": 4,
+  "sameHouseCount": 1,
+  "intraSurnameCount": 0,
+  "honestyCount": 8
+ },
+ "crossChecks": [
+  "★★★ №4+№5 MATI-IN-SIN POROČNA TEDNA: №4-nevesta Katarina geb. Požek (48, Milekova vdova) = №5-ženinova MATI (№5-starši 'Matija Milek ½ × Katarina geb. Požek [Gojek~]' = ISTA oseba!) — poroki 3.5. + 11.5. = 8 dni narazen; + №4-nevestini starši 'Matija Požek ¼ × Marija geb. Pezdirec' = Požek×Pezdirec-rod (PEZDIREC-MREŽA 1914: №4 mati + №5 mati geb. + №6-nevesta geb. Dragoš? — sorodne veje!)",
+  "★★★ №5 DVOTERNA KORPUS-SINHRONIZACIJA: ženin Anton Milek = krst 1893 h65 (Matija Milek ½ × Katarina Požek — starost 21 ✓ ISTA HIŠA!) + nevesta Barbara Straus = krst 1894 h71 (Jurij Straus ¼ × Barbara Jakobčič — starost 19 ✓) = 2. 'dvoterna sinhronizacija' po 1913 №3 + SEJEM SELITEV Straus h71 → h31 (6× hiper-zoom hiša 31!)",
+  "★★★ №4 KRONOLOŠKA REŠITEV MILEK-h65: M1903 №3 'Matthias Mück [Milek] h65 (25!) × Maria Huestič' = SIN (ne vdovec!) → h65 otroci 1887–1901 (mati Katarina geb. Požek) = STAREŠI par, otroci 1904–1913 (mati Marija geb. Hrišič/Hrustič) = SINOV par → Katarina geb. Požek (r. ~1866) je lahko živa 1914 kot VDOVA Matije st. = №4-nevesta (48 ✓) [~ VERIF grob]",
+  "★★ №3 Janez Muc h91 = korpus Muc-družina (Janez Muc × Ana Kure, otroci 1893–1908; 1913 №10 'Mlec') — a Janez (47, r. ~1867) = PREDKORPUSNA generacija; starši Nikolaj Muc × Marija Jakšič = 2. Muc-veja [~]",
+  "★★ №3+№6 MLAJKOVA-MREŽA: №3-nevesta Marija Mlakova (44, h68, oče Janez Mlak 1/8 × Marija geb. Žitav) + №6-nevesta Marija geb. Jakobčič 'Mlakova vdova' (55, Dobravice 5) — dve Mlakovi ženski; [~ sorodstvo/ne-VERIF]; ŽITAV-priimek = Zemelj-42 korpus (1913 №12!) — 2. pojav",
+  "★★ №7 ROJSTNA DATUMA-novini: ženin '12. VII. 1879' (35.0 let na poročni dan!) + nevesta '8. XII. 1885' (28.6 let ✓ 29) — 1. rojstni datumi v blokih linije!",
+  "★ №1 Ana Segina: korpus Segina-družina h70/h30 (Nikolaj Segina × Marjeta geb. Milek: Ana 1893 + Ana 1899 [Regist?] — a starosti 21/15 se NEujemata z 19! + župnija Adlešiči [~] → verjetno adlešiška Segina-veja [~ VERIF]",
+  "★ №6 starši obeh strani = korpus-družine: ženinovi Jurij Željko [~] × Marija geb. Schweiger (korpus 5×) + nevestini Janez Jakobčič (korpus 12×) × Ana geb. Dragoš (korpus 7×!)",
+  "★ №1 priča Jožef Vranešič = korpus-ženin 1913 №10 (Janko Vranešič h76!) — sosedska vez [~]",
+  "★ №1-nevesta služabnica [~] na Griblje h46 = Brodarič-korpus-hiša (1893–1919!) — delavno razmerje [~]"
+ ],
+ "anomalies": [
+  "№7 TOR-izjema (7.7.1914): 1. torek po 1912 №1 — hiper-zoom ×4 enoglasen '7 z zastavico' (10×) vs STRIP '12.7.' + ov '8.7.'; nedeljska hipoteza (12.7.) zavrnjena [~ VERIF ostaja]",
+  "№4 ISTA-HIŠA poroka h68 × h68 — 1. tak primer v celi liniji 1886–1914!",
+  "№4 ženin Ivan Mih 71 let — NAJSTAREJŠI ŽENIN LINIJE (prej 66 = 1913 №12 Janez Simončič!); par 71 × 48 = 119 let skupaj (2. rekord po 134 P128 v1!)",
+  "№6 par 42 × 55 (13 let razlike, nevesta vdova) + №6-nevesta 55 = 3. najstarejša nevesta linije [~]",
+  "3 VDOVSKI vpisi v enem letu (№2 ženin vdovec + №4 + №6 nevesti vdovi) — rekord linije (prej 1–2/leto)",
+  "WWI-luknja: zadnja poroka 7.7.1914 → 1915 №1 šele 2.5.1915 (s156) = 10-mesečna vrzel — 1. svetovna vojna (28.7.1914) = 1. zlom kontinuitete linije!",
+  "№2 NOV PODPIS 'Leopold [?] župni upravitelj [v Črnomlju]' — 1. 'Leopold' v liniji [~ — ista iniciala priimka kot ženin Holbec?! VERIF]",
+  "3 INTRA-GRIBLJE poroke (№3 + №4 + №5) = REKORD LINIJE (prejšnji maks 2 = 1911 №1+№2; 1910 №1 + 1912 №1 + 1913 №10 = 1/leto!)",
+  "№1 'Hlošča' = KLOSTER (2. pojav po 1913 №12 — ista H/K-precitljivost pisarja!)",
+  "№5 SEJEM selitev Straus h71 (krst 1894) → h31 (poroka 1914) — hiša h31 = Papič/Križan-Jakobič hiša [~]",
+  "№7-sosednji hiši Krasinec 8 × 7 (intra-vasično)",
+  "0 masa-dnevov 2. leto zapored (2013 + 1914) — vojni spopad s 'skupnimi dnevi'?",
+  "Vsi duhovniški podpisi 1914 [~] (Jos. Hamf/Leopold/Pavl/Lamp/Tomc) — 1913: Rant/Raml/Benk/Polak — NOVA generacija podpisov [~ VERIF]"
+ ],
+ "honesty": [
+  "№1-nevesta priimek: 5 variant (Lipovec/Straus/Segina/Jegliča/Legina) — SEGINA po očetu Nikolaju (×3) + korpus; a starost 19 se ne ujema s korpus-h70 Anama (21/15) → možna adlešiška veja [~ VERIF]; vas 'Griblje 46 [~ 14] (ž.) Adlešiči [~]'",
+  "№2: ženin Holbec [~ Fojek/Votovec] ×3 potrjeno; status vdovec [~ 'svoboden'?]; nevesta Jakša [~ Jaušiča/Javšica — k/u zmeda]; mati Ana geb. Plut [~ Elut]",
+  "№3: starost neveste 44 [~ 47 — 4/7-zmeda sosednjih branj]; ženinov poklic kovač [~]; starši Nikolaj Muc × Marija Jakšič predkorpusni [~]",
+  "№4: nevestino ime Katarina [~ 'Ivana' 1. branje]; 'Milekova vdova' — identiteta Mileka [~ Matija st. h65 kronološko SOGLAŠA a nedokazana]; ženinovi starši Marko Mih [~ Muh] × Marija [Horvatini/Kapušinič ~]; številke listin 2004/12648 [~]",
+  "№5: datum 11.5. [~ '18.5.' — oba PON!]; hiša 31 [~ korpus-krst h71 — selitev dokumentirana a hiša na poročni [~ VERIF]]",
+  "№6: ženinova starša Jurij Željko [~ Leliko/Zalha] × Marija geb. Schweiger [~ Švajger]; zglašnica št. 124 [~ 294]; županstvo [Črnomelj/Dobravlje ~]",
+  "№7: DATUM 7.7. [~ STRIP '12.7.' — hiper-zoom ×4 '7'; koledarska NED-hipoteza (12.7.) bi podprla vikend-vzorec — ostaja [~ VERIF] najodprteje]; priča Janez [Tavčer? ~]; starši [Mlh? ~]",
+  "Metoda: 5 krogov (14 full-row + 12 mikro + 31 hiper + kontrole) — sistemske lekcije: S/J/L-inicial (Segina/Jegliča/Legina!), M-priimki (Muc/Milek/Mlak/Mih/Mikc — 5 družin!), F/P (Požek/Fojek), F/H/V (Fojek/Holbec/Votovec), hiša 71/31 (6× hiper!), starost 22/42 (4-zaprta-zanka!)"
+ ]
+}

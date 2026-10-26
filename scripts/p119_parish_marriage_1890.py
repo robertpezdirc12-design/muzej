@@ -338,9 +338,9 @@ def main() -> int:
     check("I9 qa-p119", '"qa-p119-parish-marriage-1890"' in qa)
     check("I9b qa-p115 bloki 78", "poročni bloki (04455) ≠ 142" in qa)
     check("I9c p80 bloki 78", "poročni vpisi (04455) ≠ 158" in qa)
-    check("I9d p80 sidra 71 (1898×9 · 1899×6 · 1900×2!)", "poročna sidra ≠ 157" in qa)
+    check("I9d p80 sidra 71 (1898×9 · 1899×6 · 1900×2!)", "poročna sidra ≠ 161" in qa)
     # vitals 550 regresijska zaščita v qa-p119
-    check("I9e vitals 637 zaščita (P128)", "HOUSE_VITALS.length !== 681" in qa[qa.index("const p119Marr"):] if "const p119Marr" in qa else False)
+    check("I9e vitals 637 zaščita (P128)", "HOUSE_VITALS.length !== 685" in qa[qa.index("const p119Marr"):] if "const p119Marr" in qa else False)
     check("I9f stari 537/544 iztekla", "HOUSE_VITALS.length !== 537" not in qa and "HOUSE_VITALS.length !== 544" not in qa)
 
     # ---------- I10: README + notes ----------

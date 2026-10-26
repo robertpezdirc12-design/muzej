@@ -157,15 +157,15 @@ def main():
     # ---------- I6: qa-parish.ts ----------
     qa = open(QA_TS).read()
     check("I6a qa-p138 id", "qa-p138-parish-marriage-1909" in qa)
-    n659 = qa.count("HOUSE_VITALS.length !== 681")
+    n659 = qa.count("HOUSE_VITALS.length !== 685")
     check("I6b vitals pini 659", n659 >= 52, str(n659))
     n142 = qa.count(".length !== 164")
     check("I6c bloki pini 147", n142 >= 25, str(n142))
-    check("I6d sidra 140 + 1909:8", "poročna sidra ≠ 157" in qa and "h.year === 1909).length !== 8" in qa)
+    check("I6d sidra 140 + 1909:8", "poročna sidra ≠ 161" in qa and "h.year === 1909).length !== 8" in qa)
     check("I6e hiše 1909 pin", '"1,17,29,30,46,46,57,74"' in qa)
     check("I6f ostanki 651/134/127", "!== 651" not in qa and "!== 134" not in qa and "sidra ≠ 127" not in qa, "stale pini!")
     check("I6g vrata h30+h46 (P138 izjeme)", 'v.year === 1909 && hn === "30"' in qa and '(hn === "46" && (v.year === 1898 || v.year === 1903 || v.year === 1904 || v.year === 1909 || v.year === 1912))' in qa)
-    check("I6h p80 hiše 68 + PT 13 (h57 že v korpusu!)", "p80Houses.size !== 70" in qa and "p80Gap.length !== 13" in qa)
+    check("I6h p80 hiše 68 + PT 13 (h57 že v korpusu!)", "p80Houses.size !== 71" in qa and "p80Gap.length !== 13" in qa)
 
     # ---------- I7: duhovniki + dnevi ----------
     priests = [e["priest"] for e in ent]

@@ -2541,6 +2541,86 @@ export const HOUSE_VITALS: HouseVital[] = [
     status: "DOCUMENTED",
   },
 
+  // ——— P143 razširitev: POROČNA KNJIGA 04455 — polno leto 1914 (skeni
+  // s154-dno + s155 == Pag. 153–154; meja 1914/1915: s155-dno = 2 prazna
+  // pasova + diagonala + s156 = letna glava »1915«; 7 vpisov: 1886:7 → … →
+  // 1913:13 → 1914:7 — VOJNO LETO: zadnja poroka 7. 7. 1914 (3 tedne pred
+  // avstrijsko napovedjo vojne Srbiji 28. 7.!) → 10-mesečna vrzel do 1915
+  // №1 (2. 5. 1915) = 1. ZLOM KONTINUITETE LINIJE; 3 PON + 3 NED + 1 TOR =
+  // 6/7 vikendov (№7 = 1. torek po 1912 №1!); postna vrzel 22. 2. → 3. 5.
+  // (4. zapored)) — vpisi z Griblji (3 INTRA-GRIBLJE poroke = REKORD:
+  // №3 h91 × h68 + №4 h68 × h68 ISTA HIŠA (1. tak primer v celi liniji!) +
+  // №5 h65 × h31): NOVELE: ★★★ №4+№5 MATI-IN-SIN POROČNA TEDNA (№4 3. 5.:
+  // Ivan Mih h68, 71 — NAJSTAREJŠI ŽENIN LINIJE! × Katarina geb. Požek,
+  // MILEKOVA VDOVA 48 (vdova Matija Mileka st. h65 — M1903 №3 Milek-poroka
+  // (25-letni ženin!) = SIN → kronologija 2 generacij razrešena!) + №5
+  // 11. 5. (8 DNI ZA №4!): NJUN SIN Anton Milek 21 × Barbara Straus 19 —
+  // mati se poroči, sin 8 dni za njo!) + ★★★ №5 DVOTERNA KORPUS-SINHRONI-
+  // ZACIJA (Anton = krst 1893 h65 + Barbara = krst 1894 h71 'Jurij Straus ×
+  // Barbara Jakobčič' + SEJEM SELITEV Straus h71 → h31 (6× hiper-zoom!) =
+  // 2. 'dvoterna' po 1913 №3!) + ★★★ №4 ISTA-HIŠA h68 × h68 + par 71 × 48 =
+  // 119 let (2. rekord!) + ★★ MLAJKOVA-MREŽA ×2 (№3 nevesta Marija
+  // Mlakova h68 [hčer Janeza Mlaka 1/8 × Marija geb. Žitav — 2. pojav
+  // Žitav po 1913 №12!] + №6 nevesta Marija geb. Jakobčič 'Mlakova vdova'
+  // 55 [Dobravice 5] — MLAK = 1. pravi pojav!) + ★★ №7 ROJSTNA DATUMA-novini
+  // ('12. VII. 1879' ženin = poroka NA 35. ROJSTNI DAN! + '8. XII. 1885'
+  // nevesta — 1. rojstni datumi v blokih linije!) + №7 TOR-izjema (7. 7.
+  // [hiper-zoom ×4 '7 z zastavico' vs STRIP '12.7.'!]) + ★ №1 SEGINA-ANKETA
+  // (5 variant: Lipovec/Straus/Jegliča/Legina/Segina — S/J/L-INITIAL
+  // CONFUSION! + korpus h70/h30 Nikolaj Segina × Marjeta geb. Milek: Ani
+  // 1893+1899 — a starost 19 ≠ 21/15 + '(ž.) Adlešiči' → adlešiška veja
+  // [~ VERIF] + mladoletna dekle/služabnica [~] na Brodaričevi h46!) + ★
+  // №2 HOLBEC ×3 potrjen (branjа Fojek/Votovec = F/H/V-zmeda!) + LEOPOLD
+  // 'župni upravitelj' = NOV PODPIS + ★ 3 VDOVSKI vpisi (№2 + №4 + №6 —
+  // rekord!) + №6 42 × 55 + ★ NOVE OBLASTI (DEKANIJA METLIKA št. 148 — 1.! +
+  // županstvo V GRIBLJAH št. 11 + županstvo Dobravice [~] + škof Ljubljana
+  // št. 3 + deželna vlada št. [12648 ~] + župno sodišče Črnomelj št. 69) +
+  // NOVI POKLICI (finančni spravnik! + gostilničar + kovač [~]) + ~6 NOVIH
+  // PRIIMKOV (Pajzar [~], Holbec [~], Mih [~], Mlak, Cajnar [~], Željko-
+  // poročna-prvojavitev) + M-PRIIMKI 5-družinska zmeda (Muc/Milek/Mlak/
+  // Mih/Mikc!) + 'HLOŠČA' = KLOSTER 2. pojav! + 'LOKA' = OTOK!
+  // Dokaz: research/issue17/parish-marriage-1914.json; verifikator:
+  // scripts/p143_parish_marriage_1914.py --check (I1–I12).
+  {
+    houseNo: "91",
+    bookSignature: "04455",
+    year: 1914,
+    scan: 154,
+    page: 153,
+    whatSi: "poroka (22. 2. 1914, vpis 3 — NEDELJA, 3 dni pred pepelnično sredo!) — ženin Janez MUC [~ branje 'Mikc' — M-priimek Muc/Milek/Mlak/Mih/Mikc = 5-družinska zmeda leta!], ¼ zemljak, kovač [~ — poklic ali hišno ime?], 47 [~ samski], GRIBLJE 91 (★★ korpus Muc-družina h91: Janez Muc × Ana Kure, otroci 1893–1908 [korpus piše 'Muc', poročna 1913 №10 'Mlec' — ista družina!]; a 47-letni Janez (r. ~1867) = PREDKORPUSNA generacija — čez korpusno okno 1885+!; 2. poročni dokaz h91 po №10-1913) × Marija MLAKOVA [★★ hiper-zoom ×3: M-l-a-k-o-v-a (NE Milekova/Mihova!) + VDOVA: NE — hči Janeza Mlaka; MLAJKOVA-MREŽA ×2 z №6!], 44 [~ branje tudi 47 — 4/7-zmeda], samska, GRIBLJE 68 (★★★ 1. KORPUSNI POJAV hiše 68 — NOVA p80-hiša 70. → 71.! [0 zapisov 1885–1913 — Mlak/Mih-hiša!]; ★★★ INTRA-GRIBLJE h91 × h68 = 1. od REKORDNIH 3 intra-Griblje porok 1914!); starši ženina: Nikolaj Muc ¼ zemlj. × Marija geb. Jakšič [~ — 2. Muc-veja pred korpusom]; starši neveste: Janez Mlak 1/8 [~ 'kmetovali'?] × Marija geb. ŽITAV [★ korpus: Žitav = Zemelj-42 družina (1913 №12 Ana Žitav, oče Franc Žitav bajtar!) — 2. pojav priimka!]; priči: Nikolaj Željko ¼ zemlj. [korpus-priimek!] + Janez Jakšič ¼; zglašnica županstva V GRIBLJAH 21/2. 1914 št. 11 [~ 1/117 — 1. 'županstvo Griblje' po 1903?]; duhovnik [Jos. Punc?/Bauež? ~]",
+    whatEn: "marriage (Feb 22, 1914, entry 3 — SUNDAY, 3 days before Ash Wednesday!) — the groom Janez MUC [~ the reading 'Mikc' — the M-surname Muc/Milek/Mlak/Mih/Mikc = a 5-family confusion of the year!], a quarter farmer, a smith [~ an occupation or a house name?], 47 [~ single], GRIBLJE 91 (★★ the corpus Muc family of h91: Janez Muc × Ana Kure, children 1893–1908 [the corpus writes 'Muc', the 1913 marriage book №10 'Mlec' — the same family!]; but the 47-year-old Janez (b. ~1867) = a PRE-CORPUS generation — beyond the corpus window 1885+!; the 2nd marriage evidence of h91 after the 1913 №10) × Marija MLAKOVA [★★ a hyper-zoom ×3: M-l-a-k-o-v-a (NOT Milekova/Mihova!) + WIDOW: NO — the daughter of Janez Mlak; the MLAK NETWORK ×2 with №6!], 44 [~ a reading also 47 — a 4/7 confusion], single, GRIBLJE 68 (★★★ the 1st CORPUS APPEARANCE of the house 68 — a NEW p80 house, the 70th → 71st! [0 records 1885–1913 — the Mlak/Mih house!]; ★★★ the INTRA-GRIBLJE h91 × h68 = the 1st of the RECORD 3 intra-Griblje marriages of 1914!); the groom's parents: Nikolaj Muc ¼ a farmer × Marija née Jakšič [~ — a 2nd Muc branch before the corpus]; the bride's parents: Janez Mlak 1/8 [~] × Marija née ŽITAV [★ the corpus: Žitav = the Zemelj-42 family (the 1913 №12 Ana Žitav, the father Franc Žitav a cottager!) — the 2nd appearance of the surname!]; the witnesses: Nikolaj Željko ¼ a farmer [a corpus surname!] + Janez Jakšič ¼; the banns of the municipality IN GRIBLJE Feb 21, 1914 no. 11 [~ 1/117 — the 1st 'Griblje municipality' after 1903?]; priest [Jos. Punc?/Bauež? ~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "68",
+    bookSignature: "04455",
+    year: 1914,
+    scan: 155,
+    page: 154,
+    whatSi: "poroka (3. 5. 1914, vpis 4 — NEDELJA, 1. po postu!) — ženin Ivan MIH [★★★ potrjen ×3 hiper-zoom 95 % — 'Hafner' IZKLJUČEN (1. napačno branje!); ~ vdovec], ¼ zemljak, 71 (!!), GRIBLJE 68 (★ NAJSTAREJŠI ŽENIN CELE LINIJE 1886–1914 — prej 66 = 1913 №12 Janez Simončič!) × Katarina geb. POŽEK, MILEKOVA VDOVA [★ hiper-zoom ×3: M-i-l-e-k-o-v-a + 'vdova' ×2/3], 48, GRIBLJE 68 (★★★ ISTA-HIŠA poroka h68 × h68 — 1. TAK PRIMER V CELI LINIJI! + ★★★ vdova MATIJE MILEKA ST. s h65 = MATI №5-ŽENINA Antona Mileka (poroki 3. 5. + 11. 5. = 8 DNI NARAZEN — MATI-IN-SIN POROČNA TEDNA!) + ★★ kronologija 2 generacij h65: M1903 №3 'Matthias Milek (25!) × Maria Huestič' = SIN → korpus-otroci h65 1887–1901 (mati Katarina geb. Požek = STAREŠI par) + 1904–1913 (mati Marija geb. Hrišič = SINOV par) → Katarina (r. ~1866) je lahko živa 1914 kot vdova = NEVESTA (48 ✓) [~ VERIF]; par 71 × 48 = 119 let skupaj = 2. rekord linije (za 134 P128 v1!); nevestini starši: Matija Požek ¼ zemljak [~ Fojek — F/P-zmeda] × Marija geb. Pezdirec [PEZDIREC-MREŽA!] = Požek×Pezdirec-rod); starši ženina: Marko Mih [~ Muh] ¼ zemljak × Marija geb. [Horvatini?/Kapušinič? ~]; priči: Janez Primožič [~ Primož] ¼ + Matija [?]; listine: pregled prošnje v 2. kol. [~ dispensa?] — [škof/ordinariat Ljubljana 20/4. 1914 št. 2004 ~] + deželna vlada [Ljubljana] 23/4. 1914 št. [12648/2498 ~]; duhovnik [Jos. Tomc?/Bamp? ~]; ★ isto leto: №3-nevesta Marija Mlakova (hčer Janeza Mlaka!) Z ISTO HIŠE h68 — Mlak-hči poročena 22. 2., Mih-vdovec prevzame hišo 3. 5.!",
+    whatEn: "marriage (May 3, 1914, entry 4 — SUNDAY, the 1st after Lent!) — the groom Ivan MIH [★★★ confirmed ×3 hyper-zoom 95 % — 'Hafner' EXCLUDED (a 1st wrong reading!); ~ a widower], a quarter farmer, 71 (!!), GRIBLJE 68 (★ THE OLDEST GROOM OF THE WHOLE LINE 1886–1914 — before: 66 = the 1913 №12 Janez Simončič!) × Katarina née POŽEK, MILEK'S WIDOW [★ a hyper-zoom ×3: M-i-l-e-k-o-v-a + 'widow' ×2/3], 48, GRIBLJE 68 (★★★ a SAME-HOUSE marriage h68 × h68 — THE 1ST SUCH CASE IN THE WHOLE LINE! + ★★★ the widow of MATIJA MILEK SR. of h65 = THE MOTHER OF THE №5 GROOM Anton Milek (the marriages May 3 + May 11 = 8 DAYS APART — A MOTHER-AND-SON WEDDING WEEK!) + ★★ the chronology of the 2 generations of h65: the M1903 №3 'Matthias Milek (25!) × Maria Huestič' = THE SON → the corpus children of h65 1887–1901 (the mother Katarina née Požek = the SENIOR couple) + 1904–1913 (the mother Marija née Hrišič = the son's couple) → Katarina (b. ~1866) can be alive in 1914 as a widow = THE BRIDE (48 ✓) [~ VERIF]; the couple 71 × 48 = 119 years together = the 2nd record of the line (after 134 P128 v1!); the bride's parents: Matija Požek ¼ a farmer [~ Fojek — an F/P confusion] × Marija née Pezdirec [the PEZDIREC NETWORK!] = the Požek×Pezdirec lineage); the groom's parents: Marko Mih [~ Muh] ¼ a farmer × Marija née [Horvatini?/Kapušinič? ~]; the witnesses: Janez Primožič [~ Primož] ¼ + Matija [?]; the documents: a review of the petition in the 2nd column [~ a dispensation?] — [the bishop/ordinariat of Ljubljana Apr 20, 1914 no. 2004 ~] + the provincial government [of Ljubljana] Apr 23, 1914 no. [12648/2498 ~]; priest [Jos. Tomc?/Bamp? ~]; ★ the same year: the №3 bride Marija Mlakova (the daughter of Janez Mlak!) FROM THE SAME HOUSE h68 — the Mlak daughter married Feb 22, the Mih widower takes over the house May 3!",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "65",
+    bookSignature: "04455",
+    year: 1914,
+    scan: 155,
+    page: 154,
+    whatSi: "poroka (11. 5. 1914 [~ branjа tudi '18. 5.' — oba PON!], vpis 5 — PONEDELJEK, 8 dni za materino poroko №4!) — ženin Anton MILEK [★★ KORPUS-KRST: rojen 1893 h65 — 'Matija Milek ½ × Katarina Požek' [korpus!] → starost 21 ✓ ISTA HIŠA!], ½ [~ 'gomljahovšin'? — zemljak-sin formula], 21, samski (mladoletnik!), GRIBLJE 65 (korpus-hiša Milek 1887–1913 — DVE GENERACIJI: stariški par Matija Milek × Katarina geb. Požek (otroci 1887–1901) + sinov par Matija ml. × Marija geb. Hrišič (1904–1913; poroka M1903 №3!); ženinova mati = №4-NEVESTA Katarina geb. Požek — porokа 8 dni prej!) × Barbara STRAUS [★★ KORPUS-KRST: rojena 1894 h71 — 'Jurij Straus ¼ × Barbara Jakobčič' [korpus!] → starost 19 ✓], ¼, 19, samska (mladoletna — proglaš!), GRIBLJE 31 [★ hiper-zoom ×6: hiša 31 (NE 71!) — korpus-krst na h71 = SEJEM SELITEV Strausovih h71 → h31 [h31 = Papič/Križan-Jakobičeva hiša 1911 №1!]]; ★★★ INTRA-GRIBLJE h65 × h31 (3. intra v letu — REKORD!) + ★★★ DVOTERNA KORPUS-SINHRONIZACIJA (OBE strani krščeni v korpusu — 2. 'dvoterna' po 1913 №3!); starši ženina: Matija Milek [pokojni?] ½ × Katarina geb. Požek [★ = №4-nevesta! ~ branje 'Gojek' — G/P-zmeda]; starši neveste: Jurij Straus ¼ zemljak [korpus ✓] × Barbara geb. Jakobčič [korpus ✓ — JAKOBČIČ-mreža + №6-nevesta roj. Jakobčičeva!]; priči: Matija Hrižan [~ Hričan] + Janez Jakša [~ Žakšič — 3. Jakša-pojav leta!]; zglašnica županstva V DOBRAVICAH [~ 'o Deželah'!] 10/5. 1914 št. 3 + proglaš polnoletnosti [za nevesto? ~] — sodišče Črnomelj; duhovnik [Jos. Pavl?/Povl ~]",
+    whatEn: "marriage (May 11, 1914 [~ a reading also 'May 18' — both MONDAYS!], entry 5 — MONDAY, 8 days after his mother's marriage №4!) — the groom Anton MILEK [★★ a CORPUS BAPTISM: born 1893 at h65 — 'Matija Milek ½ × Katarina Požek' [the corpus!] → the age 21 ✓ THE SAME HOUSE!], a half [~], 21, single (a minor!), GRIBLJE 65 (the corpus house of the Mileks 1887–1913 — TWO GENERATIONS: the senior couple Matija Milek × Katarina née Požek (children 1887–1901) + the son's couple Matija jr. × Marija née Hrišič (1904–1913; the marriage M1903 №3!); the groom's mother = THE №4 BRIDE Katarina née Požek — her marriage 8 days earlier!) × Barbara STRAUS [★★ a CORPUS BAPTISM: born 1894 at h71 — 'Jurij Straus ¼ × Barbara Jakobčič' [the corpus!] → the age 19 ✓], a quarter, 19, single (a minor — a majority declaration!), GRIBLJE 31 [★ a hyper-zoom ×6: the house 31 (NOT 71!) — the corpus baptism at h71 = THE STRAUS MOVE h71 → h31 [h31 = the Papič/Križan-Jakobič house of the 1911 №1!]]; ★★★ the INTRA-GRIBLJE h65 × h31 (the 3rd intra of the year — A RECORD!) + ★★★ a DOUBLE CORPUS SYNCHRONIZATION (BOTH sides baptized in the corpus — the 2nd 'double' after the 1913 №3!); the groom's parents: Matija Milek [the late?] ½ × Katarina née Požek [★ = the №4 bride! ~ the reading 'Gojek' — a G/P confusion]; the bride's parents: Jurij Straus ¼ a farmer [the corpus ✓] × Barbara née Jakobčič [the corpus ✓ — the JAKOBČIČ network + the №6 bride born a Jakobčič!]; the witnesses: Matija Hrižan [~ Hričan] + Janez Jakša [~ Žakšič — the 3rd Jakša appearance of the year!]; the banns of the municipality IN DOBRAVICE [~] May 10, 1914 no. 3 + a majority declaration [for the bride? ~] — the Črnomelj court; priest [Jos. Pavl?/Povl ~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "31",
+    bookSignature: "04455",
+    year: 1914,
+    scan: 155,
+    page: 154,
+    whatSi: "poroka (11. 5. 1914, vpis 5 — PONEDELJEK) — nevesta Barbara STRAUS [★★ KORPUS-KRST: rojena 1894 h71 — 'Jurij Straus ¼ × Barbara Jakobčič' [korpus!] → starost 19 ✓; STRAUS-mreža: 3 Straus-neveste 1912 + Barbara bajtarica h46 1912 №9!], ¼, 19, samska (mladoletna!), GRIBLJE 31 (★★ hiper-zoom ×6: hiša 31 (NE 71!) — korpus-krst 1894 na h71 = SEJEM SELITEV Strausovih h71 → h31 (1911 №1 Papič h31!) [~]; 1. poročni dokaz h31 v 20. stoletju [1892 №4 'Jakobčičeva h13/h31'? — VERIF]; sestra Marija roj. 1890 h71 [korpus]!) × Anton MILEK (21 — korpus-krst 1893 h65!; MATI = №4-nevesta Katarina geb. Požek — porokа 8 dni prej!), ½, 21, samski (mladoletnik!), GRIBLJE 65; ★★★ INTRA-GRIBLJE h31 × h65 (3. intra-Griblje poroka leta = REKORD LINIJE [1910 №1 + 1911 №1+№2 + 1912 №1 + 1913 №10 + 1914 №3+№4+№5!]) + DVOTERNA KORPUS-SINHRONIZACIJA; starši neveste: Jurij Straus ¼ zemljak [korpus ✓] × Barbara geb. Jakobčič [korpus ✓]; starši ženina: Matija Milek ½ [pokojni?] × Katarina geb. Požek [№4-nevesta!]; priči: Matija Hrižan + Janez Jakša [~]; zglašnica županstva v Dobravicah 10/5. 1914 št. 3 + proglaš polnoletnosti — sodišče Črnomelj [~]; duhovnik [Jos. Pavl? ~]",
+    whatEn: "marriage (May 11, 1914, entry 5 — MONDAY) — the bride Barbara STRAUS [★★ a CORPUS BAPTISM: born 1894 at h71 — 'Jurij Straus ¼ × Barbara Jakobčič' [the corpus!] → the age 19 ✓; the STRAUS network: 3 Straus brides of 1912 + Barbara a cottager of h46 in the 1912 №9!], a quarter, 19, single (a minor!), GRIBLJE 31 (★★ a hyper-zoom ×6: the house 31 (NOT 71!) — the corpus baptism of 1894 at h71 = THE STRAUS MOVE h71 → h31 (the 1911 №1 Papič of h31!) [~]; the 1st marriage evidence of h31 in the 20th century [the 1892 №4 'a Jakobčič of h13/h31'? — VERIF]; the sister Marija born 1890 at h71 [the corpus]!) × Anton MILEK (21 — the corpus baptism of 1893 at h65!; his MOTHER = the №4 bride Katarina née Požek — her marriage 8 days earlier!), a half, 21, single (a minor!), GRIBLJE 65; ★★★ the INTRA-GRIBLJE h31 × h65 (the 3rd intra-Griblje marriage of the year = THE LINE RECORD [the 1910 №1 + the 1911 №1+№2 + the 1912 №1 + the 1913 №10 + the 1914 №3+№4+№5!]) + a DOUBLE CORPUS SYNCHRONIZATION; the bride's parents: Jurij Straus ¼ a farmer [the corpus ✓] × Barbara née Jakobčič [the corpus ✓]; the groom's parents: Matija Milek ½ [the late?] × Katarina née Požek [the №4 bride!]; the witnesses: Matija Hrižan + Janez Jakša [~]; the banns of the Dobravice municipality May 10, 1914 no. 3 + a majority declaration — the Črnomelj court [~]; priest [Jos. Pavl? ~]",
+    status: "DOCUMENTED",
+  },
 
   // ——— P122 razširitev: POROČNA KNJIGA 04455 — polno leto 1893 (skeni 87–90 ==
   // strani 86–89; VELIKA GLAVA »Traunungs=Buch« + rokopisno »1893« na s87 =

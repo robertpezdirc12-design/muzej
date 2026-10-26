@@ -163,14 +163,14 @@ def main():
     # ---------- I6: qa-parish.ts ----------
     qa = open(QA_TS).read()
     check("I6a qa-p139 id", "qa-p139-parish-marriage-1910" in qa)
-    n664 = qa.count("HOUSE_VITALS.length !== 681")
+    n664 = qa.count("HOUSE_VITALS.length !== 685")
     check("I6b vitals pini 664", n664 >= 54, str(n664))
     n147 = qa.count(".length !== 164")
     check("I6c bloki pini 147", n147 >= 25, str(n147))
-    check("I6d sidra 140 + 1910:5", "poročna sidra ≠ 157" in qa and "h.year === 1910).length !== 5" in qa)
+    check("I6d sidra 140 + 1910:5", "poročna sidra ≠ 161" in qa and "h.year === 1910).length !== 5" in qa)
     check("I6e hiše 1910 pin", '"6,8,13,31,86"' in qa)
     check("I6f ostanki 659/142/135", "!== 659" not in qa and ".length !== 142" not in qa and "sidra ≠ 135" not in qa, "stale pini!")
-    check("I6g p80 hiše 68 (+h86!)", "p80Houses.size !== 70" in qa, "")
+    check("I6g p80 hiše 68 (+h86!)", "p80Houses.size !== 71" in qa, "")
     check("I6h PT luknja 13 nespremenjena (h86 v naboru!)", "p80Gap.length !== 13" in qa, "")
 
     # ---------- I7: duhovniki + dnevi ----------

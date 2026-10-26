@@ -357,12 +357,12 @@ def main() -> int:
     qa = open(QA_TS).read()
     check("I9 qa-p127", '"qa-p127-parish-marriage-1898"' in qa)
     check("I9b p80 bloki 78", "poročni vpisi (04455) ≠ 158" in qa)
-    check("I9c p80 sidra 71 (1898×9 · 1899×6 · 1900×2)", "poročna sidra ≠ 157" in qa)
+    check("I9c p80 sidra 71 (1898×9 · 1899×6 · 1900×2)", "poročna sidra ≠ 161" in qa)
     check("I9d p80 hiše 1898 = [22×2,34,46,48,54,62,67,70]",
           "hiše 1898 (04455) ≠ [22×2,34,46,48,54,62,67,70]" in qa)
     check("I9e p80 hiše 58", "različnih hiš (vse tri knjige) ≠ 70" in qa)
     check("I9f PT luknja 12", "PT luknja ≠ 13 hiš" in qa)
-    check("I9g vitals 637 zaščita (P128)", "HOUSE_VITALS.length !== 681" in qa)
+    check("I9g vitals 637 zaščita (P128)", "HOUSE_VITALS.length !== 685" in qa)
     check("I9h Rauy 1898 bloki ×9 zaščita", "Rauy podpisi 1898 blokov ≠ 9" in qa)
     check("I9i stari 537/544/548/550/554/559/563/566/569/578 iztekla",
           "HOUSE_VITALS.length !== 537" not in qa and "HOUSE_VITALS.length !== 544" not in qa
