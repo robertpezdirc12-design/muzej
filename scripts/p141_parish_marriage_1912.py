@@ -79,9 +79,9 @@ GRIBLJE_ROWS = [1, 9, 15, 17]
 GRIBLJE_HOUSES = ["21", "44", "46", "63", "78"]
 GRIBLJE_BLOCKS = 5              # №1 2 (INTRA!) + №9 1 + №15 1 + №17 1
 GRIBLJE_INTRA = 1
-VITALS_TOTAL = 675              # 670 + 5
+VITALS_TOTAL = 675              # 670 + 5 (ZAMRNJEN 1912-evidence pin — NE posodabljati v kaskadi!; tekoči korpus = 681 od P142)
 BLOKI_04455 = 158               # 153 + 5
-SIDRA_TOTAL = 151               # 146 + 5 blokov (+1912:5)
+SIDRA_TOTAL = 151               # 146 + 5 blokov (+1912:5) (ZAMRNJEN 1912-evidence pin — NE posodabljati v kaskadi!; tekoči korpus = 157 od P142)
 EXPECTED_MONDAYS = 14           # + 1 nedelja + 1 torek (№1!) + 1 petek (№5!)
 EXPECTED_SUNDAYS = 1
 
@@ -198,14 +198,14 @@ def main():
     # ---------- I6: qa-parish.ts ----------
     qa = open(QA_TS).read()
     check("I6a qa-p141 id", "qa-p141-parish-marriage-1912" in qa)
-    n675 = qa.count("HOUSE_VITALS.length !== 675")
+    n675 = qa.count("HOUSE_VITALS.length !== 681")
     check("I6b vitals pini 675", n675 >= 55, str(n675))
-    n158 = qa.count('.length !== 158')
+    n158 = qa.count('.length !== 164')
     check("I6c bloki pini 158", n158 >= 1, str(n158))
-    check("I6d sidra 151 + 1912:5", "poročna sidra ≠ 151" in qa and "h.year === 1912).length !== 5" in qa, "")
+    check("I6d sidra 151 + 1912:5", "poročna sidra ≠ 157" in qa and "h.year === 1912).length !== 5" in qa, "")
     check("I6e hiše 1912 pin", '"21,44,46,63,78"' in qa, "")
-    check("I6f ostanki 670/153/146/70", "!== 670" not in qa and ".length !== 153" not in qa and "sidra ≠ 146" not in qa and "p80Houses.size !== 70" not in qa, "stare pini!")
-    check("I6g p80 hiše 69 (h78 ŽE v p80!)", "p80Houses.size !== 69" in qa, "")
+    check("I6f ostanki 670/153/146", "!== 670" not in qa and ".length !== 153" not in qa and "sidra ≠ 146" not in qa, "stare pini!")  # P142: '!== 70' odstranjen — h76 naredil p80=70 TEKOČI pin!
+    check("I6g p80 hiše 69 (h78 ŽE v p80!)", "p80Houses.size !== 70" in qa, "")
     check("I6h PT luknja 13 nespremenjena", "p80Gap.length !== 13" in qa, "")
 
     # ---------- I7: duhovniki + dnevi ----------
@@ -237,7 +237,7 @@ def main():
     # ---------- I10: README ----------
     rd = open(README).read()
     check("I10a README P141 bullet", "po P141" in rd, "")
-    check("I10b README 675/158", "675" in rd and "158" in rd, "")
+    check("I10b README 675/158", "681" in rd and "164" in rd, "")
     check("I10c README P142 lead", "P142" in rd, "")
 
     # ---------- I11: P140 dokaz nespremenjen (lekcija P9) ----------

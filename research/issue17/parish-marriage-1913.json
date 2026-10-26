@@ -1,0 +1,645 @@
+{
+ "source": {
+  "book": "04455 (ženitovanske knjige — Trauungsbuch, župnija Podzemelj)",
+  "url": "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04455/",
+  "year": 1913,
+  "scans": "s152–s154 (top) == Pag. 151–153; s154 y≈780 = letna glava »1914«",
+  "method": "8 krogov VLM-branj (Faza 1: 14 overview + 7 STRIP + 26 vrstičnih + 84 finiх zoomov multi-render o/i/d) + korpus-forenzika (04105-krsti 1885–1919 + 04455-poroke 1886–1912) — 1913 = isti slovenski pisar kot 1912 (najhitrejša pisava linije) + SISTEMSKA H/K/M-INITIAL CONFUSION (Klepec/Hlepec/Hlebec, Kralj/Hvali/Mal/Mali, Kapljišče/Harpišče, Krasinec/Hrašinec, Macel/Mavrel)",
+  "lead": "P141-lead: »s152 = ŽE 1913 №1 (27.1.1913 Juvančič × Mihelčič?)«"
+ },
+ "lead": {
+  "claim": "P141-lead: №1 27.1.1913 Juvančič × Mihelčič? na s152",
+  "correction": "13 vpisov (NE 1!): №1–6 s152 + №7–11 s153 + №12–13 s154-top; meja 1913/1914 DOKAZANA (letna glava »1914« na s154 y≈780 — 1. letna glava po 1908!); №1 = Matija Juvančič [~ Janževič] × Marija MACEL — lead-ov »Mihelčič« je bil pravzaprav №4-nevesta (Strofeja Mihelčič!)"
+ },
+ "entries": [
+  {
+   "row": 1,
+   "date": "27. januar 1913 (ponedeljek)",
+   "scan": 152,
+   "page": 151,
+   "groom": {
+    "name": "Matija Juvančič [~ 4 L-branjа 'Janževič' — priimek po očetu Juriju Juvančiču (2 R-branjа) + korpus 1903 'Matevž Juvančič' h24 + P141-lead]",
+    "place": "Kapljišče 6 [~ 'Kapljišče b.' — bajtar?] (1. poročni dokaz hiše Kapljišče 6)",
+    "stand": "¼ gomoljnega sina [~ 'goml. vin']",
+    "age": 32,
+    "status": "samski (ženin)",
+    "note": "★ JUVANČIČ-družina: 1903 korpus Griblje h24 'Matevž Juvančič [~]' + №5-1913 nevesta Ana Juvančič (hči Nikolaja Juvančiča!) = 3 Juvančič-pojavi v poročni knjigi 1913!"
+   },
+   "bride": {
+    "name": "Marija Macel [~ branjа Mavrel/Mačele/Malele — 4 variante; MACEL 2 odločilna zooma 95 %]",
+    "place": "Zemelj 33 (1. vpis Zemelj 33)",
+    "stand": "¼ [hči]",
+    "age": 23,
+    "status": "samska",
+    "note": "MACEL = NOVI PRIIMEK korpusa (Zemelj-vas, ne-Griblje)"
+   },
+   "groomParents": {
+    "father": "Jurij Juvančič, ¼ kmet [~ branje 'Jurjavčič']",
+    "mother": "Ana [Tone?/Žome? ~ — 2 nejasni branjа]"
+   },
+   "brideParents": {
+    "father": "Janez Macel, bajtar [~ hujšar?]",
+    "mother": "Marija [Javhik?/Javnik? ~]"
+   },
+   "witnesses": [
+    "Matija Žome [~] ½ zeml.",
+    "Nikolaj Pud [~] ½ zeml."
+   ],
+   "witnessStatus": "oba ½ zemljaka",
+   "urkunden": "ženitovana napisnica/oglašnica — izpostava v Podnanosu?? [~ 'Podnanos d.d.'] 25/1. 1913 št. 12 + upravno dovoljenje očetovo za mladoletnega [~] (datum dokumenta 25/1. potrjuje poroko 27/1.!)",
+   "priest": "Jos. R[ud?/emš? ~ — 1. od ~10 branj podpisov leta: Rud/Pavl/Pavc/Raml/Roml/Rant/Benk/Komp/Šumi/Remš — verjetno VSI isti župnik v najhitrejši pisavi, vzorec P141 'Rauy']",
+   "anomalies": [
+    "DATUM-ANKETA: 3 branjа ('24.1.' strip / 'junij 27' ov / '27.1.' lead) — razrešeno: 27.1. (dokument 25/1 + PON + P141-lead); [~] odprto: branje meseca jan/jun"
+   ]
+  },
+  {
+   "row": 2,
+   "date": "31. marec 1913 (ponedeljek — 1. poroka po postu!)",
+   "scan": 152,
+   "page": 151,
+   "groom": {
+    "name": "Nikolaj Vasić [~ branjа Vršič/Javrič/Javornik — priimek po očetu Nikolaju Vasiću (2 R-branjа STRONG)]",
+    "place": "Kapljišče 4",
+    "stand": "¼ zemlj. sin",
+    "age": 23,
+    "status": "samski",
+    "note": "VASIĆ = NOVI PRIIMEK korpusa"
+   },
+   "bride": {
+    "name": "Marija Klepec [~ branjа Hlepec/Mavrel — K/H zmeda; priimek po očetu Juriju Klepcu]",
+    "place": "GRIBLJE 25 (★ korpus: h25 Klepec-družina — 1896 krst Ane 'Janez Klepec?/Mlepec? × Katarina Tome?'!)",
+    "stand": "¼ zemlj. hči",
+    "age": 23,
+    "status": "samska",
+    "note": "★★ KORPUS-HIŠA: h25 — Marija (r. ~1890) = starejša hči Janeza/Jurija Klepca h25 pred korpusnim krstom 1896!"
+   },
+   "groomParents": {
+    "father": "Nikolaj Vasić, ¼ gomolj. [~ goml.]",
+    "mother": "Marija Stari[ni]č/šnik [~ 2 branjа]"
+   },
+   "brideParents": {
+    "father": "Jurij Klepec, ¼ kmet [~ Janez po korpusu 1896]",
+    "mother": "Katarina [Čop?/Tome? ~ — korpus 1896 'Katarina Tome?']"
+   },
+   "witnesses": [
+    "Martin Jurjevčič [~]",
+    "Ivan Vlasić [~ Vlasic/Vlašič] ¼"
+   ],
+   "witnessStatus": "kmetje",
+   "urkunden": "ženitovanjska poglašnica župništva Podzemelj 24.3. 1913 št. 14 + občinski list župnega sodišča Črnomelj",
+   "priest": "Jos. Pavc/Pavl [~]"
+  },
+  {
+   "row": 3,
+   "date": "21. april 1913 (ponedeljek)",
+   "scan": 152,
+   "page": 151,
+   "groom": {
+    "name": "Jurij Dragoš [~ branjа Ivan/Jure/Janez — korpus 1915 'Jure Dragos' + 1918 'Janez Dragoš?' — DRAGOŠ potrjen ×2]",
+    "place": "Žužkovci 4 [~ branje 'Vučkoviči']",
+    "stand": "¼ gomiljar/gospodarjev [~]",
+    "age": 25,
+    "status": "samski",
+    "note": "★ korpus 1918: 'Janez Dragoš, posednik, roj. 23.11.[1887]' h53 — starost 25 ✓ (5 mesecev po 25. rojstnem dnevu)!"
+   },
+   "bride": {
+    "name": "Marjeta Pezdirec",
+    "place": "GRIBLJE 53 (★★ KORPUS-KRST: rojena 14.8.1891 h53 — Janez Pozdirec ¼ × Marija Križan — starost 21 let 8 mesecev ✓!)",
+    "stand": "¼ gomiljarova [~]",
+    "age": 21,
+    "status": "samska",
+    "note": "★★★ DVOTERNA KORPUS-SINHRONIZACIJA: (1) njen krst 14.8.1891 h53 (oče Janez Pezdirec ¼ × Marija Križan/Hrižan — ISTA hiša 53!) + (2) par-krsta na h53 1915 (Jure Dragos × Marjeta Pezdirc — sin Janez 18.12.1915!) + 1918 (Nikolaj 9.8.1918!) — PAR + PRESELITEV NA NEVESTINO HIŠO POTRJENA ×2!"
+   },
+   "groomParents": {
+    "father": "[Janez? ~ Nikolaj?] Dragoš [~ branje 'Dražgos']",
+    "mother": "Katarina [? ~]"
+   },
+   "brideParents": {
+    "father": "Janez Pezdirec, ¼ zemljak [korpus-sinhrono!]",
+    "mother": "Marija Križan [~ Hrižan — korpus piše oba]"
+   },
+   "witnesses": [
+    "Nikolaj Željko",
+    "Nikolaj Krivuda ¼ [~]"
+   ],
+   "witnessStatus": "zemljaki",
+   "urkunden": "ženitovanjska oglašnica županija Adlešiči 12./22.4. 1913 št. 118 [~ dan dvoven!] + vojaški + krstni list",
+   "priest": "Jožef Ž. [~]"
+  },
+  {
+   "row": 4,
+   "date": "28. april 1913 (ponedeljek)",
+   "scan": 152,
+   "page": 151,
+   "groom": {
+    "name": "Janez Hlebec [~ Hlepec/Klepec — H/K-M zmeda; korpus 1887–1891 h2 'Peter Hlebec ¼ × Ana Jakobič' — Janez (r. ~1889) verjetno iz te Družine!]",
+    "place": "Dragošje 2 [~ Dragatuš?/Dragoši? — 3 branjа]",
+    "stand": "¼ zemlj. sin",
+    "age": 24,
+    "status": "samski",
+    "note": "★ KORPUS-HLEBEC: h2 Griblje (Peter Hlebec × Ana Jakobič: Nikolaj 1887, Marija 1889, Marjeta 1891) — Janez r. ~1889 med krstoma!"
+   },
+   "bride": {
+    "name": "Strofeja Mihelčič [~ Doroteja? — 2 branjа imena; MIHELČIČ 95 % zoom = P141-lead-ime a za №4!]",
+    "place": "[Adlešiči? ~ — vasi nejasna; 'Dragatuš 1' ov = dvomljivo]",
+    "stand": "½ gomlj. hči",
+    "age": 17,
+    "status": "samska (mladoletna!)",
+    "note": "MIHELČIČ = NOVI PRIIMEK korpusa; 17 let = ena najmlajših nevest linije"
+   },
+   "groomParents": {
+    "father": "Matija [Klepec?/Hlepec? ~ — 'Klopčec' branje] ¼",
+    "mother": "Marija Željko [~]"
+   },
+   "brideParents": {
+    "father": "Janez Mihelčič, ½ [~ branje 'Adlešič' = kontaminacija z občino-adreso dokumenta!]",
+    "mother": "Barbara Milev [~ Barbana]"
+   },
+   "witnesses": [
+    "Nikolaj Željko",
+    "Nikolaj Hrast ¼ [~ Hpalj/Krivuda]"
+   ],
+   "witnessStatus": "zemljaki",
+   "urkunden": "izjavnica županija Adlešiči 20/4. 1913 št. 131 + [vojaški list? ~]",
+   "priest": "Jos. Pavel župnik [~]"
+  },
+  {
+   "row": 5,
+   "date": "5. maj 1913 (ponedeljek) [~ branje '6.5.' — 5.5. 2 odločilna zooma]",
+   "scan": 152,
+   "page": 151,
+   "groom": {
+    "name": "Jurij Jesih [~ Franc? — 2 branjа imena]",
+    "place": "»[V/Ž]relčičevih 6« [~ hišno ime! branjа 'Vrhovska vas 6'/'Zemelj 6'/'Želčičevh 6' — 3 variante; morda 'pri Željcovih 6'?!]",
+    "stand": "¼ zemlj. sin",
+    "age": 29,
+    "status": "samski",
+    "note": "JESIH = NOVI PRIIMEK korpusa"
+   },
+   "bride": {
+    "name": "Ana Juvančič [~ branjа Žužajevič/Žurajevič — priimek po očetu Nikolaju Juvančiču!]",
+    "place": "Krasinec 5",
+    "stand": "¼",
+    "age": 23,
+    "status": "samska",
+    "note": "★ 2. JUVANČIČ-poročna oseba leta (№1 ženin + №5 nevesta — različni veji: Jurijeva vs Nikolajeva!)"
+   },
+   "groomParents": {
+    "father": "Janez Jesih, ¼ zemljak",
+    "mother": "Ana Ivanič"
+   },
+   "brideParents": {
+    "father": "Nikolaj Juvančič, ¼ zemljak",
+    "mother": "Katarina Klepec [★ KLEPEC-mreža: tudi №2 nevesta + №13 mati!]"
+   },
+   "witnesses": [
+    "Matija Jaklič, hlapec [~ 'kafijaža' — kavarnar?!]",
+    "Marija Jesih ½ [sestra/ vdova ženina?]"
+   ],
+   "witnessStatus": "hlapec + ½ zemljaka",
+   "urkunden": "[...] št. 638 + [...] 4/5. 1913 št. 78 + lastno očetovo dovoljenje [~]",
+   "priest": "Jos. Komp [~]"
+  },
+  {
+   "row": 6,
+   "date": "26. maj 1913 (ponedeljek)",
+   "scan": 152,
+   "page": 151,
+   "groom": {
+    "name": "Janez Marovšič [~★ branjа Marošinič/Marovšinč/Hudavičič/Adamič/Javornik/Krajinec/Krasinec/Hrovatin — 8 VARIANT = NAJTRŠA BESEDA LETA 1913! MAROVŠIČ 2 zooma; VERIF odprto]",
+    "place": "Krasinec 26 [~ 'Krajinec 26' — e6-vil 99 % 'Krasinec 26']",
+    "stand": "¼ zemljak",
+    "age": 33,
+    "status": "samski [~]"
+   },
+   "bride": {
+    "name": "Marijeta Željko",
+    "place": "GRIBLJE 1 (★★ KORPUS: h1 Željko-družina — Nikolaj Željko × Katarina Kure: krsti 1892 Neža, 1896 Anton!)",
+    "stand": "¼ gospod. hči",
+    "age": 23,
+    "status": "samska",
+    "note": "★★ KORPUS-SINHRONIZACIJA: oče Nikolaj Željko h1 (2 R-branjā 'Nikolaj Želiko/Željko') — Marijeta r. ~1890 = prvi otrok pred korpusnima krstoma 1892/1896! + ŽELJKO-mreža leta: №3+№4 priči Nikolaj Željko ×2!"
+   },
+   "groomParents": {
+    "father": "Matija [Marovšič ~ — branjа 'Hudavičič/Adamič'] ¼",
+    "mother": "Katarina geb. Žugelj [★ ŽUGELJ: korpus-priimek + 1912 №14 intra-Žugelj!]"
+   },
+   "brideParents": {
+    "father": "Nikolaj Željko, ¼ [korpus!]",
+    "mother": "[Katarina Kure ~ — 'Kune' branje; korpus h1 'Katarina Kure' ✓]"
+   },
+   "witnesses": [
+    "[imena nejasna — ¼ zemljaka]"
+   ],
+   "witnessStatus": "¼ zemljaka",
+   "urkunden": "zemljiška knjiga okrajnega sodišča Črnomelj št. 16 [~] + poglas/prošnja za dovoljenje sodišča Črnomelj 5/11. 1912 (predporočni dokument izpred 7 mesecev!)",
+   "priest": "Jos. Šumi [~]"
+  },
+  {
+   "row": 7,
+   "date": "6. julij 1913 (nedelja)",
+   "scan": 153,
+   "page": 152,
+   "groom": {
+    "name": "Fran(c) Šoflak [~ branjа Voplah/Voplak — ŠOFLAK 3 branjā z očetom Vidom Šoflakom!]",
+    "place": "Gradac 1",
+    "stand": "c.k. poštar [! — 1. poštar linije; ~ zemljak?]",
+    "age": 39,
+    "status": "samski [~]"
+   },
+   "bride": {
+    "name": "Amalija Polda",
+    "place": "Gradac 85 [~ 65]",
+    "stand": "prostovoljka [~ 'prostovojka' — 1. pojav poklica!]",
+    "age": 35,
+    "status": "samska [~]"
+   },
+   "groomParents": {
+    "father": "Vid Šoflak, posestnik in kovač [★ 2 poklica!] [~ branje 'Voplak']",
+    "mother": "[Federeta? ~ — nejasno ime] Galun"
+   },
+   "brideParents": {
+    "father": "Andrej Polda, posestnik",
+    "mother": "Marija Švajger [★ korpus-priimek Švajger — 1912 'Švajgar-slovensko'!]"
+   },
+   "witnesses": [
+    "Jakob Štjepanič [~ Stipanič], hlapec",
+    "Martin Kobe"
+   ],
+   "witnessStatus": "hlapec + [?]",
+   "urkunden": "zemljiškoknjižni izpisek županije Gradac 18/6. 1913 št. 113 [~] + krstni in SMRTNI list župnijskega urada Metlika 17/5. 1913 št. 155 [~ 'na tri Štujem?' — smrtni list = prejšnji zakon? ali starša?]",
+   "priest": "Jos. Raml [~]",
+   "anomalies": [
+    "SMRTNI LIST v dokumentih — prejšnji zakon enega od partnerjev kljub statusu 'samski' [~ VERIF]"
+   ]
+  },
+  {
+   "row": 8,
+   "date": "7. julij 1913 (ponedeljek) [~ strip '9.7.' — 3 branjа 7.7.]",
+   "scan": 153,
+   "page": 152,
+   "groom": {
+    "name": "Ladislav Miklavčič [~ branjа 'Hadija/Ladija Žugan' — LADISLAV d8 2×; 1. ime Ladislav v liniji!]",
+    "place": "Otok 38",
+    "stand": "½ zemlj. sin",
+    "age": 21,
+    "status": "samski (mladoletnik!)"
+   },
+   "bride": {
+    "name": "Barbara Kambič [~ branjа Kramlič/Krambič/Kumpič — 5 variant; KAMBIČ h8-zoom 100 % + korpus-priimek!]",
+    "place": "Krasinec 40 [~ branjа 'Hrašinec' — H/K zmeda; KRASINEC = korpus-vas]",
+    "stand": "¼",
+    "age": 22,
+    "status": "samska (mladoletna!)"
+   },
+   "groomParents": {
+    "father": "Janez [Hrižan?/Štrisan? ~] ½",
+    "mother": "Marija Bajuk [~ Bajčik — korpus-priimek Bajuk?]"
+   },
+   "brideParents": {
+    "father": "Matija [Kambič? ~ branjā 'Hamrlč/Humberič'] ¼",
+    "mother": "Katarina Pezdirec [★ PEZDIREC-mreža leta: №3 nevesta + №8 mati + №13 mati + priči ×2 + priča Peter = 7 oseb!]"
+   },
+   "witnesses": [
+    "Martin Pezdirec",
+    "Janez Pezdirec [brata priči?!]"
+   ],
+   "witnessStatus": "zemljaka",
+   "urkunden": "ženitovanjska zloštnica [~ zglasnica] županstva Podzemelj 6/7. 1913 št. 14 + sproščnica polnoletnosti za ženina in nevesto 20/5. 1913 [~ — OBA mladoletna!]",
+   "priest": "Jos. Raml [~]"
+  },
+  {
+   "row": 9,
+   "date": "21. julij 1913 (ponedeljek)",
+   "scan": 153,
+   "page": 152,
+   "groom": {
+    "name": "Jožef Štukelj [~ Štucelj/Stukelj]",
+    "place": "Petrova vas i. Črnomelj 4 (★ DRUGO-ŽUPNIJSKI ženin — Petrova vas = župnija Črnomelj!)",
+    "stand": "¼ [zemljak?]",
+    "age": 28,
+    "status": "samski",
+    "note": "★★ KORPUS-1918: 'Jožef Štucelj [~], posednik, roj. 30.11.[~1885], h44 Griblje × Barbara r. Tome' — sin Terezija 10.11.1918 — ALI je to isti Jožef (poročen z Ana Žunič 1913 → nova žena Barbara Tome)? [~ VERIF — če DA: preselitev Petrova vas → Griblje h44 + 2. zakon!]"
+   },
+   "bride": {
+    "name": "Ana Žunič",
+    "place": "Krasinec 10 [~ branjе 'Žustova 10']",
+    "stand": "½ zemljakova hči",
+    "age": 18,
+    "status": "samska"
+   },
+   "groomParents": {
+    "father": "Janez Štukelj, ¼ gospodar",
+    "mother": "Marija Grahelj [~ Grabelj — korpus-priimek Grabelj!]"
+   },
+   "brideParents": {
+    "father": "Matija Žunič, ½ [~ korpus 'Žume/Žumič' h11 = ŽUNIČ-družina!]",
+    "mother": "Ana Hočevar [korpus-priimek Hočevar]"
+   },
+   "witnesses": [
+    "Jakob Jerman [~ Žemva] ¼",
+    "Janez Hočevar [~ — brat mati?]"
+   ],
+   "witnessStatus": "¼ + ¾ zemljaka [~]",
+   "urkunden": "konzistorijalna izjava (?) izdana v Črnomlju 9. julija 1913 št. 261 [~ 'Konisovaniška uplambica']",
+   "priest": "Jos. P. [~]"
+  },
+  {
+   "row": 10,
+   "date": "27. julij 1913 (nedelja) [~ branjа '7.7./9.7.' — zamaknjen '2'; 27.7. ov + kronologija (№9 = 21.7.!) + NED-vzorec]",
+   "scan": 153,
+   "page": 152,
+   "groom": {
+    "name": "Janko Vranešič [~ branjа Vranovič/Kranedič/Vranesic — VRANEŠIČ 3 branjā; 'Žugan' = hišno ime ali priimek matere? ~]",
+    "place": "GRIBLJE 76 (★ 1. POROČNI DOKAZ hiše 76 — NOVA p80-hiša 69. → 70.!; korpus: sin Vilhelmina krščena 9.9.1913 h76!)",
+    "stand": "zemljak [~ čolnar? 'čolnar' 1. branje — Bela krajina ob Kolpi!]",
+    "age": 20,
+    "status": "samski (mladoletnik!)"
+   },
+   "bride": {
+    "name": "Alojzija Mlec [~ korpus-branjа 'Muc' — h91-družina se v korpusu piše 'Muc' [~], v poročni 1913 'Mlec' ×3 — ista družina!]",
+    "place": "GRIBLJE 91 (★★ korpus: krst 9.5.1893 h91 'Janez Novak?[~]/Muc × Ana Kure' — Alojzija r. 1893 = starost 20 ✓!)",
+    "stand": "¼ zemlj. hči",
+    "age": 20,
+    "status": "samska (mladoletna!)",
+    "note": "★★★ INTRA-GRIBLJE poroka (h76 × h91 — 5. intra-Griblje par linije po 1910 №1, 1911 №1+№2, 2012 №1!) + ★★ SHOTGUN: poroka 27.7. → hčer Vilhelmina krščena 9.9.1913 h76 = rojena ~7.9. = VSEBOVANA POROKA (nevri sta bila noseča ~2 meseca!) + korpus-1913 oče 'Janez Kramec? [~ Kranec] šoždar?' = zmeden podpis istega para [~ VERIF]"
+   },
+   "groomParents": {
+    "father": "[Kafija?/Jožef? ~ — nejasno ime] Vranešič, posestnik",
+    "mother": "Katarina Urbas [~ Vrbas — korpus-priimek?]"
+   },
+   "brideParents": {
+    "father": "Janez Mlec [korpus ~ 'Muc'], ¼ zemljak",
+    "mother": "Ana Kure [korpus!]"
+   },
+   "witnesses": [
+    "Martin Jurajevič [~ Jurjavčič — sorodnik №1-ženina?!]",
+    "[Katapina? ~]"
+   ],
+   "witnessStatus": "kmet + posestnik [~]",
+   "urkunden": "škofni urad Črnomelj 19/4. ali 19/7. 1913 št. 239 [~ dan dvoven] + proglaš polnoletnosti za nevesto — sodišče Črnomelj 26/6. 1913 [nevesta 20 let = mladoletna!] + zvestilni list žup. urada Vinica [~ 21.4. 1913 št. 26 — VINICA = drugo-župnijske listine ženina?] + poročna potrditev kr. kotarskega sodišča v Beli Krajini 22/7. 1913 št. 2165 [~]",
+   "priest": "[nejasen podpis]",
+   "anomalies": [
+    "VSEBOVANA POROKA (hčer 7 tednov po poroki — korpus 9.9.1913!)",
+    "obe stranki mladoletni (20+20)"
+   ]
+  },
+  {
+   "row": 11,
+   "date": "24. avgust 1913 (nedelja) [~ VERIF: row-branjе 'Sept. 24.' vs STRIP '24. avgust' — NED-kader + 4-tedenski ritem po №10 (27.7.) govorita za avgust]",
+   "scan": 153,
+   "page": 152,
+   "groom": {
+    "name": "Rajmund Čeveljak [~ 'Čeh' — 1. ime Rajmund v liniji (latinsko!), priimek ČEVELJAK 95 % zoom = 'čeveljak' (čeveljar- Sorodnik?) ~ VERIF]",
+    "place": "GRIBLJE 35 (★ branje 'GORIŠICE' = GENETSKA-VAS za GRIBLJE — 4. pojav! [1910+1911+1912 'Giriči/Girišice' + 1913 'Gorišice' — korpus-hiša h35!])",
+    "stand": "[zemljak? ~]",
+    "age": 29,
+    "status": "samski [~]"
+   },
+   "bride": {
+    "name": "Marijeta Režek [~ branje 'Ržek' 95 % + 'Rezek']",
+    "place": "Krajnji vrh 25 [~ 'Krajni vrh' — vas nad Adlešiči]",
+    "stand": "[?]",
+    "age": 39,
+    "status": "samska [~ vdova?! — smrtni list v dokumentih! par 29+39]",
+    "note": "★ nevesta 39 let (2. najstarejša leta po №12-44) + SMRTNI LIST v dokumentih = verjetno VDOVA prejšnjega zakona [~ VERIF]"
+   },
+   "groomParents": {
+    "father": "[Anton? ~ 'Antonija Gril, hranopotnik' — nejasno; morda 'hranopotna oseba' = reven!",
+    "mother": "[Matko? ~ 'Reček' — REŽEK?! sorodnica neveste [~]]"
+   },
+   "brideParents": {
+    "father": "[nejasno — 'Ana Vrvoda' ~]",
+    "mother": "[nejasno — 'Nikolaj Judnič' ~ — ŽUNIČ?!]"
+   },
+   "witnesses": [
+    "[nejasno — ¼ zeml.]"
+   ],
+   "witnessStatus": "¼ zemljaka",
+   "urkunden": "domovnica [~ 'Št. Hrilošof, okraj Lele' — neberljivo] + krstni, SMRTNI in birmanski list za nevesto + proglaš potrditev kr. kotarskega sodišča Bela Krajina [~ '22.?? 1913 br. 7/65']",
+   "priest": "[~ 'P. Mikeln Polak, Čop.' — nejasen podpis; delegirani duhovnik?]",
+   "anomalies": [
+    "NAJMANJ BERLJIV VPIS LETA — starši obeh strank skoraj neberljivi",
+    "verjetna VDOVA-nevesta (smrtni list)"
+   ]
+  },
+  {
+   "row": 12,
+   "date": "2. november 1913 (nedelja)",
+   "scan": 154,
+   "page": 153,
+   "groom": {
+    "name": "Janez Simončič [~ Šimončič]",
+    "place": "Kloster 82",
+    "stand": "bajtar",
+    "age": 66,
+    "status": "samski [~ vdovec? — 66 let!] (★ NAJSTAREJŠI ŽENIN LETA + 2. najstarejši linije)",
+    "note": "SIMONČIČ = NOVI PRIIMEK korpusa"
+   },
+   "bride": {
+    "name": "Ana Žitav [~ branjа Šitar/Litar/'Lojtarjeva hči' — ŽITAV po očetu Francu Žitavu (e12-fath 'Franc Jitau' + e12-bsur 'Ana Žitav')!]",
+    "place": "Zemelj 42",
+    "stand": "[bajtarka? ~ 'lajtariča']",
+    "age": 44,
+    "status": "samska [~ vdova?]",
+    "note": "ŽITAV = NOVI PRIIMEK korpusa; par 66+44 = NAJSTAREJŠI PAR LETA (110 let skupaj!)"
+   },
+   "groomParents": {
+    "father": "Matija Šimončič, ¼ zemljak",
+    "mother": "Katarina Pezdirec [★ 3. PEZDIREC-mati leta (№8+№12+№13) — korpus-priimek; branjа 'Pekovec/Pekdinec' = Pezdirec-variantna družina (kot 'Perdinec' 1903!)]"
+   },
+   "brideParents": {
+    "father": "Franc Žitav, bajtar",
+    "mother": "Jedert Rozman [★ JEDERT = neobičajno ime; Rozman = korpus-priimek?]"
+   },
+   "witnesses": [
+    "Janez [Hvala?/Vukar?/Vlakar? ~ — 3 branjā]",
+    "Janez Rakar [~]"
+   ],
+   "witnessStatus": "[iz gmajne? ~ 'iz gmf.']",
+   "urkunden": "ženitovanjska oglašnica županstva Gradac 1. nov. 1913 št. 4",
+   "priest": "Jos. [Raml/Roml ~] župnik"
+  },
+  {
+   "row": 13,
+   "date": "10. november 1913 (ponedeljek)",
+   "scan": 154,
+   "page": 153,
+   "groom": {
+    "name": "Jožef Kralj [~ branjа Mali/Hvali/Mlak — H/K/M zmeda; KRALJ po L-strani ×2 + oba 1911-ankerja!]",
+    "place": "Mlake 10",
+    "stand": "½ gomiljnega sina [~]",
+    "age": 23,
+    "status": "samski (mladoletnik! — priglas polnoletnosti!)"
+   },
+   "bride": {
+    "name": "Neža Kralj [~ branjа 'Niža Hvali']",
+    "place": "Kapljišče 8 (★ korpus-hiša: 1911 №13 ženin Matija Kralj iz Kapljišča 8 — ISTA HIŠA!)",
+    "stand": "¼ gomilj. hči [~]",
+    "age": 18,
+    "status": "samska (mladoletna! — ustno očetovo dovoljenje!)"
+   },
+   "groomParents": {
+    "father": "Jurij Kralj, ½ zemljak [★★★ KORPUS-ANKER 1911-№6: 'Georg Kralj ½ × Anna geb. Pezdirec' — ISTA STARŠA! Jožef = BRAT 1911-ženina Mathiasa Kralja (Podzemelj 2)!]",
+    "mother": "Ana Pezdirec [korpus!]"
+   },
+   "brideParents": {
+    "father": "Matija Kralj, ¼ [★★ KORPUS-ANKER 1911-№13: 'Matija Kralj × Ana geb. Klepec' — ISTA STARŠA! Neža = SESTRA 1911-ženina Matije Kralja (Kapljišče 8)!]",
+    "mother": "Ana Klepec [korpus — H/K: branjе 'Hlebec/Hlepec' = KLEPEC!]"
+   },
+   "witnesses": [
+    "Peter Pezdirec, ½ [★ korpus h20: 'Peter Pezdirec/Perdinec ¾ × Doroteja Klepec' — 6 krstov 1897–1906!]",
+    "[Žunič?/Jesih?] Jesih, ¼ [~]"
+   ],
+   "witnessStatus": "½ + ¼ zemljaka",
+   "urkunden": "ženitovanjska zalošnica [~] županije Podzemelj 8. nov. 1913 št. 20 + PRIGLAS POLNOLETNOSTI ženina — podčastništvo Metlika (Jos. Remš [~]) 28/10. 1913 + USTNO OČETOVO DOVOLJENJE za mladoletno nevesto + ★★★ DISPENSA 3. KOLENA (enake stranske veze) — ORDINARIAT LJUBLJANA 31/10. 1913 št. 47845 [1. dispenza 3. kolena v liniji — za INTRA-KRALJ par!]",
+   "priest": "Jos. Remš [~ — podpis + dokument-uradnik ista priimka? zmeda] župnik",
+   "anomalies": [
+    "★★★ INTRA-PRIIMEK №13 KRALJ × KRALJ (4. intra-priimek poroka linije: 1910 Jakobčič + 1912 Pezdirec + 1912 Žugelj + 1913 Kralj)",
+    "DISPENSA 3. KOLENA — prva v liniji (1907 je bila 2. kolena)",
+    "OBA mladoletna (23+18) — 3 priglasi/dovoljenja v dokumentih!"
+   ]
+  }
+ ],
+ "excluded": [
+  {
+   "scan": 154,
+   "y": 780,
+   "reason": "letna glava »1914« — meja leta 1913/1914 (1. letna glava po 1908; P143-lead: 1914 №1 = 9.2.1914 Jožef Pajzar Hlošča 54 × Ana Lipovec GRIBLJE 46!)"
+  }
+ ],
+ "stats": {
+  "entries": 13,
+  "gribljeMarriages": 5,
+  "gribljeRows": [
+   2,
+   3,
+   6,
+   10,
+   11
+  ],
+  "gribljeHouses": [
+   "1",
+   "25",
+   "35",
+   "53",
+   "76",
+   "91"
+  ],
+  "gribljeIntra": 1,
+  "gribljeBlocks": 6,
+  "sameVillageRows": [
+   10
+  ],
+  "mondays": 9,
+  "sundays": 4,
+  "weekendPct": "13/13 = 100 % (9 PON + 4 NED — 1. POPOLOMA vikend-leto po 1907 '12/12 PON'!)",
+  "lentGap": "27.1. → 31.3. (post 5.2.–23.3. — 3. potrjena postna vrzel linije po 1911 + 1912)",
+  "yearHeading": "DA — '/1913' na s152 y≈50 + '1914' na s154 y≈780 (1. letni glavi po 1908!)",
+  "massDays": 0,
+  "intraSurname": 1,
+  "newP80House": "h76 (69. → 70.)",
+  "newSurnames": [
+   "Macel",
+   "Vasić",
+   "Mihelčič",
+   "Jesih",
+   "Marovšič [~]",
+   "Šoflak",
+   "Polda",
+   "Miklavčič",
+   "Štukelj",
+   "Vranešič",
+   "Mlec",
+   "Čeveljak [~]",
+   "Režek",
+   "Simončič",
+   "Žitav",
+   "Juvančič (1. v poročni — korpus 1903)"
+  ],
+  "newOccupations": [
+   "c.k. poštar",
+   "prostovoljka [~]",
+   "kovač-posestnik (dvojni poklic očeta №7)"
+  ],
+  "authorities": [
+   "županija Podzemelj/Gradac/Adlešiči",
+   "sodišče Črnomelj",
+   "župno sodišče Črnomelj",
+   "ORDINARIAT LJUBLJANA (dispenza 3. kolena št. 47845!)",
+   "podčastništvo Metlika",
+   "kr. kotarsko sodišče Bela Krajina (št. 2165)",
+   "škofni urad Črnomelj (št. 239)",
+   "župnijski urad Metlika (št. 155)",
+   "župni urad VINICA (št. 26 — drugo-župnijski!)",
+   "izpostava Podnanos [~]",
+   "župništvo Stari trg pri Ptuju?? [~ №7 — najbolj oddaljena oblast linije!]",
+   "konzistorij [~ №9]"
+  ],
+  "ages": {
+   "oldestGroom": "№12 Janez Simončič 66",
+   "oldestBride": "№12 Ana Žitav 44",
+   "youngest": "№4 Strofeja Mihelčič 17 + №13 Neža Kralj 18",
+   "minors": "№4 (17), №8 (21+22), №10 (20+20), №13 (23+18) = 7 mladoletnih oseb — rekord leta"
+  },
+  "vitalsTotal": 681,
+  "blocks04455": 164,
+  "sidraTotal": 157,
+  "p80Houses": 70,
+  "newHouses": [
+   "76"
+  ],
+  "unnumbered": 0,
+  "sameVillageCount": 1,
+  "sameHouseCount": 0,
+  "sameHouseRows": [],
+  "priests": "~10 variant podpisov (Rud/Pavl/Pavc/Raml/Roml/Rant/Benk/Komp/Šumi/Remš) — verjetno 1 župnik [+ kaplan/delegat?] v najhitrejši pisavi (vzorec P141 'Rauy' [~]) — VERIF odprto",
+  "intraSurnameRows": [
+   13
+  ]
+ },
+ "crossChecks": [
+  "№3 Marjeta Pezdirec Griblje 53 = korpus-krst 14.8.1891 h53 (Janez Pozdirec ¼ × Marija Križan) — starost 21 ✓ + hiša ✓ + starša ✓",
+  "№3 par = korpus-krsti 1915 (sin Janez 18.12.1915 h53 'Jure Dragos × Marjeta Pezdirc') + 1918 (sin Nikolaj 9.8.1918 h53 'Janez Dragoš? roj. 23.11. × Marjeta [Pezdirc]') — PAR + PRESELITEV NA h53 ×2 POTRJENA",
+  "№10 Alojzija Mlec Griblje 91 = korpus-krst 9.5.1893 h91 ('Janez Novak?[~]/Muc × Ana Kure') — starost 20 ✓ + hiša ✓ + starša (Janez Mlec × Ana Kure) ✓",
+  "№10 par = korpus-krst hčere Vilhelmine 9.9.1913 h76 — poroka 27.7.1913 + 7 tednov = VSEBOVANA POROKA + preselitev na h76",
+  "№13 ženinovi starši Jurij Kralj ½ × Ana Pezdirec = 1911 №6 starša (Georg Kralj ½ Hübler × Anna geb. Pezdirec — Podzemelj 2) — Jožef = brat Mathiasa Kralja",
+  "№13 nevestini starši Matija Kralj ¼ × Ana Klepec = 1911 №13 starša (Matija Kralj Gsellner × Ana geb. Klepec — Kapljišče 8) — Neža = sestra Matije Kralja + ISTA HIŠA Kapljišče 8",
+  "№6 nevesta Marijeta Željko Griblje 1 = h1 Željko-družina (korpus: Nikolaj Željko ¼/½ × Katarina Kure — krsti 1892/1896; Marijeta r. ~1890 = prvi otrok) + oče 'Nikolaj Željko' 2 R-branjā ✓",
+  "№2 nevesta Marija Klepec Griblje 25 = h25 Klepec-družina (korpus 1896: 'Janez Klepec? × Katarina Tome?') — Marija r. ~1890 = starejša hči",
+  "№13 priča Peter Pezdirec ½ = korpus h20 (Peter Pezdirec/Perdinec ¾ × Doroteja Klepec — 6 krstov 1897–1906)",
+  "№4 ženin Janez Hlebec = korpus h2 Hlebec-družina (Peter Hlebec ¼ × Ana Jakobič — krsti 1887/1889/1891)",
+  "№11 'Gorišice' = GRIBLJE (genetska-vas 4. pojav: 1910+1911+1912 'Giriči/Girišice' + 1913 'Gorišice' — hiša h35)",
+  "№9 ženin Jožef Štukelj ~ korpus-1918 'Jožef Štucelj h44 × Barbara Tome' [~ VERIF — morebiti isti mož po 2. zakonu]",
+  "№1 ženin Matija Juvančič ~ korpus-1903 'Matevž Juvančič h24' [~ — ista družina, druga hiša?]",
+  "№5 nevesta Ana Juvančič (oče Nikolaj Juvančič ¼) — 2. Juvančič-veja leta (№1 Jurijeva + №5 Nikolajeva)",
+  "Koledar 1913: 8 PON + 5 NED = 13/13 vikendi ✓ (edina 'vsotedeljenska' struktura skupaj s 1907!)",
+  "Postna vrzel: №1 27.1. → №2 31.3. (post 5.2.–23.3.) ✓ — 3. potrjena vrzel",
+  "№13 dispenza 3. kolena + INTRA-KRALJ — konsistentno (sorodstvo 3. stopnje med dvema Kralj-vejama!)",
+  "№12 mati Katarina Pezdirec [~ 'Pekdinec/Pekovec'] = Pezdirec-varianta (kot korpusova 'Perdinec/Pozdirec'!) — 3. Pezdirec-mati leta"
+ ],
+ "anomalies": [
+  "№1 datum: 3 nasprotujoča branjа ('24.1.' STRIP / 'junij 27' OV / '27.1.' lead+document 25/1) — rešitev 27.1. (PON); jan/jun-zmeda dokumentirana",
+  "№6 ženin priimek: 8 variantskih branj (Marovšič/Marošinič/Marovšinč/Hudavičič/Adamič/Javornik/Krajinec/Krasinec/Hrovatin) — NAJTEŽJA BESEDA LETA; MAROVŠIČ 2 zooma [~ VERIF]",
+  "№8 nevesta: 5 branj imena (Barbara/Elžana/Katarina/Ožbana/Bubara) + 4 branjа priimka (Kambič/Kramlič/Krambič/Kumpič) — BARBARA KAMBIČ [~]",
+  "№8 datum: strip '9.7.' vs 3 row-branjа '7.7.' — 7.7. (PON) [~]",
+  "№10 datum: 'Julij 7/9' vs '27.7.' — kronologija (№9 = 21.7.) + NED → 27.7. [~]",
+  "№11 mesec: STRIP '24. avgust' vs row 'Sept. 24.' — 24.8. (NED + 4-tedenski kader) [~ VERIF]",
+  "№11 starši obeh strank + priče skoraj neberljivi (najmanj berljiv vpis leta)",
+  "№11 verjetna VDOVA-nevesta (39 + smrtni list) [~]",
+  "№4 nevestino ime: 'Strofeja' (novo ime!) vs 'Doroteja' [~]; vasi 'Dragošje/Dragatuš/Dragoši' [~]",
+  "№5 ženinova vasi: 'Vrhovska vas 6/Zemelj 6/[V/Ž]relčičevih 6' — hišno ime? [~]",
+  "№7 smrtni list med dokumenti (kljub statusu samski) + 'izpostava Podnanos' [~] + 'Stari trg pri Ptuju' [~ — najbolj oddaljena oblast!]",
+  "№7 mati 'Federeta Galun' — neobičajno ime [~]",
+  "№12 priči: 'Janez Hvala?/Vukar/Vlakar' — 3 branjа [~]",
+  "Duhovnik-podpisi: ~10 variant (Rud/Pavl/Pavc/Raml/Roml/Rant/Benk/Komp/Šumi/Remš) — verjetno 1–2 dejanska duhovnika (župnik + kaplan/incorrect) v najhitrejši pisavi [~ VERIF — vzorec P141 'Rauy']",
+  "№10 korpus-1913 oče 'Janez Kramec? [~ Kranec] šoždar?' na krstu hčere ≠ poročni 'Janko Vranešič' [~ VERIF — ista oseba?]"
+ ],
+ "honesty": [
+  "VERIF-oznake [~]: ~20 odprtih podrobnosti — največ v eni fazi po 1912 (ista najhitrejša pisava + 8-variantska imena)",
+  "NAJVEČJE ODPRTE TOČKE: (1) №6 priimek Marovšič [8 variant]; (2) №8 nevesta Barbara Kambič [5+4 variant]; (3) №11 mesec avgust/september + starši (skoraj neberljivi); (4) №1 Juvančič/Janževič; (5) duhovnik-podpisi (10 variant — en župnik?); (6) №11 Čeveljak/Čeh + ali je poklic 'čeveljar'",
+  "H/K/M-INITIAL CONFUSION = SISTEMSKA lekcija 1913: Klepec/Hlepec/Hlebec + Kralj/Hvali/Mal/Mali + Kapljišče/Harpišče + Krasinec/Hrašinec + Macel/Mavrel — vsaka H/M-inicialna beseda zahteva korpus-križ",
+  "METODA: ozki zoomi (< 300 px) so ZAVARALI v 30 % primerov — koherentni bloki 4–5× (celotna vrstica z vasjo+imenom+poklicem) so zanesljivejši; STRIP-tehnika za datume je ostala avtoritativna razen №1 ('24.1.' napaka) in №11 (avgust?)",
+  "P141-lead 'Mihelčič' je pripadal №4-nevesti (ne №1!) — lekcija: lead-imena preverjati po vseh vpisom strani"
+ ]
+}

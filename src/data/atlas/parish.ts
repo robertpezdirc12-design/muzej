@@ -2446,6 +2446,101 @@ export const HOUSE_VITALS: HouseVital[] = [
     status: "DOCUMENTED",
   },
 
+  // ——— P142 razširitev: POROČNA KNJIGA 04455 — polno leto 1913 (skeni
+  // s152–s154 top == Pag. 151–153; s154 y≈780 = rokopisna letna glava
+  // »1914« = meja leta DOKAZANA — 1. letna glava po 1908!; 13 vpisov:
+  // 1886:7 → … → 1912:17 → 1913:13; letnica 1913 v vsakem vpisu + letni
+  // glavi »/1913« s152; 8 PON + 5 NED = 13/13 VIKENDI — 1. popolno
+  // vikend-leto po 1907 »12/12 PON«; postna vrzel 27.1.→31.3. — 3. zapored;
+  // 0 masa-dnevov = 1. leto brez skupnega dne po 2010!) — vpisi z Griblji
+  // (5 porok / 6 blokov: h25 №2 + h53 №3 + h1 №6 + h76+h91 №10 INTRA! +
+  // h35 №11 'Gorišice' = genetska-vas 4. pojav!): NOVELE: ★★★ №13 INTRA-
+  // KRALJ + 1. DISPENSA 3. KOLENA (ordinariat Ljubljana 31/10.1913 št.
+  // 47845 — 4. intra-priimek poroka linije!) + DVOJNI 1911-KORPUS-ANKER
+  // (obenem starši = 1911 №6 Georg Kralj × Anna Pezdirec + 1911 №13
+  // Matija Kralj × Anna Klepec — sestra hiše Kapljišče 8 ISTA!) + ★★★ №3
+  // Marjeta Pezdirec h53 = DVOTERNA korpus-sinhronizacija (krst 14.8.1891
+  // h53 + par-krsti 1915/1918 h53 'Dragos × Pezdirc'!) + ★★★ №10 INTRA-
+  // GRIBLJE h76 × h91 (5. intra-vasični par!) + VSEBOVANA POROKA (hčer
+  // Vilhelmina krščena 9.9.1913 h76 = 7 tednov po poroki!) + h76 = NOVA
+  // p80-hiša 69. → 70. + ★★ №11 'Gorišice' = GRIBLJE (genetska-vas 4.:
+  // Giriči/Girišice/Gorišice) + Rajmund = 1. ime + ★★ №1 DATUMSKA ANKETA
+  // ('24.1.'/'junij 27'/'27.1.' — dokument 25/1 + PON = 27.1.!) + ★★
+  // PEZDIREC-MREŽA ×7 oseb + JUVANČIČ ×2 (№1 ženin + №5 nevesta — 2 veji!)
+  // + ★ №12 najstarejši par (66+44 = 110 let!) + ★ №9 DRUGO-ŽUPNIJSKI
+  // ženin (Petrova vas i. Črnomelj!) + korpus-1918 [~] + ★ NOVE OBLASTI
+  // (ordinariat Ljubljana! + podčastništvo Metlika + kr. kotarsko sodišče
+  // Bela Krajina št. 2165 + škofni urad Črnomelj št. 239 + župni urad
+  // VINICA št. 26 + izpostava Podnanos [~] + [Stari trg pri Ptuju? ~]) +
+  // ★ NOVI POKLICI (c.k. poštar! + prostovoljka [~] + kovač-posestnik) +
+  // ~16 NOVIH PRIIMKOV (Macel, Vasić, Mihelčič, Jesih, Marovšič [~],
+  // Šoflak, Polda, Miklavčič, Štukelj, Vranešič, Mlec, Čeveljak [~],
+  // Režek, Simončič, Žitav, Juvančič-poročna-prvojavitev) + 7 mladoletnih
+  // oseb (rekord!) + SISTEMSKA H/K/M-INITIAL CONFUSION (Klepec/Hlepec,
+  // Kralj/Hvali/Mal, Krasinec/Hrašinec, Macel/Mavrel, Kapljišče/Harpišče)!
+  // Dokaz: research/issue17/parish-marriage-1913.json; verifikator:
+  // scripts/p142_parish_marriage_1913.py --check (I1–I12).
+  {
+    houseNo: "25",
+    bookSignature: "04455",
+    year: 1913,
+    scan: 152,
+    page: 151,
+    whatSi: "poroka (31. 3. 1913, vpis 2 — PONEDELJEK, 1. po postu!) — nevesta Marija KLEPEC [~ branjа Hlepec/Mavrel — K/H zmeda; priimek po očetu!], ¼ zemlj. hči, 23, samska, GRIBLJE 25 (★ KORPUS-HIŠA: h25 Klepec-družina — krst 1896 'Janez Klepec? × Katarina Tome?'; Marija r. ~1890 = starejša hči pred korpusnim krstom!) × Nikolaj VASIĆ [~ branjа Vršič/Javrič/Javornik — priimek po očetu Nikolaju Vasiću!; NOV PRIIMEK], ¼ zemlj. sin, 23, samski, KAPLJIŠČE 4; starši neveste: Jurij Klepec [~ Janez po korpusu] ¼ kmet × Katarina [Čop?/Tome? ~]; starši ženina: Nikolaj Vasić ¼ × Marija [Staričnič?/Starišnik? ~]; priči: Martin Jurjevčič [~] + Ivan Vlasić [~] ¼; ženitovanjska poglašnica župništva Podzemelj 24.3. 1913 št. 14 + občinski list župnega sodišča Črnomelj; duhovnik [Jos. Pavc? ~]",
+    whatEn: "marriage (Mar 31, 1913, entry 2 — MONDAY, the 1st after Lent!) — the bride Marija KLEPEC [~ the readings Hlepec/Mavrel — the K/H confusion; the surname after the father!], a quarter smallholder's daughter, 23, single, GRIBLJE 25 (★ a CORPUS HOUSE: the h25 Klepec family — the 1896 baptism 'Janez Klepec? × Katarina Tome?'; Maria b. ~1890 = the elder daughter before the corpus baptism!) × Nikolaj VASIĆ [~ the readings Vršič/Javrič/Javornik — the surname after the father Nikolaj Vasić!; a NEW SURNAME], a quarter smallholder's son, 23, single, KAPLJIŠČE 4; the bride's parents: Jurij Klepec [~ Janez per the corpus] ¼ a farmer × Katarina [Čop?/Tome? ~]; the groom's parents: Nikolaj Vasić ¼ × Marija [Staričnič?/Starišnik? ~]; the witnesses: Martin Jurjevčič [~] + Ivan Vlasić [~] ¼; the wedding banns of the Podzemelj parish Mar 24, 1913 no. 14 + the communal document of the Črnomelj parish court; priest [Jos. Pavc? ~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "53",
+    bookSignature: "04455",
+    year: 1913,
+    scan: 152,
+    page: 151,
+    whatSi: "poroka (21. 4. 1913, vpis 3 — PONEDELJEK) — nevesta Marjeta PEZDIREC, ¼ [gomiljarova ~], 21, samska, GRIBLJE 53 (★★★ DVOTERNA KORPUS-SINHRONIZACIJA: (1) KORPUS-KRST: rojena 14. 8. 1891 h53 — oče Janez Pozdirec ¼ × Marija Križan [korpus!] → starost 21 let 8 mesecev ✓ + ISTA HIŠA 53!; (2) PAR-KRSTI: sin Janez 18. 12. 1915 h53 'Jure Dragos × Marjeta Pezdirc' + sin Nikolaj 9. 8. 1918 h53 = PAR + PRESELITEV NA NEVESTINO HIŠO POTRJENA ×2!) × Jurij DRAGOŠ [~ branjа Ivan/Jure/Janez — korpus 1915 'Jure Dragos' + 1918 'Janez Dragoš? roj. 23.11.[1887]' — starost 25 ✓!], ¼ gomiljar [~], 25, samski, ŽUŽKOVCI 4 [~ branjа 'Vučkoviči']; starši neveste: Janez Pezdirec ¼ [KORPUS-SINHRONO!] × Marija Križan [~ Hrižan — korpus piše oba]; starši ženina: [Janez? ~ Nikolaj?] Dragoš × Katarina [?]; priči: Nikolaj Željko [korpus h1/h60!] + Nikolaj Krivuda ¼ [~]; oglašnica županije Adlešiči 12./22.4. 1913 št. 118 [~ dan dvoven] + vojaški + krstni list; duhovnik [Jožef Ž.? ~]",
+    whatEn: "marriage (Apr 21, 1913, entry 3 — MONDAY) — the bride Marjeta PEZDIREC, a quarter [~], 21, single, GRIBLJE 53 (★★★ a DOUBLE-ANCHOR CORPUS SYNCHRONIZATION: (1) a CORPUS BAPTISM: born Aug 14, 1891 at h53 — the father Janez Pozdirec ¼ × Marija Križan [the corpus!] → the age 21 years 8 months ✓ + THE SAME HOUSE 53!; (2) the COUPLE'S BAPTISMS: the son Janez Dec 18, 1915 at h53 'Jure Dragos × Marjeta Pezdirc' + the son Nikolaj Aug 9, 1918 at h53 = THE COUPLE + THE MOVE TO THE BRIDE'S HOUSE CONFIRMED twice!) × Jurij DRAGOŠ [~ the readings Ivan/Jure/Janez — the 1915 corpus 'Jure Dragos' + the 1918 'Janez Dragoš? b. Nov 23 [1887]' — the age 25 ✓!], a quarter [~], 25, single, ŽUŽKOVCI 4 [~ the reading 'Vučkoviči']; the bride's parents: Janez Pezdirec ¼ [CORPUS-SYNCHRONOUS!] × Marija Križan [~ Hrižan — the corpus has both]; the groom's parents: [Janez? ~ Nikolaj?] Dragoš × Katarina [?]; the witnesses: Nikolaj Željko [the corpus h1/h60!] + Nikolaj Krivuda ¼ [~]; the banns of the Adlešiči municipality Apr 12/22, 1913 no. 118 [~ a doubled day] + the military + the baptismal certificate; priest [Jožef Ž.? ~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "1",
+    bookSignature: "04455",
+    year: 1913,
+    scan: 152,
+    page: 151,
+    whatSi: "poroka (26. 5. 1913, vpis 6 — PONEDELJEK) — nevesta Marijeta ŽELJKO, ¼ gospod. hči, 23, samska, GRIBLJE 1 (★★ KORPUS: h1 Željko-družina — oče Nikolaj Željko ¼/½ × Katarina Kure [korpus: krsti 1892 Neža + 1896 Anton h1!]; Marijeta r. ~1890 = prvi otrok pred korpusnima krstoma!; oče 'Nikolaj Željko' 2 R-branjā ✓) × Janez MAROVŠIČ [~★ branjа Marošinič/Marovšinč/Hudavičič/Adamič/Javornik/Krajinec — 8 VARIANT = najtrša beseda leta; VERIF odprto!], ¼ zemljak, 33, samski, KRASINEC 26 [~ branjа 'Krajinec 26']; starši neveste: Nikolaj Željko ¼ [KORPUS!] × [Katarina Kure ~ — korpus h1!]; starši ženina: Matija [Marovšič? ~] ¼ × Katarina geb. ŽUGELJ [korpus-priimek + 1912 №14 intra-Žugelj!]; priči: [imena nejasna] ¼ zemljaka; zemljiška knjiga okrajnega sodišča Črnomelj št. 16 [~] + poglas/prošnja sodišča Črnomelj 5/11. 1912 (dokument 7 mesecev pred poroko!); duhovnik [Jos. Šumi? ~]",
+    whatEn: "marriage (May 26, 1913, entry 6 — MONDAY) — the bride Marijeta ŽELJKO, a quarter farmer's daughter, 23, single, GRIBLJE 1 (★★ a CORPUS: the h1 Željko family — the father Nikolaj Željko ¼/½ × Katarina Kure [the corpus: the baptisms 1892 Neža + 1896 Anton at h1!]; Marijeta b. ~1890 = the first child before the corpus baptisms!; the father 'Nikolaj Željko' confirmed by 2 R-readings) × Janez MAROVŠIČ [~★ the readings Marošinič/Marovšinč/Hudavičič/Adamič/Javornik/Krajinec — 8 VARIANTS = the hardest word of the year; VERIF open!], a quarter farmer, 33, single, KRASINEC 26 [~ the reading 'Krajinec 26']; the bride's parents: Nikolaj Željko ¼ [a CORPUS!] × [Katarina Kure ~ — the h1 corpus!]; the groom's parents: Matija [Marovšič? ~] ¼ × Katarina née ŽUGELJ [a corpus surname + the 1912 №14 intra-Žugelj!]; the witnesses: [names unclear] a quarter farmers; the land register of the Črnomelj district court no. 16 [~] + the request of the Črnomelj court Nov 5, 1912 (a document 7 months before the wedding!); priest [Jos. Šumi? ~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "76",
+    bookSignature: "04455",
+    year: 1913,
+    scan: 153,
+    page: 152,
+    whatSi: "poroka (27. 7. 1913 [~ branjа '7.7./9.7.' — zamaknjen '2'; kronologija №9 = 21.7.! + NED], vpis 10 — NEDELJA) — ženin Janko VRANEŠIČ [~ branjа Vranovič/Kranedič — 3 branjā VRANEŠIČ; 'Žugan' = hišno ime? ~], zemljak [~ čolnar?], 20, samski (mladoletnik!), GRIBLJE 76 (★★ h76 = 1. POROČNI DOKAZ — NOVA p80-hiša 69. → 70.! [04105-h76-krst 1913 izven p80-filtra]; ★ KORPUS: hčer Vilhelmina krščena 9. 9. 1913 h76 ['Janez Kramec? ~ Kranec šoždar? × Alojzija Muc[=Mlec ~]'] = VSEBOVANA POROKA — rojena ~7 tednov po poroki!) × nevesta Alojzija MLEC [~ korpus-branjа 'Muc' — ista h91-družina!], ¼ zemlj. hči, 20, samska (mladoletna!), GRIBLJE 91 (★★ KORPUS-KRST: rojena 9. 5. 1893 h91 — oče Janez M[uc→Mlec ~] × Ana Kure [korpus!] → starost 20 ✓!); ★★★ INTRA-GRIBLJE h76 × h91 = 5. intra-vasični par linije (1910 №1 + 1911 №1+№2 + 1912 №1 + 1913 №10!) + obe mladoletni (proglaš polnoletnosti za nevesto — sodišče Črnomelj 26/6. 1913!); starši ženina: [Kafija?/Jožef? ~] Vranešič posestnik × Katarina Urbas [~ Vrbas]; starši neveste: Janez Mlec [korpus ~ 'Muc'] ¼ × Ana Kure [korpus!]; priči: Martin Jurajevič [~ — sorodnik №1-ženina Juvančiča?!] + [Katapina? ~]; škofni urad Črnomelj 19/4. ali 19/7. 1913 št. 239 [~] + zvestilni list žup. urada VINICA 21/4. 1913 št. 26 [drugo-župnijski!] + poročna potrditev kr. kotarskega sodišča v BELI KRAJINI 22/7. 1913 št. 2165 [~]; duhovnik [nejasen podpis]",
+    whatEn: "marriage (Jul 27, 1913 [~ the readings '7.7./9.7.' — a swallowed '2'; the chronology of №9 = Jul 21! + SUNDAY], entry 10 — SUNDAY) — the groom Janko VRANEŠIČ [~ the readings Vranovič/Kranedič — 3 readings VRANEŠIČ; 'Žugan' = a house name? ~], a farmer [~ a boatman?], 20, single (a minor!), GRIBLJE 76 (★★ h76 = the 1st MARRIAGE EVIDENCE — a NEW p80 house, the 69th → 70th! [the 04105-h76 baptism of 1913 outside the p80 filter]; ★ a CORPUS: the daughter Vilhelmina baptized Sep 9, 1913 at h76 ['Janez Kramec? ~ Kranec? × Alojzija Muc [=Mlec ~]'] = A SHOTGUN WEDDING — born ~7 weeks after the wedding!) × the bride Alojzija MLEC [~ the corpus reading 'Muc' — the same h91 family!], a quarter farmer's daughter, 20, single (a minor!), GRIBLJE 91 (★★ a CORPUS BAPTISM: born May 9, 1893 at h91 — the father Janez M[uc→Mlec ~] × Ana Kure [the corpus!] → the age 20 ✓!); ★★★ the INTRA-GRIBLJE h76 × h91 = the 5th intra-village couple of the line (the 1910 №1 + the 1911 №1+№2 + the 1912 №1 + the 1913 №10!) + both minors (a majority declaration for the bride — the Črnomelj court Jun 26, 1913!); the groom's parents: [Kafija?/Jožef? ~] Vranešič a farmer × Katarina Urbas [~ Vrbas]; the bride's parents: Janez Mlec [the corpus ~ 'Muc'] ¼ × Ana Kure [the corpus!]; the witnesses: Martin Jurajevič [~ — a relative of the №1 groom Juvančič?!] + [Katapina? ~]; the episcopal office of Črnomelj Apr 19 or Jul 19, 1913 no. 239 [~] + a certificate of the VINICA parish office Apr 21, 1913 no. 26 [another parish!] + the marriage confirmation of the ROYAL DISTRICT COURT OF BELA KRAJINA Jul 22, 1913 no. 2165 [~]; priest [an unclear signature]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "91",
+    bookSignature: "04455",
+    year: 1913,
+    scan: 153,
+    page: 152,
+    whatSi: "poroka (27. 7. 1913, vpis 10 — NEDELJA) — nevesta Alojzija MLEC [~ korpus-branjа 'Muc' — korpus piše h91-družino kot 'Muc' [~], poročna knjiga 1913 kot 'Mlec' ×3 — ista družina (Janez × Ana Kure h91)!], ¼ zemlj. hči, 20, samska (mladoletna!), GRIBLJE 91 (★★ KORPUS-KRST: rojena 9. 5. 1893 h91 — 'oče Janez Novak?[~] (=Mlec!) × Ana Kure' [korpus 1893!] → starost 20 ✓; 2. poročni dokaz h91 [1. = 1909 №? — korpus-hiša od P119!]) × Janko VRANEŠIČ, zemljak [~ čolnar?], 20, samski (mladoletnik!), GRIBLJE 76 (1. poročni dokaz h76 — NOVA p80-hiša!); ★★★ INTRA-GRIBLJE h91 × h76 = 5. intra-vasični par linije + ★★ VSEBOVANA POROKA: hčer Vilhelmina krščena 9. 9. 1913 h76 = rojena 7 tednov po poroki (nevra sta bila noseča ~2 meseca — obe mladoletni!); ★ KORPUS-1913 [~ VERIF]: krst hčere piše očeta 'Janez Kramec? [~ Kranec] šoždar?' ≠ poročni 'Janko Vranešič' — zmeden podpis istega para?; starši neveste: Janez Mlec [korpus ~ 'Muc'] ¼ zemljak × Ana Kure [korpus!]; starši ženina: [Kafija?/Jožef? ~] Vranešič posestnik × Katarina Urbas [~ Vrbas]; priči: Martin Jurajevič [~] + [Katapina? ~]; listine: škofni urad Črnomelj št. 239 [~] + proglaš polnoletnosti neveste — sodišče Črnomelj 26/6. 1913 + zvestilni list žup. urada Vinica št. 26 [drugo-župnijski!] + potrditev kr. kotarskega sodišča Bela Krajina št. 2165; duhovnik [nejasen podpis]",
+    whatEn: "marriage (Jul 27, 1913, entry 10 — SUNDAY) — the bride Alojzija MLEC [~ the corpus reading 'Muc' — the corpus writes the h91 family as 'Muc' [~], the 1913 marriage book as 'Mlec' ×3 — the same family (Janez × Ana Kure of h91)!], a quarter farmer's daughter, 20, single (a minor!), GRIBLJE 91 (★★ a CORPUS BAPTISM: born May 9, 1893 at h91 — 'the father Janez Novak?[~] (=Mlec!) × Ana Kure' [the 1893 corpus!] → the age 20 ✓; the 2nd marriage evidence of h91 [the 1st = a 1909 corpus-house since P119!]) × Janko VRANEŠIČ, a farmer [~ a boatman?], 20, single (a minor!), GRIBLJE 76 (the 1st marriage evidence of h76 — a NEW p80 house!); ★★★ the INTRA-GRIBLJE h91 × h76 = the 5th intra-village couple of the line + ★★ A SHOTGUN WEDDING: the daughter Vilhelmina baptized Sep 9, 1913 at h76 = born 7 weeks after the wedding (the couple ~2 months pregnant — both minors!); ★ the 1913 CORPUS [~ VERIF]: the daughter's baptism writes the father as 'Janez Kramec? [~ Kranec]?' ≠ the marriage 'Janko Vranešič' — a confused signature of the same couple?; the bride's parents: Janez Mlec [the corpus ~ 'Muc'] ¼ a farmer × Ana Kure [the corpus!]; the groom's parents: [Kafija?/Jožef? ~] Vranešič a farmer × Katarina Urbas [~ Vrbas]; the witnesses: Martin Jurajevič [~] + [Katapina? ~]; the documents: the episcopal office of Črnomelj no. 239 [~] + the bride's majority declaration — the Črnomelj court Jun 26, 1913 + a certificate of the Vinica parish office no. 26 [another parish!] + the confirmation of the royal district court of Bela Krajina no. 2165; priest [an unclear signature]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "35",
+    bookSignature: "04455",
+    year: 1913,
+    scan: 153,
+    page: 152,
+    whatSi: "poroka (24. 8. 1913 [~ VERIF: STRIP 'avgust' vs row 'Sept. 24.' — NED-kader + 4-tedenski ritem po №10 (27.7.) govorita za avgust], vpis 11 — NEDELJA) — ženin Rajmund ČEVELJAK [~ 'Čeh' — 1. ime RAJMUND v liniji (latinsko!); priimek ČEVELJAK 95 % zoom [~ morda poklic 'čeveljar'?!]; NOV PRIIMEK ~], [zemljak? ~], 29, samski [~], GORIŠICE 35 (★★★ 'GORIŠICE' = GENETSKA-VAS za GRIBLJE — 4. pojav! [1910 + 1911 + 1912 'Giriči/Girišice' + 1913 'Gorišice' — korpus-hiša h35!]; 1. poročni dokaz h35 v 20. stoletju [1895 'Giriči' 1. pojav? ~]) × Marijeta REŽEK [~ branjа 'Ržek/Rezek'; NOV PRIIMEK], [?], 39, [samska? ~ VDOVA?! — smrtni list v dokumentih!], KRAJNJI VRH 25 [~ 'Krajni vrh' — vas nad Adlešiči]; ★ par 29+39 = 2. najstarejši par leta + verjetna VDOVA (smrtni list = 1. vdovski dokument 1913 [~ VERIF]); starši ženina: [Anton? ~ 'Antonija Gril, hranopotna oseba'? — skoraj neberljivo! NAJMANJ BERLJIV VPIS LETA] × [Matko Reček? ~ — REŽEK?! morda sorodnica neveste [~]]; starši neveste: [skoraj neberljivi — 'Ana Vrvoda?/Nikolaj Judnič? ~ — ŽUNIČ?!']; priči: [nejasni] ¼ zemljaka; domovnica [~ 'Št. Hrilošof, okraj Lele' — neberljivo!] + krstni, SMRTNI in birmanski list za nevesto + proglaš potrditev kr. kotarskega sodišča Bela Krajina [~ br. 7/65]; duhovnik [~ 'P. Mikeln Polak, Čop.' — delegirani duhovnik?]",
+    whatEn: "marriage (Aug 24, 1913 [~ VERIF: the STRIP 'avgust' vs the row 'Sept 24' — the SUNDAY cadence + the 4-week rhythm after №10 (Jul 27) favor August], entry 11 — SUNDAY) — the groom Rajmund ČEVELJAK [~ 'Čeh' — the 1st name RAJMUND of the line (Latin!); the surname ČEVELJAK a 95 % zoom [~ perhaps the occupation 'a cobbler'?!]; a NEW SURNAME ~], [a farmer? ~], 29, single [~], GORIŠICE 35 (★★★ 'GORIŠICE' = a GENETIC NAME for GRIBLJE — the 4th appearance! [1910 + 1911 + 1912 'Giriči/Girišice' + 1913 'Gorišice' — the corpus house h35!]; the 1st marriage evidence of h35 in the 20th century) × Marijeta REŽEK [~ the readings 'Ržek/Rezek'; a NEW SURNAME], [?], 39, [single? ~ a WIDOW?! — a death certificate among the documents!], KRAJNJI VRH 25 [~ 'Krajni vrh' — a village above Adlešiči]; ★ the couple 29+39 = the 2nd oldest of the year + a probable WIDOW (the death certificate = the 1st widow evidence of 1913 [~ VERIF]); the groom's parents: [Anton? ~ 'Antonija Gril, a pauper'? — almost illegible! THE LEAST LEGIBLE ENTRY OF THE YEAR] × [Matko Reček? ~ — REŽEK?! perhaps the bride's relative [~]]; the bride's parents: [almost illegible — 'Ana Vrvoda?/Nikolaj Judnič? ~ — ŽUNIČ?!']; the witnesses: [unclear] a quarter farmers; a residence certificate [~ 'Št. Hrilošof, okraj Lele' — illegible!] + the baptismal, DEATH and confirmation certificates of the bride + a declaration of the royal district court of Bela Krajina [~ no. 7/65]; priest [~ 'P. Mikeln Polak, Čop.' — a delegated priest?]",
+    status: "DOCUMENTED",
+  },
+
 
   // ——— P122 razširitev: POROČNA KNJIGA 04455 — polno leto 1893 (skeni 87–90 ==
   // strani 86–89; VELIKA GLAVA »Traunungs=Buch« + rokopisno »1893« na s87 =

@@ -64,7 +64,7 @@ GRIBLJE_HOUSES = ["6", "8", "13", "31", "86"]
 GRIBLJE_BLOCKS = 5              # №1 2 (INTRA!) + №14 2 + №17 1
 VITALS_TOTAL = 670              # 659 + 5
 BLOKI_04455 = 147               # 142 + 5
-SIDRA_TOTAL = 151               # 135 + 5 (1910:5)
+SIDRA_TOTAL = 157               # 135 + 5 (1910:5)
 RAUY_COUNT = 16                 # 16+/19 blokov ne — 17–18/19 vpisov (№9 Danijel!)
 EXPECTED_MONDAYS = 13           # + 6 nedelj = 100% vikend!
 
@@ -163,11 +163,11 @@ def main():
     # ---------- I6: qa-parish.ts ----------
     qa = open(QA_TS).read()
     check("I6a qa-p139 id", "qa-p139-parish-marriage-1910" in qa)
-    n664 = qa.count("HOUSE_VITALS.length !== 675")
+    n664 = qa.count("HOUSE_VITALS.length !== 681")
     check("I6b vitals pini 664", n664 >= 54, str(n664))
-    n147 = qa.count(".length !== 158")
+    n147 = qa.count(".length !== 164")
     check("I6c bloki pini 147", n147 >= 25, str(n147))
-    check("I6d sidra 140 + 1910:5", "poročna sidra ≠ 151" in qa and "h.year === 1910).length !== 5" in qa)
+    check("I6d sidra 140 + 1910:5", "poročna sidra ≠ 157" in qa and "h.year === 1910).length !== 5" in qa)
     check("I6e hiše 1910 pin", '"6,8,13,31,86"' in qa)
     check("I6f ostanki 659/142/135", "!== 659" not in qa and ".length !== 142" not in qa and "sidra ≠ 135" not in qa, "stale pini!")
     check("I6g p80 hiše 68 (+h86!)", "p80Houses.size !== 70" in qa, "")
