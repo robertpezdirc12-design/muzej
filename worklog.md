@@ -6106,3 +6106,33 @@ Stage Summary:
 - METODA-PREBOJ: GRID-TEHNIKA + korpus-forenzika + multi-render — 7 popravkov 2. kroga dokumentiranih (honesty!).
 - ZGODOVINSKI DOLG ZMANJŠAN: p80 + p105–p113 + p114 SANIRANI (30 → 12 rdečih; ostaja samo p85–p96 I10 era-kalibracija repeat/new — kandidat za ločeno nalogo z faznimi snapshoti).
 - NASLEDNJI KORAK: P140 — poročna 1911 (№1–7 na s146: 30.1.–19.6. 1911!; prenesti s147+; P140-lead iz P139 meje).
+
+---
+Task ID: P145
+Agent: Z.ai Code (analiza + transkripcija + verifikacija)
+Task: P145 — poročna knjiga 04455, polno leto 1916 (issue #18; nadaljevanje poročne linije po P144; uporabnikovo "najprej dokončajmo" — zbiranje podatkov pred urejanjem)
+
+Work Log:
+- branje delovnega stanja: P144 zaključen 27.10. (leta 1886–1915); 1916 še nezačet — potrjeno z inventory (brez p145 skripte/dokaza) + P144-lead
+- prenos skenov 157–161 iz Matricula Online (inventar 192 slik ✓; knjiga 04455)
+- 3× overview VLM-branja (s158–s160) → struktura: s158 = letna glava »1916« + №1–3; s159 = №4 + PRAZEN pas + DIAGONALA (obe strani!); s160 = letna glava »1917« + reset štetja — meja 1916/1917 DOKAZANA
+- 8× full-row L+R branj (2× Lanczos izrezi) + 14× hiper-zoom (datumi ×2, hišne št. ×3, imena/statusi ×5, listine ×2, podpis ×2) + agent-oči-arbitraža vsak vpis
+- korpus-forenzika: križ proti 04105-krstim (parish.ts) — TROJNA sinhronizacija №2 (datum 27.2.1916 + roj. 7.5.1893 + starša 'Kuhar?/Kuklar? × Katarina Klobučar' h29!), Schweiger ×5 potrjen, Jakša ×11, Klobučar ×135, Vrščaj ×2, Plut ×1, Vardjan ×4, Žarkovič ×2; 8 novih priimkov
+- kalibracija cifer: 10× mega-zoom primerjave ("2" vzorec iz '22let' proti "3" iz '30/7') — nevestina hiša = h27 (NE h34/h37!); hiša ženina №1 = 241 (črtica-1 — 1. trimestna št. linije!)
+- evidence JSON research/issue17/parish-marriage-1916.json (4 vpisa + 10 crossChecks + 13 anomalij + honesty 12) + notes
+- skripta scripts/p145_parish_marriage_1916.py (invariante I1–I12 po vzorcu p144 + --live)
+- parish.ts +1 blok 04455/1916 (h37 × h27 INTRA — P145-sekcija z popolnim dokaznim komentarjem)
+- qa-parish.ts: qa-p145 sekcija (pini [37,27] + TROJNA/MLADOLETNA/INTRA/PRAVKA-POPRAVKA/PERDINČEVA/KUHAR?/KUKLAR?) + anchors +1916:1 + p90-h37 dovoljenje 04455/1916
+- pin-kaskada 686→687 [×59] / 169→170 [×30] / 162→163 [sidra + anchors] v qa-parish.ts + 34 skriptah (p140–p144 tekoči I6 + p117–p125 BLOCKS_04455_TS + p115 anchors-lista 162→163 + p80 len(vitals) + p144 I6f ostanki)
+- README: header po P145 + P145 bullet + korpus-števci 687/170/163 + P146-lead
+- popravki med verifikacijo: p115 anchors-lista (162→163 + ["1916"]), BLOCKS_04455_TS ×9, qa-p90 dovoljenje h37-1916, qa-p145 case-fix "ustno"
+- verifikacija: p145 --check 61/61 + --live 63/63 · p144 61/61 · p143 64/64 · veriga p115–p145 31 skript: 0 NOVIH failov proti HEAD-baseline (zgodovinske zastavice nespremenjene!) · runQA **146/146 ok:True** · tsc 0 · lint 0 (3 znane BABEL)
+
+Stage Summary:
+- 1916 = 4 vpisov = NAJŠIBKEJŠE LETO LINIJE (1915: 6 → 4 — WWI vrhunec!); vrzel №3→№4 = 5 mesecev (fronta!)
+- ★★★ №1 VOJAK 5. ARMADE — SOŠKA FRONTA (Ermächtigungsschein des Feldsup. d. V-Armee; Rinče na Goriškem 241 [~] = najbolj oddaljen dom ~180 km!; 1. ČETRTEK LINIJE)
+- ★★★ №2 TROJNA KORPUS-SINHRONIZACIJA STUBLJAR-KUHAR (datum + rojstvo + starša = 3 vezi) + 3 POPRAVKE P144-leada (posestnik ≠ vdovec; 26 ≠ 37; h27 ≠ h34 — Perdinčeva hiša, oče hišar = najemniški vzorec!)
+- ★★ 2 MLADOLETNI nevesti (22 + 20) = REKORD; №2 ustno dovoljenje očeta pred pričami (nov režim); №3 oče-ženina PRAZEN + roj. GORJE (2. Gorenjska-žel. mobilnost); №4 7 listin a–g + obč. TALIČVRH [~] neidentificirana + škof. odredba ZA ČAS VOJSKE
+- №3+№4 DVOTERNA hiša h4 Vranoviče; ISTE-HIŠE 1916 = 0 (1. leto z 0 po 1913); duhovnik Valerijan Miklavčič ×4 (3. branje podpira Miklavč-)
+- korpus po P145: 687 vitals · 170 blokov 04455 · 163 sidra · 72 hiš · PT 13; QA 146/146
+- NASLEDNJE: **P146 = poročno leto 1917 = ZAKLJUČEK POROČNE LINIJE 04455** (s160 letna glava »1917« že prenešena; skeni 160–161)

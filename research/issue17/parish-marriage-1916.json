@@ -1,0 +1,228 @@
+{
+ "source": {
+  "book": "04455 (ženitovanske knjige — Trauungsbuch, župnija Podzemelj)",
+  "url": "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04455/",
+  "year": 1916,
+  "scans": "s158 (№1–3) + s159 (№4) == Pag. 157–158; meja 1916/1917: s159-dno = PRAZEN pas + DIAGONALA (obe strani!) + s160 = letna glava »1917« (reset štetja №1!)",
+  "method": "krogi VLM-branj (3× overview s158–s160 + 8× full-row L+R 2× [vsi 4 vpisi!] + 14× hiper-zoom fine [datumi ×2, hišne št. ×3, imena ×2, statusi ×3, listine ×2, podpis]) + agent-oči-arbitraža (vsak vpis prebran direktno s skena!) + korpus-forenzika (04105-krsti 1885–1919 + 04455-poroke 1886–1915 + P81-1825-cenzus) — 1916 = 5. vojno leto (WWI vrhunec)"
+ },
+ "lead": {
+  "claim": "P144-lead: 1916 №1 27.1. Franc Moretič [~] Renče na Goriškem 24 VOJAK r. 1891 × Jozefa Kupančič [~] Gradac 28 (Gorenjska-železniška mobilnost!) + №2 27.2. Marko STUBLJAR GRIBLJE 37 VDOVEC r. 1889 × Frana Kuhar [~] GRIBLJE 34 — INTRA sosednji hiši h37 × h34! + Stubljar = 1825-cenzus 1.0 (P81!) + №3 11.6. Skvarča [~] Vranoviče 4 × Schuweiger [~ Schweiger — korpus 5×!] Vranoviče 31 INTRA — 3 vpisi",
+  "correction": "4 vpisov (№4 6.11. s159 je bil izven P144-radarske meje!); №2 = 3× PRAVKA POPRAVKA (POSESTNIK 26 let — NE 'vdovec 37'!; h27 — NE 34!) + nevesta GRIBLJE 27 (NE 34!) + hišar-hiša = najemniški socialni vzorec + USTNO dovoljenje očeta pred pričami (1. linije!); №1 = hiša 241 [~ 24] + ČETRTEK (nov dan linije!) + VOJAK 5. ARMADE — SOŠKA FRONTA (NE 'Gorenjska-žel. mobilnost' — vojaška mobilnost!); №3 = roj. GORJE (Gorenjska — 2. po 1915 №6!) + oče-ženina PRAZEN + nevesta POSESTRICA; №4 (nov) = OTOVEC [~ 'Otorovec'] 18 + nevesta 20 let MLADOLETNA iz VRANOVIČE 4 (ISTA HIŠA kot №3-ženin!) + 7 listin a–g; 1916 = 4 poroke = NAJŠIBKEJŠE LETO LINIJE (1915: 6 — WWI vrhunec!)"
+ },
+ "entries": [
+  {
+   "row": 1,
+   "date": "27. januar 1916 (četrt)",
+   "scan": 158,
+   "page": 157,
+   "groom": {
+    "name": "Franc Moretič [~ Moretić/Moretik — korpus 0 — NOV priimek!]",
+    "place": "RINČE NA GORIŠKEM 241 [~ 24 — P144-lead; VLM-row '241'; hiper-zoom: jasna črtica 1 = 241 — 1. TRIMESTNA hišna št. linije!; Renče = Goriška (Soška fronta regija)]",
+    "stand": "voj. rezervist v vojski [pisarjevo 'voj. rezerv. v vojski' — VOJAK — WWI!]",
+    "age": 24,
+    "status": "ženin (vojaški rezervist v vojski!)",
+    "birth": "12. V. 1891 [~ 12/5 — VLM ✓; 24 ✓ aritmetika (poroka pred 25. rojstnim dnem ✓)]"
+   },
+   "bride": {
+    "name": "Jozefa Kupanič [~ Kupančič/Kupanec — korpus 0 — NOV priimek!]",
+    "place": "GRADAC 28",
+    "stand": "posestnica samostne hiše [~ 'pos. samostna hiši' — VERIF]",
+    "age": 24,
+    "status": "ženina",
+    "birth": "8. III. 1891 [24 ✓ aritmetika (poroka pred 25. rojstnim dnem ✓)]"
+   },
+   "groomParents": "+Mihael Moretič, zidar (†) × Franciška roj. Fajt [NOV priimek!], oba katol.",
+   "brideParents": "+Jurij Kupanič, posest. (†) × Ana roj. Vardjan [korpus ×4!], oba katoliška",
+   "witnesses": "Jakob Štepanič, kat. — posest. in ŽUPAN (župan-priča!) + Ignacij Potočnik, kat. — posest. in gostilničar",
+   "witnessStatus": "posestnik-in-župan + posestnik-in-gostilničar (2 poklica priča — gostilničar 2. po 1914!)",
+   "urkunden": "1) ženinov roj. list 23. I. 1916; 2) Testimonium st. lib. ženima 23. I. 1916; 3) ★★ Ermächtigungsschein des Feldsup. d. V-Armee 25. I. 1916 (2. VOJAŠKA listina linije po 1915 №4 Verkündmachtigungsschein! — Feldsuperiorat d. 5. Armee = SOŠKA FRONTA!); 4) spregled 2 oklicov c. kr. okr. glavarstva Črnomelj 22. I. 1916 (glavarstvo 5.!); 5) spričevalo 2 oklicov knj. šk. ordinarijat Ljubljana 22. I. 1916 (ordinariat 4.!); 6) Pregledko Visp. des Feld-Super. d. V. Armee 22. I. 1916 [~ — VERIF]; 7) razodetna prisega sodž. 27. I. 1916 (na poročni dan!)",
+   "priest": "P. Valerijan Miklavčič [~ Mikčak/Miklavžič — korpus-1915 ×6; branje-1916 podpira Miklavč-!], župnik",
+   "anomalies": [
+    "VOJAK 5. armade (SOŠKA FRONTA!) — najbolj oddaljen ženinov dom linije (Renče ~180 km!)",
+    "ČETRTEK = NOV dan v tednu linije (prej NED/PON/TOR — 1912 №1 Dunaj-TOR, 1914 №7 + 1915 №4 TOR!)",
+    "hiša 241 = 1. TRIMESTNA hišna št. linije [~]",
+    "7 listin = bogat vojaški režim"
+   ]
+  },
+  {
+   "row": 2,
+   "date": "27. februar 1916 (nedelja)",
+   "scan": 158,
+   "page": 157,
+   "groom": {
+    "name": "Marko Stubljar [~ Stublar — korpus-1918/19: 'Stublar? [~ Stubljar]'; P144-lead 'VDOVEC' = PRAVKA POPRAVKA → POSESTNIK!]",
+    "place": "GRIBLJE 37 (1825-cenzus 1.0 — P81 Stubler @30!)",
+    "stand": "posestnik",
+    "age": 26,
+    "status": "ženin",
+    "birth": "30. VII. 1889 [26 ✓ aritmetika ✓✓]"
+   },
+   "bride": {
+    "name": "Frana Kuhar [~ Ivana po korpusu-krsti 1918/19 ('mati Ivana roj. Kukar') — 2 roki!; Kuhar/Kukar — K/H-linija (korpus 'Kuhar?/Kuklar? [~]')]",
+    "place": "GRIBLJE 27 [P144-lead '34' = PRAVKA POPRAVKA; hiper-zoom: jasna 2 (≈ '22let' vzorec) + 7; h27 = PERDINČEVA hiša (korpus v3/v11 Marcus Perdinec ¼)!]",
+    "stand": "hišarjeva hči samostne hiše ['hišarja sam. hiši' — oče HIŠAR = najemnik/gospodar na tuji hiši!]",
+    "age": 22,
+    "status": "ženina — MLADOLETNA (22 < 24 — avstrijska polnoletnost!)",
+    "birth": "7. V. 1893 [korpus-1918/19: 7. 5. 1893 EXACT MATCH ✓✓; 22 ✓ aritmetika (poroka pred 23. rojstnim dnem ✓)]"
+   },
+   "groomParents": "+Marko Stubljar, posest. († — ISTO IME oče-sin Marko!) × Ana roj. Grabrijan [korpus ×40!], oba katol.",
+   "brideParents": "Fran Kuhar [~ Kukar], hišar × Katarina roj. Klobučar [korpus ×135! = KORPUS-PAR 'Kuhar?/Kuklar? [~] ½ zemljak × Katarina Klobučar [~]' iz krst h29 1888–1892 — DVOTERNA SINHRONIZACIJA starša!]",
+   "witnesses": "Peter Kohanič [~ Kohanić/Kohanec — NOV priimek!] + Janez Grabrijan (ženinova mati-rodbina!), oba posest. kat.",
+   "witnessStatus": "2 posestnika",
+   "urkunden": "ženitovanjska zglašnica županstva Griblje št. 1 z dne 25. 2. 1916 (poroka 2 dni kasneje ✓ — datumska sklada!) + ZA MLADOLETNO NEVESTO ustno dovoljenje očeta pred gorenjima pričama (★ 1. 'ustno dovoljenje očeta pred pričami' linije — prej listine/sodne privolitve!)",
+   "priest": "Val. Miklavčič [~]",
+   "anomalies": [
+    "P144-lead 3 POPRAVKA (posestnik ≠ vdovec; 26 ≠ 37 let; h27 ≠ h34!) — radar-podcenitev",
+    "hišar-oče na PERDINČEVI h27 = najemniški socialni vzorec (1. linije? [~ VERIF])",
+    "USTNO dovoljenje očeta pred pričami = nov privolitveni režim",
+    "oče-sin ISTO IME Marko Stubljar"
+   ]
+  },
+  {
+   "row": 3,
+   "date": "11. junij 1916 (nedelja)",
+   "scan": 158,
+   "page": 157,
+   "groom": {
+    "name": "France Skvarča [~ Skvarča/Skvaria — NOV priimek, korpus 0!]",
+    "place": "VRANOVIČE 4",
+    "stand": "žel. delavec (2. po 1915 №6 Kranjska Gora!)",
+    "age": 27,
+    "status": "ženin",
+    "birth": "30. IX. 1888 [27 ✓ aritmetika ✓✓] — ROJ. GORJE (Gorenjska!): rojstni list žup. Gorje 31. 5. 1916 + zglašnica županstva Gorje 16. 5. 1916!"
+   },
+   "bride": {
+    "name": "Katarina Schweiger [korpus ×5! — P144-lead 'korpus 5×' POTRJEN]",
+    "place": "VRANOVIČE 31",
+    "stand": "mala posestrica [~ mala posestnica — hiper-zoom 'posest-rica' = posestrica]",
+    "age": 34,
+    "status": "ženina (posestrica na h31!)",
+    "birth": "27. II. 1882 [34 ✓ aritmetika ✓✓]"
+   },
+   "groomParents": "mati Jera Skvarča, kajžarka [~ kajžarkja], samostna hiši, kat. — OČE PRAZEN (celica BREZ vpisa — anomalija!)",
+   "brideParents": "+Matija Schweiger, posestnik († — hiper-zoom MATIJA, ne Marija!) × +Katarina roj. Žarkovič (†; korpus ×2), oba katoliška (po statusu posestrica = verjetno pošten oče-drugi [~ VERIF] — nevesta = Katarina Schweiger po poštnem očetu?)",
+   "witnesses": "Jožef Schweiger, posestnik (nevestin sorodnik — ISTI PRIIMEK!) in Lovrenc Štrukelj [NOV priimek!], žel. delavec (ženinov KOLEGA — žel. delavec!), oba kat.",
+   "witnessStatus": "posestnik + žel. delavec (kolega-ženina!)",
+   "urkunden": "1) ženinov rojstni list Gorje 31. 5. 1916 (★ Gorenjska!); 2) ženitovanjska zglašnica županstva Gorje 16. 5. 1916 (★ drugo-župnijska zglašnica); 3) razodetna prisega samiškega [~ samostanskega] stanu storjena z dovoljenjem ordinarijata Ljubljana št. 2422 z dna 8. 6. 1916 (ordinariat 4.!)",
+   "priest": "Valerijan Miklavčič [~]",
+   "anomalies": [
+    "OČE-ŽENINA PRAZEN (celica brez vpisa — nezakonski rod [~] ali †-izpust!) — 2. primer linije (po 1915 №1 nevesta Muc-oče-PRAZEN!)",
+    "roj. GORJE = 2. Gorenjska-žel. mobilnost linije (po 1915 №6!) + 2 drugo-župnijski listini (Gorje ×2!)",
+    "nevesta POSESTRICA (mala posestrica [~]) + oba starša †",
+    "DVOTERNA hiša h4: №3-ženin + №4-nevesta IZ ISTEGA izvora Vranoviče 4!",
+    "priča-žel. delavec = kolega ženina (2. kolega-priča po 1915 №6!)"
+   ]
+  },
+  {
+   "row": 4,
+   "date": "6. november 1916 (ponedeljek)",
+   "scan": 159,
+   "page": 158,
+   "groom": {
+    "name": "Jakob Vrščaj [~ Viščaj; korpus ×2 — botra Marija Vrščaj? h54!]",
+    "place": "OTOVEC 18 [~ 'Otorovec' — pisarjeva oblika; rojstni list (a) iz žup. urada ČRNOMELJ → Otovec (župnija Črnomelj, ob železnici Metlika!) — 1. ovec-izvor ženina!]",
+    "stand": "posestnik — VOJAK ZAČASNO ODPUŠČEN [pisarjevo 'vojak začasno odpuščen' = 2. vojak leta!]",
+    "age": 26,
+    "status": "ženin (vojak — častno/začasno odpuščen!)",
+    "birth": "14. XII. 1889 [26 ✓ aritmetika ✓✓ (poroka 6. 11. — še ni 27. rojstni dan 14. 12. ✓)]"
+   },
+   "bride": {
+    "name": "Ana Plut [korpus ×1 — 'novi priimki' lista (hrvaški); 1. POROČNA javitev!]",
+    "place": "VRANOVIČE 4 (★ ISTA HIŠA kot №3-ŽENIN Skvarča! — hišna veriga v enem letu)",
+    "stand": "pos. hiši [~ posestrica/posestnica hiše — VERIF]",
+    "age": 20,
+    "status": "ženina — MLADOLETNA (20 < 24!)",
+    "birth": "12. XII. 1895 [20 ✓ aritmetika ✓✓ (10 mesecev do 21)]"
+   },
+   "groomParents": "+Jožef Vrščaj, posest. (†) × Marija roj. Jakša [korpus ×11! — M1891 №12 Jakša × Jakša!], oba katol.",
+   "brideParents": "Martin Plut, posest. × Ana roj. Grahek [NOV priimek!], oba katol.",
+   "witnesses": "Jožef Grahek, posest. (nevestin sorodnik — mati-rodbina Grahek!) in Jožef Malnerič [NOV priimek!], posest., oba katoliška",
+   "witnessStatus": "2 posestnika",
+   "urkunden": "a) ženinov krstni list ex anno 1907 št. 369, žup. urad Črnomelj (izdaj 1907!); b) ★ miliški list [~ militar./vojaški list] žene+ženinove št. 321 z dne 26. 10. 1916, žup. urad Črnomelj (vojaška listina žup. urada!); c) oklicni list žup. urada Črn. št. 336 z dne 5. 11. 1916 (1. OKLICNI LIST kot imenovana listina!); d) ženitovanjska zgl. obč. Taličvrh [~ — NEidentificirana občina!] št. 394 z dne 6. 11. 1916 (na poročni dan!); e) spregled 2 oklicov c. kr. okr. glavarstva Črn. št. 22946 z dne 27. 10. 1916; f) ★ od cerkvene strani oklici spregledani v smislu ŠKOF. ODREDBE ZA ČAS VOJSKE (vojni cerkveni režim!); g) ustno privoljenje očeta za ml. nevesto [v prisotnosti gore-jih so-... — izpust VERIF]",
+   "priest": "Valerijan Miklavčič [~]",
+   "anomalies": [
+    "2. MLADOLETNA nevesta leta (№2 22 + №4 20 = REKORD LINIJE!)",
+    "OTOVEC [~ 'Otorovec'] — 1. ovec-izvor ženina + obč. TALIČVRH [~] NEidentificirana oblast!",
+    "miliški list št. 321 = vojaška listina (žene+ženinove!)",
+    "7 listin a–g = najbogatejši vojni režim (škof. odredba ZA ČAS VOJSKE!)",
+    "DVOTERNA hiša h4 Vranoviče (№3-ženin + №4-nevesta!)"
+   ]
+  }
+ ],
+ "excluded": [],
+ "stats": {
+  "entries": 4,
+  "gribljeMarriages": 1,
+  "gribljeRows": [
+   2
+  ],
+  "gribljeHouses": [
+   "37",
+   "27"
+  ],
+  "gribljeIntra": 1,
+  "gribljeBlocks": 1,
+  "sameVillageRows": [
+   3,
+   4
+  ],
+  "sameVillageCount": 2,
+  "sameHouseRows": [],
+  "sameHouseCount": 0,
+  "mondays": 1,
+  "sundays": 2,
+  "thursdays": 1,
+  "weekendPct": "3/4 = 75 % (2 NED + 1 PON + 1 ČET №1 27. 1. — 1. ČETRTEK LINIJE — vojaški termin!)",
+  "lentGap": "NI porok v postu — 2. leto zapored (vojna!; letnica 27. 1. → 6. 11.; №1 PRED postom)",
+  "warGap": "WWI VRHUNEC: 4 poroke = NAJŠIBKEJŠE LETO LINIJE (1915: 6 — padec na 4!); 2 VOJAKA (№1 voj. rezervist v vojski — 5. armada SOŠKA FRONTA + №4 vojak začasno odpuščen!) + Ermächtigungsschein Feldsup. d. 5. Armee + miliški list št. 321 + škof. odredba ZA ČAS VOJSKE; vrzel №3→№4 (11. 6. → 6. 11.) = 5 mesecev (fronta!)",
+  "yearHeading": "DA — »1916« na s158 (P144-pričakovano!) + reset štetja №1 27. 1.; meja 1916/1917: s159-dno = PRAZEN pas + DIAGONALA (obe strani!) + s160 = letna glava »1917« + reset №1 (5. zaporedna letna glava)",
+  "vitalsTotal": 687,
+  "blocks04455": 170,
+  "sidraTotal": 163,
+  "p80Houses": 72,
+  "newHouses": [],
+  "unnumbered": 0
+ },
+ "crossChecks": [
+  "№2 POROKA V KORPUSU-KRSTI 1918/19: 'mati Ivana roj. Kukar (7. 5. 1893; por. 27. 2. 1916)' — EXACT datum poroke + EXACT roj. datum = DVOTERNA KORPUS-SINHRONIZACIJA!",
+  "№2 starši neveste = KORPUS-PAR iz krst h29 1888–1892: 'Kuhar?/Kuklar? [~] ½ zemljak × Katarina Klobučar [~]' — ISTI PAR (oče + mati) = TROJNA SINHRONIZACIJA (datum + rojstvo + starša!)",
+  "№2 Stubljar h37 = 1825-cenzus 1.0 (P81: Stubler @30) — znana hiša",
+  "№3 Schweiger korpus ×5 (P144-lead 'korpus 5×' POTRJEN!): M1890 №2 Schweiger × Jakša + učiteljska družina h90 (Kopitar × Schweiger 1890+1892)",
+  "№4 mati roj. Jakša — korpus ×11 (M1891 №12 Jakša × Jakša — največja Jakša-gostota!)",
+  "№4 Vrščaj korpus ×2 (botra Marija Vrščaj? h54 — P125)",
+  "№4 Plut korpus ×1 ('novi priimki' lista; hrvaški) — 1. POROČNA javitev priimka",
+  "№1 mati neveste roj. Vardjan — korpus ×4 (h24-veza [~])",
+  "№3 mati neveste roj. Žarkovič — korpus ×2 (Georg Žarkovič Hübler × Ana Škalič [~])",
+  "duhovnik Valerijan Miklavčič = ISTI podpis na vseh 6 vpisih 1915 (korpus: 'P. Valerian Mikčak [~ Miklavžič/Miklavič — VERIF]') — branje-1916 'Miklavčič' = 3. neodvisno branje, podpira Miklavč-varianto! + župan-priča Jakob Štepanič [~ korpus]"
+ ],
+ "anomalies": [
+  "№1 hiša 241 = 1. TRIMESTNA hišna št. linije 1886–1916 (Renče na Goriškem 241 [~ 24 — P144-lead; VLM-row 241; hiper-zoom črtica-1])",
+  "№1 ČETRTEK = NOV dan v tednu linije (prej NED/PON/TOR — 1. četrti termin; vojaški dopust!)",
+  "№1 ženin VOJAK 5. ARMade — SOŠKA FRONTA (Ermächtigungsschein des Feldsup. d. V-Armee!) — Renče na Goriškem = najbolj oddaljen ženinov dom linije (~180 km, Goriška!)",
+  "№2 P144-lead 3 POPRAVKA: POSESTNIK (NE 'vdovec') + 26 let (NE '37') + h27 (NE '34') — P144-radar-podcenitev (fine-zoom rešitev!)",
+  "№2 oče HIŠAR na h27 (PERDINČEVA hiša — korpus v3/v11 Marcus Perdinec ¼!) = najemniški socialni vzorec (1. linije? [~ VERIF])",
+  "№2 USTNO dovoljenje očeta PRED GORENJIMA PRIČAMA — 1. tak privolitveni režim linije (prej listine/sodne privolitve!)",
+  "№3 OČE-ŽENINA PRAZEN (celica brez vpisa — nezakonski rod [~] ali †-izpust) — 2. primer oče-PRAZEN linije (po 1915 №1)",
+  "№3 ROJ. GORJE (Gorenjska) — rojstni list + zglašnica iz Gorje = 2. Gorenjska-žel. mobilnost linije (po 1915 №6 Kranjska Gora!)",
+  "№3 nevesta POSESTRICA ('mala posestrica' [~ mala posestnica]) + oba starša † — 1. posestrica-status poroke linije [~ VERIF]",
+  "№4 OTOVEC [~ 'Otorovec'] — 1. ženin iz Otovec (žup. Črnomelj!) + obč. TALIČVRH [~] = NEidentificirana oblast linije!",
+  "№2+№4 DVE MLADOLETNI nevesti v enem letu (22 + 20) = REKORD LINIJE (prej maks 1/leto!)",
+  "№3+№4 DVOTERNA hiša h4 VRANOVIČE (№3-ženin izvor + №4-nevestin izvor!) — hišna veriga v enem letu (po 1914 №4+№5 mati-sin!)",
+  "WWI-REŽIM: miliški list št. 321 + škof. odredba ZA ČAS VOJSKE + 2 vojaka (№1 v vojski + №4 odpuščen) + Ermächtigungsschein 5. armade = najgloblja vojaška vpletenost leta"
+ ],
+ "honesty": [
+  "№1 hiša 241 vs 24 (lead) vs 29 (ov) — hiper-zoom '241' (jasna črtica-1) ampak [~ VERIF fine]",
+  "№1 roj. mesec 12/5 [~ 12/6 — edge-crop; 5 iz '12/5'-konteksta]",
+  "№1 listina 6) 'Pregledko Visp. des Feld-Super. d. V. Armee' [~ — nemško-slovenska mešanica, VERIF]",
+  "№2 nevesta ime FRANA [~ IVANA po korpusu-krsti 1918/19 ('mati Ivana roj. Kukar') — 2 roki; krstna knjiga piše drugače kot poročna!",
+  "№2 priimek KUHAR [~ KUKAR — korpus-1918/19 'Kukar' ×2 + 'Kuhar?/Kuklar? [~]' — K/H-linija; življenjska varianta priimka]",
+  "№2 priča Peter Kohanič [~ Kohanić/Kohanec — VERIF]",
+  "№3 status 'mala posestrica' [~ 'mala posestnica' — razpored 'posest-rica']",
+  "№3 mati 'kajžarka' [~ 'kajžarkja' — j-glide]",
+  "№4 kraj OTOVEC [~ 'Otorovec' — pisarjeva oblika; podpora: rojstni list iz žup. Črnomelj → Otovec]",
+  "№4 obč. TALIČVRH [? — NEidentificirana občina — VERIF proti GURS-občinam 1916!]",
+  "№4 listina b) 'miliški list' [~ militar./vojaški list — VERIF]",
+  "duhovnik Miklavčič [~ Mikčak/Miklavžič — 3. branje podpira Miklavč-; človeška paleografija ostaja VERIF (issue #12)]"
+ ]
+}

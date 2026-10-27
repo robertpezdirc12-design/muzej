@@ -2678,6 +2678,45 @@ export const HOUSE_VITALS: HouseVital[] = [
     status: "DOCUMENTED",
   },
 
+  // ——— P145 razširitev: POROČNA KNJIGA 04455 — polno leto 1916 (skeni
+  // s158 + s159 == Pag. 157–158; s158 = letna glava »1916« [P144-pričakovano!];
+  // meja 1916/1917: s159-dno = PRAZEN pas + DIAGONALA (obe strani!) + s160 =
+  // letna glava »1917« + reset štetja №1!); 4 vpisov: 1886:7 → … → 1914:7 →
+  // 1915:6 → 1916:4 — WWI VRHUNEC = NAJŠIBKEJŠE LETO LINIJE (padec 6 → 4!);
+  // 1 ČET №1 (1. četrtek linije — vojaški termin!) + 2 NED + 1 PON — vpisi z
+  // Griblji (1 poroka: №2 h37 × h27 INTRA!):
+  // NOVELE: ★★★ №1 VOJAK 5. ARMade — SOŠKA FRONTA (Franc Moretič, voj.
+  // rezervist v vojski, Rinče na Goriškem 241 [~ 24] — najbolj oddaljen dom
+  // linije ~180 km! + Ermächtigungsschein des Feldsup. d. V-Armee 25. I. 1916
+  // = 2. vojaška listina linije po 1915 №4!) + ★★★ №2 TROJNA
+  // KORPUS-SINHRONIZACIJA STUBLJAR-KUHAR (poroka 27. 2. 1916 EXACT v
+  // korpusu-krsti 1918/19 'mati Ivana roj. Kukar (7. 5. 1893; por. 27. 2.
+  // 1916)' + roj. 7. 5. 1893 EXACT + starša neveste = korpus-par 'Kuhar?/
+  // Kuklar? [~] ½ zemljak × Katarina Klobučar [~]' iz krst h29 1888–1892!) +
+  // ★★ №2 3 POPRAVKE P144-leada (POSESTNIK ne vdovec! + 26 let ne 37! + h27
+  // ne 34! = PERDINČEVA hiša — oče HIŠAR = najemnik = nov socialni vzorec!) +
+  // ★★ №2+№4 DVE MLADOLETNI nevesti (22 + 20) = REKORD LINIJE + №2 ustno
+  // dovoljenje očeta pred gorenjima pričama (1. privolitveni režim!) + ★★ №3
+  // OČE-ŽENINA PRAZEN (2. primer po 1915 №1!) + nevesta POSESTRICA [~] + roj.
+  // GORJE (2. Gorenjska-žel. mobilnost po 1915 №6!) + ★★ №4 7 listin a–g
+  // (miliški list št. 321 + škof. odredba ZA ČAS VOJSKE + obč. TALIČVRH [~]
+  // NEidentificirana!) + ★★ №3+№4 DVOTERNA hiša h4 VRANOVIČE (hišna veriga!) +
+  // ISTE-HIŠE 1916 = 0 (1. leto z 0 po 1913!) + duhovnik Valerijan Miklavčič
+  // ×4 (3. branje podpira korpus-Miklavč-!) + ~8 NOVIH PRIIMKOV (Moretič ·
+  // Fajt · Kupanič [~] · Skvarča · Štrukelj · Grahek · Malnerič · Kohanič [~])
+  // Dokaz: research/issue17/parish-marriage-1916.json; verifikator:
+  // scripts/p145_parish_marriage_1916.py --check (I1–I12).
+  {
+    houseNo: "37",
+    bookSignature: "04455",
+    year: 1916,
+    scan: 158,
+    page: 157,
+    whatSi: "poroka (27. 2. 1916, vpis 2 — NEDELJA; korpus-krsti 1918/19: 'por. 27. 2. 1916' EXACT!) — ženin Marko STUBLJAR [~ Stublar — korpus-1918/19: 'Stublar? [~ Stubljar]'], posestnik [P144-lead 'vdovec 37 let' = PRAVKA POPRAVKA!], 26 [r. 30. VII. 1889 — 26 ✓ aritmetika], ženin, GRIBLJE 37 (1825-cenzus 1.0 — P81 Stubler @30; oče +Marko Stubljar posest. † — ISTO IME oče-sin! × mati Ana roj. Grabrijan [korpus ×40!]) × Frana KUHAR [~ Ivana po korpusu-krsti 1918/19 ('mati Ivana roj. Kukar') — 2 roki!; Kuhar/Kukar — K/H-linija], hišarjeva hči samostne hiše, 22 [r. 7. V. 1893 — korpus EXACT ✓✓; 22 ✓], MLADOLETNA ženina (22 < 24 — avstrijska polnoletnost!), GRIBLJE 27 [P144-lead '34' = PRAVKA POPRAVKA!; h27 = PERDINČEVA hiša (korpus v3/v11 Marcus Perdinec ¼ × Margareth Klepec) — oče Fran Kuhar [~ Kukar] HIŠAR = najemnik/gospodar na tuji hiši = NOV socialni vzorec linije! × mati Katarina roj. Klobučar [korpus ×135! = korpus-par 'Kuhar?/Kuklar? [~] × Katarina Klobučar [~]' iz krst h29 1888–1892 — TROJNA SINHRONIZACIJA!]); ★ INTRA-GRIBLJE (h37 × h27 — edini Griblje-vpis leta: WWI VRHUNEC — 4 poroke = najšibkejše leto linije 1915: 6 → 4!); priči: Peter Kohanič [~ Kohanić/Kohanec — nov priimek!] + Janez Grabrijan (ženinova mati-rodbina!), oba posest. kat.; listine: ženitovanjska zglašnica županstva Griblje št. 1 z dne 25. 2. 1916 (poroka 2 dni kasneje ✓) + ZA MLADOLETNO NEVESTO ustno dovoljenje očeta pred gorenjima pričama (★ 1. 'ustno dovoljenje očeta pred pričami' linije — prej listine/sodne privolitve!); duhovnik Val. Miklavčič [~ Mikčak/Miklavžič — 3. branje!]",
+    whatEn: "marriage (Feb 27, 1916, entry 2 — SUNDAY; the 1918/19 baptism corpus: 'm. Feb 27, 1916' EXACT!) — groom Marko STUBLJAR [~ Stublar — the 1918/19 corpus: 'Stublar? [~ Stubljar]'], a landowner [the P144 lead 'a 37-year-old widower' = THE CORRECTED READING!], 26 [b. Jul 30, 1889 — 26 ✓ arithmetic], single, GRIBLJE 37 (the 1825 census 1.0 — P81 Stubler @30; father +Marko Stubljar landowner † — THE SAME NAME father-son! × mother Ana née Grabrijan [the corpus ×40!]) × Frana KUHAR [~ Ivana per the 1918/19 baptism corpus ('the mother Ivana née Kukar') — 2 hands!; Kuhar/Kukar — the K/H line], a house-keeper's daughter of an own house, 22 [b. May 7, 1893 — the corpus EXACT ✓✓; 22 ✓], a MINOR bride (22 < 24 — the Austrian majority!), GRIBLJE 27 [the P144 lead '34' = THE CORRECTED READING!; h27 = the PERDINEC house (the corpus v3/v11 Marcus Perdinec ¼ × Margareth Klepec) — the father Fran Kuhar [~ Kukar] a HOUSE-Keeper = a tenant on someone else's house = a NEW social pattern of the line! × mother Katarina née Klobučar [the corpus ×135! = the corpus couple 'Kuhar?/Kuklar? [~] × Katarina Klobučar [~]' from the h29 baptisms 1888–1892 — a TRIPLE SYNCHRONIZATION!]); ★ an INTRA-GRIBLJE marriage (h37 × h27 — the only Griblje entry of the year: THE WWI PEAK — 4 marriages = the weakest year of the line 1915: 6 → 4!); the witnesses: Peter Kohanič [~ Kohanić/Kohanec — a new surname!] + Janez Grabrijan (the groom's mother-kin!), both landowners Catholic; the documents: the marriage banns of the Griblje municipality no. 1 of Feb 25, 1916 (the marriage 2 days later ✓) + FOR THE MINOR BRIDE the father's oral consent before the two witnesses (★ the 1st 'oral father's consent before witnesses' of the line — before: documents/court consents!); priest Val. Miklavčič [~ Mikčak/Miklavžič — the 3rd reading!]",
+    status: "DOCUMENTED",
+  },
+
   // ——— P122 razširitev: POROČNA KNJIGA 04455 — polno leto 1893 (skeni 87–90 ==
   // strani 86–89; VELIKA GLAVA »Traunungs=Buch« + rokopisno »1893« na s87 =
   // Pag. 86 POTRJENA — P122 lead!; 20 vpisov: 1886:7 → 1887:21 → 1888:20 →
