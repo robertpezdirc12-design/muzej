@@ -6164,3 +6164,16 @@ Stage Summary:
 - ★ №5 30-letna razlika (Adlešič 65 × Kambič 35) + Tribuče 2. pojav; ISTA-HIŠE 0 (2. leto); duhovnik Miklavčič ×8 (4. branje)
 - korpus po P146: 688 vitals · 171 blokov · 164 sidra · 72 hiš; QA 147/147
 - NASLEDNJE: **P147 = leto 1918** (№1 4.2. že viden na s163!; s164 = 3 vpisa 1918 z k.u.k. Bahnbaukompanie listino) → P148 (1919: 11 vpisov vidnih — №6 Griblje 77 × 37/8 INTRA hišar × Pezdirc!) → P149–P151 (1920–1922)
+
+---
+Task ID: P146-b
+Agent: Z.ai Code
+Task: Sanacija 4 zastarelih chain-checkov (p138/p139 I6c + p142/p143 I6f) — P146-kaskada kolizija
+
+Work Log:
+- p138/p139 I6c "bloki pini 147": štela sta izginli pin `.length !== 164` (≥25 — P143-era ostanki, FAILI že na HEAD; P146-kaskada je spremenila samo števec 0→1) → posodobljena na tekoči pin `.length !== 171`
+- p142/p143 I6f "ostanki 681/164/157/70": preverjala odsotnost `.length !== 164` — ki je ZDAJ (po P146-kaskadi 163→164) spet v qa kot NOVI sidra-pin → posodobljena na trenutni stale-set 687/170/163/71
+- veriga p115–p146 po sanaciji: samo zgodovinske zastavice (p80-bloki-78 ×11 + p127-675 ×1 — nespremenjene od HEAD)
+
+Stage Summary:
+- 0 novih problemov; chain higiena sanirana po vzorcu "P143-ZAMUDE SANIRANE"

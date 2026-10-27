@@ -185,8 +185,8 @@ def main():
     check("I6c bloki pini 169", n169 >= 2, str(n169))
     check("I6d sidra 162 + 1913:6", "poročna sidra ≠ 164" in qa and "p142Marr.length !== 6" in qa, "")
     check("I6e hiše 1913 pin", '"1,25,35,53,76,91"' in qa, "")
-    check("I6f ostanki 681/164/157/70", "HOUSE_VITALS.length !== 681" not in qa and ".length !== 164" not in qa
-          and "p80MarrAnchors.length !== 157" not in qa and "p80Houses.size !== 70" not in qa, "stare pini! (posodobljeno P143)")
+    check("I6f ostanki 687/170/163/72 (P146-sanacija!)", "HOUSE_VITALS.length !== 687" not in qa and ".length !== 170" not in qa
+          and "p80MarrAnchors.length !== 163" not in qa and "p80Houses.size !== 71" not in qa, "stare pini! (posodobljeno P146)")
     check("I6g p80 hiše 72 (+h76!)", "p80Houses.size !== 72" in qa, "")
     check("I6h PT luknja 13 nespremenjena", "p80Gap.length !== 13" in qa, "")
 
