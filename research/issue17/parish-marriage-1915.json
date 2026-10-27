@@ -1,0 +1,365 @@
+{
+ "source": {
+  "book": "04455 (ženitovanske knjige — Trauungsbuch, župnija Podzemelj)",
+  "url": "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04455/",
+  "year": 1915,
+  "scans": "s156 (№1–3) + s157 (№4–6) == Pag. 155–156; meja 1915/1916: s157-dno = PRAZEN pas + DIAGONALA (f8-kontrola L+R!) + s158 = letna glava »1916« (№1 27.1.1916 — štetje ponovno od №1!)",
+  "method": "5 krogov VLM-branj (Faza-1 overviewji + STRIP reciklirani iz P142 [21 branj!] + 16 full-row 3× + 30 blok-zoomov fine-A + [~ VERIF fine dopolnilni]) + korpus-forenzika (04105-krsti 1885–1919 + 04455-poroke 1886–1914) — 1915 = isti slovenski pisar (1912–) + rojstni datumi v VSEH 6 vpisih + WWI: 3 vojaki na dopustu + 1. romska poroka linije",
+  "lead": "P143-lead: »1915 = 3 vpisi = najšibkejše leto linije (№1 2.5. + №2 27.8. + №3 19.9.)« — PODCENJEN ×2: 6 vpisov (№4–6 na s157!) + №2-datum 22.8. (NE 27.8.!) + №2-vera/starost [~ VERIF fine]"
+ },
+ "lead": {
+  "claim": "P143-lead: 1915 №1 2.5. Peter Vrebec tesar GRIBLJE 82 × Terezija Muc ISTA-HIŠA h82 + №2 27.8. protestant Anton Brodarič Krasinec 35 × Barbara Segina Čerkvišče 22 + №3 19.9. Jakob Hošec Dobravice 48 — 3 vpisi",
+  "correction": "6 vpisov (№1–3 s156 + №4–6 s157 — s157 je bila izven P143-radarske meje!); №2-datum = 22. 8. (STRIP + zglš. obč. Podzemelj 22.8. + fine-num 100 % — NE 27.8.!); №3 = 1. ROMSKA poroka linije (samostna ciganka + priči oba cigana!); 4 NED + 1 PON + 1 TOR (№4 21.9. = 3. torek linije); vojno leto: 3 vojaki na dopustu (№3+№4+№6) + Feldsuperiorat Graz + 10-mesečna WWI-vrzel 7.7.1914 → 2.5.1915"
+ },
+ "entries": [
+  {
+   "row": 1,
+   "date": "2. maj 1915 (nedelja)",
+   "scan": 156,
+   "page": 155,
+   "groom": {
+    "name": "Peter Vrebec [~ branjа Vrabe/Vreber — V/B-zmeda; korpus B1916/B1919: 'Vrebec/Vreber' tesar]",
+    "place": "GRIBLJE 82 (★★ 1. poročni dokaz h82 — NOVA p80-hiša 71. → 72.! [04105-h82-krsti 1916/1919 IZVEN p80-filtra!] + INTRA-GRIBLJE (edini Griblje-vpis leta: VOJNO LETO!); PAR-KRSTI: B1916 Ana + B1919 Peter, oba h82 — 'Peter Vrebec tesarski mojster × Terezija roj. Muc 12.10.1887' [korpus!] = poročni par POTRJEN!)",
+    "stand": "tesar [korpus-1916: tesarski mojster — razvoj poklica!]",
+    "age": 32,
+    "status": "ženin",
+    "birth": "16. VII. 1882 [~ V vs VII — fine; 32 ✓ aritmetika (33 po maju!)]"
+   },
+   "bride": {
+    "name": "Terezija Muc [~ korpus Muc-mreža h91 Janez Muc × Ana Kure 1893–1908 — veja?]",
+    "place": "GRIBLJE 82 (★★★ ISTA-HIŠA h82 × h82 — 2. tak primer linije po 1914 №4 h68! + par-krsti 1916/1919 na isti hiši!)",
+    "stand": "bajtarska hči",
+    "age": 27,
+    "status": "devica (deklica)",
+    "birth": "12. X. 1887 [27 ✓ aritmetika]"
+   },
+   "groomParents": {
+    "father": "Peter Vrebec, bajtar (ISTO IME — oče in sin Peter!)",
+    "mother": "Katarina geb. Ritmanic [~ NOV priimek — korpus 0 zapisov]"
+   },
+   "brideParents": {
+    "father": "— (PRAZNO — NEZAKONSKA! ★★★ korpus B1887 Griblje h52: 'Terezija, očeta stolpec PRAZEN, mati Marija Muc bajtkr. žena' = EXACT MATCH!)",
+    "mother": "Marija Muc, bajtarica [korpus B1887 ✓]"
+   },
+   "witnesses": [
+    "Muc Janez [~ poklic 'polzumljaka' — VERIF fine; verjetno nevestin sorodnik Muc-mreža]",
+    "Globič Jure [~ NOV priimek — korpus 0]"
+   ],
+   "witnessStatus": "oba kat. [~ poklica neberljiva — VERIF fine]",
+   "urkunden": "ženitovanjska zglašnica županstva TRIBUČE [~ 'Stribuče'] 30.4.1915 št. 144 [~ 147 — VERIF fine] + sprječevalo samskega stanu ŽENINA od žup. urada ADLEŠIČI 15.4.1915 (!!! — Vrebec registriran v Adlešičih — drugo-župnijski izvor?) + krstni list (sicut sub 2) + birmovalni list ženina",
+   "priest": "P. Valerian Mikčak [~ Miklavžič/Miklavič — VERIF fine; župnik 1915 — podpis na vseh 6 vpisih]",
+   "anomalies": "★★★ NEVESTA NEZAKONSKA hči (oče PRAZEN v vpisu + korpus B1887 h52 isti vzorec — edini tak doblet korpusa!) + ★★★ PAR-KRSTI 1916+1919 h82 (Ana + Peter — zakonska pot potrjena dvakrat!) + ★ ISTA-HIŠA h82 × h82 (2. primer po 1914 №4) + ★ sprječevalo iz ADLEŠIČ (župnija-mobilnost ženina)"
+  },
+  {
+   "row": 2,
+   "date": "22. avgust 1915 (nedelja) [~ branjа 2.8./27.8. — REŠENO: STRIP '22. august' + zglš. obč. Podzemelj '22. avg. 1915' + fine-num 100 %!]",
+   "scan": 156,
+   "page": 155,
+   "groom": {
+    "name": "Anton Brodarič [~ ov 'Bvdovič' = zmeda; korpus Krasinec-35 Brodarič-veja!]",
+    "place": "KRASINEC 35 (★★ korpus-veja: M1906 №2+№3 RECIPROČNI par Brodarič 35 ↔ Županič 18 + M1909 №2 Nikolaj Brodarič Krasinec 35 × Marija Kambič — oče №2 = M1909-ženin? [~ VERIF starost])",
+    "stand": "posestnik 1/4 [~ VERIF fine]",
+    "age": 20,
+    "status": "svoboden [~ VERIF fine — ov je bral 35 = hišna št. kot starost?]",
+    "birth": "[~ VERIF fine — rojstni datum?]",
+    "religion": "[~ VERIF fine — ov 2× 'protestant' vs rows 'katolik'!]"
+   },
+   "bride": {
+    "name": "Barbara Segina [★ 4. Segina-pojav: 1914 №1 Ana Segina [adlešiška veja] + 1914 №2 Barbara Segina nevesta + 1915 priča Danijel Segina (№5!) — S/L-INITIAL CONFUSION 'Legina' ×2 v ov!]",
+    "place": "ČERKVIŠČE 22 [~ hiša — VERIF fine]",
+    "stand": "posestničeva hči",
+    "age": 19,
+    "status": "devica",
+    "birth": "[~ r. ~1896 — 1. hči M1893 №3!]",
+    "religion": "[~ VERIF fine — protestant/katolik?]"
+   },
+   "groomParents": {
+    "father": "Nikolaj Brodarič, posest 1/4 [korpus: M1909 №2 ženin Krasinec 35 — ISTA HIŠA! morestvo?]",
+    "mother": "Ana geb. Tome [~ prečrtano 'Tome'; korpus Tomc = Primostek-mreža]"
+   },
+   "brideParents": {
+    "father": "Peter Segina, posest 1/4 [★ M1893 №3 ženin!]",
+    "mother": "Barbara geb. Kambič [★ M1893 №3 nevesta! — 'Rambič' branjа = K/R-zmeda + Kambič korpus-varianta]"
+   },
+   "witnesses": [
+    "Nikolaj Župančič [~ — korpus Županič Krasinec 18 = sosedje Brodaričev 35! (M1897 №5 + M1906 №2/№3!)]",
+    "Peter Kohanič [~ branjа Kolančič — korpus Kohanič Vranoviče 4 (M1898 №3!)]"
+   ],
+   "witnessStatus": "oba 1/4 zemljaka [~ VERIF fine]",
+   "urkunden": "rojstni+krstni list ženina in neveste 11.5.1915 + ženitno dovoljenje SODIŠČE METLIKA 5.V.1915 [~ V vs VIII — VERIF] + [Leniščno?] dovoljenje 5.V.1915 + sprječevalo nravnosti žup. urada PODZEMELJ + izjava županstva + dovoljenje c.k. DEŽELNE VLADE št. 12236 15.7.1915 (3. deželna vlada linije!) + zglašnica OBČINE PODZEMELJ št. 26 22.8.1915 [— poročni datum v listini ✓]",
+   "priest": "M. Valerian Mikčak [~ VERIF fine]",
+   "anomalies": "★★★ STARŠA-ANKETA: obe strani staršev v korpusu (ženinovi Krasinec-35 Brodarič [M1906+M1909!] + nevestini M1893 №3 Segina × Kambič [ISTI PAR!] = 2. 'dvojni starš-par' po 1914 №8-analogiji) + [~ protestantska poroka? — ov 2× 'protestant' + deželna vlada dovoljenje (mešani zakon?) — VERIF fine e2-g!] + priča Župančič = Krasinec-18 sosed (recipročna veza 1906!)"
+  },
+  {
+   "row": 3,
+   "date": "19. september 1915 (nedelja)",
+   "scan": 156,
+   "page": 155,
+   "groom": {
+    "name": "Jakob Hošec [~ branjа Hosec — NOV priimek: korpus 0 zapisov]",
+    "place": "DOBRAVICE 48 (★ 6. poročni dokaz h48 [1912 №18 'Filovje 29'? ne — h48: korpus B1898 Janez Berkopne h48 + M1914 №1 Ana Segina 'dekle na h46'...; ISTA-HIŠA s nevesto!])",
+    "stand": "vojak na dopustu (★★ 1. od 3 vojakov leta — WWI!)",
+    "age": 33,
+    "status": "samski",
+    "birth": "17. julij 1882 [33 ✓ aritmetika]"
+   },
+   "bride": {
+    "name": "Katarina Hudorovič [~ branjа Hudorovac/Huderovac — korpus HUDOROVIČ-ROMA MREŽA: B1917 h5 Mara Hudorovac CIGANKA (nezakonska!) + B1919 h47 Barbara n. Hudorovac × Janez Šimec = 3. romska ženska Griblij!]",
+    "place": "DOBRAVICE 48 (★★★ ISTA-HIŠA 48 × 48 — 3. tak primer linije (1914 №4 h68 + 1915 №1 h82 + to!); nevesta 'samostna ciganka' stanuje pri Hošcovih bajtarjih!)",
+    "stand": "samostna ciganka (★★★ 1. ROMSKA poroka linije 1886–1915!)",
+    "age": 30,
+    "status": "samostna (samska)",
+    "birth": "2. maj 1885 [30 ✓ aritmetika; r. pred korpusnim oknom 1885+ — krst v drugi župniji?]"
+   },
+   "groomParents": {
+    "father": "Klemen Hošec, bajtar",
+    "mother": "Katarina geb. Cinca [~ NOV priimek — korpus 0]"
+   },
+   "brideParents": {
+    "father": "France/Frančišek Hudorovič [~ VERIF fine — celica kaže 'France Hudorovac in Mate Hudorovac' = 2 imeni?]",
+    "mother": "Ana geb. Hudorovič, ciganka [~ VERIF — endogamna romska družina: mati ROJ. Hudorovič!]"
+   },
+   "witnesses": [
+    "Fran[c] Hudorovič [~ VERIF]",
+    "Mate Hudorovič [~ VERIF]"
+   ],
+   "witnessStatus": "oba cigana [★★★ — korpus-romska družina; priči = nevestina sorodnika!]",
+   "urkunden": "roj.+krstni list ženina 11.9.1915 + roj.+krstni list neveste 14.9.1915 + sodna izjava samostojnega stanu ženina — [ž. mesta? Ivanice ~ VERIF] 11.IX.1915 + milostna izpustnica županstva [Brusnice? ~ VERIF] 14.9.1915 + soglasje 2 občev c.k. OKRAJNEGA GLAVARSTVA ČRNOMELJ 17.9.1915 + soglasje k.u. ORDINARIATA ŠKOFIJE LJUBLJANA 16.9.1915 [~ 18.9.? — VERIF] (2. ordinariat po 1913 №13!) + soglasje c.k. VOJNEGA SUPERIORATA GRAZ 19.9.1915 (★★ Feldsuperiorat — vojaška oblast na dan poroke!)",
+   "priest": "J. Valerian Mikčak [~ dekan? — VERIF fine]",
+   "anomalies": "★★★ 1. ROMSKA POROKA LINIJE (nevesta 'samostna ciganka' + priči 'oba cigana' + mati roj. Hudorovič — endogamna skupnost!) + ★★ VOJAK NA DOPUSTU ×3 oblasti (glavarstvo + ordinariat + Feldsuperiorat — najbolj birokratska poroka leta!) + ISTA-HIŠA 48 × 48 (3. primer) + korpus-romska mreža 1917/1919 (Mara + Barbara Hudorovič)"
+  },
+  {
+   "row": 4,
+   "date": "21. september 1915 (torek — 3. torek linije po 1912 №1 + 1914 №7!) [~ branjа '1.9.' rows / '4.9.' ov — REŠENO: STRIP '21. september' + Verkündmachtigungsschein 19.9.1915 (2 dni prej!) + hiša '65' v stripu = Drašiči 65 ✓]",
+   "scan": 157,
+   "page": 156,
+   "groom": {
+    "name": "Jožef Kostelec [~ branjа Josef — NOV priimek: korpus 0 neposrednih (le Bajuk×Pezdirec Drašiči-kontekst!)]",
+    "place": "DRAŠIČI 65",
+    "stand": "vojak na dopustu (★★ 2. vojak leta — Verkündmachtigungsschein Feldsuperiorata!)",
+    "age": 27,
+    "status": "samski",
+    "birth": "1. februar 1888 [27 ✓ aritmetika]"
+   },
+   "bride": {
+    "name": "Ana Žugelj [korpus Žugelj-mreža: Dobravice 18/21 + Otok 9/11 (M1908 №6 + M1909 №10 + M1912 №14!)]",
+    "place": "METLIKA 19 (sluškinja v mestu — 1. 'Metlika-mestni' naslov ženske linije? [~ — hiša 19 = mestna!])",
+    "stand": "sluškinja (2. sluškinja linije po 1914 №1!)",
+    "age": 30,
+    "status": "samska",
+    "birth": "24. januar 1885 [30 ✓ aritmetika; najstarejša nevesta leta]"
+   },
+   "groomParents": {
+    "father": "Marko Kostelec, posestnik",
+    "mother": "Neža geb. Škala [korpus Škala = Podzemelj 28 (M1896 №2 + M1898 №23 + M1902 №3!) — veja?]"
+   },
+   "brideParents": {
+    "father": "Martin Žugelj, posestnik [~ — korpus M1912 №14 Martin Žugelj Krivoglavci 38? veja]",
+    "mother": "Marija geb. Štefanič [korpus Štefanič×Muc-mreža: M1896 №1 + M1901 №8 + M1909 №10!]"
+   },
+   "witnesses": [
+    "Gustav Hönig [~ nemški priimek — VERIF fine]",
+    "Alojzij Žugelj [≈ nevestin sorodnik (brat?) — Žugelj-mreža]"
+   ],
+   "witnessStatus": "[~ VERIF — 'mann' = händler?]",
+   "urkunden": "Verkündmachtigungsschein k.k. FELDSUPERIORATA GRAZ št. 4804 19.9.1915 (★★ vojaška proglašitev — 2 dni pred poroko! nem. listina) + [listine za nevesto — 'Hodumly'? ~ VERIF = iz Metlike?] + [~ ostale listine — VERIF fine e4-doc]",
+   "priest": "M. Valerian Mikčak [~ VERIF fine]",
+   "anomalies": "★★ Verkündmachtigungsschein (nem. 'vojaška proglašna listina' — 1. nemško-jezikovna listina leta + Feldsuperiorat Graz 2. pojav) + TOR-datum (3. torek linije — vojaški dopusti dikrirajo termine!) + sluškinja-nevesta iz Metlika mesta"
+  },
+  {
+   "row": 5,
+   "date": "25. oktober 1915 (ponedeljek)",
+   "scan": 157,
+   "page": 156,
+   "groom": {
+    "name": "Jurij Maverin [~★ VERIF fine e5-g: branjа Mavrin/Maverin/Martinu — M1910 №4 'Georg MARTIN CERKVIŠČE 15' = ISTA HIŠA → brat? 'Martin' najverjetneje!]",
+    "place": "ČERKVIŠČE 15 [korpus M1910 №4 Georg Martin ISTA HIŠA + M1912 №6 Ana Jakofčič ČERKVIŠČE 17 sosednja!]",
+    "stand": "posestnik [~ ov 'hlapec' — VERIF fine]",
+    "age": 34,
+    "status": "samski",
+    "birth": "14. april 1881 [34 ✓ aritmetika]"
+   },
+   "bride": {
+    "name": "Ana Starašinič [korpus Starašinič = Krasinec-mreža: M1886 №3+№6+№9 + M1898 №5 (Krasinec 32) + №26 (Krasinec 42) + M1899 №6 (Krasinec 44)!]",
+    "place": "KRASINEC 17 [~ VERIF fine e5-b — branjа tudi 12]",
+    "stand": "posestna hči",
+    "age": 23,
+    "status": "samska (MLADOLETNA — avstrijska polnoletnost 24! → dovoljenje očeta ✓)",
+    "birth": "5. marec 1892 [23 ✓ aritmetika]"
+   },
+   "groomParents": {
+    "father": "Janez [Martin? Maverin?] [~ VERIF fine e5-par]",
+    "mother": "Ana geb. Jurešič [~ VERIF — 'Jurejfič-čiče'; korpus 0 — NOV priimek?]"
+   },
+   "brideParents": {
+    "father": "Nikolaj Starašinič, posestnik",
+    "mother": "Barbara geb. Jurešič [~ ISTA priimek kot ženinova mati — sorodstvo? VERIF]"
+   },
+   "witnesses": [
+    "Danijel Segina, posestnik [4. Segina-pojav! — Segina-mreža h30/h70]",
+    "Marko Jurajefič [~ VERIF — 'Hosec Komet-užiškar' garbled; korpus Jurajevič-mreža!]"
+   ],
+   "witnessStatus": "[~ VERIF — 'kmet-užitnikar'?]",
+   "urkunden": "ženitovanjska zglašnica št. 24 21.10.1915 obč. PODZEMELJ [~ ov '21. avg.' — 4 dni pred poroko ✓ koherentno] + dovoljenje očeta za mladoletno nevesto v pričo [Hardima Čedrica? Franca Dovgana? ~ VERIF fine]",
+   "priest": "C. Valerijan Mikčak [~ VERIF fine]",
+   "anomalies": "★ priimek-uganka Maverin/Martin (korpus M1910 №4 ISTA HIŠA Čerkvišče 15!) + obe materi geb. Jurešič + 4. Segina-pojav (priča) + mladoletna nevesta (23)"
+  },
+  {
+   "row": 6,
+   "date": "21. november 1915 (nedelja)",
+   "scan": 157,
+   "page": 156,
+   "groom": {
+    "name": "Janez Curnar [~ branjа Curnan — NOV priimek: korpus 0]",
+    "place": "GRADAC 95 [~ korpus Gradac-mreža: M1908 №8 Petschauer 'Müllerdorf'!]",
+    "stand": "železniški delavec (★ 1. železniški delavec linije! — Bela krajina proga 1913!) + VOJAK NA DOPUSTU (★★ 3. vojak leta — REKORD!)",
+    "age": 30,
+    "status": "samski",
+    "birth": "24. februar 1885 [30 ✓ aritmetika]"
+   },
+   "bride": {
+    "name": "Ana Brinec [korpus Brinec = Griblje-mreža h10/14/23/24/25/69 (B1887–B1917!) + M1896 №17 Brinsec Griblje 24 + B1917 h24 par Janez Brinec × Ana Milek!]",
+    "place": "VRANOVIČI 33 [~ VERIF fine e5-b... e6-b]",
+    "stand": "[~ VERIF — 'pos. jamska hiši'? = pri jamski hiši? bajtarska hči?]",
+    "age": 26,
+    "status": "deklica",
+    "birth": "4. april 1889 [26 ✓ aritmetika]"
+   },
+   "groomParents": {
+    "father": "Jožef Curnar, hišar [~ 'hisan' — hišnik/hišar]",
+    "mother": "Marija geb. Robič [~ NOV priimek: korpus 0]"
+   },
+   "brideParents": {
+    "father": "Marko Brinec, pos. [193? ~ VERIF — 'pos. 193' nenavadno]",
+    "mother": "Ana geb. Jakljevič [korpus JAKLJEVIČ-mreža: M1912 №11/№12 reciprocalni par + h13/h15/h16!]"
+   },
+   "witnesses": [
+    "Nikolaj Jakljevič, žel. usluž. [≈ nevestin sorodnik po materi! — korpus Jakljevič-mreža]",
+    "Ivan Pleš [~ VERIF — branjа Oleš; NOV priimek]"
+   ],
+   "witnessStatus": "železniška uslužbenca [~ VERIF — priči = ženinovi kolegi z železnice!]",
+   "urkunden": "ženitovanjska zglašnica županstva KRANJ GORA [= KRANJSKA GORA — ženinovo domače županstvo, Gorenjska!] št. 6 2.XI.1915 + rojstni list ženina št. 15 2.XI.1915 + župni izvod KRANJSKA GORA (★ najbolj oddaljena oblast linije po 1913 '[Stari trg pri Ptuju]'! — železniški delavec z Gorenjske!)",
+   "priest": "O. Valerijan Mikčak [~ VERIF — 'podp. test.'?] [~ VERIF fine]",
+   "anomalies": "★★★ 3. VOJAK NA DOPUSTU = REKORD LINIJE + ★★ KRANJSKA GORA oblast (najdlje! — železniška mobilnost: Gorenjska → Gradac!) + ★ železniški kolegiji (priči žel. usluž. + ženin žel. delavec — proga Bela krajina 1913!) + nevesta iz Jakljevič-mreže (mati geb. Jakljevič + priča Nikolaj Jakljevič)"
+  }
+ ],
+ "excluded": [],
+ "stats": {
+  "entries": 6,
+  "gribljeMarriages": 1,
+  "gribljeRows": [
+   1
+  ],
+  "gribljeHouses": [
+   "82"
+  ],
+  "gribljeIntra": 1,
+  "gribljeBlocks": 1,
+  "sameVillageRows": [
+   1,
+   3
+  ],
+  "sameVillageCount": 2,
+  "sameHouseRows": [
+   1,
+   3
+  ],
+  "sameHouseCount": 2,
+  "mondays": 1,
+  "sundays": 4,
+  "tuesdays": 1,
+  "weekendPct": "5/6 = 83 % (4 NED + 1 PON + 1 TOR №4 21.9. — 3. torek po 1912 №1 + 1914 №7 — VOJAŠKI dopustni termini!)",
+  "lentGap": "NI porok v postu — 1. leto brez (vojna: letnica se praktično začne 2.5. = 4 tedne po veliki noči 4.4.1915; prejšnja 5-letna serija postnih vrzeli 1911–1914 se konča!)",
+  "warGap": "WWI: zadnja predvojna 7.7.1914 → 2.5.1915 = 10 MESECEV vrzel (1. zlom kontinuitete 1886–1914 [P143]); 1915 samo 6 porok = najšibkejše leto linije (prej 1886: 7!); 3 VOJAKI NA DOPUSTU (№3+№4+№6 — rekord!) + Feldsuperiorat Graz ×2 + Verkündmachtigungsschein (nem. vojaška listina)",
+  "yearHeading": "DA — »1915« na s156 (iz P142-Faze-1) + »1916« na s158 (meja DOKAZANA: s157-dno prazen pas + DIAGONALA [f8-kontrola] + s158 štetje ponovno od №1!)",
+  "unnumbered": 0,
+  "newHouses": [
+   "82"
+  ],
+  "vitalsTotal": 686,
+  "blocks04455": 169,
+  "sidraTotal": 162,
+  "p80Houses": 72
+ },
+ "crossChecks": [
+  {
+   "id": "CC1",
+   "sidro": "№1 nevesta Terezija Muc (r. 12.10.1887)",
+   "verdict": "✓ korpus-krst B1887 Griblje h52: 'Terezija, očeta stolpec PRAZEN — nezakonska, mati Marija Muc bajtkr. žena' = EXACT MATCH (oče PRAZEN v vpisu + mati Marija Muc bajtarica + rojstvo 1887 → starost 27 ✓) — edini dvojni dokaz tega vzorca v korpusu!"
+  },
+  {
+   "id": "CC2",
+   "sidro": "№1 poročni par na h82",
+   "verdict": "✓ PAR-KRSTI: B1916 h82 Ana + B1919 h82 Peter — 'oče Peter Vrebec tesarski mojster, mati Terezija roj. Muc, 12.10.1887' [korpus!] = poročni par POTRJDEN ×2 na ISTI hiši + razvoj poklica tesar → tesarski mojster (1916)!"
+  },
+  {
+   "id": "CC3",
+   "sidro": "№2 nevestina starša (Peter Segina × Barbara 'Rambič')",
+   "verdict": "✓ M1893 №3 (6.2.1893): Peter Segina × Barbara KAMBIČ — ISTI PAR! ('Rambič' = Kambič — K/R-zmeda; Barbara nevesta r. ~1896 = 1. hči!)"
+  },
+  {
+   "id": "CC4",
+   "sidro": "№2 ženinova veja Krasinec 35",
+   "verdict": "✓ korpus: M1906 №2+№3 RECIPROČNI par (Nicolaus Brodarič Krasinec 35 × Margareth Županič 18 + Nicolaus Županič 18 × Anna Brodarič 35 — križno-izmenične hiše po 1912 №11+№12!) + M1909 №2 Nikolaj Brodarič Krasinec 35 × Marija Kambič (№2-oče = M1909-ženik? [~ VERIF starost] — morestvo: 1. žena Ana Tomc † pred 1909!)"
+  },
+  {
+   "id": "CC5",
+   "sidro": "№2 priča Nikolaj Župančič",
+   "verdict": "✓ korpus Županič Krasinec 18 (M1897 №5 + M1906 №2/№3) — sosedja Brodaričev 35; priča = recipročna veza 1906!"
+  },
+  {
+   "id": "CC6",
+   "sidro": "№3 romska mreža Hudorovič",
+   "verdict": "✓ korpus: B1917 h5 Mara Hudorovac CIGANKA (nezakonska!) + B1919 h47 Barbara n. Hudorovac (× Janez Šimec posednik r. 23.10.1886) = 3 romske ženske v Gribljah 1915–1919 (Katarina + Mara + Barbara)!"
+  },
+  {
+   "id": "CC7",
+   "sidro": "№4 nevestina mreža (Ana Žugelj)",
+   "verdict": "✓ korpus Žugelj-mreža: Dobravice 18/21 + Otok 9/11 (M1908 №6 Anna Zugelj Dobravice 18 + M1909 №10 Maria Zugelj Dobravice 21 + M1912 №14 Martin Žugelj Krivoglavci 38 × Marija Žugelj Dobravice 18) + mati Marija geb. Štefanič — Štefanič×Muc-mreža (M1896 №1 + M1901 №8 + M1909 №10)!"
+  },
+  {
+   "id": "CC8",
+   "sidro": "№5 nevestina mreža (Ana Starašinič)",
+   "verdict": "✓ korpus Starašinič = Krasinec-mreža: M1886 №3+№6+№9 (Štarašinič) + M1898 №5 (Barbara Krasinec 32) + M1898 №26 (Anna Krasinec 42) + M1899 №6 (Anna Krasinec 44) + M1886 №3 nevesta Anna Štarašinič × Nicolaus Kambič (№2-materina veja?!)"
+  },
+  {
+   "id": "CC9",
+   "sidro": "№5 ženin ISTA HIŠA Čerkvišče 15",
+   "verdict": "✓ korpus M1910 №4: Georg MARTIN CERKVIŠČE 15 × Dorothea Dragoš — ISTA HIŠA kot №5-ženin → priimek 'Maverin' [~ VERIF] verjetno 'Martin' (brat?) + M1912 №6 Ana Jakofčič ČERKVIŠČE 17 sosednja!"
+  },
+  {
+   "id": "CC10",
+   "sidro": "№6 nevestina mreža (Ana Brinec)",
+   "verdict": "✓ korpus Brinec = Griblje h10/14/23/24/25/69 (B1887–B1917 — 51 zapisov!) + M1896 №17 Brinsec Griblje 24 + mati Ana geb. Jakljevič (JAKLJEVIČ-mreža: M1912 №11/№12 reciprocalni par + h13/15/16) + priča Nikolaj Jakljevič (≈ nevestin sorodnik po materi!)"
+  }
+ ],
+ "anomalies": [
+  "★★★ №3 PRVA ROMSKA POROKA LINIJE 1886–1915 — nevesta 'samostna ciganka' + priči 'oba cigana' + mati roj. Hudorovič (endogamna skupnost) + korpus-romska mreža 1917/1919!",
+  "★★★ №1 DVOTERNA KORPUS-SINHRONIZACIJA VREBEC-MUC — krst 1887 h52 (oče PRAZEN — exact) + par-krsti 1916/1919 h82 (ista hiša!)!",
+  "★★★ 3 VOJAKI NA DOPUSTU (№3+№4+№6) = REKORD LINIJE — 1. leta z vojaki na dopustu (do 1914: 0!) + Feldsuperiorat Graz ×2 + Verkündmachtigungsschein (nem. vojaška listina — 1.!)!",
+  "★★ DVE ISTA-HIŠA poroki v enem letu (№1 h82 × h82 Griblje + №3 h48 × h48 Dobravice) — po 1. primeru linije (1914 №4 h68) kar 2 novi = 3 skupaj!",
+  "★★ №2 STARŠA-OBE-STRANI V KORPUSU — ženinovi (Krasinec-35 Brodarič: M1906 recipročni par + M1909 Nikolaj) + nevestini (M1893 №3 Segina × Kambič — ISTI PAR!)!",
+  "★★ №6 KRANJSKA GORA — najbolj oddaljena oblast linije (zglašnica + rojstni list + župni izvod, vsi 2.XI.1915) — železniški delavec z Gorenjske (mobilnost WWI!) + priči žel. usluž. = kolegi!",
+  "★ №2 DATUMSKA ANKETA REŠENA — branjа 2.8. (rows) / 27.8. (ov+lead) / 22.8. (STRIP) → 22.8.1915 (fine-num 100 % + zglašnica obč. Podzemelj '22. avg. 1915' ✓)!",
+  "★ №4 DATUM REŠEN — STRIP '21. sept' + Verkündmachtigungsschein 19.9. (2 dni prej ✓) + strip-hiša '65' = Drašiči 65 ✓ → 21.9.1915 TOR (3. torek — VOJAŠKI termin!)",
+  "★ №5 PRIIMEK-UGANKA Maverin/Mavrin/Martin — M1910 №4 Georg MARTIN ISTA HIŠA Čerkvišče 15! [~ VERIF fine]",
+  "★ №1 SPRJEČEVALO IZ ADLEŠIČ — ženin Vrebec registriran v drugi župniji (2. adlešiška oblast po 1912 №17!) — župnijska mobilnost!",
+  "★ NOVA OBLAST: c.k. VOJNI SUPERIORAT GRAZ (№3 soglasje 19.9. + №4 Verkündmachtigungsschein št. 4804) — 1. VOJAŠKA oblast linije! + županstvo TRIBUČE (1.!) + SODIŠČE METLIKA (1.!) + deželna vlada št. 12236 (4.) + ordinariat Ljubljana (3.)",
+  "★ ROJSTNI DATUMI V VSEH 6 VPISIH — 1914-novina (№7 tedaj) postane PRAVILO 1915 (10 rojstnih datumov; VSE starosti aritmetično ✓ — edino leto s popolno preverljivostjo!)",
+  "★ №1 NEVESTA NEZAKONSKA hči (oče PRAZEN — 2. nezakonska oseba linije po 1895 h28 P105!) + №5 MLADOLETNA nevesta (23 < 24 → dovoljenje očeta v pričo [2 prič!] ✓)"
+ ],
+ "honesty": [
+  "№2 VERA + STAROST [~]: ov 2× 'protestant' (obe osebi!) vs rows 'katolik' 20 l. vs ov '35' (= hiša?) — deželna-vlada dovoljenje št. 12236 namiguje mešani zakon ali mladoletnost → [~ VERIF fine e2-g]",
+  "№2 rojstni datum ženina [~ VERIF fine — prisoten? (1914-stil)] + poklic 'posestnik' [~]",
+  "№2-oče = M1909-ženik? [~]: Nikolaj Brodarič Krasinec 35 — morestvo-rekonstrukcija (1. žena Ana Tomc †, 2. Marija Kambič 1909) odvisna od starosti 20/35",
+  "№4 datum [~]: STRIP 21.9. + listina 19.9. + hiša 65 ✓ vse podpira 21.9.; rows '1.9.' = izpusten '2' — [~ VERIF fine e4-num]",
+  "№5 priimek ženina [~]: Maverin/Mavrin/Martin(u) — korpus M1910 №4 'Georg Martin ČERKVIŠČE 15' ISTA HIŠA podriva 'Maverin' [~ VERIF fine e5-g + e5-par]",
+  "№5 hiša neveste [~]: 17 (rows) vs 12 (ov) [~ VERIF fine e5-b]",
+  "№5 priči + listina-dovoljenja priče [~]: 'Marko Jurajefič' [~ 'Hosec Komet-užiškar' garbled] + 'v pričo Hardima Čedrica in Franca Dovgana' [~ VERIF fine]",
+  "№6 nevesta [~]: poklic 'pos. jamska hiši' [~ — 'pri jamski hiši'? bajtarska hči?] + oče 'Marko Brinec pos. 193' [~ VERIF] + priča Ivan Pleš [~ Oleš]",
+  "№3 starši [~]: oče 'France Hudorovac in Mate Hudorovac' (2 imeni v celici — oče + priča zlit?) + mati 'Ana Hudorovac ciganka' (roj. Hudorovič — endogamija [~]) [~ VERIF fine]",
+  "№1 ženinov rojstni mesec [~]: 16.V.1882 (rows — 33 l.) vs 16.VII.1882 (fine — 32 l. ✓ aritmetika fine) [~ VERIF hiper-zoom]",
+  "№1 zglašnica št. [~]: 144 (fine) vs 147 (ov) + Tribuče [~ 'Stribuče'] [~ VERIF]",
+  "Duhovnik [~]: 'P./M./J./C./O. Valerian Mikčak' [~ Miklavžič/Miklavič] — podpis na vseh 6 vpisih; 'Valerijan' = 1. v liniji [~ VERIF podpis-zoom]"
+ ]
+}

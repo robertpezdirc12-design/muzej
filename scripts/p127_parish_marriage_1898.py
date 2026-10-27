@@ -61,7 +61,7 @@ GREGWART_FORMULA = 7           # DE ×5 (v10/v15/v19/v20/v27) + SLO ×2 (v11/v12
 ZAIFLNER = 6
 MOTTILING = 6
 VITALS = 681                   # 675 (P141) + 6 (P142); 664 (P139) + 6 (P140); P127-era: 587 + 6 (P128) + 2 (P129) + 4 bloki 1902 (P131) + 12 blokov 1903 (P132)
-BLOCKS_04455 = 164               # 61 (P126) + 9
+BLOCKS_04455 = 169                # POSODABLJENO P144: 164 (P142-era) → 168 (P143: +4 — ZAMUDA SANIRANA!) → 169 (P144: +1 h82!)               # 61 (P126) + 9
 P80_HOUSES = 58                # 52 (P126) + 6 NOVIH v vzorcu (h48/h22/h67/h70/h34/h46 prek 04455-1898!)
 P80_PT_GAP = 12                # 10 + h46 + h48 (v luknji 41–60!)
 SIDRA_TS = 63                  # 70 − 7 okvir 1886 (pass-1 »60« = POPRAVEK)
@@ -357,12 +357,12 @@ def main() -> int:
     qa = open(QA_TS).read()
     check("I9 qa-p127", '"qa-p127-parish-marriage-1898"' in qa)
     check("I9b p80 bloki 78", "poročni vpisi (04455) ≠ 158" in qa)
-    check("I9c p80 sidra 71 (1898×9 · 1899×6 · 1900×2)", "poročna sidra ≠ 161" in qa)
+    check("I9[cd] p80 sidra 72 (1898×9 · 1899×6 · 1900×2)", "poročna sidra ≠ 162" in qa)
     check("I9d p80 hiše 1898 = [22×2,34,46,48,54,62,67,70]",
           "hiše 1898 (04455) ≠ [22×2,34,46,48,54,62,67,70]" in qa)
     check("I9e p80 hiše 58", "različnih hiš (vse tri knjige) ≠ 70" in qa)
     check("I9f PT luknja 12", "PT luknja ≠ 13 hiš" in qa)
-    check("I9g vitals 637 zaščita (P128)", "HOUSE_VITALS.length !== 685" in qa)
+    check("I9g vitals 637 zaščita (P128)", "HOUSE_VITALS.length !== 686" in qa)
     check("I9h Rauy 1898 bloki ×9 zaščita", "Rauy podpisi 1898 blokov ≠ 9" in qa)
     check("I9i stari 537/544/548/550/554/559/563/566/569/578 iztekla",
           "HOUSE_VITALS.length !== 537" not in qa and "HOUSE_VITALS.length !== 544" not in qa

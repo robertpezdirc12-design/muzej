@@ -2622,6 +2622,62 @@ export const HOUSE_VITALS: HouseVital[] = [
     status: "DOCUMENTED",
   },
 
+  // ——— P144 razširitev: POROČNA KNJIGA 04455 — polno leto 1915 (skeni
+  // s156 + s157 == Pag. 155–156; meja 1915/1916: s157-dno = PRAZEN pas +
+  // diagonala + s158 = letna glava »1916« (№1 27.1.1916 — štetje ponovno
+  // od №1!); 6 vpisov: 1886:7 → … → 1913:13 → 1914:7 → 1915:6 — VOJNO
+  // LETO = najšibkejše leto linije (prej 1886: 7!); 4 NED + 1 PON + 1 TOR
+  // (№4 21.9. = 3. torek po 1912 №1 + 1914 №7 — VOJAŠKI termini!) — vpisi z
+  // Griblji (1 poroka = najmanj od P115!: №1 ISTA-HIŠA h82 × h82!):
+  // NOVELE: ★★★ №3 PRVA ROMSKA POROKA LINIJE 1886–1915 (Katarina
+  // HUDOROVIČ 'samostna ciganka' Dobravice 48 + priči 'oba cigana' (Fran +
+  // Mate Hudorovič!) + mati Ana roj. Hudorovič ciganka = ENDOGAMNA romska
+  // družina! + korpus-potrditvi B1917 h5 Mara Hudorovac CIGANKA
+  // [nezakonska!] + B1919 h47 Barbara n. Hudorovac = 3 romske ženske
+  // Griblij 1915–1919!) + ★★★ №1 DVOTERNA KORPUS-SINHRONIZACIJA VREBEC-MUC
+  // (korpus-krst neveste B1887 h52: 'Terezija, očeta stolpec PRAZEN —
+  // nezakonska, mati Marija Muc bajtkr. žena' = EXACT MATCH z vpisom [oče
+  // PRAZEN + mati Marija Muc bajtarica + r. 12.10.1887 → 27 ✓!] + PAR-KRSTI
+  // na poročni hiši: B1916 Ana + B1919 Peter, oba h82 — 'Peter Vrebec
+  // tesarski mojster × Terezija roj. Muc, 12.10.1887' [korpus!] = poročni
+  // par POTRJEN ×2!) + ★★★ 3 VOJAKI NA DOPUSTU = REKORD LINIJE (№3 Jakob
+  // Hošec Dobravice 48 [soglasje glavarstva Črnomelj + ordinariat Ljubljana
+  // + c.k. VOJNI SUPERIORAT GRAZ — 3 oblasti!] + №4 Jožef Kostelec Drašiči
+  // 65 [Verkündmachtigungsschein k.k. Feldsuperiorata Graz št. 4804 — nem.
+  // vojaška listina!] + №6 Janez Curnar Gradac 95 [zglašnica iz KRANJSKE
+  // GORE!]) + ★★ №1+№3 DVE ISTA-HIŠA poroki v enem letu (h82 × h82 Griblje
+  // + h48 × h48 Dobravice — po 1. primeru 1914 №4 h68 kar 2 novi = 3 v
+  // liniji!) + ★★ №2 STARŠA-OBE-STRANI V KORPUSU (ženinovi Krasinec-35
+  // Brodarič-veja [M1906 №2+№3 RECIPROČNI par Brodarič 35 ↔ Županič 18 +
+  // M1909 №2 Nikolaj Brodarič × Marija Kambič = verjetno №2-oče!] +
+  // nevestini M1893 №3 Peter Segina × Barbara Kambič [ISTI PAR!] — 'Rambič'
+  // = Kambič!) + ★★ №6 KRANJSKA GORA — najbolj oddaljena oblast linije
+  // (železniški delavec z Gorenjske na Belokranjski progi + priči žel.
+  // usluž. = kolegi!) + ★ NOVE OBLASTI (Feldsuperiorat Graz ×2 — 1. vojaška
+  // oblast linije! + županstvo TRIBUČE [1.!] + žup. urad ADLEŠIČI + sodišče
+  // Metlika [1.!] + županstvo Kranjska Gora + deželna vlada št. 12236 +
+  // ordinariat Ljubljana) + ★ NOVI POKLICI (železniški delavec — 1.! +
+  // tesar → tesarski mojster [1916!] + sluškinja + samostna ciganka —
+  // unikat!) + ROJSTNI DATUMI V VSEH 6 VPISIH (1914-novina postane PRAVILO
+  // — vse starosti aritmetično ✓!) + ~10 NOVIH PRIIMKOV (Vrebec ·
+  // Ritmanič · Globič · Hošec · Cinca · Hudorovič · Kostelec · Maverin [~
+  // Martin?] · Curnar · Robič · Jurešič [~] · Pleš [~]) + WWI-PROFIL: 1.
+  // leto BREZ postne vrzeli po 4-letni seriji 1911–1914 (vojna: letnica se
+  // začne 2.5. = 4 tedne po veliki noči!) + vrzel №1→№2 (2.5.→22.8.) = 3,5
+  // meseca (fronta!)
+  // Dokaz: research/issue17/parish-marriage-1915.json; verifikator:
+  // scripts/p144_parish_marriage_1915.py --check (I1–I12).
+  {
+    houseNo: "82",
+    bookSignature: "04455",
+    year: 1915,
+    scan: 156,
+    page: 155,
+    whatSi: "poroka (2. 5. 1915, vpis 1 — NEDELJA, 1. poroka po 10-mesečni WWI-vrzeli [zadnja predvojna 7. 7. 1914!] + 1. po veliki noči 4. 4. 1915) — ženin Peter VREBEC [~ branjа Vrabe/Vreber — V/B-zmeda; korpus-1916: 'Vrebec', 1919: 'Vreber'], tesar, 32 [~ 33 — r. 16. VII. 1882 [~ V — VERIF], ženin, GRIBLJE 82 (★ 1. poročni dokaz h82 — NOVA p80-hiša 71. → 72.! [04105-h82-krsti 1916/1919 IZVEN p80-filtra!]; PAR-KRSTI: B1916 Ana + B1919 Peter, oba h82 — 'Peter Vrebec tesarski mojster × Terezija roj. Muc, 12.10.1887' [korpus!] = razvoj poklica tesar → TESARSKI MOJSTER 1916!) × Terezija MUC [~ korpus Muc-mreža h91 (Janez Muc × Ana Kure 1893–1908) — veja?], bajtarska hči, 27 (r. 12. X. 1887 — 27 ✓ aritmetika), devica, GRIBLJE 82 (★★★ ISTA-HIŠA h82 × h82 — 2. tak primer linije po 1914 №4 h68 × h68! + ★★★ NEVESTA NEZAKONSKA hči: oče PRAZEN v vpisu + korpus-krst B1887 Griblje h52 'Terezija, očeta stolpec PRAZEN — nezakonska, mati Marija Muc bajtkr. žena' = EXACT MATCH → DVOTERNA KORPUS-SINHRONIZACIJA [edini dvojni dokaz tega vzorca v korpusu!] + PAR-KRSTI 1916/1919 na poročni hiši h82 = zakonska pot potrjena ×2!); starši ženina: Peter Vrebec bajtar (ISTO IME — oče in sin Peter!) × Katarina geb. Ritmanič [~ NOV priimek — korpus 0]; starši neveste: oče — (PRAZNO — NEZAKONSKA!) × Marija Muc bajtarica [korpus B1887 ✓]; priči: Muc Janez [~ poklic neberljiv 'polzumljaka' — VERIF; Muc-mreža?] + Globič Jure [~ NOV priimek — korpus 0] (oba kat.); listine: zglašnica županstva TRIBUČE [~ 'Stribuče' — 1. pojav oblasti!] 30. 4. 1915 št. 144 [~ 147 — VERIF] + sprječevalo samskega stanu ŽENINA od žup. urada ADLEŠIČI 15. 4. 1915 (★ drugo-župnijski izvor — Vrebec registriran v Adlešičih!; 2. adlešiška oblast po 1912 №17!) + krstni list (sicut sub 2) + birmovalni list ženina; duhovnik P. Valerian Mikčak [~ Miklavžič/Miklavič — VERIF; 'Valerijan' = 1. v liniji — podpis na vseh 6 vpisih 1915!]; ★ INTRA-GRIBLJE ISTA-HIŠA (1. v letu — edini Griblje-vpis leta: VOJNO LETO — 6 porok = najšibkejše leto linije!)",
+    whatEn: "marriage (May 2, 1915, entry 1 — SUNDAY, the 1st marriage after the 10-month WWI gap [the last pre-war one Jul 7, 1914!] + the 1st after Easter Apr 4, 1915) — the groom Peter VREBEC [~ the readings Vrabe/Vreber — a V/B confusion; the 1916 corpus: 'Vrebec', 1919: 'Vreber'], a carpenter, 32 [~ 33 — b. Jul 16, 1882 [~ May — VERIF], single, GRIBLJE 82 (★ the 1st marriage evidence of h82 — a NEW p80 house, the 71st → 72nd! [the 04105-h82 baptisms 1916/1919 outside the p80 filter!]; the COUPLE'S BAPTISMS: B1916 Ana + B1919 Peter, both h82 — 'Peter Vrebec a master carpenter × Terezija née Muc, Oct 12, 1887' [the corpus!] = the career carpenter → MASTER CARPENTER 1916!) × Terezija MUC [~ the corpus Muc network of h91 (Janez Muc × Ana Kure 1893–1908) — a branch?], a cottager's daughter, 27 (b. Oct 12, 1887 — 27 ✓ arithmetic), single, GRIBLJE 82 (★★★ a SAME-HOUSE marriage h82 × h82 — the 2nd such case of the line after the 1914 №4 h68 × h68! + ★★★ AN ILLEGITIMATE BRIDE: the father EMPTY in the entry + the corpus baptism B1887 Griblje h52 'Terezija, the father's column EMPTY — illegitimate, the mother Marija Muc a cottager's wife' = an EXACT MATCH → a DOUBLE-ANCHOR CORPUS SYNCHRONIZATION [the only double proof of this pattern in the corpus!] + the couple's baptisms 1916/1919 at the marriage house h82 = the marriage confirmed twice!); the groom's parents: Peter Vrebec a cottager (the SAME NAME — father and son Peter!) × Katarina née Ritmanič [~ a NEW surname — 0 in the corpus]; the bride's parents: father — (EMPTY — ILLEGITIMATE!) × Marija Muc a cottager [the corpus B1887 ✓]; the witnesses: Muc Janez [~ an unreadable occupation 'polzumljaka' — VERIF; the Muc network?] + Globič Jure [~ a NEW surname — 0 in the corpus] (both Catholic); the documents: the banns of the TRIBUČE municipality [~ 'Stribuče' — the 1st appearance of this authority!] Apr 30, 1915 no. 144 [~ 147 — VERIF] + the groom's single-status certificate from the ADLEŠIČI parish office Apr 15, 1915 (★ an another-parish origin — the Vrebecs registered in Adlešiči!; the 2nd Adlešiči authority after the 1912 №17!) + a baptismal certificate (sicut sub 2) + the groom's confirmation certificate; priest P. Valerian Mikčak [~ Miklavžič/Miklavič — VERIF; 'Valerijan' = the 1st of the line — the signature on all 6 entries of 1915!]; ★ an INTRA-GRIBLJE SAME-HOUSE marriage (the only Griblje entry of the year: THE WAR YEAR — 6 marriages = the weakest year of the line!)",
+    status: "DOCUMENTED",
+  },
+
   // ——— P122 razširitev: POROČNA KNJIGA 04455 — polno leto 1893 (skeni 87–90 ==
   // strani 86–89; VELIKA GLAVA »Traunungs=Buch« + rokopisno »1893« na s87 =
   // Pag. 86 POTRJENA — P122 lead!; 20 vpisov: 1886:7 → 1887:21 → 1888:20 →

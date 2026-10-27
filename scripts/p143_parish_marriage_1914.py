@@ -4,7 +4,7 @@
 (issue #18). 29. leto poročne linije (P115 = 1886 → … → P143 = 1914).
 
 Invariante I1–I12 + --live (LIVE 04455 HTTP). Vzorec: p142 (ZAMRNJENI pini 675/158/151
-p141 + 681/164/157 p142 ostajajo; tekoči korpus 685/168/161/71 od P143)."""
+p141 + 681/164/157 p142 + 685/168/161 p143 ostajajo [P143-pini ZAMRNJENI]; tekoči korpus 686/169/162/72 od P144)."""
 import json
 import re
 import sys
@@ -26,9 +26,9 @@ GRIBLJE_ROWS = [1, 3, 4, 5]   # +№1 dekle/služabnica na h46 (Brodarič-hiša)
 GRIBLJE_HOUSES = ["31", "46", "65", "68", "91"]  # 46 = dekle-hiša (brez novega bloka!)
 GRIBLJE_BLOCKS = 4              # №3 h91+h68 + №4 h68 (ISTA-HIŠA!) + №5 h65+h31 → 4 bloki
 GRIBLJE_INTRA = 3               # №3 + №4 + №5 = REKORD!
-VITALS_TOTAL = 685              # 681 + 4 (tekoči pin P143)
-BLOKI_04455 = 168               # 164 + 4
-SIDRA_TOTAL = 161               # 157 + 4 blokov (+1914:4)
+VITALS_TOTAL = 685              # 681 + 4 (ZAMRNJEN 1914-evidence pin — NE posodabljati v kaskadi!; tekoči korpus = 686 od P144)
+BLOKI_04455 = 168               # 164 + 4 (ZAMRNJEN 1914-evidence pin; tekoči = 169 od P144)
+SIDRA_TOTAL = 161               # 157 + 4 blokov (+1914:4) (ZAMRNJEN 1914-evidence pin; tekoči = 162 od P144)
 EXPECTED_MONDAYS = 3            # + 3 nedelje + 1 torek = 6/7 vikendov
 EXPECTED_SUNDAYS = 3
 
@@ -143,15 +143,15 @@ def main():
     # ---------- I6: qa-parish.ts ----------
     qa = open(QA_TS).read()
     check("I6a qa-p143 id", "qa-p143-parish-marriage-1914" in qa)
-    n685 = qa.count("HOUSE_VITALS.length !== 685")
-    check("I6b vitals pini 685", n685 >= 57, str(n685))
-    n168 = qa.count(".length !== 168")
-    check("I6c bloki pini 168", n168 >= 2, str(n168))
-    check("I6d sidra 161 + 1914:4", "poročna sidra ≠ 161" in qa and "p143Marr.length !== 4" in qa, "")
+    n686 = qa.count("HOUSE_VITALS.length !== 686")
+    check("I6b vitals pini 686", n686 >= 57, str(n686))
+    n169 = qa.count(".length !== 169")
+    check("I6c bloki pini 169", n169 >= 2, str(n169))
+    check("I6d sidra 162 + 1914:4", "poročna sidra ≠ 162" in qa and "p143Marr.length !== 4" in qa, "")
     check("I6e hiše 1914 pin", '"31,65,68,91"' in qa, "")
     check("I6f ostanki 681/164/157/70", "HOUSE_VITALS.length !== 681" not in qa and ".length !== 164" not in qa
           and "p80MarrAnchors.length !== 157" not in qa and "p80Houses.size !== 70" not in qa, "stare pini!")
-    check("I6g p80 hiše 71 (+h68!)", "p80Houses.size !== 71" in qa, "")
+    check("I6g p80 hiše 72 (+h68!)", "p80Houses.size !== 72" in qa, "")
     check("I6h PT luknja 13 nespremenjena", "p80Gap.length !== 13" in qa, "")
     check("I6i p88 h91-1914 izjema", '(hn === "91" && (v.year === 1890 || v.year === 1913 || v.year === 1914))' in qa, "")
 
