@@ -198,11 +198,11 @@ def main():
     # ---------- I6: qa-parish.ts ----------
     qa = open(QA_TS).read()
     check("I6a qa-p141 id", "qa-p141-parish-marriage-1912" in qa)
-    n675 = qa.count("HOUSE_VITALS.length !== 687")
+    n675 = qa.count("HOUSE_VITALS.length !== 688")
     check("I6b vitals pini 675", n675 >= 55, str(n675))
-    n158 = qa.count('.length !== 170')
+    n158 = qa.count('.length !== 171')
     check("I6c bloki pini 158", n158 >= 1, str(n158))
-    check("I6d sidra 151 + 1912:5", "poročna sidra ≠ 163" in qa and "h.year === 1912).length !== 5" in qa, "")
+    check("I6d sidra 151 + 1912:5", "poročna sidra ≠ 164" in qa and "h.year === 1912).length !== 5" in qa, "")
     check("I6e hiše 1912 pin", '"21,44,46,63,78"' in qa, "")
     check("I6f ostanki 670/153/146", "!== 670" not in qa and ".length !== 153" not in qa and "sidra ≠ 146" not in qa, "stare pini!")  # P142: '!== 70' odstranjen — h76 naredil p80=70 TEKOČI pin!
     check("I6g p80 hiše 69 (h78 ŽE v p80!)", "p80Houses.size !== 72" in qa, "")

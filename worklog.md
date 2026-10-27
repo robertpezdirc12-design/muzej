@@ -6136,3 +6136,31 @@ Stage Summary:
 - №3+№4 DVOTERNA hiša h4 Vranoviče; ISTE-HIŠE 1916 = 0 (1. leto z 0 po 1913); duhovnik Valerijan Miklavčič ×4 (3. branje podpira Miklavč-)
 - korpus po P145: 687 vitals · 170 blokov 04455 · 163 sidra · 72 hiš · PT 13; QA 146/146
 - NASLEDNJE: **P146 = poročno leto 1917 = ZAKLJUČEK POROČNE LINIJE 04455** (s160 letna glava »1917« že prenešena; skeni 160–161)
+
+---
+Task ID: P146
+Agent: Z.ai Code (transkripcija + verifikacija + README-ureditev + push vse tri platforme)
+Task: P146 — poročna knjiga 04455, polno leto 1917 (issue #18; zaključek poročne linije → PRAVLJENO: knjiga sega do 1922!) + README "Trenutno stanje" + GitHub/GitLab/Vercel push
+
+Work Log:
+- P145 push na main → GitHub Actions sync.yml SUCCESS (GitLab) + deploy.yml dispatch (Vercel)
+- README: dodan "Trenutno stanje (kratek povzetek)" — tabela linij, korpus, odprte točke (priporočilo revizije §dokumentacija!)
+- prenos s160–s167 + s191–s192; agent-oči 5 full-page (s160, s161, s162, s163, s165) + s192 NASLOVNICA
+- ★★★ NASLOVNICA s192 = »Podzemelj P 1873–1922« — poročna knjiga sega do 1922 (README 'do 1917' = PRAVKA!) → poročna linija: P147 (1918) + P148 (1919) + P149–P151 (1920–1922)
+- 1917 = 8 vpisov (№1–2 s160 + №3–5 s161 + №6–7 s162 + №8 s163; P145-lead znal 2!); kalendarska kontrola 8/8 ✓ (5 NED + 1 PON + 2 SRE)
+- 16× full-row VLM L+R + korpus-forenzika ×10 (h15=1887-Fablić + h38 znana; Šimec ×223, Adlešič ×141, Butala ×23, Jakljič ×14, Marentič ×9, Tomc ×6, Štrukelj 2. pojav; M1906-Županič-18 v 2. zakonu [~])
+- evidence JSON (8 vpisov + 10 cc + 13 anom + honesty 12) + notes + parish.ts +1 blok (h15 × h38 INTRA) + qa-p146 (147. kontrola) + skripta p146
+- pin-kaskada 687→688 [×60] / 170→171 [×31] / 163→164 [sidra + anchors] v qa-parish.ts + 32 skriptah + p145 I6f ostanki
+- popravki: p146 template-ostanki (I2 vrste, I5b regex-leta, I9c notes-marker, I4c INTRA-vpis v JSON, I6f stale-vrednosti)
+- verifikacija: p146 --check 60/60 + --live 62/62 · p145 61/61 · runQA **147/147 ok:True** · tsc 0 · lint 0
+- push: commit + GitHub main + sync.yml/deploy.yml dispatch (GitLab + Vercel)
+
+Stage Summary:
+- 1917 = 8 vpisov; ★★★ 4 POROKE NA ISTI DAN 18.2.1917 = 2. rekord linije (po 1893: 7!)
+- ★★★ vojaški WWI-režim: №1 zidar-SANITETNI vojak (Tunice [~] neidentificirana oblast!) + Genehmigung k.k. Feld-Sanitäts-Abtheilung + DISPENS od 3 razglasov (vojna nujna poroka na sredo!) + №6 k.u.k. VOJNI delavec (8 listin!) + №8 vojni INVALID-fotograf "PRI VOJAKIH" (1. vojaški Wohnort!) + Trauungsermächtigung Feldsuperior Štabbuch 4982/17 + 2. DISPENS
+- ★★ №4 1. MNLADOLETEN ŽENIN linije (21 < 24) + mladoletna nevesta = OBA mladoletna (1. tak par!) + zglašnica KRANJSKA GORA (2. pojav)
+- ★★ №7 oče-PRAZEN (3. primer) + Butala 70 let (2. najstarejši!) + 33-letna razlika + građnik-priča (nov poklic!)
+- ★★ №3 predkorpusna generacija (Jakljič b. 1863!) × Šimec (×223 največja mreža!) = h15 × h38 INTRA + zglašnica na poročni dan
+- ★ №5 30-letna razlika (Adlešič 65 × Kambič 35) + Tribuče 2. pojav; ISTA-HIŠE 0 (2. leto); duhovnik Miklavčič ×8 (4. branje)
+- korpus po P146: 688 vitals · 171 blokov · 164 sidra · 72 hiš; QA 147/147
+- NASLEDNJE: **P147 = leto 1918** (№1 4.2. že viden na s163!; s164 = 3 vpisa 1918 z k.u.k. Bahnbaukompanie listino) → P148 (1919: 11 vpisov vidnih — №6 Griblje 77 × 37/8 INTRA hišar × Pezdirc!) → P149–P151 (1920–1922)

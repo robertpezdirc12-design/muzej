@@ -73,7 +73,7 @@ GRIBLJE_MARRIAGES = 3
 GRIBLJE_HOUSES_TS = "10,53,61,91"   # hiše z 1890 bloki v parish.ts
 EXPECTED_VITALS = 548               # P119 dokaz lastna kumulativa (544 + 4 bloki)
 BLOCKS_04455 = 31                    # 27 (P118) + 4 novih blokov 1890 (P119)
-BLOCKS_04455_TS = 170   # POSODABLJENO P144: 164 (P142-era) → 168 (P143: +4 — ZAMUDA SANIRANA!) → 169 (P144: +1 h82!)   # P140: + 6 blokov 1911               # P126: + 9 blokov 1897 (52 + 9)                # parish.ts zdaj = 49 (P121 +4 bloki 1892 + P122 +5 bloki 1893 + P123 +4 bloki 1894 + P124 +3 bloki 1895)
+BLOCKS_04455_TS = 171   # POSODABLJENO P144: 164 (P142-era) → 168 (P143: +4 — ZAMUDA SANIRANA!) → 169 (P144: +1 h82!)   # P140: + 6 blokov 1911               # P126: + 9 blokov 1897 (52 + 9)                # parish.ts zdaj = 49 (P121 +4 bloki 1892 + P122 +5 bloki 1893 + P123 +4 bloki 1894 + P124 +3 bloki 1895)
 P80_HOUSES = 46                     # 44 (P118) + h91 + h53 NOVI v vzorcu (h10/h61 že)
 DATE_COUNTS = {"januar": 1, "februar": 2, "marec": 0, "april": 1, "maj": 3,
                "junij": 1, "julij": 1, "avgust": 3, "september": 0, "oktober": 0,
@@ -338,9 +338,9 @@ def main() -> int:
     check("I9 qa-p119", '"qa-p119-parish-marriage-1890"' in qa)
     check("I9b qa-p115 bloki 78", "poročni bloki (04455) ≠ 142" in qa)
     check("I9c p80 bloki 78", "poročni vpisi (04455) ≠ 158" in qa)
-    check("I9[cd] p80 sidra 72 (1898×9 · 1899×6 · 1900×2!)", "poročna sidra ≠ 163" in qa)
+    check("I9[cd] p80 sidra 72 (1898×9 · 1899×6 · 1900×2!)", "poročna sidra ≠ 164" in qa)
     # vitals 550 regresijska zaščita v qa-p119
-    check("I9e vitals 637 zaščita (P128)", "HOUSE_VITALS.length !== 687" in qa[qa.index("const p119Marr"):] if "const p119Marr" in qa else False)
+    check("I9e vitals 637 zaščita (P128)", "HOUSE_VITALS.length !== 688" in qa[qa.index("const p119Marr"):] if "const p119Marr" in qa else False)
     check("I9f stari 537/544 iztekla", "HOUSE_VITALS.length !== 537" not in qa and "HOUSE_VITALS.length !== 544" not in qa)
 
     # ---------- I10: README + notes ----------

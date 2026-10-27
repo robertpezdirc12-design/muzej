@@ -2678,6 +2678,47 @@ export const HOUSE_VITALS: HouseVital[] = [
     status: "DOCUMENTED",
   },
 
+  // ——— P146 razširitev: POROČNA KNJIGA 04455 — polno leto 1917 (skeni
+  // s160–s163 == Pag. 159–162; letna glava »Leto 1917« ročno VELIKO na s160
+  // [5. zaporedna!]; meja 1917/1918: s163 vsebuje ŽE letno glavo »1918« +
+  // 1918 №1 = KNJIGA SE NADALJUJE! + NASLOVNICA s192 = »Podzemelj
+  // P 1873–1922« → poročna knjiga do 1922 — README-popravek!); 8 vpisov:
+  // … → 1915:6 → 1916:4 → 1917:8 — OBNOVA po 1916 (še vedno pod vojno
+  // ravnjo!); 5 NED + 1 PON + 2 SRE — vpisi z Griblji (1 poroka: №3 h15 ×
+  // h38 INTRA!):
+  // NOVELE: ★★★ №2–№5 = 4 POROKE NA ISTI DAN 18. 2. 1917 (nedelja) = 2.
+  // REKORD LINIJE (po 1893: 7!) + ★★★ VOJAŠKI WWI-REŽIM (№1 Franc Vrhovnik
+  // zidar-SANITETNI vojak + Genehmigung der k.k. Feld-Sanitäts-Abtheilung +
+  // DISPENS von 3 Aufgeboten [tempora clausa — vojna NUJNA poroka na sredo
+  // 3.1.!] + №6 Jožef Jager k.u.k. VOJNI delavec + №8 Andrej Višček vojni
+  // INVALID-fotograf »PRI VOJAKIH« [1. vojaški Wohnort linije!] +
+  // Trauungsermächtigung des Feldsuperiors Štabbuch 4982/17 + 2. DISPENS!) +
+  // ★★ №4 1. MLADOLETEN ŽENIN LINIJE (Lovrencij Štrukelj 21 < 24! — čevljar
+  // + žel. uslužbenec, 2 poklica!) + mladoletna nevesta = OBA MLADOLETA (1.
+  // tak par!) + zglašnica KRANJSKA GORA (2. pojav — žel. mobilnost!) + ★★
+  // №7 oče-ŽENINA PRAZEN (3. primer!) + Janez Butala 70 LET [r. 1846 — 2.
+  // najstarejši ženin po 71 = 1914 №4!] + 33-letna razlika + GRAĐNIK-priča
+  // (Jožef Ronda — NOV poklic!) + ★★ №3 PREDKORPUSNA generacija (Janez
+  // Jakljič b. 8. 6. 1863 — 53! = najstarejši rojen ženin z rojstnim letom!)
+  // + 4 pokojni starši + zglašnica NA POROČNI DAN št. 1 + ★ №5 30-letna
+  // razlika (Nikolaj Adlešič 65 × Katarina Kambič 35!) + TRIBUČE (2. pojav
+  // P144-oblasti!) + №2 M1906-ŽENIN-HIŠA (Županič-18 recipročni par!) v 2.
+  // zakonu [~ vdovec] + ISTA-HIŠE 1917 = 0 (2. leto!) + duhovnik Valerijan
+  // Miklavčič ×8 (4. branje!) + ~7 NOVIH PRIIMKOV (Jager · Drganec · Višček
+  // · Šarašinič [~] · Lugnar · Ronda · Halčič [~])
+  // Dokaz: research/issue17/parish-marriage-1917.json; verifikator:
+  // scripts/p146_parish_marriage_1917.py --check (I1–I12).
+  {
+    houseNo: "15",
+    bookSignature: "04455",
+    year: 1917,
+    scan: 161,
+    page: 160,
+    whatSi: "poroka (18. 2. 1917, vpis 3 — NEDELJA; 2. od 4 POROK NA ISTI DAN [№2–№5!] = 2. REKORD LINIJE po 1893: 7!) — ženin Janez JAKLJIČ [korpus ×14!], posestnik, 53 [r. 8. VI. 1863 — 53 ✓ aritmetika — PREDKORPUSNA generacija: najstarejši rojen ženin z rojstnim letom v liniji!], rim. kat., GRIBLJE 15 (h15 = poročna 1887 №4 Fablić! znana hiša; starši +Miko Jakljič posestnik † × +Marija roj. Šambič [~] †) × Ana ŠIMEC [korpus ×223 = NAJVEČJA priimška mreža!], posestnica samostne hiše, 44 [r. 2. V. 1872 — 44 ✓], GRIBLJE 38 (h38 = znana hiša; starši +Jure Šimec posestnik † × +Ana roj. Križan † = KRIŽAN-mreža!); ★ INTRA-GRIBLJE (h15 × h38 — obe znani!) + 4 pokojni starši (obe strani!) + zglašnica ženinova od županstva Griblje NA POROČNI DAN 18. 2. 1917 št. 1 (hitri zakon!); priči: Matija Jakljič, posest. + Matija Štraus, posest. (ŠTRAUS-mreža — h71→h31 selitev P143!), oba rim. kat.; duhovnik Val. Miklavčič [~ — 4. branje!]",
+    whatEn: "marriage (Feb 18, 1917, entry 3 — SUNDAY; the 2nd of 4 MARRIAGES ON THE SAME DAY [№2–№5!] = the 2nd RECORD OF THE LINE after 1893: 7!) — groom Janez JAKLJIČ [the corpus ×14!], a landowner, 53 [b. Jun 8, 1863 — 53 ✓ arithmetic — a PRE-CORPUS generation: the oldest groom with a birth year in the line!], Roman Catholic, GRIBLJE 15 (h15 = the 1887 marriage №4 Fablić! a known house; parents +Miko Jakljič landowner † × +Marija née Šambič [~] †) × Ana ŠIMEC [the corpus ×223 = THE LARGEST surname network!], an independent house's owneress, 44 [b. May 2, 1872 — 44 ✓], GRIBLJE 38 (h38 = a known house; parents +Jure Šimec landowner † × +Ana née Križan † = the KRIŽAN network!); ★ an INTRA-GRIBLJE marriage (h15 × h38 — both known!) + 4 deceased parents (both sides!) + the banns of the groom from the Griblje municipality ON THE WEDDING DAY Feb 18, 1917 no. 1 (a swift marriage!); the witnesses: Matija Jakljič, landowner + Matija Štraus, landowner (the ŠTRAUS network — the h71→h31 move P143!), both Roman Catholic; priest Val. Miklavčič [~ — the 4th reading!]",
+    status: "DOCUMENTED",
+  },
+
   // ——— P145 razširitev: POROČNA KNJIGA 04455 — polno leto 1916 (skeni
   // s158 + s159 == Pag. 157–158; s158 = letna glava »1916« [P144-pričakovano!];
   // meja 1916/1917: s159-dno = PRAZEN pas + DIAGONALA (obe strani!) + s160 =

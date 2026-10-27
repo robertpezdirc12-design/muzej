@@ -55,7 +55,7 @@ GRIBLJE_MARRIAGES_STR = "2 (v17-1895: h24 × h14"
 GRIBLJE_HOUSES = [14, 24, 18]
 EXPECTED_VITALS = 569          # 566 (P124) + 3 bloki (h24 + h14-1895ext + h18-1896)
 BLOCKS_04455 = 52                     # P125 dokaz lastna kumulativa (49 + 3); trenutna = 142 (P138)             # P125 dokaz lastna kumulativa (49 + 3)
-BLOCKS_04455_TS = 170   # POSODABLJENO P144: 164 (P142-era) → 168 (P143: +4 — ZAMUDA SANIRANA!) → 169 (P144: +1 h82!)   # P140: + 6 blokov 1911            # parish.ts zdaj = 61 + 9 blokov 1898 (P127)
+BLOCKS_04455_TS = 171   # POSODABLJENO P144: 164 (P142-era) → 168 (P143: +4 — ZAMUDA SANIRANA!) → 169 (P144: +1 h82!)   # P140: + 6 blokov 1911            # parish.ts zdaj = 61 + 9 blokov 1898 (P127)
 P80_HOUSES = 51                # 48 (P124) + 3 (h24/h14/h18 — krstni bloki teh hiš izven p80 vzorca!) — dokaz-const (JSON P125)
 P80_PT_GAP = 10                # nespremenjeno
 RAZPORED = {97: 3, 98: 4, 99: 5, 100: 5, 101: 1}  # v17-19 + v1-4 + v5-9 + v10-14 + v15
@@ -405,7 +405,7 @@ def main() -> int:
     qa = open(QA_TS).read()
     check("I9 qa-p125", '"qa-p125-parish-marriage-1896"' in qa)
     check("I9b p80 bloki 78", "poročni vpisi (04455) ≠ 158" in qa)
-    check("I9[cd] p80 sidra 72 (1895×5 + 1896×1 + 1897×9 + 1898×9 · 1899×6 · 1900×2)", "poročna sidra ≠ 163" in qa)
+    check("I9[cd] p80 sidra 72 (1895×5 + 1896×1 + 1897×9 + 1898×9 · 1899×6 · 1900×2)", "poročna sidra ≠ 164" in qa)
     check("I9d p80 hiša 1896 = [18]", "hiša 1896 (04455) ≠ [18]" in qa)
     check("I9e p80 hiše 58", "različnih hiš (vse tri knjige) ≠ 70" in qa)
     check("I9f PT luknja 12 (+h46/h48 — P127!)", "PT luknja ≠ 13 hiš" in qa)

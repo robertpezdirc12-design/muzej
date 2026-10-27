@@ -1,0 +1,361 @@
+{
+ "source": {
+  "book": "04455 (ženitovanske knjige — Trauungsbuch, župnija Podzemelj)",
+  "url": "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04455/",
+  "year": 1917,
+  "scans": "s160 (№1–2) + s161 (№3–5) + s162 (№6–7) + s163 (№8) == Pag. 159–162; letna glava »Leto 1917« na s160 (ročno, velika!); meja 1917/1918: s163 vsebuje ŽE letno glavo »1918« + 1918 №1 (4. 2. 1918 Otok 5 Janez Križan × Marija Galovc Krasine 44!) — KNJIGA SE NADALJUJE!",
+  "method": "4× full-page agent-oči (s160–s163) + 16× full-row VLM L+R + korpus-forenzika (10 križev) + kalendarska kontrola vseh 8 datumov ✓ + naslovnica s192 = »Podzemelj P 1873–1922« = KNJIGA DO 1922 (README-popravek!)"
+ },
+ "lead": {
+  "claim": "P145-lead: 1917 №1–2 že vidni na s160 (letna glava »1917« + reset №1) — poročna knjiga 04455 se konča 1917 → P146 = ZAKLJUČEK POROČNE LINIJE",
+  "correction": "8 vpisov (NE 2! — №3–8 na s161–s163 so bili izven P145-radarske meje!) + **KNJIGA SE NE KONČA 1917!**: s163 vsebuje že letno glavo »1918« + №1 (4. 2. 1918), s164 = 3 vpisa 1918, s165–s167 = 11 vpisov 1919, naslovnica s192 = »Podzemelj P 1873–1922« → poročna knjiga sega do 1922 = poročna linija se RAZŠIRI na P147 (1918) + P148 (1919) + P149 (1920) + P150 (1921) + P151 (1922)! + ★★★ №2–№5 = 4 POROKE NA ISTI DAN 18. 2. 1917 (nedelja) = 2. rekord linije (po 1893: 7!)"
+ },
+ "entries": [
+  {
+   "row": 1,
+   "date": "3. januar 1917 (sreda — vojni nujni primer z dispensom od razglasov!)",
+   "scan": 160,
+   "page": 159,
+   "groom": {
+    "name": "Franc Vrhovnik [~ Vrhownik]",
+    "place": "PODZ-MEJ. (= Podzemelj) — TUNICE [~ — žup./občina 'Tunice' NEidentificirana — rojstni list št. 33 + samsko stanje št. 34 od žup. urada Tunice! — VERIF]",
+    "stand": "zidar — SANITETNI VOJAK (medicinski vojak WWI!)",
+    "age": 25,
+    "status": "ženin (sanitetni vojak!)",
+    "birth": "27. X. 1891 [~ 23.10 — VLM; 25 ✓ aritmetika]"
+   },
+   "bride": {
+    "name": "Jozefa Gregorič [korpus ×6]",
+    "place": "GRADAC 8 [~ št. 8 — VERIF]",
+    "stand": "posestničeva hči [~ 'povst hiši' — VERIF]",
+    "age": 23,
+    "status": "ženina",
+    "birth": "6. VIII. 1893 [23 ✓ aritmetika]"
+   },
+   "groomParents": "Lovrencij Vrhovnik [~], ½ zemljak, Tunice × roj. Miko [~ Rozalija? — VERIF], oba r. katol. [~ — VERIF]",
+   "brideParents": "Miko [~ Gregorič?] × Marija roj. Halčič [~ — VERIF], oba r. katol. [~]",
+   "witnesses": "Jožef Valičič [~], posestnik + Anton Štrugar(?) Novak(?) [~ — VERIF], posestnik in kovač [~]",
+   "witnessStatus": "2 posestnika [~ kovač]",
+   "urkunden": "1) ženit. zglašnica ženinova od županstva Tunice [~] 20./29.12.1916 št. 1; 2) ★★ Genehmigung der k.k. Feld-Sanitäts-Abtheilung I Abtheilung Nr. 6 vom 2.1.1917 (sovražje sanitetne vojske!); 3) ★★ Dispens von 3 Aufgeboten n. tempore clausi — Feldsuperiorat 2.1.1917 (dispens od 3 razglasov v zaprtem času — vojni nujni primer!); 4) spregled 2 oklicov in prepričanja(?) časa domačega župana(?) [~]; 5) dovoljenje za mladoletno nevesto [~]; 6) rojstni list ženinov žup. urad Tunice št. 33, 15. 8. 1916; 7) spričevalo samskega stanu ženina žup. urad Tunice št. 34, 30.12.1916; 8) spregled z oklicov [~]; 9) razodetna prisega ženina",
+   "priest": "P. Valerijan Miklavčič [~ — 4. branje!], župnik",
+   "anomalies": [
+    "SANITETNI VOJAK (medicinski) + Genehmigung k.k. Feld-Sanitäts-Abtheilung + DISPENS od 3 razglasov (tempora clausa) = vojna NUJNA poroka (sreda 3.1.!)",
+    "žup./občina 'TUNICE' [~] = NEidentificirana (rojstni list + samsko stanje od tam!)",
+    "sreda = 2. ne-vikend dan v vojnih letih (po 1916 №1 čet!)"
+   ]
+  },
+  {
+   "row": 2,
+   "date": "18. februar 1917 (nedelja — 1. od 4 porok tega dne!)",
+   "scan": 160,
+   "page": 159,
+   "groom": {
+    "name": "Miko Županič [korpus Županič-18 hiša: M1906 №2+№3 RECIPROČNI par Brodarič 35 ↔ Županič 18!]",
+    "place": "KRASINEC 18",
+    "stand": "posestnik [~ vdovec — Stan-stolpec VERIF]",
+    "age": 51,
+    "status": "ženin [~ vdovec — 2. zakon!]",
+    "birth": "10. IX. 1865 [51 ✓ aritmetika]"
+   },
+   "bride": {
+    "name": "Bara Šarašinič [~ Šarašončič/Harasinčič — VERIF; NOV priimek!]",
+    "place": "KRASINEC 52",
+    "stand": "posestrnica [~ — VERIF]",
+    "age": 44,
+    "status": "ženina",
+    "birth": "21. V. 1872 [44 ✓ aritmetika]"
+   },
+   "groomParents": "+Matija Županič, posestnik (†) × +Katarina roj. Šarašinič [~] (†), oba r. kat.",
+   "brideParents": "+Peter Šarašonič [~], posestnik (†) × +Marija roj. Štambič [~ — VERIF] (†), oba katol.",
+   "witnesses": "Janez Županič + Janez Rakar, čevljarski mojster",
+   "witnessStatus": "posestnik + čevljarski mojster",
+   "urkunden": "1) ženit. zglašnica ženinova od županstva Podzemelj z dne 17. 2. 1917 št. 28 (poroka naslednji dan ✓); 2) spregled 2 oklicov od c. kr. glavarstva Črnomelj z dne 18. 2. 1917 št. 3196 (na poročni dan!); 3) overjen list dekleta(?) v Melikah [~ — VERIF]",
+   "priest": "P. Valerijan Miklavčič [~]",
+   "anomalies": [
+    "M1906-ŽENIN-HIŠA (Županič-18 = recipročni par Brodarič 35 ↔ Županič 18!) — 11 let pozneje v 2. zakonu [~]",
+    "starša OBEH strani † (4 pokojni starši!)",
+    "listina glavarstva NA POROČNI DAN (18.2.)"
+   ]
+  },
+  {
+   "row": 3,
+   "date": "18. februar 1917 (nedelja — 2. od 4 porok tega dne!)",
+   "scan": 161,
+   "page": 160,
+   "groom": {
+    "name": "Janez Jakljič [korpus ×14!]",
+    "place": "GRIBLJE 15 (h15 = poročna 1887 №4 Fablić! znana hiša)",
+    "stand": "posestnik",
+    "age": 53,
+    "status": "ženin",
+    "birth": "8. VI. 1863 [53 ✓ aritmetika] — PREDKORPUSNA generacija (b. 1863 < 1886!) — najstarejši rojstni datum ženina v liniji z rojstnim letom!"
+   },
+   "bride": {
+    "name": "Ana Šimec [korpus ×223 — NAJVEČJA mreža!]",
+    "place": "GRIBLJE 38 (h38 = znana hiša)",
+    "stand": "posestnica samostne hiše",
+    "age": 44,
+    "status": "ženina (samska?)",
+    "birth": "2. V. 1872 [44 ✓ aritmetika]"
+   },
+   "groomParents": "+Miko Jakljič, posestnik (†) × +Marija roj. Šambič [~] (†), oba r. k.",
+   "brideParents": "+Jure Šimec, posestnik (†) × +Ana roj. Križan (†), oba r. k.",
+   "witnesses": "Matija Jakljič, posest. + Matija Štraus, posest. (ŠTRAUS-mreža!), oba rim. kat.",
+   "witnessStatus": "2 posestnika",
+   "urkunden": "ženit. zglašnica ženinova od županstva GRIBLJE z dne 18. 2. 1917 št. 1 (NA POROČNI DAN — hitri zakon!)",
+   "priest": "P. Valerijan Miklavčič [~]",
+   "anomalies": [
+    "PREDKORPUSNA generacija (b. 1863 — 53 let!)",
+    "starša OBEH strani † (4 pokojni!)",
+    "zglašnica NA POROČNI DAN št. 1 (hitri zakon!)",
+    "INTRA-GRIBLJE (h15 × h38 — obe hiši znani!) — edini Griblje-vpis leta"
+   ]
+  },
+  {
+   "row": 4,
+   "date": "18. februar 1917 (nedelja — 3. od 4 porok tega dne!)",
+   "scan": 161,
+   "page": 160,
+   "groom": {
+    "name": "Lovrencij Štrukelj [ŠTRUKELJ = 2. pojav — 1916 №3-priča Lovrenc Štrukelj žel. delavec!]",
+    "place": "VRANOVIČE 30",
+    "stand": "čevljar in železniški uslužbenec (2 poklica!)",
+    "age": 21,
+    "status": "ženin — MLADOLETEN (21 < 24) = 1. MNLADOLETEN ŽENIN LINIJE!",
+    "birth": "6. VIII. 1895 [21 ✓ aritmetika]"
+   },
+   "bride": {
+    "name": "Ivana Brinc [BRINC-mreža!]",
+    "place": "VRANOVIČE 33",
+    "stand": "posestnica samostne hiše",
+    "age": 23,
+    "status": "ženina — MLADOLETNA (23 < 24!) — OBA MLADOLETA!",
+    "birth": "18. V. 1893 [23 ✓ aritmetika]"
+   },
+   "groomParents": "Lovrencij Štrukelj, čevljarski mojster × Marija roj. Štuga [~ — VERIF], oba rim. kat. (živa!)",
+   "brideParents": "+Marko Brinc, posestnik (†) × +Ana roj. Jaklič (†), oba rim. kat.",
+   "witnesses": "Janez Lugnar [NOV priimek!], žel. uslužbenec (KOLEGA ženina!) + Miko Jaklič, posestnik, oba rim. kat.",
+   "witnessStatus": "žel. uslužbenec + posestnik",
+   "urkunden": "1) ★ ženit. zglašnica ženinova od županstva KRANJSKA GORA z dne [23.1. št. 5 / 31.1. št. 1 — VERIF] 1917 (★ 2. KRANJSKA GORA oblast linije po 1915 №6! — železniška služba!); 2) dovoljenje očeta mladoletnega ženina; 3) soglasje [~ — VERIF] Mulika(?) z dne 8.2.1917",
+   "priest": "P. Valerijan Miklavčič [~]",
+   "anomalies": [
+    "1. MLADOLETEN ŽENIN LINIJE (21 < 24!) + mladoletna nevesta = OBA MLADOLETA! (1. tak par linije!)",
+    "zglašnica KRANJSKA GORA (2. pojav — žel. mobilnost; oče dovoljenje)",
+    "2 poklica ženina (čevljar + žel. uslužbenec) — 1. dualni poklic?"
+   ]
+  },
+  {
+   "row": 5,
+   "date": "18. februar 1917 (nedelja — 4. od 4 porok tega dne!)",
+   "scan": 161,
+   "page": 160,
+   "groom": {
+    "name": "Nikolaj Adlešič [ADLEŠIČ korpus ×141!]",
+    "place": "TRIBUČE žup. Adlešiči (P144-nova oblast Tribuče!)",
+    "stand": "posestnik",
+    "age": 65,
+    "status": "ženin",
+    "birth": "16. XII. 1851 [65 ✓ aritmetika] — 2. NAJSTAREJŠI ŽENIN LINIJE (po 71 = 1914 №4!)"
+   },
+   "bride": {
+    "name": "Katarina Kambič [KAMBIČ korpus ×96!]",
+    "place": "KRASINEC 79 [~ — VERIF]",
+    "stand": "posestnica samostne hiše",
+    "age": 35,
+    "status": "ženina",
+    "birth": "16. III. 1881 [35 ✓ aritmetika] — 30-LETNA STAROSTNA RAZLIKA (65 × 35!)"
+   },
+   "groomParents": "+Marko Adlešič, posestnik (†) × +Ana roj. Bahor (†), oba rim. kat.",
+   "brideParents": "+Janez Kambič, posestnik (†) × +Ana roj. Križan (†), oba rim. kat.",
+   "witnesses": "Janez Županič(Šupanič?) [~] + Miko Adlešič, posestnik (ženinov sorodnik!)",
+   "witnessStatus": "posestnik ×2",
+   "urkunden": "1) ženitor(ženinov?) zglašenje od županstva TRIBUČE z dne 15. 2. 1917 št. 80(?) [~]; 2) rojstni list in [ostalni?] list ženinov od žup. urada Adlešiči z dne 2. 2. [~] št. 48; 3) sudni(?) list [~ — VERIF] od žup. urada Adlešiči z dne 18. 2. 1917 št. 44 (na poročni dan!)",
+   "priest": "P. Valerijan Miklavčič [~]",
+   "anomalies": [
+    "30-LETNA starostna razlika (65 × 35!)",
+    "TRIBUČE (P144-nova oblast — 2. pojav!) + Adlešiči listine",
+    "2. najstarejši ženin linije (65)",
+    "listina NA POROČNI DAN št. 44"
+   ]
+  },
+  {
+   "row": 6,
+   "date": "18. april 1917 (sreda)",
+   "scan": 162,
+   "page": 161,
+   "groom": {
+    "name": "Jožef Jager [NOV priimek!]",
+    "place": "HRUŠICA 13 [~ — katera Hrušica? rojstni list žup. 'sv. Peter'? — VERIF]",
+    "stand": "k.u.k. VOJNI DELAVEC [pisarjevo '...kon. su-dav. voj. delavec' — VERIF; vojna industrija WWI!]",
+    "age": 22,
+    "status": "ženin (vojni delavec!)",
+    "birth": "18. III. 1895 [22 ✓ aritmetika]"
+   },
+   "bride": {
+    "name": "Marija Tomc [korpus ×6]",
+    "place": "PRIMOSTEK 15",
+    "stand": "posestnica hiše",
+    "age": 22,
+    "status": "ženina",
+    "birth": "26. II. 1895 [22 ✓ aritmetika] — ISTA STAROST (22 × 22)!"
+   },
+   "groomParents": "+Janez Jager, kočar [~ — VERIF] (†) × +Lila [~ Lina? — VERIF] roj. Prepeluh [~] (†), oba r. kat.",
+   "brideParents": "+Janez Tomc, posestnik (†) × +Katarina roj. Jaklič (†), oba r. kat.",
+   "witnesses": "Miko Jaklič, posestnik + Jože Tomc, posest. sin (nevestin brat?), oba r. kat.",
+   "witnessStatus": "posestnik + posestnikov sin",
+   "urkunden": "1) ženinov rojstni list žup. [sv. Peter? — VERIF] št. [2040/2016 — VERIF] z dne [13.2.1916 — VERIF]; 2) spregled z oklicov od glavarstva št. 1959(?) 25.3.1917; 3) zdravstveno pričevanje št. 4899 z dne 5.4.1917; 4) vojno dovoljenje vojaške oblasti št. 2?? z dne 12.4.1917 [~]; 5) bralna pričevanja(?) ženina c. kr. sod. št. 3896 [~]; 6) [Podrope?] ... dežbi(?) z dne 2.4.1917 [~]; 7) razodetna prisega; 8) ženit. zglašnica županstva Podzemelj [~]",
+   "priest": "P. Valerijan Miklavčič [~]",
+   "anomalies": [
+    "k.u.k. VOJNI DELAVEC (vojaška industrija WWI!) — nov vojni poklic",
+    "8 listin = najbogatejši seznam vojnega leta",
+    "ISTA STAROST 22 × 22 (3. tak par? [~ VERIF])",
+    "rojstni list žup. 'sv. Peter' [~] = zunaj-župnijski izvor"
+   ]
+  },
+  {
+   "row": 7,
+   "date": "22. oktober 1917 (ponedeljek)",
+   "scan": 162,
+   "page": 161,
+   "groom": {
+    "name": "Janez Butala [BUTALA korpus ×23!]",
+    "place": "[VRELNJIGA?] 19 [~ — NEberljivo/NEidentificirano — VERIF; listine od žup. Semič!]",
+    "stand": "kmečki posestnik",
+    "age": 70,
+    "status": "ženin",
+    "birth": "28. XII. 1846 [70 ✓ aritmetika] — 2. NAJSTAREJŠI ŽENIN LINIJE (po 71 = 1914 №4!) + 33-LETNA RAZLIKA!"
+   },
+   "bride": {
+    "name": "Marija Drganec [NOV priimek!]",
+    "place": "[KRMOŠNJICE-vrh/Krvavič vrh?] [~ — VERIF; žup. Semič po listinah!]",
+    "stand": "samska posestnica",
+    "age": 37,
+    "status": "ženina",
+    "birth": "29. XII. 1879 [37 ✓ aritmetika]"
+   },
+   "groomParents": "MATI-SAMO: +Ana Butala, rim. kat. (†) — OČE PRAZEN (3. primer linije po 1915 №1 + 1916 №3!)",
+   "brideParents": "+Matija Drganec, posest. (†) × +Marija roj. Novak (†), r. k.",
+   "witnesses": "Matija Brkovič [~], posestnik + Jožef Ronda [NOV priimek!], građnik [NOV POKLIC — gradbenik!], oba r. kat.",
+   "witnessStatus": "posestnik + građnik (1. građnik-priča linije!)",
+   "urkunden": "1) overitev roj. lista ž. [Semič] št. 134/17; 2) spričevalo samskega stanu neveste ž. u. Semič št. 138/17; 3) oklicni list žup. v Semič(?) št. 73/17; 4) ženitovanjska zglašnica na ženinovem(?) hišnem št. [Podzemelj?] 9.10.1917; 5) spričevalo [~] št. 18/17; 6) prirelica(?) copulandi(?) od žup. urada [Semič/Šmihel? — VERIF] št. 153/17",
+   "priest": "P. Valerijan Miklavčič [~]",
+   "anomalies": [
+    "OČE-ŽENINA PRAZEN (3. primer linije — mati-samo!) + nevestini starši oboji †",
+    "70-letnik ženin (2. najstarejši!) + 33-LETNA razlika",
+    "GRAĐNIK-priča (Jožef Ronda) = 1. gradbeni poklic linije!",
+    "listine od žup. SEMIČ (Belokrajinska oblast — 1.?) + [Šmihel? — VERIF]"
+   ]
+  },
+  {
+   "row": 8,
+   "date": "25. november 1917 (nedelja)",
+   "scan": 163,
+   "page": 162,
+   "groom": {
+    "name": "Andrej Višček [NOV priimek!]",
+    "place": "PRI VOJAKIH (sicer Velika Bučina vas 3, žup. Bučina) — 1. 'PRI VOJAKIH' Wohnort LINIJE (vojaška postojanka/bolnišnica?)",
+    "stand": "voj. invalid — fotograf [roj. invalid, I. razred — VERIF]",
+    "age": 23,
+    "status": "ženin (vojanski invalid WWI!)",
+    "birth": "19. IX. 1894 [23 ✓ aritmetika]"
+   },
+   "bride": {
+    "name": "Marija Marentič [MARENTIČ korpus ×9]",
+    "place": "GRADAC 5",
+    "stand": "posestnikova hči",
+    "age": 22,
+    "status": "ženina — MLADOLETNA (22 < 24!)",
+    "birth": "11. VIII. 1895 [22 ✓ aritmetika]"
+   },
+   "groomParents": "Janez Višček, posestnik × Alojzija roj. Cupič [~ — VERIF], oba katoliška (živa!)",
+   "brideParents": "Jožef Marentič, posestnik × +Marija roj. Stojmič [~] (†), oba katoliška",
+   "witnesses": "Matija Štepanič, posest. + Alojzij Dim, gostilničar in posest. (gostilničar 3. pojav!), oba katoliška",
+   "witnessStatus": "posestnik + gostilničar-posestnik",
+   "urkunden": "1) ženinov rojstni list; 2) ženinov zdravstveni list št. [415/716 — VERIF], žup. urad, [17.12.1916? — VERIF]; 3) ženitovanjska zglašnica št. 96, županova listina [22.12.1916? — VERIF]; 4) spregled 2 oklicov št. 2178/17 glav. Črnomelj; 5) dovoljenje za mladoletno nevesto; 6) dovoljenje za mladoletnega ženina [~]; 7) ★ Trauungsermächtigung des Feldsuperiors, Štabbuch št. 4982/17 [~ — nem. vojaška listina — 4. vojaška listina linije!]; 8) ★ Dispens v 3. stopnji (od razglasov!)",
+   "priest": "P. Valerijan Miklavčič [~]",
+   "anomalies": [
+    "'PRI VOJAKIH' = 1. vojaški Wohnort linije (vojaška postojanka!)",
+    "vojanski INVALID-fotograf (ranjenec WWI!) + fotograf = NOV poklic",
+    "Trauungsermächtigung des Feldsuperiors (Štabbuch 4982/17) + Dispens 3. stopnje",
+    "MLADOLETA nevesta + [mladoleten ženin?] — dovoljenji za oba!"
+   ]
+  }
+ ],
+ "excluded": [],
+ "stats": {
+  "entries": 8,
+  "gribljeMarriages": 1,
+  "gribljeRows": [
+   3
+  ],
+  "gribljeHouses": [
+   "15",
+   "38"
+  ],
+  "gribljeIntra": 1,
+  "gribljeBlocks": 1,
+  "sameVillageRows": [
+   3,
+   4
+  ],
+  "sameVillageCount": 2,
+  "sameHouseRows": [],
+  "sameHouseCount": 0,
+  "wednesdays": 2,
+  "sundays": 5,
+  "mondays": 1,
+  "weekendPct": "6/8 = 75 % (5 NED + 1 PON + 2 SRE — vojni termini!)",
+  "sameDayRecord": "★★★ 4 POROKE NA ISTI DAN 18. 2. 1917 (nedelja — №2–№5!) = 2. REKORD LINIJE (po 1893: 7!)",
+  "lentGap": "NI porok v postu — 3. leto zapored (vojna!)",
+  "warGap": "WWI: 8 vpisov = OBNOVA po 1916 (4!) — še vedno pod vojno ravnjo (prej 1911: 6, 1912: 17!); VOJNI KONTEKST ×4 (№1 sanitETNI vojak + №6 k.u.k. vojni delavec + №8 vojni invalid 'pri vojakih' + №4 žel. Kranjska Gora) + 3 vojaške listine (Feld-Sanitäts-Abtheilung + Feldsuperior Štabbuch 4982/17 + vojno dovoljenje №6) + 2 dispensa od razglasov (№1 + №8!)",
+  "yearHeading": "DA — »Leto 1917« ročno VELIKO na s160 (5. zaporedna!); meja 1917/1918: s163 vsebuje ŽE letno glavo »1918« + 1918 №1 — KNJIGA SE NADALJUJE!",
+  "bookExtension": "NASLOVNICA s192 = »Podzemelj P 1873–1922« — poročna knjiga 04455 sega do 1922 (prejšnja trditev 'do 1917' = PRAVKA!); 1918: 4 vpisi že vidni (№1 4.2. + №2 7.6. + №3 30.6. + №4 10.10.) + 1919: 11 vpisov že vidni (s165–s167) → P147 (1918) + P148 (1919) + P149 (1920) + P150 (1921) + P151 (1922)!",
+  "vitalsTotal": 688,
+  "blocks04455": 171,
+  "sidraTotal": 164,
+  "p80Houses": 72,
+  "newHouses": [],
+  "unnumbered": 0
+ },
+ "crossChecks": [
+  "№3 h15 = poročna 1887 №4 (Johann Fablić, GRIBLJE 15 — P116!) — znana hiša (2. poročni dokaz)",
+  "№3 nevesta ŠIMEC — korpus ×223 (NAJVEČJA priimška mreža!) + h38 znana (18 omenb)",
+  "№2 Miko Županič KRASINEC 18 = M1906 №2+№3-ŽENIN-HIŠA (RECIPROČNI par Brodarič 35 ↔ Županič 18!) — 11 let pozneje v 2. zakonu [~ VERIF starost 51 ✓ 1865]",
+  "№4 ŠTRUKELJ = 2. pojav (1916 №3-priča Lovrenc Štrukelj žel. delavec!) + zglašnica KRANJSKA GORA = 1915 №6-vzorec (žel. mobilnost)",
+  "№5 ADLEŠIČ ×141 + KAMBIČ ×96 + priča Miko Adlešič (sorodnik) + nevestina mati roj. Križan (KRIŽAN-mreža!)",
+  "№6 Tomc ×6 + starša Jaklič + priča Miko Jaklič = JAKLJIČ-mreža ×14 (tudi №3 + №4!)",
+  "№7 BUTALA ×23 (močna mreža!) + nevestina mati roj. NOVAK (korpus!)",
+  "№8 MARENTIČ ×9 + priča Matija ŠTEPANIČ (cf. 1916 №1 župan-priča Jakob Štepanič — familija [~]) + nevestina mati roj. Stojmič [~]",
+  "duhovnik P. Valerijan Miklavčič ×8 (vseh 8 vpisov!) — 4. neodvisno branje, potrjuje Miklavč- (korpus Mikčak [~])",
+  "№3 priča Matija ŠTRAUS (ŠTRAUS-mreža: h71→h31 selitev P143!) + №2-cesta čevljarski mojster Rakar (čevljar 2. pojav)"
+ ],
+ "anomalies": [
+  "№1 SANITETNI vojak + Genehmigung der k.k. Feld-Sanitäts-Abtheilung + DISPENS von 3 Aufgeboten (tempora clausa!) = vojna NUJNA poroka na sredo 3.1. (1. dan leta +3!)",
+  "№1 žup./občina 'TUNICE' [~] = NEidentificirana oblast (rojstni list št. 33 + samsko stanje št. 34 od tam!)",
+  "★★★ №2–№5 = 4 POROKE NA ISTI DAN 18. 2. 1917 (nedelja) = 2. REKORD LINIJE (po 1893: 7!)",
+  "№3 PREDKORPUSNA generacija (b. 1863 — ženin 53) + 4 pokojni starši + zglašnica NA POROČNI DAN",
+  "★★ №4 1. MLADOLETEN ŽENIN LINIJE (21 < 24!) + mladoletna nevesta (23) = OBA MLADOLETA (1. tak par!)",
+  "№4 zglašnica iz KRANJSKE GORE (2. pojav oblasti — železniška mobilnost po 1915 №6!) + ženin z 2 poklicema (čevljar + žel. uslužbenec)",
+  "№5 30-LETNA starostna razlika (65 × 35!) + 2. najstarejši ženin (65)",
+  "№6 k.u.k. VOJNI DELAVEC (vojaška industrija!) + 8 listin + rojstni list od zunaj-župnije [sv. Peter? ~]",
+  "★★ №7 OČE-ŽENINA PRAZEN (3. primer linije — mati-samo!) + 70-LETNIK (2. najstarejši!) + 33-LETNA razlika + GRAĐNIK-priča (nov poklic!)",
+  "★★ №8 'PRI VOJAKIH' Wohnort (1. linije!) + vojanski INVALID-fotograf (NOV poklic) + Trauungsermächtigung des Feldsuperiors (Štabbuch 4982/17) + Dispens 3. stopnje",
+  "№8+№1 DVA dispensa od razglasov v enem letu (vojni režim!)",
+  "★★ KNJIGA-RAZŠIRITEV: naslovnica s192 = »Podzemelj P 1873–1922« — poročna linija NE konča 1917! s163 že vsebuje 1918 №1; 1918: 4 vpisi + 1919: 11 vpisov že vidni → P147–P151 (1918–1922)!",
+  "čevljar ×2 (№4 ženin + №2-priča Rakar) + gostilničar ×2 (№8-priča Dim + 1916 №1-priča Potočnik) + 2 'na poročni dan' listini (№3 št. 1 + №5 št. 44)"
+ ],
+ "honesty": [
+  "№1 roj. 27.10 [~ 23.10 — VLM] + starost 25 ✓ oboje",
+  "№1 'TUNICE' žup./občina [~ NEidentificirana — VERIF proti GURS/GN 1917!]",
+  "№1 starši: Lovrencij Vrhovnik [~] ½ zemljak Tunice × roj. Miko [~ Rozalija?]; nevestini Miko [~] × Marija roj. Halčič [~] — VERIF",
+  "№2 ženinov status posestnik [~ vdovec — Stan-stolpec VERIF]",
+  "№2 nevestin priimek Šarašinič [~ Šarašončič/Harasinčič — VERIF] + starši Šarašonič/Štambič [~]",
+  "№4 zglašnica KRANJSKA GORA: [23.1. št. 5 vs 31.1. št. 1 — VERIF]",
+  "№4 mati roj. Štuga [~ — VERIF]",
+  "№6 ženinov status 'k.u.k. vojni delavec' [~ — pisarjevo '...kon. su-dav. voj. delavec' — VERIF]",
+  "№6 rojstni list žup. [sv. Peter? ~] št. [2040/2016 ~] z dne [13.2.1916 ~] — VERIF",
+  "№7 groom Wohnort [VRELNJIGA? 19 ~] + bride Wohnort [Krvavič vrh? ~] + listine [Semič vs Šmihel? ~] — VERIF",
+  "№8 zdravstveni list št. [415/716 ~] + zglašnica [22.12.1916? ~] + priimki Cupič/Stojmič [~]",
+  "№5 bride house KRASINEC 79 [~ — VERIF]"
+ ]
+}

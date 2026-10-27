@@ -139,11 +139,11 @@ def main():
     # ---------- I6: qa-parish.ts ----------
     qa = open(QA_TS).read()
     check("I6a qa-p144 id", "qa-p144-parish-marriage-1915" in qa)
-    n686 = qa.count("HOUSE_VITALS.length !== 687")
+    n686 = qa.count("HOUSE_VITALS.length !== 688")
     check("I6b vitals pini 686", n686 >= 57, str(n686))
-    n169 = qa.count(".length !== 170")
+    n169 = qa.count(".length !== 171")
     check("I6c bloki pini 169", n169 >= 2, str(n169))
-    check("I6d sidra 162 + 1915:1", "poročna sidra ≠ 163" in qa and "p144Marr.length !== 1" in qa, "")
+    check("I6d sidra 162 + 1915:1", "poročna sidra ≠ 164" in qa and "p144Marr.length !== 1" in qa, "")
     check("I6e hiše 1915 pin", '"82"' in qa, "")
     check("I6f ostanki 686/169/162/71 (P145-kaskada!)", "HOUSE_VITALS.length !== 686" not in qa and ".length !== 169" not in qa
           and "p80MarrAnchors.length !== 162" not in qa and "p80Houses.size !== 71" not in qa, "stare pini!")
