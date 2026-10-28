@@ -147,15 +147,15 @@ def main():
     # ---------- I6: qa-parish.ts ----------
     qa = open(QA_TS).read()
     check("I6a qa-p145 id", "qa-p145-parish-marriage-1916" in qa)
-    n687 = qa.count("HOUSE_VITALS.length !== 688")
+    n687 = qa.count("HOUSE_VITALS.length !== 702")
     check("I6b vitals pini 687", n687 >= 57, str(n687))
-    n170 = qa.count(".length !== 171")
+    n170 = qa.count(".length !== 185")
     check("I6c bloki pini 170", n170 >= 2, str(n170))
-    check("I6d sidra 163 + 1916:1", "poročna sidra ≠ 164" in qa and "p145Marr.length !== 1" in qa, "")
+    check("I6d sidra 163 + 1916:1", "poročna sidra ≠ 178" in qa and "p145Marr.length !== 1" in qa, "")
     check("I6e hiše 1916 pini [37,27]", '"37"' in qa and '"27"' in qa, "")
     check("I6f ostanki 686/169/162/71", "HOUSE_VITALS.length !== 686" not in qa and ".length !== 169" not in qa
-          and "p80MarrAnchors.length !== 162" not in qa and "p80Houses.size !== 71" not in qa, "stare pini!")
-    check("I6g p80 hiše 72 (nespremenjeno — h37+h27 že znani!)", "p80Houses.size !== 72" in qa, "")
+          and "p80MarrAnchors.length !== 162" not in qa and "p80Houses.size !== 74" not in qa, "stare pini!")
+    check("I6g p80 hiše 72 (nespremenjeno — h37+h27 že znani!)", "p80Houses.size !== 75" in qa, "")
     check("I6h PT luknja 13 nespremenjena", "p80Gap.length !== 13" in qa, "")
     check("I6i anchors-lista 1916:1 (p115)", 'h.year === 1916).length !== 1' in qa, "")
 

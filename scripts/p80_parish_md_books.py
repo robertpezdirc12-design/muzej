@@ -236,7 +236,7 @@ def verify():
         # prek 04455-1903 (P132) in nista v P80_PT_GAP dokumentiranih 13 dokazih luknje
         # (uskladitev s qa-parish P80_PT_GAP semantiko: gap = fiksen seznam 13 dokazov!)
         and all(h in houses for h in (v["houseNo"] for v in sample))
-        and len(vitals) == 688  # POSODABLJENO P144: 578 (era P126) → 670 (P140) → 675 (P141) → 681 (P142) → 685 (P143) → 686 (živi korpus!; P127–P144: poročna linija 1898–1915)
+        and len(vitals) == 702  # POSODABLJENO P149: 578 (era P126) → 686 (P144) → 688 (P146) → 698 (P148: +10 blokov 1919!) → 702 (P149: +4 blokov 1920!)
         and len(houses) == 75  # POSODABLJENO P144: 57 (era P126) → 72 (P140) → 73 (P142: +h76) → 74 (P143: +h68 — ZAMUDA SANIRANA v P144!) → 75 (P144: +h82 poročna 1915!; skriptin filter: ves 1897; P127–P144 poročne hiše + h86 + h63)
         and set(inset) - {"41", "50"} <= pts  # POSODABLJENO P139: h41+h50 (04455-1903, P132) sta v luknji
         # 41–60 brez PT-nabora — izjemi kot pri inset-pogoju zgoraj

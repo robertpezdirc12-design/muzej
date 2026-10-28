@@ -6237,3 +6237,36 @@ Stage Summary:
 - ★ 4 kasnejše anotacije 1975–1980 (matičar-forenzika; hiša 90 v Gribljih!) + 2 samokorekciji pisarja
 - korpus po P148: 698 vitals · 181 blokov · 174 sidra · 75 hiš (+3 h2/h12/h77!) · QA 149/149
 - NASLEDNJE: **P149 = leto 1920** (s175-dno + s176+; №1–4/1920 vsi 19.1.1920 — viden 2. intra-hiša Berkoper × Škala Lemelj 41!) → P150–P151 (1921–1922 = KONEC KNJIGE!)
+---
+Task ID: P149
+Agent: Z.ai Code (transkripcija + forenzika + kaskada + push-veriga)
+Task: P149 — poročna knjiga 04455, polno leto 1920 (s175/s176-DUPLIKAT + s177–s182 == Pag. 174–180) — 35. leto poročne linije; 2. največje leto (37 vpisov); ★★★ MATRICULA-DUPLIKAT (invarianta Pag==sken−1 LOMLJENA!) + ★★★ SIBLING-SWAP + ★★★ 2. VPIS BREZ ŠTEVILKE (Vode-Ljubljana!)
+
+Work Log:
+- push-veriga P148 DOKONČANA (začetek seje): GitLab (sdarg-PAT od uporabnika; credential store obnovljen; 7d62407..b6833a0) + GitHub (5c6ba5f..b6833a0) + sync.yml push-run success + Vercel produkcija 149/149 (qa-p148-parish-marriage-1919 LIVE!)
+- diagnoza P149: inventar 192 URL-jev rekonstruiran (recept P126; ★ trap P148: base64 dekodira CEL URL!); prenos s175–s184 10/10 JPEG-magika ✓
+- ★★★ MEJA-DISCOVERY: s175 = s176 (obe Pag. 174!) = MATRICULA-DUPLIKAT na meji 1919/1920 (pixel-diff mean 20.5, hash različna = svetloba, ne vsebina!) → invarianta Pag == sken − 1 SE PRVIČ V 35 LETIH LOMI; nova preslikava s177–s184 == Pag. 175–182 (sken − 2; verificirana na 8 Pag-kotih!)
+- ★ meja 1919/1920 = veliki cifri »1 9« (L) / »2 0« (R) na s175 = 8. marker-dokaz (razporejen po razporedu!)
+- ★★★ №-STOLPEC-forenzika: vpisne številke piše pisar v LEVEM MARGINU (stolpec 'Gaus-Nr.' = HIŠNA ŠTEVILKA!) → margin-stripi rešili №-kolizijo (s181 = №28–33, s182 = №34–36 — faza-1 'dva №34' = zmotno branje Kurrent 4/7!) + ODKRITI 2. NEŠTEVILČENI VPIS (Vode-Štefanc!)
+- ★★★ 2. VPIS BREZ ŠTEVILKE: Anton VODE (nadučitelj) × Sofija ŠTEFANC (učiteljica) = edini učiteljski par linije — poročen v LJUBLJANI 15.8.1920 (datum 'v Ljubljani' PODČRTANO + 'Mar. Ormay'!; margin 'bzer/jtou' [~ 'brez št.']; listine ZAGREB št. 2534/20 + LJUBLJANA št. 1293/20; priča J. Cernič štud. phil.; OBE hišni številki = črti!)
+- ★★★ SIBLING-SWAP №2+№3 (nov vzorec linije!): Jožef Škala (Podzemelj 5, kolar) × Ana Berkoper (Lemelj 14) + Martin Berkoper × Juljana Škala — popolna zamenjava sorojencev, ISTA starša obeh strani + ISTI priči (Franc Sober + Janez Mur), isti dan 19.1.!; P148-lead korekcije ×3 ('Krugel × Miklavc' → Žugelj/Zugof × Milaver!; 'Lemelj 41' → 14!)
+- ★★ mrlški list prilepljen (Anton Novak? hišar Gradac 59 † 2.10.1920 — izdal ISTI župnik!) + ★★ dispens-slip 1918 (Trebnje-par — tuj dokument!)
+- ★★ 4 FAMILIJSKI DVOJNI POROČNI DANI (= P148-rekord!): Dragos brat+sestra Čerkvišče 4 (26.1.) · Oberman brata Cirkile 9 župn. Metlika (9.2.) · Perdivec sestra+brat Otok 1 (14.5. = PETEK — edini v liniji!) · Štipanič sestri Gradac 57 (11.4. + 7.11.)
+- ★ INTRA-HIŠE ×3 (№25 Krasinec 34×34 STARI PAR 53×44 vsi-4-†! · №33 Dobravice 9×9 LEVIRAT-hipoteza [~] + bride-roj. 16.4.1899 = №1-bride-roj. — H11! · №21/№22 Otok 1) + INTRA-PRIIMKI ×3 + INTRA-starši ×3 + IZVEN REDA ×2
+- ★ 16-letna nevesta №8 (najmlajša linije!) + 17-letni ženin №16 (najmlajši ženin! 'morski pomočnik' [~]; 4 otroška dovoljenja) + KRIŽAN ×5 vpisov + 5 VDOV + 1 vdovec + 5 samokorekcij + anotacija 1936 (1. izven 1975–80!) + novi poklici (rihtar ×2, ribič, konjar, učitelja, gostilničar, žel.-čuvaj) + izven-župnijski ×5 + črtice '—' ×3 + 4 duhovniki (Cerar ~25× + kaplan Lopar ×6 + Vajgar + Ormay)
+- 24× row-panel L+R (142 crops) + 15× zoom-forenzika + kalendarska kontrola 37/37 ✓ (24 PON 64,9 % + 10 NED + 2 PET + 1 TOR) + korpus-forenzika ×13
+- evidence JSON (37 + 13 cc + 22 anom + honesty 24 — ★ samokorekcija štetja: 5. vdova №20 Štravs-rj.-Klepec!)+ notes + 4 NOVIH BLOKOV parish.ts (№10 h46×h41 INTRA h46-NOVA · №27 h18-NOVA Požek × Križan-rihtarja-hči! · №28 h21-NOVA Hukar · №34 h6×h36 INTRA h36-NOVA — KRIŽAN obe strani!)
+- pin-kaskada: qa-parish 63×698→702 + 34×181→185 + sidra 174→178 (incl. SKRITO p80MarrAnchors.length !== 174!) + 1920-filter + P149-sporočilo; p80 688→702; BLOCKS_04455 171→185 ×16 skript; ★★★ SANACIJA P148-ZAMUD: p140–p147 tekoči I6 (688/171/164-stari stringi!) + p115 anchors 164→178 + I8/I8c/I9c + p137–p139 (651/659/664-era!) + I6g p80Houses ×10 + I6f-stale-popravek (74!) — veriga p137–p148 VSE 100% PASS (prej 15 failov, večina ŽE na P148-HEAD!)
+- ★ runQA-kaskada: 4 faili (sidra-pin 174 · qa-p88 h46-NOVA-kolizija · qa-p93 h18-kolizija · moj INTRA-case-bug) → vsi sanirani (allow-listi +1920!)
+- verifikacija: p149 --check --live **44/44 PASS** · runQA **150/150 ok:True** · tsc 0 · lint 0 · veriga p137–p148 100% (+p115 45/45; p116/p126/p127 = dokumentirane zgodovinske zastavice p80-bloki-78/p127-675!)
+- README: datum-popravek (1.11→28.10!) + Trenutno stanje (po P149 · 35/36 · korpus 702/185/178/75) + P149-bullet
+- (dev-strežnik v peskovniku nestabilen — zdravje dokazano z runQA-bun-izvajanjem celotnega qa-kodeka + tsc; produkcija bo potrdila runtime)
+
+Stage Summary:
+- 1920 = 37 vpisov = 2. NAJVEČJE LETO LINIJE (boom traja!); P148-lead podcenitev ×9 + korekcije ×3
+- ★★★ MATRICULA-DUPLIKAT s175=s176 — 1. kršitev invariante Pag==sken−1 v 35 letih → s177+ == sken−2
+- ★★★ SIBLING-SWAP №2+№3 = nov vzorec linije (isti starši + isti priči!)
+- ★★★ 2. VPIS BREZ ŠTEVILKE — učiteljski par v LJUBLJANI (Zagreb+Ljubljana listine!)
+- ★★ 4 fam. dvojni dani (= rekord) + INTRA-HIŠE ×3 + LEVIRAT-hipoteza + KRIŽAN ×5
+- korpus po P149: 702 vitals · 185 blokov 04455 · 178 sidra · 75 hiš · PT 13; QA 150/150
+- NASLEDNJE: **P150 = leto 1921** (s182-dno №1–2 + s183 №3–8 [24.1. ×3 cluster! Griblje 63/70/18/36 + anotaciji 1935/1979!] + s184 №9–14 [Griblje 6/49/53/59 + INTRA-HIŠA Krasinec 4×4!]) → P151 (1922 = KONEC KNJIGE 04455!)

@@ -120,14 +120,14 @@ def main():
     # ---------- I6: qa-parish.ts ----------
     qa = open(QA_TS).read()
     check("I6a qa-p148 id", "qa-p148-parish-marriage-1919" in qa)
-    n698 = qa.count("HOUSE_VITALS.length !== 698")
+    n698 = qa.count("HOUSE_VITALS.length !== 702")
     check("I6b vitals pini 698", n698 >= 62, str(n698))
-    n181 = qa.count(".length !== 181")
+    n181 = qa.count(".length !== 185")
     check("I6c bloki pini 181", n181 >= 33, str(n181))
     check("I6d p148Marr 10-blok pin (qa-p148!)", "p148Marr.length !== 10" in qa, "")
-    check("I6e ostanki 688/171 (stale čisti!)",
-          "HOUSE_VITALS.length !== 688" not in qa and ".length !== 171" not in qa, "stare pini!")
-    check("I6f sidra 174", "poročna sidra ≠ 174" in qa, "")
+    check("I6e ostanki 688/171 (stale čisti!) + P149-sanacija", "HOUSE_VITALS.length !== 688" not in qa and ".length !== 171" not in qa
+          and "HOUSE_VITALS.length !== 698" not in qa and ".length !== 181" not in qa, "stare pini!")
+    check("I6f sidra 174", "poročna sidra ≠ 178" in qa, "")
 
     # ---------- I7: dnevi + stats ----------
     st = d["stats"]

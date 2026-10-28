@@ -2678,6 +2678,71 @@ export const HOUSE_VITALS: HouseVital[] = [
     status: "DOCUMENTED",
   },
 
+  // ——— P149 razširitev: POROČNA KNJIGA 04455 — polno leto 1920 (skeni
+  // s175/s176 (DUPLIKAT! obe = Pag. 174) – s182 == Pag. 174–180; meja
+  // 1919/1920 = veliki cifri »1 9« (L) / »2 0« (R) na s175 — 8. marker-dokaz,
+  // zdaj RAZPOREJEN po razporedu!); 37 vpisov (36 oštevilčenih №1–36 + 1
+  // NEŠTEVILČEN Vode-Ljubljana 15.8.!) = 2. NAJVEČJE LETO LINIJE (1919:40 →
+  // 1920:37 — povojni boom se nadaljuje!); 24 PON (64,9% — padec od 82,5%!)
+  // + 10 NED (rekord povojnega obdobja!) + 2 PETKA (№21/№22 — edini!) + 1
+  // TOR (№11); vpisi z Griblji (4 poroke!): №10 h46×h41 INTRA · №27 h18 ·
+  // №28 h21 · №34 h6×h36 INTRA = 6 Griblje-številk; NOVELE: ★★★ 2. VPIS
+  // BREZ ŠTEVILKE (Vode-Štefanc 15.8. 'v LJUBLJANI' — učiteljski par! Mar.
+  // Ormay! Zagreb-listina!) + ★★★ MATRICULA-DUPLIKAT s175=s176 (invarianta
+  // Pag==sken−1 LOMLJENA — s177+ == sken−2!) + ★★★ SIBLING-SWAP №2+№3
+  // (Škala × Berkoper obojestransko, ISTI starši + ISTI priči!) + ★★ MRLŠKI
+  // LIST prilepljen (Anton Novak? hišar Gradac 59 † 2.10.1920 — izdal ISTI
+  // župnik!) + ★★ DISPENS-SLIP 1918 (Trebnje-par!) + ★★ 4 FAMILIJSKI
+  // DVOJNI POROČNI DANI (Dragos brat+sestra 26.1. · Oberman brata 9.2. ·
+  // Perdivec sestra+brat 14.5. · Štipanič sestri 11.4.+7.11.) + ★ INTRA-HIŠE
+  // ×3 (№25 Krasinec 34×34 stari par 53×44! · №33 Dobravice 9×9 levirat? ·
+  // №21/№22 Otok 1) + INTRA-PRIIMKI ×3 + IZVEN REDA ×2 + 16-letna nevesta
+  // (NAJMLAJŠA!) + 17-letni ženin (NAJMLAJŠI!) + KRIŽAN ×5 vpisov + 4 VDOVE
+  // + 1 vdovec + 5 samokorekcij + anotacija 1936 + 4 duhovniki (Cerar ~25×
+  // + kaplan Lopar ×6 + Vajgar + Ormay-Ljubljana!)
+  // Dokaz: research/issue17/parish-marriage-1920.json; verifikator:
+  // scripts/p149_parish_marriage_1920.py --check (I1–I12).
+  {
+    houseNo: "46",
+    bookSignature: "04455",
+    year: 1920,
+    scan: 177,
+    page: 175,
+    whatSi: "poroka (2. 2. 1920, vpis 10 — PONEDELJEK) — ženin Matija BRODARIČ [K/R — ne 'Brodavič'!], kmet. povest. sin, 21 [r. 26. I. 1899 ✓], rim. kat., GRIBLJE 46 (★ NOVA Griblje-hiša — 1. poročni dokaz h46!) × nevesta Barbara MILCH roj. ŠTRAVS, PUNOSTIVKA (VDOVA!), 25 [r. 4. X. 1894 ✓], GRIBLJE 41 (h41 = poročna 1919 №20!); ★★★ INTRA-GRIBLJE h46 × h41 + 4. GRIBLJE-vpis 1920; starši/Urkunden [faza-2 zoom čaka — honesty H19]",
+    whatEn: "marriage (Feb 2, 1920, entry 10 — MONDAY) — groom Matija BRODARIČ [K/R — not 'Brodavič'!], a smallholder landowner's son, 21 [b. Jan 26, 1899 ✓], Roman Catholic, GRIBLJE 46 (★ a NEW Griblje house — the 1st marriage evidence of h46!) × bride Barbara MILCH née ŠTRAVS, a WIDOW, 25 [b. Oct 4, 1894 ✓], GRIBLJE 41 (h41 = the 1919 №20 marriage!); ★★★ an INTRA-GRIBLJE marriage h46 × h41 + the 4th Griblje entry of 1920; parents/documents [phase-2 zoom pending — honesty H19]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "18",
+    bookSignature: "04455",
+    year: 1920,
+    scan: 180,
+    page: 178,
+    whatSi: "poroka (6. 9. 1920, vpis 27 — PONEDELJEK) — ženin Anton POŽEK, kmet. povest. sin, 29 [r. 25. VIII. 1891 [~ '25/9' → aritmetika 29 zahteva avgust!] — H10], rim. kat., GRIBLJE 18 (★ NOVA Griblje-hiša — 1. poročni dokaz h18!; oče †Jurij Požek — cf. 1919 №6 h77 Požek-rod!) × nevesta Marija KRIŽAN, RIHTARJA hči (2. rihtar po №5-Tafjan!), 18 [r. 28. V. 1902 ✓ — '1903' faza-1 → zoom '1902'!], Krasinec 47 (★ KRIŽAN ×160-mreža! oče = Miko Križan RIHTAR × Ana roj. Jakofčič); ★★★ GRIBLJE-VPIS h18 + priči Jakob Bohte + Marko ŠTABLJAR (cf. P145 Stubljar!) + otroško dovoljenje za 18-letno nevesto",
+    whatEn: "marriage (Sep 6, 1920, entry 27 — MONDAY) — groom Anton POŽEK, a smallholder landowner's son, 29 [b. Aug 25, 1891 [~ 'Sep 25' → arithmetic 29 requires August!] — H10], Roman Catholic, GRIBLJE 18 (★ a NEW Griblje house — the 1st marriage evidence of h18!; father †Jurij Požek — cf. the 1919 №6 h77 Požek kin!) × bride Marija KRIŽAN, a bailiff's daughter (the 2nd bailiff after №5-Tafjan!), 18 [b. May 28, 1902 ✓ — '1903' phase-1 → the zoom shows '1902'!], Krasinec 47 (★ the KRIŽAN ×160 network! father = Miko Križan a BAILIFF × Ana née Jakofčič); ★★★ the GRIBLJE entry h18 + witnesses Jakob Bohte + Marko ŠTABLJAR (cf. P145 Stubljar!) + a child-consent for the 18-year-old bride",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "21",
+    bookSignature: "04455",
+    year: 1920,
+    scan: 181,
+    page: 179,
+    whatSi: "poroka (13. 9. 1920, vpis 28 — PONEDELJEK) — ženin Jožef HUKAR [~ Huchar], kmet. povest. sin, 21 [r. 31. I. 1899 ✓], rim. kat., GRIBLJE 21 (★ NOVA Griblje-hiša — 1. poročni dokaz h21!; cf. priča 'Anton Hrugar hivar' 1921 №1 = Hukar-mreža? [~]) × nevesta Nera MOTYJEC [~ Matijec], kmet. povest. hči, 22 [r. 1. I. 1898 ✓], Bedenj 47, ŽUPNIJA ZGORNJI ADLEŠIČI (izven-župnijska!); ★★★ GRIBLJE-VPIS h21 + priči Marko ŠTABLJAR + Anton POŽEK (Griblje sosedi! — cf. №27!) + 3 listine (Adlešiči!)",
+    whatEn: "marriage (Sep 13, 1920, entry 28 — MONDAY) — groom Jožef HUKAR [~ Huchar], a smallholder landowner's son, 21 [b. Jan 31, 1899 ✓], Roman Catholic, GRIBLJE 21 (★ a NEW Griblje house — the 1st marriage evidence of h21!; cf. the witness 'Anton Hrugar a house-farmer' 1921 №1 = a Hukar network? [~]) × bride Nera MOTYJEC [~ Matijec], a smallholder landowner's daughter, 22 [b. Jan 1, 1898 ✓], Bedenj 47, THE PARISH OF ZGORNJI ADLEŠIČI (out-of-parish!); ★★★ the GRIBLJE entry h21 + witnesses Marko ŠTABLJAR + Anton POŽEK (Griblje neighbours! — cf. №27!) + 3 documents (Adlešiči!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "6",
+    bookSignature: "04455",
+    year: 1920,
+    scan: 182,
+    page: 180,
+    whatSi: "poroka (8. 11. 1920, vpis 34 — PONEDELJEK) — ženin Janez KURE, povest., 35 [r. 8. XII. 1884 ✓], rim. kat., GRIBLJE 6 (h6 = poročna 1903 №14 Jakobčič! 2. poročni dokaz h6; starši †Anton Kure povest. × Bara roj. KRIŽAN!) × nevesta Marija KRIŽAN, kmet. povest. hči, 24 [r. 19. III. 1896 ✓], GRIBLJE 36 (★ NOVA Griblje-hiša — 1. poročni dokaz h36!; starši Janez Križan povest. × Katarina roj. Štunf); ★★★ INTRA-GRIBLJE h6 × h36 + KRIŽAN OBEH straneh (mama-ženina roj. Križan + oče-neveste Križan — ×160-mreža!) + faza-1-№-kolizija rešena (s181 = №28–33, s182 = №34–36!)",
+    whatEn: "marriage (Nov 8, 1920, entry 34 — MONDAY) — groom Janez KURE, a landowner, 35 [b. Dec 8, 1884 ✓], Roman Catholic, GRIBLJE 6 (h6 = the 1903 №14 Jakobčič marriage! the 2nd marriage evidence of h6; parents †Anton Kure × Bara née KRIŽAN!) × bride Marija KRIŽAN, a smallholder landowner's daughter, 24 [b. Mar 19, 1896 ✓], GRIBLJE 36 (★ a NEW Griblje house — the 1st marriage evidence of h36!; parents Janez Križan × Katarina née Štunf); ★★★ an INTRA-GRIBLJE marriage h6 × h36 + KRIŽAN on BOTH sides (the groom's mother née Križan + the bride's father Križan — the ×160 network!) + the phase-1 №-collision resolved (s181 = №28–33, s182 = №34–36!)",
+    status: "DOCUMENTED",
+  },
+
   // ——— P148 razširitev: POROČNA KNJIGA 04455 — polno leto 1919 (skeni
   // s165–s175 == Pag. 164–174; letna glava »Leto 1919.« ročno VELIKO na
   // s165 [7. zaporedna!]; meja 1919/1920 = veliki cifri »19«/»20« na

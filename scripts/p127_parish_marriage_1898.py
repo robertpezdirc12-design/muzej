@@ -61,7 +61,7 @@ GREGWART_FORMULA = 7           # DE ×5 (v10/v15/v19/v20/v27) + SLO ×2 (v11/v12
 ZAIFLNER = 6
 MOTTILING = 6
 VITALS = 681                   # 675 (P141) + 6 (P142); 664 (P139) + 6 (P140); P127-era: 587 + 6 (P128) + 2 (P129) + 4 bloki 1902 (P131) + 12 blokov 1903 (P132)
-BLOCKS_04455 = 171                # POSODABLJENO P144: 164 (P142-era) → 168 (P143: +4 — ZAMUDA SANIRANA!) → 169 (P144: +1 h82!)               # 61 (P126) + 9
+BLOCKS_04455 = 185                # POSODABLJENO P144: 164 (P142-era) → 168 (P143: +4 — ZAMUDA SANIRANA!) → 169 (P144: +1 h82!)               # 61 (P126) + 9 → 185 (P149: +4!)
 P80_HOUSES = 58                # 52 (P126) + 6 NOVIH v vzorcu (h48/h22/h67/h70/h34/h46 prek 04455-1898!)
 P80_PT_GAP = 12                # 10 + h46 + h48 (v luknji 41–60!)
 SIDRA_TS = 63                  # 70 − 7 okvir 1886 (pass-1 »60« = POPRAVEK)
