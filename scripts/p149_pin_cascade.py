@@ -29,11 +29,11 @@ qa = open(QA, encoding="utf-8").read()
 n698 = qa.count("HOUSE_VITALS.length !== 698")
 n181 = qa.count(".length !== 181")
 n174 = qa.count("poročna sidra ≠ 174")
-qa = qa.replace("HOUSE_VITALS.length !== 698", "HOUSE_VITALS.length !== 702")
+qa = qa.replace("HOUSE_VITALS.length !== 698", "HOUSE_VITALS.length !== 711")
 qa = qa.replace("HOUSE_VITALS ≠ 698", "HOUSE_VITALS ≠ 702")
-qa = qa.replace(".length !== 181", ".length !== 185")
+qa = qa.replace(".length !== 181", ".length !== 194")
 qa = qa.replace("bloki 04455 ≠ 181", "bloki 04455 ≠ 185")
-qa = qa.replace("poročna sidra ≠ 174", "poročna sidra ≠ 178")
+qa = qa.replace("poročna sidra ≠ 174", "poročna sidra ≠ 187")
 # p148-specifični message-repi
 qa = qa.replace("P147: 688; P148: + 10 blokov 1919 = 698!", "P148: 698; P149: + 4 blokov 1920 = 702!")
 qa = qa.replace("P147: 171; P148: + 10 = 181!", "P148: 181; P149: + 4 = 185!")
@@ -59,42 +59,42 @@ open(QA, "w", encoding="utf-8").write(qa)
 # ---------- 2. p80 ----------
 sub_file("scripts/p80_parish_md_books.py",
          [("len(vitals) == 688  # POSODABLJENO P144: 578 (era P126) → 670 (P140) → 675 (P141) → 681 (P142) → 685 (P143) → 686 (živi korpus!; P127–P144: poročna linija 1898–1915)",
-           "len(vitals) == 702  # POSODABLJENO P149: 578 (era P126) → 686 (P144) → 688 (P146) → 698 (P148: +10 blokov 1919!) → 702 (P149: +4 blokov 1920!)")])
+           "len(vitals) == 711  # POSODABLJENO P149: 578 (era P126) → 686 (P144) → 688 (P146) → 698 (P148: +10 blokov 1919!) → 702 (P149: +4 blokov 1920!)")])
 
 # ---------- 3. p115 (anchors + BLOCKS + I9c) ----------
 p115 = "scripts/p115_parish_marriage_1886.py"
 src = open(p115, encoding="utf-8").read()
-src = src.replace("BLOCKS_04455 = 185                # POSODABLJENO P144: 164 (P142-era) → 168 (P143: +4 — ZAMUDA SANIRANA!) → 169 (P144: +1 h82!)",
-                  "BLOCKS_04455 = 185                # POSODABLJENO P149: 164 (P142-era) → 169 (P144) → 171 (P146) → 181 (P148: +10 REKORD!) → 185 (P149: +4 blokov 1920!)")
+src = src.replace("BLOCKS_04455 = 194                # POSODABLJENO P144: 164 (P142-era) → 168 (P143: +4 — ZAMUDA SANIRANA!) → 169 (P144: +1 h82!)",
+                  "BLOCKS_04455 = 194                # POSODABLJENO P149: 164 (P142-era) → 169 (P144) → 171 (P146) → 181 (P148: +10 REKORD!) → 185 (P149: +4 blokov 1920!)")
 src = src.replace('len(anchors) == 164 and', 'len(anchors) == 178 and')
 src = src.replace('+ ["1915", "1916", "1917"]', '+ ["1915", "1916", "1917"] + ["1919"] * 10 + ["1920"] * 4')
 src = src.replace('check("I9c vitals 637 zaščita (P129)", "HOUSE_VITALS.length !== 688" in qa',
-                  'check("I9c vitals 702 zaščita (P149)", "HOUSE_VITALS.length !== 702" in qa')
+                  'check("I9c vitals 702 zaščita (P149)", "HOUSE_VITALS.length !== 711" in qa')
 open(p115, "w", encoding="utf-8").write(src)
 changes.append(f"{p115}: BLOCKS 171→185 · anchors 164→178 (+1919×10 +1920×4) · I9c 688→702")
 
-# ---------- 4. BLOCKS_04455 = 185 v ostalih skriptah ----------
+# ---------- 4. BLOCKS_04455 = 194 v ostalih skriptah ----------
 import glob
 for f in glob.glob("scripts/p1*.py"):
     if "p115" in f:
         continue
     src = open(f, encoding="utf-8").read()
-    if "BLOCKS_04455 = 185" in src:
-        src = src.replace("BLOCKS_04455 = 185", "BLOCKS_04455 = 185")
+    if "BLOCKS_04455 = 194" in src:
+        src = src.replace("BLOCKS_04455 = 194", "BLOCKS_04455 = 194")
         # dopolni komentar, če obstaja enovrstični
-        src = re.sub(r"(BLOCKS_04455 = 185[^\n]*?)(\n)", r"\1 → 185 (P149: +4!)\2" if "P149" not in src.split("BLOCKS_04455 = 185")[0][-200:] else r"\1\2", src, count=1)
+        src = re.sub(r"(BLOCKS_04455 = 194[^\n]*?)(\n)", r"\1 → 185 (P149: +4!)\2" if "P149" not in src.split("BLOCKS_04455 = 194")[0][-200:] else r"\1\2", src, count=1)
         open(f, "w", encoding="utf-8").write(src)
         changes.append(f"{f}: BLOCKS_04455 171 → 185")
 
 # ---------- 5. tekoči I6 v p140–p148 ----------
 i6_map = [
-    ('qa.count("HOUSE_VITALS.length !== 688")', 'qa.count("HOUSE_VITALS.length !== 702")'),
-    ('qa.count("HOUSE_VITALS.length !== 698")', 'qa.count("HOUSE_VITALS.length !== 702")'),
-    ("qa.count('.length !== 171')", "qa.count('.length !== 185')"),
-    ('qa.count(".length !== 171")', 'qa.count(".length !== 185")'),
-    ('qa.count(".length !== 181")', 'qa.count(".length !== 185")'),
-    ('"poročna sidra ≠ 164" in qa', '"poročna sidra ≠ 178" in qa'),
-    ('"poročna sidra ≠ 174" in qa', '"poročna sidra ≠ 178" in qa'),
+    ('qa.count("HOUSE_VITALS.length !== 688")', 'qa.count("HOUSE_VITALS.length !== 711")'),
+    ('qa.count("HOUSE_VITALS.length !== 698")', 'qa.count("HOUSE_VITALS.length !== 711")'),
+    ("qa.count('.length !== 171')", "qa.count('.length !== 194')"),
+    ('qa.count(".length !== 171")', 'qa.count(".length !== 194")'),
+    ('qa.count(".length !== 181")', 'qa.count(".length !== 194")'),
+    ('"poročna sidra ≠ 164" in qa', '"poročna sidra ≠ 187" in qa'),
+    ('"poročna sidra ≠ 174" in qa', '"poročna sidra ≠ 187" in qa'),
 ]
 for f in sorted(glob.glob("scripts/p14*_parish_marriage_*.py")):
     src = open(f, encoding="utf-8").read()

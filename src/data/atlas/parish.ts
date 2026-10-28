@@ -8183,4 +8183,117 @@ export const HOUSE_VITALS: HouseVital[] = [
     whatEn: "baptized Jožef (Dec 17?/18; **the personal ID 191219500852 = 12-DIGIT (a digit missing!) → Dec 19? ≠ the birth 17? [a DOUBT — both]**); father **Matija Štuvec? [~]**, landowner, born Feb 12, 1873, mother **Marija née Ureh? [~]** (Aug 14, 1881; m. 1912?); h5 = the **9th ENTRY — a 2-YEAR GAP** (1917 → 1919); **the 11th GRIBLJE row of 1919 = the LAST GRIBLJE row of book 04105!**; stamp VPIS PRENEŠEN Feb 6, 2007 (Beljakovič) + marg »died Aug 11, 1958 in Dončele« [~]; godparents Janez Dragoš + Neža Jakofčič; midwife Marija Jakofčič; signature Jos. Lopar/Logar Kpol.",
     status: "DOCUMENTED",
   },
+  // ——— P150 razširitev: POROČNA KNJIGA 04455 — polno leto 1921 (s182-dno
+  // (№1–2) + s183–s187 == Pag. 180–185); 31 vpisov (№1–31) = 3. NAJVEČJE LETO
+  // LINIJE (1919:40 → 1920:37 → 1921:31); 13 PON (41,9%) + 9 NED + 4 SRE +
+  // 2 TOR + 3 PET + 0 SOB; vpisi z Griblji (9 poroke → 9 NOVIH BLOKOV!):
+  // №4 h63×h70 INTRA · №8 h68×h36 INTRA · №10 h64 · №11 h64×h53 INTRA ·
+  // №13 h59 · №20 h45×h92 INTRA (h92 NOVA!) · №22 h72×h44 INTRA (h72 NOVA!)
+  // · №23 h10 · №27 h7 = 14 Griblje-števil; NOVELE: ★★★ 2 RAZVEZI-LISTINE (1. v
+  // liniji! škof. ord. LJUBLJANA №16 št. 1442/21? + №18 št. 459/21!) +
+  // ★★★ 1. HRVAŠKA (№28 Kaluka 41 (Hrv.) + potrdilo žup. Lipik/Lipnik!) +
+  // ★★ 6 INTRA-HIŠE = REKORD (№6 Gradac 1 · №9 Krasinec 47 · №16 Grm 35 ·
+  // №18 Krasinec 2 · №26 Gradac 78 · №31 Črnomelj 69!) + ★★ 4 POROKE ISTI
+  // DAN 21.11. (№27–30) + ★★ ŽUPNIK-MENJAVA SREDI LETA (Cerar №1–24 → P.
+  // Remigi JEREB №25–31, od 10.10.! — 1. opazovani prehod) + ★ POLETNA VRZEL
+  // 113 DNI (19.6.→10.10. — najdaljša [~]) + BERKOVEC-TROJICA (№5/1921 + №5
+  // + №6/1922 Lemelj 13, zadnja dva ISTI DAN!) + JAKOFČIČ ×5 v letu +
+  // PERDIVEC ×8 omemb + MITENET ×3 + KURE ×6 + 5 MODRIH ANOTACIJ (†1976–81,
+  // №8 + MATIČAR-PODPIS — 1.!) + 3 SAMOKOREKCIJE (№19-oče prečrtan · №20-
+  // datum X→20. · №22-hišna 72) + 1. DATUM-NEOBSTOJI (№24 roj. 31. 6.!) +
+  // NOVI POKLICI (sedlar · sodni sluga · pekar · orožniški tit. narednik ·
+  // elektriciar? · revžarski pomočnik?) + 17-letna nevesta №31 + 52-letni
+  // ženin №16 + 1. rojen-v-Metliki №20
+  // Dokaz: research/issue17/parish-marriage-1921.json; verifikator:
+  // scripts/p150_parish_marriage_1921.py --check (I1–I12).
+  {
+    houseNo: "63",
+    bookSignature: "04455",
+    year: 1921,
+    scan: 183,
+    page: 181,
+    whatSi: "poroka (24. 1. 1921, vpis 4 — PONEDELJEK) — ženin Anton KRIŽAN, povstnika sin, 25 [r. 6. 3. 1895 ✓], GRIBLJE 63 (h63 = poročna 1911 №1 nevesta Catharina KRIŽAN prek 04105-filtra — 2. poročni dokaz h63; 1. v 04455!) × nevesta Marija GRABRIJAN, povstnika hiči, 20 (temno prepisano), r. 28. 2. 1900 ✓, GRIBLJE 70 (★ 1. korpusni dokaz h70-v-04455; h70 že v vzorci prek 04105); ★★★ INTRA-GRIBLJE h63 × h70; starši: Miko Križan × Katarina roj. PERDIVEC + †Marko Grabrijan × Marija roj. PERDIVEC = INTRA-STARŠI ×2 (obe mati roj. Perdivec — sestri? [~])!; priči Jure Grabrijan + Janez Papič? [~] kolar; KRIŽAN ×160-mreža (cf. P149 №27!)",
+    whatEn: "marriage (Jan 24, 1921, entry 4 — MONDAY) — groom Anton KRIŽAN, a smallholder's son, 25 [b. Mar 6, 1895 ✓], GRIBLJE 63 (h63 = the 1911 №1 bride Catharina KRIŽAN via the 04105 filter — the 2nd marriage evidence of h63; the 1st in 04455!) × bride Marija GRABRIJAN, a smallholder's daughter, 20 (rewritten darker), b. Feb 28, 1900 ✓, GRIBLJE 70 (★ the 1st corpus evidence of h70 in 04455; h70 already in the sample via 04105); ★★★ an INTRA-GRIBLJE marriage h63 × h70; parents: Miko Križan × Katarina née PERDIVEC + †Marko Grabrijan × Marija née PERDIVEC = INTRA-PARENTS ×2 (both mothers born Perdivec — sisters? [~])!; witnesses Jure Grabrijan + Janez Papič? [~] a wheelwright; the KRIŽAN ×160 network (cf. P149 №27!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "68",
+    bookSignature: "04455",
+    year: 1921,
+    scan: 183,
+    page: 181,
+    whatSi: "poroka (31. 1. 1921, vpis 8 — PONEDELJEK) — ženin Miko MITEK, povstnika sin, 23 [r. 29. 2. 1897 ✓ — 1. 29.-februarski rojstni datum linije?! [~]], GRIBLJE 68 (★ NOVA-dokaz: P149-lead '18' → ZOOM 68!; h68 = poročna 1914 №3/№4 — 2. poročni dokaz) × nevesta Katarina KRŽAN [~ Kružan], povstnika hiči, 23, r. 20. 9. 1898 ✓, GRIBLJE 36 (h36 = poročna 1920 №34!); ★★★ INTRA-GRIBLJE h68 × h36 + MITENET (cf. №12-mati + №20-nevesta!); margin MODRA ANOTACIJA 1979 + MATIČAR-PODPIS (1. v liniji!): 'Zakonca Mitek Katarina hiči umrla 26.5.1979 v Gribljah (mrk. l. 1979, str. 12, zop. 3), Gradac 4.6.1979 — matičar Šimec Šuso? [~]'",
+    whatEn: "marriage (Jan 31, 1921, entry 8 — MONDAY) — groom Miko MITEK, a smallholder's son, 23 [b. Feb 29, 1897 ✓ — the 1st Feb-29 birth date of the line?! [~]], GRIBLJE 68 (★ NEW evidence: the P149 lead read '18' → the ZOOM shows 68!; h68 = the 1914 №3/№4 marriage — the 2nd marriage evidence) × bride Katarina KRŽAN [~ Kružan], a smallholder's daughter, 23, b. Sep 20, 1898 ✓, GRIBLJE 36 (h36 = the 1920 №34 marriage!); ★★★ an INTRA-GRIBLJE marriage h68 × h36 + the MITENET (cf. №12-mother + №20-bride!); a blue 1979 margin ANNOTATION + a REGISTRAR SIGNATURE (the 1st of the line!): 'the spouse Mitek Katarina died May 26, 1979 in Griblje (reg. 1979, p. 12, no. 3), Gradac Jun 4, 1979 — registrar Šimec Šuso? [~]'",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "64",
+    bookSignature: "04455",
+    year: 1921,
+    scan: 184,
+    page: 182,
+    whatSi: "poroka (10. 4. 1921, vpis 10 — NEDELJA) — ženin Anton HARASINIČ, povstnik, '46 let' [r. 30. 5. 1875/1876-dvom — H10: račun 45/44!], ČERKVIŠČE 25 (lead-korekcija '33'→25!) × nevesta Marija JAKOFČIČ, povstnika hiči, 32, r. 27. 3. 1889 ✓, GRIBLJE 64 (h64 = poročna 1886 №12 Požek! 2. poročni dokaz); ★★★ BRAT+SESTRA ISTI DAN (№10-bride + №11-groom = sorojenci Janez Jakofčič × Marija Štabjar!) + JAKOFČIČ-NET (×149-mreža!); starši: †Miko Harasinič × Marija roj. PERDIVEC; priči Miko Kambič gostilničar + Peter Harasinič; 20-letna razlika",
+    whatEn: "marriage (Apr 10, 1921, entry 10 — SUNDAY) — groom Anton HARASINIČ, a smallholder, '46 years' [b. May 30, 1875/1876-doubt — H10: the arithmetic gives 45/44!], ČERKVIŠČE 25 (the lead correction '33'→25!) × bride Marija JAKOFČIČ, a smallholder's daughter, 32, b. Mar 27, 1889 ✓, GRIBLJE 64 (h64 = the 1886 №12 Požek marriage! the 2nd marriage evidence); ★★★ A BROTHER+SISTER WED THE SAME DAY (№10-bride + №11-groom = the children of Janez Jakofčič × Marija Štabjar!) + the JAKOFČIČ network (the ×149 web!); parents: †Miko Harasinič × Marija née PERDIVEC; witnesses Miko Kambič an innkeeper + Peter Harasinič; a 20-year age gap",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "53",
+    bookSignature: "04455",
+    year: 1921,
+    scan: 184,
+    page: 182,
+    whatSi: "poroka (10. 4. 1921, vpis 11 — NEDELJA) — ženin Matija JAKOFČIČ, povstnika sin ✓, 24 [r. 7. 7. 1896 ✓], GRIBLJE 64 (h64 = 2. dokaz ISTI DAN kot №10! — brat №10-neveste!) × nevesta Margareta DRAGOS roj. PERDIVEC (VDOVA [~]), povstnica, 29, r. 17. 8. 1891 ✓, GRIBLJE 53 (★ BLOK h53 — h53 = poročna 1890 v6 Perdinec! 2. poročni dokaz; P80_PT_GAP-hiša!); ★★★ INTRA-GRIBLJE h64 × h53 + PERDIVEC-mreža (nevesta roj. Perdivec + №10-mati roj. Perdivec + №11-tasta roj. Križan!); priči Peter Perdivec + Matija Jakofčič",
+    whatEn: "marriage (Apr 10, 1921, entry 11 — SUNDAY) — groom Matija JAKOFČIČ, a smallholder's son ✓, 24 [b. Jul 7, 1896 ✓], GRIBLJE 64 (h64 = the 2nd evidence THE SAME DAY as №10! — the brother of the №10 bride!) × bride Margareta DRAGOS née PERDIVEC (a WIDOW [~]), a smallholder, 29, b. Aug 17, 1891 ✓, GRIBLJE 53 (★ the h53 BLOCK — h53 = the 1890 v6 Perdinec marriage! the 2nd marriage evidence; an P80_PT_GAP house!); ★★★ an INTRA-GRIBLJE marriage h64 × h53 + the PERDIVEC web (the bride born Perdivec + the №10 mother born Perdivec + the №11 grandmother born Križan!); witnesses Peter Perdivec + Matija Jakofčič",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "59",
+    bookSignature: "04455",
+    year: 1921,
+    scan: 184,
+    page: 182,
+    whatSi: "poroka (13. 4. 1921, vpis 13 — SREDA) — ženin Michael JAKOFČIČ, povstnik ✓, 35 [r. 27. 3. 1885 ✓], ČERKVIŠČE 9 × nevesta Ana JAKLIČ roj. KAMBIČ (VDOVA!), povstnica, 40 (5 let STAREJŠA!), r. 2. 5. 1880 ✓, GRIBLJE 59 (★ BLOK h59 — h59 = P80_PT_GAP-hiša (poročna 1897-era); 1. poročni dokaz h59 v 04455!); ★★★ JAKOFČIČ 3. v 4 dneh (№10 + №11 + №13!) + VDOWA + tasta nem. BRUNER [~]; priči Peter Jakofčič + Janez Jaklič; 3. poroka 13. 4.",
+    whatEn: "marriage (Apr 13, 1921, entry 13 — WEDNESDAY) — groom Michael JAKOFČIČ, a smallholder ✓, 35 [b. Mar 27, 1885 ✓], ČERKVIŠČE 9 × bride Ana JAKLIČ née KAMBIČ (a WIDOW!), a smallholder, 40 (5 years OLDER!), b. May 2, 1880 ✓, GRIBLJE 59 (★ the h59 BLOCK — an P80_PT_GAP house (the 1897-era marriage); the 1st marriage evidence of h59 in 04455!); ★★★ the 3rd JAKOFČIČ in 4 days (№10 + №11 + №13!) + a WIDOW + the German BRUNER grandmother [~]; witnesses Peter Jakofčič + Janez Jaklič; the 2nd wedding of Apr 13",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "92",
+    bookSignature: "04455",
+    year: 1921,
+    scan: 185,
+    page: 183,
+    whatSi: "poroka (20. 5. 1921, vpis 20 — PETEK; datum-korekcija: prečrtano + X + »20.«!) — ženin Janez ŠTABGAR? [~ Štubgar], revžarski pomočnik? [~], 29 [račun 30-dvom], r. 24. 6. 1891 V METLIKI (1. rojen-izven-vas ženin!), GRIBLJE 45 × nevesta Marija MITEK, hiči povstnika, 25 [~26-dvom], r. 24. 7. 1895 ✓, GRIBLJE 92 (★★★ NOVA HIŠA — 1. korpusni dokaz h92 = 1. poročni dokaz NAJVIŠJE številke — nov maksimum po h87/P148!); ★★★ INTRA-GRIBLJE h45 × h92 + MITENET (№8-ženin Mitek h68 + №12-mati roj. Mitek!) + SAMOKOREKCIJA-datuma; priči Franc Rajmer? čevljar + Franc Vrana? sluga",
+    whatEn: "marriage (May 20, 1921, entry 20 — FRIDAY; a date correction: struck out + an X + »20.«!) — groom Janez ŠTABGAR? [~ Štubgar], a 'revžar' assistant? [~], 29 [the arithmetic says 30 — a doubt], b. Jun 24, 1891 IN METLIKA (the 1st groom born outside the parish villages!), GRIBLJE 45 × bride Marija MITEK, a smallholder's daughter, 25 [~26-doubt], b. Jul 24, 1895 ✓, GRIBLJE 92 (★★★ A NEW HOUSE — the 1st corpus evidence of h92 = the 1st marriage evidence of the HIGHEST number — a new maximum after h87/P148!); ★★★ an INTRA-GRIBLJE marriage h45 × h92 + the MITENET (№8-groom Mitek h68 + №12-mother born Mitek!) + a date self-correction; witnesses Franc Rajmer? a shoemaker + Franc Vrana? a servant",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "72",
+    bookSignature: "04455",
+    year: 1921,
+    scan: 186,
+    page: 184,
+    whatSi: "poroka (6. 6. 1921, vpis 22 — PONEDELJEK) — ženin Michael ŠTRAVS, sin povstnika ✓, 25 [r. 13. 9. 1895 ✓], GRIBLJE 72 (★★★ NOVA HIŠA — 1. korpusni dokaz h72!; številka 72-dopisana/popravljena — SAMOKOREKCIJA [~]; P149-lead '4a' → 72!) × nevesta Ana TOMC, hiči povstnika, 21, r. 30. 8. 1899 ✓ (+ opomba 'šlejfa'? [~]), GRIBLJE 44; ★★★ INTRA-GRIBLJE h72 × h44 + ŠTRAVS-net (1887-h71-Straus → 1921-h72-Štravs!) + JAKOFČIČ-mati (†Marija roj. Jakofčič — 5. pojav v letu!); oče-neveste Janez Tomc vihtar [rihtar ~] (cf. №12!); priči Miko Kure + Janez Klepec",
+    whatEn: "marriage (Jun 6, 1921, entry 22 — MONDAY) — groom Michael ŠTRAVS, a smallholder's son ✓, 25 [b. Sep 13, 1895 ✓], GRIBLJE 72 (★★★ A NEW HOUSE — the 1st corpus evidence of h72!; the number 72-added/corrected — a SELF-CORRECTION [~]; the P149 lead read '4a' → 72!) × bride Ana TOMC, a smallholder's daughter, 21, b. Aug 30, 1899 ✓ (+ a note 'šlejfa'? [~]), GRIBLJE 44; ★★★ an INTRA-GRIBLJE marriage h72 × h44 + the ŠTRAVS web (1887-h71-Straus → 1921-h72-Štravs!) + a JAKOFČIČ mother (†Marija née Jakofčič — the 5th appearance of the year!); the bride's father Janez Tomc a vihtar [rihtar ~] (cf. №12!); witnesses Miko Kure + Janez Klepec",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "10",
+    bookSignature: "04455",
+    year: 1921,
+    scan: 186,
+    page: 184,
+    whatSi: "poroka (6. 6. 1921, vpis 23 — PONEDELJEK) — ženin Miko BRINEC, sin povstnika, 25 [r. 8. 9. 1895 ✓], GRIBLJE 10 (h10 = poročna-era znana hiša — poročni dokaz 1921!) × nevesta Bara KLEPEC, hiči povstnika, 21, r. 19. 10. 1899 ✓, Krasinec 34; starši: Janez Brinec × Ana roj. KURE + Jurij Klepec × Marija roj. Tomc; priči Janez Kure + Anton Marenta?; KURE-mreža (cf. №16/№24/№25!); 3. poroka 6. 6. (№21–23 = ponedeljkov trojček!)",
+    whatEn: "marriage (Jun 6, 1921, entry 23 — MONDAY) — groom Miko BRINEC, a smallholder's son, 25 [b. Sep 8, 1895 ✓], GRIBLJE 10 (h10 = a known house of the marriage era — the 1921 marriage evidence!) × bride Bara KLEPEC, a smallholder's daughter, 21, b. Oct 19, 1899 ✓, Krasinec 34; parents: Janez Brinec × Ana née KURE + Jurij Klepec × Marija née Tomc; witnesses Janez Kure + Anton Marenta?; the KURE web (cf. №16/№24/№25!); the 3rd wedding of Jun 6 (№21–23 = a Monday trio!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "7",
+    bookSignature: "04455",
+    year: 1921,
+    scan: 187,
+    page: 185,
+    whatSi: "poroka (21. 11. 1921, vpis 27 — PONEDELJEK) — ženin Jurij JAKLIČ, pavestniška sin ✓, 24 [r. 24. 4. 1897 ✓], BORŠT 47 (izven-župnijski — župn. Boršt!) × nevesta Marija FOTTER, pavest. hiči, 20 (NEDOLETNA!), r. 27. 7. 1901 ✓, GRIBLJE 7 (★ BLOK h7 — NAJNIŽJA Griblje-št. 1921; h7 že v vzorci prek 04105 — poročni dokaz 1921!; FOTTER = NOV PRIIMEK!); dokument: PISMENO DOVOLJENJE OČETA NEDOLETNE NEVESTE; priči Matija Štrucelj? + Miko Tasič? (rim. kat.); ★★★ 1. od 4 POROK 21. 11. + MODRA ANOTACIJA † 6. 11. 1977: 'Zakonec Jaklič Jurij umrl dne 6. 11. 77 v Gribljah (l. 1977, str. 107, zop. št. 5), Gradac 5. 12. [77/79?]' + 'matičar Šimec Šuso? [~]' (2. matičar-podpis!)",
+    whatEn: "marriage (Nov 21, 1921, entry 27 — MONDAY) — groom Jurij JAKLIČ, a smallholder's son ✓, 24 [b. Apr 24, 1897 ✓], BORŠT 47 (out-of-parish — the parish of Boršt!) × bride Marija FOTTER, a smallholder's daughter, 20 (a MINOR!), b. Jul 27, 1901 ✓, GRIBLJE 7 (★ the h7 BLOCK — the LOWEST Griblje number of 1921; h7 already in the sample via 04105 — the 1921 marriage evidence!; FOTTER = a NEW SURNAME!); document: a WRITTEN CONSENT of the father of the underage bride; witnesses Matija Štrucelj? + Miko Tasič? (Roman Catholic); ★★★ the 1st of 4 WEDDINGS Nov 21 + a blue ANNOTATION † Nov 6, 1977: 'the husband Jaklič Jurij died Nov 6, 77 in Griblje (1977, p. 107, no. 5), Gradac Dec 5' + 'registrar Šimec Šuso? [~]' (the 2nd registrar signature!)",
+    status: "DOCUMENTED",
+  },
 ];

@@ -6270,3 +6270,26 @@ Stage Summary:
 - ★★ 4 fam. dvojni dani (= rekord) + INTRA-HIŠE ×3 + LEVIRAT-hipoteza + KRIŽAN ×5
 - korpus po P149: 702 vitals · 185 blokov 04455 · 178 sidra · 75 hiš · PT 13; QA 150/150
 - NASLEDNJE: **P150 = leto 1921** (s182-dno №1–2 + s183 №3–8 [24.1. ×3 cluster! Griblje 63/70/18/36 + anotaciji 1935/1979!] + s184 №9–14 [Griblje 6/49/53/59 + INTRA-HIŠA Krasinec 4×4!]) → P151 (1922 = KONEC KNJIGE 04455!)
+
+---
+
+## P150 — poročna knjiga 04455, polno leto 1921 (s182-dno + s183–s187 == Pag. 180–185)
+
+Datum: 28. 10. 2026 · 36. leto poročne linije (P115 = 1886 → … → P150 = 1921)
+
+Stage Summary:
+- 1921 = 31 vpisov (№1–31) = 3. NAJVEČJE LETO LINIJE (1919:40 → 1920:37 → 1921:31); P149-lead podcenitev ×2,2 + korekcije ×8 (Griblje 18→68 · 4×4→47×47 · Čerkvišče 33→25 · Griblje 49→64 · rihtar→pavstnik · Dobravice 42→39 · 4a→72 · 1901→1891) + lead-anotacija '1935' OVRŽENA (najdene 1976/1979×2/1980/1981)
+- ★★★ 2 RAZVEZI-LISTINE = 1. v LINIJI (№16 + №18 škof. ord. LJUBLJANA — obe nevesti!)
+- ★★★ 1. HRVAŠKA: №28 Kaluka 41 (Hrv.) + potrdilo žup. Lipik/Lipnik
+- ★★ 6 INTRA-HIŠE = REKORD LINIJE + 5 INTRA-GRIBLJE / 13 Griblje-števil v 1 letu (rekord!)
+- ★★ 2 NOVI HIŠI: h92 (1. dokaz NAJVIŠJE številke — maksimum po h87!) + h72 (1. korpusni dokaz!) → p80 75 → 77
+- ★★ 4 POROKE ISTI DAN 21.11. (№27–30) + več-dnevi ×7 + ŽUPNIK-MENJAVA SREDI LETA (Cerar → P. Remigi JEREB, 1. opazovani prehod!)
+- ★ POLETNA VRZEL 113 DNI (najdaljša [~]) + 1. DATUM-NEOBSTOJI (№24 roj. 31.6.!) + MATIČAR-PODPIS (1.!) + 5 anotacij †1976–81
+- ★★ FAMILIJSKI DANI: Jakša-brata 7 dni (isti priči!) · Jakofčič brat+sestra ISTI DAN · Berkovec-TROJICA (končnica v 1922!)
+- mreže: JAKOFČIČ ×5+mati · PERDIVEC ×8 · KURE ×6 · MITENET ×3 (nova!) · ŠTRAVS ×3 · ŽUGELJ ×3
+- NOVI POKLICI ×6 (sedlar · sodni sluga · pekar · orožniški tit. narednik · elektriciar? · revžarski pomočnik?) + 17-letna nevesta + 52-letni ženin + 2 starejše nevesti + roj. V METLIKI (1.!)
+- 9 NOVIH BLOKOV parish.ts (h63 h68 h64 h53 h59 h92 h72 h10 h7)
+- pin-kaskada: vitals 702 → 711 · bloki 04455 185 → 194 · sidra 178 → 187 · p80 hiše 75 → 77 (+h92/h72!) · p80-ves-1897-razlika (+h45) dokumentirana · p138-I6g P149-zamuda sanirana · qa-p85/86/92/115 allow-liste +1921
+- verifikacija: p150 --check --live 57/57 PASS · runQA 151/151 ok:True · tsc 0 · lint 0 · veriga p115–p149 (p115 45/45 · p137–p148 100 %!)
+- korpus po P150: 711 vitals · 194 blokov 04455 · 187 sidra · 77 hiš · PT 13; QA 151/151
+- NASLEDNJE: **P151 = leto 1922 = KONEC KNJIGE 04455!** (s188 glava »1922.« №1–5 + s189 №6–9 [Berkovec-SESTRA ISTI DAN — TROJICA!] + s190 №10–13 [Jurij Jakofčič 67 LET! · MALA PAKA (Hrv.?) podstotnik + NOVI duhovnik Jusan? · 27.8. = ZADNJI VPIS!] + s191 tipovan list 1911 + s192 naslovnica)

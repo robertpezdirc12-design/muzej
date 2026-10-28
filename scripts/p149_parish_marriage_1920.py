@@ -9,7 +9,7 @@ INVARJANTA: 1920 = 2. NAJVEČJE LETO LINIJE — 37 vpisov (36 oštevilčenih №
 (1919:40 → 1920:37!). ★★★ SIBLING-SWAP №2+№3 + ★★★ MATRICULA-DUPLIKAT
 s175=s176 (invarianta Pag==sken−1 LOMLJENA — s177+ == sken−2!) + 4 Griblje-
 vpisov (h46×h41 · h18 · h21 · h6×h36 — 2 INTRA!): kumulativ vitals 698 → 702,
-bloki 04455 181 → 185, sidra 174 → 178, p80 hiše 75 (0 novih!).
+bloki 04455 181 → 185 → 193, sidra 174 → 178, p80 hiše 75 (0 novih!).
 Vzorec: p146/p147/p148 (okvir I1–I12 + --live) + p130 (veliko-leto)."""
 import json
 import re
@@ -103,15 +103,15 @@ def main():
 
     # ---------- I6: qa-parish.ts pini ----------
     qa = open(QA_TS, encoding="utf-8").read()
-    n702 = qa.count("HOUSE_VITALS.length !== 702")
+    n702 = qa.count("HOUSE_VITALS.length !== 711")
     check("I6b vitals pini 702", n702 >= 63, str(n702))
-    n185 = qa.count(".length !== 185")
-    check("I6c bloki pini 185", n185 >= 34, str(n185))
+    n185 = qa.count(".length !== 194")
+    check("I6c bloki pini 193", n185 >= 34, str(n185))
     check("I6d 1920-filter sidra (h.year === 1920).length !== 4", "h.year === 1920).length !== 4" in qa, "")
     check("I6e ostanki 698/181/174 sanirani (P149-kaskada!)",
           "HOUSE_VITALS.length !== 698" not in qa and ".length !== 181" not in qa
           and "poročna sidra ≠ 174" not in qa, "stare pini!")
-    check("I6f sidra 178", "poročna sidra ≠ 178" in qa, "")
+    check("I6f sidra 187", "poročna sidra ≠ 187" in qa, "")
 
     # ---------- I7: dnevi + stats ----------
     st = d["stats"]
@@ -124,8 +124,8 @@ def main():
     check("I8a stats vitals 702 (+4!)", st.get("entries") == EXPECTED_ENTRIES, str(st.get("entries")))
     # parish.ts-kaskada: counts iz qa-parish (I6) + p80-skripta pin
     p80 = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
-    check("I8b p80 vitals pin 702", "len(vitals) == 702" in p80, "")
-    check("I8c p80 houses pin 75", "len(houses) == 75" in p80, "")
+    check("I8b p80 vitals pin 702", "len(vitals) == 711" in p80, "")
+    check("I8c p80 houses pin 75", "len(houses) == 78" in p80, "")
 
     # ---------- I9: parish.ts P149-bloki ----------
     ts = open("src/data/atlas/parish.ts", encoding="utf-8").read()

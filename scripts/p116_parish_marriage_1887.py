@@ -57,7 +57,7 @@ GRIBLJE_ROWS = [3, 4, 11, 20]
 GRIBLJE_MARRIAGES = 4
 GRIBLJE_HOUSES_TS = "3,10,15,23,37,69,71"
 EXPECTED_VITALS = 533           # 528 (P114/P115) + 5 novih poročnih blokov P116 (zgodovinsko — P117 dokaz gre na 537)
-BLOCKS_04455 = 185                # POSODABLJENO P144: 164 (P142-era) → 168 (P143: +4 — ZAMUDA SANIRANA!) → 169 (P144: +1 h82!)                # 11 (P115) + … + 4 bloki 1892 (P121) + 5 bloki 1893 (P122) + 4 bloki 1894 (P123) + 2 bloka 1900 (P129) → 185 (P149: +4!)
+BLOCKS_04455 = 194                # POSODABLJENO P144: 164 (P142-era) → 168 (P143: +4 — ZAMUDA SANIRANA!) → 169 (P144: +1 h82!)                # 11 (P115) + … + 4 bloki 1892 (P121) + 5 bloki 1893 (P122) + 4 bloki 1894 (P123) + 2 bloka 1900 (P129) → 185 (P149: +4!)
 DATE_COUNTS = {"januar": 3, "februar": 8, "marec": 0, "april": 0, "maj": 5,
                "junij": 0, "julij": 1, "avgust": 2, "september": 1, "oktober": 1,
                "november": 0, "december": 0}
