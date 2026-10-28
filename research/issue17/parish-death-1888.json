@@ -1,0 +1,618 @@
+{
+ "phase": "P154",
+ "title": "MRLIŠKA knjiga 04894 — leto 1888 = 3. polno leto mrliške linije = REKORDNO leto (29 Griblje-vpisov / 102 vrstic!)",
+ "status": "SAMPLE-TRANSCRIPTION-D1888",
+ "issuedAt": "2025-10-28",
+ "source": {
+  "book": "Mrtvaška knjiga 04894, župnija Podzemelj (Matricula Online)",
+  "url": "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04894/",
+  "scans": "s13-dno (1888 r1–r5, P153-lead forenzika) + s14–s21 (r6–r102); meja 1889 = veliki cifri »1 8 8 9« čez prazno vrsto na s21 (forenzično potrjeno: 8 = dvojna zanka ×2, 9 = zanka + DOLGI REP skozi vrstico!)",
+  "inventory": "256 slik (P80)",
+  "pageMapping": "stran == sken − 1 (Stran 12–20 == s13–s21; P80-invarianta mrliške, 9. potrditev)",
+  "reading": "9× celostansko (s13–s22) + 116× VLM prehod (58× trak pass-1 + 58× ciljirani pass-2; glm-5v-turbo, thinking-off, 429-retry) + 15× max-zoom celic (2–7×) + 4× predstavitveni wide-trakovi na sken + AI-vizualna forenzika (marker 1888 ×3 segmenti, marker 1889, glave s14/s16, celice h83/h25/h83-hiša) — metodologija P153"
+ },
+ "frame": {
+  "type": "leto 1888 = vrste 1–102 (P153-lead r1–r5 na s13-dno + s14–s21; restart 1.1.1889 na s21)",
+  "layout": "Mrtvaška knjiga: zaporedna št. | mesec + dan smrti | dan pokopa | bivališče (vas + hiša) | ime, priimek in stan | vere/spola | starost | bolezen ali vzrok | previden | podpis duhovnika | opomba",
+  "pageMapping": "stran == sken − 1 (Stran 13–20 == s14–s21)",
+  "boundaries": {
+   "1887→1888": "s13 (str. 12): veliki cifri »1 8 8 8« čez prazno vrsto 72 — P153 določil, P154 FORENZIČNO POTRDIL (celostanski VLM-prehod je zmotno bral »1889«; 3-segmentni max-zoom + pregled cifrov: vse tri »8« = dve zaprti zanki, brez repa!)",
+   "1888→1889": "s21 (str. 20): veliki cifri »1 8 8 9« čez prazno vrsto za r102 — 9 z dolgim repom (max-zoom desne strani!); 1889 r1 = Januarj 9. Gradac 64; P155-LEAD: Griblje 53 Ana Perdihec, omgina ¼ žemlj., 67 let, Mertvod [~] (25.1.1889 — h53 = Perdinec-hiša P154-r20! + Mertvod = P153-r66 ponovitev!)"
+  },
+  "glave": "s14–s21: letnica-glava »Leto 18ſſ..« IZPISANA (kurzivna 88-forma, dve dolgi-s zanki + nefilačane pike — vsa 8 skenov!; nasprotje P153: s13-glava PRAZNA!) — 2. primer glav-vrste mrliške (P80-parallel poročne)"
+ },
+ "entries": [
+  {
+   "row": 5,
+   "houseNo": "72",
+   "bookSignature": "04894",
+   "year": 1888,
+   "scan": 13,
+   "page": 12,
+   "mesec": "Januarj",
+   "smrt": "31.",
+   "pokop": "2. 2.",
+   "whatSi": "umrla Marija Straus [~ Štraus], ½ zemlj. hči, 1 DAN (31. 1., pokop 2. 2.) — Slabost; And. Glibe coop. (P153-lead forenzika — 1. gribeljski vpis 1888; h72 = ŠTRAVS poročne 1921-№22!)",
+   "whatEn": "died Marija Straus [~], a half-farmer's daughter, 1 DAY old (Jan 31, buried Feb 2) — weakness; And. Glibe coop. (the P153-lead forensics — the 1st Griblje entry of 1888; h72 = the ŠTRAVS marriage 1921 №22!)",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 6,
+   "houseNo": "72",
+   "bookSignature": "04894",
+   "year": 1888,
+   "scan": 14,
+   "page": 13,
+   "mesec": "Februar",
+   "smrt": "3.",
+   "pokop": "5.",
+   "whatSi": "umrla Barbara Strauš [~], omgena [~] ½ žemljakinja, 22 let (3. 2., pokop 5. 2.) — NA PORODU (= porodna smrt!); And. Glibe coop.; ★★ h72 DRAMA ×2: mati Barbara (22) umrla na porodu 3 dni po hči Mariji (1 dan, 31. 1.) — novorojenček + mati v 4 dneh!",
+   "whatEn": "died Barbara Strauš [~], a [~] half-smallholder woman, 22 years (Feb 3, buried Feb 5) — IN CHILDBIRTH (= a maternal death!); And. Glibe coop.; ★★ the h72 DRAMA ×2: mother Barbara (22) died in childbirth 3 days after her daughter Marija (1 day, Jan 31) — the newborn + the mother within 4 days!",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 7,
+   "houseNo": "61",
+   "bookSignature": "04894",
+   "year": 1888,
+   "scan": 14,
+   "page": 13,
+   "mesec": "Februar",
+   "smrt": "11.",
+   "pokop": "13.",
+   "whatSi": "umrla Katarina Požek [~ — celostanska 'Poreht' NAPAČNA, max-zoom jasno PožeK!], ¼ žemlj. hči, 10 mesecev (11. 2., pokop 13. 2.) — Božjast; And. Glibe coop.",
+   "whatEn": "died Katarina Požek [~ — the full-page 'Poreht' WRONG, the max-zoom clearly PožeK!], a quarter-smallholder's daughter, 10 months (Feb 11, buried Feb 13) — cramps; And. Glibe coop.",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 10,
+   "houseNo": "61",
+   "bookSignature": "04894",
+   "year": 1888,
+   "scan": 14,
+   "page": 13,
+   "mesec": "Februar",
+   "smrt": "15.",
+   "pokop": "17.",
+   "whatSi": "umrla Marija Požek [~ — celostanska 'Požeš' popravljena], ½ žemljatka hči, 3 leta (15. 2., pokop 17. 2.) — Išiste [~ — neberljivo, 2. VLM 'Iliste']; And. Glibe coop.; ★ h61 DRAMA: dve hči Požekovih (10 mesecev + 3 leta) v 4 dneh!",
+   "whatEn": "died Marija Požek [~ — the full-page 'Požeš' corrected], a half-smallholderess's daughter, 3 years (Feb 15, buried Feb 17) — Išiste [~ — illegible]; And. Glibe coop.; ★ the h61 DRAMA: two Požek daughters (10 months + 3 years) within 4 days!",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 13,
+   "houseNo": "35",
+   "bookSignature": "04894",
+   "year": 1888,
+   "scan": 14,
+   "page": 13,
+   "mesec": "Februar",
+   "smrt": "26.",
+   "pokop": "28.",
+   "whatSi": "umrl Matija Križan [~ Hrižan — Kurrent varianta], ½ žemlj. sin, 3 leta (26. 2., pokop 28. 2.) — Angina; And. Glibe coop.",
+   "whatEn": "died Matija Križan [~ Hrižan — the Kurrent variant], a half-farmer's son, 3 years (Feb 26, buried Feb 28) — angina; And. Glibe coop.",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 15,
+   "houseNo": "69",
+   "bookSignature": "04894",
+   "year": 1888,
+   "scan": 14,
+   "page": 13,
+   "mesec": "Marcej",
+   "smrt": "4.",
+   "pokop": "5.",
+   "whatSi": "umrla Marija Brinec [~ — celostanska 'Brune' NAPAČNA!], ½ žemljat. hči, 5 DNI (4. 3., pokop 5. 3.) — Slabost; And. Glibe coop.",
+   "whatEn": "died Marija Brinec [~ — the full-page 'Brune' WRONG!], a half-smallholder's daughter, 5 DAYS (Mar 4, buried Mar 5) — weakness; And. Glibe coop.",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 20,
+   "houseNo": "53",
+   "bookSignature": "04894",
+   "year": 1888,
+   "scan": 15,
+   "page": 14,
+   "mesec": "April",
+   "smrt": "3.",
+   "pokop": "5.",
+   "whatSi": "umrl Janez Perdinec [~ — celostanska 'Simon Pozdinec h88' = ×2 NAPAČNA! max-zoom: Janez Perdinec h53!], vdovec in kolar, 75 let (3. 4., pokop 5. 4.) — Nadluka; previden (1); BREZ PODPISA; h53 = P153-1887 (Marija Šimec 62!) + P155-1889-lead (Ana Perdihec 67 Mertvod [~]!) — PERDINEC-mreža!",
+   "whatEn": "died Janez Perdinec [~ — the full-page 'Simon Pozdinec h88' DOUBLY WRONG! the max-zoom: Janez Perdinec h53!], a widower and wheelwright, 75 years (Apr 3, buried Apr 5) — diphtheria; received the sacraments (1); NO SIGNATURE; h53 = P153-1887 (Marija Šimec 62!) + the P155-1889-lead (Ana Perdihec 67 Mertvod [~]!) — the PERDINEC network!",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 21,
+   "houseNo": "65",
+   "bookSignature": "04894",
+   "year": 1888,
+   "scan": 15,
+   "page": 14,
+   "mesec": "April",
+   "smrt": "9.",
+   "pokop": "11.",
+   "whatSi": "umrla Katarina Milek [~ — VLM 'Štriten/Mulek' zavrnjena], ½ žeml'atovs hči, 9 let (9. 4., pokop 11. 4.) — Bule [~ — neberljivo, 'Ruda?']; BREZ PODPISA; h65 = P153-1887 (Mihael Milek 49, Marec!) — Milek-hiša 2. leto zapored!",
+   "whatEn": "died Katarina Milek [~ — the VLM 'Štriten/Mulek' rejected], a half-smallholder's daughter, 9 years (Apr 9, buried Apr 11) — Bule [~ — illegible]; NO SIGNATURE; h65 = P153-1887 (Mihael Milek 49, March!) — the Milek house 2 years running!",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 22,
+   "houseNo": "26",
+   "bookSignature": "04894",
+   "year": 1888,
+   "scan": 15,
+   "page": 14,
+   "mesec": "April",
+   "smrt": "16.",
+   "pokop": "18.",
+   "whatSi": "umrla Marija Brinec [~], omgjena [~] ¼ žemlj. žena, 63 let [~ — Kurrent 3/9!] (16. 4., pokop 18. 4.) — Pljučnica [~ Pljuunica]; previdna (1); BREZ PODPISA; h26 = BRINEC-hiša (poročna 1887 №4!) — 2. Brinec smrt 1888 (r82 h24!)",
+   "whatEn": "died Marija Brinec [~], a [~] quarter-farmer's wife, 63 years [~ — the Kurrent 3/9!] (Apr 16, buried Apr 18) — pneumonia [~]; received the sacraments (1); NO SIGNATURE; h26 = the BRINEC house (marriage 1887 №4!) — the 2nd Brinec death of 1888 (r82 h24!)",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 23,
+   "houseNo": "83",
+   "bookSignature": "04894",
+   "year": 1888,
+   "scan": 15,
+   "page": 14,
+   "mesec": "April",
+   "smrt": "18.",
+   "pokop": "19.",
+   "whatSi": "umrla Marija Radovič [~], krajčeva hči [~ krojačeva; 3. vrstica 'o viši' neberljiva [?]], starost NEIZPISANA (— [?]) (18. 4., pokop 19. 4.) — VSLED TĚŽKEGA PORODA (= po težkem porodu — 2. porodna smrt leta!); BREZ PODPISA; ★★ NOVA HIŠA h83 (max-zoom potrdila 83, ne 68/88!) = p80-hiša #78",
+   "whatEn": "died Marija Radovič [~], a tailor's daughter [~; the 3rd line illegible [?]], age NOT WRITTEN (— [?]) (Apr 18, buried Apr 19) — AFTER A DIFFICULT CHILDBIRTH (= the 2nd maternal death of the year!); NO SIGNATURE; ★★ A NEW HOUSE h83 (the max-zoom confirmed 83, not 68/88!) = the p80-house #78",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 24,
+   "houseNo": "61",
+   "bookSignature": "04894",
+   "year": 1888,
+   "scan": 15,
+   "page": 14,
+   "mesec": "April",
+   "smrt": "19.",
+   "pokop": "21.",
+   "whatSi": "umrla Barbara Požek [~ — celostanska 'Povelt' NAPAČNA!], 24 let (19. 4., pokop 21. 4.) — Jetika; previdna (1); BREZ PODPISA; ★★ h61 = 3. SMRT na isti hiši 1888 (r7 Katarina 10-mes + r10 Marija 3-let Februar + Barbara 24 April) = POŽEK-TRAGEDIJA h61!",
+   "whatEn": "died Barbara Požek [~ — the full-page 'Povelt' WRONG!], 24 years (Apr 19, buried Apr 21) — Jetika (dropsy); received the sacraments (1); NO SIGNATURE; ★★ h61 = the 3rd DEATH at the same house of 1888 (r7 Katarina 10-mo + r10 Marija 3-yr February + Barbara 24 April) = the POŽEK TRAGEDY of h61!",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 37,
+   "houseNo": "1",
+   "bookSignature": "04894",
+   "year": 1888,
+   "scan": 16,
+   "page": 15,
+   "mesec": "Maj",
+   "smrt": "23.",
+   "pokop": "24.",
+   "whatSi": "umrl Matija Želičo [~ — Kurrent 'Žefičo/Željko'; 1. od 4 Želičo/Željko-smrti 1888!], ½ žemljatov sin, 3 leta (23. 5., pokop 24. 5.) — Vrhjatinka [~ — neberljiv ljudski izraz, paralela Strgjatinka!]; BREZ PODPISA",
+   "whatEn": "died Matija Želičo [~ — the Kurrent 'Žefičo/Željko'; the 1st of 4 Želičo/Željko deaths of 1888!], a half-smallholder's son, 3 years (May 23, buried May 24) — Vrhjatinka [~ — an illegible folk term, parallel to Strgjatinka!]; NO SIGNATURE",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 43,
+   "houseNo": "13",
+   "bookSignature": "04894",
+   "year": 1888,
+   "scan": 16,
+   "page": 15,
+   "mesec": "Junij",
+   "smrt": "8.",
+   "pokop": "8. [~ 9.]",
+   "whatSi": "umrla Marija Jakobčič [~], ½ žemljatova hči, 5½ let (8. 6., pokop 8./9. 6.) — Strgjatinka [~ — nerazrešen ljudski izraz, 1. od 3!]; BREZ PODPISA; h13 = P153 'Jakopič 3 dogodka v 2 letih' hiša — 4. dogodek!",
+   "whatEn": "died Marija Jakobčič [~], a half-smallholder's daughter, 5½ years (Jun 8, buried Jun 8/9) — Strgjatinka [~ — an unresolved folk term, the 1st of 3!]; NO SIGNATURE; h13 = the P153 'Jakopič 3-events-in-2-years' house — the 4th event!",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 44,
+   "houseNo": "21",
+   "bookSignature": "04894",
+   "year": 1888,
+   "scan": 16,
+   "page": 15,
+   "mesec": "Junij",
+   "smrt": "10.",
+   "pokop": "11.",
+   "whatSi": "umrl Nikolaj Požek [~ Požett/Povelt — Kurrent zmeda], ½ žemljatov sin, 6 mesecev (10. 6., pokop 11. 6.) — Sušica; BREZ PODPISA; h21 = P153-1887 (Matija Požek 2¾!) — Požek-hiša 2. leto!",
+   "whatEn": "died Nikolaj Požek [~ Požett/Povelt — the Kurrent confusion], a half-smallholder's son, 6 months (Jun 10, buried Jun 11) — consumption; NO SIGNATURE; h21 = P153-1887 (Matija Požek 2¾!) — the Požek house 2 years running!",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 60,
+   "houseNo": "25",
+   "bookSignature": "04894",
+   "year": 1888,
+   "scan": 18,
+   "page": 17,
+   "mesec": "Julij",
+   "smrt": "27.",
+   "pokop": "28.",
+   "whatSi": "umrl Janez Klepec, ½ žemlj. sin, 1 mesec (27. 7., pokop 28. 7.) — Davica; BREZ PODPISA; ★ max-zoom hiša = 25 (5-forma identična s59-'35'; 6 ima visok ovinek!) — celostanska '26' zavrnjena; h25 [~ — Kurrent 5/6]",
+   "whatEn": "died Janez Klepec, a half-farmer's son, 1 month (Jul 27, buried Jul 28) — croup; NO SIGNATURE; ★ the max-zoom house = 25 (the 5-form identical to s59-'35'; the 6 has a tall loop!) — the full-page '26' rejected; h25 [~ — the Kurrent 5/6]",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 63,
+   "houseNo": "60",
+   "bookSignature": "04894",
+   "year": 1888,
+   "scan": 18,
+   "page": 17,
+   "mesec": "Avgust",
+   "smrt": "10.",
+   "pokop": "12.",
+   "whatSi": "umrla Doroteja Želičo [~ Željko], ½ žemlj. hči, 14 let (10. 8., pokop 12. 8.) — Strgjatinka [~]; BREZ PODPISA; ★★ h60 ŽELIČO/ŽELJKO-TRAGEDIJA 1/2: 6 dni pred sestro Barbaro (r66, 3 let) — isti vzrok!",
+   "whatEn": "died Doroteja Želičo [~ Željko], a half-farmer's daughter, 14 years (Aug 10, buried Aug 12) — Strgjatinka [~]; NO SIGNATURE; ★★ the h60 ŽELIČO/ŽELJKO-TRAGEDY 1/2: 6 days before her sister Barbara (r66, 3 years) — the same cause!",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 66,
+   "houseNo": "60",
+   "bookSignature": "04894",
+   "year": 1888,
+   "scan": 18,
+   "page": 17,
+   "mesec": "Avgust",
+   "smrt": "16.",
+   "pokop": "18.",
+   "whatSi": "umrla Barbara Želičo [~ Žefiko/Željko], ½ žemlj. hči, 3 let (16. 8., pokop 18. 8.) — Strgjatinka [~ — celostanska 'Marbmila/Grižatnica' zavrnjeni!]; BREZ PODPISA; ★★ h60 ŽELIČO/ŽELJKO-TRAGEDIJA 2/2: sestra Doroteje (14) — obe 'Strgjatinka' v 6 dneh!",
+   "whatEn": "died Barbara Želičo [~ Žefiko/Željko], a half-farmer's daughter, 3 years (Aug 16, buried Aug 18) — Strgjatinka [~ — the full-page 'Marbmila/Grižatnica' rejected!]; NO SIGNATURE; ★★ the h60 ŽELIČO/ŽELJKO-TRAGEDY 2/2: Doroteja's (14) sister — both 'Strgjatinka' within 6 days!",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 68,
+   "houseNo": "1",
+   "bookSignature": "04894",
+   "year": 1888,
+   "scan": 18,
+   "page": 17,
+   "mesec": "Avgust",
+   "smrt": "20.",
+   "pokop": "22.",
+   "whatSi": "umrl Anton Željko [~], ½ žemlj. sin, 4 mesece [~] (20. 8., pokop 22. 8.) — Davica; BREZ PODPISA; ★★ ŽELIČO/ŽELJKO = 4 MRTVIH OTROK 1888 na dveh hišah (h1: Matija 3-let maj + Anton 4-mes avg; h60: Doroteja 14 + Barbara 3 avg)!",
+   "whatEn": "died Anton Željko [~], a half-farmer's son, 4 months [~] (Aug 20, buried Aug 22) — croup; NO SIGNATURE; ★★ ŽELIČO/ŽELJKO = 4 DEAD CHILDREN of 1888 at two houses (h1: Matija 3-yr May + Anton 4-mo Aug; h60: Doroteja 14 + Barbara 3 Aug)!",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 72,
+   "houseNo": "47",
+   "bookSignature": "04894",
+   "year": 1888,
+   "scan": 19,
+   "page": 18,
+   "mesec": "Avgust",
+   "smrt": "26.",
+   "pokop": "27.",
+   "whatSi": "umrla Marija Klobučar [~], ½ žemlj. hči, 3 leta (26. 8., pokop 27. 8.) — Davica; Jos. Romey; ★ NOVA p80-HIŠA h47 (P153-1887: Katarina Klobučar h46, 74 — sosednja hiša! Klobučar-mreža ×2 zaporedni leti!)",
+   "whatEn": "died Marija Klobučar [~], a half-farmer's daughter, 3 years (Aug 26, buried Aug 27) — croup; Jos. Romey; ★ A NEW p80-HOUSE h47 (P153-1887: Katarina Klobučar h46, 74 — the neighbouring house! The Klobučar network ×2 consecutive years!)",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 74,
+   "houseNo": "26",
+   "bookSignature": "04894",
+   "year": 1888,
+   "scan": 19,
+   "page": 18,
+   "mesec": "Avgust",
+   "smrt": "29.",
+   "pokop": "30.",
+   "whatSi": "umrl Matija Križan [~ Hrižan], ½ žemlj. sin, 2 leti (29. 8., pokop 30. 8.) — Difteritis [~ Diſenteritis — dolgi-s zmeda!]; Jos. Romey; h26 = 2. smrt hiše 1888 (r22 Marija Brinec 63, April!)",
+   "whatEn": "died Matija Križan [~ Hrižan], a half-farmer's son, 2 years (Aug 29, buried Aug 30) — Difteritis [~ Diſenteritis — the long-s confusion!]; Jos. Romey; h26 = the house's 2nd death of 1888 (r22 Marija Brinec 63, April!)",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 81,
+   "houseNo": "36",
+   "bookSignature": "04894",
+   "year": 1888,
+   "scan": 19,
+   "page": 18,
+   "mesec": "September",
+   "smrt": "8.",
+   "pokop": "9.",
+   "whatSi": "umrla Ana Križan [~ Hrižan], ½ žemlj. hči, 4 leta [~ — celostanska '9' popravljena po R-alignment!] (8. 9., pokop 9. 9.) — Gliste; BREZ PODPISA; h36 = P153-1887 (Šimec-Ana sidro!) + P115-1886 (Pegdirc-ženin!) — 3-virska hiša",
+   "whatEn": "died Ana Križan [~ Hrižan], a half-farmer's daughter, 4 years [~ — the full-page '9' corrected by R-alignment!] (Sep 8, buried Sep 9) — Gliste (worms); NO SIGNATURE; h36 = P153-1887 (the Šimec-Ana anchor!) + P115-1886 (the Pegdirc-groom!) — a 3-source house",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 82,
+   "houseNo": "24",
+   "bookSignature": "04894",
+   "year": 1888,
+   "scan": 19,
+   "page": 18,
+   "mesec": "September",
+   "smrt": "13.",
+   "pokop": "15.",
+   "whatSi": "umrla Barbara Brinec, ½ žemljatova hči, 16 let (13. 9., pokop 15. 9.) — Pljučnica [~]; Andrej Glibe coop. (POLNI podpis 'Andrej' — potrditev And.-kratic!); h24 = BRINEC-mreža (r15 h69 + r22 h26 = 3 Brinec-smrti 1888!)",
+   "whatEn": "died Barbara Brinec, a half-smallholder's daughter, 16 years (Sep 13, buried Sep 15) — pneumonia [~]; Andrej Glibe coop. (the FULL signature 'Andrej' — a confirmation of the And. abbreviations!); h24 = the BRINEC network (r15 h69 + r22 h26 = 3 Brinec deaths of 1888!)",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 84,
+   "houseNo": "41",
+   "bookSignature": "04894",
+   "year": 1888,
+   "scan": 20,
+   "page": 19,
+   "mesec": "September",
+   "smrt": "22.",
+   "pokop": "24.",
+   "whatSi": "umrl Matija Hlusič [~ — celostanska 'Marija Mušič' = ×2 NAPAČNA! max-zoom: Matija Hlusič!], ¼ žemljatov sin, 3½ leta (22. 9., pokop 24. 9.) — Difteritis (JASNA forma — dihtagija!); BREZ PODPISA",
+   "whatEn": "died Matija Hlusič [~ — the full-page 'Marija Mušič' DOUBLY WRONG! the max-zoom: Matija Hlusič!], a quarter-smallholder's son, 3½ years (Sep 22, buried Sep 24) — Difteritis (a CLEAR form — diphtheria!); NO SIGNATURE",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 87,
+   "houseNo": "7",
+   "bookSignature": "04894",
+   "year": 1888,
+   "scan": 20,
+   "page": 19,
+   "mesec": "Oktober",
+   "smrt": "11.",
+   "pokop": "12.",
+   "whatSi": "umrl Jožef Totter [~ Fotter — P150-№27-vez!], ½ žemlj. sin, 5 let (11. 10., pokop 12. 10.) — Vodernica; BREZ PODPISA; h7 = poročna 1921-№27-hiša (Fotter-ženin!) — TOTTER/FOTTER čez 33 leta!",
+   "whatEn": "died Jožef Totter [~ Fotter — the P150-№27 link!], a half-farmer's son, 5 years (Oct 11, buried Oct 12) — Vodernica (dropsy); NO SIGNATURE; h7 = the marriage-1921-№27 house (the Fotter groom!) — TOTTER/FOTTER across 33 years!",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 89,
+   "houseNo": "8",
+   "bookSignature": "04894",
+   "year": 1888,
+   "scan": 20,
+   "page": 19,
+   "mesec": "Oktober",
+   "smrt": "20.",
+   "pokop": "22.",
+   "whatSi": "umrl Martin Jakobčič [~], ½ žemljatov sin, 1 URO (20. 10., pokop 22. 10.) — Difteritis in slabost — v sih Kruščen [? — 2. del neberljiv, morebiti nem. 'Krämpfen' = krči!] = NAJKRAJŠA ŽIVLJENJSKA DOBA 1888 + nerazrešen vzrok; BREZ PODPISA",
+   "whatEn": "died Martin Jakobčič [~], a half-smallholder's son, 1 HOUR old (Oct 20, buried Oct 22) — Difteritis and weakness — v sih Kruščen [? — the 2nd part illegible, possibly the German 'Krämpfen' = convulsions!] = the SHORTEST LIFESPAN of 1888 + an unresolved cause; NO SIGNATURE",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 97,
+   "houseNo": "8",
+   "bookSignature": "04894",
+   "year": 1888,
+   "scan": 21,
+   "page": 20,
+   "mesec": "November",
+   "smrt": "18.",
+   "pokop": "20.",
+   "whatSi": "umrl Mihael Jakobčič [~], ½ žemlj. kolar, vdovec, 68 let [~ — VLM '65' zavrnjeno!] (18. 11., pokop 20. 11.) — Nadluka; previden (1); BREZ PODPISA; ★ h8 DRAMA ×2: 29 dni po Martinu (r89, 1 ura!) — oče/syn? dedek? (kolar-vdovec)",
+   "whatEn": "died Mihael Jakobčič [~], a half-farmer wheelwright, a widower, 68 years [~ — the VLM '65' rejected!] (Nov 18, buried Nov 20) — Nadluka (diphtheria); received the sacraments (1); NO SIGNATURE; ★ the h8 DRAMA ×2: 29 days after Martin (r89, 1 hour!) — father/son? grandfather? (a widower wheelwright)",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 98,
+   "houseNo": "35",
+   "bookSignature": "04894",
+   "year": 1888,
+   "scan": 21,
+   "page": 20,
+   "mesec": "November",
+   "smrt": "24.",
+   "pokop": "26.",
+   "whatSi": "umrla Ana Križan [~ Hrižan], ¼ žemljaNova hči, 8 let [~ — VLM '3' zavrnjeno!] (24. 11., pokop 26. 11.) — Pljučnica; BREZ PODPISA; h35 = 2. smrt hiše 1888 (r13 Matija 3-let, Februar!) — KRIŽAN-hiša ×2!",
+   "whatEn": "died Ana Križan [~ Hrižan], a quarter-smallholder's daughter, 8 years [~ — the VLM '3' rejected!] (Nov 24, buried Nov 26) — pneumonia; NO SIGNATURE; h35 = the house's 2nd death of 1888 (r13 Matija 3-yr, February!) — the KRIŽAN house ×2!",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 99,
+   "houseNo": "21",
+   "bookSignature": "04894",
+   "year": 1888,
+   "scan": 21,
+   "page": 20,
+   "mesec": "November",
+   "smrt": "26.",
+   "pokop": "28.",
+   "whatSi": "umrla Marija Požek [~ — celostanska 'Povelt' zavrnjena!], omgina [~] ¼ žemljatinja, 38 let [~ — celostanska '2½' zavrnjena!] (26. 11., pokop 28. 11.) — Vodernica; previdna (1); BREZ PODPISA; h21 = 2. smrt hiše 1888 (r44 Nikolaj 6-mes, Junij!) + P153-1887 (Matija 2¾) — Požek ×3 čez 2 leti!",
+   "whatEn": "died Marija Požek [~ — the full-page 'Povelt' rejected!], a [~] quarter-smallholderess, 38 years [~ — the full-page '2½' rejected!] (Nov 26, buried Nov 28) — Vodernica (dropsy); received the sacraments (1); NO SIGNATURE; h21 = the house's 2nd death of 1888 (r44 Nikolaj 6-mo, June!) + P153-1887 (Matija 2¾) — Požek ×3 across 2 years!",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 102,
+   "houseNo": "3",
+   "bookSignature": "04894",
+   "year": 1888,
+   "scan": 21,
+   "page": 20,
+   "mesec": "December",
+   "smrt": "25.",
+   "pokop": "27.",
+   "whatSi": "umrl Peter Križan [~ Hrižan], ½ žemlj. kolar in vdovec, 80 let (25. 12., pokop 27. 12.) — STAROST (= starostni vohun — 1. 'starost' kot vzrok mrliške linije!); previden (1); BREZ PODPISA; ZADNJI gribeljski vpis 1888; h3 = P153-1887 (Doroteja 39!) — Križan-hiša ×2; 5 dni pred koncem leta",
+   "whatEn": "died Peter Križan [~ Hrižan], a half-farmer wheelwright and widower, 80 years (Dec 25, buried Dec 27) — OLD AGE (= the 1st 'old age' cause of the death line!); received the sacraments (1); NO SIGNATURE; the LAST Griblje entry of 1888; h3 = P153-1887 (Doroteja 39!) — the Križan house ×2; 5 days before the year's end",
+   "status": "DOCUMENTED"
+  }
+ ],
+ "excluded": [
+  {
+   "row": "1888-r1–r4 (s13-dno)",
+   "what": "Januar 1888 izven Gribelj (P153-lead forenzika ponovljena): Certoviše 35 Marko Jakofčič 77 Nadluka (4.1.) · Dobravice 25 Marija Plut 60 Plunica (11.1.) · Otak 22 N. Žugelj mrtvorojeno (14./17.1. [~]) · Gradac 21 Ana Maventič 64 Slabost (19.1.)"
+  },
+  {
+   "row": "s14 r8–r9",
+   "what": "Februar: Krasinec 25 Marjeta Starevinec 50 Sušica (13.2.) · Krasinec 28 Marija Starevinec 40 Marbmil [~] omgirana (14.2.) — STAREVINEC sestre ×2 2 dni! (izven Gribelj)"
+  },
+  {
+   "row": "s14 r11–r12+r14",
+   "what": "Boršt ez naselju 29 Peter Mušič 63 Kolerica? (19.2.) · Krivoglavce 30 Marija Tomc 3 Božjast (26.2.) · Gornelj 15 Nikolaj Janežič bajtar 39 od ženja zasvet (27.2.–1.3.)"
+  },
+  {
+   "row": "s14 r16–r18",
+   "what": "Marzec: Otak 23 Ana Vlašič 1½ Sušica previdena (5.3.) · Podžemelj 31 Marko Mušič 63¾ Sušica previden (6.3.) · Boršt 50 Matija Kohanič vdovec in kolar 36 Nadluka (8.3.)"
+  },
+  {
+   "row": "s15 r19",
+   "what": "Marcej 15/17 Klofjišče? 9 Barbara Tavče 29 Sušica (izven Gribelj)"
+  },
+  {
+   "row": "s15 r25–r31",
+   "what": "April–Maj: Krivoglavce 28 Jožef Miha 1-mes Božjast (20.4.) · Krasinec 36 Ana Harasovič 68 Nadluka (20.4.) · Vranoviče 4 Marija Kobanci 36 Krtina (20.4.) · Boginja vas 47 Marija Janežič 26 Krtina (25.4.) · Dobravice 21 Marija Žugelj 19 Nadluka (29.4.) · Krasinec 25 Katarina Starevinne 8 Kolera? (3.5.) · Gradac 21 Ana Sercar 8 Rda? (6.5.)"
+  },
+  {
+   "row": "s16 r32–r36+r38–r42",
+   "what": "Maj: Gradac 65 Marija Arhovec 57 (6.5.) · Klošter 54 Jožef Plut 4-let Božjast (15.5.) · Gradac 75 A. Žugelj mrtvorjen (21.5.) · Dobravce 34 Vera Hlepec 2 An-utopila? [~] (19.5.) · Boginja vas 36 Marija Janežič samska bajtarica 66 Nadluka (21.5.) · Klošter 52 Arabella Rastar? vdov. 53 Maron? (26.5.) · Dobravice 11 Marija Žugelj 2-mes Krtina (28.5.) · Gradac 16 Katarina Plut 19 (31.5.) · Gradac 26 Marija Perdiče 5-mes Božjast (2.6.) · Klošter 37 Jožef Hočevar 72 Kašelj (6.6.)"
+  },
+  {
+   "row": "s17 r45–r57 (CEL loot)",
+   "what": "Junij–Julij 0 Griblje! Disenterija/Kolera-epidemija: Krasinec 42 Jurij Harasimič 8 Božjast (11.6.) · Certoviše 40 Ana Tahtefajtič 19 Disenteria (12.6.) · Boršt 13 Ana Hrvanarič 14½ Disenteria (15.6.) · Krasinec 42 Katarina Starevina 5½ Kolera (16.6.) · Krasinec 45 Mihael Bedeneč 4½ Kolera (25.6.) · Vranoviče 4 Martina Plut 4 Trizgatinka (27.6.) · Krasinec 6 Miholaj Bahorvič 70½ Krtina (28.6.) · Dobravice 11 Marija Žugelj 31 Krtina (1.7.) · Boršt 47 Marija Jaklič 3-mes Krtina (1.7.) · Gradac 9 Franc Safrič 7½ Vodernica (4.7.) · Krasinec 32 Ana Harasimič 14½ Plučnica (13.7.) · Krasinec 45 Anton Starasimič 1½ Krtina (15.7.) · Certoviše 15 N. Martin mrtvorojeno (19.7.) — ★ Krasinec ×6/13!"
+  },
+  {
+   "row": "s18 r58–r59+r61–r62+r64–r65+r67+r69–r70",
+   "what": "Julij–Avgust: Krasinec 35 Janez Brodarič 4 Davica (22.7.) · Grintiče 35 Katarina Janežič 9 Davica (26.7.) · Grintiče 5 A. Tovše mrtvorojeno ženski (29.7.) · Begunja vas 12 Mihael Vipavec 2 Davica (3.8.) · Krasinec 12 Martin Starasimič 1½ Davica (11.8.) · Gradac 66 Antonij Dolar 4-mes Sušica (12.8.) · Krasinec 16 Barbara Klepec 9 Cavina [Difteritis!] (19.8.) · Krasinec 46 Ana Klemšič 2½ Davica (22.8.) · Prilozje 28 Barbara Simič 33 Krvavet. vrk od proška? (22.8.) — ★ DAVICA-klaster ×7!"
+  },
+  {
+   "row": "s19 r71+r73+r75–r80+r83",
+   "what": "Avgust–September: Begunja vas 15 Ana Brodarič 6 Davica (26.8.) · Begunya vas 39 Ana Pavič 6 Krtina (29.8.) · Ohljuka 18 Anton Janeževič 4 Disenteria (1.9.) · Gradac 12 Uršula Moar 58 Želodam-bol? (2.9.) · Krasinec 9 Nikolaj Hrižan 3 Vodernica (3.9.) · Ohljuka 18 Nikolaj Janeževič 3½ Vodernica negovan (4.9.) · Gradac 49 Jožefa Plesec 29 Sušnica previdena (4.9.) · Primostek 11 Katarina Surajevčič 2 Božjast (8.9.) · Dobravice 9 Anton Žugelj 6 Božjast (19.9.)"
+  },
+  {
+   "row": "s20 r85–r86+r88+r90–r96",
+   "what": "September–November: Gradac 49 Janez Pleše 1-mes Slabost (25.9.) · Primostek 11 Marija Janežič 4 Božjast (3.10.) · Podžemelj 30 Ana Pezdirec bajtarjeva hči 3 Pljučnica (19.10.) · Certoviše 25 N. Kontovič mrtvorojeno (26.10.) · Krasinec 48 Marjeta Hribar vdova-bajtarca 52 Nadluka (1.11.) · Gornelj 14 Barbara Barkapee? 4-mes Božjast (4.11.) · Gradac 34 Marija Kleper 3 Božjast (5.11.) · Boginja vas 14 N. Kralj mrtvorojeno deklica (12.11.) · Primostek 14 Anton Tovše 1-mes Božjast (13.11.) · Vranoviče 4 Janez Šimek roj. Metlika? 3 Božjast (14.11.) — ★ ŠIMEK izven Gribelj!"
+  },
+  {
+   "row": "s21 r100–r101",
+   "what": "December: Klošter 41 Katarina Plut 2-let Disenteria (13.12.) · Gradac 26 Marija Aveglia kolarka iz Reke? 61 Karast? [~] (16.12.)"
+  },
+  {
+   "row": "s21 1889-r1–r6 (restart)",
+   "what": "1889 ZAČETEK (P155-lead!): Gradac 64 Marija Novanič 2½ (9.1.) · Vranoviče 20 Antonija Vlasovič 7 (15.1.) · Dobravice 7 Katarina Gvednič? ½ žemlj. in vdova 65 Pljučnica (15.1.) · ★ GRIBLJE 53 Ana Perdihec omgina ¼ žemlj. 67 Mertvod [~] n.opt (25.1.) · Certoviše 6 Katarina Grabrijan samska 23 Griža previden (5.2.) · Krasinec 41 Ana Maxenfič 14-dni Božjast (23.2.)"
+  }
+ ],
+ "stats": {
+  "rows": "1888 = 102 vpisov (r1–r102; 46 → 71 → 102 — 3. linearni skok, rekord!)",
+  "griblje": "29 Griblje-vpisov (13 → 13 → 29 = ×2.2 REKORD!; 22 % vseh vpisov)",
+  "houses": "20 različnih hiš (72×2 · 61×3 · 35×2 · 69 · 53 · 65 · 26×2 · 83 · 1×2 · 13 · 21×2 · 25 · 60×2 · 47 · 36 · 24 · 41 · 7 · 8×2 · 3)",
+  "months": {
+   "Januarj": 1,
+   "Februar": 4,
+   "Marzec": 1,
+   "April": 5,
+   "Maj": 1,
+   "Junij": 2,
+   "Julij": 1,
+   "Avgust": 5,
+   "September": 3,
+   "Oktober": 2,
+   "November": 3,
+   "December": 1
+  },
+  "calendar": "max meseca April (5) in Avgust (5) — dvojni vrh (pomlad + poletno-jesenska epidemija); December 1 (r102 25.12.); brez praznih mesecev",
+  "ages": "razpon: 1 URA (r89) → 80 let (r102); otroška umrljivost: ≤5 let ×15/29 = 52 % (!); ≤1 mesec ×2; novorojenčki ≤5 dni ×3",
+  "causes": "Davica ×3 (r60? ne: r68 + r72 + [Krasinec-klaster]) · Difteritis ×3 (r74 + r84 + r89) + Cavina[Difteritis] (izključeni) · Strgjatinka[~] ×3 (r43 + r63 + r66 — NERAZREŠEN ljudski izraz!) · Pljučnica[~] ×3 (r22 + r82 + r98) · Vodernica ×2 (r87 + r99) · Sušica ×2 (r44 + r81-Gliste posebej) · Nadluka ×2 (r20 + r97) · Slabost ×2 (r5 + r15) · NA PORODU ×1 (r6!) · Vsled těžkega poroda ×1 (r23!) · Starost ×1 (r102 — 1. primer!) · Jetika ×1 (r24) · Božjast ×1 (r7) · Angina ×1 (r13) · Išiste[~] ×1 (r10) · Bule[~] ×1 (r21) · Gliste ×1 (r81) · Vrhjatinka[~] ×1 (r37) · Kruščen[?] ×1 (r89)",
+  "priests": "PODPISI-KOLAPS: samo 9/29 gribeljskih vpisov podpisanih! (And. Glibe coop. ×6 Feb–Mar vključno s P153-leadom + Jos. Romey ×2 Avg 26–29 + Andrej Glibe coop. ×1 Sep 13) — proti 1887 (vsi podpisani!) — nov fenomen; previden-oznake (1) ×6",
+  "gaps": "brej gribeljskih smrti: Jun 11 → Jul 26 (45 dni, epidemija) · Sep 24 → Okt 20 (26 dni) · najgostjeje: Februar (5 v 23 dneh) + Avgust (6 v 25 dneh)"
+ },
+ "crossChecks": [
+  {
+   "id": "X1-stran-sken",
+   "what": "stran == sken − 1 za vseh 29 blokov (s13-dno str. 12 + s14–s21 == str. 13–20) — P80-invarianta mrliške, 9. potrditev"
+  },
+  {
+   "id": "X2-datumi-narascuje",
+   "what": "datumi smrti naraščajoče čez celo leto (31.1. → 25.12.); meseci v register-vrstnem redu (Januarj→December) brez skokov nazaj"
+  },
+  {
+   "id": "X3-p153-lead",
+   "what": "r5 h72 Marija Straus = P153-lead FORENZIKA POTRJENA (1 dan, 31.1., pokop 2.2., Slabost, And. Glibe coop.)"
+  },
+  {
+   "id": "X4-marker-1888",
+   "what": "P153-meja '1 8 8 8' POTRJENA z 3-segmentno max-zoom forenziko (celostanski VLM je bral '1889' — VSE tri 8 = dve zaprti zanki!)"
+  },
+  {
+   "id": "X5-marker-1889",
+   "what": "meja 1888/1889 na s21: '1 8 8 9' — 9 z dolgim repom (max-zoom!) + ozek restart-stolpec 1–6; 1889-r1 = Januarj 9 (Gradac 64)"
+  },
+  {
+   "id": "X6-glave-izpisane",
+   "what": "s14–s21: glava 'Leto 18ſſ..' izpisana (8/8 skenov; kurzivna 88-forma) — protislovje s P153 s13-PRAZNO glavo = pisar je začel letnico šele na 1. celotni strani leta"
+  },
+  {
+   "id": "X7-h72-stravs",
+   "what": "h72 = ŠTRAVS poročne 1921-№22 (P150) + P154 r5+r6 (Marija 1 dan + Barbara 22 Na porodu) — hiša čez 33 leta"
+  },
+  {
+   "id": "X8-perdinec-h53",
+   "what": "h53 = P153-1887 (Marija Šimec 62) + P154-r20 (Janez Perdinec 75) + P155-lead (Ana Perdihec 67 Mertvod [~]) — PERDINEC-mreža 3 leta"
+  },
+  {
+   "id": "X9-fotter-h7",
+   "what": "h7 = P154-r87 (Jožef Totter 5, 1888) + poročna 1921-№27 (Fotter-ženin) — TOTTER/FOTTER čez 33 leta"
+  },
+  {
+   "id": "X10-požek-h21",
+   "what": "h21 = P153-1887 (Matija 2¾) + P154-r44 (Nikolaj 6-mes) + P154-r99 (Marija 38) — Požek ×3 čez 2 leti"
+  }
+ ],
+ "anomalies": [
+  {
+   "id": "A1-celostanska-1889-napaka",
+   "what": "★★ celostanski VLM-prehod s13 je marker prebral kot '1 8 8 9' — 3-segmentna max-zoom forenzika POTRDILA '1 8 8 8' (vse tri 8 = dve zaprti zanki, brez repa) — metodološki dokaz: max-zoom forenzika > celostanski VLM"
+  },
+  {
+   "id": "A2-h83-nova",
+   "what": "★★ r23 hiša = 83 (max-zoom: 8+dvohrba 3) = NOVA p80-hiša #78 — celostanska '68' + VLM '83/88' zmeda razrešena"
+  },
+  {
+   "id": "A3-r20-dvojna-napaka",
+   "what": "★★ r20: celostansko branje 'Simon Pozdinec h88 78 let' = ×2 NAPAČNO — max-zoom: Janez Perdinec h53 75 let (Perdinec-mreža!)"
+  },
+  {
+   "id": "A4-r84-dvojna-napaka",
+   "what": "★★ r84: celostansko 'Marija Mušič h41' = ×2 NAPAČNO — max-zoom: Matija Hlusič h41 (spol + priimek!)"
+  },
+  {
+   "id": "A5-h25-kurent-5/6",
+   "what": "★ r60 hiša = 25 [~ — Kurrent 5/6 zmeda; 5-forma identična s59-'35', 6 ima visok ovinek kot s15-'26'] — celostanska '26' zavrnjena"
+  },
+  {
+   "id": "A6-porodni-smrti",
+   "what": "★★ 2 porodni smrti: r6 Barbara Strauš h72 'NA PORODU' (22, 3 dni po hči!) + r23 Marija Radovič h83 'Vsled těžkega poroda' — 1. dokazana porodna umrljivost mrliške linije!"
+  },
+  {
+   "id": "A7-zeljko-4-otroci",
+   "what": "★★ ŽELIČO/ŽELJKO = 4 mrtvi otroci 1888 (h1: Matija 3-let 23.5. + Anton 4-mes 20.8.; h60: Doroteja 14 + Barbara 3, oba avgusta 'Strgjatinka' v 6 dneh!) — najhujša družinska tragedija linije"
+  },
+  {
+   "id": "A8-požek-h61-3",
+   "what": "★★ h61 = 3 smrti 1888 (Katarina 10-mes 11.2. + Marija 3-let 15.2. + Barbara 24 19.4.) — POŽEK-TRAGEDIJA; + h21 Marija 38 (26.11.) = Požek ×5 v letu!"
+  },
+  {
+   "id": "A9-strgjatinka",
+   "what": "★ 'Strgjatinka' [~] = nerazrešen ljudski vzrok ×3 (r43 + r63 + r66 — h60-sestri!) + paralela 'Vrhjatinka' (r37) + 'Trizgatinka' (s17 izključeni) — 4 variante 1 izraza [~]? (mogoče 'strgavčnica/krčavica')"
+  },
+  {
+   "id": "A10-starost-vzrok",
+   "what": "★ r102 Peter Križan 80 = vzrok 'STAROST' — 1. starostni vzrok mrliške linije (80-letnik!); + r89 '1 URO' = najkrajša življenjska doba 1888"
+  },
+  {
+   "id": "A11-podpisi-kolaps",
+   "what": "★ PODPISI-KOLAPS: samo 9/29 gribeljskih vpisov podpisanih (Glibe coop. ×7 Feb–Mar+Sep vključno s leadom + Romey ×2 Avg) — proti 1887 vse-podpisano; duhovnik preneha podpisati po aprilu [~ administrativna sprememba?]"
+  },
+  {
+   "id": "A12-kurent-dolgi-s",
+   "what": "★ 'Difteritis' [~ Diſenteritis] = dolgi-s zmeda (r74) — vzrok lahko difterija ALI disenterija; jasen 'Difteritis' r84 + jasen 'Disenteria' s17 = obe bolezni hkrati v epidemiji"
+  }
+ ],
+ "honesty": [
+  "h25 [~] — Kurrent 5/6: max-zoom potrdil 5-formo, a 26 variant ostaja možnost (r60)",
+  "h83 [~] — max-zoom jasno 83, a 8/6/8-Kurrent zmeda dokumentirana (r23)",
+  "starost r22 '63' [~] — Kurrent 3/9 (63 vs 69)",
+  "starost r23 NEIZPISANA (— [?]) — edini odrasli vpis brez starosti v 1888",
+  "vzroki neberljivi: Išiste (r10) · Bule (r21) · Vrhjatinka (r37) · Strgjatinka ×3 (r43/63/66) · Kruščen (r89, 2. del) — [~]/[?] oznake v blokih",
+  "Difteritis vs Diſenteritis (r74) — dolgi-s: nemogoče ločiti brez konteksta",
+  "Želičo/Željko/Žefiko priimek — 3 Kurrent-varianti, 1 oseba-družina [~]",
+  "stan-forme 'omgena/omgjena/omgina' [~] — neznan termin (mogoče vdovstvo/iznajmljevanje)",
+  "podpis-odsotnost: 21/29 vpisov brez podpisa — zapisano kot opažanje, vzrok neznan",
+  "pokop r43 '8. | 8.' — isti dan smrti in pokopa [~ — 9. možen]"
+ ],
+ "nextSteps": [
+  "P155 = mrliška 1889 (s21-restart r1–6 = Januar–Februar lead: h53 Ana Perdihec 67 Mertvod [~] 25.1. + s22+; ~70–100 vrstic; izven-Griblje lead: r7 h35 Mar 1!)",
+  "alternativa: krstna knjiga 04105-nadaljevanje (1888+ — 2. linija po P152-odločitvi)"
+ ]
+}

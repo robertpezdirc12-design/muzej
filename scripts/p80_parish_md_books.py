@@ -230,14 +230,14 @@ def verify():
     inset = sorted(houses - PT_GAP_HOUSES, key=lambda x: int(float(x)))
     inv["I7_pt_consistency"] = (
         houses == (set(inset) | set(gap))
-        and len(gap) == 14  # POSODABLJENO P139: 13 (era P126) → 14 (h45 prek 04105-1897 — skriptin filter VES 1897, razlikuje se od qa-parish p80All!)
+        and len(gap) == 15  # POSODABLJENO P139: 13 (era P126) → 14 (h45 prek 04105-1897 — skriptin filter VES 1897!); POSODABLJENO P154: 14 → 15 (h47 prek mrliške 04894-1888 — Klobučar-soseda h46!)
         and all(41 <= float(h) <= 60 for h in gap)
         # POSODABLJENO P139: inset-pogoj (≤40/≥61/½) UMAKNJEN — h41+h50 sta v vzorcu
         # prek 04455-1903 (P132) in nista v P80_PT_GAP dokumentiranih 13 dokazih luknje
         # (uskladitev s qa-parish P80_PT_GAP semantiko: gap = fiksen seznam 13 dokazov!)
         and all(h in houses for h in (v["houseNo"] for v in sample))
-        and len(vitals) == 725  # POSODABLJENO P151: 578 (era P126) → … → 714 (P151 — KONEC 04455!); POSODABLJENO P153: 714 → 725 (+11 blokov mrliške 04894-1887 — 1. polno leto mrliške linije!)
-        and len(houses) == 78  # POSODABLJENO P150: 57 (era P126) → 72 (P140) → 73 (P142: +h76) → 74 (P143: +h68) → 75 (P144: +h82!) → 75 (P145–P149: 0 novih) → 78 (P150: +h92/h72 poročna 1921!; skriptin filter VES 1897 → +h45 razlika od qa-parish p80All — dokumentirana P139; python-števec: 76 (h45!) + 2 = 78)
+        and len(vitals) == 754  # POSODABLJENO P151: 578 (era P126) → … → 714 (P151 — KONEC 04455!); P153: 714 → 725 (+11 blokov 04894-1887); POSODABLJENO P154: 725 → 754 (+29 blokov mrliške 04894-1888 — REKORDNO leto: 29 Griblje-vpisov!)
+        and len(houses) == 80  # POSODABLJENO P150: … → 78 (P150: +h92/h72 poročna 1921!; skriptin filter VES 1897 → +h45 — P139); POSODABLJENO P154: 78 → 80 (+h47 LUKNJA-dokaz + h83 NOVA — mrliška 04894-1888 REKORD!)
         and set(inset) - {"41", "50"} <= pts  # POSODABLJENO P139: h41+h50 (04455-1903, P132) sta v luknji
         # 41–60 brez PT-nabora — izjemi kot pri inset-pogoju zgoraj
     )

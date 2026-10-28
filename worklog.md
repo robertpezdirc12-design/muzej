@@ -6379,3 +6379,31 @@ Work Log:
 - qa-p153-parish-death-1887 (154. kontrola v qa-parish.ts): bloki-1887 13 · hiše [3,13,21,22,35,36,43,44,46,53,58,65,76] · skeni 6–13 · Mertvod/prejel-olje/max-zoom-pini · 04894=26 · vitals=725 · 1888-ni-še!
 - README: po P153 (glava + tabela-linij + korpus + odprto-①-mrliška + TOC P1–P153 + intro-odstavek + pripoved-bullet)
 - pin-kaskada: qa-parish 67× `!== 714`→`725` · skripte 36× grep-string · p80 len(vitals)==725 · 4 stražarji (p86-h53, p88-h46, p92-h43, p94-h22) + 04894-1887 izjeme
+
+---
+Task ID: P154
+Agent: Z.ai Code (glavni agent)
+Task: P154 — MRLIŠKA knjiga 04894, leto 1888 = 3. polno leto mrliške linije = REKORDNO leto (29 Griblje-vpisov / 102 vrstic!)
+
+Work Log:
+- prenos skenov s14–s22 (inventar 256 ✓; s13–s17 že iz /tmp/p153) → /tmp/p154
+- celostanski VLM prehodi (s13–s22; ozadnji proces umrl po s13 — ključne strani ročno prebrane)
+- ★ SPOR MARKERJA RAZREŠEN: celostanski VLM je s13-mejo bral »1889« — 3-segmentna max-zoom forenzika + AI-vizualni pregled: vse tri »8« = dve zaprti zanki → 1888 POTRJEN (anomalija A1)
+- kalibracija vrstic po ser. številkah (uniformna mreža ne dela — dvovrstična imena!) + široki prekrivajoči trakovi ±75/+95 px
+- VLM pass-1 (58 trakov, 429-retry) + pass-2 ciljirani (ser. št. v pozivu) + 15× max-zoom celic + 4× wide-trakovi
+- 29 GRIBLJE-VPISOV forenzično preverjenih: r5 h72 P153-lead ✓ + r6 h72 Barbara 'NA PORODU' (22, 3 dni po hči — mati+novorojenček v 4 dneh!) + h61 Požek ×3 + Željko/Želičo ×4 otroci (h1 ×2 + h60 ×2, sestri 'Strgjatinka' v 6 dneh!) + h83 NOVA (Radovič, 'Vsled těžkega poroda') + h47 NOVA (Klobučar) + r102 'STAROST' vzrok (80 let, 1. primer!) + r89 '1 URO' + podpisi-kolaps 9/29
+- max-zoom popravki ×4: r20 'Simon Pozdinec h88'→Janez Perdinec h53 (×2!) · r84 'Marija Mušič'→Matija Hlusič (spol+priimek!) · r7 'Poreht'→PožeK · r15 'Brune'→Brinec + r60 hiša 25 [~ Kurrent 5/6]
+- marker-1889 na s21 forenzično potrjen (9 z dolgim repom!) + P155-lead: h53 Ana Perdihec 67 Mertvod [~] 25.1.1889
+- dokaz research/issue17/parish-death-1888.json (29 entries + 13 excluded-skupin + 12 anomalij + 10 crossChecks + honesty 10) + notes
+- parish.ts: +29 blokov 04894-1888 — vsak z max-zoom-popravki/nerazrešenimi vzroki dokumentiranimi v whatSi
+- verifikator scripts/p154_parish_death_1888.py (I1–I12 + --live; 37 kontrol — 37/37 PASS)
+- qa-p154-parish-death-1888 (155. kontrola v qa-parish.ts): bloki-1888 29 · hiše 20 · skeni 13–21 · 2-porodni-smrti/Željko×4/h61×3/STAROST/1-URO/Totter/Perdinec/Hlusič/ZADNJI-1888 · 04894=55 · vitals=754 · p80=79 · 1889-ni-še!
+- pin-kaskada: qa-parish 68× `!== 725`→`754` · p80-sekcija 26→55 + p80Houses 77→79 · qa-p153 (1888-prisotnost + kumulativ) · qa-p85/p86 NOVA-hiša-stražarja + 04894-1888 izjeme (h7/h41/h53) · p80-skripta (754/80/15) · p153-skripta (754/55/79 + I5b/I6e/I6f/I10b)
+- README: po P154 (glava-QA-155 + tabela-linij mrliška-3/39 + korpus 754/55/79 + odprto-①-P155-lead + TOC P1–P154 + P154-vnos)
+- verifikacija: p154 37/37 · p153 --check 39/39 · p80 --check PASS · runQA 155/155 ok:True · tsc 0 · lint 0
+
+Stage Summary:
+- mrliška linija: 1886 (46/13) → 1887 (71/13) → 1888 (102/29 REKORD) — korpus 754 vitalov · 04455 197 + 04894 55 · sidra 190 · hiše 79 · PT 13
+- QA 155/155 ok:True — qa-p154 = 155. kontrola
+- push: GitHub origin + GitLab gitlab + Vercel avtomatski deploy
+- P155 LEAD: mrliška 1889 (s21-restart r1–6 + s22+; h53-Perdihec-Mertvod-lead 25.1.!)
