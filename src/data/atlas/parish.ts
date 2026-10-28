@@ -2678,6 +2678,140 @@ export const HOUSE_VITALS: HouseVital[] = [
     status: "DOCUMENTED",
   },
 
+  // ——— P148 razširitev: POROČNA KNJIGA 04455 — polno leto 1919 (skeni
+  // s165–s175 == Pag. 164–174; letna glava »Leto 1919.« ročno VELIKO na
+  // s165 [7. zaporedna!]; meja 1919/1920 = veliki cifri »19«/»20« na
+  // s175-sredini — 7. marker-tehnika!); 40 vpisov (39 oštevilčenih №1–№39
+  // + 1 NEŠTEVILČEN Boren 24.2.!) = ★★★ REKORD LINIJE (prej 1912: 17 —
+  // ×2,35!) — povojni poročni boom (1914:7 → 1915:6 → 1916:4 → 1917:8 →
+  // 1918:4 → 1919:40!); 33 PON + 6 NED + 1 SOB (82,5 % ponedeljkov!);
+  // vpisi z Griblji (10 porok!): №3 h22[~] · №6 h77×87 · №13 h12×30 ·
+  // №18 h2×58 · №20 h41×64[~] · №21 h20×13 · №27 h48 · №33 h61 · №34
+  // h26×24 · №35 h15 = 16 Griblje-številk (REKORD pokritosti!):
+  // NOVELE: ★★★ 10 GRIBLJE-VPISOV (P147-lead napovedal 1!) + ★★★ VPIS
+  // BREZ ŠTEVILKE (1. v liniji 1886–1919!) + ★★★ PEZDIRC-DELAŽA = 25
+  // omenb (neveste ×4 · ženini ×3 · matere ×5 · priče ×7 · intra-priimek
+  // №24 Otok 4×1! · intra-starši №26/№33!) + ★★ 2 VDOVI PO WWI-VOJAKIH
+  // (№13 Kambič † sodno potrdilo 14.2.1919! + №15 Hosteler LAJTNANT †
+  // 1918!) + ★★ FAMILIJSKI DVOJNI POROČNI DANI ×4 (brat+sestra Mališič
+  // Otok 13 oba 10.2. ISTI priči! · sistri Rovnik Lemelj 41 24.+29.11.
+  // ISTI priči! · brata Klepec 27.1.+20.10. oče-župan! · sestra+brat
+  // Pezdirc Krasinec 28!) + ★ 5 VPISOV NA ISTI DAN 10.2. (№7–№11 =
+  // rekord dneva!) + ★ INTRA-HIŠE ×3 (№4 Gradac 4 · №10 Primostek 15 ·
+  // №11 Lemelj 22 = REKORD LINIJE!) + ★ POSTNA VRZEL nazaj 2.3.→28.4.
+  // (Veliko noč 20.4.1919 — 1. od 1914!) + ★ SHS-TRANZICIJA (Narodna
+  // vlada Ljubljana + deželna vlada za Slovenijo poleg k.u.k. glavarjev!)
+  // + ★ NOVI POKLICI (žandar №25! · poštar №14! · parna žaga №37! ·
+  // svihtar/sakristan ×3!) + ★ 9 nedoletnih nevest + 2 ženina (večjost
+  // 24!) + proglasitev polnoletnosti №36 (1. v liniji!) + ★ 4 KASNEJŠE
+  // ANOTACIJE 1975–1980 (№19 · №20 'Husič Anton † 29.4.1975 v Gribljah
+  // št. 90!' · №33 'Požek Peter † 18.6.1975' · №3 modra 1980!) + ★ 2
+  // samokorekciji pisarja (№15 prečrtan bivališč · №28 avg→sept!) +
+  // duhovnik Gregor Cerar ~20× (nov dominantni!) + Valerian Urban dekan
+  // ×5 (10.2.-blok!) + kaplan ×2
+  // Dokaz: research/issue17/parish-marriage-1919.json; verifikator:
+  // scripts/p148_parish_marriage_1919.py --check (I1–I12).
+  {
+    houseNo: "22",
+    bookSignature: "04455",
+    year: 1919,
+    scan: 165,
+    page: 164,
+    whatSi: "poroka (27. 1. 1919, vpis 3 — PONEDELJEK) — ženin Janez KLEPEC, kmet. povestnika sin, 25 [r. 19. IX. 1894 — aritmetika 24 [~ zapis 25!]], rim. kat., Krasinec 36 (oče Miklo [~ Nikolaj] Klepec ŽUPAN × Katarina roj. Segina — cf. №32 BRAT!) × nevesta Katarina STRAVS, kmet. povestnika hči, 21 [r. 27. III. 1898], GRIBLJE 22 [~ — zoom 'lje 22'; faza-1 'Apilje 42' ZAVRŽENO!] (starši Matija Stravs × Marija roj. Jakofčič †); ★ 1. GRIBLJE-vpis 1919 (P147-lead pričakoval šele №6!) + priči: Jožef PEZDIRC, povest. + Miklo Požek, povest. (PEZDIRC 1./7!); duhovnik Miklavčič [~ — 6. branje!]; modra svinčnica-anotacija 1980 o ženinu",
+    whatEn: "marriage (Jan 27, 1919, entry 3 — MONDAY) — groom Janez KLEPEC, a smallholder landowner's son, 25 [b. Sep 19, 1894 — arithmetic 24 [~ the entry says 25!]], Roman Catholic, Krasinec 36 (father Miklo [~ Nikolaj] Klepec the MAYOR × Katarina née Segina — cf. №32 BROTHER!) × bride Katarina STRAVS, a smallholder landowner's daughter, 21 [b. Mar 27, 1898], GRIBLJE 22 [~ — the zoom shows 'lje 22'; the phase-1 'Apilje 42' REJECTED!] (parents Matija Stravs × Marija née Jakofčič †); ★ the 1st GRIBLJE entry of 1919 (the P147-lead expected №6!); witnesses: Jožef PEZDIRC, landowner + Miklo Požek, landowner (PEZDIRC 1st/7!); priest Miklavčič [~ — the 6th reading!]; a blue-pencil annotation of 1980 about the groom",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "77",
+    bookSignature: "04455",
+    year: 1919,
+    scan: 166,
+    page: 165,
+    whatSi: "poroka (3. 2. 1919, vpis 6 — PONEDELJEK) — ženin Jurij POŽEK, hišar, 35 [r. 6. V. 1883 ✓], rim. kat., GRIBLJE 77 (starši Jurij Požek hišar † × Katarina roj. KRIŽAN) × nevesta Marija PEZDIRC, dekla, 27 [r. 4. XII. 1892 — aritmetika 26 [~]], GRIBLJE 87 [KOREKCIJA P147-lead '37/8'!] (starši Marko Pezdirc hišar † × Ana roj. Željko); ★★★ INTRA-GRIBLJE h77 × h87 (Požek × PEZDIRC!) + priči: Miklo Željko ŽUPAN + Miklo Požek povest. (3. župan-priča 1919!); zglasnica županstva Griblje št. 1/1919",
+    whatEn: "marriage (Feb 3, 1919, entry 6 — MONDAY) — groom Jurij POŽEK, a house-farmer, 35 [b. May 6, 1883 ✓], Roman Catholic, GRIBLJE 77 (parents Jurij Požek a house-farmer † × Katarina née KRIŽAN) × bride Marija PEZDIRC, a maidservant, 27 [b. Dec 4, 1892 — arithmetic 26 [~]], GRIBLJE 87 [a CORRECTION of the P147-lead '37/8'!] (parents Marko Pezdirc a house-farmer † × Ana née Željko); ★★★ an INTRA-GRIBLJE marriage h77 × h87 (Požek × PEZDIRC!); witnesses: Miklo Željko the MAYOR + Miklo Požek (the 3rd mayor-witness of 1919!); the banns of the Griblje municipality no. 1/1919",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "12",
+    bookSignature: "04455",
+    year: 1919,
+    scan: 168,
+    page: 167,
+    whatSi: "poroka (24. 2. 1919, vpis 13 — PONEDELJEK) — ženin Franc DRAGOS, živžar [~ poklic nejasen — cf. №15!], 25 [r. 28. I. 1894 ✓], rim. kat., GRIBLJE 12 [zoom potrjuje '12' — faza-1 '42' ZAVRŽENO!] (starši Janez Dragos × Barbara roj. Cvilkovič [~]) × nevesta Marija MILEK, VDOVA KAMBIČ, povestnica, 27 [r. 13. IV. 1891 ✓], GRIBLJE 30 [zoom hišni stolpec '30.' — faza-1 '50' ZAVRŽENO!] (starši Janez Milek † × Marija roj. PEZDIRC †); ★★★ NEVESTA = VDOVA PO WWI-VOJAKU: potrdilo okrajnega sodišča Črnomelj 14.2.1919 o smrti Janeza KAMBIČA, VOJAKA, prvega moža! + priča Marko PEZDIRC (3./7!) + INTRA-GRIBLJE h12 × h30",
+    whatEn: "marriage (Feb 24, 1919, entry 13 — MONDAY) — groom Franc DRAGOS, a 'živžar' [~ an unclear trade — cf. №15!], 25 [b. Jan 28, 1894 ✓], Roman Catholic, GRIBLJE 12 [the zoom confirms '12' — the phase-1 '42' REJECTED!] (parents Janez Dragos × Barbara née Cvilkovič [~]) × bride Marija MILEK, a KAMBIČ WIDOW, a landowneress, 27 [b. Apr 13, 1891 ✓], GRIBLJE 30 [the zoom of the house-number column shows '30.' — the phase-1 '50' REJECTED!] (parents Janez Milek † × Marija née PEZDIRC †); ★★★ the BRIDE IS A WWI-SOLDIER'S WIDOW: the district court of Črnomelj's certificate of Feb 14, 1919 on the death of Janez KAMBIČ, a SOLDIER, her first husband! + witness Marko PEZDIRC (3rd/7!) + an INTRA-GRIBLJE marriage h12 × h30",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "2",
+    bookSignature: "04455",
+    year: 1919,
+    scan: 170,
+    page: 169,
+    whatSi: "poroka (18. 5. 1919, vpis 18 — NEDELJA) — ženin Nikolaj HLEBEC [~ Kleber/Klepec — 'lebec' jasno!], povest. sin, 31 [r. 3. X. 1887 ✓], rim. kat., GRIBLJE 2. (starši Peter Hlebec × Ana roj. Jakofčič †) × nevesta Barbara KAMBIČ, povest. hči, 26 [r. 19/24. IX. 1893 [~]], GRIBLJE 58 (starši Matija Kambič † × Ana roj. PEZDIRC †); ★★ INTRA-GRIBLJE h2 × h58 + mati neveste roj. PEZDIRC † (5./25!) + priča Matija PEZDIRC (1./7!)",
+    whatEn: "marriage (May 18, 1919, entry 18 — SUNDAY) — groom Nikolaj HLEBEC [~ Kleber/Klepec — 'lebec' is clear!], a landowner's son, 31 [b. Oct 3, 1887 ✓], Roman Catholic, GRIBLJE 2. (parents Peter Hlebec × Ana née Jakofčič †) × bride Barbara KAMBIČ, a landowner's daughter, 26 [b. Sep 19/24 [~], 1893], GRIBLJE 58 (parents Matija Kambič † × Ana née PEZDIRC †); ★★ an INTRA-GRIBLJE marriage h2 × h58 + the bride's mother née PEZDIRC † (5th/25!) + witness Matija PEZDIRC (1st/7!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "41",
+    bookSignature: "04455",
+    year: 1919,
+    scan: 170,
+    page: 169,
+    whatSi: "poroka (26. 5. 1919, vpis 20 — PONEDELJEK) — ženin Anton KLUSIČ [~ Hlusič/Husič — anotacija 1975 piše 'Husič'!], povestniški sin, 22 [r. 9. IV. 1896 ✓], rim. kat., GRIBLJE 41. (starši Matija Hlusič [~] × Vera roj. Jakofčič) × nevesta Jozefa ŠTRAVS, povestniška hči, 19 [r. 10. II. 1900 ✓ — NEDOLETNA!], GRIBLJE 64 [~ 65?] (starši Nikolaj Štravs × Marija roj. Jakofčič); ★★ INTRA-GRIBLJE h41 × h64[~] + OBE matere JAKOFČIČ! + priča Matija PEZDIRC (2./7!) + KASNEJŠA ANOTACIJA 1975: 'Zakonec Husič Anton umrl 29.4.1975 v Gribljah št. 90' (nova hišna referenca 90!); 6 urdnih postavk (sodišče + glavarstvo)",
+    whatEn: "marriage (May 26, 1919, entry 20 — MONDAY) — groom Anton KLUSIČ [~ Hlusič/Husič — the 1975 annotation writes 'Husič'!], a landowner's son, 22 [b. Apr 9, 1896 ✓], Roman Catholic, GRIBLJE 41. (parents Matija Hlusič [~] × Vera née Jakofčič) × bride Jozefa ŠTRAVS, a landowner's daughter, 19 [b. Feb 10, 1900 ✓ — a MINOR!], GRIBLJE 64 [~ 65?] (parents Nikolaj Štravs × Marija née Jakofčič); ★★ an INTRA-GRIBLJE marriage h41 × h64[~] + BOTH mothers JAKOFČIČ! + witness Matija PEZDIRC (2nd/7!) + a LATER 1975 ANNOTATION: 'the spouse Husič Anton died Apr 29, 1975 in Griblje no. 90' (a new house reference 90!); 6 official documents (the court + the district authority)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "20",
+    bookSignature: "04455",
+    year: 1919,
+    scan: 171,
+    page: 170,
+    whatSi: "poroka (26. 5. 1919, vpis 21 — PONEDELJEK) — ženin Peter PEZDIRC, povestnik, 32 [r. 25. X. 1886 ✓], rim. kat., GRIBLJE 20. (starši Peter Pezdirc † × Katarina roj. Deklič [~]) × nevesta Barbara JAKOFČIČ, povestniška hči, 30 [r. 3. IV. 1888 — aritmetika 31 [~]], GRIBLJE 13. (starši Matija Jakofčič × Marija roj. PEZDIRC †); ★★★ ŽENIN = PEZDIRC! + mati neveste roj. PEZDIRC + OBA priča PEZDIRC (Matija 3./7! + Jure 1./7!) = 5 PEZDIRC-oseb v enem vpisu! + INTRA-GRIBLJE h20 × h13",
+    whatEn: "marriage (May 26, 1919, entry 21 — MONDAY) — groom Peter PEZDIRC, a landowner, 32 [b. Oct 25, 1886 ✓], Roman Catholic, GRIBLJE 20. (parents Peter Pezdirc † × Katarina née Deklič [~]) × bride Barbara JAKOFČIČ, a landowner's daughter, 30 [b. Apr 3, 1888 — arithmetic 31 [~]], GRIBLJE 13. (parents Matija Jakofčič × Marija née PEZDIRC †); ★★★ THE GROOM IS A PEZDIRC! + the bride's mother née PEZDIRC + BOTH witnesses PEZDIRC (Matija 3rd/7! + Jure 1st/7!) = 5 PEZDIRC persons in one entry! + an INTRA-GRIBLJE marriage h20 × h13",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "48",
+    bookSignature: "04455",
+    year: 1919,
+    scan: 172,
+    page: 171,
+    whatSi: "poroka (25. 8. 1919, vpis 27 — PONEDELJEK) — ženin Janez GUSTAVIN [~ Šustavin?], povestniška sin, 28 [r. 25. XII. 1890 ✓], rim. kat., [~ Šmilovje/Sutloga?] 31 (starši Janez(?) Gustavin × Ana roj. Jakofčič) × nevesta Marija BERKOPER, povestniška hči, 19 [r. 26. X. 1898 [~ aritmetika 20!]], GRIBLJE 48. (starši Janez Berkoper × Katarina roj. HLEBEC, umrla kot Pezdirc? [~]); ★★ NEVESTA IZ GRIBLJE 48 + mati roj. HLEBEC (cf. №18 ženin!) + priča Peter PEZDIRC (7./7!) + podpis žup. Kapl. + 'per delegatis nem.' [~]",
+    whatEn: "marriage (Aug 25, 1919, entry 27 — MONDAY) — groom Janez GUSTAVIN [~ Šustavin?], a landowner's son, 28 [b. Dec 25, 1890 ✓], Roman Catholic, [~ Šmilovje/Sutloga?] 31 (parents Janez(?) Gustavin × Ana née Jakofčič) × bride Marija BERKOPER, a landowner's daughter, 19 [b. Oct 26, 1898 [~ arithmetic 20!]], GRIBLJE 48. (parents Janez Berkoper × Katarina née HLEBEC, died as Pezdirc? [~]); ★★ the BRIDE IS FROM GRIBLJE 48 + the mother née HLEBEC (cf. №18 the groom!) + witness Peter PEZDIRC (7th/7!) + the signature 'žup. Kapl.' + 'per delegatis nem.' [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "61",
+    bookSignature: "04455",
+    year: 1919,
+    scan: 173,
+    page: 172,
+    whatSi: "poroka (3. 11. 1919, vpis 33 — PONEDELJEK) — ženin Peter POŽEK, povestnika sin, 23 [r. 28. VI. 1896 ✓], rim. kat., GRIBLJE 61. (starši Nikolaj Požek × Ana roj. Dragos) × nevesta Marija PEZDIRC, povestniška hči, 22 [r. 12. XI. 1896 ✓], Krasinec 28. (starši Peter PEZDIRC × Marija roj. PEZDIRC = ISTI STARŠI KOT №26 ŽENIN!); ★★★ NEVESTA = SESTRA ženina №26 (Peter Pezdirc Krasinec 28 — oba poročena 1919: 11.8. + 3.11.!) + Griblje 61 + priča Anton Jakofčič + KASNEJŠA ANOTACIJA 1975/76: 'Zakonec Požek Peter umrl 18.6.1975 v Gribljah'",
+    whatEn: "marriage (Nov 3, 1919, entry 33 — MONDAY) — groom Peter POŽEK, a landowner's son, 23 [b. Jun 28, 1896 ✓], Roman Catholic, GRIBLJE 61. (parents Nikolaj Požek × Ana née Dragos) × bride Marija PEZDIRC, a landowner's daughter, 22 [b. Nov 12, 1896 ✓], Krasinec 28. (parents Peter PEZDIRC × Marija née PEZDIRC = THE SAME PARENTS AS THE №26 GROOM!); ★★★ THE BRIDE IS THE SISTER of the №26 groom (Peter Pezdirc Krasinec 28 — both married in 1919: Aug 11 + Nov 3!) + Griblje 61 + witness Anton Jakofčič + a LATER 1975/76 ANNOTATION: 'the spouse Požek Peter died Jun 18, 1975 in Griblje'",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "26",
+    bookSignature: "04455",
+    year: 1919,
+    scan: 173,
+    page: 172,
+    whatSi: "poroka (10. 11. 1919, vpis 34 — PONEDELJEK) — ženin Matija KRALJ, povestniška sin, 25 [r. 4. XI. 1894 ✓], rim. kat., GRIBLJE 26. (starši Nikolaj Kralj † × Katarina roj. Jakofčič) × nevesta Ana BRINEC, povestnika hči, 24 [r. 19. IV. 1895 — faza-1 '19/9 1893' ZAVRŽENO, aritmetika!], GRIBLJE 24. (starši Matija Brinec † × Barbara roj. Jakofčič); ★★ INTRA-GRIBLJE h26 × h24 + OBE matere JAKOFČIČ! + priča Jurij Štravs SVIHTAR (sakristan — 1. sistematični pojav poklica!) + Nikolaj Milek sameški fant [~]",
+    whatEn: "marriage (Nov 10, 1919, entry 34 — MONDAY) — groom Matija KRALJ, a landowner's son, 25 [b. Nov 4, 1894 ✓], Roman Catholic, GRIBLJE 26. (parents Nikolaj Kralj † × Katarina née Jakofčič) × bride Ana BRINEC, a landowner's daughter, 24 [b. Apr 19, 1895 — the phase-1 'Sep 19, 1893' REJECTED by arithmetic!], GRIBLJE 24. (parents Matija Brinec † × Barbara née Jakofčič); ★★ an INTRA-GRIBLJE marriage h26 × h24 + BOTH mothers JAKOFČIČ! + witness Jurij Štravs a SVIHTAR (the sexton — the 1st systematic appearance of the trade!) + Nikolaj Milek a bachelor lad [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "15",
+    bookSignature: "04455",
+    year: 1919,
+    scan: 174,
+    page: 173,
+    whatSi: "poroka (17. 11. 1919, vpis 35 — PONEDELJEK) — ženin Matija JURAJEVIČ [~ — cf. №29 Juragec!], povestnika sin, 25 [r. 11. VIII. 1894 ✓], rim. kat., Krasinec 5. (starši Nikolaj Juragevič [~] × Katarina roj. Klepec) × nevesta Barbara JAKLIČ, povestnika hči, 22 [r. 14. IX. 1897 ✓], GRIBLJE 15. (starši Janez Jaklič × Marija roj. Brinec †); ★ NEVESTA IZ GRIBLJE 15 (h15 = 1917 №3 poročna hiša Jakljič × Šimec — 2. poroka h15 v vzorcu!) + priča Matija Berkoper [~]",
+    whatEn: "marriage (Nov 17, 1919, entry 35 — MONDAY) — groom Matija JURAJEVIČ [~ — cf. №29 Juragec!], a landowner's son, 25 [b. Aug 11, 1894 ✓], Roman Catholic, Krasinec 5. (parents Nikolaj Juragevič [~] × Katarina née Klepec) × bride Barbara JAKLIČ, a landowner's daughter, 22 [b. Sep 14, 1897 ✓], GRIBLJE 15. (parents Janez Jaklič × Marija née Brinec †); ★ the BRIDE IS FROM GRIBLJE 15 (h15 = the 1917 №3 marriage house Jakljič × Šimec — the 2nd h15 marriage in the sample!) + witness Matija Berkoper [~]",
+    status: "DOCUMENTED",
+  },
+
   // ——— P146 razširitev: POROČNA KNJIGA 04455 — polno leto 1917 (skeni
   // s160–s163 == Pag. 159–162; letna glava »Leto 1917« ročno VELIKO na s160
   // [5. zaporedna!]; meja 1917/1918: s163 vsebuje ŽE letno glavo »1918« +

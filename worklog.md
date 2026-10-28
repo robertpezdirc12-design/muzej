@@ -6207,3 +6207,33 @@ Stage Summary:
 - ★ P146-lead KOREKCIJE ×4 (Krasinec 44→14 · 7.6.→2.6. · 10.10.→16.10. · Bahnbaukompanie→pešpolka 17)
 - korpus po P147: 688 vitals · 171 blokov · 164 sidra · 72 hiš; QA 148/148
 - NASLEDNJE: **P148 = leto 1919** (s165–s167 = 11 vpisov; №6 Griblje 77 × 37/8 INTRA hišar × Pezdirc-hči = 1. Griblje-vpis po 1917!) → P149–P151 (1920–1922)
+---
+Task ID: P148
+Agent: Z.ai Code (transkripcija + verifikacija + parish.ts + commit)
+Task: P148 — poročna knjiga 04455, polno leto 1919 (s165–s175 == Pag. 164–174) — 34. leto poročne linije; ★★★ REKORD LINIJE: 40 vpisov = povojni poročni boom; 10 Griblje-vpisov; PEZDIRC-delaža 25 omenb
+
+Work Log:
+- diagnoza: HEAD @ 5c6ba5f (P147); peskovnik resetiran → repo re-kloniran → premaknjen /tmp/muzej-repo → /home/z/muzej (Write-tool omejitev /home/z); P140–P147 vsi commitani, worklog-posodobitve zaostajajo (P147 lepo zapisan!)
+- inventar 192 URL-jev REKONSTRUIRAN iz book.html (recept P126: /image/<b64>/ → hosted-images; ★ trap: končnica URL-vzorca `/` NI del base64 — rstrip('/') pred dekodiranjem!); prenos s165–s176 (12/12 JPEG-magika ✓)
+- 2× full-page agent-oči s165–s175 (11 strani!) — s169/s170: 1919 se NADALJUJE dlje od lead-a (s165–s167)!; meja 1919/1920 = veliki cifri »19«/»20« na s175-SREDINI (7. marker-tehnika — brez 'Leto 1920' glave!) → 1919 ZAKLJUČEN z 40 vpisi
+- ★★★ ŠTEVILČENJE-forenzika: s169-1. vrstica (Boren 24.2.) = NEŠTEVILČENA (levi rob PRAZEN — zoomi levi pas ×3!) = 1. VPIS BREZ ŠTEVILKE linije 1886–1919!; Lasič = №14, Muc = №15 (številke na DNU vrstic — ne na vrhu!)
+- GRID-tehnika (mreža 50/100 px, 11 strani) + avtodetekcija črt NEUSPEŠNA (mehka pravila — prag ne-lovljiv) → y-meje ročno po straneh; 40× full-row izrezov L (x 55–1255) + R (x 1235–W) 2× LANCZOS
+- ★ transkripcija 40 vpisov (2 prehoda: full-page + row-crops; konsenz): №1 Štipanič×Mališič Gradac 43×21 (modra anotacija 1980!) · №2 Tasič×Jaklič (1. dovoljenje NARODNE VLADE!) · №3 Klepec×Stravs GRIBLJE 22[~] (oče-ŽUPAN!) · №4 Čerin×Kambič Gradac 4×4 PREHODNO ('po napovedi' rojstvo!) · №6 Požek×Pezdirc h77×87 (lead-korekcija '37/8'→87!) · №7+№8 BRAT+SESTRA Mališič Otok 13 isti dan isti priči! · №10 Primostek 15×15 INTRA-HIŠA · №11 Lemelj 22×22 INTRA-HIŠA (oče DELAVEC V AMERIKI!) · №12 10 urdnih postavk (rekord!) · №13 Dragos×Milek h12×30 VDOVA PO VOJAKU (sodno potrdilo Kambič †!) · №15 Vera vdova po Hosteler-LAJTNANTU (prečrtan poskus!) · №19+№20 anotaciji 1975/76+1978 · №21 Peter PEZDIRC h20 ×13 OBA priča PEZDIRC (5 Pezdirc-vpis!) · №24 INTRA-PRIIMEK PEZDIRC×PEZDIRC Otok 4×1! · №25 ŽANDAR podstražmojster × 44-letna gostilničarka! · №26 2. Peter PEZDIRC (18-letna nevesta — sodno dovoljenje!) · №32 BRAT №3 (ista starša!) · №33 nevesta = SESTRA №26-ženina (Krasinec 28!) · №36 Anton KRIŽAN (×160-mreža!) + 'proglasitev polnoletnosti' (1. v liniji!) · №37 Snežnik-Sudol parna žaga (najbolj oddaljena župnija!) · №39 SESTRA №37 (5 dni!) — EDINA SOBOTA 1919!
+- 15× zoom-forenzika: Griblje 22 (nevesta №3 — 'lje 22'!) · h12+h30 (№13 — faza-1 '42'+'50' ZAVRŽENA!) · Griblje 87 (№6 — lead-korekcija!) · Krasinec 54 (Boren) · Hlebec (№18 — 'lebec') · Klusič/Hlusič/Husič (№20 — 3 variante!) · Kompozitni zoom-spleti (stack-tehnika z rdečimi oznakami) + KOORDINATNA težava: številke vrstic na DNU vrstic, stolpci x ≈ 245–405 (Wohnort) / 455–805 (ime)
+- kalendarska kontrola 40/40 ✓ (33 PON = 82,5 %! + 6 NED + 1 SOB = №39 29.11.!) + aritmetika (30 čistih + 10 zaokrožitev [meja 24. leta!] + 5 dvomov [№1 letnica, №14 letnica, №16/21 starost, №27, №28 1872/44-vs-1892/27!])
+- korpus-forenzika ×13: PEZDIRC-DELAŽA 25 omenb (neveste ×4 · ženini ×3 · matere ×5 · priče ×7 · intra-priimek · intra-starši!) · 4 familijski dvojni poročni dani · 5 vpisov 10.2. (rekord dneva!) · postna vrzel nazaj (2.3.→28.4. — 1. od 1914!) · SHS-tranzicija (Narodna vlada!) · novi poklici (žandar/poštar/parna žaga/svihtar ×3!) · 2 begunca + 1 emigrant · 9 nedoletnih nevest · 12 korpus-sinhronizacij
+- evidence JSON (40 vpisov + 13 cc + 22 anom + honesty 24!) + notes + 10 NOVIH BLOKOV parish.ts (h22[~] h77 h12 h2 h41 h20 h48 h61 h26 h15!) + qa-p148 (149. kontrola) + skripta p148 (I1–I12 + --live)
+- PIN-kaskada: vitals 688→698 (62 pinov!) · bloki 04455 171→181 (33 pinov!) · sidra 164→174 · ★ p80 hiše 72→75 (+3 NOVE: h2/h12/h77 — 1. poročni dokazi v 04455; prvotni 'vse že znane' NAPAČEN — stale-diagnoza z git-stash-A/B-testom!) · 5 chain-check sanacij (p85 h41/h77 · p87 h12 · p90 h20 · p93 h48 · p94 h22 — vzorec P146-b!) + 1 syntax-fix (manjkajoči zaklepaj p85!)
+- verifikacija: p148 --check --live **55/55 PASS** · runQA **149/149 ok:True** · tsc 0 · lint 0
+- README: Trenutno stanje (po P148 · QA 149/149 · pokritost 34/36 · P149 lead) + Zadnje stanje P148-bullet
+
+Stage Summary:
+- 1919 = 40 vpisov = ★★★ REKORD LINIJE (×2,35 nad 1912: 17!) = povojni poročni boom; 1. VPIS BREZ ŠTEVILKE (Boren!)
+- ★★★ 10 GRIBLJE-vpisov / 16 števil (P147-lead PODCENITEV ×3,6!) — INTRA-GRIBLJE ×6 + INTRA-HIŠE ×3 (rekord linije!) + INTRA-PRIIMEK Pezdirc × Pezdirc (Otok!)
+- ★★★ PEZDIRC-delaža 25 omenb — največja priimška koncentracija enega leta linije (neveste/ženini/matere/priče/intra-starši)
+- ★★ 2 vdovi po WWI-vojakih (sodno potrdilo Kambič † 14.2.1919 + lajtnant Hosteler † 1918!) = vojna žrtev-dokumentacija
+- ★★ 4 familijski dvojni poročni dani (Mališič Otok 13 · Rovnik Lemelj 41 · Klepec · Pezdirc Krasinec 28)
+- ★ SHS-tranzicija (Narodna vlada Ljubljana) + novi poklici (žandar, poštar, parna žaga, svihtar/sakristan ×3) + 9 nedoletnih nevest + proglasitev polnoletnosti (1.!)
+- ★ 4 kasnejše anotacije 1975–1980 (matičar-forenzika; hiša 90 v Gribljih!) + 2 samokorekciji pisarja
+- korpus po P148: 698 vitals · 181 blokov · 174 sidra · 75 hiš (+3 h2/h12/h77!) · QA 149/149
+- NASLEDNJE: **P149 = leto 1920** (s175-dno + s176+; №1–4/1920 vsi 19.1.1920 — viden 2. intra-hiša Berkoper × Škala Lemelj 41!) → P150–P151 (1921–1922 = KONEC KNJIGE!)

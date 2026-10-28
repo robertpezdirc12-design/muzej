@@ -1,0 +1,864 @@
+{
+  "source": "Matricula Online — Poroka Podzemelj 04455 (P Podzemelj 1873-1922), skeni s165–s175 == Pag. 164–174; URL-vzorci: hosted-images.matricula-online.eu (inventar 192; recept P126)",
+  "lead": {
+    "claim": "P147-lead: P148 = leto 1919 (s165–s167 = 11 vpisov; №6 Griblje 77 × 37/8 INTRA hišar × Pezdirc-hči = 1. Griblje-vpis po 1917!) → P149–P151 (1920–1922)",
+    "correction": "PODCENITEV ×3,6! 1919 = 40 vpisov (39 oštevilčenih №1–№39 + 1 NEŠTEVILČEN — Boren 24.2., levi rob PRAZEN — 1. taki primer linije!) na skenih s165–s175 (ne s165–s167!); Griblje-vpisov 10 (ne 1!): №3 h22[~] · №6 h77×87 · №13 h12×30 · №18 h2×58 · №20 h41×64[~] · №21 h20×13 · №27 h48 · №33 h61 · №34 h26×24 · №35 h15; meja 1919/1920 = veliki marker »19«/»20« na s175-sredini (med №39 in 1920-№1) — ne glava!; №6 KOREKCIJA: nevesta = GRIBLJE 87 (ne 37/8!)"
+  },
+  "entries": [
+    {
+      "row": 1,
+      "date": "1919 19. januar Podž.",
+      "scan": 165,
+      "page": 164,
+      "groom": "Anton Štipanič, Gradac 43, mizar [~ mixar-zapis], samski, r.k., 30/5 1893 [~ zapis '1891' — aritmetika 25 let zahteva 1893!], 25 let",
+      "bride": "Frana Mališič, Gradac 21, kmet. povest. hči, r.k., 13/9 1893, 25 let ✓",
+      "groomParents": "Matija Štipanič, živ., mizar × Ana roj. Marentič, povestnik — oba r.kat.",
+      "brideParents": "Janez Mališič, kmet. povestnik × Gabrijela roj. Lerch — oba r.kat.",
+      "witnesses": "Jakob Štipanič, povestnik-župan + Franc Piletič, železničar — oba r.kat.",
+      "witnessStatus": "župan-priča (Griblje?) + železničar (žel. mobilnost)",
+      "urkunden": "1) spregled enega upravljanja urad. glav. Črnomelj št. 277/1919 [~]; 2) na ist. št. spregled enega cerk. uradnika, deh. urad Podzemelj; 3) ženitovanjska izglasnica županstva Gradac 19.1.1919 št. 8",
+      "priest": "[~ podpis navpično — 'Rogac/Rožac? župl. v. odlog' + 'per deleg.']",
+      "anomalies": [
+        "rojstna letnica ženina 1891-vs-1893 (aritmetika 25!) — honesty H1"
+      ]
+    },
+    {
+      "row": 2,
+      "date": "1919 20. januar Podž.",
+      "scan": 165,
+      "page": 164,
+      "groom": "Niko Tasič, Boginja vas 39, kmet. povestnika sin, r.k., 2/9 1897, 21 let ✓",
+      "bride": "Katarina Jaklič, Borišt 47, kmet. povestnika hči, r.k., 22/8 1899, 19 let ✓",
+      "groomParents": "Anton Tasič, živ., kmet. povestnik × Ana roj. Černič — oba r.katol.",
+      "brideParents": "Matija Jaklič, kmet. povestnik × Marija [prečrtana 'Pirc'?] roj. Kambič — oba r.kat.",
+      "witnesses": "Janez Jaklič, povestnik + Miklo Černič, povestnik — oba r.kat.",
+      "witnessStatus": "oba povestniki (kmetje)",
+      "urkunden": "1) spregled enega uradnika od okraj. glavar. v dekaniji, šrda št. 596 z dne 18.1.1919 [~ vojaško?]; 2) ženitovanjska zglasnica županstva Podž. 19.1.1919; 3) pismeno dovoljenje (ičta ženina ni nevošte [~]); 4) dovoljenje Narod. vlade za vojaštvu obveznega ženina, Glav. Črn. št. 242, z dne 10.1.1919",
+      "priest": "[~ 'Roman Josip Muzika(?)] par deleg.'",
+      "anomalies": [
+        "4. dovoljenje NARODNE VLADE za vojaškega obveznika = 1. SHS-državna oblast v liniji (po k.u.k. 1914–1918!)"
+      ]
+    },
+    {
+      "row": 3,
+      "date": "1919 27. januar Podž.",
+      "scan": 165,
+      "page": 164,
+      "groom": "Janez Klepec, Krasinec 36, kmet. povestnika sin, r.k., 19/9 1894, 25 let [~ aritmetika 24! — zapis 25 svinčnik?]",
+      "bride": "Katarina Stravs, GRIBLJE 22 [~ — zoom 'lje 22'; faza-1 'Apilše 42' ZAVRŽENO!], kmet. povestnika hči, r.k., 27/3 1898, 21 let [~ 20,84 → 21 v 5 dneh]",
+      "groomParents": "Miklo [~ Nikolaj] Klepec, ŽUPAN, živ., povestnik × Katarina roj. Segina — oba r.kat.",
+      "brideParents": "Matija Stravs, kmet. povestnik × Marija roj. Jakofčič (†) — oba r.kat.",
+      "witnesses": "Jožef PEZDIRC, povestnik + Miklo Požek, povestnik — oba r.kat.",
+      "witnessStatus": "Pezdirc-priča (1. od 7 pojavov 1919!) + Požek-priča",
+      "urkunden": "1) ženit. zglas. županstva Podž. št. 3, z dne 26.1.1919; 2) moštveno dovoljenje očetovo predpisano (kahor spreval [~]) za nedoletno nevesto",
+      "priest": "[~ Miklavčič duhovnik žup. — 6. branje linije!]",
+      "anomalies": [
+        "★ NEVESTA IZ GRIBLJE 22 [~] = 1. Griblje-vpis 1919 (lead je pričakoval šele №6!) + modra svinčnica-anotacija 1980 o ženinu (izbris/legitimacija?)",
+        "oče ženina ŽUPAN (Miklo/Nikolaj Klepec) — brat ženina №32 (Anton, ista starša!)"
+      ]
+    },
+    {
+      "row": 4,
+      "date": "1919 2. februar Podž.",
+      "scan": 166,
+      "page": 165,
+      "groom": "Vincencij Čerin, Gradac 4 (PREHODNO!), mizarski mojster, r.k., 'po napovedi' roj. 28/9 1892, 26 let ✓",
+      "bride": "Matilda Kambič, Gradac 4, povest. hči, r.k., 26/12 1896, 22 let ✓",
+      "groomParents": "Fran Čerin (†), povest. × Marija roj. Bevk — oba katol.",
+      "brideParents": "Matija Kambič, povest. × Marija roj. Starasinič — oba katol.",
+      "witnesses": "Ignacij Potočnik, gostilničar + Anton Strugar, kovaški mojster — oba r.kat.",
+      "witnessStatus": "gostilničar + kovaški mojster (rokokovska elita)",
+      "urkunden": "1) ord. žup. št. 5312/1919 spregled krstnega lista in samoženskega lista za ženina [~ 'samolega']; 2) ženinova razodetna prisega; 3) ob. glas. Črn. št. 372/19 spregled enega oklica, na ist št. spregled 1 uradnika dela monda(?) Matik [~]",
+      "priest": "[~ 'Rogar Josip(?) župl.' + per deleg.]",
+      "anomalies": [
+        "★ 'po napovedi' rojstvo (brez krstnega lista!) + (prehodno) bivališče = 2 zavori v enem vpisu",
+        "istna hiša Gradac 4 × 4 (ženin samo prehodno!)"
+      ]
+    },
+    {
+      "row": 5,
+      "date": "1919 3. februar Podž.",
+      "scan": 166,
+      "page": 165,
+      "groom": "Anton Plut, Klošter 91, kmet. povestn. sin, r.k., 29/12 1891, 27 let ✓",
+      "bride": "Helena Jakša, Klošter 40, kmet. povest. hči, r.k., 25/1 1897, 22 let ✓",
+      "groomParents": "Matija Plut, povestnik × Ana roj. Herbavec [~ Herbave] — oba r.kat.",
+      "brideParents": "Martin Jakša, povest. × Helena roj. Jakša (isti priimek!) — oba r.kat.",
+      "witnesses": "Miklo Križan, povestnik + Jožef Kambič, povestnik",
+      "witnessStatus": "Križan-mreža!",
+      "urkunden": "1) ženinova ženitovanjska zglasnica županstva Gradac št. 9/1919; 2) ustmeno dovoljenje očetovo za nedoletno nevesto pred poročnima pričama",
+      "priest": "[~ 'f. Valerian Urban os. text. Pra.']",
+      "anomalies": [
+        "nedoletna nevesta (22 < 24!) — ustno očetovo dovoljenje",
+        "starši neveste Jakša × Jakša (isti priimek)"
+      ]
+    },
+    {
+      "row": 6,
+      "date": "1919 3. februar Podž.",
+      "scan": 166,
+      "page": 165,
+      "groom": "Jurij Požek, GRIBLJE 77, hišar, samski, r.k., 6/5 1883, 35 let ✓",
+      "bride": "Marija Pezdirc, GRIBLJE 87 [KOREKCIJA lead '37/8'!], dekla, r.k., 4/12 1892, 27 let [~ aritmetika 26!]",
+      "groomParents": "Jurij Požek (†), hišar × Katarina roj. Križan — oba r.kat.",
+      "brideParents": "Marko Pezdirc (†), hišar × Ana roj. Željko — oba r.kat.",
+      "witnesses": "Miklo Željko, ŽUPAN + Miklo Požek, povestnik — oba r.kat.",
+      "witnessStatus": "župan (Miklo Željko — 3. župan-priča 1919!) + Požek-priča",
+      "urkunden": "1) ženitovanjska zglasnica za ženina, županstva Griblje št. 1/1919",
+      "priest": "[~ 'Lojze(?) Jurko(?) župl.' per delegaturno]",
+      "anomalies": [
+        "★★★ INTRA-GRIBLJE h77 × h87 (Požek × PEZDIRC!) = PREDVIDENI lead-vpis; starši neveste PEZDIRC × Željko; hiši 77 + 87 obe Griblje"
+      ]
+    },
+    {
+      "row": 7,
+      "date": "1919 10. februar Podž.",
+      "scan": 166,
+      "page": 165,
+      "groom": "Stanko Primožič, Otok 2, povest. sin in zidar, r.k., 6/8 1897, 21 let ✓",
+      "bride": "Ana Mališič, Otok 13, povest. hči, r.k., 15/6 1895, 23 let ✓",
+      "groomParents": "Franc Primožič (†), povestnik, GORIŠKI BEGENEC × Marija roj. Rusjan — oba r.kat.",
+      "brideParents": "Janez Mališič, kmet. povestnik × Marija roj. Palčič [~ Palič/Pavlič] — oba r.kat.",
+      "witnesses": "Jožef Križan, povestnik + Marija Filak, povestnik — oba r.kat.",
+      "witnessStatus": "mešani par-priče (moški + ženska!)",
+      "urkunden": "1) rojstni list ženinov, ordinari. gorički št. 187/1919; 2) razodetna prisega ženina; 3) spregled 2 oklicov in dovolj. razov. prisega, ordin. župlj. št. 656/1919 [~]; 4) očetovo pismeno dovoljenje za ned. nevesto; 5) izpis iz očet. oblasti pa ženina, Sodišče Met. št. 211/19; 6) dovoljenje državne vlade za ned. ženina, okr. glav. Črn. št. 1332/19; 7) spregled 2 oklicov, okr. glas. Črn. 1332/19",
+      "priest": "J. Valerian Urban, dekan, ord. adm. test. [~]",
+      "anomalies": [
+        "★★ OBA NEDOLETNA (21 + 23 < 24!): izpis iz očetovske oblasti (ženiN!) + sodišče + državna vlada",
+        "★ oče ženina GORIŠKI BEGENEC (begunec pred italijansko fronto!)"
+      ]
+    },
+    {
+      "row": 8,
+      "date": "1919 10. februar Podž.",
+      "scan": 167,
+      "page": 166,
+      "groom": "Jožef Mališič, Otok 13, povest. sin, r.k., 30/1 1892, 27 let ✓",
+      "bride": "Bara (Barbara) Jaklič, Lemelj 25, povest. hči, r.k., 5/5 1891, 27 let ✓",
+      "groomParents": "Janez Mališič, povestnik × Marija roj. Palčič [~ — ISTA kot №7!] — oba r.kat.",
+      "brideParents": "Miklo Jaklič, povestnik × Ana roj. Žungl [~ Lngelj] — oba r.kat.",
+      "witnesses": "Jožef Križan, povestnik + Marija Filak, povestnik — ISTA kot №7!",
+      "witnessStatus": "identične priče z №7",
+      "urkunden": "1) ženitovanjska zglasnica županstva Podzemelj št. 4/1919",
+      "priest": "J. Valerian Urban, ord. test. dekan [~]",
+      "anomalies": [
+        "★★ BRAT + SESTRA NA ISTI DAN: Jožef (№8) in Ana (№7) Mališič, Otok 13, ISTA starša (Janez × Marija Palčič) — dvojni poročni dan družine Otok 13!"
+      ]
+    },
+    {
+      "row": 9,
+      "date": "1919 10. februar Podž.",
+      "scan": 167,
+      "page": 166,
+      "groom": "Anton Marentič, Krasinec 41, povestnik, r.k., 29/5 1890, 28 let ✓",
+      "bride": "Marija Klepec, Krasinec 32, povest. hči, r.k., 25/4 1898, 21 let [~ 20,8 → 21]",
+      "groomParents": "Matija/Marija [~ — 'Matija' moško pričakovano, faza-1 'Marija'!] Marentič (‡), povestnik × Bara roj. Jaklčevič [~ Jakofčič] — oba r.kat.",
+      "brideParents": "Jurij Klepec, povestnik × Marija roj. Tome — oba r.kat.",
+      "witnesses": "Miklo Starasinič, povestnik + Anton Marentič, povestnik",
+      "witnessStatus": "Starasinič-mreža (Krasinec-klan!)",
+      "urkunden": "1) ženitovanjska zglasnica županstva Podzemlj št. 5/1919",
+      "priest": "Valerian Urban, ord. test. dekan [~]",
+      "anomalies": [
+        "starši ženina: oče [~ Matija/Marija Marentič — dvom spola/branja!] + mati Bara Jaklčevič"
+      ]
+    },
+    {
+      "row": 10,
+      "date": "1919 10. februar Podž.",
+      "scan": 167,
+      "page": 166,
+      "groom": "Janez Zupanič, Primostek št. 15., povestnik, r.k., 25/11 1879, 39 let ✓",
+      "bride": "Marija Tome, Primostek št. 15., posel. hči, r.k., 21/8 1895, 23 let ✓",
+      "groomParents": "Miklo Zupanič (†), povest. × Katarina roj. PEZDIRC — oba r.kat.",
+      "brideParents": "Janez Tome, povest. × Bara roj. Tome (isti priimek!) — oba r.kat.",
+      "witnesses": "Jurij Zupanič, povest.-gostilničar + Jožef PEZDIRC, povestnik — oba r.kat.",
+      "witnessStatus": "PEZDIRC-priča (2. pojav!) + Zupanič-gostilničar",
+      "urkunden": "1) dovolj. pismeno očeta nedol. neveste; 2) okr. glav. Črn. spregled 2 oklicov št. 586/1919; 3) ord. žup. spregled svaštva [~] v II. hol. št. 522/1919, obenem spregled 2 oklicov; 4) spregled istega zadr. po Narodni vladi v Ljub. št. 395/1919; 5) ženitov. zglasnica županstva Podž. št. 9/1919",
+      "priest": "Valerian Urban, ord. test. dk. [~]",
+      "anomalies": [
+        "★★ INTRA-HIŠA Primostek 15 × 15 (2. v letu!) + mati ženina PEZDIRC + priča PEZDIRC"
+      ]
+    },
+    {
+      "row": 11,
+      "date": "1919 10. februar Podž.",
+      "scan": 167,
+      "page": 166,
+      "groom": "Michael Moravec, Lemelj 22, povestnik, r.k., 8/9 1891, 27 let ✓",
+      "bride": "Ana Starasinič, Lemelj 22, hči povestnice, r.k., 6/8 1898, 20 let ✓",
+      "groomParents": "Miklo Moravec (†), povest. × Marija roj. Milek — oba r.kat.",
+      "brideParents": "Miklo Starasinič, DELAVEC V AMERIKI × Marija roj. Muc, povestnica — oba r.kat.",
+      "witnesses": "Jurij Križan, povestnik + Trče/Frče Jurajevič [~], hišar",
+      "witnessStatus": "Križan-mreža + Jurajevič (hišar)",
+      "urkunden": "1) ženitovanjska zglasnica Podž. št. 4/1919 [~ ali 9/1919!]; 2) ženitno dovolilo za nedoletno nevesto od okr. sodišča Metlika št. 212/1919-1",
+      "priest": "J. Valerian Urban ord. test. dk. [~]",
+      "anomalies": [
+        "★★ INTRA-HIŠA Lemelj 22 × 22 (3. v letu!) + oče neveste DELAVEC V AMERIKI (emigrant!) + SODIŠČE-Metlika dovolilo za nedoletno (20!)"
+      ]
+    },
+    {
+      "row": 12,
+      "date": "1919 24. februar Podž.",
+      "scan": 168,
+      "page": 167,
+      "groom": "Janez Nemanič, [~ Cvoile/Škile?] 1, župnija Metlika, povestnik, r.k., 14/12 1891, 27 let ✓",
+      "bride": "Terezija Muc, Primostek 4, poust. hči, r.k., 8/4 1892, 26 let ✓",
+      "groomParents": "Janez Nemanič (†), povestnik × Katarina roj. Tome — oba rim. kat.",
+      "brideParents": "Miklo Muc, povestnik × Ana roj. Tome — oba rim. kat.",
+      "witnesses": "Martin Štefanič [~], povestnik + Jurij Tome, povestnik",
+      "witnessStatus": "Tome-mreža ×2",
+      "urkunden": "10 POSTAVK (najdaljši Refusen 1919!): 1) ženitovanjska zglasnica županstva Božakovo(?) rodne št. 8 [~]; 2) odločni list župnega urada Metlika z dne 29.1.1919; 3) spregled enega verižnega(?) oklica nam. deh. urada Podzemelj z dne 24/1 1919 [~]; 4) spregled druga oklična obr. glas. Črnomelj z dne 14/1.1919 št. 9177 [~]; 5) dispensa [prečrtano] v župljani z dne 8/2 1919 št. 462; 6) izpis o prostem stanju neveste iz rojnega urada Podzemelj z dne 29/4 1919 št. 58 [~]; 7) testimonium status liberi ženina, župni urad v Metliki z dne 24/4 1919; 8) spregled zakonskega razdelka(?) Državne vlade za Slovenijo z dne 4/2 1919 št. 913 [~]; 9) rojstni in krstni list ženina, župnega urada v Metliki z dne 24/4 1919; 10) rojstni in krstni list, župni urada Sodražica(?) z dne 29/1 1919 št. 34 [~]",
+      "priest": "[~ Gregor Cerar/Cerč, župnik]",
+      "anomalies": [
+        "★★ 10 urdnih postavk (REKORD 1919) + ženin iz TUJE ŽUPLNIJE Metlika + dispensa (dat. 8.2.1919 = pred poroko 24.2!) + 2× 'rojstni in krstni list' (dvojno dokumentiranje!)"
+      ]
+    },
+    {
+      "row": 13,
+      "date": "1919 24. februar Podž.",
+      "scan": 168,
+      "page": 167,
+      "groom": "Franc Dragos, GRIBLJE 12 [~ zoom potrjuje '12' — faza-1 '42' ZAVRŽENO!], živžar [~ poklic nejasen — cf. №15!], samski, r.k., 28/1 1894, 25 let ✓",
+      "bride": "Marija Milek, GRIBLJE 30 [~ zoom hišni stolpec '30.' — faza-1 '50' ZAVRŽENO!], VDOVA KAMBIČ, povestnica, r.k., 13/4 1891, 27 let ✓",
+      "groomParents": "Janez Dragos, povestnik × Barbara roj. Cvilkovič [~ Cvilikovič] — oba rim. kat.",
+      "brideParents": "Janez Milek (†), povestnik × Marija roj. PEZDIRC (†) — oba rim. kat.",
+      "witnesses": "Marko PEZDIRC, povestnik + Matija Štrk [~], povestnik",
+      "witnessStatus": "PEZDIRC-priča (3. pojav!)",
+      "urkunden": "1) ženitovanjska zglasnica županstva Griblje z dne 2/2 1919, št. 2; 2) potrdilo okrajnega sodišča v Črnomlju z dne 14/2 1919 o smrti Janeza Kambiča, VOJAKA, prvega moža neveste",
+      "priest": "[~ Gregor Cerar, župnik]",
+      "anomalies": [
+        "★★★ NEVESTA = VDOVA PO WWI-VOJAKU (Janez Kambič † na vojaki — sodno potrdilo 14.2.1919!) + mati neveste roj. PEZDIRC + priča PEZDIRC + INTRA-GRIBLJE h12 × h30"
+      ]
+    },
+    {
+      "row": "bez-št. (med №13 in №14)",
+      "date": "1919 24. februar [~ Podž.]",
+      "scan": 169,
+      "page": 168,
+      "groom": "Jakob Boren, [~ Kranska/Stranska/Grauska?] vas 4, povestnika sin, r.k., 22/4 1892, 26 let ✓",
+      "bride": "Katarina Grdinovac, Krasinec 54 [~ zoom '54' — faza-1 '52' ZAVRŽENO!], povestnica, r.k., 1/5 1896, 22 let ✓",
+      "groomParents": "Janez Boren (†), povestnik × Ana roj. Golobič — oba rim. kat.",
+      "brideParents": "Peter Grdin(a) [~ + 'var'? — nejasno!] (†), povestnik × Ana roj. Crnič/Crnić — rim. kat.",
+      "witnesses": "Jakob Hočevar [~], povestnik + Jožef Rauh/Ravh [~], povestnik",
+      "witnessStatus": "Ravh — nemško-zveneči priimek (redkev!)",
+      "urkunden": "11+ POSTAVK (najgostejši blok!): 1) sporočilo vojaškega pouka(?) z dne 25/1 al. 8/3 [~]; 2) ženitovanjska zglasnica [~] z dne 24/2 št. 44; 3) spregled dveh oklicev, škr. ord. z dne 25/1 št. 109 [~]; 4) spregled dveh oklicev obr. obl. z dne 19/1 št. 8576 [~]; 5) zapisnik porote o sodni sposobnosti neveste; 6) sprevalo(?) ženina-Goriške z dne 19/1 št. 29 [~]; 7) zapisnik o izpustu iz vojske z dne 14/2; 8) odločni list iz ženina z dne 14/2 št. 21; 9) krstni list neveste, župni urad Župnik Novo z dne 19/2-čt št. 16 [~]; 10) potrdilo o prostem stanju neveste, župn. urad Župnik Novo z dne 14/2-čt št. 15; 11) samoški(?) in rojstni list ženina, urad Šmihel(?) z dne 16/2 [~]",
+      "priest": "[~ per deleg. — 'Mar. Krabar/Benedikt(?)' neberljivo]",
+      "anomalies": [
+        "★★★ VPIS BREZ ŠTEVILKE (levi rob PRAZEN — 1. primer linije 1886–1919!) + 11+ urdnih postavk + datum = ISTI DAN kot №13 (24.2.)"
+      ]
+    },
+    {
+      "row": 14,
+      "date": "1919 2. marec Gradac-žup.",
+      "scan": 169,
+      "page": 168,
+      "groom": "Ladislav Lašič [~ Lasič], Gradac 1, povestnik, r.k., 2/1 1890 [~ aritmetika 28 let zahteva 1891!], 28 let",
+      "bride": "Jozefa Mikluž [~ Mikelič/Mihelič], Gradac 1 [~ ali 4?], povestnika hči, r.k., 19/9 1892, 26 let ✓",
+      "groomParents": "Karel Lasič (†), povestnik × Katarina roj. Hebat — rim. kat.",
+      "brideParents": "Janez Rafael Mikluž, povestnik × Marija roj. Rusjan — rim. kat.",
+      "witnesses": "Friderik Schmidt, POŠTAR + Franc Hebat, povestnik",
+      "witnessStatus": "POŠTAR-priča (1. v liniji!) + Hebat (mati ženina = ista familija!)",
+      "urkunden": "1) karodetna(?) prisega ženina [~]; 2) spregled 2 oklicev, obr. glav. Črn. 14/2 št. 913 [~]; 3) dovoljenje raz. prisega, ord. blk. št. 75 [~]; 4) spregled 2 oklicev št. ord. 14/2-19 št. 552 [~]; 5) narodna prisega neveste [~]",
+      "priest": "Gregor Cerar, župnik [~ — 1. jasno branje!]",
+      "anomalies": [
+        "župnija GRADAC (druga!) + INTRA-hiša Gradac 1 × 1 [~] + poštar-priča (nov poklic linije!)"
+      ]
+    },
+    {
+      "row": 15,
+      "date": "1919 2. marec Podž.",
+      "scan": 169,
+      "page": 168,
+      "groom": "Martin Muc, [~ Krivo-glavice?] 28, živžar [~ — cf. №13!], r.k., 3/7 1896, 22 let ✓",
+      "bride": "Vera, VDOVA po Jožefu Hostelerju (LAJTNANT!), roj. Matjašič, Drašiči bg. [prečrtan poskus + popravek!], župnija Metlika, r.k., 13/4 1895, 23 let ✓",
+      "groomParents": "Janez Muc (†), povestnik × Katarina roj. Klepar [~ Klepec] — rim. kat.",
+      "brideParents": "Marko Matjašič (†), povestnik × Marija roj. Matkovič [~] — rim. kat.",
+      "witnesses": "Miklo Muc, povestnik + Anton Bajuk, povestnik",
+      "witnessStatus": "Muc-mreža (oče+sin ime!)",
+      "urkunden": "1) spregled 2 oklicev obr. glas. [~] 11/2-19 št. 418 [~]; 2) svedočilo o smrti Jožefa Hostelerja, LAJTNANT, potrdilo obr. sod. Metlika št. 8, 4.1918 [~]; 3) krajevna pristojnost, okr. ord. 24/2-19 št. 1125 [~]; 4) buglas(?) prehodnega bivanja, obr. sod. Metlika št. 45 [~]; 5) sameški list ženina, župn. urad Sodra(?) št. 19-čt. 455 [~]; 6) izpust iz vojske, obr. sod. Metlika 14/2-19 št. 99/95 [~]; 7) ženitovanjska dovoljna zglasnica žup. Sodra(?) št. 6 [~]; 8) odločni list Metlika z dne 16/2-19 št. 24",
+      "priest": "Gregor Cerar, župnik [~]",
+      "anomalies": [
+        "★★ 2. VDOVA PO VOJAKU v 10 dneh (№13 Kambič 24.2. + №15 Hosteler-lajtnant!) + prečrtan poskus bivališča (redka samokorekcija!) + Drašiči/Metlika"
+      ]
+    },
+    {
+      "row": 16,
+      "date": "1919 28. april",
+      "scan": 170,
+      "page": 169,
+      "groom": "Anton Klepec, [~ Gradac 34/31?], povestnik, r.k., 11/1 1888, 30 let [~ aritmetika 31!]",
+      "bride": "Ivana Berkoper [~], [~ Klošter 83/88?], povestniška hči, r.k., 16/9 1899, 20 let [~ aritmetika 19!]",
+      "groomParents": "Nikolaj Klepec (†), povestnik × Marija roj. Stangar [~] —",
+      "brideParents": "Francišek Berkoper, povestnik × Ivana roj. Zupanič —",
+      "witnesses": "Franc Sober [~], holarski/kolarski mojster + Janez Kovank [~], tavornik? [~]",
+      "witnessStatus": "kolar-mojster (rogokolec!)",
+      "urkunden": "1) ženit. zglasnica žup. Gradac 24.4.1919 št. 19; 2) spregled 2 oklicev obr. glas. Črnomelj 24/4.1919 št. 4300 [~]; 3) spregled 2 oklicev obr. urad Metlika št. 25/4-19 [~]; 4) [...] ženitovsko dovoljenje [~]",
+      "priest": "Gregor Cerar, župnik [~]",
+      "anomalies": [
+        "starejši ženin (30) × mlajša nevesta (20) = 10-letna razlika + 3 hiše/številke [~]"
+      ]
+    },
+    {
+      "row": 17,
+      "date": "1919 11. maj",
+      "scan": 170,
+      "page": 169,
+      "groom": "Alojzij Mališič, Brest 34, povest. sin, r.k., 25/4 1890, 29 let ✓",
+      "bride": "Katarina Kralj, Brest 22, poust. hči, r.k., 16/4 1893, 26 let ✓",
+      "groomParents": "Janez Mališič, povestnik × Katarina (†) roj. Jakša —",
+      "brideParents": "Jurij Kralj (†), povestnik × Ana (†) roj. PEZDIRC —",
+      "witnesses": "Janez Kralj, povestnik + Mihal Jakofčič, povestnika sin",
+      "witnessStatus": "Kralj-familija (brat? oče?) + Jakofčič-mreža",
+      "urkunden": "1) izpust iz očetovske oblasti, obr. sod. Metlika 1/5-19 št. 2919/2918 [~]; 2) ženitovanjska zglasnica žup. Sodolnec(?) 8/5-19 št. 19 [~]; 3) župniku dovoljenje obr. glas. Črnomelj 14/5-19 št. 4654 [~]",
+      "priest": "Gregor Cerar, župnik [~]",
+      "anomalies": [
+        "mati neveste roj. PEZDIRC (†) — 4. pojav Pezdirc-žensk 1919!"
+      ]
+    },
+    {
+      "row": 18,
+      "date": "1919 18. maj",
+      "scan": 170,
+      "page": 169,
+      "groom": "Nikolaj Hlebec [~ Kleber/Klepec — 'lebec' jasno], GRIBLJE 2., povest. sin, r.k., 3/10 1887, 31 let ✓",
+      "bride": "Barbara Kambič, GRIBLJE 58, povest. hči, r.k., 19/9 [~ 24/9?] 1893, 26 let [~ 25,6 → 26 ✓]",
+      "groomParents": "Peter Hlebec, povestnik × Ana roj. Jakofčič (†) —",
+      "brideParents": "Matija Kambič (†), povestnik × Ana roj. PEZDIRC (†) —",
+      "witnesses": "Matija PEZDIRC, povestnik + Peter Miklavčič [~], povestnik",
+      "witnessStatus": "PEZDIRC-priča (Matija — 1. od 4 pojavov!)",
+      "urkunden": "ženitovanjska zglasnica žup. Griblje z dne [~18/5] 1919, št. 2 [~]",
+      "priest": "Gregor Cerar, župnik [~]",
+      "anomalies": [
+        "★★ INTRA-GRIBLJE h2 × h58 + mati neveste roj. PEZDIRC (†)"
+      ]
+    },
+    {
+      "row": 19,
+      "date": "1919 26. maj",
+      "scan": 170,
+      "page": 169,
+      "groom": "Michael Gregorič, [~ Podremf/Sodremf?] 9., povestniški sin, r.k., 28/10 1896, 22 let ✓",
+      "bride": "Marija Tome, Škrilje 2., povestniška hči, r.k., 24/10 1899, 19 let ✓ — NEDOLETNA!",
+      "groomParents": "Mihael Gregorič, povestnik × Katarina roj. Brodarič [~] —",
+      "brideParents": "Nikolaj Tome, povestnik × Barbara roj. Juregier [~] —",
+      "witnesses": "Miklo Kure [~], povestnik + Matija Mur(a?) [~ cut]",
+      "witnessStatus": "Kure-mreža",
+      "urkunden": "1) ženitno dovoljenje obr. glav. Črnomelj z dne 14/5-19 št. 534 [~]; 2) načelonsko dovoljenje za ženina z dne 14/5-19 [~]; 3) očetovsko dovoljenje za nevesto z dne 14/5-19; 4) sameški list [~]; 5) ženitovanjska zglasnica žup. Sodremf(?) 25/5-19 št. 11 [~]",
+      "priest": "Gregor Cerar, župnik [~]",
+      "anomalies": [
+        "kasnejša anotacija 1978 (Matični množ. Podzemelj l. 1978 dč. 35 — 'Zakonec Gregorič Marija' — smrt/status?) + 2× 'Podremf/Sodremf' župnija"
+      ]
+    },
+    {
+      "row": 20,
+      "date": "1919 26. maj",
+      "scan": 170,
+      "page": 169,
+      "groom": "Anton Klusič [~ Hlusič/Husič — anotacija 1975 piše 'Husič'!], GRIBLJE 41., povestniški sin, r.k., 9/4 1896, 22 let ✓",
+      "bride": "Jozefa Štravs, GRIBLJE 64 [~ 65?], povestniška hči, r.k., 10/2 1900, 19 let ✓ — NEDOLETNA!",
+      "groomParents": "Matija Hlusič [~], povestnik × Vera roj. Jakofčič —",
+      "brideParents": "Nikolaj Štravs, povestnik × Marija roj. Jakofčič —",
+      "witnesses": "Matija Štravs, povestnik + Matija PEZDIRC, povestnik",
+      "witnessStatus": "PEZDIRC-priča (Matija — 2. pojav!)",
+      "urkunden": "1) ženitno dovoljenje obr. glav. Črnomelj z dne 8/5-19 št. 5435; 2) spregled zak. radalca(?) 5/5-19 nr. 2324 [~]; 3) sameški list; 4) izpust iz očet. oblasti ženina, obr. sod. Črnomelj dne 15/5-19 št. 503/19 [~]; 5) zato(?) neveste obr. sod. Črn. dne 15/5-19 št. 504/19 [~]; 6) ženit. zglasnica žup. Griblje z dne 26/5-19 št. 4",
+      "priest": "Gregor Cerar, župnik [~]",
+      "anomalies": [
+        "★★ INTRA-GRIBLJE h41 × h64[~] + KASNEJŠA ANOTACIJA 1975: 'Zakonec Husič Anton umrl z dne 29.4.1975 v Gribljah št. 90' (nova hišna referenca 90!) + obe matere Jakofčič!"
+      ]
+    },
+    {
+      "row": 21,
+      "date": "1919 26. maj",
+      "scan": 171,
+      "page": 170,
+      "groom": "Peter PEZDIRC, GRIBLJE 20., povestnik, r.k., 25/10 1886, 32 let ✓",
+      "bride": "Barbara Jakofčič, GRIBLJE 13., povestniška hči, r.k., 3/4 1888, 30 let [~ aritmetika 31!]",
+      "groomParents": "Peter Pezdirc (†), povestnik × Katarina roj. Deklič [~ Deblič?] —",
+      "brideParents": "Matija Jakofčič, povestnik × Marija roj. PEZDIRC (†) —",
+      "witnesses": "Matija PEZDIRC, povestnik + Jure PEZDIRC, povestnik — OBA PEZDIRC!",
+      "witnessStatus": "Matija PEZDIRC (3. pojav!) + Jure PEZDIRC (1. pojav)",
+      "urkunden": "ženitovanjska zglasnica žup. Griblje 25/5-19 št. 5",
+      "priest": "Gregor Cerar, župnik [~]",
+      "anomalies": [
+        "★★★ ŽENIN = PEZDIRC! (Griblje 20) + mati neveste roj. PEZDIRC + OBA priča PEZDIRC = 5 Pezdirc-oseb v enem vpisu! + INTRA-GRIBLJE h20 × h13"
+      ]
+    },
+    {
+      "row": 22,
+      "date": "1919 2. junij",
+      "scan": 171,
+      "page": 170,
+      "groom": "Janez Kozelj [~], Metlika 92., udar kmet? [~] povestnik, r.k., roj. po referenci 'Gohrid(?) št. 7, župn. Sv. Juršad(?)' [~], 10/8 1886, 32 let ✓",
+      "bride": "Julijana Hopovič [~ Hropovič?], Primostek 22., kovača in gostilničarja hči, r.k., 16/9 [~ 1892/1893?] — 26 let [~ aritmetika 25 pri 1893!]",
+      "groomParents": "Janez Kozelj (†), kovač × Ana roj. Grohar —",
+      "brideParents": "Franc Repovž (†?), kovač in gostilničar × Barba-ra VDOVA Štrk roj. Plut —",
+      "witnesses": "Anton Trček, povestnik + Fran Škof, povestnik",
+      "witnessStatus": "Škof-priimek (redkev!)",
+      "urkunden": "ženitovanjska zglasnica žup. Metlika 26/5-19 št. 8; odločni list žup. urad Metlika 26/5-19 št. 155; metliški list župni urad Metlika 26/5-19 št. 154",
+      "priest": "Gregor Cerar, župnik [~]",
+      "anomalies": [
+        "rojstvo po referenci iz TUJE župnije (Sv. Juršad?) + mati neveste = vdova Štrk roj. Plut (dvojni zakon!)"
+      ]
+    },
+    {
+      "row": 23,
+      "date": "1919 14. julij",
+      "scan": 171,
+      "page": 170,
+      "groom": "Anton Jakofčič, Krasinec 6., povestnik, r.k., 9/1 1897, 22 let ✓",
+      "bride": "Karolina PEZDIRC, Krasinec 2., povestniška hči, r.k., 1/2 1899, 20 let ✓",
+      "groomParents": "Mihael Jakofčič (†), povestnik × Barba(ra) roj. Štravs —",
+      "brideParents": "Jurij PEZDIRC, SVIHTAR [~ — sakristan! cf. №34 priča!] × Ana roj. Simonič (†) —",
+      "witnesses": "Anton Irus/Trus [~], sluga? + Jure PEZDIRC, povestnik",
+      "witnessStatus": "Jure PEZDIRC (2. pojav!)",
+      "urkunden": "izpust iz očetovske oblasti neveste, okrajno sodišče Metlika 1/6-19 št. 895/19 [~]; izto za ženina, okrajno sodišče Metlika 11/6-19 št. 448/19 [~]; izpravnjak samek, župni urad Podremec(?) 31/5-19 št. 151 [~]; ženitovanjska zglasnica županstvo Podrremec(?) 11/6-19 št. 12 [~]",
+      "priest": "Gregor Cerar, župnik [~]",
+      "anomalies": [
+        "★★ nevesta = PEZDIRC (Krasinec 2) + oče SVIHTAR (sakristan!) + nedoletna (20) — sodna dovoljenja"
+      ]
+    },
+    {
+      "row": 24,
+      "date": "1919 21. julij",
+      "scan": 171,
+      "page": 170,
+      "groom": "Matija PEZDIRC, Otok 4., povestniška sin, r.k., 24/4 1889, 30 let ✓",
+      "bride": "Katarina PEZDIRC, Otok 1., povestniška hči, r.k., 13/6 1898, 21 let ✓",
+      "groomParents": "Martin Pezdirc, povestnik × Marija roj. Salčič [~ Falčič/Balčič?] —",
+      "brideParents": "Jožef Pezdirc, povestnik × Marija roj. Tome —",
+      "witnesses": "Matija PEZDIRC, povestnik + Miklo Klepec, povestnik",
+      "witnessStatus": "Matija PEZDIRC (4. pojav!)",
+      "urkunden": "državsko ženitno dovoljenje nov. 20/7-19 [~]; dispensa cum 2. grad. impedita(?) 24/5-19 št. 2445 [~]; izto držav. vlade za Slov. 21/5-19 št. 5316 [~]; testimonium status lib. ženina in neveste; ženitov. zglasnica žup. Sodremec(?) 21/5-19 št. 13 [~]",
+      "priest": "Gregor Cerar, župnik [~]",
+      "anomalies": [
+        "★★★ INTRA-PRIIMEK: PEZDIRC × PEZDIRC (Otok 4 × Otok 1 — različni hiši, isti priimek!) + dispensa (impedita?) + državno dovoljenje"
+      ]
+    },
+    {
+      "row": 25,
+      "date": "1919 21. julij Metlika",
+      "scan": 172,
+      "page": 171,
+      "groom": "Andrej Pance, Metlika, OROŽNIŠKI PODSTRAŽMOJSTER [~ — žandarmerija NCO!], r.k., 19/9 1882, 36 let ✓",
+      "bride": "Katarina, VDOVA [~ Mlin Sum? Mlinšum?], roj. Simonič, povestnica in gostilničarka, Gradac 12., r.k., 31/3 1875, 44 let ✓",
+      "groomParents": "Franc Pance, povestnika sin(?), na Vičin št. 8 [~] × Vera roj. Zurža [~] —",
+      "brideParents": "Jakob Simonič (†), povestnik × Katarina roj. Golobič; živi(?) vrh 2, župn. Šemija(?) [~] —",
+      "witnesses": "Franc Tome, povestnik žage(?) [~] + Ignacij Potočnik, gostilničar",
+      "witnessStatus": "Potočnik = ISTI gostilničar-priča kot №4!",
+      "urkunden": "ženitna knjižica orožniškega zavedbenika(?) v župljani 16/5-19 št. 495/6 [~]; metliški list, župni urad Sodraml(?) 11/5-19 št. 1 [~]; spregled okličev, škof. ord. 16/5-19 št. 3746 [~]; izto obr. glas. Črnomelj 17/5-19 št. 4864 [~]; sameški list, župni urad Metlika 29/5-19 št. 234; odločni list, župni urad Metlika 29/5-19 št. 233; ženit. zglasnica župan. kri(?) 11/5-19 št. 44 [~]",
+      "priest": "Gregor Cerar, župnik [~]",
+      "anomalies": [
+        "★★ ŽENIN = ŽANDAR (orožniški podstražmojster — 1. v liniji!) × 44-letna gostilničarka-vdova (18-letna razlika, mlajši ženin!)"
+      ]
+    },
+    {
+      "row": 26,
+      "date": "1919 11. avgust",
+      "scan": 172,
+      "page": 171,
+      "groom": "Peter PEZDIRC, Krasinec 28., povestniška sin, r.k., 8/9 1891, 27 let ✓",
+      "bride": "Terezija Jakofčič, Krasinec 6., povestniška hči, r.k., 24/2 1901, 18 let ✓ — NAJMLAJŠA NEVESTA 1919!",
+      "groomParents": "Peter PEZDIRC, povestnik × Marija roj. PEZDIRC — OBA PEZDIRC!",
+      "brideParents": "Mihael Jakofčič (†), povestnik × Barbara roj. Štravs —",
+      "witnesses": "Matija Štravs, povestnik + Jurij PEZDIRC, povestnik",
+      "witnessStatus": "Jurij PEZDIRC (3. pojav — cf. №23 oče-svihtar je drug Jurij?)",
+      "urkunden": "proglas za pobno(?) [~ — podletno?] nevesto, okrajno sodišče v Metliki dne 30/7-19, št. 5744/9 [~]",
+      "priest": "Gregor Cerar, župnik [~]",
+      "anomalies": [
+        "★★★ 2. Peter PEZDIRC v 1919 (№21 Griblje 20 r.1886 + №26 Krasinec 28 r.1891!) + starši ženina PEZDIRC × PEZDIRC (intra-priimek staršev!) + nevesta 18 let (sodno dovoljenje!)"
+      ]
+    },
+    {
+      "row": 27,
+      "date": "1919 25. avgust",
+      "scan": 172,
+      "page": 171,
+      "groom": "Janez Gustavin [~ Šustavin?], [~ Šmilovje/Sutloga?] 31, povestniška sin, r.k., 25/12 1890, 28 let ✓",
+      "bride": "Marija Berkoper, GRIBLJE 48., povestniška hči, r.k., 26/10 1898 [~ — aritmetika 20 pri 19 let!; faza-1 '25/6 1898, 21' ZAVRŽENO], 19 let [~]",
+      "groomParents": "Janez(?) Gustavin, povestnik × Ana roj. Jakofčič —",
+      "brideParents": "Janez Berkoper, povestnik × Katarina roj. HLEBEC [~ — cf. №18!], umrla kot Pezdirc? [~ 'umor. Pezdirc'] —",
+      "witnesses": "Marija Višnavec [~], povestnik + Peter PEZDIRC, povestnik",
+      "witnessStatus": "Peter PEZDIRC-priča (3. Peter?)",
+      "urkunden": "proglasni(?) list za [~ polnoletno/podletno] nevesto, okrajno sodišče v Črnomlju, dne 24/8-19 št. 5525/14 [~]",
+      "priest": "žup. Kapl. [~ kaplan!] + per delegatis nem. [~]",
+      "anomalies": [
+        "★★ NEVESTA IZ GRIBLJE 48 + mati roj. HLEBEC (ist priimek kot №18 ženin!) 'umrla kot Pezdirc'(?) + podpis kaplan + per delegatis nem. (nemško?!)"
+      ]
+    },
+    {
+      "row": 28,
+      "date": "1919 8. september [avg→sept prečrtano/popravljeno!]",
+      "scan": 172,
+      "page": 171,
+      "groom": "Anton Nemanič, [~ Dobravce 27/18?], povestnik, r.k., 11/5 1872 [~] 1892?, 44 [~] 27 let — ROJSTVO/STAROST [~ dvom!]",
+      "bride": "Barbara Kügel [~ Kugel/Krugel], Dobravce 18 [~], pusta/povesta hči, r.k., 24/2 1896, 23 let ✓",
+      "groomParents": "Martin Nemanič (†), povestnik × Marija roj. Hočevar (†) —",
+      "brideParents": "Matija Kugel, povestnik × Ana roj. Kraf (†) —",
+      "witnesses": "Martin Kugel, povestnik + Fran Moraj [~], povestnik",
+      "witnessStatus": "Kugel-familija (brat/oče?)",
+      "urkunden": "izpust iz očetovske oblasti neveste, okrajno sodišče v Metliki 26/8-19 št. 2457/19 [~]",
+      "priest": "Gregor Cerar, župnik [~]",
+      "anomalies": [
+        "mesec POPRAVLJEN (avgust → september — redka samokorekcija datuma!) + ženinovo rojstvo/letost [~ 1872/44 vs 1892/27 — vprašanje odgovora: star 47? ali 27?]"
+      ]
+    },
+    {
+      "row": 29,
+      "date": "1919 22. september",
+      "scan": 173,
+      "page": 172,
+      "groom": "Martin Juragec [~ Jurgovič/Jurajsovič?], Škrilje 24., krojaški pomočnik? [~], r.k., 26/12 1892 [~ 18/2?], 26 let ✓",
+      "bride": "Marija Novak ROJ. JAKŠA [vdovski ali poročni priimek — 'vdova' ne zapisan!], Gradac 2., povestnica, r.k., 14/9 1891, 27 let ✓",
+      "groomParents": "Martin Juragec, krojač? × Marija roj. [~ cut] —",
+      "brideParents": "Janez Jakša, mizar × Marija roj. Flek [~] —",
+      "witnesses": "Miklo Tome, povestnik + Jakob Štipanič, povestnik",
+      "witnessStatus": "Štipanič (cf. №1 ženin — familija?)",
+      "urkunden": "spregled enega oklica, deh. urad v Metliki 11/2-19 št. 24 [~] in okrajni glavar Črnomelj [~]",
+      "priest": "Gregor Cerar, župnik [~]",
+      "anomalies": [
+        "nevesta 'Novak roj. Jakša' — poročno ime brez 'vdova' (_status nejasen!)"
+      ]
+    },
+    {
+      "row": 30,
+      "date": "1919 29. september",
+      "scan": 173,
+      "page": 172,
+      "groom": "Jožef Dernac [~ Dernai?], Spodnja Vranca(?) 26 [~ — TUJA ŽUPLNIJA!], krojač, r.k., 15/6 1887, 32 let ✓",
+      "bride": "Amalija Kovarič [~], [~ Gradac 64/61?], povestniška hči, r.k., 25/9 1897, 22 let ✓",
+      "groomParents": "Martin Dernac, povestnik × Franciška roj. Škodanin [~] —",
+      "brideParents": "Martin Kovarič (†), povestnik × Marija roj. Jakša —",
+      "witnesses": "Jakob Štipanič, povestnik + Martin [~ cut], mikar/mizar",
+      "witnessStatus": "Štipanič 2× v s173!",
+      "urkunden": "spregled enega oklica, deh. urad Metlika 29/5-19 št. 48 [~]; deh. urad Videm(?) (Krvav?) 25/9-19 št. 452 [~]; okrajno glav. Brščini(?) 29/9-19 št. 5840 [~]; okrajno glav. Črnomelj 29/9-19 št. 1803 [~]; sameški list ženinov [~]",
+      "priest": "Gregor Cerar, župnik [~]",
+      "anomalies": [
+        "ženin iz TUJE župnije ('(župnija ...)' — navedeno!) + krojač (drugi krojač 1919!)"
+      ]
+    },
+    {
+      "row": 31,
+      "date": "1919 6. oktober",
+      "scan": 173,
+      "page": 172,
+      "groom": "Jožef PEZDIRC [faza-1 'Kovarič' ZAVRŽENO — zoom jasno 'Pezdirc'!], [~ Gradarče/Gradašče?] 6., kovač, r.k., 18/3 1893, 26 let ✓",
+      "bride": "Katarina Belčič [~], [~ Gradarče?] 31, kovačlega mojstra hči, r.k., 11/11 1894 [~ 14/9 1895?], 25 let [~]",
+      "groomParents": "Jurij PEZDIRC (†), povestnik × Ana roj. Guaglia [~ Quaglia — italijansko-zveneči!] —",
+      "brideParents": "Matija Belčič, kovaški × Franciška roj. Šuhek [~] —",
+      "witnesses": "Jurij Kure [~], povestnik + Martin [~ cut]",
+      "witnessStatus": "Kure-mreža",
+      "urkunden": "[~ — odločni list župnega urada Adlešiči(?) 29/9-19 št. 93 — sicer prazno!]",
+      "priest": "žup. kogar(?), Kapl. [~ kaplan] + prečrtan 'G'",
+      "anomalies": [
+        "★★ ženin = PEZDIRC (kovač!) + oče roj. Guaglia (italijanska sled?) + Refusen PRAZEN/EN vrstičen + kaplan-podpis"
+      ]
+    },
+    {
+      "row": 32,
+      "date": "1919 20. oktober",
+      "scan": 173,
+      "page": 172,
+      "groom": "Anton Klepec, Krasinec 26., povestniška sin, r.k., 24/10 1896, 22 let ✓",
+      "bride": "Terezija Jaklčevič [~ — prečrtan dvojni zapis v hišnem stolpcu!], Krasinec 8., poustnika hči, r.k., 24/10 1897, 21 let [~ 20,99 → 21 v 4 dneh]",
+      "groomParents": "Nikolaj Klepec, povestnik × Katarina roj. Segina — ISTA STARŠA KOT №3! (BRATA!)",
+      "brideParents": "Nikolaj Jakličevič [~], povestnik × Ana roj. Kružan/Križan [~] —",
+      "witnesses": "Matija Štravs, povestnik + Miklo [~ cut]",
+      "witnessStatus": "Štravs ×2 v s173!",
+      "urkunden": "ženitno dovoljenje ženin(?) okrajnega glavarja v Črnomlju [~]",
+      "priest": "Gregor Cerar, župnik [~]",
+      "anomalies": [
+        "★★ BRATA KLEPEC NA POROKI (№3 Janez 27.1. + №32 Anton 20.10. — oče Nikolaj/Miklo župan + Katarina Segina!) + prečrtan zapis pri nevesti"
+      ]
+    },
+    {
+      "row": 33,
+      "date": "1919 3. november",
+      "scan": 173,
+      "page": 172,
+      "groom": "Peter Požek, GRIBLJE 61., povestnika sin, r.k., 28/6 1896, 23 let ✓",
+      "bride": "Marija PEZDIRC, Krasinec 28., povestniška hči, r.k., 12/11 1896, 22 let ✓",
+      "groomParents": "Nikolaj Požek, povestnika sin × Ana roj. Dragos —",
+      "brideParents": "Peter PEZDIRC, povestnik × Marija roj. PEZDIRC — ISTA STARŠA KOT №26 ŽENIN! (SESTRA!)",
+      "witnesses": "Matija Štravs, povestnik + Anton Jakofčič, povestnik",
+      "witnessStatus": "Štravs 3× v s173!",
+      "urkunden": "ženitno dovoljenje ženij(?) okrajnega glavarja Črnomelj z dne 23/10-19 št. 10833 [~]",
+      "priest": "Gregor Cerar, župnik [~]",
+      "anomalies": [
+        "★★★ INTRA-FAMILIJA: nevesta Marija Pezdirc (Krasinec 28) = SESTRA ženina №26 (Peter Pezdirc — isti starša Peter × Marija roj. Pezdirc!) + Griblje 61 + anotacija 1975/76: 'Zakonec Požek Peter umrl z dne 18.6.1975 v Gribljah' (Matičar Kajdič?)"
+      ]
+    },
+    {
+      "row": 34,
+      "date": "1919 10. november",
+      "scan": 173,
+      "page": 172,
+      "groom": "Matija Kralj, GRIBLJE 26., povestniška sin, r.k., 4/11 1894, 25 let ✓",
+      "bride": "Ana Brinec, GRIBLJE 24., povestnika hči, r.k., 19/4 1895 [faza-1 '19/9 1893' ZAVRŽENO — aritmetika 24 zahteva 1895!], 24 let ✓",
+      "groomParents": "Nikolaj Kralj (†), povestnik × Katarina roj. Jakofčič —",
+      "brideParents": "Matija Brinec (†), povestnik × Barbara roj. Jakofčič —",
+      "witnesses": "Jurij Štravs, SVIHTAR (sakristan!) + Nikolaj Milek, sameški fant [~]",
+      "witnessStatus": "svihtar-priča (2. pojav poklica!) + Milek (cf. №11 mati roj. Milek + №13 Milek!)",
+      "urkunden": "ženitno dovoljenje ženij(?) okrajno glas. Črnomelj z dne 4/11-19 št. 11038 [~]",
+      "priest": "Gregor Cerar, župnik [~]",
+      "anomalies": [
+        "★★ INTRA-GRIBLJE h26 × h24 + obe matere JAKOFČIČ + priča SVIHTAR"
+      ]
+    },
+    {
+      "row": 35,
+      "date": "1919 17. november",
+      "scan": 174,
+      "page": 173,
+      "groom": "Matija Jurajevič [~ — cf. №29 Juragec + №11 priča Jurajevič!], Krasinec 5., povestnika sin, r.k., 11/8 1894, 25 let ✓",
+      "bride": "Barbara Jaklič, GRIBLJE 15., povestnika hči, r.k., 14/9 1897, 22 let ✓",
+      "groomParents": "Nikolaj Juragevič [~], povestnik × Katarina roj. Klepec —",
+      "brideParents": "Janez Jaklič, povestnik × Marija roj. Brinec (†) —",
+      "witnesses": "Matija Jaklič, povestnik + Matija Berkoper [~], povestnik",
+      "witnessStatus": "Jaklič-familija (oče brat?)",
+      "urkunden": "ženitno dovoljenje okr. glav. Črnomelj 6/11-19 št. 11259 [~]",
+      "priest": "Gregor Cerar, župnik [~]",
+      "anomalies": [
+        "NEVESTA IZ GRIBLJE 15 (h15 = 1917 №3 poročna hiša!) + Juragec/Jurajevič 2× v letu"
+      ]
+    },
+    {
+      "row": 36,
+      "date": "1919 17. november",
+      "scan": 174,
+      "page": 173,
+      "groom": "Anton KRIŽAN, Krasinec 44., povestniški sin, r.k., 31/3 1894, 25 let ✓",
+      "bride": "Marija Jakofčič, Krasinec 43., povestniška hči, r.k., 28/12 1899, 19 let ✓ — NEDOLETNA!",
+      "groomParents": "Nikolaj Križan, povestnik × Ana roj. Jaklčevič [~] —",
+      "brideParents": "Jurij Jakofčič (†), povestnik × Marija roj. Klepec —",
+      "witnesses": "Jakob Bohte [~ Bolte?], povestnik + Janez Tome, povestnik",
+      "witnessStatus": "Bohte — nov priimek linije?",
+      "urkunden": "ženitno dovoljenje obr. glav. Črnomelj 11/11-19 št. 11413 [~]; proglasitev polnoletnosti neveste si natalo(?) po glavarstvu pred porajanjem(?) [~]; odločni list, župni urad [~]",
+      "priest": "Gregor Cerar, župnik [~]",
+      "anomalies": [
+        "★★ ŽENIN = KRIŽAN (korpus-top mreža ×160!) + 'PROGLASITEV POLNOLETNOSTI' neveste (19 → polnoletnost razglašena!)"
+      ]
+    },
+    {
+      "row": 37,
+      "date": "1919 24. november",
+      "scan": 174,
+      "page": 173,
+      "groom": "Jožef Makarovič [~ Makavnič?], Snežnik-Sudol 1, župnija Stari trg pri Ložu [TUJA ŽUPLNIJA — daleč!], uslužbenec na parni žagi, r.k., roj. po referenci 'v Sv. Gori pri Gorici(?)' [~], 8/3 1885, 34 let ✓",
+      "bride": "Olga Rovnik, Lemelj 41., gostilničarka hči, r.k., 29/12 1895 [~], 24 let [~ 23,9 → 24]",
+      "groomParents": "Jožef Makarovič (†), gostilničar(?) × Karolina roj. Kofol —",
+      "brideParents": "Valentin Rovnik, gostilničar, BEGENEC × Antonija roj. Kancier [~ Kandler?] —",
+      "witnesses": "Miklo Jaklič, SVIHTAR (sakristan) + Jožef Mališič, povestnik",
+      "witnessStatus": "svihtar (3. pojav poklica!) + Mališič",
+      "urkunden": "6+ postavk: 2) spregled oklica, št. župn. Črnomelj 14/9-19 št. 2559 [~]; 3) izto, okrajno glav. Črnomelj 15/10-19 št. 11991 [~]; 4) spregled samežnja(?) krsta ob deželi oblasti v župljani, 16-19 št. 5562 [~]; 5) spregled snarstva(?) državna oblast v župljani 11/11-19 št. 13594 [~]; 6) izto, šolski(?) obližari(?) v Ljubljani [~]",
+      "priest": "Gregor Čar/Cerar, župnik [~]",
+      "anomalies": [
+        "★★ ženin iz SNEŽNIKA (Stari trg pri Ložu — najbolj oddaljena župnija 1919!) + PARNA ŽAGA (industrija!) + oče neveste BEGENEC"
+      ]
+    },
+    {
+      "row": 38,
+      "date": "1919 24. november",
+      "scan": 174,
+      "page": 173,
+      "groom": "Nikolaj Jaklič, Brest 47., povestniška sin, r.k., 22/6 1894, 25 let ✓",
+      "bride": "Ana Zupanič, Krasinec 29., povestniška hči, r.k., 25/1 1900, 19 let ✓ — NEDOLETNA!",
+      "groomParents": "Matija Jaklič, povestnik × Marija roj. Kambič —",
+      "brideParents": "Janez Zupanič, povestnik × Ana roj. Kambič (†) —",
+      "witnesses": "Peter PEZDIRC, povestnik + Miklo Tasič, povestnik",
+      "witnessStatus": "PEZDIRC-priča (Peter — 3. Peter? cf. №21/№26!) + Tasič (cf. №2!)",
+      "urkunden": "1) ženitno dovoljenje okr. glav. Črnomelj 14/11-19 št. 11414 [~]; 2) sameški list ženina, župni urad Sodramec(?) 24/10-19 št. 440 [~]; 3) izto št. 244 [~]; 4) spregled snodatka(?), dež. vlade župljani 14/11-19 št. 1025 [~]; 5) izto, šolski(?) obdružatelj(?) v Ljubljani 25/10-19 št. 5709 [~]",
+      "priest": "Gregor Cerar, župnik [~]",
+      "anomalies": [
+        "obe matere KAMBIČ! + nedoletna nevesta (19)"
+      ]
+    },
+    {
+      "row": 39,
+      "date": "1919 29. november [sobota!]",
+      "scan": 175,
+      "page": 174,
+      "groom": "Jožef Grebnič [~], sedež Ština(?) [~ 43?], Solkan 230(?) [~], mixar/mizar, r.k., 30/12 1881 [~], 38 let [~ 37,9 → 38]",
+      "bride": "Petrima(?) [~ Perina/Petrunija?] Marija Rovnik, Lemelj 41, gostilničarka hči, r.k., 28/1 1892, 27 let ✓",
+      "groomParents": "Jožef Grebnič, povestnik × Terezija roj. Šuligg [~ Šuligoj?] — r.kat.",
+      "brideParents": "Valentin Rovnik, gostilničar, BEGENEC × Antonija roj. Kancier — ISTA STARŠA KOT №37!",
+      "witnesses": "Miklo Jaklič, svihtar + Jožef Mališič, povestnik — ISTA KOT №37!",
+      "witnessStatus": "identične priče z №37",
+      "urkunden": "1) odločni list, župni urad Ština 29/9-19 št. 455 [~]; 2) spregled oklica, škof. ord. župljana 19/9 št. 616 [~]; 3) spregled oklica, obr. glas. Črnomelj 16/9-19 št. 11991 [~ — ISTA št. kot №37-3!]; 4) dva sameška lista ženini, urad Solkan 8/5-19 št. 26 in 28 [~]",
+      "priest": "[~ 'Jožef Grebnič(?) pff. bozor' per deleg. — podpis dvomljiv!]",
+      "anomalies": [
+        "★★★ SESTRSKI DVOJNI POROČNI DAN: Rovnik-sistri Lemelj 41 (Olga №37 24.11. + Petrima-Marija №39 29.11. — 5 dni!) + ISTI priči + ženin iz Solkana (sedež = žel./žaga?) + EDINA SOBOTA 1919!"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "row": "meja",
+      "scan": 175,
+      "note": "veliki marker »19« (leva stran) / »20« (desna stran) na s175-sredini (y≈510–700) = MEJA 1919/1920 — brez letne glave 'Leto 1920' (samo cifri!): 7. marker-tehnika linije (cf. 1888, 1897, 1909 'Leto' glave)"
+    },
+    {
+      "row": "1920-№1",
+      "scan": 175,
+      "note": "19.1.1920 Janez Krugel, Dobravce 9 × Marija Miklavc, Kringglni?(?) 50 — P149-lead"
+    },
+    {
+      "row": "1920-№2",
+      "scan": 175,
+      "note": "19.1.1920 Jožef Škala, kolar, Podremf(?) 5 × Ana Berkoper, Lemelj 41 — P149-lead"
+    },
+    {
+      "row": "1920-№3",
+      "scan": 175,
+      "note": "19.1.1920 Martin Berkoper, Lemelj 41 × Julijana Škala, Podremf(?) 5, kotarska hči — P149-lead (2. intra-hiša Rovnik-gostilna!)"
+    },
+    {
+      "row": "1920-№4",
+      "scan": 175,
+      "note": "19.1.1920 Anton Gregorič, Podremf(?) 9 × Marija Harasimič(?), Lemelj 23 — P149-lead"
+    }
+  ],
+  "stats": {
+    "entries": 40,
+    "numberedEntries": 39,
+    "unnumberedEntries": 1,
+    "bothSides": 40,
+    "gribljeMarriages": 10,
+    "gribljeRows": [
+      3,
+      6,
+      13,
+      18,
+      20,
+      21,
+      27,
+      33,
+      34,
+      35
+    ],
+    "gribljeHouses": [
+      "22[~]",
+      "77",
+      "87",
+      "12",
+      "30",
+      "2",
+      "58",
+      "41",
+      "64[~]",
+      "20",
+      "13",
+      "48",
+      "61",
+      "26",
+      "24",
+      "15"
+    ],
+    "gribljeBlocks": 10,
+    "sameVillageCount": 6,
+    "sameVillageRows": [
+      6,
+      13,
+      18,
+      20,
+      21,
+      34
+    ],
+    "sameHouseCount": 3,
+    "sameHouseRows": [
+      10,
+      11,
+      4
+    ],
+    "sameHouseNote": "INTRA-HIŠE: №4 Gradac 4×4 (ženin prehodno!) · №10 Primostek 15×15 · №11 Lemelj 22×22 = REKORD LINIJE (3!; prej: max 1)",
+    "mondays": 33,
+    "sundays": 6,
+    "saturdays": 1,
+    "weekendPct": "7/40 = 17.5% (33 pon + 6 ned + 1 sob — PONEDELJKOVA LINIJA 82.5%!)",
+    "sameDayRecord": "10. 2. 1919 (ponedeljek): 5 vpisov (№7–№11) = NOV REKORD LINIJE (po 1893: 7 ne? — 4×18.2.1917 = 2.); 24. 2. = 3 vpisi (№12, №13, bez-št.); 26. 5. = 3 (№19–№21); 17. 11. = 2; 24. 11. = 2; 21. 7. = 2; 2. 3. = 2; 3. 2. = 2",
+    "siblingSameDay": "2: №7+№8 (brat+sestra Mališič, Otok 13!) + №37+№39 (sistri Rovnik, Lemelj 41 — 5 dni)",
+    "lentGap": "postna vrzel: 2.3. → 28.4. = 57 dni (VELIKONOČJE 20.4.1919 — 1. postna vrzel od 1914!)",
+    "warGap": "POVojni REKORD: 40 vpisov = največje leto linije (1886–1919; prej 1912: 17!) — povojni poročni boom ×2,35!",
+    "widowGrooms": 0,
+    "widowBrides": 2,
+    "minorGrooms": 2,
+    "minorBrides": 9,
+    "vitalsTotal": 698,
+    "blocks04455": 181,
+    "sidraTotal": 174,
+    "p80Houses": 75,
+    "unnumbered": 1,
+    "yearHeading": "»Leto 1919.« ročno VELIKO na s165-vrh (7. zaporedna!) + meja »19«/»20« veliki marker s175-sredina",
+    "bookExtension": "poročna knjiga 04455 do 1922 → P149 = 1920 (s175-dno + s176+), P150 = 1921, P151 = 1922 (konec knjige!)",
+    "newHouses": [
+      "2",
+      "12",
+      "77"
+    ],
+    "newHousesNote": "3 NOVE hiše v 04455: h2 (1. poročni dokaz najnižje aktivne številke!) · h12 (1. poročni dokaz!) · h77 (1. poročni dokaz!) — h15/20/22/26/41/48/61/87 že v 04455"
+  },
+  "crossChecks": [
+    "№6 ženin Jurij Požek h77 — Požek-mreža: №33 ženin Peter Požek h61 + №3 priča Miklo Požek = 3 Požek-vpisi 1919!",
+    "PEZDIRC-MREŽA 1919 (glavna novela!): №6 nevesta Marija (Griblje 87) · №10 mati ženina Katarina + priča Jožef · №13 mati neveste + priča Marko · №17 mati neveste (†) · №18 mati neveste (†) + priča Matija · №20 priča Matija · №21 ženin Peter (Griblje 20!) + mati neveste + OBA priča (Matija ×2 + Jure) · №23 nevesta Karolina (Krasinec 2) + oče sv. Jurij · №24 ženin Matija × nevesta Katarina (Otok 4 × 1!) + priča Matija · №26 ženin Peter + starši Peter × Marija-roj.-Pezdirc + priča Jurij · №27 priča Peter · №33 nevesta Marija + starši Peter × Marija-roj.-Pezdirc · №35 priča Peter · №38 priča Peter = 25 PEZDIRC-OMENB v 40 vpisih!",
+    "№26+№33: SESTRA-MARIJA (r. 12.11.1896) + BRAT-PETER (r. 8.9.1891), Krasinec 28, starši Peter Pezdirc × Marija roj. Pezdirc — oba poročena v 1919 (11.8. + 3.11.)!",
+    "№7+№8: brat+sestra Mališič Otok 13 (starši Janez × Marija roj. Palčič) — oba 10.2.1919, ISTI priči (Jožef Križan + Marija Filak)",
+    "№37+№39: sistri Rovnik Lemelj 41 (starši Valentin begunec × Antonija roj. Kancier) — 24.11. + 29.11., ISTI priči (Miklo Jaklič-svihtar + Jožef Mališič)",
+    "№3+№32: brata Klepec (oče Nikolaj/Miklo Klepec ŽUPAN × Katarina Segina; Janez 19.9.1894 Krasinec 36 + Anton 24.10.1896 Krasinec 26)",
+    "№18+№27: HLEBEC — №18 ženin Nikolaj (Griblje 2) + №27 mati neveste roj. Hlebec 'umrla kot Pezdirc?'",
+    "duhovniki 1919: Gregor Cerar (župnik — dominantni, ~20 vpisov!) · Valerian Urban (dekan — 10.2. blok №7–№11!) · kaplan (№27, №31) · Miklavčič (№3) · nejasni (№1, №4, №6) = 5+ duhovnikov / 40 vpisov",
+    "svihtar (sakristan) poklic ×3 (№23 oče Jurij Pezdirc + №34 priča Jurij Štravs + №37/№39 priča Miklo Jaklič) = NOV poklic-vzorec linije",
+    "begunci ×3 (№7 oče goriški + №37/№39 oče Valentin Rovnik) + emigrant (№11 oče Starasinič v Ameriki) + 1. ameriška sled poročne linije ŽENA (№2 dovoljenje Narodne vlade)",
+    "juridni sistemi v tranziciji: k.u.k. okrajno glavarstvo Črnomelj + NARODNA VLADE (Ljubljana!) + okrajna sodišča (Metlika/Črnomelj) + deželna vlada za Slovenijo = SHS-tranzicija 1919 (5 institucij)",
+    "hiše Griblje: h2, h12, h13, h15, h20, h22[~], h24, h26, h30, h41, h48, h58, h61, h64[~], h77, h87 = 16 Griblje-številk 1919 (od 72 p80!) — REKORD pokritosti",
+    "P80-KUMULATIV: hiše 72 → 75 (+3 NOVE v 04455: h2 · h12 · h77!); 13 kontinuitet (h15/20/22/26/41/48/61/87 že poročno zasidrane)"
+  ],
+  "anomalies": [
+    "★★★ REKORD LINIJE: 40 vpisov (prej 1912: 17 — ×2,35!) = povojni poročni boom 1919",
+    "★★★ 10 GRIBLJE-VPISOV (prej rekord po letih ~5?) — 25% leta! INTRA-GRIBLJE ×6 (№6, №13, №18, №20, №21, №34) + INTRA-HIŠE ×3 (№4, №10, №11 — REKORD)",
+    "★★★ VPIS BREZ ŠTEVILKE (Boren, 24.2., med №13 in №14 — levi rob PRAZEN) = 1. taki primer linije 1886–1919",
+    "★★ MEJA 1919/1920 = veliki cifri »19«/»20« na s175 (brez 'Leto' glave — 7. marker-tehnika)",
+    "★★ PEZDIRC-DELAŽA: 25 omenb v 40 vpisih (vključno intra-priimek №24 + intra-starši №26/№33) — največja priimška koncentracija enega leta linije",
+    "★★ 2 VDOVI PO WWI-VOJAKIH (№13 Kambič — sodno potrdilo o smrti 14.2.1919 + №15 Hosteler-LAJTNANT — potrdilo 1918) = vojna žrtev-dokumentacija",
+    "★★ DVOJNI POROČNI DANI FAMILIJ: brat+sestra Mališič Otok 13 (10.2.) + sistri Rovnik Lemelj 41 (24.+29.11.) + brata Klepec (27.1.+20.10.) + sestra+brat Pezdirc Krasinec 28 (11.8.+3.11.)",
+    "★ 5 VPISOV NA ISTI DAN 10.2.1919 (№7–№11) = REKORD LINIJE po 1893 (7?) — vsi ponedeljki!",
+    "★ 33/40 PONEDELJKOV (82.5%) = 3. popolnoma ponedeljkovo leto linije (po 1904? 1906? 1907? — cf. P136 '12/12 ponedeljkov')",
+    "★ 1 SOBOTA (№39 29.11.) = 2. sobota linije? (verif)",
+    "★ POSTNA VRZEL nazaj: 2.3. → 28.4. (57 dni — Veliko noč 20.4.1919) = 1. postna vrzel od 1914 (vojne leta brez!)",
+    "★ SHS-TRANZICIJA: dovoljenja NARODNE VLADE (Ljubljana) + deželna vlada za Slovenijo poleg k.u.k. okrajnih glavarjev = pravni dualizem 1919",
+    "★ ŽANDAR-ŽENIN (№25 orožniški podstražmojster) + POŠTAR-priča (№14 Friderik Schmidt) + PARNA ŽAGA-uslužbenec (№37) = novi poklici linije",
+    "★ 3 'SVIHTAR' (sakristan) = cerkveni servis v poročnih podatkih (1. sistematični pojav)",
+    "★ 2 BEGENCA-očeta (goriški №7 + Rovnik №37/№39) + 1 delavec v Ameriki (№11) = povojna mobilnost",
+    "★ 9 nedoletnih nevest (18–23 let) + 2 nedoletna ženina (21) = 27.5% leta zahteva starševsko/sodno dovoljenje (večina šele 24!)",
+    "★ 'PROGLASITEV POLNOLETNOSTI' (№36) = posebna sodna procedura za 19-letno nevesto (1. v liniji!)",
+    "★ KASNEJŠE ANOTACIJE: №19 (1978: 'Zakonec Gregorič Marija' — MM Podzemelj) + №20 (1975: 'Husič Anton umrl 29.4.1975 v Gribljah št. 90') + №33 (1975/76: 'Požek Peter umrl 18.6.1975 v Gribljah') + №3 (1980: modra svinčnica o Klepcu) = 4 anotacije 1975–1980 (matičar-forenzika!)",
+    "★ 2 SAMOKOREKCIJE pisarja: №15 prečrtan poskus bivališča + №28 mesec avg→sept prečrtan/popravljen",
+    "★ ITALIJANSKA SLED: №31 babica? ne — mati ženina 'Ana roj. Guaglia/Quaglia' [~] (redka ne-slovenska familija)",
+    "★ hiša 90 v Gribljah (anotacija №20 1975) = številka IZVEN vzorca do zdaj",
+    "★ ženin №22 z rojstvom-po-referenci iz tuje župnije ('Gohrid št. 7, župn. Sv. Juršad' [~]) + №37 ('v Sv. Gori pri Gorici' [~]) = 2 referenčna rojstva"
+  ],
+  "honesty": [
+    "№1 ženin roj. '30/5 1891' [~ — aritmetika 25 let zahteva 1893; zapis dvomljiv '1891/1893' — VERIF krstni list]",
+    "№3 nevesta bivališče 'Griblje 22' [~ — zoom potrjuje 'lje 22'; faza-1 'Apilše 42' ZAVRŽENO; VERIF zemljevid hiš]",
+    "№6 nevesta starost '27 let' [~ — aritmetika 4.12.1892→3.2.1919 = 26,17 → 26; zapis morda 26/27]",
+    "№13 hiši: ženin 'Griblje 12' + nevesta 'Griblje 30' [~ — zoomi potrjujeta '12' in hišni stolpec '30.'; faza-1 '42' + '50' ZAVRŽENA]",
+    "№13+№15 poklic 'živžar' [~ — 2× enak zapis; pomen NEJASEN (morda dialekt 'živeljar' = najemnik?) — VERIF dialektologija]",
+    "bez-št. Boren: bivališče 'Kranska/Stranska/Grauska vas 4' [~ — začetnica dvomljiva; oče 'Peter Grdin(a) + var?' [~]]",
+    "№14 ženin roj. '2/1 1890' + 28 let [~ — aritmetika zahteva 1891!; priimek Lašič/Lasič [~]; nevesta 'Mikluž' [~ Mikelič/Mihelič]; hiši 'Gradac 1 × 1' [~ — nevesta morda 4]",
+    "№15 nevesta ime 'Vera' + pokojnik 'Jožef Hosteler, lajtnant' [~] + bivališče 'Drašiči bg.' [~ — prečrtan poskus]",
+    "№16 hiši 'Gradac 34' [~31?] + 'Klošter 83' [~88?] + starost ženina 30 [~31]",
+    "№18 priimek 'Hlebec' [~ Kleber/Klepec — 'lebec' jasno; nevesta roj. 19/9 [~24/9] 1893]",
+    "№19+№23+№24 župnija 'Podremf/Sodremf/Podremec' [~ — 3 zapisi ene župnije; branje P/S dvom]",
+    "№20 priimek 'Klusič' [~ Hlusič (oče) / Husič (anotacija 1975!) — 3 variante] + nevesta hiša 'Griblje 64' [~65]",
+    "№22 nevesta roj. 16/9 1892/1893 [~ — aritmetika 26 let → 1892; zapis 1893] + rojstvo-referenca 'Gohrid/Sv. Juršad' [~]",
+    "№25 nevesta 'vdova Mlin Sum(?)' [~ Mlinšum/Mlinšek?] + ženin poklic 'orožniški podstražmojster' [~]",
+    "№27 ženin priimek 'Gustavin' [~ Šustavin?] + bivališče 'Šmilovje/Sutloga 31' [~] + nevesta roj. 26/10 1898 + 19 let [~ aritmetika 20!] + mati 'Katarina roj. Hlebec, umrla kot Pezdirc' [~ branje 'umor. Pezdirc']",
+    "№28 ženin '11/5 1872, 44 let' [~ 1892, 27 — VELIK dvom; hiša Dobravce 27/18 [~]; mesec avg→sept popravljen]",
+    "№29 priimek 'Juragec' [~ Jurgovič] + poklic 'krojaški pomočnik' [~] + nevesta status (Novak roj. Jakša — vdova?)",
+    "№30 bivališče 'Spodnja Vranca 26' [~] + tuja župnija ime [~]",
+    "№31 ženin priimek 'PEZDIRC' (zoom jasno! — faza-1 'Kovarič' ZAVRŽENO) + nevesta roj. 11/11 1894 [~14/9 1895] + hiši 'Gradarče 6 × 31' [~]",
+    "№35 'Jurajevič' [~] + priča 'Berkoper' [~]",
+    "№37 ženin 'Makarovič' [~ Makavnič] + rojstvo-referenca 'Sv. Gora pri Gorici' [~] + nevesta roj. 29/12 1895 [~]",
+    "№39 nevesta ime 'Petrima' [~ Perina/Petrunija] + bivališče 'sedež Ština 43, Solkan 230' [~] + ženin roj. 30/12 1881 [~] + podpis duhovnika dvomljiv",
+    "Refusen-besedila: številne številke/datumi [~] — najslabše berljivi bloki (svinčnik + Kurrent); vsi uradni kvantifikatorji (št./datum) so orientacijski",
+    "METODA: 2× full-page agent-oči (s165–s175, 11 strani!) + 40× full-row VLM L+R + 15 zoom-forenzika (hiše ×4, priimki ×2, rojstva ×3, meja ×1, refuzen-dna ×3, anotacije ×2) + kalendarska kontrola 40/40 + aritmetična kontrola (30 čistih + 10 zaokrožitev + 5 dvomov!) + korpus-forenzika ×12"
+  ]
+}
