@@ -112,9 +112,9 @@ def main():
 
     # ---------- I6: qa-parish.ts pini ----------
     qa = open(QA_TS, encoding="utf-8").read()
-    n710 = qa.count("HOUSE_VITALS.length !== 711")
+    n710 = qa.count("HOUSE_VITALS.length !== 714")
     check("I6a vitals pini 711", n710 >= 64, str(n710))
-    n193 = qa.count(".length !== 194")
+    n193 = qa.count(".length !== 197")
     check("I6b bloki pini 194", n193 >= 35, str(n193))
     check("I6c 1921-filter sidra (h.year === 1921).length !== 9",
           "h.year === 1921).length !== 9" in qa, "")
@@ -135,7 +135,7 @@ def main():
     # ---------- I8: kumulativ 710/193/186/77 ----------
     check("I8a stats entries 31", st.get("entries") == EXPECTED_ENTRIES, str(st.get("entries")))
     p80 = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
-    check("I8b p80 vitals pin 710", "len(vitals) == 711" in p80, "")
+    check("I8b p80 vitals pin 710", "len(vitals) == 714" in p80, "")
     check("I8c p80 houses pin 78 (skriptin filter VES 1897 = +h45!)", "len(houses) == 78" in p80, "")
 
     # ---------- I9: parish.ts P150-bloki ----------
@@ -148,7 +148,7 @@ def main():
     # ---------- I10: README + notes ----------
     rd = open(README, encoding="utf-8").read()
     check("I10a README po P150", "po P150" in rd, "")
-    check("I10b README 711/194", "711" in rd and "194" in rd, "")
+    check("I10b README 714/197", "714" in rd and "197" in rd, "")
     nt = open(NOTES, encoding="utf-8").read()
     check("I10c notes P150 obstajajo", "P150" in nt and "1921" in nt, "")
 
@@ -166,7 +166,7 @@ def main():
 
     # ---------- I12: veriga — starejše skripte sanirane ----------
     p115 = open("scripts/p115_parish_marriage_1886.py", encoding="utf-8").read()
-    check("I12a p115 anchors 186 + 1921×8", "len(anchors) == 187" in p115 and '["1921"] * 9' in p115, "")
+    check("I12a p115 anchors 190 + 1922×3 (P151-kaskada!)", "len(anchors) == 190" in p115 and '["1922"] * 3' in p115, "")
     p138 = open("scripts/p138_parish_marriage_1909.py", encoding="utf-8").read()
     check("I12b p138 I6g h46-1920 sanirana (P149-zamuda!)",
           "v.year === 1912 || v.year === 1920))" in p138, "")

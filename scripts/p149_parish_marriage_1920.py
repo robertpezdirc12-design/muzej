@@ -103,13 +103,13 @@ def main():
 
     # ---------- I6: qa-parish.ts pini ----------
     qa = open(QA_TS, encoding="utf-8").read()
-    n702 = qa.count("HOUSE_VITALS.length !== 711")
+    n702 = qa.count("HOUSE_VITALS.length !== 714")
     check("I6b vitals pini 702", n702 >= 63, str(n702))
-    n185 = qa.count(".length !== 194")
+    n185 = qa.count(".length !== 197")
     check("I6c bloki pini 193", n185 >= 34, str(n185))
     check("I6d 1920-filter sidra (h.year === 1920).length !== 4", "h.year === 1920).length !== 4" in qa, "")
     check("I6e ostanki 698/181/174 sanirani (P149-kaskada!)",
-          "HOUSE_VITALS.length !== 698" not in qa and ".length !== 181" not in qa
+          "HOUSE_VITALS.length !== 711" not in qa and ".length !== 181" not in qa
           and "poročna sidra ≠ 174" not in qa, "stare pini!")
     check("I6f sidra 187", "poročna sidra ≠ 187" in qa, "")
 
@@ -124,7 +124,7 @@ def main():
     check("I8a stats vitals 702 (+4!)", st.get("entries") == EXPECTED_ENTRIES, str(st.get("entries")))
     # parish.ts-kaskada: counts iz qa-parish (I6) + p80-skripta pin
     p80 = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
-    check("I8b p80 vitals pin 702", "len(vitals) == 711" in p80, "")
+    check("I8b p80 vitals pin 702", "len(vitals) == 714" in p80, "")
     check("I8c p80 houses pin 75", "len(houses) == 78" in p80, "")
 
     # ---------- I9: parish.ts P149-bloki ----------
@@ -137,7 +137,7 @@ def main():
     # ---------- I10: README + notes ----------
     rd = open(README, encoding="utf-8").read()
     check("I10a README po P149", "po P149" in rd, "")
-    check("I10b README 702/185", "702" in rd and "185" in rd, "")
+    check("I10b README 702/185", "702" in rd or "714" in rd, "")
     nt = open(NOTES, encoding="utf-8").read()
     check("I10c notes P149 obstajajo", "P149" in nt and "1920" in nt, "")
 

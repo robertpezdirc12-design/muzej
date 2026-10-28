@@ -6293,3 +6293,33 @@ Stage Summary:
 - verifikacija: p150 --check --live 57/57 PASS · runQA 151/151 ok:True · tsc 0 · lint 0 · veriga p115–p149 (p115 45/45 · p137–p148 100 %!)
 - korpus po P150: 711 vitals · 194 blokov 04455 · 187 sidra · 77 hiš · PT 13; QA 151/151
 - NASLEDNJE: **P151 = leto 1922 = KONEC KNJIGE 04455!** (s188 glava »1922.« №1–5 + s189 №6–9 [Berkovec-SESTRA ISTI DAN — TROJICA!] + s190 №10–13 [Jurij Jakofčič 67 LET! · MALA PAKA (Hrv.?) podstotnik + NOVI duhovnik Jusan? · 27.8. = ZADNJI VPIS!] + s191 tipovan list 1911 + s192 naslovnica)
+
+---
+
+## P151 — poročna knjiga 04455, leto 1922 = ZAKLJUČEK KNJIGE (s188–s190 == Pag. 186–188 + s191 prilepljen list + s192 naslovnica)
+
+Datum: 28. 10. 2026 · 37. leto poročne linije (P115 = 1886 → … → P151 = 1922 = KONEC!)
+
+Stage Summary:
+- 1922 = 13 vpisov (11 oštevilčenih №1–11 + **2 NEŠTEVILČENA = 3. + 4. v liniji** — 9.2. + Mala Paka; skupaj 4: Boren 1919 · Vode 1920 · + ta dva!); P151-lead KOREKCIJE ×16 (največja sprava do zdaj!)
+- ★★★ SIBLING-SWAP #2 = 2. v LINIJI (№4+№5 — isti dan 20.2. + isti priči Peter Kralj + Matija Lapner + ISTA starša obeh strani Berkovec↔Brodarič!)
+- ★★★ 1. FRANCISKAN + 1. 'per delegationem' + 1. O.F.M. duhovnik (P. Edvard Raustelar O.F.M. Brežje — Mala Paka!) = 3. duhovnik-prehod
+- ★★★ 16 NOVIH PRIIMKOV = REKORD LINIJE (Melovec · Lozanski · Benčič · Šuštarič · Jurejevič · Lapner · Rakar · Sopčič · Zrimšek · Miljavac · Vresler · Jug · Lehlič? · Grnič · Vidmar · Raustelar!)
+- ★★ 2. HRVAŠKA (Mala Paka 19 župn. Lipnik-Hrv. + Podževec? — 1. ženin-iz-Hrv.!); ★★ ZADNJI VPIS 27.8.1922 + naslovnica 'P 1873–1922' = LINIJA 1886–1922 KOMPLETNA (37 let!)
+- ★★ NAJSTAREJŠI ŽENIN 67 LET (№10 Jurij Jakofčič-SENIOR — korpus-botra 1910 + sin-junior 1879!) + H-dvom 1866/67-razlika-11
+- ★★ INTRA-GRIBLJE h23×h68 (Brinec × Milek/Mlak-M-zmeda!) + h17-KRALJ 3. dokaz + h48 2. dokaz + MLADOLETNOST-VAL ≥6/13 (16-letnici ×2!) + 2 VDOVI + 5-LISTIN №8
+- ★ BERKOVEC-TROJICA zaključena + SEGINA ×2 + TESAR ×2 + BRODARIČ ×3 + ŽUPANIČ ×3 + 5 NEZNANIH VAS [~] + svinčne anotacije ×2 + novi poklici (cerkvenik!)
+- korpus po P151: 714 vitals · 197 blokov 04455 · 190 sidra · 77 hiš (0 novih!) · QA 152/152
+- NASLEDNJE: **P152 = sinteza 37-letne linije ALI nova knjiga** — odločitev uporabnika!
+
+Work Log:
+- diagnoza: s188–s192 že prenešeni (P150 11/11!); 2× full-page agent-oči (s188/s189/s190) + 26× row-panel L+R (recept P150-rows2) + **40+ zoom-forenzika (3–8×)** + 2× margin-strip (neštevilčeni-forenzika!)
+- ★ margin-stripi: 9.2.-vrstica + Mala Paka-vrstica = LEVI ROB PRAZEN ×2 → 3. + 4. NEŠTEVILČENI VPISI LINIJE (skupaj 4!)
+- ★★★ SIBLING-SWAP #2 forenzika: №4-R + №5-L/R zoomi — ISTA starša (Berkovec: Matija × Bara Tomc | Brodarič: Janez × Katarina Urh — faza-1 'Barbare roj. Mlak' POPRAVLJEN!) + ISTI priči (Peter Kralj + Matija Lapner!)
+- ★ zoom-forenzika 40+: Griblje 69→**68** (m1b!) · '23 let'→**28** (m1c!) · '15 let'→**25** (m9b!) · Krasinec '4'→**7** (m7!) · '10.2.1895'→**10.7.1885+36** (aritmetika ✓!) · 'Zupan/tajarski'→**Segina/tesarski pomočnik** (m4!) · '1860'→**1866** (m16b — H-dvom 67!) · 'Nemig frenk'→**R. Remigi Jereb** (r4R!) · 'P. Seligman Jusan'→**P. Edvard Raustelar O.F.M. Brežje, per delegationem** (paka-podpis!) · 'Bojinje'→**BOGINJA VAS** · 'Grmovšek'→**PRIMOSTEK 11** · 'Prilozje 3'→**31** · glava **'1922.'** (9. zaporedna!) · naslovnica **'P 1873–1922'**!
+- korpus-forenzika ×17: h17=KRALJ (1892-Johann-48 + 1909-Maria-27 → 1922-Jurij-36 ✓!) · h23=BRINEC (1887/1888 → Marko-28 = sin-Mathias? ✓!) · h68=MLAK/MILEK-M-zmeda (1914-MLAKOVA!) · JAKOFČIČ-senior/junior (1910-botra + 1919-h6!) · BERKOVEC-korpus (1896-'Lomelj 14'!) + 16 novih priimkov-grep (Melovec/Lozanski/Benčič/Šuštarič/Jurejevič/Lapner/Rakar/Sopčič/Zrimšek/Miljavac/Vresler/Jug/Tehlič/Grnič/Vidmar/Raustelar = 0-pojavi!)
+- kalendarna 13/13 ✓ (8 PON 61,5 % + 4 NED + 1 ČET) + aritmetika (9 čistih + 4 zaokrožitve 'v XX. letu' + 2 NEZAPISANI starosti + H-dvom №10!)
+- evidence JSON (13 + 17 cc + 18 anom + honesty 23) + notes (54 vrstic) + 3 NOVIH BLOKOV parish.ts (h17 · h23×h68-INTRA · h48) + qa-p151 (152. kontrola) + skripta p151 (I1–I12 + --live 54/54!)
+- PIN-KASKADA: vitals 711 → 714 [×65] · bloki 04455 194 → 197 [×36] · sidra 187 → 190 [×1] + p115-anchors 190 + ["1922"]×3 + p115-BLOCKS_04455 197 + p80-vitals-pin 714 + p149/p150-README-pini + p150-I12a (190+1922×3!) · ★ SANACIJA negativnih pinov (p148/p149-I6e '≠714 not in qa' → era-711/702!) · runQA-kaskada (qa-p88-h23-1922 · qa-p93-h48-1922 allow-liste!)
+- verifikacija: p151 --check --live **54/54 PASS** · runQA **152/152 ok:True** · tsc 0 · lint 0 · veriga p115–p150 (p115 45/45 · p137 68/68 · p140/p143 64/64 · p146 60/60 · p148 53/53 · p149 · p150 54/54 — VSE 100 % PASS!)
+- README: po P151 (37/37 KOMPLETNA · korpus 714/197/190/77) + P151-bullet (P150 → arhiv) + P152-lead

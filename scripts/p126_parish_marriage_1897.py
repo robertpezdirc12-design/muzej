@@ -365,7 +365,7 @@ def main() -> int:
           "hiše 1897 (04455) ≠ [8,18,27,28,29,33,39,40×2]" in qa)
     check("I9e p80 hiše 58 (+6 NOVIH 1898 — P127!)", "različnih hiš (vse tri knjige) ≠ 70" in qa)
     check("I9f PT luknja 12 (+h46/h48 — P127!)", "PT luknja ≠ 13 hiš" in qa)
-    check("I9g vitals 637 zaščita (P128)", "HOUSE_VITALS.length !== 688" in qa)
+    check("I9g vitals 637 zaščita (P128)", "HOUSE_VITALS.length !== 714" in qa)
     check("I9h Rauy 1897 bloki ×9 zaščita", "Rauy podpisi 1897 blokov ≠ 9" in qa)
     check("I9i stari 537/544/548/550/554/559/563/566/569 iztekla",
           "HOUSE_VITALS.length !== 537" not in qa and "HOUSE_VITALS.length !== 544" not in qa

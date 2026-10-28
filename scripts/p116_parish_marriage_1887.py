@@ -238,7 +238,7 @@ def main() -> int:
     check("I9b qa-p115 bloki 78", "poročni bloki (04455) ≠ 142" in qa)
     check("I9c p80 bloki 78", "poročni vpisi (04455) ≠ 158" in qa)
     # vitals 528 regresijska zaščita v qa-p116
-    check("I9d vitals 637 zaščita (P128)", "HOUSE_VITALS.length !== 688" in qa[qa.index("const p116Marr"):] if "const p116Marr" in qa else False)
+    check("I9d vitals 637 zaščita (P128)", "HOUSE_VITALS.length !== 714" in qa[qa.index("const p116Marr"):] if "const p116Marr" in qa else False)
 
     # ---------- I10: README + notes ----------
     rd = open("README.md").read()

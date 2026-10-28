@@ -1,0 +1,474 @@
+{
+ "source": {
+  "book": "Trauungsbuch 04455 — župnija Podzemelj (P 1873–1922)",
+  "url": "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04455/",
+  "scans": "s188–s190 (vpisi) + s191 (tipped-in spričevalo) + s192 (naslovnica)",
+  "downloaded": "11/11 JPEG (s182–s192, P150-nabava)",
+  "reading": "2× full-page (s188/s189/s190) + 26× row-panel L+R (2.0×) + 40+ zoom-forenzika (3–8×) + 2× margin-strip (neštevilčeni-forenzika!)"
+ },
+ "lead": "P150-LEAD: 1922 = KONEC KNJIGE 04455 (s188 glava »1922.« №1–5 + s189 №6–9 + s190 №10–13 + s191 tipovan list + s192 naslovnica; ~13 vpisov) — P151-lead KOREKCIJE/POTRDITVE ×16: 23×69→23×68 · 16-letna-№2→20-letna (11.10.1901) · 9.2-'Semič/Grm'→Jsenic? [~] 3/Gradac 23 · Kaplice 44→Kapljice 46 [~] · 'Bojinje'→BOGINJA VAS 15 · №5+№6/1922→№4+№5 · 'Prilozje 3'→31 · s190 №10–13→№9–11 (+2 neštevilčena! 12–13 NE OBSTOJITA!) · 'Čerkvišče 18'→Čerhovice? [~] 26 · 'podstotnik'→povestnik · 'P. Seligman Jusan o.f.m.?'→P. Edvard Raustelar O.F.M. Brežje 'per delegationem'! · 27.8-ZADNJI VPIS ✓ POTRJEN (№11!) · s191 rokopisan (NE tipovan) spričevalo o razglasih 3.7.1911 (Julij Bieteto × Urša Marija Štakel — župnik Jožef Rome!) · s192 naslovnica 'Podzemelj P 1873–1922' = URADNA letnica konca!",
+ "entries": [
+  {
+   "row": "1",
+   "date": "23. 1. 1922",
+   "dayOfWeek": "PONEDELJEK",
+   "scan": 188,
+   "page": 186,
+   "groom": "Jurij Kralj, povestnik-tesar ✓, 36 let, r. 10. 7. 1885 ✓, GRIBLJE 17 (Wohnort prazen — 'Griblje' pod datumom!; h17 = Kralj: 1892-№10 Johann 48 [1.] + 1909-№1 Maria 27 [2.] → 1922 Jurij [3.])",
+   "bride": "Ana Segina, povest. hči, starost NEZAPISANA (r. 22. 9. 1897 → 24), FUČKOVIČ 11. [~ neznana vas!]",
+   "groomParents": "Janez Kralj, vrtnar? [~ 'vrtlhar'] × Ana roj. Jakobovič? [~]",
+   "brideParents": "Daniel Segina, povest. × Barbora roj. Frensič? [~]",
+   "witnesses": "Miko Filak? [~ 'Fiškar'], povest. + Julij Belčič? [~], tesar? [~ 'terar']",
+   "documents": "1. metrični registri in mrtviški listi [~] 2. metrični spiski list [~]",
+   "priest": "R. Remigi Jereb, žup. m.p.",
+   "note": "SEGINA ×2 v letu (cf. №11-ženin!) + TESAR ×2 (№11 tesarski pomočnik!) + Filak-varianta (cf. №9-Flak!)"
+  },
+  {
+   "row": "2",
+   "date": "6. 2. 1922",
+   "dayOfWeek": "PONEDELJEK",
+   "scan": 188,
+   "page": 186,
+   "groom": "Marko Brine, povest. sin ✓, 28 let, r. 24. 4. 1893 ✓, GRIBLJE 23 (h23 = Brinec-družina: 1887-Maria [1.] + 1888-Mathias [2.] → 1922-Marko [3.]; Marko = sin Mathiasa-1888-ženina? [~ aritmetika ✓])",
+   "bride": "Loroteja [~] Milek, povest. hči, 20 let, r. 11. 10. 1901 ✓, GRIBLJE 68 (lead '69' → ZOOM 68!; h68 = 1914-№3/№4-MLAKOVA + 1921-№8-Mitek → [4.]; M-5-družinska zmeda Milek/Mlak!)",
+   "groomParents": "Matija Brine, povestnik × Marija roj. Lehlič [~ 'Zeblič']",
+   "brideParents": "Matija Milek, povest. × Katarina roj. Požek (cf. h21-Požek 1889!)",
+   "witnesses": "Miko Požek, povest. (nevestina-mati-priimek!) + Tomaž Lehlič, povest. (ženinova-mati-priimek!)",
+   "documents": "1. spričevalo sorodstva škof. ord. Ljubljana št. 428/22 2. ženitčno dovoljenje za nevesto od okraj. sodišča v Črnomlju št. 5877/21 (mladoletna-nevesta-vzorec!)",
+   "priest": "R. Remigi Jereb, žup. m.p.",
+   "note": "★★★ INTRA-GRIBLJE h23 × h68!"
+  },
+  {
+   "row": "unnum-9.2.",
+   "date": "9. 2. 1922",
+   "dayOfWeek": "ČETRTEK",
+   "scan": 188,
+   "page": 186,
+   "groom": "Matija Melovec? [~], kroplar, črt. pod., narednik [~ narodnik/marodnik — WWI-NCO-kandidat!], 30 let, r. 24. 2. 1891 ✓, Jsenic? [~ neznana vas!] 3.",
+   "bride": "Ludmila Piletič [~ Biletič], železni čuv.-hči, 16 let, r. 18. 8. 1905 ✓ (16-LETNICA #3 linije!), GRADAC 23 (NOVA hiša!)",
+   "groomParents": "Anton Melovec? [~], povest. × Neža roj. Horacić? [~]",
+   "brideParents": "Franc Piletič? [~], železničar × Marija roj. Malešič? [~]",
+   "witnesses": "Franc Piletič?, povest. (nevestin oče?)",
+   "documents": "4+ listin [~]: 1. sorodstveni list? 2. rojstni list? 3. ženinovo dovoljenje Komande št. okr. vojne brigade št. 66.49 [~] 4. list žel. urada z dne 1.8.1922? št. 25 [~]; za nevesto: očetovo dovoljenje (mladoletnica!)",
+   "priest": "R. Remigi Jereb, žup. m.p.",
+   "margin": "PRAZEN — 3. NEŠTEVILČENI VPIS LINIJE (po Borenu 1919 + Vode 1920)!"
+  },
+  {
+   "row": "3",
+   "date": "20. 2. 1922",
+   "dayOfWeek": "PONEDELJEK",
+   "scan": 188,
+   "page": 186,
+   "groom": "Matija Kralj, povestnik ✓, 30 let, r. 23. 1. 1892 ✓, Kapljice 46 [~ Kapljušče? — lead 'Kaplice 44' → ZOOM 46!]",
+   "bride": "Ana Brodarič, povestnikova hči, 24 let, r. 17. 6. 1897 ✓, BOGINJA VAS 15 (lead 'Bojinje' → ZOOM Boginja vas!)",
+   "groomParents": "+Jurij Kralj, povestnik × Katarina roj. Plut",
+   "brideParents": "Nikolaj Brodarič, povest. × Ana roj. Šuštarič (NOV PRIIMEK — cf. №8-ŽENIN Šuštarič!)",
+   "witnesses": "Matija Šuštarič?, povest. + Anton Hnidarsič? [~], povestnik",
+   "documents": "— (prazno)",
+   "priest": "R. Remigi Jereb, žup. m.p.",
+   "note": "BRODARIČ ×3 v letu (№3-nevesta Ana [Boginja vas] + №4-nevesta Terezija + №5-ženin Matija [Krasinec 7] = 2 familije!) + KRALJ ×2 (№1 + №3!) + ŠUŠTARIČ-mreža (№3-mati-roj. + №8-ženin + №8-oče!)"
+  },
+  {
+   "row": "4",
+   "date": "20. 2. 1922",
+   "dayOfWeek": "PONEDELJEK",
+   "scan": 188,
+   "page": 186,
+   "groom": "Anton Berkovec, povestnikov sin ✓, 29 let, r. 10. 1. 1893 ✓, LEMELJ 13 (Berkovec-varianta [~ Berkoper cf. P149-Lemelj 14 + 1896-'Lomelj 14']!)",
+   "bride": "Terezija Brodarič, povestnikova hči, 21 let, r. 4. 2. 1901 ✓, KRASINEC 7 (NOVA poročna hiša korpusa!)",
+   "groomParents": "Matija Berkovec, povestnik + Bara roj. Tomc",
+   "brideParents": "Janez Brodarič, povest. + Katarina roj. Urh",
+   "witnesses": "Peter Kralj, povestnik + Matija Lapner, povest.",
+   "documents": "— (prazno)",
+   "priest": "R. Remigi Jereb, žup. m.p.",
+   "note": "★★★ SIBLING-SWAP #2 z №5!"
+  },
+  {
+   "row": "5",
+   "date": "20. 2. 1922",
+   "dayOfWeek": "PONEDELJEK",
+   "scan": 189,
+   "page": 187,
+   "groom": "Matija Brodarič, povestnik, 34 let, r. 29. 12. 1887 ✓ [~ 23.12.], KRASINEC 7 (ISTA hiša kot №4-nevesta!)",
+   "bride": "Bara Berkovec, povestnikova hči, 22 let, r. 5. 4. 1899 ✓, LEMELJ 13 (ISTA hiša kot №4-ženin!)",
+   "groomParents": "Janez Brodarič, povestnik + Katarina roj. Urh (ISTA kot №4-nevestini!)",
+   "brideParents": "Matija Berkovec, povest. + Bara roj. Tomc (ISTA kot №4-ženinovi!)",
+   "witnesses": "Peter Kralj, povestnik + Matija Lapner, povestnik (ISTI kot №4!)",
+   "documents": "— (prazno)",
+   "priest": "R. Remigi Jereb, žup. m.p.",
+   "note": "★★★ SIBLING-SWAP #2 = NOV VZOREC LINIJE (2. po P149 №2+№3): Anton-Berkovec × Terezija-Brodarič + Matija-Brodarič × Bara-Berkovec — ISTI DAN 20.2. + ISTI PRIČI + POPOLNA ZAMENJAVA SOROJENCEV!; BERKOVEC-TROJICA: №5/1921-Katarina + №4-anton + №5-Bara (sorojenci Lemelj 13, 13 mesecev!)"
+  },
+  {
+   "row": "6",
+   "date": "19. 2. 1922",
+   "dayOfWeek": "NEDELJA",
+   "scan": 189,
+   "page": 187,
+   "groom": "Jožef Lozanski [~ Lazanski], hlapec ✓ (svinčniški ✓!), 41 let, r. 9. 3. 1880 ✓, METLIKA 4 (IZVEN REDA — pred №3–5 20.2.!)",
+   "bride": "Marija Benčič, kočarica? [~ kuharica], 42 let, r. 13. 12. 1879 ✓, PRANOVIČE 29 (+ SVINČNIK: 'rojen(v)a v [Benečji? ~ Vanečji] vasi, žup. Semič' — Semič-referenca!)",
+   "groomParents": "+Jakob Lozanski, povestnik × Barbare roj. Čerganc? [~]",
+   "brideParents": "+Matija Benčič, povestnik × Marija roj. Hrovvar? [~ Horvat]",
+   "witnesses": "Matija Žunič, povestnik + Karl Pilc? [~], povestnik (nem. ime!)",
+   "documents": "krstni in smrtni listi ženina + žup. urad [Metlika? ~] št. 24725/30.4.22 [~]",
+   "priest": "R. Remigi Jereb, žup. m.p.",
+   "note": "IZVEN KRONOLOŠKEGA REDA (NEDELJA pred ponedeljki!)"
+  },
+  {
+   "row": "7",
+   "date": "15. 5. 1922",
+   "dayOfWeek": "PONEDELJEK",
+   "scan": 189,
+   "page": 187,
+   "groom": "Anton Jurejevič? [~], povestnik, 25 let, r. 1. 9. 1896 ✓ (faza-1 '15' → ZOOM 25 ✓!), PRIMOSTEK 11 (lead 'Grmovšek' → ZOOM Primostek!; NOVA hiša!)",
+   "bride": "Marija Lapner, mlinarja hči, '20 let' (r. 21. 12. 1902 — aritmetika 19 → +1 ZAOKROŽITEV; mladoletna <21!), OTOK 21",
+   "groomParents": "+Miko Jurejevič? [~], povestnik × Ana roj. Mušič",
+   "brideParents": "Anton Lapner, mlinar × Margareta roj. Hure? [~ Kure]",
+   "witnesses": "Matija Filak, povestnik + Matija Lapner, povestnik ('oba povestnika' — Lapner-oče? [~])",
+   "documents": "1. spričevalo sorodstva škof. ord. 3.7.[19]23? št. 4588 [~ leto!] 2. očetovo dovoljenje mladoletne neveste 3. spričevalo enega oklica žel. urad Šuhor? [~] + obraj? 5.7.[19]22 št. 4921 [~]",
+   "priest": "R. Remigi Jereb, žup. m.p.",
+   "note": "LAPNER ×2 v letu (cf. №4+№5-priča Matija Lapner!)"
+  },
+  {
+   "row": "8",
+   "date": "22. 5. 1922",
+   "dayOfWeek": "PONEDELJEK",
+   "scan": 189,
+   "page": 187,
+   "groom": "Janez Šuštarič (NOV PRIIMEK!), povestnik, 31 let, r. 20. 12. 1890 ✓, PRILOZJE 31 (lead '3' → ZOOM 31!)",
+   "bride": "Ana Pezdirc, povest. hči, 16 let, r. 27. 8. 1905 ✓ [~ 25.8.] (16-LETNICA #4 linije!), GRIBLJE 48 (h48 = P148-№20 → [2. poročni dokaz]!)",
+   "groomParents": "Jurij Šuštarič, povestnik × Ana roj. Jakofčič (mreža ×151!)",
+   "brideParents": "Jurij Pezdirc, povestnik × Katarina roj. Pezdirc? [~ — INTRA-STARŠI!]",
+   "witnesses": "Miko Berkovec, povestnik (cf. №4+№5-Berkovec!) + Matija Šuštarič, povestnik",
+   "documents": "5 LISTIN!: 1. spričevalo [sorodstva? ~] o hčer. strani škof. ord. 10.5. št. 494 2. spričevalo enega oklica dekan. urad Šuhor? [~] 7 dne 13.5. št. 109 3. spričevalo enega oklica okraj. glavar Trnovec? [~] 11. maja št. 5238 4. spričevalo [sorodstva? ~] policijske uprave 13 dni 16 maja št. 18338 5. pismeno dovoljenje očeta mladoletne neveste",
+   "priest": "R. Remigi Jereb, žup. m.p.",
+   "note": "2. najbolj dokumentiran vpis linije (po №12/1919 z 10 postavkami!)"
+  },
+  {
+   "row": "9",
+   "date": "28. 5. 1922",
+   "dayOfWeek": "NEDELJA",
+   "scan": 190,
+   "page": 188,
+   "groom": "Anton Jakša, cizljar [~ cizmar], 26 let, r. 24. 12. 1895 ✓, PRANOVIČE 6 (NOVA hiša!; Jakša-mreža — cf. P150-Jakša-brata №2+№7!)",
+   "bride": "Ana vdova Flak [~ Filak-varianta!] roj. Rožič, 24 let, r. 22. 6. 1897 ✓, Hrbiška gora? [~] 57 (VDOVA #1!)",
+   "groomParents": "Janez Jakša, povestnik × Marija roj. Starasinič? [~ Harasinič]",
+   "brideParents": "Jožef Rožič, povestnik × Marija roj. Rožič [~ — INTRA-STARŠI!]",
+   "witnesses": "Miko Harasinič, povestnik + Matija Majerle, povestnik (cf. korpus Majerle ×2!)",
+   "documents": "dovoljenje in pooblastilo župnega urada Črnomelj za poroko z dne 25. maja št. 175 [~] (gotovljeno na pročto slovo? [~])",
+   "priest": "R. Remigi Jereb, žup. m.p.",
+   "note": "župn. Črnomelj-izven-listina!"
+  },
+  {
+   "row": "10",
+   "date": "11. 6. 1922",
+   "dayOfWeek": "NEDELJA",
+   "scan": 190,
+   "page": 188,
+   "groom": "Jurij Jakofčič, povestnik, '67 let' (r. 2. 4. 1866 — ARITMETIKA: 1866→56; RAZLIKA 11 LET! [~ 1855 bi dalo 67]), Čerhovice? [~] 26 (JAKOFČIČ-senior — cf. korpus: boter 1910 '¾ zemljak, h6-oče' + sin-junior r. 15.2.1879 [1919-h6-8.vpis]!)",
+   "bride": "Bara vdova Županič roj. Harasinič, '51 let' (r. 31. 5. 1872 — aritmetika 50 → +1 ZAOKROŽITEV), KRASINEC 18 (VDOVA #2!)",
+   "groomParents": "+Miko Jakofčič, povestnik × Ana roj. Mušič",
+   "brideParents": "+Peter Harasinič, povestnik × +Marija roj. Tomše? [~]",
+   "witnesses": "Janez Rakar? [~], cevljar [~ cizmar — 2. v letu!] + Janez Sopčič? [~], povestnik",
+   "documents": "1. spričevalo dveh oklicov škof. ord. z dne 2.6.22 št. 613/EŽ [~] 2. spričevalo tretjega oklica, okraj. glavarstvo Črnomelj z dne 10.6.1922 št. 6248 ('smrti prve žene' [~ Ursunden!])",
+   "priest": "R. Remigi Jereb, žup. m.p.",
+   "note": "NAJSTAREJŠI ŽENIN LINIJE 67 LET (P150-№16:52 → 1922-№10:67!)"
+  },
+  {
+   "row": "unnum-19.6.",
+   "date": "19. 6. 1922",
+   "dayOfWeek": "PONEDELJEK",
+   "scan": 190,
+   "page": 188,
+   "groom": "Janko Miljavac (NOV PRIIMEK — hrvaška-varianta!), povestnik (lead 'podstotnik' → ZOOM povestnik!), '48 let' (r. 30. 12. 1874 — aritmetika 47 → +1), MALA PAKA 19, župnija Lipnik (Hrvaška) — IZVEN ŽUPNIJE + HRVAŠKA!",
+   "bride": "Marija Zrimšek (NOV PRIIMEK!), kmečka? [~ 'kgovška'], '49 let' (r. 15. 4. 1874 — aritmetika 48 → +1), Podževec? [~ — Hrv.?]",
+   "groomParents": "+Janez Zrimšek, povestnik × +Marija roj. Vidmar (NOVA!)",
+   "brideParents": "+Franc Miljavac, mlinar × Bara roj. Sopčič (NOVA!)",
+   "witnesses": "Janko Novak, gostilničar (ponovitev P149!) + Donat Jug, cerkvenik (NOV POKLIC + NOV PRIIMEK!)",
+   "documents": "1. izjava župnega urada Lipnik z dne 8. jun. 1922 št. 54 2. spričevalo [enega lista? ~] za nevesto škof. ord. Ljublj. dne 19.6.22 št. 2198 3. spričevalo župnika [urade? ~] z dne 19.6.22 št. 914 [~]",
+   "priest": "Per delegationem: P. Edvard Raustelar O.F.M. Brežje (NOV DUHOVNIK — 1. FRANCISKAN + 1. 'per delegationem' + 1. O.F.M. v LINIJI!)",
+   "margin": "PRAZEN — 4. NEŠTEVILČENI VPIS LINIJE!",
+   "note": "2. HRVAŠKA-referenca linije (po P150-Kaluka) — 1. ŽENIN iz hrvaške župnije!"
+  },
+  {
+   "row": "11",
+   "date": "27. 8. 1922",
+   "dayOfWeek": "NEDELJA",
+   "scan": 190,
+   "page": 188,
+   "groom": "Janez Segina, tesarski pomočnik ✓ (faza-1 'tajarski povestnik' → ZOOM!), 24 let, r. 1. 7. 1898 ✓, Šibrje? [~] 20 (SEGINA ×2 v letu!)",
+   "bride": "Jožefa Županič, povest. hči, starost NEZAPISANA (r. 28. 5. 1903 → 19; mladoletna!), KRASINEC 16 (NOVA hiša!)",
+   "groomParents": "Jurij Segina, povestnik × Marija roj. Grnič? [~]",
+   "brideParents": "Janez Županič, povestnik × Katerina roj. Galovec? [~]",
+   "witnesses": "Franc Vresler? [~], povestnik + Miko Županič, povestnik (ŽUPANIČ ×3 v letu!)",
+   "documents": "1. spričevalo dveh oklicev okraj. glavarstvo Črnomelj z dne 23.8.1922 št. 8574 2. spričevalo dveh oklicov škof. ordinariat z dne 15.? [avgust? ~] št. 849 [~]",
+   "priest": "R. Remigi Jereb, žup. m.p.",
+   "note": "★★★ ZADNJI VPIS KNJIGE 04455!"
+  }
+ ],
+ "excluded": [
+  {
+   "row": "tipovan-list-1911",
+   "note": "s191 = PRILEPLJEN ROKOPISNI list (NE tipovan!): spričevalo o razglasih, Novo mesto 3. julija 1911 → 'župniku Jožefu Rome v Podzemelj' — ženin Julij Bieteto? [~] (s. kn. dvornega oprema pevca, r. 27.8.1885 Ljubljana) × nevesta Urša Marija Štakel? [~] (r. 26.3.1892 Novo mesto); oklici 4./5./11. junija 1911 'v tukajnji župnijski cerkvi in na Trstaju'; podpis + 'Stv. 143. 1911?' — TUJ dokument (1911-era, ne-1922!)"
+  },
+  {
+   "row": "naslovnica-s192",
+   "note": "s192 = USNJENA NASLOVNICA z arhivsko nalepko: 'Podzemelj P 1873–1922' — URADNA letnica-območje knjige 04455 = 1873–1922 → potrjuje KONEC 1922 (zadnji vpis 27.8.1922 №11!) + korpus-linija 1886–1922 = 37 ZAPOREDNIH LET KOMPLETNO!"
+  }
+ ],
+ "stats": {
+  "vpisi": 13,
+  "ostevilceni": 11,
+  "nestevilceni": 2,
+  "strani": "s188–s190 (Pag. 186–188 == sken − 2, 9.–11. potrditev!)",
+  "dnevi": "8 PON (61,5%) + 4 NED + 1 ČET + 0 TOR/PET/SOB",
+  "kalendarna": "13/13 ✓",
+  "aritmetika": "9 čistih + 4 zaokrožitve (+1: №7-20/19 · №10-51/50 · Paka-48/47 + 49/48) + 2 starosti NEZAPISANI (№1+№11-nevesti) + 1 H-dvom (№10: 1866/67-razlika-11!)",
+  "duhovniki": "Jereb 12× + P. Edvard Raustelar O.F.M. (Brežje, per delegationem) ×1 = 2/13",
+  "vdove": 2,
+  "mladoletne": "2× 16-letnici (3.+4. v liniji!) + 2× 19/20-letnici + 4× dovoljenja/ž. sodišče",
+  "noviPriimki": 16,
+  "noviPoklici": "tesarski pomočnik · cerkvenik · cizljar/cizmar ×2 · kroplar? · kočarica? [~]",
+  "hrvaska": 2,
+  "vrzeli": "postna 85 dni (19.2.→15.5., Velika noč 16.4.) + poletna 69 dni (19.6.→27.8.)",
+  "intra": "INTRA-GRIBLJE h23×h68 (№2) · SIBLING-SWAP #2 (№4+№5!) · INTRA-PRIIMEK SEGINA ×2 + PEZDIRC-starši [~] + INTRA-STARŠI Rožič [~] (№9)",
+  "kumulativ": "vitals 711 → 714 (+3!) · bloki 04455 194 → 197 · sidra 187 → 190 · p80 hiše 77 (0 novih — h17/h23/h48/h68 že v vzorci!)"
+ },
+ "crossChecks": [
+  {
+   "id": "cc-1",
+   "what": "Pag == sken − 2 na VSIH 3 straneh (s188=186 · s189=187 · s190=188) — 9.–11. potrditev nove preslikave (skupaj 11 od P149-najdbe!)"
+  },
+  {
+   "id": "cc-2",
+   "what": "glava '1922.' (ročna, na s188) = 9. zaporedna velika letna glava linije"
+  },
+  {
+   "id": "cc-3",
+   "what": "№-zaporedje 1–11 brez presledkov + 2 neštevilčena vstavljena kronološko pravilno (9.2. med №2 in №3; 19.6. med №10 in №11!)"
+  },
+  {
+   "id": "cc-4",
+   "what": "★★★ SIBLING-SWAP #2: №4 (Anton Berkovec Lemelj 13 × Terezija Brodarič Krasinec 7) + №5 (Matija Brodarič Krasinec 7 × Bara Berkovec Lemelj 13) — ISTI DAN 20.2. + ISTI PRIČI (Peter Kralj + Matija Lapner) + ISTA starša obeh strani (Berkovec: Matija × Bara Tomc | Brodarič: Janez × Katarina Urh) — 2. v liniji (P149 №2+№3!)"
+  },
+  {
+   "id": "cc-5",
+   "what": "BERKOVEC-TROJICA: №5/1921 Katarina (Lemelj 13) + №4-Anton + №5-Bara (Lemelj 13) — sorojenci v 13 mesecih (lead ✓; številčenje №5+№6→№4+№5!)"
+  },
+  {
+   "id": "cc-6",
+   "what": "KRASINEC 7 = Brodarič-družina (№4-NEVESTA + №5-ŽENIN ISTA HIŠA!) + h7 = NOVA poročna hiša korpusa (0 pred-pojavov!)"
+  },
+  {
+   "id": "cc-7",
+   "what": "korpus-JAKOFČIČ: №10-Jurij = SENIOR (korpus 1910: boter 'Jurij Jakofčič ¾ zemljak, h6-oče' + korpus 1919-h6: sin 'Jurij Jakofčič r. 15.2.1879 × Katarina r. Jaklič') — 67 let = senior-kompatibilno (junior bi imel 43!)"
+  },
+  {
+   "id": "cc-8",
+   "what": "korpus-h17-KRALJ: 1892-№10 Johann Kralj 48 h17 [1.] + 1909-№1 Maria Kralj 27 h17 [2.] → 1922-№1 Jurij 36 h17 [3.] — Johann-r.~1844 → sin-Jurij-r.1885 = aritmetika ✓"
+  },
+  {
+   "id": "cc-9",
+   "what": "korpus-h23-BRINEC: 1887-v4 Maria Brinec h23 [1.] + 1888-v2 Mathias Brinec h23 [2.] → 1922-№2 Marko 28 h23 [3.] — Mathias-1888-ženin (~24) → sin-Marko-r.1893 = aritmetika ✓"
+  },
+  {
+   "id": "cc-10",
+   "what": "korpus-h68: 1914-№3/№4 (Marija MLAKOVA!) + 1921-№8-Mitek → 1922-№2-Loroteja MILEK [4.] — M-5-družinska zmeda (Muc/Milek/Mlak/Mih/Mikc — P141-forenzika!) nadaljevana"
+  },
+  {
+   "id": "cc-11",
+   "what": "h48: P148-№20-poroka (korpus!) → 1922-№8-NEVESTA Ana Pezdirc = 2. poročni dokaz h48"
+  },
+  {
+   "id": "cc-12",
+   "what": "LAPNER-mreža v 1 letu: №7-nevesta Marija Lapner (Otok 21, mlinarja-hči) + №4+№5-priča Matija Lapner (povestnik) + №7-oče Anton Lapner mlinar — oče/hči? [~]"
+  },
+  {
+   "id": "cc-13",
+   "what": "BERKOVEC-korpus: 1896-№15 'Johann BERKOVEC Lomelj [~] 14' + P149-'Berkoper Lemelj 14' → 1922-'Berkovec Lemelj 13' — h13/h14 Berkovec/Berkoper-pisarne-varianti [~]"
+  },
+  {
+   "id": "cc-14",
+   "what": "ŽUPANIČ ×3 v letu: №10-vdova Županič (Krasinec 18) + №11-nevesta Županič (Krasinec 16!) + №11-priča Miko Županič"
+  },
+  {
+   "id": "cc-15",
+   "what": "čevljar-poklic ×2 v letu (№9-ženin cizljar + №10-priča Rakar cevljar) + korpus-1912-'Mihael Lozar čevljar' (h78!)"
+  },
+  {
+   "id": "cc-16",
+   "what": "SEGINA ×2 (№1-NEVESTA Ana + №11-ŽENIN Janez — različni starši = 2 familije!) + TESAR ×2 (№1-povestnik-tesar + №11-tesarski pomočnik!)"
+  },
+  {
+   "id": "cc-17",
+   "what": "BRODARIČ ×3 v letu: №3-nevesta Ana (Boginja vas 15, oče Nikolaj) + №4-nevesta Terezija + №5-ženin Matija (Krasinec 7, oče Janez) = 2 BRODARIČ-familije + KRALJ ×2 (№1 + №3)!"
+  }
+ ],
+ "anomalies": [
+  {
+   "id": "an-1",
+   "what": "★★★ SIBLING-SWAP #2 = NOV VZOREC LINIJE (№4+№5 — isti dan + isti priči + popolna zamenjava sorojencev Berkovec↔Brodarič!)"
+  },
+  {
+   "id": "an-2",
+   "what": "★★★ 2 NEŠTEVILČENA VPISA = 3. + 4. v LINIJI (skupaj 4: Boren 24.2.1919 · Vode 15.8.1920 · 9.2.1922-Gradac-23 · Mala Paka 19.6.1922!)"
+  },
+  {
+   "id": "an-3",
+   "what": "★★★ 1. FRANCISKAN + 1. 'per delegationem' + 1. O.F.M. duhovnik linije: P. Edvard Raustelar O.F.M. (Brežje) — Mala Paka-poroka! (3. duhovnik po Cerar→Jereb!)"
+  },
+  {
+   "id": "an-4",
+   "what": "★★★ 16 NOVIH PRIIMKOV = REKORD LINIJE (Melovec · Lozanski · Benčič · Šuštarič · Jurejevič · Lapner · Rakar · Sopčič · Zrimšek · Miljavac · Vresler · Jug · Tehlič? · Grnič · Vidmar · Raustelar — P150: ~6, P149: ~2!)"
+  },
+  {
+   "id": "an-5",
+   "what": "★★ 2. HRVAŠKA-referenca linije: Mala Paka 19 + župnija Lipnik (Hrvaška!) + Podževec? [~ Hrv.] + Hrv.-listine (Lipnik-izjava) — 1. ŽENIN iz hrvaške župnije!"
+  },
+  {
+   "id": "an-6",
+   "what": "★★ ARITMETIKA-H: №10-ženin r. 2.4.1866 + '67 let' → 56 (RAZLIKA 11 LET! [~ 1855 bi dalo 67 — senior-Jakofčič-kompatibilno]; 2. datum-dvom po P150-№24 31.6.!"
+  },
+  {
+   "id": "an-7",
+   "what": "★★ ZADNJI VPIS 27.8.1922 (№11) = KONEC KNJIGE 04455 + naslovnica-arhivska-nalepka 'Podzemelj P 1873–1922' — URADNA potrditev + korpus-linija 1886–1922 KOMPLETNA (37 let!)"
+  },
+  {
+   "id": "an-8",
+   "what": "★★ 2 VDOVI (№9 Ana Flak-rj.-Rožič + №10 Bara Županič-rj.-Harasinič) + 2 najstarejša ženina (№10: 67! + №6: 41)"
+  },
+  {
+   "id": "an-9",
+   "what": "★★ 16-LETNICA ×2 (9.2.-Ludmila Piletič Gradac 23 + №8-Ana Pezdirc Griblje 48 — 3. + 4. v liniji!) + 'očetovo dovoljenje mladoletne neveste' ×3 (9.2. + №7 + №8!) + okraj. sodišče-ženitčno dovoljenje (№2!) + №7-nevesta 19/20 + №11-nevesta 19 — MLADOLETNIH ≥6/13!"
+  },
+  {
+   "id": "an-10",
+   "what": "★★ 5-LISTIN №8 (okraj. glavar Trnovec + policijska uprava št. 18338 + dekan. urad + škof. ord. + očetovo dovoljenje!) = 2. najbolj dokumentiran vpis linije (po №12/1919!)"
+  },
+  {
+   "id": "an-11",
+   "what": "★ zaokrožitve ×4 (№7: 20/19 · №10: 51/50 · Paka: 48/47 + 49/48 — 'v XX. letu'-konvencija!) + 2 starosti NEZAPISANE (№1 + №11-nevesti!)"
+  },
+  {
+   "id": "an-12",
+   "what": "★ NEZNANE VASI ×5 [~]: Fučkovič 11 (№1!) · Jsenic 3 (9.2.!) · Šibrje 20 (№11!) · Čerhovice 26 (№10!) · Hrbiška gora 57 (№9!) + Podževec? [~] — REKORD neznanih krajev!"
+  },
+  {
+   "id": "an-13",
+   "what": "★ IZVEN REDA: №6 19.2. pred №3–5 20.2. (NEDELJA med ponedeljki!) + VRZELI: postna 85 dni (19.2.→15.5., Velika noč 16.4.) + poletna 69 dni (19.6.→27.8.)"
+  },
+  {
+   "id": "an-14",
+   "what": "★ SVINČNE ANOTACIJE ×2: №6-nevesta 'rojen(v)a v [Benečji? ~] vasi, žup. Semič' (Semič-referenca — P150-pattern!) + svinčniški ✓-znaki ×6 (hlapec · narednik · sin · tesar · pomočnik · povestnik)"
+  },
+  {
+   "id": "an-15",
+   "what": "★ INTRA-PRIIMEK ×2 (SEGINA: №1-nevesta + №11-ženin, 2 familije! + PEZDIRC №8-starši [~]) + INTRA-STARŠI №9 [~ 'Marija roj. Rožič']"
+  },
+  {
+   "id": "an-16",
+   "what": "★ M-5-ZMEDA: h68-№2-nevesta 'MILEK' vs korpus-h68-1914-'MLAKOVA' (pisarne-varianti Milek/Mlak!) + Flak/Filak (№9-nevesta vs №7-priča!)"
+  },
+  {
+   "id": "an-17",
+   "what": "★ ŽELEZNI-POKLICI: železni čuv.-hči (9.2.-nevesta!) + žel. urad-listine ×2 (9.2. + №7) — železniška-mreža (cf. P149-žel.-čuvaj + P150-žel. delavec!)"
+  },
+  {
+   "id": "an-18",
+   "what": "★ NOVI POKLICI: tesarski pomočnik (№11!) · cerkvenik (Donat Jug — 1.!) · cizljar/cizmar ×2 (№9 + №10-priča!) · kroplar-narednik? [~] (9.2.) + gostilničar-ponovitev (Paka-priča!)"
+  }
+ ],
+ "honesty": [
+  {
+   "id": "h-1",
+   "what": "№1-NEVESTA starost NEZAPISANA (roj. 22.9.1897 branje čisto; izračun 24)"
+  },
+  {
+   "id": "h-2",
+   "what": "№11-NEVESTA starost NEZAPISANA (roj. 28.5.1903 ZOOM-potrjeno ×3; izračun 19)"
+  },
+  {
+   "id": "h-3",
+   "what": "№2-ŽENIN '23 let' (faza-1-full-page) → ZOOM '28 let' ✓ (aritmetika ✓)"
+  },
+  {
+   "id": "h-4",
+   "what": "№2-NEVESTA hiša '69' (lead) → ZOOM '68' ✓ (m1b 5×)"
+  },
+  {
+   "id": "h-5",
+   "what": "№5-ŽENIN hiša '4' (faza-1) → ZOOM '7' ✓ (Krasinec 7, m7)"
+  },
+  {
+   "id": "h-6",
+   "what": "№7-ŽENIN '15 let' (faza-1) → ZOOM '25 let' ✓ (m9b — aritmetika ✓)"
+  },
+  {
+   "id": "h-7",
+   "what": "№10-roj. '1866' — 3-kratno branje (full '1860' → row '1866' → zoom '1866') — vseeno H-dvom protiv '67 let'"
+  },
+  {
+   "id": "h-8",
+   "what": "№8-NEVESTA roj. '25.8' (full) → '27.8' (m9-zoom) [~]"
+  },
+  {
+   "id": "h-9",
+   "what": "№5-ŽENIN roj. '23.12' (full) → '29.12' (zoom) [~]"
+  },
+  {
+   "id": "h-10",
+   "what": "№6-ŽENIN 'Lozanski/Lazanski' [~]"
+  },
+  {
+   "id": "h-11",
+   "what": "№6-NEVESTA poklic 'kočarica [~ kuharica/kmečarica]'"
+  },
+  {
+   "id": "h-12",
+   "what": "№7-priimek 'Jurejevič [~ Jurejević]"
+  },
+  {
+   "id": "h-13",
+   "what": "№7-NEVESTA-mati 'Hure [~ Kure]' — corpus-KURE ×6!"
+  },
+  {
+   "id": "h-14",
+   "what": "№10-priči 'Rakar [~]' + 'Sopčič [~]'"
+  },
+  {
+   "id": "h-15",
+   "what": "Paka-NEVESTA vas 'Podževec [~]'"
+  },
+  {
+   "id": "h-16",
+   "what": "9.2.-vas 'Jsenic [~]' + poklic 'kroplar, črt. pod., narednik [~ narodnik/marodnik]'"
+  },
+  {
+   "id": "h-17",
+   "what": "№9-vas 'Hrbiška gora [~]' + №9-mati 'Starasinič [~ Harasinič]' (S/H-varianti — P147-forenzika!)"
+  },
+  {
+   "id": "h-18",
+   "what": "№10-vas 'Čerhovice [~]'"
+  },
+  {
+   "id": "h-19",
+   "what": "№11-vas 'Šibrje [~]' + №11-mati 'Grnič [~]"
+  },
+  {
+   "id": "h-20",
+   "what": "№1-vas 'Fučkovič [~]' + №2-mati 'Lehlič [~ Zeblič/Tehlič]"
+  },
+  {
+   "id": "h-21",
+   "what": "9.2-starši 'Anton Melovec [~]' + 'Horacić [~]' + 'Malešič [~]"
+  },
+  {
+   "id": "h-22",
+   "what": "podpis 'R. Remigi Jereb' — faza-1 'Nemig frenk' → zoom-r4R ✓ (12× potrjeno)"
+  },
+  {
+   "id": "h-23",
+   "what": "s191 ROKOPISNI (lead 'tipovan' = tipped-in misinterpretacija!) + imena 'Bieteto [~]' + 'Štakel [~]"
+  }
+ ]
+}

@@ -157,9 +157,9 @@ def main():
     # ---------- I6: qa-parish.ts ----------
     qa = open(QA_TS).read()
     check("I6a qa-p138 id", "qa-p138-parish-marriage-1909" in qa)
-    n659 = qa.count("HOUSE_VITALS.length !== 711")
+    n659 = qa.count("HOUSE_VITALS.length !== 714")
     check("I6b vitals pini 659", n659 >= 52, str(n659))
-    n142 = qa.count(".length !== 194")
+    n142 = qa.count(".length !== 197")
     check("I6c bloki pini 171 (P146-sanacija starega 147-pina!)", n142 >= 25, str(n142))
     check("I6d sidra 140 + 1909:8", "poročna sidra ≠ 187" in qa and "h.year === 1909).length !== 8" in qa)
     check("I6e hiše 1909 pin", '"1,17,29,30,46,46,57,74"' in qa)

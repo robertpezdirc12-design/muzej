@@ -349,7 +349,7 @@ def main() -> int:
     check("I9[cd] p80 sidra 72 (1898×9 · 1899×6 · 1900×2!)", "poročna sidra ≠ 164" in qa)
     check("I9d p80 hiše 58 (qa kumulativa — …; P127: +6 NOVIH!)", "različnih hiš (vse tri knjige) ≠ 70" in qa)
     # vitals 563 regresijska zaščita v qa-p123
-    check("I9e vitals 637 zaščita (P128)", "HOUSE_VITALS.length !== 688" in qa[qa.index("const p123Marr"):] if "const p123Marr" in qa else False)
+    check("I9e vitals 637 zaščita (P128)", "HOUSE_VITALS.length !== 714" in qa[qa.index("const p123Marr"):] if "const p123Marr" in qa else False)
     check("I9f stari 537/544/548/550/554/559 iztekla",
           "HOUSE_VITALS.length !== 537" not in qa and "HOUSE_VITALS.length !== 544" not in qa
           and "HOUSE_VITALS.length !== 548" not in qa and "HOUSE_VITALS.length !== 550" not in qa

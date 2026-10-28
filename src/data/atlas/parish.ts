@@ -8296,4 +8296,51 @@ export const HOUSE_VITALS: HouseVital[] = [
     whatEn: "marriage (Nov 21, 1921, entry 27 — MONDAY) — groom Jurij JAKLIČ, a smallholder's son ✓, 24 [b. Apr 24, 1897 ✓], BORŠT 47 (out-of-parish — the parish of Boršt!) × bride Marija FOTTER, a smallholder's daughter, 20 (a MINOR!), b. Jul 27, 1901 ✓, GRIBLJE 7 (★ the h7 BLOCK — the LOWEST Griblje number of 1921; h7 already in the sample via 04105 — the 1921 marriage evidence!; FOTTER = a NEW SURNAME!); document: a WRITTEN CONSENT of the father of the underage bride; witnesses Matija Štrucelj? + Miko Tasič? (Roman Catholic); ★★★ the 1st of 4 WEDDINGS Nov 21 + a blue ANNOTATION † Nov 6, 1977: 'the husband Jaklič Jurij died Nov 6, 77 in Griblje (1977, p. 107, no. 5), Gradac Dec 5' + 'registrar Šimec Šuso? [~]' (the 2nd registrar signature!)",
     status: "DOCUMENTED",
   },
+  // ——— P151: poročna knjiga 04455, leto 1922 = ZAKLJUČEK KNJIGE (s188–s190 ==
+  // Pag. 186–188, 9.–11. potrditev Pag==sken−2!) — 37. leto poročne linije
+  // (P115 = 1886 → … → P151 = 1922 = KONEC; naslovnica 'P 1873–1922'!). 13
+  // vpisov (11 oštevilčenih №1–11 + 2 NEŠTEVILČENA = 3.+4. v liniji!) =
+  // ★★★ SIBLING-SWAP #2 (№4+№5 — isti dan + isti priči + zamenjava
+  // sorojencev Berkovec↔Brodarič!) + ★★★ 1. FRANCISKAN/'per delegationem'
+  // duhovnik (P. Edvard Raustelar O.F.M. Brežje — Mala Paka-Hrvaška!) +
+  // ★★★ 16 NOVIH PRIIMKOV = REKORD + ★★ 2. HRVAŠKA-referenca (Mala Paka 19,
+  // župn. Lipnik-Hrv.!) + ★★ ZADNJI VPIS 27.8.1922 (№11) + ★★ 2 VDOVI +
+  // 16-LETNICA ×2 (3.+4.!) + MLADOLETNOST-VAL (≥6/13!) + 5-LISTIN №8 +
+  // NAJSTAREJŠI ŽENIN 67 LET (№10 Jurij Jakofčič-SENIOR — H: 1866/67!) +
+  // INTRA-GRIBLJE h23×h68 (Brinec × Milek/Mlak-M-zmeda!) + SEGINA ×2 +
+  // TESAR ×2 + BRODARIČ ×3 + ŽUPANIČ ×3 + BERKOVEC-TROJICA zaključena +
+  // 5 NEZNANIH VAS [~] (Fučkovič · Jsenic · Šibrje · Čerhovice · Hrbiška
+  // gora!) + P151-lead KOREKCIJE ×16
+  // Dokaz: research/issue17/parish-marriage-1922.json; verifikator:
+  // scripts/p151_parish_marriage_1922.py --check (I1–I12).
+  {
+    houseNo: "17",
+    bookSignature: "04455",
+    year: 1922,
+    scan: 188,
+    page: 186,
+    whatSi: "poroka (23. 1. 1922, vpis 1 — PONEDELJEK) — ženin Jurij KRALJ, povestnik-tesar ✓ (svinčniški ✓!), 36 [r. 10. 7. 1885 ✓ — lead-faza-1 '10.2.1895' → ZOOM 1885, aritmetika ✓!], GRIBLJE 17 (★ 3. poročni dokaz h17 — 1892-№10 Johann Kralj 48 [1.] + 1909-№1 Maria Kralj 27 [2.] → 1922 Jurij [3.]; korpus-aritmetika: Johann-r.~1844 → sin-Jurij-r.1885 ✓!) × nevesta Ana SEGINA, povest. hči, starost NEZAPISANA (r. 22. 9. 1897 → 24), FUČKOVIČ 11. [~ NEZNANA VAS!]; ★ SEGINA ×2 v letu (cf. №11-ženin Janez Segina — 2 familije!) + TESAR ×2 (cf. №11 tesarski pomočnik!); starši: Janez Kralj vrtnar? [~ 'vrtlhar'] × Ana roj. Jakobovič? [~] + Daniel Segina povest. × Barbora roj. Frensič? [~]; priči Miko Filak? [~ 'Fiškar'] + Julij Belčič? tesar? [~]; duhovnik R. Remigi Jereb",
+    whatEn: "marriage (Jan 23, 1922, entry 1 — MONDAY) — groom Jurij KRALJ, a smallholder-carpenter ✓ (a pencil check!), 36 [b. Jul 10, 1885 ✓ — the lead-faza-1 'Feb 10, 1895' → the ZOOM 1885, the arithmetic ✓!], GRIBLJE 17 (★ the 3rd marriage evidence of h17 — the 1892-№10 Johann Kralj 48 [1st] + the 1909-№1 Maria Kralj 27 [2nd] → 1922 Jurij [3rd]; the corpus-arithmetic: Johann-b.~1844 → the son-Jurij-b.1885 ✓!) × bride Ana SEGINA, a smallholder's daughter, the age NOT WRITTEN (b. Sep 22, 1897 → 24), FUČKOVIČ 11. [~ an UNKNOWN VILLAGE!]; ★ SEGINA ×2 in the year (cf. the №11 groom Janez Segina — 2 families!) + TESAR ×2 (cf. №11 the carpenter's assistant!); parents: Janez Kralj a gardener? [~] × Ana née Jakobovič? [~] + Daniel Segina × Barbora née Frensič? [~]; witnesses Miko Filak? [~] + Julij Belčič? a carpenter? [~]; priest R. Remigi Jereb",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "23",
+    bookSignature: "04455",
+    year: 1922,
+    scan: 188,
+    page: 186,
+    whatSi: "poroka (6. 2. 1922, vpis 2 — PONEDELJEK) — ženin Marko BRINE, povest. sin ✓, 28 [r. 24. 4. 1893 ✓ — faza-1 '23 let' → ZOOM 28, aritmetika ✓!], GRIBLJE 23 (★ 3. poročni dokaz h23 = BRINEC-družina: 1887-v4 Maria [1.] + 1888-v2 Mathias [2.] → 1922 Marko [3.] — Marko = sin Mathiasa-1888-ženina? [~ aritmetika ✓]) × nevesta Loroteja? [~] MILEK, povest. hči, 20, r. 11. 10. 1901 ✓ (P150-lead '16-letna' → NEPRAVILNO — 20-letna!), GRIBLJE 68 (★ lead '69' → ZOOM 68!; 4. poročni dokaz h68: 1914-№3/№4-MLAKOVA + 1921-№8-Mitek → 1922 [4.] — M-5-družinska zmeda Milek/Mlak nadaljevana!); ★★★ INTRA-GRIBLJE h23 × h68!; starši: Matija Brine povestnik × Marija roj. Lehlič? [~ 'Zeblič'] + Matija Milek povest. × Katarina roj. POŽEK (cf. h21-Požek 1889!); priči Miko POŽEK povest. (nevestina-mati-priimek!) + Tomaž Lehlič? povest.; listine ×2: spričevalo sorodstva škof. ord. Ljubljana št. 428/22 + ženitčno dovoljenje okraj. sodišča Črnomelj št. 5877/21 (mladoletna-nevesta-vzorec!); duhovnik R. Remigi Jereb",
+    whatEn: "marriage (Feb 6, 1922, entry 2 — MONDAY) — groom Marko BRINE, a smallholder's son ✓, 28 [b. Apr 24, 1893 ✓ — the faza-1 '23 years' → the ZOOM 28, the arithmetic ✓!], GRIBLJE 23 (★ the 3rd marriage evidence of h23 = the BRINEC family: the 1887-v4 Maria [1st] + the 1888-v2 Mathias [2nd] → 1922 Marko [3rd] — Marko = the son of Mathias the 1888 groom? [~ the arithmetic ✓]) × bride Loroteja? [~] MILEK, a smallholder's daughter, 20, b. Oct 11, 1901 ✓ (the P150-lead '16-year-old' → WRONG — she is 20!), GRIBLJE 68 (★ the lead '69' → the ZOOM 68!; the 4th marriage evidence of h68: the 1914-№3/№4-MLAKOVA + the 1921-№8-Mitek → 1922 [4th] — the M-5-family confusion Milek/Mlak continues!); ★★★ an INTRA-GRIBLJE marriage h23 × h68!; parents: Matija Brine × Marija née Lehlič? [~] + Matija Milek × Katarina née POŽEK (cf. the h21-Požek 1889!); witnesses Miko POŽEK (the bride's-mother-surname!) + Tomaž Lehlič?; documents ×2: the kinship certificate of the diocesan ordinariate Ljubljana no. 428/22 + the marital permission of the district court Črnomelj no. 5877/21 (the underage-bride pattern!); priest R. Remigi Jereb",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "48",
+    bookSignature: "04455",
+    year: 1922,
+    scan: 189,
+    page: 187,
+    whatSi: "poroka (22. 5. 1922, vpis 8 — PONEDELJEK) — ženin Janez ŠUŠTARIČ (NOV PRIIMEK — REKORD-LETNA valova 16 novih!), povestnik, 31 [r. 20. 12. 1890 ✓], PRILOZJE 31 (lead '3' → ZOOM 31!) × nevesta Ana PEZDIRC, povest. hči, 16 (16-LETNICA #4 linije!), r. 27. 8. 1905 ✓ [~ 25.8.], GRIBLJE 48 (★ 2. poročni dokaz h48 po P148-№20!; PEZDIRC-mreža ×152!); starši: Jurij Šuštarič povestnik × Ana roj. JAKOFČIČ (mreža ×151!) + Jurij PEZDIRC povestnik × Katarina roj. Pezdirc? [~ — INTRA-STARŠI!]; priči Miko BERKOVEC povestnik (cf. №4+№5-Berkovec-TROJICA!) + Matija Šuštarič; ★★ 5 LISTIN (2. najbolj dokumentiran vpis linije po №12/1919!): spričevalo [sorodstva?] škof. ord. št. 494 · dekan. urad Šuhor? [~] št. 109 · okraj. glavar Trnovec? [~] št. 5238 · policijska uprava št. 18338 · PISMENO DOVOLJENJE OČETA MLADOLETNE NEVESTE; duhovnik R. Remigi Jereb",
+    whatEn: "marriage (May 22, 1922, entry 8 — MONDAY) — groom Janez ŠUŠTARIČ (a NEW SURNAME — the record-year wave of 16 new ones!), a smallholder, 31 [b. Dec 20, 1890 ✓], PRILOZJE 31 (the lead '3' → the ZOOM 31!) × bride Ana PEZDIRC, a smallholder's daughter, 16 (the 16-year-old #4 of the line!), b. Aug 27, 1905 ✓ [~ Aug 25], GRIBLJE 48 (★ the 2nd marriage evidence of h48 after the P148-№20!; the PEZDIRC network ×152!); parents: Jurij Šuštarič × Ana née JAKOFČIČ (the network ×151!) + Jurij PEZDIRC × Katarina née Pezdirc? [~ — INTRA-PARENTS!]; witnesses Miko BERKOVEC (cf. the №4+№5 Berkovec-TRIO!) + Matija Šuštarič; ★★ 5 DOCUMENTS (the 2nd best-documented entry of the line after №12/1919!): the [kinship?] certificate of the diocesan ordinariate no. 494 · the deanery office Šuhor? [~] no. 109 · the district captain Trnovec? [~] no. 5238 · the police directorate no. 18338 · a WRITTEN CONSENT of the father of the underage bride; priest R. Remigi Jereb",
+    status: "DOCUMENTED",
+  },
 ];

@@ -26,10 +26,10 @@ def sub_file(path, pairs, regex=False):
 
 # ---------- 1. qa-parish.ts ----------
 qa = open(QA, encoding="utf-8").read()
-n698 = qa.count("HOUSE_VITALS.length !== 698")
-n181 = qa.count(".length !== 181")
+n698 = qa.count("HOUSE_VITALS.length !== 714")
+n181 = qa.count(".length !== 197")
 n174 = qa.count("poročna sidra ≠ 174")
-qa = qa.replace("HOUSE_VITALS.length !== 698", "HOUSE_VITALS.length !== 711")
+qa = qa.replace("HOUSE_VITALS.length !== 714", "HOUSE_VITALS.length !== 711")
 qa = qa.replace("HOUSE_VITALS ≠ 698", "HOUSE_VITALS ≠ 702")
 qa = qa.replace(".length !== 181", ".length !== 194")
 qa = qa.replace("bloki 04455 ≠ 181", "bloki 04455 ≠ 185")
@@ -59,7 +59,7 @@ open(QA, "w", encoding="utf-8").write(qa)
 # ---------- 2. p80 ----------
 sub_file("scripts/p80_parish_md_books.py",
          [("len(vitals) == 688  # POSODABLJENO P144: 578 (era P126) → 670 (P140) → 675 (P141) → 681 (P142) → 685 (P143) → 686 (živi korpus!; P127–P144: poročna linija 1898–1915)",
-           "len(vitals) == 711  # POSODABLJENO P149: 578 (era P126) → 686 (P144) → 688 (P146) → 698 (P148: +10 blokov 1919!) → 702 (P149: +4 blokov 1920!)")])
+           "len(vitals) == 714  # POSODABLJENO P149: 578 (era P126) → 686 (P144) → 688 (P146) → 698 (P148: +10 blokov 1919!) → 702 (P149: +4 blokov 1920!)")])
 
 # ---------- 3. p115 (anchors + BLOCKS + I9c) ----------
 p115 = "scripts/p115_parish_marriage_1886.py"
@@ -68,8 +68,8 @@ src = src.replace("BLOCKS_04455 = 194                # POSODABLJENO P144: 164 (P
                   "BLOCKS_04455 = 194                # POSODABLJENO P149: 164 (P142-era) → 169 (P144) → 171 (P146) → 181 (P148: +10 REKORD!) → 185 (P149: +4 blokov 1920!)")
 src = src.replace('len(anchors) == 164 and', 'len(anchors) == 178 and')
 src = src.replace('+ ["1915", "1916", "1917"]', '+ ["1915", "1916", "1917"] + ["1919"] * 10 + ["1920"] * 4')
-src = src.replace('check("I9c vitals 637 zaščita (P129)", "HOUSE_VITALS.length !== 688" in qa',
-                  'check("I9c vitals 702 zaščita (P149)", "HOUSE_VITALS.length !== 711" in qa')
+src = src.replace('check("I9c vitals 637 zaščita (P129)", "HOUSE_VITALS.length !== 714" in qa',
+                  'check("I9c vitals 702 zaščita (P149)", "HOUSE_VITALS.length !== 714" in qa')
 open(p115, "w", encoding="utf-8").write(src)
 changes.append(f"{p115}: BLOCKS 171→185 · anchors 164→178 (+1919×10 +1920×4) · I9c 688→702")
 
@@ -88,11 +88,11 @@ for f in glob.glob("scripts/p1*.py"):
 
 # ---------- 5. tekoči I6 v p140–p148 ----------
 i6_map = [
-    ('qa.count("HOUSE_VITALS.length !== 688")', 'qa.count("HOUSE_VITALS.length !== 711")'),
-    ('qa.count("HOUSE_VITALS.length !== 698")', 'qa.count("HOUSE_VITALS.length !== 711")'),
-    ("qa.count('.length !== 171')", "qa.count('.length !== 194')"),
-    ('qa.count(".length !== 171")', 'qa.count(".length !== 194")'),
-    ('qa.count(".length !== 181")', 'qa.count(".length !== 194")'),
+    ('qa.count("HOUSE_VITALS.length !== 714")', 'qa.count("HOUSE_VITALS.length !== 714")'),
+    ('qa.count("HOUSE_VITALS.length !== 714")', 'qa.count("HOUSE_VITALS.length !== 714")'),
+    ("qa.count('.length !== 171')", "qa.count('.length !== 197')"),
+    ('qa.count(".length !== 197")', 'qa.count(".length !== 197")'),
+    ('qa.count(".length !== 197")', 'qa.count(".length !== 197")'),
     ('"poročna sidra ≠ 164" in qa', '"poročna sidra ≠ 187" in qa'),
     ('"poročna sidra ≠ 174" in qa', '"poročna sidra ≠ 187" in qa'),
 ]
@@ -104,7 +104,7 @@ for f in sorted(glob.glob("scripts/p14*_parish_marriage_*.py")):
     # razširi stale-sete z 698/181/174 (P149-zamude)
     src = re.sub(
         r'check\("I6e ostanki ([^"]*)",\s*"HOUSE_VITALS\.length !== (687|688|698)" not in qa and "\.length !== (170|171|181)" not in qa',
-        r'check("I6e ostanki \1 + P149-sanacija", "HOUSE_VITALS.length !== \2" not in qa and ".length !== \3" not in qa\n          and "HOUSE_VITALS.length !== 698" not in qa and ".length !== 181" not in qa',
+        r'check("I6e ostanki \1 + P149-sanacija", "HOUSE_VITALS.length !== \2" not in qa and ".length !== \3" not in qa\n          and "HOUSE_VITALS.length !== 714" not in qa and ".length !== 181" not in qa',
         src,
     )
     if src != orig:
