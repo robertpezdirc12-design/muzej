@@ -230,14 +230,14 @@ def verify():
     inset = sorted(houses - PT_GAP_HOUSES, key=lambda x: int(float(x)))
     inv["I7_pt_consistency"] = (
         houses == (set(inset) | set(gap))
-        and len(gap) == 15  # POSODABLJENO P139: 13 (era P126) → 14 (h45 prek 04105-1897 — skriptin filter VES 1897!); POSODABLJENO P154: 14 → 15 (h47 prek mrliške 04894-1888 — Klobučar-soseda h46!)
+        and len(gap) == 16  # POSODABLJENO P139: 13 → 14 (h45 prek 04105-1897); P154: 14 → 15 (h47 prek mrliške 04894-1888!); POSODABLJENO P155: 15 → 16 (h55 prek mrliške 04894-1889 — Šimec-luknja!)
         and all(41 <= float(h) <= 60 for h in gap)
         # POSODABLJENO P139: inset-pogoj (≤40/≥61/½) UMAKNJEN — h41+h50 sta v vzorcu
         # prek 04455-1903 (P132) in nista v P80_PT_GAP dokumentiranih 13 dokazih luknje
         # (uskladitev s qa-parish P80_PT_GAP semantiko: gap = fiksen seznam 13 dokazov!)
         and all(h in houses for h in (v["houseNo"] for v in sample))
-        and len(vitals) == 754  # POSODABLJENO P151: 578 (era P126) → … → 714 (P151 — KONEC 04455!); P153: 714 → 725 (+11 blokov 04894-1887); POSODABLJENO P154: 725 → 754 (+29 blokov mrliške 04894-1888 — REKORDNO leto: 29 Griblje-vpisov!)
-        and len(houses) == 80  # POSODABLJENO P150: … → 78 (P150: +h92/h72 poročna 1921!; skriptin filter VES 1897 → +h45 — P139); POSODABLJENO P154: 78 → 80 (+h47 LUKNJA-dokaz + h83 NOVA — mrliška 04894-1888 REKORD!)
+        and len(vitals) == 762  # POSODABLJENO P151: 578 (era P126) → … → 714 (P151 — KONEC 04455!); P153: 714 → 725 (+11 blokov 04894-1887); P154: 725 → 754 (+29 blokov mrliške 04894-1888 — REKORDNO leto!); POSODABLJENO P155: 754 → 762 (+8 blokov mrliške 04894-1889 — NAJNIŽE leto!)
+        and len(houses) == 81  # P154: 78 → 80 (+h47 +h83!); POSODABLJENO P155: 80 → 81 (+h55 — mrliška 04894-1889, krstni dokazi izven filtra!)
         and set(inset) - {"41", "50"} <= pts  # POSODABLJENO P139: h41+h50 (04455-1903, P132) sta v luknji
         # 41–60 brez PT-nabora — izjemi kot pri inset-pogoju zgoraj
     )

@@ -31,8 +31,8 @@ EXPECTED_EXCLUDED = 13           # skupine vrstic izven Gribelj + 1889-restart
 EXPECTED_ANOMALIES = 12
 EXPECTED_CROSSCHECKS = 10
 GRIBLJE_HOUSES = "1,1,3,7,8,8,13,21,21,24,25,26,26,35,35,36,41,47,53,60,60,61,61,61,65,69,72,72,83"
-VITALS_TOTAL = 754               # 725 + 29!
-BLOKI_04894 = 55                 # 26 + 29!
+VITALS_TOTAL = 762               # POSODABLJENO P155: 754 + 8!
+BLOKI_04894 = 63                 # POSODABLJENO P155: 55 + 8!
 P80_HOUSES = 79                  # 77 + 2 (h47/h83)!
 NEW_SCANS = [13, 14, 15, 16, 18, 19, 20, 21]
 
@@ -167,15 +167,15 @@ def main():
     # ---------- I6: parish.ts ----------
     d1888 = [v for v in vit if v["bookSignature"] == "04894" and v["year"] == 1888]
     d04894 = [v for v in vit if v["bookSignature"] == "04894"]
-    check("I6a vitals 754", len(vit) == VITALS_TOTAL, str(len(vit)))
-    check("I6b mrliški bloki 04894 = 55", len(d04894) == BLOKI_04894, str(len(d04894)))
+    check("I6a vitals 762 (P155)", len(vit) == VITALS_TOTAL, str(len(vit)))
+    check("I6b mrliški bloki 04894 = 63 (P155)", len(d04894) == BLOKI_04894, str(len(d04894)))
     check("I6c bloki 1888 = 29", len(d1888) == 29, str(len(d1888)))
     check("I6d bloki 1888: skeni 13–21 + stran == sken − 1",
           all(v["scan"] and 13 <= v["scan"] <= 21 and v["page"] == v["scan"] - 1 for v in d1888), "")
-    check("I6d2 bloki 1889+ ne obstajajo (P155-lead!)",
-          not [v for v in vit if v["bookSignature"] == "04894" and (v["year"] or 0) >= 1889], "")
+    check("I6d2 bloki 1890+ ne obstajajo (P156-lead!)",
+          not [v for v in vit if v["bookSignature"] == "04894" and (v["year"] or 0) >= 1890], "")
     p80_script = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
-    check("I6f p80-skripta pini 754 + 55", "len(vitals) == 754" in p80_script, "")
+    check("I6f p80-skripta pini 762 + 63", "len(vitals) == 762" in p80_script, "")
 
     # ---------- I7: max-zoom popravki (4!) ----------
     r20 = next((e for e in ent if e["row"] == 20), None)

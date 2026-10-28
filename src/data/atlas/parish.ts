@@ -839,6 +839,93 @@ export const HOUSE_VITALS: HouseVital[] = [
     whatEn: "died Peter Križan [~ Hrižan], a half-farmer wheelwright and widower, 80 years (Dec 25, buried Dec 27) — OLD AGE (= the 1st 'old age' cause of the death line!); received the sacraments (1); NO SIGNATURE; the LAST Griblje entry of 1888; h3 = P153-1887 (Doroteja 39!) — the Križan house ×2; 5 days before the year's end",
     status: "DOCUMENTED",
   },
+  // ——— P155: MRLIŠKA KNJIGA 04894 — leto 1889 = 4. polno leto mrliške linije = NAJNIŽE leto ———
+  // 8 Griblje-vpisov / 36 vrstic (13 → 13 → 29 → 8 = povratek na dno!) — s21-dno (r1–6) + s22–s24 (r7–r36);
+  // meja 1890 = INLINE »1890.« v mesec-stolpcu restartne vrstice na s24 (3. stil meje!); glave s22–s24 izpisane;
+  // ★★★ 92-letni REKORD linije (r27 h55 Peter Šimec kolar!) + ★★★ 2 krstna↔mrliška vezi dojenčkov (h69 Janez 16 dni
+  // + h65 Barbara 13 dni — SKLAD NA DAN!) + ★★ h83 sib-swap (†31.10. → krst nov.!) + ★★ P154-lead-popravek 67→49
+  // (marker-9 forenzika!) + ★ ¼ ure (izenačen rekord!) + 0 novih p80-hiš (h30/h48/h55 = 1. mrliški vpisi!);
+  // dokaz: research/issue17/parish-death-1889.json (10 izključenih skupin + 8 anomalij + 10 križnih)
+  {
+    houseNo: "53",
+    bookSignature: "04894",
+    year: 1889,
+    scan: 21,
+    page: 20,
+    whatSi: "umrla Ana Perdihec [~ Perdirec — cf. cluster Perdinec/Pendirec/Pozdirec/Pegdirec/Perdivec!], omgina [~] ¼ žemlj., 49 let [~ — ★★★ P154-LEAD-POPRAVEK: provizorna 67 → max-zoom 8×: 49 (4-forma + 9-forma z dolgim repom; VLM 47 TUDI napačen — VLM bere 9 kot 7!); marker-9 referenca!] (25. 1., pokop 27. 1.) — Mertvod [~]; 'sv. olje' [~] izpisano v previden-stolpcu (= poslednje maziljenje — 2. izpisani sakrament linije!); BREZ PODPISA; P155-LEAD (P154-napovedan!); h53 = 3. smrt v 3. letih (1887 Marija Šimec 62 + 1888 Janez Perdinec + 1889 Ana!)",
+    whatEn: "died Ana Perdihec [~ Perdirec — cf. the Perdinec/Pendirec/Pozdirec/Pegdirec/Perdivec cluster!], a [~] widow of a quarter-smallholder, 49 years [~ — ★★★ THE P154-LEAD CORRECTION: the provisional 67 → the max-zoom 8×: 49 (the 4-form + the 9-form with a long tail; the VLM's 47 ALSO wrong — the VLM reads 9 as 7!); the marker-9 reference!] (Jan 25, buried Jan 27) — Mertvod [~ childbed fever?]; 'holy oil' [~] written in the sacraments column (= the last rites — the 2nd WRITTEN sacrament of the line!); NO SIGNATURE; the P155-LEAD (announced by P154!); h53 = the 3rd death in 3 consecutive years (1887 Marija Šimec 62 + 1888 Janez Perdinec + 1889 Ana!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "69",
+    bookSignature: "04894",
+    year: 1889,
+    scan: 22,
+    page: 21,
+    whatSi: "umrl Janez Brinec, ½ žemljaškov sin, 16 DNI (16. 4., pokop 17. 4.) — Božjast; brez oznake; BREZ PODPISA; ★★★ KRSTNA↔MRLIŠKA VEZ #1 mrliške linije: krstna 04105-1889 h69 Janez 1./2. 4. (oče Janez Brinec × mati Barbara Strauš) → † 16./17. 4. = ISTI OTROK — SKLAD NA DAN!; h69 = Brinec-hiša (1886 vdova Podec + 1888 Marija 5 dni + poročna 1887 + krsti 1888–1895 — isti oče Janez ×5!)",
+    whatEn: "died Janez Brinec, a half-farmer's son, 16 DAYS old (Apr 16, buried Apr 17) — cramps; no mark; NO SIGNATURE; ★★★ THE BAPTISM↔DEATH LINK #1 of the death line: the baptism register 04105-1889 h69 Janez born Apr 1/2 (father Janez Brinec × mother Barbara Strauš) → died Apr 16/17 = THE SAME CHILD — agreement to the day!; h69 = the Brinec house (1886 the widow Podec + 1888 Marija 5 days + the 1887 marriage + the baptisms 1888–1895 — the same father Janez ×5!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "30",
+    bookSignature: "04894",
+    year: 1889,
+    scan: 22,
+    page: 21,
+    whatSi: "umrla Marija Milek [~ Mileš], omgjena [~] ½ žemljatkinja, 66 let (16. 6., pokop 17. 6.) — Pljučnica; previdna (1); BREZ PODPISA; h30 = 1. MRLIŠKI vpis hiše 30 (poročna 1889 №8 ženin Johann MILEK 60 LET, GRIBLJE 30 — poroka 14. 10. 1889, 4 meseci PO tej smrti! + krstna 1890 dvojčka oče Janez Milek × mati Marjeta Pendirec [~]!) — Milek-mreža h30/65/22!",
+    whatEn: "died Marija Milek [~ Mileš], a [~] married half-smallholderess, 66 years (Jun 16, buried Jun 17) — pneumonia; received the sacraments (1); NO SIGNATURE; h30 = the 1st DEATH entry of house 30 (the marriage 1889 №8 groom Johann MILEK, 60 YEARS OLD, GRIBLJE 30 — married Oct 14, 1889, 4 months AFTER this death! + the baptism 1890 twins father Janez Milek × mother Marjeta Pendirec [~]!) — the Milek network h30/65/22!",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "55",
+    bookSignature: "04894",
+    year: 1889,
+    scan: 23,
+    page: 22,
+    whatSi: "umrl Peter Šimec, ½ žemlj. in KOLAR (2. kolar linije za 1888-r102 Križan h3!), 92 LET (26. 10., pokop 28. 10.) — Vodenica; previden (1); Andrej Glibe (POLNI PODPIS!); ★★★ REKORD LINIJE: najstarejši človek 04894 (prej 80-P154-r102 / 78-P154-r99 / 74-P153!) + ★★ hiša 55 FORENZIKA: 8× = DVE ISTI 5-formi (ne 53/58! — cf. r4-h53 5+3!); 1. mrliški vpis h55 (krstna 1890: 'Šimec zdaj tudi na luknji 55' — ŠIMEC-VEZ!); VLM '72' ZAVRJEN (9-as-7!)",
+    whatEn: "died Peter Šimec, a half-smallholder AND WHEELWRIGHT (the 2nd wheelwright of the line after 1888-r102 Križan h3!), 92 YEARS old (Oct 26, buried Oct 28) — dropsy; received the sacraments (1); Andrej Glibe (the FULL SIGNATURE!); ★★★ THE LINE RECORD: the oldest person of 04894 (the previous 80-P154-r102 / 78-P154-r99 / 74-P153!) + ★★ house 55 FORENSICS: 8× = TWO IDENTICAL 5-forms (not 53/58! — cf. r4-h53 5+3!); the 1st death entry of h55 (the baptism 1890: 'Šimec now also on the gap-house 55' — the ŠIMEC link!); the VLM '72' REJECTED (the 9-as-7 error!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "83",
+    bookSignature: "04894",
+    year: 1889,
+    scan: 23,
+    page: 22,
+    whatSi: "umrla Barbara Radovič, hčimika? [?] in čevljarjeva? [~] hiči (stan delno neberljiv!), ¼ URE (31. 10., pokop 1. 11. — pokop z mesecem 'Nov.'!) — Slabost; brez oznake (—); Antn. Glibe; ★★ ¼ URE = IZENAČEN najkrajši rekord linije (P153-r35!; VLM '4 ure' ZAVRJEN — ulomek 1/4 forenzično!) + ★★ h83 SIB-SWAP: † Barbara (31. 10.) → krstna-1889 Barbara (nov.) = IMENSKA NASLEDNICA v istem mesecu!; h83 = 2. smrt hiše (1888 r23 Marija 'Vsled těžkega poroda'!)",
+    whatEn: "died Barbara Radovič, a [?] little-daughter? in the shoemaker's? [~] house (the status partly illegible!), ¼ of an HOUR (Oct 31, buried Nov 1 — the burial with the month 'Nov.'!) — weakness; no mark (—); Antn. Glibe; ★★ ¼ HOUR = TIED for the shortest lifespan of the line (P153-r35!; the VLM '4 hours' REJECTED — the 1/4 fraction forensically!) + ★★ h83 SIB-SWAP: † Barbara (Oct 31) → the baptism-1889 Barbara (Nov.) = THE NAMESAKE SUCCESSOR in the same month!; h83 = the house's 2nd death (1888 r23 Marija 'after a difficult childbirth'!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "5",
+    bookSignature: "04894",
+    year: 1889,
+    scan: 23,
+    page: 22,
+    whatSi: "umrla Katarina Strauciž [~ Straucif/Strucelj — konec neberljiv, 3 branja! — paralela Strauš-clusteru h69/h72], samska [~] ½ žemlj. hiči [~ hči], 58 let (20. 11., pokop 22. 11.) — Vodenica; previdna (1); Jos. Romey [~ Rauq]; ★ hiša 5 FORENZIKA: 7× = ena 5-forma + pika = h5 (ne 6/65!); h5 že v mrliškem 1886 (Barbara Brinec 2 leti) + krstna 1891–1919 (Torec/Štrucelj!)",
+    whatEn: "died Katarina Strauciž [~ Straucif/Strucelj — the surname ending illegible, 3 readings! — a parallel to the Strauš cluster of h69/h72], single [~], of the half-farm house [~ daughter], 58 years (Nov 20, buried Nov 22) — dropsy; received the sacraments (1); Jos. Romey [~ Rauq]; ★ house 5 FORENSICS: 7× = a single 5-form + a period = h5 (not 6/65!); h5 already in the 1886 death register (Barbara Brinec, 2 years) + the baptisms 1891–1919 (Torec/Štrucelj!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "65",
+    bookSignature: "04894",
+    year: 1889,
+    scan: 23,
+    page: 22,
+    whatSi: "umrla Barbara Milek [~ Mileš], ½ žemljaškova hiči, 13 DNI (6. 12., pokop 7. 12.) — Gliste; brez oznake (—); Jos. Romey [~ Rauq]; ★★★ KRSTNA↔MRLIŠKA VEZ #2: krstna 04105-1889 h65 Barbara 23. 11. (oče Matija Milek) → † 6./7. 12. = ISTA OTROK — SKLAD NA DAN! + ★★ HIŠA-FORENZIKA: max-zoom '65.' (začetna branja '68' NAPAČNA!); h65 = Milek-hiša (1887 Mihael 49 + 1888 Katarina 9 + poročna 1903 MÜCK [~ Milek]!)",
+    whatEn: "died Barbara Milek [~ Mileš], of the half-farmer's house, 13 DAYS old (Dec 6, buried Dec 7) — worms; no mark (—); Jos. Romey [~ Rauq]; ★★★ THE BAPTISM↔DEATH LINK #2: the baptism register 04105-1889 h65 Barbara baptized Nov 23 (father Matija Milek) → died Dec 6/7 = THE SAME CHILD — agreement to the day! + ★★ HOUSE FORENSICS: the max-zoom '65.' (the initial readings '68' WRONG!); h65 = the Milek house (1887 Mihael 49 + 1888 Katarina 9 + the 1903 marriage MÜCK [~ Milek]!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "48",
+    bookSignature: "04894",
+    year: 1889,
+    scan: 24,
+    page: 23,
+    whatSi: "umrl Jurij Klobučar (č jasno — 3×!), ½ žemljaškov sin, 30 let (7. 12., pokop 9. 12.) — Jetika; previden (1); Jos. Romey [~ Rauq]; ZADNJI gribeljski vpis 1889 (meja 1890 v isti strani!); ★ hiša 48 FORENZIKA: 8× = 4-forma + pravi 8 (nasprotje 5-formi r27!) = h48 — 1. MRLIŠKI vpis h48 (poročna 1898 Anna KLOBUČAR + krstna 1898 mati Katarina Klobučar + Klobučar-soseda h46-1887!)",
+    whatEn: "died Jurij Klobučar (the č clear — 3×!), a half-farmer's son, 30 years (Dec 7, buried Dec 9) — diphtheria; received the sacraments (1); Jos. Romey [~ Rauq]; the LAST Griblje entry of 1889 (the 1890 boundary on the very same page!); ★ house 48 FORENSICS: 8× = the 4-form + a true 8 (contrasting the 5-forms of r27!) = h48 — the 1st DEATH entry of h48 (the 1898 marriage Anna KLOBUČAR + the 1898 baptism mother Katarina Klobučar + the Klobučar-neighbour h46-1887!)",
+    status: "DOCUMENTED",
+  },
   // ——— P80 razširitev: POROČNA KNJIGA 04455 1873–1922 — okvir 1886 (skeni 61–65 == Pag. 60–64, vpisi 1–24; Pag. = sken − 1 v razponu 61–66) ———
   // P115 (faza 2) RE-READ: 8 blokov popravljenih na podlagi max-zoom branja (h36→56, h63→65, h15→16, h25→Priložje
   // + priimki Pegdirec/Klepec/Požek/Tomec/Straus/Križan) — evidence: research/issue17/parish-marriage-1886.json

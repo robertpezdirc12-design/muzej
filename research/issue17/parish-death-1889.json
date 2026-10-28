@@ -1,0 +1,374 @@
+{
+ "phase": "P155",
+ "title": "MRLIŠKA knjiga 04894 — leto 1889 = 4. polno leto mrliške linije = NAJNIŽE leto (8 Griblje-vpisov / 36 vrstic — po rekordnem 1888 ×2.2 povratek na dno linije!) + ★★ 92-LETNI REKORD (Peter Šimec h55 = najstarejši človek linije!) + 2 KRSTNA↔MRLIŠKA vezi dojenčkov (h69 Janez 16 dni + h65 Barbara 13 dni!) + h83 sib-swap (†Barbara 31.10. → krst Barbara nov.!) + ★★★ P154-LEAD-POPRAVEK: starost 67 → 49 (max-zoom 8× > VLM > provizorna napoved!)",
+ "status": "SAMPLE-TRANSCRIPTION-D1889",
+ "issuedAt": "2026-10-28",
+ "source": {
+  "book": "Mrtvaška knjiga 04894, župnija Podzemelj (Matricula Online)",
+  "url": "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04894/",
+  "scans": "s21-dno (1889 r1–6, restart za P154-markerjem »1 8 8 9«) + s22–s24 (r7–r36 == str. 21–23); meja 1889/1890 = INLINE »1890.« v datumskem stolpcu restartne vrstice na s24 (vrsta 1890-r1: Januarj 1./2. — 3. STIL MEJE mrliške: po inline-mesecu 1886/87 [P80] in velikih cifrih 1887/88+1888/89 [P153/P154]!)",
+  "inventory": "256 slik (P80)",
+  "pageMapping": "stran == sken − 1 (Stran 20–23 == s21–s24; P80-invarianta mrliške, 10. potrditev!)",
+  "reading": "4× celostansko (s21–s24, glm-5v-turbo, thinking-off, retry) + direktna AI-vizualna forenzika vsakih 8 GRIBLJE-vrstic (kontaktne mape 130-px trakov za kalibracijo y-centrov + max-zoom celice 3–9×: hišne št. r27/r30/r32/r33 + starosti r4/r17/r27/r28/r32 + stani r28/r30 + priimki r4/r30 + vzroki r7/r8) + marker-9 referenca (P154-rows3 s21-marker2-right: 9 = zaprta zanka + DOLGI REP!) + 2× neodvisna VLM-miselnost (celostansko + celotna vrstica) — POENOSTAVLJENA metoda glede na 1888 (116× trak-pass → 0; kompromis dokumentiran v honesty H10)"
+ },
+ "frame": {
+  "type": "leto 1889 = vrste 1–36 (s21-dno r1–6 + s22 r7–r19 + s23 r20–r32 + s24 r33–r36; restart 1.1.1890 na s24)",
+  "layout": "Mrtvaška knjiga: zaporedna št. | mesec + dan smrti | dan pokopa | bivališče (vas + hiša) | ime, priimek in stan | vere/spola | starost | bolezen ali vzrok | previden | podpis duhovnika | opomba",
+  "pageMapping": "stran == sken − 1 (Stran 21–23 == s22–s24)",
+  "boundaries": {
+   "1888→1889": "s21 (str. 20): veliki cifri »1 8 8 9« čez prazno vrsto za r102 — P154 FORENZIČNO POTRDILA (9 z dolgim repom!); restart r1 = Januarj 9. Gradac 64 (Marija Kovačič [~], 2½ leta [~])",
+   "1889→1890": "s24 (str. 23): INLINE »1890.« v MESEC-stolpcu restartne vrstice (nad »Januarij 1. 2.«, 1890-r1 = Zemelj 17 Jurij Muc 3 ure) — NAPISANO MALO, z nimi (ne veliki cifri čez prazno vrsto!) — 3. stil meje mrliške linije; 1890 r1–r8 na s24-dno (P156-okvir!), r9+ = s25 (glava »Leto 1890«) — meja 1890/91 PRED s32 (s32-top = »Leto 1891« že potrjen!)",
+   "lead-1890": "GRIBLJE 90 — g. Peter Klambič [~ Krambič-VLM], učitelj, 20½ let [~ 20¾], Jetika (26./28. 1. 1890) = P156-LEAD: 1. stan 'učitelj' mrliške linije + ★ h90 = ŠOLSKA HIŠA (krstna 04105-1890 h90: 'oče Franc Kopitar UČITELJ — šolska hiša' 16./17. 11. 1890!) — učiteljska zamenjava v letu 1890? († Klambič jan. → Kopitar nov.? ali [~]) + g. = 'gospod' častni naslov (1. mrliške!)"
+  },
+  "glave": "s22–s24: letnica-glava »Leto 1889« IZPISANA (3/3 skenov — tiskana tabla + ročna letnica; s21-restart BREZ glave — sredinski restart brez ponovitve!)"
+ },
+ "entries": [
+  {
+   "row": 4,
+   "houseNo": "53",
+   "bookSignature": "04894",
+   "year": 1889,
+   "scan": 21,
+   "page": 20,
+   "mesec": "Januarj",
+   "smrt": "25.",
+   "pokop": "27.",
+   "ime": "Ana Perdihec [~ Perdirec — Kurrent; VLM: 'Perdihrec']",
+   "stan": "omgina [~] ¼ žemlj.",
+   "starost": "49 let",
+   "bolezen": "Mertvod [~]",
+   "previden": "sv. olje [~] (izpisano v previden-stolpcu = poslednje maziljenje!)",
+   "duhovnik": null,
+   "whatSi": "umrla Ana Perdihec [~ Perdirec — cf. cluster Perdinec/Pendirec/Pozdirec/Pegdirec/Perdivec: 1890 h53 poročna Johann Perdinec + 1919 h48 krst Jurij Perdivec!], omgina [~] ¼ žemlj., 49 let (25. 1., pokop 27. 1.) — Mertvod [~]; 'sv. olje' [~] izpisano v previden-stolpcu (= poslednje maziljenje — 2. izpisani sakrament mrliške za P153-r66!); BREZ PODPISA; ★★★ P154-LEAD-POPRAVEK: starost 67 (P154 provizorna) → 49 (max-zoom 8×: 4-forma + 9-forma z dolgim repom; VLM neodvisno 47 — TUDI NAPAČEN: VLM bere 9-formo kot 7!; marker-9 referenca »1 8 8 9« z dolgim repom = ključ forenze!) = DVOJNI POPRAVEK NAPovedi; h53 = 3. smrt v 3. letih zapored (1887 Marija Šimec 62 + 1888 Janez Perdinec + 1889 Ana!)",
+   "whatEn": "died Ana Perdihec [~ Perdirec — cf. the Perdinec/Pendirec/Pozdirec/Pegdirec/Perdivec cluster: the 1890 h53 marriage Johann Perdinec + the 1919 h48 baptism Jurij Perdivec!], a [~] widow of a quarter-smallholder, 49 years (Jan 25, buried Jan 27) — Mertvod [~ childbed fever?]; 'holy oil' [~] written in the sacraments column (= the last rites — the 2nd WRITTEN sacrament of the death line after P153-r66!); NO SIGNATURE; ★★★ THE P154-LEAD CORRECTION: the age 67 (P154 provisional) → 49 (max-zoom 8×: the 4-form + the 9-form with a long tail; the VLM independently 47 — ALSO WRONG: the VLM reads the 9-form as 7!; the marker-9 reference »1 8 8 9« with the long tail = the forensics key!) = a DOUBLE correction of the announced lead; h53 = the 3rd death in 3 consecutive years (1887 Marija Šimec 62 + 1888 Janez Perdinec + 1889 Ana!)",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 11,
+   "houseNo": "69",
+   "bookSignature": "04894",
+   "year": 1889,
+   "scan": 22,
+   "page": 21,
+   "mesec": "April",
+   "smrt": "16.",
+   "pokop": "17.",
+   "ime": "Janez Brinec",
+   "stan": "½ žemljaškov sin",
+   "starost": "16 dni",
+   "bolezen": "Božjast",
+   "previden": "—",
+   "duhovnik": null,
+   "whatSi": "umrl Janez Brinec, ½ žemljaškov sin, 16 DNI (16. 4., pokop 17. 4.) — Božjast; brez previden-oznake; BREZ PODPISA; ★★★ KRSTNA↔MRLIŠKA VEZ #1 mrliške linije: krstna 04105-1889 h69 = »krščen Janez (1./2. 4.) — oče Janez Brinec ¼ zemljišt, mati Barbara Strauš« → † 16./17. 4. = ISTI OTROK (rojen 1./2. 4. → umrl 16./17. 4. = 16 dni — SKLAD NA DAN!); h69 = Brinec-hiša: 1886 vdova Podec + 1888 Marija 5 dni + 1889 Janez 16 dni + poročna 1887 ženin Johann Brine? + krsti 1888/1889/1890/1894/1895 — 5-krstna Brinec-veriga istega očeta!",
+   "whatEn": "died Janez Brinec, a half-farmer's son, 16 DAYS old (Apr 16, buried Apr 17) — cramps; no sacrament mark; NO SIGNATURE; ★★★ THE BAPTISM↔DEATH LINK #1 of the death line: the baptism register 04105-1889 h69 = 'baptized Janez (Apr 1/2) — father Janez Brinec ¼ smallholder, mother Barbara Strauš' → died Apr 16/17 = THE SAME CHILD (born Apr 1/2 → died Apr 16/17 = 16 days — agreement to the day!); h69 = the Brinec house: 1886 the widow Podec + 1888 Marija 5 days + 1889 Janez 16 days + the 1887 marriage groom Johann Brine? + the baptisms 1888/1889/1890/1894/1895 — the 5-baptism Brinec chain of the same father!",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 17,
+   "houseNo": "30",
+   "bookSignature": "04894",
+   "year": 1889,
+   "scan": 22,
+   "page": 21,
+   "mesec": "Junij",
+   "smrt": "16.",
+   "pokop": "17.",
+   "ime": "Marija Milek [~ Mileš]",
+   "stan": "omgjena [~] ½ žemljatkinja",
+   "starost": "66 let",
+   "bolezen": "Pljučnica",
+   "previden": "1",
+   "duhovnik": null,
+   "whatSi": "umrla Marija Milek [~ Mileš], omgjena [~] ½ žemljatkinja, 66 let (16. 6., pokop 17. 6.) — Pljučnica; previdna (1); BREZ PODPISA; h30 = 1. MRLIŠKI vpis hiše 30 (hiša že v korpusu: poročna 1889 №8 ženin Johann MILEK 60 LET, GRIBLJE 30 — poroka 14. 10. 1889, 4 meseci PO tej smrti! + krstna 1890 dvojčka Janez+Marija oče Janez Milek × mati Marjeta Pendirec [~]!) — Milek-mreža čez hiše 30/65/22!",
+   "whatEn": "died Marija Milek [~ Mileš], a [~] married half-smallholderess, 66 years (Jun 16, buried Jun 17) — pneumonia; received the sacraments (1); NO SIGNATURE; h30 = the 1st DEATH entry of house 30 (the house already in the corpus: the marriage 1889 №8 groom Johann MILEK, 60 YEARS OLD, GRIBLJE 30 — married Oct 14, 1889, 4 months AFTER this death! + the baptism 1890 twins Janez+Marija father Janez Milek × mother Marjeta Pendirec [~]!) — the Milek network across houses 30/65/22!",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 27,
+   "houseNo": "55",
+   "bookSignature": "04894",
+   "year": 1889,
+   "scan": 23,
+   "page": 22,
+   "mesec": "Oktober",
+   "smrt": "26.",
+   "pokop": "28.",
+   "ime": "Peter Šimec",
+   "stan": "½ žemlj. in kolar",
+   "starost": "92 let",
+   "bolezen": "Vodenica",
+   "previden": "1",
+   "duhovnik": "Andrej Glibe (polni podpis)",
+   "whatSi": "umrl Peter Šimec, ½ žemlj. in KOLAR (2. kolar linije za 1888-r102 Peter Križan h3!), 92 LET (26. 10., pokop 28. 10.) — Vodenica; previden (1); Andrej Glibe (POLNI PODPIS — potrditev And.-kratic!); ★★★ REKORD LINIJE: 92 let = NAJSTAREJŠI ČLOVEK mrliške 04894 (prejšnji maksimum: 80 — P154-r102 Peter Križan; 74 — P153 Katarina Klobučar; 78 — P154-r99 Marija Požek!) + ★★ hiša 55 FORENZIKA: 8× max-zoom = DVE ISTI 5-FORMI (flag-vrh + enojna zanka) — ne 53 (3-forma: dvojni zanki brez flaga, cf. r4-h53!) in ne 58! (prva omemba h55 v mrliški; krstna: 'Šimec zdaj tudi na luknji 55' 1890 Nikolaj Šimec — ŠIMEC-VEZ h55!); VLM '72 let' ZAVRJEN (9-as-7!)",
+   "whatEn": "died Peter Šimec, a half-smallholder AND WHEELWRIGHT (the 2nd wheelwright of the line after 1888-r102 Peter Križan h3!), 92 YEARS old (Oct 26, buried Oct 28) — dropsy; received the sacraments (1); Andrej Glibe (the FULL SIGNATURE — confirming the And.-initials!); ★★★ THE LINE RECORD: 92 years = THE OLDEST PERSON of the death register 04894 (the previous maximum: 80 — P154-r102 Peter Križan; 74 — P153 Katarina Klobučar; 78 — P154-r99 Marija Požek!) + ★★ house 55 FORENSICS: 8× max-zoom = TWO IDENTICAL 5-FORMS (flag-top + single loop) — not 53 (the 3-form: two stacked loops without the flag, cf. r4-h53!) and not 58! (the first mention of h55 in the death register; the baptism register: 'Šimec now also on the gap-house 55' 1890 Nikolaj Šimec — the ŠIMEC link h55!); the VLM '72 years' REJECTED (the 9-as-7 error!)",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 28,
+   "houseNo": "83",
+   "bookSignature": "04894",
+   "year": 1889,
+   "scan": 23,
+   "page": 22,
+   "mesec": "Oktober",
+   "smrt": "31.",
+   "pokop": "1. Nov.",
+   "ime": "Barbara Radovič",
+   "stan": "hčimika? [?] in čevljarjeva? [~] hiči",
+   "starost": "¼ ure",
+   "bolezen": "Slabost",
+   "previden": "—",
+   "duhovnik": "Antn. Glibe",
+   "whatSi": "umrla Barbara Radovič, hčimika? [?] in čevljarjeva? [~] hiči (stan delno neberljiv — 5× zoom!), ¼ URE (31. 10., pokop 1. 11. — pokop z mesecem 'Nov.' = november-prelom pri POKOPU!) — Slabost; brez oznake (—); Antn. Glibe; ★★ ¼ URE = IZENAČEN NAJKRAJŠI ŽIVLJENJSKI DOBA LINIJE (P153-r35 Janez Križan ¼ ure!) — VLM '4 ure' ZAVRJEN (ulomek 1/4 forenzično!) + ★★ h83 SIB-SWAP: † Barbara (31. 10., ¼ ure) → krstna 04105-1889 h83 = »krščena Barbara (november [~]) — oče [?] Radovič, mati Katarina Milkovič [~]« = IMENSKA NASLEDNICA v istem mesecu! (2. sib-swap linije za P84-h83-1888-Marija!); h83 = 2. smrt hiše (1888 r23 Marija 'Vsled těžkega poroda'!)",
+   "whatEn": "died Barbara Radovič, a [?] little-daughter? in the shoemaker's? [~] house (the status partly illegible — 5× zoom!), ¼ of an HOUR (Oct 31, buried Nov 1 — the burial with the month 'Nov.' = the November break at the BURIAL!) — weakness; no mark (—); Antn. Glibe; ★★ ¼ HOUR = TIED for the SHORTEST LIFESPAN of the line (P153-r35 Janez Križan ¼ hour!) — the VLM '4 hours' REJECTED (the 1/4 fraction forensically!) + ★★ h83 SIB-SWAP: † Barbara (Oct 31, ¼ hour) → the baptism register 04105-1889 h83 = 'baptized Barbara (November [~]) — father [?] Radovič, mother Katarina Milkovič [~]' = THE NAMESAKE SUCCESSOR in the same month! (the 2nd sib-swap of the line after P84-h83-1888-Marija!); h83 = the house's 2nd death (1888 r23 Marija 'after a difficult childbirth'!)",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 30,
+   "houseNo": "5",
+   "bookSignature": "04894",
+   "year": 1889,
+   "scan": 23,
+   "page": 22,
+   "mesec": "November",
+   "smrt": "20.",
+   "pokop": "22.",
+   "ime": "Katarina Strauciž [~ Straucif/Strucelj — konec neberljiv]",
+   "stan": "samska [~] ½ žemlj. hiči [~ hči]",
+   "starost": "58 let",
+   "bolezen": "Vodenica",
+   "previden": "1",
+   "duhovnik": "Jos. Romey [~ Rauq]",
+   "whatSi": "umrla Katarina Strauciž [~ Straucif/Strucelj — konec priimka neberljiv, 3 branja (AI 8×: 'Strauciž' · VLM: 'Strucelj') — paralela Strauš/Straus-clusteru h69/h72!], samska [~] ½ žemlj. hiči [~ hči], 58 let (20. 11., pokop 22. 11.) — Vodenica; previdna (1); Jos. Romey [~ Rauq]; ★ hiša 5 FORENZIKA: 7× max-zoom = ena cifra 5-FORMA + pika = h5 (ne 6/65!) — h5 že v mrliškem 1886 (Barbara Brinec 2 leti!) + krstna 1891/1903/1905/1907/1910/1912/1914/1917/1919 (Torec/Štrucelj-družine!)",
+   "whatEn": "died Katarina Strauciž [~ Straucif/Strucelj — the surname ending illegible, 3 readings (AI 8×: 'Strauciž' · the VLM: 'Strucelj') — a parallel to the Strauš/Straus cluster of h69/h72!], single [~], of the half-farm house [~ daughter], 58 years (Nov 20, buried Nov 22) — dropsy; received the sacraments (1); Jos. Romey [~ Rauq]; ★ house 5 FORENSICS: 7× max-zoom = a single 5-FORM digit + a period = h5 (not 6/65!) — h5 already in the 1886 death register (Barbara Brinec, 2 years!) + the baptisms 1891/1903/1905/1907/1910/1912/1914/1917/1919 (the Torec/Štrucelj families!)",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 32,
+   "houseNo": "65",
+   "bookSignature": "04894",
+   "year": 1889,
+   "scan": 23,
+   "page": 22,
+   "mesec": "December",
+   "smrt": "6.",
+   "pokop": "7.",
+   "ime": "Barbara Milek [~ Mileš]",
+   "stan": "½ žemljaškova hiči",
+   "starost": "13 dni",
+   "bolezen": "Gliste",
+   "previden": "—",
+   "duhovnik": "Jos. Romey [~ Rauq]",
+   "whatSi": "umrla Barbara Milek [~ Mileš], ½ žemljaškova hiči, 13 DNI (6. 12., pokop 7. 12.) — Gliste; brez oznake (—); Jos. Romey [~ Rauq]; ★★★ KRSTNA↔MRLIŠKA VEZ #2: krstna 04105-1889 h65 = »krščena Barbara (23. 11.) — oče Matija Milek [~], mati Katarina Trojžif? [~]« → † 6./7. 12. = ISTA OTROK (krst 23. 11. → smrt 6. 12. = 13 dni — SKLAD NA DAN!) + ★★ HIŠA-FORENZIKA: max-zoom = '65.' (6-forma + 5-forma + pika) — ZAČETNA BRANJA '68' NAPAČNA (moja 0.75× + VLM nista videla 6-forme!) — h65 = Milek-hiša: 1887 Mihael 49 + 1888 Katarina 9 + 1889 Barbara 13 dni + poročna 1903 Matthias MÜCK [~ Milek]!",
+   "whatEn": "died Barbara Milek [~ Mileš], of the half-farmer's house, 13 DAYS old (Dec 6, buried Dec 7) — worms; no mark (—); Jos. Romey [~ Rauq]; ★★★ THE BAPTISM↔DEATH LINK #2: the baptism register 04105-1889 h65 = 'baptized Barbara (Nov 23) — father Matija Milek [~], mother Katarina Trojžif? [~]' → died Dec 6/7 = THE SAME CHILD (baptized Nov 23 → died Dec 6 = 13 days — agreement to the day!) + ★★ HOUSE FORENSICS: the max-zoom = '65.' (the 6-form + the 5-form + a period) — the INITIAL READINGS '68' WRONG (my 0.75× and the VLM both missed the 6-form!) — h65 = the Milek house: 1887 Mihael 49 + 1888 Katarina 9 + 1889 Barbara 13 days + the 1903 marriage Matthias MÜCK [~ Milek]!",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 33,
+   "houseNo": "48",
+   "bookSignature": "04894",
+   "year": 1889,
+   "scan": 24,
+   "page": 23,
+   "mesec": "December",
+   "smrt": "7.",
+   "pokop": "9.",
+   "ime": "Jurij Klobučar",
+   "stan": "½ žemljaškov sin",
+   "starost": "30 let",
+   "bolezen": "Jetika",
+   "previden": "1",
+   "duhovnik": "Jos. Romey [~ Rauq]",
+   "whatSi": "umrl Jurij Klobučar (č jasno na 'č' — 3×!), ½ žemljaškov sin, 30 let (7. 12., pokop 9. 12.) — Jetika; previden (1); Jos. Romey [~ Rauq]; ZADNJI gribeljski vpis 1889 (meja 1890 že v isti vrsti strani!); ★ hiša 48 FORENZIKA: 8× max-zoom = 4-forma + pravi 8 (dvojna zanka — nasprotje 5-formi r27!) = h48 — 1. MRLIŠKI vpis h48 (poročna 1898 Anna KLOBUČAR 1. poročni dokaz + krstna 1898 mati Katarina Klobučar + Klobučar-soseda h46-1887!); VLM 'Lurij Mlobučar' (K/K-zmeda) zavrnjen",
+   "whatEn": "died Jurij Klobučar (the č clear on the 'č' — 3×!), a half-farmer's son, 30 years (Dec 7, buried Dec 9) — diphtheria; received the sacraments (1); Jos. Romey [~ Rauq]; the LAST Griblje entry of 1889 (the 1890 boundary on the very same page!); ★ house 48 FORENSICS: 8× max-zoom = the 4-form + a true 8 (the double loop — contrasting the 5-forms of r27!) = h48 — the 1st DEATH entry of h48 (the 1898 marriage Anna KLOBUČAR the 1st marriage proof + the 1898 baptism mother Katarina Klobučar + the Klobučar-neighbour h46-1887!); the VLM 'Lurij Mlobučar' (the K/K confusion) rejected",
+   "status": "DOCUMENTED"
+  }
+ ],
+ "excluded": [
+  {
+   "id": "E1",
+   "rows": "s21 r97–r102",
+   "opis": "1888 zaključek (že v korpusu P154: r97 h8? 68-let Mihael Šakabčič? [VLM-neke] … r102 h3 Peter Križan 80 STAROST — VSI P154-bloki!)"
+  },
+  {
+   "id": "E2",
+   "rows": "s21 marker",
+   "opis": "veliki cifri »1 8 8 9« čez prazno vrsto (P154 forenzika — 9 z dolgim repom; tu = marker-9 REFERENCA za starost-forenziko!)"
+  },
+  {
+   "id": "E3",
+   "rows": "1889 r1–r3 (s21-dno)",
+   "opis": "Gradac 64 Marija Kovačič [~] 2½ leta [~] Kaself? [?] (9./11. 1.) · Vranoviče 20 Antonija Krasovic [~] 9 let [~ 7] ¼ žemlj. hiči (15./17. 1.) · Dobravice 9 Katarina Judmič [?] (VLM 'Malarina Pudmic'!) 68 let ½ žemlj. in vdova (15./17. 1.)"
+  },
+  {
+   "id": "E4",
+   "rows": "1889 r5–r6 (s21-dno)",
+   "opis": "Cerkvišče 6 Katarina Grabrijan vnuka? ½ zemljičove hiše? 23 let Jetika previden (5./7. 2.) · Krasinec 41 Ana Mavrenič [~ Mavričič] ½ žemljakove hiči? 14 dni Božjast (23./25. 2.)"
+  },
+  {
+   "id": "E5",
+   "rows": "s22 r7–r10",
+   "opis": "Prilozje 35 Marija Nemanič [~ Nemanjič] omgjena bajtarca 48 let Pljučnica previden (Marci 1./3. — ★ VLM-vas-napaka 'Griblje' → 5× forenzika Prilozje!) · Kapljišče 9 Ana Kralj omgina? ½ žemlj. st.? 49 let [~ 47-VLM] Na porodu [~ — VLM 'Na povoden'; 49-letna!] previden (4./6. 3.) · Gradac 37 Barbara Mavrenič [~] ½ žemljatove hiše 18 let Jetika (6./8. 4.) · Cerkvišče 8 Benedikt Jakofčič [~ Jakobeč] sinorne? ½ žemlj. hiče sin 6 mesecev Jetika (11./13. 4.)"
+  },
+  {
+   "id": "E6",
+   "rows": "s22 r12–r16",
+   "opis": "Krasinec 8 Eva Bajcar [~ Cajnar] ½ zemlj. hiče nezakonska dota? 18 mesecev Jetika (13./14. 5.) · Gradac 73 Martin Sech [~ Serch] ožin? gospodar 63 let Naduka (15./17. 5.) · Krasinec 8 Katarina Bajnar [~ Cajnar] ¼ žemljatove hiši 21 let Jetika (21./23. 5.) · Primostek 15 Katarina Tome [~ Tomec] omgjena ½ žemljatkinja 51 let Jetika previden + Jos. Romey (22./24. 5.) · Gradac 85 Marija Kosir? [~ Kovič?] bajtarjina? hiš? 2 uri Prezgobj. porod [~ prezgodnji porod] (24./25. 5.)"
+  },
+  {
+   "id": "E7",
+   "rows": "s22 r18–r19",
+   "opis": "Dobravice 8 N. Štefanič [~ Štefančič] ½ žemljiča nezakonsko? možljega spola — Mrtvorojeno (17./17. 6.) · Otak 11 Jurij Jurejevič [~ Jurojevič] ožin? in žemljak 49 let Marbmil [?] previden + Jos. Romey (Julij 2./4. [~ 3./4.])"
+  },
+  {
+   "id": "E8",
+   "rows": "s23 r20–r26",
+   "opis": "Cerkvišče 26 Katarina Jakofčič ½ žemljatova hiš? 9 let Jetika 'na olje' [~ — izpisano v previden-stolpcu!] (Julij 2./4.) · Klošter 36 Marijeta Plut ½ žemljatova hiš — starost-celica 'Umrlo pred poroko'? [~] + Vsled slabosti (11./11. 8.) · Vranoviče 32 N. Štua [~ Ščua] hišin? otrok — Mrtvorojen (6./6. 8.) · Dobravice 34 Barbara Klepec omgina ½ žemljatkinja 43 let Pljučnica previden + Jos. Romey (26./28. 9.) · Dobravice 34 Anton Klepec ½ žemlj. sin 4 mesece Jetika + Jos. Romey (1./3. 10.) · Cerkvišče 14 Janez Baravinič? [~ Maravinič] ½ žemljatove hiče sin 3½ leta Griža + Andrej Glibe kaplan (11./12. 10.) · Otok 16 N. Javlič? [~ Jaklič] ½ žemlj. otrok — Mrtvorojena (14./15. 10.)"
+  },
+  {
+   "id": "E9",
+   "rows": "s23 r29+r31",
+   "opis": "Gradac 71 Katarina Hločavar [~ Hlčavar] samska? ½ zemlj. sestra 44 let 'Starost'?? [~ — 2. starostni vzrok linije, a pri 44 letih?! — anomalija A7] previden + Jos. Romey (18./20. 11.) · Dobravice 16 Janez Matkovič [~ Markovič] ½ žemljakov sin 2 dni Slabost + Jos. Romey (28./29. 11.)"
+  },
+  {
+   "id": "E10",
+   "rows": "s24-dno 1890 r1–r8",
+   "opis": "1890-P156-okvir: Zemelj 17 Jurij Muc ½ žemljaškov sin 3 ure Slabost (1./2. 1.) · Prilozje 32 Ana Šištarič [~ Šuštarič] vdova? in kolarica 63 let Naduka (4./6. 1.) · Vranoviče — [brez hiše!] Ignacij Hudorovac cigančkin? sin 9 dni Slabost (9./10. 1.) · Dobravice 24 Marija Žugelj omgjena ½ žemljatkinja 40 let Jetika (12./14. 1.) · Boginja vas 12 Ana Požek [~ Poček] ½ zemlj. vdova in kletarca? 59 let Pljučnica (16./17. 1.) · Boršt 38 Anton Križan [~ Kružan-VLM] ½ žemljaškov sin 8 dni Božjast (19./21. 1.) · Kapljišče 5 Neža Mavrenič [~ Makarovič-VLM] 1 žemljaška hiš 11 mesecev Božjast (22./24. 1.) · ★ GRIBLJE 90 g. Peter Klambič [~ Krambič-VLM] učitelj 20½ let [~ 20¾-VLM] Jetika previden + Jos. Rauq (26./28. 1.) = P156-LEAD!"
+  }
+ ],
+ "stats": {
+  "vrstic": 36,
+  "griblje_vpisov": 8,
+  "hise": [
+   "53",
+   "69",
+   "30",
+   "55",
+   "83",
+   "5",
+   "65",
+   "48"
+  ],
+  "hise_razlicnih": 8,
+  "nove_p80_hise": 0,
+  "meseci": {
+   "Januarj": 1,
+   "April": 1,
+   "Junij": 1,
+   "Oktober": 2,
+   "November": 1,
+   "December": 2
+  },
+  "podpisi": "5/8 (Andrej Glibe polni ×1 [r27!] + Antn. Glibe ×1 [r28] + Jos. Romey [~ Rauq] ×3 [r30/r32/r33]; BREZ PODPISA ×3: r4 ['sv. olje' namesto podpisa!] + r11 + r17)",
+  "starost_razpon": "13 dni → 92 let (REKORD!)",
+  "otroska_umrljivost": "25 % (≤16 dni ×2/8 — OBA z krstno-vezjo na dan natančno!)",
+  "najkrajsa": "¼ ure (r28 h83 — izenačen rekord s P153-r35!)",
+  "najstarejsa": "92 let (r27 h55 Peter Šimec — NOV REKORD LINIJE!)",
+  "previden": "4/8 z oznako (1 ×3 + 'sv. olje' ×1) + 2 brez (—) + r11 brez-podpis-celice",
+  "intra_house": "0 (nasprotje 1888: 6!)",
+  "epidemija": "Jetika ×2 od 8 (r32 h48 + r33 — december; + izključeni r5/r9/r10/r12/r14/r15/r24 [E4–E8] — Jetika-dominanta 1889 čez vasi!)"
+ },
+ "crossChecks": [
+  {
+   "id": "X1",
+   "name": "krstna↔mrliška h69 Janez",
+   "detail": "krstna 04105-1889: Janez 1./2. 4. (oče Janez Brinec ¼ zemljišt × mati Barbara Strauš) ↔ mrliška 16./17. 4. 16 dni = ISTI OTROK — rojstvo→smrt SKLAD NA DAN — 1. POPOLNA veza te vrste v liniji!"
+  },
+  {
+   "id": "X2",
+   "name": "krstna↔mrliška h65 Barbara",
+   "detail": "krstna 04105-1889: Barbara 23. 11. (oče Matija Milek × mati Katarina Trojžif? [~]) ↔ mrliška 6./7. 12. 13 dni = ISTA OTROK — SKLAD NA DAN!"
+  },
+  {
+   "id": "X3",
+   "name": "h83 sib-swap",
+   "detail": "† Barbara 31. 10. (¼ ure) → krstna Barbara nov. 1889 (oče [?] Radovič × mati Katarina Milkovič [~]) = imenska naslednica — 2. sib-swap mrliške linije (P84-h83-1888-Marija vzorec!)"
+  },
+  {
+   "id": "X4",
+   "name": "h53 ×3 leta zapored",
+   "detail": "1887 Marija Šimec 62 (½ Hobarjeva žena [~]) → 1888 Janez Perdinec (vdovec) → 1889 Ana Perdihec 49 (omgina ¼) — Perdinec/Pegdirec-cluster: 6+ priimkovih variant istega rodu (1890 poročna Johann Perdinec h53 + 1913 Marjeta PEZDIREC h53 + 1919 krst Jurij Perdivec h48!)"
+  },
+  {
+   "id": "X5",
+   "name": "h69 Brinec-vez",
+   "detail": "mrliška: 1886 vdova Podec 50 → 1888 Marija 5 dni → 1889 Janez 16 dni; poročna 1887 ženin Johann Brine? 22; krstna 1888/89/90/94/95 — isti oče Janez ×5! (materi: Katarina Strauš → Barbara Strauš → Ana Kure) — Strauš/Brinec-par na h69 = h72-ŠTRAVS-poročni 1921 №22 vzporeda!"
+  },
+  {
+   "id": "X6",
+   "name": "h65 Milek-kontinuiteta",
+   "detail": "mrliška: 1887 Mihael 49 → 1888 Katarina 9 → 1889 Barbara 13 dni; krstna 1887–1908 ×8 (Matija Milek/Mihelt/Mihek/Mitek-varianti!) — poročna 1903 Matthias MÜCK [~ Milek] h65"
+  },
+  {
+   "id": "X7",
+   "name": "92-letni rekord + Šimec h55",
+   "detail": "92 > 80 (P154-r102) > 78 (P154-r99) > 74 (P153) — nov maksimum linije; h55 = Šimec-luknja (krstna 1890: 'Nikolaj Šimec — Šimec zdaj tudi na luknji 55 — najtrajnejša familija') + Peter Šimec KOLAR (2. kolar za 1888-r102 Križan h3!)"
+  },
+  {
+   "id": "X8",
+   "name": "hiša-forenzika ×4",
+   "detail": "r32 h65 (ne 68! — 6-forma + 5-forma + pika; začetna napaka popravljena) · r27 h55 (DVE 5-formi — ne 53/58!; cf. r4-h53 5+3!) · r33 h48 (4-forma + pravi 8!) · r30 h5 (ena 5-forma + pika — ne 6/65!) — VSE 8 hiš max-zoom potrjenih; 0 novih p80-hiš (vse že v korpusu!)"
+  },
+  {
+   "id": "X9",
+   "name": "meja-stili mrliške",
+   "detail": "1886/87 inline-mesec 'Januarj 1887' (P80) → 1887/88 veliki cifri '1 8 8 8' (P153) → 1888/89 veliki cifri '1 8 8 9' (P154) → 1889/90 INLINE '1890.' v mesec-stolpcu restartne vrstice (P155 — 3. stil!; s25 glava 'Leto 1890' + s32-top 'Leto 1891' — meja 1890/91 pred s32!)"
+  },
+  {
+   "id": "X10",
+   "name": "pageMapping",
+   "detail": "stran == sken − 1: s21=str. 20 (P154) + s22='Stran 21' + s23='Stran 22' + s24='Stran 23' — P80-invarianta mrliške, 10. potrditev!"
+  }
+ ],
+ "anomalies": [
+  {
+   "id": "A1-vlm-9-as-7",
+   "opis": "★★ VLM bere 9-formo (zaprta zanka + dolgi rep) KOT 7 — 3 primeri: r4 '49'→VLM '47' · r8 '49'→VLM '44' · r27 '92'→VLM '72'! REŠITEV: marker-9 referenca (P154-rows3 s21-marker2-right: 9 = zaprta zanka + DOLGI REP skozi vrstico) + r99-78 referenca (7 = flag-forma BREZ zaprte zanke!) — max-zoom > VLM (2. leto zapored!)"
+  },
+  {
+   "id": "A2-celostanska-vas-napaka",
+   "opis": "celostanski VLM prebral vas s22-r7 kot 'Griblje 35' → 9. gribeljski vpis bi bil NAPAČEN — 5× max-zoom: P-r-i-l-o-ž-j-e = Prilozje (G-формa + b-l-j-cluster čisto drugačna, cf. r11/r17!) — lažno-pozitivni vas-detektor"
+  },
+  {
+   "id": "A3-p154-lead-popravek",
+   "opis": "★★★ P154-lead starost 67 (provizorna iz P154-boundary konteksta) → 8× forenzika 49 — VLM neodvisno 47 (tudi napačen!) — DVOJNI popravek: napoved + neodvisni VLM; r4-d1 = 4-forma (ne 6-forma cf. r17-66!), d2 = 9-forma (marker-referenca!)"
+  },
+  {
+   "id": "A4-r28-quarter-hour",
+   "opis": "r28 starost: VLM '4 ure' vs AI '¼ ure' — 6× max-zoom: ulomek 1-over-4 (maja črtica + 4 pod!) + 'ure' = ¼ URE — izenačen najkrajši rekord linije (P153-r35 ¼ ure!)"
+  },
+  {
+   "id": "A5-r28-stan",
+   "opis": "r28 stan 'hčimika? [?] in čevljarjeva? [~] hiči' — 1. beseda neberljiva (hčinka? krčmica? hči mika?), 2. del 'čevljarjeva' (čevljar = šuster!) [~] — NERAZREŠENO"
+  },
+  {
+   "id": "A6-r30-priimek",
+   "opis": "r30 priimek 'Strauciž [~ Straucif/Strucelj]' — 3 branja (AI 8× + VLM celostansko + VLM fix) — konec z dolgim repom (ž/ſz?) — NERAZREŠENO; paralela: h69/h72 Strauš-cluster"
+  },
+  {
+   "id": "A7-r29-starost-vzrok",
+   "opis": "r29 (izključena, Gradac 71) vzrok 'Starost' pri 44 letih?? [~ — VLM 'Hkrast'?] — 2. 'starost' vzrok linije (po P154-r102 pri 80!) — ali gre za 'Starabost'/drugo? [?]"
+  },
+  {
+   "id": "A8-r8-na-porodu",
+   "opis": "r8 (izključena, Kapljišče 9) vzrok 'Na porodu [~]' (VLM 'Na povoden') pri Ana Kralj 49 let — 3. porodna smrt linije (po P154-r6 + r23!) — a pri 49 letih [~]; starost '4y' = 49 (9-forma!) ne 44/47"
+  }
+ ],
+ "honesty": [
+  "H1: starost r4 = 49 let [~] — 3 branja: P154-provizorna 67 (ZAVRJENA), VLM 47 (zavrnjena — 9-as-7!), AI 8× 49 (4-forma + 9-forma) — preostala negotovost: prva cifra 4/6 (6-forma cf. r17 izključena, ampak Kurrent 4/6 zmeda ostaja sistemsko tveganje)",
+  "H2: priimek r30 NERAZREŠEN (Strauciž/Straucif/Strucelj) — blok uporablja [~] z vsemi tremi variantami",
+  "H3: stan r28 delno neberljiv [?] [~] — 'hčimika' je najboljša ugiba, ne beranje",
+  "H4: podpisi 'Jos. Romey [~ Rauq]' ×4 — variante (Romey/Ramej/Rauq/Roue) istih podpisov; corpus-konvencija 'Romey' ohranjena z [~]",
+  "H5: s21-r3 ime 'Katarina Judmič [?]' — najšibkejše branje leta (VLM 'Malarina Pudmic' popolnoma drugačno!); izključena vrsta, vpliv na vzorec = 0",
+  "H6: izključeni datumi r19/r20 julij '2./4.' [~ 3./4.] — 2 branja si nasprotujeta (AI: r19=3., VLM: r19=2.); zaporedje ser. št. sugerira r19 ≤ r20",
+  "H7: 1890-r8 (P156-lead) starost '20½ let [~ 20¾]' — 2 branja ulomka; stan 'učitelj' (VLM 'mirtelj' zavrnjen) — P156 bo forenzično potrdil",
+  "H8: vseh 8 hišnih števil max-zoom potrjenih (5/3/8-forme dvakrat križno referencirane), ampak Kurrent 5/3/8 zmeda = sistemsko tveganje linije (P153-r66 53→58 precedens!)",
+  "H9: s21-restart BREZ letnice-glave (sredinski restart — 'Leto 1889' glave samo s22–s24 3/3)",
+  "H10: METODA-POENOSTAVITEV: 1888 je uporabil 116× VLM-trak-pass; P155 = 4 celostanska + 8-vrstična direktna AI-vizualna forenzika + ~25 max-zoom celic + marker-referenca — manj VLM-klicev, več direktnih AI-OGLED-ov; kompromis: trak-pass-1 (ser. št. inventar) ni bil narejen — ser. številke so bile prebrane iz vrstic neposredno (r4/r11/r17/r27/r28/r30/r32/r33 vse videne v max-zoom!) — tveganje: zamujen gribeljski vpis med vrsticami je minimalen (vse 36 vrstic AI-ogledanih na strani ali kontakt-mapi!)"
+ ],
+ "nextSteps": [
+  "P156 = mrliška 1890 (s24-dno 1890-r1–8 + s25–s31; meja 1890/91 pred s32 — s32-top 'Leto 1891' že potrjen!)",
+  "P156-LEAD: GRIBLJE 90 — g. Peter Klambič [~], učitelj, 20½ let [~ 20¾], Jetika (26./28. 1. 1890) — 1. stan 'učitelj' mrliške linije + h90 = kandidat NOVE p80-hiše (preveriti!) + g. = 'gospod' častni naslov (1. mrliške!)",
+  "h90 ŽE v korpusu (krstna 04105 ×9: 1890/1892/1898/1900/1908/1910/1912/1914/1919!) — preveriti krstna-1890-h90 vezo (isto leto kot mrliška-1890-lead!)"
+ ]
+}
