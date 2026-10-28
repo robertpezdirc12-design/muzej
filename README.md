@@ -9,14 +9,14 @@ lestvica zanesljivosti, odprti podatki in časovnica od prve omembe vasi leta **
 - [Značilnosti](#značilnosti) · [Tehnologija](#tehnologija) · [Zagon](#zagon) ·
   [Struktura podatkov](#struktura-podatkov) · [Licenca](#licenca) · [Provenanca](#provenanca) ·
   [Povezava GitHub → Vercel](#povezava-github--vercel)
-- **[ATLAS 1825](#atlas-1825-gitlab-issue-2)** — raziskovalna linija v fazah (P1–P145):
+- **[ATLAS 1825](#atlas-1825-gitlab-issue-2)** — raziskovalna linija v fazah (P1–P151):
   [arhivski temelj + strojni prepis PS (P1–P45)](#arhivski-temelj-in-strojni-prepis-ps-p1p45) ·
   [georeferenciranje + overlayji (P46–P51)](#georeferenciranje-in-overlayji-p46p51) ·
   [infrastruktura repozitorija (P52–P53)](#infrastruktura-repozitorija-p52p53) ·
   [register PS — parcelna rekonstrukcija (P54–P76)](#register-ps--parcelna-rekonstrukcija-p54p76) ·
   [arhivska forenzika + žetoni (P77–P78)](#arhivska-forenzika-in-žetoni-p77p78) ·
-  [župnija Podzemelj — matične knjige (P79–P139)](#župnija-podzemelj--matične-knjige-p79p139)
-- [Zadnje stanje raziskave](#zadnje-stanje-raziskave-po-p145--2026-10-27) · [Varnost](#varnost)
+  [župnija Podzemelj — matične knjige (P79–P151)](#župnija-podzemelj--matične-knjige-p79p151)
+- [Zadnje stanje raziskave](#zadnje-stanje-raziskave-po-p151--2026-10-28) · [Varnost](#varnost)
 
 ## Trenutno stanje (kratek povzetek)
 
@@ -566,15 +566,15 @@ API (statični, brez runtime AI):
 - **produkcija & žetoni — operativni zdravstveni audit (P78, issue #6)** — edina NE-lastniška odprta točka po P77 (③ žetoni; MERI in SANIRA, kjer API to dopušča; **v7 join nespremenjen**): **produkcija ZDRAVA in AKTUALNA** — `GET /` HTTP 200 (704 548 B == post-P77 deploy), `/api/qa` ok True **79/79** (79 testov; `qa-p76-sections-perblatt` True), `/api/atlas/ps-parcels-geo` **v7/891**; **zrcala bajtno identična** (`git ls-remote`: GitLab = GitHub = lokalni HEAD; GitHub REST `GET /commits/main` 404 neavtentificirano — repozitorij zaseben, ls-remote z žetonom iz remote URL); **GitLab PAT #3 AVTORITATIVNO aktiven** (`/personal_access_tokens/self`: id 28471532, `dsfsd`, active, rok **2026-11-14**, scopes ⊇ api + write_repository + read_repository + self_rotate) — rok 2026-11-09 v naslovu issue #6 se nanaša na STARI žeton; **DISCOVERY — GitHub Actions blokiran na nivoju računa (billing)**: vsi jobi NE STARTAJO (failure v ~2 s, `steps: []`, `runner_id: 0`, logi `BlobNotFound`; kontrola z dispatchem tudi po sanaciji skrivnosti — enak podpis na sync.yml IN token-health.yml) — check-run anotacija (avtoritativno GitHub): *"The job was not started because recent account payments have failed or your spending limit needs to be increased. Please check the 'Billing & plans' section in your settings"*; zadetki: **sync.yml** (dvosmerna sinhronizacija — mreža varnosti; zadnji uspeh 2026-10-11T06:23Z), **token-health.yml** (dnevni watchdog — ZATO NI OPOZORIL 10-13/14/15 ob izteku VERCEL_TOKEN!) in **deploy.yml** (rezervni deploy; zadnji uspeh 2026-10-11; potekel žeton 2026-10-14 = dodaten razlog) — **SANACIJA P78: skrivnost GITLAB_TOKEN** (držala neveljaven PAT #2, updated 2026-10-13) zamenjana z aktualnim PAT #3 (libsodium sealed box prek PyNaCl; `PUT /repos/…/actions/secrets/GITLAB_TOKEN` HTTP 204, updated 2026-10-15T20:51:08Z) — nujno tudi samo po sebi (stari PAT bi padel ob auth, takoj ko bi Actions začel teči); **OSTAJA LASTNIŠKA AKCIJA: Billing & plans** (plačilna metoda / spending limit — API brez admin:billing scope ne more) + nov VERCEL_TOKEN (vercel.com/account/tokens; Vercel API ne ustvarja žetonov) — primarni deploy (Vercel GitHub App) NEODVISEN od obeh in DELA;
   `scripts/p78_tokens_production_audit.py` (I1–I9, `--check` bajtno PASS; live probe: Vercel `/`, `/api/qa`, geo; GitLab PAT/project z WAF-retry; zrcala ls-remote; Actions check-run anotacija; brez mutacij) + dokaz `research/issue17/tokens-production-audit.json` (OPERATIONAL-AUDIT; sanacija + časovnica + vpliv per workflow + 3 lastniške akcije po prioriteti); QA ostaja **79/79** (operativni audit ni produkcija vsebine); veriga `p60–p67 + p70–p78 --check` bajtno PASS; tsc 0 / lint 0; v7 runtime join NESPREMENJEN (sha256 4bb40370…).
 
-### Župnija Podzemelj — matične knjige (P79–P139)
+### Župnija Podzemelj — matične knjige (P79–P151)
 
 Trije matrični viri (Matricula Online): mrliška **04894 1886–1922**, krstna **04105 1886–1919**,
-poročna **04455 1872–1917**. Vzorec: vsi matrični vpisi z gribeljskimi hišnimi številkami —
+poročna **04455 1873–1922** (naslovnica P151). Vzorec: vsi matrični vpisi z gribeljskimi hišnimi številkami —
 prikazani v runtime `parish.ts` (HOUSE_VITALS) + QA kontrole + letni verifikatorji.
 Do konca P99: **313 vpisov / 84 hiš / devetnajst let** (1886–1904), QA **100/100**.
-Od P115 teče **poročna linija 04455** — polna leta 1886–1912 (P115–P141, 27 faz
-zapored); skupni korpus po P141: **675 vpisov · bloki 04455 158 · sidra 151 ·
-hiše 70 · PT 13**, QA **142/142**.
+Od P115 teče **poročna linija 04455** — polna leta **1886–1922 = 37/37 KOMPLETNA**
+(P115–P151, 37 faz zapored); skupni korpus po P151: **714 vpisov · bloki 04455 197 ·
+sidra 190 · hiše 77 · PT 13**, QA **152/152** — KNJIGA 04455 ZAKLJUČENA.
 
 - **župnija Podzemelj — vzorčni prepis matričnih vpisov z gribeljskimi hišnimi št. (P79, issue #18)** — prvi napredek na človeški/paleografski liniji od P39 (MERI, NE odloča; **v7 join nespremenjen**): vir **Matricula Online** (prosto dostopen, brez avtentikacije; krstna knjiga **04105 1886–1919**, Nadškofijski arhiv Ljubljana; slike prek base64-kodiranih URL-jev v JSON `files`); **VZOREC = polno leto 1886** (skeni 2–15 == tiskane strani 1–14: vsi vpisi z Griblji v letu; prebranih 95 vrstic, od tega 12 Griblje) **+ sidro 1887** (verifikacija obstoječega zapisa hiše 61) — **15 vpisov / 13 različnih hiš** (8 [~] · 11 · 13 · 16 · 36×2 · 39 · 54 · 56 · 57 · 61 · 71 · 75 · 94) — **NAD merili issue #18 (vzorec 5 hiš)**; vsak vpis: signatura + leto + stran/skan + hišna št. + otrok + starši (Kurrent branje z [~] negotovostjo; hišne številke preverjene z 2× izrezi); **PT usklajenost = DOKAZ ŠTEVILČNE EVOLUCIJE**: PT 1825 nabor = 84 hiš **1–40 + 61–99** z polovičkami (LUKNJA 41–60) → 10/13 vpisov v naboru (8, 11, 13, 16, 36, 39, 61, 71, 75, 94), 3/13 (**54, 56, 57**) v luknji 41–60 — številčenje se je med 1825 in 1886 razširilo/preštevilčilo (številčna usklajenost ≠ identiteta stavbe — za to bi bila potrebna povezava prek lastniških imen, opozorilo PUA/PT iz issue #18 ostaja); hiša 36: 2 vpisa v 1886 (row 39 brez očeta — mati Barbara Šimec; row 95 oče Matija Križan — dve družini pod eno št. [~]); poznejši modri pripisi 20. st. (npr. hiša 39: umrl 18.9.1961 v Gribljah št. 39 — potrjuje št.) dokumentirani ločeno od osnovnega vpisa; **sidro: hiša 61 (sken 20, stran 19, vrstica 28) ponovno prebrana in POTRJENA** (sken/leto/hiša/ime == parish.ts; oče: obe branji dokumentirani — »Miha P.—« obstoječe / »Miko Jože H.?« ponovno [~]);
   `scripts/p79_parish_sample.py` (I1–I8, `--check` PASS; live: knjiga HTTP 200, inventar **326 slik** iz base64 dekodiranja, citirani skeni 10/10 JPEG 200) + dokaz `research/issue17/parish-sample-transcription.json` (SAMPLE-TRANSCRIPTION) + `parish.ts` HOUSE_VITALS 2 → 15 (vsi DOCUMENTED, s stranmi) + QA 79 → **80/80** (nova qa-p79-parish-sample: celovit runtime preracun iz HOUSE_VITALS × PARISH_BOOKS + pini PT klasifikacije — okvir/sidro/PT/usklajenost, dve obliki repo/produkcija po P53/P57/P58); kartica NI dodana (paleografski dokaz raziskovalne linije — strojno berljiv prek dokaza, vzorec P77); veriga `p60–p67 + p70–p79 --check` PASS; tsc 0 / lint 0; v7 runtime join NESPREMENJEN (sha256 4bb40370…).
