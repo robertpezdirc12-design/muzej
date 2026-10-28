@@ -6350,3 +6350,32 @@ Work Log:
 - qa-p152-parish-marriage-synthesis (153. kontrola v qa-parish.ts): korpus-pini 714/197/190/77 + dobe-bloki 164/7/26 + zero-leta + pokritost 35/37 let + rekordi 1919:10/1922:3
 - README: po P152 (sintezni bullet + tabela + odprto ① nova-knjiga + TOC + pripoved P79–P152)
 - verifikacija: p152 --check **40/40 PASS** · runQA **153/153 ok:True** · tsc 0 · lint 0
+
+## P153 — mrliška knjiga 04894, leto 1887 = 1. polno leto mrliške linije
+
+Datum: 28. 10. 2026 · 1. polno leto po P80-okvirju (1886: 46 vrstic / 13 Griblje) — NOVA LINIJA po odločitvi P152-lead (mrliška 04894; krstna-nadaljevanje čaka)
+
+Stage Summary:
+- **MRLIŠKA LINIJA ODPRTA: leto 1887 = 71 vrstic / 13 Griblje-vpisov / 13 hiš — ★ ISTA ŠTEVILKA GRIBLJE-VPISOV KOT 1886 (13 = 13!)**
+- okvir: s6-dno (r1–r5 za prelomom »Januarj 1887«) + s7–s13 == str. 5–12 — **stran == sken − 1 POTRJENA** (P80-invarianta mrliške; nasprotno poročni, kjer je P149 prelomila!)
+- **meja 1887/1888 na s13**: veliki cifri **»1 8 8 8« čez prazno vrsto 72** (marker brez glave — vzporedno poročni s175 »19/20«) + **★ letnica-glava »Leto 18 ....« PRAZNA** (pisar ni izpisal leta — 1. primer mrliške!) + ozek stolpec restarta 65–71 → 1–5
+- **★★ MAX-ZOOM POPRAVKI ×4**: r66 hiša **53→58** (Kurrent 3/8-zmeda — 2× VLM + max-zoom!) · r55 **'Marija Požit'→Matija Požek** · r61 **'Marija Milek'→Matija Milek** ('sin'=moški!) · r63 **'½ ure'→¼ ure** (15 minut!)
+- **★★ 3 družinski dvojčki smrti**: Milek ×2 (h65-49 + h22-3) · Šimec ×2 (h36-2 + h53-62) · Križan ×2 (h3-39 + h35-¼-ure!) — + ★ h13 Jakopič = 3 dogodka v 2 letih
+- otroška umrljivost 38 % (≤3 leta ×5/13) · razpon **¼ ure → 74 let** (Katarina Klobučar h46 najstarejša — Plučni-mrah [~])
+- **★ NOVI VZROKI ×5**: Plučni-mrah [~] · Gliste · Griža · Jetika · **Mertvod [~]** (nevzvodabljen — 3 VLM-varianti!) + Sušica ×4 dominantna
+- **★★ 'PREJEL SV. POSL. OLJE'** (r66 Marko Požek h58 — 1. IZPISANI SAKRAMENT mrliške linije!) + r51 'previdena' izpisano + 140-dnevna vrzel (13.4.→31.8.)
+- duhovniški lok: **Dovgan → Glibel/Glibo/Gliebe (P80-kapljan; variante = 1 oseba [~]) → 'coop.' → Jos. Romej** ([~] paralela z župnikom Romeom P151-s191!)
+- P154-LEAD: **Griblje 72 Marija Straus, ½ zemlj. hči, 1 DAN (31.1.1888)** = 1. gribeljski vpis 1888 (h72 = ŠTRAVS poročne 1921-№22!)
+- **11 NOVIH BLOKOV: vitals 714 → 725 (+11) · mrliški bloki 04894 = 15 → 26 · p80 hiše 77 (0 novih — vseh 13 hiš že v korpusu!)**
+- ★ PIN-KASKADA: 714→725 (67 qa-pinskih + 36 skript-grepov + p80) + **4 NOVA-hiša-stražarja razširjena** (h53/h46/h43/h22 — mrliški 1887 bloki PRED krstnimi prvenci!)
+- verifikacija: p153 **38/38 PASS (+ --live 41/41)** · p80 --check PASS · runQA **154/154 ok:True** · tsc 0 · lint 0
+
+Work Log:
+- fetch 12/12 JPEG (s6–s17; inventar 256 potrjen) — scripts/tmp/p153_fetch.py
+- branje: 7× celostansko (s6–s13) + 61× VLM prehod (35 trak-izrezov + 26 forenzičnih; glm-5v-turbo, thinking-off — scripts/tmp/p153_read.mjs) + 17× max-zoom celic (3.2–3.6×) + 2× super-zoom (r71-ime, r66-hiša)
+- dokaz research/issue17/parish-death-1887.json (13 entries + 19 excluded-skupin + 11 anomalij + 9 crossChecks + honesty 8) + notes parish-death-1887-notes.md
+- parish.ts: +11 blokov 04894-1887 (h65 h46 h53 h76 h3 h21 h13 h22 h35 h58 h43) — vsak z max-zoom-popravki dokumentiranimi v whatSi
+- verifikator scripts/p153_parish_death_1887.py (I1–I12 + --live; 38 kontrol: dokaz/sidri/meseci/hiše/parish.ts-čepi/max-zoom/meja/qa/README/mejniki)
+- qa-p153-parish-death-1887 (154. kontrola v qa-parish.ts): bloki-1887 13 · hiše [3,13,21,22,35,36,43,44,46,53,58,65,76] · skeni 6–13 · Mertvod/prejel-olje/max-zoom-pini · 04894=26 · vitals=725 · 1888-ni-še!
+- README: po P153 (glava + tabela-linij + korpus + odprto-①-mrliška + TOC P1–P153 + intro-odstavek + pripoved-bullet)
+- pin-kaskada: qa-parish 67× `!== 714`→`725` · skripte 36× grep-string · p80 len(vitals)==725 · 4 stražarji (p86-h53, p88-h46, p92-h43, p94-h22) + 04894-1887 izjeme

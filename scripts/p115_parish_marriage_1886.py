@@ -219,7 +219,7 @@ def main() -> int:
     check("I9 qa-p115", '"qa-p115-parish-marriage-1886"' in qa)
     check("I9b qa-p115 hiše 1886", "16,25,31,56,60,65,71" in qa)
     # vitals 528 regresijska zaščita v qa-p115
-    check("I9c vitals 702 zaščita (P149)", "HOUSE_VITALS.length !== 714" in qa[qa.index("const p115Marr"):])
+    check("I9c vitals 702 zaščita (P149)", "HOUSE_VITALS.length !== 725" in qa[qa.index("const p115Marr"):])
 
     # ---------- I10: README + notes ----------
     rd = open("README.md").read()

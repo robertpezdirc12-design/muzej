@@ -103,7 +103,7 @@ def main():
 
     # ---------- I6: qa-parish.ts pini ----------
     qa = open(QA_TS, encoding="utf-8").read()
-    n702 = qa.count("HOUSE_VITALS.length !== 714")
+    n702 = qa.count("HOUSE_VITALS.length !== 725")
     check("I6b vitals pini 702", n702 >= 63, str(n702))
     n185 = qa.count(".length !== 197")
     check("I6c bloki pini 193", n185 >= 34, str(n185))

@@ -130,7 +130,7 @@ def main():
 
     # ---------- I6: qa-parish pini ----------
     qa = open(QA_TS).read()
-    n593 = qa.count("HOUSE_VITALS.length !== 714")
+    n593 = qa.count("HOUSE_VITALS.length !== 725")
     n587 = qa.count("HOUSE_VITALS.length !== 587")
     n76 = qa.count("bloki 04455 ≠ 142")
     n70 = qa.count("bloki 04455 ≠ 70")

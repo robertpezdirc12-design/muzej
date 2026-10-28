@@ -320,7 +320,7 @@ def main() -> int:
     check("I9b p80 bloki 78", "poročni vpisi (04455) ≠ 158" in qa)
     check("I9[cd] p80 sidra 72 (1898×9 · 1899×6 · 1900×2!)", "poročna sidra ≠ 164" in qa)
     # vitals 550 regresijska zaščita v qa-p120
-    check("I9d vitals 637 zaščita (P128)", "HOUSE_VITALS.length !== 714" in qa[qa.index("const p120Marr"):] if "const p120Marr" in qa else False)
+    check("I9d vitals 637 zaščita (P128)", "HOUSE_VITALS.length !== 725" in qa[qa.index("const p120Marr"):] if "const p120Marr" in qa else False)
     check("I9e stari 537/544/548 iztekla",
           "HOUSE_VITALS.length !== 537" not in qa and "HOUSE_VITALS.length !== 544" not in qa
           and "HOUSE_VITALS.length !== 548" not in qa)

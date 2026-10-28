@@ -113,7 +113,7 @@ def main():
 
     # ---------- I6: qa-parish.ts pini ----------
     qa = open(QA_TS, encoding="utf-8").read()
-    n714 = qa.count("HOUSE_VITALS.length !== 714")
+    n714 = qa.count("HOUSE_VITALS.length !== 725")
     check("I6a vitals pini 714 (65 stare + novi!)", n714 >= 65, str(n714))
     n197 = qa.count(".length !== 197")
     check("I6b bloki pini 197 (36 stare + novi!)", n197 >= 36, str(n197))
@@ -171,7 +171,7 @@ def main():
     p115 = open("scripts/p115_parish_marriage_1886.py", encoding="utf-8").read()
     check("I12a p115 anchors 190 + 1922×3", "len(anchors) == 190" in p115 and '["1922"] * 3' in p115, "")
     p150 = open("scripts/p150_parish_marriage_1921.py", encoding="utf-8").read()
-    check("I12b p150 vitals-pin 714 (kaskada!)", 'qa.count("HOUSE_VITALS.length !== 714")' in p150, "")
+    check("I12b p150 vitals-pin 714 (kaskada!)", 'qa.count("HOUSE_VITALS.length !== 725")' in p150, "")
     check("I12c p80-hiše text-pini 77 (p137–p146!)",
           all('"p80Houses.size !== 77"' in open(f, encoding="utf-8").read()
               for f in ("scripts/p137_parish_marriage_1908.py", "scripts/p142_parish_marriage_1913.py",

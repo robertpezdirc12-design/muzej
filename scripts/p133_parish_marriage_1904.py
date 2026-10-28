@@ -142,7 +142,7 @@ def main():
     # ---------- I6: qa-parish.ts ----------
     qa = open(QA_TS).read()
     check("I6a qa-p133 id", "qa-p133-parish-marriage-1904" in qa)
-    n619 = qa.count("HOUSE_VITALS.length !== 714")
+    n619 = qa.count("HOUSE_VITALS.length !== 725")
     check("I6b vitals pini 619", n619 >= 46, str(n619))
     n102 = qa.count("bloki 04455 ≠ 142")
     check("I6c bloki pini 102", n102 >= 8, str(n102))
