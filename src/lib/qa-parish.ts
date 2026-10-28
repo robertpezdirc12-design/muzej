@@ -5731,6 +5731,52 @@ push(
       : p151Errors.join("; "),
   );
   }
+  // ——— qa-p152: SINTEZA poročne linije 04455 (1886–1922) = kuratorsko zaprtje
+  //      knjige (P152; 1. SINTEZNA faza — NI novih branj; kompilacija 37 letnih
+  //      dokazov P115–P151 + preracun runtime-korpusa) ———
+  {
+  const p152Errors: string[] = [];
+  // sinteza NE dodaja blokov — korpus nespremenjen (P151-rekapitulacija!)
+  if (HOUSE_VITALS.length !== 714)
+    p152Errors.push(`HOUSE_VITALS ≠ 714 (${HOUSE_VITALS.length} — P152 sinteza = MERI, 0 novih!)`);
+  const p152Blocks = HOUSE_VITALS.filter((h) => h.bookSignature === "04455");
+  if (p152Blocks.length !== 197)
+    p152Errors.push(`bloki 04455 ≠ 197 (${p152Blocks.length} — 195 linija (1886–1922) + 2 pred-linijska (1882+1885)!)`);
+  if (p80MarrAnchors.length !== 190)
+    p152Errors.push(`poročna sidra ≠ 190 (${p80MarrAnchors.length})`);
+  if (p80Houses.size !== 77)
+    p152Errors.push(`p80 hiše ≠ 77 (${p80Houses.size})`);
+  // dobe (sinteza): predvojna 1886–1913 = 162 blokov · WWI 1914–1918 = 7 · boom 1919–1922 = 26
+  const p152Pre = p152Blocks.filter((h) => (h.year ?? 0) <= 1913).length;
+  const p152Wwi = p152Blocks.filter((h) => (h.year ?? 0) >= 1914 && (h.year ?? 0) <= 1918).length;
+  const p152Boom = p152Blocks.filter((h) => (h.year ?? 0) >= 1919).length;
+  if (p152Pre !== 164 || p152Wwi !== 7 || p152Boom !== 26)
+    p152Errors.push(`dobe-bloki ≠ 164/7/26 (najdeno: ${p152Pre}/${p152Wwi}/${p152Boom} — predvojna 1886–1913 vključuje 2 pred-linijska 1882+1885!)`);
+  // zero-leta sinteze: 1901 + 1918 (edini leti linije BREZ Griblje-blokov!)
+  if (p152Blocks.some((h) => h.year === 1901 || h.year === 1918))
+    p152Errors.push("zero-blok-leta 1901+1918 imata bloke (sinteza: 0!) — korpus ali sinteza napačna");
+  // letni rekordi sinteze: max 1919 = 10 blokov (povratni priliv!) · 1922 = 3
+  if (p152Blocks.filter((h) => h.year === 1919).length !== 10)
+    p152Errors.push(`bloki 1919 ≠ 10 (${p152Blocks.filter((h) => h.year === 1919).length} — največji enoletni priliv linije!)`);
+  if (p152Blocks.filter((h) => h.year === 1922).length !== 3)
+    p152Errors.push(`bloki 1922 ≠ 3 (${p152Blocks.filter((h) => h.year === 1922).length} — zaprtje knjige!)`);
+  // 37 let linije pokritost: vsa leta 1886–1922 RAZEN 1901+1918 imata ≥1 blok
+  const p152Years = new Set(p152Blocks.filter((h) => (h.year ?? 0) >= 1886).map((h) => h.year as number));
+  const p152Missing = [1901, 1918].length === 2
+    ? Array.from({ length: 37 }, (_, i) => 1886 + i).filter((y) => y !== 1901 && y !== 1918 && !p152Years.has(y))
+    : ["?"];
+  if (p152Missing.length > 0)
+    p152Errors.push(`leta brez blokov izven zero-nabora [1901, 1918]: ${p152Missing.join(",")}`);
+  push(
+    "qa-p152-parish-marriage-synthesis",
+    "P152: ŽUPNIJA PODZEMELJ — SINTEZA POROČNE LINIJE 04455 (1886–1922) = KURATORSKO ZAPRTJE KNJIGE (issue #18; SYNTHESIS-M04455; 1. SINTEZNA faza — NI novih branj, NI novih skenov!): kompilacija 37 letnih dokazov P115–P151 + preracun runtime-korpusa; **evidence-vpisi 592** (avg 16,0/leto; max 1919:40 rekord — min 4: 1916 + 1918!) · **bloki-po-letu preracunani iz parish.ts**: 195 linija + 2 pred-linijska (1882+1885) = 197 · **zero-blok-leta 1901 + 1918** (2. prekinitvi!) · **DOBE**: predvojna 1886–1913 = 442 vpisov/avg 15,79/162 blokov · **WWI-kolaps 1914–1918 = 29/avg 5,8 (37 %!)/7 blokov** · **povojni boom 1919–1922 = 121/avg 30,25/26 blokov** (1919+1920+1921 = 3 največja leta zapored; 1922 se prekine 27.8.!); **kalendarna** (44 zabeleženih): PONEDELJEK 21 (48 % = 1. dan!) + NEDELJA 13 + SOBOTA 0/44 + 1. PETEK 14.5.1920 · **metrična legenda**: evidence-vpisi (592, vsi) vs parish-bloki (195, hišne omembe) vs stats.gribljeMarriages (127, osebe iz vasi — zgodnja metrika!) = RAZLIKA METRIK dokumentirana v honesty · **1906 intra-datotečna anomala** (gribljeBlocks=6 vs gribljeBlocksNew=5 vs kumulativ +5 — avtoritativno 5, parish.ts potrjuje; stari dokaz ni popravljen!) · kuratorski zaključki ×8: demografski lok (stabilno → kolaps → boom → rezanje), vrzel-Griblja, mreže KRIŽAN×160/PEZDIRC×152/JAKOFČIČ×151, duhovniški lok (Rauy → Cerar-dominanta → Jereb 1. prehod → Raustelar 1. O.F.M.), osebni ekstremi (67-letni ženin + 16-letnice), sibling-swap ×2, migracijski robovi (Amerika 1918 + Hrvaška ×2 + Ljubljana 1920), dokumentacijski vrhi (№12/1919 + №8/1922 + 4 brez številke!); korpus po P152: **714/197/190/77 NESPREMENJEN** (sinteza = MERI!); **P153 LEAD: nova knjiga** — mrliška 04456/04894 ALI krstna 04105-nadaljevanje-čez-1919? — odločitev uporabnika!; skripta scripts/p152_parish_marriage_synthesis.py (I1–I12); dokaz research/issue17/parish-marriage-synthesis.json; status SYNTHESIS-M04455",
+    "P152: THE PARISH OF PODZEMELJ — SYNTHESIS OF THE MARRIAGE LINE 04455 (1886–1922) = THE CURATORIAL CLOSURE OF THE REGISTER (issue #18; SYNTHESIS-M04455; the 1st SYNTHESIS phase — NO new readings, NO new scans!): the compilation of the 37 annual evidences P115–P151 + the recomputation of the runtime corpus; **592 evidence entries** (avg 16.0/year; max 1919:40 the record — min 4: 1916 + 1918!) · **blocks-per-year recomputed from parish.ts**: 195 line + 2 pre-line (1882+1885) = 197 · **zero-block years 1901 + 1918** · **THE ERAS**: pre-war 1886–1913 = 442 entries/avg 15.79/162 blocks · **the WWI collapse 1914–1918 = 29/avg 5.8 (37%!)/7 blocks** · **the post-war boom 1919–1922 = 121/avg 30.25/26 blocks** (1919+1920+1921 = the 3 largest years in a row; 1922 breaks off Aug 27!); **the calendar** (44 recorded): MONDAY 21 (48% = the 1st day!) + SUNDAY 13 + SATURDAY 0/44 + the 1st FRIDAY May 14, 1920 · **the metrics legend**: evidence-entries (592, all) vs parish-blocks (195, house mentions) vs stats.gribljeMarriages (127, persons from the village — the early metric!) = the DIFFERENCE OF METRICS documented in honesty · **the 1906 intra-file anomaly** (gribljeBlocks=6 vs gribljeBlocksNew=5 vs cumulative +5 — authoritatively 5, parish.ts confirms; the old evidence not corrected!) · 8 curatorial conclusions: the demographic arc (stable → collapse → boom → the cut), the Griblje gap, the networks KRIŽAN×160/PEZDIRC×152/JAKOFČIČ×151, the priest arc (Rauy → the Cerar dominance → Jereb the 1st observed handover → Raustelar the 1st O.F.M.), the personal extremes (the 67-year-old groom + the 16-year-old brides), the sibling-swaps ×2, the migration edges (America 1918 + Croatia ×2 + Ljubljana 1920), the documentation peaks (№12/1919 + №8/1922 + 4 unnumbered!); the corpus after P152: **714/197/190/77 UNCHANGED** (the synthesis = MEASURES!); **the P153 LEAD: a new register** — the death register 04456/04894 OR the baptism 04105-continuation-past-1919? — the user's decision!; the script scripts/p152_parish_marriage_synthesis.py (I1–I12); the evidence research/issue17/parish-marriage-synthesis.json; status SYNTHESIS-M04455",
+    p152Errors.length === 0,
+    p152Errors.length === 0
+      ? `592 evidence-vpisov (37 let!) · bloki 195+2 = 197 · zero-leta 1901+1918 · dobe 15,79 → **5,8 (WWI-kolaps!)** → **30,25 (boom!)** · max 1919:40 · min 4 · PON 21/44 + SOB 0 · metrična razlika 127-vs-195 dokumentirana · 1906-anomala · korpus 714/197/190/77 NESPREMENJEN (MERI!)`
+      : p152Errors.join("; "),
+  );
+  }
   // ——— qa-p150: POROČNA KNJIGA 04455 — polno leto 1921 (P150; 36. leto poročne linije) ———
   {
   const p150Errors: string[] = [];

@@ -159,7 +159,7 @@ def main():
     check("I6b vitals pini 637", n638 >= 46, str(n638))
     n121 = qa.count("bloki 04455 ≠ 142")
     check("I6c bloki pini 120", n121 >= 8, str(n121))
-    check("I6d sidra 113 + 1906:5", "poročna sidra ≠ 164" in qa and "h.year === 1906).length !== 5" in qa)
+    check("I6d sidra 113 + 1906:5", "poročna sidra ≠ 190" in qa and "h.year === 1906).length !== 5" in qa)
     check("I6e hiše 1906 pin", "21,31,35,62,73" in qa)
     check("I6f ostanki 632/115/108", "!== 632" not in qa and "bloki 04455 ≠ 115" not in qa and "sidra ≠ 108" not in qa, "stale pini!")
 
@@ -190,7 +190,7 @@ def main():
 
     # ---------- I10: README ----------
     rd = open(README).read()
-    check("I10a README P135 bullet", "po P141" in rd)
+    check("I10a README P135 bullet", "po P152" in rd)
     check("I10b README 638/121", "638" in rd and "121" in rd)
     check("I10c README P136 lead", "P136" in rd)
 

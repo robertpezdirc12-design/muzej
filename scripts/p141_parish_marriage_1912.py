@@ -236,7 +236,7 @@ def main():
 
     # ---------- I10: README ----------
     rd = open(README).read()
-    check("I10a README P141 bullet", "po P141" in rd, "")
+    check("I10a README P141 bullet", "po P152" in rd, "")
     check("I10b README 675/158", "681" in rd and "164" in rd, "")
     check("I10c README P142 lead", "P142" in rd, "")
 

@@ -144,7 +144,7 @@ def main():
     check("I6b vitals pini 610", n610 >= 46, str(n610))
     n94 = qa.count("bloki 04455 ≠ 142")
     check("I6c bloki pini 94", n94 >= 8, str(n94))
-    check("I6d sidra 86 + 1903:11", "poročna sidra ≠ 164" in qa and "h.year === 1903).length !== 12" in qa)
+    check("I6d sidra 86 + 1903:11", "poročna sidra ≠ 190" in qa and "h.year === 1903).length !== 12" in qa)
     check("I6e hiše 1903 pin", "11,11,20,41,44,46,48,50,56,6,65,9" in qa)
     check("I6f izjema h41-1903", 'v.year === 1903 && hn === "41"' in qa)
 

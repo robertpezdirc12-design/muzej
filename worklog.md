@@ -6323,3 +6323,30 @@ Work Log:
 - PIN-KASKADA: vitals 711 → 714 [×65] · bloki 04455 194 → 197 [×36] · sidra 187 → 190 [×1] + p115-anchors 190 + ["1922"]×3 + p115-BLOCKS_04455 197 + p80-vitals-pin 714 + p149/p150-README-pini + p150-I12a (190+1922×3!) · ★ SANACIJA negativnih pinov (p148/p149-I6e '≠714 not in qa' → era-711/702!) · runQA-kaskada (qa-p88-h23-1922 · qa-p93-h48-1922 allow-liste!)
 - verifikacija: p151 --check --live **54/54 PASS** · runQA **152/152 ok:True** · tsc 0 · lint 0 · veriga p115–p150 (p115 45/45 · p137 68/68 · p140/p143 64/64 · p146 60/60 · p148 53/53 · p149 · p150 54/54 — VSE 100 % PASS!)
 - README: po P151 (37/37 KOMPLETNA · korpus 714/197/190/77) + P151-bullet (P150 → arhiv) + P152-lead
+
+---
+
+## P152 — SINTEZA poročne linije 04455 (1886–1922) = kuratorsko zaprtje knjige
+
+Datum: 28. 10. 2026 · 1. SINTEZNA faza (P115 = 1886 → … → P151 = 1922 → P152 = sinteza; NI novih branj, NI novih skenov!)
+
+Stage Summary:
+- **KNJIGA 04455 ZAPRTA: sinteza 37 letnih dokazov (P115–P151) + preracun runtime-korpusa parish.ts — MERI, ne spreminja!**
+- **592 evidence-vpisov / 37 let** (avg 16,0/leto) · bloki-po-letu: **195 linija + 2 pred-linijska (1882+1885) = 197** · zero-blok-leta **1901 + 1918**
+- **★★★ DOBE (demografski lok linije): predvojna 1886–1913 = 442 vpisov / avg 15,79 / 162 blokov → WWI-KOLAPS 1914–1918 = 29 / avg 5,8 (37 % predvojne ravni!; dvojno dno 1916+1918 = 4) / 7 blokov → POVOJNI BOOM 1919–1922 = 121 / avg 30,25 / 26 blokov** (1919:40 rekord + 1920:37 + 1921:31 = 3 največja leta ZAPORED; 1922:13 — prekinitev 27.8. = konec knjige!)
+- **★★★ KALENDARNA** (44 zabeleženih vpisov kasnejših faz): **PONEDELJEK 21 (48 % = 1. dan porok linije!)** + NEDELJA 13 + SREDA 4 + PETEK 3 (1. PETEK 14.5.1920!) + TOREK 2 + ČETRTEK 1 + **SOBOTA 0/44**; za 548/592 vpisov dan NI zabeležen (zgodnje faze)
+- **★★ METRIČNA LEGENDA = novost sinteze**: evidence-vpisi 592 (vsi prebrani) vs parish.ts bloki 195 (gribeljske HIŠNE omembe) vs stats.gribljeMarriages 127 (zgodnja metrika: osebe iz vasi) — **RAZLIKA METRIK dokumentirana, ne spravljena** (stats-ključi se spreminjajo po fazah!)
+- **★★ 1906 INTRA-DATOTEČNA ANOMALA**: stats.gribljeBlocks=6 vs stats.gribljeBlocksNew=5 vs kumulativ bloki04455 115→120 (+5) — **avtoritativno 5** (parish.ts potrjuje); stari dokaz NI popravljen (P152 ne revidira zgodovine!)
+- kuratorski zaključki ×8: demografski lok (stabilno → kolaps → boom → rezanje) · vrzel-Griblja (1901+1918; povratek 1919 z 10 bloki = največji priliv!) · mreže KRIŽAN×160/PEZDIRC×152/JAKOFČIČ×151 · duhovniški lok (Rauy → Cerar-dominanta → Jereb 1. prehod → Raustelar 1. O.F.M.) · osebni ekstremi (67-letni ženin + 16-letnice + mladoletnost-val) · sibling-swap ×2 (1920 №2/№3 + 1922 №4/№5) · migracijski robovi (Amerika 1918 + Hrvaška ×2 + Ljubljana-uciteljski-par 1920) · dokumentacijski vrhi (№12/1919 + №8/1922 5-listin + 4 vpisi brez številke!)
+- korpus po P152: **714 vitals · 197 blokov 04455 · 190 sidra · 77 hiš — NESPREMENJEN (sinteza = MERI!)**; QA **153/153**
+- NASLEDNJE: **P153 = nova knjiga?** — mrliška **04456/04894** (okvir 1886 P80) ALI krstna **04105-nadaljevanje-čez-1919** (knjiga se konča 1919!) — **odločitev uporabnika!**
+
+Work Log:
+- kompilacija 37 dokazov research/issue17/parish-marriage-1886..1922.json (592 vpisov; dayOfWeek ×44; stats-ključi spravljeni per-faza!)
+- preracun parish.ts: bloki 04455 po letih ×37 (197) + pre-line 1882/1885 identifikacija + zero-leta 1901/1918 potrditev + dobe-razdelitev
+- dokaz `parish-marriage-synthesis.json` (SYNTHESIS-M04455: perYear ×37 + totals + extremes + eras + calendar + metricsLegend + curatorial ×8 + honesty ×8 + openQuestions ×3)
+- notes `parish-marriage-synthesis-notes.md` (demografska tabela + metrična legenda + honesty + naslednja-faza)
+- verifikator `scripts/p152_parish_marriage_synthesis.py` (I1–I12 + --live; 40 kontrol: letni pini ×74, dobe, kalendarna, metrična-razlika, 1906-anomala, kontinuiteta P115/P151, qa/README-pini)
+- qa-p152-parish-marriage-synthesis (153. kontrola v qa-parish.ts): korpus-pini 714/197/190/77 + dobe-bloki 164/7/26 + zero-leta + pokritost 35/37 let + rekordi 1919:10/1922:3
+- README: po P152 (sintezni bullet + tabela + odprto ① nova-knjiga + TOC + pripoved P79–P152)
+- verifikacija: p152 --check **40/40 PASS** · runQA **153/153 ok:True** · tsc 0 · lint 0

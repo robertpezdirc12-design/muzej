@@ -1,0 +1,322 @@
+{
+  "phase": "P152",
+  "type": "SYNTHESIS-M04455",
+  "status": "COMPLETE",
+  "issuedAt": "2026-10-28",
+  "title": "SINTEZA poročne linije 04455 (1886–1922) = kuratorsko zaprtje knjige",
+  "source": "37 letnih dokazov research/issue17/parish-marriage-1886..1922.json (P115–P151) + runtime-korpus parish.ts (MERI — NE spreminja prepisov!)",
+  "method": "popolna kompilacija 37 letnih dokazov + preracun runtime-korpusa iz parish.ts; obe metriki (evidence-vpisi vs parish-bloki) dokumentirani LOČENO — razlika je metrična, ne napaka!",
+  "line": {
+    "book": "04455",
+    "bookLabel": "Podzemelj P 1873–1922 (naslovnica, P151)",
+    "years": "1886–1922",
+    "yearsCount": 37,
+    "transcriptionPhases": "P115–P151 (37 faz zapored)",
+    "preLineBlocks": [
+      {
+        "year": 1882,
+        "blocks": 1,
+        "note": "pred-linijski blok (korpus vsebuje 2 pred-1886 bloka!)"
+      },
+      {
+        "year": 1885,
+        "blocks": 1,
+        "note": "pred-linijski blok"
+      }
+    ]
+  },
+  "perYear": [
+    {
+      "year": 1886,
+      "entries": 24,
+      "blocks": 7
+    },
+    {
+      "year": 1887,
+      "entries": 21,
+      "blocks": 7
+    },
+    {
+      "year": 1888,
+      "entries": 20,
+      "blocks": 4
+    },
+    {
+      "year": 1889,
+      "entries": 10,
+      "blocks": 7
+    },
+    {
+      "year": 1890,
+      "entries": 16,
+      "blocks": 4
+    },
+    {
+      "year": 1891,
+      "entries": 18,
+      "blocks": 2
+    },
+    {
+      "year": 1892,
+      "entries": 15,
+      "blocks": 4
+    },
+    {
+      "year": 1893,
+      "entries": 20,
+      "blocks": 5
+    },
+    {
+      "year": 1894,
+      "entries": 15,
+      "blocks": 4
+    },
+    {
+      "year": 1895,
+      "entries": 16,
+      "blocks": 5
+    },
+    {
+      "year": 1896,
+      "entries": 18,
+      "blocks": 1
+    },
+    {
+      "year": 1897,
+      "entries": 18,
+      "blocks": 9
+    },
+    {
+      "year": 1898,
+      "entries": 27,
+      "blocks": 9
+    },
+    {
+      "year": 1899,
+      "entries": 9,
+      "blocks": 6
+    },
+    {
+      "year": 1900,
+      "entries": 8,
+      "blocks": 2
+    },
+    {
+      "year": 1901,
+      "entries": 11,
+      "blocks": 0
+    },
+    {
+      "year": 1902,
+      "entries": 6,
+      "blocks": 4
+    },
+    {
+      "year": 1903,
+      "entries": 20,
+      "blocks": 12
+    },
+    {
+      "year": 1904,
+      "entries": 15,
+      "blocks": 8
+    },
+    {
+      "year": 1905,
+      "entries": 17,
+      "blocks": 13
+    },
+    {
+      "year": 1906,
+      "entries": 12,
+      "blocks": 5
+    },
+    {
+      "year": 1907,
+      "entries": 12,
+      "blocks": 5
+    },
+    {
+      "year": 1908,
+      "entries": 17,
+      "blocks": 9
+    },
+    {
+      "year": 1909,
+      "entries": 15,
+      "blocks": 8
+    },
+    {
+      "year": 1910,
+      "entries": 19,
+      "blocks": 5
+    },
+    {
+      "year": 1911,
+      "entries": 13,
+      "blocks": 6
+    },
+    {
+      "year": 1912,
+      "entries": 17,
+      "blocks": 5
+    },
+    {
+      "year": 1913,
+      "entries": 13,
+      "blocks": 6
+    },
+    {
+      "year": 1914,
+      "entries": 7,
+      "blocks": 4
+    },
+    {
+      "year": 1915,
+      "entries": 6,
+      "blocks": 1
+    },
+    {
+      "year": 1916,
+      "entries": 4,
+      "blocks": 1
+    },
+    {
+      "year": 1917,
+      "entries": 8,
+      "blocks": 1
+    },
+    {
+      "year": 1918,
+      "entries": 4,
+      "blocks": 0
+    },
+    {
+      "year": 1919,
+      "entries": 40,
+      "blocks": 10
+    },
+    {
+      "year": 1920,
+      "entries": 37,
+      "blocks": 4
+    },
+    {
+      "year": 1921,
+      "entries": 31,
+      "blocks": 9
+    },
+    {
+      "year": 1922,
+      "entries": 13,
+      "blocks": 3
+    }
+  ],
+  "totals": {
+    "evidenceEntries": 592,
+    "avgEntriesPerYear": 16.0,
+    "blocks04455Total": 197,
+    "blocksLine1886to1922": 195,
+    "blocksPreLine": 2,
+    "vitals": 714,
+    "anchors": 190,
+    "houses80": 77,
+    "gribljeMarriagesStatsMetric": 127,
+    "metricNote": "stats.gribljeMarriages (zgodnje faze) = poroke OSEB iz Griblje; parish.ts bloki = vpisi z GRIBELJSKO HIŠNO ŠT. (ženin/nevesta/priča/starši) — 127 vs 195 je RAZLIKA METRIK, dokumentirana v honesty!"
+  },
+  "extremes": {
+    "maxYears": [
+      {
+        "year": 1919,
+        "entries": 40,
+        "note": "povojni rekord — P148"
+      }
+    ],
+    "minYears": [
+      {
+        "year": 1916,
+        "entries": 4,
+        "note": "WWI-dno — P146"
+      },
+      {
+        "year": 1918,
+        "entries": 4,
+        "note": "2. dno + 0 Griblje-blokov — P147"
+      }
+    ],
+    "zeroGribljeBlockYears": [
+      1901,
+      1918
+    ],
+    "zeroGribljeNote": "BLOKI == 0 v dveh letih: 1901 (11 vpisov, P130 — 1. leto linije brez Griblje!) · 1918 (4 vpisi, P147 — vojno leto; 16-letna prekinitev do 1919-povratka z 10 bloki = največji enoletni priliv!)"
+  },
+  "eras": {
+    "preWar": {
+      "label": "predvojna 1886–1913",
+      "years": 28,
+      "entries": 442,
+      "avg": 15.79,
+      "blocks": 162,
+      "note": "stabilna osnova ~16 vpisov/leto; vrhunci 1898:27 + 1886:24; korpusni vrh blokov 1903:12 + 1905:13"
+    },
+    "wwi": {
+      "label": "prva svetovna 1914–1918",
+      "years": 5,
+      "entries": 29,
+      "avg": 5.8,
+      "blocks": 7,
+      "note": "KOLAPS porok — 1914:7 → 1915:6 → 1916:4 → 1917:8 → 1918:4; avg 5,8 = 37 % predvojne ravni; vojaške listine (Feldsuperiorat Graz št. 2531, sanitetni vojaki); 1918 tudi 0 Griblje-blokov"
+    },
+    "boom": {
+      "label": "povojni boom 1919–1922",
+      "years": 4,
+      "entries": 121,
+      "avg": 30.25,
+      "blocks": 26,
+      "note": "NADOMESTNI BOOM — 1919:40 (rekord linije!) + 1920:37 + 1921:31 = 3 največja leta ZAPORED + 1922:13 (knjiga se zapre 27.8.1922!); župniška menjava sredi 1921 (Cerar → Jereb); polna-leta sredstvo 1919–1921 = 36,0"
+    }
+  },
+  "calendar": {
+    "dayOfWeekRecorded": {
+      "PONEDELJEK": 21,
+      "NEDELJA": 13,
+      "SREDA": 4,
+      "PETEK": 3,
+      "TOREK": 2,
+      "ČETRTEK": 1
+    },
+    "dayOfWeekUnrecorded": 548,
+    "note": "dayOfWeek se sistematično beleži šele od kasnejših faz (P137+); iz 44 zabeleženih: PONEDELJEK 21 (48 %!) = 1. dan porok linije, NEDELJA 13, SREDA 4, PETEK 3 (1. edini PETEK 14.5.1920!), TOREK 2, ČETRTEK 1, SOBOTA 0/44"
+  },
+  "metricsLegend": [
+    "evidenceEntries = vpisi prebrani na polnih straneh (vsi, ne samo Griblje) — P115–P151",
+    "blocks = parish.ts HouseVital bloki 04455 za leto (Griblje-hišne omembe) — MERI runtime",
+    "gribljeMarriages (stats, zgodnje faze) = poroke oseb iz Griblje-vasi — ožja metrika",
+    "razlika blocks(195) − stats-metrika(127) ≈ 68 = bloki iz prič/staršev/sorojencev z gribeljskimi hišnimi št."
+  ],
+  "curatorial": [
+    "KNJIGA 04455 ZAKLJUČENA: 37/37 let prebranih (1886–1922), naslovnica potrjuje 'P 1873–1922' — 2 pred-linijska bloka (1882, 1885) so korpusni bonus iz sidranskih faz",
+    "demografski lok: stabilno ~16/leto → WWI-kolaps 5,8/leto (dno 4: 1916 + 1918) → boom 30,25/leto (1919 rekord 40) → rezanje ob koncu knjige (1922 se ustavi 27.8.)",
+    "2 leti BREZ Griblje-blokov: 1901 + 1918; povratek 1919 z 10 bloki = največji enoletni priliv linije",
+    "največje družinske mreže linije: KRIŽAN ×160 · PEZDIRC ×152 · JAKOFČIČ ×151 (rastejo do P151); novi-priimki-rekord: P151 16 novih v 1 letu",
+    "institucionalni lok: Jos. Rauy (P79-era, 11/12 v 1906!) → Miklavčič/Cerar → Cerar-dominanta ~1907–1921 → P. Remigi Jereb (od 10.10.1921, 1. opazovani prehod!) → P. Edvard Raustelar O.F.M. (1922, 1. frančiškan + 'per delegationem')",
+    "ekstremi oseb: najstarejši ženin 67 let (Jakofčič-senior, 1922 №10) · najmlajša nevesta 16 let (1920 №8 Zunič + 1922 ×2) · mladoletnost-val WWI/boom · sibling-swap dogodki (1920 №2/№3 + 1922 №4/№5)",
+    "migracijski robovi: 2 hrvaški referenci (1921 Kaluka-nevesta + 1922 Mala Paka-ženin) + 1. ameriško-rojena oseba (1918 №2 Gregorič) + učiteljski par v Ljubljani (1920 Vode, brez št.!)",
+    "dokumentacijski vrh: №12/1919 (najbolj dokumentiran vpis linije) + №8/1922 (5 listin); 4 vpisi BREZ številke (1919 Boren · 1920 Vode · 1922 ×2)"
+  ],
+  "honesty": [
+    "sinteza MERI obstoječe prepise — NI novih paleografskih branj (ni novih skenov!); vsi podatki iz P115–P151 dokazov",
+    "metrična razlika 127 (stats.gribljeMarriages zgodnjih faz) vs 195 (parish.ts bloki) je DOKUMENTIRANA, ne spravljena — stats-ključi se spreminjajo po fazah (gribljeMarriages → gribljeBlocks/gribljeBlocksNew → gribljeEntries)!",
+    "1906 intra-datotečna neskladja: stats.gribljeBlocks=6 vs stats.gribljeBlocksNew=5 vs kumulativ bloki04455 115→120 (+5) — avtoritativno 5 (parish.ts potrjuje); dokumentirano, stari dokaz NI popravljen (P152 NE revidira zgodovine!)",
+    "dayOfWeek manjka za 548/592 vpisov (zgodnje faze niso beležile) — kalendarna statistika pokriva samo 44 vpisov kasnejših faz",
+    "era-meje (1913/1914 + 1918/1919) so kuratorske konvencije (vojna 1914–1918), ne arhivske — knjiga ne pozna 'er'",
+    "avg-boom 30,25 vključuje delno 1922 (13 do 27.8.) — mehansko; polnih-let sredstvo 1919–1921 = 36,0",
+    "pred-linijska bloka 1882+1885 NE pripadata 37-letni liniji — vključena samo v skupni pin 197",
+    "sinhteza-pini vitals 714 / bloki 197 / sidra 190 / hiše 77 so REKAPITULACIJA P151 — P152 ne dodaja blokov (korpus nespremenjen!)"
+  ],
+  "openQuestions": [
+    "naslednja faza: nova knjiga — mrliška 04456 (oz. 04894?) ALI krstna 04105-nadaljevanje-čez-1919? — odločitev uporabnika (P152-lead)",
+    "človeška paleografska potrditev VLM prepisov (issue #12) ostaja odprta za vseh 592 vpisov",
+    "metrična sprava stats.gribljeMarriages zgodnjih faz bi zahtevala re-read 14 dokazov P115–P134; nizka prioriteta (razlika dokumentirana)"
+  ]
+}

@@ -131,8 +131,8 @@ def main():
     n171 = qa.count(".length !== 197")
     check("I6c bloki pini 171", n171 >= 3, str(n171))
     check("I6d p147Marr 0-blok pin (qa-p147!)", "p147Marr.length !== 0" in qa, "")
-    check("I6e ostanki 687/170/164-sidra-check (kaskada čista) + P149-sanacija", "HOUSE_VITALS.length !== 687" not in qa and ".length !== 170" not in qa
-          and "HOUSE_VITALS.length !== 714" not in qa and ".length !== 181" not in qa, "stare pini!")
+    check("I6e ostanki 687/170/181-sidra-check (kaskada čista) + P152-sanacija — 714 je ERA-pin (pozitivno!)", "HOUSE_VITALS.length !== 687" not in qa and ".length !== 170" not in qa
+          and "HOUSE_VITALS.length !== 714" in qa and ".length !== 181" not in qa, "stare pini!")
     check("I6f sidra 164 (nespremenjeno)", "poročna sidra ≠ 187" in qa, "")
 
     # ---------- I7: dnevi + stats ----------
