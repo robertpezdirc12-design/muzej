@@ -1,0 +1,222 @@
+{
+  "source": {
+    "book": "04455 (ženitovanska knjiga — Trauungsbuch, župnija Podzemelj; naslovnica s192: »Podzemelj P 1873–1922«)",
+    "url": "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04455/",
+    "year": 1918,
+    "scans": "s163 (№1 + letna glava »1918«) + s164 (№2–4) == Pag. 162–163; meja 1918/1919: s165 vrh = letna glava »Leto 1919« (ročno, podčrtana!) → 1918 ZAKLJUČEN z 4 vpisi (P146-lead: №1 + 3 na s164 = 4 — TOČNO!); Pag. == sken − 1 (33. potrditev; velja 61–163)",
+    "phase": "P147",
+    "line": "33. leto poročne linije (P115 = 1886 → … → P146 = 1917 → P147 = 1918)"
+  },
+  "lead": {
+    "claim": "P146-lead: s163 vsebuje že letna glava »1918« + №1 (4. 2. Janez Križan Otok 5 × Marija Galovc Krasine 44!) + s164 = 3 vpisa 1918 (7.6. + 30.6. z k.u.k. Bahnbaukompanie listino + 10.10.) → P147 = leto 1918",
+    "correction": "4 vpisi POTRJENI (№1 s163 + №2–4 s164 — štetje točno!), KOREKCIJE ×4: (1) №1 datum 4. 2. ✓ toda nevestino bivališče = KRASINEC ŠT. 14 (NE 44! — zoom ×4: enojna '1' + '4'; korpus nima ne 14 ne 44); (2) №2 datum 2. junija (NE 7.6.! — zoom: j-u-n-i-ja z jasnim '2.'); (3) №2 nevesta roj. ~10. 8. 1891 (obledalo — starost 26 ✓ aritmetika; lead ni znal); (4) №4 datum 16. OKTOBER (NE 10.! — zoom + zglašnica 15. okt. 1918 podpira 16.); k.u.k. Bahnbaukompanie = PRAVKA za №3 — listina je Dispens von 2 Aufgeboten + Trauungsermächtigung FELDSUPERIORATA GRAZ št. 2531 (vojaška, toda ženin je II. nadomestna komp. c. in kr. pešpolka št. 17!); ★ 1918 = 0 GRIBLJE-VPISOV = 2. leto linije BREZ Griblje (po 1901 P130 — 16 let prej!) → 0 novih blokov, vse kumulativne številke nespremenjene"
+  },
+  "entries": [
+    {
+      "row": 1,
+      "date": "4. februar 1918 (ponedeljek — vojni termin!)",
+      "scan": 163,
+      "page": 162,
+      "groom": {
+        "name": "Janez Križan [korpus ×160!]",
+        "place": "OTOK 5 [~ št. 5 — Otok 5 NOVA omemba (korpus: 9/10/11/14/20/21/22/34)]",
+        "stand": "kmeč. povest (= kmetičeva povestna/prva stanovska kategorija), samski sin",
+        "age": 28,
+        "status": "ženin, samski",
+        "birth": "20. 11. 1889 [28 ✓ aritmetika]"
+      },
+      "bride": {
+        "name": "Marija Galovec [NOV PRIIMEK — Galovec/Galovc = 0 v korpusu!]",
+        "place": "KRASINEC ŠT. 14 [★ KOREKCIJA P146-LEADA (44!): zoom ×4 = enojno '1' + '4'; oznaka 'bivališče' nad celico = prebivališče, ne nujno rojstna hiša; Krasinec 14 NOVA št. (korpus: 4/8/9/13/18/21/23/28/32/35/36/37/43/48/53)]",
+        "stand": "kmeč. povest, samska hči",
+        "age": 28,
+        "status": "nevesta, samska",
+        "birth": "9. 12. 1889 [28 ✓ aritmetika]"
+      },
+      "groomParents": "Nikolaj Križan, posestnik × Marija roj. Plut [korpus ×1!], oba katoliška",
+      "brideParents": "Nikolaj Galovec, posestnik × Katarina roj. Brovarič [~ — nov priimek matere; B/G Kurrent količina], oba katoliška",
+      "witnesses": "Miko Starasinič [~ — v. Šarašinič 1917 №2!], povostnik, na Krasincu št. 32 [korpus ×2!] IN Miko Starasinič [~], posestmik, na Krasincu št. 9 [korpus ×4!]",
+      "witnessStatus": "2 povestnika/posestnika — ★ ISTI PAR ime+priimek, RAZLIČNI hiši 32/9 (morda oče + sin [~])",
+      "urkunden": "ženitovanjska zglašnica županstva Podzemelj št. 1, z dne 27. 1. 1918 (8 dni pred poroko)",
+      "priest": "P. Valerijan Miklavčič, ord. test. — 5. branje! (1917: ×8/8; 1918 №1 nadaljuje)",
+      "anomalies": [
+        "ponedeljek 4.2. = vojni termin (2. ponedeljek linije v WWI po 1916 №1 četrt)",
+        "Krasinec 14 [~] = korekcija P146-lead '44' — prva popravljena hiša lead-faze"
+      ]
+    },
+    {
+      "row": 2,
+      "date": "2. junij 1918 (nedelja) [★ KOREKCIJA P146-LEADA '7.6.'!]",
+      "scan": 164,
+      "page": 163,
+      "groom": {
+        "name": "Jožef Željko [korpus ×148 = 3. največja mreža!]",
+        "place": "CERKVIŠČE 18 [~ — nova št. (korpus: 4/8/9/16/26/31/35)]",
+        "stand": "kmeč. povest., samski sin",
+        "age": 23,
+        "status": "ženin, samski",
+        "birth": "23. februar 1895 [23 ✓ aritmetika]"
+      },
+      "bride": {
+        "name": "Ivana Gregorič",
+        "place": "CERKVIŠČE 4 [korpus ×3!]",
+        "stand": "kmeč. povest., samska hči",
+        "age": 26,
+        "status": "nevesta, samska",
+        "birth": "10. avgust 1891 [~ OBLEDALO — '10' dan + '1891' leto najbolj berljivi; starost 26 ✓ aritmetika; VERIF po krstni knjigi]"
+      },
+      "groomParents": "Janez Željko, kmeč. posestnik × Katarina roj. Korbavec [~ NOV priimek] (†), oba katolika",
+      "brideParents": "Matija Gregorič, kmeč. posestnik × Katarina roj. Stubler [korpus ×10!], oba katolika",
+      "witnesses": "Jurij Grabrijan [korpus ×27!], povest na Cerkvišču št. 51 [nova št.] IN Miho Križan [×160!], povest. na Otoku 20 [korpus ×2!]",
+      "witnessStatus": "2 povestnika (oba kmečki)",
+      "urkunden": "1) Spričevalo o prej. sv. krstu za nevesto — ★★ V AMERIKI ROJENO (1. ameriško-rojena oseba poročne linije 1886–1918!); 2) Izpust iz očetovske oblasti za ženina, sodnija Metlika 2. 4. 1918; 3) Dovoljenje dežel. vlade potem c. kr. glav. [~] št. 9144 z dne 25. 5. 1918; 4) ženitovanska zglas. žup. Podz. št. 3, z dne 2/6 1918 (NA POROČNI DAN — vzorec P146 №3!)",
+      "priest": "J. Paulin Bitnar [~ — per deleg.!]",
+      "anomalies": [
+        "★★ NEVESTA V AMERIKI ROJENA (spričevalo o krstu) = 1. v poročni liniji 48 let! — emigrantska družina Gregorič",
+        "ista vas Cerkvišče 18 × 4 (sameVillage!)",
+        "† pri materi ženina (Korbavec) — mati že pokojna ob poroki",
+        "duhovnik Paulin Bitnar = NOVO ime ('per deleg.')"
+      ]
+    },
+    {
+      "row": 3,
+      "date": "30. junij 1918 (nedelja)",
+      "scan": 164,
+      "page": 163,
+      "groom": {
+        "name": "Franc Petrič [NOV PRIIMEK — Petrič/Petric = 0 v korpusu!]",
+        "place": "II. nadomestna komp. c. in kr. peš polka št. 17, pčer [= preko? — VERIF] GRADAC 95 [korpus ×1!]",
+        "stand": "VOJAK — železniški predelavec v civili (railway worker!)",
+        "age": 33,
+        "status": "ženin, vojak WWI",
+        "birth": "29. december 1884 [33 ✓ aritmetika]"
+      },
+      "bride": {
+        "name": "Ana Šepaher [NOV PRIIMEK!]",
+        "place": "Podzemelj — nova šola [~ 'nova šola' nad celico = službinsko/prebivališče]",
+        "stand": "kmeč. povest., sam. hči-slúžkinja (samska hči + služkinja!)",
+        "age": 38,
+        "status": "nevesta, samska",
+        "birth": "9. november 1879 [38 ✓ aritmetika — popolni-pogled '35' je bil NAPAČEN, vrstica pokaže 38!]"
+      },
+      "groomParents": "Krišula [~ Križula?] Petrič, samska gostinja (†), rim. kat. — ★ MATI-SAMA = NEZAKONSKO ROJSTVO (oče prazen!)",
+      "brideParents": "Janez Šepaher, kmeč. posestnik × Marija roj. Kolar [korpus ×2!], oba rim. katol.",
+      "witnesses": "Anton Kralj [korpus ×34!], posest. v Gradacu IN Lovrencij Štrukelj [★ 3. pojav! — 1916 №3-priča + 1917 №4-ŽENIN + 1918 №3-PRIČA], železničar, oba katolika r.",
+      "witnessStatus": "posestnik + železničar (prvič železničar-priča po 1917 №4 ženinu-železniškemu uslužbencu!)",
+      "urkunden": "1) Dispens von 2 Aufgeboten ü. Trauungsermächtigung seitens des Feldsuper. Graz Nr. 2531 vom 13. 6. 1918 (★★ VOJAŠKA DVOLISTINA — 2. dispens + vojaško pooblastilo!); 2) ženinov rojstni list, žup. urad Kranj. gora št. 76 z dne 4. 6. 1918 (★ KRANJSKA GORA — 2. pojav oblasti!); 3) ženinov testim. stat. liberi ut sub 2) št. 79; 4) spugled 2 oklicev c. kr. okr. glav. Črnomelj št. 10282/18; 5) ženinova ženitovanska zglašnica, županstvo Kr. gora, št. 6, 30/6 1918 (NA POROČNI DAN!); 6) in 7) nevestin rojstni list + spričevalo samsk. stanu od župnega urada Semič št. 198 in 199 z dne 21. 6. 1918",
+      "priest": "Leopold Höltker [~], žup. v pod. — per deleg. (robno)",
+      "anomalies": [
+        "★★ VOJAK-ŽELEZNIŠKI PREDELAVEC (2 poklica — civilni + vojaški!) + vojaški Wohnort = II. nadomestna komp. pešpolka 17",
+        "★★ OČE PRAZEN (mati Krišula samska gostinja †) = NEZAKONSKI ženin + 'gostinja' = nov poklic starša!",
+        "★★ DISPENS von 2 Aufgeboten + Feldsuperior Graz (vojna NUJNA poroka — vzorec 1917 №1/№8)",
+        "rojstni list iz KRANJSKE GORE (2. pojav — po 1917 №4 zglašnica!) + Semič-listine za nevesto",
+        "nevesta 38 — 5 let STAREJŠA od ženina (REVERZ!)",
+        "3 duhovnika v 1. letu (Miklavčič №1/№4 + Bitnar №2 + Höltker №3) = 1. taki trojček!"
+      ]
+    },
+    {
+      "row": 4,
+      "date": "16. oktober 1918 (sreda — vojni termin!) [★ KOREKCIJA P146-LEADA '10.10.'!]",
+      "scan": 164,
+      "page": 163,
+      "groom": {
+        "name": "Peter Jakofčič [korpus ×149 = 2. največja mreža!]",
+        "place": "CERKVIŠČE 17 [~ — nova št.]",
+        "stand": "kmečki povestnik",
+        "age": 58,
+        "status": "ženin, stan ne izrecno [~ — 58 = 2. najstarejši ženin WWI-let (po 1917 №7: 70!)]",
+        "birth": "19. junij 1860 [58 ✓ aritmetika — PREDKORPUSNA generacija!]"
+      },
+      "bride": {
+        "name": "Ana Jakša [korpus ×8!]",
+        "place": "KRASINEC 30 [nova št.!]",
+        "stand": "samsko kmečko dekle",
+        "age": 41,
+        "status": "nevesta, samska",
+        "birth": "11. januar 1877 [41 ✓ aritmetika — popolni-pogled '1872/44' je bil NAPAČEN!]"
+      },
+      "groomParents": "Jure Jakofčič, kmečki povestnik (†) × Zara [~ Gara/Sara?] roj. Kambič [korpus ×56!] (†), oba katoliška",
+      "brideParents": "Matija Jakša, kmečki povestnik (†) × Marija roj. Vtraos [~ Utraos/Straos/Vrtaov? — VERIF], oba katoliška",
+      "witnesses": "Janez Malešič [NOV PRIIMEK!], povestnik v Borštu IN Miho Županič [korpus ×36! — M1906-Županič-18 mreža!], povestnik na Krasincu",
+      "witnessStatus": "2 povestnika",
+      "urkunden": "1. Spregled 2 oklicev, ord. žup. št. 4323/18; 2. Spregled 2 oklicev, glav. Črnomelj št. 17942/18; 3. ženitovanjska zglas. županstva Podzemelj, z dne 15. okt. 1918 (DAN PRED POROKO — podpira datum 16.!)",
+      "priest": "Valerijan Miklavčič, žup. (+ štampiljka sod. z dovoljenjem)",
+      "anomalies": [
+        "★ PREDKORPUSNA generacija ženina (b. 1860 — 58 let!) × 41-letna nevesta = NAJSTAREJŠI PAR WWI-LIN (99 let skupaj!)",
+        "VSEH 4 starši (†) = 2. vpis linije z 4 pokojnimi starši (po 1917 №3!)",
+        "sreda 16.10. = vojni termin (3. ne-vikend dan 1918 — vojna leta vzorec)",
+        "zglašnica DAN PRED poroko (15. okt.) — datumska veriga potrjuje 16. (korekcija lead '10.10.')"
+      ]
+    }
+  ],
+  "excluded": [],
+  "stats": {
+    "entries": 4,
+    "bothSides": 4,
+    "gribljeMarriages": 0,
+    "gribljeRows": [],
+    "gribljeHouses": [],
+    "gribljeBlocks": 0,
+    "sameVillageRows": [2],
+    "sameVillageCount": 1,
+    "sameHouseRows": [],
+    "sameHouseCount": 0,
+    "mondays": 1,
+    "sundays": 2,
+    "wednesdays": 1,
+    "weekendPct": "2/4 = 50% (1 pon + 2 ned + 1 sre — vojni razpad vikendov)",
+    "sameDayRecord": null,
+    "lentGap": "brez postne vrzeli (4. leto zapored od 1915)",
+    "warGap": "WWI: 4 vpisi = povratek na najnižjo raven (1916: 4, 1917: 8, 1918: 4 — vojno leto št. 4); VOJNI KONTEKST ×2 (№3 VOJAK-železniški predelavec + II. nadomestna komp. + Dispens von 2 + Feldsuperior Graz + №4 sreda-termin); 1 dispens; 2 vojaške listine; ameriška emigrantska nevesta №2 (v Ameriki rojena!)",
+    "yearHeading": "DA — »Leto 1918« ročno VELIKO na s163 (6. zaporedna!); meja 1918/1919: s165 vrh = letna glava »Leto 1919« → 1918 = ZAKLJUČEN (4 vpisi)",
+    "bookExtension": "naslovnica s192 = »Podzemelj P 1873–1922« — poročna linija nadaljuje: P148 (1919: 11 vpisov vidnih — №6 Griblje 77 × 37/8 INTRA hišar × Pezdirc!) + P149 (1920) + P150 (1921) + P151 (1922)",
+    "vitalsTotal": 688,
+    "blocks04455": 171,
+    "sidraTotal": 164,
+    "p80Houses": 72,
+    "newHouses": [],
+    "unnumbered": 0,
+    "priests": {
+      "Miklavčič": 2,
+      "Bitnar": 1,
+      "Höltker": 1,
+      "note": "3 duhovnika / 4 vpise = 1. taki razkol leta linije (Miklavčič domovina-dominanta, Bitnar + Höltker 'per deleg.')"
+    },
+    "newSurnames": ["Galovec (№1 nevesta)", "Brovarič [~] (№1 mati)", "Korbavec [~] (№2 mati)", "Petrič (№3 ženin)", "Šepaher (№3 nevesta)", "Malešič (№4 priča)", "Vtraos [~] (№4 mati)"],
+    "corpusNetworks": "Željko ×148 (№2!) · Jakofčič ×149 (№4!) · Križan ×160 (№1 + priča №2!) · Šimec ×142 · Adlešič ×141 · Kambič ×56 (№4 mati!) · Županič ×36 (№4 priča!) · Kralj ×34 (№3 priča!) · Grabrijan ×27 (№2 priča!) · Butala ×23 · Stubler ×10 (№2 mati!) · Jakša ×8 (№4 nevesta!) · Kolar ×2 (№3 mati!) · Plut ×1 (№1 mati!) · Štrukelj 3. pojav (priča!)"
+  },
+  "crossChecks": [
+    "№1 ženin Janez Križan = korpus ×160 (največja mreža!) — Otok 5 nova št.; Otok-Križani že od 1900 v1 (Otok 34!)",
+    "№1 mati Marija roj. Plut = korpus ×1 — redka vez",
+    "№1 priča Starasinič/Krasinec 32 = korpus ×2 (Krasinec 32!) + priča 2 Krasinec 9 = korpus ×4 — 2 hiši že znani!",
+    "№1/1917 №2 Starasinič × Šarašinič = varianta istega priimka (Krasinec 52/32/9 — klan!)",
+    "№2 ženin Jožef Željko = korpus ×148 (3. največja!) — Cerkvišče 18 nova št. (korpus 16 = Željko-velika l. 1889!)",
+    "№2 priča Jurij Grabrijan (Cerkvišče 51) = korpus ×27 + priča Miho Križan Otok 20 = korpus ×2 (Otok 20!) — obe hiši že znani",
+    "№2 mati roj. Stubler = korpus ×10 (Stubljar-varianta — TROJNA sinhronizacija P145!); mati №1 Korbavec [~] + №4 mati Kambič ×56",
+    "№3 priča Lovrencij Štrukelj železničar = 3. POJAV (1916 №3-priča → 1917 №4-žENIN → 1918 №3-priča!) — 1. trojna vloga v WWI-seriji",
+    "№3 ženin Franc Petrič + nevesta Ana Šepaher = 2 NOVA priimka; mati Kolar ×2; priča Anton Kralj ×34 (Gradac!); Gradac 95 = korpus ×1",
+    "№4 ženin Peter Jakofčič = korpus ×149 (2. največja!); nevesta Ana Jakša ×8; priča Janez Malešič NOV + Miho Županič ×36 (M1906-reciprok!); Cerkvišče 17 + Krasinec 30 = nove številke"
+  ],
+  "anomalies": [
+    "★★ №2 NEVESTA V AMERIKI ROJENA (spričevalo o prej. sv. krstu 'v Ameriki rojeno') = 1. ameriško-rojena oseba poročne linije 1886–1918 (48 let!) — emigrantska Gregorič-Cerkvišče 4 družina",
+    "★★ №3 VOJAK-ŽELEZNIŠKI PREDELAVEC v civili + vojaški Wohnort (II. nadomestna komp. c. in kr. peš polka št. 17) + oče PRAZEN (mati Krišula samska gostinja † = NEZAKONSKO!) + Dispens von 2 Aufgeboten + Trauungsermächtigung FELDSUPERIORATA GRAZ št. 2531 (vojaška DVOLISTINA!)",
+    "★★ №4 PREDKORPUSNA generacija (b. 1860 — 58!) × 41 = NAJSTAREJŠI PAR WWI-serije (99 skupaj) + VSEH 4 starši (†) (2. primer po 1917 №3!)",
+    "★★ 0 GRIBLJE-VPISOV = 2. leto linije BREZ Griblje (po 1901 P130 — 16-letna prekinitev!) → 0 novih blokov; kumulativ 688/171/164/72 NESPREMENJEN",
+    "★★ 3 DUHOVNIKI / 4 vpise (Miklavčič ×2 + Bitnar 'per deleg.' + Höltker 'per deleg.') = 1. taki razkol leta linije",
+    "★ P146-lead KOREKCIJE ×4 (Krasinec 44→14; 7.6.→2.6.; 10.10.→16.10.; k.u.k. Bahnbaukompanie→Feldsuperiorat Graz/pešpolka 17!)",
+    "★ №1 ISTA PRIČA ×2: 'Miko Starasinič' Krasinec 32 IN 'Miko Starasinič' Krasinec 9 (različni hiši — oče+sin [~]?)",
+    "★ №1 nevestino bivališče OZNAČENO 'bivališče' (1. izrecna oznaka v WWI-seriji? — prebivališče ≠ rojstna hiša)",
+    "★ №3 nevesta 'sam. hči-slúžkinja' = DVOJNI stan (samska hči + služkinja — poklicni skok iz kmečkega!)",
+    "★ №4 zglašnica DAN PRED poroko (15. okt.) → datumska veriga potrjuje 16. okt. (korekcija lead!)"
+  ],
+  "honesty": [
+    "№1 nevesta bivališče: 'Krasinec št. 14' [~ — zoom ×4 potrjuje enojno '1'; P146-lead '44' = NAPAČEN; korpus nima ne 14 ne 44 — VERIF po občinski knjigi]",
+    "№2 nevesta roj. 10. 8. 1891 [~ OBLEDALO — dan '10' + leto '1891' najbolj berljivi; starost 26 ✓ aritmetika; alternativno 16.8.? — VERIF po krstni knjigi]",
+    "№2 ženin hiša Cerkvišče 18 [~ — '18' vs '48': eno-obstična enica + polna osmica podpirata 18; korpus ima Cerkvišče 16 (Željko!), ne 18]",
+    "№3 groom Wohnort 'pčer Gradac 95' [~ — 'pčer' = 'preko'? vojaška poštna okrajšava — VERIF]",
+    "№3 ženinova mati 'Krišula' [~ Križula/Krušula?] Petrič samska gostinja",
+    "№4 mati ženina 'Zara' [~ Gara/Sara?] roj. Kambič + mati neveste 'Vtraos' [~ Utraos/Straos/Vrtaov?] — 2 najšibkejši branki",
+    "№2/№3 duhovnika 'J. Paulin Bitnar' + 'Leopold Höltker' [~ — podpisa diagonalna; 'per deleg.' jasna]",
+    "starosti/datumi 8/8 ✓ aritmetika + kalendarska (1 pon + 2 ned + 1 sre) — samokolovrstno"
+  ]
+}

@@ -6177,3 +6177,33 @@ Work Log:
 
 Stage Summary:
 - 0 novih problemov; chain higiena sanirana po vzorcu "P143-ZAMUDE SANIRANE"
+
+---
+Task ID: P147
+Agent: Z.ai Code (transkripcija + verifikacija + README + commit)
+Task: P147 — poročna knjiga 04455, polno leto 1918 (s163–s164 == Pag. 162–163) — 33. leto poročne linije; 0 Griblje-vpisov = 2. leto linije BREZ Griblje (po 1901!)
+
+Work Log:
+- diagnoza: HEAD @ bc251c5 (P146-b) — P140–P146 vsi commitani (worklog-posodobitve zaostajajo za commiti!); P146-lead določa P147 = 1918
+- repo premaknjen: /tmp/muzej-repo → /home/z/muzej (Write-tool omejitev /home/z)
+- inventar 192 URL-jev rekonstruiran iz matricula MatriculaDocView-konfiguracije (recept P126: image/<base64> → hosted-images.matricula-online.eu; direktni prenos z UA + JPEG-magika deluje — brez Playwrighta!)
+- prenos s162–s168 (7/7 OK v 1. poskusu) + full-page predogledi + GRID-koordinate
+- ★ MEJA 1918/1919 DOKAZANA: s165-vrh = letna glava »Leto 1919« (ročno, podčrtana!) → 1918 ZAKLJUČEN z 4 vpisi (P146-lead štetje №1+3 TOČNO!)
+- 2× full-page agent-oči (s163, s164) + 8× full-row VLM L+R + 7× zoom-forenzika (Krasinec 14/44 · datum 16./10. · obledalo 1891 kontrast-enhance · Cerkvišče 18 · vojaški naslov · priče ×2)
+- ★★ transkripcija 4 vpisov: №1 Križan Otok 5 × Galovec Krasinec 14 (P146-lead '44' KOREKCIJA!) · №2 Željko Cerkvišče 18 × Gregorič Cerkvišče 4 (V AMERIKI ROJENA!) · №3 Petrič (vojak-železniški predelavec!) × Šepaher · №4 Jakofčič 58 × Jakša 41 (NAJSTAREJŠI PAR WWI!)
+- ★★ 0 OMEMB GRIBLJE v 4/4 vpisih = 2. leto linije BREZ Griblje (po 1901 P130 — 16 let!) → 0 novih blokov; kumulativ 688/171/164/72 NESPREMENJEN
+- kalendarska + aritmetična kontrola 8/8 ✓ (1 pon + 2 ned + 1 sre; vse starosti ✓)
+- korpus-forenzika ×10: TOP-3 mreže korpusa VSE v 1918 (Križan ×160 + Jakofčič ×149 + Željko ×148!) + Štrukelj 3. pojav (1. trojna vloga WWI!) + 6 novih hišnih št. + ~7 novih priimkov
+- evidence JSON (4 + 10 cc + 10 anom + honesty 8) + notes + qa-p147 (148. kontrola — vzorec p130 0-blok-leto!) + skripta p147 (I1–I12 + --live)
+- verifikacija: p147 --check --live **51/51 PASS** · runQA **148/148 ok:True** (0 failov!) · tsc 0 · lint 0
+- README: Trenutno stanje (po P147 · QA 148/148 · pokritost 33/36 · P148 lead) + Zadnje stanje P147-bullet
+
+Stage Summary:
+- 1918 = 4 vpisi; ★★ 0 GRIBLJE = 2. leto linije BREZ (16-letna prekinitev po 1901!)
+- ★★ №2 nevesta Ivana Gregorič = 1. AMERIŠKO-ROJENA oseba poročne linije 1886–1918 (48 let!)
+- ★★ №3 Franc Petrič = vojak-železniški predelavec + oče PRAZEN (mati samska gostinja † = NEZAKONSKO!) + Dispens von 2 + Feldsuperiorat Graz št. 2531
+- ★★ №4 Jakofčič 58 (b. 1860 predkorpusno!) × Jakša 41 = 99 let + VSEH 4 starši (†)
+- ★★ 3 duhovniki / 4 vpise (Miklavčič ×2 5. branje + Bitnar + Höltker — oba 'per deleg.')
+- ★ P146-lead KOREKCIJE ×4 (Krasinec 44→14 · 7.6.→2.6. · 10.10.→16.10. · Bahnbaukompanie→pešpolka 17)
+- korpus po P147: 688 vitals · 171 blokov · 164 sidra · 72 hiš; QA 148/148
+- NASLEDNJE: **P148 = leto 1919** (s165–s167 = 11 vpisov; №6 Griblje 77 × 37/8 INTRA hišar × Pezdirc-hči = 1. Griblje-vpis po 1917!) → P149–P151 (1920–1922)
