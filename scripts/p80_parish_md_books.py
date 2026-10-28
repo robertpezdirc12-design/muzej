@@ -236,8 +236,8 @@ def verify():
         # prek 04455-1903 (P132) in nista v P80_PT_GAP dokumentiranih 13 dokazih luknje
         # (uskladitev s qa-parish P80_PT_GAP semantiko: gap = fiksen seznam 13 dokazov!)
         and all(h in houses for h in (v["houseNo"] for v in sample))
-        and len(vitals) == 762  # POSODABLJENO P151: 578 (era P126) → … → 714 (P151 — KONEC 04455!); P153: 714 → 725 (+11 blokov 04894-1887); P154: 725 → 754 (+29 blokov mrliške 04894-1888 — REKORDNO leto!); POSODABLJENO P155: 754 → 762 (+8 blokov mrliške 04894-1889 — NAJNIŽE leto!)
-        and len(houses) == 81  # P154: 78 → 80 (+h47 +h83!); POSODABLJENO P155: 80 → 81 (+h55 — mrliška 04894-1889, krstni dokazi izven filtra!)
+        and len(vitals) == 777  # POSODABLJENO P151: 578 (era P126) → … → 714 (P151 — KONEC 04455!); P153: 714 → 725 (+11 blokov 04894-1887); P154: 725 → 754 (+29 blokov mrliške 04894-1888 — REKORDNO leto!); P155: 754 → 762 (+8 blokov mrliške 04894-1889 — NAJNIŽE leto!); POSODABLJENO P156: 762 → 777 (+15 blokov mrliške 04894-1890!)
+        and len(houses) == 82  # P154: 78 → 80 (+h47 +h83!); P155: 80 → 81 (+h55 — mrliška 04894-1889, krstni dokazi izven filtra!); POSODABLJENO P156: 81 → 82 (+h90 — mrliška 04894-1890 Klambič-učitelj ŠOLSKA HIŠA; krstni dokazi 1890–1919 izven filtra!)
         and set(inset) - {"41", "50"} <= pts  # POSODABLJENO P139: h41+h50 (04455-1903, P132) sta v luknji
         # 41–60 brez PT-nabora — izjemi kot pri inset-pogoju zgoraj
     )
