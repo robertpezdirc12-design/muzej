@@ -1,0 +1,125 @@
+{
+  "phase": "P158",
+  "title": "ŽUPNIJA PODZEMELJ — MRLIŠKA KNJIGA 04894 — polno leto 1892 (7. polno leto mrliške linije, issue #18)",
+  "status": "SAMPLE-TRANSCRIPTION-D1892",
+  "issuedAt": "2026-07-18",
+  "source": {
+    "book": "matricula-online.eu /sl/slovenia/ljubljana/podzemelj/04894/",
+    "skeni": "s34–s41-top (+ s42 kontrola meje) == strani 33–40",
+    "pageMapping": "stran == sken − 1 — 13. potrditev P80-invariantne mrliške (s34→33, s35→34, s36→35, s37→36, s38→37 [γ-7!], s39→38, s40→39, s41→40); s38 = 'Stran 37': celostanski-VLM + faza-1 '34' OBOJE NAPAČNA — γ-7-forma v ŠTEVILKI STRANI (sepia, drugačna roka?) — MAX-ZOOM > VLM 9. potrditev!",
+    "scanLayout": "dvoplautna skena 2528×2000; levi polaut = identifikacijski stolpci (zaporedna/mesec-dan/vas-hišna/ime-stan), desni = Vera/Spola/Starost/Bolezen/Previden/Podpis/Opomba; ena vrstica teče čez OBA polauta (L/R-trakovi ×2.2)",
+    "layout": "Leto 1892: glava izpisana 6/6 polnih strani (s34–s40-left); INLINE '1892' velike cifre v r1-celici (3. INLINE-potrditev); mesecni markerji INSIDE vrsticnih celic (Januarij r1, Februar r7, Marcej r11+r13, April r26, Maj r33, Junij r39, Julij r42, Avgust r44, September r47+r48, Oktober r56+r59, November r61+r70, December r72); rdeče arhivske oznake ≥9/17 Griblje-vrstic (kredne kljukice — X9-pojav 2. leto); mrtvorojenci: N. + priimek, BREZ PODPISA, starost/vzrok —",
+    "rowsTotal": 81,
+    "rowHeights": "~130–160 px (faza-0 kaskada th=0.65/0.6, cov=0.30–0.35; s41 = FAIL — ročna kalibracija po ruler-diagih)",
+    "method": "7× celostansko branje (s34–s42, glm-5v-turbo thinking-off) + vrsticna detekcija (horizontalne crte + gostota crnila — kaskada 6 kandidatov) + 26 L/R trakov (2.2×, snap-band pripenjanje) + 35 max-zoom celic + 12 super-zoom (3–8×: Pezdirec-priimek, Jakobčič-k-o-b, Stran-37, Foček-F, Požek-ž, 2½, ½-urn, Habost, Prehlajenje, 1¾, Bulc/Milek, 1893-marker) + 9 ruler-diagov ≈ 89 VLM/AI-operacij"
+  },
+  "frame": {
+    "lead": "s34-r1 = Griblje 57 Rudolf PEZDIREC ¼ zemljatov sin 2½ leta Merzlica 6./8. 1. 1892 franc Češarek coop. — LEAD 100% POTRJEN (P157-napovedi 4/4) + POPRAVEK ×3 (Sedrinec/Terdinec→PEZDIREC; 22→2½ leta; Jos. Pešarelly→franc Češarek) — ★★★ = krstna-04105-1889-Rudolf (oče Peter Pezdirec × mati Marija Županič) — VITAL-CHAIN krstna→mrliška + poročna-1909-№8-hčera Maria PEZDIREC 'GRIBLJE 57' = PEZDIREC-HIŠA!",
+    "boundaries": "meja 1892/93 = '— 1893. —' na PRAZNI vrsti s flomastri (levo+desno) + Januarij pod markerom (s41, med r82 in 1893-r1) = 5. STIL MEJE (razporejeni-marker — 1. primer na mrliški liniji!; zaporedje stilov: prazna-glava-P153 → cifri-P154 → INLINE-P155/156/157 → hibrid-glava+marker-P157 → razporejeni-P158); 1892 = 81 vrstic (r1–r81; r81 = Grem 29 Nikolaj H~ure 4 leta 27./29.12. — IZVEN Gribelj!); s42 = 'Leto 1893' + r10–21 = P159-podlaga",
+    "glave": "»Leto 1892« izpisane 6/6 polnih strani (s34–s40-left; s41-left = podedovana 1892-glava nad 1893-markerom)",
+    "meseci": "Jan 1 · Feb 3 · Mar 2 · Apr 1 · Maj 1 · Jun 0 · Jul 0 · Avg 0 · Sep 3 · Okt 3 · Nov 2 · Dec 1 — JUN–AVG = 0 (poletna luknja ×3 zapored!)",
+    "podpisi": "16/17 (franc Češarek coop. ×14 + Jos. Rauq ×1 [r14 — VLM 'Ramej' ista oseba!] + Ivan Šašelj župnik Adlešiči ×1 [r21 — DVOJNI podpis istega dne z r22-Krasinec!] + BREZ PODPISA ×1 [r50-SUICID — r53-vzorec #4!]) — 2. nepopolno odpisano leto (1887 popolno, 1891 15/15!)",
+    "razpon": "½ ure (r61) → 80 let (r21)",
+    "otrisjaUmrljivost": "35 % (≤3 leta ×6/17: 2½ + 1¾ + 2-mes + 2 + 2¾ + ½-ure — dvig iz 33 %-1891!)",
+    "mrtvorojeno": "×6 čez knjigo (r2-Krasinec-2-N.-Požekova + r35-Primostek-10-N.-Hruh + r43-Ohljuka-17-N.-Kraf-'Prezgodaj rojen' + r63-Otok-3-N.-Cajvar + r66-Vranoviče-9-N.-Petrovčič + r68-Podžemelj-9-N.-Gregorič) — s39 = 3 na eni strani!; vsi BREZ PODPISA"
+  },
+  "entries": [
+    {"row": 1, "houseNo": "57", "bookSignature": "04894", "year": 1892, "scan": 34, "page": 33, "mesec": "Januarj", "smrt": "6.", "pokop": "8.", "ime": "Rudolf PEZDIREC [~ Pezdinec/Pegdirec — VLM 'Sedrinec'/'Terdinec' ×2 ZAVRJENA]", "stan": "¼ zemljatov sin", "spol": "moški", "starost": "2½ leta [VLM '22 leta' ZAVRJEN — ulomek 2/1/2 jasno!]", "bolezen": "Merzlica [~ Mrzlica]", "previden": "—", "duhovnik": "franc Češarek, coop. [VLM 'Jos. Pešarelly' ZAVRJEN]", "rdeca": true, "opomba": "★★★ LEAD 100% + VITAL-CHAIN krstna-04105-1889-Rudolf (oče Peter Pezdirec × Marija Županič) + poročna-1909-№8-hčera = PEZDIREC-HIŠA!; h57 = 1. mrliški vpis"},
+    {"row": 6, "houseNo": "37", "bookSignature": "04894", "year": 1892, "scan": 34, "page": 33, "mesec": "Februar", "smrt": "30. 1.", "pokop": "1. 2.", "ime": "Marija Husič", "stan": "vdova, kolarica; roj. Huljar [~ — VLM 'Hleušič roj. Štrukar živa botanica' ×3 ZAVRJEN]", "spol": "ženski", "starost": "62 let", "bolezen": "Nadruha [~ Nadluha]", "previden": "1", "duhovnik": "franc Češarek, coop.", "rdeca": true, "opomba": "kolarica ×3 leto zapored (1891 ×2!); HUSIČ ×2 1892 (cf. r46!); h37 = 2. mrliški vpis (1890-r10!)"},
+    {"row": 8, "houseNo": "36", "bookSignature": "04894", "year": 1892, "scan": 34, "page": 33, "mesec": "Februar", "smrt": "14.", "pokop": "16.", "ime": "Peter Križan [~ Kržan — VLM 'Hujan' ZAVRJEN]", "stan": "samotni gostač [~ gostilnar]", "spol": "moški", "starost": "70 let", "bolezen": "Slabost", "previden": "1", "duhovnik": "franc Češarek, coop.", "rdeca": true, "opomba": "KRIŽAN-mreža (1888-h3 + 1890-h35 + krstna-1892-h63!); h36 = 3. mrliški vpis; isti datum kot r9!"},
+    {"row": 9, "houseNo": "48", "bookSignature": "04894", "year": 1892, "scan": 34, "page": 33, "mesec": "Februar", "smrt": "14.", "pokop": "16.", "ime": "Janez HLOBUČAR", "stan": "¼ zemljatov sin", "spol": "moški", "starost": "22 let", "bolezen": "Pljučnica", "previden": "sv. olje ('bi. olj' izpisano)", "duhovnik": "franc Češarek, coop.", "rdeca": true, "opomba": "KLOBUČAR-mreža (1891-h46 + h47-soseda-P154!); h48 = 2. mrliški vpis (1889!)"},
+    {"row": 14, "houseNo": "80", "bookSignature": "04894", "year": 1892, "scan": 35, "page": 34, "mesec": "Marcej", "smrt": "8.", "pokop": "10.", "ime": "Marija Šimec [~ Štmc]", "stan": "vdova, gostilničarka [~ gostilnica]; roj. Hmener [~]", "spol": "ženski", "starost": "44 let", "bolezen": "Slabost", "previden": "1", "duhovnik": "Jos. Rauq [VLM 'Ramej' — ista oseba!]", "rdeca": true, "opomba": "★★ h80 = 1. KORPUSNI dokaz kadarkoli (0 blokov vseh treh knjig!) → p80 hiše 82→83 EDINA nova 1892!; ŠIMEC-vez (h56/h55/h38/h80!); 1. izpisani 'gostilničarka'-stan"},
+    {"row": 21, "houseNo": "43", "bookSignature": "04894", "year": 1892, "scan": 35, "page": 34, "mesec": "Marcej", "smrt": "20.", "pokop": "22.", "ime": "Katarina Brula [~ Bulc]", "stan": "vdova, bajtarica; roj. MILEK", "spol": "ženski", "starost": "80 let", "bolezen": "Slabost", "previden": "1", "duhovnik": "Ivan Šašelj, župnik Adlešiči (2-vrstični)", "rdeca": true, "opomba": "★★ ŠAŠELJ-1892 DVOJNI podpis istega dne (r21 + r22-Krasinec!); najstarejša 1892; MILEK-mreža (h64-familija + krstna-botra!); h43 = 2. mrliški vpis (1887!)"},
+    {"row": 27, "houseNo": "23", "bookSignature": "04894", "year": 1892, "scan": 36, "page": 35, "mesec": "April", "smrt": "11.", "pokop": "13.", "ime": "Marija BRINEC", "stan": "omgjena ½ zemljakinja; roj. Hlebec", "spol": "ženski", "starost": "77 let [★★ POPRAVEK — VLM '37' + faza-1 '47' OBOJE ZAVRJENA — γγ γ-7 ×2!]", "bolezen": "Mertvorno [~ Mertvod — X6 odrasli 4.!]", "previden": "1", "duhovnik": "franc Češarek, coop.", "rdeca": false, "opomba": "h23 = BRINEC-hiša (1891-r56!); BRINEC ×3 1892; γ-7-forma 9.+10. potrditev"},
+    {"row": 34, "houseNo": "17", "bookSignature": "04894", "year": 1892, "scan": 36, "page": 35, "mesec": "Maj", "smrt": "13.", "pokop": "15.", "ime": "Ana KRALJ [~ Kraf]", "stan": "omgjena ¼ zemljakinja; roj. JAKOBČIČ", "spol": "ženski", "starost": "38 let", "bolezen": "Jetika", "previden": "1", "duhovnik": "franc Češarek, coop.", "rdeca": false, "opomba": "h17 = KRALJ-hiša (poročna-1892-№10 + 1909 + 1922!); JAKOBČIČ-mreža #4; h17 = 1. mrliški vpis"},
+    {"row": 46, "houseNo": "41", "bookSignature": "04894", "year": 1892, "scan": 37, "page": 36, "mesec": "September", "smrt": "19.", "pokop": "20.", "ime": "Barbara Husič [~ Hlačič/Kusič]", "stan": "¼ gemlj. hči", "spol": "ženski", "starost": "1¾ leta [★★ POPRAVEK — VLM '17¾' ZAVRJEN — otrok!]", "bolezen": "Jetika", "previden": "—", "duhovnik": "franc Češarek, coop.", "rdeca": true, "opomba": "HUSIČ ×2 1892 (cf. r6-h37!); h41 = 2. mrliški vpis (1888!)"},
+    {"row": 48, "houseNo": "16", "bookSignature": "04894", "year": 1892, "scan": 38, "page": 37, "mesec": "September", "smrt": "2.", "pokop": "3.", "ime": "Matija FILAK", "stan": "¼ zemljatov sin", "spol": "moški", "starost": "7 let", "bolezen": "Vodenica", "previden": "—", "duhovnik": "franc Češarek, coop.", "rdeca": false, "opomba": "★★ FILAK-mreža ×3 v 3 letih (1890-lead-Jurij + 1891-Ana-77 + 1892-Matija-7!) — mati+sin?; s38 = 'Stran 37' γ-7 v številki strani!; h16 = 3. mrliški vpis"},
+    {"row": 50, "houseNo": "9", "bookSignature": "04894", "year": 1892, "scan": 38, "page": 37, "mesec": "September", "smrt": "9.", "pokop": "10.", "ime": "Janez JAKOBČIČ [VLM 'Jakšič' ZAVRJEN]", "stan": "oženjen ¼ zemljak", "spol": "moški", "starost": "53 let", "bolezen": "'Se je obesil' — ★★★ 1. SUICID linije!", "previden": ". (pika — NI prejel!)", "duhovnik": "BREZ PODPISA (r53-vzorec #4)", "rdeca": true, "opomba": "★★ JAKOBČIČ-mreža #3 (h6 ×2 + h9!); h9 = 2. mrliški vpis (1891-Peter!)"},
+    {"row": 56, "houseNo": "58", "bookSignature": "04894", "year": 1892, "scan": 38, "page": 37, "mesec": "Oktober", "smrt": "9.", "pokop": "11.", "ime": "Nikolaj Foček [~ Toček]", "stan": "¼ zemljatov sin", "spol": "moški", "starost": "2 meseca", "bolezen": "Jetika", "previden": "—", "duhovnik": "franc Češarek, coop.", "rdeca": true, "opomba": "hisna 58 (faza-1 '53' ZAVRJENA!); OKTOBER-marker INSIDE r56; h58 = 3. mrliški vpis (1887 + 1890-Požek ×2!) — Foček ≠ Požek [~]"},
+    {"row": 57, "houseNo": "2", "bookSignature": "04894", "year": 1892, "scan": 38, "page": 37, "mesec": "Oktober", "smrt": "19.", "pokop": "20.", "ime": "Marjeta Hlebeg [~ Hlebec]", "stan": "¼ zemljahova hči", "spol": "ženski", "starost": "2 leti", "bolezen": "Božjast (X11 dojenčkov-termin)", "previden": "—", "duhovnik": "franc Češarek, coop.", "rdeca": true, "opomba": "h2 = 1. mrliški vpis (poročna-1919 + krstna 1887–1901 izven!)"},
+    {"row": 59, "houseNo": "20", "bookSignature": "04894", "year": 1892, "scan": 39, "page": 38, "mesec": "Oktober", "smrt": "21.", "pokop": "23.", "ime": "Anton BRINEC", "stan": "¼ zemljatov sin", "spol": "moški", "starost": "2¾ leta", "bolezen": "Prehlajenje [VLM 'Sušljanje' ZAVRJEN — 2. pojav linije!]", "previden": "—", "duhovnik": "franc Češarek, coop.", "rdeca": false, "opomba": "BRINEC ×2 v 22 dneh (r59 + r64!); OKTOBER ponovljen INSIDE r59; h20 = 1. mrliški vpis"},
+    {"row": 61, "houseNo": "61", "bookSignature": "04894", "year": 1892, "scan": 39, "page": 38, "mesec": "November", "smrt": "2.", "pokop": "3.", "ime": "Ana POŽEK [VLM 'Pižek' ZAVRJEN — ž-háček!]", "stan": "¼ zemljatova hči", "spol": "ženski", "starost": "½ URE [★★ POPRAVEK — VLM '¾ leta' + faza-1 '¾ urn' OBOJE ZAVRJENA!]", "bolezen": "Habost [VLM 'Slabost/Nabost' ×2 ZAVRJENA]", "previden": "—", "duhovnik": "franc Češarek, coop.", "rdeca": true, "opomba": "★★ NAJKRAJŠA 1892 + h61 = 3. LETO ZAPORED (6 vpisov 1888×3+1891×2+1892×1 — najbolj trpljenča POTRJENA!) + POŽEK-h61 (1887-Miko + 1891-Nikolaj + 1892-Ana!)"},
+    {"row": 64, "houseNo": "24", "bookSignature": "04894", "year": 1892, "scan": 39, "page": 38, "mesec": "November", "smrt": "13.", "pokop": "15.", "ime": "Marija BRINEC", "stan": "½ zemlj. hči", "spol": "ženski", "starost": "5 let", "bolezen": "Jetika", "previden": "—", "duhovnik": "franc Češarek, coop.", "rdeca": false, "opomba": "hisna 24 (faza-1 '21' ZAVRJENA!); BRINEC ×3 1892 (3 hiše!); JETIKA ×4 1892; h24 = 2. mrliški vpis (1888!)"},
+    {"row": 72, "houseNo": "8", "bookSignature": "04894", "year": 1892, "scan": 40, "page": 39, "mesec": "December", "smrt": "1.", "pokop": "3.", "ime": "Barbara Jakopec", "stan": "¼ zemljatova hči", "spol": "ženski", "starost": "6 let", "bolezen": "Difteritis [~ Difterija — 2. pojav! SEP–DEC-epidemija: Difteritis ×2 + Angina ×3]", "previden": "—", "duhovnik": "franc Češarek, coop.", "rdeca": false, "opomba": "December-marker INSIDE r72; h8 = 3. mrliški vpis (1888 ×2!); ZADNJI Griblje-vpis 1892"}
+  ],
+  "excluded": [
+    {"id": "E1", "opis": "s34 nonGriblje (r2 Krasinec-2-N.-Požekova-Mrtvorojeno! + r3 Primostek-22-Magdalena-Repovž-32-Jos.-Rauq + r4/r5 Gradac + r7 Krasinec-49 + r10 Podžemelj-11 + r11 Primostek-9 + r12 Otok-2) — r2 = POŽEK-Mrtvorojeno (Krasinec — ne-h61!); Rauq-Januar ×5 (r3/r7/r10/r11/r12!) — vrnitev že januarja 1892!"},
+    {"id": "E2", "opis": "s35 nonGriblje (r13/r15–r20/r22–r24 Gradac/Certoviše/Krasinec/Podžemelj) — r22-Krasinec-6-Matija-Bahorič = Šašelj-2. podpis (DVOJNI!) + r24-Podzemelj-12-Marija-ŠTRAVS-16-dni-Slabost (ŠTRAVS-čez-vas — STRAUS-mreža-surname-ček!) + r23-Podžemelj-22-Martin-Muc"},
+    {"id": "E3", "opis": "s36 nonGriblje (r25/r26/r28–r33/r35/r36) — r35-Primostek-10-'N. Hruh'-Habost = imenovan-Mrtvorojeno? [~ X-vprasanje] + r30-Gradac-26-Jurij-1¼-ure-Habost + r36-Klošter-40-Janez-Herkavec-Mrzol"},
+    {"id": "E4", "opis": "s37 nonGriblje (r37–r45 + r47) — r43-Ohljuka-17-N.-Kraf-'Prezgodaj rojen'-¼-ure-BREZ-PODPISA + r45-Dobravice-23-Katarina-Jugant-Jos.-Rauq+'⅑'-flomaster [~] + r47-Ohljuka-16-Nikolaj-Klepec-Bule"},
+    {"id": "E5", "opis": "s38 nonGriblje (r49 Otok-14-Katarina-Novak-14-Jetika-Jos.-Rauq + r51–r55 Otok-17/16-Kraf-Klepec-kompleks: Janez-2-Krze + Marija-12-Difteritis! + Barbara-3-Angina + Marija-7½-Angina + Jožef-1½-Angina + r58-Gradac-22-Katarina-Taicman-'osebnica'-65-let + RED-V!) — r51–r55 = KRAF/KLEPEC-epidemija-jedro"},
+    {"id": "E6", "opis": "s39 nonGriblje (r60 Gradac-62-Franc-Humpahar-10¾-Jetika + r62 Krasinec-50-Katarina-Musič-38-Nadruka + r63-Otok-3-N.-Cajvar-Mrtvorojeno + r65-Gradac-3-Ana-Novak-68-Vodenica + r66-Vranoviče-9-N.-Petrovčič-Mrtvorojeno + r67-Grem(?)-30-Matija-Toma-4-Davica-Jos.-Rauq-'⅑' + r68-Podžemelj-9-N.-Gregorič-Mrtvorojeno + r69-Otok-10-Katarina-Toma-vdova-46-Nadruka-Jos.-Rauq) — MRTVOROJENO ×3 NA ENI STRANI!"},
+    {"id": "E7", "opis": "s40 nonGriblje (r70 Klošter-36-Anton-Škut-9-dni-Božjast + r71-Certoviše-22-Peter-65-Pljučnica + r73–r80 Grem/Perm-Gradac-Otok-Klošter-Kremelj — Jos.-Rauq ×6 + Češarek ×4!) — r74-Otok-22-Ana-Štarnarič-vdova-kolarica-31-Nadluka"},
+    {"id": "E8", "opis": "s41: r82-Boginja-vas-39-Ana-Cesnik-34-Božjast + MARKER-VRSTA '— 1893. —' (5. STIL MEJE!) + 1893-r1–r9 (P159-podlaga: r1-Otok-23-Marija-Kosic-2-dni + r5-Griblje-69(?)-Katarina-P~rinc-35-Pljučnica + r7-Griblje-53(?)-Ana-F~oček-35-Jetika — oba Jos. Rauq! + r9-Krasinec-23-vdova-kolarica-74) + r81 = Grem 29 Nikolaj H~ure 4 leta (celostanski-VLM 'Griblje h29' ZAVRJEN — max-zoom: 'Grem' jasno!) — ZADNJI 1892-vpis IZVEN Gribelj"}
+  ],
+  "stats": {
+    "vrstic": 81,
+    "gribljeVpisov": 17,
+    "hise": 17,
+    "ponovitve": 0,
+    "nare": "1. mrliško leto BREZ hišnih ponovitev (1888-h61×3 → 1890-h30×2 → 1891-h6+h61×2 → 1892 ×0!)",
+    "noveMrliskiVpisi": ["h57", "h80", "h2", "h20", "h17"],
+    "razponStarosti": "½ ure → 80 let",
+    "najstarejsa": "80 let (r21 Katarina Brula roj. Milek)",
+    "najkrajsa": "½ ure (r61 Ana Požek)",
+    "otrisjaUmrljivost": "35 % (≤3 leta ×6/17)",
+    "vzrokiLeksikon": "Jetika ×4 (najpogostejši!) + Slabost ×4 + Difteritis ×2 + Angina ×3 (nonG — SEP–DEC-epidemija!) + Prehlajenje ×1 (2. pojav!) + Vodenica ×2 (nonG-r65 + r48) + Nadruha + Habost + Božjast + Merzlica + Mertvorno (X6!) + 'Se je obesil' (1. suicid!)",
+    "duhovniki": "franc Češarek coop. (dominanta ×14/17 Griblje) + Jos. Rauq (vrnitev — Januar ×5 nonG + r14 + Sep–Dec nonG!) + Ivan Šašelj župnik Adlešiči (gost — DVOJNI podpis 20./22.3.!)",
+    "podpisi": "16/17 (BREZ = r50-suicid)",
+    "rdeceOznake": "≥9/17 Griblje-vrstic + ≥4 nonG (X9-pojav 2. leto)"
+  },
+  "crossChecks": [
+    {"id": "X1", "name": "PEZDIREC-h57 VITAL-CHAIN (krstna-1889-Rudolf → mrliška-1892-Rudolf!)", "detail": "krstna-04105-1889 h57 Rudolf (oče Peter Pezdirec [~ Pegdirec] × mati Marija Županič) + mrliška-04894-1892 h57 Rudolf 2½ leta — ime + hiša + starost ✓✓✓; poročna-04455-1909-№8 hčera Maria PEZDIREC 24 'GRIBLJE 57' = h57 = PEZDIREC-HIŠA (20-letna kontinuiteta 1889–1909!); korpus 04105-h57-krsti: 1888-Marija + 1889-Rudolf + 1894-Janez + 1899-Alojzij"},
+    {"id": "X2", "name": "FILAK-mreža ×3 v 3 letih (h16)", "detail": "1890-lead-r44-Jurij (P156-hipoteza) + 1891-r33-Ana-vdova-kolarica-77 + 1892-r48-Matija-7-Vodenica — Ana + Matija = mati + sin? [~ ×2 v 15 mesecih!]"},
+    {"id": "X3", "name": "JAKOBČIČ-mreža #4 (h6 ×2 + h9 + h17-roj.)", "detail": "1891: h6 Matija-59 (r39) + h6 Matija-23 (r64 — isto-imeški par X10!) + 1892: h9 Janez-53-SUICID (r50) + h17-roj.-Ana-Kralj (r34) — 4 JAKOBČIČ-dogodki v 14 mesecih čez 3 hiše!"},
+    {"id": "X4", "name": "h61 = 3. LETO ZAPORED — NAJBOLJ TRPLJENČA hiša POTRJENA", "detail": "1888 ×3 + 1891 ×2 (Novak-75 + Nikolaj-POŽEK-½-URE) + 1892 ×1 (Ana-POŽEK-½-URE-Habost) = 6 mrliških vpisov; POŽEK-h61: krstna-1887-Miko + 1891-Nikolaj + 1892-Ana; ½-URE ×2 na isti hiši v 15 mesecih!"},
+    {"id": "X5", "name": "BRINEC ×3 1892 (3 RAZLIČNE hiše!)", "detail": "h23-Marija-77 (r27-April, roj. Hlebec) + h20-Anton-2¾ (r59-Okt) + h24-Marija-5 (r64-Nov) — cf. Požek-veriga-h79→h77→h28 (krstna-1891) — familija-nomadstvo? [~]; P157-r56-h23-Matija-BRINEC = 4. BRINEC-1891/92!"},
+    {"id": "X6", "name": "Mertvod/Mertvorno X6-odrasli — 4. primer", "detail": "P153-66 + P155-49 + 1890-53 + 1892-r27-Marija-Brinec-77 — M-e-r-t-v-o-r-n-o jasno; adult 'Mertvorno' ≠ mrtvorojenost-semantika — nerazrešeno [~]; cf. s37-r41-Metvord-16-let (nonG — 5. pojav 1892!)"},
+    {"id": "X7", "name": "SEP–DEC-EPIDEMIJA-kompleks (Difteritis ×2 + Angina ×3)", "detail": "r52-Otok-17-Marija-Kraf-12-Difteritis + r53-Barbara-3-Angina + r54-Marija-7½-Angina + r55-Jožef-1½-Angina (vsi Otok-17/16-KLEPEC/KRAF!) + r72-Griblje-8-Barbara-Jakopec-6-Difteritis — Otok-cluster Sept + Griblje-Dec [~ ena epidemija?]"},
+    {"id": "X8", "name": "ŠAŠELJ-1892 DVOJNI podpis (gost-župnik Adlešiči)", "detail": "r21-Griblje-43-Katarina-Brula + r22-Krasinec-6-Matija-Bahorič — ISTI dan 20./22.3.; cf. 1891-r25-Šašelj-dvojno; Šašelj = Adlešiči-župnik (P156-Joann=IVAN!) — 2. gostovanje v mrliški"},
+    {"id": "X9", "name": "RDEČE arhivske oznake X9-pojav 2. leto (≥9/17 Griblje + ≥4 nonG)", "detail": "r1-Pezdirec + r8 + r9 + r14 + r21(faint) + r23-nonG + r24-nonG + r46 + r50 + r56 + r57 + r58-nonG + r61 — kredne kljukice/pike; cf. 1891-≥12/15 — vzorec nadaljevan [~ arhivist-marker]"},
+    {"id": "X10", "name": "γ-7-FORMA — 10. do 13. potrditev (s38-'Stran 37' + h57 + h23-γγ + r47-'1¾')", "detail": "stran-'37' (VLM+faza-1 '34' NAPAČNA — sepia-roka!) + h57-LEAD (P157-strip-'54' že prej!) + h23-'77' (γγ — VLM-'37'+faza-1-'47' ZAVRJENA) + r47-September-'1./2.' + '1¾' (VLM-'17¾' ZAVRJEN) — MAX-ZOOM > VLM 8.+9.+10. potrditev v ENI fazi!"}
+  ],
+  "anomalies": [
+    {"id": "A1", "opis": "★★★ 1. SUICID mrliške linije 1886–1892 (r50 Janez Jakobčič h9 'Se je obesil' — previden pika + BREZ PODPISA — r53-vzorec #4!)"},
+    {"id": "A2", "opis": "★★ h80 = 1. KORPUSNI dokaz kadarkoli (vse tri knjige 0 blokov pred P158!) — Marija Šimec vdova-gostilničarka (1. izpisani 'gostilničarka'-stan!) → p80 hiše 82→83 EDINA nova"},
+    {"id": "A3", "opis": "★★ h61 = 3. leto zapored + Ana-POŽEK-½-URE (najkrajša 1892) — 6. mrliški vpis hiše (najbolj trpljenča POTRJENA) + ½-URE ×2 isti hiši v 15 mesecih"},
+    {"id": "A4", "opis": "★★ 5. STIL MEJE: '— 1893. —' na PRAZNI vrsti s flomastri + Januarij pod njo (s41) — razporejeni-marker, 1. na mrliški liniji"},
+    {"id": "A5", "opis": "★★ s38 = 'Stran 37' — γ-7-forma v ŠTEVILKI STRANI (VLM + faza-1 '34' OBOJE NAPAČNA — sepia-roka?; 13. potrditev invarianta stran == sken − 1)"},
+    {"id": "A6", "opis": "★★ γγ-77-POPRAVEK (r27 h23-Marija-Brinec: VLM-'37' + faza-1-'47' OBOJE ZAVRJENA → 77) + Mertvorno-X6 (4. adult-primer!)"},
+    {"id": "A7", "opis": "★★ '17¾'→1¾-POPRAVEK (r46 h41-Barbara-Husič — OTROK, ne 17-letnica!) + '2-let-VLM-'22-leta'-zmeda-lead (r1: VLM-'22' → 2½-ulomek)"},
+    {"id": "A8", "opis": "★ JUN–AVG = 0 (poletna luknja ×3 zapored: 1890-Jun0-Jul1? + 1891-Maj0-Jun2 + 1892-Jun0-Jul0-Avg0 — vzorec [~]) + SEP-TIK (r46–r48 = 3 Griblje-vpisa v 17 dneh!)"},
+    {"id": "A9", "opis": "★ Mrtvorojeno/Prezgodaj-rojen ×6 (r2/r35/r43/r63/r66/r68) — s39 ×3 na ENI strani!; vsi N.+priimek+BREZ-PODPISA; r2 = POŽEK-Mrtvorojeno (Krasinec-2!) + r35-'N. Hruh' [~ imenovani-mrtvorojeni? X-vprasanje]"},
+    {"id": "A10", "opis": "★ 'Hmener'/'Huljar'/'Štmc'/'Bulc'/'Foček'/'Hlebeg'/'Taicman' — 7 X-imenskih [~] (Kurrent-e/c + l/b + ž/š zmeda; VLM-celostanski ×7 ZAVRJENI) + r81-'Grem' ≠ 'Griblje' (celostanski-VLM ZAVRJEN — zadnji-1892-vpis izven Gribelj!)"}
+  ],
+  "honesty": [
+    "r27-starost: '77 let' = γγ γ-7-forma ×2 (max-zoom 3.4×) — VLM-'37' + faza-1-'47' OBOJE ZAVRJENA, ampak γ-7-zvezda je 13× potrjena; ostaja [~ 3 %-dvd]",
+    "r1-priimek: 'PEZDIREC' = max-zoom 8× (P-zanček + e-z-d-i-r + r-enojna + -ec) — VLM-'Sedrinec'/'Terdinec' + faza-1-'Pezdinec' vsi [~]; krstna-korpus-piše 'Pezdirec' (1889) in 'Pegdirec' (1886) — ortografija ni-kanonizirana v viru",
+    "r14-ime/roj.: 'Marija Šimec [~ Štmc], roj. Hmener [~]' — celostanski-VLM-'Hmelcij-roj.-Plenčar' + moja-ruler-'Šimec-roj.-Hleviček' — max-zoom: Š-t-m-c + H-m-e-n-e-r — OBE varianti ostajata [~]",
+    "r61-starost: '½ URE' = max-zoom 3× (ulomek-½ + 'urn') — VLM-'¾-leta' + faza-1-'¾-urn' OBOJE ZAVRJENA; semantika ✓ (Habost-dojenčkov)",
+    "r6-roj.: 'Huljar [~]' — 3 VLM-branja ('Hleušič'/'Štrukar'/'živa-botanica') VSE napačne; max-zoom daje H-?-l-j-a-r [~ 3 odprte crke]",
+    "r56-vas-ili-hisna: 'Griblje 58' = max-zoom (faza-1-'53' ZAVRJENA); r59-'Griblje 20' + r64-'Griblje 24' = max-zoom (faza-1-'24'/'21' OBOJE ZAVRJENA — tri-razlicne-hise!)",
+    "r50-priimek: 'Jakobčič' = max-zoom 6× (k-o-b; VLM-'Jakšič' ZAVRJEN) — 'Jakopčič' teoretično [~ 5 %], ampak tall-loop-b + P157-h6-Jakobčič-para tehtata",
+    "s39-'r67-vas': 'Grem/Perm/Krem [~]' — neberljivo-v-polovi (nonG-izkljucen); r81-'Grem' pa jasno (max-zoom)",
+    "mesec-r6: smrt-30.1. + pokop-1.2. = straddle — 'Februar' po-pokopu (row-marker-semantika: r6-sedi-v-Januarj-bloku-pred-Februar-markerom-r7! — štetje-po-pokopu [~])",
+    "rdeče-oznake: ≥9/17-potrjenih (faint-kreda-na-sliki) — štetje-približno [~ ±1]; r21-oznaka-vprašljiva"
+  ],
+  "nextSteps": [
+    "P159-LEAD: mrliška 04894 leto 1893 — s41-dno (1893-r1–r9: marker-'—1893.—' + Januarj-3./5.-Otok-23-Marija-Kosic-2-dni + r5-Griblje-69(?)-Katarina-P~rinc-35-Pljučnica + r7-Griblje-53(?)-Ana-F~oček-35-Jetika — oba-Jos.-Rauq + r9-vdova-kolarica-74!) + s42 (r10–21: #15-Griblje-32-Marjeta-Šuštaric-¼-ure? + #19-Griblje-56-Janez-Sunc-31-Glošnica — oba-Jos.-Ramej/Rauq!) — meja-1893/94 [~ s47+?]",
+    "h61-7.-leto? (1893: r5-Griblje-69(?) — če-h61 → 4. leto zapored!) + POŽEK-ali-ne? (r5-'P~rinc' [~ Brinec/Požek/Princ])",
+    "r7-Griblje-53(?)-'Ana-F~oček-roj.-Dragaj' — cf. 1892-r56-h58-Nikolaj-FOČEK (mama? [~]) — hisna-53-ali-58 (γ-7!)",
+    "vzrok-leksikon-1893 (Merzlica-jan-1892-lead → 1893-continuiteta? Jetika-1892-×4 →?)",
+    "s42-'Stran 41'-kontrola (invarianta-14.!) + 1893-glava-izpisana?"
+  ],
+  "phase2Adjudication": {
+    "note": "P158 = enofazna adjudikacija (max-zoom + super-zoom v teku faze-1; celostanski-VLM + ruler-diagi + snap-band-trakovi + 35-celic + 12-super-zoomov — 89 operacij); POPRAVKI ×6 (r1-name/age/sign + r27-age + r46-age + r61-age) vse-dokazane-v-isto-fazo",
+    "corrections": [
+      "r1 Rudolf: Sedrinec/Terdinec→PEZDIREC (8×-max-zoom + krstna-korpus!) + 22→2½-leta (ulomek!) + Jos.-Pešarelly→franc-Češarek-coop.",
+      "r27 Marija Brinec: 37/47→77 let (γγ!)",
+      "r46 Barbara Husič: 17¾→1¾ leta (otrok!)",
+      "r61 Ana Požek: ¾-leta/¾-urn→½-URE (ulomek!) + vzrok-Slabost/Nabost→Habost",
+      "r59 vzrok: Sušljanje→Prehlajenje (max-zoom)",
+      "hisna: r56-53→58 + r64-21→24 + r59-24→20 + r24-nonG-42→12 (Podzemelj!)"
+    ]
+  }
+}

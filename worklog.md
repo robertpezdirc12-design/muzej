@@ -6451,3 +6451,26 @@ Stage Summary:
 - Faza-1 napake: 3 starosti (95/9/44 → 75/7/77) + 1 podpis (Čašeř→Šašeř) + 1 stan (½→⅛) + 7 previden + 2 vzroka (Slabost→Starost, Hržlica→Mrzlica) + lead-17-mes
 - verifikacija: tsc 0 · lint 0 · runQA 158/158 ok:True (assertije sinhronizirane!)
 - P158 LEAD nespremenjen: Griblje 57 Rudolf P~ezdinec 2½ let Merlica 6./8.1.1892 fran Češarek coop.
+
+---
+Task ID: P158
+Agent: Z.ai Code (glavni agent)
+Task: P158 — MRLIŠKA knjiga 04894, polno leto 1892 = 7. polno leto mrliške linije (issue #18): s34-top (r1 = LEAD, INLINE »1892« + Januarj INSIDE r1-celice — 3. INLINE-potrditev!) + s34–s40 + s41-top (r81) == str. 33–40 (stran == sken − 1 — 13. potrditev! s38 = 'Stran 37' γ-7 v ŠTEVILKI STRANI!) + meja 1892/93 = »— 1893. —« na PRAZNI vrsti s flomastri + Januarij pod njo (s41) = 5. STIL MEJE (razporejeni-marker, 1. na mrliški!) + glave 6/6 + ★★★ 1892 = 81 vrstic / 17 Griblje-vpisov / 17 hiš — NARE (1. mrliško leto BREZ hišnih ponovitev! rast 55→65→81!) + ★★★ 1. SUICID linije (r50 h9 Janez JAKOBČIČ 'Se je obesil' — pika + BREZ PODPISA = r53-vzorec #4!) + ★★★ LEAD PEZDIREC-h57 = krstna-1889-Rudolf (VITAL-CHAIN!) + ★★ h80 = 1. korpusni dokaz (gostilničarka → p80 83 EDINA!) + ★★ h61 = 3. leto (Ana POŽEK ½ URE — najbolj trpljenča POTRJENA!) + γγ-77 + 1¾ + ½-URE POPRAVKI + Šašelj-DVOJNI + mreže ×4 + SEP–DEC-epidemija + JUN–AVG = 0 (uporabnik: »odlicno pushaj na github gitlab vercel sinhroniziraj posodobi readme in nadaljuj« → P157-f2 push + produkcija 158/158 potrjena → P158 zagnan)
+
+Work Log:
+- P157 PUSH + PRODUKCIJA POTRJENA: GitHub origin + GitLab gitlab = 458a15d (1:1, ls-remote) + Vercel auto-deploy — **produkcija griblje-museum.vercel.app /api/qa = 158/158 ok:True + qa-p157-parish-death-1891 True!** (pravilni URL = griblje-museum, summary-typ »griblib« 404!)
+- P158 FAZA-0: 9 skenov s34–s42 prenesenih (9/9, inventar 256 ✓) — delovni imenik /tmp/p158
+- FAZA-1 celostansko: 9× VLM (s34–s42) — 1892/93-meja LOKALIZIRANA: s41 = »— 1893. —« marker-vrsta + 1893-r1–r9 (5. STIL MEJE!); vrstična detekcija (kaskada 6 kandidatov th/cov — s41 FAIL → ruler-diagi 100px-mreža 9×!)
+- FAZA-2 forenzika: 26 L/R trakov (snap-band pripenjanje) + 35 max-zoom celic + 12 super-zoomov (3–8×) ≈ 89 operacij; 17 Griblje-vrstic ADJUDICIRANE (hisna-POPRAVKI ×3: 53→58, 21→24, 24→20; celostanski-VLM ×9 ZAVRJENI: Sedrinec→PEZDIREC, 22→2½, Pešarelly→Češarek, Pižek→POŽEK, Jakšič→JAKOBČIČ, Ramej→Rauq, Sušljanje→Prehlajenje, Nabost→Habost, Griblje→Grem-r81!)
+- KRITIČNI POPRAVKI: r27 37/47→77 (γγ γ-7 ×2!) + r46 17¾→1¾ (otrok!) + r61 ¾-urn→½-URE + s38-'34'→'Stran 37' (sepia-roka!)
+- KORPUS-KRIŽI: PEZDIREC-h57 (krstna-1888/1889/1894/1899 + poročna-1909-№8-hčera!) + h80-0-blokov (1. korpusni!) + h17-KRALJ-hiša (poročna-1892-№10!) + h61-6.-vpis
+- 17 NOVIH BLOKOV parish.ts (P158-sekcija po P157) + qa-p158 (159. kontrola, 17 assertijev) + pin-kaskada: vitals 792→809 (72 qa-pinskih!) + 04894 93→110 (7×) + p80Houses 82→83 (9×) + guard-i 1892→1893 (5×) + p80-skripta (809/84) + p153–p157-skripte (VITALS_TOTAL + I6d2/I12b/I12c!)
+- evidence parish-death-1892.json (17 entries + 8 excluded + 10 anomalij + 10 crossChecks + honesty 10 + phase2) + notes.md
+- skripta p158 (I1–I12 + --live)
+- README (glava-QA-159 + tabela-linij mrliška-7/39 + korpus 809/110/83 + odprto-①-P159-lead + TOC P1–P158 + sekcija-glava P79–P158 [šte pravilna anchor!] + P158-vnos) + worklog
+
+Stage Summary:
+- mrliška linija: 1886 (46/13) → 1887 (71/13) → 1888 (102/29) → 1889 (36/8) → 1890 (55/15) → 1891 (65/15) → **1892 (81/17 NARE!)** — korpus 809 vitalov · 04455 197 + 04894 110 · sidra 190 · hiše 83 (p80) / 91 (korpus) · PT 13
+- QA 159/159 ok:True — qa-p158 = 159. kontrola
+- push: GitHub origin + GitLab gitlab + Vercel avtomatski deploy
+- P159 LEAD: mrliška 1893 (s41-dno + s42+; Griblje 69(?) Katarina P~rinc 35 + Griblje 53(?) Ana F~oček roj. Dragaj 35 — oba Jos. Rauq Januar!; r5 = h61-4.-leto? [~ γ-7!]; meja 1893/94 [~ s47+?])
