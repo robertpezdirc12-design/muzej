@@ -1521,6 +1521,71 @@ export const HOUSE_VITALS: HouseVital[] = [
     whatEn: "died Janez KRIŽE [~ Križan — the VLM 'Kruge' REJECTED — the max-zoom: K-r-i-ž-e clear!], a married ¼-smallholder, 61 years (Dec 29, buried Dec 31) — Pljučnica (pneumonia); previden (1); Jan Jelen; ★ the LAST Griblje entry of 1893 (the 10th = zap 67) + h19 already in the corpus (a marriage branch) + the KRIŽ/KRIŽAN glyph family (1888 ×5 + 1890-h35 + 1891-h85 + h23-1892-née-Hlebec) + the burial Dec 31 = the last day of the year; a red archival mark",
     status: "DOCUMENTED",
   },
+  // ——— P160: MRLIŠKA KNJIGA 04894 — leto 1894 = 9. polno leto mrliške linije (50 vrstic / 6 Griblje-vpisov
+  // / 6 hiš — VSE RAZLIČNE (87,57,49,35,72,24 — po 1893-h32×2 spet 0 ponovitev!); zap 1–50 = s47-top + s48–s50
+  // + s51-r50 == str. 46–49 (stran == sken − 1 — 15. potrditev!); meja 1894/95 = »— 1895. —« razporejeni-marker
+  // (P158-stil #2!) + Jan Jelen podpis V MEJNI VRSTI; 2 duhovnika VZPOREDNO celo leto (Jelen ×23 + Rauq ×25
+  // + 1 zunanji + 1 brez-mrtvorojen) — JELEN-ERA ———
+  {
+    houseNo: "87",
+    bookSignature: "04894",
+    year: 1894,
+    scan: 48,
+    page: 47,
+    whatSi: "umrla Marjeta PEZDIREC [★★ P159-lead 'TERDIČEC' ZAVRJEN — TERDIČEC-glyph = PEZDIREC-glyph (cf. h57-Rudolf-1892 + h89-Pegdirec-1893 sorodstvo!); VLM 'Pezdirec' ✓], rojena HLEPEC [★★ LEAD 'roj. Klepec' POPRAVLJEN — max-zoom: H-zanka vlevo jasno; cf. r15-Katarina-Klepec-Podžemelj-29 ISTA STRAN — H/K-distinkcija DOKAZANA!], vdova, NOTARICA [★★ LEAD 'kolarica' POPRAVLJEN — X7-Notarica-leksikon: 1. notarica-KOT-STAN na Gribljih (P156-vzorec ×3 [~])!], 62 let [★★ LEAD 62 POTRJEN — VLM '82' ZAVRJEN @8×: 6 = samo spodnja zanka, 8 bi imel DVE!] (9. 4., pokop 11. 4.) — Pljučnica [T-glyph cf. 1892-leksikon!]; previden (1); Jan Jelen; ★ h87 = 1. MRLIŠKI vpis (04455-poročna-1919-№6-h77×87 + 04105-krstni izven filtra!) + PEZDIREC-mreža: h87 + h57 = 2 PEZDIREC-hiše v ISTEM letu ISTEGA meseca (r14 9.4. + r22 30.7.)!; rdeča arhivska oznaka",
+    whatEn: "died Marjeta PEZDIREC [★★ the P159-lead 'TERDIČEC' REJECTED — the TERDIČEC glyph = the PEZDIREC glyph (cf. h57-Rudolf-1892 + h89-Pegdirec-1893 kinship!); the VLM 'Pezdirec' ✓], née HLEPEC [★★ the LEAD 'née Klepec' CORRECTED — the max-zoom: the H-loop to the left clear; cf. r15-Katarina-Klepec-Podžemelj-29 THE SAME PAGE — the H/K distinction PROVEN!], a widow, a NOTARICA [★★ the LEAD 'kolarica' CORRECTED — the X7-Notarica lexicon: the 1st notarica-AS-A-STATUS on Griblje (the P156 pattern ×3 [~])!], 62 years [★★ the lead 62 CONFIRMED — the VLM '82' REJECTED @8×: the 6 = only the lower loop, the 8 would have TWO!] (Apr 9, buried Apr 11) — Pljučnica (pneumonia; the T-glyph cf. the 1892 lexicon!); previden (1); Jan Jelen; ★ h87 = the 1st DEATH entry (the 04455-marriage-1919-№6-h77×87 + the 04105 baptisms outside the filter!) + the PEZDIREC network: h87 + h57 = 2 PEZDIREC houses in THE SAME year (r14 Apr 9 + r22 Jul 30)!; a red archival mark",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "57",
+    bookSignature: "04894",
+    year: 1894,
+    scan: 48,
+    page: 47,
+    whatSi: "umrl Janez PEZDIREC [LEAD 100% — P159-lead 'TERDIČEC-h57' = PEZDIREC-glyph], ¼ zemljalov sin, 1 MESEC (30. 7., pokop 1. 8.) — Habost; previden pika; Jan Jelen; ★ h57 = 2. mrliški vpis (P158-r1-Rudolf-2½-let-Jan-1892 — 2. PEZDIREC-otrok h57 v 3 letih!) + h57 = PEZDIREC-hiša (poročna-1909-№8-hčera-Maria 'GRIBLJE 57'!) + datum-forenzika: pokop '1. avg.' [diag-'oktobr' ZAVRJEN @6× — brez k-glyph!] → smrt 30. jul; kronologija r21-27.7 ≤ r22-1.8 ≤ r23-3.8 ✓; rdeča arhivska oznaka",
+    whatEn: "died Janez PEZDIREC [the LEAD 100% — the P159-lead 'TERDIČEC-h57' = the PEZDIREC glyph], a quarter-smallholder's son, 1 MONTH (Jul 30, buried Aug 1) — Habost; previden a dot; Jan Jelen; ★ h57 = the 2nd death entry (the P158-r1-Rudolf-2½-years-Jan-1892 — the 2nd PEZDIREC child of h57 in 3 years!) + h57 = the PEZDIREC house (the 1909-marriage-№8-daughter-Maria 'GRIBLJE 57'!) + the date forensics: the burial '1. avg.' [the diag-'oktober' REJECTED @6× — no k-glyph!] → the death Jul 30; the chronology r21-Jul-27 ≤ r22-Aug-1 ≤ r23-Aug-3 ✓; a red archival mark",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "49",
+    bookSignature: "04894",
+    year: 1894,
+    scan: 48,
+    page: 47,
+    whatSi: "umrla Barbara BRODARIČ [LEAD 100%], rojena POGOREVC [LEAD 100%], omožena ½ zemljallinja, 53 let (11. 8., pokop 13. 8.) — Jetika; previden (1); Jan Jelen; ★ h49 = 1. MRLIŠKI vpis (04105-krstni ×6 izven filtra — P103-r68-h49-Brodarič-kontinuiteta!) + BRODARIČ-mreža čez meje: h49-1894 + s47-r11-Ana-Brodarič-Boginja-vas + s51-r6-1895-Nikolaj-Brodarič-Krasinec (3 Brodarič-vpisi v 1894/95-plast!); Jetika ×14 = REKORD LINIJE (1892-×4 → 1893-×5 → 1894-×14 — SEP–DEC-epidemija-kont.); rdeča arhivska oznaka",
+    whatEn: "died Barbara BRODARIČ [the LEAD 100%], née POGOREVC [the LEAD 100%], a married ½-smallholderess, 53 years (Aug 11, buried Aug 13) — Jetika; previden (1); Jan Jelen; ★ h49 = the 1st DEATH entry (the 04105 baptisms ×6 outside the filter — the P103-r68-h49-Brodarič continuity!) + the BRODARIČ network across boundaries: h49-1894 + s47-r11-Ana-Brodarič-Boginja-vas + s51-r6-1895-Nikolaj-Brodarič-Krasinec (3 Brodarič entries in the 1894/95 layer!); the Jetika ×14 = the LINE RECORD (1892-×4 → 1893-×5 → 1894-×14 — the SEP–DEC-epidemic cont.); a red archival mark",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "35",
+    bookSignature: "04894",
+    year: 1894,
+    scan: 49,
+    page: 48,
+    whatSi: "umrl Mihael JAKOPIČ [★★ VLM 'Fabjan' ZAVRJEN — max-zoom: J-a-k-o-p-i-č jasno; Jakopič/Jakobčič-glyph-familija (P158-×4 + P159-r25/r27)!], ¼ zemljastov sin, 4 DNI (10. 9., pokop 11. 9.) — Habost; previden pika; Jan Jelen; ★ h35 = 5. mrliški vpis (1887 + 1888-×2 + 1890 — zdaj 1894! NAJVEČ mrliških vpisov skupaj s h24/h72-3!); Griblje-otroci 4/6 = 67 % (r22-1-mes + r30-4-dni + r37-1-leto + r38-1-leto); rdeča arhivska oznaka",
+    whatEn: "died Mihael JAKOPIČ [★★ the VLM 'Fabjan' REJECTED — the max-zoom: J-a-k-o-p-i-č clear; the Jakopič/Jakobčič glyph family (P158-×4 + P159-r25/r27)!], a quarter-smallholder's son, 4 DAYS (Sep 10, buried Sep 11) — Habost; previden a dot; Jan Jelen; ★ h35 = the 5th death entry (1887 + 1888-×2 + 1890 — now 1894! the MOST death entries together with h24/h72-3!); the Griblje children 4/6 = 67% (r22-1-month + r30-4-days + r37-1-year + r38-1-year); a red archival mark",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "72",
+    bookSignature: "04894",
+    year: 1894,
+    scan: 50,
+    page: 49,
+    whatSi: "umrla Ana STRAUV [~ Strauv/Straus-glyph — LEAD/VLM ✓], ¼ zemljaškova hiči, 1 LETO (5. 11., pokop 6. 11.) — Bele [P157-lexikonski [~Bule?] — zdaj jasno Bele cf. 1891-leksikon!]; previden pika; Jan Jelen; ★★ STRAUS-mreža #7: h72 = 3. mrliški vpis (1888-×2-1-dan! + zdaj 1894-1-leto!) + h72 = Strauš-hiša (1888-15-vpisov-krstna + poročna-1886-v23-Maria-Straus + 1891-h71 + 1893-h69-roj.-Straus!) — STRAUS-kampanja: 1888 ×2 + 1890 ×2 + 1891 ×1 + 1893 ×2 + 1894 ×1 = ×8-glyph-baza; rdeča arhivska oznaka",
+    whatEn: "died Ana STRAUV [~ Strauv/Straus glyph — the LEAD/VLM ✓], a quarter-smallholderess of the house, 1 YEAR (Nov 5, buried Nov 6) — Bele [the P157 lexicon [~Bule?] — now clear Bele cf. the 1891 lexicon!]; previden a dot; Jan Jelen; ★★ the STRAUS network #7: h72 = the 3rd death entry (1888-×2-1-day! + now 1894-1-year!) + h72 = the Strauš house (the 1888-15-entry baptism + the 1886-marriage-v23-Maria-Straus + 1891-h71 + 1893-h69-née-Straus!) — the STRAUS campaign: 1888 ×2 + 1890 ×2 + 1891 ×1 + 1893 ×2 + 1894 ×1 = the ×8 glyph base; a red archival mark",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "24",
+    bookSignature: "04894",
+    year: 1894,
+    scan: 50,
+    page: 49,
+    whatSi: "umrla Barbara BRINEC [LEAD/VLM ✓ — cf. P158-×3-h23/h20/h24!], ¼ zemljalkova hiči, 1 LETO (12. 11., pokop 14. 11.) — Jetika; previden pika; Jan Jelen; ★ h24 = 3. mrliški vpis (1888 + 1892 + zdaj 1894!) + h24 = BRINEC-hiša (krstna-13-vpisov-NAJBOLJ-VPISOVANA-registra!) + BRINEC-mreža: h24-1894 + P158-h23/h20 + 1891-h23-Brinec-16-dni + 1893-h23-roj.-Hlebec — Jetika ×14 (2. od 14 na Gribljih!); rdeča arhivska oznaka",
+    whatEn: "died Barbara BRINEC [the LEAD/VLM ✓ — cf. the P158-×3-h23/h20/h24!], a quarter-smallholderess of the house, 1 YEAR (Nov 12, buried Nov 14) — Jetika; previden a dot; Jan Jelen; ★ h24 = the 3rd death entry (1888 + 1892 + now 1894!) + h24 = the BRINEC house (the baptism-13-entries-the-MOST-ENTERED-of-the-register!) + the BRINEC network: h24-1894 + P158-h23/h20 + 1891-h23-Brinec-16-days + 1893-h23-née-Hlebec — the Jetika ×14 (the 2nd of 14 on Griblje!); a red archival mark",
+    status: "DOCUMENTED",
+  },
   // ——— P80 razširitev: POROČNA KNJIGA 04455 1873–1922 — okvir 1886 (skeni 61–65 == Pag. 60–64, vpisi 1–24; Pag. = sken − 1 v razponu 61–66) ———
   // P115 (faza 2) RE-READ: 8 blokov popravljenih na podlagi max-zoom branja (h36→56, h63→65, h15→16, h25→Priložje
   // + priimki Pegdirec/Klepec/Požek/Tomec/Straus/Križan) — evidence: research/issue17/parish-marriage-1886.json

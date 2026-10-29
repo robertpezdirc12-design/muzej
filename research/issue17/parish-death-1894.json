@@ -1,0 +1,315 @@
+{
+ "phase": "P160",
+ "title": "MRLIŠKA KNJIGA 04894 — leto 1894 = 9. polno leto mrliške linije (issue #18)",
+ "status": "SAMPLE-TRANSCRIPTION-D1894",
+ "issuedAt": "2025-10-29",
+ "source": {
+  "book": "04894 (mrliška), župnija Podzemelj",
+  "url": "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04894/",
+  "scans": "s47-top + s48–s50 + s51-r50 (zap 1–50)",
+  "pages": "46–49 (stran == sken − 1 — 15. potrditev!)",
+  "inventar": 256
+ },
+ "frame": {
+  "vrstic": 50,
+  "gribljeVpisov": 6,
+  "gribljeHis": "87,57,49,35,72,24 (VSE RAZLIČNE!)",
+  "meja1894_95": "»— 1895. —« razporejeni-marker (P158-stil #2!) + Januarj pod markerjem + Jan Jelen podpis V MEJNI VRSTI (s51)",
+  "zacetekLeta": "s47 = 'Leto 1894' glava + restart zap 1 (7. stil meje-začetek)",
+  "meseciSmrti": "Jan2·Feb7·Mar3·Apr4·Jun1·Jul6·Avg3·Sep8·Okt2·Nov9·Dec5 = 50"
+ },
+ "entries": [
+  {
+   "row": 14,
+   "houseNo": "87",
+   "bookSignature": "04894",
+   "year": 1894,
+   "scan": 48,
+   "page": 47,
+   "mesec": "April",
+   "smrt": "9.",
+   "pokop": "11.",
+   "ime": "Marjeta PEZDIREC [P159-lead 'TERDIČEC' — glyph = PEZDIREC-glyph!]",
+   "stan": "vdova, notarica [X7-leksikon — 1. kot stan!]",
+   "rojena": "HLEPEC [lead 'Klepec' POPRAVLJEN — H-zanka; r15-Klepec ISTA STRAN!]",
+   "spol": "ženski",
+   "starost": "62 let [VLM '82' ZAVRJEN @8× — 6 = samo spodnja zanka!]",
+   "bolezen": "Pljučnica [T-glyph]",
+   "previden": "1",
+   "duhovnik": "Jan Jelen",
+   "opomba": "★ h87 = 1. mrliški vpis + PEZDIREC-mreža (h87+h57 isto leto!) + rdeča V"
+  },
+  {
+   "row": 22,
+   "houseNo": "57",
+   "bookSignature": "04894",
+   "year": 1894,
+   "scan": 48,
+   "page": 47,
+   "mesec": "Julij (pokop avgust)",
+   "smrt": "30.",
+   "pokop": "1. 8. ['avg.' — diag-'oktobr' ZAVRJEN @6×!]",
+   "ime": "Janez PEZDIREC [LEAD 100%]",
+   "stan": "¼ zemljalov sin",
+   "spol": "moški",
+   "starost": "1 mesec",
+   "bolezen": "Habost",
+   "previden": "pika",
+   "duhovnik": "Jan Jelen",
+   "opomba": "★ h57 = 2. mrliški vpis (Rudolf-1892!) + PEZDIREC-hiša (poročna-1909!) + kronologija r21-27.7 ≤ 1.8 ≤ r23-3.8 ✓; rdeča V"
+  },
+  {
+   "row": 24,
+   "houseNo": "49",
+   "bookSignature": "04894",
+   "year": 1894,
+   "scan": 48,
+   "page": 47,
+   "mesec": "Avgust",
+   "smrt": "11.",
+   "pokop": "13.",
+   "ime": "Barbara BRODARIČ [LEAD 100%]",
+   "stan": "omožena ½ zemljallinja",
+   "rojena": "POGOREVC [LEAD 100%]",
+   "spol": "ženski",
+   "starost": "53 let",
+   "bolezen": "Jetika",
+   "previden": "1",
+   "duhovnik": "Jan Jelen",
+   "opomba": "★ h49 = 1. mrliški vpis (04105-krstni ×6 izven filtra!) + BRODARIČ-mreža čez meje; rdeča V"
+  },
+  {
+   "row": 30,
+   "houseNo": "35",
+   "bookSignature": "04894",
+   "year": 1894,
+   "scan": 49,
+   "page": 48,
+   "mesec": "September",
+   "smrt": "10.",
+   "pokop": "11.",
+   "ime": "Mihael JAKOPIČ [VLM 'Fabjan' ZAVRJEN — J-a-k-o-p-i-č @max-zoom!]",
+   "stan": "¼ zemljastov sin",
+   "spol": "moški",
+   "starost": "4 dni",
+   "bolezen": "Habost",
+   "previden": "pika",
+   "duhovnik": "Jan Jelen",
+   "opomba": "★ h35 = 5. mrliški vpis (1887+1888×2+1890 — največ skupaj s h24/h72-3!)"
+  },
+  {
+   "row": 37,
+   "houseNo": "72",
+   "bookSignature": "04894",
+   "year": 1894,
+   "scan": 50,
+   "page": 49,
+   "mesec": "November",
+   "smrt": "5.",
+   "pokop": "6.",
+   "ime": "Ana STRAUV [~ Strauv/Straus-glyph]",
+   "stan": "¼ zemljaškova hiči",
+   "spol": "ženski",
+   "starost": "1 leto",
+   "bolezen": "Bele [P157-lexikonski [~Bule?] — zdaj jasno!]",
+   "previden": "pika",
+   "duhovnik": "Jan Jelen",
+   "opomba": "★★ STRAUS-mreža #7 + h72 = 3. mrliški vpis (1888-×2!); rdeča V"
+  },
+  {
+   "row": 38,
+   "houseNo": "24",
+   "bookSignature": "04894",
+   "year": 1894,
+   "scan": 50,
+   "page": 49,
+   "mesec": "November",
+   "smrt": "12.",
+   "pokop": "14.",
+   "ime": "Barbara BRINEC",
+   "stan": "¼ zemljalkova hiči",
+   "spol": "ženski",
+   "starost": "1 leto",
+   "bolezen": "Jetika",
+   "previden": "pika",
+   "duhovnik": "Jan Jelen",
+   "opomba": "★ h24 = 3. mrliški vpis (1888+1892!) + BRINEC-hiša (krstna-13-vpisov — najbolj vpisovana!); rdeča V"
+  }
+ ],
+ "excluded": [
+  {
+   "id": "E1",
+   "opis": "s47-top: 'Leto 1894' glava + restart zap 1 — zap 1–12 = 12 non-Griblje (Podžemelj/Gradac/Dobravice/Primostek/Otok/Zarenej/Boršt/Boginja vas)"
+  },
+  {
+   "id": "E2",
+   "opis": "s47-r2: Helena Rovnič 91 let Podžemelj 8 Vodenica — ZUNANJI duhovnik + opomba ('potapljanje na Vrhniki? župnik St. Peter...' [~]) — non-Griblje, anomalija"
+  },
+  {
+   "id": "E3",
+   "opis": "s48: zap 13, 15–21, 23 = 10 non-Griblje (r15-Katarina-Klepec-Podžemelj-29 = H/K-distinkcija-referenca!)"
+  },
+  {
+   "id": "E4",
+   "opis": "s49: zap 25–29, 31–36 = 11 non-Griblje (r26-Rozalija-KOLAR-nez. — VLM 'Notar' ZAVRJEN @3.5× — opomba-v-imenskem-stolpcu: nez.-hči-Marije-Kolar-iz-Prapročeta-fare-Semiče!; r28-Janez-Schweiger-10-let Vranoviče!)"
+  },
+  {
+   "id": "E5",
+   "opis": "s50: zap 39–48 = 10 non-Griblje (r41-Mrtvorojen-Krivoglavce-29 [ne 69!]-N.-Muc-moški-spola-BREZ-podpisa — r53-vzorec #5!; r20-19./20.-jul [VLM-29/30 ZAVRJEN — Kurrent-2/9!])"
+  },
+  {
+   "id": "E6",
+   "opis": "s51: meja '— 1895. —' + Januarj 1895 + restart zap 1 — 1895 = P161 (r4-Griblje-12-Janez-DRAGOŠ-69-Nadruha-19./21.-jan = LEAD!)"
+  },
+  {
+   "id": "E7",
+   "opis": "s51-r49/r50 = zap 49–50 1894-tail (Krasinec-19-Katarina-Galovec-84-Nadruha-Jelen + Pero-39-Janez-Klavče-1-leto-Jetika-Rauq) — non-Griblje"
+  }
+ ],
+ "stats": {
+  "celotnoLeto": {
+   "vrstic": 50,
+   "jetika": 14,
+   "nadruha": 8,
+   "pljucnica": 7,
+   "vodenica": 4,
+   "habost": 4,
+   "vrocinskaBolezen": 4,
+   "bozjast": 3,
+   "ranaNaNogi": 1,
+   "mrtvorojen": 1,
+   "bele": 1,
+   "griza": 1,
+   "krastelj": "~1",
+   "mrtvorojenBrezPodpisa": "r41 (r53-vzorec #5!)"
+  },
+  "duhovniki": {
+   "jelen": 23,
+   "rauq": 25,
+   "zunanji": 1,
+   "brez": 1,
+   "skupaj": 50,
+   "podpisiRazmerje": "49/50 — 5. skoraj-popolno leto; Griblje 6/6 Jelen!"
+  },
+  "otrskaUmrljivost": "17/50 = 34 % (≤6 let); Griblje 4/6 = 67 %",
+  "razpon": "4 dni (Griblje-r30!) → 91 let (r2 Helena Rovnič — 2. najvišja po 95-P157!)",
+  "redneOznake": "rdeča arhivska V ≥5/6 (X9-4. leto!)"
+ },
+ "crossChecks": [
+  {
+   "id": "X1",
+   "name": "LEAD-P160 6/6 POTRJEN + POPRAVKI ×3",
+   "detail": "r14-TERDIČEC→PEZDIREC-glyph + roj.-Klepec→HLEPEC + kolarica→NOTARICA + 62-ne-82 (@8×: 6 = samo spodnja zanka!); r22-'oktobr'→1. avg (@6×); r30-Fabjan→JAKOPIČ; r24/r37/r38 100%"
+  },
+  {
+   "id": "X2",
+   "name": "datum-forenzika r20 = 19./20. jul",
+   "detail": "VLM '29./30.' ZAVRJEN — Kurrent 2/9 → 19./20. julij; brez popravka KRONOLOGIJA-PLOM (r19-14. → r20-29. → r21-26.)! s popravkom: 14. ≤ 19. ≤ 26. ≤ 30. ✓"
+  },
+  {
+   "id": "X3",
+   "name": "kronologija pokopov 49/49 rastoča",
+   "detail": "r22 pokop 1. avg med r21-27.7 in r23-3.8 ✓ (kotrilska kaskada potrjena!)"
+  },
+  {
+   "id": "X4",
+   "name": "stran == sken − 1 (15. potrditev!)",
+   "detail": "s47=46 (glava 'Stran 46' VLM ✓ diag ✓), s48=47, s49=48, s50=49, s51=50"
+  },
+  {
+   "id": "X5",
+   "name": "INLINE-stil mesecev: r3-Februarj + r10-Marcej (s47) + r13-April + r18-Julij + r23-Avgust (s48) + r26-September + r34-Oktober + r36-November (s49) + r46-December (s50)",
+   "detail": "mesec-celici r11/r12 PRAZNI → INLINE-iz-r10-nadaljevanje — VLM 'April-r11' ZAVRJEN"
+  },
+  {
+   "id": "X6",
+   "name": "H/K-distinkcija DOKAZANA",
+   "detail": "r14-roj.-HLEPEC (H-zanka-vlevo) vs r15-Katarina-KLEPEC-Podžemelj-29-ISTA-STRAN — dve različni družini, dva glypha!"
+  },
+  {
+   "id": "X7",
+   "name": "Griblje-6-hiš-vse-različne",
+   "detail": "87,57,49,35,72,24 — po 1893-h32×2 (URH-tragedija) spet 0 ponovitev; 1892-17-nare → 1893-9-hiš → 1894-6-hiš"
+  },
+  {
+   "id": "X8",
+   "name": "h35 = 5. mrliški vpis",
+   "detail": "1887 + 1888 ×2 + 1890 + 1894 — največ mrliških vpisov (skupaj s h24-3 + h72-3)"
+  },
+  {
+   "id": "X9",
+   "name": "podpisi 49/50 + 6/6-Griblje-Jelen",
+   "detail": "23 Jelen + 25 Rauq + 1 zunanji + 1 brez-mrtvorojen = 50 ✓; vsi 6 Griblje-vpisov Jan Jelen!"
+  },
+  {
+   "id": "X10",
+   "name": "p80-kaskada",
+   "detail": "vitals 819 → 825; 04894 120 → 126; p80 hiše 86 → 87 (+h49 EDINA nova — mrliška-1894 Barbara-Brodarič, 15. dokazana luknja-številka!); korpus 92 (0 novih); max-zoom > VLM 11. potrditev (10 adjudikacij!)"
+  }
+ ],
+ "anomalies": [
+  {
+   "id": "A1",
+   "opis": "★★★ datum-forenzika r20 (s48) = 19./20. julij — VLM '29./30.' ZAVRJEN (Kurrent 2/9); brez popravka bi bila kronologija pokopov PLOMLJENA (r19-14. jul → r20-'29.' jul → r21-26. jul!)"
+  },
+  {
+   "id": "A2",
+   "opis": "★★ meja 1894/95 = razporejeni-marker (P158-stil #2) + Jan Jelen podpis V MEJNI VRSTI (med markerjem in zap 1!) — edini tak podpis linije"
+  },
+  {
+   "id": "A3",
+   "opis": "★★ r14 'notarica' = 1. NOTARICA-KOT-STAN na Gribljih (X7-leksikon: P156-Notarica ×3 [~] + P159-r26-Rozalija-Notar [~ → zdaj KOLAR!])"
+  },
+  {
+   "id": "A4",
+   "opis": "★★ r2 = 3. ZUNANJI duhovnik linije (podpis + opomba v opomba-stolpcu; Helena Rovnič 91 let — 2. najvišja starost linije!)"
+  },
+  {
+   "id": "A5",
+   "opis": "★ r17 'Rana na nogi' (Gara no moge) = NOV VZROK linije 1886–1894 (Otok 33 Katarina Berčkopec 64, 29. jun/1. jul)"
+  },
+  {
+   "id": "A6",
+   "opis": "★ Jetika ×14 = REKORD LINIJE (1892-×4 → 1893-×5 → 1894-×14 — epidemija-eksplozija!)"
+  },
+  {
+   "id": "A7",
+   "opis": "★ r41 mrtvorojen-#5: Krivoglavce 29 [ne 69! @3.2×] — N. Muc ¼ zemljastova dete MOŠKEGA spola — brez podpisa (r53-vzorec #5) + starost prazna"
+  },
+  {
+   "id": "A8",
+   "opis": "★ r26 nezakonska-#2: Rozalija KOLAR nez. hči Marije Kolar iz Prapročeta, fare Semiče (opomba-v-imenskem-stolpcu @3.5×)"
+  },
+  {
+   "id": "A9",
+   "opis": "★ 2 PEZDIREC-hiše isto leto: h87 (r14, april) + h57 (r22, julij) — h57 = 2. Pezdirec-otrok v 3 letih (Rudolf-1892!)"
+  },
+  {
+   "id": "A10",
+   "opis": "★ h35 = 5. mrliški vpis (1887+1888×2+1890+1894) — največ mrliških vpisov skupaj s h24/h72-3"
+  }
+ ],
+ "honesty": [
+  "r2 zunanji-duhovnik podpis neberljiv-do-konca [~ 'Ivan g. Ošpen/Marjan Albr...'] — 40 % negotovosti",
+  "r33 vzrok 'Nadluha/Nadruha' glyph-variacija [~] — leksikon Neskladen (P159-nadluha ×5!)",
+  "r3 vzrok 'Kruselj/Krastelj' [~] — glyph 50 %",
+  "r1 vzrok 'Pulalajnja a slihod krstte' [~ 'Pljučnica + slabokrvnost?'] — dvodelen [~]",
+  "meseci r11/r12 = marec (ne april) — INFERIRANO iz INLINE-r10 (mesec-celici prazni) — 85 %",
+  "r39 vas 'Dragoše/Dragovše' glyph [~]; r43 'Marjeta Štefanec ryg. [?]' stan-del [~]",
+  "r50 vas 'Pero/Perna' + ime 'Klavče/Kiurče' [~] — 50 %",
+  "r5 vzrok 'Griža' [~ 90 %]; r47-vas 'Klošter' [~ 85 %]",
+  "r49 'Katarina Galovec ryg. hčerke, vdova Katarina' stan-del dvoumen [~]",
+  "r20-mesec julij — inferirano iz INLINE-r18-Julij + kronologije — 90 %"
+ ],
+ "nextSteps": [
+  "P161: mrliška 1895 (s51-meja + s52–s55 + meja 1895/96 s55-marker '1896 velika cifra + restart'!)",
+  "P161-LEAD: r4 Griblje 12 Janez DRAGOŠ 69 Nadruha 19./21. jan + s52-×5-Gribljev (VLM!) + 1895-total-VLM 12 — največ odkar 1892-17!",
+  "Oslabost (s51-r2 Jožef Humpare Gradac 4, 58) — nov vzrok-leksikon"
+ ],
+ "phase2Adjudication": {
+  "method": "9× celostanski VLM (s47–s55) + 5 diag + pol-širinska-detekcija-L/R + 19 sheetov/celic + 4 super-zoomi ≈ 60 operacij",
+  "detekcija": "s49–s51 12/12; s47/s48 FAIL (4/12, 6/12) → diag-vizualna-kalibracija + interpolacija-iz-anchorjev (razmak ~135.5px); nizki pragi (cov 0.12–0.20) dali 13–21 intervalov — NE-zanesljivo → vizualna-pot",
+  "yCentri": "s48: zap14=531, zap22=1627, zap24=1890; s49: zap30=1085; s50: zap37=400, zap38=538, zap41=945",
+  "superZoomi": "r14-starost @8× (62!) + r14-ime @6× + r21/r22-datum @6× + r26-ime @3.5× + r41 @3.2×"
+ }
+}
