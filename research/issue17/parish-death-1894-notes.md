@@ -13,7 +13,7 @@ Datum: 2026-10-29 · Faza: P160 · Skleni: 47–51 (prenos 47–56, 10/10) · St
 
 | zap | sken/str | datum (smrt/pokop) | hišna | ime | stan/roj. | starost | vzrok | previden | podpis |
 |---|---|---|---|---|---|---|---|---|---|
-| 14 | s48/47 | April 9./11. | **87** | Marjeta **PEZDIREC** | vdova, kolarica, roj. **HLEPEC** | 62 let | Pljučnica | 1 | Jan Jelen |
+| 14 | s48/47 | April 9./11. | **87** | Marjeta **PEZDIREC** | vdova, **notarica**, roj. **HLEPEC** | 62 let | Pljučnica | 1 | Jan Jelen |
 | 22 | s48/47 | Julij 30./avg 1. | **57** | Janez **PEZDIREC** | ½ zemljaškov sin | 1 mesec | Habost | pika | Jan Jelen |
 | 24 | s48/47 | Avgust 11./13. | **49** | Barbara **BRODARIČ** | omožena ½ zemljaškinja, roj. POGOREVC | 53 let | Jetika | 1 | Jan Jelen |
 | 30 | s49/48 | September 10./11. | **35** | Mihael **JAKOBIČ** | ¼ zemljaškov sin | 4 dni | Habost | pika | Jan Jelen |
@@ -26,7 +26,9 @@ Datum: 2026-10-29 · Faza: P160 · Skleni: 47–51 (prenos 47–56, 10/10) · St
 2. **TERDIČEC → PEZDIREC** (h57, 8×): identičen glyph kot h87. h57 = **P158-hiša kontinuiteta** (Rudolf 1892 + poročna-1909-№8 Maria PEZDIREC »GRIBLJE 57«) — 3. mrliški vpis h57.
 3. **Škavor → STRAUS** (h72, 5×): dolgi-s + t-ligatura, nato r-a-u-s. VLM je izmislil »Škavor« (A2-vzorec). h72 = STRAUS-gnezdo: 1888-Marija-1-dan (P154-lead) + 1894-Ana-1-leto = **STRAUS-MREŽA #7**.
 4. **Brodanič → BRODARIČ** (h49, 5×): enojna r-wave (ne n-dvojni hrbet). P159-lead-imé 100 % potrideno.
-5. **Klepec → HLEPEC** (r14-roj., 8×): H = dve vertikali + prečka (K = diagonali), 4. črka p-descender. VLM »Klepec« zavržen.
+5. **Klepec → HLEPEC** (r14-roj., 8×): H = dve vertikali + prečka (K = diagonali), 4. črka p-descender. VLM »Klepec« zavržen. cf. r15-Katarina-KLEPEC-Podžemelj-29 ISTA STRAN — H/K-distinkcija DOKAZANA (referenčni par!).
+6. **kolarica → NOTARICA** (r14-stan, REKONCILIACIJA-93e7f65): X7-Notarica-leksikon (P156-vzorec ×3 [~]) — 1. notarica-KOT-STAN na Gribljih!
+7. **82 → 62 let** (r14, @8×): 6 = samo spodnja zanka; 8 bi imel DVE zanki. VLM »82« zavržen — LEAD 62 potrjen.
 
 ## γ-7-FORENZIKA (11.–13. primer linije)
 

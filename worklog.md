@@ -6522,3 +6522,12 @@ Stage Summary:
 - QA 161/161 ok:True — qa-p160 = 161. kontrola
 - push: GitHub origin + GitLab gitlab + Vercel avtomatski deploy
 - P161 LEAD: mrliška 1895 (s51-dno-restart zap1 = Krasinec-50?/30? Katarina-JAKOBČIČ-vdova-bajtarca-roj.-PEZDIREC-70-Nadruha-Jelen! + s52 zap 10–21 Feb–Maj ×6 Gribljev [JOŽEK-1-DAN-h38-Oslablost? + PAVČIČ-14-h33 + HRIŠAN-16-mes-h35 + BRODANIČ?-25-h46-Otročnica + BRODANIČ?-3-dni-h46-Habost + PEZDIREC-28-h87-Marijeta-Otročnica!] + s53 zap 22–33 ×2 [GRINEC?-36-h26 + HLEVIČ?-60-h37] + s54 zap 34–45 ×1 [ŠEPINA?-6-mes-h30 — VLM-'Češarek'-podpis = A-napaka!] + s55 zap 46–52 ×2 [KRIŽAN-1½-h36 + JAKLOVIČ?-53-h8]; forenzika: 'Brodanič'-glyph ×2 (Brodarič-check!) + s54-glava-'1893'-VLM-A1 + 50/30-γ-5/3 + zap11-'Oslablost'; meja 1895/96 ŽE VIDENTA: s55-'1896.'-velika-letnica + Januar + restart-zap1 = 7. STIL-kandidat!)
+
+## REKONCILIACIJA P160 — merge divergentnih vej (gitlab 93e7f65+6553ab8 ⊕ lokalni 08cfd75)
+
+- PROBLEM: P160 je obstajel v DVEH različicah — (a) GitLab 93e7f65 (19:42 UTC, push uspel) + worklog-opomba 6553ab8 (GitHub-push FAIL: token 401 Bad credentials — REVOKED; produkcija ostala 160/160 [P159]); (b) lokalni 08cfd75 (21:38 UTC, re-generiran po sandbox-resetu — repo RE-KLONIRAN iz GitHub @ P159, torej SLEP za gitlab-popravki!).
+- REŠITEV: `git merge -s ours gitlab/main` (drevo = lokalno, oba parenta → GitHub in GitLab fast-forward BREZ force!) + ročna rekonciliacija gitlab-unikatov, katerim lokalna seja ni videla:
+  - r14-h87 (Marjeta PEZDIREC): stan **'kolarica' → NOTARICA** (X7-Notarica-leksikon — 1. notarica-KOT-STAN na Gribljih, P156-vzorec ×3 [~]) + **VLM '82' ZAVRJEN @8×** (6 = samo spodnja zanka) → 62 POTRJEN + H/K-distinkcija-referenca r15-Katarina-KLEPEC-Podžemelj-29 ISTA STRAN — parish.ts whatSi/whatEn + JSON stan/opomba + notes MAX-ZOOM-točki 6/7;
+  - README korpus: **PT-luknja 13 → 14** (doc-list = 14; skripta-geometrija = 17 — stale-P160-vnos saniran!);
+  - remote-i: GitHub origin token ROTIRAN (nov ghp_…) + GitLab gitlab ponovno vezan (uporabnik robert.pezdirc12 → projekt robert.pezdirc12/muzej — markec-group1-er a je ARHIV: markec-group/muzej-arhiv!).
+- Verifikacija: p160 53/53 · p159 52/52 · runQA 161/161 ok:True · tsc 0 · lint 0 — push GitHub (b265f87→merge) + GitLab (6553ab8→merge) oba fast-forward ✓ → Vercel deploy 161/161.
