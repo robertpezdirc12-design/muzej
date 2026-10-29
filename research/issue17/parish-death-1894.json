@@ -1,0 +1,308 @@
+{
+ "phase": "P160",
+ "title": "MRLIŠKA knjiga 04894, leto 1894 = 9. polno leto mrliške linije (issue #18)",
+ "status": "SAMPLE-TRANSCRIPTION-D1894",
+ "issuedAt": "2026-10-29",
+ "source": {
+  "book": "04894 MRTVAŠKA KNJIGA župnije Podzemelj (matricula-online.eu)",
+  "skeni": "47–51 (prenos 10/10: s47–s56; 1894 + meja-kontrola s52–s56)",
+  "pageMapping": "stran == sken − 1 — 15. zaporedna potrditev (s47=Stran 46, s48=47, s49=48, s50=49, s51=50; VLM 'Stran 57' na s52 = A2-napaka, dejansko 51 — P161)",
+  "scanLayout": "dvodelni spread 2528×2000; L = stolpci 1–4, R = 5–10",
+  "layout": "10 stolpcev (zaporedna / mesec+smrt+pokop / vas / hišna / ime-stan / vere+spola / starost / bolezen / previden / podpis+opomba)",
+  "rowsTotal": 50,
+  "rowHeights": "~137–150 px (enakomerna; s51-marker-vrsta višja ~140 + prazna)",
+  "method": "10× celostansko VLM (s47–s56, glm-5v-turbo thinking-off, 0 FAIL!) + ruler-diagi 100px-mreža (P158-lekcija; s47/s48/s50-detekcija-FAIL → full-width-repair 0.06–0.94 th 0.60–0.65 cov 0.20!) + 6 L/R-trakov (2.2×) + 29 max-zoom celic (3–6×) + 12 super-zoom (8×: P/T-zanček ×2 + roj.-linie ×2; 5×: imena ×6) + re-crop ×6 (r22/r24-bandi) ≈ 78 operacij; vas-kontaktne mape (vas2) za celostansko Griblje-kontrolo"
+ },
+ "frame": {
+  "lead": "P159-LEAD 5/5 POTRJEN z max-zoom POPRAVKI: s47-restart 'Leto 1894' glava + zap 1–12 Januarj–Julij (VLM: 0 Gribljev ✓✓) + s48 zap 13–24 April–Avgust (×3 Gribljev ✓: zap14 h87 Marjeta-TERDIČEC?→★★★ PEZDIREC (P-zanček 8×!) roj.-Klepec?→★★ HLEPEC (H-forma!) + zap22 h57 Janez-TERDIČEC?→★★★ PEZDIREC (ISTI P-zanček — h57 = P158-PEZDIREC-hiša kontinuiteta!) + zap24 h49 Barbara-BRODARIČ ✓ (VLM 'Brodanič' ZAVRJEN — P159-lead 100%!) roj.-POGOREVC ✓ 53-Jetika ✓) — vsi Jan Jelen ✓✓; meja 1894/95 [~ s52+?] → s51 (razporejeni marker — 1 sken PREJ kot lead!)",
+  "boundaries": "meja 1893/94 = 6. STIL MEJE: restart na s47 ('Leto 1894' glava: natisnjeno 'Leto' + ročno '1894' + zap 1 Januarj 5. — 1. mrliški restart z glavo-letnico od 1891/92-hibrida!); meja 1894/95 = 5. STIL MEJE 2. POTRDITEV: »— 1 8 9 5. —« (1895) velik razporejeni marker na PRAZNI vrsti (s51, y~570–700, flomaster-črti) + 'Januarij' pod markerjem + restart zap 1; zap 49–50 = December-1894-rep (Krasinec 14 Galovec?-84-NAJSTAREJŠA-1894-Jan-Jelen + Pernu?-39-Kuve?-1-leto-Jetika-Jos.-Rauq-ZADNJI-podpis-1894!); zaporedje-stilov-meja: prazna-P153 → cifri-P154 → INLINE-P155/156/157 → hibrid-P157 → razporejeni-P158/159/160 (5. STIL 2. potrditev — P159 + P160!) + 6. STIL (restart-z-glavo — P160!)",
+  "glave": "»Leto 1894« 5/5 izpisane (s47–s51; s47-celica: Leto 18O4-ročno — 4-zanka jasna!)"
+ },
+ "entries": [
+  {
+   "row": 14,
+   "houseNo": "87",
+   "bookSignature": "04894",
+   "year": 1894,
+   "scan": 48,
+   "page": 47,
+   "mesec": "April",
+   "smrt": "9.",
+   "pokop": "11.",
+   "ime": "Marjeta PEZDIREC",
+   "stan": "vdova, kolarica",
+   "rojena": "HLEPEC",
+   "spol": "žens.",
+   "starost": "62 let",
+   "bolezen": "Pljučnica",
+   "previden": "1",
+   "duhovnik": "Jan Jelen",
+   "opomba": "★★★ P159-lead 'TERDIČEC' ZAVRJEN — max-zoom 8×: P-zanček (loop + descender) + z-glyph (x-forma 3. črka) = PEZDIREC!; ★ roj. 'Klepec' (VLM) ZAVRJEN — H-forma (dve vertikali + prečka) = HLEPEC (8×, p-descender); ★ h87 = 1. mrliški vpis (korpus: 04455-1889/1891 + 04105-1895/1902/1904 že!); ★ γ-7-forenzika (87 = 8 + γ-7); rdeča arhivska oznaka; PEZDIREC-ERA 1894 #2 (zap1-s47-Podžemelj #1!)"
+  },
+  {
+   "row": 22,
+   "houseNo": "57",
+   "bookSignature": "04894",
+   "year": 1894,
+   "scan": 48,
+   "page": 47,
+   "mesec": "Julij",
+   "smrt": "30.",
+   "pokop": "1. avg",
+   "ime": "Janez PEZDIREC",
+   "stan": "½ zemljaškov sin",
+   "rojena": "",
+   "spol": "moš.",
+   "starost": "1 mesec",
+   "bolezen": "Habost",
+   "previden": "pika",
+   "duhovnik": "Jan Jelen",
+   "opomba": "★★★ h57 = P158-PEZDIREC-HIŠA kontinuiteta (Rudolf-1892-2½-let + poročna-1909-№8-Maria-PEZDIREC-'GRIBLJE 57' + Janez-1894 = 3. mrliški vpis h57!) — ISTI P-zanček-glyph kot r14 (brat? X-open); ★ γ-7 (57 = 5 + γ-7); mesec-prelom Julij→Avgust INSIDE vrstice (pokop 1. 8.); previden-PIKA (dojenček!); Julij-30 = najkasnejši Griblje-pokop-julij-linije"
+  },
+  {
+   "row": 24,
+   "houseNo": "49",
+   "bookSignature": "04894",
+   "year": 1894,
+   "scan": 48,
+   "page": 47,
+   "mesec": "Avgust",
+   "smrt": "11.",
+   "pokop": "13.",
+   "ime": "Barbara BRODARIČ",
+   "stan": "omožena ½ zemljaškinja",
+   "rojena": "POGOREVC",
+   "spol": "žens.",
+   "starost": "53 let",
+   "bolezen": "Jetika",
+   "previden": "1",
+   "duhovnik": "Jan Jelen",
+   "opomba": "★★ VLM 'Brodanič' ZAVRJEN — max-zoom 5×: r-wave (enojna srednja črka, ne n-hrbet) = BRODARIČ (P159-lead 100%!); ★ h49 = 1. mrliški vpis (korpus: samo 04105-1899+!); ★ γ-4 + 9 (49 — hišna 8×); roj. POGOREVC jasno (8×); previden 1 (odrasla)"
+  },
+  {
+   "row": 30,
+   "houseNo": "35",
+   "bookSignature": "04894",
+   "year": 1894,
+   "scan": 49,
+   "page": 48,
+   "mesec": "September",
+   "smrt": "10.",
+   "pokop": "11.",
+   "ime": "Mihael JAKOBIČ",
+   "stan": "¼ zemljaškov sin",
+   "rojena": "",
+   "spol": "moš.",
+   "starost": "4 dni",
+   "bolezen": "Habost",
+   "previden": "pika",
+   "duhovnik": "Jan Jelen",
+   "opomba": "★★ JAKOBIČ (ne 'Jakobčič' — max-zoom 5×: b + i-č, BREZ 2. č!; [~ Jakobič/Jakobčič-varianta X-open]); ★★ h35 = bivša KRIŽAN-hiša (1887-Janez-¼-URE + 1888 ×2 + 1890-mrtvorojeno) — hiša-z-2-priimki čez leta (X-anomala!); ★ najkrajši 1894 (4 dni); previden-PIKA (dojenček); 3 (dve skledi) + 5 (ploščati vrh) hišna-8×"
+  },
+  {
+   "row": 37,
+   "houseNo": "72",
+   "bookSignature": "04894",
+   "year": 1894,
+   "scan": 50,
+   "page": 49,
+   "mesec": "November",
+   "smrt": "5.",
+   "pokop": "6.",
+   "ime": "Ana STRAUS",
+   "stan": "½ zemljaškova hči",
+   "rojena": "",
+   "spol": "žens.",
+   "starost": "1 leto",
+   "bolezen": "Bele",
+   "previden": "pika",
+   "duhovnik": "Jan Jelen",
+   "opomba": "★★★ VLM 'Škavor' ZAVRJEN — max-zoom 5×: S-t-r-a-u-s (dolgi-s + t-ligatura) = STRAUS!; ★★★ STRAUS-MREŽA #7: h72 ↔ 1888-h72-Marija-Straus-1-DAN (P154-lead-hiša!) + 1890-h42/h71 + 1891-h71 + 1893-h45/h69 — h72 = STRAUS-GNEZDO (3. vpis!); ★ Bele = 1890-december-kompleks-vzrok (2. leto-ponovitev!); γ-7 (72 = γ-7 + 2); previden-PIKA (otrok); rdeča arhivska oznaka"
+  },
+  {
+   "row": 38,
+   "houseNo": "24",
+   "bookSignature": "04894",
+   "year": 1894,
+   "scan": 50,
+   "page": 49,
+   "mesec": "November",
+   "smrt": "12.",
+   "pokop": "14.",
+   "ime": "Barbara BRINEC",
+   "stan": "½ zemljaškova hči",
+   "rojena": "",
+   "spol": "žens.",
+   "starost": "1 leto",
+   "bolezen": "Jetika",
+   "previden": "pika",
+   "duhovnik": "Jan Jelen",
+   "opomba": "★ BRINEC jasno (5×; VLM ✓); ★ h24 = 3. mrliški vpis (1888 + 1892 + 1894!); ★★ HLEBEC-MATIKA-MREŽA: r14-Marjeta-PEZDIREC-roj.-HLEPEC (h87) ↔ 1892-r27-Marija-BRINEC-roj.-Hlebec (h23) — 2 črkovanji iste matika-družine (X10!); ½-zemljaškova (ne ¼ — diag-VLM-vzor!); previden-PIKA; ZAPOREDNA-Novemberska-dvojica (r37+r38 = 2 Griblje-v-8-dneh!)"
+  }
+ ],
+ "excluded": [
+  {
+   "id": "E1",
+   "opis": "s47-restart (zap 1–12, Januarj–Julij): 0 GRIBLJEV — P159-lead-hipoteza 100% POTRJENA (1. mrliško leto z Griblje-praznim 1. skenom od 1889!); ★ zap1 = Podžemelj 30 Marjeta PEXDIREC roj. Bajuk bajtar omožen bajtarica 45 'Publapenji v atok hviba' [~ neznan-vzrok — max-zoom izven P160-scope] Jos. Rauq — PEZDIREC-glyph #1 1894!"
+  },
+  {
+   "id": "E2",
+   "opis": "s47 zap2 = Podžemelj 8 Helena Rovit? [~] roj. Štefanc vdova ½ zemljaškinja 71 Vodenica + DOLGA opomba ('Zakopana na svetem...' [~]) + 'prej. sv. olje' — 2. IZPISANI SAKRAMENT mrliške linije (cf. P155-1891-r66!); Jos. Rauq"
+  },
+  {
+   "id": "E3",
+   "opis": "s48 zap15 = Podžemelj 29 Katarina Klepec roj. Klepec? [~ isti-priimek-roj.] vdova bajtarica 70 Nadruha — ★★ Jos. RAUQ-podpis APRILA (med Jelen-Griblje-vrsticami r14/r16! — izmenični-duo-dokaz)"
+  },
+  {
+   "id": "E4",
+   "opis": "s49 zap25 = Zemelj 25 Katarina JAKLIČ roj. FILAK vdova kolarica 57 Jetika Jos. Rauq — FILAK-mreža (1890-lead-Jurij + 1891-Ana-77 + 1892-Matija-7 + 1894-roj.-Filak!) + zaporedna-25 == hišna-25 (kartezanska-identiteta!)"
+  },
+  {
+   "id": "E5",
+   "opis": "s50 zap41 = Krivoglavce 29 N. hči ¼ zemljaškova NEZNANEGA SPOLA starost '—' Mrtvorojena pokop ~9./13. 11. — ★★ BREZ PODPISA ('———') = r53-vzorec #5 (1887-r35 + 1890-r53 + 1891-r2 + 1892-suicid-r50 + 1894-r41!)"
+  },
+  {
+   "id": "E6",
+   "opis": "s51-top 1894-rep: zap49 = Krasinec 14 Katarina Galovec? [~] roj. Šuštar vdova kolarica 84 let Nadruha Jan Jelen — NAJSTAREJŠA 1894 (84!) + zap50 = Pernu? [~] 39 Janez Kuve? [~] ¼ zemljaškov sin 1 leto Jetika Jos. Rauq — ZADNJI 1894 (26./27. 12.)"
+  },
+  {
+   "id": "E7",
+   "opis": "MEJA 1894/95 = 5. STIL MEJE 2. POTRDITEV: »— 1 8 9 5. —« (1895) velik marker na PRAZNI vrsti (s51 y~570–700 — marker-celica 3×!) + 'Januarij' pod njo + restart zap 1 (8./10. 1.) — zaporedje-stilov: prazna-P153 → cifri-P154 → INLINE-P155/156/157 → hibrid-P157 → razporejeni-P158/159/160!"
+  },
+  {
+   "id": "E8",
+   "opis": "1895-restart zap1 (s51-dno) = Krasinec 50? [~ VLM 30 — γ-5/3!] Katarina JAKOBČIČ vdova bajtarca roj. ★ PEZDIREC [~ P-glyph!] 70 let Nadruha Jan Jelen — P161-LEAD! (PEZDIREC-čez-mejo + Jakobčič↔Jakobič-1894-r30-glyph-veza!)"
+  }
+ ],
+ "stats": {
+  "vrstic": 50,
+  "gribljeVpisov": 6,
+  "hise": 6,
+  "ponovitve": 0,
+  "nare": "2. NARE leto mrliške (po 1892!): 6 vpisov / 6 hiš — 0 ponovitev (rast 13→13→29→8→15→15→17→10→6!)",
+  "noveMrliskiVpisi": [
+   "49 (1. mrliški — korpus samo 04105!)",
+   "87 (1. mrliški — korpus 04455+04105!)"
+  ],
+  "razponStarosti": "4 dni → 84 let",
+  "najstarejsi": "Katarina Galovec? roj. Šuštar, Krasinec 14, 84 let (zap49, 18./20. 12.)",
+  "najkrajsi": "Mihael Jakobič, Griblje 35, 4 dni (zap30, 10./11. 9.)",
+  "otrisjaUmrljivost": "4/6 Griblje ≤ 1 leto (67 % — 2. najhujše po 1890-73%: 1-mes + 4-dni + 1-let ×2)",
+  "vzrokiLeksikon": "Habost ×2 (dojenčka!) + Jetika ×2 + Pljučnica + Bele (1890-kompleks-nadaljevanje!); net-Griblje: Nadruha ×5 + Jetika ×6 + Vročinska-bolezen ×3 + Vodenica ×2 + Božjast ×2 + Kašelj + Griža + Mrtvorojena + 'Publapenji' [~ X-vzrok!]",
+  "duhovniki": "Jan Jelen (Griblje 6/6 = 100 %!) + Jos. Rauq (izmenični-duo: Rauq-April-med-Jeleni!; zap50-Rauq-zadnji-1894) — JOLEN-RAUQ-DUO 1894",
+  "podpisi": "49/50 (mrtvorojena-zap41-BREZ — r53-vzorec #5!); [~ diag] Jelen ×20 + Rauq ×19 + brez ×1 — 2. nepopolno leto (po 1892-suicid!)",
+  "rdeceOznake": "X9-pojav 4. leto: ≥3/6 Griblje (r14 + r24 + r37 + r38-roj.-linija) + net-Griblje (s49 ×4 + s50 ×3)",
+  "noveHiše": 0
+ },
+ "crossChecks": [
+  {
+   "id": "X1",
+   "name": "LEAD-P160 5/5 POTRJEN + POPRAVKI",
+   "detail": "0-Griblje-s47 ✓ + ×3-Griblje-s48 ✓ + h49-Brodarič-roj.-Pogorevc-53-Jetika ✓ + vsi-Jelen ✓ + meja-s51 (ne s52 — 1 sken prej!); POPRAVKI ×3: TERDIČEC→PEZDIREC (h87) + TERDIČEC→PEZDIREC (h57) + Klepec→HLEPEC; VLM-besedne-napake: Škavor→STRAUS + Brodanič→BRODARIČ (P159-lead ✓!)"
+  },
+  {
+   "id": "X2",
+   "name": "PEZDIREC-h57-KONTINUITETA (3. mrliški vpis!)",
+   "detail": "h57 = P158-Rudolf-PEZDIREC-2½-let (1892) + poročna-04455-1909-№8-Maria-PEZDIREC-'GRIBLJE 57' + 1894-Janez-1-mesec — 20-letna kontinuiteta potrjena 3.×; ISTI P-zanček-glyph r14↔r22 (8×) = hišna-družina!"
+  },
+  {
+   "id": "X3",
+   "name": "STRAUS-MREŽA #7 (h72-GNEZDO!)",
+   "detail": "h72-Ana-1-leto-1894 ↔ 1888-h72-Marija-Straus-1-DAN (P154-lead!) + 1890-h42/h71 + 1891-h71-Matija-85 + 1892-Štravs-16-dni + 1893-h45-Ana + h69-roj.-Straus — h72 = 3. STRAUS-vpis v hiši (7 let čez)!"
+  },
+  {
+   "id": "X4",
+   "name": "γ-7-FORENZIKA ×3 + 4/5-FORME",
+   "detail": "h87 = 8 + γ-7 (prečka + zankom-rep!) + h57 = 5 + γ-7 + h72 = γ-7 + 2 — VSE tri γ-7-max-zoom-6× (11.–13. γ-7 linije!); h49 = 4-forma + 9 + h35 = 3 + 5 + h24 = 2 + 4-forma — vseh 6 hišnih števil max-zoom-potrjenih!"
+  },
+  {
+   "id": "X5",
+   "name": "HLEBEC-MATIKA-MREŽA (2 črkovanji!)",
+   "detail": "1894-r14-Marjeta-PEZDIREC-roj.-HLEPEC (h87) ↔ 1892-r27-Marija-BRINEC-roj.-Hlebec (h23) ↔ 1894-r38-Barbara-BRINEC (h24) — HLEPEC/Hlebec-varianta = ista matika-familija; BRINEC-mreža: h24 ×3 (1888+1892+1894!)"
+  },
+  {
+   "id": "X6",
+   "name": "MAX-ZOOM > VLM 11. POTRDITEV (5 imen!)",
+   "detail": "TERDIČEC→PEZDIREC ×2 (P-zanček 8×) + Škavor→STRAUS (dolgi-s 5×) + Brodanič→BRODARIČ (r-wave 5×) + Klepec→HLEPEC (H-forma 8×) — 5 ZAVRJENIH VLM-imes-napak v ENEM letu = rekord linije!"
+  },
+  {
+   "id": "X7",
+   "name": "JOLEN-RAUQ-DUO-PODPISNI-LOK",
+   "detail": "Jelen ×20 + Rauq ×19 [~ diag] izmenično Apr–Dec (zap15-Rauq-med-Jeleni + zap42–46-Rauq-blok + zap50-Rauq-ZADNJI-1894!); Češarek 0× (era-konec potrjen 2. leto!); Griblje 6/6 Jelen"
+  },
+  {
+   "id": "X8",
+   "name": "HIŠA-HIGIENA: NARE 2.× + ZASIČANJE",
+   "detail": "6/6 hiš unikatnih (87/57/49/35/72/24 — 0 ponovitev = 2. nare-leto po 1892!); vseh 6 ŽE v korpusu 92 + vseh 6 ŽE v p80-filter 86 = 0 NOVIH hiš (krstna-1894 0-novih → mrliška-1894 0-novih — vzorec-zasičen 2. leto zapored!)"
+  },
+  {
+   "id": "X9",
+   "name": "RDEČE-ARHIVSKE-OZNAKE X9 4. LETO",
+   "detail": "≥3/6 Griblje-rdeče (r14-V + r24-√-roj. + r37-V + r38) + net-Griblje (s49-r26/r28/r34 + s50-r39/r43/r44...) — X9-pojav 4. leto zapored (1891≥12/15 + 1892≥9/17 + 1893≥9/10 + 1894≥3/6)"
+  },
+  {
+   "id": "X10",
+   "name": "PEZDIREC-ERA 1894 (3 + 1 čez-mejo!)",
+   "detail": "zap1-s47-Podžemelj-30-Marjeta-roj.-Bajuk (net-Griblje!) + h87-Marjeta + h57-Janez + 1895-zap1-Krasinec-roj.-PEZDIREC — 4 PEZDIREC-glypha 1894/95-meje; cf. 1892-Rudolf + 1893-h89-Ana-PEGDIREC — P-glyph-familija-narašča (X-open: h87-veja?)"
+  }
+ ],
+ "anomalies": [
+  {
+   "id": "A1",
+   "opis": "★★★ TERDIČEC-HIPOTEZA (P159-lead) ZAVRJENA: h87 + h57 = PEZDIREC (P-zanček + z-glyph 8×) — lead-beseda 'TERDIČEC-glyph = cf. Terdinec/Pezdirec-familija' RESILIČNO PRAVILNA (P-veja)!"
+  },
+  {
+   "id": "A2",
+   "opis": "★★★ VLM-'Škavor' ZAVRJEN → STRAUS (h72) — STRAUS-MREŽA #7 + h72-gnezdo-3.-vpis"
+  },
+  {
+   "id": "A3",
+   "opis": "★★ VLM-'Brodanič' ZAVRJEN → BRODARIČ (P159-lead-imé 100% potrdjen!); s52-'Brodanič' ×2 (1895) = P161-forenzika"
+  },
+  {
+   "id": "A4",
+   "opis": "★★ VLM-'Klepec' ZAVRJEN → HLEPEC (r14-roj. — H-forma 8×; p-descender!)"
+  },
+  {
+   "id": "A5",
+   "opis": "★★ JAKOBIČ (b + i-č, brez 2. č — ne Jakobčič!); h35 = bivša-KRIŽAN-hiša (1887+1888×2+1890) → hiša-z-2-priimki (X-open)"
+  },
+  {
+   "id": "A6",
+   "opis": "★★ PREVIDEN-PIKE ×4 = VSI OTROCI ≤1 leto (r22-1-mes + r30-4-dni + r37-1-let + r38-1-let) vs odrasli ×2 = previden-1 (r14-62 + r24-53) — demografski-sakramentalni-split čist!"
+  },
+  {
+   "id": "A7",
+   "opis": "★★ 1894 = 50 VRSTIC = DNO-po-1889 (36→55→65→81→69→50) + 0 NOVIH hiš (zasičanje-2.-leto!) + 2 NOVA-mrliška-vpisa (h49 + h87)"
+  },
+  {
+   "id": "A8",
+   "opis": "★★ MEJA 1894/95 = 5. STIL 2. POTRDITEV (razporejeni-marker + Januarij + restart — s51); meja-1893/94 = 6. STIL (restart-z-glavo 'Leto 1894' — s47)"
+  },
+  {
+   "id": "A9",
+   "opis": "★ s54-VLM-glava-'Leto-1893' + podpis-'Fr.-Češarek'-r39 = A1/A2-napaki (1895-scope — P161-forenzika; Češarek-era-konec-1892 → nemožen-1895!)"
+  },
+  {
+   "id": "A10",
+   "opis": "★ PEZDIREC-GLYPH ×3 1894 (zap1-Podžemelj + h87 + h57) + 1-1895-roj. — P-familija-4-glyphov na-meji (X10!)"
+  }
+ ],
+ "honesty": [
+  "VLM-odvisnost za ne-Griblje-vrstice: samo diag-3×-kontrola (celostanski-pregled), ne max-zoom vsi 44 net-vrstice",
+  "JAKOBIČ [~]: b+i-č-razbrano 5× — 'Jakobčič'-varianta (s 2. č) ni 100%-izključena (cf. P158-r50-JAKOBČIČ-suicid!)",
+  "Galovec?/Kuve?/Pernu?/Rovit? imena [~] — max-zoom samo R-kontekst (ime-celice izven P160-Griblje-scope)",
+  "previden-pika: '.'-glyph razbrano kot pika — lahko tudi prazno-mesto (cf. P159-r45-pika-vzor)",
+  "podpis-count (Jelen ×20 + Rauq ×19) iz diag-3× — ne vsi 50 max-zoom (Griblje-6 = max-zoom 100%!)",
+  "rdeče-oznake ≥3/6 — ne vse 6 L-celic preverjene na rdeče-barvo (r22/r30-nejasno)",
+  "s52-'Stran 57' = VLM-A2-napaka (dejansko 51) — opažena, ne-croppana (P161-scope)",
+  "zap2-s47-dolga-opomba ne-max-zoom (izven-Griblje; 'prej. sv. olje' z diag-3×-vidna)",
+  "1895-zap1-hiša '50-vs-30' [?] — P161-forenzika (γ-5/3-medved)",
+  "s54-'desna-tabela'-VLM-opomba — layout-nejasnost (1895-scope)"
+ ],
+ "nextSteps": [
+  "P161-LEAD: mrliška 04894 leto 1895 — s51-dno (restart zap1: Krasinec-50?/30? Katarina-JAKOBČIČ-vdova-bajtarca-roj.-PEZDIREC-70-Nadruha-Jelen!) + s52 (zap 10–21 Feb–Maj: ×6 GRIBLJEV! — zap11-h38-Katarina-JOŽEK-1-DAN-Oslablost? [VLM!] + zap12-h33-Ana-PAVČIČ-14-let-[vzrok-?] + zap13-h35-Katarina-HRIŠAN-16-mesec-Jetika + zap15-h46-Marija-BRODANIČ?-25-Otročnica + zap16-h46-Anton-BRODANIČ?-3-dni-Habost + zap18-h87-Marijeta-PEZDIREC-28-Otročnica [~ 'Brodanič' ×2 = P161-forenzika; PEZDIREC-h87-2.-vpis!]) + s53 (zap 22–33 Maj–Sep: ×2 — zap22-h26-Janez-GRINEC?-36-Pljučnica + zap29-h37-Mihael-HLEVIČ?-60-Nadluha) + s54 (zap 34–45 Okt–Nov: ×1 — zap39-h30-Nikolaj-ŠEPINA?-6-mes-Slabost [VLM-'Češarek'-podpis = A-napaka!]) + s55 (zap 46–52 Nov–Dec: ×2 — zap49-h36-Janez-KRIŽAN-1½-let-Bele + zap51-h8-Janez-JAKLOVIČ?-53-Jetika) — VSE Jan Jelen? [~ Rauq-1895-izjema-s52-r12!]; meja 1895/96 ŽE VIDENTA: s55-'1896.'-velika-letnica + Januar + restart-zap1 (7. STIL-MEJE-kandidat: restart-z-veliko-letnico-brezz-markerja!)",
+  "P161-forenzika-prioritete: s52-'Brodanič'-×2 (Brodarič-glyph-check!) + h87-Marijeta-PEZDIREC-2.-vpis + s54-glava-'1893'-VLM-A1 + s54-'Češarek'-podpis-morén + 1895-zap1-hiša-50/30-γ-5/3 + zap11-'Oslablost'-vzrok [~ Oslablost/Oslabost]",
+  "X-odprta: h35-2-priimki (Križan→Jakobič) + h57-Janez↔Rudolf-veza (brata?) + HLEPEC/Hlebec-ortografija + PEZDIREC-h87-veja (Marjeta-vdova-62 → Marijeta-28-1895 = snaha?)"
+ ]
+}

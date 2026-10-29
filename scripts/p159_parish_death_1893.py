@@ -34,8 +34,8 @@ EXPECTED_EXCLUDED = 8
 EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 10
 GRIBLJE_HOUSES = "19,21,32,45,56,58,69,89,98"
-VITALS_TOTAL = 819               # 809 + 10!
-BLOKI_04894 = 120                # 110 + 10!
+VITALS_TOTAL = 825               # 809 + 10!
+BLOKI_04894 = 126                # 110 + 10!
 P80_HOUSES = 86                  # TS-filter: 83 + h98 + h89 + h45! EDINA nova 1893 (+h89/h45 prek mrliške!)
 P80_PY_HOUSES = 86               # python-filter (širši 1897): 84 + h98 + h89!
 NEW_SCANS = [41, 42, 43, 44, 45, 46]
@@ -146,18 +146,18 @@ def main():
           sorted(v["year"] for v in h69_mrl) == [1886, 1888, 1889, 1893], str(sorted(v["year"] for v in h69_mrl)))
 
     # ---------- I6: parish.ts ----------
-    check("I6a vitals 819", len(vit) == VITALS_TOTAL, str(len(vit)))
+    check("I6a vitals 825", len(vit) == VITALS_TOTAL, str(len(vit)))
     d04894 = [v for v in vit if v["bookSignature"] == "04894"]
-    check("I6b mrliški bloki 04894 = 120", len(d04894) == BLOKI_04894, str(len(d04894)))
+    check("I6b mrliški bloki 04894 = 126", len(d04894) == BLOKI_04894, str(len(d04894)))
     d1893 = [v for v in d04894 if v["year"] == 1893]
     check("I6c bloki 1893 = 10", len(d1893) == 10, str(len(d1893)))
     check("I6d bloki 1893: skeni 41–46 + stran == sken − 1",
           all(v["scan"] and 41 <= v["scan"] <= 46 and v["page"] == v["scan"] - 1 for v in d1893), "")
-    check("I6d2 bloki 1894+ ne obstajajo (P160-lead!; P159 = 1893 v korpusu!)",
-          all(v["year"] < 1894 for v in d04894), "")
+    check("I6d2 bloki 1895+ ne obstajajo (P161-lead!; P160 = 1894 sedaj v korpusu!)",
+          all(v["year"] < 1895 for v in d04894), "")
     p80 = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
     check("I6f p80-skripta pini 819 + 86",
-          "len(vitals) == 819" in p80 and "len(houses) == 86" in p80, "")  # python-p80 = 86 (širši 1897-filter; +h98 +h89!)
+          "len(vitals) == 825" in p80 and "len(houses) == 87" in p80, "")  # python-p80 = 86 (širši 1897-filter; +h98 +h89!)
     houses_all = {v["houseNo"] for v in vit if v["houseNo"].isdigit()}
     check("I6g korpus = 92 hiš (+h98 EDINA!)", len(houses_all) == 92, str(len(houses_all)))
 
@@ -235,7 +235,7 @@ def main():
     check("I11b stran == sken − 1 = 14. potrditev (source.pageMapping)",
           "14. potrditev" in d["source"]["pageMapping"], "")
     check("I11c rdeče oznake X9-pojav 3. leto (stats)", "X9-pojav 3. leto" in d["stats"]["rdeceOznake"], "")
-    check("I11d P160-lead v nextSteps (s47-restart + s48-×3-Gribljev!)",
+    check("I11d P161-lead v nextSteps (s47-restart + s48-×3-Gribljev!)",
           any("P160-LEAD" in s for s in d["nextSteps"]), "")
     check("I11e metodološka-lekcija (blede-vlade → pol-sirinsko!)",
           "POL-SIRINSKO" in d["source"]["method"] and "vrzeli-rekonstrukciji" in d["source"]["method"], "")
@@ -243,11 +243,11 @@ def main():
     # ---------- I12: qa + README + notes ----------
     qa = open(QA_TS, encoding="utf-8").read()
     check("I12 qa-p159 sekcija (160. kontrola)", "qa-p159-parish-death-1893" in qa, "")
-    check("I12b qa-pini 819/120/84 (72×+7×+9×)",
-          qa.count("!== 819") >= 72 and qa.count("!== 120") >= 7 and qa.count("p80Houses.size !== 86") >= 9,
-          f"{qa.count('!== 819')}/{qa.count('!== 120')}/{qa.count('p80Houses.size !== 86')}")
+    check("I12b qa-pini 825/126/87 (74×+9×+12×)",
+          qa.count("!== 825") >= 72 and qa.count("!== 126") >= 7 and qa.count("p80Houses.size !== 87") >= 9,
+          f"{qa.count('!== 825')}/{qa.count('!== 126')}/{qa.count('p80Houses.size !== 87')}")
     check("I12c qa-p158-SANACIJA (82 vrstic!)", qa.count("82 vrstic") >= 10 and "P159-SANACIJA" in qa, "")
-    check("I12d qa guard 1894 (bloki 1894+ ne!)", "1894+-mrliški bloki že v korpusu" in qa, "")
+    check("I12d qa guard 1894 (bloki 1894+ ne!)", "1895+-mrliški bloki že v korpusu" in qa, "")
     par = open(PARISH_TS, encoding="utf-8").read()
     check("I12e parish.ts P159-bloki (10× 1893-04894)",
           par.count('bookSignature: "04894",\n    year: 1893,') == 10, "")
