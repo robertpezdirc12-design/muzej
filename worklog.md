@@ -6519,5 +6519,5 @@ Work Log:
 Stage Summary:
 - mrliška linija: 1886 (46/13) → 1887 (71/13) → 1888 (102/29) → 1889 (36/8) → 1890 (55/15) → 1891 (65/15) → 1892 (82/17) → 1893 (69/10) → **1894 (50/6 — VSE-hiše-različne!; Jetika ×14 REKORD!)** — korpus 825 vitalov · 04455 197 + 04894 126 · sidra 190 · hiše 87 (p80) / 92 (korpus) · PT 14
 - QA 161/161 ok:True — qa-p160 = 161. kontrola
-- push: GitHub origin + GitLab gitlab + Vercel avtomatski deploy
+- push: **GitLab gitlab ✓ (b265f87..93e7f65)** — ⚠ GitHub origin FAIL (token 401 Bad credentials — REVOKED; ls-remote anonimno deluje, push ne; uporabnik: posodobi/rotira GitHub-token → git push origin main → Vercel deploy 161/161; produkcija ostaja 160/160 [P159] do takrat!)
 - P161 LEAD: mrliška 1895 (s51-meja '— 1895. —' + zap 1–9 Jan–Feb + s52–s55; **r4 Griblje 12 Janez DRAGOŠ 69 Nadruha 19./21. jan — 1. Griblje-1895!** + r8-Vranoviče-terja-Županič-ryg.-Krjian-35-Jetika; s52-×5 + s53-×2 + s54-×1 [r39-h30-Nikolaj-Šepina] + s55-×3 = **1895-VLM-total 12 — največ odkar 1892-17!**; meja 1895/96 = s55-marker '1896 velika cifra + restart'; Oslabost = NOV vzrok!)
