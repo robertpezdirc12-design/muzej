@@ -1,0 +1,512 @@
+{
+ "phase": "P157",
+ "title": "MRLIŠKA knjiga 04894 — leto 1891 = 6. polno leto mrliške linije (65 vrstic / 15 Griblje-vpisov / 13 hiš — h6 + h61 ×2 edini ponovitvi; stagnacija vpisov 15→15 po 1890-rekordu-15, vrstice 55→65)",
+ "status": "SAMPLE-TRANSCRIPTION-D1891",
+ "issuedAt": "2026-11-01T00:00:00Z",
+ "source": {
+  "book": "04894 — Mrtvaška knjiga župnije Podzemelj (Ljubljana), 1875–1885+",
+  "url": "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04894/",
+  "scans": "s28-dno + s29–s33 (celo leto 1891) + s34-kontrola (meja 1892)",
+  "pageMapping": "stran == sken − 1 (12. potrditev P80-invariante mrliške: s28=27 ✓ [VLM 'Stran 27'] · s29=28 ✓ [max-zoom 'Stran 28' — VLM '18' 2/8-zmeda!] · s30=29 ✓ · s31=30 ✓ · s32=31 ✓ [VLM '81'!] · s33=32 ✓ · s34=33 ✓)",
+  "layout": "dvostranski razpored skena: LEVA stran = Zaporedna + Mesec/dan (smrt|pokop) + Bivališče (vas|hišna) + Ime/priimek/stan; DESNA = Vera + Spola (zach./živ. + moš./žens.) + Starost + Bolezen/vzrok + Previden + Podpis + Opomba; glava 'Leto 18ſſ' izpisana 5/5 polnih strani (s29–s33!); rdeče kredne arhivske oznake ob imenih (X9 — 1. sistematično dokumentirane!)"
+ },
+ "frame": {
+  "type": "mrliška-04894 (P80-okvir: 1886 = s2–6; leto 1891 = s28-dno → s33-dno)",
+  "pageMapping": "s28-dno (1891-r1–3 za velikim podčrtanim markerjem »1891« + Januarj INSIDE r1-mesec-celice — INLINE-stil 3. potrditev!) + s29–s33 == str. 27–32 + s34 = 'Leto 1892.' glava + velik podčrtan »1892« + restart #1 Januarj = P158-lead",
+  "boundaries": "meja 1890/91 = podčrtan »1891« + Januarj v r1 (INLINE, 3. potrditev — 2 skena prej kot P155-lead-napoved, kot P156-potrjeno); meja 1891/92 = s34: velik podčrtan »1892« + IZPISANA glava »Leto 1892.« = 4. STIL MEJE mrliške (hibrid marker+glava — po 1.-prazna-glava-P153, 2.-cifri-P154, 3.-INLINE-P155/P156!)",
+  "glave": "Leto 1891 — izpisana 5/5 polnih strani (s29–s33; nasprotje 1887-PRAZNO!); s28-restart = glava znotraj vrstice (marker-in-r1)",
+  "duhovniki": "★★★ DUHOVNIŠKA KRIZA 1891 = 7 podpisnih oblik v enem letu: Jan–Maj 'Jos. Rauq' [~ Roup/Raup — q/p + a/o VLM-zmeda ISTA OSEBA — baseline max-zoom #29/#34/#41!] → Junij + 'Nikolaj Belavič, kaplan' (3-vrstični, #30!) + 'fr. Češarek [~ Čašeř], župnik' (2-vrstični s titlom, #33!) → Avg 19 'Jos. Rauq ŽUP.' (1. žup.-titel linije, #42!) → Avg 22 'g. Ivan Šašelj, župnik Adlešiči' (zunanji, #43 — P156-Joann=IVAN rešeno!) → Avg 23 'p. Matija Novak, kaplan' (s32-r44 izven Gribelj) → Sep Rauq → Okt–Dec 'Franc Češarek [~ Češanek — 'Češareky' podpis!], coop./coadj.' ×6/6 zadnjih Griblje-vpisov = ČEŠAREK-ERA; nasprotje 1890: Rauq ×12 + Šašelj ×2 = 2 oblike!"
+ },
+ "entries": [
+  {
+   "row": 13,
+   "houseNo": "61",
+   "bookSignature": "04894",
+   "year": 1891,
+   "scan": 29,
+   "page": 28,
+   "mesec": "Marcej",
+   "smrt": "6.",
+   "pokop": "8.",
+   "ime": "Katarina Novak",
+   "stan": "vdova, kolarica",
+   "spol": "ženski",
+   "starost": "95 let",
+   "bolezen": "Slabost",
+   "previden": "1",
+   "duhovnik": "Jos. Rauq [~ Roup]",
+   "rdeca": "rdeča oznaka ob imenu",
+   "whatSi": "umrla Katarina Novak, vdova kolarica, 95 LET (6. 3., pokop 8. 3.) — Slabost; Jos. Rauq; ★★★ NOVI REKORD LINIJE 95 let (prej 92-P155-r27!); h61 ×2 letos + 'vdova kolarica' ×2; VLM '64' ZAVRJEN (super 8×: 61!); VLM 'Marcej 6./8.' ✓ ×3",
+   "whatEn": "died Katarina Novak, a widowed wheelwright's-wife (kolarica), 95 YEARS (Mar 6, buried Mar 8) — weakness; Jos. Rauq; ★★★ the NEW LINE RECORD 95 years (the previous 92!); h61 ×2 this year + 'widow kolarica' ×2; the VLM '64' REJECTED (super 8×: 61!)",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 17,
+   "houseNo": "56",
+   "bookSignature": "04894",
+   "year": 1891,
+   "scan": 30,
+   "page": 29,
+   "mesec": "Marcej",
+   "smrt": "27.",
+   "pokop": "28.",
+   "ime": "Janez Šimec",
+   "stan": "vdovec in kolar",
+   "spol": "moški",
+   "starost": "74 let",
+   "bolezen": "Šarost [~]",
+   "previden": "1",
+   "duhovnik": "Jos. Rauq",
+   "whatSi": "umrl Janez Šimec, vdovec in kolar, 74 let (27. 3., pokop 28. 3.) — Šarost [~ NOV X-vzrok]; Jos. Rauq; ★ KOLAR #3 linije; h56 = 1. MRLIŠKI vpis (04105-1886 + 04455-1886-ženin-Johann!); VLM 'Notar' ZAVRJEN (max-zoom 'vdovec in kolar'); hisna 56 potrjena (ne 16!)",
+   "whatEn": "died Janez Šimec, a widower and wheelwright, 74 years (Mar 27, buried Mar 28) — Šarost [~ a NEW X-cause]; Jos. Rauq; ★ the WHEELWRIGHT #3; h56 = the 1st DEATH entry; the VLM 'Notar' REJECTED (the max-zoom 'vdovec in kolar'); house 56 confirmed (not 16!)",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 27,
+   "houseNo": "46",
+   "bookSignature": "04894",
+   "year": 1891,
+   "scan": 30,
+   "page": 29,
+   "mesec": "Maj",
+   "smrt": "8.",
+   "pokop": "11.",
+   "ime": "Marjeta Klobučar",
+   "stan": "¼ zemlj. hči",
+   "spol": "ženski",
+   "starost": "41 let",
+   "bolezen": "Pljučnica",
+   "previden": "1",
+   "duhovnik": "Jos. Rauq",
+   "rdeca": "rdeča oznaka",
+   "whatSi": "umrla Marjeta Klobučar [VLM 'Mlakar' ZAVRJEN], ¼ zemlj. hči, 41 let [VLM '11' ZAVRJEN] (8. 5., pokop 11. 5.) — Pljučnica; Jos. Rauq; ★ h46 = KLOBUČAR-hiša sama (h47-soseda P154!); 41-letna ¼-hči",
+   "whatEn": "died Marjeta Klobučar [the VLM 'Mlakar' REJECTED], a quarter-smallholder's daughter, 41 years [the VLM '11' REJECTED] (May 8, buried May 11) — pneumonia; Jos. Rauq; ★ h46 = the KLOBUČAR house itself (the h47-neighbor of P154!)",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 30,
+   "houseNo": "68",
+   "bookSignature": "04894",
+   "year": 1891,
+   "scan": 31,
+   "page": 30,
+   "mesec": "Junij",
+   "smrt": "1.",
+   "pokop": "2.",
+   "ime": "Marjeta Muh [~ Mah/Mih]",
+   "stan": "⅓ zemlj. hči [~ ½]",
+   "spol": "ženski",
+   "starost": "9 let",
+   "bolezen": "Hržlica [~ Hojlica?]",
+   "previden": "1",
+   "duhovnik": "Nikolaj Belavič, kaplan",
+   "rdeca": "rdeča oznaka",
+   "whatSi": "umrla Marjeta Muh [~], ⅓ zemlj. hči [~ ½], 9 let [VLM '4' ZAVRJEN] (1. 6., pokop 2. 6.) — Hržlica [~ NOV X-vzrok]; ★ Nikolaj Belavič, KAPLAN = 1. kaplan-podpis linije (3-vrstični!); h68 = 1. MRLIŠKI vpis (04455-1914/1921 prekašana ×23!); 2. ⅓-hči letos",
+   "whatEn": "died Marjeta Muh [~], a third-smallholder's daughter [~ ½], 9 years [the VLM '4' REJECTED] (Jun 1, buried Jun 2) — Hržlica [~ a NEW X-cause]; ★ Nikolaj Belavič, a CHAPLAIN = the 1st chaplain signature of the line (3-line!); h68 = the 1st DEATH entry (1914/1921 outrun ×23!); the 2nd ⅓-daughter of the year",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 33,
+   "houseNo": "16",
+   "bookSignature": "04894",
+   "year": 1891,
+   "scan": 31,
+   "page": 30,
+   "mesec": "Junij",
+   "smrt": "18.",
+   "pokop": "20.",
+   "ime": "Ana Filak",
+   "stan": "vdova, kolarica",
+   "spol": "ženski",
+   "starost": "44 let",
+   "bolezen": "Nadluha [~ Nadluka]",
+   "previden": "1",
+   "duhovnik": "fr. Češarek [~ Čašeř] + 'župnik' [~ coadj.?]",
+   "rdeca": "rdeča oznaka",
+   "whatSi": "umrla Ana FILAK, vdova kolarica, 44 let (18. 6., pokop 20. 6.) — Nadluha; fr. Češarek [~ Čašeř] župnik [~] (2-vrstični s titlom!); ★ P156-LEAD-FILAK POTRJEN (×2 v 2 mesecih — DOKAZANA!); 'vdova kolarica' ×2; FILAK-mreža (Bara roj. Filath h61-krstna-1887!); VLM 'Ivan Čuček' ZAVRJEN (2×!); h16 = 2. mrliški (1886)",
+   "whatEn": "died Ana FILAK, a widowed wheelwright's-wife, 44 years (Jun 18, buried Jun 20) — Nadluha; fr. Češarek [~ Čašeř] 'župnik' [~] (2-line with a title!); ★ the P156-LEAD-FILAK CONFIRMED (×2 in 2 months — PROVEN!); 'widow kolarica' ×2; the FILAK network; the VLM 'Ivan Čuček' REJECTED (twice!); h16 = the 2nd death entry (1886)",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 34,
+   "houseNo": "9",
+   "bookSignature": "04894",
+   "year": 1891,
+   "scan": 31,
+   "page": 30,
+   "mesec": "Julij",
+   "smrt": "2.",
+   "pokop": "4.",
+   "ime": "Peter Jakofčič [~ Jakofič]",
+   "stan": "¼ zemljare vdovec [~ gospod. oče?]",
+   "spol": "moški",
+   "starost": "74 let",
+   "bolezen": "Nadluha",
+   "previden": "1",
+   "duhovnik": "Jos. Rauq [~ Roup]",
+   "rdeca": "rdeča oznaka",
+   "whatSi": "umrl Peter Jakofčič [~], ¼ zemljare vdovec [~], 74 let [VLM '44' ZAVRJEN — γ-7!] (2. 7., pokop 4. 7.) — Nadluha; Jos. Rauq; h9 = 1. MRLIŠKI vpis (04455-1894 prekašana!)",
+   "whatEn": "died Peter Jakofčič [~], a quarter-smallholderess's widower [~], 74 years [the VLM '44' REJECTED — γ-7!] (Jul 2, buried Jul 4) — Nadluha; Jos. Rauq; h9 = the 1st DEATH entry (1894 outrun!)",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 39,
+   "houseNo": "6",
+   "bookSignature": "04894",
+   "year": 1891,
+   "scan": 31,
+   "page": 30,
+   "mesec": "Julij",
+   "smrt": "22.",
+   "pokop": "24.",
+   "ime": "Matija Jakobčič",
+   "stan": "oženjen ¼ gemžga [~]",
+   "spol": "moški",
+   "starost": "59 let",
+   "bolezen": "Nadluha",
+   "previden": "1",
+   "duhovnik": "Jos. Rauq",
+   "whatSi": "umrl Matija Jakobčič, oženjen ¼ gemžga [~], 59 let (22. 7., pokop 24. 7.) — Nadluha; Jos. Rauq; ★ h6 = 1. MRLIŠKI vpis (04455-1903+ prekašana!) + IŠTO-IMEŠKI PAR (cf. r64!)",
+   "whatEn": "died Matija Jakobčič, a married quarter-gemžga [~], 59 years (Jul 22, buried Jul 24) — Nadluha; Jos. Rauq; ★ h6 = the 1st DEATH entry (1903+ outrun!) + the SAME-NAME PAIR (cf. r64!)",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 41,
+   "houseNo": "61",
+   "bookSignature": "04894",
+   "year": 1891,
+   "scan": 31,
+   "page": 30,
+   "mesec": "Avgust",
+   "smrt": "11.",
+   "pokop": "13.",
+   "ime": "Nikolaj Požek",
+   "stan": "¼ zemljakov sin",
+   "spol": "moški",
+   "starost": "½ ure",
+   "bolezen": "Slabost",
+   "previden": "1",
+   "duhovnik": "Jos. Rauq [~ Roup]",
+   "rdeca": "rdeča oznaka",
+   "whatSi": "umrl Nikolaj POŽEK [VLM 'Fošek/Perkič/Prvič' ×3 ZAVRJENI], ¼ zemljakov sin, ½ URE (11. 8., pokop 13. 8.) — Slabost; Jos. Rauq; ★★ NAJKRAJŠI 1891 + h61 ×2 (EDINA ponovitev!) + POŽEK-h61 (Miko-Požek-krstna-1887!) — 4. ime Nikolaj 1891 (cf. #57-Belavič, #57-Šilak?, s29-Nikolaj-Muc!)",
+   "whatEn": "died Nikolaj POŽEK [the VLM 'Fošek/Perkič/Prvič' ×3 REJECTED], a quarter-smallholder's son, ½ an HOUR (Aug 11, buried Aug 13) — weakness; Jos. Rauq; ★★ the SHORTEST of 1891 + h61 ×2 (the ONLY repeat!) + the POŽEK-h61 — 4 first-name Nikolaj in 1891",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 42,
+   "houseNo": "62",
+   "bookSignature": "04894",
+   "year": 1891,
+   "scan": 32,
+   "page": 31,
+   "mesec": "Avgust",
+   "smrt": "19.",
+   "pokop": "21.",
+   "ime": "Jožef Kure [~ Kurec]",
+   "stan": "½ gemžga sin [~]",
+   "spol": "moški",
+   "starost": "14 dni",
+   "bolezen": "Slabost",
+   "previden": "1",
+   "duhovnik": "Jos. Rauq ŽUP. (1. titel!)",
+   "whatSi": "umrl Jožef Kure [~], ½ gemžga sin [~], 14 dni (19. 8., pokop 21. 8.) — Slabost [VLM 'Hlakort' ZAVRJEN]; ★ Jos. Rauq ŽUP. = 1. 'žup.'-titel linije + AVGUSTOVSKI LOM (Rauq-žup. → Šašelj → Novak = 3 v 5 dneh!); h62 = 1. MRLIŠKI vpis (krstna-1887 ostaja najzgodnejša!)",
+   "whatEn": "died Jožef Kure [~], a half-gemžga son [~], 14 days (Aug 19, buried Aug 21) — weakness [the VLM 'Hlakort' REJECTED]; ★ Jos. Rauq ŽUP. = the 1st 'žup.' title of the line + the AUGUST BREAK (3 priests in 5 days!); h62 = the 1st DEATH entry (the 1887 baptism remains the earliest!)",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 43,
+   "houseNo": "55",
+   "bookSignature": "04894",
+   "year": 1891,
+   "scan": 32,
+   "page": 31,
+   "mesec": "Avgust",
+   "smrt": "22.",
+   "pokop": "24.",
+   "ime": "Jožef Šimec",
+   "stan": "½ gemžga sin [~]",
+   "spol": "moški",
+   "starost": "1 leto",
+   "bolezen": "Božjast",
+   "previden": "1",
+   "duhovnik": "g. Ivan Šašelj, župnik Adlešiči",
+   "rdeca": "rdeča oznaka — križec",
+   "whatSi": "umrl Jožef Šimec, ½ gemžga sin [~], 1 leto (22. 8., pokop 24. 8.) — Božjast; ★ g. Ivan Šašelj, ŽUPNIK ADLEŠIČI (2-vrstični — P156-Joann=IVAN REŠENO!); h55 = ŠIMEC-REKORD-hiša (92-letni-Peter-1889 → otrok-Jožef-1891!); hisna '55.' s piko (cf. P155-r30-forenzika!)",
+   "whatEn": "died Jožef Šimec, a half-gemžga son [~], 1 year (Aug 22, buried Aug 24) — Božjast; ★ Mr. Ivan Šašelj, the PARISH PRIEST OF ADLEŠIČI (the P156-Joann=IVAN RESOLVED!); h55 = the ŠIMEC-RECORD house (the 92-year-old Peter 1889 → the child Jožef 1891!)",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 55,
+   "houseNo": "30",
+   "bookSignature": "04894",
+   "year": 1891,
+   "scan": 33,
+   "page": 32,
+   "mesec": "Oktober",
+   "smrt": "24.",
+   "pokop": "26.",
+   "ime": "Janez Mihelčič",
+   "stan": "oženjen ¼ gemžga [~]",
+   "spol": "moški",
+   "starost": "62 let",
+   "bolezen": "Pljučnica",
+   "previden": "1",
+   "duhovnik": "Franc Češarek [~ Češanek], coop.",
+   "rdeca": "rdeča oznaka",
+   "whatSi": "umrl Janez Mihelčič, oženjen ¼ gemžga [~], 62 let (24. 10., pokop 26. 10.) — Pljučnica; ★ Franc Češarek [~], coop. = ČEŠAREK-ERA (okt–dec ×6!); h30 = 4. mrliški vpis (1889 + 1890 ×2 + 1891 — edina 3-zaporedna!)",
+   "whatEn": "died Janez Mihelčič, a married quarter-gemžga [~], 62 years (Oct 24, buried Oct 26) — pneumonia; ★ Franc Češarek [~], coop. = the ČEŠAREK-ERA (Oct–Dec ×6!); h30 = the 4th death entry (the only 3-consecutive-years house!)",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 56,
+   "houseNo": "23",
+   "bookSignature": "04894",
+   "year": 1891,
+   "scan": 33,
+   "page": 32,
+   "mesec": "November",
+   "smrt": "8.",
+   "pokop": "9.",
+   "ime": "Matija Brinec",
+   "stan": "½ zemljatov sin",
+   "spol": "moški",
+   "starost": "2½ leta",
+   "bolezen": "Bule [~ Bele]",
+   "previden": "1",
+   "duhovnik": "Franc Češarek, coop.",
+   "rdeca": "rdeča oznaka",
+   "whatSi": "umrl Matija BRINEC [VLM 'Božičec' ZAVRJEN], ½ zemljatov sin, 2½ leta (8. 11., pokop 9. 11.) — Bule [~ Bele]; Franc Češarek; ★ BRINEC-mreža (h69-1889-vez + h26-1890 + h23!); h23 = 1. MRLIŠKI vpis (04455-1887/1888 + 04105-1897 + 1922!)",
+   "whatEn": "died Matija BRINEC [the VLM 'Božičec' REJECTED], a half-smallholder's son, 2½ years (Nov 8, buried Nov 9) — Bule [~ Bele]; Franc Češarek; ★ the BRINEC network; h23 = the 1st DEATH entry (1887/1888 + 1897 + 1922!)",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 62,
+   "houseNo": "85",
+   "bookSignature": "04894",
+   "year": 1891,
+   "scan": 33,
+   "page": 32,
+   "mesec": "December",
+   "smrt": "9.",
+   "pokop": "11.",
+   "ime": "Janez Križan [~ Kržan]",
+   "stan": "¼ zemljatov sin",
+   "spol": "moški",
+   "starost": "2½ leta",
+   "bolezen": "Bule [~ Bele]",
+   "previden": "1",
+   "duhovnik": "Franc Češarek, coop.",
+   "rdeca": "rdeča oznaka",
+   "whatSi": "umrl Janez KRIŽAN [~], ¼ zemljatov sin, 2½ leta (9. 12., pokop 11. 12.) — Bule [~]; Franc Češarek; ★★★ h85 = 1. MRLIŠKI vpis + PRVI DOKAZ KADARKOLI (PRAZNA hiša korpusa!) → p80 82 → 83 = EDINA nova p80-hiša 1891!; KRIŽAN-mreža (h35-1890 + 1888 ×5 + h85!)",
+   "whatEn": "died Janez KRIŽAN [~], a quarter-smallholder's son, 2½ years (Dec 9, buried Dec 11) — Bule [~]; Franc Češarek; ★★★ h85 = the 1st DEATH entry + THE FIRST EVIDENCE EVER → p80 82 → 83 = the ONLY new p80-house of 1891!; the KRIŽAN network",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 63,
+   "houseNo": "71",
+   "bookSignature": "04894",
+   "year": 1891,
+   "scan": 33,
+   "page": 32,
+   "mesec": "December",
+   "smrt": "12.",
+   "pokop": "14.",
+   "ime": "Matija Štravs",
+   "stan": "¼ zemljatov sin",
+   "spol": "moški",
+   "starost": "85 let",
+   "bolezen": "Bule [~ Bele]",
+   "previden": "1",
+   "duhovnik": "Franc Češarek, coop.",
+   "rdeca": "rdeča oznaka",
+   "whatSi": "umrl Matija ŠTRAVS [VLM 'Škraba' ZAVRJEN], ¼ zemljatov sin, 85 let, hisna 71 [VLM '91' ZAVRJEN — γ-7!] (12. 12., pokop 14. 12.) — Bule [~]; Franc Češarek; ★★ STRAUS/ŠTRAVS-mreža #4 (1888-h72 + 1890-h42 + 1890-h71 + 1891-h71-85!); h71 = 3. mrliški (1886 + 1890 + 1891); 85-letni ¼-sin = starejša 'veja' [~]",
+   "whatEn": "died Matija ŠTRAVS [the VLM 'Škraba' REJECTED], a quarter-smallholder's son, 85 years, house 71 [the VLM '91' REJECTED — γ-7!] (Dec 12, buried Dec 14) — Bule [~]; Franc Češarek; ★★ the STRAUS/ŠTRAVS NETWORK #4; h71 = the 3rd death entry; the 85-year-old ¼-son = the older 'branch' [~]",
+   "status": "DOCUMENTED"
+  },
+  {
+   "row": 64,
+   "houseNo": "6",
+   "bookSignature": "04894",
+   "year": 1891,
+   "scan": 33,
+   "page": 32,
+   "mesec": "December",
+   "smrt": "15.",
+   "pokop": "17.",
+   "ime": "Matija Jakobčič",
+   "stan": "¼ zemljakov sin",
+   "spol": "moški",
+   "starost": "23 let",
+   "bolezen": "Pljučnica",
+   "previden": "1",
+   "duhovnik": "Franc Češarek [~ coadj.], coop.",
+   "rdeca": "rdeča oznaka",
+   "whatSi": "umrl Matija Jakobčič (ISTO-IMEŠKI r39!), ¼ zemljakov sin, 23 let (15. 12. [~ 16.], pokop 17. 12.) — Pljučnica; Franc Češarek [~ coadj.]; ★★ h6 ×2 ISTEGA IMENA v 5 mesecih (oče-59 + sin-23? [~ X10!]) + NAJZGODNEJŠI h6",
+   "whatEn": "died Matija Jakobčič (the SAME-NAME r39!), a quarter-smallholder's son, 23 years (Dec 15 [~ 16], buried Dec 17) — pneumonia; Franc Češarek [~ coadj.]; ★★ h6 ×2 THE SAME NAME in 5 months (father-59 + son-23? [~ X10!]) + the EARLIEST h6",
+   "status": "DOCUMENTED"
+  }
+ ],
+ "excluded": [
+  {
+   "id": "E1",
+   "rows": "s28-dno r1–r3 (1891-lead)",
+   "opis": "P157-LEAD vrstice (izven Gribelj): r1 Vranoviče 11 Ana Schweiger ⅓ zemlj. hči 17 MESECEV [VLM '14' + strip '19' ZAVRJENA — max-zoom '17' γ-7!] Božjast 2./3. 1. Jos. Rauq = LEAD 100% POTRJEN (P156-lead: Ana ✓ ⅓ ✓ 17 ✓ — celostanski-VLM 'Eliza/žena-Janeza/14' = 3× NAPAČEN!) · r2 Otok 15. [P156-lead '18' → POPRAVEK 15. — 5-forma + pika, ne 8!] N. Jaklič [~ Jahlič] 'moškega spola' [~] Slabost BREZ PODPISA = r53-vzorec #3 (P153-53 + P156-53 + 1891-r2 — neimenovani + brez-podpisa!) · r3 Prilozje 48 Matija Špina [~ Šepina?] oženjen bajtar 69 let Nadruha — izven Gribelj"
+  },
+  {
+   "id": "E2",
+   "rows": "s29 r4–r12 + r14–r15 (10 vrstic)",
+   "opis": "izven Gribelj (str. 28): r4-Zemelj-34-Janez-Šilak-3-let-Vodenica [P156-lead-Filak-guest-2 's29-r4-janez' NE POTRJEN — 'Šilak' ≠ Filak!] · r5/r10-Gradac-61-Brumštol/Kristinčin-gostilna · r6-Giriče-35-N.-Šimec-Mrtvorojen-BREZ-podpisa (r53-vzorec #4!) · r7-Krasinec-39 · r8-Gradac-81-Kugelj-14-let · r9/r11-Giriče-36-Šimec-2-dni + Klošter-41 · r14-Vranoviče-32 · r15-Podžemelj-39"
+  },
+  {
+   "id": "E3",
+   "rows": "s30 r16, r18–r26, r28 (11 vrstic)",
+   "opis": "izven Gribelj (str. 29): r16-Gradac-11-Mihelič-Šarost [~ — ista beseda kot #17!] · r18-Certoviše-19 · r19-Boršt-34 · r20-Klošter-8-Nikolaj-Muc · r21-Gradac-7-Božjast · r22-Certoviše-34 · r23-Krasinec-26-Harasinič-kolar · r24/r25-Krasinec-22/5-Nadluha ×2 (epidemija-nadaljevanje!) · r26-Otok-5-Krican-50 · r28-Primostek-10-N.-Muc-'Utovorjen?' [~] starost '—' = r53-vzorec #5!"
+  },
+  {
+   "id": "E4",
+   "rows": "s31 r29, r31–r32, r35–r38, r40 (7 vrstic)",
+   "opis": "izven Gribelj (str. 30): r29-Boginja-vas-13-Tasič-84 · r31/r38-Certoviše-3-Tomc-ženin-62 + Tomcova-vdova-59 (Jetika ×4 s35/r36!) · r32-Boginja-vas-39-Tadič-73 · r35-Vranoviče-12-Hočevar-64-Jetika · r36-Primostek-17-6-mesecev-Jetika · r37-Vranoviče-9-Petrovič-1 URA-'Prezgodnji porod' = 2. izpisani prezgodnji-porod linije (po 1890-r10-2-uri — 1891 ×2 phenomenon!) · r40-Dobravice-9-3-mesece"
+  },
+  {
+   "id": "E5",
+   "rows": "s32 r44–r53 (10 vrstic)",
+   "opis": "izven Gribelj (str. 31): r44-Vranoviče-8-Jakiša-vdova-69-p. Matija-Novak-kaplan (3. avgustovski duhovnik!) · r45-Podžemelj-6 · r46/r47-Gradac-62/64 · r48-Dobravice-11 · r49-Krivoglavce-29 · r50-Otok-34 · r51-Certoviše-34 · r52-Klošter-76-J.-Češarek-coadj. (ČEŠAREK-coadj.-1. pojav!) · r53-Boršt-38-Nadruha"
+  },
+  {
+   "id": "E6",
+   "rows": "s33 r54, r57–r61, r65 (6 vrstic)",
+   "opis": "izven Gribelj (str. 32): r54-Podžemelj-44 · r57-Zemelj-38-Nikolaj-Muc-kmet-71 · r58-Gradac-2 · ★ r59+r60-GIRIČE 35 [celostanski-VLM 'Griše/Gnise' + strip 'Gričice' — max-zoom: Giriče!] = DVOJČKI-ŠIMEC ¼ ure (Jurij) + 2 uri (Marjeta) ISTI DAN 19./20. 11. = dvojčki-smrti #5 linije ampak IZVEN Gribelj (nasprotje 1890-h30-Griblje-dvojčkov!) · r61-Krasinec-19 · r65-Gradac-60"
+  },
+  {
+   "id": "E7",
+   "rows": "s34-top r1–r2 (1892-lead)",
+   "opis": "P158-LEAD (1892, izven P157-scope): r1 GRIBLJE 57 [VLM-strip '54' ZAVRJEN — γ-7-forma!] Rudolf Pezdinec [~ Terdinec/Tezdinec — 3 VLM-varianti; cf. h53-Perdinec-vez!] ½ zemljakov sin 2½ leta Merlica [~ Merzlica] 6./8. 1. 1892 fran Češarek coop. [strip 'Pešarelj' ZAVRJEN — max-zoom 'fran Češareky' = isto kot #52/#55!] · r2 Krasinec-2-N.-Peglinac-Mrtvorojen?-BREZ-podpisa (r53-vzorec #6!)"
+  }
+ ],
+ "stats": {
+  "vrstic": 65,
+  "griblje_vpisov": 15,
+  "hise": 13,
+  "hise_razlicnih": "6,9,16,23,30,46,55,56,61,62,68,71,85",
+  "hise_ponovitve": "h61 ×2 (r13-Novak + r41-Požek!) + h6 ×2 (r39-Jakobčič-59 + r64-Jakobčič-23 ISTO IME!)",
+  "hise_1_mrliški_vpis": 7,
+  "hise_1_mrliški_vpis_opis": "h56 (04105-1886 + 04455-1886-ženin!), h68 (04455-1914/1921 prekašana ×23!), h9 (04455-1894), h6 (04455-1903+ ×2 istega-imena!), h62 (04455-1898+), h23 (04455-1887/1888-BRINEC-družina!), h85 (PRVI DOKAZ KADARKOLI!)",
+  "hise_najzgodnejši_vpis_kadarkoli": 3,
+  "hise_najzgodnejši_vpis_opis": "h68 (1914→1891 ×23!), h9 (1894→1891 ×3!), h6 (1903→1891 ×12!) — h62 ostaja pri krstni-1887, h85 pri krstni-1888 (obe krstni starejši)!",
+  "nove_p80_hise": 1,
+  "nove_p80_hise_opis": "h85 = EDINA nova p80-hiša 1891 (prek mrliške; krstni 04105-1888/1908 izven filtra — cf. h63/h86-vzorec!; korpus 90 NESPREMENJEN — vseh 13 hiš-1891 že!) — p80 hiše 81 → 82; PT-gap 13 (TS) / 16 (python) nespremenjen (h85 izven 41–60)"
+ },
+ "crossChecks": [
+  {
+   "id": "X1",
+   "name": "duhovniška-kriza-1891 (7 podpisnih oblik)",
+   "detail": "Jan–Maj Rauq [~ Roup] ×5 → Junij +Belavič-kaplan (#30) +fr.-Češarek-'župnik' (#33) → Julij Rauq → Avg: Rauq-ŽUP. (#42, 19.) + Šašelj-zunanji (#43, 22.) + Novak-kaplan (s32-r44, 23.) = 3 duhovnika v 5 DNEH! → Sep Rauq → Okt–Dec ČEŠAREK coop. ×6 = 1891 = leto-krize (nasprotje 1890 ×2-oblike); Češarek #33-'župnik' [~ coadj.?] = X-open (junij-titel pred avgustovskim lomom — protislovno [~])"
+  },
+  {
+   "id": "X2",
+   "name": "STRAUS/ŠTRAVS-mreža #4",
+   "detail": "1888-h72-Marija-1-DAN (P154-lead) + 1890-h42-Matija-8-MES + 1890-h71-Marija-8-MES + 1891-h71-Matija-ŠTRAVS-85 = 4 smrti v 4 letih + poročna-1921-№22 (h72!); 85-letni Matija ¼-sin = 'starejša veja' Mathias-Straus-h71-1887 ('2 veje' P117!); VLM 'Škraba' + '91' OBOJE ZAVRJENA (γ-7 + Š-t-r-a-v-s max-zoom!)"
+  },
+  {
+   "id": "X3",
+   "name": "REKORD-95 (h61 Novak)",
+   "detail": "r13 Katarina Novak vdova kolarica 95 LET = novi rekord linije (prej 92-P155-r27-Peter-Šimec-h55; še prej 80/78/74); 2. rekordni-vpis h-hiše-rekorderjev: h55-92 (1889) → h61-95 (1891); max-zoom super 8× = '61' (ne 64!) + strip ×2 '95 let' SKLAD"
+  },
+  {
+   "id": "X4",
+   "name": "h61 ×2 (Novak + Požek)",
+   "detail": "r13 Katarina Novak vdova-kolarica 95 (marec) + r41 Nikolaj Požek ¼-sin ½-ure (avgust) = EDINA hišna-ponovitev 1891; POŽEK-h61: krstna-04105-1887-h61 oče 'Miko Požek [~]' (mati Bara roj. FILATH!) = ista familija; h61 mrliška 1888 ×3 (Požek-tragedija!) + 1891 ×2 = 5 mrliških vpisov — 1. NAJBOLJ trpljenča hiša mrliške? [~]"
+  },
+  {
+   "id": "X5",
+   "name": "ISTO-IMEŠKI PAR h6 (X10)",
+   "detail": "r39 Matija Jakobčič oženjen-¼-gemžga 59 (julij) + r64 Matija Jakobčič ¼-sin 23 (december) = isto ime + isto hišo v 5 mesecih = oče + sin? [~ — 1. isto-imeški par istega leta linije; VLM 'Škofič' za r64 ZAVRJEN (max-zoom Jakobčič!)]"
+  },
+  {
+   "id": "X6",
+   "name": "FILAK-lead POTRJEN (P156)",
+   "detail": "P156-lead: 'Filak ×2 v 2 mesecih [r44-1890-Jurij + s29-r4-janez-1891?]' → r44-1890-Jurij-Filak ✓ (P156) + 1891-r33 Ana-FILAK-h16 (ne s29-r4! — 'Šilak' Zemelj ≠ Filak) = hipoteza DOKAZANA z 1. popravkom lokacije (s31-r33) + FILAK-mreža: Bara-roj.-Filath-h61-krstna-1887 + priča-Miko-Filak-1922 [~]"
+  },
+  {
+   "id": "X7",
+   "name": "BULE/BELE december-kompleks ×2",
+   "detail": "1889-r35-Notarica + 1890-r51/r54/r55-Bele ×3 (december!) → 1891: Bule ×2 NOVEMBER–DECEMBER (r56-Brinec-2½ + r62-Križan-2½ + r63-Štravs-85 — 2 otroka + 1 starček!) = beseda se pojavlja ZIMSKI-meseci ×5/8 čez leta (X-leksikon: Bule [~ Bele/Buhe — 3 VLM-varianti!])"
+  },
+  {
+   "id": "X8",
+   "name": "P156-lead 100% POTRJEN + POPRAVEK",
+   "detail": "Ana Schweiger: ime ✓ (VLM 'Eliza' NAPAČEN!) + ⅓-zemlj.-hči ✓ (VLM 'žena-Janeza' NAPAČEN!) + 17-mesecev ✓ (VLM '14' + strip '19' NAPAČNA!) + 2./3.1. ✓ + Vranoviče-11 ✓ = 5/5; POPRAVEK: Otok 18 → 15. (5-forma + pika — max-zoom!); r2 'moškega spola' [~ nezakona? P156-napoved — max-zoom favorizira 'moškega spola' + spola-tick?]"
+  },
+  {
+   "id": "X9",
+   "name": "RDEČE arhivske oznake (1. sistematične!)",
+   "detail": "vsaj 12/15 Griblje-vrstic + lead r1/r2 = rdeče kredne kljukice/pike/črtice ob imenih (1. sistematično dokumentirane v liniji — prejšnje faze niso poročale!); vzorec: Griblje-vrstice prevladujejo (marker poznejšega arhivista za izluščenje? [~]); izjeme brez rdeče: #17-Šimec + #39-Jakobčič + #42-Kure = X-open"
+  },
+  {
+   "id": "X10",
+   "name": "najzgodnejši-vpisi ×3 + p80-h85",
+   "detail": "h68 (1914→1891!) + h9 (1894→1891!) + h6 (1903→1891!) = 3 hiš dobi 1891 kot NAJZGODNEJŠI vpis (h62 ostaja pri krstni-04105-1887, h85 pri krstni-04105-1888 — obe krstni starejši!; nasprotje 1890: ×2 h42/h18!); h85 = v p80-filtru SAMO prek mrliške-1891 (krstni 1888/1908 izven filtra — cf. h63/h86-vzorec!) → p80 81→82 EDINA (TS-filter; python-p80 = 83); korpus 90 NESPREMENJEN"
+  }
+ ],
+ "anomalies": [
+  {
+   "id": "A1",
+   "opis": "★★ VLM-starost-4/7-zmeda ×3: #34-Jakofčič '44' → max-zoom γ-7 = 74! · #27-Klobučar '11' → max-zoom 4-zanka = 41! · #30-Muh '4' → max-zoom 9-skleda+rep = 9! = A1-vzorec (P155 ×3) ponovljen"
+  },
+  {
+   "id": "A2",
+   "opis": "★★ VLM-hiša-γ-7-zmeda ×2: #63-Štravs '91' → γ-7-forma + 1 = 71! (nasprotje 9 — referenčni-par r62-h85 '85' ISTA STRAN!) · s34-r1-Pezdinec '54' → γ-7 = 57! = γ-7 forenzika 3. potrditev (po P156-r43-h71!)"
+  },
+  {
+   "id": "A3",
+   "opis": "★★ VLM-ime-popravki ×5: #41 'Fošek/Perkič/Prvič' ×3 → POŽEK (ž-ščepka!) · #56 'Božičec' → BRINEC · #63 'Škraba' → ŠTRAVS · #27 'Mlakar' → KLOBUČAR · #17 'Notar' → 'vdovec in kolar' — max-zoom > VLM 7. potrditev (vsak popravek 2× neodvisno!)"
+  },
+  {
+   "id": "A4",
+   "opis": "★★ LEAD-POPRAVEK: Otok 18 (P156-lead ×2 faze!) → 15. — max-zoom '15.' 5-forma + pika; ampak P156-lead-Se Schweiger-del 100% POTRJEN — lead-delna-napaka 1./2."
+  },
+  {
+   "id": "A5",
+   "opis": "★ VLM-Čuček-zmeda: #33-podpis celostanski 'Ivan Čuček' + strip 'Ivan U.[~]aef.' → max-zoom 2× = 'fr. Češarek [~ Čašeř]' + 'župnik' — NOV duhovnik-dvom (Čašeř ≠ Češarek-glyphs? X-open)"
+  },
+  {
+   "id": "A6",
+   "opis": "★ VLM-vzrok-zmeda ×2: #42 'Hlakort' → 'Slabost' (max-zoom!) · #30 'Hojlica' → 'Hržlica' [~ Hojlica?] — vzroki-leksikon: Nadluha ×5 + Slabost ×4 + Bule ×3 + Božjast ×1 + Pljučnica ×3 + Šarost [~] + Hržlica [~] = 2 NOVA X-vzroka; Sušica + Jetika = 0 (PRVIK!)"
+  },
+  {
+   "id": "A7",
+   "opis": "★ s29-page-number: celostanski 'Stran 18' → max-zoom 'Stran 28' (2/8!) — 12. potrditev stran==sken−1; s32 'Stran 81' → 31 (isti vzorec!)"
+  },
+  {
+   "id": "A8",
+   "opis": "★ row-map-s29: header-band interval [249–324] = sub-glava (ne vrstica #4!) — 1. vrsta zamaknjena; s29-13-crop popravljen +1505–1650; VLM-strip-serial-check = zanesljiva metoda"
+  },
+  {
+   "id": "A9",
+   "opis": "★ dvojčki-smrti #5 ZUNAJ Gribelj: s33-r59/r60-Giriče-35-Šimec-¼-ure + 2-uri isti dan (19./20. 11.) = 1890-h30-Griblje-dvojčkov-nasprotje; + s31-r37-Vranoviče-9-1-URA-'Prezgodnji porod' = 2. izpisani (1890-r10-2-uri → 1891 ×2 phenomenon!)"
+  },
+  {
+   "id": "A10",
+   "opis": "★ OTROŠKA umrljivost 1891 = 33 % (≤3 leta ×5/15: ½-ure + 14-dni + 1-leto + 2½ ×2 — med 1889-25 % in 1890-73 %!); razpon ½ ure → 95 let (najširši kadarkoli!); meseci: Mar2 · Maj1 · Jun2 · Jul2 · Avg3 · Okt1 · Nov1 · Dec3; podpisi 15/15 = 1. popoln-odpisan-leto od 1887!"
+  }
+ ],
+ "honesty": [
+  "H1: #13 starost 95 let — 2× strip SKLAD + celostanski SKLAD + max-zoom — jasen; ampak '95' bi lahko bilo '9¾' [~ zavrženo — 'let' sklada]",
+  "H2: #30 starost 9 let — max-zoom 9-skleda+rep; celostanski '4' ZAVRJEN; ampak 9/4 Kurrent ostaja najtežja zmeda [~]",
+  "H3: #33 podpis 'fr. Češarek [~ Čašeř] župnik' — 8× super-zoom; 'Čašeř' kot ločen duhovnik ostaja odprt [~]",
+  "H4: #34 stan '¼ zemljare vdovec' [~ gospod. oče?] — VLM ×2 varianti; max-zoom naklonjen 'vdovec' [~]",
+  "H5: #2-lead 'moškega spola' [~] — max-zoom; P156-napoved 'nezakona-spola' NIZKA zaupanja (beseda ima m/k začetnico) [~]",
+  "H6: rdeče oznake — barva iz skena (rdeča-kreda [~]); morda oranžna [~]; le Griblje-vrstice označene [~ vzorec]",
+  "H7: #63 stan '¼ zemljatov sin' pri 85 letih — nenavadno ampak jasno zapisano (cf. P155-r27-92-letni-½!)",
+  "H8: #17 vzrok 'Šarost' [~] — nerazrešen X-vzrok (lahko 'Škrlat'? [~])",
+  "H9: s34-r1-lead 'Pezdinec [~ Terdinec]' — P/T Kurrent zmeda ostaja [~]; hisna 57 γ-7 jasna",
+  "H10: meja-1892 = 4. stil (glava + marker) — s34-»1892« max-zoom potrjen; nadaljnje 1892-vrstice P158-scope"
+ ],
+ "nextSteps": [
+  "P158 = mrliška 1892 (s34-top lead: GRIBLJE 57 Rudolf Pezdinec [~ Terdinec] ½-sin 2½-let Merlica [~] 6./8. 1. 1892 fran-Češarek-coop. + s34–s37 [~]; meja 1892/93 [~ s40-s41?]; ČEŠAREK-era se nadaljuje?; h57 = nova p80-hiša? [~ preveri!])",
+  "X9-rdeče-oznake: sistemska forenzika čez vse mrliške skene (ali so oznake na VSIH Griblje-vrsticah? katere faze?) — P158-vključno",
+  "X10-isto-imeški-par: krstna-04105-forenzika h6 1866–1870 (ali obstaja sin-Matija-Jakobčič-r.~1868? oče-Matija-r.~1832?)",
+  "X3-rekord: krstna/matrika-napredna forenzika Katarine-Novak-h61 (r. ~1796?! — pred-1875-knjiga)",
+  "Čašeř/Češarek + Belavič + Novak-kaplan: cerkveno-zgodovinska kontrola (Adlešiči/Črnomelj dekanija — kaplanski-prenosi 1891)"
+ ]
+}

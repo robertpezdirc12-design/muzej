@@ -34,8 +34,8 @@ EXPECTED_EXCLUDED = 8            # skupine vrstic izven Gribelj + 1891-lead + 18
 EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 10
 GRIBLJE_HOUSES = "7,18,26,27,30,32,35,37,38,42,58,71,90,91"
-VITALS_TOTAL = 777               # 762 + 15!
-BLOKI_04894 = 78                 # 63 + 15!
+VITALS_TOTAL = 792               # 762 + 15!
+BLOKI_04894 = 93                 # 63 + 15!
 P80_HOUSES = 82                  # 81 + h90! (EDINA nova p80-hiša 1890!)
 NEW_SCANS = [24, 25, 26, 27, 28]
 
@@ -186,11 +186,11 @@ def main():
     check("I6c bloki 1890 = 15", len(d1890) == 15, str(len(d1890)))
     check("I6d bloki 1890: skeni 24–28 + stran == sken − 1",
           all(v["scan"] and 24 <= v["scan"] <= 28 and v["page"] == v["scan"] - 1 for v in d1890), "")
-    check("I6d2 bloki 1891+ ne obstajajo (P157-lead!)",
-          not [v for v in vit if v["bookSignature"] == "04894" and (v["year"] or 0) >= 1891], "")
+    check("I6d2 bloki 1892+ ne obstajajo (P158-lead!)",
+          not [v for v in vit if v["bookSignature"] == "04894" and (v["year"] or 0) >= 1892], "")
     p80_script = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
-    check("I6f p80-skripta pini 777 + 82",
-          "len(vitals) == 777" in p80_script and "len(houses) == 82" in p80_script, "")
+    check("I6f p80-skripta pini 792 + 83",
+          "len(vitals) == 792" in p80_script and "len(houses) == 83" in p80_script, "")
     houses_all = {v["houseNo"] for v in vit if v["houseNo"] and v["houseNo"].isdigit()}
     check("I6g korpus = 90 hiš (vseh 14 hiš-1890 že!)", len(houses_all) == 90, str(len(houses_all)))
     # h90 = EDINA nova p80-hiša (krstni dokazi izven filtra!)
@@ -289,7 +289,7 @@ def main():
     # ---------- I12: qa + README + notes ----------
     qa = open(QA_TS, encoding="utf-8").read()
     check("I12 qa-p156 obstaja", "qa-p156-parish-death-1890" in qa, "")
-    check("I12b qa-p155 guard 1891 (posodobljeno)", "1891+-mrliški bloki že v korpusu" in qa, "")
+    check("I12b qa-p155 guard 1891 (posodobljeno)", "1892+-mrliški bloki že v korpusu" in qa, "")
     readme = open(README, encoding="utf-8").read()
     check("I12c README P156", "P156" in readme and "1890" in readme, "")
     notes = open(NOTES, encoding="utf-8").read()
