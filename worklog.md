@@ -6428,3 +6428,26 @@ Stage Summary:
 - QA 158/158 ok:True — qa-p157 = 158. kontrola
 - push: GitHub origin + GitLab gitlab + Vercel avtomatski deploy
 - P158 LEAD: mrliška 1892 (s34-top: Griblje 57 Rudolf Pezdinec [~ Terdinec] 2½-let Merlica 6./8. 1. — Češarek-era!)
+
+---
+Task ID: P157-f2
+Agent: Z.ai Code (glavni agent)
+Task: P157 FAZA-2 ADJUDIKACIJA — 13 max-zoom/super-zoom celic nad faza-1 spori (r13-95, r30-9, r33-44 + podpis + previden-stolpec ×7 + r43-⅛ + lead-17-mesec + mesecni-markerji); γ-7/9/4-forma PARNOST določena za celoten rokopis
+
+Work Log:
+- ČEŠAREK-SERIJA RAZREŠENA: #55 'fr. Češarek coop.' + #52 'Franc Češarek coop.' + #43 'g. Ivan Šašelj / župnik Adlešiči' (2-vrstični) — #33 'Čašeř+župnik' = ISTA ROKA kot #43 → **Ivan Šašeř = Šašelj (župnik!) — Čašeř ≠ Češarek** (celostanski 'Ivan Čuček' + faza-1 'fr. Češarek-župnik' OBOJE ZAVRJENA)
+- r13 h61 Novak: starost 95→**75** (γ-7-forma; '9' tega rokopisa = skleda+rep — Krasinec-39-s29 + r39-'59' referenčna para!) + vzrok 'Slabost'→**Starost** (t s prečko; semantika starostne smrti ✓) — **'95-REKORD' HIPOTEZA ZAVRJENA** (rekord OSTAJA 92-P155-r27!)
+- r30 h68 Muh: 9→**7 let** (γ-7 6. potrditev) + 'Hržlica'→**Mrzlica** (= 'Merzlica' 1892-lead ISTI rokopis!) + previden (1)→—
+- r33 h16 Filak: 44→**77 let** (γγ = γ-7 ×2) + 'Nadluha'→**Nadruha** (N 6× max-zoom: dva grba brez repa ≠ Z/zaduha)
+- previden (1)→**—** ×7 (r30/39/41/42/43/56/62 — max-zoom jasna črtica + podpis-sosedstvo; R-stripski '1'-zmeda!)
+- r43 h55 Šimec: stan ½→**⅛ gemžjakov sin** (imenovalec = dvojna zanka = 8; kontra '2-wavy' v r56/r62-'2½')
+- r17 'kolar' POTRJEN (8×: K-zanka ≠ N — faza-1 drži) · r62 'sin' POTRJEN (7×: 'vin'=sin-quick, ne-vnuk)
+- lead s28: r1 starost 19→**17 mesecev** (γ-7!) · zaporedna r2-'9.'=**2.** + r3-'γ'=**3.** (obrabljen) — lead = 1/2/3
+- MES-MARKERJI (page-JSON): Okt-prelom med r54–r55 → **#55 = OKTOBAR-marker vrstica**; Nov@r56; Dec@r62
+- Božjast ×4 čez strani (17-mes-lead + 10-mes-r54 + 5-let + 1-leto-r43) = DOJENČKOV-TERMIN (X11 odprt); Bule dec-kompleks ×3 (2½+2½+85) + Merzlica jan-1892 2½ = epidemija-narrativ?
+- 15 NOVIH max-zoom operacij (skupaj ≈ 108); popravki: parish.ts ×11 + qa-parish.ts (qa-p157 tekst + 3 ASSERTIJE: '95 LET'/'NOVI REKORD'→'75 let'/'γ-7-forma'/'rekord OSTAJA 92') + parish-death-1891.json (3 entries + previden ×6 + phase2Adjudication blok) + notes.md (faza-2 sekcija)
+
+Stage Summary:
+- Faza-1 napake: 3 starosti (95/9/44 → 75/7/77) + 1 podpis (Čašeř→Šašeř) + 1 stan (½→⅛) + 7 previden + 2 vzroka (Slabost→Starost, Hržlica→Mrzlica) + lead-17-mes
+- verifikacija: tsc 0 · lint 0 · runQA 158/158 ok:True (assertije sinhronizirane!)
+- P158 LEAD nespremenjen: Griblje 57 Rudolf P~ezdinec 2½ let Merlica 6./8.1.1892 fran Češarek coop.

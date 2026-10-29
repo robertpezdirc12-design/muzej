@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """P157 — MRLIŠKA knjiga 04894, leto 1891 = 6. polno leto mrliške linije
 (s28-dno + s29–s33 == str. 27–32; 65 vrstic / 15 Griblje-vpisov / 13 hiš —
-h6 + h61 ×2 edini ponovitvi). (issue #18). ★★★ NOVI REKORD 95 let (h61 Novak!)
+h6 + h61 ×2 edini ponovitvi). (issue #18). ★★ r13-95→75 POPRAVEK (γ-7-forma!) — rekord ostaja 92-P155.
 + ★★★ DUHOVNIŠKA KRIZA 1891 (7 podpisnih oblik — 3 duhovnika v 5 dneh avgusta
 + ČEŠAREK-era ×6!) + ★★ STRAUS/ŠTRAVS-mreža #4 (h71 Matija Štravs 85!) +
 ★★ ISTO-IMEŠKI PAR h6 (2× Matija Jakobčič!) + FILAK-lead POTRJEN + ★★★ h85 =
@@ -109,7 +109,7 @@ def main():
     uniq = sorted({e["houseNo"] for e in ent}, key=int)
     check("I2b hišni multizbroj = 13 različnih (h61 ×2 + h6 ×2!)",
           len(uniq) == 13, ",".join(uniq))
-    check("I2c h61 ×2 (r13-Novak-95 + r41-Požek-½-ure!)",
+    check("I2c h61 ×2 (r13-Novak-75 + r41-Požek-½-ure!)",
           sum(1 for e in ent if e["houseNo"] == "61") == 2
           and {e["row"] for e in ent if e["houseNo"] == "61"} == {13, 41}, "")
     check("I2c2 h6 ×2 ISTO-IMEŠKA (r39 + r64 Jakobčič!)",
@@ -202,9 +202,10 @@ def main():
 
     # ---------- I7: max-zoom forenzika ----------
     r13 = next((e for e in ent if e["row"] == 13), None)
-    check("I7a r13 = REKORD 95 let (h61 Novak vdova-kolarica!)",
-          bool(r13) and r13["houseNo"] == "61" and "95 LET" in r13["whatSi"]
-          and "NOVI REKORD LINIJE" in r13["whatSi"] and "kolarica" in r13["whatSi"].lower(), "")
+    check("I7a r13 = 95→75 POPRAVEK (h61 Novak vdova-kolarica! γ-7-forma)",
+          bool(r13) and r13["houseNo"] == "61" and "75 let" in r13["whatSi"]
+          and "γ-7-forma" in r13["whatSi"] and "rekord linije OSTAJA 92" in r13["whatSi"]
+          and "kolarica" in r13["whatSi"].lower(), "")
     r63 = next((e for e in ent if e["row"] == 63), None)
     check("I7b r63 h71 ≠ 91 (γ-7-forma!) + ŠTRAVS ne Škraba + 85 let",
           bool(r63) and r63["houseNo"] == "71" and "ŠTRAVS" in r63["whatSi"]
@@ -260,15 +261,15 @@ def main():
     n_cesarek = sum(1 for e in signed if "Češarek" in e["duhovnik"])
     n_saselj = sum(1 for e in signed if "Šašelj" in e["duhovnik"])
     n_belavic = sum(1 for e in signed if "Belavič" in e["duhovnik"])
-    check("I10a podpisi 15/15 (Rauq ×7 + Češarek ×6 + Šašelj ×1 + Belavič ×1)",
-          len(signed) == 15 and (n_rauq, n_cesarek, n_saselj, n_belavic) == (7, 6, 1, 1),
+    check("I10a podpisi 15/15 (Rauq ×7 + Češarek ×6 + Šašelj ×2 [r43 + r33-Šašeř~Šašelj!] + Belavič ×1)",
+          len(signed) == 15 and (n_rauq, n_cesarek, n_saselj, n_belavic) == (7, 6, 2, 1),
           f"Rauq {n_rauq} / Češarek {n_cesarek} / Šašelj {n_saselj} / Belavič {n_belavic}")
     r42 = next((e for e in ent if e["row"] == 42), None)
     check("I10b r42 Rauq ŽUP. (1. titel!) + AVGUSTOVSKI LOM",
           bool(r42) and "ŽUP." in r42["whatSi"] and "AVGUSTOVSKI" in r42["whatSi"], "")
     ages = [e["starost"] for e in ent]
-    check("I10c razpon ½ ure → 95 let (najširši kadarkoli!)",
-          "½ ure" in ages and "95 let" in ages, str(ages))
+    check("I10c razpon ½ ure → 85 let",
+          "½ ure" in ages and "85 let" in ages, str(ages))
     mla = [e for e in ent if e["starost"] in ("½ ure", "14 dni", "1 leto", "2½ leta")]
     check("I10d otroška umrljivost 5/15 = 33 % (≤3 leta ×5 — med 1889 in 1890!)",
           len(mla) == 5, str([e["starost"] for e in mla]))
@@ -297,8 +298,8 @@ def main():
     readme = open(README, encoding="utf-8").read()
     check("I12d README P157", "P157" in readme and "1891" in readme, "")
     notes = open(NOTES, encoding="utf-8").read()
-    check("I12e notes obstajajo (REKORD 95 + duhovniška kriza)",
-          "95 let" in notes and "DUHOVNIŠKA KRIZA" in notes, "")
+    check("I12e notes obstajajo (95→75 POPRAVEK + duhovniška kriza)",
+          "95→75" in notes and "DUHOVNIŠKA KRIZA" in notes, "")
 
     # ---------- izpis ----------
     fails = [r for r in results if not r[1]]
