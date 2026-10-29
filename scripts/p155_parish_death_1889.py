@@ -31,8 +31,8 @@ EXPECTED_EXCLUDED = 10           # skupine vrstic izven Gribelj + marker + 1890-
 EXPECTED_ANOMALIES = 8
 EXPECTED_CROSSCHECKS = 10
 GRIBLJE_HOUSES = "5,30,48,53,55,65,69,83"
-VITALS_TOTAL = 809               # POSODABLJENO P158: 792 + 17!
-BLOKI_04894 = 110                # POSODABLJENO P158: 93 + 17!
+VITALS_TOTAL = 819               # POSODABLJENO P159: 809 + 10 (mrliška 1893)!
+BLOKI_04894 = 120               # POSODABLJENO P159: 110 + 10 (mrliška 1893)!
 P80_HOUSES = 79                  # NESPREMENJENO (0 novih!)
 NEW_SCANS = [21, 22, 23, 24]
 
@@ -170,18 +170,18 @@ def main():
     d1889 = [v for v in vit if v["bookSignature"] == "04894" and v["year"] == 1889]
     d04894 = [v for v in vit if v["bookSignature"] == "04894"]
     check("I6a vitals 777 (P156)", len(vit) == VITALS_TOTAL, str(len(vit)))
-    check("I6b mrliški bloki 04894 = 110 (P158)", len(d04894) == BLOKI_04894, str(len(d04894)))
+    check("I6b mrliški bloki 04894 = 120 (P159)", len(d04894) == BLOKI_04894, str(len(d04894)))
     check("I6c bloki 1889 = 8", len(d1889) == 8, str(len(d1889)))
     check("I6d bloki 1889: skeni 21–24 + stran == sken − 1",
           all(v["scan"] and 21 <= v["scan"] <= 24 and v["page"] == v["scan"] - 1 for v in d1889), "")
-    check("I6d2 bloki 1893+ ne obstajajo (P159-lead!; P158 = 1892 v korpusu!)",
-          not [v for v in vit if v["bookSignature"] == "04894" and (v["year"] or 0) >= 1893], "")
+    check("I6d2 bloki 1894+ ne obstajajo (P160-lead!; P159 = 1893 v korpusu!)",
+          not [v for v in vit if v["bookSignature"] == "04894" and (v["year"] or 0) >= 1894], "")
     p80_script = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
-    check("I6f p80-skripta pini 809 + 84", "len(vitals) == 809" in p80_script and "len(houses) == 84" in p80_script, "")
+    check("I6f p80-skripta pini 819 + 86", "len(vitals) == 819" in p80_script and "len(houses) == 86" in p80_script, "")
     # celotni korpus = 90 številskih hiš (p80-filtriranih 79 — tega preverja qa-p80!)
     houses_all = {v["houseNo"] for v in vit if v["houseNo"] and v["houseNo"].isdigit()}
-    check("I6g korpus = 91 hiš (P158: +h80 EDINA — 1. korpusni dokaz!)",
-          len(houses_all) == 91, str(len(houses_all)))
+    check("I6g korpus = 92 hiš (P159: +h98 EDINA — 1. korpusni dokaz!)",
+          len(houses_all) == 92, str(len(houses_all)))
 
     # ---------- I7: max-zoom forenzika ----------
     r4 = next((e for e in ent if e["row"] == 4), None)

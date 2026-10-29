@@ -1,0 +1,391 @@
+{
+ "phase": "P159",
+ "title": "Župnija Podzemelj — mrliška knjiga 04894, leto 1893 = 8. polno leto mrliške linije (issue #18)",
+ "status": "SAMPLE-TRANSCRIPTION-D1893",
+ "issuedAt": "2025-session-P159",
+ "source": {
+  "book": "matricula-online.eu /sl/slovenia/ljubljana/podzemelj/04894/",
+  "skeni": "s41-dno (za »— 1893. —« markerjem) + s42–s46 (celota) == strani 40–45 (+ s47 kontrola meje 1894)",
+  "pageMapping": "stran == sken − 1 — 14. potrditev P80-invariantne mrliške (s41→40, s42→41, s43→42, s44→43, s45→44, s46→45); vseh 6/6 preverjenih prek zap-sheets polic",
+  "scanLayout": "dvostranski razpon 2529×2000; L stran = stolpci 1–4 (zaporedna/mesec/vas+hiša/ime), R = 5–10 (vere/spola/starost/bolezen/previden/podpis/opomba)",
+  "layout": "glava »Leto 1893« izpisana 5/5 polnih strani (s42–s46-left; s41-left = podedovana 1892-glava nad 1893-markerjem)",
+  "rowsTotal": 69,
+  "rowHeights": "134–145 px (enakomerno ~137; vrzeli-rekonstrukcija po tem razmaku!)",
+  "method": "9× celostanski VLM (s41–s49, glm-5v-turbo thinking-off) + vrstična-detekcija POL-SIRINSKO L/R (blede-vlade-1893-lekcija!) + 15 zap-sheets polic (x 0.04–0.30 @2× — vsak 1893-zap vizualno potrjen!) + 3 vrzeli-rekonstrukciji (s44 zap 39–42 + s45 zap 47/48 + s46 zap 61/62) + 10 L-trakov + 10 R-trakov (2.2×, snap-band) + 30 max-zoom celic (hisne ×10 @5× + starost/vzrok/podpis ×10 @3.5×) + 4 super-zoomi (4.5–6×) ≈ 91 operacij"
+ },
+ "frame": {
+  "lead": "s41-dno: Griblje 69 Katarina GRINEC roj. STRAUS omožena ½ zem. gostinja 35 let Pljučnica 31. 1./2. 2. 1893 Jos. Rauq — LEAD 100% POTRJEN (starost 35 ✓) + POPRAVEK imena ('P~rinc'/'Prinec' → GRINEC — max-zoom 6× G-zanka!) + 2. lead: Griblje 58 Ana POŽEK roj. DRAGOŠ 35 Jetika 8./10. 2. — POPRAVKI ×3 (F~oček→POŽEK; Dragaj→DRAGOŠ; h53(?)→58) + VLM-'55' ZAVRJEN (identičen γ-3-gljif kot zap5-35!)",
+  "boundaries": "meja 1892/93 = '— 1893. —' flomaster-marker + Januarij + zap 1 INSIDE isti visoki band (s41) = 5. STIL MEJE 2. potrditev (razporejeni-marker!); meja 1893/94 = restart na s47 ('Leto 1894' glava + zap 1) = 6. STIL MEJE za P160 (brez velikega markerja na s46!); zap 69 pokop 1. 1. 1894 = čez-mejni pokop (Matija Novak coop.!), NE restart",
+  "glave": "»Leto 1893« izpisane 5/5 polnih strani (s42–s46-left)",
+  "meseci": "celo leto: Jan5·Feb9·Mar6·Apr10·Maj4·Jun5·Jul7·Avg2·Sep3·Okt5·Nov5·Dec8 (69); Griblje: Jan1·Feb1·Mar1·Apr1·Jul3·Okt1·Nov1·Dec1 (JUN+SEP = 0!)",
+  "podpisi": "10/10 = 4. popoln-odpisano leto (Rauq ×7 Jan–Jul + Jan Jelen ×3 Okt–Dec — NOVI DUHOVNIK!; ČEŠAREK 0× — KONEC ERE 1891-Okt–1892 ×20!)",
+  "razpon": "2 meseca (zap 44 Antonija Kukar) → 62 let (zap 25 Matija Urh)",
+  "otrisjaUmrljivost": "20 % (≤3 leta ×2/10 — najnižja do zdaj!)",
+  "mrtvorojeno": "×4 čez leto (zap 10 Otok + 14 Dobravice + 60 Podžemelj + 63 Otok) — vsi izven Gribelj"
+ },
+ "entries": [
+  {
+   "row": 5,
+   "houseNo": "69",
+   "bookSignature": "04894",
+   "year": 1893,
+   "scan": 41,
+   "page": 40,
+   "mesec": "Januarj",
+   "smrt": "31.",
+   "pokop": "2. feb.",
+   "ime": "Katarina GRINEC [P158-lead 'P~rinc' + celostanski-VLM 'Prinec' OBOJE ZAVRJENA — max-zoom 6×: G-zanka jasno!]",
+   "stan": "omožena ½ zem. gostinja",
+   "rojena": "STRAUS (poročna-1886-v2-Margareth-Straus-veja!)",
+   "spol": "ženski",
+   "starost": "35 let",
+   "bolezen": "Pljučnica",
+   "previden": "1",
+   "duhovnik": "Jos. Rauq",
+   "opomba": "LEAD 100% + STRAUS-mreža #6 + h69 = 4. mrliški vpis (1886 + 1888 + 1889-Brinec-16-dni + 1893!); rdeča arhivska oznaka"
+  },
+  {
+   "row": 7,
+   "houseNo": "58",
+   "bookSignature": "04894",
+   "year": 1893,
+   "scan": 41,
+   "page": 40,
+   "mesec": "Februar",
+   "smrt": "8.",
+   "pokop": "10.",
+   "ime": "Ana POŽEK [P158-lead 'F~oček' + VLM 'Torek' ZAVRJENA — ž-háček cf. 1891-r41!]",
+   "stan": "omožena ¼ zemljastinja",
+   "rojena": "DRAGOŠ [lead 'Dragaj' — max-zoom jasno!]",
+   "spol": "ženski",
+   "starost": "35 let [VLM '55' ZAVRJEN — identičen γ-3-gljif kot zap5-35!]",
+   "bolezen": "Jetika",
+   "previden": "1",
+   "duhovnik": "Jos. Rauq",
+   "opomba": "LEAD 100% (h53→58 POPRAVEK) + h58 = POŽEK×DRAGOS-hiša (1889/90/92 krstna sidra — zdaj MRLIŠKA!) + DRAGOŠ ×3 v 1893 (zap16-zap26); rdeča arhivska oznaka"
+  },
+  {
+   "row": 19,
+   "houseNo": "56",
+   "bookSignature": "04894",
+   "year": 1893,
+   "scan": 42,
+   "page": 41,
+   "mesec": "Marcej",
+   "smrt": "29.",
+   "pokop": "31.",
+   "ime": "Janez SINEC [~ Sivec — VLM 'kmet iz zemljat' ZAVRJEN]",
+   "stan": "oženjen ½ zemljašt",
+   "spol": "moški",
+   "starost": "31 let",
+   "bolezen": "Pljučnica",
+   "previden": "1",
+   "duhovnik": "Jos. Rauq",
+   "opomba": "h56 = ŠIMEC-hiša (nov priimek na rekordni hiši!) + A2-IZMISLIL: VLM 'Griblje-zap15' = Prilozje (1. vas-zamenjava-A2!); rdeča arhivska oznaka"
+  },
+  {
+   "row": 25,
+   "houseNo": "32",
+   "bookSignature": "04894",
+   "year": 1893,
+   "scan": 43,
+   "page": 42,
+   "mesec": "April",
+   "smrt": "11.",
+   "pokop": "13.",
+   "ime": "Matija URH",
+   "stan": "oženjen ¼ zemljašt",
+   "spol": "moški",
+   "starost": "62 let",
+   "bolezen": "Nadruha [1891-leksikon — N 6×: dva grba!]",
+   "previden": "1",
+   "duhovnik": "Jos. Rauq",
+   "opomba": "★★★ URH-TRAGEDIJA 1/2 + ISTO IME kot krstni-oče-h32 (1889/90/92 ×3 — oče sam umrl!); hisna 32 γ-3 (ne 52!); rdeča arhivska oznaka"
+  },
+  {
+   "row": 41,
+   "houseNo": "98",
+   "bookSignature": "04894",
+   "year": 1893,
+   "scan": 44,
+   "page": 43,
+   "mesec": "Julij",
+   "smrt": "2.",
+   "pokop": "3.",
+   "ime": "Josefa LOZAR [VLM 'neudarjava hči' ZAVRJEN]",
+   "stan": "čevljarjeva hči [1. čevljar-poklic mrliške linije!]",
+   "spol": "ženski",
+   "starost": "5 let",
+   "bolezen": "Kolxe [~ Kolike/kolera? — VLM 'Klore' — X-vzrok kandidat!]",
+   "previden": "pika",
+   "duhovnik": "Jos. Rauq",
+   "opomba": "★★★ h98 = 1. KORPUSNI dokaz kadarkoli → p80 84 EDINA + korpus 92!; hisna 98 max-zoom (9-zanka+8); VRZELI-VRSTICA (s44 gap — rekonstruirana!); rdeča arhivska oznaka"
+  },
+  {
+   "row": 44,
+   "houseNo": "21",
+   "bookSignature": "04894",
+   "year": 1893,
+   "scan": 44,
+   "page": 43,
+   "mesec": "Julij",
+   "smrt": "22.",
+   "pokop": "23.",
+   "ime": "Antonija KUKAR [VLM 'Kljakar' ZAVRJEN — K-u-k jasno!]",
+   "stan": "¼ zemljatova hči",
+   "spol": "ženski",
+   "starost": "2 meseca",
+   "bolezen": "Difleritis [~ Difterija]",
+   "previden": "pika",
+   "duhovnik": "Jos. Rauq",
+   "opomba": "★★ KUKAR-mreža (1890-h30-Kukar/Stubhar + P158-'21→24'-re-read — h21 res!) + ZAPOREDNA Griblje-dvojica julij (zap44+45); rdeča arhivska oznaka"
+  },
+  {
+   "row": 45,
+   "houseNo": "32",
+   "bookSignature": "04894",
+   "year": 1893,
+   "scan": 44,
+   "page": 43,
+   "mesec": "Julij",
+   "smrt": "27.",
+   "pokop": "29.",
+   "ime": "Martin URH",
+   "stan": "½ zemljatov sin",
+   "spol": "moški",
+   "starost": "53 let",
+   "bolezen": "OD STRELE UBIT [★★★ 1. NASILNA/nesrečna smrt linije 1886–1893!]",
+   "previden": "pika",
+   "duhovnik": "Jos. Rauq",
+   "opomba": "★★★ URH-TRAGEDIJA 2/2 (2 smrti h32 v 3 mesecih!) + previden-PIKE ×3 vsi JULIJ (3 smrti/27 dni nič prejetih!); rdeča arhivska oznaka"
+  },
+  {
+   "row": 52,
+   "houseNo": "45",
+   "bookSignature": "04894",
+   "year": 1893,
+   "scan": 45,
+   "page": 44,
+   "mesec": "Oktobar",
+   "smrt": "1.",
+   "pokop": "3.",
+   "ime": "Ana STRAUS [VLM 'samotna hajtarjeva hči' ZAVRJEN]",
+   "stan": "gostja [~ samsta] bajtarjeva hči",
+   "spol": "ženski",
+   "starost": "44 let",
+   "bolezen": "Jetika",
+   "previden": "1",
+   "duhovnik": "Jan Jelen [★★★ NOVI DUHOVNIK — 1. podpis!]",
+   "opomba": "★★ STRAUS-mreža #6 + ČEŠAREK-ERA KONEC (0× 1893!) + hisna 45 max-zoom (ne 42!); rdeča arhivska oznaka"
+  },
+  {
+   "row": 57,
+   "houseNo": "89",
+   "bookSignature": "04894",
+   "year": 1893,
+   "scan": 45,
+   "page": 44,
+   "mesec": "November",
+   "smrt": "7.",
+   "pokop": "9.",
+   "ime": "Ana PEGDIREC [~ Pegdirec/Peglirec — VLM 'Peglič' — PEZDIREC-glyph-sorodstvo (h57-Rudolf-1892 + h42-3×-P101)!]",
+   "stan": "omožena bajtarca",
+   "spol": "ženski",
+   "starost": "22 let",
+   "bolezen": "Vročinska bolezen [VLM 'Vpičnost [?]' RAZREŠEN — 1890-leksikon!]",
+   "previden": "1",
+   "duhovnik": "Jan Jelen",
+   "opomba": "November-marker INSIDE r57-celice; h89 v korpusu že (krstna-veja); rdeča arhivska oznaka"
+  },
+  {
+   "row": 67,
+   "houseNo": "19",
+   "bookSignature": "04894",
+   "year": 1893,
+   "scan": 46,
+   "page": 45,
+   "mesec": "December",
+   "smrt": "29.",
+   "pokop": "31.",
+   "ime": "Janez KRIŽE [~ Križan — VLM 'Kruge' ZAVRJEN — K-r-i-ž-e jasno!]",
+   "stan": "oženjen ¼ zemljak",
+   "spol": "moški",
+   "starost": "61 let",
+   "bolezen": "Pljučnica",
+   "previden": "1",
+   "duhovnik": "Jan Jelen",
+   "opomba": "ZADNJI Griblje-vpis 1893 (pokop 31. 12.!); h19 v korpusu že (poročna-veja); KRIŽAN-glyph-familija; rdeča arhivska oznaka"
+  }
+ ],
+ "excluded": [
+  {
+   "id": "E1",
+   "opis": "s41-top 1892-rep: zap 81 Grem-29-Nikolaj-Kure-½-zemlj.-sin-4-let [~ 'Mrica' — P158 že!] + zap 82 Boginja-vas-39-Ana-Černič-gosta-bajtarca-v-Bednja-st-13-54-Božjast — ★ P158-SANACIJA: zap 82 = 82. vrstica 1892 (ne 81! — cf. P87 '82 zveznih vrstic')"
+  },
+  {
+   "id": "E2",
+   "opis": "s41 nonGriblje 1893 (zap 1 Otok-23-Marija-Lasie-8-dni [INSIDE marker-band!] + zap 2 Otok-13-Janez-Malešič-74 + zap 3 Dobravice-4-Janez-Štefanič-4 + zap 4 Gradac-4-Štefanič-½ + zap 6 Gradac-21-Janez-Malešič-1½ + zap 8 Primostek-5-Marija-Terdinec?-1 + zap 9 Krasinec-23-Marija-Harasimč-74)"
+  },
+  {
+   "id": "E3",
+   "opis": "s42 nonGriblje (zap 10 Otok-21-N.-Tabrič-MRTVOROJEN + 11 Ohljuka-18-Ana-Jurajevčič-5-mes-Božjast + 12 Kapljice-5-Matija-Marenski-1-leto + 13 Kapljice-3-Marija-Mraf-5-Davica + 14 Dobravice-24-N.-Žingel-MRTVOROJEN + 15 PRILOZJE-32-Marjeta-Grštavič-14-URE-Slabost [A2-IZMISLIL 'Griblje'!] + 16 Dragovje-4-Marija-Dragoš-17-Difleritis + 17 Krivoglavce-28-Marija-Muc-roj.-Jurajevčič-31 + 18 Krasinec-3-Neža-Terdinec-3-Jetika + 20 Krasinec-39-Marija-Černič-63 + 21 Dobravice-20-Marija-Angel-roj.-Žur-23)"
+  },
+  {
+   "id": "E4",
+   "opis": "s43 nonGriblje (zap 22 Gradac-15-Janez-Lamut-¼ + 23 Krasinec-2-Peter-Terdinec-½ + 24 Boršt-38-Jožef-Križan-½ + 26 Dragoše-5-Nikolaj-Dragoš-¼ + 27 Dobravice-16-Jožef-Kambič-bajtar + 28 Grem-37-Katarina-Gerdešič + 29 Otok-9-Alojzija-Žugelj-¾ + 30 Boršt-Jurij-Jakobič-¼ + 31 Certovše-Barbara-Križan-¼ [Maj 11./13.] + 32 Boršt + 33 Klošter-52-Janez-Rakar-bajtar)"
+  },
+  {
+   "id": "E5",
+   "opis": "s44 nonGriblje (zap 34 Dobravice-22-Jožef-Štefanič [Maj 24./26.] + 35 Podžemelj-1-Helena-Skala-omožena-katarica [Jun 6./8.] + 36 Dobravice-27-Janez-Nemanič-½ + 37 Gradac-34-Emil-Hampegar-NEZAK.-sin-hčere-Marjete [Jun 18./20.] + 38 Dobravice-22-Martin-Štefanič-PREČRTANO-'Rus.?' [Jun 24./26. — samokorekcija!] + 39 Dobravice [28./30.] + 40 Otok [30./2-jul] + 42 Otok [12./14.] + 43 Krasinec [19./21.])"
+  },
+  {
+   "id": "E6",
+   "opis": "s45 nonGriblje (zap 46 Boršt-50-Jožef-Tabor [28./30.] + 47 Krasinec-9?-Marija-Hönigman-vdova-gostačka [Avg 10./12.] + 48 Gradac-30?-Marjeta-Križan-vdova-bajtarca [22./24.] + 49 Krasinec [Sep 11./13.] + 50 Podžemelj-30-Marjeta-Križan-vdova [19./21.] + 51 Vranoviče-20-Anton-Gregorič-vdovec-kotar [Sep 29./Okt 1.] + 53 Vranoviče [3./5.] + 54 Giriče-3-Andrej-Pafrič-¼ [15./17.] + 55 Otok-10-Marija-Jurajevčič-½ [17./19.] + 56 Krasinec-21-Ana-Harasinič-bajtarca-vdova [22./24.])"
+  },
+  {
+   "id": "E7",
+   "opis": "s46 nonGriblje (zap 58 Dobravice-4-Alozij-Štefančič-3-Jetika [Nov 8./9.] + 59 Gradac-8-Nikolaj-Gregorič-3-Božjast [8./10.] + 60 Podžemelj-33-N.-Macele-MRTVOROJENA [25./26.] + 61 Zastava-10-Martin-Herk-40-Ostanelost [30./2-dec] + 62 Gradac-81?-Ana-Žugelj-13 [Dec 5./6.] + 63 Otok-13-N.-Malešič-MRTVOROJEN [5./6.] + 64 Gradac-61-Katarina-Novacič-2-Jetika [19./20.] + 65 Primostek-16-Marija-Tomc-23-Jetika [19./21.] + 66 Gradac-3-Ana-Novak-35-Ostanelost [21./23.] + 68 Vranoviče-18-Ana-Schweiger-62-Ostanelost [30./31.] + 69 Klošter-41-Ana-Plut-65-Ostanelost [30./1-jan-1894 — Matija Novak coop.!])"
+  },
+  {
+   "id": "E8",
+   "opis": "s47+ = 1894 ('Leto 1894' glava + restart zap 1–12 Jan–Mar; s48 ×3 Gribljev: Terdičec-h87-62 + Terdičec-h57-1-mes-Habost + Brodarič-h49-53 — vsi Jan Jelen!) — P160-lead; meja 1893/94 = 6. STIL MEJE (restart z glavo)"
+  }
+ ],
+ "stats": {
+  "vrstic": 69,
+  "gribljeVpisov": 10,
+  "hise": 9,
+  "ponovitve": 1,
+  "nare": "NE-NARE (h32 ×2 — URH-TRAGEDIJA; po NARE-1892!)",
+  "noveMrliskiVpisi": [
+   "h98 (1. KORPUSNI dokaz kadarkoli!)"
+  ],
+  "razponStarosti": "2 meseca → 62 let",
+  "najstarejsi": "62 let (zap 25 Matija Urh)",
+  "najkrajsi": "2 meseca (zap 44 Antonija Kukar)",
+  "otrisjaUmrljivost": "20 % (≤3 leta ×2/10 — najnižja do zdaj!)",
+  "vzrokiLeksikon": "Pljučnica ×3 (najpogostejši!) + Jetika ×2 + Nadruha + Kolxe [~ X!] + Difleritis + OD STRELE UBIT [X-3.] + Vročinska bolezen",
+  "duhovniki": "Jos. Rauq ×7 (Jan–Jul) + Jan Jelen ×3 (Okt–Dec — NOVI!) + ČEŠAREK 0× (KONEC ERE!)",
+  "podpisi": "10/10 = 4. popoln-odpisano leto",
+  "rdeceOznake": "≥9/10 (X9-pojav 3. leto)",
+  "noveHiše": [
+   "98 (1. korpusni dokaz kadarkoli!) — p80-filter +h98+h89+h45"
+  ]
+ },
+ "crossChecks": [
+  {
+   "id": "X1",
+   "name": "LEAD-P159 2/2 POTRJEN + POPRAVKI",
+   "detail": "zap5 Katarina-Grinec-35 ✓ + zap7 Ana-Požek-35 ✓; popravki: P~rinc→GRINEC (max-zoom 6× G-zanka) + F~oček→POŽEK (ž-háček) + Dragaj→DRAGOŠ + h53(?)→58; VLM-'55' ZAVRJEN — identičen γ-3-gljif kot zap5-35!"
+  },
+  {
+   "id": "X2",
+   "name": "URH-TRAGEDIJA h32 (2. isto-hišni par linije!)",
+   "detail": "zap25 Matija-62-April (Nadruha) + zap45 Martin-53-Julij (OD STRELE UBIT) = 2 smrti ISTA HIŠA v 3 mesecih; cf. 1891-h6-×2 (oče+sin?); h32 = Urh-hiša (krstni oče Matija ×3 1889/90/92)"
+  },
+  {
+   "id": "X3",
+   "name": "krstna-vez h32: Matija Urh = krstni-oče SAM",
+   "detail": "krstna-04105 1889+1890+1892 'oče Matija Urh' ×3 (mati Pezdirec/Pegdirec!) — ISTO IME kot zap25-62-letni; oče je umrl 11. 4. 1893 — 3 mesece pred Martinom (strela!)"
+  },
+  {
+   "id": "X4",
+   "name": "STRAUS-mreža #6 ×2 v 1893",
+   "detail": "h45 Ana STRAUS 44 (gostja bajtarjeva hči, 1./3. 10., Jetika) + h69 Katarina GRINEC roj. STRAUS 35; serija: 1888-h72 + 1890-h42/h71 + 1891-h71 + 1892-Štravs-16-dni + 1893 ×2; poročna-1886-v2-Margareth-Straus-veja"
+  },
+  {
+   "id": "X5",
+   "name": "KUKAR-mreža + P158-'21→24'-re-read razrešen",
+   "detail": "h21 Antonija KUKAR 2-MESECA (VLM 'Kljakar' ZAVRJEN) — 1890-h30-Kukar/Stubhar-gospodinjstvo + P158-faza-2 je njegov '21' prebrala kot 24; h21 = prava Kukar-hiša 1893"
+  },
+  {
+   "id": "X6",
+   "name": "h58 = POŽEK × DRAGOS-sidro — 1. MRLIŠKA na sidru",
+   "detail": "krstna-sidra 1889+1890+1892 (h58 oče-Janez/Nikolaj-Požek × mati-Ana-Dragos) + zdaj mrliška-1893 Ana-Požek-roj.-Dragoš-35; DRAGOŠ ×3 v 1893 (h58 + zap16-Marija + zap26-Nikolaj)"
+  },
+  {
+   "id": "X7",
+   "name": "h98 = 1. KORPUSNI dokaz kadarkoli",
+   "detail": "vse tri knjige (04455/04105/04894): 0 blokov h98 pred P159!; zap41 Josefa-LOZAR čevljarjeva-hči (1. čevljar-poklic mrliške!) 5-let Kolxe → p80 hiše 83→86 (+h98 EDINA-1.-korpusni + h89 + h45 prek mrliške — 04105-bloki izven filtra!) + korpus 91→92"
+  },
+  {
+   "id": "X8",
+   "name": "stran == sken − 1 — 14. potrditev",
+   "detail": "s41→40, s42→41, s43→42, s44→43, s45→44, s46→45 — 6/6 preverjenih prek zap-sheets (glave 'Stran 41'–'Stran 45' + zaporedna-štev. policah)"
+  },
+  {
+   "id": "X9",
+   "name": "podpisni-monopol-sprehod Rauq → Jelen",
+   "detail": "Jos. Rauq ×7 (Jan–Jul) → Jan Jelen ×3 (Okt–Dec; 1. podpis zap52 1. 10.); ČEŠAREK 0× — KONEC ČEŠAREK-ERE (1891-Okt–1892: 6+14 = ×20!)"
+  },
+  {
+   "id": "X10",
+   "name": "VLM-žrtve ×6 + A2-IZMISLIL — max-zoom > VLM 10. potrditev",
+   "detail": "Prinec→GRINEC + Torek→POŽEK + 55→35 (γ-3!) + Kljakar→KUKAR + Kruge→KRIŽE + Klore→Kolxe + Peglič→PEGDIREC + 'neudarjava'→čevljarjeva + 'samotna-hajtarjeva'→gostja + A2: zap15 'Griblje'→PRILOZJE (1. vas-zamenjava-A2 na mrliški!)"
+  }
+ ],
+ "anomalies": [
+  {
+   "id": "A1",
+   "opis": "★★★ 1. NASILNA/nesrečna smrt mrliške linije 1886–1893: zap45 h32 Martin-URH-53 'OD STRELE UBIT' (27./29. 7.) — edini tak vzrok"
+  },
+  {
+   "id": "A2",
+   "opis": "★★★ previden-PIKE ×3 — vsi JULIJ (h98-5-let 2./3. + h21-2-mes 22./23. + h32-53-let 27./29. = 3 smrti v 27 dnih NIČ prejetih — julij-tragedija!)"
+  },
+  {
+   "id": "A3",
+   "opis": "★★ URH-TRAGEDIJA h32 ×2 (zap25-April + zap45-Julij) = 2. isto-hišni par linije (cf. 1891-h6-×2)"
+  },
+  {
+   "id": "A4",
+   "opis": "★★ dve 35-letnici v 8 dneh (zap5-Jan31 + zap7-Feb8 — identičen γ-3-gljif starosti!; različna vzroka Pljučnica/Jetika)"
+  },
+  {
+   "id": "A5",
+   "opis": "★★ VLM-A2-IZMISLIL: zap15 vas = PRILOZJE (celostanski-VLM 'Griblje-h32-Marjeta-Šuštarčič'!) — 1. vas-zamenjava-A2 na mrliški liniji"
+  },
+  {
+   "id": "A6",
+   "opis": "★★ zap38 Dobravice-22 Martin-Štefanič + PREČRTAN-'Rus.?' (Jun 24./26.) — samokorekcija na črti (1. prečrtano-ime-1893)"
+  },
+  {
+   "id": "A7",
+   "opis": "★ zap37 Gradac-34 Emil-Hampegar NEZAKONSKI sin ½-zemljakove-hčere Marjete-Hampegar (mati-imenuje — brez očeta!)"
+  },
+  {
+   "id": "A8",
+   "opis": "★ zap69 Klošter-41 pokop 1. 1. 1894 = čez-mejni pokop (podpis Matija Novak coop.!); zap40 Jun-30./Jul-2 + zap51 Sep-29./Okt-1 = 2 čez-mesecna datuma"
+  },
+  {
+   "id": "A9",
+   "opis": "★ Mrtvorojeno ×4 čez leto (zap10-Otok + zap14-Dobravice + zap60-Podžemelj + zap63-Otok) — vsi izven Gribelj; zap20 Krasinec-39-Černič-63 'Mrtvorno'-odrasla? [~ X6-sorodno?]"
+  },
+  {
+   "id": "A10",
+   "opis": "★ vrzeli-rekonstrukcija ×3 (s44 zap 39–42 + s45 zap 47/48 + s46 zap 61/62) — vladanje-1893 BLEDO: polnoširinska-detekcija FAIL ×6/6 → pol-sirinsko L/R + zap-sheets police (nov metodološki standard!)"
+  }
+ ],
+ "honesty": [
+  "Kolxe [~]: vzrok zap41 neberljiv-določen (Kolike/kolera? — VLM 'Klore') — X-vzrok ostaja odprt [~ 40 %]",
+  "Pegdirec [~]: ime zap57 (Peglirec/Peglič? — PEZDIREC-glyph-sorodstvo utemeljena, a g/d/z-ločitev negotova [~ 25 %]",
+  "Sinec [~ Sivec]: rep-konec zap19 — n/v-ločitev negotova [~ 20 %]",
+  "gostja [~ samsta]: stan zap52 — g/s-zanka zmeda; VLM 'samotna-hajtarjeva' ZAVRJEN, lastna rekonstrukcija [~ 30 %]",
+  "previden-PIKE ×3: pika interpretirana kot NI-prejel (r53-vzorec) — majhna pika, ne jasna črtica [~ 15 %]",
+  "vrzeli-rekonstrukcija: s44 zap 39–42 + s45 zap 47/48 + s46 zap 61/62 iz enakomernega razmaka (~137px) — datumi/vasi/zap-številke VIZUALNO preverjeni na policah, starosti/vzroki IZ VLM (ne max-zoom!) — excluded-vnosi E5/E6/E7 približek",
+  "Jelen-quick: podpis variante 'Jan Jelen/Jelenu/Jeleu' (VLM ×3) — 1 oseba [~ 10 %]",
+  "s43 L13/L14-band-indeks: 1 presežek-detekcije (13 bandov za 12 vrstic) — ne vpliva na Griblje-vrstice",
+  "meseci-celo-leto: rekonstruirani iz zap-sheetov (mesec-label le pri prelomih) — Feb9/Apr10/Jul7 občutljivi na [~]",
+  "rdeče-oznake: pasivna-detekcija iz vas/zap-sheetov — ≥9/10 spodnja meja"
+ ],
+ "nextSteps": [
+  "P160-LEAD: mrliška 04894 leto 1894 — s47 (restart 'Leto 1894' glava + zap 1–12 Jan–Mar; VLM: 0 Gribljev!) + s48 (zap 13–24 Apr–Avg: ×3 Gribljev — zap14 Griblje-87-Marjeta-TERDIČEC-roj.-Klepec-vdova-kolarica-62-Pljučnica + zap22 Griblje-57?-Janez-TERDIČEC-1-mes-Habost [Jelen] + zap24 Griblje-49?-Barbara-BRODARIČ-roj.-Pogorevc-53-Jetika [Jelen]) + s49+; meja 1894/95 [~ s52+?]",
+  "TERDIČEC-glyph: s48 ×2 (87 + 57?) — cf. Terdinec/Pezdirec/Pegdirec-glyph-familija (zap18-s42-Neža + zap23-s43-Peter + zap8-s41-Marija)!",
+  "krstna-04105-1893/1894 še NE transkribirana — P87/P88-vzorec; križi možni (h98-Lozar? h56-Sinec? h32-Urh-1893-otroci?)"
+ ],
+ "phase2Adjudication": {
+  "metoda": "9× celostanski VLM (s41–s49) + vrstična-detekcija pol-sirinsko L/R (blede-vlade-1893!) + 15 zap-sheets polic + 3 vrzeli-rekonstrukciji + 10 L-trakov + 10 R-trakov (2.2×) + 30 max-zoom celic (hisne ×10 @5×, starost/vzrok/podpis ×10 @3.5×) + 4 super-zoomi (4.5–6×: zap05-ime, zap57-ime, zap41-vzrok, zap41-hisna) ≈ 91 operacij",
+  "popravki": "hisna ×1 (lead-53→58) + imena ×5 (P~rinc→Grinec, F~oček→Požek, Kruge→Križe, Kljakar→Kukar, Peglič→Pegdirec) + starost ×1 (VLM-55→35) + stan ×2 (čevljarjeva — ne 'neudarjava'; gostja — ne 'samotna-hajtarjeva') + VLM-A2-vas ×1 (zap15 = Prilozje!) + Dragaj→Dragoš",
+  "skripte": "scripts/tmp/p159_fetch.py + p159_read_page.mjs + p159_rows.py (pol-sirinsko!) + p159_crops.py (repo-commit) — delovni /tmp/p159"
+ }
+}

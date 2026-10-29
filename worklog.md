@@ -6470,7 +6470,31 @@ Work Log:
 - README (glava-QA-159 + tabela-linij mrliška-7/39 + korpus 809/110/83 + odprto-①-P159-lead + TOC P1–P158 + sekcija-glava P79–P158 [šte pravilna anchor!] + P158-vnos) + worklog
 
 Stage Summary:
-- mrliška linija: 1886 (46/13) → 1887 (71/13) → 1888 (102/29) → 1889 (36/8) → 1890 (55/15) → 1891 (65/15) → **1892 (81/17 NARE!)** — korpus 809 vitalov · 04455 197 + 04894 110 · sidra 190 · hiše 83 (p80) / 91 (korpus) · PT 13
+- mrliška linija: 1886 (46/13) → 1887 (71/13) → 1888 (102/29) → 1889 (36/8) → 1890 (55/15) → 1891 (65/15) → **1892 (82/17 NARE! [P159-SANACIJA: 81→82 — zap 82 = Boginja-vas-39-Ana-Černič])** — korpus 809 vitalov · 04455 197 + 04894 110 · sidra 190 · hiše 83 (p80) / 91 (korpus) · PT 13
 - QA 159/159 ok:True — qa-p158 = 159. kontrola
 - push: GitHub origin + GitLab gitlab + Vercel avtomatski deploy
 - P159 LEAD: mrliška 1893 (s41-dno + s42+; Griblje 69(?) Katarina P~rinc 35 + Griblje 53(?) Ana F~oček roj. Dragaj 35 — oba Jos. Rauq Januar!; r5 = h61-4.-leto? [~ γ-7!]; meja 1893/94 [~ s47+?])
+
+---
+Task ID: P159
+Agent: Z.ai Code (glavni agent)
+Task: P159 — MRLIŠKA knjiga 04894, leto 1893 = 8. polno leto mrliške linije (issue #18): s41-dno (za »— 1893. —« markerjem; zap 81–82 = 1892-rep → P158-SANACIJA 81→82 vrstic!) + s42–s46 == str. 40–45 (stran == sken − 1 — 14. potrditev!) + meja 1893/94 = restart na s47 (6. STIL MEJE za P160; zap 69 pokop 1. 1. 1894 = čez-mejni!) + glave 5/5 + ★★★ 1893 = 69 vrstic / 10 Griblje-vpisov / 9 hiš (h32 ×2 ISTA HIŠA — URH-TRAGEDIJA!) + ★★★ 1. NASILNA smrt linije (r45 h32 Martin URH 53 'OD STRELE UBIT' — previden pika!) + ★★★ NOVI DUHOVNIK Jan Jelen (1. podpis zap52 1. 10. ×3 — KONEC ČEŠAREK-ERE 0×!) + ★★ LEAD 100% (2× 35-letnici v 8 dneh — Grinec-roj.-Straus-h69 + Požek-roj.-Drags-h58; VLM '55' ZAVRJEN — identičen γ-3-gljif!) + ★★ h98 = 1. KORPUSNI dokaz kadarkoli (Josefa LOZAR čevljarjeva hči → p80 86!) + STRAUS-mreža #6 ×2 + KUKAR-mreža + previden-PIKE ×3 vsi JULIJ + A2-IZMISLIL-Prilozje + vrstična-detekcija-lekcija (blede-vlade-1893 → pol-sirinsko L/R + zap-sheets police + vrzeli-rekonstrukcija!; uporabnik: »nadaljuij kjer si ostal« → P158 produkcija potrjena → P159 zagnan)
+
+Work Log:
+- P158 PRODUKCIJA POTRJENA: lokalni HEAD df826da = GitHub origin = GitLab gitlab (ls-remote 1:1) + Vercel — **produkcija griblje-museum.vercel.app /api/qa = 159/159 ok:True + qa-p158-parish-death-1892 True!**
+- P159 FAZA-0: 9 skenov s41–s49 prenesenih (9/9, inventar 256 ✓) — delovni imenik /tmp/p159
+- FAZA-1 celostansko: 9× VLM (s41–s49) — 1893-struktura LOKALIZIRANA: s41-dno (zap 1–9) + s42–s45 + s46-top (zap 58–69; zap 69 pokop 1. 1. 1894 = čez-mejni!) + **meja 1893/94 = restart na s47** (P160); NOV DUHOVNIK Jan/Jos. Jelen od zap 59!
+- FAZA-2 vrstična-detekcija: **LEKCIJA — vladanje-1893 BLEDO: polnoširinska detekcija FAIL ×6/6** (th 0.35–0.65) → **POL-SIRINSKO L/R** (L 0.10–0.42, R 0.60–0.88, th 0.45–0.60) + **15 zap-sheets polic** (x 0.04–0.30 @2× — vsak 1893-zap VIZUALNO potrjen: zap-številke + datumi + vasi!) + **3 vrzeli-rekonstrukciji** (s44 zap 39–42 [535px!] + s45 zap 47/48 [276px] + s46 zap 61/62 [275px] iz enakomernega razmaka ~137px — **GRIBLJE zap 41 bila V VRZELI!**)
+- FAZA-3 forenzika: 10 L-trakov + 10 R-trakov (2.2×, snap-band) + 30 max-zoom celic (hisne ×10 @5× + starost/vzrok/podpis ×10 @3.5×) + 4 super-zoomi (4.5–6×) ≈ 91 operacij; **10 Griblje-vrstic ADJUDICIRANE** (popravki: P~rinc→GRINEC [G-zanka 6×!] + F~oček→POŽEK + Dragaj→DRAGOŠ + h53(?)→58 + Kruge→KRIŽE + Kljakar→KUKAR + Peglič→PEGDIREC + 'neudarjava'→čevljarjeva + 'samotna-hajtarjeva'→gostja + VLM-'55'→35!)
+- ★ P158-SANACIJA: 1892 = **82 vrstic** (ne 81!) — zap 82 = Boginja vas 39 Ana Černič 28./30. 12. (gosta bajtarca, 54, Božjast, Rauq) odkrita prek zap-s41 police; cf. P87-krstna-1892 '82 zveznih vrstic'; ni Griblje → brez vitals-vpliva
+- KORPUS-KRIŽI: URH-TRAGEDIJA h32 ×2 (Matija-62-April-Nadruha + Martin-53-Julij-OD-STRELE — 2. isto-hišni par po 1891-h6!; Matija = krstni-oče-h32-sam!) + h98-1.-korpusni (p80 +h98+h89+h45!) + STRAUS #6 ×2 (h45-Ana + h69-roj.-Straus!) + KUKAR h21 (1890-h30-vez!) + POŽEK×DRAGOS-h58-1.-mrliška-na-sidru + DRAGOŠ ×3 1893 + ŠIMEC-h56-nov-priimek + PEZDIREC-glyph h89 + KRIŽAN-glyph h19
+- 10 NOVIH BLOKOV parish.ts (P159-sekcija po P158) + qa-p159 (160. kontrola, 16 assertijev) + pin-kaskada: vitals 809→819 (73 qa-pinskih!) + 04894 110→120 (7×) + p80Houses 83→86 (11× — +h98+h89+h45!) + guard-i 1893→1894 (p153/p155/p158!) + hiša-stražarji razširjeni z 04894-1893 izjemami (h45 [p91] + h89 [p93] + h19 [p96]!) + p80-skripta (819/86) + p153–p158-skripte (VITALS_TOTAL/BLOKI/P80_HOUSES + I6f/I12c + guard-i!)
+- evidence parish-death-1893.json (10 entries + 8 excluded + 10 anomalij + 10 crossChecks + honesty 10 + phase2) + notes.md
+- skripta p159 (I1–I12; 52 kontrol; parsnik-lekcija: `\{(.*?)\}` — `[^{}]` polomi na `{`-v-nizih!)
+- README (glava-QA-160 + tabela mrliška-8/39 + korpus 819/120/86 + odprto-①-P160-lead + TOC/sekcija P79–P159 + P159-vnos + P158-bullet-SANACIJA) + worklog
+
+Stage Summary:
+- mrliška linija: 1886 (46/13) → 1887 (71/13) → 1888 (102/29) → 1889 (36/8) → 1890 (55/15) → 1891 (65/15) → 1892 (82/17) → **1893 (69/10 — h32 ×2 URH-TRAGEDIJA!)** — korpus 819 vitalov · 04455 197 + 04894 120 · sidra 190 · hiše 86 (p80) / 92 (korpus) · PT 13
+- QA 160/160 ok:True — qa-p159 = 160. kontrola
+- push: GitHub origin + GitLab gitlab + Vercel avtomatski deploy
+- P160 LEAD: mrliška 1894 (s47-restart 'Leto 1894' + zap 1–12 Jan–Mar [VLM: 0 Gribljev!] + s48 ×3 Gribljev — TERDIČEC ×2 [h87-Marjeta-roj.-Klepec-vdova-kolarica-62 + h57?-Janez-1-mes-Habost] + BRODARIČ [h49?-Barbara-roj.-Pogorevc-53-Jetika] — vsi Jan Jelen!; TERDIČEC-glyph = cf. Terdinec/Pezdirec-familija!; meja 1894/95 [~ s52+?])
