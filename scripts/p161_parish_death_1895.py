@@ -32,8 +32,8 @@ EXPECTED_EXCLUDED = 8
 EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 10
 GRIBLJE_HOUSES = "8,12,26,30,33,35,36,37,38,46,87"
-VITALS_TOTAL = 886               # POSODABLJENO P162: 837 + 16 (mrliška 1896)!
-BLOKI_04894 = 187                # POSODABLJENO P164: + 7 (mrliška 1898)!
+VITALS_TOTAL = 894               # POSODABLJENO P162: 837 + 16 (mrliška 1896)!
+BLOKI_04894 = 195                # POSODABLJENO P164: + 7 (mrliška 1898)!
 P80_HOUSES = 87                  # NESPREMENJENA — zasičanje 3. leto!
 KORPUS_HOUSES = 93               # POSODABLJENO P162: 92 + 1 (+h51 — 1. dokaz kadarkoli)!
 NEW_SCANS = [51, 52, 53, 54, 55]
@@ -150,11 +150,11 @@ def main():
     check("I6c bloki 1895 = 12", len(d1895) == 12, str(len(d1895)))
     check("I6d bloki 1895: skeni 51–55 + stran == sken − 1",
           all(v["scan"] and 51 <= v["scan"] <= 55 and v["page"] == v["scan"] - 1 for v in d1895), "")
-    check("I6d2 bloki 1900+ ne obstajajo (P166-lead!; P165 = 1899 v korpusu!)",
-          all(v["year"] < 1900 for v in d04894), "")
+    check("I6d2 bloki 1901+ ne obstajajo (P167-lead!; P161-P166 = 1895–1900 sedaj v korpusu!)",
+          all(v["year"] < 1901 for v in d04894), "")
     p80 = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
     check("I6f p80-skripta pini 886 + 88 + gap-18 (POSODABLJENO P164)",
-          "len(vitals) == 886" in p80 and "len(houses) == 88" in p80 and "len(gap) == 18" in p80, "")
+          "len(vitals) == 894" in p80 and "len(houses) == 89" in p80 and "len(gap) == 18" in p80, "")
     houses_all = {v["houseNo"] for v in vit if v["houseNo"].isdigit()}
     check("I6g korpus = 93 hiš (POSODABLJENO P162: +h51!)", len(houses_all) == KORPUS_HOUSES, str(len(houses_all)))
 
@@ -219,7 +219,7 @@ def main():
     check("I10b qa-p161 = 162. kontrola (bloki-1895 12 + hiše 11 + Škurmelj ×3!)",
           "qa-p161-parish-death-1895" in qa and "NOVI DUHOVNIK #7" in qa, "")
     check("I10c qa guard 1899 (bloki 1899+ ne!)",
-          "1900+-mrliški bloki že v korpusu" in qa, "")
+          "1901+-mrliški bloki že v korpusu" in qa, "")
     par = open(PARISH_TS, encoding="utf-8").read()
     check("I10d parish.ts: 12 blokov 1895-04894",
           par.count('bookSignature: "04894",\n    year: 1895,') == 12, "")
@@ -235,7 +235,7 @@ def main():
     check("I12a p80 PT_GAP doc-list 15 (P162: +h51!)",
           '"44", "53", "54", "56", "57", "59", "60", "42", "58", "52", "46", "48", "43", "49", "51"' in qa, "")
     check("I12b p153–p161 skripte VITALS_TOTAL 853",
-          all("VITALS_TOTAL = 886" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
+          all("VITALS_TOTAL = 894" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
               for i, y in ((153, 1887), (154, 1888), (155, 1889), (156, 1890), (157, 1891), (158, 1892), (159, 1893), (160, 1894), (161, 1895))), "")
     check("I12c p161-next: P162-lead (1896) v dokazu",
           "P162" in d["nextSteps"][0], "")

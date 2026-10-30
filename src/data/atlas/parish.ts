@@ -2279,6 +2279,122 @@ export const HOUSE_VITALS: HouseVital[] = [
     status: "DOCUMENTED",
   },
 
+  // ——— P166 razširitev: MRLIŠKA KNJIGA 04894, POLNO LETO 1900 (issue #18) ———
+  // s75-dno (meja 1899/1900 = P165 re-potrditev: '1900' VELIKA + VEČKRATNI podčrtaj
+  // na PRAZNI vrsti + Januarj-INLINE + restart zap 61→1 = 5. STIL 7. POTRDITEV!)
+  // + s76 (zap 9–20) + s77 (21–32) + s78 (33–44) + s79 (45–56) + s80 (57–61 + meja!)
+  // == str. 74–79 (stran == sken − 1 — 41.–46. potrditev! s75=74 … s80=79!) + meja
+  // 1900/01 = s80-sredina ('1901' VELIKA + podčrtaj na PRAZNI vrsti + Januarj-INLINE
+  // + restart zap 61→1 = 5. STIL 8. POTRDITEV — P165-lead-'s79+?' OVRJEN — s80 = ŽE
+  // meja! s79 = Avg–Nov brez restarta!)
+  // + ★★★ 1900 = 61 vrstic / 8 Griblje-vpisov / 8 hiš — VSE RAZLIČNE (2. leto BREZ
+  // hiša-×2 — cf. 1899-13!; rast 13→7→8!) + p80 hiše 88 → 89 (+h81 EDINA NOVA —
+  // 04105-krstna-izven-filtra → 04894-vhaja!; cf. P162-+h51 = 2. taki-dogodek!) + ★★★ h81 = 1. MRLIŠKI VPIS KADARKOLI
+  // (24. PT-vezni dokaz IZVEN 41–60 cf. h11/h82-P165! — hišna-'81' [Kurrent-2 =
+  // ODPRTA-zgornja-zanka — ta = ZAPRTA → 8; VLM-'21'-Papič ZAVRJENO!])
+  // + ★★★ NOVI DUHOVNIK #10: J.R. Kut'nek [~ Kutinek/Kub'nek — VLM-'Klevinek/
+  // Kuhinek' OBOJE ZAVRJENI — 1. podpis s79-zap49 21. 9. 1900!; dominanta Sep–Dec
+  // 12×; smena: Perz-era Jan–Avg 30× (49%!) → Rauq 19× → Kut'nek]
+  // + ★★★ URH-h32-SAGA #2 (1893-Martin-OD-STRELE → 1900-Marija-vdova-64-Jetika —
+  // VLM-'Matija-Ulh' ZAVRJEN!) + ★★★ ŠTRAUS-h45-×3-v-7-LETIH (1893-×2 + 1896-Barbara
+  // + 1900-Marko-75-vdovec — VLM-'Ulhar' + P165-lead-'Štavar' OBOJE ZAVRJENA!)
+  // + ★★★ HLOBUČAR-×2-v-2-MESECIH (Marija-h47-DEC-1900-72 + Matija-h48-JAN-1901-65
+  // = P167-lead!; cf. P161-h46-Marija-BRODARIČ-roj.-KLOBUČAR!) + ★★★ POROČNA-cross-
+  // h49 (04105-1899-krstna-Marija-Brodarič + matičar-'† 24/6.00' ↔ mrliška-Feb-1900-
+  // Marija-3-mes = DVA-dojenčka-v-3-MESECIH?! [~]) + MAX-ZOOM > VLM 17. potrditev =
+  // 10 popravkov (zap34-'Griblje-3'→GIRIČE + zap14-'Griblje-42'→OTOK-11 + zap16-
+  // 'Griblje-48'→CERKVIŠE-19 + zap21-'Griblje-28'→KRIVOGLAVE-28 + zap35-'Hrasten'
+  // →Klošter + zap59-'Vilbucar'→HLOBUČAR + zap57-'Kušlanič'→KUPARIČ + zap8-'Matija'
+  // →Marija-URH + zap3-'Ulhar/Štavar'→ŠTRAUS + 'Klevinek'→Kut'nek — 5× A2-vas-napake
+  // = NOVI REKORD linije!) + 3× pokop-'jan-1901'-LETNICA-v-pokop-stolpcu (zap59–61
+  // — 1. primer linije!) + kronologija 60/61 (zap44-Avg6 → zap45-Avg4 INVERZIJA [~VLM]
+  // — 1. od odkar P163-MESEC-0!) + razpon 1-URA→94-let (zap45-Zemelj-18-Habost +
+  // zap57-Krasinec-18-Na-prostodu[?] — 94 = izenačitev P165-rekorda!) + meseci
+  // Jan4·Feb6·Mar7·Apr6·MAJ12·Jun5·Jul3·Avg5·Sep4·Okt2·Nov3·Dec4 = 61 (MAJ-DOMINANTA
+  // 20% — cf. 1895-MARCIJ-EPIDEMIJA!) + otroška umrljivost ~48% + PEZDIREC-×3-1900
+  // (h20-Podžemelj?ne — h49-Ana-1½-Podzemelj + Otok-11-Jurij-75 + Krasinec-46-
+  // Nikolaj-5-mes — era 9. leto!) ———
+  {
+    houseNo: "45",
+    bookSignature: "04894",
+    year: 1900,
+    scan: 75,
+    page: 74,
+    whatSi: "umrl Marko ŠTRAUS [★★★ max-zoom: Št-r-a-u-s — VLM-'Ulhar' + P165-lead-'Štavar' OBOJE ZAVRJENA — Štraus-glif = 1893/1896-h45-konzistenca!], vdovec in žitkar, 75 let (19. 1., pokop 21. 1.) — Naduka [~ Nadruha]; previden (1); Jo. Perz coop. [#9!]; ★★ STRAUS-MREŽA #9 (h45 = 3. Strauš-vpis: 1893-×2-Ana-44+Martin? cf. h67-P95-blok-'h45-Martin-Straus'! + 1896-Barbara-roj.-Zavrtovič-70 + 1900-Marko-75 = 3 vpisi v 7 letih!) + 4 + 5 hišna (45 — 8×)",
+    whatEn: "died Marko ŠTRAUS [★★★ the max-zoom: Št-r-a-u-s — the VLM-'Ulhar' AND the P165-lead-'Štavar' BOTH REJECTED — the Štraus glyph = the 1893/1896-h45 consistency!], a widower and crofter, 75 years (Jan 19, buried Jan 21) — Naduka [~ Nadruha dropsy]; previden (1); Jo. Perz coop. [#9!]; ★★ the STRAUS network #9 (h45 = the 3rd Strauš entry: 1893-×2-Ana-44+Martin? cf. the h67-P95-block-'h45-Martin-Straus'! + 1896-Barbara-née-Zavrtovič-70 + 1900-Marko-75 = 3 entries in 7 years!) + the 4 + 5 house number (45 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "32",
+    bookSignature: "04894",
+    year: 1900,
+    scan: 75,
+    page: 74,
+    whatSi: "umrla Marija URH [★★★ max-zoom: Marija — VLM-'Matija-Ulh' ZAVRJEN — P165-lead-'Marija-URH' POTRJEN!], žitkarca in vdova, 64 let (13. 2., pokop 15. 2.) — Jetika; previden (1); Jo. Perz coop. [#9!]; ★★★ URH-h32-SAGA #2 (1893-Martin-OD-STRELE → 1900-vdova-Marija-64!; h32 = 4. mrliški vpis 1890+1893-×2+1900!) + URH-mreža (h51-1896-×2-DVORNA + 1897-Ana-roj.-Novosel-61 = h51 ×3 v 13 mesecih!) + 3 + 2 hišna (32 — 8×)",
+    whatEn: "died Marija URH [★★★ the max-zoom: Marija — the VLM-'Matija-Ulh' REJECTED — the P165-lead-'Marija-URH' PROVEN!], a crofteress and widow, 64 years (Feb 13, buried Feb 15) — Jetika [~ dropsy]; previden (1); Jo. Perz coop. [#9!]; ★★★ the URH-h32-SAGA #2 (1893-Martin-STRUCK-BY-LIGHTNING → 1900-the-widow-Marija-64!; h32 = the 4th death entry 1890+1893-×2+1900!) + the URH network (h51-1896-×2-DRAMA + 1897-Ana-née-Novosel-61 = h51 ×3 in 13 months!) + the 3 + 2 house number (32 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "81",
+    bookSignature: "04894",
+    year: 1900,
+    scan: 76,
+    page: 75,
+    whatSi: "umrla Barbara POVŠEK [~], samka kajtovica [~ bajtarica?], 36 let (24. 2., pokop 26. 2.) — Nadluha; previden (1); Jos. Rauq; ★★★ h81 = 1. MRLIŠKI VPIS KADARKOLI (24. PT-vezni dokaz — IZVEN 41–60 cf. h11/h82-P165!; korpus: 04105-krstna ×1!) + ★★ hišna-'81' [★ Kurrent-2 = ODPRTA-zgornja-zanka (ref. Otok-8 + Vranoviče-24-glifi @×6) — ta cifra = ZAPRTA-zgornja-zanka → 8; VLM-'21' = PAPIČ-hiša ZAVRJENO!] + 8 + 1 hišna (81 — 8×)",
+    whatEn: "died Barbara POVŠEK [~], a single cottageress [~ bajtarica?], 36 years (Feb 24, buried Feb 26) — Nadluha [~ dropsy]; previden (1); Jos. Rauq; ★★★ h81 = the 1st DEATH ENTRY EVER (the 24th PT-link proof — OUTSIDE the 41–60 gap cf. h11/h82-P165!; corpus: the 04105 baptism ×1!) + ★★ the house-no-'81' [★ the Kurrent-2 = an OPEN upper loop (cf. the Otok-8 + Vranoviče-24 glyphs @×6) — this digit = a CLOSED upper loop → 8; the VLM-'21' = the PAPIČ house REJECTED!] + the 8 + 1 house number (81 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "49",
+    bookSignature: "04894",
+    year: 1900,
+    scan: 76,
+    page: 75,
+    whatSi: "umrla Marija BRODARIČ [~], žemljakova žena, 3 MESECE (26. 2., pokop 28. 2.) — Bele; previden (1); Jos. Rauq; ★★ h49 = 2. mrliški vpis (1894 + 1900!) + ★★★ POROČNA-cross-04105-1899 (h49 = NOVA-LUKNJA-#19: Nikolaj-Brodarič × Marjeta-Milek → krstna-Marija-Nov-1899 z matičar-opombo '† 24/6.00' ↔ mrliška-Feb-1900-'Marija-3-mes' = DVA-dojenčka-Marija-v-3-MESECIH?! [~ — ali je matičar-opomba 4-mesece-zamaknjena / 2 otroka istega imena?]) + BRODARIČ-mreža (P161-h46-TRAGEDIJA + h33-1899!) + 4 + 9 hišna (49 — 8×)",
+    whatEn: "died Marija BRODARIČ [~], a smallholder's wife, 3 MONTHS (Feb 26, buried Feb 28) — Bele [~ white-sickness]; previden (1); Jos. Rauq; ★★ h49 = the 2nd death entry (1894 + 1900!) + ★★★ the POROČNA-cross-04105-1899 (h49 = the NEW-GAP-#19: Nikolaj-Brodarič × Marjeta-Milek → the baptized-Marija-Nov-1899 with the registrar-note '† Jun 24, 1900' ↔ the deaths-Feb-1900-'Marija-3-mos' = TWO-infants-Marija-within-3-MONTHS?! [~ — or is the registrar-note 4-months-shifted / 2 same-named children?]) + the BRODARIČ network (the P161-h46-TRAGEDY + h33-1899!) + the 4 + 9 house number (49 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "63",
+    bookSignature: "04894",
+    year: 1900,
+    scan: 78,
+    page: 77,
+    whatSi: "umrl Jožef KRIŽAN [★★ max-zoom: K-r-i-ž-a-n — VLM-'Kružan'; i/u-nejasno [~]; h63 = KRIŽAN-hiša cf. 1896-N.-Križan-14-dni!], ½ zemljakov sin, 1½ leta (6. 6., pokop 8. 6.) — Duke [? — neberljivo — cf. 'Bele/Davica'-družina]; previden (1); Jo. Perz coop. [#9!]; ★ h63 = 2. mrliški vpis (1896 + 1900!) + KRIŽAN-mreža (1896-h63 + 1901-zap1-h36-Ana-Križan = P167-lead!) + 6 + 3 hišna (63 — 8×)",
+    whatEn: "died Jožef KRIŽAN [★★ the max-zoom: K-r-i-ž-a-n — the VLM-'Kružan'; the i/u unclear [~]; h63 = the KRIŽAN house cf. 1896-N.-Križan-14-days!], a half-smallholder's son, 1½ years (Jun 6, buried Jun 8) — Duke [? — illegible — cf. the 'Bele/Davica' family]; previden (1); Jo. Perz coop. [#9!]; ★ h63 = the 2nd death entry (1896 + 1900!) + the KRIŽAN network (1896-h63 + 1901-zap1-h36-Ana-Križan = the P167-lead!) + the 6 + 3 house number (63 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "65",
+    bookSignature: "04894",
+    year: 1900,
+    scan: 78,
+    page: 77,
+    whatSi: "umrla Marija MIHELJ [~ Mihel/Mihek], ½ zemljakova hči, 7 TEDNOV (21. 6., pokop 23. 6.) — Božjast; previden (1); Jo. Perz coop. [#9!]; ★ h65 = 5. mrliški vpis (1887+1888+1889+1899-Neža-MILEK-3-mes + 1900!) — hiša-×2-v-2-LETIH (1899 + 1900!; MILEK-hiša → MIHELJ-hči? [~ menjava-gospodinjstva cf. h10-1900!]) + MILEK-veza (h22/h65/h82-×3-1899!) + 6 + 5 hišna (65 — 8×)",
+    whatEn: "died Marija MIHELJ [~ Mihel/Mihek], a half-smallholder's daughter, 7 WEEKS (Jun 21, buried Jun 23) — Božjast [~ god's-punishment]; previden (1); Jo. Perz coop. [#9!]; ★ h65 = the 5th death entry (1887+1888+1889+1899-Neža-MILEK-3-mos + 1900!) — the house-×2-in-2-YEARS (1899 + 1900!; the MILEK house → a MIHELJ daughter? [~ a household change cf. h10-1900!]) + the MILEK link (h22/h65/h82-×3-1899!) + the 6 + 5 house number (65 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "23",
+    bookSignature: "04894",
+    year: 1900,
+    scan: 79,
+    page: 78,
+    whatSi: "umrl Peter BRINEC [★★ BRINEC-mreža: h58-1896-Ana-roj.-Brinec + h14-1896-N.-Brinec + h24-1888/94!], [—stan], 3 leta (22. 9., pokop 24. 9.) — Božjast; previden (1); J.R. Kut'nek [#10 — 2. podpis 1. dan po 1.!]; ★ h23 = 3. mrliški vpis (1891 + 1892 + 1900!) + 2 + 3 hišna (23 — 8×)",
+    whatEn: "died Peter BRINEC [★★ the BRINEC network: h58-1896-Ana-née-Brinec + h14-1896-N.-Brinec + h24-1888/94!], [—status], 3 years (Sep 22, buried Sep 24) — Božjast; previden (1); J.R. Kut'nek [#10 — the 2nd signature 1 day after the 1st!]; ★ h23 = the 3rd death entry (1891 + 1892 + 1900!) + the 2 + 3 house number (23 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "47",
+    bookSignature: "04894",
+    year: 1900,
+    scan: 80,
+    page: 79,
+    whatSi: "umrla Marija HLOBUČAR [★★★ max-zoom: H-l-o-b-u-č-a-r — VLM-'Vilbucar' ZAVRJEN!; cf. P161-h46-Marija-BRODARIČ-roj.-KLOBUČAR + krstna-h75-1899-Marija-Stubljar-NE-ista!], vdova kolarica, 72 let (30. 12., pokop 1. 1. 1901!) — Oslablost; previden (1); J.R. Kut'nek [#10!]; ★ h47 = 2. mrliški vpis (1888 + 1900!) + ★★★ HLOBUČAR-×2-v-2-MESECIH (Marija-h47-DEC-1900-72 + Matija-h48-JAN-1901-65-samski-½-zemlj.-sin = P167-lead — mreža ×3: h46-1895-Klobučar-roj.!; 'zadnja-Griblje-1900'!) + pokop-'1 jan 1901' = 1. od 3× LETNICA-v-pokop-stolpcu (zap59–61!) + 4 + 7 hišna (47 — 8×)",
+    whatEn: "died Marija HLOBUČAR [★★★ the max-zoom: H-l-o-b-u-č-a-r — the VLM-'Vilbucar' REJECTED!; cf. the P161-h46-Marija-BRODARIČ-née-KLOBUČAR + the baptismal-h75-1899-Marija-Stubljar-NOT-the-same!], a widow cottageress, 72 years (Dec 30, buried Jan 1, 1901!) — Oslablost [~ weakness]; previden (1); J.R. Kut'nek [#10!]; ★ h47 = the 2nd death entry (1888 + 1900!) + ★★★ the HLOBUČAR-×2-within-2-MONTHS (Marija-h47-DEC-1900-72 + Matija-h48-JAN-1901-65-single-half-smallholder's-son = the P167-lead — the network ×3: h46-1895-Klobučar-née!; 'the LAST Griblje-1900'!) + the burial-'Jan 1, 1901' = the 1st of 3× YEAR-in-the-burial-column (zap59–61!) + the 4 + 7 house number (47 — 8×)",
+    status: "DOCUMENTED",
+  },
+
   // ——— P80 razširitev: POROČNA KNJIGA 04455 1873–1922 — okvir 1886 (skeni 61–65 == Pag. 60–64, vpisi 1–24; Pag. = sken − 1 v razponu 61–66) ———
   // P115 (faza 2) RE-READ: 8 blokov popravljenih na podlagi max-zoom branja (h36→56, h63→65, h15→16, h25→Priložje
   // + priimki Pegdirec/Klepec/Požek/Tomec/Straus/Križan) — evidence: research/issue17/parish-marriage-1886.json

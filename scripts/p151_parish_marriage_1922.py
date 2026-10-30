@@ -121,7 +121,7 @@ def main():
           "h.year === 1922).length !== 3" in qa, "")
     check("I6d ostanki 711/194/187 sanirani (P151-kaskada!)",
           "HOUSE_VITALS.length !== 711" not in qa and ".length !== 194" not in qa
-          and "p80MarrAnchors.length !== 187" not in qa, "stare pini!")
+          and "p80MarrAnchors.length !== 195" not in qa, "stare pini!")
     check("I6e sidra 190", "p80MarrAnchors.length !== 190" in qa, "")
     check("I6f p80 hiše 77", "p80Houses.size !== 77" in qa, "")
 

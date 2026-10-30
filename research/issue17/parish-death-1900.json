@@ -1,0 +1,351 @@
+{
+ "status": "SAMPLE-TRANSCRIPTION-D1900",
+ "generated": "2026-10-31",
+ "phase": "P166 — MRLIŠKA KNJIGA 04894, leto 1900 = 15. polno leto mrliške linije (issue #18)",
+ "source": {
+  "book": "04894 (Mrtvaška knjiga 1886–1922, župnija Podzemelj)",
+  "urls": "matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04894/ — skeni 75–80 == str. 74–79",
+  "metoda": "6× celostansko VLM (glm-5v-turbo; s75–s77 re-uporabljeni iz P165!) + 3× diag-PNG agent-oči (rows-final konsolidacija COV=0.010 zap-projekcija) + 46 max-zoom izrezov (12 Griblje-trakov ×2.2 + 17 mejnih + 17 celic ×3.0) + 2× super-zoom ×6 (hišna-glif 81|21 + ref-Otok-8)"
+ },
+ "frame": {
+  "leto": 1900,
+  "vrstic": 61,
+  "griblje_vpisi": 8,
+  "hise": 8,
+  "ponovitve": "BREZ hiša-×2 (2. leto zapored! cf. 1899-13-vse-različne; rast 13→7→8)",
+  "meja_1898_99": "s70-top (P164 — '1899.' INLINE — re-potriditev P165)",
+  "meja_1899_1900": "s75-sredina ('1900' VELIKA + VEČKRATNI podčrtaj (3+ črt) na PRAZNI vrsti + Januarj-INLINE + restart zap 61→1 = 5. STIL 7. POTRDITEV — P164-lead-'s75+?' POTRJEN)",
+  "meja_1900_01": "s80-sredina ('1901' VELIKA + podčrtaj na PRAZNI vrsti + Januarj-INLINE + restart zap 61→1 = 5. STIL 8. POTRDITEV — P165-lead-'s79+?' OVRJEN: s79 = Avg–Nov BREZ restarta, s80 = ŽE meja! s80-zap57–61 = 1900-rep)",
+  "skeni_nov": [
+   76,
+   77,
+   78,
+   79,
+   80
+  ],
+  "griblje_hise": "45,32,81,49,63,65,23,47 — VSE RAZLIČNE",
+  "rast": "13→7→8 (1897-13 · 1898-7 · 1899-13 · 1900-8)",
+  "p80_hise": "88 → 89 (+h81 EDINA NOVA — 1. mrliški-vpis = 24. PT-vez; 04105-krstna izven p80-filtra!; cf. P162-h51!)",
+  "korpus": "93 NESPREMENJEN (h81 že v 04105!)"
+ },
+ "entries": [
+  {
+   "row": 3,
+   "zap": 3,
+   "houseNo": "45",
+   "bookSignature": "04894",
+   "year": 1900,
+   "scan": 75,
+   "page": 74,
+   "mesec": "Januarj",
+   "smrt": "19.",
+   "pokop": "21.",
+   "ime": "Marko ŠTRAUS [★★★ max-zoom: Št-r-a-u-s — VLM-'Ulhar' + P165-lead-'Štavar' OBOJE ZAVRJENA!]",
+   "stan": "vdovec in žitkar",
+   "rojena": null,
+   "spol": "moš.",
+   "starost": "75 let",
+   "bolezen": "Naduka [~ Nadruha]",
+   "previden": "1",
+   "duhovnik": "Jo. Perz coop. [#9]",
+   "opomba": "STRAUS-MREŽA #9 — h45 = 3. Strauš-vpis (1893-×2 + 1896-Barbara + 1900-Marko = 3 vpisi v 7 letih!); 1. Griblje-1900",
+   "dokaz": "crops/griblje-zap3-marko-stavar-75.png + crops/s75-zap3-ime.png + crops/s75-zap3-vas-hisna.png"
+  },
+  {
+   "row": 8,
+   "zap": 8,
+   "houseNo": "32",
+   "bookSignature": "04894",
+   "year": 1900,
+   "scan": 75,
+   "page": 74,
+   "mesec": "Februar",
+   "smrt": "13.",
+   "pokop": "15.",
+   "ime": "Marija URH [★★★ max-zoom: Marija jasno — VLM-'Matija-Ulh' ZAVRJEN!]",
+   "stan": "žitkarca in vdova",
+   "rojena": null,
+   "spol": "žens.",
+   "starost": "64 let",
+   "bolezen": "Jetika",
+   "previden": "1",
+   "duhovnik": "Jo. Perz coop. [#9]",
+   "opomba": "URH-h32-SAGA #2 — 1893-Martin-OD-STRELE → 1900-vdova-Marija!; h32 = 4. mrliški vpis (1890+1893-×2+1900)",
+   "dokaz": "crops/griblje-zap8-marija-urh-75.png + crops/s75-zap8-ime.png + crops/s75-zap8-vas-hisna.png"
+  },
+  {
+   "row": 1,
+   "zap": 9,
+   "houseNo": "81",
+   "bookSignature": "04894",
+   "year": 1900,
+   "scan": 76,
+   "page": 75,
+   "mesec": "Februar",
+   "smrt": "24.",
+   "pokop": "26.",
+   "ime": "Barbara POVŠEK [~]",
+   "stan": "samka kajtovica [~ bajtarica?]",
+   "rojena": null,
+   "spol": "žens.",
+   "starost": "36 let",
+   "bolezen": "Nadluha",
+   "previden": "1",
+   "duhovnik": "Jos. Rauq",
+   "opomba": "★★★ h81 = 1. MRLIŠKI VPIS KADARKOLI = 24. PT-vezni dokaz IZVEN 41–60 (04105-krstna ×1!); hišna-'81': Kurrent-2 = ODPRTA-zgornja-zanka (ref. Otok-8 + Vranoviče-24 @×6) — ta = ZAPRTA → 8; VLM-'21'-Papič ZAVRJENO",
+   "dokaz": "crops/griblje-zap9-barbara-povsek-76.png + crops/s76-zap9-vas-hisna.png + crops/s76-zap9-hisna-x6.png + crops/s77-zap24-hisna-x6-ref.png"
+  },
+  {
+   "row": 2,
+   "zap": 10,
+   "houseNo": "49",
+   "bookSignature": "04894",
+   "year": 1900,
+   "scan": 76,
+   "page": 75,
+   "mesec": "Februar",
+   "smrt": "26.",
+   "pokop": "28.",
+   "ime": "Marija BRODARIČ [~]",
+   "stan": "žemljakova žena",
+   "rojena": null,
+   "spol": "žens.",
+   "starost": "3 mesece",
+   "bolezen": "Bele",
+   "previden": "1",
+   "duhovnik": "Jos. Rauq",
+   "opomba": "★★★ POROČNA-cross-04105-1899: h49-krstna-Marija-Brodarič-Nov-1899 (matičar-'† 24/6.00') ↔ mrliška-Feb-1900-Marija-3-mes = DVA-dojenčka-v-3-MESECIH?! [~]; h49 = 2. mrliški (1894+1900); BRODARIČ-mreža (h46-P161-TRAGEDIJA + h33-1899)",
+   "dokaz": "crops/griblje-zap10-marija-brodaric-76.png + crops/s76-zap10-vas-hisna.png"
+  },
+  {
+   "row": 6,
+   "zap": 38,
+   "houseNo": "63",
+   "bookSignature": "04894",
+   "year": 1900,
+   "scan": 78,
+   "page": 77,
+   "mesec": "Junij",
+   "smrt": "6.",
+   "pokop": "8.",
+   "ime": "Jožef KRIŽAN [★★ max-zoom: K-r-i-ž-a-n — VLM-'Kružan' i/u-nejasno [~]]",
+   "stan": "½ zemljakov sin",
+   "rojena": null,
+   "spol": "moš.",
+   "starost": "1½ leta",
+   "bolezen": "Duke [? neberljivo]",
+   "previden": "1",
+   "duhovnik": "Jo. Perz coop. [#9]",
+   "opomba": "h63 = KRIŽAN-hiša = 2. mrliški (1896-N.-Križan-14-dni + 1900!); hišna-'63.' jasno @×3 (ne 65!); KRIŽAN-mreža (1896-h63 + 1901-zap1-h36-Ana-Križan-P167-lead!)",
+   "dokaz": "crops/griblje-zap38-joze-hrizan-78.png + crops/s78-zap38-vas-hisna.png + crops/s78-zap38-ime-bolezen.png"
+  },
+  {
+   "row": 8,
+   "zap": 40,
+   "houseNo": "65",
+   "bookSignature": "04894",
+   "year": 1900,
+   "scan": 78,
+   "page": 77,
+   "mesec": "Junij",
+   "smrt": "21.",
+   "pokop": "23.",
+   "ime": "Marija MIHELJ [~ Mihel/Mihek]",
+   "stan": "½ zemljakova hči",
+   "rojena": null,
+   "spol": "žens.",
+   "starost": "7 tednov",
+   "bolezen": "Božjast",
+   "previden": "1",
+   "duhovnik": "Jo. Perz coop. [#9]",
+   "opomba": "h65 = 5. mrliški vpis (1887+1888+1889+1899-Neža-MILEK + 1900!) = hiša-×2-v-2-LETIH; MILEK-hiša → MIHELJ-hči? [~ menjava cf. h10-1900-Grabrijan!]",
+   "dokaz": "crops/griblje-zap40-marija-mihelj-78.png + crops/s78-zap40-vas-hisna.png + crops/s78-zap40-ime.png"
+  },
+  {
+   "row": 6,
+   "zap": 50,
+   "houseNo": "23",
+   "bookSignature": "04894",
+   "year": 1900,
+   "scan": 79,
+   "page": 78,
+   "mesec": "September",
+   "smrt": "22.",
+   "pokop": "24.",
+   "ime": "Peter BRINEC [★★ BRINEC-mreža: h58-1896 + h14-1896 + h24-1888/94!]",
+   "stan": "[—]",
+   "rojena": null,
+   "spol": "moš.",
+   "starost": "3 leta",
+   "bolezen": "Božjast",
+   "previden": "1",
+   "duhovnik": "J.R. Kut'nek [#10 — 2. podpis!]",
+   "opomba": "h23 = 3. mrliški vpis (1891+1892+1900!); zap50-vas-hisna = Griblje-23 jasno @×3 (FIX-re-crop: yc1058 — 1. crop zadel zap51-Vranoviče-24!)",
+   "dokaz": "crops/griblje-zap50-peter-brinec-79.png + crops/s79-zap50-vas-hisna-FIX.png + crops/s79-zap50-ime-FIX.png"
+  },
+  {
+   "row": 3,
+   "zap": 59,
+   "houseNo": "47",
+   "bookSignature": "04894",
+   "year": 1900,
+   "scan": 80,
+   "page": 79,
+   "mesec": "December",
+   "smrt": "30.",
+   "pokop": "1. jan 1901!",
+   "ime": "Marija HLOBUČAR [★★★ max-zoom: H-l-o-b-u-č-a-r — VLM-'Vilbucar' ZAVRJEN!]",
+   "stan": "vdova kolarica",
+   "rojena": null,
+   "spol": "žens.",
+   "starost": "72 let",
+   "bolezen": "Oslablost",
+   "previden": "1",
+   "duhovnik": "J.R. Kut'nek [#10]",
+   "opomba": "★★★ HLOBUČAR-×2-v-2-MESECIH (Marija-h47-DEC-1900-72 + Matija-h48-JAN-1901-65 = P167-lead!; mreža ×3: h46-1895-Klobučar-roj.!); h47 = 2. mrliški (1888+1900); ZADNJA Griblje-1900; pokop-'1 jan 1901' = 1. od 3× LETNICA-v-pokop-stolpcu (zap59–61 — 1. primer linije!)",
+   "dokaz": "crops/griblje-zap59-marija-hlobucar-80.png + crops/s80-zap59-vas-hisna.png + crops/s80-zap59-ime.png"
+  }
+ ],
+ "excluded": [
+  {
+   "id": "E1",
+   "opis": "s75-zap1–8: Januarj/Februar 1900 (meja-marker s75-sredina — frame; P165-že-v-korpusu kot meja!)",
+   "opis2": "zap1-Ana-Pezdirec-44-Krasinec-28 + zap2-Štefanič-14-Dobravice-4 + zap4-Piletic-3-Gradac-78 + zap5-Ivanc-89-Primostek-18 + zap6-Muc-34-Primostek-21 + zap7-Hladic-62-Čerkviše-11 (ne-Griblje)"
+  },
+  {
+   "id": "E2",
+   "opis": "s76-zap11–20: nadaljevanje (12 ne-Griblje)",
+   "opis2": "zap11-Juran-81-Primostek-5 + zap12-Jakša-29-Vranoviče-14 + zap13-Jurajevič-20-Otok-11 + zap15-Stampahtar-3-dni-Dobravice-19 + zap17-Bahorič-82-Krasinec-6 + zap18-Špaler-81-Gradac-14 + zap19-Pezdirec-1½-Podzemelj-10 + zap20-Mumik-90-Klošter-54"
+  },
+  {
+   "id": "E3",
+   "opis": "s76-zap14 = OTOK-11 (VLM-'Griblje-42' ZAVRJENO @×3!)",
+   "opis2": "Jurij PEZDIREC-75-hajtar-vdovec-Mar-11/13 — PEZDIREC-×3-1900 #2 (era 9. leto!) — vas-ODPRTA-Otok"
+  },
+  {
+   "id": "E4",
+   "opis": "s76-zap16 = CERKVIŠE-19 (VLM-'Griblje-48' ZAVRJENO @×3!)",
+   "opis2": "Marija Škavc-2-let-hajtarjeva-hči-Mar-19/21 — Bele"
+  },
+  {
+   "id": "E5",
+   "opis": "s77-zap21 = KRIVOGLAVE-28 (VLM-'Griblje-28' ZAVRJENO @×3!)",
+   "opis2": "Alžbeta Hlec-14-mes-½-zemljakova-žena-Apr-16/18 — Dobavci[~]"
+  },
+  {
+   "id": "E6",
+   "opis": "s78-zap34 = GIRIČE-3 (VLM-'Griblje-3' ZAVRJENO @×3!)",
+   "opis2": "Martin Capuč[~Paprič]-7-mes-½-žemljarjev-sin-Maj-19/20 — 5. A2-vas-napaka-1900 = NOVI-REKORD!"
+  },
+  {
+   "id": "E7",
+   "opis": "s79-zap50-kontekst: Sep-22/24 Griblje-23 = EDINA Griblje-vrstica s79 (VLM-12→1!)",
+   "opis2": "s79 = Avg4–Nov6 (zap45–56): 45-Jurajevič-1-URA-Zemelj-18-Habost! + 48-Novak-85 + 51-Dolniak-73-Vranoviče-24 + 55-Jakaš-74-Starost + 56-Novak-27"
+  },
+  {
+   "id": "E8",
+   "opis": "s80-zap57–58 + zap60–61: 1900-rep (ne-Griblje)",
+   "opis2": "zap57-Kuparič-94-NAJSTAREJŠA-izenačitev-P165!-Krasinec-18-Na-prostodu[?] + zap58-Hrašovec-74-Dobravice-43 + zap60-Štublar-72-Certoviše-23 + zap61-Galovec-64-Krasinec-14 (oba-zadnja-pokop-'2 jan 1901'!)"
+  }
+ ],
+ "anomalies": [
+  {
+   "id": "A1",
+   "opis": "MAX-ZOOM > VLM 17. potrditev = 10 popravkov: zap3-'Ulhar/Štavar'→ŠTRAUS + zap8-'Matija-Ulh'→Marija-URH + zap34-'Griblje-3'→GIRIČE-3 + zap14-'Griblje-42'→OTOK-11 + zap16-'Griblje-48'→CERKVIŠE-19 + zap21-'Griblje-28'→KRIVOGLAVE-28 + zap35-'Hrasten'→Klošter + zap59-'Vilbucar'→HLOBUČAR + zap57-'Kušlanič'→KUPARIČ + 'Klevinek/Kuhinek'→Kut'nek"
+  },
+  {
+   "id": "A2",
+   "opis": "5× VLM-A2-VAS-NAPAKE-v-1-LETU = NOVI REKORD linije (cf. P162-×3 + P163-×2 + P164-×1 + P165-×1) — Giriče/Otok/Cerkviše/Krivoglave/+Klošter — 'Griblje' = privzeti-VLM-prior!"
+  },
+  {
+   "id": "A3",
+   "opis": "NOVI DUHOVNIK #10: J.R. Kut'nek [~ Kutinek/Kub'nek — X-open] — 1. podpis s79-zap49 (21. 9. 1900!); dominanta Sep–Dec 12×; VLM-'Klevinek' (s79) + 'Kuhinek' (s80) = ISTA-ROKA-različni-VLM-preberi!; smena: Perz-era-1900-Jan–Avg-30× (49%!) → Rauq 19× → Kut'nek"
+  },
+  {
+   "id": "A4",
+   "opis": "3× pokop-LETNICA-v-pokop-stolpcu ('1 jan 1901' zap59 + '2 jan 1901' zap60+61) = 1. primer linije — NOVOLETNI-prehod-zapisan-v-celici!"
+  },
+  {
+   "id": "A5",
+   "opis": "kronologija 60/61 — zap44 (Avg 6/8) → zap45 (Avg 4/9) INVERZIJA [~VLM-branje?] — 1. odkar P163-MESEC-0; cf. P164-kaos-rešitev (mesec-labeli-zanesljivi, dnevi-ne)"
+  },
+  {
+   "id": "A6",
+   "opis": "razpon 1-URA → 94-let: zap45-Ana-Jurajevič-Zemelj-18-Habost (1 uro!) + zap57-Katarina-Kuparič-Krasinec-18-Na-prostodu[?] (94 let = izenačitev-P165-zap26-Ana-Juževič-rekorda!)"
+  },
+  {
+   "id": "A7",
+   "opis": "hišna-'81' @×6-glif-dokaz (Kurrent-2-odprta vs zaprta-zgornja-zanka + ref-Otok-8) — VLM-'21'-Papič ZAVRJENO — h81 = 1. mrliški = 24. PT-vezni"
+  },
+  {
+   "id": "A8",
+   "opis": "POROČNA-cross-h49-drama: 04105-1899-krstna-Marija-Brodarič (matičar-'† 24/6.00') ↔ 04894-Feb-1900-Marija-Brodarič-3-mes = DVA-dojenčka-v-3-mesecih?! [~ — matičar-opomba-zamik / 2-ista-imena]"
+  },
+  {
+   "id": "A9",
+   "opis": "PEZDIREC-×3-1900 (era 9. leto!): h49-Ana-1½-Podzemelj-10 + OTOK-11-Jurij-75 + Krasinec-46-Nikolaj-5-mes — razpršeni-čez-3-vsi!; h49-blok-Ana = zap19-ne-Griblje (Podzemelj!)"
+  },
+  {
+   "id": "A10",
+   "opis": "HLOBUČAR-×2-v-2-mesecih (Marija-h47-Dec + Matija-h48-Jan-1901 = P167-lead!) — mreža-×3 (h46-1895-Klobučar-roj.-Brodarič!); + zap59-pokop-1901-letnica = NOVOLETNO-drame-okno"
+  }
+ ],
+ "crossChecks": [
+  {
+   "id": "X1",
+   "opis": "stran == sken − 1 — 41.–46. potrditev (s75=74! s76=75! s77=76! s78=77! s79=78! s80=79!) — P80-invarianta mrliške"
+  },
+  {
+   "id": "X2",
+   "opis": "zap-continuiteta: s75-dno-1–8 → s76-9–20 → s77-21–32 → s78-33–44 → s79-45–56 → s80-57–61 = 61/61 brez vrzeli! (restart-samo-@meji)"
+  },
+  {
+   "id": "X3",
+   "opis": "kronologija 60/61 (1 INVERZIJA zap44/45 [~]) — mesečni-labeli: Jan@zap1 + Feb@zap5 + Mar@zap11 + Apr@zap18 + Maj@zap24 + Jun@zap36 + Jul@zap41 + Avg@zap44 + Sep@zap48 + Okt@zap53 + Nov@zap55 + Dec@zap58 — 12/12-labeli-potrjeni"
+  },
+  {
+   "id": "X4",
+   "opis": "meseci: Jan4·Feb6·Mar7·Apr6·MAJ12·Jun5·Jul3·Avg5·Sep4·Okt2·Nov3·Dec4 = 61 (MAJ-DOMINANTA 20% — cf. 1895-MARCIJ-6/12!)"
+  },
+  {
+   "id": "X5",
+   "opis": "duhovniki 61/61: Perz-30 (Jan–Avg) + Rauq-19 + Kut'nek-12 (Sep–Dec) = 61 — podpisi-100% (0 mrtvorojen-brez-podpisa-1900!)"
+  },
+  {
+   "id": "X6",
+   "opis": "Griblje-8/61 = 13.1% (cf. 1899-13/61 = 21.3% — padec; rast-vpisov 13→8) — hiše-8/8-različne (2. leto!)"
+  },
+  {
+   "id": "X7",
+   "opis": "hišne-številke-1900 = 45,32,81,49,63,65,23,47 — korpus: vseh 8 ŽE (0 novih — 4. leto zasičanja!; korpus-93 NESPREMENJEN) AMPAK p80-vzorec: **88 → 89 (+h81 EDINA NOVA — 04105-krstna-izven-filtra → 04894-1900-vhaja!; cf. P162-+h51 = 2. taki-dogodek!)**"
+  },
+  {
+   "id": "X8",
+   "opis": "4× 'previden-1'-pika-vzorec (X9-6. leto!) + podpisi-v-ogel ('coop.'-podčrtaj-Perz-kaskada-s75–s78)"
+  },
+  {
+   "id": "X9",
+   "opis": "starostne-enote: let-×28 + mesece-×12 + tednov-×2 + dni-×3 + 1-ura-×1 + [—]-×3 (zap50-Brinec-3-let-brez-stana!) = 61"
+  },
+  {
+   "id": "X10",
+   "opis": "P167-lead-pripravljen: s80-dno-1901-zap1–6 (Griblje-×3-ŽE: zap1-h36-Ana-Križan-76-vdova-kolarica + zap4-h48-Matija-HLOBUČAR-65-samski + zap2?-Krasinec-18-Marija-2-mes) + s81+ (meja-1901/02 [~ s85+?])"
+  }
+ ],
+ "honesty": [
+  "H1: branja = 6× celostansko VLM (glm-5v-turbo, 0 FAIL; s75–s77 re-uporabljeni iz P165-sesanja!) + 3× diag-PNG agent-oči (rows-final COV=0.010-zap-projekcija; 61-vrstična transkripcija!) + 46 max-zoom izrezov (12 Griblje-trakov ×2.2 + 17 mejnih + 17 celic ×3.0) + 2 super-zoom ×6 (81|21-glif + ref-Otok-8!) — VSE datoteke v /tmp/p166 (sandbox-volatilno; skripte v repo scripts/tmp/!)",
+  "H2: [~] konservativno — Štraus (glif-1893/96-konzistenca ampak-rokopis-iskren-dvom) + Povšek + Hlec + Capuč + Mihelj + KRIŽAN-i/u + Duke[?] + Naduka + Kuparič + Kut'nek — vse-negotovosti-označene",
+  "H3: rows-mapa-zamaknjena-1× (s79-zap50-crop-zadel-zap51 @yc1196 — FIX-re-crop @yc1058 = Griblje-23-potrjen!) — lekcija: yc→zap-preslikavo-VEDEJO-verificirati-s-vrstnim-indeksom!",
+  "H4: zap45-'1 ura' [~VLM] — ekstremna-starost-brez-max-zoom-celice (ne-Griblje-vrstica; X-vzrok-Habost-konsistenten) — če-se-izkaže-napačno → P166b-revizija",
+  "H5: zap57-'94 let' [~VLM] + 'Na-prostodu'[?] — NAJSTAREJŠA-izenačitev-P165 — potrebna-celica-pri-čistem-prenosu (ne-Griblje)",
+  "H6: zap44/45-Avg-inverzija [~VLM] — dan-smrti-Avg-4-vs-6 — lahko-VLM-zmeda-4/6-cifer; kronologija-sicer-60/61",
+  "H7: h49-dvojna-Marija-drama [~] — matičar-opomba-'† 24/6.00'-NI-mrliški-vnos (04105-marginacija!) — lahko-2-otroka / zamik / napaka-pisarja — brez-mrliškega-vnosa-Junij-1900 (Jun-61-vrstic-brez-h49!) — ODPRTA",
+  "H8: VLM-A2-rekord-5×-vas-napak — 'Griblje-prior'-sistematična-VLM-pristranskost (prompt-za-leto-1901-dodan-explicitni-VSEBOLJ-NUMERIČNI-vas-filter!)",
+  "H9: meja-1900/01-'s80'-P165-lead-'s79+?'-OVRJEN — s79-popolnoma-1900 (Avg–Nov-brez-restarta) — še-1-lekcija: lead-meje-VEDNO-±1-sken-verificirati",
+  "H10: pokop-1901-letnice (zap59–61) — datum-pokopa-pade-v-NASLEDNJE-leto (starost-leto-1900-ostaja!) — vpis-šteje-po-SMRTI-ne-po-pokopu (konsistentno-z-globinsko-hronologijo 61/61-po-smrti)"
+ ],
+ "nextSteps": {
+  "P167-lead": "mrliška 1901 (s80-dno-restart zap1–6 [Griblje-×3-ŽE-VIDNI: zap1-h36-Ana-Križan-76-vdova-kolarica-Oslablost-Jan7/9 + zap4-h48-Matija-HLOBUČAR-65-samski-½-zemlj.-sin-Jetika-Jan13/15 = HLOBUČAR-×2-v-2-MESECIH! + zap2?-Krasinec-18-2-mes] + s81 (zap7–18?) + s82+; meja 1901/02 [~ s85+?])",
+  "opomba": "P167 = 16. polno leto mrliške linije; s80-zap1–6-ŽE-prebrani (VLM-s80!) — 6/61-vrstic-1901-pripravljenih!"
+ }
+}
