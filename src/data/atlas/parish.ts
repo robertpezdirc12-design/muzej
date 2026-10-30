@@ -2037,6 +2037,93 @@ export const HOUSE_VITALS: HouseVital[] = [
     whatEn: "died Janez BERTOPIO [? illegible — 8-glyphs @max-zoom — the VLM-'Botek' REJECTED! ~ Bertoncelj/Bertopč-X-open], a quarter-smallholder's son, 6 weeks (Nov 21, buried Nov 23) — Habost [~ dropsy]; previden (1); Fr. Škurmelj; ★ the h14-×2-1897-#2 + ★ the boundary-1897/98-INLINE-page (zap52-end + the '1898.'-DOUBLE-underlined-empty-row + the Jan-INLINE-r1 + the restart = the 5th STYLE 5th confirmation!) + the 1 + 4 house number (14)",
     status: "DOCUMENTED",
   },
+  // ——— P164 razširitev: MRLIŠKA KNJIGA 04894, POLNO LETO 1898 (issue #18) ———
+  // s65-dno (meja 1897/98: "1898." DVOJNI podčrtaj na PRAZNI vrsti + zap1 "3. Jan. 5." Jan-OKRAJŠAVA-INLINE
+  // + restart zap 58→1 = 5. STIL 6. POTRDITEV) + s66 (zap 4–15) + s67 (16–27) + s68 (28–39) + s69 (40–48)
+  // == str. 64–68 (stran == sken − 1 — 27.–34. potrditev! s65=64 … s72=71!) + meja 1898/99 = s70-top
+  // ("1899." INLINE v smrti-celici zap1 + Januarj-INLINE + restart = 4. INLINE-potrditev — cf. P161-s51!)
+  // — P163-lead-'s71+?' OVRJEN (s70 = ŽE 1899!) + s69-dno = PRAZNE vrste!
+  // + ★★★ PEZDIREC-×4-v-1898 = REKORD mrliške (Marija-½-hči-h52 + Doroteja-59-h30 + Ana-roj.-Pezdirec-63-h64
+  // + Janez-34-Boršt-h23!) — era 7. leto (rast 2→3→4!) + ★★★ h64-×2-DRAMA (Ana-63-April + Matija-58-Okt
+  // = 2 smrti ISTA HIŠA v ~6 MESECIH — verjetno PAR [~] — 3. par linije: 1895-h46-2-dni + 1896-h51-12-dni!)
+  // + ★★★ 2× 1. MRLIŠKI VPIS KADARKOLI (h52 = 20. PT-luknja-dokaz + h34 = 21.!) + DNO mrliške linije
+  // (48 vpisov / 7 Gribljev / 6 hiš — najnižje odkar 1889-8; 0 novih hiš — 4. leto zasičanja!)
+  // + MAX-ZOOM > VLM 15. potrditev = 9 popravkov (hišna-'32'→52 + 'Maj'→Marcej + 'Krasinec'→ŠKRILJE
+  // + 'Hprnica[?]'→Vodernica + 'Vaselj'→Kašelj + 'Mihel'→MILEK + 'Žele'→ŽELJKO + 'Jelen'/'Hennig'→Škurmelj
+  // + zap5→Mrtvorojen!) + P162b-γ-lekcija 16.–17. potrditev (s65: '41'→71 + '43'→73 — γ = 7!)
+  // + 2× mrtvorojen-BREZ-podpisa (zap39-N.-Plut + zap41-N.-Jože — r53-vzorec #12–#13!) + VLM-duhovnik-stolpec
+  // NEZANESLJIV-1898 + sken-geometrija-lekcija (dvoglavi-razpon + rotacija + natisnjen-'Zaporedna-štev.')
+  // → morfološka-odstranitev-črt (scipy-81×1) — P163-s64-napaka-RAZREŠENA!
+  {
+    houseNo: "52",
+    bookSignature: "04894",
+    year: 1898,
+    scan: 66,
+    page: 65,
+    whatSi: "umrla Marija PEZDIREC [★★ max-zoom: P-e-z-d-i-r-e-c — KURRENT-z-zanke!], ½ ženljakova hči, 11 mesecev (26. 1., pokop 28. 1.) — Božjast; previden (1); Fr. Škurmelj [VLM-'Jelen' ZAVRJEN @max-zoom!]; ★★★ PEZDIREC-era 7. leto (1896-×2 + 1897-×3 + 1898-×4!) + ★★★ h52 = 1. MRLIŠKI VPIS KADARKOLI (20. PT-luknja-dokaz — h52 ŽE v P80_PT_GAP-doc-list prek poročne-1895-Mathias-Perdinec!) + hišna-'32'→52 @max-zoom (5 = raven-zgornji-dvig — P163-lead-'h32' OVRJEN!) + 5 + 2 hišna (52 — 8×)",
+    whatEn: "died Marija PEZDIREC [★★ the max-zoom: P-e-z-d-i-r-e-c — the KURRENT-z-loops!], a half-smallholder's daughter, 11 months (Jan 26, buried Jan 28) — Božjast [~ X11!]; previden (1); Fr. Škurmelj [the VLM-'Jelen' REJECTED @max-zoom!]; ★★★ the PEZDIREC era the 7th year (1896-×2 + 1897-×3 + 1898-×4!) + ★★★ h52 = the 1st DEATH ENTRY EVER (the 20th PT-gap proof — h52 ALREADY in the P80_PT_GAP-doc-list via the 1895 marriage-Mathias-Perdinec!) + the house-no-'32'→52 @max-zoom (the 5 = the flat-top-riser — the P163-lead-'h32' OVERRIDDEN!) + the 5 + 2 house number (52 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "30",
+    bookSignature: "04894",
+    year: 1898,
+    scan: 66,
+    page: 65,
+    whatSi: "umrla Doroteja PEZDIREC [★★ max-zoom: z-zanke], ½ ženlj. žena, 59 let (5. 3. [VLM-'Maj' ZAVRJEN @max-zoom — 5-glyph = Marcej!], pokop 7. 3.) — Nadruha; previden (1); Fr. Škurmelj; ★★ PEZDIREC-×4-#2 + h30 = 6. mrliški vpis (1889 + 1890-×2 + 1891 + 1895 + 1898 — NAJPOGOSTEJŠA Griblje-hiša mrliške!) + 3 + 0 hišna (30 — 8×)",
+    whatEn: "died Doroteja PEZDIREC [★★ the max-zoom: the z-loops], a half-smallholder's wife, 59 years (Mar 5 [the VLM-'Maj' REJECTED @max-zoom — the 5-glyph = Marcej!], buried Mar 7) — Nadruha [~ dropsy-fever]; previden (1); Fr. Škurmelj; ★★ the PEZDIREC-×4-#2 + h30 = the 6th death entry (1889 + 1890-×2 + 1891 + 1895 + 1898 — the MOST FREQUENT Griblje house of the death register!) + the 3 + 0 house number (30 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "64",
+    bookSignature: "04894",
+    year: 1898,
+    scan: 66,
+    page: 65,
+    whatSi: "umrla Ana VERBIČAR [~ Verbiščar — caron!], roj. PEZDIREC, omožena bajtarica, 63 let (7. 4., pokop 9. 4.) — Oslablost; previden (1); Jos. Rauq; ★★★ h64-×2-1898-#1 + ★★★ PEZDIREC-×4-#3 (rojena!) + h64 = 3.–4. vpis čez 3 leta (1896-×2-Bule-otroci + 1898-×2-VERBIČAR-par — hiša-×2-v-2-LETIH!) + 6 + 4 hišna (64 — 8×)",
+    whatEn: "died Ana VERBIČAR [~ Verbiščar — the caron!], née PEZDIREC, a married cottageress, 63 years (Apr 7, buried Apr 9) — Oslablost [~ weakness]; previden (1); Jos. Rauq; ★★★ the h64-×2-1898-#1 + ★★★ the PEZDIREC-×4-#3 (née!) + h64 = the 3rd–4th entry across 3 years (the 1896-×2-Bule-children + the 1898-×2-VERBIČAR-couple — the house-×2-in-2-YEARS!) + the 6 + 4 house number (64 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "34",
+    bookSignature: "04894",
+    year: 1898,
+    scan: 67,
+    page: 66,
+    whatSi: "umrla Ana FILAK, omožena ženljakinja, 60 let (13. 5., pokop 16. 5.) — Vodernica [VLM-'Hprnica[?]' ZAVRJEN — korpus-termin ×4!]; previden (1); Fr. Škurmelj; ★★ h34 = 1. MRLIŠKI VPIS KADARKOLI (21. PT-soroden dokaz; h34 IZVEN 41–60-luknje!) + FILAK-vez (1895-h16-×2 + 1896-h51-Marija-Urh-roj.-Filak!) + 3 + 4 hišna (34 — 8×)",
+    whatEn: "died Ana FILAK, a married smallholderess, 60 years (May 13, buried May 16) — Vodernica [~ dropsy-variant — the VLM-'Hprnica[?]' REJECTED — the corpus term ×4!]; previden (1); Fr. Škurmelj; ★★ h34 = the 1st DEATH ENTRY EVER (the 21st PT-adjacent proof; h34 OUTSIDE the 41–60 gap!) + the FILAK link (the 1895-h16-×2 + the 1896-h51-Marija-Urh-née-Filak!) + the 3 + 4 house number (34 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "64",
+    bookSignature: "04894",
+    year: 1898,
+    scan: 68,
+    page: 67,
+    whatSi: "umrl Matija VERBIČAR [★★ max-zoom: Griblje-64 jasno!], vdovec in ožitkar [~], 58 let (1. 10. [VLM-'11.' ZAVRJEN — kronologija: zap38 = 6./8.!], pokop 6. 10.) — Oslablost; previden (1); Fr. Škurmelj [VLM-'F. Hennig' ZAVRJEN!]; ★★★ h64-×2-1898-#2 (Ana-April + Matija-Okt = 2 smrti ISTA HIŠA v ~6 MESECIH — verjetno PAR [~] — cf. 1896-h51-×2-12-dni + 1895-h46-2-dni!) + 3. mrliški vpis h64 + A6-kronologija-POPRAVEK (smrt-11./pokop-6. nemogoče → 1./6. [~]) + 6 + 4 hišna (64 — 8×)",
+    whatEn: "died Matija VERBIČAR [★★ the max-zoom: the Griblje-64 clear!], a widower and [~ smallholder-helper], 58 years (Oct 1 [the VLM-'11.' REJECTED — the chronology: zap38 = 6./8.!], buried Oct 6) — Oslablost [~ weakness]; previden (1); Fr. Škurmelj [the VLM-'F. Hennig' REJECTED!]; ★★★ the h64-×2-1898-#2 (Ana-April + Matija-Oct = 2 deaths THE SAME HOUSE in ~6 MONTHS — probably the COUPLE [~] — cf. the 1896-h51-×2-12-days + the 1895-h46-2-days!) + the 3rd death entry of h64 + the A6-chronology-CORRECTION (the death-11./burial-6. impossible → 1./6. [~]) + the 6 + 4 house number (64 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "60",
+    bookSignature: "04894",
+    year: 1898,
+    scan: 69,
+    page: 68,
+    whatSi: "umrla Ana ŽELJKO [~ Željka — H9!], ½ ženljakova hči, 1½ leta (16. 12., pokop 18. 12.) — Kašelj [VLM-'Vaselj' ZAVRJEN @max-zoom — K-a-š-e-l-j jasno!]; previden (1); Fr. Škurmelj; ★ h60 = 3. mrliški vpis (1888-×2 + 1898) + ŽELJKO-vez (P92-1887-botra-Nikolaj-Željko-h1 = familija!) + 6 + 0 hišna (60 — 8×)",
+    whatEn: "died Ana ŽELJKO [~ Željka — H9!], a half-smallholder's daughter, 1½ years (Dec 16, buried Dec 18) — Kašelj [~ cough — the VLM-'Vaselj' REJECTED @max-zoom — K-a-š-e-l-j clear!]; previden (1); Fr. Škurmelj; ★ h60 = the 3rd death entry (the 1888-×2 + 1898) + the ŽELJKO link (the P92-1887-godfather-Nikolaj-Željko-h1 = the family!) + the 6 + 0 house number (60 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "22",
+    bookSignature: "04894",
+    year: 1898,
+    scan: 69,
+    page: 68,
+    whatSi: "umrl Janez MILEK [VLM-'Mihel' ZAVRJEN @max-zoom — M-i-l-e-k jasno!], oženjen kolar [~ gospodin?], 64 let (22. 12., pokop 24. 12.) — Nadruha; previden (1); Fr. Škurmelj; ★ h22 = 2. mrliški vpis (1887-Matija-Milek-3 + 1898-Janez-MILEK-64 — MILEK-×2-hiša!) + 1887-Milek-smrt 12 let pred krstnim prvencem (P153!) + poročna-1898-h22-×2-ženina-same-dan (P127!) + 2 + 2 hišna (22 — 8×)",
+    whatEn: "died Janez MILEK [the VLM-'Mihel' REJECTED @max-zoom — M-i-l-e-k clear!], a married carter [~ kolar; ~ gospodin?], 64 years (Dec 22, buried Dec 24) — Nadruha [~ dropsy-fever]; previden (1); Fr. Škurmelj; ★ h22 = the 2nd death entry (the 1887-Matija-Milek-3 + the 1898-Janez-MILEK-64 — the MILEK-×2-house!) + the 1887-Milek-death 12 years before the first baptism (P153!) + the marriage-1898-h22-×2-grooms-same-day (P127!) + the 2 + 2 house number (22 — 8×)",
+    status: "DOCUMENTED",
+  },
   // ——— P80 razširitev: POROČNA KNJIGA 04455 1873–1922 — okvir 1886 (skeni 61–65 == Pag. 60–64, vpisi 1–24; Pag. = sken − 1 v razponu 61–66) ———
   // P115 (faza 2) RE-READ: 8 blokov popravljenih na podlagi max-zoom branja (h36→56, h63→65, h15→16, h25→Priložje
   // + priimki Pegdirec/Klepec/Požek/Tomec/Straus/Križan) — evidence: research/issue17/parish-marriage-1886.json

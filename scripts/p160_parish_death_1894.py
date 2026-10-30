@@ -34,8 +34,8 @@ EXPECTED_EXCLUDED = 8
 EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 10
 GRIBLJE_HOUSES = "24,35,49,57,72,87"
-VITALS_TOTAL = 866               # POSODABLJENO P162: 837 + 16 (mrliška 1896)!
-BLOKI_04894 = 167                # POSODABLJENO P163: 154 + 13 (mrliška 1897)!
+VITALS_TOTAL = 873               # POSODABLJENO P162: 837 + 16 (mrliška 1896)!
+BLOKI_04894 = 174                # POSODABLJENO P164: + 7 (mrliška 1898)!
 P80_HOUSES = 87                  # 86 → 87 (+h49 EDINA — mrliška-1894; 04105-izven-filtra — 17. PT-luknja-dokaz!)
 KORPUS_HOUSES = 93               # POSODABLJENO P162: 92 + 1 (+h51 — 1. dokaz kadarkoli)!
 NEW_SCANS = [47, 48, 49, 50, 51]
@@ -149,16 +149,16 @@ def main():
     # ---------- I6: parish.ts ----------
     check("I6a vitals 825", len(vit) == VITALS_TOTAL, str(len(vit)))
     d04894 = [v for v in vit if v["bookSignature"] == "04894"]
-    check("I6b mrliški bloki 04894 = 167 (POSODABLJENO P163)", len(d04894) == BLOKI_04894, str(len(d04894)))
+    check("I6b mrliški bloki 04894 = 174 (POSODABLJENO P164)", len(d04894) == BLOKI_04894, str(len(d04894)))
     d1894 = [v for v in d04894 if v["year"] == 1894]
     check("I6c bloki 1894 = 6", len(d1894) == 6, str(len(d1894)))
     check("I6d bloki 1894: skeni 47–51 + stran == sken − 1",
           all(v["scan"] and 47 <= v["scan"] <= 51 and v["page"] == v["scan"] - 1 for v in d1894), "")
-    check("I6d2 bloki 1898+ ne obstajajo (P164-lead!; P163 = 1897 v korpusu!)",
-          all(v["year"] < 1898 for v in d04894), "")
+    check("I6d2 bloki 1899+ ne obstajajo (P165-lead!; P164 = 1898 v korpusu!)",
+          all(v["year"] < 1899 for v in d04894), "")
     p80 = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
-    check("I6f p80-skripta pini 866 + 89 + gap-19 (P163)",
-          "len(vitals) == 866" in p80 and "len(houses) == 89" in p80 and "len(gap) == 19" in p80, "")  # python-p80 = 87 (+h49!)
+    check("I6f p80-skripta pini 873 + 88 + gap-18 (POSODABLJENO P164)",
+          "len(vitals) == 873" in p80 and "len(houses) == 88" in p80 and "len(gap) == 18" in p80, "")  # python-p80 = 87 (+h49!)
     houses_all = {v["houseNo"] for v in vit if v["houseNo"].isdigit()}
     check("I6g korpus = 92 hiš (NESPREMENJENA — zasičanje!)", len(houses_all) == 93, str(len(houses_all)))
 
@@ -245,9 +245,9 @@ def main():
     qa = open(QA_TS, encoding="utf-8").read()
     check("I12 qa-p160 sekcija (161. kontrola)", "qa-p160-parish-death-1894" in qa, "")
     check("I12b qa-pini 866/167 (78×+12×) (P163)",
-          qa.count("!== 866") >= 78 and qa.count("!== 167") >= 12,
+          qa.count("!== 873") >= 78 and qa.count("!== 174") >= 12,
           f"{qa.count('!== 866')}/{qa.count('!== 167')}")
-    check("I12c qa guard 1895 (bloki 1895+ ne!)", "1898+-mrliški bloki že v korpusu" in qa, "")
+    check("I12c qa guard 1895 (bloki 1895+ ne!)", "1899+-mrliški bloki že v korpusu" in qa, "")
     par = open(PARISH_TS, encoding="utf-8").read()
     check("I12d parish.ts P160-bloki (6× 1894-04894)",
           par.count('bookSignature: "04894",\n    year: 1894,') == 6, "")

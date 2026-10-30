@@ -1,0 +1,308 @@
+{
+ "status": "SAMPLE-TRANSCRIPTION-D1898",
+ "generated": "2026-10-30",
+ "phase": "P164",
+ "source": "matricula-online.eu 04894 skeni s65–s72 (8/8 JPEG 200)",
+ "frame": {
+  "leto": 1898,
+  "vrstic": 48,
+  "griblje_vpisi": 7,
+  "hise": 6,
+  "ponovitve": "h64 ×2 (Ana-63-April + Matija-58-Okt = PAR [~] — 2 smrti ISTA HIŠA v ~6 mesecev!) + PEZDIREC-×4 (h52-Marija + h30-Doroteja + h64-Ana-roj. + Boršt-h23-Janez — 3 na Gribljih + 1 sosednja vas!)",
+  "meja_1897_98": "s65-dno: »1898.« DVOJNO podčrtana na PRAZNI vrsti + zap1 »3. Jan. 5.« — Jan.-OKRAJŠAVA-INLINE + restart zap 58→1 = 5. STIL 6. POTRDITEV (P163-potrditev; pikselsko @max-zoom s65-meja-marker!)",
+  "meja_1898_99": "s70-top: »1899.« ročno v smrti-celici zap1 NAD Januarj-INLINE + restart zap 48→1 = 4. INLINE-potrditev (cf. P161-s51 »— 1895. —« INLINE!) — P163-lead-'s71+?' OVRJEN (s70 = ŽE 1899: glava + zap 1–11; s69-dno = PRAZNE vrste brez markera!)",
+  "skeni_nov": 8,
+  "griblje_hise": "22,30,34,52,60,64",
+  "rast": "13→13→29→8→15→15→17→10→6→12→16→13→7 (DNO mrliške linije — najnižje odkar 1889-8; PEZDIREC-×4 = edina svetla pika!)"
+ },
+ "entries": [
+  {
+   "row": 4,
+   "zap": 4,
+   "houseNo": "52",
+   "bookSignature": "04894",
+   "year": 1898,
+   "scan": 66,
+   "page": 65,
+   "mesec": "Januarj",
+   "smrt": "26.",
+   "pokop": "28.",
+   "ime": "Marija PEZDIREC [★★ max-zoom: P-e-z-d-i-r-e-c — KURRENT-z-zanke!]",
+   "stan": "½ ženljakova hči",
+   "rojena": null,
+   "spol": "žens.",
+   "starost": "11 mesecev",
+   "bolezen": "Božjast",
+   "previden": "1",
+   "duhovnik": "Fr. Škurmelj [VLM-'Jelen' ZAVRJEN @max-zoom — podpis = Škurmelj!]",
+   "opomba": "★★★ PEZDIREC-era 7. leto (1896-×2 + 1897-×3 + 1898-×4!) + h52 = 1. MRLIŠKI VPIS KADARKOLI (20. PT-luknja-dokaz — h52 ŽE v P80_PT_GAP-doc-list prek poročne-1895-Mathias-Perdinec!) + hišna-'32'→52 @max-zoom (5 = raven-zgornji-dvig!) + P163-lead-'h32' OVRJEN + 5 + 2 hišna (52 — 8×)"
+  },
+  {
+   "row": 10,
+   "zap": 10,
+   "houseNo": "30",
+   "bookSignature": "04894",
+   "year": 1898,
+   "scan": 66,
+   "page": 65,
+   "mesec": "Marec [VLM-'Maj' ZAVRJEN @max-zoom — 5-glyph = Marcej!]",
+   "smrt": "5.",
+   "pokop": "7.",
+   "ime": "Doroteja PEZDIREC [★★ max-zoom: z-zanke]",
+   "stan": "½ ženlj. žena",
+   "rojena": null,
+   "spol": "žens.",
+   "starost": "59 let",
+   "bolezen": "Nadruha",
+   "previden": "1",
+   "duhovnik": "Fr. Škurmelj",
+   "opomba": "★★ PEZDIREC-×4-#2 + h30 = 6. mrliški vpis (1889 + 1890-×2 + 1891 + 1895 + 1898 — NAJPOGOSTEJŠA Griblje-hiša mrliške!) + 3 + 0 hišna (30 — 8×)"
+  },
+  {
+   "row": 14,
+   "zap": 14,
+   "houseNo": "64",
+   "bookSignature": "04894",
+   "year": 1898,
+   "scan": 66,
+   "page": 65,
+   "mesec": "April",
+   "smrt": "7.",
+   "pokop": "9.",
+   "ime": "Ana VERBIČAR [~ Verbiščar — caron!], roj. PEZDIREC",
+   "stan": "omožena bajtarica",
+   "rojena": "PEZDIREC",
+   "spol": "žens.",
+   "starost": "63 let",
+   "bolezen": "Oslablost",
+   "previden": "1",
+   "duhovnik": "Jos. Rauq",
+   "opomba": "★★★ h64-×2-1898-#1 + ★★★ PEZDIREC-×4-#3 (rojena!) + h64 = 3.–4. vpis čez 3 leta (1896-×2-Bule-otroci + 1898-×2-VERBIČAR-par — hiša-×2-v-2-LETIH!) + 6 + 4 hišna (64 — 8×)"
+  },
+  {
+   "row": 21,
+   "zap": 21,
+   "houseNo": "34",
+   "bookSignature": "04894",
+   "year": 1898,
+   "scan": 67,
+   "page": 66,
+   "mesec": "Maj",
+   "smrt": "13.",
+   "pokop": "16.",
+   "ime": "Ana FILAK",
+   "stan": "omožena ženljakinja",
+   "rojena": null,
+   "spol": "žens.",
+   "starost": "60 let",
+   "bolezen": "Vodernica [VLM-'Hprnica[?]' ZAVRJEN — korpus-termin ×4!]",
+   "previden": "1",
+   "duhovnik": "Fr. Škurmelj",
+   "opomba": "★★ h34 = 1. MRLIŠKI VPIS KADARKOLI (21. PT-soroden dokaz; h34 IZVEN 41–60-luknje!) + FILAK-vez (1895-h16-×2 + 1896-h51-Marija-Urh-roj.-Filak!) + 3 + 4 hišna (34 — 8×)"
+  },
+  {
+   "row": 37,
+   "zap": 37,
+   "houseNo": "64",
+   "bookSignature": "04894",
+   "year": 1898,
+   "scan": 68,
+   "page": 67,
+   "mesec": "Oktober",
+   "smrt": "1. [VLM-'11.' ZAVRJEN — kronologija: zap38 = 6./8.!]",
+   "pokop": "6.",
+   "ime": "Matija VERBIČAR [★★ max-zoom: Griblje-64 jasno!]",
+   "stan": "vdovec in ožitkar [~]",
+   "rojena": null,
+   "spol": "moš.",
+   "starost": "58 let",
+   "bolezen": "Oslablost",
+   "previden": "1",
+   "duhovnik": "Fr. Škurmelj [VLM-'F. Hennig' ZAVRJEN!]",
+   "opomba": "★★★ h64-×2-1898-#2 (Ana-April + Matija-Okt = 2 smrti ISTA HIŠA v ~6 MESECIH — verjetno PAR [~] — cf. 1896-h51-×2-12-dni + 1895-h46-2-dni!) + 3. mrliški vpis h64 + A6-kronologija-POPRAVEK (smrt-11./pokop-6. nemogoče → 1./6. [~])"
+  },
+  {
+   "row": 46,
+   "zap": 46,
+   "houseNo": "60",
+   "bookSignature": "04894",
+   "year": 1898,
+   "scan": 69,
+   "page": 68,
+   "mesec": "December",
+   "smrt": "16.",
+   "pokop": "18.",
+   "ime": "Ana ŽELJKO [~ Željka — H9!]",
+   "stan": "½ ženljakova hči",
+   "rojena": null,
+   "spol": "žens.",
+   "starost": "1½ leta",
+   "bolezen": "Kašelj [VLM-'Vaselj' ZAVRJEN @max-zoom — K-a-š-e-l-j jasno!]",
+   "previden": "1",
+   "duhovnik": "Fr. Škurmelj",
+   "opomba": "★ h60 = 3. mrliški vpis (1888-×2 + 1898) + ŽELJKO-vez (P92-1887-botra-Nikolaj-Željko-h1 = familija!) + 6 + 0 hišna (60 — 8×)"
+  },
+  {
+   "row": 48,
+   "zap": 48,
+   "houseNo": "22",
+   "bookSignature": "04894",
+   "year": 1898,
+   "scan": 69,
+   "page": 68,
+   "mesec": "December",
+   "smrt": "22.",
+   "pokop": "24.",
+   "ime": "Janez MILEK [VLM-'Mihel' ZAVRJEN @max-zoom — M-i-l-e-k jasno!]",
+   "stan": "oženjen kolar [~ gospodin?]",
+   "rojena": null,
+   "spol": "moš.",
+   "starost": "64 let",
+   "bolezen": "Nadruha",
+   "previden": "1",
+   "duhovnik": "Fr. Škurmelj",
+   "opomba": "★ h22 = 2. mrliški vpis (1887-Matija-Milek-3 + 1898-Janez-MILEK-64 — MILEK-×2-hiša!) + 1887-Milek-smrt 12 let pred krstnim prvencem (P153!) + poročna-1898-h22-×2-ženina-same-dan (P127!) + 2 + 2 hišna (22 — 8×)"
+  }
+ ],
+ "excluded": [
+  {
+   "id": "E1",
+   "opis": "s65-zgoraj: 1897-rep zap 51–58 (Klošter-54-Marija-Ihut-5½ + GRIBLJE-48-Janez-Berkič-6-tednov-P163! + … — konec 1897)",
+   "opis2": "meja-1897/98 = s65-dno marker (frame)"
+  },
+  {
+   "id": "E2",
+   "opis": "s66-zap15: Janez-PEZDIREC-Boršt-23-34-let-Jetika (½ ženljakov sin) — PEZDIREC-×4-#4 ampak vas = BORŠT (ne Griblje!)",
+   "opis2": "max-zoom: P-e-z-d-i-r-e-c z-zanke jasne — VLM ✓; diag-'Borčinec' ZAVRJEN!"
+  },
+  {
+   "id": "E3",
+   "opis": "s67-zap18: ŠKRILJE-2-Nikolaj-Tome-66-let-Vodenica[~Vodninska-bolga?] — P163-lead-'h2-Griblje' OVRJEN (vas = Škrilje, ŽE v župnijskem-naboru!)",
+   "opis2": "max-zoom: Š-k-r-i-l-j-e s caronom — VLM-'Krasinec' ZAVRJEN (A2-vas-napaka!)"
+  },
+  {
+   "id": "E4",
+   "opis": "s70-celota (zap 1–11) = 1899 (glava 'Leto 1899' + '1899.'-INLINE + restart) — P165!",
+   "opis2": "Griblje ×1 že 1899: zap10-h20-Marija-Pezdirec (PEZDIREC-era-8.-leto-lead!)"
+  },
+  {
+   "id": "E5",
+   "opis": "s71/s72 (zap 12–35) = 1899-nadaljevanje — P165; s72-VLM-meseci-KAOS (Januarj@24? februarj@27? Avgust@32?) — anomalija-P165-lead",
+   "opis2": ""
+  },
+  {
+   "id": "E6",
+   "opis": "s70-zap7: Krasinec-3-Jožef-Pezdirec[~]-2-mes-Vodnica — 1899 (PEZDIREC-era-8.-leto-lead)",
+   "opis2": ""
+  },
+  {
+   "id": "E7",
+   "opis": "s65-meja-marker + s70-meja-marker — frame-dokaz (ne vpis)",
+   "opis2": "DVOJNI-podčrtaj-s65 + INLINE-s70 = 2 različni varianti stil-#5!"
+  },
+  {
+   "id": "E8",
+   "opis": "Griblje-lead ×7 (s66-zap4-h52-Marija-Pezdirec + s66-zap10-h30-Doroteja + s66-zap14-h64-Ana-Verbičar-roj.-Pezdirec + s67-zap21-h34-Ana-Filak + s68-zap37-h64-Matija-Verbičar + s69-zap46-h60-Ana-Željko + s69-zap48-h22-Janez-Milek) — VSI POTRJENI @max-zoom!",
+   "opis2": "P163-lead-'h32'→52 OVRJEN (5-forma!) + lead-'×2-s67-h2+h34' DELNO OVRJEN (h2 = Škrilje!)"
+  }
+ ],
+ "anomalies": [
+  {
+   "id": "A1",
+   "opis": "MAX-ZOOM > VLM 15. potrditev = 9 popravkov: hišna-'32'→52 + 'Maj'→Marcej-zap10 + 'Krasinec'→Škrilje-zap18 + 'Hprnica[?]'→Vodernica-zap21 + 'Vaselj'→Kašelj-zap46 + 'Mihel'→Milek-zap48 + 'Žele'→Željko-zap46 + 'Jelen'/'Hennig'→Fr.-Škurmelj-podpisa + 'Starost/Slabost'→Mrtvorojen-zap5"
+  },
+  {
+   "id": "A2",
+   "opis": "P162b-γ-lekcija 16.–17. POTRDITEV: s65-zap2-starost 41→71 + s65-zap3-starost 43→93→73 (γ-forma = 7! VLM×2 + diag-eye vsi ZAVRJENI @max-zoom ×3.2!) — VEDNO kalibriraj γ/±/zaprta-zanka!"
+  },
+  {
+   "id": "A3",
+   "opis": "★★★ h64-×2-DRAMA: Ana-VERBIČAR-roj.-PEZDIREC-63-April + Matija-VERBIČAR-58-Okt = 2 smrti ISTA HIŠA v ~6 MESECIH (verjetno PAR [~]) — 3. tak par linije (1895-h46-2-dni + 1896-h51-12-dni + 1898-h64-6-mes!)"
+  },
+  {
+   "id": "A4",
+   "opis": "★★★ PEZDIREC-×4-v-1898 = REKORD mrliške (Marija-½-hči-h52 + Doroteja-žena-h30 + Ana-roj.-Pezdirec-h64 + Janez-sin-Boršt-h23) — era 7. leto; 1899-lead: h20-Marija + h3-Jožef[~] = era-8.!"
+  },
+  {
+   "id": "A5",
+   "opis": "2× mrtvorojen-BREZ-podpisa (s68-zap39-N.-Plut-dele-možkega-spola + s69-zap41-N.-Jože-dele-možkega-spola — r53-vzorec #12–#13; — črtica namesto podpisa @max-zoom!)"
+  },
+  {
+   "id": "A6",
+   "opis": "s68-zap37-kronologija: VLM-smrt-'11.'/pokop-'6.' NEMOŽE → smrt-1./pokop-6. [~ rekonstrukcija: zap38 = 6./8. nadaljuje!]"
+  },
+  {
+   "id": "A7",
+   "opis": "VLM-duhovnik-stolpec NEZANESLJIV-1898: 'Fr. Jelen' (s66) + 'F. Hennig' (s68) ZAVRJENA @max-zoom — podpisi = Fr.-Škurmelj + Jos.-Rauq-leksikon (cf. P161-Škurmelj-od-Nov-1895!)"
+  },
+  {
+   "id": "A8",
+   "opis": "SKEN-GEOMETRIJA: dvoglavi-razpon ('Mrtvaška-knjiga.') + ROTACIJA (pravila-drsijo v x) + natisnjen-navpičen-'Zaporedna-štev.'-naslov-v-zap-stolpcu → zap-stolpčna-detekcija zahteva morfološko-odstranitev-črt (scipy-opening-81×1) — P163-s64-napaka-RAZREŠENA!"
+  },
+  {
+   "id": "A9",
+   "opis": "P163-lead-VLM-glava-'1897'-s68-ANOMALIJA OVRJENA: s68-glava = 'Leto 1898' (jasno @diag; zap 28–39!)"
+  },
+  {
+   "id": "A10",
+   "opis": "1898 = DNO mrliške linije (48 vpisov / 7 Gribljev — najnižje odkar 1889-8) + meseci Jan4·Feb1·Mar8·Apr3·Maj10·Jun2·Jul3·Avg2·Sep3·Okt5·Nov2·Dec5 + otroška umrljivost 46 % (≤6-let ×22/48)"
+  }
+ ],
+ "crossChecks": [
+  {
+   "id": "X1",
+   "opis": "stran == sken − 1 — 27.–34. potrditev (s65=64! s66=65! s67=66! s68=67! s69=68! s70=69! s71=70! s72=71!) — P80-invarianta mrliške"
+  },
+  {
+   "id": "X2",
+   "opis": "zap-continuity 1–48 brez preskokov (s65-dno 1–3 + s66 4–15 + s67 16–27 + s68 28–39 + s69 40–48) + restart-1-NA-s70 (1899!)"
+  },
+  {
+   "id": "X3",
+   "opis": "meseci = Jan4·Feb1·Mar8·Apr3·Maj10·Jun2·Jul3·Avg2·Sep3·Okt5·Nov2·Dec5 = 48 ✓ (brez MESEC-0 — 1. leto z vsemi 12 meseci odkar 1890!)"
+  },
+  {
+   "id": "X4",
+   "opis": "Griblje-hiše 6 (22,30,34,52,60,64) — VSE ŽE v korpusu-93 (0 novih hiš — 4. leto zasičanja; h51-P162 = zadnja!)"
+  },
+  {
+   "id": "X5",
+   "opis": "h34 + h52 = 1. MRLIŠKI VPIS KADARKOLI (h52 = 20. PT-luknja-dokaz — ŽE v P80_PT_GAP-doc-list prek poročne-1895; h34 = 21. — IZVEN 41–60-luknje!)"
+  },
+  {
+   "id": "X6",
+   "opis": "h30 = 6. mrliški vpis (1889 + 1890-×2 + 1891 + 1895 + 1898 — REKORDISTKA mrliške!)"
+  },
+  {
+   "id": "X7",
+   "opis": "h64-vez: 1896-×2 (Bule-otroci-r-wave!) → 1898-×2 (VERBIČAR-par) — hiša-×2-v-2-letih; + h60 1888-×2 → 1898; + h22 1887 → 1898 (MILEK-×2!)"
+  },
+  {
+   "id": "X8",
+   "opis": "PEZDIREC-mreža-čez-knjige: poročna-1886-Nikolaj-PEZDIRC-h16-P115 + mrliška 1896-×2 + 1897-×3 + 1898-×4 = era-rast 2→3→4!"
+  },
+  {
+   "id": "X9",
+   "opis": "meje ×2 pikselsko (s65-'1898.'-DVOJNI-podčrtaj-prazna-vrsta + s70-'1899.'-INLINE) — 2 VARIANTI stil-#5 v istem letu!"
+  },
+  {
+   "id": "X10",
+   "opis": "PIN-kaskada: vitals 866→873 (+7) · mrliški-bloki-04894 167→174 · p80-skripta 873/88/18 (h34/h52 IZVEN p80-filtra!) · korpus-93-NESPREMENJEN · qa-p164 = 165. kontrola"
+  }
+ ],
+ "honesty": [
+  "H1: branja = 8× celostansko VLM (glm-5v-turbo, 0 FAIL) + 8× diag-PNG agent-oči (full-transkripcija 48+ vrstic) + 26 max-zoom izrezov (22 + 4 dopolnilni: podpisa + zap5 + zap39 + zap15)",
+  "H2: [~] konservativno: ŽELJKO[~Željka] + ožitkar[~] + oženjen-kolar[~gospodin] + Verbiščar[~Verbičar] + Vodernica-kontekst + Škrilje-Vodenica-bolezen[~Vodninska-bolga] + Dragovič[~Dragoše] + Hamrščak[~Stampahtar] + Kalf[~Skalj] + Marentič[~Havernik] + Jakopec[~Jakopič] + Podbar[~Stublar] + Maverič[~Marošnič]",
+  "H3: SANACIJA-ne-potrebna (/tmp/p164 artefakti zdržali celo sejo — prvič odkar P161!)",
+  "H4: duhovnik-stolpec za 48-vrstic NE-popoln-forenzično (max-zoom le ×2 podpisa) — Škurmelj/Rauq-razpored po diag-agent-oči; 'Jelen'/'Hennig' VLM-zmeda dokumentirana",
+  "H5: rows.json = morfološka-odstranitev-črt (MERGE_GAP-55; head-merge ×7 skenov) — diag-overlays približni (±40px), crops ročno-kalibrirani",
+  "H6: zap15-mesec = Maj [~] (diag-glyph dvomen 'Maraj/Marej' — kronologija: Apr7→Maj22→Jun21 zahteva Maj!)",
+  "H7: zap37-datumi = 1./6. [~ rekonstrukcija-kronologije — VLM '11./6.' nemogoče]",
+  "H8: zap12-starost = '1' (leto|uro dvom — VLM '1 leto' vs diag '1 urno' — [~])",
+  "H9: h60-ŽELJKO [~] — cf. P92-1887-botra-Nikolaj-Željko-h1 (familija-ime); ženska-oblika 'Željka' [~]",
+  "H10: VLM-MISS-Griblje = 0-leta (diag-8/8 potrjeno — P163-×3-s63-lekcija vgrajena v prompt!) + A2-vas (Škrilje) forenzično-potrjena"
+ ],
+ "nextSteps": [
+  "P165 = mrliška 1899 (s70-glava-'Leto 1899' + '1899.'-INLINE-zap1 [Januarj 1./5.-Otok-11-Nikolaj-Jurcavič-68!] + s70 zap 1–11 [Griblje ×1: zap10-h20-Marija-Pezdirec! — PEZDIREC-era-8.!] + s71 zap 12–23 [Griblje ×5!] + s72 zap 24–35 [Griblje ×2: h32-Marija-Mulek? + h24-Matija-Štrinec?] — VLM-s72-meseci-KAOS (Januarj@24?) ANOMALIJA! + NOVI-DUHOVNIK-#9-kandidat: Franc-Števan-coop!; meja 1899/1900 [~ s75+?])"
+ ]
+}
