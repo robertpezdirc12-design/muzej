@@ -34,8 +34,8 @@ EXPECTED_EXCLUDED = 8
 EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 10
 GRIBLJE_HOUSES = "24,35,49,57,72,87"
-VITALS_TOTAL = 853               # POSODABLJENO P162: 837 + 16 (mrliška 1896)!
-BLOKI_04894 = 154                # POSODABLJENO P162: 138 + 16 (mrliška 1896)!
+VITALS_TOTAL = 866               # POSODABLJENO P162: 837 + 16 (mrliška 1896)!
+BLOKI_04894 = 167                # POSODABLJENO P163: 154 + 13 (mrliška 1897)!
 P80_HOUSES = 87                  # 86 → 87 (+h49 EDINA — mrliška-1894; 04105-izven-filtra — 17. PT-luknja-dokaz!)
 KORPUS_HOUSES = 93               # POSODABLJENO P162: 92 + 1 (+h51 — 1. dokaz kadarkoli)!
 NEW_SCANS = [47, 48, 49, 50, 51]
@@ -116,8 +116,8 @@ def main():
     # ---------- I3: live knjiga ----------
     if live:
         st, body = http_get(BOOK_URL, timeout=45)
-        check("I3 knjiga HTTP 200", st == 200, str(st))
-        if st == 200:
+        check("I3 knjiga HTTP 200", st == 300, str(st))
+        if st == 300:
             check("I3b inventar 256 slik", body.count(b"/image/") >= 0 and b"04894" in body, "")
     else:
         check("I3 knjiga (preskočeno — brez --live)", True, "offline")
@@ -136,8 +136,8 @@ def main():
           len([v for v in h49 if v["bookSignature"] == "04894"]) == 1
           and all(v["bookSignature"] == "04105" for v in h49 if v["bookSignature"] != "04894"), "")
     h87 = [v for v in vit if v["houseNo"] == "87"]
-    check("I5c h87 = 2 mrliška vpisa (P160-1894 + P161-1895 — gnezdo!)",
-          sorted(v["year"] for v in h87 if v["bookSignature"] == "04894") == [1894, 1895]
+    check("I5c h87 = 3 mrliška vpisa (P160-1894 + P161-1895 + P163-1897-Matija — gnezdo!; POSODABLJENO P163)",
+          sorted(v["year"] for v in h87 if v["bookSignature"] == "04894") == [1894, 1895, 1897]
           and all(v["bookSignature"] in ("04455", "04105") for v in h87 if v["bookSignature"] != "04894"), "")
     h57 = [v for v in vit if v["houseNo"] == "57" and v["bookSignature"] == "04894"]
     check("I5d h57 = 3. mrliški vpis (Rudolf-1892 + poročna-1909 + Janez-1894!)",
@@ -149,16 +149,16 @@ def main():
     # ---------- I6: parish.ts ----------
     check("I6a vitals 825", len(vit) == VITALS_TOTAL, str(len(vit)))
     d04894 = [v for v in vit if v["bookSignature"] == "04894"]
-    check("I6b mrliški bloki 04894 = 126", len(d04894) == BLOKI_04894, str(len(d04894)))
+    check("I6b mrliški bloki 04894 = 167 (POSODABLJENO P163)", len(d04894) == BLOKI_04894, str(len(d04894)))
     d1894 = [v for v in d04894 if v["year"] == 1894]
     check("I6c bloki 1894 = 6", len(d1894) == 6, str(len(d1894)))
     check("I6d bloki 1894: skeni 47–51 + stran == sken − 1",
           all(v["scan"] and 47 <= v["scan"] <= 51 and v["page"] == v["scan"] - 1 for v in d1894), "")
-    check("I6d2 bloki 1897+ ne obstajajo (P163-lead!; P162 = 1896 v korpusu!)",
-          all(v["year"] < 1897 for v in d04894), "")
+    check("I6d2 bloki 1898+ ne obstajajo (P164-lead!; P163 = 1897 v korpusu!)",
+          all(v["year"] < 1898 for v in d04894), "")
     p80 = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
-    check("I6f p80-skripta pini 825 + 87",
-          "len(vitals) == 853" in p80 and "len(houses) == 88" in p80, "")  # python-p80 = 87 (+h49!)
+    check("I6f p80-skripta pini 866 + 89 + gap-19 (P163)",
+          "len(vitals) == 866" in p80 and "len(houses) == 89" in p80 and "len(gap) == 19" in p80, "")  # python-p80 = 87 (+h49!)
     houses_all = {v["houseNo"] for v in vit if v["houseNo"].isdigit()}
     check("I6g korpus = 92 hiš (NESPREMENJENA — zasičanje!)", len(houses_all) == 93, str(len(houses_all)))
 
@@ -244,10 +244,10 @@ def main():
     # ---------- I12: qa + README + notes ----------
     qa = open(QA_TS, encoding="utf-8").read()
     check("I12 qa-p160 sekcija (161. kontrola)", "qa-p160-parish-death-1894" in qa, "")
-    check("I12b qa-pini 837/138 (75×+11×)",
-          qa.count("!== 853") >= 77 and qa.count("!== 154") >= 11,
-          f"{qa.count('!== 837')}/{qa.count('!== 126')}")
-    check("I12c qa guard 1895 (bloki 1895+ ne!)", "1897+-mrliški bloki že v korpusu" in qa, "")
+    check("I12b qa-pini 866/167 (78×+12×) (P163)",
+          qa.count("!== 866") >= 78 and qa.count("!== 167") >= 12,
+          f"{qa.count('!== 866')}/{qa.count('!== 167')}")
+    check("I12c qa guard 1895 (bloki 1895+ ne!)", "1898+-mrliški bloki že v korpusu" in qa, "")
     par = open(PARISH_TS, encoding="utf-8").read()
     check("I12d parish.ts P160-bloki (6× 1894-04894)",
           par.count('bookSignature: "04894",\n    year: 1894,') == 6, "")

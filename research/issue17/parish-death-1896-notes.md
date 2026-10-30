@@ -74,3 +74,27 @@ stale-guardi 1893+/1896+ → **1897+** (11×) · qa-p162 = **163. kontrola** · 
 **P163-LEAD**: mrliška 1897 — s60-dno-restart (zap1–2) + s61 (glava 'Leto 1897', zap 3–14) + s62+;
 Griblje-lead ×3: **h51-Ana-Urh-roj.-Novosel-61** (URH-TRILOGIJA #3!) + **h42-Pezdirc?-52** +
 **h2-Ana-Vrobeč?-33/53?**; meja 1897/98 [~ s67+?].
+
+## γ-REVIZIJA-P162b (2026-10-30, današnja seja)
+
+Pri ponovni forenziki (26 izrezov: 23 trakovi ×2.2 + celice ×3.0 + primerjava-cifer) je
+**zap-stolpčna kalibracija s56** razkrila sistematiko γ→4 v prejšnji seji:
+
+| Referenca | Glyph | Zaključek |
+|---|---|---|
+| s56 zap-stolpec v3 (sekvenca 5,6,**7**,8…16 — železno, s55 se konča z zap4!) | **γ-zanka** (odprt vrh, spodnja zanka) | **7 = γ-zanka** |
+| s56 zap-stolpec v10 »14« | **+-križ** (središčna zanka) | **4 = +-križ** |
+| s56 zap-stolpec v5 »9« | **zaprta zgornja zanka + rep** | **9 = zaprta-zanka** |
+| s55 v10 Tomc »γ+±« (celostranski VLM '44') | γ + +-križ | **74** (ne 44 — isti γ→4 obrat!) |
+
+**Posledice (3 starosti popravljene):**
+1. **h51 Peter URH: 42 → 72 let** — prejšnja seja je eliminirala '92' (VLM), a brez 7-testa sprejela lead-'42'; γ-glyph = ZAP7.
+2. **h58 Ana PRIJET roj. BRINEC: 40 → 70 let** — isto γ→4; VLM-'30'/'34' ostajata zavrnjena (pravilno).
+3. **h45 Barbara STRAUS: 40 → 70 let** — isto γ→4.
+
+**Ohranjeno:** vas-A2-popravki (s56-zap5 = Boginja vas! s58-zap31 = Prilozje! — pixel-verificirano
+današnjo sejo na vas-celicah: 'Boginja vas 42' + 'Prilozje 27' + 'Griblje 58' jasno berljivi);
+ime 'Ana PRIJET roj. BRINEC, vdova kolarica' (ime-celica pixel-verificirana).
+
+**h51-DRAMA nespremenjena** (2 smrti v 12 dneh), a odnos Marija↔Peter NI več mati/sin (oba 72!).
+Kurent-lekcija za P163+: VEDNO kalibriraj γ/±/zaprta-zanka na zap-stolpcu ISTEGA skena pred branjem starosti.

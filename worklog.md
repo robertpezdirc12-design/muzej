@@ -6553,6 +6553,33 @@ Stage Summary:
 - korpus po P161: **837 vitalov · bloki 04455 197 + 04894 138 · sidra 190 · hiše 87 (p80) / 92 (korpus) · PT 14**, QA **162/162**
 - P162 LEAD: mrliška **1896** (s55-dno-restart zap1–4 [Dobravice-21-Zugelj-2-DNI + Prilozje-30 + Primostek-15 + **GRIBLJE-58-Ana-roj.-Primca-vdova-kolarica-40-Slabost**!] + s56 Stran-55 zap5–16 ×4 Gribljev [h14-mrtvorojeno?-neznani + h45-Barbara-Straus-vdova-Zavrtovič-40 [h72-gnezdo-vez!] + h51 ×2-DVORNA [Marija-Mih.-roj.-Filak-72-Slabost + Peter-**URH**-vdovec-42-Nadluha = **URH-h32-vez!**]] + s57+; meja 1896/97 [~ s60+?]; forenzika: Fr.-Škura = Škurmelj-krajša? + zap8-'Mrkvožjen'-vzrok)
 
+## P163 — MRLIŠKA KNJIGA 04894, LETO 1897 = 12. POLNO LETO MRLIŠKE LINIJE (issue #18) — 58 vrstic / 13 vpisov / 10 hiš
+
+- OKVIR POTRJEN: s60-dno (restart zap 1–2 — P162!) + s61 (glava 'Leto 1897' + zap 3–14) + s62 (15–26) + s63 (27–38) + s64 (39–50) + s65 (51–58 + MEJA 1897/98 = **5. STIL MEJE 5. POTRDITEV**: »1898.« DVOJNI podčrtaj na PRAZNI vrsti + Januarij INLINE v zap1 + restart 58→1 — P162-lead-'s67' OVRJEN!)
+- stran == sken − 1 — **26.–32. potrditev!** (s61=60 … s67=66)
+- **1897 = 58 VRSTIC / 13 GRIBLJE-VPISOV / 10 HIŠ (h2 ×2 + h14 ×2 + h53 ×2 = 3 PONOVITVE!)** — odbijanje po vrhuncu-1896 (rast …12→16→**13**!)
+- **★★★ URH-TRILOGIJA dokaz #3**: h51-**Ana URH roj. NOVOSEL** (vdova bajtarca, 61, Slabost, 2.2. — P162-lead 100%! VLM-'Mlh' ZAVRJEN @max-zoom!) = 1893-h32-Martin + 1896-h51-×2 + 1897-Ana = **h51 ×3 v 13 MESECIH**
+- **★★★ PEZDIREC-×3-v-1897**: h42-**Jurij-PEZDIRC**-52-Jetika-Marec [VLM-'Perdivec' → z-zanke! lead-'Jurij/Jožef' POTRJEN: JURIJ!] + h87-**Matija**-3-mes-Julij + h53-**Barbara**-8-mes-September [hišna-'83'→**53**!] — **era 6. leto!**
+- **★★★ HLEBEC-h2-×2-DRAMA**: mati-**Ana-HLEBEC**-33-Maj [VLM-'Vrobeč' ZAVRJEN! γ-3-REŠEN!] + sin-**Peter**-1-mes-Junij [VLM-'6'→9!] = **2 smrti ISTA HIŠA v 6 TEDNEH**
+- **★★★ h54 = 1. MRLIŠKI VPIS KADARKOLI** (Ana-ŠIMEC-rej.-Štruncelj[~]-35 — **19. PT-luknja-dokaz!**)
+- BRINEC-×2 (h53-Ana-2-let + h26-Janez-7-let — pokop-17.7-γ-7 > VLM-'14'!) + STRAUS-MREŽA **#9** (h16-Martin-10-mes — 3. HIŠA mreže!) + h14 = **3-PRIIMKI-hiša** (N.-Brinec-1896 → DRINEC[~] + BERTOPIO[?])
+- **MAX-ZOOM > VLM 14. POTRDITEV = 10 POPRAVKOV** + **VLM-MISS-Griblje ×3 s63** (diag-agent-oči RAZKRILA!) + 2× A2 ponovno (Giriče + Prilozje) + 'prečrtano-1898'-glava-s64 ZAVRJENA + A-scribal-glyph #2 ('Stran 63' γ-3) + r53-#11 (N.-Jakofčič) + NOVI DUHOVNIK #8-kandidat Maginarič-kaplan[~]
+- 2× MESEC-0 (Jan0 + Dec0) · Jetika ×4 · razpon 1 mesec → 61 let · otroška umrljivost **54 %** (7/13!) · kronologija 13/13
+- METODA: 6× celostansko VLM + diag-agent-oči + max-zoom (SANACIJA-ne-potrebna — artefakti zdržali!)
+- **13 NOVIH BLOKOV parish.ts: vitals 853 → 866 · mrliški 04894 154 → 167 · p80 hiše 88 NESPREMENJENE · korpus 93 NESPREMENJEN + p80-skripta-houses 88 NESPREMENJENE (h54 že v vzorci!)** + PIN-KASKADA (p153–p162 skripte VITALS_TOTAL 866/BLOKI 167 + guardi 1898 + stale-guardi → 1898 + p80 PT_GAP_HOUSES +h54 = 19. luknja-dokaz!)
+- dokaz research/issue17/parish-death-1897.json (13 + 8 excluded + 10 anomalij + 10 crossChecks + honesty 10) + notes + skripta p163 (I1–I13; 54 kontrol) + qa-p163 (164. kontrola) + README (glava-164 + mrliška-12/39 + korpus 866/167/89/93 + odprto-①-P164 + TOC P79–P163 + P163-vnos) + worklog
+- verifikacija: p163 **54/54** · p162 **53/53** [γ-REVIZIJA!] · p161 **47/47** · p160 **53/53** · p159 **52/52** · p158 **55/55** · p157 **59/59** · p156 **53/53** · p155 **43/43** · p154 **37/37** · p153 **39/39** · p80 **PASS** · tsc **0** · lint **0**
+- korpus po P163: **866 vitalov · bloki 04455 197 + 04894 167 · sidra 190 · hiše 88 (p80) / 93 (korpus) · PT 15**
+- P164 LEAD: mrliška **1898** (s65-dno-restart-zap1 [Jan-INLINE: Krasinec-23-Matija-Moravec-66!] + s66 glava-'Leto 1898' zap 4–15 [Griblje ×3: h32-Marija-Pezdirec-32? + h30-Doroteja-Pezdirec + h64-Ana-Verbičar-roj.-Pezdirec — PEZDIREC-era-7.!] + s67 (16–27 [×2: h2-Nikolaj-Tome + h34-Ana-Filak]) + s68 (28–39 [×1: h64-Matija-Verbič-58] — VLM-glava-'1897' ANOMALIJA!); meja 1898/99 [~ s71+?])
+
+## P162b — γ-REVIZIJA (2026-10-30) — 3 starosti popravljene
+
+- ★★★ **zap-stolpčna kalibracija s56** (sekvenca 5,6,**7**,8…16 = železno): **γ-zanka = 7** + ZAP-14 »14«: **+-križ = 4** + ZAP-5 »9«: **zaprta-zanka = 9** + Tomc (s55 v10) γ+± = **74** (ne 44 — celostranski VLM isti γ→4 obrat!)
+- **Posledice**: h51-**Peter URH 42 → 72 let** (9-vs-4-eliminacija BREZ 7-testa!) + h58-**Ana PRIJET roj. BRINEC 40 → 70** + h45-**Barbara STRAUS 40 → 70**; h51-ODNOS Marija↔Peter **ne-mati/sin** (OBA 72!)
+- **vas-A2-popravki PIXEL-POTRJENI** (Boginja-vas-42 + Prilozje-27 + Griblje-58!) + ime PRIJET-roj.-BRINEC pixel-potrjeno (ime-celica 'Ana Prijet rojena: Brinec. / vdova kolarica')
+- **26 forenzičnih izrezov** (23 trakovi ×2.2 + celice ×3.0 + primerjava-cifer-4-glyph) + pravilo za nadaljevanje: **VEDNO kalibriraj γ/±/zaprta-zanka na zap-stolpcu ISTEGA skena pred branjem starosti!**
+- parish.ts (3 bloka SI+EN) + qa-p162 (2 pina + povzetka SI/EN) + skripta p162 (3 pini) + dokaz JSON (3 starosti) + notes (γ-REVIZIJA-sekcija) posodobljeni; skripta p162 po reviziji **53/53 PASS**
+
 ## P162 — MRLIŠKA KNJIGA 04894, LETO 1896 = 11. POLNO LETO MRLIŠKE LINIJE (issue #18) — 60 vrstic / 16 Griblje-vpisov / 13 hiš (h51 ×2 + h42 ×2 + h46 ×2 + h64 ×2 = 4 PONOVITVE!)
 
 - ★ **SANACIJA: /tmp/p162 artefakti IZGUBLJENI (sandbox-reset med fazo: 7 VLM-page JSON + rows + traki + celice)** — repo re-kloniran iz GitHub @ P161 (800a41b — 2. re-kloniranje po P156/P160-vzorcu!); skeni s55–s61 ponovno preneseni **7/7 ✓** (matricula inventar 256); **7 celostanskih VLM re-generiranih (0 FAIL)** + **7× diag-PNG agent-oči** (polna transkripcija vseh 82 vrstic s55–s61!) + **18 max-zoom celic** (agent-oči forenzika, širina ≤1568 px = 1:1 branje) — deterministična reprodukcija!

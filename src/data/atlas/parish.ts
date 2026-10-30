@@ -1736,8 +1736,8 @@ export const HOUSE_VITALS: HouseVital[] = [
     year: 1896,
     scan: 55,
     page: 54,
-    whatSi: "umrla Ana PRIJET [~ Prijet/Bržet — X-open], roj. BRINEC [★★ max-zoom: Br-i-n-e-c jasno], vdova kolarica, 40 let [★★ max-zoom 4-0: VLM-'30' + izgubljena-seja-'34' OBOJE ZAVRJENA!] (10. 1., pokop 11. 1.) — Marost [~ Mrtvorost-kompleks cf. zap10-h45!]; previden (pika); Fr. Škurmelj; ★ 1. Griblje-1896 (restart zap4 — 5. STIL 4. potrditev!) + ★★ BRINEC-mreža (h24 1888/1894 + h23-1892-roj.-Hlebec + 1896-h14-N.-Brinec!) + h58 = POŽEK-hiša (1890 ×2!) + 5 + 8 hišna (58 — 8×)",
-    whatEn: "died Ana PRIJET [~ Prijet/Bržet — X-open], née BRINEC [★★ the max-zoom: Br-i-n-e-c clear], a widow cottageress, 40 years [★★ the max-zoom 4-0: the VLM-'30' + the lost-session-'34' BOTH REJECTED!] (Jan 10, buried Jan 11) — Marost [~ the Mrtvorost complex, cf. zap10-h45!]; previden (a DOT); Fr. Škurmelj; ★ the 1st Griblje-1896 (the restart zap4 — the 5th STYLE 4th confirmation!) + ★★ the BRINEC network (h24 1888/1894 + h23-1892-née-Hlebec + 1896-h14-N.-Brinec!) + h58 = the POŽEK house (1890 ×2!) + the 5 + 8 house number (58 — 8×)",
+    whatSi: "umrla Ana PRIJET [~ Prijet/Bržet — X-open], roj. BRINEC [★★ max-zoom: Br-i-n-e-c jasno], vdova kolarica, 70 let [★★★ γ-REVIZIJA-P162b: 7-0 — zap-kalibracija s56 (ZAP7=γ-zanka + ZAP14=+-4 + Tomc-74-dvojčlen!) dokazuje γ=7; seja-'40' BILA γ→4-sistematika! VLM-'30'/'34' ostajata ZAVRJENA!] (10. 1., pokop 11. 1.) — Marost [~ Mrtvorost-kompleks cf. zap10-h45!]; previden (pika); Fr. Škurmelj; ★ 1. Griblje-1896 (restart zap4 — 5. STIL 4. potrditev!) + ★★ BRINEC-mreža (h24 1888/1894 + h23-1892-roj.-Hlebec + 1896-h14-N.-Brinec!) + h58 = POŽEK-hiša (1890 ×2!) + 5 + 8 hišna (58 — 8×)",
+    whatEn: "died Ana PRIJET [~ Prijet/Bržet — X-open], née BRINEC [★★ the max-zoom: Br-i-n-e-c clear], a widow cottageress, 70 years [★★★ the γ-REVISION-P162b: 7-0 — the s56 zap-calibration (ZAP7=γ-loop + ZAP14=+-4 + Tomc-74-double!) proves γ=7; the session-'40' WAS a γ→4 systematic error! The VLM-'30'/'34' remain REJECTED!] (Jan 10, buried Jan 11) — Marost [~ the Mrtvorost complex, cf. zap10-h45!]; previden (a DOT); Fr. Škurmelj; ★ the 1st Griblje-1896 (the restart zap4 — the 5th STYLE 4th confirmation!) + ★★ the BRINEC network (h24 1888/1894 + h23-1892-née-Hlebec + 1896-h14-N.-Brinec!) + h58 = the POŽEK house (1890 ×2!) + the 5 + 8 house number (58 — 8×)",
     status: "DOCUMENTED",
   },
   {
@@ -1756,8 +1756,8 @@ export const HOUSE_VITALS: HouseVital[] = [
     year: 1896,
     scan: 56,
     page: 55,
-    whatSi: "umrla Barbara STRAUS [★★ STRAUS-glyph cf. 1893-h45!], roj. ZAVRTOVIČ, omožena bajtarica, 40 let (29. 1., pokop 31. 1.) — Mrtvorost [~ Mrtvod — cf. zap4-MAROST ISTI MESEC!]; previden (pika); Fr. Škurmelj; ★★ STRAUS-MREŽA #8 (h45 = 2. Strauš-vpis: 1893-h45-Ana-Straus-44-gostja-bajtarjeva-hči-Jetika! + 1888-h72 + 1890-h42/h71 + 1921-№22!) + 4 + 5 hišna (45 — 8×)",
-    whatEn: "died Barbara STRAUS [★★ the STRAUS glyph cf. 1893-h45!], née ZAVRTOVIČ, a married cottageress, 40 years (Jan 29, buried Jan 31) — Mrtvorost [~ Mrtvod — cf. zap4-MAROST the SAME MONTH!]; previden (a DOT); Fr. Škurmelj; ★★ the STRAUS network #8 (h45 = the 2nd Strauš entry: 1893-h45-Ana-Straus-44! + 1888-h72 + 1890-h42/h71 + 1921-№22!) + the 4 + 5 house number (45 — 8×)",
+    whatSi: "umrla Barbara STRAUS [★★ STRAUS-glyph cf. 1893-h45!], roj. ZAVRTOVIČ, omožena bajtarica, 70 let [★★★ γ-REVIZIJA-P162b: 7-0 — γ=7 (ZAP7=γ-zanka s56; VLM-'40' = γ→4-sistematika!)] (29. 1., pokop 31. 1.) — Mrtvorost [~ Mrtvod — cf. zap4-MAROST ISTI MESEC!]; previden (pika); Fr. Škurmelj; ★★ STRAUS-MREŽA #8 (h45 = 2. Strauš-vpis: 1893-h45-Ana-Straus-44-gostja-bajtarjeva-hči-Jetika! + 1888-h72 + 1890-h42/h71 + 1921-№22!) + 4 + 5 hišna (45 — 8×)",
+    whatEn: "died Barbara STRAUS [★★ the STRAUS glyph cf. 1893-h45!], née ZAVRTOVIČ, a married cottageress, 70 years [★★★ the γ-REVISION-P162b: 7-0 — γ=7 (ZAP7=γ-loop s56; the VLM-'40' = a γ→4 error!)] (Jan 29, buried Jan 31) — Mrtvorost [~ Mrtvod — cf. zap4-MAROST the SAME MONTH!]; previden (a DOT); Fr. Škurmelj; ★★ the STRAUS network #8 (h45 = the 2nd Strauš entry: 1893-h45-Ana-Straus-44! + 1888-h72 + 1890-h42/h71 + 1921-№22!) + the 4 + 5 house number (45 — 8×)",
     status: "DOCUMENTED",
   },
   {
@@ -1766,8 +1766,8 @@ export const HOUSE_VITALS: HouseVital[] = [
     year: 1896,
     scan: 56,
     page: 55,
-    whatSi: "umrla Marija URH, roj. FILAK, omožena kolarica, 72 let (29. 1., pokop 31. 1.) — Slabost; previden (1); Fr. Škurmelj; ★★★ h51 = NOVA korpusna hiša #93 + p80 #88 (1. dokaz kadarkoli — 0 blokov do P162!) + ★★★ h51-DRAMA #1 (12 dni pred sinom-Peterjem-42-Februar!) + FILAK-vez (1895-×2-h16 cf. P157!) + 5 + 1 hišna (51 — 8×) + P161-lead 'h51 ×2 DVORNA' POTRJEN",
-    whatEn: "died Marija URH, née FILAK, a married cottageress, 72 years (Jan 29, buried Jan 31) — Slabost [~ weakness]; previden (1); Fr. Škurmelj; ★★★ h51 = the NEW corpus house #93 + p80 #88 (the 1st evidence EVER — 0 blocks before P162!) + ★★★ the h51-DRAMA #1 (12 days before the son-Peter-42-February!) + the FILAK link (1895-×2-h16 cf. P157!) + the 5 + 1 house number (51 — 8×) + the P161-lead 'h51 ×2' CONFIRMED",
+    whatSi: "umrla Marija URH, roj. FILAK, omožena kolarica, 72 let (29. 1., pokop 31. 1.) — Slabost; previden (1); Fr. Škurmelj; ★★★ h51 = NOVA korpusna hiša #93 + p80 #88 (1. dokaz kadarkoli — 0 blokov do P162!) + ★★★ h51-DRAMA #1 (12 dni pred Peterjem-72 [γ-REVIZIJA] -Februar — ODNOS ne-mati/sin, OBA 72 [~ svak/soskinja]!) + FILAK-vez (1895-×2-h16 cf. P157!) + 5 + 1 hišna (51 — 8×) + P161-lead 'h51 ×2 DVORNA' POTRJEN",
+    whatEn: "died Marija URH, née FILAK, a married cottageress, 72 years (Jan 29, buried Jan 31) — Slabost [~ weakness]; previden (1); Fr. Škurmelj; ★★★ h51 = the NEW corpus house #93 + p80 #88 (the 1st evidence EVER — 0 blocks before P162!) + ★★★ the h51-DRAMA #1 (12 days before Peter-72 [γ-REVISION] -February — the RELATION not mother/son, BOTH 72 [~ brother-in-law's kin]!) + the FILAK link (1895-×2-h16 cf. P157!) + the 5 + 1 house number (51 — 8×) + the P161-lead 'h51 ×2' CONFIRMED",
     status: "DOCUMENTED",
   },
   {
@@ -1776,8 +1776,8 @@ export const HOUSE_VITALS: HouseVital[] = [
     year: 1896,
     scan: 56,
     page: 55,
-    whatSi: "umrl Peter URH [★★ P162-lead 100% — 42 POTRJEN @max-zoom, VLM-'92' ZAVRJEN!], vdovec in kolar, 42 let (9. 2., pokop 11. 2.) — Nadluka; previden (1); Jos. Rauq; ★★★ h51-DRAMA #2 (12 dni po Mariji-72 = 2 smrti ISTA HIŠA v 12 DNEH — cf. 1895-h46-2-dni!) + ★★★ URH-mreža (1893-h32-Martin-OD-STRELE + 1896-h51-×2 + 1897-Ana-Urh-roj.-Novosel-61 = h51 ×3 v 13 mesecih — URH-TRILOGIJA!) + 5 + 1 hišna (51) + rdeča arhivska oznaka (sled)",
-    whatEn: "died Peter URH [★★ the P162-lead 100% — 42 CONFIRMED @max-zoom, the VLM-'92' REJECTED!], a widower and cooper, 42 years (Feb 9, buried Feb 11) — Nadluka [~ dropsy]; previden (1); Jos. Rauq; ★★★ the h51-DRAMA #2 (12 days after Marija-72 = 2 deaths THE SAME HOUSE in 12 DAYS — cf. 1895-h46-2-days!) + ★★★ the URH network (1893-h32-Martin-BY-LIGHTNING + 1896-h51-×2 + 1897-Ana-Uhr-née-Novosel-61 = h51 ×3 in 13 months — the URH-TRILOGY!) + the 5 + 1 house number (51) + a red archival mark (a trace)",
+    whatSi: "umrl Peter URH [★★★ γ-REVIZIJA-P162b: 72 let — zap-kalibracija ZAP7=γ-zanka (sekvenca 5–16 železno!) + Tomc-74-isti-glyph; VLM-'92' + seja-'42' OBOJE ZAVRJENA — 9-vs-4-eliminacija BREZ 7-testa!], vdovec in kolar, 72 let (9. 2., pokop 11. 2.) — Nadluka; previden (1); Jos. Rauq; ★★★ h51-DRAMA #2 (12 dni po Mariji-72 = 2 smrti ISTA HIŠA v 12 DNEH — cf. 1895-h46-2-dni!; ODNOS ne-mati/sin — OBA 72! [γ-REVIZIJA]) + ★★★ URH-mreža (1893-h32-Martin-OD-STRELE + 1896-h51-×2 + 1897-Ana-Urh-roj.-Novosel-61 = h51 ×3 v 13 mesecih — URH-TRILOGIJA!) + 5 + 1 hišna (51) + rdeča arhivska oznaka (sled)",
+    whatEn: "died Peter URH [★★★ the γ-REVISION-P162b: 72 years — the zap-calibration ZAP7=γ-loop (the 5–16 sequence IRONCLAD!) + Tomc-74-same-glyph; the VLM-'92' + the session-'42' BOTH REJECTED — a 9-vs-4-elimination WITHOUT a 7-test!], a widower and cooper, 72 years (Feb 9, buried Feb 11) — Nadluka [~ dropsy]; previden (1); Jos. Rauq; ★★★ the h51-DRAMA #2 (12 days after Marija-72 = 2 deaths THE SAME HOUSE in 12 DAYS — cf. 1895-h46-2-days!; the RELATION not mother/son — BOTH 72! [γ-REVISION]) + ★★★ the URH network (1893-h32-Martin-BY-LIGHTNING + 1896-h51-×2 + 1897-Ana-Uhr-née-Novosel-61 = h51 ×3 in 13 months — the URH-TRILOGY!) + the 5 + 1 house number (51) + a red archival mark (a trace)",
     status: "DOCUMENTED",
   },
   {
@@ -1888,6 +1888,153 @@ export const HOUSE_VITALS: HouseVital[] = [
     page: 59,
     whatSi: "umrla Joana PAPIČ [~ Joana/Fana-Papič — X-open], ½ zemljarjeva hči, 2 leti (24. 11., pokop 26. 11.) — Vodenica; previden (pika); Fr. Škurmelj; ★ ZADNJI Griblje-1896 (zap54 — pred mejo-1897 na ISTI strani s60!) + h31 = 1. mrliški vpis (krstni 1890-že v p80!) + 3 + 1 hišna (31 — 8×) + meja-1896/97-INLINE-stran (zap60-konec + '1897.'-marker + restart zap1 = 5. STIL 4. potrditev!)",
     whatEn: "died Joana PAPIČ [~ Joana/Fana-Papič — X-open], a half-smallholder's daughter, 2 years (Nov 24, buried Nov 26) — Vodenica [~ dropsy]; previden (a DOT); Fr. Škurmelj; ★ the LAST Griblje-1896 (zap54 — before the 1897 boundary ON THE SAME PAGE s60!) + h31 = the 1st death entry (baptisms 1890-already in p80!) + the 3 + 1 house number (31 — 8×) + the boundary-1896/97-INLINE-page (zap60-end + the '1897.'-marker + the restart zap1 = the 5th STYLE 4th confirmation!)",
+    status: "DOCUMENTED",
+  },
+  // ——— P163: MRLIŠKA KNJIGA 04894 — leto 1897 = 12. polno leto mrliške linije (58 vrstic / 13 Griblje-vpisov /
+  // 10 hiš — h2 ×2 + h14 ×2 + h53 ×2 = 3 PONOVITVE!) + meja 1896/97 = 5. STIL 4. POTRDITEV (s60 — P162!) +
+  // meja 1897/98 = 5. STIL 5. POTRDITEV ("1898." DVOJNI podčrtaj na PRAZNI vrsti s65 + Januarij INLINE v zap1
+  // + restart zap 58→1 — P162-lead-'s67' OVRJEN!) + stran == sken − 1 — 26.–32. potrditev (s61=60 … s67=66!)
+  // + ★★★ URH-TRILOGIJA #3 (h51-Ana-Urh-roj.-Novosel-61-vdova-bajtarca — P162-lead 100%!) + ★★★ PEZDIREC-×3-v-
+  // 1897 (h42-Jurij-52 + h87-Matija-3-mes + h53-Barbara-8-mes — era 6. leto! KURRENT-z-zanke @max-zoom ×2!)
+  // + ★★★ HLEBEC-h2-×2 (Ana-33-maj + Peter-1-mes-junij = 2 smrti ISTA HIŠA v 6 tednih — X10!) + ★★★ h54 = 1.
+  // mrliški vpis kadarkoli (19. PT-luknja-dokaz — h54 = 04105-1886-krstna-že v vzorci!) + BRINEC-mreža-×2-1897
+  // (h53-Ana-gostarjeva-hči + h26-Janez — cf. 1896-×2!) + STRAUS-MREŽA #9 (h16-Martin-bajtarjev-sin —
+  // 1893-h45 + 1896-h45 + 1897-h16 = 3. hiša!) + h14 = 3-priimki-hiša (1896-N.-Brinec → 1897-Jožef-Drinec +
+  // Janez-Bertopio[?]!) + MAX-ZOOM > VLM 14. potrditev = 10 popravkov (VLM-'Mlh'→URH + 'Vrobeč'→HLEBEC +
+  // 'Perdivec'/'Perdinec'/'Padriec'→PEZDIREC ×3 + 'Botek'→Bertopio[?] + γ-7-pokop-17-Julij + γ-3-'33' +
+  // hišna-'83'→53 + VLM-MISS-Griblje-×3-s63 + VLM-'92'→42-ostalo!) + 2× VLM-A2-vas-napaka ponovno ZAVRJENA
+  // (s61-zap4-'Griblje'→GIRIČE + s63-zap27-'Griblje-h48'→PRILOZJE — VLM-vztraja!) + VLM-A2-'prečrtano-1898'
+  // glava-s64 ZAVRJENA (Leto 1897 + ročno-dopisan-'97' — brez prečrtanja!) + A-scribal-glyph-#2 ('Stran 63'
+  // γ-3 — cf. P161-s52-'Stran 57' γ-7!) + r53-vzorec #11 (s63-zap37-N.-Jakofčič-mrtvorojena-Certoviše!) +
+  // NOVI DUHOVNIK #8-kandidat Edmund-Maginarič-kaplan[~] (s64-zap41!) + 2× MESEC-0 (Jan0 + Dec0!) ———
+  {
+    houseNo: "51",
+    bookSignature: "04894",
+    year: 1897,
+    scan: 61,
+    page: 60,
+    whatSi: "umrla Ana URH [★★★ max-zoom: U-r-h jasno — VLM-'Mlh' ZAVRJEN!], roj. NOVOSEL [★★★ P162-lead 100% — URH-TRILOGIJA #3!], vdova bajtarca, 61 let (2. 2., pokop 4. 2.) — Slabost; previden (1); Fr. Škurmelj; ★★★ URH-TRILOGIJA dokaz #3 (1893-h32-Martin-od-strele + 1896-h51-×2-Marija/Peter + 1897-Ana = h51 ×3 v 13 MESECIH — P162-lead '1897-Ana-Urh-61' POTRJEN!) + ★ h51 = p80-hiša-#88-2.-leto (P162-1.-dokaz-1896 ×2!) + 5 + 1 hišna (51 — 8×)",
+    whatEn: "died Ana URH [★★★ the max-zoom: U-r-h clear — the VLM-'Mlh' REJECTED!], née NOVOSEL [★★★ the P162-lead 100% — the URH-TRILOGY #3!], a widow cottageress, 61 years (Feb 2, buried Feb 4) — Slabost [~ weakness]; previden (1); Fr. Škurmelj; ★★★ the URH-TRILOGY proof #3 (1893-h32-Martin-by-lightning + 1896-h51-×2-Marija/Peter + 1897-Ana = h51 ×3 in 13 MONTHS — the P162-lead '1897-Ana-Uhr-61' CONFIRMED!) + ★ h51 = the p80-house-#88-2nd-year (the P162-1st-evidence-1896 ×2!) + the 5 + 1 house number (51 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "42",
+    bookSignature: "04894",
+    year: 1897,
+    scan: 61,
+    page: 60,
+    whatSi: "umrl Jurij PEZDIRC [★★ max-zoom: KURRENT-z-zanke — VLM-'Perdivec' → PEZDIREC-leksikon-vez (h42 = 1896-Marija-PEZDIREC-potrjena!) — P163-lead-'Jurij/Jožef' POTRJEN: JURIJ!], oženjen ž zemljak, 52 let (6. 3., pokop 8. 3.) — Jetika; previden (1); Fr. Škurmelj; ★★★ PEZDIREC-era 6. leto (h42 ×2 čez 2 leta: 1896-Marija-14 + 1897-Jurij-52!) + hiša-z-2-priimki-vez (1890-Caprič-roj.-Zindarič-vdova-bajtarica-h42 = 1. vpis hiše! + 1896-Marija + 1897-Jurij — 3 priimka!) + 4 + 2 hišna (42 — 8×)",
+    whatEn: "died Jurij PEZDIRC [★★ the max-zoom: the KURRENT-z-loops — the VLM-'Perdivec' → the PEZDIREC-lexicon link (h42 = the 1896-Marija-PEZDIREC-confirmed!) — the P163-lead-'Jurij/Jožef' CONFIRMED: JURIJ!], a married quarter-smallholder, 52 years (Mar 6, buried Mar 8) — Jetika [~ dysentery]; previden (1); Fr. Škurmelj; ★★★ the PEZDIREC era the 6th year (h42 ×2 across 2 years: 1896-Marija-14 + 1897-Jurij-52!) + the house-with-2-surnames link (1890-Caprič-née-Zindarič-widow-cottageress-h42 = the house's 1st entry! + 1896-Marija + 1897-Jurij — 3 surnames!) + the 4 + 2 house number (42 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "2",
+    bookSignature: "04894",
+    year: 1897,
+    scan: 61,
+    page: 60,
+    whatSi: "umrla Ana HLEBEC [★★ max-zoom: H-l-e-b-e-c — VLM-'Vrobeč' ZAVRJEN! ~ Hlepec — B/P-KURRENT], omožena ž zemljgastro, 33 let [★★ γ-3-REŠEN: obe cifri ISTI glyph = 33 (ne 53!) — P163-lead-'33/53?' OVRJEN-varianta!], (19. 5., pokop 21. 5.) — Jetika; previden (1); Fr. Škurmelj; ★★★ HLEBEC-h2-DRAMA #1 (6 TEDNOV pred sinom-Petrom-1-mes-junij = 2 smrti ISTA HIŠA v 6 TEDNEH!) + h2 = NAJNIŽJA aktivna hiša (1. mrliški vpis prek 04455-1919-P148! mrliška prehiti poročno za 22 let!) + 2 hišna (2 — 8×)",
+    whatEn: "died Ana HLEBEC [★★ the max-zoom: H-l-e-b-e-c — the VLM-'Vrobeč' REJECTED! ~ Hlepec — the B/P KURRENT], a married quarter-smallholderess, 33 years [★★ the γ-3-RESOLVED: both digits the SAME glyph = 33 (not 53!) — the P163-lead-'33/53?' OVERRIDDEN!], (May 19, buried May 21) — Jetika [~ dysentery]; previden (1); Fr. Škurmelj; ★★★ the HLEBEC-h2-DRAMA #1 (6 WEEKS before the son-Peter-1-month-June = 2 deaths THE SAME HOUSE in 6 WEEKS!) + h2 = the LOWEST active house (the 1st death entry via 04455-1919-P148! the death book outruns the marriage book by 22 years!) + the 2 house number (2 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "2",
+    bookSignature: "04894",
+    year: 1897,
+    scan: 62,
+    page: 61,
+    whatSi: "umrl Peter HLEBEC, ž zemljastov sin, 1 mesec (4. 6., pokop 9. 6. [VLM-'6' ZAVRJEN @max-zoom — zanka-zgoraj+descender = 9!]) — Slabost; previden (1); Jos. Rauq; ★★★ HLEBEC-h2-DRAMA #2 (mati-Ana-33-maj + sin-Peter-1-mes-junij = 2 smrti v 6 TEDNEH — cf. 1895-h46-2-dni + 1896-h51-12-dni!) + 2 hišna (2)",
+    whatEn: "died Peter HLEBEC, a quarter-smallholder's son, 1 month (Jun 4, buried Jun 9 [the VLM-'6' REJECTED @max-zoom — the top-loop+descender = 9!]) — Slabost [~ weakness]; previden (1); Jos. Rauq; ★★★ the HLEBEC-h2-DRAMA #2 (the mother-Ana-33-May + the son-Peter-1-month-June = 2 deaths in 6 WEEKS — cf. 1895-h46-2-days + 1896-h51-12-days!) + the 2 house number (2)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "26",
+    bookSignature: "04894",
+    year: 1897,
+    scan: 62,
+    page: 61,
+    whatSi: "umrl Janez BRINEC [★★ max-zoom: Br-i-n-e-c], ž zemljastov sin, 7 let (29. 6., pokop 17. 7. [★★ γ-7-prečka @max-zoom — VLM-'14' ZAVRJEN! 18 DNI mrlič — Julij-nadpis-pisar-pozabil!]) — Jetika; previden (1); Jos. Rauq; ★★ BRINEC-mreža-×2-1897 (h53-Ana-gostarjeva-hči-Avgust + h26-Janez-Junij!) + cf. 1896-×2 (h58-Ana-roj.-Brinec + h14-N.-Brinec!) + h26 = P82-krstna-hiša-vez + 2 + 6 hišna (26 — 8×)",
+    whatEn: "died Janez BRINEC [★★ the max-zoom: Br-i-n-e-c], a quarter-smallholder's son, 7 years (Jun 29, buried Jul 17 [★★ the γ-7-crossbar @max-zoom — the VLM-'14' REJECTED! 18 DAYS of the deceased — the scribe missed the July header!]) — Jetika [~ dysentery]; previden (1); Jos. Rauq; ★★ the BRINEC network-×2-1897 (h53-Ana-gostarjeva-daughter-August + h26-Janez-June!) + cf. 1896-×2 (h58-Ana-née-Brinec + h14-N.-Brinec!) + h26 = the P82-baptismal-house link + the 2 + 6 house number (26 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "54",
+    bookSignature: "04894",
+    year: 1897,
+    scan: 62,
+    page: 61,
+    whatSi: "umrla Ana ŠIMEC [★★ VLM ✓], rej. ŠTRUNCELJ [~ Štrucl/Štrukelj — X-open], omožena ž zemljaškinja, 35 let (14. 7., pokop 16. 7.) — Grižnica [~ Mrlica/Griža-kompleks — VLM-'Grimnica' REFINIRAN @max-zoom]; previden (1); Jos. Rauq; ★★★ h54 = 1. MRLIŠKI VPIS KADARKOLI (19. PT-luknja-dokaz! h54 = 04105-1886-krstna-Marija-že-v-vzorci + p80-skripta-houses-88→89!) + h54 = P163-EDINA-nov-dokaz-hiša-luknje + 5 + 4 hišna (54 — 8×)",
+    whatEn: "died Ana ŠIMEC [★★ the VLM ✓], née ŠTRUNCELJ [~ Štrucl/Štrukelj — X-open], a married quarter-smallholderess, 35 years (Jul 14, buried Jul 16) — Grižnica [~ the Mrlica/Griža-complex — the VLM-'Grimnica' REFINED @max-zoom]; previden (1); Jos. Rauq; ★★★ h54 = the 1st DEATH ENTRY EVER (the 19th PT-gap proof! h54 = the 04105-1886-baptised-Marija-already-in-sample + the p80-script-houses-88→89!) + h54 = the P163-ONLY-new-gap-house-proof + the 5 + 4 house number (54 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "87",
+    bookSignature: "04894",
+    year: 1897,
+    scan: 62,
+    page: 61,
+    whatSi: "umrl Matija PEZDIREC [★★ max-zoom: KURRENT-z-zanke — VLM-'Perdinec' → PEZDIREC-leksikon-vez (h87 = 1894/1895-×2-Marjeta-potrjeni!); ime-'Marlo'@max-zoom → Matija [~ Kurrent-ija/lo-zmeda]], bajtarjev sin, 3 mesece (17. 7., pokop 18. 7.) — Božjast; previden (1); Jos. Rauq; ★★★ PEZDIREC-×3-v-1897 (h42-Jurij-Marec + h87-Matija-Julij + h53-Barbara-September!) + h87 = ISTO-IMEŠKI-PAR-hiša (1894-vdova-62 + 1895-omožena-28 + 1897-sin-3-mes = 3. vpis!) + 8 + 7 hišna (87 — 8×)",
+    whatEn: "died Matija PEZDIREC [★★ the max-zoom: the KURRENT-z-loops — the VLM-'Perdinec' → the PEZDIREC-lexicon link (h87 = the 1894/1895-×2-Marjeta-confirmed!); the name-'Marlo'@max-zoom → Matija [~ the Kurrent-ija/lo-meddling]], a cottager's son, 3 months (Jul 17, buried Jul 18) — Božjast [~ X11!]; previden (1); Jos. Rauq; ★★★ the PEZDIREC-×3-in-1897 (h42-Jurij-March + h87-Matija-July + h53-Barbara-September!) + h87 = the SAME-NAME-PAIR house (1894-widow-62 + 1895-married-28 + 1897-son-3-months = the 3rd entry!) + the 8 + 7 house number (87 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "53",
+    bookSignature: "04894",
+    year: 1897,
+    scan: 63,
+    page: 62,
+    whatSi: "umrla Ana BRINEC [★★ max-zoom: Br-i-n-e-c jasno], gostarjeva hči, 2 leta (11. 8., pokop 13. 8.) — Božjast; previden (pika); Jos. Rauq; ★★ VLM-MISS-Griblje-#1 (VLM-'Griblje: 0' s63 — diag-agent-oči RAZKRILA ×3!) + BRINEC-mreža-#2-1897 + h53 = PERDINEC-hiša (1887-Marija-Šimec + 1888-Janez-Perdinec-75 + 1889-Ana-Perdihec-49 + 1890-poročna-Johann-Perdinec!) + 5 + 3 hišna (53 — 8×)",
+    whatEn: "died Ana BRINEC [★★ the max-zoom: Br-i-n-e-c clear], a innkeeper's daughter, 2 years (Aug 11, buried Aug 13) — Božjast [~ X11!]; previden (a DOT); Jos. Rauq; ★★ the VLM-MISS-Griblje-#1 (the VLM-'Griblje: 0' s63 — the diag-agent-eyes REVEALED ×3!) + the BRINEC network-#2-1897 + h53 = the PERDINEC house (1887-Marija-Šimec + 1888-Janez-Perdinec-75 + 1889-Ana-Perdihec-49 + 1890-marriage-Johann-Perdinec!) + the 5 + 3 house number (53 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "15",
+    bookSignature: "04894",
+    year: 1897,
+    scan: 63,
+    page: 62,
+    whatSi: "umrla Ana JAKLIČ [★★ VLM-MISS-Griblje-#2 — diag-agent-oči!], ž zemljakova hči, 4 leta (19. 8., pokop 21. 8.) — Habost; previden (pika); Jos. Rauq; ★ h15 = cf. 1886-mrliški-Nikolaj-Muc-63 (P80-okvir!) + JAKLIČ-vez (1891-h6-Matija? cf. P157) + 1 + 5 hišna (15 — 8×)",
+    whatEn: "died Ana JAKLIČ [★★ the VLM-MISS-Griblje-#2 — the diag-agent-eyes!], a quarter-smallholder's daughter, 4 years (Aug 19, buried Aug 21) — Habost [~ dropsy]; previden (a DOT); Jos. Rauq; ★ h15 = cf. the 1886-death-Nikolaj-Muc-63 (the P80-frame!) + the JAKLIČ link (1891-h6-Matija? cf. P157) + the 1 + 5 house number (15 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "16",
+    bookSignature: "04894",
+    year: 1897,
+    scan: 63,
+    page: 62,
+    whatSi: "umrl Martin STRAUS [★★ VLM-MISS-Griblje-#3 — diag-agent-oči! VLM-'Strund' → STRAUS-leksikon], bajtarjev sin, 10 mesecev (26. 8., pokop 28. 8.) — Krastelj; previden (pika); Jos. Rauq; ★★ STRAUS-MREŽA #9 (1893-h45-Ana-44 + 1896-h45-Barbara-roj.-Zavrtovič-40 + 1897-h16-Martin = 3. HIŠA mreže!) + h16 = FILAK-hiša-1895-×2 + 1886-krstna-Neža + 1 + 6 hišna (16 — 8×)",
+    whatEn: "died Martin STRAUS [★★ the VLM-MISS-Griblje-#3 — the diag-agent-eyes! the VLM-'Strund' → the STRAUS-lexicon], a cottager's son, 10 months (Aug 26, buried Aug 28) — Krastelj [~ scarlet fever]; previden (a DOT); Jos. Rauq; ★★ the STRAUS network #9 (1893-h45-Ana-44 + 1896-h45-Barbara-née-Zavrtovič-40 + 1897-h16-Martin = the 3rd HOUSE of the network!) + h16 = the FILAK house-1895-×2 + the 1886-baptised-Neža + the 1 + 6 house number (16 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "53",
+    bookSignature: "04894",
+    year: 1897,
+    scan: 64,
+    page: 63,
+    whatSi: "umrla Barbara PEZDIREC [★★ max-zoom: KURRENT-z-zanke — VLM-'Padriec/Perdinec' ZAVRJENA!], ž zemlj. hči, 8 mesecev (13. 9., pokop 13. 9. [isti dan! VLM-'11' ZAVRJEN]) — Jetika; previden (1); Jos. Rauq; ★★★ PEZDIREC-×3-v-1897-#3 (h42-Marec + h87-Julij + h53-September!) + h53-×2-1897 (Ana-Brinec-Avgust + Barbara-Pezdirec-September — 2 priimka 1 hiša!) + ★ hišna-'83'→53 @max-zoom (VLM-ZAVRJEN!) + 5 + 3 hišna (53)",
+    whatEn: "died Barbara PEZDIREC [★★ the max-zoom: the KURRENT-z-loops — the VLM-'Padriec/Perdinec' REJECTED!], a quarter-smallholder's daughter, 8 months (Sep 13, buried Sep 13 [the same day! the VLM-'11' REJECTED]) — Jetika [~ dysentery]; previden (1); Jos. Rauq; ★★★ the PEZDIREC-×3-in-1897-#3 (h42-March + h87-July + h53-September!) + the h53-×2-1897 (Ana-Brinec-August + Barbara-Pezdirec-September — 2 surnames 1 house!) + ★ the house-no-'83'→53 @max-zoom (the VLM-REJECTED!) + the 5 + 3 house number (53)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "14",
+    bookSignature: "04894",
+    year: 1897,
+    scan: 64,
+    page: 63,
+    whatSi: "umrl Jožef DRINEC [~ Drinovec — KURRENT-5-glyph-zmeda], ž zemljaštov sin, 4 mesece (5. 10., pokop 6. 10.) — Božjast; previden (pika); Fr. Škurmelj; ★ h14-×2-1897-#1 (Jožef-Oktobar + Janez-November!) + h14 = 3-PRIIMKI-hiša (1896-N.-BRINEC-mrtvorojen → 1897-Jožef-DRINEC + Janez-BERTOPIO[?] — hiša-z-3-priimki #4!) + poročna-hiša-1886 (P125!) + 1 + 4 hišna (14 — 8×)",
+    whatEn: "died Jožef DRINEC [~ Drinovec — the KURRENT-5-glyph meddling], a quarter-smallholder's son, 4 months (Oct 5, buried Oct 6) — Božjast [~ X11!]; previden (a DOT); Fr. Škurmelj; ★ the h14-×2-1897-#1 (Jožef-October + Janez-November!) + h14 = the 3-SURNAMES house (1896-N.-BRINEC-stillborn → 1897-Jožef-DRINEC + Janez-BERTOPIO[?] — the house-with-3-surnames #4!) + the marriage-house-1886 (P125!) + the 1 + 4 house number (14 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "14",
+    bookSignature: "04894",
+    year: 1897,
+    scan: 65,
+    page: 64,
+    whatSi: "umrl Janez BERTOPIO [? neberljivo — 8-glyph @max-zoom — VLM-'Botek' ZAVRJEN! ~ Bertoncelj/Bertopč-X-open], ž zemljatov sin, 6 tednov (21. 11., pokop 23. 11.) — Habost; previden (1); Fr. Škurmelj; ★ h14-×2-1897-#2 + ★ meja-1897/98-INLINE-stran (zap52-konec + '1898.'-DVOJNI-podčrtaj-prazna-vrsta + Jan-INLINE-r1 + restart = 5. STIL 5. potrditev!) + 1 + 4 hišna (14)",
+    whatEn: "died Janez BERTOPIO [? illegible — 8-glyphs @max-zoom — the VLM-'Botek' REJECTED! ~ Bertoncelj/Bertopč-X-open], a quarter-smallholder's son, 6 weeks (Nov 21, buried Nov 23) — Habost [~ dropsy]; previden (1); Fr. Škurmelj; ★ the h14-×2-1897-#2 + ★ the boundary-1897/98-INLINE-page (zap52-end + the '1898.'-DOUBLE-underlined-empty-row + the Jan-INLINE-r1 + the restart = the 5th STYLE 5th confirmation!) + the 1 + 4 house number (14)",
     status: "DOCUMENTED",
   },
   // ——— P80 razširitev: POROČNA KNJIGA 04455 1873–1922 — okvir 1886 (skeni 61–65 == Pag. 60–64, vpisi 1–24; Pag. = sken − 1 v razponu 61–66) ———
