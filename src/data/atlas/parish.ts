@@ -2124,6 +2124,161 @@ export const HOUSE_VITALS: HouseVital[] = [
     whatEn: "died Janez MILEK [the VLM-'Mihel' REJECTED @max-zoom — M-i-l-e-k clear!], a married carter [~ kolar; ~ gospodin?], 64 years (Dec 22, buried Dec 24) — Nadruha [~ dropsy-fever]; previden (1); Fr. Škurmelj; ★ h22 = the 2nd death entry (the 1887-Matija-Milek-3 + the 1898-Janez-MILEK-64 — the MILEK-×2-house!) + the 1887-Milek-death 12 years before the first baptism (P153!) + the marriage-1898-h22-×2-grooms-same-day (P127!) + the 2 + 2 house number (22 — 8×)",
     status: "DOCUMENTED",
   },
+  // ——— P165 razširitev: MRLIŠKA KNJIGA 04894, POLNO LETO 1899 (issue #18) ———
+  // s70-top (meja 1898/99 re-potrditev: "1899." INLINE + Januarj + restart zap 48→1 =
+  // 4. INLINE-potrditev — pikselsko @max-zoom s70-meja-INLINE!) + s70 (zap 1–11) + s71 (12–23)
+  // + s72 (24–35) + s73 (36–47) + s74 (48–59) + s75 (60–61 + meja!) == str. 69–74
+  // (stran == sken − 1 — 35.–40. potrditev!) + meja 1899/1900 = s75-sredina ("1900" VELIKA
+  // + VEČKRATNI podčrtaj na PRAZNI vrsti + Januarj-INLINE + restart zap 61→1 = 5. STIL
+  // 7. POTRDITEV — P164-lead-'s75+?' POTRJEN!)
+  // + ★★★ 1899 = 61 vrstic / 13 Griblje-vpisov / 13 hiš — VSE RAZLIČNE (1. leto BREZ
+  // hiša-×2 odkar 1889-8!) = odskočni povratek 7→13 (2. največji skok linije!)
+  // + ★★★ 2× 1. MRLIŠKI VPIS KADARKOLI (h11 + h82 = 22.+23. PT-vezni dokaz!)
+  // + ★★★ MILEK-×3-v-1899 (h22-78 + h65-3 + h82-5-mes!; h22 = MILEK-×3-hiša 1887+1898+1899!)
+  // + ★★★ PEZDIREC-era 8. leto (×3 = h20-Marija + Krasinec-3-×2; rast 2→3→4→3!)
+  // + ★★★ meseci-KAOS-anomalija P164-lead RAZREŠENA (s72 = Junij/Julij/Avgust — VLM
+  // 'Januarj/februarj/apr' = Kurrent-Jun/Jul-zmeda; kronologija 61/61!)
+  // + ★★★ NOVI DUHOVNIK #9: Jos. Perz coop. (12× s73–s74!; P164-lead-'Franc-Števan'
+  // NE POTRJEN — s72-'Jos. Vamp' = Jos. Rauq!) + MAX-ZOOM > VLM 16. potrditev = 12 popravkov
+  // (hišna-'91'→22 + '32'→82 + '32'→72 + 'Mulek'/'Mitek'→Milek + 'Jelbanič'→Jakobič
+  // + 'Drižgast'/'Krastelj'→Božjast + 'Brehlajerje'→Prehlajenje + 'Hannig'→Škurmelj
+  // + 'Jurcavič-68'→Juvančič-65!) + γ-lekcija 18.–19. potrditev (zap13-'91'→22 = ʒ-forma
+  // vs zap17-'91' = zaprta-zanka-9 — ISTE VLM-branja, RAZLIČNI glyphi!)
+  // + ★ SUICID + SODNA PREISKAVA (zap29-Primostek-21-'se ustrelil'-'sodnijsko pregledan'!)
+  // + 2× mrtvorojen-BREZ-podpisa (r53-#14+#15!) + X-vzrok 'Ustarélost [?]' ×2
+  // + drame: Otok-17-Žugec-×2-PAR (34+64-Jetika!) + Gradac-11-Mavretič-×2-6-DNI
+  // (dojenček-1-dan + mati-26!) + A2-vas-napaka 4. leto (zap40-'Griblje'→PRILOZJE!)
+  {
+    houseNo: "20",
+    bookSignature: "04894",
+    year: 1899,
+    scan: 70,
+    page: 69,
+    whatSi: "umrla Marija PEZDIREC, žena hiše [~], starost '1 4to [? ~ 1 4/12 let]' (26. 3., pokop 28. 3.) — Žule [? neznana — X-vzrok!]; previden (1); Fr. Škurmelj coop.; ★★ PEZDIREC-era 8. leto (1896-×2 + 1897-×3 + 1898-×4 + 1899-×3!) + h20 = 3. mrliški vpis (1892 + 1896 + 1899!) + mesec podedovan (label 'Marci' @ zap11 — kronologija Feb 24/26 → Mar 4/6!)",
+    whatEn: "died Marija PEZDIREC, the wife of the house [~], age '1 4to [? ~ 1 4/12 years]' (Mar 26, buried Mar 28) — Žule [? unknown — X-cause!]; previden (1); Fr. Škurmelj coop.; ★★ the PEZDIREC era the 8th year (1896-×2 + 1897-×3 + 1898-×4 + 1899-×3!) + h20 = the 3rd death entry (1892 + 1896 + 1899!) + the month inherited (the 'Marci' label @ zap11 — the chronology Feb 24/26 → Mar 4/6!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "22",
+    bookSignature: "04894",
+    year: 1899,
+    scan: 71,
+    page: 70,
+    whatSi: "umrla Marija MILEK [★★ VLM-'Mitek' + hišna-'91' OBOJE ZAVRJENA @max-zoom — jasno 22 + Milek!], omožena ž življastvja [?], 78 let (27. 3., pokop 29. 3.) — Prehlajenje [★★ VLM-'Brehlajerje' ZAVRJEN!]; previden (1); Fr. Škurmelj [★★ VLM-'Hannig' ZAVRJEN!]; ★★★ h22 = MILEK-×3-hiša (1887 + 1898 + 1899 — 3. mrliški vpis!) + MILEK-×3-v-1899 #1 (cf. h65 + h82!) + hišna-'91'→22 @max-zoom (2 = ʒ-forma brez zanke — γ-lekcija!)",
+    whatEn: "died Marija MILEK [★★ the VLM-'Mitek' + house-no-'91' BOTH REJECTED @max-zoom — clearly 22 + Milek!], a married woman of the smallholder class [?], 78 years (Mar 27, buried Mar 29) — Prehlajenje [★★ the VLM-'Brehlajerje' REJECTED!]; previden (1); Fr. Škurmelj [★★ the VLM-'Hannig' REJECTED!]; ★★★ h22 = the MILEK-×3 house (1887 + 1898 + 1899 — the 3rd death entry!) + the MILEK-×3-of-1899 #1 (cf. h65 + h82!) + the house-no-'91'→22 @max-zoom (the 2 = the ʒ-form without a loop — the γ-lesson!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "91",
+    bookSignature: "04894",
+    year: 1899,
+    scan: 71,
+    page: 70,
+    whatSi: "umrl Janez Muc [~ Mlec/Mue], bajtarjev sin [★★ VLM-'hajtarjev' ZAVRJEN — b/h-zmeda!], 3 leta (13. 4., pokop 14. 4.) — Božjast [★★ VLM-'Drižgast' ZAVRJEN!]; previden (1); Fr. Škurmelj; ★ h91 = 2. mrliški vpis (1890 + 1899!) + hišna-'91' PIKSELSKO POTRJENA (9 = zaprta-zanka — NASPROTJE zap13-'22' = ʒ-forma — ISTE VLM-branja, RAZLIČNI glyphi — γ-lekcija 18. potrditev!)",
+    whatEn: "died Janez Muc [~ Mlec/Mue], a cottager's son [★★ the VLM-'hajtarjev' REJECTED — the b/h confusion!], 3 years (Apr 13, buried Apr 14) — Božjast [★★ the VLM-'Drižgast' REJECTED!]; previden (1); Fr. Škurmelj; ★ h91 = the 2nd death entry (1890 + 1899!) + the house-no-'91' PIXEL-CONFIRMED (the 9 = the closed-loop — AGAINST zap13-'22' = the ʒ-form — the SAME VLM readings, DIFFERENT glyphs — the γ-lesson 18th confirmation!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "8",
+    bookSignature: "04894",
+    year: 1899,
+    scan: 71,
+    page: 70,
+    whatSi: "umrla Marija Jakobič [★★ VLM-'Jelbanič' ZAVRJEN @max-zoom! ~ Jakopič], vdova ½ ženljakinje [?], 40 let (23. 4. [~], pokop 24. 4.) — Prehlajenje; previden (1); Fr. Škurmelj; ★ h8 = 5. mrliški vpis (1888-×2 + 1892 + 1895 + 1899 — 2. NAJPOGOSTEJŠA Griblje-hiša po h30!)",
+    whatEn: "died Marija Jakobič [★★ the VLM-'Jelbanič' REJECTED @max-zoom! ~ Jakopič], a widow of the half-smallholderess class [?], 40 years (Apr 23 [~], buried Apr 24) — Prehlajenje; previden (1); Fr. Škurmelj; ★ h8 = the 5th death entry (1888-×2 + 1892 + 1895 + 1899 — the 2nd MOST FREQUENT Griblje house after h30!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "60",
+    bookSignature: "04894",
+    year: 1899,
+    scan: 71,
+    page: 70,
+    whatSi: "umrl Jurij Žefko [~ Žiško], oženjen ž ženljastvju [?], 69 let (9. 5., pokop 11. 5.) — Marost [~ Marazm]; previden (1); Fr. Škurmelj; ★ h60 = 4. mrliški vpis (1888-×2 + 1898 + 1899!) + hišna-'60' POTRJENA @max-zoom (cf. P164-'60/61'→64 — RAZLIČNI vrstici!)",
+    whatEn: "died Jurij Žefko [~ Žiško], married of the smallholder class [?], 69 years (May 9, buried May 11) — Marost [~ marasmus]; previden (1); Fr. Škurmelj; ★ h60 = the 4th death entry (1888-×2 + 1898 + 1899!) + the house-no-'60' CONFIRMED @max-zoom (cf. the P164-'60/61'→64 — DIFFERENT rows!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "65",
+    bookSignature: "04894",
+    year: 1899,
+    scan: 71,
+    page: 70,
+    whatSi: "umrla Neža Milek, ½ ženljarova hči [~], 3 leta (31. 5., pokop 2. 6.) — Jetika [~ Jelika]; previden (1); Fr. Škurmelj; ★ h65 = 4. mrliški vpis (1887 + 1888 + 1889 + 1899!) + MILEK-×3-v-1899 #2 + hišna-'65' POTRJENA @max-zoom",
+    whatEn: "died Neža Milek, a half-smallholder's daughter [~], 3 years (May 31, buried Jun 2) — Jetika [~]; previden (1); Fr. Škurmelj; ★ h65 = the 4th death entry (1887 + 1888 + 1889 + 1899!) + the MILEK-×3-of-1899 #2 + the house-no-'65' CONFIRMED @max-zoom",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "82",
+    bookSignature: "04894",
+    year: 1899,
+    scan: 72,
+    page: 71,
+    whatSi: "umrla Marija Milek [★★ VLM-'Mulek' ZAVRJEN!], ž ženljarova hči [~], 5 mesecev (21. 6. [★★ VLM-'Januarj' ZAVRJEN — Junij!], pokop 23. 6.) — Božjast; previden (1); Fr. Škurmelj; ★★★ h82 = 1. MRLIŠKI VPIS KADARKOLI (23. PT-vezni dokaz — v korpusu prek 04105+04455!) + hišna-'32'→82 @max-zoom (8 = DVOJNA-zanka!) + MILEK-×3-v-1899 #3 + KAOS-RAZREŠITEV (label 'Junij' @ zap24!)",
+    whatEn: "died Marija Milek [★★ the VLM-'Mulek' REJECTED!], a smallholder's daughter [~], 5 months (Jun 21 [★★ the VLM-'Januarj' REJECTED — Junij!], buried Jun 23) — Božjast; previden (1); Fr. Škurmelj; ★★★ h82 = the 1st DEATH ENTRY EVER (the 23rd PT-link proof — in the corpus via 04105+04455!) + the house-no-'32'→82 @max-zoom (the 8 = the DOUBLE-loop!) + the MILEK-×3-of-1899 #3 + the KAOS-resolution (the 'Junij' label @ zap24!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "24",
+    bookSignature: "04894",
+    year: 1899,
+    scan: 72,
+    page: 71,
+    whatSi: "umrl Matija Štrinec [~ Drinec/Brinec — cf. P163-h14!], ženjen ½ ženljak [?], 41 let (3. 8., pokop 5. 8.) — Prehlajenje (3. pojav v 1899!); previden (1); Fr. Škurmelj; ★ h24 = 4. mrliški vpis (1888 + 1892 + 1894 + 1899!) + 'Avgust' label @ zap32 (kronologija: pokop-'1. Avg.' @ zap30/31!)",
+    whatEn: "died Matija Štrinec [~ Drinec/Brinec — cf. P163-h14!], a married half-smallholder [?], 41 years (Aug 3, buried Aug 5) — Prehlajenje (the 3rd occurrence of 1899!); previden (1); Fr. Škurmelj; ★ h24 = the 4th death entry (1888 + 1892 + 1894 + 1899!) + the 'Avgust' label @ zap32 (the chronology: the burial-'1. Avg.' @ zap30/31!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "34",
+    bookSignature: "04894",
+    year: 1899,
+    scan: 73,
+    page: 72,
+    whatSi: "umrla Marija Čilak [~ Žilak/Čelak], omožena kmetica [~ VLM-'Mravlica' — cf. P164-'vdova kmeteca'!], 69 let (5. 10., pokop 7. 10.) — Ustarélost [? neznana — X-vzrok!]; previden (1); ★★★ Jos. Perz coop. = NOVI DUHOVNIK #9 (1. podpis!) + h34 = 2. mrliški vpis (1898-Ana-Filak + 1899 — zaporedno leto!) + 'Oktobar' label @ zap40",
+    whatEn: "died Marija Čilak [~ Žilak/Čelak], a married farmeress [~], 69 years (Oct 5, buried Oct 7) — Ustarélost [? unknown — X-cause!]; previden (1); ★★★ Jos. Perz coop. = the NEW PRIEST #9 (the 1st signature!) + h34 = the 2nd death entry (the 1898-Ana-Filak + 1899 — consecutive years!) + the 'Oktobar' label @ zap40",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "72",
+    bookSignature: "04894",
+    year: 1899,
+    scan: 73,
+    page: 72,
+    whatSi: "umrla Barbara Hravs [~ Uhravs], samka ¼ ženljarova hči [~], 64 let (10. 10., pokop 12. 10.) — Ustarélost [? — ISTO kot zap42!]; previden (1); Jos. Perz coop. [#9!]; ★★ h72 = 4. mrliški vpis (1888-×2 + 1894 + 1899!) + hišna-'32'→72 @max-zoom (7 = γ-forma s prečko — P162b-lekcija 19. potrditev!)",
+    whatEn: "died Barbara Hravs [~ Uhravs], a single quarter-smallholder's daughter [~], 64 years (Oct 10, buried Oct 12) — Ustarélost [? — the SAME as zap42!]; previden (1); Jos. Perz coop. [#9!]; ★★ h72 = the 4th death entry (1888-×2 + 1894 + 1899!) + the house-no-'32'→72 @max-zoom (the 7 = the γ-form with a bar — the P162b-lesson 19th confirmation!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "11",
+    bookSignature: "04894",
+    year: 1899,
+    scan: 74,
+    page: 73,
+    whatSi: "umrla Ana Žumič [~ Zumič], ¼ ženljakova hči [~], 23 let (26. 10., pokop 28. 10.) — Jetika; previden (1); Jos. Perz coop. [#9!]; ★★★ h11 = 1. MRLIŠKI VPIS KADARKOLI (22. PT-vezni dokaz — IZVEN 41–60-luknje cf. h34-P164!; korpus: 04105+04455!)",
+    whatEn: "died Ana Žumič [~ Zumič], a quarter-smallholder's daughter [~], 23 years (Oct 26, buried Oct 28) — Jetika; previden (1); Jos. Perz coop. [#9!]; ★★★ h11 = the 1st DEATH ENTRY EVER (the 22nd PT-link proof — OUTSIDE the 41–60 gap cf. h34-P164!; corpus: 04105+04455!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "12",
+    bookSignature: "04894",
+    year: 1899,
+    scan: 74,
+    page: 73,
+    whatSi: "umrl Matija Dragoš, ž ženljakov sin [~], 10 mesecev (28. 11., pokop 30. 11.) — Božjast [★★ VLM-'Krastelj' ZAVRJEN!]; previden (1); Jos. Rauq; ★ h12 = 2. mrliški vpis (1895 + 1899!) + 'November' label @ zap50 + 'December' @ zap56",
+    whatEn: "died Matija Dragoš, a smallholder's son [~], 10 months (Nov 28, buried Nov 30) — Božjast [★★ the VLM-'Krastelj' REJECTED!]; previden (1); Jos. Rauq; ★ h12 = the 2nd death entry (1895 + 1899!) + the 'November' label @ zap50 + the 'December' @ zap56",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "33",
+    bookSignature: "04894",
+    year: 1899,
+    scan: 74,
+    page: 73,
+    whatSi: "umrl Matija Deblič [~ Debljič], oženjen ½ ženljak [~], 61 let (2. 12., pokop 4. 12.) — Nadluha; previden (1); Jos. Perz coop. [#9!]; ★ h33 = 2. mrliški vpis (1895 + 1899!) + zadnji Griblje-vpis 1899 ('December' podedovan)",
+    whatEn: "died Matija Deblič [~ Debljič], a married half-smallholder [~], 61 years (Dec 2, buried Dec 4) — Nadluha; previden (1); Jos. Perz coop. [#9!]; ★ h33 = the 2nd death entry (1895 + 1899!) + the LAST Griblje entry of 1899 (the 'December' inherited)",
+    status: "DOCUMENTED",
+  },
+
   // ——— P80 razširitev: POROČNA KNJIGA 04455 1873–1922 — okvir 1886 (skeni 61–65 == Pag. 60–64, vpisi 1–24; Pag. = sken − 1 v razponu 61–66) ———
   // P115 (faza 2) RE-READ: 8 blokov popravljenih na podlagi max-zoom branja (h36→56, h63→65, h15→16, h25→Priložje
   // + priimki Pegdirec/Klepec/Požek/Tomec/Straus/Križan) — evidence: research/issue17/parish-marriage-1886.json

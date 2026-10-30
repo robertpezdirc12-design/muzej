@@ -6624,3 +6624,38 @@ Stage Summary:
 - verifikacija: p164 **52/52** · p163 **53/53** [I6f-popravek!] · p162 **52/52** · p161 **47/47** [h30-6.-vpis!] · p160 **53/53** · p159 **52/52** · p158 **55/55** · p157 **59/59** · p156 **53/53** · p155 **43/43** · p154 **37/37** · p153 **39/39** · p80 **PASS** · runQA **165/165 ok:True** · tsc **0** · lint **0**
 - korpus po P164: **873 vitalov · bloki 04455 197 + 04894 174 · sidra 190 · hiše 88 (p80) / 93 (korpus) · PT 15**, QA **165/165**
 - P165 LEAD: mrliška **1899** (s70-glava-'Leto 1899' + '1899.'-INLINE-zap1 [Januarj 1./5.-Otok-11-Nikolaj-Jurcavič-68!] + s70 zap 1–11 [**Griblje ×1: zap10-h20-Marija-Pezdirec — PEZDIREC-era-8.!**] + s71 (zap 12–23 [**Griblje ×5!**]) + s72 (zap 24–35 [Griblje ×2: h32-Marija-Mulek? + h24-Matija-Štrinec?] — **VLM-s72-meseci-KAOS ANOMALIJA!** + **NOVI-DUHOVNIK-#9-kandidat: Franc-Števan-coop!**); meja 1899/1900 [~ s75+?])
+
+---
+Task ID: P165
+Agent: Z.ai Code (glavni agent)
+Task: MRLIŠKA knjiga 04894, leto 1899 = 14. polno leto mrliške linije (issue #18)
+
+Work Log:
+- FETCH **8/8 ✓**: s70–s77 (s70–s72 re-uporabljeni iz /tmp/p164 + VLM-JSON ×3 — ni SANACIJE; s73–s77 novi: 590–599 KB)
+- VLM **8/8, 0 FAIL**: 8 celostanskih branj (glm-5v-turbo; s73–s77 foreground v 5 serijah po 1 — P158-lekcija!)
+- **8× diag-PNG agent-oči** (61-vrstična transkripcija!) + **44 max-zoom izrezov** (39 targetiranih + 5 dopolnilni re-kali)
+- **ROWS-MAPA-ZAMAKNJENA-LEKCIJA**: P164-recept AMAPA — glava/zap1-merge na s71/s70/s74 (izrez-s71-zap13-pokazal-zap12-Podzemelj-41!) → 3× re-kalibracija izrezov (s71: 376=zap12, 899=zap16, 1459=zap20; s70: 1084=zap6-Februarij, 1802=zap11; s74: 596=zap50/51, 1168=zap54, 1607=zap57)
+- OKVIR POTRJEN: s70-top (**meja 1898/99 re-potrditev: '1899.' INLINE + Januarj + restart = 4. INLINE-potrditev** — pikselsko!) + s70 (zap 1–11) + s71 (12–23) + s72 (24–35) + s73 (36–47) + s74 (48–59) + s75 (60–61) == str. 69–74 — **stran == sken − 1 — 35.–40. potrditev!**
+- MEJA 1899/1900 = **s75-sredina: '1900' VELIKA + VEČKRATNI podčrtaj (3+ črt!) na PRAZNI vrsti + Januarj-INLINE + restart zap 61→1 = 5. STIL MEJE 7. POTRDITEV** — **P164-lead-'s75+?' POTRJEN** (s74 = še 1899; s75-zap60/61 = zadnji!)
+- **1899 = 61 VRSTIC / 13 GRIBLJE-VPISOV / 13 HIŠ — VSE RAZLIČNE (1. leto BREZ hiša-×2 odkar 1889-8!) = odskočni povratek 7→13** (2. največji skok linije; rast 13→13→29→8→15→15→17→10→6→12→16→13→7→**13**!)
+- **★★★ 2× 1. MRLIŠKI VPIS KADARKOLI**: **h11 = 22. PT-vezni dokaz** (Ana-Žumič[~]-23-Jetika — IZVEN 41–60!) + **h82 = 23.** (Marija-Milek-5-mes — hišna-'32'→**82** @×5 = DVOJNA-zanka!) — 0 novih hiš v korpusu-93 (vseh 13 št. ŽE v vzorci!)
+- **★★★ MILEK-×3-v-1899**: h22-Marija-78 + h65-Neža-3 + h82-Marija-5-mes — **h22 = MILEK-×3-hiša** (1887 + 1898 + 1899!)
+- **★★★ MESECI-KAOS-ANOMALIJA (P164-lead) RAZREŠENA**: s72-labeli = **Junij @ zap24** (VLM-'Januarj' ZAVRJEN!) + **Julij @ zap27** + **Avgust @ zap32** — VLM-'Januarj/februarj/apr' = Kurrent-Jun/Jul-zmeda!; **kronologija 61/61: Jan5·Feb5·Mar4·Apr4·Maj3·Jun5·Jul5·Avg4·Sep4·Okt10·Nov6·Dec6 = 61!**; s70-lekcija: zap7–10 = **Februarij** (VLM-'Marec'-halucinacije ×3 — 'Marci'-label @ zap11 = Mar 4/6!)
+- **★★★ NOVI DUHOVNIK #9: JOS. PERZ COOP.** (1. podpis s73-zap41 'Jos. Perz' + 'coop.' @×3.0! + dominanta s73–s74 12× — sodia Rauq + Škurmelj!) — **P164-lead-'Franc-Števan-coop' NE POTRJEN** (s72-'Jos. Vamp' = Jos. Rauq @max-zoom!)
+- **★★ SUICID + SODNA PREISKAVA**: zap29-Primostek-21-Anton-Muc-6-let — 'se ustrelil'[~] + opomba **'sodnijsko pregledan'** + previden PRAZEN — **1. takšna opomba linije!** (MUC-vez: h91-Janez-Muc + 1900-Matija-Muc!)
+- **2× mrtvorojen-BREZ-PODPISA** (zap58-J.-Rapoš-Primostek-22 + zap60-J.-Pezdirec-Krasinec-3 — **r53-vzorec #14–#15**!)
+- **X-vzrok 'Ustarélost [?]' ×2** (zap42-h34-Marija-Čilak[~]-69 + zap47-h72-Barbara-Hravs[~]-64 — oba Jos.-Perz-dni, 5 dni!)
+- **MAX-ZOOM > VLM 16. POTRDITEV = 12 POPRAVKOV**: hišna-'91'→**22**-zap13 (ʒ-forma!) + '32'→**82**-zap24 (DVOJNA-zanka!) + '32'→**72**-zap47 (γ-7!) + 'Mulek'/'Mitek'→**MILEK** + 'Jelbanič'→**Jakobič** + 'Drižgast'/'Krastelj'→**Božjast** + 'Brehlajerje'→**Prehlajenje** + 'Hannig'→**Škurmelj** + 'Jurcavič-68'→**Juvančič-65** + meseci-KAOS
+- **γ-LEKCIJA 18.–19. POTRDITEV**: zap13-'91'→**22** (ʒ = 2) **vs** zap17-'91' = **91 POTRJEN** (zaprta-zanka = 9) — **ISTE VLM-branja, RAZLIČNI glyphi — samo max-zoom loči!**
+- **A2-VAS-NAPAKA 4. leto**: s73-zap40-'Griblje' → **PRILOZJE** (P-r-i-l-o-ž-j-e @max-zoom — VLM + diag oboje ovržena!)
+- **DRAME-1899**: Otok-17-Žugec-×2-PAR (34-Avg + 64-Dec — oba Jetika — **4. par linije**!) + Gradac-11-Mavretič-×2-6-DNI (dojenček-1-dan + mati-26 — **MATI+SIN**!) + Krasinec-3-Pezdirec-×2 + **PEZDIREC-era 8. leto** (×3 = h20-Marija + Krasinec-3-×2; rast 2→3→4→3!)
+- razpon **11 ur → 94 let** (zap26-Ana-Juževič — **NAJSTAREJŠA linije**!) + h20 = 3. + h8 = 5. + h91 = 2. mrliški vpis + otroška umrljivost ~39 %
+- **13 NOVIH BLOKOV parish.ts**: vitals 873 → **886** · mrliški 04894 174 → **187** · bloki-1899 = 13 · p80 hiše **88 NESPREMENJENE** · korpus **93 NESPREMENJEN** + PIN-KASKADA (qa 79× !== 886 + 13× !== 187 + stale-guardi ≥1899→≥1900 (12× qa + 12 skript) + p80-skripta **886/88/18** + p153–p164 skripte VITALS_TOTAL 886/BLOKI 187 + p160-I5e-h72-4.-vpis + p164-I10c-1900!)
+- dokaz research/issue17/parish-death-1899.json (13 + 8 excluded + 10 anomalij + 10 crossChecks + honesty 10 + P166-lead) + notes + skripta p165 (**56/56 PASS (--live) — I1–I13!**) + qa-p165 (**166. kontrola**) + README (glava-166 + mrliška-14/39 + korpus 886/187/88/93 + odprto-①-P166 + TOC/sekcija P79–P165 + P165-vnos) + worklog
+- verifikacija: p165 **56/56** · p164 **52/52** [I10c-1900!] · p163 **53/53** · p162 **52/52** · p161 **47/47** · p160 **53/53** [I5e-h72!] · p159 **52/52** · p158 **55/55** · p157 **59/59** · p156 **53/53** · p155 **43/43** · p154 **37/37** · p153 **39/39** · p80 **PASS** · runQA **166/166 ok:True** · tsc **0** · lint **0**
+- korpus po P165: **886 vitalov · bloki 04455 197 + 04894 187 · sidra 190 · hiše 88 (p80) / 93 (korpus) · PT 15**, QA **166/166**
+- P166 LEAD: mrliška **1900** (s75-dno-restart-zap1–8 [**Griblje ×2: zap3-h45-Marko-Štavar[?]-75-Jan + zap8-h32-Marija-URH-'šivkarca[?]-in-vdova'-64-Feb — URH-h32-SAGA: 1893-Martin-OD-STRELE → 1900-vdova!**] + s76 (zap9–20 [**Griblje ×4!**]) + s77 (21–32 [×1]); meja 1900/01 [~ s79+?])
+
+Stage Summary:
+- P165 = 1899 polno leto v korpusu (886/187/88/93) — 14/39 mrliške linije
+- Vse skripte + QA zelene; Sledi: runQA + tsc + lint + commit + push GitHub/GitLab
