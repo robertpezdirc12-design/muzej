@@ -1,0 +1,89 @@
+{
+  "status": "SAMPLE-TRANSCRIPTION-D1896",
+  "generated": "2026-10-30",
+  "phase": "P162",
+  "source": "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04894/ (skeni 55–61 == str. 54–60; stran == sken − 1 — 20.–25. potrditev!)",
+  "frame": {
+    "leto": 1896,
+    "vrstic": 60,
+    "griblje_vpisi": 16,
+    "hise": 13,
+    "ponovitve": "h51 ×2 + h42 ×2 + h46 ×2 + h64 ×2 = 4 hiše ×2 (rekord skupaj s 1891!)",
+    "meja_1895_96": "s55: »1896.« velika DVOJNO podčrtana letnica na PRAZNI vrsti + Januarj + restart zap 1 (5. STIL MEJE 4. POTRDITEV — vzorec #5!)",
+    "meja_1896_97": "s60: »1897.« velika TROJNO podčrtana letnica na PRAZNI vrsti + Januarj + restart zap 1 (5. STIL 4. POTRDITEV — izgubljena-seja-'s61'-hipoteza OVRJENA: s61 = že 1897, glava 'Leto 1897' + zap 3–14!)",
+    "skeni": "s55-dno-restart (zap 1–4) + s56 (zap 5–16) + s57 (zap 17–28) + s58 (zap 29–40) + s59 (zap 41–52) + s60 (zap 53–60 + meja 1897 + restart zap 1–2)",
+    "invarianta": "stran == sken − 1 (s55=54! s56=55! s57=56! s58=57! s59=58! s60=59! — 20.–25. potrditev)",
+    "meseci": "Jan4 · Feb1 · Mar1 · Apr1 · Maj1 · Jun1 · Avg2 · Sep2 · Okt1 · Nov2 · Dec0 (1. DECEMBER-0 mrliške!)",
+    "podpisi": "Fr. Škurmelj ×12 + Jos. Rauq ×3 (Feb-Apr-Avg — RAUQ-PODVIS!) + BREZ ×1 (mrtvorojen h14 — r53-vzorec #8)",
+    "razpon": "12 dni (h46-Brodarič) → 72 let (h51-Marija-Urh)",
+    "otrska_umrljivost": "44 % (≤3 leta ×7/16: h14-mrtvorojen + h46-12-dni + h63-14-dni + h20-8-mes + h41-3½ + h9-9-mes + h31-2-let)"
+  },
+  "entries": [
+    {"row": 4, "houseNo": "58", "bookSignature": "04894", "year": 1896, "scan": 55, "page": 54, "mesec": "Januarj", "smrt": "10.", "pokop": "11.", "ime": "Ana PRIJET [~ Prijet/Bržet — X-open]", "stan": "vdova kolarica", "rojena": "BRINEC [★★ max-zoom — VLM-'Ogrizovičeva' + izgubljena-seja-'Primca' ZAVRJENA]", "spol": "žens.", "starost": "40 let [★★ VLM-'30' + seja-'34' ZAVRJENA]", "bolezen": "Marost [~ Mrtvorost-kompleks]", "previden": "pika", "duhovnik": "Fr. Škurmelj", "opomba": "★ 1. Griblje-1896 (restart zap4!); ★★ BRINEC-mreža (h24 1888/1894 + h23-1892 + h14-1896!); h58 = POŽEK-hiša (1890 ×2)"},
+    {"row": 8, "houseNo": "14", "bookSignature": "04894", "year": 1896, "scan": 56, "page": 55, "mesec": "Januarj", "smrt": "21.", "pokop": "22.", "ime": "N. BRINEC [★★ VLM-'Binec/Bunec' ZAVRJEN]", "stan": "¼ žemljarjev otrok moškega spola", "rojena": null, "spol": "moš.", "starost": "[—] (mrtvorojen)", "bolezen": "Mrtvorojen", "previden": "NE", "duhovnik": "BREZ PODPISA", "opomba": "★ r53-vzorec #8; ★★ BRINEC-mreža ×2-1896; h14 = poročna-hiša-1886 (P125) — 1. mrliški vpis h14"},
+    {"row": 10, "houseNo": "45", "bookSignature": "04894", "year": 1896, "scan": 56, "page": 55, "mesec": "Januarj", "smrt": "29.", "pokop": "31.", "ime": "Barbara STRAUS", "stan": "omožena bajtarica", "rojena": "ZAVRTOVIČ", "spol": "žens.", "starost": "40 let", "bolezen": "Mrtvorost [~ Mrtvod]", "previden": "pika", "duhovnik": "Fr. Škurmelj", "opomba": "★★ STRAUS-MREŽA #8 — 2. Strauš-vpis h45 (cf. 1893-h45-Ana-Straus-44-gostja!; 1888-h72 + 1890-h42/h71 + 1921-№22)"},
+    {"row": 11, "houseNo": "51", "bookSignature": "04894", "year": 1896, "scan": 56, "page": 55, "mesec": "Januarj", "smrt": "29.", "pokop": "31.", "ime": "Marija URH", "stan": "omožena kolarica", "rojena": "FILAK", "spol": "žens.", "starost": "72 let", "bolezen": "Slabost", "previden": "1", "duhovnik": "Fr. Škurmelj", "opomba": "★★★ h51 = NOVA korpusna hiša #93 + p80 #88 (1. dokaz kadarkoli — 0 blokov!); ★★★ h51-DRAMA #1 (12 dni do Peterja!); FILAK-vez (1895-×2-h16); P161-lead 'h51 ×2 DVORNA' POTRJEN"},
+    {"row": 13, "houseNo": "51", "bookSignature": "04894", "year": 1896, "scan": 56, "page": 55, "mesec": "Februar", "smrt": "9.", "pokop": "11.", "ime": "Peter URH", "stan": "vdovec in kolar", "rojena": null, "spol": "moš.", "starost": "42 let [★★ VLM-'92' ZAVRJEN @max-zoom]", "bolezen": "Nadluka", "previden": "1", "duhovnik": "Jos. Rauq", "opomba": "★★★ h51-DRAMA #2 (2 smrti ISTA HIŠA v 12 DNEH — cf. 1895-h46-2-dni!); ★★★ URH-mreža (1893-h32-Martin-strela + 1897-h51-Ana = TRILOGIJA ×3/13-mes!); P162-lead 100%"},
+    {"row": 20, "houseNo": "20", "bookSignature": "04894", "year": 1896, "scan": 57, "page": 56, "mesec": "Marcej (INLINE)", "smrt": "31.", "pokop": "1. April", "ime": "Matija PEZDIREC [★★★ VLM-'Podrivec' + diag-'Pozdrivec' OBOJE ZAVRJENA]", "stan": "¼ zemljarjev sin", "rojena": null, "spol": "moš.", "starost": "8 mesecev", "bolezen": "Božjast [~ X11]", "previden": "NE", "duhovnik": "Fr. Škurmelj", "opomba": "★★★ PEZDIREC-×2-v-3-DNEH #1; PEZDIREC-era 5. leto (1892-h57 + 1894-×2 + 1895-×2!); h20 = BRINEC-hiša-1892"},
+    {"row": 23, "houseNo": "42", "bookSignature": "04894", "year": 1896, "scan": 57, "page": 56, "mesec": "April", "smrt": "2.", "pokop": "4.", "ime": "Marija PEZDIREC [★★★ identičen glyph]", "stan": "¼ zemljarjeva hči", "rojena": null, "spol": "žens.", "starost": "14 let [★★ VLM-'11' ZAVRJEN]", "bolezen": "Pljučnica", "previden": "1", "duhovnik": "Jos. Rauq", "opomba": "★★★ PEZDIREC-×2 #2 (3 dni po Matiji-h20!); ★ h42 = CERNIČ-hiša (P122) — hiša-z-2-priimki #2"},
+    {"row": 32, "houseNo": "46", "bookSignature": "04894", "year": 1896, "scan": 58, "page": 57, "mesec": "Maj", "smrt": "28.", "pokop": "30.", "ime": "Nikolaj BRODARIČ [★★ r-wave 7. dokaz!]", "stan": "¼ zemljarjev sin", "rojena": null, "spol": "moš.", "starost": "12 dni", "bolezen": "Slabost", "previden": "NE", "duhovnik": "Fr. Škurmelj", "opomba": "★★ h46-nadaljevanje (1895-TRAGEDIJA-hiša → 3. vpis v 15 mesecih!) — NAJMLAJŠI Griblje-1896"},
+    {"row": 33, "houseNo": "64", "bookSignature": "04894", "year": 1896, "scan": 58, "page": 57, "mesec": "Junij", "smrt": "4.", "pokop": "6.", "ime": "Ana VERBIČAR [~ X-open]", "stan": "samska bajtarjeva hči", "rojena": null, "spol": "žens.", "starost": "24 let", "bolezen": "Jetika", "previden": "1", "duhovnik": "Fr. Škurmelj", "opomba": "★★★ hišna-64 @max-zoom (VLM-'61' + diag-'60/61' OBOJE ZAVRJENA!); h64 = poročna-1921-№11-hiša (P150); h64-×2-1896 #1"},
+    {"row": 40, "houseNo": "26", "bookSignature": "04894", "year": 1896, "scan": 58, "page": 57, "mesec": "Avgust", "smrt": "8.", "pokop": "10.", "ime": "Barbara HVALEŠIČ [~ Hvalešič/Malešič — X-open]", "stan": "samska bajtarica", "rojena": null, "spol": "žens.", "starost": "36 let [★★ diag-'56' ZAVRJEN — VLM-'36' ✓]", "bolezen": "Jetika", "previden": "1", "duhovnik": "Jos. Rauq", "opomba": "★ h26 = GRINEC-hiša-1895 — hiša-z-2-priimki #3; ★ RAUQ-PODVIS #1 (Feb-Apr-Avg ×3!)"},
+    {"row": 43, "houseNo": "46", "bookSignature": "04894", "year": 1896, "scan": 59, "page": 58, "mesec": "Avgust", "smrt": "20.", "pokop": "22.", "ime": "Nikolaj ŠTABIJAR [~ Štabljak/Štabigar — X-open]", "stan": "hlapac [★★ 1. stan-hlapac mrliške!]", "rojena": null, "spol": "moš.", "starost": "16 let", "bolezen": "Jetika", "previden": "1", "duhovnik": "Fr. Škurmelj", "opomba": "★★★ h46-×2-NIKOLAJA #2 (ISTO IME + ISTA HIŠA v 3 mesecih — X10-#3!)"},
+    {"row": 48, "houseNo": "63", "bookSignature": "04894", "year": 1896, "scan": 59, "page": 58, "mesec": "September", "smrt": "5.", "pokop": "6.", "ime": "Ana KRIŽAN", "stan": "¼ zemljarjeva hči", "rojena": null, "spol": "žens.", "starost": "14 dni", "bolezen": "Slabost", "previden": "NE", "duhovnik": "Fr. Škurmelj", "opomba": "★★ KRIŽAN-mreža (1895-×2-h35/h36 → 1896-h63!); h63 = poročna-1911-№1-hiša (P140)"},
+    {"row": 49, "houseNo": "64", "bookSignature": "04894", "year": 1896, "scan": 59, "page": 58, "mesec": "September", "smrt": "13.", "pokop": "14.", "ime": "Matija JAKOBČIČ [★★ č×2 — mreža #6!]", "stan": "oženjen ½ zemljak", "rojena": null, "spol": "moš.", "starost": "68 let", "bolezen": "Ostarelost", "previden": "1", "duhovnik": "Fr. Škurmelj", "opomba": "★★ h64-×2-1896 #2 (2 priimka 1 hiša!); JAKOBČIČ-vez (1891-h6-×2 + 1892-h9-suicid + 1895-h8 + 1896-h9!)"},
+    {"row": 50, "houseNo": "41", "bookSignature": "04894", "year": 1896, "scan": 59, "page": 58, "mesec": "Oktober (INLINE 1.)", "smrt": "1.", "pokop": "2.", "ime": "Marjeta MUŠIČ [~ — VLM-'Magdalena-Hlevič' OBOJE ZAVRJENA]", "stan": "¼ žemljatova hči", "rojena": null, "spol": "žens.", "starost": "3½ leta", "bolezen": "Bule [~ REVERZ: VLM-'Škrlje' ZAVRJEN — 1. VPIS BULE na Gribljih!]", "previden": "pika", "duhovnik": "Fr. Škurmelj", "opomba": "★ h41 = HUSIČ-hiša-1892 (Barbara-1¾-vez!) — 1890-kompleks 'Bele [~ Bule] ×3' leksikonski reverz"},
+    {"row": 52, "houseNo": "9", "bookSignature": "04894", "year": 1896, "scan": 59, "page": 58, "mesec": "November", "smrt": "7.", "pokop": "9.", "ime": "Neža JAKOBČIČ [★★ č×2]", "stan": "¼ zemljarjeva hči", "rojena": null, "spol": "žens.", "starost": "9 mesecev", "bolezen": "Slabost", "previden": "pika", "duhovnik": "Fr. Škurmelj", "opomba": "★★ h9 = SUICID-hiša-1892-vez (1892-'Se-je-obesil'!); JAKOBČIČ-×2-1896 #2"},
+    {"row": 54, "houseNo": "31", "bookSignature": "04894", "year": 1896, "scan": 60, "page": 59, "mesec": "November", "smrt": "24.", "pokop": "26.", "ime": "Joana PAPIČ [~ X-open]", "stan": "½ zemljarjeva hči", "rojena": null, "spol": "žens.", "starost": "2 leti", "bolezen": "Vodenica", "previden": "pika", "duhovnik": "Fr. Škurmelj", "opomba": "★ ZADNJI Griblje-1896 (meja-1897 na ISTI strani s60!); h31 = 1. mrliški vpis (krstni 1890 v p80!)"}
+  ],
+  "excluded": [
+    {"id": "E1", "opis": "s55-zgoraj: 1895-rep zap 46–52 (Krasinec-46-Župančič-17-Božjast + Krasinec-41-Lavrenčič-16-mes + Boršt-16-Hlepec-3½ + Griblje-36-Križan-1½-Bele [P161!] + Gradac-20-Simonič-83 + Griblje-8-Jakobčič-53 [P161!] + Vranoviče-14-Jakša-26) — že v P161!"},
+    {"id": "E2", "opis": "s55-meja: »1896.« DVOJNO podčrtana letnica na PRAZNI vrsti + Januarj (5. STIL 4. POTRDITEV — max-zoom dokaz!)"},
+    {"id": "E3", "opis": "s55-restart zap 1–3 (Dobravice-31-Žugelj-2-dni + Prilozje-30-Jalkovec?-18 + Primostek-15-Förs?-94) — ne-Griblje"},
+    {"id": "E4", "opis": "s56-zap5 = Boginja vas 42 Marija Črnič 1½ Difleritis [★★ VLM-A2-'Griblje'-napaka ZAVRJENA!] — ne-Griblje"},
+    {"id": "E5", "opis": "s58-zap31 = Prilozje 27 Ana Černič 90 Oslablost [★★ VLM-A2-'Griblje'-napaka ZAVRJENA!] — ne-Griblje"},
+    {"id": "E6", "opis": "s60-zap53 + zap57 = Otok-19 + Dobravice-43 N. Hrišan ×2 mrtvorojena otroka moškega spola BREZ podpisa [r53-vzorec #9+#10 — 2× na ENI strani!] — ne-Griblje"},
+    {"id": "E7", "opis": "s60-meja: »1897.« TROJNO podčrtana letnica na PRAZNI vrsti + Januarj + restart zap 1–2 (Goriče?-25-Ana-Podxava?-79 + Gradac-2-Novak-2-mes) — meja 1896/97 = 5. STIL 4. POTRDITEV!"},
+    {"id": "E8", "opis": "s61 GLAVA 'Leto 1897' + zap 3–14 celo stran 1897 [izgubljena-seja-'s61'-meja-hipoteza OVRJENA!] — P163-korpus"},
+    {"id": "E9", "opis": "s61-1897-lead: Griblje ×3 (zap5-h51-Ana-Urh-roj.-Novosel-61-vdova-bajtarca-Slabost-2.2. [URH-TRILOGIJA #3!] + zap11-h42-Jurij/Jožef-Pezdirc?-52-Jetika-6.3. + zap14-h2-Ana-Vrobeč?-33/53?-Jetika-19.5.) + zap4-Giriče-42 [VLM-A2-'Griblje' ZAVRJENA!] — P163!"}
+  ],
+  "anomalies": [
+    {"id": "A1", "opis": "MAX-ZOOM > VLM 13. potrditev = 9 popravkov: Prijet-roj.-BRINEC-40 + h20/h42-PEZDIREC ×2 + N.-BRINEC + 14-let + h64 + 36-let + MUŠIČ + Bule"},
+    {"id": "A2", "opis": "3× VLM-vas-napaka ('Griblje' za Boginja-vas + Prilozje + Giriče) — največ v 1 letu!"},
+    {"id": "A3", "opis": "h51-DRAMA: 2 smrti v 12 dneh (72-letna mati-filakova + 42-letni vdovec-kolar) — URH-gnezdo"},
+    {"id": "A4", "opis": "PEZDIREC-×2-v-3-DNEH: 2 otroka 2 sosednji hiši (h20 + h42) — 1. taki par linije"},
+    {"id": "A5", "opis": "h46-×2-NIKOLAJA: isto ime + isto hiša v 3 mesecih (12-dni-Brodarič + 16-let-hlapac-Štabijar) — X10-#3"},
+    {"id": "A6", "opis": "4 hiše ×2 = 16 vpisov v 13 hišah — vsi vpisi v ponovitvah (h51 + h42 + h46 + h64)"},
+    {"id": "A7", "opis": "1. DECEMBER-0 mrliške (Jan4 Največ — zimska gostota) + kronologija-pokopov 16/16 rastoča"},
+    {"id": "A8", "opis": "r53-vzorec #8–#10: 3 mrtvorojeni BREZ podpisa (h14 + 2× s60-N.-Hrišan) — 2 na ENI strani (1.!)"},
+    {"id": "A9", "opis": "RAUQ-PODVIS-1896: Rauq ×3 (Feb-Apr-Avg) — edini 3 meseci brez Škurmlja; Škurmelj- era 12/16"},
+    {"id": "A10", "opis": "žemljatova/žemljarjeva-morfologija: '¼ žemljatova hči' (h41-Mušič) vs '¼ zemljarjeva hči' — 2 črkovanji istega stan-leksikona"}
+  ],
+  "crossChecks": [
+    {"id": "X1", "opis": "stran == sken − 1 — 20.–25. potrditev (s55=54! s56=55! s57=56! s58=57! s59=58! s60=59!) — P80-invarianta mrliške"},
+    {"id": "X2", "opis": "meja 1895/96 = 5. STIL 4. POTRDITEV (»1896.« DVOJNI podčrtaj s55 + Januarj + restart) — vzorec 3. potrditev (P161) identičen"},
+    {"id": "X3", "opis": "meja 1896/97 = 5. STIL 4. POTRDITEV (»1897.« TROJNI podčrtaj s60 + Januarj + restart) — ISTA STRAN kot zadnji vpis (INLINE-meja #3: 1890-s24? → 1895-s55-rep → 1896-s60!)"},
+    {"id": "X4", "opis": "P162-lead 100% (izgubljena-seja + P161-lead): h51-×2-DVORNA ✓ + Peter-Urh-42 ✓ + h45-Straus-Zavrtovič-40 ✓ + h14-mrtvorojen ✓ — LEAD 4/4"},
+    {"id": "X5", "opis": "h51 = 1. korpusni dokaz kadarkoli (0 blokov do P162!) → korpus 92 → 93 + p80 87 → 88 — P159-h98-vzorec"},
+    {"id": "X6", "opis": "P80_PT_GAP doc-list 14 → 15 (+h51 — 16. hiša luknje 41–60!) + skripta-18 — kaskada usklajena"},
+    {"id": "X7", "opis": "STRAUS-mreža #8: h45-×2 (1893-Ana-44-gostja + 1896-Barbara-40-bajtarica) — cf. 1888-h72 + 1890-h42/h71 + 1921-№22"},
+    {"id": "X8", "opis": "PEZDIREC-era 5. leto: 1892-h57-Rudolf + 1894-h87-Matija/h57-Janez + 1895-h87-Marjeta-roj.-Pezdirec + 1895-zap1-Krasinec-roj.-Pezdirec + 1896-h20-Matija + h42-Marija"},
+    {"id": "X9", "opis": "BRINEC-mreža ×2-1896: h58-Ana-roj.-Brinec (vdova kolarica!) + h14-N.-Brinec-mrtvorojen — cf. h24 1888/1894 + h23-1892-roj.-Hlebec"},
+    {"id": "X10", "opis": "JAKOBČIČ-mreža 1896 ×2: h64-Matija-68 (oženjen ½ zemljak) + h9-Neža-9-mes — h9 = 1892-SUICID-hiša; kumulativ JAKOBČIČ: 1886-×2 + 1891-h6-×2 + 1892-h9-suicid + h17 + 1895-h8 + 1896-×2 = 9 vpisov čez 6 hiš!"}
+  ],
+  "honesty": [
+    "H1: branja = 7× celostansko VLM (glm-5v-turbo, 0 FAIL po SANACIJI-re-generaciji) + 7× diag-PNG agent-oči (polna transkripcija vseh 82 vrstic s55–s61!) + 18 max-zoom celic (agent-oči forenzika — 'max-zoom > VLM' 13. potrditev)",
+    "H2: [~] konservativno: PRIJET (X-open), ŠTABIJAR (X-open), MUŠIČ (X-open), HVALEŠIČ (X-open Malešič), VERBIČAR (X-open), PAPIČ (X-open), Marost [~ Mrtvorost], Bule [~ 1890-kompleks]",
+    "H3: SANACIJA-dokumentirana: /tmp/p162 artefakti izgubljeni (sandbox-reset) — 7 celostanskih VLM re-generiranih iz istih skenov; agent-oči diag-transkripcija + 18 max-zoom celic = neodvisna forenzika; izgubljena-seja-'meja-s61'-hipoteza OVRJENA z max-zoom (s60-'1897.'-TROJNI podčrtaj) — dokaz čisto iz trenutne seje",
+    "H4: rdeče arhivske oznake NISO sistematično forenzično preverjene pri tej fazi (max-zoom celice x-band omejen) — omenjene samo kjer jasno vidne (sled ×3) — H-dvom",
+    "H5: starost-h64-Matija-Jakobčič-68 = 'najstarejši Griblje-1896 do h51-72?' — h51-Marija-72 = NAJSTAREJŠA; 68/72-rang POTRJEN",
+    "H6: s60-zap59-Klošter-41-Marjeta-Plet?-2-dni + zap44-Podžemelj-56-Janez-Štrukelj-3¼-let-oženjen-bajtar (starost/stan-anomalia!) — ne-Griblje, EXCLUDED — anomalija dokumentirana, ne razrešena (X-open)",
+    "H7: VLM-page-s56 je prijavil 5 Gribljev — agent-oči forenzika POTRDILA 4 (zap5 = Boginja vas!) + VLM-page-s58 4 → 3 (zap31 = Prilozje!) + VLM-page-s61 4 → 3 Griblje-1897 (zap4 = Giriče!) — 3× A2",
+    "H8: previden-pika vs previden-NE: 5 pika (h58/h45/h41/h9/h31) + 1 (h51-Marija/h51-Peter/h42/h64/h26/h46-Štabijar/h63-NE?) — dojenčki-NE ×4 (h14-mrtvorojen + h46-Brodarič + h63-14-dni + h20-8-mes) — demografski-sakramentalni-split 1894-vzorec",
+    "H9: h63-Ana-Križan-14-dni previden 'NE' — branje težavno (majhen glif) — H-dvom, konservativno NE (dojenček-vzorec)",
+    "H10: meja-1896/97-EXACT-vrstica: '1897.' marker y-pozicija s60 ~74 % višine — restart zap1–2 POD markerjem (Januarj-1897) — potrjeno z diag + max-zoom; brez dvoma"
+  ],
+  "nextSteps": [
+    "P163 = mrliška 1897 (s60-dno-restart zap1–2 + s61 celo stran [glava 'Leto 1897', zap 3–14] + s62+; GRIBLJE-lead ×3: h51-Ana-Urh-roj.-Novosel-61-vdova-bajtarca-Slabost-2.2. [URH-TRILOGIJA #3!] + h42-Jurij/Jožef-Pezdirc?-52-Jetika-6.3. [h42-PEZDIREC-nadaljevanje!] + h2-Ana-Vrobeč?-33/53?-Jetika-19.5.; meja 1897/98 [~ s67+?]; forenzika: Ana-Urh-Novošel-URH-h51-3.-vpis-13-meseci + Pezdirc-glyph [P-zanček!] + Vrobeč-33-vs-53 [γ-3-dvom!])"
+  ]
+}

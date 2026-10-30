@@ -35,8 +35,8 @@ EXPECTED_EXCLUDED = 8
 EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 10
 GRIBLJE_HOUSES = "2,8,9,16,17,20,23,24,36,37,41,43,48,57,58,61,80"
-VITALS_TOTAL = 837               # POSODABLJENO P159: 809 + 10 (mrliška 1893)!
-BLOKI_04894 = 138               # POSODABLJENO P161: 126 + 12 (mrliška 1895)!
+VITALS_TOTAL = 853               # POSODABLJENO P162: 837 + 16 (mrliška 1896)!
+BLOKI_04894 = 154               # POSODABLJENO P162: 138 + 16 (mrliška 1896)!
 P80_HOUSES = 86                  # TS-filter: 83 + h98 + h89 + h45! EDINA nova 1893 (+h89/h45 prek mrliške!)
 P80_PY_HOUSES = 86               # python-filter (širši 1897): 84 + h98 + h89!
 NEW_SCANS = [34, 35, 36, 37, 38, 39, 40]
@@ -192,12 +192,12 @@ def main():
     check("I6d bloki 1892: skeni 34–40 + stran == sken − 1",
           all(v["scan"] and 34 <= v["scan"] <= 40 and v["page"] == v["scan"] - 1 for v in d1892), "")
     check("I6d2 bloki 1894+ ne obstajajo (P161-lead!; P159 = 1893 v korpusu!)",
-          all(v["year"] < 1896 for v in d04894), "")
+          all(v["year"] < 1897 for v in d04894), "")
     p80 = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
     check("I6f p80-skripta pini 819 + 86",
-          "len(vitals) == 837" in p80 and "len(houses) == 87" in p80, "")  # python-p80 = 84 (širši 1897-filter)
+          "len(vitals) == 853" in p80 and "len(houses) == 88" in p80, "")  # python-p80 = 84 (širši 1897-filter)
     houses_all = {v["houseNo"] for v in vit if v["houseNo"].isdigit()}
-    check("I6g korpus = 92 hiš (+h98 EDINA!)", len(houses_all) == 92, str(len(houses_all)))
+    check("I6g korpus = 92 hiš (+h98 EDINA!)", len(houses_all) == 93, str(len(houses_all)))
 
     # ---------- I7: max-zoom forenzika ----------
     r50 = next((e for e in ent if e["row"] == 50), None)
@@ -279,9 +279,9 @@ def main():
     # ---------- I12: qa + README + notes ----------
     qa = open(QA_TS, encoding="utf-8").read()
     check("I12 qa-p158 obstaja", "qa-p158-parish-death-1892" in qa, "")
-    check("I12b qa-p157 guard 1893 (posodobljeno)", "1893+-mrliški bloki že v korpusu" in qa, "")
+    check("I12b qa-p157 guard 1893 (posodobljeno)", "1897+-mrliški bloki že v korpusu" in qa, "")
     check("I12c qa-pini 837/138/87 (75×+9×+13×)",
-          qa.count("!== 837") >= 72 and qa.count("!== 138") >= 7 and qa.count("p80Houses.size !== 87") >= 9,
+          qa.count("!== 853") >= 77 and qa.count("!== 154") >= 11 and qa.count("p80Houses.size !== 88") >= 14,
           f"{qa.count('!== 837')}/{qa.count('!== 126')}/{qa.count('p80Houses.size !== 87')}")
     readme = open(README, encoding="utf-8").read()
     check("I12d README P158", "P158" in readme and "1892" in readme, "")
