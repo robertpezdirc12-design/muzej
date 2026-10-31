@@ -6833,3 +6833,17 @@ Stage Summary:
 - **P170 KONČAN** — 19/39 mrliške linije; korpus 950/251/91/93 (PT 29)
 - 5-GLAVE-NAPAKE-REKORD + PEZDIREC-era-13 (×9-v-3-letih!) + DIAG-METODA (vizualni-gridi!) + GLAVA-HALUCINACIJA-LEKCIJA
 - P171 READY: mrliška-1905 (s99-dno-ŽE-prebrano + s100+; Lengsfeld-kontekst)
+
+## P170 deploy-status
+
+Agent: Z.ai Code (glavni agent)
+Task: Push/deploy verifikacija P170 (trilokacija + produkcija)
+
+Work Log:
+- PUSH: P170-89c26d7 → GitHub origin + GitLab gitlab = 89c26d7 (1:1, push-output-oba!) → Vercel-auto-deploy (~90-s)
+- **P170 PRODUKCIJA POTRJENA**: https://griblje-museum.vercel.app/api/qa = **ok:True 171/171 + qa-p170-parish-death-1904 pass:True** (computedAt-15:37-svež) → **19/39 mrliške linije NA-LIVE!**
+
+Stage Summary:
+- **P170 NA PRODUKCIJI** (171/171 ok:True) — mrliška linija 16→17→18→19/39 NA-LIVE (1901→1902→1903→1904)
+- Trilokacija 1:1:1 @ 89c26d7 — P171 lahko teče brez-blockad
+- **P171 LEAD: mrliška 1905** (s99-restart-zap1–12 ŽE-prebrani [z1-h59?-Marjeta-PEZDIREC?-72-let!] + s100+; Lengsfeld-DOMINANTA!)
