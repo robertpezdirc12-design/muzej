@@ -6720,6 +6720,6 @@ Work Log:
 Stage Summary:
 - P167 = 1901 polno leto v korpusu (904/205/89/93) — 16/39 mrliške linije
 - Vse skripte + QA + tsc + lint zeleni
-- PUSH: GitLab **✓ 05d5d95..12ea911** (oauth2:glpat — zrcalo-aktualno!); GitHub **✗ BLOKIRAN — PAT-ghp_ZQjc…-NEVELJAVEN** (API-401-'Bad credentials' + push-'Invalid username or token' vseh-3-formatov [token@ / token: @ / user:token] — iztek/revoked; ls-remote-deluje = repo-JAVEN-anonymous-read — nezanesljiv-test!) → **OSTAJA-UPORABNIŠKA-AKCIJA: nov-GitHub-PAT** (github.com/settings/tokens — classic-scopes-repo!)
-- Vercel-deploy: **ČAKA-GitHub-push** (primarna-pot = Vercel-GitHub-App — vezana-na-GitHub-main; deploy.yml-rezerva-mrtva [VERCEL_TOKEN-potekel-2026-10-14]; deploy-hook-ni-konfiguriran) — ko bo GitHub-pobil-12ea911 → auto-deploy-168/168
+- PUSH: GitLab **✓ 0292c96** (oauth2:glpat — zrcalo-aktualno, vključno z deploy-status-vnosom!); GitHub **✓ 0292c96** (NOV-PAT `ghp_SChC…` — API-200 + push `05d5d95..0292c96 main -> main` + ls-remote 1:1; STARI-PAT-`ghp_ZQjc…`-iztek/revoked [401-'Bad credentials'] = P78-lekcija-potrjena: ls-remote-anonymous-deluje-tudi-z-neveljavnim-žetonom = NE-test!); **TRILOKACIJE-1:1: lokalni-HEAD = GitLab = GitHub = 0292c96**
+- Vercel-deploy: **✓ AVTOMATSKI-POST-P167** (Vercel-GitHub-App; ~90-s-po-pushu): `GET /` HTTP-200-1,226,194-B + `GET /api/qa` **ok True 168/168** + **qa-p167-parish-death-1901 pass True na produkciji** (10 vpisov / 55 vrstic / 10 hiš — 1901-LIVE!)
 - P168 LEAD: mrliška **1902** (s85-dno-restart-zap1–10 ŽE prebrani [Griblje-kandidati-ŽE-VIDNI: zap4-h52?-Janez-Pezdirec-56 + zap8-h23?-Matija-'Prinec'?-64-Jetika-BRINEC-zmeda + zap10-h33?-Matija-Dehlič?-3 [~]] + s86 (zap11–22?) + s87+; meja 1902/03 [~ s90+?])
