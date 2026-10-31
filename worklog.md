@@ -6772,3 +6772,20 @@ Stage Summary:
 - Vse skripte + QA + tsc + lint zeleni
 - PUSH: P168-f59f14e + P169 skupaj (prvi-push-te-seje!) → GitHub + GitLab → Vercel-auto-deploy → verifikacija-170/170-produkcija
 - P170 LEAD: mrliška **1904** (s94-dno-restart-zap1–3 ŽE prebrani [zap3-h58?-Ivana-Puček?-2-let-Jan!] + s95 (zap4–15 ŽE-prebrani-kontekst [Griblje/Giriče-zmeda: zap8-Anton-Šapnic?-3-mes + zap10-Ana-Krvan?-79-let!]) + s96+; meja 1904/05 [~ s97+?])
+
+
+## P169 deploy-status
+
+Agent: Z.ai Code (glavni agent)
+Task: Push/deploy verifikacija P168 + P169 (trilokacija + produkcija)
+
+Work Log:
+- P168-produkcija-VERIFIKACIJA: https://griblje-museum.vercel.app/api/qa = **ok:True 169/169 + qa-p168-parish-death-1902 pass:True** → **P168-AUTO-DEPLOY-POTRJEN NA PRODUKCIJI!** (prejšnja-seja-PUSH-delovala: GitHub f59f14e + GitLab f59f14e; samo deploy-status-vnos-manjkal!)
+- Trilokacija-faza: lokalno **9d1208e** (P169) · GitLab **✓ 9d1208e** (push `f59f14e..9d1208e` — P168+P169 skupaj) · GitHub **f59f14e** (P168) — P169-push-ČAKA
+- GitHub ✗ P169-push: PAT-ghp_SChC… = **401-BAD-CREDENTIALS** (API /user + git-push-401 → token-preklican/iztekel; P167-nov-žeton-potekel) → **potreben-NOV-GitHub-PAT**; Vercel-auto-deploy-čaka-na-GitHub-push (~90-s po pushu)
+- GitLab-CI = build-only (deploy-vezan-na-GitHub-App — .gitlab-ci.yml-brez-deploy-stage)
+
+Stage Summary:
+- **P168 produkcija POTRJENA** (169/169 + qa-p168-pass) — 17/39 mrliške linije NA-LIVE
+- **P169 = GitLab ✓ + lokalno ✓ · GitHub/Vercel čakata NOV-PAT** → po-pushu: Vercel-auto-deploy → verifikacija 170/170 + qa-p169-pass
+- P170 LEAD: mrliška **1904** (s94-dno-restart-zap1–3 + s95-kontekst-zap4–15 + s96+; meja 1904/05 [~ s97+?])
