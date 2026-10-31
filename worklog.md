@@ -6789,3 +6789,18 @@ Stage Summary:
 - **P168 produkcija POTRJENA** (169/169 + qa-p168-pass) — 17/39 mrliške linije NA-LIVE
 - **P169 = GitLab ✓ + lokalno ✓ · GitHub/Vercel čakata NOV-PAT** → po-pushu: Vercel-auto-deploy → verifikacija 170/170 + qa-p169-pass
 - P170 LEAD: mrliška **1904** (s94-dno-restart-zap1–3 + s95-kontekst-zap4–15 + s96+; meja 1904/05 [~ s97+?])
+
+## P169+P170-prelude deploy-status
+
+Agent: Z.ai Code (glavni agent)
+Task: GitHub-push-sanacija z NOVIM-PAT + produkcija-verifikacija P169
+
+Work Log:
+- **NOV GitHub PAT** (uporabnik posredoval) — API `/user` = **200** (login `robertpezdirc12-design`) ✓
+- **GitHub push SANIRAN**: `git remote set-url origin` (nov-PAT) + push → **`f59f14e..f3c9d73 main->main`** (P169-1903 + deploy-status skupaj) → **TRILOKACIJA 1:1:1** (lokalno = GitHub = GitLab @ f3c9d73; `ls-remote` obeh-remote-potrdil!)
+- **P169 PRODUKCIJA POTRJENA** (Vercel-auto-deploy ~90-s-po-pushu): https://griblje-museum.vercel.app/api/qa = **ok:True 170/170 + qa-p169-parish-death-1903 pass:True + qa-p168 pass:True** (computedAt svež-post-push) → **18/39 mrliške linije NA-LIVE!**
+
+Stage Summary:
+- **P169 NA PRODUKCIJI** (170/170 ok:True) — mrliška linija 16→17→18/39 NA-LIVE (1901→1902→1903)
+- Trilokacija 1:1:1 @ f3c9d73 — brez-blockad; P170 lahko teče v isti seji
+- **P170 START: mrliška 1904** (s94-dno-restart-zap1–3 ŽE-prebrani + s95-kontekst-zap4–15 ŽE-prebrani + s96+; meja 1904/05 [~ s97+?]; Griblje/Giriče-zmeda zap8/zap10 = WATCH!)
