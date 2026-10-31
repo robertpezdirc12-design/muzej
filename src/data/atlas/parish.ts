@@ -2718,6 +2718,213 @@ export const HOUSE_VITALS: HouseVital[] = [
     status: "DOCUMENTED",
   },
 
+  // ——— P169 razširitev: MRLIŠKA KNJIGA 04894, POLNO LETO 1903 (issue #18) ———
+  // s90-dno (restart zap1–7; P168-faza-že-brano, P169-reuse) + s91–s94 ==
+  // str. 90–93 (stran == sken − 1 — 58.–61. potrditev! s91=90 … s94=93!)
+  // + meja 1903/04 = s94 ('1904' VELIKA + VEČKRATNI podčrtaj na PRAZNI
+  // vrsti + Januarj-INLINE + restart zap 51→1 = 5. STIL 11. POTRDITEV —
+  // P168-lead-'[~ s94+?]' POTRJEN!) + meja-1902/03-RE-potrditev = 12.
+  // ('1903.' večkrat-podčrtan @ s90 — diag!) + ★★★ 17 GRIBLJE = IZENAČI
+  // REKORD LINIJE (1902-17! rast: 10→17→17!) / 51 vpisov / 14 hiš (h45,
+  // h40, h18 ×2!) + ★★★ 3 GLAVE-NAPAKE = NOVI REKORD LINIJE (s92-'18903'
+  // + s94-'18903' + s95-'18[~]1904' — pisar-'189'-navada-iz-1890-ih!;
+  // 1902-je-imel-1!) + ★★★ ZAPCOL-1903 = ČIST (1–51 brez-napak — NASPROTJE
+  // 1902-'345'+NEŠTEVILČENA!) + ★★★ ŠTRAVS-×5-v-2-LETIH = GROZOVITA
+  // DRUŽINSKA TRAGEDIJA (h72-×3: Anton-9-mes + Alojzij-1-leto-1902 +
+  // Marija-35-1903 [super-×6-Štravs-NE-Špan/Špavc!] + h45-×2: Alojzij-5-mes
+  // + Nikolaj-2-let-1903!) + ★★★ PEZDIREC-×3-1903 = IZENAČI-era-11 (h52-
+  // Barbara + h40-Marija + h40-Janez!) = era-12 → PEZDIREC-×6-v-2-ZAPOREDNIH
+  // LETIH + ★★★ h40-×3-v-2-LETIH (Ana-59-NOV-1902 + Marija-23-MAR + Janez-
+  // 64-JUN-1903!) + ★★★ h4 = 1. MRLIŠKI VPIS KADARKOLI = 28. PT-vezni
+  // dokaz (Andrej-Šotler-73-let-NOV; 04105-1906-krstna-že-v-p80! IZVEN
+  // 41–60!) + ★★★ h83-hisna-agent-oči-×7 = **83** (3-kandidati-83/85/33 →
+  // 8-ima-zgornjo-zanko-ne-ravno = kalibracija-z52-5-je-RAVNO!) + ★★★
+  // h36 = 7. vpis = ×3-ZAPOREDNA-LETA (1901+1902+1903!) + h18-×2-v-1903
+  // (Janez-4½-APR + Jurij-72-OKT = možni-DED-Šimec!) + γ→7-LEKCIJA-13.–14.
+  // POTRDITEV (z41-'42'→**72** + z38-'42'→**72** obe @×7-γ-s-prečko!)
+  // + Dostál-#11-DOMINANTA (Griblje ×16-Dostál / ×1-Rauq-zap42!) + zap44
+  // = BREZ-podpisa (samo-'—') + Dostál-podpis-@-PRAZNI-vrsti (pisarjeva-
+  // navada-kot-P168-meja!) + ime-super-×6: Križan-NE-Kukan + Šimec-NE-
+  // Simenc + Radovič-NE-Radlovič + Dragaš-NE-Dragar + Žegriva [~ Žegrina]
+  // (P169-lead-'Zagriva'-POTRJEN!) + JETIKA-DOMINANTA ×4 (z8+z10+z13+z38!)
+  // + meseci-Griblje Jan1·Feb2·Mar3·Apr3·Maj1·Jun1·Jul1·Avg0·Sep0·Okt2·
+  // Nov1·Dec2 = 17 (MAR+APR-dominanta 35%!) + x-lekcija (starost-@1530–
+  // 1770-NE-1770–2200 = P168-S_X-je-bil-BOLEZEN — forenzika-re-crops!).
+  // Dokaz: research/issue17/parish-death-1903.json; skripta
+  // scripts/p169_parish_death_1903.py; zap-continuity: 1–7 (s90) → 8–19
+  // (s91) → 20–31 (s92) → 32–43 (s93) → 44–51 (s94) = 51 oštevilčenih /
+  // 51 fizičnih = ČISTO LETO (meja 1904 = s94!).
+  {
+    houseNo: "45",
+    bookSignature: "04894",
+    year: 1903,
+    scan: 90,
+    page: 89,
+    whatSi: "umrl Alojzij ŠTRAVS [★★ ŠTRAVS-×5-v-2-LETIH-#3!], hajlajerjev [~ Hejhalter/najemnik?] sin, 5 MESECEV (3. 1., pokop 5. 1.) — Kraselj [~ Kašelj-KURRENT-r/s-varianta — NOVA-BOLEZEN-FORMA!]; previden (1); Stanislav Dostál [#11!]; ★★ h45 = 4. mrliški vpis + h45-×2-v-1903-#1 (1893 + 1896 + 1900 + 1903-×2!) + PRVI-GRIBLJE-1903 (meja-1902/03-RE = '1903.' večkrat-podčrtan @ s90 = 12. POTRDITEV!) + 4 + 5 hišna (45 — 8×)",
+    whatEn: "died Alojzij ŠTRAVS [★★ the ŠTRAVS-×5-in-2-YEARS-#3!], a hajlajer's [~ Hejhalter/lodger?] son, 5 MONTHS (Jan 3, buried Jan 5) — Kraselj [~ Kašelj-KURRENT-r/s-variant — a NEW-DISEASE-FORM!]; previden (1); Stanislav Dostál [#11!]; ★★ h45 = the 4th death entry + the h45-×2-in-1903-#1 (1893 + 1896 + 1900 + 1903-×2!) + the FIRST-GRIBLJE-1903 (the 1902/03-border-RE = '1903.' multi-underlined @ s90 = the 12th CONFIRMATION!) + the 4 + 5 house number (45 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "45",
+    bookSignature: "04894",
+    year: 1903,
+    scan: 90,
+    page: 89,
+    whatSi: "umrl Nikolaj ŠTRAVS [★★ ŠTRAVS-×5-v-2-LETIH-#4!], hajlajerjev [~] sin, 2 LETI (7. 2., pokop 9. 2.) — Harost [~ cf. 1891-'Šarost'-X-vzorek]; previden (1); Stanislav Dostál [#11!]; ★★ h45-×2-v-1903-#2 = 5. mrliški vpis (1893 + 1896 + 1900 + 1903-×2! — 2-OTROKA-v-1-MESECU-razonu!) + h45-DRUŽINA: 2-mrtva-otroka-Štravs-v-5-tednih (Alojzij-JAN + Nikolaj-FEB!) + 4 + 5 hišna (45 — 8×)",
+    whatEn: "died Nikolaj ŠTRAVS [★★ the ŠTRAVS-×5-in-2-YEARS-#4!], a hajlajer's [~] son, 2 YEARS (Feb 7, buried Feb 9) — Harost [~ cf. 1891-'Šarost'-X-sample]; previden (1); Stanislav Dostál [#11!]; ★★ the h45-×2-in-1903-#2 = the 5th death entry (1893 + 1896 + 1900 + 1903-×2! — 2-CHILDREN-within-1-MONTH-span!) + the h45-FAMILY: 2-dead-Štravs-children-in-5-weeks (Alojzij-JAN + Nikolaj-FEB!) + the 4 + 5 house number (45 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "30",
+    bookSignature: "04894",
+    year: 1903,
+    scan: 90,
+    page: 89,
+    whatSi: "umrl Jožef ŽEGRIVA [★★ super-×6-ime: Ž-začetnik-potrjen — P169-lead-'Zagriva?'-POTRJEN-kot-ŽEGRIVA!; forenzika-×3.0-'Žegriva' + trakt-'Zegina'-ZAVRJEN!], ½ zemljakov sin, 10 MESECEV (8. 2., pokop 10. 2.) — Kraselj [~]; previden (1); Stanislav Dostál [#11!]; ★ h30 = 7. mrliški vpis (1889 + 1890-×2 + 1891 + 1895 + 1898 + 1903 — h30 = dojenčki-hiša cf. 1890-×2-3-dni/9-dni!) + 3 + 0 hišna (30 — 8×)",
+    whatEn: "died Jožef ŽEGRIVA [★★ the super-×6-name: the Ž-initial-proven — the P169-lead-'Zagriva?'-PROVEN-as-ŽEGRIVA!; the ×3.0-forensics-'Žegriva' + the strip-'Zegina'-REJECTED!], a half smallholder's son, 10 MONTHS (Feb 8, buried Feb 10) — Kraselj [~]; previden (1); Stanislav Dostál [#11!]; ★ h30 = the 7th death entry (1889 + 1890-×2 + 1891 + 1895 + 1898 + 1903 — h30 = the infants-house cf. 1890-×2-3-days/9-days!) + the 3 + 0 house number (30 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "52",
+    bookSignature: "04894",
+    year: 1903,
+    scan: 91,
+    page: 90,
+    whatSi: "umrla Barbara PEZDIREC [★★ PEZDIREC-×3-1903-#1 = IZENAČI-era-11 → era-12!; trakt-'Pečnirec'-ZAVRJEN — korpus-konsistenco-h52-PEZDIREC (1902-Janez-Pezdirec-h52!)], ½ zemljakova hči [~], 4 leta (14. 3., pokop 16. 3.) — Jetika [★★ forenzika-'Harost'-ZAVRJEN — diag-'Jetika'-forma + celostansko-×2!]; previden (1); Stanislav Dostál [#11!]; ★ h52 = 3. mrliški vpis (1898-Marija-11-mes + 1902-Janez-56 + 1903!) + PEZDIREC-hiša-h52 = 2-mrtvi-v-14-mesecih (oče-Janez-56-FEB-1902 + hči-Barbara-4-let-MAR-1903!) + 5 + 2 hišna (52 — 8×)",
+    whatEn: "died Barbara PEZDIREC [★★ the PEZDIREC-×3-1903-#1 = TIES-the-era-11 → era-12!; the strip-'Pečnirec'-REJECTED — the corpus-consistency-h52-PEZDIREC (the 1902-Janez-Pezdirec-h52!)], a half smallholder's daughter [~], 4 years (Mar 14, buried Mar 16) — Jetika [★★ the forensics-'Harost'-REJECTED — the diag-'Jetika'-form + the holistic-×2!]; previden (1); Stanislav Dostál [#11!]; ★ h52 = the 3rd death entry (1898-Marija-11-mos + 1902-Janez-56 + 1903!) + the PEZDIREC-house-h52 = 2-dead-in-14-months (the father-Janez-56-FEB-1902 + the daughter-Barbara-4-yrs-MAR-1903!) + the 5 + 2 house number (52 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "40",
+    bookSignature: "04894",
+    year: 1903,
+    scan: 91,
+    page: 90,
+    whatSi: "umrla Marija PEZDIREC [★★ PEZDIREC-×3-1903-#2!; trakt-'Pečnierec'-ZAVRJEN — h40-korpus-konsistenco (1902-Ana-Pezdirec!)], možena [~] ½, 23 let (16. 3., pokop 18. 3.) — Jetika; previden (1); Stanislav Dostál [#11!]; ★★ h40 = 2. mrliški vpis = h40-×3-v-2-LETIH-#2 (Ana-59-NOV-1902 + Marija-23-MAR-1903 + Janez-64-JUN-1903 = 1.-hiša-×3-v-2-letih-mrliške-linije!) + 4 + 0 hišna (40 — 8×)",
+    whatEn: "died Marija PEZDIREC [★★ the PEZDIREC-×3-1903-#2!; the strip-'Pečnierec'-REJECTED — the h40-corpus-consistency (the 1902-Ana-Pezdirec!)], a married [~] half, 23 years (Mar 16, buried Mar 18) — Jetika; previden (1); Stanislav Dostál [#11!]; ★★ h40 = the 2nd death entry = the h40-×3-in-2-YEARS-#2 (Ana-59-NOV-1902 + Marija-23-MAR-1903 + Janez-64-JUN-1903 = the 1st-house-×3-in-2-years-of-the-death-line!) + the 4 + 0 house number (40 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "36",
+    bookSignature: "04894",
+    year: 1903,
+    scan: 91,
+    page: 90,
+    whatSi: "umrla Frančiška KRIŽAN [★★★ super-×6-ime-NEDOVOMNO-Križan — VLM-celostansko-'Kukan'-ZAVRJEN! KRIŽAN-mreža: 1888-r102-Peter-80 + 1890-r35-mrtvorojen + 1903!], ½ zemljakova hči, 4 MESECE (31. 3., pokop 2. 4.) — Božjast [~ forenzika-'Krastelj'-ZAVRJEN — diag-'Božjart' + celostansko!]; previden (1); Stanislav Dostál [#11!]; ★★★ h36 = 7. mrliški vpis = ×3-ZAPOREDNA-LETA (1901 + 1902-'Na-porodu' + 1903 — edina-hiša-linije-z-3-zaporednimi-leti!) + 3 + 6 hišna (36 — 8×)",
+    whatEn: "died Frančiška KRIŽAN [★★★ the super-×6-name-UNEQUIVOCAL-Križan — the holistic-VLM-'Kukan'-REJECTED! the KRIŽAN-network: 1888-r102-Peter-80 + 1890-r35-stillborn + 1903!], a half smallholder's daughter, 4 MONTHS (Mar 31, buried Apr 2) — Božjast [~ the forensics-'Krastelj'-REJECTED — the diag-'Božjart' + holistic!]; previden (1); Stanislav Dostál [#11!]; ★★★ h36 = the 7th death entry = ×3-CONSECUTIVE-YEARS (1901 + 1902-'Na-porodu' + 1903 — the only-house-of-the-line-with-3-consecutive-years!) + the 3 + 6 house number (36 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "46",
+    bookSignature: "04894",
+    year: 1903,
+    scan: 91,
+    page: 90,
+    whatSi: "umrla Ana BRODARIČ [~ Brodarić-BRODARIČ-mreža-14.-leto-poročne-linije cf. P131!], možena [~] ¼, 33 let (8. 4., pokop 10. 4.) — Jetika; previden (1); Stanislav Dostál [#11!]; ★ h46 = 7. mrliški vpis (1887 + 1891 + 1895-×2 + 1896-×2 + 1903!) + 4 + 6 hišna (46 — 8×)",
+    whatEn: "died Ana BRODARIČ [~ the BRODARIČ-network-the-14th-year-of-the-marriage-line cf. P131!], a married [~] quarter, 33 years (Apr 8, buried Apr 10) — Jetika; previden (1); Stanislav Dostál [#11!]; ★ h46 = the 7th death entry (1887 + 1891 + 1895-×2 + 1896-×2 + 1903!) + the 4 + 6 house number (46 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "11",
+    bookSignature: "04894",
+    year: 1903,
+    scan: 91,
+    page: 90,
+    whatSi: "umrla Marija ŽEFKO [★★ ŽEFKO-×2-1903-#1!], gostlinarjeva [~ gosposlar?-KURRENT] hči, 1½ leta (15. 4., pokop 17. 4.) — Kašelj [~ forenzika-'Slabost'-ZAVRJEN — diag-'Kašej'-forma!]; previden (1); Stanislav Dostál [#11!]; ★★ h11 = 3. mrliški vpis (1899 + 1902 + 1903 — h11-×2-v-2-letih-1902+1903!) + 1 + 1 hišna (11 — 8×)",
+    whatEn: "died Marija ŽEFKO [★★ the ŽEFKO-×2-1903-#1!], a tavern-keeper's [~ gosposlar?-KURRENT] daughter, 1½ years (Apr 15, buried Apr 17) — Kašelj [~ the forensics-'Slabost'-REJECTED — the diag-'Kašej'-form!]; previden (1); Stanislav Dostál [#11!]; ★★ h11 = the 3rd death entry (1899 + 1902 + 1903 — the h11-×2-in-2-years-1902+1903!) + the 1 + 1 house number (11 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "18",
+    bookSignature: "04894",
+    year: 1903,
+    scan: 91,
+    page: 90,
+    whatSi: "umrl Janez ŠIMEC [★★ ŠIMEC-×2-1903-#1!], ½ zemljakov sin, 4½ leta [~ forenzika-'4¹⁄₁₂'-KURRENT-ulomek-zmeda], (24. 4., pokop 26. 4.) — Prehlajenje [~ forenzika-'Božjast'-ZAVRJEN — diag-'Briklojenje'-dolga-forma!]; previden (1); Stanislav Dostál [#11!]; ★★ h18 = 2. mrliški vpis (1890-Matija-Jaklič-3-let + 1903!) + h18-×2-v-1903-#1 (APR) — ŠIMEC-mreža (h56-Johann-1886 + h55-rekord-92 + h38-Jurij-48 + h18!) + 1 + 8 hišna (18 — 8×)",
+    whatEn: "died Janez ŠIMEC [★★ the ŠIMEC-×2-1903-#1!], a half smallholder's son, 4½ years [~ the forensics-'4¹⁄₁₂'-KURRENT-fraction-confusion], (Apr 24, buried Apr 26) — Prehlajenje [~ the forensics-'Božjast'-REJECTED — the diag-'Briklojenje'-long-form!]; previden (1); Stanislav Dostál [#11!]; ★★ h18 = the 2nd death entry (1890-Matija-Jaklič-3-yrs + 1903!) + the h18-×2-in-1903-#1 (APR) — the ŠIMEC-network (h56-Johann-1886 + h55-record-92 + h38-Jurij-48 + h18!) + the 1 + 8 house number (18 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "58",
+    bookSignature: "04894",
+    year: 1903,
+    scan: 91,
+    page: 90,
+    whatSi: "umrl Alojzij POŽEK [~ Lojzij], ¼ zemljakov sin, 2½ leta [~ forenzika-'2⁸⁄₁₂'-ulomek-zmeda — trakt-×2.2-2½-×2-vote!], (7. 5., pokop 9. 5.) — Božjast [~ forenzika-'Krastelj'-ZAVRJEN — diag-'Božjart'!]; previden (1); Stanislav Dostál [#11!]; ★ h58 = 6. mrliški vpis (1887-Marko-66-Mertvod + 1890-Anton-2-let + 1892 + 1893 + 1896 + 1903 — cf. 1890-Anton-2-let-IDENTIČNA-starost!) + POŽEK-mreža (h58 + h61 + h4-1903!) + hisna-agent-oči-×7 = **58** (NE-38 — 5-je-ravno-zgoraj!) + 5 + 8 hišna (58 — 8×)",
+    whatEn: "died Alojzij POŽEK [~ Lojzij], a quarter smallholder's son, 2½ years [~ the forensics-'2⁸⁄₁₂'-fraction-confusion — the strip-×2.2-2½-×2-votes!], (May 7, buried May 9) — Božjast [~ the forensics-'Krastelj'-REJECTED — the diag-'Božjart'!]; previden (1); Stanislav Dostál [#11!]; ★ h58 = the 6th death entry (1887-Marko-66-Mertvod + 1890-Anton-2-yrs + 1892 + 1893 + 1896 + 1903 — cf. the 1890-Anton-2-yrs-IDENTICAL-age!) + the POŽEK-network (h58 + h61 + h4-1903!) + the house agent-eyes-×7 = **58** (NOT 38 — the 5-is-straight-on-top!) + the 5 + 8 house number (58 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "40",
+    bookSignature: "04894",
+    year: 1903,
+    scan: 92,
+    page: 91,
+    whatSi: "umrl Janez PEZDIREC [★★ PEZDIREC-×3-1903-#3 = IZENAČI-era-11!; trakt-'Pečnirec'-×2-VLM-ZAVRJEN — korpus-konsistenco-h40 (Ana-Pezdirec-1902!)], oženjen ožitkar [~] in vdovec [★★ = MOŽNI-VDOVEC-po-Ani-Pezdirec-59-NOV-1902-ISTA-HIŠA!], 64 let [~ forenzika-'61'-KURRENT-1-črtica-≠-4-zanka!], (18. 6., pokop 21. 6.) — Nadluha [~ forenzika-'Vodenica'-ZAVRJEN — diag-'Nadniha'!]; previden (1); Stanislav Dostál [#11!]; ★★★ h40 = 3. mrliški vpis = **h40-×3-v-2-LETIH-ZAKLJUČEK** (Ana-59-NOV-1902 + Marija-23-MAR-1903 + Janez-64-JUN-1903 — 1.-hiša-×3-v-2-letih-linije!) + PEZDIREC-×6-v-2-ZAPOREDNIH-LETIH (1902: h52+h57+h40 / 1903: h52+h40-×2!) + 4 + 0 hišna (40 — 8×)",
+    whatEn: "died Janez PEZDIREC [★★ the PEZDIREC-×3-1903-#3 = TIES-the-era-11!; the strip-'Pečnirec'-×2-VLM-REJECTED — the corpus-consistency-h40 (the Ana-Pezdirec-1902!)], a married caretaker [~] and widower [★★ = the PROBABLE-WIDOWER-after-Ana-Pezdirec-59-NOV-1902-THE-SAME-HOUSE!], 64 years [~ the forensics-'61'-KURRENT-1-dash-≠-4-loop!], (Jun 18, buried Jun 21) — Nadluha [~ the forensics-'Vodenica'-REJECTED — the diag-'Nadniha'!]; previden (1); Stanislav Dostál [#11!]; ★★★ h40 = the 3rd death entry = **the h40-×3-in-2-YEARS-CONCLUSION** (Ana-59-NOV-1902 + Marija-23-MAR-1903 + Janez-64-JUN-1903 — the 1st-house-×3-in-2-years-of-the-line!) + the PEZDIREC-×6-in-2-CONSECUTIVE-YEARS (1902: h52+h57+h40 / 1903: h52+h40-×2!) + the 4 + 0 house number (40 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "60",
+    bookSignature: "04894",
+    year: 1903,
+    scan: 92,
+    page: 91,
+    whatSi: "umrla Katarina ŽEFKO [★★ ŽEFKO-×2-1903-#2!], vdova kolarica, 64 let [~ trakt-'67'! — ×3.0-64-×2-vote], (15. 7., pokop 17. 7.) — Slabost [~ forenzika-'Marbmil'-ZAVRJEN!]; previden (1); Stanislav Dostál [#11!]; ★★ h60 = 6. mrliški vpis (1888-×2 + 1898 + 1899 + 1901 + 1903 — h60-ŽEFKO-vez-1898-Žefko? cf. 1898-blok!) + KOLARICA-×2-leto (cf. 1891-r33-Filak!) + 6 + 0 hišna (60 — 8×)",
+    whatEn: "died Katarina ŽEFKO [★★ the ŽEFKO-×2-1903-#2!], a widow wheelwright's-wife (kolarica), 64 years [~ the strip-'67'! — the ×3.0-64-×2-votes], (Jul 15, buried Jul 17) — Slabost [~ the forensics-'Marbmil'-REJECTED!]; previden (1); Stanislav Dostál [#11!]; ★★ h60 = the 6th death entry (1888-×2 + 1898 + 1899 + 1901 + 1903 — the h60-ŽEFKO-link-1898 cf. the 1898-block!) + the KOLARICA-×2-of-the-year (cf. 1891-r33-Filak!) + the 6 + 0 house number (60 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "72",
+    bookSignature: "04894",
+    year: 1903,
+    scan: 93,
+    page: 92,
+    whatSi: "umrla Marija ŠTRAVS [★★★ super-×6-ime: ŠTRAVS-NE-Špan/Špavc-VLM-ZAVRJENI! ŠTRAVS-×5-v-2-LETIH-#5-FINAL!], možena ½ zemljakinja, 35 let (11. 10., pokop 13. 10.) — Jetika; previden (1); Stanislav Dostál [#11!]; ★★★ h72 = 7. mrliški vpis = **h72-×3-v-2-LETIH** (2-OTROKA-1902: Anton-9-mes-MAR + Alojzij-1-leto-OKT + Marija-35-OKT-1903!) = **ŠTRAVS-hiša-POTRJENA** (P168-h72-2-otroka-Štravs + 1903-Marija-Štravs-možena!) = GROZOVITA-DRUŽINSKA-TRAGEDIJA-1902/03: 4-mrtvi-otroci (2-@-h72 + 2-@-h45) + 1-možena-35-let-v-19-mesecih! + hisna-agent-oči-×7 = **72** (γ-s-prečko = 7 — 13.-LEKCIJA-POTRDITEV! NE-42!) + 7 + 2 hišna (72 — 8×)",
+    whatEn: "died Marija ŠTRAVS [★★★ the super-×6-name: ŠTRAVS-NOT-Špan/Špavc-VLM-REJECTED! the ŠTRAVS-×5-in-2-YEARS-#5-FINAL!], a married half smallholder's wife, 35 years (Oct 11, buried Oct 13) — Jetika; previden (1); Stanislav Dostál [#11!]; ★★★ h72 = the 7th death entry = **the h72-×3-in-2-YEARS** (2-CHILDREN-1902: Anton-9-mos-MAR + Alojzij-1-yr-OCT + Marija-35-OCT-1903!) = **the ŠTRAVS-house-PROVEN** (the P168-h72-2-Štravs-children + the 1903-Marija-Štravs-married!) = THE-GRIEZLY-FAMILY-TRAGEDY-1902/03: 4-dead-children (2-@-h72 + 2-@-h45) + 1-married-woman-35-in-19-months! + the house agent-eyes-×7 = **72** (the γ-with-the-crossbar = 7 — the 13th-LESSON-CONFIRMATION! NOT 42!) + the 7 + 2 house number (72 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "18",
+    bookSignature: "04894",
+    year: 1903,
+    scan: 93,
+    page: 92,
+    whatSi: "umrl Jurij ŠIMEC [★★ super-×6-ime: ŠIMEC-NE-Simenc-VLM-×3.0-ZAVRJEN! ŠIMEC-×2-1903-#2!], vdovec ožitkar [~ sajtkar-KURRENT], 72 LET [★★★ γ→7-LEKCIJA-13. POTRDITEV — forenzika-×3.0-'42'-ZAVRJEN: γ-zanka-s-prečko-@×7 = 7!], (30. 10., pokop 31. 10.) — Slabost [~ forenzika-'Marbmil'-ZAVRJEN!]; previden (1); Stanislav Dostál [#11!]; ★★ h18 = 3. mrliški vpis = **h18-×2-v-1903-ZAKLJUČEK** (Janez-4½-APR + Jurij-72-OKT — možni-DED-Šimec-vpisi-@-h18: 1890-Matija-Jaklič-3-let + 2-Šimec-1903 = h18-IMENSKA-ROTA!) + cf. 1890-h38-Jurij-Šimec-48-let (ISTA-IME+PRIIMEK-×2-linija!) + 1 + 8 hišna (18 — 8×)",
+    whatEn: "died Jurij ŠIMEC [★★ the super-×6-name: ŠIMEC-NOT-Simenc-the-VLM-×3.0-REJECTED! the ŠIMEC-×2-1903-#2!], a widower caretaker [~ sajtkar-KURRENT], 72 YEARS [★★★ the γ→7-LESSON-the-13th-CONFIRMATION — the forensics-×3.0-'42'-REJECTED: the γ-loop-with-the-crossbar-@×7 = 7!], (Oct 30, buried Oct 31) — Slabost [~ the forensics-'Marbmil'-REJECTED!]; previden (1); Stanislav Dostál [#11!]; ★★ h18 = the 3rd death entry = **the h18-×2-in-1903-CONCLUSION** (Janez-4½-APR + Jurij-72-OCT — the probable-DED-Šimec-entries-@-h18: 1890-Matija-Jaklič-3-yrs + 2-Šimec-1903 = the h18-NAME-ROTATION!) + cf. the 1890-h38-Jurij-Šimec-48-yrs (THE-SAME-NAME+SURNAME-×2-of-the-line!) + the 1 + 8 house number (18 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "4",
+    bookSignature: "04894",
+    year: 1903,
+    scan: 93,
+    page: 92,
+    whatSi: "umrl Andrej ŠOTLER [~ Štotler/Votler-KURRENT-Š/V-zmeda], oženjen ožitkar [~], 73 let (3. 11., pokop 5. 11.) — Slabost [~ forenzika-'Marbmil'-ZAVRJEN!]; previden (1); Jos. Rauq [★ EDINI-RAUQ-GRIBLJE-1903 (Dostál ×16 / Rauq ×1 — nasprotje-1902-×15/×2!)]; ★★★ h4 = **1. MRLIŠKI VPIS KADARKOLI = 28. PT-vezni dokaz** (04105-1906-krstna-že-v-p80 = prvi-dokaz-IZVEN-41–60-cf. h66-P168-26.-PT + h40-27.-PT!) + hisna-agent-oči-×7 = **4** (γ-BREZ-prečke = 4-y-forma — NE-7! nasprotje-z38/z41-γ-S-prečko-@-ISTA-SERIJA = kalibracijski-par!) + 4 + 0 hišna (4 — 8×)",
+    whatEn: "died Andrej ŠOTLER [~ Štotler/Votler-KURRENT-Š/V-confusion], a married caretaker [~], 73 years (Nov 3, buried Nov 5) — Slabost [~ the forensics-'Marbmil'-REJECTED!]; previden (1); Jos. Rauq [★ the ONLY-RAUQ-GRIBLJE-1903 (Dostál ×16 / Rauq ×1 — the contrast-1902-×15/×2!)]; ★★★ h4 = **the 1st DEATH ENTRY EVER = the 28th PT-link** (the 04105-1906-baptism-already-in-p80 = the first-proof-OUTSIDE-41–60-cf. h66-P168-26th + h40-27th!) + the house agent-eyes-×7 = **4** (the γ-WITHOUT-the-crossbar = 4-y-form — NOT 7! contrasting-z38/z41-γ-WITH-the-crossbar-@-THE-SAME-SERIES = the calibration-pair!) + the 4 + 0 house number (4 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "83",
+    bookSignature: "04894",
+    year: 1903,
+    scan: 94,
+    page: 93,
+    whatSi: "umrla Katarina RADOVIČ [★★ super-×6-ime: RADOVIČ-NE-Radlovič-VLM-×3.0-ZAVRJEN! RADOVIČ-mreža: 1888-Marija-'Vsled-těžkega-poroda' + 1889(?) + 1903!], možena ½ zemljakinja, 54 let (9. 12., pokop 11. 12.) — Pljučnica [~ forenzika-'Sušica'-ZAVRJEN — diag-dolga-forma!]; previden (1); Stanislav Dostál [#11!]; ★★★ h83 = 3. mrliški vpis (1888-porodna-smrt-Marija + 1889 + 1903 — h83-RADOVIČ-ISTA-DRUŽINA-×3!) + hisna-agent-oči-×7 = **83** (★ KALIBRACIJA: 3-kandidati-83/85/33 → 8-ima-ZGORNJO-ZANKO-ne-ravno = '8'; kalibriran-s-z52-'5'-je-RAVNO-zgoraj — forenzika-×3.0-'83'-PRAVILEN!) + 8 + 3 hišna (83 — 8×)",
+    whatEn: "died Katarina RADOVIČ [★★ the super-×6-name: RADOVIČ-NOT-Radlovič-the-VLM-×3.0-REJECTED! the RADOVIČ-network: 1888-Marija-'after-a-difficult-childbirth' + 1889(?) + 1903!], a married half smallholder's wife, 54 years (Dec 9, buried Dec 11) — Pljučnica [~ the forensics-'Sušica'-REJECTED — the diag-long-form!]; previden (1); Stanislav Dostál [#11!]; ★★★ h83 = the 3rd death entry (1888-the-childbirth-death-Marija + 1889 + 1903 — the h83-RADOVIČ-THE-SAME-FAMILY-×3!) + the house agent-eyes-×7 = **83** (★ CALIBRATION: the 3-candidates-83/85/33 → the 8-has-the-TOP-LOOP-not-straight = '8'; calibrated-with-z52-'5'-is-STRAIGHT-on-top — the ×3.0-forensics-'83'-CORRECT!) + the 8 + 3 house number (83 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "12",
+    bookSignature: "04894",
+    year: 1903,
+    scan: 94,
+    page: 93,
+    whatSi: "umrla Marija DRAGAŠ [★★ super-×6-ime: DRAGAŠ-NE-Dragar-VLM-ZAVRJEN! DRAGAŠ-š-začetek-potrjen @×6], ½ zemljakova hči, 10 MESECEV (22. 12., pokop 23. 12.) — Božjast [~ forenzika-'Krastelj'-ZAVRJEN — diag-'Božjart'!]; previden (1); Stanislav Dostál [#11!]; ★ h12 = 3. mrliški vpis (1895 + 1899 + 1903!) + ZADNJA-GRIBLJE-1903 (meja 1903/04 = s94-sredina: '1904' VELIKA + VEČKRATNI podčrtaj @ PRAZNI vrsti + Januarj-INLINE + restart zap 51→1 = 5. STIL 11. POTRDITEV — P168-lead-'[~ s94+?]' POTRJEN!) + 1 + 2 hišna (12 — 8×)",
+    whatEn: "died Marija DRAGAŠ [★★ the super-×6-name: DRAGAŠ-NOT-Dragar-VLM-REJECTED! the DRAGAŠ-š-ending-proven @×6], a half smallholder's daughter, 10 MONTHS (Dec 22, buried Dec 23) — Božjast [~ the forensics-'Krastelj'-REJECTED — the diag-'Božjart'!]; previden (1); Stanislav Dostál [#11!]; ★ h12 = the 3rd death entry (1895 + 1899 + 1903!) + the LAST-GRIBLJE-1903 (the border 1903/04 = s94-middle: '1904' BIG + the MULTI-underline @ an EMPTY row + the Januarij-INLINE + the restart 51→1 = the 5th STYLE 11th CONFIRMATION — the P168-lead-'[~ s94+?]' PROVEN!) + the 1 + 2 house number (12 — 8×)",
+    status: "DOCUMENTED",
+  },
+
   // ——— P80 razširitev: POROČNA KNJIGA 04455 1873–1922 — okvir 1886 (skeni 61–65 == Pag. 60–64, vpisi 1–24; Pag. = sken − 1 v razponu 61–66) ———
   // P115 (faza 2) RE-READ: 8 blokov popravljenih na podlagi max-zoom branja (h36→56, h63→65, h15→16, h25→Priložje
   // + priimki Pegdirec/Klepec/Požek/Tomec/Straus/Križan) — evidence: research/issue17/parish-marriage-1886.json

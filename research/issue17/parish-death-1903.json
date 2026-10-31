@@ -1,0 +1,489 @@
+{
+ "status": "SAMPLE-TRANSCRIPTION-D1903",
+ "generated": "2026-11-01",
+ "phase": "P169",
+ "source": {
+  "book": "04894 (mrliška, župnija Podzemelj, matricula-online.eu)",
+  "year": 1903,
+  "scans": "s90-dno (reuse-P168) + s91–s94 (s95 = 1904-kontekst)",
+  "pages": "89–93 (stran == sken − 1 — 58.–61. potrditev)",
+  "inventory": 256
+ },
+ "frame": {
+  "leto": 1903,
+  "vrstic": 51,
+  "zap_oštevilčenih": 51,
+  "neštevilčenih": 0,
+  "griblje_vpisi": 17,
+  "hise": 14,
+  "ponovitve": "h45 ×2 (2-otroka-Štravs-v-5-tednih!) + h40 ×2 (Marija-23 + Janez-64 = h40-×3-v-2-LETIH-zaključek!) + h18 ×2 (Janez-4½ + Jurij-72 = možni-DED-Šimec!)",
+  "rast": "10→17→17",
+  "rekordi": "Griblje 17 = IZENAČI-rekord-1902 (rast-10→17→17!) + 3-GLAVE-NAPAKE (s92+s94-'18903' + s95-'18[~]1904') = NOVI-REKORD-LINIJE (1902-je-imel-1!) + ZAPCOL-ČIST (1–51-brez-napak — NASPROTJE-1902!)",
+  "meja_1902_03": "s90-sredina — P168-potrditev-RE ('1903.' VELIKA + večkrat-podčrtan @ PRAZNI vrsti + Januarj-INLINE + restart zap 61→1 = 5.-STIL-12.-POTRDITEV — diag-s90!)",
+  "meja_1903_04": "s94-sredina ('1904' VELIKA + VEČKRATNI podčrtaj @ PRAZNI vrsti + Januarj-INLINE + restart zap 51→1 = 5.-STIL-11.-POTRDITEV — P168-lead-'[~ s94+?]' POTRJEN!) — s95-glava-'Leto 18[~]1904' = 3.-glava-napaka!"
+ },
+ "entries": [
+  {
+   "row": 6,
+   "zap": 1,
+   "houseNo": "45",
+   "bookSignature": "04894",
+   "year": 1903,
+   "scan": 90,
+   "page": 89,
+   "mesec": "Januar",
+   "smrt": "3.",
+   "pokop": "5.",
+   "ime": "Alojzij ŠTRAVS",
+   "stan": "hajlajerjev [~ Hejhalter?] sin",
+   "spol": "moš.",
+   "starost": "5 mesecev",
+   "bolezen": "Kraselj [~ Kašelj-varianta]",
+   "previden": "1",
+   "duhovnik": "Stanislav Dostál",
+   "opomba": "h45 = 4. mrliški vpis + h45-×2-v-1903-#1 (1893 + 1896 + 1900 + 1903-×2!); ŠTRAVS-×5-v-2-LETIH-#3; PRVI-GRIBLJE-1903 (meja-1902/03-RE = 12.-POTRDITEV!)"
+  },
+  {
+   "row": 8,
+   "zap": 3,
+   "houseNo": "45",
+   "bookSignature": "04894",
+   "year": 1903,
+   "scan": 90,
+   "page": 89,
+   "mesec": "Februar",
+   "smrt": "7.",
+   "pokop": "9.",
+   "ime": "Nikolaj ŠTRAVS",
+   "stan": "hajlajerjev [~] sin",
+   "spol": "moš.",
+   "starost": "2 leti",
+   "bolezen": "Harost [~ cf. Šarost-1891]",
+   "previden": "1",
+   "duhovnik": "Stanislav Dostál",
+   "opomba": "h45-×2-v-1903-#2 = 5. mrliški vpis; ŠTRAVS-×5-v-2-LETIH-#4; 2-otroka-v-5-tednih (Alojzij-JAN + Nikolaj-FEB!)"
+  },
+  {
+   "row": 9,
+   "zap": 4,
+   "houseNo": "30",
+   "bookSignature": "04894",
+   "year": 1903,
+   "scan": 90,
+   "page": 89,
+   "mesec": "Februar",
+   "smrt": "8.",
+   "pokop": "10.",
+   "ime": "Jožef ŽEGRIVA",
+   "stan": "½ zemljakov sin",
+   "spol": "moš.",
+   "starost": "10 mesecev",
+   "bolezen": "Kraselj [~]",
+   "previden": "1",
+   "duhovnik": "Stanislav Dostál",
+   "opomba": "h30 = 7. mrliški vpis; super-×6-ŽEGRIVA-potrjen (lead-'Zagriva?'-POTRJEN!)"
+  },
+  {
+   "row": 1,
+   "zap": 8,
+   "houseNo": "52",
+   "bookSignature": "04894",
+   "year": 1903,
+   "scan": 91,
+   "page": 90,
+   "mesec": "Marzec",
+   "smrt": "14.",
+   "pokop": "16.",
+   "ime": "Barbara PEZDIREC",
+   "stan": "½ zemljakova hči [~]",
+   "spol": "žens.",
+   "starost": "4 leta",
+   "bolezen": "Jetika",
+   "previden": "1",
+   "duhovnik": "Stanislav Dostál",
+   "opomba": "h52 = 3. mrliški vpis; PEZDIREC-×3-1903-#1 = era-12; forenzika-'Harost'-ZAVRJEN"
+  },
+  {
+   "row": 3,
+   "zap": 10,
+   "houseNo": "40",
+   "bookSignature": "04894",
+   "year": 1903,
+   "scan": 91,
+   "page": 90,
+   "mesec": "Marzec",
+   "smrt": "16.",
+   "pokop": "18.",
+   "ime": "Marija PEZDIREC",
+   "stan": "možena [~] ½",
+   "spol": "žens.",
+   "starost": "23 let",
+   "bolezen": "Jetika",
+   "previden": "1",
+   "duhovnik": "Stanislav Dostál",
+   "opomba": "h40 = 2. mrliški vpis = h40-×3-v-2-LETIH-#2; PEZDIREC-×3-1903-#2 (era-12!)"
+  },
+  {
+   "row": 5,
+   "zap": 12,
+   "houseNo": "36",
+   "bookSignature": "04894",
+   "year": 1903,
+   "scan": 91,
+   "page": 90,
+   "mesec": "Marzec/April",
+   "smrt": "31.",
+   "pokop": "2. apr.",
+   "ime": "Frančiška KRIŽAN",
+   "stan": "½ zemljakova hči",
+   "spol": "žens.",
+   "starost": "4 mesece",
+   "bolezen": "Božjast [~]",
+   "previden": "1",
+   "duhovnik": "Stanislav Dostál",
+   "opomba": "h36 = 7. mrliški vpis = ×3-ZAPOREDNA-LETA (1901+1902+1903!); super-×6-KRIŽAN-NE-Kukan!"
+  },
+  {
+   "row": 6,
+   "zap": 13,
+   "houseNo": "46",
+   "bookSignature": "04894",
+   "year": 1903,
+   "scan": 91,
+   "page": 90,
+   "mesec": "April",
+   "smrt": "8.",
+   "pokop": "10.",
+   "ime": "Ana BRODARIČ [~]",
+   "stan": "možena [~] ¼",
+   "spol": "žens.",
+   "starost": "33 let",
+   "bolezen": "Jetika",
+   "previden": "1",
+   "duhovnik": "Stanislav Dostál",
+   "opomba": "h46 = 7. mrliški vpis"
+  },
+  {
+   "row": 7,
+   "zap": 14,
+   "houseNo": "11",
+   "bookSignature": "04894",
+   "year": 1903,
+   "scan": 91,
+   "page": 90,
+   "mesec": "April",
+   "smrt": "15.",
+   "pokop": "17.",
+   "ime": "Marija ŽEFKO",
+   "stan": "gostlinarjeva [~ gosposlar?] hči",
+   "spol": "žens.",
+   "starost": "1½ leta",
+   "bolezen": "Kašelj [~]",
+   "previden": "1",
+   "duhovnik": "Stanislav Dostál",
+   "opomba": "h11 = 3. mrliški vpis; ŽEFKO-×2-1903-#1"
+  },
+  {
+   "row": 9,
+   "zap": 16,
+   "houseNo": "18",
+   "bookSignature": "04894",
+   "year": 1903,
+   "scan": 91,
+   "page": 90,
+   "mesec": "April",
+   "smrt": "24.",
+   "pokop": "26.",
+   "ime": "Janez ŠIMEC",
+   "stan": "½ zemljakov sin",
+   "spol": "moš.",
+   "starost": "4½ leta [~]",
+   "bolezen": "Prehlajenje [~]",
+   "previden": "1",
+   "duhovnik": "Stanislav Dostál",
+   "opomba": "h18 = 2. mrliški vpis; h18-×2-v-1903-#1; ŠIMEC-mreža"
+  },
+  {
+   "row": 12,
+   "zap": 19,
+   "houseNo": "58",
+   "bookSignature": "04894",
+   "year": 1903,
+   "scan": 91,
+   "page": 90,
+   "mesec": "Maj",
+   "smrt": "7.",
+   "pokop": "9.",
+   "ime": "Alojzij POŽEK [~ Lojzij]",
+   "stan": "¼ zemljakov sin",
+   "spol": "moš.",
+   "starost": "2½ leta [~ 2⁸⁄₁₂]",
+   "bolezen": "Božjast [~]",
+   "previden": "1",
+   "duhovnik": "Stanislav Dostál",
+   "opomba": "h58 = 6. mrliški vpis; hisna-agent-oči-×7 = 58-NE-38; POŽEK-mreža"
+  },
+  {
+   "row": 3,
+   "zap": 22,
+   "houseNo": "40",
+   "bookSignature": "04894",
+   "year": 1903,
+   "scan": 92,
+   "page": 91,
+   "mesec": "Junij",
+   "smrt": "18.",
+   "pokop": "21.",
+   "ime": "Janez PEZDIREC",
+   "stan": "oženjen ožitkar [~] in vdovec",
+   "spol": "moš.",
+   "starost": "64 let [~ 61]",
+   "bolezen": "Nadluha [~]",
+   "previden": "1",
+   "duhovnik": "Stanislav Dostál",
+   "opomba": "h40 = 3. mrliški vpis = h40-×3-v-2-LETIH-ZAKLJUČEK; PEZDIREC-×3-1903-#3 (era-12!); možni-vdovec-po-Ani-1902!"
+  },
+  {
+   "row": 11,
+   "zap": 30,
+   "houseNo": "60",
+   "bookSignature": "04894",
+   "year": 1903,
+   "scan": 92,
+   "page": 91,
+   "mesec": "Julij [~ VLM-None-diag-15./17-JUL]",
+   "smrt": "15.",
+   "pokop": "17.",
+   "ime": "Katarina ŽEFKO",
+   "stan": "vdova kolarica",
+   "spol": "žens.",
+   "starost": "64 let [~ 67]",
+   "bolezen": "Slabost [~]",
+   "previden": "1",
+   "duhovnik": "Stanislav Dostál",
+   "opomba": "h60 = 6. mrliški vpis; ŽEFKO-×2-1903-#2; KOLARICA-×2-leto"
+  },
+  {
+   "row": 7,
+   "zap": 38,
+   "houseNo": "72",
+   "bookSignature": "04894",
+   "year": 1903,
+   "scan": 93,
+   "page": 92,
+   "mesec": "Oktober",
+   "smrt": "11.",
+   "pokop": "13.",
+   "ime": "Marija ŠTRAVS",
+   "stan": "možena ½ zemljakinja",
+   "spol": "žens.",
+   "starost": "35 let",
+   "bolezen": "Jetika",
+   "previden": "1",
+   "duhovnik": "Stanislav Dostál",
+   "opomba": "h72 = 7. mrliški vpis = h72-×3-v-2-LETIH; ŠTRAVS-hiša-POTRJENA (super-×6-NE-Špan/Špavc!); ŠTRAVS-×5-v-2-LETIH-#5-FINAL; hisna-γ-s-prečko = 72-NE-42 (13.-LEKCIJA!)"
+  },
+  {
+   "row": 10,
+   "zap": 41,
+   "houseNo": "18",
+   "bookSignature": "04894",
+   "year": 1903,
+   "scan": 93,
+   "page": 92,
+   "mesec": "Oktober",
+   "smrt": "30.",
+   "pokop": "31.",
+   "ime": "Jurij ŠIMEC",
+   "stan": "vdovec ožitkar [~]",
+   "spol": "moš.",
+   "starost": "72 let [★★★ γ→7-13.-POTRDITEV — forenzika-'42'-ZAVRJEN!]",
+   "bolezen": "Slabost [~]",
+   "previden": "1",
+   "duhovnik": "Stanislav Dostál",
+   "opomba": "h18 = 3. mrliški vpis = h18-×2-v-1903-ZAKLJUČEK; γ→7-LEKCIJA-13. POTRDITEV (forenzika-'42'-ZAVRJEN — γ-s-prečko-@×7 = 7!); super-×6-ŠIMEC-NE-Simenc; cf. 1890-h38-Jurij-Šimec-48"
+  },
+  {
+   "row": 11,
+   "zap": 42,
+   "houseNo": "4",
+   "bookSignature": "04894",
+   "year": 1903,
+   "scan": 93,
+   "page": 92,
+   "mesec": "November",
+   "smrt": "3.",
+   "pokop": "5.",
+   "ime": "Andrej ŠOTLER [~ Štotler/Votler]",
+   "stan": "oženjen ožitkar [~]",
+   "spol": "moš.",
+   "starost": "73 let",
+   "bolezen": "Slabost [~]",
+   "previden": "1",
+   "duhovnik": "Jos. Rauq",
+   "opomba": "★★★ h4 = 1. MRLIŠKI VPIS KADARKOLI = 28. PT-vezni dokaz (IZVEN 41–60 — cf. h66-26. + h40-27.!); hisna-agent-oči-×7 = 4-NE-7 (γ-BREZ-prečke!); EDINI-RAUQ-GRIBLJE-1903"
+  },
+  {
+   "row": 5,
+   "zap": 48,
+   "houseNo": "83",
+   "bookSignature": "04894",
+   "year": 1903,
+   "scan": 94,
+   "page": 93,
+   "mesec": "December",
+   "smrt": "9.",
+   "pokop": "11.",
+   "ime": "Katarina RADOVIČ",
+   "stan": "možena ½ zemljakinja",
+   "spol": "žens.",
+   "starost": "54 let",
+   "bolezen": "Pljučnica [~]",
+   "previden": "1",
+   "duhovnik": "Stanislav Dostál",
+   "opomba": "h83 = 3. mrliški vpis (RADOVIČ-ISTA-DRUŽINA-×3!); hisna-agent-oči-×7 = 83 (3-kandidati-83/85/33 → KALIBRACIJA-s-z8-'5'-ravno-zgoraj!); super-×6-RADOVIČ-NE-Radlovič"
+  },
+  {
+   "row": 7,
+   "zap": 50,
+   "houseNo": "12",
+   "bookSignature": "04894",
+   "year": 1903,
+   "scan": 94,
+   "page": 93,
+   "mesec": "December",
+   "smrt": "22.",
+   "pokop": "23.",
+   "ime": "Marija DRAGAŠ",
+   "stan": "½ zemljakova hči",
+   "spol": "žens.",
+   "starost": "10 mesecev",
+   "bolezen": "Božjast [~]",
+   "previden": "1",
+   "duhovnik": "Stanislav Dostál",
+   "opomba": "h12 = 3. mrliški vpis; ZADNJA-GRIBLJE-1903; super-×6-DRAGAŠ-NE-Dragar"
+  }
+ ],
+ "excluded": [
+  {
+   "id": "E1",
+   "opis": "s90-zap58–61 (4-vrste-1902-dno: Primostek-Goričice? + Griblje-h65-Milek + Gradac + Griblje-h26-Brinec) — ŽE-v-P168-korpusu (bloki-h65 + h26!)",
+   "opis2": "s90-dno-reuse; P168-faza-pokritost"
+  },
+  {
+   "id": "E2",
+   "opis": "s90-zap2 (Dobravice/Certoviše-h26-Nikolaj-Jakobčič-68-let-Jan) + zap5–7 (Gradac-h20-Jakob-Kocar + Dobravice-h2-Peter-Jakobič + Hrasinec?-h55-Matija-Moravec) — ne-Griblje",
+   "opis2": "non-Griblje-1903"
+  },
+  {
+   "id": "E3",
+   "opis": "s91-zap9/11/15/17/18 (Krasinec-h31-Marija-Kumič + Krasinec-h43-Katarina-Jakopič + Krasinec-h29-Ana-Lešanič + Vranoviče-h11-Rozalija-Svaiger + Primostek-h13-Nikolaj-Šonc-81-let) — ne-Griblje",
+   "opis2": "s91-non-Griblje-×5"
+  },
+  {
+   "id": "E4",
+   "opis": "s92-zap20/21/23/24/25/26/27/28/29/31 (Hrnelj-h19 + Krasinec-h30 + Gradac-h28 + Boršt-h22 + Krasinec-h8 + Krasinec-h14-×2 + Primostek-h25 + Klošter-h43 + Gradac-h8) — ne-Griblje",
+   "opis2": "s92-non-Griblje-×10"
+  },
+  {
+   "id": "E5",
+   "opis": "s93-zap32–37/39/40/43 (Primostek-h25 + Hrnelj-h44 + Otok-h3 + Hrnelj-h18-mrtvorojen-brez-pokopa + Giriče-h35 + Primostek-h3 + Otok-h8 + Primostek-h1 + Primostek-h9) — ne-Griblje",
+   "opis2": "s93-non-Griblje-×9; zap35 = mrtvorojen-brez-podpisa-podpis-'neberljiv'!"
+  },
+  {
+   "id": "E6",
+   "opis": "s94-zap44–47/49/51 (Vranoviče-h9-J.-Petrovič-NEKOMPLETEN-brez-starosti-brez-podpisa! + Vranoviče-h97 + Dobravice-h25 + Vranoviče-pod-dvor-h? + Otok-h4 + Dobrovic?-h26-pokop-1-jan-04!) — ne-Griblje",
+   "opis2": "s94-non-Griblje-×6; zap44 = anomalija-A3!"
+  },
+  {
+   "id": "E7",
+   "opis": "s94-MEJA-'1904'-marker-vrsta (PRAZNA + večkrat-podčrtan + Dostál-podpis-@-prazni-vrsti!) + 1904-zap1–3 (Dobravice-h10-Martin + Primostek-h7-Genoveja + Griblje-h58-Ivana-Puček?-2-let!) — P170-lead!",
+   "opis2": "meja + 1904-dno"
+  },
+  {
+   "id": "E8",
+   "opis": "s95-celo-stran (zap4–15 = 1904-Jan–Apr: Klošter-h53 + Gradac-h53-Rudolf-Rauh-18-let-'imntn-udarjin'? + Dobravice-h40 + Boršt-h33 + Griblje?-h37-Anton-Šapnic-3-mes-[~Griblje/Giriče-zmeda!] + Otok-h18 + Griblje?-h63-Ana-Krvan-79-let-[~!] + Primostek-h22-×2 + Gradac-h31 + Giriče?-h35 + Goriče?-h2) — 1904 = P170-korpus!",
+   "opis2": "s95 = P170-faza; s95-glava-'18[~]1904' = 3.-glava-napaka-anomalija!"
+  }
+ ],
+ "anomalies": [
+  {
+   "id": "A1",
+   "opis": "★★★ 3 GLAVE-NAPAKE = NOVI REKORD LINIJE (1902-je-imel-1!): s92-'Leto 18903' (1-8-9-0-3!) + s94-'Leto 18903.' (ista!) + s95-'Leto 18[izbrisano]1904' (dve-letnici!) — pisar-'189'-avtomatska-navada-iz-1890-ih @ 3-od-6-strani!"
+  },
+  {
+   "id": "A2",
+   "opis": "★★★ ZAPCOL-1903 = ČIST: kontinuiteta 1–7 (s90) → 8 (s91-zapcol-P3-'8'!) → 20 → 32 → 44 → 51 — BREZ-napak (NASPROTJE-1902-'345'+NEŠTEVILČENA!) = 51-oštevilčenih / 51-fizičnih"
+  },
+  {
+   "id": "A3",
+   "opis": "zap44-s94 = NEKOMPLETEN vpis: brez-starosti + BREZ-PODPISA (samo-'—'!) — podpis-prazna-forenzika-P3!; + Dostál-podpis-@-PRAZNI-vrsti-nad-mejo-1904 (pisarjeva-navada-kot-P168-meja-Dostál-podpis!)"
+  },
+  {
+   "id": "A4",
+   "opis": "★★★ ŠTRAVS-×5-v-2-LETIH = GROZOVITA-DRUŽINSKA-TRAGEDIJA-1902/03: h72-×3 (Anton-9-mes-MAR-1902 + Alojzij-1-leto-OKT-1902 + Marija-35-OKT-1903 [možena = morda-MATI-otrok!]) + h45-×2 (Alojzij-5-mes-JAN-1903 + Nikolaj-2-let-FEB-1903) = 4-mrtvi-otroci + 1-odrasla-v-19-mesecih"
+  },
+  {
+   "id": "A5",
+   "opis": "★★★ PEZDIREC-×3-1903 = IZENAČI-era-11 → era-12 (h52-Barbara + h40-Marija + h40-Janez) → PEZDIREC-×6-v-2-ZAPOREDNIH-LETIH (1902: h52-Janez + h57-Mihajl + h40-Ana!)"
+  },
+  {
+   "id": "A6",
+   "opis": "★★★ h40-×3-v-2-LETIH = 1.-hiša-linije (Ana-59-NOV-1902 + Marija-23-MAR-1903 + Janez-64-JUN-1903) — Janez-vdovec-@-JUN = MOŽNI-VDOVEC-po-Ani (3.-smrt = vdovec-sam!)"
+  },
+  {
+   "id": "A7",
+   "opis": "h18-×2-v-1903: Janez-Šimec-4½-APR + Jurij-Šimec-72-OKT = možni-DED+VN-Šimec-pair; h18-zgodovina: 1890-Matija-Jaklič-3-let (vzorec-otroci!); cf. 1890-h38-Jurij-Šimec-48-let-ISTA-IME+PRIIMEK"
+  },
+  {
+   "id": "A8",
+   "opis": "JETIKA-DOMINANTA-1903-Griblje: ×4 (zap8-Barbara + zap10-Marija + zap13-Ana + zap38-Marija-Štravs) = 24%-17; cf. 1901-Jetika-dominanta"
+  },
+  {
+   "id": "A9",
+   "opis": "γ→7-LEKCIJA-13.–14.-POTRDITEV: zap38-'42'-VLM-×3.0→**72**-γ-s-prečko-@×7 + zap41-'42'→**72**-@×7 — NASPROTJE-zap42-'γ'-BREZ-prečke = **4** (kalibracijski-TRIPAR-@-s93-ISTA-SERIJA!)"
+  },
+  {
+   "id": "A10",
+   "opis": "HISNA-KONFLIKTI-4/4-RAZREŠENI-agent-oči-×7 (vseh-17-Griblje-hiš-pikselsko!): z19-'38'→**58** (5-ravno-zgoraj!) + z38-'42'→**72** (γ-s-prečko!) + z42-'7'→**4** (γ-brez-prečke!) + z48-'85/33'→**83** (8-zgornja-zanka-NE-ravno-5; kalibriran-z-z8-'52'-'5'-RAVNO!) — NOVA-KALIBRACIJSKA-METODA: isti-rokopis-@-ISTA-SERIJA-kot-referenca!"
+  }
+ ],
+ "crossChecks": [
+  {
+   "id": "X1",
+   "opis": "stran == sken − 1 — 58.–61. potrditev (s90=89-reuse + s91=90! s92=91! s93=92! s94=93! — diag-glave-'Stran 90/91/92/93'-1:1!) — P80-invarianta"
+  },
+  {
+   "id": "X2",
+   "opis": "zap-continuity 1903: 1–7 (s90-dno) → 8–19 (s91) → 20–31 (s92) → 32–43 (s93) → 44–51 (s94) = 51-vpisov-ČISTO (zapcol-forenzika-P1–P8: '1'+'7'+'8'+'20'+'32'+'44'+'1'-RESTART-'-')"
+  },
+  {
+   "id": "X3",
+   "opis": "meja-1903/04 = s94: '1904' VELIKA + VEČKRATNI-podčrtaj @ PRAZNI-vrsti (forenzika-meja-P2-'podcrtaj=vecikrat'!) + Januarj-INLINE-zap1 + restart — 5.-STIL-11.-POTRDITEV (P168-lead-POTRJEN!); meja-1902/03-RE @ s90 = 12.-POTRDITEV ('1903.'-večkrat-podčrtan!)"
+  },
+  {
+   "id": "X4",
+   "opis": "Duhovniki-1903-Griblje: Stanislav Dostál ×16 / Jos. Rauq ×1 (zap42-Šotler!) — Dostál-#11-DOMINANTA-95% (nasprotje-1902-×15/×2-88%!); podpisi-forenzika: P1-'Stanislav-Dostál' + P2-'Jos.-Rauq' + P3-'—PRAZNO/ČRTICA'-@-zap44!"
+  },
+  {
+   "id": "X5",
+   "opis": "p80-hiše = 90-NESPREMENJENE: h4-1903-mrliški = 28.-PT-vezni-dokaz ampak h4-ŽE-v-p80-kot-04105-1906-krstna (P101-blok!) — kot-P167-h28-vzorec; 04894-bloki-222 → 239 (+17); vitals-921 → 938 (+17)"
+  }
+ ],
+ "honesty": [
+  "H1: branja = 6× celostansko VLM (glm-5v-turbo, 0 FAIL; s90-reuse + s91–s95-foreground-1-po-1-P158-lekcija) + rows-v3-celica-metoda (P168-vzor-ČISTA-verzija!) + 6× diag-PNG agent-oči (12/12-×5 + s90-12/12!) + 16-VLM-forenzika-klicev (11-kompozitov + 5-KOMPOZIT2) + 77-izrezov (26-trakov-×2.2 + 48-celic-×3.0 + 3-glave) + 46-re-crops (x-lekcija!) + 11-super-zoomov-×6/×7 + 6-agent-oči-hisna-×7-fix-crops",
+  "H2: x-lekcija-P169 (NOVO!): starost-stolpec-@-x1530–1770 (NE-1770–2200-kot-P168-S_X-ki-je-bil-DEJANSKO-BOLEZEN!) + bolezen-@1755–2100 + hisna-@820–900 (NE-430–700 = POKOP!) — P168-S_X-napaka-ODKRITA-in-dokumentirana (P168-starosti-rezultati-so-bili-vseeno-pravilni-prek-super-zoom-serij!)",
+  "H3: bolezen-forenzika-×3.0-SISTEMATIČNO-nezanesljiva (previden-'1'-kljukica-@-x2000–2080-v-traktu → VLM-zmede-'Krastelj'/'Marbmil'/'Sušica'!) — bolezni-IZBRANE-po-2-vote-sistemu (celostansko + diag-roka), forenzika-kot-[~]-alternativa-v-anomalijah",
+  "H4: [~] negotovosti: hajlajer [~ Hejhalter]-stan (z1/z3) + Pezdirec-NE-Pečnirec-(trakt-×3-VLM-zmeda-korpus-konsistenco!) + starosti-z16-'4½'-vs-'4¹⁄₁₂' + z19-'2½'-vs-'2⁸⁄₁₂' + z22-'64'-vs-'61' + z30-'64'-vs-'67' + ime-z4-Žegriva-[~ Žegrina] + ime-z42-Šotler-[~ Štotler/Votler] + bolezni-×11-[~]",
+  "H5: zap44-NEKOMPLETEN (brez-starosti + brez-podpisa) = izključen-iz-analize-ampak-dokumentiran-kot-anomalija-A3; zap35-s93-mrtvorojen-'Mrtvorojena'-izpisano-brez-pokopa = non-Griblje-E5",
+  "H6: s95-Griblje-zmeda (zap8-'Anton-Šapnic'-h37 + zap10-'Ana-Krvan'-h63 = VLM-'Griblje' ×2 ampak diag-'Grtlfe'-GRIBLJE-podobna-forma-'Giriče'-kandidat!) — NE-vključeno-v-1903 (1904!) ampak-P170-WATCH",
+  "H7: VLM-vas-0-napak-3.-leto-ZAPORED (17/17-Griblje @×3.0-vas-hisna-kompozitov — vseh-17-potvrjenih-'Griblje'!)",
+  "H8: zap30-mesec-'Julij'-[~ VLM-None-diag-15./17-OKVIR-JUL]-rekonstrukcija-po-kontinuiteti (Jun-zap22 → Okt-zap38 = zap23–37-Jul-Avg-Sep-razpon)",
+  "H9: dup-check: zap12-'Marzec-31.-/April-2.' = mesec-prelom-INLINE (kot-P168-vzorec!); zap51-'Dec-30./pokop-1-jan-04' = MEJNI-pokop (P168-lead-potrjen!)",
+  "H10: metoda-2-fazna: (1) celostansko-VLM-6× → rows-v3 → diag-6× → (2) forenzika-16-klicev → super-zoom-×6/×7 → agent-oči-×7-hisna-FINAL — vsak-konflikt-2+-neodvisna-vira"
+ ],
+ "nextSteps": {
+  "P170-lead": "mrliška 1904 (s94-dno-restart-zap1–3 ŽE-prebrani [Griblje-kandidat-ŽE-VIDEN: zap3-h58?-Ivana-Puček?-2-let-Jan!] + s95 (zap4–15 ŽE-prebrani-kontekst [Griblje-kandidati-zmeda: zap8-h37?-Anton-Šapnic?-3-mes + zap10-h63?-Ana-Krvan?-79-let = Griblje/Giriče-FORENZIKA-P170!] + s96+; meja 1904/05 [~ s97+?]; s95-glava-'Leto 18[~]1904' = 3.-glava-napaka-POTRJENA!)",
+  "opomba": "h72-×3-1902/03 → P170-watch: ŠTRAVS-mreža-nadaljevanje (4.-vpis-h72? + h45-3.-otrok?) + PEZDIREC-era-13-? + h4-2.-mrliški + h83-4.-vpis (RADOVIČ-×4!) + zap44-vzorec-NEKOMPLETNIH-vpisov"
+ }
+}

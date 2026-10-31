@@ -6750,3 +6750,25 @@ Stage Summary:
 - Vse skripte + QA + tsc + lint zeleni
 - PUSH: lokalni-HEAD = GitHub = GitLab (NOV-PAT-GitHub-ghp_SChC… + GitLab-glpat) → Vercel-auto-deploy
 - P169 LEAD: mrliška **1903** (s90-dno-restart-zap1–7 ŽE prebrani [Griblje-kandidati-ŽE-VIDNI: zap1-h45?-Alojzij-Štravs-5-mes-Jan + zap3-h43/45?-Nikolaj-Štravs-2-let-Feb + zap4-h30?-Jožef-Zagriva?-10-mes-Feb = Štravs-×2-ŽE!] + s91 (zap8–19?) + s92+; meja 1903/04 [~ s94+?])
+
+
+## P169 — mrliška knjiga 04894, leto 1903 = 18. polno leto mrliške linije (issue #18)
+
+Agent: Z.ai Code (glavni agent)
+Task: MRLIŠKA knjiga 04894, leto 1903 = 18. polno leto mrliške linije (issue #18) — nadaljevanje po seji-kompakciji (faze 1–2 = fetch/VLM/forenzika ŽE končane; seja = kaskada-dokončanje + QA + README + push + deploy)
+
+Work Log:
+- OBNOVA-po-kompakciji: /tmp/p169 Zdrav (s90–s95 + diag + crops + forensic + x-check!) — prvič-v-liniji artefakti preživeli sejo!
+- Predfaza: P168-commit f59f14e ŽE-v-lokalnem-repu (ne-pushan!) + P169 v teku (parish.ts-bloki + JSON + notes + skripta-p169 NAREJENI; kaskada-qa-parish PRAZNA)
+- I6g/I10b-analiza: **P80_HOUSES = 91 NE 90!** (h4 = NOVA-v-p80All prek mrliške-04894-1903; 04105-1906-blok-IZVEN-filtra — p80-skripta + qa-251 že-91, skripta-p169 stale-90!) → skripta-p169 popravljenа (P80_HOUSES-91 + I10b-pin + docstring)
+- qa-parish.ts: **qa-p169 blok = 170. kontrola DODAN** (17 blokov + hiša-list 4,11,12,18×2,30,36,40×2,45×2,46,52,58,60,72,83 + pini-938/239/91 + guard-1904 + stran==sken−1-s90–s94 + 10 hišnih-vez-checkov: h4-PT28 + h45-×2 + ŠTRAVS-×5 + PEZDIREC-×3 + h40-×3-1.-HIŠA + h18-×2 + h36-×3-ZAPOREDNA + h30-ŽEGRIVA + EDINI-RAUQ + Dostál-×16) — h58→h30-ŽEGRIVA-POPRAVEK (blok = Alojzij-POŽEK; Jožef-ŽEGRIVA = h30!)
+- REGRESIJA-SANACIJA (4× stale-guard-izrazi pokvarjeni s prejšnjim-blanket-replace: h30-747 + h12-950 + h46/h45/h40/h18-1062/1377/1495/1617 — `))`-odveč + `)/`-pokvarjen-komentar → ročna-rekonstrukcija: `&& !(v...1903 && hn === "XX")))` + `//`-komentar-popravljen!)
+- verifikacija: p169 **54/54 (+--live PASS)** · runQA **170/170 ok:True** (bun-direct) · tsc **0** · lint **0**
+- README: glava-170 (po-P169 · QA-170/170) + TOC-P1–P169 + TOC-P79–P169 (text+anchor+sekcija-glava!) + mrliška-vrstica 17/39→**18/39** + P169-fragment + **P169-=-1903**-nalepka + status-kolonka + korpus 921→**938**/222→**239**/90→**91** + Odprto-①-P168-ZAKLJUČEN→**P169-ZAKLJUČEN→P170-=-1904** (s94-dno/s95-kontekst-lead!) + **Zadnje-stanje: P168 + P169 vnosa DODANA** (P168-vnos manjkal-iz-seje-kompakcije!)
+- korpus po P169: **938 vitalov · bloki 04455 197 + 04894 239 · sidra 190 · hiše 91 (p80) / 93 (korpus) · PT 28**, QA **170/170**
+
+Stage Summary:
+- P169 = 1903 polno leto v korpusu (938/239/91/93) — 18/39 mrliške linije + 17-GRIBLJE-IZENAČI-REKORD (10→17→17!)
+- Vse skripte + QA + tsc + lint zeleni
+- PUSH: P168-f59f14e + P169 skupaj (prvi-push-te-seje!) → GitHub + GitLab → Vercel-auto-deploy → verifikacija-170/170-produkcija
+- P170 LEAD: mrliška **1904** (s94-dno-restart-zap1–3 ŽE prebrani [zap3-h58?-Ivana-Puček?-2-let-Jan!] + s95 (zap4–15 ŽE-prebrani-kontekst [Griblje/Giriče-zmeda: zap8-Anton-Šapnic?-3-mes + zap10-Ana-Krvan?-79-let!]) + s96+; meja 1904/05 [~ s97+?])
