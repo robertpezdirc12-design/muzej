@@ -6692,3 +6692,32 @@ Work Log:
 Stage Summary:
 - P166 = 1900 polno leto v korpusu (894/195/89/93) — 15/39 mrliške linije
 - Vse skripte + QA + tsc + lint zeleni; Sledi: commit + push GitHub/GitLab
+
+
+## P167 — mrliška knjiga 04894, leto 1901 = 16. polno leto mrliške linije (issue #18)
+
+Agent: Z.ai Code (glavni agent)
+Task: MRLIŠKA knjiga 04894, leto 1901 = 16. polno leto mrliške linije (issue #18)
+
+Work Log:
+- Predfaza: P162–P166-push-VERIFIKACIJA (lokalni HEAD 05d5d95 = GitHub origin = GitLab gitlab ls-remote 1:1 z NOVIMA žetonoma!) + produkcija 167/167 ok:True (Vercel-auto-deploy-P166!) — VSE ŽE NA PRODUKCIJI → P167-start
+- FETCH **5/5 ✓**: s81–s85 (604–628 KB) + s80-reuse-kopija iz /tmp/p166 → /tmp/p167 (inventar 256 ✓)
+- VLM **5/5, 0 FAIL** (celostansko glm-5v-turbo; foreground-1-sken-po-1 — P158-lekcija!): s81 (12 vrstic; Griblje ×4) + s82 (12; ×1) + s83 (12; ×0) + s84 (12; ×2) + s85 (12; ×1-1901 + 1902-dno-10)
+- **ROWS-tri-metoda-lekcija**: v1-COM-bug (**linije-v-projekciji** — opening-(81,1)-odstrani-navpične-ampak-horizontalne-ostanejo → COM = mešano → yc-zamaknjene!) → v2-linije-opening-1×30 (linije-vrzeli @rotiranih!) → **v3-celica-podana-KONČNA** (linije + interpolacija-3-prehoda-n=2 + cifre-BREZ-linij [clean-&-~dilate-(7×15)] + preslikava-cifra→celica — **cifra @ VRH celice**!) + **NASLOV-'Zaporedna štev.'-ostanek = false-cifra** @s82/s84/s85-y~230–240 (izključen-y<330 — P162-TOP_ZONE-lekcija!)
+- **5× diag-PNG agent-oči**: 12/12-vrstic-na-5-skenih ✓✓✓✓✓ + **15× zapcol-rezin** (×2.5) + 1× zoom-s81-top — pikselska-potrditev: **s81-'4' = zap7** (γ→7-zmeda!) + **s85-'65' = zap55** ('55'-PRAZNO @y372 — 5/6-zmeda!) + **zap-continuity: 61→1(s80)→6→7–18→19–30→31–42→43–54→55→meja→1(1902) = 55 vrstic BREZ vrzeli!**
+- **MEJA 1901/02 = s85-sredina**: '1902.' VELIKA + DVOJNI podčrtaj na PRAZNI vrsti + Januarj-INLINE + restart zap = **5. STIL MEJE 9. POTRDITEV — P166-lead-'[~ s85+?]' POTRJEN!** (meja-kompozit-PANEL-2-forenzika!)
+- **42 max-zoom izrezov → 6 KOMPOZITOV** (ekonomija-7× — vzor-P162-primerjava-cifer!): meja-1901-02 (3 trakov) + griblje-A (5) + griblje-B (5) + vas-hisna (10) + ime-starost (11) + podpisi (6) = 6× VLM-klic
+- Forenzika **6/6, 0 FAIL**: **10/10-Griblje-potrdjenih** (Križan-76-h36-Jan7/9 + Hlobučar-65-h48-Jan16/18 + Štolfa-8-h60-Jan29/31 + Brinec-4-h28-Feb26/28 + Cindrič-8-mes-h81-Mar24/25 + Milek-54-h29-Mar29/31 + Papič-4-mes-h33-Apr26/29 + Križan[~Kešran]-63-h35-Okt15/19 + Jakobčič-42-h64-Okt19/19?-Voz-[~] + Rampič[~Mramlič]-19-h34-Dec24/29!) + **3-IME-KONFLIKTI → [~] konservativno** (Križan-vs-Kešran + Rampič-vs-Mramlič + Kukljaš-vs-Kut'nek!)
+- **★★★ 1901 = 55 vrstic / 10 Griblje / 10 hiš — VSE RAZLIČNE (3. leto BREZ hiša-×2!; rast 13→7→8→13→8→10!)** + **h28 = 1. MRLIŠKI VPIS KADARKOLI = 25. PT-vezni dokaz** (IZVEN 41–60!) + **h35 = 7. mrliški vpis = NOVI REKORD linije** (cf. h30-6!) + **KRIŽAN-×2-1901** (h36-Ana + h35-Janez = 2-hiši-2-spola!) + **HLOBUČAR-×2-v-2-MESECIH-RAZREŠEN** (Marija-h47-DEC-1900 + Matija-h48-JAN-1901 = 17-DNI-sosednji-hiši — P166-lead-100%!) + h81-2.-leto-ZAPORED + h36/h60/h64-5.-vpis (h64-hiša-×2-×2!) + MILEK-4-hiše-10-vpisov + PAPIČ-3-hiše
+- **KUT'NEK-DOMINANTA-1901** (6× Griblje-Jan–Mar!) → Rauq-Apr → Škurmelj[~Dostal]-Okt → **'Dostal' = NOVI-DUHOVNIK-KANDIDAT #11 [~]** (podpisi-K-'Češarek'-KONFLIKT-ne-razrešen!)
+- **VLM-vas-0-napak** (10/10 @kompozit-vas-hisna-×3.0 — **1. leto BREZ A2-vas-napake odkar P161** — 'kompozit-vas-hisna'-lekcija-deluje!) + γ→7-lekcija **9.–10. POTRDITEV**
+- **10 NOVIH BLOKOV parish.ts**: vitals 894 → **904** · mrliški 04894 195 → **205** · p80 hiše **89-NESPREMENJENE** (h28 = 1. mrliški ampak ŽE v 04105!) · korpus **93-NESPREMENJEN** + PIN-KASKADA (qa 81× !== 904 + 15× !== 205 + stale-guardi ≥1901→≥1902 (13× qa + 14 skript) + p80-skripta 904/89/18 + p153–p166 skripte VITALS_TOTAL 904/BLOKI 205/I6d2→1902 (p157–p159-'1900+'-guardi!) + **vrata-p86-+h28-1901 + vrata-p93-+h48-1901** — 2-vrata-sanirana!)
+- dokaz research/issue17/parish-death-1901.json (10 + 8 excluded + 10 anomalij + 10 crossChecks + honesty 10 + P168-lead) + notes + skripta p167 (**I1–I13**) + qa-p167 (**168. kontrola**) + README (glava-168 + mrliška-16/39 + korpus 904/205/89/93 + odprto-①-P168 + TOC P79–P167 + P167-vnos) + worklog
+- REGRESIJA-SANACIJA (I6b/I6d2-checki p153–p166 — POSODABLJENO-P167!) — lekcija-regex: 'BLOKI_04894 = 195' (underscore!)-ne-uje-'BLOKI = 195' + **regex-[^"]*-požrli-vrstice** (I6b+d19XX) → ročna-rekonstrukcija-3-sken (p164/p165/p166!) — vse-syntax-OK!
+- verifikacija: p167 **51/51 (+live 53/53)** · p166 **52/52** · p165 **54/54** · p164 **52/52** · p163 **53/53** · p162 **53/53** · p161 **47/47** · p160 **53/53** · p159 **52/52** · p158 **55/55** · p157 **59/59** · p156 **53/53** · p155 **43/43** · p154 **37/37** · p153 **39/39** · p80 **PASS** · runQA **168/168 ok:True** (bun-direct; vrata-p86/p93-sanirana!) · tsc **0** · lint **0**
+- korpus po P167: **904 vitalov · bloki 04455 197 + 04894 205 · sidra 190 · hiše 89 (p80) / 93 (korpus) · PT 15**, QA **168/168**
+
+Stage Summary:
+- P167 = 1901 polno leto v korpusu (904/205/89/93) — 16/39 mrliške linije
+- Vse skripte + QA + tsc + lint zeleni; Sledi: commit + push GitHub/GitLab
+- P168 LEAD: mrliška **1902** (s85-dno-restart-zap1–10 ŽE prebrani [Griblje-kandidati-ŽE-VIDNI: zap4-h52?-Janez-Pezdirec-56 + zap8-h23?-Matija-'Prinec'?-64-Jetika-BRINEC-zmeda + zap10-h33?-Matija-Dehlič?-3 [~]] + s86 (zap11–22?) + s87+; meja 1902/03 [~ s90+?])

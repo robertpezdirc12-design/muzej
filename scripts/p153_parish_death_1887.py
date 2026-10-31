@@ -30,8 +30,8 @@ EXPECTED_EXCLUDED = 19           # skupine vrstic izven Gribelj + 1888-lead
 EXPECTED_ANOMALIES = 11
 EXPECTED_CROSSCHECKS = 9
 GRIBLJE_HOUSES = "3,13,21,22,35,36,43,44,46,53,58,65,76"  # sortirano številčno (13 = 13!)
-VITALS_TOTAL = 894               # POSODABLJENO P162: 837 + 16 (mrliška 1896)!
-BLOKI_04894 = 195                # POSODABLJENO P164: + 7 (mrliška 1898)!
+VITALS_TOTAL = 904               # POSODABLJENO P162: 837 + 16 (mrliška 1896)!
+BLOKI_04894 = 205                # POSODABLJENO P167: + 10 (mrliška 1901)!
 P80_HOUSES = 79                  # POSODABLJENO P154: 77 + 2 (h47/h83)!
 NEW_SCANS = [6, 8, 9, 11, 12, 13]
 
@@ -174,16 +174,16 @@ def main():
     d1887 = [v for v in vit if v["bookSignature"] == "04894" and v["year"] == 1887]
     d04894 = [v for v in vit if v["bookSignature"] == "04894"]
     check("I6a vitals 777 (P156)", len(vit) == VITALS_TOTAL, str(len(vit)))
-    check("I6b mrliški bloki 04894 = 174 (POSODABLJENO P164)", len(d04894) == BLOKI_04894, str(len(d04894)))
+    check("I6b mrliški bloki 04894 = 205 (POSODABLJENO P167)", len(d04894) == BLOKI_04894, str(len(d04894)))
     check("I6c bloki 1887 = 13", len(d1887) == 13, str(len(d1887)))
     check("I6d bloki 1887: skeni 6–13 + stran == sken − 1",
           all(v["scan"] and 6 <= v["scan"] <= 13 and v["page"] == v["scan"] - 1 for v in d1887), "")
     d1888 = [v for v in vit if v["bookSignature"] == "04894" and v["year"] == 1888]
     check("I6e bloki 1888 = 29 (POSODABLJENO P154)", len(d1888) == 29, str(len(d1888)))
     check("I6e2 bloki 1900+ ne obstajajo (P166-lead!; P165 = 1899 sedaj v korpusu!)",
-          not [v for v in vit if v["bookSignature"] == "04894" and (v["year"] or 0) >= 1901], "")
+          not [v for v in vit if v["bookSignature"] == "04894" and (v["year"] or 0) >= 1902], "")
     p80_script = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
-    check("I6f p80-skripta pini 886 + 88 + gap-18 (POSODABLJENO P164)", "len(vitals) == 894" in p80_script and "len(houses) == 89" in p80_script and "len(gap) == 18" in p80_script, "")
+    check("I6f p80-skripta pini 886 + 88 + gap-18 (POSODABLJENO P164)", "len(vitals) == 904" in p80_script and "len(houses) == 89" in p80_script and "len(gap) == 18" in p80_script, "")
 
     # ---------- I7: max-zoom popravki (4!) ----------
     h58 = next((e for e in ent if e["houseNo"] == "58"), None)
@@ -216,7 +216,7 @@ def main():
     # ---------- I10: qa-parish ----------
     qa = open(QA_TS, encoding="utf-8").read()
     check("I10a qa-p153 obstaja (154. kontrola)", "qa-p153-parish-death-1887" in qa, "")
-    check("I10b vitals-pin 886 v qa (P165)", "HOUSE_VITALS.length !== 894" in qa, "")
+    check("I10b vitals-pin 886 v qa (P165)", "HOUSE_VITALS.length !== 904" in qa, "")
     check("I10c ni več 714-pinov", "HOUSE_VITALS.length !== 714" not in qa, "")
 
     # ---------- I11: README ----------

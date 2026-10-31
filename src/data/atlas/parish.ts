@@ -2395,6 +2395,130 @@ export const HOUSE_VITALS: HouseVital[] = [
     status: "DOCUMENTED",
   },
 
+  // ——— P167 razširitev: MRLIŠKA KNJIGA 04894, POLNO LETO 1901 (issue #18) ———
+  // s80-dno (meja 1900/01 = P166 re-potrditev: '1901' VELIKA + podčrtaj na PRAZNI
+  // vrsti + Januarj-INLINE + restart zap 61→1 = 5. STIL 8. POTRDITEV!) + s81
+  // (zap 7–18; VLM-'4' = γ→7/4-zmeda!) + s82 (19–30; 'Zaporedna štev.'-NASLOV-
+  // ostanek @y239 = cif-detekcija-zmeda!) + s83 (31–42) + s84 (43–54; NASLOV @240!)
+  // + s85 (55 + MEJA!) == str. 79–84 (stran == sken − 1 — 47.–52. potrditev! s80=79
+  // … s85=84!) + meja 1901/02 = s85-sredina ('1902.' VELIKA + DVOJNI podčrtaj na
+  // PRAZNI vrsti + Januarj-INLINE + restart zap = 5. STIL 9. POTRDITEV — P166-lead-
+  // '[~ s85+?]' POTRJEN!; zapcol-55 = '55' PRAZNO — VLM-'65' = 5/6-zmeda ZAVRJEN!)
+  // + ★★★ 1901 = 55 vrstic / 10 Griblje-vpisov / 10 hiš — VSE RAZLIČNE (3. leto BREZ
+  // hiša-×2!; rast 13→7→8→13→8→10!) + ★★★ h28 = 1. MRLIŠKI VPIS KADARKOLI (25.
+  // PT-vezni dokaz IZVEN 41–60 cf. h11/h82-P165 + h81-P166!) + ★★★ h35 = 7. mrliški
+  // vpis = NOVI REKORD linije (cf. h30-6-P164 + h36/h60-5!) + ★★★ KRIŽAN-×2-1901
+  // (h36-Ana-76-vdova + h35-Janez-63-vdovec = 2 hiši-2 spola-v-1-LETU!) + ★★★
+  // HLOBUČAR-×2-v-2-MESECIH-RAZREŠEN (Marija-h47-DEC-1900-72 + Matija-h48-JAN-1901-
+  // 65-samski = 2 SOSEDNJI hiši-h47/h48 — P166-lead 100%!) + ★ h81 = 2. leto ZAPORED
+  // (1900-Barbara-Povšek-36 + 1901-Marija-Cindrič-8-mes!) + ★ h36 = 5. + h60 = 5. +
+  // h64 = 5. mrliški vpis (h64: 1896-×2 + 1898-×2 + 1901 = hiša-×2-×2!) + KUT'NEK-
+  // DOMINANTA-1901 (6× Griblje-Jan–Mar!; cf. P166-Sep–Dec-12×) + NOVI-DUHOVNIK-
+  // KANDIDAT 'Dostal' [~ — zap50/51/55-Okt–Dec + meja-K-'Laur. Dostál' — Škurmelj-
+  // zmeda @podpisi!] + MAX-ZOOM forenzika (6 kompozitov × 42 izrezov): zap50-ime-
+  // KONFLIKT 'Križan'-K-vs-'Kešran'-B → [~] + zap55-'Rampič'-'Mramlič'-×2-beri →
+  // [~] + VLM-MISS-s81-Griblje-×0-rebra (4/4 forenzika-potrjena!) ———
+  {
+    houseNo: "36",
+    bookSignature: "04894",
+    year: 1901,
+    scan: 80,
+    page: 79,
+    whatSi: "umrla Ana KRIŽAN [★★ P167-lead-POTRJEN — kompozit-griblje-A @×2.2: K-r-i-ž-a-n + hišna-36-visoka!], vdova kolarica [~ kmetica], 76 let (7. 1., pokop 9. 1.) — Marbmil [~ Marelost = senilnost cf. 1891-Bele-družina]; previden (1); J.R. Kut'nek [#10 — Griblje-1901-dominanta 1/6!]; ★ h36 = 5. mrliški vpis (1887 + 1888 + 1892 + 1895 + 1901!) + ★★★ KRIŽAN-×2-1901 (h36-Ana-76 + h35-Janez-63-vdovec = 2 hiši-2 spola-v-1-LETU — cf. KRIŽAN-mreža: h63-1896 + h63-1900 + h35-×6!) + 3 + 6 hišna (36 — 8×)",
+    whatEn: "died Ana KRIŽAN [★★ the P167-lead-PROVEN — the kompozit-griblje-A @×2.2: K-r-i-ž-a-n + the house-no-36 high-confidence!], a widow cottageress [~ kmetica], 76 years (Jan 7, buried Jan 9) — Marbmil [~ Marelost = senility cf. the 1891-Bele family]; previden (1); J.R. Kut'nek [#10 — the Griblje-1901-dominant 1/6!]; ★ h36 = the 5th death entry (1887 + 1888 + 1892 + 1895 + 1901!) + ★★★ the KRIŽAN-×2-1901 (h36-Ana-76 + h35-Janez-63-widower = 2 houses-2 sexes-in-1-YEAR — cf. the KRIŽAN network: h63-1896 + h63-1900 + h35-×6!) + the 3 + 6 house number (36 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "48",
+    bookSignature: "04894",
+    year: 1901,
+    scan: 80,
+    page: 79,
+    whatSi: "umrl Matija HLOBUČAR [★★ P166-lead-POTRJEN — kompozit @×2.2: H-l-o-b-u-č-a-r-glif-konzistenca-h47-1900!], samski ½ zemljakov sin, 65 let (16. 1., pokop 18. 1.) — Jetika; previden (1); J.R. Kut'nek [#10!]; ★ h48 = 3. mrliški vpis (1889 + 1892 + 1901!) + ★★★ HLOBUČAR-×2-v-2-MESECIH-RAZREŠEN (Marija-h47-DEC-1900-72-vdova-kolarica + Matija-h48-JAN-1901-65-samski = 2 SOSEDNJI hiši-h47/h48 — mreža ×3: h46-1895-Klobučar-roj.!; P166-lead-'Matija-h48-JAN-1901' 100%!) + 4 + 8 hišna (48 — 8×)",
+    whatEn: "died Matija HLOBUČAR [★★ the P166-lead-PROVEN — the kompozit @×2.2: the H-l-o-b-u-č-a-r glyph-consistency-h47-1900!], a single half-smallholder's son, 65 years (Jan 16, buried Jan 18) — Jetika [~ dropsy]; previden (1); J.R. Kut'nek [#10!]; ★ h48 = the 3rd death entry (1889 + 1892 + 1901!) + ★★★ the HLOBUČAR-×2-within-2-MONTHS-RESOLVED (Marija-h47-DEC-1900-72-widow-cottageress + Matija-h48-JAN-1901-65-single = 2 ADJACENT houses-h47/h48 — the network ×3: h46-1895-Klobučar-née!; the P166-lead-'Matija-h48-JAN-1901' 100%!) + the 4 + 8 house number (48 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "60",
+    bookSignature: "04894",
+    year: 1901,
+    scan: 81,
+    page: 80,
+    whatSi: "umrl Anton ŠTOLFA [~ Štolfa/Štolar? — kompozit-ime @×3.0: 'Štolfa'], gospodinov sin, 8 let (29. 1., pokop 31. 1.) — Živce [? — cf. 'Duke/Bele'-družina]; previden (1); J.R. Kut'nek [#10!]; ★ h60 = 5. mrliški vpis (1888-×2 + 1898 + 1899 + 1901!) + γ→7-lekcija-potrditev (s81-VLM-'zap4' = dejansko zap7 — cifre @ vrh celic!) + 6 + 0 hišna (60 — 8×)",
+    whatEn: "died Anton ŠTOLFA [~ Štolfa/Štolar? — the kompozit-ime @×3.0: 'Štolfa'], a smallholder's son, 8 years (Jan 29, buried Jan 31) — Živce [? — cf. the 'Duke/Bele' family]; previden (1); J.R. Kut'nek [#10!]; ★ h60 = the 5th death entry (1888-×2 + 1898 + 1899 + 1901!) + the γ→7-lesson-proof (the s81-VLM-'zap4' = actually zap7 — digits at cell tops!) + the 6 + 0 house number (60 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "28",
+    bookSignature: "04894",
+    year: 1901,
+    scan: 81,
+    page: 80,
+    whatSi: "umrla Marija BRINEC [★★ BRINEC-mreža-#6: h58-1896-Ana-roj. + h14-1896-N. + h24-1888/94 + h23-1900-Peter + h28-1901!], hči [~ kmetova hči], 4 leta (26. 2., pokop 28. 2.) — Božjast; previden (1); J.R. Kut'nek [#10!]; ★★★ h28 = 1. MRLIŠKI VPIS KADARKOLI (25. PT-vezni dokaz — IZVEN 41–60 cf. h11/h82-P165 + h81-P166!; korpus: h28 že v 04105-krstni!) + 2 + 8 hišna (28 — 8×)",
+    whatEn: "died Marija BRINEC [★★ the BRINEC network-#6: h58-1896-Ana-née + h14-1896-N. + h24-1888/94 + h23-1900-Peter + h28-1901!], a daughter [~ a farmer's daughter], 4 years (Feb 26, buried Feb 28) — Božjast [~ god's-punishment]; previden (1); J.R. Kut'nek [#10!]; ★★★ h28 = the 1st DEATH ENTRY EVER (the 25th PT-link proof — OUTSIDE the 41–60 gap cf. h11/h82-P165 + h81-P166!; corpus: h28 already in the 04105 baptisms!) + the 2 + 8 house number (28 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "81",
+    bookSignature: "04894",
+    year: 1901,
+    scan: 81,
+    page: 80,
+    whatSi: "umrla Marija CINDRIČ [~ Cindrič/Cendrič — kompozit-ime @×3.0], hči [~ čevljarska hči?], 8 MESECEV (24. 3., pokop 25. 3.) — Božjast; previden (1); J.R. Kut'nek [#10!]; ★ h81 = 2. mrliški vpis + 2. leto ZAPORED (1900-Barbara-Povšek-36 + 1901-Marija-Cindrič-8-mes — cf. h81-PT-vezni-dokaz-P166!) + h81-×2-nova-hiša (P166-EDINA-nova-04894-vhaja → ŽE 2. vpis-v-2-letih!) + 8 + 1 hišna (81 — 8×)",
+    whatEn: "died Marija CINDRIČ [~ Cindrič/Cendrič — the kompozit-ime @×3.0], a daughter [~ a shoemaker's daughter?], 8 MONTHS (Mar 24, buried Mar 25) — Božjast [~ god's-punishment]; previden (1); J.R. Kut'nek [#10!]; ★ h81 = the 2nd death entry + the 2nd CONSECUTIVE year (1900-Barbara-Povšek-36 + 1901-Marija-Cindrič-8-mos — cf. the h81-PT-link-proof-P166!) + the h81-×2-new-house (the P166-ONLY-new-04894-entry → ALREADY the 2nd entry-in-2-years!) + the 8 + 1 house number (81 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "29",
+    bookSignature: "04894",
+    year: 1901,
+    scan: 81,
+    page: 80,
+    whatSi: "umrla Ana MILEK [★★ MILEK-leksikon — cf. h22/h65/h82-×3-1899 + h65-1900-Marija-Mihelj-MILEK-hiša!], samska [~ samotna], 54 let (29. 3., pokop 31. 3.) — Prehlajenje [~ cf. 1899-Božjast-lekcija]; previden (1); J.R. Kut'nek [#10! — 'Kukljaš'-VLM-varianta [~]]; ★ h29 = 4. mrliški vpis (1886-×3 + 1901!) + MILEK-mreža (h22-1887/98/99 + h65 + h82-1899 + h29-1901 = 5 hiš!) + 2 + 9 hišna (29 — 8×)",
+    whatEn: "died Ana MILEK [★★ the MILEK lexicon — cf. h22/h65/h82-×3-1899 + h65-1900-Marija-Mihelj-the-MILEK-house!], single [~ solitary], 54 years (Mar 29, buried Mar 31) — Prehlajenje [~ a cold cf. the 1899-Božjast-lesson]; previden (1); J.R. Kut'nek [#10! — the 'Kukljaš'-VLM-variant [~]]; ★ h29 = the 4th death entry (1886-×3 + 1901!) + the MILEK network (h22-1887/98/99 + h65 + h82-1899 + h29-1901 = 5 houses!) + the 2 + 9 house number (29 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "33",
+    bookSignature: "04894",
+    year: 1901,
+    scan: 82,
+    page: 81,
+    whatSi: "umrl Martin PAPIČ [★★ PAPIČ-hiša: h31-1886-poroka-Martin-Papič-28 × Straus + h33-1901!], gospodinov sin, 4 MESECE (26. 4., pokop 29. 4.) — Božjast; previden (1); Jos. Rauq [~ 'Pauč'-VLM-varianta]; ★ h33 = 3. mrliški vpis (1895 + 1899 + 1901!) + PAPIČ-mreža (h31-1886-poroka + h54-1896-Joana-2-let + h33-1901 = 3 hiše!) + 3 + 3 hišna (33 — 8×)",
+    whatEn: "died Martin PAPIČ [★★ the PAPIČ house: h31-1886-wedding-Martin-Papič-28 × Straus + h33-1901!], a smallholder's son, 4 MONTHS (Apr 26, buried Apr 29) — Božjast [~ god's-punishment]; previden (1); Jos. Rauq [~ the 'Pauč'-VLM-variant]; ★ h33 = the 3rd death entry (1895 + 1899 + 1901!) + the PAPIČ network (h31-1886-wedding + h54-1896-Joana-2-yrs + h33-1901 = 3 houses!) + the 3 + 3 house number (33 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "35",
+    bookSignature: "04894",
+    year: 1901,
+    scan: 84,
+    page: 83,
+    whatSi: "umrl Janez KRIŽAN [~ Kešran — IME-KONFLIKT: kompozit-ime-'Križan' @×3.0 vs kompozit-griblje-B-'Kešran' — K-r-glif-nejasen [~]; KRIŽAN-×2-1901!], vdovec [~ 'in očet?'-stan-nejasen], 63 let (15. 10., pokop 19. 10.) — Jetika; previden (1); Fr. Škurmelj [~ 'Dostal'-kompozit-podpisi-varianta!]; ★★★ h35 = 7. mrliški vpis = NOVI REKORD mrliške linije (1887 + 1888-×2 + 1890 + 1894 + 1895 + 1901 — cf. h30-6-P164 + h36/h60-5!) + KRIŽAN-×2-1901 (h36-Ana-76-Jan + h35-Janez-63-Okt!) + 3 + 5 hišna (35 — 8×)",
+    whatEn: "died Janez KRIŽAN [~ Kešran — the NAME-CONFLICT: the kompozit-ime-'Križan' @×3.0 vs the kompozit-griblje-B-'Kešran' — the K-r glyph unclear [~]; the KRIŽAN-×2-1901!], a widower [~ 'and father?'-status-unclear], 63 years (Oct 15, buried Oct 19) — Jetika [~ dropsy]; previden (1); Fr. Škurmelj [~ the 'Dostal'-kompozit-podpisi-variant!]; ★★★ h35 = the 7th death entry = THE NEW RECORD of the death line (1887 + 1888-×2 + 1890 + 1894 + 1895 + 1901 — cf. h30-6-P164 + h36/h60-5!) + the KRIŽAN-×2-1901 (h36-Ana-76-Jan + h35-Janez-63-Oct!) + the 3 + 5 house number (35 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "64",
+    bookSignature: "04894",
+    year: 1901,
+    scan: 84,
+    page: 83,
+    whatSi: "umrl Janez JAKOBČIČ [★★ JAKOBČIČ-mreža: h64-1896-Matija-68 + h9-1896-Neža-9-mes + h64-1901!], ženjen gospodin, 42 let (19. 10., pokop 19. 10.? [~ pokop-dan-enak-smrti cf. 1895-h46-2-dni!]) — Voz [~ 'pade na zadušil'-opomba = padel/zadušil se? — NESREČA-kandidat cf. 1893-od-strele!]; previden (1); Fr. Škurmelj [~ 'Dostal'-varianta!]; ★ h64 = 5. mrliški vpis (1896-×2 + 1898-×2 + 1901 — hiša-×2-v-2-LETIH-×2 = 1896 + 1898!) + h64-VERBIČAR-vez (1898-Ana-roj.-Pezdirec + Matija!) + 6 + 4 hišna (64 — 8×)",
+    whatEn: "died Janez JAKOBČIČ [★★ the JAKOBČIČ network: h64-1896-Matija-68 + h9-1896-Neža-9-mos + h64-1901!], a married smallholder, 42 years (Oct 19, buried Oct 19? [~ the burial-day-equals-death cf. 1895-h46-2-days!]) — Voz [~ the 'pade na zadušil'-note = fell/strangled? — an ACCIDENT-candidate cf. 1893-struck-by-lightning!]; previden (1); Fr. Škurmelj [~ the 'Dostal'-variant!]; ★ h64 = the 5th death entry (1896-×2 + 1898-×2 + 1901 — the house-×2-in-2-YEARS-×2 = 1896 + 1898!) + the h64-VERBIČAR link (1898-Ana-née-Pezdirec + Matija!) + the 6 + 4 house number (64 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "34",
+    bookSignature: "04894",
+    year: 1901,
+    scan: 85,
+    page: 84,
+    whatSi: "umrl Nikolaj RAMPIČ [~ Mramlič — IME-×2-BERI: kompozit-griblje-B-'Rampič' + meja-K-'Mramlič' — R/M-glif-nejasen [~]; cf. 1896-N.-Hrišan-r53-vzorec!], gospodinov sin, 19 let (24. 12., pokop 29. 12.) — Pljučnica; previden (1); Franc Dostal [~ 'Laur. Dostál'-meja-K + 'Češarek'-podpisi-K = NOVI-DUHOVNIK-KANDIDAT #11 [~]!]; ★ h34 = 3. mrliški vpis (1898-Ana-FILAK-21. + 1899 + 1901!) + ZADNJA-GRIBLJE-1901 (meja 1901/02 = '1902.' VELIKA + DVOJNI podčrtaj na PRAZNI vrsti + restart — 5. STIL 9. POTRDITEV!) + 3 + 4 hišna (34 — 8×)",
+    whatEn: "died Nikolaj RAMPIČ [~ Mramlič — the NAME-×2-READ: the kompozit-griblje-B-'Rampič' + the meja-K-'Mramlič' — the R/M glyph unclear [~]; cf. the 1896-N.-Hrišan-r53-pattern!], a smallholder's son, 19 years (Dec 24, buried Dec 29) — Pljučnica [~ pneumonia]; previden (1); Franc Dostal [~ 'Laur. Dostál'-meja-K + 'Češarek'-podpisi-K = the NEW-PRIEST-CANDIDATE #11 [~]!]; ★ h34 = the 3rd death entry (1898-Ana-FILAK-21. + 1899 + 1901!) + the LAST-GRIBLJE-1901 (the border 1901/02 = '1902.' LARGE + a DOUBLE underline on an EMPTY row + the restart — the 5th-STYLE 9th-PROOF!) + the 3 + 4 house number (34 — 8×)",
+    status: "DOCUMENTED",
+  },
+
   // ——— P80 razširitev: POROČNA KNJIGA 04455 1873–1922 — okvir 1886 (skeni 61–65 == Pag. 60–64, vpisi 1–24; Pag. = sken − 1 v razponu 61–66) ———
   // P115 (faza 2) RE-READ: 8 blokov popravljenih na podlagi max-zoom branja (h36→56, h63→65, h15→16, h25→Priložje
   // + priimki Pegdirec/Klepec/Požek/Tomec/Straus/Križan) — evidence: research/issue17/parish-marriage-1886.json

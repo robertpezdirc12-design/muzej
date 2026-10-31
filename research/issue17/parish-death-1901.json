@@ -1,0 +1,180 @@
+{
+ "status": "SAMPLE-TRANSCRIPTION-D1901",
+ "generated": "2026-10-31",
+ "phase": "P167",
+ "source": {
+  "book": "04894",
+  "parish": "Podzemelj (matricula-online.eu)",
+  "skeni_novi": [81, 82, 83, 84, 85],
+  "skeni_reuse": [80],
+  "vrsta": "mrliška",
+  "url": "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04894/"
+ },
+ "frame": {
+  "leto": 1901,
+  "vrstic": 55,
+  "griblje_vpisi": 10,
+  "hise": 10,
+  "ponovitve": "BREZ hiša-×2 (3. leto zapored — cf. 1899-13 + 1900-8!)",
+  "meja_1900_01": "s80-sredina — P166 re-potrditev ('1901' VELIKA + podčrtaj na PRAZNI vrsti + Januarj-INLINE + restart zap 61→1 = 5. STIL 8. POTRDITEV — pikselsko!)",
+  "meja_1901_02": "s85-sredina ('1902.' VELIKA + DVOJNI podčrtaj na PRAZNI vrsti + Januarj-INLINE + restart zap = 5. STIL 9. POTRDITEV — P166-lead-'[~ s85+?]' POTRJEN!; zapcol-55 = '55' PRAZNO — VLM-'65' = 5/6-zmeda ZAVRJEN!)",
+  "skeni_nov_str": "s81–s85",
+  "griblje_hise": "36,48,60,28,81,29,33,35,64,34",
+  "rast": "13→7→8→13→8→10",
+  "p80_hise": 89,
+  "korpus": 93,
+  "stran_invarianta": "stran == sken − 1 — 47.–52. potrditev (s80=79 … s85=84!)"
+ },
+ "entries": [
+  {
+   "row": 1, "zap": 1, "houseNo": "36", "bookSignature": "04894", "year": 1901,
+   "scan": 80, "page": 79, "mesec": "Januarj", "smrt": "7.", "pokop": "9.",
+   "ime": "Ana KRIŽAN [★★ P167-lead-POTRJEN — kompozit-griblje-A @×2.2: K-r-i-ž-a-n + hišna-36-visoka!]",
+   "stan": "vdova kolarica [~ kmetica]", "rojena": null, "spol": "žens.",
+   "starost": "76 let", "bolezen": "Marbmil [~ Marelost = senilnost]", "previden": "1",
+   "duhovnik": "J.R. Kut'nek [#10 — Griblje-1901-dominanta 1/6!]",
+   "opomba": "h36 = 5. mrliški vpis (1887+1888+1892+1895+1901!); ★★★ KRIŽAN-×2-1901 (h36-Ana + h35-Janez = 2 hiši-2 spola-v-1-LETU!)",
+   "dokaz": "crops/griblje-zap1-ana-krizan-80dno.png + kompozit-griblje-A PANEL-1"
+  },
+  {
+   "row": 4, "zap": 4, "houseNo": "48", "bookSignature": "04894", "year": 1901,
+   "scan": 80, "page": 79, "mesec": "Januarj", "smrt": "16.", "pokop": "18.",
+   "ime": "Matija HLOBUČAR [★★ P166-lead-POTRJEN — H-l-o-b-u-č-a-r-glif-konzistenca-h47-1900!]",
+   "stan": "samski ½ zemljakov sin", "rojena": null, "spol": "moš.",
+   "starost": "65 let", "bolezen": "Jetika", "previden": "1",
+   "duhovnik": "J.R. Kut'nek [#10]",
+   "opomba": "h48 = 3. mrliški vpis (1889+1892+1901!); ★★★ HLOBUČAR-×2-v-2-MESECIH-RAZREŠEN (Marija-h47-DEC-1900 + Matija-h48-JAN-1901 = 2 SOSEDNJI hiši — mreža ×3: h46-1895-Klobučar-roj.!)",
+   "dokaz": "crops/griblje-zap4-matija-hlobucar-80dno.png + kompozit-griblje-A PANEL-2"
+  },
+  {
+   "row": 7, "zap": 7, "houseNo": "60", "bookSignature": "04894", "year": 1901,
+   "scan": 81, "page": 80, "mesec": "Januarj", "smrt": "29.", "pokop": "31.",
+   "ime": "Anton ŠTOLFA [~ Štolfa/Štolar?]",
+   "stan": "gospodinov sin", "rojena": null, "spol": "moš.",
+   "starost": "8 let", "bolezen": "Živce [?]", "previden": "1",
+   "duhovnik": "J.R. Kut'nek [#10]",
+   "opomba": "h60 = 5. mrliški vpis (1888-×2+1898+1899+1901!); γ→7-lekcija-potrditev (s81-VLM-'zap4' = dejansko zap7 — cifre @ vrh celic!)",
+   "dokaz": "crops/griblje-zap7-anton-stolfa-81.png + kompozit-griblje-A PANEL-3"
+  },
+  {
+   "row": 11, "zap": 11, "houseNo": "28", "bookSignature": "04894", "year": 1901,
+   "scan": 81, "page": 80, "mesec": "Februar", "smrt": "26.", "pokop": "28.",
+   "ime": "Marija BRINEC [★★ BRINEC-mreža-#6: h58-1896 + h14-1896 + h24-1888/94 + h23-1900 + h28-1901!]",
+   "stan": "hči [~ kmetova hči]", "rojena": null, "spol": "žens.",
+   "starost": "4 leta", "bolezen": "Božjast", "previden": "1",
+   "duhovnik": "J.R. Kut'nek [#10]",
+   "opomba": "★★★ h28 = 1. MRLIŠKI VPIS KADARKOLI (25. PT-vezni dokaz IZVEN 41–60 cf. h11/h82-P165 + h81-P166!; korpus: h28 že v 04105-krstni!)",
+   "dokaz": "crops/griblje-zap11-marija-brinec-81.png + kompozit-griblje-A PANEL-4 + kompozit-vas-hisna PANEL-4"
+  },
+  {
+   "row": 13, "zap": 13, "houseNo": "81", "bookSignature": "04894", "year": 1901,
+   "scan": 81, "page": 80, "mesec": "Marcej", "smrt": "24.", "pokop": "25.",
+   "ime": "Marija CINDRIČ [~ Cindrič/Cendrič]",
+   "stan": "hči [~ čevljarska hči?]", "rojena": null, "spol": "žens.",
+   "starost": "8 mesecev", "bolezen": "Božjast", "previden": "1",
+   "duhovnik": "J.R. Kut'nek [#10]",
+   "opomba": "★ h81 = 2. mrliški vpis + 2. leto ZAPORED (1900-Barbara-Povšek + 1901!; h81 = P166-EDINA-nova → ŽE 2. vpis-v-2-letih!)",
+   "dokaz": "crops/griblje-zap13-marija-cindric-81.png + kompozit-griblje-A PANEL-5"
+  },
+  {
+   "row": 15, "zap": 15, "houseNo": "29", "bookSignature": "04894", "year": 1901,
+   "scan": 81, "page": 80, "mesec": "Marcej", "smrt": "29.", "pokop": "31.",
+   "ime": "Ana MILEK [★★ MILEK-leksikon — h22/h65/h82-×3-1899 + h65-1900!]",
+   "stan": "samska [~ samotna]", "rojena": null, "spol": "žens.",
+   "starost": "54 let", "bolezen": "Prehlajenje [~]", "previden": "1",
+   "duhovnik": "J.R. Kut'nek [#10 — 'Kukljaš'-VLM-varianta [~]]",
+   "opomba": "★ h29 = 4. mrliški vpis (1886-×3 + 1901!); MILEK-mreža (h22-1887/98/99 + h65 + h82-1899 + h29-1901 = 5 hiš!)",
+   "dokaz": "crops/griblje-zap15-ana-milek-81.png + kompozit-griblje-B PANEL-1"
+  },
+  {
+   "row": 19, "zap": 19, "houseNo": "33", "bookSignature": "04894", "year": 1901,
+   "scan": 82, "page": 81, "mesec": "April", "smrt": "26.", "pokop": "29.",
+   "ime": "Martin PAPIČ [★★ PAPIČ-hiša: h31-1886-poroka-Martin-Papič-28 × Straus!]",
+   "stan": "gospodinov sin", "rojena": null, "spol": "moš.",
+   "starost": "4 mesece", "bolezen": "Božjast", "previden": "1",
+   "duhovnik": "Jos. Rauq [~ 'Pauč'-VLM-varianta]",
+   "opomba": "★ h33 = 3. mrliški vpis (1895+1899+1901!); PAPIČ-mreža (h31-1886 + h54-1896-Joana + h33-1901 = 3 hiše!)",
+   "dokaz": "crops/griblje-zap19-martin-papic-82.png + kompozit-griblje-B PANEL-2"
+  },
+  {
+   "row": 50, "zap": 50, "houseNo": "35", "bookSignature": "04894", "year": 1901,
+   "scan": 84, "page": 83, "mesec": "Oktober", "smrt": "15.", "pokop": "19.",
+   "ime": "Janez KRIŽAN [~ Kešran — IME-KONFLIKT: kompozit-ime-'Križan' @×3.0 vs kompozit-griblje-B-'Kešran']",
+   "stan": "vdovec [~ 'in očet?'-stan-nejasen]", "rojena": null, "spol": "moš.",
+   "starost": "63 let", "bolezen": "Jetika", "previden": "1",
+   "duhovnik": "Fr. Škurmelj [~ 'Dostal'-podpisi-varianta!]",
+   "opomba": "★★★ h35 = 7. mrliški vpis = NOVI REKORD mrliške linije (1887+1888-×2+1890+1894+1895+1901 — cf. h30-6-P164!); KRIŽAN-×2-1901 (h36-Ana + h35-Janez!)",
+   "dokaz": "crops/griblje-zap50-janez-kesran-84.png + kompozit-griblje-B PANEL-3 + kompozit-ime-starost PANEL-4"
+  },
+  {
+   "row": 51, "zap": 51, "houseNo": "64", "bookSignature": "04894", "year": 1901,
+   "scan": 84, "page": 83, "mesec": "Oktober", "smrt": "19.", "pokop": "19.?",
+   "ime": "Janez JAKOBČIČ [★★ JAKOBČIČ-mreža: h64-1896-Matija + h9-1896-Neža + h64-1901!]",
+   "stan": "ženjen gospodin", "rojena": null, "spol": "moš.",
+   "starost": "42 let", "bolezen": "Voz [~ 'pade na zadušil'-opomba = NESREČA-kandidat!]", "previden": "1",
+   "duhovnik": "Fr. Škurmelj [~ 'Dostal'-varianta!]",
+   "opomba": "★ h64 = 5. mrliški vpis (1896-×2 + 1898-×2 + 1901 — hiša-×2-v-2-LETIH-×2!); pokop-dan-enak-smrti [~ cf. 1895-h46-2-dni!]",
+   "dokaz": "crops/griblje-zap51-janez-jakobcic-84.png + kompozit-griblje-B PANEL-4"
+  },
+  {
+   "row": 55, "zap": 55, "houseNo": "34", "bookSignature": "04894", "year": 1901,
+   "scan": 85, "page": 84, "mesec": "December", "smrt": "24.", "pokop": "29.",
+   "ime": "Nikolaj RAMPIČ [~ Mramlič — IME-×2-BERI: griblje-B-'Rampič' + meja-K-'Mramlič']",
+   "stan": "gospodinov sin", "rojena": null, "spol": "moš.",
+   "starost": "19 let", "bolezen": "Pljučnica", "previden": "1",
+   "duhovnik": "Franc Dostal [~ 'Laur. Dostál'-meja-K = NOVI-DUHOVNIK-KANDIDAT #11 [~]!]",
+   "opomba": "★ h34 = 3. mrliški vpis (1898-Ana-FILAK + 1899 + 1901!); ZADNJA-GRIBLJE-1901 (meja 1901/02 = '1902.' + DVOJNI podčrtaj = 5. STIL 9. POTRDITEV!)",
+   "dokaz": "crops/griblje-zap55-nikolaj-rampic-85.png + kompozit-griblje-B PANEL-5 + kompozit-meja-1901-02 PANEL-1"
+  }
+ ],
+ "excluded": [
+  {"id": "E1", "opis": "s80-dno-zap1–6 (meja-1900/01 + Januarj-INLINE; P167-faza: zap1 + zap4 Griblje-ŽE-v-korpusu!)", "opis2": "zap2-Krasinec-18-2-mes + zap3/5/6-ne-Griblje (VLM-s80-P166!)"},
+  {"id": "E2", "opis": "s81-zap8–10,12,14,16–18 (ne-Griblje)", "opis2": "zap8-Podzemelj?-h?-Ana-Dvoegi?-70-Starost + zap9-Podzemelj-Matija-Jakopič? + zap10-Krasinec-h30?-Ana-Pustala-77-Pljučnica? + zap12-Gotenica?-h?-Martin-Kavarič?-1-let-Jetika + zap14-Grem-h22?-Janez-Gorše?-Slabost + zap16-Dragoče?-h?-Katarina-Dvoegi?-70-Starost + zap17-Klarje?-h?-Jakob-Brinovec?-8-mes-Griža + zap18-Vranoviče-h24-Janez-Zabovcniak?-26-Jetika"},
+  {"id": "E3", "opis": "s82-zap20–30 (ne-Griblje)", "opis2": "Apr/Maj/Jun/Jul-prelomi; vasi: Krasinec, Grem?, Vranoviče ×2, Goriče ×2, Grobnik?, Gradac ×2, Gorenje?, Otok?"},
+  {"id": "E4", "opis": "s83-zap31–42 (ne-Griblje — Griblje-×0 = 1. takšna stran odkar P162!)", "opis2": "Jul/Avg/Sep/Okt-prelomi; vasi: Primostek ×2, Boršt, Gradac ×3, Otok, Krasinec, Grem?, Podzemelj?, Podbrezje?"},
+  {"id": "E5", "opis": "s84-zap43–49,52–54 (ne-Griblje)", "opis2": "Okt/Nov-prelomi; vasi: Vranoviče ×2, Grem ×2, Gradac, Goriče, Podbrezje?, Krasinec ×2, Malše-h10"},
+  {"id": "E6", "opis": "s85-1902-zap1–10 (meja-marker + restart — P168-območje!)", "opis2": "zap1-Grem?/Gam?-h33-Martin-Tilak?-Božjast-Jan5/7 + zap2-Grobice?-h18-Matija-Vršnec?-Apnena? + zap3-Podžemelj?-Katarina-Štibič?-Marbmil + zap4-Griblje?-h52?-Janez-Pezdirec-56 + zap5-Ivariče?-h33?-Marija-Kavčič-4-mes + zap6-Karlovše?-h21?-Marija-Tuše-84 + zap7-Osredek?-h?-Karel-Jurka-79-Starost + zap8-Griblje?-h23?-Matija-Prinec?-64-Jetika + zap9-Krasinec?-h30?-Marija-Vrdošek?-2-mes-Griža + zap10-Prsaje?-h33?-Marija-Pribiš?-3-Jetika — [~ VLM-s85]"},
+  {"id": "E7", "opis": "s85-1901-rep-zap55-meja (marker-'1902.'-PRAZNA-vrsta)", "opis2": "zap55 = ZADNJA-Griblje-1901-ŽE-v-korpusu (meja-kompozit PANEL-1!)"},
+  {"id": "E8", "opis": "s81-zap7-rep (P167-ŽE-v-korpusu kot h60!)", "opis2": "vrsta1-s81 = zap7 (VLM-'zap4' = γ→7-zmeda) — forenzika @×2.2-potrdila"}
+ ],
+ "anomalies": [
+  {"id": "A1", "opis": "MAX-ZOOM forenzika (6 kompozitov × 42 izrezov): 3 IME-KONFLIKTI → [~] (zap50-'Križan'-K-vs-'Kešran'-B + zap55-'Rampič'-B-vs-'Mramlič'-K + zap15-'Kukljaš'-'Kut'nek'-duh!) — KONZERVATIVNO: brez brez-dokaznih popravkov (cf. 1896/1900-rezolucije!)", "opis2": ""},
+  {"id": "A2", "opis": "VLM-vas-0-napak (10/10 Griblje-potrdjenih @kompozit-vas-hisna ×3.0-visoka-gotovost!) — 1. leto BREZ A2-vas-napake odkar P161 (1896-×3 + 1899-×1 + 1900-×5-REKORD!) — lekcija-'kompozit-vas-hisna'-deluje!", "opis2": ""},
+  {"id": "A3", "opis": "KUT'NEK-DOMINANTA-1901 (6× Griblje-Jan–Mar zap1–15!; cf. P166-Sep–Dec-12×-dominanta!) — smena: Rauq (Apr-zap19) → Škurmelj[~Dostal] (Okt-zap50/51) → Dostal[~#11-kandidat] (Dec-zap55) = 4 fazе-v-1-LETU!", "opis2": ""},
+  {"id": "A4", "opis": "NOVI-DUHOVNIK-KANDIDAT #11: 'Dostal' [~ Laur. Dostál-meja-K-panel-1 + Franc-Dostal-zap55 + Fran-Dostal-zap50/51-griblje-B — V-PODPISI-K-'Češarek'/'Škurmelj' = KONFLIKT-NE-RAZREŠEN [~]; cf. P164-'VLM-duhovnik-stolpec-NEZANESLJIV'-lekcija]", "opis2": ""},
+  {"id": "A5", "opis": "h35 = 7. mrliški vpis = NOVI REKORD linije (1887+1888-×2+1890+1894+1895+1901 — cf. h30-6-P164 + h36/h60/h64-5!)", "opis2": ""},
+  {"id": "A6", "opis": "h28 = 1. MRLIŠKI VPIS KADARKOLI = 25. PT-vezni dokaz (IZVEN 41–60! cf. h11/h82-P165 + h81-P166; h28 = 28 < 41 — pod-luknjo!)", "opis2": ""},
+  {"id": "A7", "opis": "KRIŽAN-×2-1901 = 2 hiši-2 spola-v-1-LETU (h36-Ana-76-vdova-Jan + h35-Janez-63-vdovec-Okt — cf. h45-×2-1896-hiša-×2!; KRIŽAN-mreža: h63-1896 + h63-1900 + h35-×6 + h36-×5 = 6 hiš-11 vpisov!)", "opis2": ""},
+  {"id": "A8", "opis": "γ→7-LEKCIJA-9.-10.-POTRDITEV (s81-VLM-'zap4' = zap7 @zapcol-×2.5 + s85-VLM-'zap65' = zap55 @zapcol-'55'-PRAZNO — 5/6-zmeda!) — cifre @ VRH celic (COM-detekcija = celica-center!) — v1-bug: linije-v-projekciji (v3-FIX: opening-1×30-izolacija!)", "opis2": ""},
+  {"id": "A9", "opis": "h64 = 5. mrliški vpis (1896-×2 + 1898-×2 + 1901!) — hiša-×2-v-2-LETIH-×2 (1896 TRAGEDIJA + 1898 PAR + 1901-NESREČA-'Voz'-pade-zadušil [~]!) + pokop-dan-enak-smrti-zap51 [~ cf. 1895-h46-2-dni]", "opis2": ""},
+  {"id": "A10", "opis": "OTROŠKA-UMRLJIVOST-GRIBLJE-40% (4/10: h60-8-let + h28-4-let + h81-8-mes + h33-4-mes) — razpon 4-mesece → 76-let (h33 → h36!); Božjast-×3 (h28/h81/h33 — cf. 1900-×?); meseci Griblje: Jan3·Feb1·Mar2·Apr1·Okt2·Dec1 = 10", "opis2": ""}
+ ],
+ "crossChecks": [
+  {"id": "X1", "opis": "stran == sken − 1 — 47.–52. potrditev (s80=79! s81=80! s82=81! s83=82! s84=83! s85=84!) — P80-invarianta mrliške"},
+  {"id": "X2", "opis": "meja 1900/01 re-potrditev = s80-sredina ('1901' VELIKA + podčrtaj + PRAZNA-vrsta + Januarj-INLINE + restart 61→1 — 5. STIL 8. POTRDITEV — P166-pikselsko!)"},
+  {"id": "X3", "opis": "meja 1901/02 = s85-sredina ('1902.' VELIKA + DVOJNI podčrtaj + PRAZNA-vrsta + Januarj-INLINE + restart — 5. STIL 9. POTRDITEV — P166-lead-'[~ s85+?]' POTRJEN!)"},
+  {"id": "X4", "opis": "zap-continuity: 61→restart-1 (s80) → 6 (s80-dno) → 7–18 (s81) → 19–30 (s82) → 31–42 (s83) → 43–54 (s84) → 55 (s85) → restart-1 (s85-dno = 1902!) = 55 vrstic BREZ vrzeli"},
+  {"id": "X5", "opis": "hišne veze: h36-5. + h48-3. + h60-5. + h28-1.! + h81-2. + h29-4. + h33-3. + h35-7.-REKORD + h64-5. + h34-3. = 36 vpisov na 10 hišah (korpus-konstantnost!)"},
+  {"id": "X6", "opis": "duhovnik-kontinuiteta: Kut'nek-6×-Jan–Mar (P166-Sep–Dec-1900-nadaljevanje!) → Rauq-Apr → Škurmelj[~Dostal]-Okt → Dostal[~]-Dec = 4 fazе"},
+  {"id": "X7", "opis": "HLOBUČAR-×2-v-2-MESECIH-cross: Marija-h47-30.12.1900 (P166-zap59) ↔ Matija-h48-16.1.1901 (P167-zap4) = 17 dni med smrtjema na SOSEDNJIH hišah!"},
+  {"id": "X8", "opis": "MILEK-mreža-cross: h22-1887/1898/1899 + h65-1887/1888/1889/1899/1900 + h82-1899 + h29-1901-Ana-54 = 4 hiše-10 vpisov (največja-mreža-mrliške!)"},
+  {"id": "X9", "opis": "rast-vrstic: 1896-60 → 1897-58 → 1898-48 → 1899-61 → 1900-61 → 1901-55 (avg-vrstic-6-let = 57.2; 1901 = 55 = pod-povprečjem!)" },
+  {"id": "X10", "opis": "rast-Griblje: 1896-16 → 1897-13 → 1898-7 → 1899-13 → 1900-8 → 1901-10 (P162-REKORD-16-ni-podbit!)" }
+ ],
+ "honesty": [
+  "H1: branja = 5× celostansko VLM (glm-5v-turbo, 0 FAIL, s81–s85; serije ≤2 foreground po P158-lekciji!) + rows-v1/v2/v3-tri-metode (v1-COM-bug-linije → v3-celica-odprta!) + 5× diag-PNG agent-oči + 15× zapcol-rezin + 1× zoom-s81-top + 42 max-zoom izrezov (10 Griblje-trakov ×2.2 + 5 mejnih + 27 celic ×3.0) v 6 kompozitov — VSE datoteke v /tmp/p167 (sandbox-volatilno; skripte v repo scripts/tmp/!)",
+  "H2: [~] konservativno: KRIŽAN-[~Kešran] + RAMPIČ-[~Mramlič] + Dostal-[~#11-kandidat] + ŠTOLFA-[~Štolar?] + CINDRIČ-[~Cendrič] + MILEK-stan-[~samotna] + JAKOBČIČ-bolezen-[~Voz] + Prehlajenje-[~] — NI brez-dokaznih popravkov (cf. 1896/1900-max-zoom-rezolucije — tu = 3-ne-razrešeni-KONFLIKTI-iz-samih-kompozitov!)",
+  "H3: rows-metoda-v3 = celica-podana (horizontalne-linije-opening-1×30 + interpolacija + cifre-brez-linij) — v1-COM-bug (linije-v-projekciji → yc-zamaknjene) ODKRIT-in-SANIRAN-pikselsko (zapcol-agent-oči!) — lekcija: projekcijo VEDEJO očistiti linij pred COM!",
+  "H4: NASLOV-'Zaporedna štev.'-ostanek = false-cifra @s82/s84/s85 (y~230–240) — izključen z yc<330-pragom (P162-TOP_ZONE-lekcija!) — diag-kontrolla-potrdila-12/12-vrstic-na-5-skenih!",
+  "H5: s81-VLM-'zap4' = dejansko zap7 (γ→7-zmeda — 9.-10.-potrditev-lekcije!) — s81-Griblje-×4-vse-potrdjene-kompozit-A (VLM-MISS-s81 = 0-rebra ampak 1-cifra-zmeda!)",
+  "H6: s85-VLM-'zap65' = dejansko zap55 (5/6-zmeda!) — zapcol-×2.5-'55'-PRAZNO @y372 — zap-continuity-55-vrstic-BEZ-vrzeli (X4) — P166-lead-'s85+?'-POTRJEN",
+  "H7: duhovnik-stolpec = [~] tam kjer kompoziti-konflikt (zap50/51-'Škurmelj'-podpisi-K-vs-'Dostal'-griblje-B + zap55-'Češarek'-vs-'Dostal') — P164-lekcija-'VLM-duhovnik-NEZANESLJIV'-uporabljena — Dostal = KANDIDAT-#11-NE-čisto!",
+  "H8: 1902-dno-s85 = ŽE-prebrani-VLM (E6) — P168-lead-10-vrstic-ŽE-v-roki (Griblje-kandidati: zap4-h52?-Pezdirec + zap8-h23?-Brinec?-Prinec-zmeda + zap10-h33?-Dehlič? [~]) — forenzika-P168-bom-potreben!",
+  "H9: P167-forenzika = 6 kompozitov (NE 42 posamičnih VLM-klicev — ekonomija-7×!) — kompozit-vzor-P162-primerjava-cifer; oznake-PANEL-N-rdeča-obroba-rumena-oznaka",
+  "H10: p80-hiše = 89-NESPREMENJENE (h28 = 1.-mrliški-ampak-ŽE-v-04105-krstnih → korpus-93-konstanten!; cf. h81-P166-vzorec!) — PT_GAP-doc-15-nespremenjen"
+ ],
+ "nextSteps": {
+  "P168-lead": "mrliška 1902 (s85-dno-restart zap1–10 ŽE prebrani [Griblje-kandidati-ŽE-VIDNI: zap4-h52?-Janez-Pezdirec-56-let + zap8-h23?-Matija-'Prinec'?-64-let-Jetika = BRINEC-zmeda! + zap10-h33?-Matija-Dehlič?-3-let] + s86 (zap11–22?) + s87+; meja 1902/03 [~ s90+?])",
+  "opomba": "P168 = 17. polno leto mrliške linije; s85-dno-1902-zap1–10-ŽE-prebrani (VLM-s85!) — 10 vrstic + s86+"
+ }
+}
