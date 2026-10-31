@@ -6804,3 +6804,32 @@ Stage Summary:
 - **P169 NA PRODUKCIJI** (170/170 ok:True) — mrliška linija 16→17→18/39 NA-LIVE (1901→1902→1903)
 - Trilokacija 1:1:1 @ f3c9d73 — brez-blockad; P170 lahko teče v isti seji
 - **P170 START: mrliška 1904** (s94-dno-restart-zap1–3 ŽE-prebrani + s95-kontekst-zap4–15 ŽE-prebrani + s96+; meja 1904/05 [~ s97+?]; Griblje/Giriče-zmeda zap8/zap10 = WATCH!)
+
+## P170 — mrliška 1904
+
+Agent: Z.ai Code (glavni agent)
+Task: P170 — MRLIŠKA knjiga 04894, leto 1904 (19. polno leto mrliške linije; issue #18)
+
+Work Log:
+- PRELUDE: GitHub-push-SANACIJA z NOVIM-PAT (f59f14e..f3c9d73) → TRILOKACIJA 1:1:1 + P169-PRODUKCIJA-POTRJENA (170/170 + qa-p169-pass) — cf. prejšnji-vnos
+- t1 FETCH: p79-recept (BOOK_URL → /image/<b64>/ → hosted-images) → inventory-256 ✓ (P169-ujemanje!) + s94–s99 (6/6 JPEG ~650 KB)
+- t2 VLM-CELOSTANSKO ×6 (glm-5v-turbo thinking-off, foreground 1-sken-po-1 — 0 FAIL): s94 (11-vrstic; glava-'18903'-P169-POTRJENA + MEJA-'1904'@row8!) + s95 (12; glava-'Leto-18.1904'!) + s96 (12; '18/94'-prečrtano!) + s97 (12; '18904'!) + s98 (8; '1896/4'-zmeda!) + s99 (12; '18905' = 1905-glava!)
+- t3 FORENZIKA (21. okvir): 3× diag ×1.8 (vas-kolona!) + 5× hišna-kolona-×3.0 (kalibracija-s95) + 22+ crops (trakovi ×2.2 + celice ×3.0 + super-zoom ×6/×8 + glave ×2.5/×4 ×3-faze)
+- ★ NOVA-DIAG-METODA: VIZUALNI-GRIDI-z-Read-očmi — 5-strani-polno-vizualno-prebranih (1.-sezona-glavni-agent-SAM!) — rešilo-koordinatno-krizo (ry-top-150-NAPAČEN → glava-@-130–290 → vrstice-@-330–1950/135px!)
+- ★ GLAVA-HALUCINACIJA-LEKCIJA: ×4-crops-faza-1 = VLM-'1904'-iz-prompta-kljub-'letnice-ni-vidno'-v-opombi → SANACIJA-full-pas-×2.5 → DEJANSKE-glave-'Leto-18/904'-'18/94'-'18904'-'18904'-'18905' = **5 GLAVE-NAPAKE = NOVI-REKORD-LINIJE** (P169-3→5!)
+- 429-RATE-LIMIT (sleep-90/240-s) — 1-klic-po-1-potrjen!
+- t4 REŠITVE-forenzika: hišna-z8-'31'-NE-'37' (3-glasa-ZAVRJENI-vizualno-'1'-brez-prečke; kalibracija-z13-'31'!) + starosti-z5-'13'/z10-'79'/z38-'60'/z40-'78' + ime-z33/z37-'PEZDIREC'-@×5 ('Catharina-Pezdirec'!) + podpis-'Hugo-LENGSFELD' ('L-ne-D' + '-feld-ne--pfeld' ×2!)
+- GRIBLJE-1904 = **12** (rast 10→17→17→**12** = PADEC-po-2-rekordih!): h58-Ivana-Puček + h31-Anton-Zapič + h63-Ana-Križan-79 + h35-Janez-Šimec + h2-Marija-Zapič + h91-Martin-Mravinec + h62-Barbara-Kurec + h34-Katarina-Čišlak + h1-Nikolaj-Železnik-71 + h48-Katarina-PEZDIREC + h66-Katarina-Križan-60 + h14-Ana-PEZDIREC-65
+- ★★★ h63 = 1.-MRLIŠKI-KADARKOLI = 28.-PT (+MARGINALIJA-'mat.š.-št-246/1906'-1.-mrliška!) · h66 = 2.-mrliški = 26.-PT-kontinuiteta (P168!)
+- ★★★ NOVI-DUHOVNIK-#12-LENGSFELD (od-okt-1904; alternacija-Dostál→Lengsfeld→Rauq; cf.-krstna-'Hengsfeld'-L/H-zmeda!) · NEKOMPLETEN-TRIPLI-z42 (3×-'——'!) + z20-DVOJNI · h43-Boginja-vas-×2 (Kömerl!) · z22-'je-utonil' + z5-'izvitrno-udarjen'
+- t5 parish.ts: +12-BLOKOV-04894-1904 (comment-26-vrstic) → vitals 938→950 · bloki 239→251 · p80-hiše-91-NESPREMENJENE (vseh-12-ŽE!) · korpus-93 · PT 28→29
+- PIN-KASKADA: qa 85× 950 + 19× 251 + stale-guardi ≥1905 (18× qa + 17 skript) + p80-skripta + p153–p169-pine + VRATA-h91/h14/h48-1904 (p88/p91/p93!) + **p108PageOfScan-SANACIJA-po-blanket-poškobi** ('s-===-251'→'239'-nazaj — LEKCIJA: blanket-replace-NEVARNO!)
+- REGRESIJA-SANACIJA-starih-skript: p153–p164-pine (I6d2-guards-1905 + I6f-950 + I10b + I12b/d) + p160-I5e-h72-7-vpisov (P169-MISS!) + p161-h30-7/h35-8 + p162-h45-ŠTRAVS-×5 (P169-×2-miss!)
+- t6 VERIFIKACIJA: **p170 54/54 (+--live 56/56)** · p153 39/39 · p154 37/37 · p155 43/43 · p156 53/53 · p157 59/59 · p158 55/55 · p159 52/52 · p160 53/53 · p161 47/47 · p162 52/52 · p163 53/53 · p164 52/52 · p165 54/54 · p166 52/52 · p167 51/51 · p168 57/57 · p169 54/54 · p80-PASS · **runQA 171/171 ok:True** · tsc 0 · lint 0
+- DOKAZ parish-death-1904.json (47-entries [12-Griblje + 35-ne-Griblje-s-*!] + 7-excluded + 10-anomalij + 5-crossChecks + honesty-10 + P171-lead) + notes
+- P171-LEAD: mrliška-1905 (s99-restart-zap1–12-ŽE-prebrani [z1-h59?-Marjeta-PEZDIREC?-72-let = era-13-nadaljevanje!] + s100+; meja 1905/06 [~ s102+?]; Lengsfeld-DOMINANTA-×11!)
+
+Stage Summary:
+- **P170 KONČAN** — 19/39 mrliške linije; korpus 950/251/91/93 (PT 29)
+- 5-GLAVE-NAPAKE-REKORD + PEZDIREC-era-13 (×9-v-3-letih!) + DIAG-METODA (vizualni-gridi!) + GLAVA-HALUCINACIJA-LEKCIJA
+- P171 READY: mrliška-1905 (s99-dno-ŽE-prebrano + s100+; Lengsfeld-kontekst)

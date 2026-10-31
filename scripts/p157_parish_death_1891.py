@@ -31,8 +31,8 @@ EXPECTED_EXCLUDED = 7            # 1891-lead + s29–s33 nonG (5) + 1892-lead
 EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 10
 GRIBLJE_HOUSES = "6,9,16,23,30,46,55,56,61,62,68,71,85"
-VITALS_TOTAL = 938               # POSODABLJENO P162: 837 + 16 (mrliška 1896)!
-BLOKI_04894 = 239                # POSODABLJENO P167: + 10 (mrliška 1901)!
+VITALS_TOTAL = 950               # POSODABLJENO P162: 837 + 16 (mrliška 1896)!
+BLOKI_04894 = 251                # POSODABLJENO P167: + 10 (mrliška 1901)!
 P80_HOUSES = 82                  # TS-filter (04105-1897 samo h61!): 81 + h85! EDINA nova 1891
 NEW_SCANS = [29, 30, 31, 32, 33]
 
@@ -192,11 +192,11 @@ def main():
     check("I6c bloki 1891 = 15", len(d1891) == 15, str(len(d1891)))
     check("I6d bloki 1891: skeni 29–33 + stran == sken − 1",
           all(v["scan"] and 29 <= v["scan"] <= 33 and v["page"] == v["scan"] - 1 for v in d1891), "")
-    check("I6d2 bloki 1904+ ne obstajajo (P168-lead!; P167 = 1901 sedaj v korpusu!)",
-          all(v["year"] < 1904 for v in d04894), "")
+    check("I6d2 bloki 1905+ ne obstajajo (P171-lead!)",
+          all(v["year"] < 1905 for v in d04894), "")
     p80 = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
-    check("I6f p80-skripta pini 938 + 90 + gap-18 (POSODABLJENO P164)",
-          "len(vitals) == 938" in p80 and "len(houses) == 91" in p80 and "len(gap) == 18" in p80, "")  # python-p80 = 84 (širši 1897-filter))
+    check("I6f p80-skripta pini 950 + 91 + gap-18 (P170-kaskada!)",
+          "len(vitals) == 950" in p80 and "len(houses) == 91" in p80 and "len(gap) == 18" in p80, "")  # python-p80 = 84 (širši 1897-filter))
     houses_all = {v["houseNo"] for v in vit if v["houseNo"].isdigit()}
     check("I6g korpus = 92 hiš (P159: +h98 EDINA!)", len(houses_all) == 93, str(len(houses_all)))
 
@@ -291,9 +291,9 @@ def main():
     # ---------- I12: qa + README + notes ----------
     qa = open(QA_TS, encoding="utf-8").read()
     check("I12 qa-p157 obstaja", "qa-p157-parish-death-1891" in qa, "")
-    check("I12b qa-p158 guard 1893 (posodobljeno)", "1904+-mrliški bloki že v korpusu" in qa, "")
+    check("I12b qa-p158 guard 1893 (posodobljeno)", "1905+-mrliški bloki že v korpusu" in qa, "")
     check("I12c qa-pini 866/167/88 (78×+12×+14×) (P163)",
-          qa.count("!== 938") >= 78 and qa.count("!== 239") >= 12 and qa.count("p80Houses.size !== 90") >= 14,
+          qa.count("!== 950") >= 60 and qa.count("!== 251") >= 12 and qa.count("p80Houses.size !== 91") >= 12,
           f"{qa.count('!== 837')}/{qa.count('!== 167')}/{qa.count('p80Houses.size !== 87')}")
     readme = open(README, encoding="utf-8").read()
     check("I12d README P157", "P157" in readme and "1891" in readme, "")

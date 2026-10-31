@@ -2925,6 +2925,153 @@ export const HOUSE_VITALS: HouseVital[] = [
     status: "DOCUMENTED",
   },
 
+  // ——— P170: mrliška 1904 (04894, skeni 94-dno + 95–98 == str. 93-dno + 94–97;
+  // 47 vpisov zap1–47: 3 (s94-dno) + 12 (s95) + 12 (s96) + 12 (s97) + 8 (s98);
+  // s99 = 1905-glava-'18905' + restart zap1 = MEJA 1904/05 = 12. potrditev
+  // 5. STILA) — 12 GRIBLJE (rast 10→17→17→12 = PADEC-po-2-rekordih!; 12 hiš
+  // brez-×2) + ★★★ 5 GLAVE-NAPAKE = NOVI-REKORD-LINIJE (s95-'Leto-18/904'
+  // [izbris-'18' + '1904' — P169-3.-glava-POTRJENA!] + s96-'Leto-18/94'
+  // [prečrtana-'9'] + s97-'Leto-18904' + s98-'Leto-18904' + s99-'Leto-18905'
+  // = pisar-'189'-navada ×4!) + ★★★ PEZDIREC-×3-1904 = era-13 (×9-v-3-letih:
+  // z33-h48-Katarina + z37-h28-Krasinec-Jožef + z45-h14-Griblje-Ana!; +
+  // 1905-z1-h59-Marjeta = P171-lead!) + ★★★ h66 = 2. MRLIŠKI VPIS (26.-PT-vez
+  // @ 1904! — 1. = P168-1902-Katarina) + ★★★ NOVI-DUHOVNIK-#12: Hugo
+  // LENGSFELD (z35–z39-s97 + z43–z45-s98 + 1905-×11 = od-oktobra-1904;
+  // forenzika-'L-ne-D' + '-feld-ne--pfeld' ×2; cf. krstna-1904-'Hengsfeld'
+  // [~ L/H-KURRENT-zmeda] — alternacija Dostál(1–34) → Lengsfeld(35–39+43–45)
+  // → Rauq(40–42+46–47)) + ★★★ NEKOMPLETEN-TRIPLI-1.-v-liniji (z42-Gorišice:
+  // starost+'——'+previden-'—'+podpis-'——' = 3-×-PRAZNO!) + z20-Otok-
+  // NEKOMPLETEN-DVOJNI (starost-prazna + podpis-'——') + Boginja-vas-h43-×2-
+  // v-1-letu (2-otroka-Kömerl-8-mesecev!) + z22-'je utonil' (2.-utopitev-v-
+  // liniji cf. z18-1887-'je-utonil'?) + MARGINALIJA-z10-'mat.š.-št-246/1906'
+  // (1. mrliška-marginalija-vzorec cf. krstne!) + VLM-vas-0-napak-4.-leto
+  // (12/12 Griblje!) + forenzika-×5/×6/×8 (hišna-z8-'31' [NE-37-lead!] +
+  // starosti-z5-'13' + z10-'79' + z38-'60' + z40-'78' + ime-PEZDIREC ×2!
+  // + podpis-'Lengsfeld'!) — Dokaz: research/issue17/parish-death-1904.json;
+  // skripta scripts/p170_parish_death_1904.py; zap-continuity: 1–3 (s94-dno)
+  // → 4–15 (s95) → 16–27 (s96) → 28–39 (s97) → 40–47 (s98) = 47 oštevilčenih
+  // = ČISTO LETO (meja 1905 = s99!).
+  {
+    houseNo: "58",
+    bookSignature: "04894",
+    year: 1904,
+    scan: 94,
+    page: 93,
+    whatSi: "umrla Ivana PUČEK [~ diag-'Pušič' — KURRENT-č/š; P169-lead-'Puček?'-POTRJEN!], ½ zemljakova hči, 2 LETI (13. 1., pokop 15. 1.) — Jetika [~ dropsy]; previden (—); Stanislav Dostál [#11!]; ★ h58 = 5. mrliški vpis (1889 + 1899 + 1903-Ivana-Puček-2-let-Jan-kontekst + 1904!) + PRVI-GRIBLJE-1904 (1904-dno-s94: meja-1903/04-za = restart zap 51→1 = 5. STIL 11. POTRDITEV!) + 5 + 8 hišna (58 — 8×)",
+    whatEn: "died Ivana PUČEK [~ the diag-'Pušič' — the KURRENT-č/š; the P169-lead-'Puček?'-PROVEN!], a half smallholder's daughter, 2 YEARS (Jan 13, buried Jan 15) — Jetika [~ dropsy]; previden (—); Stanislav Dostál [#11!]; ★ h58 = the 5th death entry (1889 + 1899 + the 1903-Ivana-Puček-2-yr-Jan-context + 1904!) + the FIRST-GRIBLJE-1904 (the 1904-bottom-s94: after the 1903/04-border = the restart 51→1 = the 5th STYLE 11th CONFIRMATION!) + the 5 + 8 house number (58 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "31",
+    bookSignature: "04894",
+    year: 1904,
+    scan: 95,
+    page: 94,
+    whatSi: "umrl Anton ZAPIČ [~ Šapnic-lead-ZAVRJEN — forenzika-×3-'Zapic'-forma cf. z15-Marija-Zapic-ISTA-forma!; KURRENT-p/n], ½ zemljakov sin, 3 MESECE (25. 2., pokop 27. 2.) — Jetika [~ dropsy]; previden (—); Stanislav Dostál [#11!]; ★ h31 = 3. mrliški vpis (1899-Papič + 1901-PAPIČ-Martina + 1904 — GRIBLJE-h31!) + hišna-forenzika-×6-'31' (lead-'37?' + celostansko-'37' + diag-'37' = 3-glasa-NAPAČNO — kolona-×3.0-'31' + VIZUALNO-'31.'-druga-cifra-brez-prečke = 1! cf. z13-h31-ISTA-forma = h31-×2-1904!) + 3 + 1 hišna (31 — 8×)",
+    whatEn: "died Anton ZAPIČ [~ the Šapnic-lead-REJECTED — the forensics-×3-'Zapic'-form cf. z15-Marija-Zapic-THE-SAME-form!; the KURRENT-p/n], a half smallholder's son, 3 MONTHS (Feb 25, buried Feb 27) — Jetika [~ dropsy]; previden (—); Stanislav Dostál [#11!]; ★ h31 = the 3rd death entry (1899-Papič + 1901-PAPIČ-Martina + 1904 — the GRIBLJE-h31!) + the house-forensics-×6-'31' (the lead-'37?' + the whole-page-'37' + the diag-'37' = 3-votes-WRONG — the column-×3.0-'31' + the VISUAL-'31.'-the 2nd digit-without-the-crossbar = 1! cf. z13-h31-THE-SAME-form = h31-×2-1904!) + the 3 + 1 house number (31 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "63",
+    bookSignature: "04894",
+    year: 1904,
+    scan: 95,
+    page: 94,
+    whatSi: "umrla Ana KRIŽAN [~ diag-'74' + pas-'99'-ZAVRJENI — VIZUALNO-'79'-jasno ('7'-prečka + '9'-zanka!)], vdova in vajtarka, 79 LET (3. 3., pokop 5. 3.) — Hlavost [~ mavrica?]; previden (—); Stanislav Dostál [#11!]; ★★★ h63 = 1. MRLIŠKI VPIS KADARKOLI (28. PT-vezni dokaz! cf. P140-krstni-04105-IZVEN-filtra — cf. h66-vzorec!) + MARGINALIJA-'mat.š. št 246/1906' (1. mrliška-marginalija-vzorca — matična-številka-1906-referenca!) + 6 + 3 hišna (63 — 8×)",
+    whatEn: "died Ana KRIŽAN [~ the diag-'74' + the strip-'99'-REJECTED — the VISUAL-'79'-clear ('7'-crossbar + '9'-loop!)], a widow and a lodgekeeper, 79 YEARS (Mar 3, buried Mar 5) — Hlavost [~ mavrica?]; previden (—); Stanislav Dostál [#11!]; ★★★ h63 = THE 1ST DEATH ENTRY EVER (the 28th PT-linked proof! cf. the P140-baptism-04105-OUTSIDE-the-filter — cf. the h66-pattern!) + the MARGINALIA-'mat.š. št 246/1906' (the 1st death-register-marginalia-pattern — a registrar-number-1906-reference!) + the 6 + 3 house number (63 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "35",
+    bookSignature: "04894",
+    year: 1904,
+    scan: 95,
+    page: 94,
+    whatSi: "umrl Janez ŠIMEC [~ diag-'Simenc'-ZAVRJEN — cf. P169-Šimec-NE-Simenc-lekcija!], sin ½ zemljaka [~ svrsn?-KURRENT], 30 LET (9. 4., pokop 11. 4.) — Jetika [~ dropsy]; previden (1); Jos. Rauq [~ Ramej-ISTA-OSEBA]; ★ h35 = 4. mrliški vpis (1896 + 1899 + 1901 + 1904!) + 3 + 5 hišna (35 — 8×)",
+    whatEn: "died Janez ŠIMEC [~ the diag-'Simenc'-REJECTED — cf. the P169-Šimec-NOT-Simenc-lesson!], a half smallholder's son [~ svrsn?-KURRENT], 30 YEARS (Apr 9, buried Apr 11) — Jetika [~ dropsy]; previden (1); Jos. Rauq [~ Ramej-THE-SAME-PERSON]; ★ h35 = the 4th death entry (1896 + 1899 + 1901 + 1904!) + the 3 + 5 house number (35 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "2",
+    bookSignature: "04894",
+    year: 1904,
+    scan: 95,
+    page: 94,
+    whatSi: "umrla Marija ZAPIČ [~ Zapic-forma = ISTA-kot-z8-Anton!], ¼ zemljakova hči, 4 MESECE (13. 4., pokop 15. 4.) — Hlavost [~ mavrica?]; previden (—); Jos. Rauq [~ Ramej]; ★ h2 = 4. mrliški vpis (1896 + 1897 + 1901 + 1904!) + 2. + 0. hišna (2 — 8×)",
+    whatEn: "died Marija ZAPIČ [~ the Zapic-form = THE-SAME-as-z8-Anton!], a quarter smallholder's daughter, 4 MONTHS (Apr 13, buried Apr 15) — Hlavost [~ mavrica?]; previden (—); Jos. Rauq [~ Ramej]; ★ h2 = the 4th death entry (1896 + 1897 + 1901 + 1904!) + the 2 + 0 house number (2 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "91",
+    bookSignature: "04894",
+    year: 1904,
+    scan: 96,
+    page: 95,
+    whatSi: "umrl Martin MRAVINEC [~ diag-'Mavrinec' — KURRENT-r/v; samoten = samski!], samoten ¼ zemljakov sin, 66 LET (14. 4., pokop 16. 4.) — Nadulha [~ Naduha]; previden (1); Stanislav Dostál [#11!]; ★ h91 = 2. mrliški vpis (1903-zap31?-kontekst + 1904 — cf. P119-h91-krstni!) + 9 + 1 hišna (91 — 8×)",
+    whatEn: "died Martin MRAVINEC [~ the diag-'Mavrinec' — the KURRENT-r/v; samoten = unmarried!], an unmarried quarter smallholder's son, 66 YEARS (Apr 14, buried Apr 16) — Nadulha [~ Naduha]; previden (1); Stanislav Dostál [#11!]; ★ h91 = the 2nd death entry (the 1903-zap31?-context + 1904 — cf. the P119-h91-baptism!) + the 9 + 1 house number (91 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "62",
+    bookSignature: "04894",
+    year: 1904,
+    scan: 96,
+    page: 95,
+    whatSi: "umrla Barbara KUREC [~ diag-'Rure' — KURRENT-K/R], omožena ½ zemljakinja, 56 LET (23. 5., pokop 25. 5.) — Jetika [~ dropsy]; previden (1); Stanislav Dostál [#11!]; ★ h62 = 4. mrliški vpis (1887 + 1899 + 1900 + 1904!) + 6 + 2 hišna (62 — 8×)",
+    whatEn: "died Barbara KUREC [~ the diag-'Rure' — the KURRENT-K/R], a married half smallholder's wife, 56 YEARS (May 23, buried May 25) — Jetika [~ dropsy]; previden (1); Stanislav Dostál [#11!]; ★ h62 = the 4th death entry (1887 + 1899 + 1900 + 1904!) + the 6 + 2 house number (62 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "34",
+    bookSignature: "04894",
+    year: 1904,
+    scan: 96,
+    page: 95,
+    whatSi: "umrla Katarina ČIŠLAK [~ diag-'Čilak'/'Čižak' — š-začetek-KURRENT], ½ zemljakova hči, 11 MESECEV (24. 7., pokop 26. 7.) — Božjast [~ god's-punishment]; previden (—); Stanislav Dostál [#11!]; ★ h34 = 5. mrliški vpis (1887 + 1891 + 1896 + 1899 + 1904!) + 3 + 4 hišna (34 — 8×)",
+    whatEn: "died Katarina ČIŠLAK [~ the diag-'Čilak'/'Čižak' — the š-middle-KURRENT], a half smallholder's daughter, 11 MONTHS (Jul 24, buried Jul 26) — Božjast [~ god's-punishment]; previden (—); Stanislav Dostál [#11!]; ★ h34 = the 5th death entry (1887 + 1891 + 1896 + 1899 + 1904!) + the 3 + 4 house number (34 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "1",
+    bookSignature: "04894",
+    year: 1904,
+    scan: 96,
+    page: 95,
+    whatSi: "umrl Nikolaj ŽELEZNIK [~ diag-'Željko' — cf. P99-h83-1903-ŽELJKO-signal — 2-familije ali ISTA-zmeda-ŽELEZNIK/ŽELJKO!], vženjen vajhtar [~ oženjen], 71 LET (27. 7., pokop 29. 7.) — Hlavost [~ mavrica?]; previden (1); Stanislav Dostál [#11!]; ★ h1 = 3. mrliški vpis (1889 + 1890 + 1904 — NAJNIŽJA-hiša!) + 1. + 0. hišna (1 — 8×)",
+    whatEn: "died Nikolaj ŽELEZNIK [~ the diag-'Željko' — cf. the P99-h83-1903-ŽELJKO-signal — 2-families or THE-SAME-ŽELEZNIK/ŽELJKO-confusion!], a married lodgekeeper [~ oženjen], 71 YEARS (Jul 27, buried Jul 29) — Hlavost [~ mavrica?]; previden (1); Stanislav Dostál [#11!]; ★ h1 = the 3rd death entry (1889 + 1890 + 1904 — the LOWEST house!) + the 1 + 0 house number (1 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "48",
+    bookSignature: "04894",
+    year: 1904,
+    scan: 97,
+    page: 96,
+    whatSi: "umrla Katarina PEZDIREC [★★ super-×5-ime-forenzika-'Catharina Pezdirec' — celostansko-'Cudriec' + diag-glif-'Cendrec'-VIRNO-Pezdirec-forma!; PEZDIREC-×3-1904-#1!], ¼ zemljakova hči, 1 MESEC (11. 9., pokop 13. 9.) — Hlavost [~ mavrica?]; previden (—); Stanislav Dostál [#11!]; ★★★ h48 = 6. mrliški vpis (1886 + 1889 + 1899 + 1903 + 1904!) + PEZDIREC-era-13 (z33+z37+z45 = ×3-1904 — ×9-v-3-letih!) + 4 + 8 hišna (48 — 8×)",
+    whatEn: "died Katarina PEZDIREC [★★ the super-×5-name-forensics-'Catharina Pezdirec' — the whole-page-'Cudriec' + the diag-glyph-'Cendrec'-VIRINALLY-the-Pezdirec-form!; the PEZDIREC-×3-1904-#1!], a quarter smallholder's daughter, 1 MONTH (Sep 11, buried Sep 13) — Hlavost [~ mavrica?]; previden (—); Stanislav Dostál [#11!]; ★★★ h48 = the 6th death entry (1886 + 1889 + 1899 + 1903 + 1904!) + the PEZDIREC-era-13 (z33+z37+z45 = ×3-1904 — ×9-in-3-years!) + the 4 + 8 house number (48 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "66",
+    bookSignature: "04894",
+    year: 1904,
+    scan: 97,
+    page: 96,
+    whatSi: "umrla Katarina KRIŽAN, vajtharka, vdova, 60 LET [~ diag-'60' ×2; vizualno-'6l' = 60!], (20. 10., pokop 22. 10.) — Nadulha [~ Naduha]; previden (1); Hugo LENGSFELD [#12! — 1. mrliški podpis-od-oktobra-1904!]; ★★★ h66 = 2. MRLIŠKI VPIS = 26.-PT-vezni-dokaz @ 1904 (1. = P168-1902-Anton-Križan-1-leto!) + GRIBLJE-vizualno-JASNO ('Griblje'-forma!) + 6 + 6 hišna (66 — 8×)",
+    whatEn: "died Katarina KRIŽAN, a lodgekeeper, a widow, 60 YEARS [~ the diag-'60' ×2; the visual-'6l' = 60!], (Oct 20, buried Oct 22) — Nadulha [~ Naduha]; previden (1); Hugo LENGSFELD [#12! — the 1st death-signature-from-October-1904!]; ★★★ h66 = the 2nd DEATH ENTRY = the 26th PT-linked-proof @ 1904 (the 1st = the P168-1902-Anton-Križan-1-yr!) + the GRIBLJE-visually-CLEAR ('Griblje'-form!) + the 6 + 6 house number (66 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "14",
+    bookSignature: "04894",
+    year: 1904,
+    scan: 98,
+    page: 97,
+    whatSi: "umrla Ana PEZDIREC [★★ super-×5-'Pexdirec'-glif = PEZDIREC-era! — diag-'Pešdirec'; PEZDIREC-×3-1904-#3 = Griblje-#2!], omožena vajtharica, 65 LET (14. 12., pokop 16. 12.) — Hlavost [~ mavrica?]; previden (1); Hugo LENGSFELD [#12!]; ★★★ h14 = 2. mrliški vpis (1898?-kontekst + 1904 — GRIBLJE-h14 ≠ KRASINEC-h14-1903-×2!) + ZADNJA-GRIBLJE-1904 (meja 1904/05 = s99: '18905'-glava + restart zap 47→1 + Januar-podčrtan = 5. STIL 12. POTRDITEV!) + 1 + 4 hišna (14 — 8×)",
+    whatEn: "died Ana PEZDIREC [★★ the super-×5-'Pexdirec'-glyph = the PEZDIREC-era! — the diag-'Pešdirec'; the PEZDIREC-×3-1904-#3 = Griblje-#2!], a married lodgekeeper, 65 YEARS (Dec 14, buried Dec 16) — Hlavost [~ mavrica?]; previden (1); Hugo LENGSFELD [#12!]; ★★★ h14 = the 2nd death entry (the 1898?-context + 1904 — the GRIBLJE-h14 ≠ the KRASINEC-h14-1903-×2!) + the LAST-GRIBLJE-1904 (the border 1904/05 = s99: the '18905'-header + the restart 47→1 + the Januarij-underlined = the 5th STYLE 12th CONFIRMATION!) + the 1 + 4 house number (14 — 8×)",
+    status: "DOCUMENTED",
+  },
+
   // ——— P80 razširitev: POROČNA KNJIGA 04455 1873–1922 — okvir 1886 (skeni 61–65 == Pag. 60–64, vpisi 1–24; Pag. = sken − 1 v razponu 61–66) ———
   // P115 (faza 2) RE-READ: 8 blokov popravljenih na podlagi max-zoom branja (h36→56, h63→65, h15→16, h25→Priložje
   // + priimki Pegdirec/Klepec/Požek/Tomec/Straus/Križan) — evidence: research/issue17/parish-marriage-1886.json

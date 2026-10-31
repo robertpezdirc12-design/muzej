@@ -37,8 +37,8 @@ EXPECTED_EXCLUDED = 8
 EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 5
 GRIBLJE_HOUSES = "2,11,16,23,25,26,33,36,38,40,52,57,65,66,72,72,90"
-VITALS_TOTAL = 938               # 904 + 17!
-BLOKI_04894 = 239                # 205 + 17!
+VITALS_TOTAL = 950               # 904 + 17!
+BLOKI_04894 = 251                # 205 + 17!
 P80_HOUSES = 90                  # 89 + h66 (h40 ŽE-v-04455!)
 KORPUS_HOUSES = 93               # NESPREMENJENO (h66/h40 že v korpusu!)
 NEW_SCANS = [86, 87, 88, 89, 90]
@@ -177,11 +177,11 @@ def main():
     check("I6c bloki 1902 = 17", len(d1902) == 17, str(len(d1902)))
     check("I6d bloki 1902: skeni 85–90 + stran == sken − 1",
           all(v["scan"] and 85 <= v["scan"] <= 90 and v["page"] == v["scan"] - 1 for v in d1902), "")
-    check("I6d2 bloki 1904+ ne obstajajo (P170-lead!; P168 = 1902 sedaj v korpusu!)",
-          all(v["year"] < 1904 for v in d04894), "")
+    check("I6d2 bloki 1905+ ne obstajajo (P171-lead!)",
+          all(v["year"] < 1905 for v in d04894), "")
     p80 = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
     check("I6f p80-skripta pini 938 + 90 + gap-18 (vitals-P168-kaskada!)",
-          "len(vitals) == 938" in p80 and "len(houses) == 91" in p80 and "len(gap) == 18" in p80, "")
+          "len(vitals) == 950" in p80 and "len(houses) == 91" in p80 and "len(gap) == 18" in p80, "")
     houses_all = {v["houseNo"] for v in vit if v["houseNo"].isdigit()}
     check("I6g korpus = 93 hiš (NESPREMENJEN — h66/h40 že v korpusu!)",
           len(houses_all) == KORPUS_HOUSES, str(len(houses_all)))
@@ -243,16 +243,16 @@ def main():
     # ---------- I10: qa-parish + pin-kaskada ----------
     qa = open(QA_TS, encoding="utf-8").read()
     check("I10a qa-p168 = 169. kontrola", "qa-p168-parish-death-1902" in qa, "")
-    check("I10b qa-pini 938/239/90 (82×+16×+20×)",
-          qa.count("!== 938") >= 80 and qa.count("!== 239") >= 15 and qa.count("p80Houses.size !== 90") >= 18,
-          f"{qa.count('!== 938')}/{qa.count('!== 239')}/{qa.count('p80Houses.size !== 90')}")
+    check("I10b qa-pini 950/251/91 (82×+16×+20×)",
+          qa.count("!== 950") >= 80 and qa.count("!== 251") >= 15 and qa.count("p80Houses.size !== 91") >= 18,
+          f"{qa.count('!== 950')}/{qa.count('!== 251')}/{qa.count('p80Houses.size !== 91')}")
     check("I10c qa guard 1903 (bloki 1903+ ne!)",
-          "1904+-mrliški bloki že v korpusu" in qa and "(h.year ?? 0) >= 1904" in qa, "")
+          "1905+-mrliški bloki že v korpusu" in qa and "(h.year ?? 0) >= 1905" in qa, "")
     check("I10d P80_PT_GAP doc-list 15 (NESPREMENJENO!)",
           '"49", "51"' in qa and "p80Gap.length !== 15" in qa, "")
     check("I10e stale-guardi p153–p167 → 1903 (15× qa)",
-          qa.count("1904+-mrliški bloki že v korpusu") >= 15,
-          f"{qa.count('1904+-mrliški bloki že v korpusu')}")
+          qa.count("1905+-mrliški bloki že v korpusu") >= 15,
+          f"{qa.count('1905+-mrliški bloki že v korpusu')}")
 
     # ---------- I11: honesty + notes ----------
     check("I11a honesty 10 točk", len(d["honesty"]) == 10, str(len(d["honesty"])))
@@ -266,15 +266,15 @@ def main():
 
     # ---------- I12: kaskada ----------
     check("I12a p153–p167 skripte VITALS_TOTAL 938",
-          all("VITALS_TOTAL = 938" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
+          all("VITALS_TOTAL = 950" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
               for i, y in ((153, 1887), (154, 1888), (155, 1889), (156, 1890), (157, 1891), (158, 1892), (159, 1893), (160, 1894), (161, 1895), (162, 1896), (163, 1897), (164, 1898), (165, 1899), (166, 1900), (167, 1901))), "")
     check("I12b p80 PT_GAP_HOUSES komentar (P167: korpus-NESPREMENJEN!)",
           "+ 51 (mrliška 04894-1896" in p80, "")
     check("I12c stale-guardi p153–p167 → 1903 (VSE skripte!)",
-          all("1904+-mrliški bloki že v korpusu" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
+          all("1905+-mrliški bloki že v korpusu" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
               for i, y in ((155, 1889), (156, 1890), (157, 1891), (158, 1892), (159, 1893), (160, 1894), (162, 1896), (163, 1897), (164, 1898), (165, 1899), (166, 1900), (167, 1901))), "")
-    check("I12d qa-parish.ts bloki 04894 = 239 (P168-kaskada!)",
-          qa.count('04894").length !== 239') >= 15, str(qa.count('04894").length !== 239')))
+    check("I12d qa-parish.ts bloki 04894 = 251 (P170-kaskada!)",
+          qa.count('04894").length !== 251') >= 15, str(qa.count('04894").length !== 251')))
 
     # ---------- I13 (--live): matricula dostopna ----------
     if live:
