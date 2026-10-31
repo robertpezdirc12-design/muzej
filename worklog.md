@@ -6719,5 +6719,7 @@ Work Log:
 
 Stage Summary:
 - P167 = 1901 polno leto v korpusu (904/205/89/93) — 16/39 mrliške linije
-- Vse skripte + QA + tsc + lint zeleni; Sledi: commit + push GitHub/GitLab
+- Vse skripte + QA + tsc + lint zeleni
+- PUSH: GitLab **✓ 05d5d95..12ea911** (oauth2:glpat — zrcalo-aktualno!); GitHub **✗ BLOKIRAN — PAT-ghp_ZQjc…-NEVELJAVEN** (API-401-'Bad credentials' + push-'Invalid username or token' vseh-3-formatov [token@ / token: @ / user:token] — iztek/revoked; ls-remote-deluje = repo-JAVEN-anonymous-read — nezanesljiv-test!) → **OSTAJA-UPORABNIŠKA-AKCIJA: nov-GitHub-PAT** (github.com/settings/tokens — classic-scopes-repo!)
+- Vercel-deploy: **ČAKA-GitHub-push** (primarna-pot = Vercel-GitHub-App — vezana-na-GitHub-main; deploy.yml-rezerva-mrtva [VERCEL_TOKEN-potekel-2026-10-14]; deploy-hook-ni-konfiguriran) — ko bo GitHub-pobil-12ea911 → auto-deploy-168/168
 - P168 LEAD: mrliška **1902** (s85-dno-restart-zap1–10 ŽE prebrani [Griblje-kandidati-ŽE-VIDNI: zap4-h52?-Janez-Pezdirec-56 + zap8-h23?-Matija-'Prinec'?-64-Jetika-BRINEC-zmeda + zap10-h33?-Matija-Dehlič?-3 [~]] + s86 (zap11–22?) + s87+; meja 1902/03 [~ s90+?])
