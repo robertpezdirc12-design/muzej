@@ -6867,3 +6867,35 @@ Stage Summary:
 - **P171 KONČAN (koda)**: 1905 = 61 vrstic / **16 GRIBLJE = 2.-REKORD LINIJE** (rast 17→12→16!) / 14 hiš (h18/h27 ×2 = PADEC-vzorec ×3!) / meja-1905/06 = s104 (13. POTRDITEV 5. STILA!)
 - mrliška linija **20/39** (1886–1905) — P172-LEAD: 1906 (s104-zap1–9: zap1-Ana-BRINEC-h49-66-Jan + zap6-Katarina-PEZDIREC-h20-61-Feb = era-13-nadaljevanje-1906!)
 - PUSH: BLOKIRAN — oba GitHub PAT-a 401 (ghp_NiEv… NOV-od-uporabnika = 401! + ghp_SChC… = 401) → **potreben NOV žeton od uporabnika**
+
+## P172 — mrliška 1906 (5 GLAVE-NAPAKE = REKORD IZENAČEN + NOV-DUHOVNIK-#13-KUHINEK)
+
+Agent: Z.ai Code (glavni agent)
+Task: P172 — mrliška knjiga 04894, leto 1906 (21. polno leto mrliške linije) + P171-push-zaključek
+
+Work Log:
+- PUSH-P171-RAZREŠEN: uporabnik posredoval NOV GitHub PAT (ghp_IL99…) → api.github.com/user = 200 ✓ → push fb0c1ae (P171) → GitHub origin (cb8c034..fb0c1ae) + GitLab gitlab (403-lažen-alarm → 'Everything up-to-date' = USPEŠEN!) → **trilokacija 1:1:1 @ fb0c1ae** → Vercel-auto-deploy → **produkcija 172/172 ok:True POTRJENA** → origin-remote posodobljen z novim PAT
+- T1-FETCH: s105–s110 (matricula 04894, inventar 256 slik) → /tmp/p172 + s104-copy-iz-p171 = 7 skenov
+- T2-VLM: p172_read_page.mjs (4 serije ≤2-skena foreground) = 7/7 OK (81 vrstic / 19 Griblje)
+- T3-ROWS+DIAG: p172_rows_v3.py — s105/s106 GOOD, s107–s110 FAIL (celice-manjka!) → **P170-diag-grid-recept** (p172_diag.py: vrstice-@-330–1950/135px) → **diag-vizualna-zaslona ×7 skenov z Read-očmi** (s104–s110 polno-prebrani!)
+- T4-FORENZIKA: p172_crops.py (14-trakov ×2.2 + 12-celic ×3.0 + 5-glav) + p172_kompozit.py (5-KOMPOZIT) → Read-očmi ×3:
+  - z1-h49 = '49'-jasno-NI-'19' (VLM-h19-ZAVRJENA!) + BRINEC-potrjen
+  - z48 = 'Joček'-jasno (VLM-'Potokar'-ZAVRJENA!) + h77-'77'-γ×2
+  - z54 = 'Šimec'-jasno (VLM-'Timec'-ZAVRJENA!) + h18-'18'
+  - z35 = Nadruka (VLM-'Nadluka'-r/u!) + z1 = Slabost (VLM-'Šarost'-s/z!) + z6 = Nadruka (VLM-'Nadluhec'!)
+  - podpis-z21 = 'J. R. KUHinek'-jasno = **NOV-DUHOVNIK-#13!**
+  - GLAVE-×5: s104-'48/1905' + s105-'18906' + s106/s107/s108-'181906' = REKORD-IZENAČEN-P170!
+  - s109 = MEJA-1906/07 (P171-lead-'[~ s107+?]'-KOREKCIJA!) + s109-z1 = ANTON-Brinec-vdovec (P172-lead-'Ana'-SPOL-KOREKCIJA!)
+- T5- parish.ts: P172-blok-komentar (29-vrstic) + 10-vpisov (z1–z54; h39/h77 = 1.-MRLIŠKI-VPIS-KADARKOLI-×2!) + P173-LEAD
+- KASKADA: qa-parish.ts 966→976 (×87!) + 267→277 (×21!) + guardi-1906→1907 (×20!) + NOVE-izjeme-p85-h77/p90-h20/p93-h18/p94-h49/p96-h19 (04894-1906-bloki!) + qa-p160-h57-3.→4.-vpis! + p80-skripta-976 + parish.ts-h49/h57-vpis-številčenje-regresija (2.→3. + 3.→4.-vpis!)
+- SKRIPTA: scripts/p172_parish_death_1906.py (I1–I13) = **51/51 PASS** (po-7-sintaksnih-popravkih-pričakovanj!)
+- DOKAZ: research/issue17/parish-death-1906.json (56 entries = 10-Griblje + 46-s-*; DUP-21-anomalija!) + NOTES
+- STALE-SANACIJA: p153–p171 skripte ×19 (VITALS_TOTAL-976 + BLOKI-277 + guardi-1907 + I10e/I12d-qa-stringi + p160-I5b/I5d-h49/h57-vpisi + p153-I6e2/I10b!) — **VSE-19-skript-0-FAIL**
+- QA: qa-p172 = **173. kontrola** · **runQA 173/173 ok:True** · tsc 0 · lint 0
+- KUMULATIV: vitals 966 → 976 · mrliški 04894 267 → 277 · p80 91 NESPREMENJENE · korpus 93 NESPREMENJEN · PT 29 (h39-29.-kandidat!)
+
+Stage Summary:
+- **P172 KONČAN (koda)**: 1906 = 55-vpisov (56-oštevilčenih — **PISAR-DUPLIKAT-21 = 1.-v-liniji!**) / 10-GRIBLJE (padec-rekorda 17→16→16→10!) / 9-hiš (h58-×2-8-tednov-apart! h58 = 8.-vpis-REKORDISTKA!) / meja-1906/07 = s109 (14. POTRDITEV 5. STILA!)
+- **5-GLAVE-NAPAKE = REKORD-LINIJE-IZENAČEN** (P170-5! pisar-'18'-navada-×5-v-1-letu: '48/1905'-'4'-za-'1'-NOV-vzorec!)
+- **NOV-DUHOVNIK-#13-KUHINEK** (×3-GRIBLJE + s106-DOMINANTA!) + PODLOGAR-kapelan + FLORJANČIČ-×2 = 4-duhovniki-v-1-letu!
+- mrliška linija **21/39** (1886–1906) — P173-LEAD: 1907 (s109-zap1–11 ŽE-prebrani: ANTON-BRINEC-h49-vdovec-SPOL-KOREKCIJA + 6-GRIBLJE-v-Januarju-SAMO! + s110-z13-Veljko-h60 + z18-Urh-h32; meja 1907/08 [~ s113+?])
