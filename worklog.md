@@ -7090,3 +7090,10 @@ Stage Summary:
 - **P179 KONČAN (koda)**: 1913 = 58-vrstic (zap1–58) / 14-GRIBLJE / 13-hiš (h59-×2-JAKLIČ!) / padec 18→14
 - mrliška linija **28/39** (1886–1913) — P180-LEAD: 1914 (s147-z1–12-ŽE-prebrani: 3-GRIBLJE — z1-h8-Matija-VOTLOVEC-9½ + z7-h40-Marija-PEKOVEC-2½ + z8-h34-Josefa-FINK-2-ŠILAK-hiša-4.-ZAPOREDNO-LETO! + z9/z10/z12-'[~]Ho?er/Ojster'-podpisi-[?]-NOVI?; meja 1914/15 [?])
 - PEZDIREC-3.-LETO-ZAPORED + 2-NOVA-STANA-V-1-LETU (UČITELJ + KOVAČ!) + NOVI-DUHOVNIK-#18-POLÁK-Koop. + 34.-PT-kandidat-h92 + VLM-VAS-LEKCIJA (14-celic-re-verifikacija!)
+
+## P179 — deploy-status (2026-11-01)
+
+- PUSH: GitHub **fc13874..86b4eb7** (nov-PAT-200) + GitLab **fc13874..86b4eb7** (WAF-403-ob-prvem-poskusu → retry-USPEL!)
+- TRILOKACIJA: lokalni == GitHub (API-commits/main) == **86b4eb7** ✓; GitLab == 86b4eb7 (git-potrditev)
+- VERCEL: GitHub-App-avtomatski-deploy ~95-s → **griblje-museum.vercel.app 200** + **/api/qa = runQA 180/180 ok:True + qa-p179-parish-death-1913 pass:True NA PRODUKCIJI!**
+- mrliška linija: **28/39** (1886–1913) — naslednja: **P180 = 1914**
