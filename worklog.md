@@ -7060,3 +7060,10 @@ Stage Summary:
 - **P178 KONČAN (koda)**: 1912 = 77-vrstic (zap1–77) / 18-GRIBLJE / 16-hiš (h42-×2-PEZDIREC + h91-×2-ISTI-DAN!) / rast 13→18
 - mrliška linija **27/39** (1886–1912) — P179-LEAD: 1913 (s142-z1–12-ŽE-prebrani: 3-GRIBLJE — z2-h65-Marija-MILEK-4 + z4-h5-Anton-ŠTRUCELJ + z5-h47-Marija-HLOBUČAR? + z6-MARASMUS-1.×!; meja-1913/14 [?])
 - MRTVOROJEN-×3-REKORD + PORODNA-SMRT-#4 (MATI+OTROK-v-1-DNEVU-1.×!) + 2×-1.-MRLIŠKI-VPIS (h78+h79) + 4.-TRAUMA (utopitev-otroka!) + POSESTNIK-1.-POJAV + ULOMEK-#2 + 'je'-LEKCIJA + BITNAR-LAMBERT
+
+## P178 — deploy-status (2026-11-01)
+
+- PUSH: GitHub **426a52b..9ae5c26** (nov PAT `ghp_9YrV…`, api.github.com/user → 200!) + GitLab **9ae5c26** (git "Everything up-to-date" — že bil pushan; API-WAF false alarm obvoden)
+- TRILOKACIJA: lokalni == GitHub (API-commits/main) == **9ae5c26** ✓; GitLab == 9ae5c26 (git-potrditev)
+- VERCEL: GitHub-App-avtomatski-deploy ~90-s → **griblje-museum.vercel.app 200** + **/api/qa = runQA 179/179 ok:True + qa-p178-parish-death-1912 pass:True NA PRODUKCIJI!**
+- mrliška linija: **27/39** (1886–1912) — naslednja: **P179 = 1913**
