@@ -7031,3 +7031,9 @@ Stage Summary:
 - TRILOKACIJA: lokalni == GitHub (API-commits/main) == **f33fac8** ✓; GitLab-po-WAF-relaksaciji
 - VERCEL: GitHub-App-avtomatski-deploy ~75-s → **griblje-museum.vercel.app 200** + **/api/qa = runQA 178/178 ok:True + qa-p177-parish-death-1911 pass:True NA PRODUKCIJI!**
 - mrliška linija: **26/39** (1886–1911) — naslednja: P178 = 1912
+
+## README-sync (2026-11-01)
+
+- README.md posodobljen na stanje po P177: TOC-anchor + heading 'Zadnje stanje raziskave' (po P172 · 2026-10-31 → po P177 · 2026-11-01) + 3 NOVE podrobne izjave (P177 + P176 + P175 — do zdaj manjkale v sekciji!) + mrliška tabelna celica (+P177-segment, repki 'P176 = 1910' → 'P177 = 1911' ×2) + Korpus-vrstica (+P177: +13 mrliških blokov 1911 pred P176-incrementom)
+- Vercel produkcija re-verificirana: griblje-museum.vercel.app/api/qa → 200 ok:True
+- TRILOKACIJA re-verificirana pred tem pushom: lokalni == GitHub (API) == GitLab (API) == a41bbba
