@@ -34,8 +34,8 @@ EXPECTED_EXCLUDED = 8            # skupine vrstic izven Gribelj + 1891-lead + 18
 EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 10
 GRIBLJE_HOUSES = "7,18,26,27,30,32,35,37,38,42,58,71,90,91"
-VITALS_TOTAL = 1020               # POSODABLJENO P162: 837 + 16 (mrliška 1896)!
-BLOKI_04894 = 321                # POSODABLJENO P167: + 10 (mrliška 1901)!
+VITALS_TOTAL = 1032             # 1020 + 12! (P176)
+BLOKI_04894 = 333               # 321 + 12! (P176)
 P80_HOUSES = 82                  # 81 + h90! (EDINA nova p80-hiša 1890!)
 NEW_SCANS = [24, 25, 26, 27, 28]
 
@@ -187,16 +187,16 @@ def main():
     check("I6d bloki 1890: skeni 24–28 + stran == sken − 1",
           all(v["scan"] and 24 <= v["scan"] <= 28 and v["page"] == v["scan"] - 1 for v in d1890), "")
     check("I6d2 bloki 1908+ ne obstajajo (P174-lead!)",
-          not [v for v in vit if v["bookSignature"] == "04894" and (v["year"] or 0) >= 1910], "")  # POSODABLJENO P173
+          not [v for v in vit if v["bookSignature"] == "04894" and (v["year"] or 0) >= 1911], "")  # POSODABLJENO P173
     p80_script = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
     check("I6f p80-skripta pini 950 + 91 + gap-18 (P170-kaskada!)",
-          "len(vitals) == 1020" in p80_script and "len(houses) == 93" in p80_script and "len(gap) == 18" in p80_script, "")
+          "len(vitals) == 1032" in p80_script and "len(houses) == 92" in p80_script and "len(gap) == 18" in p80_script, "")
     houses_all = {v["houseNo"] for v in vit if v["houseNo"] and v["houseNo"].isdigit()}
     check("I6g korpus = 92 hiš (P159: +h98 EDINA!)", len(houses_all) == 93, str(len(houses_all)))
     # h90 = EDINA nova p80-hiša (krstni dokazi izven filtra!)
     h90_04105 = [v for v in vit if v["houseNo"] == "90" and v["bookSignature"] == "04105"]
-    check("I6h h90: krstni dokazi 1890–1919 (izven p80-filtra!) + 2 mrliški (1890 + 1902-Grabrijan-P168!)",
-          len(h90_04105) >= 6 and len([v for v in vit if v["houseNo"] == "90" and v["bookSignature"] == "04894"]) == 2, "")
+    check("I6h h90: krstni dokazi 1890–1919 (izven p80-filtra!) + 3 mrliški (1890 + 1902-Grabrijan + 1910-Kalan-učiteljev-sin-P176!)",
+          len(h90_04105) >= 6 and len([v for v in vit if v["houseNo"] == "90" and v["bookSignature"] == "04894"]) == 3, "")
 
     # ---------- I7: max-zoom forenzika ----------
     r8 = next((e for e in ent if e["row"] == 8), None)

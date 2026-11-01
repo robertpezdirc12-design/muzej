@@ -3934,6 +3934,160 @@ export const HOUSE_VITALS: HouseVital[] = [
     status: "DOCUMENTED",
   },
 
+  // ——— P176: MRLIŠKA KNJIGA 04894, LETO 1910 = 25. polno leto mrliške linije (issue #18) ———
+  // OKVIR: s126 (zap1–12; glava-'Leto 18 1910'; restart-BREZ-velikega-separatorja = 7. STIL-2. leto!)
+  //   + s127 (zap13–24) + s128 (zap25–36) + s129 (zap37–48) + s130 (zap49–54) == str. 125–129
+  //   (stran == sken − 1 — 101.–105. potrditev VIZUALNO — s126-'Stran 125'!) + MEJA 1910/11 = s130
+  //   (z1-restart-Januar-1911 INSIDE-skena = 8. STIL-mid-scan-restart-1.×! P175-lead-'[~ s131+?]' KOREKCIJA-→-s130!)
+  //   + GLAVE: s126–s129-'Leto 18 1910' + s130-'Leto 1910 / ~1911~' + s131-'Leto 1910'-kontinuiteta-1911-vrstic
+  // 1910 = 54 VRSTIC (12+12+12+12+6) / 12 GRIBLJE-vpisov / 11 hiš (h6-×2 = MATI+SIN — PADEC-vzorec-7.-leto!)
+  //   — rast 11→12; RAZPON: ¼ ure → 75 let!
+  // ★★★ z51-Ana-Novak-h16-STAROST-'¼ URE' = EKSTREMNA-STAROST-LINIJE (15 minut! 1.-'ure'-enota-v-liniji —
+  //   max-zoom-'1/4-ure'-jasno @3×!) + ★★★ z40-Vincencij-KALAN-učiteljev-sin-h90 = ŠOLSKA-HIŠA-vez
+  //   (h90-učiteljska-veriga: Klambič-1890-† → Kopitar-krstna-1890 → Kalan-1908 → Šušteršič-1914!) +
+  // ★★★ z38-Martin-PAPIČ-h31 = IŠTO-IMEŠKI-PAR-24-LETNI-LOK (Martin-Papič-28-poročna-04455-1886-№2-ISTA-HIŠA
+  //   × Straus → 1910-†-53-let! VLM-'Japič'-ZAVRJEN @8× — P-zanček-jasno!) + ★★★ z23-h35 = 10. MRLIŠKI VPIS
+  //   HIŠE = NOV REKORD LINIJE (h58-9-prekašan! 1887 + 1888-×2 + 1890 + 1894 + 1895 + 1901 + 1904 + 1905 + 1910!)
+  // ★★★ z10-Matija-KAMBIČ-h74 = VLM-'Vambič'-ZAVRJEN (K-inicial-@8× — dvojna-zanka-iniciala! h74-1907-'KAMBIČ'-vez
+  //   + 1886-'Hambeč'-koren = H/K/V-KURRENT-zmeda-RAZREŠENA!) + ★★★ z41-Alojz-MUC-h91 = VLM-'Huc'-ZAVRJEN
+  //   (M-dvojni-jez @3×! h91-MUC-hiša-vez-1890/1899 + P173-MUC×KURE-genetska!) + ★★★ z53-Marko-ŠTRAVS-h72
+  //   = VLM-'Štrancar'-'srejenin-otrok'-ZAVRJEN-×2 (Š-t-r-a-v-s @3×! h72-poročna-1921-№22-vez + oženjen-vrtnar!)
+  // ★★ z9-Marjeta-PEZDIREC-h49-STAROST-'66'-P175-lead-POTRJEN (VLM-'86'-ZAVRJEN — KURRENT-6-samo-spodnja-zanka!)
+  //   + ★★ z13-Marjeta-VÖTTER-h7-70-let = P175-lead-'h4-40'-KOREKCIJA-×2 (h7 = TOTTER/FOTTER-1888-hiša —
+  //   T/F/V-vez-33-let! lexikon-vez ×23!) + ★★ z45/z46-h6-×2 = MATI+SIN (Ana-JAKOFČIČ-42-vdova + Juri-JAKOFČIČ-
+  //   1-dan! VLM-'Jakopič'-'Jaklič'-ZAVRJEN — Kurrent-f-ascender+descender @3×! h6-1891-'Jakobčič'-vez!)
+  // ★★ z3-Mihael-PEZDIREC-h14-bolezen-'Mrtvo najden' = 2.-TRAUMA-SMRT-v-SLOVENŠČINI (cf.-1908-'Z-VRCA-PADEL'!)
+  //   + ★★ z29-'Je utonil'-Podmelnica-h9-78-let = 1.-UTONITEV-LINIJE (ne-Griblje!)
+  // ★ DUHOVNIKI: 'Lausin-Bitnar-[~]'-#16-DOMINANTA-×~26 (VLM-'Lavlin-Bitmar'/'Lamlin-Bitnar'-forme!) +
+  //   Jos.-Punc-×~12 (Punc/Rauq-zmeda-nadaljevanje-5.-leto!) + z12-'Jos.-Punc-ž.' (ž = župnik?)
+  // bolezni: Jetika ×6 + Božjast ×5 + Slabost ×4 + 'Šplatingta'-'Škrlatinka' ×4-GNEZDO-Orehovišče-h19/h3-Sep
+  //   + Naduhba-Naduha ×4 + Starost ×1 + Vodernica ×1 + Altersschwäche ×2 + Mrtvo-najden ×1 + Šanost ×1
+  // meseci: Jan3·Feb5·Mar5·Apr1·Maj6·Jun3·Jul5·Avg4·Sep6·Okt5·Nov7·Dec4 (Griblje: Jan1·Mar3·Jun1·Sep1·Okt2·Nov2·Dec2)
+  // P177 LEAD: mrliška 1911 (s130-z1–5 ŽE-prebrani: 0-GRIBLJE + z4-MRTVOROJENEC-'J.-Škaf'-BREZ-PODPISA!
+  //   + s131-z6–17: 2-GRIBLJE-ŽE-vidnih — z13-Ana-BRINEC-h14-8-let + z14-Katarina-HRUŠIČ-h34-88-let!
+  //   h34-ŠILAK-vrnitev! + s132-z18–29: 3-'Pexdipec'=PEZDIREC-×3 — z24-Ana-h10-81 + z26-Janez-h42-53 +
+  //   z27-Vido-h48-3-mes!; meja 1911/12 [?])
+  {
+    houseNo: "14",
+    bookSignature: "04894",
+    year: 1910,
+    scan: 126,
+    page: 125,
+    whatSi: "umrl Mihael PEZDIREC [~ z-DESCENDER-leksikon-P174/P175-potrjen!], vdovec in vrtnar [~ 'vrt(h)ar' — Kurrent-n/h — ISTA-forma-kot-z10 + z53!], 72 LET (14. 1., pokop 18. 1.) — Mrtvo najden [★★★ 1.-TA-BOLEZEN-v-SLOVENŠČINI + 2.-TRAUMA-SMRT-linije — cf.-1908-'Z-VRCA-PADEL-JE-SE-UBIL'! max-zoom-'M-r-t-v-o-n-a-j-d-e-n'-jasno!]; previden (.); Lausin Bitnar [~ — #16]; ★★ h14 = 6. mrliški vpis (1896 + 1897-×2 + 1904 + 1907 + 1910!) + PEZDIREC-h14-vez (poročna-1908-v17-'Dorothea-PEZDIREC-h14'!; cf.-1896-'N.-Bimec?'-X-open!) + 1 + 4 hišna (14)",
+    whatEn: "died Mihael PEZDIREC [~ the z-DESCENDER-lexicon-confirmed-P174/P175!], a widower and gardener [~ 'vrt(h)ar' — the Kurrent-n/h — the SAME-form-as-z10 + z53!], 72 YEARS (Jan 14, buried Jan 18) — found dead [★★★ the 1st SUCH-ILLNESS-IN-SLOVENE + the 2nd TRAUMA-DEATH-of-the-line — cf.-1908-'FELL-FROM-A-CART-AND-KILLED-HIMSELF'! the max-zoom-'f-o-u-n-d-d-e-a-d'-clear!]; previden (.); Lausin Bitnar [~ — #16]; ★★ h14 = the 6th death entry (1896 + the 1897-×2 + 1904 + 1907 + 1910!) + the PEZDIREC-h14-link (the marriage-1908-v17-'Dorothea-PEZDIREC-h14'!; cf.-the-1896-'N.-Bimec?'-X-open!) + the 1 + 4 house number (14)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "49",
+    bookSignature: "04894",
+    year: 1910,
+    scan: 126,
+    page: 125,
+    whatSi: "umrla Marjeta PEZDIREC [~ z-DESCENDER-leksikon!], samostka delavka [~ 'samostanska delavka' = SAMSKA delavka — 1.-TA-STAN-hiše!], 66 LET [★★★ P175-lead-'66'-100%-POTRJEN — VLM-'86'-ZAVRJEN (KURRENT-6-samo-spodnja-zanka — lekcija-z17-1909-×2!)] (1. 3., pokop 3. 3.) — Utomila [~ utrujenost/izčrpanost — 1.-TA-BOLEZEN-linije!]; previden (.); Lausin Bitnar [~]; ★ h49 = 6. mrliški vpis (1894 + 1900 + 1906 + 1907-×2 + 1910!) + BRODARIČ-hiša-4-priimka (Brodarič + Željko + Križan + PEZDIREC-lodger!; cf.-P173-'2-zaporedna-Januarja-66-let'!) + ★ z9-Marec-1. = 1909-z11-'Marec'-kontinuiteta-2.-leto + 4 + 9 hišna (49)",
+    whatEn: "died Marjeta PEZDIREC [~ the z-DESCENDER-lexicon!], a single working-woman [~ 'samostka delavka' = an UNMARRIED worker — the 1st SUCH-STATUS-of-the-house!], 66 YEARS [★★★ the P175-lead-'66'-100%-CONFIRMED — the VLM-'86'-REJECTED (the KURRENT-6-only-the-lower-loop — the z17-1909-lesson-×2!)] (Mar 1, buried Mar 3) — Utomila [~ exhaustion — the 1st SUCH-ILLNESS-of-the-line!]; previden (.); Lausin Bitnar [~]; ★ h49 = the 6th death entry (1894 + 1900 + 1906 + the 1907-×2 + 1910!) + the BRODARIČ-house-4-surnames (Brodarič + Željko + Križan + the PEZDIREC-lodger!; cf.-P173-'2-consecutive-Januaries-66-years'!) + ★ the z9-March-1 = the 1909-z11-'Marec'-continuity-2nd-year + the 4 + 9 house number (49)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "74",
+    bookSignature: "04894",
+    year: 1910,
+    scan: 126,
+    page: 125,
+    whatSi: "umrl Matija KAMBIČ [★★★ VLM-'Vambič'-ZAVRJEN — ULTRA-ZOOM-@8×: K-inicial = DVOJNA-zanka-iniciala (ista-forma-kot-'Kralj'-z23!) — h74-1907-'KAMBIČ'-vez + 1886-'Hambeč'-koren = H/K/V-KURRENT-zmeda-RAZREŠENA! P175-lead-'Hanžič?'-ZAVRJEN!], ženjen vrtnar [~ VLM-'možen' — 'ženjen'-jasno!], 69 LET (17. 3., pokop 19. 3.) — Vodernica [~ vodenica = DROPSY — lexikon-vez (1888-h7 + 1890-h16-'Vodenica' + 1902-'Vodernica'!)]; previden (1); Lausin Bitnar [~]; ★★ h74 = 3. mrliški vpis (1886 + 1907 + 1910!) + KAMBIČ-vez-×3 (1886-'Hambeč' + 1907-Marija-DRAGOŠ-omožena-KAMBIČ + 1910-Matija!) + ★★ 1886-'h74-1.'-VPIS-vez (krstni-1886-isti-mesec!) + 7 + 4 hišna (74)",
+    whatEn: "died Matija KAMBIČ [★★★ the VLM-'Vambič'-REJECTED — the ULTRA-ZOOM-@8×: the K-initial = the DOUBLE-loop-initial (the-SAME-form-as-'Kralj'-z23!) — the h74-1907-'KAMBIČ'-link + the 1886-'Hambeč'-root = the H/K/V-KURRENT-confusion-RESOLVED! the P175-lead-'Hanžič?'-REJECTED!], a married gardener [~ the VLM-'možen' — 'ženjen'-clear!], 69 YEARS (Mar 17, buried Mar 19) — Vodernica [~ dropsy — the lexicon-link (the-1888-h7 + the-1890-h16-'Vodenica' + the-1902-'Vodernica'!)]; previden (1); Lausin Bitnar [~]; ★★ h74 = the 3rd death entry (1886 + 1907 + 1910!) + the KAMBIČ-link-×3 (the-1886-'Hambeč' + the-1907-Marija-DRAGOŠ-married-KAMBIČ + the-1910-Matija!) + ★★ the 1886-'h74-1st'-ENTRY-link (the-1886-baptism-the-SAME-month!) + the 7 + 4 house number (74)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "7",
+    bookSignature: "04894",
+    year: 1910,
+    scan: 127,
+    page: 126,
+    whatSi: "umrla Marjeta VÖTTER [~ 'Vöttler'-VLM — lexikon-vez ×23!], vdova vrtnarica [~ VLM-'vnfhouca' — 'vrtnarica'-jasno!], 70 LET [★★★ P175-lead-'40'-KOREKCIJA — max-zoom-'70'-jasno @3×!] (25. 3., pokop 26. 3.) — Altersschwäche [★★ NEMŠČINA-v-boleznih — 2.×-v-3-mesecih (cf.-z23!) = 1902-vzorec-nadaljevanje!]; previden (1); Jos. Punc [~ Punc/Rauq-zmeda!]; ★★ h7 = 3. mrliški vpis (1888 + 1890 + 1910!) + ★★ TOTTER/FOTTER→VÖTTER-vez (1888-Jožef-TOTTER-5-let-h7 + poročna-1921-№27-FOTTER-ženin-h7 + 1910-VÖTTER = ISTA-familija-T/F/V-33-let!) + ★ P175-lead-'h4'-KOREKCIJA (max-zoom-'7'-jasno — črtica-nad-!) + 7-ENOTNA-hišna (7)",
+    whatEn: "died Marjeta VÖTTER [~ the VLM-'Vöttler' — the lexicon-link ×23!], a widow gardener-woman [~ the VLM-'vnfhouca' — 'vrtnarica'-clear!], 70 YEARS [★★★ the P175-lead-'40'-CORRECTION — the max-zoom-'70'-clear @3×!] (Mar 25, buried Mar 26) — Altersschwäche [★★ GERMAN-in-the-illnesses — the 2nd-×-in-3-months (cf.-z23!) = the 1902-pattern-continuation!]; previden (1); Jos. Punc [~ the Punc/Rauq-confusion!]; ★★ h7 = the 3rd death entry (1888 + 1890 + 1910!) + ★★ the TOTTER/FOTTER→VÖTTER-link (the-1888-Jožef-TOTTER-5-years-h7 + the marriage-1921-№27-FOTTER-groom-h7 + the-1910-VÖTTER = the-SAME-family-T/F/V-33-years!) + ★ the P175-lead-'h4'-CORRECTION (the max-zoom-'7'-clear — the crossbar-above-!) + the 7-SINGLE-digit-house (7)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "35",
+    bookSignature: "04894",
+    year: 1910,
+    scan: 127,
+    page: 126,
+    whatSi: "umrl Alojzij KRALJ, ¼ zemljakov sin, 25 DNI (26. 6., pokop 27. 6.) — Altersschwäche [NEMŠČINA-×2-v-3-mesecih!]; previden (.) [dojenček!]; Lausin Bitnar [~]; ★★★ h35 = 10. MRLIŠKI VPIS HIŠE = NOV REKORD LINIJE (h58-9-IZENAČUJE→PREKAŠA! 1887 + 1888-×2 + 1890 + 1894 + 1895 + 1901 + 1904 + 1905 + 1910!) + ★ KRIŽAN-hiša→KRALJ (cf.-h17-KRALJ-vez-1892/1909/1922!) + ★★ Altersschwäche-×2-leta-1910 (z13-Marec + z23-Junij — dojenček!) + 3 + 5 hišna (35)",
+    whatEn: "died Alojzij KRALJ, a quarter-smallholder's son, 25 DAYS (Jun 26, buried Jun 27) — Altersschwäche [the GERMAN-×2-in-3-months!]; previden (.) [an-infant!]; Lausin Bitnar [~]; ★★★ h35 = the 10th DEATH ENTRY OF THE HOUSE = THE NEW LINE RECORD (the h58-9-EQUALS→OUTRUNS! 1887 + the 1888-×2 + 1890 + 1894 + 1895 + 1901 + 1904 + 1905 + 1910!) + ★ the KRIŽAN-house→KRALJ (cf.-the-h17-KRALJ-link-1892/1909/1922!) + ★★ the Altersschwäche-×2-of-1910 (the z13-March + the z23-June — an-infant!) + the 3 + 5 house number (35)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "31",
+    bookSignature: "04894",
+    year: 1910,
+    scan: 129,
+    page: 128,
+    whatSi: "umrl Martin PAPIČ [★★★ VLM-'Japič'-ZAVRJEN — ULTRA-ZOOM-@8×: P-zanček-jasno (ista-forma-kot-'Pezdirec'-z3/z9!) — lexikon-h31-PAPIČ-vez!], oženjen ⅛ zemljak [★★★ 1.-⅛-ULOMEK-LINIJE (½/¼/⅛-nov-nivo! VLM-'18 umrlat' ZAVRJEN — '⅛ zemljak'-jasno!)], 53 LET (24. 9., pokop 29. 9.) — Jetika; previden (1); Lausin Bitnar [~]; ★★★ IŠTO-IMEŠKI-PAR-24-LETNI-LOK: Martin-Papič-28-½-Gütler-poročna-04455-1886-№2-GRIBLJE-31 (× Margareth-STRAUS-21!) → Martin-Papič-53-†-1910-ISTA-HIŠA = ženin-1886-je-UMRL-v-svoji-hiši-24-let-pozneje (VPIS-2-1886-vez!) + ★ h31 = 6. mrliški vpis (1886 + 1896 + 1904 + 1905 + 1907 + 1910!) + ★★ IŠTO-IME-×3-linije (h6-1891-Matija-×2 + h31-1886/1910-Martin!) + 3 + 1 hišna (31)",
+    whatEn: "died Martin PAPIČ [★★★ the VLM-'Japič'-REJECTED — the ULTRA-ZOOM-@8×: the P-hook-clear (the-SAME-form-as-'Pezdirec'-z3/z9!) — the lexicon-h31-PAPIČ-link!], a married ⅛ smallholder [★★★ the 1st-⅛-FRACTION-OF-THE-LINE (½/¼/⅛-a-new-level! the VLM-'18 umrlat'-REJECTED — '⅛ zemljak'-clear!)], 53 YEARS (Sep 24, buried Sep 29) — Jetika; previden (1); Lausin Bitnar [~]; ★★★ the NAMESAKE-PAIR-24-YEAR-ARC: Martin-Papič-28-½-Gütler-marriage-04455-1886-№2-GRIBLJE-31 (× Margareth-STRAUS-21!) → Martin-Papič-53-†-1910-the-SAME-HOUSE = the-1886-groom-DIED-in-his-own-house-24-years-later (the-ENTRY-2-1886-link!) + ★ h31 = the 6th death entry (1886 + 1896 + 1904 + 1905 + 1907 + 1910!) + ★★ the NAMESAKE-×3-of-the-line (the-h6-1891-Matija-×2 + the-h31-1886/1910-Martin!) + the 3 + 1 house number (31)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "90",
+    bookSignature: "04894",
+    year: 1910,
+    scan: 129,
+    page: 128,
+    whatSi: "umrl Vincencij KALAN [★★ VLM-'Halam'-ZAVRJEN — lexikon-KALAN ×34 (h90-učitelj-1908!)!], učiteljev sin [★★★ VLM-'nežnjen sin'-ZAVRJEN — crop-×2.2-'učiteljev sin'-jasno!], 6 MESECEV (12. 10., pokop 13. 10.) — Božjast; previden (.) [dojenček!]; Lausin Bitnar [~]; ★★★ h90 = 3. mrliški vpis (1890-Klambič-UČITELJ-† + 1902-Grabrijan + 1910!) + ★★★ ŠOLSKA-HIŠA-učiteljska-veriga-100% (Klambič-†-1890-20½ → Kopitar-oče-krstna-1890 → Vetrovnik-1898 → KALAN-1908 → Šušteršič-1914 — učiteljev-sin-†-na-šolski-hiši!) + ★ Vincencij-ime-vez (cf.-P111-lead-'Karol-Feliks'-h45-1917-era-vincenzi!) + 9 + 0 hišna (90)",
+    whatEn: "died Vincencij KALAN [★★ the VLM-'Halam'-REJECTED — the lexicon-KALAN ×34 (the h90-teacher-1908!)!], a teacher's son [★★★ the VLM-'nežnjen sin'-REJECTED — the crop-×2.2-'učiteljev sin'-clear!], 6 MONTHS (Oct 12, buried Oct 13) — Božjast; previden (.) [an-infant!]; Lausin Bitnar [~]; ★★★ h90 = the 3rd death entry (the-1890-Klambič-TEACHER-† + the-1902-Grabrijan + 1910!) + ★★★ the SCHOOLHOUSE-teacher-chain-100% (the-Klambič-†-1890-20½ → the-Kopitar-father-baptism-1890 → the-Vetrovnik-1898 → the-KALAN-1908 → the-Šušteršič-1914 — a-teacher's-son-†-at-the-school-house!) + ★ the Vincencij-name-link (cf.-the-P111-lead-'Karol-Feliks'-h45-1917-era-vincenzi!) + the 9 + 0 house number (90)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "91",
+    bookSignature: "04894",
+    year: 1910,
+    scan: 129,
+    page: 128,
+    whatSi: "umrl Alojz MUC [★★★ VLM-'Huc'-ZAVRJEN — ULTRA-ZOOM-@3×: M-dvojni-jez-jasno (ne-H-enojni!) — h91-MUC-hiša-vez!], ¼ zemljakov sin, 3 MESECE (14. 10., pokop 19. 10.) — Božjast; previden (.) [dojenček!]; Lausin Bitnar [~]; ★★ h91 = 5. mrliški vpis (1890-Marjeta + 1899-Janez + 1904 + 1907 + 1910!) + ★★★ MUC-hiša-kontinuiteta (1890-Marjeta-Muc-53-vdova + 1899-Janez-Muc-3-bajtarjev-sin + 1910-Alojz-Muc-3-mes = 3-generacije-dojenčkov-odraslih!) + ★ P173-'Marija-MUC-h17'-vez-1909 (MUC-mreža-2-leti-zapored!) + 9 + 1 hišna (91)",
+    whatEn: "died Alojz MUC [★★★ the VLM-'Huc'-REJECTED — the ULTRA-ZOOM-@3×: the M-double-hump-clear (not-the-H-single!) — the h91-MUC-house-link!], a quarter-smallholder's son, 3 MONTHS (Oct 14, buried Oct 19) — Božjast; previden (.) [an-infant!]; Lausin Bitnar [~]; ★★ h91 = the 5th death entry (the-1890-Marjeta + the-1899-Janez + 1904 + 1907 + 1910!) + ★★★ the MUC-house-continuity (the-1890-Marjeta-Muc-53-widow + the-1899-Janez-Muc-3-cottager's-son + the-1910-Alojz-Muc-3-months = 3-generations-infants-adults!) + ★ the P173-'Marija-MUC-h17'-link-1909 (the MUC-network-2-consecutive-years!) + the 9 + 1 house number (91)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "6",
+    bookSignature: "04894",
+    year: 1910,
+    scan: 129,
+    page: 128,
+    whatSi: "umrla Ana JAKOFČIČ [★★ VLM-'Jakopič'-ZAVRJEN — crop-×2.2: f-ascender+descender-jasno (cf.-P132-'JAKOFČIČ/JAKOBČIČ-dve-pisavi'-leksikon + h13-cluster + 1909-z16-'Jakfjič'!)], vdova vrtnarica [VLM-'oživljenica' ZAVRJEN — 'vrtnarica'-jasno!], 42 LET (15. 11., pokop 17. 11.) — Šanost [★★ X-ANOMALIJA-BOLEZNI (nerazrešena — 'Slanost'? 'Srčnost'? [?]— cf.-1909-'Šanost'-X-ni-bil!)]; previden (1); Jos. Punc [~]; ★★ h6-×2-v-1910 (z45-mati + z46-sin = MATI+SIN — PADEC-vzorec-7.-leto!) + ★★ h6 = 3.+4. mrliški vpis (1891-×2-IŠTO-IMEŠKI-PAR-Matija + 1910-×2!) + ★ JAKOFČIČ/JAKOBČIČ-koren-h6 (1891-'Jakobčič' + 1910-'Jakofčič' — dve-pisavi-iste-hiše!) + 6-ENOTNA-hišna (6)",
+    whatEn: "died Ana JAKOFČIČ [★★ the VLM-'Jakopič'-REJECTED — the crop-×2.2: the f-ascender+descender-clear (cf.-the-P132-'JAKOFČIČ/JAKOBČIČ-two-spellings'-lexicon + the h13-cluster + the-1909-z16-'Jakfjič'!)], a widow gardener-woman [the VLM-'oživljenica'-REJECTED — 'vrtnarica'-clear!], 42 YEARS (Nov 15, buried Nov 17) — Šanost [★★ an-X-ANOMALY-ILLNESS (unresolved — 'Slanost'? 'Srčnost'? [?])]; previden (1); Jos. Punc [~]; ★★ the h6-×2-in-1910 (the z45-mother + the z46-son = MOTHER+SON — the DROP-pattern-7th-YEAR!) + ★★ h6 = the 3rd+4th death entries (the-1891-×2-NAMESAKE-PAIR-Matija + the-1910-×2!) + ★ the JAKOFČIČ/JAKOBČIČ-root-h6 (the-1891-'Jakobčič' + the-1910-'Jakofčič' — two-spellings-of-the-SAME-house!) + the 6-SINGLE-digit-house (6)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "6",
+    bookSignature: "04894",
+    year: 1910,
+    scan: 129,
+    page: 128,
+    whatSi: "umrl Juri JAKOFČIČ [★★ ISTA-pisava-kot-mati-z45 ('Juri' = Jurij! VLM-'Jaklič'-ZAVRJEN)], ¼ zemljakov sin, 1 DAN (19. 11., pokop 21. 11.) — Slabohotnost [~ VLM-'Slabohot' — 'Slabohotnost'/'Slabotnost'? [?]]; previden (.) [dojenček!]; Lausin Bitnar [~]; ★★★ h6-×2-2.-del (z45-Ana-42-†-15. 11. + z46-Juri-1-dan-†-19. 11. = MATI+SIN-v-4-DNEH — 4.-družinski-dvojni-smrti-par-linije! cf.-1890-h30-Milek-dvojčki!) + ★ h6 = 4. mrliški vpis (1891-×2 + 1910-×2!) + 6-ENOTNA-hišna (6)",
+    whatEn: "died Juri JAKOFČIČ [★★ the SAME-spelling-as-the-mother-z45 ('Juri' = Jurij! the VLM-'Jaklič'-REJECTED)], a quarter-smallholder's son, 1 DAY (Nov 19, buried Nov 21) — Slabohotnost [~ the VLM-'Slabohot' — 'Slabohotnost'/'Slabotnost'? [?]]; previden (.) [an-infant!]; Lausin Bitnar [~]; ★★★ the h6-×2-part-2 (the z45-Ana-42-†-Nov-15 + the z46-Juri-1-day-†-Nov-19 = MOTHER+SON-WITHIN-4-DAYS — the 4th family-double-death-pair-of-the-line! cf.-the-1890-h30-Milek-twins!) + ★ h6 = the 4th death entry (the-1891-×2 + the-1910-×2!) + the 6-SINGLE-digit-house (6)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "16",
+    bookSignature: "04894",
+    year: 1910,
+    scan: 130,
+    page: 129,
+    whatSi: "umrla Ana NOVAK, bajtarjeva hči, ¼ URE [★★★ EKSTREMNA-STAROST-LINIJE = 15 MINUT! 1.-'ure'-ENOTA-v-liniji (vse-do-zdaj: ½-dne-minimum!) — max-zoom-'1/4-ure'-jasno @3×!] (11. 12., pokop 13. 12.) — Slabost; previden (.) [dojenček!]; Lausin Bitnar [~]; ★★ h16 = 6. mrliški vpis (1886 + 1891 + 1892 + 1897 + 1902 + 1910!) + FILAK-hiša→NOVAK (cf.-1886-poročna-№17-Ana-Filak-h16 × Georg-Tomec!) + ★★ DECEMBER-band-začetek-z51 (VLM-izpuščil — sekvencna-forenzika-11. 12.!) + 1 + 6 hišna (16)",
+    whatEn: "died Ana NOVAK, a cottager's daughter, ¼ OF AN HOUR [★★★ THE EXTREME AGE OF THE LINE = 15 MINUTES! the 1st-'hour'-UNIT-in-the-line (everything-before: the ½-day-minimum!) — the max-zoom-'1/4-ure'-clear @3×!] (Dec 11, buried Dec 13) — Slabost; previden (.) [an-infant!]; Lausin Bitnar [~]; ★★ h16 = the 6th death entry (1886 + 1891 + 1892 + 1897 + 1902 + 1910!) + the FILAK-house→NOVAK (cf.-the-1886-marriage-№17-Ana-Filak-h16 × Georg-Tomec!) + ★★ the DECEMBER-band-start-at-z51 (the VLM-missed — the sequence-forensics-Dec-11!) + the 1 + 6 house number (16)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "72",
+    bookSignature: "04894",
+    year: 1910,
+    scan: 130,
+    page: 129,
+    whatSi: "umrl Marko ŠTRAVS [★★ VLM-'Štrancar'-ZAVRJEN — crop-×3.0-'Š-t-r-a-v-s'-jasno (cf.-h72-poročna-1921-№22-'ŠTRAVS'-ženin! lexikon-Štraus-×70/Štravs-×35!)], oženjen vrtnar [★★ VLM-'srejenin otrok'-ZAVRJEN-×2 — 'oženjen vrtnar'-jasno @3×!], 75 LET (16. 12., pokop 17. 12.) — Starost [1.-TA-BOLEZEN-kot-VZROK-linije ('starost' sama!)]; previden (1); Lausin Bitnar [~]; ★★ h72 = 8. mrliški vpis (1888-×2 + 1894 + 1899 + 1902-×2 + 1903 + 1910!) + ★★★ ŠTRAVS-hiša-kontinuiteta (1888-Marija-1-dan + 1895-Matija-85-h71-mreža + 1910-Marko-75 = STRAUS/ŠTRAVS-vez-×8! poročna-1921-№22!) + ★ 75-let = 2.-NAJSTAREJŠI-1910 (po-z51-¼-ure-ekstrem!) + 7 + 2 hišna (72)",
+    whatEn: "died Marko ŠTRAVS [★★ the VLM-'Štrancar'-REJECTED — the crop-×3.0-'Š-t-r-a-v-s'-clear (cf.-the-h72-marriage-1921-№22-'ŠTRAVS'-groom! the lexicon-Štraus-×70/Štravs-×35!)], a married gardener [★★ the VLM-'srejenin otrok'-REJECTED-×2 — 'oženjen vrtnar'-clear @3×!], 75 YEARS (Dec 16, buried Dec 17) — Starost [the 1st SUCH-ILLNESS-AS-THE-CAUSE-of-the-line ('old age' itself!)]; previden (1); Lausin Bitnar [~]; ★★ h72 = the 8th death entry (the-1888-×2 + 1894 + 1899 + the-1902-×2 + 1903 + 1910!) + ★★★ the ŠTRAVS-house-continuity (the-1888-Marija-1-day + the-1895-Matija-85-h71-network + the-1910-Marko-75 = the STRAUS/ŠTRAVS-link-×8! the marriage-1921-№22!) + ★ the 75-years = the 2nd-OLDEST-1910 (after-the-z51-¼-hour-extreme!) + the 7 + 2 house number (72)",
+    status: "DOCUMENTED",
+  },
+
   // ——— P80 razširitev: POROČNA KNJIGA 04455 1873–1922 — okvir 1886 (skeni 61–65 == Pag. 60–64, vpisi 1–24; Pag. = sken − 1 v razponu 61–66) ———
   // P115 (faza 2) RE-READ: 8 blokov popravljenih na podlagi max-zoom branja (h36→56, h63→65, h15→16, h25→Priložje
   // + priimki Pegdirec/Klepec/Požek/Tomec/Straus/Križan) — evidence: research/issue17/parish-marriage-1886.json
