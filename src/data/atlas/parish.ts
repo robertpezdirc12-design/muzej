@@ -4428,6 +4428,167 @@ export const HOUSE_VITALS: HouseVital[] = [
     status: "DOCUMENTED",
   },
 
+  // ——— P179 razširitev: MRLIŠKA KNJIGA 04894 — leto 1913 (skeni 142–146; 58 vpisov z1–58 / 14 GRIBLJE / 13 hiš; h59-×2-JAKLIČ-oče+hči-v-2-mesecih!; meja 1913/14 = s147-glava-'18 1914' + restart-58→1 = 20.-POTRDITEV — STIL-7-2.×-glava+restart-brez-velikega-separatorja!; dokaz: research/issue17/parish-death-1913.json) ———
+  // ★★★ PEZDIREC-1913 (z51-h51-Janez-74-'Penčiče'-VLM-ZAVRJEN-@×6.0 — P-e-z(x-KRIŽEC+DESCENDER!)-d-i-r-e-c = LEKSIKON-3.×-variante!; cf. ×4-1911 + ×4-1912!) + ★★★ h59-×2-1913 = JAKLIČ-oče+hči (z35-Janez-28-ženjen-kovač-avg + z47-Marija-5-mes-bajtarjeva-hči-okt — 2-MESECI!) + ★★★ h92 = 1. MRLIŠKI VPIS KADARKOLI = 34.-PT-vez-kandidat (Matija-ŠTRAVS-89 — NAJVIŠJA-hiša-mrliške-linije!)
+  // ★★★ 1.-LJUDSKI-UČITELJ-STAN-LINIJE (z19-h90-g.-Frane-HALAR-56-'ženjen ljudski učitelj' — VLM-'Ivana'-IME-ZAVRJEN-@×4.0!) + ★★★ 1.-KOVAČ-STAN (z35-'ženjen kovač' — VLM-stan-POPOLNOMA-PREGLEDAL!) + ★ 1.-'delavec-in-vdovec'-FORMULA (z48-h92!) + ★★★ ANZELM-POLÁK-'Koop.' = NOVI-DUHOVNIK-LINIJE (kooperator! — podpis-'Anzelm Polák'+Koop.-@×4.0; s145–s146-4×-Griblje-DOMINANTA!) + 'Jos. Pomp+ž./'-podpis = Jos. Rumpf [~ 'Pomp/Pumf'-zmeda-nadaljevanje]
+  // ★ VLM-VAS-NI-ZANESLJIVA: 3×-'Grišiče'-@crop-ZAVRJENE-EXCLUDE (z14-h1-Katarina-Jodlja-74-MODRA-MARGINALIJA! + z28-h3-Matija-LAPRIČ-'Griblje'-VLM-NAPAKA! + z49-h1-Anton-Judnič-'Griblje'-VLM-NAPAKA! — P177-VAS-×3-vzorec-2.×) → 14-GRIBLJE-ne-17! + h1-×2-hipoteza-PAVŠA (Griblje-h1-Žefko + Grišiče-h1-Judnič = 2-RAZLIČNI-vasi!)
+  // ★ korekcije-×21-forenzika (traki-×2.2-×19 + celice-×3.0/4.0/5.0/6.0-~×20 + PODW-podpisi-×5): MILEK-'Hlebič'-ZAVRJEN + ŠILAK-'Viljak'-h34-leksikon-4.× + KRAMBIČ-'Agota'-VLM-IME-HALUCINACIJA + JAKLIČ-'Jakhlič' + ŽEFKO-[~] + ŠTRAVS-'Špavc'-leksikon + PEZDIREC-'Penčiče' + MRAMEŽIČ-'Mramorič'-[~]-ž-descender + LAPRIČ-'Lapajne'-[~] + HALAR-'Ivana' + FRANE-'Franco' + Kašelj-'kavrg' + Božjast-'Zavrat'-žj-ligatura-×3 + Slabost-'Hlabost'-ſl-LIGATURA + Jetika-'jediha' + s144-zap-25-'26'-dvojna-VLM + z35-smrt-27-pokop-28 (VLM-24/26-DVOJNI-MISREAD!) + starost-56-'36'-zmeda + 13-pokopov-iz-vas-celic + Polák-diakritik + 'Koop.'-razrešen
+  // bolezni Griblje: Jetika ×6-DOMINANTA + Božjast ×3 + Starost ×2 + Slabost/Kašelj/Naduha ×1; meseci: Jan-×3-DOMINANTA (1.-JANUARSKA-DOMINANTA-LINIJE!) + Apr/Maj/Jul/Sep-×2/Okt-×2/Nov-×2 (Feb/Mar/Jun/Dec-0!); ½-zemljatov-sin-×4 (z24/z30/z39 + z4-'½ zemlj. sin'-varianta!) + 'ostarena'-×2-[~]
+  // P180 LEAD: mrliška 1914 (s147-z1–12 ŽE-prebrani: 3-GRIBLJE — z1-h8-Matija-VOTLOVEC-9½ + z7-h40-Marija-PEKOVEC-2½ + z8-h34-Josefa-FINK-2-SHILAK-hiša-4.-ZAPOREDNO-LETO! + z9/z10/z12-'[~]Ho?er/Ojster'-podpisi-[?]-NOVI?; meja 1914/15 [?])
+  {
+    houseNo: "65",
+    bookSignature: "04894",
+    year: 1913,
+    scan: 142,
+    page: 141,
+    whatSi: "umrla Marija MILEK [★★★ VLM-'Hlebič'-ZAVRJEN-@×4.0 — M-ligatura-jasna; P178-lead-'MILEK'-potrjen!], ½ zemljiškova hči [~], 4 LETA (11. 1., pokop 13. 1.) — Jetika [~ VLM-'jediha'-ZAVRJEN]; previden (.); Lambert Bitnar; ★ h65 = 9. mrliški vpis (8-pred: 1887–1907!) + MILEK-vez (cf. h30-poročni-1889 + 1912-Peter-h29!) + 1. GRIBLJE-1913 + 6 + 5 hišna (65)",
+    whatEn: "died Marija MILEK [★★★ the VLM-'Hlebič'-REJECTED-@×4.0 — the M-ligature-clear; the P178-lead-'MILEK'-confirmed!], a half-tenant's daughter [~], 4 YEARS (Jan 11, buried Jan 13) — Jetika [~ the VLM-'jediha'-REJECTED]; previden (.); Lambert Bitnar; ★ h65 = the 9th death entry (8-prior: 1887–1907!) + the MILEK-link (cf. h30-marriage-1889 + 1912-Peter-h29!) + the 1st GRIBLJE-1913 + the 6 + 5 house number (65)",
+    status: "DOCUMENTED",
+  },
+
+  {
+    houseNo: "5",
+    bookSignature: "04894",
+    year: 1913,
+    scan: 142,
+    page: 141,
+    whatSi: "umrl Anton ŠTRUCELJ [P178-lead-'ŠTRUCELJ'-potrjen-@×4.0 — descender-j!], ½ zemlj. sin, 82 DNI (15. 1., pokop 16. 1.) — Slabost [~ VLM-'Hlabost' — ſl-LIGATURA-ZAVRJEN!]; previden (.); Lambert Bitnar; ★ h5 = 4. mrliški vpis (1886 + 1889 + 1908!) + 2. GRIBLJE-1913 + NAJNIŽJA-hiša-z-VPISOM-1913 + 5 hišna (5)",
+    whatEn: "died Anton ŠTRUCELJ [the P178-lead-'ŠTRUCELJ'-confirmed-@×4.0 — the descender-j!], a half-tenant's son, 82 DAYS (Jan 15, buried Jan 16) — Slabost [~ the VLM-'Hlabost' — the ſl-LIGATURE-REJECTED!]; previden (.); Lambert Bitnar; ★ h5 = the 4th death entry (1886 + 1889 + 1908!) + the 2nd GRIBLJE-1913 + the LOWEST house WITH-an-ENTRY-1913 + the 5 house number (5)",
+    status: "DOCUMENTED",
+  },
+
+  {
+    houseNo: "47",
+    bookSignature: "04894",
+    year: 1913,
+    scan: 142,
+    page: 141,
+    whatSi: "umrla Marija HLOBUČAR [★★ K-LIGATURA-LEKSIKON-2.× (cf. P177-'Vlobučar'!) — P178-lead-'HLOBUČAR?'-potrjen-@×4.0!], ostarena najharica [~ 'osirotena?'-zmeda], 51 LET (24. 1., pokop 26. 1.) — Jetika; previden (1); Lambert Bitnar; ★ h47 = 3. mrliški vpis (1888 + 1900!) + HLOBUČAR-1.-VPIS! + 3. GRIBLJE-1913 + 4 + 7 hišna (47)",
+    whatEn: "died Marija HLOBUČAR [★★ the K-LIGATURE-LEKSIKON-2.× (cf. the P177-'Vlobučar'!) — the P178-lead-'HLOBUČAR?'-confirmed-@×4.0!], an enfeebled day-laborer [~ the 'osirotena?'-confusion], 51 YEARS (Jan 24, buried Jan 26) — Jetika; previden (1); Lambert Bitnar; ★ h47 = the 3rd death entry (1888 + 1900!) + the HLOBUČAR-1st-ENTRY! + the 3rd GRIBLJE-1913 + the 4 + 7 house number (47)",
+    status: "DOCUMENTED",
+  },
+
+  {
+    houseNo: "90",
+    bookSignature: "04894",
+    year: 1913,
+    scan: 143,
+    page: 142,
+    whatSi: "umrl g. Frane HALAR [★★★ VLM-'Ivana-Halar'-IME-ZAVRJEN-@×4.0 — 'g.'-pred-iménom!], ženjen ljudski učitelj [★★★ 1.-LJUDSKI-UČITELJ-STAN-LINIJE! — crop-'xčenjen ljudski učitelj'], 56 LET [~ VLM-'36'-zmeda — ʒ-KURRENT] (16. 4., pokop 18. 4.) — Jetika; previden (1); Jos. Rauy [~ 'Rauq /?'-VLM]; ★★★ h90 = 4. mrliški vpis (1890 + 1902 + 1910!) + 1.-UČITELJ-V-GRIBLJU-KADARKOLI + 4. GRIBLJE-1913 + 9 + 0 hišna (90)",
+    whatEn: "died g. Frane HALAR [★★★ the VLM-'Ivana-Halar'-NAME-REJECTED-@×4.0 — the 'g.'-before-the-name!], a married folk-teacher [★★★ the 1st FOLK-TEACHER-STATUS-OF-THE-LINE! — the crop-'ženjen ljudski učitelj'], 56 YEARS [~ the VLM-'36'-confusion — the ʒ-KURRENT] (Apr 16, buried Apr 18) — Jetika; previden (1); Jos. Rauy [~ the 'Rauq /?'-VLM]; ★★★ h90 = the 4th death entry (1890 + 1902 + 1910!) + the 1st-TEACHER-IN-GRIBLJE-EVER + the 4th GRIBLJE-1913 + the 9 + 0 house number (90)",
+    status: "DOCUMENTED",
+  },
+
+  {
+    houseNo: "49",
+    bookSignature: "04894",
+    year: 1913,
+    scan: 143,
+    page: 142,
+    whatSi: "umrl Frane BRODARIČ [~ VLM-'Franco'-ZAVRJEN-'Frane'-@×4.0!], ½ zemljatov sin, 1½ LETA (27. 5., pokop 28. 5.) — Jetika; previden (1); Lambert Bitnar; ★ h49 = 7. mrliški vpis (1894–1910-×6!) + BRODARIČ-1.-VPIS-[?] + 5. GRIBLJE-1913 + 4 + 9 hišna (49)",
+    whatEn: "died Frane BRODARIČ [~ the VLM-'Franco'-REJECTED-'Frane'-@×4.0!], a half-tenant's son, 1½ YEARS (May 27, buried May 28) — Jetika; previden (1); Lambert Bitnar; ★ h49 = the 7th death entry (1894–1910-×6!) + the BRODARIČ-1st-ENTRY-[?] + the 5th GRIBLJE-1913 + the 4 + 9 house number (49)",
+    status: "DOCUMENTED",
+  },
+
+  {
+    houseNo: "34",
+    bookSignature: "04894",
+    year: 1913,
+    scan: 144,
+    page: 143,
+    whatSi: "umrl Anton ŠILAK [★★★ h34-LEKSIKON-4.× ('Tlak'-P178-zmeda + VLM-'Viljak'-ZAVRJEN-@×5.0 — Ṽ+caron = Š!); cf. 1911-HRUŠIČ + 1912-Janez-79], ½ zemljatov sin, 1 LETO (8. 7., pokop 9. 7.) — Božjast; previden (.); Lambert Bitnar; ★★★ h34 = 9. mrliški vpis (3.-ZAPOREDNO-LETO: 1911 + 1912 + 1913 = 1.-V-LINIJI!) + ŠILAK-leksikon-4.× + 6. GRIBLJE-1913 + 3 + 4 hišna (34)",
+    whatEn: "died Anton ŠILAK [★★★ the h34-LEKSIKON-4.× (the 'Tlak'-P178-confusion + the VLM-'Viljak'-REJECTED-@×5.0 — the Ṽ+caron = Š!); cf. 1911-HRUŠIČ + 1912-Janez-79], a half-tenant's son, 1 YEAR (Jul 8, buried Jul 9) — Božjast; previden (.); Lambert Bitnar; ★★★ h34 = the 9th death entry (the 3rd-CONSECUTIVE-YEAR: 1911 + 1912 + 1913 = the 1st-IN-THE-LINE!) + the ŠILAK-leksikon-4.× + the 6th GRIBLJE-1913 + the 3 + 4 house number (34)",
+    status: "DOCUMENTED",
+  },
+
+  {
+    houseNo: "12",
+    bookSignature: "04894",
+    year: 1913,
+    scan: 144,
+    page: 143,
+    whatSi: "umrla Ana DRAGOŠ, vdova najharica, 81 LET (6. 8., pokop 8. 8.) — Starost; previden (1); Jos. Rauy; ★ h12 = 4. mrliški vpis (1895 + 1899 + 1903!) + DRAGOŠ-1.-VPIS-[?] + 7. GRIBLJE-1913 + 1 + 2 hišna (12)",
+    whatEn: "died Ana DRAGOŠ, a widow day-laborer, 81 YEARS (Aug 6, buried Aug 8) — Starost; previden (1); Jos. Rauy; ★ h12 = the 4th death entry (1895 + 1899 + 1903!) + the DRAGOŠ-1st-ENTRY-[?] + the 7th GRIBLJE-1913 + the 1 + 2 house number (12)",
+    status: "DOCUMENTED",
+  },
+
+  {
+    houseNo: "59",
+    bookSignature: "04894",
+    year: 1913,
+    scan: 144,
+    page: 143,
+    whatSi: "umrl Janez JAKLIČ [~ VLM-'Jakhlič'-ZAVRJEN-@×4.0], ženjen kovač [★★★ 1.-KOVAČ-STAN-LINIJE! — VLM-stan-POPOLNOMA-PREGLEDAL-'ženjen Kovač'], 28 LET (27. 8. [★★ VLM-smrt-'24'/pokop-'26'-DVOJNI-MISREAD-@×4/×6-ZAVRJEN!], pokop 28. 8.) — Jetika; previden (1); Lambert Bitnar; ★★★ h59-×2-1913-#1 = OČE (avg!) + h59 = 3. mrliški vpis (1886 + 1905!) + JAKLIČ-vez (cf. P178-honesty!) + 8. GRIBLJE-1913 + 5 + 9 hišna (59)",
+    whatEn: "died Janez JAKLIČ [~ the VLM-'Jakhlič'-REJECTED-@×4.0], a married blacksmith [★★★ the 1st BLACKSMITH-STATUS-OF-THE-LINE! — the VLM-status-COMPLETELY-MISSED-'ženjen Kovač'], 28 YEARS (Aug 27 [★★ the VLM-death-'24'/burial-'26'-DOUBLE-MISREAD-@×4/×6-REJECTED!], buried Aug 28) — Jetika; previden (1); Lambert Bitnar; ★★★ the h59-×2-1913-#1 = the FATHER (Aug!) + h59 = the 3rd death entry (1886 + 1905!) + the JAKLIČ-link (cf. the P178-honesty!) + the 8th GRIBLJE-1913 + the 5 + 9 house number (59)",
+    status: "DOCUMENTED",
+  },
+
+  {
+    houseNo: "1",
+    bookSignature: "04894",
+    year: 1913,
+    scan: 145,
+    page: 144,
+    whatSi: "umrla Barbara ŽEFKO [~ 'Žefo'-VLM — k-jasna-@×4.0], ostarena ½ zemljakinja [~ 'osirotena?'-zmeda], 41 LET (4. 9., pokop 6. 9.) — Jetika; previden (1); Jos. Rumpf [~ podpis-'Jos. Pomp'+'ž./'-ZAVRJEN-'Pomp/Pumf'-'Rauq'-ZMEDA-nadaljevanje]; ★ h1 = 5. mrliški vpis (1888-×2 + 1904 + 1907!) + NAJNIŽJA-hiša-1913-#2 + h1-NI-×2 (cf. z49-Grišiče-h1-EXCLUDED!) + 9. GRIBLJE-1913 + 1 hišna (1)",
+    whatEn: "died Barbara ŽEFKO [~ the 'Žefo'-VLM — the k-clear-@×4.0], an enfeebled half-tenant-woman [~ the 'osirotena?'-confusion], 41 YEARS (Sep 4, buried Sep 6) — Jetika; previden (1); Jos. Rumpf [~ the signature-'Jos. Pomp'+'ž./'-REJECTED — the 'Pomp/Pumf'-'Rauq'-confusion-continues]; ★ h1 = the 5th death entry (1888-×2 + 1904 + 1907!) + the LOWEST-house-1913-#2 + the h1-NOT-×2 (cf. z49-Grišiče-h1-EXCLUDED!) + the 9th GRIBLJE-1913 + the 1 house number (1)",
+    status: "DOCUMENTED",
+  },
+
+  {
+    houseNo: "44",
+    bookSignature: "04894",
+    year: 1913,
+    scan: 145,
+    page: 144,
+    whatSi: "umrl Anton KRAMBIČ [★★★ VLM-'Agota'-IME-HALUCINACIJA-ZAVRJEN-@×4.0 — 'Anton'-jasno!], ½ zemljatov sin, 3 MESECE (9. 9., pokop 11. 9.) — Kašelj [~ VLM-'kavrg'-ZAVRJEN]; previden (.); Jos. Rumpf [~ 'Pomp']; ★ h44 = 4. mrliški vpis (1887 + 1906 + 1908!) + KRAMBIČ-vez (cf. 1912-z9-[?]!) + 10. GRIBLJE-1913 + 4 + 4 hišna (44)",
+    whatEn: "died Anton KRAMBIČ [★★★ the VLM-'Agota'-NAME-HALLUCINATION-REJECTED-@×4.0 — 'Anton'-clear!], a half-tenant's son, 3 MONTHS (Sep 9, buried Sep 11) — Kašelj [~ the VLM-'kavrg'-REJECTED]; previden (.); Jos. Rumpf [~ 'Pomp']; ★ h44 = the 4th death entry (1887 + 1906 + 1908!) + the KRAMBIČ-link (cf. 1912-z9-[?]!) + the 10th GRIBLJE-1913 + the 4 + 4 house number (44)",
+    status: "DOCUMENTED",
+  },
+
+  {
+    houseNo: "59",
+    bookSignature: "04894",
+    year: 1913,
+    scan: 145,
+    page: 144,
+    whatSi: "umrla Marija JAKLIČ, bajtarjeva hči, 5 MESECEV (21. 10., pokop 23. 10.) — Božjast [~ VLM-'Zavrat'-ZAVRJEN — žj-LIGATURA-3.×-1913!]; previden (.); Anzelm Polák [★★★ NOVI-DUHOVNIK-LINIJE-'Koop.'-kooperator-@×4.0!]; ★★★ h59-×2-1913-#2 = HČI-5-MES (okt — JAKLIČ-oče-avg + hči-okt = 2-VPISA-V-2-MESECIH = PADEC-vzorec-9.-leto! KOVAČEVA-DRUGA-HIŠA?) + h59 = 4. mrliški vpis + 11. GRIBLJE-1913 + 5 + 9 hišna (59)",
+    whatEn: "died Marija JAKLIČ, a cottage-laborer's daughter, 5 MONTHS (Oct 21, buried Oct 23) — Božjast [~ the VLM-'Zavrat'-REJECTED — the žj-LIGATURE-3.×-1913!]; previden (.); Anzelm Polák [★★★ the NEW-PRIEST-OF-THE-LINE-'Koop.'-cooperator-@×4.0!]; ★★★ the h59-×2-1913-#2 = the DAUGHTER-5-MONTHS (Oct — the JAKLIČ-father-Aug + the-daughter-Oct = 2-ENTRIES-IN-2-MONTHS = the PADEC-pattern-9th-year! the BLACKSMITH'S-SECOND-HOUSE?) + h59 = the 4th death entry + the 11th GRIBLJE-1913 + the 5 + 9 house number (59)",
+    status: "DOCUMENTED",
+  },
+
+  {
+    houseNo: "92",
+    bookSignature: "04894",
+    year: 1913,
+    scan: 145,
+    page: 144,
+    whatSi: "umrl Matija ŠTRAVS [~ VLM-'Špavc'-ZAVRJEN-@×4.0 — Štr-LEKSIKON-2.× (cf. 1912-h11-Barbara-52!)], delavec in vdovec [★★ 1.-'delavec-in-vdovec'-FORMULA-LINIJE!], 89 LET (22. 10., pokop 23. 10.) — Starost; previden (1); Anzelm Polák [Koop.]; ★★★ h92 = 1. MRLIŠKI VPIS KADARKOLI = 34.-PT-vez-kandidat (cf. h78-32. + h79-33. — 1912-ISTI-MESEC-NOV!) + NAJVIŠJA-hiša-MRLIŠKE-LINIJE + ★ ŠTRAVS-2.-vpis-1913-2.-hiša (h11→h92!) + 12. GRIBLJE-1913 + 9 + 2 hišna (92)",
+    whatEn: "died Matija ŠTRAVS [~ the VLM-'Špavc'-REJECTED-@×4.0 — the Štr-LEKSIKON-2.× (cf. 1912-h11-Barbara-52!)], a laborer and widower [★★ the 1st-'laborer-and-widower'-FORMULA-OF-THE-LINE!], 89 YEARS (Oct 22, buried Oct 23) — Starost; previden (1); Anzelm Polák [Koop.]; ★★★ h92 = the 1st DEATH ENTRY EVER = the 34th-PT-link-candidate (cf. h78-32nd + h79-33rd — 1912-THE-SAME-MONTH-NOV!) + the HIGHEST-house-OF-THE-DEATH-LINE + ★ the ŠTRAVS-2nd-entry-1913-2nd-house (h11→h92!) + the 12th GRIBLJE-1913 + the 9 + 2 house number (92)",
+    status: "DOCUMENTED",
+  },
+
+  {
+    houseNo: "51",
+    bookSignature: "04894",
+    year: 1913,
+    scan: 146,
+    page: 145,
+    whatSi: "umrl Janez PEZDIREC [★★★ VLM-'Penčiče'-ZAVRJEN-@×6.0 — P-e-z(x-KRIŽEC+DESCENDER!)-d-i-r-e-c = LEKSIKON ('Perdinec'-1912-'Perdih'-1911-'Pegdirec'-poročna!); cf. ×4-1911 + ×4-1912!], samski delavec [~], 74 LET (10. 11., pokop 12. 11.) — Naduha; previden (1); Anzelm Polák [Koop.]; ★★★ PEZDIREC-1913 = 3.-LETO-ZAPORED (1911-×4 + 1912-×4 + 1913-×1!) + h51 = 4. mrliški vpis (1896-×2 + 1897!) + 13. GRIBLJE-1913 + 5 + 1 hišna (51)",
+    whatEn: "died Janez PEZDIREC [★★★ the VLM-'Penčiče'-REJECTED-@×6.0 — P-e-z(the-x-CROSS+DESCENDER!)-d-i-r-e-c = the LEKSIKON (the 'Perdinec'-1912-'Perdih'-1911-'Pegdirec'-marriage!); cf. ×4-1911 + ×4-1912!], an unmarried laborer [~], 74 YEARS (Nov 10, buried Nov 12) — Naduha; previden (1); Anzelm Polák [Koop.]; ★★★ PEZDIREC-1913 = the 3rd-CONSECUTIVE-YEAR (1911-×4 + 1912-×4 + 1913-×1!) + h51 = the 4th death entry (1896-×2 + 1897!) + the 13th GRIBLJE-1913 + the 5 + 1 house number (51)",
+    status: "DOCUMENTED",
+  },
+
+  {
+    houseNo: "76",
+    bookSignature: "04894",
+    year: 1913,
+    scan: 146,
+    page: 145,
+    whatSi: "umrla Vilhelmina MRAMEŽIČ [~ VLM-'Mramorič'-okvirno — ž-DESCENDER+CARON-@×6.0!], kerljanjeva? hči [? — kajžarjeva?/kolarjeva?-kandidati], 2 MESECA (12. 11., pokop 13. 11.) — Božjast; previden (.); Anzelm Polák [Koop.]; ★ h76 = 2. mrliški vpis (1887!) + MRAMEŽIČ-1.-VPIS-[?] + 14. GRIBLJE-1913-ZAKLJUČEK + 7 + 6 hišna (76)",
+    whatEn: "died Vilhelmina MRAMEŽIČ [~ the VLM-'Mramorič'-approximate — the ž-DESCENDER+CARON-@×6.0!], a ?-laborer's daughter [? — the kajžarjeva?/kolarjeva?-candidates], 2 MONTHS (Nov 12, buried Nov 13) — Božjast; previden (.); Anzelm Polák [Koop.]; ★ h76 = the 2nd death entry (1887!) + the MRAMEŽIČ-1st-ENTRY-[?] + the 14th GRIBLJE-1913-CLOSER + the 7 + 6 house number (76)",
+    status: "DOCUMENTED",
+  },
+
   // ——— P80 razširitev: POROČNA KNJIGA 04455 1873–1922 — okvir 1886 (skeni 61–65 == Pag. 60–64, vpisi 1–24; Pag. = sken − 1 v razponu 61–66) ———
   // P115 (faza 2) RE-READ: 8 blokov popravljenih na podlagi max-zoom branja (h36→56, h63→65, h15→16, h25→Priložje
   // + priimki Pegdirec/Klepec/Požek/Tomec/Straus/Križan) — evidence: research/issue17/parish-marriage-1886.json

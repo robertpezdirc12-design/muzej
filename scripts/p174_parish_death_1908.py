@@ -29,8 +29,8 @@ EXPECTED_ANOMALIES = 14
 EXPECTED_CROSSCHECKS = 5
 GRIBLJE_HOUSES = "2,3,5,20,24,24,30,33,39,42,44,83,85"
 GRIBLJE_ZAPS = [10, 16, 20, 25, 42, 47, 54, 59, 64, 70, 71, 72, 75]
-VITALS_TOTAL = 1063             # 1020 + 12! (P176)
-BLOKI_04894 = 364               # 321 + 12! (P176)
+VITALS_TOTAL = 1077             # 1020 + 12! (P176)
+BLOKI_04894 = 378               # 321 + 12! (P176)
 P80_HOUSES = 92                 # NESPREMENJENO (vseh-12-hiš-ŽE-v-p80!)
 KORPUS_HOUSES = 93              # NESPREMENJENO
 NEW_SCANS = [115, 116, 117, 118, 119, 120, 121]  # s114-reuse (P173-meja-lead!) + s122 = 1909-lead
@@ -179,10 +179,10 @@ def main():
     check("I6d bloki 1908: skeni 115–120 + stran == sken − 1",
           all(v["scan"] and 115 <= v["scan"] <= 120 and v["page"] == v["scan"] - 1 for v in d1908), "")
     check("I6d2 bloki 1910+ ne obstajajo (P176-lead!; P175 = 1909 sedaj v korpusu!)",
-          all(v["year"] < 1913 for v in d04894), "")
+          all(v["year"] < 1914 for v in d04894), "")
     p80 = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
     check("I6e p80-skripta pini 1009 + 92 + gap-18 (vitals-P174-kaskada!)",
-          "len(vitals) == 1063" in p80 and "len(houses) == 93" in p80 and "len(gap) == 18" in p80, "")
+          "len(vitals) == 1077" in p80 and "len(houses) == 93" in p80 and "len(gap) == 18" in p80, "")
     houses_all = {v["houseNo"] for v in vit if v["houseNo"].isdigit()}
     check("I6f korpus = 93 hiš (NESPREMENJENO — vseh-12-1908-hiš-ŽE-v-korpusu!)",
           len(houses_all) == KORPUS_HOUSES, str(len(houses_all)))
@@ -257,10 +257,10 @@ def main():
     qa = open(QA_TS, encoding="utf-8").read()
     check("I10a qa-p174 = 175. kontrola", "qa-p174-parish-death-1908" in qa, "")
     check("I10b qa-parish pini 1009 + 310 (P174-kaskada!)",
-          qa.count("!== 1063") >= 91 and qa.count("!== 364") >= 25,
+          qa.count("!== 1077") >= 91 and qa.count("!== 378") >= 25,
           f"1032×{qa.count('!== 1032')}/333×{qa.count('!== 333')}")
     check("I10c qa-parish guardi ≥1909 (22× — P174-kaskada-21 + qa-p174-lastni!)",
-          qa.count(">= 1913") >= 24, f"{qa.count('>= 1913')}")
+          qa.count(">= 1914") >= 28, f"{qa.count('>= 1914')}")
     check("I10d qa-parish p80 = 92 (24× — NESPREMENJENO!)",
           qa.count("p80Houses.size !== 93") == 24, f"{qa.count('p80Houses.size !== 92')}")
     check("I10e 1908-izjeme-v-guardih (p85-h30 + p90-h20!)",
@@ -278,8 +278,8 @@ def main():
                                  "ŠTRUCELJ", "EDINA-1908-vrsta-BREZ-datuma-smrti"]), "")
     check("I11c P175-LEAD-v-parish.ts (s121-zap1–10 + s122!)",
           "P175-LEAD: 1909" in src and "s122-zap11–22" in src, "")
-    check("I11d ni-04894-1911-blokov-še (P177-lead!; 04455/04105-1911-legalno!)",
-          re.search(r'bookSignature: "04894",\s*year: 1913', src) is None, "")
+    check("I11d ni-04894-1914-blokov-še (P180-lead!; P179 = 1913 sedaj v korpusu!)",
+          re.search(r'bookSignature: "04894",\s*year: 1914', src) is None, "")
 
     # ---------- I12: honesty ----------
     check("I12 honesty ≥6 (honesty-1–6!)",

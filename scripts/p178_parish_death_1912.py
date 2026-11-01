@@ -28,8 +28,8 @@ EXPECTED_ENTRIES = 77   # 18 Griblje + 59 ne-Griblje
 EXPECTED_EXCLUDED = 1
 GRIBLJE_HOUSES = "11,16,21,26,29,33,34,39,42,42,57,68,72,78,79,87,91,91"
 GRIBLJE_ZAPS = [1, 10, 20, 24, 32, 33, 35, 36, 39, 45, 47, 60, 61, 62, 64, 66, 71, 74]
-VITALS_TOTAL = 1063             # 1045 + 18!
-BLOKI_04894 = 364               # 346 + 18!
+VITALS_TOTAL = 1077             # 1063 + 14!
+BLOKI_04894 = 378               # 364 + 14!
 KORPUS_HOUSES = 93              # NESPREMENJENO
 NEW_SCANS = [137, 138, 139, 140, 141]
 
@@ -156,8 +156,8 @@ def main():
     # ---------- I6: kumulativ + parish.ts ----------
     vit = parse_house_vitals()
     d04894 = [v for v in vit if v["bookSignature"] == "04894"]
-    check("I6a vitals 1063", len(vit) == VITALS_TOTAL, str(len(vit)))
-    check("I6b mrliški bloki 04894 = 364", len(d04894) == BLOKI_04894, str(len(d04894)))
+    check("I6a vitals 1077", len(vit) == VITALS_TOTAL, str(len(vit)))
+    check("I6b mrliški bloki 04894 = 378", len(d04894) == BLOKI_04894, str(len(d04894)))
     d1912 = [v for v in d04894 if v["year"] == 1912]
     check("I6c bloki 1912 = 18", len(d1912) == 18, str(len(d1912)))
     check("I6d bloki 1912: skeni 135–141 + stran == sken − 1",
@@ -193,27 +193,27 @@ def main():
     # ---------- I8: qa-parish.ts ----------
     check("I8a qa-p178 obstaja (179. kontrola)", "qa-p178-parish-death-1912" in qa, "")
     check("I8b qa-p178 hiše-lista", '"11,16,21,26,29,33,34,39,42,42,57,68,72,78,79,87,91,91"' in qa, "")
-    check("I8c vitals-checki 1063 (>= 92)", qa.count("!== 1063") >= 92, str(qa.count("!== 1063")))
-    check("I8d bloki-checki 364 (>= 26)", qa.count("!== 364") >= 26, str(qa.count("!== 364")))
+    check("I8c vitals-checki 1077 (>= 93)", qa.count("!== 1077") >= 93, str(qa.count("!== 1077")))
+    check("I8d bloki-checki 378 (>= 27)", qa.count("!== 378") >= 27, str(qa.count("!== 378")))
     check("I8e p80-checki 93 (>= 25)", qa.count("p80Houses.size !== 93") >= 24, str(qa.count("p80Houses.size !== 93")))
-    check("I8f guardi-1913 (>= 25)", qa.count("(h.year ?? 0) >= 1913") >= 25, str(qa.count("(h.year ?? 0) >= 1913")))
+    check("I8f guardi-1914 (>= 28)", qa.count("(h.year ?? 0) >= 1914") >= 28, str(qa.count("(h.year ?? 0) >= 1914")))
     check("I8g NOVA-hiša-allowi-1912 (h91 + h87!)",
           'v.year === 1912 && hn === "91"' in qa and 'v.year === 1912 && hn === "87"' in qa, "")
-    check("I8h p80Death-sporočilo (P178: + 18 blokov 1912 = 364!)",
-          "P178: + 18 blokov 1912 = 364!" in qa, "")
+    check("I8h p80Death-sporočilo (P179: + 14 blokov 1913 = 378!)",
+          "P179: + 14 blokov 1913 = 378!" in qa, "")
 
     # ---------- I9: skripte-kaskada ----------
-    check("I9a p153–p177 skripte VITALS_TOTAL 1063",
-          all("VITALS_TOTAL = 1063" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
+    check("I9a p153–p178 skripte VITALS_TOTAL 1077",
+          all("VITALS_TOTAL = 1077" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
               for i, y in ((153, 1887), (154, 1888), (155, 1889), (156, 1890), (157, 1891), (158, 1892), (159, 1893),
                            (160, 1894), (161, 1895), (162, 1896), (163, 1897), (164, 1898), (165, 1899), (166, 1900),
                            (167, 1901), (168, 1902), (169, 1903), (170, 1904), (171, 1905), (172, 1906), (173, 1907),
                            (174, 1908), (175, 1909), (176, 1910), (177, 1911))), "")
     check("I9b p170–p177 skripte BLOKI_04894 364",
-          all("BLOKI_04894 = 364" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
+          all("BLOKI_04894 = 378" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
               for i, y in ((170, 1904), (171, 1905), (172, 1906), (173, 1907), (174, 1908), (175, 1909), (176, 1910), (177, 1911))), "")
-    check("I9c p80-skripta 1063/93",
-          "len(vitals) == 1063" in open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
+    check("I9c p80-skripta 1077/93",
+          "len(vitals) == 1077" in open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
           and "len(houses) == 93" in open("scripts/p80_parish_md_books.py", encoding="utf-8").read(), "")
 
     # ---------- I10: honesty ----------

@@ -7067,3 +7067,26 @@ Stage Summary:
 - TRILOKACIJA: lokalni == GitHub (API-commits/main) == **9ae5c26** ✓; GitLab == 9ae5c26 (git-potrditev)
 - VERCEL: GitHub-App-avtomatski-deploy ~90-s → **griblje-museum.vercel.app 200** + **/api/qa = runQA 179/179 ok:True + qa-p178-parish-death-1912 pass:True NA PRODUKCIJI!**
 - mrliška linija: **27/39** (1886–1912) — naslednja: **P179 = 1913**
+
+## P179 — mrliška 1913 ('PEZDIREC-3.-LETO + h59-×2-JAKLIČ-oče+hči + h92-1.-MRLIŠKI-VPIS-34.-PT + 1.-UČITELJ + 1.-KOVAČ + ANZELM-POLÁK-'Koop.'-NOVI-DUHOVNIK + 3×-Grišiče-EXCLUDE + 21-KOREKCIJ!')
+
+Agent: Z.ai Code (glavni agent)
+Task: P179 — mrliška knjiga 04894, leto 1913 (28. polno leto mrliške linije)
+
+Work Log:
+- OKOLJE: NOVI-PAT-validiran (api.github.com/user → 200) → P178-push-zaključen (9ae5c26 → GitHub 200 + GitLab + Vercel-179/179-PRODUKCIJA + deploy-status-fc13874!) → /tmp/p178-PREŽIVEL (s135–s142 + inventory-256!)
+- T1-FETCH: /tmp/p179/p179_fetch.py — s143–s147 (5 skeni, 256/256-inventar, 3.2-MB) + s142-REUSE-iz-p178 (P179-LEAD-raw!)
+- T2-VLM-BRANJE: read_page.mjs-3-serije-foreground (143+144-retry / 145+146 / 147) — 6/6-OK (26–68-s/sken; glave-'18/913'-'18.913'-'-18.1913'-'18-1914'!) — s147-glava-'18 1914' + restart-58→z1 = MEJA-1913/14!
+- T3-FORENZIKA (39-cropov: traki-×2.2-×19 + celice-×3.0/4.0/5.0/6.0-~×15 + VAS-PALETE-×4-14-celic + PODW-podpisi-×5 + diag-grid-s143 + DIAG-strip-s144-k1-k4!): **21-KOREKCIJ** — z2-'Hlebič'→**MILEK** (P178-lead-POTRJEN-@×4.0!) + z30-'Viljak'→**ŠILAK** (h34-leksikon-4.× — Ṽ+caron-@×5.0!) + z39-'Agota'→**ANTON-KRAMBIČ** (VLM-IME-HALUCINACIJA-@×4.0!) + z35-'Jakhlič'→**JAKLIČ** + stan-'ženjen kovač' (VLM-POPOLNOMA-PREGLEDAL!) + z48-'Špavc'→**ŠTRAVS** (leksikon!) + z51-'Penčiče'→**PEZDIREC** (x-KRIŽEC+DESCENDER-@×6.0!) + z52-'Mramorič'→**MRAMEŽIČ-[~]** (ž-descender+caron!) + z28-'Lapajne'→**LAPRIČ-[~]** + z19-'Ivana'→**g.-Frane-HALAR** + stan-'ženjen ljudski učitelj' (1.-UČITELJ!) + z24-'Franco'→**FRANE** + z39-'kavrg'→**Kašelj** + z47-'Zavrat'→**Božjast** (žj-ligatura-×3!) + z4-'Hlabost'→**Slabost** (ſl-LIGATURA!) + z2-'jediha'→**Jetika** + s144-zap-**25** (VLM-dvojna-'26'!) + **z35-smrt-27-pokop-28** (VLM-24/26-DVOJNI-MISREAD-@×4/×6!) + z19-starost-**56** ('36'-zmeda) + **13-pokopov-iz-vas-celic** + Polák-diakritik + **'Koop.'-RAZREŠEN** (kooperator!) + **VAS-RE-VERIFIKACIJA-14-celic** (4-palette): 3×-'Grišiče'-EXCLUDE (z14-Jodlja-MODRA-MARGINALIJA + z28-LAPRIČ + z49-Judnič — P177-vzorec-2.×!) → **14-GRIBLJE-ne-17** + h1-×2-hipoteza-PAVŠA!
+- T4-MEJA: **1913/14 = s147** (glava-'18 1914' + restart-58→z1 = **20.-POTRDITEV — STIL-7-2.×** glava+restart-brez-velikega-separatorja; brez-inline-pokopov-tokrat — zap58-pokop-'18/20.-dec-1913'!)
+- T5-PARISH.TS: P179-blok-komentar (8-vrstic + P180-LEAD) + 14-blokov (h65/h5/h47/h90/h49/h34/h12/h59-×2/h1/h44/h92/h51/h76!) + PEZDIREC-1913 + h92-1.-MRLIŠKI-VPIS + HALAR-UČITELJ + JAKLIČ-kovač + POLÁK-Koop.
+- T5b-KASKADA: qa-parish.ts (93× 1063→1077 + 27× 364→378 + **25×-guardi-1913→1914** + p80Death-sporočilo + allowi-1913-×3 (p85-h90 + p87-h12 + p94-h49!) + **qa-p179-blok-180.-kontrola!**) + **stale-sanacija-p153–p178-×26-skript-×5-KROGOV** (VITALS_TOTAL-1077 + BLOKI-378 + guardi-1914 + p156-I6h-h90-3→4-mrliški + p160-I5b-h49-6→7 + p162-I5a-h51-+1913 + p172–p176-I11d-1913→1914-lead-guardi + **p170-I12b-PRE-EXISTING-SYNTAX-BUG-POPRAVLJEN** (', ) ""' — P178-regresija-ga-NI-ulovila!) + p80-skripta-1077/93!) — **REGRESIJA-26/26-ZELENO!**
+- SKRIPTA: scripts/p179_parish_death_1913.py (I1–I13, --live) = **48/48 PASS + --live 48/48!**
+- DOKAZ: research/issue17/parish-death-1913.json (**55 entries = 14-Griblje + 41-ne! 3-excluded-Grišiče + 17-anomalij + 5-crossChecks + honesty-7 + P180-lead**) + notes
+- QA: qa-p179 = **180. kontrola** (blok v qa-parish.ts) · **runQA 180/180 ok:True** · p179-skripta 48/48 · REGRESIJA-26/26 · tsc 0 · lint 0
+- KUMULATIV: vitals 1063 → 1077 · mrliški 04894 364 → 378 · p80 93-NESPREMENJENO (h92-ŽE-v-p80-prek-poročne-1921-P150!) · korpus 93-NESPREMENJENO · PT-luknja 15-NESPREMENJENA (h92-kandidat-NE-štet!)
+
+Stage Summary:
+- **P179 KONČAN (koda)**: 1913 = 58-vrstic (zap1–58) / 14-GRIBLJE / 13-hiš (h59-×2-JAKLIČ!) / padec 18→14
+- mrliška linija **28/39** (1886–1913) — P180-LEAD: 1914 (s147-z1–12-ŽE-prebrani: 3-GRIBLJE — z1-h8-Matija-VOTLOVEC-9½ + z7-h40-Marija-PEKOVEC-2½ + z8-h34-Josefa-FINK-2-ŠILAK-hiša-4.-ZAPOREDNO-LETO! + z9/z10/z12-'[~]Ho?er/Ojster'-podpisi-[?]-NOVI?; meja 1914/15 [?])
+- PEZDIREC-3.-LETO-ZAPORED + 2-NOVA-STANA-V-1-LETU (UČITELJ + KOVAČ!) + NOVI-DUHOVNIK-#18-POLÁK-Koop. + 34.-PT-kandidat-h92 + VLM-VAS-LEKCIJA (14-celic-re-verifikacija!)
