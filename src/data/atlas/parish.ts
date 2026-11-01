@@ -3701,8 +3701,8 @@ export const HOUSE_VITALS: HouseVital[] = [
     year: 1908,
     scan: 116,
     page: 115,
-    whatSi: "umrl Jožef PERDINEC [★ KURRENT-r/n-zmeda — Perdinec-×159-dominanten cf.-h53-PERDINEC-hiša!], ¼ zemljakov sin, starost '—' [PRAZNA!] (24. 5., pokop 25. 5.) — VSLED TEŽKEGA PORODA [★★★ max-zoom-'Vsled...težkega poroda'-jasno — 1888-r23-'VSLED-TĚŽKEGA-PORODA'-leksikalna-paralela!]; previden (.); Gregor Cerar; ★★★ PORODNA-SMRT-#3-linije (1888-×2-MATERI → 1908-OTROK!) + rdeči-✓-revizija! + h85 = 2. mrliški vpis (1891 + 1908!) + 8 + 5 hišna (85)",
-    whatEn: "died Jožef PERDINEC [★ the KURRENT-r/n-confusion — the Perdinec-×159-dominant cf.-the-h53-PERDINEC-house!], a quarter-smallholder's son, age '—' [EMPTY!] (May 24, buried May 25) — FROM A DIFFICULT CHILDBIRTH [★★★ the max-zoom-'Vsled...težkega poroda'-clear — the 1888-r23-'VSLED-TĚŽKEGA-PORODA'-lexical-parallel!]; previden (.); Gregor Cerar; ★★★ the CHILDBIRTH-DEATH-#3-of-the-line (the 1888-×2-MOTHERS → the 1908-CHILD!) + the red-✓-revision! + h85 = the 2nd death entry (1891 + 1908!) + the 8 + 5 house number (85)",
+    whatSi: "umrl Jožef PEZDIREC [★★★ P175-KOREKCIJA — max-zoom-'Pezdirec'-jasno: z-DESCENDER @3. črka (ista-forma-kot-1909-z44-h85-Jožef!) + cf.-h20-1892/1906-PEZDIREC-hiša + P163-leksikon-vez ('Perdivec'/'Perdinec'→PEZDIREC ×3!) — prejšnja-'PERDINEC' ZAVRJENA!], ¼ zemljakov sin, starost '—' [PRAZNA!] (24. 5., pokop 25. 5.) — VSLED TEŽKEGA PORODA [★★★ max-zoom-'Vsled...težkega poroda'-jasno — 1888-r23-'VSLED-TĚŽKEGA-PORODA'-leksikalna-paralela!]; previden (.); Gregor Cerar; ★★★ PORODNA-SMRT-#3-linije (1888-×2-MATERI → 1908-OTROK!) + rdeči-✓-revizija! + h85 = 2. mrliški vpis (1891 + 1908!) + PEZDIREC-h85-vez (1908-Jožef + 1909-Jožef-2-dni = 2-otroka-v-2-letih!) + 8 + 5 hišna (85)",
+    whatEn: "died Jožef PEZDIREC [★★★ the P175-CORRECTION — the max-zoom-'Pezdirec'-clear: the z-DESCENDER at-the-3rd-letter (the-SAME-form-as-the-1909-z44-h85-Jožef!) + cf.-the-h20-1892/1906-PEZDIREC-house + the P163-lexicon-link ('Perdivec'/'Perdinec'→PEZDIREC ×3!) — the-previous-'PERDINEC' REJECTED!], a quarter-smallholder's son, age '—' [EMPTY!] (May 24, buried May 25) — FROM A DIFFICULT CHILDBIRTH [★★★ the max-zoom-'Vsled...težkega poroda'-clear — the 1888-r23-'VSLED-TĚŽKEGA-PORODA'-lexical-parallel!]; previden (.); Gregor Cerar; ★★★ the CHILDBIRTH-DEATH-#3-of-the-line (the 1888-×2-MOTHERS → the 1908-CHILD!) + the red-✓-revision! + h85 = the 2nd death entry (1891 + 1908!) + the PEZDIREC-h85-link (the-1908-Jožef + the-1909-Jožef-2-days = 2-children-in-2-years!) + the 8 + 5 house number (85)",
     status: "DOCUMENTED",
   },
   {
@@ -3761,8 +3761,8 @@ export const HOUSE_VITALS: HouseVital[] = [
     year: 1908,
     scan: 120,
     page: 119,
-    whatSi: "umrla Katarina PERDINEC [★★★ VLM-'Pečnik'-ZAVRJENA — max-zoom-'Perdinec'-jasno!], ¼ zemljakova hči, 2 LETI (22. 11., pokop 24. 11.) — Jetika; previden (.); Gregor Cerar; ★ h20 = 5. mrliški vpis (1892 + 1896 + 1899 + 1906 + 1908!) + PERDINEC-vez-1908-×3 (z25-h85-Jožef + z70-h20-Katarina + z71-h30-Matija!) + 2 + 0 hišna (20)",
-    whatEn: "died Katarina PERDINEC [★★★ the VLM-'Pečnik'-REJECTED — the max-zoom-'Perdinec'-clear!], a quarter-smallholder's daughter, 2 YEARS (Nov 22, buried Nov 24) — Jetika; previden (.); Gregor Cerar; ★ h20 = the 5th death entry (1892 + 1896 + 1899 + 1906 + 1908!) + the PERDINEC-link-1908-×3 (the z25-h85-Jožef + the z70-h20-Katarina + the z71-h30-Matija!) + the 2 + 0 house number (20)",
+    whatSi: "umrla Katarina PEZDIREC [★★★ P175-KOREKCIJA ×2 — max-zoom-'Pezdirec'-jasno (z-descender!) — ISTA-forma-kot-h20-1892-Matija-PEZDIREC + 1906-z6-Katarina-PEZDIREC — HIŠA-NE-MENJA-PRIIMKA-V-2-LETIH!; prejšnja-'PERDINEC' ZAVRJENA!], ¼ zemljakova hči, 2 LETI (22. 11., pokop 24. 11.) — Jetika; previden (.); Gregor Cerar; ★ h20 = 5. mrliški vpis (1892 + 1896 + 1899 + 1906 + 1908!) + PEZDIREC-vez-1908/09-×4 (z25-h85 + z70-h20 + z71-h30 + 1909-z44-h85!) + 2 + 0 hišna (20)",
+    whatEn: "died Katarina PEZDIREC [★★★ the P175-CORRECTION ×2 — the max-zoom-'Pezdirec'-clear (the z-descender!) — the-SAME-form-as-the-h20-1892-Matija-PEZDIREC + the-1906-z6-Katarina-PEZDIREC — the-HOUSE-DOES-NOT-CHANGE-SURNAME-IN-2-YEARS!; the-previous-'PERDINEC' REJECTED!], a quarter-smallholder's daughter, 2 YEARS (Nov 22, buried Nov 24) — Jetika; previden (.); Gregor Cerar; ★ h20 = the 5th death entry (1892 + 1896 + 1899 + 1906 + 1908!) + the PEZDIREC-link-1908/09-×4 (the z25-h85 + the z70-h20 + the z71-h30 + the 1909-z44-h85!) + the 2 + 0 house number (20)",
     status: "DOCUMENTED",
   },
   {
@@ -3771,8 +3771,8 @@ export const HOUSE_VITALS: HouseVital[] = [
     year: 1908,
     scan: 120,
     page: 119,
-    whatSi: "umrl Matija PERDINEC [★★★ VLM-'Pečnik'-ZAVRJENA — max-zoom-'Perdinec'-jasno!], vdovec in vrškar, 81 LET (1. 12., pokop 3. 12.) — Slabost; previden (1); Gregor Cerar; ★ h30 = 8. mrliški vpis (1889 + 1890-×2 + 1891 + 1895 + 1898 + 1903 + 1908!) + ★ PERDINEC-vez-1908-×3 (z25 + z70 + z71!) + DECEMBER-×3-GRIBLJE-1908 (z71 + z72 + z75 = zadnja-trijica!) + 3 + 0 hišna (30)",
-    whatEn: "died Matija PERDINEC [★★★ the VLM-'Pečnik'-REJECTED — the max-zoom-'Perdinec'-clear!], a widower and threshing-man, 81 YEARS (Dec 1, buried Dec 3) — Slabost; previden (1); Gregor Cerar; ★ h30 = the 8th death entry (1889 + the 1890-×2 + 1891 + 1895 + 1898 + 1903 + 1908!) + ★ the PERDINEC-link-1908-×3 (z25 + z70 + z71!) + the DECEMBER-×3-GRIBLJE-1908 (z71 + z72 + z75 = the last-trio!) + the 3 + 0 house number (30)",
+    whatSi: "umrl Matija PEZDIREC [★★★ P175-KOREKCIJA ×3 — max-zoom-'Pezdirec'-jasno (z-descender + d-ascender @3.–4. črka!); prejšnja-'PERDINEC' ZAVRJENA — cf.-P163-leksikon-vez!], vdovec in vrškar, 81 LET (1. 12., pokop 3. 12.) — Slabost; previden (1); Gregor Cerar; ★ h30 = 8. mrliški vpis (1889 + 1890-×2 + 1891 + 1895 + 1898 + 1903 + 1908!) + ★ PEZDIREC-vez-1908/09-×4 (z25 + z70 + z71 + 1909-z44!) + DECEMBER-×3-GRIBLJE-1908 (z71 + z72 + z75 = zadnja-trijica!) + 3 + 0 hišna (30)",
+    whatEn: "died Matija PEZDIREC [★★★ the P175-CORRECTION ×3 — the max-zoom-'Pezdirec'-clear (the z-descender + the d-ascender at-the-3rd–4th-letter!); the-previous-'PERDINEC' REJECTED — cf.-the-P163-lexicon-link!], a widower and threshing-man, 81 YEARS (Dec 1, buried Dec 3) — Slabost; previden (1); Gregor Cerar; ★ h30 = the 8th death entry (1889 + the 1890-×2 + 1891 + 1895 + 1898 + 1903 + 1908!) + ★ the PEZDIREC-link-1908/09-×4 (z25 + z70 + z71 + the-1909-z44!) + the DECEMBER-×3-GRIBLJE-1908 (z71 + z72 + z75 = the last-trio!) + the 3 + 0 house number (30)",
     status: "DOCUMENTED",
   },
   {
@@ -3793,6 +3793,144 @@ export const HOUSE_VITALS: HouseVital[] = [
     page: 119,
     whatSi: "umrla Barbara MILEK [★★ max-zoom-'Milek'-jasno cf.-h65-MILEK-1886-poročna!; VLM-'Mlek'; diag-'Mlech'], nova dnadelovka [~ VLM-'drnadelovka' — 'nova dnevna delavka'? NERAZREŠEN-STAN!], 76 LET (15. 12., pokop 17. 12.) — Nemoglost [~ VLM-'Dremoglost' — max-zoom-'Nemoglost'-jasno; = nemoklost/šibkost?]; previden (1); Gregor Cerar; ★ h39 = 2. mrliški vpis (1906 + 1908!) + MILEK-vez (h65-×8-REKORDISTKA-1907!) + rdeči-✓-revizija! + ZADNJA-GRIBLJE-1908 (meja-1908/09 = s121-naslednja-stran!) + 3 + 9 hišna (39)",
     whatEn: "died Barbara MILEK [★★ the max-zoom-'Milek'-clear cf.-the-h65-MILEK-1886-married!; the VLM-'Mlek'; the diag-'Mlech'], a new day-laborer-woman [~ the VLM-'drnadelovka' — 'a new day laborer'? UNRESOLVED-STATUS!], 76 YEARS (Dec 15, buried Dec 17) — Nemoglost [~ the VLM-'Dremoglost' — the max-zoom-'Nemoglost'-clear; = infirmity/weakness?]; previden (1); Gregor Cerar; ★ h39 = the 2nd death entry (1906 + 1908!) + the MILEK-link (the h65-×8-RECORD-HOLDER-1907!) + the red-✓-revision! + the LAST-GRIBLJE-1908 (the 1908/09-boundary = the-s121-next-page!) + the 3 + 9 house number (39)",
+    status: "DOCUMENTED",
+  },
+
+  // ——— P175: MRLIŠKA KNJIGA 04894, LETO 1909 = 24. polno leto mrliške linije (issue #18) ———
+  // OKVIR: s121-dno (velik separator »1 9 0 9.« INSIDE band2-prazne-vrste = 17. POTRDITEV mejnega stila!
+  //   zap1–10) + s122 (zap11–22) + s123 (zap23–34) + s124 (zap35–46) + s125 (zap47–55) == str. 120–124
+  //   (stran == sken − 1 — 96.–100. potrditev VIZUALNO!) + MEJA 1909/10 = s126 (glava-'Leto 18 1910' + restart
+  //   55→1 BREZ velikega separatorja = NOV-PODVZOREC-7. STIL — P174-lead-'[~ s125+?]' POTRJEN-→-s126!)
+  //   + GLAVE: s121-'Leto 18 1908' (stran-začeta-v-1908!) + s122–s125-'Leto 18 1909' + s126-'Leto 18 1910'
+  // 1909 = 55 VRSTIC (10+12+12+12+9) / 11 GRIBLJE-vpisov / 10 hiš (h34-×2-DVOJČKI!) — rast 13→11;
+  //   padec po rekordnem 1908-76! RAZPON: ½ dne → 92 let (izenačenje REKORDA 1889!);
+  // ★★★ z3-Peter-Stublar-92-let = IZENAČENJE REKORDA LINIJE (1889-P155-92!) — 2.×-92-v-liniji!
+  // ★★★ z21/z22-h34-ŠILAK-DVOJČKI (½-dne + 2-dni = P174-lead 100% POTRJEN — VLM-'Tlak' ×2 ZAVRJEN!)
+  // ★★★ P174-KOREKCIJA: 'PERDINEC'→PEZDIREC ×3 (z25-h85 + z70-h20 + z71-h30! max-zoom-z-DESCENDER
+  //   @3. črka — ista forma kot 1909-z44-h85 + h20-1892/1906-PEZDIREC-hiša + P163-leksikon-vez!)
+  // ★★★ z44-h85-Jožef-PEZDIREC-2-dni = h85-vez-1908/09 (porodna-smrt-1908 + dojenček-1909!)
+  // ★★ z52-h86 = 1. MRLIŠKI VPIS KADARKOLI (h86 = 04455-1910/04105-1912+ — vse-kasneje!) → p80 92-NESPREMENJENO (h86-ŽE-v-p80-prek-04455-1910-poročna-P139!)
+  // ★★ MRTVOROJENI-×2-nad-Griblji (z7-s121-'Mrtvorojena'-starost-'.'-podpis-'——' + z45-s124-'Mrtvorojen'-
+  //   starost-'-'-VLM-VRSTA-IZPUŠČENA-REŠENA!) — obe-BREZ-podpisa (r53-vzorec!)
+  // ★★ z10-PISAR-KOREKCIJA: smrt-'22'-nad-prečrtanim-'24' (1. številčna-korekcija-v-vrstici-linije!)
+  // ★ z6-bolezen-'Mrtvoud-[?]' = X-ANOMALIJA (63-let + pokop-3-dni — NI-mrtvorojen; P174-lead-'z6/z7-MRTVOROD-
+  //   ×2' POL-KOREKCIJA: samo-z7-jest!)
+  // ★ DUHOVNIKI: Gregor Cerar coop.[~] ×~30-DOMINANTA + Jos. Rauq ×~8 + 'Lausin Bitnar-[~]' = NOVI-DUHOVNIK-#16
+  //   (×5-v-1909-avg-Dec! — VLM-'Lavtin Bitenc' ZAVRJEN: B-i-t-n-a-r!) + Jos. Pintar ×1?
+  // bolezni: Naduhova ×3 + Narust ×2 + Jetika ×1 + Slabost ×2 + Pljučnica ×2 + Naduha ×1 = 0-EKZOTIČNIH
+  // (kontrast-1907-5-GLAVE-NAPAKE!); starosti-½-dne → 92-let; meseci: Jan2·Feb4·Mar2·Apr1·Maj1·Jul1·
+  //   Sep1·Nov1·Dec3 (1909) — Oktober-PRAZEN!
+  // P176 LEAD: mrliška 1910 (s126-zap1–12 ŽE-prebrani: 3-GRIBLJE-ŽE-vidnih — z3-Mihael-PEZDIREC?-h14-72-'Mrko-najden'?[~]
+  //   + z9-Marjeta-h49-66 + z10-h74-'Marija-Hanžič?'[~-VLM-'Vambič'] + s127-zap13–24-2-GRIBLJE (z13-Marija-Vötter?-h4-40-
+  //   'Altersschwäche'-NEMŠČINA! + z23-Alojzij-Kralj-h35-25-dni!); meja 1910/11 [~ s131+?])
+  {
+    houseNo: "2",
+    bookSignature: "04894",
+    year: 1909,
+    scan: 122,
+    page: 121,
+    whatSi: "umrla Barbara TOME [★★ diag-'Toma'-KOREKCIJA — max-zoom-'Tome.'-s-piko!], vdova vrškarica [~ VLM-'vrtnarica' — vrškarica-forma cf.-1906-z62 + z71-h30!], 86 LET (25. 2., pokop 27. 2.) — Naduhova; previden (1); Jos. Rauq; ★ h2 = 8. mrliški vpis (1892 + 1897-×2 + 1902 + 1904 + 1905 + 1908 + 1909!) + 2 hišna (2)",
+    whatEn: "died Barbara TOME [★★ the diag-'Toma'-CORRECTION — the max-zoom-'Tome.'-with-dot!], a widow threshing-woman [~ the VLM-'vrtnarica' — the threshing-woman-form cf.-1906-z62 + z71-h30!], 86 YEARS (Feb 25, buried Feb 27) — Naduhova (asthma); previden (1); Jos. Rauq; ★ h2 = the 8th death entry (1892 + the 1897-×2 + 1902 + 1904 + 1905 + 1908 + 1909!) + the 2 house number (2)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "15",
+    bookSignature: "04894",
+    year: 1909,
+    scan: 122,
+    page: 121,
+    whatSi: "umrla Marija JAKOFČIČ [~ max-zoom-'Jakfjič'-forma = ISTA-kot-z51-Brošt-h47! cf.-h13-cluster-Jakobuč/Jakofčič/Jakobčič + P132-'JAKOFČIČ/JAKOBČIČ-dve-pisavi'-leksikon!; VLM-'Jakše'], ½ zemljakova hči, 75 LET (23. 3., pokop 25. 3.) — Jetika; previden (1); Gregor Cerar; ★ h15 = 3. mrliški vpis (1886-Muc + 1897-JAKLIČ + 1909! = 3-priimka-hiše!) + 1 + 5 hišna (15)",
+    whatEn: "died Marija JAKOFČIČ [~ the max-zoom-'Jakfjič'-form = the-SAME-as-z51-Brošt-h47! cf.-the-h13-cluster-Jakobuč/Jakofčič/Jakobčič + the-P132-'JAKOFČIČ/JAKOBČIČ-two-spellings'-lexicon!; the VLM-'Jakše'], a half-smallholder's daughter, 75 YEARS (Mar 23, buried Mar 25) — Jetika (tuberculosis); previden (1); Gregor Cerar; ★ h15 = the 3rd death entry (the 1886-Muc + the 1897-JAKLIČ + 1909! = 3-surnames-of-the-house!) + the 1 + 5 house number (15)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "43",
+    bookSignature: "04894",
+    year: 1909,
+    scan: 122,
+    page: 121,
+    whatSi: "umrla Marija LAŠIČ [~ max-zoom-'Lasič'-s-karonom — cf.-P153-h43-1887-Matija-LAŠIČ-3!; VLM-'Lovšic'], omožena ½ zemljakinja [★★ VLM-'½-komferšinja'-ZAVRJENA — '½-zemljakinja'-jasno!], 64 LET [★★★ P174-lead-'84'-KOREKCIJA — max-zoom-'64'-jasno (KURRENT-6 = samo-spodnja-zanka, 8-bi-imel-DVE)!] (8. 4., pokop 10. 4.) — Narust; previden (1); Gregor Cerar; ★ h43 = 3. mrliški vpis (1887 + 1892 + 1909!) + 4 + 3 hišna (43)",
+    whatEn: "died Marija LAŠIČ [~ the max-zoom-'Lasič'-with-caron — cf.-the-P153-h43-1887-Matija-LAŠIČ-3!; the VLM-'Lovšic'], a married half-smallholder-woman [★★ the VLM-'½-komferšinja'-REJECTED — the '½-zemljakinja'-clear!], 64 YEARS [★★★ the P174-lead-'84'-CORRECTION — the max-zoom-'64'-clear (the KURRENT-6 = only-the-lower-loop, the-8-would-have-TWO)!] (Apr 8, buried Apr 10) — Narust (frailty); previden (1); Gregor Cerar; ★ h43 = the 3rd death entry (1887 + 1892 + 1909!) + the 4 + 3 house number (43)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "34",
+    bookSignature: "04894",
+    year: 1909,
+    scan: 122,
+    page: 121,
+    whatSi: "umrl Matija ŠILAK [★★★ max-zoom-'Šilak'-jasno (karon-nad-S!) — P174-lead-POTRJEN; VLM-'Tlak' ZAVRJEN!], ½ zemljakov sin, ½ DNE (19. 3., pokop 20. 3.) — Slabost; previden (.) [dojenček!]; Gregor Cerar; ★★★ h34-×2-v-1909-1.-del (z21-Matija-½-dne + z22-Nikolaj-2-dni = ŠILAK-DVOJČKI — P174-lead-100%!) + h34 = 5. mrliški vpis (1898 + 1899 + 1901 + 1904 + 1909!) + 3 + 4 hišna (34)",
+    whatEn: "died Matija ŠILAK [★★★ the max-zoom-'Šilak'-clear (the caron-above-S!) — the P174-lead-CONFIRMED; the VLM-'Tlak' REJECTED!], a half-smallholder's son, ½ DAY (Mar 19, buried Mar 20) — Slabost (weakness); previden (.) [an-infant!]; Gregor Cerar; ★★★ the h34-×2-in-1909-part-1 (the z21-Matija-½-day + the z22-Nikolaj-2-days = the ŠILAK-TWINS — the-P174-lead-100%!) + h34 = the 5th death entry (1898 + 1899 + 1901 + 1904 + 1909!) + the 3 + 4 house number (34)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "34",
+    bookSignature: "04894",
+    year: 1909,
+    scan: 122,
+    page: 121,
+    whatSi: "umrl Nikolaj ŠILAK [★★★ max-zoom-'Šilak'-jasno ×2 — P174-lead 100% POTRJEN!], ½ zemljakov sin, 2 DNI (21. 3., pokop 22. 3.) — Slabost; previden (.) [dojenček!]; Gregor Cerar; ★★★ h34-×2-v-1909-2.-del (z21 + z22 = DVOJČKI-2-dni-apart — PADEC-vzorec-6.-leto!) + ★ h34 = 6. mrliški vpis + NIKOLAJ-ŠILAK-ime-vez (cf.-Nikolaj-×3-1908-PERDINEC/PEZDIREC-hiše!) + 3 + 4 hišna (34)",
+    whatEn: "died Nikolaj ŠILAK [★★★ the max-zoom-'Šilak'-clear ×2 — the P174-lead-100%-CONFIRMED!], a half-smallholder's son, 2 DAYS (Mar 21, buried Mar 22) — Slabost; previden (.) [an-infant!]; Gregor Cerar; ★★★ the h34-×2-in-1909-part-2 (the z21 + the z22 = the TWINS-2-days-apart — the-DROP-pattern-6th-YEAR!) + ★ h34 = the 6th death entry + the NIKOLAJ-ŠILAK-name-link (cf.-the-Nikolaj-×3-1908-PEZDIREC-houses!) + the 3 + 4 house number (34)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "29",
+    bookSignature: "04894",
+    year: 1909,
+    scan: 123,
+    page: 122,
+    whatSi: "umrla Marija KRIŽAN [~ max-zoom-'Križan/Krišan'-ISTI-glyph-kot-z52-h86! cf.-h36-1882-poročna-Mathias-KRIŽAN + 1888-×5-krstna!; VLM-'Vržan'], kmečka delavka [~ 1.-TA-STAN-linije? cf.-X7-Notarica!], 74 LET (11. 5., pokop 13. 5.) — Naduhova; previden (1); Gregor Cerar; ★ h29 = 5. mrliški vpis (1886-×3-EPIDEMIJA + 1901 + 1909!) + 2 + 9 hišna (29)",
+    whatEn: "died Marija KRIŽAN [~ the max-zoom-'Križan/Krišan'-the-SAME-glyph-as-z52-h86! cf.-the-h36-1882-marriage-Mathias-KRIŽAN + the-1888-×5-baptisms!; the VLM-'Vržan'], a farm servant-woman [~ the-1st-SUCH-STATUS-of-the-line? cf.-X7-Notarica!], 74 YEARS (May 11, buried May 13) — Naduhova (asthma); previden (1); Gregor Cerar; ★ h29 = the 5th death entry (the 1886-×3-EPIDEMIC + 1901 + 1909!) + the 2 + 9 house number (29)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "18",
+    bookSignature: "04894",
+    year: 1909,
+    scan: 123,
+    page: 122,
+    whatSi: "umrl Peter ŠIMEC [★★★ max-zoom-'Šimec'-jasno (karon-nad-S + ŠIMEC-vez-P173!); VLM-'Lincet' ZAVRJEN!], samoski hlapec [~ 'samostanski hlapec'? — cf.-X-Notarica-leksikon!], 64 LET (1. 7., pokop 3. 7.) — Pljučnica; previden (1); Gregor Cerar; ★ h18 = 7. mrliški vpis (1890 + 1903-×2 + 1905-×2 + 1906 + 1909!) + ŠIMEC-h18-vez (cf.-h56-1886 + h55-1889/1891!) + 1 + 8 hišna (18)",
+    whatEn: "died Peter ŠIMEC [★★★ the max-zoom-'Šimec'-clear (the caron-above-S + the ŠIMEC-link-P173!); the VLM-'Lincet' REJECTED!], a [~ 'monastery lackey'? — cf.-the-X-Notarica-lexicon!] lone-lackey, 64 YEARS (Jul 1, buried Jul 3) — Pljučnica (pneumonia); previden (1); Gregor Cerar; ★ h18 = the 7th death entry (1890 + the 1903-×2 + the 1905-×2 + 1906 + 1909!) + the ŠIMEC-h18-link (cf.-the-h56-1886 + the-h55-1889/1891!) + the 1 + 8 house number (18)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "85",
+    bookSignature: "04894",
+    year: 1909,
+    scan: 124,
+    page: 123,
+    whatSi: "umrl Jožef PEZDIREC [★★★ max-zoom-'Pezdirec'-jasno (z-DESCENDER @3. črka — ISTA-forma-kot-1908-z25-h85-Jožef!; VLM-'Perdinec' ZAVRJEN — P174-KOREKCIJA-leksikon!)], ¼ zemljakov sin, 2 DNI (26. 9., pokop 28. 9.) — Slabost; previden (.) [dojenček!]; Lausin Bitnar [~ — NOVI-DUHOVNIK-#16 (1.-podpis!); VLM-'Lavtin Bitenc' ZAVRJEN!]; ★★★ h85 = 3. mrliški vpis (1891-KRIŽAN + 1908-porodna-smrt + 1909!) + ★★★ PEZDIREC-h85-vez-1908/09 (1908-Jožef-VSLED-TEŽKEGA-PORODA + 1909-Jožef-2-dni = 2-otroka-v-2-letih-ISTA-hiša!) + 8 + 5 hišna (85)",
+    whatEn: "died Jožef PEZDIREC [★★★ the max-zoom-'Pezdirec'-clear (the z-DESCENDER at-the-3rd-letter — the-SAME-form-as-the-1908-z25-h85-Jožef!; the VLM-'Perdinec' REJECTED — the P174-CORRECTION-lexicon!)], a quarter-smallholder's son, 2 DAYS (Sep 26, buried Sep 28) — Slabost; previden (.) [an-infant!]; Lausin Bitnar [~ — the NEW-PRIEST-#16 (the-1st-signature!); the VLM-'Lavtin Bitenc' REJECTED!]; ★★★ h85 = the 3rd death entry (the-1891-KRIŽAN + the-1908-childbirth-death + 1909!) + ★★★ the PEZDIREC-h85-link-1908/09 (the-1908-Jožef-FROM-A-DIFFICULT-CHILDBIRTH + the-1909-Jožef-2-days = 2-children-in-2-years-the-SAME-house!) + the 8 + 5 house number (85)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "33",
+    bookSignature: "04894",
+    year: 1909,
+    scan: 125,
+    page: 124,
+    whatSi: "umrla Marija DEBLIČ [~ max-zoom-'Deblič' — cf.-P166-1899-Matija-DEBLIČ-h33 + P118-1888-'Dehlič?'-vez!; P168-lead-'Dehlič?-h33' NASLOV-KONSISTENTEN!], vdova vrškarica, 70 LET [★★ diag-'76'-ZAVRJEN — max-zoom-'70'-jasno!] (1. 12., pokop 3. 12.) — Narust; previden (1); Lausin Bitnar [~]; ★ h33 = 6. mrliški vpis (1895 + 1899 + 1901 + 1902 + 1908 + 1909!) + DEBLIČ-vez-h33-×3 (1899 + 1902 + 1909!) + 3 + 3 hišna (33)",
+    whatEn: "died Marija DEBLIČ [~ the max-zoom-'Deblič' — cf.-the-P166-1899-Matija-DEBLIČ-h33 + the-P118-1888-'Dehlič?'-link!; the P168-lead-'Dehlič?-h33' TITLE-CONSISTENT!], a widow threshing-woman, 70 YEARS [★★ the diag-'76'-REJECTED — the max-zoom-'70'-clear!] (Dec 1, buried Dec 3) — Narust (frailty); previden (1); Lausin Bitnar [~]; ★ h33 = the 6th death entry (1895 + 1899 + 1901 + 1902 + 1908 + 1909!) + the DEBLIČ-link-h33-×3 (1899 + 1902 + 1909!) + the 3 + 3 house number (33)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "13",
+    bookSignature: "04894",
+    year: 1909,
+    scan: 125,
+    page: 124,
+    whatSi: "umrla Marija JAKOBIČ [~ max-zoom-'Jakobič/Jakobšič' — h13-CLUSTER-vez (1886-Jakobuč + 1887-Jakofčič + 1888-Jakobčič!); VLM-'Jakobič'], omožena ½ gem. gospodinja [~ 'gospodinjstva'? — cf.-h11-h31-statusi!], 59 LET (2. 12., pokop 3. 12.) — Naduha; previden (1); Lausin Bitnar [~]; ★ h13 = 4. mrliški vpis (1886 + 1887 + 1888 + 1909!) + TRI-VIRSKA-h13-nadaljevanje (1885-poročna + 1886/1887/1888 + 1909 = 5. leto!) + 1 + 3 hišna (13)",
+    whatEn: "died Marija JAKOBIČ [~ the max-zoom-'Jakobič/Jakobšič' — the h13-CLUSTER-link (the-1886-Jakobuč + the-1887-Jakofčič + the-1888-Jakobčič!); the VLM-'Jakobič'], a married [~ 'household'? — cf.-the-h11-h31-statuses!] ½-housekeeper, 59 YEARS (Dec 2, buried Dec 3) — Naduha; previden (1); Lausin Bitnar [~]; ★ h13 = the 4th death entry (1886 + 1887 + 1888 + 1909!) + the THREE-SOURCE-h13-continuation (the-1885-marriage + the-1886/1887/1888 + 1909 = the-5th-year!) + the 1 + 3 house number (13)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "86",
+    bookSignature: "04894",
+    year: 1909,
+    scan: 125,
+    page: 124,
+    whatSi: "umrla Marija KRIŽAN [~ max-zoom-ISTA-forma-kot-z25-h29! cf.-h36-1882-Mathias-KRIŽAN-mreža!; VLM-'Mišma' ZAVRJEN], omožena ½ zemljakinja, 57 LET (7. 12., pokop 8. 12.) — Pljučnica; previden (1); Lausin Bitnar [~]; ★★★ h86 = 1. MRLIŠKI VPIS KADARKOLI (korpus: 04455-1910 + 04105-1912/1913/1918 — VSE-KASNEJE! = 31.-PT-kandidat!) + ★★ KRIŽAN-×2-v-1909 (z25-h29-74-let + z52-h86-57-let = 2-različni-Mariji-KRIŽAN-v-1-letu — cf.-h87-1894/1895-istoimeški-par!) + 8 + 6 hišna (86)",
+    whatEn: "died Marija KRIŽAN [~ the max-zoom-the-SAME-form-as-z25-h29! cf.-the-h36-1882-Mathias-KRIŽAN-network!; the VLM-'Mišma' REJECTED], a married half-smallholder-woman, 57 YEARS (Dec 7, buried Dec 8) — Pljučnica (pneumonia); previden (1); Lausin Bitnar [~]; ★★★ h86 = the 1st DEATH ENTRY EVER (the-corpus: the-04455-1910 + the-04105-1912/1913/1918 — ALL-LATER! = the-31st-PT-candidate!) + ★★ the KRIŽAN-×2-in-1909 (the-z25-h29-74-years + the-z52-h86-57-years = 2-different-Marija-KRIŽAN-in-1-year — cf.-the-h87-1894/1895-namesake-pair!) + the 8 + 6 house number (86)",
     status: "DOCUMENTED",
   },
 

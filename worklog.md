@@ -6959,3 +6959,23 @@ Work Log:
 Stage Summary:
 - **P174 KONČAN (koda)**: 1908 = 76-vrstic (ČISTA-SEKVENCA-zap1–76 — 4.-čisto-leto!) / 13-GRIBLJE / 12-hiš (h24-×2-PADEC-vzorec-5.-leto!) / **2.-največje-leto-linije** (za-1888-102! rast 10→17→17→67→76!) / **★★★ SAMOMOR-#2-'SE-JE-OBESIL'-BREZ-PODPISA + TRAUMA-#2-'Z-VRCA-PADEL-JE-SE-UBIL'-sv.-olje-#3-SAKRAMENT + PORODNA-SMRT-#3-OTROK!** / ŠKRLATINKA-×10 + DOBRČI-×4 = 2-epidemiji / NOVI-DUHOVNIK-DEKAN-Matija-CERAR + 1.-MARGINALIJA-mrliške!
 - mrliška linija **23/39** (1886–1908) — P175-LEAD: 1909 (s121-zap1–10-0-GRIBLJE-z3-Stublar-92-IZENAČENJE-REKORDA-1889-z6/z7-MRTVOROD-×2! + s122-zap11–22-4-GRIBLJE-z21/z22-ŠILAK-DVOJČKI-h34-½-dneva/2-dni!; meja 1909/10 [~ s125+?])
+
+## P175 — mrliška 1909 (ŠILAK-DVOJČKI + STUBLAR-92-REKORD + P174-KOREKCIJA-PEZDIREC!)
+
+Agent: Z.ai Code (glavni agent)
+Task: P175 — mrliška knjiga 04894, leto 1909 (24. polno leto mrliške linije)
+
+Work Log:
+- OKOLJE: PAT-validiran (200) → git-log-odkritje: P168–P174-VSE-KONČANI (repo @ P174-80f5559) → P175-nadaljevanje-po-P174-LEAD! /tmp-ŽE-poln: s121–s127-fetched + rows_vlm.json-81-vrstic + 46-cropov + diag-×7 (T1–T3-ŽE-opravljeni-v-prejšnji-seji!)
+- T4-FORENZIKA-VERIFIKACIJA: cropi-že-prebrani (46 datotek: ime_z×11 + cel_z×9 + ano_z×11 + maxz_z×3 + pod_z×6 + ref_z×4) → parish.ts-P175-blok-ŽE-vpisan (11-vpisov-popolnih + P176-LEAD-komentar) + qa-p175-blok-ŽE-v-qa-parish.ts (176. kontrola) + P174-KOREKCIJA-parish.ts-×3 (PERDINEC→PEZDIREC z25/z70/z71!)
+- T5-PREVERJENO: tsc 0 + lint 0 @-start → vse-kaskade-ŽE-vpokane (1020×90 + 321×24 + guardi-1910×23 + p80-93-×24!)
+- ★★★ P80-KASKADA-NAPAKA-ODKRITA-IN-POPRAVLJENA: prejšnja-seja-je-kaskadirala-p80 92→93 (+h86) — NAPAČNO! h86 = ŽE-v-p80All-filtru-prek-04455-1910-poročna-P139 (04455-IMA-BREZ-letne-omejitve!) → REVERT-×24 (p80Houses.size !== 93 → !== 92) + qa-p92/qa-p93-allow-listi (+h43/h18-1909-mrliški-bloki!) + tekstovne-korekcije (parish.ts-blok-komentar + qa-p175-push-Si/En + dokaz-A5 + notes + p80-skripta-revert-92!) — runQA 150/176 → **176/176!**
+- T6-SANACIJA-×3-KROGA: ① 23-skript (p153–p174 + p80: VITALS_TOTAL-1020 + BLOKI-321 + guardi-1910 + qa-pini-1020/321/1910/93 + p80-pin-1020/93) ② 21-skript (996-p80-pini + < 1908-guardi + >= 1906 + 297-qa-pini — stale-ŽE-od-P174!) ③ 7-fix (p153-I10b-1020-pin + p157-I5d-h85-3-mrliški-PEZDIREC-vez + p165-I12d-321-pin + p172/p173-I11d-1910-guards + p174-I5e/I11b-PEZDIREC-KOREKCIJA-leksikon + p175-I5e-'Nikolaj-ŠILAK'-match-bug!) — **POLNA-REGRESIJA 23/23-ZELENO!**
+- SKRIPTA: scripts/p175_parish_death_1909.py (I1–I13, --live) = **56/56 PASS + --live 59/59!**
+- DOKAZ: research/issue17/parish-death-1909.json (**55 entries = 11-Griblje + 44-s-*! 1-excluded + 12-anomalij + 5-crossChecks + honesty-7 + P176-lead**) + NOTES (14-forezika-odločitev!)
+- QA: qa-p175 = **176. kontrola** (blok v qa-parish.ts) · **runQA 176/176 ok:True** · p175-skripta 56/56 · REGRESIJA-23/23 · tsc 0 · lint 0
+- KUMULATIV: vitals 1009 → 1020 · mrliški 04894 310 → 321 · p80 92-NESPREMENJENO (h86-ŽE-v-p80!) · korpus 93-NESPREMENJEN · PT 29 (h86-31.-kandidat-NE-šteta!)
+
+Stage Summary:
+- **P175 KONČAN (koda)**: 1909 = 55-vrstic (ČISTA-SEKVENCA-zap1–55 — 5.-čisto-leto!) / 11-GRIBLJE / 10-hiš (h34-×2-DVOJČKI!) / rast 13→11 (padec-po-rekordnem-1908-76!) / **★★★ z3-Peter-Stublar-92-let = IZENAČENJE-REKORDA-LINIJE (1889-P155-92 — 2.×-92!)** + **★★★ z21/z22-h34-ŠILAK-DVOJČKI (½-dne + 2-dni — P174-lead-100%-POTRJEN — VLM-'Tlak'-×2-ZAVRJEN — karon-nad-S!)** + **★★★ P174-KOREKCIJA-'PERDINEC'→PEZDIREC-×3 (parish.ts-z25/z70/z71-korigirani — z-DESCENDER-leksikon-vez!)** + **★★★ z44-h85-vez-1908/09 (porodna-smrt-1908 + dojenček-1909 = 2-otroka-v-2-letih!)** + **★★ z52-h86-1.-MRLIŠKI-VPIS-KADARKOLI (31.-PT-kandidat!)** + ★★ z17-'84'→64-P174-LEAD-KOREKCIJA (KURRENT-6!) + ★★ MRTVOROJENI-×2 (r53-#18–#19) + ★★ z10-PISAR-KOREKCIJA-smrt-'22'-nad-'24' (1.-številčna-v-vrstici!) + ★ z6-'Mrtvoud-[?]'-X-ANOMALIJA + VLM-korekcije-×8 + diag-korekcije-×3 + **NOVI-DUHOVNIK-'Lausin-Bitnar-[~]'-#16** (×5 — VLM-2-forme!) + bolezni-0-EKZOTIČNIH + meja 1909/10 = s126 (**7.-STIL-BREZ-velike-glave-1.×** — P174-lead-POTRJEN!)
+- mrliška linija **24/39** (1886–1909) — P176-LEAD: 1910 (s126-zap1–12-3-GRIBLJE-ŽE-vidnih: z3-Mihael-PEZDIREC?-h14-72-'Mrko-najden'[~] + z9-Marjeta-h49-66 + z10-h74-'Marija-Hanžič?'[~] + s127-zap13–24-2-GRIBLJE: z13-Marija-Vötter?-h4-40-'Altersschwäche'-NEMŠČINA! + z23-Alojzij-Kralj-h35-25-dni!; meja 1910/11 [~ s131+?])

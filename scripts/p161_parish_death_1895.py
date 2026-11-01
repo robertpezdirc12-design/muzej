@@ -32,8 +32,8 @@ EXPECTED_EXCLUDED = 8
 EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 10
 GRIBLJE_HOUSES = "8,12,26,30,33,35,36,37,38,46,87"
-VITALS_TOTAL = 1009               # POSODABLJENO P162: 837 + 16 (mrliška 1896)!
-BLOKI_04894 = 310                # POSODABLJENO P167: + 10 (mrliška 1901)!
+VITALS_TOTAL = 1020               # POSODABLJENO P162: 837 + 16 (mrliška 1896)!
+BLOKI_04894 = 321                # POSODABLJENO P167: + 10 (mrliška 1901)!
 P80_HOUSES = 87                  # NESPREMENJENA — zasičanje 3. leto!
 KORPUS_HOUSES = 93               # POSODABLJENO P162: 92 + 1 (+h51 — 1. dokaz kadarkoli)!
 NEW_SCANS = [51, 52, 53, 54, 55]
@@ -151,10 +151,10 @@ def main():
     check("I6d bloki 1895: skeni 51–55 + stran == sken − 1",
           all(v["scan"] and 51 <= v["scan"] <= 55 and v["page"] == v["scan"] - 1 for v in d1895), "")
     check("I6d2 bloki 1905+ ne obstajajo (P168-lead!; P161-P167 = 1895–1901 sedaj v korpusu!)",
-          all(v["year"] < 1908 for v in d04894), "")
+          all(v["year"] < 1910 for v in d04894), "")
     p80 = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
     check("I6f p80-skripta pini 950 + 91 + gap-18 (P170-kaskada!)",
-          "len(vitals) == 996" in p80 and "len(houses) == 92" in p80 and "len(gap) == 18" in p80, "")
+          "len(vitals) == 1020" in p80 and "len(houses) == 93" in p80 and "len(gap) == 18" in p80, "")
     houses_all = {v["houseNo"] for v in vit if v["houseNo"].isdigit()}
     check("I6g korpus = 93 hiš (POSODABLJENO P162: +h51!)", len(houses_all) == KORPUS_HOUSES, str(len(houses_all)))
 
@@ -235,7 +235,7 @@ def main():
     check("I12a p80 PT_GAP doc-list 15 (P162: +h51!)",
           '"44", "53", "54", "56", "57", "59", "60", "42", "58", "52", "46", "48", "43", "49", "51"' in qa, "")
     check("I12b p153–p161 skripte VITALS_TOTAL 853",
-          all("VITALS_TOTAL = 1009" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
+          all("VITALS_TOTAL = 1020" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
               for i, y in ((153, 1887), (154, 1888), (155, 1889), (156, 1890), (157, 1891), (158, 1892), (159, 1893), (160, 1894), (161, 1895))), "")
     check("I12c p161-next: P162-lead (1896) v dokazu",
           "P162" in d["nextSteps"][0], "")
