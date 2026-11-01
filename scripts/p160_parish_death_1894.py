@@ -34,8 +34,8 @@ EXPECTED_EXCLUDED = 8
 EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 10
 GRIBLJE_HOUSES = "24,35,49,57,72,87"
-VITALS_TOTAL = 996               # POSODABLJENO P162: 837 + 16 (mrliška 1896)!
-BLOKI_04894 = 297                # POSODABLJENO P167: + 10 (mrliška 1901)!
+VITALS_TOTAL = 1009               # POSODABLJENO P162: 837 + 16 (mrliška 1896)!
+BLOKI_04894 = 310                # POSODABLJENO P167: + 10 (mrliška 1901)!
 P80_HOUSES = 87                  # 86 → 87 (+h49 EDINA — mrliška-1894; 04105-izven-filtra — 17. PT-luknja-dokaz!)
 KORPUS_HOUSES = 93               # POSODABLJENO P162: 92 + 1 (+h51 — 1. dokaz kadarkoli)!
 NEW_SCANS = [47, 48, 49, 50, 51]
@@ -245,7 +245,7 @@ def main():
     qa = open(QA_TS, encoding="utf-8").read()
     check("I12 qa-p160 sekcija (161. kontrola)", "qa-p160-parish-death-1894" in qa, "")
     check("I12b qa-pini 950/251 (P170-kaskada!)",
-          qa.count("!== 996") >= 78 and qa.count("!== 297") >= 12,
+          qa.count("!== 1009") >= 78 and qa.count("!== 310") >= 12,
           f"{qa.count('!== 976')}/{qa.count('!== 277')}")
     check("I12c qa guard 1895 (bloki 1895+ ne!)", "1908+-mrliški bloki že v korpusu" in qa, "")
     par = open(PARISH_TS, encoding="utf-8").read()

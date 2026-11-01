@@ -31,8 +31,8 @@ EXPECTED_EXCLUDED = 10           # skupine vrstic izven Gribelj + marker + 1890-
 EXPECTED_ANOMALIES = 8
 EXPECTED_CROSSCHECKS = 10
 GRIBLJE_HOUSES = "5,30,48,53,55,65,69,83"
-VITALS_TOTAL = 996               # POSODABLJENO P162: 837 + 16 (mrliška 1896)!
-BLOKI_04894 = 297                # POSODABLJENO P167: + 10 (mrliška 1901)!
+VITALS_TOTAL = 1009               # POSODABLJENO P162: 837 + 16 (mrliška 1896)!
+BLOKI_04894 = 310                # POSODABLJENO P167: + 10 (mrliška 1901)!
 P80_HOUSES = 79                  # NESPREMENJENO (0 novih!)
 NEW_SCANS = [21, 22, 23, 24]
 

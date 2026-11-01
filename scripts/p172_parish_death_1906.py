@@ -32,8 +32,8 @@ EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 5
 GRIBLJE_HOUSES = "18,19,20,39,44,49,57,58,77"
 GRIBLJE_ZAPS = [1, 6, 16, 21, 23, 29, 34, 35, 48, 54]
-VITALS_TOTAL = 996               # 966 + 10!
-BLOKI_04894 = 297                # 267 + 10!
+VITALS_TOTAL = 1009               # 966 + 10!
+BLOKI_04894 = 310                # 267 + 10!
 P80_HOUSES = 92                  # NESPREMENJENO (h39/h77-ŽE-v-p80!)
 KORPUS_HOUSES = 93               # NESPREMENJENO
 NEW_SCANS = [105, 106, 107, 108]  # s104-reuse (P171-lead-diag!)
@@ -264,10 +264,10 @@ def main():
     qa = open(QA_TS, encoding="utf-8").read()
     check("I10a qa-p172 = 173. kontrola", "qa-p172-parish-death-1906" in qa, "")
     check("I10b qa-parish pini 976 + 277 (P172-kaskada!)",
-          qa.count("!== 996") == 88 and qa.count("!== 297") == 22,
+          qa.count("!== 1009") == 88 and qa.count("!== 310") == 22,
           f"976×{qa.count('!== 976')}/277×{qa.count('!== 277')}")
     check("I10c qa-parish guardi ≥1907 (20× — P172-kaskada!)",
-          qa.count(">= 1908") == 21, f"{qa.count('>= 1907')}")
+          qa.count(">= 1909") == 21, f"{qa.count('>= 1907')}")
     check("I10d qa-p171-govori-P172-LEAD (1906-BRINEC-PEZDIREC!)",
           "P172-LEAD" in qa and "1906" in qa, "")
 

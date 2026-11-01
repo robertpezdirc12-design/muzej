@@ -37,8 +37,8 @@ EXPECTED_EXCLUDED = 8
 EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 5
 GRIBLJE_HOUSES = "2,11,16,23,25,26,33,36,38,40,52,57,65,66,72,72,90"
-VITALS_TOTAL = 996               # 904 + 17!
-BLOKI_04894 = 297                # 205 + 17!
+VITALS_TOTAL = 1009               # 904 + 17!
+BLOKI_04894 = 310                # 205 + 17!
 P80_HOUSES = 90                  # 89 + h66 (h40 ŽE-v-04455!)
 KORPUS_HOUSES = 93               # NESPREMENJENO (h66/h40 že v korpusu!)
 NEW_SCANS = [86, 87, 88, 89, 90]
@@ -244,10 +244,10 @@ def main():
     qa = open(QA_TS, encoding="utf-8").read()
     check("I10a qa-p168 = 169. kontrola", "qa-p168-parish-death-1902" in qa, "")
     check("I10b qa-pini 950/251/91 (82×+16×+20×)",
-          qa.count("!== 996") >= 80 and qa.count("!== 297") >= 15 and qa.count("p80Houses.size !== 92") >= 18,
+          qa.count("!== 1009") >= 80 and qa.count("!== 310") >= 15 and qa.count("p80Houses.size !== 92") >= 18,
           f"{qa.count('!== 976')}/{qa.count('!== 277')}/{qa.count('p80Houses.size !== 92')}")
     check("I10c qa guard 1908 (bloki 1908+ ne!)",
-          "1908+-mrliški bloki že v korpusu" in qa and "(h.year ?? 0) >= 1908" in qa, "")
+          "1908+-mrliški bloki že v korpusu" in qa and "(h.year ?? 0) >= 1909" in qa, "")
     check("I10d P80_PT_GAP doc-list 15 (NESPREMENJENO!)",
           '"49", "51"' in qa and "p80Gap.length !== 15" in qa, "")
     check("I10e stale-guardi → 1908 (20× qa)",
@@ -266,7 +266,7 @@ def main():
 
     # ---------- I12: kaskada ----------
     check("I12a p153–p167 skripte VITALS_TOTAL 938",
-          all("VITALS_TOTAL = 996" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
+          all("VITALS_TOTAL = 1009" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
               for i, y in ((153, 1887), (154, 1888), (155, 1889), (156, 1890), (157, 1891), (158, 1892), (159, 1893), (160, 1894), (161, 1895), (162, 1896), (163, 1897), (164, 1898), (165, 1899), (166, 1900), (167, 1901))), "")
     check("I12b p80 PT_GAP_HOUSES komentar (P167: korpus-NESPREMENJEN!)",
           "+ 51 (mrliška 04894-1896" in p80, "")

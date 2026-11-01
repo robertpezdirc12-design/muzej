@@ -36,8 +36,8 @@ EXPECTED_EXCLUDED = 9
 EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 10
 GRIBLJE_HOUSES = "9,14,20,26,31,41,42,45,46,51,58,63,64"
-VITALS_TOTAL = 996               # 837 + 16!
-BLOKI_04894 = 297                # POSODABLJENO P167: + 10 (mrliška 1901)!
+VITALS_TOTAL = 1009               # 837 + 16!
+BLOKI_04894 = 310                # POSODABLJENO P167: + 10 (mrliška 1901)!
 P80_HOUSES = 88                  # 87 + h51 (EDINA NOVA — 1. dokaz kadarkoli!)!
 KORPUS_HOUSES = 93               # 92 + h51!
 NEW_SCANS = [55, 56, 57, 58, 59, 60]
@@ -234,10 +234,10 @@ def main():
     qa = open(QA_TS, encoding="utf-8").read()
     check("I10a qa-p162 = 163. kontrola", "qa-p162-parish-death-1896" in qa, "")
     check("I10b qa-pini 950/251/91 (P170-kaskada!)",
-          qa.count("!== 996") >= 60 and qa.count("!== 297") >= 12 and qa.count("p80Houses.size !== 92") >= 12,
+          qa.count("!== 1009") >= 60 and qa.count("!== 310") >= 12 and qa.count("p80Houses.size !== 92") >= 12,
           f"{qa.count('!== 853')}/{qa.count('!== 154')}/{qa.count('p80Houses.size !== 90')}")
     check("I10c qa guard 1908 (bloki 1908+ ne!)",
-          "1908+-mrliški bloki že v korpusu" in qa and "(h.year ?? 0) >= 1908" in qa, "")
+          "1908+-mrliški bloki že v korpusu" in qa and "(h.year ?? 0) >= 1909" in qa, "")
     check("I10d P80_PT_GAP doc-list 15 (+h51 = 16. hiša luknje!)",
           '"49", "51"' in qa and "p80Gap.length !== 15" in qa, "")
     check("I10e stale-guardi → 1908 (20× qa)",
@@ -255,7 +255,7 @@ def main():
 
     # ---------- I12: kaskada ----------
     check("I12a p153–p162 skripte VITALS_TOTAL 866",
-          all("VITALS_TOTAL = 996" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
+          all("VITALS_TOTAL = 1009" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
               for i, y in ((153, 1887), (154, 1888), (155, 1889), (156, 1890), (157, 1891), (158, 1892), (159, 1893), (160, 1894), (161, 1895), (162, 1896))), "")
     check("I12b p80 PT_GAP_HOUSES + 51 (18. luknja-dokaz)",
           '"51" in p80 or \'51\' in p80' and '"51", "52"' in p80.replace('", "', '", "'), "")

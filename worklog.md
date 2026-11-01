@@ -6930,3 +6930,32 @@ Work Log:
 Stage Summary:
 - **P173 KONČAN (koda)**: 1907 = 67 vrstic (ČISTA-SEKVENCA-BREZ-predorov!) / **20 GRIBLJE = NOV REKORD LINIJE** (rast 17→16→16→10→**20**!) / 18 hiš (h49-×2 + h10-×2 = PADEC-vzorec-4.-leto!) / **3 PISAR-DATUM-NAPAKE = 1.-TIPO-V-LINIJI** (29.-Feb + 31.-Sept-×2!) / 5-GLAVE-NAPAKE = REKORD-IZENAČEN-3.× (s111-'181904'-NAPAČNO-LETO!) / **NOVI-DUHOVNIK-LILEK-'župnik-v.p.'** + Nemaniš + Guido-KRUSCH-layman + CERAR-DOMINANTA!
 - mrliška linija **22/39** (1886–1907) — P174-LEAD: 1908 (s114-zap1–3 + s115-zap4–15 + s116-zap16–27: 4-GRIBLJE-ŽE-vidnih! — z10-h42-Doroteja-PEZDIREC-81 = era-nadaljevanje!; meja 1908/09 [~ s119+?])
+
+## P174 — mrliška 1908 (SAMOMOR-#2 + TRAUMA + PORODNA-SMRT-#3!)
+
+Agent: Z.ai Code (glavni agent)
+Task: P174 — mrliška knjiga 04894, leto 1908 (23. polno leto mrliške linije)
+
+Work Log:
+- OKOLJE: PAT-validiran (200) → git-log-odkritje: **P168–P173-VSE-KONČANI (repo @ P173-9420a65, produkcija-174/174)** → P174-nadaljevanje-po-P173-LEAD! SANACIJA: /home/z/muzej-izgubljen (sandbox-reset) → svež-klon-iz-GitHub @ P173 + bun-install (508-paketov)
+- T1-FETCH: s114–s120 (matricula 04894, inventar-256 ✓; p153_fetch-recept) → /tmp/p174 + DOPOLNILO s121/s122 (meja-1908/09-NI-na-s119/s120 — 1908-teče-naprej!) = 9-skenov
+- T2-VLM: p174_read_page.mjs (4-serije-≤2-skena-foreground) = 9/9-OK (s114-retry-1: JSON-unterminated→poskus-2!) — 76-vrstic-1908-preliminarno
+- T3-ROWS+DIAG: p174_diag.py (fiksni-grid-330–1950/135px — rows-v3-FAIL-3.-leto-lekcija!) → **diag-vizualna-zaslona ×9-skenov-z-Read-očmi** (s114–s122-polno-prebrani!) → **MEJA-1908/09 = s121** (velika-'1909.'-BREZ-podčrtanja + PIKA + prazna-vrsta-R1 + restart-76→1 = 16.-POTRDITEV — P173-lead-'[~ s119+?]'-KOREKCIJA-→-s121! VLM-mislil-'1908'!) + s122-'Januar'-z11 = VLM-NAPAKA (FEBRUAR-kontinuiteta!)
+- T4-FORENZIKA: p174_crops.py (105-datotek: 13-trakov-×2.2 + ~35-celic-×3.0 + 9-glav + meja + Dobrei-kompozit-×4 + 2-podpisa) → Read-oči ×3-kroga:
+  - ★★★ z47 = 'Peter-HROVAT'-'SE-JE-OBESIL'-jasno = **SAMOMOR-2.-V-LINIJI** (1892-h9-Janez-53-let-1.! — 16-LETNI-LOK!) + **PODPIS-'—'-pri-samomoru!** (VLM-'Afanas'-ZAVRJENA!)
+  - ★★★ z57 = 'Z-VRCA-PADEL-JE-SE-UBIL' = **2.-TRAUMA-SMRT** + **'sv.-olje'-v-previden-stolpcu = 3.-IZPISANI-SAKRAMENT-linije!**
+  - ★★★ z25 = 'VSLED-TEŽKEGA-PORODA' = **PORODNA-SMRT-#3** (1888-×2-MATERI → 1908-OTROK!) + starost-PRAZNA + rdeči-✓
+  - ★★★ z10-starost = **'51'-jasno** (P173-LEAD-'81'-KOREKCIJA! max-zoom-'5'-odprta ≠ '8'-zapeta!) + z42 = 'Anton-BRINEC' (VLM-'Alojz-Ožinger'-ZAVRJENA — P173-patroN!) + z67/z70/z71 = 'PERDINEC'-×3 (VLM-'Pečnik'-ZAVRJENA!) + z72 = 'ŠTRUCELJ' (VLM-'Špancej'! + **smrt-celica-IZBRISANA = edina-1908-brez-datuma!**) + z74 = 'HRALJ' (VLM-'Wolf'!) + z50 = 'Katarina-ŽUGELJ' (VLM-'Kalevina'!) + z26 = 'JULIJ' + z60 = 'BOŽMAN' + z16 = 'MARJETA' + z28 = VLM-VRSTA-IZPUŠČENA-diag-rešena-'ŽMIDARŠIČ[~]'
+  - ★★ z4-podpis = **'G. g. Matija-CERAR-DEKAN' = NOV-DUHOVNIK-#15** + **OPOMBA-marginalija-'Matijo-Sogozor?-župn.-per-vic-[?]'-ZA-HRBTOM-knjige (1.-marginalija-mrliške!)**
+  - ★★ h64-hiša = **'24'-PRAV** (diag-'34'-NAPAČNA — KURRENT-2/3: zapeta-2-≠-odprta-3!) = **h24-×2-v-1908-PADEC-vzorec-5.-leto** (z16-BRINEC + z64-JURJEVIČ!)
+  - ŠKRLATINKA-EPIDEMIJA ×10 (Jun–Sep-vsi-≤6-let!) + **SMUK-SIBLI-1-DAN-APART** (z40-Rudolf-5 + z41-Ana-3-h11-Mlače!) + DOBRČI-[~]-×4-epidemija (Sep–Okt!) + BOŽJAST-×2 + z31-MRTVOROJEN-'J.-Vošman'-vas-'Zorit-[?]'-BREZ-PODPISA (r53-vzorec!) + prazne-starosti-×4 + z76-'1-LETO' (diag-'4'-KOREKCIJA!) + z18-'43' + z46-'64'
+- T5-parish.ts: P174-blok-komentar (25-vrstic) + 13-vpisov (z10–z75; h24-×2!) + P175-LEAD
+- KASKADA: qa-parish.ts 996→1009 (×89!) + 297→310 (×23!) + guardi-1909 (×22!) + izjemi-p85-h30/p90-h20 (04894-1908-bloki!) + p80-skripta-1009/92 + stale-sanacija-p153–p173-×21-skript (VITALS_TOTAL-1009 + BLOKI-310 + guardi-1909) — VSE-0-FAIL!
+- SKRIPTA: scripts/p174_parish_death_1908.py (I1–I13, --live) = **54/54 PASS + --live 57/57!**
+- DOKAZ: research/issue17/parish-death-1908.json (**76 entries = 13-Griblje + 63-s-***! 2 excluded + 14 anomalij + 5 crossChecks + honesty 6 + P175-lead) + NOTES
+- QA: qa-p174 = **175. kontrola** (blok v qa-parish.ts) · **runQA 175/175 ok:True** (lokalno-3001!) · p174-skripta 54/54 · tsc 0 · lint 0
+- KUMULATIV: vitals 996 → 1009 · mrliški 04894 297 → 310 · p80 92 NESPREMENJENE (vseh-12-hiš-ŽE-v-p80!) · korpus 93 NESPREMENJEN · PT 29 (0-novih-kandidatov!)
+
+Stage Summary:
+- **P174 KONČAN (koda)**: 1908 = 76-vrstic (ČISTA-SEKVENCA-zap1–76 — 4.-čisto-leto!) / 13-GRIBLJE / 12-hiš (h24-×2-PADEC-vzorec-5.-leto!) / **2.-največje-leto-linije** (za-1888-102! rast 10→17→17→67→76!) / **★★★ SAMOMOR-#2-'SE-JE-OBESIL'-BREZ-PODPISA + TRAUMA-#2-'Z-VRCA-PADEL-JE-SE-UBIL'-sv.-olje-#3-SAKRAMENT + PORODNA-SMRT-#3-OTROK!** / ŠKRLATINKA-×10 + DOBRČI-×4 = 2-epidemiji / NOVI-DUHOVNIK-DEKAN-Matija-CERAR + 1.-MARGINALIJA-mrliške!
+- mrliška linija **23/39** (1886–1908) — P175-LEAD: 1909 (s121-zap1–10-0-GRIBLJE-z3-Stublar-92-IZENAČENJE-REKORDA-1889-z6/z7-MRTVOROD-×2! + s122-zap11–22-4-GRIBLJE-z21/z22-ŠILAK-DVOJČKI-h34-½-dneva/2-dni!; meja 1909/10 [~ s125+?])
