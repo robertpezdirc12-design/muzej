@@ -3397,6 +3397,249 @@ export const HOUSE_VITALS: HouseVital[] = [
     status: "DOCUMENTED",
   },
 
+  // ——— P173: mrliška 1907 (04894, skeni 109–114 == str. 108–113; 67 oštevilčenih
+  // vrstic zap1–67 = 67 VPISOV, ČISTA-SEKVENCA-BREZ-predorov: s109 (1–11;
+  // P172-meja-lead!) + s110 (12–23) + s111 (24–35) + s112 (36–47) + s113 (48–59)
+  // + s114 (60–67); meja 1907/08 = s114 (velika-'1908'-PODČRTANA + Januarij +
+  // restart 67→1 + glava-'181907' = 6. STIL 15. POTRDITEV — VIZUALNO-diag!
+  // P172-lead-'[~ s113+?]'-KOREKCIJA-→-s114!) —
+  // 20 GRIBLJE = **NOV REKORD LINIJE** (rast 17→16→16→10→20!; 18 hiš!)
+  // + ★★★ 3 PISAR-DATUM-NAPAKE = 1.-TIPO-V-LINIJI (NE-MOŽNI-datumi!): z18-'29.'
+  // Februarij-1907 (NE-PRESTOPNO-leto!) + z55-'31.-September' + z56-'31.-September'
+  // (September-ima-30-dni-×2 = pisar-javni-koledar-napake-batch!) + ★★★ 5
+  // GLAVE-NAPAKE = REKORD-IZENAČEN-3.× (P170-5 + P172-5 + P173-5!): s109-'181907'
+  // + s111-'181904'-**NAPAČNO-LETO-NOV-VZOREC** (4-za-7!) + s112-'18'-NEKOMPLETNA
+  // (2.-v-liniji-po-P171-s101!) + s113-'181907.' + s114-'181907' + ★★★
+  // P172-'BRINEC-PAR-vez'-KOREKCIJA: 1907-z1 = Anton-BRODARIČ (NE-BRINEC!
+  // kompozit-×4-ista-glyph-forma-kot-z57!) — h49-vez-ostaja (2-zaporedna-Januarja
+  // -66-let-vdova/vdovec — priimka-RAZLIČNA!) + ★★ h75 + h10 = 2-NOVI-MRLIŠKI-HIŠI
+  // (1.-MRLIŠKI-VPIS-KADARKOLI-×2!) + ★ h49-×2 + h10-×2-v-1-letu (PADEC-vzorec
+  // -4.-leto: 1904-h18 + 1905-h18/h27 + 1906-h58 + 1907-h49/h10!) + ★ h65 =
+  // 8.-vpis-IZENAČUJE-REKORDISTKO-h58 (8×-1906!) + ★★ VLM-korekcije-imen-×13
+  // (z4-'Hleu'→MUC! + z9-'pri-Jovanek/POVH'→roj.-NOVAK! + z13-'Veliko'→ŽELJKO!
+  // + z57-'h40'→h49! + z58-'Ogrince'→BRINEC! + z63-'Vrhnar'→BRINEC! +
+  // z18-'Udoh'→URH! + z55-'Kroše'→KRIŽE! + z39-'Mlek'→MILEK! + z27-'Šimec'→
+  // ŠTRMEC[~] + z32-'Kumič'→ŽUNIČ[~] + z11-'Pošek/Drišek'→POČEK[~] + z2-'Veljko'→
+  // ŽELJKO[~]) + ★★ VLM-bolezen-korekcije-×4 ('Maščef'/'Kaicij'/'Kasek'/'Kaikel'→
+  // KAŠEL — z2/z11/z13/z32/z39!) + ★ NOVI-DUHOVNIK-Jos.-LILEK-'župnik-v.p.'
+  // (×4-5-podpisov — 0-pred-1907!) + Martin-NEMANIŠ-×1 + Guido-KRUSCH-layman-
+  // signature-×1 (z42-'za-župnika'+Krusch+rola[?]-ANOMALIJA!) + Gregor-CERAR-
+  // kaplan-DOMINANTA-×~14 (znan-iz-krstne-1908+ — 1.-mrliški-podpisi!) +
+  // GENETSKE-VEZE: h91 = MUC-×-KURE (krstna-1895/1902/1904/1908 — z4-MUC!) +
+  // h60 = ŽELJKO-×-Brodarič (krstna-1888–1906 — z13-ŽELJKO!) + h52 = PEZDIREC
+  // (krstna-1898/1908 — z9-vdova-po-Janezu-Pezdircu!) + h65 = MILEK-1886-poročna!
+  // + h14 = BRINEC-krstna! + h49-BRODARIČ-mreža (1899-poročna-Nikolaj-×-Marjeta-
+  // Milek + 1900-Marija-BRODARIČ!) + Mrtvorojenec-×1 (s111-z35-Otok-h10-brez-
+  // podpisa!) + DVOJČKI-Krasinec-h18-×2-1-dan (z44-Martin + z45-Majeta-Čupanič[~]!)
+  // + BRINEC-×3-v-1907 (z58-h25 + z63/z65-h10!) + ŠIMEC-roj.-×2 (z37 + z56!)
+  // + ŽELJKO-vez-h1+h60 + P174-LEAD: 1908 zap1–3 ŽE-prebrani (s114-restart:
+  // z1-Dobravice-h25-Martin-Plut-vrškar-in-vdovec + z2-Gradac-h47-Frano-Schweiger
+  // + z3-Krivoglavce-h29-Janez-Muc = 0-GRIBLJE-v-zap1–3!) + s115-zap4–15 (z10-
+  // GRIBLJE-h42-Doroteja-PEZDIREC-81-let-Jan = h42-PEZDIREC-nadaljevanje!) +
+  // s116-zap16–27 (z16-GRIBLJE-h24-Majeta-Binec-11-let + z20-GRIBLJE-h3-Ana-
+  // Papič-85 + z25-GRIBLJE-h85-Jožef-Perdinec = 4-GRIBLJE-ŽE-vidnih; meja
+  // 1908/09 [~ s119+?]).
+  {
+    houseNo: "49",
+    bookSignature: "04894",
+    year: 1907,
+    scan: 109,
+    page: 108,
+    whatSi: "umrl Anton BRODARIČ [★★★ P172-'BRINEC-PAR-vez'-KOREKCIJA — kompozit-×4-'Brodarič'-jasno + ISTA-glyph-forma-kot-z57-Nikolaj-BRODARIČ!], vdovec vrškar [~ 'vdovec-in-vrškar' — vrškarica-forma-potrjena-1906-z62!], 66 LET (1. 1., pokop 3. 1. — Januarij-podčrtan + velika-'1907.'!) — Nadruka [~ VLM-'Naduha' — kompozit-K-jasno cf.-P172-Nadruka!]; previden (1); St. Florijana FLORJANČIČ cap. [#14?]; ★★★ h49 = 4. mrliški vpis (1894 + 1900 + 1906 + 1907!) + h49-×2-v-1-letu-1907 (z1-Anton-66-Jan + z57-Nikolaj-18-dni-Nov!) + ★★★ h49-vez-1906/07-REŠE-NA-NOVO (1906-Ana-BRINEC-66-vdova-Jan + 1907-Anton-BRODARIČ-66-vdovec-Jan = 2-zaporedna-Januarja-66-let — priimka-RAZLIČNA — P172-'PAR-vez'-ZAVRJENA!) + BRODARIČ-h49-mreža (1899-poročna-Nikolaj-Brodarič-×-Marjeta-Milek + 1900-Marija-BRODARIČ-3-mes!) + 4 + 9 hišna (49 — 8×)",
+    whatEn: "died Anton BRODARIČ [★★★ the P172-'BRINEC-couple-link'-CORRECTION — the composite-×4-'Brodarič'-clear + the SAME-glyph-form-as-z57-Nikolaj-BRODARIČ!], a widower threshing-man [~ 'widower-and-threshing-man'], 66 YEARS (Jan 1, buried Jan 3 — the Januarij-underlined + the large-'1907.'!) — Nadruka [~ the VLM-'Naduha' — the composite-K-clear cf.-P172-Nadruka!]; previden (1); St. Florijana FLORJANČIČ cap. [#14?]; ★★★ h49 = the 4th death entry (1894 + 1900 + 1906 + 1907!) + the h49-×2-in-1-year-1907 (the z1-Anton-66-Jan + the z57-Nikolaj-18-days-Nov!) + ★★★ the h49-link-1906/07-RE-SOLVED (1906-Ana-BRINEC-66-widow-Jan + 1907-Anton-BRODARIČ-66-widower-Jan = 2-consecutive-Jans-66-years — the SURNAMES-DIFFER — the P172-'couple-link'-REJECTED!) + the BRODARIČ-h49-network (the 1899-marriage-Nikolaj-Brodarič-×-Marjeta-Milek + the 1900-Marija-BRODARIČ-3-months!) + the 4 + 9 house number (49 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "1",
+    bookSignature: "04894",
+    year: 1907,
+    scan: 109,
+    page: 108,
+    whatSi: "umrla Ana ŽELJKO [~ KURRENT-Ž/V-caron — kompozit-caron; P172-lead-'VELJKO'-alternativa; VLM-'Želko'], ¼ zemljaškova hiča, 6 LET (6. 1., pokop 7. 1.) — Kašel [~ VLM-'Kaicij' — KAŠEL-družina cf.-z11/z13!]; previden (—); Florjančič cap.; ★ h1 = 4. mrliški vpis (1888-×2 + 1904 + 1907!) + ★ ŽELJKO-vez-1907 (z2-h1-Ana-6-let + z13-h60-Anton-4-mes = 2-hiši-v-1-letu!) + h60-ŽELJKO-×-Brodarič-genetska (krstna-1888+1894+1897+1899+1906 — oče-Nikolaj-Željko!) + 1 hišna (1)",
+    whatEn: "died Ana ŽELJKO [~ the KURRENT-Ž/V-caron — the composite-caron; the P172-lead-'VELJKO'-alternative; the VLM-'Želko'], a quarter-smallholder's house, 6 YEARS (Jan 6, buried Jan 7) — Kašel [~ the VLM-'Kaicij' — the KAŠEL-family cf.-z11/z13!]; previden (—); Florjančič cap.; ★ h1 = the 4th death entry (the 1888-×2 + 1904 + 1907!) + ★ the ŽELJKO-link-1907 (the z2-h1-Ana-6-years + the z13-h60-Anton-4-months = 2-houses-in-1-year!) + the h60-ŽELJKO-×-Brodarič-genetics (the baptisms-1888+1894+1897+1899+1906 — the father-Nikolaj-Željko!) + the 1 house number (1)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "91",
+    bookSignature: "04894",
+    year: 1907,
+    scan: 109,
+    page: 108,
+    whatSi: "umrla Ana MUC [★★★ P172-lead-'MEC'-KOREKCIJA + VLM-'Hleu'-ZAVRJENA — kompozit-'Muc'-jasno + h91 = MUC-×-KURE-familija-genetska (krstna-1895/1902/1904/1908-'Janez-Muc-bajtar'!)], hovarčeva hiča [~ diag-'hovacova'; VLM-'hlapčeva-žena'-zmeda], 16 LET (7. 1., pokop 9. 1.) — Pljučnica [~ 'Rjučnica'-P/R-KURRENT]; previden (1); Florjančič cap.; ★ h91 = 4. mrliški vpis (1890 + 1899 + 1904 + 1907!) + h91 = NAJVIŠJA-mrliška-hiša-številka (2.-najvišja-h81!) + 9 + 1 hišna (91)",
+    whatEn: "died Ana MUC [★★★ the P172-lead-'MEC'-CORRECTION + the VLM-'Hleu'-REJECTED — the composite-'Muc'-clear + h91 = the MUC-×-KURE-family-genetics (the baptisms-1895/1902/1904/1908-'Janez-Muc-cottager'!)], a hovarčeva-house [~ the diag-'hovacova'; the VLM-'servant's-wife'-confusion], 16 YEARS (Jan 7, buried Jan 9) — Pljučnica [~ 'Rjučnica'-P/R-KURRENT]; previden (1); Florjančič cap.; ★ h91 = the 4th death entry (1890 + 1899 + 1904 + 1907!) + h91 = the HIGHEST-death-house-NUMBER (the 2nd-highest-h81!) + the 9 + 1 house number (91)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "87",
+    bookSignature: "04894",
+    year: 1907,
+    scan: 109,
+    page: 108,
+    whatSi: "umrla Barbara PEZDIREC [★★ kompozit-'Pezdirec'-jasno — ISTA-forma-kot-z59!], bajtarjeva hiča, 3 TEDNOV [~ diag-'5'? — digit-odrezan], (9. 1., pokop 11. 1.) — Božjast; previden (—); Florjančič cap.; ★ h87 = 4. mrliški vpis (1894 + 1895 + 1897 + 1907!) + PEZDIREC-vez-1907-×3 (z5-h87 + z9-h52-'po-Janezu-Pezdircu' + z59-Krasinec-Katarina-roj.-Pezdirec = era-13-nadaljevanje: 1902×3+1903×3+1904×3+1905×2+1906×1+1907×3!; + s115-z10-1908-Doroteja-PEZDIREC-h42!) + 8 + 7 hišna (87)",
+    whatEn: "died Barbara PEZDIREC [★★ the composite-'Pezdirec'-clear — the SAME-form-as-z59!], a cottager's house, 3 WEEKS [~ the diag-'5'? — the digit-cut], (Jan 9, buried Jan 11) — Božjast; previden (—); Florjančič cap.; ★ h87 = the 4th death entry (1894 + 1895 + 1897 + 1907!) + the PEZDIREC-link-1907-×3 (the z5-h87 + the z9-h52-'after-Janez-Pezdirc' + the z59-Krasinec-Katarina-born-Pezdirec = the era-13-continuation: 1902×3+1903×3+1904×3+1905×2+1906×1+1907×3!; + the s115-z10-1908-Doroteja-PEZDIREC-h42!) + the 8 + 7 house number (87)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "52",
+    bookSignature: "04894",
+    year: 1907,
+    scan: 109,
+    page: 108,
+    whatSi: "umrla Marija NOVAK [★★ VLM-'pri-Jovanek'-ZAVRJENA + P172-lead-'POVH'-ZAVRJENA — kompozit-'Marija, ry: Novak odova / po + Janezu Pezdircu / ¼ zemljaku'-jasno!], roj. NOVAK, vdova po Janezu PEZDIREC, ¼ zemljakinja, 69 LET (15. 1., pokop 17. 1.) — Nadruka; previden (—); Jos. Rauq ž.; ★★★ h52 = 4. mrliški vpis (1898 + 1902 + 1903 + 1907!) + ★★★ PEZDIREC-h52-vez (krstna-1898-'Matija-Podrinc'-×-Ana-Jakobič + 1908-'Matija-Pezdirec'-×-Ana-Jakobčič = ISTA-zveza-KURRENT-varianti — vdova-'po-Janezu-Pezdircu'-potrjuje-družino!) + 5 + 2 hišna (52)",
+    whatEn: "died Marija NOVAK [★★ the VLM-'pri-Jovanek'-REJECTED + the P172-lead-'POVH'-REJECTED — the composite-'Marija, ry: Novak widow / after + Janez Pezdirc / ¼ smallholder'-clear!], born NOVAK, a widow after Janez PEZDIREC, a quarter-smallholderess, 69 YEARS (Jan 15, buried Jan 17) — Nadruka; previden (—); Jos. Rauq ž.; ★★★ h52 = the 4th death entry (1898 + 1902 + 1903 + 1907!) + ★★★ the PEZDIREC-h52-link (the baptism-1898-'Matija-Podrinc'-×-Ana-Jakobič + the 1908-'Matija-Pezdirec'-×-Ana-Jakobčič = the SAME-couple-KURRENT-variants — the widow-'after-Janez-Pezdirc'-confirms-the-family!) + the 5 + 2 house number (52)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "31",
+    bookSignature: "04894",
+    year: 1907,
+    scan: 109,
+    page: 108,
+    whatSi: "umrl Alojzij POČEK [~ KURRENT-P-bowl-jasna-×4-zoom; VLM-'Pošek'; P172-lead-'DRIŠEK'-ZAVRJENA], ¼ zemljakov sin, 6 MESECEV (24. 1., pokop 25. 1.) — Kašel [~ VLM-'Kaicij']; previden (—); Jos. Rauq ž.; ★ h31 = 5. mrliški vpis (1886 + 1896 + 1904 + 1905 + 1907!) + cf. 1886-poročna-h31-Martin-Papič-1.-vpis-1886! + 3 + 1 hišna (31)",
+    whatEn: "died Alojzij POČEK [~ the KURRENT-P-bowl-clear-×4-zoom; the VLM-'Pošek'; the P172-lead-'DRIŠEK'-REJECTED], a quarter-smallholder's son, 6 MONTHS (Jan 24, buried Jan 25) — Kašel [~ the VLM-'Kaicij']; previden (—); Jos. Rauq ž.; ★ h31 = the 5th death entry (1886 + 1896 + 1904 + 1905 + 1907!) + cf. the 1886-marriage-h31-Martin-Papič-the-1st-entry-1886! + the 3 + 1 house number (31)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "60",
+    bookSignature: "04894",
+    year: 1907,
+    scan: 110,
+    page: 109,
+    whatSi: "umrl Anton ŽELJKO [★★ VLM-'Veliko'-ZAVRJENA — kompozit-caron-Ž-jasno!], bajtarjev sin, 4 MESECE (9. 2., pokop 11. 2.) — Kašel [★★ VLM-'Maščef'-ZAVRJENA — kompozit-'Kasel' = KAŠEL!]; previden (—); Jos. Rauq; ★★★ h60 = 7. mrliški vpis (1888-×2 + 1898 + 1899 + 1901 + 1903 + 1907!) + ★★★ ŽELJKO-h60-GENETSKA (krstna-h60 = Željko-×-Brodarič-1888+1894+1897+1899+1906-'oče-Nikolaj-Željko'!) + ŽELJKO-vez-1907 (z2-h1-Ana!) + h60/h49-KRIŽ (mati-'Marija-Brodarič?'-krstna-1908 = h49-familija!) + 6 + 0 hišna (60)",
+    whatEn: "died Anton ŽELJKO [★★ the VLM-'Veliko'-REJECTED — the composite-caron-Ž-clear!], a cottager's son, 4 MONTHS (Feb 9, buried Feb 11) — Kašel [★★ the VLM-'Maščef'-REJECTED — the composite-'Kasel' = KAŠEL!]; previden (—); Jos. Rauq; ★★★ h60 = the 7th death entry (the 1888-×2 + 1898 + 1899 + 1901 + 1903 + 1907!) + ★★★ the ŽELJKO-h60-GENETICS (the h60-baptisms = Željko-×-Brodarič-1888+1894+1897+1899+1906-'the father-Nikolaj-Željko'!) + the ŽELJKO-link-1907 (the z2-h1-Ana!) + the h60/h49-CROSS (the mother-'Marija-Brodarič?'-the 1908-baptism = the h49-family!) + the 6 + 0 house number (60)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "32",
+    bookSignature: "04894",
+    year: 1907,
+    scan: 110,
+    page: 109,
+    whatSi: "umrl Matija URH [★★★ VLM-'Udoh'-ZAVRJENA — kompozit-'Urh'-jasno cf.-1906-h57-Matija-URH!], ¼ zemljakov sin, 16 LET (29. 2.[!], pokop 1. 3.) — Jetika; previden (1); Jos. Rauq; ★★★ h32 = 6. mrliški vpis (1890 + 1893-×2 + 1900 + 1905 + 1907!) + ★★★ PISAR-DATUM-NAPAKA-1/3 (smrt-'29.'-Februar-1907 = NE-PRESTOPNO-leto — 29.2.1907-NE-OBSTOJA — 1.-v-liniji!; pokop-'1.-marc.' = 1.-marca — [~ rešitev-28.2-1-dnevna-vrzela]) + URH-vez (1906-h57-Matija-URH-78 + 1905-h32-Marija-Urh-83 + 1907-z20-Otok-h8-Barbara-Urh = ×4-v-2-letih!) + 3 + 2 hišna (32)",
+    whatEn: "died Matija URH [★★★ the VLM-'Udoh'-REJECTED — the composite-'Urh'-clear cf.-the-1906-h57-Matija-URH!], a quarter-smallholder's son, 16 YEARS (Feb 29[!], buried Mar 1) — Jetika; previden (1); Jos. Rauq; ★★★ h32 = the 6th death entry (1890 + the 1893-×2 + 1900 + 1905 + 1907!) + ★★★ the SCRIBE-DATE-ERROR-1/3 (the death-'29.'-February-1907 = a NON-LEAP-year — Feb-29-1907-DOES-NOT-EXIST — the 1st-in-the-line!; the burial-'1.-marc.' = Mar 1 — [~ the solution-Feb-28-a-1-day-gap]) + the URH-link (the 1906-h57-Matija-URH-78 + the 1905-h32-Marija-Urh-83 + the 1907-z20-Otok-h8-Barbara-Urh = ×4-in-2-years!) + the 3 + 2 house number (32)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "14",
+    bookSignature: "04894",
+    year: 1907,
+    scan: 111,
+    page: 110,
+    whatSi: "umrla Marija ŠTRMEC [~ kompozit-'Štimec/Štrmec'-KURRENT-tr-zmeda; VLM-page-'Štrmec'], omožena ¼ zemljakinja [~ diag-'ovrozena'], 39 LET (3. 5., pokop 5. 5. — Maj!) — Pljučnica [~ diag-'Štuimec'-ZAVRJENA]; previden (—); Jos. Rauq; ★ h14 = 5. mrliški vpis (1896 + 1897-×2 + 1904 + 1907!) + h14-BRINEC-genetska (krstna-1908-'oče-Janez-Brinec-¼-zemljak'-h14-4.-VPIS-ISTA-familija — omožena-ŠTRMEC = Brinec-žena?) + 1 + 4 hišna (14)",
+    whatEn: "died Marija ŠTRMEC [~ the composite-'Štimec/Štrmec'-KURRENT-tr-confusion; the VLM-page-'Štrmec'], a married quarter-smallholderess [~ the diag-'ovrozena'], 39 YEARS (May 3, buried May 5 — Maj!) — Pljučnica [~ the diag-'Štuimec'-REJECTED]; previden (—); Jos. Rauq; ★ h14 = the 5th death entry (1896 + the 1897-×2 + 1904 + 1907!) + the h14-BRINEC-genetics (the 1908-baptism-'the father-Janez-Brinec-quarter-smallholder'-h14-the-4th-ENTRY-the-SAME-family — the married-ŠTRMEC = a-Brinec-wife?) + the 1 + 4 house number (14)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "11",
+    bookSignature: "04894",
+    year: 1907,
+    scan: 111,
+    page: 110,
+    whatSi: "umrla Marija ŽUNIČ [~ kompozit-Ž-caron-jasna; VLM-'Kumič'-ZAVRJENA], ¼ zemljaškova hiča, 2 LETI (6. 6., pokop 8. 6. — Juni!) — Kašel [★★ diag-'Kasel'-jasno = KAŠEL-POTRJEN!]; previden (—); Jos. Rauq; ★ h11 = 4. mrliški vpis (1899 + 1902 + 1903 + 1907!) + 1 + 1 hišna (11)",
+    whatEn: "died Marija ŽUNIČ [~ the composite-Ž-caron-clear; the VLM-'Kumič'-REJECTED], a quarter-smallholder's house, 2 YEARS (Jun 6, buried Jun 8 — Juni!) — Kašel [★★ the diag-'Kasel'-clear = KAŠEL-PROVEN!]; previden (—); Jos. Rauq; ★ h11 = the 4th death entry (1899 + 1902 + 1903 + 1907!) + the 1 + 1 house number (11)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "74",
+    bookSignature: "04894",
+    year: 1907,
+    scan: 112,
+    page: 111,
+    whatSi: "umrla Marija DRAGOŠ [~ kompozit-'Dragos'-final-š-hook; cf.-DRAGAR-varianta], roj. DRAGOŠ [~], omožena KAMBIČ [~ kompozit-'Škambič/Hambič'-zmeda], ¼ zemljakinja, 22 LET (13. 7., pokop 14. 7. — Julij!) — Jetika; previden (1); Jos. Rauq; ★ h74 = 2. mrliški vpis (1886 + 1907 — 21-letna-vrzela!) + KAMBIČ-vez-×2-1907 (z36-h74 + z59-Krasinec-h40-Katarina-'omožena-Kambič'!) + 7 + 4 hišna (74)",
+    whatEn: "died Marija DRAGOŠ [~ the composite-'Dragos'-final-š-hook; cf.-the-DRAGAR-variant], born DRAGOŠ [~], married KAMBIČ [~ the composite-'Škambič/Hambič'-confusion], a quarter-smallholderess, 22 YEARS (Jul 13, buried Jul 14 — Julij!) — Jetika; previden (1); Jos. Rauq; ★ h74 = the 2nd death entry (1886 + 1907 — a 21-year gap!) + the KAMBIČ-link-×2-1907 (the z36-h74 + the z59-Krasinec-h40-Katarina-'married-Kambič'!) + the 7 + 4 house number (74)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "75",
+    bookSignature: "04894",
+    year: 1907,
+    scan: 112,
+    page: 111,
+    whatSi: "umrl Matija ŠIMEC [~ kompozit-Š; VLM-'Simic'], kmetijski hlapec [~ 'kmetiški'], 24 LET (16. 7., pokop 18. 7.) — od opeklin [★★ diag-'?led opeklin' — OPEKLINE = 3.-NESREČA-V-LINIJI (P171-'Žganje-v-glavi' + 'Se-ubila'-samomor?)!]; previden (1); Jos. Rauq; ★★★ h75 = **1. MRLIŠKI VPIS KADARKOLI = 30.-PT-vezni-kandidat** (04894-h75-pred-1907-pRAZNO — cf. krstna-h75 + poročna!) + NOVA-MRLIŠKA-HIŠA + ŠIMEC-vez (cf. z56-'rojena-Šimec'-h21 = ŠIMEC-roj.-×2-v-1-letu!) + 7 + 5 hišna (75)",
+    whatEn: "died Matija ŠIMEC [~ the composite-Š; the VLM-'Simic'], a farm servant [~ 'kmetiški'], 24 YEARS (Jul 16, buried Jul 18) — from BURNS [★★ the diag-'?led opeklin' — BURNS = the 3rd-ACCIDENT-in-the-line (the P171-'burn-to-the-head' + the 'Se-ubila'-suicide?)!]; previden (1); Jos. Rauq; ★★★ h75 = **the 1st DEATH ENTRY EVER = the 30th-PT-link-candidate** (the 04894-h75-before-1907-EMPTY — cf. the baptism-h75 + the marriage!) + A NEW DEATH HOUSE + the ŠIMEC-link (cf. the z56-'born-Šimec'-h21 = the ŠIMEC-born-×2-in-1-year!) + the 7 + 5 house number (75)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "65",
+    bookSignature: "04894",
+    year: 1907,
+    scan: 112,
+    page: 111,
+    whatSi: "umrl Matija MILEK [★★ VLM-'Mlek'-ZAVRJENA — kompozit-i-jasna + h65 = MILEK-hiša!], oženjen ¼ zemljak [~ ½-diag-zmeda], 65 LET (24. 7., pokop 26. 7.) — Kašel [~ diag-'Kasek'-zmeda]; previden (1); Jos. Rauq; ★★★ h65 = 8. mrliški vpis (1887 + 1888 + 1889 + 1899 + 1900 + 1902 + 1905 + 1907!) = **IZENAČUJE-REKORDISTKO-h58 (8×-1906!)** + MILEK-h65-vez (1886-poročna-Mathias-Milek-½-Gütler-GRIBLJE-65-×-Katharina-Požek-h64!) + 6 + 5 hišna (65)",
+    whatEn: "died Matija MILEK [★★ the VLM-'Mlek'-REJECTED — the composite-i-clear + h65 = the MILEK-house!], a married quarter-smallholder [~ ½-diag-confusion], 65 YEARS (Jul 24, buried Jul 26) — Kašel [~ the diag-'Kasek'-confusion]; previden (1); Jos. Rauq; ★★★ h65 = the 8th death entry (1887 + 1888 + 1889 + 1899 + 1900 + 1902 + 1905 + 1907!) = **EQUALS-THE-RECORD-HOLDER-h58 (8×-1906!)** + the MILEK-h65-link (the 1886-marriage-Mathias-Milek-half-Gütler-GRIBLJE-65-×-Katharina-Požek-h64!) + the 6 + 5 house number (65)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "28",
+    bookSignature: "04894",
+    year: 1907,
+    scan: 113,
+    page: 112,
+    whatSi: "umrl Jurij TOŽEK [★★ diag-'Toček/Soček'-ZAVRJENA — kompozit-ž-hook-jasna + P172-h58-TOŽEK-familija!], oženjen ¼ zemljak, 62 LET (21. 9., pokop 23. 9. — Sept.!; glava-'18.1907'-ČISTA!) — Prehlajenje; previden (1); Gregor CERAR kaplan [★ 1.-mrliški-podpis-CERAR — znan-iz-krstne-1908+ ('~20×-nov-dominantni')!]; ★ h28 = 2. mrliški vpis (1901 + 1907 — 6-letna-vrzela!) + TOŽEK-vez (1906-h58-×2-Matija-10-mes + Janez-49 + z56-'omožena-Tožek'!) + 2 + 8 hišna (28)",
+    whatEn: "died Jurij TOŽEK [★★ the diag-'Toček/Soček'-REJECTED — the composite-ž-hook-clear + the P172-h58-TOŽEK-family!], a married quarter-smallholder, 62 YEARS (Sep 21, buried Sep 23 — Sept.!; the header-'18.1907'-CLEAN!) — Prehlajenje; previden (1); Gregor CERAR kaplan [★ the 1st-death-signature-CERAR — known-from-the-baptisms-1908+ ('~20×-the-new-dominant')!]; ★ h28 = the 2nd death entry (1901 + 1907 — a 6-year gap!) + the TOŽEK-link (the 1906-h58-×2-Matija-10-months + Janez-49 + the z56-'married-Tožek'!) + the 2 + 8 house number (28)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "19",
+    bookSignature: "04894",
+    year: 1907,
+    scan: 113,
+    page: 112,
+    whatSi: "umrla Ana KRIŽE [★★ VLM-'Kroše'-ZAVRJENA — kompozit-'Križe'-jasno + P172-1906-h19-Janez-KRIŽE!], samotka ¼ zemljaška hiča, 24 LET (29. 9., pokop 31. 9.[!]) — Pljučnica; previden (1); Gregor Cerar kapl.; ★★★ h19 = 3. mrliški vpis (1893 + 1906 + 1907!) + ★ KRIŽE-h19-KONTINUITETA (1906-Janez-KRIŽE + 1907-Ana-KRIŽE = 2-leta-zapored-ISTA-hiša-ISTA-družina — cf. BRINEC-h49-vzorec!) + ★★★ PISAR-DATUM-NAPAKA-2/3 (pokop-'31.'-September = NE-OBSTOJA — 30-dni!; [~ rešitev-30.9-ali-1.10]) + 1 + 9 hišna (19)",
+    whatEn: "died Ana KRIŽE [★★ the VLM-'Kroše'-REJECTED — the composite-'Križe'-clear + the P172-1906-h19-Janez-KRIŽE!], a lone quarter-smallholder's house, 24 YEARS (Sep 29, buried Sep 31[!]) — Pljučnica; previden (1); Gregor Cerar kapl.; ★★★ h19 = the 3rd death entry (1893 + 1906 + 1907!) + ★ the KRIŽE-h19-CONTINUITY (the 1906-Janez-KRIŽE + the 1907-Ana-KRIŽE = 2-consecutive-years-the-SAME-house-the-SAME-family — cf. the BRINEC-h49-pattern!) + ★★★ the SCRIBE-DATE-ERROR-2/3 (the burial-'31.'-September = DOES-NOT-EXIST — 30-days!; [~ the solution-Sep-30-or-Oct-1]) + the 1 + 9 house number (19)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "21",
+    bookSignature: "04894",
+    year: 1907,
+    scan: 113,
+    page: 112,
+    whatSi: "umrla Ana ŠIMEC [★★ kompozit-'rojena-Šimec'-jasno — Š-caron!], roj. ŠIMEC, omožena TOŽEK [~ kompozit-'Toček/Poček'-zmeda — cf.-z53-Jurij-TOŽEK-h28!], ¼ zemljakinja, 42 LET (30. 9., pokop 31. 9.[!]) — Jetika; previden (1); Gregor Cerar kap.; ★ h21 = 6. mrliški vpis (1887 + 1888-×2 + 1893 + 1905 + 1907!) + ★★★ PISAR-DATUM-NAPAKA-3/3 (pokop-'31.'-September-×2-z-z55 = pisar-BATCH-napaka!) + ŠIMEC-roj.-vez (cf. z37-h75-Matija-ŠIMEC = roj.-Šimec-×2-v-1-letu!) + TOŽEK-vez (omožena-TOŽEK!) + 2 + 1 hišna (21)",
+    whatEn: "died Ana ŠIMEC [★★ the composite-'born-Šimec'-clear — the Š-caron!], born ŠIMEC, married TOŽEK [~ the composite-'Toček/Poček'-confusion — cf.-the-z53-Jurij-TOŽEK-h28!], a quarter-smallholderess, 42 YEARS (Sep 30, buried Sep 31[!]) — Jetika; previden (1); Gregor Cerar kap.; ★ h21 = the 6th death entry (1887 + the 1888-×2 + 1893 + 1905 + 1907!) + ★★★ the SCRIBE-DATE-ERROR-3/3 (the burial-'31.'-September-×2-with-z55 = the scribe-BATCH-error!) + the ŠIMEC-born-link (cf. the z37-h75-Matija-ŠIMEC = the born-Šimec-×2-in-1-year!) + the TOŽEK-link (married-TOŽEK!) + the 2 + 1 house number (21)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "49",
+    bookSignature: "04894",
+    year: 1907,
+    scan: 113,
+    page: 112,
+    whatSi: "umrl Nikolaj BRODARIČ [★★ kompozit-'Brodarič'-jasno — ISTA-forma-kot-z1-Anton!; VLM-page-'Brodarvič'], ¼ zemljakov sin [~ ½-diag], 18 DNI (7. 11., pokop 8. 11. — November!) — Božjast; previden (—); Gregor Cerar kap.; ★★★ h49-×2-v-1-letu-2.-del (z1-Anton-66-Jan + z57-Nikolaj-18-dni-Nov!) + ★★★ NIKOLAJ-BRODARIČ-ime-vez (1899-poročna-'ženin-Nikolaj-Brodarič'-NE-poročna-ampak-'Nikolaj-Brodarič-×-Marjeta-Milek'-krstna-1899-h49-mati! + 1900-krstna-Marija-h49-starši-Nikolaj-×-Marjeta = oče-izgubi-2-otroka-v-8-letih? [~ — ali-2-Nikolaji?]) + h49 = 4.-vpis-leta-+ ×2-v-1907 = 5.-vpis-skupno! + 4 + 9 hišna (49 — 8×)",
+    whatEn: "died Nikolaj BRODARIČ [★★ the composite-'Brodarič'-clear — the SAME-form-as-z1-Anton!; the VLM-page-'Brodarvič'], a quarter-smallholder's son [~ ½-diag], 18 DAYS (Nov 7, buried Nov 8 — November!) — Božjast; previden (—); Gregor Cerar kap.; ★★★ the h49-×2-in-1-year-part-2 (the z1-Anton-66-Jan + the z57-Nikolaj-18-days-Nov!) + ★★★ the NIKOLAJ-BRODARIČ-name-link (the 1899-'Nikolaj-Brodarič-×-Marjeta-Milek'-the-1899-baptism-h49-mother! + the 1900-baptism-Marija-h49-parents-Nikolaj-×-Marjeta = the father-loses-2-children-in-8-years? [~ — or 2-Nikolajs?]) + the h49 = the 4th-entry-year-+ ×2-in-1907 = the 5th-entry-total! + the 4 + 9 house number (49 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "25",
+    bookSignature: "04894",
+    year: 1907,
+    scan: 113,
+    page: 112,
+    whatSi: "umrl Matija BRINEC [★★★ VLM-'Ogrince'-ZAVRJENA — kompozit-'Brince/Brinec'-jasno!], ¼ zemljakov sin, 2 LETI (19. 11., pokop 21. 11.) — Vodenica; previden (—); Gregor Cerar kap.; ★ h25 = 4. mrliški vpis (1888 + 1902 + 1905 + 1907!) + BRINEC-×3-v-1907 (z58-h25 + z63/z65-h10!) + 2 + 5 hišna (25)",
+    whatEn: "died Matija BRINEC [★★★ the VLM-'Ogrince'-REJECTED — the composite-'Brince/Brinec'-clear!], a quarter-smallholder's son, 2 YEARS (Nov 19, buried Nov 21) — Vodenica; previden (—); Gregor Cerar kap.; ★ h25 = the 4th death entry (1888 + 1902 + 1905 + 1907!) + the BRINEC-×3-in-1907 (the z58-h25 + the z63/z65-h10!) + the 2 + 5 house number (25)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "10",
+    bookSignature: "04894",
+    year: 1907,
+    scan: 114,
+    page: 113,
+    whatSi: "umrl Anton BRINEC [★★★ VLM-'Vrhnar'-ZAVRJENA — kompozit-'Brince'-jasno!], ¼ zemljakov sin, 4 DNI (19. 12., pokop 20. 12.) — Slabost; previden (—); Jos. LILEK župnik v. p. [~ — NOVI-DUHOVNIK-×1-GRIBLJE ('župnik-v.p.'-formula-×4-5!; 0-pred-1907-v-parish.ts!)]; ★★★ h10 = **1. MRLIŠKI VPIS KADARKOLI = 31.-PT-vezni-kandidat** (04894-h10-pred-1907-pRAZNO — cf. krstna-h10 + poročna-h10!) + ★★★ h10-×2-v-1-letu (z63-Anton-4-dni + z65-Jožef-11-dni — 6-DNI-APART!) + glava-'18.1907'-meja-1907/08-BEZ-dis-strani (velika-'1908'+restart-POD-z67!) + 1 + 0 hišna (10)",
+    whatEn: "died Anton BRINEC [★★★ the VLM-'Vrhnar'-REJECTED — the composite-'Brince'-clear!], a quarter-smallholder's son, 4 DAYS (Dec 19, buried Dec 20) — Slabost; previden (—); Jos. LILEK župnik v. p. [~ — A NEW PRIEST-×1-GRIBLJE (the 'parish-priest-v.p.'-formula-×4-5!; 0-before-1907-in-parish.ts!)]; ★★★ h10 = **the 1st DEATH ENTRY EVER = the 31st-PT-link-candidate** (the 04894-h10-before-1907-EMPTY — cf. the baptism-h10 + the marriage-h10!) + ★★★ the h10-×2-in-1-year (the z63-Anton-4-days + the z65-Jožef-11-days — 6-DAYS-APART!) + the header-'18.1907'-the-1907/08-border-ON-this-page (the large-'1908'+the-restart-BELOW-z67!) + the 1 + 0 house number (10)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "10",
+    bookSignature: "04894",
+    year: 1907,
+    scan: 114,
+    page: 113,
+    whatSi: "umrl Jožef BRINEC [★★ kompozit-'Brince'-jasno cf.-z63!], ¼ zemljakov sin, 11 DNI (25. 12., pokop 26. 12.) — Slabost; previden (—); Greg. Cerar kap.; ★★★ h10-×2-v-1-letu-2.-del (6-DNI-APART-po-z63-Anton!) + BRINEC-×3-v-1907 (z58-h25-Matija + z63-Anton + z65-Jožef!) + BRINEC-dekleta-mreža (h14-krstna-'oče-Janez-Brinec' + h25 + h10!) + ZADNJA-GRIBLJE-1907 (meja-1907/08 = ISTA-stran: velika-'1908'-PODČRTANA + Januarij + restart 67→1 = 6. STIL 15. POTRDITEV!) + 1 + 0 hišna (10)",
+    whatEn: "died Jožef BRINEC [★★ the composite-'Brince'-clear cf.-z63!], a quarter-smallholder's son, 11 DAYS (Dec 25, buried Dec 26) — Slabost; previden (—); Greg. Cerar kap.; ★★★ the h10-×2-in-1-year-part-2 (6-DAYS-APART-after-z63-Anton!) + the BRINEC-×3-in-1907 (the z58-h25-Matija + the z63-Anton + the z65-Jožef!) + the BRINEC-children-network (the h14-baptism-'the father-Janez-Brinec' + h25 + h10!) + the LAST-GRIBLJE-1907 (the 1907/08-border = the SAME-page: the large-'1908'-UNDERLINED + the Januarij + the restart 67→1 = the 6th STYLE 15th CONFIRMATION!) + the 1 + 0 house number (10)",
+    status: "DOCUMENTED",
+  },
+
   // ——— P80 razširitev: POROČNA KNJIGA 04455 1873–1922 — okvir 1886 (skeni 61–65 == Pag. 60–64, vpisi 1–24; Pag. = sken − 1 v razponu 61–66) ———
   // P115 (faza 2) RE-READ: 8 blokov popravljenih na podlagi max-zoom branja (h36→56, h63→65, h15→16, h25→Priložje
   // + priimki Pegdirec/Klepec/Požek/Tomec/Straus/Križan) — evidence: research/issue17/parish-marriage-1886.json

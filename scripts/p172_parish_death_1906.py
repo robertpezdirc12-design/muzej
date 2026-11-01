@@ -32,9 +32,9 @@ EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 5
 GRIBLJE_HOUSES = "18,19,20,39,44,49,57,58,77"
 GRIBLJE_ZAPS = [1, 6, 16, 21, 23, 29, 34, 35, 48, 54]
-VITALS_TOTAL = 976               # 966 + 10!
-BLOKI_04894 = 277                # 267 + 10!
-P80_HOUSES = 91                  # NESPREMENJENO (h39/h77-ŽE-v-p80!)
+VITALS_TOTAL = 996               # 966 + 10!
+BLOKI_04894 = 297                # 267 + 10!
+P80_HOUSES = 92                  # NESPREMENJENO (h39/h77-ŽE-v-p80!)
 KORPUS_HOUSES = 93               # NESPREMENJENO
 NEW_SCANS = [105, 106, 107, 108]  # s104-reuse (P171-lead-diag!)
 
@@ -188,11 +188,11 @@ def main():
     check("I6c bloki 1906 = 10", len(d1906) == 10, str(len(d1906)))
     check("I6d bloki 1906: skeni 104–108 + stran == sken − 1",
           all(v["scan"] and 104 <= v["scan"] <= 108 and v["page"] == v["scan"] - 1 for v in d1906), "")
-    check("I6d2 bloki 1907+ ne obstajajo (P173-lead!; P172 = 1906 sedaj v korpusu!)",
-          all(v["year"] < 1907 for v in d04894), "")
+    check("I6d2 bloki 1908+ ne obstajajo (P174-lead!; P172 = 1906 sedaj v korpusu!)",
+          all(v["year"] < 1908 for v in d04894), "")
     p80 = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
     check("I6f p80-skripta pini 976 + 91 + gap-18 (vitals-P172-kaskada!)",
-          "len(vitals) == 976" in p80 and "len(houses) == 91" in p80 and "len(gap) == 18" in p80, "")
+          "len(vitals) == 996" in p80 and "len(houses) == 92" in p80 and "len(gap) == 18" in p80, "")
     houses_all = {v["houseNo"] for v in vit if v["houseNo"].isdigit()}
     check("I6g korpus = 93 hiš (NESPREMENJENO — h39/h77-ŽE-v-korpusu!)",
           len(houses_all) == KORPUS_HOUSES, str(len(houses_all)))
@@ -264,10 +264,10 @@ def main():
     qa = open(QA_TS, encoding="utf-8").read()
     check("I10a qa-p172 = 173. kontrola", "qa-p172-parish-death-1906" in qa, "")
     check("I10b qa-parish pini 976 + 277 (P172-kaskada!)",
-          qa.count("!== 976") == 87 and qa.count("!== 277") == 21,
+          qa.count("!== 996") == 88 and qa.count("!== 297") == 22,
           f"976×{qa.count('!== 976')}/277×{qa.count('!== 277')}")
     check("I10c qa-parish guardi ≥1907 (20× — P172-kaskada!)",
-          qa.count(">= 1907") == 20, f"{qa.count('>= 1907')}")
+          qa.count(">= 1908") == 21, f"{qa.count('>= 1907')}")
     check("I10d qa-p171-govori-P172-LEAD (1906-BRINEC-PEZDIREC!)",
           "P172-LEAD" in qa and "1906" in qa, "")
 
@@ -282,8 +282,8 @@ def main():
                                  "VLM-'Potokar'-ZAVRJENA"]), "")
     check("I11c P173-LEAD-v-parish.ts (s109-zap1–11-ŽE-vidni!)",
           "P173-LEAD: 1907" in src and "Anton-BRINEC" in src.replace("ANTON", "Anton"), "")
-    check("I11d ni-04894-1907-blokov-še (P173-lead!; 04455-1907-legalno!)",
-          re.search(r'bookSignature: "04894",\s*year: 1907', src) is None, "")
+    check("I11d ni-04894-1908-blokov-še (P174-lead!; P173 = 1907 sedaj v korpusu!; 04455-1908-legalno!)",
+          re.search(r'bookSignature: "04894",\s*year: 1908', src) is None, "")
 
     # ---------- I12: honesty ----------
     check("I12 honesty ≥5 (honesty-1–7!)",

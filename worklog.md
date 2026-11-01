@@ -6899,3 +6899,34 @@ Stage Summary:
 - **5-GLAVE-NAPAKE = REKORD-LINIJE-IZENAČEN** (P170-5! pisar-'18'-navada-×5-v-1-letu: '48/1905'-'4'-za-'1'-NOV-vzorec!)
 - **NOV-DUHOVNIK-#13-KUHINEK** (×3-GRIBLJE + s106-DOMINANTA!) + PODLOGAR-kapelan + FLORJANČIČ-×2 = 4-duhovniki-v-1-letu!
 - mrliška linija **21/39** (1886–1906) — P173-LEAD: 1907 (s109-zap1–11 ŽE-prebrani: ANTON-BRINEC-h49-vdovec-SPOL-KOREKCIJA + 6-GRIBLJE-v-Januarju-SAMO! + s110-z13-Veljko-h60 + z18-Urh-h32; meja 1907/08 [~ s113+?])
+
+## P173 — mrliška 1907 (NOV REKORD LINIJE: 20 GRIBLJE!)
+
+Agent: Z.ai Code (glavni agent)
+Task: P173 — mrliška knjiga 04894, leto 1907 (22. polno leto mrliške linije)
+
+Work Log:
+- OKOLJE: PAT validiran (200) → git-log-odkritje: P168–P172-VSE-KONČANI (repo @ P172-b1cac87, produkcija-173/173) → P173-nadaljevanje-po-P172-LEAD!
+- T1-FETCH: s111–s116 (matricula 04894) → /tmp/p173 + s109/s110-copy-iz-p172 = 8 skenov
+- T2-VLM: p173_read_page.mjs (3 serije ≤2-skena foreground) = 6/6 OK (72 vrstic / 21 Griblje-preliminarno)
+- T3-ROWS+DIAG: p173_rows_diag.py — FAIL-na-vseh (P172-vzorec) → diag-grid-330–1950/135px → **diag-vizualna-zaslona ×8 skenov z Read-očmi** (s109–s116 polno-prebrani!) → **MEJA-1907/08 = s114** (velika-'1908'-PODČRTANA + restart 67→1 = 6. STIL 15. POTRDITEV — P172-lead-'[~ s113+?]-KOREKCIJA!)
+- T4-FORENZIKA: p173_crops2.py (137 datotek — po-BUG-popravku-v1-isto-ime!) + kalibracija-meritev (MERITEV-s109-ime-trak!) + p173_kompozit.py (A–N = 14 panelov) → Read-očmi ×3-kroga:
+  - ★★★ z1 = 'Anton-BRODARIČ'-jasno (P172-'BRINEC-PAR-vez'-KOREKCIJA! — ista-glyph-forma-kot-z57!)
+  - ★★★ z4 = 'Ana-MUC'-jasno (VLM-'Hleu' + P172-lead-'MEC'-ZAVRJENA! — h91 = MUC-×-KURE-genetska!)
+  - ★★★ z9 = 'Marija-roj.-NOVAK-vdova-po-Janezu-PEZDIRC-U' (VLM-'pri-Jovanek' + lead-'POVH'-ZAVRJENA!)
+  - z13 = 'Anton-ŽELJKO' (VLM-'Veliko'-ZAVRJENA!) + z18 = 'Matija-URH' (VLM-'Udoh'-ZAVRJENA!) + z18-smrt-'29.-Feb'-PISAR-NAPAKA!
+  - z57-hišna = '49' (VLM-'40'-ZAVRJENA!) + z58 = 'BRINEC' (VLM-'Ogrince'!) + z63 = 'BRINEC' (VLM-'Vrhnar'!) = BRINEC-×3!
+  - z55/z56-pokop = '31.-September'-×2 = PISAR-BATCH-NAPAKA! + z59-pokop-'4.' (VLM-'14'!)
+  - z11 = 'POČEK' (VLM-'Pošek'/lead-'Drišek'!) + z39 = 'MILEK' (VLM-'Mlek'! — h65 = MILEK-1886!) + z55 = 'KRIŽE' (VLM-'Kroše'!)
+  - bolezni-'Maščef/Kaicij/Kasek/Kaikel'→KAŠEL-×4! + glave: s111-'181904'-NAPAČNO-LETO! + s112-'18'-NEKOMPLETNA!
+  - podpisi: z42-'za-župnika'+Guido-KRUSCH+rola[?]-ANOMALIJA! + z48/z62-'Jos.-LILEK-župnik-v.p.' = NOVI-DUHOVNIK!
+- T5-parish.ts: P173-blok-komentar (42-vrstic) + 20-vpisov (z1–z65; h75/h10 = 1.-MRLIŠKI-VPIS-KADARKOLI-×2!) + P174-LEAD
+- KASKADA: qa-parish.ts 976→996 (×87!) + 277→297 (×21!) + guardi-1907→1908 (×20!) + p80-hiše-91→92 (×24! +h75!) + NOVE-izjeme-p86-h28/p87-h75/p88-h91/p90-h87/p91-h14/p92-h10/p94-h49/p96-h19 + h19-guard-1907! + p80-skripta-996/92 + stale-sanacija-p153–p172-×20-skript (VITALS-996 + BLOKI-297 + guardi-1908 + I6d2 + I10b/c/e + I12d + p160-I5b-h49-4→5-VPIS + p161-I5d-h87-3→4!) — VSE-0-FAIL!
+- SKRIPTA: scripts/p173_parish_death_1907.py (I1–I13, --live) = **59/59 PASS**
+- DOKAZ: research/issue17/parish-death-1907.json (**67 entries = 20-Griblje + 47-s-***! 2 excluded + 12 anomalij + 5 crossChecks + honesty 6 + P174-lead) + NOTES
+- QA: qa-p173 = **174. kontrola** (blok v qa-parish.ts) · **runQA 174/174 ok:True** · p173-skripta 59/59 · REGRESIJA: vseh-20-skript (p153–p172) 0-FAIL · tsc 0 · lint 0
+- KUMULATIV: vitals 976 → 996 · mrliški 04894 277 → 297 · p80 91 → 92 (+h75!) · korpus 93 NESPREMENJEN · PT 29 (h75/h10-30./31.-kandidata!)
+
+Stage Summary:
+- **P173 KONČAN (koda)**: 1907 = 67 vrstic (ČISTA-SEKVENCA-BREZ-predorov!) / **20 GRIBLJE = NOV REKORD LINIJE** (rast 17→16→16→10→**20**!) / 18 hiš (h49-×2 + h10-×2 = PADEC-vzorec-4.-leto!) / **3 PISAR-DATUM-NAPAKE = 1.-TIPO-V-LINIJI** (29.-Feb + 31.-Sept-×2!) / 5-GLAVE-NAPAKE = REKORD-IZENAČEN-3.× (s111-'181904'-NAPAČNO-LETO!) / **NOVI-DUHOVNIK-LILEK-'župnik-v.p.'** + Nemaniš + Guido-KRUSCH-layman + CERAR-DOMINANTA!
+- mrliška linija **22/39** (1886–1907) — P174-LEAD: 1908 (s114-zap1–3 + s115-zap4–15 + s116-zap16–27: 4-GRIBLJE-ŽE-vidnih! — z10-h42-Doroteja-PEZDIREC-81 = era-nadaljevanje!; meja 1908/09 [~ s119+?])
