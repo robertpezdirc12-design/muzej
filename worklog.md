@@ -7024,3 +7024,10 @@ Stage Summary:
 - **P177 KONČAN (koda)**: 1911 = 58-vrstic (ČISTA-SEKVENCA-zap1–58 — 7.-čisto-leto!) / 13-GRIBLJE / 12-hiš (h14-×2-BRINEC-brat+sestra?) / rast 12→13
 - mrliška linija **26/39** (1886–1911) — P178-LEAD: 1912 (s135-dno-z1–6 + s136-z7–18-ŽE-prebrani: 2-GRIBLJE — z1-jožef-PEČNIK?-h87 + z10-barbara-ŠTRAVS-h11 + z3-MRTVOROJENEC-×2-v-2-mesecih!; meja-1912/13 [~ s140+?])
 - 2-NOVI-BOLEZNI-V-1-LETU (HLADNI-KAŠELJ + OPEKLINA = 3.-TRAUMA-SMRT!) + DECEMBER-DOMINANTA-×4 + Bitnar-×11-3.-leto + otroška-smrt-×4 (31%)
+
+## P177 — deploy-status (2026-11-01)
+
+- PUSH: GitHub **7cc0435..f33fac8** (nov-PAT, api.github.com/user → 200!) + GitLab **7cc0435..f33fac8** (WAF-blocks-API/ls-remote = znana-false-alarm — push-USPEL-po-git-izpisu!)
+- TRILOKACIJA: lokalni == GitHub (API-commits/main) == **f33fac8** ✓; GitLab-po-WAF-relaksaciji
+- VERCEL: GitHub-App-avtomatski-deploy ~75-s → **griblje-museum.vercel.app 200** + **/api/qa = runQA 178/178 ok:True + qa-p177-parish-death-1911 pass:True NA PRODUKCIJI!**
+- mrliška linija: **26/39** (1886–1911) — naslednja: P178 = 1912
