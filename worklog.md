@@ -7001,3 +7001,26 @@ Work Log:
 Stage Summary:
 - **P176 KONČAN (koda)**: 1910 = 54-vrstic (ČISTA-SEKVENCA-zap1–54 — 6.-čisto-leto!) / 12-GRIBLJE / 11-hiš (h6-×2-MATI+SIN!) / rast 11→12 / **★★★ z51-Ana-NOVAK-h16-'¼ URE' = EKSTREMNA-STAROST-LINIJE (15-minut — 1.-'ure'-enota!)** + **★★★ z38-Martin-PAPIČ-h31-IŠTO-IMEŠKI-PAR-24-LETNI-LOK (poročna-1886-№2-×-Margareth-STRAUS-ISTA-HIŠA! + '⅛ zemljak' = 1.-⅛-ULOMEK-LINIJE!)** + **★★★ z40-Vincencij-KALAN-učiteljev-sin-h90-ŠOLSKA-HIŠA (veriga-Klambič→Kopitar→Vetrovnik→Kalan→Šušteršič!)** + **★★★ z23-h35 = 10.-MRLIŠKI-VPIS-HIŠE = NOV-REKORD-LINIJE (h58-9-prekašan!)** + **★★★ z10-KAMBIČ (VLM-'Vambič'-ZAVRJEN — K-@8× — H/K/V-RAZREŠENA!) + z41-MUC ('Huc'-ZAVRJEN!) + z53-ŠTRAVS ('Štrancar'-'srejenin-otrok'-ZAVRJENA-×2 — 'Starost'-1.-VZROK!)** + **★★ z9-'66'-P175-lead-POTRJEN ('86'-ZAVRJEN) + z13-VÖTTER-h7-70-'h4-40'-KOREKCIJA-×2 (TOTTER/FOTTER-33-let!) + z45/z46-JAKOFČIČ-MATI+SIN-v-4-DNEH (PADEC-vzorec-7.-leto!) + z3-'Mrtvo najden'-SLOVENŠČINA-2.-TRAUMA** + ★★ z29-'Je utonil' = 1.-UTONITEV-LINIJE + meseci-bande-forenzika ('None'-artefakt + DECEMBER-z51!) + duhovniki-0-NOVIH (Bitnar-#16-DOMINANTA-2.-leto + Punc-zmeda-5.-leto!) + meja 1910/11 = s130-INSIDE (**8.-STIL-mid-scan-restart-1.×** — P175-lead-KOREKCIJA!)
 - mrliška linija **25/39** (1886–1910) — P177-LEAD: 1911 (s130-z1–5-0-GRIBLJE + z4-MRTVOROJENEC-BREZ-PODPISA + s131-z6–17-2-GRIBLJE: z13-Ana-BRINEC-h14-8 + z14-Katarina-HRUŠIČ-h34-88-ŠILAK-vrnitev! + s132-z18–29-3-'Pexdipec'=PEZDIREC-×3: z24-Ana-h10-81 + z26-Janez-h42-53 + z27-Vido-h48-3-mes!; meja 1911/12 [?])
+
+## P177 — mrliška 1911 ('96'→26-LET-KROP + KUPANIČ-'Nepomuk' + PEZDIREC-×4-1911 + BRINEC-×2-h14 + VAS-×3-KOREKCIJE!)
+
+Agent: Z.ai Code (glavni agent)
+Task: P177 — mrliška knjiga 04894, leto 1911 (26. polno leto mrliške linije)
+
+Work Log:
+- OKOLJE: PAT-validiran (api.github.com/user → 200) → repo @ P176-7cc0435 → P177-nadaljevanje-po-P176-LEAD! /tmp/p176-PREŽIVEL (s130–s132-raw = 1911-z1–29-ŽE-prebrani!)
+- T1-FETCH: /tmp/p177_fetch.py (p175-vzorec) — s133–s136 (4 skeni, 256/256-inventar, 2.65-MB) + cp-s130–s132-iz-p176
+- T2-VLM-BRANJE: read_page.mjs-3-serije-foreground (133+134-retry / 135+136) — 4/4-OK (25–83-s/sken; glave-'Leto 18.911/18.1911/48.1912'!) + 6-KOMPOZIT-PANELOV (K-A–K-F: 36-kropov!) — VLM-panel-omejitev-DOGVODENA (stolpci-zamenjani!) → kompenzirano-z-16-LASTNIMI-VIZIJAMI
+- T3-FORENZIKA (35-kropov: traki-×2.2 ×18 + celice-×3.0 ×12 + PODW-podpisi-×4 + diag-s130/s135): **12-KOREKCIJ** — z31-'96'→26-LET (roj. 19. 8. 1884-marginalija = 1-DAN-PRED-27.! 4/8-KURRENT!) + z30-'95'→35-LET (roj. 4. 8. 1876!) + z47-'Nepomuk'→KUPANIČ (@×3.0!) + z48-'Birčec'/'Sofija'→Matija-BRINEC + OPEKLINA (3.-TRAUMA!) + z51-'Perdih'→PEZDIREC (z-descender — PEZDIREC-×4-1911 = 1.-LETO-×4!) + z54-'Fošelj'→POŽEK (ž-caron!) + z42-h14→h19 (4/9!) + z24-'Lodnemej'→PODZEMELJ + z30/z36-'Griblje'→GRIŠIČE? (VAS-×3 → GRIBLJE-13-ne-16!) + z55-'Vlobučar'→HLOBUČAR (H-prečka + P166!) + z46-'klatran'→HLADNI-KAŠELJ (1.-ta-bolezen!) + PODW-podpisi (z30-'Rauq'→Pumf + z31-'Pithar'→Bitnar + z42-'Pihnar'→Bitnar!)
+- T4-BAND-MAPA: 330+135×k-VELJA-s131–s136 + **s130-ODSTOPANJE-+1** (meja-band-'~1911~'-porine-vrstice: k7=z1…k11=z5 — diag-rešeno!) + **MEJA-1911/12 = s135-INSIDE** ('1912'-VELIKA-v-bandu-k5 + restart-z58→z1 + Bitnar-podpis-v-bandu = 2.-POTRDITEV-STILA-8; P176-lead-'[?]' REŠEN!) + z58-pokop-'2-jan-1912'-EKSPPLICITNO
+- T5-PARISH.TS: P177-blok-komentar + 13-blokov (h14-×2/h19/h20/h24/h31/h34/h41/h42/h43/h46/h48/h57; PEZDIREC-×4 + BRINEC-×2 + KUPANIČ + POŽEK + HLOBUČAR + MAVREŠIČ-roj.-Pezdirec!) + p177_insert.py
+- T5b-KASKADA: qa-parish.ts (91× 1032→1045 + 25× 333→346 + 24× guardi-1911→1912 + p80Death-sporočilo + **allow-listi-×7** (p85-h41 + p88-h46 + p90-h20 + p91-h14 + p92-h43 + p93-h48 + p96-h19!) + qa-p177-blok-178.-kontrola!) + skripte-p153–p176 (35× VITALS_TOTAL-1045 + 24× BLOKI-346!)
+- SKRIPTA: scripts/p177_parish_death_1911.py (I1–I13, --live) = **53/53 PASS + --live!**
+- DOKAZ: research/issue17/parish-death-1911.json (**58 entries = 13-Griblje + 45-ne! 3-excluded (z24-Podzemelj + z30/z36-Grišiče?) + 12-anomalij + 5-crossChecks + honesty-7 + P178-lead**) + notes
+- QA: qa-p177 = **178. kontrola** (blok v qa-parish.ts) · **runQA 178/178 ok:True** · p177-skripta 53/53 · tsc 0 · lint 0
+- KUMULATIV: vitals 1032 → 1045 · mrliški 04894 333 → 346 · p80 92-NESPREMENJENO (h19-ŽE-v-p80-prek-poročne-1907!) · korpus 93-NESPREMENJENO · PT 29 (0-novih — vse-hiše-3.–8.-mrliški-vpis!)
+
+Stage Summary:
+- **P177 KONČAN (koda)**: 1911 = 58-vrstic (ČISTA-SEKVENCA-zap1–58 — 7.-čisto-leto!) / 13-GRIBLJE / 12-hiš (h14-×2-BRINEC-brat+sestra?) / rast 12→13
+- mrliška linija **26/39** (1886–1911) — P178-LEAD: 1912 (s135-dno-z1–6 + s136-z7–18-ŽE-prebrani: 2-GRIBLJE — z1-jožef-PEČNIK?-h87 + z10-barbara-ŠTRAVS-h11 + z3-MRTVOROJENEC-×2-v-2-mesecih!; meja-1912/13 [~ s140+?])
+- 2-NOVI-BOLEZNI-V-1-LETU (HLADNI-KAŠELJ + OPEKLINA = 3.-TRAUMA-SMRT!) + DECEMBER-DOMINANTA-×4 + Bitnar-×11-3.-leto + otroška-smrt-×4 (31%)

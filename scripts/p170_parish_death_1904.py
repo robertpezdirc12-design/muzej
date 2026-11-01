@@ -26,8 +26,8 @@ EXPECTED_EXCLUDED = 7
 EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 5
 GRIBLJE_HOUSES = "1,2,14,31,34,35,48,58,62,63,66,91"
-VITALS_TOTAL = 1032             # 1020 + 12! (P176)
-BLOKI_04894 = 333               # 321 + 12! (P176)
+VITALS_TOTAL = 1045             # 1020 + 12! (P176)
+BLOKI_04894 = 346               # 321 + 12! (P176)
 P80_HOUSES = 92                  # NESPREMENJENO (vseh-12-ŽE-v-p80!)
 KORPUS_HOUSES = 93               # NESPREMENJENO
 NEW_SCANS = [95, 96, 97, 98]
@@ -266,7 +266,7 @@ def main():
 
     # ---------- I12: kaskada ----------
     check("I12a p153–p169 skripte VITALS_TOTAL 950",
-          all("VITALS_TOTAL = 1032" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
+          all("VITALS_TOTAL = 1045" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
               for i, y in ((153, 1887), (154, 1888), (155, 1889), (156, 1890), (157, 1891), (158, 1892), (159, 1893), (160, 1894), (161, 1895), (162, 1896), (163, 1897), (164, 1898), (165, 1899), (166, 1900), (167, 1901), (168, 1902), (169, 1903))), "")
     check("I12b p80-skripta P169-komentar-kaskada (938 → 950-pini!)",
           "len(vitals) == 1032" in p80, "")

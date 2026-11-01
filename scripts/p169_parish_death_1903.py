@@ -27,8 +27,8 @@ EXPECTED_EXCLUDED = 8
 EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 5
 GRIBLJE_HOUSES = "4,11,12,18,18,30,36,40,40,45,45,46,52,58,60,72,83"
-VITALS_TOTAL = 1032             # 1020 + 12! (P176)
-BLOKI_04894 = 333               # 321 + 12! (P176)
+VITALS_TOTAL = 1045             # 1020 + 12! (P176)
+BLOKI_04894 = 346               # 321 + 12! (P176)
 P80_HOUSES = 92                  # 90 → 91 (+h4 = 28. PT-vez; 04105-1906-blok-IZVEN-filtra!)
 KORPUS_HOUSES = 93               # NESPREMENJENO
 NEW_SCANS = [91, 92, 93, 94]
@@ -265,7 +265,7 @@ def main():
 
     # ---------- I12: kaskada ----------
     check("I12a p153–p168 skripte VITALS_TOTAL 938",
-          all("VITALS_TOTAL = 1032" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
+          all("VITALS_TOTAL = 1045" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
               for i, y in ((153, 1887), (154, 1888), (155, 1889), (156, 1890), (157, 1891), (158, 1892), (159, 1893), (160, 1894), (161, 1895), (162, 1896), (163, 1897), (164, 1898), (165, 1899), (166, 1900), (167, 1901), (168, 1902))), "")
     check("I12b p80-skripta P169-komentar (921 → 938 + h4-28.-PT!)",
           "P169: 921 → 938" in p80 and "28. PT-vez" in p80, "")

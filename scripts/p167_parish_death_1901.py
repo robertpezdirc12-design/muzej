@@ -33,8 +33,8 @@ EXPECTED_EXCLUDED = 8
 EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 10
 GRIBLJE_HOUSES = "28,29,33,34,35,36,48,60,64,81"
-VITALS_TOTAL = 1032             # 1020 + 12! (P176)
-BLOKI_04894 = 333               # 321 + 12! (P176)
+VITALS_TOTAL = 1045             # 1020 + 12! (P176)
+BLOKI_04894 = 346               # 321 + 12! (P176)
 P80_HOUSES = 89                  # NESPREMENJENO (h28 že v 04105!)
 KORPUS_HOUSES = 93               # NESPREMENJENO (h28 že v 04105!)
 NEW_SCANS = [81, 82, 83, 84, 85]
@@ -250,7 +250,7 @@ def main():
 
     # ---------- I12: kaskada ----------
     check("I12a p153–p166 skripte VITALS_TOTAL 904",
-          all("VITALS_TOTAL = 1032" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
+          all("VITALS_TOTAL = 1045" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
               for i, y in ((153, 1887), (154, 1888), (155, 1889), (156, 1890), (157, 1891), (158, 1892), (159, 1893), (160, 1894), (161, 1895), (162, 1896), (163, 1897), (164, 1898), (165, 1899), (166, 1900))), "")
     check("I12b p80 PT_GAP_HOUSES komentar (P167: korpus-NESPREMENJEN!)",
           "+ 51 (mrliška 04894-1896" in p80, "")

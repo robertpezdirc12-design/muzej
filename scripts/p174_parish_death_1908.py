@@ -29,8 +29,8 @@ EXPECTED_ANOMALIES = 14
 EXPECTED_CROSSCHECKS = 5
 GRIBLJE_HOUSES = "2,3,5,20,24,24,30,33,39,42,44,83,85"
 GRIBLJE_ZAPS = [10, 16, 20, 25, 42, 47, 54, 59, 64, 70, 71, 72, 75]
-VITALS_TOTAL = 1032             # 1020 + 12! (P176)
-BLOKI_04894 = 333               # 321 + 12! (P176)
+VITALS_TOTAL = 1045             # 1020 + 12! (P176)
+BLOKI_04894 = 346               # 321 + 12! (P176)
 P80_HOUSES = 92                 # NESPREMENJENO (vseh-12-hiš-ŽE-v-p80!)
 KORPUS_HOUSES = 93              # NESPREMENJENO
 NEW_SCANS = [115, 116, 117, 118, 119, 120, 121]  # s114-reuse (P173-meja-lead!) + s122 = 1909-lead

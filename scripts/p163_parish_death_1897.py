@@ -36,8 +36,8 @@ EXPECTED_EXCLUDED = 8
 EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 10
 GRIBLJE_HOUSES = "2,14,15,16,26,42,51,53,54,87"
-VITALS_TOTAL = 1032             # 1020 + 12! (P176)
-BLOKI_04894 = 333               # 321 + 12! (P176)
+VITALS_TOTAL = 1045             # 1020 + 12! (P176)
+BLOKI_04894 = 346               # 321 + 12! (P176)
 P80_HOUSES = 88                  # NESPREMENJENO (h54 že v vzorci prek 04105!)
 P80_SCRIPT_HOUSES = 88           # NESPREMENJENO (h34/h52 IZVEN p80-filtra — P164!)
 KORPUS_HOUSES = 93               # NESPREMENJENO (h54 že!)
@@ -258,7 +258,7 @@ def main():
 
     # ---------- I12: kaskada ----------
     check("I12a p153–p163 skripte VITALS_TOTAL 873",
-          all("VITALS_TOTAL = 1032" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
+          all("VITALS_TOTAL = 1045" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
               for i, y in ((153, 1887), (154, 1888), (155, 1889), (156, 1890), (157, 1891), (158, 1892), (159, 1893), (160, 1894), (161, 1895), (162, 1896))), "")
     check("I12b p80 PT_GAP_HOUSES vsebuje 54 (19. luknja-dokaz)",
           '"54"' in p80, "")

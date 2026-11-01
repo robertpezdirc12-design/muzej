@@ -32,8 +32,8 @@ EXPECTED_EXCLUDED = 8
 EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 10
 GRIBLJE_HOUSES = "8,12,26,30,33,35,36,37,38,46,87"
-VITALS_TOTAL = 1032             # 1020 + 12! (P176)
-BLOKI_04894 = 333               # 321 + 12! (P176)
+VITALS_TOTAL = 1045             # 1020 + 12! (P176)
+BLOKI_04894 = 346               # 321 + 12! (P176)
 P80_HOUSES = 87                  # NESPREMENJENA — zasičanje 3. leto!
 KORPUS_HOUSES = 93               # POSODABLJENO P162: 92 + 1 (+h51 — 1. dokaz kadarkoli)!
 NEW_SCANS = [51, 52, 53, 54, 55]
@@ -235,7 +235,7 @@ def main():
     check("I12a p80 PT_GAP doc-list 15 (P162: +h51!)",
           '"44", "53", "54", "56", "57", "59", "60", "42", "58", "52", "46", "48", "43", "49", "51"' in qa, "")
     check("I12b p153–p161 skripte VITALS_TOTAL 853",
-          all("VITALS_TOTAL = 1032" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
+          all("VITALS_TOTAL = 1045" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
               for i, y in ((153, 1887), (154, 1888), (155, 1889), (156, 1890), (157, 1891), (158, 1892), (159, 1893), (160, 1894), (161, 1895))), "")
     check("I12c p161-next: P162-lead (1896) v dokazu",
           "P162" in d["nextSteps"][0], "")

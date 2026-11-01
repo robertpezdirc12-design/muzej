@@ -36,8 +36,8 @@ EXPECTED_EXCLUDED = 9
 EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 10
 GRIBLJE_HOUSES = "9,14,20,26,31,41,42,45,46,51,58,63,64"
-VITALS_TOTAL = 1032             # 1020 + 12! (P176)
-BLOKI_04894 = 333               # 321 + 12! (P176)
+VITALS_TOTAL = 1045             # 1020 + 12! (P176)
+BLOKI_04894 = 346               # 321 + 12! (P176)
 P80_HOUSES = 88                  # 87 + h51 (EDINA NOVA — 1. dokaz kadarkoli!)!
 KORPUS_HOUSES = 93               # 92 + h51!
 NEW_SCANS = [55, 56, 57, 58, 59, 60]
@@ -255,7 +255,7 @@ def main():
 
     # ---------- I12: kaskada ----------
     check("I12a p153–p162 skripte VITALS_TOTAL 866",
-          all("VITALS_TOTAL = 1032" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
+          all("VITALS_TOTAL = 1045" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
               for i, y in ((153, 1887), (154, 1888), (155, 1889), (156, 1890), (157, 1891), (158, 1892), (159, 1893), (160, 1894), (161, 1895), (162, 1896))), "")
     check("I12b p80 PT_GAP_HOUSES + 51 (18. luknja-dokaz)",
           '"51" in p80 or \'51\' in p80' and '"51", "52"' in p80.replace('", "', '", "'), "")

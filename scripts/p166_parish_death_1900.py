@@ -36,8 +36,8 @@ EXPECTED_EXCLUDED = 8
 EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 10
 GRIBLJE_HOUSES = "23,32,45,47,49,63,65,81"
-VITALS_TOTAL = 1032             # 1020 + 12! (P176)
-BLOKI_04894 = 333               # 321 + 12! (P176)
+VITALS_TOTAL = 1045             # 1020 + 12! (P176)
+BLOKI_04894 = 346               # 321 + 12! (P176)
 P80_HOUSES = 89                  # 88 + h81 EDINA NOVA (1. mrliški — 24. PT-vez; cf. P162-h51!)
 KORPUS_HOUSES = 93               # NESPREMENJENO (h81 že v 04105!)
 NEW_SCANS = [76, 77, 78, 79, 80]
@@ -256,7 +256,7 @@ def main():
 
     # ---------- I12: kaskada ----------
     check("I12a p153–p165 skripte VITALS_TOTAL 894",
-          all("VITALS_TOTAL = 1032" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
+          all("VITALS_TOTAL = 1045" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
               for i, y in ((153, 1887), (154, 1888), (155, 1889), (156, 1890), (157, 1891), (158, 1892), (159, 1893), (160, 1894), (161, 1895), (162, 1896), (163, 1897), (164, 1898), (165, 1899))), "")
     check("I12b p80 PT_GAP_HOUSES komentar (P166: korpus-NESPREMENJEN!)",
           "+ 51 (mrliška 04894-1896" in p80, "")
