@@ -7037,3 +7037,26 @@ Stage Summary:
 - README.md posodobljen na stanje po P177: TOC-anchor + heading 'Zadnje stanje raziskave' (po P172 · 2026-10-31 → po P177 · 2026-11-01) + 3 NOVE podrobne izjave (P177 + P176 + P175 — do zdaj manjkale v sekciji!) + mrliška tabelna celica (+P177-segment, repki 'P176 = 1910' → 'P177 = 1911' ×2) + Korpus-vrstica (+P177: +13 mrliških blokov 1911 pred P176-incrementom)
 - Vercel produkcija re-verificirana: griblje-museum.vercel.app/api/qa → 200 ok:True
 - TRILOKACIJA re-verificirana pred tem pushom: lokalni == GitHub (API) == GitLab (API) == a41bbba
+
+## P178 — mrliška 1912 ('MRTVOROJEN-×3-REKORD' + PORODNA-SMRT-#4 + PEZDIREC-×4-2.-leto + 'Se utopil' + POSESTNIK-×4 + BITNAR-'Lambert'-RAZREŠEN!)
+
+Agent: Z.ai Code (glavni agent)
+Task: P178 — mrliška knjiga 04894, leto 1912 (27. polno leto mrliške linije)
+
+Work Log:
+- OKOLJE: PAT-validiran (api.github.com/user → 200) → repo @ P177-a41bbba → README-sync-426a52b-pushan (GitHub+GitLab+Vercel-verificiran!) → /tmp/p177-REUSE (s135/s136 + inventory-256!)
+- T1-FETCH: /tmp/p178_fetch.py — s137–s140 (4 skeni, 256/256-inventar, 2.6-MB) + s141–s142-nadoljevanje (+2 = 6-skenov-skupaj!)
+- T2-VLM-BRANJE: read_page.mjs-3-serije-foreground (137+138 / 139+140 / 141+142) — 6/6-OK (25–49-s/sken; glave-'18/48.1912' + s142-'18.1913'!) — s140/s141/s142-diag-gridi-VIZUALNO-z-Read-očmi (band-geometrija-330+135×k-POTRJENA!)
+- T3-FORENZIKA (81-cropov: R1-48 + R2-33 + R3/R4/R5-diag-oči-~20-@×4.0!): **16-KOREKCIJ** — z62-'Otica'→**Ana-MUC**-45-KRVOTOK (h91-×2-ISTI-DAN = PORODNA-SMRT-#4!) + z30-'Mitropanca'→**MRTVOROJENA** (r53-#22!) + z60/z61-MRTVOROJEN-×2 (r53-#23–#24 = **×3-REKORD**!) + z64/z71/z74/z77-'Perdinec'→**PEZDIREC-×4** (2.-LETO-×4!) + z32-'Tlak'→**ŠILAK** (leksikon-3.×!) + h33-'83'→**33** (3/8!) + z35-'Hriberšon'→**HRIŽAN** (ž-caron!) + z25-'De-ukrstel'→**'Se utopil'** (2.-UTONITEV — 1.-OTROK!) + z39-'Hkravost'→**HRIPAVOST** (1.-TA-BOLEZEN!) + z47-'Krič'→**KRČI** + z49/z65-'Mačkuha'/'Nasratno'→**NADUHA-×2** + z59-'Orofen-Muc'→**Anton-MLEC** + 'Ofujenica'→**PLJUČNICA** + z69/z76-'Gomelj'→**ZEMELJ** + z77-'Dobranice'→**PODZEMELJ** + z66-'Lah.'-[~ Luh.] + **POSESTNIK-×4** (z30-hiči + z60/z61-sin + z62-žena — 1.-POJAV-STAN!) + **ULOMEK-'1 10/12'-z64** (ne-1½/1¾!) + **'je'-LIGATURA-LEKCIJA** ('¼'-zmeda-×5!) + **BITNAR-'Lambert'-RAZREŠEN** ('Lambinus'-crop — 'Pintar'-VLM-scan-HALUCINACIJA!)
+- T4-MEJA: **1912/13 = s142** (glava-'Leto 18 1913'-VELIKA-ROČNA + restart-77→z1 + s141-z76/z77-pokop-'1.-jan.-1913'-×2-INLINE = **19.-POTRDITEV — 7.-STIL-2.×** — P177-lead-'[~ s140+?]'-KOREKCIJA!) + s141-glava-'48.1912' (pisar-'48'-2.-PONOVITEV-od-P172!)
+- T5-PARISH.TS: P178-blok-komentar (12-vrstic + P179-LEAD) + 18-blokov (h87/h11/h57/h33/h34/h72/h26/h21/h39/h78/h29/h16/h91-×2/h42-×2/h68/h79!) + PEZDIREC-×4 + BRINEC-0 + 2×-1.-MRLIŠKI-VPIS (h78 + h79!)
+- T5b-KASKADA: qa-parish.ts (92× 1045→1063 + 26× 346→364 + 24× p80-92→93-**+h79-EDINA-NOVA!** + 24× guardi-1912→1913 + NOVA-hiša-allowi-×2 (p88-h91-1912 + p90-h87-1912!) + p80Death-sporočilo + **qa-p178-blok-179.-kontrola!**) + **stale-sanacija-p153–p177-×24-skript-×4-KROGA** (VITALS_TOTAL-1063 + BLOKI-364 + guardi-1913 + p80-skripta-1063/93 + gnezdo-korekcije-p160/p161 (h87-×5 + h57-×6 + h72-×9!) + I12c/I12d-nizi + I11d-1913!) — **REGRESIJA-26/26-ZELENO!**
+- SKRIPTA: scripts/p178_parish_death_1912.py (I1–I13, --live) = **46/46 PASS + --live 47/47!**
+- DOKAZ: research/issue17/parish-death-1912.json (**77 entries = 18-Griblje + 59-ne! 1-excluded (1913-lead-s142-z1–12!) + 18-anomalij + 5-crossChecks + honesty-7 + P179-lead**) + notes
+- QA: qa-p178 = **179. kontrola** (blok v qa-parish.ts) · **runQA 179/179 ok:True** · p178-skripta 46/46 · REGRESIJA-26/26 · tsc 0 · lint 0
+- KUMULATIV: vitals 1045 → 1063 · mrliški 04894 346 → 364 · **p80 92 → 93 (+h79-EDINA-NOVA — 04105-h79-izven-filtra!)** · korpus 93-NESPREMENJENO (h78-ŽE-v-p80-prek-04455/04105!) · PT-luknja 15 (h78/h79-kandidata-NE-šteta!)
+
+Stage Summary:
+- **P178 KONČAN (koda)**: 1912 = 77-vrstic (zap1–77) / 18-GRIBLJE / 16-hiš (h42-×2-PEZDIREC + h91-×2-ISTI-DAN!) / rast 13→18
+- mrliška linija **27/39** (1886–1912) — P179-LEAD: 1913 (s142-z1–12-ŽE-prebrani: 3-GRIBLJE — z2-h65-Marija-MILEK-4 + z4-h5-Anton-ŠTRUCELJ + z5-h47-Marija-HLOBUČAR? + z6-MARASMUS-1.×!; meja-1913/14 [?])
+- MRTVOROJEN-×3-REKORD + PORODNA-SMRT-#4 (MATI+OTROK-v-1-DNEVU-1.×!) + 2×-1.-MRLIŠKI-VPIS (h78+h79) + 4.-TRAUMA (utopitev-otroka!) + POSESTNIK-1.-POJAV + ULOMEK-#2 + 'je'-LEKCIJA + BITNAR-LAMBERT

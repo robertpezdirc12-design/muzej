@@ -4220,6 +4220,214 @@ export const HOUSE_VITALS: HouseVital[] = [
     whatEn: "died Marija MAVREŠIČ [★★★ the CROP-×3.0 — the VLM-'Mavrič'-REJECTED (the n/š-KURRENT; cf. z11-s131-Marjeta-MAVREŠIČ-the-SAME-year!), born PEZDIREC [★★★ the CROP — the z-DESCENDER-clear!]], a half-smallholder's wife [~ 'omrčena'], 26 YEARS [★★★ the CROP — the VLM-'96'-REJECTED! born Aug 19, 1884-margin → 1911−1884 = 26-CONSISTENT!] (Aug 18, buried Aug 20) — Jetika; previden (1); Lausin Bitnar [★★ the WIDE-SIGNATURE-CROP — the VLM-'LamblPithar'-REJECTED!]; ★★★ the MAX-ZOOM-FORENSICS-3rd-year (95→35-z30 + 96→26-z31!) + h57 = the 5th death entry + the born-PEZDIREC = the 5th-contact-of-the-1911-network! + the 5 + 7 house number (57)",
     status: "DOCUMENTED",
   },
+  // ——— P178 razširitev: MRLIŠKA KNJIGA 04894 — leto 1912 (skeni 135–141; 77 vpisov z1–77 / 18 Griblje / 16 hiš; h42-×2 + h91-×2; PEZDIREC-×4-2.-leto!; meja 1912/13 = s142-glava-1913 + restart-77→1 (P177-lead-'[~ s140+?]' KOREKCIJA!); dokaz: research/issue17/parish-death-1912.json) ———
+  // ★★★ MRTVOROJENI-×3-v-1-LETU = REKORD LINIJE (z30-Otok-h21-'J.-Dajnar'-posestnika-hiči + z60-h16-'J.-Novak'-posestnikov-sin + z61-h91-'J.-Muc'-posestnikov-sin — VSI-BREZ-PODPIŠA — r53-#22–#24!) + ★★★ z62-h91-Ana-MUC-45-let-KRVOTOK = PORODNA-SMRT-#4 (1888-×2-MATERI → 1908-OTROK → 1912-MATI+OTROK-ISTI-DAN-14.-10.! — h91-×2-v-1-DNEVU = MATI+MRTVOROJEN-SIN-DRAMA!)
+  // ★★★ PEZDIREC-×4-1912 = 2.-LETO-×4-PRIIMKA (z64-h42-Marija-1-10/12 + z71-h79-Ana-59 + z74-h42-Ana-76 + z77-Podzemelj-h10-Marija-51 — 'Perdinec'-z-DESCENDER-leksikon-@×3.0-×3!) + ★★★ h42-×2-1912 (Marija-Okt + Ana-Dec — 2-vpisa-v-3-MESECIH = PADEC-vzorec-8.-leto!) + h91-×2-ISTI-DAN
+  // ★★★ 2×-1.-MRLIŠKI-VPIS-KADARKOLI (h78-32.-PT-kandidat z45-Julij-Lozar-5-mes + h79-33.-PT-kandidat z71-Ana-PEZDIREC-59!) + ★★★ 'Se utopil'-z25-Gera-h36-Anton-Bajuk-2-let = 2.-UTONITEV-LINIJE (cf. 1910-'Je utonil'-Podmelnica-78 — 1.-OTROK! 4.-TRAUMA-SMRT!) + ★ z1-h87-'Hirn-[?]-[?]-ung'-NEMŠKA-bolezen-[?]
+  // ★★★ POSESTNIK-×4-omemb (z30-'posestnika hiči' + z60/z61-'posestnikov sin' + z62-'posestnikova žena' — 1.-POJAV-STAN-v-liniji!) + ★★★ ULOMEK-'1 10/12'-z64 (1-leto-10-mes = 2.-ULOMEK-LINIJE za P176-'¼-URE'! ne-1½/1¾!) + ★★★ 'je'-LIGATURA-LEKCIJA ('¼'-zmeda-×5-RAZREŠENA — z20/z35/z36/z45-stani = 'je'!) + ★★ ŠILAK-'Tlak'-leksikon-3.× (z32-h34-Janez-79!)
+  // ★★★ BITNAR-#16-IME-RAZREŠEN: 'Lambert BITNAR' (podpis-'Lambinus Bitnar'-crop + 'Lanml/Lanin/Lanlin Pihnar/Pšinar'-VLM-forme-×~30-4.-leto-DOMINANTA!) + 'Pintar'-VLM-scan-ZAVRJEN (= Bitnar!) + 'Jos. Rumpf/Puml/Rauq'-zmeda ×~15 + z75-'ž'-dodatek-podpisu + z54-'Rep.'-dodatek (repetent?)
+  // ★ GLAVE: '48.1912'-×2 (s136 + s141 — pisar-'48'-navada-2.-PONOVITEV-od-P172-s104-'48/1905'!) + '18'-navada-×4 + s139-'Pag-198'-VLM-page-misread (pravi-138!) + pokop-'1.-jan.-1913'-×2-INLINE (z76+z77!)
+  // bolezni: Jetika ×~20-DOMINANTA + Prehlajenje ×6 + Naduha ×5 + Božjast ×4 + Slabost ×3 + Pljučnica ×4 (z59-'Ofujenica'-RAZREŠENA!) + Krvotok ×1-porodna + Krči-[?] ×1 + Hripavost-[?] ×1 + 'Kroisel'-[?] ×1-KROP-hip + Udarnica ×1 + Marasmus-1913-lead ×1 + Mrtvorojen ×3
+  // meseci Griblje: Mar1·Maj1·Jun1·Junij4·Jul3·Avg2·Okt5·Nov2·Dec1 (Jan0·Feb0·Sep0!) + Okt-DOMINANTA-×5
+  // P179 LEAD: mrliška 1913 (s142-z1–12 ŽE-prebrani: 3-GRIBLJE — z2-h65-Marija-MILEK-4-let + z4-h5-Anton-ŠTRUCELJ-82?-dni + z5-h47-Marija-HLOBUČAR?-51! + z6-CEROVIŠE-h9-MARASMUS-1.× + z11-'1-uro'-Podzemelj-3.-'ure'-enota!; meja 1913/14 [?])
+  {
+    houseNo: "87",
+    bookSignature: "04894",
+    year: 1912,
+    scan: 135,
+    page: 134,
+    whatSi: "umrl Jožef PEČNIK [~ VLM-panel-'Drexchinec'-ZAVRJEN — 'Pečnik'-P177-lead-potrjen-@×4!], bajtarjev sin [~ panel-'bajtargar'-hlapeç], 11 LET (9. 1., pokop 11. 1.) — 'Hirn-[?] [?]-ung' [★★ NERAZREŠENA-NEMŠKA-bolezen (VLM-'srčna krvavitvena'-[~] — cf. Altersschwäche-1902-vzorec!)]; previden (1); Lambert Bitnar [★★ #16-IME-RAZREŠENO-'Lambinus-Bitnar'-crop!]; ★ h87 = 5. mrliški vpis (1895-ISTO-IMEŠKI-PAR + 3-pred!) + 1. GRIBLJE-1912 + 8 + 7 hišna (87)",
+    whatEn: "died Jožef PEČNIK [~ the VLM-panel-'Drexchinec'-REJECTED — 'Pečnik'-the-P177-lead-confirmed-@×4!], a smallholder's son [~], 11 YEARS (Jan 9, buried Jan 11) — 'Hirn-[?] [?]-ung' [★★ an UNRESOLVED-GERMAN-illness (the VLM-'cardiac-hemorrhage'-[~] — cf. the-Altersschwäche-1902-pattern!)]; previden (1); Lambert Bitnar [★★ #16-NAME-RESOLVED-'Lambinus-Bitnar'-crop!]; ★ h87 = the 5th death entry (1895-THE-SAME-NAME-PAIR + 3-prior!) + the 1st GRIBLJE-1912 + the 8 + 7 house number (87)",
+    status: "DOCUMENTED",
+  },
+
+  {
+    houseNo: "11",
+    bookSignature: "04894",
+    year: 1912,
+    scan: 136,
+    page: 135,
+    whatSi: "umrla Barbara ŠTRAVS, 52 LET (10. 3., pokop 12. 3.) — Jetika; previden (1); Lambert Bitnar; ★ h11 = 5. mrliški vpis (4-pred!) + ŠTRAVS-h11-vez (cf. h45-ŠTRAUS-×3 + h72!) + 1 + 1 hišna (11)",
+    whatEn: "died Barbara ŠTRAVS, 52 YEARS (Mar 10, buried Mar 12) — Jetika; previden (1); Lambert Bitnar; ★ h11 = the 5th death entry + the ŠTRAVS-h11-link + the 1 + 1 house number (11)",
+    status: "DOCUMENTED",
+  },
+
+  {
+    houseNo: "57",
+    bookSignature: "04894",
+    year: 1912,
+    scan: 137,
+    page: 136,
+    whatSi: "umrla Amalija MARENIČ [~ 'Mavrenič'/'Marenfič'-VLM-zmeda], 1¾ LETA [~], 17. 5., pokop 19. 5.) — Jetika; previden (.); Lambert Bitnar; ★★ h57 = 6. mrliški vpis (P172-Matija-URH-78 + 4-pred!) + stan-'je-?-ova-hiči'-[?]-ANOMALIJA + 5 + 7 hišna (57)",
+    whatEn: "died Amalija MARENIČ [~ the 'Mavrenič'/'Marenfič'-VLM-confusion], 1¾ YEARS [~], May 17, buried May 19) — Jetika; previden (.); Lambert Bitnar; ★★ h57 = the 6th death entry + the status-'je-?-ova-hiči'-[?]-ANOMALY + the 5 + 7 house number (57)",
+    status: "DOCUMENTED",
+  },
+
+  {
+    houseNo: "33",
+    bookSignature: "04894",
+    year: 1912,
+    scan: 137,
+    page: 136,
+    whatSi: "umrla Marija ŽEFKA [~], 1¾ LETA (1. 6., pokop 2. 6.) — Jetika; previden (.); Lambert Bitnar; ★★ h33-KOREKCIJA (crop-×4.0-'33'-jasno — VLM-'83'-ZAVRJEN — 3/8-KURRENT!) = 7. mrliški vpis (DEBLIČ-hiša-×3 + 3-pred!) + 3 + 3 hišna (33)",
+    whatEn: "died Marija ŽEFKA [~], 1¾ YEARS (Jun 1, buried Jun 2) — Jetika; previden (.); Lambert Bitnar; ★★ the h33-CORRECTION (the crop-×4.0-'33'-clear — the VLM-'83'-REJECTED — the 3/8-KURRENT!) = the 7th death entry + the 3 + 3 house number (33)",
+    status: "DOCUMENTED",
+  },
+
+  {
+    houseNo: "34",
+    bookSignature: "04894",
+    year: 1912,
+    scan: 138,
+    page: 137,
+    whatSi: "umrl Janez ŠILAK [★★★ VLM-'Tlak'-LEKSIKON-3.× — P175-'Tlak'-×2-ZAVRJEN-ŠILAK + h34-ŠILAK-hiša (DVOJČKI-1909-×2!)], vdovec, 79 LET (20. 6., pokop 22. 6.) — Vodenača; previden (1); Lambert Bitnar; ★★ h34 = 8. mrliški vpis (1893-DVOJČKI-×2-1909 + HRUŠIČ-1911 + 4-pred!) + 3 + 4 hišna (34)",
+    whatEn: "died Janez ŠILAK [★★★ the VLM-'Tlak'-LEXICON-3rd — the P175-'Tlak'-×2-REJECTED-ŠILAK + the h34-ŠILAK-house (the-TWINS-1909-×2!)], a widower, 79 YEARS (Jun 20, buried Jun 22) — Vodenača; previden (1); Lambert Bitnar; ★★ h34 = the 8th death entry + the 3 + 4 house number (34)",
+    status: "DOCUMENTED",
+  },
+
+  {
+    houseNo: "72",
+    bookSignature: "04894",
+    year: 1912,
+    scan: 138,
+    page: 137,
+    whatSi: "umrl Julij ŠTRAVS, 11 MESECEV (28. 6., pokop 29. 6.) — Božjast; previden (.); Lambert Bitnar; ★ h72 = 9. mrliški vpis (1888-×2 + 1894 + 1899 + 1902-×2 + 1903 + 1910-Marko-75! + 1911) + ★★ ŠTRAVS-h72-kontinuiteta-2.-LETO-ZAPORED (1911-? + 1910-Marko!) + 7 + 2 hišna (72)",
+    whatEn: "died Julij ŠTRAVS, 11 MONTHS (Jun 28, buried Jun 29) — Božjast; previden (.); Lambert Bitnar; ★ h72 = the 9th death entry + ★★ the ŠTRAVS-h72-continuity + the 7 + 2 house number (72)",
+    status: "DOCUMENTED",
+  },
+
+  {
+    houseNo: "26",
+    bookSignature: "04894",
+    year: 1912,
+    scan: 138,
+    page: 137,
+    whatSi: "umrl Anton HRIŽAN [★★ KROP-×4.0-'Hrižan'-ž-CARON-jasno — VLM-'Hriberšon'-ZAVRJEN!], 6 MESECEV (30. 6., pokop 1. 7.) — Božjast; previden (.); Lambert Bitnar; ★ h26 = 8. mrliški vpis (P168-'7.-vpis-IZENAČI' + 6-pred!) + 2 + 6 hišna (26)",
+    whatEn: "died Anton HRIŽAN [★★ the CROP-×4.0-'Hrižan'-the-ž-CARON-clear — the VLM-'Hriberšon'-REJECTED!], 6 MONTHS (Jun 30, buried Jul 1) — Božjast; previden (.); Lambert Bitnar; ★ h26 = the 8th death entry + the 2 + 6 house number (26)",
+    status: "DOCUMENTED",
+  },
+
+  {
+    houseNo: "21",
+    bookSignature: "04894",
+    year: 1912,
+    scan: 138,
+    page: 137,
+    whatSi: "umrl Jurij POČEK [~ 'Doček'/'Jožek'-VLM-zmeda — P-začetnica], 10 MESECEV (5. 7., pokop 6. 7.) — Jetika; previden (.); Lambert Bitnar; ★ h21 = 7. mrliški vpis (5-pred!) + cf. P172-'Potokar'→JOČEK-h77-priimek-leksikon + 2 + 1 hišna (21)",
+    whatEn: "died Jurij POČEK [~ the 'Doček'/'Jožek'-VLM-confusion], 10 MONTHS (Jul 5, buried Jul 6) — Jetika; previden (.); Lambert Bitnar; ★ h21 = the 7th death entry + cf. the P172-'Potokar'→JOČEK-surname-lexicon + the 2 + 1 house number (21)",
+    status: "DOCUMENTED",
+  },
+
+  {
+    houseNo: "39",
+    bookSignature: "04894",
+    year: 1912,
+    scan: 138,
+    page: 137,
+    whatSi: "umrl Janez JAKLIČ [~ — P176-JAKOFČIČ-lekcija-BREZ-f-dokaza-tukaj (crop-'J-a-k-l-i-č'! — h39 = MILEK-hiša-vez!)], kmetov sin [~], 6 MESECEV (16. 7., pokop 17. 7.) — Hripavost [★★ 1.-TA-BOLEZEN-LINIJE (VLM-'Hkravost'/'Hiravost'-ZAVRJENA — 'hripavost'-crop! — 2.-NOVI-BOLEZNI-V-1-LETU! cf. 1911-HLADNI-KAŠELJ!)]; previden (.); Lambert Bitnar; ★ h39 = 3. mrliški vpis (1908-Barbara-MILEK-76 + 1893!) + MILEK-hiša + 3 + 9 hišna (39)",
+    whatEn: "died Janez JAKLIČ [~ — the P176-JAKOFČIČ-lesson-WITHOUT-the-f-proof-here — h39 = the MILEK-house-link!], a smallholder's son [~], 6 MONTHS (Jul 16, buried Jul 17) — Hripavost [★★ the 1st SUCH-ILLNESS-of-the-line (the VLM-'Hkravost'/'Hiravost'-REJECTED!) — the 2nd-NEW-ILLNESSES-in-1-year (cf. 1911-HLADNI-KAŠELJ!)]; previden (.); Lambert Bitnar; ★ h39 = the 3rd death entry + the MILEK-house + the 3 + 9 house number (39)",
+    status: "DOCUMENTED",
+  },
+
+  {
+    houseNo: "78",
+    bookSignature: "04894",
+    year: 1912,
+    scan: 139,
+    page: 138,
+    whatSi: "umrl Julij LOZAR [~ 'Ložar'], je zemljakov sin [★★ 'je'-LIGATURA-LEKCIJA — '¼'-VLM-zmeda-RAZREŠENA!], 5 MESECEV (28. 7., pokop 29. 7.) — Slabost; previden (—); Lambert Bitnar; ★★★ h78 = 1. MRLIŠKI VPIS KADARKOLI = 32.-PT-vez-kandidat (korpus-93-NESPREMENJEN — cf. h79-ISTI-MESEC!) + 7 + 8 hišna (78)",
+    whatEn: "died Julij LOZAR [~ 'Ložar'], a 'je'-smallholder's son [★★ the 'je'-LIGATURE-LESSON — the '¼'-VLM-confusion-RESOLVED!], 5 MONTHS (Jul 28, buried Jul 29) — Slabost; previden (—); Lambert Bitnar; ★★★ h78 = the 1st DEATH ENTRY EVER = the 32nd-PT-link-candidate + the 7 + 8 house number (78)",
+    status: "DOCUMENTED",
+  },
+
+  {
+    houseNo: "29",
+    bookSignature: "04894",
+    year: 1912,
+    scan: 139,
+    page: 138,
+    whatSi: "umrl Peter MILEK [★★ KROP-vas+'Griblje-h29'-@×4.0-POTRJENO!], 6½ LET (2. 8., pokop 4. 8.) — Krči [~ 'Krič' — 2.-NOVA-BOLEZEN-1912!]; previden (—); Jos. Rumpf [~ Pumf-'Rauq/Ruml'-zmeda]; ★★ h29 = 6. mrliški vpis (4-pred!) + ★★ MILEK-×3-1912-vez (z47-Griblje-h29 + cf. h39 + h65!) + 2 + 9 hišna (29)",
+    whatEn: "died Peter MILEK [★★ the crop-vas+'Griblje-h29'-CONFIRMED-@×4.0!], 6½ YEARS (Aug 2, buried Aug 4) — Krči [~ the 2nd-NEW-ILLNESS-1912!]; previden (—); Jos. Rumpf [~ Pumf]; ★★ h29 = the 6th death entry + ★★ the MILEK-×3-1912-link + the 2 + 9 house number (29)",
+    status: "DOCUMENTED",
+  },
+
+  {
+    houseNo: "16",
+    bookSignature: "04894",
+    year: 1912,
+    scan: 140,
+    page: 139,
+    whatSi: "'J. NOVAK' — MRTVOROJEN [★★★ r53-vzorec-#22 — BREZ-PODPIŠA + starost-'—' + previden-'—'!], posestnikov sin [★★ 1.-POJAV-'POSESTNIK'-STAN-LINIJE!], 13. 10. = pokop-13. 10.-ISTI-DAN; ★★★ MRTVOROJENI-×3-1912 = REKORD-LINIJE (prej-max-×2-P175!) + h16-NOVAK-hiša (P176-z51-Ana-NOVAK-'¼-URE'-1910!) = 7. mrliški vpis + 1 + 6 hišna (16)",
+    whatEn: "'J. NOVAK' — STILLBORN [★★★ the r53-pattern-#22 — NO-SIGNATURE + age-'—'!], a landowner's son [★★ the 1st-'POSESTNIK'-STATUS-of-the-line!], Oct 13 = buried-Oct-13-THE-SAME-DAY; ★★★ STILLBORN-×3-1912 = the LINE-RECORD + the h16-NOVAK-house (the P176-'¼-HOUR'-1910!) = the 7th death entry + the 1 + 6 house number (16)",
+    status: "DOCUMENTED",
+  },
+
+  {
+    houseNo: "91",
+    bookSignature: "04894",
+    year: 1912,
+    scan: 140,
+    page: 139,
+    whatSi: "'J. MUC' — MRTVOROJEN [★★★ r53-vzorec-#23 — BREZ-PODPIŠA + '—'-starost!], posestnikov sin, 14. 10. = pokop-14. 10.-ISTI-DAN; ★★★ h91 = 6. mrliški vpis (2.-NAJVIŠJA-MRLIŠKA-hiša!) + ★★★ h91-×2-ISTI-DAN-14.-10. (z61-mrtvorojen-sin + z62-mati-Ana-MUC-45-KRVOTOK = PORODNA-SMRT-#4! 1888-×2-MATERI → 1908-OTROK → 1912-MATI+OTROK!) + MUC×KURE-hiša (1907-Ana!) + 9 + 1 hišna (91)",
+    whatEn: "'J. MUC' — STILLBORN [★★★ the r53-pattern-#23 — NO-SIGNATURE!], a landowner's son, Oct 14 = buried-Oct-14-THE-SAME-DAY; ★★★ h91 = the 6th death entry (the 2nd-HIGHEST-death-house!) + ★★★ the h91-×2-THE-SAME-DAY-Oct-14 (the z61-stillborn-son + the z62-mother-Ana-MUC-45-KRVOTOK = the CHILDBIRTH-DEATH-#4! 1888-×2-MOTHERS → 1908-CHILD → 1912-MOTHER+CHILD!) + the MUC×KURE-house + the 9 + 1 house number (91)",
+    status: "DOCUMENTED",
+  },
+
+  {
+    houseNo: "91",
+    bookSignature: "04894",
+    year: 1912,
+    scan: 140,
+    page: 139,
+    whatSi: "umrla Ana MUC [★★ KROP-×4.0-'Ana'-jasno — VLM-'Otica'-ZAVRJEN!], posestnikova žena [★★ POSESTNIK-×2-ISTO-HIŠO!], 45 LET (14. 10., pokop 16. 10.) — Krvotok [★★ porodna-krvavitev-hipoteza — 3.-TRAUMA-Ω! cf. z61-MRTVOROJEN-SIN-ISTI-DAN!]; previden (—); Lambert Bitnar; ★★★ h91 = 7. mrliški vpis + ★★★ MATI+OTROK-v-1-DNEVU = 1.-V-LINIJI (cf. P165-Gradac-mati+sin-6-DNI + HLEBEC-h2-mati+sin-6-TEDNEV!) + 9 + 1 hišna (91)",
+    whatEn: "died Ana MUC [★★ the crop-×4.0-'Ana'-clear — the VLM-'Otica'-REJECTED!], a landowner's wife [★★ POSESTNIK-×2-THE-SAME-HOUSE!], 45 YEARS (Oct 14, buried Oct 16) — Krvotok [★★ the childbirth-hemorrhage-hypothesis! cf. the z61-STILLBORN-SON-THE-SAME-DAY!]; previden (—); Lambert Bitnar; ★★★ h91 = the 7th death entry + ★★★ MOTHER+CHILD-IN-1-DAY = the 1st-of-the-line + the 9 + 1 house number (91)",
+    status: "DOCUMENTED",
+  },
+
+  {
+    houseNo: "42",
+    bookSignature: "04894",
+    year: 1912,
+    scan: 140,
+    page: 139,
+    whatSi: "umrla Marija PEZDIREC [★★★ 'Perdinec'-z-DESCENDER-@×4.0 — PEZDIREC-LEKSIKON!], 1 10/12 LETA [★★★ ULOMEK-#2-LINIJE (1-leto-10-mes — ne-1½/1¾-VLM!) — cf. P176-'¼-URE'-z51!], 23. 10., pokop 25. 10.) — 'Kroisel' [? NERAZREŠENA (KROP-hip [~] — cf. z31-1911-26-LET-KROP!)]; previden (—); Lambert Bitnar; ★★★ h42 = 7. mrliški vpis + PEZDIREC-hiša (1902-×3-era + 1911-Janez-53!) + ★★★ PEZDIREC-×4-1912-2.-LETO (z64 + z71 + z74 + z77-Podzemelj!) + 4 + 2 hišna (42)",
+    whatEn: "died Marija PEZDIREC [★★★ the 'Perdinec'-z-DESCENDER-@×4.0 — the PEZDIREC-LEXICON!], 1 10/12 YEARS [★★★ the FRACTION-#2-of-the-line (1-year-10-months!)], Oct 23, buried Oct 25) — 'Kroisel' [? UNRESOLVED (the KROP-hypothesis [~]!)]; previden (—); Lambert Bitnar; ★★★ h42 = the 7th death entry + the PEZDIREC-house + ★★★ PEZDIREC-×4-1912 = the 2nd-YEAR-×4 + the 4 + 2 house number (42)",
+    status: "DOCUMENTED",
+  },
+
+  {
+    houseNo: "68",
+    bookSignature: "04894",
+    year: 1912,
+    scan: 140,
+    page: 139,
+    whatSi: "umrla Marija LAH. [~ 'Luh.'/'Hub.'-VLM-zmeda], ½ LETA (4. 11., pokop 6. 11.) — Pljučnica; previden (1); Lambert Bitnar; ★ h68 = 2. mrliški vpis (1-pred!) + 6 + 8 hišna (68)",
+    whatEn: "died Marija LAH. [~ the 'Luh.'/'Hub.'-VLM-confusion], ½ YEAR (Nov 4, buried Nov 6) — Pljučnica; previden (1); Lambert Bitnar; ★ h68 = the 2nd death entry + the 6 + 8 house number (68)",
+    status: "DOCUMENTED",
+  },
+
+  {
+    houseNo: "79",
+    bookSignature: "04894",
+    year: 1912,
+    scan: 141,
+    page: 140,
+    whatSi: "umrla Ana PEZDIREC [★★★ 'Perdinec'-z-DESCENDER-@×4.0 — VLM-'Pečnik'-ZAVRJEN!], sluška delavka [~ 'služka'], 59 LET (15. 11., pokop 16. 11.) — Jetika; previden (1); Lambert Bitnar; ★★★ h79 = 1. MRLIŠKI VPIS KADARKOLI = 33.-PT-vez-kandidat (cf. h78-ISTI-MESEC-NOVEMBER!) + ★★★ PEZDIREC-×4-1912-#2 + 7 + 9 hišna (79)",
+    whatEn: "died Ana PEZDIREC [★★★ the 'Perdinec'-z-DESCENDER-@×4.0 — the VLM-'Pečnik'-REJECTED!], a maid-worker [~], 59 YEARS (Nov 15, buried Nov 16) — Jetika; previden (1); Lambert Bitnar; ★★★ h79 = the 1st DEATH ENTRY EVER = the 33rd-PT-link-candidate (cf. h78-THE-SAME-MONTH!) + ★★★ PEZDIREC-×4-1912-#2 + the 7 + 9 house number (79)",
+    status: "DOCUMENTED",
+  },
+
+  {
+    houseNo: "42",
+    bookSignature: "04894",
+    year: 1912,
+    scan: 141,
+    page: 140,
+    whatSi: "umrla Ana PEZDIREC [★★★ 'Perdinec'-z-DESCENDER-@×4.0!], vdova oštkapica [? — VLM-'kova-ošitkapica'], 76 LET (6. 12., pokop 7. 12.) — Naduha [~ VLM-'Nadluha' — l/u-KURRENT]; previden (1); Lambert Bitnar; ★★★ h42-×2-1912 = PADEC-vzorec-8.-leto (z64-Marija-1-10/12-Okt + z74-Ana-76-Dec — 2-vpisa-v-3-MESECIH! BABICA+VNUK-hipoteza!) + ★★★ PEZDIREC-×4-1912-#3 + h42 = 8. mrliški vpis + 4 + 2 hišna (42)",
+    whatEn: "died Ana PEZDIREC [★★★ the 'Perdinec'-z-DESCENDER-@×4.0!], a widow-?- [?], 76 YEARS (Dec 6, buried Dec 7) — Naduha [~ the VLM-'Nadluha' — the l/u-KURRENT]; previden (1); Lambert Bitnar; ★★★ the h42-×2-1912 = the PADEC-pattern-8th-year (2-entries-in-3-MONTHS! the GRANDMOTHER+GRANDCHILD-hypothesis!) + ★★★ PEZDIREC-×4-1912-#3 + the h42 = the 8th death entry + the 4 + 2 house number (42)",
+    status: "DOCUMENTED",
+  },
+
   // ——— P80 razširitev: POROČNA KNJIGA 04455 1873–1922 — okvir 1886 (skeni 61–65 == Pag. 60–64, vpisi 1–24; Pag. = sken − 1 v razponu 61–66) ———
   // P115 (faza 2) RE-READ: 8 blokov popravljenih na podlagi max-zoom branja (h36→56, h63→65, h15→16, h25→Priložje
   // + priimki Pegdirec/Klepec/Požek/Tomec/Straus/Križan) — evidence: research/issue17/parish-marriage-1886.json
