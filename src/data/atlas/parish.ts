@@ -3072,6 +3072,200 @@ export const HOUSE_VITALS: HouseVital[] = [
     status: "DOCUMENTED",
   },
 
+  // ——— P171: mrliška 1905 (04894, skeni 99 + 100–104 == str. 98–103;
+  // 61 vpisov zap1–61: 12 (s99) + 12 (s100) + 12 (s101) + 12 (s102) + 12
+  // (s103) + 1 (s104); s104 = MEJA 1905/06: '— 1906 —' VELIKOPISANO-
+  // čezvrstično + restart zap 61→1 + Januarj = 5. STIL 13. POTRDITEV!) —
+  // 16 GRIBLJE = 2. REKORD LINIJE (rast 17→12→16!; 14 hiš + h18/h27 ×2-v-1-
+  // letu = PADEC-vzorec ×3!) + ★ 4 GLAVE-NAPAKE (s99-'Leto 18 905' +
+  // s101-'Leto 18' NEKOMPLETNA + s102-'Leto 18/905' + s103-'Leto 18 905' =
+  // pisar-'905'-navada ×2 + nekompletna + poševnica — P170-rekord-5 → 4!)
+  // + ★★★ PEZDIREC-×2-1905 = era-13 (×11-v-4-letih: 1902×3 + 1903×3 +
+  // 1904×3 + 1905×2!; z1-h59-Marjeta-72 [P170-lead-POTRJEN-×3-forenzika!]
+  // + z61-h42-Anton-8-mes = ZADNJA-GRIBLJE-1905!) + ★★★ VLM-VAS-LEKCIJA:
+  // diag-vizualna-zaslona ×6-z-Read-očmi (P170-metoda!) — VLM-page-vas-×4-
+  // NAPAČNE (s99-z5/z6-'Vinoglavce'→KRIVOGLAVCE ×2 + s99-z10-'Obrhoviče'→
+  // CEROVIŠE + s102-z45-'Grem'→ZEMELJ = PREKINITEV-4-letnega-'VLM-vas-0-
+  // napak'-vzorca!) + VLM-starost-korekcije ×9 (z1-'92'→72! + z4/z9/z10/z15/
+  // z30/z31/z32/z37/z41/z44/z48/z53) + ime-napake ×3 (s102-z44-'Agnes'→
+  // ANTON-KUKAR-MOŠKI-75-let! + s103-z59-'Martina-Hlavos-42'→MARTIN-ŠTRAVS-
+  // 72! + s103-z50-'Neža'→MARIJA-Urh!) + rows-v3-c0-LEKCIJA ('c0=GLAVA-
+  // ostanek' — p169-recept; vse-crops-re-gen ×73!) + ★ KUKAR-h27-×2-v-1-
+  // letu (z40-Marija-9½ + z44-Anton-75 — oče/hči?; cf. h43-Boginja-vas-
+  // 1904!) + ★ ŠIMEC-h18-×2-v-1-letu (z20-Ana-24 + z52-Ana-7-mes — mati/
+  // hči?; cf. h18-kontinuiteta!) + ★ Martin-ŠTRAVS-h35 = ŠTRAVS-×2-hiši
+  // (h45-P169-×5 + h35-1905!) + ★ h35 = 9.-VPIS = REKORDISTKA-hiša (8×
+  // pred-1905!) + h65 = 7.-VPIS + h81 = 3.-VPIS + ★ zap49-'Marjeta-CAPRIČ'
+  // (VLM-page-'Lapajne'-ZAVRJENA-×2!) + ★ LENGSFELD-DOMINANTA: ×15/16
+  // Griblje (samo-z26-Jos.-Rauq!) + z29-'šačunar?'-stan-zmeda + z38-'Žganje-
+  // v-glavi' (2.-nesreča-vzorec!) + z57-'Se-ubila'-samomor? (Krasinec-
+  // kontekst!) — Dokaz: research/issue17/parish-death-1905.json; skripta
+  // scripts/p171_parish_death_1905.py; zap-continuity: 1–12 (s99) → 13–24
+  // (s100) → 25–36 (s101) → 37–48 (s102) → 49–60 (s103) → 61 (s104) = 61
+  // oštevilčenih = ČISTO LETO (meja 1906 = s104!) + P172-LEAD: 1906 zap1–9
+  // ŽE-vidni @ s104 (zap1-Ana-BRINEC-h49-66-let-Jan + zap6-Katarina-
+  // PEZDIREC-h20-61-let-Feb; meja 1906/07 [~ s107+?]).
+  {
+    houseNo: "59",
+    bookSignature: "04894",
+    year: 1905,
+    scan: 99,
+    page: 98,
+    whatSi: "umrla Marjeta PEZDIREC [★★★ P170-lead-'z1-h59?-Marjeta-PEZDIREC?-72' = POTRJEN-×3 (kompozit-ime + kalibracija-'P'-kvačkast-ascender ×2 cf. z15-Jožef-Pesdirec/z27-Martin-Pezdirec ISTA-forma!) — diag-'Bedirec/Berdirec'-ZAVRJEN!], ⅛ zemljakinja [~ 1/8-zapis], 72 LET (4. 1., pokop 6. 1.) — Šarost [~ diag-'Slarost' — KURRENT-š/s; cf. z50-ISTA-bolezen!]; previden (1); Hugo LENGSFELD [#12!]; ★★★ h59 = 2. mrliški vpis (1886 + 1905 — 19-letna-vrzela!) + PRVI-GRIBLJE-1905 (s99-restart: meja-1904/05-za = restart zap 47→1 = 5. STIL 12. POTRDITEV-potrjena!) + PEZDIREC-era-13-odprtje (×2-1905!) + 5 + 9 hišna (59 — 8×)",
+    whatEn: "died Marjeta PEZDIREC [★★★ the P170-lead-'z1-h59?-Marjeta-PEZDIREC?-72' = PROVEN-×3 (the composite-name + the calibration-'P'-hooked-ascender ×2 cf. z15-Jožef-Pesdirec/z27-Martin-Pezdirec THE-SAME-form!) — the diag-'Bedirec/Berdirec'-REJECTED!], an 1/8 smallholder [~ the 1/8-entry], 72 YEARS (Jan 4, buried Jan 6) — Šarost [~ the diag-'Slarost' — the KURRENT-š/s; cf. z50-THE-SAME-disease!]; previden (1); Hugo LENGSFELD [#12!]; ★★★ h59 = the 2nd death entry (1886 + 1905 — a 19-year gap!) + the FIRST-GRIBLJE-1905 (the s99-restart: after the 1904/05-border = the restart 47→1 = the 5th STYLE 12th CONFIRMATION-proven!) + the PEZDIREC-era-13-opening (×2-1905!) + the 5 + 9 house number (59 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "63",
+    bookSignature: "04894",
+    year: 1905,
+    scan: 100,
+    page: 99,
+    whatSi: "umrla Marija KRIŽAN [~ diag-'Hrižan' — KURRENT-k/h; kompozit-'Križan'-K-zanka-potrjena!], kmetjakova hči [~ ⅓-delež-zapis — forenzika-'1/3-zemljakova'], 83 LET (23. 2., pokop 25. 2.) — Prehlajenje [~ the common cold?]; previden (1); Hugo LENGSFELD [#12!]; ★ h63 = 4. mrliški vpis (1896 + 1900 + 1904-Ana-Križan-79 + 1905!) + 28.-PT-vez-kontinuiteta (1.-mrliški-1904 = P170!) + 6 + 3 hišna (63 — 8×)",
+    whatEn: "died Marija KRIŽAN [~ the diag-'Hrižan' — the KURRENT-k/h; the composite-'Križan'-K-loop-proven!], a farmer's daughter [~ the ⅓-fraction-entry — the forensics-'1/3-smallholder'], 83 YEARS (Feb 23, buried Feb 25) — Prehlajenje [~ the common cold?]; previden (1); Hugo LENGSFELD [#12!]; ★ h63 = the 4th death entry (1896 + 1900 + the 1904-Ana-Križan-79 + 1905!) + the 28th-PT-link-continuity (the 1st death-1904 = P170!) + the 6 + 3 house number (63 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "81",
+    bookSignature: "04894",
+    year: 1905,
+    scan: 100,
+    page: 99,
+    whatSi: "umrla Amalija CINDRIČ [~ diag-'Curdec/Window-zmeda' + VLM-'Windisch' — kompozit-'Cindrič' [~] — KURRENT-c/w/z-zmeda cf. h77-Cindrič-1902-menjava!], čevljarjeva hči [~ diag-'dele-gorjva-hiš' — zmeda!], 7 MESECEV (4. 3., pokop 6. 3.) — Slabost; previden (—); Hugo LENGSFELD [#12!]; ★ h81 = 3. mrliški vpis (1900 + 1901 + 1905!) + NOVI-MAKSIMUM-hiša-81 (h73-1906-Šuparnič-poročni-lead-vrb!; hišna-81 = 2. najvišja-mrliška-po-h91!) + starost-VLM-'4-mes'-KOREKCIJA-→-'7-mes' (diag + kompozit-×2-soglasje!) + 8 + 1 hišna (81 — 8×)",
+    whatEn: "died Amalija CINDRIČ [~ the diag-'Curdec/Window-confusion' + the VLM-'Windisch' — the composite-'Cindrič' [~] — the KURRENT-c/w/z-confusion cf. the h77-Cindrič-1902-change!], a shoemaker's daughter [~ the diag-'dele-gorjva-hiš' — confusion!], 7 MONTHS (Mar 4, buried Mar 6) — Slabost; previden (—); Hugo LENGSFELD [#12!]; ★ h81 = the 3rd death entry (1900 + 1901 + 1905!) + the NEW-MAXIMUM-house-81 (the h73-1906-Šuparnič-marriage-lead-vrb!; the house-81 = the 2nd highest-death after-h91!) + the age-VLM-'4-mes'-CORRECTION-→-'7-mes' (the diag + the composite-×2-agreement!) + the 8 + 1 house number (81 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "18",
+    bookSignature: "04894",
+    year: 1905,
+    scan: 100,
+    page: 99,
+    whatSi: "umrla Ana ŠIMEC [~ diag-'Alca' — KURRENT-A/n], kmetjakinja [~ diag-'rojena-po-gospodakinje' — mož-neberljiv?], 24 LET (5. 3., pokop 7. 3.) — Posodna mrzlica [~ diag-'Podvna-mafka' + VLM-'muglica' — ×5-'Posodna-mrzlica' — NOV-vzorec!]; previden (1); Hugo LENGSFELD [#12!]; ★★★ h18 = 4. mrliški vpis (1890 + 1903-×2 + 1905!) + ŠIMEC-h18-×2-v-1-letu (z20-Ana-24-mati? + z52-Ana-7-mes-hči — SEPTEMBER!) + PEZDIREC-štirna-h14-×2 + 1 + 8 hišna (18 — 8×)",
+    whatEn: "died Ana ŠIMEC [~ the diag-'Alca' — the KURRENT-A/n], a farmer's wife [~ the diag-'rojena-po-gospodakinje' — the husband-illegible?], 24 YEARS (Mar 5, buried Mar 7) — Posodna mrzlica [~ the diag-'Podvna-mafka' + the VLM-'muglica' — the ×5-'Posodna-mrzlica' — A NEW pattern!]; previden (1); Hugo LENGSFELD [#12!]; ★★★ h18 = the 4th death entry (1890 + the 1903-×2 + 1905!) + the ŠIMEC-h18-×2-in-1-year (the z20-Ana-24-mother? + the z52-Ana-7-mes-daughter — SEPTEMBER!) + the PEZDIREC-h14-shaft-×2 + the 1 + 8 house number (18 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "25",
+    bookSignature: "04894",
+    year: 1905,
+    scan: 100,
+    page: 99,
+    whatSi: "umrla Marija BRINEC [~ VLM-potrjena — diag-'Brinec.-' jasno!], vdova, dopkavica [~ diag-'dopkavica' — neberljiva-nadomestna-vloga?], 84 LET (14. 3., pokop 16. 3.) — Grižnica [~ dysentery cf. 'Grišnica'-diag]; previden (1); Hugo LENGSFELD [#12!]; ★ h25 = 3. mrliški vpis (1888 + 1902 + 1905!) + starost-VLM-'81'-KOREKCIJA-→-'84' (diag + kompozit!) + BRINEC-net (cf. h88-krstna-1904-Brinec-očetje + h26-poročna!) + 2 + 5 hišna (25 — 8×)",
+    whatEn: "died Marija BRINEC [~ the VLM-proven — the diag-'Brinec.-' clear!], a widow, a dopkavica [~ the diag-'dopkavica' — an illegible-tertiary-role?], 84 YEARS (Mar 14, buried Mar 16) — Grižnica [~ dysentery cf. the 'Grišnica'-diag]; previden (1); Hugo LENGSFELD [#12!]; ★ h25 = the 3rd death entry (1888 + 1902 + 1905!) + the age-VLM-'81'-CORRECTION-→-'84' (the diag + the composite!) + the BRINEC-net (cf. the h88-baptism-1904-Brinec-fathers + the h26-marriage!) + the 2 + 5 house number (25 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "2",
+    bookSignature: "04894",
+    year: 1905,
+    scan: 101,
+    page: 100,
+    whatSi: "umrl Janez TOME [~ VLM-page-'Vome'-ZAVRJEN — diag-'Tome'-jasno + kompozit-'Janez-Tome'!], kmetjakov sin [~ ½-delež-zapis — forenzika-'1/2-zemljakov'], 7 TEDNOV (17. 3., pokop 19. 3.) — Božjast; previden (—); Jos. Rauq [~ Ramej-ISTA-OSEBA]; ★ h2 = 6. mrliški vpis (1892 + 1897-×2 + 1902 + 1904-Marija-Zapič + 1905!) + EDINA-GRIBLJE-Rauq-1905 (×15-Lengsfeld-dominanta!) + 2. + 0. hišna (2 — 8×)",
+    whatEn: "died Janez TOME [~ the VLM-page-'Vome'-REJECTED — the diag-'Tome'-clear + the composite-'Janez-Tome'!], a farmer's son [~ the ½-fraction-entry — the forensics-'1/2-smallholder'], 7 WEEKS (Mar 17, buried Mar 19) — Božjast; previden (—); Jos. Rauq [~ Ramej-THE-SAME-PERSON]; ★ h2 = the 6th death entry (1892 + the 1897-×2 + 1902 + the 1904-Marija-Zapič + 1905!) + the ONLY-GRIBLJE-Rauq-1905 (×15-Lengsfeld-dominance!) + the 2 + 0 house number (2 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "21",
+    bookSignature: "04894",
+    year: 1905,
+    scan: 101,
+    page: 100,
+    whatSi: "umrl Andrej VERBIČAR [~ VLM-page-'Verbičar'-POTRJEN — diag-'Verbicar' jasno!], šačunar? [~ diag-'jamke-?acenar' + kompozit-'šlacunar' — STAN-zmeda = NOV-vzorec-NEZAKONSKEGA?], 62 LET (25. 4., pokop 25. 4. [~ isti-dan? — VLM-'25/25' + diag!]) — Nadruha [~ Naduha]; previden (1); Hugo LENGSFELD [#12!]; ★ h21 = 5. mrliški vpis (1887 + 1888-×2 + 1893 + 1905!) + MILEK-signal-h21 (boter-Matija-Milek-krstna-1904-r57!) + 2 + 1 hišna (21 — 8×)",
+    whatEn: "died Andrej VERBIČAR [~ the VLM-page-'Verbičar'-PROVEN — the diag-'Verbicar' clear!], a šačunar? [~ the diag-'jamke-?acenar' + the composite-'šlacunar' — a STATUS-confusion = A NEW illegitimate-pattern?], 62 YEARS (Apr 25, buried Apr 25 [~ the same-day? — the VLM-'25/25' + the diag!]) — Nadruha [~ Naduha]; previden (1); Hugo LENGSFELD [#12!]; ★ h21 = the 5th death entry (1887 + the 1888-×2 + 1893 + 1905!) + the MILEK-signal-h21 (the godfather-Matija-Milek-the-baptism-1904-r57!) + the 2 + 1 house number (21 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "64",
+    bookSignature: "04894",
+    year: 1905,
+    scan: 102,
+    page: 101,
+    whatSi: "umrla Marija JAKOFČIČ [~ diag-'Jakofčič' jasno + VLM-potrjena!], vdova oskrbnica, 72 LET (7. 8., pokop 9. 8.) — Slabost; previden (1); Hugo LENGSFELD [#12!]; ★ h64 = 6. mrliški vpis (1896-×2 + 1898-×2 + 1901 + 1905!) + starost-VLM-'79'-KOREKCIJA-→-'72' (diag + kompozit-×2-soglasje!) + 6 + 4 hišna (64 — 8×)",
+    whatEn: "died Marija JAKOFČIČ [~ the diag-'Jakofčič' clear + the VLM-proven!], a widow lodgekeeper, 72 YEARS (Aug 7, buried Aug 9) — Slabost; previden (1); Hugo LENGSFELD [#12!]; ★ h64 = the 6th death entry (the 1896-×2 + the 1898-×2 + 1901 + 1905!) + the age-VLM-'79'-CORRECTION-→-'72' (the diag + the composite-×2-agreement!) + the 6 + 4 house number (64 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "27",
+    bookSignature: "04894",
+    year: 1905,
+    scan: 102,
+    page: 101,
+    whatSi: "umrla Marija KUKAR [~ diag-'Kukar' jasno!], kmetjakova hči [~ ¼-delež-zapis], 9½ LET (17. 8., pokop 19. 8.) — Božjast; previden (1); Hugo LENGSFELD [#12!]; ★ h27 = 2. mrliški vpis (1890 + 1905!) + ★★★ KUKAR-h27-×2-v-1-letu (z40-Marija-9½ + z44-Anton-75 = oče/hči? — 2.-×2-vzorec-po-Boginja-vas-h43-1904!) + 2 + 7 hišna (27 — 8×)",
+    whatEn: "died Marija KUKAR [~ the diag-'Kukar' clear!], a farmer's daughter [~ the ¼-fraction-entry], 9½ YEARS (Aug 17, buried Aug 19) — Božjast; previden (1); Hugo LENGSFELD [#12!]; ★ h27 = the 2nd death entry (1890 + 1905!) + ★★★ the KUKAR-h27-×2-in-1-year (the z40-Marija-9½ + the z44-Anton-75 = father/daughter? — the 2nd-×2-pattern-after-Boginja-vas-h43-1904!) + the 2 + 7 house number (27 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "27",
+    bookSignature: "04894",
+    year: 1905,
+    scan: 102,
+    page: 101,
+    whatSi: "umrl Anton KUKAR [★★★ VLM-page-'Agnes'-ZAVRJENA — diag-'Anton'-jasno + spol-MOŠKI-'1'-kolona + kompozit-'Anton-Kukar'!], kmetjakov sin [~ ¼-delež-zapis], 75 LET (28. 8., pokop 29. 8.) — Vrebušni katar [~ typhoid-fever?]; previden (1); H. LENGSFELD [#12!]; ★ h27 = 3. mrliški vpis (1890 + 1905-×2!) + starost-VLM-'35'-KOREKCIJA-→-'75' (diag + kompozit-×2!) + KUKAR-oče/hči-vzorec + 2 + 7 hišna (27 — 8×)",
+    whatEn: "died Anton KUKAR [★★★ the VLM-page-'Agnes'-REJECTED — the diag-'Anton'-clear + the sex-MALE-'1'-column + the composite-'Anton-Kukar'!], a farmer's son [~ the ¼-fraction-entry], 75 YEARS (Aug 28, buried Aug 29) — Vrebušni katar [~ typhoid-fever?]; previden (1); H. LENGSFELD [#12!]; ★ h27 = the 3rd death entry (1890 + the 1905-×2!) + the age-VLM-'35'-CORRECTION-→-'75' (the diag + the composite-×2!) + the KUKAR-father/daughter-pattern + the 2 + 7 house number (27 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "65",
+    bookSignature: "04894",
+    year: 1905,
+    scan: 102,
+    page: 101,
+    whatSi: "umrl Matija MILEK [~ diag-'Milek' jasno + VLM-potrjen!], kmetjakov sin [~ ¼-delež-zapis], 10 MESECEV (16. 9., pokop 18. 9.) — Jetika [~ dropsy]; previden (—); H. LENGSFELD [#12!]; ★ h65 = 7. mrliški vpis (1887 + 1888 + 1889 + 1899 + 1900 + 1902-Mathias-Milek-44 + 1905!) + MILEK-veriga-h65 (4.-generacija-signal cf. krstna-1904-r73-h65-oče-Matija!) + 6 + 5 hišna (65 — 8×)",
+    whatEn: "died Matija MILEK [~ the diag-'Milek' clear + the VLM-proven!], a farmer's son [~ the ¼-fraction-entry], 10 MONTHS (Sep 16, buried Sep 18) — Jetika [~ dropsy]; previden (—); H. LENGSFELD [#12!]; ★ h65 = the 7th death entry (1887 + 1888 + 1889 + 1899 + 1900 + the 1902-Mathias-Milek-44 + 1905!) + the MILEK-chain-h65 (the 4th-generation-signal cf. the baptism-1904-r73-h65-father-Matija!) + the 6 + 5 house number (65 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "31",
+    bookSignature: "04894",
+    year: 1905,
+    scan: 103,
+    page: 102,
+    whatSi: "umrla Marjeta CAPRIČ [★★★ VLM-page-'Lapajne'-ZAVRJENA — diag-'Caprič?/Garjič' + kompozit-×2-'Caprič' (C-kapitala!)] [~ priimek-Caprič-NOVA-vzorec?], možjena kmetjakinja [~ diag-'možjenca-po-kmetjakinje'], 41 LET (22. 9., pokop 23. 9.) — Jetika [~ dropsy]; previden (1); Hugo LENGSFELD [#12!]; ★ h31 = 4. mrliški vpis (1886-Papič-poročni + 1896 + 1904-Anton-Zapič + 1905!) + VLM-page-'Februar'-MESEC-HALUCINACIJA (diag-'Sept' ×4-zaslon-potrjen!) + 3 + 1 hišna (31 — 8×)",
+    whatEn: "died Marjeta CAPRIČ [★★★ the VLM-page-'Lapajne'-REJECTED — the diag-'Caprič?/Garjič' + the composite-×2-'Caprič' (the C-capital!)] [~ the surname-Caprič-A NEW pattern?], a married farmer's wife [~ the diag-'možjenca-po-kmetjakinje'], 41 YEARS (Sep 22, buried Sep 23) — Jetika [~ dropsy]; previden (1); Hugo LENGSFELD [#12!]; ★ h31 = the 4th death entry (the 1886-Papič-marriage + 1896 + the 1904-Anton-Zapič + 1905!) + the VLM-page-'Februar'-MONTH-HALLUCINATION (the diag-'Sept' ×4-screen-proven!) + the 3 + 1 house number (31 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "32",
+    bookSignature: "04894",
+    year: 1905,
+    scan: 103,
+    page: 102,
+    whatSi: "umrla Marija URH [★★★ VLM-page-'Neža'-ZAVRJENA — diag-'Marija'-jasno + kompozit-'Marija-Urh'!], dolnja dekla [~ diag-'sumska' — KURRENT-d/s], 83 LET (25. 9., pokop 27. 9.) — Slabost; previden (1); Hugo LENGSFELD [#12!]; ★ h32 = 5. mrliški vpis (1890 + 1893-×2 + 1900 + 1905!) + URH-veriga (cf. h51-1896-Marija-Urh-rj.-Filak + z58-s103!) + 3 + 2 hišna (32 — 8×)",
+    whatEn: "died Marija URH [★★★ the VLM-page-'Neža'-REJECTED — the diag-'Marija'-clear + the composite-'Marija-Urh'!], a lower maid [~ the diag-'sumska' — the KURRENT-d/s], 83 YEARS (Sep 25, buried Sep 27) — Slabost; previden (1); Hugo LENGSFELD [#12!]; ★ h32 = the 5th death entry (1890 + the 1893-×2 + 1900 + 1905!) + the URH-chain (cf. the h51-1896-Marija-Urh-rj.-Filak + z58-s103!) + the 3 + 2 house number (32 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "18",
+    bookSignature: "04894",
+    year: 1905,
+    scan: 103,
+    page: 102,
+    whatSi: "umrla Ana ŠIMEC [~ diag-'Šimec.-' jasno + VLM-potrjena!], kmetjakova hči [~ ¼-delež-zapis], 7 MESECEV (26. 9., pokop 27. 9.) — Slabost; previden (—); Hugo LENGSFELD [#12!]; ★ h18 = 5. mrliški vpis (1890 + 1903-×2 + 1905-×2!) + ŠIMEC-h18-×2-v-1-letu-2. del (z20-Ana-24-mat-MAREC + z52-Ana-7-mes-hči-SEPTEMBER = MEGA-mati/hči-vez!) + 1 + 8 hišna (18 — 8×)",
+    whatEn: "died Ana ŠIMEC [~ the diag-'Šimec.-' clear + the VLM-proven!], a farmer's daughter [~ the ¼-fraction-entry], 7 MONTHS (Sep 26, buried Sep 27) — Slabost; previden (—); Hugo LENGSFELD [#12!]; ★ h18 = the 5th death entry (1890 + the 1903-×2 + the 1905-×2!) + the ŠIMEC-h18-×2-in-1-year-part-2 (the z20-Ana-24-mother-MARCH + the z52-Ana-7-mes-daughter-SEPTEMBER = the MEGA-mother/daughter-link!) + the 1 + 8 house number (18 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "35",
+    bookSignature: "04894",
+    year: 1905,
+    scan: 103,
+    page: 102,
+    whatSi: "umrl Martin ŠTRAVS [★★★ VLM-page-'Martina-Hlavos'-ZAVRJENA-×3 (spol-MOŠKI + diag-'Štravs'-Š-trikotnik + kompozit-'Martin-Štravs'!)], kmečen bajtar [~ diag-'senjen-bajfar'], 72 LET (29. 10., pokop 31. 10.) — Srčni kap [~ diag-'Srni' — KURRENT-č/n]; previden (—); M. LENGSFELD [#12!]; ★★★ h35 = 9. mrliški vpis = REKORDISTKA-hiša (1887 + 1888-×2 + 1890 + 1894 + 1895 + 1901 + 1904-Janez-Šimec + 1905!) + ŠTRAVS-×2-hiši (h45-P169-×5-1903 + h35-1905-Martin!) + starost-VLM-'42'-KOREKCIJA-→-'72' + 3 + 5 hišna (35 — 8×)",
+    whatEn: "died Martin ŠTRAVS [★★★ the VLM-page-'Martina-Hlavos'-REJECTED-×3 (the sex-MALE + the diag-'Štravs'-Š-triangle + the composite-'Martin-Štravs'!)], a peasant cottager [~ the diag-'senjen-bajfar'], 72 YEARS (Oct 29, buried Oct 31) — Srčni kap [~ the diag-'Srni' — the KURRENT-č/n]; previden (—); M. LENGSFELD [#12!]; ★★★ h35 = the 9th death entry = THE RECORD-HOUSE (1887 + the 1888-×2 + 1890 + 1894 + 1895 + 1901 + the 1904-Janez-Šimec + 1905!) + the ŠTRAVS-×2-houses (the h45-P169-×5-1903 + the h35-1905-Martin!) + the age-VLM-'42'-CORRECTION-→-'72' + the 3 + 5 house number (35 — 8×)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "42",
+    bookSignature: "04894",
+    year: 1905,
+    scan: 104,
+    page: 103,
+    whatSi: "umrl Anton PEZDIREC [★★ diag-'Pesdirec' + kompozit-'Anton-Pezdirec'-P-potrjen!], kmetjakov sin [~ ¼-delež-zapis], 8 MESECEV (17. 12., pokop 18. 12.) — Božjast; previden (—); H. LENGSFELD [#12!]; ★★★ h42 = 4. mrliški vpis (1890 + 1896 + 1897 + 1905!) + ZADNJA-GRIBLJE-1905 (meja 1905/06 = s104: '— 1906 —'-VELIKOPISANO-čezvrstično + restart zap 61→1 + Januarj = 5. STIL 13. POTRDITEV!) + PEZDIREC-era-13-zaključek (×2-1905 = era-×11-v-4-letih!) + h42-ŠTRAUS-signal (krstna-1904-r90-h42-oče-Matija-Štraus!) + 4 + 2 hišna (42 — 8×)",
+    whatEn: "died Anton PEZDIREC [★★ the diag-'Pesdirec' + the composite-'Anton-Pezdirec'-P-proven!], a farmer's son [~ the ¼-fraction-entry], 8 MONTHS (Dec 17, buried Dec 18) — Božjast; previden (—); H. LENGSFELD [#12!]; ★★★ h42 = the 4th death entry (1890 + 1896 + 1897 + 1905!) + the LAST-GRIBLJE-1905 (the border 1905/06 = s104: the '— 1906 —'-LARGE-WRITTEN-across-the-row + the restart 61→1 + the Januarij = the 5th STYLE 13th CONFIRMATION!) + the PEZDIREC-era-13-close (×2-1905 = the era-×11-in-4-years!) + the h42-ŠTRAUS-signal (the baptism-1904-r90-h42-father-Matija-Štraus!) + the 4 + 2 house number (42 — 8×)",
+    status: "DOCUMENTED",
+  },
+
   // ——— P80 razširitev: POROČNA KNJIGA 04455 1873–1922 — okvir 1886 (skeni 61–65 == Pag. 60–64, vpisi 1–24; Pag. = sken − 1 v razponu 61–66) ———
   // P115 (faza 2) RE-READ: 8 blokov popravljenih na podlagi max-zoom branja (h36→56, h63→65, h15→16, h25→Priložje
   // + priimki Pegdirec/Klepec/Požek/Tomec/Straus/Križan) — evidence: research/issue17/parish-marriage-1886.json

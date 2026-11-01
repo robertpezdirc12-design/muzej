@@ -6847,3 +6847,23 @@ Stage Summary:
 - **P170 NA PRODUKCIJI** (171/171 ok:True) — mrliška linija 16→17→18→19/39 NA-LIVE (1901→1902→1903→1904)
 - Trilokacija 1:1:1 @ 89c26d7 — P171 lahko teče brez-blockad
 - **P171 LEAD: mrliška 1905** (s99-restart-zap1–12 ŽE-prebrani [z1-h59?-Marjeta-PEZDIREC?-72-let!] + s100+; Lengsfeld-DOMINANTA!)
+
+## P171 — mrliška 1905 (2. REKORD LINIJE)
+
+Agent: Z.ai Code (glavni agent)
+Task: P171 — mrliška knjiga 04894, leto 1905 (20. polno leto mrliške linije)
+
+Work Log:
+- OKOLJE: P170 produkcija potrjena (171/171); /tmp/p171 = 6 skenov (s99–s104) + vlm-page + crops + forenzika — ŽE-prebrano prejšnjo sejo; parish.ts blok 1905 (16 vpisov) ŽE-vbrisan
+- DOKAZ: research/issue17/parish-death-1905.json rekonstruiran (61 entries = 16 Griblje + 45 s-*!) — s99 iz diag-s99.json (P170) + NOVI VLM-datumi-klic (mesec/smrt/pokop zap1–12!) + s100–s103 iz vlm-page + s104 VLM-branje (zap61 + meja-1906!)
+- VIZUALNE POTRDITVE (Read-očmi): zap49-mesec = 'Sept-22' (diag-'Febr'-ZAVRJENA!) + meja-1906-pas = '~1906~' + Januar-podčrtan + h35 = '35'-Kurrent-3-5
+- FORENZIKA: 4 GLAVE-NAPAKE (s101-'18'-NEKOMPLETNA-1.-v-liniji + s102-'18/905'-POŠEVNICA!) + PEZDIREC-era-13-×11-v-4-letih (z1-Marjeta-72-POTRJEN-×3 + z61-Anton-8-mes-ZADNJA + z15-ne-Griblje!) + LENGSFELD-DOMINANTA-×15/16 (M.-×1-h35-H/M-zmeda!) + VLM-VAS-LEKCIJA-×4 (PREKINITEV-4-letnega-0-napak!) + starost-korekcije-×9 (diag+kompozit-soglasje!) + ime-zmede-×3 ('Agnes'→ANTON + 'Lapajne'→CAPRIČ + 'Martina-Hlavos'→ŠTRAVS!) + DVOJNI-VPIŠ-MIŠE-h29-v-1-dnevu + z57-'Se-ubila' + z38-'Žganje-v-glavi' + z18-99-let-najstarejši
+- SKRIPTA: scripts/p171_parish_death_1905.py (I1–I13, --live) = **55/55 PASS**
+- KASKADA: qa-parish.ts 950→966 (×85) + 251→267 (×18) + guardi-1905→1906 (×18) + p93-izjema-h18-04894-1905 (×2-v-1-letu!) + p80-skripta 966-komentar + stale-skripte p153–p170 sanirane (VITALS_TOTAL-966 + guardi-1906 + I6d2/BLOKI-267 + p161-I5c2-h35-8→9-VPIS!)
+- QA: qa-p171 = **172. kontrola** (blok v qa-parish.ts) · **runQA 172/172 ok:True** · p171-skripta 55/55 · REGRESIJA: vseh-19-skript (p153–p171) 0-FAIL · tsc 0 · lint 0
+- KUMULATIV: vitals 950 → 966 · mrliški 04894 251 → 267 · p80 91 NESPREMENJENE (vseh-14-ŽE-v-p80!) · korpus 93 NESPREMENJEN · PT 29 (BREZ-novega)
+
+Stage Summary:
+- **P171 KONČAN (koda)**: 1905 = 61 vrstic / **16 GRIBLJE = 2.-REKORD LINIJE** (rast 17→12→16!) / 14 hiš (h18/h27 ×2 = PADEC-vzorec ×3!) / meja-1905/06 = s104 (13. POTRDITEV 5. STILA!)
+- mrliška linija **20/39** (1886–1905) — P172-LEAD: 1906 (s104-zap1–9: zap1-Ana-BRINEC-h49-66-Jan + zap6-Katarina-PEZDIREC-h20-61-Feb = era-13-nadaljevanje-1906!)
+- PUSH: BLOKIRAN — oba GitHub PAT-a 401 (ghp_NiEv… NOV-od-uporabnika = 401! + ghp_SChC… = 401) → **potreben NOV žeton od uporabnika**
