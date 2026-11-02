@@ -1,0 +1,641 @@
+{
+  "status": "SAMPLE-TRANSCRIPTION-D1924",
+  "book": "04894",
+  "year": 1924,
+  "period": "s248–s255 (z1–z46) == str. 247–254 == 167.–202. potrditev stran==sken−1 — KONEC-KNJIGE!",
+  "meja": "1924/25 NE OBSTAJA — KNJIGA-KONČANA: z46-Marija-Jaklič-†-31.12.1924-pokop-2.1.1925 = ZADNJI-VPIS-KNJIGE-04894! (256-skenov; s256 = VEZ-KNJIGE \"Podzemelj-M-1886–1924\"!)",
+  "vpisov_total": 46,
+  "griblje_count": 14,
+  "griblje_hise": "2,6,16,43,45,50,53,55,55,62,68,69,70,88",
+  "duhovniki": {
+    "Jožef Ott [~Roth/Rott], kaplan": "~26 vpisov [★★ dominanta-2.-leto! #27-kandidat! garble-×6]",
+    "Remigi Jereb, žup.": "×3 (z39/z45/z46) [★★ POVRAT-JEREB — župnik-še-vedno-podpisuje-redko!]",
+    "'Mihael Murnig Fereh'[?]": "×3 (z41/z43/z44) [~ MURNIK-#29-kandidat? ali-OTT-garble — nerazrešeno!]"
+  },
+  "entries": [
+    {
+      "zap": 1,
+      "scan": 248,
+      "page": 247,
+      "vas": "Verhnice",
+      "houseNo": "11",
+      "ime": "Jožef Husić",
+      "whatSi": "",
+      "duhovnik": "Jož. Roth, Kaplan.",
+      "griblje": false
+    },
+    {
+      "zap": 2,
+      "scan": 248,
+      "page": 247,
+      "vas": "Leborka [~] / Griblje?",
+      "houseNo": "7",
+      "ime": "Mate Tragos",
+      "whatSi": "",
+      "duhovnik": "Jož. Roth, Kaplan.",
+      "griblje": false
+    },
+    {
+      "zap": 3,
+      "scan": 248,
+      "page": 247,
+      "vas": "Obravnice [~]",
+      "houseNo": "25",
+      "ime": "Ivan Beninger",
+      "whatSi": "",
+      "duhovnik": "Jož. Roth, Kaplan",
+      "griblje": false
+    },
+    {
+      "zap": 4,
+      "scan": 248,
+      "page": 247,
+      "vas": "Kratinec",
+      "houseNo": "13",
+      "ime": "Danijel Goličar [~]",
+      "whatSi": "",
+      "duhovnik": "Jož. Roth, Kaplan",
+      "griblje": false
+    },
+    {
+      "zap": 5,
+      "scan": 248,
+      "page": 247,
+      "vas": "Griblje",
+      "houseNo": "50",
+      "ime": "Matija PERDIRC",
+      "whatSi": "★★★ NOVA-HIŠA-MRLIŠKA (1.-MRLIŠKI-VPIS-KADARKOLI = 35.-PT-kandidat! h50-ŽE-v-p80-prek-04455-1903!) + PERDIH/PEZDIRC-glif-kontinuiteta (cf. 1922-×4-BOOM!) + 'posestnik'-stan!",
+      "duhovnik": "Jož. Roth, Kaplan.",
+      "griblje": true
+    },
+    {
+      "zap": 6,
+      "scan": 248,
+      "page": 247,
+      "vas": "Zemelj",
+      "houseNo": "16",
+      "ime": "Marija Oberman",
+      "whatSi": "",
+      "duhovnik": "O[?] Rupnik Povrh",
+      "griblje": false
+    },
+    {
+      "zap": 7,
+      "scan": 248,
+      "page": 247,
+      "vas": "Obravnice [~]",
+      "houseNo": "15",
+      "ime": "Ana Sveiger",
+      "whatSi": "",
+      "duhovnik": "",
+      "griblje": false
+    },
+    {
+      "zap": 8,
+      "scan": 249,
+      "page": 248,
+      "vas": "Gradac",
+      "houseNo": "84",
+      "ime": "Andrej Polda",
+      "whatSi": "",
+      "duhovnik": "Jož. Roth, Kaplan",
+      "griblje": false
+    },
+    {
+      "zap": 9,
+      "scan": 249,
+      "page": 248,
+      "vas": "Bohinjo vas",
+      "houseNo": "14",
+      "ime": "Janez Hralj",
+      "whatSi": "",
+      "duhovnik": "O. Ruisig / Jurk",
+      "griblje": false
+    },
+    {
+      "zap": 10,
+      "scan": 249,
+      "page": 248,
+      "vas": "Griblje",
+      "houseNo": "45",
+      "ime": "Jožef ŽELJKO",
+      "whatSi": "★★★ SUICID-OBESITEV-#3-LINIJE 'duševna-slabost-(se-sam-obesil)' (cf. 1892-'se-ustrelil' + 1908-'se-je-obesil') + 16-let-TRAGEDIJA + ŽELJKO-×3-v-3-letih (1922-Katarina-h60 + 1923-Marija-h60!) + 'kočarja-sin'-stan!",
+      "duhovnik": "Jož. Roth, Kaplan",
+      "griblje": true
+    },
+    {
+      "zap": 11,
+      "scan": 249,
+      "page": 248,
+      "vas": "Gradac",
+      "houseNo": "34",
+      "ime": "Ana Hočevar",
+      "whatSi": "",
+      "duhovnik": "Jož. Roth, Kaplan",
+      "griblje": false
+    },
+    {
+      "zap": 12,
+      "scan": 249,
+      "page": 248,
+      "vas": "Krasinec",
+      "houseNo": "2",
+      "ime": "Marija Podlire",
+      "whatSi": "",
+      "duhovnik": "Jož. Roth, Kaplan",
+      "griblje": false
+    },
+    {
+      "zap": 13,
+      "scan": 249,
+      "page": 248,
+      "vas": "Gradac",
+      "houseNo": "34",
+      "ime": "Janez Hralj",
+      "whatSi": "",
+      "duhovnik": "Jož. Roth, Kaplan",
+      "griblje": false
+    },
+    {
+      "zap": 14,
+      "scan": 249,
+      "page": 248,
+      "vas": "Griblje",
+      "houseNo": "43",
+      "ime": "Janez LASIČ",
+      "whatSi": "★ NAJSTAREJŠI-1924 (roj.-1841-~83-l!) + 'vžithar-vdovec'-stan-kombinacija-3.× (cf. 1922-z45 + 1923-z57!) + h43-mreža!",
+      "duhovnik": "Jož. Roth, -Kaplan.",
+      "griblje": true
+    },
+    {
+      "zap": 15,
+      "scan": 250,
+      "page": 249,
+      "vas": "Griblje",
+      "houseNo": "63",
+      "ime": "Viktorija Jehlič",
+      "whatSi": "",
+      "duhovnik": "Jož. Rott kaplan.",
+      "griblje": false
+    },
+    {
+      "zap": 16,
+      "scan": 250,
+      "page": 249,
+      "vas": "Zemelj",
+      "houseNo": "81",
+      "ime": "Marija Muc",
+      "whatSi": "",
+      "duhovnik": "Rupnik Franc",
+      "griblje": false
+    },
+    {
+      "zap": 17,
+      "scan": 250,
+      "page": 249,
+      "vas": "Primostek",
+      "houseNo": "10",
+      "ime": "Alozij Muc",
+      "whatSi": "",
+      "duhovnik": "Rupnik Jerča",
+      "griblje": false
+    },
+    {
+      "zap": 18,
+      "scan": 250,
+      "page": 249,
+      "vas": "Klošter",
+      "houseNo": "82",
+      "ime": "Ana Simončič",
+      "whatSi": "",
+      "duhovnik": "Jož. Rott kaplan.",
+      "griblje": false
+    },
+    {
+      "zap": 19,
+      "scan": 250,
+      "page": 249,
+      "vas": "Levaniše",
+      "houseNo": "21",
+      "ime": "Jožef Starešinič",
+      "whatSi": "",
+      "duhovnik": "Jož. Rott kaplan.",
+      "griblje": false
+    },
+    {
+      "zap": 20,
+      "scan": 250,
+      "page": 249,
+      "vas": "Otok",
+      "houseNo": "24",
+      "ime": "Ljuba Tavčar",
+      "whatSi": "",
+      "duhovnik": "Rupnik Jerča",
+      "griblje": false
+    },
+    {
+      "zap": 21,
+      "scan": 251,
+      "page": 250,
+      "vas": "Griblje",
+      "houseNo": "88",
+      "ime": "Julij BRINEC",
+      "whatSi": "★★★ BRINEC-mreža-4.-leto-zapored (h14-1920/1922×2 + h2-1923? + h88-1924!) + 'otrok-posestnika'-stan!",
+      "duhovnik": "Jož. Rott, kaplan.",
+      "griblje": true
+    },
+    {
+      "zap": 22,
+      "scan": 251,
+      "page": 250,
+      "vas": "Primostek",
+      "houseNo": "8",
+      "ime": "Alojzij Muc",
+      "whatSi": "",
+      "duhovnik": "Mlinarj Frlč",
+      "griblje": false
+    },
+    {
+      "zap": 23,
+      "scan": 251,
+      "page": 250,
+      "vas": "Griblje",
+      "houseNo": "53",
+      "ime": "Jožef JAKOFČIČ",
+      "whatSi": "★ kurator: VLM-'Galkovič'-ZAVRŽEN → JAKOFČIČ + 'posestnikov-otrok'-stan + h53-mreža (cf. 1923-z31?ne! 1922-z28-Perdih-h53!)!",
+      "duhovnik": "Jož. Rott, kaplan",
+      "griblje": true
+    },
+    {
+      "zap": 24,
+      "scan": 251,
+      "page": 250,
+      "vas": "Griblje",
+      "houseNo": "68",
+      "ime": "Jožefa MLEK",
+      "whatSi": "★ MLEK/MILEK-h68-mreža (cf. 1920-×2!) + 'posestnikova-otrok'-stan-ženska-forma!",
+      "duhovnik": "Jož. Rott, kaplan.",
+      "griblje": true
+    },
+    {
+      "zap": 25,
+      "scan": 251,
+      "page": 250,
+      "vas": "Griblje",
+      "houseNo": "6",
+      "ime": "J. JAKOFČIČ",
+      "whatSi": "★★★ MRTVOROJEN-#17-korpusa ('moškega-spola' + VLM-'mrkorojin'-ZAVRŽEN + PODPIS-PRAZEN-3.×-forma cf. 1920-z1/1922-z47!) + inicialka-only-×2-v-1-letu-cf.-1922! + JAKOFČIČ-h6-×3-za-1918-×2-BRATA!",
+      "duhovnik": "",
+      "griblje": true
+    },
+    {
+      "zap": 26,
+      "scan": 251,
+      "page": 250,
+      "vas": "Griblje",
+      "houseNo": "55",
+      "ime": "Štefan-Ivan ZUPANIČ",
+      "whatSi": "★ 'posestniška-otrok'-stan + h55-×2-v-1-LETU (cf. z40-Muhar!) + dvojni-ime-Štefan-Ivan!",
+      "duhovnik": "Jož. Rott, kaplan.",
+      "griblje": true
+    },
+    {
+      "zap": 27,
+      "scan": 252,
+      "page": 251,
+      "vas": "Gradac",
+      "houseNo": "13",
+      "ime": "Jožefa Marella",
+      "whatSi": "",
+      "duhovnik": "Rott / Ferkl [podpis: Rott; drugi podpis Ferkl]",
+      "griblje": false
+    },
+    {
+      "zap": 28,
+      "scan": 252,
+      "page": 251,
+      "vas": "Podzemelj",
+      "houseNo": "40",
+      "ime": "Frančišek Torganc",
+      "whatSi": "",
+      "duhovnik": "Rott / ferh [podpis: Rott; drugi podpis ferh]",
+      "griblje": false
+    },
+    {
+      "zap": 29,
+      "scan": 252,
+      "page": 251,
+      "vas": "Griblje",
+      "houseNo": "69",
+      "ime": "Bara DRAGOS",
+      "whatSi": "★ DRAGOS-mreža-×2-v-1924 (cf. 1923-z9-h44-Franc! 1919-h12!) + 'samska-delavka'-stan (cf. 1922-z13-'samska-delavnica'-×2-forma!) + h69-mreža!",
+      "duhovnik": "Jos. Rott, kaplan.",
+      "griblje": true
+    },
+    {
+      "zap": 30,
+      "scan": 252,
+      "page": 251,
+      "vas": "Griblje",
+      "houseNo": "62",
+      "ime": "Jožef KURE",
+      "whatSi": "★ KURE-mreža (cf. 1921-h29/h41!) + 'posestniška-otrok'-stan + bolezen-ni-vpisana-[~]!",
+      "duhovnik": "Jos. Rott, kaplan.",
+      "griblje": true
+    },
+    {
+      "zap": 31,
+      "scan": 252,
+      "page": 251,
+      "vas": "Krasinec",
+      "houseNo": "2",
+      "ime": "M. Vapic",
+      "whatSi": "",
+      "duhovnik": "",
+      "griblje": false
+    },
+    {
+      "zap": 32,
+      "scan": 252,
+      "page": 251,
+      "vas": "Griblje",
+      "houseNo": "70",
+      "ime": "Daniel BRINEC",
+      "whatSi": "★★ BRINEC-mreža-5.-leto (1920-h46 + 1922-h14-×2 + 1923-h14 + 1924-h70!) + 'otrok-posestnika' + bolezen-'opriza'[?]-nerazrešeno!",
+      "duhovnik": "Jos. Rott, kaplan.",
+      "griblje": true
+    },
+    {
+      "zap": 33,
+      "scan": 253,
+      "page": 252,
+      "vas": "Gradac",
+      "houseNo": "77",
+      "ime": "Marija Jaklin",
+      "whatSi": "",
+      "duhovnik": "Jože Rott kaplan",
+      "griblje": false
+    },
+    {
+      "zap": 34,
+      "scan": 253,
+      "page": 252,
+      "vas": "Borovci",
+      "houseNo": "14",
+      "ime": "Anton Berkopec",
+      "whatSi": "",
+      "duhovnik": "M. Rupnik Ferch",
+      "griblje": false
+    },
+    {
+      "zap": 35,
+      "scan": 253,
+      "page": 252,
+      "vas": "Kapliše",
+      "houseNo": "5",
+      "ime": "Neža Maretič",
+      "whatSi": "",
+      "duhovnik": "M. Rupnik Ferch",
+      "griblje": false
+    },
+    {
+      "zap": 36,
+      "scan": 253,
+      "page": 252,
+      "vas": "Krasinec",
+      "houseNo": "49",
+      "ime": "Anton Ernić",
+      "whatSi": "",
+      "duhovnik": "Jos. Rott kaplan.",
+      "griblje": false
+    },
+    {
+      "zap": 37,
+      "scan": 253,
+      "page": 252,
+      "vas": "Griblje",
+      "houseNo": "16",
+      "ime": "Alojzy NOVAK",
+      "whatSi": "★ NOVAK-mreža + 'posestniška-sin'-stan + h16-mreža!",
+      "duhovnik": "Jos. Rott kaplan.",
+      "griblje": true
+    },
+    {
+      "zap": 38,
+      "scan": 253,
+      "page": 252,
+      "vas": "Odzemelj",
+      "houseNo": "0",
+      "ime": "Marija Lozman",
+      "whatSi": "",
+      "duhovnik": "M. Rupnik Ferch",
+      "griblje": false
+    },
+    {
+      "zap": 39,
+      "scan": 254,
+      "page": 253,
+      "vas": "Otok",
+      "houseNo": "21",
+      "ime": "Matija Lapuar",
+      "whatSi": "",
+      "duhovnik": "Remigij Ferelj Podrumelj",
+      "griblje": false
+    },
+    {
+      "zap": 40,
+      "scan": 254,
+      "page": 253,
+      "vas": "Griblje",
+      "houseNo": "55",
+      "ime": "Martin MUHAR",
+      "whatSi": "★★★ 1.×-priimek-korpusa-kandidat-MUHAR + 'delavec-samski'-stan-1.×-FORMA + h55-×2-v-1-LETU (cf. z26-Zupanič)!",
+      "duhovnik": "Jožef Roth, kaplan.",
+      "griblje": true
+    },
+    {
+      "zap": 41,
+      "scan": 254,
+      "page": 253,
+      "vas": "Podzemelj",
+      "houseNo": "14",
+      "ime": "Mihael Berkopec",
+      "whatSi": "",
+      "duhovnik": "Mihael Murnig Ferelj",
+      "griblje": false
+    },
+    {
+      "zap": 42,
+      "scan": 254,
+      "page": 253,
+      "vas": "Griblje",
+      "houseNo": "2",
+      "ime": "Marija BRINEC",
+      "whatSi": "★ BRINEC-h2-mreža (cf. 1923-z57-Hlebec-h2! P163!) + 'služkinja'-stan (delavka-forma-×2-v-1924!) + h2-mreža-cf.-P163 + ZADNJA-1924-GRIBLJE-VRSTA + MEJA-NE-OBSTAJA — KNJIGA-KONČANA-z46-†-31.12.1924!",
+      "duhovnik": "Jožef Roth, kaplan.",
+      "griblje": true
+    },
+    {
+      "zap": 43,
+      "scan": 254,
+      "page": 253,
+      "vas": "Podzemelj",
+      "houseNo": "9",
+      "ime": "Zofija-Jozefa Gregorc",
+      "whatSi": "",
+      "duhovnik": "Mihael Murnig Ferelj",
+      "griblje": false
+    },
+    {
+      "zap": 44,
+      "scan": 254,
+      "page": 253,
+      "vas": "Primostek",
+      "houseNo": "8",
+      "ime": "Janez Muc",
+      "whatSi": "",
+      "duhovnik": "Mihael Murnig Ferelj",
+      "griblje": false
+    },
+    {
+      "zap": 45,
+      "scan": 255,
+      "page": 254,
+      "vas": "Griblje vas 42",
+      "houseNo": "42",
+      "ime": "Katarina Ernic",
+      "whatSi": "",
+      "duhovnik": "Remigij Ferch",
+      "griblje": false
+    },
+    {
+      "zap": 46,
+      "scan": 255,
+      "page": 254,
+      "vas": "Zemelj",
+      "houseNo": "15",
+      "ime": "Marija Jellic",
+      "whatSi": "",
+      "duhovnik": "Remigij Ferch",
+      "griblje": false
+    }
+  ],
+  "excluded": [],
+  "anomalies": [
+    {
+      "tip": "suicid-obesitev-3-linije",
+      "detail": "z10-'duševna-slabost-(se-sam-obesil)' = SUICID-OBESITEV-#3-linije (cf. 1892-'se-ustrelil' + 1908-'se-je-obesil'!) + Jožef-ŽELJKO-16-let-TRAGEDIJA + ŽELJKO-×3-v-3-letih!"
+    },
+    {
+      "tip": "mrtvorojen-17-korpusa",
+      "detail": "z25-'J.-JAKOFČIČ-moškega-spola'-h6 = MRTVOROJEN-#17-korpusa (PODPIS-PRAZEN-3.×-FORMA cf. 1920-z1 + 1922-z47! inicialka-only!) + h6-×3-za-1918-×2-BRATA!"
+    },
+    {
+      "tip": "h50-nova-mrliška-1x",
+      "detail": "z5-Matija-PERDIRC-h50 = NOVA-HIŠA-MRLIŠKA (1.-MRLIŠKI-VPIS-KADARKOLI = 35.-PT-kandidat! h50-ŽE-v-p80-prek-04455-1903!) + PERDIH-glif-kontinuiteta!"
+    },
+    {
+      "tip": "h55-x2-v-1-letu",
+      "detail": "h55-×2-v-1-LETU (z26-Štefan-Ivan-ZUPANIČ-posestniška-otrok + z40-Martin-MUHAR-delavec-samski!)"
+    },
+    {
+      "tip": "muhar-1x-priimek",
+      "detail": "z40-Martin-MUHAR = 1.×-priimek-korpusa-kandidat + 'delavec-samski'-stan-1.×-FORMA!"
+    },
+    {
+      "tip": "brinec-mreza-5-leto",
+      "detail": "BRINEC-mreža-5.-leto-kontakti (1920-h46-×2 → 1922-h14-×2 → 1923-h14 → 1924-h88+h70+h2 = 3-RAZLIČNE-hiše-v-1924!)"
+    },
+    {
+      "tip": "duhovnik-jereb-povrat",
+      "detail": "z39/z45/z46-'Remigij-Ferelj/Ferch'-podpisi = JEREB-POVRAT-×3 (Jereb-je-še-župnik-v-1924-ampak-OTT-kaplan-dominira!)"
+    },
+    {
+      "tip": "ott-kaplan-dominanta",
+      "detail": "Jožef-OTT[~Roth/Rott]-kaplan-DOMINANTA-~26-1924 (2.-leto! garble-×6: Roth/Rott/Ruisig/Mlinarj-Frlč/Rupnik-Jerča/Rott-Ferkl!) + VLM-\"Rupnik-Franc\"-z16-ZAVRŽEN-kuratorsko!"
+    },
+    {
+      "tip": "murnik-3x-nerazrešen",
+      "detail": "z41/z43/z44-'Mihael-Murnig-Fereh'[?]-podpisi-×3-nerazrešeni (MURNIK-nov-duhovnik-kandidat #29? ali-OTT-garble?)"
+    },
+    {
+      "tip": "s253-zap-duplikat",
+      "detail": "s253-b1-zaporedna-'32'-DUPLIKAT (s252-b6-z32-Daniel-Brine-že-32!) = PISAR-DUPLIKAT-2.×-linije (cf. 1921-s218!) — s253-b1 = z33-kronološko!"
+    },
+    {
+      "tip": "s256-vez-halucinacija",
+      "detail": "s256 = VEZ-KNJIGE (\"Podzemelj-M-1886–1924\") — VLM-\"z73-Jožef-Koščak-Jos.-Rauq\"-HALUCINACIJA-ZAVRŽENA-kuratorsko! — KNJIGA-KONČANA-s255-z46!"
+    },
+    {
+      "tip": "zadnji-vpis-knjige",
+      "detail": "z46-Marija-Jaklič-Zemelj-h15-†-31.12.1924-pokop-2.1.1925 = ZADNJI-VPIS-KNJIGE-04894 (39-let-1886–1924-KONEC!)"
+    },
+    {
+      "tip": "z45-boginja-vas-korekcija",
+      "detail": "z45-kurator: VLM-'Griblje-vas-h42'-ZAVRŽEN → 'Boginja-vas-h42' (tuja-vas-pri-Metliki!) + 'vžitharica'-2.×!"
+    },
+    {
+      "tip": "z3-vranovice-zeleznicar",
+      "detail": "z3-kurator: VLM-'Obravnice'-ZAVRŽEN → 'Vranoviče-h25-Ivan-Beninger-železničarja-sin' = ŽELEZNIČAR-forma-×2-v-liniji (cf. 1923-z30!)"
+    },
+    {
+      "tip": "z15-krasinec-korekcija",
+      "detail": "z15-kurator: VLM-'Griblje-h63'-ZAVRŽEN → 'Krasinec-h53-Viktorija-Jehlič-posestnikova-žena' (vas+hišna!) + 'maternidnost'[?]-porodna-smrt-kandidat!"
+    },
+    {
+      "tip": "kostni-kri-1924-0-griblje",
+      "detail": "KOSTNI-KRI-v-1924: z1-\"Kostna-guba\"[~]-Verhnice-—-continuiteta-6.-leto-ampak-0-Griblje!"
+    }
+  ],
+  "crossChecks": [
+    {
+      "id": "X1",
+      "detail": "zaporedne-z1–z46-kompletne (s248-z1–z7 + s249–s255! s253-dup-'32'-RAZREŠEN-kuratorsko!)"
+    },
+    {
+      "id": "X2",
+      "detail": "page==scan−1 za vseh 46 (s248→247 … s255→254 = 167.–202.-potrditev!)"
+    },
+    {
+      "id": "X3",
+      "detail": "s256-VEZ-KNJIGE-kurator (\"Podzemelj-M-1886–1924\"-NAPISEK-vis-p190-s256-top!) — z73-halucinacija-ZAVRŽENA!"
+    },
+    {
+      "id": "X4",
+      "detail": "KONEC-KNJIGE-kurator (z46-zadnji-vpis-†-31.12.1924! brez-zaključne-opombe-pisarja!)"
+    },
+    {
+      "id": "X5",
+      "detail": "h50-NOVA-mrliška-kurator (z5-ime-crop-'Griblje-50-Matija-Perdirc-posestnik'!) = 35.-PT-kandidat-p80-NESPREMENJENO!"
+    },
+    {
+      "id": "X6",
+      "detail": "SUICID-z10-bolezen-crop (\"duševna-slabost-(se-sam-obesil)\"-jasno-vis!)"
+    },
+    {
+      "id": "X7",
+      "detail": "MRTVOROJEN-z25-ime-crop (\"J.-Jakofčič-moškega-spola\"-podpis-področje-PRAZNO-vis!)"
+    },
+    {
+      "id": "X8",
+      "detail": "JEREB-povrat-podpis-crop (z16-\"Remigy-Ferch\"-jasno-vis! — VLM-\"Rupnik-Franc\"-ZAVRŽEN!)"
+    }
+  ],
+  "honesty": [
+    "VLM-glave-s248–s255 (\"Leto-18/1919/1913-garble\") ZAVRŽENE — zaporedna-številka+meja-kuratorski-zanesljivi!",
+    "s256-VLM-halucinacija-\"z73-Jožef-Koščak-63-Altersschwäche-Jos.-Rauq\"-POPOLNOMA-ZAVRŽENA (veza-knjige!)",
+    "z30-bolezen-NI-vpisana-[~] — vzrok-neznana!",
+    "z32-bolezen-'opriza'[?]-nerazrešeno (operacija? oprostitev?)",
+    "z15-'maternidnost'[?]-porodna-smrt-kandidat-ampak-ne-razrešeno + ne-Griblje",
+    "z16/z17/z20/z22/z27/z28/z41/z43/z44-podpisi-garble-×9 ('Rupnik-Jerča'/'Mlinarj-Frlč'/'Ruisig-Jurk'/'Murnig-Fereh') — vse-[~]-OTT/Jereb-kandidati-ne-razrešeni",
+    "z25-ime-'J.-JAKOFČIČ'-samo-inicialka + 'moškega-spola' — ime-neznano!",
+    "z2/z7-vas-\"Leborka[~]\"/\"Obravnice[~]\"-z3-Vranoviče-korekcija-z2-nerazrešena",
+    "'Vrgika[?Vrhnika?]-h18'-z33-vas-nerazrešena (TUJI-vpis-kandidat!)",
+    "z5-Perdirc-vs-Perdih-glif-vzorec-kontinuiteta — priimek-[~]-forenzika-nekonkluzivna",
+    "nižja-zanesljivost: VLM-glave-s248–s255-garble-ZAVRŽENE — zaporedna-številka-kontinuiteta-z1–z46-kuratorsko-zanesljiva"
+  ],
+  "leadP190_end": {
+    "line": "MRLIŠKA-LINIJA-39/39-KONEC!",
+    "opis": "KNJIGA-04894-KONČANA: 1886–1924 = 39-let (1886-okvir + 1887–1924-polnih-38-let) · 256-skenov · P80-okvir-1886-46-vrstic + P153–P190-38-polnih-let · VSE-POTRJENO!"
+  }
+}

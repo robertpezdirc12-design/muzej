@@ -37,8 +37,8 @@ EXPECTED_EXCLUDED = 1
 EXPECTED_ANOMALIES = 14
 EXPECTED_CROSSCHECKS = 7
 GRIBLJE_HOUSES = "5,8,17,25,44,45,88,90,90"
-VITALS_TOTAL = 1205             # 1194 + 11! (P189)
-BLOKI_04894 = 506               # 495 + 11! (P189)
+VITALS_TOTAL = 1219             # 1205 + 14! (P190 = KONEC-KNJIGE!)
+BLOKI_04894 = 520               # 506 + 14! (P190 = KONEC-KNJIGE!)
 P80_HOUSES = 93                 # NESPREMENJENO (vseh-8-hiš-ŽE-v-filtru!)
 KORPUS_HOUSES = 93              # NESPREMENJENO
 NEW_SCANS = [152, 153, 154, 155, 156, 157, 158, 159, 160, 161]
@@ -172,8 +172,8 @@ def main():
     check("I6c bloki 1915 = 9 (Griblje!)",
           len(d1915) == 9 and all(v["houseNo"] in {"5", "8", "17", "25", "44", "45", "88", "90"}
                                    for v in d1915), str(len(d1915)))
-    check("I6d bloki 1924+ ne obstajajo (P189-lead!)",
-          all(v["year"] < 1924 for v in d04894), "")
+    check("I6d bloki 1925+ ne obstajajo (P190-KONEC-KNJIGE!)",
+          all(v["year"] < 1925 for v in d04894), "")
     p80src = open(P80, encoding="utf-8").read()
     check("I6e p80-skripta pini 1091 + 93 + gap-18 (vitals-P181-kaskada!)",
           "len(vitals) == 1100" in p80src and "len(houses) == 94" in p80src
@@ -217,12 +217,12 @@ def main():
     # ---------- I10: qa-parish.ts pini ----------
     qa = open(QA_TS, encoding="utf-8").read()
     check("I10a qa-pini 1091 (95×)",
-          qa.count("!== 1205") >= 90, str(qa.count("!== 1205")))
+          qa.count("!== 1219") >= 90, str(qa.count("!== 1219")))
     check("I10b qa-pini 392 (15×+)",
-          qa.count('04894").length !== 506') >= 15
-          and "p80Death.length !== 506" in qa, str(qa.count('04894").length !== 506')))
+          qa.count('04894").length !== 520') >= 15
+          and "p80Death.length !== 520" in qa, str(qa.count('04894").length !== 520')))
     check("I10c qa guard 1919 (bloki 1919+ ne!)",
-          "1916+-mrliški bloki že v korpusu" in qa and "(h.year ?? 0) >= 1924" in qa, "")
+          "1916+-mrliški bloki že v korpusu" in qa and "(h.year ?? 0) >= 1925" in qa, "")
     check("I10d stale-guardi → 1916 (27× qa)",
           qa.count("(h.year ?? 0) >= 1916") >= 27, str(qa.count("(h.year ?? 0) >= 1916")))
 
@@ -231,8 +231,8 @@ def main():
     for y in range(153, 181):
         f = f"scripts/p{y}_parish_death_{y - 153 + 1887}.py"
         s = open(f, encoding="utf-8").read()
-        stale.append(all(p in s for p in ("VITALS_TOTAL = 1205", "BLOKI_04894 = 506",
-                                          "1924")))
+        stale.append(all(p in s for p in ("VITALS_TOTAL = 1219", "BLOKI_04894 = 520",
+                                          "1925")))
     check("I11a p153–p180 skripte VITALS_TOTAL 1100 + BLOKI 401 + guardi 1917",
           all(stale), f"{stale.count(True)}/28")
 

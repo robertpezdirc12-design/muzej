@@ -30,8 +30,8 @@ EXPECTED_ANOMALIES = 12
 EXPECTED_CROSSCHECKS = 5
 GRIBLJE_HOUSES = "6,6,7,14,16,31,35,49,72,74,90,91"
 GRIBLJE_ZAPS = [3, 9, 10, 13, 23, 38, 40, 41, 45, 46, 51, 53]
-VITALS_TOTAL = 1205             # 1194 + 11! (P189)
-BLOKI_04894 = 506               # 495 + 11! (P189)
+VITALS_TOTAL = 1219             # 1205 + 14! (P190 = KONEC-KNJIGE!)
+BLOKI_04894 = 520               # 506 + 14! (P190 = KONEC-KNJIGE!)
 P80_HOUSES = 92                 # NESPREMENJENO — vseh-11-hiš-ŽE-v-p80!
 KORPUS_HOUSES = 93              # NESPREMENJENO
 NEW_SCANS = [126, 127, 128, 129, 130]
@@ -196,7 +196,7 @@ def main():
     check("I6d bloki 1910: skeni 126–130 + stran == sken − 1",
           all(v["scan"] and 126 <= v["scan"] <= 130 and v["page"] == v["scan"] - 1 for v in d1910), "")
     check("I6d2 bloki 1911+ ne obstajajo (P177-lead!; P176 = 1910 sedaj v korpusu!)",
-          all(v["year"] < 1924 for v in d04894), "")
+          all(v["year"] < 1925 for v in d04894), "")
     p80 = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
     check("I6e p80-skripta pini 1032 + 92 + gap-18 (vitals-P176-kaskada!)",
           "len(vitals) == 1100" in p80 and "len(houses) == 94" in p80 and "len(gap) == 18" in p80, "")
@@ -292,7 +292,7 @@ def main():
     qa = open(QA_TS, encoding="utf-8").read()
     check("I10a qa-p176 = 177. kontrola", "qa-p176-parish-death-1910" in qa, "")
     check("I10b qa-parish pini 1032 + 333 (P176-kaskada!)",
-          qa.count("!== 1205") >= 91 and qa.count("!== 446") >= 25,
+          qa.count("!== 1219") >= 91 and qa.count("!== 446") >= 25,
           f"1032×{qa.count('!== 1032')}/333×{qa.count('!== 333')}")
     check("I10c qa-parish guardi ≥1916 (23× — P176-kaskada!)",
           qa.count(">= 1916") >= 28, f"{qa.count('>= 1915')}")
