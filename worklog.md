@@ -7291,3 +7291,9 @@ Stage Summary:
 - SKRIPTE: scripts/p189_parish_death_1923.py (**45/45 + --live 48/48!**)
 - VERIFIKACIJA: runQA **190/190 ok:True** · tsc 0 · lint 0 · korpus po P189: **1205/198+506/191/94(p80)·93(korpus)** — PT-luknja 18
 - P190-LEAD: mrliška 1924 = **ZADNJE-LETO-KNJIGE** (s248-z1–z7 + s249–s255 + s256-z73-ŽE-prebrani! 256-skenov-do-1924 → linija-39/39-KONEC!; meja-1923/24-s247-END-POTRJENA!)
+
+## P189 deploy-status · 2026-11-02
+
+- PUSH: GitHub 45cc12a..**0627359** ✓ + GitLab 45cc12a..**0627359** ✓ (GitLab-403-×1 → retry-OK!) — TRILOKACIJA-lokalni==GitHub==GitLab==**0627359** ✓
+- VERCEL: **griblje-museum.vercel.app 200** + **/api/qa = ok:True + 190/190 (qa-p189-parish-death-1923 pass:True) NA PRODUKCIJI!** — produkcija-P189-POTRJENA ✓
+- mrliška linija: **38/39** (1886–1923) — naslednja: **P190 = 1924 = ZADNJE-LETO-KNJIGE** (s248–s256-ŽE-prebrani! 256-skenov-do-1924 → linija-39/39-KONEC!)
