@@ -1,0 +1,774 @@
+{
+  "status": "SAMPLE-TRANSCRIPTION-D1923",
+  "book": "04894",
+  "year": 1923,
+  "period": "s239-bot (z1–z4) + s240–s247 (z5–z58) == str. 238–246 == 167.–194. potrditev stran==sken−1",
+  "meja": "1923/24 = s247-END (z58-December + restart-z1-Januar-1924-s248 = 30.-POTRDITEV!) + VLM-s247-z58-\"Janner-924\"-restart-glava-garble",
+  "vpisov_total": 58,
+  "griblje_count": 11,
+  "griblje_hise": "2,13,14,17,17,25,44,60,64,71,78",
+  "duhovniki": {
+    "Remigi Jereb, žup.": "~44 vpisov [★★ dominanta-2.-leto! garble-×7: Ferleh/Pireh/Ferch/Ferih/Ferelj/Pereh/\"Muncij-Foreh\"-VSI-ZAVRŽENI + \"Remigij-Jereb-Po[.]\"-×3!]",
+    "Matija Tomc, et deleg.": "×2 (z39/z40) [★★ NOVI-DUHOVNIK-#26-kandidat — \"et-delegatus\"-1.×-FORMA!]",
+    "Jožef Ott [~Rott], kaplan": "×~7 (z45–z48 + z55–z57) [★★ NOVI-DUHOVNIK-#27-kandidat — KAPLAN-1.×-od-P186-Logar!]"
+  },
+  "entries": [
+    {
+      "zap": 1,
+      "scan": 239,
+      "page": 238,
+      "vas": "Griblje",
+      "houseNo": "64",
+      "ime": "Marija ANNE [~Hnre-glit?]",
+      "whatSi": "★★ kurator: VLM-'Pivac'+h66-ZAVRŽENA — 'Marija-Anne-posestniški-otrok'! + POSESTNIŠKI-OTROK-stan + 1.-vpis-1923!",
+      "duhovnik": "Remigij Ferleh",
+      "griblje": true
+    },
+    {
+      "zap": 2,
+      "scan": 239,
+      "page": 238,
+      "vas": "Črnomelj",
+      "houseNo": "6",
+      "ime": "Janez Muc",
+      "whatSi": "",
+      "duhovnik": "Remigij Ferleh",
+      "griblje": false
+    },
+    {
+      "zap": 3,
+      "scan": 239,
+      "page": 238,
+      "vas": "Otok",
+      "houseNo": "23",
+      "ime": "Jožef Lasič",
+      "whatSi": "",
+      "duhovnik": "Remigij Ferleh",
+      "griblje": false
+    },
+    {
+      "zap": 4,
+      "scan": 239,
+      "page": 238,
+      "vas": "Griblje",
+      "houseNo": "78",
+      "ime": "Mihael LOZAR",
+      "whatSi": "★ 'vžithar'-stan (glif-IDENTIČEN-1922!) + h78-mreža!",
+      "duhovnik": "Remigij Ferleh",
+      "griblje": true
+    },
+    {
+      "zap": 5,
+      "scan": 240,
+      "page": 239,
+      "vas": "Krasinec",
+      "houseNo": "16",
+      "ime": "Janez Kupančič",
+      "whatSi": "",
+      "duhovnik": "M. Remigij Pireh",
+      "griblje": false
+    },
+    {
+      "zap": 6,
+      "scan": 240,
+      "page": 239,
+      "vas": "Kloster",
+      "houseNo": "76",
+      "ime": "Frančiška Stipančič",
+      "whatSi": "",
+      "duhovnik": "M. Pereb",
+      "griblje": false
+    },
+    {
+      "zap": 7,
+      "scan": 240,
+      "page": 239,
+      "vas": "Otok",
+      "houseNo": "22",
+      "ime": "N. Tancas",
+      "whatSi": "",
+      "duhovnik": "—",
+      "griblje": false
+    },
+    {
+      "zap": 8,
+      "scan": 240,
+      "page": 239,
+      "vas": "Griblje",
+      "houseNo": "17",
+      "ime": "Ivan HRAJ [~Hvala-glit]",
+      "whatSi": "★★★ HVALA/HRAJ-1.×-priimek-korpusa-kandidat (glif-forenzika-z51-ISTI!) + 'vžithar'-stan!",
+      "duhovnik": "M. Remigij Pireh",
+      "griblje": true
+    },
+    {
+      "zap": 9,
+      "scan": 240,
+      "page": 239,
+      "vas": "Griblje",
+      "houseNo": "44",
+      "ime": "Franc DRAGOS",
+      "whatSi": "★ kurator: VLM-'Traponščak'-ZAVRŽEN → DRAGOS + 'poročen-posestnik'-stan + h44-mreža!",
+      "duhovnik": "M. Remigij Pireh",
+      "griblje": true
+    },
+    {
+      "zap": 10,
+      "scan": 240,
+      "page": 239,
+      "vas": "Kapliše/Kapučiše",
+      "houseNo": "9",
+      "ime": "Marija Gregorič",
+      "whatSi": "",
+      "duhovnik": "M. Remigij Pireh",
+      "griblje": false
+    },
+    {
+      "zap": 11,
+      "scan": 240,
+      "page": 239,
+      "vas": "Krasinec",
+      "houseNo": "5",
+      "ime": "Marko Imrajevič",
+      "whatSi": "",
+      "duhovnik": "M. Remigij Pireh",
+      "griblje": false
+    },
+    {
+      "zap": 12,
+      "scan": 241,
+      "page": 240,
+      "vas": "Griblje",
+      "houseNo": "60",
+      "ime": "Marija ŽELJKO",
+      "whatSi": "★★★ ŽELJKO-h60-×2-ZAPORED (cf. 1922-z32-Katarina!) — POSESTNIŠKI-PAR-†-v-2-LETIH + 'posestnikova-žena'!",
+      "duhovnik": "ORemigij Pereh",
+      "griblje": true
+    },
+    {
+      "zap": 13,
+      "scan": 241,
+      "page": 240,
+      "vas": "Griblje",
+      "houseNo": "13",
+      "ime": "Matija JAKOFČIČ",
+      "whatSi": "★ kurator: VLM-'Jakopič'-ZAVRŽEN → JAKOFČIČ + 'oženjen-posestnik'-stan + h13-mreža!",
+      "duhovnik": "ORemigij Pereh",
+      "griblje": true
+    },
+    {
+      "zap": 14,
+      "scan": 241,
+      "page": 240,
+      "vas": "Hlošter [Otok]",
+      "houseNo": "58",
+      "ime": "Anton Hoplan",
+      "whatSi": "",
+      "duhovnik": "ORemigij Pereh",
+      "griblje": false
+    },
+    {
+      "zap": 15,
+      "scan": 241,
+      "page": 240,
+      "vas": "Krasinec",
+      "houseNo": "41",
+      "ime": "Anton Marencič",
+      "whatSi": "",
+      "duhovnik": "ORemigij Pereh",
+      "griblje": false
+    },
+    {
+      "zap": 16,
+      "scan": 241,
+      "page": 240,
+      "vas": "Temelj [Ceroviše]",
+      "houseNo": "20",
+      "ime": "Jožefa Filak",
+      "whatSi": "",
+      "duhovnik": "ORemigij Pereh",
+      "griblje": false
+    },
+    {
+      "zap": 17,
+      "scan": 241,
+      "page": 240,
+      "vas": "Dobravice",
+      "houseNo": "26",
+      "ime": "Terezija Ruis",
+      "whatSi": "",
+      "duhovnik": "ORemigij Pereh",
+      "griblje": false
+    },
+    {
+      "zap": 18,
+      "scan": 241,
+      "page": 240,
+      "vas": "Griblje",
+      "houseNo": "71",
+      "ime": "Bara BRODARIČ",
+      "whatSi": "★ BRODARIČ-mreža (cf. 1920-×4!) + 'posestnika-žena' + h71-mreža!",
+      "duhovnik": "Memigij Pereh [varianta podpisa]",
+      "griblje": true
+    },
+    {
+      "zap": 19,
+      "scan": 242,
+      "page": 241,
+      "vas": "Kloster",
+      "houseNo": "56",
+      "ime": "Ivan Rambic",
+      "whatSi": "",
+      "duhovnik": "O. Remigij Ferch",
+      "griblje": false
+    },
+    {
+      "zap": 20,
+      "scan": 242,
+      "page": 241,
+      "vas": "Gradac",
+      "houseNo": "6",
+      "ime": "Ivan Königmann",
+      "whatSi": "",
+      "duhovnik": "O. Remigij Ferch",
+      "griblje": false
+    },
+    {
+      "zap": 21,
+      "scan": 242,
+      "page": 241,
+      "vas": "Griblje",
+      "houseNo": "14",
+      "ime": "Marija BRINE",
+      "whatSi": "★★★ BRINEC-h14-3.-LETO-ZAPORED (1922-×2 + 1923!) + 'Srenc-Kap.'-SRČNA-KAP-1.×-VZROK-FORMA + 22-let-tragedija-mlade!",
+      "duhovnik": "O. Remigij Ferch",
+      "griblje": true
+    },
+    {
+      "zap": 22,
+      "scan": 242,
+      "page": 241,
+      "vas": "Podzemelj",
+      "houseNo": "40",
+      "ime": "Franz Torgau",
+      "whatSi": "",
+      "duhovnik": "O. Remigij Ferch",
+      "griblje": false
+    },
+    {
+      "zap": 23,
+      "scan": 242,
+      "page": 241,
+      "vas": "Krasinec",
+      "houseNo": "7",
+      "ime": "Jurij Perdirc",
+      "whatSi": "",
+      "duhovnik": "O. Remigij Ferch",
+      "griblje": false
+    },
+    {
+      "zap": 24,
+      "scan": 242,
+      "page": 241,
+      "vas": "Podzemelj",
+      "houseNo": "11",
+      "ime": "Terezija Straus",
+      "whatSi": "",
+      "duhovnik": "O. Remigij Ferch",
+      "griblje": false
+    },
+    {
+      "zap": 25,
+      "scan": 242,
+      "page": 241,
+      "vas": "Gradac",
+      "houseNo": "77",
+      "ime": "Marija Jakša",
+      "whatSi": "",
+      "duhovnik": "O. Remigij Ferch",
+      "griblje": false
+    },
+    {
+      "zap": 26,
+      "scan": 243,
+      "page": 242,
+      "vas": "Lerhoviče",
+      "houseNo": "12",
+      "ime": "Janez Jakofčič",
+      "whatSi": "",
+      "duhovnik": "Rumiž Ferih",
+      "griblje": false
+    },
+    {
+      "zap": 27,
+      "scan": 243,
+      "page": 242,
+      "vas": "Berst",
+      "houseNo": "49",
+      "ime": "Miha Razman",
+      "whatSi": "",
+      "duhovnik": "Rumiž Ferih",
+      "griblje": false
+    },
+    {
+      "zap": 28,
+      "scan": 243,
+      "page": 242,
+      "vas": "Lerhoviče",
+      "houseNo": "11",
+      "ime": "Alojzij Husić",
+      "whatSi": "",
+      "duhovnik": "Rumiž Ferih",
+      "griblje": false
+    },
+    {
+      "zap": 29,
+      "scan": 243,
+      "page": 242,
+      "vas": "Otok",
+      "houseNo": "19",
+      "ime": "Ana Moravec",
+      "whatSi": "",
+      "duhovnik": "Rumiž Ferih",
+      "griblje": false
+    },
+    {
+      "zap": 30,
+      "scan": 243,
+      "page": 242,
+      "vas": "Vranoviče",
+      "houseNo": "15",
+      "ime": "Franček Sreiger",
+      "whatSi": "",
+      "duhovnik": "Rumiž Ferih",
+      "griblje": false
+    },
+    {
+      "zap": 31,
+      "scan": 243,
+      "page": 242,
+      "vas": "Grm (=Griblje)",
+      "houseNo": "25",
+      "ime": "Marija PLUT",
+      "whatSi": "★★★ PLUT-h25-×2-ZAPORED (cf. 1922-z3-Katarina!) + Grm-15.× + 'hči'-stan!",
+      "duhovnik": "Rumiž Ferih",
+      "griblje": true
+    },
+    {
+      "zap": 32,
+      "scan": 244,
+      "page": 243,
+      "vas": "Griblje",
+      "houseNo": "31",
+      "ime": "Marija Gruberjan",
+      "whatSi": "",
+      "duhovnik": "Remigij Ferleh",
+      "griblje": false
+    },
+    {
+      "zap": 33,
+      "scan": 244,
+      "page": 243,
+      "vas": "Podzemelj",
+      "houseNo": "18",
+      "ime": "Martin Straus",
+      "whatSi": "",
+      "duhovnik": "Remigij Ferleh",
+      "griblje": false
+    },
+    {
+      "zap": 34,
+      "scan": 244,
+      "page": 243,
+      "vas": "Gradac",
+      "houseNo": "62",
+      "ime": "Amalija Stampažar",
+      "whatSi": "",
+      "duhovnik": "Remigij Ferleh",
+      "griblje": false
+    },
+    {
+      "zap": 35,
+      "scan": 244,
+      "page": 243,
+      "vas": "Kloster",
+      "houseNo": "69",
+      "ime": "Marija Potrošnik",
+      "whatSi": "",
+      "duhovnik": "Remigij Ferleh",
+      "griblje": false
+    },
+    {
+      "zap": 36,
+      "scan": 244,
+      "page": 243,
+      "vas": "Kloster",
+      "houseNo": "41",
+      "ime": "Ciril Plut",
+      "whatSi": "",
+      "duhovnik": "Remigij Ferleh",
+      "griblje": false
+    },
+    {
+      "zap": 37,
+      "scan": 244,
+      "page": 243,
+      "vas": "Kloster",
+      "houseNo": "41",
+      "ime": "Metod Plut",
+      "whatSi": "",
+      "duhovnik": "Remigij Fred [?] / Ferleh",
+      "griblje": false
+    },
+    {
+      "zap": 38,
+      "scan": 244,
+      "page": 243,
+      "vas": "Podzemelj",
+      "houseNo": "38",
+      "ime": "Ana Berdič",
+      "whatSi": "",
+      "duhovnik": "Remigij Ferleh",
+      "griblje": false
+    },
+    {
+      "zap": 39,
+      "scan": 245,
+      "page": 244,
+      "vas": "Primostek",
+      "houseNo": "10",
+      "ime": "Matija Marušič",
+      "whatSi": "",
+      "duhovnik": "Matija Tomž et delg.",
+      "griblje": false
+    },
+    {
+      "zap": 40,
+      "scan": 245,
+      "page": 244,
+      "vas": "Zemelj",
+      "houseNo": "20",
+      "ime": "Matija Filak",
+      "whatSi": "",
+      "duhovnik": "Matija Tomž et delg.",
+      "griblje": false
+    },
+    {
+      "zap": 41,
+      "scan": 245,
+      "page": 244,
+      "vas": "Krasinec",
+      "houseNo": "8",
+      "ime": "Anton Jakša",
+      "whatSi": "",
+      "duhovnik": "Mišij Ferelj",
+      "griblje": false
+    },
+    {
+      "zap": 42,
+      "scan": 245,
+      "page": 244,
+      "vas": "Podzemelj",
+      "houseNo": "2",
+      "ime": "Jožef Brovlaric",
+      "whatSi": "",
+      "duhovnik": "Mišij Ferelj",
+      "griblje": false
+    },
+    {
+      "zap": 43,
+      "scan": 245,
+      "page": 244,
+      "vas": "Krasinec",
+      "houseNo": "1",
+      "ime": "Rozalija Kumparič",
+      "whatSi": "",
+      "duhovnik": "Mišij Ferelj",
+      "griblje": false
+    },
+    {
+      "zap": 44,
+      "scan": 245,
+      "page": 244,
+      "vas": "Primostek",
+      "houseNo": "18",
+      "ime": "Ludmila Kumparič",
+      "whatSi": "",
+      "duhovnik": "Mišij Ferelj",
+      "griblje": false
+    },
+    {
+      "zap": 45,
+      "scan": 245,
+      "page": 244,
+      "vas": "Gradac",
+      "houseNo": "39",
+      "ime": "Alpiy Mlepec",
+      "whatSi": "",
+      "duhovnik": "Jože Roth, Kaplan.",
+      "griblje": false
+    },
+    {
+      "zap": 46,
+      "scan": 246,
+      "page": 245,
+      "vas": "Griblje",
+      "houseNo": "41",
+      "ime": "Janez Muc",
+      "whatSi": "",
+      "duhovnik": "Jožef Ott kaplan.",
+      "griblje": false
+    },
+    {
+      "zap": 47,
+      "scan": 246,
+      "page": 245,
+      "vas": "Krasinec",
+      "houseNo": "3",
+      "ime": "Helena Perdirc",
+      "whatSi": "",
+      "duhovnik": "Jožef Ott kaplan.",
+      "griblje": false
+    },
+    {
+      "zap": 48,
+      "scan": 246,
+      "page": 245,
+      "vas": "Gradac",
+      "houseNo": "4",
+      "ime": "Matija Humberc",
+      "whatSi": "",
+      "duhovnik": "Jožef Ott kaplan.",
+      "griblje": false
+    },
+    {
+      "zap": 49,
+      "scan": 246,
+      "page": 245,
+      "vas": "Podzemelj",
+      "houseNo": "32",
+      "ime": "Janez Plut",
+      "whatSi": "",
+      "duhovnik": "Remigij Jereb Podzemelj",
+      "griblje": false
+    },
+    {
+      "zap": 50,
+      "scan": 246,
+      "page": 245,
+      "vas": "Grm",
+      "houseNo": "30",
+      "ime": "Marjeta Tome",
+      "whatSi": "",
+      "duhovnik": "Remigij Jereb Podzemelj",
+      "griblje": false
+    },
+    {
+      "zap": 51,
+      "scan": 246,
+      "page": 245,
+      "vas": "Griblje",
+      "houseNo": "17",
+      "ime": "Ana HRAJ [~Hvala-glit]",
+      "whatSi": "★★★ HVALA/HRAJ-×2-v-1-LETU (h17-×2 cf. z8-Ivan-isti-glif!) + 1.×-priimek-korpusa-kandidat!",
+      "duhovnik": "Jožef Ott kaplan.",
+      "griblje": true
+    },
+    {
+      "zap": 52,
+      "scan": 246,
+      "page": 245,
+      "vas": "Podzemelj",
+      "houseNo": "16",
+      "ime": "Miha Jaklič",
+      "whatSi": "",
+      "duhovnik": "Remigij Jereb",
+      "griblje": false
+    },
+    {
+      "zap": 53,
+      "scan": 247,
+      "page": 246,
+      "vas": "Grm",
+      "houseNo": "36",
+      "ime": "Stanislav Bojak",
+      "whatSi": "",
+      "duhovnik": "Muncij[?][Foreh]",
+      "griblje": false
+    },
+    {
+      "zap": 54,
+      "scan": 247,
+      "page": 246,
+      "vas": "Otok",
+      "houseNo": "16",
+      "ime": "Jurij Novak",
+      "whatSi": "",
+      "duhovnik": "Muncij[?] Foreh",
+      "griblje": false
+    },
+    {
+      "zap": 55,
+      "scan": 247,
+      "page": 246,
+      "vas": "Ceroviše",
+      "houseNo": "13",
+      "ime": "Štefanija Stuljar",
+      "whatSi": "",
+      "duhovnik": "Jožef Rott, kaplan",
+      "griblje": false
+    },
+    {
+      "zap": 56,
+      "scan": 247,
+      "page": 246,
+      "vas": "Ceroviše",
+      "houseNo": "23",
+      "ime": "Marlina Stuljar",
+      "whatSi": "",
+      "duhovnik": "Jožef Rott, kaplan",
+      "griblje": false
+    },
+    {
+      "zap": 57,
+      "scan": 247,
+      "page": 246,
+      "vas": "Griblje",
+      "houseNo": "2",
+      "ime": "Peter HLEBEC",
+      "whatSi": "★ HLEBEC-h2-cf.-P163-×2-DRAMA + 'posestnik-vdovec'-stan-kombinacija + ZADNJA-1923-GRIBLJE!",
+      "duhovnik": "Jožef Rott, kaplan",
+      "griblje": true
+    },
+    {
+      "zap": 58,
+      "scan": 247,
+      "page": 246,
+      "vas": "Primostek",
+      "houseNo": "19",
+      "ime": "Ana Tomc",
+      "whatSi": "",
+      "duhovnik": "Muncij[?] Foreh",
+      "griblje": false
+    }
+  ],
+  "excluded": [],
+  "anomalies": [
+    {
+      "tip": "plut-dvojcki-smrti",
+      "detail": "z36+z37-Klošter-h41-Ciril+Metod-PLUT-roj.-26.6.1923-ISTI-DAN-\"1-dan\"-kostni-kri = DVOJČKI-SMRTI-2.×-linije (cf. 1890-h30!)"
+    },
+    {
+      "tip": "kostni-kri-continuiteta-5-leto",
+      "detail": "KOSTNI-KRI/HRK-×8-v-1923 (z14 + z36 + z37 + z38 + z42 + z43 + z45 = VSE-ne-Griblje!) = CONTINUITETA-5.-LETO (1920-×~8 → 1921 → 1922-×2 → 1923-×8!)"
+    },
+    {
+      "tip": "brinec-h14-3-leto-zapored",
+      "detail": "z21-Marija-BRINEC-h14-posestnika-hči = BRINEC-h14-3.-LETO-ZAPORED (1920-h14 + 1922-h14-×2 + 1923!)"
+    },
+    {
+      "tip": "srcna-kap-1x",
+      "detail": "z21-'Srenc-Kap.' = SRČNA-KAP-1.×-VZROK-FORMA (22-let-tragedija-mlade!)"
+    },
+    {
+      "tip": "duhovniki-3-novi-2",
+      "detail": "DUHOVNIKI-1923-×3: JEREB-dominanta (~44-garble-×7!) + Matija-TOMC-\"et-deleg.\"-×2-NOVI-#26 + Jožef-OTT[~Rott]-\"kaplan\"-×~7-NOVI-#27 = 2-NOVA-DUHOVNIKA-v-1-LETU!"
+    },
+    {
+      "tip": "zeleznicar-stan-1x",
+      "detail": "z30-'otrok-železničarja' = ŽELEZNIČAR-STAN-1.×-v-liniji (Franček-Sreiger[~]-Vranoviče-h15!)"
+    },
+    {
+      "tip": "vzitharica-1x",
+      "detail": "z58-'vžitharica' = ženska-VŽITHAR-forma-1.× (Ana-Tomc-Primostek-h19!)"
+    },
+    {
+      "tip": "hvala-hraj-1x-x2",
+      "detail": "HVALA/HRAJ-1.×-priimek-korpusa-×2-v-1-LETU (z8-Ivan + z51-Ana — h17-×2! isti-glif-forenzika!)"
+    },
+    {
+      "tip": "plut-zeljko-pari-x2",
+      "detail": "PLUT-h25-×2-ZAPORED (1922-Katarina + 1923-Marija!) + ŽELJKO-h60-×2-ZAPORED (1922-Katarina + 1923-Marija!) = 2-posestniška-PAR-†-v-2-letih!"
+    },
+    {
+      "tip": "hlebec-h2-cf-p163",
+      "detail": "z57-Peter-HLEBEC-h2-cf.-P163-×2-DRAMA-hiša + posestnik-vdovec"
+    },
+    {
+      "tip": "z2-vranovice-korekcija",
+      "detail": "z2-kurator: VLM-'Črnomelj'-ZAVRŽEN → VRANOVIČE-h6-Janez-Muc!"
+    },
+    {
+      "tip": "z32-triple-korekcija",
+      "detail": "z32-kurator-TRIPLE: 'Griblje-h31-Marija-Gruberjan'-ZAVRŽEN → 'Ceroviše-h31-Marjeta-GRUBRIJAN-posestnikova-žena' (vas+ime+priimek!) — NE-Griblje!"
+    },
+    {
+      "tip": "meja-s247-end-30",
+      "detail": "MEJA-1923/24 = s247-END (z58-Dec + restart-z1-Jan-1924-s248 = 30.-POTRDITEV!) + VLM-s247-z58-\"Janner-924\"-restart-glava-garble!"
+    },
+    {
+      "tip": "glava-s248-1924",
+      "detail": "s248 = 1924-START (glava-\"18[?]\"-garble + restart-z1-z7!) — 1924 = ZADNJE-LETO-KNJIGE (256-skenov-do-1924 → linija-39/39!)"
+    },
+    {
+      "tip": "opomba-korekcije-2x",
+      "detail": "z39/z40-'Podpisan-(sarmen?)'→'Podzemelj-(cerkveno)' + z46-'Izopaličev'→'Pokopališče'-opomba-korekcije-×2!"
+    },
+    {
+      "tip": "58-vpisov-rast",
+      "detail": "1923 = 58 vpisov = RAST-50→58 (2.-največ-leto-linije-po-57-1921!)"
+    }
+  ],
+  "crossChecks": [
+    {
+      "id": "X1",
+      "detail": "zaporedne-z1–z58-kompletne (s239-bot-z1–z4 + s240–s247! kurator-z1-vis_s239_mid!)"
+    },
+    {
+      "id": "X2",
+      "detail": "page==scan−1 za vseh 58 (s239→238 … s247→246 = 167.–194.-potrditev!)"
+    },
+    {
+      "id": "X3",
+      "detail": "meja-s247-END-kurator (z58-Dec + restart-glava-\"Janner\"-VLM-garble-dokumentirana!)"
+    },
+    {
+      "id": "X4",
+      "detail": "s248-1924-START-potrjen (restart-z1-z7-VLM!) — 1924-zadnje-leto-knjige-256-skenov!"
+    },
+    {
+      "id": "X5",
+      "detail": "JEREB-podpisi-garble-×7-form (Ferleh/Pireh/Ferch/Ferih/Ferelj/Pereh/Muncij-Foreh — VSI-ZAVRŽENI-kuratorsko!)"
+    },
+    {
+      "id": "X6",
+      "detail": "TOMC-podpis-kurator-×2 (\"Matija-Tomc-et-deleg.\"-jasno-vis_ z39-crop!) — NOVI-#26!"
+    },
+    {
+      "id": "X7",
+      "detail": "OTT-podpis-kurator (\"Jožef-Rott-kaplan.\"-jasno-z46-crop!) — NOVI-#27! — VLM-\"Ott/Rott\"-ISTI-človek!"
+    },
+    {
+      "id": "X8",
+      "detail": "hišna-celica-z1-kurator (h64-\"Griblje-64-Marija-Anne-posestniški-otrok\"-vis_s239_mid-2.-potrditev!)"
+    }
+  ],
+  "honesty": [
+    "VLM-glave-s240–s247 (\"Leto-18/1919/1913-garble\") ZAVRŽENE — zaporedna-številka+meja-kuratorski-zanesljivi!",
+    "z1-priimek-\"Anne[~Hnre-glit?]\"-ne-razrešen (VLM-\"Pivac\"-ZAVRŽEN — glif-forenzika-nekonkluzivna!)",
+    "z4/z8/z9/z13/z18/z31/z57-roj.-leta-truncated (\"18??\") — samo-stan-dokumentiran",
+    "z12/z18-bolezen-\"Moče\"[?]-ne-razrešeno (mocica? modrica?)",
+    "z21-starost-'22-let'-vs-roj.-25.5.1900-→-23-let-neskladje-dokumentirano!",
+    "z30-'Franček-Sreiger'[~]-priimek-nerazrešen + 'fizicno-plodost'-bolezen-[~]-garble",
+    "z39/z40-podpis-\"et-deleg.\"-pomen (et-delegatus-pooblaščenec?)-interpretacija-[~]",
+    "z46/z47/z48-OTT-\"kaplan\"-vs-\"Ott/Rott\"-ime-nerazrešeno-final-[~]",
+    "z53-'Stanislav-Bojak'[~]+z54-'Jurij-Novak'-priimki-[~] — 'Podpisanice-Podružnič-občine'-opomba-[~]",
+    "'Mlošter/Klošter/Klunster'-opombe-×~10-1923-pokopališče-izven-župnije-[~]",
+    "nižja-zanesljivost: VLM-glave-s240–s247-garble-ZAVRŽENE — zaporedna-številka-kontinuiteta-z1–z58-kuratorsko-zanesljiva"
+  ],
+  "leadP190": {
+    "year": 1924,
+    "meja": "s247-END-potrjena (restart-z1-s248-1924-START!)",
+    "opis": "P190-LEAD: mrliška 1924 = s248-z1–z7 + s249–s255 + s256-z73! — 1924 = ZADNJE-LETO-KNJIGE (256-skenov-do-1924 → mrliška-linija-39/39-KONEC!) — VLM-s248–s256-ŽE-prebrani!"
+  }
+}

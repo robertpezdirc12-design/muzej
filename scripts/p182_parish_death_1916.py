@@ -34,8 +34,8 @@ EXPECTED_EXCLUDED = 4
 EXPECTED_ANOMALIES = 15
 EXPECTED_CROSSCHECKS = 8
 GRIBLJE_HOUSES = "9,15,21,28,31,35,37,88,88"
-VITALS_TOTAL = 1194             # 1180 + 14! (P188)
-BLOKI_04894 = 495               # 481 + 14! (P188)
+VITALS_TOTAL = 1205             # 1194 + 11! (P189)
+BLOKI_04894 = 506               # 495 + 11! (P189)
 P80_HOUSES = 93                 # NESPREMENJENO (vseh-8-hiš-ŽE-v-filtru!)
 KORPUS_HOUSES = 93              # NESPREMENJENO
 NEW_SCANS = [162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172]
@@ -175,11 +175,11 @@ def main():
     check("I6c bloki 1916 = 9 (Griblje!)",
           len(d1916) == 9 and all(v["houseNo"] in {"9", "15", "21", "28", "31", "35", "37", "88"}
                                    for v in d1916), str(len(d1916)))
-    check("I6d bloki 1923+ ne obstajajo (P189-lead!)",
-          all(v["year"] < 1923 for v in d04894), "")
+    check("I6d bloki 1924+ ne obstajajo (P189-lead!)",
+          all(v["year"] < 1924 for v in d04894), "")
     p80src = open(P80, encoding="utf-8").read()
     check("I6e p80-skripta pini 1118 + 93 + gap-18 (vitals-P183-kaskada!)",
-          "len(vitals) == 1194" in p80src and "len(houses) == 94" in p80src
+          "len(vitals) == 1205" in p80src and "len(houses) == 94" in p80src
           and "len(gap) == 18" in p80src, "")
 
     # ---------- I7: h88-×2-MATER-IN-DOTKA + vzroki-novi ----------
@@ -213,21 +213,21 @@ def main():
 
     # ---------- I9: qa-parish.ts pini ----------
     qa = open(QA_TS, encoding="utf-8").read()
-    check("I9a qa-pini 1100 (90×+)", qa.count("!== 1194") >= 90, str(qa.count("!== 1194")))
+    check("I9a qa-pini 1100 (90×+)", qa.count("!== 1205") >= 90, str(qa.count("!== 1205")))
     check("I9b qa-pini 401 (15×+)",
-          qa.count('04894").length !== 495') >= 15
-          and "p80Death.length !== 495" in qa, str(qa.count('04894").length !== 495')))
+          qa.count('04894").length !== 506') >= 15
+          and "p80Death.length !== 506" in qa, str(qa.count('04894").length !== 506')))
     check("I9c qa-p182 = 183. kontrola", "qa-p182-parish-death-1916" in qa, "")
     check("I9d qa guard 1919 (bloki 1919+ ne!)",
-          "1923+-mrliški bloki že v korpusu" in qa and "(h.year ?? 0) >= 1923" in qa, "")
+          "1924+-mrliški bloki že v korpusu" in qa and "(h.year ?? 0) >= 1924" in qa, "")
 
     # ---------- I10: stale-sanacija p153–p181 ----------
     stale = []
     for y in range(153, 183):
         f = f"scripts/p{y}_parish_death_{y - 153 + 1887}.py"
         s = open(f, encoding="utf-8").read()
-        stale.append(all(p in s for p in ("VITALS_TOTAL = 1194", "BLOKI_04894 = 495",
-                                          "1923")))
+        stale.append(all(p in s for p in ("VITALS_TOTAL = 1205", "BLOKI_04894 = 506",
+                                          "1924")))
     check("I10a p153–p182 skripte VITALS_TOTAL 1118 + BLOKI 419 + guardi 1918",
           all(stale), f"{stale.count(True)}/30")
 

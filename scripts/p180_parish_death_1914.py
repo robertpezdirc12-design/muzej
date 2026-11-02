@@ -35,8 +35,8 @@ EXPECTED_EXCLUDED = 4
 EXPECTED_ANOMALIES = 13
 EXPECTED_CROSSCHECKS = 5
 GRIBLJE_HOUSES = "8,34,36,40,40"
-VITALS_TOTAL = 1194             # 1180 + 14! (P188)
-BLOKI_04894 = 495               # 481 + 14! (P188)
+VITALS_TOTAL = 1205             # 1194 + 11! (P189)
+BLOKI_04894 = 506               # 495 + 11! (P189)
 P80_HOUSES = 93                 # NESPREMENJENO (vse-4-hiše-ŽE-v-filtru!)
 KORPUS_HOUSES = 93              # NESPREMENJENO
 NEW_SCANS = [147, 148, 149, 150, 151]
@@ -161,8 +161,8 @@ def main():
     check("I6c bloki 1914 = 5", len(d1914) == 5, str(len(d1914)))
     check("I6d bloki 1914: skeni 147–151 + stran == sken − 1",
           all(v["scan"] and 147 <= v["scan"] <= 151 and v["page"] == v["scan"] - 1 for v in d1914), "")
-    check("I6d2 bloki 1923+ ne obstajajo (P189-lead!)",
-          all(v["year"] < 1923 for v in d04894), "")
+    check("I6d2 bloki 1924+ ne obstajajo (P189-lead!)",
+          all(v["year"] < 1924 for v in d04894), "")
     p80 = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
     check("I6f p80-skripta pini 1082 + 93 + gap-18 (vitals-P180-kaskada!)",
           "len(vitals) == 1100" in p80 and "len(houses) == 94" in p80 and "len(gap) == 18" in p80, "")
@@ -226,10 +226,10 @@ def main():
     qa = open(QA_TS, encoding="utf-8").read()
     check("I10a qa-p180 = 181. kontrola", "qa-p180-parish-death-1914" in qa, "")
     check("I10b qa-pini 1145/446/93 (94×+28×+24×)",
-          qa.count("!== 1194") >= 90 and qa.count("!== 446") >= 15 and qa.count("p80Houses.size !== 93") >= 18,
+          qa.count("!== 1205") >= 90 and qa.count("!== 446") >= 15 and qa.count("p80Houses.size !== 93") >= 18,
           f"{qa.count('!== 1100')}/{qa.count('!== 446')}/{qa.count('p80Houses.size !== 93')}")
     check("I10c qa guard 1919 (bloki 1919+ ne!)",
-          "1917+-mrliški bloki že v korpusu" in qa and "(h.year ?? 0) >= 1923" in qa, "")
+          "1917+-mrliški bloki že v korpusu" in qa and "(h.year ?? 0) >= 1924" in qa, "")
     check("I10d p152Wwi-04455-sinteza-NESPREMENJENA-7 (mrliški-1914-niso-v-04455-obsegu!)",
           "p152Wwi !== 7" in qa and "dobe (sinteza 04455)" in qa, "")
     check("I10e stale-guardi → 1916 (28× qa)",
@@ -257,10 +257,10 @@ def main():
     check("I12b p80 PT_GAP_HOUSES komentar (P162: + 51)", "+ 51 (mrliška 04894-1896" in p80, "")
     check("I12c stale-guardi → 1916 (p153–p179!)",
           all(any(pat in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
-                  for pat in ('(h.year ?? 0) >= 1916', 'v["year"] < 1923', '(v["year"] or 0) >= 1916'))
+                  for pat in ('(h.year ?? 0) >= 1916', 'v["year"] < 1924', '(v["year"] or 0) >= 1916'))
               for i, y in ((153, 1887), (154, 1888), (155, 1889), (156, 1890), (157, 1891), (158, 1892), (159, 1893), (160, 1894), (161, 1895), (162, 1896), (163, 1897), (164, 1898), (165, 1899), (166, 1900), (167, 1901), (168, 1902), (169, 1903), (170, 1904), (171, 1905), (172, 1906), (173, 1907), (174, 1908), (175, 1909), (176, 1910), (177, 1911), (178, 1912), (179, 1913))), "")
     check("I12d qa-parish.ts bloki 04894 = 401 (P181-kaskada!)",
-          qa.count('04894").length !== 495') >= 15, str(qa.count('04894").length !== 495')))
+          qa.count('04894").length !== 506') >= 15, str(qa.count('04894").length !== 506')))
 
     # ---------- I13 (--live): matricula dostopna ----------
     if live:
