@@ -7316,3 +7316,14 @@ Stage Summary:
 - VERCEL: **griblje-museum.vercel.app 200** + **/api/qa = ok:True + 191/191 (qa-p191-parish-death-1924 pass:True) NA PRODUKCIJI!** — produkcija-P190-POTRJENA ✓
 - **★★★ MRLIŠKA-LINIJA-04894-39/39-KONEC-LINIJE!** (1886–1924: 256-skenov · 1886-okvir-P80 + P153–P190-38-polnih-let · 520-mrliških-blokov-Griblje-v-parish.ts · 8-duhovnikov-#23–#29-obdobje-1919–1924 · KNJIGA-POPOLNOMA-DIGITALIZIRANA!)
 - korpus-final: **1219-vitalov/198-poročnih + 520-mrliških/191 + 94-p80-hiš · 93-korpus-hiš · PT-luknja-18**
+
+## P191 · 2026-11-02 — PT-LUKNJA-18 ZAKLJUČENA (finalni report po koncu mrliške linije)
+
+- KONTEKST: mrliška linija 04894 = **39/39 KONEC** (P190) → vse tri knjige popolnoma prebrane (krstna 04105: 1887–1919 · poročna 04455: 1886–1922 · mrliška 04894: 1886–1924) → korpus **FINALEN** → PT-luknja definivno rešljiva analitično (BREZ novih skenov)!
+- ANALIZA: `scripts/tmp/p191-pt-luknja.ts` (bere `src/data/atlas/parish.ts` HOUSE_VITALS) → dokaz `research/issue17/pt-luknja-18-final.json`
+- REZULTAT: **18/18 hiš (42–60 brez h41/h50) Z dokazi — pravih lukenj (0 blokov) = 0!** · **13/18 v VSEH TREH knjigah** (k+p+m) · 5 brez poročne (h45/h47/h49/h51/h55) · h51 najtanjša (**4 bloki, samo mrliška** — Urh-luknja 1896!) · max h46 = **30 blokov** · min h51 = 4 · luknja = **artefakt vzorčnega filtra** (04105-allow-leta), ne realnosti
+- KORPUS-FINALNO: **vitals 1219 · 04105=502 · 04455=197 · 04894=520** · hiš raw 95 (p80-vzorec 94 / korpus 93 po filtru I7)
+- VERIFIKATOR: `scripts/p191_pt_luknja_final.py` — **6/6 I1–I6 + --live produkcija ok:True 191/191 PASS!**
+- SEMANTIKA zdokumentirana: p80-skripta-set-18 (`PT_GAP_HOUSES`) ≠ qa doc-list-15 (`P80_PT_GAP` = brez h45/h47/h55 — dokazi geometrija/filtra)
+- README: Trenutno-stanje → **po P191** (status-linija + mrliška-tabela-vrstica 39/39-KONEC-LINIJE + korpus-finalno + Odprto-⑥-~~PT-luknja~~-ZAKLJUČENA + Zadnje-stanje-glava + kazalo-anchors P79–P190)
+- **P192-LEAD: krstna-nadaljevanje 1920+** — nasledstvena knjiga za 04105 (krstna 04105 se konča 1919); naslednji korak: identifikacija podpisa nasledstvene krstne knjige na Matriculi (župnija Podzemelj) + prenos prvih skenov + meja 1919/20
