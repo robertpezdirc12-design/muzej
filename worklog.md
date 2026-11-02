@@ -7097,3 +7097,27 @@ Stage Summary:
 - TRILOKACIJA: lokalni == GitHub (API-commits/main) == **86b4eb7** ✓; GitLab == 86b4eb7 (git-potrditev)
 - VERCEL: GitHub-App-avtomatski-deploy ~95-s → **griblje-museum.vercel.app 200** + **/api/qa = runQA 180/180 ok:True + qa-p179-parish-death-1913 pass:True NA PRODUKCIJI!**
 - mrliška linija: **28/39** (1886–1913) — naslednja: **P180 = 1914**
+
+## P180 — mrliška 1914 ('3-LEAD-KOREKCIJE + PEZDIREC-4.-LETO + h40-×2-2-PRIIMKA-MLINARJEVA + UTONITE-×2-REKORD + TUJ-ŽUPANIJA-VPIS-1.× + NEMANIČ-#19 + PALETA-SEBE-LEKCIJA!')
+
+Agent: Z.ai Code (glavni agent)
+Task: P180 — mrliška knjiga 04894, leto 1914 (29. polno leto mrliške linije)
+
+Work Log:
+- OKOLJE: NOVI-PAT-validiran (api.github.com/user → 200) → P179-trilokacija-86b4eb7-potrjena → /tmp-prazen (re-fetch!)
+- T1-FETCH: /tmp/p180/p180_fetch.py — s147–s153 (7 skeni, 256/256-inventar, 4.4-MB!) — s147-REUSE-lead (P179!)
+- T2-VLM-BRANJE: read_page-4-serije-foreground (147+148 / 149+150 / 151+152 / 153) — 7/7-OK (15–28-s/sken; glave-'18-1914'-'18..1914'-'18.1914'-'18/914'-'18/1914'-'18915'-'19/15'!) — 1914 = s147–s151 (55-vrstic: 12+12+12+12+7!); meja-1914/15 = s152 (glava-'18915'-NAPAKA + restart!)
+- T3-FORENZIKA (33-cropov: palete-×3.0-×5 + traki-×2.2-×12 + celice-×4.0–7.0-×13 + podpisi-×4.0-×7 + glave-×4.0-×3 + diag-×3!): **3-LEAD-KOREKCIJE** (z1-'VOTLOVEC'→JAKOFČIČ-th=k + z7-'PEKOVEC'→PEZDIREC-x-KRIŽEC + z8-'FINK'→FIŠLAK[~Filak]!) + **PALETA-SEBE-LEKCIJA-1.×** (paleta-s149-celica-8-'Griblje'-SEBE-MISREAD → diag-rdeča-ločila-RE-VERIFIKACIJA-×12-vrstic = 'Priložje-36' — s149 = 0-GRIBLJE! VLM-×3-zmede-z28-'Griže'/z32-'Priložje'/z36-'Zemelj'!) + VLM-VAS-KOREKCIJE-×9 (z3-Vranoviče + z4-Zemelj-27 + z13/z15/z20-Dobravice + z42-Dobravice + z16-Priložje!) + z2-starost-45-[~43]-PISAR-×2-POPRAVEK + z24-'Utopil-v-Kolpi'-'Umril'-ZAVRJEN-'Katija'→Matija-'Marija'-@×7.0 + z32-64-let-null-ZAVRJEN-'Mladuha'→Naduha-'samočna-ampfaltnija'→omožena-⅛-zemljatkinja + z50-HRIŽAN-'Hribernik'-ZAVRJEN-ž-caron + z53-TKALČIĆ-'Tkalec'-caron + z38-'Brijač'→Božjast + z55-'maduha'→naduha + podpisi (z1-'Anzelm-Polák'-Anton-ZAVRJEN! + z42-'Pust'→Rumpf + z47-'Nemánjić'-NOVI-#19! + z48-Bitnar + Bitnar-forme-Lambertus/Lambinus/Pavel/Pamlin/Pmbn/Fr.) + 'L.?t.-No?jay-o.f.d.'-×7-[?]-NE-RAZREŠEN (P179-lead-'Ho?er/Ojster'-ZAVRJEN!) + glave-s148-'18…1914'-mala-vrinjena + s152-'Leto-18-915'-9-VRINJENA-@×4.0!
+- T4-MEJA: **1914/15 = s152** (page-top-'1915.'-ročna + glava-'Leto 18 915'-PISARJEVA-NAPAKA + restart-55→z1 = **21.-POTRDITEV** — nov-podvzorec: page-top + glava-napaka!) + s148-glava-'18…1914'-mala-vrinjena = anomalia-ne-meja!
+- T5-PARISH.TS: P180-blok-komentar (4-vrstice + P181-LEAD) + 5-blokov (h8-JAKOFČIČ + h40-PEZDIREC + h34-FIŠLAK + h36-HRIŽAN + h40-TKALČIĆ-×2!) + h40-×2-2-RAZLIČNA-PRIIMKA + MLINAR-FORMULA-1.× + previden-'ne'-EKSPlicitno
+- T5b-KASKADA: qa-parish.ts (94× 1077→1082 + 28× 378→383 + 27×-guardi-1914→1915 + p152Wwi-04455-sinteza-NESPREMENJENA-7 (LEKCIJA: mrliški-niso-v-04455-obsegu!) + p80Death-sporočilo + qa-p178/qa-p179-guard-sporočila + **qa-p180-blok-181.-kontrola!** + p92-allow-lista-+h40-1914!) + **stale-sanacija-p153–p179-×27-skript + p80** (VITALS_TOTAL-1082 + BLOKI-383 + guardi-1915 + 'P181-lead' + 'P180-+-5-blokov-1914-=-383!' + year:1915-assertioni + vitals-komentar-veriga!) — **REGRESIJA-28/28-ZELENO!**
+- SKRIPTA: scripts/p180_parish_death_1914.py (I1–I13, --live) = **52/52 PASS**
+- DOKAZ: research/issue17/parish-death-1914.json (**55 entries = 5-Griblje + 50-ne! 4-excluded-vas-zmede + 13-anomalij + 5-crossChecks + honesty-7 + P181-lead**) + notes
+- QA: qa-p180 = **181. kontrola** · **runQA 181/181 ok:True** · p180-skripta 52/52 · REGRESIJA-28/28 · tsc 0 · lint 0
+- KUMULATIV: vitals 1077 → 1082 · mrliški 04894 378 → 383 · p80 93-NESPREMENJENO (vse-4-hiše-ŽE-v-filtru!) · korpus 93-NESPREMENJEN · PT-luknja 15-NESPREMENJENA
+
+Stage Summary:
+- **P180 KONČAN (koda)**: 1914 = 55-vrstic (z1–55) / 5-GRIBLJE / 4-hiše (h40-×2-2-PRIIMKA!) / padec 14→5
+- mrliška linija **29/39** (1886–1914) — P181-LEAD: 1915 (s152-z1–10 + s153-z11–18-ŽE-prebrani: 1-GRIBLJE — s153-z17-h88-Ivana-BRINEC-1-mes!; podpisi-'Vlčar-o.F.'-[?]-NOVI?; meja-1915/16 [?])
+- 3-LEAD-KOREKCIJE (VOTLOVEC→JAKOFČIČ + PEKOVEC→PEZDIREC-4.-leto + FINK→FIŠLAK) + UTONITE-×2-REKORD + TUJ-ŽUPANIJA-VPIS-1.× (Preloka!) + NOVI-DUHOVNIK-#19-NEMANIČ + ANZELM-POLÁK-#18-POTRJEN + PALETA-SEBE-LEKCIJA (metodološka-lekcija!) + GLAVE-NAPAKE-×2 ('18915'!) + MLINAR-FORMULA-1.× (TKALČIĆ-h40!)
+

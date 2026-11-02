@@ -4434,7 +4434,7 @@ export const HOUSE_VITALS: HouseVital[] = [
   // ★ VLM-VAS-NI-ZANESLJIVA: 3×-'Grišiče'-@crop-ZAVRJENE-EXCLUDE (z14-h1-Katarina-Jodlja-74-MODRA-MARGINALIJA! + z28-h3-Matija-LAPRIČ-'Griblje'-VLM-NAPAKA! + z49-h1-Anton-Judnič-'Griblje'-VLM-NAPAKA! — P177-VAS-×3-vzorec-2.×) → 14-GRIBLJE-ne-17! + h1-×2-hipoteza-PAVŠA (Griblje-h1-Žefko + Grišiče-h1-Judnič = 2-RAZLIČNI-vasi!)
   // ★ korekcije-×21-forenzika (traki-×2.2-×19 + celice-×3.0/4.0/5.0/6.0-~×20 + PODW-podpisi-×5): MILEK-'Hlebič'-ZAVRJEN + ŠILAK-'Viljak'-h34-leksikon-4.× + KRAMBIČ-'Agota'-VLM-IME-HALUCINACIJA + JAKLIČ-'Jakhlič' + ŽEFKO-[~] + ŠTRAVS-'Špavc'-leksikon + PEZDIREC-'Penčiče' + MRAMEŽIČ-'Mramorič'-[~]-ž-descender + LAPRIČ-'Lapajne'-[~] + HALAR-'Ivana' + FRANE-'Franco' + Kašelj-'kavrg' + Božjast-'Zavrat'-žj-ligatura-×3 + Slabost-'Hlabost'-ſl-LIGATURA + Jetika-'jediha' + s144-zap-25-'26'-dvojna-VLM + z35-smrt-27-pokop-28 (VLM-24/26-DVOJNI-MISREAD!) + starost-56-'36'-zmeda + 13-pokopov-iz-vas-celic + Polák-diakritik + 'Koop.'-razrešen
   // bolezni Griblje: Jetika ×6-DOMINANTA + Božjast ×3 + Starost ×2 + Slabost/Kašelj/Naduha ×1; meseci: Jan-×3-DOMINANTA (1.-JANUARSKA-DOMINANTA-LINIJE!) + Apr/Maj/Jul/Sep-×2/Okt-×2/Nov-×2 (Feb/Mar/Jun/Dec-0!); ½-zemljatov-sin-×4 (z24/z30/z39 + z4-'½ zemlj. sin'-varianta!) + 'ostarena'-×2-[~]
-  // P180 LEAD: mrliška 1914 (s147-z1–12 ŽE-prebrani: 3-GRIBLJE — z1-h8-Matija-VOTLOVEC-9½ + z7-h40-Marija-PEKOVEC-2½ + z8-h34-Josefa-FINK-2-SHILAK-hiša-4.-ZAPOREDNO-LETO! + z9/z10/z12-'[~]Ho?er/Ojster'-podpisi-[?]-NOVI?; meja 1914/15 [?])
+  // P180 LEAD → RESOLUCIJA (P180, 2026-11-02): 1914 = 55 vrstic (s147–s151) / 5 GRIBLJE / 4 hiše (h40-×2!) — lead-KOREKCIJE-×3: z1-'VOTLOVEC'→JAKOFČIČ + z7-'PEKOVEC'→PEZDIREC-4.-LETO + z8-'FINK'→FIŠLAK[~Filak]! + 'No?jay'-podpis-×7-[?]-NE-RAZREŠEN + UTONITE-×2-REKORD + TUJ-ŽUPANIJA-VPIS-1.× (z24-Preloka!) + s149-0-GRIBLJE (VLM-×3-vas-zmede-z28/z32/z36-ZAVRJENE — PALETA-SEBE-LEKCIJA!) + meja 1914/15 = s152-glava-'18915'-NAPAKA (POTRJENO!)
   {
     houseNo: "65",
     bookSignature: "04894",
@@ -4588,6 +4588,67 @@ export const HOUSE_VITALS: HouseVital[] = [
     whatEn: "died Vilhelmina MRAMEŽIČ [~ the VLM-'Mramorič'-approximate — the ž-DESCENDER+CARON-@×6.0!], a ?-laborer's daughter [? — the kajžarjeva?/kolarjeva?-candidates], 2 MONTHS (Nov 12, buried Nov 13) — Božjast; previden (.); Anzelm Polák [Koop.]; ★ h76 = the 2nd death entry (1887!) + the MRAMEŽIČ-1st-ENTRY-[?] + the 14th GRIBLJE-1913-CLOSER + the 7 + 6 house number (76)",
     status: "DOCUMENTED",
   },
+
+  // ——— P180 razširitev: MRLIŠKA KNJIGA 04894 — leto 1914 (skeni 147–151; 55 vpisov z1–55 / 5 GRIBLJE / 4 hiše (h40-×2!); PEZDIREC-1914 = 4.-LETO-ZAPORED + h34-FIŠLAK-ŠILAK-hiša-4.-ZAPOREDNO-LETO + UTONITE-×2-REKORD + TUJ-ŽUPANIJA-VPIS-1.× + NOVI-DUHOVNIK-#19-NEMANIČ; meja 1914/15 = s152-glava-'Leto 18 915'-PISARJEVA-NAPAKA-9-vrinjena! + page-top-'1915.'-ročna + restart-55→1 = 21.-POTRDITEV; dokaz: research/issue17/parish-death-1914.json) ———
+  // ★★★ 3-lead-KOREKCIJE-@forenzika (P179-lead-s147-z1–12!): z1-'VOTLOVEC'→JAKOFČIČ (KURRENT-th=k-LIGATURA-@×5.0 — cf. P176-×2-f-forma + h8-leksikon-JAKOBČIČ-×5!) + z7-'PEKOVEC'→PEZDIREC (x-KRIŽEC+DESCENDER-@×5.0 — h40-leksikon-1902/1903!) + z8-'FINK'→FIŠLAK[~Filak] (h34-leksikon: Filak-1898 + Čilak-1899 + Čišlak-1904 + Šilak-×4!)
+  // ★★★ UTONITE-×2-v-1-LETU = REKORD LINIJE (z24-Matija-Jaklič-'Utopil-v-Kolpi'-32-TUJ-ŽUPANIJA-Preloka-1.×! + z42-Marija-Reš-Dobravice-'Je-utonila[~]'-64 — #3-#4!) + ★★★ NOVI-DUHOVNIK-#19-IVAN-NEMANIČ (s150-z47-'Nemánjić'-@×4.0!) + ANZELM-POLÁK-#18-POTRJEN (z1-podpis-@×4.0 — VLM-'Anton'-ZAVRJEN!) + 'L.?t.-No?jay-o.f.d.'-×7-[?]-NE-RAZREŠEN (P179-lead-'Ho?er/Ojster'-ZAVRJEN!)
+  // ★★★ PALETA-SEBE-LEKCIJA-1.×: paleta-s149-celica-8-'Griblje'-SEBE-MISREAD → diag-rdeča-ločila-RE-VERIFIKACIJA-×12 = 'Priložje-36' — s149 = 0-GRIBLJE (VLM-×3-zmede-z28-'Griže'/z32-'Priložje'/z36-'Zemelj'-VSE-ZAVRJENE!) → 5-GRIBLJE-ne-8! + VLM-VAS-KOREKCIJE-×9-@palete (z3-Vranoviče + z4-Zemelj-27 + z13/z15/z20-Dobravice + z42-Dobravice!) + z2-starost-45-[~43]-pisar-×2-POPRAVEK (1.-prečrtan!) + ⅛-ULOMEK-#2 (z32-'omožena-⅛-zemljatkinja'!)
+  {
+    houseNo: "8",
+    bookSignature: "04894",
+    year: 1914,
+    scan: 147,
+    page: 146,
+    whatSi: "umrl Matija JAKOFČIČ [★★★ P179-lead-'VOTLOVEC'-ZAVRJEN-@×5.0 — KURRENT-th=k-LIGATURA = JAKOFČIČ (cf. P176-JAKOFČIČ-×2-f-forma!); h8-leksikon-JAKOBČIČ/Jakopec/Jakobič-×5!], ¼ zemljakov sin [~ zemljatov], 9½ LETA (8. 1., pokop 10. 1.) — Božjast; previden (−); Anzelm Polák [★★ VLM-'Anton Polak'-ZAVRJEN-@×4.0 — #18-POTRJEN-2.-leto!]; ★ h8 = 6. mrliški vpis (1888-×2 + 1892 + 1895 + 1899!) + 1. GRIBLJE-1914 + JAKOFČIČ-vez-26-let + 8 hišna (8)",
+    whatEn: "died Matija JAKOFČIČ [★★★ the P179-lead-'VOTLOVEC'-REJECTED-@×5.0 — the KURRENT-th=k-LIGATURE = JAKOFČIČ (cf. the P176-JAKOFČIČ-×2-f-form!); the h8-lexicon-JAKOBČIČ/Jakopec/Jakobič-×5!], a quarter-tenant's son [~ zemljatov], 9½ YEARS (Jan 8, buried Jan 10) — Božjast; previden (−); Anzelm Polák [★★ the VLM-'Anton Polak'-REJECTED-@×4.0 — the #18-CONFIRMED-2nd-year!]; ★ h8 = the 6th death entry (1888-×2 + 1892 + 1895 + 1899!) + the 1st GRIBLJE-1914 + the JAKOFČIČ-link-26-years + the 8 house number (8)",
+    status: "DOCUMENTED",
+  },
+
+  {
+    houseNo: "40",
+    bookSignature: "04894",
+    year: 1914,
+    scan: 147,
+    page: 146,
+    whatSi: "umrla Marija PEZDIREC [★★★ P179-lead-'PEKOVEC'-ZAVRJEN-@×5.0 — P-e-z(x-KRIŽEC+DESCENDER!)-d-i-r-e-c = LEKSIKON (cf. h40-1902-Ana + 1903-×2-'Pečnierec'-trakt!)], ¼ zemljatova hči, 2½ LETI (18. 2., pokop 20. 2.) — Kašelj; previden (.); Jos. Rumpf; ★★★ PEZDIREC-1914 = 4.-LETO-ZAPORED (1911-×4 + 1912-×4 + 1913-×1 + 1914-×1!) + h40 = 4. mrliški vpis (1902 + 1903-×2!) + 2. GRIBLJE-1914 + 4 + 0 hišna (40)",
+    whatEn: "died Marija PEZDIREC [★★★ the P179-lead-'PEKOVEC'-REJECTED-@×5.0 — P-e-z(the-x-CROSS+DESCENDER!)-d-i-r-e-c = the LEKSIKON (cf. the h40-1902-Ana + the 1903-×2-'Pečnierec'-tract!)], a quarter-tenant's daughter, 2½ YEARS (Feb 18, buried Feb 20) — Kašelj; previden (.); Jos. Rumpf; ★★★ PEZDIREC-1914 = the 4th-CONSECUTIVE-YEAR (1911-×4 + 1912-×4 + 1913-×1 + 1914-×1!) + h40 = the 4th death entry (1902 + 1903-×2!) + the 2nd GRIBLJE-1914 + the 4 + 0 house number (40)",
+    status: "DOCUMENTED",
+  },
+
+  {
+    houseNo: "34",
+    bookSignature: "04894",
+    year: 1914,
+    scan: 147,
+    page: 146,
+    whatSi: "umrla Josefa FIŠLAK [★★ P179-lead-'FINK'-ZAVRJEN-@×5.0 — F-i-š/l-a-k; h34-leksikon: Filak-1898 + Čilak-1899 + Čišlak-1904 + ŠILAK-×4 (1909-×2/1912/1913)!], ¼ zemljakova hči, 2 LETI (1. 3., pokop 3. 3.) — Božjast; previden (.); Jos. Rumpf; ★★★ h34 = 10. mrliški vpis + ŠILAK-hiša-4.-ZAPOREDNO-LETO (1911-HRUŠIČ + 1912-Janez + 1913-Anton + 1914-Josefa = 1.-V-LINIJI!) + FIŠLAK-Filak-vez-16-let (1898!) + 3. GRIBLJE-1914 + 3 + 4 hišna (34)",
+    whatEn: "died Josefa FIŠLAK [★★ the P179-lead-'FINK'-REJECTED-@×5.0 — F-i-š/l-a-k; the h34-lexicon: Filak-1898 + Čilak-1899 + Čišlak-1904 + ŠILAK-×4 (1909-×2/1912/1913)!], a quarter-tenant's daughter, 2 YEARS (Mar 1, buried Mar 3) — Božjast; previden (.); Jos. Rumpf; ★★★ h34 = the 10th death entry + the ŠILAK-house-4th-CONSECUTIVE-YEAR (1911-HRUŠIČ + 1912-Janez + 1913-Anton + 1914-Josefa = the 1st-IN-THE-LINE!) + the FIŠLAK-Filak-link-16-years (1898!) + the 3rd GRIBLJE-1914 + the 3 + 4 house number (34)",
+    status: "DOCUMENTED",
+  },
+
+  {
+    houseNo: "36",
+    bookSignature: "04894",
+    year: 1914,
+    scan: 151,
+    page: 150,
+    whatSi: "umrla Amalija HRIŽAN [★★ VLM-'Hribernik'-ZAVRJEN-@×5.0 — ž-CARON = HRIŽAN (leksikon-3.×: 1888-h36-'Križan-[~Hrižan]' + 1912-h26-Anton-HRIŽAN!)], ¼ zemljakova hči, 6 LET (10. 11., pokop 12. 11.) — Vroled opreklin [~ VLM-'Vročica oprekljan' — hipoteza-'Vročica opeklin'-OPEKLINA-vez-NE-POTRJENA!]; previden (.); Lambert Bitnar; ★ h36 = 8. mrliški vpis (1887–1903-×7!) + KRIŽAN/HRIŽAN-mreža-+1 + otrok-6-let (otroška-80%-1914!) + 4. GRIBLJE-1914 + 3 + 6 hišna (36)",
+    whatEn: "died Amalija HRIŽAN [★★ the VLM-'Hribernik'-REJECTED-@×5.0 — the ž-CARON = HRIŽAN (the lexicon-3rd-×: the 1888-h36-'Križan-[~Hrižan]' + the 1912-h26-Anton-HRIŽAN!)], a quarter-tenant's daughter, 6 YEARS (Nov 10, buried Nov 12) — Vroled opreklin [~ the VLM-'Vročica oprekljan' — the 'Vročica opeklin'-burn-fever-hypothesis-UNCONFIRMED!]; previden (.); Lambert Bitnar; ★ h36 = the 8th death entry (1887–1903-×7!) + the KRIŽAN/HRIŽAN-network-+1 + a 6-year-old child (the child-deaths-80%-of-1914!) + the 4th GRIBLJE-1914 + the 3 + 6 house number (36)",
+    status: "DOCUMENTED",
+  },
+
+  {
+    houseNo: "40",
+    bookSignature: "04894",
+    year: 1914,
+    scan: 151,
+    page: 150,
+    whatSi: "umrla Marija TKALČIĆ [~ VLM-'Tkalec'-ZAVRJEN-@×5.0 — caron-nad-c = TKALČIĆ!], mlinarjeva žena [★★ 1.-'MLINARJEVA'-FORMULA-LINIJE — MLIN-vez-Griblje (h40-PEZDIREC-hiša-z-mlinarjem!)], 21 LET (15. 12., pokop 16. 12.) — Prehlajenje; previden (NE [★★ EKSPLICITNA-ZAVRNITEV — redka-forma!]); Lambert Bitnar; ★★★ h40-×2-1914 = 2-RAZLIČNA-PRIIMKA (PEZDIREC-otrok + TKALČIĆ-mlinarjeva = 2.-LETO-h40-×2-od-1903!) + 5. GRIBLJE-1914-ZAKLJUČEK + 4 + 0 hišna (40)",
+    whatEn: "died Marija TKALČIĆ [~ the VLM-'Tkalec'-REJECTED-@×5.0 — the caron-above-c = TKALČIĆ!], a miller's wife [★★ the 1st-'MILLER'S-WIFE'-FORMULA-OF-THE-LINE — the MILL-link-to-Griblje (the h40-PEZDIREC-house-with-a-miller!)], 21 YEARS (Dec 15, buried Dec 16) — Prehlajenje; previden (NO [★★ the EXPLICIT-REFUSAL — a rare-form!]); Lambert Bitnar; ★★★ the h40-×2-1914 = 2-DIFFERENT-SURNAMES (the PEZDIREC-child + the TKALČIĆ-miller's-wife = the 2nd-YEAR-of-the-h40-×2-since-1903!) + the 5th GRIBLJE-1914-CLOSER + the 4 + 0 house number (40)",
+    status: "DOCUMENTED",
+  },
+
+  // P181 LEAD: mrliška 1915 (s152-z1–10 + s153-z11–18 ŽE-prebrani: 1-GRIBLJE — s153-z17-h88-Ivana-BRINEC-1-mes-Božjast-'Pankratius-Bithmar'-podpis-[~Bitnar]! + s152-0-Griblje + s153-z13-'Girišiče'-zmeda!; podpisi-'Vlčar-o.F.'-[?]-NOVI? + Učak + 'Pankratius-Bithmar'-[~Bitnar]; glava-s152-'18915'-napaka-POTRJENA; meja 1915/16 [?])
 
   // ——— P80 razširitev: POROČNA KNJIGA 04455 1873–1922 — okvir 1886 (skeni 61–65 == Pag. 60–64, vpisi 1–24; Pag. = sken − 1 v razponu 61–66) ———
   // P115 (faza 2) RE-READ: 8 blokov popravljenih na podlagi max-zoom branja (h36→56, h63→65, h15→16, h25→Priložje
