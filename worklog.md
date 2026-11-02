@@ -7199,3 +7199,9 @@ Stage Summary:
 - SKRIPTE: scripts/p184_parish_death_1918.py (**39/39 --live!**)
 - VERIFIKACIJA: runQA **185/185 ok:True** · tsc 0 · lint 0 · korpus po P184: **1145/198+446/191/93(p80)·93(korpus)** — PT-luknja 18
 - P185-LEAD: mrliška 1919 (s203-'Anno-1919'-restart-z1–6: z5-h62-Kure-Marija-roj.-'Poriček'?-36-l-jetika-Griblje + z6-'Grišči-h3-Tapič'-cf.-GLIF-TEST!; meja-1919/20 [?])
+
+## P184 deploy-status · 2026-11-03
+
+- PUSH: GitHub 349084b..**5ee1b91** ✓ + GitLab 349084b..**5ee1b91** ✓ — TRILOKACIJA-lokalni==GitHub==GitLab==**5ee1b91** ✓
+- VERCEL: **griblje-museum.vercel.app 200** + **/api/qa = ok:True + 185/185 (qa-p184-parish-death-1918 pass:True) NA PRODUKCIJI!** — produkcija-P184-POTRJENA ✓
+- mrliška linija: **33/39** (1886–1918) — naslednja: **P185 = 1919** (s203-'Anno-1919'-restart-z1–6 + s204-z7–12 ŽE-prebrani: z5-h62-Kure-Marija-36-l-Griblje + z6-'Tapič'-cf.-GLIF-TEST!; meja-1919/20 [?])
