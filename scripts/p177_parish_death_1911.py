@@ -28,8 +28,8 @@ EXPECTED_ANOMALIES = 12
 EXPECTED_CROSSCHECKS = 5
 GRIBLJE_HOUSES = "14,14,19,20,24,31,34,41,42,43,46,48,57"
 GRIBLJE_ZAPS = [13, 14, 26, 27, 31, 42, 46, 47, 48, 51, 54, 55, 56]
-VITALS_TOTAL = 1145             # 1118 + 27! (P184)
-BLOKI_04894 = 446               # 419 + 27! (P184)
+VITALS_TOTAL = 1154             # 1118 + 27! (P184)
+BLOKI_04894 = 455               # 419 + 27! (P184)
 P80_HOUSES = 92                 # NESPREMENJENO
 KORPUS_HOUSES = 93              # NESPREMENJENO
 NEW_SCANS = [133, 134, 135, 136]
@@ -165,7 +165,7 @@ def main():
     check("I6d bloki 1911: skeni 130–135 + stran == sken − 1",
           all(v["scan"] and 130 <= v["scan"] <= 135 and v["page"] == v["scan"] - 1 for v in d1911), "")
     check("I6d2 bloki 1913+ ne obstajajo (P178-lead!; P176-P177 = 1910+1911 sedaj v korpusu!)",
-          all(v["year"] < 1919 for v in d04894), "")
+          all(v["year"] < 1920 for v in d04894), "")
     houses_all = {v["houseNo"] for v in vit if v["houseNo"].isdigit()}
     check("I6g korpus = 93 hiš (NESPREMENJENO — vseh-12-hiš-ŽE-v-korpusu!)",
           len(houses_all) == KORPUS_HOUSES, str(len(houses_all)))
@@ -233,7 +233,7 @@ def main():
     # ---------- I10: qa-parish + pin-kaskada ----------
     check("I10a qa-p177 = 178. kontrola", "qa-p177-parish-death-1911" in qa, "")
     check("I10b qa-pini 1045/346/92",
-          qa.count("!== 1145") >= 91 and qa.count("!== 446") >= 25 and qa.count("p80Houses.size !== 93") >= 24,
+          qa.count("!== 1154") >= 91 and qa.count("!== 446") >= 25 and qa.count("p80Houses.size !== 93") >= 24,
           f"{qa.count('!== 1045')}/{qa.count('!== 346')}/{qa.count('p80Houses.size !== 92')}")
     check("I10c qa guardi-1913 (POSODABLJENO P178 — 24× + p177Future!)",
           qa.count("(h.year ?? 0) >= 1916") >= 28 and "1916+-mrliški bloki že v korpusu" in qa,

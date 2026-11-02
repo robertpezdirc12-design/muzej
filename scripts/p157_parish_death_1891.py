@@ -31,8 +31,8 @@ EXPECTED_EXCLUDED = 7            # 1891-lead + s29–s33 nonG (5) + 1892-lead
 EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 10
 GRIBLJE_HOUSES = "6,9,16,23,30,46,55,56,61,62,68,71,85"
-VITALS_TOTAL = 1145             # 1118 + 27! (P184)
-BLOKI_04894 = 446               # 419 + 27! (P184)
+VITALS_TOTAL = 1154             # 1118 + 27! (P184)
+BLOKI_04894 = 455               # 419 + 27! (P184)
 P80_HOUSES = 82                  # TS-filter (04105-1897 samo h61!): 81 + h85! EDINA nova 1891
 NEW_SCANS = [29, 30, 31, 32, 33]
 
@@ -193,10 +193,10 @@ def main():
     check("I6d bloki 1891: skeni 29–33 + stran == sken − 1",
           all(v["scan"] and 29 <= v["scan"] <= 33 and v["page"] == v["scan"] - 1 for v in d1891), "")
     check("I6d2 bloki 1908+ ne obstajajo (P174-lead!)",
-          all(v["year"] < 1919 for v in d04894), "")
+          all(v["year"] < 1920 for v in d04894), "")
     p80 = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
     check("I6f p80-skripta pini 950 + 91 + gap-18 (P170-kaskada!)",
-          "len(vitals) == 1100" in p80 and "len(houses) == 93" in p80 and "len(gap) == 18" in p80, "")  # python-p80 = 84 (širši 1897-filter))
+          "len(vitals) == 1100" in p80 and "len(houses) == 94" in p80 and "len(gap) == 18" in p80, "")  # python-p80 = 84 (širši 1897-filter))
     houses_all = {v["houseNo"] for v in vit if v["houseNo"].isdigit()}
     check("I6g korpus = 92 hiš (P159: +h98 EDINA!)", len(houses_all) == 93, str(len(houses_all)))
 
@@ -293,7 +293,7 @@ def main():
     check("I12 qa-p157 obstaja", "qa-p157-parish-death-1891" in qa, "")
     check("I12b qa-p158 guard 1893 (posodobljeno)", "1916+-mrliški bloki že v korpusu" in qa, "")
     check("I12c qa-pini 866/167/88 (78×+12×+14×) (P163)",
-          qa.count("!== 1145") >= 60 and qa.count("!== 446") >= 12 and qa.count("p80Houses.size !== 93") >= 12,
+          qa.count("!== 1154") >= 60 and qa.count("!== 446") >= 12 and qa.count("p80Houses.size !== 93") >= 12,
           f"{qa.count('!== 837')}/{qa.count('!== 167')}/{qa.count('p80Houses.size !== 87')}")
     readme = open(README, encoding="utf-8").read()
     check("I12d README P157", "P157" in readme and "1891" in readme, "")

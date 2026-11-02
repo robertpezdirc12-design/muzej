@@ -34,8 +34,8 @@ EXPECTED_EXCLUDED = 8
 EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 10
 GRIBLJE_HOUSES = "19,21,32,45,56,58,69,89,98"
-VITALS_TOTAL = 1145             # 1118 + 27! (P184)
-BLOKI_04894 = 446               # 419 + 27! (P184)
+VITALS_TOTAL = 1154             # 1118 + 27! (P184)
+BLOKI_04894 = 455               # 419 + 27! (P184)
 P80_HOUSES = 86                  # TS-filter: 83 + h98 + h89 + h45! EDINA nova 1893 (+h89/h45 prek mrliške!)
 P80_PY_HOUSES = 86               # python-filter (širši 1897): 84 + h98 + h89!
 NEW_SCANS = [41, 42, 43, 44, 45, 46]
@@ -154,10 +154,10 @@ def main():
     check("I6d bloki 1893: skeni 41–46 + stran == sken − 1",
           all(v["scan"] and 41 <= v["scan"] <= 46 and v["page"] == v["scan"] - 1 for v in d1893), "")
     check("I6d2 bloki 1905+ ne obstajajo (P169-lead!; P167-P168 = 1901+1902 sedaj v korpusu!)",
-          all(v["year"] < 1919 for v in d04894), "")
+          all(v["year"] < 1920 for v in d04894), "")
     p80 = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
     check("I6f p80-skripta pini 950 + 91 + gap-18 (P170-kaskada!)",
-          "len(vitals) == 1100" in p80 and "len(houses) == 93" in p80 and "len(gap) == 18" in p80, "")  # python-p80 = 86 (širši 1897-filter; +h98 +h89!)
+          "len(vitals) == 1100" in p80 and "len(houses) == 94" in p80 and "len(gap) == 18" in p80, "")  # python-p80 = 86 (širši 1897-filter; +h98 +h89!)
     houses_all = {v["houseNo"] for v in vit if v["houseNo"].isdigit()}
     check("I6g korpus = 93 hiš (POSODABLJENO P162: +h51!)", len(houses_all) == 93, str(len(houses_all)))
 
@@ -244,7 +244,7 @@ def main():
     qa = open(QA_TS, encoding="utf-8").read()
     check("I12 qa-p159 sekcija (160. kontrola)", "qa-p159-parish-death-1893" in qa, "")
     check("I12b qa-pini 886/187/88 (78×+12×+14×) (P165)",
-          qa.count("!== 1145") >= 60 and qa.count("!== 446") >= 12 and qa.count("p80Houses.size !== 93") >= 12,
+          qa.count("!== 1154") >= 60 and qa.count("!== 446") >= 12 and qa.count("p80Houses.size !== 93") >= 12,
           f"{qa.count('!== 837')}/{qa.count('!== 167')}/{qa.count('p80Houses.size !== 87')}")
     check("I12c qa-p158-SANACIJA (82 vrstic!)", qa.count("82 vrstic") >= 10 and "P159-SANACIJA" in qa, "")
     check("I12d qa guard 1899 (bloki 1899+ ne!)", "1916+-mrliški bloki že v korpusu" in qa, "")

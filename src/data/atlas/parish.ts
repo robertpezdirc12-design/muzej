@@ -5306,6 +5306,104 @@ export const HOUSE_VITALS: HouseVital[] = [
     whatEn: "died Janez NEČEMER [~], a coachman, the husband of Marija Butara, 61 YEARS (Dec 30, buried Dec 31) — Naduha; previden (prev.); Jos. Rupar, kapl. [★]; b. Apr 27, 1857 + ★ the h92-2nd-entry + the COACHMAN-2nd-×-trade! + the 1918-CLOSER-WITHOUT-note + the RUPAR-last!",
     status: "DOCUMENTED",
   },
+  // ——— P185: mrliška 1919 (s203–s212; 58 vrstic / 9 GRIBLJE / 8 hiš — KRATEK-leto
+  // cf. 1918-×103!; ★★ NOVI-DUHOVNIK-'Gregor-Cerar-župnik'-#23 (feb–dec-dominanta! —
+  // RUPAR-odsoten!) + Logar-kapl-NOV + GLYPH-COMPARISON-2.× (z6-'Tapič'→PAPIČ-cf.-P182!)
+  // + KORPUS-KOREKCIJA-CVITKOVIČ (z44-h12-BRATA-cf.-1918-Anton!) + z5-KURE-roj.-POŽEK
+  // (LEAD-potrjen + h62-×5-plex!) + ŠTRAUS-h48 (VLM-'Ptičar'-ZAVRJENO!) + BRINAR-h24-1.×-priimek
+  // + h84-NOVA-hiša-mrliške + z57-IZVEN-VRSTNEGA-RED-1.× + z58-ČEZMEJNI-pokop-31.12.1919/2.1.1920
+  // + September-1-vpis (inverzno-cf.-1916-0!) + GRM-×2 + meja 1919/20 = s212-DNO-mid-page
+  // ('19 20' + restart-z1 = 26.-POTRDITEV!) ———
+  {
+    houseNo: "62",
+    bookSignature: "04894",
+    year: 1919,
+    scan: 203,
+    page: 202,
+    whatSi: "umrla Marija KURE, roj. POŽEK [★★ P185-LEAD-POTRJEN: VLM-'Krive'-ZAVRJENO-@×5!], žena posestnika Janesa Kure (por. 16.11.1906), 36 LET (23. 1., pokop 25. 1.) — Jetika; previden (prev.); Jos. Logar, kpl. [★★ NOVI-KAPLAN-1919 — cf. P184-RUPAR!]; roj. 15.6.1882-SKLADNO! + ★ h62-KURE-plex-×5 (cf. 1917-Marija-9-dni = OTROK-iste-MARIJE + 1918-Anton-81!) + POŽEK-mreža (cf. P184-'Tožek'→POŽEK-×5!) + 1.-GRIBLJE-1919",
+    whatEn: "died Marija KURE, née POŽEK [★★ the P185-LEAD-CONFIRMED: the VLM-'Krive'-REJECTED-@×5!], the wife of the farmer Janes Kure (married Nov 16, 1906), 36 YEARS (Jan 23, buried Jan 25) — Jetika; previden (prev.); Jos. Logar, kpl. [★★ the NEW-CHAPLAIN-1919 — cf. the P184-RUPAR!]; b. Jun 15, 1882-CONSISTENT! + ★ the h62-KURE-plex-×5 + the POŽEK-network + the 1st-GRIBLJE-1919",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "45",
+    bookSignature: "04894",
+    year: 1919,
+    scan: 207,
+    page: 206,
+    whatSi: "umrla Ana MUC, roj. Kiško [~], vdova po † Marku Mucu nasluhniku [~], 68 LET (30. 4., pokop 2. 5.) — Maduha [~]; previden (prev.); Gregor Cerar, župnik [★★ NOVI-DUHOVNIK-#23!]; roj. maj 1841[!]+68-let = MATEMATIČNA-NESKLADJE (1841→78! verjetno-1851 — anomalija!) + ★ h45-cf.-ŠTRAUS-mreža-1900/1903! + MUC-×3-1919",
+    whatEn: "died Ana MUC, née Kiško [~], a widow after † Marko Muc the lodger [~], 68 YEARS (Apr 30, buried May 2) — Maduha [~]; previden (prev.); Gregor Cerar, župnik [★★ the NEW-PRIEST-#23!]; b. May 1841[!]+68-years = the MATH-INCONSISTENCY (1841→78! probably-1851 — anomaly!) + ★ the h45-cf.-ŠTRAUS-network + MUC-×3-1919",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "82",
+    bookSignature: "04894",
+    year: 1919,
+    scan: 209,
+    page: 208,
+    whatSi: "umrla Ana VREBER, zak. hči Petra Vreber + Terezije roj. M.[~], 3 LETA (24. 7., pokop 25. 7.) — Sušica; previden (—); Jos. Logar, kpl.; roj. 16.6.1916-SKLADNO! + ★ VREBER = 1.×-priimek-korpusa! + h82-2.-vpis (cf. 1899-Milek!)",
+    whatEn: "died Ana VREBER, a lawful daughter of Peter Vreber + Terezija née M.[~], 3 YEARS (Jul 24, buried Jul 25) — Sušica; previden (—); Jos. Logar, kpl.; b. Jun 16, 1916-CONSISTENT! + ★ VREBER = the 1st-surname-ever-in-the-corpus! + the h82-2nd-entry",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "84",
+    bookSignature: "04894",
+    year: 1919,
+    scan: 210,
+    page: 209,
+    whatSi: "umrla Ana CERŠINER [~ VLM-'Cerdiner'-kompozit], samska hči premin. Martina C. + Margarete roj. C.[~], 24 LET (14. 8., pokop 15. 8.) — Pljučnica; previden (prev.); Gregor Cerar, župnik; roj. 23.6.1895-SKLADNO! + ★★ h84 = NOVA-HIŠA-mrliške-linije (1. MRLIŠKI VPIS KADARKOLI — PT-kandidat!)",
+    whatEn: "died Ana CERŠINER [~ the VLM-'Cerdiner'-composite], an unmarried daughter of the late Martin C. + Margareta née C.[~], 24 YEARS (Aug 14, buried Aug 15) — Pljučnica; previden (prev.); Gregor Cerar, župnik; b. Jun 23, 1895-CONSISTENT! + ★★ the h84 = THE-NEW-HOUSE-OF-THE-DEATH-LINE (the 1st DEATH ENTRY EVER — the PT-candidate!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "12",
+    bookSignature: "04894",
+    year: 1919,
+    scan: 210,
+    page: 209,
+    whatSi: "umrl Vincencij DRAGOS, zak. sin posestnika Janeza D. + Barbare roj. CVITKOVIČ [★★★ KORPUS-KOREKCIJA: VLM-'Cesther'→CVITKOVIČ-po-h12-1918-ISTA-STARŠA!], 3 LET (31. 8., pokop 1. 9.) — Puškljenji [~]; previden (—); Jos. Logar, kpl.; roj. 2.9.1916 + ★★★ h12-BRATA-v-2-letih (cf. 1918-Anton-21-l!) + pokop-1.-SEPTEMBER (September-1919-OBSTAJA — inverzno-cf.-1916-0!)",
+    whatEn: "died Vincencij DRAGOS, a lawful son of the farmer Janez D. + Barbara née CVITKOVIČ [★★★ the CORPUS-CORRECTION: the VLM-'Cesther'→CVITKOVIČ-per-the-h12-1918-THE-SAME-PARENTS!], 3 YEARS (Aug 31, buried Sep 1) — Puškljenji [~]; previden (—); Jos. Logar, kpl.; b. Sep 2, 1916 + ★★★ the h12-BROTHERS-in-2-years (cf. 1918-Anton-21!) + the burial-on-SEPTEMBER-1 (September-1919-EXISTS — inversely-cf.-1916-0!)",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "33",
+    bookSignature: "04894",
+    year: 1919,
+    scan: 210,
+    page: 209,
+    whatSi: "umrl Matija TILAK [~ cf. TAPRIČ-h33-1908-mreža!], nasluhnik, poročen z Marijo roj. Uhanič [~] (27/5 1847[~]), 66 LET (10. 10., pokop 11. 10.) — Vodenica; previden (prev.); Gregor Cerar, župnik; roj. 15.6.1853-SKLADNO! + ★ vas-'Grm'-kratka-forma-8.×! + pokop-PODZEMELJ [~ rokhveno-fraza!]",
+    whatEn: "died Matija TILAK [~ cf. the TAPRIČ-h33-1908-network!], a lodger, married to Marija née Uhanič [~], 66 YEARS (Oct 10, buried Oct 11) — Vodenica; previden (prev.); Gregor Cerar, župnik; b. Jun 15, 1853-CONSISTENT! + ★ the village-'Grm'-short-form-8th-×! + the burial-at-PODZEMELJ [~]",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "26",
+    bookSignature: "04894",
+    year: 1919,
+    scan: 210,
+    page: 209,
+    whatSi: "umrla Marija MOLEK, roj. Taras [~ T-/Z-glif], žena Matija Molek-nasluhnika, 75 LET (11. 10., pokop 12. 10.) — Vodenica; previden (prev.); Gregor Cerar, župnik; roj. 24.4.1844-SKLADNO! + ★ vas-'Grm'-kratka-forma-9.×! + h26-MOLEK-mreža (cf. 1918-Ana-Molek!) + GRM-×2-v-2-DNEH (z46/z47!)",
+    whatEn: "died Marija MOLEK, née Taras [~ the T-/Z-glyph], the wife of Matija Molek the lodger, 75 YEARS (Oct 11, buried Oct 12) — Vodenica; previden (prev.); Gregor Cerar, župnik; b. Apr 24, 1844-CONSISTENT! + ★ the village-'Grm'-short-form-9th-×! + the h26-MOLEK-network + the GRM-×2-IN-2-DAYS!",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "48",
+    bookSignature: "04894",
+    year: 1919,
+    scan: 211,
+    page: 210,
+    whatSi: "umrl Jožef ŠTRAUS [★★ kurator-×2.2: VLM-'Ptičar'-ZAVRJENO — glif-Š-t-r-a-u-s-jasen!], malo nasluhnik, poročen z Marijo roj. ŠEGINA (17.5.1896), 62 LET (7. 11., pokop 8. 11.) — Maduha [~]; previden (— [~]); Gregor Cerar, župnik; roj. 30.9.1857-SKLADNO! + ★ ŠTRAUS-mreža-+1 (cf. h45-1900 + h22-1918 + P182-h31!) + ŠEGINA-roj. (cf. P184-z65-'Vegina'→ŠEGINA!) + h48-cf.-PEZDIREC-mreža-1892–1911!",
+    whatEn: "died Jožef ŠTRAUS [★★ the kurator-×2.2: the VLM-'Ptičar'-REJECTED — the Š-t-r-a-u-s-glyph-clear!], a small lodger, married to Marija née ŠEGINA (May 17, 1896), 62 YEARS (Nov 7, buried Nov 8) — Maduha [~]; previden (— [~]); Gregor Cerar, župnik; b. Sep 30, 1857-CONSISTENT! + ★ the ŠTRAUS-network-+1 + the ŠEGINA-née + the h48-cf.-PEZDIREC-network!",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "24",
+    bookSignature: "04894",
+    year: 1919,
+    scan: 212,
+    page: 211,
+    whatSi: "umrla Barbara BRINAR [~ BRINAR = 1.×-priimek-korpusa! kurator-×5: VLM-'Markoacu'-ZAVRJENO → 'vdova-po-†-Matiju'!], vdova po † Matiju Brinarju, rojena Jakofčič [~] (por. vk 1880), 66 LET (13. 11., pokop 15. 11.) — Starostna slabost; previden (prev.); Jos. Logar, kpl.; roj. 13.4.1853-SKLADNO! + ★ h24-cf.-Štrinec/BRINEC/JURAJEVIČ-mreža! + JAKOFČIČ-roj. (cf. h9-1917-Marija!)",
+    whatEn: "died Barbara BRINAR [~ BRINAR = the 1st-surname-ever-in-the-corpus! the kurator-×5: the VLM-'Markoacu'-REJECTED → 'a widow-after-†-Matij'!], a widow after † Matij Brinar, born Jakofčič [~] (married 1880), 66 YEARS (Nov 13, buried Nov 15) — Starostna slabost; previden (prev.); Jos. Logar, kpl.; b. Apr 13, 1853-CONSISTENT! + ★ the h24-cf.-Štrinec/BRINEC/JURAJEVIČ-network!",
+    status: "DOCUMENTED",
+  },
   // ——— P80 razširitev: POROČNA KNJIGA 04455 1873–1922 — okvir 1886 (skeni 61–65 == Pag. 60–64, vpisi 1–24; Pag. = sken − 1 v razponu 61–66) ———
   // P115 (faza 2) RE-READ: 8 blokov popravljenih na podlagi max-zoom branja (h36→56, h63→65, h15→16, h25→Priložje
   // + priimki Pegdirec/Klepec/Požek/Tomec/Straus/Križan) — evidence: research/issue17/parish-marriage-1886.json
