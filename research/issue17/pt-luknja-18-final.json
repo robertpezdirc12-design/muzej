@@ -1,7 +1,7 @@
 {
  "phase": "P191",
  "title": "PT-luknja-18 — finalni dokazi po zaključku mrliške linije 39/39 (knjiga 04894 popolnoma digitalizirana)",
- "generatedAt": "2026-11-02T21:02:48.464Z",
+ "generatedAt": "2026-11-02T23:10:13.751Z",
  "definition": {
   "gapRange": "hiše 41–60 brez h41 (izven vzorca) in h50 (04455-dokazana)",
   "gapHouses": [
@@ -27,11 +27,11 @@
   "note": "p80-skripta-set 18 (PT_GAP_HOUSES) ≠ qa doc-list 15 (P80_PT_GAP = 18 brez h45/h47/h55 — dokazi geometrija/filtra)"
  },
  "corpus": {
-  "vitalsTotal": 1235,
+  "vitalsTotal": 1256,
   "byBook": {
    "04105": 502,
    "04894": 520,
-   "04106": 16,
+   "04106": 37,
    "04455": 197
   },
   "housesDistinctAll": 95,
@@ -83,16 +83,17 @@
   },
   {
    "houseNo": "43",
-   "blocksTotal": 8,
+   "blocksTotal": 9,
    "byBook": {
     "04105": 2,
     "04455": 1,
-    "04106": 0,
+    "04106": 1,
     "04894": 5
    },
-   "firstYear": 1887,
+   "firstYear": 1884,
    "lastYear": 1924,
    "years": [
+    1884,
     1887,
     1892,
     1897,
@@ -105,21 +106,23 @@
    "dokazVia": [
     "krstna-04105",
     "poročna-04455",
-    "mrliška-04894"
+    "mrliška-04894",
+    "mrliška-04106-predzgodovina"
    ]
   },
   {
    "houseNo": "44",
-   "blocksTotal": 20,
+   "blocksTotal": 21,
    "byBook": {
     "04105": 8,
     "04455": 5,
-    "04106": 0,
+    "04106": 1,
     "04894": 7
    },
-   "firstYear": 1887,
+   "firstYear": 1884,
    "lastYear": 1923,
    "years": [
+    1884,
     1887,
     1888,
     1899,
@@ -144,7 +147,8 @@
    "dokazVia": [
     "krstna-04105",
     "poročna-04455",
-    "mrliška-04894"
+    "mrliška-04894",
+    "mrliška-04106-predzgodovina"
    ]
   },
   {
@@ -233,16 +237,18 @@
   },
   {
    "houseNo": "47",
-   "blocksTotal": 8,
+   "blocksTotal": 10,
    "byBook": {
     "04105": 5,
     "04455": 0,
-    "04106": 0,
+    "04106": 2,
     "04894": 3
    },
-   "firstYear": 1887,
+   "firstYear": 1884,
    "lastYear": 1919,
    "years": [
+    1884,
+    1884,
     1887,
     1888,
     1890,
@@ -254,7 +260,8 @@
    ],
    "dokazVia": [
     "krstna-04105",
-    "mrliška-04894"
+    "mrliška-04894",
+    "mrliška-04106-predzgodovina"
    ]
   },
   {
@@ -297,16 +304,17 @@
   },
   {
    "houseNo": "49",
-   "blocksTotal": 14,
+   "blocksTotal": 15,
    "byBook": {
     "04105": 6,
     "04455": 0,
-    "04106": 0,
+    "04106": 1,
     "04894": 8
    },
-   "firstYear": 1894,
+   "firstYear": 1884,
    "lastYear": 1918,
    "years": [
+    1884,
     1894,
     1899,
     1900,
@@ -324,7 +332,8 @@
    ],
    "dokazVia": [
     "krstna-04105",
-    "mrliška-04894"
+    "mrliška-04894",
+    "mrliška-04106-predzgodovina"
    ]
   },
   {
