@@ -7327,3 +7327,10 @@ Stage Summary:
 - SEMANTIKA zdokumentirana: p80-skripta-set-18 (`PT_GAP_HOUSES`) ≠ qa doc-list-15 (`P80_PT_GAP` = brez h45/h47/h55 — dokazi geometrija/filtra)
 - README: Trenutno-stanje → **po P191** (status-linija + mrliška-tabela-vrstica 39/39-KONEC-LINIJE + korpus-finalno + Odprto-⑥-~~PT-luknja~~-ZAKLJUČENA + Zadnje-stanje-glava + kazalo-anchors P79–P190)
 - **P192-LEAD: krstna-nadaljevanje 1920+** — nasledstvena knjiga za 04105 (krstna 04105 se konča 1919); naslednji korak: identifikacija podpisa nasledstvene krstne knjige na Matriculi (župnija Podzemelj) + prenos prvih skenov + meja 1919/20
+
+## P191 deploy-status + LEAD-korekcija · 2026-11-02
+
+- PUSH: GitHub 3aadb38..**52a39bb** ✓ + GitLab 3aadb38..**52a39bb** ✓ (GitLab-403-×1 → retry-OK!) — TRILOKACIJA-lokalni==GitHub==GitLab==**52a39bb** ✓
+- VERCEL: griblje-museum.vercel.app 200 + /api/qa = ok:True + **191/191** NA PRODUKCIJI ✓
+- **P192-LEAD-KOREKCIJA (Matricula-katalog preverjen živo!)**: popolna tabela knjig župnije Podzemelj — krstna: 01723 (1675–1703) … 04104 (1871–1885), **04105 (1886–1919) = ZADNJA krstna v katalogu** → *krstna-nadaljevanje 1920+ NE OBSTAJA*!; mrliška: 01732–01735, **04106 = 1857–1885 (208 skenov!)** = predhodnica 04894 (1886–1924); poročna: 04795 (1669–1679) … 01738 (1828–1873), 04455 (1873–1922) — projekt pokriva 1886–1922 → **1873–1885 nepreberrano!**
+- **P192 = PREDZGODOVINA 1873–1885** (kandidat-knjige): krstna **04104 (1871–1885, 200 skenov)** · mrliška **04106 (1857–1885, 208 skenov)** · poročna **04455-zacetek (1873–1885, ~prvih 100 skenov)** — vse tri ključne za ZGODNJE dokaze PT-luknja hiš (42–60) + korpus pred 1886!
