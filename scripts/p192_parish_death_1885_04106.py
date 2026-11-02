@@ -74,9 +74,9 @@ if "--live" in sys.argv:
     try:
         with urllib.request.urlopen("https://griblje-museum.vercel.app/api/qa", timeout=60) as r:
             rep = json.load(r)
-        p192 = [c for c in rep.get("checks", []) if c.get("id") == "qa-p192-parish-death-1885-04106"]
-        check("LIVE produkcija ok", rep.get("ok") is True, f"total={rep.get('total')}")
-        check("LIVE qa-p192 pass", bool(p192) and p192[0].get("ok") is True)
+        p192 = [c for c in rep.get("tests", []) if c.get("id") == "qa-p192-parish-death-1885-04106"]
+        check("LIVE produkcija ok", rep.get("ok") is True, f"passed={rep.get('passed')}")
+        check("LIVE qa-p192 pass", bool(p192) and p192[0].get("pass") is True)
     except Exception as e:
         check("LIVE produkcija", False, str(e))
 
