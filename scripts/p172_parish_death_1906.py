@@ -32,8 +32,8 @@ EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 5
 GRIBLJE_HOUSES = "18,19,20,39,44,49,57,58,77"
 GRIBLJE_ZAPS = [1, 6, 16, 21, 23, 29, 34, 35, 48, 54]
-VITALS_TOTAL = 1091             # 1020 + 12! (P176)
-BLOKI_04894 = 392               # 321 + 12! (P176)
+VITALS_TOTAL = 1100             # 1091 + 9! (P182)
+BLOKI_04894 = 401               # 392 + 9! (P182)
 P80_HOUSES = 92                  # NESPREMENJENO (h39/h77-ŽE-v-p80!)
 KORPUS_HOUSES = 93               # NESPREMENJENO
 NEW_SCANS = [105, 106, 107, 108]  # s104-reuse (P171-lead-diag!)
@@ -189,10 +189,10 @@ def main():
     check("I6d bloki 1906: skeni 104–108 + stran == sken − 1",
           all(v["scan"] and 104 <= v["scan"] <= 108 and v["page"] == v["scan"] - 1 for v in d1906), "")
     check("I6d2 bloki 1908+ ne obstajajo (P174-lead!; P172 = 1906 sedaj v korpusu!)",
-          all(v["year"] < 1916 for v in d04894), "")
+          all(v["year"] < 1917 for v in d04894), "")
     p80 = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
     check("I6f p80-skripta pini 976 + 91 + gap-18 (vitals-P172-kaskada!)",
-          "len(vitals) == 1091" in p80 and "len(houses) == 93" in p80 and "len(gap) == 18" in p80, "")
+          "len(vitals) == 1100" in p80 and "len(houses) == 93" in p80 and "len(gap) == 18" in p80, "")
     houses_all = {v["houseNo"] for v in vit if v["houseNo"].isdigit()}
     check("I6g korpus = 93 hiš (NESPREMENJENO — h39/h77-ŽE-v-korpusu!)",
           len(houses_all) == KORPUS_HOUSES, str(len(houses_all)))
@@ -264,7 +264,7 @@ def main():
     qa = open(QA_TS, encoding="utf-8").read()
     check("I10a qa-p172 = 173. kontrola", "qa-p172-parish-death-1906" in qa, "")
     check("I10b qa-parish pini 976 + 277 (P172-kaskada!)",
-          qa.count("!== 1091") >= 91 and qa.count("!== 392") >= 25,
+          qa.count("!== 1100") >= 91 and qa.count("!== 401") >= 25,
           f"976×{qa.count('!== 976')}/277×{qa.count('!== 277')}")
     check("I10c qa-parish guardi ≥1916 (20× — P172-kaskada!)",
           qa.count(">= 1916") >= 28, f"{qa.count('>= 1915')}")

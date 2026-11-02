@@ -4741,6 +4741,104 @@ export const HOUSE_VITALS: HouseVital[] = [
     status: "DOCUMENTED",
   },
 
+  // ——— P182: mrliška 1916 (s162–s172 == str. 161–170 + s173-DVOPAGE == str. 171+172 = MEJA;
+  // 71 vpisov / 9 GRIBLJE / 8 hiš (h88 ×2 = MATER-IN-DOTKA-V-8-DNEH!); ★★★ 1.-×-FORME:
+  // in-utero-KRST-'mrtvoroj.-dete-še-živo-in-utero-v-sili-krščeno'-z71 (2.-signal — cf. krstna-s290
+  // 'krščena-v-sili-in-utero-m.'-PRVI!) + previden-'ne'-×2-z62/z63 + DVOPAGE-skan-s173-1.× +
+  // SEPTEMBER-1916-0-vpisov-1.× + BREZ-zaključne-opombe (cf. 1915!) + 3-LEAD-KOREKCIJE
+  // (z24-Griblje→ŠKRILJE + z57-Griblje→DRAGOŠE-X-šrafura + z56-'Tapič'→PAPIČ-GLIF-TEST=s153-z13!)
+  // + WWI-vojak-črnogorski-z18 + tuj-pokop-KOSTEL-#3-z17; meja 1916/17 = s173-restart-z1 =
+  // 23.-POTRDITEV) ———
+  {
+    houseNo: "28",
+    bookSignature: "04894",
+    year: 1916,
+    scan: 162,
+    page: 161,
+    whatSi: "umrla Ana PEZDIREC [★★★ P182-LEAD-POTRJEN-×3 — vas-'Grm' = 2.-POTRDITEV-KRATKE-FORME (cf. P181-z56-h25 + storno-z61-h36!)], žena vžitharja [~ — cf. P181-h44-'kmetica-vžitharnica'], 72 LET (14. 1., pokop 19. 1.) — Pljučnica; previden (prev.); Lambinus [~ Lambert/Panlinus-forma] Bitnar; opomba-'pokopana na starem pokopališču' [2.-MASOVNI-vzorec cf. 1915-×~10!]; ★ h28 = 3. mrliški vpis (1901-BRINEC + 1907-TOŽEK!) + roj. 30.6.1843 + 1.-GRIBLJE-1916",
+    whatEn: "died Ana PEZDIREC [★★★ the P182-LEAD-CONFIRMED-×3 — the village-'Grm' = the 2nd-CONFIRMATION-of-the-short-form (cf. P181-z56-h25 + the storno-z61-h36!)], a vžithar's wife [~ — cf. P181-h44-'farmer's-vžithar-widow'], 72 YEARS (Jan 14, buried Jan 19) — Pljučnica; previden (prev.); Lambinus [~ the Lambert/Panlinus-form] Bitnar; the note-'buried at the old cemetery' [the 2nd-MASSIVE-pattern cf. 1915-×~10!]; ★ the h28 = the 3rd death entry (1901-BRINEC + 1907-TOŽEK!) + b. Jun 30, 1843 + the 1st-GRIBLJE-1916",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "15",
+    bookSignature: "04894",
+    year: 1916,
+    scan: 164,
+    page: 163,
+    whatSi: "umrla Marija JAKLIČ [~ cf. korpus-JAKLIČ-h59-1913-×2-mreža!], poštnikova žena [~ VLM-'posoštnikova'-ZAVRJENA — KURRENT-pošt-jasna!], 54 LET (28. 3., pokop 29. 3.) — Mrtvoud [★★★ 1.-'MRTVOUD'-(udar/kapi)-VZROK-LINIJE @×2.0-jasno!]; previden (prev.); Lambinus Bitnar; ★ h15 = 4. mrliški vpis (1886 + 1897 + 1909!) + roj. 28.12.1861 + 'marcij'-mesec-forma + 2.-GRIBLJE-1916",
+    whatEn: "died Marija JAKLIČ [~ cf. the corpus-JAKLIČ-h59-1913-×2-network!], a postman's wife [~ the VLM-'posoštnikova'-REJECTED — the KURRENT-pošt-clear!], 54 YEARS (Mar 28, buried Mar 29) — Mrtvoud [★★★ the 1st-'MRTVOUD'-(stroke/apoplexy)-CAUSE-OF-THE-LINE @×2.0-clear!]; previden (prev.); Lambinus Bitnar; ★ the h15 = the 4th death entry (1886 + 1897 + 1909!) + b. Dec 28, 1861 + the 'marcij'-month-form + the 2nd-GRIBLJE-1916",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "21",
+    bookSignature: "04894",
+    year: 1916,
+    scan: 166,
+    page: 165,
+    whatSi: "umrl Julij ČERNIČ [~ cf. P181-correxit-z68-'Dejnar'→'Černič' — priimek-3.-×-linije!], posest. otrok, 2 LETI (24. 6., pokop 25. 6.) — Dobrci [★★★ 1.-'DOBRCI'-VZROK-LINIJE — ×4-1916-MASOVNI (cf. VLM-'dobrici'-variante-z40/z45/z53!)]; previden (—); Lambinus Bitnar; ★ h21 = 8. mrliški vpis (1887–1912-×7!) + roj. 8.8.1913 + sosed-z31-Krivoglavice + 3.-GRIBLJE-1916",
+    whatEn: "died Julij ČERNIČ [~ cf. the P181-correxit-z68-'Dejnar'→'Černič' — the surname-3rd-×-of-the-line!], a farmer's child, 2 YEARS (Jun 24, buried Jun 25) — Dobrci [★★★ the 1st-'DOBRCI'-CAUSE-OF-THE-LINE — ×4-1916-MASSIVE (cf. the VLM-'dobrici'-variants-z40/z45/z53!)]; previden (—); Lambinus Bitnar; ★ the h21 = the 8th death entry (1887–1912-×7!) + b. Aug 8, 1913 + the neighbor-z31-Krivoglavice + the 3rd-GRIBLJE-1916",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "88",
+    bookSignature: "04894",
+    year: 1916,
+    scan: 167,
+    page: 166,
+    whatSi: "umrla Ana BRINC [★★ BRINEC-črkovanje-varianta — cf. h88-1915-'Ivana-BRINEC'-P180-LEAD + 'Brinuc'-zmeda-P181-ZAVRJENA!], posestnikova žena, 44 LET (1. 7., pokop 3. 7.) — Prehlaženje; previden (prev.); Lambinus Bitnar; ★★ ROJ.-POPRAVEK: VLM-'22.12.1859'→×5-ZOOM-'22.12.871'=1871-OKRAJŠAVA-Z-TILDO (starost-44-SKLADNA!) + ★ h88 = 3. mrliški vpis (1886 + 1915!) + ★★★ h88-×2-1916 = MATER-IN-DOTKA-V-8-DNEH (Ana-1.7. + Neža-9./11.7. — DVOJNA-TRAGEDIJA-#7-linije cf. #5-SESTRI-h90-1915!) + 4.-GRIBLJE-1916",
+    whatEn: "died Ana BRINC [★★ the BRINEC-spelling-variant — cf. h88-1915-'Ivana-BRINEC'-the-P180-LEAD + the 'Brinuc'-confusion-P181-REJECTED!], a farmer's wife, 44 YEARS (Jul 1, buried Jul 3) — Prehlaženje; previden (prev.); Lambinus Bitnar; ★★ the BIRTH-YEAR-CORRECTION: the VLM-'Dec 22, 1859'→the ×5-ZOOM-'Dec 22, 871'=1871-THE-ABBREVIATION-WITH-A-TILDE (the age-44-CONSISTENT!) + ★ the h88 = the 3rd death entry (1886 + 1915!) + ★★★ the h88-×2-1916 = MOTHER-AND-DAUGHTER-IN-8-DAYS (Ana-Jul-1 + Neža-Jul-9/11 — the DOUBLE-TRAGEDY-#7 cf. #5-the-SISTERS-h90-1915!) + the 4th-GRIBLJE-1916",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "35",
+    bookSignature: "04894",
+    year: 1916,
+    scan: 168,
+    page: 167,
+    whatSi: "umrla Antonija KURE [~ cf. korpus-KURE-h62-1906-×2-leksikon!], posestnikov otrok, 11 MESECEV (2. 7., pokop 4. 7.) — Dobrici [2.-MASOVNI-1916!]; previden (—); Lambinus Bitnar; ★ vas-'Grm' = Griblje-kratka-forma-3.-× (cf. z2-h28!) + h35 = 11. mrliški vpis (1887–1910-×10 = DOLGA-HIŠA-linije!) + roj. 28.7.1905 + 5.-GRIBLJE-1916",
+    whatEn: "died Antonija KURE [~ cf. the corpus-KURE-h62-1906-×2-lexicon!], a farmer's child, 11 MONTHS (Jul 2, buried Jul 4) — Dobrici [the 2nd-MASSIVE-1916!]; previden (—); Lambinus Bitnar; ★ the village-'Grm' = the Griblje-short-form-3rd-× (cf. z2-h28!) + the h35 = the 11th death entry (1887–1910-×10 = the LONG-HOUSE-of-the-line!) + b. Jul 28, 1905 + the 5th-GRIBLJE-1916",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "88",
+    bookSignature: "04894",
+    year: 1916,
+    scan: 168,
+    page: 167,
+    whatSi: "umrla Neža BRINC [★★ BRINEC-varianta-2.-×-1916 (cf. z38-Ana!)], posestnikov otrok, 19 DNI (9. 7., pokop 11. 7.) — Mladostna slabost; previden (—); Lambinus Bitnar; roj. 21.6.1916 + ★★★ h88-×2-V-8-DNEH = MATER (Ana-44-l-1.7. — h88-3.-vpis!) + DOTKA (Neža-19-dni-9./11.7. — h88-4.-vpis!) = DVOJNA-TRAGEDIJA-#7 (cf. #5-SESTRI-h90-1915!) + BRINEC-mreža-×3-v-2-letih + 6.-GRIBLJE-1916",
+    whatEn: "died Neža BRINC [★★ the BRINEC-variant-2nd-×-1916 (cf. z38-Ana!)], a farmer's child, 19 DAYS (Jul 9, buried Jul 11) — Mladostna slabost; previden (—); Lambinus Bitnar; b. Jun 21, 1916 + ★★★ the h88-×2-IN-8-DAYS = the MOTHER (Ana-44-y-Jul-1 — the h88-3rd-entry!) + the DAUGHTER (Neža-19-days-Jul-9/11 — the h88-4th-entry!) = the DOUBLE-TRAGEDY-#7 (cf. #5-the-SISTERS-h90-1915!) + the BRINEC-network-×3-in-2-years + the 6th-GRIBLJE-1916",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "31",
+    bookSignature: "04894",
+    year: 1916,
+    scan: 170,
+    page: 169,
+    whatSi: "umrla Vida PAPIČ [★★★ LEAD-KOREKCIJA-'Tapič'→PAPIČ — GLIF-TEST: ×5.0-glyph-IDENTIČEN-s153-z13-'Franc-PAPIČ'-(P181-potrjen!) + KORPUS-h31 = PAPIČ/Straus-hiša (krstna-s53-Martin-Papič-×-Marjeta-Straus-'Kurrent-P/T'-zmeda-dokumentirana!) — 1.×-MRLIŠKI-PAPIČ-v-korpusu!], posestnikov otrok, 3 LETA (16. 8., pokop 18. 8.) — Hiravost [~ cf. P181-z46-1.× — 2.-×-linije!]; previden (—); Lambinus Bitnar; roj. 13.2.1913 + ★ h31 = 8. mrliški vpis (1886–1911-×7!) + 7.-GRIBLJE-1916",
+    whatEn: "died Vida PAPIČ [★★★ the LEAD-CORRECTION-'Tapič'→PAPIČ — the GLYPH-TEST: the ×5.0-glyph-IDENTICAL-to-s153-z13-'Franc-PAPIČ'-(the P181-confirmed!) + the CORPUS-h31 = the PAPIČ/Straus-house (the krstna-s53-Martin-Papič-×-Marjeta-Straus-'Kurrent-P/T'-confusion-documented!) — the 1st-×-DEATH-REGISTER-PAPIČ-in-the-corpus!], a farmer's child, 3 YEARS (Aug 16, buried Aug 18) — Hiravost [~ cf. the P181-z46-1st-× — the 2nd-×-of-the-line!]; previden (—); Lambinus Bitnar; b. Feb 13, 1913 + ★ the h31 = the 8th death entry (1886–1911-×7!) + the 7th-GRIBLJE-1916",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "9",
+    bookSignature: "04894",
+    year: 1916,
+    scan: 172,
+    page: 171,
+    whatSi: "umrla Meža JAKOFČIČ [~ cf. korpus-h9-1891-'Peter-Jakofčič'-1.-mrliški + P159-NUCLEUS!], kmeč. posest. zak. hči, 1 LETO (13. 12., pokop 15. 12.) — Davica [★★★ 1.-'DAVICA'-(difterija)-VZROK-LINIJE!]; previden (—); Lambinus Bitnar; roj. 15.11.1915 + ★ h9 = 4. mrliški vpis (1891 + 1892 + 1896!) + 8.-GRIBLJE-1916",
+    whatEn: "died Meža JAKOFČIČ [~ cf. the corpus-h9-1891-'Peter-Jakofčič'-the-1st-death-entry + the P159-NUCLEUS!], a farmer-tenant's lawful daughter, 1 YEAR (Dec 13, buried Dec 15) — Davica [★★★ the 1st-'DAVICA'-(diphtheria)-CAUSE-OF-THE-LINE!]; previden (—); Lambinus Bitnar; b. Nov 15, 1915 + ★ the h9 = the 4th death entry (1891 + 1892 + 1896!) + the 8th-GRIBLJE-1916",
+    status: "DOCUMENTED",
+  },
+  {
+    houseNo: "37",
+    bookSignature: "04894",
+    year: 1916,
+    scan: 172,
+    page: 171,
+    whatSi: "umrl Marko ŠTUBLJAR [★★★ vpisan-MRTVOROJENO-DETETO-pod-očetovim-imenu — opomba-'mrtvoroj. dete, še živo in utero v sili krščeno' = IN-UTERO-NUJNI-KRST-V-MRLIŠKI-1.× (2.-SIGNAL — cf. KRSTNA-04105-s290-'krščena-v-sili-in-utero-m.'-PRVI-TAK-SIGNAL!) + ★★★ CROSS-REF-ČEZ-KNJIGI: krstna-s290-oče-'Hubljan?'-[~]-KOREKCIJA→ŠTUBLJAR-prek-mrliške-×2.0-CROP (1.-ČEZ-KNJIGI-IME-KOREKCIJA!) + cf. korpus-TROJNA-h37-h27-h15-P145-STUBLJAR!], posestnika sin [~], MRTVOROJENO (roj. 29. 12., pokop 31. 12.); previden (—); Lambinus Bitnar; ★ h37 = 4. mrliški vpis (1890 + 1892 + 1895!) + 9.-GRIBLJE-1916-ZAKLJUČEK + 2.-MRTVOROJENO-1916 (cf. z43-Krasinec-Cajnar-dvojček!) + 3 + 7-hišna (37)",
+    whatEn: "died Marko ŠTUBLJAR [★★★ entered-as-THE-STILLBORN-CHILD-under-the-father's-name — the note-'stillborn child, still alive in utero baptized in emergency' = the IN-UTERO-EMERGENCY-BAPTISM-IN-THE-DEATH-REGISTER-1st-× (the 2nd-SIGNAL — cf. the KRSTNA-04105-s290-'baptized-in-emergency-in-utero-m.'-THE-FIRST!) + ★★★ the CROSS-BOOK-REF: the krstna-s290-father-'Hubljan?'-[~]-CORRECTION→ŠTUBLJAR-via-the-death-register-×2.0-CROP (the 1st-CROSS-BOOK-NAME-CORRECTION!) + cf. the corpus-TROJNA-h37-h27-h15-the-P145-STUBLJAR!], a farmer's son [~], STILLBORN (b. Dec 29, buried Dec 31); previden (—); Lambinus Bitnar; ★ the h37 = the 4th death entry (1890 + 1892 + 1895!) + the 9th-GRIBLJE-1916-CLOSER + the 2nd-STILLBORN-1916 (cf. z43-the-Krasinec-Cajnar-twin!) + the 3 + 7-house-number (37)",
+    status: "DOCUMENTED",
+  },
   // ——— P80 razširitev: POROČNA KNJIGA 04455 1873–1922 — okvir 1886 (skeni 61–65 == Pag. 60–64, vpisi 1–24; Pag. = sken − 1 v razponu 61–66) ———
   // P115 (faza 2) RE-READ: 8 blokov popravljenih na podlagi max-zoom branja (h36→56, h63→65, h15→16, h25→Priložje
   // + priimki Pegdirec/Klepec/Požek/Tomec/Straus/Križan) — evidence: research/issue17/parish-marriage-1886.json

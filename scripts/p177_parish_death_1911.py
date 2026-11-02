@@ -28,8 +28,8 @@ EXPECTED_ANOMALIES = 12
 EXPECTED_CROSSCHECKS = 5
 GRIBLJE_HOUSES = "14,14,19,20,24,31,34,41,42,43,46,48,57"
 GRIBLJE_ZAPS = [13, 14, 26, 27, 31, 42, 46, 47, 48, 51, 54, 55, 56]
-VITALS_TOTAL = 1091             # 1032 + 13!
-BLOKI_04894 = 392               # 333 + 13!
+VITALS_TOTAL = 1100             # 1091 + 9! (P182)
+BLOKI_04894 = 401               # 392 + 9! (P182)
 P80_HOUSES = 92                 # NESPREMENJENO
 KORPUS_HOUSES = 93              # NESPREMENJENO
 NEW_SCANS = [133, 134, 135, 136]
@@ -165,7 +165,7 @@ def main():
     check("I6d bloki 1911: skeni 130–135 + stran == sken − 1",
           all(v["scan"] and 130 <= v["scan"] <= 135 and v["page"] == v["scan"] - 1 for v in d1911), "")
     check("I6d2 bloki 1913+ ne obstajajo (P178-lead!; P176-P177 = 1910+1911 sedaj v korpusu!)",
-          all(v["year"] < 1916 for v in d04894), "")
+          all(v["year"] < 1917 for v in d04894), "")
     houses_all = {v["houseNo"] for v in vit if v["houseNo"].isdigit()}
     check("I6g korpus = 93 hiš (NESPREMENJENO — vseh-12-hiš-ŽE-v-korpusu!)",
           len(houses_all) == KORPUS_HOUSES, str(len(houses_all)))
@@ -233,7 +233,7 @@ def main():
     # ---------- I10: qa-parish + pin-kaskada ----------
     check("I10a qa-p177 = 178. kontrola", "qa-p177-parish-death-1911" in qa, "")
     check("I10b qa-pini 1045/346/92",
-          qa.count("!== 1091") >= 91 and qa.count("!== 392") >= 25 and qa.count("p80Houses.size !== 93") >= 24,
+          qa.count("!== 1100") >= 91 and qa.count("!== 401") >= 25 and qa.count("p80Houses.size !== 93") >= 24,
           f"{qa.count('!== 1045')}/{qa.count('!== 346')}/{qa.count('p80Houses.size !== 92')}")
     check("I10c qa guardi-1913 (POSODABLJENO P178 — 24× + p177Future!)",
           qa.count("(h.year ?? 0) >= 1916") >= 28 and "1916+-mrliški bloki že v korpusu" in qa,
@@ -256,10 +256,10 @@ def main():
 
     # ---------- I12: kaskada ----------
     check("I12a p153–p176 skripte VITALS_TOTAL 1045",
-          all("VITALS_TOTAL = 1091" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
+          all("VITALS_TOTAL = 1100" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
               for i, y in ((153, 1887), (154, 1888), (155, 1889), (156, 1890), (157, 1891), (158, 1892), (159, 1893), (160, 1894), (161, 1895), (162, 1896), (163, 1897), (164, 1898), (165, 1899), (166, 1900), (167, 1901), (168, 1902), (169, 1903), (170, 1904), (171, 1905), (172, 1906), (173, 1907), (174, 1908), (175, 1909), (176, 1910))), "")
     check("I12b p170–p176 skripte BLOKI_04894 346",
-          all("BLOKI_04894 = 392" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
+          all("BLOKI_04894 = 401" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
               for i, y in ((170, 1904), (171, 1905), (172, 1906), (173, 1907), (174, 1908), (175, 1909), (176, 1910))), "")
 
     # ---------- I13 (--live): matricula dostopna ----------
