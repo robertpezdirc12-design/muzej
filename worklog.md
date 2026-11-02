@@ -7156,3 +7156,16 @@ Stage Summary:
 - PUSH: GitHub cf4009c..**ac6d9c6** ✓ + GitLab cf4009c..**ac6d9c6** ✓ (1.-poskus-oba!) — TRILOKACIJA-lokalni==GitHub==GitLab==**ac6d9c6** ✓
 - VERCEL: GitHub-App-avtomatski-deploy → **griblje-museum.vercel.app 200** + **/api/qa = ok:True + 183/183 (qa-p182-parish-death-1916 pass:True) NA PRODUKCIJI!** — produkcija-P182-POTRJENA ✓
 - mrliška linija: **31/39** (1886–1916) — naslednja: **P183 = 1917** (s173-restart-z1–6 + s174-z7–13 ŽE-prebrani: 6-GRIBLJE! z1-'roj.-15.2.1843-2-leti'-NEUSKLADJE-forenzika-LEAD!)
+
+## P183 — MRLIŠKA 1917 (32. polno leto mrliške linije) · 2026-11-03
+
+- T0-PRENOSES: s175–s186-×12 (fetch-direct-hosted-images-OK!)
+- T1-VLM-BRANJE: read_page-7-serij (175+176 / 177 / 178 / 179+180 / 181+182 / 183+184) — 12/12-OK — 1917 = s173-DVOPAGE + s174–s183 (72-vrstic: 6+7+7+7+7+7+7+7+7+7+3!) + s184 = MEJA-1918 (restart + begunci-×2!)
+- T2-PAGINACIJA-MISTERIJ-RAZREŠEN (A9): visual-'Stran'-crops-×6 (s162-'161' + s172-'170' + s174-'172' + s175-'173' + s176-'174' + s173-left-'171') → **'162b'-VSTAVLJEN-LIST-hipoteza** (s164-VLM!) — scan−2-od-s165; s173-DVOPAGE = p171+blank-face; shranjena-konvencija-scan−1-OBDRŽANA (QA-intaktna!)
+- T3-FORENZIKA (kurator-visual-×~20-ODLOČILNI): **7-LEAD-RAZREŠITEV** (z1-roj.-1913-'2-leti'-slapost + z7-GRIŠIČE-h49-EXCLUDED + z11-POŽEK-h77-roj.-KRIŽAN + z24-POŽEK-h21-korpus-×3 + z28-KRALJ-'rojen'→OŽENJEN-'23'→73-SKLADNO + z35-roj.-27.II.916-'1-leto'-SKLADNO + z43-GRIBLJE-'66-let'-SKLADNO + z55-'47'-SKLADNO!) + okrajšave-z-tildo-×13-VSE-SKLADNE + z22-MRTVOROJENO-ISTI-DAN-protokol + z51-'na-porodu'-MATER+OTROK-ISTI-DAN + z34/z61-PAR-KRIŽAN-h3-×2-v-6-MESECIH-#8 + z36/z37-DVOJČKI-#7-roj.-ISTI-DAN + z42-vojak-služba-1.× + z66/z71-BEGUNCI-1.× + z48-MRTVOROJENO-ciganke-#5 + h78-1.-MRLIŠKI-VPIS-KADARKOLI!
+- T4-PARISH.TS: P183-blok-komentar (9-vrstic) + 18-blokov (h9 + h2 + h5 + h62 + h77 + h54 + h14 + h21 + h26 + h3-Peter + h34 + h53 + h41 + h36-'Grm' + h20 + h78 + h3-Katarina + h28-'Grm'!)
+- T5-KASKADA: qa-parish.ts (97× 1100→1118 + 31× 401→419 + 33×-guardi-1917→1918 + p80Death-sporočilo + p85-h41/h77 + p86-h28/h53 + p90-h20 + p91-h9/h14-dovoljenja + **qa-p183-blok-184.-kontrola!** + paren-lekcija: inner-paren-group-rabi-4-closes!) + **stale-sanacija-p153–p182-×32-skript + p80-pin-1118 + p182-skripta-update** (py_compile-33/33-OK!)
+- DOKAZ: research/issue17/parish-death-1917.json (**72 entries = 18-Griblje + 54-ne! 1-excluded-Grišiče + 17-anomalij + 8-crossChecks + honesty-10 + P184-lead**) + notes
+- SKRIPTE: scripts/p183_parish_death_1917.py (**36/36 --live!**) + p182-update-37/37 + p80-PASS
+- VERIFIKACIJA: runQA **184/184 ok:True** · tsc 0 · lint 0 · korpus po P183: **1118/198+419/191/93(p80)·93(korpus)** — PT-luknja 18
+- P184-LEAD: mrliška 1918 (s184-restart-z1–6 ŽE-prebrani: **z6-h49-Štravs-Barbara-82-l-Griblje** + begunki-×2-Gradac-Čepovan/Volenje-Vrtojbe!; meja-1918/19 [?])
