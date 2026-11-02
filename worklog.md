@@ -7205,3 +7205,22 @@ Stage Summary:
 - PUSH: GitHub 349084b..**5ee1b91** ✓ + GitLab 349084b..**5ee1b91** ✓ — TRILOKACIJA-lokalni==GitHub==GitLab==**5ee1b91** ✓
 - VERCEL: **griblje-museum.vercel.app 200** + **/api/qa = ok:True + 185/185 (qa-p184-parish-death-1918 pass:True) NA PRODUKCIJI!** — produkcija-P184-POTRJENA ✓
 - mrliška linija: **33/39** (1886–1918) — naslednja: **P185 = 1919** (s203-'Anno-1919'-restart-z1–6 + s204-z7–12 ŽE-prebrani: z5-h62-Kure-Marija-36-l-Griblje + z6-'Tapič'-cf.-GLIF-TEST!; meja-1919/20 [?])
+
+## P185 · 2026-11-03
+
+- T0-PRENOSES: s203–s232-×30 (inventory-256-b64-dekodiranje-hosted-URL-jev!)
+- T1-VLM-BRANJE: read_page-×4-serije (s203–s214) — 1919 = s203–s212 (~58-vrstic = KRATEK-LETO!) + s212-DNO-MEJA-'19 20'-restart + s213-'Leto-1910'-glava-napaka (1920-P186-lead!)
+- T2-KURATOR-VISUAL-FORENZIKA (×~20-cropov-×2.2–×7): **z5-'Krive'→KURE-roj.-POŽEK-LEAD-POTRJEN** (h62-×5-plex-1917-otok-iste-MARIJE!) + **z6-'Tapič'→PAPIČ-GLYPH-COMPARISON-2.×** (identičen-cf.-P182-z56! vas-GRIŠIČE-'911'=1911-'9-J'-5.-LETO!) + **z44-'Cesther'→CVITKOVIČ-KORPUS-KOREKCIJA** (h12-BRATA-cf.-1918-Anton!) + **z52-'Ptičar'→ŠTRAUS** (ŠEGINA-roj.!) + **z55-'Markoacu'→'vdova-po-†-Matiju'-BRINAR-1.×-priimek** (roj.-Jakofčič!) + **s206-numeracija-'89-94'→'19-24'** (@×3.0-marginalna!) + s205-'z12'→z13 + z57-IZVEN-VRSTNEGA-RED (1./2.-dec-po-z56-4./5.!) + z58-ČEZMEJNI-POKOP (†-31.12.1919/pokop-2.1.1920!) + z25-'roj.-1841'-'68-let'-MATEMATIČNA-NESKLADJE (→78! verjetno-1851!) + 'Rauq/Ropar/Lopar/Hoper'→LOGAR-k-g-glif + September-1919-1-vpis ('sept.'-marker — INVERZNO-cf.-1916-0!) + GRM-×2-v-2-DNEH + opomba-'Podzemelj-rokhveno[?]'-×~12-ne-dekodirana (+'ališči'=pokopališči!)
+- T3-DUHOVNIKI: **Gregor-Cerar-župnik-#23-NOVI** (feb–dec-dominanta-×~30 — RUPAR-odsoten!) + Jos.-Logar-kapl.-NOV (jan–dec) + Učakar-žup-jan-×1 + Kuhinar[~]-maj-×1
+- T4-PARISH.TS: P185-blok-komentar + 9-blokov (h62-KURE + h45-MUC + h82-VREBER + **h84-CERŠINER-NOVA-HIŠA-1.-MRLIŠKI-VPIS-KADARKOLI-34.-PT-kandidat!** + h12-DRAGOS-CVITKOVIČ + h33-Grm-TILAK + h26-Grm-MOLEK + h48-ŠTRAUS + h24-BRINAR!)
+- T5-KASKADA: qa-parish.ts (99×-1145→1154 + 33×-446→455 + guardi-1920-×36 + p80Houses-94-×29 + p80Death-sporočilo + **p87-h12/p91-h45/p93-h48-dovoljenja-1919** + qa-p185-blok-186.-kontrola + **p152Boom-REVERT-lekcija** ('>=1919'-replace-all-prešel-boom-filtr-1919–1922! + 4-historical-en-sporočila-revert)) + p80-skripta (vitals-1154 + hiše-93→**94**) + stale-sanacija-p153–p184-×32 (VITALS_TOTAL-1154 + BLOKI-455 + guardi-1920 + I6d-'<1920' — py_compile-32/32!) + REGRESIJA-p184-verifikator-36/36-PASS!
+- DOKAZ: research/issue17/parish-death-1919.json (**58 entries = 9-Griblje + 49-ne! 0-excluded + 14-anomalij + 8-crossChecks + honesty-10 + P186-lead**) + notes
+- SKRIPTE: scripts/p185_parish_death_1919.py (**43/43 + --live 46/46!**)
+- VERIFIKACIJA: runQA **186/186 ok:True** · tsc 0 · lint 0 · korpus po P185: **1154/198+455/191/94(p80)·93(korpus)** — PT-luknja 18
+- P186-LEAD: mrliška 1920 (s212-z1-Marko-Krizan[~]-Griblje-h86-74-l-1./3.-jan-1920 + s213-'Leto-1910'-glava-napaka-za-1920!-z2-Vranoviče-h14-Jakša-Jožef-7-l-jetika-'Kloster'-pokop + s213–s232-PRENESANI-30-skenov!; meja-1920/21 [?])
+
+## P185 deploy-status · 2026-11-03
+
+- PUSH: GitHub eed91a2..**3f04ffb** ✓ + GitLab eed91a2..**3f04ffb** ✓ — TRILOKACIJA-lokalni==GitHub==GitLab==**3f04ffb** ✓
+- VERCEL: **griblje-museum.vercel.app 200** + **/api/qa = ok:True + 186/186 (qa-p185-parish-death-1919 pass:True) NA PRODUKCIJI!** — produkcija-P185-POTRJENA ✓
+- mrliška linija: **34/39** (1886–1919) — naslednja: **P186 = 1920** (s212-z1 + s213-z2–z8 + s214-z8–z13 ŽE-prebrani; s213–s232-PRENESANI; meja-1920/21 [?])
