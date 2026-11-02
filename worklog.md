@@ -7121,3 +7121,9 @@ Stage Summary:
 - mrliška linija **29/39** (1886–1914) — P181-LEAD: 1915 (s152-z1–10 + s153-z11–18-ŽE-prebrani: 1-GRIBLJE — s153-z17-h88-Ivana-BRINEC-1-mes!; podpisi-'Vlčar-o.F.'-[?]-NOVI?; meja-1915/16 [?])
 - 3-LEAD-KOREKCIJE (VOTLOVEC→JAKOFČIČ + PEKOVEC→PEZDIREC-4.-leto + FINK→FIŠLAK) + UTONITE-×2-REKORD + TUJ-ŽUPANIJA-VPIS-1.× (Preloka!) + NOVI-DUHOVNIK-#19-NEMANIČ + ANZELM-POLÁK-#18-POTRJEN + PALETA-SEBE-LEKCIJA (metodološka-lekcija!) + GLAVE-NAPAKE-×2 ('18915'!) + MLINAR-FORMULA-1.× (TKALČIĆ-h40!)
 
+## P180 — deploy-status (2026-11-02)
+
+- PUSH: GitHub **857e66b..7c120e6** (nov-PAT-ghp_9YrV…-200-validiran) + GitLab **857e66b..7c120e6** (WAF-403-×2-ob-prvih-poskusih → retry-USPEL — znani-vzorec!)
+- TRILOKACIJA: lokalni == GitHub (API-commits/main) == **7c120e6** ✓; GitLab == 7c120e6 (git-potrditev)
+- VERCEL: GitHub-App-avtomatski-deploy → **griblje-museum.vercel.app 200** + **/api/qa = ok:True + qa-p180-parish-death-1914 pass:True NA PRODUKCIJI!**
+- mrliška linija: **29/39** (1886–1914) — naslednja: **P181 = 1915** (s152-z1–10 + s153-z11–18 ŽE-prebrani: 1-GRIBLJE — s153-z17-h88-Ivana-BRINEC-1-mes!; podpisi-'Vlčar-o.F.'-[?]-NOVI?; meja 1915/16 [?])
