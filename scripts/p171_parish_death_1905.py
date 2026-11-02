@@ -30,8 +30,8 @@ EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 5
 GRIBLJE_HOUSES = "2,18,21,25,27,31,32,35,42,59,63,64,65,81"
 GRIBLJE_ZAPS = [1, 16, 19, 20, 24, 26, 29, 39, 40, 44, 47, 49, 50, 52, 59, 61]
-VITALS_TOTAL = 1082             # 1020 + 12! (P176)
-BLOKI_04894 = 383               # 321 + 12! (P176)
+VITALS_TOTAL = 1091             # 1020 + 12! (P176)
+BLOKI_04894 = 392               # 321 + 12! (P176)
 P80_HOUSES = 92                  # NESPREMENJENO (vseh-14-ŽE-v-p80!)
 KORPUS_HOUSES = 93               # NESPREMENJENO
 NEW_SCANS = [100, 101, 102, 103, 104]   # s99-reuse (diag iz P170 + VLM-datumi!)
@@ -186,10 +186,10 @@ def main():
     check("I6d bloki 1905: skeni 99–104 + stran == sken − 1",
           all(v["scan"] and 99 <= v["scan"] <= 104 and v["page"] == v["scan"] - 1 for v in d1905), "")
     check("I6d2 bloki 1908+ ne obstajajo (P174-lead!; P171 = 1905 sedaj v korpusu!)",
-          all(v["year"] < 1915 for v in d04894), "")
+          all(v["year"] < 1916 for v in d04894), "")
     p80 = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
     check("I6f p80-skripta pini 966 + 91 + gap-18 (vitals-P171-kaskada!)",
-          "len(vitals) == 1082" in p80 and "len(houses) == 93" in p80 and "len(gap) == 18" in p80, "")
+          "len(vitals) == 1091" in p80 and "len(houses) == 93" in p80 and "len(gap) == 18" in p80, "")
     houses_all = {v["houseNo"] for v in vit if v["houseNo"].isdigit()}
     check("I6g korpus = 93 hiš (NESPREMENJENO — vseh-14-hiš-ŽE-v-korpusu!)",
           len(houses_all) == KORPUS_HOUSES, str(len(houses_all)))
@@ -259,10 +259,10 @@ def main():
     qa = open(QA_TS, encoding="utf-8").read()
     check("I10a qa-p171 = 172. kontrola", "qa-p171-parish-death-1905" in qa, "")
     check("I10b qa-pini 966/267/91",
-          qa.count("!== 1082") >= 80 and qa.count("!== 383") >= 18 and qa.count("p80Houses.size !== 93") >= 18,
+          qa.count("!== 1091") >= 80 and qa.count("!== 392") >= 18 and qa.count("p80Houses.size !== 93") >= 18,
           f"{qa.count('!== 976')}/{qa.count('!== 277')}/{qa.count('p80Houses.size !== 92')}")
-    check("I10c qa guard 1908 (bloki 1908+ ne!)",
-          "1915+-mrliški bloki že v korpusu" in qa and "(h.year ?? 0) >= 1915" in qa, "")
+    check("I10c qa guard 1916 (bloki 1916+ ne!)",
+          "1916+-mrliški bloki že v korpusu" in qa and "(h.year ?? 0) >= 1916" in qa, "")
     check("I10d P80_PT_GAP doc-list 15 (NESPREMENJENO!)",
           '"49", "51"' in qa and "p80Gap.length !== 15" in qa, "")
     check("I10e stale-guardi → 1908 (20× qa)",
@@ -281,15 +281,15 @@ def main():
 
     # ---------- I12: kaskada ----------
     check("I12a p153–p170 skripte VITALS_TOTAL 976",
-          all("VITALS_TOTAL = 1082" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
+          all("VITALS_TOTAL = 1091" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
               for i, y in ((153, 1887), (154, 1888), (155, 1889), (156, 1890), (157, 1891), (158, 1892), (159, 1893), (160, 1894), (161, 1895), (162, 1896), (163, 1897), (164, 1898), (165, 1899), (166, 1900), (167, 1901), (168, 1902), (169, 1903), (170, 1904))), "")
     check("I12b p80-skripta P171-komentar-kaskada (950 → 966-pini!)",
-          "len(vitals) == 1082" in p80 and "P171: 950 → 966" in p80, "")
+          "len(vitals) == 1091" in p80 and "P171: 950 → 966" in p80, "")
     check("I12c stale-guardi → 1908 (20× qa)",
-          all("1915+-mrliški bloki že v korpusu" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
+          all("1916+-mrliški bloki že v korpusu" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
               for i, y in ((155, 1889), (156, 1890), (157, 1891), (158, 1892), (159, 1893), (160, 1894), (161, 1895), (162, 1896), (163, 1897), (164, 1898), (165, 1899), (166, 1900), (167, 1901), (168, 1902), (169, 1903), (170, 1904))), "")
     check("I12d qa-parish.ts bloki 04894 = 277 (P171-kaskada!)",
-          qa.count('04894").length !== 383') >= 15, str(qa.count('04894").length !== 383')))
+          qa.count('04894").length !== 392') >= 15, str(qa.count('04894").length !== 392')))
 
     # ---------- I13 (--live): matricula dostopna ----------
     if live:
