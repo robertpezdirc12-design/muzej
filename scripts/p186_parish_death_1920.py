@@ -1,0 +1,187 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""P186 — MRLIŠKA knjiga 04894, leto 1920 = 35. polno leto mrliške linije (issue #18):
+s212-z1-MEJA-ROW + s213–s220 + s221-z50/z51 == str. 208–214 (stran == sken − 1 —
+160.–166. potrditev!) + 51 vpisov = NAJNIŽJE-LETO-LINIJE (<55-1889!) / 10 GRIBLJE /
+9 hiš (h46-×2!) = 2.-KRATEK-leto-zapored (58→51 — povojna-ekonomija!) + 'kostni-hri'[~]-
+×~8-OTROŠKA-dominanta + ★★★ z51-RAJMER-dojenček-roj.-11.12.1920-†-25.12.1920 = 14-DNI
+(roj./†-v-istem-mesecu-1.×-linije!) + ★★ h14-ISTI-STARŠA-cf.-P183-z22-MRTVOROJENO +
+h46-×2 (Brodarič-dojenček + Milek-vdova) + BRODARIČ-mreža-×4 + MILEK-×2 + ★ z35-Leško-
+1.×-priimek (h60-PT-vez-kandidat!) + ★ z30-Pavlakovič-LINK-cf.-P184-s199-ADMIN-
+'Sprejemica'-Helene-Pavlaković-27.6.1921! + meja 1920/21 = s221-MID ('19 21' + restart-
+z1-MRTVOROJENO-nezakonsko = 27.-POTRDITEV — 2.-leto-na-dnu-strani — kurator-visual!).
+Kumulativ: vitals 1154 → 1164, mrliški bloki 04894 455 → 465, p80 hiše 94-NESPREMENJENO,
+korpus 93-NESPREMENJEN, PT-luknja 18-NESPREMENJENA. Vzorec p185."""
+import json
+import re
+import sys
+import time
+import urllib.request
+import urllib.error
+
+DOKAZ = "research/issue17/parish-death-1920.json"
+BOOK_URL = "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04894/"
+UA = {"User-Agent": "Mozilla/5.0 (compatible; muzej-qa/1.0)"}
+QA_TS = "src/lib/qa-parish.ts"
+PARISH_TS = "src/data/atlas/parish.ts"
+NOTES = "research/issue17/parish-death-1920-notes.md"
+P80 = "scripts/p80_parish_md_books.py"
+
+EXPECTED_ENTRIES = 51
+EXPECTED_EXCLUDED = 0
+EXPECTED_ANOMALIES = 14
+EXPECTED_CROSSCHECKS = 8
+GRIBLJE_HOUSES = "9,14,24,45,46,46,60,70,75,86"
+VITALS_TOTAL = 1164             # 1154 + 10! (P186)
+BLOKI_04894 = 465               # 455 + 10! (P186)
+P80_HOUSES = 94                 # NESPREMENJENO (h60-ŽE-v-42–60-luknja-setu!)
+KORPUS_HOUSES = 93              # NESPREMENJENO
+NEW_SCANS = [212, 213, 214, 215, 216, 217, 218, 219, 220, 221]
+
+results = []
+
+
+def check(name, ok, detail=""):
+    results.append((name, ok, detail))
+
+
+def http_get(url, timeout=30, tries=3):
+    last = None
+    for i in range(tries):
+        try:
+            req = urllib.request.Request(url, headers=UA)
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                return r.status, r.read()
+        except urllib.error.HTTPError as e:
+            if e.code in (403, 429, 502, 503):
+                time.sleep(3 * (i + 1))
+                last = e
+            else:
+                raise
+        except Exception as e:
+            last = e
+            time.sleep(2)
+    raise last
+
+
+def main():
+    live = "--live" in sys.argv
+
+    # ---------- I1: dokaz-JSON ----------
+    d = json.load(open(DOKAZ, encoding="utf-8"))
+    check("I1a status-D1920", d["status"] == "SAMPLE-TRANSCRIPTION-D1920", d["status"])
+    check("I1b knjiga-04894-leto-1920", d["book"] == "04894" and d["year"] == 1920, "")
+    check("I1c 51-vpisov", len(d["entries"]) == EXPECTED_ENTRIES, str(len(d["entries"])))
+    check("I1d 0-excluded", len(d.get("excluded", [])) == EXPECTED_EXCLUDED, str(len(d.get("excluded", []))))
+    check("I1e 14-anomalij", len(d["anomalies"]) == EXPECTED_ANOMALIES, str(len(d["anomalies"])))
+    check("I1f 8-crossChecks", len(d["crossChecks"]) == EXPECTED_CROSSCHECKS, str(len(d["crossChecks"])))
+    check("I1g 10-honesty", len(d["honesty"]) == 10, str(len(d["honesty"])))
+
+    # ---------- I2: okvir (stran == sken − 1; s212–s221; z1–z51) ----------
+    ok_scan = all(e["page"] == e["scan"] - 1 and 212 <= e["scan"] <= 221 for e in d["entries"])
+    check("I2a stran-==-sken-1-s212–s221", ok_scan, "")
+    zaps = [e["zap"] for e in d["entries"]]
+    check("I2b zaporedne-1–51-kompletne", zaps == list(range(1, 52)), str(zaps[:5]) + "…" + str(zaps[-3:]))
+    grib = [e for e in d["entries"] if e["griblje"]]
+    check("I2c 10-Griblje", len(grib) == 10, str(len(grib)))
+    check("I2d hiše-10-Griblje", ",".join(sorted((e["houseNo"] for e in grib), key=int)) == GRIBLJE_HOUSES,
+          ",".join(sorted((e["houseNo"] for e in grib), key=int)))
+
+    # ---------- I3: forenzika-markerji (kurator-visual) ----------
+    def si(zap):
+        return next((e.get("whatSi", "") for e in d["entries"] if e["zap"] == zap), "")
+    check("I3a z1-MEJA-ROW-1920", "MEJA-1920-z1" in si(1), "")
+    check("I3b z51-RAJMER-14-DNI-tragedija", "14-DNI" in si(51) and "11.12.1920" in si(51), "")
+    check("I3c z14-ISTI-STARŠA-cf.-P183-z22", "P183-z22" in si(16), "")
+    check("I3d z7-'Bruhner'-ZAVRJENO→BRINEC", "'Bruhner'-ZAVRJENO" in si(7), "")
+    check("I3e z35-Leško-1.×-priimek-+-'35'-kurator", "1.×-priimek-korpusa?" in si(35) and "'35'" in si(35), "")
+    check("I3f h46-×2-v-1-LETU", "h46-×2-v-1-LETU" in si(18), "")
+    check("I3g z50-kurator-visual-s221", "kurator-visual-s221" in si(50), "")
+
+    # ---------- I4: anomalije-ključi ----------
+    tips = " | ".join(a["tip"] for a in d["anomalies"])
+    for key in ("meja-mid-page", "najnizje-leto-linije", "kostni-hri-dominanta",
+                "dojencek-rojen-v-istem-mesecu", "pavlakovic-link", "civil-podpis",
+                "VLM-numeracija-misread", "mrtvorojeno-1921-lead"):
+        check(f"I4-{key}", key in tips, "")
+
+    # ---------- I5: crossChecks-ključi ----------
+    xids = " ".join(c["id"] for c in d["crossChecks"])
+    check("I5-crossChecks-X1–X8", all(f"X{i}" in xids for i in range(1, 9)), xids)
+
+    # ---------- I6: parish.ts bloki ----------
+    src = open(PARISH_TS, encoding="utf-8").read()
+    b1920 = re.findall(r'houseNo: "(\d+)",\s*bookSignature: "04894",\s*year: 1920,', src)
+    check("I6a parish.ts-10-blokov-1920", len(b1920) == 10, str(len(b1920)))
+    check("I6b hiše-1920-v-parish.ts", ",".join(sorted(b1920, key=int)) == "9,14,24,45,46,46,60,70,75,86",
+          ",".join(sorted(b1920, key=int)))
+    b1921 = re.findall(r'bookSignature: "04894",\s*year: 1921', src)
+    check("I6d 0-blokov-04894-1921 (P187-lead!)", len(b1921) == 0, str(len(b1921)))
+    p80src = open(P80, encoding="utf-8").read()
+    check("I6e p80-skripta pini 1164 + 94 + gap-18",
+          "len(vitals) == 1164" in p80src and "len(houses) == 94" in p80src
+          and "len(gap) == 18" in p80src, "")
+
+    # ---------- I7: qa-parish.ts pini ----------
+    qa = open(QA_TS, encoding="utf-8").read()
+    check("I7a qa-pini 1164 (90×+)", qa.count("!== 1164") >= 90, str(qa.count("!== 1164")))
+    check("I7b qa-pini 465 (15×+)",
+          qa.count('04894").length !== 465') >= 15
+          and "p80Death.length !== 465" in qa, str(qa.count('04894").length !== 465')))
+    check("I7c qa-p186 = 187. kontrola", "qa-p186-parish-death-1920" in qa, "")
+    check("I7d qa guard 1921 (bloki 1921+ ne!)",
+          "1921+-mrliški bloki že v korpusu" in qa and "(h.year ?? 0) >= 1921" in qa, "")
+    check("I7e p80Houses-94-pin", "p80Houses.size !== 94" in qa, "")
+
+    # ---------- I8: stale-sanacija p153–p186 ----------
+    stale = []
+    for y in range(153, 187):
+        f = f"scripts/p{y}_parish_death_{y - 153 + 1887}.py"
+        s = open(f, encoding="utf-8").read()
+        stale.append(all(p in s for p in ("VITALS_TOTAL = 1164", "BLOKI_04894 = 465",
+                                          "1921")))
+    check("I8a p153–p186 skripte VITALS_TOTAL 1164 + BLOKI 465 + guardi 1921",
+          all(stale), f"{stale.count(True)}/34")
+
+    # ---------- I9: notes ----------
+    n = open(NOTES, encoding="utf-8").read()
+    check("I9 notes: NAJNIŽJE-leto + RAJMER-14-dni + Pavlakovič-LINK + s221-meja",
+          "NAJNIŽJE" in n and "RAJMER" in n and "PAVLAKOVIČ" in n and "s221" in n, "")
+
+    # ---------- I10: honesty + P187-lead ----------
+    check("I10a honesty-nižja-zanesljivost", any("nižja-zanesljivost" in h for h in d["honesty"]), "")
+    lp = d.get("leadP187", {})
+    check("I10b P187-lead-1921", lp.get("year") == 1921 and "s221" in lp.get("meja", ""), "")
+
+    # ---------- I11: LIVE (matricula) ----------
+    if live:
+        st, body = http_get(BOOK_URL)
+        check("L1 matricula-04894-stran-200", st == 200, str(st))
+        import base64 as _b64
+        urls = []
+        for mm in re.finditer(r'"(/image/[A-Za-z0-9+/=]+/)"', body.decode("utf-8", "replace")):
+            seg = mm.group(1)[7:-1]
+            try:
+                dec = _b64.b64decode(seg + "=" * (-len(seg) % 4)).decode("utf-8")
+                if dec.startswith("http"):
+                    urls.append(dec)
+            except Exception:
+                pass
+        urls = list(dict.fromkeys(urls))
+        check("L2 inventar-256", len(urls) == 256, str(len(urls)))
+        probes = []
+        for scan_no in (212, 216, 221):
+            st2, img = http_get(urls[scan_no - 1])
+            probes.append(st2 == 200 and img[:2] == b"\xff\xd8")
+        check("L3 JPEG-probe-s212/s216/s221", all(probes), str(probes))
+
+    ok = sum(1 for _, o, _ in results if o)
+    print(f"p186: {ok}/{len(results)} {'PASS' if ok == len(results) else 'FAIL'}")
+    for name, o, det in results:
+        if not o:
+            print(f"  FAIL: {name} {det}")
+    return 0 if ok == len(results) else 1
+
+
+if __name__ == "__main__":
+    sys.exit(main())

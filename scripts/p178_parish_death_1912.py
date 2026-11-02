@@ -28,8 +28,8 @@ EXPECTED_ENTRIES = 77   # 18 Griblje + 59 ne-Griblje
 EXPECTED_EXCLUDED = 1
 GRIBLJE_HOUSES = "11,16,21,26,29,33,34,39,42,42,57,68,72,78,79,87,91,91"
 GRIBLJE_ZAPS = [1, 10, 20, 24, 32, 33, 35, 36, 39, 45, 47, 60, 61, 62, 64, 66, 71, 74]
-VITALS_TOTAL = 1154             # 1118 + 27! (P184)
-BLOKI_04894 = 455               # 419 + 27! (P184)
+VITALS_TOTAL = 1164             # 1118 + 27! (P184)
+BLOKI_04894 = 465               # 419 + 27! (P184)
 KORPUS_HOUSES = 93              # NESPREMENJENO
 NEW_SCANS = [137, 138, 139, 140, 141]
 
@@ -163,7 +163,7 @@ def main():
     check("I6d bloki 1912: skeni 135–141 + stran == sken − 1",
           all(v["scan"] and 135 <= v["scan"] <= 141 and v["page"] == v["scan"] - 1 for v in d1912), "")
     check("I6d2 bloki 1914+ ne obstajajo (P179-lead!; P177-P178 = 1911+1912 sedaj v korpusu!)",
-          all(v["year"] < 1920 for v in d04894), "")
+          all(v["year"] < 1921 for v in d04894), "")
     houses_all = {v["houseNo"] for v in vit if v["houseNo"].isdigit()}
     check("I6g korpus = 93 hiš (NESPREMENJENO — h78/h79-ŽE-v-korpusu!)",
           len(houses_all) == KORPUS_HOUSES, str(len(houses_all)))
@@ -193,7 +193,7 @@ def main():
     # ---------- I8: qa-parish.ts ----------
     check("I8a qa-p178 obstaja (179. kontrola)", "qa-p178-parish-death-1912" in qa, "")
     check("I8b qa-p178 hiše-lista", '"11,16,21,26,29,33,34,39,42,42,57,68,72,78,79,87,91,91"' in qa, "")
-    check("I8c vitals-checki 1077 (>= 93)", qa.count("!== 1154") >= 93, str(qa.count("!== 1154")))
+    check("I8c vitals-checki 1077 (>= 93)", qa.count("!== 1164") >= 93, str(qa.count("!== 1164")))
     check("I8d bloki-checki 378 (>= 27)", qa.count("!== 446") >= 27, str(qa.count("!== 446")))
     check("I8e p80-checki 93 (>= 25)", qa.count("p80Houses.size !== 93") >= 24, str(qa.count("p80Houses.size !== 93")))
     check("I8f guardi-1915 (>= 28)", qa.count("(h.year ?? 0) >= 1916") >= 28, str(qa.count("(h.year ?? 0) >= 1916")))
