@@ -7182,3 +7182,20 @@ Stage Summary:
 - ★ GITHUB-PAT-401-UNAUTHORIZED (delal-ob-P182/P183-pushih-ac6d9c6/99d124c-✓-vmes-rotiran/razveljavljen!) — potrebuj-fresh-PAT-za-origin-push + Vercel-sync P184-lead-commita (GitLab-mirroring-GitHub-NE-v-smeri-GitHub!)
 - STANJE-FAZ: P182 ✓-PRODUKCIJA · P183 ✓-PRODUKCIJA · **P184 = 1918 PREBRAN-DO-93%** (s184–s203 + ADMIN-s199/s200-RAZREŠITEV-'starem-pokopališču'! + STORNO-#2 + ŠPANSKA-GRIPA-×~20 + RUPAR-kaplan-novi-duhovnik + ~29-GRIBLJE-candidatov-REKORD!) — forenzika-×10 + dokaz-JSON + insert + QA = NASLEDNJA-FAZA
 - mrliška-linija: **32/39 zaključenih + 1918-prebran** — do-konca-knjige-ostane: 1918-finalizacija + 1919 + 1920 + 1921 + 1922 + 1923 + 1924 (6-let!)
+
+## P184 — MRLIŠKA 1918 (33. polno leto mrliške linije) · 2026-11-03
+
+- GITHUB-PAT-OBNOVLJEN (nov-PAT-API-200!) → push-bb2b49c..349084b ✓ — TRILOKACIJA-OBNOVLJENA!
+- T0-PRENOSES: s187–s206-×20
+- T1-VLM-BRANJE: read_page-×10-serij (s184–s203) — 1918 = s184–s202 (~103-vrstic!) + s199-ADMIN-0-vnosov + s200-SMRTNI-LIST-INSERT + s203-'Anno-1919'-MEJA!
+- T2-s199/s200-RAZREŠITEV: 'Spremnica-za-mrljča'-premestitev-ostankov-STARÉGA-pokopališča-Gradac→novo (1919/20-Dr.-Gregorin!) = 'starem-pokopališču'-'staro-v-Podzemlju'-×~25-OPOMB-RAZREŠENIH!
+- T3-FORENZIKA (kurator-visual-×~28): **9-LEAD-RAZREŠITEV** (z13-Žemelj-MUC + z33-GRIŠIČE-Tapič + z39-BOGINJA-VAS-Kralj-EXCLUDED-×3! + z36-'Tuše'→KURE + z65-'Elna-Vegina'→ŠEGINA + z75-'vdova'→OTROK + z83-'Juve-Draguš'→JURE-DRAGOS + z94/z96-'Tožek/Toček'→POŽEK + z9-'Starijar'→STANJEL + z45-vdova-po-Markotu + z35-roj.-9.8-'6-dni'-SKLADNO!) + STORNO-#2-z34 (datumi-popravljeni-nato-prečrtani-@×3.0!) + z34-mesec-'avgust'-meja!
+- T4-ŠPANSKA-GRIPA: '(španka)'-×~40-okt–dec + 'Španska-bolezen'-FULL-FORM-z102-1.×! — 103-vpisov-REKORD!
+- T5-POŽEK-družina-×5 (z80/z82/z85/z91/z94/z96): Jurij-×2-poroki (Križan-†→Veselič-1907) + DVOJNI-TRAGEDIJI-#10 (h6-BRATA-3-dni!) + #11 (h58-MATER+HČER-13-dni!)
+- T6-RUPAR-kaplan: 'Jos.-Rupar-kapl.'-×9-nov–dec (Bitnar-odsoten!) — P180-'Rumpf'-zmeda-RAZREŠITEV-kandidat!
+- T7-PARISH.TS: P184-blok-komentar + 27-blokov (h49 + h19 + h12 + h53-Nikolaj + h62-KURE + h22-Štravs + h46-Klobučar-RUPAR + h35-'Grm'-Kure + h30-ŠEGINA + h6-Bara + h53-Jerdivec + h88-OTROK + h26-'Grm'-Molek + h6-Marija + h22-Požek + h58-Neža + h53-Jure + h10-Brinec + h22-Marija + h2-'Grišlje'-Humar + h27-Alojzij + h37-'Grm'-Štefanič + h27-Peter + h58-Katarina + h16-Filak + h74-Kambič + h92-Nečemer!)
+- T8-KASKADA: qa-parish.ts (97× 1118→1145 + 31× 419→446 + 33×-guardi-1918→1919 + p80Death-sporočilo + p85-h30/p86-h53/p87-h12/p88-h46/p90-h37/p92-h10/p94-h22+h49/p96-h19-dovoljenja + **paren-lekcije-×4** (4-close-rfind-bug + un-nest-×5 + programski-balance-pass!) + **qa-p184-blok-185.-kontrola!**) + stale-sanacija-p153–p184-×33-skript + p80-pin-1145 + p183-update-36/36 (py_compile-34/34!)
+- DOKAZ: research/issue17/parish-death-1918.json (**103 entries = 27-Griblje + 76-ne! 3-excluded + 16-anomalij + 8-crossChecks + honesty-10 + P185-lead**) + lead-notes (WIP-prej!)
+- SKRIPTE: scripts/p184_parish_death_1918.py (**39/39 --live!**)
+- VERIFIKACIJA: runQA **185/185 ok:True** · tsc 0 · lint 0 · korpus po P184: **1145/198+446/191/93(p80)·93(korpus)** — PT-luknja 18
+- P185-LEAD: mrliška 1919 (s203-'Anno-1919'-restart-z1–6: z5-h62-Kure-Marija-roj.-'Poriček'?-36-l-jetika-Griblje + z6-'Grišči-h3-Tapič'-cf.-GLIF-TEST!; meja-1919/20 [?])
