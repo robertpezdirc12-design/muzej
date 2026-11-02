@@ -7175,3 +7175,10 @@ Stage Summary:
 - PUSH: GitHub afba92d..**99d124c** ✓ + GitLab afba92d..**99d124c** ✓ — TRILOKACIJA-lokalni==GitHub==GitLab==**99d124c** ✓
 - VERCEL: **griblje-museum.vercel.app 200** + **/api/qa = ok:True + 184/184 (qa-p183-parish-death-1917 pass:True) NA PRODUKCIJI!** — produkcija-P183-POTRJENA ✓
 - mrliška linija: **32/39** (1886–1917) — naslednja: **P184 = 1918** (s184-restart-z1–6 ŽE-prebrani: z6-h49-Štravs-Barbara-82-l-Griblje + begunki-×2-Gradac!)
+
+## P184-lead-status · 2026-11-03
+
+- P184-LEAD-dokaz (parish-death-1918-lead.md) COMMITAN + **GitLab-push bb2b49c..b7e6e04 ✓** — TRILOKACIJA-DELOVNA (GitHub-BLOKADAN!)
+- ★ GITHUB-PAT-401-UNAUTHORIZED (delal-ob-P182/P183-pushih-ac6d9c6/99d124c-✓-vmes-rotiran/razveljavljen!) — potrebuj-fresh-PAT-za-origin-push + Vercel-sync P184-lead-commita (GitLab-mirroring-GitHub-NE-v-smeri-GitHub!)
+- STANJE-FAZ: P182 ✓-PRODUKCIJA · P183 ✓-PRODUKCIJA · **P184 = 1918 PREBRAN-DO-93%** (s184–s203 + ADMIN-s199/s200-RAZREŠITEV-'starem-pokopališču'! + STORNO-#2 + ŠPANSKA-GRIPA-×~20 + RUPAR-kaplan-novi-duhovnik + ~29-GRIBLJE-candidatov-REKORD!) — forenzika-×10 + dokaz-JSON + insert + QA = NASLEDNJA-FAZA
+- mrliška-linija: **32/39 zaključenih + 1918-prebran** — do-konca-knjige-ostane: 1918-finalizacija + 1919 + 1920 + 1921 + 1922 + 1923 + 1924 (6-let!)
