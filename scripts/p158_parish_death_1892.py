@@ -35,7 +35,7 @@ EXPECTED_EXCLUDED = 8
 EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 10
 GRIBLJE_HOUSES = "2,8,9,16,17,20,23,24,36,37,41,43,48,57,58,61,80"
-VITALS_TOTAL = 1219             # 1205 + 14! (P190 = KONEC-KNJIGE!)
+VITALS_TOTAL = 1235             # 1205 + 14! (P190 = KONEC-KNJIGE!)
 BLOKI_04894 = 520               # 506 + 14! (P190 = KONEC-KNJIGE!)
 P80_HOUSES = 86                  # TS-filter: 83 + h98 + h89 + h45! EDINA nova 1893 (+h89/h45 prek mrliške!)
 P80_PY_HOUSES = 86               # python-filter (širši 1897): 84 + h98 + h89!
@@ -281,7 +281,7 @@ def main():
     check("I12 qa-p158 obstaja", "qa-p158-parish-death-1892" in qa, "")
     check("I12b qa-p157 guard 1893 (posodobljeno)", "1916+-mrliški bloki že v korpusu" in qa, "")
     check("I12c qa-pini 866/167/88 (78×+12×+14×) (P163)",
-          qa.count("!== 1219") >= 60 and qa.count("!== 446") >= 12 and qa.count("p80Houses.size !== 93") >= 12,
+          qa.count("!== 1235") >= 60 and qa.count("!== 446") >= 12 and qa.count("p80Houses.size !== 93") >= 12,
           f"{qa.count('!== 837')}/{qa.count('!== 167')}/{qa.count('p80Houses.size !== 87')}")
     readme = open(README, encoding="utf-8").read()
     check("I12d README P158", "P158" in readme and "1892" in readme, "")

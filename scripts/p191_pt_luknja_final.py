@@ -8,7 +8,7 @@ Ta verifikator potrjuje dokaz research/issue17/pt-luknja-18-final.json
 (generira ga scripts/tmp/p191-pt-luknja.ts iz src/data/atlas/parish.ts):
 
   I1  datoteka obstaja, phase == P191, definicija gap = 18 hiš (42–60 brez h41/h50)
-  I2  korpus FINALNO: vitals 1219 · 04105=502 · 04455=197 · 04894=520
+  I2  korpus FINALNO: vitals 1235 · 04105=502 · 04455=197 · 04894=520
   I3  gap-status: 18/18 hiš Z dokazi — pravih lukenj (0 blokov) = 0
   I4  konsistentnost na hišo: blocksTotal == vsota po knjigah == len(years)
       in firstYear <= lastYear
@@ -33,8 +33,8 @@ LIVE_URL = "https://griblje-museum.vercel.app/api/qa"
 
 EXPECTED_GAP = ["42", "43", "44", "45", "46", "47", "48", "49",
                 "51", "52", "53", "54", "55", "56", "57", "58", "59", "60"]
-EXPECTED_CORPUS = {"04105": 502, "04455": 197, "04894": 520}
-VITALS_TOTAL = 1219
+EXPECTED_CORPUS = {"04105": 502, "04455": 197, "04106": 16, "04894": 520}
+VITALS_TOTAL = 1235
 
 
 def load():
@@ -61,7 +61,7 @@ def check(report):
 
     # I2
     corpus = report["corpus"]
-    ok("I2 korpus FINALNO (vitals 1219 · 04105=502 · 04455=197 · 04894=520)",
+    ok("I2 korpus FINALNO (vitals 1235 · 04105=502 · 04455=197 · 04894=520)",
        corpus["vitalsTotal"] == VITALS_TOTAL
        and {k: v for k, v in corpus["byBook"].items()} == EXPECTED_CORPUS,
        str(corpus["byBook"]))
@@ -74,7 +74,7 @@ def check(report):
     # I4
     bad = []
     for g in report["gapHouses"]:
-        s = g["byBook"]["04105"] + g["byBook"]["04455"] + g["byBook"]["04894"]
+        s = g["byBook"]["04105"] + g["byBook"]["04455"] + g["byBook"].get("04106", 0) + g["byBook"]["04894"]
         if g["blocksTotal"] != s or g["blocksTotal"] != len(g["years"]):
             bad.append(f"h{g['houseNo']}-vsota")
         if g["firstYear"] is None or g["firstYear"] > g["lastYear"]:

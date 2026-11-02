@@ -28,10 +28,11 @@ const gapHouses = GAP.map((hn) => {
   if (perBook["04105"]) via.push("krstna-04105");
   if (perBook["04455"]) via.push("poročna-04455");
   if (perBook["04894"]) via.push("mrliška-04894");
+  if (perBook["04106"]) via.push("mrliška-04106-predzgodovina");
   return {
     houseNo: hn,
     blocksTotal: blocks.length,
-    byBook: { "04105": perBook["04105"] ?? 0, "04455": perBook["04455"] ?? 0, "04894": perBook["04894"] ?? 0 },
+    byBook: { "04105": perBook["04105"] ?? 0, "04455": perBook["04455"] ?? 0, "04106": perBook["04106"] ?? 0, "04894": perBook["04894"] ?? 0 },
     firstYear: years[0] ?? null,
     lastYear: years[years.length - 1] ?? null,
     years,
