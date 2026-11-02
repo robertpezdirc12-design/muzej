@@ -39,8 +39,8 @@ EXPECTED_EXCLUDED = 8
 EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 10
 GRIBLJE_HOUSES = "8,11,12,20,22,24,33,34,60,65,72,82,91"
-VITALS_TOTAL = 1180             # 1118 + 27! (P184)
-BLOKI_04894 = 481               # 419 + 27! (P184)
+VITALS_TOTAL = 1194             # 1180 + 14! (P188)
+BLOKI_04894 = 495               # 481 + 14! (P188)
 P80_HOUSES = 88                  # NESPREMENJENO (vseh 13 št. že v korpusu!)
 KORPUS_HOUSES = 93               # NESPREMENJENO
 NEW_SCANS = [70, 71, 72, 73, 74]
@@ -169,7 +169,7 @@ def main():
     check("I6d bloki 1899: skeni 70–74 + stran == sken − 1",
           all(v["scan"] and 70 <= v["scan"] <= 74 and v["page"] == v["scan"] - 1 for v in d1899), "")
     check("I6d2 bloki 1905+ ne obstajajo (P168-lead!; P165-P167 = 1899+1900+1901 sedaj v korpusu!)",
-          all(v["year"] < 1922 for v in d04894), "")
+          all(v["year"] < 1923 for v in d04894), "")
     p80 = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
     check("I6f p80-skripta pini 950 + 91 + gap-18 (P170-kaskada!)",
           "len(vitals) == 1100" in p80 and "len(houses) == 94" in p80 and "len(gap) == 18" in p80, "")
@@ -240,10 +240,10 @@ def main():
     qa = open(QA_TS, encoding="utf-8").read()
     check("I10a qa-p165 = 166. kontrola", "qa-p165-parish-death-1899" in qa, "")
     check("I10b qa-pini 950/251/91 (P170-kaskada!)",
-          qa.count("!== 1180") >= 78 and qa.count("!== 446") >= 12 and qa.count("p80Houses.size !== 93") >= 14,
+          qa.count("!== 1194") >= 78 and qa.count("!== 446") >= 12 and qa.count("p80Houses.size !== 93") >= 14,
           f"{qa.count('!== 976')}/{qa.count('!== 277')}/{qa.count('p80Houses.size !== 92')}")
     check("I10c qa guard 1919 (bloki 1919+ ne!)",
-          "1916+-mrliški bloki že v korpusu" in qa and "(h.year ?? 0) >= 1922" in qa, "")
+          "1916+-mrliški bloki že v korpusu" in qa and "(h.year ?? 0) >= 1923" in qa, "")
     check("I10d P80_PT_GAP doc-list 15 (NESPREMENJENO — h51 zadnji!)",
           '"49", "51"' in qa and "p80Gap.length !== 15" in qa, "")
     check("I10e stale-guardi → 1908 (20× qa)",

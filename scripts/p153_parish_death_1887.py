@@ -30,8 +30,8 @@ EXPECTED_EXCLUDED = 19           # skupine vrstic izven Gribelj + 1888-lead
 EXPECTED_ANOMALIES = 11
 EXPECTED_CROSSCHECKS = 9
 GRIBLJE_HOUSES = "3,13,21,22,35,36,43,44,46,53,58,65,76"  # sortirano številčno (13 = 13!)
-VITALS_TOTAL = 1180             # 1118 + 27! (P184)
-BLOKI_04894 = 481               # 419 + 27! (P184)
+VITALS_TOTAL = 1194             # 1180 + 14! (P188)
+BLOKI_04894 = 495               # 481 + 14! (P188)
 P80_HOUSES = 79                  # POSODABLJENO P154: 77 + 2 (h47/h83)!
 NEW_SCANS = [6, 8, 9, 11, 12, 13]
 
@@ -181,7 +181,7 @@ def main():
     d1888 = [v for v in vit if v["bookSignature"] == "04894" and v["year"] == 1888]
     check("I6e bloki 1888 = 29 (POSODABLJENO P154)", len(d1888) == 29, str(len(d1888)))
     check("I6e2 bloki 1908+ ne obstajajo (P174-lead!; P172 = 1906 sedaj v korpusu!)",
-          not [v for v in vit if v["bookSignature"] == "04894" and (v["year"] or 0) >= 1922], "")  # POSODABLJENO P172
+          not [v for v in vit if v["bookSignature"] == "04894" and (v["year"] or 0) >= 1923], "")  # POSODABLJENO P172
     p80_script = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
     check("I6f p80-skripta pini 950 + 91 + gap-18 (P170-kaskada!)", "len(vitals) == 1100" in p80_script and "len(houses) == 94" in p80_script and "len(gap) == 18" in p80_script, "")
 
