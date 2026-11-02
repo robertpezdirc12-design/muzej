@@ -7348,3 +7348,10 @@ Stage Summary:
 - VERIFIKACIJA: runQA **192/192 ok:True (lokalno-3007!)** · tsc 0 · lint 0 · korpus po P192: **1235/198+16(04106)+520/191/94(p80)·93(korpus)** — PT-luknja 18
 - **★★★ PREDZGODOVINA-LINIJA-1/29-LET!** (mrliška-04106: 1885 ✓ → 1884–1857-čaka; krstna-04104-1871–1885-×200-skenov-čaka; poročna-04455-1873–1885-čaka!)
 - P193-LEAD: mrliška-04106-leto-**1884** (s193–s198: zap.-1884-z69–z76-ŽE-videni-s198 + z1–z68-s193–s197-prenesti! meja-1883/84 [?]) + vzporedno-krstna-04104-probe (200-skenov!)
+
+## P192 deploy-status · 2026-11-03
+
+- PUSH: GitHub 87733d6..**8bd10af** ✓ + GitLab 87733d6..**8bd10af** ✓ (GitLab-403-×1 → retry-OK!) — TRILOKACIJA-lokalni==GitHub==GitLab==**8bd10af** ✓
+- VERCEL: **griblje-museum.vercel.app 200** + **/api/qa = ok:True + 192/192 (qa-p192-parish-death-1885-04106 pass:True) NA PRODUKCIJI!** — produkcija-P192-POTRJENA ✓ (p192-verifikator --live 17/17-PASS!)
+- **★★★ PREDZGODOVINA-LINIJA: 1/29 LET!** (mrliška-04106: 1885 ✓ — naslednja: **P193 = 1884** (s193–s198; z69–z76-ŽE-videni!) + krstna-04104-1871–1885-×200-skenov-čaka!)
+- korpus: **1235/198+16(04106)+520/191/94(p80)·93(korpus)** — PT-luknja 18 · knjige-v-korpusu: **4 (04105-krstna + 04455-poročna + 04894-mrliška + 04106-mrliška-predzgodovina!)**
