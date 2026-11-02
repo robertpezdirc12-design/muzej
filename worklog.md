@@ -7224,3 +7224,22 @@ Stage Summary:
 - PUSH: GitHub eed91a2..**3f04ffb** ✓ + GitLab eed91a2..**3f04ffb** ✓ — TRILOKACIJA-lokalni==GitHub==GitLab==**3f04ffb** ✓
 - VERCEL: **griblje-museum.vercel.app 200** + **/api/qa = ok:True + 186/186 (qa-p185-parish-death-1919 pass:True) NA PRODUKCIJI!** — produkcija-P185-POTRJENA ✓
 - mrliška linija: **34/39** (1886–1919) — naslednja: **P186 = 1920** (s212-z1 + s213-z2–z8 + s214-z8–z13 ŽE-prebrani; s213–s232-PRENESANI; meja-1920/21 [?])
+
+## P186 · 2026-11-03
+
+- T0-PRENOSES: s203–s232-ŽE (P185) — brez-novih!
+- T1-VLM-BRANJE: s215–s232-×18-serije — 1920 = s212-z1 + s213–s221-z50/z51 (~51-vrstic = NAJNIŽJE-LETO!) + s221-MID-MEJA-'19 21' + s223/s228-'1921'-glave
+- T2-KURATOR-VISUAL-FORENZIKA (×14-cropov): **s221-full-page-MEJA-DECISIVNO** (z50-Jakofčič-'Jos.-Logar-kpl.'-jasno-cf.-VLM-'Rauq-žup.' + z51-RAJMER-dojenček-roj.-11.12.1920-†-25.12.1920-14-DNI! + z1-1921-MRTVOROJENO-nezakonsko-podpis-PRAZEN!) + z1-'MEJA-ROW'-KRIŽAN[~Petričan]-vdovec-po-†-Mariji-roj.-ŠTRAUS + z4-BRODARIČ-dojenček + z7-'Bruhner'→BRINEC-posestnik (žena-roj.-MILEK!) + z14-'Brumer'→BRINEC-'otrok-preminule-Marije' + z16-h14-ISTI-STARŠA-cf.-P183-z22 + z18-MILEK-vdova-roj.-Perdihec[~] + z35-'34'→'35'-LEŠKO-1.×-priimek (roj.-Brodarič!) + z46-PERDIH[~Prdinar?] + z30-Pavlakovič-'umrla-Griblje-ob-Hlebu'-srčna-kap-↔-P184-ADMIN-'Sprejemica'-LINK! + z08/z36/z47-Grm-×3 = 1921 (P187-lead!) + z08-Kure-'padec-z-voza'-NESREČA-1.× + z47-'R.-Kumerrej-knj.-uprav.'-1.×-CIVIL-podpis
+- T3-NUMERACIJA: s216-'z90-95'→'z20-25'-kurator-lekcija-3.-LETO + s218-'z31'-duplicate-fix — kontinuiteta-z1–51-100%
+- T4-PARISH.TS: P186-blok-komentar + 10-blokov (h86-KRIŽAN + h46-Brodarič + h24-BRINEC + h70-BRINEC + h14-BRINEC-ISTI-STARŠA + h46-MILEK-×2! + h60-LEŠKO + h75-PERDIH + h9-JAKOFČIČ + h45-RAJMER-14-DNI!)
+- T5-KASKADA: qa-parish.ts (100×-1154→1164 + 34×-455→465 + guardi-1921-×36 + p80Death-sporočilo + p87-h75/p88-h46+h70/p91-h9+h14+h45-dovoljenja-1920 + qa-p186-blok-187.-kontrola + **paren-lekcija-2.** (p88/p91-replace-')-požrl'-2-zapiranja → +1-`)`-empirično-per-line!)) + p80-skripta (vitals-1164 + hiše-94) + stale-sanacija-p153–p185-×33 (VITALS_TOTAL-1164 + BLOKI-465 + guardi-1921 + I6d/I6d2-1921 — py_compile-33/33!) + REGRESIJA-p184-36/36 + p185-43/43-PASS!
+- DOKAZ: research/issue17/parish-death-1920.json (**51 entries = 10-Griblje + 41-ne! 0-excluded + 14-anomalij + 8-crossChecks + honesty-10 + P187-lead**) + notes
+- SKRIPTE: scripts/p186_parish_death_1920.py (**40/40 + --live 43/43!**)
+- VERIFIKACIJA: runQA **187/187 ok:True** · tsc 0 · lint 0 · korpus po P186: **1164/198+465/191/94(p80)·93(korpus)** — PT-luknja 18
+- P187-LEAD: mrliška 1921 (s221-z1-3 + s222-z4–z9 + s223–s232-ŽE-prebrani: z3-h82-Marija-Muc-72-l + z9-h41-Marija-KURE + Grm-×3 (Kure-'padec-z-voza'-NESREČA + Molek-'otrok-preminulega-očeta' + Pezdirc-'Kumerrej-knj.-uprav.'-civil!); meja-1921/22 [?])
+
+## P186 deploy-status · 2026-11-03
+
+- PUSH: GitHub 8a7f6f9..**ebc811a** ✓ + GitLab 8a7f6f9..**ebc811a** ✓ — TRILOKACIJA-lokalni==GitHub==GitLab==**ebc811a** ✓
+- VERCEL: **griblje-museum.vercel.app 200** + **/api/qa = ok:True + 187/187 (qa-p186-parish-death-1920 pass:True) NA PRODUKCIJI!** — produkcija-P186-POTRJENA ✓
+- mrliška linija: **35/39** (1886–1920) — naslednja: **P187 = 1921** (s221-z1-3 + s222-z4–z9 + s223–s232-ŽE-prebrani!; meja-1921/22 [?])
