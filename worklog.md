@@ -7273,3 +7273,9 @@ Stage Summary:
 - SKRIPTE: scripts/p188_parish_death_1922.py (**45/45 + --live 48/48!**)
 - VERIFIKACIJA: runQA **189/189 ok:True** · tsc 0 · lint 0 · korpus po P188: **1194/198+495/191/94(p80)·93(korpus)** — PT-luknja 18
 - P189-LEAD: mrliška 1923 (s239-bot-restart-z1-Marija-Anne-posestniških-strot-kuratorsko-videna! + z2-Vranoviče-h6-Janez-Muc-pleurica + s240–s246-VLM-prebrani-52-vpisov-do-z52! + knjiga-256-skenov-do-1924 → meja-1923/24-na-s24x [?])
+
+## P188 deploy-status · 2026-11-02
+
+- PUSH: GitHub f4e069f..**d2627b4** ✓ + GitLab f4e069f..**d2627b4** ✓ — TRILOKACIJA-lokalni==GitHub==GitLab==**d2627b4** ✓
+- VERCEL: **griblje-museum.vercel.app 200** + **/api/qa = ok:True + 189/189 (qa-p188-parish-death-1922 pass:True) NA PRODUKCIJI!** — produkcija-P188-POTRJENA ✓
+- mrliška linija: **37/39** (1886–1922) — naslednja: **P189 = 1923** (s239-bot-restart-z1-Marija-Anne + s240–s246-ŽE-prebrani-52-vpisov; meja-1923/24-na-s24x [?] — knjiga-256-skenov-do-1924!)
