@@ -7150,3 +7150,9 @@ Stage Summary:
 - SKRIPTE: scripts/p182_parish_death_1916.py (**40/40 --live!**) + p80 (--check-PASS)
 - VERIFIKACIJA: runQA **183/183 ok:True** · tsc 0 · lint 0 · korpus po P182: **1100/198+401/191/93(p80)·93(korpus)** — PT-luknja 18
 - P183-LEAD: mrliška 1917 (s173-restart-z1–6 + s174-z7–13 ŽE-prebrani: **6-GRIBLJE** — z1-h9-Jakofčič-Marija + z3-h2-Hlebec-Matija-22-l + z4-h5-Brinec-Peter-71-l + z6-Kure-Marija-9-dni + s174-z7-h49-Matesič-Ana-73 + z11-h22-Tožek-Katarina-69!; z1-'roj.-15.2.1843-2-leti'-NEUSKLADJE-forenzika-LEAD!)
+
+## P182 deploy-status · 2026-11-03
+
+- PUSH: GitHub cf4009c..**ac6d9c6** ✓ + GitLab cf4009c..**ac6d9c6** ✓ (1.-poskus-oba!) — TRILOKACIJA-lokalni==GitHub==GitLab==**ac6d9c6** ✓
+- VERCEL: GitHub-App-avtomatski-deploy → **griblje-museum.vercel.app 200** + **/api/qa = ok:True + 183/183 (qa-p182-parish-death-1916 pass:True) NA PRODUKCIJI!** — produkcija-P182-POTRJENA ✓
+- mrliška linija: **31/39** (1886–1916) — naslednja: **P183 = 1917** (s173-restart-z1–6 + s174-z7–13 ŽE-prebrani: 6-GRIBLJE! z1-'roj.-15.2.1843-2-leti'-NEUSKLADJE-forenzika-LEAD!)
