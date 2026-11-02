@@ -7309,3 +7309,10 @@ Stage Summary:
 - SKRIPTE: scripts/p190_parish_death_1924.py (**46/46 + --live 49/49!**)
 - VERIFIKACIJA: runQA **191/191 ok:True** · tsc 0 · lint 0 · korpus po P190: **1219/198+520/191/94(p80)·93(korpus)** — PT-luknja 18
 - **★★★ MRLIŠKA-LINIJA-39/39-KONEC-LINIJE!** (1886-okvir-P80-46-vrstic + P153–P190-1887–1924-polnih-38-let! 256-skenov! 520-mrliških-blokov-Griblje-v-parish.ts! KNJIGA-04894-POPOLNOMA-DIGITALIZIRANA!)
+
+## P190 deploy-status · 2026-11-02 — LINIJA-39/39-KONEC
+
+- PUSH: GitHub 918a9c3..**98861a2** ✓ + GitLab 918a9c3..**98861a2** ✓ — TRILOKACIJA-lokalni==GitHub==GitLab==**98861a2** ✓
+- VERCEL: **griblje-museum.vercel.app 200** + **/api/qa = ok:True + 191/191 (qa-p191-parish-death-1924 pass:True) NA PRODUKCIJI!** — produkcija-P190-POTRJENA ✓
+- **★★★ MRLIŠKA-LINIJA-04894-39/39-KONEC-LINIJE!** (1886–1924: 256-skenov · 1886-okvir-P80 + P153–P190-38-polnih-let · 520-mrliških-blokov-Griblje-v-parish.ts · 8-duhovnikov-#23–#29-obdobje-1919–1924 · KNJIGA-POPOLNOMA-DIGITALIZIRANA!)
+- korpus-final: **1219-vitalov/198-poročnih + 520-mrliških/191 + 94-p80-hiš · 93-korpus-hiš · PT-luknja-18**
