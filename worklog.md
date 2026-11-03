@@ -7511,3 +7511,11 @@ Stage Summary:
 - LEKCIJE: (1) **rdeči-margini = avtoritativni-ordinali** (VLM-off-by-one-nevidno — KROP-leva-cela-OBVEZEN-za-restart/številčenje!); (2) VLM-leto-VEEDNO-KROP-potrdi (glava + MEJA + aritmetika-z-sosedi!); (3) VLM-tail/meja-flagi = navodila-za-KROP, ne-izreki; (4) nohup-VM-umira-med-klici → foreground-batche-×2; (5) Juli-matcher (nemški-meseci!); (6) qa-IZJEME-rastejo-z-vsako-fazo (4-krstni-testi!)
 - VERIFIKACIJA: **runQA 197/197 ok:True** (qa-p197 = 197.-kontrola!) · tsc 0 · lint 0 · regresija-p192–p197-VSE-PASS
 - **★★★ PREDZGODOVINA-LINIJA: 6/29-LET!** → **P198-LEAD: 1879 (7/29)** — SIDRA-ŽE-KROP-POTRJENA-TA-SEJO: 1879-konec = **z63-s164** (rdeči-margini-62,63!) + **s163-ŽE-PREBRAN** (z50–z61 = 12-vrstic; Griblje-z58-Križan-h30 + z59-Kraus-h32!) → probe: s157–s164; 1879-začetek = z1-išče-nazaj + krstna-04104-čaka
+
+## P197 deploy-status · 2025-11-03 — ★ PRODUKCIJA-POTRJENA (197/197!)
+
+- PUSH: **GitHub e0b5d27..8857983 ✓** + **GitLab e0b5d27..8857983 ✓** (retry-za-WAF-403-nestabilnost — UA-config-obdržan!) — **TROJNA-USKLAJENOST-@-8857983: lokalni == GitHub == GitLab!**
+- VERCEL: **griblje-museum.vercel.app /api/qa = ok:True + 197/197 + qa-p197 pass:True** (poll-×2 — deploy-~90-s!) — produkcija-P197-POTRJENA ✓
+- VERIFIKATOR: **p197_parish_death_1880_04106.py --live = VSI-PASS ✓** (I1–I10 + LIVE-×2!)
+- korpus po P197: **1315/198+96(04106)+520/191/94(p80)·93(korpus)** — PT-luknja-18 (96/1315-regenerirana!)
+- **★★★ PREDZGODOVINA-LINIJA: 6/29-LET — POPOLNOMA-ZELENA!** → **P198 = 1879 (7/29)**: s163-ŽE-PREBRAN (z50–z61!) + s164-tail-z62/z63-ŽE-KROP-POTRJEN (1879-konec = z63!) → probe-s157–s164 + krstna-04104-čaka
