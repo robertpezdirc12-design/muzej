@@ -29,7 +29,7 @@ EXPECTED_ENTRIES = 55   # 14 Griblje + 41 ne-Griblje
 EXPECTED_EXCLUDED = 3
 GRIBLJE_HOUSES = "1,5,12,34,44,47,49,51,59,59,65,76,90,92"
 GRIBLJE_ZAPS = [2, 4, 5, 19, 24, 30, 33, 35, 37, 39, 47, 48, 51, 52]
-VITALS_TOTAL = 1283             # 1205 + 14! (P190 = KONEC-KNJIGE!)
+VITALS_TOTAL = 1302             # 1205 + 14! (P190 = KONEC-KNJIGE!)
 BLOKI_04894 = 520               # 506 + 14! (P190 = KONEC-KNJIGE!)
 KORPUS_HOUSES = 93              # NESPREMENJENO
 NEW_SCANS = [143, 144, 145, 146]
@@ -200,7 +200,7 @@ def main():
     # ---------- I8: qa-parish.ts ----------
     check("I8a qa-p179 obstaja (180. kontrola)", "qa-p179-parish-death-1913" in qa, "")
     check("I8b qa-p179 hiše-lista", '"1,5,12,34,44,47,49,51,59,59,65,76,90,92"' in qa, "")
-    check("I8c vitals-checki 1077 (>= 93)", qa.count("!== 1283") >= 93, str(qa.count("!== 1283")))
+    check("I8c vitals-checki 1077 (>= 93)", qa.count("!== 1302") >= 93, str(qa.count("!== 1302")))
     check("I8d bloki-checki 378 (>= 27)", qa.count("!== 446") >= 27, str(qa.count("!== 446")))
     check("I8e p80-checki 93 (>= 25)", qa.count("p80Houses.size !== 93") >= 24, str(qa.count("p80Houses.size !== 93")))
     check("I8f guardi-1915 (>= 28)", qa.count("(h.year ?? 0) >= 1916") >= 28, str(qa.count("(h.year ?? 0) >= 1916")))
