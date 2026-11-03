@@ -7430,9 +7430,10 @@ Stage Summary:
 - **★★★ PREDZGODOVINA-LINIJA-4/29-LET!** (mrliška-04106: 1885 ✓ + 1884 ✓ + 1883 ✓ + 1882 ✓ → 1881–1857-čaka; krstna-04104-1871–1885-×200-skenov-čaka; poročna-04455-1873–1885-čaka!)
 - P196-LEAD: mrliška-04106-leto-**1881** (s174–s180-probe! — s180-1882-START-ŽE-viden ('1882.'-glava + restart-z1) → meja-1881/82-NA-s180-TOP → 1881 = z1–zN-s174–s179 + probe-s174/s175! + krstna-04104-1871–1885-×200-skenov-čaka!)
 
-## P195 deploy-status · 2026-11-03
+## P195 deploy-status · 2026-11-03 — ★ DELOVNA-BLOKADA-GitHub-PAT!
 
-- PUSH: GitHub → **f32c211-sledilec** ✓ + GitLab ✓ (403-retry-živi!) — TRILOKACIJA-lokalni==GitHub==GitLab ✓
-- VERCEL: **griblje-museum.vercel.app 200** + **/api/qa = ok:True + 195/195 (qa-p195-parish-death-1882-04106 pass:True) NA PRODUKCIJI!** — produkcija-P195-POTRJENA ✓ (p195-verifikator --live 27/27-PASS!)
+- PUSH: **GitLab f32c211..4655d34 ✓ (403-×1 → retry-OK — vzorec-živi!)** · **GitHub ✗ BLOKIRAN** — PAT-v-origin-URL-401-'Bad-credentials' (API + vsi-git-auth-formi: oauth2:/x-access-token:/token:token/empty-askpass — VSI-FAIL!) — ⚠️ **TREBA-ŽIVI-PAT-OD-UPORABNIKA!** (read-deluje-anonimno-repo-je-public!)
+- VERCEL: griblje-museum.vercel.app 200 + /api/qa = ok:True + **194/194 = ŠE-P194-stanje** (Vercel-je-GitHub-priključen → deploy-NE-sproži-dokler-GitHub-push-ne-gre-skup!) — ** produkcija-P195-ČAKA-NA-GitHub-PUSH + živi-PAT** (potem-p195-verifikator --live!)
+- LOKALNO+GITLAB: **P195-POLNOSTA-POTRJENA** (runQA 195/195 ok:True lokalno + GitLab-mirror-4655d34 ✓!)
 - **★★★ PREDZGODOVINA-LINIJA: 4/29 LET!** (mrliška-04106: 1885 ✓ + 1884 ✓ + 1883 ✓ + 1882 ✓ — naslednja: **P196 = 1881** (s174–s180-probe; s180-1882-START-ŽE-viden!) + krstna-04104-1871–1885-×200-skenov-čaka!)
 - korpus: **1283/198+64(04106)+520/191/94(p80)·93(korpus)** — PT-luknja 18 · knjige-v-korpusu: **4 (04105-krstna + 04455-poročna + 04894-mrliška + 04106-mrliška-predzgodovina!)**
