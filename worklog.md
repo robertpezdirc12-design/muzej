@@ -7476,3 +7476,11 @@ Stage Summary:
 - VERIFIKACIJA: verifier-p196-**VSI-PASS-26/26** (po-patchu!) + runQA **196/196 ok:True** + tsc 0 + lint 0
 - NOVI-ARHIV: scripts/tmp/p196_extract.mjs (ekstrakcija-93-iz-VLM-JSON) + scripts/tmp/p196_crop.mjs (10-kropov) + scripts/tmp/p196_krop_patch.mjs (surgical-patch) + scripts/tmp/p196_runqa.mjs (runQA-runner-fs-opts!)
 - METODOLOŠKA-LEKCIJA-#11: **zavrnitve-fresh-branj-NAJ-BOJO-LOČENE-na-polja** (ime ≠ starost ≠ hiša!) — celostanski-zavrnitveni-svežnji-skrijejo-delno-pravilne-fresh-branje (z1: ime-fresh-PRAVILNO-Jure + starost-fresh-NAPAČNO-70 → sveženj-zavrl-oboj!)
+
+## P196-KROP deploy-status · 2025-11-03 — ★ PRODUKCIJA-POTRJENA-Z-KROP-MARKERJI
+
+- PUSH: **GitHub f8215c7..2c91b74 ✓** (KROP-seja-commit!) · **GitLab ✗ ŠE-VEDNO-BLOKADEN** (403-access-rights — treba-novi-žeton-od-uporabnika!)
+- VERCEL: **griblje-museum.vercel.app /api/qa = ok:True + 196/196 + qa-p196 pass:True + VSEH-5-KROP-MARKERJEV-ŽIVIH** (Jure-ne-Ursula ✓ + 72-ne-92 ✓ + h26-ne-h21 ✓ + Ivec-6J ✓ + 45-ne-35 ✓ + Zemelj-h21-ne-Prilozje ✓) — produkcija-KROP-POTRJENA ✓ (poll-×2-po-60s!)
+- TROJNA-USKLAJENOST: **lokalni-2c91b74 == GitHub-2c91b74 == Vercel-produkcija (KROP-markerji!)** — GitLab-ostaja-za-marker (4.-mesto, blokada-žetona)
+- korpus: **1302/198+83(04106)+520/191/94(p80)·93(korpus)** — NESPREMENJENO (KROP = čista-usklajenost, brez-strukturnih-sprememb!)
+- **★★★ PREDZGODOVINA-LINIJA: 5/29-LET — POPOLNOMA-ZELENA-Z-KROP-FORENZIKO!** → P197 = 1880 (s165–s171-probe; tail-z72-72J-KROP!)
