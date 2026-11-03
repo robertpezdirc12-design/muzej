@@ -7382,3 +7382,27 @@ Stage Summary:
 - VERCEL: **griblje-museum.vercel.app 200** + **/api/qa = ok:True + 193/193 (qa-p193-parish-death-1884-04106 pass:True) NA PRODUKCIJI!** — produkcija-P193-POTRJENA ✓ (p193-verifikator --live 26/26-PASS!)
 - **★★★ PREDZGODOVINA-LINIJA: 2/29 LET!** (mrliška-04106: 1885 ✓ + 1884 ✓ — naslednja: **P194 = 1883** (s187–s192; s192-z69–z75-ŽE-videni!) + krstna-04104-1871–1885-×200-skenov-čaka!)
 - korpus: **1256/198+37(04106)+520/191/94(p80)·93(korpus)** — PT-luknja 18 · knjige-v-korpusu: **4 (04105-krstna + 04455-poročna + 04894-mrliška + 04106-mrliška-predzgodovina!)**
+
+## P194 · 2026-11-03 — PREDZGODOVINA-3/29: mrliška 04106, leto 1883 (★★★ nehronomološka-forenzika!)
+
+- T0-INVARIANTA: 1883 = **s186–s192 == Pag. 180–186** (pag == sken − 6 — s186-180 + s187-181 + s188-182 + s191-185-vizualno!) — **★★★ VLM-stran-zavrnitve-×5**: s188-'1873'→1883 + s188-'številčenje-321–333'→z21–z33 (stray-'3'-svinčnik-margin-ob-vseh-vrsticah!) + s190-'1864/65-restart-145–154'→z45–z55-NEPREKINJENO! + s187-'Griblje-z15'→CERTOVIŠE!
+- **★★★ MEJA-1882/83 = s186-top**: 1882-tail-z59-Dragoše + veliki-cifri **'1'+'8'-L + '8'+'3'-R = SPLIT-MARKER-ČEZ-RAZPON** (nova-tehnika-#9-cf.-04455-s175-'19'/'20'!) + 'Jänner' + restart-z1 = **33.-POTRDITEV-invariante!** (s186-dodatno-prenesen-izven-lead-range!)
+- **★★★ z33-DUPLIKAT-ŠTEVILČENJA-4.×-linije**: s188-konec-'33' (Janez-Glaš?-Dovak?) + s189-začetek-'33' (Primostek-47) = **2-RAZLIČNA-vpisa-z-ISTO-številko!** (cf. 1921-s218 + 1904-s253 + 1885-z4-VSTAVEK!)
+- **★★★ DAVICA-NIT-PRETEG-NA-OKTOBER-1883** (P193-LEAD-posodobitev!): z58-Boginja-vas-Tavčar-1-J-Diphtheritis + z59-Difteritis + z70-h37-Maria-Husić-1J1M3Tg! + z75-Certoviše-Keffela-1-J = **×4-v-1883** — nit: okt(2)→dec(2)-1883 → mär-1885-P192-epidemija! + **★★★ GEHIRN-družina-×2-AUGUST** (z41-Zemelj-Gehirnentzündung + z42-h49-Gehirnreizung?-v-5-dneh!)
+- 1883 = **76 vpisanih vrstic (z1–z75 + z33-×2!) / 11 GRIBLJE / 10 hiš (h68-×2! + h36-×2!)** — forma-nemška-'Sterb-Buch'-skroz
+- ★★★ **h68-JANUARSKA-KATASTROFA-×2-v-10-DNEH** (z2-Barbara-URH-2-MESECE-VLM-'2-leta'-ZAVRŽEN! + z4-Matthias-URH-72-l — babica+vnuček?-hipoteza [~]! — h68 = URH-hiša-cf.-1885-'ALTH'-P192!) + **★★★ 90-LET-z6-h20-Ana-Perdih** (najstarejši-1883 + **ASTHMA-1.×-predzgodovine** — ×3-1883: z6 + z28 + z36!) + **★★★ z7-NEZNAN-OTROK-Hrast-20** (starost+bolezen+duhovnik-PRAZNI!) + **★★★ z69-h78-PRAZNI-polji-×2** (Legan-Gutsbesitzer — 2.×-cf.-1884-z57-Funkl-ISTI-hiša!) + **★★★ VIJOLIČNO-črnilo-menjava-pisala** (s189-z36–z37 + s190-z45!)
+- DUHOVNIKI-1883: **Franz-JANČAR [~Janežič?]-'v.R.C.-Pfarrer'-DOMINANTA-~40+** (NOVI-duhovnik-kandidat-#30! VLM-×3-branja-zmeda-RAZREŠENA-očesno!) + **Franz-DOVGAN-×5** ('Dorgun'-forma-z20!) + **Peter-Ogrin-coop.-s192-tail-×4** (→1884-dominanta-P193 — kontinuiteta!) + PLUT-hiša-Klošter-36-×3-v-3-mesecih (z10 + z14 + z21!) + 'Germ'-vas-forma-×3 (= ZEMELJ!) + Podzemelj-'(:-Oberhof:)'-opomba-z48 + MRTVOROJEN-z27-Otok + z31-duhovnik-podpis-PRAZEN
+- **PT-LUKNJA-DOKAZI-1883: h44 (z73-Hlebučar!) + h49 (z42-BRODARIČ!) + h33 (z32-Šimec!) + h21 (z56-Cadič!) + h37 (z70-Husić-DAVICA!)** — hišne-kontinuitete: h49-BRODARIČ-21-let-nazaj (1883→1894-P160!) + h44-Hlebučar→Klobučar→BRINEC-1901! + h36-2-priimka-1883 (HLEBEC-feb + KRIŽAN-jul!)→KRIŽAN-1901! + h33→PAPIČ-1901! + h21→POŽEK-1885! + z74-Klošter-38-P193-dvom-RAZREŠEN ('Otok-[~Griblje?]'→KLOŠTER-vizualno!)
+- T3-PARISH.TS: P194-blok-komentar + **11-blokov-04106-1883** (vitals 1256 → 1267 · 04106 = 37 → 48 · 04894 = 520-NESPREMENJENO)
+- T4-KASKADA: qa-p194 (194.-kontrola) + 106×-1256→1267 + p192-QA (bloki-37→48 + leta-{1883,1884,1885}!) + p90-dovoljenja (h20/h37-via-04106-1883!) + p94-dovoljenje (h49-1883-razširitev!) + pt-luknja-REGENERACIJA (04106-48 + vitals-1267!) + stale-sanacija-41-skript (1256→1267 + '!== 1256'-bare-vzorci + p80/p191-EXPECTED_CORPUS-04106-48!)
+- DOKAZ: research/issue17/parish-death-1883-04106.json (**79-entries: 11-Griblje + 66-ne + 1-tail-1882 + 1-meja! 18-anomalij + 8-crossChecks + honesty-12 + leadP195-1882!**) + notes
+- SKRIPTA: scripts/p194_parish_death_1883_04106.py (**24/24-PASS + --live-podpora!**)
+- VERIFIKACIJA: runQA **194/194 ok:True (lokalno-bun!)** · tsc 0 · lint 0 · **REGRESIJA: p184-36/36 + p185-43/43 + p186-40/40 + p187-42/42 + p188-45/45 + p189-45/45 + p190-46/46 + p191---check-PASS + p192-PASS + p193-PASS + p80---check-PASS!**
+- korpus po P194: **1267/198+48(04106)+520/191/94(p80)·93(korpus)** — PT-luknja 18
+- **★★★ PREDZGODOVINA-LINIJA-3/29-LET!** (mrliška-04106: 1885 ✓ + 1884 ✓ + 1883 ✓ → 1882–1857-čaka; krstna-04104-1871–1885-×200-skenov-čaka!)
+- P195-LEAD: mrliška-04106-leto-**1882** (s180–s186: 1882 = z1–z59! — s186-z59-Dragoše-ŽE-viden + z1–z58-s180–s185-prenesti! meja-1881/82 = s180/s181-probe!)
+
+## P194 deploy-status · 2026-11-03
+
+- PUSH: GitHub + GitLab + VERCEL (sledi — glej commit)
+- korpus: **1267/198+48(04106)+520/191/94(p80)·93(korpus)** — PT-luknja 18 · knjige-v-korpusu: **4 (04105-krstna + 04455-poročna + 04894-mrliška + 04106-mrliška-predzgodovina!)**

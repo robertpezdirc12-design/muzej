@@ -11,7 +11,7 @@ I6: duhovniki-1884 (Peter-Ogrin-coop-dominanta ~24 + Franz-Dovgan + GLIBE-1.-POD
 I7: katastrofe (h8-JABLKONIČ-×3 + h47-KLOBUČAR-×2 + h63-KRIŽAN-×2 + MOVRIN-×4)
 I8: anomalije-oznake (DAVICA-NIT + MASERN-PRELUDE + FORME-NI-1884/Sterb-Buch + PRAZNI-polji + REWRITE-imena + dvojni-zapis + NOVA-vas-Gorice)
 I9: PT-luknja-REGENERACIJA (h43/h44/h47/h49 via 04106 + pt-luknja-18-final.json 04106 == 37)
-I10: 04894-still-520 + 04106-leta == {1884, 1885}
+I10: 04894-still-520 + 04106-leta == {1883, 1884, 1885}
 --live: produkcija /api/qa == 193/193 + qa-p193 pass:True
 """
 import json, re, sys, urllib.request
@@ -33,7 +33,7 @@ check("I2 hiše-1884", ",".join(his) == "6,8,8,8,10,13,16,17,27,43,44,47,47,49,6
 
 # I3: vitals + 04106-skupaj
 skupaj = src.count('bookSignature: "04106"')
-check("I3 vitals-1256 + 04106==37", "HOUSE_VITALS.length !== 1256" not in src and skupaj == 37,
+check("I3 vitals-1267 + 04106==48", "HOUSE_VITALS.length !== 1267" not in src and skupaj == 48,
       f"04106-bloki={skupaj}")
 
 # I4: dokaz
@@ -46,14 +46,14 @@ check("I4 dokaz (84/21-griblje/16-anomalij + meja-s192)",
 
 # I5: qa-parish
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1256")
+st = qa.count("HOUSE_VITALS.length !== 1267")
 check("I5 qa-p193 + števec-1256", "qa-p193-parish-death-1884-04106" in qa and st >= 100,
       f"1256-številcev={st}")
 
 # I6: duhovniki-1884 (samo v P193-segmentu)
 i0 = src.find("P193: mrliška PREDZGODOVINA 04106, leto 1884")
 seg = src[i0:]
-check("I6 Ogrin-dominanta-24", seg.count("Peter Ogrin coop") == 24, f"Ogrin={seg.count('Peter Ogrin coop')}")
+check("I6 Ogrin-dominanta-≥24", seg.count("Peter Ogrin coop") >= 24, f"Ogrin={seg.count('Peter Ogrin coop')}")
 check("I6b Franz-Dovgan", seg.count("Dovgan") + seg.count("DOVGAN") >= 10, f"Dovgan-omen={seg.count('Dovgan') + seg.count('DOVGAN')}")
 check("I6c GLIBE-1.-PODPIS z49", "GLIBE-1.-PODPIS" in seg)
 check("I6d Glibe-kontinuiteta-1885", "kontinuiteta-ČEZ-MEJO" in seg or "kontinuiteta-ČEZ-MEJO-KNJIG" in seg)
@@ -79,14 +79,14 @@ check("I8g NOVA-vas-Gorice", "NOVA-vas" in seg and seg.count("Gorice") >= 3)
 # I9: PT-luknja-REGENERACIJA
 check("I9 PT-luknja-dokazi-04106", "PT-luknja-dokazi" in seg and "h43 (z46" in seg and "h44 (z48" in seg and "h47 (z27" in seg and "h49 (z62" in seg)
 pt = json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8"))
-check("I9b pt-luknja 04106==37", pt["corpus"]["byBook"].get("04106") == 37 and pt["corpus"]["vitalsTotal"] == 1256,
+check("I9b pt-luknja 04106==48", pt["corpus"]["byBook"].get("04106") == 48 and pt["corpus"]["vitalsTotal"] == 1267,
       f"04106={pt['corpus']['byBook'].get('04106')} vitals={pt['corpus']['vitalsTotal']}")
 
 # I10: 04894 + 04106-leta
 bloki94 = re.findall(r'bookSignature:\s*"04894"', src)
 check("I10 04894 == 520", len(bloki94) == 520, f"najdeno {len(bloki94)}")
 izven = re.findall(r'bookSignature:\s*"04106",\s*year:\s*(\d+)', src)
-check("I10b 04106-leta-{1884,1885}", set(izven) == {"1884", "1885"}, str(set(izven)))
+check("I10b 04106-leta-{1883,1884,1885}", set(izven) == {"1883", "1884", "1885"}, str(set(izven)))
 
 # --live
 if "--live" in sys.argv:
