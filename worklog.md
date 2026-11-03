@@ -7484,3 +7484,11 @@ Stage Summary:
 - TROJNA-USKLAJENOST: **lokalni-2c91b74 == GitHub-2c91b74 == Vercel-produkcija (KROP-markerji!)** — GitLab-ostaja-za-marker (4.-mesto, blokada-žetona)
 - korpus: **1302/198+83(04106)+520/191/94(p80)·93(korpus)** — NESPREMENJENO (KROP = čista-usklajenost, brez-strukturnih-sprememb!)
 - **★★★ PREDZGODOVINA-LINIJA: 5/29-LET — POPOLNOMA-ZELENA-Z-KROP-FORENZIKO!** → P197 = 1880 (s165–s171-probe; tail-z72-72J-KROP!)
+
+## P196-GITLAB-odblockada · 2025-11-03 — GITLAB-4-COMMITI-DODANI (nov-žeton-od-uporabnika!)
+
+- DIAGNOZA: GitLab-API-curl = 403-"Blocked"-HTML (HK-IP-47.57.x + curl-UA-blokada!) → z-browser-UA = **200 (žeton-VELJAVEN: robert.pezdirc12!)** → git-transport-brez-UA-blokade → push-USPEŠEN; ★ LEKCIJA: "403" = 2.×-lažen-alarm (cf. P171-"Everything-up-to-date") — vedno-testiraj-z-2.-kanalom (git-transport ≠ curl-UA)!
+- PUSH: **GitLab f94f794..c17b543 ✓ (4-commits: dc99db6 + f8215c7 + 2c91b74 + c17b543)** — ls-remote-prej-pokazal-f94f794 → GitLab-bil-4-commite-zadaj!
+- REMOTE-ŽETONI-ROTIRANI: origin (nov ghp_…; api.github.com/user = 200 ✓ + fetch+push-OK ✓) + gitlab (nov glpat_…; ls-remote+push-OK ✓) — oba-vezana-v-remote-URL-e (repo-praksa!)
+- TROJNA-USKLAJENOST: **lokalni-c17b543 == GitHub-c17b543 == GitLab-c17b543** (ls-remote-1:1:1!) — GitLab-marker (4.-lokacija) PONOVNO-ŽIV!
+- → P197-START: mrliška-04106-leto-1880 (s165–s171-probe = Pag. 159–165 = sken − 6; MEJA-1879/80-išče; tail-1880-z72-Valčič-92J-Wassersucht-ŽE-potrjen-iz-P196-s171!)
