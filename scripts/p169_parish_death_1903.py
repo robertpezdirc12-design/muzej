@@ -27,7 +27,7 @@ EXPECTED_EXCLUDED = 8
 EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 5
 GRIBLJE_HOUSES = "4,11,12,18,18,30,36,40,40,45,45,46,52,58,60,72,83"
-VITALS_TOTAL = 1267             # 1205 + 14! (P190 = KONEC-KNJIGE!)
+VITALS_TOTAL = 1283             # 1205 + 14! (P190 = KONEC-KNJIGE!)
 BLOKI_04894 = 520               # 506 + 14! (P190 = KONEC-KNJIGE!)
 P80_HOUSES = 92                  # 90 → 91 (+h4 = 28. PT-vez; 04105-1906-blok-IZVEN-filtra!)
 KORPUS_HOUSES = 93               # NESPREMENJENO
@@ -243,7 +243,7 @@ def main():
     qa = open(QA_TS, encoding="utf-8").read()
     check("I10a qa-p169 = 170. kontrola", "qa-p169-parish-death-1903" in qa, "")
     check("I10b qa-pini 950/251/91",
-          qa.count("!== 1267") >= 80 and qa.count("!== 446") >= 15 and qa.count("p80Houses.size !== 93") >= 18,
+          qa.count("!== 1283") >= 80 and qa.count("!== 446") >= 15 and qa.count("p80Houses.size !== 93") >= 18,
           f"{qa.count('!== 976')}/{qa.count('!== 277')}/{qa.count('p80Houses.size !== 92')}")
     check("I10c qa guard 1919 (bloki 1919+ ne!)",
           "1916+-mrliški bloki že v korpusu" in qa and "(h.year ?? 0) >= 1925" in qa, "")

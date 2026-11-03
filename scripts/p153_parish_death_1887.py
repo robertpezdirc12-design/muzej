@@ -30,7 +30,7 @@ EXPECTED_EXCLUDED = 19           # skupine vrstic izven Gribelj + 1888-lead
 EXPECTED_ANOMALIES = 11
 EXPECTED_CROSSCHECKS = 9
 GRIBLJE_HOUSES = "3,13,21,22,35,36,43,44,46,53,58,65,76"  # sortirano številčno (13 = 13!)
-VITALS_TOTAL = 1267             # 1205 + 14! (P190 = KONEC-KNJIGE!)
+VITALS_TOTAL = 1283             # 1205 + 14! (P190 = KONEC-KNJIGE!)
 BLOKI_04894 = 520               # 506 + 14! (P190 = KONEC-KNJIGE!)
 P80_HOUSES = 79                  # POSODABLJENO P154: 77 + 2 (h47/h83)!
 NEW_SCANS = [6, 8, 9, 11, 12, 13]
