@@ -7404,5 +7404,7 @@ Stage Summary:
 
 ## P194 deploy-status · 2026-11-03
 
-- PUSH: GitHub + GitLab + VERCEL (sledi — glej commit)
+- PUSH: GitHub →**0dfbd59** ✓ + GitLab →**0dfbd59** ✓ (403-×1 → retry-OK!) — TRILOKACIJA-lokalni==GitHub==GitLab==**0dfbd59** ✓
+- VERCEL: **griblje-museum.vercel.app 200** + **/api/qa = ok:True + 194/194 (qa-p194-parish-death-1883-04106 pass:True) NA PRODUKCIJI!** — produkcija-P194-POTRJENA ✓ (p194-verifikator --live 26/26-PASS!)
+- **★★★ PREDZGODOVINA-LINIJA: 3/29 LET!** (mrliška-04106: 1885 ✓ + 1884 ✓ + 1883 ✓ — naslednja: **P195 = 1882** (s180–s186; 1882 = z1–z59; s186-z59-ŽE-viden!) + krstna-04104-1871–1885-×200-skenov-čaka!)
 - korpus: **1267/198+48(04106)+520/191/94(p80)·93(korpus)** — PT-luknja 18 · knjige-v-korpusu: **4 (04105-krstna + 04455-poročna + 04894-mrliška + 04106-mrliška-predzgodovina!)**
