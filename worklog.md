@@ -7603,3 +7603,11 @@ Stage Summary:
 - korpus po P200: **1355/200+136(04106)+520/191/94(p80)·93(korpus)** — PT-luknja 18
 - **★★★ PREDZGODOVINA-LINIJA-9/29-LET!** (mrliška-04106: 1885 ✓ + 1884 ✓ + 1883 ✓ + 1882 ✓ + 1881 ✓ + 1880 ✓ + 1879 ✓ + 1878 ✓ + **1877 ✓** → 1876–1857-čaka; krstna-04104-1871–1885-×200-skenov-čaka; poročna-04455-1873–1885-čaka!)
 - P201-LEAD: mrliška-04106-leto-**1876** (10/29! — s134–s142-probe! — **s142-Dez-tail-ŽE-PREBRAN-ta-seja** (10-vrstic: Griblje-×3: z4-h44-Barbara-KAVČIČ[?]-**24-URE**-Vesperstbrand[?]-Dez-24/25 + z6-h75-STUBLER-50⅔J-Asthma + z7-h16-PILAH[~Spilak?]-3½J-Hirnentzündung!) + '1876.'-glava-v-z1-s142! → 1876 ≈ 60-85-?-vpisov; 1876-začetek = išče-nazaj + krstna-04104-čaka!)
+
+## P200 deploy-status · 2025-11-04 — ★ PRODUKCIJA-POTRJENA (200/200!)
+
+- PUSH: **GitHub c216872..cc950b5 ✓** + **GitLab c216872..cc950b5 ✓** (mirror-živ — brez-blokad!) — **TROJNA-USKLAJENOST-@-cc950b5: lokalni == GitHub == GitLab (1:1:1!)**
+- VERCEL: **griblje-museum.vercel.app/api/qa = ok:True + 200/200 + qa-p200 pass:True** (poll-2-po-~90-s!) — produkcija-P200-POTRJENA ✓
+- VERIFIKATOR: **p200_parish_death_1877_04106.py --live = VSI-PASS ✓** (I1–I10 + LIVE-produkcija-×2: passed=200 + qa-p200-pass!)
+- korpus po P200: **1355/200+136(04106)+520/191/94(p80)·93(korpus)** — PT-luknja-18 (136/1355-regenerirana!)
+- **★★★ PREDZGODOVINA-LINIJA: 9/29-LET — POPOLNOMA-ZELENA-PRODUKCIJA!** → **P201-LEAD: 1876 (10/29)**: s134–s142-probe; **s142-Dez-tail-ŽE-PREBRAN-ta-seji** (10-vrstic: Griblje-×3: z4-h44-Barbara-KAVČIČ[?]-**24-URE**-Vesperstbrand[?]-Dez-24/25 + z6-h75-STUBLER-50⅔J-Asthma + z7-h16-PILAH[~Spilak?]-3½J-Hirnentzündung!) + '1876.'-glava-v-z1-s142! → 1876 ≈ 60-85-?-vpisov; 1876-začetek = išče-nazaj + **krstna-04104 (1871–1885, ×200-skenov!) + poročna-04455 (1873–1885!) čakata**
