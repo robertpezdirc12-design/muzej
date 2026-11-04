@@ -7544,3 +7544,14 @@ Stage Summary:
 - korpus po P198: **1324/198+105(04106)+520/191/94(p80)·93(korpus)** — PT-luknja 18
 - **★★★ PREDZGODOVINA-LINIJA-7/29-LET!** (mrliška-04106: 1885 ✓ + 1884 ✓ + 1883 ✓ + 1882 ✓ + 1881 ✓ + 1880 ✓ + 1879 ✓ → 1878–1857-čaka; krstna-04104-1871–1885-×200-skenov-čaka; poročna-04455-1873–1885-čaka!)
 - P199-LEAD: mrliška-04106-leto-**1878** (s150–s157-probe! — **s157-ordinali-73–82-KROP-ŽE-POTRJENI-×2-seji** + **s158-tail-z83–z85-2-viri** (KROP + RE-READ!) → 1878 ≈ 85-vpisov; 1878-začetek = z1-išče-nazaj + krstna-04104-čaka!)
+
+## P198 deploy-status · 2025-11-04 — ★ PRODUKCIJA-POTRJENA (198/198!)
+
+- PUSH: **GitHub 195b4e1..40f0556 ✓** (nov-PAT `ghp_lNX3…` — api/user-200 + push-OK; repo-praksa: žeton-v-origin-URL!) — remote-head-40f0556 == lokalni-40f0556 (1:1!)
+- VERCEL: **griblje-museum.vercel.app/api/qa = ok:True + 198/198 + qa-p198 pass:True** (poll-po-~90-s-deployu!) — produkcija-P198-POTRJENA ✓
+- VERIFIKATOR: **p198_parish_death_1879_04106.py --live = VSI-PASS ✓** (I1–I10 + LIVE-produkcija-×2: passed=198 + qa-p198-pass!)
+- **GitLab: ✗ NEUSPEŠEN — ŽETON-NE-OBSTAJA-VEČ** (P198-sandbox-wipe-pobrisal-`~/.git-credentials` + re-clone-izgubil-remote-'gitlab'! API-brez-auth-404 = privaten-projekt; `git ls-remote`-brez-žetona-fatal) → **potreben-NOV-glpat-od-uporabnika** (vzorec-P170-rotacija: nov-žeton-v-remote-URL = 1-ukaz-push); **GitLab-zaostaja-2-commits** (40f0556-P198 + deploy-status)
+- TROJNA-USKLAJENOST: **(2/3)-ZELENA: lokalni-40f0556 == GitHub-40f0556 ✓** · GitLab-≤195b4e1-ČAKA-žeton
+- LEKCIJA-#17: **žetoni-NE-preživijo-sandbox-wipe** (kot-/tmp!) — credential-store-NI-trajen; deploy-status-vnos-VEDNO-dokumentira-žeton-stanje; GitLab-mirror-2.-obnova-vzorec-P170 (push-v-2.-kanalu-po-novem-žetonu!)
+- korpus po P198: **1324/198+105(04106)+520/191/94(p80)·93(korpus)** — PT-luknja-18 (105/1324-regenerirana!)
+- **★★★ PREDZGODOVINA-LINIJA: 7/29-LET — POPOLNOMA-ZELENA-PRODUKCIJA!** → **P199-LEAD: 1878 (8/29)**: s150–s157-probe; **s157-ordinali-73–82-ŽE-POTRJENI-×2-seji** + **s158-tail-z83–z85-2-viri** (KROP + RE-READ!) → 1878 ≈ 85-vpisov; 1878-začetek = z1-išče-nazaj + **krstna-04104 (1871–1885, ×200-skenov!) + poročna-04455 (1873–1885!) čakata**
