@@ -34,7 +34,7 @@ EXPECTED_EXCLUDED = 8
 EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 10
 GRIBLJE_HOUSES = "19,21,32,45,56,58,69,89,98"
-VITALS_TOTAL = 1324             # 1205 + 14! (P190 = KONEC-KNJIGE!)
+VITALS_TOTAL = 1347             # 1205 + 14! (P190 = KONEC-KNJIGE!)
 BLOKI_04894 = 520               # 506 + 14! (P190 = KONEC-KNJIGE!)
 P80_HOUSES = 86                  # TS-filter: 83 + h98 + h89 + h45! EDINA nova 1893 (+h89/h45 prek mrliške!)
 P80_PY_HOUSES = 86               # python-filter (širši 1897): 84 + h98 + h89!
@@ -244,7 +244,7 @@ def main():
     qa = open(QA_TS, encoding="utf-8").read()
     check("I12 qa-p159 sekcija (160. kontrola)", "qa-p159-parish-death-1893" in qa, "")
     check("I12b qa-pini 886/187/88 (78×+12×+14×) (P165)",
-          qa.count("!== 1324") >= 60 and qa.count("!== 446") >= 12 and qa.count("p80Houses.size !== 93") >= 12,
+          qa.count("!== 1347") >= 60 and qa.count("!== 446") >= 12 and qa.count("p80Houses.size !== 93") >= 12,
           f"{qa.count('!== 837')}/{qa.count('!== 167')}/{qa.count('p80Houses.size !== 87')}")
     check("I12c qa-p158-SANACIJA (82 vrstic!)", qa.count("82 vrstic") >= 10 and "P159-SANACIJA" in qa, "")
     check("I12d qa guard 1899 (bloki 1899+ ne!)", "1916+-mrliški bloki že v korpusu" in qa, "")
