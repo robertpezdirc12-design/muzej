@@ -7575,3 +7575,11 @@ Stage Summary:
 - korpus po P199: **1347/199+128(04106)+520/191/94(p80)·93(korpus)** — PT-luknja 18
 - **★★★ PREDZGODOVINA-LINIJA-8/29-LET!** (mrliška-04106: 1885 ✓ + 1884 ✓ + 1883 ✓ + 1882 ✓ + 1881 ✓ + 1880 ✓ + 1879 ✓ + 1878 ✓ → 1877–1857-čaka; krstna-04104-1871–1885-×200-skenov-čaka; poročna-04455-1873–1885-čaka!)
 - P200-LEAD: mrliška-04106-leto-**1877** (9/29! — s142–s149-probe! — **s148-tail-Oct–Dez-ŽE-PREBRAN-ta-seja** (8-vrstic: Griblje-×1-z4-Katharina-h18[?]-Nov + podpis-prehod-'Hogy/Cooperator'→'Franz-Dougan'!) + **s148-ordinali-NEVIDNI** (scan-edge — KROP-štetje-iz-vsebin!) → 1877 ≈ 85-?-vpisov; 1877-začetek = z1-išče-nazaj + krstna-04104-čaka!)
+
+## P199 deploy-status · 2025-11-04 — ★ PRODUKCIJA-POTRJENA (199/199!)
+
+- PUSH: **GitHub 1dca576..95ae522 ✓** + **GitLab 1dca576..95ae522 ✓** (nov-glpat-živ! remote-'gitlab'-repo-praksa!) — **TROJNA-USKLAJENOST-@-95ae522: lokalni == GitHub == GitLab (1:1:1!)**
+- VERCEL: **griblje-museum.vercel.app/api/qa = ok:True + 199/199 + qa-p199 pass:True** (poll-po-~100-s-deployu!) — produkcija-P199-POTRJENA ✓
+- VERIFIKATOR: **p199_parish_death_1878_04106.py --live = VSI-PASS ✓** (I1–I10 + LIVE-produkcija-×2: passed=199 + qa-p199-pass!)
+- korpus po P199: **1347/199+128(04106)+520/191/94(p80)·93(korpus)** — PT-luknja-18 (128/1347-regenerirana!)
+- **★★★ PREDZGODOVINA-LINIJA: 8/29-LET — POPOLNOMA-ZELENA-PRODUKCIJA!** → **P200-LEAD: 1877 (9/29)**: s142–s149-probe; **s148-tail-Oct–Dez-ŽE-PREBRAN-ta-seji** (8-vrstic: Griblje-×1-Katharina-h18[?]-Nov + podpis-prehod-'Hogy/Cooperator'→'Franz-Dougan'!) + **s148-ordinali-NEVIDNI** (scan-edge — KROP-štetje-iz-vsebin!) → 1877 ≈ 85-?-vpisov; 1877-začetek = z1-išče-nazaj + **krstna-04104 (1871–1885, ×200-skenov!) + poročna-04455 (1873–1885!) čakata**
