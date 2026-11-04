@@ -22,9 +22,9 @@ TOP_ZONE = 330     # y-center < TOP_ZONE = stran-glava/tabela-glava
 BOT_ZONE_FRAC = 0.965
 HALF = 72          # snap pol-višina vrstice za izreze
 # markerji (velike letnice med vrsticami) — vizualno potrjeno:
-#   s55: "1896." na y≈1355–1377 (med zap 52 in zap 1)
+#   s55: "1896." na y≈1375–1377 (med zap 52 in zap 1)
 #   s60: "1897." na y≈1485–1545 (med zap 60 in zap 1)
-DROP_MARKERS = {"s55": [(1355, 1377)], "s60": [(1485, 1545)]}
+DROP_MARKERS = {"s55": [(1375, 1377)], "s60": [(1485, 1545)]}
 
 
 def raw_groups(a, w, h):
