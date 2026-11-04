@@ -57,7 +57,7 @@ EYES = {
          "old": {"p1": [1121, 1140]}, "artifact": "4→1 (−300); pass1 edini", "renumOffset": 300,
          "note": "annRecords 1135/1136/1138 'auf transportirt 1844' = prečrtane 1435/1436/1438 (+300) — neodvisen dokaz zamika"},
     75: {"true": [1441, 1460], "blatt": "II", "cls": "mainRun",
-         "crossed": [1443, 1444, 1446, 1451],
+         "crossed": [1443, 1461, 1446, 1451],
          "old": {"p1": [1441, 1460], "p2": [1441, 1460]},
          "note": "stari passi pravilna; P59 strip 941–960 napačen (odrez); v3 16 vrstic pravilnih"},
     76: {"true": [1461, 1480], "blatt": "II", "cls": "mainRun",
