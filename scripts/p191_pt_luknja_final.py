@@ -8,7 +8,7 @@ Ta verifikator potrjuje dokaz research/issue17/pt-luknja-18-final.json
 (generira ga scripts/tmp/p191-pt-luknja.ts iz src/data/atlas/parish.ts):
 
   I1  datoteka obstaja, phase == P191, definicija gap = 18 hiš (42–60 brez h41/h50)
-  I2  korpus FINALNO: vitals 1347 · 04105=502 · 04455=197 · 04106=83 · 04894=520
+  I2  korpus FINALNO: vitals 1355 · 04105=502 · 04455=197 · 04106=136 · 04894=520
   I3  gap-status: 18/18 hiš Z dokazi — pravih lukenj (0 blokov) = 0
   I4  konsistentnost na hišo: blocksTotal == vsota po knjigah == len(years)
       in firstYear <= lastYear
@@ -33,8 +33,8 @@ LIVE_URL = "https://griblje-museum.vercel.app/api/qa"
 
 EXPECTED_GAP = ["42", "43", "44", "45", "46", "47", "48", "49",
                 "51", "52", "53", "54", "55", "56", "57", "58", "59", "60"]
-EXPECTED_CORPUS = {"04105": 502, "04455": 197, "04106": 128, "04894": 520}  # POSODABLJENO P196: 04106 64 → 83 (+19 blokov 1881!)
-VITALS_TOTAL = 1347
+EXPECTED_CORPUS = {"04105": 502, "04455": 197, "04106": 136, "04894": 520}  # POSODABLJENO P200: 04106 83 → 136 (+8 blokov 1877!)
+VITALS_TOTAL = 1355
 
 
 def load():
@@ -61,7 +61,7 @@ def check(report):
 
     # I2
     corpus = report["corpus"]
-    ok("I2 korpus FINALNO (vitals 1347 · 04105=502 · 04455=197 · 04106=83 · 04894=520)",
+    ok("I2 korpus FINALNO (vitals 1355 · 04105=502 · 04455=197 · 04106=136 · 04894=520)",
        corpus["vitalsTotal"] == VITALS_TOTAL
        and {k: v for k, v in corpus["byBook"].items()} == EXPECTED_CORPUS,
        str(corpus["byBook"]))

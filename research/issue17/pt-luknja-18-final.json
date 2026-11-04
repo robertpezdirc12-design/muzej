@@ -27,15 +27,15 @@
   "note": "p80-skripta-set 18 (PT_GAP_HOUSES) ≠ qa doc-list 15 (P80_PT_GAP = 18 brez h45/h47/h55 — dokazi geometrija/filtra)"
  },
  "corpus": {
-  "vitalsTotal": 1347,
+  "vitalsTotal": 1355,
   "byBook": {
    "04105": 502,
    "04894": 520,
-   "04106": 128,
+   "04106": 136,
    "04455": 197
   },
   "housesDistinctAll": 95,
-  "housesNote": "raw-distinct v HOUSE_VITALS = 95; p80-vzorec = 94 · korpus = 93 (pogoji filtra v qa-parish I7) | P197: +13-blokov-1880 (04106 83→96, vitals 1302→1315) | P198: +9-blokov-1879 (04106 96→105, vitals 1315→1324; sanacija-re-run!) | P199: +23-blokov-1878 (04106 105→128, vitals 1324→1347)"
+  "housesNote": "raw-distinct v HOUSE_VITALS = 95; p80-vzorec = 94 · korpus = 93 (pogoji filtra v qa-parish I7) | P197: +13-blokov-1880 (04106 83→96, vitals 1302→1315) | P198: +9-blokov-1879 (04106 96→105, vitals 1315→1324; sanacija-re-run!) | P199: +23-blokov-1878 (04106 105→128, vitals 1324→1347) | P200: +8-blokov-1877 (04106 128→136, vitals 1347→1355)"
  },
  "gapStatus": {
   "total": 18,
