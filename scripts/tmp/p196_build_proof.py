@@ -234,13 +234,13 @@ proof = {
     "H12": "M/W-nit-hipoteza-[~Masern-pustl?]-NE-potrjena — samo-glif-družina-dokumentirana (cf. P195-Waſſerſucht-forenzika-rešitev)!"
   },
   "kaskada": {
-    "vitals": "1283 → 1406 (+19 blokov 04106-1881!)",
+    "vitals": "1283 → 1444 (+19 blokov 04106-1881!)",
     "04106": "64 → 83 (16×-1885 + 21×-1884 + 11×-1883 + 16×-1882 + 19×-1881!)",
     "04894": "520-NESPREMENJENO",
     "p80": "94-NESPREMENJENO",
     "korpus": "93-NESPREMENJEN",
     "pt_luknja": "18-NESPREMENJENA (h50-izven-vzorca-42–60-brez-h50-1881!)",
-    "qa": "qa-p196 = 196.-kontrola + qa-p195-števec-1283→1406-sanacija (counting-upgrade!)"
+    "qa": "qa-p196 = 196.-kontrola + qa-p195-števec-1283→1444-sanacija (counting-upgrade!)"
   },
   "lead": {
     "P197": "mrliška 04106, leto 1880 (s171-top-tail-z72-ŽE-viden: Jože-Valčič?-Vranoviče-h14-72J?-Wassersucht?-F.Jančar → 1880-konec = z72 → 1880 = s164?–s171 + probe-s164/165 [hipoteza-z-nazaj-štetjem ~72-vrstic!])",
