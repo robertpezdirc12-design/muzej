@@ -214,13 +214,13 @@ dokaz = {
         "H12": "z2-starost-'5 [~8?]'-meseci — Kurrent-5/8-glyph-zmeda-dokumentirana!",
     },
     "kaskada": {
-        "vitals": "1267 → 1315 (+16 blokov 04106-1882!)",
+        "vitals": "1267 → 1324 (+16 blokov 04106-1882!)",
         "04106": "48 → 64 (16×-1885 + 21×-1884 + 11×-1883 + 16×-1882!)",
         "04894": "520-NESPREMENJENO",
         "p80": "94-NESPREMENJENO",
         "korpus": "93-NESPREMENJEN",
         "pt_luknja": "18-NESPREMENJENA (h50-izven-vzorca-42–60-brez-h50!)",
-        "qa": "qa-p195 = 195.-kontrola + 106×-1267→1315 + p192-QA (bloki-48→64 + leta-{1882,1883,1884,1885}!) + stale-sanacija",
+        "qa": "qa-p195 = 195.-kontrola + 106×-1267→1324 + p192-QA (bloki-48→64 + leta-{1882,1883,1884,1885}!) + stale-sanacija",
     },
     "lead": {
         "P196": "mrliška 04106, leto 1881 (s174–s180-probe!) — 1881-tail-s180-top-ŽE-viden ('1882.'-glava + restart-z1 = meja-1881/82-na-s180-TOP → 1881 = s174–s179 + probe!)",

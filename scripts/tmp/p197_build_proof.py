@@ -204,7 +204,7 @@ proof = {
         "krop_seja_2025-11-03": "10-cropov (p197_crop.mjs) + 2-polna-leva-stran — VSI-izreki-v-KROP-poljih!",
     },
     "kaskada": {
-        "vitals": "1302 → 1315 (+13-blokov-04106-1880!)",
+        "vitals": "1302 → 1324 (+13-blokov-04106-1880!)",
         "04106": "83 → 96 (16×-1885 + 21×-1884 + 11×-1883 + 16×-1882 + 19×-1881 + 13×-1880!)",
         "04894": "520-NESPREMENJENO",
         "p80": "94-NESPREMENJENO",
