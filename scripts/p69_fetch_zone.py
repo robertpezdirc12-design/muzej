@@ -3,7 +3,7 @@
 # Prenese strani iz VAČ (uodid 373415, docid 41780) in izreže LEVO TABELARNO
 # CONO (Nro. des Blattes + Nro. der Parzelle + margini) — 4× Lanczos upscale,
 # JPEG q92. ŠIROK izrez (x=0..430) popravlja P59 past "odrezane vodilne števke"
-# (p76: 161-180 je bil odrez 1472-1480; p87: 161-180 je bil odrez 1681-1700).
+# (p76: 161-180 je bil odrez 1484-1480; p87: 161-180 je bil odrez 1681-1700).
 #
 # Vhod:  VAČ https://vac.sjas.gov.si/vac/util/pdfPageImage?uodid=373415&docid=41780&page=N
 # Izhod: /tmp/p69/raw/<page>.jpg  (posnetek v izvorni ločljivosti)
