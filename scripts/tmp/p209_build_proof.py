@@ -106,10 +106,10 @@ proof = {
         "H8": "s64–s68-1867-kontekst-SAMO-za-mejo (vpisi-NE-v-korpus-1868!)",
     },
     "kaskada": {
-        "before": {"vitals": 1531, "04106": 279, "faz": 208},
-        "after": {"vitals": 1531 + 13, "04106": 279 + 13, "faz": 209},
+        "before": {"vitals": 1544, "04106": 279, "faz": 208},
+        "after": {"vitals": 1544 + 13, "04106": 279 + 13, "faz": 209},
         "yearset": "+1868",
-        "verifier_patch": "p19x–p208 (kumulativni-1531→1511 + 279→292 + yearset-+1868)",
+        "verifier_patch": "p19x–p208 (kumulativni-1544→1511 + 279→292 + yearset-+1868)",
     },
     "lead": {
         "P210": "1867 — s69-TAIL-×7-ŽE-VLM-PREBRANA (zap-64–70-Nov-18-glava-+December + 'vsota'-'1|8'!) + s84/s85-ŽE-FETCHAN+VLM (zap-38–63-kontekst!) → probe-s078–s086!",

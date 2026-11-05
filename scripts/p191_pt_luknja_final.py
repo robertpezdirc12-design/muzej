@@ -33,8 +33,8 @@ LIVE_URL = "https://griblje-museum.vercel.app/api/qa"
 
 EXPECTED_GAP = ["42", "43", "44", "45", "46", "47", "48", "49",
                 "51", "52", "53", "54", "55", "56", "57", "58", "59", "60"]
-EXPECTED_CORPUS = {"04105": 502, "04455": 197, "04106": 312, "04894": 520}  # POSODABLJENO P200: 04106 83 → 136 (+8 blokov 1877!)
-VITALS_TOTAL = 1531
+EXPECTED_CORPUS = {"04105": 502, "04455": 197, "04106": 325, "04894": 520}  # POSODABLJENO P200: 04106 83 → 136 (+8 blokov 1877!)
+VITALS_TOTAL = 1544
 
 
 def load():
