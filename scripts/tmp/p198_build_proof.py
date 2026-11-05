@@ -201,7 +201,7 @@ proof = {
         "H15": "z27-priimek-'Peglic?[~Pegelj/~Pezdirc]' + z28-isto — priimkov-varianta-NERAZREŠENA [~] (hiši-h44/h40-JASNI!)",
     },
     "kaskada": {
-        "vitals": "1315 → 1461 (+9-blokov-04106-1879!)",
+        "vitals": "1315 → 1472 (+9-blokov-04106-1879!)",
         "04106": "96 → 105 (16×-1885 + 21×-1884 + 11×-1883 + 16×-1882 + 19×-1881 + 13×-1880 + 9×-1879!)",
         "04894": "520-NESPREMENJENO",
         "p80": "94-NESPREMENJENO",

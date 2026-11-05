@@ -12,8 +12,8 @@
 #         1501–1520 (2× bajtno); vrstice 5–14 (1505–1514) rdeče
 #         prečrtane (opomba); oči na 4× izrezu (ta seja, worklog):
 #         r1–r4 = 1501–1504 jasno, r5–r8 prečrtane; kontinuiteta
-#         p76→p77→p78 = 1461–1480 → 1481–1500 → 1501–1520 (strip
-#         p77 2× bajtno 1481–1500); karta KO 1544: blok 1461–1500 ima
+#         p76→p77→p78 = 1472–1480 → 1481–1500 → 1501–1520 (strip
+#         p77 2× bajtno 1481–1500); karta KO 1544: blok 1472–1500 ima
 #         12 poligonov, blok 1121–1200 (P38-era branje p74/p76/p77) 0.
 #         → v2 p78 vrstice 1603/1604/1605 = P38 pass1+pass2 napačno
 #         (Kurrent 5→6); prave: 1503/1504/1505.
@@ -110,7 +110,7 @@
 #      1501–1520 bajtno + strip 2× p93 r11–20 == 1911–1920 ∧ r1–10 ==
 #      garbled set + p77 strip == 1481–1500 + p87 pass2 == 1681–1700
 #      + arbitražni nizi ("1501–1520", "1901–1907") + karta (1901–1907
-#      ⊆ poligoni; 1503–1505, 1681–1700 ∉; 1121–1200 ∅; 1461–1500 ≥ 10)
+#      ⊆ poligoni; 1503–1505, 1681–1700 ∉; 1121–1200 ∅; 1472–1500 ≥ 10)
 #   I3/A kolizije renumerifikacije: 1503–1505, 1904, 1681–1700 proste;
 #      1903/1905 samo p98; 11 p87 vrstic koordinatno == p36 (lažna geom.)
 #   I4/B flagi == P66 (5 base, 11 vrstic, bajtno); M per flag ne-prazna
@@ -382,8 +382,8 @@ def main():
             fail(f"I2 karta IMA poligon {n} (pričakovano brez)")
     if any(str(n) in geo_exact for n in range(1121, 1201)):
         fail("I2 karta ima točne poligone v 1121–1200 (pričakovano prazno)")
-    if sum(1 for n in range(1461, 1501) if str(n) in geo_exact) < 10:
-        fail("I2 karta 1461–1500 < 10 točnih poligonov (pričakovana gostota)")
+    if sum(1 for n in range(1472, 1501) if str(n) in geo_exact) < 10:
+        fail("I2 karta 1472–1500 < 10 točnih poligonov (pričakovana gostota)")
 
     # ————— I3/A: kolizije renumerifikacije + lažna geometrija p87 —————
     old_nums = {m["old"] for m in RENUM}
@@ -632,8 +632,8 @@ def main():
         "(disciplina P56–P66). (A) SKOK II·IV (1603/1604) = ARTIFAKT "
         "DVOJNE KURRENT ZAMENJAVE: p78 (Blatt II, Wüstung 'Pod Grabino') "
         "prave številke 1501–1520 (strip 2× bajtno, vrstice 5–14 rdeče "
-        "prečrtane, kontinuiteta 1461–1480→1481–1500→1501–1520, karta: "
-        "1461–1500 ima 12 poligonov / 1121–1200 PRAZNO), v2 1603–1605 = "
+        "prečrtane, kontinuiteta 1472–1480→1481–1500→1501–1520, karta: "
+        "1472–1500 ima 12 poligonov / 1121–1200 PRAZNO), v2 1603–1605 = "
         "P38 napaka 5→6 → prave 1503/1504/1505; p93 (Blatt IV) prave "
         "1901–1920 (strip 2× r11–20 bajtno, oči r1–8 = 1901–1908 z rdečimi "
         "prečrtami 1901–1904/1906–1907, karta: blok 1901–1907 ima TOČNO 7 "
@@ -680,8 +680,8 @@ def main():
         "discipline). (A) THE II·IV SKIP (1603/1604) = A DOUBLE KURRENT "
         "SUBSTITUTION ARTIFACT: p78 (Blatt II, Wüstung 'Pod Grabino') "
         "true numbers 1501–1520 (strip 2 passes byte-exact, rows 5–14 "
-        "red-crossed, continuity 1461–1480→1481–1500→1501–1520, map: "
-        "1461–1500 has 12 polygons / 1121–1200 EMPTY), v2 1603–1605 = "
+        "red-crossed, continuity 1472–1480→1481–1500→1501–1520, map: "
+        "1472–1500 has 12 polygons / 1121–1200 EMPTY), v2 1603–1605 = "
         "P38 error 5→6 → true 1503/1504/1505; p93 (Blatt IV) true "
         "1901–1920 (strip 2 passes r11–20 byte-exact, eyes r1–8 = "
         "1901–1908 with red crossings 1901–1904/1906–1907, map: block "
@@ -745,7 +745,7 @@ def main():
         },
         "mapWitness": {
             "present": {"1901–1907": 7, "1903": True, "1904": True,
-                        "1905": True, "1461–1500": "≥10"},
+                        "1905": True, "1472–1500": "≥10"},
             "absent": ["1503", "1504", "1505", "1681–1700", "1121–1200"],
             "note": "16xx poligoni (1603, 1604/1-3, 1605) na tretji lokaciji "
                     "(v2 lažna dodelitev fuzijam); 19xx ~1.6 km JugZ",
@@ -890,7 +890,7 @@ def main():
             "I1 vhodni pini (27× sha256 + števci 1093/800/211/39/110/101)",
             "I2/A dokazi p78/p93/p87 (strip 2× bajtno; arbitražni nizi; "
             "karta 1901–1907 ✓ / 1503–1505, 1681–1700, 1121–1200 ∅ / "
-            "1461–1500 ≥ 10)",
+            "1472–1500 ≥ 10)",
             "I3/A kolizije renumerifikacije (0) + lažna geometrija p87 "
             "(11 vrstic == p36 koordinate)",
             "I4/B flagi == P65 bajtno (5 base, 11 vrstic); M ne-prazna ∧ "

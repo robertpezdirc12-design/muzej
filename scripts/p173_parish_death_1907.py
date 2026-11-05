@@ -30,7 +30,7 @@ EXPECTED_ANOMALIES = 12
 EXPECTED_CROSSCHECKS = 5
 GRIBLJE_HOUSES = "1,10,10,11,14,19,21,25,28,31,32,49,49,52,60,65,74,75,87,91"
 GRIBLJE_ZAPS = [1, 2, 4, 5, 9, 11, 13, 18, 27, 32, 36, 37, 39, 53, 55, 56, 57, 58, 63, 65]
-VITALS_TOTAL = 1461             # 1205 + 14! (P190 = KONEC-KNJIGE!)
+VITALS_TOTAL = 1472             # 1205 + 14! (P190 = KONEC-KNJIGE!)
 BLOKI_04894 = 520               # 506 + 14! (P190 = KONEC-KNJIGE!)
 P80_HOUSES = 92                  # 91 + h75!
 KORPUS_HOUSES = 93               # NESPREMENJENO (h75/h10-ŽE-v-korpusu!)
@@ -267,7 +267,7 @@ def main():
     qa = open(QA_TS, encoding="utf-8").read()
     check("I10a qa-p173 = 174. kontrola", "qa-p173-parish-death-1907" in qa, "")
     check("I10b qa-parish pini 996 + 297 (P173-kaskada!)",
-          qa.count("!== 1461") >= 91 and qa.count("!== 446") >= 25,
+          qa.count("!== 1472") >= 91 and qa.count("!== 446") >= 25,
           f"996×{qa.count('!== 1032')}/297×{qa.count('!== 333')}")
     check("I10c qa-parish guardi ≥1916 (21× — P173-kaskada + p173-lastni!)",
           qa.count(">= 1916") >= 28, f"{qa.count('>= 1915')}")

@@ -13,7 +13,7 @@ for d in (OUT, CELLS):
 
 # (sken, y0, y1, zap) — L-band meje (gap-vrstice ročno)
 ROWS = [
-    (41, 1317, 1461, 5),
+    (41, 1317, 1472, 5),
     (41, 1575, 1712, 7),
     (42, None, None, 19),   # L11 iz lines.json
     (43, None, None, 25),   # L5
