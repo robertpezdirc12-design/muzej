@@ -19,7 +19,7 @@ STRATA: parcela z lokalno gostoto temnega (bbox±100 px) ≥ 0.06 je na narisani
 
 VHODI (vsi committed):
   public/atlas/n83-a0{2,3,4,5}.jpg
-  research/georef-n83/gurs/parceles-{0..4}.json           (KO 1574, P10 prenos)
+  research/georef-n83/gurs/parceles-{0..4}.json           (KO 1581, P10 prenos)
   research/georef-n83/gurs/parceles-ko1552-ch-{0..2}.json (KO 1552, P47 prenos)
   research/georef-n83/ezkn-ix24.json                      (celice eZKN 1:2880)
   research/issue17/neatline-georef.json                   (P46 afine + s̄)
@@ -95,9 +95,9 @@ TR = Transformer.from_crs("EPSG:3794", "EPSG:4326", always_xy=True)
 
 
 def load_parcels() -> list[dict]:
-    """KO 1574 (parceles-0..4) + KO 1552 v bboxu ch (parceles-ko1552-ch-0..2)."""
+    """KO 1581 (parceles-0..4) + KO 1552 v bboxu ch (parceles-ko1552-ch-0..2)."""
     out = []
-    files = [(f"research/georef-n83/gurs/parceles-{i}.json", 1574) for i in range(5)]
+    files = [(f"research/georef-n83/gurs/parceles-{i}.json", 1581) for i in range(5)]
     files += [(f"research/georef-n83/gurs/parceles-ko1552-ch-{i}.json", 1552) for i in range(3)]
     for rel, ko in files:
         d = json.loads((REPO / rel).read_text(encoding="utf-8"))
@@ -521,13 +521,13 @@ def main() -> None:
         },
         "inputs": {
             "images": [f"public/atlas/n83-a0{n}.jpg" for n in (2, 3, 4, 5)],
-            "parcelsKo1574": [f"research/georef-n83/gurs/parceles-{i}.json" for i in range(5)],
+            "parcelsKo1581": [f"research/georef-n83/gurs/parceles-{i}.json" for i in range(5)],
             "parcelsKo1552ch": [f"research/georef-n83/gurs/parceles-ko1552-ch-{i}.json" for i in range(3)],
             "cells": "research/georef-n83/ezkn-ix24.json (VKIX24 cf/dg/cg/ch)",
             "affines": "research/issue17/neatline-georef.json (P46) + model.ts georef-a02",
             "wfsProvenance": {
                 "url": "https://ipi.eprostor.gov.si/wfs-si-gurs-kn/wfs (SI.GURS.KN:PARCELE)",
-                "ko1574Fetch": "scripts/tmp/p10-download-parcels.sh (P10)",
+                "ko1581Fetch": "scripts/tmp/p10-download-parcels.sh (P10)",
                 "ko1552Fetch": "scripts/p47_fetch_ko1552.sh (bbox celice ch + marža; 1113 parcel, 2026-10-13)",
             },
         },
@@ -550,13 +550,13 @@ def main() -> None:
             "I7": "izrezi obstajajo, sha256 v izpisu — " + ("PASS" if not any("I7" in f for f in FAILURES) else "FAIL"),
         },
         "status": "",  # izpolnjeno spodaj
-        "methodSi": ("P47 (2026-10-13): sodobne parcele (GURS eZKN WFS; KO 1574 2117 + KO 1552 "
+        "methodSi": ("P47 (2026-10-13): sodobne parcele (GURS eZKN WFS; KO 1581 2117 + KO 1552 "
                       "1113 v bboxu ch) preslikane prek P46 afin v pikselski prostor skenov; "
                       "vzorčenje oboda 1,5 px; črnilo = temno (prag 195) v plus-obliki 3×3; "
                       "strata po lokalni gostoti temnega ≥ 0.06 (DRAWN) — EMPTY = nenarisano "
                       "1825 (WAIDENDORF); kontrole: zamiki 100/200/400 px × 8 smeri; A02 pod "
                       "GEOTRUTH mejami kot kontrola metode."),
-        "methodEn": ("P47 (2026-10-13): modern parcels (GURS eZKN WFS; KO 1574 2117 + KO 1552 "
+        "methodEn": ("P47 (2026-10-13): modern parcels (GURS eZKN WFS; KO 1581 2117 + KO 1552 "
                       "1113 within ch bbox) mapped through the P46 affines into scan pixel "
                       "space; perimeter sampling at 1.5 px; ink = dark (threshold 195) in a "
                       "plus-shaped 3×3; strata by local dark density ≥ 0.06 (DRAWN) — EMPTY = "
@@ -566,7 +566,7 @@ def main() -> None:
 
     rs = {s: sheets[s]["drawn"]["residualM"]["median"] for s in SHEETS}
     out["findings"] = [
-        ("Neodvisna validacija P46 afin: sodobne parcele KO 1574/1552 se registrirajo "
+        ("Neodvisna validacija P46 afin: sodobne parcele KO 1581/1552 se registrirajo "
          "na narisane črte 1825 z mediano residuala "
          f"{rs['A03']}/{rs['A04']}/{rs['A05']} m (A03/A04/A05), p90 ≤ "
          f"{max(sheets[s]['drawn']['residualM']['p90'] for s in ('A03','A04','A05'))} m "

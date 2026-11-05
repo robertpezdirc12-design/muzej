@@ -42,7 +42,7 @@ P59 = os.path.join(ROOT, "research/issue17/ps-blatt-headers.json")
 P60_EV = os.path.join(ROOT, "research/issue17/ps-perblatt-attribution.json")
 P60_RT = os.path.join(ROOT, "src/data/atlas/ps-perblatt-attribution.json")
 BH_RT = os.path.join(ROOT, "src/data/atlas/ps-blatt-headers.json")
-GURS = os.path.join(ROOT, "research/georef-n83/gurs/parcels-ko1574-merged.json")
+GURS = os.path.join(ROOT, "research/georef-n83/gurs/parcels-ko1581-merged.json")
 OUT_EV = os.path.join(ROOT, "research/issue17/ps-unit-semantics.json")
 OUT_RT = os.path.join(ROOT, "src/data/atlas/ps-unit-semantics.json")
 
@@ -317,13 +317,13 @@ def main():
     ev = {
         "task": "P61 — unit-semantics moda B: merjena karakterizacija (odprta točka P60 #1)",
         "date": "2026-10-14",
-        "principle": ("moda B merjena s permutacijsko kontrolo na GURS parcelah KO 1574: napačni "
+        "principle": ("moda B merjena s permutacijsko kontrolo na GURS parcelah KO 1581: napačni "
                       "številčni join ZAVRŽEN, delna površina neuporabna — moda B = drugačna "
                       "registracijska konvencija [~], identiteta enote ODPRTA; deterministične "
                       "FNV-1a točke (prenosljivo Python/TS) po receptu P55 kontrol"),
         "inputs": {
             "v2": "research/issue17/ps-parcels-geo-v3.json (rowsEvidence 1079; P68 v3 — sha256 == P60)",
-            "gurs": "research/georef-n83/gurs/parcels-ko1574-merged.json (2117 parcel, P47)",
+            "gurs": "research/georef-n83/gurs/parcels-ko1581-merged.json (2117 parcel, P47)",
             "p59": "research/issue17/ps-blatt-headers.json (pageAttribution)",
             "p60": "research/issue17/ps-perblatt-attribution.json (unitSemantics + v2Sha256)",
         },

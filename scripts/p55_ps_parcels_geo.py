@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 P55 (issue #13/§PS; PS-recap »next« — kontrola polnega prepisa) — GEOLOKACIJA
-GRUNDPARCELLEN: protokol PS 1825 ↔ sodobne parcele KO 1574 (GURS eZKN).
+GRUNDPARCELLEN: protokol PS 1825 ↔ sodobne parcele KO 1581 (GURS eZKN).
 
 PROBLEM: PS = »Protocol der Grund-Parcellen der Gemeinde GRÜBLE« (N083PS, 143
 strani): 2505 Grundparzellen + 102 Bauplätze = 2607 vrstic (rdeči tuč, str. 143).
@@ -10,7 +10,7 @@ Vsaka vrstica: parcele, hišna št., lastnik, raba, površina (Joch/Klafter) —
 a BREZ geometrije. Brez povezave na karto je protokol le besedilo.
 
 NAJDBA (P55, deterministična): številke parcel iz protokola se ŠE VEDNO
-ujemajo s sodobnimi parcelnimi številkami k.o. 1574 GRIBLJE (ZKN izvoz P47,
+ujemajo s sodobnimi parcelnimi številkami k.o. 1581 GRIBLJE (ZKN izvoz P47,
 SI.GURS.KN:PARCELE). Delitve po 1825 obstajajo (»52/1«, »52/2« — base + pripona),
 zato se povezuje po BASE številki in se površine delov seštejejo.
 
@@ -39,7 +39,7 @@ WOHNORT: stolpec se piše le ob SPREMEMBI (ditto »«) — P55 ga razširi napre
 
 Viri (vsi committed): research/issue17/ps-raw/ps-*.json (P36/P38 branja),
 research/issue17/PS-full-v2.json (izbira strani po prehodu), research/georef-n83/
-gurs/parcels-ko1574-merged.json (2117 parcel, P47 prenos).
+gurs/parcels-ko1581-merged.json (2117 parcel, P47 prenos).
 
 Izpis: research/issue17/ps-parcels-geo.json (dokaz — vse vrstice) +
 src/data/atlas/ps-parcels-geo.json (runtime — samo povezane vrstice).
@@ -49,7 +49,7 @@ Invarianti (FAIL → exit 1):
   I1  izbira strani P38 replicirana: 135 strani (pass1 58 / pass2 69 / pass3 8),
       vrstic 2590–2610 (kontrolna vsota 2607, rdeči tuč — glave/robovi [~])
   I2  povezava: vrstic 1100–1250, unikatnih pozicioniranih parcel 750–850;
-      vsaka pozicija znotraj bbox KO 1574 ± 200 m
+      vsaka pozicija znotraj bbox KO 1581 ± 200 m
   I3  površine: median modern/QK v [3.30, 3.90]; naključna kontrola (seed 42)
       višja od realnega medianа; |Δ| od 3.59665 ≤ 2 %
   I4  površinski pas ±10 %: realni delež > 2× naključne kontrole
@@ -72,7 +72,7 @@ OUT_CANONICAL = REPO / "research/issue17/ps-parcels-geo.json"
 OUT_RUNTIME = REPO / "src/data/atlas/ps-parcels-geo.json"
 RAW_DIR = REPO / "research/issue17/ps-raw"
 PS_FULL_V2 = REPO / "research/issue17/PS-full-v2.json"
-PARCELS = REPO / "research/georef-n83/gurs/parcels-ko1574-merged.json"
+PARCELS = REPO / "research/georef-n83/gurs/parcels-ko1581-merged.json"
 
 HIST_QK_M2 = 3.59665      # 1 Wiener Quadrat-Klafter [m²] (zgodovinska konstanta)
 AREA_BAND = 0.10          # ±10 % pas za površinski dokaz
@@ -152,7 +152,7 @@ def propagate_wohnort(rows: list[dict]) -> None:
 
 def main() -> int:
     check = "--check" in sys.argv
-    print("P55 — geolokacija Grundparzellen (PS 1825 ↔ parcele KO 1574)")
+    print("P55 — geolokacija Grundparzellen (PS 1825 ↔ parcele KO 1581)")
 
     # ——— vhodi ———
     rows, sel = load_chosen_rows()
@@ -351,13 +351,13 @@ def main() -> int:
         conf_counts[r["conf"]] += 1
 
     evidence = {
-        "task": "P55 (issue #13/PS; PS-recap next »kontrola polnega prepisa«) — GEOLOKACIJA GRUNDPARCELLEN: PS protokol 1825 ↔ sodobne parcele KO 1574",
+        "task": "P55 (issue #13/PS; PS-recap next »kontrola polnega prepisa«) — GEOLOKACIJA GRUNDPARCELLEN: PS protokol 1825 ↔ sodobne parcele KO 1581",
         "date": "2026-10-14",
-        "principle": "Številke parcel iz protokola PS (Gemeinde GRÜBLE, 2505 Grundparzellen + 102 Bauplätze = 2607) se še vedno ujemajo s sodobnimi parcelnimi številkami k.o. 1574 (ZKN, P47 prenos); delitve po 1825 = base + pripona (površine delov se seštejejo). Vztrajnost oštevilčenja se dokazuje z DVEH neodvisnih strani: površine (median modern/QK ≈ zgodovinski 1 QK = 3.59665 m², kontrola s premešanjem) in prostorska soslednost (zaporedne številke = sosede na terenu — odločilni test, neodvisen od VLM površin).",
+        "principle": "Številke parcel iz protokola PS (Gemeinde GRÜBLE, 2505 Grundparzellen + 102 Bauplätze = 2607) se še vedno ujemajo s sodobnimi parcelnimi številkami k.o. 1581 (ZKN, P47 prenos); delitve po 1825 = base + pripona (površine delov se seštejejo). Vztrajnost oštevilčenja se dokazuje z DVEH neodvisnih strani: površine (median modern/QK ≈ zgodovinski 1 QK = 3.59665 m², kontrola s premešanjem) in prostorska soslednost (zaporedne številke = sosede na terenu — odločilni test, neodvisen od VLM površin).",
         "inputs": {
             "psRows": "research/issue17/ps-raw/ps-*.json (P36 pass-1 + P38 pass-2/pass-3 branja)",
             "pageSelection": "research/issue17/PS-full-v2.json (pages.pass po strani — replikirano)",
-            "parcels": "research/georef-n83/gurs/parcels-ko1574-merged.json (2117 parcel KO 1574, P47)",
+            "parcels": "research/georef-n83/gurs/parcels-ko1581-merged.json (2117 parcel KO 1581, P47)",
         },
         "historicalConstant": {
             "qkM2": HIST_QK_M2,
@@ -406,7 +406,7 @@ def main() -> int:
         },
         "invariants": {
             "I1": f"izbira strani P38 replicirana: 135 strani, vrstic 2700–2800 (≈ kontrolna vsota 2607 + prebri glav/robov); za 8 pass3-strani pass1 (pass3 parsed ni na voljo, številčno nezanesljivo — odmik dokumentiran) — PASS",
-            "I2": f"povezava {len(matched)} vrstic (900–1250), {len(pos_by_base)} unikatnih parcel (750–850), vse pozicije znotraj bbox KO 1574 ± 200 m — PASS",
+            "I2": f"povezava {len(matched)} vrstic (900–1250), {len(pos_by_base)} unikatnih parcel (750–850), vse pozicije znotraj bbox KO 1581 ± 200 m — PASS",
             "I3": f"površine: median {area_median:.4f} v [3.30, 3.90], Δ ≤ 3.5 % od 3.59665; premešana kontrola (seed {SEED_AREA}) {sh_median:.4f} višja — PASS",
             "I4": f"pas ±10 %: realni {100*tight_share:.1f} % > 2× kontrola {100*sh_tight_share:.1f} % — PASS",
             "I5": f"soslednost: {len(consec_d)} parov (500–700), median {consec_median:.0f} m ≤ 100 m, ≤150 m {100*consec_share150:.1f} % ≥ 70 %, kontrola (seed {SEED_SPATIAL}) {sh_spatial_median:.0f} m ≥ 5× — PASS",
@@ -414,10 +414,10 @@ def main() -> int:
             "I7": "dokaz ⊇ runtime — povezane vrstice bajtno enake v obeh izpisih",
             "I8": "Furkofze: natanko 2 vrstici, parceli {2159, 2160}, lastnik Van Wawech — PASS",
         },
-        "statusLine": f"DISCOVERED-DETERMINISTIC — PS protokol 1825 prvič geolociran: {len(matched)} vrstic ({100*len(matched)/sel['rows']:.1f} %) povezanih s sodobnimi parcelami KO 1574 po ohranjeni številki; vztrajnost dokazana: površine median {area_median:.2f} ≈ 1 QK = {HIST_QK_M2} m² (Δ {100*(area_median/HIST_QK_M2-1):.1f} %), soslednost {consec_median:.0f} m vs naključno {sh_spatial_median:.0f} m ({sh_spatial_median/consec_median:.0f}×); per-parcelno zaupanje STRONG {conf_counts['STRONG']} / MEDIUM {conf_counts['MEDIUM']} / WEAK {conf_counts['WEAK']}; identifikacija na ravni posamezne parcele ostaja [~]",
+        "statusLine": f"DISCOVERED-DETERMINISTIC — PS protokol 1825 prvič geolociran: {len(matched)} vrstic ({100*len(matched)/sel['rows']:.1f} %) povezanih s sodobnimi parcelami KO 1581 po ohranjeni številki; vztrajnost dokazana: površine median {area_median:.2f} ≈ 1 QK = {HIST_QK_M2} m² (Δ {100*(area_median/HIST_QK_M2-1):.1f} %), soslednost {consec_median:.0f} m vs naključno {sh_spatial_median:.0f} m ({sh_spatial_median/consec_median:.0f}×); per-parcelno zaupanje STRONG {conf_counts['STRONG']} / MEDIUM {conf_counts['MEDIUM']} / WEAK {conf_counts['WEAK']}; identifikacija na ravni posamezne parcele ostaja [~]",
         "verdictSi": (
             f"P55 (2026-10-14): protokol PS »Der Grund-Parcellen der Gemeinde GRÜBLE« (1825; 2505 Grundparzellen + 102 Bauplätze = 2607) je prvič GEOLOCIRAN — "
-            f"{len(matched)} vrstic ({100*len(matched)/sel['rows']:.1f} %) se poveže s sodobnimi parcelami k.o. 1574 GRIBLJE (P47 prenos) po parcelni številki "
+            f"{len(matched)} vrstic ({100*len(matched)/sel['rows']:.1f} %) se poveže s sodobnimi parcelami k.o. 1581 GRIBLJE (P47 prenos) po parcelni številki "
             f"(delitve po 1825: base + pripona, površine delov seštejte). Vztrajnost oštevilčenja 1825→2026 dokazujeta dva neodvisna testa: "
             f"(A) POVRŠINE — median razmerja modern/QK po {len(area_pairs)} parih = {area_median:.4f} ≈ zgodovinski 1 Wiener QK = {HIST_QK_M2} m² "
             f"(Δ {100*(area_median/HIST_QK_M2-1):.2f} %); premešana kontrola (seed {SEED_AREA}) {sh_median:.4f}, pas ±10 %: {100*tight_share:.1f} % proti {100*sh_tight_share:.1f} %; "
@@ -429,7 +429,7 @@ def main() -> int:
         ),
         "verdictEn": (
             f"P55 (2026-10-14): the PS protocol »Der Grund-Parcellen der Gemeinde GRÜBLE« (1825; 2505 Grundparzellen + 102 Bauplätze = 2607) is GEOLOCATED for the first time — "
-            f"{len(matched)} rows ({100*len(matched)/sel['rows']:.1f} %) link to modern parcels of c.m. 1574 GRIBLJE (P47 export) by parcel number "
+            f"{len(matched)} rows ({100*len(matched)/sel['rows']:.1f} %) link to modern parcels of c.m. 1581 GRIBLJE (P47 export) by parcel number "
             f"(post-1825 subdivisions: base + suffix, part areas summed). The persistence of the numbering 1825→2026 is proven by two independent tests: "
             f"(A) AREAS — the median modern/QK ratio over {len(area_pairs)} pairs = {area_median:.4f} ≈ the historical 1 Wiener QK = {HIST_QK_M2} m² "
             f"(Δ {100*(area_median/HIST_QK_M2-1):.2f} %); shuffled control (seed {SEED_AREA}) {sh_median:.4f}, ±10 % band: {100*tight_share:.1f} % vs {100*sh_tight_share:.1f} %; "

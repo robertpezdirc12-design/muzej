@@ -13,7 +13,7 @@ cnt = t.query_ball_point(P_all, 60, return_length=True)
 P = P_all[cnt >= 4]
 
 mods_all = []
-for f in ['research/georef-n83/gurs/parcels-ko1574-merged.json', 'research/georef-n83/gurs/parcels-ko1552-merged.json']:
+for f in ['research/georef-n83/gurs/parcels-ko1581-merged.json', 'research/georef-n83/gurs/parcels-ko1552-merged.json']:
     for o in json.load(open(f)):
         a = o.get('a', o.get('geom_area', 9999))
         if a < 800: mods_all.append((o['lat'], o['lng']))

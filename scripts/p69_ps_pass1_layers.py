@@ -39,7 +39,7 @@ QK_M2 = 3.59665
 
 V3 = REPO / "src/data/atlas/ps-parcels-geo.json"
 V3_EV = REPO / "research/issue17/ps-parcels-geo-v3.json"  # arhiv v3 (P70 izvedba → runtime v4)
-CARD = REPO / "research/georef-n83/gurs/parcels-ko1574-merged.json"
+CARD = REPO / "research/georef-n83/gurs/parcels-ko1581-merged.json"
 TOPO = REPO / "research/issue17/ps-register-topology.json"
 P59H = REPO / "research/issue17/ps-blatt-headers.json"
 PROOF = REPO / "research/issue17/ps-pass1-layers.json"
@@ -76,7 +76,7 @@ EYES = {
          "old": {"p1": [1821, 1842]}, "artifact": "5→8 (+300)", "renumOffset": -300,
          "note": "P59 strip 1621–1640 = 5→6; oba sloja zamenjala isto števko 5; v3 17 vrstic lažno na 1821–1840"},
     80: {"true": [1541, 1560], "blatt": "II", "cls": "mainRun",
-         "crossed": [1541, 1542, 1543, 1574, 1545, 1546, 1548, 1549, 1550, 1552, 1553, 1555],
+         "crossed": [1541, 1542, 1543, 1581, 1545, 1546, 1548, 1549, 1550, 1552, 1553, 1555],
          "old": {"p1": [62, 81], "p2": [1644, 1663]}, "artifact": "5→6 (+100) na p2", "renumOffset": -100,
          "note": "P59 strip 1541–1560 pravilen; rdeča marginala 'jetzt … 1853'"},
     81: {"true": [1561, 1580], "blatt": "II", "cls": "mainRun",
