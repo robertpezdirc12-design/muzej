@@ -26,9 +26,9 @@ for i, sl in enumerate(objs):
 print(f'ZKN G4 (velike simbole): {len(pts)}')
 P = np.array(pts)
 
-# sodobne stavbe (vse male parcele k.o. 1590 + okoliških k.o. — samo cona)
+# sodobne stavbe (vse male parcele k.o. 1597 + okoliških k.o. — samo cona)
 mods = []
-for f in ['research/georef-n83/gurs/parcels-ko1590-merged.json']:
+for f in ['research/georef-n83/gurs/parcels-ko1597-merged.json']:
     for o in json.load(open(f)):
         if o.get('geom_area', 9999) < 800:
             mods.append((o['lat'], o['lng']))

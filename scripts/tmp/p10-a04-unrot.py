@@ -36,9 +36,9 @@ def px2geo(x, y):
     return (LAT1 - y*sy/M, LNG0 + x*sx/M_LNG)
 G = np.array([px2geo(x, y) for x, y in P])
 
-# sodobne stavbe v coni (k.o. 1590 + 1552 severni del)
+# sodobne stavbe v coni (k.o. 1597 + 1552 severni del)
 mods = []
-for f in ['research/georef-n83/gurs/parcels-ko1590-merged.json', 'research/georef-n83/gurs/parcels-ko1552-merged.json']:
+for f in ['research/georef-n83/gurs/parcels-ko1597-merged.json', 'research/georef-n83/gurs/parcels-ko1552-merged.json']:
     for o in json.load(open(f)):
         aA = o.get('a', o.get('geom_area', 9999))
         if aA < 800 and 45.535 <= o['lat'] <= 45.560 and 15.260 <= o['lng'] <= 15.305:

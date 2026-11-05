@@ -9,7 +9,7 @@
 #
 # DOKAZI (vsi neodvisni, vsaj 3 na stran):
 #  1. OČI: napisane številke (4×–8× Lanczos izrezi /tmp/p69)
-#  2. KONTINUITETA: p73 (1101–20) → p74 (1421–40) → ... → p82 (1590–1600);
+#  2. KONTINUITETA: p73 (1101–20) → p74 (1421–40) → ... → p82 (1597–1600);
 #     p91 (961–80) → p92 (981–1000); p49–52 = 921–1000
 #  3. KARTA: poligoni pravih razponov obstajajo (1421–40: 16, 1511–80: 18,
 #     1521–40: 15, 921–43: 16 ...), lažnih razponov tudi (1821–40: 17) —
@@ -39,7 +39,7 @@ QK_M2 = 3.59665
 
 V3 = REPO / "src/data/atlas/ps-parcels-geo.json"
 V3_EV = REPO / "research/issue17/ps-parcels-geo-v3.json"  # arhiv v3 (P70 izvedba → runtime v4)
-CARD = REPO / "research/georef-n83/gurs/parcels-ko1590-merged.json"
+CARD = REPO / "research/georef-n83/gurs/parcels-ko1597-merged.json"
 TOPO = REPO / "research/issue17/ps-register-topology.json"
 P59H = REPO / "research/issue17/ps-blatt-headers.json"
 PROOF = REPO / "research/issue17/ps-pass1-layers.json"
@@ -76,16 +76,16 @@ EYES = {
          "old": {"p1": [1821, 1842]}, "artifact": "5→8 (+300)", "renumOffset": -300,
          "note": "P59 strip 1621–1640 = 5→6; oba sloja zamenjala isto števko 5; v3 17 vrstic lažno na 1821–1840"},
     80: {"true": [1541, 1560], "blatt": "II", "cls": "mainRun",
-         "crossed": [1541, 1542, 1543, 1590, 1545, 1546, 1548, 1549, 1550, 1552, 1553, 1555],
+         "crossed": [1541, 1542, 1543, 1597, 1545, 1546, 1548, 1549, 1550, 1552, 1553, 1555],
          "old": {"p1": [62, 81], "p2": [1644, 1663]}, "artifact": "5→6 (+100) na p2", "renumOffset": -100,
          "note": "P59 strip 1541–1560 pravilen; rdeča marginala 'jetzt … 1853'"},
     81: {"true": [1561, 1580], "blatt": "II", "cls": "mainRun",
          "crossed": [1563, 1564, 1565, 1566, 1567, 1576],
          "old": {"p1": [164, 183], "p2": [1661, 1680]}, "artifact": "5→6 (+100) na p2", "renumOffset": -100,
          "note": "P59 strip 161–180 = odrez vodilnih"},
-    82: {"true": [1590, 1600], "blatt": "II", "cls": "mainRun", "crossed": [],
-         "old": {"p1": [1590, 1600], "p2": [1681, 1700]}, "artifact": "5→6 (+100) na p2",
-         "note": "pass1 PRAVILEN (1590+); join je vzel p2 → p82 vrstice IZGUBLJENE iz v3 (karta 1582–1600 = 13 poligonov brez vrstic)"},
+    82: {"true": [1597, 1600], "blatt": "II", "cls": "mainRun", "crossed": [],
+         "old": {"p1": [1597, 1600], "p2": [1681, 1700]}, "artifact": "5→6 (+100) na p2",
+         "note": "pass1 PRAVILEN (1597+); join je vzel p2 → p82 vrstice IZGUBLJENE iz v3 (karta 1582–1600 = 13 poligonov brez vrstic)"},
     83: {"true": [161, 170], "blatt": "II", "cls": "section",
          "crossed": [162, 169],
          "old": {"p1": [161, 181], "p2": [161, 180]},
