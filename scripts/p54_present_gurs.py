@@ -10,7 +10,7 @@ stavbami iz OpenStreetMap posnetka 2026-10-07: 15 obstaja · 26 negotovih ·
 le jedro vasi (x −336..661 lokalnih metrov), tlorisi 1825 pa segajo do x −1510
 (razpršena zidanica na zahodnih pobočjih) — odsotnost stavbe v OSM tam pomeni
 odsotnost POSNETKA, ne odsotnost stavbe. P48 je prinesel uradni vir: GURS eZKN
-stavbe (WFS SI.GURS.KN:STAVBE, OBRIS_GEOM, KO 1557 403 + KO 1552 južni bbox
+stavbe (WFS SI.GURS.KN:STAVBE, OBRIS_GEOM, KO 1574 403 + KO 1552 južni bbox
 313) in pokazal, da registracija stavbne ravni znaša 9.8/10.1 m. P54 zato
 ponovno izračuna P16 primerjavo na uradnih obriseh — z ISTIMI pravili, ki jih
 skript NAJPREJ KALIBRIRA z replajo na starih OSM podatkih (156/156), šele nato
@@ -28,7 +28,7 @@ NADGRADNJE P54 (pošteno dokumentirane):
   · vir: OSM posnetek → uradni GURS eZKN obrisi (EPSG:3794 → WGS84 prek
     pyproj always_xy, enako P47/P48 → toLocal() izv. village3d.ts);
   · pokritost: okno = bbox(350 OSM) ∪ bbox(156 tlorisov) ± 50 m — GURS pokrije
-    TUDI zahodna pobočja (380 stavb v oknu, vse KO 1557);
+    TUDI zahodna pobočja (380 stavb v oknu, vse KO 1574);
   · d: P16 je za »ni je več« zapisal d le do ~117 m (sicer null) — P54 zapiše
     d ZA VSE (najbližja stavba, 0.1 m), ker UI (village-viewer/AR) prikazuje
     razdaljo tudi za rdeče duhove;
@@ -38,7 +38,7 @@ NADGRADNJE P54 (pošteno dokumentirane):
 Skript je determinističen (brez AI ob delovanju), vhodi so že committed dokazi:
   - src/data/atlas/present.json          (P16 — OSM; hkrati vir replaje)
   - src/data/atlas/buildings.json        (156 tlorisov 1825, list A02)
-  - research/georef-n83/gurs/stavbe-ko1557-0.json        (403, P48 prenos)
+  - research/georef-n83/gurs/stavbe-ko1574-0.json        (403, P48 prenos)
   - research/georef-n83/gurs/stavbe-ko1552-south-0.json  (313, P48 prenos)
   - research/georef-n83/ezkn-ix24.json   (celica cf — replika P48 kontrole)
   - src/data/atlas/model.ts              (GEOTRUTH meje A02 — px replika P48)
@@ -51,8 +51,8 @@ present-osm-p16.json (arhiv nadomeščenega P16 artefakta, bajtna kopija).
 Invarianti (FAIL → exit 1):
   I1  REPLA P16: pravila nad starimi OSM podatki reproducirajo STARE statuse
       156/156 (+ osmId za obstoja/negotovo + d ±0.05 m) — pravila so kalibrirana
-  I2  VHODI: 403 + 313 značilk, 2 brez geometrije (obe KO 1557), 714 z geometrijo,
-      714 unikatnih EID; okno 380 stavb (vse KO 1557; KO 1552 južni bbox 0 —
+  I2  VHODI: 403 + 313 značilk, 2 brez geometrije (obe KO 1574), 714 z geometrijo,
+      714 unikatnih EID; okno 380 stavb (vse KO 1574; KO 1552 južni bbox 0 —
       Adlešiči/Fučkovci izven okna A02); px replika: težišča tlorisov na skenu
       ≤ 1.5 px od GEOTRUTH preslikave; v celici cf 154 stavb == P48
   I3  PRAVILA (GURS): obstoja ⇒ d ≤ 20 ∧ (d ≤ 8 ∨ prekrivanje ≥ 0.10);
@@ -209,7 +209,7 @@ def load_gurs():
     """Uradni GURS eZKN stavbe → lokalni metri (P47/P48 transformacija)."""
     out = []
     n_total = n_null = 0
-    for fn, ko_expect in (("research/georef-n83/gurs/stavbe-ko1557-0.json", 1557),
+    for fn, ko_expect in (("research/georef-n83/gurs/stavbe-ko1574-0.json", 1574),
                           ("research/georef-n83/gurs/stavbe-ko1552-south-0.json", 1552)):
         g = json.loads((ROOT / fn).read_text(encoding="utf-8"))
         for ft in g["features"]:
@@ -366,8 +366,8 @@ def compute():
         fail(f"I5: v celici cf {n_in_cell} ≠ P48 modernEvaluated {cont['modernEvaluated']}")
     if pairs != cont["pairs"]:
         fail(f"I5: pari ≤ 25 px {pairs} ≠ P48 {cont['pairs']}")
-    if n_window != PIN_IN_WINDOW or ko_in_window != [1557]:
-        fail(f"I2: okno {n_window} (KO {ko_in_window}) ≠ 380 (KO [1557])")
+    if n_window != PIN_IN_WINDOW or ko_in_window != [1574]:
+        fail(f"I2: okno {n_window} (KO {ko_in_window}) ≠ 380 (KO [1574])")
 
     # ——— match na GURS ————————————————————————————————————————————————
     newm = match_all(fps, blds)
@@ -421,7 +421,7 @@ def compute():
 
     meta = {
         "noteSi": ("Današnje stavbe: uradni GURS eZKN obrisi (WFS SI.GURS.KN:STAVBE, "
-                   "posnetek 2026-10-13, KO 1557 GRIBLJE + KO 1552 ADLEŠIČI južni bbox; "
+                   "posnetek 2026-10-13, KO 1574 GRIBLJE + KO 1552 ADLEŠIČI južni bbox; "
                    "recept scripts/p48_fetch_stavbe.sh). Lokalni koordinati: toLocal() "
                    "izv. village3d.ts (izhodišče 45.5725 N 15.2926 E — sodobno jedro vasi, "
                    "OSM place node). Stavbe 1825: list A02 po GEOTRUTH afini (issue #14) — "
@@ -430,7 +430,7 @@ def compute():
                    "uradni GURS obrisi (P54) — popolna pokritost katastra, vključno z "
                    "zahodnimi pobočji."),
         "noteEn": ("Present-day buildings: official GURS eZKN footprints (WFS "
-                   "SI.GURS.KN:STAVBE, snapshot 2026-10-13, KO 1557 GRIBLJE + KO 1552 "
+                   "SI.GURS.KN:STAVBE, snapshot 2026-10-13, KO 1574 GRIBLJE + KO 1552 "
                    "ADLEŠIČI south bbox; receipt scripts/p48_fetch_stavbe.sh). Local "
                    "coords via toLocal() of village3d.ts (origin = modern village "
                    "centre, OSM place node). 1825 buildings: sheet A02 under the "
@@ -482,7 +482,7 @@ def compute():
         "inputs": {
             "osmP16": "research/issue17/present-osm-p16.json (bajtni arhiv P16, 350 stavb, 156 match)",
             "footprints1825": "src/data/atlas/buildings.json (156, list A02, P9)",
-            "gursKo1557": "research/georef-n83/gurs/stavbe-ko1557-0.json (403, P48 prenos)",
+            "gursKo1574": "research/georef-n83/gurs/stavbe-ko1574-0.json (403, P48 prenos)",
             "gursKo1552south": "research/georef-n83/gurs/stavbe-ko1552-south-0.json (313, P48 prenos)",
             "cells": "research/georef-n83/ezkn-ix24.json (celica cf — P48 kontrola)",
             "boundsA02": "src/data/atlas/model.ts (GEOTRUTH meje — px replika P48)",
@@ -505,7 +505,7 @@ def compute():
                      "mPerPx": round(mppx, 4), "pxErrMaxFootprints": round(px_err_max, 2)},
         "invariants": {
             "I1": "REPLA P16 na starih OSM podatkih == stari statusi 156/156 (+ osmId, d ±0.05) — PASS",
-            "I2": "403 + 313 značilk, 2 brez geometrije (KO 1557), 714 unikatnih EID; okno 380 (KO 1557); px replika ≤ 1.5 px; cf == P48 154 — PASS",
+            "I2": "403 + 313 značilk, 2 brez geometrije (KO 1574), 714 unikatnih EID; okno 380 (KO 1574); px replika ≤ 1.5 px; cf == P48 154 — PASS",
             "I3": "pravila za vseh 156: obstoja ⇒ d ≤ 20 ∧ (≤ 8 ∨ ov ≥ 0.10), negotovo ⇒ d ≤ 40, ni je več ⇒ d > 40 — PASS",
             "I4": f"števci {PIN_COUNTS['exists']}/{PIN_COUNTS['uncertain']}/{PIN_COUNTS['gone']}, prehodi {sum(PIN_TRANSITIONS.values())} vsrstno pinani, spremenjenih {PIN_CHANGED}, d-obstoja ≤ {PIN_D_EXISTS_MAX}, d-gone ≤ {PIN_D_GONE_MAX} — PASS",
             "I5": f"P48 navzkrižje: cf {PIN_IN_CELL} == modernEvaluated, pari {PIN_PAIRS} == pairs, {PIN_PAIR_FOOTPRINTS} tlorisov, okno-blizu {PIN_MODERN_NEAR} — PASS",
@@ -516,7 +516,7 @@ def compute():
         "status": "UPGRADED-DETERMINISTIC — P16 primerjava na uradnih GURS obriseh (pravila kalibrirana z replajo 156/156); terenska preverba »ni je več« ostaja priporočena [~]",
         "verdictSi": ("P54 (2026-10-14): »Kaj je izginilo?« nadgrajeno z OSM posnetka na "
                       "uradne GURS eZKN obrise (714 stavb z geometrijo; 380 v oknu A02 + "
-                      "sodobna vas, vse KO 1557). Pravila P16 nespremenjena — kalibrirana "
+                      "sodobna vas, vse KO 1574). Pravila P16 nespremenjena — kalibrirana "
                       "z replajo na starih podatkih (156/156, vključno z osmId in d). "
                       "Rezultat: 18 obstaja · 21 negotovih · 117 ni jih več (P16: 15/26/"
                       "115); 7 tlorisov spremenilo status (4× negotovo→obstoja — GURS je "
@@ -530,7 +530,7 @@ def compute():
                       "ostaja priporočena."),
         "verdictEn": ("P54 (2026-10-14): »What has vanished?« upgraded from the OSM "
                       "snapshot to official GURS eZKN footprints (714 buildings with "
-                      "geometry; 380 within the A02 + modern-village window, all KO 1557). "
+                      "geometry; 380 within the A02 + modern-village window, all KO 1574). "
                       "P16 rules unchanged — calibrated by replay on the old data "
                       "(156/156, including osmId and d). Result: 17 exists · 22 uncertain "
                       "· 117 gone (P16: 15/26/115); 7 footprints changed status (4× "

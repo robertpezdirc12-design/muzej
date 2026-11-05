@@ -27,7 +27,7 @@ Viri (vsi committed):
   research/issue17/ps-dual-occurrence-pack.json  (P72 dokaz — 135 dual base)
   research/issue17/ps-blatt-headers.json         (P59 pageAttribution — Blatti)
   research/issue17/ps-register-topology.json     (P56 pageMap)
-  research/georef-n83/gurs/parcels-ko1557-merged.json (2117 parcel, P47)
+  research/georef-n83/gurs/parcels-ko1574-merged.json (2117 parcel, P47)
   src/data/atlas/ps-parcels-geo.json             (v5 runtime — vhod; nasledstvena veja)
 
 Izpis:
@@ -74,7 +74,7 @@ V5_EV = REPO / "research/issue17/ps-parcels-geo-v5.json"
 DUAL_EV = REPO / "research/issue17/ps-dual-occurrence-pack.json"
 P59_EV = REPO / "research/issue17/ps-blatt-headers.json"
 P56_EV = REPO / "research/issue17/ps-register-topology.json"
-PARCELS = REPO / "research/georef-n83/gurs/parcels-ko1557-merged.json"
+PARCELS = REPO / "research/georef-n83/gurs/parcels-ko1574-merged.json"
 V5_RT = REPO / "src/data/atlas/ps-parcels-geo.json"
 OUT_EV = REPO / "research/issue17/ps-parcels-geo-v6.json"
 OUT_RUNTIME = REPO / "src/data/atlas/ps-parcels-geo.json"

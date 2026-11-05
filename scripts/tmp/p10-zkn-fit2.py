@@ -25,7 +25,7 @@ P = np.array(pts)
 print(f'ZKN G4: {len(P)} simbolov')
 
 mods = []
-for o in json.load(open('research/georef-n83/gurs/parcels-ko1557-merged.json')):
+for o in json.load(open('research/georef-n83/gurs/parcels-ko1574-merged.json')):
     if o.get('geom_area', 9999) < 800 and o['lat'] < 45.560:
         mods.append((o['lat'], o['lng']))
 Q = np.array([((lng-15.28)*M_LNG, -(lat-45.55)*M_LAT) for lat, lng in mods])

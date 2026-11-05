@@ -36,7 +36,7 @@ protislovita; razlika je razložena z odzivnostjo detektorja (repi,
 zanedba senčil).
 
 VHODI (vsi committed):
-  research/georef-n83/gurs/stavbe-ko1557-0.json      (401 z geometrijo)
+  research/georef-n83/gurs/stavbe-ko1574-0.json      (401 z geometrijo)
   research/georef-n83/gurs/stavbe-ko1552-south-0.json (313)
   research/issue17/neatline-georef.json               (P46 afina A05 + sbar)
   research/georef-n83/ezkn-ix24.json                  (celica ch)
@@ -194,7 +194,7 @@ def point_in_poly(lng: float, lat: float, ring: list) -> bool:
 
 def load_stavbe() -> list[dict]:
     out = []
-    files = [("research/georef-n83/gurs/stavbe-ko1557-0.json", 1557),
+    files = [("research/georef-n83/gurs/stavbe-ko1574-0.json", 1574),
              ("research/georef-n83/gurs/stavbe-ko1552-south-0.json", 1552)]
     for rel, ko in files:
         d = json.loads((REPO / rel).read_text(encoding="utf-8"))

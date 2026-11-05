@@ -18,7 +18,7 @@ P = P_all[cnt >= 4]
 print(f'A05 jedro: {len(P)} točk (od {len(P_all)})')
 
 mods_all = []
-for f in ['research/georef-n83/gurs/parcels-ko1557-merged.json', 'research/georef-n83/gurs/parcels-ko1552-merged.json']:
+for f in ['research/georef-n83/gurs/parcels-ko1574-merged.json', 'research/georef-n83/gurs/parcels-ko1552-merged.json']:
     for o in json.load(open(f)):
         a = o.get('a', o.get('geom_area', 9999))
         if a < 800:
@@ -30,7 +30,7 @@ CANDS = {
   'Adlešiči-vas':  (45.522, 45.540, 15.290, 15.310),
   'Jankoviči':     (45.523, 45.545, 15.273, 15.293),
   'Dragoši':       (45.543, 45.563, 15.267, 15.300),
-  'rečni-k.o.1557':(45.548, 45.558, 15.294, 15.302),
+  'rečni-k.o.1574':(45.548, 45.558, 15.294, 15.302),
   'Bedenj-vzhod':  (45.530, 45.546, 15.270, 15.290),
 }
 pc = P.mean(axis=0)

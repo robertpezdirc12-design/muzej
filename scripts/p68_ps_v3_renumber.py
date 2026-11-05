@@ -12,7 +12,7 @@ vodilne 1 + 8→6). Ta skripta IZVEDE specifikacijo:
      == P67 dokaz renumberSpec; 0 kolizij (novi base bodisi prosti bodisi
      z instanco samo na straneh DRUGAČNEGA Blatta — 1903/1905 @p98 III).
   2) RE-JOIN po P55 metodi (group_pos = površinsko uteženo središče poligonov
-     k.o. 1557): 14 preslikanih vrstic (3× p78 → 1503–1505, 11× p87 →
+     k.o. 1574): 14 preslikanih vrstic (3× p78 → 1503–1505, 11× p87 →
      1681–1700) IZPADE (base brez PF poligona — kartni priči P67), 3× p93
      re-claim na 1903/1904/1905 (poligoni obstajajo, jugozahodna lokacija).
   3) Vse ostale vrstice BAJTNO nespremenjene (lekcija P9) — razen prekalkulacij
@@ -25,7 +25,7 @@ Viri (vsi committed):
   src/data/atlas/ps-parcels-geo.json           (v2 runtime — bajtno == dokaz)
   research/issue17/ps-anomaly-forensics.json   (P67 specifikacija RENUM)
   research/issue17/ps-blatt-headers.json       (P59 pageAttribution — Blatti)
-  research/georef-n83/gurs/parcels-ko1557-merged.json (2117 parcel, P47)
+  research/georef-n83/gurs/parcels-ko1574-merged.json (2117 parcel, P47)
 
 Izpis:
   research/issue17/ps-parcels-geo-v3.json      (dokaz v3 — rowsEvidence 1079
@@ -75,7 +75,7 @@ V3_EV = REPO / "research/issue17/ps-parcels-geo-v3.json"
 OUT_RUNTIME = REPO / "src/data/atlas/ps-parcels-geo.json"
 P67_EV = REPO / "research/issue17/ps-anomaly-forensics.json"
 P59_EV = REPO / "research/issue17/ps-blatt-headers.json"
-PARCELS = REPO / "research/georef-n83/gurs/parcels-ko1557-merged.json"
+PARCELS = REPO / "research/georef-n83/gurs/parcels-ko1574-merged.json"
 
 HIST_QK_M2 = 3.59665
 AREA_BAND = 0.10
@@ -627,7 +627,7 @@ def build_documents():
                            f"(sha256 {PIN_P67_EV_SHA[:8]}…; renumberSpec 17)",
             "p59Evidence": "research/issue17/ps-blatt-headers.json "
                            f"(sha256 {PIN_P59_EV_SHA[:8]}…; pageAttribution)",
-            "parcels": "research/georef-n83/gurs/parcels-ko1557-merged.json "
+            "parcels": "research/georef-n83/gurs/parcels-ko1574-merged.json "
                        f"(sha256 {PIN_PARCELS_SHA[:8]}…; 2117 parcel P47)",
         },
         "historicalConstant": {"wienerQkM2": HIST_QK_M2},
@@ -637,7 +637,7 @@ def build_documents():
         "collisions": "0 (1503–1505, 1904, 1681–1700 proste; 1903/1905 samo "
                       "p98 — strani drugačnega Blatta III vs IV)",
         "removedRows": removed,
-        "removedReason": "preslikana base brez PF poligona v k.o. 1557 "
+        "removedReason": "preslikana base brez PF poligona v k.o. 1574 "
                          "(P67 kartni priči: 1503–1505 in 1681–1700 NE "
                          "obstajajo); vrstica registra ostaja v ps-raw, "
                          "izpada le iz joina",
