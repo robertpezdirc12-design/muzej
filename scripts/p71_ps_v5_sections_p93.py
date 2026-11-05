@@ -47,7 +47,7 @@ Viri (vsi committed):
                                                  eyesVerdicts p93 [ OVERRIDE ])
   research/issue17/ps-blatt-headers.json        (P59 pageAttribution — Blatti)
   research/issue17/ps-register-topology.json    (P56 pageMap + annRecords p93)
-  research/georef-n83/gurs/parcels-ko1581-merged.json (2117 parcel, P47)
+  research/georef-n83/gurs/parcels-ko1590-merged.json (2117 parcel, P47)
   research/issue17/p93-forensics/*.png          (7 forenzičnih izrezov 8–12×)
 
 Izpis:
@@ -94,7 +94,7 @@ OUT_RUNTIME = REPO / "src/data/atlas/ps-parcels-geo.json"
 P69_EV = REPO / "research/issue17/ps-pass1-layers.json"
 P59_EV = REPO / "research/issue17/ps-blatt-headers.json"
 P56_EV = REPO / "research/issue17/ps-register-topology.json"
-PARCELS = REPO / "research/georef-n83/gurs/parcels-ko1581-merged.json"
+PARCELS = REPO / "research/georef-n83/gurs/parcels-ko1590-merged.json"
 FORENSICS = REPO / "research/issue17/p93-forensics"
 
 HIST_QK_M2 = 3.59665
@@ -309,7 +309,7 @@ def compute():
                 "owner": r["owner"], "areaQK": r["areaQK"],
                 "reason": f"C2: p93 reverzija — base {nb} brez PF poligona "
                           f"(1601–1620 večinoma odsotnih v sodobnem k.o. "
-                          f"1581; vrstica ostane v registru)",
+                          f"1590; vrstica ostane v registru)",
             })
             continue
         r2["lat"], r2["lng"], r2["areaModern"], r2["parts"] = gp

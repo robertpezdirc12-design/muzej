@@ -13,7 +13,7 @@
 #         prečrtane (opomba); oči na 4× izrezu (ta seja, worklog):
 #         r1–r4 = 1501–1504 jasno, r5–r8 prečrtane; kontinuiteta
 #         p76→p77→p78 = 1511–1480 → 1481–1500 → 1501–1520 (strip
-#         p77 2× bajtno 1481–1500); karta KO 1581: blok 1511–1500 ima
+#         p77 2× bajtno 1481–1500); karta KO 1590: blok 1511–1500 ima
 #         12 poligonov, blok 1121–1200 (P38-era branje p74/p76/p77) 0.
 #         → v2 p78 vrstice 1603/1604/1605 = P38 pass1+pass2 napačno
 #         (Kurrent 5→6); prave: 1503/1504/1505.
@@ -62,7 +62,7 @@
 #         'Ulrich Franz', 647 'Gemeinde', 662 'Mülley Franzl', 1822
 #         'Büller Lorenz', 1823 'Gavčnik Miha', 1824 'Gavčnik Gregor',
 #         2142 'Häupler Martin', 2144–2147 …), 
-#       • njihove številke NIMAJO poligonov v karti KO 1581 → izpadle
+#       • njihove številke NIMAJO poligonov v karti KO 1590 → izpadle
 #         iz v2 (join filter; matchedShare 38.6 %),
 #       • 1820 (p63) in 2140 (p109) IMATA geometrijo in sta v v2 —
 #         a na PREJŠNJI strani (meja strani je nevidna per-page
@@ -95,7 +95,7 @@
 #   src/data/atlas/ps-attribution-full.json       (P65 runtime 211)
 #   src/data/atlas/ps-split-pack.json             (P66 runtime 39)
 #   research/issue17/ps-register-topology.json    (P56 pageMap)
-#   research/georef-n83/gurs/parcels-ko1581-merged.json (2117 poligonov)
+#   research/georef-n83/gurs/parcels-ko1590-merged.json (2117 poligonov)
 #   research/issue17/ps-raw/blatt-76|77|78|78-pass2|93.json (strip)
 #   research/issue17/ps-raw/ps-035-pass2|036-pass2|063|064|078|
 #     078-pass2|079-pass2|085-pass2|087|087-pass2|093|093-pass2|098|
@@ -146,7 +146,7 @@ PINS = {
         "2fddc76fb94b69fed55170220fa8dfa3ace4a9466043d264b8b8df788e78a50c",
     "research/issue17/PS-full-v2.json":
         "81f140e989d50a67656a81ed166c5b2c400617a9a1036a85758df0cf312fc92c",
-    "research/georef-n83/gurs/parcels-ko1581-merged.json":
+    "research/georef-n83/gurs/parcels-ko1590-merged.json":
         "fee91fca736348f40ef11d38b7a5b51d51656a9768cda648f4d737029bb3941f",
     "research/issue17/ps-raw/blatt-76.json":
         "e2aca956f40e0e18e9af8b1ddcfa4f6a10696e074d2fadbec635f0f973da0fb1",
@@ -198,7 +198,7 @@ P65RT = os.path.join(ROOT, "src/data/atlas/ps-attribution-full.json")
 P66RT = os.path.join(ROOT, "src/data/atlas/ps-split-pack.json")
 TOPO = os.path.join(ROOT, "research/issue17/ps-register-topology.json")
 SELFV2 = os.path.join(ROOT, "research/issue17/PS-full-v2.json")
-GEO = os.path.join(ROOT, "research/georef-n83/gurs/parcels-ko1581-merged.json")
+GEO = os.path.join(ROOT, "research/georef-n83/gurs/parcels-ko1590-merged.json")
 
 EXPECTED_ROWS = 1093
 EXPECTED_BASES = 800
@@ -879,8 +879,8 @@ def main():
             "p65rt": "src/data/atlas/ps-attribution-full.json (211)",
             "p66rt": "src/data/atlas/ps-split-pack.json (39)",
             "topo": "research/issue17/ps-register-topology.json (pageMap)",
-            "geo": "research/georef-n83/gurs/parcels-ko1581-merged.json "
-                   "(2117 poligonov KO 1581)",
+            "geo": "research/georef-n83/gurs/parcels-ko1590-merged.json "
+                   "(2117 poligonov KO 1590)",
             "p38raw": "research/issue17/ps-raw/ps-*.json (dokazi sosedov + "
                       "sloji napak)",
             "strip": "research/issue17/ps-raw/blatt-*.json (strip branja)",

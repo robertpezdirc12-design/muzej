@@ -31,7 +31,7 @@ Viri (vsi committed):
   research/issue17/ps-cross-blatt-pack.json       (P74 dokaz — 48 cross base)
   research/issue17/ps-blatt-headers.json          (P59 pageAttribution — Blatti)
   research/issue17/ps-register-topology.json      (P56 pageMap)
-  research/georef-n83/gurs/parcels-ko1581-merged.json (2117 parcel, P47)
+  research/georef-n83/gurs/parcels-ko1590-merged.json (2117 parcel, P47)
   src/data/atlas/ps-parcels-geo.json              (v6 runtime — vhod;
                                                    nasledstvena veja)
 
@@ -85,7 +85,7 @@ V6_EV = REPO / "research/issue17/ps-parcels-geo-v6.json"
 PACK_EV = REPO / "research/issue17/ps-cross-blatt-pack.json"
 P59_EV = REPO / "research/issue17/ps-blatt-headers.json"
 P56_EV = REPO / "research/issue17/ps-register-topology.json"
-PARCELS = REPO / "research/georef-n83/gurs/parcels-ko1581-merged.json"
+PARCELS = REPO / "research/georef-n83/gurs/parcels-ko1590-merged.json"
 V6_RT = REPO / "src/data/atlas/ps-parcels-geo.json"
 OUT_EV = REPO / "research/issue17/ps-parcels-geo-v7.json"
 OUT_RUNTIME = REPO / "src/data/atlas/ps-parcels-geo.json"

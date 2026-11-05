@@ -14,7 +14,7 @@ print(f'A05 točk: {len(P)}')
 
 # sodobne točke: vse male parcele iz obeh k.o. v coni
 mods = []
-for f in ['research/georef-n83/gurs/parcels-ko1581-merged.json', 'research/georef-n83/gurs/parcels-ko1552-merged.json']:
+for f in ['research/georef-n83/gurs/parcels-ko1590-merged.json', 'research/georef-n83/gurs/parcels-ko1552-merged.json']:
     for o in json.load(open(f)):
         if o.get('a', o.get('geom_area', 9999)) < 800 and 45.515 <= o['lat'] <= 45.565 and 15.27 <= o['lng'] <= 15.315:
             mods.append(((o['lng']-15.29)*M_LNG, -(o['lat']-45.54)*M_LAT))  # lokalni m, izhodišče (15.29, 45.54)

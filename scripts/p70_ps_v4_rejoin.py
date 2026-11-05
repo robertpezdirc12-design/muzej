@@ -31,7 +31,7 @@ Viri (vsi committed):
   research/issue17/ps-pass1-layers.json        (P69 spec: renum + rejoin)
   research/issue17/ps-blatt-headers.json       (P59 pageAttribution — Blatti)
   research/issue17/ps-raw/ps-0NN{,-pass2}.json (P38 branja — vir novih)
-  research/georef-n83/gurs/parcels-ko1581-merged.json (2117 parcel, P47)
+  research/georef-n83/gurs/parcels-ko1590-merged.json (2117 parcel, P47)
 
 Izpis:
   research/issue17/ps-parcels-geo-v4.json      (dokaz v4)
@@ -74,7 +74,7 @@ V4_EV = REPO / "research/issue17/ps-parcels-geo-v4.json"
 OUT_RUNTIME = REPO / "src/data/atlas/ps-parcels-geo.json"
 P69_EV = REPO / "research/issue17/ps-pass1-layers.json"
 P59_EV = REPO / "research/issue17/ps-blatt-headers.json"
-PARCELS = REPO / "research/georef-n83/gurs/parcels-ko1581-merged.json"
+PARCELS = REPO / "research/georef-n83/gurs/parcels-ko1590-merged.json"
 RAW_DIR = REPO / "research/issue17/ps-raw"
 
 HIST_QK_M2 = 3.59665
@@ -118,7 +118,7 @@ SLOJI: dict[int, tuple[str, int]] = {
     79: ("pass2", -300),   # P38 izbira; 182x → 152x (5→8)
     80: ("pass2", -100),   # P38 izbira == v3 sloj; 164x → 154x (5→6)
     81: ("pass2", -100),   # P38 izbira; 166x → 156x (5→6)
-    82: ("pass1", 0),      # »pass1 PRAVILEN (1581+); join je vzel p2« (P69)
+    82: ("pass1", 0),      # »pass1 PRAVILEN (1590+); join je vzel p2« (P69)
     87: ("pass3", 0),      # P38 izbira (pass3 → pass1 datoteka); 0 kandidatov
     89: ("pass1", 0),      # »pass1 PRAVILEN (921+); join je vzel p2« (P69)
     90: ("pass1", 0),      # »pass1 PRAVILEN« (P69)
@@ -717,7 +717,7 @@ def build_documents():
                            f"rejoinSpec 98)",
             "p59Evidence": "research/issue17/ps-blatt-headers.json "
                            f"(sha256 {sha256(P59_EV)[:8]}…; pageAttribution)",
-            "parcels": "research/georef-n83/gurs/parcels-ko1581-merged.json "
+            "parcels": "research/georef-n83/gurs/parcels-ko1590-merged.json "
                        f"(sha256 {sha256(PARCELS)[:8]}…; 2117 parcel P47)",
             "psRaw": "research/issue17/ps-raw/ps-0NN{,-pass2}.json (P38 "
                      "branja — vir 95 rejoin vrstic; sloji po strani: "
@@ -741,7 +741,7 @@ def build_documents():
                       "dokumentirane; SPLIT join odločitev = LASTNIKA",
         },
         "removedRows": removed,
-        "removedReason": "preslikana base brez PF poligona v k.o. 1581; "
+        "removedReason": "preslikana base brez PF poligona v k.o. 1590; "
                          "vrstica registra ostaja v ps-raw, izpada le iz "
                          "joina",
         "addedRows": added,
