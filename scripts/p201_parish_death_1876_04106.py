@@ -3,7 +3,7 @@
 """P201 — verifikator MRLIŠKE PREDZGODOVINE 04106, leto 1876 (predzgodovina-10/29).
 I1: parish.ts vsebuje 20 blokov bookSignature 04106 / year 1876
 I2: hiše 1876 == [7,8,12,16,18,20,23,26,34,41,44,46,46,49,52,53,55,64,70,75] (h46-×2!)
-I3: 04106-skupaj == 279 + vitals-števec-1498
+I3: 04106-skupaj == 292 + vitals-števec-1498
 I4: dokaz research/issue17/parish-death-1876-04106.json (89 entries / 20-griblje /
     16-anomalij / meja-s134-velika-'1876 Jänner' + NOVEMBER-falsifikacija + s136/s142-
     40./41.-potrditvi + December-0 + 89-vrstic)
@@ -11,7 +11,7 @@ I5: qa-parish.ts vsebuje qa-p201-parish-death-1876-04106 + števec 1375 (≥ 100
 I6: duhovniki-1876 (KOGEJ-RAZŠIRJENO-V-1876 + Dovgan-×3 + Hozjan-Capp.)
 I7: PEZDINC-#8 (z22-'Perdire'-h53!) + DRAGOŠ-h12-NIT (z36!) + ŠIMEC-h18-3.-LETO (z78!)
 I8: forma-invariante (s134-velika-glava + s136-z1-celica-40. + s142-z1-celica-41.)
-I9: pt-luknja (04106 == 279, vitals == 1498)
+I9: pt-luknja (04106 == 292, vitals == 1511)
 I10: 04894-still-520 + 04106-leta == {1876,...,1885}
 I8b: otroška-umrljivost-55% (11/20) + KRONOLOŠKA-NAPAKA-pisarja (z83-Nov-24-pred-z85-Nov-12!)
 """
@@ -39,7 +39,7 @@ check("I2 hiše-1876 (file-order, h46-×2)", his == ["7", "41", "53", "46", "23"
 
 # I3: 04106-skupaj + vitals-1498
 skupaj = src.count('bookSignature: "04106"')
-check("I3 vitals-1498 + 04106==279", "HOUSE_VITALS.length !== 1498" not in src and skupaj == 279,
+check("I3 vitals-1511 + 04106==292", "HOUSE_VITALS.length !== 1511" not in src and skupaj == 292,
       f"04106-bloki={skupaj}")
 
 # I4: dokaz
@@ -55,9 +55,9 @@ check("I4 dokaz (89/20-griblje/16-anomalij + meja-s134 + NOVEMBER-falsifikacija 
 
 # I5: qa-parish
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1498")
+st = qa.count("HOUSE_VITALS.length !== 1511")
 check("I5 qa-p201 + števec-1375", "qa-p201-parish-death-1876-04106" in qa and st >= 100,
-      f"1498-številcev={st}")
+      f"1511-številcev={st}")
 
 # I6: duhovniki-1876 (P201-segment)
 i0 = src.find("P201: mrliška PREDZGODOVINA 04106, leto 1876")
@@ -81,15 +81,15 @@ check("I8g KRONOLOŠKA-NAPAKA-PISARJA (Nov-24-pred-Nov-12!)", "KRONOLOŠKA-NAPAK
 
 # I9: pt-luknja
 pt = json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8"))
-check("I9 pt-luknja (04106==279, vitals==1375)",
-      pt["corpus"]["byBook"]["04106"] == 279 and pt["corpus"]["vitalsTotal"] == 1498,
+check("I9 pt-luknja (04106==292, vitals==1511)",
+      pt["corpus"]["byBook"]["04106"] == 292 and pt["corpus"]["vitalsTotal"] == 1511,
       f"04106={pt['corpus']['byBook']['04106']} vitals={pt['corpus']['vitalsTotal']}")
 
 # I10: 04894 + leta-nabor
 bloki94 = re.findall(r'bookSignature:\s*"04894"', src)
 check("I10 04894 == 520", len(bloki94) == 520, f"najdeno {len(bloki94)}")
 leta = sorted(set(re.findall(r'bookSignature:\s*"04106",\s*year:\s*(\d{4})', src)))
-check("I10b 04106-leta-{1876,...,1885}", ",".join(leta) == "1869,1870,1871,1872,1873,1874,1875,1876,1877,1878,1879,1880,1881,1882,1883,1884,1885", ",".join(leta))
+check("I10b 04106-leta-{1876,...,1885}", ",".join(leta) == "1868,1869,1870,1871,1872,1873,1874,1875,1876,1877,1878,1879,1880,1881,1882,1883,1884,1885", ",".join(leta))
 
 # --live
 if "--live" in sys.argv:

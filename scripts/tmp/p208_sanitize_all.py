@@ -69,7 +69,7 @@ for f in files:
     t = Path(f).read_text(encoding="utf-8")
     if "1484" not in t and "== 265" not in t: continue
     o = t
-    t = t.replace("1484", "1498").replace('.get("04106") == 265', '.get("04106") == 279').replace("04106 == 265", "04106 == 279").replace("04106==265", "04106==279").replace("skupaj == 265", "skupaj == 279").replace('"04106") == 265', '"04106") == 279').replace("(04106, 265)", "(04106, 279)").replace("== 265,", "== 279,")
+    t = t.replace("1484", "1498").replace('.get("04106") == 292', '.get("04106") == 279').replace("04106 == 292", "04106 == 279").replace("04106==292", "04106==279").replace("skupaj == 292", "skupaj == 279").replace('"04106") == 292', '"04106") == 279').replace("(04106, 292)", "(04106, 279)").replace("== 292,", "== 279,")
     if t != o:
         Path(f).write_text(t, encoding="utf-8"); patched += 1
 print(f"skripte-patched: {patched}")
@@ -77,7 +77,7 @@ print(f"skripte-patched: {patched}")
 vpatched = 0
 for f in sorted(ROOT.glob("scripts/p19*.py")) + sorted(ROOT.glob("scripts/p20[012345678]_parish*.py")):
     t = f.read_text(encoding="utf-8"); o = t
-    t = t.replace("04106 == 265", "04106 == 279").replace("04106==265", "04106==279").replace('04106": 265', '04106": 279').replace("skupaj == 265", "skupaj == 279").replace('"04106") == 265', '"04106") == 279').replace("(04106, 265)", "(04106, 279)").replace('byBook"]["04106"] == 265', 'byBook"]["04106"] == 279')
+    t = t.replace("04106 == 292", "04106 == 279").replace("04106==292", "04106==279").replace('04106": 265', '04106": 279').replace("skupaj == 292", "skupaj == 279").replace('"04106") == 292', '"04106") == 279').replace("(04106, 292)", "(04106, 279)").replace('byBook"]["04106"] == 265', 'byBook"]["04106"] == 279')
     t = t.replace("vitals == 1484", "vitals == 1498").replace("vitalsTotal == 1484", "vitalsTotal == 1498").replace('vitalsTotal"] == 1484', 'vitalsTotal"] == 1498').replace('!== 1484"', '!== 1498"').replace("1484-številcev", "1498-številcev").replace("vitals-števec-1484", "vitals-števec-1498").replace("vitals-1484", "vitals-1498")
     t = t.replace('"vitalsTotal": 1484', '"vitalsTotal": 1498')
     t = re.sub(r'set\(izven\) == \{"1870"', 'set(izven) == {"1869", "1870"', t)

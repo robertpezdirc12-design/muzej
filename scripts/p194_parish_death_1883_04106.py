@@ -4,13 +4,13 @@
 
 I1: parish.ts vsebuje 11 blokov bookSignature 04106 / year 1883
 I2: hiše 1883 == [20,21,33,36,36,37,44,49,68,68,78]
-I3: HOUSE_VITALS.length == 1498 (1235 + 21-P193 + 11-P194!) + 04106-skupaj == 48
+I3: HOUSE_VITALS.length == 1511 (1235 + 21-P193 + 11-P194!) + 04106-skupaj == 48
 I4: dokaz research/issue17/parish-death-1883-04106.json (79 entries / 11-griblje / 18-anomalij / meja-s186 / z33-duplikat)
-I5: qa-parish.ts vsebuje qa-p194-parish-death-1883-04106 + števec 1498 (≥ 100)
+I5: qa-parish.ts vsebuje qa-p194-parish-death-1883-04106 + števec 1511 (≥ 100)
 I6: duhovniki-1883 (Jančar-dominanta + Dovgan + Ogrin-tail-s192)
 I7: katastrofe/oznake (h68-×2-KATASTROFA + h78-PRAZNO + h49-BRODARIČ + h44-HLEBUČAR + h36-VIJOLIČNO)
 I8: z6-90-LET + z37-DAVICA + z9-HLEBEC + z21-Cadič
-I9: PT-luknja-dokazi (h44/h49/h33/h21/h37) + pt-luknja-18-final.json (04106 == 279, vitals == 1498)
+I9: PT-luknja-dokazi (h44/h49/h33/h21/h37) + pt-luknja-18-final.json (04106 == 292, vitals == 1511)
 I10: 04894-still-520 + 04106-leta == {1883, 1884, 1885}
 --live: produkcija /api/qa == 194/194 + qa-p194 pass:True
 """
@@ -33,7 +33,7 @@ check("I2 hiše-1883", ",".join(his) == "20,21,33,36,36,37,44,49,68,68,78", ",".
 
 # I3: vitals + 04106-skupaj
 skupaj = src.count('bookSignature: "04106"')
-check("I3 vitals-1498 + 04106==279", "HOUSE_VITALS.length !== 1498" not in src and skupaj == 279,
+check("I3 vitals-1511 + 04106==292", "HOUSE_VITALS.length !== 1511" not in src and skupaj == 292,
       f"04106-bloki={skupaj}")
 
 # I4: dokaz
@@ -47,9 +47,9 @@ check("I4 dokaz (79/11-griblje/18-anomalij + meja-s186 + z33-duplikat)",
 
 # I5: qa-parish
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1498")
-check("I5 qa-p194 + števec-1498", "qa-p194-parish-death-1883-04106" in qa and st >= 100,
-      f"1498-številcev={st}")
+st = qa.count("HOUSE_VITALS.length !== 1511")
+check("I5 qa-p194 + števec-1511", "qa-p194-parish-death-1883-04106" in qa and st >= 100,
+      f"1511-številcev={st}")
 
 # I6: duhovniki-1883 (P194-segment)
 i0 = src.find("P194: mrliška PREDZGODOVINA 04106, leto 1883")
@@ -74,14 +74,14 @@ check("I8c h21-Cadič", "CADIČ" in seg or "Cadič" in seg)
 # I9: PT-luknja
 check("I9 PT-luknja-dokazi-1883", "PT-luknja-dokazi-1883" in seg and "h44 (z73" in seg and "h49 (z42" in seg and "h33 (z32" in seg and "h21 (z56" in seg and "h37 (z70" in seg)
 pt = json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8"))
-check("I9b pt-luknja 04106==64", pt["corpus"]["byBook"].get("04106") == 279 and pt["corpus"]["vitalsTotal"] == 1498,
+check("I9b pt-luknja 04106==64", pt["corpus"]["byBook"].get("04106") == 292 and pt["corpus"]["vitalsTotal"] == 1511,
       f"04106={pt['corpus']['byBook'].get('04106')} vitals={pt['corpus']['vitalsTotal']}")
 
 # I10: 04894 + 04106-leta
 bloki94 = re.findall(r'bookSignature:\s*"04894"', src)
 check("I10 04894 == 520", len(bloki94) == 520, f"najdeno {len(bloki94)}")
 izven = re.findall(r'bookSignature:\s*"04106",\s*year:\s*(\d+)', src)
-check("I10b 04106-leta-{1877,...,1885}", set(izven) == {"1869", "1870", "1871", "1872", "1873", "1874", "1875", "1876", "1877", "1878", "1879", "1880", "1881", "1882", "1883", "1884", "1885"}, str(set(izven)))
+check("I10b 04106-leta-{1877,...,1885}", set(izven) == {"1868", "1869", "1870", "1871", "1872", "1873", "1874", "1875", "1876", "1877", "1878", "1879", "1880", "1881", "1882", "1883", "1884", "1885"}, str(set(izven)))
 
 # --live
 if "--live" in sys.argv:

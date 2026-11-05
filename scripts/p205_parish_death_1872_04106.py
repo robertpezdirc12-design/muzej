@@ -17,7 +17,7 @@ bloki = re.findall(r'\{\s*houseNo:\s*"(\d+)",\s*bookSignature:\s*"04106",\s*year
 check("I1 bloki 04106/1872 == 17", len(bloki) == 17, f"najdeno {len(bloki)}")
 check("I2 hiše-1872 (file-order)", bloki == ["50", "66", "11", "44", "44", "6", "5", "37", "20", "6", "1", "7", "42", "62", "62", "8", "38"], ",".join(bloki))
 skupaj = src.count('bookSignature: "04106"')
-check("I3 vitals-1498 + 04106==279", "HOUSE_VITALS.length !== 1498" not in src and skupaj == 279, f"04106={skupaj}")
+check("I3 vitals-1511 + 04106==292", "HOUSE_VITALS.length !== 1511" not in src and skupaj == 292, f"04106={skupaj}")
 
 d = json.load(open(f"{ROOT}/research/issue17/parish-death-1872-04106.json", encoding="utf-8"))
 grib = [e for e in d["entries"] if "gribl" in str(e.get("vas", "")).lower()]
@@ -29,8 +29,8 @@ check("I4 dokaz (114/17-griblje/13-anomalij + meja-s92-'vsota' + 114-vrstic)",
       f"entries={len(d['entries'])} griblje={len(grib)} anomalije={len(d['anomalije'])}")
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1498")
-check("I5 qa-p205 + števec-1461", "qa-p205-parish-death-1872-04106" in qa and st >= 100, f"1498-številcev={st}")
+st = qa.count("HOUSE_VITALS.length !== 1511")
+check("I5 qa-p205 + števec-1461", "qa-p205-parish-death-1872-04106" in qa and st >= 100, f"1511-številcev={st}")
 
 i0 = src.find("P205: mrliška PREDZGODOVINA 04106, leto 1872")
 seg = src[i0:] if i0 >= 0 else ""
@@ -47,7 +47,7 @@ check("I8d h38/24-Prilozje-DVOJNA (P204-tail-1:1!)", "Prilozje-in-Griblje" in se
 check("I8e KURE-nit (z86-KHURE!)", "KHURE" in seg or "KURE-nit" in seg)
 check("I9 qa-p205 (205. kontrola!)", "qa-p205" in qa and "205. kontrola" in qa)
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-check("I9b pt-luknja-242/1461", '"vitalsTotal": 1498' in pt and '"04106": 279' in pt)
+check("I9 pt-luknja-292/1511", '"vitalsTotal": 1511' in pt and '"04106": 292' in pt)
 
 try:
     req = urllib.request.Request("https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04106/",

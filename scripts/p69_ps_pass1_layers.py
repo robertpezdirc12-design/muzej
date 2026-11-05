@@ -11,7 +11,7 @@
 #  1. OČI: napisane številke (4×–8× Lanczos izrezi /tmp/p69)
 #  2. KONTINUITETA: p73 (1101–20) → p74 (1421–40) → ... → p82 (1581–1600);
 #     p91 (961–80) → p92 (981–1000); p49–52 = 921–1000
-#  3. KARTA: poligoni pravih razponov obstajajo (1421–40: 16, 1498–80: 18,
+#  3. KARTA: poligoni pravih razponov obstajajo (1421–40: 16, 1511–80: 18,
 #     1521–40: 15, 921–43: 16 ...), lažnih razponov tudi (1821–40: 17) —
 #     zato fuzije, ne izpad
 #  4. ANNRECORDS P56: p74 prečrtane 1135/1136/1138 = oči 1435/1436/1438 (+300);
@@ -57,13 +57,13 @@ EYES = {
          "old": {"p1": [1121, 1140]}, "artifact": "4→1 (−300); pass1 edini", "renumOffset": 300,
          "note": "annRecords 1135/1136/1138 'auf transportirt 1844' = prečrtane 1435/1436/1438 (+300) — neodvisen dokaz zamika"},
     75: {"true": [1441, 1460], "blatt": "II", "cls": "mainRun",
-         "crossed": [1443, 1498, 1446, 1451],
+         "crossed": [1443, 1511, 1446, 1451],
          "old": {"p1": [1441, 1460], "p2": [1441, 1460]},
          "note": "stari passi pravilna; P59 strip 941–960 napačen (odrez); v3 16 vrstic pravilnih"},
-    76: {"true": [1498, 1480], "blatt": "II", "cls": "mainRun",
-         "crossed": [1463, 1468, 1469, 1471, 1498, 1473, 1474, 1475],
+    76: {"true": [1511, 1480], "blatt": "II", "cls": "mainRun",
+         "crossed": [1463, 1468, 1469, 1471, 1511, 1473, 1474, 1475],
          "old": {"p1": [1161, 1181], "p2": [1161, 1180]}, "artifact": "4→1 (−300)",
-         "note": "P59 arbitraža (1498–1480) potrjena z očmi; kontinuiteta p75→p76→p77"},
+         "note": "P59 arbitraža (1511–1480) potrjena z očmi; kontinuiteta p75→p76→p77"},
     77: {"true": [1481, 1500], "blatt": "II", "cls": "mainRun", "crossed": [],
          "old": {"p1": [1181, 1200], "p2": [1481, 1500]}, "artifact": "4→1 (−300) na p1",
          "note": "pass2 pravilen; brez prečrtanj; karta 1481–1500 = 1483, 1486"},
