@@ -112,7 +112,7 @@ SLOJI: dict[int, tuple[str, int]] = {
     73: ("pass2", 0),      # P38 izbira; 0 kandidatov (v3 1118–1120 pravilne)
     74: ("pass1", 300),    # »pass1 edini« (P69); 1121–1140 → 1421–1440
     75: ("pass2", 0),      # P38 izbira; 0 kandidatov (stari passi pravilna)
-    76: ("pass2", 300),    # P38 izbira; 1161–1180 → 1484–1480 (4→1)
+    76: ("pass2", 300),    # P38 izbira; 1161–1180 → 1498–1480 (4→1)
     77: ("pass2", 0),      # »pass2 pravilen« (P69); 1481–1500 direktno
     78: ("pass2", -100),   # P38 izbira; 160x → 150x (P67 5→6)
     79: ("pass2", -300),   # P38 izbira; 182x → 152x (5→8)
@@ -772,7 +772,7 @@ def build_documents():
             "(bajtno po P69 očesni forenziki) + 95 rejoin vrstic iz starih "
             "P38 slojev (ključi po korekciji, P55 normalizacija, group_pos "
             "poligoni). Konec lažnih fuzij: p74 1121–1140 → 1421–1440 "
-            "(4→1 artefakt), p76 1161–1180 → 1484–1480, p79 182x → 152x "
+            "(4→1 artefakt), p76 1161–1180 → 1498–1480, p79 182x → 152x "
             "(5→8), p80/p81 16xx → 15xx (5→6), p89/p90 19xx → 9xx "
             "(fantom-1 ±1000 — 9 dolgi ascender ≠ vodilna 1), p92 +9 "
             "zamik, p99 92x → 192x (Blatt III). 33 fuzij isti-Blatt (dva "
@@ -788,7 +788,7 @@ def build_documents():
             "rows from the old P38 layers (keys corrected, P55 "
             "normalization, group_pos polygons). End of false fusions: "
             "p74 1121–1140 → 1421–1440 (4→1 artifact), p76 1161–1180 → "
-            "1484–1480, p79 182x → 152x (5→8), p80/p81 16xx → 15xx (5→6), "
+            "1498–1480, p79 182x → 152x (5→8), p80/p81 16xx → 15xx (5→6), "
             "p89/p90 19xx → 9xx (phantom-1 ±1000 — a long ascender 9 is "
             "not a leading 1), p92 +9 shift, p99 92x → 192x (Blatt III). "
             "6 same-Blatt fusions (the register holds 921–1000 in two "

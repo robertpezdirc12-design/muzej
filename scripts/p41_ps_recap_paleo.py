@@ -326,7 +326,7 @@ def main() -> None:
                 "summaNach": summaNach,
                 "unresolved": [
                     "hiše 121½, 122, 123 in 134, 135 brez površin v rekapitulaciji (stolpec prazen)",
-                    "bauplatz reference 921/893/1403/999/152/1484/1592/1403/360/620/1311/306/688/336/601 [~] (dvojice 1403 dvomljiva)",
+                    "bauplatz reference 921/893/1403/999/152/1498/1592/1403/360/620/1311/306/688/336/601 [~] (dvojice 1403 dvomljiva)",
                 ],
             },
             "page140Right": {

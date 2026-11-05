@@ -17,7 +17,7 @@ bloki = re.findall(r'\{\s*houseNo:\s*"(\d+)",\s*bookSignature:\s*"04106",\s*year
 check("I1 bloki 04106/1873 == 38", len(bloki) == 38, f"najdeno {len(bloki)}")
 check("I2 hiše-1873 (file-order)", bloki == ["55", "30", "27", "44", "65", "65", "33", "13", "13", "51", "49", "57", "8", "41", "5", "10", "40", "58", "43", "63", "28", "28", "37", "33", "24", "24", "22", "30", "10", "60", "43", "7", "34", "11", "94", "23", "2", "16"], ",".join(bloki))
 skupaj = src.count('bookSignature: "04106"')
-check("I3 vitals-1484 + 04106==265", "HOUSE_VITALS.length !== 1484" not in src and skupaj == 265, f"04106={skupaj}")
+check("I3 vitals-1498 + 04106==279", "HOUSE_VITALS.length !== 1498" not in src and skupaj == 279, f"04106={skupaj}")
 
 d = json.load(open(f"{ROOT}/research/issue17/parish-death-1873-04106.json", encoding="utf-8"))
 grib = [e for e in d["entries"] if "gribl" in str(e.get("vas", "")).lower()]
@@ -30,8 +30,8 @@ check("I4 dokaz (212/38-griblje/14-anomalij + KOLERA + meja-s102 + 212-vrstic)",
       f"entries={len(d['entries'])} griblje={len(grib)} anomalije={len(d['anomalije'])}")
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1484")
-check("I5 qa-p204 + števec-1444", "qa-p204-parish-death-1873-04106" in qa and st >= 100, f"1484-številcev={st}")
+st = qa.count("HOUSE_VITALS.length !== 1498")
+check("I5 qa-p204 + števec-1444", "qa-p204-parish-death-1873-04106" in qa and st >= 100, f"1498-številcev={st}")
 
 i0 = src.find("P204: mrliška PREDZGODOVINA 04106, leto 1873")
 seg = src[i0:] if i0 >= 0 else ""
@@ -51,7 +51,7 @@ check("I8d BRIME-h24-NIT (→P203-z6!)", "BRIME-h24-NIT" in qa and "BRIME-NIT" i
 check("I8e ULEDBA-×3-konec-1873", "ULEDBA-×3" in qa and "ULEDBA" in seg)
 check("I8f Griblje-DVOJNOST-h58 (Krasinec-mimo-Griblje-Dozeth-MOŠKI!)", "Griblje-DVOJNOST" in seg)
 check("I9 peščeni-števec-qa-p204 (204. kontrola!)", "qa-p204" in qa and "204. kontrola" in qa)
-check("I9b pt-luknja-242/1461", '"vitalsTotal": 1484' in open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read())
+check("I9b pt-luknja-242/1461", '"vitalsTotal": 1498' in open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read())
 
 # I10 LIVE-verifikacija matricula (s102-naslovnica-dostopna)
 try:

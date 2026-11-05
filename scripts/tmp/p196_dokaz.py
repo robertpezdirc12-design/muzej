@@ -285,13 +285,13 @@ dokaz = {
         "H12": "z81-'Svec-vs-Ivec'-ime + '2-vs-6'-starost-razkol (crop-vs-fresh) — OBE-dokumentirani [~]",
     },
     "kaskada": {
-        "vitals": "1283 → 1484 (+19 blokov 04106-1881!)",
+        "vitals": "1283 → 1498 (+19 blokov 04106-1881!)",
         "04106": "64 → 83 (16×-1885 + 21×-1884 + 11×-1883 + 16×-1882 + 19×-1881!)",
         "04894": "520-NESPREMENJENO",
         "p80": "94-NESPREMENJENO",
         "korpus": "93-NESPREMENJEN",
-        "pt_luknja": "18-NESPREMENJENA (regenerirana-83/1484!)",
-        "qa": "qa-p196 = 196.-kontrola + 107×-1283→1484 + stale-sanacija-p153–p195 + p80 + p191!",
+        "pt_luknja": "18-NESPREMENJENA (regenerirana-83/1498!)",
+        "qa": "qa-p196 = 196.-kontrola + 107×-1283→1498 + stale-sanacija-p153–p195 + p80 + p191!",
     },
     "lead": {
         "P197": "mrliška 04106, leto 1880 (s165–s171-probe!) — s171-'18/81'-MEJA-ŽE-VIDENA + tail-1880-z72-Valčič-92J-ŽE-prebran! 1880-z1-iskati-naprej-nazaj (z2–z72 = 71-vrstic-1880)!",
