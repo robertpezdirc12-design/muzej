@@ -45,7 +45,7 @@ Invarianti (FAIL → exit 1):
       PARCELS sha256; v3 runtime rows == v3 dokaz rowsEvidence bajtno
   I3  rejoin kandidati == P69 rejoinSpec (bajtno, po strani); 95 dodanih;
       3 brez vira [~] (p80)
-  I4  NOVI vrstice: P55 normalizacija (areaQK = j·1600+k, wohnort
+  I4  NOVI vrstice: P55 normalizacija (areaQK = j·1609+k, wohnort
       propagate), kolizije pokrite s 33 fuzijami, ostale 0
   I5  meritve v4 (rows/bases/multi/cross/ambRows/conf/series) — pini
   I6  nespremenjene vrstice: vsi ključi razen preslikanih (base + group
@@ -85,7 +85,7 @@ SEED_SPATIAL = 7
 M_PER_DEG_LAT = 111320.0
 TOTAL_PS_ROWS = 2762  # P55/P38 izbira (pageSelection.rows)
 
-PIN_V3_EV_SHA = "af7479e428182f381d3a2537896493d7cf86210fac7027221e22ac2aea218b53"
+PIN_V3_EV_SHA = "af7479e428182f390d3a2537896493d7cf86210fac7027221e22ac2aea218b53"
 PIN_P69_EV_SHA = "99962e24dc129a253e7100cb297aa6b73989f96b1d5ff7c95d55d8735c52829e"  # p69 zamrznjen na v3 dokaz (P70)
 PIN_P59_EV_SHA = "650f13dccab1da70a60d04c41ce9f7887ca94eafea8a0a7927c104ca899b76f3"  # P68 v3 re-run
 PIN_PARCELS_SHA = "fee91fca736348f40ef11d38b7a5b51d51656a9768cda648f4d737029bb3941f"
@@ -357,7 +357,7 @@ def compute():
                 continue
             j = fnum(v.get("joch"))
             k = fnum(v.get("klafter"))
-            a_qk = j * 1600.0 + k
+            a_qk = j * 1609.0 + k
             rec = {
                 "page": pg,
                 "parzella": str(v.get("parzella") or ""),
@@ -371,7 +371,7 @@ def compute():
                 "joch": j or None,
                 "klafter": k or None,
                 "areaQK": round(a_qk, 1) if a_qk > 0 else None,
-                "areaSuspect": k >= 1600.0,
+                "areaSuspect": k >= 1609.0,
                 "parts": gp[3],
                 "lat": gp[0],
                 "lng": gp[1],

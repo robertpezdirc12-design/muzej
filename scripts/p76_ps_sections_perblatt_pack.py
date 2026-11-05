@@ -111,7 +111,7 @@ OUT_EV = os.path.join(ROOT, "research/issue17/ps-sections-perblatt-pack.json")
 OUT_RT = os.path.join(ROOT, "src/data/atlas/ps-sections-perblatt-pack.json")
 
 PIN_P69EV_SHA = "99962e24dc129a253e7100cb297aa6b73989f96b1d5ff7c95d55d8735c52829e"
-PIN_V3EV_SHA = "af7479e428182f381d3a2537896493d7cf86210fac7027221e22ac2aea218b53"
+PIN_V3EV_SHA = "af7479e428182f390d3a2537896493d7cf86210fac7027221e22ac2aea218b53"
 PIN_V7EV_SHA = "4d701a71e2cd58a5cd8feefeec8534132ff717f8cb340ec20b4da1ba4a7aad6f"
 PIN_P59EV_SHA = "650f13dccab1da70a60d04c41ce9f7887ca94eafea8a0a7927c104ca899b76f3"
 PIN_P56EV_SHA = "2fddc76fb94b69fed55170220fa8dfa3ace4a9466043d264b8b8df788e78a50c"

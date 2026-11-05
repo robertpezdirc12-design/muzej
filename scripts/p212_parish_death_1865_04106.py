@@ -17,7 +17,7 @@ bloki = re.findall(r'\{\s*houseNo:\s*"(\d+)",\s*bookSignature:\s*"04106",\s*year
 check("I1 bloki 04106/1865-numeric == 13", len(bloki) == 13, f"najdeno {len(bloki)}")
 check("I2 hiše-1865-numeric (file-order)", bloki == ["3", "68", "23", "50", "37", "18", "37", "28", "70", "67", "32", "19", "14"], ",".join(bloki))
 skupaj = src.count('bookSignature: "04106"')
-check("I3 vitals-1600 + 04106==381", "HOUSE_VITALS.length !== 1600" not in src and skupaj == 381, f"04106={skupaj}")
+check("I3 vitals-1609 + 04106==390", "HOUSE_VITALS.length !== 1609" not in src and skupaj == 390, f"04106={skupaj}")
 
 d = json.load(open(f"{ROOT}/research/issue17/parish-death-1865-04106.json", encoding="utf-8"))
 grib = [e for e in d["entries"] if "gribl" in str(e.get("vas", "")).lower()]
@@ -31,8 +31,8 @@ check("I4 dokaz (66/13-griblje + meja-s46-1865-letnica + 66-vrstic)",
 check("I4b 2×-prenoza-9/9 + z74-duel-KROP (crossChecks!)", "9/9" in cc and "74/75/76" in cc)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1600")
-check("I5 qa-p212 + števec-1557", "qa-p212-parish-death-1865-04106" in qa and st >= 100, f"1600-številcev={st}")
+st = qa.count("HOUSE_VITALS.length !== 1609")
+check("I5 qa-p212 + števec-1557", "qa-p212-parish-death-1865-04106" in qa and st >= 100, f"1609-številcev={st}")
 
 i0 = src.find("P212: mrliška PREDZGODOVINA 04106, leto 1865")
 seg = src[i0:] if i0 >= 0 else ""
@@ -48,7 +48,7 @@ check("I8c otroška-umrljivost-31%-4/13", "otroška-umrljivost-31%-4/13" in seg)
 check("I8d 12-hiš (h37-×2-HUSIČ-klaster!)", "12 hiš" in seg and "h37-×2-HUSIČ-klaster" in seg)
 check("I9a qa-p212 (212. kontrola!)", "qa-p212" in qa and "212. kontrola" in qa)
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-check("I9b pt-luknja-338/1557", '"vitalsTotal": 1600' in pt and '"04106": 381' in pt)
+check("I9b pt-luknja-338/1557", '"vitalsTotal": 1609' in pt and '"04106": 390' in pt)
 
 try:
     req = urllib.request.Request("https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04106/",

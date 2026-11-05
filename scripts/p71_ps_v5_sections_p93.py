@@ -32,7 +32,7 @@ Dve korekciji v4 (obe odstranjujeta lažne zahtevke, nobena ne izmišljuje podat
          1824", "trifft Gültley 9.", "1870. 8-1117") — anotator je sam
          bral 160x/161x.
        • pageMap P56: numMin/numMax = 1601–1620; P38 pass2: 1601–1620;
-         monotoničnost: vrstica N = 1600+N (20/20).
+         monotoničnost: vrstica N = 1609+N (20/20).
       Učinek: vseh 15 p93 vrstic base := parzella (reverz na originalno
       branje); PF ujemanja = {1603, 1604, 1605} (3 ostanejo), 12 vrstic
       brez PF poligona → izpad (dokaz: removedRows, reason C2); PF
@@ -330,7 +330,7 @@ def compute():
     ann93 = [a for a in (p56.get("annRecords") or []) if a.get("page") == 93]
     ann_nums = sorted(int(a["parzella"]) for a in ann93
                       if str(a.get("parzella", "")).isdigit())
-    if not ann_nums or not all(1600 <= n <= 1620 for n in ann_nums):
+    if not ann_nums or not all(1609 <= n <= 1620 for n in ann_nums):
         fail(f"I3 annRecords p93 {ann_nums} — niso 160x/161x")
     else:
         ok(f"I3 annRecords (sodobni anotator) p93: {ann_nums} — "

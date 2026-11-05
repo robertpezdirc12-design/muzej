@@ -54,7 +54,7 @@ RADIUS = (50.0, 100.0)
 PAS = 0.25
 FNV_OFFSET = 0x811C9DC5
 FNV_PRIME = 0x01000193
-FNV_PIN = 1711381398  # FNV-1a-32("p61-perm-0-lat") — pin determinizma
+FNV_PIN = 1711390398  # FNV-1a-32("p61-perm-0-lat") — pin determinizma
 
 # ——— pini rezultatov (vzorci iz podatkov; skripta FAIL ob odmiku) ———
 PIN_MODI = {"A": 226, "B": 60, "X": 788, "noRatio": 5}  # P68 v3 (v2: A 226 / B 62 / X 800 / noRatio 5)

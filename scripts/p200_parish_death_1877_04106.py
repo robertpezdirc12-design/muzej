@@ -4,7 +4,7 @@
 
 I1: parish.ts vsebuje 8 blokov bookSignature 04106 / year 1877
 I2: hiše 1877 == [6,8,12,18,42,53,57,62]
-I3: 04106-skupaj == 381 + vitals-števec-1498
+I3: 04106-skupaj == 390 + vitals-števec-1498
 I4: dokaz research/issue17/parish-death-1877-04106.json (60 entries / 8-griblje /
     13-anomalij / meja-s143-'18 77.'-ODREZANA + s145-'1877.'-39.-potrditev + 60-vrstic)
 I5: qa-parish.ts vsebuje qa-p200-parish-death-1877-04106 + števec 1375 (≥ 100)
@@ -12,7 +12,7 @@ I6: duhovniki-1877 (KOGEJ-RAZŠIRJENO-NAZAJ + Dovgan-dominanta + JANČAR-NIT-STA
 I7: kontinuitete/oznake (h12-DRAGOŠ-POPREVEK + h18-ŠIMEC-NIT + h53/h57-NIT + PEZDINC-#7)
 I8: oznake ('Hrible'[?]-NOVA-LOKALNOST + 'Br[a]stfbrand'-KLASTER-×3 + ULEDBA-#10-8.-
     instance + 39.-POTRDITEV + ŠTEVJE-IZ-VRSTIC + otroška-umrljivost-75%)
-I9: pt-luknja-18-final.json (04106 == 381, vitals == 1600)
+I9: pt-luknja-18-final.json (04106 == 390, vitals == 1609)
 I10: 04894-still-520 + 04106-leta == {1877,...,1885}
 --live: produkcija /api/qa == 200/200 + qa-p200 pass:True
 """
@@ -35,7 +35,7 @@ check("I2 hiše-1877", ",".join(his) == "6,8,12,18,42,53,57,62", ",".join(his))
 
 # I3: 04106-skupaj + vitals-1498
 skupaj = src.count('bookSignature: "04106"')
-check("I3 vitals-1600 + 04106==381", "HOUSE_VITALS.length !== 1600" not in src and skupaj == 381,
+check("I3 vitals-1609 + 04106==390", "HOUSE_VITALS.length !== 1609" not in src and skupaj == 390,
       f"04106-bloki={skupaj}")
 
 # I4: dokaz
@@ -50,9 +50,9 @@ check("I4 dokaz (60/8-griblje/14-anomalij + meja-s143-'18 77.' + s145-'1877.'-39
 
 # I5: qa-parish
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1600")
+st = qa.count("HOUSE_VITALS.length !== 1609")
 check("I5 qa-p200 + števec-1375", "qa-p200-parish-death-1877-04106" in qa and st >= 100,
-      f"1600-številcev={st}")
+      f"1609-številcev={st}")
 
 # I6: duhovniki-1877 (P200-segment)
 i0 = src.find("P200: mrliška PREDZGODOVINA 04106, leto 1877")
@@ -79,15 +79,15 @@ check("I8f otroška-umrljivost-75% (6/8!)", "75%-1877" in seg or "UMRLJIVOST-75%
 
 # I9: pt-luknja
 pt = json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8"))
-check("I9 pt-luknja (04106==381, vitals==1511)",
-      pt["corpus"]["byBook"]["04106"] == 381 and pt["corpus"]["vitalsTotal"] == 1600,
+check("I9 pt-luknja (04106==390, vitals==1511)",
+      pt["corpus"]["byBook"]["04106"] == 390 and pt["corpus"]["vitalsTotal"] == 1609,
       f"04106={pt['corpus']['byBook']['04106']} vitals={pt['corpus']['vitalsTotal']}")
 
 # I10: 04894-still-520 + leta-nabor
 check("I10 04894-still-520", src.count('bookSignature: "04894"') == 520,
       f"04894={src.count('bookSignature: \"04894\"')}")
 leta = sorted(set(re.findall(r'bookSignature:\s*"04106",\s*year:\s*(\d{4})', src)))
-check("I10b 04106-leta-{1877,...,1885}", ",".join(leta) == "1861,1862,1863,1864,1865,1866,1867,1868,1869,1870,1871,1872,1873,1874,1875,1876,1877,1878,1879,1880,1881,1882,1883,1884,1885", ",".join(leta))
+check("I10b 04106-leta-{1877,...,1885}", ",".join(leta) == "1860,1861,1862,1863,1864,1865,1866,1867,1868,1869,1870,1871,1872,1873,1874,1875,1876,1877,1878,1879,1880,1881,1882,1883,1884,1885", ",".join(leta))
 
 # --live
 if "--live" in sys.argv:

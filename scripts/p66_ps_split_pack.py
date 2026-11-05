@@ -68,7 +68,7 @@ P65RT = os.path.join(ROOT, "src/data/atlas/ps-attribution-full.json")
 OUT_EV = os.path.join(ROOT, "research/issue17/ps-split-pack.json")
 OUT_RT = os.path.join(ROOT, "src/data/atlas/ps-split-pack.json")
 
-PIN_V2EV_SHA = "af7479e428182f381d3a2537896493d7cf86210fac7027221e22ac2aea218b53"  # P68 v3 (join blok)
+PIN_V2EV_SHA = "af7479e428182f390d3a2537896493d7cf86210fac7027221e22ac2aea218b53"  # P68 v3 (join blok)
 PIN_P59EV_SHA = "650f13dccab1da70a60d04c41ce9f7887ca94eafea8a0a7927c104ca899b76f3"  # P68 v3 re-run
 PIN_P65RT_SHA = "e714c3550e759a59f6577e24f3aa314e42e30c951353e7f290d360a4bba16b57"  # P68 v3 re-run
 

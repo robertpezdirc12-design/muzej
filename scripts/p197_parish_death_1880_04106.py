@@ -4,13 +4,13 @@
 
 I1: parish.ts vsebuje 13 blokov bookSignature 04106 / year 1880
 I2: hiše 1880 == [2,5,8,10,10,18,20,21,22,27,39,42,47] (h10-×2!)
-I3: 04106-skupaj == 381 + vitals-števec-1600 (qa ≥ 100)
+I3: 04106-skupaj == 390 + vitals-števec-1609 (qa ≥ 100)
 I4: dokaz research/issue17/parish-death-1880-04106.json (71 entries / 13-griblje / 14-anomalij / meja-s164 + s171-tail / 71-vrstic)
 I5: qa-parish.ts vsebuje qa-p197-parish-death-1880-04106 + števec 1511 (≥ 100)
 I6: duhovniki-1880 (Jančar-naslovni-naraščaj coop.→kaplan→VRD/WRD + 12/13-GRIBLJE-92% + Dovgan-z10-izjema + Janežal-glifa)
 I7: kontinuitete/oznake (h10-×2 + h2-nit + h21-hot-spot + ŠIMEC/TIMEC-DVOJNICA + KLOBUČAR-nit + PEZDIREC-nit)
 I8: epidemije/oznake (FRISELN-EPIDEMIJA-×28-W-krivulja + M/W-NIT-×3-MASERN + z55-PRESKOK + VLM-LETO-MISREAD-×2-KROP + MEJA-'1880'-SPLIT-36.-POTRDITEV + ULEDBA-#10)
-I9: pt-luknja-18-final.json (04106 == 381, vitals == 1600)
+I9: pt-luknja-18-final.json (04106 == 390, vitals == 1609)
 I10: 04894-still-520 + 04106-leta == {1880, 1881, 1882, 1883, 1884, 1885}
 --live: produkcija /api/qa == 197/197 + qa-p197 pass:True
 """
@@ -31,9 +31,9 @@ check("I1 bloki 04106/1880 == 13", len(bloki) == 13, f"najdeno {len(bloki)}")
 his = sorted(bloki, key=int)
 check("I2 hiše-1880 (h10-×2)", ",".join(his) == "2,5,8,10,10,18,20,21,22,27,39,42,47", ",".join(his))
 
-# I3: 04106-skupaj + vitals-1600 (parish.ts ne sme imeti starega-asserta)
+# I3: 04106-skupaj + vitals-1609 (parish.ts ne sme imeti starega-asserta)
 skupaj = src.count('bookSignature: "04106"')
-check("I3 vitals-1600 + 04106==381", "HOUSE_VITALS.length !== 1600" not in src and skupaj == 381,
+check("I3 vitals-1609 + 04106==390", "HOUSE_VITALS.length !== 1609" not in src and skupaj == 390,
       f"04106-bloki={skupaj}")
 
 # I4: dokaz
@@ -48,9 +48,9 @@ check("I4 dokaz (71/13-griblje/14-anomalij + meja-s164 + s171-tail + 71-vrstic)"
 
 # I5: qa-parish
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1600")
+st = qa.count("HOUSE_VITALS.length !== 1609")
 check("I5 qa-p197 + števec-1511", "qa-p197-parish-death-1880-04106" in qa and st >= 100,
-      f"1600-številcev={st}")
+      f"1609-številcev={st}")
 
 # I6: duhovniki-1880 (P197-segment)
 i0 = src.find("P197: mrliška PREDZGODOVINA 04106, leto 1880")
@@ -83,7 +83,7 @@ check("I8g 1¾-leta-KROP (z66-ne-VLM)", "1¾" in seg and "KROP" in seg)
 # I9: PT-luknja
 pt = json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8"))
 gap_ids = sorted(int(g["houseNo"]) for g in pt["gapHouses"])
-check("I9 pt-luknja 04106==381", pt["corpus"]["byBook"].get("04106") == 381 and pt["corpus"]["vitalsTotal"] == 1600,
+check("I9 pt-luknja 04106==390", pt["corpus"]["byBook"].get("04106") == 390 and pt["corpus"]["vitalsTotal"] == 1609,
       f"04106={pt['corpus']['byBook'].get('04106')} vitals={pt['corpus']['vitalsTotal']}")
 check("I9b pt-vzorca-kontekst", 42 in gap_ids and 50 not in gap_ids, f"gap={gap_ids[:4]}...{gap_ids[-2:]}")
 
@@ -91,7 +91,7 @@ check("I9b pt-vzorca-kontekst", 42 in gap_ids and 50 not in gap_ids, f"gap={gap_
 bloki94 = re.findall(r'bookSignature:\s*"04894"', src)
 check("I10 04894 == 520", len(bloki94) == 520, f"najdeno {len(bloki94)}")
 izven = re.findall(r'bookSignature:\s*"04106",\s*year:\s*(\d+)', src)
-check("I10b 04106-leta-{1877,...,1885}", set(izven) == {"1861", "1862", "1863", "1864", "1865", "1866", "1867", "1868", "1869", "1870", "1871", "1872", "1873", "1874", "1875", "1876", "1877", "1878", "1879", "1880", "1881", "1882", "1883", "1884", "1885"}, str(set(izven)))
+check("I10b 04106-leta-{1877,...,1885}", set(izven) == {"1860", "1861", "1862", "1863", "1864", "1865", "1866", "1867", "1868", "1869", "1870", "1871", "1872", "1873", "1874", "1875", "1876", "1877", "1878", "1879", "1880", "1881", "1882", "1883", "1884", "1885"}, str(set(izven)))
 
 # --live
 if "--live" in sys.argv:

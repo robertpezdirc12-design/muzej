@@ -68,7 +68,7 @@ RATIO_LO, RATIO_HI = 0.8, 1.25      # P60 pas (moda B)
 DOM_THR = 0.75                       # R2a prag dominance
 SPLIT_LO = 0.5                       # pod tem = fragmented
 
-PIN_V2_EV_SHA = "af7479e428182f381d3a2537896493d7cf86210fac7027221e22ac2aea218b53"  # P68: v3 dokaz (1079; + join blok)
+PIN_V2_EV_SHA = "af7479e428182f390d3a2537896493d7cf86210fac7027221e22ac2aea218b53"  # P68: v3 dokaz (1079; + join blok)
 PIN_BHRT_SHA = "f4c4dedcd6c65d4d1480b4124ae93d00304be2f24f30aa74ca5d0c6ff8c9efe6"  # P68: v3 re-run
 PIN_P60RT_SHA = "c42bf221141e46aee0c387506bdf594c24373d41b19420fe2fc8fc2b7047d6e4"  # P68: v3 re-run
 
