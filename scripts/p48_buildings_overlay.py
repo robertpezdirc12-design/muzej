@@ -33,7 +33,7 @@ DELI:
      za človeško paleografijo, brez spremembe obstoječih dokazov.
 
 VHODI (vsi committed):
-  research/georef-n83/gurs/stavbe-ko1544-0.json      (403 stavbe KO 1544, P48 prenos)
+  research/georef-n83/gurs/stavbe-ko1557-0.json      (403 stavbe KO 1557, P48 prenos)
   research/georef-n83/gurs/stavbe-ko1552-south-0.json (313 stavb KO 1552 južni bbox, P48)
   public/atlas/n83-a0{2,3,4,5}.jpg
   src/data/atlas/model.ts                             (GEOTRUTH meje A02)
@@ -190,10 +190,10 @@ def point_in_poly(lng: float, lat: float, ring: list) -> bool:
 
 
 def load_stavbe() -> list[dict]:
-    """KO 1544 (vse) + KO 1552 (južni bbox) — obrisi OBRIS_GEOM.
-    KO 1544: 403 značilk, 401 z geometrijo (2 brez OBRIS_GEOM)."""
+    """KO 1557 (vse) + KO 1552 (južni bbox) — obrisi OBRIS_GEOM.
+    KO 1557: 403 značilk, 401 z geometrijo (2 brez OBRIS_GEOM)."""
     out = []
-    files = [("research/georef-n83/gurs/stavbe-ko1544-0.json", 1544),
+    files = [("research/georef-n83/gurs/stavbe-ko1557-0.json", 1557),
              ("research/georef-n83/gurs/stavbe-ko1552-south-0.json", 1552)]
     for rel, ko in files:
         d = json.loads((REPO / rel).read_text(encoding="utf-8"))
@@ -615,13 +615,13 @@ def main() -> None:
 
     # ── invariante I1–I5 ──
     print("\n[3/6] invariante I1–I5")
-    n_ko1544 = sum(1 for b in load_stavbe() if b["ko"] == 1544)
+    n_ko1557 = sum(1 for b in load_stavbe() if b["ko"] == 1557)
     n_ko1552 = sum(1 for b in load_stavbe() if b["ko"] == 1552)
-    if n_ko1544 != 401 or n_ko1552 != 313:
-        fail(f"I1: prenos stavb KO1544 {n_ko1544} (pričakovano 401 z geometrijo), "
+    if n_ko1557 != 401 or n_ko1552 != 313:
+        fail(f"I1: prenos stavb KO1557 {n_ko1557} (pričakovano 401 z geometrijo), "
              f"KO1552 {n_ko1552} (313)")
     else:
-        ok(f"I1: prenos 401 + 313 = {n_ko1544 + n_ko1552} stavb (KO 1544: 403 značilk, "
+        ok(f"I1: prenos 401 + 313 = {n_ko1557 + n_ko1552} stavb (KO 1557: 403 značilk, "
            f"2 brez OBRIS_GEOM)")
     if not (sheets["A02"]["nEvaluated"] >= 150 and sheets["A04"]["nEvaluated"] >= 35
             and sheets["A05"]["nEvaluated"] >= 80 and sheets["A03"]["nEvaluated"] == 0):
@@ -899,7 +899,7 @@ def main() -> None:
                         "iz committed dokazov, brez AI"),
         },
         "inputs": {
-            "stavbeKo1544": "research/georef-n83/gurs/stavbe-ko1544-0.json (403, P48 prenos)",
+            "stavbeKo1557": "research/georef-n83/gurs/stavbe-ko1557-0.json (403, P48 prenos)",
             "stavbeKo1552south": "research/georef-n83/gurs/stavbe-ko1552-south-0.json (313, P48 prenos)",
             "fetchReceipt": "scripts/p48_fetch_stavbe.sh (GURS eZKN WFS, OBRIS_GEOM, 2026-10-13)",
             "affines": {"A02": "model.ts georef-a02 meje (GEOTRUTH)",
@@ -934,7 +934,7 @@ def main() -> None:
                     "popravljena kvantitativno (človeška paleografija str. 138–139 "
                     "ostaja odločilna)"),
         "verdictSi": (
-            "P48 (2026-10-13): sodobni stavbni tlorisi (GURS eZKN WFS, 403 KO 1544 + "
+            "P48 (2026-10-13): sodobni stavbni tlorisi (GURS eZKN WFS, 403 KO 1557 + "
             "313 KO 1552 južni bbox) preslikani na skene 1825 — registracija stavbne "
             "ravni: A02 mediana residuala "
             f"{sheets['A02']['onSymbol']['residualM']['median']} m (p90 "
@@ -955,7 +955,7 @@ def main() -> None:
             "človeške paleografije. SHEET_GEOREFS in obstoječi dokazi P40–P47 "
             "nespremenjeni."),
         "verdictEn": (
-            "P48 (2026-10-13): modern building footprints (GURS eZKN WFS, 403 KO 1544 + "
+            "P48 (2026-10-13): modern building footprints (GURS eZKN WFS, 403 KO 1557 + "
             "313 KO 1552 south bbox) mapped onto the 1825 scans — building-level "
             f"registration: A02 median residual "
             f"{sheets['A02']['onSymbol']['residualM']['median']} m (p90 "
@@ -991,7 +991,7 @@ def main() -> None:
         "generatedAt": "2026-10-13",
         "methodSi": (
             "P48 (2026-10-13): sodobni stavbni tlorisi (GURS eZKN WFS SI.GURS.KN:STAVBE, "
-            "OBRIS_GEOM; KO 1544 403 + KO 1552 južni bbox 313, recept "
+            "OBRIS_GEOM; KO 1557 403 + KO 1552 južni bbox 313, recept "
             "scripts/p48_fetch_stavbe.sh) preslikani prek GEOTRUTH meja A02 (model.ts) / "
             "P46 afin A03–A05 na skene; vzorčenje notranjosti+oboda 2 px (vrez 1,5 px), "
             "pokritost črnila na erodirani maski (prag 195, plus-oblika 3×3), "
@@ -1001,7 +1001,7 @@ def main() -> None:
             "ps-landuse.json + houses.ts + ps-raw/ps-138.json"),
         "methodEn": (
             "P48 (2026-10-13): modern building footprints (GURS eZKN WFS "
-            "SI.GURS.KN:STAVBE, OBRIS_GEOM; KO 1544 403 + KO 1552 south bbox 313, "
+            "SI.GURS.KN:STAVBE, OBRIS_GEOM; KO 1557 403 + KO 1552 south bbox 313, "
             "receipt scripts/p48_fetch_stavbe.sh) mapped via the A02 GEOTRUTH bounds "
             "(model.ts) / P46 affines A03–A05 onto the scans; interior+perimeter "
             "sampling at 2 px (inset 1.5 px), ink coverage on the eroded mask "

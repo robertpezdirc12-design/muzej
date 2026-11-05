@@ -211,7 +211,7 @@ def load_cells():
 
 def load_modern():
     mods = []
-    for fn, ka in [('parcels-ko1544-merged.json', 'geom_area'),
+    for fn, ka in [('parcels-ko1557-merged.json', 'geom_area'),
                    ('parcels-ko1552-merged.json', 'a')]:
         for o in json.load(open(f'{ROOT}/research/georef-n83/gurs/{fn}')):
             if o.get(ka, 9999) < 800:

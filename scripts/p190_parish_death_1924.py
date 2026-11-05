@@ -130,7 +130,7 @@ def main():
 
     # ---------- I7: qa-parish.ts pini ----------
     qa = open(QA_TS, encoding="utf-8").read()
-    check("I7a qa-pini 1511 (90×+)", qa.count("!== 1544") >= 90, str(qa.count("!== 1544")))
+    check("I7a qa-pini 1511 (90×+)", qa.count("!== 1557") >= 90, str(qa.count("!== 1557")))
     check("I7b qa-pini 520 (15×+)",
           qa.count('04894").length !== 520') >= 15
           and "p80Death.length !== 520" in qa, str(qa.count('04894").length !== 520')))

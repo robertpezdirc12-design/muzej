@@ -21,7 +21,7 @@ Kaj naredi (vse izključno iz committed dokazov):
      Imena/kultura/ertrag/anmerkung: večina polnih prehodov.
   2. VERIŽNOST: vrstice 1–20 (str. 3) + 21–40 (str. 4) + committed ps-005 (41)
      = neprekinjena veriga Blatt I (PS-full-v2 range str. 5 = [41, 60]).
-  3. JOIN: številke 1–40 ↔ sodobne parcele k.o. 1544 (P47 prenos) po mehaniki P55
+  3. JOIN: številke 1–40 ↔ sodobne parcele k.o. 1557 (P47 prenos) po mehaniki P55
      (base_of z odstranitvijo `*`, group_pos = težišče po površinah delov).
   4. TEST VZTRAJNOSTI (A) POVRŠINE: median modern/QK po parih ≈ 1 Wiener QK
      (3.59665 m²), premešana kontrola (seed 42) višja; delež pasu ±10 %.
@@ -66,7 +66,7 @@ OUT_RUNTIME = ROOT / "src" / "data" / "atlas" / "ps-register-start.json"
 P56_RUNTIME = ROOT / "src" / "data" / "atlas" / "ps-register-topology.json"
 PS_FULL_V2 = ROOT / "research" / "issue17" / "PS-full-v2.json"
 PS_005 = RAW / "ps-005.json"
-PARCELS = ROOT / "research" / "georef-n83" / "gurs" / "parcels-ko1544-merged.json"
+PARCELS = ROOT / "research" / "georef-n83" / "gurs" / "parcels-ko1557-merged.json"
 
 HIST_QK_M2 = 3.59665      # 1 Wiener Quadrat-Klafter (zgodovinska konstanta, P55)
 M_PER_DEG_LAT = 111320.0  # ploščni faktor (izv. village3d.ts / P55)
@@ -437,7 +437,7 @@ def main() -> int:
     in_bbox = all(bb[0] <= r["lat"] <= bb[1] and bb[2] <= r["lng"] <= bb[3]
                   for r in rows_out if r["lat"] is not None)
     i4 = ok(len(matched_bases) == 26 and in_bbox,
-            f"povezanih base {len(matched_bases)}/40 · vse pozicije v bbox KO 1544 ± 200 m")
+            f"povezanih base {len(matched_bases)}/40 · vse pozicije v bbox KO 1557 ± 200 m")
 
     # ——— soslednost sosedov + zaupanje ———
     def dm(a, b2):
@@ -549,7 +549,7 @@ def main() -> int:
             "Strani 3–4 protokola PS (Der Grund-Parcellen der Gemeinde GRÜBLE, 1825) — začetek "
             "glavnega registra, številke 1–40 Blatt I — prebrane s štirimi neodvisnimi VLM plastmi "
             "(polna stran ×3, kolone ×3, izrezi ×3, celice 6×) z deterministično adjudikacijo; "
-            "povezava številk 1–40 na sodobne parcele k.o. 1544 (P55 mehanika) obnovi VSEH 26 base, "
+            "povezava številk 1–40 na sodobne parcele k.o. 1557 (P55 mehanika) obnovi VSEH 26 base, "
             "ki jih je P56 moral sanirati (edini vir teh številk je bil S3 zapadek str. 138–139); "
             "vztrajnost oštevilčenja potrjena z dvema neodvisnima testoma (površine + soslednost)."
         ),

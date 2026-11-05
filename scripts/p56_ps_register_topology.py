@@ -32,8 +32,8 @@ PER-BLATT DVOUMNOST (P55 [~] → kvantificirano): koliko base številk se
 pojavlja na več straneh (per-Blatt ponovitve) — brez ugibanja, samo
 meritve; join po sami številki teh instanc ne more ločiti [~].
 
-SODOBNA PRAZNINA 2507–2607: v sodobnem k.o. 1544 (P47 prenos, 2117 parcel,
-vse ko 1544) NE obstaja nobena parcela 2507–2607 — točno tam, kjer register
+SODOBNA PRAZNINA 2507–2607: v sodobnem k.o. 1557 (P47 prenos, 2117 parcel,
+vse ko 1557) NE obstaja nobena parcela 2507–2607 — točno tam, kjer register
 nadaljuje prek recap vsote 2505; 2608–2700 pa obstaja (78 parcel).
 
 ČASOVNICA SPREMEMB: anmerkung stolpec po vseh izbranih straneh — 584
@@ -43,7 +43,7 @@ kataster); protokol je bil vzdrževan ~stoletje [~ per-row VLM branja].
 Viri (vsi committed): research/issue17/ps-raw/ps-*.json (P36/P38 branja),
 research/issue17/PS-full-v2.json (izbira strani), research/issue17/
 ps-parcels-geo.json (P55 join — vrstice, razmerja), research/georef-n83/
-gurs/parcels-ko1544-merged.json (2117 sodobnih parcel, P47).
+gurs/parcels-ko1557-merged.json (2117 sodobnih parcel, P47).
 
 Izpis: research/issue17/ps-register-topology.json (dokaz — poln) +
 src/data/atlas/ps-register-topology.json (runtime — kompakt).
@@ -81,7 +81,7 @@ OUT_RUNTIME = REPO / "src/data/atlas/ps-register-topology.json"
 RAW_DIR = REPO / "research/issue17/ps-raw"
 PS_FULL_V2 = REPO / "research/issue17/PS-full-v2.json"
 P55_EVIDENCE = REPO / "research/issue17/ps-parcels-geo.json"
-PARCELS = REPO / "research/georef-n83/gurs/parcels-ko1544-merged.json"
+PARCELS = REPO / "research/georef-n83/gurs/parcels-ko1557-merged.json"
 
 YEAR_RE = re.compile(r"(?<!\d)(1[5-9]\d\d)(?!\d)")
 S1_PAGES = range(5, 128)      # 5–127
@@ -514,7 +514,7 @@ def main() -> int:
             "psRaw": "research/issue17/ps-raw/ps-*.json (P36/P38 branja, 233 datotek)",
             "pageSelection": "research/issue17/PS-full-v2.json (135 strani)",
             "p55Evidence": "research/issue17/ps-parcels-geo.json (2762 vrstic, 1110 povezanih)",
-            "modernParcels": "research/georef-n83/gurs/parcels-ko1544-merged.json (2117, vse ko 1544)",
+            "modernParcels": "research/georef-n83/gurs/parcels-ko1557-merged.json (2117, vse ko 1557)",
             "p48BlattX": "research/issue17/buildings-overlay.json (neodvisna Blatt X analiza P48)",
         },
         "pageSelection": {
@@ -618,7 +618,7 @@ def main() -> int:
             "contPsRows": len(ps_cont_rows),
             "contPsUnique": len(ps_cont_unique),
             "verdictSi": (
-                "v sodobnem k.o. 1544 NE obstaja nobena parcela 2507–2607 — točno tam, kjer register "
+                "v sodobnem k.o. 1557 NE obstaja nobena parcela 2507–2607 — točno tam, kjer register "
                 "nadaljuje prek recap vsote 2505 (87 dodatkov S2); 2608–2700 pa obstaja (78 parcel). "
                 "Vzrok praznine ni znan [~] — možnosti: ukinjene/absorbirane parcele, prenumeracija "
                 "1841 (Grundsteuerkataster); pošteno: samo opazovanje, brez trditve o vzroku"
