@@ -130,8 +130,8 @@ proof["entries"] = entries
 proof["tail_1868"] = tail_1868
 
 import os
-os.makedirs("/home/z/muzej/research/issue17", exist_ok=True)
-json.dump(proof, open("/home/z/muzej/research/issue17/parish-death-1869-04106.json", "w"), ensure_ascii=False, indent=1)
+os.makedirs("/home/z/my-project/muzej-backup/research/issue17", exist_ok=True)
+json.dump(proof, open("/home/z/my-project/muzej-backup/research/issue17/parish-death-1869-04106.json", "w"), ensure_ascii=False, indent=1)
 print(f"dokaz: research/issue17/parish-death-1869-04106.json — {len(entries)}-vpisov / {len(griblje)}-Griblje / {len(hise)}-hiš")
 print("hiše:", ",".join(hise))
 print("otroci:", len(otroci), "/", len(griblje), f"= {round(100*len(otroci)/len(griblje))}%")

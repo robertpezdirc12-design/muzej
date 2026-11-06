@@ -3,7 +3,7 @@
 """P203 — vstavi 21-GRIBLJE-blokov (04106, leto 1874) v parish.ts PRED P202-sekcijo."""
 from pathlib import Path
 
-TS = Path("/home/z/muzej/src/data/atlas/parish.ts")
+TS = Path("/home/z/my-project/muzej-backup/src/data/atlas/parish.ts")
 src = TS.read_text(encoding="utf-8")
 
 ANCHOR = "  // ——— P202: mrliška PREDZGODOVINA 04106, leto 1875"

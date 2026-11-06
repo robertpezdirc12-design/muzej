@@ -126,6 +126,6 @@ proof["meja_1865"] = {"vir": "s46-KROP-glava (pag 41)", "velika_letnica": kglava
                        "naslednja_vrsta2": kglava212.get("naslednja_vrsta2")}
 proof["tail_1865_p211"] = {"vir": "s51-KROP-glava (pag 46; P211-dokaz-reuse!)", "vrstice": kglava.get("tail_vrstice", []),
                             "precrtana": kglava.get("precrtana_vrsta"), "restart": kglava.get("restart_vrsta1")}
-os.makedirs("/home/z/muzej/research/issue17", exist_ok=True)
-json.dump(proof, open("/home/z/muzej/research/issue17/parish-death-1865-04106.json", "w"), ensure_ascii=False, indent=1)
+os.makedirs("/home/z/my-project/muzej-backup/research/issue17", exist_ok=True)
+json.dump(proof, open("/home/z/my-project/muzej-backup/research/issue17/parish-death-1865-04106.json", "w"), ensure_ascii=False, indent=1)
 print(f"OK dokaz: entries={len(entries)} griblje={len(griblje)} otroci={len(otroci)} meseci-sum={meseci_sum}")

@@ -4,7 +4,7 @@
 from pathlib import Path
 import re
 
-ROOT = Path("/home/z/muzej")
+ROOT = Path("/home/z/my-project/muzej-backup")
 files = sorted(ROOT.glob("scripts/p2[0-9][0-9]_parish*.py"))
 full_years = ["1868", "1869", "1870", "1871", "1872", "1873", "1874", "1875", "1876", "1877",
               "1878", "1879", "1880", "1881", "1882", "1883", "1884", "1885"]

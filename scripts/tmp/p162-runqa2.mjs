@@ -1,4 +1,4 @@
-import { runQA } from '/home/z/muzej/src/lib/qa.ts';
+import { runQA } from '/home/z/my-project/muzej-backup/src/lib/qa.ts';
 const r = runQA({});
 console.log('top keys:', Object.keys(r));
 const arr = r.tests || r.checks || [];

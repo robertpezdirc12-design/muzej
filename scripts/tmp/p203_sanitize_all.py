@@ -5,7 +5,7 @@ verifier-patch (p190–p202) + pt-luknja + skripte-kaskada."""
 from pathlib import Path
 import glob, json, re
 
-ROOT = Path("/home/z/muzej")
+ROOT = Path("/home/z/my-project/muzej-backup")
 
 # ——— A: qa-p202 INSERT ———
 QA = ROOT / "src/lib/qa-parish.ts"

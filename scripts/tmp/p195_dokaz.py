@@ -6,7 +6,7 @@ Struktura po vzoru P192–P194 (entries + anomalije + duhovniki + epidemija +
 hišne_kontinuitete + forme + crossChecks + honesty + kaskada + lead + notes)."""
 import json, os
 
-ROOT = "/home/z/muzej"
+ROOT = "/home/z/my-project/muzej-backup"
 
 def E(skan, pag, z, mesec, smrt, pokop, vas, hisna, ime, stan, starost, bolezen,
       previden, duhovnik, griblje, blok, spol, leto=1882, opomba=None):

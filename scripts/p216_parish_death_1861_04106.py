@@ -3,7 +3,7 @@
 """P216 — verifikator MRLIŠKE PREDZGODOVINE 04106, leto 1861 (predzgodovina-25/29)."""
 import json, re, sys, urllib.request
 
-ROOT = "/home/z/muzej"
+ROOT = "/home/z/my-project/muzej-backup"
 results, ok = [], True
 
 def check(ime, cond, detail=""):
@@ -17,7 +17,7 @@ bloki = re.findall(r'\{\s*houseNo:\s*"(\d+)",\s*bookSignature:\s*"04106",\s*year
 check("I1 bloki 04106/1861-numeric == 10", len(bloki) == 10, f"najdeno {len(bloki)}")
 check("I2 hiše-1861-numeric (file-order)", bloki == ["1", "68", "42", "42", "42", "26", "48", "18", "14", "67"], ",".join(bloki))
 skupaj = src.count('bookSignature: "04106"')
-check("I3 vitals-1609 + 04106==390", "HOUSE_VITALS.length !== 1609" not in src and skupaj == 390, f"04106={skupaj}")
+check("I3 vitals-1632 + 04106==413", "HOUSE_VITALS.length !== 1632" not in src and skupaj == 413, f"04106={skupaj}")
 
 d = json.load(open(f"{ROOT}/research/issue17/parish-death-1861-04106.json", encoding="utf-8"))
 grib = [e for e in d["entries"] if "gribl" in str(e.get("vas", "")).lower() and "grem" not in str(e.get("vas", "")).lower()]
@@ -34,8 +34,8 @@ check("I4c h42-klaster + pezdirc-mreza + valentin-×2 (anomalije!)",
       "h42-klaster-druzina" in an and "pezdirc-mreza-1860-1865" in an and "valentin-×2-h57-1860-tail" in an)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1609")
-check("I5 qa-p216 + števec-1600", "qa-p216-parish-death-1861-04106" in qa and st >= 125, f"1609-številcev={st}")
+st = qa.count("HOUSE_VITALS.length !== 1632")
+check("I5 qa-p216 + števec-1600", "qa-p216-parish-death-1861-04106" in qa and st >= 125, f"1632-številcev={st}")
 
 i0 = src.find("P216: mrliška PREDZGODOVINA 04106, leto 1861")
 seg = src[i0:] if i0 >= 0 else ""
@@ -52,7 +52,7 @@ check("I8d otroška-umrljivost-50%-5/10 (NAJVIŠJA!)", "otroška-umrljivost-50%-
 check("I8e VALENTIN-×2-h57-1860-tail", "VALENTIN-×2-h57-1860-tail" in seg)
 check("I9a qa-p216 (216. kontrola!)", "qa-p216" in qa and "216. kontrola" in qa)
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-check("I9b pt-luknja-381/1600", '"vitalsTotal": 1609' in pt and '"04106": 390' in pt)
+check("I9b pt-luknja-381/1600", '"vitalsTotal": 1632' in pt and '"04106": 413' in pt)
 
 try:
     req = urllib.request.Request("https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04106/",

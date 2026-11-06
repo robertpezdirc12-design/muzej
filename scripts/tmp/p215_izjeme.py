@@ -4,7 +4,7 @@
 Vzorec P214 (p214_izjeme): NOVA-hiša-pini + HOUSE_VITALS.some(...) allow-termini."""
 from pathlib import Path
 
-p = Path("/home/z/muzej/src/lib/qa-parish.ts")
+p = Path("/home/z/my-project/muzej-backup/src/lib/qa-parish.ts")
 lines = p.read_text(encoding="utf-8").split("\n")
 
 JOBS = [("P91) že obstaja", "9"), ("P92) že obstaja", "10")]

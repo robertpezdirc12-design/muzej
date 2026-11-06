@@ -5,7 +5,7 @@ PRED P203-sekcijo (newest-first vzorec). 212 vpisov / 38 Griblje / 30 hiš (REKO
 import json
 from pathlib import Path
 
-TS = Path("/home/z/muzej/src/data/atlas/parish.ts")
+TS = Path("/home/z/my-project/muzej-backup/src/data/atlas/parish.ts")
 src = TS.read_text(encoding="utf-8")
 
 ANCHOR = "  // ——— P203: mrliška PREDZGODOVINA 04106, leto 1874"

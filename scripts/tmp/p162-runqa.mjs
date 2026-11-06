@@ -1,4 +1,4 @@
-import { runQA } from '/home/z/muzej/src/lib/qa.ts';
+import { runQA } from '/home/z/my-project/muzej-backup/src/lib/qa.ts';
 const r = runQA({});
 const tests = r.tests || r.checks || [];
 const fails = tests.filter(t => !t.ok);

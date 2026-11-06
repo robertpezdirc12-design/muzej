@@ -5,8 +5,8 @@ from pathlib import Path
 import subprocess
 
 head = subprocess.run(["git", "show", "HEAD:src/lib/qa-parish.ts"], capture_output=True, text=True,
-                      cwd="/home/z/muzej").stdout.split("\n")
-p = Path("/home/z/muzej/src/lib/qa-parish.ts")
+                      cwd="/home/z/my-project/muzej-backup").stdout.split("\n")
+p = Path("/home/z/my-project/muzej-backup/src/lib/qa-parish.ts")
 lines = p.read_text(encoding="utf-8").split("\n")
 
 

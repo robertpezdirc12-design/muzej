@@ -453,9 +453,9 @@ def class_areas(p39, v2):
             a = agg[cls]
             a[0] += 1
             if hasarea:
-                a[1] += j * 1609 + k
+                a[1] += j * 1632 + k
                 a[2] += 1
-            per_section[e["section"]][cls] += (j * 1609 + k) if hasarea else 0
+            per_section[e["section"]][cls] += (j * 1632 + k) if hasarea else 0
     return {k: {"pairs": v[0], "areaK": v[1], "withArea": v[2]} for k, v in agg.items()}, per_section
 
 
@@ -625,16 +625,16 @@ def main():
 
     # ——— I3: sekcije vs P40 konstante ———
     for sec, const in P40_SECTIONS.items():
-        s = sum(per_section[sec].values()) / 1609.0
+        s = sum(per_section[sec].values()) / 1632.0
         if abs(s - const) > 0.02:
             fail(f"I3: sekcija {sec} {s:.2f} != P40 {const}")
 
     # ——— 3) PV sprava ———
     pv = extract_pv()
     def J(x):
-        return x / 1609.0
+        return x / 1632.0
     past_alm = areas.get("PASTVISCE", {"areaK": 0})["areaK"] + areas.get("ALM", {"areaK": 0})["areaK"]
-    weiden_gap = PV_EXPECT["Weiden"][0] * 1609 + PV_EXPECT["Weiden"][1] - past_alm
+    weiden_gap = PV_EXPECT["Weiden"][0] * 1632 + PV_EXPECT["Weiden"][1] - past_alm
     njiva_area = areas.get("NJIVA", {"areaK": 0})["areaK"]
     travnik_area = areas.get("TRAVNIK", {"areaK": 0})["areaK"]
     vrt_area = areas.get("VRT", {"areaK": 0})["areaK"]
@@ -642,7 +642,7 @@ def main():
     gozd_area = areas.get("GOZD", {"areaK": 0})["areaK"]
     neklas_area = areas.get("NEKLASIFICIRANO", {"areaK": 0})["areaK"]
     total_rows = sum(v["areaK"] for v in areas.values())
-    pv_total = PV_EXPECT["Grand_Total"][0] * 1609 + PV_EXPECT["Grand_Total"][1]
+    pv_total = PV_EXPECT["Grand_Total"][0] * 1632 + PV_EXPECT["Grand_Total"][1]
     area_gap = total_rows - pv_total
 
     # ——— 4) leksikon ———
@@ -706,14 +706,14 @@ def main():
         "families": families_out,
         "singles": singles_out,
         "pvReconciliation": {
-            "pvOfficial": {k: {"joch": v[0], "klafter": v[1], "jochF": round(J(v[0]*1609+v[1]), 2)} for k, v in PV_EXPECT.items()},
-            "psClassAreasJ": {k: round(v["areaK"] / 1609.0, 2) for k, v in sorted(areas.items())},
+            "pvOfficial": {k: {"joch": v[0], "klafter": v[1], "jochF": round(J(v[0]*1632+v[1]), 2)} for k, v in PV_EXPECT.items()},
+            "psClassAreasJ": {k: round(v["areaK"] / 1632.0, 2) for k, v in sorted(areas.items())},
             "weidenGapJ": round(J(weiden_gap), 2),
             "psPastVisceAlmJ": round(J(past_alm), 2),
-            "njivaVsAeckerDeltaJ": round(J(njiva_area - (PV_EXPECT["Aecker"][0]*1609+PV_EXPECT["Aecker"][1])), 2),
-            "travnikVsWiesenDeltaJ": round(J(travnik_area - (PV_EXPECT["Wiesen"][0]*1609+PV_EXPECT["Wiesen"][1]) - (PV_EXPECT["Wiesen_mit_Obstbaeumen"][0]*1609+PV_EXPECT["Wiesen_mit_Obstbaeumen"][1])), 2),
-            "vrtVsGemueseDeltaJ": round(J(vrt_area - (PV_EXPECT["Gemuese_Gaerten"][0]*1609+PV_EXPECT["Gemuese_Gaerten"][1])), 2),
-            "vinogradVsWeinDeltaJ": round(J(vinograd_area - (PV_EXPECT["Wein_Gaerten"][0]*1609+PV_EXPECT["Wein_Gaerten"][1])), 2),
+            "njivaVsAeckerDeltaJ": round(J(njiva_area - (PV_EXPECT["Aecker"][0]*1632+PV_EXPECT["Aecker"][1])), 2),
+            "travnikVsWiesenDeltaJ": round(J(travnik_area - (PV_EXPECT["Wiesen"][0]*1632+PV_EXPECT["Wiesen"][1]) - (PV_EXPECT["Wiesen_mit_Obstbaeumen"][0]*1632+PV_EXPECT["Wiesen_mit_Obstbaeumen"][1])), 2),
+            "vrtVsGemueseDeltaJ": round(J(vrt_area - (PV_EXPECT["Gemuese_Gaerten"][0]*1632+PV_EXPECT["Gemuese_Gaerten"][1])), 2),
+            "vinogradVsWeinDeltaJ": round(J(vinograd_area - (PV_EXPECT["Wein_Gaerten"][0]*1632+PV_EXPECT["Wein_Gaerten"][1])), 2),
             "gozdVsWalderNote": "PV 'Walder' vrstica v committed transkripciji PRAZNA — "
                                 "gozda uradni izkaz NE navaja; PS ima GOZD "
                                 f"{J(gozd_area):.2f} J; vrzel odprta (možen napaka branja PV ali "

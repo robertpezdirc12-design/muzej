@@ -4,7 +4,7 @@
 import json
 from pathlib import Path
 
-TS = Path("/home/z/muzej/src/data/atlas/parish.ts")
+TS = Path("/home/z/my-project/muzej-backup/src/data/atlas/parish.ts")
 src = TS.read_text(encoding="utf-8")
 ANCHOR = "  // ——— P204: mrliška PREDZGODOVINA 04106, leto 1873"
 assert src.count(ANCHOR) == 1, f"anchor-count={src.count(ANCHOR)}"
