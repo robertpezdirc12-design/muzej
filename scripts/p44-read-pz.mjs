@@ -23,7 +23,7 @@ function imgFor(page) {
 
 const PROMPT = `To je stran ${'{PAGE}'} katastrskega cenilnega elaborata (PZ — "Catastral-Schätzungs-Elaborat") za občino Grüble/Griblje iz franciscejskega katastra 1825, napisana v nemški Kurrent pisavi z rdečimi rubrikami. Elaborat vsebuje: (a) §§ odseke po kulturah z narativnim opisom in majhnimi povzetkovnimi tabelami v fl/kr, (b) tiskane primerjalne obrazce "Resultate der benützten Behelfe" s pridelki po razredih (Metzen/Centner/Eimer), (c) del "Veranschlagung des Cultur-Aufwandes und Darstellung des Rein-Ertrages" s §§, ki se začnejo znova pri 1.
 
-NALOGA: prepiši VSE tabele in številske vrstice na tej strani. Za vsako tabelo zapiši kulturo (npr. Ackerland, Wiesen, Weingärten, Gärten, Hutweide/Weiden, Bau-Area), oznako razreda (I, II, III, IV, ...), površino (Joch + Klafter; 1 Joch = 1642 kv. Klafter), vrednosti (fl/kr — Rob-Ertrag, Cultur-Aufwand, Rein-Ertrag, Tarif, Anschlag — kjer so), pridelke (Metzen/Centner/Eimer) in vsote (Summe/Total). Prepiši tudi § naslove in kratko vsebino narativa (1 stavek na §).
+NALOGA: prepiši VSE tabele in številske vrstice na tej strani. Za vsako tabelo zapiši kulturo (npr. Ackerland, Wiesen, Weingärten, Gärten, Hutweide/Weiden, Bau-Area), oznako razreda (I, II, III, IV, ...), površino (Joch + Klafter; 1 Joch = 1652 kv. Klafter), vrednosti (fl/kr — Rob-Ertrag, Cultur-Aufwand, Rein-Ertrag, Tarif, Anschlag — kjer so), pridelke (Metzen/Centner/Eimer) in vsote (Summe/Total). Prepiši tudi § naslove in kratko vsebino narativa (1 stavek na §).
 
 PRAVILA:
 - Negotova branja označi z [~], neberljiva z [?]; ne izmišljuj števk
