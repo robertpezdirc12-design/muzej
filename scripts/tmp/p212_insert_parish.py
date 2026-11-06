@@ -4,7 +4,7 @@
 import json, re
 from pathlib import Path
 
-TS = Path("/home/z/my-project/muzej-backup/src/data/atlas/parish.ts")
+TS = Path("/home/z/my-project/src/data/atlas/parish.ts")
 src = TS.read_text(encoding="utf-8")
 ANCHOR = "  // ——— P211: mrliška PREDZGODOVINA 04106, leto 1866"
 

@@ -118,7 +118,7 @@ proof = {
 
 json.dump(proof, open(f"{TMP}/proof_1861.json", "w"), ensure_ascii=False, indent=1)
 import shutil
-shutil.copy(f"{TMP}/proof_1861.json", "/home/z/my-project/muzej-backup/research/issue17/parish-death-1861-04106.json")
+shutil.copy(f"{TMP}/proof_1861.json", "/home/z/my-project/research/issue17/parish-death-1861-04106.json")
 print(f"dokaz: {proof['entries_count']} entries / {proof['griblje_count']} griblje / {proof['statistika']['griblje_hise']} hiš")
 print("otroška:", otrostenje)
 print("meseci-griblje:", dict(meseci_g))

@@ -3,7 +3,7 @@
 import json
 
 D = "/tmp/p172/vlm-page"
-OUT = "/home/z/my-project/muzej-backup/research/issue17/parish-death-1906.json"
+OUT = "/home/z/my-project/research/issue17/parish-death-1906.json"
 
 # ——— diag-korekcije (diag + KOMPOZIT-soglasje; vir: p172_diag-Read-očmi + forensic/) ———
 # (zap, sken) → popravki nad VLM-izhodom

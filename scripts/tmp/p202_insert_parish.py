@@ -4,7 +4,7 @@
 (newest-first vzorec). 10 vpisov / 10 hiš (5 NOVIH: h11/h35/h45/h59/h72!)."""
 from pathlib import Path
 
-TS = Path("/home/z/my-project/muzej-backup/src/data/atlas/parish.ts")
+TS = Path("/home/z/my-project/src/data/atlas/parish.ts")
 src = TS.read_text(encoding="utf-8")
 
 ANCHOR = "  // ——— P201: mrliška PREDZGODOVINA 04106, leto 1876"

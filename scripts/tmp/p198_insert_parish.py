@@ -5,7 +5,7 @@ PRED P197-sekcijo (newest-first vzorec; SANACIJA-RE-RUN: repo-re-clone-@195b4e1
 → P198-bloki-bili-izgubljeni-z-wipe → re-insert-iz-sejnih-dokazov!)."""
 from pathlib import Path
 
-TS = Path("/home/z/my-project/muzej-backup/src/data/atlas/parish.ts")
+TS = Path("/home/z/my-project/src/data/atlas/parish.ts")
 src = TS.read_text(encoding="utf-8")
 
 ANCHOR = "  // ——— P197: mrliška PREDZGODOVINA 04106, leto 1880"

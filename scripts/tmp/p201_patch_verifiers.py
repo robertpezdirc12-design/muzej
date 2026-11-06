@@ -5,7 +5,7 @@ Vzorec P200-seje: vsaka-faza-patcha-VSE-starе-verifierje-naprej."""
 import re
 from pathlib import Path
 
-ROOT = Path("/home/z/my-project/muzej-backup/scripts")
+ROOT = Path("/home/z/my-project/scripts")
 patched = 0
 for f in sorted(ROOT.glob("p19*.py")) + sorted(ROOT.glob("p200_parish*.py")):
     t = f.read_text(encoding="utf-8")

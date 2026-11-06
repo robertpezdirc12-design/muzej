@@ -4,7 +4,7 @@
 from pathlib import Path
 import glob, json, re
 
-ROOT = Path("/home/z/my-project/muzej-backup")
+ROOT = Path("/home/z/my-project")
 QA = ROOT / "src/lib/qa-parish.ts"
 src = QA.read_text(encoding="utf-8")
 ANCHOR = "  // ——— qa-p207: MRLIŠKA PREDZGODOVINA 04106 — leto 1870 = 16. leto PREDZGODOVINSKE"

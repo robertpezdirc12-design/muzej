@@ -3,7 +3,7 @@
 """P202 — INSERT qa-p202 blok v qa-parish.ts (pred qa-p201-anchor)."""
 from pathlib import Path
 
-QA = Path("/home/z/my-project/muzej-backup/src/lib/qa-parish.ts")
+QA = Path("/home/z/my-project/src/lib/qa-parish.ts")
 src = QA.read_text(encoding="utf-8")
 
 ANCHOR = "  // ——— qa-p201: MRLIŠKA PREDZGODOVINA 04106 — leto 1876 = 10. leto PREDZGODOVINSKE"

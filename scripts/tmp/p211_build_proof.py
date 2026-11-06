@@ -132,8 +132,8 @@ proof["tail_1865"] = {"vir": "s51-KROP-glava (pag 46)", "vrstice": kglava.get("t
 d50 = json.load(open("/tmp/p211/vlm-page/s50.json"))
 proof["kontekst_1865_s50"] = {"zap": "50–64", "vrstic": len(d50.get("vrstice", [])), "vrstice": d50.get("vrstice", [])}
 
-os.makedirs("/home/z/my-project/muzej-backup/research/issue17", exist_ok=True)
-json.dump(proof, open("/home/z/my-project/muzej-backup/research/issue17/parish-death-1866-04106.json", "w"), ensure_ascii=False, indent=1)
+os.makedirs("/home/z/my-project/research/issue17", exist_ok=True)
+json.dump(proof, open("/home/z/my-project/research/issue17/parish-death-1866-04106.json", "w"), ensure_ascii=False, indent=1)
 print(f"dokaz: research/issue17/parish-death-1866-04106.json — {len(entries)}-vpisov / {len(griblje)}-Griblje / {len(hise)}-hiš")
 print("hiše:", ",".join(hise))
 print("otroci:", len(otroci), "/", len(griblje), f"= {round(100*len(otroci)/len(griblje))}%")

@@ -7,7 +7,7 @@ LEKCIJA-P198-#16: apostrof-forme ('04106"') == 96') + dict-forme
 import glob, re
 from pathlib import Path
 
-ROOT = Path("/home/z/my-project/muzej-backup")
+ROOT = Path("/home/z/my-project")
 files = sorted(set(glob.glob(str(ROOT / "scripts/**/*.py"), recursive=True)
                    + glob.glob(str(ROOT / "scripts/**/*.mjs"), recursive=True)))
 skip = ("p59_ps_blatt_headers", "p198_")

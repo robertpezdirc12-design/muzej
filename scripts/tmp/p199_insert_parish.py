@@ -4,7 +4,7 @@
 PRED P198-sekcijo (newest-first vzorec). 23 vpisov / 22 hiš (h30-×2!)."""
 from pathlib import Path
 
-TS = Path("/home/z/my-project/muzej-backup/src/data/atlas/parish.ts")
+TS = Path("/home/z/my-project/src/data/atlas/parish.ts")
 src = TS.read_text(encoding="utf-8")
 
 ANCHOR = "  // ——— P198: mrliška PREDZGODOVINA 04106, leto 1879"

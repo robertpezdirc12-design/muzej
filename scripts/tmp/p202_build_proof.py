@@ -148,7 +148,7 @@ proof = {
     ],
 }
 
-out = "/home/z/my-project/muzej-backup/research/issue17/parish-death-1875-04106.json"
+out = "/home/z/my-project/research/issue17/parish-death-1875-04106.json"
 json.dump(proof, open(out, "w"), ensure_ascii=False, indent=1)
 print(f"OK → {out}")
 print(f"entries: {len(entries)} | griblje: {len(griblje)} | otroci-jasni: {len(otroci)}/10 | hiše: {proof['statistika']['hise']}")

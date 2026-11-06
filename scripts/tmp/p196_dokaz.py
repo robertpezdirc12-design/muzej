@@ -9,7 +9,7 @@ prejšnje-seje (19-GRIBLJE-bloki — see /tmp/p196_blocks.ts + parish.ts!) +
 fresh-read-potrditve (NOVA-ULEDBA-#10 z80 + ANGINA z81!)."""
 import json, os
 
-ROOT = "/home/z/my-project/muzej-backup"
+ROOT = "/home/z/my-project"
 
 def E(skan, pag, z, mesec, smrt, pokop, vas, hisna, ime, stan, starost, bolezen,
       previden, duhovnik, griblje, blok, spol, leto=1881, opomba=None):

@@ -6,7 +6,7 @@ pt-luknja-regeneracija."""
 import glob, json
 from pathlib import Path
 
-ROOT = Path("/home/z/my-project/muzej-backup")
+ROOT = Path("/home/z/my-project")
 QA = ROOT / "src/lib/qa-parish.ts"
 src = QA.read_text(encoding="utf-8")
 orig = src

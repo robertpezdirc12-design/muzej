@@ -4,7 +4,7 @@
 import json, re, os
 
 VLM = "/tmp/p196/vlm-page"
-OUT = "/home/z/my-project/muzej-backup/research/issue17/parish-death-1881-04106.json"
+OUT = "/home/z/my-project/research/issue17/parish-death-1881-04106.json"
 STRANI = [("s171",165),("s172",166),("s173",167),("s174",168),("s175",169),
           ("s176",170),("s177",171),("s178",172),("s179",173)]
 
@@ -85,7 +85,7 @@ assert len(entries) == 93, f"vpisov={len(entries)} (pričakovano 93)"
 grib = [e for e in entries if e["blok_v_parish"]]
 assert len(grib) == 19 and len({e["hisna"] for e in grib}) == 17
 
-d = json.load(open("/home/z/my-project/muzej-backup/research/issue17/parish-death-1882-04106.json", encoding="utf-8"))
+d = json.load(open("/home/z/my-project/research/issue17/parish-death-1882-04106.json", encoding="utf-8"))
 
 def starost_leta(s):
     """Pretvori starost-v-leta (float) — podpira: '76', '10 tednov', '5 mesecev', '¾ let', '½ Jahr', '8 mesecev'."""
@@ -115,7 +115,7 @@ moski = sum(1 for e in entries if e["spol"] == "M")
 zenske = sum(1 for e in entries if e["spol"] == "Ž")
 
 # nove-hiše: Griblje-hiše-1881, ki-NE-obstajajo-v-04106-blokih-1882–1885
-src = open("/home/z/my-project/muzej-backup/src/data/atlas/parish.ts", encoding="utf-8").read()
+src = open("/home/z/my-project/src/data/atlas/parish.ts", encoding="utf-8").read()
 novejse_hise = set(re.findall(r'houseNo:\s*"(\d+)",\s*bookSignature:\s*"04106",\s*year:\s*(?:188[2-5])', src))
 nove_1881 = sorted({e["hisna"] for e in grib} - novejse_hise, key=int)
 

@@ -9,7 +9,7 @@
 #
 # DOKAZI (vsi neodvisni, vsaj 3 na stran):
 #  1. OČI: napisane številke (4×–8× Lanczos izrezi /tmp/p69)
-#  2. KONTINUITETA: p73 (1101–20) → p74 (1421–40) → ... → p82 (1597–1632);
+#  2. KONTINUITETA: p73 (1101–20) → p74 (1421–40) → ... → p82 (1597–1642);
 #     p91 (961–80) → p92 (981–1000); p49–52 = 921–1000
 #  3. KARTA: poligoni pravih razponov obstajajo (1421–40: 16, 1511–80: 18,
 #     1521–40: 15, 921–43: 16 ...), lažnih razponov tudi (1821–40: 17) —
@@ -83,9 +83,9 @@ EYES = {
          "crossed": [1563, 1564, 1565, 1566, 1567, 1576],
          "old": {"p1": [164, 183], "p2": [1661, 1680]}, "artifact": "5→6 (+100) na p2", "renumOffset": -100,
          "note": "P59 strip 161–180 = odrez vodilnih"},
-    82: {"true": [1597, 1632], "blatt": "II", "cls": "mainRun", "crossed": [],
-         "old": {"p1": [1597, 1632], "p2": [1681, 1700]}, "artifact": "5→6 (+100) na p2",
-         "note": "pass1 PRAVILEN (1597+); join je vzel p2 → p82 vrstice IZGUBLJENE iz v3 (karta 1582–1632 = 13 poligonov brez vrstic)"},
+    82: {"true": [1597, 1642], "blatt": "II", "cls": "mainRun", "crossed": [],
+         "old": {"p1": [1597, 1642], "p2": [1681, 1700]}, "artifact": "5→6 (+100) na p2",
+         "note": "pass1 PRAVILEN (1597+); join je vzel p2 → p82 vrstice IZGUBLJENE iz v3 (karta 1582–1642 = 13 poligonov brez vrstic)"},
     83: {"true": [161, 170], "blatt": "II", "cls": "section",
          "crossed": [162, 169],
          "old": {"p1": [161, 181], "p2": [161, 180]},

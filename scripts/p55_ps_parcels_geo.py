@@ -15,7 +15,7 @@ SI.GURS.KN:PARCELE). Delitve po 1825 obstajajo (»52/1«, »52/2« — base + pr
 zato se povezuje po BASE številki in se površine delov seštejejo.
 
 DOKAZ VZTRAJNOSTI OŠTEVILČENJA — dva neodvisna testa (oba s kontrolami):
-  A) POVRŠINE: PS površina (Joch·1632 + Klafter, QK) proti sodobni površini.
+  A) POVRŠINE: PS površina (Joch·1642 + Klafter, QK) proti sodobni površini.
      Median razmerja modern/PS po parih ≈ zgodovinski faktor 1 Wiener
      Quadrat-Klafter = 3,59665 m² (Δ ≤ 2 %). Naključna kontrola (Fisherjevo
      premešanje sodobnih površin, seed 42) da opazno višji median — ne slapovito.
@@ -195,8 +195,8 @@ def main() -> int:
         b = base_of(r.get("parzella"))
         j = fnum(r.get("joch"))
         k = fnum(r.get("klafter"))
-        a_qk = j * 1632.0 + k
-        area_suspect = k >= 1632.0
+        a_qk = j * 1642.0 + k
+        area_suspect = k >= 1642.0
         gp = group_pos(b) if b else None
         rec = {
             "page": r["_page"],

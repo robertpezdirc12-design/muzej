@@ -11,7 +11,7 @@ from pathlib import Path
 RAW = json.load(open("/tmp/p197/entries_raw.json"))
 ENT = RAW["entries"]
 TAIL = RAW["tail_1879"]
-OUT = Path("/home/z/my-project/muzej-backup/research/issue17/parish-death-1880-04106.json")
+OUT = Path("/home/z/my-project/research/issue17/parish-death-1880-04106.json")
 
 # ——— starost-parser (P196-vzorec) ———
 def starost_j(mala):

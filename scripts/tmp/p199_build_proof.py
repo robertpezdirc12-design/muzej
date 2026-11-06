@@ -9,7 +9,7 @@ from pathlib import Path
 RAW = json.load(open("/tmp/p199/entries_1878.json"))
 ENT = RAW["entries"]
 TAIL77 = RAW["tail_1877"]
-OUT = Path("/home/z/my-project/muzej-backup/research/issue17/parish-death-1878-04106.json")
+OUT = Path("/home/z/my-project/research/issue17/parish-death-1878-04106.json")
 
 
 def starost_j(mala):
