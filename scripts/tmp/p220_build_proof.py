@@ -108,7 +108,7 @@ proof = {
     ],
     "kaskada": {
         "insert": "10-GRIBLJE-blokov-parish.ts (pred-P219-sekcijo; scan: s2–s7; pag = sken−1-svinčnik-foliacija-dokumentirana!)",
-        "sanitizacija": "qa-p220 + števci 1642→1677 + 04106 423→433 + yearset-+1857 + guard-1857 (04106-SET-KOMPLETEN-1857–1885!) + verifierji-patched + pt-luknja-433/1677 + krstne-izjeme-(po-runQA!)",
+        "sanitizacija": "qa-p220 + števci 1642→1698 + 04106 423→433 + yearset-+1857 + guard-1857 (04106-SET-KOMPLETEN-1857–1885!) + verifierji-patched + pt-luknja-433/1698 + krstne-izjeme-(po-runQA!)",
         "verifikacija": "verifier-p220-I1–I10 + runQA-220/220 + tsc-0 + lint-0 + REGRESIJA-p190–p219 + p80",
     },
     "lead": "PREDZGODOVINA-LINIJA-04106-KONČANA (29/29-let!) — knjiga-04106-POPOLNOTA-prepisana (1857–1885 = 29-let, 433-Griblje-vpisov!) → P221-LEAD: krstna-04104-PREDZGODOVINA (1871–1885, 15-let — ×200-skenov-čaka! P196-worklog-lead!) — pričakovani-start: 1885 (1/15) po-descending-vzorca-mrliške-predzgodovine; s-proba-potreben!",

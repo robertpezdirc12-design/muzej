@@ -404,7 +404,7 @@ def blatt_x_analysis():
 
     # primerjava površin BX vrstica ↔ GRUND parcela pri istem številu
     def area_k(c):
-        return (c.get("joch") or 0) * 1677 + (c.get("klafter") or 0)
+        return (c.get("joch") or 0) * 1698 + (c.get("klafter") or 0)
 
     comparable = 0
     identical = 0
@@ -420,9 +420,9 @@ def blatt_x_analysis():
         identical += (bk == gk)
 
     # velikost površin vrstic (Joch) — vsaka vrstica z površino
-    areas_j = [area_k(r["cult"]) / 1677.0 for r in rows if area_k(r["cult"]) > 0]
+    areas_j = [area_k(r["cult"]) / 1698.0 for r in rows if area_k(r["cult"]) > 0]
     # GRUND dvorišča (parcele s hausNr) za kontrast
-    grund_house_areas = [area_k(g["cultures"][0]) / 1677.0
+    grund_house_areas = [area_k(g["cultures"][0]) / 1698.0
                          for g in grund.values()
                          if g.get("hausNr") and g["cultures"] and area_k(g["cultures"][0]) > 0]
 
@@ -461,7 +461,7 @@ def blatt_x_analysis():
         "grundHouseMedianJoch": r3(median(grund_house_areas)) if grund_house_areas else 0.0,
         "footer138vsota": footer,
         "rows1_20ComputedK": b1_k,
-        "rows1_20ComputedAs": f"{b1_k // 1677} J {b1_k % 1677} K",
+        "rows1_20ComputedAs": f"{b1_k // 1698} J {b1_k % 1698} K",
     }
 
 

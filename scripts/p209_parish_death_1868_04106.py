@@ -17,7 +17,7 @@ bloki = re.findall(r'\{\s*houseNo:\s*"(\d+)",\s*bookSignature:\s*"04106",\s*year
 check("I1 bloki 04106/1868-numeric == 13", len(bloki) == 13, f"najdeno {len(bloki)}")
 check("I2 hiše-1868-numeric (file-order)", bloki == ["54", "54", "50", "36", "65", "66", "26", "15", "13", "10", "41", "35", "13"], ",".join(bloki))
 skupaj = src.count('bookSignature: "04106"')
-check("I3 vitals-1677 + 04106==433", "HOUSE_VITALS.length !== 1677" not in src and skupaj == 433, f"04106={skupaj}")
+check("I3 vitals-1698 + 04106==433", "HOUSE_VITALS.length !== 1698" not in src and skupaj == 433, f"04106={skupaj}")
 
 d = json.load(open(f"{ROOT}/research/issue17/parish-death-1868-04106.json", encoding="utf-8"))
 grib = [e for e in d["entries"] if "gribl" in str(e.get("vas", "")).lower()]
@@ -29,8 +29,8 @@ check("I4 dokaz (80/13-griblje/anomalije + meja-s69-vsota-4-delna + 80-vrstic)",
       f"entries={len(d['entries'])} griblje={len(grib)} anomalije={len(d['anomalije'])}")
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1677")
-check("I5 qa-p209 + števec-1511", "qa-p209-parish-death-1868-04106" in qa and st >= 100, f"1677-številcev={st}")
+st = qa.count("HOUSE_VITALS.length !== 1698")
+check("I5 qa-p209 + števec-1511", "qa-p209-parish-death-1868-04106" in qa and st >= 100, f"1698-številcev={st}")
 
 i0 = src.find("P209: mrliška PREDZGODOVINA 04106, leto 1868")
 seg = src[i0:] if i0 >= 0 else ""
@@ -46,7 +46,7 @@ check("I8c MRTVOROJEN-z42-Knavs-h52", "PERDIRC-nit" in seg)
 check("I8d 12-hiš-vsi-različni", "12 hiš" in seg)
 check("I9 qa-p206 (207. kontrola!)", "qa-p209" in qa and "209. kontrola" in qa)
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-check("I9 pt-luknja-292/1511", '"vitalsTotal": 1677' in pt and '"04106": 433' in pt)
+check("I9 pt-luknja-292/1511", '"vitalsTotal": 1698' in pt and '"04106": 433' in pt)
 
 try:
     req = urllib.request.Request("https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04106/",
