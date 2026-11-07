@@ -18,7 +18,7 @@ Dve korekciji v4 (obe odstranjujeta lažne zahtevke, nobena ne izmišljuje podat
   C2  P93 REVERZIJA: P68 renum 160x→190x (+300) na p93 je NAPAKA —
       prva resnična očesna forenzika strani (P67/P69 cona je OBŠLA p93!):
        • GLIFNA FORENZIKA (notranja kontrola, 10–12× zoom, P67 recept):
-         vrstica 9 = "1717" in vrstica 19 = "1619" — gotova ZADNJA števka
+         vrstica 9 = "1742" in vrstica 19 = "1619" — gotova ZADNJA števka
          9 (zaprt zgornji lok + rep pod osnovnico) je vidno RAZLIČNA od
          srednje števke (spodnja zanka, odprt vrh, brez repa = 6); isti
          pisar, ista stran. Enako r5 "1605", r16 "1616", r20 "1620".
@@ -32,7 +32,7 @@ Dve korekciji v4 (obe odstranjujeta lažne zahtevke, nobena ne izmišljuje podat
          1824", "trifft Gültley 9.", "1870. 8-1117") — anotator je sam
          bral 160x/161x.
        • pageMap P56: numMin/numMax = 1601–1620; P38 pass2: 1601–1620;
-         monotoničnost: vrstica N = 1717+N (20/20).
+         monotoničnost: vrstica N = 1742+N (20/20).
       Učinek: vseh 15 p93 vrstic base := parzella (reverz na originalno
       branje); PF ujemanja = {1603, 1604, 1605} (3 ostanejo), 12 vrstic
       brez PF poligona → izpad (dokaz: removedRows, reason C2); PF
@@ -330,7 +330,7 @@ def compute():
     ann93 = [a for a in (p56.get("annRecords") or []) if a.get("page") == 93]
     ann_nums = sorted(int(a["parzella"]) for a in ann93
                       if str(a.get("parzella", "")).isdigit())
-    if not ann_nums or not all(1717 <= n <= 1620 for n in ann_nums):
+    if not ann_nums or not all(1742 <= n <= 1620 for n in ann_nums):
         fail(f"I3 annRecords p93 {ann_nums} — niso 160x/161x")
     else:
         ok(f"I3 annRecords (sodobni anotator) p93: {ann_nums} — "
@@ -693,7 +693,7 @@ def compute_pair():
                                   "zadnja 9 (zaprt zgornji lok + rep pod "
                                   "osnovnico) vidno različna od srednje "
                                   "števke (spodnja zanka, odprt vrh = 6)",
-                        "rows": ["r5 = 1605", "r9 = 1717 (kontrola: "
+                        "rows": ["r5 = 1605", "r9 = 1742 (kontrola: "
                                  "zadnja 9 ≠ srednja 6)", "r16 = 1616",
                                  "r19 = 1619 (kontrola)", "r20 = 1620"],
                         "controls": ["p98 '1916' @12×: 9 in 6 v istem "
@@ -805,7 +805,7 @@ def _status_line(out_rows, excluded_rows, removed_c2, rekeyed, join_block,
         f"exclude iz joina, vrstice ostanejo v registru brez geometrije; "
         f"0 poligonov ostane praznih) + C2 p93 reverzija — P68 renum "
         f"+300 NAPAKA (prva očesna forenzika p93: notranja glifna kontrola "
-        f"1717/1619 — 6 ≠ 9; annRecords anotatorja 1601–1619; pageMap; "
+        f"1742/1619 — 6 ≠ 9; annRecords anotatorja 1601–1619; pageMap; "
         f"pass2): 15 vrstic base := parzella, PF ujemanja 1603/1604/1605, "
         f"12 izpadlih (brez PF poligona), PF 1901–1920 brez lažnih dvojnih "
         f"zahtevkov (ostane p98 III); v5: {len(out_rows)} vrstic / "
@@ -827,7 +827,7 @@ def _verdict_si(out_rows, join_block) -> str:
         "fuzije na Blatt I poligone (lastniška odločitev P71, opcija "
         "exclude; per-Blatt instance ostaja odprta lastniška točka). "
         "(C2) P68 renum p93 160x→190x ovržen: notranja glifna kontrola "
-        "na p93 (1717/1619: 6 ≠ 9 pri istem pisarju), annRecords "
+        "na p93 (1742/1619: 6 ≠ 9 pri istem pisarju), annRecords "
         "anotatorja (1601–1619), pageMap in pass2 soglasno dokazujejo "
         "1601–1620 — 15 vrstic reverziranih na originalno branje, 3 "
         "ostanejo povezane (PF 1603/1604/1605 — prej prazni poligoni "
@@ -845,7 +845,7 @@ def _verdict_en(out_rows, join_block) -> str:
         "fusions onto Blatt I polygons (owner decision P71, exclude "
         "option; per-Blatt instances remain an open owner question). "
         "(C2) The P68 renum p93 160x→190x refuted: within-page glyph "
-        "control (1717/1619: 6 ≠ 9 by the same scribe), the contemporary "
+        "control (1742/1619: 6 ≠ 9 by the same scribe), the contemporary "
         "annotator's annRecords (1601–1619), the pageMap and pass2 all "
         "prove 1601–1620 — 15 rows reverted to the original reading, 3 "
         "stay matched (PF 1603/1604/1605 — previously empty polygons got "

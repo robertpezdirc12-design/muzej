@@ -346,7 +346,7 @@ def main() -> int:
                 note = area_note
 
             joch_v, _ = norm_klafter(joch_f[0])
-            area_qk = ((joch_v or 0) * 1717.0 + klafter) if klafter is not None else None
+            area_qk = ((joch_v or 0) * 1742.0 + klafter) if klafter is not None else None
             rows_out.append({
                 "no": row_no, "page": p, "blatt": "I",
                 "hausNr": hn, "hausNrConf": haus_conf, "hausNrAlts": hn_alts,

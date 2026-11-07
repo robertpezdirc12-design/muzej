@@ -18,7 +18,7 @@ check("I1 bloki 04106/1857-numeric == 10", len(bloki) == 10, f"najdeno {len(blok
 pri = ["60", "64", "52", "13", "36", "31", "48", "65", "[?]", "36"]
 check("I2 hiše-1857 (file-order, vključno-[?])", bloki == pri, ",".join(bloki))
 skupaj = src.count('bookSignature: "04106"')
-check("I3 vitals-1717 + 04106==433", "HOUSE_VITALS.length !== 1717" not in src and skupaj == 433, f"04106={skupaj}")
+check("I3 vitals-1742 + 04106==433", "HOUSE_VITALS.length !== 1742" not in src and skupaj == 433, f"04106={skupaj}")
 
 d = json.load(open(f"{ROOT}/research/issue17/parish-death-1857-04106.json", encoding="utf-8"))
 grib = [e for e in d["entries"] if "gribl" in str(e.get("vas", "")).lower() and "grem" not in str(e.get("vas", "")).lower()]
@@ -35,8 +35,8 @@ check("I4c knjiga-start-1857 + oktober-luknja + z58-honesty-max + popravki-pisar
       "knjiga-start-1857" in an and "oktober-luknja" in an and "z58-honesty-max" in an and "popravki-pisarja-×2" in an)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1717")
-check("I5 qa-p220 + števec-1717", "qa-p220-parish-death-1857-04106" in qa and st >= 132, f"1717-številcev={st}")
+st = qa.count("HOUSE_VITALS.length !== 1742")
+check("I5 qa-p220 + števec-1742", "qa-p220-parish-death-1857-04106" in qa and st >= 132, f"1742-številcev={st}")
 
 i0 = src.find("P220: mrliška PREDZGODOVINA 04106, leto 1857")
 seg = src[i0:] if i0 >= 0 else ""
@@ -51,7 +51,7 @@ check("I8b pag-sken−1-SVINČNIK-FOLIACIJA (konvencijski-prehod!)", "sken−1-S
 check("I8c otroška-umrljivost-30%-3/10 + ekstremi-3-tedne-→-73-J", "umrljivost-30%-3/10" in seg and "3-tedne-→-73-J" in seg)
 check("I9a qa-p220 (220. kontrola!)", "qa-p220" in qa and "220. kontrola" in qa)
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-check("I9b pt-luknja-433/1717", '"vitalsTotal": 1717' in pt and '"04106": 433' in pt)
+check("I9b pt-luknja-433/1742", '"vitalsTotal": 1742' in pt and '"04106": 433' in pt)
 
 live = "--live" in sys.argv
 if live or "--check" not in sys.argv:

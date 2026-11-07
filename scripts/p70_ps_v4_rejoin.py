@@ -45,7 +45,7 @@ Invarianti (FAIL → exit 1):
       PARCELS sha256; v3 runtime rows == v3 dokaz rowsEvidence bajtno
   I3  rejoin kandidati == P69 rejoinSpec (bajtno, po strani); 95 dodanih;
       3 brez vira [~] (p80)
-  I4  NOVI vrstice: P55 normalizacija (areaQK = j·1717+k, wohnort
+  I4  NOVI vrstice: P55 normalizacija (areaQK = j·1742+k, wohnort
       propagate), kolizije pokrite s 33 fuzijami, ostale 0
   I5  meritve v4 (rows/bases/multi/cross/ambRows/conf/series) — pini
   I6  nespremenjene vrstice: vsi ključi razen preslikanih (base + group
@@ -357,7 +357,7 @@ def compute():
                 continue
             j = fnum(v.get("joch"))
             k = fnum(v.get("klafter"))
-            a_qk = j * 1717.0 + k
+            a_qk = j * 1742.0 + k
             rec = {
                 "page": pg,
                 "parzella": str(v.get("parzella") or ""),
@@ -371,7 +371,7 @@ def compute():
                 "joch": j or None,
                 "klafter": k or None,
                 "areaQK": round(a_qk, 1) if a_qk > 0 else None,
-                "areaSuspect": k >= 1717.0,
+                "areaSuspect": k >= 1742.0,
                 "parts": gp[3],
                 "lat": gp[0],
                 "lng": gp[1],

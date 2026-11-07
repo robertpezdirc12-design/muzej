@@ -17,7 +17,7 @@ bloki = re.findall(r'\{\s*houseNo:\s*"(\d+)",\s*bookSignature:\s*"04106",\s*year
 check("I1 bloki 04106/1863-numeric == 7", len(bloki) == 7, f"najdeno {len(bloki)}")
 check("I2 hiše-1863-numeric (file-order)", bloki == ["10", "65", "32", "18", "11", "53", "21"], ",".join(bloki))
 skupaj = src.count('bookSignature: "04106"')
-check("I3 vitals-1717 + 04106==433", "HOUSE_VITALS.length !== 1717" not in src and skupaj == 433, f"04106={skupaj}")
+check("I3 vitals-1742 + 04106==433", "HOUSE_VITALS.length !== 1742" not in src and skupaj == 433, f"04106={skupaj}")
 
 d = json.load(open(f"{ROOT}/research/issue17/parish-death-1863-04106.json", encoding="utf-8"))
 grib = [e for e in d["entries"] if "gribl" in str(e.get("vas", "")).lower() and "grem" not in str(e.get("vas", "")).lower()]
@@ -32,8 +32,8 @@ check("I4b 2×-prenoza-7/7 + KROP-VIZUALNE-ADJUDIKACIJE (crossChecks!)", "7/7" i
 check("I4c z64-ULEDBA-12.×-EKSPLICITNO (anomalije!)", "z64-uledba-eksplicitno" in an and "31.-Dec-1863" in an)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1717")
-check("I5 qa-p214 + števec-1581", "qa-p214-parish-death-1863-04106" in qa and st >= 120, f"1717-številcev={st}")
+st = qa.count("HOUSE_VITALS.length !== 1742")
+check("I5 qa-p214 + števec-1581", "qa-p214-parish-death-1863-04106" in qa and st >= 120, f"1742-številcev={st}")
 
 i0 = src.find("P214: mrliška PREDZGODOVINA 04106, leto 1863")
 seg = src[i0:] if i0 >= 0 else ""
@@ -49,7 +49,7 @@ check("I8c otroška-umrljivost-29%-2/7", "otroška-umrljivost-29%-2/7" in seg)
 check("I8d 7-hiš (NAJMANJ-v-predzgodovini!)", "7 hiš" in seg and "NAJMANJ-v-predzgodovini" in seg)
 check("I9a qa-p214 (214. kontrola!)", "qa-p214" in qa and "214. kontrola" in qa)
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-check("I9b pt-luknja-362/1581", '"vitalsTotal": 1717' in pt and '"04106": 433' in pt)
+check("I9b pt-luknja-362/1581", '"vitalsTotal": 1742' in pt and '"04106": 433' in pt)
 
 try:
     req = urllib.request.Request("https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04106/",
