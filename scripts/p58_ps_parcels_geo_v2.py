@@ -153,7 +153,7 @@ def compute() -> tuple[dict, dict]:
             "joch": None,
             "klafter": k,
             "areaQK": aq,
-            "areaSuspect": bool(k and k >= 1698.0),
+            "areaSuspect": bool(k and k >= 1717.0),
             "parts": r.get("parts"),
             "lat": r["lat"],
             "lng": r["lng"],

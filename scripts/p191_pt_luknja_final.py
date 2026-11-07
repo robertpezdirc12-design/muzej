@@ -33,8 +33,8 @@ LIVE_URL = "https://griblje-museum.vercel.app/api/qa"
 
 EXPECTED_GAP = ["42", "43", "44", "45", "46", "47", "48", "49",
                 "51", "52", "53", "54", "55", "56", "57", "58", "59", "60"]
-EXPECTED_CORPUS = {"04105": 502, "04455": 197, "04106": 433, "04894": 520, "04104": 46}  # POSODABLJENO P222: + krstna-04104 = 46 (25×1885-P221 + 21×1884-P222!)
-VITALS_TOTAL = 1698
+EXPECTED_CORPUS = {"04105": 502, "04455": 197, "04106": 433, "04894": 520, "04104": 65}  # POSODABLJENO P223: + krstna-04104 = 65 (25×1885-P221 + 21×1884-P222 + 19×1883-P223!)
+VITALS_TOTAL = 1717
 
 
 def load():
@@ -61,7 +61,7 @@ def check(report):
 
     # I2
     corpus = report["corpus"]
-    ok("I2 korpus FINALNO (vitals 1698 · 04105=502 · 04455=197 · 04106=433 · 04894=520 · 04104=46)",
+    ok("I2 korpus FINALNO (vitals 1717 · 04105=502 · 04455=197 · 04106=433 · 04894=520 · 04104=65)",
        corpus["vitalsTotal"] == VITALS_TOTAL
        and {k: v for k, v in corpus["byBook"].items()} == EXPECTED_CORPUS,
        str(corpus["byBook"]))

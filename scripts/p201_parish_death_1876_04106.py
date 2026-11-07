@@ -11,7 +11,7 @@ I5: qa-parish.ts vsebuje qa-p201-parish-death-1876-04106 + števec 1375 (≥ 100
 I6: duhovniki-1876 (KOGEJ-RAZŠIRJENO-V-1876 + Dovgan-×3 + Hozjan-Capp.)
 I7: PEZDINC-#8 (z22-'Perdire'-h53!) + DRAGOŠ-h12-NIT (z36!) + ŠIMEC-h18-3.-LETO (z78!)
 I8: forma-invariante (s134-velika-glava + s136-z1-celica-40. + s142-z1-celica-41.)
-I9: pt-luknja (04106 == 433, vitals == 1698)
+I9: pt-luknja (04106 == 433, vitals == 1717)
 I10: 04894-still-520 + 04106-leta == {1876,...,1885}
 I8b: otroška-umrljivost-55% (11/20) + KRONOLOŠKA-NAPAKA-pisarja (z83-Nov-24-pred-z85-Nov-12!)
 """
@@ -39,7 +39,7 @@ check("I2 hiše-1876 (file-order, h46-×2)", his == ["7", "41", "53", "46", "23"
 
 # I3: 04106-skupaj + vitals-1498
 skupaj = src.count('bookSignature: "04106"')
-check("I3 vitals-1698 + 04106==433", "HOUSE_VITALS.length !== 1698" not in src and skupaj == 433,
+check("I3 vitals-1717 + 04106==433", "HOUSE_VITALS.length !== 1717" not in src and skupaj == 433,
       f"04106-bloki={skupaj}")
 
 # I4: dokaz
@@ -55,9 +55,9 @@ check("I4 dokaz (89/20-griblje/16-anomalij + meja-s134 + NOVEMBER-falsifikacija 
 
 # I5: qa-parish
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1698")
+st = qa.count("HOUSE_VITALS.length !== 1717")
 check("I5 qa-p201 + števec-1375", "qa-p201-parish-death-1876-04106" in qa and st >= 100,
-      f"1698-številcev={st}")
+      f"1717-številcev={st}")
 
 # I6: duhovniki-1876 (P201-segment)
 i0 = src.find("P201: mrliška PREDZGODOVINA 04106, leto 1876")
@@ -82,7 +82,7 @@ check("I8g KRONOLOŠKA-NAPAKA-PISARJA (Nov-24-pred-Nov-12!)", "KRONOLOŠKA-NAPAK
 # I9: pt-luknja
 pt = json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8"))
 check("I9 pt-luknja (04106==433, vitals==1511)",
-      pt["corpus"]["byBook"]["04106"] == 433 and pt["corpus"]["vitalsTotal"] == 1698,
+      pt["corpus"]["byBook"]["04106"] == 433 and pt["corpus"]["vitalsTotal"] == 1717,
       f"04106={pt['corpus']['byBook']['04106']} vitals={pt['corpus']['vitalsTotal']}")
 
 # I10: 04894 + leta-nabor
