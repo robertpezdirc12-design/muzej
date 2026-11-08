@@ -61,9 +61,9 @@ CELLS = [
 GLAVE = [
     ("cell-s104-glava-48-1905", 104),
     ("cell-s105-glava-18906", 105),
-    ("cell-s106-glava-183906", 106),
-    ("cell-s107-glava-183906", 107),
-    ("cell-s108-glava-183906", 108),
+    ("cell-s106-glava-185306", 106),
+    ("cell-s107-glava-185306", 107),
+    ("cell-s108-glava-185306", 108),
 ]
 
 

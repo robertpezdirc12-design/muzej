@@ -4,7 +4,7 @@
 
 I1: parish.ts vsebuje 16 blokov bookSignature 04106 / year 1885
 I2: hiše 1885 == [1,5,9,13,21,31,31,31,31,54,58,62,63,63,68,78]
-I3: HOUSE_VITALS.length == 1839 (1219 + 16 + 21-P193 + 11-P194!)
+I3: HOUSE_VITALS.length == 1853 (1219 + 16 + 21-P193 + 11-P194!)
 I4: dokaz research/issue17/parish-death-1885-04106.json ima 16 griblje-blokov + meja + anomalije
 I5: qa-parish.ts vsebuje qa-p192-parish-death-1885-04106 + števec 1235
 I6: knjiga-04106 v PARISH_BOOKS (death 1857–1885)
@@ -32,7 +32,7 @@ his = sorted(bloki, key=int)
 check("I2 hiše-1885", ",".join(his) == "1,5,9,13,21,31,31,31,31,54,58,62,63,63,68,78", ",".join(his))
 
 # I3: vitals
-check("I3 vitals-1839 + 04106==433", "HOUSE_VITALS.length !== 1839" not in src and src.count('bookSignature: "04106"') == 433,
+check("I3 vitals-1853 + 04106==433", "HOUSE_VITALS.length !== 1853" not in src and src.count('bookSignature: "04106"') == 433,
       f"04106-bloki={src.count('bookSignature: \"04106\"')}")
 
 # I4: dokaz
@@ -43,8 +43,8 @@ check("I4 dokaz (16 griblje + meja + anomalije)", len(grib) == 16 and d["okvir"]
 
 # I5: qa-parish
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-check("I5 qa-p192 + števec", "qa-p192-parish-death-1885-04106" in qa and qa.count("HOUSE_VITALS.length !== 1839") >= 100,
-      f"1839-številcev={qa.count('HOUSE_VITALS.length !== 1839')}")
+check("I5 qa-p192 + števec", "qa-p192-parish-death-1885-04106" in qa and qa.count("HOUSE_VITALS.length !== 1853") >= 100,
+      f"1853-številcev={qa.count('HOUSE_VITALS.length !== 1853')}")
 
 # I6: PARISH_BOOKS
 check("I6 PARISH_BOOKS 04106", re.search(r'signature: "04106", type: "death", from: 1857, to: 1885', src) is not None)

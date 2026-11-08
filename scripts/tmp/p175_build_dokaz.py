@@ -97,7 +97,7 @@ dokaz = {
         "meja_1909_10": "s126 (glava-'Leto 18 1910' + restart-55→1-BREZ-velikega-separatorja = NOV-PODVZOREC-7.-STIL-familija-brez-velike-glave-1.×! P174-lead-'[~ s125+?]' POTRJEN-→-s126)",
         "glave_napake": [
             "s121-'Leto 18 1908' (meja-stran — stran-začeta-v-1908, separator-1909-NA-DNU!)",
-            "s122–s125-'Leto 18 1909' = '183909'-PREDPONSKA-'18'-navada-×4-UNIVERZALNO — 0-EKZOTIČNIH (kontrast-1907-rekord-5!)",
+            "s122–s125-'Leto 18 1909' = '185309'-PREDPONSKA-'18'-navada-×4-UNIVERZALNO — 0-EKZOTIČNIH (kontrast-1907-rekord-5!)",
             "s126-'Leto 18 1910' (1910-prva-stran — P176-scope!)"
         ],
         "stran_invarianta": "stran == sken − 1 (s121–s125 == str. 120–124 — 96.–100. potrditev VIZUALNO-diag)"

@@ -68,7 +68,7 @@ stack(["meja-1903-04-z51-zadnji-1903", "meja-1903-04-marker-1904",
        "meja-1903-04-z1-prvi-1904", "meja-1902-03-marker-1903-re"],
       "KOMPOZIT-meja-1903-04.png", 0.62)
 # 5. GLAVE-NAPAKE (3 pisarjeve napake-kandidati)
-stack(["glava-s92-18903", "glava-s94-18903", "glava-s95-183904"],
+stack(["glava-s92-18903", "glava-s94-18903", "glava-s95-185304"],
       "KOMPOZIT-glave-napake.png", 0.85)
 # 6. VAS-HISNA-A: 9 celic (2 cols)
 stack(["s90-z1-vas-hisna", "s90-z3-vas-hisna", "s90-z4-vas-hisna",

@@ -64,9 +64,9 @@ stack([
 stack([
     "cell-s104-glava-48-1905",
     "cell-s105-glava-18906",
-    "cell-s106-glava-183906",
-    "cell-s107-glava-183906",
-    "cell-s108-glava-183906",
+    "cell-s106-glava-185306",
+    "cell-s107-glava-185306",
+    "cell-s108-glava-185306",
     "s104-meja-1906-pas",
     "s109-z1-anton-ali-ana-brinec",
 ], "KOMPOZIT-C-glave-meja", scale=0.45)

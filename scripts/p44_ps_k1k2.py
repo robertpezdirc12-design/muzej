@@ -6,7 +6,7 @@ P44 (issue #10) — N083PS: RAZCEP K1/K2 v "Abschluß der Gemeinde" (str. 140 de
 PROBLEM (P41 §21, UNRESOLVED):
   Abschluß vrstici  Grundparzellen (nach Anlage) 831|K1  in  Zinsb./Ziffer 1041
   383|K2  se seštejeta v Summe der Grundparzellen 1215|490. Ker je 831+383 = 1214
-  Joch, mora veljati  K1 + K2 = 1839 + 490 = 2090 K  (prenos 1 J). VLM prehodi so
+  Joch, mora veljati  K1 + K2 = 1853 + 490 = 2090 K  (prenos 1 J). VLM prehodi so
   K1 brali 968/468 (vizualno "9?8"), K2 pa 1288/1388 — noben par branj ni izpolnil
   omejitve, zato je razcep ostal UNRESOLVED.
 
@@ -30,14 +30,14 @@ METODA P44 (izključno iz committed dokazov, brez AI ob delovanju):
 INVARIANTE (FAIL ob padu katerekoli):
   I1  vsota 7 vrstic leve strani == 831|702 (rekonstrukcija iz committed vrstic)
   I2  831|702 + 3|312 == 834|1014 (zaprtje leve strani)
-  I3  omejitev: (1215·1839+490) − (831+383)·1839 == 2090
+  I3  omejitev: (1215·1853+490) − (831+383)·1853 == 2090
   I4  paralelnost: desna vrstica 4 (3|312) == leva vrstica 132 (3|312) IN
       Joch desne vrstice 1 (831) == Joch leve vsote (831)
   I5  K1 = 702 == Klafter leve vsote; K2 = 2090 − 702 == 1388; 1388 je med
-      committed VLM branji K2 celice (pass2); 1388 < 1839; 702 < 1839
-  I6  popolna zaprtost: (831·1839+702) + (383·1839+1388) == 1215·1839+490 IN
-      (1215·1839+490) + (5·1839+1003) == 1220·1839+1493 IN
-      (3·1839+312) + (2·1839+691) == 5·1839+1003
+      committed VLM branji K2 celice (pass2); 1388 < 1853; 702 < 1853
+  I6  popolna zaprtost: (831·1853+702) + (383·1853+1388) == 1215·1853+490 IN
+      (1215·1853+490) + (5·1853+1003) == 1220·1853+1493 IN
+      (3·1853+312) + (2·1853+691) == 5·1853+1003
   I7  enoličnost: natanko ENA sprejeta hipoteza (H1); vse ostale zavrnjene
       z izrecnim razlogom; noben drug par kandidatov ne izpolnjuje omejitve
       s strukturnim sidrom.
@@ -65,7 +65,7 @@ RUNTIME = ROOT / "src" / "data" / "atlas"
 CANON = EV / "ps-recap-paleo.json"
 RAW_DIR = EV / "ps-recap-paleo-raw"
 
-K_PER_J = 1839
+K_PER_J = 1853
 
 
 def jk(j: int, k: int) -> int:
@@ -222,7 +222,7 @@ def main() -> None:
     if 1388 not in k2_all:
         fail("I5: 1388 ni med committed VLM branji K2 celice (pass2)")
     if not (0 <= K1 < K_PER_J and 0 <= K2 < K_PER_J):
-        fail("I5: K1 ali K2 je zunaj razreda [0, 1839)")
+        fail("I5: K1 ali K2 je zunaj razreda [0, 1853)")
 
     # ——— 8. Popolna zaprtost (I6) ———
     if jk(831, K1) + jk(383, K2) != jk(*rG):
@@ -283,9 +283,9 @@ def main() -> None:
             "accepted": False,
             "reasons": [
                 "K1 = 468 je branje pass2 (pass3 zamaknjeno)",
-                "K2 = 1622 > 1839 K — anomalija za stolpec Klafter (brazda bi nosila 1 J v Joch stolpcu); brez opore v prehodih",
+                "K2 = 1622 > 1853 K — anomalija za stolpec Klafter (brazda bi nosila 1 J v Joch stolpcu); brez opore v prehodih",
             ],
-            "rejection": "K2 > 1839 K je anomalija + brez opore v prehodih",
+            "rejection": "K2 > 1853 K je anomalija + brez opore v prehodih",
         },
     ]
     # aritmetična skladnost vseh hipotez (samo informativno: vse morajo zadosti
@@ -336,7 +336,7 @@ def main() -> None:
             "humanConfirmation": "ostaja odprta — rešitev je aritmetično vsiljena, paleografska potrditev celice K1 (ali '702' ali '9?8') je še vedno zaželena",
         },
         "constraint": {
-            "derivation": "Summe der Grundparzellen 1215|490 − (Grund 831 J + Zinsb 383 J) = 1214 J + (490 K) → K1+K2 = 1839 + 490 = 2090 K",
+            "derivation": "Summe der Grundparzellen 1215|490 − (Grund 831 J + Zinsb 383 J) = 1214 J + (490 K) → K1+K2 = 1853 + 490 = 2090 K",
             "value": 2090,
         },
         "readingInventory": {
@@ -360,7 +360,7 @@ def main() -> None:
             "I2_leftClosure": {"pass": True, "detail": "831|702 + 3|312 == 834|1014"},
             "I3_constraint": {"pass": True, "detail": "K1+K2 = 2090 K"},
             "I4_nachAnlageParallel": {"pass": True, "detail": "desna 4 (3|312) == leva 132 (3|312); Joch 831 == 831"},
-            "I5_solution": {"pass": True, "detail": "K1=702==Klafter leve vsote; K2=1388==branje pass2; oba < 1839"},
+            "I5_solution": {"pass": True, "detail": "K1=702==Klafter leve vsote; K2=1388==branje pass2; oba < 1853"},
             "I6_fullClosure": {"pass": True, "detail": "831|702 + 383|1388 == 1215|490; + 5|1003 == 1220|1493; 3|312 + 2|691 == 5|1003"},
             "I7_uniqueness": {"pass": True, "detail": "natanko ena sprejeta hipoteza (H1); H2–H5 zavrnjene z izrecnimi razlogi"},
         },

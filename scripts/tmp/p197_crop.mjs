@@ -13,7 +13,7 @@ const crops = [
   ['s168', 'z52-klobucar',    0.02, 0.74, 0.66, 0.94],  // z52 Klobučar-h47 (Griblje, zadnja vrstica)
   ['s169', 'griblje-z53-z57', 0.02, 0.13, 0.66, 0.62],  // z53 Mihelič + z55 Klepec + z56 Kere + z57 Pezdirc (glave 1880-August + September!)
   ['s169', 'bottom-z60-z62',  0.02, 0.66, 0.99, 0.97],  // z60 + z61 + z62-MANJKAJOČA (polna-širina = starost/bolezen!)
-  ['s170', 'glava-z63',       0.02, 0.09, 0.99, 0.26],  // leto-glava '1880 Novobr' + z63 (1839→1880 forenzika!)
+  ['s170', 'glava-z63',       0.02, 0.09, 0.99, 0.26],  // leto-glava '1880 Novobr' + z63 (1853→1880 forenzika!)
   ['s170', 'griblje-z65-z66', 0.02, 0.29, 0.66, 0.51],  // z65 Hukar-h27 + z66 Simec-h18 (Griblje)
 ];
 

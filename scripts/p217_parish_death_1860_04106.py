@@ -17,7 +17,7 @@ bloki = re.findall(r'\{\s*houseNo:\s*"(\d+)",\s*bookSignature:\s*"04106",\s*year
 check("I1 bloki 04106/1860-numeric == 9", len(bloki) == 9, f"najdeno {len(bloki)}")
 check("I2 hiše-1860-numeric (file-order)", bloki == ["55", "6", "13", "50", "58", "24", "30", "57", "57"], ",".join(bloki))
 skupaj = src.count('bookSignature: "04106"')
-check("I3 vitals-1839 + 04106==433", "HOUSE_VITALS.length !== 1839" not in src and skupaj == 433, f"04106={skupaj}")
+check("I3 vitals-1853 + 04106==433", "HOUSE_VITALS.length !== 1853" not in src and skupaj == 433, f"04106={skupaj}")
 
 d = json.load(open(f"{ROOT}/research/issue17/parish-death-1860-04106.json", encoding="utf-8"))
 grib = [e for e in d["entries"] if "gribl" in str(e.get("vas", "")).lower() and "grem" not in str(e.get("vas", "")).lower()]
@@ -34,8 +34,8 @@ check("I4c valentin-×2 + pezdirc-mreza + pozek-h58 (anomalije!)",
       "valentin-×2-h57" in an and "pezdirc-mreza-1860" in an and "z27-pozek-h58-nit" in an)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1839")
-check("I5 qa-p217 + števec-1609", "qa-p217-parish-death-1860-04106" in qa and st >= 125, f"1839-številcev={st}")
+st = qa.count("HOUSE_VITALS.length !== 1853")
+check("I5 qa-p217 + števec-1609", "qa-p217-parish-death-1860-04106" in qa and st >= 125, f"1853-številcev={st}")
 
 i0 = src.find("P217: mrliška PREDZGODOVINA 04106, leto 1860")
 seg = src[i0:] if i0 >= 0 else ""
@@ -51,7 +51,7 @@ check("I8c otroška-umrljivost-11%-1/9 (NAJNIŽJA!)", "otroška-umrljivost-11%-1
 check("I8d TAIL-1859-45-vrstic (6-GRIBLJE-tail!)", "TAIL-1859" in seg and "45-vrstic" in seg)
 check("I9a qa-p217 (217. kontrola!)", "qa-p217" in qa and "217. kontrola" in qa)
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-check("I9b pt-luknja-390/1609", '"vitalsTotal": 1839' in pt and '"04106": 433' in pt)
+check("I9b pt-luknja-390/1609", '"vitalsTotal": 1853' in pt and '"04106": 433' in pt)
 
 try:
     req = urllib.request.Request("https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04106/",
