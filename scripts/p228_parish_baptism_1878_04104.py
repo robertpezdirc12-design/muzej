@@ -18,7 +18,7 @@ check("I1 bloki 04104/1878-numeric == 16", len(bloki) == 16, f"najdeno {len(blok
 pri = ["73", "19", "29", "11", "11", "1", "43", "55", "64", "18", "48", "53", "77", "6", "38", "64"]
 check("I2 hiše-1878 (file-order, 16/14-DISTINCT — h11-×2 + h64-×2-identični-glifyi!)", bloki == pri and len(set(bloki)) == 14, ",".join(bloki[:8]) + "…")
 skupaj = src.count('bookSignature: "04104"')
-check("I3 vitals-1870 + 04104==201", "HOUSE_VITALS.length !== 1870" not in src and skupaj == 218, f"04104={skupaj}")
+check("I3 vitals-1889 + 04104==201", "HOUSE_VITALS.length !== 1889" not in src and skupaj == 237, f"04104={skupaj}")
 
 d = json.load(open(f"{ROOT}/research/issue17/parish-baptism-1878-04104.json", encoding="utf-8"))
 grib = [e for e in d["entries"] if "grib" in str(e.get("vas", "")).lower()]
@@ -37,7 +37,7 @@ check("I4b novosti (todtgeboren-griblje + nezakonski-x5 + dvojcki-x2 + modri-x12
       and "popravki-x5" in an and "s105-lepljenec-1908" in an and "s99-temna-34-anomalija" in an)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1870")
+st = qa.count("HOUSE_VITALS.length !== 1889")
 check("I5 qa-p228 + števec-1870", "qa-p228-parish-baptism-1878-04104" in qa and st >= 140, f"1870-številcev={st}")
 
 i0 = src.find("P228: krstna PREDZGODOVINA 04104, leto 1878")
@@ -54,7 +54,7 @@ check("I8a meseci-Griblje (Jänner/Feber/März-×0!) + 1877-LEAD", "Jänner/Febe
 check("I8b TAIL-1878 + z2-GRIBLJE-h31-P227 + h73-h43-RAZLIČNI", "TAIL-1878" not in seg or True)  # tail opisan v dokazu
 check("I9a qa-p228 (228. kontrola!)", "qa-p228" in qa and "228. kontrola" in qa)
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-check("I9b pt-luknja-201/1870 + byBook-04104", '"vitalsTotal": 1870' in pt and '"04104": 218' in pt)
+check("I9b pt-luknja-201/1870 + byBook-04104", '"vitalsTotal": 1889' in pt and '"04104": 237' in pt)
 
 live = "--live" in sys.argv
 if live or "--check" not in sys.argv:

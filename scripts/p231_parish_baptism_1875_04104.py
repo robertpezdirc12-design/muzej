@@ -18,7 +18,7 @@ check("I1 bloki 04104/1875-numeric == 17", len(bloki) == 17, f"najdeno {len(blok
 pri = ["30", "48", "5", "28", "34", "37", "94", "33", "29", "64", "72", "38", "57", "48", "68", "1", "11"]
 check("I2 hiše-1875 (file-order, 17-vpisov / 16-DISTINCT-h48-×2-DUEL!)", bloki == pri and len(set(bloki)) == 16, ",".join(bloki) if bloki else "-")
 skupaj = src.count('bookSignature: "04104"')
-check("I3 vitals-1870 + 04104==218", "HOUSE_VITALS.length !== 1870" not in src and skupaj == 218, f"04104={skupaj}")
+check("I3 vitals-1889 + 04104==218", "HOUSE_VITALS.length !== 1889" not in src and skupaj == 237, f"04104={skupaj}")
 
 d = json.load(open(f"{ROOT}/research/issue17/parish-baptism-1875-04104.json", encoding="utf-8"))
 grib = [e for e in d["entries"] if "grib" in str(e.get("vas", "")).lower()]
@@ -38,7 +38,7 @@ check("I4b novosti (violet-retro-datirani + feber-1-prelim-brez-datuma + z100-to
       and "duhovniki-dovgan-x10-hoggia-x7" in an)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1870")
+st = qa.count("HOUSE_VITALS.length !== 1889")
 check("I5 qa-p231 + števec-1870", "qa-p231-parish-baptism-1875-04104" in qa and st >= 143, f"1870-številcev={st}")
 
 i0 = src.find("P231: krstna PREDZGODOVINA 04104, leto 1875")
@@ -55,7 +55,7 @@ check("I8a meseci-Griblje (August+September-×0!) + 1874-LEAD", "August+Septembe
 check("I8b TAIL-1875-s64 + finis-Anni-1875-P230 + z3t-KRIŽ", "TAIL-1875" in seg and "finis-Anni-1875" in seg and "s64-r3-P230" in seg)
 check("I9a qa-p231 (231. kontrola!)", "qa-p231" in qa and "231. kontrola" in qa)
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-check("I9b pt-luknja-218/1870 + byBook-04104", '"vitalsTotal": 1870' in pt and '"04104": 218' in pt)
+check("I9b pt-luknja-218/1870 + byBook-04104", '"vitalsTotal": 1889' in pt and '"04104": 237' in pt)
 
 live = "--live" in sys.argv
 if live or "--check" not in sys.argv:

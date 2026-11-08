@@ -32,7 +32,7 @@ his = sorted(bloki, key=int)
 check("I2 hiše-1885", ",".join(his) == "1,5,9,13,21,31,31,31,31,54,58,62,63,63,68,78", ",".join(his))
 
 # I3: vitals
-check("I3 vitals-1870 + 04106==433", "HOUSE_VITALS.length !== 1870" not in src and src.count('bookSignature: "04106"') == 433,
+check("I3 vitals-1889 + 04106==433", "HOUSE_VITALS.length !== 1889" not in src and src.count('bookSignature: "04106"') == 433,
       f"04106-bloki={src.count('bookSignature: \"04106\"')}")
 
 # I4: dokaz
@@ -43,7 +43,7 @@ check("I4 dokaz (16 griblje + meja + anomalije)", len(grib) == 16 and d["okvir"]
 
 # I5: qa-parish
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-check("I5 qa-p192 + števec", "qa-p192-parish-death-1885-04106" in qa and qa.count("HOUSE_VITALS.length !== 1870") >= 100,
+check("I5 qa-p192 + števec", "qa-p192-parish-death-1885-04106" in qa and qa.count("HOUSE_VITALS.length !== 1889") >= 100,
       f"1870-številcev={qa.count('HOUSE_VITALS.length !== 1870')}")
 
 # I6: PARISH_BOOKS
