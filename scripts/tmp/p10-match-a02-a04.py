@@ -21,7 +21,7 @@ def detect(f, x0, x1, y0, y1):
             pts.append((cx, cy))
     return np.array(pts)
 
-P2 = detect('public/atlas/n83-a02.jpg', 950, 2600, 1803, 2158)  # A02 južni rob
+P2 = detect('public/atlas/n83-a02.jpg', 950, 2600, 1819, 2158)  # A02 južni rob
 P4 = detect('public/atlas/n83-a04.jpg', 0, 2645, 0, 700)        # A04 severni rob
 print(f'A02-jug: {len(P2)}; A04-sever: {len(P4)}')
 random.seed(11)

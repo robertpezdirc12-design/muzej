@@ -8,12 +8,12 @@ for name in ["p221_parish_baptism_1885_04104.py", "p222_parish_baptism_1884_0410
              "p223_parish_baptism_1883_04104.py", "p224_parish_baptism_1882_04104.py"]:
     f = ROOT / "scripts" / name
     t = f.read_text(encoding="utf-8"); o = t
-    t = t.replace('check("I3 vitals-1803 + 04104==90", "HOUSE_VITALS.length !== 1803" not in src and skupaj == 90, f"04104={skupaj}")',
-                  'check("I3 vitals-1803 + 04104==107", "HOUSE_VITALS.length !== 1803" not in src and skupaj == 107, f"04104={skupaj}")')
-    t = t.replace('check("I9b pt-luknja-65/1803 + byBook-04104", \'"vitalsTotal": 1803\' in pt and \'"04104": 90\' in pt)',
-                  'check("I9b pt-luknja-107/1803 + byBook-04104", \'"vitalsTotal": 1803\' in pt and \'"04104": 107\' in pt)')
-    t = t.replace('check("I9b pt-luknja-90/1803 + byBook-04104", \'"vitalsTotal": 1803\' in pt and \'"04104": 90\' in pt)',
-                  'check("I9b pt-luknja-107/1803 + byBook-04104", \'"vitalsTotal": 1803\' in pt and \'"04104": 107\' in pt)')
+    t = t.replace('check("I3 vitals-1819 + 04104==90", "HOUSE_VITALS.length !== 1819" not in src and skupaj == 90, f"04104={skupaj}")',
+                  'check("I3 vitals-1819 + 04104==107", "HOUSE_VITALS.length !== 1819" not in src and skupaj == 107, f"04104={skupaj}")')
+    t = t.replace('check("I9b pt-luknja-65/1819 + byBook-04104", \'"vitalsTotal": 1819\' in pt and \'"04104": 90\' in pt)',
+                  'check("I9b pt-luknja-107/1819 + byBook-04104", \'"vitalsTotal": 1819\' in pt and \'"04104": 107\' in pt)')
+    t = t.replace('check("I9b pt-luknja-90/1819 + byBook-04104", \'"vitalsTotal": 1819\' in pt and \'"04104": 90\' in pt)',
+                  'check("I9b pt-luknja-107/1819 + byBook-04104", \'"vitalsTotal": 1819\' in pt and \'"04104": 107\' in pt)')
     if t != o:
         f.write_text(t, encoding="utf-8"); patched += 1
 print(f"verifierji-patched: {patched} (pričakovano 4)")
