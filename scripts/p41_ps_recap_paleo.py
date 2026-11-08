@@ -69,7 +69,7 @@ RAW = EV / "ps-recap-paleo-raw"
 OUT_EVIDENCE = EV / "ps-recap-paleo.json"
 OUT_RUNTIME = ROOT / "src" / "data" / "atlas" / "ps-recap-paleo.json"
 
-KLAFTER_PER_JOCH = 1742
+KLAFTER_PER_JOCH = 1759
 
 
 def fail(msg: str):

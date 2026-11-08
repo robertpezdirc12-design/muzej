@@ -18,7 +18,7 @@ check("I1 bloki 04104/1883-numeric == 19", len(bloki) == 19, f"najdeno {len(blok
 pri = ["28", "20", "7", "39", "8", "35", "25", "17", "[?]", "19", "24", "90", "1", "56", "37", "25", "11", "63", "29"]
 check("I2 hiše-1883 (file-order, h25-×2! + 2-×-[?]-DUELI!)", bloki == pri, ",".join(bloki[:8]) + "…")
 skupaj = src.count('bookSignature: "04104"')
-check("I3 vitals-1742 + 04104==90", "HOUSE_VITALS.length !== 1742" not in src and skupaj == 90, f"04104={skupaj}")
+check("I3 vitals-1759 + 04104==107", "HOUSE_VITALS.length !== 1759" not in src and skupaj == 107, f"04104={skupaj}")
 
 d = json.load(open(f"{ROOT}/research/issue17/parish-baptism-1883-04104.json", encoding="utf-8"))
 grib = [e for e in d["entries"] if "gribl" in str(e.get("vas", "")).lower() and "grem" not in str(e.get("vas", "")).lower()]
@@ -36,8 +36,8 @@ check("I4b novosti (mesec-carry-over + marz-korekcija + hisni-dueli + pripisi-mm
       and "hisni-dueli-reseni" in an and "pripisi-kriz-mmk-1883" in an and "mreze-1883" in an)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1742")
-check("I5 qa-p223 + števec-1742", "qa-p223-parish-baptism-1883-04104" in qa and st >= 135, f"1742-številcev={st}")
+st = qa.count("HOUSE_VITALS.length !== 1759")
+check("I5 qa-p223 + števec-1759", "qa-p223-parish-baptism-1883-04104" in qa and st >= 135, f"1759-številcev={st}")
 
 i0 = src.find("P223: krstna PREDZGODOVINA 04104, leto 1883")
 seg = src[i0:] if i0 >= 0 else ""
@@ -51,7 +51,7 @@ check("I8a mreže-1883 (PEZDIRC-grafija-×6 + BRODARIČ-×4 + DRAGOŠ-×2 + SIME
 check("I8b DVOJČKI-GRIBLJE-h68-ZWILLINGE-P224-LEAD", "ZWILLINGE" in seg and "P224-LEAD" in seg)
 check("I9a qa-p223 (223. kontrola!)", "qa-p223" in qa and "223. kontrola" in qa)
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-check("I9b pt-luknja-65/1742 + byBook-04104", '"vitalsTotal": 1742' in pt and '"04104": 90' in pt)
+check("I9b pt-luknja-107/1759 + byBook-04104", '"vitalsTotal": 1759' in pt and '"04104": 107' in pt)
 
 live = "--live" in sys.argv
 if live or "--check" not in sys.argv:
