@@ -18,7 +18,7 @@ check("I1 bloki 04106/1858-numeric == 10", len(bloki) == 10, f"najdeno {len(blok
 pri = ["49", "19", "19", "19", "60", "65", "3", "2", "44", "50"]
 check("I2 hiše-1858-numeric (file-order)", bloki == pri, ",".join(bloki))
 skupaj = src.count('bookSignature: "04106"')
-check("I3 vitals-1889 + 04106==433", "HOUSE_VITALS.length !== 1889" not in src and skupaj == 433, f"04106={skupaj}")
+check("I3 vitals-1906 + 04106==433", "HOUSE_VITALS.length !== 1906" not in src and skupaj == 433, f"04106={skupaj}")
 
 d = json.load(open(f"{ROOT}/research/issue17/parish-death-1858-04106.json", encoding="utf-8"))
 grib = [e for e in d["entries"] if "gribl" in str(e.get("vas", "")).lower() and "grem" not in str(e.get("vas", "")).lower()]
@@ -34,7 +34,7 @@ check("I4c pezdirc-mreza-padire + nov-duhovnik-auber-duel + starost-0-dueli",
       "pezdirc-mreza-padire" in an and "nov-duhovnik-auber-duel" in an and "starost-0-dueli" in an)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1889")
+st = qa.count("HOUSE_VITALS.length !== 1906")
 check("I5 qa-p219 + števec-1642", "qa-p219-parish-death-1858-04106" in qa and st >= 126, f"1870-številcev={st}")
 
 i0 = src.find("P219: mrliška PREDZGODOVINA 04106, leto 1858")
@@ -51,7 +51,7 @@ check("I8c otroška-umrljivost-50%-5/10 + ekstremi-0[?]-→-68-J[?]", "otroška-
 check("I8d foliacija-svinčnik-sken−1-dokumentirana + pag-konvencija", "svinčnik-foliacija-arhivarja = sken−1" in seg and "sken−5-KORPUS-KONVENCIJA" in seg)
 check("I9a qa-p219 (219. kontrola!)", "qa-p219" in qa and "219. kontrola" in qa)
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-check("I9b pt-luknja-423/1642", '"vitalsTotal": 1889' in pt and '"04106": 433' in pt)
+check("I9b pt-luknja-423/1642", '"vitalsTotal": 1906' in pt and '"04106": 433' in pt)
 
 live = "--live" in sys.argv
 if live or "--check" not in sys.argv:
