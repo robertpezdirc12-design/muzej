@@ -10,7 +10,7 @@ Preberi GLAVO strani in VSAK vnos vrstica-po-vrstico.
 
 GLAVA — poročaj:
 - številka strani (Pag.)
-- zapis leta v glavi (natančno kot je napisano — pisar pogosto napiše npr. '181906', '18906', '18/905' — napake so POMENBNE!)
+- zapis leta v glavi (natančno kot je napisano — pisar pogosto napiše npr. '183906', '18906', '18/905' — napake so POMENBNE!)
 - velika letnica čez vrsto (če je)
 - ali je restart zaporedne številke (meja let!)
 

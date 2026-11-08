@@ -65,7 +65,7 @@ TRAKT = [
     # --- glave-napake (3 pisarjeve napake-kandidati!) ---
     ("glava-s92-18903", 92, GLAVA),
     ("glava-s94-18903", 94, GLAVA),
-    ("glava-s95-181904", 95, GLAVA),
+    ("glava-s95-183904", 95, GLAVA),
     # --- s95 Griblje/Giriče zmeda (1904 — samo kontekst!) ---
     ("s95-z8-anton-sajnic-kontekst", 95, S95["z8"]),
     ("s95-z10-ana-krvan-kontekst", 95, S95["z10"]),
@@ -169,7 +169,7 @@ def main():
     # glave-trakovi (širši, manjši zoom)
     for name, scan, yc in [("glava-s92-18903", 92, GLAVA),
                            ("glava-s94-18903", 94, GLAVA),
-                           ("glava-s95-181904", 95, GLAVA)]:
+                           ("glava-s95-183904", 95, GLAVA)]:
         crop(name, scan, G_X[0], G_X[1], yc, 70, 2.0)
         n += 1
     print(f"crops: {n} shranjenih ({len(TRAKT)} trakov + {len(CELLS)} celic + 3 glave)")

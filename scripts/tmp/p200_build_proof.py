@@ -204,7 +204,7 @@ proof = {
         "hišne-v-2.-vrstici-vase-celice-vzorec (z1-'8' + z2-Gradac-'8'!)",
     ],
     "crossChecks": [
-        "md5-križna-validacija-ta-seja: s148 (cfb227bde948) + s149 (ae3e71e1819d) sveže == P199-disk-1:1 ✓ — veriga-P197→P198→P199→P200-bajtno-zvezana-4.×!",
+        "md5-križna-validacija-ta-seja: s148 (cfb227bde948) + s149 (ae3e71e1839d) sveže == P199-disk-1:1 ✓ — veriga-P197→P198→P199→P200-bajtno-zvezana-4.×!",
         "z-continuity-×6-strani: 11→21→33→43→52→60 ✓ (datum-veriga-continuous: Jän1→Feb28/Mär1→März5→März28→Juni26→Sept28→Okt18→Dez21→1878-restart!)",
         "1877-konec = z60-s148-v8-Dez-21 ✓ + 1878-start = s149-restart-1 (P199-reuse!) ✓",
         "s148-tail-8-vrstic-1:1 == P199-tail_1877-reuse (md5-validirano!) ✓",
