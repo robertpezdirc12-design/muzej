@@ -16,7 +16,7 @@ Kaj naredi (izključno iz committed dokazov; brez AI ob delovanju):
         uporabljala — P40 dokazuje, da je to uradna rekapitulacija dokumenta);
      d) Bauplätze 102 nasproti Blatt X (str. 138) 60 vrstic — registrska
         vrzel 42 (pokritost registra 58,8 %).
-  3. DEKOMPOZICIJA POVRŠIN po sekcijah modela P39 (joch + klafter/1853):
+  3. DEKOMPOZICIJA POVRŠIN po sekcijah modela P39 (joch + klafter/1870):
      GRUND_1_2505 / NADALJEVANJE_2506 / WALDUNG / BLATT_X + vrstice brez
      razčlenjene površine (32). Nastane SWOBODNA tabela kandidatov za
      pomen rekapitulacijske vsote "Summa 1216(?) Joch" (str. 141, branje
@@ -65,7 +65,7 @@ EV = ROOT / "research" / "issue17"
 OUT_EVIDENCE = EV / "ps-recap.json"
 OUT_RUNTIME = ROOT / "src" / "data" / "atlas" / "ps-recap.json"
 
-KLAFTER_PER_JOCH = 1853  # franciscejski kataster: 1 Joch = 1853 Quadrat-Klafter
+KLAFTER_PER_JOCH = 1870  # franciscejski kataster: 1 Joch = 1870 Quadrat-Klafter
 
 
 def fail(msg: str):

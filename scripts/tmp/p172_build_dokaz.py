@@ -112,7 +112,7 @@ KOR = {
     # ——— s108 ———
     ("s108", 45): {"ime": "Jožef JURAJEVIČ [~ diag-'Jurajevič'; VLM-'Zuanajevič'-zmeda]",
                    "bolezen": "~~Bazljenica-prečrtano~~ Črevesni katar [~ diag-'Grovers'-čolov'-zmeda]",
-                   "opomba": "VLM-'November-1905'-HALUCINACIJA — VIZUALNO-November-1906 (glava-s108-'185306'!)"},
+                   "opomba": "VLM-'November-1905'-HALUCINACIJA — VIZUALNO-November-1906 (glava-s108-'187006'!)"},
     ("s108", 46): {"ime": "Anton KUPANIČ [~ diag-'Kupanič'; VLM-'Župančič'-zmeda]", "mesec": "November (diag; VLM-None!)"},
     ("s108", 47): {"ime": "Matija KUPANIČ [~ diag-'Kupanič'; VLM-'Župančič'-zmeda]", "mesec": "November (diag; VLM-None!)"},
     ("s108", 48): {"hisna": "77", "vas": "Griblje", "ime": "Jurij JOČEK [★★★ VLM-'Potokar'-ZAVRJENA — diag-'Joček'+kompozit!]",
@@ -189,8 +189,8 @@ dokaz = {
         "hise_seznam": sorted(set(e["houseNo"] for e in grb), key=int),
         "ponovitve": "h58-×2 (z29-Matija-TOŽEK-10-mes + z35-Janez-FOČEK-49-let — 8-tednov-apart!)",
         "meja_1905_06": "s104 ('— 1906 —'-VELIKOPISANO + restart zap 61→1 + Januar-podčrtan — 13. POTRDITEV 5. STIL)",
-        "meja_1906_07": "s109 (velika-'1907.' + Januar + restart zap 55→1 + glava-'185307' = 14. POTRDITEV 5. STIL; P171-lead-[~ s107+?]-KOREKCIJA-→-s109!)",
-        "glave_napake": ["s104-'Leto 48/1905'-'4'-za-'1'-NOV-vzorec!", "s105-'Leto 18906'", "s106-'Leto 18.1906'", "s107-'Leto 185306'", "s108-'Leto 185306'"] ,
+        "meja_1906_07": "s109 (velika-'1907.' + Januar + restart zap 55→1 + glava-'187007' = 14. POTRDITEV 5. STIL; P171-lead-[~ s107+?]-KOREKCIJA-→-s109!)",
+        "glave_napake": ["s104-'Leto 48/1905'-'4'-za-'1'-NOV-vzorec!", "s105-'Leto 18906'", "s106-'Leto 18.1906'", "s107-'Leto 187006'", "s108-'Leto 187006'"] ,
         "stran_invarianta": "stran == sken − 1 (77.–81. potrditev VIZUALNO!)",
     },
     "entries": entries,
@@ -200,7 +200,7 @@ dokaz = {
         {"id": "X3", "opis": "s110 = 1907-nadaljevanje (zap12–23-Februar–Marec): z13-Anton-Veljko-h60 + z18-Matija-Urh-h32-16-let; meja-1907/08 [~ s113+?]" },
     ],
     "anomalies": [
-        {"id": "A1", "opis": "★★★ 5 GLAVE-NAPAKE = REKORD-LINIJE-IZENAČEN (P170-rekord-5!): s104-'Leto 48/1905'-'4'-za-'1'-NOV-vzorec + s105-'Leto 18906' + s106-'Leto 18.1906' + s107-'Leto 185306' + s108-'Leto 185306' — pisar-'18'-navada-×5-v-1-letu!"},
+        {"id": "A1", "opis": "★★★ 5 GLAVE-NAPAKE = REKORD-LINIJE-IZENAČEN (P170-rekord-5!): s104-'Leto 48/1905'-'4'-za-'1'-NOV-vzorec + s105-'Leto 18906' + s106-'Leto 18.1906' + s107-'Leto 187006' + s108-'Leto 187006' — pisar-'18'-navada-×5-v-1-letu!"},
         {"id": "A2", "opis": "★★★ PISAR-DUPLIKAT-zaporedna-21 = 1.-V-LINIJI: s105-z21-Maj-10-Griblje-h19-Janez-KRIŽE + s106-z21-Maj-22-Klošter-h56-Neža-SRAIJER = 56-oštevilčenih-vrstic = 55-vpisov!"},
         {"id": "A3", "opis": "★★★ NOV DUHOVNIK #13: J. R. KUHINEK (×3-GRIBLJE: z21-h19-1.-podpis + z23-h39 + z29-h58 + s106-DOMINANTA-×9-vpisov!; ×13-duhovnik-linije)"},
         {"id": "A4", "opis": "★ LEOPOLD-PODLOGAR-kapelan-×1 (s106-z25-'kap. v Črnomlju'-izven-župnijski-1.-podpis-v-liniji!)"},

@@ -110,7 +110,7 @@ def main():
           f"{fr['vpisi']}/{fr['zap_oštevilčenih']}/{fr['griblje_vpisi']}/{fr['hise']}")
     check("I2b 14-anomalij (SUICID + TRAUMA + POROD-#3 + ŠKRLATINKA-×10!) + glave-'18'-×7",
           "SE JE OBESIL" in d["anomalies"][2]["opis"] and len(fr["glave_napake"]) == 3
-          and any("185308" in g or "18[ročno-1908]" in g for g in fr["glave_napake"]),
+          and any("187008" in g or "18[ročno-1908]" in g for g in fr["glave_napake"]),
           str(len(fr["glave_napake"])))
     check("I2c hiše-zaporedje (h24-×2!)",
           ",".join([str(e["houseNo"]) for e in sorted(grb, key=lambda x: int(x["houseNo"]))]) == GRIBLJE_HOUSES,

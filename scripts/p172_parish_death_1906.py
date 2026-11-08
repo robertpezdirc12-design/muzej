@@ -7,7 +7,7 @@ matricula-online.eu.
 P172-novosti: 55 vpisov (56-oštevilčenih — PISAR-DUPLIKAT-21 1.-v-liniji!) /
 10 GRIBLJE (padec-rekorda 17→16→16→10!) / 9 hiš + h58-×2-v-1-letu + 5
 GLAVE-NAPAKE = REKORD-LINIJE-IZENAČEN (s104-'48/1905'-'4'-za-'1'-NOV-vzorec +
-s105-'18906' + s106/s107/s108-'185306'-×3 — pisar-'18'-navada ×5-v-1-letu!) +
+s105-'18906' + s106/s107/s108-'187006'-×3 — pisar-'18'-navada ×5-v-1-letu!) +
 NOV DUHOVNIK #13: J. R. KUHINEK (×3-GRIBLJE + s106-DOMINANTA!) + PODLOGAR-
 kapelan-×1 + FLORJANČIČ-×2-1.-mrliški-podpisi + PEZDIREC-era-13 (×1 = era-×12-
 v-5-letih!) + BRINEC-vez (1906-ANA-vdova-h49 → 1907-ANTON-vdovec-h49!) +
@@ -199,9 +199,9 @@ def main():
 
     # ---------- I7: forenzika (anomalije A1–A10!) ----------
     a1 = next(x for x in d["anomalies"] if x["id"] == "A1")
-    check("I7a A1: 5-GLAVE-NAPAKE-REKORD-IZENAČEN (48/1905 + 18906 + 185306-×3!)",
+    check("I7a A1: 5-GLAVE-NAPAKE-REKORD-IZENAČEN (48/1905 + 18906 + 187006-×3!)",
           "5 GLAVE-NAPAKE" in a1["opis"] and "48/1905" in a1["opis"]
-          and "18906" in a1["opis"] and "185306" in a1["opis"], "")
+          and "18906" in a1["opis"] and "187006" in a1["opis"], "")
     a2 = next(x for x in d["anomalies"] if x["id"] == "A2")
     check("I7b A2: PISAR-DUPLIKAT-zaporedna-21 (1.-v-liniji — 56-oštevilčenih = 55-vpisov!)",
           "DUPLIKAT-zaporedna-21" in a2["opis"], "")

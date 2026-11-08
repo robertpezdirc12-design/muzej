@@ -196,7 +196,7 @@ def main():
     check("I7c A4: ŠTRAVS-×5-v-2-LETIH (4-otroci + 1-odrasla-v-19-mesecih!)",
           "ŠTRAVS-×5-v-2-LETIH" in a4["opis"] and "19-mesecih" in a4["opis"], "")
     a1 = next(x for x in d["anomalies"] if x["id"] == "A1")
-    check("I7d A1: 3-GLAVE-NAPAKE-REKORD (s92-18903 + s94-18903 + s95-185304!)",
+    check("I7d A1: 3-GLAVE-NAPAKE-REKORD (s92-18903 + s94-18903 + s95-187004!)",
           "18903" in a1["opis"] and "18[izbrisano]1904" in a1["opis"], "")
     a2 = next(x for x in d["anomalies"] if x["id"] == "A2")
     check("I7e A2: ZAPCOL-ČIST-1903 (NASPROTJE-1902-'345'+NEŠTEVILČENA!)",

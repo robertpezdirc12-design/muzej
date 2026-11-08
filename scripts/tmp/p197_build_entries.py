@@ -10,7 +10,7 @@ Struktura dokazane preslikave:
   s166: z19–z30 · s167: z31–z41 · s168: z42–z52
   s169: z53, z54, z56–z62 — ★ z55 = IZPUŠČENA-ŠTEVILKA (rdeči-margin-KROP:
         53,54,56,57,58,59,60,61,62!) → VLM-vrste 3–9 = +1-shift (z56..z62)
-  s170: z63–z71 (leto-glava '1880 Novobr' — VLM-'1853' ZAVRJEN-KROP!)
+  s170: z63–z71 (leto-glava '1880 Novobr' — VLM-'1870' ZAVRJEN-KROP!)
   s171: z72-tail (reuse P196 s171.json vrsta-1: Valčič-Vranoviče-72J!) + MEJA-1880/81
 
 KROP-izreki (agent-oči, 1.7×-zoom): z10-vas=GRIBLJE (VLM-'Krive' ZAVRJEN),
@@ -149,7 +149,7 @@ out = {
         "meja_1879_80": "s164 mid-page '1 8'|'8 0' SPLIT-ČEZ-RAZPON = 36.-POTRDITEV-invariante (P194-tehnika-#9!)",
         "restart": "63→1 na s164 (rdeči-margin-KROP: 62,63,1,2,3,4,5,6,7!)",
         "anomalija_številčenja": "★ z55 = IZPUŠČENA-ŠTEVILKA (s169 rdeči-margin: 53,54,56..62 — pisar-preskok; cf. P196-z8-DUPLIKAT!)",
-        "leto_popravki": "VLM-'1859'(s165)/'1853'(s170) = KURRENT-misread — KROP: '1880 Feber' + '1880 Novobr' glavi!",
+        "leto_popravki": "VLM-'1859'(s165)/'1870'(s170) = KURRENT-misread — KROP: '1880 Feber' + '1880 Novobr' glavi!",
         "krop_izreki": 10,
         "duhovniki_krop": "Jančar (coop.→v.kaplan→VRD-Pfarrer/Priester/Pastor — naraščajoči-naslovi!) + Dovgan (z10-Griblje! + z62?)",
     },

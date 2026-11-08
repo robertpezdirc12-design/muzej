@@ -10,7 +10,7 @@ I5: qa-parish.ts vsebuje qa-p196-parish-death-1881-04106 + števec 1511 (≥ 100
 I6: duhovniki-1881 (Jančar-19/19-GRIBLJE-100%-dominanta-3.-leto + Dovgan-izključno-ne-Griblje + Prieſter-ligatura)
 I7: katastrofe/oznake (h37-×2-v-2-dneh + h21-×2 + h66-NOVA + h56-ŠIMEC + h78-LOZAR-nit + h65-MILEK-nit + h60-MÜHLZÜGLER-ženska-nit)
 I8: epidemije/oznake (M/W-NIT-×4 + FRISELN-×3 + ANGINA-1.× + TUBERCULOSE-1.× + BLATTERN-×5 + NOVA-ULEDBA-#10)
-I9: pt-luknja-18-final.json (04106 == 433, vitals == 1853)
+I9: pt-luknja-18-final.json (04106 == 433, vitals == 1870)
 I10: 04894-still-520 + 04106-leta == {1881, 1882, 1883, 1884, 1885}
 --live: produkcija /api/qa == 196/196 + qa-p196 pass:True
 """
@@ -33,7 +33,7 @@ check("I2 hiše-1881 (h37-×2 + h21-×2)", ",".join(his) == "2,4,8,13,17,18,21,2
 
 # I3: vitals + 04106-skupaj
 skupaj = src.count('bookSignature: "04106"')
-check("I3 vitals-1853 + 04106==433", "HOUSE_VITALS.length !== 1853" not in src and skupaj == 433,
+check("I3 vitals-1870 + 04106==433", "HOUSE_VITALS.length !== 1870" not in src and skupaj == 433,
       f"04106-bloki={skupaj}")
 
 # I4: dokaz
@@ -48,9 +48,9 @@ check("I4 dokaz (93/19-griblje/26-anomalij + meja-s171 + s180-top + 93-vrstic)",
 
 # I5: qa-parish
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1853")
+st = qa.count("HOUSE_VITALS.length !== 1870")
 check("I5 qa-p196 + števec-1511", "qa-p196-parish-death-1881-04106" in qa and st >= 100,
-      f"1853-številcev={st}")
+      f"1870-številcev={st}")
 
 # I6: duhovniki-1881 (P196-segment)
 i0 = src.find("P196: mrliška PREDZGODOVINA 04106, leto 1881")
@@ -83,7 +83,7 @@ check("I8h z8-DUPLIKAT-5.×", "z8-DUPLIKAT" in seg)
 # I9: PT-luknja
 pt = json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8"))
 gap_ids = sorted(int(g["houseNo"]) for g in pt["gapHouses"])
-check("I9 pt-luknja 04106==433", pt["corpus"]["byBook"].get("04106") == 433 and pt["corpus"]["vitalsTotal"] == 1853,
+check("I9 pt-luknja 04106==433", pt["corpus"]["byBook"].get("04106") == 433 and pt["corpus"]["vitalsTotal"] == 1870,
       f"04106={pt['corpus']['byBook'].get('04106')} vitals={pt['corpus']['vitalsTotal']}")
 check("I9b pt-vzorca-kontekst", 42 in gap_ids and 50 not in gap_ids, f"gap={gap_ids[:4]}...{gap_ids[-2:]}")
 

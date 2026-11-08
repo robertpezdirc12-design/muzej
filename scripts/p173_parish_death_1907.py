@@ -8,7 +8,7 @@ P173-novosti: 67 vpisov (zap1–67, ČISTA-SEKVENCA!) / 20 GRIBLJE = NOV-REKORD
 LINIJE (rast 17→16→16→10→20!) / 18 hiš (h49-×2 + h10-×2 = PADEC-vzorec-4.-leto!)
 + 3 PISAR-DATUM-NAPAKE = 1.-TIPO-V-LINIJI (z18-'29.-Feb-1907'-NE-PRESTOPNO!
 + z55/z56-'31.-Sept'-×2-BATCH!) + 5 GLAVE-NAPAKE = REKORD-IZENAČEN-3.×
-(s111-'185304'-NAPAČNO-LETO-NOV-VZOREC + s112-'18'-NEKOMPLETNA!) +
+(s111-'187004'-NAPAČNO-LETO-NOV-VZOREC + s112-'18'-NEKOMPLETNA!) +
 P172-'BRINEC-PAR-vez'-KOREKCIJA (z1 = Anton-BRODARIČ!) + h75/h10 = 1.-MRLIŠKI-
 VPIS-KADARKOLI-×2 (30./31.-PT-kandidata!) + h65-8.-vpis-IZENAČUJE-h58 +
 NOVI-DUHOVNIK-LILEK-'župnik-v.p.' + Nemaniš + Guido-KRUSCH-layman + CERAR-
@@ -109,9 +109,9 @@ def main():
           fr["vpisi"] == 67 and fr["zap_oštevilčenih"] == 67
           and fr["griblje_vpisi"] == 20 and fr["hise"] == 18,
           f"{fr['vpisi']}/{fr['zap_oštevilčenih']}/{fr['griblje_vpisi']}/{fr['hise']}")
-    check("I2b 3-PISAR-DATUM-NAPAKE (1.-TIPO!) + 5-GLAVE-NAPAKE (s111-'185304'!)",
+    check("I2b 3-PISAR-DATUM-NAPAKE (1.-TIPO!) + 5-GLAVE-NAPAKE (s111-'187004'!)",
           "29.-Februar" in d["anomalies"][0]["opis"] and len(fr["glave_napake"]) == 5
-          and any("185304" in g for g in fr["glave_napake"]), str(len(fr["glave_napake"])))
+          and any("187004" in g for g in fr["glave_napake"]), str(len(fr["glave_napake"])))
     check("I2c hiše-zaporedje (h49-×2 + h10-×2!)",
           ",".join([str(e["houseNo"]) for e in sorted(grb, key=lambda x: int(x["houseNo"]))]) == GRIBLJE_HOUSES,
           ",".join([str(e["houseNo"]) for e in sorted(grb, key=lambda x: int(x["houseNo"]))]))
@@ -202,8 +202,8 @@ def main():
     check("I7a A1: 3-PISAR-DATUM-NAPAKE-1.-TIPO (29.-Feb + 31.-Sept-×2!)",
           "29.-Februar-1907" in a1["opis"] and "31.-September" in a1["opis"], "")
     a2 = next(x for x in d["anomalies"] if x["id"] == "A2")
-    check("I7b A2: 5-GLAVE-NAPAKE-REKORD-IZENAČEN-3.× (s111-'185304'-NAPAČNO-LETO!)",
-          "REKORD-IZENAČEN-3.×" in a2["opis"] and "185304" in a2["opis"]
+    check("I7b A2: 5-GLAVE-NAPAKE-REKORD-IZENAČEN-3.× (s111-'187004'-NAPAČNO-LETO!)",
+          "REKORD-IZENAČEN-3.×" in a2["opis"] and "187004" in a2["opis"]
           and "NEKOMPLETNA" in a2["opis"], "")
     a4 = next(x for x in d["anomalies"] if x["id"] == "A4")
     check("I7c A4: P172-'BRINEC-PAR-vez'-KOREKCIJA (z1 = Anton-BRODARIČ!)",

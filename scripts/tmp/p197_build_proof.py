@@ -127,7 +127,7 @@ proof = {
     "anomalije": [
         "★★★ MEJA-1879/80-s164: velika-'1880'-črta-SPLIT-ČEZ-RAZPON ('1 8'-levo | '8 0'-desno — KROP-POTRJENO!) = 36.-POTRDITEV-invariante + P194-TEHNIKA-#9-ponovitev (s171-'18/81'-35. + s180-'18/82'-34.!) + RESTART-63→1 (rdeči-margini-62,63,1–7-KROP!)",
         "★★★ z55-IZPUŠČENA-ŠTEVILKA: s169-rdeči-margini-53,54,56–62 (KROP-leva-cela!) — pisar-preskok = 2. številčna-anomalija-04106 (cf. P196-z8-DUPLIKAT-5.×!) — VLM-sam-protisloven ('53–61'-lista + '53–62'-tail-tekst!)",
-        "★★★ VLM-LETO-MISREAD-×2: '1859'(s165) + '1853'(s170) = KURRENT-8-dvojna-zanka-zmeda — KROP-glavi-'1880 Feber' + '1880 Novobr' POTRJENI! (3. KURRENT-cifra-lekcija-seje)",
+        "★★★ VLM-LETO-MISREAD-×2: '1859'(s165) + '1870'(s170) = KURRENT-8-dvojna-zanka-zmeda — KROP-glavi-'1880 Feber' + '1880 Novobr' POTRJENI! (3. KURRENT-cifra-lekcija-seje)",
         f"★★★ FRISELN-EPIDEMIJA-1880: ×{fr_total}-družina (FRAISEN-10 + FRIESEN-6 + FRISEN-2 + KRUP/KRAVIPEN-4 + Kopfraisen/gichtern-...) = {round(100 * fr_total / len(ENT))}%-vpisov! KRIVULJA: 1880-×{fr_total} → 1881-×3-DOLINA → 1882-×16-FLOOD (P195) = W-krivulja-epidemije (otroška — večina-<4J!)",
         "★★★ JANČAR-NASLOVNI-NARAŠČAJ-1880: 'coop.'(Jan) → 'v. kaplan'(März) → 'v.R.D./VRD Priester'(Aug/Okt) — naraščajoči-hierarhija + GRIBLJE-12/13-Jančar-91% (cf. 1881-19/19-100%-DOMINANTA-3.-leto!) — JANČAR-nit-4.-leto!",
         "★★ Dovgan-z10-GRIBLJE-IZJEMA (Katharina-Knuel-pokop-18.2.) — cf. 1881-DOVGAN-izključno-ne-Griblje → 1880-lahko-Dovgan-Griblje = vloga-vmes!",
@@ -197,7 +197,7 @@ proof = {
         "H6": "tail=DA-flagi-s167/s169 = FALSE-POSITIVI (VLM-lastni-tekst: 'konec-NI-na-strani!') — dokumentirano-in-zavrnjeno!",
         "H7": "1879-tail (z62-Cvikl + z63-Jakofčič) IZKLJUČEN-iz-1880-nabora (le-dokaz-zh; P198-jih-vzame!)",
         "H8": "Juli-matcher-popravek (6-vpisov) — meseci-zdaj-sklenjeni-1→12 ✓",
-        "H9": "VLM-'1859'/'1853'-misread-×2 ZAVRJENA (KROP-glavi!) — pri-prvi-branji-bi-bil-NAPAČEN-leto-okvir!",
+        "H9": "VLM-'1859'/'1870'-misread-×2 ZAVRJENA (KROP-glavi!) — pri-prvi-branji-bi-bil-NAPAČEN-leto-okvir!",
         "H10": "ime-'Knuel[~Kuncelj]' + 'Huore[~Huoe/Thure]' + 'Krian[~Kovian]' — priimki-[~]-ostajajo (crop-1.7×-limit!)",
         "H11": "z72 = P196-s171.json-reuse (vrsta-1) — polja-nespremenjena (KROP-že-potrjen-v-P196-seji!)",
         "H12": "VLM-zap-shift-s169 (+1-od-3.-vrste) programsko-popravljen — zap_raw-ohranjen-vsak-vpis!",
@@ -220,7 +220,7 @@ proof = {
     "entries": [],
     "notes": [
         "Nastalo: P197 (2025-11-03) — fetch-s163–s171 (p197_fetch.py: inventar-208 + md5-s171-validacija + preslikava-idx=sken−1!) + VLM-×8-fresh (p197_read_page.mjs) + P196-s171-reuse + KROP-×10-cropov (p197_crop.mjs — agent-oči!) + builder (p197_build_entries.py + p197_build_proof.py)",
-        "METODOLOŠKE-LEKCIJE: (1) VLM-leto-misread ('1859'/'1853') — LETO-VEDNO-KROP-POTRDI (glava + MEJA + aritmetika!); (2) rdeči-margini = avtoritativni-ordinals (VLM-off-by-one-nevidno!); (3) VLM-tail-flags = navodila-za-KROP, ne-izreki; (4) ozadjski-nohup-VM-umira-med-klici → foreground-batche!",
+        "METODOLOŠKE-LEKCIJE: (1) VLM-leto-misread ('1859'/'1870') — LETO-VEDNO-KROP-POTRDI (glava + MEJA + aritmetika!); (2) rdeči-margini = avtoritativni-ordinals (VLM-off-by-one-nevidno!); (3) VLM-tail-flags = navodila-za-KROP, ne-izreki; (4) ozadjski-nohup-VM-umira-med-klici → foreground-batche!",
         "Entries-71 (z1–z72, z55-prazna) — 1879-tail-z62/z63-ločeno (tail_1879-ključ!)",
         "GRIBLJE-13-vpisov/12-hiš (h10-×2) — parish.ts-bloki-vitajšnji-pd-1880-skeni!",
     ],
