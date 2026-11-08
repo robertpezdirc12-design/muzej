@@ -42,7 +42,7 @@ for scan, nrows, y0, y1 in [(s, *PAGES[s]) for s in PAGES]:
         L = strip.crop((0, 0, lw, strip.height))
         R = strip.crop((int(w * 0.45), 0, w, strip.height))
         for half, c in (("L", L), ("R", R)):
-            sc = 2.2 if c.width < 1781 else 1.8
+            sc = 2.2 if c.width < 1803 else 1.8
             c.resize((int(c.width * sc), int(c.height * sc)), Image.LANCZOS).save(
                 f"{OUT}/s{scan:02d}-r{idx+1}{half}.png")
 
