@@ -124,13 +124,13 @@ def main():
     b1925 = re.findall(r'bookSignature: "04894",\s*year: 1925', src)
     check("I6d 0-blokov-04894-1925 (KNJIGA-KONČANA!)", len(b1925) == 0, str(len(b1925)))
     p80src = open(P80, encoding="utf-8").read()
-    check("I6e p80-skripta pini 1803 + 94 + gap-18 (P219-sandizacija!)",
-          "len(vitals) == 1803" in p80src and "len(houses) == 94" in p80src
+    check("I6e p80-skripta pini 1819 + 94 + gap-18 (P219-sandizacija!)",
+          "len(vitals) == 1819" in p80src and "len(houses) == 94" in p80src
           and "len(gap) == 18" in p80src, "")
 
     # ---------- I7: qa-parish.ts pini ----------
     qa = open(QA_TS, encoding="utf-8").read()
-    check("I7a qa-pini 1511 (90×+)", qa.count("!== 1803") >= 90, str(qa.count("!== 1803")))
+    check("I7a qa-pini 1511 (90×+)", qa.count("!== 1819") >= 90, str(qa.count("!== 1819")))
     check("I7b qa-pini 520 (15×+)",
           qa.count('04894").length !== 520') >= 15
           and "p80Death.length !== 520" in qa, str(qa.count('04894").length !== 520')))

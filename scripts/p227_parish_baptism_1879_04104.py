@@ -18,7 +18,7 @@ check("I1 bloki 04104/1879-numeric == 22", len(bloki) == 22, f"najdeno {len(blok
 pri = ["31", "68", "16", "18", "6", "22", "24", "17", "23", "49", "44", "7", "46", "22", "62", "17", "37", "63", "11", "31", "28", "40"]
 check("I2 hiše-1879 (file-order, 22/19-DISTINCT — h31-×2 + h22-×2 + h17-×2-DUELI-REŠENI!)", bloki == pri and len(set(bloki)) == 19, ",".join(bloki[:8]) + "…")
 skupaj = src.count('bookSignature: "04104"')
-check("I3 vitals-1803 + 04104==151", "HOUSE_VITALS.length !== 1803" not in src and skupaj == 151, f"04104={skupaj}")
+check("I3 vitals-1819 + 04104==151", "HOUSE_VITALS.length !== 1819" not in src and skupaj == 167, f"04104={skupaj}")
 
 d = json.load(open(f"{ROOT}/research/issue17/parish-baptism-1879-04104.json", encoding="utf-8"))
 grib = [e for e in d["entries"] if "grib" in str(e.get("vas", "")).lower()]
@@ -37,8 +37,8 @@ check("I4b novosti (dvojcki-zwillinge-x3 + todtgeboren-x3 + nezakonski-x2 + modr
       and "z60-pogojni-krst" in an and "z32-imenski-popravek" in an and "z76-datumski-pripis" in an)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1803")
-check("I5 qa-p227 + števec-1803", "qa-p227-parish-baptism-1879-04104" in qa and st >= 139, f"1803-številcev={st}")
+st = qa.count("HOUSE_VITALS.length !== 1819")
+check("I5 qa-p227 + števec-1819", "qa-p227-parish-baptism-1879-04104" in qa and st >= 139, f"1819-številcev={st}")
 
 i0 = src.find("P227: krstna PREDZGODOVINA 04104, leto 1879")
 seg = src[i0:] if i0 >= 0 else ""
@@ -54,7 +54,7 @@ check("I8a meseci-Griblje (März/Mai-×0!) + 1878-94-BONUS-LEAD", "März/Mai-×0
 check("I8b TAIL-1879 + †-15.6.1941 + DOVGAN-podpis + h-paralele", "TAIL-1879-ZAČETEK" in seg and "†-15.6.1941" in seg and "podpis-Franz-DOVGAN" in seg and "HURE-oče-nit" in seg and "P226-PARALELA" in seg)
 check("I9a qa-p227 (227. kontrola!)", "qa-p227" in qa and "227. kontrola" in qa)
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-check("I9b pt-luknja-151/1803 + byBook-04104", '"vitalsTotal": 1803' in pt and '"04104": 151' in pt)
+check("I9b pt-luknja-167/1819 + byBook-04104", '"vitalsTotal": 1819' in pt and '"04104": 167' in pt)
 
 live = "--live" in sys.argv
 if live or "--check" not in sys.argv:

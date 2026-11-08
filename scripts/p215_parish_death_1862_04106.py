@@ -17,7 +17,7 @@ bloki = re.findall(r'\{\s*houseNo:\s*"(\d+)",\s*bookSignature:\s*"04106",\s*year
 check("I1 bloki 04106/1862-numeric == 9", len(bloki) == 9, f"najdeno {len(bloki)}")
 check("I2 hiše-1862-numeric (file-order)", bloki == ["9", "10", "61", "5", "47", "1", "63", "61", "5"], ",".join(bloki))
 skupaj = src.count('bookSignature: "04106"')
-check("I3 vitals-1803 + 04106==433", "HOUSE_VITALS.length !== 1803" not in src and skupaj == 433, f"04106={skupaj}")
+check("I3 vitals-1819 + 04106==433", "HOUSE_VITALS.length !== 1819" not in src and skupaj == 433, f"04106={skupaj}")
 
 d = json.load(open(f"{ROOT}/research/issue17/parish-death-1862-04106.json", encoding="utf-8"))
 grib = [e for e in d["entries"] if "gribl" in str(e.get("vas", "")).lower() and "grem" not in str(e.get("vas", "")).lower()]
@@ -34,8 +34,8 @@ check("I4c FILAK-mreža-×3 + KUNE-h10-nit + POŽEK-h67-tail (anomalije!)",
       "filak-mreza-1862" in an and "kune-h10-nit" in an and "z54-pozek-tail-1861" in an)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1803")
-check("I5 qa-p215 + števec-1590", "qa-p215-parish-death-1862-04106" in qa and st >= 125, f"1803-številcev={st}")
+st = qa.count("HOUSE_VITALS.length !== 1819")
+check("I5 qa-p215 + števec-1590", "qa-p215-parish-death-1862-04106" in qa and st >= 125, f"1819-številcev={st}")
 
 i0 = src.find("P215: mrliška PREDZGODOVINA 04106, leto 1862")
 seg = src[i0:] if i0 >= 0 else ""
@@ -51,7 +51,7 @@ check("I8c otroška-umrljivost-33%-3/9", "otroška-umrljivost-33%-3/9" in seg)
 check("I8d h5+h61-×2 (7 hiš!)", "h5+h61-×2" in seg)
 check("I9a qa-p215 (215. kontrola!)", "qa-p215" in qa and "215. kontrola" in qa)
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-check("I9b pt-luknja-371/1590", '"vitalsTotal": 1803' in pt and '"04106": 433' in pt)
+check("I9b pt-luknja-371/1590", '"vitalsTotal": 1819' in pt and '"04106": 433' in pt)
 
 try:
     req = urllib.request.Request("https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04106/",

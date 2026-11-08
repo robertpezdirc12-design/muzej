@@ -1,0 +1,493 @@
+{
+ "phase": "P228",
+ "title": "Župnija Podzemelj — krstna knjiga 04104 (predzgodovina), polno leto 1878 = 8/15 (issue #18)",
+ "type": "parish-baptism-prehistory",
+ "status": "DOCUMENTED",
+ "issuedAt": "2026-11-09",
+ "source": {
+  "book": "04104",
+  "url": "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04104/",
+  "inventar": 200,
+  "okvir": "s92–s106 (15 skenov; s99–s106-proba-P227-LEAD!-s92–s98-probe-nazaj!-s92-MEJA!-s105-DUPLIKAT!-s106-tail-P227!)",
+  "prenos": "2×-neodvisna-md5-15/15"
+ },
+ "method": "2×-neodvisna-prenosa-md5 + VIZUALNO-arhivar-branje-×15 (API-429-override!-s92–s106!) + krop-70 (Griblje-×16 + dueli-×8 + dvojčki-×2 + todtgeboren + nezakonski-×4 + MEJA + restart + foliacija-×14 + zap-×4 + podpisi-×16 + lepljenec + vsotna!) — triangulacija-VIZUALNO+MAX-krop+sandwich-chronologija",
+ "frame": {
+  "scanFrom": 92,
+  "scanTo": 106,
+  "pagKonvencija": "gola-svinčna-'sken−5'-13/14-SEKVENČNO (87–99!-s98='93'-LEAD-'93'-NA-s98-KOREKCIJA!-s99-TEMNA-'34'-ANOMALIA-LUKNJA-'94'!) + s105-DUPLIKAT-SKEN (≡s104!-LEPLJENEC-1908!) → 'sken−6'-od-s106 = ARTEFAKT-DUPLIKATA-RAZLAGA-NAJDENA! (SKUPNA-SERIJA-87–158!)",
+  "year": 1878,
+  "rowsTotal": 94,
+  "break1877/78": "s92/s93 (TAIL-1877 + glava-'Jahr 1877'-BREZ-VSOTNE/velikih-cifer-P225-TIP! + restart-z1-[8↔9]-JÄNNER-DUEL-Boginja-vas-h14-Margareth!-mesec-PREČRTAN!)",
+  "break1878/79": "s105/s106 (P227!)"
+ },
+ "okvir": {
+  "window": "s92–s106 (15 skenov; s99–s106-proba-P227-LEAD! s92–s98-probe-nazaj! s92-MEJA! s105-DUPLIKAT! s106-tail-P227!)",
+  "prenos": "2×-neodvisna-md5-15/15 (s92–s106!)",
+  "foliacija": "gola-svinčna-'sken−5'-13/14-SEKVENČNO (s92='87'/s93='88'/s94='89'/s95='90'/s96='91'/s97='92'/s98='93'/s99-TEMNA-'34'-ANOMALIA-LUKNJA-'94'!/s100='95'/s101='96'/s102='97'/s103='98'/s104='99') + s105='99'-DUPLIKAT-SKEN (≡s104-1:1!-LEPLJENEC-1908!) → s106='100'-'sken−6'-P227-konvencija = ARTEFAKT-DUPLIKATA-s105-RAZLAGA-NAJDENA! (SKUPNA-SERIJA-87–158!)",
+  "mejaStart": "s92/s93 (TAIL-1877-Dezember-z86–z91 + glava-'Jahr 1877'-BREZ-VSOTNE/velikih-cifer-P225-TIP! + RESTART-z1-NA-DAN-[8↔9]-JÄNNER-DUEL-Geburt-'9'/Taufe-'8'-OBRNJENO-X-open!-Boginja-vas-h14-Margareth-MODRI-dolg-†6.12.1959!-mesec-'Jänner'-PREČRTAN!-8.-restart-z1!)",
+  "mejaKonec": "s105/s106 (P227!-TAIL-1878-z90–z94 + VSOTNA-RAZPETA-'1 8'+'79'='1879'-velika-letnica! + RESTART-z1-1879!)",
+  "rowsTotal": 94,
+  "aritmetika": "7+6+7+7+6+8+8+7+8+8+7+10+5 = 94 = P227-LEAD-'1878 = 94-vpisov-pričakovano'-1:1-INVARIANTA! (zap-stolpci-15/15-ČISTO-brez-duplikatov!)",
+  "meseci": "A6+Mai1+Aug1+Juli2+S3+O2+D1 = 16-Griblje (Jänner/Feber/März-×0!-3-prazne!)",
+  "duhovniki": "TROJNA-IZMENJAVA-'…binant-Kroggj[?]-coop' ↔ 'Franz-Dovgan' ↔ 'Franz-Janičar-coop' (3-podpisa!-vs-×2-1879/1880!-Kroggj-z1–z26-alternacija-z-Dovganom!-Janičar-vstopi-z35!-Griblje-split-DOVGAN-×10/JANIČAR-×3/KROGGJ-×1/PRAZNA-×1!)",
+  "stats": {
+   "griblje_vpisov": 16,
+   "griblje_his": 14,
+   "dup": "h11-×2 (z28+z29!-s97-1:1-VIZUALNO!) + h64-×2 (z46+z81!-identični-glifyi-64/69-DUEL-X-open!) — vs-h43-×2/h33-×2-ni (z23-h73!-z31-h43!-z45-h55!-z56-h53!-RAZLIČNI!)",
+   "pezdirc": "×17-vrstic-NOV-REKORD-LINJE (vs-×14-P226-×12-P227!): Griblje-×6-vrstic (z23-matec! + z45-matec! + z46-oče-Terdič-X-open+boter-Johann-DVOJNI! + z53-matec-Pezdrič! + z56-oče+matec-garble! + z81-matec+boter-Georg-DVOJNI!) + ne-Griblje-×11 (z2/z3/z4-matec-×3-ZAPOREDOMA-RESTART-stran! + z7-boter + z22/z25-oče + z44-boter + z60-boter + z70-oče + z84-boter + z89-oče!) — grafija-continuum-8-let: ×4/×4/×6/×4/×9/×14/×12/×17!",
+   "milek": "×2 (z27-oče-Griblje! + …)",
+   "simec": "×3 (z29-botra-Anna-Griblje! + z45-oče-Griblje! + z69-oče-Griblje!)",
+   "dragoš": "×3 (z29-matec-garble! + z52-botra-Jre-Dragot-X-open! + z56-botra-Anna! + z69-botra!-×4-vrstic!)",
+   "jakofčič": "×5+-vrstic (z30-botra-×2-DVOJNI! + z52-oče-garble + z64? + z81-oče! + z24-botra-Catharina + …)",
+   "klobučar": "×1-X-open (z52-botra-Cathar.-Hlobucar!)",
+   "brodarič": "×2 (z53-boter-Anton! + z56-boter-Anton!)",
+   "hure": "×1 (z64-boter-Anton!-P227-z63-oče-PARALELA!)",
+   "križan": "×2 (z44-matec-Barbara-neG! + matec-Hrižan-variants?)",
+   "dvojcki": "★★★ ×2 (z17/z18-Krasinec-h43-Febrar-28/März-1-zavit-oklepaj-bracket-P223-PARALELA! + z87/z88-Bajukh-Primostek/Gerag[?]-h12-December-17/17-squiggle-mark-+Agnes-Bajukh-PREČRTANA-v-botrah!-vas-popravki!) — vs-×3-P227-REKORD",
+   "todtgeboren": "★★★ z28-GRIBLJE-TODTGEBOREN (garble-'Nrbžgabumšt'≈'nichtlebendgeburt'/'Notgeburt'-X-open!-MAX-krop!-botra+duhovnik-VSI-PRAZNI!-1.-v-GRIBLJI!-P227-×3-PARALELA!)",
+   "nezakonski": "★★★ ×5-REKORD-LINJE (očetov-stolpec-PRAZEN!): z9-Dobravce-h13 (Jänner-25/26!-Dovgan!) + z13?-Gradaz-h68 (Februar-2/3!) + z36?-Krasine-h23 (Mai-21!) + z63?-Krasine-h9 (Sept-22!) + z65-GRIBLJE-h6 (October-3/3!-P227-z23-PARALELA!) — X-open-za-z13/z36/z63 (MAX-krop!)",
+   "modri": "★★★ ×12+-REKORD-LINJE (MODRI-pripisi!): z1-dolg-'†6.12.1959-Pančiči[?]-MMK-1959'! + z2-dolg-'†29.12.1960-Gradac[?]-MMK-1960-kop.19/9-908'! + z11-'†9.9.1978'! + z20-'†30.8.1949'! + z22-'†30.IV.1948-godine-pri-Begunjah'! + z31-GRIBLJE-'†18.6.1955-št-43'-MATCH! + z37-'†10.7.1963-Gradac-št-38'! + z38-'†10.7.1967-Auflišši-Matica-Preg-št-43'! + z39-'†27.8.1961'! + z42-'†1.8.1955-št-31/34'! + z51-'†18.3.1959-Gribljah-št-18'-MATCH-h18! + z83-'†21.4.1954-št-66'! — 1948–1978-razpon!-×2-MATCH-hišam (z31-h43!-z52-h18!)",
+   "cnilo_pripisi": "★★★ ČRNILO-pripisi-×4-Griblje (ročno-črnilo!): z23-'por. 18/11 1920-† 12.5.1939'! + z64-'poročen-27/9-974[?]-dolg'! + z65-'um-16-Novr-880[?]'! + z69-'† 31.10.1931-Anwaru[?]-Reading[?]'! + ne-G: z51-'†17.6.1935'! + z82-'am-16-Jänr-879[?]'! + z58-'†27.4.1966'! + z60-'†8.3.1972-+✠-margina'! + z75-'✠-4/y-1884'! + z72-'†-9/1-878[?]'! + z86-'†-5.4.1935'! + z91-'†-3.1.1932'-P227-TAIL! + z93-'+8/879'-P227-TAIL!",
+   "popravki": "★★★ POPRAVKI-×5: z87-VAS-POPRAVEK ('Nicolaus'-✗✗-DOVEMA-KRIŽEMA→'Primostek'!-pisarjev-slip-otrokovo-ime-v-vas-stolpcu!) + z88-vas-'Gerag[?]'-X-open (✗-v-sredini!) + z46-DATUMSKA-KOREKCIJA ('Juni-30'-prečrtan→'Juli-1'!) + z1-MESEC-PREČRTAN ('Jänner'-ponovljen-čez-prečrtano!) + z4-OČE-POPRAVEK ('Georg-gm[?]fič'-PREČRTAN→'Nicolaus-Uhr'!)",
+   "posebne": "z1-RESTART-DATUMSKI-DUEL (Geburt-'9'/Taufe-'8'-OBRNJENI-glifyi-X-open!-P227-8./9.-PARALELA!) + s105-LEPLJENEC-1908 (Danijel-Barle-rojen-19/1-1879-v-Podzemlju-+Marijo-Župan-15/5-1908-poročen-Župni-urad-Svinče[?]-25/5-1908-OVALNI-PEČAT-+podpis-'Ant.-Peterlin[?]'!-lepljen-ČEZ-z82–z85!) + HEBAMME-Maria-Rom/Born-×8 (z10/z19/z34/z35/z37/z40/z68/z72!-continuum!) + rojen≠krsten-Griblje-×5 (z24-4/5! + z30-28/29! + z46-30/1! + z56-19/20! + z64-28/29!) + ✠-veliki-križ-margina (z60!) + zap-r1-'34-42'-STRAY-s99 (temna-'34'+svetla-'42'!)"
+  }
+ },
+ "entries": [
+  {
+   "z": "z23",
+   "sken": 96,
+   "pag": "91 [konv.-sken−5]",
+   "mesec": "April",
+   "rojen": "4",
+   "krsten": "4",
+   "vas": "Griblje",
+   "hisna": "73",
+   "otrok": "Georg",
+   "spol": "moški",
+   "ocec": "Nicolaus Županič[?]-garble, ½ Gübl",
+   "matec": "Cathar. z.b. Pezdire [~PEZDIRC!]",
+   "botra": "Nicolaus Starasinič + Margareth Županič",
+   "_opomba": "★★★ PEZDIRC-matec-nit (1/6-Griblje!-continuum-8-let!) + ★★★ črnilo-pripis-'por. 18/11 1920 v Kuniva[?]-† 12.5.1939' (ročno-črnilo!) + podpis-Franz-DOVGAN + h73 (z31-h43-RAZLIČNI-Kurrent-7/4!)"
+  },
+  {
+   "z": "z24",
+   "sken": 96,
+   "pag": "91 [konv.-sken−5]",
+   "mesec": "April",
+   "rojen": "4",
+   "krsten": "5",
+   "vas": "Griblje",
+   "hisna": "19",
+   "otrok": "Anton",
+   "spol": "moški",
+   "ocec": "Johann Hriže[?]-garble, ½ güblo[?]",
+   "matec": "Maria Sodec",
+   "botra": "Peter Klebec + Catharina Jakofeč",
+   "_opomba": "★★★ podpis-TRETJI-DUHOVNIK-'…binant-Kroggj[?]-coop'-garble (1/16-Griblje!-trojna-izmenjava!) + rojen≠krsten-4/5 + h19"
+  },
+  {
+   "z": "z27",
+   "sken": 96,
+   "pag": "91 [konv.-sken−5]",
+   "mesec": "April",
+   "rojen": "25",
+   "krsten": "25",
+   "vas": "Griblje",
+   "hisna": "29",
+   "otrok": "Johann",
+   "spol": "moški",
+   "ocec": "Peter Milek [~MILEK!], ¼ Ġ.",
+   "matec": "Anna j. Hrižan",
+   "botra": "Johann Pajk[?]-garble + Barbava Adlesič[?]-garble",
+   "_opomba": "★★★ MILEK-oče-nit (1/2-1878!) + podpis-Franz-DOVGAN + h29"
+  },
+  {
+   "z": "z28",
+   "sken": 97,
+   "pag": "92 [konv.-sken−5]",
+   "mesec": "April",
+   "rojen": "25",
+   "krsten": "25",
+   "vas": "Griblje",
+   "hisna": "11",
+   "otrok": "IME-GARBLE-'Nrbžgabumšt'[?] ≈ 'nichtlebendgeburt'[?]-X-open",
+   "spol": "X-open",
+   "ocec": "Mathias Drmelič[?]-garble, ¼ Ġ.",
+   "matec": "Agnes z.b. Hlobuvar[?]-garble",
+   "botra": "BOTRA-PRAZNA [—!]",
+   "_opomba": "★★★ TODTGEBOREN-GRIBLJE (garble-'Nrbžgabumšt'≈'nichtlebendgeburt'/'Notgeburt'-X-open!-P227-todtgeboren-×3-PARALELA!-1.-v-GRIBLJI!) + botra+duhovnik-VSI-PRAZNI! + h11 (z29-×2!) + MAX-krop-potrjeno"
+  },
+  {
+   "z": "z29",
+   "sken": 97,
+   "pag": "92 [konv.-sken−5]",
+   "mesec": "April",
+   "rojen": "26",
+   "krsten": "26",
+   "vas": "Griblje",
+   "hisna": "11 [DUEL-×2-JASNO!]",
+   "otrok": "Joannes",
+   "spol": "moški",
+   "ocec": "Mathias Lunič[?]-Tumie[?]-garble, ½ Gübl",
+   "matec": "Barbara z.b. Dragos [~DRAGOŠ!]",
+   "botra": "Mathias Jakofeč + Anna Simec [~SIMEC!]",
+   "_opomba": "★★★ DRAGOŠ-matec-nit (1/3!) + SIMEC-botra-nit (1/2!) + h11-×2 (z28!-DUEL-REŠEN-1:1-VIZUALNO!) + podpis-Franz-DOVGAN"
+  },
+  {
+   "z": "z30",
+   "sken": 97,
+   "pag": "92 [konv.-sken−5]",
+   "mesec": "April",
+   "rojen": "28",
+   "krsten": "29",
+   "vas": "Griblje",
+   "hisna": "1",
+   "otrok": "Anna",
+   "spol": "ženski",
+   "ocec": "Nicolaus Beltho[?]-garble, ¼ Gübl",
+   "matec": "Anna z.b. Jakofeč",
+   "botra": "Johann Jakofeč + Agnes Jakofeč [~JAKOFČIČ-×2-vrstica!]",
+   "_opomba": "★★★ JAKOFČIČ-DVOJNI-botra-nit (×2-v-vrstici!) + rojen≠krsten-28/29 + podpis-Franz-DOVGAN + h1"
+  },
+  {
+   "z": "z31",
+   "sken": 97,
+   "pag": "92 [konv.-sken−5]",
+   "mesec": "Mai",
+   "rojen": "1",
+   "krsten": "1",
+   "vas": "Griblje",
+   "hisna": "43",
+   "otrok": "Maria",
+   "spol": "ženski",
+   "ocec": "Johann Vludži[?]-garble, ½ gübl",
+   "matec": "Maria z.b. Brula[?]-garble",
+   "botra": "Marcus Skala[?]-garble + Catharina Hlobučič[?]-garble",
+   "_opomba": "★★★ MODRI-MATIČARSKI-PRIPIS-'umrla dne 18.6.1955 v gvi števil 43'-MATCH-h43! + h43 (z23-h73-RAZLIČNI!) + Mai-blok-start + podpis-Franz-DOVGAN"
+  },
+  {
+   "z": "z45",
+   "sken": 99,
+   "pag": "94 [konv.-sken−5]",
+   "mesec": "Juli",
+   "rojen": "9",
+   "krsten": "9",
+   "vas": "Griblje",
+   "hisna": "55",
+   "otrok": "Nicolaus",
+   "spol": "moški",
+   "ocec": "Nicolaus Simec [~SIMEC!], ¼ Gübler",
+   "matec": "Maria Pezdire [~PEZDIRC!]",
+   "botra": "Marko Kraus[?]-garble + Ana Kukar[?]-garble",
+   "_opomba": "★★★ SIMEC-oče-nit (2/2-KOMPLET!) + ★★★ PEZDIRC-matec-nit (2/6!) + podpis-Franz-JANIČAR-coop (1/3-Griblje!) + h55 (z56-h53-RAZLIČNI!) + Juli-blok"
+  },
+  {
+   "z": "z46",
+   "sken": 99,
+   "pag": "94 [konv.-sken−5]",
+   "mesec": "Juli",
+   "rojen": "30-x [Juni-30-PREČRTAN!→Juli-1]",
+   "krsten": "1",
+   "vas": "Griblje",
+   "hisna": "64 [DUEL-64/69-X-open-identični-glifyi-z81!]",
+   "otrok": "Margarebh",
+   "spol": "ženski",
+   "ocec": "Nicolaus Terdič[?]-Perdič[?]-garble [~PEZDIRC-grafija-X-open!], ¼ Ġ.",
+   "matec": "Karth. z.b. Adlesič[?]-garble",
+   "botra": "Johann Pezdire [~PEZDIRC!] + Katharina Krambič[?]-garble",
+   "_opomba": "★★★ PEZDIRC-DVOJNI-vrstica (oče-X-open + boter!-2/6!) + ★★★ DATUMSKA-KOREKCIJA ('Juni 30'-prečrtan → 'Juli 1'!-Z49-P226-PARALELA!) + h64-×2-DUEL (z81-identični-glifyi!-64/69-X-open!) + podpis-Franz-DOVGAN"
+  },
+  {
+   "z": "z52",
+   "sken": 100,
+   "pag": "95 [konv.-sken−5]",
+   "mesec": "September",
+   "rojen": "9",
+   "krsten": "9",
+   "vas": "Griblje",
+   "hisna": "18 [celica-'8'-+'1'-slabo-MODRI-'št-18'-NAMIG!]",
+   "otrok": "Catharina",
+   "spol": "ženski",
+   "ocec": "Johann Jakofeč[?]-Šovar[?]-garble",
+   "matec": "Maria Uhr",
+   "botra": "Jre Dragot[?] [~DRAGOŠ-X-open!] + Cathar. Hlobucar[?] [~KLOBUČAR-X-open!]",
+   "_opomba": "★★★ MODRI-MATIČARSKI-PRIPIS-'Umrila dne 18.3.1959 v Gribljah št 18 (MMK gradec l. 1959, št 115 (kop. št 7)'!-MATCH-h18! + DRAGOŠ-boter-X-open (2/3!) + KLOBUČAR-boter-X-open + podpis-Franz-JANIČAR-coop (2/3!) + September-blok"
+  },
+  {
+   "z": "z53",
+   "sken": 100,
+   "pag": "95 [konv.-sken−5]",
+   "mesec": "September",
+   "rojen": "11",
+   "krsten": "11",
+   "vas": "Griblje",
+   "hisna": "48",
+   "otrok": "Anna",
+   "spol": "ženski",
+   "ocec": "Johann Hlobunür[?]-garble, ¼ Ġ.",
+   "matec": "Barbara z.b. Pezdrič [~PEZDIRC!]",
+   "botra": "Anton Brodarič [~BRODARIČ!] + Agnes Smucel[?]-garble",
+   "_opomba": "★★★ PEZDIRC-matec-nit (3/6!) + BRODARIČ-boter-nit (1/3!) + podpis-Franz-DOVGAN + h48"
+  },
+  {
+   "z": "z56",
+   "sken": 100,
+   "pag": "95 [konv.-sken−5]",
+   "mesec": "August",
+   "rojen": "19",
+   "krsten": "20",
+   "vas": "Griblje",
+   "hisna": "53",
+   "otrok": "Petrus",
+   "spol": "moški",
+   "ocec": "Johann Pezdire [~PEZDIRC!], ½ gübl",
+   "matec": "Anna z.b. Terdič[?]-Perdič[?]-garble [~PEZDIRC-grafija-X-open!]",
+   "botra": "Anton Brodarič [~BRODARIČ!] + Anna Dragos [~DRAGOŠ!]",
+   "_opomba": "★★★ PEZDIRC-matec-garble-X-open (oče+matec!-4/6!) + BRODARIČ-boter (2/3!) + DRAGOŠ-boter (3/3-KOMPLET!) + rojen≠krsten-19/20 + podpis-Franz-DOVGAN + h53 (z45-h55-RAZLIČNI!) + August-blok"
+  },
+  {
+   "z": "z64",
+   "sken": 101,
+   "pag": "96 [konv.-sken−5]",
+   "mesec": "September",
+   "rojen": "28",
+   "krsten": "29",
+   "vas": "Griblje",
+   "hisna": "77",
+   "otrok": "Michail",
+   "spol": "moški",
+   "ocec": "Johann Tuttler[?]-garble, Göntlon[?]-garble",
+   "matec": "Kath. z.b. Hrižan",
+   "botra": "Anton Hure [~HURE!] + Margareth Tuttler[?]-garble",
+   "_opomba": "★★★ HURE-boter-nit (1/1!-P227-z63-oče-PARALELA!) + ★★★ črnilo-pripis-dolg-'poročen 27/9 974[?] v Mamorških vas[?] N.N. 17.3.972[?]'-garble + rojen≠krsten-28/29 + podpis-Franz-DOVGAN + h77"
+  },
+  {
+   "z": "z65",
+   "sken": 102,
+   "pag": "97 [konv.-sken−5]",
+   "mesec": "October",
+   "rojen": "3",
+   "krsten": "3",
+   "vas": "Griblje",
+   "hisna": "6",
+   "otrok": "Johann",
+   "spol": "moški",
+   "ocec": "OČETOV-STOLPEC-PRAZEN [NEZAKONSKI!]",
+   "matec": "Maria Jakofeč[?], Lnišfhnurgi[?]-garble",
+   "botra": "Mathias Murla[?]-Merla[?]-garble + Catharina Piglher[?]-garble",
+   "_opomba": "★★★ NEZAKONSKI-GRIBLJE (očetov-stolpec-PRAZEN!-P227-z23-PARALELA!-×5-linije!) + ★★★ črnilo-pripis-'um 16 Novr 880[?]-gestorben[?]'-X-open + podpis-Franz-DOVGAN + h6 + Oktobar-blok"
+  },
+  {
+   "z": "z69",
+   "sken": 102,
+   "pag": "97 [konv.-sken−5]",
+   "mesec": "October",
+   "rojen": "23",
+   "krsten": "23",
+   "vas": "Griblje",
+   "hisna": "38",
+   "otrok": "Johann",
+   "spol": "moški",
+   "ocec": "Georg Simec [~SIMEC!], Göntlon[?]-garble",
+   "matec": "Anna z.b. Hrižan",
+   "botra": "Gotlob Tokar[?]-garble + Anna Dragos [~DRAGOŠ!]",
+   "_opomba": "★★★ SIMEC-oče-nit (2/2!) + DRAGOŠ-botra-KOMPLET (3/3!) + ★★★ črnilo-pripis-'† 31.10.1931 v Anwaru[?]-naslednju v Reading[?]' + podpis-Franz-DOVGAN + h38"
+  },
+  {
+   "z": "z81",
+   "sken": 104,
+   "pag": "99 [konv.-sken−5]",
+   "mesec": "December",
+   "rojen": "2",
+   "krsten": "2",
+   "vas": "Griblje",
+   "hisna": "64 [DUEL-64/69-X-open-identični-glifyi-z46!]",
+   "otrok": "Barbara",
+   "spol": "ženski",
+   "ocec": "Mathias Jakofeč [~JAKOFČIČ!]",
+   "matec": "Maria Pezdire [~PEZDIRC!]",
+   "botra": "Georg Pezdire [~PEZDIRC!] + Kath. Novak",
+   "_opomba": "★★★ PEZDIRC-DVOJNI-vrstica (matec+boter!-5/6!-JAKOFČIČ-oče!) + h64-×2-DUEL (z46-identični-glifyi!-64/69-X-open!) + podpis-Franz-JANIČAR-coop (3/3!) + Dezember-blok + s105-DUPLIKAT-SKEN-istega-lista!"
+  }
+ ],
+ "stats": {
+  "griblje_vpisov": 16,
+  "griblje_his": 14,
+  "dup": "h11-×2 (z28+z29!-s97-1:1-VIZUALNO!) + h64-×2 (z46+z81!-identični-glifyi-64/69-DUEL-X-open!) — vs-h43-×2/h33-×2-ni (z23-h73!-z31-h43!-z45-h55!-z56-h53!-RAZLIČNI!)",
+  "pezdirc": "×17-vrstic-NOV-REKORD-LINJE (vs-×14-P226-×12-P227!): Griblje-×6-vrstic (z23-matec! + z45-matec! + z46-oče-Terdič-X-open+boter-Johann-DVOJNI! + z53-matec-Pezdrič! + z56-oče+matec-garble! + z81-matec+boter-Georg-DVOJNI!) + ne-Griblje-×11 (z2/z3/z4-matec-×3-ZAPOREDOMA-RESTART-stran! + z7-boter + z22/z25-oče + z44-boter + z60-boter + z70-oče + z84-boter + z89-oče!) — grafija-continuum-8-let: ×4/×4/×6/×4/×9/×14/×12/×17!",
+  "milek": "×2 (z27-oče-Griblje! + …)",
+  "simec": "×3 (z29-botra-Anna-Griblje! + z45-oče-Griblje! + z69-oče-Griblje!)",
+  "dragoš": "×3 (z29-matec-garble! + z52-botra-Jre-Dragot-X-open! + z56-botra-Anna! + z69-botra!-×4-vrstic!)",
+  "jakofčič": "×5+-vrstic (z30-botra-×2-DVOJNI! + z52-oče-garble + z64? + z81-oče! + z24-botra-Catharina + …)",
+  "klobučar": "×1-X-open (z52-botra-Cathar.-Hlobucar!)",
+  "brodarič": "×2 (z53-boter-Anton! + z56-boter-Anton!)",
+  "hure": "×1 (z64-boter-Anton!-P227-z63-oče-PARALELA!)",
+  "križan": "×2 (z44-matec-Barbara-neG! + matec-Hrižan-variants?)",
+  "dvojcki": "★★★ ×2 (z17/z18-Krasinec-h43-Febrar-28/März-1-zavit-oklepaj-bracket-P223-PARALELA! + z87/z88-Bajukh-Primostek/Gerag[?]-h12-December-17/17-squiggle-mark-+Agnes-Bajukh-PREČRTANA-v-botrah!-vas-popravki!) — vs-×3-P227-REKORD",
+  "todtgeboren": "★★★ z28-GRIBLJE-TODTGEBOREN (garble-'Nrbžgabumšt'≈'nichtlebendgeburt'/'Notgeburt'-X-open!-MAX-krop!-botra+duhovnik-VSI-PRAZNI!-1.-v-GRIBLJI!-P227-×3-PARALELA!)",
+  "nezakonski": "★★★ ×5-REKORD-LINJE (očetov-stolpec-PRAZEN!): z9-Dobravce-h13 (Jänner-25/26!-Dovgan!) + z13?-Gradaz-h68 (Februar-2/3!) + z36?-Krasine-h23 (Mai-21!) + z63?-Krasine-h9 (Sept-22!) + z65-GRIBLJE-h6 (October-3/3!-P227-z23-PARALELA!) — X-open-za-z13/z36/z63 (MAX-krop!)",
+  "modri": "★★★ ×12+-REKORD-LINJE (MODRI-pripisi!): z1-dolg-'†6.12.1959-Pančiči[?]-MMK-1959'! + z2-dolg-'†29.12.1960-Gradac[?]-MMK-1960-kop.19/9-908'! + z11-'†9.9.1978'! + z20-'†30.8.1949'! + z22-'†30.IV.1948-godine-pri-Begunjah'! + z31-GRIBLJE-'†18.6.1955-št-43'-MATCH! + z37-'†10.7.1963-Gradac-št-38'! + z38-'†10.7.1967-Auflišši-Matica-Preg-št-43'! + z39-'†27.8.1961'! + z42-'†1.8.1955-št-31/34'! + z51-'†18.3.1959-Gribljah-št-18'-MATCH-h18! + z83-'†21.4.1954-št-66'! — 1948–1978-razpon!-×2-MATCH-hišam (z31-h43!-z52-h18!)",
+  "cnilo_pripisi": "★★★ ČRNILO-pripisi-×4-Griblje (ročno-črnilo!): z23-'por. 18/11 1920-† 12.5.1939'! + z64-'poročen-27/9-974[?]-dolg'! + z65-'um-16-Novr-880[?]'! + z69-'† 31.10.1931-Anwaru[?]-Reading[?]'! + ne-G: z51-'†17.6.1935'! + z82-'am-16-Jänr-879[?]'! + z58-'†27.4.1966'! + z60-'†8.3.1972-+✠-margina'! + z75-'✠-4/y-1884'! + z72-'†-9/1-878[?]'! + z86-'†-5.4.1935'! + z91-'†-3.1.1932'-P227-TAIL! + z93-'+8/879'-P227-TAIL!",
+  "popravki": "★★★ POPRAVKI-×5: z87-VAS-POPRAVEK ('Nicolaus'-✗✗-DOVEMA-KRIŽEMA→'Primostek'!-pisarjev-slip-otrokovo-ime-v-vas-stolpcu!) + z88-vas-'Gerag[?]'-X-open (✗-v-sredini!) + z46-DATUMSKA-KOREKCIJA ('Juni-30'-prečrtan→'Juli-1'!) + z1-MESEC-PREČRTAN ('Jänner'-ponovljen-čez-prečrtano!) + z4-OČE-POPRAVEK ('Georg-gm[?]fič'-PREČRTAN→'Nicolaus-Uhr'!)",
+  "posebne": "z1-RESTART-DATUMSKI-DUEL (Geburt-'9'/Taufe-'8'-OBRNJENI-glifyi-X-open!-P227-8./9.-PARALELA!) + s105-LEPLJENEC-1908 (Danijel-Barle-rojen-19/1-1879-v-Podzemlju-+Marijo-Župan-15/5-1908-poročen-Župni-urad-Svinče[?]-25/5-1908-OVALNI-PEČAT-+podpis-'Ant.-Peterlin[?]'!-lepljen-ČEZ-z82–z85!) + HEBAMME-Maria-Rom/Born-×8 (z10/z19/z34/z35/z37/z40/z68/z72!-continuum!) + rojen≠krsten-Griblje-×5 (z24-4/5! + z30-28/29! + z46-30/1! + z56-19/20! + z64-28/29!) + ✠-veliki-križ-margina (z60!) + zap-r1-'34-42'-STRAY-s99 (temna-'34'+svetla-'42'!)",
+  "griblje_16": "16-GRIBLJE / 14-hiš (h11-×2 + h64-×2-identični-glifyi-64/69-DUEL!) — + PEZDIRC-×17-REKORD (2-DVOJNI!-continuum-8-let!) + TROJNA-IZMENJAVA (3-PODPISA!) + TODTGEBOREN-GRIBLJE-z28 + NEZAKONSKI-×5 + DVOJČKI-×2 + MODRI-×12 (×2-MATCH!) + POPRAVKI-×5 + LEPLJENEC-1908!"
+ },
+ "anomalije": [
+  {
+   "id": "meja-1877-78-s92-s93",
+   "opis": "★★★ MEJA-1877/78 = s92/s93 (67.-POTRDITEV-invariante, 66.-P227!): s92 = TAIL-1877 (Dezember-11–30-×6: z86-Gradaz + z87-Krasine-†6.4.1945-črnilo! + z88-Zemelj + z89-GRIBLJE-h33! + z90/z91-Gradac) + glava-'Jahr 1877'-BREZ-VSOTNE/velikih-cifer (P225-TIP!) + RESTART-z1-NA-DAN-[8↔9]-JÄNNER-DUEL (Geburt-'9'/Taufe-'8'-OBRNJENI-glifyi-X-open!-P227-8./9.-PARALELA!)-Boginja-vas-h14-Margareth-MODRI-dolg-'†6.12.1959-Pančiči[?]-MMK-1959'-mesec-'Jänner'-PREČRTAN!-8.-restart-z1-NAJPONEJŠI-SE-ZLOMIL (P221-1.1!-P222-1.1!-P223-4.1!-P224-2.1!-P225-1.1!-P226-3.1!-P227-8./9.!-P228-[8↔9]-DUEL!)"
+  },
+  {
+   "id": "foliacija-sken-5-duplikat-razlaga",
+   "opis": "★★★ FOLIACIJA-'sken−5'-13/14-SEKVENČNO (87–99!) + s105-DUPLIKAT-SKEN (≡s104-1:1!-isti-list-z80–z89!-oba-'99'!-LEPLJENEC-1908-NA-s105!) → s106='100'-'sken−6'-P227/P226-konvencija = ARTEFAKT-DUPLIKATA-s105-RAZLAGA-NAJDENA! (SKUPNA-SERIJA-87–158!) — LEAD-korekcija: napovedana-s99='93'-JE-NA-s98 ('sken−5'-ne-'sken−6'!-v-starem-oknu!)"
+  },
+  {
+   "id": "s99-temna-34-anomalija",
+   "opis": "★★★ s99-FOLIACIJA-ANOMALIA: TEMNA-'34'-cifra (drugačna-pisava/črnilo!-10×-mega-krop!-vs-svetlomodra-serija!) — pričakovana-'94'-po-kontinuiteti (87–93-na-s92–s98 + 95–99-na-s100–s104!) → LUKNJA-'94'-NA-s99!-X-open-'34'-ali-'94'-stara-foliacija? + zap-r1-MARGINA-'34-42'-STRAY-par (temna-'34'+svetla-'42'-na-isti-vrstici!)"
+  },
+  {
+   "id": "s105-lepljenec-1908",
+   "opis": "★★★ s105-LEPLJENEC-DOKUMENT-1908: papirnata-priloga-lepljena-ČEZ-z82–z85 ('Št. 1257[?]-Danijel-Barle-rojen-19/1-1879-v-Podzemlju-oče-z-Marijo-Župan-tukaj-15/5-1908-poročen-Župni-urad-v-Svinčah[?]-pri-N.M.-25/5-1908'-+OVALNI-PEČAT!-+podpis-'Ant.-Peterlin[?]') — s104 = isti-list-BREZ-lepljenca (duplikat-sken-pred-lepljenjem!) — 1908-datum-na-lepljencu = terminus-post-quem-za-skeniranje!"
+  },
+  {
+   "id": "vrstna-aritmetika-94",
+   "opis": "★★★ 94-VPIISOV-DISTINCT — ŠTEVJE-IZ-VRSTIC-8.× (z1–z94; vrstna-aritmetika 7+6+7+7+6+8+8+7+8+8+7+10+5 = 94 = P227-LEAD-'1878 = 94-vpisov-pričakovano'-1:1-INVARIANTA! — zap-stolpci-15/15-ČISTO!-s104-×10-REKORD-stran!)"
+  },
+  {
+   "id": "duhovniska-trojna-izmenjava",
+   "opis": "★★★ DUHOVNIŠKA-TROJNA-IZMENJAVA-1878-'…binant-Kroggj[?]-coop'-garble ↔ 'Franz-Dovgan' ↔ 'Franz-Janičar-coop'-3-PODPISA-REKORD-LINJE (vs-×2-1879/1880!): Kroggj-z1–z26-alternacija-z-Dovganom (z1–z3/z5–z7-Kroggj + z4/z9/z15/z19/z21/z23/z25/z27-Dovgan!) + Janičar-vstopi-okoli-z35 (z35–z39-×5-ZAPOREDOMA!) + Dovgan/Janičar-alternacija-do-konca — Griblje-split: DOVGAN-×10/JANIČAR-×3 (z45/z52/z81!)/KROGGJ-×1 (z24!)/PRAZNA-×1 (z28!)"
+  },
+  {
+   "id": "z28-todtgeboren-griblje",
+   "opis": "★★★ z28-TODTGEBOREN-GRIBLJE-1.-v-GRIBLJI (P227-todtgeboren-×3-PARALELA!): April-25/25-garble-ime-'Nrbžgabumšt'[?] ≈ 'nichtlebendgeburt'/'Notgeburt'-X-open (MAX-krop-10×!-gaburt=geburt!) + oče-Mathias-Drmelič[?]-¼-Ġ + matec-Agnes-z.b.-Hlobuvar[?] + botra-PRAZNA [—!] + duhovnik-PRAZEN [—!] — h11 (z29-×2!)"
+  },
+  {
+   "id": "nezakonski-x5",
+   "opis": "★★★ NEZAKONSKI-×5-REKORD-LINJE (očetov-stolpec-PRAZEN!-vs-×7-P226!-×2-P227!): z9-Dobravce-h13 (Jänner-25/26!-Dovgan!) + z13-Gradaz-h68 (Februar-2/3!-X-open) + z36-Krasine-h23 (Mai-21!-X-open) + z63-Krasine-h9 (Sept-22!-X-open) + z65-GRIBLJE-h6 (October-3/3!-matec-Maria-Jakofeč-garble!-P227-z23-PARALELA!)"
+  },
+  {
+   "id": "dvojcki-x2",
+   "opis": "★★★ DVOJČKI-×2 (vs-×3-P227-REKORD): z17/z18-Krasinec-h43 (Febrar-28/März-1-Johann+Barbara-zavit-oklepaj-bracket-{!-isti-starši-Peter-Jakofeič+Catharina-Brodarič!-P223-GRIBLJE-h68-P226-Boršt-h20-P227-×3-PARALELA!) + z87/z88-Bajukh (December-17/17-Nicolaus+Georg-h12-isti-starši-Johann-Bajukh+Maria-Hrižan!-squiggle-mark-med-imeni!-+Agnes-Bajukh-PREČRTANA-v-z87-botrah!-vas-popravki-Nicolaus-✗✗→Primostek!-Gerag[?]-X-open!)"
+  },
+  {
+   "id": "modri-x12-match",
+   "opis": "★★★ MODRI-MATIČARSKI-PRIPISI-×12+-REKORD-LINJE (1948–1978!-vs-×12-P227!)-×2-MATCH-HIŠAM: z31-'umrla-dne-18.6.1955-v-gvi-števil-43'-MATCH-h43! + z52-'Umrila-dne-18.3.1959-v-Gribljah-št-18-(MMK-gradec-l.-1959-št-115-kop.-št-7)'-MATCH-h18! + z1-dolg-'†6.12.1959-v-Pančiči[?]-MMK-Pančiči-l-1959-št-46-št-4'! + z2-dolg-'†29.12.1960-v-Gradac[?]-št-12-MMK-1960-kop-19/9-908'! + z11-'†9.9.1978'! + z20-'†30.8.1949'! + z22-'†30.IV.1948-godine-pri-Begunjah'! + z37-'†10.7.1963-Gradac-št-38'! + z38-'†10.7.1967-Auflišši-Matica-Preg-št-43'! + z39-'†27.8.1961'! + z42-'†1.8.1955-št-31/34'! + z83-'†21.4.1954-št-66'!"
+  },
+  {
+   "id": "popravki-x5",
+   "opis": "★★★ POPRAVKI-×5-REKORD-STRAN-s104/s93: z87-VAS-POPRAVEK ('Nicolaus'-✗✗-DOVEMA-KRIŽEMA→'Primostek'!-pisarjev-slip-otrokovo-ime-v-vas-stolpec!-MAX-krop!) + z88-vas-'Gerag[?]'-X-open (✗-v-sredini-celice!) + z46-DATUMSKA-KOREKCIJA ('Juni-30'-PREČRTAN→'Juli-1'!-Z49-'zuzschreiben'-P226-PARALELA!) + z1-MESEC-PREČRTAN ('Jänner'-ponovljen-čez-prečrtano!) + z4-OČE-POPRAVEK ('Georg-gm[?]fič'-PREČRTAN→'Nicolaus-Uhr'-½-Ġ!-P227-z32-IMENSKI-PARALELA!) + z1-RESTART-DATUMSKI-DUEL (Geburt-'9'/Taufe-'8'-OBRNJENI-glifyi-X-open!)"
+  },
+  {
+   "id": "cnilo-pripisi-x4-griblje",
+   "opis": "★★★ ČRNILO-pripisi-×4-Griblje (ročno-črnilo!-P227-z95-'†15.6.1941'-PARALELA!): z23-'por.-18/11-1920-v-Kuniva[?]-†-12.5.1939'! + z64-dolg-'poročen-27/9-974[?]-v-Mamorških-vas[?]-N.N.-17.3.972[?]-N.N.-Lobinije[?]'! + z65-'um-16-Novr-880[?]-gestorben[?]-X-open'! + z69-'†-31.10.1931-v-Anwaru[?]-naslednju-v-Reading[?]'! + ne-Griblje-×7 (z51-'†17.6.1935'! + z82-'am-16-Jänr-879[?]-Cholernborn[?]'! + z58-'†27.4.1966'! + z60-'†8.3.1972'-+✠-veliki-križ-margina! + z75-'✠-4/y-1884'! + z72-'†9/1-878[?]'! + z86-'†5.4.1935'!)"
+  },
+  {
+   "id": "s106-vsotna-razpeta-1879",
+   "opis": "★★★ s106-VELIKA-LETNICA-'1879'-RAZPETA (P227-POTRJENA-VIZUALNO!): velike-cifre-'1'-(krsten-stolpec)-'8'-(ime-stolpec)-na-LEVI-strani + '79'-(na-desni-strani-spreada!) = '1 8 7 9' — RAZPETA-ČEZ-SPREAD! (P228-mega-krop-1:1!-VSOTNA-'1878'-NE-OBSTAJA-big-digits-samo-za-1879/1880!-1877/78-BREZ!)"
+  },
+  {
+   "id": "hebamme-maria-rom-x8",
+   "opis": "HEBAMME-'Maria-Rom/Born'-×8-continuum (vs-×4-P227!): z10 (s94!) + z19 (s95!) + z34 + z35 + z37 + z40 (s98-×4!) + z68 + z72 (s102!) — 'Die-beistehende-Hebamme'-vzorec-continuum-8-let!"
+  },
+  {
+   "id": "glave-jahr-1877-1878",
+   "opis": "GLAVE: 'Jahr 1877'-s92 (ZADNJA-1877-stran!) + 'Jahr 1878'-s93–s106 (14×-continuum!-tudi-s106-ČEPRV-1879-zacne-na-njej!-P227-'s-popravo'-(8-čez-X-open)-potrjeno!) — glava-box = leto-SPREMLJajoče-vsebino!"
+  }
+ ],
+ "crossLinks": [
+  {
+   "id": "x-pezdirc-continuum-8-let",
+   "opis": "PEZDIRC-grafija-continuum-8-let (P221-×4/P222-×4/P223-×6/P224-×4/P225-×9/P226-×14/P227-×12/P228-×17-REKORD!): Griblje-×6-vrstic (z23-matec-Cathar-z.b.-Pezdire! + z45-matec-Maria-Pezdire! + z46-oče-Nicolaus-Terdič-X-open-+boter-Johann-Pezdire-DVOJNI! + z53-matec-Barbara-z.b.-Pezdrič! + z56-oče-Johann-Pezdire-+matec-Anna-z.b.-Terdič-garble! + z81-matec-Maria-Pezdire-+boter-Georg-Pezdire-DVOJNI!) + ne-Griblje-×11 (z2/z3/z4-matec-×3-ZAPOREDOMA-NA-RESTART-STRANI!-Jänner-10/16/20! + z7-boter-Anton-Pezdive! + z22-oče-Michael-Pezdire! + z25-oče-Georg-Pezdire! + z44-boter-Maria-Pezdire! + z60-boter-Mathias-Pezdive! + z70-oče-Georg-Pezdire! + z84-boter-Michael-Pezdire! + z89-oče-Michael-Pezdire!)"
+  },
+  {
+   "id": "x-simec-dragos-komplet",
+   "opis": "SIMEC-×3-v-Griblje (z29-botra-Anna! + z45-oče-Nicolaus! + z69-oče-Georg!) — KOMPLET-nit + DRAGOŠ-×4 (z29-matec-Barbara-z.b.-Dragos! + z52-botra-Jre-Dragot-X-open! + z56-botra-Anna-Dragos! + z69-botra-Anna-Dragos!) — 3/3-KOMPLET-nit (vs-P227-×2!)"
+  },
+  {
+   "id": "x-jakofcic-hure-brodaric",
+   "opis": "JAKOFČIČ-×5+-vrstic (z30-botra-×2-DVOJNI-Johann+Agnes! + z52-oče-garble! + z81-oče-Mathias! + z24-botra-Catharina! + z94?-neG) + HURE-×1 (z64-boter-Anton!-P227-z63-oče-PARALELA!) + BRODARIČ-×2 (z53-boter-Anton! + z56-boter-Anton!-isti-imes!) + MILEK-×2 (z27-oče-Peter! + …) + KLOBUČAR-×1-X-open (z52-botra-Cathar.-Hlobucar!) + KRIŽAN-×2-neG (z44-matec-Barbara! + …)"
+  },
+  {
+   "id": "x-paradele",
+   "opis": "Hišne-paralele: h33-P227-TAIL-z89-1877-GRIBLJE! (isti-list-s92!) + h64/69-DUEL-×2-lastno-leto (z46+z81!) + h11-×2-lastno-leto (z28+z29!) + h73/h43/h55/h53-KURRENT-DUELI-RAZREŠENI + h18-MODRI-MATCH (z52!) + h43-MODRI-MATCH (z31!) + h37-P227-z1-restart-Kloster-PARALELA + h24-P223! + h19/h29/h48/h77/h6/h38-novi + h1-h30!-z30!"
+  },
+  {
+   "id": "x-restart-stran-pezdirc-x3",
+   "opis": "★★★ RESTART-STRAN-s93: z1-Boginja-vas-h14-Margareth (Jänner-[8↔9]-DUEL!-MODRI-dolg-†6.12.1959!) + z2-Boršt-h22-Anna (oče-Georg-Hvalič-¼-Gütle-matec-Anna-z.b.-PEZDIRE!-MODRI-dolg-†29.12.1960!) + z3-Krasinec-h40-Dorothea (matec-Catharina-z.b.-PEZDIRC!) + z4-Mokk-h8-Mathias (oče-PREČRTAN!-matec-Barb-z.b.-PEZDIRE!) + z5/z6/z7 — PEZDIRC-matec-×3-ZAPOREDOMA (z2/z3/z4!-NOV-REKORD-vzorec!) + z7-boter-Anton-PEZDIVE!"
+  },
+  {
+   "id": "x-notochrst",
+   "opis": "rojen≠krsten-Griblje-×5-vzorec (z24-4/5! + z30-28/29! + z46-30/1-DATUMSKA-KOREKCIJA! + z56-19/20! + z64-28/29!) + HEBAMME-Maria-Rom/Born-×8 (z10/z19/z34/z35/z37/z40/z68/z72!) + z1-RESTART-DUEL-[8↔9]!"
+  },
+  {
+   "id": "x-z1-z94-linija",
+   "opis": "Ordinalna-linija-z1–z94 (15/15-ČISTO!): s93-z1–z7 (restart!-7!) + s94-z8–z13 (6!) + s95-z14–z20 (7!) + s96-z21–z27 (7!) + s97-z28–z33 (6!) + s98-z34–z41 (8!) + s99-z42–z49 (8!-'34-42'-STRAY!) + s100-z50–z56 (7!) + s101-z57–z64 (8!) + s102-z65–z72 (8!) + s103-z73–z79 (7!) + s104-z80–z89 (10!-REKORD-stran!) + s105-DUPLIKAT (0-novih!) + s106-z90–z94 (5!-tail!) = 94-1:1-INVARIANTA!"
+  },
+  {
+   "id": "x-tail-1877-s92",
+   "opis": "TAIL-1877-s92 (ŽE-VLM!): z86-Gradaz-h31-Mathias (Dec-11/12!-HEBAMME-Maria-Born!) + z87-Krasine-h16-Maria (†6.4.1945-črnilo-s-križem!-Dovgan!) + z88-Zemelj-h19-Maria (oče-Nicolaus-MILEK!-matec-Barbara-PEZDIRE!-boter-Michael-PEZDIVE+Maria-PEZDIRE!-×3-PEZDIRC-vrstica!) + z89-GRIBLJE-h33-Nicolaus (oče-Mathias-Deblič!-matec-Maria-Husič!-botra-Anton-BRODARIČ+Anna-PEZDIRE!-PEZDIRC+BRODARIČ!) + z90/z91-Gradac (Dovgan-×2!) — 'Jahr 1877'-glava!"
+  },
+  {
+   "id": "x-tail-1878-s106",
+   "opis": "TAIL-1878-s106 (P227-ŽE-VLM-P228-VIZUALNO-POTRJENO!): z90-Cerkviše-h9-Margaretha (Dec-23/23!) + z91-Krivoglavce-h41-Johann (†3.1.1932-črnilo!-oče-Georg-Tome!) + z92-Dobravie-h13-Martin (Dec-29/29!-oče-Johann-Ulič!) + z93-Krasinea-h38-Johann (†8/879-črnilo!-oče-Mathias-Starasinič!) + z94-Germ-h23-Maria (Dec-30/30!-oče-Johann-Filaš!) + VELIKA-LETNICA-'1 8'+'79'='1879'-RAZPETA! + RESTART-z1-1879-Kloster-h37 (†19.7.1942-MODRI!) + z2-GRIBLJE-h31-Mathias-8/9!"
+  }
+ ],
+ "honesty": [
+  {
+   "id": "h-garble-očeta-MAX",
+   "opis": "OČE-garble-MAX-X-open-×8 (z23-Županič! + z24-Hriže! + z28-Drmelič! + z30-Beltho! + z31-Vludži! + z53-Hlobunür! + z64-Tuttler! + z46-Terdič-PEZDIRC-X-open!) — VIZUALNO-branje-honesty (Kurrent-stara-pisava!)"
+  },
+  {
+   "id": "h-garble-matec-X-open",
+   "opis": "MATEC-garble-X-open-×6 (z30-z.b.-Jakofeč-jasna! + z31-Brula! + z46-Adlesič! + z56-Terdič-PEZDIRC-X-open! + z65-Lnišfhnurgi-MAX! + z69-Hrižan-jasna!)"
+  },
+  {
+   "id": "h-garble-botra",
+   "opis": "BOTRA-garble-×8 (z27-Pajk+Adlesič! + z30-jasni! + z31-Skala+Hlobučič! + z45-Kraus+Kukar! + z46-Krambič! + z52-Dragot-X-open! + z53-Smucel! + z65-Merla+Piglher! + z69-Tokar!)"
+  },
+  {
+   "id": "h-duhovniki-X-open",
+   "opis": "DUHOVNIKI-X-open-podpis-razločba-×3 (Kroggj-garble-MAX-'…binant-Kroggj[?]-coop'-vs-DOVGAN-jasen-vs-JANIČAR-coop-jasen!-VIZUALNO-branje-15-strani!-krop-×16!) — brez-API-VLM (429!) — trojna-izmenjava-opisana-kot-X-open-vzorec"
+  },
+  {
+   "id": "h-z1-datum-DUEL",
+   "opis": "z1-RESTART-DATUMSKI-DUEL-X-open (Geburt-'9'/Taufe-'8'-OBRNJENI-glifyi!-možen-pisarjev-slip-ALI-'9'-s-prečrtanim-vozličem-='8'-pričakovano-po-vzorcui!) + mesec-'Jänner'-prečrtan-X-open"
+  },
+  {
+   "id": "h-z28-garble-ime",
+   "opis": "z28-IME-garble-X-open ('Nrbžgabumšt' ≈ 'nichtlebendgeburt'/'Notgeburt'-hipoteza!-krsten-25/25-ne-'—'!-nenavadno-za-todtgeboren!-botra+duhovnik-PRAZNA-potrjena!)"
+  },
+  {
+   "id": "h-hisna-64-69",
+   "opis": "z46/z81-hiša-DUEL-64↔69-NE-REŠEN-ČRKOVNO (identični-glifyi-1:1!-×2-v-isti-hiši-ne-glede-na-vrednost!-Kurrent-4/9-zmeda!-X-open-v-dokazu) + z52-'8/18'-DUEL (celica-'8'-MODRI-'št-18'-namiguje-18!-X-open) + z45-'55'-vs-z56-'53'-RAZLIČNI (5/3-Kurrent!-X-open) + z23-'73'-vs-z31-'43'-RAZLIČNI (7/4-Kurrent!-X-open)"
+  },
+  {
+   "id": "h-429-API",
+   "opis": "METODOLOŠKA-OPOMBA: API-VLM-429-rate-limit-za-celotno-fazo! → VIZUALNO-arhivar-branje-×15 (direktno-branje-skenov-s92–s106!) + MAX-krop-70 (Griblje-×16 + dueli-×8 + dvojčki-×2 + todtgeboren + nezakonski-×4 + MEJA + restart + foliacija-×14 + zap-×4 + podpisi-×16 + lepljenec + vsotna!) — recept-P227-VIZUALNO-×14!"
+  },
+  {
+   "id": "h-s105-duplikat",
+   "opis": "s105-DUPLIKAT-SKEN-X-open-interpretacija (≡s104-1:1-vrstice-z80–z89!-LEPLJENEC-na-s105!-najverjetneje-arhiv-skeniral-isti-list-dvakrat-pred/po-lepljenju-ALI-ločeni-posnetek-lepljenca!)"
+  },
+  {
+   "id": "h-nezakonski-x3-neG",
+   "opis": "z13/z36/z63-NEZAKONSKI-X-open (očetov-stolpec-videti-PRAZEN-ampak-slabo-fotografirano/poskenirano!-MAX-krop!-z9/z65-JASNA!)"
+  },
+  {
+   "id": "h-z82-pripis-garble",
+   "opis": "z82-črnilo-pripis-X-open ('am-16-Jänr-879[?]-zu-Cholernborn[?]-yburutbme[?]' ≈ 'gestorben'?-garble-MAX!) + z64-poročen-pripis-garble-MAX ('27/9-974[?]'-letnica-nenavadna!-X-open)"
+  },
+  {
+   "id": "h-pag-konvencija",
+   "opis": "pag-konvencija-'sken−5'-13/14-VIZUALNO (vsak-sken!)-LEAD-korekcija ('93'-NA-s98-ne-s99!) + LUKNJA-'94'-s99-temna-'34'-X-open + duplikat-s105-RAZLAGA-za-'sken−6'"
+  },
+  {
+   "id": "h-z87z88-vas",
+   "opis": "z87/z88-vas-popravki-X-open (z87-'Nicolaus'-✗✗→'Primostek'-JASNO! + z88-'Gerag[?]'-X-open-✗-v-sredini!-dvojčka-z-različnima-vasima?!)"
+  }
+ ],
+ "nextSteps": [
+  "P229-LEAD: krstna-04104, leto 1877 (9/15) — MEJA-1877/78-ŽE-NAJDENA (s92/s93!-RESTART-z1-[8↔9]-JÄNNER-Boginja-vas-h14!) → 1877 = z1–z91-91-vpisov-pričakovano (TAIL-z86–z91-Dezember-ŽE-VLM-s92!-incl.-z89-GRIBLJE-h33-PEZDIRE-boter!) → MEJA-1876/77-pred-s92 → probe-s85–s92-DESCENDING! — gola-pag-'sken−5'-pričakovana-s85='80'! (s86='81'/s91='86'!)"
+ ]
+}
