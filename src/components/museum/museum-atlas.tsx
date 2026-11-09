@@ -87,6 +87,18 @@ import {
   PRIEST_1884,
   OLDEST_PAIR_1884,
   MARRIAGE_1884_VILLAGE_DUELS,
+  MARRIAGE_1883_BLOCKS,
+  MARRIAGE_1883_GRIBLJE,
+  MARRIAGE_1883_HOUSES,
+  MARRIAGE_1883_TOTAL,
+  MARRIAGE_1883_XOPEN,
+  MARRIAGE_1883_MEJA,
+  MARRIAGE_1883_NUMBERING,
+  PEZDIRC_1883_NIT,
+  MILEK_1883_KANDIDAT,
+  PRIEST_1883,
+  HROVALJ_1883_SIBLINGS,
+  MARRIAGE_1883_VILLAGE_DUELS,
 } from "@/data/atlas/parish-marriage-early";
 import { LANDUSE_ZONES, LANDUSE_ENTITIES, HAMLETS } from "@/data/atlas/landuse";
 import { getCoverage, getArchiveInventory, parishStats, getHouseStory } from "@/lib/atlas";
@@ -1206,6 +1218,81 @@ function MarriageEarly1885() {
   );
 }
 
+function MarriageEarly1883() {
+  const { t } = useLang();
+  return (
+    <div className="rounded-xl border bg-card/60 p-5">
+      <h3 className="flex items-center gap-2 font-serif text-lg font-semibold">
+        <BookOpen className="h-4 w-4 text-primary" aria-hidden />
+        {t(
+          "Poročna predzgodovina 04455 (P240): leto 1883 = 3/13",
+          "The marriage prehistory 04455 (P240): the year 1883 = 3/13",
+        )}
+      </h3>
+      <p className="mt-2 text-sm text-muted-foreground">
+        {t(
+          `3/13 poročne predzgodovine (1873–1885): skeni s50–s52, ${MARRIAGE_1883_TOTAL} vpisov leta 1883 — BREZ preskokov (3. leto zapored!). Restart leta na s50-DNO (vpis 1 = 21. januar, ženin Jovan CRNIČ; števke »1 8 8 3.« razporejene črez stolpce!), meja 1882/83 = s50-sredina (tail-1882 = vpisi 24–26!), meja 1883/84 = s52→s53 (P239 1:1). Številčenje: s50 = restart-1 · s51 = 2–7 (nodat-ultra-zoom: »prva je 2., ne 1.!«) · s52 = 8–12. Griblje: ${MARRIAGE_1883_GRIBLJE} poroki (h13 · h2!) + ${MARRIAGE_1883_XOPEN.length} X-open kandidat.`,
+          `3/13 of the marriage prehistory (1873–1885): scans s50–s52, ${MARRIAGE_1883_TOTAL} entries of 1883 — NO skips (the 3rd year in a row!). The year restarts at the s50-BOTTOM (entry 1 = Jan 21, groom Jovan CRNIČ; the digits »1 8 8 3.« spread across the columns!), the 1882/83 boundary = s50-middle (the 1882 tail = entries 24–26!), the 1883/84 boundary = s52→s53 (P239 1:1). The numbering: s50 = restart-1 · s51 = 2–7 (the nodat-ultra-zoom: »the first is 2., not 1.!«) · s52 = 8–12. Griblje: ${MARRIAGE_1883_GRIBLJE} marriages (h13 · h2!) + ${MARRIAGE_1883_XOPEN.length} X-open candidate.`,
+        )}
+      </p>
+
+      {/* Griblje poroke 1883 — vrstni red blokov */}
+      <div className="mt-4 rounded-lg border bg-background/60 p-4">
+        <h4 className="text-sm font-semibold">
+          {t("Griblje poroke 1883 — vrstni red blokov", "The Griblje marriages 1883 — the block order")}
+          <span className="ml-2 rounded-full border px-2 py-0.5 text-[10px] font-medium text-primary">
+            ×{MARRIAGE_1883_GRIBLJE}
+          </span>
+        </h4>
+        <div className="mt-3 grid gap-2 sm:grid-cols-2">
+          {MARRIAGE_1883_BLOCKS.map((h) => (
+            <div key={h.houseNo + h.scan} className="rounded border bg-card/60 px-2 py-1.5 text-center">
+              <div className="text-xs font-semibold tabular-nums">h{h.houseNo}</div>
+              <div className="text-[9px] text-muted-foreground">s{h.scan} · Pag. {h.page}</div>
+            </div>
+          ))}
+        </div>
+        <p className="mt-1.5 text-[11px] font-mono text-muted-foreground">{MARRIAGE_1883_HOUSES.join(" → ")}</p>
+        <p className="mt-2 text-[11px] text-muted-foreground">
+          {t(
+            `${PEZDIRC_1883_NIT} ${MILEK_1883_KANDIDAT}.`,
+            `${PEZDIRC_1883_NIT} ${MILEK_1883_KANDIDAT}.`,
+          )}
+        </p>
+      </div>
+
+      {/* anomalije */}
+      <div className="mt-4 grid gap-3">
+        <div className="rounded-lg border border-emerald-600/40 bg-emerald-600/10 p-4 text-emerald-900 dark:text-emerald-100">
+          <h4 className="text-sm font-semibold">
+            {t("h2 = 1. poročni 04455-blok kadarkoli!", "h2 = the 1st marriage 04455-block ever!")}
+          </h4>
+          <p className="mt-1.5 text-xs">
+            {t(
+              `Vpis 6 (4. februar 1883): ženin Peter HLEBEC, GRIBLJE 2 — »nesumnjivo bralno zvest« (ultra-zoom 1:1!). h2 = najnižja aktivna hiša; prej je imela SAMO mrliški vpis (04894-1919, P148) — poročna knjiga je bila 36 let prehitevana, sedaj prehiteva! + h13 (vpis 5, RADOVIČ — roj. v Segečelu, župn. Vinica, pripis = rojstni kraj, NE hiša!). ${HROVALJ_1883_SIBLINGS}.`,
+              `Entry 6 (Feb 4, 1883): the groom Peter HLEBEC, GRIBLJE 2 — »indisputably letter-faithful« (the ultra-zoom 1:1!). h2 = the lowest active house; previously it had ONLY a death entry (04894-1919, P148) — the marriage book was outrun for 36 years, now it overtakes! + h13 (entry 5, RADOVIČ — born in Segečelo, the parish of Vinica, the annotation = the birthplace, NOT the house!). ${HROVALJ_1883_SIBLINGS}.`,
+            )}
+          </p>
+          <p className="mt-2 text-[11px] text-muted-foreground">
+            {t(MARRIAGE_1883_MEJA.restartSi, MARRIAGE_1883_MEJA.restartEn)} · {t(MARRIAGE_1883_MEJA.boundarySi, MARRIAGE_1883_MEJA.boundaryEn)} · {t(MARRIAGE_1883_MEJA.tailSi, MARRIAGE_1883_MEJA.tailEn)}
+          </p>
+        </div>
+        <div className="rounded-lg border border-dashed p-4">
+          <h4 className="text-sm font-semibold">
+            {t("X-open kandidat + vas-dueli (pošteno ostajajo)", "The X-open candidate + village duels (honestly remain)")}
+          </h4>
+          <p className="mt-1.5 text-xs text-muted-foreground">
+            {t(
+              `${MARRIAGE_1883_XOPEN.join(" · ")} — v3: ženin Georg Vituh? (»Granc 25«-duel-»Nemški Rif« — ni Griblje!). Vas-dueli: ${MARRIAGE_1883_VILLAGE_DUELS.join(" · ")}. ${MARRIAGE_1883_NUMBERING}. Duhovnik: ${PRIEST_1883}.`,
+              `${MARRIAGE_1883_XOPEN.join(" · ")} — v3: the groom Georg Vituh? (»Granc 25«-duel-»Nemški Rif« — not Griblje!). Village duels: ${MARRIAGE_1883_VILLAGE_DUELS.join(" · ")}. ${MARRIAGE_1883_NUMBERING}. The priest: ${PRIEST_1883}.`,
+            )}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function MarriageEarly1884() {
   const { t } = useLang();
   return (
@@ -1473,6 +1560,9 @@ function ParishTab() {
       {/* P236: sinteza krstne predzgodovine 04104 (1871–1885) */}
       <BaptismLineSynthesis />
       <ParishForensics />
+
+      {/* P240: poročna predzgodovina 04455 — leto 1883 = 3/13 */}
+      <MarriageEarly1883 />
 
       {/* P239: poročna predzgodovina 04455 — leto 1884 = 2/13 */}
       <MarriageEarly1884 />

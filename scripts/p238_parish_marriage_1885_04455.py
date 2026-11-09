@@ -18,7 +18,7 @@ check("I1 bloki 04455/1885-numeric == 7", len(bloki) == 7, f"najdeno {len(bloki)
 pri = ["58", "60", "32", "71", "29 [~X-OPEN]", "26", "13"]
 check("I2 hiše-1885 (file-order, h29-X-OPEN)", bloki == pri, ",".join(bloki))
 skupaj = src.count('bookSignature: "04455"')
-check("I3 vitals-1946 + 04455==203", "HOUSE_VITALS.length !== 1949" not in src and skupaj == 206, f"04455={skupaj}")
+check("I3 vitals-1951 + 04455==208 (P240-živo!)", "HOUSE_VITALS.length !== 1951" not in src and skupaj == 208, f"04455={skupaj}")
 
 d = json.load(open(f"{ROOT}/research/issue17/parish-marriage-1885-04455.json", encoding="utf-8"))
 an = json.dumps(d["anomalies"], ensure_ascii=False)
@@ -37,7 +37,7 @@ check("I4c PEZDIRC-×3 + BRINC-mreža + h71-STRAUS + P84-korekcija",
       and "straus-h71-1885" in an and "P84-okvir-korekcija-dokumentirana" in json.dumps(d["crossChecks"], ensure_ascii=False))
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1949")
+st = qa.count("HOUSE_VITALS.length !== 1951")
 check("I5 qa-p238 + števec-1946", "qa-p238-parish-marriage-early-04455" in qa and st >= 148, f"1946-številcev={st}")
 
 i0 = src.find("P238: poročna PREDZGOVINA 04455, leto 1885")
@@ -54,7 +54,7 @@ check("I8b X-OPEN-vas-dueli-h29/h15/h9 + 3-X-OPEN", "X-OPEN-vas-dueli (h29/h15/h
 check("I8c korpus-1946-dokaz (duplikat-odstranjen)", "P239: + 3 bloka 04455-1884 = 1949" in qa)
 check("I9a qa-p238 (238. kontrola!)", "qa-p238" in qa and "qa-p238-parish-marriage-early-04455" in qa)
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-check("I9b pt-luknja-1946 + byBook-04455=203", '"vitalsTotal": 1949' in pt and '"04455": 206' in pt)
+check("I9b pt-luknja-1951 + byBook-04455=208 (P240-živo!)", '"vitalsTotal": 1951' in pt and '"04455": 208' in pt)
 
 m = open(f"{ROOT}/src/data/atlas/parish-marriage-early.ts", encoding="utf-8").read()
 check("I9c modul-parish-marriage-early (15-izvozov)", all(x in m for x in

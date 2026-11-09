@@ -27,12 +27,12 @@
   "note": "p80-skripta-set 18 (PT_GAP_HOUSES) ≠ qa doc-list 15 (P80_PT_GAP = 18 brez h45/h47/h55 — dokazi geometrija/filtra)"
  },
  "corpus": {
-  "vitalsTotal": 1949,
+  "vitalsTotal": 1951,
   "byBook": {
    "04105": 502,
    "04894": 520,
    "04106": 433,
-   "04455": 206,
+   "04455": 208,
    "04104": 288
   },
   "housesDistinctAll": 95,

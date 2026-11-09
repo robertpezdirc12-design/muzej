@@ -1,11 +1,12 @@
 // parish-marriage-early.ts — P238: POROČNA PREDZGOVINA 04455, leto 1885 = 1/13 NOVA LINIJA
 // P239: leto 1884 = 2/13 (s52–s56, 18 vpisov, RESTART = s53, 3 Griblje bloka, MILEK-križ +2!).
-// Meritve so izpeljane ob zagonu IZ korpusa HOUSE_VITALS (parish.ts) — qa-p238/qa-p239 jih živo
-// preverja proti dokaz-seji P238 (research/issue17/parish-marriage-1885-04455.json, 2026-11-09)
-// in dokaz-seji P239 (research/issue17/parish-marriage-1884-04455.json, 2026-11-09).
+// P240: leto 1883 = 3/13 (s50–s52, 12 vpisov, RESTART = s50-dno, 2 Griblje bloka h13+h2, h2 = 1.-poročni-04455-blok!).
+// Meritve so izpeljane ob zagonu IZ korpusa HOUSE_VITALS (parish.ts) — qa-p238/qa-p239/qa-p240 jih živo
+// preverja proti dokaz-seji P238 (research/issue17/parish-marriage-1885-04455.json, 2026-11-09),
+// dokaz-seji P239 (parish-marriage-1884-04455.json) in dokaz-seji P240 (parish-marriage-1883-04455.json).
 // NOVA LINIJA: poročna-predzgodovina (krstna-04104-KONČANA-15/15-P236-sinteza! + forenzika-P237!).
 // Vir: poročna knjiga 04455 (Trauungs-Buch), Matricula Online — skeni s56–s61 == Pag. 55–60
-// (★★★ Pag = sken−1 RAZŠIRJENO na 55–66; prej P84: samo 61–66!). P239: s52–s56.
+// (★★★ Pag = sken−1 RAZŠIRJENO na 55–66; prej P84: samo 61–66!). P239: s52–s56. P240: s50–s52.
 
 import { HOUSE_VITALS } from "./parish";
 
@@ -122,4 +123,64 @@ export const MARRIAGE_1884_VILLAGE_DUELS = [
   "v9 »Boginja/Podgora/Borinja« vas 12",
   "v10 »Ceroviči/Cerovica« 17",
   "v14 »Črnomelj 152/352«",
+] as const;
+
+// ——— P240: leto 1883 = 3/13 — s50–s52, 12 vpisov, RESTART = s50-dno ———
+
+/** Bloki P240 (leto 1883) iz korpusa — izpeljano 1:1 (h13-ženin-RADOVIČ · h2-ženin-HLEBEC). */
+export const MARRIAGE_1883_BLOCKS = HOUSE_VITALS.filter(
+  (h) => h.bookSignature === "04455" && h.year === 1883,
+);
+
+/** Št. Griblje porok 1883 v korpusu (meritev: 2 — oba-GRIBLJE-ženina; 1 X-OPEN-kandidat-v3-NI-blok). */
+export const MARRIAGE_1883_GRIBLJE = MARRIAGE_1883_BLOCKS.length;
+
+/** Hiše poročne linije 1883 (merjeni vrstni-red blokov: 13, 2). */
+export const MARRIAGE_1883_HOUSES = MARRIAGE_1883_BLOCKS.map((h) => h.houseNo);
+
+/** Vsi vpisi leta 1883 (meritev: 12 številčenih — zap 1.–12., BREZ preskokov!). */
+export const MARRIAGE_1883_TOTAL = 12;
+
+/** X-open kandidat 1883 (v3 ženin 'Granc 25'-duel-'Nemški-Rif' — ni-GRIBLJE) — NE-blok! */
+export const MARRIAGE_1883_XOPEN = ["v3 [~X-OPEN]"] as const;
+
+/** Meje leta 1883: restart = s50-DNO (vpis 1 = 21. Januar, Jovan CRNIČ!) · meja-1882/83 = s50-MID (tail-1882-vpisi-24–26!) · meja-1883/84 = s52→s53 (P239-1:1!). */
+export const MARRIAGE_1883_MEJA = {
+  restartSi: "restart-vpis-1 = 21. Januar 1883 (s50-DNO, števke-»1 8 8 3.«-razporejene-črez-stolpce!, ženin Jovan CRNIČ von-Bedenj-H.20-Adlešiči-[~])",
+  restartEn: "restart-entry-1 = Jan 21, 1883 (the s50-BOTTOM, the-»1 8 8 3.«-digits-spread-across-the-columns!, groom Jovan CRNIČ from-Bedenj-no.20-Adlešiči-[~])",
+  tailSi: "tail-vpis-12 = 28. Oktober 1883 (s52 — 1884-se-začne-na-naslednjem-listu!)",
+  tailEn: "tail-entry-12 = Oct 28, 1883 (s52 — 1884-starts-on-the-next-spread!)",
+  boundarySi: "meja-1882/83 = s50-MID (tail-1882-vpisi-24–26-novembra!-#26-Mathias-HRIZAN-GRIBLJE-36-tail!) · meja-1883/84 = s52→s53 (P239-1:1!)",
+  boundaryEn: "the 1882/83 boundary = s50-MID (the 1882-tail-entries-24–26-of-November!-#26-Mathias-HRIZAN-GRIBLJE-36-tail!) · the 1883/84 boundary = s52→s53 (P239-1:1!)",
+} as const;
+
+/** Številčenje strani 1883 (s50 = restart-1 · s51 = 2–7 · s52 = 8–12) — nodat-ULTRA-ZOOM: s51-prva = '2.' (navpični-lok-Kurent, NE-'1.')-1:1! Pass-1-'statistika-1,8,8,3'-MISREAD = glava-1883-števke-razporejene-črez-stolpce (razrešeno-2:1!). */
+export const MARRIAGE_1883_NUMBERING =
+  "s50 = restart-1 · s51 = vpisi 2–7 (nodat-ultra-zoom-'prva-je-2.-ne-1.'!) · s52 = 8–12 (P239-1:1!) — 12-VPISOV-BREZ-PRESKOKOV · glava-'1 8 8 3.'-števke-črez-stolpce (pass-1-'statistika'-MISREAD-razrešen!)";
+
+/** PEZDIRC-nit 1883: vpis-4-ženin-Miha-PEZDIRC-Podzemelj-3-'NI-Pegdirc'-ULTRA-ZOOM-črka-za-črko! + v5-priča-[~Pezdirc/Jakobrič-DUEL!] + v7-mati-neveste-roj.-Pezdič-[~pass-2] — PEZDIRC-CONTINUUM-04104-×131→04455! */
+export const PEZDIRC_1883_NIT =
+  "vpis-4-ženin-Miha-PEZDIRC-Podzemelj-3 (ultra-zoom-'NI-Pegdirc'-črka-za-črko!) + v5-priča-[~Pezdirc/Jakobrič-DUEL!] + v7-mati-roj.-Pezdič-[~1-read] = continuum-04104-×131→04455-se-širi-v-3.-letu-predzgodovine!";
+
+/** MILEK-križ-kandidat 1883 (IZVEN-KORPUSA!): v10-nevesta-Margareth-'Milleh-(Milek/Milech)'-[~X-OPEN-3-branja-1:1] × Johann-Horvat-Metlika-45 — križ-×237-NESPREMENJEN (blok- ni-v-korpusu-iskreno!). */
+export const MILEK_1883_KANDIDAT =
+  "v10-nevesta-Margareth-Milleh-[~Milek/Milech]-×-Johann-Horvat-Metlika-45 = križ-KANDIDAT-IZVEN-KORPUSA (×237-ostaja-iskreno!)";
+
+/** Duhovnik 1883: Franz Dovgan-[~garble-×5] + v12-'Michael-Fandorf-[?]'-1-read = NOVI-DUHOVNIK-KANDIDAT-[~X-OPEN!]. */
+export const PRIEST_1883 =
+  "Franz Dovgan [~Dorgan/Dergan/Lovgan-garble-×5] — dominanta (v1-v9!) + v12-'Michael-[?]'-Fandorf-[?]-pp. = NOVI-DUHOVNIK-KANDIDAT-[~1-read-X-OPEN!]";
+
+/** HROVALJ-brat+sestra-isti-dan: v8-ženin-Mathias-HROVALJ-Kaplitz-8-[~Podmelc-DUEL] + v9-nevesta-Anna-HROVALJ-Kaplische-(ISTA-hiša!)-13.-Mai = brat+sestra-poroka-ISTI-DAN (cf.-h34-SILAH-sestrski-2-leta!). */
+export const HROVALJ_1883_SIBLINGS =
+  "v8-ženin-Mathias-HROVALJ-Kaplitz-8-[~Podmelc-DUEL] × Anna-Klepec/Hlepec-Boršt-16 + v9-nevesta-Anna-HROVALJ-'Kaplische'-(ISTA-hiša-[~]!) × Janez-Gašlevič/Jaklevič-PriLozja — brat+sestra-IZ-ISTE-HIŠE-poroka-ISTI-DAN-13.-Mai (1.×-v-predzgodovini!-cf.-h34-SILAH-sestrski-1884+1885!)";
+
+/** Najstarejši par leta 1883 (v10: 28 + 28 = 56 — prvo-branje; starosti-dueli-[~]). */
+export const OLDEST_PAIR_1883 = "28 + 28 = 56 let (vpis 10, Horvat × Milleh-[~] — starosti-dueli-[~!])";
+
+/** Vas-dueli 1883 (v2-'Gradec-47/17-vs-Graduc'-fil.-cerkev! + v3-'Granc-25-vs-Nemški-Rif'-X-OPEN! + v8-'Kaplitz-vs-Podmelc'! + v12-'Gertsitsch-3-vs-5'!). */
+export const MARRIAGE_1883_VILLAGE_DUELS = [
+  "v2 »Gradec 47/17 vs Graduc« fil.-cerkev [~]",
+  "v3 »Granc 25 vs Nemški Rif« [~X-OPEN]",
+  "v8 »Kaplitz 8 vs Podmelc« [~]",
+  "v12 »Gertsitsch 3 vs 5« [~]",
 ] as const;
