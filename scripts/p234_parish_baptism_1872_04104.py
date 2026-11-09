@@ -18,7 +18,7 @@ check("I1 bloki 04104/1872-numeric == 17", len(bloki) == 17, f"najdeno {len(blok
 pri = ["11", "30", "3", "44", "9", "38", "24", "12", "33", "6", "40", "68", "69", "7", "30", "66", "29"]
 check("I2 hiše-1872 (file-order, 17-vpisov / 16-DISTINCT-h30-×2-DUEL!)", bloki == pri and len(set(bloki)) == 16, ",".join(bloki) if bloki else "-")
 skupaj = src.count('bookSignature: "04104"')
-check("I3 vitals-1923 + 04104==271", "HOUSE_VITALS.length !== 1923" not in src and skupaj == 271, f"04104={skupaj}")
+check("I3 vitals-1940 + 04104==288", "HOUSE_VITALS.length !== 1940" not in src and skupaj == 288, f"04104={skupaj}")
 
 d = json.load(open(f"{ROOT}/research/issue17/parish-baptism-1872-04104.json", encoding="utf-8"))
 grib = [e for e in d["entries"] if "grib" in str(e.get("vas", "")).lower()]
@@ -39,8 +39,8 @@ check("I4b novosti (pezdirc-x5 + dragoš-x3-paralela + hrižan-x5 + h40-continuu
       and "mesec-garbage-row-z27-september-x0" in an)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1923")
-check("I5 qa-p234 + števec-1923", "qa-p234-parish-baptism-1872-04104" in qa and st >= 146, f"1923-številcev={st}")
+st = qa.count("HOUSE_VITALS.length !== 1940")
+check("I5 qa-p234 + števec-1940", "qa-p234-parish-baptism-1872-04104" in qa and st >= 146, f"1940-številcev={st}")
 
 i0 = src.find("P234: krstna PREDZGODOVINA 04104, leto 1872")
 seg = src[i0:] if i0 >= 0 else ""
@@ -56,9 +56,9 @@ check("I8a P233-NAPoved-POTRJENA + GARBAGE-ROW + 'Morija'-nota", "P233-ARITMETI�
 check("I8b P233-LEAD-POTRJEN-s26 + LEAD-P235-1871", "P233-X-open-RESOLVED" in seg and "P235-LEAD" in qa and "1871" in qa)
 check("I9a qa-p234 (234. kontrola!)", "qa-p234" in qa and "234. kontrola" in qa)
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-check("I9b pt-luknja-271/1923 + byBook-04104", '"vitalsTotal": 1923' in pt and '"04104": 271' in pt)
+check("I9b pt-luknja-271/1940 + byBook-04104", '"vitalsTotal": 1940' in pt and '"04104": 288' in pt)
 v233 = open(f"{ROOT}/scripts/p233_parish_baptism_1873_04104.py", encoding="utf-8").read()
-check("I9c p233-verifier-sanitizacija (1906→1923, 254→271)", '"vitalsTotal": 1923' in v233 and "1906" not in v233)
+check("I9c p233-verifier-sanitizacija (1906→1940, 254→271)", '"vitalsTotal": 1940' in v233 and "1906" not in v233)
 
 live = "--live" in sys.argv
 if live or "--check" not in sys.argv:

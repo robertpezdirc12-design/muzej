@@ -19,7 +19,7 @@ FIXES = {
         ('qa.count("04894\\").length !== 297") >= 12, str(qa.count("04894\\").length !== 297"))',
          'qa.count("04894\\").length !== 321") >= 12, str(qa.count("04894\\").length !== 321"))'),
     ],
-    "scripts/p172_parish_death_1923.py": [
+    "scripts/p172_parish_death_1940.py": [
         ('check("I11d ni-04894-1908-blokov-še (P174-lead!; P173 = 1907 sedaj v korpusu!; 04455-1908-legalno!)",\n'
          '          re.search(r\'bookSignature: "04894",\\s*year: 1908\', src) is None, "")',
          'check("I11d ni-04894-1910-blokov-še (P176-lead!; P175 = 1909 sedaj v korpusu!; 04455-1910-legalno!)",\n'

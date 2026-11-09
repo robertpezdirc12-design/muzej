@@ -226,12 +226,12 @@ def main():
     check("I8b meja 1905/06 = s104 (13.-POTRDITEV-5.-STILA — VIZUALNO!)",
           "s104" in d["crossChecks"][2]["opis"] and "13. POTRDITEV" in d["crossChecks"][2]["opis"]
           and "restart-61→1" in d["crossChecks"][2]["opis"], "")
-    check("I8c P172-lead v dokazu (1923 + BRINEC-zap1 + PEZDIREC-zap6!)",
-          "P172-lead" in d["nextSteps"] and "1923" in d["nextSteps"]["P172-lead"]
+    check("I8c P172-lead v dokazu (1940 + BRINEC-zap1 + PEZDIREC-zap6!)",
+          "P172-lead" in d["nextSteps"] and "1940" in d["nextSteps"]["P172-lead"]
           and "BRINEC" in d["nextSteps"]["P172-lead"]
           and "PEZDIREC" in d["nextSteps"]["P172-lead"], "")
     check("I8d X1-s104-zap1–9-LEAD-kontekst (P172-scope!)",
-          any("zap1" in x["opis"] and "1923" in x["opis"] for x in d["excluded"]), "")
+          any("zap1" in x["opis"] and "1940" in x["opis"] for x in d["excluded"]), "")
 
     # ---------- I9: demografija ----------
     prev = [e["previden"] for e in grb]

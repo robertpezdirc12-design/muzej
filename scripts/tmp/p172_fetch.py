@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""P172 delovna faza — prenos skenov mrliške knjige 04894 (leto 1923: skeni 105–110).
+"""P172 delovna faza — prenos skenov mrliške knjige 04894 (leto 1940: skeni 105–110).
 Ni del repozitorija: delovni imenik /tmp/p172 (po vzoru P171 /tmp/p171)."""
 import base64, re, sys, urllib.request, urllib.error, os
 
 BOOK_URL = "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04894/"
 UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36"}
 OUT = "/tmp/p172"
-SCANS = range(105, 111)  # skeni 105–110 (celo leto 1923 + uvod 1907 — meja 1923/07 [~ s107+?])
+SCANS = range(105, 111)  # skeni 105–110 (celo leto 1940 + uvod 1907 — meja 1940/07 [~ s107+?])
 
 
 def http_get(url, headers=UA, tries=4):

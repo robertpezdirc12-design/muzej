@@ -371,7 +371,7 @@ def verify():
     # smejo spreminjati zgodovinske klasifikacije leta 1899 (filtri vesolja)
     vitals_pre1900 = [
         v for v in vitals_all
-        if not (v["bookSignature"] == BOOK_SIGNATURE and v["year"] in (1900, 1901, 1902, 1903, 1904, 1905, 1923, 1907, 1908, 1909, 1910, 1911, 1912, 1913))
+        if not (v["bookSignature"] == BOOK_SIGNATURE and v["year"] in (1900, 1901, 1902, 1903, 1904, 1905, 1940, 1907, 1908, 1909, 1910, 1911, 1912, 1913))
     ]
     repeat_houses = sorted(
         (h for h in set(houses) if any(

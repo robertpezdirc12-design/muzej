@@ -7,7 +7,7 @@ src = open(PATH, encoding="utf-8").read()
 ANCHOR = """      : p191Errors.join("; "),
   );
   }
-  // ——— qa-p189: MRLIŠKA KNJIGA 04894 — polno leto 1923"""
+  // ——— qa-p189: MRLIŠKA KNJIGA 04894 — polno leto 1940"""
 
 BLOCK = """      : p191Errors.join("; "),
   );
@@ -76,7 +76,7 @@ BLOCK = """      : p191Errors.join("; "),
       : p192Errors.join("; "),
   );
   }
-  // ——— qa-p189: MRLIŠKA KNJIGA 04894 — polno leto 1923"""
+  // ——— qa-p189: MRLIŠKA KNJIGA 04894 — polno leto 1940"""
 
 assert ANCHOR in src, "anchor qa-p191-konec ni najden!"
 src = src.replace(ANCHOR, BLOCK, 1)

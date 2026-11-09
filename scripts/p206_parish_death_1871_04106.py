@@ -17,7 +17,7 @@ bloki = re.findall(r'\{\s*houseNo:\s*"(\d+)",\s*bookSignature:\s*"04106",\s*year
 check("I1 bloki 04106/1871 == 11", len(bloki) == 11, f"najdeno {len(bloki)}")
 check("I2 hiše-1871 (file-order)", bloki == ["11", "29", "38", "13", "33", "66", "72", "28", "65", "2", "8"], ",".join(bloki))
 skupaj = src.count('bookSignature: "04106"')
-check("I3 vitals-1923 + 04106==433", "HOUSE_VITALS.length !== 1923" not in src and skupaj == 433, f"04106={skupaj}")
+check("I3 vitals-1940 + 04106==433", "HOUSE_VITALS.length !== 1940" not in src and skupaj == 433, f"04106={skupaj}")
 
 d = json.load(open(f"{ROOT}/research/issue17/parish-death-1871-04106.json", encoding="utf-8"))
 grib = [e for e in d["entries"] if "gribl" in str(e.get("vas", "")).lower()]
@@ -29,8 +29,8 @@ check("I4 dokaz (73/11-griblje/anomalije + meja-s86-'vsota' + 73-vrstic)",
       f"entries={len(d['entries'])} griblje={len(grib)} anomalije={len(d['anomalije'])}")
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1923")
-check("I5 qa-p206 + števec-1472", "qa-p206-parish-death-1871-04106" in qa and st >= 100, f"1923-številcev={st}")
+st = qa.count("HOUSE_VITALS.length !== 1940")
+check("I5 qa-p206 + števec-1472", "qa-p206-parish-death-1871-04106" in qa and st >= 100, f"1940-številcev={st}")
 
 i0 = src.find("P206: mrliška PREDZGODOVINA 04106, leto 1871")
 seg = src[i0:] if i0 >= 0 else ""
@@ -46,7 +46,7 @@ check("I8c KROP-POPOLNO-SOGLASJE-z50 (5¾-J!)", "KROP-POPOLNO-SOGLASJE" in seg a
 check("I8d 11-hiš-vsi-različni", "11 hiš" in seg)
 check("I9 qa-p206 (206. kontrola!)", "qa-p206" in qa and "206. kontrola" in qa)
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-check("I9 pt-luknja-292/1511", '"vitalsTotal": 1923' in pt and '"04106": 433' in pt)
+check("I9 pt-luknja-292/1511", '"vitalsTotal": 1940' in pt and '"04106": 433' in pt)
 
 try:
     req = urllib.request.Request("https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04106/",

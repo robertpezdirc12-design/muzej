@@ -131,8 +131,8 @@ def main():
           "VOJNI DELAVEC" in allsi and "KRANJSKA GORA" in allsi, "")
     check("I4i №3 PREDKORPUSNA generacija (b. 1863!) + Šimec ×223!",
           "PREDKORPUSNA" in allsi and "×223" in allsi, "")
-    check("I4j №2 M1923-ŽENIN-HIŠA (Županič-18 recipročni!) + №5 30-letna razlika!",
-          "M1923" in allsi and "30-LETNA" in allsi, "")
+    check("I4j №2 M1940-ŽENIN-HIŠA (Županič-18 recipročni!) + №5 30-letna razlika!",
+          "M1940" in allsi and "30-LETNA" in allsi, "")
 
     # ---------- I5: parish.ts ----------
     ts = open(PARISH_TS).read()

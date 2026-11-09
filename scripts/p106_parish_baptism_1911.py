@@ -34,7 +34,7 @@ OČETA Z ISTO MATI: Požek → Trček, ISTA Katarina Kure!); r69 h74 2. VPIS —
 VRZEL 18 LET (EMŠO 1310911500879 SKLADNO; VPIS PRENEŠEN); r73 h49 6. VPIS —
 ZAPORED (Brodarič kontinuiteta); r74 h6 6. VPIS — **ZAPORED 3. leto**
 (1909/10/11; Jakobič SKLADNO; Klepec 4.×!); r80 h30 13. VPIS — **SEGINA
-POVRAT: 1923 menjava REŠENA** (oče Segina × mati Brinec!; VPIS PRENEŠEN
+POVRAT: 1940 menjava REŠENA** (oče Segina × mati Brinec!; VPIS PRENEŠEN
 25.11.2007); r82 h40 4. VPIS — VRZEL 12 LET (botri HRIŽAN PAR; EMŠO
 2311911505307 — dan 23 vs register 22 [~]; dojenček † 7/10.1914); r84 h31 10.
 VPIS — VRZEL 11 LET (oče Gapič?/Papič? kolizija; mati Katarina Hrižan;
@@ -335,9 +335,9 @@ def verify():
         # r74 — h6 ZAPORED 3. leto + Jakobič + Klepec 4.×
         and "3. leto" in " ".join(r74["notes"]) and "Jakobič" in r74["father"]
         and "Klepec" in r74["botra"]
-        # r80 — SEGINA POVRAT (1923 menjava rešena)
+        # r80 — SEGINA POVRAT (1940 menjava rešena)
         and "Segina" in r80["father"] and "Brinec" in r80["mother"]
-        and "REŠENA" in " ".join(r80["notes"]) and "1923" in " ".join(r80["notes"])
+        and "REŠENA" in " ".join(r80["notes"]) and "1940" in " ".join(r80["notes"])
         # r84 — h31 11 LET + Papič kolizija
         and "11 LET" in " ".join(r84["notes"]) and "Papič" in json.dumps(r84, ensure_ascii=False)
     )

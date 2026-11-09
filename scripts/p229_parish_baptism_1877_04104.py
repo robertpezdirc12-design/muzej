@@ -18,7 +18,7 @@ check("I1 bloki 04104/1877-numeric == 20", len(bloki) == 20, f"najdeno {len(blok
 pri = ["37", "6", "13", "36", "65", "74", "6", "7", "14", "14", "2", "35", "20", "9", "40", "49", "78", "3", "34", "33"]
 check("I2 hiše-1877 (file-order, 20/18-DISTINCT — h6-×2 + h14-×2-DVOJČKI!)", bloki == pri and len(set(bloki)) == 18, ",".join(bloki[:8]) + "…")
 skupaj = src.count('bookSignature: "04104"')
-check("I3 vitals-1923 + 04104==271", "HOUSE_VITALS.length !== 1923" not in src and skupaj == 271, f"04104={skupaj}")
+check("I3 vitals-1940 + 04104==288", "HOUSE_VITALS.length !== 1940" not in src and skupaj == 288, f"04104={skupaj}")
 
 d = json.load(open(f"{ROOT}/research/issue17/parish-baptism-1877-04104.json", encoding="utf-8"))
 grib = [e for e in d["entries"] if "grib" in str(e.get("vas", "")).lower()]
@@ -39,8 +39,8 @@ check("I4b novosti (dvojcki-x4-rekord + todtgeboren-tip-x3 + november-31-duel-x2
       and "duhovniska-izmenjava-1877" in an and "nezakonski-x4" in an)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1923")
-check("I5 qa-p229 + števec-1923", "qa-p229-parish-baptism-1877-04104" in qa and st >= 140, f"1923-številcev={st}")
+st = qa.count("HOUSE_VITALS.length !== 1940")
+check("I5 qa-p229 + števec-1940", "qa-p229-parish-baptism-1877-04104" in qa and st >= 140, f"1940-številcev={st}")
 
 i0 = src.find("P229: krstna PREDZGODOVINA 04104, leto 1877")
 seg = src[i0:] if i0 >= 0 else ""
@@ -56,7 +56,7 @@ check("I8a meseci-Griblje (Juni/Sep-×0!) + 1876-LEAD", "Juni/Sep-×0" in seg an
 check("I8b TAIL-1877-s92 + h33-P228-TAIL-KRIŽ", "TAIL-1877-s92" in seg or True)  # tail opisan v dokazu
 check("I9a qa-p229 (229. kontrola!)", "qa-p229" in qa and "229. kontrola" in qa)
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-check("I9b pt-luknja-271/1923 + byBook-04104", '"vitalsTotal": 1923' in pt and '"04104": 271' in pt)
+check("I9b pt-luknja-271/1940 + byBook-04104", '"vitalsTotal": 1940' in pt and '"04104": 288' in pt)
 
 live = "--live" in sys.argv
 if live or "--check" not in sys.argv:

@@ -636,7 +636,7 @@ def main():
         "1511–1500 ima 12 poligonov / 1121–1200 PRAZNO), v2 1603–1605 = "
         "P38 napaka 5→6 → prave 1503/1504/1505; p93 (Blatt IV) prave "
         "1901–1920 (strip 2× r11–20 bajtno, oči r1–8 = 1901–1908 z rdečimi "
-        "prečrtami 1901–1904/1923–1907, karta: blok 1901–1907 ima TOČNO 7 "
+        "prečrtami 1901–1904/1940–1907, karta: blok 1901–1907 ima TOČNO 7 "
         "poligonov), P38 pass1 = 9→0 (1001–1020), pass2 = 9→6 (1601–1620) "
         "→ prave 1903/1904/1905; p87 (Blatt II) prave 1681–1700 (pass2 + "
         "oči r1–8 = 1681–1688; pass1 661–680 = izguba vodilne 1 + 8→6; "
@@ -684,7 +684,7 @@ def main():
         "1511–1500 has 12 polygons / 1121–1200 EMPTY), v2 1603–1605 = "
         "P38 error 5→6 → true 1503/1504/1505; p93 (Blatt IV) true "
         "1901–1920 (strip 2 passes r11–20 byte-exact, eyes r1–8 = "
-        "1901–1908 with red crossings 1901–1904/1923–1907, map: block "
+        "1901–1908 with red crossings 1901–1904/1940–1907, map: block "
         "1901–1907 has EXACTLY 7 polygons), P38 pass1 = 9→0 (1001–1020), "
         "pass2 = 9→6 (1601–1620) → true 1903/1904/1905; p87 (Blatt II) "
         "true 1681–1700 (pass2 + eyes r1–8 = 1681–1688; pass1 661–680 = "
@@ -734,7 +734,7 @@ def main():
                     "bezeichnung": "Wüstung Pod Grabino"},
             "p93": {"reads": ["blatt-93.json"],
                     "numbers": "1901–1920 (r11–20 bajtno; r1–10 garbled)",
-                    "crossed": "1901–1904, 1923–1907 (oči)",
+                    "crossed": "1901–1904, 1940–1907 (oči)",
                     "p38pass1": "1001–1020 (9→0)",
                     "p38pass2": "1601–1620 (9→6)"},
             "p87": {"reads": ["ps-087-pass2.json"],

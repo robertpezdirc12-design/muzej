@@ -4,7 +4,7 @@
 
 I1: parish.ts vsebuje 13 blokov bookSignature 04106 / year 1880
 I2: hiše 1880 == [2,5,8,10,10,18,20,21,22,27,39,42,47] (h10-×2!)
-I3: 04106-skupaj == 433 + vitals-števec-1923 (qa ≥ 100)
+I3: 04106-skupaj == 433 + vitals-števec-1940 (qa ≥ 100)
 I4: dokaz research/issue17/parish-death-1880-04106.json (71 entries / 13-griblje / 14-anomalij / meja-s164 + s171-tail / 71-vrstic)
 I5: qa-parish.ts vsebuje qa-p197-parish-death-1880-04106 + števec 1511 (≥ 100)
 I6: duhovniki-1880 (Jančar-naslovni-naraščaj coop.→kaplan→VRD/WRD + 12/13-GRIBLJE-92% + Dovgan-z10-izjema + Janežal-glifa)
@@ -31,9 +31,9 @@ check("I1 bloki 04106/1880 == 13", len(bloki) == 13, f"najdeno {len(bloki)}")
 his = sorted(bloki, key=int)
 check("I2 hiše-1880 (h10-×2)", ",".join(his) == "2,5,8,10,10,18,20,21,22,27,39,42,47", ",".join(his))
 
-# I3: 04106-skupaj + vitals-1923 (parish.ts ne sme imeti starega-asserta)
+# I3: 04106-skupaj + vitals-1940 (parish.ts ne sme imeti starega-asserta)
 skupaj = src.count('bookSignature: "04106"')
-check("I3 vitals-1923 + 04106==433", "HOUSE_VITALS.length !== 1923" not in src and skupaj == 433,
+check("I3 vitals-1940 + 04106==433", "HOUSE_VITALS.length !== 1940" not in src and skupaj == 433,
       f"04106-bloki={skupaj}")
 
 # I4: dokaz
@@ -48,9 +48,9 @@ check("I4 dokaz (71/13-griblje/14-anomalij + meja-s164 + s171-tail + 71-vrstic)"
 
 # I5: qa-parish
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1923")
+st = qa.count("HOUSE_VITALS.length !== 1940")
 check("I5 qa-p197 + števec-1511", "qa-p197-parish-death-1880-04106" in qa and st >= 100,
-      f"1923-številcev={st}")
+      f"1940-številcev={st}")
 
 # I6: duhovniki-1880 (P197-segment)
 i0 = src.find("P197: mrliška PREDZGODOVINA 04106, leto 1880")
@@ -83,7 +83,7 @@ check("I8g 1¾-leta-KROP (z66-ne-VLM)", "1¾" in seg and "KROP" in seg)
 # I9: PT-luknja
 pt = json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8"))
 gap_ids = sorted(int(g["houseNo"]) for g in pt["gapHouses"])
-check("I9 pt-luknja 04106==433", pt["corpus"]["byBook"].get("04106") == 433 and pt["corpus"]["vitalsTotal"] == 1923,
+check("I9 pt-luknja 04106==433", pt["corpus"]["byBook"].get("04106") == 433 and pt["corpus"]["vitalsTotal"] == 1940,
       f"04106={pt['corpus']['byBook'].get('04106')} vitals={pt['corpus']['vitalsTotal']}")
 check("I9b pt-vzorca-kontekst", 42 in gap_ids and 50 not in gap_ids, f"gap={gap_ids[:4]}...{gap_ids[-2:]}")
 

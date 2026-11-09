@@ -120,7 +120,7 @@ def main():
     zaps = sorted(int(e["zap"]) for e in grb)
     check("I3a Griblje-zap: 1,2,4,5,9,11,13,18,27,32,36,37,39,53,55,56,57,58,63,65",
           zaps == GRIBLJE_ZAPS, str(zaps))
-    check("I3b ČISTA-SEKVENCA zap1–67 (BREZ-predorov/DUPLIKATOV — nasprotje-1923!)",
+    check("I3b ČISTA-SEKVENCA zap1–67 (BREZ-predorov/DUPLIKATOV — nasprotje-1940!)",
           sorted(int(e["zap"]) for e in ent) == list(range(1, 68)), "")
     check("I3c neštevilčenih = 0", fr["neštevilčenih"] == 0, "")
 
@@ -224,8 +224,8 @@ def main():
     c1 = d["crossChecks"][0]["opis"]
     check("I8a zap-kontinuiteta (C1 — 67-oštevilčenih = 67-VPISOV!)",
           "67-oštevilčenih" in c1 and "ČISTA-SEKVENCA" in c1, c1[:60])
-    check("I8b meja 1923/07 = s109 + meja 1907/08 = s114 (15.-POTRDITEV — KOREKCIJA!)",
-          "s109" in fr["meja_1923_07"] and "s114" in fr["meja_1907_08"]
+    check("I8b meja 1940/07 = s109 + meja 1907/08 = s114 (15.-POTRDITEV — KOREKCIJA!)",
+          "s109" in fr["meja_1940_07"] and "s114" in fr["meja_1907_08"]
           and "15. POTRDITEV" in fr["meja_1907_08"]
           and "KOREKCIJA" in fr["meja_1907_08"], "")
     ns = json.dumps(d["nextSteps"], ensure_ascii=False)

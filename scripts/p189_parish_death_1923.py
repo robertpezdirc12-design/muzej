@@ -1,20 +1,20 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""P189 — MRLIŠKA knjiga 04894, leto 1923 = 38. polno leto mrliške linije (issue #18):
+"""P189 — MRLIŠKA knjiga 04894, leto 1940 = 38. polno leto mrliške linije (issue #18):
 s239-bot (z1–z4) + s240–s246 + s247-z53–z58 == str. 238–246 (stran == sken − 1 —
 167.–194. potrditev!) + 58 vpisov / 11 GRIBLJE / 10 hiš (h17-×2!) + ★★★ DUHOVNIKI-
 ×3-v-1-LETU: Remigi-JEREB-žup.-dominanta-~44-2.-leto (garble-×7-VSI-ZAVRŽENI!) +
 ★★ Matija-TOMC-'et-deleg.'-×2 = NOVI-DUHOVNIK-#26-kandidat ('et-delegatus'-1.×!)
 + ★★ Jožef-OTT[~Rott]-'kaplan'-×~7 = NOVI-DUHOVNIK-#27-kandidat (KAPLAN-1.×-od-
 P186-Logar!) = 2-NOVA-DUHOVNIKA-v-1-LETU! + ★★★ z36+z37-PLUT-DVOJČKI-SMRTI
-(Klošter-h41-roj.-26.6.1923-ISTI-DAN-'1-dan' = 2.×-linije-cf.-1890-h30!) + ★★★
+(Klošter-h41-roj.-26.6.1940-ISTI-DAN-'1-dan' = 2.×-linije-cf.-1890-h30!) + ★★★
 KOSTNI-KRI/HRK-×8-CONTINUITETA-5.-LETO (vse-ne-Griblje!) + ★★★ z21-BRINEC-h14-
 3.-LETO-ZAPORED ('Srenc-Kap.'-SRČNA-KAP-1.×-VZROK-FORMA-22-let-tragedija!) +
 ★★★ HVALA/HRAJ-1.×-priimek-korpusa-×2-v-1-LETU (z8-Ivan + z51-Ana-h17-×2-isti-
 glif-forenzika!) + ŽELJKO-h60-×2 + PLUT-h25-×2-ZAPORED (posestniška-PAR-†!) +
 z30-ŽELEZNIČAR-stan-1.× + z58-'vžitharica'-1.× + z57-HLEBEC-h2-cf.-P163! +
 z2-'Črnomelj'→Vranoviče + z32-TRIPLE-korekcija (Griblje→Ceroviše-Marjeta-
-GRUBRIJAN!) + MEJA 1923/24 = s247-END (restart-z1-Jan-1924 = 30.-POTRDITEV!) +
+GRUBRIJAN!) + MEJA 1940/24 = s247-END (restart-z1-Jan-1924 = 30.-POTRDITEV!) +
 s248-1924-START = ZADNJE-LETO-KNJIGE (256-skenov-do-1924 → linija-39/39!).
 Kumulativ: vitals 1194 → 1205, mrliški bloki 04894 495 → 506, p80 hiše 94-
 NESPREMENJENO, korpus 93-NESPREMENJEN, PT-luknja 18-NESPREMENJENA. Vzorec p188."""
@@ -25,12 +25,12 @@ import time
 import urllib.request
 import urllib.error
 
-DOKAZ = "research/issue17/parish-death-1923.json"
+DOKAZ = "research/issue17/parish-death-1940.json"
 BOOK_URL = "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04894/"
 UA = {"User-Agent": "Mozilla/5.0 (compatible; muzej-qa/1.0)"}
 QA_TS = "src/lib/qa-parish.ts"
 PARISH_TS = "src/data/atlas/parish.ts"
-NOTES = "research/issue17/parish-death-1923-notes.md"
+NOTES = "research/issue17/parish-death-1940-notes.md"
 P80 = "scripts/p80_parish_md_books.py"
 
 EXPECTED_ENTRIES = 58
@@ -75,8 +75,8 @@ def main():
 
     # ---------- I1: dokaz-JSON ----------
     d = json.load(open(DOKAZ, encoding="utf-8"))
-    check("I1a status-D1923", d["status"] == "SAMPLE-TRANSCRIPTION-D1923", d["status"])
-    check("I1b knjiga-04894-leto-1923", d["book"] == "04894" and d["year"] == 1923, "")
+    check("I1a status-D1940", d["status"] == "SAMPLE-TRANSCRIPTION-D1940", d["status"])
+    check("I1b knjiga-04894-leto-1940", d["book"] == "04894" and d["year"] == 1940, "")
     check("I1c 58-vpisov", len(d["entries"]) == EXPECTED_ENTRIES, str(len(d["entries"])))
     check("I1d 0-excluded", len(d.get("excluded", [])) == EXPECTED_EXCLUDED, str(len(d.get("excluded", []))))
     check("I1e 16-anomalij", len(d["anomalies"]) == EXPECTED_ANOMALIES, str(len(d["anomalies"])))
@@ -105,7 +105,7 @@ def main():
     check("I3f z21-SRČNA-KAP-1.×-BRINEC-h14", "SRČNA-KAP-1.×-VZROK-FORMA" in si(21) and "BRINEC-h14-3.-LETO-ZAPORED" in si(21), "")
     check("I3g z31-PLUT-h25-×2-ZAPORED", "PLUT-h25-×2-ZAPORED" in si(31), "")
     check("I3h z51-HRAJ-×2-h17-POPOLNO", "HVALA/HRAJ-×2-v-1-LETU" in si(51), "")
-    check("I3i z57-HLEBEC-h2-ZADNJA", "HLEBEC-h2" in si(57) and "ZADNJA-1923-GRIBLJE" in si(57), "")
+    check("I3i z57-HLEBEC-h2-ZADNJA", "HLEBEC-h2" in si(57) and "ZADNJA-1940-GRIBLJE" in si(57), "")
 
     # ---------- I4: anomalije-ključi ----------
     tips = " | ".join(a["tip"] for a in d["anomalies"])
@@ -121,10 +121,10 @@ def main():
 
     # ---------- I6: parish.ts bloki ----------
     src = open(PARISH_TS, encoding="utf-8").read()
-    b1923 = re.findall(r'houseNo: "(\d+)",\s*bookSignature: "04894",\s*year: 1923,', src)
-    check("I6a parish.ts-11-blokov-1923", len(b1923) == 11, str(len(b1923)))
-    check("I6b hiše-1923-v-parish.ts", ",".join(sorted(b1923, key=int)) == "2,13,14,17,17,25,44,60,64,71,78",
-          ",".join(sorted(b1923, key=int)))
+    b1940 = re.findall(r'houseNo: "(\d+)",\s*bookSignature: "04894",\s*year: 1940,', src)
+    check("I6a parish.ts-11-blokov-1940", len(b1940) == 11, str(len(b1940)))
+    check("I6b hiše-1940-v-parish.ts", ",".join(sorted(b1940, key=int)) == "2,13,14,17,17,25,44,60,64,71,78",
+          ",".join(sorted(b1940, key=int)))
     b1924 = re.findall(r'bookSignature: "04894",\s*year: 1925', src)
     check("I6d 0-blokov-04894-1925 (P190-KONEC-KNJIGE!)", len(b1924) == 0, str(len(b1924)))
     p80src = open(P80, encoding="utf-8").read()
@@ -138,8 +138,8 @@ def main():
     check("I7b qa-pini 520 (15×+)",
           qa.count('04894").length !== 520') >= 15
           and "p80Death.length !== 520" in qa, str(qa.count('04894").length !== 520')))
-    check("I7c qa-p189 = 190. kontrola", "qa-p189-parish-death-1923" in qa, "")
-    check("I7d qa guard 1925 (bloki 1923+ ne!)",
+    check("I7c qa-p189 = 190. kontrola", "qa-p189-parish-death-1940" in qa, "")
+    check("I7d qa guard 1925 (bloki 1940+ ne!)",
           "1925+-mrliški bloki že v korpusu" in qa and "(h.year ?? 0) >= 1925" in qa, "")
     check("I7e p80Houses-94-pin", "p80Houses.size !== 94" in qa, "")
 

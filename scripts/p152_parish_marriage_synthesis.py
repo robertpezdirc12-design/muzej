@@ -6,7 +6,7 @@ letnih dokazov (P115–P151) + preracun runtime-korpusa parish.ts: 592 evidence
 vpisov · 195 linija-blokov + 2 pred-linijska (1882+1885) = 197 · zero-leta
 1901+1918 · dobe: predvojna 442/15,79 · WWI 29/5,8 (kolaps!) · boom 121/30,25
 (1919 rekord 40!) · max/min 40/4 · kalendarna (44 zabeleženih): PON 21 NED 13
-SOB 0! · metrična razlika 127-vs-195 DOKUMENTIRANA · 1923 intra-datotečno
+SOB 0! · metrična razlika 127-vs-195 DOKUMENTIRANA · 1940 intra-datotečno
 neskladje (6-vs-5-vs-kumulativ+5 — avtoritativno 5!). Vzorec: p146–p151
 (I1–I12 + --live)."""
 import json
@@ -20,7 +20,7 @@ BOOK_URL = "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/044
 UA = {"User-Agent": "Mozilla/5.0 (compatible; muzej-qa/1.0)"}
 QA_TS = "src/lib/qa-parish.ts"
 README = "README.md"
-YEARS = list(range(1886, 1923))
+YEARS = list(range(1886, 1940))
 
 # ---- PINI (izračun P152; sinteza NE spreminja korpusa!) ----
 EXPECTED_ENTRIES_TOTAL = 592
@@ -43,7 +43,7 @@ DOW_RECORDED = {"PONEDELJEK": 21, "NEDELJA": 13, "SREDA": 4, "PETEK": 3, "TOREK"
 DOW_UNRECORDED = 548
 STATS_METRIC_GRIBLJE = 127           # zgodnja metrika — DOKUMENTIRANA razlika!
 GRIBLJE_BLOCK_KEY_YEARS = 23         # leta z gribljeBlocks*-ključi
-ANOMALY_1923 = (6, 5)                # stats.gribljeBlocks=6 vs gribljeBlocksNew=5
+ANOMALY_1940 = (6, 5)                # stats.gribljeBlocks=6 vs gribljeBlocksNew=5
 
 results = []
 
@@ -75,7 +75,7 @@ def main():
     # ---------- I2: letna tabela (37 pinov!) ----------
     pinned = {1886: 24, 1887: 21, 1888: 20, 1889: 10, 1890: 16, 1891: 18, 1892: 15,
               1893: 20, 1894: 15, 1895: 16, 1896: 18, 1897: 18, 1898: 27, 1899: 9,
-              1900: 8, 1901: 11, 1902: 6, 1903: 20, 1904: 15, 1905: 17, 1923: 12,
+              1900: 8, 1901: 11, 1902: 6, 1903: 20, 1904: 15, 1905: 17, 1940: 12,
               1907: 12, 1908: 17, 1909: 15, 1910: 19, 1911: 13, 1912: 17, 1913: 13,
               1914: 7, 1915: 6, 1916: 4, 1917: 8, 1918: 4, 1919: 40, 1920: 37,
               1921: 31, 1922: 13}
@@ -124,10 +124,10 @@ def main():
           "714/197/190/77")
     check("I6c naslovnica P-1873-1922", "1873–1922" in d["line"]["bookLabel"], "")
 
-    # ---------- I7: 1923 anomala + honesty ----------
+    # ---------- I7: 1940 anomala + honesty ----------
     hon = " ".join(d.get("honesty", []))
-    check("I7a 1923-neskladje (6-vs-5-vs-kumulativ+5 — avtoritativno 5!)",
-          f"{ANOMALY_1923[0]}" in hon and f"{ANOMALY_1923[1]}" in hon and "avtoritativno 5" in hon, "")
+    check("I7a 1940-neskladje (6-vs-5-vs-kumulativ+5 — avtoritativno 5!)",
+          f"{ANOMALY_1940[0]}" in hon and f"{ANOMALY_1940[1]}" in hon and "avtoritativno 5" in hon, "")
     check("I7b honesty ≥8", len(d.get("honesty", [])) >= 8, str(len(d.get("honesty", []))))
     check("I7c NI novih branj (MERI!)",
           any("NI novih paleografskih branj" in h for h in d.get("honesty", [])), "")
@@ -150,10 +150,10 @@ def main():
             g = int(mm[0]) if mm else 0
         present += 1
         pin = dict(BPIN).get(y, 0)
-        if int(g) != pin and y != 1923:      # 1923 = dokumentirana anomala (6 vs 5)!
+        if int(g) != pin and y != 1940:      # 1940 = dokumentirana anomala (6 vs 5)!
             mism.append((y, g, pin))
     check("I8a 23 let z blok-ključi", present == GRIBLJE_BLOCK_KEY_YEARS, str(present))
-    check("I8b ujemanja (brez 1923-anomale!)", not mism, str(mism))
+    check("I8b ujemanja (brez 1940-anomale!)", not mism, str(mism))
 
     # ---------- I9: qa-parish qa-p152 ----------
     qa = open(QA_TS, encoding="utf-8").read()
@@ -208,7 +208,7 @@ def main():
 # bloki-po-letu pini (parish.ts runtime, P152 preracun)
 BPIN = {1886: 7, 1887: 7, 1888: 4, 1889: 7, 1890: 4, 1891: 2, 1892: 4, 1893: 5,
         1894: 4, 1895: 5, 1896: 1, 1897: 9, 1898: 9, 1899: 6, 1900: 2, 1901: 0,
-        1902: 4, 1903: 12, 1904: 8, 1905: 13, 1923: 5, 1907: 5, 1908: 9, 1909: 8,
+        1902: 4, 1903: 12, 1904: 8, 1905: 13, 1940: 5, 1907: 5, 1908: 9, 1909: 8,
         1910: 5, 1911: 6, 1912: 5, 1913: 6, 1914: 4, 1915: 1, 1916: 1, 1917: 1,
         1918: 0, 1919: 10, 1920: 4, 1921: 9, 1922: 3}
 

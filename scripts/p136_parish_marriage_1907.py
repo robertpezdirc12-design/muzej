@@ -3,7 +3,7 @@
 """P136 — župnija Podzemelj: poročna knjiga 04455, polno leto 1907
 (s132–s134 == Pag. 131–133) (issue #18).
 
-Nadaljevanje poročne linije (P115 = 1886 → … → P135 = 1923): okvir POTRJEN
+Nadaljevanje poročne linije (P115 = 1886 → … → P135 = 1940): okvir POTRJEN
 — s132–s134 == Pag. 131–133 (Pag. == sken − 1, **22. potrditev; velja
 61–133**); **ROKOPISNA GLAVA »1907« POTRJENA na s132** (P135-lead!) +
 **ROKOPISNA GLAVA »1908« na s134 = P137 LEAD** (1908-v1 Jän 26 + v2 že
@@ -42,7 +42,7 @@ import urllib.request
 BOOK_URL = "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04455/"
 UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36"}
 DOKAZ = "research/issue17/parish-marriage-1907.json"
-DOKAZ_P135 = "research/issue17/parish-marriage-1923.json"
+DOKAZ_P135 = "research/issue17/parish-marriage-1940.json"
 PARISH_TS = "src/data/atlas/parish.ts"
 QA_TS = "src/lib/qa-parish.ts"
 README = "README.md"

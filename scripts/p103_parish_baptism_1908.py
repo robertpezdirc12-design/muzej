@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """P103 — župnija Podzemelj: krstna knjiga 04105, polno leto 1908 (issue #18).
 
-Razširitev vzorca P79 (1886) → … → P100 (1905) → P101 (1923) → P102 (1907) na
+Razširitev vzorca P79 (1886) → … → P100 (1905) → P101 (1940) → P102 (1907) na
 leto 1908: okvir glava »Leto 18 1908« na str. 173 = skeni 189/190 (dup par;
 1908 r1 = Krasinec 38(?) August, 1./1. Januar — P102 lead POTRJEN; hiša
 forenzika 38 vs lead 58) – row 90 na str. 180 (sken 199; glava »1909« INLINE
@@ -14,7 +14,7 @@ dopolnitvami: r6 na 190, r47 na 194, r79 na 198). Stran == sken − 16 (189) /
 vpisov / 18 hiš + 1 neberljiva (r84 — POSTRGAN rob str. 179, papir fizično
 manjka na obojih dup skenih; pričevanje-samo brez vitals bloka) — NARE 18/18
 (po 1907 prelomu h10 ×2 spet brez intra-letne ponovitve). 0 NOVIH hiš (4. leto
-z 0: 1905 0/1923 1/1907 0/1908 0 — VSE 18 hiš že zasidrane). PT 12/6 (44+46+49
+z 0: 1905 0/1940 1/1907 0/1908 0 — VSE 18 hiš že zasidrane). PT 12/6 (44+46+49
 +52+56+60 v luknji 41–60 — ponovitve; luknja ostaja samo h51). Kumulativ s
 P79–P102: 382 vpisov / 85 hiš / DVAINDVAJSET+ENO let (1886–1908).
 Sidra: r16 h14 4. VPIS ISTA familija (BRINEC; botra = babica ISTA Barbara
@@ -25,7 +25,7 @@ Muc kovač = r31 h91 oče!); r31 h91 5. VPIS ISTA (Muc bajtar × Ana Kure; EMŠO
 2204908500557 sidro; pripisno neskladje poroke); r41 h85 2. VPIS — NUJNI KRST
 (»v sili krščen?«; botra + podpis PRAZNA; VRZEL 20 LET; dojenček † 29.5.1908);
 r46 h52 3. VPIS — ISTA ZVEZA čez 10 LET (Podrinc/Pendirec ≈ Pezdirec +
-Jakobič ≈ Jakobčič); r47 h44 5. VPIS (Štrucelj ISTA oče cf. 1923; botrinja
+Jakobič ≈ Jakobčič); r47 h44 5. VPIS (Štrucelj ISTA oče cf. 1940; botrinja
 Doroteja = r69 mati CROSS-ROW; forenzika na dup skenu 194); r55 h23 7. VPIS —
 ISTA ZVEZA čez 8 LET (Brinec? × Marija Dehlič — MATI ISTA kot 1900; celica
 RAZTRGANA); r57 h65 9. VPIS — MILEK 1887–1908 (boter Peter Pezdirec ISTA kot
@@ -83,7 +83,7 @@ EXPECTED_VITALS_HOUSES = sorted([10, 11, 14, 16, 23, 24, 30, 36, 44, 46, 49, 52,
 EXPECTED_PT_IN_SET = ["10", "11", "14", "16", "23", "24", "30", "36", "65", "85", "90", "91"]
 EXPECTED_PT_GAP = ["44", "46", "49", "52", "56", "60"]  # ponovitve že dokazanih — luknja 41–60 ostaja samo h51
 EXPECTED_REPEATS = 0            # NARE 18/18 — po 1907 prelomu spet brez ponovitev
-EXPECTED_NEW_HOUSES = 0         # 4. leto z 0 novih (1905 0 / 1923 1 / 1907 0 / 1908 0)
+EXPECTED_NEW_HOUSES = 0         # 4. leto z 0 novih (1905 0 / 1940 1 / 1907 0 / 1908 0)
 EXPECTED_VITALS_TOTAL = 686     # POSODABLJENO P144: +1 blok 1915 (№1 h82 ISTA-HIŠA!)     # HOUSE_VITALS 356 + 18 (P103: krstna 1908; r84 neberljiva brez bloka)  # POSODABLJENO P138: 490 (era P106) → 651 (P137) → 659 (P138: + 8 poročnih blokov 1909!)
 BLOCKS_04105 = 502              # 330 + 18  # POSODABLJENO P138: 441 (era P106) → 502 (krstna knjiga zrasla P107–P114!)
 KUMULATIV_ENTRIES = 382         # 363 + 19
@@ -91,9 +91,9 @@ KUMULATIV_HOUSES = 85
 KUMULATIV_YEARS = 23            # 1886–1908
 # kontinuitete (hiša → zadnje krstno leto pred 1908 v 04105, iz parish.ts)
 CONTINUITY = {
-    "10": 1907, "11": 1907, "14": 1902, "16": 1923, "23": 1905, "24": 1923,
-    "30": 1923, "36": 1904, "44": 1923, "46": 1899, "49": 1907, "52": 1898,
-    "56": 1888, "60": 1923, "65": 1904, "85": 1888, "90": 1900, "91": 1904,
+    "10": 1907, "11": 1907, "14": 1902, "16": 1940, "23": 1905, "24": 1940,
+    "30": 1940, "36": 1904, "44": 1940, "46": 1899, "49": 1907, "52": 1898,
+    "56": 1888, "60": 1940, "65": 1904, "85": 1888, "90": 1900, "91": 1904,
 }
 # sidra/pini P103 (row, scan, hiša, pin):
 ANCHORS = [

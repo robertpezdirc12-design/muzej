@@ -168,7 +168,7 @@ proof = {
         "h39[~29]-GRIBLJE: z19-Anna-Simec-Vdova-1880 (3/9-zmeda-dokumentirana!)",
         "h47-GRIBLJE: z52-Johann-Klobučar-11M-1880 → KLOBUČAR-priimek-nit (P193-1884!)",
         "h5-GRIBLJE: z10-Katharina-Knuel[~Kuncelj]-70J-1880 (nov-dokaz!)",
-        "h20-GRIBLJE: z22-Fabian-Grabrian-3½J-1880 (cf. P171-Katarina-PEZDIREC-h20-1923-04894!)",
+        "h20-GRIBLJE: z22-Fabian-Grabrian-3½J-1880 (cf. P171-Katarina-PEZDIREC-h20-1940-04894!)",
     ],
     "forme": [
         "nemška-tiskana-'Sterb-Buch'-skroz (slovenska-šele-1885-s205/s206-P192!)",

@@ -361,7 +361,7 @@ def verify():
     # ne smejo spreminjati zgodovinske klasifikacije novih/ponovljenih hiš
     vitals_pre95 = [
         v for v in vitals_all
-        if not (v["bookSignature"] == BOOK_SIGNATURE and v["year"] in (1895, 1896, 1897, 1898, 1899, 1900, 1901, 1902, 1903, 1904, 1905, 1923, 1907, 1908, 1909, 1910, 1911))
+        if not (v["bookSignature"] == BOOK_SIGNATURE and v["year"] in (1895, 1896, 1897, 1898, 1899, 1900, 1901, 1902, 1903, 1904, 1905, 1940, 1907, 1908, 1909, 1910, 1911))
     ]
     repeat_houses = [h for h in houses if any(
         v["houseNo"] == h and v["bookSignature"] == BOOK_SIGNATURE and v["year"] != 1894

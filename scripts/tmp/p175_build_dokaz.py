@@ -44,7 +44,7 @@ ent.append(E(28, 28, "2", 123, "Maj", "30", "31", "Gradac", "Terezija Novak", "�
 ent.append(E(29, 29, "21", 123, "Junij", "3", "5", "Hrašinec", "Peter Jurajevič", "½ romfalov sin [~]", "46 let", "Srčno kap [~]", ".", "Gegor Čerar [~]", None))
 ent.append(E(30, 30, "48", 123, "Junij", "13", "14", "Gradac", "Janez Marentič", "bajtarjev sin", "2 dni", "Prirojena slabost", ".", "Gegor Čerar [~]", None))
 ent.append(E(31, 31, "19", 123, "Junij", "14", "15", "Hrasinec", "Ana Vržan [~ KRIŽAN-mreža!]", "¼ gospodinja hiša [~ VLM-'gumflava']", "12 let", "Jetika", "1", "Gegor Čerar [~]", None))
-ent.append(E(32, 32, "18", 123, "Julij", "1", "3", "Griblje", "Peter ŠIMEC [★★★ max-zoom-'Šimec'-karon-nad-S + ŠIMEC-vez-P173!]", "samoski hlapec [~ 'samostanski hlapec'? — cf.-X-Notarica-leksikon]", "64 let", "Pljučnica", "1", "Gregor Cerar [~ VLM-'Gegor']", "★★★ VLM-'Lincet'-ZAVRJEN! + h18 = 7. mrliški vpis (1890 + 1903-×2 + 1905-×2 + 1923 + 1909!)"))
+ent.append(E(32, 32, "18", 123, "Julij", "1", "3", "Griblje", "Peter ŠIMEC [★★★ max-zoom-'Šimec'-karon-nad-S + ŠIMEC-vez-P173!]", "samoski hlapec [~ 'samostanski hlapec'? — cf.-X-Notarica-leksikon]", "64 let", "Pljučnica", "1", "Gregor Cerar [~ VLM-'Gegor']", "★★★ VLM-'Lincet'-ZAVRJEN! + h18 = 7. mrliški vpis (1890 + 1903-×2 + 1905-×2 + 1940 + 1909!)"))
 ent.append(E(33, 33, "24", 123, "Julij", "2", "4", "Vranoviče", "Ana Haraja [~]", "¼ romfaltova hiša [~]", "6 let", "Želodčni tafar [~]", "1", "Gega Čerar [~ VLM-raw]", None))
 ent.append(E(34, 34, "34", 123, "Julij", "3", "4", "Hrasinec", "Frančišek Urhovec", "¼ umfakar sin [~ vrškar?]", "¼ ure [~ NAJKRAJŠA-STAROST-LINIJE!]", "Prirojena slabost", ".", "Gegor Čerar [~]", None))
 # ——— s124 (str. 123): zap35–46 ———
@@ -109,7 +109,7 @@ dokaz = {
     "anomalies": [
         {"id": "A1", "opis": "★★★ z3-Peter-Stublar-92-let = IZENAČENJE-REKORDA-LINIJE (1889-P155-92!) — 2.×-92-v-liniji (s121-zap3 — Petrovišče-h4-vdovec-'ožigkar'[~]!)"},
         {"id": "A2", "opis": "★★★ z21/z22-h34-ŠILAK-DVOJČKI (Matija-½-dne + Nikolaj-2-dni — P174-lead-100%-POTRJEN; VLM-'Tlak'-×2-ZAVRJEN — max-zoom-karon-nad-S!) — h34-×2-v-1909-1.-del + PADEC-vzorec-6.-leto"},
-        {"id": "A3", "opis": "★★★ P174-KOREKCIJA-'PERDINEC'→PEZDIREC-×3 (1908-z25-h85 + z70-h20 + z71-h30 — max-zoom-z-DESCENDER-@3.-črka — ista-forma-kot-1909-z44! + h20-1892/1923-PEZDIREC-hiša-ne-menja-priimka-v-2-letih + P163-leksikon-vez-'Perdivec'/'Perdinec'→PEZDIREC-×3 + poročna-1908-v17-'Dorothea-PEZDIREC-h14'!) — parish.ts-3-bloki-korigirani"},
+        {"id": "A3", "opis": "★★★ P174-KOREKCIJA-'PERDINEC'→PEZDIREC-×3 (1908-z25-h85 + z70-h20 + z71-h30 — max-zoom-z-DESCENDER-@3.-črka — ista-forma-kot-1909-z44! + h20-1892/1940-PEZDIREC-hiša-ne-menja-priimka-v-2-letih + P163-leksikon-vez-'Perdivec'/'Perdinec'→PEZDIREC-×3 + poročna-1908-v17-'Dorothea-PEZDIREC-h14'!) — parish.ts-3-bloki-korigirani"},
         {"id": "A4", "opis": "★★★ z44-h85-Jožef-PEZDIREC-2-dni = h85-vez-1908/09 (1908-porodna-smrt + 1909-dojenček = 2-otroka-v-2-letih-ISTA-hiša!) — VLM-'Perdinec'/'Mladosť'-ZAVRJENA"},
         {"id": "A5", "opis": "★★ z52-h86 = 1.-MRLIŠKI-VPIS-KADARKOLI (korpus-04455-1910 + 04105-1912/1913/1918 — VSE-KASNEJE!) = 31.-PT-kandidat; p80 92-NESPREMENJENO (h86-ŽE-v-p80-prek-04455-1910-poročna-P139!) — VLM-'Mišma'-ZAVRJENO + diag-hišna-'26'→86!"},
         {"id": "A6", "opis": "★★ MRTVOROJENI-×2-nad-Griblji (z7-s121-'Mrtvorojena'-starost-'.'-podpis-'——' + z45-s124-'Mrtvorojen'-starost-'-'-BREZ-podpisa + VLM-VRSTA-IZPUŠČENA-diag-REŠENA!) — r53-vzorec-#18–#19"},
@@ -125,7 +125,7 @@ dokaz = {
         {"id": "C2", "opis": "stran == sken − 1: s121–s125 == str. 120–124 (96.–100. potrditev VIZUALNO-diag!)"},
         {"id": "C3", "opis": "glave-konzistenca: s121-'Leto 18 1908' (meja-stran!) + s122–s125-'Leto 18 1909' + s126-'Leto 18 1910' — '18'-navada-0-EKZOTIČNIH"},
         {"id": "C4", "opis": "hišna-konzistenca: dokaz-11-Griblje-vpisov == parish.ts-11-blokov-1:1 (hiše 2,13,15,18,29,33,34,34,43,85,86 — h34-×2-DVOJČKI!)"},
-        {"id": "C5", "opis": "P174-KOREKCIJA-leksikon-vez: 'Perdivec'/'Perdinec'→PEZDIREC (P163-leksikon + h20-1892/1923 + poročna-1908-v17-Dorothea-PEZDIREC-h14 + 1909-z44-max-zoom!)"}
+        {"id": "C5", "opis": "P174-KOREKCIJA-leksikon-vez: 'Perdivec'/'Perdinec'→PEZDIREC (P163-leksikon + h20-1892/1940 + poročna-1908-v17-Dorothea-PEZDIREC-h14 + 1909-z44-max-zoom!)"}
     ],
     "honesty": [
         "rows-v3-FAIL-lekcija-4.-leto (diag-grid-fiksni-recept-ponovno-vzpostavljen — 7/7-skenov-diag-prebranih!)",

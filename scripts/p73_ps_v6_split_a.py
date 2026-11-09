@@ -666,7 +666,7 @@ def _next_list() -> list:
         "opcija B (per-page instance za SPLIT) zahteva georef Blattnih "
         "kart (Franciscejski kataster I–V) — ločen podprojekt [~]",
         "praznine brez registrskih strani: PF 1644–1655, 1673/1679, "
-        "1842–1860, 1904/1923 (modernVoid [~])",
+        "1842–1860, 1904/1940 (modernVoid [~])",
         "operacijsko: GitHub Actions billing (#7)",
     ]
 

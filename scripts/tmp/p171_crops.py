@@ -3,10 +3,10 @@
 """P171 — forenzični izrezi mrliške 04894, leto 1905 (skeni 99–104).
 Trakovi ×2.2 (16 Griblje-1905) + celice ×3.0 (targetirane forenzike:
 z1-Pezdirec/h59/72let + 10-glava-napak + starost-korekcije + imena
-Caprič/Lapajne + ŠTRAVS-h35 + Anton-Kukar + MEJA-1923 pas).
+Caprič/Lapajne + ŠTRAVS-h35 + Anton-Kukar + MEJA-1940 pas).
 yc iz /tmp/p171/rows3.json (v3-detekcija + diag-vizualna-verifikacija
 6-strani-z-Read-očmi: s99 zap1–12, s100 zap13–24, s101 zap25–36,
-s102 zap37–48, s103 zap49–60, s104 zap61 + MEJA-1923 + 1923-z1–9!).
+s102 zap37–48, s103 zap49–60, s104 zap61 + MEJA-1940 + 1940-z1–9!).
 Izhod: /tmp/p171/crops/*.png"""
 from PIL import Image
 import os
@@ -160,11 +160,11 @@ def main():
                        ("glava-s102-18905", 102), ("glava-s103-18905", 103)]:
         crop(name, scan, G_X[0], G_X[1], GLAVA, 70, 2.0)
         n += 1
-    # MEJA 1923 pas (širok, ~1.6 zoom)
+    # MEJA 1940 pas (širok, ~1.6 zoom)
     im = Image.open("/tmp/p171/s104.jpg")
     c = im.crop((300, S104["z62"] + 30, 1900, S104["r1"] - 10))
     c = c.resize((int(c.size[0] * 1.6), int(c.size[1] * 1.6)), Image.LANCZOS)
-    c.save(f"{OUT}/meja-1923-pas.png")
+    c.save(f"{OUT}/meja-1940-pas.png")
     n += 1
     print(f"crops: {n} ({len(TRAKT)} trakov + {len(CELLS)} celic + 4 glave + meja)")
 

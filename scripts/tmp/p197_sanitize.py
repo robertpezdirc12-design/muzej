@@ -127,7 +127,7 @@ BLOCK = '''
   }
 '''
 
-ANCHOR = "  // ——— qa-p189: MRLIŠKA KNJIGA 04894 — polno leto 1923"
+ANCHOR = "  // ——— qa-p189: MRLIŠKA KNJIGA 04894 — polno leto 1940"
 assert src.count(ANCHOR) == 1, f"anchor={src.count(ANCHOR)}"
 src = QA.read_text(encoding="utf-8")
 src = src.replace(ANCHOR, BLOCK + "\n" + ANCHOR, 1)

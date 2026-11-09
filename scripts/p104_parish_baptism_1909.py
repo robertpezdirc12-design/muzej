@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """P104 — župnija Podzemelj: krstna knjiga 04105, polno leto 1909 (issue #18).
 
-Razširitev vzorca P79 (1886) → … → P101 (1923) → P102 (1907) → P103 (1908) na
+Razširitev vzorca P79 (1886) → … → P101 (1940) → P102 (1907) → P103 (1908) na
 leto 1909: glava »1909 / Januarij« INLINE na str. 180 = skeni 199/200 (dup par;
 P103 ocava »sken 200 = str. 181« POPRAVLJENA — s200 = str. 180, r89 1908 pod
 belim trakom berljiv SAMO na s200!) – row 81 na str. 187 (sken 211; glava
@@ -19,7 +19,7 @@ hiš že zasidrane; h42/h48/h54 = ponovitve v luknji 41–60). PT 14/3.
 Kumulativ s P79–P103: 400 vpisov / 85 hiš / 24 let (1886–1909).
 Sidra: r6 h77 3. VPIS — POŽEK POVRAT po 19 LETIH (1890 → 1902 Cindrič → 1909
 ISTI Jurij Požek bajtar!); r9 h10 6. VPIS — SELITEV h30→h10 (Matija Brinec ×
-Marija Grabrijan = ISTA ZVEZA kot h30 1923; trije Brincovi možje zapored
+Marija Grabrijan = ISTA ZVEZA kot h30 1940; trije Brincovi možje zapored
 1907/08/09; EMŠO 3001909500735); r17 h42 4. VPIS — ISTA ZVEZA 1905 vrne
 (Jurij Pezdirec × Katarina Jurajevič); r20+r21 h34 DVOJČKI (ISTA botra
 Segina+Šuštar; r20 † 18/4.09 ISTI DAN!, r21 † 3/10.09); r28 h72 6. VPIS —
@@ -93,7 +93,7 @@ KUMULATIV_YEARS = 24            # 1886–1909
 # kontinuitete (hiša → zadnje krstno leto pred 1909 v 04105, iz parish.ts)
 CONTINUITY = {
     "1": 1905, "6": 1907, "10": 1908, "12": 1907, "24": 1908, "30": 1908,
-    "32": 1903, "33": 1898, "34": 1923, "35": 1923, "42": 1923, "48": 1907,
+    "32": 1903, "33": 1898, "34": 1940, "35": 1940, "42": 1940, "48": 1907,
     "54": 1904, "63": 1903, "66": 1905, "72": 1895, "77": 1902,
 }
 # sidra/pini P104 (row, scan, hiša, pin):

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""P172 v3 — rows detekcija za mrliške skene 105–110 (leto 1923).
+"""P172 v3 — rows detekcija za mrliške skene 105–110 (leto 1940).
 P168/P169/P171-v3-metoda (čista verzija):
  1. horizontalne linije = opening(clean, 1×30) → linija-y (interpolacija
     vrzeli do 2× mediana-razmika)

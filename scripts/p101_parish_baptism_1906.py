@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""P101 — župnija Podzemelj: krstna knjiga 04105, polno leto 1923 (issue #18).
+"""P101 — župnija Podzemelj: krstna knjiga 04105, polno leto 1940 (issue #18).
 
 Razširitev vzorca P79 (1886) → … → P98 (1903) → P99 (1904) → P100 (1905) na
-leto 1923: okvir glava »1923« na str. 158 = sken 170/171 (dup par, P100
-dokazano; 1923 r1 = »Gorn?« 34 Jožef, 1./1. Januar — P100 lead POTRJEN) –
+leto 1940: okvir glava »1940« na str. 158 = sken 170/171 (dup par, P100
+dokazano; 1940 r1 = »Gorn?« 34 Jožef, 1./1. Januar — P100 lead POTRJEN) –
 row 87 na str. 165 (skeni 178/179; glava »1907« POD r87; 1907 r1 = Dobravice
 27 Ivanka, podpis Anton Dostál — P102 lead). 87 oštevilčenih vrstic. NOVELA
 P101 — EN podvojen par skenov v okviru leta: 178/179 = str. 165 (rows 85–87).
@@ -14,11 +14,11 @@ VSI vpisi z Griblji: 18 vpisov / 18 hiš — NARE ponovno (vsaka hiša 1×; po
 1905 prelomu h12 ×2 spet brez intra-letne ponovitve). 1 NOVA HIŠA: h4 (85.
 vitals; po dveh letih 1904+1905 brez novih; h4 JE v PT naboru). PT 14/4
 (42+44+49+60 v luknji 41–60 — vsi ponovitve že dokazanih; ostaja samo h51).
-Kumulativ s P79–P100: 347 vpisov / 85 hiš / ENAINDVajset let (1886–1923).
+Kumulativ s P79–P100: 347 vpisov / 85 hiš / ENAINDVajset let (1886–1940).
 Sidra: r8 h16 7. VPIS NOVA DRUŽINA Jakofčič + † 16.2.1944 (2. svetovna
 vojna); r16 h49 2. VPIS + EMŠO sidro + BRODARIČ↔ŽELJKO izmena (r16 boter
 Željko + r19 boter Brodarič); r18 h34 5. VPIS — MENJAVA DRUŽINE 2× (Šimec
-1887 → Šilak/Šulak 1899–1905 → Šimec 1923 — POVRAT, druga žena Kere);
+1887 → Šilak/Šulak 1899–1905 → Šimec 1940 — POVRAT, druga žena Kere);
 r19 h60 7. VPIS — PAR Željko × Brodarič POVRAT (5. otrok istega para; botrinja
 Marija Klepec 3.×); r35 h19 2. VPIS — NEZAKONSKI (očetova kolona prazna,
 mati Ana Kovač [~] samostojna); r40 h44 3. VPIS — ŠTRUCELJ + HRIŽAN signali;
@@ -35,12 +35,12 @@ oče; r85 h35 5. VPIS — HRIŽAN ×2 (mati + botrinja) + PEZDIREC oče; r86 h15
 6. VPIS — ŠTRAUS signal (Matija Štraus: lead 04455 na 4. hiši h45→h40→h16→
 h15, VENDAR mati Marjeta Simec — 2. Štrausov par [MERI]) + ŠTRUCELJ boter.
 DUHOVNIKI NOVELA (celo leto 87): Jos. Rauq 39 + NOV KAPLAN J. R. Kulbinek
-(o.t.cap.) 20 — prvi podpis r38 = 12.5.1923 + Hugo Hengsfeld 17 (samo
+(o.t.cap.) 20 — prvi podpis r38 = 12.5.1940 + Hugo Hengsfeld 17 (samo
 Januar–April) + NOV coop. P. Kazimir Škrabec 7 (r76–r79 + r85–r87) + Dostál
 1 (dualni podpis r30!) + prazni 4 (mrtvorojeni); na Gribljih 18/18: Rauq 7 +
 Kulbinek 6 + Škrabec 3 + Hengsfeld 2. BABICA NOVELA: TOTER 0× — PRVIČ v
-vzorcu (1886–1923)!; Marjeta Vötter 5× na Gribljih (zapisi Sotter 1889 →
-Toter 1901–05 → Vötter 1923 — ista Marjeta? [MERI]); na Gribljih 18/18:
+vzorcu (1886–1940)!; Marjeta Vötter 5× na Gribljih (zapisi Sotter 1889 →
+Toter 1901–05 → Vötter 1940 — ista Marjeta? [MERI]); na Gribljih 18/18:
 Mih (+Mihelič[~]) 10 + Vötter 5 + Adlešič 1 + Burek[~] 1 + Dragoš 1; celo
 leto 83 imenovanih / 1 prazna (r34) / 3 neberljive (r10 trak, r11+r12
 nalepka). EMŠO kampanja: 3 sidra na Gribljih (r16, r51, r62 — vsi skladni).
@@ -64,13 +64,13 @@ BOOK_URL = "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/041
 BOOK_SIGNATURE = "04105"
 EXPECTED_IMAGES = 326
 UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36"}
-DOKAZ = "research/issue17/parish-baptism-1923.json"
+DOKAZ = "research/issue17/parish-baptism-1940.json"
 DOKAZ_P100 = "research/issue17/parish-baptism-1905.json"
 PARISH_TS = "src/data/atlas/parish.ts"
 ATLAS_TS = "src/lib/atlas.ts"
 PT_CHAIN = "research/issue13/chain-full-pt-ps.json"
 
-FRAME_SCANS = (170, 179)        # skeni 170/171 (str. 158: glava 1923 + rows 1–12) – 178/179 (str. 165: rows 85–87 + glava 1907)
+FRAME_SCANS = (170, 179)        # skeni 170/171 (str. 158: glava 1940 + rows 1–12) – 178/179 (str. 165: rows 85–87 + glava 1907)
 FRAME_PAGES = (158, 165)
 DATA_SCANS = [170, 172, 173, 174, 175, 176, 177, 178]
 EXPECTED_CITED = [170, 172, 173, 174, 175, 176, 177, 178]
@@ -83,12 +83,12 @@ EXPECTED_PT_IN_SET = ["4", "15", "16", "18", "19", "20", "21", "24", "26", "27",
 EXPECTED_PT_GAP = ["42", "44", "49", "60"]  # ponovitve že dokazanih (42 P99, 44 1888/1901, 49 P92, 60 P84)
 EXPECTED_REPEATS = 0            # NARE ponovno — 0 intra-letnih ponovitev
 EXPECTED_NEW_HOUSES = 1         # h4 (85. hiša v vitals; 1. nova po dveh letih 0+0)
-EXPECTED_VITALS_TOTAL = 686     # POSODABLJENO P144: +1 blok 1915 (№1 h82 ISTA-HIŠA!)     # HOUSE_VITALS 323 + 18 (P101: krstna 1923)  # POSODABLJENO P138: 490 (era P106) → 651 (P137) → 659 (P138: + 8 poročnih blokov 1909!)
+EXPECTED_VITALS_TOTAL = 686     # POSODABLJENO P144: +1 blok 1915 (№1 h82 ISTA-HIŠA!)     # HOUSE_VITALS 323 + 18 (P101: krstna 1940)  # POSODABLJENO P138: 490 (era P106) → 651 (P137) → 659 (P138: + 8 poročnih blokov 1909!)
 BLOCKS_04105 = 502              # 297 + 18  # POSODABLJENO P138: 441 (era P106) → 502 (krstna knjiga zrasla P107–P114!)
 KUMULATIV_ENTRIES = 347         # 329 + 18
 KUMULATIV_HOUSES = 85
-KUMULATIV_YEARS = 21            # 1886–1923
-# kontinuitete (hiša → zadnje krstno leto pred 1923 v 04105, iz parish.ts)
+KUMULATIV_YEARS = 21            # 1886–1940
+# kontinuitete (hiša → zadnje krstno leto pred 1940 v 04105, iz parish.ts)
 CONTINUITY = {
     "4": None, "15": 1904, "16": 1904, "18": 1898, "19": 1901, "20": 1903,
     "21": 1904, "24": 1904, "26": 1896, "27": 1902, "30": 1903, "34": 1905,
@@ -174,7 +174,7 @@ def parish_vitals_04105():
 
 
 def page_of_scan(scan):
-    """NOVELA P101: EN podvojen par v okviru leta (+ en 170/171 = 1923 glava).
+    """NOVELA P101: EN podvojen par v okviru leta (+ en 170/171 = 1940 glava).
     skeni 170/171 = str. 158 (dup par); stran == sken − 13 (172–178);
     skeni 178/179 = str. 165 (dup par); stran == sken − 14 (180+)."""
     if scan in (170, 171):
@@ -217,7 +217,7 @@ def verify():
     inv["I3_jpeg_probes"] = all(probes.get(s, False) for s in DATA_SCANS)
     inv["I3_cited_scans"] = dokaz["source"]["scans"] == EXPECTED_CITED
 
-    # I4 — okvir leta: glava 1923 na str. 158 = sken 170/171 (P100 dokazano)
+    # I4 — okvir leta: glava 1940 na str. 158 = sken 170/171 (P100 dokazano)
     # … row 87 (skeni 178/179, str. 165); glava 1907 POD r87; 87 vrstic;
     # DVA dup para; page_of_scan konsistenten
     fr = dokaz["frame"]
@@ -322,20 +322,20 @@ def verify():
     prior = {}
     for v in vitals:
         h, y = v["houseNo"], v["year"]
-        if h in CONTINUITY and y is not None and y < 1923:
+        if h in CONTINUITY and y is not None and y < 1940:
             if h not in prior or y > prior[h]:
                 prior[h] = y
     inv["I8_continuity"] = all(prior.get(h) == y for h, y in CONTINUITY.items())
 
-    # I9 — vitals projekcija: 04105 blokov 315 (297 + 18); 1923 bloki == 18;
+    # I9 — vitals projekcija: 04105 blokov 315 (297 + 18); 1940 bloki == 18;
     # SKUPNI HOUSE_VITALS (vse 3 knjige) == 341 (323 + 18)
-    blocks_1923 = [v for v in vitals if v["year"] == 1923]
+    blocks_1940 = [v for v in vitals if v["year"] == 1940]
     all_src = open(PARISH_TS, encoding="utf-8").read()
     total_blocks = len(re.findall(r"bookSignature:\s*\"(04105|04894|04455)\"", all_src))  # P138: metoda bookSignature-štetja (stara {}-regex preskakovala bloke z zavitimi oklepaji!)
     inv["I9_vitals_projection"] = (
         len(vitals) == BLOCKS_04105
-        and len(blocks_1923) == EXPECTED_ENTRIES
-        and sorted(int(v["houseNo"]) for v in blocks_1923) == EXPECTED_HOUSES
+        and len(blocks_1940) == EXPECTED_ENTRIES
+        and sorted(int(v["houseNo"]) for v in blocks_1940) == EXPECTED_HOUSES
         and total_blocks == EXPECTED_VITALS_TOTAL
     )
 

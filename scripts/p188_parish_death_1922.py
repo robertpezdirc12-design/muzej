@@ -126,8 +126,8 @@ def main():
     check("I6a parish.ts-14-blokov-1922", len(b1922) == 14, str(len(b1922)))
     check("I6b hiše-1922-v-parish.ts", ",".join(sorted(b1922, key=int)) == "9,11,14,14,18,20,21,25,33,35,48,53,60,71",
           ",".join(sorted(b1922, key=int)))
-    b1923 = re.findall(r'bookSignature: "04894",\s*year: 1925', src)
-    check("I6d 0-blokov-04894-1925 (P190-KONEC-KNJIGE!)", len(b1923) == 0, str(len(b1923)))
+    b1940 = re.findall(r'bookSignature: "04894",\s*year: 1925', src)
+    check("I6d 0-blokov-04894-1925 (P190-KONEC-KNJIGE!)", len(b1940) == 0, str(len(b1940)))
     p80src = open(P80, encoding="utf-8").read()
     check("I6e p80-skripta pini 1194 + 94 + gap-18",
           "len(vitals) == 1511" in p80src and "len(houses) == 94" in p80src
@@ -162,7 +162,7 @@ def main():
     # ---------- I10: honesty + P188-lead ----------
     check("I10a honesty-nižja-zanesljivost", any("nižja-zanesljivost" in h for h in d["honesty"]), "")
     lp = d.get("leadP189", {})
-    check("I10b P189-lead-1923", lp.get("year") == 1923 and "s239" in lp.get("meja", ""), "")
+    check("I10b P189-lead-1940", lp.get("year") == 1940 and "s239" in lp.get("meja", ""), "")
 
     # ---------- I11: LIVE (matricula) ----------
     if live:
