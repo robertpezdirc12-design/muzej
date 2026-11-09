@@ -19,6 +19,20 @@ import {
   X_OPEN_REMAINDERS,
 } from "@/data/atlas/parish-synthesis";
 import {
+  FORENSIC_VERDICTS,
+  H65_STATS,
+  H69_ERAS,
+  H69_TOTAL,
+  MATHIAS_H65_SPAN,
+  MATHIAS_H65_TOTAL,
+  MILIC_FAMILY_RE,
+  MILIC_FAMILY_TOTAL,
+  MILIC_H69_OVERLAP,
+  MILIC_PER_BOOK,
+  MILIC_PER_YEAR_04104,
+  PRIEST_CROSS,
+} from "@/data/atlas/parish-forensics";
+import {
   P81_THRESHOLD,
   P81_NEAR_MISS,
   p81BestMatch,
@@ -8244,6 +8258,52 @@ function parishChecksPart4(push: Push): void {
     p236Errors.length === 0
       ? `15 let sinteze 1:1-z-runtime (288-Griblje-križ!) · 1562 vpisov · PEZDIRC ×131/15-let · meje 60.–74. · restart-z1 15/15 · 5 niti + 3 X-open · **SINTEZA-LINIE-KOMPLETNA!**`
       : p236Errors.join("; "),
+  );
+  }
+
+  // ——— qa-p237: FORENZIKA NITI — MILIČ↔MILEK križ · h69 zgodba · duhovniški križ (P237) ———
+  {
+  const p237Errors: string[] = [];
+  // vse številke morajo biti 1:1 z meritveno sejo P237 (scripts/tmp/p237_measure*.ts)
+  // in izpeljane iz korpusa ob zagonu (modul parish-forensics.ts).
+  if (MILIC_FAMILY_TOTAL !== 234)
+    p237Errors.push(`MILIČ-family-total ≠ 234 (${MILIC_FAMILY_TOTAL} — 53+78+20+36+47 čez 5 knjig!)`);
+  const p237PoKnjigah = MILIC_PER_BOOK.map((b) => b.mentions);
+  if (p237PoKnjigah.join(",") !== "53,78,20,36,47")
+    p237Errors.push(`MILIČ-po-knjigah ≠ [53,78,20,36,47] (${p237PoKnjigah.join(",")})`);
+  const p237PoLetih = MILIC_PER_YEAR_04104.map((y) => y.count);
+  if (p237PoLetih.join(",") !== "0,3,3,2,2,6,7,1,5,3,3,7,3,3,5")
+    p237Errors.push(`MILIČ-po-letih-04104 (1885→1871) ≠ [0,3,3,2,2,6,7,1,5,3,3,7,3,3,5] (${p237PoLetih.join(",")})`);
+  if (MILIC_PER_YEAR_04104.length !== 15 || MILIC_PER_YEAR_04104[0].year !== 1885 || MILIC_PER_YEAR_04104[14].year !== 1871)
+    p237Errors.push("MILIC_PER_YEAR_04104 ni 15 let 1885→1871");
+  // križ na enak regex direktno proti korpusu (neodvisno od modula)
+  const p237Križ = HOUSE_VITALS.filter((h) => MILIC_FAMILY_RE.test(h.whatSi)).length;
+  if (p237Križ !== 234)
+    p237Errors.push(`neodvisni-križ-proti-korpusu ≠ 234 (${p237Križ})`);
+  if (MATHIAS_H65_TOTAL !== 22)
+    p237Errors.push(`Mathias/Matija-h65-veriga ≠ 22 (${MATHIAS_H65_TOTAL})`);
+  if (MATHIAS_H65_SPAN.first !== 1871 || MATHIAS_H65_SPAN.last !== 1914)
+    p237Errors.push(`Mathias-veriga-span ≠ 1871–1914 (${MATHIAS_H65_SPAN.first}–${MATHIAS_H65_SPAN.last} — poročna 04455 1914 zaključi!)`);
+  if (H65_STATS.total !== 42 || H65_STATS.family !== 36 || H65_STATS.others !== 6)
+    p237Errors.push(`h65 ≠ {42, 36, 6} (${H65_STATS.total}/${H65_STATS.family}/${H65_STATS.others} — 04894-1907: 'h65 = MILEK-hiša!')`);
+  if (H69_TOTAL !== 25)
+    p237Errors.push(`h69 ≠ 25 blokov (${H69_TOTAL} — 04104×4 + 04106×5 + 04894×5 + 04455×2 + 04105×9!)`);
+  if (H69_ERAS.length !== 3 || H69_ERAS.reduce((s, e) => s + e.proofs, 0) !== 25)
+    p237Errors.push(`H69_ERAS ≠ 3 obdobja / 25 dokazov (${H69_ERAS.length} / ${H69_ERAS.reduce((s, e) => s + e.proofs, 0)})`);
+  if (PRIEST_CROSS["04104"] !== 3 || Object.entries(PRIEST_CROSS).some(([k, v]) => k !== "04104" && v !== 0))
+    p237Errors.push(`duhovniški-križ ≠ {04104:3, ostale:0} (${JSON.stringify(PRIEST_CROSS)})`);
+  if (MILIC_H69_OVERLAP !== 1)
+    p237Errors.push(`Milek@h69-presek ≠ 1 (${MILIC_H69_OVERLAP} — 1898 botra Katarina Milek!)`);
+  if (FORENSIC_VERDICTS.length !== 3 || FORENSIC_VERDICTS.map((v) => v.status).join(",") !== "POTRJENO,RAZREŠENO-DELNO,X-OPEN-OSTAJA")
+    p237Errors.push(`FORENSIC_VERDICTS ≠ 3 sodbe z statusi (${FORENSIC_VERDICTS.map((v) => `${v.id}:${v.status}`).join(" ")})`);
+  push(
+    "qa-p237-parish-forensics",
+    "P237: ŽUPNIJA PODZEMELJ — FORENZIKA NITI (issue #18): križni preseki sinteze P236 MERJENI čez vseh 5 knjig (04104+04105+04106+04894+04455 = 1940 blokov): **★★★ MILIČ↔MILEK-križ = ×234 blokov** (04104 ×53 · 04105 ×78 · 04106 ×20 · 04894 ×36 · 04455 ×47 — kurirani MILIČ/MILEK/MIHELČ/MILCH/Mihelt/Mihek-Kurrent-regex, brez 'Michael'-lažnih!) + **★★★ Mathias/Matija-h65-veriga ×22 blokov 1871–1914 = 43 let** (ISTI oče z 4 grafijami: Milič-1871 → Milek-1874/1877 → MILEK-1882 ×2 → Matija-04105-1887–1913 ×11 → ženin-04455-1886/1905/1914!-mrliška-04894-1907 eksplicitno 'h65 = MILEK-hiša!') + **h65 = {42 blokov · 36 družinskih · 6 ostalih (Brinc/Brune-doba 1863–1873!)}** + **★★★ h69 zgodba = 25 blokov** (04104×4 + 04105×8 + 04106×6 + 04894×5 + 04455×2): pred-Brinec-doba-10 (1859–1884: Parič/Husič/Borin/Kuss/Brune-69-let-KROP-Griblje-69!/Husič-DUEL/TERDIČ-wirth!) + **BRINEC-doba-11 (1886–1895: oče-Janez-Brinec-×5-ISTI! + mrliška ×4 + poroki ×2 = 11-dokazov-v-10-letih!)** + poznejša-menjava-4 (Straus-1898/Željko-1904+1906/Dragos-1924) + **'Vodenica' ×2 (1886 + 1924!) → h69 = VODENIŠKA-hiša (mlin!)** + Milek@h69-presek ×1 (botra-Katarina-Milek-1898 = družabna-mreža-h65↔h69!) + **duhovniški-križ NEGATIVEN** (Weisel/Wenzel/Wessely: 04104 ×3-samo-1871! · ostale-knjige ×0 → X-open pošteno OSTAJA!) + **1885 = 0 iskreno** (P236-LEAD 'z105-botra-MILEK' = ne-Griblje-vrstica-izven-korpusa!); sodbe: POTRJENO (milek-h65!) + RAZREŠENO-DELNO (h69-menjava!) + X-OPEN-OSTAJA (duhovniki!); skripta scripts/p237_parish_forensics.py (I1–I10); status FORENZIKA-NITI-POTRJENA",
+    "P237: THE PARISH OF PODZEMELJ — THE THREADS FORENSICS (issue #18): the cross-sections of the P236 synthesis MEASURED across all 5 books (04104+04105+04106+04894+04455 = 1940 blocks): **★★★ the MILIČ↔MILEK cross = ×234 blocks** (04104 ×53 · 04105 ×78 · 04106 ×20 · 04894 ×36 · 04455 ×47 — the curated MILIČ/MILEK/MIHELČ/MILCH/Mihelt/Mihek Kurrent regex, no 'Michael' false positives!) + **★★★ the Mathias/Matija h65 chain ×22 blocks 1871–1914 = 43 years** (the SAME father with 4 graphies: Milič-1871 → Milek-1874/1877 → MILEK-1882 ×2 → Matija-04105-1887–1913 ×11 → the groom-04455-1886/1905/1914! — the death register 04894 1907 explicitly 'h65 = the MILEK house!') + **h65 = {42 blocks · 36 family · 6 others (the Brinc/Brune era 1863–1873!)}** + **★★★ the h69 story = 25 blocks** (04104×4 + 04105×8 + 04106×6 + 04894×5 + 04455×2): the pre-Brinec era-10 (1859–1884: Parič/Husič/Borin/Kuss/Brune-69-years-KROP-Griblje-69!/the Husič DUEL/TERDIČ-wirth!) + **the BRINEC era-11 (1886–1895: the father Janez Brinec ×5-SAME! + deaths ×4 + marriages ×2 = 11 proofs in 10 years!)** + the later succession-4 (Straus-1898/Željko-1904+1906/Dragos-1924) + **'Miller' ×2 (1886 + 1924!) → h69 = the MILLER'S house (a mill!)** + the Milek@h69 overlap ×1 (the godmother Katarina Milek 1898 = the social network h65↔h69!) + **the priests' cross NEGATIVE** (Weisel/Wenzel/Wessely: 04104 ×3-1871-only! · the other books ×0 → the X-open honestly REMAINS!) + **1885 = 0 honest** (the P236-LEAD 'z105-godmother-MILEK' = a non-Griblje row outside the corpus!); the verdicts: CONFIRMED (milek-h65!) + PARTIALLY-RESOLVED (the h69 succession!) + X-OPEN-REMAINS (the priests!); the script scripts/p237_parish_forensics.py (I1–I10); status THE-THREADS-FORENSICS-CONFIRMED",
+    p237Errors.length === 0,
+    p237Errors.length === 0
+      ? `MILIČ-križ ×234/5-knjig · Mathias-h65-veriga ×22/1871–1914 · h65 = 42/36/6 · h69 = 25 (3 obdobja + VODENICA!) · duhovniški-križ 3/0/0/0/0 · sodbe 3 — **FORENZIKA-NITI-POTRJENA!**`
+      : p237Errors.join("; "),
   );
   }
 

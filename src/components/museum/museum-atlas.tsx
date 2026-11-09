@@ -47,6 +47,18 @@ import {
   PEZDIRC_TOTAL,
   X_OPEN_REMAINDERS,
 } from "@/data/atlas/parish-synthesis";
+import {
+  FORENSIC_VERDICTS,
+  H65_STATS,
+  H69_ERAS,
+  H69_TOTAL,
+  MATHIAS_H65_SPAN,
+  MATHIAS_H65_TOTAL,
+  MILIC_FAMILY_TOTAL,
+  MILIC_H69_OVERLAP,
+  MILIC_PER_BOOK,
+  PRIEST_CROSS,
+} from "@/data/atlas/parish-forensics";
 import { LANDUSE_ZONES, LANDUSE_ENTITIES, HAMLETS } from "@/data/atlas/landuse";
 import { getCoverage, getArchiveInventory, parishStats, getHouseStory } from "@/lib/atlas";
 import type { GeoFix } from "@/lib/geo";
@@ -1092,6 +1104,130 @@ function BaptismLineSynthesis() {
   );
 }
 
+function ParishForensics() {
+  const { t } = useLang();
+  const maxMilic = Math.max(...MILIC_PER_BOOK.map((b) => b.mentions));
+  const statusStyle: Record<string, string> = {
+    "POTRJENO": "border-emerald-600/40 bg-emerald-600/10 text-emerald-900 dark:text-emerald-100",
+    "RAZREŠENO-DELNO": "border-primary/40 bg-primary/10 text-primary",
+    "X-OPEN-OSTAJA": "border-amber-500/40 bg-amber-500/10 text-amber-900 dark:text-amber-100",
+  };
+  const statusLabel: Record<string, [string, string]> = {
+    "POTRJENO": ["potrjeno", "confirmed"],
+    "RAZREŠENO-DELNO": ["razrešeno (delno)", "partially resolved"],
+    "X-OPEN-OSTAJA": ["X-open ostaja", "X-open remains"],
+  };
+  const bookName: Record<string, string> = {
+    "04104": t("krstna predzgodovina 1871–1885", "the baptism prehistory 1871–1885"),
+    "04105": t("krstna 1886–1919", "baptisms 1886–1919"),
+    "04106": t("mrliška predzgodovina 1857–1885", "the death prehistory 1857–1885"),
+    "04894": t("mrliška 1886–1924", "deaths 1886–1924"),
+    "04455": t("poročna 1886–1922", "marriages 1886–1922"),
+  };
+
+  return (
+    <div className="rounded-xl border bg-card/60 p-5">
+      <h3 className="flex items-center gap-2 font-serif text-lg font-semibold">
+        <Users className="h-4 w-4 text-primary" aria-hidden />
+        {t(
+          "Forenzika niti (P237): križ čez vseh 5 knjig",
+          "The threads forensics (P237): a cross across all 5 books",
+        )}
+      </h3>
+      <p className="mt-2 text-sm text-muted-foreground">
+        {t(
+          `Odprti X-open vprašanja sinteze so sedaj MERJENI čez celotni korpus (${HOUSE_VITALS.length} blokov): priimek MILIČ/MILEK/MIHELČ se pojavlja v ${MILIC_FAMILY_TOTAL} blokov čez vseh 5 knjig; veriga očeta Mathias/Matija na hiši 65 traja ${MATHIAS_H65_SPAN.first}–${MATHIAS_H65_SPAN.last} (${MATHIAS_H65_TOTAL} dokazov); hiša 69 ima ${H69_TOTAL} dokazov in je vodeniška hiša. Sodbe: ${FORENSIC_VERDICTS.map((v) => t(statusLabel[v.status][0], statusLabel[v.status][1])).join(" · ")}.`,
+          `The open X-open questions of the synthesis are now MEASURED across the whole corpus (${HOUSE_VITALS.length} blocks): the surname MILIČ/MILEK/MIHELČ appears in ${MILIC_FAMILY_TOTAL} blocks across all 5 books; the father Mathias/Matija chain at house 65 spans ${MATHIAS_H65_SPAN.first}–${MATHIAS_H65_SPAN.last} (${MATHIAS_H65_TOTAL} proofs); house 69 has ${H69_TOTAL} proofs and is the miller's house. Verdicts: ${FORENSIC_VERDICTS.map((v) => t(statusLabel[v.status][0], statusLabel[v.status][1])).join(" · ")}.`,
+        )}
+      </p>
+
+      {/* MILIČ-križ po knjigah — mini stolpci */}
+      <div className="mt-4 rounded-lg border bg-background/60 p-4">
+        <h4 className="text-sm font-semibold">
+          {t("MILIČ↔MILEK-križ po knjigah", "The MILIČ↔MILEK cross by book")}
+          <span className="ml-2 rounded-full border px-2 py-0.5 text-[10px] font-medium text-primary">
+            ×{MILIC_FAMILY_TOTAL}
+          </span>
+        </h4>
+        <div className="mt-3 grid gap-2 sm:grid-cols-5">
+          {MILIC_PER_BOOK.map((b) => (
+            <div key={b.signature} className="flex flex-col items-center gap-1">
+              <span className="text-xs font-semibold tabular-nums">×{b.mentions}</span>
+              <span
+                className="w-full rounded-t-sm bg-primary/60"
+                style={{ height: Math.max(4, Math.round((b.mentions / maxMilic) * 48)) }}
+                aria-hidden
+              />
+              <span className="text-[10px] font-mono tabular-nums">{b.signature}</span>
+              <span className="text-center text-[9px] leading-tight text-muted-foreground">{bookName[b.signature]}</span>
+            </div>
+          ))}
+        </div>
+        <p className="mt-2 text-[11px] text-muted-foreground">
+          {t(
+            `Kurent-garble MILIČ/MILEK/MIHELČ = isti priimek (h65-veja 1:1): ${MATHIAS_H65_TOTAL} dokazov očeta Mathias/Matija (${MATHIAS_H65_SPAN.first}–${MATHIAS_H65_SPAN.last}); hiša 65 = ${H65_STATS.total} blokov, od tega ${H65_STATS.family} družine (mrliška 1907: »h65 = MILEK-hiša!«).`,
+            `The Kurrent garble MILIČ/MILEK/MIHELČ = one surname (the h65 branch 1:1): ${MATHIAS_H65_TOTAL} proofs of the father Mathias/Matija (${MATHIAS_H65_SPAN.first}–${MATHIAS_H65_SPAN.last}); house 65 = ${H65_STATS.total} blocks, ${H65_STATS.family} of the family (the 1907 death register: »h65 = the MILEK house!«).`,
+          )}
+        </p>
+      </div>
+
+      {/* h69 zgodba — obdobja */}
+      <div className="mt-4 rounded-lg border bg-background/60 p-4">
+        <h4 className="text-sm font-semibold">
+          {t("h69 — vodeniška hiša (mlin)", "h69 — the miller's house (a mill)")}
+          <span className="ml-2 rounded-full border px-2 py-0.5 text-[10px] font-medium text-primary">
+            {H69_TOTAL} {t("dokazov", "proofs")}
+          </span>
+        </h4>
+        <ol className="mt-2 space-y-1.5 text-xs">
+          {H69_ERAS.map((e) => (
+            <li key={e.id} className="rounded border bg-card/60 px-2.5 py-1.5">
+              <span className="font-semibold">
+                {t(e.labelSi, e.labelEn)} · {t(e.spanSi, e.spanEn)}{" "}
+              </span>
+              <span className="text-muted-foreground">— {t(e.familiesSi, e.familiesEn)}</span>
+            </li>
+          ))}
+        </ol>
+        <p className="mt-2 text-[11px] text-muted-foreground">
+          {t(
+            `»Vodenica« ×2 (1886 + 1924) + presek z Milek-družino ×${MILIC_H69_OVERLAP} (botra Katarina Milek 1898 — mreža h65↔h69).`,
+            `»Miller's wife« ×2 (1886 + 1924) + the Milek-family overlap ×${MILIC_H69_OVERLAP} (godmother Katarina Milek 1898 — the h65↔h69 network).`,
+          )}
+        </p>
+      </div>
+
+      {/* sodbe */}
+      <div className="mt-4 grid gap-3">
+        {FORENSIC_VERDICTS.map((v) => (
+          <div key={v.id} className={`rounded-lg border p-4 ${statusStyle[v.status]}`}>
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <h4 className="text-sm font-semibold">{t(v.titleSi, v.titleEn)}</h4>
+              <Badge variant="outline" className="shrink-0 bg-background/60 font-mono text-[10px]">
+                {t(statusLabel[v.status][0], statusLabel[v.status][1])}
+              </Badge>
+            </div>
+            <p className="mt-1.5 text-xs">{t(v.bodySi, v.bodyEn)}</p>
+            {v.xOpenSi && (
+              <p className="mt-2 rounded border border-dashed bg-background/60 px-2 py-1 text-[11px] text-muted-foreground">
+                X-open: {t(v.xOpenSi, v.xOpenEn ?? v.xOpenSi)}
+              </p>
+            )}
+          </div>
+        ))}
+      </div>
+
+      {/* duhovniški križ — rezultat */}
+      <p className="mt-3 text-[11px] text-muted-foreground">
+        {t(
+          `Duhovniški križ (Weisel/Wenzel/Wessely): 04104 = ${PRIEST_CROSS["04104"]} (samo 1871) · 04105 = ${PRIEST_CROSS["04105"]} · 04106 = ${PRIEST_CROSS["04106"]} · 04894 = ${PRIEST_CROSS["04894"]} · 04455 = ${PRIEST_CROSS["04455"]} — brez neodvisnega dokaza, X-open pošteno ostaja.`,
+          `The priests' cross (Weisel/Wenzel/Wessely): 04104 = ${PRIEST_CROSS["04104"]} (1871 only) · 04105 = ${PRIEST_CROSS["04105"]} · 04106 = ${PRIEST_CROSS["04106"]} · 04894 = ${PRIEST_CROSS["04894"]} · 04455 = ${PRIEST_CROSS["04455"]} — no independent proof, the X-open honestly remains.`,
+        )}
+      </p>
+    </div>
+  );
+}
+
 function ParishTab() {
   const { lang, t } = useLang();
   const [type, setType] = useState<"all" | "baptism" | "marriage" | "death">("all");
@@ -1159,6 +1295,7 @@ function ParishTab() {
 
       {/* P236: sinteza krstne predzgodovine 04104 (1871–1885) */}
       <BaptismLineSynthesis />
+      <ParishForensics />
 
       {/* brskalnik knjig */}
       <div>
