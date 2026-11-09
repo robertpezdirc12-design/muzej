@@ -11,6 +11,14 @@ import { PUA_CONTINUATION } from "@/data/atlas/research";
 import { ATLAS_OWNERS } from "@/data/atlas/model";
 import namePack from "@/data/atlas/parish-name-linkage.json";
 import {
+  BAPTISM_LINE_YEARS,
+  BAPTISM_LINE_TOTALS,
+  CROSS_YEAR_THREADS,
+  PEZDIRC_PER_YEAR,
+  PEZDIRC_TOTAL,
+  X_OPEN_REMAINDERS,
+} from "@/data/atlas/parish-synthesis";
+import {
   P81_THRESHOLD,
   P81_NEAR_MISS,
   p81BestMatch,
@@ -8198,6 +8206,44 @@ function parishChecksPart4(push: Push): void {
     p235Errors.length === 0
       ? `17 vpisov / 108-vpisov (z1–z108!-116-vrstic-−-8-DUPLIKAT!-SEKVENČNO-1:1-10/10!-TAIL-VERIGA-3/3!-z108-TAIL!) / 16-hiš-h28-DUEL-3.-LETO! · MEJA-1870/71 = ZAČETEK-KNJIGE (nalepek-'PODZEMELJ-R-1871-1885'!-KNJIGA = 15-LET-LINIJA!) · MEJA-1871/72 = s13/s14 (P234-1:1!) · DUPLIKAT-s3=s4-RESITEV (2-DUPLIKATA-KNJIGE-KOMPLET!) · DUHOVNIKI-EKSTRAHIRANI (Weisel/Dotto/Feršlan/Wessely!) · PEZDIRC-×8-'Peter'-×3-X! · MILIČ-×5 · JAKOFČIČ-×11-ish · HRIŽAN-×9 · KLOBUČAR-×5 · BRODARIČ-×5 · DRAGOŠ-×6 · DVOJČKI-z72/z73-X! · PREČRTANI-z37/z38 · NEZ-×1 · MODRI-×3-1957! · 2-PRAZNA-MESECA · **LINIJA-15/15-KOMPLETNA!** · vitals 1940 · 04104 288`
       : p235Errors.join("; "),
+  );
+  }
+
+  // ——— qa-p236: SINTEZA KRSTNE PREDZGODOVINE 04104 — 15/15 KOMPLETNA (P236; križnoletne niti + časovnica) ———
+  {
+  const p236Errors: string[] = [];
+  // Sinteza mora biti 1:1 konsistentna z runtime podatkom parish.ts — vsako leto
+  // BAPTISM_LINE_YEARS.griblje == št. blokov 04104/<leto>; skupaj == 288 (qa-p235 križ).
+  for (const yl of BAPTISM_LINE_YEARS) {
+    const runtime = HOUSE_VITALS.filter((h) => h.bookSignature === "04104" && h.year === yl.year).length;
+    if (runtime !== yl.griblje)
+      p236Errors.push(`sinteza-1871–1885/${yl.year}: griblje=${yl.griblje} ≠ runtime-bloki=${runtime} (1:1-skladnost!)`);
+  }
+  if (BAPTISM_LINE_YEARS.length !== 15)
+    p236Errors.push(`BAPTISM_LINE_YEARS ≠ 15 let (${BAPTISM_LINE_YEARS.length})`);
+  if (BAPTISM_LINE_TOTALS.entries !== 1562)
+    p236Errors.push(`seštevek-vpisov ≠ 1562 (${BAPTISM_LINE_TOTALS.entries} — 104+112+99+106+89+122+96+94+108+100+119+92+98+115+108!)`);
+  if (BAPTISM_LINE_TOTALS.griblje !== 288)
+    p236Errors.push(`seštevek-Griblje ≠ 288 (${BAPTISM_LINE_TOTALS.griblje} — mora = bloki 04104 qa-p235-križ!)`);
+  if (PEZDIRC_PER_YEAR.length !== 15 || PEZDIRC_TOTAL !== 131)
+    p236Errors.push(`PEZDIRC-continuum ≠ ×131/15-let (${PEZDIRC_TOTAL}/${PEZDIRC_PER_YEAR.length} — 4+4+6+4+9+14+12+17+11+17+5+7+8+5+8!)`);
+  if (BAPTISM_LINE_YEARS.filter((y) => y.boundaryNo >= 60 && y.boundaryNo <= 74).length !== 15)
+    p236Errors.push("meje-let niso razporejene 60.–74. potrditev (invarianta-mej!)" );
+  if (CROSS_YEAR_THREADS.length !== 5)
+    p236Errors.push(`CROSS_YEAR_THREADS ≠ 5 niti (${CROSS_YEAR_THREADS.length} — pezdirc/milek/duhovniki/hise/vzorci!)`);
+  if (X_OPEN_REMAINDERS.length !== 3)
+    p236Errors.push(`X_OPEN_REMAINDERS ≠ 3 (${X_OPEN_REMAINDERS.length} — z81-hisna/z37-z38/weisel-wessely!)`);
+  // restart-z1 v vseh 15 letih + DVOJČKI-leta = 8
+  if (BAPTISM_LINE_YEARS.filter((y) => /restart|z1 ·/.test(y.restart)).length !== 15)
+    p236Errors.push("restart-z1 ni dokumentiran za vsa 15 let");
+  push(
+    "qa-p236-parish-synthesis-04104",
+    "P236: ŽUPNIJA PODZEMELJ — SINTEZA KRSTNE PREDZGODOVINE 04104, 15/15 KOMPLETNA (issue #18): knjiga »PODZEMELJ-R-1871-1885« (nalepek 1:1, P235!) — časovnica 15 let (P221=1885 … P235=1871): **1562 vpisov / 288 Griblje-vpisov / meje 60.–74. potrditev invariante / restart-z1 v vseh 15 letih** + **★★★ PEZDIRC-continuum ×131 vrstic = edini priimek v VSEH 15 letih** (grafija-continuum Pezdirc/Perdisek/Ležir/Pedice/Pegdire/Bezdirč … — vrh ×17 (1878+1876!), dno ×5 (1875); 1:1-skaldnost z runtime-parish.ts!) + **★★★ MILIČ/MILEK/MIHELČ-hipoteza** (1871-×5-rekord ↔ MILEK-×6-1879 ↔ MILCH-garble — ista družina? X-open!) + **★★★ DUHOVNIKI** (Weisel/Wenzel?/Wessely-continuum 1871! — Dovgan-continuum + PET-duhovnikov-1873-rekord + izmenjave Hoggia↔Dovgan/Kroggj/Janičar + meje-duhovnikov = meje-let 1:1!) + **★★★ hišni continui** (h40-PEZDIRC! · h69-×3-RAZLIČNI! · h12-DRAGOŠ↔PEZDIRC · h1-×5 · h11-restart-hiša · h65-MILIČ→MILEK→PEZDIRC!) + **★★★ vzorci** (DVOJČKI-v-8/15-letih-1.-z72/z73-1871! · PREČRTANI-×4-serije · DUPLIKATI-SKENOV ×4+1-TROJNI (s60=s61=s62!) + s105-LEPLJENEC-1908-pečat + LUKNJA-'158' · NEZAKONSKI-rekordi ×6/×7!) + **X-open preostanki ×3** (z81-hisna-28/20! · z37/z38-obseg! · Weisel=Wenzel=Wessely?!); UI: časovnica-15-stolpcev + PEZDIRC-mini-grafikon + 5-niti-kartic + X-open-kartice (ParishTab!) — 1:1-skaldnost sinteze z runtime-podatkom ŽIVO preverjena (vsako leto!); skripta scripts/p236_parish_synthesis_04104.py (I1–I10); status SINTEZA-LINIE-KOMPLETNA",
+    "P236: THE PARISH OF PODZEMELJ — THE SYNTHESIS OF THE BAPTISM PREHISTORY 04104, 15/15 COMPLETE (issue #18): the book »PODZEMELJ-R-1871-1885« (a 1:1 sticker, P235!) — the 15-year timeline (P221=1885 … P235=1871): **1562 entries / 288 Griblje entries / the boundaries 60.–74. invariant confirmations / a z1-restart in all 15 years** + **★★★ the PEZDIRC continuum ×131 rows = the only surname in ALL 15 years** (a 1:1 consistency with the runtime parish.ts!) + **★★★ the MILIČ/MILEK/MIHELČ hypothesis** (one family? X-open!) + **★★★ the PRIESTS** (the Weisel/Wenzel?/Wessely continuum 1871! — the FIVE-priest-1873 record + the priest boundaries = the year boundaries 1:1!) + **★★★ the house continuums** (h40-PEZDIRC! · h69-×3-DIFFERENT! · h1-×5 · h65-MILIČ→MILEK→PEZDIRC!) + **★★★ the patterns** (TWINS in 8/15 years · STRUCK-OUTS · SCAN-DUPLICATES ×4+1-TRIPLE + the s105-PASTED-1908 seal + the '158' GAP · the illegitimate records ×6/×7!) + **the X-open remainders ×3** (z81-house-28/20! · the z37/z38 extent! · Weisel=Wenzel=Wessely?!); the UI: the 15-column timeline + the PEZDIRC mini-chart + 5 thread cards + X-open cards (ParishTab!) — the 1:1 consistency of the synthesis with the runtime data LIVE-verified (every year!); the script scripts/p236_parish_synthesis_04104.py (I1–I10); status SYNTHESIS-OF-THE-LINE-COMPLETE",
+    p236Errors.length === 0,
+    p236Errors.length === 0
+      ? `15 let sinteze 1:1-z-runtime (288-Griblje-križ!) · 1562 vpisov · PEZDIRC ×131/15-let · meje 60.–74. · restart-z1 15/15 · 5 niti + 3 X-open · **SINTEZA-LINIE-KOMPLETNA!**`
+      : p236Errors.join("; "),
   );
   }
 

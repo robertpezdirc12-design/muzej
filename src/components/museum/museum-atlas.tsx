@@ -39,6 +39,14 @@ import { ATLAS_HOUSES } from "@/data/atlas/houses";
 import { ATLAS_OWNERS, SHEET_GEOREFS } from "@/data/atlas/model";
 import { ATLAS_SOURCES, NEGATIVE_RESULTS, HERITAGE_UNITS } from "@/data/atlas/sources";
 import { PARISH, PARISH_BOOKS, HOUSE_VITALS, type HouseVital } from "@/data/atlas/parish";
+import {
+  BAPTISM_LINE_YEARS,
+  BAPTISM_LINE_TOTALS,
+  CROSS_YEAR_THREADS,
+  PEZDIRC_PER_YEAR,
+  PEZDIRC_TOTAL,
+  X_OPEN_REMAINDERS,
+} from "@/data/atlas/parish-synthesis";
 import { LANDUSE_ZONES, LANDUSE_ENTITIES, HAMLETS } from "@/data/atlas/landuse";
 import { getCoverage, getArchiveInventory, parishStats, getHouseStory } from "@/lib/atlas";
 import type { GeoFix } from "@/lib/geo";
@@ -926,6 +934,164 @@ function SourceCard({
 
 /* ——— MATRIKE 1669–1947 (issue #6): brskalnik knjig + hišne zgodbe ——— */
 
+/* P236: SINTEZA KRSTNE PREDZGODOVINE 04104 — časovnica 15 let (1871–1885 = 15/15!) */
+function BaptismLineSynthesis() {
+  const { t } = useLang();
+  const [openYear, setOpenYear] = useState<number | null>(1871);
+  const maxEntries = Math.max(...BAPTISM_LINE_YEARS.map((y) => y.entries));
+  const maxPez = Math.max(...PEZDIRC_PER_YEAR.map((y) => y.count));
+
+  return (
+    <div className="rounded-xl border bg-card/60 p-5">
+      <h3 className="flex items-center gap-2 font-serif text-lg font-semibold">
+        <Layers className="h-4 w-4 text-primary" aria-hidden />
+        {t(
+          "Krstna predzgodovina 04104: sinteza 15 let (1871–1885)",
+          "The baptism prehistory 04104: a 15-year synthesis (1871–1885)",
+        )}
+      </h3>
+      <p className="mt-2 text-sm text-muted-foreground">
+        {t(
+          `Knjiga »${BAPTISM_LINE_TOTALS.label}« (nalepek 1:1!) je s fazami P221–P235 dokumentirana od naslovnice do konca: ${BAPTISM_LINE_TOTALS.entries} vpisov, od tega ${BAPTISM_LINE_TOTALS.griblje} v Gribljih; meje let = ${BAPTISM_LINE_TOTALS.boundaryConfirmations}. potrditev invariante; restart-z1 v vseh 15 letih. Klikni stolpec za podrobnosti leta.`,
+          `The book »${BAPTISM_LINE_TOTALS.label}« (a 1:1 sticker!) was fully documented by phases P221–P235, from the title page to the end: ${BAPTISM_LINE_TOTALS.entries} entries, ${BAPTISM_LINE_TOTALS.griblje} of them in Griblje; the year boundaries = the ${BAPTISM_LINE_TOTALS.boundaryConfirmations} invariant confirmations; a z1-restart in all 15 years. Click a column for the year's details.`,
+        )}
+      </p>
+
+      {/* časovnica — 15 stolpcev */}
+      <div className="mt-4 overflow-x-auto pb-1">
+        <div
+          className="flex min-w-[640px] items-end gap-1.5 sm:min-w-0"
+          role="listbox"
+          aria-label={t("Časovnica vpisov po letih", "Entries timeline by year")}
+        >
+          {[...BAPTISM_LINE_YEARS].reverse().map((y) => {
+            const open = openYear === y.year;
+            const h = Math.round((y.entries / maxEntries) * 100);
+            const hg = Math.round((y.griblje / maxEntries) * 100);
+            return (
+              <button
+                key={y.year}
+                role="option"
+                aria-selected={open}
+                onClick={() => setOpenYear(open ? null : y.year)}
+                className={`group flex flex-1 flex-col items-center gap-1 rounded-lg border px-1 py-2 transition ${
+                  open ? "border-primary bg-accent" : "border-transparent hover:border-primary/30 hover:bg-accent/50"
+                }`}
+              >
+                <span className="text-[11px] font-semibold tabular-nums text-foreground">{y.entries}</span>
+                <span className="flex w-5 flex-col justify-end" style={{ height: 88 }} aria-hidden>
+                  <span
+                    className="w-full rounded-t-sm border border-primary/50 bg-primary/25"
+                    style={{ height: `${h}%`, display: "flex", flexDirection: "column", justifyContent: "flex-end" }}
+                  >
+                    <span className="w-full rounded-t-sm bg-primary/70" style={{ height: `${(hg / h) * 100}%` }} />
+                  </span>
+                </span>
+                <span className="text-[11px] font-medium tabular-nums">{y.year}</span>
+                <span className="text-[9px] text-muted-foreground">{y.phase}</span>
+              </button>
+            );
+          })}
+        </div>
+        <p className="mt-1 text-[10px] text-muted-foreground">
+          {t(
+            `polni stolpec = vpisi v knjigi · temnejši del = Griblje (${BAPTISM_LINE_YEARS.map((y) => y.griblje).join(" · ")})`,
+            `full column = entries in the book · darker part = Griblje (${BAPTISM_LINE_YEARS.map((y) => y.griblje).join(" · ")})`,
+          )}
+        </p>
+      </div>
+
+      {/* podrobnosti izbranega leta */}
+      {openYear != null &&
+        (() => {
+          const y = BAPTISM_LINE_YEARS.find((x) => x.year === openYear);
+          if (!y) return null;
+          return (
+            <div key={y.year} className="mt-3 rounded-lg border bg-background/60 p-4">
+              <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                <span className="font-display text-lg font-semibold tabular-nums">{y.year}</span>
+                <Badge variant="outline" className="font-mono text-[10px]">{y.phase} · {y.progress}</Badge>
+                <span className="text-sm text-muted-foreground">
+                  {t(`${y.entries} vpisov · ${y.griblje} Griblje / ${y.houses} hiš`, `${y.entries} entries · ${y.griblje} Griblje / ${y.houses} houses`)}
+                </span>
+              </div>
+              <dl className="mt-3 grid gap-x-6 gap-y-1.5 text-xs sm:grid-cols-2">
+                <div>
+                  <dt className="font-semibold text-muted-foreground">{t("okvir skenov", "scan window")}</dt>
+                  <dd>{y.scans} ({y.scanCount}) · {y.foliation}</dd>
+                </div>
+                <div>
+                  <dt className="font-semibold text-muted-foreground">{t("meja z naslednjim letom", "boundary with the next year")}</dt>
+                  <dd>{y.boundaryNext}</dd>
+                </div>
+                <div>
+                  <dt className="font-semibold text-muted-foreground">{t("restart-z1", "z1-restart")}</dt>
+                  <dd>{y.restart}</dd>
+                </div>
+              </dl>
+              <ul className="mt-3 space-y-1 text-xs">
+                {y.highlights.map((hl) => (
+                  <li key={hl} className="rounded border bg-card/60 px-2.5 py-1.5">{hl}</li>
+                ))}
+              </ul>
+            </div>
+          );
+        })()}
+
+      {/* PEZDIRC-continuum — mini grafikon */}
+      <div className="mt-5 rounded-lg border bg-background/60 p-4">
+        <h4 className="text-sm font-semibold">
+          {t("PEZDIRC-continuum", "The PEZDIRC continuum")}
+          <span className="ml-2 rounded-full border px-2 py-0.5 text-[10px] font-medium text-primary">
+            ×{PEZDIRC_TOTAL} {t("vrstic / 15 let", "rows / 15 years")}
+          </span>
+        </h4>
+        <div className="mt-2 flex items-end gap-1" aria-hidden>
+          {[...PEZDIRC_PER_YEAR].reverse().map((p) => (
+            <span key={p.year} className="flex flex-1 flex-col items-center gap-0.5">
+              <span className="text-[9px] tabular-nums text-muted-foreground">{p.count}</span>
+              <span
+                className="w-full rounded-t-sm bg-primary/60"
+                style={{ height: Math.max(4, Math.round((p.count / maxPez) * 56)) }}
+              />
+              <span className="text-[9px] tabular-nums text-muted-foreground">&rsquo;{String(p.year).slice(2)}</span>
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* križnoletne niti */}
+      <div className="mt-5 grid gap-3 md:grid-cols-2">
+        {CROSS_YEAR_THREADS.map((th) => (
+          <div key={th.id} className="rounded-lg border bg-background/60 p-4">
+            <h4 className="text-sm font-semibold">{t(th.nameSi, th.nameEn)}</h4>
+            <p className="mt-1.5 text-xs text-muted-foreground">{t(th.summarySi, th.summaryEn)}</p>
+            <p className="mt-2 text-xs">{t(th.detailSi, th.detailEn)}</p>
+            {th.xOpen && (
+              <p className="mt-2 rounded border border-amber-500/40 bg-amber-500/10 px-2 py-1 text-[11px] text-amber-900 dark:text-amber-100">
+                X-open: {t(th.xOpen, th.xOpen)}
+              </p>
+            )}
+          </div>
+        ))}
+      </div>
+
+      {/* X-open preostanki */}
+      <div className="mt-5">
+        <h4 className="text-sm font-semibold">{t("X-open preostanki (P235-LEAD)", "X-open remainders (the P235-LEAD)")}</h4>
+        <div className="mt-2 grid gap-2 md:grid-cols-3">
+          {X_OPEN_REMAINDERS.map((x) => (
+            <div key={x.id} className="rounded-lg border border-dashed p-3">
+              <div className="text-xs font-semibold">{t(x.titleSi, x.titleEn)}</div>
+              <p className="mt-1 text-[11px] text-muted-foreground">{t(x.bodySi, x.bodyEn)}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function ParishTab() {
   const { lang, t } = useLang();
   const [type, setType] = useState<"all" | "baptism" | "marriage" | "death">("all");
@@ -990,6 +1156,9 @@ function ParishTab() {
           </a>
         </div>
       </div>
+
+      {/* P236: sinteza krstne predzgodovine 04104 (1871–1885) */}
+      <BaptismLineSynthesis />
 
       {/* brskalnik knjig */}
       <div>
@@ -1073,8 +1242,8 @@ function ParishTab() {
                   </span>
                 </div>
                 <ul className="mt-3 space-y-2 text-sm">
-                  {vitals.map((v) => (
-                    <li key={`${v.year}-${v.scan}`} className="rounded border p-2">
+                  {vitals.map((v, vi) => (
+                    <li key={`${v.year}-${v.scan}-${vi}`} className="rounded border p-2">
                       <span className="font-semibold tabular-nums">{v.year}</span> —{" "}
                       {lang === "si" ? v.whatSi : v.whatEn}
                       <div className="mt-1 text-xs text-muted-foreground">
