@@ -3089,6 +3089,37 @@ export const HOUSE_VITALS: HouseVital[] = [
     whatEn: "marriage 22. Nov 1885 (entry 22) — groom Janez Jakobič [~Jakobčič], 25 y., ledig, Latan [~Lederer/Lakner-DUEL!], Griblje 13 × bride Maria Stubler [~Strohler/Hubler], 21 y., Griblje 23 [28-DUEL-X-OPEN!]; groom's parents: Mathias [~Matevž] Jakobič × Maria roj. PEZDIREC [~Pegdirre!]; bride's parents: Janez Stubler × Maria roj. Marasim [~Marašinč?]; witnesses: Matija Jakobič [~Trambe-DUEL?]; priest Franz Dovgan [~Dergan]; + [see-SI]",
     status: "DOCUMENTED" as const,
   },
+  // ——— P239: poročna PREDZGOVINA 04455, leto 1884 = 2/13 — (s52–s56; 18-vpisov-leta-1884 (števje-iz-zap-stolpca 1.–18., BREZ-preskokov!); ★★★ RESTART-1884 = s53 (velika-glava-»1884« + vpis-1 = 6.-Februar-1884-Martin-PEZDIRC!); ★★★ MEJA-1883/84 = s52→s53 (s52 = tail-1883-vpisi-8–12-vsi-»1883«!); ★★★ MEJA-1884/85 = s56-tail-vpisi-15–18 + RESTART-1885 (P238-1:1!) + ★★★ s55 = vpisi-11–14 (ULTRA-ZOOM-'11.'-dve-navpični-črti-NE-'12.'!-3:1-proti-pass1/2-misread!) + s53=1–5 · s54=6–10 · s55=11–14 · s56=15–18 → 18-VPISOV-BREZ-PRESKOKA (kontrast-1885-vpis-3-PRESKOČEN!) — 3-GRIBLJE-bloka (h54-×-h44-POLNI-GRIBLJE×2! + h47-×-h34-POLNI-GRIBLJE×2!-DVOJNI-h34-križ-z-1885-vpisom-1! + h36-NEVESTA-MILEK-mati!) + ★★★ MILEK-križ-+2 (v6-priča-MIHELČ[~Milech!] + v18-mati-ženina-Anna-roj.-MILEK[~!] = križ-235→237!) + PEZDIRC-×4-groomov-v-letu (vpis-1-Martin + vpis-2-Mathias-isti-vas-duel! + vpis-14-Janez-Črnomelj + vpis-15-Matthias-Otok-1-tail!) = PEZDIRC-CONTINUUM-04104-×131→04455-se-streže! + duhovnik-Franz-Dovgan-EDINI-vseh-18-1:1-kot-1885! + 2-X-OPEN-kandidata (v7-nevesta-Hrizan?-Griblje-2?-duel-Vrtok-5! + v10-nevesta-dekla-»Griblner-dyfla«-brez-hišne!) + vas-dueli (v1/v2-»Oslob/Podkraj/Plok«-1! + v7-»Voranci/Brasine«-13 + v9-»Boginja/Podgora/Borinja«-vas-12 + v10-»Ceroviči/Cerovica«-17 + v14-Črnomelj-152/352!) ———
+  {
+    houseNo: "54",
+    bookSignature: "04455",
+    year: 1884,
+    scan: 54,
+    page: 53,
+    whatSi: "poroka 13. Februar 1884 (vpis 6) — ženin Johann SIMEC, 24 let, ledig, Griblenski-sin [~Griblmarjev], GRIBLJE 54 × nevesta Anna STRUCELJ [~Strucli/Struch-DUEL!], 21 let, ledig, GRIBLJE 44 (½-Griblje [~]); starši ženina: Georg Simec [~]-Griblenski × Anna roj. [~]; starši neveste: Mathias Strucelj [~]-½-Griblje × Agnes KLOBUČAR [~]; priče: Mathias Klobučar + Jovan MIHELČ [~MILECH! — MILIČ↔MILEK-križ-nit-P237!]; duhovnik Franz Dovgan; + ★★★ POLNI-GRIBLJE-BLOK ×2 (h54 × h44 — 1:1-ultra-zoom-vrstice!) + ★★★ priča-MIHELČ [~Milech] = NOVI-MILIČ↔MILEK-KRIŽ-BLOK (×235→×236!) + h54-nit (04105-1886-krstna-h54-križ!) + KLOBUČAR-mreža (mati-neveste-Klobučar + priča-Klobučar-×2!) + datum-13.-Februar-(2×-1:1-nodat+full-row; pass-1-'6.-Feb'-misread!)",
+    whatEn: "marriage Feb 13, 1884 (entry 6) — groom Johann SIMEC, 24 y., ledig, a Griblje son, GRIBLJE 54 × bride Anna STRUCELJ [~Strucli/Struch-DUEL!], 21 y., ledig, GRIBLJE 44 (½-Griblje [~]); groom's parents: Georg Simec [~] × Anna née [~]; bride's parents: Mathias Strucelj [~] × Agnes KLOBUČAR [~]; witnesses: Mathias Klobučar + Jovan MIHELČ [~MILECH! — the MILIČ↔MILEK-cross-thread-P237!]; priest Franz Dovgan; + [see-SI]",
+    status: "DOCUMENTED" as const,
+  },
+  {
+    houseNo: "47",
+    bookSignature: "04455",
+    year: 1884,
+    scan: 56,
+    page: 55,
+    whatSi: "poroka 22. Juni 1884 (vpis 16) — ženin Peter HLOBUČAR, ¼-Gübler [~Zippler], 39 let [~], GRIBLJE 47 × nevesta Maria SILAH [~Kilak], Wirthstochter, 34 let, ½-GRIBLJE 34; starši neveste: Johann Silah [~Šilak] × Anna roj. Dehlin [~Dehlič — ISTI-starši-kot-1885-vpis-1-nevesta-Barbara-SILAH-h34!]; priče: Marko Hlobučar [~½-Griblje] + Mathias Mrk [~MUC!]; duhovnik Franz Dovgan; + ★★★ POLNI-GRIBLJE-BLOK ×2 (h47 × h34!) + ★★★ DVOJNI-h34-SILAH-križ: ISTI-starši (Johann-Silah × Anna-Dehlin!) kot-h34-nevesta-1885-vpis-1-(Barbara-Silah-×-Nikolaus-Pozek-h58!) = SESTRSKI-poroki-h34-1884+1885! + HLOBUČAR-nit (h47-1884 + Marko-Hlobučar-priča + 04105-štad-h47? + P238-h47-ni-bil-blok!) + MUC-priča-nit (×3-1885-continuum!)",
+    whatEn: "marriage Jun 22, 1884 (entry 16) — groom Peter HLOBUČAR, a ¼-Gütler [~Zippler], 39 y. [~], GRIBLJE 47 × bride Maria SILAH [~Kilak], a farmer's daughter, 34 y., ½-GRIBLJE 34; bride's parents: Johann Silah [~Šilak] × Anna née Dehlin [~Dehlič — the SAME parents as the 1885-entry-1 bride Barbara SILAH h34!] = SISTER-WEDDINGS-at-h34-1884+1885!; witnesses: Marko Hlobučar [~½-Griblje] + Mathias Mrk [~MUC!]; priest Franz Dovgan; + [see-SI]",
+    status: "DOCUMENTED" as const,
+  },
+  {
+    houseNo: "36",
+    bookSignature: "04455",
+    year: 1884,
+    scan: 56,
+    page: 55,
+    whatSi: "poroka 23. Novembris 1884 (vpis 18, TAIL!) — ženin Joannes MAVRIN, ½-Zippler [~Gütler], 44 let, Cerovišče [~Cerkvišče/Čečovice-DUEL!]-15 × nevesta Anna KRIZAN [~Hrizan], kmetova-hči, GRIBLJE 36; starši neveste: Marko Krizan [~Hrizan]-kmet × Anna roj. Regina [~]; starši ženina: Georg Mavrin [~Movrin!] × Anna roj. MILEK [~! — MILIČ↔MILEK-križ-nit-P237!]; priče: Georg Movrin + Mathias Jauhovič [~]; duhovnik Franz Dovgan; + ★★★ NEVESTA-GRIBLJE-h36 (P238-tail-branje-1:1!) + ★★★ mati-ženina-MILEK [~!] = NOVI-MILIČ↔MILEK-KRIŽ-BLOK (×236→×237!) + TAIL-1884-vpis-18 (zadnji-vpis-leta!-pred-RESTART-1885-na-isti-strani-s56!) + h36-nit (04104-krstna-h36-križ! + P236-sinteza) + MAVRIN/Movrin-dvojno-branje-1:1",
+    whatEn: "marriage Nov 23, 1884 (entry 18, TAIL!) — groom Joannes MAVRIN, a ½-Zippler [~Gütler], 44 y., Cerovišče [~DUEL!]-15 × bride Anna KRIZAN [~Hrizan], a farmer's daughter, GRIBLJE 36; bride's parents: Marko Krizan × Anna née Regina [~]; groom's parents: Georg Mavrin [~Movrin!] × Anna née MILEK [~! — the MILIČ↔MILEK-cross-thread-P237!]; witnesses: Georg Movrin + Mathias Jauhovič [~]; priest Franz Dovgan; + [see-SI]",
+    status: "DOCUMENTED" as const,
+  },
   // ——— P79 vzorec: polno leto 1886 (vsi Griblje vpisi, strani 1–14) ———
   {
     houseNo: "8",

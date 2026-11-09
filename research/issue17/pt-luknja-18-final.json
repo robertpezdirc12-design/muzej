@@ -1,5 +1,5 @@
 {
- "phase": "P191",
+ "phase": "P239",
  "title": "PT-luknja-18 — finalni dokazi po zaključku mrliške linije 39/39 (knjiga 04894 popolnoma digitalizirana)",
  "generatedAt": "2026-11-03T09:16:20.571Z",
  "definition": {
@@ -27,12 +27,12 @@
   "note": "p80-skripta-set 18 (PT_GAP_HOUSES) ≠ qa doc-list 15 (P80_PT_GAP = 18 brez h45/h47/h55 — dokazi geometrija/filtra)"
  },
  "corpus": {
-  "vitalsTotal": 1946,
+  "vitalsTotal": 1949,
   "byBook": {
    "04105": 502,
    "04894": 520,
    "04106": 433,
-   "04455": 203,
+   "04455": 206,
    "04104": 288
   },
   "housesDistinctAll": 95,
@@ -240,10 +240,10 @@
   },
   {
    "houseNo": "47",
-   "blocksTotal": 10,
+   "blocksTotal": 11,
    "byBook": {
     "04105": 5,
-    "04455": 0,
+    "04455": 1,
     "04106": 2,
     "04894": 3
    },
@@ -251,13 +251,11 @@
    "lastYear": 1919,
    "years": [
     1884,
-    1884,
     1887,
     1888,
     1890,
     1900,
     1911,
-    1913,
     1913,
     1919
    ],
@@ -265,7 +263,8 @@
     "krstna-04105",
     "mrliška-04894",
     "mrliška-04106-predzgodovina"
-   ]
+   ],
+   "p239Note": "P239: + poročna-04455-1884 vpis-16 (Peter HLOBUČAR × Maria SILAH-h34 — SESTRSKI-poroki-h34!)"
   },
   {
    "houseNo": "48",
@@ -432,10 +431,10 @@
   },
   {
    "houseNo": "54",
-   "blocksTotal": 13,
+   "blocksTotal": 14,
    "byBook": {
     "04105": 6,
-    "04455": 2,
+    "04455": 3,
     "04106": 3,
     "04894": 2
    },
@@ -443,11 +442,10 @@
    "lastYear": 1917,
    "years": [
     1882,
-    1882,
+    1884,
     1885,
     1886,
     1889,
-    1897,
     1897,
     1898,
     1900,
@@ -461,7 +459,8 @@
     "poročna-04455",
     "mrliška-04894",
     "mrliška-04106-predzgodovina"
-   ]
+   ],
+   "p239Note": "P239: + poročna-04455-1884 vpis-6 (Johann SIMEC-h54 × Anna STRUCELJ-h44 — POLNI-GRIBLJE!)"
   },
   {
    "houseNo": "55",

@@ -1,9 +1,11 @@
 // parish-marriage-early.ts — P238: POROČNA PREDZGOVINA 04455, leto 1885 = 1/13 NOVA LINIJA
-// Meritve so izpeljane ob zagonu IZ korpusa HOUSE_VITALS (parish.ts) — qa-p238 jih živo
-// preverja proti dokaz-seji P238 (research/issue17/parish-marriage-1885-04455.json, 2026-11-09).
+// P239: leto 1884 = 2/13 (s52–s56, 18 vpisov, RESTART = s53, 3 Griblje bloka, MILEK-križ +2!).
+// Meritve so izpeljane ob zagonu IZ korpusa HOUSE_VITALS (parish.ts) — qa-p238/qa-p239 jih živo
+// preverja proti dokaz-seji P238 (research/issue17/parish-marriage-1885-04455.json, 2026-11-09)
+// in dokaz-seji P239 (research/issue17/parish-marriage-1884-04455.json, 2026-11-09).
 // NOVA LINIJA: poročna-predzgodovina (krstna-04104-KONČANA-15/15-P236-sinteza! + forenzika-P237!).
 // Vir: poročna knjiga 04455 (Trauungs-Buch), Matricula Online — skeni s56–s61 == Pag. 55–60
-// (★★★ Pag = sken−1 RAZŠIRJENO na 55–66; prej P84: samo 61–66!).
+// (★★★ Pag = sken−1 RAZŠIRJENO na 55–66; prej P84: samo 61–66!). P239: s52–s56.
 
 import { HOUSE_VITALS } from "./parish";
 
@@ -62,3 +64,62 @@ export const OLDEST_PAIR_1885 = "48 + 49 = 97 let (vpis 21, Bruselj × Planinec)
 
 /** Najmlajša nevesta (vpis 7: 17 [~19-duel]). */
 export const YOUNGEST_BRIDE_1885 = 17;
+
+// ——— P239: leto 1884 = 2/13 — s52–s56, 18 vpisov, RESTART = s53 ———
+
+/** Bloki P239 (leto 1884) iz korpusa — izpeljano 1:1 (h54 × h44 · h47 × h34 · h36-nevesta). */
+export const MARRIAGE_1884_BLOCKS = HOUSE_VITALS.filter(
+  (h) => h.bookSignature === "04455" && h.year === 1884,
+);
+
+/** Št. Griblje porok 1884 v korpusu (meritev: 3 — 2 polna Griblje×2 + 1 Griblje-nevesta; 2 X-open NISTA bloka). */
+export const MARRIAGE_1884_GRIBLJE = MARRIAGE_1884_BLOCKS.length;
+
+/** Hiše poročne linije 1884 (merjeni vrstni-red blokov: 54, 47, 36). */
+export const MARRIAGE_1884_HOUSES = MARRIAGE_1884_BLOCKS.map((h) => h.houseNo);
+
+/** Vsi vpisi leta 1884 (meritev: 18 številčenih — zap 1.–18., BREZ preskokov!). */
+export const MARRIAGE_1884_TOTAL = 18;
+
+/** X-open kandidati 1884 (v7 nevesta Hrizan? — Griblje-2?-duel-Vrtok-5 + v10 nevesta-dekla brez hišne) — NE-bloki! */
+export const MARRIAGE_1884_XOPEN = [
+  "v7 [~X-OPEN]",
+  "v10 [~X-OPEN]",
+] as const;
+
+/** Meje leta 1884: restart = s53 (vpis 1 = 6. Februar, Martin PEZDIRC!) · meja-1883/84 = s52→s53 · meja-1884/85 = s56-tail (P238-1:1!). */
+export const MARRIAGE_1884_MEJA = {
+  restartSi: "restart-vpis-1 = 6. Februar 1884 (s53, velika-glava-»1884«, ženin Martin PEZDIRC!)",
+  restartEn: "restart-entry-1 = Feb 6, 1884 (s53, the big-»1884«-heading, groom Martin PEZDIRC!)",
+  tailSi: "tail-vpis-18 = 23. Novembris 1884 (s56, RESTART-1885-na-isti-strani!)",
+  tailEn: "tail-entry-18 = Nov 23, 1884 (s56, the 1885-restart on the same page!)",
+  boundarySi: "meja-1883/84 = s52→s53 (s52 = tail-1883-vpisi-8–12-vsi-»1883«!)",
+  boundaryEn: "the 1883/84 boundary = s52→s53 (s52 = the 1883-tail-entries-8–12-all-»1883«!)",
+} as const;
+
+/** Številčenje strani 1884 (s53=1–5 · s54=6–10 · s55=11–14 · s56=15–18) — ultra-zoom-RAZREŠITEV: s55-prva = '11.' (dve-navpični-črti, NE-'12.' — 3:1!). */
+export const MARRIAGE_1884_NUMBERING =
+  "s53 = vpisi 1–5 · s54 = 6–10 · s55 = 11–14 ('11.'-ultra-zoom-3:1!) · s56 = tail-15–18 — 18-VPISOV-BREZ-PRESKOKA (kontrast-1885-vpis-3-PRESKOČEN!)";
+
+/** PEZDIRC-nit 1884: ×4 GROOMI (vpis-1-Martin + vpis-2-Mathias-[isti-vas-duel-Oslob/Podkraj/Plok-1!] + vpis-14-Janez-Črnomelj-152/352 + vpis-15-Matthias-Otok-1-tail!) — PEZDIRC-CONTINUUM-04104-×131→04455! */
+export const PEZDIRC_1884_NIT =
+  "×4-ženini (vpis-1-Martin-30 + vpis-2-Mathias-27-isti-hiša-1! + vpis-14-Janez-Črnomelj + vpis-15-Matthias-Otok-1) + priče/starši-[~Pezdivec/Peddirec-×2]";
+
+/** MILEK-križ-nit 1884: +2 NOVA-bloka (v6-priča-Jovan-MIHELČ-[~Milech!] + v18-mati-ženina-Anna-roj.-MILEK-[~!]) — križ-235→237 (04455-48→50!). */
+export const MILEK_1884_NIT =
+  "v6-priča-MIHELČ-[~Milech!] + v18-mati-ženina-MILEK-[~!] = križ-235→237 (04455-×48→×50!)";
+
+/** Duhovnik vseh 18 vpisov 1884 (1:1-kot-1885-PRIEST_1885!). */
+export const PRIEST_1884 = "Franz Dovgan [~Dorgen/Doregan] — edini-duhovnik-vseh-18-vpisov (1:1-kot-1885!)";
+
+/** Najstarejši par leta 1884 (vpis 12: 56 + 41 = 97 let [~duel-starost!]). */
+export const OLDEST_PAIR_1884 = "56 + 41 = 97 let [~duel] (vpis 12, Jakobčič? × vdova)";
+
+/** Vase-dueli 1884 (v1/v2-'Oslob/Podkraj/Plok'-1 + v7-'Voranci/Brasine'-13 + v9-'Boginja/Podgora/Borinja'-vas-12 + v10-'Ceroviči/Cerovica'-17 + v14-'Črnomelj-152/352'). */
+export const MARRIAGE_1884_VILLAGE_DUELS = [
+  "v1/v2 »Oslob/Podkraj/Plok« 1 [~X-OPEN]",
+  "v7 »Voranci/Brasine« 13",
+  "v9 »Boginja/Podgora/Borinja« vas 12",
+  "v10 »Ceroviči/Cerovica« 17",
+  "v14 »Črnomelj 152/352«",
+] as const;

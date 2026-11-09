@@ -75,6 +75,18 @@ import {
   PRIEST_1885,
   OLDEST_PAIR_1885,
   YOUNGEST_BRIDE_1885,
+  MARRIAGE_1884_BLOCKS,
+  MARRIAGE_1884_GRIBLJE,
+  MARRIAGE_1884_HOUSES,
+  MARRIAGE_1884_TOTAL,
+  MARRIAGE_1884_XOPEN,
+  MARRIAGE_1884_MEJA,
+  MARRIAGE_1884_NUMBERING,
+  PEZDIRC_1884_NIT,
+  MILEK_1884_NIT,
+  PRIEST_1884,
+  OLDEST_PAIR_1884,
+  MARRIAGE_1884_VILLAGE_DUELS,
 } from "@/data/atlas/parish-marriage-early";
 import { LANDUSE_ZONES, LANDUSE_ENTITIES, HAMLETS } from "@/data/atlas/landuse";
 import { getCoverage, getArchiveInventory, parishStats, getHouseStory } from "@/lib/atlas";
@@ -1194,6 +1206,81 @@ function MarriageEarly1885() {
   );
 }
 
+function MarriageEarly1884() {
+  const { t } = useLang();
+  return (
+    <div className="rounded-xl border bg-card/60 p-5">
+      <h3 className="flex items-center gap-2 font-serif text-lg font-semibold">
+        <BookOpen className="h-4 w-4 text-primary" aria-hidden />
+        {t(
+          "Poročna predzgodovina 04455 (P239): leto 1884 = 2/13",
+          "The marriage prehistory 04455 (P239): the year 1884 = 2/13",
+        )}
+      </h3>
+      <p className="mt-2 text-sm text-muted-foreground">
+        {t(
+          `2/13 poročne predzgodovine (1873–1885): skeni s52–s56, ${MARRIAGE_1884_TOTAL} vpisov leta 1884 — BREZ preskokov (kontrast 1885-vpis-3!). Restart leta na s53 (vpis 1 = 6. februar, ženin Martin PEZDIRC!), meja 1883/84 = s52→s53 (s52 = tail-1883), meja 1884/85 = s56-tail-vpisi-15–18 (P238 1:1). Številčenje strani razrešeno: s53 = 1–5 · s54 = 6–10 · s55 = 11–14 (ultra-zoom: »11.« = dve navpični črti, NE »12.«!) · s56 = 15–18. Griblje: ${MARRIAGE_1884_GRIBLJE} porok (h54 × h44 · h47 × h34 · h36) + ${MARRIAGE_1884_XOPEN.length} X-open kandidata.`,
+          `2/13 of the marriage prehistory (1873–1885): scans s52–s56, ${MARRIAGE_1884_TOTAL} entries of 1884 — NO skips (in contrast to the 1885-entry-3!). The year restarts on s53 (entry 1 = Feb 6, groom Martin PEZDIRC!), the 1883/84 boundary = s52→s53 (s52 = the 1883 tail), the 1884/85 boundary = the s56-tail-entries-15–18 (P238 1:1). The page numbering resolved: s53 = 1–5 · s54 = 6–10 · s55 = 11–14 (the ultra-zoom: »11.« = two vertical strokes, NOT »12.«!) · s56 = 15–18. Griblje: ${MARRIAGE_1884_GRIBLJE} marriages (h54 × h44 · h47 × h34 · h36) + ${MARRIAGE_1884_XOPEN.length} X-open candidates.`,
+        )}
+      </p>
+
+      {/* Griblje poroke 1884 — vrstni red blokov */}
+      <div className="mt-4 rounded-lg border bg-background/60 p-4">
+        <h4 className="text-sm font-semibold">
+          {t("Griblje poroke 1884 — vrstni red blokov", "The Griblje marriages 1884 — the block order")}
+          <span className="ml-2 rounded-full border px-2 py-0.5 text-[10px] font-medium text-primary">
+            ×{MARRIAGE_1884_GRIBLJE}
+          </span>
+        </h4>
+        <div className="mt-3 grid gap-2 sm:grid-cols-3">
+          {MARRIAGE_1884_BLOCKS.map((h) => (
+            <div key={h.houseNo + h.scan} className="rounded border bg-card/60 px-2 py-1.5 text-center">
+              <div className="text-xs font-semibold tabular-nums">h{h.houseNo}</div>
+              <div className="text-[9px] text-muted-foreground">s{h.scan} · Pag. {h.page}</div>
+            </div>
+          ))}
+        </div>
+        <p className="mt-1.5 text-[11px] font-mono text-muted-foreground">{MARRIAGE_1884_HOUSES.join(" → ")}</p>
+        <p className="mt-2 text-[11px] text-muted-foreground">
+          {t(
+            `${PEZDIRC_1884_NIT}. ${MILEK_1884_NIT}`,
+            `${PEZDIRC_1884_NIT}. ${MILEK_1884_NIT}`,
+          )}
+        </p>
+      </div>
+
+      {/* anomalije */}
+      <div className="mt-4 grid gap-3">
+        <div className="rounded-lg border border-amber-500/40 bg-amber-500/10 p-4 text-amber-900 dark:text-amber-100">
+          <h4 className="text-sm font-semibold">
+            {t("Dvojni h34-SILAH-križ (sestrski poroki!)", "The double h34-SILAH cross (sister weddings!)")}
+          </h4>
+          <p className="mt-1.5 text-xs">
+            {t(
+              `Vpis 16 (22. junij 1884): nevesta Maria SILAH h34, starši Johann Silah × Anna roj. Dehlin — ISTI starši kot nevesta vpisa 1/1885 (Barbara SILAH h34 × Nikolaus Pozek h58) = SESTRSKI poroki na h34 v dveh zaporednih letih. ${OLDEST_PAIR_1884}; duhovnik: ${PRIEST_1884}.`,
+              `Entry 16 (Jun 22, 1884): the bride Maria SILAH h34, parents Johann Silah × Anna née Dehlin — THE SAME parents as the bride of entry 1/1885 (Barbara SILAH h34 × Nikolaus Pozek h58) = SISTER weddings at h34 in two consecutive years. ${OLDEST_PAIR_1884}; the priest: ${PRIEST_1884}.`,
+            )}
+          </p>
+          <p className="mt-2 text-[11px] text-muted-foreground">
+            {t(MARRIAGE_1884_MEJA.restartSi, MARRIAGE_1884_MEJA.restartEn)} · {t(MARRIAGE_1884_MEJA.boundarySi, MARRIAGE_1884_MEJA.boundaryEn)} · {t(MARRIAGE_1884_MEJA.tailSi, MARRIAGE_1884_MEJA.tailEn)}
+          </p>
+        </div>
+        <div className="rounded-lg border border-dashed p-4">
+          <h4 className="text-sm font-semibold">
+            {t("X-open kandidati + vas-dueli (pošteno ostajajo)", "X-open candidates + village duels (honestly remain)")}
+          </h4>
+          <p className="mt-1.5 text-xs text-muted-foreground">
+            {t(
+              `${MARRIAGE_1884_XOPEN.join(" · ")} — v7: nevesta Anna Hrizan? (hiša »Griblje 2«-duel-Vrtok-5!); v10: nevesta Katharina dekla »Griblner dyfla« (Griblje-brej-hišne!). Vas-dueli: ${MARRIAGE_1884_VILLAGE_DUELS.join(" · ")}. ${MARRIAGE_1884_NUMBERING}.`,
+              `${MARRIAGE_1884_XOPEN.join(" · ")} — v7: the bride Anna Hrizan? (the house »Griblje 2«-duel-Vrtok-5!); v10: the bride Katharina a maid »Griblner dyfla« (Griblje-without-a-house!). Village duels: ${MARRIAGE_1884_VILLAGE_DUELS.join(" · ")}. ${MARRIAGE_1884_NUMBERING}.`,
+            )}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function ParishForensics() {
   const { t } = useLang();
   const maxMilic = Math.max(...MILIC_PER_BOOK.map((b) => b.mentions));
@@ -1386,6 +1473,9 @@ function ParishTab() {
       {/* P236: sinteza krstne predzgodovine 04104 (1871–1885) */}
       <BaptismLineSynthesis />
       <ParishForensics />
+
+      {/* P239: poročna predzgodovina 04455 — leto 1884 = 2/13 */}
+      <MarriageEarly1884 />
 
       {/* P238: poročna predzgodovina 04455 (1873–1885) */}
       <MarriageEarly1885 />
