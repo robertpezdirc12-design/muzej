@@ -32,7 +32,7 @@ export const MILIC_PER_BOOK: MilicPerBook[] = FORENSIC_BOOKS.map((signature) => 
   };
 });
 
-/** Skupno število blokov z MILIČ-družino čez vseh 5 knjig (meritev: 234). */
+/** Skupno število blokov z MILIČ-družino čez vseh 5 knjig (meritev: 235). */
 export const MILIC_FAMILY_TOTAL = MILIC_PER_BOOK.reduce((s, b) => s + b.mentions, 0);
 
 /** MILIČ-družina v predzgodovinski krstni 04104 po letih (1885→1871, kot PEZDIRC_PER_YEAR).
@@ -156,13 +156,13 @@ export interface ForensicVerdict {
 export const FORENSIC_VERDICTS: ForensicVerdict[] = [
   {
     id: "milek-kriz",
-    titleSi: "MILIČ↔MILEK-križ: h65-veja POTRJENA (×234 blokov čez 5 knjig!)",
-    titleEn: "The MILIČ↔MILEK cross: the h65 branch CONFIRMED (×234 blocks across 5 books!)",
+    titleSi: "MILIČ↔MILEK-križ: h65-veja POTRJENA (×235 blokov čez 5 knjig!)",
+    titleEn: "The MILIČ↔MILEK cross: the h65 branch CONFIRMED (×235 blocks across 5 books!)",
     status: "POTRJENO",
     bodySi:
-      "Mathias @ h65: 1871 »Milič« (krstna 04104) → 1874 »Milek« → 1877 »Milek« → 1882 »MILEK«/»Milech«/»Mihelč« ×2 — ISTI oče zapisan z 4 grafijami čez 11 let! Krstna 04105 nadaljuje z istim očetom »Matija« 1887–1913 (×11 — MILEK/Mihelt/Mihek/Mitek/Milfelt-Kurrent) = veriga 1871–1914 = 43 let (zaključi jo poročna 04455 1914!); poročna 04455: ženin Mathias Milek 1886 (mrliška piše »Mileh« = pisateljska varianta!) + 1903 »MÜCK [~ Milek]« + 1905 nevesta Catharina MILEK — vse GRIBLJE 65; mrliška 04894 1907 eksplicitno: »h65 = MILEK-hiša!«. Skupaj 234 blokov (04104 ×53 · 04105 ×78 · 04106 ×20 · 04894 ×36 · 04455 ×47) — Kurrent-garble MILIČ/MILEK/MIHELČ = ISTI priimek (za h65-vejo 1:1). Bonus: h65 ima pred-MILEK dobo Brinc/Brune (1863–1869: Johan Brinc 43 l. + Georg Brine »Grenzwachter« 44½ l.) — BRINC/BRINEC-mreža povezuje h65 in h69!",
+      "Mathias @ h65: 1871 »Milič« (krstna 04104) → 1874 »Milek« → 1877 »Milek« → 1882 »MILEK«/»Milech«/»Mihelč« ×2 — ISTI oče zapisan z 4 grafijami čez 11 let! Krstna 04105 nadaljuje z istim očetom »Matija« 1887–1913 (×11 — MILEK/Mihelt/Mihek/Mitek/Milfelt-Kurrent) = veriga 1871–1914 = 43 let (zaključi jo poročna 04455 1914!); poročna 04455: ženin Mathias Milek 1886 (mrliška piše »Mileh« = pisateljska varianta!) + 1903 »MÜCK [~ Milek]« + 1905 nevesta Catharina MILEK — vse GRIBLJE 65; mrliška 04894 1907 eksplicitno: »h65 = MILEK-hiša!«. Skupaj 235 blokov (04104 ×53 · 04105 ×78 · 04106 ×20 · 04894 ×36 · 04455 ×48) — Kurrent-garble MILIČ/MILEK/MIHELČ = ISTI priimek (za h65-vejo 1:1). Bonus: h65 ima pred-MILEK dobo Brinc/Brune (1863–1869: Johan Brinc 43 l. + Georg Brine »Grenzwachter« 44½ l.) — BRINC/BRINEC-mreža povezuje h65 in h69!",
     bodyEn:
-      "Mathias @ h65: 1871 »Milič« (baptism 04104) → 1874 »Milek« → 1877 »Milek« → 1882 »MILEK«/»Milech«/»Mihelč« ×2 — the SAME father written with 4 graphies across 11 years! Baptism 04105 continues with the same father »Matija« 1887–1913 (×11 — the MILEK/Mihelt/Mihek/Mitek/Milfelt Kurrent) = the chain 1871–1914 = 43 years (capped by marriage 04455 1914!); marriage 04455: groom Mathias Milek 1886 (the death register writes »Mileh« = a scribe's variant!) + 1903 »MÜCK [~ Milek]« + 1905 bride Catharina MILEK — all GRIBLJE 65; death 04894 1907 explicitly: »h65 = MILEK-hiša!« (the MILEK house). 234 blocks in total (04104 ×53 · 04105 ×78 · 04106 ×20 · 04894 ×36 · 04455 ×47) — the Kurrent garble MILIČ/MILEK/MIHELČ = ONE surname (for the h65 branch 1:1). Bonus: h65 has a pre-MILEK Brinc/Brune era (1863–1869: Johan Brinc 43 y. + Georg Brine »Grenzwachter« 44½ y.) — the BRINC/BRINEC network links h65 and h69!",
+      "Mathias @ h65: 1871 »Milič« (baptism 04104) → 1874 »Milek« → 1877 »Milek« → 1882 »MILEK«/»Milech«/»Mihelč« ×2 — the SAME father written with 4 graphies across 11 years! Baptism 04105 continues with the same father »Matija« 1887–1913 (×11 — the MILEK/Mihelt/Mihek/Mitek/Milfelt Kurrent) = the chain 1871–1914 = 43 years (capped by marriage 04455 1914!); marriage 04455: groom Mathias Milek 1886 (the death register writes »Mileh« = a scribe's variant!) + 1903 »MÜCK [~ Milek]« + 1905 bride Catharina MILEK — all GRIBLJE 65; death 04894 1907 explicitly: »h65 = MILEK-hiša!« (the MILEK house). 234 blocks in total (04104 ×53 · 04105 ×78 · 04106 ×20 · 04894 ×36 · 04455 ×48) — the Kurrent garble MILIČ/MILEK/MIHELČ = ONE surname (for the h65 branch 1:1). Bonus: h65 has a pre-MILEK Brinc/Brune era (1863–1869: Johan Brinc 43 y. + Georg Brine »Grenzwachter« 44½ y.) — the BRINC/BRINEC network links h65 and h69!",
     xOpenSi:
       "Ne-h65 veje ostajajo odprte: botri 'Mathe/Mate Milič' (1871 z81/z83, h28) brez direktnega križa; MILIČ-1871-rekord ×5 oseb vključuje h23/h26 — krščenci teh vej nimajo mrliške/poročne potrditve istovetnosti.",
     xOpenEn:

@@ -59,6 +59,23 @@ import {
   MILIC_PER_BOOK,
   PRIEST_CROSS,
 } from "@/data/atlas/parish-forensics";
+import {
+  MARRIAGE_1885_BLOCKS,
+  MARRIAGE_1885_GRIBLJE,
+  MARRIAGE_1885_HOUSES,
+  MARRIAGE_1885_TOTAL,
+  MARRIAGE_1885_ZAP_SKIPPED,
+  MARRIAGE_1885_XOPEN,
+  PEZDIRC_1885,
+  LEDERER_1885,
+  BRINEC_1885,
+  MARRIAGE_1885_MEJA,
+  P84_CORRECTION,
+  MARRIAGE_1885_OUT_OF_ORDER,
+  PRIEST_1885,
+  OLDEST_PAIR_1885,
+  YOUNGEST_BRIDE_1885,
+} from "@/data/atlas/parish-marriage-early";
 import { LANDUSE_ZONES, LANDUSE_ENTITIES, HAMLETS } from "@/data/atlas/landuse";
 import { getCoverage, getArchiveInventory, parishStats, getHouseStory } from "@/lib/atlas";
 import type { GeoFix } from "@/lib/geo";
@@ -1104,6 +1121,79 @@ function BaptismLineSynthesis() {
   );
 }
 
+function MarriageEarly1885() {
+  const { t } = useLang();
+  return (
+    <div className="rounded-xl border bg-card/60 p-5">
+      <h3 className="flex items-center gap-2 font-serif text-lg font-semibold">
+        <BookOpen className="h-4 w-4 text-primary" aria-hidden />
+        {t(
+          "Poročna predzgodovina 04455 (P238): leto 1885 = 1/13",
+          "The marriage prehistory 04455 (P238): the year 1885 = 1/13",
+        )}
+      </h3>
+      <p className="mt-2 text-sm text-muted-foreground">
+        {t(
+          `NOVA LINIJA (1873–1885, descending kot krstna 04104): skeni s56–s61 == Pag. 55–60 (pravilo Pag = sken−1 razširjeno na 55–66!), ${MARRIAGE_1885_TOTAL} vpisov leta 1885 — pisar je PRESKOČIL vpis 3 (zap-stolpec: 2, 4, 5, 6). Restart leta na s56 (vpis 1 = 25. januar), meja 1885/86 na s61 (vpis 22 = 22. november + restart 1886 na isti strani). Griblje: ${MARRIAGE_1885_GRIBLJE} porok (h58 × h34 · h60 · h32 · h71 · h29? · h26 · h13 × h23/28) + ${MARRIAGE_1885_XOPEN.length} X-open vas-dueli (h29/h15/h9).`,
+          `A NEW LINE (1873–1885, descending like the baptism 04104): scans s56–s61 == Pag. 55–60 (the Pag = scan−1 rule extended to 55–66!), ${MARRIAGE_1885_TOTAL} entries of 1885 — the scribe SKIPPED entry 3 (the number column: 2, 4, 5, 6). The year restarts on s56 (entry 1 = Jan 25), the 1885/86 boundary on s61 (entry 22 = Nov 22 + the 1886 restart on the same page). Griblje: ${MARRIAGE_1885_GRIBLJE} marriages (h58 × h34 · h60 · h32 · h71 · h29? · h26 · h13 × h23/28) + ${MARRIAGE_1885_XOPEN.length} X-open village duels (h29/h15/h9).`,
+        )}
+      </p>
+
+      {/* Griblje poroke 1885 — vrstni red blokov */}
+      <div className="mt-4 rounded-lg border bg-background/60 p-4">
+        <h4 className="text-sm font-semibold">
+          {t("Griblje poroke 1885 — vrstni red blokov", "The Griblje marriages 1885 — the block order")}
+          <span className="ml-2 rounded-full border px-2 py-0.5 text-[10px] font-medium text-primary">
+            ×{MARRIAGE_1885_GRIBLJE}
+          </span>
+        </h4>
+        <div className="mt-3 grid gap-2 sm:grid-cols-7">
+          {MARRIAGE_1885_BLOCKS.map((h) => (
+            <div key={h.houseNo + h.scan} className="rounded border bg-card/60 px-2 py-1.5 text-center">
+              <div className="text-xs font-semibold tabular-nums">h{h.houseNo}</div>
+              <div className="text-[9px] text-muted-foreground">s{h.scan} · Pag. {h.page}</div>
+            </div>
+          ))}
+        </div>
+        <p className="mt-1.5 text-[11px] font-mono text-muted-foreground">{MARRIAGE_1885_HOUSES.join(" → ")}</p>
+        <p className="mt-2 text-[11px] text-muted-foreground">
+          {t(
+            `PEZDIRC ×${PEZDIRC_1885} (vpis 11 ženin 1:1 — continuum 04104 ×131 → 04455!) · BRINC/BRINEC ×${BRINEC_1885} blokov (mati roj. Brunc [~] + Georg Brinec h26 usnjar — P237-mreža širša!) · Lederer/usnjar ×${LEDERER_1885} (usnjarska veja vpisov 16–22).`,
+            `PEZDIRC ×${PEZDIRC_1885} (entry 11 the groom 1:1 — the continuum 04104 ×131 → 04455!) · BRINC/BRINEC ×${BRINEC_1885} blocks (the mother née Brunc [~] + Georg Brinec h26 tanner — the P237 network wider!) · Lederer/tanner ×${LEDERER_1885} (the tanners' branch of entries 16–22).`,
+          )}
+        </p>
+      </div>
+
+      {/* anomalije */}
+      <div className="mt-4 grid gap-3">
+        <div className="rounded-lg border border-amber-500/40 bg-amber-500/10 p-4 text-amber-900 dark:text-amber-100">
+          <h4 className="text-sm font-semibold">
+            {t("Vpis 3 PRESKOČEN (zap 2, 4, 5, 6)", "Entry 3 SKIPPED (the number column 2, 4, 5, 6)")}
+          </h4>
+          <p className="mt-1.5 text-xs">
+            {t(
+              `${MARRIAGE_1885_TOTAL} številčenih vpisov — pisar je skočil od 2 na 4 (številka ${MARRIAGE_1885_ZAP_SKIPPED} ostala prazna) (s57, ultra-zoom zap-stolpec 1:1); datum izven vrsti: vpis 7 = 7. februar vpisan PO vpisih 5–6 (8. februar). Najstarejši par: ${OLDEST_PAIR_1885}; najmlajša nevesta: ${YOUNGEST_BRIDE_1885} let; duhovnik: ${PRIEST_1885}.`,
+              `${MARRIAGE_1885_TOTAL} numbered entries — the scribe jumped from 2 to 4 (the number ${MARRIAGE_1885_ZAP_SKIPPED} left empty) (s57, the ultra-zoom number column 1:1); out of order: entry 7 = Feb 7 written AFTER entries 5–6 (Feb 8). The oldest pair: ${OLDEST_PAIR_1885}; the youngest bride: ${YOUNGEST_BRIDE_1885} y.; the priest: ${PRIEST_1885}.`,
+            )}
+          </p>
+          <p className="mt-2 text-[11px] text-muted-foreground">{t(MARRIAGE_1885_MEJA.restartSi, MARRIAGE_1885_MEJA.restartEn)} {t(MARRIAGE_1885_MEJA.tailSi, MARRIAGE_1885_MEJA.tailEn)} — {t(MARRIAGE_1885_OUT_OF_ORDER, MARRIAGE_1885_OUT_OF_ORDER)}.</p>
+        </div>
+        <div className="rounded-lg border border-dashed p-4">
+          <h4 className="text-sm font-semibold">
+            {t("X-open vas-dueli (pošteno ostajajo)", "X-open village duels (honestly remain)")}
+          </h4>
+          <p className="mt-1.5 text-xs text-muted-foreground">
+            {t(
+              `${MARRIAGE_1885_XOPEN.join(" · ")} — vpisi 11/12/13: »½-Gütl-Gern/Glob«-zapisi vs GRIBLJE (stan ≠ hiša!); hiša neveste vpisa 22: 23-vs-28-duel; veliko leto na s61: »1 8 8 6« vs krop-»1883«-misread (sidro P84: vpis 1 = 24. 1. 1886 1:1). ${P84_CORRECTION}.`,
+              `${MARRIAGE_1885_XOPEN.join(" · ")} — entries 11/12/13: the »½-Gütl-Gern/Glob« readings vs GRIBLJE (a status ≠ a house!); the bride's house of entry 22: the 23-vs-28 duel; the big year on s61: »1 8 8 6« vs the crop-»1883«-misread (the P84 anchor: entry 1 = Jan 24, 1886 1:1). ${P84_CORRECTION}.`,
+            )}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function ParishForensics() {
   const { t } = useLang();
   const maxMilic = Math.max(...MILIC_PER_BOOK.map((b) => b.mentions));
@@ -1296,6 +1386,9 @@ function ParishTab() {
       {/* P236: sinteza krstne predzgodovine 04104 (1871–1885) */}
       <BaptismLineSynthesis />
       <ParishForensics />
+
+      {/* P238: poročna predzgodovina 04455 (1873–1885) */}
+      <MarriageEarly1885 />
 
       {/* brskalnik knjig */}
       <div>
