@@ -124,7 +124,7 @@ EYES = {
          "old": {"p1": [990, 1008], "p2": [990, 1008]}, "artifact": "+9 zamik (celostranski)", "renumOffset": -9,
          "note": "oči 8×: r2–r5 = 982–985 (X8Y vzorec), r20 = 1000 (štirimestna); kontinuiteta p91 (961–80)→p92 (981–1000); P59 arbitraža 1881–1900 = isti 9→19 artefakt kot p89 p2; numerala I·IV @ r2; annRecords 998–1008 = pisano 989–999 (+9)"},
     93: {"true": [1901, 1920], "blatt": "IV", "cls": "mainRun",
-         "crossed": [1901, 1902, 1903, 1904, 1905, 1906, 1907],
+         "crossed": [1901, 1902, 1903, 1904, 1905, 1923, 1907],
          "old": {"p1": [1001, 1020], "p2": [1601, 1620]}, "artifact": "9→6/9→0 — P67 že dokazal",
          "note": "P68 renum 160x→190x izveden (re-claim 1903/1904/1905); karta 1901–1907 = 7 poligonov; prehod sekcije sredi strani (→1303+); v3 3 vrstice pravilne"},
     99: {"true": [1921, 1940], "blatt": "III", "cls": "mainRun", "crossed": [],

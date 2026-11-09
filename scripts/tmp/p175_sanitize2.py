@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """P175 stale-sanacija-2. krog: preostali stale-vzorci, ki jih P174-sanacija
-ni zajela (996-p80-pini + < 1908-guardi + >= 1906 + 297-qa-pini)."""
+ni zajela (996-p80-pini + < 1908-guardi + >= 1923 + 297-qa-pini)."""
 import glob, re, io
 
 changed = []
@@ -17,7 +17,7 @@ for path in sorted(glob.glob("scripts/p1*_parish_death_*.py")):
     # 2. I6d2-guardi — < 1908 → < 1910
     src = src.replace('all(v["year"] < 1908 for v in d04894)',
                       'all(v["year"] < 1910 for v in d04894)')
-    src = src.replace('(v["year"] or 0) >= 1906', '(v["year"] or 0) >= 1910')
+    src = src.replace('(v["year"] or 0) >= 1923', '(v["year"] or 0) >= 1910')
     # 3. I12d qa-pini — 04894").length !== 297 → !== 321
     src = src.replace("qa.count('04894\").length !== 297')",
                       "qa.count('04894\").length !== 321')")

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""P172 — verifikator MRLIŠKE knjige 04894, leto 1906 (20. → 21. polno leto).
+"""P172 — verifikator MRLIŠKE knjige 04894, leto 1923 (20. → 21. polno leto).
 Celoten neodvisen preracun iz bundled parish.ts + dokaz-JSON + qa + kaskada.
 I-checki I1–I13 (vzorec P153–P171); --live = dodatna HTTP verifikacija
 matricula-online.eu.
@@ -10,21 +10,21 @@ GLAVE-NAPAKE = REKORD-LINIJE-IZENAČEN (s104-'48/1905'-'4'-za-'1'-NOV-vzorec +
 s105-'18906' + s106/s107/s108-'187006'-×3 — pisar-'18'-navada ×5-v-1-letu!) +
 NOV DUHOVNIK #13: J. R. KUHINEK (×3-GRIBLJE + s106-DOMINANTA!) + PODLOGAR-
 kapelan-×1 + FLORJANČIČ-×2-1.-mrliški-podpisi + PEZDIREC-era-13 (×1 = era-×12-
-v-5-letih!) + BRINEC-vez (1906-ANA-vdova-h49 → 1907-ANTON-vdovec-h49!) +
+v-5-letih!) + BRINEC-vez (1923-ANA-vdova-h49 → 1907-ANTON-vdovec-h49!) +
 VLM-korekcije ×7 (imen ×4 + bolezni ×3) + h39/h77 = 1.-MRLIŠKI-VPIS-KADARKOLI
 ×2 (29.-PT-vez-kandidat!) + diag-vizualna-zaslona ×7-skenov-P170-metoda
-(rows-v3-FAIL-s107–s110!) + MEJA-1906/07 = s109 (14. POTRDITEV — P171-lead-
+(rows-v3-FAIL-s107–s110!) + MEJA-1923/07 = s109 (14. POTRDITEV — P171-lead-
 [~ s107+?]-KOREKCIJA!).
 Kumulativ: vitals 966 → 976, mrliški bloki 04894 267 → 277, p80 hiše 91
 NESPREMENJENE (h39/h77-ŽE-v-p80!), korpus 93 NESPREMENJEN, PT 29."""
 import json, os, re, sys, time, urllib.request, urllib.error
 
-DOKAZ = "research/issue17/parish-death-1906.json"
+DOKAZ = "research/issue17/parish-death-1923.json"
 BOOK_URL = "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04894/"
 UA = {"User-Agent": "Mozilla/5.0 (compatible; muzej-qa/1.0)"}
 QA_TS = "src/lib/qa-parish.ts"
 PARISH_TS = "src/data/atlas/parish.ts"
-NOTES = "research/issue17/parish-death-1906-notes.md"
+NOTES = "research/issue17/parish-death-1923-notes.md"
 
 EXPECTED_ENTRIES = 56   # 10 Griblje + 46 ne-Griblje-s-* (vključno-z-DUP-21!)
 EXPECTED_EXCLUDED = 3
@@ -99,7 +99,7 @@ def main():
     grb = [e for e in ent if not str(e["houseNo"]).endswith("*")]
 
     # ---------- I1: dokaz ----------
-    check("I1 dokaz obstaja + status", d["status"] == "SAMPLE-TRANSCRIPTION-D1906", d["status"])
+    check("I1 dokaz obstaja + status", d["status"] == "SAMPLE-TRANSCRIPTION-D1923", d["status"])
     check("I1b 56 vnosov (10-Griblje + 46-ne-Griblje-s-*!)", len(ent) == EXPECTED_ENTRIES, str(len(ent)))
     check("I1c 3 excluded / 10 anomalij / 5 križnih",
           len(d["excluded"]) == EXPECTED_EXCLUDED and len(d["anomalies"]) == EXPECTED_ANOMALIES
@@ -107,7 +107,7 @@ def main():
           f"{len(d['excluded'])}/{len(d['anomalies'])}/{len(d['crossChecks'])}")
 
     # ---------- I2: okvir ----------
-    check("I2 1906 = 55 vpisov (56-oštevilčenih!) / 10 Griblje / 9 hiš",
+    check("I2 1923 = 55 vpisov (56-oštevilčenih!) / 10 Griblje / 9 hiš",
           fr["vpisi"] == 55 and fr["zap_oštevilčenih"] == 56
           and fr["griblje_vpisi"] == 10 and fr["hise"] == 9,
           f"{fr['vpisi']}/{fr['zap_oštevilčenih']}/{fr['griblje_vpisi']}/{fr['hise']}")
@@ -138,46 +138,46 @@ def main():
 
     vit = parse_house_vitals()
     d04894 = [v for v in vit if v["bookSignature"] == "04894"]
-    d1906 = [v for v in d04894 if v["year"] == 1906]
+    d1923 = [v for v in d04894 if v["year"] == 1923]
 
     def v_hn(vlist, hn):
         return next(v for v in vlist if v["houseNo"] == hn)
 
     # ---------- I5: hišne veze (parish.ts-whatSi-long-forme!) ----------
-    e49 = v_hn(d1906, "49")
+    e49 = v_hn(d1923, "49")
     check("I5a h49-Ana-BRINEC = P171-lead-POTRJEN-×3 (kompozit-'49'-jasno-NI-'19'!)",
           "P171-lead" in e49["whatSi"] and "POTRJEN" in e49["whatSi"]
           and "BRINEC" in e49["whatSi"] and "h19" in e49["whatSi"], "")
-    e20 = v_hn(d1906, "20")
+    e20 = v_hn(d1923, "20")
     check("I5b h20-Katarina-PEZDIREC = P171-lead-POTRJEN + era-13-nadaljevanje (×12-v-5-letih!)",
           "P171-lead" in e20["whatSi"] and "PEZDIREC" in e20["whatSi"]
           and "era-13-nadaljevanje" in e20["whatSi"], "")
-    e39 = v_hn(d1906, "39")
+    e39 = v_hn(d1923, "39")
     check("I5c h39-Katarina-ŠIMEC = 1. MRLIŠKI VPIS KADARKOLI (29.-PT-vez-kandidat!)",
           "1. MRLIŠKI VPIS KADARKOLI" in e39["whatSi"] and "ŠIMEC" in e39["whatSi"]
           and "29.-PT-vez-kandidat" in e39["whatSi"], "")
-    e77 = v_hn(d1906, "77")
+    e77 = v_hn(d1923, "77")
     check("I5d h77-Jurij-JOČEK = 1. MRLIŠKI VPIS KADARKOLI (VLM-'Potokar'-ZAVRJENA!)",
           "1. MRLIŠKI VPIS KADARKOLI" in e77["whatSi"] and "JOČEK" in e77["whatSi"]
           and "Potokar" in e77["whatSi"], "")
-    e58a = [v for v in d1906 if v["houseNo"] == "58" and "10 MESECEV" in v["whatSi"]]
-    e58b = [v for v in d1906 if v["houseNo"] == "58" and "49 LET" in v["whatSi"]]
+    e58a = [v for v in d1923 if v["houseNo"] == "58" and "10 MESECEV" in v["whatSi"]]
+    e58b = [v for v in d1923 if v["houseNo"] == "58" and "49 LET" in v["whatSi"]]
     check("I5e h58-×2-v-1-letu (z29-Matija-TOŽEK-10-mes + z35-Janez-FOČEK-49!)",
           len(e58a) == 1 and len(e58b) == 1 and "TOŽEK" in e58a[0]["whatSi"]
           and "FOČEK" in e58b[0]["whatSi"] and "×2-v-1-letu" in e58b[0]["whatSi"], "")
-    e18 = v_hn(d1906, "18")
+    e18 = v_hn(d1923, "18")
     check("I5f h18-Alojzij-ŠIMEC = 6. mrliški vpis (VLM-'Timec'-ZAVRJENA!)",
           "6. mrliški vpis" in e18["whatSi"] and "Timec" in e18["whatSi"]
           and "ŠIMEC" in e18["whatSi"], "")
-    e19 = v_hn(d1906, "19")
+    e19 = v_hn(d1923, "19")
     check("I5g h19-Janez-KRIŽE = NOV-DUHOVNIK-#13-KUHINEK (1.-mrliški-podpis!)",
           "KRIŽE" in e19["whatSi"] and "KUHINEK" in e19["whatSi"]
           and "NOVI DUHOVNIK" in e19["whatSi"], "")
-    e57 = v_hn(d1906, "57")
+    e57 = v_hn(d1923, "57")
     check("I5h h57-Matija-URH = 4. mrliški vpis + podpis-BREZ (z33–z36!)",
           "4. mrliški vpis" in e57["whatSi"] and "URH" in e57["whatSi"]
           and "podpis-BREZ" in e57["whatSi"], "")
-    e44 = v_hn(d1906, "44")
+    e44 = v_hn(d1923, "44")
     check("I5i h44-Matija-ŠTRUKELJ = 2. mrliški vpis (19-letna-vrzela-1887!)",
           "2. mrliški vpis" in e44["whatSi"] and "ŠTRUKELJ" in e44["whatSi"]
           and "19-letna-vrzela" in e44["whatSi"], "")
@@ -185,10 +185,10 @@ def main():
     # ---------- I6: kumulativ + parish.ts ----------
     check("I6a vitals 976", len(vit) == VITALS_TOTAL, str(len(vit)))
     check("I6b mrliški bloki 04894 = 277", len(d04894) == BLOKI_04894, str(len(d04894)))
-    check("I6c bloki 1906 = 10", len(d1906) == 10, str(len(d1906)))
-    check("I6d bloki 1906: skeni 104–108 + stran == sken − 1",
-          all(v["scan"] and 104 <= v["scan"] <= 108 and v["page"] == v["scan"] - 1 for v in d1906), "")
-    check("I6d2 bloki 1908+ ne obstajajo (P174-lead!; P172 = 1906 sedaj v korpusu!)",
+    check("I6c bloki 1923 = 10", len(d1923) == 10, str(len(d1923)))
+    check("I6d bloki 1923: skeni 104–108 + stran == sken − 1",
+          all(v["scan"] and 104 <= v["scan"] <= 108 and v["page"] == v["scan"] - 1 for v in d1923), "")
+    check("I6d2 bloki 1908+ ne obstajajo (P174-lead!; P172 = 1923 sedaj v korpusu!)",
           all(v["year"] < 1925 for v in d04894), "")
     p80 = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
     check("I6f p80-skripta pini 976 + 91 + gap-18 (vitals-P172-kaskada!)",
@@ -221,10 +221,10 @@ def main():
     check("I8a zap-kontinuiteta (C1 — 56-oštevilčenih!)",
           "56-oštevilčenih" in c1 or "56-oštevilčenih" in c1, c1[:60])
     c5 = d["crossChecks"][4]["opis"]
-    check("I8b meja 1905/06 = s104 + meja 1906/07 = s109 (14.-POTRDITEV — KOREKCIJA!)",
-          "s104" in fr["meja_1905_06"] and "s109" in fr["meja_1906_07"]
-          and "14. POTRDITEV" in fr["meja_1906_07"]
-          and "KOREKCIJA" in fr["meja_1906_07"], "")
+    check("I8b meja 1905/06 = s104 + meja 1923/07 = s109 (14.-POTRDITEV — KOREKCIJA!)",
+          "s104" in fr["meja_1905_06"] and "s109" in fr["meja_1923_07"]
+          and "14. POTRDITEV" in fr["meja_1923_07"]
+          and "KOREKCIJA" in fr["meja_1923_07"], "")
     ns = json.dumps(d["nextSteps"], ensure_ascii=False)
     check("I8c P173-lead v dokazu (1907 + BRINEC-Anton + SPOL-KOREKCIJA!)",
           "P173-lead" in ns and "1907" in ns and "Anton-BRINEC" in ns
@@ -262,19 +262,19 @@ def main():
 
     # ---------- I10: qa-parish + pin-kaskada ----------
     qa = open(QA_TS, encoding="utf-8").read()
-    check("I10a qa-p172 = 173. kontrola", "qa-p172-parish-death-1906" in qa, "")
+    check("I10a qa-p172 = 173. kontrola", "qa-p172-parish-death-1923" in qa, "")
     check("I10b qa-parish pini 976 + 277 (P172-kaskada!)",
           qa.count("!== 1511") >= 91 and qa.count("!== 446") >= 25,
           f"976×{qa.count('!== 976')}/277×{qa.count('!== 277')}")
     check("I10c qa-parish guardi ≥1916 (20× — P172-kaskada!)",
           qa.count(">= 1916") >= 28, f"{qa.count('>= 1915')}")
-    check("I10d qa-p171-govori-P172-LEAD (1906-BRINEC-PEZDIREC!)",
-          "P172-LEAD" in qa and "1906" in qa, "")
+    check("I10d qa-p171-govori-P172-LEAD (1923-BRINEC-PEZDIREC!)",
+          "P172-LEAD" in qa and "1923" in qa, "")
 
     # ---------- I11: parish.ts-kaskada ----------
     src = open(PARISH_TS, encoding="utf-8").read()
     check("I11a P172-blok-komentar-v-parish.ts",
-          "P172: mrliška 1906" in src, "")
+          "P172: mrliška 1923" in src, "")
     check("I11b P172-10-blokov-whatSi-potrditve (BRINEC + PEZDIREC + KUHINEK + JOČEK!)",
           all(k in src for k in ["P171-lead-'zap1-Ana-BRINEC-h49-66-Jan' = POTRJEN-×3",
                                  "P171-lead-'zap6-Katarina-PEZDIREC-h20-61-Feb' = POTRJEN",
@@ -298,11 +298,11 @@ def main():
         check("I13a --live matricula-04894-dostopen", st == 200, f"HTTP {st}")
         # dokaz-številke == parish.ts-številke (1:1!)
         check("I13b dokaz-Griblje == parish.ts-Griblje (1:1!)",
-              sorted([e["houseNo"] for e in grb]) == sorted([v["houseNo"] for v in d1906]),
+              sorted([e["houseNo"] for e in grb]) == sorted([v["houseNo"] for v in d1923]),
               f"{sorted([e['houseNo'] for e in grb])}")
         check("I13c dokaz-skeni == parish.ts-skeni (1:1!)",
               sorted([(e["houseNo"], e["scan"], e["page"]) for e in grb])
-              == sorted([(v["houseNo"], v["scan"], v["page"]) for v in d1906]), "")
+              == sorted([(v["houseNo"], v["scan"], v["page"]) for v in d1923]), "")
 
     ok_n = sum(1 for _, ok, _ in results if ok)
     for name, ok, detail in results:

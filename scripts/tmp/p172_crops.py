@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""P172 — forenzični izrezi mrliške 04894, leto 1906 (skeni 104–108).
-Trakovi ×2.2 (10 Griblje-1906) + celice ×3.0 (targetirane forenzike:
+"""P172 — forenzični izrezi mrliške 04894, leto 1923 (skeni 104–108).
+Trakovi ×2.2 (10 Griblje-1923) + celice ×3.0 (targetirane forenzike:
 z1-Brinec/h49-vs-19 + z6-bolezen + z16-ime + z21-ime/Kuhinek-podpis
 + z48-ime-Joček + z54-ime-Šimec + GLAVE-napake ×4).
 yc = P172-diag-vizualno-prebrane (Read-oči ×7: s104–s110, P170-recept!)
@@ -26,7 +26,7 @@ S108 = {"z45": 390, "z46": 525, "z47": 660, "z48": 795, "z49": 930, "z50": 1065,
 GLAVA = 155  # letnica-glava y (vsi skeni)
 
 TRAKT = [
-    # --- 10 Griblje-1906 (celotne vrstice) ---
+    # --- 10 Griblje-1923 (celotne vrstice) ---
     ("griblje-s104-z1-ana-brinec", 104, S104["z1"]),
     ("griblje-s104-z6-katarina-pezdirec", 104, S104["z6"]),
     ("griblje-s105-z16-matija-strukelj", 105, S105["z16"]),
@@ -38,7 +38,7 @@ TRAKT = [
     ("griblje-s108-z48-jurij-jocek", 108, S108["z48"]),
     ("griblje-s108-z54-alojz-simec", 108, S108["z54"]),
     # --- kontekst: MEJA + 1907-z1 (s109 Brinec Ana/Anton?) ---
-    ("s104-meja-1906-pas", 104, S104["MEJA"]),
+    ("s104-meja-1923-pas", 104, S104["MEJA"]),
     ("s109-z1-anton-ali-ana-brinec", 109, 530),
     ("s109-z2-ana-veljko", 109, 660),
     ("s109-z4-ana-mec-h91", 109, 930),

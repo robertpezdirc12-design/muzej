@@ -37,7 +37,7 @@ Dve korekciji v4 (obe odstranjujeta lažne zahtevke, nobena ne izmišljuje podat
       branje); PF ujemanja = {1603, 1604, 1605} (3 ostanejo), 12 vrstic
       brez PF poligona → izpad (dokaz: removedRows, reason C2); PF
       1901–1920 izgubi lažne dvojne zahtevke p93 (ostane p98 III).
-      PF 1904/1906 izpadeta iz base seta (prazna — dokumentirana
+      PF 1904/1923 izpadeta iz base seta (prazna — dokumentirana
       praznina), PF 1603/1604/1605 dobita prve prave vrstice.
 
 Viri (vsi committed):
@@ -748,7 +748,7 @@ def compute_pair():
                           ".json)",
             "note": "C1 in C2 odstranjujeta LE lažne zahtevke — noben nov "
                     "podatek ni izmišljen; PF 1603/1604/1605 dobita prve "
-                    "prave vrstice (prej prazni!), PF 1904/1906 izpadeta "
+                    "prave vrstice (prej prazni!), PF 1904/1923 izpadeta "
                     "iz base seta (dokumentirana praznina)",
         },
         "areaProof": area_proof,
@@ -815,7 +815,7 @@ def _status_line(out_rows, excluded_rows, removed_c2, rekeyed, join_block,
         f"(Δ {area_proof['deltaPct']} %), sosledje "
         f"{spatial_proof['consecPairs']} parov / {spatial_proof['medianM']} m "
         f"({spatial_proof['enrichmentX']}×); odprte praznine: PF 1644–1655, "
-        f"1673/1679, 1842–1860, 1904/1906 brez registrskih strani "
+        f"1673/1679, 1842–1860, 1904/1923 brez registrskih strani "
         f"(modernVoid [~])"
     )
 
@@ -863,7 +863,7 @@ def _next_list() -> list:
         "LASTNIŠKO: ② SPLIT joina (33 fuzij isti-Blatt 921–1000: "
         "p49–52 × p89–92; + cross-Blatt)",
         "praznine brez registrskih strani: PF 1644–1655, 1673/1679, "
-        "1842–1860, 1904/1906 (modernVoid [~] — možnost: Abschreibung "
+        "1842–1860, 1904/1923 (modernVoid [~] — možnost: Abschreibung "
         "ali prelom številčenja; brez trditve o vzroku)",
         "P56 modernVoid 2507–2607 (87 dodatkov S2 brez sodobnih parcel) "
         "— nespremenjeno",

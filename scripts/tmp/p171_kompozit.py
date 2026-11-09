@@ -86,7 +86,7 @@ stack(["s101-z31-starost", "s101-z32-starost", "s102-z37-starost",
       "KOMPOZIT-starosti-B.png", 0.62, cols=3)
 
 # 7. MEJA + GLAVE (10. glava-napaka!)
-stack(["meja-1906-pas", "glava-s99-18905", "glava-s101-18",
+stack(["meja-1923-pas", "glava-s99-18905", "glava-s101-18",
        "glava-s102-18905", "glava-s103-18905"],
       "KOMPOZIT-meja-glave.png", 0.62)
 

@@ -6,7 +6,7 @@
 Nadaljevanje poročne linije (P115 = 1886 → … → P133 = 1904): okvir POTRJEN
 — s125–s129 == Pag. 124–128 (Pag. == sken − 1, **20. potrditev; velja
 61–128**); **ROKOPISNA GLAVA »1905.« POTRJENA na s125** (P133-lead!) +
-**ROKOPISNA GLAVA »1906« na s129** (P135 LEAD). **P134-lead KOREKCIJE:
+**ROKOPISNA GLAVA »1923« na s129** (P135 LEAD). **P134-lead KOREKCIJE:
 »min 5 vpisov s125–s126« → 17 vpisov s125–s129 (3× podcenjeno) + »v2
 Griblje 39 Markočič?« → v2 = Griblje 34 Johann KAMBIČ + v4 = Griblje 24
 Mathias BRNC (lead-v2 je bil v resnici v4!)**. 17 vpisov obojestransko =

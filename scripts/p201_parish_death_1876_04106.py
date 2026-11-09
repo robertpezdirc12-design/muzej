@@ -39,7 +39,7 @@ check("I2 hiše-1876 (file-order, h46-×2)", his == ["7", "41", "53", "46", "23"
 
 # I3: 04106-skupaj + vitals-1498
 skupaj = src.count('bookSignature: "04106"')
-check("I3 vitals-1906 + 04106==433", "HOUSE_VITALS.length !== 1906" not in src and skupaj == 433,
+check("I3 vitals-1923 + 04106==433", "HOUSE_VITALS.length !== 1923" not in src and skupaj == 433,
       f"04106-bloki={skupaj}")
 
 # I4: dokaz
@@ -55,9 +55,9 @@ check("I4 dokaz (89/20-griblje/16-anomalij + meja-s134 + NOVEMBER-falsifikacija 
 
 # I5: qa-parish
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1906")
+st = qa.count("HOUSE_VITALS.length !== 1923")
 check("I5 qa-p201 + števec-1375", "qa-p201-parish-death-1876-04106" in qa and st >= 100,
-      f"1870-številcev={st}")
+      f"1923-številcev={st}")
 
 # I6: duhovniki-1876 (P201-segment)
 i0 = src.find("P201: mrliška PREDZGODOVINA 04106, leto 1876")
@@ -82,7 +82,7 @@ check("I8g KRONOLOŠKA-NAPAKA-PISARJA (Nov-24-pred-Nov-12!)", "KRONOLOŠKA-NAPAK
 # I9: pt-luknja
 pt = json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8"))
 check("I9 pt-luknja (04106==433, vitals==1511)",
-      pt["corpus"]["byBook"]["04106"] == 433 and pt["corpus"]["vitalsTotal"] == 1906,
+      pt["corpus"]["byBook"]["04106"] == 433 and pt["corpus"]["vitalsTotal"] == 1923,
       f"04106={pt['corpus']['byBook']['04106']} vitals={pt['corpus']['vitalsTotal']}")
 
 # I10: 04894 + leta-nabor

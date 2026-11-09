@@ -64,10 +64,10 @@ patch(QA, [
     ("P168: + mrliški blok 04894-1902 h40 (Ana-PEZDIREC-59 — 1. mrliški vpis h40 = 27. PT-vez!)",
      "P168: + mrliški blok 04894-1902 h40 (Ana-PEZDIREC-59 — 1. mrliški vpis h40 = 27. PT-vez!); P175: + mrliški blok 04894-1909 h43 (Marija-LAŠIČ-64 — 3. mrliški vpis!)"),
     # 1l. qa-p93 — h18-1909-allow
-    ('!(v.bookSignature === "04894" && v.year === 1906 && hn === "18")',
-     '!(v.bookSignature === "04894" && v.year === 1906 && hn === "18") && !(v.bookSignature === "04894" && v.year === 1909 && hn === "18")'),
-    ("P172: + mrliški blok 04894-1906 h18 (Alojzij ŠIMEC — 6. mrliški!)",
-     "P172: + mrliški blok 04894-1906 h18 (Alojzij ŠIMEC — 6. mrliški!); P175: + mrliški blok 04894-1909 h18 (Peter-ŠIMEC-64 — 7. mrliški vpis!)"),
+    ('!(v.bookSignature === "04894" && v.year === 1923 && hn === "18")',
+     '!(v.bookSignature === "04894" && v.year === 1923 && hn === "18") && !(v.bookSignature === "04894" && v.year === 1909 && hn === "18")'),
+    ("P172: + mrliški blok 04894-1923 h18 (Alojzij ŠIMEC — 6. mrliški!)",
+     "P172: + mrliški blok 04894-1923 h18 (Alojzij ŠIMEC — 6. mrliški!); P175: + mrliški blok 04894-1909 h18 (Peter-ŠIMEC-64 — 7. mrliški vpis!)"),
 ], "QA")
 
 # ——— 2. parish.ts blok-komentar ———

@@ -14,7 +14,7 @@ fs.mkdirSync(OUT_DIR, { recursive: true });
 const SCANS = ['s100', 's101', 's102', 's103'];
 
 function promptFor(scan) {
-  return `To je CELLOTEN sken strani MRLIŠKE matične knjige župnije Podzemelj (leto 1904/1905/1906), slovenska Kurrent pisava (nemški gotski vpliv). Sken = ${scan}.
+  return `To je CELLOTEN sken strani MRLIŠKE matične knjige župnije Podzemelj (leto 1904/1905/1923), slovenska Kurrent pisava (nemški gotski vpliv). Sken = ${scan}.
 
 Struktura tabele (stolpci, levo → desno):
 1. Zaporedna številka vrstice (ročno; vsako leto se restarta na 1!)
@@ -33,7 +33,7 @@ PRAVILA:
 - POZOR NA KURRENT CIFRE: 4 ima zanko; 1 je ozka črtica; 7 ima prečko (γ-forma!); 5 je lahko podobna 6; 8/9 se ločita po zgornji zanki.
 - Še posebej NATAČNO pri VASI: poišči VSE vrstice, kjer je vas »Griblje« (ali varianta Griblj/Grible) — to so ključne!
 - Posebej zapiši VSE MARKERJE: letnica-glava »Leto 18 ..« (ali PRAZNA glava ali NAPAKE v glavi — npr. '18905'!), veliki cifri čez vrsto (npr. »— 1905. —«), mesečni prelomi (»Januar 1905«), prazne vrste, nove številčne kolumne (restart zaporedne številke na 1!).
-- Če stran vsebuje ZAČETEK novega leta (restart številčenja ali letnica 1906), to jasno označi z MEJA.
+- Če stran vsebuje ZAČETEK novega leta (restart številčenja ali letnica 1923), to jasno označi z MEJA.
 - Izhod: SAMO en veljaven JSON objekt (brez ograj, brez markdown):
 {"skan": "${scan}", "struktura": "opis (glave, št. vrstic, posebnosti)", "meja": "opis ali null", "vrstice": [{"vrsta": 1, "zaporedna": "1", "mesec": "Februar", "smrt": "5.", "pokop": "7.", "vas": "Griblje", "hisna": "12", "ime": "...", "stan": "...", "starost": "60 let", "bolezen": "Sušica", "previden": "1", "duhovnik": "...", "opomba": null}], "markerji": ["opis ali ..."], "opomba": "..."}`;
 }

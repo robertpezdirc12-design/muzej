@@ -323,7 +323,7 @@ def verify():
     # zgodovinske klasifikacije leta 1897 (h40: 1898 MENJAVA — Brodarič)
     vitals_pre98 = [
         v for v in vitals_all
-        if not (v["bookSignature"] == BOOK_SIGNATURE and v["year"] in (1898, 1899, 1900, 1901, 1902, 1903, 1904, 1905, 1906, 1907, 1908, 1909, 1910, 1911, 1912, 1913))
+        if not (v["bookSignature"] == BOOK_SIGNATURE and v["year"] in (1898, 1899, 1900, 1901, 1902, 1903, 1904, 1905, 1923, 1907, 1908, 1909, 1910, 1911, 1912, 1913))
     ]
     repeat_houses = sorted(
         (h for h in set(houses) if any(

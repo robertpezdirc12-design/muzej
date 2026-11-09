@@ -11,7 +11,7 @@ LINIJE + ZAPCOL-ČIST (1–51!) + ŠTRAVS-×5-v-2-letih (grozovita tragedija!)
 + h4 = 1. MRLIŠKI = 28. PT-vez + h83-agent-oči-×7-'83'-kalibracija +
 γ→7-13.–14. POTRDITEV (z38/z41-'42'→72!) + x-lekcija (starost-@1530–1770!).
 Kumulativ: vitals 921 → 938, mrliški bloki 04894 222 → 239, p80 hiše 90 → 91
-(+h4 = 1. mrliški vpis h4 = 28. PT-vez!; 04105-1906-blok-IZVEN-filtra —
+(+h4 = 1. mrliški vpis h4 = 28. PT-vez!; 04105-1923-blok-IZVEN-filtra —
 cf. h66-vzorec!), korpus 93 NESPREMENJEN, PT 27 → 28."""
 import json, os, re, sys, time, urllib.request, urllib.error
 
@@ -29,7 +29,7 @@ EXPECTED_CROSSCHECKS = 5
 GRIBLJE_HOUSES = "4,11,12,18,18,30,36,40,40,45,45,46,52,58,60,72,83"
 VITALS_TOTAL = 1511             # 1205 + 14! (P190 = KONEC-KNJIGE!)
 BLOKI_04894 = 520               # 506 + 14! (P190 = KONEC-KNJIGE!)
-P80_HOUSES = 92                  # 90 → 91 (+h4 = 28. PT-vez; 04105-1906-blok-IZVEN-filtra!)
+P80_HOUSES = 92                  # 90 → 91 (+h4 = 28. PT-vez; 04105-1923-blok-IZVEN-filtra!)
 KORPUS_HOUSES = 93               # NESPREMENJENO
 NEW_SCANS = [91, 92, 93, 94]
 
@@ -181,7 +181,7 @@ def main():
     check("I6f p80-skripta pini 950 + 91 + gap-18 (vitals-P170-kaskada!)",
           "len(vitals) == 1100" in p80 and "len(houses) == 94" in p80 and "len(gap) == 18" in p80, "")
     houses_all = {v["houseNo"] for v in vit if v["houseNo"].isdigit()}
-    check("I6g korpus = 93 hiš (NESPREMENJEN — h4 že v korpusu prek 04105-1906!)",
+    check("I6g korpus = 93 hiš (NESPREMENJEN — h4 že v korpusu prek 04105-1923!)",
           len(houses_all) == KORPUS_HOUSES, str(len(houses_all)))
 
     # ---------- I7: max-zoom forenzika (20. okvir) ----------

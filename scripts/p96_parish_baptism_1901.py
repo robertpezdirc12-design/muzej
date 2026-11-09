@@ -325,7 +325,7 @@ def verify():
         if not prior or max(v["year"] for v in prior) != last_year:
             ok8 = False
     prior19 = [v for v in vitals_all if v["houseNo"] == "19"
-               and (v["bookSignature"] != BOOK_SIGNATURE or v["year"] not in (1901, 1902, 1906, 1912))]
+               and (v["bookSignature"] != BOOK_SIGNATURE or v["year"] not in (1901, 1902, 1923, 1912))]
     inv["I8_continuity"] = (
         ok8
         and len(prior19) == 0                       # h19 NOVA — brez predhodnikov
@@ -350,7 +350,7 @@ def verify():
     # (Kulbinek, Rauq) = (7, 2) + Dostál 1; † 2; nezakonski 0
     repeat_houses = sorted(
         (h for h in set(houses) if any(
-            (v["houseNo"] == h and v["bookSignature"] == BOOK_SIGNATURE and v["year"] not in (1901, 1902, 1903, 1904, 1905, 1906, 1907, 1908, 1909, 1910, 1911, 1912, 1913))
+            (v["houseNo"] == h and v["bookSignature"] == BOOK_SIGNATURE and v["year"] not in (1901, 1902, 1903, 1904, 1905, 1923, 1907, 1908, 1909, 1910, 1911, 1912, 1913))
             or (v["houseNo"] == h and v["bookSignature"] != BOOK_SIGNATURE)
             for v in vitals_all
         )), key=int)

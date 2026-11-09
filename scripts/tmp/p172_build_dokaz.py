@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-"""P172 — gradnja dokaza parish-death-1906.json (56 vrstic = 55 vpisov + dup-21)."""
+"""P172 — gradnja dokaza parish-death-1923.json (56 vrstic = 55 vpisov + dup-21)."""
 import json
 
 D = "/tmp/p172/vlm-page"
-OUT = "/home/z/my-project/research/issue17/parish-death-1906.json"
+OUT = "/home/z/my-project/research/issue17/parish-death-1923.json"
 
 # ——— diag-korekcije (diag + KOMPOZIT-soglasje; vir: p172_diag-Read-očmi + forensic/) ———
 # (zap, sken) → popravki nad VLM-izhodom
@@ -46,7 +46,7 @@ KOR = {
     ("s105", 16): {"hisna": "44", "vas": "Griblje", "ime": "Matija ŠTRUKELJ [~ diag-'Štruelly' — KURRENT-k/l; kompozit-'Štrukelj'[~]]",
                    "stan": "oženjen oziškar [★★ VLM-'črnjen-vrtnar'-ZAVRJENA!]", "starost": "68 let",
                    "bolezen": "Pljučnica [~ diag-'Rjučnica?' — KURRENT-p/r]", "duhovnik": "H. Lengsfeld",
-                   "opomba": "h44 = 2. mrliški vpis (1887 + 1906 — 19-letna-vrzela!)"},
+                   "opomba": "h44 = 2. mrliški vpis (1887 + 1923 — 19-letna-vrzela!)"},
     ("s105", 17): {"ime": "Cecilija LEVSTIK [~ diag-'Levstik']", "stan": "možena štvancarica? [~ diag-'domačica-zmeda']", "starost": "69 let"},
     ("s105", 18): {"ime": "Jurij MAROVT [~ diag-'Marovt'; VLM-'Marencič'-zmeda]", "stan": "vdovec oziškar [~ diag-'vdovec-očitnar']",
                    "starost": "67 let (diag; VLM-'81'!)", "bolezen": "Slabost [~ VLM-'Šarost']"},
@@ -77,11 +77,11 @@ KOR = {
     ("s106", 29): {"hisna": "58", "vas": "Griblje", "ime": "Matija TOŽEK [~ diag-'Toizek/Tojzek'; VLM-'Tožek'-potrjen [~]]",
                    "stan": "¼ zemljakov sin [~ diag-'1/1[?]-zmeda']", "starost": "10 mesecev",
                    "mesec": "Avgust (diag; VLM-None!)", "bolezen": "Slabost", "duhovnik": "J. R. KUHINEK [#13!]",
-                   "opomba": "★★★ h58 = 8. mrliški vpis = REKORDISTKA-1906 + h58-×2-v-1-letu (z35!)"},
+                   "opomba": "★★★ h58 = 8. mrliški vpis = REKORDISTKA-1923 + h58-×2-v-1-letu (z35!)"},
     ("s106", 30): {"mesec": "Avgust (diag; VLM-None!)", "ime": "Ana JAKOBIČ [~ diag-'Jakobič'; VLM-'Jakobčič'-zmeda]", "starost": "2 meseca"},
     ("s106", 31): {"mesec": "Avgust (diag; VLM-None!)", "ime": "Josifa PEZDIREC [~ diag-'Josefa-Pezdirec' — PEZDIREC!]",
                    "stan": "¼ zemljakova hči [~ diag; VLM-'1/2-kumfjakova'-zmeda]", "starost": "1 mesec",
-                   "opomba": "PEZDIREC-×2-v-1906-vpisih (z6-Katarina-GRIBLJE + z31-Krasinec-ne-Griblje!)"},
+                   "opomba": "PEZDIREC-×2-v-1923-vpisih (z6-Katarina-GRIBLJE + z31-Krasinec-ne-Griblje!)"},
     ("s106", 32): {"mesec": "September (diag)", "ime": "Anton STARŠINIČ [~ diag-'Staršinič'; VLM-'Haravtič'-zmeda]", "starost": "14 dni"},
     # ——— s107 ———
     ("s107", 33): {"vas": "Klošter [~ diag-'Klost(e)r']", "ime": "Marjina POTRNIK [~ diag-'Dotromiš'-NEBERLJIVA; VLM-'Mihajla-Potoknik'-zmeda]",
@@ -89,7 +89,7 @@ KOR = {
     ("s107", 34): {"hisna": "57", "vas": "Griblje", "ime": "Matija URH [~ diag-'Urh' + VLM-potrjen!]",
                    "stan": "vdovec in vrškar [~ diag-'vrškar'; VLM-'vršhar'-zmeda]", "starost": "78 let",
                    "bolezen": "Slabost [~ diag-'Stawost']", "duhovnik": "BREZ-PODPISA (z33–z36-neodpisani!)",
-                   "opomba": "h57 = 4. mrliški vpis (1892 + 1894 + 1902 + 1906!) + URH-veriga"},
+                   "opomba": "h57 = 4. mrliški vpis (1892 + 1894 + 1902 + 1923!) + URH-veriga"},
     ("s107", 35): {"hisna": "58", "vas": "Griblje", "ime": "Janez FOČEK [~ diag-'Foček/Sosek'; kompozit-'Foček'[~]]",
                    "stan": "oženjen ¼ zemljak", "starost": "49 let",
                    "bolezen": "Nadruka [~ VLM-'Nadluka'-ZAVRJENA — r/u-KURRENT!]", "duhovnik": "BREZ-PODPISA (z33–z36!)",
@@ -112,7 +112,7 @@ KOR = {
     # ——— s108 ———
     ("s108", 45): {"ime": "Jožef JURAJEVIČ [~ diag-'Jurajevič'; VLM-'Zuanajevič'-zmeda]",
                    "bolezen": "~~Bazljenica-prečrtano~~ Črevesni katar [~ diag-'Grovers'-čolov'-zmeda]",
-                   "opomba": "VLM-'November-1905'-HALUCINACIJA — VIZUALNO-November-1906 (glava-s108-'187006'!)"},
+                   "opomba": "VLM-'November-1905'-HALUCINACIJA — VIZUALNO-November-1923 (glava-s108-'187006'!)"},
     ("s108", 46): {"ime": "Anton KUPANIČ [~ diag-'Kupanič'; VLM-'Župančič'-zmeda]", "mesec": "November (diag; VLM-None!)"},
     ("s108", 47): {"ime": "Matija KUPANIČ [~ diag-'Kupanič'; VLM-'Župančič'-zmeda]", "mesec": "November (diag; VLM-None!)"},
     ("s108", 48): {"hisna": "77", "vas": "Griblje", "ime": "Jurij JOČEK [★★★ VLM-'Potokar'-ZAVRJENA — diag-'Joček'+kompozit!]",
@@ -132,7 +132,7 @@ KOR = {
     ("s108", 54): {"hisna": "18", "vas": "Griblje", "ime": "Alojzij ŠIMEC [★★★ VLM-'Timec'-ZAVRJENA — diag-'Šimec'+kompozit!]",
                    "stan": "¼ zemljakov sin", "starost": "5 mesecev", "mesec": "December (diag; VLM-None!)",
                    "bolezen": "Božjast", "duhovnik": "St. Florijana FLORJANČIČ cap. [#14?]",
-                   "opomba": "★★★ h18 = 6. mrliški vpis + ZADNJA-GRIBLJE-1906 (meja-1906/07 = s109!)"},
+                   "opomba": "★★★ h18 = 6. mrliški vpis + ZADNJA-GRIBLJE-1923 (meja-1923/07 = s109!)"},
     ("s108", 55): {"vas": "Dolnja-v-Kandlj? [~ diag; VLM-'Boginja-vas-v-Kandiji'-zmeda]",
                    "ime": "Nikolaj VARRICA [~ diag-'Varrica/Čarica'; VLM-'Uhančič'-zmeda]", "stan": "oženjen tovariš [~ diag; VLM-'družen-posestnik'-zmeda]",
                    "starost": "32 let", "bolezen": "Tuberculosis-pulm. [~ diag]", "mesec": "December (diag; VLM-None!)"},
@@ -163,7 +163,7 @@ for scan in ["s104", "s105", "s106", "s107", "s108"]:
         is_grb = "gribl" in vas.lower()
         e = {
             "row": row, "zap": z, "houseNo": hisna if is_grb else hisna + "*",
-            "bookSignature": "04894", "year": 1906, "scan": SCAN_NO[scan],
+            "bookSignature": "04894", "year": 1923, "scan": SCAN_NO[scan],
             "page": PAGE[scan], "mesec": kor.get("mesec", v.get("mesec", "")),
             "smrt": str(v.get("smrt", "")), "pokop": str(v.get("pokop", "")),
             "vas": vas, "ime": kor.get("ime", v.get("ime", "")),
@@ -178,42 +178,42 @@ for scan in ["s104", "s105", "s106", "s107", "s108"]:
 
 grb = [e for e in entries if not str(e["houseNo"]).endswith("*")]
 dokaz = {
-    "status": "SAMPLE-TRANSCRIPTION-D1906",
+    "status": "SAMPLE-TRANSCRIPTION-D1923",
     "generated": "P172",
-    "phase": "death-1906-full-year",
+    "phase": "death-1923-full-year",
     "source": "matricula-online.eu 04894, skeni 104–108 == str. 103–107",
     "frame": {
-        "leto": 1906, "vrstic": len(entries), "zap_oštevilčenih": 56,
+        "leto": 1923, "vrstic": len(entries), "zap_oštevilčenih": 56,
         "neštevilčenih": 0, "vpisi": 55, "dup_zaporedna": "21 (s105-z21-Maj-10-Griblje + s106-z21-Maj-22-Klošter = PISAR-DUPLIKAT-1.-v-liniji!)",
         "griblje_vpisi": len(grb), "hise": len(set(e["houseNo"] for e in grb)),
         "hise_seznam": sorted(set(e["houseNo"] for e in grb), key=int),
         "ponovitve": "h58-×2 (z29-Matija-TOŽEK-10-mes + z35-Janez-FOČEK-49-let — 8-tednov-apart!)",
-        "meja_1905_06": "s104 ('— 1906 —'-VELIKOPISANO + restart zap 61→1 + Januar-podčrtan — 13. POTRDITEV 5. STIL)",
-        "meja_1906_07": "s109 (velika-'1907.' + Januar + restart zap 55→1 + glava-'187007' = 14. POTRDITEV 5. STIL; P171-lead-[~ s107+?]-KOREKCIJA-→-s109!)",
-        "glave_napake": ["s104-'Leto 48/1905'-'4'-za-'1'-NOV-vzorec!", "s105-'Leto 18906'", "s106-'Leto 18.1906'", "s107-'Leto 187006'", "s108-'Leto 187006'"] ,
+        "meja_1905_06": "s104 ('— 1923 —'-VELIKOPISANO + restart zap 61→1 + Januar-podčrtan — 13. POTRDITEV 5. STIL)",
+        "meja_1923_07": "s109 (velika-'1907.' + Januar + restart zap 55→1 + glava-'187007' = 14. POTRDITEV 5. STIL; P171-lead-[~ s107+?]-KOREKCIJA-→-s109!)",
+        "glave_napake": ["s104-'Leto 48/1905'-'4'-za-'1'-NOV-vzorec!", "s105-'Leto 18906'", "s106-'Leto 18.1923'", "s107-'Leto 187006'", "s108-'Leto 187006'"] ,
         "stran_invarianta": "stran == sken − 1 (77.–81. potrditev VIZUALNO!)",
     },
     "entries": entries,
     "excluded": [
         {"id": "X1", "opis": "s104-zap61-62 = 1905-vrstici (P171-ŽE-v-korpusu!): zap61-Anton-PEZDIREC-h42-8-mes-Dec + zap62-Gradac-h34-Ana-Hrastovšec?-72"},
-        {"id": "X2", "opis": "s109 = MEJA-1906/07 + ZAČETEK-1907 (zap1–11-Januar-1907 = P173-LEAD!): z1-Anton-BRINEC-h49-66-vdovec-SPOL-KOREKCIJA + z2-Ana-VELJKO-h1 + z4-Ana-MEC-h91 + z5-Barbara-KRISTOF?-h87 + z9-Marija-POVH-h52-'+-Janezu-Pezdirec' + z11-Alojzij-DRIŠEK?-h31 = 6-GRIBLJE-v-Januarju-SAMO!"},
+        {"id": "X2", "opis": "s109 = MEJA-1923/07 + ZAČETEK-1907 (zap1–11-Januar-1907 = P173-LEAD!): z1-Anton-BRINEC-h49-66-vdovec-SPOL-KOREKCIJA + z2-Ana-VELJKO-h1 + z4-Ana-MEC-h91 + z5-Barbara-KRISTOF?-h87 + z9-Marija-POVH-h52-'+-Janezu-Pezdirec' + z11-Alojzij-DRIŠEK?-h31 = 6-GRIBLJE-v-Januarju-SAMO!"},
         {"id": "X3", "opis": "s110 = 1907-nadaljevanje (zap12–23-Februar–Marec): z13-Anton-Veljko-h60 + z18-Matija-Urh-h32-16-let; meja-1907/08 [~ s113+?]" },
     ],
     "anomalies": [
-        {"id": "A1", "opis": "★★★ 5 GLAVE-NAPAKE = REKORD-LINIJE-IZENAČEN (P170-rekord-5!): s104-'Leto 48/1905'-'4'-za-'1'-NOV-vzorec + s105-'Leto 18906' + s106-'Leto 18.1906' + s107-'Leto 187006' + s108-'Leto 187006' — pisar-'18'-navada-×5-v-1-letu!"},
+        {"id": "A1", "opis": "★★★ 5 GLAVE-NAPAKE = REKORD-LINIJE-IZENAČEN (P170-rekord-5!): s104-'Leto 48/1905'-'4'-za-'1'-NOV-vzorec + s105-'Leto 18906' + s106-'Leto 18.1923' + s107-'Leto 187006' + s108-'Leto 187006' — pisar-'18'-navada-×5-v-1-letu!"},
         {"id": "A2", "opis": "★★★ PISAR-DUPLIKAT-zaporedna-21 = 1.-V-LINIJI: s105-z21-Maj-10-Griblje-h19-Janez-KRIŽE + s106-z21-Maj-22-Klošter-h56-Neža-SRAIJER = 56-oštevilčenih-vrstic = 55-vpisov!"},
         {"id": "A3", "opis": "★★★ NOV DUHOVNIK #13: J. R. KUHINEK (×3-GRIBLJE: z21-h19-1.-podpis + z23-h39 + z29-h58 + s106-DOMINANTA-×9-vpisov!; ×13-duhovnik-linije)"},
         {"id": "A4", "opis": "★ LEOPOLD-PODLOGAR-kapelan-×1 (s106-z25-'kap. v Črnomlju'-izven-župnijski-1.-podpis-v-liniji!)"},
         {"id": "A5", "opis": "★ FLORJANČIČ-×2-s108 (z48-z54 — 1.-mrliški-podpisi-Florjančič-vzorec!; diag-'coadj./svp'-zmede; St.-Florijana-forma)"},
         {"id": "A6", "opis": "★ PODPISI-BREZ: z33–z36-s107-neodpisani (vzorec-1904-vpisi-4–19!) + z53-starost-PRAZNA + podpis-'———'-črta"},
         {"id": "A7", "opis": "★ VLM-HALUCINACIJE-×4-imen (z48-'Potokar'→JOČEK! + z54-'Timec'→ŠIMEC! + z21-'Klinc'→KRIŽE + z16-'črnjen-vrtnar'→'oženjen-oziškar'!) — kompozit-B2-×2-potrjene!"},
-        {"id": "A8", "opis": "★ VLM-korekcije-boleznih-×3 (z1-'Šarost'→SLABOST-s/z-KURRENT + z6-'Nadluhec'→NADRUKA + z35-'Nadluka'→NADRUKA-r/u!) + z45-'November-1905'-HALUCINACIJA-VIZUALNO-Nov-1906"},
+        {"id": "A8", "opis": "★ VLM-korekcije-boleznih-×3 (z1-'Šarost'→SLABOST-s/z-KURRENT + z6-'Nadluhec'→NADRUKA + z35-'Nadluka'→NADRUKA-r/u!) + z45-'November-1905'-HALUCINACIJA-VIZUALNO-Nov-1923"},
         {"id": "A9", "opis": "★★ h58-×2-v-1-letu (z29-Matija-TOŽEK-10-mes + z35-Janez-FOČEK-49-let — 8-tednov-apart!) + h58 = 8.-vpis-REKORDISTKA-izenačen-h18-1905"},
         {"id": "A10", "opis": "★ IZVEN-ŽUPNIJE: z14-s105-'Krupa-župnija-Semič'-Jurij-POTOKAR-60 + z49-h49-Gradac-Jakob-POPIČ (h49-ISTA-št.-kot-Griblje-Brinec-NE-ISTA-vas!) + h18-PADEC-vzorec-×3-leto-zapored"},
     ],
     "crossChecks": [
         {"id": "C1", "opis": "ZAP-KONTINUITETA: zap1–9 (s104) + zap10–21 (s105) + zap21–32 (s106 — DUP-21!) + zap33–44 (s107) + zap45–55 (s108) = 56-oštevilčenih = 55-vpisov (ČISTO-LETO-z-DUPLIKATOM!)"},
-        {"id": "C2", "opis": "10 Griblje-vpisov = parish.ts-bloki-1906 (1:1!) + 9 hiš [18,19,20,39,44,49,57,58,77] (h58-×2!)"},
+        {"id": "C2", "opis": "10 Griblje-vpisov = parish.ts-bloki-1923 (1:1!) + 9 hiš [18,19,20,39,44,49,57,58,77] (h58-×2!)"},
         {"id": "C3", "opis": "duhovniki-Griblje: Lengsfeld-×3 (z1-z6-z16) + KUHINEK-×3 (z21-z23-z29) + brez-×2 (z34-z35) + Florjančič-×2 (z48-z54) = 10/10-pokriti = 4-duhovniki-v-1-letu"},
         {"id": "C4", "opis": "meseci-Griblje: Jan1·Feb1·Mar1·Maj1·Jun1·Avg1·Okt2·Dec2 = 10 ✓ + starosti-1-mes→78-let + otroška-smrt-4/10"},
         {"id": "C5", "opis": "56-vrstic == s104-9 + s105-12 + s106-12 + s107-12 + s108-11 = 56 ✓ + stran == sken − 1 (77.–81.-potrditev-VIZUALNO!)"},

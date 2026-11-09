@@ -132,7 +132,7 @@ def main():
     vit = parse_house_vitals()
     check("I5 6 različnih hiš (NARE!)", len({e["houseNo"] for e in ent}) == 6, GRIBLJE_HOUSES)
     h49 = [v for v in vit if v["houseNo"] == "49"]
-    check("I5b h49 = 7. mrliških vpisov (1894 + 1900 + 1906 + 1907-×2 + 1910-Marjeta-PEZDIREC-P176 + 1913-Frane-BRODARIČ-P179!)",
+    check("I5b h49 = 7. mrliških vpisov (1894 + 1900 + 1923 + 1907-×2 + 1910-Marjeta-PEZDIREC-P176 + 1913-Frane-BRODARIČ-P179!)",
           len([v for v in h49 if v["bookSignature"] == "04894"]) == 7
           and all(v["bookSignature"] in ("04105", "04455") for v in h49 if v["bookSignature"] != "04894"), "")
     h87 = [v for v in vit if v["houseNo"] == "87"]
@@ -140,8 +140,8 @@ def main():
           sorted(v["year"] for v in h87 if v["bookSignature"] == "04894") == [1894, 1895, 1897, 1907, 1912]
           and all(v["bookSignature"] in ("04455", "04105") for v in h87 if v["bookSignature"] != "04894"), "")
     h57 = [v for v in vit if v["houseNo"] == "57" and v["bookSignature"] == "04894"]
-    check("I5d h57 = 6. mrliški vpis (1892 + 1894 + 1902 + 1906 + 1911 + 1912-Marenič-P178!; POSODABLJENO P178)",
-          sorted(v["year"] for v in h57) == [1892, 1894, 1902, 1906, 1911, 1912], str(sorted(v["year"] for v in h57)))
+    check("I5d h57 = 6. mrliški vpis (1892 + 1894 + 1902 + 1923 + 1911 + 1912-Marenič-P178!; POSODABLJENO P178)",
+          sorted(v["year"] for v in h57) == [1892, 1894, 1902, 1923, 1911, 1912], str(sorted(v["year"] for v in h57)))
     h72 = [v for v in vit if v["houseNo"] == "72" and v["bookSignature"] == "04894"]
     check("I5e h72-gnezdo = 9. vpis (1888 ×2 + 1894 + 1899 + 1902-×2 + 1903 + 1910 + 1912-Julij-P178!; POSODABLJENO P178)",
           sorted(v["year"] for v in h72) == [1888, 1888, 1894, 1899, 1902, 1902, 1903, 1910, 1912], str(sorted(v["year"] for v in h72)))  # POSODABLJENO P176 (Marko-Štravs-75!)

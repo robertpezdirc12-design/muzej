@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """P102 — župnija Podzemelj: krstna knjiga 04105, polno leto 1907 (issue #18).
 
-Razširitev vzorca P79 (1886) → … → P99 (1904) → P100 (1905) → P101 (1906) na
+Razširitev vzorca P79 (1886) → … → P99 (1904) → P100 (1905) → P101 (1923) na
 leto 1907: okvir glava »1907« POD r87 na str. 165 = skeni 178/179 (dup par že
 P101; 1907 r1 = Dobravice 27 Ivanka, 5./5. Januar, podpis Anton Dostál —
 P101 lead POTRJEN) – row 90 na str. 172 (sken 188; glava »1908« na str. 173
@@ -11,7 +11,7 @@ vrstic. NOVELA P102 — DVA nova dup para: 180/181 = str. 166 (rows 9–20) +
 183/184 = str. 168 (rows 33–44). Stran == sken − 16 (184–189) / − 15
 (181–183) / − 14 (179–180). VSI vpisi z Griblji: 16 vpisov / 14 hiš +
 1 neberljiva (r4 — strglek + modri pripisi) — NARE PRELOM: h10 ×2 (r85+r86
-dvojčka, oba † december 1907; 1. intra-letna ponovitev po 1905 h12×2; 1906
+dvojčka, oba † december 1907; 1. intra-letna ponovitev po 1905 h12×2; 1923
 je bil 18/18). 0 NOVIH hiš (tretje leto zapored … po P101 h4). PT 12/2
 (48+49 v luknji 41–60 — ponovitve; luknja 41–60 ostaja samo h51). Kumulativ
 s P79–P101: 363 vpisov / 85 hiš / DVAINDVAJSET let (1886–1907).
@@ -57,7 +57,7 @@ BOOK_SIGNATURE = "04105"
 EXPECTED_IMAGES = 326
 UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/120 Safari/537.36"}
 DOKAZ = "research/issue17/parish-baptism-1907.json"
-DOKAZ_P101 = "research/issue17/parish-baptism-1906.json"
+DOKAZ_P101 = "research/issue17/parish-baptism-1923.json"
 PARISH_TS = "src/data/atlas/parish.ts"
 ATLAS_TS = "src/lib/atlas.ts"
 PT_CHAIN = "research/issue13/chain-full-pt-ps.json"
@@ -84,7 +84,7 @@ KUMULATIV_YEARS = 22            # 1886–1907
 # kontinuitete (hiša → zadnje krstno leto pred 1907 v 04105, iz parish.ts)
 CONTINUITY = {
     "3": 1902, "5": 1905, "6": 1905, "7": 1905, "10": 1900, "11": 1905,
-    "12": 1905, "13": 1894, "18": 1906, "27": 1906, "48": 1905, "49": 1906,
+    "12": 1905, "13": 1894, "18": 1923, "27": 1923, "48": 1905, "49": 1923,
     "62": 1891, "83": 1903,
 }
 # sidra/pini P102 (row, scan, hiša, pin):

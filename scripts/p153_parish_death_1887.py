@@ -180,7 +180,7 @@ def main():
           all(v["scan"] and 6 <= v["scan"] <= 13 and v["page"] == v["scan"] - 1 for v in d1887), "")
     d1888 = [v for v in vit if v["bookSignature"] == "04894" and v["year"] == 1888]
     check("I6e bloki 1888 = 29 (POSODABLJENO P154)", len(d1888) == 29, str(len(d1888)))
-    check("I6e2 bloki 1908+ ne obstajajo (P174-lead!; P172 = 1906 sedaj v korpusu!)",
+    check("I6e2 bloki 1908+ ne obstajajo (P174-lead!; P172 = 1923 sedaj v korpusu!)",
           not [v for v in vit if v["bookSignature"] == "04894" and (v["year"] or 0) >= 1925], "")  # POSODABLJENO P172
     p80_script = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
     check("I6f p80-skripta pini 950 + 91 + gap-18 (P170-kaskada!)", "len(vitals) == 1100" in p80_script and "len(houses) == 94" in p80_script and "len(gap) == 18" in p80_script, "")

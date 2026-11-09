@@ -5,10 +5,10 @@
 Razširitev vzorca P79 (1886) → … → P97 (1902) → P98 (1903) → P99 (1904) na
 leto 1905: okvir glava »1905« na str. 150 POD r90 (sken 160, P99 dokazano;
 1905 r1 = Gradac 45 Antonija, 2./7. Januar) – row 87 na str. 157 (sken 169;
-glava »1906« na str. 158 = sken 170/171 — 1906 r1 = »Gorn?« 34 Jožef, P101
+glava »1923« na str. 158 = sken 170/171 — 1923 r1 = »Gorn?« 34 Jožef, P101
 lead). 87 oštevilčenih vrstic. NOVELA P100 — DVA podvojena para skenov v
 okviru leta: 164/165 (str. 154, rows 40–51) + 168/169 (str. 157, rows 76–87)
-+ dup par 170/171 (str. 158) = ŽE leto 1906. Stran == sken − 10 (160–164) /
++ dup par 170/171 (str. 158) = ŽE leto 1923. Stran == sken − 10 (160–164) /
 − 11 (165–168) / − 12 (169–170) / − 13 (171+) — premik offseta za vsak dup
 par (vzorec P97 −6/−7/−8, P98 −8/−9, P99 −9/−10). Format = spread (levo
 data, desno Roditelja/Botra/Babica; naslov razporejen čez obe strani).
@@ -54,7 +54,7 @@ PARISH_TS = "src/data/atlas/parish.ts"
 ATLAS_TS = "src/lib/atlas.ts"
 PT_CHAIN = "research/issue13/chain-full-pt-ps.json"
 
-FRAME_SCANS = (160, 170)        # skeni 160 (str. 150: r90 1904 + glava 1905 + rows 1–3) – 170 (str. 158: glava 1906 + rows 1–5 1906)
+FRAME_SCANS = (160, 170)        # skeni 160 (str. 150: r90 1904 + glava 1905 + rows 1–3) – 170 (str. 158: glava 1923 + rows 1–5 1923)
 FRAME_PAGES = (150, 158)
 EXPECTED_ENTRIES = 16
 EXPECTED_DISTINCT = 15          # 16 vpisov / 15 hiš (h12 ×2 — NARE prelom)
@@ -67,7 +67,7 @@ EXPECTED_PT_IN_SET = ["1", "5", "6", "7", "11", "12", "22", "23", "25", "34", "3
 EXPECTED_PT_GAP = ["42", "48", "58"]  # ponovitve že dokazanih (42 P99, 48 P93, 58 P84) — vse v luknji 41–60
 EXPECTED_REPEATS = 15           # 16 vpisov − 1 intra-letni ponovitev (h12)
 EXPECTED_NEW_HOUSES = 0         # TRETJIKRAT v vzorcu 0 novih (po 1903–1904 mešano)
-EXPECTED_VITALS_TOTAL = 686     # POSODABLJENO P144: +1 blok 1915 (№1 h82 ISTA-HIŠA!)     # HOUSE_VITALS 307 + 16 (P100: krstna 1905); P101: + 18 (1906); P102: + 15 (1907)  # POSODABLJENO P138: 490 (era P106) → 651 (P137) → 659 (P138: + 8 poročnih blokov 1909!)
+EXPECTED_VITALS_TOTAL = 686     # POSODABLJENO P144: +1 blok 1915 (№1 h82 ISTA-HIŠA!)     # HOUSE_VITALS 307 + 16 (P100: krstna 1905); P101: + 18 (1923); P102: + 15 (1907)  # POSODABLJENO P138: 490 (era P106) → 651 (P137) → 659 (P138: + 8 poročnih blokov 1909!)
 KUMULATIV_ENTRIES = 329         # 313 + 16
 KUMULATIV_HOUSES = 84
 KUMULATIV_YEARS = 20            # 1886–1905
@@ -151,10 +151,10 @@ def parish_vitals_04105():
 
 
 def page_of_scan(scan):
-    """NOVELA P100: DVA podvojena para v okviru leta (+ en 170/171 = 1906).
+    """NOVELA P100: DVA podvojena para v okviru leta (+ en 170/171 = 1923).
     stran == sken − 10 (160–164); skeni 164/165 = str. 154 (dup par);
     stran == sken − 11 (165–168); skeni 168/169 = str. 157 (dup par);
-    stran == sken − 12 (169–170); skeni 170/171 = str. 158 (dup par, 1906);
+    stran == sken − 12 (169–170); skeni 170/171 = str. 158 (dup par, 1923);
     stran == sken − 13 (171+)."""
     if scan in (164, 165):
         return 154
@@ -203,7 +203,7 @@ def verify():
     inv["I3_cited_scans"] = dokaz["source"]["scans"] == EXPECTED_CITED
 
     # I4 — okvir leta: glava 1905 POD r90 na str. 150 (sken 160, P99 dokazano)
-    # … row 87 (sken 169, str. 157); glava 1906 na str. 158 (sken 170/171);
+    # … row 87 (sken 169, str. 157); glava 1923 na str. 158 (sken 170/171);
     # 87 vrstic; DVA dup para; page_of_scan konsistenten
     fr = dokaz["frame"]
     inv["I4_frame_year_rows"] = (
@@ -219,7 +219,7 @@ def verify():
     inv["I4_glava_notes"] = (
         "POD r90" in fr["yearStart"]["note"]
         and "Gradac 45" in fr["yearStart"]["note"]
-        and "1906" in fr["yearEnd"]["note"]
+        and "1923" in fr["yearEnd"]["note"]
         and fr["duplicateScans"]["count"] == 2
     )
 

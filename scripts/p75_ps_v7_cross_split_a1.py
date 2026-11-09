@@ -752,7 +752,7 @@ def _next_list() -> list:
         "LASTNIŠKO: per-Blatt instance sekcij (56 vrstic; P60 moda B / PF "
         "protokol)",
         "praznine brez registrskih strani: PF 1644–1655, 1673/1679, "
-        "1842–1860, 1904/1906 (modernVoid [~])",
+        "1842–1860, 1904/1923 (modernVoid [~])",
         "operacijsko: GitHub Actions billing (#7)",
     ]
 
