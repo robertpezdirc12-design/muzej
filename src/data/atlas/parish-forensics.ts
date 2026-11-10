@@ -70,7 +70,7 @@ export const H65_STATS = (() => {
   return { total: vsi.length, family: druzina.length, others: vsi.length - druzina.length };
 })();
 
-/** h69 zgodba — vseh 25 blokov čez 5 knjig (04104×4 · 04105×8 · 04106×6 · 04894×5 · 04455×2). */
+/** h69 zgodba — vseh 26 blokov čez 5 knjig (04104×4 · 04105×9 · 04106×5 · 04894×5 · 04455×3 — P247: +04455-1877!). */
 export const H69_TOTAL = HOUSE_VITALS.filter((h) => h.houseNo === "69").length;
 
 export interface H69Era {
@@ -84,17 +84,17 @@ export interface H69Era {
   familiesEn: string;
 }
 
-/** Obdobja h69: pred-Brinec (10) + BRINEC-doba (11) + poznejša menjava (4) = 25. */
+/** Obdobja h69: pred-Brinec (11 — P247: +04455-1877-nevesta-Allešič-'Brinc'-opomba!) + BRINEC-doba (11) + poznejša menjava (4) = 26. */
 export const H69_ERAS: H69Era[] = [
   {
     id: "pred-brinec",
     labelSi: "Pred-Brinec doba",
     labelEn: "The pre-Brinec era",
-    spanSi: "1859–1884",
-    spanEn: "1859–1884",
-    proofs: 10,
+    spanSi: "1859–1884 (+ 1877-poročna-04455!)",
+    spanEn: "1859–1884 (+ the-1877-04455-marriage!)",
+    proofs: 11,
     familiesSi:
-      "Parič (1859) · Husič (1871) · Borin (1872) · Kuss (1873) · Brinc/Brune-priselitev (1874: 69-letni Joannes Brune umrl @h69 — KROP »Griblje-69« jasno!) · Husič-DUEL (1875) · TERDIČ-wirth (1882) · oče-PRAZNO (1884) · otrok-BRINE (04106-1884)",
+      "Parič (1859) · Husič (1871) · Borin (1872) · Kuss (1873) · Brinc/Brune-priselitev (1874: 69-letni Joannes Brune umrl @h69 — KROP »Griblje-69« jasno!) · Husič-DUEL (1875) · TERDIČ-wirth (1882) · oče-PRAZNO (1884) · otrok-BRINE (04106-1884) · poročna-04455-1877 (nevesta-Katharina-Allešič-'vmožitva/Witwe-BRINC'-opomba! — P247!)",
     familiesEn:
       "Parič (1859) · Husič (1871) · Borin (1872) · Kuss (1873) · the Brinc/Brune arrival (1874: the 69-year-old Joannes Brune died @h69 — the KROP »Griblje-69« clear!) · the Husič DUEL (1875) · TERDIČ-wirth (1882) · the empty father (1884) · the BRINE child (04106-1884)",
   },

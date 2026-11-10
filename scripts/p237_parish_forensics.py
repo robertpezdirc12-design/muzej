@@ -29,11 +29,11 @@ for m in BLOK_RE.finditer(src):
     house, sig, year, what = m.group(1), m.group(2), int(m.group(3)), m.group(4)
     bloki.append({"house": house, "sig": sig, "year": year, "what": what})
 
-check("I1 korpus razčlenjen == 1985 blokov (križ z HOUSE_VITALS) — P244-živo!",
-      len(bloki) == 1985, f"razčlenjenih={len(bloki)}")
+check("I1 korpus razčlenjen == 1990 blokov (križ z HOUSE_VITALS) — P244-živo!",
+      len(bloki) == 1990, f"razčlenjenih={len(bloki)}")
 po_knjigi = {k: sum(1 for b in bloki if b["sig"] == k) for k in ("04104", "04105", "04106", "04894", "04455")}
 check("I1b bloki-po-knjigah == {04104:288, 04105:502, 04106:433, 04894:520, 04455:242} (P246-živo!)",
-      po_knjigi == {"04104": 288, "04105": 502, "04106": 433, "04894": 520, "04455": 242},
+      po_knjigi == {"04104": 288, "04105": 502, "04106": 433, "04894": 520, "04455": 247},
       ",".join(f"{k}:{v}" for k, v in po_knjigi.items()))
 
 milic_po_knjigi = {k: sum(1 for b in bloki if b["sig"] == k and MILIC_RE.search(b["what"])) for k in po_knjigi}
@@ -62,8 +62,8 @@ check("I4b Mathias/Matija-h65-veriga == 22 blokov · span 1871–1914 (43 let!)"
 h69 = [b for b in bloki if b["house"] == "69"]
 h69_knjige = {k: sum(1 for b in h69 if b["sig"] == k) for k in ("04104", "04105", "04106", "04894", "04455")}
 h69_milek = [b for b in h69 if MILIC_RE.search(b["what"])]
-check("I5 h69 == 25 blokov (4+8+6+5+2!) · Milek@h69-presek == 1 (botra-Katarina-1898)",
-      len(h69) == 25 and h69_knjige == {"04104": 4, "04105": 8, "04106": 6, "04894": 5, "04455": 2}
+check("I5 h69 == 26 blokov (4+8+6+5+3!-P247: +04455-1877!) · Milek@h69-presek == 1 (botra-Katarina-1898)",
+      len(h69) == 26 and h69_knjige == {"04104": 4, "04105": 8, "04106": 6, "04894": 5, "04455": 3}
       and len(h69_milek) == 1,
       ",".join(f"{k}:{v}" for k, v in h69_knjige.items()) + f" · milek={len(h69_milek)}")
 
@@ -80,10 +80,10 @@ check("I7 modul parish-forensics.ts (regex + izpeljanke + 3 sodbe + VODENICA)",
       and mod.count("id: \"") >= 6)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-check("I8 qa-p237 (živi preverja 240/53-78-20-36-53/22/42-36-6/25/3-0-0-0-0!)",
+check("I8 qa-p237 (živi preverja 240/53-78-20-36-53/22/42-36-6/26/3-0-0-0-0!)",
       "qa-p237-parish-forensics" in qa and "MILIC_FAMILY_TOTAL !== 240" in qa
       and '"53,78,20,36,53"' in qa and "MATHIAS_H65_TOTAL !== 22" in qa
-      and "H69_TOTAL !== 25" in qa and "FORENZIKA-NITI-POTRJENA" in qa)
+      and "H69_TOTAL !== 26" in qa and "FORENZIKA-NITI-POTRJENA" in qa)
 
 ui = open(f"{ROOT}/src/components/museum/museum-atlas.tsx", encoding="utf-8").read()
 check("I9 UI-ParishForensics (komponenta + uvoz + render v ParishTab)",

@@ -1,0 +1,115 @@
+{
+  "faza": "P247",
+  "naslov": "POROČNA PREDZGOVINA 04455, leto 1877 = 9/13",
+  "datum": "2026-11-10",
+  "vir": "poročna 04455 (Trauungs-Buch), Matricula — skeni s15–s18 glavni (+ s14-kontekst; 4 skeni md5-4/4 — vsi-že-na-disku-iz-P246-md5-11/11-s14–s24-1:1-preverjeno-obnovljeno!; razprti-listi 2449–2453×1800 px)",
+  "frame": {
+    "restart_varianta": "RESTART-1877 = s15-TOP (marginalna-'1'-fizično-1:1-Read-očesa-P244-LEKCIJA-upoštevana!-velika-letnica-NI-posebna-glava!-vpis-1 = '1877-Jänner-14'-INLINE!-ženin-Georg-Levstih-[~Levstik/Lovišič-DUEL-3-branj!]-29-[~24-DUEL!]-×-nevesta-Cäcilie-Grubanič-[~Kukamič-DUEL!]-GRIBLJE-10-40-[~16-pass-1-DUEL!]-NEVESTA-BLOK!-cf.-P246-RESTART-1878-vzorec!)",
+    "meja_1876_77": "s14→s15 (tail-1876 = s14-margine-14–15-NOVEMBER-1876!-+ VELIKA-rokopisna-opomba-'f i n i s / 1 8 7 6'-s14-sredina-strani!-s14-'Pag. 13'!-m14-nevesta-Anna-Pegdire-[~PEZDIRC!]-GRIBLJE-30-1876-kontekst!)",
+    "meja_1877_78": "s18→s19 (P246-1:1!-tail-1877 = s18-margine-15–18-po-popravkih-NOVEMBER/DECEMBER-1877!-'Pag. 17'!-P246-branja-'14[~74]-15-16[~76]-17'-REŠENO-KOT-RE-NUMBERING!)",
+    "numbering": "ŠTEVILČENJE-v-LEVI-MARGINI-POTRJENO-3.-LETO: s15 = 1–5 · s16 = 6–9 · s17 = 10–14 · s18 = 15–18-po-popravkih → 18-VPISOV-BREZ-PRESKOKOV (modro-sivo-črnilo-+ natisnjen-Lfd.-stolpec-NE-OBSTAJA-P245!-margine-fizično-Read-očesa-1:1-×4-strani!) — ★★★ RE-NUMBERING-s18-+1-×4-PREČRTANIH: pisarja-zaporedje-14/15/16/17-VSE-PREČRTANE-in-popravljene-NA-15/16/17/18 (modro-sivo!-VLM-pass-2-margine-1:1-+ Read-očesa-1:1!)-RAZLOG = dup-'14' (s17-m14-September-16-že-bil!-s18-r1-Napaka-14-→-prečrtano-15!)-NOVA-numbering-anomalija-tipa-'sistematični-popravek-+1' (cf.-P245-s28-'6-[7]-8'-aritmetična-vsiljena!-P246-'prečrtani-popravki-številk-v-margini'-NAPVED-IZPOLNJENA!)",
+    "glava_1877": "velika-glava-'1877'-NE-OBSTAJA-na-nobenem-listu-s15–s18 (kot-1878!-letnica-INLINE-v-datumu-1.-vpisa-vsakega-lista: s15-r1-'1877-Jänner-14'-+ s16-r6-'1877-Februar-7[~6-DUEL]'-+ s17-r10-'1877-April-24[~29-DUEL]'-+ s18-r1-'1877-Novb.-14'!-nadaljnji-vpisi-samo-mesec+dan!)-→ 9.-MEJNA-VARIANTA-POTRJENA-V-2.-LETU (1877+1878-INLINE-vzorec-vs-1879-ponovljena-velika-glava-vs-1880-restart-na-dnu!-ponavljanje-glave-je-LETO-specifično-ne-knjižno-P246-teza-POTRJEN!)",
+    "foliacija": "'Pag-=-sken−1'-4/4-1877 (s15-'Pag. 14'-1:1-+ s16-'Pag. 15'-1:1-+ s17-'Pag. 16'-1:1-+ s18-'Pag. 17'-1:1!-+ s14-'Pag. 13'-kontekst-1:1!)-→ skupaj-z-11/11-(1878+1879) = 15/15-V-ZAPOREDNIH-LETIH-pravilo-NE-PRELAMA (4.-leto-zapored!)",
+    "finis_1876_s14": "VELIKA-rokopisna-opomba-'f i n i s / 1 8 7 6'-s14-sredina-strani (razmaknjene-črke-čez-stolpce!) = 3.-INSTANCE-ZAKLJUČNE-OZNAKE-LETA-v-poročni-predzgovorini (cf.-P245-s25-'finis-pro-anno-1878'-2.-instance-+ P243-s38-'finis-/-s-1880'-1.-odkrita!)-vzorec-do-zdaj-SAMO-SODA-LETA-1876/1878/1880 (liha-leta-1877/1879-BREZ-finis!-X-OPEN-vzorec!)"
+  },
+  "stats": {
+    "entries": 18,
+    "gribljeMarriages": 5,
+    "blokovNovih": 5,
+    "hiše": ["10", "8", "51", "51", "69"],
+    "mladoletnice": 2
+  },
+  "bloki": [
+    {
+      "vpis": 1,
+      "scan": 15,
+      "page": 14,
+      "datum": "14. Jänner 1877 (RESTART-1877!)",
+      "ženin": "Georg Levstih [~Levstik/Lovišič-DUEL-3-branj!]",
+      "hiša": "Vranu-vice [~Aranu-vice/Kranu-nec-X-OPEN!] 20",
+      "nevesta": "Cäcilie Grubanič [~Kukamič/Kukhanic-DUEL!-X-OPEN]",
+      "hišaN": "GRIBLJE 10 ('Gri. belj. vac. 10'-3-branja!)",
+      "opomba": "★★★ NEVESTA-BLOK (ženin-izven-Griblje!) + h10-1.-POROČNI-DOKAZ-V-PREDZGOVINI-cf.-h10-04104-1871-Kuke-+ 1880-Hure!-starost-DUEL-40-vs-16-pass-1!-unanimous-'dd.-13-Jänner-1877'-v-Gymnasium-[Crnomelj~Graduc-DUEL!]-Franz-DOVGAN-podpis!"
+    },
+    {
+      "vpis": 4,
+      "scan": 15,
+      "page": 14,
+      "datum": "7. Februar 1877 [~datum-duel!]",
+      "ženin": "Johann Gahofič [~Juhofčič/Kathunik/Droppan-MULTI-DUEL-4-branj!-cf.-h8-1873-oče-Johann-Jakopič-J/G-garble-veriga!]",
+      "hiša": "GRIBLJE 8 ('Gri. belj. č. 8'!)",
+      "nevesta": "Maria Moh [~Merk/Arik-DUEL!]",
+      "hišaN": "GRIBLJE 51 [~31-DUEL-X-OPEN!-isti-glif-kot-v5-ženin!-MOH-družina-h51!]",
+      "opomba": "★★★ INTRA-DVOJNI-BLOK (h8×h51!) + h8-firstYear-04455-DVIG-1881→1877-ZA-4-LET (cf.-h8-04455-1882-P241-nevesta!-cf.-h8-04104-1873-Johann-Jakopič-×-Anna-BRODARIČ!) + MOH-TROJČEK-vpis-4-of-3!"
+    },
+    {
+      "vpis": 5,
+      "scan": 15,
+      "page": 14,
+      "datum": "4. Februar 1877 [~datum-duel-7-vs-4!]",
+      "ženin": "Mathias Moh [~Lumin-2-line-DUEL!]",
+      "hiša": "GRIBLJE 51 [~31-DUEL-X-OPEN!-★★★ h51-1881-krst-MATI-Maria-BRODARIČ-1:1-PARALELA!]",
+      "nevesta": "Maria Brodarič [~Prodaric-DUEL!-BRODARIČ-korpus-nit-2:1!-h8-1873-mati-Anna-BRODARIČ-3/3!]",
+      "hišaN": "Krasinec 7 ('Chra.-sine. 7'!)",
+      "opomba": "★★★★★ h51-1.-04455-BLOK-KADARKOLI (PT-LUKNJA-HIŠA-cf.-h50-P244!) + ★★★★★ h51-1877-poroka-→-h51-1881-krst-mati-Maria-BRODARIČ-1:1-IME+HIŠA-PARALELA (oče-1881-'Matthias-Brodnik/BRINAR-garble-DUEL'-MOH-garble-kandidat-X-OPEN!) + MLADOLETNICA-16-l + Consens-pripis ('Consens-von-Gemeindmann-in-Griblje-dd.-6-Februar-1877'[~]) + ★★★★★ MOH×BRODARIČ-DVOJNI-SORODSTVENI-ZAKON-z-v7!"
+    },
+    {
+      "vpis": 7,
+      "scan": 16,
+      "page": 15,
+      "datum": "7. Februar 1877 [~]",
+      "ženin": "Johann Brodavič [~Prodavič/Prodančič/Brozdovič-DUEL!-cf.-v5-nevesta-Brodarič-ISTA-HIŠA-Krasinec-7-brat-kandidat!]",
+      "hiša": "Krasinec 7 ('Chasi. nec. 7'!)",
+      "nevesta": "Katharina Moh [~]",
+      "hišaN": "GRIBLJE 51 [~31-DUEL-X-OPEN!-isti-glif!]",
+      "opomba": "★★★★★ NEVESTA-BLOK-h51-×2-V-1-LETU (2.×-linije-cf.-P244-h16!-P242-h27!) + ★★★★★ MOH×BRODARIČ-DVOJNI-SORODSTVENI-ZAKON (Moh-brat+sestra-Mathias+Katharina-×-Brodarič-brat+sestra-Maria+Johann-cf.-HROVALJ-brat+sestra-P240-v8/v9!-1.×-ČEZ-DVE-DRUŽINI!) + MLADOLETNICA-16-l + Befunde-'Consens-v.-Ing.-Mildnig-dd.-26-Jan-877'-+-'dd.-2-Febr.-877'"
+    },
+    {
+      "vpis": 16,
+      "scan": 18,
+      "page": 17,
+      "datum": "28. December 1877 [~'Desinc'-garble-DUEL!-IZVEN-KRONOLOGIJE-po-vpisu-17!-leta-NI-v-vrsti-'d.-19-Jänner-1878'-pripis-X-OPEN!]",
+      "ženin": "Nicholaus Terdić [~Serdić/Serttič-T/S-DUEL!-P246-branja-'Serttič/Senttič'!]",
+      "hiša": "'Pfarrer-v.-Cernomelj' 13 [~X-OPEN!-P246-branja-'Vrhnika-Pfannuma'-garble!-P1-'Gradac-Gornjemark-Griblje-3'-garble!]",
+      "nevesta": "Katharina Allešič [~Ažetič-DUEL!-P1-'Theresia'-DUEL!]",
+      "hišaN": "GRIBLJE 69 ('Gri. ble. 69'-3-branja!)",
+      "opomba": "★★★ NEVESTA-BLOK + h69-firstYear-04455-DVIG-1887→1877-ZA-10-LET (cf.-h69-04455-1887/1893!) + ★ BRINC-MREŽA-dokaz-v-1877 (opomba-'vmožitva/Witwe-BRINC'-pod-priimkom!-cf.-h24-1880-BRINE-P243!-h21-1879-BRINC-P244!-P237-h65-BRINC-pred-doba!) + starost-51-vs-29-P2-DUEL!-margina-'15'-PREČRTANA-→-'16'!"
+    }
+  ],
+  "anomalie": [
+    "★★★★★ MOH-TROJČEK-V-1-MESECU (★★★★★-REKORD-TIPA!): v4-nevesta-Maria-Moh-GRIBLJE-51 (26-l!)-+ v5-ženin-Mathias-Moh-GRIBLJE-51 (29-l!)-+ v7-nevesta-Katharina-Moh-GRIBLJE-51 (16-l-MLADOLETNICA!) = 3-SOROJENCI-iz-iste-hiše-h51-v-3-tednih-Januar/Februar-1877 (cf.-h34-SILAH-sestrski-1884+1885-P241/P238!-h34-HROVALJ-brat+sestra-ISTI-DAN-P240!-h16-×2-BLOKA-P244!-h23-h1-×2!)",
+    "★★★★★ MOH×BRODARIČ-DVOJNI-SORODSTVENI-ZAKON (1.×-ČEZ-DVE-DRUŽINI-v-predzgodovini!): v5-ženin-Mathias-MOH-h51-×-v5-nevesta-Maria-BRODARIČ-Krasinec-7-+ v7-ženin-Johann-BRODAVIČ[~Brodarič!]-Krasinec-7-×-v7-nevesta-Katharina-MOH-h51 = brat+sestra-×-brat+sestra-ISTA-HIŠI-obeh-strani (cf.-HROVALJ-brat+sestra-IZ-ISTE-HIŠE-poroka-ISTI-DAN-P240!)",
+    "★★★ h51-PT-LUKNJA-HIŠA: h51-1.-04455-BLOK-KADARKOLI (v5-ženin-!-cf.-h50-P244-1.-poročni-dokaz-v-predzgodovini!)-+ h51-1881-krst-MATI-Maria-BRODARIČ = 1:1-IME+HIŠA-PARALELA-4-leta-kasneje (oče-'Matthias-Brodnik/BRINAR-garble-DUEL'-MATTHIAS-MATCH-v5-ženin-Mathias-MOH!-MOH-garble-kandidat-X-OPEN!)",
+    "★★★ firstYear-DVIG-×3: h8-1881→1877-ZA-4-LET-+ h10-1887→1877-ZA-10-LET-+ h69-1887→1877-ZA-10-LET (cf.-h53-DVIG-1890→1880-ZA-10-LET-P243!-h10/h69-PODVOJEN-10-LET-DVIG!)",
+    "★★★ RE-NUMBERING-s18-+1-×4-PREČRTANIH (14→15-15→16-16→17-17→18!-dup-'14'-s17/s18-razlog!-NOVA-numbering-anomalija-tipa-'sistematični-popravek-+1'-cf.-P245-s28-'6-[7]-8'!-P246-NAPVED-'prečrtani-popravki-številk-v-margini'-IZPOLNJENA!)",
+    "★★★ finis-1876-s14 = 3.-INSTANCE-ZAKLJUČNE-OZNAKE-LETA (cf.-P243-P245!-vzorec-SODA-leta-1876/1878/1880-liha-BREZ!)",
+    "★★★ GLAVA-INLINE-POTRJENA-2.-LETO (1877+1878-vs-1879-ponovljena-vs-1880-restart-dno!-ponavljanje-je-LETO-specifično!)",
+    "★★★ PEZDIRC-CONTINUUM-×131→04455-v-9.-LETU-NI-bloki-pošteno (v5-nevesta-'Prodaric'[~PEZDIRC-garble-kandidat!]-BRODARIČ-2:1-korpus-nit!-+ s14-kontekst-m14-1876-nevesta-Anna-'Pegdire'[~PEZDIRC!]-GRIBLJE-30!-cf.-P246-×2-garble-8.-leto!)",
+    "★★★ DOVGAN-CONTINUUM-PODALJŠAN-NA-9-LET (1877–1885!-podpisi-na-vsih-4-listih-s15–s18!-garble-'Dorgan'-pass-3-v5!)",
+    "★★ HRIŽAN/Križan-kontekst: v14-nevesta-Maria-geb.-Križan-[~Pežjan-DUEL!]-Primostek (cf.-HRIŽAN-nit!-X-OPEN!)",
+    "★★ ČUPANIČ/ŽUPANIČ-paralela: v6-ženin-Johann-Čupanič-[~Trupanič/Županič-DUEL!]-½-Gübl-Krasinec-16-cf.-h31-1876-oče-Nicolaus-ŽUPANIČ-½-Ġübl-+ boter-Johann-ŽUPANIČ!",
+    "★★ MLADOLETNICA-×2 (v5-Maria-Brodarič-16-l-+ v7-Katharina-Moh-16-l!-obe-MOH×BRODARIČ-zakona!-Consens-pripisi!)",
+    "★ v13-pripis-'M.P.-Leingang'-Graz-1877-'dd.-22-März-1877'[~X-OPEN!-ženin-'des-Pfarrers-v.-Črnomelj'-unehelich-kandidat!]",
+    "★ BRINC-MREŽA-v16-opomba (vmožitva/Witwe-Brinc!)",
+    "★ h36-NI-BLOK-pošteno: v17-ženin-'Kblo.-šter.-36'[~KLO-ŠTER-split!-Kloster-village-cf.-v13-'Kloster-27'-3-branja!]-vs-'Griblje-36'-P2-DUEL-X-OPEN (h36-firstYear-OSTAJA-1878-P246!)",
+    "X-OPEN-kandidati (pošteno ostajajo): v1-ženin-kraj-'Vranu-vice'-[~]-+ v1-nevesta-priimek-Grubanič-vs-Kukamič!-+ v2-nevesta-hiša-[~X]-+ v2-starost-18-vs-32-DUEL!-+ v9-hiši-oboje-[~X]-(INTRA-kandidat-NE-varn!)-+ v13-Kloster-27-vs-3-DUEL!-+ v16-hiša-Pfarrer-13-[~]-+ v18-ženin-kraj-'Cerki-31'-[~X]"
+  ],
+  "nodat": 0,
+  "qa": "qa-parish-p247-guardi: vitals-1990 · 04455-247 · sidra-240 (1877:5!) · dobe-214 (44-pred-linijskih!)",
+  "metoda": [
+    "4-skenov-s15–s18-md5-4/4 (že-na-disku-iz-P246-md5-11/11-1:1-obnovljeno!-+ s14-kontekst!)",
+    "Read-očesa-NAJPREJ-×5-polnih-strani (s14–s18!-P244-LEKCIJA!-restart-margine-fizično!)",
+    "VLM-pass-1-×4-polni-prepisi-JSON (s15–s18!)",
+    "pass-2-ultra-zoom-3×-×15-kropov (vrstice-+ margine-s18-+ datum-s18-r1!)",
+    "pass-3-celični-6×-×30-kropov (Griblje-kandidati!)",
+    "mikro-kropi-7×–10×-×12 (hišne-številke-+ margine-popravki-+ datumi!)",
+    "letterform-forenzika: 'Novb.'-N-dvojni-lok-vs-J (s18-r1-datum-VLM-misread-'Jänner'-×2-KOREKCIJA!)-+ 'Klo-šter'-split-vs-'Griblje-36'-+ 3-vs-5-glif-primerjava!)",
+    "reconciliacija-z-P246-tail-read (s18-m14–17-'14[~74]-15-16[~76]-17'-REŠENO-kot-RE-NUMBERING!)",
+    "hišna-sinhronizacija-z-krstnim/mrliškim-korpusom (h51-1881-BRODARIČ-PARALELA!-h8-1873-Jakopič!-h10-1871/1880!-h69!)"
+  ],
+  "hišnaSinhronizacija": {
+    "sklad": "5-od-5-hiš-že-v-krstnem/mrliškem-korpusu-SKLAD (h8-04104-1873/1876/1881/1883/1884/1885-+ h10-04104-1871/1880-+ h51-04104-1881/1884-+ h69-04104-1871/1872/1873/1884!-vsi-priimki-skladi-ali-garble-verige!-NOVA-04455-anchora: h10/h51/h69-prvič!)",
+    "paralela": "h51-1877-poroka-Mathias-MOH-×-Maria-BRODARIČ-→-h51-1881-krst-mati-Maria-BRODARIČ-(oče-Matthias!)-(1:1-IME+HIŠA!)"
+  },
+  "lead": "P248+: leto-1876-=-10/13 (s13-nazaj-tail-1876-=-s14-margine-14–15-'finis-1876'-že-1:1-P247!-s15-'1877'-restart-že-1:1!) ali-knjižno-odpiranje-1873-s1 · deploy: GitHub-origin-žeton-#7-+ GitLab-mirror-workflow-+ Vercel-avtomatsko"
+}
