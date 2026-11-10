@@ -27,12 +27,12 @@
     "note": "p80-skripta-set 18 (PT_GAP_HOUSES) ≠ qa doc-list 15 (P80_PT_GAP = 18 brez h45/h47/h55 — dokazi geometrija/filtra)"
   },
   "corpus": {
-    "vitalsTotal": 1966,
+    "vitalsTotal": 1969,
     "byBook": {
       "04105": 502,
       "04894": 520,
       "04106": 433,
-      "04455": 223,
+      "04455": 226,
       "04104": 288
     },
     "housesDistinctAll": 95,
@@ -393,14 +393,14 @@
     },
     {
       "houseNo": "53",
-      "blocksTotal": 21,
+      "blocksTotal": 22,
       "byBook": {
         "04105": 7,
-        "04455": 3,
+        "04455": 4,
         "04106": 0,
         "04894": 11
       },
-      "firstYear": 1887,
+      "firstYear": 1880,
       "lastYear": 1924,
       "years": [
         1887,
@@ -429,7 +429,8 @@
         "krstna-04105",
         "poročna-04455",
         "mrliška-04894"
-      ]
+      ],
+      "p243Note": "P243: poročna-04455-1880-vpis-20-TAIL-Peter-PERDIRC-[~Pegdirc-DUEL!]-GRIBLJE-53 (s38!) — h53-firstYear-04455-1890→1880-DVIG-ZA-10-LET + margine-'Gaveldzettel-der-Gemeinde-Griblje-vom-21.-November-1880'-očetova-privolitev! (cf.-04105-h53-firstYear-1887 — poročna-OUTRUNA-ZA-7-LET!)"
     },
     {
       "houseNo": "54",
@@ -662,5 +663,5 @@
       ]
     }
   ],
-  "vitalsTotal": 1966
+  "vitalsTotal": 1969
 }

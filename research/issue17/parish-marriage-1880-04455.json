@@ -1,0 +1,109 @@
+{
+  "faza": "P243",
+  "naslov": "POROČNA PREDZGOVINA 04455, leto 1880 = 6/13 — s35–s38 (RESTART-1880 = s35-DNO! NOVA-7.-MEJNA-VARIANTA + finis-s38!)",
+  "datum": "2026-11-10",
+  "vir": {
+    "knjiga": "poročna 04455 (Trauungs-Buch), župnija Podzemelj — Matricula Online",
+    "skeni": "s35–s38 (+ s31–s34, s39-kontekst; 9 skenov md5-9/9!)",
+    "razprti_listi": "2453–2457 × 1800 px; viewer-HTML→192-base64-URL-dekodiranih (hosted-images.matricula-online.eu, trailing-slash-fix!)",
+    "metoda": "2×-P242-neodvisna-prenesa-md5 + 1×-P243-s31–s39-md5-9/9! + VLM-6-passov (~50 klicev): pass-1-s36/s37/s38-cel-strani (3) + pass-2-ultra-zoom-klope-13 + pass-3-vrstični-trakovi-18+3-numcol + pass-4-s36-8-trakov-+ polni-numcol-+ glava (19) + pass-5-s35-6-klicev + pass-6-ultra-zoom-12 + pass-6b-koti-5"
+  },
+  "frame": {
+    "restart_varianta": "RESTART-1880 = s35-DNO: številčenje 31-32-33 (tail-1879!) → RESTART-1–2 (numcol-3×-'31,32,33,[1?],[2?]'-1:1!) — NOVA-7.-MEJNA-VARIANTA: restart-na-dnu-prejšnje-strani (P240-1883-vzorec!) + letnica-'1880'-v-datumskem-stolpcu-VRSTE-3-na-s36 (pass-5-'1880,-4.-Febr.'-1:1!-letnica-ŠELE-na-slednji-strani-NI-pri-restartu!) — kombinacija-P240+P242-vzorcev! vpis-1 = 1. Jänner[~4.-DUEL]-1880 (Peter/Janez-Jakljevic[?]-'ž.-Griblan'-×-Martha-Juhlevič[?]-'zu-Grüble[?]') · vpis-2 = 4. Feb-Janez-Dragot-Dragote-4!",
+    "meja_1879_80": "s35-mid (vpisi-31–33 = tail-1879 → RESTART-1–2 = 1880-dno!)",
+    "meja_1880_81": "s38→s39 (s38 = tail-1880-vpis-20-21.[~25!]-Nov + s38-DNO-'finis / s 1880'-ZAKLJUČNA-OZNAKA-LETA-1.-TA-VRSTA-V-POROČNI-PREDZGODOVINI-cf.-mrliške-zaključne-opombe-P181! + s39-top-letnica-'1881'-nad-vrsto-1-P242-2×-neodvisno-1:1!-P242-[X-OPEN]-REŠENA!)",
+    "numbering": "s35 = 31–33-1879 + RESTART-1–2-dno · s36 = 3–8 (6 vrstic!-3-nesmiselne-numcol-branje-'1,4,5,6,7,8'/'3,4,5,6,7,8'-KONVERGIRALE-na-3–8-z-8-band-predpostavko-zavrnjeno!) · s37 = 9–14 (pass-2-'[8]'-bleed-dan-'8.'-Februar-MISREAD!-pass-1-+ pass-3-1:1!) · s38 = 15–20-tail (vsi-passi-1:1!) → 20 VPISOV-BREZ-PRESKOKOV (kontrast-1881-PRESKOK-12!-1882/1883/1884-tudi-BREZ!)",
+    "finis": "finis / s 1880 (normalizirana-transkripcija-vira-'f i n i s / s 1880'!) — s38-DNO-'f i n i s / s 1880' (pass-6-2×-1:1!-'sums-s-1880'-+ pass-1-vsote-'m21-n1-i8/0-[?]'-[~X-OPEN]-) = ZAKLJUČNA-OZNAKA-LETA (1.-TA-VRSTA-V-POROČNI-PREDZGODOVINI!-cf.-P181-mrliška-EKSPlicitna-zaključna-opomba!)",
+    "foliacija": "s38-TR-'Pag. 34.'-(2×-branja-pass-2-'34~'-+ pass-6b-3×-'34.'!)-vs-pričakovano-'Pag. 37'-(pravilo-Pag==sken−1-iz-s39-'Pag. 38'-2×-neodvisno-1:1-P242!-s38-kot-BL-'5'-nejasno!) — [~X-OPEN-DUEL]: (a) 7-vs-4-Kurrent-zmeda-cf.-P162b-γ→7! ALI (b) dup-vstavljen-list-cf.-P149-s175=s176!-pošteno-ostaja"
+  },
+  "stats": {
+    "entries": 20,
+    "entriesNote": "2-s35-dno-restart (vpis-1-+ vpis-2) + 6-s36 (3–8) + 6-s37 (9–14) + 6-s38 (15–20-tail) = 20 DISTINCT",
+    "gribljeMarriages": 3,
+    "gribljeHouses": [
+      "24",
+      "63",
+      "53"
+    ],
+    "skupaj04455": 226,
+    "skupajVitals": 1969,
+    "sidra": 219,
+    "dobe": 193
+  },
+  "bloki": [
+    {
+      "houseNo": "24",
+      "vpis": 4,
+      "sken": 36,
+      "pag": 35,
+      "zenin": "Mathias BRINE [~Brinc/Brinec-DUEL!]",
+      "starost": "24",
+      "stan": "bauernsohn",
+      "hisa": "GRIBLJE 24 (ultra-zoom-pass-6-2.2×-1:1!)",
+      "nevesta": "[~R-panela-noisy-X-OPEN!]",
+      "nit": "BRINC/BRINEC-MREŽA-cf.-P238-h26-+ P242-v13-Peter-BRINC!-h24-1.-poročni-dokaz-v-predzgodovini (04455-1896-P125-OUTRUNA-samo-sabo-ZA-16-LET!)"
+    },
+    {
+      "houseNo": "63",
+      "vpis": 14,
+      "sken": 37,
+      "pag": 36,
+      "zenin": "Križan Miklavčič [~priimek-DUEL-pass-1-'Nikolaus-Bričan'-2:1!]",
+      "starost": "20 let 1[~]",
+      "stan": "?",
+      "hisa": "GRIBLJE 63 (ultra-zoom-pass-6-2.4×-1:1!)",
+      "nevesta": "Magdalena [?] PEGDIREC [~Pezdirc-DUEL!]-hči-Marka-Pegdirec-dekla-v-Gribljah (nevesta-hiša-NI-številčena-[~X-OPEN-cf.-pass-3-'Podgorica'-DUEL!])",
+      "price": "Anton Kure + Jožef Jurajesič[?]",
+      "duhovnik": "Fran Dovžan[?]",
+      "nit": "h63-KRIŽAN-continuum-cf.-P239-lead-mrliška-04106-1884-h63-KRIŽAN-×2 (NIT-4-LETA-1880→1884!) + PEZDIRC-CONTINUUM-×131→04455-v-6.-letu!"
+    },
+    {
+      "houseNo": "53",
+      "vpis": 20,
+      "sken": 38,
+      "pag": 37,
+      "zenin": "Peter PERDIRC [~Pegdirc-DUEL-pass-1-'Pegdirec'-vs-pass-6-'Perdirc'-1:1!-iskreno-odprt!]",
+      "starost": "26",
+      "stan": "?",
+      "hisa": "GRIBLJE 53 (ultra-zoom-pass-6-2.4×-1:1-'53-[~58-DUEL-pass-3!]-verjetneje-53'!)",
+      "nevesta": "Maria [~Anna-DUEL-pass-1!-2:1-za-Maria!]-Zupančič [~Brine-DUEL-pass-3!]-Krasinec 18[?]",
+      "price": "Zupančič/Zarasinič[~DUEL!]",
+      "margine": "★★★ 'Gaveldzettel der Gemeinde Griblje vom 21. November 1880' + 'Väterliche Einwilligung ist 18 nov bracht[?]' = očetova-privolitev-dokumentirana (1.-TA-VRSTA-DOKUMENTA-V-POROČNI-PREDZGODOVINI!-cf.-mladoletnost-val-P151!)",
+      "nit": "h53-firstYear-04455-1890→1880-DVIG-ZA-10-LET! (+ 04105-h53-firstYear-1887 → poročna-OUTRUNA-krstno-ZA-7-LET!-h53-21→22-blokov!)"
+    }
+  ],
+  "anomalie": [
+    "★★★ RESTART-1880 = s35-DNO — NOVA-7.-MEJNA-VARIANTA (restart-na-dnu-P240-vzorec!-+ letnica-'1880'-v-datumskem-stolpcu-VRSTE-3-na-s36-pass-5-1:1!-kombinacija-P240+P242!)",
+    "★★★ 'finis / s 1880' na s38-DNO = ZAKLJUČNA-OZNAKA-LETA (1.-ta-vrsta-v-poročni-predzgodovini-cf.-mrliške-zaključne-opombe!)",
+    "★★★ h53-firstYear-04455-1890→1880-DVIG-ZA-10-LET (v20-PERDIRC-TAIL!-+ 04105-1887-→-poročna-OUTRUNA-krstno-na-h53-ZA-7-LET!)",
+    "★★★ MARGINE-v20-'Gaveldzettel-der-Gemeinde-Griblje-vom-21.-November-1880'-+ 'Väterliche-Einwilligung-ist-18-nov-bracht[?]' = očetova-privolitev (1.-ta-vrsta-dokumenta!-mladoletna-nevesta-[~]-cf.-P151-val!)",
+    "★★★ FOLIACIJA-s38-'Pag. 34.'-2×-branja-vs-'Pag. 37'-pričakovano (pravilo-sken−1; s39-'Pag. 38'-2×-1:1!) — [~X-OPEN-DUEL: 7-vs-4-Kurrent-cf.-P162b-ALI-dup-list-cf.-P149!]",
+    "★★ h63-KRIŽAN-continuum: v14-ženi n-Križan-Miklavčič-GRIBLJE-63-cf.-P239-lead-mrliška-04106-1884-h63-KRIŽAN-×2 (NIT-4-LETA!)",
+    "★★ PEZDIRC-CONTINUUM-×131→04455-v-6.-letu-predzgodovine: v14-nevesta-Magdalena-PEGDIREC-[~Pezdirc!]-hči-Marka-Pegdirec-+ v20-ženi n-Peter-PERDIRC-[~Pegdirc-DUEL!]-+ s36-mater-[~Maria-geb.-Pedirec/Pegdirec-×2-branja-pass-4!]-iskreno-[~]",
+    "★★ BRINC/BRINEC-mreža-4.-leto: v4-ženi n-Mathias-BRINE-[~Brinc/Brinec-DUEL!]-GRIBLJE-24-cf.-P238-BRUNC-mati-+ h26-BRINEC-+ P242-Peter-BRINC-h28!",
+    "★★ GRIBLJAN-IZVOR-pripise-×2 (cf.-P242-s41-'z-Gribl.'-×9!): s35-dno-vpis-1-+ vpis-2-oba-ženi n-'ž.-Griblan'-[~'ged.-Griblan'?]-bivališča-Drilazje-30[?]/Dragote-4-NI-bloki-pošteno!-+ v1-nevesta-'zu-Grüble[?]'-brez-številke-[~X-OPEN!]",
+    "★★ Dovgan/Dovžan-continuum-6-let-1880–1885 (s35-dno-×2-'Dorgano[?]-Dovžan[?]-Fr.~'-+ s37-v14-'Fran-Dovžan[?]'!-1:1-kot-1881–1885-dominanta!)",
+    "★ h24-1.-poročni-dokaz-v-predzgodovini (04455-1896-P125!-poročna-OUTRUNA-samo-sabo-ZA-16-LET!)",
+    "★ datum-dueli: v20-'21-vs-25'-Nov-(2:1-za-21-+ margine-Gaveldzettel-21.-TRETJI-DOKAZ!) · v1-'1-vs-4'-Jän-[~X-OPEN] · v15-'10-vs-16'-Okt-[~X-OPEN] · v19-'11-vs-14'-Nov-[~X-OPEN]",
+    "★ v11-ženi n-starost-'69'-[~pass-1!-X-OPEN-DUEL-cf.-pass-3-'Jakofčič-Gajšlar'-neujemljivo!] — če-pravilno-NAJSTAREJŠI-ŽENIN-6-FAZ-PREDZGODOVINE-[~pošteno-odprto!]"
+  ],
+  "nodat": [],
+  "qa": "qa-p243-parish-marriage-early-04455-1880 (243. kontrola — ŽIVO iz korpusa!)",
+  "verifikator": "scripts/p243_parish_marriage_1880_04455.py (I1–I10 + --live)",
+  "skripte": [
+    "scripts/tmp/p243_fetch.py",
+    "scripts/tmp/p243_krops.py",
+    "scripts/tmp/p243_vlm_pass1.mjs",
+    "scripts/tmp/p243_krops3.py",
+    "scripts/tmp/p243_vlm_pass3.mjs",
+    "scripts/tmp/p243_krops4.py",
+    "scripts/tmp/p243_vlm_pass4.mjs",
+    "scripts/tmp/p243_krops5.py",
+    "scripts/tmp/p243_vlm_pass5.mjs",
+    "scripts/tmp/p243_krops6.py",
+    "scripts/tmp/p243_vlm_pass6.mjs",
+    "scripts/tmp/p243_vlm_pass6b.mjs",
+    "scripts/p243_bump.py"
+  ],
+  "naprej": "P244+: leto-1879 = 7/13 (s34-nazaj — s35-numcol-31–33-že-1:1-tail-1879!-restart-1879-pričakovan-na-s34-ali-s34-dno!) ali knjižno-odpiranje-1873-s1"
+}

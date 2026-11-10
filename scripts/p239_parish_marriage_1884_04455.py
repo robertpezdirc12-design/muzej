@@ -17,7 +17,7 @@ bloki = re.findall(r'houseNo: "([^"]+)",\s*bookSignature: "04455",\s*year: 1884,
 check("I1 bloki 04455/1884-numeric == 3", len(bloki) == 3, f"najdeno {len(bloki)}")
 check("I2 hiše-1884 (vrstni-red 54, 47, 36)", bloki == ["54", "47", "36"], ",".join(bloki))
 skupaj = src.count('bookSignature: "04455"')
-check("I3 vitals-1966 + 04455==223 (P241-živo!)", "HOUSE_VITALS.length !== 1966" not in src and skupaj == 223, f"04455={skupaj}")
+check("I3 vitals-1966 + 04455==223 (P241-živo!)", "HOUSE_VITALS.length !== 1969" not in src and skupaj == 226, f"04455={skupaj}")
 
 d = json.load(open(f"{ROOT}/research/issue17/parish-marriage-1884-04455.json", encoding="utf-8"))
 an = json.dumps(d["anomalies"], ensure_ascii=False)
@@ -36,7 +36,7 @@ check("I4c PEZDIRC-×4 + MILEK-križ-+2 + DVOJNI-h34 + duhovnik-konstanca",
       and "DVOJNI-h34-SILAH-križ" in an and "dohovnik-konstanca" in an)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1966")
+st = qa.count("HOUSE_VITALS.length !== 1969")
 check("I5 qa-p239 + števec-1966", "qa-p239-parish-marriage-early-04455-1884" in qa and st >= 145, f"1966-številcev={st}")
 
 i0 = src.find("P239: poročna PREDZGOVINA 04455, leto 1884")
@@ -55,8 +55,8 @@ check("I8b modul-1884 (MARRIAGE_1884_*-izvozi)", all(x in m for x in [
     "MARRIAGE_1884_XOPEN", "MARRIAGE_1884_MEJA", "MARRIAGE_1884_NUMBERING", "PEZDIRC_1884_NIT",
     "MILEK_1884_NIT", "PRIEST_1884", "OLDEST_PAIR_1884", "MARRIAGE_1884_VILLAGE_DUELS"]))
 check("I8c forenzika-×237", "×237 blokov čez 5 knjig" in open(f"{ROOT}/src/data/atlas/parish-forensics.ts", encoding="utf-8").read())
-check("I9a pt-luknja-1966 + byBook-04455=223 (P241-živo!)", '"vitalsTotal": 1966' in open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-      and '"04455": 223' in open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read())
+check("I9a pt-luknja-1969 + byBook-04455=226 (P241-živo!)", '"vitalsTotal": 1969' in open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
+      and '"04455": 226' in open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read())
 check("I9b worklog-P239-vnos", "## P239" in open(f"{ROOT}/worklog.md", encoding="utf-8").read())
 check("I9c UI-MarriageEarly1884-v-ParishTab", "MarriageEarly1884" in open(f"{ROOT}/src/components/museum/museum-atlas.tsx", encoding="utf-8").read())
 

@@ -328,3 +328,79 @@ export const MARRIAGE_1881_VILLAGE_DUELS = [
   "v23-ženi n »Gersiče 33 vs Gortice« [~]",
   "v14-nevesta »Hrizom vs Hrizan/Križan« [~]",
 ] as const;
+
+// ——— P243: POROČNA PREDZGOVINA 04455, leto 1880 = 6/13 (s35–s38; restart-s35-DNO NOVA-7.-MEJNA-VARIANTA!) ———
+
+/** Griblje bloki poročne linije 1880 v korpusu (merjeni vrstni red: h24-vpis-4-s36 · h63-vpis-14-s37 · h53-vpis-20-TAIL-s38!). */
+export const MARRIAGE_1880_BLOCKS = HOUSE_VITALS.filter(
+  (h) => h.bookSignature === "04455" && h.year === 1880,
+);
+
+/** Št. Griblje porok 1880 v korpusu (meritev: 3 = h24-BRINE + h63-KRIŽAN × Pegdirec + h53-PERDIRC-[~Pegdirc!]!-vsi-ženi n-bloki!). */
+export const MARRIAGE_1880_GRIBLJE = MARRIAGE_1880_BLOCKS.length;
+
+/** Hiše poročne linije 1880 (merjeni vrstni red blokov: 24, 63, 53). */
+export const MARRIAGE_1880_HOUSES = MARRIAGE_1880_BLOCKS.map((h) => h.houseNo);
+
+/** Vsi vpisi leta 1880 (meritev: 20 DISTINCT = 2-s35-dno-restart + 6-s36 + 6-s37 + 6-s38-tail!-BREZ-preskokov-kontrast-1881-PRESKOK-12!). */
+export const MARRIAGE_1880_TOTAL = 20;
+
+/** Meje leta 1880: RESTART-1880 = s35-DNO (NOVA-7.-MEJNA-VARIANTA: restart-1–2-na-dnu + letnica-v-datumskem-stolpcu-VRSTE-3-na-s36!) · meja-1879/80 = s35-mid (33→1–2!) · meja-1880/81 = s38→s39 (finis! + P242-2×-1:1!). */
+export const MARRIAGE_1880_MEJA = {
+  restartSi:
+    "restart-vpisi-1–2 = s35-DNO (številčenje-31-32-33 → RESTART-1–2!-numcol-3×-1:1!-vpis-1 = 1. Jänner[~4.-DUEL]-Peter/Janez-Jakljevic[?]-'ž.-Griblan' × Martha-Juhlevič[?]-'zu-Grüble[?]'; vpis-2 = 4. Feb-Janez-Dragot-Dragote-4!) — NOVA-7.-MEJNA-VARIANTA (restart-na-dnu-prejšnje-strani-P240-1883-vzorec!-+ letnica-'1880'-v-datumskem-stolpcu-VRSTE-3-na-s36-'1880,-4.-Febr.'-pass-5-1:1!-kombinacija-P240+P242!)",
+  restartEn:
+    "restart-entries-1–2 = s35-BOTTOM (numbering-31-32-33 → RESTART-1–2!-numcol-3×-1:1!-entry-1 = Jan 1[~4.-DUEL]-Peter/Janez-Jakljevic[?]-'ž.-Griblan' × Martha-Juhlevič[?]-'zu-Grüble[?]'; entry-2 = Feb 4-Janez-Dragot-Dragote-4!) — a-NEW-7th-BOUNDARY-VARIANT (restart-at-the-bottom-of-the-previous-page-the-P240-1883-pattern!-+ the-year-'1880'-in-the-DATE-COLUMN-of-ROW-3-on-s36-pass-5-1:1!-the-P240+P242-combination!)",
+  tailSi:
+    "tail-vpis-20 = 21. November 1880 [~25.-DUEL-2:1-za-21!-TRETJI-DOKAZ-margine-'Gaveldzettel...21.-November-1880'!] (s38-TAIL!) + s38-dno-'finis / s 1880' = ZAKLJUČNA-OZNAKA-LETA (1.-ta-vrsta-v-poročni-predzgodovini!-cf.-mrliške-zaključne-opombe-P181!)",
+  tailEn:
+    "tail-entry-20 = Nov 21, 1880 [~25.-the-DUEL-2:1-for-21!-the-THIRD-PROOF-margine!] (s38-TAIL!) + s38-bottom-'finis / s 1880' = the-YEAR-END-MARK (the-1st-of-this-kind-in-the-early-marriage-line!)",
+  boundarySi:
+    "meja-1879/80 = s35-mid (33→1–2-restart!) · meja-1880/81 = s38→s39 (s39-top-letnica-'1881'-nad-vrsto-1-P242-2×-neodvisno-1:1!-REŠENA!)",
+  boundaryEn:
+    "the-1879/80-boundary = s35-mid (33→1–2-restart!) · the-1880/81-boundary = s38→s39 (the-s39-top-'1881'-P242-2×-independently-1:1!-RESOLVED!)",
+} as const;
+
+/** Številčenje strani 1880 (s35 = 31–33 + restart-1–2-dno! · s36 = 3–8 · s37 = 9–14 · s38 = 15–20-tail) — 20-VPISOV-BREZ-PRESKOKOV (3.-leto-BREZ-kontrast-1881!). */
+export const MARRIAGE_1880_NUMBERING =
+  "s35 = 31–33-1879 + RESTART-1–2-dno! · s36 = 3–8 (6-vrstic!-numcol-3×-3-nesmiselna-branja-konvergirala!) · s37 = 9–14 (pass-2-'[8]'-dan-'8.'-Februar-bleed-MISREAD!-pass-1-+ pass-3-9–14-1:1!) · s38 = 15–20-tail (vsi-passi-1:1!) → 20-VPISOV-BREZ-PRESKOKOV (kontrast-1881-PRESKOK-12!)";
+
+/** ★★★ h53-firstYear-DVIG: vpis-20 = ženi n-Peter-PERDIRC-[~Pegdirc-DUEL!]-GRIBLJE-53-21.-Nov-1880 — h53-firstYear-04455-1890→1880-DVIG-ZA-10-LET! (+ margine-'Gaveldzettel-der-Gemeinde-Griblje'-1.-ta-vrsta-dokumenta!). */
+export const H53_1880_DVIG =
+  "vpis-20-Peter-PERDIRC-[~Pegdirc-DUEL!]-GRIBLJE-53-21.-Nov-1880 = h53-firstYear-04455-1890→1880! (DVIG-ZA-10-LET!-+ margine-'Gaveldzettel-der-Gemeinde-Griblje-vom-21.-November-1880'-+ 'Väterliche-Einwilligung'-očetova-privolitev-1.-ta-vrsta-dokumenta-v-predzgodovini!-h53-04105-firstYear-1887-→-poročna-OUTRUNA-krstno-na-h53-ZA-7-LET!-h53-21→22-blokov!)";
+
+/** ★★★ h63-KRIŽAN-continuum: vpis-14 = ženi n-Križan-Miklavčič-GRIBLJE-63-4.-Juli-1880 × Magdalena-[?]-PEGDIREC-[~Pezdirc!] — cf.-P239-lead-mrliška-04106-1884-h63-KRIŽAN-×2 (nit-4-leta!) + PEZDIRC-continuum! */
+export const KRIZAN_1880_NIT =
+  "vpis-14-ženi n-Križan-Miklavčič-GRIBLJE-63 (ultra-zoom-2.4×-1:1!-priimek-duel-pass-1-'Bričan'-2:1!) × Magdalena-[?]-PEGDIREC-[~Pezdirc-DUEL!]-hči-Marka-Pegdirec-dekla-v-Gribljah = h63-KRIŽAN-nit-cf.-P239-lead-mrliška-1884-h63-KRIŽAN-×2 (NIT-4-LETA-1880→1884!) + PEZDIRC-CONTINUUM-×131→04455-v-6.-letu-predzgodovine (1880-×2-reads + s36-mater-[~Pedirec-×2-branja!] = ×3-reads!-cf.-1881-×1-1882-×5-1883-×1-1884-×4-1885-×3!)";
+
+/** BRINC/BRINEC-mreža 1880: vpis-4 = ženi n-Mathias-BRINE-[~Brinc/Brinec-DUEL!]-GRIBLJE-24-s36 (ultra-zoom-2.2×-1:1!) — cf.-P238-h26-BRINEC-usnjar-+ P242-v13-Peter-BRINC-+ 1885-BRUNC-[~Brinc!]-mati! */
+export const BRINC_1880_NIT =
+  "vpis-4-ženi n-Mathias-BRINE-GRIBLJE-24 (bauernsohn-24-let!-ultra-zoom-2.2×-1:1!-priimek-DUEL-'Brine/Brinc/Brinec'-iskreno!) = h24-1.-poročni-dokaz-v-predzgodovini (h24-04455-1896-P125-→-poročna-OUTRUNA-sama-sabo-ZA-16-LET!) — cf.-P238-h26-BRINEC-+ P242-v13-Peter-BRINC-h28-+ P238-mati-'BRUNC-[~Brinc!]'-mreža-4-leti!";
+
+/** GRIBLJAN-IZVOR-pripise 1880 (cf.-P242-s41-'z-Gribl.'-×9!): s35-dno-vpis-1-+ vpis-2-oba-ženi n-'ž.-Griblan'-[~'ged.-Griblan'?]-bivališča-Drilazje-30[?]-+ Dragote-4-NI-bloki-pošteno! */
+export const GRIBLJAN_1880_IZVOR =
+  "s35-dno-vpis-1 (Peter/Janez-Jakljevic[?]-'ž.-Griblan'-Drilazje-30[?]-×-Martha-Juhlevič[?]-'zu-Grüble[?]-brez-številke-[~X-OPEN!]') + vpis-2 (Janez-Dragot-'ž.-Griblan'-Dragote-4-×-Maria/Rozalija-Dragot!) = GRIBLJAN-IZVOR-pripise-×2 (rozen/izvor-Griblje-bivališče-drugje-NI-bloki!-pošteno!-cf.-P242-s41-'z-Gribl.'-×9-NOVA-podkategorija!)";
+
+/** Foliacija-1880-[~X-OPEN-DUEL]: s38-TR-'Pag. 34.'-(2×-branja-pass-2-'34~'-+ pass-6b-3×-'34.')-vs-pričakovano-'Pag. 37'-(pravilo-Pag==sken−1; s39-'Pag. 38'-2×-1:1-potrjeno!). */
+export const FOLIACIJA_1880_XOPEN =
+  "s38-'Pag. 34.'-2×-branja-(pass-2-1:1-dvom-'34~'-+ pass-6b-3×-'34.')-vs-pričakovano-'Pag. 37'-(pravilo-Pag==sken−1-iz-s39-'Pag. 38'-2×-neodvisno-1:1!-[7-vs-4-Kurrent-zmeda-cf.-P162b!-ali-dup-vstavljen-list-cf.-P149-s175=s176!])-[~X-OPEN-DUEL-pošteno-ostaja!]";
+
+/** Duhovnik 1880: Franz-Dovgan/Dovžan-[~Dorgano-garble!]-continuum-6-let (1880–1885!-s35-dno-×2-+ s37-v14-+ cf.-1881–1885-dominanta!). */
+export const PRIEST_1880 =
+  "Franz-Dovgan/Dovžan-[~Dorgano-garble!] — s35-dno-vpis-1-+ vpis-2-×2-+ s37-vpis-14-('Fran-Dovžan[?]-Fran-Dovjana[?]'!)-continuum-DOVGAN-6-LET-1880–1885 (1:1-kot-1881–1885-dominanta!)";
+
+/** Datum-dueli 1880 (v20-'21-vs-25'-Nov!-v1-'1-vs-4'-Jän!-v15-'10-vs-16'-Okt!-v19-'11-vs-14'-Nov!). */
+export const MARRIAGE_1880_DUELS = [
+  "v20-datum »21. vs 25. November« 2:1 [~] (pass-3-+ pass-6-21!-+ margine-Gaveldzettel-21.-TRETJI-DOKAZ!)",
+  "v1-datum »1. vs 4. Jänner 1880« [~X-OPEN] (pass-6-'1.-Jänner-18[80]'-vs-pass-5-'4.-Jänner-1880'!)",
+  "v15-datum »10. vs 16. Oktober« [~X-OPEN] (pass-2-'10.-Okt'-vs-pass-1-'16.-Okt!')",
+  "v19-datum »11. vs 14. November« [~X-OPEN] (pass-1-'11.-Nov'-vs-pass-3-'14.-Nov!')",
+] as const;
+
+/** Vse-nove-1880-meritve-v-obliki-za-QA (skupaj-04455: 223→226 · vitals: 1966→1969 · sidra: 216→219-1880:3! · dobe: 190→193-23-pred-linijskih!). */
+export const MARRIAGE_1880_KORPUS = {
+  skupaj04455: 226,
+  skupajVitals: 1969,
+  sidra: 219,
+  dobe: 193,
+} as const;
