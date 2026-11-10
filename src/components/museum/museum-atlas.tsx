@@ -151,6 +151,10 @@ import {
   FOLIACIJA_1880_XOPEN,
   PRIEST_1880,
   MARRIAGE_1880_DUELS,
+  MARRIAGE_1879_KOREKCIJA,
+  MARGINA_1879_STEVILCENJE,
+  FINIS_1878_S25,
+  MARRIAGE_1879_KONTEKST,
 } from "@/data/atlas/parish-marriage-early";
 import { LANDUSE_ZONES, LANDUSE_ENTITIES, HAMLETS } from "@/data/atlas/landuse";
 import { getCoverage, getArchiveInventory, parishStats, getHouseStory } from "@/lib/atlas";
@@ -1369,8 +1373,8 @@ function MarriageEarly1879() {
       </h3>
       <p className="mt-2 text-sm text-muted-foreground">
         {t(
-          `5/13 poročne predzgodovine (1873–1885): skeni s27–s35, ${MARRIAGE_1879_TOTAL} vpisov leta 1879 — BREZ preskokov (5. leto!). RESTART-1879 = s27-TOP (velika glava pred vrstico 1; vpis 1 = 29. Jänner [~März-DUEL]!) + ★★★★★ GLAVA-'1879'-PONOVLJENA-NA-VSAKEM-RAZPRTEM-LISTU (s27–s34!) = NOVA-8.-MEJNA-VARIANTA (mrliški vzorec mej čez knjige!) — ${MARRIAGE_1879_GRIBLJE} Griblje blokov.`,
-          `5/13 of the marriage prehistory (1873–1885): scans s27–s35, ${MARRIAGE_1879_TOTAL} entries of 1879 — WITHOUT skips (the 5th year!). RESTART-1879 = s27-TOP (the big heading before row 1; entry 1 = Jan 29 [~März-DUEL]!) + the-'1879'-HEADING-REPEATED-ON-EVERY-SPREAD (s27–s34!) = a NEW-8th-BOUNDARY-VARIANT (the death-register boundary pattern across books!) — ${MARRIAGE_1879_GRIBLJE} Griblje blocks.`,
+          `7/13 poročne predzgodovine (1873–1885): skeni s26–s35, ${MARRIAGE_1879_TOTAL} vpisov leta 1879 — BREZ preskokov (5. leto!). P245-KOREKCIJA: RESTART-1879 = s26-TOP (velika letnica v datumu vpisa 1 = 1. Jänner — Wilhelm Fritz LOKA 1 × Anna Blasnik CERNO 38! številčenje v LEVI MARGINI!) + GLAVA-'1879'-PONOVLJENA-NA-VSAKEM-RAZPRTEM-LISTU (s27–s34!) = NOVA-8.-MEJNA-VARIANTA — PONOVITEV, ne restart-marker (P244-napaka popravljena!) — ${MARRIAGE_1879_GRIBLJE} Griblje blokov.`,
+          `7/13 of the marriage prehistory (1873–1885): scans s26–s35, ${MARRIAGE_1879_TOTAL} entries of 1879 — WITHOUT skips (the 5th year!). P245-CORRECTION: RESTART-1879 = s26-TOP (the big year as the prefix of entry 1's date = Jan 1 — Wilhelm Fritz LOKA 1 × Anna Blasnik CERNO 38! numbering IN THE LEFT MARGIN!) + the-'1879'-HEADING-REPEATED-ON-EVERY-SPREAD (s27–s34!) = a NEW-8th-BOUNDARY-VARIANT — a REPETITION, not a restart-marker (the P244 error corrected!) — ${MARRIAGE_1879_GRIBLJE} Griblje blocks.`,
         )}
       </p>
 
@@ -1406,8 +1410,8 @@ function MarriageEarly1879() {
           </h4>
           <p className="mt-1.5 text-xs">
             {t(
-              `Vpis 5: ženin Mathias PEZDIRC, GRIBLJE 50 × Maria Škuncelj, GRIBLJE 44 (5. februar — pass-3-1:1-krop!) — ${H50_1879_PT_LUKNJA} · ${H16_1879_DVOJNA}`,
-              `Entry 5: the groom Mathias PEZDIRC, GRIBLJE 50 × Maria Škuncelj, GRIBLJE 44 (Feb 5 — the-pass-3-1:1-crop!) — ${H50_1879_PT_LUKNJA} · ${H16_1879_DVOJNA}`,
+              `Vpis 7 (P245-KOREKCIJA, prej 5): ženin Mathias PEZDIRC, GRIBLJE 50 × Maria Škuncelj, GRIBLJE 44 (5. februar — pass-3-1:1-krop!) — ${H50_1879_PT_LUKNJA} · ${H16_1879_DVOJNA}`,
+              `Entry 7 (P245-CORRECTION, formerly 5): the groom Mathias PEZDIRC, GRIBLJE 50 × Maria Škuncelj, GRIBLJE 44 (Feb 5 — the-pass-3-1:1-crop!) — ${H50_1879_PT_LUKNJA} · ${H16_1879_DVOJNA}`,
             )}
           </p>
           <p className="mt-2 text-[11px] text-muted-foreground">
@@ -1430,14 +1434,47 @@ function MarriageEarly1879() {
         </div>
         <div className="rounded-lg border border-sky-600/40 bg-sky-600/10 p-4 text-sky-900 dark:text-sky-100">
           <h4 className="text-sm font-semibold">
-            {t("FOLIACIJA-REŠITEV: Pag = sken−1 4/4 v 1879 → P243-s38-DUEL zaprt!", "FOLIATION-RESOLUTION: Pag = scan−1 4/4 in 1879 → the P243-s38-DUEL closed!")}
+            {t("FOLIACIJA-REŠITEV: Pag = sken−1 5/5 v 1879 → P243-s38-DUEL zaprt!", "FOLIATION-RESOLUTION: Pag = scan−1 5/5 in 1879 → the P243-s38-DUEL closed!")}
           </h4>
           <p className="mt-1.5 text-xs">
             {t(
-              `${FOLIACIJA_1879_REŠITEV} — s27-'Pag. 26' + s30-'Pag. 29' + s34-'Pag. 33' + s35-'Pag. 34' (vsi ultra-zoom-1:1!) — s38-branje-'Pag. 34.' = MISREAD-'Pag. 37' (0-vs-7-Kurrent-cf.-P162b!)`,
-              `${FOLIACIJA_1879_REŠITEV} — s27-'Pag. 26' + s30-'Pag. 29' + s34-'Pag. 33' + s35-'Pag. 34' (all ultra-zoom-1:1!) — the-s38-'Pag. 34.'-reading = a MISREAD-'Pag. 37' (0-vs-7-Kurrent-cf.-P162b!)`,
+              `${FOLIACIJA_1879_REŠITEV} — s26-'Pag. 25' + s27-'Pag. 26' + s30-'Pag. 29' + s34-'Pag. 33' + s35-'Pag. 34' (vsi ultra-zoom-1:1!-s26-P245-KOREKCIJA-nova!) — s38-branje-'Pag. 34.' = MISREAD-'Pag. 37' (0-vs-7-Kurrent-cf.-P162b!)`,
+              `${FOLIACIJA_1879_REŠITEV} — s26-'Pag. 25' + s27-'Pag. 26' + s30-'Pag. 29' + s34-'Pag. 33' + s35-'Pag. 34' (all ultra-zoom-1:1!-s26-new-via-the-P245-correction!) — the-s38-'Pag. 34.'-reading = a MISREAD-'Pag. 37' (0-vs-7-Kurrent-cf.-P162b!)`,
             )}
           </p>
+        </div>
+        <div className="rounded-lg border border-amber-600/40 bg-amber-600/10 p-4 text-amber-900 dark:text-amber-100">
+          <h4 className="text-sm font-semibold">
+            {t("★★★ P245-KOREKCIJA: P244-napaka razkrita in popravljena — RESTART-1879 = s26 (ne s27!)", "★★★ THE P245-CORRECTION: the P244 error revealed and fixed — RESTART-1879 = s26 (not s27!)")}
+          </h4>
+          <p className="mt-1.5 text-xs">
+            {t(
+              `${MARRIAGE_1879_KOREKCIJA.razkritje} — ${MARRIAGE_1879_KOREKCIJA.vzrokNapake}`,
+              `${MARRIAGE_1879_KOREKCIJA.razkritje} — ${MARRIAGE_1879_KOREKCIJA.vzrokNapake}`,
+            )}
+          </p>
+          <p className="mt-2 text-[11px] text-muted-foreground">
+            {t(
+              `Dokazi: ${MARRIAGE_1879_KOREKCIJA.dokazi.join(" · ")} — NESPREMENJENO: ${MARRIAGE_1879_KOREKCIJA.nespremenjeno.join(" · ")}.`,
+              `Evidence: ${MARRIAGE_1879_KOREKCIJA.dokazi.join(" · ")} — UNCHANGED: ${MARRIAGE_1879_KOREKCIJA.nespremenjeno.join(" · ")}.`,
+            )}
+          </p>
+        </div>
+        <div className="rounded-lg border border-sky-600/40 bg-sky-600/10 p-4 text-sky-900 dark:text-sky-100">
+          <h4 className="text-sm font-semibold">
+            {t("Številčenje v LEVI margini (nov element formata!) + finis pro anno 1878 + kontekst v1–v5", "The numbering IN THE LEFT MARGIN (a new format element!) + finis pro anno 1878 + the context entries 1–5")}
+          </h4>
+          <p className="mt-1.5 text-xs">
+            {t(
+              `${MARGINA_1879_STEVILCENJE} · ${FINIS_1878_S25}`,
+              `${MARGINA_1879_STEVILCENJE} · ${FINIS_1878_S25}`,
+            )}
+          </p>
+          <ul className="mt-2 space-y-1 text-[11px] text-muted-foreground">
+            {MARRIAGE_1879_KONTEKST.map((k) => (
+              <li key={k.slice(0, 24)} className="[overflow-wrap:anywhere]">• {k}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>

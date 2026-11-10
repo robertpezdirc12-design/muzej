@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""P244 — verifikator POROČNE PREDZGOVINE 04455, leto 1879 = 7/13 (I1–I10 + --live)."""
+"""P244 — verifikator POROČNE PREDZGOVINE 04455, leto 1879 = 7/13 (I1–I10 + I11-P245-KOREKCIJA + --live)."""
 import json, re, sys, urllib.request
 
 ROOT = "/home/z/my-project"
@@ -30,19 +30,22 @@ check("I3 skeni+pagi (27/26 · 28/27 · 29/28 · 30/29 · 31/30 · 32/31 ×2 · 
 
 d = json.load(open(f"{ROOT}/research/issue17/parish-marriage-1879-04455.json", encoding="utf-8"))
 an = json.dumps(d["anomalie"], ensure_ascii=False)
-check("I4 dokaz (33-vpisov + 9-Griblje + restart-s27-TOP + glava-na-vsakem-listu-NOVA-8-VARIANTA + meje!)",
+check("I4 dokaz (33-vpisov + 9-Griblje + P245-KOREKCIJA-restart-s26-TOP + GLAVA-ponovljena-ne-restart + meje!)",
       d["stats"]["entries"] == 33 and d["stats"]["gribljeMarriages"] == 9
-      and "NOVA-8.-MEJNA-VARIANTA" in d["frame"]["restart_varianta"]
-      and "s27-TOP" in d["frame"]["restart_varianta"]
-      and "PONOVLJENA-NA-VSAKEM" in d["frame"]["restart_varianta"]
-      and "s26→s27" in d["frame"]["meja_1878_79"]
+      and "P245-KOREKCIJA" in d["frame"]["restart_varianta"]
+      and "s26-TOP" in d["frame"]["restart_varianta"]
+      and "Wilhelm-Fritz" in d["frame"]["restart_varianta"]
+      and "LEVI-MARGINI" in d["frame"]["restart_varianta"]
+      and "PONOVITEV-leto-na-vsakem-listu" in d["frame"]["restart_varianta"]
+      and "s25→s26" in d["frame"]["meja_1878_79"]
+      and "finis-pro-anno-1878" in d["frame"]["meja_1878_79"]
       and "s35-mid" in d["frame"]["meja_1879_80"],
       f"entries={d['stats']['entries']} griblje={d['stats']['gribljeMarriages']}")
 check("I4b h50-PT-luknja + h16-×2 + h63-KRIŽAN-2.-leto + FOLIACIJA-4/4-REŠITEV",
       "h50-PT-luknja-hiša-1.-poročni-dokaz-v-predzgodovini" in an
       and "h16-×2-BLOKA-V-1-LETU" in an
       and "h63-KRIŽAN-2.-LETO-ZAPORED" in an
-      and "4/4-1879" in d["frame"]["foliacija"] and "REŠEN" in d["frame"]["foliacija"])
+      and "5/5-1879" in d["frame"]["foliacija"] and "Pag. 25" in d["frame"]["foliacija"] and "REŠEN" in d["frame"]["foliacija"])
 an2 = json.dumps(d, ensure_ascii=False)
 check("I4c PEZDIRC-7.-leto + DOVGAN-7-let + MILEH-križ + TRIPLE-DUEL-v1",
       "7.-LETU" in an2 and "DOVGAN-CONTINUUM-PODALJŠAN-NA-7-LET" in an2
@@ -53,23 +56,26 @@ st = qa.count("HOUSE_VITALS.length !== 1978")
 check("I5 qa-p244 + števec-1978 (×150!)", "qa-p244-parish-marriage-early-04455-1879" in qa and st >= 150, f"1978-številcev={st}")
 check("I5b sidra-228 + 1879:9-P244 (qa-sidra-message)", "poročna sidra ≠ 228 (1879:9-P244!" in qa)
 check("I5c dobe-202 + 32-pred-linijskih", "dobe-bloki ≠ 202/7/26" in qa and "32 pred-linijskih 1879-P244×9!" in qa)
-check("I5d p80-1879:9-garda + sken-range-27–35", 'p80MarrAnchors.filter((h) => h.year === 1879).length !== 9' in qa and "skeni izven 27–35" in qa)
+check("I5d p80-1879:9-garda + sken-range-27–35", 'p80MarrAnchors.filter((h) => h.year === 1879).length !== 9' in qa and "skeni izven 26–35" in qa and "skeni izven 27–35" not in qa)
 
-i0 = src.find("P244: POROČNA PREDZGOVINA 04455, leto 1879")
+i0 = src.find("P244+P245-KOREKCIJA: POROČNA PREDZGOVINA 04455, leto 1879")
 seg = src[i0:] if i0 >= 0 else ""
-check("I6a 33-VPISOV-BREZ-PRESKOKOV + RESTART-s27-TOP + GLAVA-PONOVLJENA",
-      "33-VPISOV-BREZ-PRESKOKOV" in seg and "RESTART-1879 = s27-top" in seg and "GLAVA-PONOVLJENA-NA-VSAKEM-RAZPRTEM-LISTU" in seg)
-check("I6b meja-s26→s27 + meja-s35-mid-P243 + NOVA-8.-VARIANTA",
-      "MEJA-1878/79 = s26→s27" in seg and "MEJA-1879/80 = s35-mid" in seg and "NOVA-8.-MEJNA-VARIANTA" in seg)
+check("I6a 33-VPISOV-BREZ-PRESKOKOV + P245-KOREKCIJA-RESTART-s26-top + GLAVA-PONOVLJENA",
+      "33-VPISOV-BREZ-PRESKOKOV" in seg and "RESTART-1879 = s26-top" in seg and "Wilhelm-Fritz" in seg
+      and "GLAVA-PONOVLJENA-NA-VSAKEM-RAZPRTEM-LISTU" in seg and "PONOVITEV-ne-restart-marker" in seg)
+check("I6b meja-s25→s26 + finis-1878 + meja-s35-mid-P243 + NOVA-8.-VARIANTA",
+      "MEJA-1878/79 = s25→s26" in seg and "finis-pro-anno-1878" in seg and "MEJA-1879/80 = s35-mid" in seg
+      and "NOVA-8.-MEJNA-VARIANTA" in seg)
 check("I6c 9-GRIBLJE-blokov + h50-PT + h16-×2 + h63-KRIŽAN-NIT-5-LET",
-      "9-GRIBLJE-blokov" in seg and "h50-PT-luknja-hiša-1.-poročni-dokaz" in seg
-      and "h16-×2-BLOKA-V-1-LETU" in seg and "NIT-5-LET" in seg)
+      "9-GRIBLJE-blokov" in seg and "h50-v7-PT-luknja-hiša-1.-poročni-dokaz" in seg
+      and "h16-v4-×2-BLOKA-V-1-LETU" in seg and "NIT-5-LET" in seg)
 check("I6d PEZDIRC-7.-leto + DOVGAN-podpis-Dopgan + MILEH-križ + Civil-Beizag",
-      "PEZDIRC-×2-ženinov-+ -priča!" in seg and "DOVGAN-continuum-SE-PODALJŠUJE-NA-7-LET" in seg
+      "PEZDIRC-×2-ženinov (v7+v21!)" in seg and "DOVGAN-continuum-SE-PODALJŠUJE-NA-7-LET-IN-ŠIRI-OD-v1" in seg
       and "Mileh" in seg and "Civil-Beizag" in seg)
 
 m = open(f"{ROOT}/src/data/atlas/parish-marriage-early.ts", encoding="utf-8").read()
-check("I7a modul-1879 (MARRIAGE_1879_*-izvozi)", all(x in m for x in [
+check("I7a modul-1879 (MARRIAGE_1879_*-izvozi + P245-KOREKCIJA-izvozi!)", all(x in m for x in [
+    "MARRIAGE_1879_KOREKCIJA", "MARGINA_1879_STEVILCENJE", "FINIS_1878_S25", "MARRIAGE_1879_KONTEKST",
     "MARRIAGE_1879_BLOCKS", "MARRIAGE_1879_GRIBLJE", "MARRIAGE_1879_HOUSES", "MARRIAGE_1879_TOTAL",
     "MARRIAGE_1879_MEJA", "MARRIAGE_1879_NUMBERING", "FOLIACIJA_1879_REŠITEV", "H50_1879_PT_LUKNJA",
     "H16_1879_DVOJNA", "KRIZAN_1879_NIT", "PEZDIRC_1879_CONTINUUM", "BRINC_1879_NIT",
@@ -84,13 +90,38 @@ check("I8a pt-luknja-1978 + byBook-04455=235", pt.get("vitalsTotal") == 1978 and
       f"vitalsTotal={pt.get('vitalsTotal')} 04455={pt.get('corpus', {}).get('byBook', {}).get('04455')}")
 
 ui = open(f"{ROOT}/src/components/museum/museum-atlas.tsx", encoding="utf-8").read()
-check("I9 UI-MarriageEarly1879-v-ParishTab + importi",
+check("I9 UI-MarriageEarly1879-v-ParishTab + importi + P245-KOREKCIJA-kartica!",
       "MarriageEarly1879" in ui and "H50_1879_PT_LUKNJA" in ui
-      and "FOLIACIJA-REŠITEV: Pag = sken−1 4/4 v 1879" in ui)
+      and "FOLIACIJA-REŠITEV: Pag = sken−1 5/5 v 1879" in ui
+      and "P245-KOREKCIJA: P244-napaka razkrita in popravljena" in ui
+      and "MARRIAGE_1879_KOREKCIJA" in ui and "MARGINA_1879_STEVILCENJE" in ui
+      and "FINIS_1878_S25" in ui and "MARRIAGE_1879_KONTEKST" in ui)
 check("I9b worklog-P244-vnos", "## P244" in open(f"{ROOT}/worklog.md", encoding="utf-8").read())
 check("I9c stari-verifikatorji-na-živih-številkah",
       "1978" in open(f"{ROOT}/scripts/p238_parish_marriage_1885_04455.py", encoding="utf-8").read()
       and "235" in open(f"{ROOT}/scripts/p242_parish_marriage_1881_04455.py", encoding="utf-8").read())
+
+# ——— I11: P245-KOREKCIJA ————
+kj = json.dumps(d.get("korekcija", {}), ensure_ascii=False)
+check("I11a JSON-korekcija-polje (razkritje + vzrok + dokazi + nespremenjeno)",
+      d.get("korekcija", {}).get("faza") == "P245" and "s26 (ne s27!)" in kj
+      and "pass-1-na-s26-vrnil-prazno" in kj.replace("PRAZNO", "prazno").replace("vrstic=0", "vrstic=0")
+      and "6-VLM-pregledov" in kj and "33-vpisov-skupaj" in kj)
+check("I11b bloki-vpis-korigirani (4-7-9-12-16-20-21-24-25!)",
+      [b["vpis"] for b in d["bloki"]] == [4, 7, 9, 12, 16, 20, 21, 24, 25],
+      ",".join(str(b["vpis"]) for b in d["bloki"]))
+check("I11c anomalie-KOREKCIJA-vnosi (21-vnosov!-margina + finis + kontekst + Dovgan)",
+      len(d["anomalie"]) == 21 and any("P245-KOREKCIJA-METODA" in a for a in d["anomalie"])
+      and any("FINIS-PRO-ANNO-1878" in a for a in d["anomalie"])
+      and any("KONTEKST-v1-v2-v3-v5" in a for a in d["anomalie"])
+      and any("DOVGAN-od-PRVEGA-VPISA" in a for a in d["anomalie"]))
+mk = open(f"{ROOT}/src/data/atlas/parish-marriage-early.ts", encoding="utf-8").read()
+check("I11d modul-KOREKCIJA-vsebine (Fritz + margina + finis + kontekst + Dovgan-×3)",
+      "RESTART-1879 = s26 (ne s27!)" in mk and "Wilhelm-Fritz" in mk
+      and "natisnjen-Lfd.-stolpec-NE-OBSTAJA" in mk and "finis-pro-anno-1878" in mk
+      and "Franz-Dovgan-podpis-×3-NA-s26" in mk and "6-[7]-8" in mk)
+check("I11e parish.ts-KOREKCIJA-sekcija (P244+P245-KOREKCIJA-naslov!)",
+      "P244+P245-KOREKCIJA: POROČNA PREDZGOVINA 04455" in src and "vpis 4" in src and "vpis 7" in src)
 
 # ——— I10: QA-živo ———
 try:

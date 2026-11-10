@@ -1,162 +1,195 @@
 {
-  "faza": "P244",
-  "naslov": "POROČNA PREDZGOVINA 04455, leto 1879 = 7/13 — s27–s35 (RESTART-1879 = s27-TOP! GLAVA-PONOVLJENA-NA-VSAKEM-LISTU = NOVA-8.-MEJNA-VARIANTA + FOLIACIJA-4/4→P243-DUEL-REŠEN!)",
-  "datum": "2026-11-10",
-  "vir": {
-    "knjiga": "poročna 04455 (Trauungs-Buch), župnija Podzemelj — Matricula Online",
-    "skeni": "s26–s35 (10 skenov md5-10/10! — glavni s27–s35)",
-    "razprti_listi": "~2457 × 1800 px; viewer-HTML→192-URL trailing-slash-fix"
-  },
-  "frame": {
-    "restart_varianta": "RESTART-1879 = s27-TOP: VELIKA-glava-'1879'-na-ZAČETKU-leve-polovice-PRED-vrstico-zap.-št.-1 (cf.-P241-4.-VARIANTA!) — NOVA-8.-MEJNA-VARIANTA: GLAVA-'1879'-PONOVLJENA-NA-VSAKEM-RAZPRTEM-LISTU-s27–s34 (mrliški-vzorec-mej-60.–74.-POTRDILO-ČEZ-KNJIGE!) + vpis-1 = 29. Jänner 1879 [~März-DUEL-2-branja!-pass-1+2+3-za-Jänner!] — Georg-Klepec-[~Klejec/Klobučar/Pegdirc-TRIPLE-DUEL-4-branja!]-½-Güblar-GRIBLJE-16-[~DUEL-Otok-1!] × Marie-Jurejevič-GRIBLJE-10-[~3-branja!] + MODRI-pripis-'Civil-Beizag-präsent-...-Dechant-von-Admont-vom-9.-Jänner-1879'-NOV-element-[~X-OPEN!]",
-    "meja_1878_79": "s26→s27 (tail-1878 = Georg-Krugel-[~Krigel!]-½-Grubl-+ Klobucar-s26-DNO!-opomba-'von-Cernomelj-dd.-12-Jänner-879'-priča-[~X-OPEN!])",
-    "meja_1879_80": "s35-mid (P243-1:1!-vpisi-31–33-tail-1879 → RESTART-1–2-1880-dno!)",
-    "numbering": "s27 = 1–2-restart · s28 = 3–8 (6-vrstic!-pass-1-samo-3-videl-krop-stolp-3×-RAZREŠENO: v3-Wingler-Cerknobl-14-vojak-NE-Griblje!-v5-Pezdirc-50!-v6-Luniri-Vranovice-19!) · s29 = 9–11 · s30 = 12–14 · s31 = 15–18 · s32 = 19–21 · s33 = 22–25 · s34 = 26–30 · s35-top = 31–33-tail (P243-1:1!) — 33-VPISOV-BREZ-PRESKOKOV (5.-leto-zapored!)",
-    "finis": "NI-zaključne-oznake-v-1879-pasovih (s35-top-31–33-tail-→-s35-DNO-restart-1880 — 'finis / s 1880'-je-NA-DNU-1880-P243!)",
-    "foliacija": "s27-'Pag. 26.'-1:1-+ s30-'Pag. 29'-1:1-+ s34-'Pag. 33'-1:1-+ s35-'Pag. 34.'-1:1 = FOLIACIJA-'Pag-=-sken−1'-4/4-1879! → P243-s38-'Pag. 34.'-X-OPEN-DUEL-REŠEN: pravilo-Pag==sken−1-OSTAJA (s38-branje-'34'-= MISREAD-'37'-0-vs-7-Kurrent-cf.-P162b!) + s31-'Pag. 36.'-[~MISREAD-'30'-0-vs-6-DUEL-podporjen!]"
-  },
-  "stats": {
-    "entries": 33,
-    "entriesNote": "s27-1–2 + s28-3–8 + s29-9–11 + s30-12–14 + s31-15–18 + s32-19–21 + s33-22–25 + s34-26–30 + s35-top-31–33 = 33 DISTINCT (BREZ preskokov!)",
-    "gribljeMarriages": 9,
-    "gribljeHouses": [
-      "16",
-      "50",
-      "61",
-      "21",
-      "32 [~]",
-      "13 [~]",
-      "42",
-      "17 [~]",
-      "16"
-    ],
-    "skupaj04455": 235,
-    "skupajVitals": 1978,
-    "sidra": 228,
-    "dobe": 202
-  },
-  "bloki": [
-    {
-      "vpis": 1,
-      "scan": 27,
-      "page": 26,
-      "datum": "29. Jänner 1879 [~März-DUEL]",
-      "ženin": "Georg Klepec [~Klejec/Klobučar/Pegdirc-TRIPLE-DUEL-4-branja!]",
-      "hiša": "GRIBLJE 16 [~DUEL-Otok-1!]",
-      "nevesta": "Marie Jurejevič",
-      "hišaN": "GRIBLJE 10 [~]",
-      "opomba": "RESTART-vpis-1!-+ 'Civil-Beizag'-modri-pripis-NOV-element!-+ Klepec-cf.-P94-h22-MILEK-×-KLEPEC-1899!"
-    },
-    {
-      "vpis": 5,
-      "scan": 28,
-      "page": 27,
-      "datum": "5. Februar 1879",
-      "ženin": "Mathias Pezdirc",
-      "hiša": "GRIBLJE 50 (1:1-krop!)",
-      "nevesta": "Maria Škuncelj",
-      "hišaN": "GRIBLJE 44 [~]",
-      "opomba": "★★★ h50 = 1.-POROČNI-DOKAZ-V-PREDZGODOVINI (PT-luknja-hiša-P191!) + PEZDIRC-ženin-7.-leto! + v3-Wingler-Cerknobl-vojak-NE-Griblje!"
-    },
-    {
-      "vpis": 9,
-      "scan": 29,
-      "page": 28,
-      "datum": "12. Februar 1879 [pass-4-1:1!]",
-      "ženin": "Georg Tomc [~Tomic]",
-      "hiša": "GRIBLJE 61 [~]",
-      "nevesta": "Barbara-geb.-Tomc-vdova-verw.-Schilar [~ŠILAR!]",
-      "hišaN": "GRIBLJE 25 [~]",
-      "opomba": "h61-1.-poročni-dokaz!-+ ŠILAR-vdova-nit + TOMC-TRIPLET-1/3!"
-    },
-    {
-      "vpis": 12,
-      "scan": 30,
-      "page": 29,
-      "datum": "12. Feber 1879 [pass-3-1:1!]",
-      "ženin": "Johann Pozèh [~Požeh]",
-      "hiša": "GRIBLJE 21 (ultra-zoom-1:1!)",
-      "nevesta": "Maria Brinc [~Brüne/Princ-DUEL!]",
-      "hišaN": "GRIBLJE 24",
-      "opomba": "★★★ h24-2.-leto-ZAPORED (1879-nevesta-→-1880-ženin-Mathias-BRINE-P243-v4!) + BRINC-5.-leto + DRAGOŠ-mati-nit!"
-    },
-    {
-      "vpis": 16,
-      "scan": 31,
-      "page": 30,
-      "datum": "19. Februar 1879 [~3-poroke-19.-X-OPEN!]",
-      "ženin": "Matthias Vijanec [~Vipovec-DUEL!]",
-      "hiša": "Ammanhof[?]-IZVEN-korpusa",
-      "nevesta": "Anne Sušarič [~Gustaria-garble!]",
-      "hišaN": "GRIBLJE 32 [~Grilogz-2-branja!]",
-      "opomba": "★ nevesta-h32-2.-poročni-dokaz (cf.-P238-1885!) + priča-'Pezdire'-[~PEZDIRC!] + 'Ann.-Broda'-cf.-BRODARIČ!"
-    },
-    {
-      "vpis": 20,
-      "scan": 32,
-      "page": 31,
-      "datum": "19.[~Feber?] 1879 [~]",
-      "ženin": "Martin Tomc [~Tome]",
-      "hiša": "GRIBLJE 13 [~DUEL-16-X-OPEN!]",
-      "nevesta": "Maria Hugelji [~Kugelj-TRIPLE-DUEL-IME-Maria/Engel/Anna!]",
-      "hišaN": "'Privo-glavre-30'[~NE-Griblje!]",
-      "opomba": "h13-2.-poročni-dokaz (cf.-P240-1883-+ P242!) + TOMC-TRIPLET-2/3 + nevesta-16-let-mladoletnica!"
-    },
-    {
-      "vpis": 21,
-      "scan": 32,
-      "page": 31,
-      "datum": "19.[~Feber?] 1879",
-      "ženin": "Georg Pegdirec [~Pezdirc-DUEL!]",
-      "hiša": "GRIBLJE 42 (ultra-zoom-1:1!)",
-      "nevesta": "Dorothea Hrizan [~Križan!]",
-      "hišaN": "GRIBLJE 63 (ultra-zoom-1:1!)",
-      "opomba": "★★★ h63-KRIŽAN-2.-LETO-ZAPORED (1879-nevesta-→-1880-ženin-P243-v14!-NIT-5-LET-z-mrliško-1884-P239!) + PEZDIRC-ženin-7.-leto-×2-v-letu! + margine-'Gesuchs-1879-...der-Gemein[de]'-[~GAVELDZETTEL-cf.-X-OPEN!]"
-    },
-    {
-      "vpis": 24,
-      "scan": 33,
-      "page": 32,
-      "datum": "24. Februar 1879 [~23-vs-24-DUEL!]",
-      "ženin": "Johann Kralj",
-      "hiša": "GRIBLJE 17 [~DUEL-24!]",
-      "nevesta": "Anna Janoprič [~]",
-      "hišaN": "Crhlivec[?]-IZVEN",
-      "opomba": "★ h17-2.-poročni-dokaz-cf.-P151-1922-Jurij-KRALJ-h17-3.-dokaz-ISTO-DRUŽINA (1892-№10-Johann!)"
-    },
-    {
-      "vpis": 25,
-      "scan": 33,
-      "page": 32,
-      "datum": "4. Mai 1879",
-      "ženin": "Matthius Tomc [~]",
-      "hiša": "GRIBLJE 16 [~2-branja!-STEM-garble]",
-      "nevesta": "Maria Mihelec [~Mihelič-DUEL!]",
-      "hišaN": "Semič-3-IZVEN",
-      "opomba": "★★★ h16-×2-BLOKA-V-1879 (2.×-linije-cf.-P242-h27-×2-bloka!) + TOMC-TRIPLET-3/3!-+ Mihelec-cf.-MIHELČ-MILIČ-križ!"
-    }
+ "faza": "P244",
+ "naslov": "POROČNA PREDZGOVINA 04455, leto 1879 = 7/13 — s26–s35 (P245-KOREKCIJA: RESTART-1879 = s26-TOP-velika-letnica-v-datumu-vpisa-1-Fritz-×-Blasnik!-številčenje-v-LEVI-MARGINI! + GLAVA-ponovljena-s27–s34-je-PONOVITEV-ne-restart! + FOLIACIJA-5/5→P243-DUEL-REŠEN!)",
+ "datum": "2026-11-10",
+ "vir": {
+  "knjiga": "poročna 04455 (Trauungs-Buch), župnija Podzemelj — Matricula Online",
+  "skeni": "s26–s35 (10 skenov md5-10/10! — vsi-glavni!-+ s25-tail-kontekst-1878-na-zalogi-md5!) — P245-KOREKCIJA: s26-je-GLAVNI (restart!) ne-samo-tail-kontekst",
+  "razprti_listi": "~2457 × 1800 px; viewer-HTML→192-URL trailing-slash-fix"
+ },
+ "frame": {
+  "restart_varianta": "P245-KOREKCIJA (popravlja-P244!): RESTART-1879 = s26-TOP — VELIKA-letnica-'1879'-kot-predpona-DATUMA-vpisa-1 ('1879-Jänner-1.'-veliko!-NI-posebna-glava-nad-tabelo!-cf.-P238/P239-vzorec-velika-letnica-v-vpisu-1!) — vpis-1 = 1. Jänner 1879 — Wilhelm-Fritz-[~frih/Kritz-DUEL-Kurrent!]-Ökonom-Wolfsberg-41-v-Kärnthen-stanuje-LOKA-1 (34-l) × Anna-Blasnik-[~Blahnik-DUEL!]-Cerno-melj.-38 (43-l)-gostilničarjeva-hči! + vpis-2 = 12. Jänner — Anton-Krupljen-[~Krystan/Pristan-DUEL!]-k.k.-Postwärth-Cernomelj (37-l) × Elisabeth-[~Rubin/Krslin-DUEL!]-18-l-MLADOLETNICA-minderjährig-Einwilligung-starši! + vpis-3 = 26. Jänner — Georg-Krugel-[~Krigel/Krügel-DUEL!]-½-Gübler-Dobranič-18 (63-l) × Katharina-geb.-Klobučar-[~Hrab/Klepec-DUEL-verw.!]-Boršt-22 (44-l)-VDOVA! — ŠTEVILČENJE-v-LEVI-MARGINI (1-2-3-modro-sivo!-natisnjen-Lfd.-stolpec-NE-OBSTAJA-'Haus-Nr.'-je-med-Wohnort-in-imenom!) + DUHOVNIK-Franz-DOVGAN-podpis-×3 (v1–v3!-kontinuum-od-1.-VPISA-1879!) — P244-napaka (restart-s27-TOP-+-'vpis-1-=-Klepec-29.-Jänner')-nastala: pass-1-s26-vrnil-PRAZNO (vrstic=0-glave=[ni]!)-+ pass-1-s27-številke-'niso-vidne'→P244-sklenil-restart-na-s27; GLAVA-'1879'-na-s27–s34-je-PONOVITEV-leto-na-vsakem-listu (P244-sama-NOVA-8.-VARIANTA!)-NE-restart-marker — Klepec-29.-Jänner = vpis-4 (NE-1!)",
+  "meja_1878_79": "s25→s26 (P245-KOREKCIJA!-tail-1878 = s25: zap-št.-22–23-v-margini — 22-=-1878-Okt.-[24~27-DUEL!]-Martin-[~]-Mrivo-glavre-38-+ 23-=-Novem.-10.-Mathias-[~]-Gornji-Dovc.-67-+ ★★★ VELIKA-ROKOPISNA-OPOMBA-'finis-pro-anno-1878'-na-sredi-strani-POD-vrstama = ZAKLJUČNA-OZNAKA-LETA — 2.-instance-v-poročni-predzgovorini (cf.-P243-s38-'finis-/-s-1880'!-vzorec-PONOVLJEN-čez-leta!-P243-'1.-ta-vrsta'-→-1.-ODKRITA-v-P243-ampak-s25-zgodnejša-v-knjigi!) — Krugel-s26-dno-NI-tail-1878-ampak-vpis-3-1879-P245-KOREKCIJA!)",
+  "meja_1879_80": "s35-mid (P243-1:1!-vpisi-31–33-tail-1879 → RESTART-1–2-1880-dno!)",
+  "numbering": "s26 = 1–3-restart (P245-KOREKCIJA!-margini-1/2/3!) · s27 = 4–5 (margini-4/5!-Klepec-16-je-v4!) · s28 = 6–8 (3-vrstice!-margina-6-jasna-+ 7-poškodovana-trganje-papirja-aritmetično-vsiljena-6-[7]-8-+ 8-jasna!-v6-Wingler-Cerknobl-14-vojak-NE-Griblje-v7-Pezdirc-50-v8-Kunič[~]-Ustje-19!) · s29 = 9–11 · s30 = 12–14 · s31 = 15–18 · s32 = 19–21 · s33 = 22–25 · s34 = 26–30 · s35-top = 31–33-tail (P243-1:1!) — 33-VPISOV-BREZ-PRESKOKOV (5.-leto-zapored!-vsota-NESPREMENJENA: P244-s27+s28-8-vpisov-=-KOREKCIJA-s26+s27+s28-8-vpisov!)",
+  "finis": "NI-zaključne-oznake-v-1879-pasovih (s35-top-31–33-tail-→-s35-DNO-restart-1880 — 'finis / s 1880'-je-NA-DNU-1880-P243!)",
+  "foliacija": "s26-'Pag. 25.'-1:1 (P245-KOREKCIJA-nova!)-+ s27-'Pag. 26.'-1:1-+ s30-'Pag. 29'-1:1-+ s34-'Pag. 33'-1:1-+ s35-'Pag. 34.'-1:1 = FOLIACIJA-'Pag-=-sken−1'-5/5-1879! → P243-s38-'Pag. 34.'-X-OPEN-DUEL-REŠEN: pravilo-Pag==sken−1-OSTAJA (s38-branje-'34'-= MISREAD-'37'-0-vs-7-Kurrent-cf.-P162b!) + s31-'Pag. 36.'-[~MISREAD-'30'-0-vs-6-DUEL-podporjen!]"
+ },
+ "stats": {
+  "entries": 33,
+  "entriesNote": "s26-1–3-restart + s27-4–5 + s28-6–8 + s29-9–11 + s30-12–14 + s31-15–18 + s32-19–21 + s33-22–25 + s34-26–30 + s35-top-31–33 = 33 DISTINCT (BREZ preskokov!-P245-KOREKCIJA: distribucija-s26–s28-popravljena-vsota-33-NESPREMENJENA!)",
+  "gribljeMarriages": 9,
+  "gribljeHouses": [
+   "16",
+   "50",
+   "61",
+   "21",
+   "32 [~]",
+   "13 [~]",
+   "42",
+   "17 [~]",
+   "16"
   ],
-  "anomalie": [
-    "★★★ RESTART-1879 = s27-TOP — VELIKA-glava-'1879'-pred-vrstico-zap.-št.-1 (cf.-P241-4.-VARIANTA!) — vpis-1 = 29. Jänner[~März-DUEL]!",
-    "★★★★★ GLAVA-'1879'-PONOVLJENA-NA-VSAKEM-RAZPRTEM-LISTU-s27–s34 (VSE-pass-1-glave-'1879'!) = NOVA-8.-MEJNA-VARIANTA — mrliški-vzorec-mej-60.–74.-POTRDILO-ČEZ-KNJIGE (prvič-v-poročni-predzgovorini!)!",
-    "★★★★★ FOLIACIJA-'Pag-=-sken−1'-4/4-1879 (s27-'Pag. 26' + s30-'Pag. 29' + s34-'Pag. 33' + s35-'Pag. 34'!-vsi-ultra-zoom!) → P243-s38-'Pag. 34.'-X-OPEN-DUEL-REŠEN: pravilo-Pag==sken−1-OSTAJA (s38-branje-'34'-= MISREAD-'37'-0-vs-7-Kurrent!)",
-    "★★★ h50-PT-luknja-hiša-1.-poročni-dokaz-v-predzgodovini (v5-Mathias-Pezdirc-×-Maria-Škuncelj!-cf.-P191-mrliško!)",
-    "★★★ h16-×2-BLOKA-V-1-LETU (v1-Klepec-+ v25-Tomc!-2.×-linije-cf.-P242-h27-×2!)",
-    "★★★ h63-KRIŽAN-2.-LETO-ZAPORED (v21-Georg-Pegdirc-×-Dorothea-Križan!-1879-nevesta-→-1880-ženin-P243-v14!-NIT-5-LET: 1879→1884-mrliška-×2-P239!)",
-    "★★★ h24-BRINC-2.-LETO-ZAPORED (v12-Maria-Brinc-nevesta-→-1880-Mathias-BRINE-ženin-P243-v4!-BRINC-MREŽA-5.-leto!)",
-    "★★★ PEZDIRC-CONTINUUM-×131→04455-v-7.-LETU: v5-ženin-Mathias-h50-+ v21-ženin-Georg-[~Pegdirc!]-h42-+ v16-priča-'Pezdire'-[~!] = 2-ŽENINOV-×-1-PRIČA!",
-    "★★★ DOVGAN-CONTINUUM-PODALJŠAN-NA-7-LET (1879–1885!): s35-tail-D-podpis-'Copulatus-sum-Griblje-d.-14/9-1879.-Dopgan'-1:1!-+ v16-'Franc-[~Pasthic/Dovgan]'-+ s27-v1-modri-pripis-'Anton-Franz-von-Dovgan-Dechant'-[~X-OPEN!]",
-    "★★★ MILEK-križ-kandidat-IZVEN-korpusa (s35-tail-D-starš-'½-Gübl.-Mileh'-[~!]-v-vpisu-31-Jožef-Požeh[?]-Griblje-77[?]-×-Hrizan[~]) = križ-×237→×238-[~]-iskreno-X-OPEN!",
-    "★★ v1-'Civil-Beizag-präsent'-modri-pripis-'Gemäß-dießfalls-Anordnung-des-HH-Dechant-von-Admont-vom-9.-Jänner-1879'-NOV-ELEMENT-v-predzgodovini-[~X-OPEN-kaj-točno!]",
-    "★★ TOMC-×3-TRIPLET-v-1-LETU (v9-Georg-h61-+ v20-Martin-h13[~]-+ v25-Matthius-h16!-3-brata?-cf.-P94-Tominc-mrliško!)",
-    "★★ v9-ŠILAR-vdova-'verw.-Schilar'-h25[~]-nit (cf.-P238-h34-SILAH-+ P242-v23-Šilar!)",
-    "★★ v16-'3-poroke-19.'-kandidat [~X-OPEN] (v15-+ v16-+ v17-vsi-'19.'-cf.-P240-v5+v6-ISTA-DAN!)",
-    "★ v17-'½-Griblner'-kraj-Gradac-6/8-NI-blok-pošteno (GRIBLJAN-IZVOR-cf.-P242-×9!)",
-    "★ v24-h17-Kralj-cf.-P151-1922-ISTO-DRUŽINA (Johann-1879-34-l → Jurij-1922-36-l-r.1885-[~aritmetika: oče-sin!])",
-    "★ s35-tail-v31-'Griblje-77[?]'-DUEL-'Lunnauševšč'-X-OPEN-NI-blok-pošteno!-+ v33-17.-März-Tabor-×-Judnič-tail!"
+  "skupaj04455": 235,
+  "skupajVitals": 1978,
+  "sidra": 228,
+  "dobe": 202
+ },
+ "bloki": [
+  {
+   "vpis": 4,
+   "scan": 27,
+   "page": 26,
+   "datum": "29. Jänner 1879 [~März-DUEL]",
+   "ženin": "Georg Klepec [~Klejec/Klobučar/Pegdirc-TRIPLE-DUEL-4-branja!]",
+   "hiša": "GRIBLJE 16 [~DUEL-Otok-1!]",
+   "nevesta": "Marie Jurejevič",
+   "hišaN": "GRIBLJE 10 [~]",
+   "opomba": "P245-KOREKCIJA: vpis-4 (NE-1!-restart-je-v1-Fritz-s26!)-+ 'Civil-Beizag'-modri-pripis-NOV-element!-+ Klepec-cf.-P94-h22-MILEK-×-KLEPEC-1899!"
+  },
+  {
+   "vpis": 7,
+   "scan": 28,
+   "page": 27,
+   "datum": "5. Februar 1879",
+   "ženin": "Mathias Pezdirc",
+   "hiša": "GRIBLJE 50 (1:1-krop!)",
+   "nevesta": "Maria Škuncelj",
+   "hišaN": "GRIBLJE 44 [~]",
+   "opomba": "★★★ h50 = 1.-POROČNI-DOKAZ-V-PREDZGODOVINI (PT-luknja-hiša-P191!) + PEZDIRC-ženin-7.-leto! + P245-KOREKCIJA: vpis-7 (NE-5!-margina-fizično-poškodovana-trganje-papirja-aritmetično-vsiljena-6-[7]-8!) + v6-Wingler-Cerknobl-vojak-NE-Griblje!"
+  },
+  {
+   "vpis": 9,
+   "scan": 29,
+   "page": 28,
+   "datum": "12. Februar 1879 [pass-4-1:1!]",
+   "ženin": "Georg Tomc [~Tomic]",
+   "hiša": "GRIBLJE 61 [~]",
+   "nevesta": "Barbara-geb.-Tomc-vdova-verw.-Schilar [~ŠILAR!]",
+   "hišaN": "GRIBLJE 25 [~]",
+   "opomba": "h61-1.-poročni-dokaz!-+ ŠILAR-vdova-nit + TOMC-TRIPLET-1/3!"
+  },
+  {
+   "vpis": 12,
+   "scan": 30,
+   "page": 29,
+   "datum": "12. Feber 1879 [pass-3-1:1!]",
+   "ženin": "Johann Pozèh [~Požeh]",
+   "hiša": "GRIBLJE 21 (ultra-zoom-1:1!)",
+   "nevesta": "Maria Brinc [~Brüne/Princ-DUEL!]",
+   "hišaN": "GRIBLJE 24",
+   "opomba": "★★★ h24-2.-leto-ZAPORED (1879-nevesta-→-1880-ženin-Mathias-BRINE-P243-v4!) + BRINC-5.-leto + DRAGOŠ-mati-nit!"
+  },
+  {
+   "vpis": 16,
+   "scan": 31,
+   "page": 30,
+   "datum": "19. Februar 1879 [~3-poroke-19.-X-OPEN!]",
+   "ženin": "Matthias Vijanec [~Vipovec-DUEL!]",
+   "hiša": "Ammanhof[?]-IZVEN-korpusa",
+   "nevesta": "Anne Sušarič [~Gustaria-garble!]",
+   "hišaN": "GRIBLJE 32 [~Grilogz-2-branja!]",
+   "opomba": "★ nevesta-h32-2.-poročni-dokaz (cf.-P238-1885!) + priča-'Pezdire'-[~PEZDIRC!] + 'Ann.-Broda'-cf.-BRODARIČ!"
+  },
+  {
+   "vpis": 20,
+   "scan": 32,
+   "page": 31,
+   "datum": "19.[~Feber?] 1879 [~]",
+   "ženin": "Martin Tomc [~Tome]",
+   "hiša": "GRIBLJE 13 [~DUEL-16-X-OPEN!]",
+   "nevesta": "Maria Hugelji [~Kugelj-TRIPLE-DUEL-IME-Maria/Engel/Anna!]",
+   "hišaN": "'Privo-glavre-30'[~NE-Griblje!]",
+   "opomba": "h13-2.-poročni-dokaz (cf.-P240-1883-+ P242!) + TOMC-TRIPLET-2/3 + nevesta-16-let-mladoletnica!"
+  },
+  {
+   "vpis": 21,
+   "scan": 32,
+   "page": 31,
+   "datum": "19.[~Feber?] 1879",
+   "ženin": "Georg Pegdirec [~Pezdirc-DUEL!]",
+   "hiša": "GRIBLJE 42 (ultra-zoom-1:1!)",
+   "nevesta": "Dorothea Hrizan [~Križan!]",
+   "hišaN": "GRIBLJE 63 (ultra-zoom-1:1!)",
+   "opomba": "★★★ h63-KRIŽAN-2.-LETO-ZAPORED (1879-nevesta-→-1880-ženin-P243-v14!-NIT-5-LET-z-mrliško-1884-P239!) + PEZDIRC-ženin-7.-leto-×2-v-letu! + margine-'Gesuchs-1879-...der-Gemein[de]'-[~GAVELDZETTEL-cf.-X-OPEN!]"
+  },
+  {
+   "vpis": 24,
+   "scan": 33,
+   "page": 32,
+   "datum": "24. Februar 1879 [~23-vs-24-DUEL!]",
+   "ženin": "Johann Kralj",
+   "hiša": "GRIBLJE 17 [~DUEL-24!]",
+   "nevesta": "Anna Janoprič [~]",
+   "hišaN": "Crhlivec[?]-IZVEN",
+   "opomba": "★ h17-2.-poročni-dokaz-cf.-P151-1922-Jurij-KRALJ-h17-3.-dokaz-ISTO-DRUŽINA (1892-№10-Johann!)"
+  },
+  {
+   "vpis": 25,
+   "scan": 33,
+   "page": 32,
+   "datum": "4. Mai 1879",
+   "ženin": "Matthius Tomc [~]",
+   "hiša": "GRIBLJE 16 [~2-branja!-STEM-garble]",
+   "nevesta": "Maria Mihelec [~Mihelič-DUEL!]",
+   "hišaN": "Semič-3-IZVEN",
+   "opomba": "★★★ h16-×2-BLOKA-V-1879 (2.×-linije-cf.-P242-h27-×2-bloka!) + TOMC-TRIPLET-3/3!-+ Mihelec-cf.-MIHELČ-MILIČ-križ!"
+  }
+ ],
+ "anomalie": [
+  "★★★ P245-KOREKCIJA: RESTART-1879 = s26-TOP — velika-letnica-v-datumu-vpisa-1 (1.-Jänner-Wilhelm-Fritz-LOKA-1-×-Anna-Blasnik-CERNO-38!-cf.-P238/P239-vzorec!) — P244-trdil-s27-TOP-z-Klepcem-kot-vpisom-1 (napaka: pass-1-s26-prazno-vrstic=0-+ številke-'niso-vidne'-na-s27!)-Klepec = vpis-4 (NE-1!)-podrobnosti-v-frame.restart_varianta",
+  "★★★★★ GLAVA-'1879'-PONOVLJENA-NA-VSAKEM-RAZPRTEM-LISTU-s27–s34 (VSE-pass-1-glave-'1879'!) = NOVA-8.-MEJNA-VARIANTA (P245-KOREKCIJA: ponovitev-glave-NI-restart-marker!-P244-je-iz-nje-napačno-sklenil-restart-na-s27!) — mrliški-vzorec-mej-60.–74.-POTRDILO-ČEZ-KNJIGE (prvič-v-poročni-predzgovorini!)!",
+  "★★★★★ FOLIACIJA-'Pag-=-sken−1'-5/5-1879 (s26-'Pag. 25' + s27-'Pag. 26' + s30-'Pag. 29' + s34-'Pag. 33' + s35-'Pag. 34'!-vsi-ultra-zoom!) → P243-s38-'Pag. 34.'-X-OPEN-DUEL-REŠEN: pravilo-Pag==sken−1-OSTAJA (s38-branje-'34'-= MISREAD-'37'-0-vs-7-Kurrent!)",
+  "★★★ h50-PT-luknja-hiša-1.-poročni-dokaz-v-predzgodovini (v7-Mathias-Pezdirc-×-Maria-Škuncelj!-cf.-P191-mrliško!)",
+  "★★★ h16-×2-BLOKA-V-1-LETU (v4-Klepec-+ v25-Tomc!-2.×-linije-cf.-P242-h27-×2!)",
+  "★★★ h63-KRIŽAN-2.-LETO-ZAPORED (v21-Georg-Pegdirc-×-Dorothea-Križan!-1879-nevesta-→-1880-ženin-P243-v14!-NIT-5-LET: 1879→1884-mrliška-×2-P239!)",
+  "★★★ h24-BRINC-2.-LETO-ZAPORED (v12-Maria-Brinc-nevesta-→-1880-Mathias-BRINE-ženin-P243-v4!-BRINC-MREŽA-5.-leto!)",
+  "★★★ PEZDIRC-CONTINUUM-×131→04455-v-7.-LETU: v7-ženin-Mathias-h50-+ v21-ženin-Georg-[~Pegdirc!]-h42-+ v16-priča-'Pezdire'-[~!] = 2-ŽENINOV-×-1-PRIČA!",
+  "★★★ DOVGAN-CONTINUUM-PODALJŠAN-NA-7-LET (1879–1885!): s35-tail-D-podpis-'Copulatus-sum-Griblje-d.-14/9-1879.-Dopgan'-1:1!-+ v16-'Franc-[~Pasthic/Dovgan]'-+ s27-v1-modri-pripis-'Anton-Franz-von-Dovgan-Dechant'-[~X-OPEN!]",
+  "★★★ MILEK-križ-kandidat-IZVEN-korpusa (s35-tail-D-starš-'½-Gübl.-Mileh'-[~!]-v-vpisu-31-Jožef-Požeh[?]-Griblje-77[?]-×-Hrizan[~]) = križ-×237→×238-[~]-iskreno-X-OPEN!",
+  "★★ v4-'Civil-Beizag-präsent'-modri-pripis-'Gemäß-dießfalls-Anordnung-des-HH-Dechant-von-Admont-vom-9.-Jänner-1879'-NOV-ELEMENT-v-predzgodovini-[~X-OPEN-kaj-točno!]",
+  "★★ TOMC-×3-TRIPLET-v-1-LETU (v9-Georg-h61-+ v20-Martin-h13[~]-+ v25-Matthius-h16!-3-brata?-cf.-P94-Tominc-mrliško!)",
+  "★★ v9-ŠILAR-vdova-'verw.-Schilar'-h25[~]-nit (cf.-P238-h34-SILAH-+ P242-v23-Šilar!)",
+  "★★ v16-'3-poroke-19.'-kandidat [~X-OPEN] (v15-+ v16-+ v17-vsi-'19.'-cf.-P240-v5+v6-ISTA-DAN!)",
+  "★ v17-'½-Griblner'-kraj-Gradac-6/8-NI-blok-pošteno (GRIBLJAN-IZVOR-cf.-P242-×9!)",
+  "★ v24-h17-Kralj-cf.-P151-1922-ISTO-DRUŽINA (Johann-1879-34-l → Jurij-1922-36-l-r.1885-[~aritmetika: oče-sin!])",
+  "★ s35-tail-v31-'Griblje-77[?]'-DUEL-'Lunnauševšč'-X-OPEN-NI-blok-pošteno!-+ v33-17.-März-Tabor-×-Judnič-tail!",
+  "★★★ P245-KOREKCIJA-METODA: številčenje-1879-v-LEVI-MARGINI (modro-sivo-črnilo!-natisnjen-Lfd.-stolpec-NE-OBSTAJA-'Haus-Nr.'-je-med-Wohnort-in-imenom!) — dokazi: margina-2/3-s26-+ 4/5-s27-+ 6/8-s28-ultra-zoom-jasna-+ 7-poškodovana-trganje-papirja-aritmetično-vsiljena-6-[7]-8-+ 22/23-s25-1878!-P244-pass-1-s26-vrnil-prazno-PONOVLJENIH-6-VLM-pregledov-P245-+ 3-ultra-zooma",
+  "★★★ FINIS-PRO-ANNO-1878 = s25-sredina-strani (velika-rokopisna-opomba-POD-vrstama-22–23!) = 2.-instance-zaključne-oznake-leta-v-poročni-predzgovorini (cf.-P243-s38-'finis-/-s-1880'-1.-ODKRITA!-vzorec-se-PONOVLJUJE-čez-leta-1878-in-1880!)-+ meja-1878/79-spremenjena-s26→s27-NA-s25→s26",
+  "★★ KONTEKST-v1-v2-v3-v5-NI-bloki-pošteno: v1-Fritz-LOKA-1-(roj.-Wolfsberg-Kärnthen!)-+ v2-Krupljen-CERNO-melj.-+ v3-Krugel-DOBRANIČ-18-(½-Gübler-status-NI-hiša-Griblje!)-+ v5-Štefanik[~]-DOBRANE-8 — vsi-4-NI-kandidati-korpusa (GRIBLJAN-izvor/bivališče-pravilo-pošteno!)",
+  "★★ DOVGAN-od-PRVEGA-VPISA-1879: Franz-Dovgan-podpis-×3-na-s26 (v1-2-3!-+ Befunde-v3-'Franz-Dovgan') = kontinuum-ZDAJ-OD-1.-VPISA-leta (P244-je-poznal-samo-s35-tail-podpis-14/9!-1879–1885-kontinuum-se-širi!)"
+ ],
+ "nodat": [],
+ "qa": "qa-p244-parish-marriage-early-04455-1879 (244. kontrola — ŽIVO iz korpusa!)",
+ "metoda": "10-skenov-s26–s35-md5-10/10 (viewer-HTML→192-URL-trailing-slash-fix!) + VLM-pass-1-×8 (s27–s34-polni-prepisi!) + pass-2-×18-kropov (glave-+ stolpci-+ bloki-+ tail!) + pass-4-ultra-zoom-4×-5-kropov (s27-v1-L/D + s29-L-vse + s31-v16 + s32-v20!) + reconciliacija-1:1-z-P243-tail (s35-top-31–33!) — P245-KOREKCIJA: 6-VLM-pregledov-živega-vira (margine-s25/s26/s27/s28 + s26-polna-stran + glava-stolpcev!) + 3-ultra-zooma-margine (s26-'1'-cvak + s28-'6'-jasno + s28-'8'-jasno!-7-poškodovano-trganje-papirja-aritmetično!) + moja-lastna-očesa-Read-pregledi-4-striptov — P244-napaka-RAZKRITA: pass-1-s26-vrnil-prazno (vrstic=0!)-in-P244-je-sklenil-restart-na-s27-brez-fizične-berljivosti-števil",
+ "lead": "P246+: leto-1878-=-8/13 (s24-nazaj-tail-1878 = s25-22–23-'finis-pro-anno-1878'-že-1:1-P245-KOREKCIJA!-s26-'1879'-restart-že-1:1!) ali-knjižno-odpiranje-1873-s1",
+ "korekcija": {
+  "faza": "P245",
+  "razkritje": "RESTART-1879 = s26 (ne s27!): 3-vpisa-januarja-1879-na-s26 (v1-Fritz-LOKA-1-×-Blasnik-CERNO-38 · v2-Krupljen-CERNO-· v3-Krugel-DOBRANIČ-18)-številčenje-v-levi-margini-1–3",
+  "vzrok-napake": "P244-pass-1-na-s26-vrnil-prazno (vrstic=0-glave=[ni]-meja='') → s26-obdelan-kot-'tail-kontekst'-brez-vpisov; s27-velika-glava-'1879'-napačno-tumačena-kot-restart-marker (glava-je-ponovljena-na-vsakem-listu!); marginalne-številke-niso-bile-preverjene-fizično",
+  "dokazi": [
+   "6-VLM-pregledov (margine-s25/s26/s27/s28 + s26-polna-stran + glava-stolpcev)",
+   "ultra-zoom: s26-'1'-cvak + s28-'6'-jasno + s28-'8'-jasno + s28-'7'-trganje-papirja-aritmetika-6-[7]-8",
+   "s25-margina-22/23-+-velika-opomba-'finis-pro-anno-1878'",
+   "foliacija-s26-'Pag. 25.'-1:1-→-pravilo-Pag==sken−1-5/5",
+   "duhovnik-Franz-DOVGAN-×3-podpisa-na-s26 (v1–v3!)"
   ],
-  "nodat": [],
-  "qa": "qa-p244-parish-marriage-early-04455-1879 (244. kontrola — ŽIVO iz korpusa!)",
-  "metoda": "10-skenov-s26–s35-md5-10/10 (viewer-HTML→192-URL-trailing-slash-fix!) + VLM-pass-1-×8 (s27–s34-polni-prepisi!) + pass-2-×18-kropov (glave-+ stolpci-+ bloki-+ tail!) + pass-4-ultra-zoom-4×-5-kropov (s27-v1-L/D + s29-L-vse + s31-v16 + s32-v20!) + reconciliacija-1:1-z-P243-tail (s35-top-31–33!)",
-  "lead": "P245+: leto-1878-=-8/13 (s26-nazaj-tail-1878-Georg-Krugel-s26-dno!-s27-'1879'-glava-že-1:1!) ali-knjižno-odpiranje-1873-s1"
+  "spremembe": [
+   "restart_varianta: s27-TOP→s26-TOP (+ vpis-1-=-Fritz)",
+   "meja_1878_79: s26→s27-postane-s25→s26",
+   "bloki: Klepec-vpis-1→4-+-Pezdirc-vpis-5→7",
+   "distribucija: s27-1–2-+-s28-3–8→s26-1–3-+-s27-4–5-+-s28-6–8",
+   "foliacija: 4/4→5/5-(-s26)",
+   "novi-kontekstni-vpisi-v1-v2-v3-v5-NI-bloki-pošteno",
+   "DOVGAN-kontinuum-od-v1-(-×3-podpisa-s26)",
+   "FINIS-1878-s25-=-2.-instance-vzorca"
+  ],
+  "nespremenjeno": [
+   "33-vpisov-skupaj-BREZ-preskokov",
+   "9-Griblje-blokov-h16-h50-h61-h21-h32-h13-h42-h17-h16",
+   "korpus-235-04455-·-1978-vitalov-·-228-sidra-·-202-dobe",
+   "v9–v33-vse-številke-NESESPRJENE",
+   "meja-1879/80-s35-mid-P243"
+  ]
+ }
 }
