@@ -405,7 +405,7 @@ export const MARRIAGE_1880_KORPUS = {
   dobe: 193,
 } as const;
 
-/** ——— P244: poročna predzgodovina 04455, leto 1879 = 5/13 (s27–s35; RESTART-s27-top velika-glava + GLAVA-PONOVLJENA-NA-VSAKEM-LISTU-NOVA-8.-MEJNA-VARIANTA! + FOLIACIJA-4/4→P243-DUEL-REŠEN!) — 33 VPISOV-BREZ-PRESKOKOV · 9-GRIBLJE-blokov (h16-×2-BLOKA!) ——— */
+/** ——— P244: poročna predzgodovina 04455, leto 1879 = 7/13 (s27–s35; RESTART-s27-top velika-glava + GLAVA-PONOVLJENA-NA-VSAKEM-LISTU-NOVA-8.-MEJNA-VARIANTA! + FOLIACIJA-4/4→P243-DUEL-REŠEN!) — 33 VPISOV-BREZ-PRESKOKOV · 9-GRIBLJE-blokov (h16-×2-BLOKA!) ——— */
 export const MARRIAGE_1879_BLOCKS = HOUSE_VITALS.filter(
   (h) => h.bookSignature === "04455" && h.year === 1879,
 );

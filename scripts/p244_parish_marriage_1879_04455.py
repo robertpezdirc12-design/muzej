@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""P244 — verifikator POROČNE PREDZGOVINE 04455, leto 1879 = 5/13 (I1–I10 + --live)."""
+"""P244 — verifikator POROČNE PREDZGOVINE 04455, leto 1879 = 7/13 (I1–I10 + --live)."""
 import json, re, sys, urllib.request
 
 ROOT = "/home/z/my-project"

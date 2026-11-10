@@ -1363,8 +1363,8 @@ function MarriageEarly1879() {
       <h3 className="flex items-center gap-2 font-serif text-lg font-semibold">
         <BookOpen className="h-4 w-4 text-primary" aria-hidden />
         {t(
-          "Poročna predzgodovina 04455 (P244): leto 1879 = 5/13",
-          "The marriage prehistory 04455 (P244): the year 1879 = 5/13",
+          "Poročna predzgodovina 04455 (P244): leto 1879 = 7/13",
+          "The marriage prehistory 04455 (P244): the year 1879 = 7/13",
         )}
       </h3>
       <p className="mt-2 text-sm text-muted-foreground">
@@ -1951,7 +1951,7 @@ function ParishTab() {
       {/* P242: poročna predzgodovina 04455 — leto 1881 = 5/13 */}
       <MarriageEarly1881 />
 
-      {/* P244: poročna predzgodovina 04455 — leto 1879 = 5/13 */}
+      {/* P244: poročna predzgodovina 04455 — leto 1879 = 7/13 */}
       <MarriageEarly1879 />
       {/* P243: poročna predzgodovina 04455 — leto 1880 = 6/13 */}
       <MarriageEarly1880 />
