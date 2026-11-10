@@ -253,3 +253,78 @@ export const MARRIAGE_1882_VILLAGE_DUELS = [
   "v21 »Krupšiše 4« [~]",
   "v2 »Mokre 24 vs Mohr« [~]",
 ] as const;
+
+// ——— P242: leto 1881 = 5/13 (s39–s44, 25 vpisov z 1-PRESKOKOM-12!, 9 Griblje blokov, RESTART = s39-letnica-v-stolpcu-NAD-vrstico-1!, h52-firstYear-DVIG-1882→1881!, PEZDIRC-ženi n-v14-h42!) ———
+
+/** Bloki P242 (leto 1881) iz korpusa — izpeljano 1:1 (h27-ženi n · h4-nevesta · h28×h8-POLNI · h42-PEZDIRC-×-h27-POLNI · h41×h52-POLNI · h16-nevesta!). */
+export const MARRIAGE_1881_BLOCKS = HOUSE_VITALS.filter(
+  (h) => h.bookSignature === "04455" && h.year === 1881,
+);
+
+/** Št. Griblje porok 1881 v korpusu (meritev: 9 = 3-POLNA ×2 (h28×h8 · h42×h27 · h41×h52!) + h27-ženi n + h4-nevesta + h16-nevesta!-h27-×2-BLOKA-V-1-LETU-PRVIČ!). */
+export const MARRIAGE_1881_GRIBLJE = MARRIAGE_1881_BLOCKS.length;
+
+/** Hiše poročne linije 1881 (merjeni vrstni red blokov: 27, 4, 28, 8, 42, 27, 41, 52, 16). */
+export const MARRIAGE_1881_HOUSES = MARRIAGE_1881_BLOCKS.map((h) => h.houseNo);
+
+/** Vsi vpisi leta 1881 (meritev: 25 DISTINCT — 1–11 + 13–26!-PRESKOK-12!-kontrast-1882-26-BREZ-preskokov!). */
+export const MARRIAGE_1881_TOTAL = 25;
+
+/** Ordinalna anomalija: pisar je preskočil vpis 12 (s41-konec-11→s42-zacetek-13!-[X-OPEN-DUEL: ali-s42=12–15-preskok-16!]-5.-številčenjska-anomalija-linije-cf.-1885-vpis-3-P238!). */
+export const MARRIAGE_1881_ZAP_SKIPPED = 12;
+
+/** X-open hišni dueli 1881 (v4-nevesta-'4:8:47'-3-branja! + v13-ženi n-'28-vs-26'! — NE-bloki!-h4/h28-vzeti-kot-glavni-bloki). */
+export const MARRIAGE_1881_XOPEN = [
+  "v4-nevesta [~4:8:47]",
+  "v13-ženi n [~28:26]",
+] as const;
+
+/** Meje leta 1881: restart = s39 (letnica-v-datumskem-stolpcu-NAD-vrstico-1 — NOVA-5.-mejna-varianta!) · meja-1880/81 = s38→s39 · meja-1881/82 = s44→s45-glava (P241-1:1!). */
+export const MARRIAGE_1881_MEJA = {
+  restartSi:
+    "restart-vpis-1 = 16. Jänner 1881 (s39, letnica-'1881'-ročno-v-DATUMSKEM-STOLPCU-NAD-VRSTICO-zap.-št.-1!-NOVA-5.-MEJNA-VARIANTA-skromna!-cf.-1882-VELIKA-GLAVA-+ 1883-'1-8-8-3.'-razporejena-+ 1884/1885-vrhnja!)",
+  restartEn:
+    "restart-entry-1 = Jan 16, 1881 (s39, the-year-'1881'-handwritten-in-the-DATE-COLUMN-ABOVE-row-zap.-1!-a-NEW-5th-BOUNDARY-VARIANT-modest!-cf.-the-1882-BIG-HEADING-+ the-1883-scattered-+ the-1884/1885-top!)",
+  tailSi: "tail-vpis-26 = 20. Dezember 1881 (s44 — P241-MEJA-IZPOLNJENA-1:1!-'1881-se-zaključi-na-s44'!-nič-1882-na-s44!)",
+  tailEn: "tail-entry-26 = Dec 20, 1881 (s44 — the-P241-BOUNDARY-FULFILLED-1:1!-'1881-ends-on-s44'!-nothing-1882-on-s44!)",
+  boundarySi:
+    "meja-1880/81 = s38→s39 (tail-1880-pričakovan-na-s38-P243!-[X-OPEN!]) · meja-1881/82 = s44→s45-glava (P241-1:1-dokaz!)",
+  boundaryEn:
+    "the-1880/81-boundary = s38→s39 (the-1880-tail-expected-on-s38-P243!-[X-OPEN!]) · the-1881/82-boundary = s44→s45-heading (the-P241-1:1-proof!)",
+} as const;
+
+/** Številčenje strani 1881 (s39=1–4 · s40=5–7 · s41=8–11 · s42=13–16-PRESKOK-12! · s43=17–20 · s44=21–26) — 25-VPISOV-z-1-PRESKOKOM (kontrast-1882-26-BREZ-preskokov!-cf.-1885-vpis-3-P238!). */
+export const MARRIAGE_1881_NUMBERING =
+  "s39 = restart-1–4 · s40 = 5–7 · s41 = 8–11 · s42 = 13–16 (PRESKOK-12!-11→13!-· ali-s42=12–15-preskok-16-[~X-OPEN-DUEL!]) · s43 = 17–20 · s44 = 21–26 — 25-VPISOV-z-1-PRESKOKOM";
+
+/** ★★★★ PEZDIRC-nit 1881: ženi n-v14-Georg-PEZDIRC-GRIBLJE-42 (črka-za-črko-uz-A-1:1!-56-let-[~DUEL!]-×-Anna-geb.-Hrizom-[~Križan!]-GRIBLJE-27-POLNI ×2!) + PEZDIRC-v-s40-v7-starši ('Michael-Kathar.-PEZDIREC-½-Gübly'!) = CONTINUUM-04104-×131→04455-v-5.-letu-predzgodovine (1881-×1-+ 1882-×5-+ 1883-×1-+ 1884-×4-+ 1885-×3!). */
+export const PEZDIRC_1881_NIT =
+  "v14-ŽENIN-Georg-PEZDIRC-GRIBLJE-42 (črka-za-črko-'P-e-z-d-i-r-c'-1:1!-NI-'Pegdirc'!) × Anna-geb.-Hrizom-GRIBLJE-27-POLNI ×2! + starši-v-s40-v7-'Michael-Kathar.-PEZDIREC-½-Gübly' = continuum-04104-×131→04455-v-5.-letu!";
+
+/** ★★★★★ h52-FIRSTYEAR-DVIG: vpis-17 = nevesta-Anna-Petrič-GRIBLJE-52-24.-Okt-1881 (uz-B-'jasno-5-nad-2'-1:1!-NE-32/42!) — h52-firstYear-1882→1881-ZA-1-LETO!-P241-'poročna-prehiti-krstno-na-h52-ZA-5-LET'-→-sedaj-ZA-6-LET!-h52-9→10-blokov! */
+export const H52_1881_DVIG =
+  "vpis-17-Anna-Petrič-GRIBLJE-52-24.-Okt-1881 = h52-firstYear-DVIG-1882→1881! (uz-B-'jasno-5-nad-2'-1:1!-NE-32/42!-P241-ZA-5-LET-→-ZA-6-LET!-h52-9→10-blokov-p242Note!)";
+
+/** ★★★ TAPIČ↔ŠILAR-KRIŽ 1881: v23-ženi n-Marcus-TAPIČ-Gersiče-33 × nevesta-Katharina-ŠILAR-GRIBLJE-16 — starši-neveste-Mathias-Šilar-×-Anna-geb.-TAPIČ (nevestina-mati-verjetno-ženi nova-sorodnica!-nova-nit-linije!) + priči-Martin-×-Markus-TAPIČ (dva-Tapič!). */
+export const TAPIC_SILAR_1881_KRIŽ =
+  "v23-Marcus-TAPIČ-×-Katharina-ŠILAR-h16! + starši-neveste-Mathias-Šilar-×-Anna-geb.-TAPIČ (mati-≈-ženi nova-sorodnica-[~]!) + priči-Martin-×-Markus-TAPIČ = NOVA-nit-linije-P242!";
+
+/** Duhovnik 1881: Franz-Dovgan-DORGON-DORGAN-DERGANZ-variante-iste-roke-[~]-dominanta-×~20-podpisov + v23-DUEL-[Dovgan-vs-Jemiar/Janžar!] = DRUGI-duhovnik-kandidat-[~X-OPEN!] + s39-v3-Derganz-kapelan-[~duel!]. */
+export const PRIEST_1881 =
+  "Franz Dovgan [~Dorgon/Dorgan/Drougar/Derganz-garble-iste-roke!] — dominanta-×~20 + v23-DUEL-[Dovgan-vs-'Jemiar/Janžar'-1-read!] = DRUGI-DUHOVNIK-KANDIDAT-[~X-OPEN!]";
+
+/** Foliacija-1881: 'Pag. 38'-s39-NEDVOUMNO-+ 'Pag. 42'-s43-+ 'Pag. 43'-s44 = pravilo-'Pag-=-sken−1'-potrjeno-3/3-P242!-s40/s41/s42-predpostavljeno-39/40/41-[~nepreverjeno]. */
+export const FOLIACIJA_1881 =
+  "s39-'Pag. 38'-NEDVOUMNO-(uz-C-izrez-5!-'3'-zaokrožena-zanka-+ '8'-zaprta-zanki!) + s43-'Pag. 42' + s44-'Pag. 43' = pravilo-'Pag-=-sken−1'-3/3!-s40/s41/s42-predpostavljeno-[~nepreverjeno!]-P241-s45-'93/94'-[~X-OPEN]-ostaja";
+
+/** BRINC-nit-continuum 1881 (v13-ženi n-Peter-BRINC-h28-×-Katharina-Horvasinič-h8!-cf.-1882-v13-BRINC-vdova-h56-P241-+ 1885-BRINC/BRINEC-P238!). */
+export const BRINC_1881_NIT =
+  "v13-ŽENIN-Peter-BRINC-GRIBLJE-28-36-let!-×-Katharina-geb.-Horvasinič-[~PREČRTAN-'Bunc'!]-GRIBLJE-8-POLNI ×2! = cf.-1882-v13-BRINC-vdova-h48-48-let-P241-+ 1885-BRINC/BRINEC-×2-P238!-starši-žena-Johann-Brine-×-Maria-geb.-KLOBUČAR!";
+
+/** Vas/hišni dueli 1881 (v4-nevesta-'4:8:47'-3-branja!-+ v13-ženi n-'28-vs-26'!-+ v23-'Gersiče-33-vs-Gortice'!-+ v14-nevesta-priimek-'Hrizom-vs-Križan'!). */
+export const MARRIAGE_1881_VILLAGE_DUELS = [
+  "v4-nevesta »Griblje 4 vs 47 vs 8« 3-branja [~X-OPEN]",
+  "v13-ženi n »Griblje 28 vs 26« 2:1 [~]",
+  "v23-ženi n »Gersiče 33 vs Gortice« [~]",
+  "v14-nevesta »Hrizom vs Hrizan/Križan« [~]",
+] as const;

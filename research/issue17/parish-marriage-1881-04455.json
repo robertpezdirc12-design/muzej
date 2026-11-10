@@ -1,0 +1,59 @@
+{
+  "faza": "P242",
+  "naslov": "POROČNA PREDZGOVINA 04455, leto 1881 = 5/13 — 25 vpisov (1–26, PRESKOK-12!), 9 Griblje blokov, restart = s39-v1 (letnica-v-stolpcu), h52-firstYear-1882→1881!, PEZDIRC-ženi n h42!",
+  "datum": "2026-11-09",
+  "vir": {
+    "knjiga": "04455 — Trauungs-Buch, župnija Podzemelj (Matricula Online)",
+    "url": "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04455/",
+    "skeni": [39, 40, 41, 42, 43, 44],
+    "prenosi": "2× neodvisna prenesesa, md5 6/6 1:1 (s39=600ff662… · s40=fb93da96… · s41=39e9f253… · s42=e389b028… · s43=3fc320ff… · s44=39f2b973…)",
+    "metoda": "viewer-HTML → 192 base64-URL (hosted-images.matricula-online.eu, trailing-slash-fix!) → direct-JPG; VLM pass-1 ×5 celih strani (s40–s44) + pass-1 s39 + pass-2 ×2 polovic s44 + pass-2 s43-top/bot + ultra-zoom A (v4/v13/v14/v23) + B (v17–v20) + C (zap-št/foliacija/v4wn) + D (7 mini-kropov) — 15 VLM klicev"
+  },
+  "frame": {
+    "restart_varianta": "RESTART-1881 = s39-top: letnica '1881' ročno v DATUMSKEM STOLPCU NAD VRSTICO zap.-št.-1 (vpis 1 = 16. Jänner 1881) — NOVA-5. MEJNA-VARIANTA (skromna-letnica-v-stolpcu!-cf.-1885/1884-vrhnja + 1883-'1-8-8-3.'-razporejena + 1882-VELIKA-GLAVA-PRED-VRSTICO-1!)",
+    "meja_1880_81": "s38→s39 (tail-1880-NI-na-s39: vpis-1 = 16. Jänner je prvi-1881!-tail-1880-pričakovan-na-s38-P243-material-[X-OPEN!])",
+    "meja_1881_82": "s44→s45-glava (P241-1:1-dokaz!-tail-1881 = vpis-26 = 20. Dezember 1881-na-s44!-1882-glava-'1882'-PRED-VRSTICO-1-na-s45-top-p12!)",
+    "meja_1881_82_reconciliacija": "P241-MEJA-IZPOLNJENA-1:1: P241 je bral s44-tail-konca-1881-+'1881-se-zaključi-na-s44' — P242 potrdila: s44 = vpisi 21–26 (21. Nov–20. Dez 1881), zadnji-vpis-26, nič-1882-na-s44!",
+    "numbering": "25-VPISOV-z-1-PRESKOKOM (s39=1–4 · s40=5–7 · s41=8–11 · s42=13–16 · s43=17–20 · s44=21–26!-KONTRAST-1882-26-BREZ-PRESKOKOV!) — PRESKOK-12: s41-konec-11→s42-zacetek-13-[X-OPEN-DUEL: ali-s42=12–15-(ultra-A-ofset-branje-'13.'-na-izrezu-3!)-→-preskok-16-namesto-12!]",
+    "foliacija": "s39 = 'Pag. 38' NEDVOUMNO (ultra-zoom-C-izrez-5: 'prva števka zaokrožena zanka 3, druga 8 z zaprtima zankama') + s43 = 'Pag. 42' + s44 = 'Pag. 43' → pravilo-Pag-=-sken−1-potrjeno-3/3-na-s39/s43/s44-P242!-s40/s41/s42-predpostavljeno-39/40/41-[~nepreverjeno]-P241-foliacija-s45-'93/94'-[~X-OPEN]-ostaja-odprta"
+  },
+  "stats": {
+    "entries": 25,
+    "entriesExcludingSkip": "1–11 (s39–s41) + 13–26 (s42–s44) = 25 DISTINCT (26−1-preskok!)",
+    "gribljeMarriages": 9,
+    "gribljeHouses": ["27", "4", "28", "8", "42", "27", "41", "52", "16"],
+    "polniX2": 3,
+    "zapSkipped": 12,
+    "skupaj04455": 223,
+    "skupajVitals": 1966
+  },
+  "bloki": [
+    { "vpis": 4, "scan": 39, "datum": "16. Februar 1881", "zenin": "Johann Kuthar [~Trunkar-DUEL-2-branja!], ½ Grüblner [~¼-DUEL!], 24 let, GRIBLJE 27", "nevesta": "Katharina Klobučar, ½ Grüblnerin [~], 24 let, GRIBLJE 4 [~DUEL:47-(pass-1!)-:8-(uz-C!)-3-branja-4-2:1!]", "hiši": ["27", "4"], "dupl": "POLNI ×2 + overilnica-'Griblje dd. 16. Feb. 1881' + priča-Jakob-Klobučar-½-Grübl. + duhovnik-Franz-Dovgan-1:1" },
+    { "vpis": 13, "scan": 42, "datum": "12./22. Mai 1881 [~DUEL-datum!]", "zenin": "Peter BRINC, 36 let, GRIBLJE 28 [~DUEL:26-(uz-D-s5!)-2:1-za-28!]", "nevesta": "Katharina geb. Horvasinič [~Horvatinič-DUEL!-PREČRTAN-'Bunc'!], 37 let, GRIBLJE 8", "hiši": ["28", "8"], "dupl": "POLNI ×2 + starši-neveste-Georg-Horvasinič-×-Maria-+ priča-Johann-Andreas-Tosser/Toster + duhovnik-Franz-Dovgan-1:1 + 'Griblje dd. 21 Mai 1881'" },
+    { "vpis": 14, "scan": 42, "datum": "19. Juni 1881", "zenin": "Georg PEZDIRC (črka-za-črko-'P-e-z-d-i-r-c'-uz-A-1:1!-NI-'Pegdirc'!), 56 let [~5c-DUEL!], GRIBLJE 42 (uz-D-s3-'štiri-dva'-1:1!)", "nevesta": "Anna geb. Hrizom [~Hrizan/Križan-DUEL!], 39 let, vdova-Kuebar [~], GRIBLJE 27 (uz-D-s4-'dva-sedem'-1:1!)", "hiši": ["42", "27"], "dupl": "★★★ PEZDIRC-ŽENIN-04455-1881 (continuum-04104-×131→04455!) + Hrizan/Križan-mati-nit (cf.-P239-v7-v18!) + starši-žena-Mathias-Pezdirc-×-Maria-geb.-Hrizan + starši-neveste-Peter-Horvasinič-×-Maria + priča-Nikolaus-Galovec + duhovnik-Franz-Dovgan-1:1 + 'Griblje dd. 15/19 Juni 1881'" },
+    { "vpis": 17, "scan": 43, "datum": "24. Oktober 1881", "zenin": "Mathias Kambič, Gribljan [~'½ güblm'-pripisa!], 40 let, GRIBLJE 41", "nevesta": "Anna Petrič, ½ güblm [~], 26 let, GRIBLJE 52 (uz-B-'jasno-5-nad-2'-1:1!-NE-32/42!)", "hiši": ["41", "52"], "dupl": "★★★ POLNI ×2 + h52-FIRSTYEAR-1882→1881-DVIG-1-LETO! (P241-h52-9-blokov-firstYear-1882-P241-note-→-10-blokov-firstYear-1881-p242Note!) + starši-neveste-Johan-Petrič-×-Anna-Kambič-Lisična + priča-Johann-Kambič-Lisična + Urkunden-'Gemeindezettel-Griblje-dd.-20-Oct-1881' + duhovnik-Franz-Dorgon-[~Dovgan-varianta!]" },
+    { "vpis": 23, "scan": 44, "datum": "13./20. November 1881 [~DUEL!]", "zenin": "Marcus Tapič [~Martin-DUEL-2:2!], 42 let, Gersiče 33 [~Gortice-DUEL!]", "nevesta": "Katharina Šilar [~Šiler!], 31 let, GRIBLJE 16 (pass-1-+-uz-A-'16-jasno'-2×-1:1!)", "hiši": ["16"], "dupl": "★★★ TAPIČ↔ŠILAR-KRIŽ-v-1-vpisu (starši-neveste-Mathias-Šilar-×-Anna-geb.-TAPIČ!-nevestina-mati-verjetno-ženinova-sorodnica!) + priči-Martin-×-Markus-TAPIČ (dva-Tapič!) + duhovnik-DUEL-[Dovgan-vs-Jemiar/Janžar-uz-A-'NE-morem-potrditi-Dovgan'-pass-1-'Franz-Janžar?'!]" }
+  ],
+  "anomalie": [
+    "★★★ PRESKOK-12 = 5.-številčenjska-anomalija-linije (1885-vpis-3-PRESKOČEN-P238!-+ 1881-vpis-12-PRESKOČEN-P242!-kontrast-1882/1883/1884-BREZ-preskokov!)-[X-OPEN-DUEL: s42-zap-stolpec-ultra-A-'13.'-na-izrezu-3-ofset-branje → ali-s42=12–15-preskok-16!]",
+    "★★★ RESTART-1881 = NOVA-5.-MEJNA-VARIANTA (letnica-v-datumskem-stolpcu-NAD-vrstico-1-skromna!-ne-VELIKA-glava-kot-1882!-ne-razporejena-kot-1883!-ne-vrhnja-kot-1884/1885!)",
+    "★★★★ h52-FIRSTYEAR-DVIG-1882→1881 (vpis-17-nevesta-Anna-Petrič-GRIBLJE-52-24.-Okt-1881!-P241-'poročna-prehiti-krstno-na-h52-ZA-5-LET'-→-sedaj-ZA-6-LET!)",
+    "★★★ PEZDIRC-ŽENIN-v14-GRIBLJE-42 (continuum-04104-×131→04455-5.-leto-predzgodovine!-+ Hrizan/Križan-mati-DUEL-cf.-P239!)",
+    "★★★ TAPIČ↔ŠILAR-KRIŽ-v23 (starši-neveste-Anna-geb.-TAPIČ!-priči-2×-TAPIČ!-nova-nit-linije!)",
+    "★★★ POLNI ×2-×3-vpisov (v4-h27×h4!-v13-h28×h8!-v17-h41×h52!)-+ h27-×2-bloka-v-1-letu (v4-ženin-+ v14-nevesta!)",
+    "s41-v8–v11-'z-Gribl.'-IZVOR-pripise-×9 (rozen-v-Gribljeh-bivališče-drugje: Plešter-41/Zemelj-10/Vrasine-10/Germ-25!-NI-bivališča-NI-bloki!-nova-podkategorija-pripisov!)",
+    "s40-'½/¼-Gübly'-parcelni-pripise-×10 (v5-'Plasour-Griblje'-12? + v6/v7-Prodanovič/Mus/Tome-'¼ Gübly'-×3!-starši-v7-Michael-Kathar.-PEZDIREC-½-Gübly!-PEZDIRC-pred-celu-linijo!)",
+    "duhovnik-1881: Franz-Dovgan-DORGON-DORGAN-DERGANZ-variante-iste-roke-[~]-dominanta-×~20-podpisov + v23-DUEL-[Dovgan-vs-Jemiar/Janžar-X-OPEN!]",
+    "starost-v14-ženina-'56'-[~DUEL-'5c'-uz-A!-pass-1-ne-bral!-56-ob-nevesti-39-[~]]",
+    "v4-nevesta-hišna-'4'-3-branja (pass-1-'47'-uz-A-'4.'-izključitev-47!-uz-C-'8-ali-4'-DUEL!)-[X-OPEN-DUEL-4:8:47]",
+    "v13-ženin-hišna-DUEL-[28-(pass-1-+ uz-A-2:1!)-vs-26-(uz-D-s5!)]-+[~X-OPEN-26-delo!]",
+    "s43-v18-v19-v20-'½ gübt'-izvor-pripise (Branoviče-1/Borst-38/Drasiče-35/Mößling-20/Krasinec-8-bivališča-NI-bloki!)"
+  ],
+  "nodat": "brez-papirnatih-trakov-v-1881-pasovih (s44-pass-1-'papirnatih trakov ni videti'!-mikro-prerezi-v-VLM-kropih-[~]-cf.-1882-nodat-trakovi-×5!)",
+  "qa": "qa-p242-parish-marriage-early-04455-1881 — LIVE na /api/qa",
+  "verifikator": "scripts/p242_parish_marriage_1881_04455.py (I1–I10 + --live)",
+  "skripte": "scripts/p242_bump.py (sanacija-166-gardov-1957→1966 + 214→223 + 207→216 + 181→190)",
+  "naprej": {
+    "p243": "leto-1880 = 6/13 (s38-nazaj — tail-1880-pričakovan-na-s38!-s39-top-'1881'-letnica-pred-vrstico-1-že-1:1!) ali-knjižno-odpiranje-1873-s1"
+  }
+}
