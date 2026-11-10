@@ -19,7 +19,7 @@ check("I1 bloki 04455/1878 == 7 (h2+h47+h63+h18+h23+h1+h36!)",
 check("I1b vrstni-red-7 (2,47,63,18,23,1,36!-bloki-po-skenih-s20×4+s21+s23+s24!)",
       bloki == ["2", "47", "63", "18", "23", "1", "36"], ",".join(bloki))
 skupaj = src.count('bookSignature: "04455"')
-check("I2 vitals-1996 + 04455==253", "HOUSE_VITALS.length !== 1996" not in src and skupaj == 253, f"04455={skupaj}")
+check("I2 vitals-1997 + 04455==254", "HOUSE_VITALS.length !== 1997" not in src and skupaj == 254, f"04455={skupaj}")
 
 nove = re.findall(r'houseNo: "([^"]+)",\s*bookSignature: "04455",\s*year: 1878,\s*scan: (\d+),\s*page: (\d+),', src)
 check("I3 skeni+pagi (20/19 ×4 · 21/20 · 23/22 · 24/23 — pag=sken−1!)",
@@ -52,10 +52,10 @@ check("I4c PEZDIRC-8.-leto-×2 + DOVGAN-8-let + MILEK-h65 + KELCHO-continuum + h
       and "Kelcho" in an2 and "BRULA" in an2)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1996")
-check("I5 qa-p246 + števec-1985 (×155!)", "HOUSE_VITALS.length !== 1978" not in qa and st >= 150, f"1996-številcev={st}")
-check("I5b sidra-235 + 1878:7-P246 (qa-sidra-message)", "poročna sidra ≠ 246 (1876:6-P248! · 1877:5-P247! · 1878:7-P246!" in qa)
-check("I5c dobe-209 + 39-pred-linijskih", "dobe-bloki ≠ 220/7/26" in qa and "50 pred-linijskih 1876-P248×6!+1877-P247×5!" in qa)
+st = qa.count("HOUSE_VITALS.length !== 1997")
+check("I5 qa-p246 + števec-1985 (×155!)", "HOUSE_VITALS.length !== 1978" not in qa and st >= 150, f"1997-številcev={st}")
+check("I5b sidra-235 + 1878:7-P246 (qa-sidra-message)", "poročna sidra ≠ 247 (1875:1-P249! · 1876:6-P248! · 1877:5-P247! · 1878:7-P246!" in qa)
+check("I5c dobe-209 + 39-pred-linijskih", "dobe-bloki ≠ 221/7/26" in qa and "51 pred-linijskih 1875-P249×1!+1876-P248×6!+1877-P247×5!" in qa)
 check("I5d p80-1878:7-garda + sken-range-19–24", 'p80MarrAnchors.filter((h) => h.year === 1878).length !== 7' in qa and "skeni izven 19–24" in qa and "skeni izven 18–24" not in qa)
 
 i0 = src.find("P246: POROČNA PREDZGOVINA 04455, leto 1878")
@@ -85,8 +85,8 @@ check("I7c FOLIACIJA-6/6 + GLAVA-9.-VARIANTA-v-modulu",
       "6/6-1878" in m and "9.-MEJNA-VARIANTA" in m and "11/11-v-zaporednih-letih" in m)
 
 pt = json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8"))
-check("I8a pt-luknja-1996 + byBook-04455=253 + P246-note",
-      pt.get("vitalsTotal") == 1996 and pt.get("corpus", {}).get("byBook", {}).get("04455") == 253
+check("I8a pt-luknja-1997 + byBook-04455=254 + P246-note",
+      pt.get("vitalsTotal") == 1997 and pt.get("corpus", {}).get("byBook", {}).get("04455") == 254
       and "P246" in pt.get("corpus", {}).get("housesNote", ""),
       f"vitalsTotal={pt.get('vitalsTotal')} 04455={pt.get('corpus', {}).get('byBook', {}).get('04455')}")
 
@@ -98,7 +98,7 @@ check("I9 UI-MarriageEarly1878-v-ParishTab + importi + HRIŽAN-kartica!",
       and "P246: poročna predzgodovina 04455 — leto 1878 = 8/13" in ui)
 check("I9b worklog-P246-vnos", "## P246" in open(f"{ROOT}/worklog.md", encoding="utf-8").read())
 check("I9c stari-verifikatorji-na-živih-številkah",
-      "1996" in open(f"{ROOT}/scripts/p238_parish_marriage_1885_04455.py", encoding="utf-8").read()
+      "1997" in open(f"{ROOT}/scripts/p238_parish_marriage_1885_04455.py", encoding="utf-8").read()
       and "242" in open(f"{ROOT}/scripts/p242_parish_marriage_1881_04455.py", encoding="utf-8").read())
 
 # ——— I11: foliacija/margine/glava-dokazi ————

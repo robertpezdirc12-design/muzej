@@ -773,3 +773,98 @@ export const MARRIAGE_1876_KORPUS = {
   sidra: 246,
   dobe: 220,
 } as const;
+
+/** ——— P249: poročna predzgovorina 04455, leto 1875 = 11/13 (s8–s10 + s7-tail-1874-kontekst; RESTART = s8-TOP!-margina-'21'-ANOMALIJA!-preskok-8-FALSIFICIRANA-dup-8!-MNOŽIČNI-DAN-4.-Februar-×10!-FINIS-1874-s7!-DOVGAN-11-LET!) — 17-rednih + 1-violet-NAKNADNI = 18-vpisov · 1-GRIBLJE-blok (h8!) ——— */
+export const MARRIAGE_1875_BLOCKS = HOUSE_VITALS.filter(
+  (h) => h.bookSignature === "04455" && h.year === 1875,
+);
+export const MARRIAGE_1875_GRIBLJE = MARRIAGE_1875_BLOCKS.length;
+export const MARRIAGE_1875_HOUSES = MARRIAGE_1875_BLOCKS.map((h) => h.houseNo);
+export const MARRIAGE_1875_TOTAL = 18;
+
+/** Meje 1875: RESTART-s8-TOP ('21'-anomalija-margine!-velika-'1875'-INLINE!) + MEJA-1874/75 = s7→s8 (finis-1874-4.-instance-SODA-vzorec!-h42-tail-kandidat!) + MEJA-1875/76 = s10→s11 (P248-1:1-re-verifikacija!-violet-8-dup-kolizija!). */
+export const MARRIAGE_1875_MEJA = {
+  restartSi:
+    "★★★ RESTART-1875 = s8-TOP (vpis-1 = 16. Jänner 1875 — velika-letnica-'1875'-v-datumskem-stolpcu-1.-vrste-INLINE-vzorec!-velika-naslovna-glava-NE-obstaja!) — vpis-1 = Jakob-Šolnar-[~Lovar-DUEL!]-vrtnar-migrant-iz-Sajevce-Pf.-Ribnica-38-l-×-Maria-Jurmanič-[~Družamič!]-Gradac-33-l-NI-blok + ★★★ MARGINA-r1 = '21'-FIZIČNO-ANOMALIJA (dve-števki-6×-mikro-1:1!-r2–r7-'2'–'7'-enostavno!-→-aritmetika-VSILJUJE-'1'-pisarska-napaka-cf.-P245-s28-'7'!)",
+  restartEn:
+    "★★★ THE-1875-RESTART = s8-TOP (entry-1 = Jan-16-1875 — the-big-'1875'-INLINE-in-the-date-column!-no-separate-heading!) — groom-Jakob-Šolnar-[~Lovar!]-gardener-migrant-from-Ribnica-×-Maria-Jurmanič-Gradac-NOT-a-block + ★★★ THE-ROW-1-MARGIN = '21'-PHYSICAL-ANOMALY (two-digits-6×-mikro-1:1!-rows-2–7-'2'–'7'-single!-→-arithmetic-FORCES-'1'-a-clerical-error!)",
+  tailSi:
+    "★★★ MEJA-1874/75 = s7→s8: tail-1874 = s7-margine-28–32 (28.-Februar…18.-November-1874-5-vpisov!-Dovgan-podpisi!) + ★★★ FINIS-'f-i-n-i-s-/-1-8-7-4'-s7-dno = 4.-INSTANCE-ZAKLJUČNE-OZNAKE-LETA (vzorec-SODA-let-1874/1876/1878/1880-POTRJEN!-LIHA-leta-1875/1877/1879-BREZ-finis-konzistentno!-'7'~'y'+'4'~'A.'-letterform[~]) + ★★★ TAIL-KANDIDAT: m32-Maria-Pegdirc-GRIBLJE-42 (mikro-6×-1:1!-'1a'-ZAVRŽEN!-ženin-Nicolaus-Marasinič-Krasinice-12) = h42-PARALELA-1:1-z-Georg-Pegdirc-1879-P244-v21 → NAPAVED-P250-PROMOCIJA!",
+  tailEn:
+    "★★★ THE-1874/75-BOUNDARY = s7→s8: the-1874-tail = s7-margins-28–32 (Feb-28…Nov-18-1874-5-entries!-Dovgan-signatures!) + ★★★ THE-'f-i-n-i-s-/-1-8-7-4'-ORNAMENT-at-the-s7-bottom = the-4th-INSTANCE-of-the-YEAR-CLOSING-MARK (the-EVEN-YEAR-pattern-1874/1876/1878/1880-CONFIRMED!-odd-years-WITHOUT-finis-consistently!) + ★★★ THE-TAIL-CANDIDATE: m32-Maria-Pegdirc-GRIBLJE-42 (mikro-6×-1:1!) = the-h42-PARALLEL-1:1-with-Georg-Pegdirc-1879 → the-P250-FORECAST-PROMOTION!",
+  boundarySi:
+    "meja-1875/76 = s10→s11 (P248-1:1-RE-VERIFIKACIJA-P249!-tail-1875-REGULARNO = s10-vpis-17-'Juli-20'-re-1:1-očesa-+ margina-'17'!-+ s11-violet-NAKNADNI-8-P248-1:1-+ s11-VRSTA-2-restart-'1'-1876!) · ★ P248-NAPAVED-preskok-8-FALSIFICIRANA: regularni-margina-'8'-'9'-'10'-FIZIČNO-1:1-s9 → DUP-8-ŠTEVILČENJA-KOLIZIJA (redni-run-1–17-BREZ-preskoka + naknadni-vpis-tudi-'8'-prištevan-po-lastni-glavi!)",
+  boundaryEn:
+    "the-1875/76-boundary = s10→s11 (P248-1:1-RE-VERIFIED!-the-regular-1875-tail = s10-entry-17-'Juli-20'-re-1:1!-+ the-violet-LATE-8-P248-1:1!) · ★ the-P248-skip-of-8-FORECAST-FALSIFIED: the-regular-margins-'8'-'9'-'10'-PHYSICALLY-1:1-on-s9 → the-DUP-8-NUMBERING-COLLISION (the-regular-run-1–17-WITHOUT-skip + the-late-entry-also-'8'!)",
+} as const;
+
+/** Številčenje 1875 (s8-1–7-'21'-anomalija!-· s9-8–12-· s10-13–17) — 17-rednih-BREZ-preskokov-8.-leto + violet-NAKNADNI-'8'-dup-kolizija! */
+export const MARRIAGE_1875_NUMBERING =
+  "s8 = restart-1–7 (margina-r1-'21'-FIZIČNO-ANOMALIJA-dve-števki-6×!-aritmetika-VSILJUJE-'1'-r2–r7-'2'–'7'-1:1!) · s9 = 8–12 (margine-'8'/'9'/'10'-FIZIČNO-1:1-5×!-NAPAVED-preskok-8-FALSIFICIRANA!) · s10 = 13–17 (margina-'17'-tail-1:1!) — 17-REDNIH-VPISOV-BREZ-PRESKOKOV-8.-leto-zapored (1875–1882!-NODAT-×0-4.-leto!-margin-številčenje-5.-leto-1879-1.·1878-2.·1877-3.·1876-4.·1875-5.!-svetlo-modro-sivo!) + DUP-8: violet-NAKNADNI-s11-top-tudi-'8'-P248-1:1 = total-18-vpisov";
+
+/** ★★★★★ FOLIACIJA-1875-'Pag = sken−1'-4/4 (s7-'Pag. 6' + s8-'Pag. 7' + s9-'Pag. 8.' + s10-'Pag. 9.'!-VSE-1:1-BREZ-misreadov!) — 23/23-v-zaporednih-letih-6.-leto! */
+export const FOLIACIJA_1875 =
+  "s7-'Pag. 6'-1:1-+ s8-'Pag. 7'-1:1-+ s9-'Pag. 8.'-1:1-+ s10-'Pag. 9.'-1:1-(očesa-+pass-1-BREZ-misreadov!-s11-'Pag. 10'-P248-2×-že-1:1!)= 4/4-1875!-→ skupaj-z-5/5-1879-+ 6/6-1878-+ 4/4-1877-+ 4/4-1876 = 23/23-v-zaporednih-letih-6.-leto (pravilo-Pag==sken−1-NE-PRELAMA!)";
+
+/** ★★★ MNOŽIČNI-POROČNI-DAN-'4. Februar 1875'-×10 (v3–v12!) = REKORD-poroke-v-1-dnevu-v-predzgodovini + datumski-vzorec-mesec-samo-ob-spremembi. */
+export const MNOZICNI_DAN_1875 =
+  "★★★ MNOŽIČNI-POROČNI-DAN-'4. Februar-1875'-×10 (v3–v12-VSE-datumi-'4.'-fizično-kropi-2.2×–2.6×-1:1!-REKORD-poroke-v-1-dnevu-v-predzgodovini-cf.-P244-1879-'19.-Februar'-×3!) + ★★★ DATUMSKI-VZOREC-MESEC-SAMO-OB-SPREMEMBI: v2-'Febr. 2.'-polno → v3–v12-SAMO-'4.'-(mesec-impliciten!) → v13-'1875. Febr. 8.'-(ob-listi-začetek-z-letnico!) → v14-'8'-SAMO-DAN → v15-'Mai 9.'-(nov-mesec-polno!) → v16-'Juni 13.' → v17-'Juli 20.' — letnica-SAMO-na-1.-vpisu-lista (s8/s9/s10-3/3-fizično!)";
+
+/** ★★★ DOVGAN-KONTINUUM-PODALJŠAN-NA-11-LET (1875–1885!) — vsi-17-rednih-vpisov + edina-izjema-violet-NAKNADNI-kaplan-Perschek. */
+export const DOVGAN_1875_PODALJŠITEV =
+  "★★★ DOVGAN-KONTINUUM-PODALJŠAN-NA-11-LET (1875–1885!): Franz-Dovgan-podpisi-na-VSIH-17-REDNIH-vpisih-s8–s10 (visual-kropi-s8-r1–r4-×4-1:1-+ s9-×3-1:1-+ v10/v17-1:1-+ pass-1-VSI!-garble-'Dorgan/Dorgon'!)-→ P248-'10-let-(1876–1885)'-PODALJŠAN-ZA-1-LETO-NAZAJ!-★ IZJEMA-EDINA: s11-top-violet-NAKNADNI-8 = KAPLAN-Daniel-Perschek (P248-1:1!) = 1.-in-EDINI-ne-Dovgan-podpis-v-kontinuumu-→-kaplan-samo-NAKNADNI-vpisi-[~X-OPEN!-1874-tail-s7-vsi-Dovgan!]";
+
+/** ★★★ h42-PARALELA-1:1 (Maria-Pegdirc-1874-tail == Georg-Pegdirc-1879-P244!) + NAPAVED-P250-PROMOCIJA. */
+export const H42_1874_PARALELA =
+  "★★★ h42-TAIL-PARALELA-1:1: s7-m32-nevesta-'Maria-Pegdirc'-GRIBLJE-42-(mikro-6×-1:1-'Griblje-42.'-'1a'-'13'-'12'-vs-branja-RAZREŠENI!)-18.-November-1874 == P244-v21-ženin-'Georg-Pegdirc'-GRIBLJE-42-ultra-zoom-1:1-1879 (ISTA-HIŠA-ISTA-DRUŽINA-PRIIMEK-2-dokaza-5-let-narazen!-oče-hči-brat-sestra-kandidat-X-OPEN!)-+ TAIL-1874-KANDIDAT-BLOK-→-NAPAVED-P250: PROMOCIJA-tail-kontekst→blok-(cf.-P248-h30-vzorec!)-korpus-04455-ŽE-ŠTEJE-h42-×2-(1890-1896...-pt-luknja!)-04455-tail-blok-bi-bil-3.-(ali-1.-po-leta-obratno!)";
+
+/** ★★★ PEZDIRC-MREŽA-×3-kontekst-1875-NI-bloki-pošteno (+ tail-kandidat!). */
+export const PEZDIRC_1875_KONTEKST =
+  "PEZDIRC-CONTINUUM-×131→04455-v-7.-LETU-predzgodovine-NI-bloki-pošteno: v10-priča-'Anton-Pegdire'-[~PEZDIRC!-vs-očesi-'Jakob'-A/J-DUEL-krop-1:1-'Anton'!]-+ v16-mati-neveste-'Anna-Pegedire'-[~PEZDIRE!-starši-Math.-Štubler!-cf.-P248-v8-'Maria-née-PEGDIRE'-+ v14-'Mathiewa-née-PEGDIRE'-mama-nit!]-+ v17-priča-'Georg-Pegdire' = ×3-kontekst-+ ★ tail-m32-'Maria-Pegdirc'-h42-KANDIDAT (grafija-continuum-7-let!-Pegdire/Pegedire/Perdirc!-cf.-P246-×2-8.-od-zadaj!)";
+
+/** ★ MLADOLETNICA-v16 + najstarejša-nevesta-v13-46-l + Mötthling-vzorec. */
+export const MLADOLETNICA_1875 =
+  "★★ MLADOLETNICA-×1: v16-nevesta-Margaret-Stubler-18-l-+ 'Vormundschaft-spect.-Consens-v.-k.k.-Bez.'-+ 'Mötthling-dd.-9.-Juni-1875'-garble-(ISTI-VZOREC-kot-P248-v14-'Mötthling'-k.k.-Bez.Gericht-Metlika!)-★ v12-nevesta-27-l-NI-mladoletnica-(očesi-'17'-VLM-'24'-KROP-4×-1:1-'27'-ZMAGA!-starostni-DUEL-pošteno!)-★ v13-nevesta-Katharina-Stubler-46-l = NAJVIŠJA-starost-neveste-v-predzgodovini-do-zdaj (cf.-P245-v1-43-l!-VDOVA-kandidat!-Stubler-×2-v-1-letu-v13+v16-ISTA-vas-Verlinišče!)";
+
+/** Datum-dueli + kontekst-izven-Griblje-1875-NI-bloki-pošteno. */
+export const MARRIAGE_1875_DUELS = [
+  "s8-margina-r1 »21 vs 1« REŠEN-aritmetiko-za-'1' (FIZIČNO-'21'-dve-števki-6×-1:1!-r2–r7-'2'–'7'-enostavno → restart-'1'-pisarska-napaka-cf.-P245-s28!-X-OPEN-tumačenje!)",
+  "s9-v8-datum »24. Jänner vs 8. Februar vs 4. Februar« REŠEN-mikro-5×-za-'1875. Febr. 4.' (VLM-'24-Jän'-ZAVRŽEN-očesi-'8-Febr'-ZAVRŽEN!)",
+  "v10-nevesta-ime »Katharina vs Maria« REŠEN-2.6×-krop-za-MARIA (VLM-'Maria-Zahopir'-+ krop-'Maria-Jatnopir'!-priimek »Zahopir vs Jatnopir vs Janopirić« TRIPLE-DUEL-[~X-OPEN!])",
+  "v10-hišna »Griblje 8 vs 6« REŠEN-mikro-2.6×-za-8 (jasen-'8'-s-piko!)",
+  "v12-starost »17 vs 24 vs 27« REŠEN-mikro-4×-za-27 (sedmica-s-prečko-1:1!)",
+  "v8-starost »24 vs 29« REŠEN-mikro-1.9×-za-29 (MILEK-Anna-Zemelj-19!)",
+  "v17-starost »19 vs 22« REŠEN-mikro-4×-za-19",
+  "v15-hišna »Gradac 26 vs 11« REŠEN-mikro-5×-za-26",
+  "s7-m32-hišna »Griblje 42 vs 1a vs 13 vs 12« REŠEN-mikro-6×-za-42 ('4'+jasen-'2'-2:1!-h42-PARALELA-podpora!)",
+  "s7-finis »1-8-7-4« letterform-duel »7~y + 4~A.« [~X-OPEN!] (okrasni-Kurrent!-vzorec-SODA-let-podpora-2:1!)",
+  "v14-datum »Februar 8 vs März 8« REŠEN-vzorec-mesec-samo-ob-spremembi-za-8.-FEBRUAR (mesec-impliciten!-v15-'Mai'-šele-nov-mesec!)",
+] as const;
+
+export const MARRIAGE_1875_KONTEKST = [
+  "v1-16.-Jänner-1875-RESTART-Jakob-Šolnar-[~Lovar-DUEL!]-vrtnar-38-l-'iz-Sajevce-Pf.-Ribnica'-MIGRANT-×-Maria-Jurmanič-[~Družamič!]-Gradac-28[~38]-33-l-NI-blok (Befunde-'Ehefähigkeitsattest'-polit.-Gemeinde!)",
+  "v2-2.-Februar-Mathias-Govednik-[~Grecdnich-DUEL!]-Ledner-[~]-25-l-Schönstein/Sebnica-[~X]-23-pf.-Kaurlain-×-Katharina-Muc-19-l-Grimoschitz-[~Primostek!]-8-NI-blok (zettel-31.-Jänner!)",
+  "v3-4.-Februar-Nicolaus-Simonič-Ledner-28-l-Drašiče-15-pf.-Kaurlain-×-Katharina-Muc-18-l-Zemelj/Gemelj-[~DUEL!]-12-★★ Muc-sestra-paralela-v2/v3-obe-'Katharina-Muc'!-NI-blok",
+  "v4-4.-Februar-Johann-Harasinic-30-l-Gradac-48-'aus-Gem.-Nr.-27'[~]-×-Maria-Hvalič-17-l-Podzemelj-11-NI-blok",
+  "v5-4.-Februar-Martin-Rus-Ledner-42-l-Dobravice-12-[~Dobrau-ee!]-×-Maria-Jurejevič-26-l-Primostek/Gorica-[~DUEL!]-11-NI-blok",
+  "v6-4.-Februar-Mathias-Štefanič-Ledner-23-l-Dobravice-12-×-Margaretha-Gluk-24-l-Hloshelj-[~Hrošelj?]-37-NI-blok",
+  "v7-4.-Februar-Johann-Malerič-30-l-Adlig-Kaurlain-148-[~]-Podvinic-[~]-×-Anna-Gluk-25-l-Hloshelj-32-★★ Gluk-sestra-paralela-v6/v7!-NI-blok",
+  "v8-4.-Februar-1875-INLINE-Martin-Rus-[~Ruž/Pues!]-Bauer-31-l-Dobrave-13-[~Zemelj-DUEL!]-×-Anna-MILEK-29-l-Zemelj-19-★★★ MILEK-kontekst-(mreža-NI-blok-cf.-h65!-starost-'29'-krop-1:1!)-zettel-Podzemelj-23.-Jänner-NI-blok",
+  "v9-4.-Februar-Nicolaus-Prant-[~Åtrand/Strnad-DUEL!]-Bauer-24-l-Jersič/Gersič-5-[~Goršiči!]-×-Maria-Kralj-18-l-Boršt-17-NI-blok (zettel-2.-Februar!)",
+  "v11-4.-Februar-Georg-Jurgejič-Bauer-41-l-Kaplšiče/Kraplišče-6-[~]-×-Anna-TOME-23-l-Kaplšiče-3-★★★ TOME-×2-(v10-ženin!)-+ DISPENS-blutsverwandtschaft-omemba-[~X-OPEN!]-NI-blok",
+  "v12-4.-Februar-Johann-Žakšon-[~Jakšič-DUEL!]-25-l-Vranovič-2-[~'Vrano-vič'!]-×-Barbara-Čeklho-[~Helfrich-DUEL!]-27-l-Vojna-vas-4-pf.-Vrhnovec/Černomelj-NI-blok (zettel-30.-Jänner!)",
+  "v13-8.-Februar-1875-INLINE-Johann-Škarasinič-[~Harasinič!]-Inwohner-33-l-Verlinišče/Lešče-11-[~14-DUEL!]-×-Katharina-Stubler-46-l-Verlinišče/Lešče-20-★★ NAJSTAREJŠA-nevesta-predzgodovine-46-l!-VDOVA-kandidat-NI-blok (Stubler-×1-od-×2!)",
+  "v14-8.-Februar-Michael-Segina-Inwohner-25-l-Gologge/Srobotnik-[~X]-27-×-Margar.-Šrambič/Kumber-26-l-Silegje/Srobotnik-27-[~]-NI-blok (priče-Nicolaus-Tome-TOME-×3!-+ Peter-Segina)",
+  "v15-9.-Mai-Johann-Schinigman-Cigarenschmied-26-l-Gradac-1-'aus-[Steyr?-X]-Aufenthalt-Dermänice[?]'-MIGRANT-×-Anna-Simončič-22-l-Gradac-26-NI-blok (cf.-P242-v12-Lingl-OFFICIER!)",
+  "v16-13.-Juni-Johann-Mihelečič-[~Mihelič!]-Inwohner-23-l-Verlinišče/Lešče-24-×-Margaret-Stubler-18-l-Verlinišče-23-★★ MLADOLETNICA-Vormundschaft-Consens-k.k.-+ Mötthling-9.-Juni-1875!-★★ mati-neveste-Anna-Pegedire-[~PEZDIRE!] × Math.-Štubler!-NI-blok (priče-Math.-Marasinič-+ Peter-Stubler!)",
+  "v17-20.-Juli-1875-TAIL-REGULARNO-Josef-Kristl-[~Verbič/Kristlin-DUEL!]-Knecht-27-l-Gradac-81-'aus-Gorenje-pri-Mužnemu[?]'-[~]-×-Anna-Novak-19-l-Gradac-81-NI-blok (priče-Martin-Škala[~Štrale!]-+ ★ Georg-Pegdire-PEZDIRC!-zettel-Gradac-19.-Juni!)",
+  "TAIL-1874-s7-kontekst-NI-bloki-pošteno: m28-28.-Februar-1874-Johann-Bajuk/Baynik-25-l-Primostek-12-×-Maria-Pavč/Keržan-Toma-23-l-Primostek-8[~16-DUEL!]-+ m29-8.-März-Martin-Tome-24-l-Primostek-16-×-Katharina-Angelj/Regel-[~DUEL!]-24-l-Dobrau-ee-21-+ m30-21.-April-Mathias-Kopač/Lepičič-40-l-Gradac-10-×-Cecilia-Kukanč/Harvan-38-l-Gostovac-22-(obe-VDOVA-kandidat!)-+ m31-21.-Mai-Jakob-Hrošavec/Brandovec-24-l-Krasinice-11-×-Anna-Klemenčič-20-l-Cermo/Gorica-maloj-14-(priča-'Georg-Podgorec'[~PEZDIRC-križ-kandidat-X-OPEN!])-+ m32-18.-November-Maria-Pegdirc-GRIBLJE-42-KANDIDAT-BLOK!-— vsi-Dovgan-podpisi-tudi-1874!",
+] as const;
+
+/** Vse-nove-1875-meritve-v-obliki-za-QA (skupaj-04455: 253→254 · vitals: 1996→1997 · sidra: 246→247-1875:1! · dobe: 220→221-59-pred-linijskih!). */
+export const MARRIAGE_1875_KORPUS = {
+  skupaj04455: 254,
+  skupajVitals: 1997,
+  sidra: 247,
+  dobe: 221,
+} as const;
