@@ -1,7 +1,7 @@
 {
  "phase": "P239",
  "title": "PT-luknja-18 — finalni dokazi po zaključku mrliške linije 39/39 (knjiga 04894 popolnoma digitalizirana)",
- "generatedAt": "2026-11-03T09:16:20.571Z",
+ "generatedAt": "2026-11-09 (P241-posodobitev)",
  "definition": {
   "gapRange": "hiše 41–60 brez h41 (izven vzorca) in h50 (04455-dokazana)",
   "gapHouses": [
@@ -27,12 +27,12 @@
   "note": "p80-skripta-set 18 (PT_GAP_HOUSES) ≠ qa doc-list 15 (P80_PT_GAP = 18 brez h45/h47/h55 — dokazi geometrija/filtra)"
  },
  "corpus": {
-  "vitalsTotal": 1951,
+  "vitalsTotal": 1957,
   "byBook": {
    "04105": 502,
    "04894": 520,
    "04106": 433,
-   "04455": 208,
+   "04455": 214,
    "04104": 288
   },
   "housesDistinctAll": 95,
@@ -364,16 +364,17 @@
   },
   {
    "houseNo": "52",
-   "blocksTotal": 8,
+   "blocksTotal": 9,
    "byBook": {
     "04105": 3,
-    "04455": 1,
+    "04455": 2,
     "04106": 0,
     "04894": 4
    },
-   "firstYear": 1887,
+   "firstYear": 1882,
    "lastYear": 1908,
    "years": [
+    1882,
     1887,
     1895,
     1898,
@@ -387,7 +388,8 @@
     "krstna-04105",
     "poročna-04455",
     "mrliška-04894"
-   ]
+   ],
+   "p241Note": "P241: + poročna-04455-1882 blok (v15-NEVESTA-Maria-PEZDIRC-[~Pegdirc-DUEL!]-GRIBLJE-52-[~2-branja!]-×-ženin-Matthias-JAKOPIČ-h13!) — firstYear 1887→1882 (poročna-prehiti-krstno-na-h52-ZA-5-LET!) + PEZDIRC-continuum-nit!"
   },
   {
    "houseNo": "53",

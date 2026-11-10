@@ -99,6 +99,18 @@ import {
   PRIEST_1883,
   HROVALJ_1883_SIBLINGS,
   MARRIAGE_1883_VILLAGE_DUELS,
+  MARRIAGE_1882_BLOCKS,
+  MARRIAGE_1882_GRIBLJE,
+  MARRIAGE_1882_HOUSES,
+  MARRIAGE_1882_TOTAL,
+  MARRIAGE_1882_XOPEN,
+  MARRIAGE_1882_MEJA,
+  MARRIAGE_1882_NUMBERING,
+  PEZDIRC_1882_NIT,
+  H1_1882_REKORD,
+  PRIEST_1882,
+  BRINC_1882_NIT,
+  MARRIAGE_1882_VILLAGE_DUELS,
 } from "@/data/atlas/parish-marriage-early";
 import { LANDUSE_ZONES, LANDUSE_ENTITIES, HAMLETS } from "@/data/atlas/landuse";
 import { getCoverage, getArchiveInventory, parishStats, getHouseStory } from "@/lib/atlas";
@@ -1116,12 +1128,12 @@ function BaptismLineSynthesis() {
       {/* križnoletne niti */}
       <div className="mt-5 grid gap-3 md:grid-cols-2">
         {CROSS_YEAR_THREADS.map((th) => (
-          <div key={th.id} className="rounded-lg border bg-background/60 p-4">
+          <div key={th.id} className="min-w-0 rounded-lg border bg-background/60 p-4">
             <h4 className="text-sm font-semibold">{t(th.nameSi, th.nameEn)}</h4>
-            <p className="mt-1.5 text-xs text-muted-foreground">{t(th.summarySi, th.summaryEn)}</p>
-            <p className="mt-2 text-xs">{t(th.detailSi, th.detailEn)}</p>
+            <p className="mt-1.5 text-xs text-muted-foreground [overflow-wrap:anywhere]">{t(th.summarySi, th.summaryEn)}</p>
+            <p className="mt-2 text-xs [overflow-wrap:anywhere]">{t(th.detailSi, th.detailEn)}</p>
             {th.xOpen && (
-              <p className="mt-2 rounded border border-amber-500/40 bg-amber-500/10 px-2 py-1 text-[11px] text-amber-900 dark:text-amber-100">
+              <p className="mt-2 rounded border border-amber-500/40 bg-amber-500/10 px-2 py-1 text-[11px] text-amber-900 dark:text-amber-100 [overflow-wrap:anywhere]">
                 X-open: {t(th.xOpen, th.xOpen)}
               </p>
             )}
@@ -1210,6 +1222,81 @@ function MarriageEarly1885() {
             {t(
               `${MARRIAGE_1885_XOPEN.join(" · ")} — vpisi 11/12/13: »½-Gütl-Gern/Glob«-zapisi vs GRIBLJE (stan ≠ hiša!); hiša neveste vpisa 22: 23-vs-28-duel; veliko leto na s61: »1 8 8 6« vs krop-»1883«-misread (sidro P84: vpis 1 = 24. 1. 1886 1:1). ${P84_CORRECTION}.`,
               `${MARRIAGE_1885_XOPEN.join(" · ")} — entries 11/12/13: the »½-Gütl-Gern/Glob« readings vs GRIBLJE (a status ≠ a house!); the bride's house of entry 22: the 23-vs-28 duel; the big year on s61: »1 8 8 6« vs the crop-»1883«-misread (the P84 anchor: entry 1 = Jan 24, 1886 1:1). ${P84_CORRECTION}.`,
+            )}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function MarriageEarly1882() {
+  const { t } = useLang();
+  return (
+    <div className="rounded-xl border bg-card/60 p-5">
+      <h3 className="flex items-center gap-2 font-serif text-lg font-semibold">
+        <BookOpen className="h-4 w-4 text-primary" aria-hidden />
+        {t(
+          "Poročna predzgodovina 04455 (P241): leto 1882 = 4/13",
+          "The marriage prehistory 04455 (P241): the year 1882 = 4/13",
+        )}
+      </h3>
+      <p className="mt-2 text-sm text-muted-foreground">
+        {t(
+          `4/13 poročne predzgodovine (1873–1885): skeni s45–s50, ${MARRIAGE_1882_TOTAL} vpisov leta 1882 — BREZ preskokov (4. leto zapored!-kontrast-1885-vpis-3!). Restart leta: VELIKA-glava-'1882'-PRED-vrstico-1 (NOVA-4.-mejna-varianta — ni v glavi strani!). P240-napoved (h36-predistopna-nit) IZPOLNJENA 1:1.`,
+          `4/13 of the marriage prehistory (1873–1885): scans s45–s50, ${MARRIAGE_1882_TOTAL} entries of 1882 — NO skips (the 4th year in a row!-in-contrast-to-the-1885-entry-3!). The year restart: the-BIG-'1882'-heading-BEFORE-row-1 (a NEW 4th boundary variant — not in the page head!). The P240-forecast (the-h36-pre-stop-thread) FULFILLED 1:1.`,
+        )}
+      </p>
+
+      {/* Griblje poroke 1882 — vrstni red blokov */}
+      <div className="mt-4 rounded-lg border bg-background/60 p-4">
+        <h4 className="text-sm font-semibold">
+          {t("Griblje poroke 1882 — vrstni red blokov", "The Griblje marriages 1882 — the block order")}
+          <span className="ml-2 rounded-full border px-2 py-0.5 text-[10px] font-medium text-primary">
+            ×{MARRIAGE_1882_GRIBLJE}
+          </span>
+        </h4>
+        <div className="mt-3 grid gap-2 sm:grid-cols-4">
+          {MARRIAGE_1882_BLOCKS.map((h) => (
+            <div key={h.houseNo + h.scan} className="rounded border bg-card/60 px-2 py-1.5 text-center">
+              <div className="text-xs font-semibold tabular-nums">h{h.houseNo}</div>
+              <div className="text-[9px] text-muted-foreground">s{h.scan} · Pag. {h.page}</div>
+            </div>
+          ))}
+        </div>
+        <p className="mt-1.5 text-[11px] font-mono text-muted-foreground">{MARRIAGE_1882_HOUSES.join(" → ")}</p>
+        <p className="mt-2 text-[11px] text-muted-foreground">
+          {t(
+            `${PEZDIRC_1882_NIT} ${BRINC_1882_NIT}.`,
+            `${PEZDIRC_1882_NIT} ${BRINC_1882_NIT}.`,
+          )}
+        </p>
+      </div>
+
+      {/* anomalije */}
+      <div className="mt-4 grid gap-3">
+        <div className="rounded-lg border border-emerald-600/40 bg-emerald-600/10 p-4 text-emerald-900 dark:text-emerald-100">
+          <h4 className="text-sm font-semibold">
+            {t("h1 = najnižja hiša s poročnim blokom kadarkoli!", "h1 = the lowest house with a marriage block ever!")}
+          </h4>
+          <p className="mt-1.5 text-xs">
+            {t(
+              `Vpis 23 (12. november 1882): ženin Nicolaus LESIRO [~Lesko-DUEL], GRIBLJE 1 × Katharina ŠKRCE [~] GRIBLJE 10 — POLNI ×2! ${H1_1882_REKORD}.`,
+              `Entry 23 (Nov 12, 1882): the groom Nicolaus LESIRO [~Lesko-DUEL], GRIBLJE 1 × Katharina ŠKRCE [~] GRIBLJE 10 — FULL ×2! ${H1_1882_REKORD}.`,
+            )}
+          </p>
+          <p className="mt-2 text-[11px] text-muted-foreground">
+            {t(MARRIAGE_1882_MEJA.restartSi, MARRIAGE_1882_MEJA.restartEn)} · {t(MARRIAGE_1882_MEJA.boundarySi, MARRIAGE_1882_MEJA.boundaryEn)} · {t(MARRIAGE_1882_NUMBERING, MARRIAGE_1882_NUMBERING)} · {t(PRIEST_1882, PRIEST_1882)}
+          </p>
+        </div>
+        <div className="rounded-lg border border-dashed p-4">
+          <h4 className="text-sm font-semibold">
+            {t("X-open dueli (pošteno ostajajo)", "The X-open duels (honestly remain)")}
+          </h4>
+          <p className="mt-1.5 text-xs text-muted-foreground">
+            {t(
+              `${MARRIAGE_1882_XOPEN.join(" · ")} — v14: 3-vasni-duel »Gradac 5 / Griblje 2 / Lette 40«! Vas-dueli: ${MARRIAGE_1882_VILLAGE_DUELS.join(" · ")}. Foliacija: s45-'93/94'-[~X-OPEN] — ne-ujema-s-'pag-=-sken−1'!`,
+              `${MARRIAGE_1882_XOPEN.join(" · ")} — v14: the-3-village-duel »Gradac 5 / Griblje 2 / Lette 40«! Village duels: ${MARRIAGE_1882_VILLAGE_DUELS.join(" · ")}. The foliation: s45-'93/94'-[~X-OPEN] — does-not-match-'pag-=-sken−1'!`,
             )}
           </p>
         </div>
@@ -1561,6 +1648,9 @@ function ParishTab() {
       <BaptismLineSynthesis />
       <ParishForensics />
 
+      {/* P241: poročna predzgodovina 04455 — leto 1882 = 4/13 */}
+      <MarriageEarly1882 />
+
       {/* P240: poročna predzgodovina 04455 — leto 1883 = 3/13 */}
       <MarriageEarly1883 />
 
@@ -1634,7 +1724,7 @@ function ParishTab() {
             const story = getHouseStory(houseNo);
             if (!story) return null;
             return (
-              <div key={houseNo} className="rounded-lg border bg-background/60 p-4">
+              <div key={houseNo} className="min-w-0 rounded-lg border bg-background/60 p-4">
                 <div className="flex items-start justify-between gap-2">
                   <div>
                     <div className="text-xs uppercase tracking-wide text-muted-foreground">
@@ -1651,7 +1741,7 @@ function ParishTab() {
                     {t("vpisi DOCUMENTED", "entries DOCUMENTED")}
                   </span>
                 </div>
-                <ul className="mt-3 space-y-2 text-sm">
+                <ul className="mt-3 min-w-0 space-y-2 text-sm [overflow-wrap:anywhere]">
                   {vitals.map((v, vi) => (
                     <li key={`${v.year}-${v.scan}-${vi}`} className="rounded border p-2">
                       <span className="font-semibold tabular-nums">{v.year}</span> —{" "}

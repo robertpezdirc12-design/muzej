@@ -1,0 +1,660 @@
+{
+ "phase": "P241",
+ "type": "poročna-predzgodovina-04455",
+ "status": "DOCUMENTED",
+ "issuedAt": "2026-11-09",
+ "source": {
+  "book": "poročna knjiga 04455 (Trauungs-Buch), župnija Podzemelj, Nadškofijski arhiv Ljubljana",
+  "url": "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04455/",
+  "scans": [
+   45,
+   46,
+   47,
+   48,
+   49,
+   50
+  ],
+  "inventar": 192,
+  "format": "razprti-listi 2457–2469×1800 (hosted-images-base64-dekodirani-URL; 2×-md5-prenosa 6/6!)",
+  "method": "6 skenov (s45–s50 razprti-listi 2457–2469×1800; Matricula-hosted-images-base64-dekodirani-URL) → page-VLM-polni-prepisi-pass-1 (5×-s45–s49) + 10-polovic-kropov-2×-pass-2 (s45–s49 L+D!) + 5-nodat-trakov-3×-pass-3 (številčenje 1–26!) + 12-blokov-ultra-zoom-pass-3b (restart-p12 + v1/v2 + v8 + v9 + v9-datum + v13 + v15 + v16 + v18 + v21 + v23 + meja_top!) + 2-retry-kropa (p04/p07/p11-slabi-rezi!) + reconciliacija-1:1-z-P240-s50-tail-vpisi-24–26 + restart-1883 (P240-1:1!); Kurrent branje, [~] = dvom; PREDZGOVINA 1882 = s45-restart-glava-PRED-vrstico-1 → s50-tail (vpis-1–26)"
+ },
+ "frame": {
+  "meja_1881_82": "s44→s45-glava: tail-1881-NI-na-s45-top (p12_s45_meja_top-ULTRA-ZOOM-1:1!-zgoraj-samo-'Traunungs-Buch'-naslov + VELIKA-glava-'1882'!) — 1881-se-zaključi-na-s44 (P242+ material!)",
+  "meja_1882_83": "s50-MID: tail-1882 = vpisi 24–26 (19./26./26. November 1882 — #26-Mathias-HRIZAN-GRIBLJE-36-tail! = h36-predistopna-nit-P240-IZPOLNJENA-1:1!) + nato števke '1 8 8 3.'-razporejene-črez-stolpce (P240-1:1!)",
+  "restart_varianta": "★★★ NOVA-4.-MEJNA-VARIANTA: VELIKA-glava-'1882'-stoji-PRED-VRSTICO-zap.-št.-1 (p12-ultra-zoom: 'headingPosition: NE v glavi strani — glava je še Traunungs-Buch, ampak PRED VRSTICO z zap. št. 1'!) — cf.-1883-'1-8-8-3.'-RAZPOREJENO-črez-stolpce + 1884/1885-glava-vrhnja (2-prejšnji-varianti!)",
+  "pag_rule": "Pag = sken−1 (P238/239/240-pravilo!) — POZOR-P241: s45-pass-1-branje-'Strani-93/94'-[~X-OPEN!] + pre-stoječi-P80-sidro-h36-ima-page-44 (=sken−6!) — pravilo-je-bilo-preverjeno-samo-za-s56–s66 (P240-sami: '[~predvidoma-NI-ločeno-preverjeno]')!",
+  "numbering": "s45 = restart-1–4 · s46 = 5–8 · s47 = 9–12 · s48 = 13–17 · s49 = 18–23 (nodat-trakovi-×5-1:1-BREZ-preskokov!) · s50-tail = 24–26 (P240-1:1!) → 26-VPISOV-BREZ-PRESKOKA (4.-leto-zapored!-kontrast-1885-vpis-3-PRESKOČEN!)",
+  "stajerska_oblika": "blok-bere-se-desno→levo (P238-razrešeno!) — v5–v8-spričevala-datirana-12./8./2./16.-februar (PRED-porokami!)"
+ },
+ "entries": [
+  {
+   "row": 1,
+   "date": "1. Februar [~21.-Jänner-DUEL-2:2!]",
+   "scan": 45,
+   "page": 44,
+   "groom": {
+    "name": "Anton TASIE [~Tasič]",
+    "age": 24,
+    "status": "lediger-Bauernsohn [~Gömblerssohn]",
+    "village": "Mokrine 1 [~Hrasine/Krasinec-DUEL-3!]"
+   },
+   "bride": {
+    "name": "Anna CVET [~Cvec]",
+    "age": 19,
+    "status": "lediga-Vinarski-Dienstbotin",
+    "village": "GRIBLJE 35 (ultra-zoom-p01-števke-'35'-1:1!)"
+   },
+   "note": "RESTART-1882!-GRIBLJE-BLOK-NEVESTA + priče-Matthias-[~Katabon/Katarbon]-×-Johann"
+  },
+  {
+   "row": 2,
+   "date": "5. [~23.-DUEL!]",
+   "scan": 45,
+   "page": 44,
+   "groom": {
+    "name": "Franz ŠIKAR [~Sitar-DUEL!]",
+    "status": "Bauernsohn-und-Student [~Kunst-kaufmann!]",
+    "village": "Mokre 24 [~Mohr/Pevma/Trebelno-DUEL!]"
+   },
+   "bride": {
+    "name": "Gertrud ROZMAN",
+    "status": "Dienstmädchen",
+    "village": "Mokre 6 [~]"
+   },
+   "note": "datum-DUEL-5./23. + izpolnilna-listina-Trebelno-23.-Jänner-[~desno]"
+  },
+  {
+   "row": 3,
+   "date": "8. Februar",
+   "scan": 45,
+   "page": 44,
+   "groom": {
+    "name": "Josef DRAGOŠ [~]",
+    "age": 29,
+    "status": "½-Güblerssohn",
+    "village": "Krasinec 7 [~]"
+   },
+   "bride": {
+    "name": "Dorothea PRODANIČ [~]",
+    "age": 19,
+    "status": "½-Güblers-tochter",
+    "village": "Krasinec 7 [~]"
+   },
+   "note": "ISTA-HIŠA-×2 (cf.-h34-SILAH-sestrski!) + DRAGOŠ-nit"
+  },
+  {
+   "row": 4,
+   "date": "8. Februar",
+   "scan": 45,
+   "page": 44,
+   "groom": {
+    "name": "Michael PRODNIK [~Prodnarič]",
+    "age": 26,
+    "status": "½-Güblerssohn",
+    "village": "Draginja vas 15 [~Boginja!]"
+   },
+   "bride": {
+    "name": "Maria GALAVEC [~Golovec]",
+    "age": 32,
+    "status": "Dienstbotin",
+    "village": "Draginja vas 15 [~]"
+   },
+   "note": "ISTA-HIŠA-×2 (1.-ISTA-hiša-dan-v-1882!) + spričevalo-Potokmelje-[~desno]"
+  },
+  {
+   "row": 5,
+   "date": "12. Februar",
+   "scan": 46,
+   "page": 45,
+   "groom": {
+    "name": "Jakob ŠIPANIČ [~Kipanič]",
+    "age": 25,
+    "status": "Knecht",
+    "village": "Gradec 6 [~Grudac!]"
+   },
+   "bride": {
+    "name": "[~Maria?]",
+    "status": "[?]",
+    "village": "[~občina-Greif?]"
+   },
+   "note": "spričevalo-12.-februar-[~desno]"
+  },
+  {
+   "row": 6,
+   "date": "15. Februar",
+   "scan": 46,
+   "page": 45,
+   "groom": {
+    "name": "Nicolaus TOMC [~Tomaž]",
+    "age": 31,
+    "status": "½-Gütlner-Knecht",
+    "village": "Primošek 13 [~Primoslek!]"
+   },
+   "bride": {
+    "name": "Katharina BERČOPEC [~]",
+    "age": 17,
+    "status": "½-Güblner-Tochter",
+    "village": "Zemelj 13 [~Primošek-DUEL!-ISTA-št.!]"
+   },
+   "note": "para-IZVEN-1.×: 2-½-Güblnerja! + št.-13-×2-DUEL (Primošek-vs-Zemelj!)"
+  },
+  {
+   "row": 7,
+   "date": "15. Februar",
+   "scan": 46,
+   "page": 45,
+   "groom": {
+    "name": "Mathias BERČOPEC [~Berlopec/Bertopet-DUEL!]",
+    "age": 23,
+    "status": "½-Gütlner-Knecht",
+    "village": "Zemelj 13 [~Temelj!]"
+   },
+   "bride": {
+    "name": "Barbara TOMC [~Tomaž]",
+    "age": 20,
+    "status": "½-Güblnerin",
+    "village": "Primošek 13 [~]"
+   },
+   "note": "IZMENA-vlog-vpisa-6! (Berčopec→ženin + Tomc→nevesta-obratno!) — dvojna-poroka-brata-in-sestre?-[~X-OPEN]"
+  },
+  {
+   "row": 8,
+   "date": "15. Februar [~16.-spričevalo-DUEL!]",
+   "scan": 46,
+   "page": 45,
+   "groom": {
+    "name": "Johan PAZEŠ [~Pazek/Gozek/Bozðe-DUEL-4!]",
+    "age": 24,
+    "status": "½-Güblner-Knecht",
+    "village": "GRIBLJE 38 (s46_levo-'jasno-38'-1:1!)"
+   },
+   "bride": {
+    "name": "Anna DRAGOS [~Dragoš]",
+    "age": 23,
+    "status": "½-Güblnerin-Tochter",
+    "village": "GRIBLJE 12 [~1-read!]"
+   },
+   "note": "POLNI-GRIBLJE-BLOK-×2! + DRAGOŠ-nit (starši-Johann-×-Anna-DRAGOS-obé-[~]!-cf.-P239-v16-Dorothea-DRAGOŠ!)",
+   "korpus": true
+  },
+  {
+   "row": 9,
+   "date": "15. Februar [~9.-DUEL-popravek-p05!]",
+   "scan": 47,
+   "page": 46,
+   "groom": {
+    "name": "Georg PEZDIRC [~P-e-z-d-i-r-c-ultra-zoom-p04!]",
+    "age": 32,
+    "status": "Inwohner/ledig",
+    "village": "Podzemelj 3"
+   },
+   "bride": {
+    "name": "Margaretha PEZDIRC [~OBA-PEZDIRC!]",
+    "age": 20,
+    "status": "ledig",
+    "village": "½-Gütl [~Prostojna-23-DUEL!]"
+   },
+   "note": "★★★ OBA-PEZDIRC!-+ starši-ž.-Georg-PEZDIRC-×-Anna-roj.-Tomc + priča-Georg-PEZDIRC = PEZDIRC-×4-v-enem-vpisu! + datum-popravek-9.→15.-p05-1:1!"
+  },
+  {
+   "row": 10,
+   "date": "15. Februar",
+   "scan": 47,
+   "page": 46,
+   "groom": {
+    "name": "Johann NAGERT [~Nigerl]",
+    "age": 30,
+    "status": "ledig",
+    "village": "Grič? Pf.-Lipnik [~]-in-Krain"
+   },
+   "bride": {
+    "name": "Marie HERBACCE [~]",
+    "age": 29,
+    "status": "ledig",
+    "village": "Ploštér [~] 40"
+   },
+   "note": "priči-Georg-Wigert-×-Johann-LESKO-[~!]-LESKO-križ-#1"
+  },
+  {
+   "row": 11,
+   "date": "15. Februar",
+   "scan": 47,
+   "page": 46,
+   "groom": {
+    "name": "Michael GREGORIČ",
+    "age": "24 [~26-DUEL!]",
+    "status": "½-Göblnerhof",
+    "village": "Podzemelj 4 [~9-DUEL!]"
+   },
+   "bride": {
+    "name": "Katharina BRODARIČ [~]",
+    "age": 19,
+    "status": "ledig",
+    "village": "Podzemelj 2"
+   },
+   "note": "priča-Michael-Gregoric-Amtsmann-[~]"
+  },
+  {
+   "row": 12,
+   "date": "15. Februar",
+   "scan": 47,
+   "page": 46,
+   "groom": {
+    "name": "Peter HLEPEC [~Stepec!-DUEL-cf.-HLEBEC-h2!]",
+    "age": 33,
+    "status": "Inwohner",
+    "village": "Mašulović [~]-hišna-[?]-Wuš?16"
+   },
+   "bride": {
+    "name": "Anna JOHANIČ [~]",
+    "age": 23,
+    "status": "ledig",
+    "village": "Prostojna 18 [~]"
+   },
+   "note": "HLEPEC/HLEBEC-nit-[~duel-Stepec!] + priča-Georg-Klepec-½-h.-(Klepec/Hlepec-nit-cf.-1883-v8!)"
+  },
+  {
+   "row": 13,
+   "date": "19. Februar [~13.-levo-DUEL!]",
+   "scan": 48,
+   "page": 47,
+   "groom": {
+    "name": "Ivan HUDIČ [~Hrovič-DUEL!]",
+    "age": 36,
+    "status": "gütlер [~]",
+    "village": "Dolence 24"
+   },
+   "bride": {
+    "name": "Katharina BRINC [~vdova-vdh.-Grunc!]",
+    "age": 48,
+    "status": "vdova (ULTRA-ZOOM-2×-p06!)",
+    "village": "GRIBLJE 56 (ultra-zoom-'jasno-56-NE-50'!)"
+   },
+   "note": "GRIBLJE-BLOK-NEVESTA-VDOVA + BRINC/BRINEC-MREŽA (oče-Ivan-Brinc + mati-Maria-roj.-Grunc + priči-Peter-×-Georg-BRINEC!) + 'Comm.-ad-valid.-Missam'-pripis-1.×! + starost-ž.-36-vs-56-DUEL",
+   "korpus": true
+  },
+  {
+   "row": 14,
+   "date": "19. Februar [~januar-spričevalo-[?]-DUEL!]",
+   "scan": 48,
+   "page": 47,
+   "groom": {
+    "name": "Anton PIRNAT [~Cirnat-DUEL!]",
+    "age": 23,
+    "status": "Dienstbot-in-Croatien [~Magmin/Asmin!]",
+    "village": "Gradac 5 [~Grič?-von-Griblje-Lette-40!-3-VASNI-DUEL!]"
+   },
+   "bride": {
+    "name": "Margaretha NOVAK",
+    "age": 25,
+    "status": "ledige-Häuslerin",
+    "village": "Gradac 2 [~GRIBLJE-2-DUEL!-p85-h35-[~]-križ?]"
+   },
+   "note": "X-OPEN-3-vasni-duel (Gradac-5/Grič-Lette-40/von-Griblje) + nevesta-hiša-DUEL-Gradac-2-vs-GRIBLJE-2!"
+  },
+  {
+   "row": 15,
+   "date": "19. Februar",
+   "scan": 48,
+   "page": 47,
+   "groom": {
+    "name": "Matthias JAKOPIČ [~Jakobitsch]",
+    "age": 25,
+    "status": "ledig",
+    "village": "GRIBLJE 13 (×3-branja-1:1!)"
+   },
+   "bride": {
+    "name": "Maria PEZDIRC [~Pegdirc-DUEL-2.-črka!]",
+    "age": 31,
+    "status": "ledige-Dienstmagd",
+    "village": "GRIBLJE 52 [~2-branja!]"
+   },
+   "note": "POLNI-GRIBLJE-BLOK-×2! + PEZDIRC-NEVESTA + h13-CONTINUUM-3-poročna-vpisa (1882+1883+1885!) + p07-krop-misaligned-RAZREŠEN-na-polovicah!",
+   "korpus": true
+  },
+  {
+   "row": 16,
+   "date": "14. Mai",
+   "scan": 48,
+   "page": 47,
+   "groom": {
+    "name": "Michael PEZDIRC [~Pegdirc-ultra-zoom-p08!]",
+    "age": 42,
+    "status": "½-Gütler",
+    "village": "Prusi nec. 3 [~'nec.'-pripis-1.×!]-oče-Georg-PEZDIRC-¥-pokojni!"
+   },
+   "bride": {
+    "name": "Anna JAKOPIČ [~]",
+    "age": 16,
+    "status": "ledige-½-Güblerin (ULTRA-ZOOM-2×!)",
+    "village": "GRIBLJE 8 (p08-številka-'8'-1:1!)"
+   },
+   "note": "GRIBLJE-BLOK-NEVESTA + PEZDIRC-ŽENIN-#2 + NAJMLAJŠA-NEVESTA-1882-16-let! + JAKOPIČ-KRIŽ-v15×v16 (2-v-2-zaporednih!-[~brat/sestra-X-OPEN!])",
+   "korpus": true
+  },
+  {
+   "row": 17,
+   "date": "29. [~Mai?]",
+   "scan": 48,
+   "page": 47,
+   "groom": {
+    "name": "Georg ŠTEFAN [~]",
+    "age": 31,
+    "status": "Anwaltner [~Aufnehmer!]",
+    "village": "Gradac 1 [~Dvornice-Pf.-Sichor-Nr.14!]"
+   },
+   "bride": {
+    "name": "Maria MLIČAR [~Mlinar-DUEL!]",
+    "status": "ledige-Dienstmagd",
+    "village": "Nemiška vas 9 [~]-Pf.-Toplice [~GRIBLJE-8?-DUEL!-desno-1-read]"
+   },
+   "note": "X-OPEN (v17: Nemiška-vas-9-vs-GRIBLJE-8? + Mličar/Mlinar!) — NI-blok!-starši-desno-Johann-Mlinar-kmet-[~]"
+  },
+  {
+   "row": 18,
+   "date": "2. Juli",
+   "scan": 49,
+   "page": 48,
+   "groom": {
+    "name": "Nicolaus JABLENIK [~Jablonšek]",
+    "age": 24,
+    "status": "led.-Gürtler",
+    "village": "Brusinec 13 [~Brošinec!]"
+   },
+   "bride": {
+    "name": "Anna PEZDIRC [~Pezdcirc-p09!]",
+    "age": 22,
+    "status": "led.-Gürtlers-tochter",
+    "village": "OTOK 1 (p09-številke-'1'-1:1!)"
+   },
+   "note": "PEZDIRC-NEVESTA-#3 + starši-Nicolaus-[~Matthias]-PEZDIRC-'Fabr.-Arzd.'-[~!] + priči-Matthias-×-Anton-PEZDIRC-'½-S.'! + duhovnik-'Georg/Jurij-DRAGON-[~]'-p09-1-read = DRUGI-DUHOVNIK-KANDIDAT-[~X-OPEN!] + consens-Podgor-1.-Julii-[~marginal]"
+  },
+  {
+   "row": 19,
+   "date": "9. Juli",
+   "scan": 49,
+   "page": 48,
+   "groom": {
+    "name": "Johann TUMIR [~Zunir!]",
+    "age": 24,
+    "status": "Landmann [~Leinmann!]",
+    "village": "Vranoviče 19"
+   },
+   "bride": {
+    "name": "Theresia GAB. ANGELOVEA [~Gaberscik/Angelova-DUEL!]",
+    "age": 32,
+    "status": "[~Hurnarič-Gorki]",
+    "village": "Vranoviče 23 [~]"
+   },
+   "note": "priči-Josef-Kunič-×-Georg-Jutriša-[~Leinmann!]"
+  },
+  {
+   "row": 20,
+   "date": "30. Juli",
+   "scan": 49,
+   "page": 48,
+   "groom": {
+    "name": "Johann MACELE [~Macel]",
+    "age": 24,
+    "status": "Mühlmann/Gütl(ssohn)?-[~]",
+    "village": "Neuberg 53 [~Homut/Golland-pri-Toplicah!]"
+   },
+   "bride": {
+    "name": "Maria JABLŠIR [~Jablanšek?]",
+    "age": 30,
+    "status": "Gütlmannin",
+    "village": "Zemelj 33 [~]"
+   },
+   "note": "priče-Georg-PEZDIRC-[~!] × Simon-[~Linnsek]-×-Martin-Mur[ka?] — PEZDIRC-priča-#4!"
+  },
+  {
+   "row": 21,
+   "date": "30. Juli [~17.-p10-copulavit-DUEL!]",
+   "scan": 49,
+   "page": 48,
+   "groom": {
+    "name": "Daniel ŠKRCA [~Mara/Maran-DUEL-3!]",
+    "age": 36,
+    "status": "Brinmann [~Aninmann!]-'zumiz-in-Malina'-[~garble!]",
+    "village": "Vranoviče [~]"
+   },
+   "bride": {
+    "name": "Anna PEZDIRC [~Pezelj-DUEL!]",
+    "age": 36,
+    "status": "[~Hurnšpanni]",
+    "village": "Krupšiše 4 [~1-read!]"
+   },
+   "note": "PEZDIRC-NEVESTA-#4-[~!] + priče-Johan-Švec-Gültner-[~]-×-Johan-Šv[ec]-[~]"
+  },
+  {
+   "row": 22,
+   "date": "30. Juli [~17.-copulavit!]",
+   "scan": 49,
+   "page": 48,
+   "groom": {
+    "name": "Johann BUTALA [~Bušula!]",
+    "age": 27,
+    "status": "¼-Höflingssohn",
+    "village": "Vranoviče 3 [~Warmberg!-1¼-DUEL!]"
+   },
+   "bride": {
+    "name": "Margaretha MACOLE [~Macele!]",
+    "age": 28,
+    "status": "Gürtlannin [~]",
+    "village": "Warmberg 1 [~]"
+   },
+   "note": "p10-ultra-zoom (crop-zadel-v22-namesto-v21!-PODATKI-UPORABLJENI!) + priči-Josef-Butala-×-Maria-Macole-roj.-[~]-×-Mathias-Tomc"
+  },
+  {
+   "row": 23,
+   "date": "12. November",
+   "scan": 49,
+   "page": 48,
+   "groom": {
+    "name": "Nicolaus LESIRO [~Lesko/Geširo/Heßiro-DUEL-4!]",
+    "age": 50,
+    "status": "¼-Höfling",
+    "village": "GRIBLJE 1 (s49_levo-'Haus-Nr.-1'-1:1!)"
+   },
+   "bride": {
+    "name": "Katharina ŠKRCE [~Škerce]",
+    "age": 30,
+    "status": "Leinannin [~Leinweber-nit!]",
+    "village": "GRIBLJE 10 [~1-read!]"
+   },
+   "note": "POLNI-GRIBLJE-BLOK-×2! + ★★★★★ h1 = NAJNIŽJA-HIŠA-S-POROČNIM-BLOKOM-KADARKOLI (preglasi-h2-P240!-poročna-OUTRUNA-mrliško-tudi-na-h1-ZA-7-LET!) + LESKO-križ-#2 + priči-Georg-[~Šeško]-×-Nikola-[~Švec]",
+   "korpus": true
+  },
+  {
+   "row": 24,
+   "date": "19. November",
+   "scan": 50,
+   "page": 49,
+   "groom": {
+    "name": "[~P240-pass-1/2-tail!]",
+    "village": "[?]"
+   },
+   "bride": {
+    "name": "[~]",
+    "village": "[?]"
+   },
+   "note": "TAIL-1882 (P240-1:1-meja!)"
+  },
+  {
+   "row": 25,
+   "date": "26. November",
+   "scan": 50,
+   "page": 49,
+   "groom": {
+    "name": "[~P240-pass-1/2-tail!]",
+    "village": "[?]"
+   },
+   "bride": {
+    "name": "[~]",
+    "village": "[?]"
+   },
+   "note": "TAIL-1882"
+  },
+  {
+   "row": 26,
+   "date": "26. November",
+   "scan": 50,
+   "page": 49,
+   "groom": {
+    "name": "Mathias HRIZAN/Križan [~DVOJNA-PRIIMKA!]",
+    "age": 24,
+    "status": "Leinweber [~Leinweber-nit!]",
+    "village": "GRIBLJE 36 (P240-tail-1:1!)"
+   },
+   "bride": {
+    "name": "Anna MATUSCHEA [~]",
+    "age": 18,
+    "status": "[~]",
+    "village": "[?]"
+   },
+   "note": "TAIL-1882!-★★★ MERGE-z-P80-sidrom (P238-h13-MERGE-vzorec!-P80-star-read:-Križan-Leinweber-24-×-Anna-Matuschea-18!) + h36-PREDISTOPNA-NIT-P240-IZPOLNJENA! + krstna-h36-križ-(Dec-1886-oče-Matija-Križan-×-mati-Ana-roj.-Milavec-1:1-IZ-TEGA-VPISA!)",
+   "korpus": true
+  }
+ ],
+ "excludedCount": 2,
+ "excluded": [
+  {
+   "id": "X1",
+   "ref": "v14-3-vasni-duel",
+   "text": "ženin-Anton-PIRNAT-[~Cirnat]: 'Gradac-5'-(levo)-vs-'Grič?-Pf.-Lipnik-in-Croatien'-(pass-1)-vs-'von-Griblje-Lette-40'-(pass-1!)-3-VASNI-DUEL + nevesta-'Gradac-2'-(pass-1!)-vs-'GRIBLJE-2'-[~]-desno-(starši-Mathias-Novak-½-Griblje!)-NI-Griblje-blok-iskreno!"
+  },
+  {
+   "id": "X2",
+   "ref": "v17-Mličar/Mlinar",
+   "text": "nevesta-'Nemiška-vas-9'-Pf.-Toplice-(pass-1!)-vs-'GRIBLJE-8?'-desno-1-read-[~!]— NI-Griblje-blok-iskreno! + priimek-MLIČAR-NI-MILIČ (križ-×237-NESPREMENJEN!)"
+  }
+ ],
+ "anomalies": [
+  {
+   "id": "A1",
+   "ref": "restart-glava-PRED-vrstico-1-NOVA-4.-VARIANTA",
+   "text": "p12_s45_meja_top-ULTRA-ZOOM: VELIKA-'1882'-NE-v-glavi-strani (glava-je-še-'Traunungs-Buch')-ampak-PRED-VRSTICO-zap.-št.-1!— 4.-mejna-varianta-zaporedoma (1883-'1-8-8-3.'-RAZPOREJENO + 1884/1885-glava-vrhnja + 1882-pred-vrstico-1!)"
+  },
+  {
+   "id": "A2",
+   "ref": "datum-v1-DUEL-2:2",
+   "text": "vpis-1-datum: '1.-Februar'-(levo_cel-'1882-Febr-1.' + p12-'1.-februarja')-vs-'21.-Jänner'-(pass-1 + p01-ultra-zoom!)-2:2-NE-RAZREŠENO-[~iskreno!]"
+  },
+  {
+   "id": "A3",
+   "ref": "v9-datum-popravek-9.→15.",
+   "text": "p05-ULTRA-ZOOM: v-robni-zapis-'9.-Febr.'-je-kasneje-nadet-POPPRAVEK-'15.'— pisarjev-popravek-datuma-1.×-v-predzgodovini!-[~2-branja]"
+  },
+  {
+   "id": "A4",
+   "ref": "v6-v7-IZMENA-VLOG",
+   "text": "vpis-6:-ženin-TOMC-×-nevesta-BERČOPEC; vpis-7:-ženin-BERČOPEC-×-nevesta-TOMC — IZMENA-vlog-v-2-zaporednih-vpisih (brat+sestra-poroka-na-isti-dan-[~X-OPEN!]-cf.-HROVALJ-1883-brat+sestra!) + vasi-št.-13-×2-DUEL (Primošek-vs-Zemelj!)"
+  },
+  {
+   "id": "A5",
+   "ref": "v9-OBA-PEZDIRC",
+   "text": "ženin-Georg-PEZDIRC-(Podzemelj-3)-×-nevesta-Margaretha-PEZDIRC-(½-Gütl-[~])-OBA-roj.-PEZDIRC!-+ starši-neveste-Georg-PEZDIRC-×-Anna-roj.-Tomc + priča-Georg-PEZDIRC = 4×-PEZDIRC-v-enem-vpisu (sorodstvo-[~X-OPEN]-2-različnih-družin?)"
+  },
+  {
+   "id": "A6",
+   "ref": "v13-vdova-48-let",
+   "text": "nevesta-Katharina-BRINC-vdova-(vdh.)-roj.-Grunc-[~]-48-let-(ULTRA-ZOOM-2×-1:1!)-×-ženin-Ivan-HUDIČ-36-[~56-DUEL!]— NAJSTAREJŠA-NEVESTA-1882 (starostna-razlika-12-let!-vdova-ponovna-poroka) + BRINC/BRINEC-priči-×2 + 'Comm.-ad-valid.-Missam'-pripis-1.×!"
+  },
+  {
+   "id": "A7",
+   "ref": "v16-NEVESTA-16-let",
+   "text": "nevesta-Anna-JAKOPIČ-16-let-(ULTRA-ZOOM-2×-1:1-p08!)-NAJMLAJŠA-1882-×-ženin-Michael-PEZDIRC-42-let (razlika-26-let!-očetov-¥-pripis!) + JAKOPIČ-KRIŽ-v15-ženin-×-v16-nevesta"
+  },
+  {
+   "id": "A8",
+   "ref": "h1-REKORD",
+   "text": "vpis-23-ženin-Nicolaus-LESIRO-GRIBLJE-1 = 1.-POROČNI-BLOK-NA-h1-KADARKOLI (najnižja-hiša!-preglasi-h2-P240-za-1-stopnjo!-h1-aktivna-v-04894-1889/1890/1904-3-mrliških!— poročna-OUTRUNA-mrliško-tudi-na-h1-ZA-7-LET!)"
+  },
+  {
+   "id": "A9",
+   "ref": "foliacija-'93/94'-[~X-OPEN]",
+   "text": "s45-pass-1-pageNote-branje-'Strani-93/94'-[~1-read!] NE-ujema-s-pravilom-'Pag-=-sken−1'-(s45→44!)-+ pre-stoječi-P80-sidro-h36-ima-page-44-za-s50-(=sken−6!)-pravilo-preverjeno-samo-s56–s66-[~iskreno-X-OPEN!]"
+  },
+  {
+   "id": "A10",
+   "ref": "v18-drugi-duhovnik-kandidat",
+   "text": "v18-duhovnik-'Georg/Jurij-DRAGON-[~]'-(p09-1-read!)-vs-dominanta-'Franz-Dovgan-[~garble-×N]'-v-vseh-ostalih-— DRUGI-DUHOVNIK-KANDIDAT-[~X-OPEN!]-+ v16-'Franz-Dergan-Cooperator'-[~garble] + v13-'Comm.-ad-valid.-Missam'-[~Dvorjan]"
+  },
+  {
+   "id": "A11",
+   "ref": "v20-priča-PEZDIRC",
+   "text": "v20-priča-'Georg-PEZDIRC-[~]'-+ v21-nevesta-Anna-PEZDIRC-[~Krupšiše-4]-+ v18-nevesta-Anna-PEZDIRC-OTOK-1-(priči-Matthias-×-Anton-PEZDIRC!)-PEZDIRC-mreža-se-širi-tudi-čez-priče/starše-([~5-vpisov-+ ×4-dodatnih!]"
+  },
+  {
+   "id": "A12",
+   "ref": "v8-DRAGOŠ-×2-starši",
+   "text": "v8-starši-neveste-'Johann-DRAGOS-×-Anna-DRAGOS'-obé-isti-priimek-[~!]— cf.-P239-v16-mati-Dorothea-roj.-DRAGOŠ-(P236-nit!)-+ P231-z51-h72-DRAGOŠ-matec-+ v3-1882-ženin-Josef-DRAGOŠ-Krasinec-+ v3-nevesta-Dorothea-PRODANIČ-[~cf.-DRAGOŠ-P236-ime!]"
+  },
+  {
+   "id": "A13",
+   "ref": "v3-v4-ISTA-hiša-×2",
+   "text": "v3-ženin-Josef-DRAGOŠ-Krasinec-7-×-nevesta-Dorothea-PRODANIČ-Krasinec-7 + v4-ženin-Michael-PRODNIK-Draginja-vas-15-×-nevesta-Maria-GALAVEC-Draginja-vas-15 — DVA-ISTA-HIŠA-poroka-zaporedoma-(v3-ISTI-DAN-8.-Februar!-v4-tudi-8.-Februar!)-cf.-h34-SILAH-sestrski-poroki-1884+1885"
+  },
+  {
+   "id": "A14",
+   "ref": "spričevala-PRED-porokami",
+   "text": "v5–v8-desno-stran: spričevala-občin-datirana-12./8./2./16.-februar-PRED-porokami-12./15./15./15.-februar!— 4-spričevala-v-4-vpisih (1.×-tako-gosta-zaporedja-v-predzgodovini!-+ v8-spričevalo-16.-febr.-PO-poroki-15.-febr.-[~datum-DUEL!]"
+  }
+ ],
+ "stats": {
+  "entries": 26,
+  "gribljeMarriages": 7,
+  "gribljeNote": "7-GRIBLJE-blokov = 6-NOVIH + 1-MERGE-z-P80-sidrom-h36 (P238-h13-MERGE-vzorec!): h35-v1-NEVESTA + h38-×-h12-v8-POLNI-×2 + h56-v13-NEVESTA-VDOVA + h13-×-h52-v15-POLNI-×2 + h8-v16-NEVESTA + h1-×-h10-v23-POLNI-×2 + h36-v26-TAIL-MERGE!— 3-POLNA-×2-1.×-v-enem-letu-predzgodovine!-2-X-OPEN-duela (v14-3-vasni + v17-Mličar/Mlinar)-NISTA-bloka!",
+  "zapSkipped": 0,
+  "pezdircVpisov": 5,
+  "h1Rekord": "vpis-23-GRIBLJE-1 = najnižja-hiša-s-poročnim-blokom-KADARKOLI (preglasi-h2-P240!-poročna-OUTRUNA-mrliško-tudi-na-h1-ZA-7-LET!)",
+  "korpusBump": "6-novih-blokov (+1-MERGE) — vitals 1951 → 1957 · 04455 208 → 214 · sidra 201 → 207 (1882:1 → 1882:7!) · dobe 175 → 181",
+  "milicKriž": "×237-NESPREMENJEN (nobenega-MILEK/MILIČ-vpisa-v-1882!-v17-'Mličar'-NI-MILIČ!-iskreno!)",
+  "yearBoundaries": "meja-1881/82 = s44→s45-glava (tail-1881-NI-na-s45!) · meja-1882/83 = s50-MID (P240-1:1!)"
+ },
+ "crossChecks": [
+  {
+   "id": "CC1",
+   "ref": "restart-1882-s45-glava-PRED-vrstico-1",
+   "verdict": "✓ p12-ULTRA-ZOOM-1:1 ('headingPosition-NE-v-glavi'!) + levo_cel-'restart-skupaj-z-veliko-1882'-+ s45_nodat-'1,2,3,4-brez-preskokov' — NOVA-4.-MEJNA-VARIANTA"
+  },
+  {
+   "id": "CC2",
+   "ref": "številčenje-1–26-BREZ-preskokov",
+   "verdict": "✓ nodat-trakovi-×5 (s45-'1,2,3,4' + s46-'5,6,7,8' + s47-'9,10,11,12' + s48-'13,14,15,16,17' + s49-'18,19,20,21,22,23'!)-+ s50-tail-24–26-(P240-1:1!) = ZVEZNO-1–26!-4.-leto-zapored"
+  },
+  {
+   "id": "CC3",
+   "ref": "meja-1882/83-s50-MID",
+   "verdict": "✓ P240-1:1-reconciliacija (tail-24–26-19./26./26.-novembra + #26-HRIZAN-GRIBLJE-36!-nato-'1-8-8-3.'-razporejeno)"
+  },
+  {
+   "id": "CC4",
+   "ref": "h36-MERGE-z-P80-sidrom",
+   "verdict": "✓ P238-h13-MERGE-vzorec-1:1 (isti-vpis-26!-P80:-Križan-Leinweber-24-×-Anna-Matuschea-18-+ krstna-h36-križ-Dec-1886-IZ-TEGA-VPISA!)"
+  },
+  {
+   "id": "CC5",
+   "ref": "PEZDIRC-v9-OBA",
+   "verdict": "✓ p04-ULTRA-ZOOM-1:1 ('Georg-PEZDIRC'-'Margaretha-PEZDIRC'-starši-PEZDIRC-×2-+ priča-PEZDIRC = ×4-v-enem-vpisu!)"
+  },
+  {
+   "id": "CC6",
+   "ref": "h1-×-h10-v23",
+   "verdict": "✓ s49_levo-'Haus-Nr.-1'-1:1-×2-branja + p11-crop-misaligned-RAZREŠEN-na-polovicah (pass-1-+ s49_levo!)"
+  },
+  {
+   "id": "CC7",
+   "ref": "p03/p07/p11-kropi-misaligned",
+   "verdict": "✓ 3-slabi-rezi-RAZREŠENI-2:1-na-polovicah (v8-'38'-jasno!-v15-'13'-×3!-v23-iz-pass-1!)-krop-geometrija-napaka-dokumentirana"
+  },
+  {
+   "id": "CC8",
+   "ref": "p10-crop-zadel-v22",
+   "verdict": "✓ v22-podatki-UPORABLJENI (Butala-×-Macole-Warmberg!)-v21-iz-pass-1-+ s49_desno-(Anna-PEZDIRC-[~!])"
+  }
+ ],
+ "p240Lead": "P240-meja-1882/83-s50-MID-POTRJENA-1:1 (tail-1882-vpisi-24–26-že-1:1-iz-P240!-#26-Mathias-HRIZAN-GRIBLJE-36-tail = h36-predistopna-nit-IZPOLNJENA-→-P241-MERGE-blok!)",
+ "p242Lead": "leto-1881 = 5/13 (s44-nazaj — s45-glava-'1882'-PRED-vrstico-1-že-1:1!-tail-1881-pričakovan-na-s44!-P241-p12-dokaz!) ali-knjižno-odpiranje-1873-s1",
+ "rowNote": "P241 = 4/13 POROČNA-PREDZGOVINA-LINIJA (1873–1885): leto-1882-KOMPLETNO (26-vpisov / 7-Griblje-blokov-3-POLNA-×2! / BREZ-preskokov-4.-leto-zapored! / ★★★★★ h1 = najnižja-hiša-s-poročnim-blokom-KADARKOLI! / PEZDIRC-×5-vpisov-v9-OBA! / BRINC/BRINEC-mreža-vdova-48-let! / MERGE-z-P80-sidrom-h36!-NOVA-4.-mejna-varianta-glava-PRED-vrstico-1!-foliacija-'93/94'-[~X-OPEN!]) — descending-vzorec-kot-04104-linija!"
+}
