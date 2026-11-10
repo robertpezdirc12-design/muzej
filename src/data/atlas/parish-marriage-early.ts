@@ -688,3 +688,88 @@ export const MARRIAGE_1877_KORPUS = {
   sidra: 240,
   dobe: 214,
 } as const;
+
+/** ——— P248: poročna predzgovorina 04455, leto 1876 = 10/13 (s11–s14; RESTART = s11-VRSTA-2-tail-violet-8-nad-nim!-TAIL-1875 = NAKNADNI-VPIS!-10.-MEJNA-VARIANTA!) — 15 VPISOV-BREZ-PRESKOKOV · 6-GRIBLJE-blokov-6-DVIGOV-V-1-LETU-REKORD (h44-ZA-23-LET!) ——— */
+export const MARRIAGE_1876_BLOCKS = HOUSE_VITALS.filter(
+  (h) => h.bookSignature === "04455" && h.year === 1876,
+);
+export const MARRIAGE_1876_GRIBLJE = MARRIAGE_1876_BLOCKS.length;
+export const MARRIAGE_1876_HOUSES = MARRIAGE_1876_BLOCKS.map((h) => h.houseNo);
+export const MARRIAGE_1876_TOTAL = 15;
+
+/** Meje 1876: RESTART-s11-VRSTA-2 (marginal-'1'-fizično!-tail-violet-8-nad-nim!-vpis-1 = '9.-Februar'-BREZ-letnice!-mesec-mikro-forenzika-'f'!) + MEJA-1875/76 = s10→s11 (NAKNADNI-VPIS-VMES!-kaplan-Perschek!) + MEJA-1876/77 = s14→s15 (finis-1876-3.-instance-P247-1:1!). */
+export const MARRIAGE_1876_MEJA = {
+  restartSi:
+    "restart-vpis-1 = 9. Februar 1876 = s11-VRSTA-2 (druga-vrsta!-marginalna-'1'-FIZIČNO-1:1!-tail-violet-8-NAD-nim!-velika-glava-NE-obstaja-AMPAK-vpis-1-BREZ-letnice-'de.-fbruar-9'-mesec-mikro-forenzika-'f'-ena-zanka+spodnja-zanka-NI-J-1:1!-X-OPEN-anomalija!) — ženin-GRIBLJE-31-Nicolaus-Krupanič-[~Zupanič/Grupanič-K-DUEL-3-branja!]-34-l-×-nevesta-GRIBLJE-44-Katharina-PEGDIRE-20-l = INTRA-DVOJNI-BLOK-h31×h44!-+ zettel-'woher-Güblje-dd.-8.-Februar-1876'-1:1-(permit-dan-pred!)-+ sreda-ritem-9/16/23!",
+  restartEn:
+    "restart-entry-1 = Feb 9, 1876 = s11-ROW-2 (the-second-row!-the-margin-'1'-PHYSICALLY-1:1!-the-violet-8-ABOVE!-no-big-heading-BUT-entry-1-WITHOUT-year!-the-month-mikro-forensics-'f'-1:1!) — groom-GRIBLJE-31-Nicolaus-Krupanič-[~DUEL!]-×-bride-GRIBLJE-44-Katharina-PEGDIRE = INTRA-DOUBLE-BLOCK!-+ zettel-'dd.-8.-February-1876'-1:1!",
+  tailSi:
+    "★★★ TAIL-1875 = s11-VRSTA-1-VPIS-8-VIOLET-NAKNADNI-VPIS (marginalna-'8'-fizično-ENA-številka-1:1!-VIJOLIČNO-ČRNILO!-podpis-KAPLAN-Daniel-Perschek-[~Fošbek-P/O-DUEL!]-≠-DOVGAN-1.-ne-Dovgan-podpis-1875–1885!-datum-'1875'+'3.'-mesec-MAREC~AUGUST-TRIPLE-DUEL-[Mikro-'M'-p2-'August'-P1-'Februar'!]-zettel-'den-3.-August-1875'-PODPORA-AUGUST!-ženin-Johann-Blažek-31-l-'Gornje-Kamenice-[~]'-Mühlbauer-×-Klemenčič-Hinenzia-[~DUEL!]-23-l-'Graßac-[~]-1'-opomba-'Privat'!) = NAKNADNO-DOPISAN-ČEZ-MEJO → NAPAVED-P249: preskok-8-v-1875-margine-s8–s10 (1–7-+-9–17!)",
+  tailEn:
+    "★★★ THE-1875-TAIL = s11-ROW-1-ENTRY-8-VIOLET-THE-LATE-ADDED-ENTRY (the-margin-'8'-physically-ONE-digit-1:1!-VIOLET-ink!-signature-the-CHAPLAIN-Daniel-Perschek-[~Fošbek-DUEL!]-≠-DOVGAN!-date-'1875'+'3.'-month-MARCH~AUGUST-TRIPLE-DUEL-zettel-'Aug-3-1875'-SUPPORTS-AUGUST!-groom-Johann-Blažek-×-Klemenčič-Hinenzia-[~DUEL!]-annotation-'Privat'!) = LATE-ADDED-ACROSS-THE-BOUNDARY → the-P249-FORECAST: the-skip-of-8-in-1875-margins-s8–s10",
+  boundarySi:
+    "meja-1875/76 = s10→s11-NA-ISTI-STRANI (tail-1875-REGULARNO = s10-vpis-17-'Juli-20'-očesa!-margine-13–17-April–Juli!-+ s11-VRSTA-1-NAKNADNI-violet-8-+ s11-VRSTA-2-RESTART-'1'!) · meja-1876/77 = s14→s15 (P247-1:1!-'f-i-n-i-s-/-1-8-7-6'-s14 = 3.-instance-zaključne-oznake-re-verifikacija-P248-očesa-krop-1:1!-vzorec-SODA-leta-1876/1878/1880!)",
+  boundaryEn:
+    "the-1875/76-boundary = s10→s11-ON-THE-SAME-PAGE (the-regular-1875-tail = s10-entry-17-'Juli-20'!-+ the-s11-ROW-1-LATE-violet-8-+ the-s11-ROW-2-RESTART-'1'!) · the-1876/77-boundary = s14→s15 (P247-1:1!-the-'finis-1876'-s14 = the-3rd-instance-re-verified-P248!)",
+} as const;
+
+/** Številčenje 1876 (s11-restart-1–5 · s12-6–9-'8'-'2'-glif-RAZREŠEN! · s13-10–13 · s14-14–15) — 15-VPISOV-BREZ-PRESKOKOV-7.-leto + margin-številčenje-4.-leto. */
+export const MARRIAGE_1876_NUMBERING =
+  "s11 = restart-1–5 (margine-1/2/3/4/5-fizično-margins-krop-1:1!) · s12 = 6–9 (6/7/8/9!-margina-'8'-dvom-'2'-glif-RAZREŠEN-margins-krop-8×-dvojni-lok-1:1!) · s13 = 10–13 · s14 = 14–15 — 15-VPISOV-BREZ-PRESKOKOV-7.-leto-zapored (1876–1882!-NODAT-×0-3.-leto!-margin-številčenje-4.-leto-1879-1.·1878-2.·1877-3.·1876-4.!-svetlo-modro-sivo!)";
+
+/** ★★★★★ FOLIACIJA-1876-'Pag = sken−1'-4/4 (s11-'Pag. 10'-2×-neodvisno! + s12-'Pag. 11'-pass-1-'4'-MISREAD-KOREKCIJA! + s13-'Pag. 12'-2×! + s14-'Pag. 13'-3×!-P247-kontekst!) — skupaj-z-19/19! */
+export const FOLIACIJA_1876 =
+  "s11-'Pag. 10'-2×-neodvisno-1:1-+ s12-'Pag. 11'-očesa-1:1-pass-1-'Pag. 4'-MISREAD-KOREKCIJA!-+ s13-'Pag. 12'-2×-1:1-+ s14-'Pag. 13'-3×-1:1-(P247-kontekst!)= 4/4-1876!-→ skupaj-z-4/4-1877-+ 6/6-1878-+ 5/5-1879 = 19/19-v-zaporednih-letih (pravilo-Pag==sken−1-NE-PRELAMA-5.-leto!)";
+
+/** ★★★ 10.-MEJNA-VARIANTA (1876): restart-VRSTA-2-NA-ISTI-STRANI-kot-tail + tail-violet-NAKNADNI + restart-BREZ-letnice + INLINE-od-2.-lista. */
+export const MEJNA_10_VARIANTA_1876 =
+  "10.-MEJNA-VARIANTA-1876: restart = s11-VRSTA-2-(druga-vrsta!-NE-top-kot-1877/1878!-NE-dno-kot-1880-P243!-NE-glava-kot-1879-P244!)-+ tail-violet-NAKNADNI-VPIS-NAD-nim-(kaplan-Perschek!)-+ restart-vpis-1-BREZ-letnice-(vs-P246/P247-INLINE-v-1.-vpisu-VSAKEGA-lista!)-+ INLINE-letnica-od-2.-lista-(s12-'1876.-Febr.-16.'-+ s13-'1876.-Februar-23.'-+ s14-'1876.-Novembris-15.'-3/3-fizično!)-= 4-nove-elemente-v-1-meji-NOV-TIP (ponavljanje-glave-je-LETO-specifično: 1877+1878+1876-INLINE!-velike-glave-samo-1879!-restart-na-dnu-samo-1880!)";
+
+/** ★★★★★ 6-firstYear-DVIGOV-V-1-LETU = REKORD-LINIJE: h44-ZA-23-LET-NOV-ABSOLUTNI-REKORD + h30-ZA-13 + h64-ZA-12 + h31-ZA-10 + h35-ZA-6 + h41-ZA-5. */
+export const FIRSTYEAR_1876_REKORD =
+  "★★★★★ 6-firstYear-04455-DVIGOV-V-1-LETU = REKORD-LINIJE: h44-1899→1876-ZA-23-LET-NOV-ABSOLUTNI-REKORD-(prejšnji-h53-10-let-P243!-h10-h69-10-let-P247!-h44-04455-do-zdaj-1899/1903/1905/1908/1912!)-+ h30-1889→1876-ZA-13-LET-+ h64-1888→1876-ZA-12-LET-(NOVA-HIŠA-V-04455!)-+ h31-1886→1876-ZA-10-LET-+ h35-1882→1876-ZA-6-LET-+ h41-1881→1876-ZA-5-LET-6-blokov-VSI-6-hiše-PRVIČ-v-04455-predzgodovini";
+
+/** ★★★★★ PEZDIRC/PEGDIRE-×9-omemb-V-1-LETU = REKORD-POROČNE-PREDZGOVINE (×4-BLOKOV!-'Leinmannstochter'-×2!-PEGDIRE-LEINWEBER-DRUŽINA-kandidat!). */
+export const PEZDIRC_1876_REKORD =
+  "★★★★★ PEZDIRC/PEGDIRE-×9-omemb-V-1-LETU-REKORD-POROČNE-PREDZGOVINE (cf.-P243-×3!-P241-×5-vpisov!-P242-×5!-P246-×2!): v1-nevesta-Katharina-Pegdire-h44-+ v8-mati-Maria-née-Pegdire-h64-mikro-1:1!-+ v9-nevesta-Barbara-Pegdire-+ v9-oče-Georg-Pegdire-×-Anna-TOME-+ v9-priča-Georg-Pegdire-+ v13-nevesta-Maria-Pegdire-h41-'Leinmannstochter'-+ v13-oče-Georg-Pegdire-×-Anna-BRINC-+ v14-nevesta-Anna-Pegdire-h30-'Leinmannstochter'-+ v14-mati-Mathiewa-née-Pegdire = ×9!-od-toga-×4-BLOKOV-(h44-+ h64-mati-+ h41-+ h30!)-+ ★ 'Leinmannstochter'-×2-(v13+v14!)-= PEGDIRE-LEINWEBER-DRUŽINA-kandidat-[X-OPEN!-cf.-P80-h13-Leinann-nit-+ P241-v26-Križan-'Leinweber'-+ P243-h63-'dekla-v-Gribljeh'!]-+ ★ 2×-Georg-Pegdire-(v9-×-Anna-Tome-vs-v13-×-Anna-Brinc!)-ISTA-IME-2-ženi-kandidat-X-OPEN";
+
+/** ★★★ h35-PARALELA-1:1 ('Mathias-Hrižan'-h35 == P229-z79-krst!) + DOVGAN-10-LET. */
+export const H35_1876_PARALELA =
+  "★★★ h35-PARALELA-1:1: v8-ženin-'Mathias-Hrižan-[~Križan-H-forma-DUEL!]'-h35-22-l == P229-z79-krst-04104-'Mathias-Hrižan'-h35 (ISTO-IME+ISTO-HIŠA-1:1!-oče-v8-'Nicolaus'-vs-krstni-oče-DUEL!-OČE-SIN-ISTO-IME-kandidat-X-OPEN-cf.-P231-z111-Kelcho-veriga!)-+ h35-HRIŽAN-veja-cf.-P246-v17-nevesta-1878-1:1-SKLAD-P229!";
+
+export const DOVGAN_1876_ZACETEK =
+  "DOVGAN-CONTINUUM-PODALJŠAN-NA-10-LET (1876–1885!): Georg/Franz-Dovgan-podpisi-na-VSIH-4-glavnih-listih-od-restarta-vpis-1-(garble-'Porger'-'Dorgar'-'Dorgun'-pass!)-cf.-DOVGAN_1877_PODALJŠITEV-9-let-→-ZDAJ-10!-+ ★ TAIL-1875-KAPLAN: 'Daniel-Perschek-[~Fošbek-P/O-DUEL!]'-vijolični-NAKNADNI-VPIS-s11-top = 1.-NE-DOVGAN-podpis-Dovgan-začenja-ŠELE-z-restartom-1876!";
+
+/** Datum-dueli 1876 + INTRA-×2 + IZMENA-×2 + DISPENS-3.-GRAD + MLADOLETNICA-×2. */
+export const MARRIAGE_1876_DUELS = [
+  "v1-mesec »Januar vs Februar 9« REŠEN-mikro-forenzika-'f'-1:1-za-FEBRUAR (ena-zanka+spodnja-zanka-NI-J!-permit-'dd.-8.-Februar'-konsistentno!-sreda-ritem-9/16/23!)",
+  "v13-datum »22. Oktober vs Sept 17« REŠEN-2:1-za-OKTOBER (mikro-'O'-poudarjen-+pass-1!-zettel-'dd.-16.-7ber'-(September)-5-tednov-prej!-'7~8-ber'-POPRAVEK-kandidat-X-OPEN!)",
+  "v12-datum »17. Septembris [~14-DUEL-mikro-'7'-jasen-vertikal-2:1!]«",
+  "tail-1875-mesec »MAREC vs AUGUST vs FEBRUAR« TRIPLE-DUEL-[X-OPEN!]-(mikro-'M'-z-lokoma!-p2-'August'-+ zettel-'3.-VIII'-PODPORA-AUGUST!-P1-'Februar'!)",
+  "v8-starost »22 vs 20« REŠEN-mikro-2:1-za-22 ('2'-zaključen-lok-1:1!)",
+  "s12-margina »8 vs 2« REŠEN-fizično-1:1-za-8 (margins-krop-8×-DVOJNI-lok!-full-page-'2'-glif-MISREAD!)",
+  "v6-Wohnort »Drašiče-36-pf.-Möbling vs Gradac-36« REŠEN-3:1-za-DRAŠIČE (pass-1+p2+p4!-Metlika-pfarrei-pripis!)",
+] as const;
+
+/** ★★ KONTEKST-izven-Griblje-1876-NI-bloki-pošteno. */
+export const MARRIAGE_1876_KONTEKST = [
+  "v2-16.-Februar-Johann-Tomc-24-l-[~27-DUEL!]-'Škri.še-1'[~Škrilje?-š-háček-forenzika-NE-'Gri.'!]-½-g.-Rofpunnwirth[?]-×-Mlakve-11-Maria-Juraješič[~Jurejevič!]-18-l-NI-blok",
+  "v3-16.-Februar-Mathias-Pasič-45-l-Desinec-pp.-Cernomelj-3-×-Cerhin.še-15-[~18-DUEL!]-Anna-Movrin-41-l-NI-blok",
+  "v4-16.-Februar-Georg-Movrin-29-l-Cerhin.še-15-×-Desinec-3-Margareh-Pasič-19-l-★★★ IZMENA-VLOG-v3/v4 (Pasič×Movrin→Movrin×Pasič!-cf.-P241-v6/v7-TOMC-BERČOPEC!)-NI-blok",
+  "v5-16.-Februar-Georg-Jurejevič[~Jeroschinich!]-40-l-Cerhin.še-17-'½-Gübl.'-PRIPIS!-×-Krasinec-20-Dorothea-Škrabanič[~Krasinič-DUEL!]-26-l-★★ '½-Gübler'-status-cf.-P244-v3-Krugel!-NI-blok",
+  "v6-16.-Februar-Mathias-Mohlorič[~Mahlorič!]-28-l-'Drašiče-36'-pf.-Möbling-(Metlika!)-3×-branja!-×-Dobranice-8-Margareta-Štefanič-22-l-NI-blok",
+  "v7-16.-Februar-Jakob-Štefanič-25-l-Dobranice-8-×-Podzgemeľ-6-Barbara-Tome-40-l-★★★ DISPENS-3.-GRAD-1:1-'Christliche-Dispens-vom-dritten-Grad-dd.-12.-Febr.'-+'zweifache-Dispens-dd.-15.-Febr.-876'-dve!-starost-razlika-15-let!-★★ IZMENA-ŠTEFANIČ-v6-nevesta→v7-ženin-ISTA-HIŠA-Dobranice-8!-NI-blok",
+  "v9-23.-Februar-Nikolaus-Mihelič[~Milek-DUEL!-MILIČ-križ-kandidat-IZVEN-korpusa-cf.-P244-'Mileh'-×238!]-22-l-'Zemelj[~Femelj/Podgemelj-DUEL!]'-19-×-Boršt-23-Barbara-PEGDIRE-21-l-★★ starši-neveste-Georg-PEGDIRE-×-Anna-née-TOME-(3×-branja!)+ priča-Georg-Pegdire!-zettel-Podgemelj-dd.-22.-Januar-+ Consens-Decan-15.-Februar-NI-blok",
+  "v10-23.-Februar-[letnica-INLINE!] Johann-Kupanič[~Županič-DUEL!-cf.-v1-Krupanič-TRIPLE-ISTO-DUEL-SKOUPINA!]-23-l-Vinica-1-×-Krasina-63-[~43-DUEL-6-vs-4-P246-lekcija!]-Anna-Bahovič-17-l-MLADOLETNICA-Aufgebot-4.-und-13.-Febr-+ Consens-Vormund-k.k.-Bez.-dd.-9.-Febr-NI-blok",
+  "v11-27.-Februar-Janko-Mihelec-26-l-Velika-Gorica-Lipnik-Kroatien-9-×-Adlešiči-16-Barbara-Novak-22-l-zettel-25.-Febr-+ dispens-Eheconsens-4.-Jänner-1876[~]-Mülling!-NI-blok",
+  "v12-17.-Septembris-[~14]-Eduard-Lingl-30-l-Graz-Windberg-48-OFFICIER-Infanterie!-×-Graz-Blae-23-Josepa-29-l-vojaški-vpis-Konsens-Militärbehörde!-NI-blok (cf.-v8-vojaška-omemba!)",
+  "v15-20.-Novembris-Anton-Novak-33-l-Gradac-3-×-Gradac-14-Rosalia-Mascle[~Marcele!]-18-l-zettel-19.-Novembris-1876-NI-blok",
+] as const;
+
+/** Vse-nove-1876-meritve-v-obliki-za-QA (skupaj-04455: 247→253 · vitals: 1990→1996 · sidra: 240→246-1876:6! · dobe: 214→220-50-pred-linijskih!). */
+export const MARRIAGE_1876_KORPUS = {
+  skupaj04455: 253,
+  skupajVitals: 1996,
+  sidra: 246,
+  dobe: 220,
+} as const;
