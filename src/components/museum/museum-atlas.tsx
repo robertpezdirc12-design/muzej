@@ -155,6 +155,18 @@ import {
   MARGINA_1879_STEVILCENJE,
   FINIS_1878_S25,
   MARRIAGE_1879_KONTEKST,
+  MARRIAGE_1878_BLOCKS,
+  MARRIAGE_1878_GRIBLJE,
+  MARRIAGE_1878_TOTAL,
+  MARRIAGE_1878_MEJA,
+  MARRIAGE_1878_NUMBERING,
+  FOLIACIJA_1878,
+  GLAVA_1878_NI,
+  HRIZAN_1878_TROJNA,
+  MILEK_1878_H65,
+  PEZDIRC_1878_KONTEKST,
+  DOVGAN_1878_PODALJŠITEV,
+  MARRIAGE_1878_KONTEKST,
 } from "@/data/atlas/parish-marriage-early";
 import { LANDUSE_ZONES, LANDUSE_ENTITIES, HAMLETS } from "@/data/atlas/landuse";
 import { getCoverage, getArchiveInventory, parishStats, getHouseStory } from "@/lib/atlas";
@@ -1481,6 +1493,104 @@ function MarriageEarly1879() {
   );
 }
 
+function MarriageEarly1878() {
+  const { t } = useLang();
+  return (
+    <div className="rounded-xl border bg-card/60 p-5">
+      <h3 className="flex items-center gap-2 font-serif text-lg font-semibold">
+        <BookOpen className="h-4 w-4 text-primary" aria-hidden />
+        {t(
+          "Poročna predzgodovina 04455 (P246): leto 1878 = 8/13",
+          "The marriage prehistory 04455 (P246): the year 1878 = 8/13",
+        )}
+      </h3>
+      <p className="mt-2 text-sm text-muted-foreground">
+        {t(
+          `8/13 poročne predzgodovine (1873–1885): skeni s19–s24, ${MARRIAGE_1878_TOTAL} vpisov leta 1878 — BREZ preskokov (6. leto!). RESTART-1878 = s19-TOP (marginalna-'1'-FIZIČNO-1:1!-vpis 1 = Jänner '1878 Jänner 16[~24]-DUEL' — Johann Šelah Gremelj[~] 20 '½ Gübler' × Anna Jureješič Primez 11 — DISPENS-super-mixta-ac-prima!) + GLAVA-'1878'-NI-PONOVLJENA-NA-LISTIH (KONTRAST-1879!-letnica samo INLINE v datumu 1. vpisa vsakega lista = 9.-MEJNA-VARIANTA!) — ${MARRIAGE_1878_GRIBLJE} Griblje blokov.`,
+          `8/13 of the marriage prehistory (1873–1885): scans s19–s24, ${MARRIAGE_1878_TOTAL} entries of 1878 — WITHOUT skips (the 6th year!). RESTART-1878 = s19-TOP (the margin-'1'-PHYSICALLY-1:1!-entry 1 = January '1878 Jänner 16[~24]-DUEL' — Johann Šelah Gremelj[~] 20 '½ Gübler' × Anna Jureješič Primez 11 — DISPENS-super-mixta-ac-prima!) + the-'1878'-HEADING-NOT-REPEATED-on-the-leaves (IN-CONTRAST-TO-1879!-the-year only INLINE in each leaf's 1st entry = the-9th-BOUNDARY-VARIANT!) — ${MARRIAGE_1878_GRIBLJE} Griblje blocks.`,
+        )}
+      </p>
+
+      {/* Griblje poroke 1878 — vrstni red blokov */}
+      <div className="mt-4 rounded-lg border bg-background/60 p-4">
+        <h4 className="text-sm font-semibold">
+          {t("Griblje poroke 1878 — vrstni red blokov", "The Griblje marriages 1878 — the block order")}
+          <span className="ml-2 rounded-full border px-2 py-0.5 text-[10px] font-medium text-primary">
+            ×{MARRIAGE_1878_GRIBLJE}
+          </span>
+        </h4>
+        <div className="mt-3 grid gap-2 sm:grid-cols-5">
+          {MARRIAGE_1878_BLOCKS.map((h) => (
+            <div key={h.houseNo + h.scan + h.whatSi.slice(40, 80)} className="rounded border bg-card/60 px-2 py-1.5 text-center min-w-0 [overflow-wrap:anywhere]">
+              <div className="text-xs font-semibold tabular-nums">h{h.houseNo}</div>
+              <div className="text-[9px] text-muted-foreground">s{h.scan} · Pag. {h.page}</div>
+            </div>
+          ))}
+        </div>
+        <p className="mt-1.5 text-[11px] font-mono text-muted-foreground">
+          {t(
+            `${MARRIAGE_1878_NUMBERING}`,
+            `${MARRIAGE_1878_NUMBERING}`,
+          )}
+        </p>
+      </div>
+
+      {/* anomalije */}
+      <div className="mt-4 grid gap-3">
+        <div className="rounded-lg border border-emerald-600/40 bg-emerald-600/10 p-4 text-emerald-900 dark:text-emerald-100">
+          <h4 className="text-sm font-semibold">
+            {t("HRIŽAN ×3 bloki v 1 letu (h63+h35+h36!) + ×3 INTRA-dvojni bloki (h47×h43 + h18×h65 + h1×h35!) + MILEK-h65 + ŠIMEC-h18 1. poročna dokaza!", "HRIŽAN ×3 blocks in 1 year (h63+h35+h36!) + ×3 INTRA-double blocks (h47×h43 + h18×h65 + h1×h35!) + MILEK-h65 + ŠIMEC-h18 the-1st-marriage-proofs!")}
+          </h4>
+          <p className="mt-1.5 text-xs">
+            {t(
+              `${HRIZAN_1878_TROJNA} · ${MILEK_1878_H65}`,
+              `${HRIZAN_1878_TROJNA} · ${MILEK_1878_H65}`,
+            )}
+          </p>
+          <p className="mt-2 text-[11px] text-muted-foreground">
+            {t(MARRIAGE_1878_MEJA.restartSi, MARRIAGE_1878_MEJA.restartEn)}
+          </p>
+        </div>
+        <div className="rounded-lg border border-amber-600/40 bg-amber-600/10 p-4 text-amber-900 dark:text-amber-100">
+          <h4 className="text-sm font-semibold">
+            {t("PEZDIRC ×2 garble v 8. letu + DOVGAN-continuum 8 let + hišna-sinhronizacija 9/10!", "PEZDIRC ×2 garbles in the 8th year + the DOVGAN-continuum 8 years + the house-synchronization 9/10!")}
+          </h4>
+          <p className="mt-1.5 text-xs">
+            {t(
+              `${PEZDIRC_1878_KONTEKST} · ${DOVGAN_1878_PODALJŠITEV}`,
+              `${PEZDIRC_1878_KONTEKST} · ${DOVGAN_1878_PODALJŠITEV}`,
+            )}
+          </p>
+          <p className="mt-2 text-[11px] text-muted-foreground">
+            {t(MARRIAGE_1878_MEJA.tailSi, MARRIAGE_1878_MEJA.tailEn)} · {t(MARRIAGE_1878_MEJA.boundarySi, MARRIAGE_1878_MEJA.boundaryEn)}
+          </p>
+        </div>
+        <div className="rounded-lg border border-sky-600/40 bg-sky-600/10 p-4 text-sky-900 dark:text-sky-100">
+          <h4 className="text-sm font-semibold">
+            {t("FOLIACIJA: Pag = sken−1 6/6 v 1878 (skupaj 11/11 z 1879!) + GLAVA-'1878'-NI-ponovljena (9.-mejna-varianta!)", "FOLIATION: Pag = scan−1 6/6 in 1878 (11/11 together with 1879!) + the-'1878'-heading-NOT-repeated (the-9th-boundary-variant!)")}
+          </h4>
+          <p className="mt-1.5 text-xs">
+            {t(
+              `${FOLIACIJA_1878} — ${GLAVA_1878_NI}`,
+              `${FOLIACIJA_1878} — ${GLAVA_1878_NI}`,
+            )}
+          </p>
+        </div>
+        <div className="rounded-lg border border-sky-600/40 bg-sky-600/10 p-4 text-sky-900 dark:text-sky-100">
+          <h4 className="text-sm font-semibold">
+            {t("Številčenje v LEVI margini potrjeno 2. leto (23 vpisov fizično!) + kontekst izven Griblje", "The numbering IN THE LEFT MARGIN confirmed for the 2nd year (23 entries physically!) + the out-of-Griblje context")}
+          </h4>
+          <ul className="mt-2 space-y-1 text-[11px] text-muted-foreground">
+            {MARRIAGE_1878_KONTEKST.map((k) => (
+              <li key={k.slice(0, 24)} className="[overflow-wrap:anywhere]">• {k}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function MarriageEarly1880() {
   const { t } = useLang();
   return (
@@ -1990,6 +2100,8 @@ function ParishTab() {
 
       {/* P244: poročna predzgodovina 04455 — leto 1879 = 7/13 */}
       <MarriageEarly1879 />
+      {/* P246: poročna predzgodovina 04455 — leto 1878 = 8/13 */}
+      <MarriageEarly1878 />
       {/* P243: poročna predzgodovina 04455 — leto 1880 = 6/13 */}
       <MarriageEarly1880 />
 

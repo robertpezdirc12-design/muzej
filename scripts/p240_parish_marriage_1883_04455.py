@@ -17,7 +17,7 @@ bloki = re.findall(r'houseNo: "([^"]+)",\s*bookSignature: "04455",\s*year: 1883,
 check("I1 bloki 04455/1883-numeric == 2", len(bloki) == 2, f"najdeno {len(bloki)}")
 check("I2 hiše-1883 (vrstni-red 13, 2)", bloki == ["13", "2"], ",".join(bloki))
 skupaj = src.count('bookSignature: "04455"')
-check("I3 vitals-1966 + 04455==223 (P241-živo!)", "HOUSE_VITALS.length !== 1978" not in src and skupaj == 235, f"04455={skupaj}")
+check("I3 vitals-1985 + 04455==242 (P246-živo!)", "HOUSE_VITALS.length !== 1985" not in src and skupaj == 242, f"04455={skupaj}")
 
 d = json.load(open(f"{ROOT}/research/issue17/parish-marriage-1883-04455.json", encoding="utf-8"))
 an = json.dumps(d["anomalies"], ensure_ascii=False)
@@ -36,7 +36,7 @@ check("I4c h2-1.-poročni-blok + PEZDIRC-'NI-Pegdirc' + MILEK-izven-korpusa + HR
       and "MILEK-križ-KANDIDAT" in an and "HROVALJ-brat+sestra" in an)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1978")
+st = qa.count("HOUSE_VITALS.length !== 1985")
 check("I5 qa-p240 + števec-1966", "qa-p240-parish-marriage-early-04455-1883" in qa and st >= 145, f"1966-številcev={st}")
 
 i0 = src.find("P240: poročna PREDZGOVINA 04455, leto 1883")
@@ -55,11 +55,11 @@ check("I8b modul-1883 (MARRIAGE_1883_*-izvozi)", all(x in m for x in [
     "MARRIAGE_1883_XOPEN", "MARRIAGE_1883_MEJA", "MARRIAGE_1883_NUMBERING", "PEZDIRC_1883_NIT",
     "MILEK_1883_KANDIDAT", "PRIEST_1883", "HROVALJ_1883_SIBLINGS", "MARRIAGE_1883_VILLAGE_DUELS"]))
 check("I8c forenzika-×237-ostaja", "×237 blokov čez 5 knjig" in open(f"{ROOT}/src/data/atlas/parish-forensics.ts", encoding="utf-8").read())
-check("I9a pt-luknja-1978 + byBook-04455=235 (P241-živo!)", '"vitalsTotal": 1978' in open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-      and '"04455": 235' in open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read())
+check("I9a pt-luknja-1985 + byBook-04455=242 (P241-živo!)", '"vitalsTotal": 1985' in open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
+      and '"04455": 242' in open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read())
 check("I9b worklog-P240-vnos", "## P240" in open(f"{ROOT}/worklog.md", encoding="utf-8").read())
 check("I9c UI-MarriageEarly1883-v-ParishTab", "MarriageEarly1883" in open(f"{ROOT}/src/components/museum/museum-atlas.tsx", encoding="utf-8").read())
-check("I9d sidra-228 + 1879:9-P244! + 1880:3-P243 (qa-sidra-message-P244-živo!)", "poročna sidra ≠ 228 (1879:9-P244! · 1880:3-P243! · 1881:9-P242! · 1882:7-P241! · 1883:2-P240!" in qa)
+check("I9d sidra-228 + 1879:9-P244! + 1880:3-P243 (qa-sidra-message-P244-živo!)", "poročna sidra ≠ 235 (1878:7-P246! · 1879:9-P244! · 1880:3-P243! · 1881:9-P242! · 1882:7-P241! · 1883:2-P240!" in qa)
 
 if "--live" in sys.argv:
     try:

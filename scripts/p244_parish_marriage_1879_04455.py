@@ -20,7 +20,7 @@ check("I1b vrstni-red-9 (16,50,61,21,32,13,42,17,16!-h16-×2!)",
       [b.replace(" [~]", "") for b in bloki] == ["16", "50", "61", "21", "32", "13", "42", "17", "16"],
       ",".join(bloki))
 skupaj = src.count('bookSignature: "04455"')
-check("I2 vitals-1978 + 04455==235", "HOUSE_VITALS.length !== 1978" not in src and skupaj == 235, f"04455={skupaj}")
+check("I2 vitals-1985 + 04455==242", "HOUSE_VITALS.length !== 1985" not in src and skupaj == 242, f"04455={skupaj}")
 
 nove = re.findall(r'houseNo: "([^"]+)",\s*bookSignature: "04455",\s*year: 1879,\s*scan: (\d+),\s*page: (\d+),', src)
 check("I3 skeni+pagi (27/26 · 28/27 · 29/28 · 30/29 · 31/30 · 32/31 ×2 · 33/32 ×2 — pag=sken−1!)",
@@ -52,10 +52,10 @@ check("I4c PEZDIRC-7.-leto + DOVGAN-7-let + MILEH-križ + TRIPLE-DUEL-v1",
       and "Mileh" in an2 and "TRIPLE-DUEL" in an2)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1978")
-check("I5 qa-p244 + števec-1978 (×150!)", "qa-p244-parish-marriage-early-04455-1879" in qa and st >= 150, f"1978-številcev={st}")
-check("I5b sidra-228 + 1879:9-P244 (qa-sidra-message)", "poročna sidra ≠ 228 (1879:9-P244!" in qa)
-check("I5c dobe-202 + 32-pred-linijskih", "dobe-bloki ≠ 202/7/26" in qa and "32 pred-linijskih 1879-P244×9!" in qa)
+st = qa.count("HOUSE_VITALS.length !== 1985")
+check("I5 qa-p244 + števec-1985 (×155!)", "qa-p244-parish-marriage-early-04455-1879" in qa and st >= 150, f"1985-številcev={st}")
+check("I5b sidra-235 + 1878:7-P246 + 1879:9-P244 (qa-sidra-message)", "poročna sidra ≠ 235 (1878:7-P246! · 1879:9-P244!" in qa)
+check("I5c dobe-209 + 39-pred-linijskih", "dobe-bloki ≠ 209/7/26" in qa and "39 pred-linijskih 1878-P246×7!" in qa)
 check("I5d p80-1879:9-garda + sken-range-27–35", 'p80MarrAnchors.filter((h) => h.year === 1879).length !== 9' in qa and "skeni izven 26–35" in qa and "skeni izven 27–35" not in qa)
 
 i0 = src.find("P244+P245-KOREKCIJA: POROČNA PREDZGOVINA 04455, leto 1879")
@@ -86,7 +86,7 @@ check("I7c FOLIACIJA-REŠITEV-v-modulu + P243-DUEL-zaprt",
       "P243-s38-'Pag. 34.'-X-OPEN-DUEL-REŠEN" in m and "MISREAD-'37'" in m)
 
 pt = json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8"))
-check("I8a pt-luknja-1978 + byBook-04455=235", pt.get("vitalsTotal") == 1978 and pt.get("corpus", {}).get("byBook", {}).get("04455") == 235,
+check("I8a pt-luknja-1985 + byBook-04455=242", pt.get("vitalsTotal") == 1985 and pt.get("corpus", {}).get("byBook", {}).get("04455") == 242,
       f"vitalsTotal={pt.get('vitalsTotal')} 04455={pt.get('corpus', {}).get('byBook', {}).get('04455')}")
 
 ui = open(f"{ROOT}/src/components/museum/museum-atlas.tsx", encoding="utf-8").read()
@@ -98,7 +98,7 @@ check("I9 UI-MarriageEarly1879-v-ParishTab + importi + P245-KOREKCIJA-kartica!",
       and "FINIS_1878_S25" in ui and "MARRIAGE_1879_KONTEKST" in ui)
 check("I9b worklog-P244-vnos", "## P244" in open(f"{ROOT}/worklog.md", encoding="utf-8").read())
 check("I9c stari-verifikatorji-na-živih-številkah",
-      "1978" in open(f"{ROOT}/scripts/p238_parish_marriage_1885_04455.py", encoding="utf-8").read()
+      "1985" in open(f"{ROOT}/scripts/p238_parish_marriage_1885_04455.py", encoding="utf-8").read()
       and "235" in open(f"{ROOT}/scripts/p242_parish_marriage_1881_04455.py", encoding="utf-8").read())
 
 # ——— I11: P245-KOREKCIJA ————
@@ -128,8 +128,8 @@ try:
     r = urllib.request.Request("http://localhost:3000/api/qa")
     with urllib.request.urlopen(r, timeout=30) as resp:
         qa_data = json.load(resp)
-    check("I10 QA-živo 244/244 ok:True (+qa-p244-id!)",
-          qa_data.get("ok") is True and qa_data.get("passed") == 244 and qa_data.get("failed") == 0,
+    check("I10 QA-živo 245/245 ok:True (+qa-p244-id!)",
+          qa_data.get("ok") is True and qa_data.get("passed") == 245 and qa_data.get("failed") == 0,
           f"passed={qa_data.get('passed')} failed={qa_data.get('failed')}")
 except Exception as e:
     check("I10 QA-živo", False, str(e)[:80])

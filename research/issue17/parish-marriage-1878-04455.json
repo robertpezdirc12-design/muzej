@@ -1,0 +1,150 @@
+{
+ "faza": "P246",
+ "naslov": "POROČNA PREDZGOVINA 04455, leto 1878 = 8/13 — s19–s24 (+ s25-tail-22–23-'finis-pro-anno-1878'-že-1:1-P245!-+ s18-tail-1877-kontekst!) — RESTART-1878 = s19-TOP (marginal-'1'-fizično-1:1!-velika-letnica-NI-posebna-glava!-letnica-samo-INLINE-v-datumu-vpisa-1-'1878-Jänner-16[~24]-DUEL'!) — GLAVA-'1878'-NI-PONOVLJENA-NA-LISTIH (kontrast-1879!-letnica-samo-v-1.-vpisu-vsakega-lista!) — ŠTEVILČENJE-v-LEVI-MARGINI-POTRJENO-2.-LETO (23-vpisov-1:1!) — FOLIACIJA-'Pag-=-sken−1'-6/6-1878!",
+ "datum": "2026-11-10",
+ "vir": {
+  "knjiga": "poročna 04455 (Trauungs-Buch), župnija Podzemelj — Matricula Online",
+  "skeni": "s19–s24 (6 glavnih skenov md5!-+ s14–s18-kontekst-nazaj-md5-11/11-skupaj!-+ s25-tail-1878-že-1:1-P245!)",
+  "razprti_listi": "~2450 × 1800 px; viewer-HTML→192-URL trailing-slash-fix"
+ },
+ "frame": {
+  "restart_varianta": "RESTART-1878 = s19-TOP — marginalna-številka-'1'-fizično-1:1-ob-datumu-'1878-Jänner-16[~24]-DUEL' (VELIKA-letnica-NI-posebna-glava!-letnica-samo-INLINE-v-datumu-vpisa-1!-cf.-P238/P239/P245-vzorec-velika-letnica-v-vpisu-1!) — vpis-1 = Jänner 1878 — ženin-Johann-Šelah[~Filak/Hilač/Kelchler-MULTI-DUEL!]-'&-Güblam'-[½-Gübler-STAND!]-Gremelj[~Kremel/Kriblje-DUEL-3-branja!]-20[~2a/24-DUEL!]-32-l-×-Anna-Jureješič[~Perzta-DUEL!]-Primez[~Drima-DUEL!]-11[~]-26-l-+ DISPENS-super-mixta-ac-prima-Befunde (consistoriale-dioecesane-impetratum!-cf.-P244-v1-'Civil-Beizag'-modri-pripis-VZOREC!) + Franz-DOVGAN-podpis! — P244-LEKCIJA-UPOŠTEVANA: marginalne-številke-fizično-preverjene-NAJPREJ (Read-očesa-na-marginah-pred-VLM-pass-1!)",
+  "meja_1877_78": "s18→s19 (tail-1877 = s18: zap-št.-14[~74]-15-16[~76]-17-v-margini-NOVEMBER-1877-vsi!-s18-'Pag. 17'!-prečrtani-popravki-številk-v-margini!)",
+  "meja_1878_79": "s25→s26 (P245-1:1!-tail-1878 = s25: margina-22–23-+ VELIKA-'finis-pro-anno-1878'-sredina-strani = 2.-instance-zaključne-oznake-leta-P245-že-vpisan!)",
+  "numbering": "s19 = 1–3-restart (margini-1/2/3-fizično-Read-očesa-1:1!) · s20 = 4–7 (margini-4/5/6/7!) · s21 = 8–11 (margini-8/9/10/11!-m9-s-prečrtanimi-popravki-v-Wohnort-celici!) · s22 = 12–14 (margini-12/13/14!) · s23 = 15–17 (margini-15/16/17!) · s24 = 18–21 (margini-18/19/20/21!) · s25 = 22–23-tail (P245-1:1!) = 23-VPISOV-BREZ-PRESKOKOV (6.-leto-zapored!-ŠTEVILČENJE-v-LEVI-MARGINI-POTRJENO-2.-LETO-cf.-P245-MARGINA_1879!)",
+  "glava_1878": "GLAVA-'1878'-NI-PONOVLJENA-NA-LISTIH! (kontrast-1879-P244/245-kjer-velika-glava-'1879'-ponovljena-s27–s34!) — letnica-se-pojavi-SAMO-INLINE-v-datumu-1.-vpisa-vsakega-lista (s19-r1-'1878-Jänner-16' + s20-r4-'1878-Febr-20' + s21-r8-'1878-Februar-24' + s22-r12-'1878-Februar-27' + s23-r15-'1878-Mai-26[~Juni-DUEL!]' + s24-r18-'1878-Juni-23') — nadaljnji-vpisi-na-listu-samo-mesec+dan (npr. s20-'20.'×3-+ s22-'März-3.'-'Mai-12.'!) = 1878-LETNO-SESTAVLJEN-GLAVNI-VPIS-BREZ-PONAVLJANJA-NOVA-PODKATEGORIJA-9.-MEJNA-VARIANTA (ponavljanje-glave-je-LETO-specifično-ne-knjižno!)",
+  "foliacija": "s19-'Pag. 18'-1:1-+ s20-'Pag. 19'-1:1-+ s21-'Pag. 20'-1:1 (10×-Read-očesa!-VLM-pass-1-misread-'21'-KOREKCIJA!)-+ s22-'Pag. 21'-1:1-+ s23-'Pag. 22'-1:1-+ s24-'Pag. 23'-1:1 (10×!-VLM-pass-1-misread-'25'-KOREKCIJA!) = FOLIACIJA-'Pag-=-sken−1'-6/6-1878! (skupaj-z-5/5-1879 = 11/11-V-ZAPOREDNIH-LETIH!-pravilo-NE-PRELAMA!)"
+ },
+ "stats": {
+  "entries": 23,
+  "entriesNote": "s19-1–3-restart + s20-4–7 + s21-8–11 + s22-12–14 + s23-15–17 + s24-18–21 + s25-22–23-tail-P245 = 23-DISTINCT (BREZ-preskokov!-6.-leto!)",
+  "gribljeMarriages": 7,
+  "gribljeHouses": [
+   "2",
+   "47",
+   "43",
+   "63",
+   "18",
+   "65",
+   "23 [~28-DUEL!]",
+   "1",
+   "35",
+   "36"
+  ],
+  "gribljeBlocksNote": "7-blokov (h2-ženin!-h47×h43-INTRA-DVOJNI!-h63-nevesta!-h18×h65-INTRA-DVOJNI!-h23-nevesta!-h1×h35-INTRA-DVOJNI!-h36-nevesta!) = 10-različnih-hiš",
+  "skupaj04455": 242,
+  "skupajVitals": 1985,
+  "sidra": 235,
+  "dobe": 209
+ },
+ "bloki": [
+  {
+   "vpis": 4,
+   "scan": 20,
+   "page": 19,
+   "datum": "20. Februar 1878",
+   "ženin": "Markus Hlebec [~Šlebec-DUEL!]",
+   "hiša": "GRIBLJE 2 (10×-1:1!)",
+   "nevesta": "Katharina Stubler [~Stebler-DUEL!]",
+   "hišaN": "Cerhovje[?]-šë. [~Leutra-DUEL!]",
+   "opomba": "★★★ h2-HLEBEC-hiša-nit-POTRJENA (cf.-P219-z45-'Klebev[~Klepec?]'-h2-+ P229-z77-'Peter-Sellebec[?]'-h2!-1.-poročni-dokaz-h2!) + HLEBEC-grafija-H-forma-kot-P229-'Hlebec'-nota!"
+  },
+  {
+   "vpis": 5,
+   "scan": 20,
+   "page": 19,
+   "datum": "20. Februar 1878",
+   "ženin": "Peter Klobučar [10×-'Klobučar'-K-jasna!]",
+   "hiša": "GRIBLJE 47 (10×-'47'-1:1!-NE-45!)",
+   "nevesta": "Katharina Brula [~Brcula-DUEL!-NE-'Brodar'-pass-1-misread!]",
+   "hišaN": "GRIBLJE 43 (10×-1:1!)",
+   "opomba": "★★★ h47-NOVA-hiša-v-korpusu (1.-dokaz!) + h43-BRULA-družina-1:1-SKLAD (cf.-P222-z92-'Maria-roj.-Bruhar/Brulav[?]'-'43'-VIZUALNO-3×-+ P228-z31-h43!-isti-priimek-isti-dom!) + KLOBUČAR-priimek-POTRJEN (cf.-h48-Klobučar-P235-z93-+ P227-z78-botra!) + starši-ženina: 'Peter-Klobučar-geb.-Dragoš'-[~DRAGOŠ-mati-nit-cf.-P244-v12!]"
+  },
+  {
+   "vpis": 6,
+   "scan": 20,
+   "page": 19,
+   "datum": "20. Februar 1878",
+   "ženin": "Johann Krambič [~Krombič/Krumbič-DUEL!]",
+   "hiša": "Hrova-sinc[~Hrušica-sine-DUEL!]-19 [NE-Griblje!]",
+   "nevesta": "Anna Hrižan [~Križan-DUEL!-H-forma-10×!]",
+   "hišaN": "GRIBLJE 63 (10×-'63'-1:1!-NE-65!)",
+   "opomba": "★★★ h63-HRIŽAN/KRIŽAN-hiša-3.-LETO-ZAPORED (1878-nevesta-Anna!-→-1879-nevesta-Dorothea-P244-v21!-→-1880-ženin-Križan-Miklavčič-P243-v14!-HIŠNA-NIT-3-LET!) + 'Inwohnerin'-stand-10×!"
+  },
+  {
+   "vpis": 7,
+   "scan": 20,
+   "page": 19,
+   "datum": "20. Februar 1878",
+   "ženin": "Georg Šimec [~Simec-DUEL!]",
+   "hiša": "GRIBLJE 18 (10×-'18'-1:1!-NE-48!)",
+   "nevesta": "Anna Milek [~Mileck!]",
+   "hišaN": "GRIBLJE 65 (10×-'65'-1:1!-NE-63/68!)",
+   "opomba": "★★★ h18-ŠIMEC-družina-1:1-SKLAD (cf.-P232-z21-h18-SIMEC-oče!-1.-poročni-dokaz-h18!) + ★★★ h65-MILEK-družina-1:1-SKLAD (cf.-P218/P220-h65-MILEK-oče-+ P224-z55-h65-MILEK!-1.-poročni-dokaz-h65!-MILEK-četrti-vir!) + INTRA-DVOJNI-blok (obe-hiši-Griblje!)"
+  },
+  {
+   "vpis": 11,
+   "scan": 21,
+   "page": 20,
+   "datum": "27. [Feber?-DUEL-mesec-X-OPEN!-pass-3-'Jänner'-pass-1-'März'-sestava-za-Feber!]",
+   "ženin": "Mathias Janževič [~Jetkovič/Janic-DUEL!]",
+   "hiša": "Sučhovce[~Girschow/Kirchov-DUEL!]-13",
+   "nevesta": "Katharina Jureješič [~Juregeštin-DUEL!]",
+   "hišaN": "GRIBLJE 23 (10×-'23'-1:1!-[~28-pass-1-DUEL!])",
+   "opomba": "★★★ h23 = 1.-poročni-dokaz-h23-v-predzgodovini (cf.-P235-z16-h23-BRINE-komplet-MILIČ-'Mihelik'-hipoteza!) + nevesta-20-let!"
+  },
+  {
+   "vpis": 17,
+   "scan": 23,
+   "page": 22,
+   "datum": "19. Juni 1878",
+   "ženin": "Nikolaus Kelcho [~Helpho/Heslho-GARBLE-DUEL!-★★★-cf.-P231-z111-'Nicolaus-Kelčho'-h1-ISTO-IME-+-ISTA-HIŠA!]",
+   "hiša": "GRIBLJE 1 (1:1!)",
+   "nevesta": "Maria Hrižan [~Križan-DUEL!-H-forma-10×!]",
+   "hišaN": "GRIBLJE 35 (10×-'35'-1:1!-NE-38!)",
+   "opomba": "★★★ h1 = KELCHO-continuum (P231-z111-krst-1875-h1-oče-'Nicolaus-Kelčho'-garble-→-1878-poroka-'Nikol.-Kelcho'-45-l-ISTI-IME-ISTI-DOM!-garble-veriga-3-branja!) + ★★★ h35-HRIŽAN-družina-1:1-SKLAD (cf.-P229-z79-'Mathias-Hrižan-[~HRIŽAN!]'-h35!-1.-poročni-dokaz-h35!) + INTRA-DVOJNI-blok"
+  },
+  {
+   "vpis": 21,
+   "scan": 24,
+   "page": 23,
+   "datum": "23. [Aug?-vs-Nov?-DUEL-mesec-X-OPEN!]",
+   "ženin": "Martin Klemen [~Hlemen-H-forma-DUEL!]",
+   "hiša": "Hrižev[?]-18-'oba-von'[~nota-DUEL!]",
+   "nevesta": "Maria Hrižan [~Križan-DUEL!-H-forma-10×!-cf.-h36-Križan-družina-P80-1882-poroka-1886-krst!]",
+   "hišaN": "GRIBLJE 36 (10×-'36'-1:1!-NE-30!)",
+   "opomba": "★★★ h36 = 1.-poročni-dokaz-h36-v-predzgodovini (cf.-P80-h36-Križan-1882-poroka-+ P80-h36-krst-1886-+ P229-h36!-Križan/Hrižan-hišna-nit!) + 'oba-von'-nota-[~X-OPEN!]"
+  }
+ ],
+ "anomalie": [
+  "★★★ RESTART-1878 = s19-TOP — marginalna-'1'-FIZIČNO-1:1 (Read-očesa-na-marginah-NAJPREJ!-P244-LEKCIJA-upoštevana!)-vpis-1 = Jänner-1878-Šelah-[~MULTI-DUEL!]-×-Jureješič-z-DISPENS-super-mixta-ac-prima-Befunde + DOVGAN-podpis!",
+  "★★★ GLAVA-'1878'-NI-PONOVLJENA-NA-LISTIH (kontrast-1879!): letnica-samo-INLINE-v-datumu-1.-vpisa-vsakega-lista (s19/s20/s21/s22/s23/s24!)-nad-aljnji-vpisi-samo-mesec+dan = 9.-MEJNA-VARIANTA (ponavljanje-glave-je-LETO-specifično!)",
+  "★★★★★ FOLIACIJA-'Pag-=-sken−1'-6/6-1878 (s19-'Pag. 18'-…-s24-'Pag. 23'!-2-VLM-pass-1-misreadi-KOREKCIJA-s21-'21'-→-'20'-in-s24-'25'-→-'23'-10×-Read-očesa!)-skupaj-z-1879 = 11/11-v-zaporednih-letih!",
+  "★★★ ŠTEVILČENJE-v-LEVI-MARGINI-POTRJENO-2.-LETO: 23-vpisov-1–23-fizično-Read-očesa-1:1 (s19-1/2/3 + s20-4/5/6/7 + s21-8/9/10/11 + s22-12/13/14 + s23-15/16/17 + s24-18/19/20/21 + s25-22/23-P245!) — m9-Wohnort-celica-s-prečrtanimi-popravki (2-prečrtane-vrstice!)",
+  "★★★ HRIŽAN-×3-BLOKI-V-1-LETU (h63-nevesta-Anna-v6-+ h35-nevesta-Maria-v17-+ h36-nevesta-Maria-v21!) = REKORD-POROČNE-PREDZGODOVINE (vs-P244-h63-×1!-+ H-forma-10×-na-vseh-treh!-Križan-DUEL-2-od-3!-h35-HRIŽAN-1:1-P229!-h36-Križan-družina-P80!)",
+  "★★★ INTRA-DVOJNI-BLOKI-×3-v-1-LETU (h47×h43-v5!-h18×h65-v7!-h1×h35-v17!-obe-hiši-Griblje!)-= 3-od-7-blokov-INTRA (rekord-vzorca!-vs-P148-1900-×2!)",
+  "★★★ MILEK-družina-h65-1.-POROČNI-DOKAZ (v7-nevesta-Anna-Milek-GRIBLJE-65!-cf.-P218/P220-h65-MILEK-oče-krstna!-+ P224-z55-h65!-+ P239-v18-mati-MILEK!-MILEK-4.-vir-od-4!)",
+  "★★★ ŠIMEC-družina-h18-1.-POROČNI-DOKAZ (v7-ženin-Georg-Šimec-GRIBLJE-18!-cf.-P232-z21-h18-SIMEC-oče-+ P229-SIMEC-×3!)",
+  "★★★ h43-BRULA-družina-1:1-SKLAD (v5-nevesta-Katharina-Brula-GRIBLJE-43!-cf.-P222-z92-'Maria-roj.-Bruhar/Brulav[?]'-'43'-3×-+ P228-z31-h43!-NE-'Brodar'-pass-1-misread-10×-KOREKCIJA!)",
+  "★★★ h47-NOVA-hiša-v-korpusu (v5-ženin-Peter-Klobučar-GRIBLJE-47-10×-1:1-NE-45!-1.-dokaz-h47!-+ starši-'Peter-Klobučar-geb.-Dragoš'-cf.-DRAGOŠ-nit-P244-v12!)",
+  "★★★ h2-HLEBEC-hiša-nit-POTRJENA (v4-ženin-Markus-Hlebec-GRIBLJE-2!-cf.-P219-z45-'Klebev[~Klepec?]'-h2-DUEL-+ P229-z77-'Peter-Sellebec[?]'-h2-garble!-HLEBEC-grafija-H-forma!)",
+  "★★★ h1-KELCHO-continuum (v17-ženin-Nikolaus-Kelcho-[~Helpho/Heslho-GARBLE!]-45-l-cf.-P231-z111-'Nicolaus-Kelčho'-h1-oče-krst-1875!-ISTO-IME-ISTA-HIŠA-garble-veriga!)",
+  "★★★ h23-1.-poročni-dokaz (v11-nevesta-Katharina-Jureješič-GRIBLJE-23-[10×!-NE-28-pass-1-DUEL!]-cf.-P235-z16-h23-BRINE!)",
+  "★★★ PEZDIRC-CONTINUUM-×131→04455-v-8.-LETU-predzgodovine: v10-ženin-Johann-Pegdiric-[~Pezdirc!]-Krasinec-2-37-l-×-Katharina-Beličič-[~Deličič-DUEL!]-Črnomelj-152-+ v20-ženin-Johann-Pegdič-[~Pejdič!]-Lahine-10-28-l-×-Katharina-Buthovec-[~Buchovec!]-Cerhovje-27 = 2-PEZDIRC-GARBLE-v-1-letu-NI-bloki-pošteno (IZVEN-Griblje!)",
+  "★★★ DOVGAN-CONTINUUM-PODALJŠAN-NA-8-LET (1878–1885!): Franz-Dovgan-[~Dorgan/Dolgan/Dorejan/Dorezan-GARBLE-VARIANTE!]-podpisi-na-VSIH-6-glavnih-listih (s19–s24!-od-vpisa-1!)",
+  "★★★ KONTEKST-vpis-1–3-+ v8–v10-+ v12–v16-+ v18–v20-NI-bloki-pošteno (izven-Griblje!): v1-Šelah-Gremelj[~]-20-DISPENS!-+ v2-Šelah[~]-×-Bulhovec[~QUAD-DUEL!]-18!-+ v3-Horvatini[~]-Hrova-sinc!-+ v8-Kompare-Melično[~]-35!-+ v9-Mathias-Hure-[~Kure!]-vid.[vdovec!]-Germ[~]-29-×-Katharina-Hrižan-[~Križan!]-Krašhar[~]-29-prečrti!-+ v10-PEZDIRC!-+ v12-Jablenik-[~]-Krasinec-13/37!-+ v13-Mavrecic-[~Mavrenk!]-Štaple-5-×-Bahorič-[~]-Krasinec[~]-44!-+ v14-Simonič-×-Judnič-[~]-Dobravce-10!-+ v15-Murko-[~Mur.]-Gremelj[~]-24-×-Vidic-[~]-Prilozje-45-vdova!-+ v16-Šlepec-Krasinec-36-×-Tome-[~]-Primez-19-16-l-MLADOLETNICA!-+ v18-Janšov[~Rabnov-DUEL!]-Krasinec-30-×-Novak-Gradec-15!-+ v19-Hovarič-Gradac-39[~32-DUEL!]-×-Jureješič-Boršt-O.!-+ v20-PEZDIRC!",
+  "★★★ DATUMSKI-DUELI-1878: v1-'Jänner-16-vs-24'-DUEL!-+ v2-'30.-Jänner-vs-Feber-25'-CELICA-DUEL!-+ v11-'27.-Feber-vs-März-vs-Jänner'-mesec-DUEL-X-OPEN!-+ v15-'Mai-vs-Juni-26'-DUEL!-+ v21-'23.-Aug-vs-Nov'-mesec-DUEL-X-OPEN!-+ v20-'10.-9'tbr'-OKTOBER-okrajšava!",
+  "★★★ STAROSTNI-DUELI: v7-'36-vs-46'-DUEL (pass-3-46!)-+ v10-'21-vs-24'-DUEL-+ v19-'24-vs-29'-DUEL-+ v18-'28-vs-29'!",
+  "★★★ v16-BARBARA-TOME-16-l-MLADOLETNICA (Primez-19!-Einwilligung-starši-cf.-P244-v2-vzorec!)-+ v15-Anna-Vidic-[~]-vdova-38-l (Prilozje-45!)",
+  "★★★ NODAT-×0-POTRJENO (nobena-vrstica-brez-datuma!-vsi-vpisi-datirani!)",
+  "★★★ NI-'finis'-V-1878-PASOVIH (s19–s24!-'finis-pro-anno-1878'-je-na-s25-P245-že-vpisan-kot-2.-instance!)"
+ ],
+ "nodat": 0,
+ "qa": "qa-parish-p246-guardi: vitals-1985 · 04455-242 · sidra-235 (1878:7!) · dobe-209 (39-pred-linijskih!)",
+ "metoda": "11-skenov-s14–s24-md5-11/11 (viewer-HTML→192-URL-trailing-slash-fix!-curl-neposredno!) + Read-očesa-NAJPREJ-margine (P244-LEKCIJA!-6-strani-margin-1:1-fizično!) + Read-očesa-full-page-s24/s20/s19/s18/s21/s22/s23 (restart-s19-TOP-določen-PREJ-VLM!) + VLM-pass-1-×6 (s19–s24-polni-prepisi-JSON!) + klope-2-×21-vrstic (s19-popravljeni-pasovi-×3!) + pass-2-ultra-6×-×29-celic + pass-3-polne-vrstice-×4-×15 + pass-5-ekstrem-10×-×6-hišnih-številk (m5-'47'-m6-'63'-m7-'18'/'65'-m11-'23'-m17-'35'-m21-'36'-VSE-1:1!) + pass-5-8×-×4-imena/wohnort (m6/m17/m21-'Hrižen'-H-forma + m21-'Križev-18' + m9-Wohnort-DUEL!) + reconciliacija-z-P245-tail (s25-22–23-'finis-1:1!') + hišna-sinhronizacija-s-krstnim-korpusom (h2-HLEBEC-P219/P229!-h43-BRULA-P222/P228!-h18-SIMEC-P232!-h65-MILEK-P218/P220/P224!-h35-HRIŽAN-P229-z79!-h63-Križan-P243/P244!-h36-Križan-P80!-h1-KELČHO-P231-z111!-h23-BRINE-P235-z16!)",
+ "lead": "P247+: leto-1877-=-9/13 (s18-nazaj-tail-1877-=-s18-14–17-'Pag. 17'-že-1:1!-s19-'1878'-restart-že-1:1!) ali-knjižno-odpiranje-1873-s1",
+ "hišnaSinhronizacija": {
+  "opis": "9-od-10-hiš-že-v-krstnem/mrliškem-korpusu (SKLAD-1:1!): h2-HLEBEC/KLEPEC-nit (P219-z45 + P229-z77!) · h43-BRULA/Bruhar (P222-z92-'43'-3× + P228-z31!) · h63-Križan/Hrižan (P243-v14-ženi n-1880 + P244-v21-nevesta-1879!-→-1878-3.-leto!) · h18-SIMEC (P232-z21!) · h65-MILEK (P218/P220/P224-+ P239-v18!) · h35-HRIŽAN (P229-z79-'Mathias-Hrižan-[~HRIŽAN!]'-ISTO-HIŠA!) · h36-Križan/Hrižan (P80-1882-poroka-+ 1886-krst!) · h1-JAKOFČIČ/KELČHO (P231-z111-'Nicolaus-Kelčho'-oče!) · h23-BRINE (P235-z16!) — NOVI-v-korpusu: h47 (v5-Klobučar!)",
+  "implikacija": "poročna-predzgovorina-1878-je-NAJBOLJŠA-hišna-sinhronizacija-do-zdaj: 9/10-hiš-že-dokazanih-v-drugih-knjigah-+ vsi-priimki-skladi (HLEBEC/BRULA/ŠIMEC/MILEK/HRIŽAN/KLOBUČAR!)"
+ }
+}

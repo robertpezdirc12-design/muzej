@@ -512,3 +512,87 @@ export const MARRIAGE_1879_KORPUS = {
   sidra: 228,
   dobe: 202,
 } as const;
+
+/** ——— P246: poročna predzgovorina 04455, leto 1878 = 8/13 (s19–s24; RESTART = s19-TOP-marginal-'1'-fizično!-GLAVA-'1878'-NI-ponovljena-kontrast-1879!-FOLIACIJA-6/6!) — 23 VPISOV-BREZ-PRESKOKOV · 7-GRIBLJE-blokov (×3-INTRA-DVOJNI!) ——— */
+export const MARRIAGE_1878_BLOCKS = HOUSE_VITALS.filter(
+  (h) => h.bookSignature === "04455" && h.year === 1878,
+);
+export const MARRIAGE_1878_GRIBLJE = MARRIAGE_1878_BLOCKS.length;
+export const MARRIAGE_1878_HOUSES = MARRIAGE_1878_BLOCKS.map((h) => h.houseNo);
+export const MARRIAGE_1878_TOTAL = 23;
+
+/** Meje 1878: RESTART-s19-top (marginal-'1'-fizično-1:1!-vpis-1 = Jänner-'1878-Jänner-16[~24]-DUEL'-Šelah-[~MULTI-DUEL!]-Gremelj[~]-20-'&-Güblam'-×-Jureješič-Primez-11-DISPENS!) + MEJA-1877/78 = s18→s19 (tail-1877 = s18-margine-14–17-NOVEMBER!) + MEJA-1878/79 = s25→s26 (P245-1:1!-'finis-pro-anno-1878'-s25-2.-instance!) + GLAVA-'1878'-NI-PONOVLJENA (KONTRAST-1879!-letnica-INLINE-v-1.-vpisu-vsakega-lista!-9.-MEJNA-VARIANTA!). */
+export const MARRIAGE_1878_MEJA = {
+  restartSi:
+    "restart-vpis-1 = Jänner 1878 = s19-TOP (marginalna-'1'-FIZIČNO-1:1-Read-očesa-P244-LEKCIJA-upoštevana!-velika-letnica-NI-posebna-glava-letnica-samo-INLINE-v-datumu!) — ženin-Johann-Šelah-[~Filak/Hilač/Kelchler-MULTI-DUEL-5-branj!]-'&-Güblam'-(½-Gübler-stand!)-Gremelj-[~Kremel/Kriblje-DUEL-3-branj!]-20-[~2a/24-DUEL!]-32-l-×-Anna-Jureješič-[~Perzta-DUEL!]-Primez-[~Drima-DUEL!]-11-[~]-26-l-+ Befunde-DISPENS-super-mixta-ac-prima-(consistoriale-dioecesane!-cf.-P244-v1-'Civil-Beizag'-VZOREC!)+ Franz-DOVGAN-podpis!",
+  restartEn:
+    "restart-entry-1 = January 1878 = s19-TOP (the-margin-'1'-PHYSICALLY-1:1-the-P244-lesson-applied!-no-separate-big-year-heading-the-year-INLINE-in-entry-1's-date!) — groom-Johann-Šelah-[~MULTI-DUEL!]-'&-Güblam'-(½-Gübler-stand!)-Gremelj-[~DUEL!]-20-[~]-32-y-×-Anna-Jureješič-[~DUEL!]-Primez-[~DUEL!]-11-[~]-26-y-+ the-Befunde-DISPENS-super-mixta-ac-prima-(cf.-P244-v1-'Civil-Beizag'-PATTERN!)+ Franz-DOVGAN-signature!",
+  tailSi:
+    "tail-vpis-23 = [Nov?-P245!] 1878 (s25-margina-22–23-P245-1:1!) — 22-=-1878-Okt.-[24~27-DUEL!]-Martin-[~]-Mrivo-glavre-38-+ 23-=-Novem.-10.-Mathias-[~]-Gornji-Dovc.-67-+ VELIKA-'finis-pro-anno-1878'-sredina-strani = 2.-instance-zaključne-oznake-P245!",
+  tailEn:
+    "tail-entry-23 = [Nov?-P245!] 1878 (s25-margin-22–23-P245-1:1!) — 22-=-Oct-1878-Martin-[~]-×-[~]-+ 23-=-Nov-10-Mathias-[~]-+ the-BIG-'finis-pro-anno-1878'-mid-page = the-2nd-instance-of-the-year-end-marker-P245!",
+  boundarySi:
+    "meja-1877/78 = s18→s19 (tail-1877 = s18: margine-14[~74]-15-16[~76]-17-NOVEMBER-1877-vsi!-'Pag. 17'-prečrtani-popravki-številk!) · meja-1878/79 = s25→s26 (P245-1:1!) — GLAVA-'1878'-NI-PONOVLJENA-NA-LISTIH (kontrast-1879-kjer-'1879'-ponovljena-s27–s34!-letnica-samo-INLINE-v-1.-vpisu-vsakega-lista-s19–s24!) = 9.-MEJNA-VARIANTA (ponavljanje-glave-je-LETO-specifično-ne-knjižno!)",
+  boundaryEn:
+    "the-1877/78-boundary = s18→s19 (the-1877-tail = s18: margins-14–17-NOVEMBER-1877!-'Pag. 17'!) · the-1878/79-boundary = s25→s26 (P245-1:1!) — the-'1878'-heading-NOT-REPEATED-on-the-leaves (in-contrast-to-1879-where-'1879'-repeats-s27–s34!-the-year-only-INLINE-in-each-leaf's-1st-entry!) = the-9th-BOUNDARY-VARIANT (heading-repetition-is-YEAR-specific-not-book-wide!)",
+} as const;
+
+/** Številčenje strani 1878 (s19 = 1–3 · s20 = 4–7 · s21 = 8–11 · s22 = 12–14 · s23 = 15–17 · s24 = 18–21 · s25-22–23-P245!) — 23-VPISOV-BREZ-PRESKOKOV (6.-leto!-ŠTEVILČENJE-v-LEVI-MARGINI-POTRJENO-2.-LETO!-margine-fizično-Read-očesa-1:1-×6-strani!). */
+export const MARRIAGE_1878_NUMBERING =
+  "s19 = 1–3 (margine-1/2/3-fizično!) · s20 = 4–7 (4/5/6/7!) · s21 = 8–11 (8/9/10/11!-m9-Wohnort-prečrti!) · s22 = 12–14 (12/13/14!) · s23 = 15–17 (15/16/17!) · s24 = 18–21 (18/19/20/21!) · s25 = 22–23-tail (P245-1:1!) — 23-VPISOV-BREZ-PRESKOKOV-6.-leto!";
+
+/** ★★★★★ FOLIACIJA-1878-'Pag = sken−1'-6/6 (s19-'Pag. 18' + s20-'Pag. 19' + s21-'Pag. 20' + s22-'Pag. 21' + s23-'Pag. 22' + s24-'Pag. 23'!-2-VLM-pass-1-misreadi-KOREKCIJA-s21-'21'-→-'20' + s24-'25'-→-'23'-10×-Read-očesa!) — skupaj-z-5/5-1879 = 11/11-V-ZAPOREDNIH-LETIH-pravilo-NE-PRELAMA! */
+export const FOLIACIJA_1878 =
+  "s19-'Pag. 18'-1:1-+ s20-'Pag. 19'-1:1-+ s21-'Pag. 20'-1:1 (10×!-VLM-misread-'21'-KOREKCIJA!)-+ s22-'Pag. 21'-1:1-+ s23-'Pag. 22'-1:1-+ s24-'Pag. 23'-1:1 (10×!-VLM-misread-'25'-KOREKCIJA!) = 6/6-1878!-→ skupaj-z-5/5-1879 = 11/11-v-zaporednih-letih (pravilo-Pag==sken−1-NE-PRELAMA!)";
+
+/** ★★★ GLAVA-'1878'-NI-PONOVLJENA-NA-LISTIH (9.-MEJNA-VARIANTA-kontrast-1879!): letnica-samo-INLINE-v-datumu-1.-vpisa-vsakega-lista (s19-r1-'1878-Jänner-16'-+ s20-r4-'1878-Febr-20'-+ s21-r8-'1878-Februar-24'-+ s22-r12-'1878-Februar-27'-+ s23-r15-'1878-Mai-26[~Juni-DUEL!]'-+ s24-r18-'1878-Juni-23')-nadaljnji-vpisi-samo-mesec+dan (s20-'20.'×3-+ s22-'März-3'-'Mai-12'!). */
+export const GLAVA_1878_NI =
+  "velika-glava-'1878'-NE-OBSTAJA-na-nobenem-listu-s19–s24 (kontrast-1879-kjer-velika-glava-'1879'-ponovljena-s27–s34-P244/245!)-letnica-samo-INLINE-v-datumu-1.-vpisa-vsakega-lista-+ nadaljnji-vpisi-samo-mesec+dan = ponavljanje-glave-je-LETO-specifično-ne-knjižno-vzorec (9.-MEJNA-VARIANTA!)";
+
+/** ★★★ HRIŽAN-×3-BLOKI-V-1-LETU (h63-v6-+ h35-v17-+ h36-v21!-H-forma-10×-na-vseh-treh!-h35-HRIŽAN-1:1-P229-z79!-h36-Križan-družina-P80!-h63-hišna-nit-3.-leto-1878→1880!) + INTRA-DVOJNI-BLOKI-×3 (h47×h43-v5-+ h18×h65-v7-+ h1×h35-v17!) + MILEK-h65-1.-poročni-dokaz + ŠIMEC-h18-1.-poročni-dokaz + h47-NOVA-hiša + h23-1.-poročni-dokaz + h1-KELCHO-continuum-P231! */
+export const HRIZAN_1878_TROJNA =
+  "HRIŽAN-×3-BLOKI-V-1-LETU-1878 (REKORD-POROČNE-PREDZGOVINE!): v6-nevesta-Anna-Hrižan-[~Križan!]-GRIBLJE-63 (10×-'63'!)-+ v17-nevesta-Maria-Hrižan-[~Križan!]-GRIBLJE-35 (10×-'35'!-cf.-P229-z79-'Mathias-Hrižan-[~HRIŽAN!]'-h35-ISTO-DRUŽINA!)-+ v21-nevesta-Maria-Hrižan-[~Križan!]-GRIBLJE-36 (10×-'36'!-cf.-P80-h36-Križan-1882-poroka!) = 3-neveste-iz-3-hiš-v-1-letu (H-forma-10×-na-vseh-treh!-Križan-DUEL-pošteno-2-od-3!-h63-hišna-nit-3.-LETO-ZAPORED-1878-Anna→1879-Dorothea→1880-Križan!)";
+
+export const MILEK_1878_H65 =
+  "v7-nevesta-Anna-MILEK-GRIBLJE-65 (10×-'65'-1:1!-NE-63/68!) = h65-MILEK-družina-1.-POROČNI-DOKAZ (cf.-P218/P220-h65-MILEK-oče-krstna!-+ P224-z55-h65!-+ P239-v18-mati-MILEK-mrliška!-MILEK-ZDAJ-V-VSEH-4-KNJIGAH!-×4-vir-križ!)-+ ženin-Georg-ŠIMEC-h18 (10×-'18'!-cf.-P232-z21-h18-SIMEC-oče!-ŠIMEC-1.-poročni-dokaz!)-INTRA-DVOJNI-blok!";
+
+export const PEZDIRC_1878_KONTEKST =
+  "PEZDIRC-CONTINUUM-×131→04455-v-8.-LETU-predzgodovine-NI-bloki-pošteno (IZVEN-Griblje!): v10-ženin-Johann-Pegdiric-[~Pezdirc!]-Krasinec-2-37-l-×-Katharina-Beličič-[~Deličič-DUEL!]-Črnomelj-152-+ v20-ženin-Johann-Pegdič-[~Pejdič!]-Lahine-10-28-l-×-Katharina-Buthovec-[~Buchovec!]-Cerhovje-27 = 2-PEZDIRC-GARBLE-v-1-letu (cf.-grafija-continuum-8-let-P228-×17-REKORD!)";
+
+export const DOVGAN_1878_PODALJŠITEV =
+  "DOVGAN-CONTINUUM-PODALJŠAN-NA-8-LET (1878–1885!): Franz-Dovgan-podpisi-na-VSIH-6-glavnih-listih-s19–s24 (od-vpisa-1-restart!-garble-grafije-'Dorgan/Dolgan/Dorejan/Dorezan'-po-listih!-cf.-DOVGAN_1879_PODALJŠITEV-7-let-→-ZDAJ-8!)";
+
+/** Datum-dueli 1878 (v1-'16-vs-24'-Jän!-v2-'30.-Jän-vs-Feber-25'-celica!-v11-'27.-mesec'!-v15-'Mai-vs-Juni-26'!-v21-'23.-Aug-vs-Nov'!-v20-'10.-9'tbr'!). */
+export const MARRIAGE_1878_DUELS = [
+  "v1-datum »Jänner 16 vs 24« 2:1-za-16 [~] (Read-očesa-'16'-+ pass-1-'16'!-pass-3-'24'-1-branje!)",
+  "v2-datum »30.-[Jän?]...25«-celica-DUEL [~X-OPEN] (krop-'30.'-+ 'Gezm/Feber-25'-2-vrstici!)",
+  "v11-mesec »Feber? vs März vs Jänner« [~X-OPEN] (pass-1-'März'-pass-3-'Jänner'-sestava-za-Feber!)",
+  "v15-mesec »Mai vs Juni 26« [~X-OPEN] (pass-1-'Mai'-margin-krop-'Mai/Juni'!)",
+  "v21-mesec »23. Aug vs Nov« [~X-OPEN] (pass-1-'Aug?'-Read-'Nov?'-X-OPEN!)",
+  "v20-datum »10. 9'tbr« = 10.-OKTOBER-okrajšava-1:1 (margin-'9'ti-Mhbzy'-cf.-OKT!)",
+] as const;
+
+/** ★★ KONTEKST-izven-Griblje-1878-NI-bloki-pošteno: v1-Šelah-Gremelj[~]-20-DISPENS-+ v2-Šelah[~]-×-Bulhovec[~]-18-+ v3-Horvatini[~]-Hrova-sinc-38-×-Mušič-17-+ v8-Kompare-Melično[~]-35-×-Perleie[~]-Gradec-4-+ v9-Hure-vid.-Germ[~]-29-×-Hrižan-Krašhar[~]-29-+ v12-Jablenik-Krasinec-13/37-+ v13-Mavrecic-Štaple-5-×-Bahorič-Krasinec[~]-44-+ v14-Simonič-×-Judnič-Dobravce-10-+ v15-Murko-Gremelj[~]-24-×-Vidic-vdova-Prilozje-45-+ v16-Šlepec-Krasinec-36-×-Tome-Primez-19-16-l-MLADOLETNICA-+ v18-Janšov[~Rabnov!]-Krasinec-30-×-Novak-Gradec-15-+ v19-Hovarič-Gradac-39[~32!]-×-Jureješič-Boršt-O. */
+export const MARRIAGE_1878_KONTEKST = [
+  "v1-Jänner-1878-Johann-Šelah-[~MULTI-DUEL!]-'&-Güblam'-Gremelj[~]-20-DISPENS-super-mixta-×-Anna-Jureješič-Primez-11-NI-blok (izven-Griblje!)",
+  "v2-Johann-Šelah[~]-'&-Gübl'-×-Maria-Bulhovec-[~Butarová/Dulavec-DUEL!]-18-NI-blok",
+  "v3-Februar-Mathias-Horvatini-[~Hovath!]-Müllner-Hrova-sinc-38-×-Katharina-Mušič-17-NI-blok",
+  "v8-Februar-Josef-Kompare-Bauer-Melično[~]-35-×-Anna-Perleie[~]-Gradec-4-NI-blok",
+  "v9-Mathias-Hure-[~Kure!]-vid.[VDOVEC!]-28-'Germ'[~]-29-×-Katharina-Hrižan-[~Križan!]-23-Krašhar[~]-29-prečrti-NI-blok",
+  "v12-Februar-Nikolaus-Jablenik-[~!]-½-Gübl-Krasinec-13-×-Anna-Šlepec-[~Hlepec!]-Krasinec-37-NI-blok",
+  "v13-März-Mathias-Mavrecic-[~Mavrenk!]-½-gütl-Sohn-Štaple-5-×-Maria-geb.-Bahorič-Krasinec[~]-44-NI-blok",
+  "v14-Mai-Johann-Simonič-Gärtner-×-Maria-Judnič-[~!]-Dobravce-10-NI-blok (JUDNIČ-cf.-P244-v33-tail!)",
+  "v15-Mai[~Juni-DUEL!]-Markus-Mur.-[~Murko!]-Gremelj[~]-24-×-Anna-Vidic-[~]-vdova-Prilozje-45-NI-blok",
+  "v16-Nikol.-Šlepec-Krasinec-36-×-Barbara-Tome-[~]-Primez-19-16-l-MLADOLETNICA-NI-blok",
+  "v18-Juni-Johann-Janšov-[~Rabnov-DUEL!]-Krasinec-30-×-Maria-Novak-geb.-Mavrenk-Gradec-15-NI-blok",
+  "v19-Sept-Mathias-Hovarič-Gradac-39[~32-DUEL!]-×-Katharina-Jureješič-Boršt-O.-34-NI-blok",
+  "v20-10.-Okt-Johann-Pegdič-[~PEZDIRC!]-Lahine-10-×-Katharina-Buthovec-Cerhovje-27-NI-blok",
+] as const;
+
+/** Vse-nove-1878-meritve-v-obliki-za-QA (skupaj-04455: 235→242 · vitals: 1978→1985 · sidra: 228→235-1878:7! · dobe: 202→209-39-pred-linijskih!). */
+export const MARRIAGE_1878_KORPUS = {
+  skupaj04455: 242,
+  skupajVitals: 1985,
+  sidra: 235,
+  dobe: 209,
+} as const;
