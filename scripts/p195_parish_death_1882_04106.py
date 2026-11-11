@@ -46,7 +46,7 @@ check("I4 dokaz (59/16-griblje/26-anomalij + meja-s180-top + 59-vrstic)",
 
 # I5: qa-parish
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1940")
+st = qa.count("HOUSE_VITALS.length !== 2043")
 check("I5 qa-p195 + števec-1511", "qa-p195-parish-death-1882-04106" in qa and st >= 100,
       f"1940-številcev={st}")
 

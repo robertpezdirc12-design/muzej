@@ -46,8 +46,8 @@ check("I4c OBA-PEZDIRC-v9 + v13-vdova-48 + v16-NEVESTA-16 + IZMENA-vlog-v6/v7",
       "OBA-PEZDIRC" in an and "48" in an and "16" in an and "IZMENA-vlog" in an)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 2032")
-check("I5 qa-p241 + števec-2012", "qa-p241-parish-marriage-early-04455-1882" in qa and st >= 145, f"2012-številcev={st}")
+st = qa.count("HOUSE_VITALS.length !== 2043")
+check("I5 qa-p241 + števec-2043", "qa-p241-parish-marriage-early-04455-1882" in qa and st >= 145, f"2043-številcev={st}")
 check("I5b sidra-262 + 1879:9-P244 + 1880:3-P243 (qa-sidra-message-P244-živo!)", "poročna sidra ≠ 262 (1873:4-P251! · 1874:11-P250! · 1875:1-P249! · 1876:6-P248! · 1877:5-P247! · 1878:7-P246! · 1879:9-P244! · 1880:3-P243!" in qa)
 check("I5c dobe-202 + 32-pred-linijskih (P244-živo!)", "dobe-bloki ≠ 236/7/26" in qa and "66 pred-linijskih 1873-P251×4!+1874-P250×11!+1875-P249×1!+1876-P248×6!+1877-P247×5!" in qa)
 
@@ -66,7 +66,7 @@ check("I7a modul-1882 (MARRIAGE_1882_*-izvozi)", all(x in m for x in [
 check("I7b h1-REKORD-v-modulu + OUTRUNA-za-7-let", "1.-poročni-blok-na-h1-KADARKOLI" in m and "ZA-7-LET" in m)
 check("I7c forenzika-×237-ostaja", "×237 blokov čez 5 knjig" in open(f"{ROOT}/src/data/atlas/parish-forensics.ts", encoding="utf-8").read())
 
-check("I8a pt-luknja-2008 + byBook-04455=265 (P243-živo!)", '"vitalsTotal": 2032' in open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
+check("I8a pt-luknja-2008 + byBook-04455=265 (P243-živo!)", '"vitalsTotal": 2043' in open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
       and '"04455": 269' in open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read())
 pt = json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8"))
 h52 = [x for x in pt["gapHouses"] if x["houseNo"] == "52"][0]
@@ -75,8 +75,8 @@ check("I8b h52-posodobljen (9-blokov/04455=2/firstYear=1882/p241Note)",
 check("I9 UI-MarriageEarly1882-v-ParishTab + importi", "MarriageEarly1882" in open(f"{ROOT}/src/components/museum/museum-atlas.tsx", encoding="utf-8").read()
       and "H1_1882_REKORD" in open(f"{ROOT}/src/components/museum/museum-atlas.tsx", encoding="utf-8").read())
 check("I9b worklog-P241-vnos", "## P241" in open(f"{ROOT}/worklog.md", encoding="utf-8").read())
-check("I9c stari-verifikatorji-na-živih-številkah",
-      "2012" in open(f"{ROOT}/scripts/p238_parish_marriage_1885_04455.py", encoding="utf-8").read()
+check("I9c stari-verifikatorji-na-živih-številkah (P257: 2043!)",
+      "2043" in open(f"{ROOT}/scripts/p238_parish_marriage_1885_04455.py", encoding="utf-8").read()
       and "269" in open(f"{ROOT}/scripts/p239_parish_marriage_1884_04455.py", encoding="utf-8").read()
       and "269" in open(f"{ROOT}/scripts/p240_parish_marriage_1883_04455.py", encoding="utf-8").read()
       and "269" in open(f"{ROOT}/scripts/p237_parish_forensics.py", encoding="utf-8").read())

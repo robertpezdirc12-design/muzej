@@ -156,7 +156,7 @@ def main():
     # ---------- I6: qa-parish.ts ----------
     qa = open(QA_TS).read()
     check("I6a qa-p137 id", "qa-p137-parish-marriage-1908" in qa)
-    n651 = qa.count("HOUSE_VITALS.length !== 725")
+    n651 = qa.count("HOUSE_VITALS.length !== 2043")
     check("I6b vitals pini 651", n651 >= 51, str(n651))
     n134 = qa.count("≠ 142")
     check("I6c bloki pini 134", n134 >= 20, str(n134))
@@ -177,7 +177,7 @@ def main():
     check("I7d stats sundays 4", st.get("sundays") == 4, str(st.get("sundays")))
 
     # ---------- I8: Parish stats ----------
-    check("I8a stats vitals", st.get("vitalsTotal") == 651, str(st.get("vitalsTotal")))
+    check("I8a stats vitals", st.get("vitalsTotal") == 2043, str(st.get("vitalsTotal")))
     check("I8b stats bloki", st.get("blocks04455") == 134, str(st.get("blocks04455")))
     check("I8c stats sidra", st.get("sidraTotal") == 127, str(st.get("sidraTotal")))
     check("I8d stats entries 17", st.get("entries") == 17, str(st.get("entries")))

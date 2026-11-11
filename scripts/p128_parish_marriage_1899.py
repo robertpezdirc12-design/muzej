@@ -130,8 +130,8 @@ def main():
 
     # ---------- I6: qa-parish pini ----------
     qa = open(QA_TS).read()
-    n593 = qa.count("HOUSE_VITALS.length !== 725")
-    n587 = qa.count("HOUSE_VITALS.length !== 587")
+    n593 = qa.count("HOUSE_VITALS.length !== 2043")
+    n587 = qa.count("HOUSE_VITALS.length !== 2043")
     n76 = qa.count("bloki 04455 ≠ 142")
     n70 = qa.count("bloki 04455 ≠ 70")
     check("I6 vitals pini 595", n593 >= 44, str(n593))

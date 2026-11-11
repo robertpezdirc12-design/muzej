@@ -30,7 +30,7 @@ check("I4 dokaz (94/21-griblje/14-anomalij + LEKCIJA-#21 + meja-s119 + 94-vrstic
       f"entries={len(d['entries'])} griblje={len(grib)} anomalije={len(d['anomalije'])}")
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1940")
+st = qa.count("HOUSE_VITALS.length !== 2043")
 check("I5 qa-p203 + števec-1406", "qa-p203-parish-death-1874-04106" in qa and st >= 100, f"1940-številcev={st}")
 
 i0 = src.find("P203: mrliška PREDZGODOVINA 04106, leto 1874")

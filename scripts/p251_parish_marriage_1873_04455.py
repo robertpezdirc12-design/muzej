@@ -62,15 +62,15 @@ check("I4c kontekst-m19-KLAGENFURT-IBERER + m21-VETRHVIŠČE + FERCHER-TERŽEK +
       and "50%-količnik" in an and "GABOFAIČ" in an2)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 2032")
-check("I5 qa-p251 + števec-2012 (×150!)", "HOUSE_VITALS.length !== 2011" not in qa and st >= 150, f"2012-številcev={st}")
+st = qa.count("HOUSE_VITALS.length !== 2043")
+check("I5 qa-p251 + števec-2043 (×150!)", "HOUSE_VITALS.length !== 2011" not in qa and st >= 150, f"2043-številcev={st}")
 check("I5b sidra-262 + 1873:4-P251 (qa-sidra-message)", "poročna sidra ≠ 262 (1873:4-P251!" in qa)
 check("I5c dobe-236 + 66-pred-linijskih", "dobe-bloki ≠ 236/7/26" in qa and "66 pred-linijskih 1873-P251×4!" in qa)
 check("I5d p80-1873:4-garda + sken-garda-s2", 'p80MarrAnchors.filter((h) => h.year === 1873).length !== 4' in qa and "poročna sidra 1873: sken ≠ 2 (P251: samo-s2-Pag.-1!-s1-vezalo!" in qa)
-check("I5e izjeme-p85-×2-h13/h22/h50/h62 + p94-h22 + MILIČ-248",
+check("I5e izjeme-p85-×2-h13/h22/h50/h62 + p94-h22 + MILIČ-250-P257",
       qa.count('!(v.bookSignature === "04455" && v.year === 1873 && (hn === "13" || hn === "22" || hn === "50" || hn === "62"))') >= 2
       and '(v.year === 1873 || v.year === 1898 || v.year === 1904 || v.year === 1919)' in qa
-      and "MILIC_FAMILY_TOTAL !== 248" in qa and "53,78,20,36,60" in qa
+      and "MILIC_FAMILY_TOTAL !== 250" in qa and "53,78,20,36,60" in qa
       and "04455 ×60-P251-+4!" in qa)
 
 i0 = src.find("P251: POROČNA PREDZGOVINA 04455, leto 1873")
@@ -101,8 +101,8 @@ check("I7c METODA-md5-2×-neodvisen + očesi-NAJPREJ + solo-×12 + letterform-re
       and "referenca-m20-'22'" in m and "kronološka-verifikacija" in m and "reconciliacija-z-P250-tail" in m)
 
 pt = json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8"))
-check("I8 pt-luknja-2026/269 vsota-1:1",
-      pt.get("vitalsTotal") == 2032 and pt.get("corpus", {}).get("byBook", {}).get("04455") == 269,
+check("I8 pt-luknja-2026/2043 vsota-1:1",
+      pt.get("vitalsTotal") == 2043 and pt.get("corpus", {}).get("byBook", {}).get("04455") == 269,
       f"vitals={pt.get('vitalsTotal')} 04455={pt.get('corpus', {}).get('byBook', {}).get('04455')}")
 
 u = open(f"{ROOT}/src/components/museum/museum-atlas.tsx", encoding="utf-8").read()

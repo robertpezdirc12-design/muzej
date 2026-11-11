@@ -1178,3 +1178,90 @@ export const PREDHODNIK_1829_KORPUS = {
   sestKnjiznih: "12 → 16 (h5+h19+h32+h62-VSTOPAJO — VSE-4-ŽE-IMELE-5-knjig!)",
   h6rekord: "ostaja-96-let (1828); P256-preoblikuje-VRH: h62-95 (2.!) + h20-93 (izenači-h22!) + h5-90 (5.!) — za-h6-96!",
 } as const;
+
+
+// ——— P257: NOTRANJOST-01738 — LETO 1830 (s6-r4–r11 = Pag. 9; 8 vpisov; 0 Griblje-hiš-pri-ženinu-RAZEN-h22-Milek!) ———
+/** 8 vpisov 1830 (m1–m8); bloki = 1 (h22-m4 — Anna MILEK, nevesta!); RESTART-1830-potrjen! */
+export const PREDHODNIK_1830_BLOCKS = HOUSE_VITALS.filter(
+  (h) => h.bookSignature === "01738" && h.year === 1830,
+);
+export const PREDHODNIK_1830_HOUSES = PREDHODNIK_1830_BLOCKS.map((h) => h.houseNo);
+export const PREDHODNIK_1830_TOTAL = 8;
+export const PREDHODNIK_1830_BLOCKI = 1;
+
+/** Struktura leta 1830: RESTART na 12. Jänner + 17. Febr ×4 + 18. März + [~21.|26.]-Juni-DUEL + 30. Juni; II-polovica PRAZNA! */
+export const PREDHODNIK_1830_STRUNA = {
+  si: "★★★★★ STRUKTURA-1830 (s6-r4–r11, Pag. 9 — foliacija-Pag-=-2·sken−3-×7!): m1 = 12. Jänner 1830 = RESTART-leta (r4 — cf.-RESTART-1873-z-1-P253!-census:'12. Jänner'-3×!) + m2–m5 = 17. Febr-×4-MNOŽIČNI-DAN (cf.-1828-6.2.-×7 + 1829-den-4.-×4!-vzorec-3.-leto!) + m6 = 18. [März?] (Möttling = METLIKA-140!-duel-140|110|40-w2-8×-'140'-srednja) + m7 = [~21.|26.?]-Juni-DUEL (w2-'1:19'-starost-ne-datum!-duel-'21.'-vs-census-'26.') + m8 = 30. Juni (ZADNJI-VPIS-1830) + ★★★ 1830-II-POLONICA-PRAZNA (Jul–Dec: 0-vpisov — census-potrjeno-1:1-'popolnoma-prazno'!-cf.-P256-napoved-IZPOLNJENA!) + 4-census-preverjanja-skupaj-44-vrstic-neodvisno!",
+  en: "THE-STRUCTURE-OF-1830 (s6-r4–r11, Pag. 9): m1 = Jan 12, 1830 = the-year's-RESTART + m2–m5 = Feb 17 ×4 (the-mass-day-pattern's-3rd-year!) + m6 = Mar 18 (Metlika-140!) + m7 = [~21.|26.?]-Jun-DUEL + m8 = Jun 30 (the-LAST-of-1830) + the-EMPTY-second-half (Jul–Dec: 0-entries — census-confirmed!)",
+} as const;
+
+/** Vsi 8 vpisov 1830 (m1 Vipavc × Aurnigl — restart-par … m8 TaNofznigh × Lenough); 0-korpusnih-Griblje-hiš-RAZEN-h22! */
+export const PREDHODNIK_1830_VPISI = {
+  si: "★★★★ 8-VPISOV-1830 (m1–m8-s6): m1 (12. Jän) Marcus-[Vipavc?~Vipauz/Wipenz/Vipavz] ([Krajnog?~Kriesing/Krajinc-VAS-GARBLE] 34, 42-43) × Catharina-[Aurnigl?~Aurnizh/Sawnich/Schurig] ([~Kaplja-vas?|Strophe?-VAS-GARBLE] 7, 35-36 — hiša-7-×4-branj!) + m2 (17. Febr) Martin-[Tschall?~Stichall/Taschall] ([Gurila?~Schurla-VAS-GARBLE] 8, 24) × Catharina-[Stephanich?~Stephanitsch] ([Dobravič?~Dobrnič/Döbmniz-VAS-GARBLE] 8, 28) + m3 (17. Febr) Math.-[Kojnig?~Krajnc/Kozina-6-branj-DUEL-črko-za-črko-'K-o-j-n-i-g'!] ([Dobrnič?~Dobraiz/Dobraniz] 17, 22) × Maria Angel ([Dobrnič?] 23, 24) + ★ m4 (17. Febr) Georg-[Moosin?~Mogorin/Masinn] ([Zarkwishe?~Zarkwische/Zerkinjef/Tscheilfe] 15, 19) × ★★★ Anna-MILEK-GRIBLJE-22 (22 — oče-Joh.-Milek!) + m5 (17. Febr) Georg-[Khaphing?~Kaphing/Knaphaiz] ([Kringlace?~Kliwoglas/Krioglauz] 29, 20) × Anna-[Tong?~Kong] ([Pamaets?~Primofel/[~Mauth] 11-[~11|14-w2-'1'-visoka!] 18) + m6 (18.) Mart.-[Kosolt?~Kofelt] (METLIKA-140, 29) × Maria-[Khaphing?~Krafing] (Kringlace 29, 22 — Khaphing-družina-×2-vrstici!) + m7 ([~21.?] Jun) Mart.-[Schunigh?~Schunick] ([Vashtaniz?~Staniz-VAS-GARBLE] 10-w2-'10'-jasno, 19) × Maria-[May?~Mag.] (★ BORŠT-20!, 16 — 2.-Boršt-hiša-01738!) + m8 (30. Juni) Johann-[TaNofznigh?~Josefich] ([Zarkwishe?~Tscheilfe] 7, 26) × Anna-[Lenough?~Lehenich] ([Zarblinge?~Tscheilfe] 16, 26)",
+  en: "8-ENTRIES-OF-1830 (m1–m8): the-restart-pair (m1 Vipavc × Aurnigl) + the-Tschall-row (m2) + the-Kojnig-row (m3) + ★ m4 the-ONLY-corpus-row (Anna-MILEK-GRIBLJE-22!) + m5 Khaphing × Tong + m6 Kosolt (Metlika-140) × Khaphing + m7 Schunigh × May (BORŠT-20!) + m8 TaNofznigh × Lenough",
+} as const;
+
+/** P257-korpus-1830: +1 blok (h22!); vitals 2032→2033; 01738 = 21; h22-span 1828–1830 TRI-LETA! */
+export const PREDHODNIK_1830_KORPUS = {
+  noviBloki: 1,
+  vpisi: 8,
+  vitalsTotal: 2033,
+  byBook01738: 21,
+  h22dvojni: "m4 = 3. blok h22-1830 (nevesta-Anna-Milek!) — h22-ŽE-1828-firstYear (P255!) = 3-LETNO-ZAPOREDJE-NEVEST (1828-Catra-[Miller-garble] + 1829-Maria-[Miller-garble] + 1830-Anna-MILEK!) — h22-01738-span-1828–1830-V-ENI-KNJIGI! + [~X-OPEN: Miller-ali-Milek-družina? (oče-1830-Joh.-vs-oče-1829-Josc.)] + [~h65-Milek-1831-vezava-kand.!]",
+  kraji1830: "0-GRIBLJE-hiš-pri-ženinih + 1-GRIBLJE-hiša-pri-nevesti (h22!) + METLIKA-140 (Möttling-1.-omemba-notranjosti-01738!) + BORŠT-20 (2.-Boršt-hiša!) + [~Kaplja-vas?|Strophe?]-7 + [~Gurila]-8 + [~Dobrnič]-8/17/23 + [~Zarkwishe]-15/7 + [~Kringlace]-29-×2 + [~Vashtaniz]-10 + [~Zarblinge]-16 + [~Pamaets]-11 — 11-garble-VASI-[~X-OPEN]",
+  niti1830: "MILEK (m4-Anna-h22-+oče-Joh.!) + ANGEL-×2 (m3-nevesta-+m5-mati-Margaretha!) + KAPHING-×2 (m5-ženin-+m6-nevesta-Maria-ista-hiša-29!) + TSCHALL-×2 (m2-ženin-+m3-priča-Math.-[Tschschol?]) + STEPHANICH-×2 (m2-nevesta-+m3-priča-Math.-[Stephanig?]) + KAMBIC-kand. (m8-očeN-Lorenz-[Kambigh?]!) + MILEK↔h65-1831-vezava-kand.",
+} as const;
+
+
+// ——— P257: NOTRANJOST-01738 — LETO 1831 (s7 = Pag. 11; 13 vpisov v 15 dneh; 10 Griblje-blokov — REKORD!) ———
+/** 13 vpisov 1831 (m1–m13); bloki = 10 (h3/h33-m1 + h50/h54-m2 + h56-m3 + h26/h27-m7 + h65-m10 + h1/h11-m13!). */
+export const PREDHODNIK_1831_BLOCKS = HOUSE_VITALS.filter(
+  (h) => h.bookSignature === "01738" && h.year === 1831,
+);
+export const PREDHODNIK_1831_HOUSES = PREDHODNIK_1831_BLOCKS.map((h) => h.houseNo);
+export const PREDHODNIK_1831_TOTAL = 13;
+export const PREDHODNIK_1831_BLOCKI = 10;
+
+/** Struktura leta 1831: 26. Jän + 1. Febr + 9. Febr + d°-×10 = 13 porok v 15 dneh (MNOŽIČNI-vzorec-4.-leto!); ANOMALIJA-m7! */
+export const PREDHODNIK_1831_STRUNA = {
+  si: "★★★★★ STRUKTURA-1831 (s7 = Pag. 11 — glava-leta-'1831'-v-stolpcu-datuma!-foliacija-Pag-=-2·sken−3-×7-s7='11'!): m1 = 26. Jänner (1.-vpis-leta) + m2 = 1. Febr + m3 = 9. Febr + m4–m13 = d°-×10 (ditto-9. Febr!) = ★★★ 13-POROK-V-15-DNEH (26. 1.–9. 2. 1831!-cf.-1828-8-porok-v-18-dneh + 1829-den-4.-×4 — MNOŽIČNI-vzorec-4.-leto!) + census-13/13-1:1-pass1-13/13 (2-neodvisni-census!) + ★ m7 = ANOMALIJA-VRSTICA (ženin-MARIA-Pödiz — ŽENSKO-IME-V-ŽENINSKEM-STOLPCU!-cf.-MUZ-vrstica-P255!-[~Maria|Mario-DUEL-w3-'Maria'-nizka]) + 1831-KONEC-na-m13 (spodaj-1-prazna-mrežna-vrstica!)",
+  en: "THE-STRUCTURE-OF-1831 (s7 = Pag. 11): Jan 26 + Feb 1 + Feb 9 + d°-×10 = 13-WEDDINGS-IN-15-DAYS (the-mass-pattern's-4th-year!) + the-m7-ANOMALY-ROW (MARIA-in-the-groom's-column!) + the-year-ends-at-m13",
+} as const;
+
+/** Odpiranje 1831 + niti: PEZDIRC-h50-42-let (★★★★★) + KRIŽAN-×2 + MILEK-h65 + STARE + MUZ + KAMBIC + KLEPEC + ANOMALIJA. */
+export const PREDHODNIK_1831_NITI = {
+  si: "★★★★★★ NITI-1831: ★★★★★★ PEZDIRC-NIT-h50 (NAJVEČJA-GENEALOŠKA-NIT-VSEH-FAZ!): Georg-PESDIRZ-h50-1831-s-očetom-MARCO-PESDIRZ (duel-oče-1:1-'Marco-Pesdirz'!-w2-6×-črko-za-črko-'Pesdirz'!-census-proti-'Peterž/Peterlin'-X-OPEN!) ↔ Marcus-PEGDIRE-h50-1873-P251-m20-oče (NEVESTA-Maria-Pegdirc!) = ★ ISTA-DRUŽINA-42-LET (1831–1873!-ista-hiša-50-ista-imena-Marco/Marcus!) + 3-druge-vrstice-družine-1831: m3-nevesta-Maria-[Pedierz?] (Podzemelj-3-oče-Andl-[Pedierz?]) + m7-[Pödiz?]-ANOMALIJA + m13-nevesta-Catharina-[Podierz?] — 4-vrstice-Pesdirc-družine-v-1831! · ★★★★ KRIŽAN-×2-v-m1 (ženin-Peter-h3!-+-mati-neveste-Dorothea-Križan!) — continuum-1828–1829–1831 (+1873-ŠIV!) · ★★★★★ MILEK-h65: Nicol-Milek-1831-oče-Janez ↔ m5-h65-1874-P250 = 43-LET-družine! + [~h22-Milek/Miller-1830-vezava-kand.-X-OPEN] · ★★★ STARE-m5-Peter-[Stare?~Hare] (Krassching-24!-continuum-1828-m6/m15!) · ★★★ MUZ-oče-m12-Math.-[Muz] (continuum-1828-Semelj!-[~r13-Muniz?-MUZ-kand.]) · ★★★ KAMBIC-m12-Nicol-[Kambicz?~Hambicz] (Podlog-[~13|15|18|20-DUEL-4-variant!] — w2-'Kambicz'-+census-'Klemič') · KLEPEC-mati-m3-[Klepz?] (continuum-1828/1829!) · [~Malezigk?-m11-MALEŠIČ-kand.-mati-Ž! + [~MALEŠIČ-r10-mati-Malefzig?-kand.!] · DOBLIČ-oče-m1-Mario-[Doblioz?] + ANGEL-×2-1830 + KOSTANER-1830-nit + [Malezigk?-r11]",
+  en: "THE-1831-THREADS: ★★★★★★ THE-PEZDIRC-THREAD-h50 (the-greatest-genealogical-thread!): Georg-PESDIRZ-h50-1831-with-father-MARCO-PESDIRZ ↔ Marcus-PEGDIRE-h50-1873 (P251-m20!) = THE-SAME-FAMILY-42-YEARS (1831–1873!-same-house-same-name!) + 3-more-1831-rows-of-the-family (m3/m7/m13-brides) + KRIŽAN-×2-in-m1 + the-MILEK-h65-43-year-thread + STARE + MUZ + KAMBIC + KLEPEC-cand. + the-m7-ANOMALY",
+} as const;
+
+/** Kraji 1831: Griblje ×10 hiš (REKORD!) + Podzemelj ×3 + Otok ×3 + Gradac + Kaplja vas + garble-VASI. */
+export const PREDHODNIK_1831_KRAJI = {
+  si: "★★★★★ KRAJI-1831 (10-GRIBLJE-HIŠ-V-1-LETU-REKORD-KORPUSA!): ženini-GRIBLJE (m1-h3-Križan! + m2-h50-Pesdirz! + m3-h56-[Kiniz?] + m7-h26-[Pödiz?]-ANOMALIJA + m10-h65-Milek! + m13-h1-[Ianigl?]) + neveste-GRIBLJE (m1-h33-[Dehligl?] + m2-h54-[Leporz?] + m7-h27-[Maly?] + m13-h11-[Podierz?]) — 6-POLNIH-DVOJNIH-DRUŽIN-v-Gribljah (m1-h3×h33!-m2-h50×h54!-m7-h26×h27!-3-dvojne-POLNE + m3-h56×Podzemelj-3 + m10-h65×Podzemelj-2 + m13-h1×h11!) + Podzemelj ×3 (m3-ne-3 + m5-ne-11 + m10-ne-2) + Otok ×3 (m4-ne-1 + m6-ne-17 + m8-ž-3 + m11-ž-22!) + Gradac-m9-ž-5 + [Podsemel?|Gradac?]-m9-ne-17-DUEL + KAPLJA-VAS-m6-ž-4 + [Krassching?~Kruschnz/Kaproic]-m5-ž-24 + [Priol?~Prioel]-m8-ne-2 + [Kruschinz?]-m11-ne-14 + [Podlog?~Priloge]-m12-ž + [Tomel?~Š.]-m12-ne-17 + 8-garble-VASI-[~X-OPEN] (Doblič-h33-priimek-DVOJMA-[Dehligl-vs-Doblioz]!)",
+  en: "THE-VILLAGES-OF-1831: a-record-10-GRIBLJE-houses-in-one-year (6-grooms + 4-brides — 3-full-doubles + 3-half!) + Podzemelj ×3 + Otok ×3 + Gradac + Kaplja-vas + 8-garble-villages-X-OPEN",
+} as const;
+
+/** P257-korpus-skupaj: +11 blokov (1+10); vitals 2032→2043; 01738 = 31; 10 dvigov + h22-3-leto! */
+export const PREDHODNIK_257_KORPUS = {
+  noviBloki: 11,
+  vpisi1830: 8,
+  vpisi1831: 13,
+  vitalsTotal: 2043,
+  byBook01738: 31,
+  dvigi: {
+    h54: "1868 → 1831 (37 let — 2.-NAJVEČJI-DVIG-VSEH-ČASOV-za-h22-41-P255!)",
+    h56: "1867 → 1831 (36 let — 3.-največji!)",
+    h27: "1864 → 1831 (33 let — 4.!)",
+    h11: "1863 → 1831 (32 let!)",
+    h1: "1861 → 1831 (30 let!)",
+    h26: "1859 → 1831 (28 let!) [~26|20-DUEL-w3-10×-'26'-srednja-4:2!]",
+    h33: "1859 → 1831 (28 let!) [~33|39-DUEL-w3-10×-'33'-srednja-3:2!]",
+    h3: "1858 → 1831 (27 let!) — h3-ŽE-šest-knjižna-iz-P254!",
+    h50: "1858 → 1831 (27 let!) — PEZDIRC-NIT-42-let!-h50-span-1831–1924-=-93-let!-POSTANE-pet-knjižna!",
+    h65: "1857 → 1831 (26 let!) — h65-BILA-PRVA-HIŠA-KORPUSA-1857 (PRE-P255!)",
+  },
+  h22tri: "h22-BREZ-dviga-ampak-3.-ZAPOREDNO-LETO (1828+1829+1830 — edina-hiša-s-3-letnim-zaporedjem-v-01738!)",
+  sestKnjiznih: "16 → 23 (+7: h1/h11/h26/h27/h33/h56/h65 — NAJVEČJI-SKOK-VSES!-prej-+4-P256!)",
+  bothEra: "17 → 26 (+9 — vse-10-hiš-1831-imajo-04455-poročne-bloke!)",
+  vrhRazponov: "h62-95-ostaja-2. + h50/h11/h33-NOVI-93/91/91 (h50-izenači-h20/h22!) + h26-90 + h27-87 + h3/h54-86 — h6-96-ostaja-1.",
+  p258: "1832+ (s8+: meja-1831/32 in nadaljevanje-notranjosti — P258-material!)",
+} as const;

@@ -29,8 +29,8 @@ for m in BLOK_RE.finditer(src):
     house, sig, year, what = m.group(1), m.group(2), int(m.group(3)), m.group(4)
     bloki.append({"house": house, "sig": sig, "year": year, "what": what})
 
-check("I1 korpus razčlenjen == 2026 blokov (križ z HOUSE_VITALS) — P244-živo!",
-      len(bloki) == 2032, f"razčlenjenih={len(bloki)}")
+check("I1 korpus razčlenjen == 2043 blokov (križ z HOUSE_VITALS) — P257-živo!",
+      len(bloki) == 2043, f"razčlenjenih={len(bloki)}")
 po_knjigi = {k: sum(1 for b in bloki if b["sig"] == k) for k in ("04104", "04105", "04106", "04894", "04455")}
 check("I1b bloki-po-knjigah == {04104:288, 04105:502, 04106:433, 04894:520, 04455:269} (P246-živo!)",
       po_knjigi == {"04104": 288, "04105": 502, "04106": 433, "04894": 520, "04455": 269},
@@ -53,7 +53,7 @@ h65 = [b for b in bloki if b["house"] == "65"]
 h65_druzina = [b for b in h65 if MILIC_RE.search(b["what"])]
 mathias = [b for b in h65 if re.search(r"Mathias|Matija|Matihe", b["what"], re.I)]
 leta_mathias = sorted(b["year"] for b in mathias)
-check("I4a h65 == {total:43, family:37, others:6}", len(h65) == 43 and len(h65_druzina) == 37,
+check("I4a h65 == {total:44, family:38, others:6} (P257: +1831!)", len(h65) == 44 and len(h65_druzina) == 38,
       f"total={len(h65)} family={len(h65_druzina)} others={len(h65)-len(h65_druzina)}")
 check("I4b Mathias/Matija-h65-veriga == 23 blokov · span 1871–1914 (43 let!)",
       len(mathias) == 23 and leta_mathias[0] == 1871 and leta_mathias[-1] == 1914,
@@ -80,9 +80,9 @@ check("I7 modul parish-forensics.ts (regex + izpeljanke + 3 sodbe + VODENICA)",
       and mod.count("id: \"") >= 6)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-check("I8 qa-p237 (živi preverja 248/53-78-20-36-60-1/23/43-37-6/26/3-0-0-0-0!)",
-      "qa-p237-parish-forensics" in qa and "MILIC_FAMILY_TOTAL !== 248" in qa
-      and '"53,78,20,36,60,1"' in qa and "MATHIAS_H65_TOTAL !== 23" in qa
+check("I8 qa-p237 (živi preverja 250/53-78-20-36-60-3/23/44-38-6/26/3-0-0-0-0-P257!)",
+      "qa-p237-parish-forensics" in qa and "MILIC_FAMILY_TOTAL !== 250" in qa
+      and '"53,78,20,36,60,3"' in qa and "MATHIAS_H65_TOTAL !== 23" in qa
       and "H69_TOTAL !== 26" in qa and "FORENZIKA-NITI-POTRJENA" in qa)
 
 ui = open(f"{ROOT}/src/components/museum/museum-atlas.tsx", encoding="utf-8").read()

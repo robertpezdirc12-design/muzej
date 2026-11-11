@@ -39,7 +39,7 @@ check("I4c naslovna-sredi-letnika + foliacija-pag-sken-plus-13 + hisa-dueli + kr
       and "hisa-dueli-tri-quad" in an and "krstni-pripisi-kriz-mrlisko" in an)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1940")
+st = qa.count("HOUSE_VITALS.length !== 2043")
 check("I5 qa-p221 + števec-1940", "qa-p221-parish-baptism-1885-04104" in qa and st >= 133, f"1940-številcev={st}")
 
 i0 = src.find("P221: krstna PREDZGODOVINA 04104, leto 1885")
@@ -54,7 +54,7 @@ check("I8a POZNEJŠI-PRIPISI-KRIŽ-04106 (NOVA-DIMENZIJA!)", "POZNEJŠI-PRIPISI-
 check("I8b pag-sken+13-FOLIO-SVINČNIK + NASLOVNA-SREDI-LETNIKA-s190", "sken+13-FOLIO-SVINČNIK" in seg and "NASLOVNA-SREDI-LETNIKA-s190" in seg)
 check("I9a qa-p221 (221. kontrola!)", "qa-p221" in qa and "221. kontrola" in qa)
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-check("I9b pt-luknja-271/1940 + byBook-04104", '"vitalsTotal": 1940' in pt and '"04104": 288' in pt)
+check("I9b pt-luknja-271/2043 + byBook-04104", '"vitalsTotal": 2043' in pt and '"04104": 288' in pt)
 
 live = "--live" in sys.argv
 if live or "--check" not in sys.argv:

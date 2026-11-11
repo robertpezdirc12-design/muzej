@@ -264,6 +264,19 @@ import {
   PREDHODNIK_1829_NITI,
   PREDHODNIK_1829_RESTART1830,
   PREDHODNIK_1829_KORPUS,
+  PREDHODNIK_1830_TOTAL,
+  PREDHODNIK_1830_BLOCKI,
+  PREDHODNIK_1830_HOUSES,
+  PREDHODNIK_1830_STRUNA,
+  PREDHODNIK_1830_VPISI,
+  PREDHODNIK_1830_KORPUS,
+  PREDHODNIK_1831_TOTAL,
+  PREDHODNIK_1831_BLOCKI,
+  PREDHODNIK_1831_HOUSES,
+  PREDHODNIK_1831_STRUNA,
+  PREDHODNIK_1831_NITI,
+  PREDHODNIK_1831_KRAJI,
+  PREDHODNIK_257_KORPUS,
   PREDHODNIK_1828_STEVILCENIH,
   PREDHODNIK_1828_NESTEVILCENIH,
   PREDHODNIK_1828_BLOCKI,
@@ -1745,6 +1758,140 @@ function Notranjost01738Leto1829() {
 
 
 /* ——— P254: HIŠNE ZGODBE GLOBJE — mreže hiš čez 6 knjig (sinteza!) ——— */
+function Notranjost01738Leto1830_1831() {
+  const { t } = useLang();
+  const e1830: { m: string; d: string; h?: string; x?: boolean }[] = [
+    { m: "1", d: "12. 1.", h: "7", x: true },
+    { m: "2", d: "17. 2.", h: "8", x: true },
+    { m: "3", d: "17. 2.", h: "17", x: true },
+    { m: "4", d: "17. 2.", h: "22★" },
+    { m: "5", d: "17. 2.", h: "[11|14]", x: true },
+    { m: "6", d: "18. 3.", h: "140", x: true },
+    { m: "7", d: "[~21.] 6.", h: "10·B20" },
+    { m: "8", d: "30. 6.", h: "7", x: true },
+    { m: "·", d: "Jul–Dec", h: "PRAZNO" },
+  ];
+  const e1831: { m: string; d: string; h?: string; x?: boolean }[] = [
+    { m: "1", d: "26. 1.", h: "3·33" },
+    { m: "2", d: "1. 2.", h: "50·54" },
+    { m: "3", d: "9. 2.", h: "56" },
+    { m: "4", d: "9. 2. d°", h: "17", x: true },
+    { m: "5", d: "9. 2. d°", h: "24", x: true },
+    { m: "6", d: "9. 2. d°", h: "4", x: true },
+    { m: "7", d: "9. 2. d°", h: "26·27★" },
+    { m: "8", d: "9. 2. d°", h: "3", x: true },
+    { m: "9", d: "9. 2. d°", h: "5", x: true },
+    { m: "10", d: "9. 2. d°", h: "65★" },
+    { m: "11", d: "9. 2. d°", h: "22", x: true },
+    { m: "12", d: "9. 2. d°", h: "[13]", x: true },
+    { m: "13", d: "9. 2. d°", h: "1·11" },
+  ];
+  return (
+    <div className="rounded-xl border bg-card/60 p-5">
+      <h3 className="flex items-center gap-2 font-serif text-lg font-semibold">
+        <BookOpenCheck className="h-4 w-4 text-primary" aria-hidden />
+        {t(
+          "Notranjost knjige 01738: leti 1830/1831 (8 + 13 vpisov — 13 porok v 15 dneh!)",
+          "The interior of the book 01738: the years 1830/1831 (8 + 13 entries — 13 weddings in 15 days!)",
+        )}
+      </h3>
+      <p className="mt-2 text-sm text-muted-foreground [overflow-wrap:anywhere]">
+        {t(
+          `Leto 1830 (s6-r4–r11, Pag. 9 — RESTART 12. Jänner!): ${PREDHODNIK_1830_TOTAL} vpisov — množični dan 17. Febr ×4 (vzorec 3. leto!), METLIKA-140 (Möttling), [~21.|26.] Juni-DUEL, 30. Juni; druga polovica PRAZNA (Jul–Dec!) — edini korpusni vpis: m4 Anna MILEK, Griblje 22 (3. zaporedno leto nevest iz h22: 1828+1829+1830!). Leto 1831 (s7, Pag. 11): ${PREDHODNIK_1831_TOTAL} vpisov v 15 dneh (26. 1.–9. 2.!) — 10 GRIBLJE hiš (ženini 3/50/56/26/65/1 + neveste 33/54/27/11) + ANOMALIJA-m7 (MARIA Pödiz — žensko ime v ženinskem stolpcu!).`,
+          `The year 1830 (s6-r4–r11, Pag. 9 — the RESTART of Jan 12!): ${PREDHODNIK_1830_TOTAL} entries — the mass day Feb 17 ×4, Metlika-140, the [~21.|26.] Jun duel; the second half EMPTY — the only corpus entry: m4 Anna MILEK of Griblje 22 (the third consecutive year of h22 brides!). The year 1831 (s7, Pag. 11): ${PREDHODNIK_1831_TOTAL} entries in 15 days — 10 GRIBLJE houses (the grooms 3/50/56/26/65/1 + the brides 33/54/27/11) + the m7 ANOMALY (MARIA in the groom's column!).`,
+        )}
+      </p>
+
+      {/* 11 blokov 10 dvigov — emerald */}
+      <div className="mt-4 rounded-lg border border-emerald-500/40 bg-emerald-500/10 p-4">
+        <p className="text-sm font-medium text-emerald-700 dark:text-emerald-300">
+          {t("★★★★★ 11 BLOKOV — 10 DVOGOV firstYear (1×1830 + 10×1831): ", "★★★★★ 11 BLOCKS — 10 firstYear LIFTS (1830+1831): ")}
+          {t(
+            `h54 1868→1831 (+37 = 2. največji dvig vseh časov za h22-41-P255!) · h56 +36 · h27 +33 · h11 +32 · h1 +30 · h26 +28[~] · h33 +28[~] · h3 +27 · h50 +27 · h65 +26 (h65 BILA prva hiša korpusa 1857!) — h22 brez dviga, a 3. ZAPOREDNO leto (1828+1829+1830!). ★★★★★ Šest-knjižni klub 16→23 (+7: h1/h11/h26/h27/h33/h56/h65 — največji skok!) + bothEra-poročna 17→26 (+9) + h50-span 1831–1924 = 93 let (3. mesto!). Korpus ${PREDHODNIK_257_KORPUS.vitalsTotal} vitalov / 01738 = ${PREDHODNIK_257_KORPUS.byBook01738} blokov.`,
+            `h54 1868→1831 (+37 = the 2nd-largest lift ever after h22-41!) · h56 +36 · h27 +33 · h11 +32 · h1 +30 · h26 +28[~] · h33 +28[~] · h3 +27 · h50 +27 · h65 +26 (h65 WAS the first house of the corpus 1857!) — h22 without a lift but a THIRD consecutive year! ★★★★★ The six-book club 16→23 (the largest jump!) + the marriage both-era 17→26 + the h50 span 1831–1924 = 93 years (3rd!). The corpus ${PREDHODNIK_257_KORPUS.vitalsTotal} vitals / 01738 = ${PREDHODNIK_257_KORPUS.byBook01738} blocks.`,
+          )}
+        </p>
+      </div>
+
+      {/* ★★★★★ PEZDIRC-NIT — primary card */}
+      <div className="mt-4 rounded-lg border border-primary/50 bg-primary/10 p-4">
+        <p className="text-sm font-medium [overflow-wrap:anywhere]">
+          {t(
+            "★★★★★★ NIT PEZDIRC-h50 (42 LET!): Georg PESDIRZ-h50-1831 (w2 črko-za-črko 'Pesdirz'! duel-oče 1:1 'Marco Pesdirz'!) s starši Marco Pesdirz × Dorothea [Chernigl?] × Anna [Leporz?] (h54!) — ↔ Marcus PEGDIRE-h50-1873 (P251-m20, oče neveste Marie Pegdire!) = ISTA DRUŽINA 42 LET (1831–1873, ista hiša 50 + ista imena Marco/Marcus!) + m3 nevesta [Pedierz?] + m13 nevesta [Podierz?] + m7 [Pödiz?]-ANOMALIJA — 4 vrstice Pesdirc-družine v 1831!",
+            "★★★★★★ THE PEZDIRC THREAD h50 (42 YEARS!): Georg PESDIRZ-h50-1831 (letter-by-letter 'Pesdirz'!) with parents Marco Pesdirz × Dorothea — ↔ Marcus PEGDIRE-h50-1873 (P251-m20!) = THE SAME FAMILY 42 YEARS (1831–1873, the same house 50 + the same name Marco/Marcus!) + the m3/m13 brides [Pedierz?]/[Podierz?] — 4 rows of the family in 1831!",
+          )}
+        </p>
+      </div>
+
+      {/* 1830 timeline */}
+      <div className="mt-4 overflow-x-auto pb-1">
+        <p className="mb-1 text-xs font-semibold text-muted-foreground">{t("Leto 1830 (m1–m8 + prazna polovica)", "The year 1830 (m1–m8 + the empty half)")}</p>
+        <div className="flex min-w-[880px] items-end gap-1 sm:min-w-0" role="listbox" aria-label={t("Vrstice leta 1830", "The rows of 1830")}>
+          {e1830.map((e, i) => {
+            const isEmpty = e.m === "·";
+            const isMilek = e.h === "22★";
+            const weak = e.x;
+            return (
+              <div key={`a${e.m}-${i}`} role="option" aria-selected={false} className="flex flex-1 flex-col items-center gap-1 rounded-lg border border-transparent px-1 py-2">
+                <span className="text-[10px] font-medium text-muted-foreground" style={{ overflowWrap: "anywhere" }}>{e.d}</span>
+                <span className={`flex h-9 min-w-9 items-center justify-center rounded-full border px-1 text-[11px] font-semibold ${isEmpty ? "border-dashed border-muted-foreground/50 bg-muted/40 text-muted-foreground" : isMilek ? "border-emerald-500 bg-emerald-500/20 text-emerald-700 dark:text-emerald-300" : weak ? "border-dashed border-amber-500/60 bg-amber-500/10 text-amber-700 dark:text-amber-300" : "border-primary/50 bg-primary/10 text-primary"}`}>{e.m}</span>
+                <span className="text-[10px] text-muted-foreground" style={{ overflowWrap: "anywhere" }}>
+                  {e.h ? (e.h === "22★" ? "h22-Milek!" : e.h === "10·B20" ? "V10 · B20" : e.h === "PRAZNO" ? "0" : `h${e.h}`) : ""}
+                </span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* 1831 timeline */}
+      <div className="mt-4 overflow-x-auto pb-1">
+        <p className="mb-1 text-xs font-semibold text-muted-foreground">{t("Leto 1831 (m1–m13 — 13 porok v 15 dneh!)", "The year 1831 (m1–m13 — 13 weddings in 15 days!)")}</p>
+        <div className="flex min-w-[880px] items-end gap-1 sm:min-w-0" role="listbox" aria-label={t("Vrstice leta 1831", "The rows of 1831")}>
+          {e1831.map((e, i) => {
+            const isDouble = (e.h || "").includes("·");
+            const anomaly = e.m === "7";
+            const weak = e.x;
+            return (
+              <div key={`b${e.m}-${i}`} role="option" aria-selected={false} className="flex flex-1 flex-col items-center gap-1 rounded-lg border border-transparent px-1 py-2">
+                <span className="text-[10px] font-medium text-muted-foreground" style={{ overflowWrap: "anywhere" }}>{e.d}</span>
+                <span className={`flex h-9 min-w-9 items-center justify-center rounded-full border px-1 text-[11px] font-semibold ${anomaly ? "border-amber-500 bg-amber-500/20 text-amber-700 dark:text-amber-300" : isDouble ? "border-emerald-500 bg-emerald-500/20 text-emerald-700 dark:text-emerald-300" : weak ? "border-dashed border-amber-500/60 bg-amber-500/10 text-amber-700 dark:text-amber-300" : e.h ? "border-primary/50 bg-primary/10 text-primary" : "border-dashed border-muted-foreground/40 text-muted-foreground"}`}>{e.m}</span>
+                <span className="text-[10px] text-muted-foreground" style={{ overflowWrap: "anywhere" }}>
+                  {e.h ? `h${e.h}${anomaly ? "-ANOM." : ""}` : ""}
+                </span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* STRUNA-1830 + NITI-1831 + KRAJI-1831 */}
+      <div className="mt-4 grid gap-3 md:grid-cols-2">
+        <div className="min-w-0 rounded-lg border bg-accent/40 p-4">
+          <p className="text-sm [overflow-wrap:anywhere]">{t(PREDHODNIK_1830_STRUNA.si, PREDHODNIK_1830_STRUNA.en)}</p>
+        </div>
+        <div className="min-w-0 rounded-lg border border-primary/40 bg-primary/5 p-4">
+          <p className="text-sm [overflow-wrap:anywhere]">{t(PREDHODNIK_1831_NITI.si, PREDHODNIK_1831_NITI.en)}</p>
+        </div>
+      </div>
+      <div className="mt-3 grid gap-3 md:grid-cols-2">
+        <div className="min-w-0 rounded-lg border bg-accent/40 p-4">
+          <p className="text-sm [overflow-wrap:anywhere]">{t(PREDHODNIK_1830_VPISI.si, PREDHODNIK_1830_VPISI.en)}</p>
+        </div>
+        <div className="min-w-0 rounded-lg border bg-accent/40 p-4">
+          <p className="text-sm [overflow-wrap:anywhere]">{t(PREDHODNIK_1831_KRAJI.si, PREDHODNIK_1831_KRAJI.en)}</p>
+        </div>
+      </div>
+      <p className="mt-2 text-xs text-muted-foreground" style={{ overflowWrap: "anywhere" }}>
+        {t(
+          "★★★★★ KRIŽAN ×2 v m1 (ženin Peter h3 + mati neveste Dorothea Križan!) · MILEK h65: Nicol-1831 (oče Janez) ↔ 1874-P250 = 43 let! · STARE-m5 + MUZ-oče-m12 + KAMBIC-m12 + KLEPEC-[Klepz?]-m3. [~X-OPEN]: Pesdirz|Podierz|Peterž · Ianigl|Muniz|Kranigh · m12-hiša [13|15|18|20]. P258+: meja-1831/32 (s8) — ali se notranjost nadaljuje v 1832?",
+          "★★★★★ KRIŽAN twice in m1 (the groom Peter h3 + the bride's mother Dorothea!) · the MILEK h65 43-year thread · STARE + MUZ-the-father + KAMBIC + KLEPEC-cand. [~X-OPEN]: Pesdirz|Podierz|Peterž · Ianigl|Muniz|Kranigh · the m12 house 4-variants. P258+: the 1831/32 boundary (s8).",
+        )}
+      </p>
+    </div>
+  );
+}
+
 function HouseStoriesP254() {
   const { t } = useLang();
   const tierMax = Math.max(...HOUSE_STORY_TIERS.map((x) => x.houses));
@@ -3296,6 +3443,7 @@ function ParishTab() {
 
       {/* P256: NOTRANJOST-01738 — NADALJEVANJE: leto 1829 (korpus +6 blokov!) */}
       <Notranjost01738Leto1829 />
+      <Notranjost01738Leto1830_1831 />
 
       {/* brskalnik knjig */}
       <div>

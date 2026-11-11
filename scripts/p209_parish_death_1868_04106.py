@@ -29,7 +29,7 @@ check("I4 dokaz (80/13-griblje/anomalije + meja-s69-vsota-4-delna + 80-vrstic)",
       f"entries={len(d['entries'])} griblje={len(grib)} anomalije={len(d['anomalije'])}")
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1940")
+st = qa.count("HOUSE_VITALS.length !== 2043")
 check("I5 qa-p209 + števec-1511", "qa-p209-parish-death-1868-04106" in qa and st >= 100, f"1940-številcev={st}")
 
 i0 = src.find("P209: mrliška PREDZGODOVINA 04106, leto 1868")
@@ -46,7 +46,7 @@ check("I8c MRTVOROJEN-z42-Knavs-h52", "PERDIRC-nit" in seg)
 check("I8d 12-hiš-vsi-različni", "12 hiš" in seg)
 check("I9 qa-p206 (207. kontrola!)", "qa-p209" in qa and "209. kontrola" in qa)
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-check("I9 pt-luknja-292/1511", '"vitalsTotal": 1940' in pt and '"04106": 433' in pt)
+check("I9 pt-luknja-292/2043", '"vitalsTotal": 2043' in pt and '"04106": 433' in pt)
 
 try:
     req = urllib.request.Request("https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04106/",

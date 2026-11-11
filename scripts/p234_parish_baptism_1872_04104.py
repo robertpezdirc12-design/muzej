@@ -39,7 +39,7 @@ check("I4b novosti (pezdirc-x5 + dragoš-x3-paralela + hrižan-x5 + h40-continuu
       and "mesec-garbage-row-z27-september-x0" in an)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1940")
+st = qa.count("HOUSE_VITALS.length !== 2043")
 check("I5 qa-p234 + števec-1940", "qa-p234-parish-baptism-1872-04104" in qa and st >= 146, f"1940-številcev={st}")
 
 i0 = src.find("P234: krstna PREDZGODOVINA 04104, leto 1872")
@@ -56,9 +56,9 @@ check("I8a P233-NAPoved-POTRJENA + GARBAGE-ROW + 'Morija'-nota", "P233-ARITMETI�
 check("I8b P233-LEAD-POTRJEN-s26 + LEAD-P235-1871", "P233-X-open-RESOLVED" in seg and "P235-LEAD" in qa and "1871" in qa)
 check("I9a qa-p234 (234. kontrola!)", "qa-p234" in qa and "234. kontrola" in qa)
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-check("I9b pt-luknja-271/1940 + byBook-04104", '"vitalsTotal": 1940' in pt and '"04104": 288' in pt)
+check("I9b pt-luknja-271/2043 + byBook-04104", '"vitalsTotal": 2043' in pt and '"04104": 288' in pt)
 v233 = open(f"{ROOT}/scripts/p233_parish_baptism_1873_04104.py", encoding="utf-8").read()
-check("I9c p233-verifier-sanitizacija (1906→1940, 254→271)", '"vitalsTotal": 1940' in v233 and "1906" not in v233)
+check("I9c p233-verifier-sanitizacija (1940→2043-P257!)", '"vitalsTotal": 2043' in v233 and "1906" not in v233)
 
 live = "--live" in sys.argv
 if live or "--check" not in sys.argv:

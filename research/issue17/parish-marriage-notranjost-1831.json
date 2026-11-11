@@ -1,0 +1,217 @@
+{
+  "phase": "P257",
+  "title": "Notranjost 01738 — leto 1831 (s7 = Pag. 11; 13 vpisov v 15 dneh; 10 Griblje-blokov — REKORD!)",
+  "generatedAt": "2026-11-11",
+  "vir": {
+    "knjiga": "01738 (Trauungs-Buch 1828–1873) — predhodnik 04455",
+    "sken": "s7 (stran 11 — foliacija-Pag-=-2·sken−3-×7!)",
+    "md5": "s7 = d19294a6d98bc646705342b22ef6dcf8 (2× neodvisno 1:1; skupaj 4. prenos s P256!)",
+    "metoda": "pass-1 + census-s7L/s7R (13/13-1:1-dvakrat!) + vrstični trakovi ×13 + duel-valovi ×3 (4×/6×/8×/10×-mikro-celice!) + G/B-bloki + desne strani (starši/priči/duhovniki)"
+  },
+  "struktura": {
+    "glava": "letnica '1831' v glavi stolpca datuma (census: 'Jahr, Monat und Tag der Trauung 1831.')",
+    "datumi": "26. Jän (m1) + 1. Febr (m2) + 9. Febr (m3) + d°-×10 (m4–m13) = 13-POROK-V-15-DNEH (26. 1.–9. 2. 1831!)",
+    "anomalija": "m7: ženin-MARIA-Pödiz — ŽENSKO-IME-V-ŽENINSKEM-STOLPCU (cf.-MUZ-vrstica-P255!); w3-'Maria'-nizka-[~Mario-alt]-ne-razloženo!",
+    "konec": "m13 = ZADNJI-VPIS-1831 (spodaj-1-prazna-mrežna-vrstica — census!)"
+  },
+  "entries": [
+    {
+      "m": 1, "datum": "26. Jänner 1831",
+      "zenin": "Peter KRIŽAN [Krishan→Krieghan→Križan — 3-branja-1:1!]",
+      "vas_zenin": "Griblje", "hisa_zenin": 3, "star_zenin": 21, "stan_zenin": "Einwohner",
+      "nevesta": "Anna [Dehligl?~Pehligh/Dölker — 3-branja-DUEL-GARBLE-X-OPEN]",
+      "vas_neveste": "Griblje", "hisa_neveste": 33,
+      "star_neveste": 21,
+      "starši_zenin": "Mathia Križan (Einwohner) + Maria [Dragoff?~]",
+      "starši_neveste": "Mario [Doblioz?~Doblič?] + ★ Dorothea KRIŽAN!",
+      "priči": "Georg [Josef?~] + Georg [~off]",
+      "urkunde": "'Copulaver[~] … Mit Ehecontract'",
+      "duhovnik": "Georg [Krapnitz?~Knapitsch]",
+      "opomba": "★★★★★ KRIŽAN-×2-v-eni-vrstici (ženin + mati-neveste!); h33-[~33|39-DUEL-w3-10×-'33'-3:2!]; očeN-Mario-Doblioz-garble-DVOJMA-Dehligl-vs-Doblioz!"
+    },
+    {
+      "m": 2, "datum": "1. Febr 1831",
+      "zenin": "Georg PESDIRZ [w2-6×-črko-za-črko!-duel-oče-'Marco-Pesdirz'-1:1!—~Podierz-alt + census-'Peterž/Peterlin'-proti-X-OPEN!]",
+      "vas_zenin": "Griblje", "hisa_zenin": 50, "star_zenin": 21, "stan_zenin": "lednar",
+      "nevesta": "Anna [Leporz?~Lebartz — DUEL-GARBLE]",
+      "vas_neveste": "Griblje", "hisa_neveste": 54, "star_neveste": 19, "stan_neveste": "lednarica",
+      "starši_zenin": "★ MARCO PESDIRZ + Dorothea [Chernigl?~Ghernigz/Gernigz]",
+      "starši_neveste": "Nicol [Leporz?] + Maria [Brigl?~]",
+      "priči": "Adam [Kristian?~] + Johann [Jellorz?~] + Anton [Ficko?~] + Mathias [Ficko?~]",
+      "urkunde": "'Mit beyliegenden Copulaet-Zeugnisse'",
+      "duhovnik": "Joseph [Tomaffia?~]",
+      "opomba": "★★★★★★ PEZDIRC-NIT-h50: Marco-Pesdirz-1831 ↔ Marcus-PEGDIRE-1873-P251-m20 = ISTA-DRUŽINA-42-LET (1831–1873!)"
+    },
+    {
+      "m": 3, "datum": "9. Febr 1831",
+      "zenin": "Math. [Kiniz?~Schimiz/Štimic — 3-branja-DUEL (w2:'Kiniz'+priimek-'Schiniz')]",
+      "vas_zenin": "Griblje", "hisa_zenin": 56, "star_zenin": 32, "stan_zenin": "Ledig",
+      "nevesta": "Maria [Pedierz?~Pesdirz/Peterž — DUEL-GARBLE (duel:'Maria Pesdirz, hiša 3'!)]",
+      "vas_neveste": "Podzemelj", "hisa_neveste": 3, "star_neveste": 25,
+      "starši_zenin": "Nicel [Schimiz?~Kiniz] + ★ Maria [Klepz?~KLEPEC-nit!]",
+      "starši_neveste": "Andl [Pedierz?~Pesdirz?] + Maria",
+      "priči": "[annas?~] + Georg [Boschn?~Pezhauer?] + Georg [Piltnar?~]",
+      "duhovnik": "Georg [Kagbern?~]",
+      "opomba": "h56-w2-8×-'56'-4-branj (census-'50' zavržen!); KLEPEC-mati-[Klepz?]-kand.!"
+    },
+    {
+      "m": 4, "datum": "9. Febr d° 1831",
+      "zenin": "Nicol [Tomz?~Tomž/Tonz — DUEL]",
+      "vas_zenin": "Podzemelj [~Pimosch?-P256-garble]", "hisa_zenin": 17, "star_zenin": 20,
+      "nevesta": "Barbara [Saie?~Sitej/Saje — DUEL]",
+      "vas_neveste": "Otok", "hisa_neveste": 1, "star_neveste": 20,
+      "starši_zenin": "Nicol Tomz + Maria [Mrz?~]",
+      "starši_neveste": "Math. Saie + Maria [Marient?~] [Anton Malenigh?~]",
+      "urkunde": "'Mit Einwilligung beiderlei Theile'",
+      "duhovnik": "[Grosup?~]"
+    },
+    {
+      "m": 5, "datum": "9. Febr d° 1831",
+      "zenin": "Peter [Stare?~Hare — DUEL (w2-'Stariz'+census-'Stare' vs-row-'Hare')]",
+      "vas_zenin": "[~Krassching?~Kruschnz/Kaproic — VAS-GARBLE]", "hisa_zenin": 24, "star_zenin": 26,
+      "nevesta": "Maria [Karl?~Nikol — DUEL]",
+      "vas_neveste": "Podzemelj", "hisa_neveste": 11, "star_neveste": 20,
+      "starši_zenin": "Peter [Stare?~Auer?] + Ursula [Homonigf?~]",
+      "starši_neveste": "Siemon [Mikl?~] + Anna",
+      "priči": "Anton [Malezig?~] + Seb. [Hare?~]",
+      "opomba": "★★★ STARA/STARE-nit (continuum-P255-m6/m15!)"
+    },
+    {
+      "m": 6, "datum": "9. Febr d° 1831",
+      "zenin": "Peter [Bedicz?~Bodicz/Pedicz — w2-'B…icz'-najverjetneje-'Bedicz'!-census-'Peterž' zavržen!]",
+      "vas_zenin": "Kaplja vas [Kapln]", "hisa_zenin": 4, "star_zenin": 24,
+      "nevesta": "Anna [Turejef?~Turajž/Jurejef — DUEL]",
+      "vas_neveste": "Otok", "hisa_neveste": 17, "star_neveste": 19,
+      "starši_zenin": "Peter Bedicz + Catharina [Nemcu?~Lausmann?~]",
+      "starši_neveste": "Nicol. [Turejef?] + Maria [Berkopec?~]",
+      "priči": "Maria + Nicol. [Vrh?~Vrik?]"
+    },
+    {
+      "m": 7, "datum": "9. Febr d° 1831",
+      "zenin": "★ MARIA Pödiz [~Podierz?~Pesdirz?—DUEL — ŽENSKO-IME-V-ŽENINSKEM-STOLPCU-ANOMALIJA! (w3-'Maria'-nizka-[~Mario-alt])]",
+      "vas_zenin": "Griblje", "hisa_zenin": 26, "star_zenin": 26,
+      "nevesta": "Anna [Maly?~Maley/Malež — DUEL-GARBLE]",
+      "vas_neveste": "Griblje", "hisa_neveste": 27, "star_neveste": 18,
+      "starši_zenin": "Georg [Pödiz?] + Maria [~roj.?]",
+      "starši_neveste": "Johann [Masch?~nejasno] + Catharina",
+      "priči": "Georg [Pödiz?] + Nicl. [Posch?~]",
+      "urkunde": "'1/18' [~številki-X-OPEN]",
+      "opomba": "h26-[~26|20-DUEL-w3-10×-'26'-srednja-4:2 (pass1/row/census/w3 vs P256-predbranje/duel1-'20')]"
+    },
+    {
+      "m": 8, "datum": "9. Febr d° 1831",
+      "zenin": "Mich. [Zajner?~Zajec — DUEL]",
+      "vas_zenin": "Otok", "hisa_zenin": 3, "star_zenin": 26,
+      "nevesta": "Maria [Zuittha?~Zuitha/Justin — DUEL]",
+      "vas_neveste": "[~Priol?~Prioel/Pribel — VAS-GARBLE]", "hisa_neveste": 2, "star_neveste": 20,
+      "starši_zenin": "Math. Zajner + Maria [Kral?~Kralj!]",
+      "starši_neveste": "Georg [Zuitha?] + Maria [Annich?~]",
+      "priči": "Joseph [Amonich?] 20 + Math. Zajner 20",
+      "duhovnik": "B. [Straffin?~]"
+    },
+    {
+      "m": 9, "datum": "9. Febr d° 1831",
+      "zenin": "Johann [Nowig?~Novak/Skvic/Noviger — DUEL]",
+      "vas_zenin": "Gradac", "hisa_zenin": 5, "star_zenin": 27,
+      "nevesta": "Catharina [Kreiel?~Krebel/Kreidl — DUEL]",
+      "vas_neveste": "[~Podzemelj?|Gradac? — DUEL-×2-branj]", "hisa_neveste": 17, "star_neveste": 22,
+      "starši_zenin": "Math. [Novin?~Nowig], Maria (rd. [Micheigh?~])",
+      "starši_neveste": "Sebast. [Stachl?~Staché] … [Jakob Hoppich?~]",
+      "priči": "Jakob [Hoppigh?~] + Jakob [Smeiger?~]",
+      "duhovnik": "[Kerndffer?~]"
+    },
+    {
+      "m": 10, "datum": "9. Febr [ito] d° 1831",
+      "zenin": "Nicol MILEK [w2-konec-'-ek'-1:1!—~Michl-census-alt]",
+      "vas_zenin": "Griblje", "hisa_zenin": 65, "star_zenin": 25, "stan_zenin": "[Lediner?~]",
+      "nevesta": "Margaretha [Prodsanzig?~Podlanzigh/Brežanigh — DUEL-GARBLE]",
+      "vas_neveste": "Podzemelj", "hisa_neveste": 2, "star_neveste": 19,
+      "starši_zenin": "Janez (Jian) [Milek] + Maria [Malefzig?~]",
+      "starši_neveste": "Mich. [Bodzai?~] + Margareth [Janzefzig?~]",
+      "urkunde": "'J°/J°'",
+      "duhovnik": "[Konig?~]",
+      "opomba": "★★★★★ MILEK-h65-NIT (1831 ↔ 1874-P250 = 43-let!); h65-×4-branj-1:1!"
+    },
+    {
+      "m": 11, "datum": "9. Febr d° 1831",
+      "zenin": "Anton [Gorenc?~Galonz/Dal — DUEL (census-'Gorenc' vs-row-'Galonz')]",
+      "vas_zenin": "Otok", "hisa_zenin": 22, "star_zenin": 29, "stan_zenin": "[Bündner?~]",
+      "nevesta": "Cath. [Mihelčič?~Muffich — DUEL (census-'Mihelčič' vs-row-'Muffich')]",
+      "vas_neveste": "[~Kruschinz?~K. — VAS-GARBLE]", "hisa_neveste": 14, "star_neveste": 20,
+      "starši_zenin": "Nicolaus [Galonz?~Gorenc] + Maria [Malezigk?~★★-MALEŠIČ-kand.!]",
+      "starši_neveste": "Mathias [Muffich?~Mihelčič] + Anna [Marnig?~]",
+      "priči": "Martin [Galonz?~] + Mart. [Malezigk?~]",
+      "duhovnik": "[Bussozzi?~]"
+    },
+    {
+      "m": 12, "datum": "9. Febr d° 1831",
+      "zenin": "Nicol [Kambicz?~Hambicz/Klemič — DUEL (w2-'Kambigh/Kambicz' vs-row-'Hambicz' vs-census-'Klemič')]",
+      "vas_zenin": "[~Podlog?~Priloge — VAS-DUEL]", "hisa_zenin": "[~13|15|18|20-DUEL-4-variant — pass1/row-'13' vs-P256-'15' vs-census-'18' vs-w2-'20'!]",
+      "star_zenin": 21,
+      "nevesta": "Maria [Mag.?~Mej? — DUEL]",
+      "vas_neveste": "[~Tomel?~Š. — VAS-GARBLE]", "hisa_neveste": 17, "star_neveste": 18,
+      "starši_zenin": "Mich. [Kambicz?~] + Anna [Lunar?~]",
+      "starši_neveste": "★ Math. MUZ + Catharina (rd. [Topič?~])",
+      "urkunde": "'Proklamacijski list 1831' [Procl. publicum/Copulatione 1831]",
+      "duhovnik": "[Graff?~]",
+      "opomba": "★★★ MUZ-oče (continuum-1828-Semelj!); KAMBIC-nit; hiša-POPOLNOMA-ODPRTA (4-variant!)"
+    },
+    {
+      "m": 13, "datum": "9. Febr d° 1831",
+      "zenin": "Math. [Ianigl?~Muniz/Kranigh — 3-variant-DUEL-GARBLE (row-'Ianigl' + pass1-'Muniz' + census-'Kranigh')]",
+      "vas_zenin": "Griblje", "hisa_zenin": 1, "star_zenin": 20, "stan_zenin": "ledina",
+      "nevesta": "Catharina [Podierz?~Pesdirz/Peterž — DUEL (duel-'Pesdirz-ali-Podierz'!)]",
+      "vas_neveste": "Griblje", "hisa_neveste": 11, "star_neveste": 24, "stan_neveste": "ledina",
+      "starši_zenin": "Math. [Ianigl?] (in-Barbare?~) + [ledina?]",
+      "starši_neveste": "Math. [Salophig?~Gerdschigh/Gerzschigh — 3-variant-GARBLE!] + Dorothea [Schiner?~]",
+      "priči": "Maria [Ianigl?] ledina + Joseph [Schiner?~] + Th. H. [Laboy?~]",
+      "duhovnik": "[Graff?~]",
+      "opomba": "ZADNJI-VPIS-1831; h1-×4-branj-1:1; [~Muniz?-MUZ-kand. (r13!)]"
+    }
+  ],
+  "korpusUcinek": {
+    "noviBloki": 10,
+    "vitals": "2033 → 2043 (skupaj s 1830: 2032 → 2043)",
+    "byBook01738": "21 → 31",
+    "dvigi": {
+      "h54": "1868 → 1831 (37 — 2.-NAJVEČJI-DVIG-VSEH-ČASOV-za-h22-41-P255!)",
+      "h56": "1867 → 1831 (36 — 3.!)",
+      "h27": "1864 → 1831 (33 — 4.!)",
+      "h11": "1863 → 1831 (32)",
+      "h1": "1861 → 1831 (30)",
+      "h26": "1859 → 1831 (28) [~26|20-DUEL]",
+      "h33": "1859 → 1831 (28) [~33|39-DUEL]",
+      "h3": "1858 → 1831 (27) — h3-ŽE-šest-knjižna-P254!",
+      "h50": "1858 → 1831 (27) — PEZDIRC-NIT-h50-span-1831–1924-=-93!-POSTANE-pet-knjižna!",
+      "h65": "1857 → 1831 (26) — h65-BILA-PRVA-HIŠA-KORPUSA-1857 (PRE-P255!)"
+    },
+    "sestKnjiznih": "16 → 23 (+7: h1/h11/h26/h27/h33/h56/h65 — NAJVEČJI-SKOK-VSES!)",
+    "bothEra": "17 → 26 (+9)",
+    "razponi": "h50-93 (izenači-h20/h22!) + h11/h33-91 + h26-90 + h27-87 + h3/h54-86 + h1/h65-83 + h56-77"
+  },
+  "niti1831": {
+    "PEZDIRC": "★★★★★★ h50-NIT: Georg-Pesdirz-1831-s-očetom-Marco ↔ Marcus-Pegdire-1873-P251-m20 = ISTA-DRUŽINA-42-LET! + m3-nevesta-Maria-[Pedierz?] + m7-[Pödiz?]-ANOMALIJA + m13-nevesta-Catharina-[Podierz?] — 4-vrstice! [~X-OPEN: Pesdirz-Podierz-Peterž-DVOJMA]",
+    "KRIŽAN": "m1-ženin-Peter-h3 + m1-mati-neveste-Dorothea — ×2-v-eni-vrstici! (continuum-1828/1829 + 1873-ŠIV)",
+    "MILEK": "m10-Nicol-h65-oče-Janez (↔1874-P250-h65 = 43-let!) + [~h22-Milek/Miller-1830-vezava-kand.]",
+    "STARE": "m5-Peter-[Stare?~Hare] (continuum-P255!)",
+    "MUZ": "m12-oče-Math.-Muz (continuum-1828-Semelj!) + [~m13-Muniz?-kand.]",
+    "KAMBIC": "m12-Nicol-[Kambicz?~Hambicz] (Podlog — hiša-4-variant-ODPRTA!)",
+    "KLEPEC": "m3-mati-Maria-[Klepz?] (continuum-1828/1829!)",
+    "MALEŠIČ-kand": "m11-mati-[Malezigk?] + m10-mati-[Malefzig?] — 2-kand.-X-OPEN",
+    "DOBLIČ": "m1-očeN-Mario-[Doblioz?] (priimek-neveste-DVOJMA-Dehligl-vs-Doblioz!)"
+  },
+  "xOpen": [
+    "m7-MARIA-Pödiz-ANOMALIJA (žensko-ime-v-ženinskem-stolpcu!-[~Maria|Mario])",
+    "m2-priimek-PESDIRZ-Podierz-Peterž-DVOJMA (w2-črko-za-črko-'Pesdirz' + duel-oče-'Marco-Pesdirz' VS census-'Peterž/Peterlin'!)",
+    "m1-nevesta-priimek-Dehligl-Pehligh-Dölker-DVOJMA + očeN-Doblioz-Doblič",
+    "m1-hiša-neveste-[~33|39] (w3-'33' 3:2)",
+    "m7-hiša-[~26|20] (w3-'26' 4:2)",
+    "m3-priimek-Kiniz-Schimiz-Štimic + m3-nevesta-Pedierz-Pesdirz",
+    "m10-priimek-Milek-Michl-Milic",
+    "m12-hiša-[~13|15|18|20]-4-variant-POPOLNOMA-ODPRO + priimek-Kambicz-Hambicz-Klemič",
+    "m13-priimek-Ianigl-Muniz-Kranigh-3-variant + očeN-Salophig-Gerdschigh-3-variant",
+    "m9-vas-neveste-[~Podzemelj|Gradac] + m11-[Gorenc|Galonz]-[Mihelčič|Muffich]-census-DVOJMA",
+    "duhovniki-1831: [~Krapnitz?/~Tomaffia?/~Kagbern?/~Grosup?/~Kerndffer?/~Konig?/~Bussozzi?/~Graff?] — 8-garble"
+  ],
+  "p258": "meja-1831/32 (s8): ali-se-notranjost-nadaljuje-v-1832 (Grüble-hiše-novih-let?) — P258-material!"
+}

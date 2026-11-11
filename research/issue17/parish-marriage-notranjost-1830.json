@@ -1,0 +1,145 @@
+{
+  "phase": "P257",
+  "title": "Notranjost 01738 — leto 1830 (s6-r4–r11; Pag. 9; 8 vpisov; 1830-II-polovica PRAZNA)",
+  "generatedAt": "2026-11-11",
+  "vir": {
+    "knjiga": "01738 (Trauungs-Buch 1828–1873) — predhodnik 04455",
+    "skeni": "s6 (stran 9 — foliacija-Pag-=-2·sken−3-potrjena-×7!); r1–r3 = 1829 (P256-m18–m20!), r4–r11 = 1830 (P257!)",
+    "md5": "s6 = 593ac8c753a8505ab2bc1f3bc3501102 (2× neodvisno 1:1; skupaj 4. prenos s P256!)",
+    "metoda": "pass-1 (s6-cela stran) + census-s6L (11/11 vrstic-1:1!) + vrstični trakovi ×8 + duel-valovi ×3 (8×/6×/10×-mikro) + G/B-bloki + desne strani"
+  },
+  "struktura": {
+    "restart": "m1 = 12. Jänner 1830 (r4) — RESTART-leta (cf. RESTART-1873-z-1-P253!); census + pass-1 + P256-predbranje: '12. Jänner' ×3 1:1!",
+    "mnogicniDan": "m2–m5 = 17. Febr ×4 MNOŽIČNI-DAN (vzorec-3.-leto: 1828-6.2.×7 + 1829-den-4.×4!)",
+    "praznaPolovica": "1830-II (Jul–Dec): 0 vpisov — census-potrjeno 'popolnoma prazno' (P256-napoved-IZPOLNJENA!)",
+    "datumi": "12. Jän + 17. Febr ×4 + 18. [März?] + [~21.|26.?]-Juni-DUEL + 30. Juni"
+  },
+  "entries": [
+    {
+      "m": 1, "row": 4, "datum": "12. Jänner 1830",
+      "zenin": "Marcus [Vipavc?~Vipauz/Wipenz/Vipavz — 4-branja-DUEL]",
+      "vas_zenin": "[~Krajnog?~Kriesing/Krajinc — VAS-GARBLE-X-OPEN]",
+      "hisa_zenin": 34, "star_zenin": "[~42|43-DUEL]",
+      "nevesta": "Catharina [Aurnigl?~Aurnizh/Sawnich/Schurig — 4-branja-DUEL]",
+      "vas_neveste": "[~Kaplja-vas?|Strophe? — VAS-GARBLE-X-OPEN (w2-'[Strop]he 7'!)]",
+      "hisa_neveste": 7,
+      "star_neveste": "[~35|36-DUEL]",
+      "starši_zenin": "Marcus [Vipavc?~] + Anna [Goggerich?~]",
+      "starši_neveste": "Georg [Aurnigl?] + Maria [Keharniggsch?~Morutz?]",
+      "priči": "Peter [Eigner?~] + Georg [Morutz?~]",
+      "duhovnik": "[~Georg-Khan-Morgglin? — Administrator]",
+      "opomba": "RESTART-1830-vrstica! hiša-7-×4-branj (census/pass1/duel/w2 — row-read-'1' zavržen 4:1!)"
+    },
+    {
+      "m": 2, "row": 5, "datum": "17. Febr 1830",
+      "zenin": "Martin [Tschall?~Stichall/Taschall — 3-branja-DUEL]",
+      "vas_zenin": "[~Gurila?~Schurla — VAS-GARBLE-X-OPEN]",
+      "hisa_zenin": 8, "star_zenin": 24,
+      "nevesta": "Catharina [Stephanich?~Stephanitsch — DUEL]",
+      "vas_neveste": "[~Dobravič?~Dobrnič/Döbmniz — VAS-GARBLE-X-OPEN]",
+      "hisa_neveste": 8, "star_neveste": 28,
+      "starši_zenin": "Math. [Tschall?] + Anna [Kralj?~]",
+      "starši_neveste": "Martin [Stephanich?] + Anna [Snugel?~Jn…?]",
+      "opomba": "manjkajoča-vrstica-iz-pass-1 — RECOVERED z duel-s6_tschall (pas-y-750–930) + census 'Stichall'!"
+    },
+    {
+      "m": 3, "row": 6, "datum": "17. Febr 1830",
+      "zenin": "Math. [Kojnig?~Krajnc/Kozina/Koging — 6-branj-DUEL; w2-črko-za-črko-'K-o-j-n-i-g'!]",
+      "vas_zenin": "[~Dobrnič?~Dobraiz/Dobraniz — VAS-GARBLE]",
+      "hisa_zenin": 17, "star_zenin": 22,
+      "nevesta": "Maria Angel",
+      "vas_neveste": "[~Dobrnič?~Döbmniz]",
+      "hisa_neveste": 23, "star_neveste": 24,
+      "starši_zenin": "Peter [Kozina?~Kojnig?] + Anna",
+      "starši_neveste": "Peter Angel + Anna",
+      "priči": "Math. [Tschschol?~Tschall!] + Math. [Stephanig?~Stephanich!]",
+      "opomba": "priči-križajo-m2 (Tschall + Stephanich-družini!) — ANGEL-družina-×2-vrstici (m3-nevesta + m5-mati!)"
+    },
+    {
+      "m": 4, "row": 7, "datum": "17. Februar 1830",
+      "zenin": "Georg [Moosin?~Mogorin/Masinn — 3-branja-DUEL-X-OPEN]",
+      "vas_zenin": "[~Zarkwishe?~Zarkwische/Zerkinjef/Tscheilfe — VAS-GARBLE-X-OPEN]",
+      "hisa_zenin": 15, "star_zenin": 19,
+      "nevesta": "Anna MILEK",
+      "vas_neveste": "Griblje", "hisa_neveste": 22, "star_neveste": 22,
+      "starši_neveste": "Joh. MILEK + Maria [Ainzey?~]",
+      "urkunde": "'Ptb. liber. cons. etc. copulirt № 42' [~X-OPEN]",
+      "opomba": "★★★★★ EDINI-KORPUSNI-VPIS-1830 (h22-3.-zaporedno-leto!); duel-Milek-4×-1:1 + [~Miller/Milet-alt-DVOJMA-1828/1829!"
+    },
+    {
+      "m": 5, "row": 8, "datum": "17. [Febr] 1830",
+      "zenin": "Georg [Khaphing?~Kaphing/Knaphaiz — DUEL]",
+      "vas_zenin": "[~Kringlace?~Kliwoglas/Krioglauz — VAS-GARBLE]",
+      "hisa_zenin": 29, "star_zenin": 20,
+      "nevesta": "Anna [Tong?~Kong — DUEL]",
+      "vas_neveste": "[~Pamaets?~Primofel/[~Mauth — VAS-GARBLE]",
+      "hisa_neveste": "[~11|14-DUEL — w2-'1'-visoka!]",
+      "star_neveste": 18,
+      "starši_zenin": "Georg Khaphing + Margaretha ANGEL (m3-družina!)",
+      "starši_neveste": "Martin Tong + Agnes [Felzi?~]",
+      "priči": "Math. ANGEL + Georg Tong",
+      "opomba": "Khaphing-družina-×2-vrstici (m5 + m6-nevesta-Maria — ista-hiša-29!)"
+    },
+    {
+      "m": 6, "row": 9, "datum": "18. [März?] 1830",
+      "zenin": "Mart. [Kosolt?~Kosalth/Kofelt — DUEL]",
+      "vas_zenin": "Möttling = METLIKA (1.-omemba-notranjosti!)",
+      "hisa_zenin": "[~140|110|40-DUEL — w2-8×-'140'-srednja!]",
+      "star_zenin": 29,
+      "nevesta": "Maria [Khaphing?~Kraphing/Krafing — DUEL]",
+      "vas_neveste": "[~Kringlace?~Kliwoglas]",
+      "hisa_neveste": 29, "star_neveste": 22,
+      "starši_zenin": "Peter Kosolt + Anna Maria",
+      "starši_neveste": "Georg [Khaphing?] + Margaretha [Brugel?~]",
+      "priči": "Georg [Tschon?] Elise. Leopold + Martin [Gorlath?~]",
+      "opomba": "METLIKA-140: hiša-v-mestu (Möttling = Metlika!)"
+    },
+    {
+      "m": 7, "row": 10, "datum": "[~21.?|26.?-Juni-DUEL (w2-'1:19'-starost!)] 1830",
+      "zenin": "Mart. [Schunigh?~Schunick — DUEL]",
+      "vas_zenin": "[~Vashtaniz?~Staniz — VAS-GARBLE-X-OPEN (w2-'…Staniz'-jasno-'…Staniz'!)]",
+      "hisa_zenin": 10, "star_zenin": 19,
+      "nevesta": "Maria [May?~Mag.]",
+      "vas_neveste": "BORŠT (duel 'Borfst' + census 'Bersht' + w2 'Boršt' — 3× 1:1!)",
+      "hisa_neveste": 20, "star_neveste": 16,
+      "starši_zenin": "Matt. [Schunigh?] + Catharina [Bais?~]",
+      "starši_neveste": "Math. [May?] + Maria [Kegig?~]",
+      "priči": "Georg [Tschik?~] + Peter [Kegig?~]",
+      "urkunde": "'Mit vaterseitl. Erlaubnis …' [~X-OPEN]",
+      "opomba": "★★★ BORŠT-20 (2.-Boršt-hiša-01738-po-h18-P256!); hiša-10-jasno-w2 ('40' zavržen!)"
+    },
+    {
+      "m": 8, "row": 11, "datum": "30. Juni 1830",
+      "zenin": "Johann [TaNofznigh?~Sebastianig/Josefich — 3-branja-DUEL]",
+      "vas_zenin": "[~Zarkwishe?~Tscheilfe/Zerkinjef — VAS-GARBLE]",
+      "hisa_zenin": 7, "star_zenin": 26,
+      "nevesta": "Anna [Lenough?~Lehenich — DUEL]",
+      "vas_neveste": "[~Zarblinge?~Tscheilfe — VAS-GARBLE]",
+      "hisa_neveste": 16, "star_neveste": 26,
+      "starši_zenin": "Jakob [Scheckigh?~] + Maria",
+      "starši_neveste": "Lorenz [Kambigh?~KAMBIC-nit-kand.!] + Anna [Hoeffmingh?~(Josepha?)]",
+      "priči": "Anna [Kangh?~] + Mich. [Kopp?~]",
+      "opomba": "ZADNJI-VPIS-1830; census-napaka-'(otrok-mrg.-Petra-Minih)'-marginalija [~X-OPEN]"
+    }
+  ],
+  "korpusUcinek": {
+    "noviBloki": 1,
+    "vitals": "2032 → 2033",
+    "byBook01738": "20 → 21",
+    "h22": "3.-ZAPOREDNO-LETO (1828+1829+1830) — h22-firstYear-OSTAJA-1828 (P255!); [~X-OPEN: Miller-ali-Milek-družina? (oče-Joh.-1830-vs-oče-Josc.-1829!)] + h22↔h65-Milek-vezava-kand.",
+    "kraji": "METLIKA-140 (1.-omemba!) + BORŠT-20 (2.-hiša!) + [~Kaplja?]-7 + [~Gurila]-8 + [~Dobrnič]-8/17/23 + [~Zarkwishe]-15/7 + [~Kringlace]-29-×2 + [~Vashtaniz]-10 + [~Zarblinge]-16 + [~Pamaets]-11"
+  },
+  "xOpen": [
+    "m1-vas-ž [~Krajnog/Kriesing/Krajinc] + vas-neveste [~Kaplja-vas|Strophe] — 2-garble-VASI",
+    "m2-vas-ž [~Gurila/Schurla] + vas-neveste [~Dobravič/Dobrnič/Döbmniz]",
+    "m3-priimek-6-branj (Kojnig-črko-za-črko-vs-Krajnc-census-vs-Kozina-row!)",
+    "m4-priimek-ž [~Moosin/Mogorin/Masinn] + vas [~Zarkwishe/Zarkwische/Zerkinjef/Tscheilfe]",
+    "m5-hiša-neveste [~11|14] + vas [~Pamaets/Primofel/~Mauth]",
+    "m6-hiša [~140|110|40] + priimek [~Kosolt/Kosalth/Kofelt]",
+    "m7-datum [~21.|26.] + vas [~Vashtaniz/Staniz/Kofland]",
+    "m8-priimek [~TaNofznigh/Sebastianig/Josefich] + marginalija-'(otrok-mrg. Petra Minih)'",
+    "h22-Milek/Miller-DVOJMA (oče-Joh.-Milek-1830 vs-oče-Josc.-Miller-1829 — ista-družina?)",
+    "duhovniki-1830: [~Khan-Morgglin?/~Hranaf?/~Hennig?/~Stamöffi?] — 4-garble"
+  ],
+  "p258": "1831 (s7) + meja-1831/32 (s8): P257-del-2!"
+}

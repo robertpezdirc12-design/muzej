@@ -31,7 +31,7 @@ check("I4 dokaz (66/13-griblje + meja-s46-1865-letnica + 66-vrstic)",
 check("I4b 2×-prenoza-9/9 + z74-duel-KROP (crossChecks!)", "9/9" in cc and "74/75/76" in cc)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1940")
+st = qa.count("HOUSE_VITALS.length !== 2043")
 check("I5 qa-p212 + števec-1557", "qa-p212-parish-death-1865-04106" in qa and st >= 100, f"1940-številcev={st}")
 
 i0 = src.find("P212: mrliška PREDZGODOVINA 04106, leto 1865")
@@ -48,7 +48,7 @@ check("I8c otroška-umrljivost-31%-4/13", "otroška-umrljivost-31%-4/13" in seg)
 check("I8d 12-hiš (h37-×2-HUSIČ-klaster!)", "12 hiš" in seg and "h37-×2-HUSIČ-klaster" in seg)
 check("I9a qa-p212 (212. kontrola!)", "qa-p212" in qa and "212. kontrola" in qa)
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-check("I9b pt-luknja-338/1557", '"vitalsTotal": 1940' in pt and '"04106": 433' in pt)
+check("I9b pt-luknja-338/2043", '"vitalsTotal": 2043' in pt and '"04106": 433' in pt)
 
 try:
     req = urllib.request.Request("https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/04106/",

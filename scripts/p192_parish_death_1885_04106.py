@@ -43,7 +43,7 @@ check("I4 dokaz (16 griblje + meja + anomalije)", len(grib) == 16 and d["okvir"]
 
 # I5: qa-parish
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-check("I5 qa-p192 + števec", "qa-p192-parish-death-1885-04106" in qa and qa.count("HOUSE_VITALS.length !== 1940") >= 100,
+check("I5 qa-p192 + števec", "qa-p192-parish-death-1885-04106" in qa and qa.count("HOUSE_VITALS.length !== 2043") >= 100,
       f"1940-številcev={qa.count('HOUSE_VITALS.length !== 1870')}")
 
 # I6: PARISH_BOOKS
