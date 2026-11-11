@@ -1,0 +1,69 @@
+{
+ "faza": "P251",
+ "naslov": "POROČNA PREDZGOVINA 04455 — leto 1873 = 13/13 KONČNO (ZAKLJUČEK predzgodovine!) — m18–m21 na Pag. 1 (s2), m1–m17 v predhodniku",
+ "datum": "2026-11-11",
+ "vir": "poročna knjiga 04455 (Trauungs-Buch), župnija Podzemelj, Matricula Online — skeni s1–s2 (+s3-križna-meja) == vezalo + Pag. 1 (+ Pag. 2); s1 = vezalo 1664×1800 px; s2 = razprti list 2448×1800 px; hosted-images-URL trailing-pattern P%20Podzemelj%201873-1922-00NN.jpg; inventar 192 slik (base64 /image/ dekodiran)",
+ "frame": {
+  "knjizno_odpiranje": "★★★ KONČNA-POTRDITEV-P251 — KNIŽNO-ODPIRANJE-04455 1:1 (P250-napoved-IZPOLNJENA!): s1 = VEZALO KNJIGE (rjava-povezava, arhivska-nalepka '…KNJIGA' [?prejšnja-beseda], BREZ-naslovnice/pečatov!) → s2 = 'Pag. 1' = PRVA-tabelarna-stran (tiskana-glava 'Trauungs-Buch' čez-odprtje!) — prva-marginala-na-strani = **18** = strukturni-dokaz: vpisi-m1–m17-leta-1873-NISO-V-TEJ-KNJIGI (nadaljevanje-iz-predhodnika-knjige!) — 1873 = SAMO-m18–m21 (4-vpisi!) — PREDZGOVINA-13/13-KONČANA",
+  "meja_1873_74": "★★★ MEJA-1873/74 = s2-MID/DNO = 13.-MEJNA-VARIANTA-1:1-RE-VERIFIKACIJA-P251-očesi (m21-'26.-Novembris-1873' → m1-'1874 Jänner [19~18-DUEL!]'-NA-ISTI-STRANI!-brez-finis!-brez-velike-glave!-m1-ženin-Jakob-PAŠIČ-34-l-×-nevesta-Anna-KUNIČ-34-l-OBÉ-WRANOVIČ-14-[~VRANOVIČI!-village-real!-NI-Griblje!])",
+  "foliacija": "★★★★★ FOLIACIJA-'Pag-=-sken−1'-1/1-1873: s2-'Pag. 1' (očesi+VLM-2:1!-z-kljukico-ozanko!) — pravilo-drži-TUDI-NA-ODPIRANJU-KNJIGE → SKUPAJ-29/29-V-ZAPOREDNIH-LETIH-8.-LETO!",
+  "numbering": "★★★ ŠTEVILČENJE-1873-TAIL: marginala-18–21-NA-PRVI-STRANI-KNJIGE (nakladalno-številčenje-iz-predhodnika!-m18-top→m21-končni-pred-restartom-1874!) — vpisi-BREZ-preskokov-v-vidnem-delu — NODAT-×0-6.-leto!",
+  "dovgan_13_let": "★★★★★ DOVGAN-CONTINUUM-PODALJŠAN-NA-13-LET (1873–1885!): m18+m20+m21 = podpis-'Franz-Dovgan' (solo-VLM-'D'-z-zanko-'-gan'-ZAVRŽEN-'Vogran'-duel!-isti-roka-×3-parafa-'M.'-pod-vsemi!) — P250-'12-LET'-PODALJŠAN-ZA-1-LETO-NAZAJ-NA-ODPIRANJE-KNJIGE!-izjemi-×2: m19-'Daniel-Teržek' [~Teršek; cf.-P250-'Dames-FERCHER'-MISREAD-kand.-X-OPEN!]-+'Hegrič'-1884-m27 [~X-OPEN]",
+  "pezdirc_13_let": "★★★★★ PEZDIRC-MARRIAGE-CONTINUUM-1873–1885-=-13/13-LET-VSEH (cf.-krstna-04104-PEZDIRC-×131-edini-v-vseh-15-letih!): m20-NEVESTA-Maria-PEGDIRE-GRIBLJE-50 (oče-Marcus-PEGDIRE!-mikro-1:1-'Pegdire'-NE-'Pozdič'!) = PEZDIRC-že-na-ODPIRANJU-knjige — P249-napoved-'PEZDIRC-že-1873!'-IZPOLNJENA-KOT-BLOK!",
+  "datum_vzorec": "4-datumov-BREZ-duelov-v-končnem-stanju: m18-'1873 Juni 11.'-letnica-glava-samo-1× (na-vrhu-datumski-stolpec!) · m19-'Augst. 23.'-[očesi-7×-'Augst'-=avgust!-kronologija-Juni<Aug<Nov-SKLAD!-pass1-'avgust'-2:1!-'Jänner'-očesna-zamik-RAZREŠENA!] · m20-'Novem(b). 5.'-mesec-kratnica · m21-'26. Nov(emb).'-dan-prvi"
+ },
+ "stats": {
+  "entries": 4,
+  "gribljeMarriages": 4,
+  "gribljeBlocks": 2,
+  "polniDvojni": 2,
+  "vpisiBrezM4": 4,
+  "nodat": 0
+ },
+ "bloki": [
+  {
+   "vpis": "m18",
+   "h13": "POLNI-DVOJNI-BLOK-1: ženin-Mathias-[J/G]ABOVŠIČ-[~Jahovšič/Gahovšič-4-branja!]-42-l-GRIBLJE-13 (1:1-13!) × nevesta-Maria-HRIŽAN-[~Križan-DUEL!-'H'-podaljšan-lok!]-32-l-GRIBLJE-62-[63-DUEL-RAZREŠEN-letterform-'2'-1:1-referenca-m20-'22'!-11×-krop!]-starši: Mathias-Gabovšič-×-Barbara-ŠIMEC | Mathias-HRIŽAN-×-Maria-MILEK-[~Mileh!] — zettel-'vom-Gemeindeamte-in-Griblje-dd.-8-Juni-1873'-duhovnik-Franz-DOVGAN"
+  },
+  {
+   "vpis": "m20",
+   "h22": "POLNI-DVOJNI-BLOK-2: ženin-Johann-MILEK-Innmann-[Inwohner!]-39-l-[34-očesna-zamik-RAZREŠENA-4×-očesi-'39'!]-GRIBLJE-22-[26-DUEL-RAZREŠEN-6×-dva-'2'-1:1!] × nevesta-Maria-PEGDIRE-26-l-GRIBLJE-50-[50~51-P250-DUEL-RAZREŠEN-'50.'-1:1!]-starši: Johann-Milek-×-Anna-ŠIMEC | Marcus-PEGDIRE-×-Anna-Schweiger-[~]-priči: Anton-ŠIMEC-(Innmann)-+-Marcus-HRIŽAN-[~Križan] — zettel-'vom-Gemeindeamte-in-Griblje-dd.-25-Oktober-1873'-duhovnik-Franz-DOVGAN"
+  }
+ ],
+ "kontekst": [
+  {
+   "vpis": "m19",
+   "vsebina": "NI-blok: ženin-'von-Josef-Narzis-[~Narziß]-IBERER-[~Überer]-h.h.-Leining-[~]-genannt…' [X-OPEN-uradnik/plemič-vzorec-1.-TE-VRSTE-V-PREDZGOVINI!]-34-l-KLAGENFURT-34-[~348]-MIGRANT!-×-nevesta-Maria-Eva-Auguška-[~Anguška]-HOMOLSCH-[~Homolitsch-'Stomašek'-očesna-zamik-RAZREŠENA!]-19-l-GRADAC-1-starši: Josef-×-Maria | Anton-HOMOLITSCH-×-Maria-JEZERNIK-[~Jeßernig!]-priča-Martin-JUBARZ-[~]-+ črni-prečrtan-podpis-+-vijolični-naknadni-zapisi-+ MÖTTLING-pripis!-zettel-[X-OPEN-garble]-duhovnik-'Daniel-TERŽEK'-[~Teršek; cf.-P250-'Dames-FERCHER'-MISREAD-kand.!]"
+  },
+  {
+   "vpis": "m21",
+   "vsebina": "NI-blok (vas-X-OPEN-≠-Griblje!): istoimenski-PAR-'Mathias-[J/G]ABOVŠIČ'-32-l-(Innmann!)-×-'Maria-GABOFAIČ-[~isti-priimek-družina!]'-22-l-OBÉ-'VETRHVIŠČE'-12-×-10-[X-OPEN-vas!-kandidati-Vetrhvišče/Vrthovišče/Lothvišče-'ē'-končnica!]'-starši: Mathias-×-Maria-KUNIČ | Georg-×-Uršula-[X-OPEN]-priči: Mathias-KUNIČ-(Innmann)-+-Milek?-Gabovšič-[~] — zettel-'vom-Gemeindeamte-PODZEMELJ-dd.-18-November-1873'-duhovnik-Franz-DOVGAN"
+  }
+ ],
+ "anomalie": [
+  "★★★ h13-04455-firstYear-1882→1873-DVIG-ZA-9-LET (P241-'h13-CONTINUUM-3-poročna-vpisa'-→-4-+ 1873-m18!)",
+  "★★★ h50-04455-firstYear-1879→1873-DVIG-ZA-6-LET (P244-v7-ženin-Pezdirc-→-m20-nevesta-Maria-PEGDIRE!-PEZDIRC-hiša-50-6-let-prej!)",
+  "★★★★★ h22-04455-firstYear-1898→1873-DVIG-ZA-25-LET (2.-NAJVEČJI-DVIG-PREDZGOVINI-za-h44-23-P248!-Johann-MILEK-Innmann-nova-Milek-hiša-≠-h65!)",
+  "★★★★★ h62-04455-firstYear-1893→1873-DVIG-ZA-20-LET (3.-NAJVEČJI!-Maria-HRIŽAN-nevesta!-h62-že-5-blokov-1893–1908!)",
+  "★★★ 4-DVIGI-V-1-LETU-ZAKLJUČEK (h22-25!-h62-20!-h13-9!-h50-6!-cf.-P250-10-DVIGOV-REKORD!)",
+  "★★★ 2-POLNI-DVOJNI-V-4-VPISIH (50%-količnik-REKORD-predzgovine!-h13×h62-+-h22×h50!-cf.-P250-2-v-11!)",
+  "★★★★★ DOVGAN-13-LET (1873–1885!-continuum-na-odpiranju-knjige!-'Vogran'-duel-RAZREŠEN-solo-VLM-'D'-z-zanko!)",
+  "★★★★★ PEZDIRC-MARRIAGE-CONTINUUM-13/13-LET-VSEH (1873–1885!-Maria-PEGDIRE-h50-oče-Marcus!)",
+  "★★★ MILEK-×2-v-1-letu-1873 (m20-ženin-Johann-h22-NOVA-Milek-hiša-≠-h65-Mathias!-+ m18-mati-Maria-Milek!-h65-P246/P250-PARALELA!)",
+  "★★★ HRIŽAN-×3-v-1-letu (m18-nevesta-+-m18-oče-Mathias-+-m20-priča-Marcus!-cf.-P250-HRIŽAN-×4!)",
+  "★★★ ŠIMEC-×3-v-1-letu (m18-mati-Barbara-+-m20-mati-Anna-+-m20-priča-Anton!-cf.-P249-priča-Nicolaus-Šimec!)",
+  "★★★ KUNIČ-križ-×3 (m21-mati-Maria-KUNIČ-+-m21-priča-Mathias-KUNIČ-+-1874-m1-nevesta-Anna-KUNIČ-kontekst-meja!)",
+  "★★★ MIGRANT-KLAGENFURT-'von…h.h.Leining-genannt'-uradnik/plemič-vzorec-1.-TE-VRSTE (m19!-cf.-P248-Lingl-OFFICIER-Graz-P249-Šolnar-Ribnica!)",
+  "★★★ m19-MÖTTLING-pripis (cf.-P248-v14-P249-v16-Mötthling-vzorec!)",
+  "★★★ ISTOIMENSKI-PAR-m21 (Mathias-Gabovšič-×-Maria-Gabofaič-[~]-cf.-P246-IZMENA-VLOG-vzorec!)",
+  "★★★ VETRHVIŠČE-X-OPEN-VAS (m21-12-×-10!-kandidati-Vetrhvišče/Vrthovišče/Lothvišče!)",
+  "★★★ P250-DUELI-RAZREŠENI-×4 (m18-'[62~66]'→62!-m20-'[22~26]'→22!-m20-'[50~51]'→50!-m19-'Dames-FERCHER'→'Daniel-Teržek' [~X-OPEN-kand.!])",
+  "★★★ m19-datum-'Augst. 23.' (očesi-7×!-kronologija-SKLAD!-'Jänner'-očesna-zamik-RAZREŠENA-pass1-'avgust'-2:1!)",
+  "★★★ s1-vezalo-'…KNJIGA'-arhivska-nalepka (prejšnja-beseda-[?]-brez-naslovnice/pečatov!)",
+  "★★★ m1-1874-datum-'[19~18]-DUEL' (P250-19!-očesi-'18.'-Kurrent-9~8-nerazločljiva-11×!-pošteno-X-OPEN!)",
+  "★★★ m1-1874-OBÉ-WRANOVIČ-14 (očesi-1:1-'Wranovič'!-=VRANOVIČI-village-real!-P250-'Kramarše~?'-kand.-RAZREŠEN!)"
+ ],
+ "hišnaSinhronizacija": "h13: 04455-{1882,1883,1885,1910}+1873 ✓-DVIG! · h22: 04455-{1898×2,1904,1919}+1873 ✓-DVIG-25-LET! · h50: 04455-{1879,1903}+1873 ✓-DVIG! · h62: 04455-{1893,1898,1904,1906,1908}+1873 ✓-DVIG-20-LET! · h65-MILEK-P246/P250-paralela-Johann-1873-nova-Milek-hiša",
+ "metoda": "2-skena-s1–s2-(+s3-križna-meja)-md5-2×-neodvisen-prenos-1:1 (s1-ad8dac44…-s2-e5e80851…-s3-2618ab67…!-inventar-192-URL-base64-dekodiran!) + Read-očesi-NAJPREJ-×2-strani-P244-LEKCIJA (knjižno-odpiranje-18-NA-OČESA!-Pag.-1!) + VLM-pass-1-×2 (s1-vezalo-specialni-+ s2-polni-prepis!-2/2-1.-poskus!) + solo-krops-×7 (priest-compare-3-image!-m18-bride-m20-groom-m21-vase-m18-groom-m19-groom!) + solo2-zoomi-×5 (m19-priest-6×!-m20-ghouse-6×!-m21-bname-5×!-m19-bride-4×!-m18-bhouse-6×-MIS!) + očesi-deciser-×6 (m18_bhouse-5×!-m19_bridecell-5×!-m19_gname-5×!-m19_gw-6×!-m19_date-7×!-m20_growcell-4×!-m18_bnum-11×-2×!) + mikro-forenzika-letterform ('2'-vs-'3'-'b'-referenca-m20-'22'!-'H'-vs-'K'-'D'-vs-'V'-'F'-vs-'T'!) + kronološka-verifikacija (Juni<Aug<Nov-SKLAD!-'Augst'-RAZREŠEN!) + reconciliacija-z-P250-tail (m1-1874-Wranovič-14-očesi-1:1!) — SANACIJA: JSON-parish-marriage-1873-04455.json (NOV-korpus-frame-knjizno_odpiranje/meja_1873_74/foliacija/numbering/dovgan_13_let/pezdirc_13_let/datum_vzorec-+ bloki-×2-+ kontekst-×2-+ anomalie-×21-+ metoda!)",
+ "lead": "P252+: POROČNA-PREDZGOVINA-13/13-ZAKLJUČENA (1873–1885!) — naslednja-faza-po-izbiri-uporabnika: ① SINTEZA-PREDZGOVINE (cf.-P236-krstna-15/15-sinteza!-mreže-hiš/PEZDIRC/DOVGAN/folijacija-29/29!) ② hišne-zgodbe-globlje ③ predhodnik-knjige-04455 (m1–m17-1873!-ali starejša-knjiga!) · deploy: GitHub-origin-žeton-#8-+-GitLab-mirror-workflow-(path-POPREVLJEN-robert.pezdirc12/muzej!)-+-Vercel-avtomatsko"
+}

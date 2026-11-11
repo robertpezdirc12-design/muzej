@@ -19,7 +19,7 @@ check("I1 bloki 04455/1876 == 6 (h31+h44+h35+h64+h41+h30!)",
 check("I1b vrstni-red-6 (31,44,35,64,41,30!-s11×2+s12×2+s13+s14!)",
       bloki == ["31", "44", "35", "64", "41", "30"], ",".join(bloki))
 skupaj = src.count('bookSignature: "04455"')
-check("I2 vitals-2008 + 04455==265", "HOUSE_VITALS.length !== 2008" not in src and skupaj == 265, f"04455={skupaj}")
+check("I2 vitals-2012 + 04455==269", "HOUSE_VITALS.length !== 2011" not in src and skupaj == 269, f"04455={skupaj}")
 
 nove = re.findall(r'houseNo: "([^"]+)",\s*bookSignature: "04455",\s*year: 1876,\s*scan: (\d+),\s*page: (\d+),', src)
 check("I3 skeni+pagi (11/10 ×2 · 12/11 ×2 · 13/12 · 14/13 — pag=sken−1!)",
@@ -56,12 +56,12 @@ check("I4c sreda-ritem + DISPENS-3.-GRAD + 'f'-forenzika + '8-vs-2' + IZMENA-×2
       and "IZMENA-VLOG-×2" in an2 and "P229-z79" in an2)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 2008")
-check("I5 qa-p248 + števec-1996 (×150!)", "HOUSE_VITALS.length !== 1990" not in qa and st >= 150, f"2008-številcev={st}")
-check("I5b sidra-246 + 1876:6-P248 (qa-sidra-message)", "poročna sidra ≠ 258 (1874:11-P250! · 1875:1-P249! · 1876:6-P248!" in qa)
-check("I5c dobe-220 + 50-pred-linijskih", "dobe-bloki ≠ 232/7/26" in qa and "62 pred-linijskih 1874-P250×11!+1875-P249×1!+1876-P248×6!" in qa)
+st = qa.count("HOUSE_VITALS.length !== 2012")
+check("I5 qa-p248 + števec-2012 (×150!)", "HOUSE_VITALS.length !== 1990" not in qa and st >= 150, f"2012-številcev={st}")
+check("I5b sidra-262 + 1876:6-P248 (qa-sidra-message)", "poročna sidra ≠ 262 (1873:4-P251! · 1874:11-P250! · 1875:1-P249! · 1876:6-P248!" in qa)
+check("I5c dobe-220 + 50-pred-linijskih", "dobe-bloki ≠ 236/7/26" in qa and "66 pred-linijskih 1873-P251×4!+1874-P250×11!+1875-P249×1!+1876-P248×6!" in qa)
 check("I5d p80-1876:6-garda + sken-range-11–14", 'p80MarrAnchors.filter((h) => h.year === 1876).length !== 6' in qa and "skeni izven 11–14" in qa and "skeni izven 10–14" not in qa)
-check("I5e MILIČ-241 + p85-izjemi-h30/h41-1876", "MILIC_FAMILY_TOTAL !== 243" in qa and 'v.year === 1876 && (hn === "30" || hn === "41"))' in qa)
+check("I5e MILIČ-247 + p85-izjemi-h30/h41-1876", "MILIC_FAMILY_TOTAL !== 247" in qa and 'v.year === 1876 && (hn === "30" || hn === "41"))' in qa)
 
 i0 = src.find("P248: POROČNA PREDZGOVINA 04455, leto 1876")
 seg = src[i0:] if i0 >= 0 else ""
@@ -93,7 +93,7 @@ pt = json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding
 h44 = [x for x in pt["gapHouses"] if x["houseNo"] == "44"][0]
 h51 = [x for x in pt["gapHouses"] if x["houseNo"] == "51"][0]
 check("I8a pt-luknja-2008 + byBook-04455=265",
-      pt.get("vitalsTotal") == 2008 and pt.get("corpus", {}).get("byBook", {}).get("04455") == 265,
+      pt.get("vitalsTotal") == 2012 and pt.get("corpus", {}).get("byBook", {}).get("04455") == 269,
       f"vitalsTotal={pt.get('vitalsTotal')} 04455={pt.get('corpus', {}).get('byBook', {}).get('04455')}")
 check("I8b h44-posodobljen (24-blokov/04455=6/firstYear=1876/p248Note!) + h51-intakten (6/2!)",
       h44["blocksTotal"] == 24 and h44["byBook"]["04455"] == 6 and h44["firstYear"] == 1876 and "p248Note" in h44

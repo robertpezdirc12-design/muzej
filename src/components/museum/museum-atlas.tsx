@@ -195,6 +195,17 @@ import {
   DOVGAN_1876_ZACETEK,
   MARRIAGE_1876_DUELS,
   MARRIAGE_1876_KONTEKST,
+  MARRIAGE_1873_BLOCKS,
+  MARRIAGE_1873_GRIBLJE,
+  MARRIAGE_1873_TOTAL,
+  MARRIAGE_1873_MEJA,
+  KNIŽNO_ODPIRANJE_1873,
+  FIRSTYEAR_1873_DVIGI,
+  DOVGAN_1873_ZAČETEK,
+  PEZDIRC_1873_ODPIRANJE,
+  MARRIAGE_1873_NITI,
+  DATUMI_1873,
+  MARRIAGE_1873_METODA,
   MARRIAGE_1874_BLOCKS,
   MARRIAGE_1874_GRIBLJE,
   MARRIAGE_1874_TOTAL,
@@ -1549,6 +1560,98 @@ function MarriageEarly1879() {
   );
 }
 
+function MarriageEarly1873() {
+  const { t } = useLang();
+  return (
+    <div className="rounded-xl border bg-card/60 p-5">
+      <h3 className="flex items-center gap-2 font-serif text-lg font-semibold">
+        <BookOpen className="h-4 w-4 text-primary" aria-hidden />
+        {t(
+          "Poročna predzgodovina 04455 (P251): leto 1873 = 13/13 KONČNO — PREDZGOVINA ZAKLJUČENA!",
+          "The marriage prehistory 04455 (P251): the year 1873 = 13/13 FINALLY — THE-PREHISTORY-COMPLETE!",
+        )}
+      </h3>
+      <p className="mt-2 text-sm text-muted-foreground">
+        {t(
+          `13/13 poročne predzgodovine (1873–1885): skena s1–s2 (+ s1-vezalo!-s3-križna-meja!), ${MARRIAGE_1873_TOTAL} vpisov 1873 (m18–m21; m1–m17 v predhodniku!) — BREZ preskokov. KONČNA-potrditev-KNIŽNEGA-ODPIRANJA (prva-marginala-18!) + ${MARRIAGE_1873_GRIBLJE} BLOKI (2-POLNA-DVOJNA = 50%-REKORD!) + 4-DVIGI (h22-25-LET!-h62-20-LET!-h13-9!-h50-6!) + DOVGAN-13-LET (1873–1885!) + PEZDIRC-13/13-LET-VSEH!`,
+          `13/13 of the marriage prehistory (1873–1885): scans s1–s2 (+ s1-the-cover!-s3-cross-boundary!), ${MARRIAGE_1873_TOTAL} entries of 1873 (m18–m21; m1–m17 in a predecessor!) — WITHOUT skips. THE-FINAL-CONFIRMATION-of-the-BOOK-OPENING (the-first-margin-18!) + ${MARRIAGE_1873_GRIBLJE} BLOCKS (2-FULL-DOUBLES = the-50%-RECORD!) + 4-FIRSTYEAR-LIFTS (h22-25-Y!-h62-20-Y!-h13-9!-h50-6!) + DOVGAN-13-YEARS (1873–1885!) + PEZDIRC-13/13-YEARS-ALL!`,
+        )}
+      </p>
+
+      {/* Griblje poroke 1873 — vrstni red blokov */}
+      <div className="mt-4 rounded-lg border bg-background/60 p-4">
+        <h4 className="text-sm font-semibold">
+          {t("Griblje poroke 1873 — 2 bloka = 4 hiše (×2 POLNA DVOJNA!)", "The Griblje marriages 1873 — 2 blocks = 4 houses (×2 FULL-DOUBLES!)")}
+          <span className="ml-2 rounded-full border px-2 py-0.5 text-[10px] font-medium text-primary">
+            ×{MARRIAGE_1873_GRIBLJE}
+          </span>
+        </h4>
+        <div className="mt-3 grid gap-2 sm:grid-cols-4">
+          {MARRIAGE_1873_BLOCKS.map((h) => (
+            <div key={h.houseNo + h.scan + h.whatSi.slice(40, 80)} className="rounded border bg-card/60 px-2 py-1.5 text-center min-w-0 [overflow-wrap:anywhere]">
+              <div className="text-xs font-semibold tabular-nums">h{h.houseNo}</div>
+              <div className="text-[9px] text-muted-foreground">s{h.scan} · Pag. {h.page}</div>
+            </div>
+          ))}
+        </div>
+        <p className="mt-1.5 text-[11px] font-mono text-muted-foreground">
+          {t("m18: h13 × h62 (POLNI DVOJNI!) · m20: h22 × h50 (POLNI DVOJNI!) — m19 (Klagenfurt × Gradac) + m21 (Vetrhvišče [~X-OPEN]) = NI bloka", "m18: h13 × h62 (FULL-DOUBLE!) · m20: h22 × h50 (FULL-DOUBLE!) — m19 (Klagenfurt × Gradac) + m21 (Vetrhvišče [~X-OPEN]) = NOT a block")}
+        </p>
+      </div>
+
+      {/* anomalije */}
+      <div className="mt-4 grid gap-3">
+        <div className="rounded-lg border border-emerald-600/40 bg-emerald-600/10 p-4 text-emerald-900 dark:text-emerald-100">
+          <h4 className="text-sm font-semibold">
+            {t("★★★★★ ZAKLJUČEK-PREDZGOVINE: 4-DVIGI (h22-25-LET-2.-NAJVEČJI!-h62-20-LET!-h13-9!-h50-6!) + 2-POLNA-DVOJNA-50%-REKORD", "★★★★★ THE-PREHISTORY-FINALE: 4-FIRSTYEAR-LIFTS (h22-25-Y-the-2nd-BIGGEST!-h62-20-Y!-h13-9!-h50-6!) + 2-FULL-DOUBLES-the-50%-RECORD")}
+          </h4>
+          <p className="mt-1.5 text-xs">
+            {t(FIRSTYEAR_1873_DVIGI.si, FIRSTYEAR_1873_DVIGI.en)}
+          </p>
+        </div>
+        <div className="rounded-lg border border-amber-600/40 bg-amber-600/10 p-4 text-amber-900 dark:text-amber-100">
+          <h4 className="text-sm font-semibold">
+            {t("★★★★★ PEZDIRC-13/13-LET-VSEH (Maria-PEGDIRE-h50!) + MILEK-×2 + HRIŽAN-×3 + ŠIMEC-×3 + KUNIČ-križ-×3", "★★★★★ PEZDIRC-13/13-YEARS-ALL (Maria-PEGDIRE-h50!) + MILEK-×2 + HRIŽAN-×3 + ŠIMEC-×3 + KUNIČ-cross-×3")}
+          </h4>
+          <p className="mt-1.5 text-xs">
+            {t(PEZDIRC_1873_ODPIRANJE.si, PEZDIRC_1873_ODPIRANJE.en)}
+          </p>
+          <p className="mt-2 text-[11px] text-muted-foreground">
+            {t(MARRIAGE_1873_NITI.si, MARRIAGE_1873_NITI.en)}
+          </p>
+        </div>
+        <div className="rounded-lg border border-sky-600/40 bg-sky-600/10 p-4 text-sky-900 dark:text-sky-100">
+          <h4 className="text-sm font-semibold">
+            {t("★★★ KONČNA-POTRDITEV-KNIŽNEGA-ODPIRANJA (marginala-18!-m1–m17-v-predhodniku!) + FOLIACIJA-29/29 + DOVGAN-13-LET + MEJA-13.-VARIANTA-RE", "★★★ THE-FINAL-CONFIRMATION-of-the-BOOK-OPENING (the-margin-18!-m1–m17-in-a-predecessor!) + FOLIACIJA-29/29 + DOVGAN-13-YEARS + the-13th-VARIANT-RE")}
+          </h4>
+          <p className="mt-1.5 text-xs">
+            {t(`${KNIŽNO_ODPIRANJE_1873.si} · ${DOVGAN_1873_ZAČETEK.si}`, `${KNIŽNO_ODPIRANJE_1873.en} · ${DOVGAN_1873_ZAČETEK.en}`)}
+          </p>
+          <p className="mt-2 text-[11px] text-muted-foreground">
+            {t(MARRIAGE_1873_MEJA.si, MARRIAGE_1873_MEJA.en)}
+          </p>
+        </div>
+        <div className="rounded-lg border border-rose-600/40 bg-rose-600/10 p-4 text-rose-900 dark:text-rose-100">
+          <h4 className="text-sm font-semibold">
+            {t("★★★ X-OPEN-1873: m19-uradnik-KLAGENFURT-'von…Leining' (1.-TA-VRSTA!) + 'Daniel-TERŽEK'-duel (cf.-P250-'FERCHER'!) + m21-'VETRHVIŠČE'-vas + istoimenski-par + m1-'[19~18]'-duel", "★★★ X-OPEN-1873: m19-the-KLAGENFURT-official-'von…Leining' (the-1st-OF-ITS-KIND!) + 'Daniel-TERŽEK'-duel (cf.-P250-'FERCHER'!) + m21-'VETRHVIŠČE'-village + the-same-surname-couple + m1-'[19~18]'-duel")}
+          </h4>
+          <p className="mt-1.5 text-xs">
+            {t(DATUMI_1873.si, DATUMI_1873.en)}
+          </p>
+        </div>
+        <div className="rounded-lg border bg-background/60 p-4">
+          <h4 className="text-sm font-semibold">
+            {t("Metoda P251 (md5-2×-neodvisen-1:1!-očesi-NAJPREJ!-solo-×12!-letterform-forenzika-'2'-referenca!-kronologija!)", "The P251 method (md5-2×-independent-1:1!-the-eyes-FIRST!-solo-×12!-letterform-forensics-the-'2'-reference!-chronology!)")}
+          </h4>
+          <p className="mt-1.5 text-[11px] font-mono text-muted-foreground">
+            {t(MARRIAGE_1873_METODA, MARRIAGE_1873_METODA)}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function MarriageEarly1874() {
   const { t } = useLang();
   return (
@@ -2573,6 +2676,7 @@ function ParishTab() {
       <MarriageEarly1878 />
       {/* P248: poročna predzgodovina 04455 — leto 1876 = 10/13 */}
       {/* P250: poročna predzgodovina 04455 — leto 1874 = 12/13 */}
+      <MarriageEarly1873 />
       <MarriageEarly1874 />
       {/* P249: poročna predzgodovina 04455 — leto 1875 = 11/13 */}
       <MarriageEarly1875 />

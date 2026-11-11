@@ -983,3 +983,67 @@ export const MARRIAGE_1874_KORPUS = {
   sidra: 258,
   dobe: 232,
 } as const;
+
+/** ————— P251 — POROČNA PREDZGOVINA 04455, leto 1873 = 13/13 KONČNO (ZAKLJUČEK predzgodovine!) ————— */
+
+/** m18–m21 = TAIL 1873 na Pag. 1 (s2): 4 vpisi, m1–m17 v predhodniku-knjigi. Griblje bloki: m18 (h13×h62-POLNI-DVOJNI!) + m20 (h22×h50-POLNI-DVOJNI!) = 4 hiše / 2 bloka-polna-dvojna. */
+export const MARRIAGE_1873_BLOCKS = HOUSE_VITALS.filter(
+  (h) => h.bookSignature === "04455" && h.year === 1873,
+);
+export const MARRIAGE_1873_GRIBLJE = MARRIAGE_1873_BLOCKS.length;
+export const MARRIAGE_1873_HOUSES = MARRIAGE_1873_BLOCKS.map((h) => h.houseNo);
+export const MARRIAGE_1873_TOTAL = 4;
+
+/** KONČNO-potrditev knjižnega odpiranja (P250-napoved-IZPOLNJENA): s1 = vezalo (nalepka '…KNJIGA' [?], brez naslovnice/pečatov!) → s2 = 'Pag. 1' = prva tabelarna stran z marginalo **18** = m1–m17-1873-NISO-v-tej-knjigi! + meja-1873/74 = s2-MID/DNO re-verifikacija (m1 = Wranovič 14 obé!). */
+export const KNIŽNO_ODPIRANJE_1873 = {
+  si: "★★★ KONČNA-POTRDITEV-P251: s1-vezalo (arhivska-nalepka-'…KNJIGA'-[?]-brez-naslovnice/pečatov!) → s2-'Pag. 1'-prva-tabelarna-stran-prva-marginala-**18** = m1–m17-1873-NISO-V-TEJ-KNJIGI (predhodnik!) — 1873-SAMO-m18–m21 (4-vpisi!) — PREDZGOVINA-13/13-ZAKLJUČENA · m1-1874-očesi-re: Jakob-PAŠIČ-×-Anna-KUNIČ-OBÉ-'Wranovič-14' [~VRANOVIČI!]-P250-'Kramarše~?'-kand.-RAZREŠEN!",
+  en: "★★★ THE-P251-FINAL-CONFIRMATION: s1-=-the-BOOK-COVER (archive-label-'…KNJIGA'-[?]-no-title-page/seals!) → s2-'Pag. 1'-the-FIRST-table-page-the-first-margin-number-**18** = m1–m17-1873-are-NOT-IN-THIS-BOOK (a-predecessor!) — 1873-ONLY-m18–m21 (4-entries!) — THE-PREHISTORY-13/13-COMPLETE · m1-1874-eyes-re: Jakob-PAŠIČ-×-Anna-KUNIČ-BOTH-'Wranovič-14' [~VRANOVIČI!]-the-P250-'Kramarše~?'-candidate-RESOLVED!",
+} as const;
+
+/** Meje-1873-re: 13.-VARIANTA-1:1-očesi + foliacija Pag. 1 = sken−1 = 29/29 (8. leto!) + številčenje 18–21 nakladalno iz predhodnika + NODAT-×0-6.-leto. */
+export const MARRIAGE_1873_MEJA = {
+  si: "★★★ MEJA-1873/74 = s2-MID/DNO = 13.-VARIANTA-1:1-RE-VERIFIKACIJA-očesi (m21-'26.-Novembris'→m1-'1874 Jänner [19~18-DUEL!]'-NA-ISTI-STRANI!) · ★★★★★ FOLIACIJA-'Pag-=-sken−1'-1/1-1873 (s2-'Pag. 1'!) → SKUPAJ-29/29-V-ZAPOREDNIH-LETIH-8.-LETO (pravilo-drži-tudi-NA-ODPIRANJU!) · številčenje: marginala-18–21-nakladalno-iz-predhodnika-BREZ-preskokov-v-vidnem-delu · NODAT-×0-6.-LETO!",
+  en: "★★★ THE-1873/74-BOUNDARY-=-s2-MID/BOTTOM-=-the-13th-VARIANT-1:1-EYES-RE-VERIFIED · ★★★★★ FOLIATION-'Pag-=-sken−1'-1/1-1873 → 29/29-TOTAL-ACROSS-CONSECUTIVE-YEARS-THE-8th-YEAR (the-rule-HOLDS-EVEN-AT-THE-BOOK-OPENING!) · numbering: margins-18–21-continuing-from-the-predecessor-NO-gaps-in-the-visible-part · NODAT-×0-THE-6th-YEAR!",
+} as const;
+
+/** ★★★★★ 4 DVIGI-V-1-LETU-ZAKLJUČEK: h22-ZA-25-LET (2.-NAJVEČJI-za-h44-23!) · h62-ZA-20-LET (3.!) · h13-ZA-9-LET · h50-ZA-6-LET. */
+export const FIRSTYEAR_1873_DVIGI = {
+  si: "★★★★★ 4-DVIGI-V-1-LETU-ZAKLJUČEK-PREDZGOVINE: h22-04455-firstYear-1898→1873-DVIG-ZA-25-LET (2.-NAJVEČJI-v-predzgodovini-za-h44-23-P248!-Johann-MILEK-Innmann!) + h62-1893→1873-ZA-20-LET (3.!-Maria-HRIŽAN!-h62-že-5-blokov-1893–1908!) + h13-1882→1873-ZA-9-LET (P241-continuum!) + h50-1879→1873-ZA-6-LET (P244-Pezdirc!) — cf.-P250-10-DVIGOV-REKORD!",
+  en: "★★★★★ 4-FIRSTYEAR-RISES-IN-1-YEAR-THE-PREHISTORY-FINALE: h22-1898→1873-BY-25-YEARS (the-2nd-BIGGEST-in-prehistory-after-h44-23!) + h62-1893→1873-BY-20 (the-3rd!) + h13-1882→1873-BY-9 + h50-1879→1873-BY-6 — cf.-the-P250-10-rises-record!",
+} as const;
+
+/** ★★★★★ DOVGAN-continuum-PODALJŠAN-NA-13-LET (1873–1885!) — podpisi že na odpiranju knjige (m18+m20+m21, isti roka ×3!). */
+export const DOVGAN_1873_ZAČETEK = {
+  si: "★★★★★ DOVGAN-CONTINUUM-PODALJŠAN-NA-13-LET (1873–1885!): m18+m20+m21 = 'Franz-Dovgan' (solo-VLM-'D'-z-zanko-'-gan'-konec-ZAVRŽEN-'Vogran'-duel!-isti-roka-×3-parafa-'M.'!) — P250-'12-LET'-PODALJŠAN-ZA-1-LETO-NAZAJ-NA-ODPIRANJE-KNJIGE!-izjemi-×2: m19-'Daniel-TERŽEK' [~Teršek; cf.-P250-'Dames-FERCHER'-MISREAD-kand.-X-OPEN!-6×-krop-'T'-z-vodoravno-'z/ž'-zanka-'-ek'-konec!]-+'Hegrič'-1884-m27 [~X-OPEN]",
+  en: "★★★★★ THE-DOVGAN-CONTINUUM-EXTENDED-TO-13-YEARS (1873–1885!): signatures-already-at-the-book-opening (m18+m20+m21-=-same-hand-×3!) — the-P250-'12-YEARS'-EXTENDED-BY-1-YEAR-BACK!-exceptions-×2: m19-'Daniel-TERŽEK' [~cf.-P250-'FERCHER'-MISREAD-candidate!]-+'Hegrič'-1884!",
+} as const;
+
+/** ★★★★★ PEZDIRC-marriage-continuum 1873–1885 = 13/13 let VSEH — Maria PEGDIRE (h50, oče Marcus!) že na odpiranju. */
+export const PEZDIRC_1873_ODPIRANJE = {
+  si: "★★★★★ PEZDIRC-MARRIAGE-CONTINUUM-1873–1885-=-13/13-LET-VSEH (cf.-krstna-04104-PEZDIRC-×131-edini-v-vseh-15-letih!): m20-NEVESTA-Maria-PEGDIRE-GRIBLJE-50 (oče-Marcus-PEGDIRE-mikro-1:1-'Pegdire'-NE-'Pozdič'!) = PEZDIRC-že-NA-ODPIRANJU-knjige — P249-napoved-'PEZDIRC-že-1873!'-IZPOLNJENA-KOT-BLOK!-+ P250-dueli-'[50~51]'→50!-'POZDIRC'→PEGDIRE!",
+  en: "★★★★★ THE-PEZDIRC-MARRIAGE-CONTINUUM-1873–1885-=-13/13-YEARS-ALL: bride-Maria-PEGDIRE-GRIBLJE-50 (father-Marcus!) = PEZDIRC-already-AT-THE-BOOK-OPENING — the-P249-forecast-FULFILLED-AS-A-BLOCK!",
+} as const;
+
+/** 2 POLNA-DVOJNA-v-4-vpisih (50%-količnik-REKORD!) + MILEK-nit + HRIŽAN-×3 + ŠIMEC-×3 + KUNIČ-križ-×3 + Klagenfurt-migrant + istoimenski-par + Vetrhvišče-X-OPEN. */
+export const MARRIAGE_1873_NITI = {
+  si: "★★★ 2-POLNA-DVOJNA-V-4-VPISIH-=-50%-količnik-REKORD-predzgovine (h13×h62-+-h22×h50!-cf.-P250-2-v-11!) · ★★★ MILEK-×2-v-1-letu-1873 (m20-ženin-Johann-h22-NOVA-Milek-hiša-≠-h65-Mathias-P246/P250!-+ m18-mati-Maria-Milek!-h65-PARALELA!) · ★★★ HRIŽAN-×3 (m18-nevesta-+ m18-oče-Mathias-+ m20-priča-Marcus!) · ★★★ ŠIMEC-×3 (m18-mati-Barbara-+ m20-mati-Anna-+ m20-priča-Anton!) · ★★★ KUNIČ-križ-×3 (m21-mati-+ priča-Mathias-+ 1874-m1-Anna-kontekst!) · ★★★ MIGRANT-KLAGENFURT-'von-Josef-Narzis-IBERER-h.h.-Leining-genannt…' [X-OPEN]-uradnik/plemič-vzorec-1.-TE-VRSTE (m19!-cf.-P248-Lingl-Graz-P249-Šolnar-Ribnica!)-+ m19-MÖTTLING-pripis + priča-Martin-JUBARZ + nevesta-'Maria-Eva-Auguška-HOMOLSCH' [~Homolitsch-'Stomašek'-RAZREŠEN!]-mati-'Maria-JEZERNIK' [~Jeßernig!] · ★★★ ISTOIMENSKI-PAR-m21 (Mathias-[J/G]abovšič-×-Maria-GABOFAIČ [~]-cf.-P246-IZMENA-VLOG!)-'VETRHVIŠČE'-12-×-10 [X-OPEN-VAS!]",
+  en: "★★★ 2-FULL-DOUBLES-IN-4-ENTRIES-=-50%-RATIO-RECORD (h13×h62-+-h22×h50!) · MILEK-×2 (h22-NEW-Milek-house-≠-h65!-+ mother-Maria-Milek!) · HRIŽAN-×3 · ŠIMEC-×3 · KUNIČ-cross-×3 · KLAGENFURT-MIGRANT-'von-Josef-Narzis-IBERER-h.h.-Leining-genannt…' [X-OPEN]-official/noble-pattern-the-1st-OF-ITS-KIND (m19!)-+ MÖTTLING-note + witness-Martin-JUBARZ + bride-'Maria-Eva-Auguška-HOMOLSCH'-mother-'Maria-JEZERNIK' · ISTOIMENSKI-PAR-m21-'VETRHVIŠČE'-12-×-10 [X-OPEN-VILLAGE!]",
+} as const;
+
+/** Datumi-1873-končno: 4-brez-duelov + m19-'Augst. 23.'-kronološko-rešeno. */
+export const DATUMI_1873 = {
+  si: "4-datumov-BREZ-duelov-v-končnem-stanju: m18-'1873 Juni 11.'-letnica-samo-na-vrhu-stolpca-1× · m19-'Augst. 23.'-[očesi-7×-'Augst'-=avgust!-kronologija-Juni<Aug<Nov-SKLAD!-pass1-'avgust'-2:1!-'Jänner'-očesna-zamik-RAZREŠENA!] · m20-'Novem(b). 5.' · m21-'26. Nov(emb).' — m1-1874-'[19~18]-DUEL'-X-OPEN-pošteno (P250-19!-očesi-'18.'-Kurrent-9~8-11×!)",
+  en: "4-dates-NO-duels-in-the-final-state · m19-'Augst. 23.'-chronology-RESOLVED (Juni<Aug<Nov-FITS!) · m1-1874-'[19~18]-DUEL'-X-OPEN-honestly",
+} as const;
+
+/** Metoda P251: 2 skena + s3-križna, md5 2× neodvisen 1:1, očesi-NAJPREJ, VLM-pass-1 ×2, solo ×12, očesi-deciser ×6. */
+export const MARRIAGE_1873_METODA =
+  "2-skena-s1–s2-(+s3-križna-meja)-md5-2×-neodvisen-prenos-1:1 (s1-ad8dac44…-s2-e5e80851…-s3-2618ab67…!-inventar-192-URL-base64-dekodiran!) + Read-očesi-NAJPREJ-×2-strani-P244-LEKCIJA (knjižno-odpiranje-18-NA-OČESA!-Pag.-1!) + VLM-pass-1-×2 (s1-vezalo-specialni-+ s2-polni-prepis!-2/2-1.-poskus!) + solo-krops-×7 (priest-compare-3-image!-m18-bride-m20-groom-m21-vase-m18-groom-m19-groom!) + solo2-zoomi-×5 (m19-priest-6×!-m20-ghouse-6×!-m21-bname-5×!-m19-bride-4×!-m18-bhouse-6×-MIS!) + očesi-deciser-×6 (m18_bhouse-5×!-m19_bridecell-5×!-m19_gname-5×!-m19_gw-6×!-m19_date-7×!-m20_growcell-4×!-m18_bnum-11×-2×!) + mikro-forenzika-letterform ('2'-vs-'3'-'b'-referenca-m20-'22'!-'H'-vs-'K'-'D'-vs-'V'-'F'-vs-'T'!) + kronološka-verifikacija (Juni<Aug<Nov-SKLAD!) + reconciliacija-z-P250-tail";
+
+/** Vse-nove-1873-meritve-v-obliki-za-QA (skupaj-04455: 265→269 · vitals: 2008→2012 · sidra: 258→262-1873:4! · dobe: 232→236-66-pred-linijskih!). */
+export const MARRIAGE_1873_KORPUS = {
+  skupaj04455: 269,
+  skupajVitals: 2012,
+  sidra: 262,
+  dobe: 236,
+} as const;

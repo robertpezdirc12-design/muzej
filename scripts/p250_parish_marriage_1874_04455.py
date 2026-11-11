@@ -18,7 +18,7 @@ check("I1 bloki 04455/1874 == 11 (REKORD!-h27-×2!)",
       len(bloki) == 11 and bloki == ["65", "7", "4", "27", "27", "33", "29", "30", "10", "43", "42"],
       f"najdeno {len(bloki)}: {','.join(bloki)}")
 skupaj = src.count('bookSignature: "04455"')
-check("I2 vitals-2008 + 04455==265", "HOUSE_VITALS.length !== 2008" not in src and skupaj == 265, f"04455={skupaj}")
+check("I2 vitals-2012 + 04455==269", "HOUSE_VITALS.length !== 2011" not in src and skupaj == 269, f"04455={skupaj}")
 
 nove = re.findall(r'houseNo: "(\d+)",\s*bookSignature: "04455",\s*year: 1874,\s*scan: (\d+),\s*page: (\d+),', src)
 pag_ok = all(int(p) == int(s) - 1 for _, s, p in nove)
@@ -72,16 +72,16 @@ check("I4c P249-KOREKCIJA-m28-'28.-Avgust' + MNOŽIČNI-DANI-×3 + H43-PARALELA 
       and "FERCHER" in an2 and "HEGRIČ" in an2)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 2008")
-check("I5 qa-p250 + števec-2008 (×150!)", "HOUSE_VITALS.length !== 2007" not in qa and st >= 150, f"2008-številcev={st}")
-check("I5b sidra-258 + 1874:11-P250 (qa-sidra-message)", "poročna sidra ≠ 258 (1874:11-P250!" in qa)
-check("I5c dobe-232 + 62-pred-linijskih", "dobe-bloki ≠ 232/7/26" in qa and "62 pred-linijskih 1874-P250×11!" in qa)
+st = qa.count("HOUSE_VITALS.length !== 2012")
+check("I5 qa-p250 + števec-2012 (×150!)", "HOUSE_VITALS.length !== 2011" not in qa and st >= 150, f"2012-številcev={st}")
+check("I5b sidra-262 + 1874:11-P250 (qa-sidra-message)", "poročna sidra ≠ 262 (1873:4-P251! · 1874:11-P250!" in qa)
+check("I5c dobe-232 + 62-pred-linijskih", "dobe-bloki ≠ 236/7/26" in qa and "66 pred-linijskih 1873-P251×4!+1874-P250×11!" in qa)
 check("I5d p80-1874:11-garda + sken-range-2–7", 'p80MarrAnchors.filter((h) => h.year === 1874).length !== 11' in qa and "skeni izven 2–7" in qa and "skeni izven 8–10" in qa)
-check("I5e izjeme-p85/p92 + GRIBLJE-29-izjema + MILIČ-243",
+check("I5e izjeme-p85/p92 + GRIBLJE-29-izjema + MILIČ-247",
       "v.year === 1874 && (hn === \"7\" || hn === \"30\")" in qa
       and "v.year === 1874 && (hn === \"10\" || hn === \"43\")" in qa
       and '(h.year === 1897 || h.year === 1909 || h.year === 1874)' in qa
-      and "MILIC_FAMILY_TOTAL !== 243" in qa and "53,78,20,36,56" in qa
+      and "MILIC_FAMILY_TOTAL !== 247" in qa and "53,78,20,36,60" in qa
       and "MATHIAS_H65_TOTAL !== 23" in qa and "H65_STATS.total !== 43" in qa)
 
 i0 = src.find("P250: POROČNA PREDZGOVINA 04455, leto 1874")
@@ -116,7 +116,7 @@ check("I7c METODA-md5-7/7 + s7-križ-1:1-identičen-P249 + mikro-8×-×3 + pasme
 
 pt = json.dumps(json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8")), ensure_ascii=False)
 check("I8 pt-luknja-2008/265 + h42/h43-firstYear-1874 + p250Note",
-      '"vitalsTotal": 2008' in pt and '"04455": 265' in pt
+      '"vitalsTotal": 2012' in pt and '"04455": 269' in pt
       and '"p250Note"' in pt and "H43-BRULA-PARALELA" in pt and "h43-04455-firstYear-1908→1874-DVIG-ZA-34-LET" in pt)
 
 u = open(f"{ROOT}/src/components/museum/museum-atlas.tsx", encoding="utf-8").read()
