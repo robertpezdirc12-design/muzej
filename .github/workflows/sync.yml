@@ -34,8 +34,13 @@ jobs:
           # P21: overitev GitLaba PREJ vsemu — pretekel/neveljaven zeton mora
           # povzrociti VIDEN padec joba, ne tihe "uspesno" (povzetek incidenta
           # 2026-10-10: fetch 3x Access denied, vseeno exit 0 -> lazen zeleni klic).
-          if ! git ls-remote --heads gitlab > /dev/null 2>&1; then
+          if ! git ls-remote --heads gitlab 2>/tmp/gitlab_err.txt > /dev/null; then
             echo "::error::GitLab overitev ni uspela — zeton GITLAB_TOKEN je neveljaven, pretekel ali nima pravic read_repository/write_repository. Obnovi zeton na gitlab.com/-/user_settings/personal_access_tokens (scope: read_repository + write_repository, api za push) in posodobi skrivnost GITLAB_TOKEN v Settings -> Secrets and variables -> Actions. Do takrat sinhronizacija ne more teci."
+            # P251-diagnostika: pravi vzrok ls-remote napake NE SME ostati skrit
+            # za 2>&1 (incident 2026-11-11: nov zeton je lokalno deloval, iz
+            # runnerja pa je ls-remote padal brez videnega razloga).
+            echo "pravi ls-remote izhod:"
+            sed 's/glpat-[A-Za-z0-9._-]*/glpat-***REDACTED***/g; s/oauth2:[^@]*/oauth2:***REDACTED***/g' /tmp/gitlab_err.txt
             exit 1
           fi
           FETCH_OK=0
