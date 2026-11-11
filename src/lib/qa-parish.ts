@@ -154,6 +154,15 @@ import {
   PREDHODNIK_1873_KORPUS,
 } from "@/data/atlas/parish-marriage-early";
 import {
+  HOUSE_STORIES,
+  HOUSE_STORY_BOOKS,
+  HOUSE_STORY_SIX,
+  HOUSE_STORY_TIERS,
+  HOUSE_STORY_TOTALS,
+  HOUSE_STORY_NOTABLES,
+  houseStoryByNo,
+} from "@/data/atlas/parish-house-stories";
+import {
   P81_THRESHOLD,
   P81_NEAR_MISS,
   p81BestMatch,
@@ -8649,6 +8658,111 @@ function parishChecksPart4(push: Push): void {
       p253Errors.length === 0
         ? `predhodnik-01738/1873: 17-vpisov-BREZ-preskokov! · 11-blokov-[63,28,25,18,28,16,10,20,12,3,73] (h28-×2!) · ŠIV-s146-h13×h62-ISTI-PAR-kot-m18! · RESTART-z-1-po-1872-tailu! · PEZDIRC-nit-m7! · DOVGAN-vsi! · m6-POLNI-DVOJNI + bratje-Silak + m12-h73←h13-POPRAVEK! · korpus-2023 (+11-NOVA-knjiga-01738!) · **PREDHODNIK-PREBRAN-ZADNJA-MOŽNOST-MATRIČNE-LINIJE!**`
         : p253Errors.join("; "),
+    );
+  }
+
+  // ——— qa-p254: HIŠNE ZGODBE GLOBJE — mreže hiš čez 6 knjig (P254) ———
+  {
+    const p254Errors: string[] = [];
+    // ★ ŽIVA REKALKULACIJA: agregiraj HOUSE_VITALS po hišah × knjigah in primerjaj z modulom 1:1!
+    const p254Agg = new Map<string, Map<string, number>>();
+    for (const v of HOUSE_VITALS) {
+      if (!p254Agg.has(v.houseNo)) p254Agg.set(v.houseNo, new Map());
+      const bm = p254Agg.get(v.houseNo)!;
+      bm.set(v.bookSignature, (bm.get(v.bookSignature) ?? 0) + 1);
+    }
+    if (p254Agg.size !== 100)
+      p254Errors.push(`živa-agregacija ≠ 100 hiš (${p254Agg.size} — 78-Griblje + 16-druga-vas + 6-neznan!)`);
+    if (HOUSE_STORIES.length !== 100)
+      p254Errors.push(`HOUSE_STORIES ≠ 100 (${HOUSE_STORIES.length})`);
+    let p254Cmp = 0;
+    for (const [h, bm] of p254Agg) {
+      const st = houseStoryByNo(h);
+      if (!st) {
+        p254Errors.push(`hiša ${h} manjka v HOUSE_STORIES`);
+        continue;
+      }
+      const liveBlocks = [...bm.values()].reduce((a, b) => a + b, 0);
+      if (st.blocks !== liveBlocks || st.books !== bm.size) {
+        p254Errors.push(`hiša ${h}: bloki/knjige ${st.blocks}/${st.books} ≠ živo ${liveBlocks}/${bm.size}`);
+        continue;
+      }
+      if (st.perBook.length !== bm.size) {
+        p254Errors.push(`hiša ${h}: perBook-dolžina ${st.perBook.length} ≠ živo ${bm.size}`);
+        continue;
+      }
+      let perOk = true;
+      for (const pb of st.perBook) {
+        if ((bm.get(pb.sig) ?? 0) !== pb.n) {
+          p254Errors.push(`hiša ${h} × ${pb.sig}: ${pb.n} ≠ živo ${bm.get(pb.sig) ?? 0}`);
+          perOk = false;
+          break;
+        }
+      }
+      if (perOk) p254Cmp++;
+    }
+    if (p254Cmp !== 100)
+      p254Errors.push(`1:1-primerjava-modul-×-živa-agregacija ≠ 100 hiš (${p254Cmp})`);
+    const p254Sum = HOUSE_STORIES.reduce((a, h) => a + h.blocks, 0);
+    if (p254Sum !== 2023 || HOUSE_STORY_TOTALS.blocks !== 2023 || HOUSE_VITALS.length !== 2023)
+      p254Errors.push(`vsota-blokov ≠ 2023 (modul-vsota ${p254Sum} / TOTALS ${HOUSE_STORY_TOTALS.blocks} / HOUSE_VITALS ${HOUSE_VITALS.length})`);
+    // ★ 9 šest-knjižnih hiš — živo vs. modul!
+    const p254SixLive = [...p254Agg.entries()].filter(([, bm]) => bm.size === 6).map(([h]) => h).sort((a, b) => Number(a) - Number(b));
+    const p254SixMod = HOUSE_STORY_SIX.map((s) => s.houseNo);
+    if (JSON.stringify(p254SixLive) !== JSON.stringify(["10", "12", "16", "18", "20", "28", "3", "63", "73"].sort((a, b) => Number(a) - Number(b))))
+      p254Errors.push(`šest-knjižne-živo ≠ [3,10,12,16,18,20,28,63,73] (${p254SixLive.join(",")})`);
+    if (JSON.stringify(p254SixMod) !== JSON.stringify(["3", "10", "12", "16", "18", "20", "28", "63", "73"]))
+      p254Errors.push(`HOUSE_STORY_SIX ≠ [3,10,12,16,18,20,28,63,73] (${p254SixMod.join(",")})`);
+    // tierji 9/53/14/8/8/8 = 100
+    const p254TierSum = HOUSE_STORY_TIERS.reduce((a, t) => a + t.houses, 0);
+    if (p254TierSum !== 100 || HOUSE_STORY_TIERS[0]?.houses !== 9 || HOUSE_STORY_TIERS[0]?.books !== 6)
+      p254Errors.push(`tierji ≠ 9/53/14/8/8/8=100 (${HOUSE_STORY_TIERS.map((t) => `${t.books}:${t.houses}`).join(" ")} — vsota ${p254TierSum})`);
+    // vrste 78/16/6
+    const p254Kinds = HOUSE_STORIES.reduce<Record<string, number>>((acc, h) => {
+      acc[h.kind] = (acc[h.kind] ?? 0) + 1;
+      return acc;
+    }, {});
+    if (p254Kinds["griblje"] !== 78 || p254Kinds["druga-vas"] !== 16 || p254Kinds["neznano"] !== 6)
+      p254Errors.push(`vrste ≠ 78/16/6 (${p254Kinds["griblje"]}/${p254Kinds["druga-vas"]}/${p254Kinds["neznano"]})`);
+    // knjige-meta vs. živo (bloki po knjigah: 11/288/502/269/433/520)
+    const p254BookLive = new Map<string, number>();
+    for (const [, bm] of p254Agg) for (const [b, n] of bm) p254BookLive.set(b, (p254BookLive.get(b) ?? 0) + n);
+    for (const bm of HOUSE_STORY_BOOKS) {
+      const live = p254BookLive.get(bm.sig) ?? 0;
+      if (live !== bm.blocks) p254Errors.push(`knjiga ${bm.sig}: bloki ${bm.blocks} ≠ živo ${live}`);
+    }
+    // rekordi in osamelci
+    const h24 = houseStoryByNo("24");
+    if (!h24 || h24.blocks !== 45 || !h24.perBook.some((p) => p.sig === "04105" && p.n === 18))
+      p254Errors.push("h24-najglasnejša ≠ 45-blokov/04105:18-rekord!");
+    const h73 = houseStoryByNo("73");
+    if (!h73 || h73.blocks !== 9 || h73.books !== 6 || !h73.perBook.every((p) => p.n >= 1 && p.n <= 2))
+      p254Errors.push("h73-tiha ≠ 9-blokov/6-knjig/1–2-na-knjigo (najtišja-šest-knjižna!)");
+    const h25 = houseStoryByNo("25");
+    if (!h25 || h25.books !== 5 || h25.perBook.some((p) => p.sig === "04106"))
+      p254Errors.push("h25-smrtna-vrzeli ≠ 5-knjig-BREZ-04106 (29-let!)");
+    const h73x = houseStoryByNo("73");
+    if (h73x && !HOUSE_STORY_SIX.some((s) => s.houseNo === "73" && s.storySi.includes("TIHA")))
+      p254Errors.push("h73-TIHA-zgodba manjka v HOUSE_STORY_SIX");
+    // 66-letni razponi
+    for (const hh of ["2", "13", "50", "60", "64"]) {
+      const st = houseStoryByNo(hh);
+      if (!st || st.span !== 66) p254Errors.push(`h${hh}-razpon ≠ 66 let (${st?.span})`);
+    }
+    if (!HOUSE_STORY_NOTABLES.some((n) => n.id === "smrtna-vrzeli") || !HOUSE_STORY_NOTABLES.some((n) => n.id === "skrita-hisa"))
+      p254Errors.push("NOTABLES: smrtna-vrzeli-h25 + skrita-hisa-h[?] manjkajo");
+    if (HOUSE_STORY_NOTABLES.length !== 7)
+      p254Errors.push(`NOTABLES ≠ 7 zgodb (${HOUSE_STORY_NOTABLES.length})`);
+    if (HOUSE_STORY_TOTALS.bothEraKrstna !== 69 || HOUSE_STORY_TOTALS.bothEraMrliska !== 75 || HOUSE_STORY_TOTALS.bothEraPorocna !== 10)
+      p254Errors.push("obe-eri-pokritje ≠ 69/75/10 (krstna/mrliška/poročna!)");
+    push(
+      "qa-p254-parish-house-stories",
+      "P254: ŽUPNIJA PODZEMELJ — HIŠNE ZGODBE GLOBJE: MREŽE HIŠ ČEZ 6 KNJIG (issue #18; P252-lead-②; SINTEZA — NI NOVIH BRANJ, NI NOVIH SKENOV!): agregacija CELOTELNEGA KORPUSA HOUSE_VITALS (2023 vitalov) po hišah čez VSEH 6 knjig — 01738 (poročna-predhodnik 1873) + 04104 (krstna-predzgodovina 1871–1885) + 04105 (krstna-linija 1887–1919) + 04455 (poročna 1873–1922) + 04106 (mrliška-predzgodovina 1857–1885) + 04894 (mrliška-linija 1886–1924) — **★ ŽIVA REKALKULACIJA: kontrola samo-agregira HOUSE_VITALS in primerja 1:1 z modulom (100/100 hiš × bloki × knjige × perBook!)** — 100 hišnih oznak = 78 Griblje (1–78) + 16 druga-vas (79–98: Požek/Šimec/Cindrič/Vreber/Željko/Ceršiner/Križan/Hrižan/Podrinec/Strmec/Muc/Nečemer/Hambič/Lozar/Vetročnik…) + 6 neznan ([?], sub dioe., 13/17/32 [~], 29 [~X-OPEN]); ★★★ **9 ŠEST-KNJIŽ-HIŠ = blok v VSEH 6 knjigah: 3, 10, 12, 16, 18, 20, 28, 63, 73** — ISTO 9 kot 'polni življenjski cikel' (obe eri × vse 3 vrste: krstna 69 / mrliška 75 / poročna 10!) — zgode: h3-HRIŽAN/KRIŽAN (Peter-†88-80-let + m11-HLEBEC-1873!) · h10-MUC (m6-1873-polni-dvojni + KRAUE-52-l-najstarejša-nevesta-1874!) · h12-DRAGOŠ-50-LET (1869→1919-ISTA-DRUŽINA!) · h16-KOLBEZEN (m6-1873 + NOVAK-1924-zadnja-leta-04894!) · h18-ŠIMEC-36-bl (najglasnejša-šest-knjižna!) · h20-BORŠT (z72/z73-DVOJČKI-1871-1.-dvojčki-linije!) · h28-DVE-DRUŽINI (edina-×2-v-01738! + 56-LETNA-ZAKONSKA-ZVEZA-PEZDIREC-1861→1917!) · h63-KRIŽAN-HIŠA (m1-KURE-PRVI-VPIS-PREDHODNIKA-29.1.1873!) · h73-★-TIHA (samo-9-blokov-1–2-na-knjigo-najtišja! + m12-KUPAMIČ-13→73-POPRAVEK!); ★★★ tierji 9/53/14/8/8/8 = 100; ★★★ rekordi: h24-najglasnejša-45-bl (04105:18-rekord-knjige!) · h65-43-bl (04106:14-rekord-MILEK!) · h35-04894:15-rekord-HRIŽAN! · h27-04455:8-rekord-SEGINA! · 5-hiš-66-let (h2/h13/h50/h60/h64 = 1857/58→1923/24!); ★★★ osamelci: h25-SMRTNA-VRZEL-29-LET (5-knjig-BREZ-04106-kljub-krstnim-1876/1883!) · h[?]-SKRITA-HIŠA-10-bl-brez-številke (04104:8 + 04106:2!) · obe-eri-pokritje-krstna-69/mrliška-75/poročna-SAMO-10 (01738-pokriva-le-1873!); knjige-meta-6 (bloki-11/288/502/269/433/520-hiše-10/72/89/82/78/92); modul parish-house-stories.ts (HOUSE_STORIES-×100 + SIX-×9 + TIERS + TOTALS + NOTABLES-×7 + BOOKS-×6 + houseStoryByNo!) + UI-HouseStoriesP254 + dokaz parish-house-stories.json (100-hiš-tabela!) + skripta p254 (I1–I10); korpus 2023/269/11-NEspremenjen (MERI!)",
+      "P254: THE PARISH OF PODZEMELJ — THE DEEP HOUSE STORIES: THE HOUSE NETWORKS ACROSS 6 BOOKS (issue #18; the P252 lead; A SYNTHESIS — NO NEW READINGS, NO NEW SCANS!): the aggregation of the ENTIRE HOUSE_VITALS corpus (2023 vitals) by house across ALL 6 books — **★ THE LIVE RECOMPUTATION: the control itself re-aggregates HOUSE_VITALS and compares 1:1 with the module (100/100 houses × blocks × books × perBook!)** — 100 house labels = 78 Griblje + 16 other-village + 6 unknown; ★★★ **THE 9 SIX-BOOK HOUSES — a block in ALL 6 books: 3, 10, 12, 16, 18, 20, 28, 63, 73** — the SAME 9 as the 'full life cycle' (both eras × all 3 kinds!); the tiers 9/53/14/8/8/8 = 100; the records: h24 the loudest 45 blocks · h35 the death-line record 15 · h27 the marriage record 8 · five 66-year-span houses; the outliers: the h25 29-YEAR DEATH GAP (5 books without 04106!) · the hidden house h[?] (10 blocks, no number!); the module parish-house-stories.ts + the HouseStoriesP254 UI + the evidence JSON (a 100-house table!) + the p254 script (I1–I10); the corpus 2023 unchanged (MERI!)",
+      p254Errors.length === 0,
+      p254Errors.length === 0
+        ? `hišne-mreže: 100-hiš-1:1-živi-rekalkulaciji! · 9-šest-knjiž-[3,10,12,16,18,20,28,63,73] = polni-cikel! · tierji-9/53/14/8/8/8 · rekordi-h24-45/h35-15/h27-8/h65-14! · h25-smrtna-vrzeli-29-let + h[?]-skrita! · obe-eri-69/75/10 · 2023-blokov-6-knjig-1:1!`
+        : p254Errors.join("; "),
     );
   }
 

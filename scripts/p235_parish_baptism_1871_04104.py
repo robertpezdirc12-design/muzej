@@ -39,8 +39,8 @@ check("I4b novosti (pezdirc-x8-peter-x3 + milič-x5 + jakofčič-sakofčič + hr
       and "h28-x2-duel-3-leto-vzorec-continuum" in an)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 1940")
-check("I5 qa-p235 + števec-1940", "qa-p235-parish-baptism-1871-04104" in qa and st >= 147, f"1940-številcev={st}")
+st = qa.count("HOUSE_VITALS.length !== 2023")
+check("I5 qa-p235 + števec-2023 (P254-sanacija!)", "qa-p235-parish-baptism-1871-04104" in qa and st >= 147, f"2023-številcev={st}")
 
 i0 = src.find("P235: krstna PREDZGODOVINA 04104, leto 1871")
 seg = src[i0:] if i0 >= 0 else ""
@@ -56,7 +56,7 @@ check("I8a nalepek-PODZEMELJ-R-1871-1885 + KNJIGA = 15-LET-LINIJA", "PODZEMELJ-R
 check("I8b P234-LEAD-POTRJEN + LINIJA-15/15-KOMPLETNA", "vs-LEAD-'~90–110'-POTRJENO-1:1" in seg and "LINIJA-15/15-KOMPLETNA" in qa)
 check("I9a qa-p235 (235. kontrola!)", "qa-p235" in qa and "235. kontrola" in qa)
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-check("I9b pt-luknja-288/1940 + byBook-04104", '"vitalsTotal": 1940' in pt and '"04104": 288' in pt)
+check("I9b pt-luknja-288/2023 (P254!) + byBook-04104", '"vitalsTotal": 2023' in pt and '"04104": 288' in pt)
 v234 = open(f"{ROOT}/scripts/p234_parish_baptism_1872_04104.py", encoding="utf-8").read()
 check("I9c p234-verifier-sanitizacija (1923→1940, 271→288)", '"vitalsTotal": 1940' in v234 and "1923" not in v234)
 

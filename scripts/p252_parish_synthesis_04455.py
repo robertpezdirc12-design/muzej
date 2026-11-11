@@ -107,8 +107,8 @@ check("I8 pt-luknja-2023/269 vsota-1:1 (korpus-NESPREMENJEN!)",
 # ——— I9: README + worklog P252 vnos ———
 rd = open(f"{ROOT}/README.md", encoding="utf-8").read()
 wl = open(f"{ROOT}/worklog.md", encoding="utf-8").read()
-check("I9 README (TOC-po-p252 + povzetek + tabela + korpus + odprto) + worklog-P252",
-      "po-p252" in rd and "P252" in rd and "SINTEZA POROČNE PREDZGODOVINE" in rd
+check("I9 README (povzetek-P252 + tabela + korpus + odprto; P254-sanacija: vezaj→presledek!) + worklog-P252",
+      "po P252" in rd and "P252" in rd and "SINTEZA POROČNE PREDZGODOVINE" in rd
       and "266 vpisov" in rd and "74 blokov" in rd
       and "## P252 — SINTEZA POROČNE PREDZGODOVINE 04455" in wl
       and "13/13 KOMPLETNA" in wl,
@@ -121,7 +121,7 @@ if live or "--check" not in sys.argv:
             qa_live = json.load(r)
         p252_live = [t for t in qa_live["tests"] if t["id"] == "qa-p252-parish-synthesis-04455-early"]
         check("I10 LIVE /api/qa ok=True — pass=246 + p252-pass",
-              qa_live.get("ok") is True and qa_live.get("passed") == 247 and p252_live and p252_live[0]["pass"] is True,
+              qa_live.get("ok") is True and qa_live.get("passed") == 248 and p252_live and p252_live[0]["pass"] is True,
               f"pass={qa_live.get('passed')}")
     except Exception as e:
         check("I10 LIVE /api/qa", False, str(e)[:80])

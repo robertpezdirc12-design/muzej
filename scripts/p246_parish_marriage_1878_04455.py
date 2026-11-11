@@ -123,8 +123,8 @@ try:
     r = urllib.request.Request("http://localhost:3000/api/qa")
     with urllib.request.urlopen(r, timeout=30) as resp:
         qa_data = json.load(resp)
-    check("I10 QA-živo 247/247 ok:True (+qa-p246-id!)",
-          qa_data.get("ok") is True and qa_data.get("passed") == 247 and qa_data.get("failed") == 0,
+    check("I10 QA-živo 248/248 ok:True (+qa-p246-id!)",
+          qa_data.get("ok") is True and qa_data.get("passed") == 248 and qa_data.get("failed") == 0,
           f"passed={qa_data.get('passed')} failed={qa_data.get('failed')}")
 except Exception as e:
     check("I10 QA-živo", False, str(e)[:80])

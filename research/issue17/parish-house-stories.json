@@ -1,0 +1,1868 @@
+{
+  "phase": "P254",
+  "title": "HIŠNE ZGODBE GLOBJE — mreže hiš čez 6 knjig",
+  "date": "2026-11-11",
+  "type": "SINTEZA (NI NOVIH BRANJ, NI NOVIH SKENOV — MERI!)",
+  "lead": "P252-lead-② (hišne-zgodbe-globlje) + P253-korpus-2023",
+  "source": {
+    "corpus": "src/data/atlas/parish.ts HOUSE_VITALS",
+    "vitalsTotal": 2023,
+    "books": 6,
+    "bookSigs": [
+      "01738",
+      "04104",
+      "04105",
+      "04455",
+      "04106",
+      "04894"
+    ],
+    "method": "agregacija vseh 2023 vitalnih blokov po hišni oznaki — 1:1 z runtime (qa-p254 živa rekalkulacija!)"
+  },
+  "structure": {
+    "housesTotal": 100,
+    "griblje": 78,
+    "drugaVas": 16,
+    "neznano": 6,
+    "neznanoOznake": [
+      "13 [~]",
+      "17 [~]",
+      "32 [~]",
+      "29 [~X-OPEN]",
+      "[?]",
+      "sub dioe."
+    ],
+    "tiers": {
+      "six": 9,
+      "five": 53,
+      "four": 14,
+      "three": 8,
+      "two": 8,
+      "one": 8
+    },
+    "tiersSum": 100
+  },
+  "sixBookHouses": {
+    "houses": [
+      "3",
+      "10",
+      "12",
+      "16",
+      "18",
+      "20",
+      "28",
+      "63",
+      "73"
+    ],
+    "count": 9,
+    "note": "blok v VSEH 6 knjigah = polni življenjski cikel (obe eri × vse 3 vrste) — ISTO 9 pri obeh kriterijih!",
+    "stories": {
+      "3": "HRIŽAN/KRIŽAN — Peter Hrižan oče 1872–1881 + †1888 80 let + m11-HLEBEC-1873 + 1907-PEZDIREC-poroka",
+      "10": "MUC — m6-1873 KOLBEZEN×MUC polni dvojni + KRAUE-52-l-najstarejša-nevesta-1874 + 11 mrliških 04106",
+      "12": "DRAGOŠ-50-LET 1869→1919 ISTA DRUŽINA + PEZDIRC-z59-1872 + 04105:14 = 2.-rekord",
+      "16": "KOLBEZEN m6-1873 + FILAK-NEMANIČ-1918-†75 (por.1879) + NOVAK-1924 zadnja leta 04894",
+      "18": "ŠIMEC (P246-1:1!) 1863 Simic-†53 + 1878-×2-INTRA + 1921-Karolina-PEZDIRC-† — 36 bl = najglasnejša šest-knjižna",
+      "20": "BORŠT: z72/z73-DVOJČKI-1871 (1. dvojčki linije!) + PEZDIRE-1869 + PEZDIRC-1919 — 60-letna PEZDIRC-nit",
+      "28": "DVE DRUŽINI (edina ×2 v 01738: m2-MAVRIN + m4-TOMC!) + 1871-Pezdirc/Požek + 56-LETNA ZAKONSKA ZVEZA PEZDIREC (por. 30.1.1861 → Anton-†78-1917)",
+      "63": "KRIŽAN-HIŠA (uradno!) 1862–1921 + m1-KURE-PRVI-VPIS-PREDHODNIKA-29.1.1873 + 3 poroke 1911/12/21 + PEZDIRC-mati-×4",
+      "73": "★ TIHA: samo 9 blokov v 6 knjigah (1–2 na knjigo, najtišja šest-knjižna!) + m12-KUPAMIČ-13→73-POPRAVEK + Županič/Lupanič/Lepančič-garble + PEZDIRC-mati-×4-grafije"
+    }
+  },
+  "missingBookAnalysis": {
+    "fiveBookMissing": {
+      "24": [
+        "01738"
+      ],
+      "23": [
+        "01738"
+      ],
+      "60": [
+        "01738"
+      ],
+      "5": [
+        "01738"
+      ],
+      "46": [
+        "01738"
+      ],
+      "4": [
+        "01738"
+      ],
+      "69": [
+        "01738"
+      ],
+      "1": [
+        "01738"
+      ],
+      "48": [
+        "01738"
+      ],
+      "65": [
+        "01738"
+      ],
+      "72": [
+        "01738"
+      ],
+      "26": [
+        "01738"
+      ],
+      "6": [
+        "01738"
+      ],
+      "11": [
+        "01738"
+      ],
+      "30": [
+        "01738"
+      ],
+      "44": [
+        "01738"
+      ],
+      "9": [
+        "01738"
+      ],
+      "38": [
+        "01738"
+      ],
+      "33": [
+        "01738"
+      ],
+      "40": [
+        "01738"
+      ],
+      "7": [
+        "01738"
+      ],
+      "29": [
+        "01738"
+      ],
+      "34": [
+        "01738"
+      ],
+      "37": [
+        "01738"
+      ],
+      "13": [
+        "01738"
+      ],
+      "31": [
+        "01738"
+      ],
+      "74": [
+        "01738"
+      ],
+      "8": [
+        "01738"
+      ],
+      "22": [
+        "01738"
+      ],
+      "53": [
+        "01738"
+      ],
+      "62": [
+        "01738"
+      ],
+      "41": [
+        "01738"
+      ],
+      "39": [
+        "01738"
+      ],
+      "32": [
+        "01738"
+      ],
+      "64": [
+        "01738"
+      ],
+      "57": [
+        "01738"
+      ],
+      "15": [
+        "01738"
+      ],
+      "25": [
+        "04106"
+      ],
+      "36": [
+        "01738"
+      ],
+      "14": [
+        "01738"
+      ],
+      "2": [
+        "01738"
+      ],
+      "35": [
+        "01738"
+      ],
+      "78": [
+        "01738"
+      ],
+      "19": [
+        "01738"
+      ],
+      "43": [
+        "01738"
+      ],
+      "17": [
+        "01738"
+      ],
+      "27": [
+        "01738"
+      ],
+      "21": [
+        "01738"
+      ],
+      "42": [
+        "01738"
+      ],
+      "58": [
+        "01738"
+      ],
+      "47": [
+        "01738"
+      ],
+      "56": [
+        "01738"
+      ],
+      "61": [
+        "01738"
+      ]
+    },
+    "summary": "52 od 53 pet-knjižnih manjka SAMO 01738 (pričakovano — le 10 hiš je v predhodniku 1873); IZJEMA = h25 brez 04106 (SMRTNA VRZEL 29 let!)"
+  },
+  "records": {
+    "loudest": {
+      "house": "24",
+      "blocks": 45,
+      "years": "1859–1920",
+      "note": "04105:18 = rekord krstne linije"
+    },
+    "secondLoudest": {
+      "house": "65",
+      "blocks": 43,
+      "note": "04106:14 = rekord mrliške predzgodovine (skupaj h13); MILEK-družina"
+    },
+    "deathLineRecord": {
+      "house": "35",
+      "blocks04894": 15,
+      "note": "HRIŽAN-družina (P229!)"
+    },
+    "marriageRecord": {
+      "house": "27",
+      "blocks04455": 8,
+      "note": "SEGINA-hiša — 1875+1881+1882+1884+…"
+    },
+    "baptismPrehistoryRecord": {
+      "houses": [
+        "6",
+        "40",
+        "[?]"
+      ],
+      "blocks04104": 8,
+      "note": "trospec — h[?] = skrita hiša brez številke!"
+    },
+    "longestSpan": {
+      "years": 66,
+      "houses": [
+        "2",
+        "13",
+        "50",
+        "60",
+        "64"
+      ],
+      "note": "1857/58–1923/24 — od prve strani 04106 do zadnjega leta 04894"
+    },
+    "quietestSix": {
+      "house": "73",
+      "blocks": 9,
+      "note": "samo 9 blokov v 6 knjigah (1–2 na knjigo) — najtišja šest-knjižna (naslednja h3 = 23!)"
+    }
+  },
+  "anomalies": {
+    "deathsGap": "h25: 5 knjig BREZ 04106 — noben mrliški zapis 1857–1885 (29 let!) kljub krstnim 1876+1883×2 — mrežna luknja",
+    "hiddenHouse": "h[?]: 10 blokov 1857–1885 (04104:8 + 04106:2) brez hišne številke — P235/P220-X-OPEN",
+    "bothEraCoverage": {
+      "krstna": 69,
+      "mrlishka": 75,
+      "porocna": 10,
+      "note": "poročna obe-eri le 10 — 01738 pokriva samo leto 1873 (17 vpisov)"
+    }
+  },
+  "bookMeta": [
+    {
+      "sig": "01738",
+      "role": "poročna-predhodnik",
+      "years": "1873",
+      "blocks": 11,
+      "houses": 10
+    },
+    {
+      "sig": "04104",
+      "role": "krstna-predzgodovina",
+      "years": "1871–1885",
+      "blocks": 288,
+      "houses": 72
+    },
+    {
+      "sig": "04105",
+      "role": "krstna-linija",
+      "years": "1887–1919",
+      "blocks": 502,
+      "houses": 89
+    },
+    {
+      "sig": "04455",
+      "role": "poročna-linija+predzgodovina",
+      "years": "1873–1922",
+      "blocks": 269,
+      "houses": 82
+    },
+    {
+      "sig": "04106",
+      "role": "mrliška-predzgodovina",
+      "years": "1857–1885",
+      "blocks": 433,
+      "houses": 78
+    },
+    {
+      "sig": "04894",
+      "role": "mrliška-linija",
+      "years": "1886–1924",
+      "blocks": 520,
+      "houses": 92
+    }
+  ],
+  "houses": [
+    {
+      "houseNo": "1",
+      "kind": "griblje",
+      "blocks": 41,
+      "books": 5,
+      "perBook": {
+        "04104": 8,
+        "04105": 9,
+        "04106": 12,
+        "04455": 7,
+        "04894": 5
+      },
+      "firstYear": 1861,
+      "lastYear": 1914,
+      "span": 53
+    },
+    {
+      "houseNo": "2",
+      "kind": "griblje",
+      "blocks": 32,
+      "books": 5,
+      "perBook": {
+        "04104": 4,
+        "04105": 6,
+        "04106": 7,
+        "04455": 3,
+        "04894": 12
+      },
+      "firstYear": 1858,
+      "lastYear": 1924,
+      "span": 66
+    },
+    {
+      "houseNo": "3",
+      "kind": "griblje",
+      "blocks": 23,
+      "books": 6,
+      "perBook": {
+        "01738": 1,
+        "04104": 4,
+        "04105": 4,
+        "04106": 7,
+        "04455": 2,
+        "04894": 5
+      },
+      "firstYear": 1858,
+      "lastYear": 1917,
+      "span": 59
+    },
+    {
+      "houseNo": "4",
+      "kind": "griblje",
+      "blocks": 7,
+      "books": 5,
+      "perBook": {
+        "04104": 1,
+        "04105": 1,
+        "04106": 2,
+        "04455": 2,
+        "04894": 1
+      },
+      "firstYear": 1870,
+      "lastYear": 1906,
+      "span": 36
+    },
+    {
+      "houseNo": "5",
+      "kind": "griblje",
+      "blocks": 31,
+      "books": 5,
+      "perBook": {
+        "04104": 5,
+        "04105": 9,
+        "04106": 10,
+        "04455": 1,
+        "04894": 6
+      },
+      "firstYear": 1859,
+      "lastYear": 1919,
+      "span": 60
+    },
+    {
+      "houseNo": "6",
+      "kind": "griblje",
+      "blocks": 35,
+      "books": 5,
+      "perBook": {
+        "04104": 8,
+        "04105": 8,
+        "04106": 6,
+        "04455": 5,
+        "04894": 8
+      },
+      "firstYear": 1860,
+      "lastYear": 1924,
+      "span": 64
+    },
+    {
+      "houseNo": "7",
+      "kind": "griblje",
+      "blocks": 24,
+      "books": 5,
+      "perBook": {
+        "04104": 6,
+        "04105": 4,
+        "04106": 6,
+        "04455": 5,
+        "04894": 3
+      },
+      "firstYear": 1867,
+      "lastYear": 1921,
+      "span": 54
+    },
+    {
+      "houseNo": "8",
+      "kind": "griblje",
+      "blocks": 38,
+      "books": 5,
+      "perBook": {
+        "04104": 6,
+        "04105": 7,
+        "04106": 11,
+        "04455": 7,
+        "04894": 7
+      },
+      "firstYear": 1871,
+      "lastYear": 1919,
+      "span": 48
+    },
+    {
+      "houseNo": "9",
+      "kind": "griblje",
+      "blocks": 23,
+      "books": 5,
+      "perBook": {
+        "04104": 5,
+        "04105": 5,
+        "04106": 3,
+        "04455": 3,
+        "04894": 7
+      },
+      "firstYear": 1862,
+      "lastYear": 1922,
+      "span": 60
+    },
+    {
+      "houseNo": "10",
+      "kind": "griblje",
+      "blocks": 30,
+      "books": 6,
+      "perBook": {
+        "01738": 1,
+        "04104": 2,
+        "04105": 6,
+        "04106": 11,
+        "04455": 7,
+        "04894": 3
+      },
+      "firstYear": 1862,
+      "lastYear": 1921,
+      "span": 59
+    },
+    {
+      "houseNo": "11",
+      "kind": "griblje",
+      "blocks": 30,
+      "books": 5,
+      "perBook": {
+        "04104": 7,
+        "04105": 7,
+        "04106": 7,
+        "04455": 3,
+        "04894": 6
+      },
+      "firstYear": 1863,
+      "lastYear": 1922,
+      "span": 59
+    },
+    {
+      "houseNo": "12",
+      "kind": "griblje",
+      "blocks": 28,
+      "books": 6,
+      "perBook": {
+        "01738": 1,
+        "04104": 3,
+        "04105": 14,
+        "04106": 3,
+        "04455": 1,
+        "04894": 6
+      },
+      "firstYear": 1869,
+      "lastYear": 1919,
+      "span": 50
+    },
+    {
+      "houseNo": "13",
+      "kind": "griblje",
+      "blocks": 39,
+      "books": 5,
+      "perBook": {
+        "04104": 8,
+        "04105": 7,
+        "04106": 14,
+        "04455": 5,
+        "04894": 5
+      },
+      "firstYear": 1857,
+      "lastYear": 1923,
+      "span": 66
+    },
+    {
+      "houseNo": "14",
+      "kind": "griblje",
+      "blocks": 33,
+      "books": 5,
+      "perBook": {
+        "04104": 4,
+        "04105": 8,
+        "04106": 5,
+        "04455": 3,
+        "04894": 13
+      },
+      "firstYear": 1861,
+      "lastYear": 1923,
+      "span": 62
+    },
+    {
+      "houseNo": "15",
+      "kind": "griblje",
+      "blocks": 19,
+      "books": 5,
+      "perBook": {
+        "04104": 2,
+        "04105": 6,
+        "04106": 2,
+        "04455": 4,
+        "04894": 5
+      },
+      "firstYear": 1868,
+      "lastYear": 1921,
+      "span": 53
+    },
+    {
+      "houseNo": "16",
+      "kind": "griblje",
+      "blocks": 34,
+      "books": 6,
+      "perBook": {
+        "01738": 1,
+        "04104": 5,
+        "04105": 8,
+        "04106": 5,
+        "04455": 6,
+        "04894": 9
+      },
+      "firstYear": 1864,
+      "lastYear": 1924,
+      "span": 60
+    },
+    {
+      "houseNo": "17",
+      "kind": "griblje",
+      "blocks": 18,
+      "books": 5,
+      "perBook": {
+        "04104": 5,
+        "04105": 3,
+        "04106": 3,
+        "04455": 3,
+        "04894": 4
+      },
+      "firstYear": 1875,
+      "lastYear": 1923,
+      "span": 48
+    },
+    {
+      "houseNo": "18",
+      "kind": "griblje",
+      "blocks": 36,
+      "books": 6,
+      "perBook": {
+        "01738": 1,
+        "04104": 5,
+        "04105": 6,
+        "04106": 10,
+        "04455": 5,
+        "04894": 9
+      },
+      "firstYear": 1861,
+      "lastYear": 1922,
+      "span": 61
+    },
+    {
+      "houseNo": "19",
+      "kind": "griblje",
+      "blocks": 21,
+      "books": 5,
+      "perBook": {
+        "04104": 3,
+        "04105": 3,
+        "04106": 9,
+        "04455": 1,
+        "04894": 5
+      },
+      "firstYear": 1858,
+      "lastYear": 1918,
+      "span": 60
+    },
+    {
+      "houseNo": "20",
+      "kind": "griblje",
+      "blocks": 34,
+      "books": 6,
+      "perBook": {
+        "01738": 1,
+        "04104": 5,
+        "04105": 5,
+        "04106": 11,
+        "04455": 4,
+        "04894": 8
+      },
+      "firstYear": 1859,
+      "lastYear": 1922,
+      "span": 63
+    },
+    {
+      "houseNo": "21",
+      "kind": "griblje",
+      "blocks": 38,
+      "books": 5,
+      "perBook": {
+        "04104": 3,
+        "04105": 10,
+        "04106": 9,
+        "04455": 6,
+        "04894": 10
+      },
+      "firstYear": 1859,
+      "lastYear": 1922,
+      "span": 63
+    },
+    {
+      "houseNo": "22",
+      "kind": "griblje",
+      "blocks": 32,
+      "books": 5,
+      "perBook": {
+        "04104": 7,
+        "04105": 7,
+        "04106": 6,
+        "04455": 5,
+        "04894": 7
+      },
+      "firstYear": 1869,
+      "lastYear": 1921,
+      "span": 52
+    },
+    {
+      "houseNo": "23",
+      "kind": "griblje",
+      "blocks": 22,
+      "books": 5,
+      "perBook": {
+        "04104": 4,
+        "04105": 7,
+        "04106": 3,
+        "04455": 4,
+        "04894": 4
+      },
+      "firstYear": 1865,
+      "lastYear": 1922,
+      "span": 57
+    },
+    {
+      "houseNo": "24",
+      "kind": "griblje",
+      "blocks": 45,
+      "books": 5,
+      "perBook": {
+        "04104": 8,
+        "04105": 18,
+        "04106": 5,
+        "04455": 5,
+        "04894": 9
+      },
+      "firstYear": 1859,
+      "lastYear": 1920,
+      "span": 61
+    },
+    {
+      "houseNo": "25",
+      "kind": "griblje",
+      "blocks": 18,
+      "books": 5,
+      "perBook": {
+        "01738": 1,
+        "04104": 3,
+        "04105": 5,
+        "04455": 2,
+        "04894": 7
+      },
+      "firstYear": 1873,
+      "lastYear": 1923,
+      "span": 50
+    },
+    {
+      "houseNo": "26",
+      "kind": "griblje",
+      "blocks": 26,
+      "books": 5,
+      "perBook": {
+        "04104": 1,
+        "04105": 5,
+        "04106": 5,
+        "04455": 3,
+        "04894": 12
+      },
+      "firstYear": 1859,
+      "lastYear": 1921,
+      "span": 62
+    },
+    {
+      "houseNo": "27",
+      "kind": "griblje",
+      "blocks": 29,
+      "books": 5,
+      "perBook": {
+        "04104": 3,
+        "04105": 9,
+        "04106": 4,
+        "04455": 8,
+        "04894": 5
+      },
+      "firstYear": 1864,
+      "lastYear": 1918,
+      "span": 54
+    },
+    {
+      "houseNo": "28",
+      "kind": "griblje",
+      "blocks": 26,
+      "books": 6,
+      "perBook": {
+        "01738": 2,
+        "04104": 7,
+        "04105": 3,
+        "04106": 7,
+        "04455": 3,
+        "04894": 4
+      },
+      "firstYear": 1865,
+      "lastYear": 1917,
+      "span": 52
+    },
+    {
+      "houseNo": "29",
+      "kind": "griblje",
+      "blocks": 23,
+      "books": 5,
+      "perBook": {
+        "04104": 5,
+        "04105": 4,
+        "04106": 4,
+        "04455": 3,
+        "04894": 7
+      },
+      "firstYear": 1859,
+      "lastYear": 1921,
+      "span": 62
+    },
+    {
+      "houseNo": "30",
+      "kind": "griblje",
+      "blocks": 40,
+      "books": 5,
+      "perBook": {
+        "04104": 4,
+        "04105": 14,
+        "04106": 6,
+        "04455": 7,
+        "04894": 9
+      },
+      "firstYear": 1860,
+      "lastYear": 1918,
+      "span": 58
+    },
+    {
+      "houseNo": "31",
+      "kind": "griblje",
+      "blocks": 42,
+      "books": 5,
+      "perBook": {
+        "04104": 5,
+        "04105": 13,
+        "04106": 7,
+        "04455": 7,
+        "04894": 10
+      },
+      "firstYear": 1857,
+      "lastYear": 1921,
+      "span": 64
+    },
+    {
+      "houseNo": "32",
+      "kind": "griblje",
+      "blocks": 26,
+      "books": 5,
+      "perBook": {
+        "04104": 1,
+        "04105": 11,
+        "04106": 4,
+        "04455": 4,
+        "04894": 6
+      },
+      "firstYear": 1863,
+      "lastYear": 1915,
+      "span": 52
+    },
+    {
+      "houseNo": "33",
+      "kind": "griblje",
+      "blocks": 30,
+      "books": 5,
+      "perBook": {
+        "04104": 4,
+        "04105": 5,
+        "04106": 7,
+        "04455": 5,
+        "04894": 9
+      },
+      "firstYear": 1859,
+      "lastYear": 1922,
+      "span": 63
+    },
+    {
+      "houseNo": "34",
+      "kind": "griblje",
+      "blocks": 35,
+      "books": 5,
+      "perBook": {
+        "04104": 3,
+        "04105": 11,
+        "04106": 5,
+        "04455": 5,
+        "04894": 11
+      },
+      "firstYear": 1864,
+      "lastYear": 1918,
+      "span": 54
+    },
+    {
+      "houseNo": "35",
+      "kind": "griblje",
+      "blocks": 35,
+      "books": 5,
+      "perBook": {
+        "04104": 5,
+        "04105": 7,
+        "04106": 3,
+        "04455": 5,
+        "04894": 15
+      },
+      "firstYear": 1867,
+      "lastYear": 1922,
+      "span": 55
+    },
+    {
+      "houseNo": "36",
+      "kind": "griblje",
+      "blocks": 33,
+      "books": 5,
+      "perBook": {
+        "04104": 2,
+        "04105": 12,
+        "04106": 6,
+        "04455": 4,
+        "04894": 9
+      },
+      "firstYear": 1857,
+      "lastYear": 1917,
+      "span": 60
+    },
+    {
+      "houseNo": "37",
+      "kind": "griblje",
+      "blocks": 28,
+      "books": 5,
+      "perBook": {
+        "04104": 7,
+        "04105": 4,
+        "04106": 10,
+        "04455": 2,
+        "04894": 5
+      },
+      "firstYear": 1859,
+      "lastYear": 1918,
+      "span": 59
+    },
+    {
+      "houseNo": "38",
+      "kind": "griblje",
+      "blocks": 16,
+      "books": 5,
+      "perBook": {
+        "04104": 4,
+        "04105": 1,
+        "04106": 5,
+        "04455": 3,
+        "04894": 3
+      },
+      "firstYear": 1867,
+      "lastYear": 1904,
+      "span": 37
+    },
+    {
+      "houseNo": "39",
+      "kind": "griblje",
+      "blocks": 16,
+      "books": 5,
+      "perBook": {
+        "04104": 4,
+        "04105": 2,
+        "04106": 4,
+        "04455": 3,
+        "04894": 3
+      },
+      "firstYear": 1859,
+      "lastYear": 1912,
+      "span": 53
+    },
+    {
+      "houseNo": "40",
+      "kind": "griblje",
+      "blocks": 28,
+      "books": 5,
+      "perBook": {
+        "04104": 8,
+        "04105": 7,
+        "04106": 5,
+        "04455": 3,
+        "04894": 5
+      },
+      "firstYear": 1867,
+      "lastYear": 1919,
+      "span": 52
+    },
+    {
+      "houseNo": "41",
+      "kind": "griblje",
+      "blocks": 22,
+      "books": 5,
+      "perBook": {
+        "04104": 2,
+        "04105": 5,
+        "04106": 4,
+        "04455": 4,
+        "04894": 7
+      },
+      "firstYear": 1866,
+      "lastYear": 1921,
+      "span": 55
+    },
+    {
+      "houseNo": "42",
+      "kind": "griblje",
+      "blocks": 27,
+      "books": 5,
+      "perBook": {
+        "04104": 3,
+        "04105": 5,
+        "04106": 6,
+        "04455": 5,
+        "04894": 8
+      },
+      "firstYear": 1861,
+      "lastYear": 1912,
+      "span": 51
+    },
+    {
+      "houseNo": "43",
+      "kind": "griblje",
+      "blocks": 16,
+      "books": 5,
+      "perBook": {
+        "04104": 4,
+        "04105": 2,
+        "04106": 3,
+        "04455": 2,
+        "04894": 5
+      },
+      "firstYear": 1873,
+      "lastYear": 1924,
+      "span": 51
+    },
+    {
+      "houseNo": "44",
+      "kind": "griblje",
+      "blocks": 39,
+      "books": 5,
+      "perBook": {
+        "04104": 6,
+        "04105": 8,
+        "04106": 12,
+        "04455": 6,
+        "04894": 7
+      },
+      "firstYear": 1858,
+      "lastYear": 1923,
+      "span": 65
+    },
+    {
+      "houseNo": "45",
+      "kind": "griblje",
+      "blocks": 21,
+      "books": 4,
+      "perBook": {
+        "04104": 2,
+        "04105": 8,
+        "04106": 2,
+        "04894": 9
+      },
+      "firstYear": 1864,
+      "lastYear": 1924,
+      "span": 60
+    },
+    {
+      "houseNo": "46",
+      "kind": "griblje",
+      "blocks": 38,
+      "books": 5,
+      "perBook": {
+        "04104": 4,
+        "04105": 12,
+        "04106": 4,
+        "04455": 7,
+        "04894": 11
+      },
+      "firstYear": 1867,
+      "lastYear": 1920,
+      "span": 53
+    },
+    {
+      "houseNo": "47",
+      "kind": "griblje",
+      "blocks": 18,
+      "books": 5,
+      "perBook": {
+        "04104": 1,
+        "04105": 5,
+        "04106": 7,
+        "04455": 2,
+        "04894": 3
+      },
+      "firstYear": 1862,
+      "lastYear": 1919,
+      "span": 57
+    },
+    {
+      "houseNo": "48",
+      "kind": "griblje",
+      "blocks": 32,
+      "books": 5,
+      "perBook": {
+        "04104": 5,
+        "04105": 8,
+        "04106": 8,
+        "04455": 4,
+        "04894": 7
+      },
+      "firstYear": 1857,
+      "lastYear": 1922,
+      "span": 65
+    },
+    {
+      "houseNo": "49",
+      "kind": "griblje",
+      "blocks": 28,
+      "books": 4,
+      "perBook": {
+        "04104": 7,
+        "04105": 6,
+        "04106": 7,
+        "04894": 8
+      },
+      "firstYear": 1858,
+      "lastYear": 1918,
+      "span": 60
+    },
+    {
+      "houseNo": "50",
+      "kind": "griblje",
+      "blocks": 11,
+      "books": 4,
+      "perBook": {
+        "04105": 1,
+        "04106": 6,
+        "04455": 3,
+        "04894": 1
+      },
+      "firstYear": 1858,
+      "lastYear": 1924,
+      "span": 66
+    },
+    {
+      "houseNo": "51",
+      "kind": "griblje",
+      "blocks": 11,
+      "books": 4,
+      "perBook": {
+        "04104": 2,
+        "04106": 3,
+        "04455": 2,
+        "04894": 4
+      },
+      "firstYear": 1867,
+      "lastYear": 1913,
+      "span": 46
+    },
+    {
+      "houseNo": "52",
+      "kind": "griblje",
+      "blocks": 14,
+      "books": 4,
+      "perBook": {
+        "04105": 3,
+        "04106": 5,
+        "04455": 2,
+        "04894": 4
+      },
+      "firstYear": 1857,
+      "lastYear": 1908,
+      "span": 51
+    },
+    {
+      "houseNo": "53",
+      "kind": "griblje",
+      "blocks": 33,
+      "books": 5,
+      "perBook": {
+        "04104": 5,
+        "04105": 7,
+        "04106": 6,
+        "04455": 4,
+        "04894": 11
+      },
+      "firstYear": 1863,
+      "lastYear": 1924,
+      "span": 61
+    },
+    {
+      "houseNo": "54",
+      "kind": "griblje",
+      "blocks": 17,
+      "books": 4,
+      "perBook": {
+        "04105": 6,
+        "04106": 6,
+        "04455": 3,
+        "04894": 2
+      },
+      "firstYear": 1868,
+      "lastYear": 1917,
+      "span": 49
+    },
+    {
+      "houseNo": "55",
+      "kind": "griblje",
+      "blocks": 18,
+      "books": 4,
+      "perBook": {
+        "04104": 5,
+        "04105": 3,
+        "04106": 6,
+        "04894": 4
+      },
+      "firstYear": 1860,
+      "lastYear": 1924,
+      "span": 64
+    },
+    {
+      "houseNo": "56",
+      "kind": "griblje",
+      "blocks": 13,
+      "books": 5,
+      "perBook": {
+        "04104": 2,
+        "04105": 3,
+        "04106": 3,
+        "04455": 3,
+        "04894": 2
+      },
+      "firstYear": 1867,
+      "lastYear": 1908,
+      "span": 41
+    },
+    {
+      "houseNo": "57",
+      "kind": "griblje",
+      "blocks": 21,
+      "books": 5,
+      "perBook": {
+        "04104": 2,
+        "04105": 5,
+        "04106": 7,
+        "04455": 1,
+        "04894": 6
+      },
+      "firstYear": 1859,
+      "lastYear": 1912,
+      "span": 53
+    },
+    {
+      "houseNo": "58",
+      "kind": "griblje",
+      "blocks": 28,
+      "books": 5,
+      "perBook": {
+        "04104": 2,
+        "04105": 8,
+        "04106": 5,
+        "04455": 2,
+        "04894": 11
+      },
+      "firstYear": 1859,
+      "lastYear": 1918,
+      "span": 59
+    },
+    {
+      "houseNo": "59",
+      "kind": "griblje",
+      "blocks": 10,
+      "books": 4,
+      "perBook": {
+        "04105": 4,
+        "04106": 1,
+        "04455": 1,
+        "04894": 4
+      },
+      "firstYear": 1875,
+      "lastYear": 1921,
+      "span": 46
+    },
+    {
+      "houseNo": "60",
+      "kind": "griblje",
+      "blocks": 30,
+      "books": 5,
+      "perBook": {
+        "04104": 3,
+        "04105": 9,
+        "04106": 5,
+        "04455": 3,
+        "04894": 10
+      },
+      "firstYear": 1857,
+      "lastYear": 1923,
+      "span": 66
+    },
+    {
+      "houseNo": "61",
+      "kind": "griblje",
+      "blocks": 16,
+      "books": 5,
+      "perBook": {
+        "04104": 1,
+        "04105": 4,
+        "04106": 2,
+        "04455": 3,
+        "04894": 6
+      },
+      "firstYear": 1862,
+      "lastYear": 1919,
+      "span": 57
+    },
+    {
+      "houseNo": "62",
+      "kind": "griblje",
+      "blocks": 28,
+      "books": 5,
+      "perBook": {
+        "04104": 6,
+        "04105": 4,
+        "04106": 6,
+        "04455": 6,
+        "04894": 6
+      },
+      "firstYear": 1864,
+      "lastYear": 1924,
+      "span": 60
+    },
+    {
+      "houseNo": "63",
+      "kind": "griblje",
+      "blocks": 29,
+      "books": 6,
+      "perBook": {
+        "01738": 1,
+        "04104": 4,
+        "04105": 8,
+        "04106": 7,
+        "04455": 5,
+        "04894": 4
+      },
+      "firstYear": 1862,
+      "lastYear": 1921,
+      "span": 59
+    },
+    {
+      "houseNo": "64",
+      "kind": "griblje",
+      "blocks": 20,
+      "books": 5,
+      "perBook": {
+        "04104": 3,
+        "04105": 2,
+        "04106": 5,
+        "04455": 3,
+        "04894": 7
+      },
+      "firstYear": 1857,
+      "lastYear": 1923,
+      "span": 66
+    },
+    {
+      "houseNo": "65",
+      "kind": "griblje",
+      "blocks": 43,
+      "books": 5,
+      "perBook": {
+        "04104": 4,
+        "04105": 11,
+        "04106": 14,
+        "04455": 5,
+        "04894": 9
+      },
+      "firstYear": 1857,
+      "lastYear": 1914,
+      "span": 57
+    },
+    {
+      "houseNo": "66",
+      "kind": "griblje",
+      "blocks": 13,
+      "books": 4,
+      "perBook": {
+        "04104": 2,
+        "04105": 4,
+        "04106": 5,
+        "04894": 2
+      },
+      "firstYear": 1868,
+      "lastYear": 1909,
+      "span": 41
+    },
+    {
+      "houseNo": "67",
+      "kind": "griblje",
+      "blocks": 5,
+      "books": 3,
+      "perBook": {
+        "04105": 1,
+        "04106": 3,
+        "04455": 1
+      },
+      "firstYear": 1861,
+      "lastYear": 1900,
+      "span": 39
+    },
+    {
+      "houseNo": "68",
+      "kind": "griblje",
+      "blocks": 19,
+      "books": 4,
+      "perBook": {
+        "04104": 6,
+        "04106": 8,
+        "04455": 2,
+        "04894": 3
+      },
+      "firstYear": 1861,
+      "lastYear": 1924,
+      "span": 63
+    },
+    {
+      "houseNo": "69",
+      "kind": "griblje",
+      "blocks": 26,
+      "books": 5,
+      "perBook": {
+        "04104": 4,
+        "04105": 8,
+        "04106": 6,
+        "04455": 3,
+        "04894": 5
+      },
+      "firstYear": 1859,
+      "lastYear": 1924,
+      "span": 65
+    },
+    {
+      "houseNo": "70",
+      "kind": "griblje",
+      "blocks": 9,
+      "books": 4,
+      "perBook": {
+        "04105": 3,
+        "04106": 3,
+        "04455": 1,
+        "04894": 2
+      },
+      "firstYear": 1865,
+      "lastYear": 1924,
+      "span": 59
+    },
+    {
+      "houseNo": "71",
+      "kind": "griblje",
+      "blocks": 13,
+      "books": 4,
+      "perBook": {
+        "04105": 4,
+        "04106": 1,
+        "04455": 3,
+        "04894": 5
+      },
+      "firstYear": 1864,
+      "lastYear": 1923,
+      "span": 59
+    },
+    {
+      "houseNo": "72",
+      "kind": "griblje",
+      "blocks": 25,
+      "books": 5,
+      "perBook": {
+        "04104": 2,
+        "04105": 8,
+        "04106": 5,
+        "04455": 1,
+        "04894": 9
+      },
+      "firstYear": 1869,
+      "lastYear": 1921,
+      "span": 52
+    },
+    {
+      "houseNo": "73",
+      "kind": "griblje",
+      "blocks": 9,
+      "books": 6,
+      "perBook": {
+        "01738": 1,
+        "04104": 2,
+        "04105": 2,
+        "04106": 2,
+        "04455": 1,
+        "04894": 1
+      },
+      "firstYear": 1869,
+      "lastYear": 1921,
+      "span": 52
+    },
+    {
+      "houseNo": "74",
+      "kind": "griblje",
+      "blocks": 13,
+      "books": 5,
+      "perBook": {
+        "04104": 3,
+        "04105": 2,
+        "04106": 2,
+        "04455": 2,
+        "04894": 4
+      },
+      "firstYear": 1859,
+      "lastYear": 1918,
+      "span": 59
+    },
+    {
+      "houseNo": "75",
+      "kind": "griblje",
+      "blocks": 6,
+      "books": 3,
+      "perBook": {
+        "04105": 3,
+        "04106": 1,
+        "04894": 2
+      },
+      "firstYear": 1876,
+      "lastYear": 1920,
+      "span": 44
+    },
+    {
+      "houseNo": "76",
+      "kind": "griblje",
+      "blocks": 4,
+      "books": 3,
+      "perBook": {
+        "04105": 1,
+        "04455": 1,
+        "04894": 2
+      },
+      "firstYear": 1887,
+      "lastYear": 1913,
+      "span": 26
+    },
+    {
+      "houseNo": "77",
+      "kind": "griblje",
+      "blocks": 10,
+      "books": 4,
+      "perBook": {
+        "04104": 1,
+        "04105": 5,
+        "04455": 1,
+        "04894": 3
+      },
+      "firstYear": 1878,
+      "lastYear": 1921,
+      "span": 43
+    },
+    {
+      "houseNo": "78",
+      "kind": "griblje",
+      "blocks": 12,
+      "books": 5,
+      "perBook": {
+        "04104": 1,
+        "04105": 3,
+        "04106": 4,
+        "04455": 1,
+        "04894": 3
+      },
+      "firstYear": 1877,
+      "lastYear": 1923,
+      "span": 46
+    },
+    {
+      "houseNo": "79",
+      "kind": "druga-vas",
+      "blocks": 2,
+      "books": 2,
+      "perBook": {
+        "04105": 1,
+        "04894": 1
+      },
+      "firstYear": 1888,
+      "lastYear": 1912,
+      "span": 24
+    },
+    {
+      "houseNo": "80",
+      "kind": "druga-vas",
+      "blocks": 1,
+      "books": 1,
+      "perBook": {
+        "04894": 1
+      },
+      "firstYear": 1892,
+      "lastYear": 1892,
+      "span": 0
+    },
+    {
+      "houseNo": "81",
+      "kind": "druga-vas",
+      "blocks": 4,
+      "books": 2,
+      "perBook": {
+        "04105": 1,
+        "04894": 3
+      },
+      "firstYear": 1900,
+      "lastYear": 1919,
+      "span": 19
+    },
+    {
+      "houseNo": "82",
+      "kind": "druga-vas",
+      "blocks": 6,
+      "books": 3,
+      "perBook": {
+        "04105": 2,
+        "04455": 1,
+        "04894": 3
+      },
+      "firstYear": 1899,
+      "lastYear": 1921,
+      "span": 22
+    },
+    {
+      "houseNo": "83",
+      "kind": "druga-vas",
+      "blocks": 8,
+      "books": 2,
+      "perBook": {
+        "04105": 4,
+        "04894": 4
+      },
+      "firstYear": 1888,
+      "lastYear": 1908,
+      "span": 20
+    },
+    {
+      "houseNo": "84",
+      "kind": "druga-vas",
+      "blocks": 1,
+      "books": 1,
+      "perBook": {
+        "04894": 1
+      },
+      "firstYear": 1919,
+      "lastYear": 1919,
+      "span": 0
+    },
+    {
+      "houseNo": "85",
+      "kind": "druga-vas",
+      "blocks": 5,
+      "books": 2,
+      "perBook": {
+        "04105": 2,
+        "04894": 3
+      },
+      "firstYear": 1888,
+      "lastYear": 1909,
+      "span": 21
+    },
+    {
+      "houseNo": "86",
+      "kind": "druga-vas",
+      "blocks": 7,
+      "books": 4,
+      "perBook": {
+        "04105": 3,
+        "04106": 1,
+        "04455": 1,
+        "04894": 2
+      },
+      "firstYear": 1874,
+      "lastYear": 1920,
+      "span": 46
+    },
+    {
+      "houseNo": "87",
+      "kind": "druga-vas",
+      "blocks": 10,
+      "books": 3,
+      "perBook": {
+        "04105": 3,
+        "04455": 2,
+        "04894": 5
+      },
+      "firstYear": 1889,
+      "lastYear": 1912,
+      "span": 23
+    },
+    {
+      "houseNo": "88",
+      "kind": "druga-vas",
+      "blocks": 12,
+      "books": 2,
+      "perBook": {
+        "04105": 6,
+        "04894": 6
+      },
+      "firstYear": 1886,
+      "lastYear": 1924,
+      "span": 38
+    },
+    {
+      "houseNo": "89",
+      "kind": "druga-vas",
+      "blocks": 2,
+      "books": 2,
+      "perBook": {
+        "04105": 1,
+        "04894": 1
+      },
+      "firstYear": 1893,
+      "lastYear": 1898,
+      "span": 5
+    },
+    {
+      "houseNo": "90",
+      "kind": "druga-vas",
+      "blocks": 16,
+      "books": 3,
+      "perBook": {
+        "04104": 1,
+        "04105": 9,
+        "04894": 6
+      },
+      "firstYear": 1883,
+      "lastYear": 1919,
+      "span": 36
+    },
+    {
+      "houseNo": "91",
+      "kind": "druga-vas",
+      "blocks": 16,
+      "books": 3,
+      "perBook": {
+        "04105": 6,
+        "04455": 3,
+        "04894": 7
+      },
+      "firstYear": 1890,
+      "lastYear": 1914,
+      "span": 24
+    },
+    {
+      "houseNo": "92",
+      "kind": "druga-vas",
+      "blocks": 3,
+      "books": 2,
+      "perBook": {
+        "04455": 1,
+        "04894": 2
+      },
+      "firstYear": 1913,
+      "lastYear": 1921,
+      "span": 8
+    },
+    {
+      "houseNo": "94",
+      "kind": "druga-vas",
+      "blocks": 3,
+      "books": 3,
+      "perBook": {
+        "04104": 1,
+        "04105": 1,
+        "04106": 1
+      },
+      "firstYear": 1873,
+      "lastYear": 1886,
+      "span": 13
+    },
+    {
+      "houseNo": "98",
+      "kind": "druga-vas",
+      "blocks": 1,
+      "books": 1,
+      "perBook": {
+        "04894": 1
+      },
+      "firstYear": 1893,
+      "lastYear": 1893,
+      "span": 0
+    },
+    {
+      "houseNo": "13 [~]",
+      "kind": "neznano",
+      "blocks": 1,
+      "books": 1,
+      "perBook": {
+        "04455": 1
+      },
+      "firstYear": 1879,
+      "lastYear": 1879,
+      "span": 0
+    },
+    {
+      "houseNo": "17 [~]",
+      "kind": "neznano",
+      "blocks": 1,
+      "books": 1,
+      "perBook": {
+        "04455": 1
+      },
+      "firstYear": 1879,
+      "lastYear": 1879,
+      "span": 0
+    },
+    {
+      "houseNo": "29 [~X-OPEN]",
+      "kind": "neznano",
+      "blocks": 1,
+      "books": 1,
+      "perBook": {
+        "04455": 1
+      },
+      "firstYear": 1885,
+      "lastYear": 1885,
+      "span": 0
+    },
+    {
+      "houseNo": "32 [~]",
+      "kind": "neznano",
+      "blocks": 1,
+      "books": 1,
+      "perBook": {
+        "04455": 1
+      },
+      "firstYear": 1879,
+      "lastYear": 1879,
+      "span": 0
+    },
+    {
+      "houseNo": "[?]",
+      "kind": "neznano",
+      "blocks": 10,
+      "books": 2,
+      "perBook": {
+        "04104": 8,
+        "04106": 2
+      },
+      "firstYear": 1857,
+      "lastYear": 1885,
+      "span": 28
+    },
+    {
+      "houseNo": "sub dioe.",
+      "kind": "neznano",
+      "blocks": 1,
+      "books": 1,
+      "perBook": {
+        "04105": 1
+      },
+      "firstYear": 1918,
+      "lastYear": 1918,
+      "span": 0
+    }
+  ],
+  "korpusUcinek": {
+    "vitalsTotal": 2023,
+    "newModule": "src/data/atlas/parish-house-stories.ts (HOUSE_STORIES ×100 + HOUSE_STORY_SIX ×9 + TIERS + TOTALS + NOTABLES ×7 + BOOKS ×6)",
+    "ui": "HouseStoriesP254 v ParishTab (Matrike)",
+    "qa": "qa-p254 (248. kontrola) — ŽIVA REKALKULACIJA agregacije iz HOUSE_VITALS 1:1!",
+    "verifier": "scripts/p254_house_stories.py (I1–I10)"
+  }
+}

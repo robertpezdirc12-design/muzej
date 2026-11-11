@@ -250,6 +250,14 @@ import {
   PREDHODNIK_1873_NITI,
   PREDHODNIK_1873_KORPUS,
 } from "@/data/atlas/parish-marriage-early";
+import {
+  HOUSE_STORIES,
+  HOUSE_STORY_BOOKS,
+  HOUSE_STORY_SIX,
+  HOUSE_STORY_TIERS,
+  HOUSE_STORY_TOTALS,
+  HOUSE_STORY_NOTABLES,
+} from "@/data/atlas/parish-house-stories";
 import { LANDUSE_ZONES, LANDUSE_ENTITIES, HAMLETS } from "@/data/atlas/landuse";
 import { getCoverage, getArchiveInventory, parishStats, getHouseStory } from "@/lib/atlas";
 import type { GeoFix } from "@/lib/geo";
@@ -1529,6 +1537,126 @@ function MarriagePredhodnik1873() {
   );
 }
 
+
+/* ——— P254: HIŠNE ZGODBE GLOBJE — mreže hiš čez 6 knjig (sinteza!) ——— */
+function HouseStoriesP254() {
+  const { t } = useLang();
+  const tierMax = Math.max(...HOUSE_STORY_TIERS.map((x) => x.houses));
+  return (
+    <div className="rounded-xl border bg-card/60 p-5">
+      <h3 className="flex items-center gap-2 font-serif text-lg font-semibold">
+        <Home className="h-4 w-4 text-primary" aria-hidden />
+        {t(
+          "Hišne zgodbe globlje (P254): mreže hiš čez 6 knjig",
+          "The deep house stories (P254): the house networks across 6 books",
+        )}
+      </h3>
+      <p className="mt-2 text-sm text-muted-foreground">
+        {t(
+          `SINTEZA (brez novih branj!): vseh ${HOUSE_STORY_TOTALS.blocks} vitalnih blokov korpusa agregiranih po hišah — ${HOUSE_STORY_TOTALS.houses} hišnih oznak = ${HOUSE_STORY_TOTALS.griblje} Griblje (1–78) + ${HOUSE_STORY_TOTALS.drugaVas} druga-vas (79–98) + ${HOUSE_STORY_TOTALS.neznano} neznan. ★★★ ${HOUSE_STORY_TOTALS.sixBook} hiš ima blok v VSEH 6 knjigah = polni življenjski cikel (krst + poroka + smrt × obe eri).`,
+          `A SYNTHESIS (no new readings!): all ${HOUSE_STORY_TOTALS.blocks} vital blocks of the corpus aggregated by house — ${HOUSE_STORY_TOTALS.houses} house labels = ${HOUSE_STORY_TOTALS.griblje} Griblje + ${HOUSE_STORY_TOTALS.drugaVas} other-village + ${HOUSE_STORY_TOTALS.neznano} unknown. ★★★ ${HOUSE_STORY_TOTALS.sixBook} houses have a block in ALL 6 books = the full life cycle.`,
+        )}
+      </p>
+
+      {/* 9 šest-knjižnih hiš */}
+      <div className="mt-4 rounded-lg border bg-background/60 p-4">
+        <h4 className="text-sm font-semibold">
+          {t("9 šest-knjižnih hiš — polni življenjski cikel", "The 9 six-book houses — the full life cycle")}
+          <span className="ml-2 rounded-full border px-2 py-0.5 text-[10px] font-medium text-primary">
+            {t("blok v VSEH 6 knjigah!", "a block in ALL 6 books!")}
+          </span>
+        </h4>
+        <div className="mt-3 grid gap-2 md:grid-cols-3">
+          {HOUSE_STORY_SIX.map((s) => (
+            <div key={s.houseNo} className="rounded-lg border p-3">
+              <div className="flex items-baseline justify-between gap-2">
+                <span className="font-serif text-base font-semibold">h{s.houseNo}</span>
+                <span className="text-[10px] text-muted-foreground">
+                  {s.blocks} {t("blokov", "blocks")} · {s.years}
+                </span>
+              </div>
+              <p className="mt-1 text-[11px] leading-relaxed text-muted-foreground" style={{ overflowWrap: "anywhere" }}>
+                {t(s.storySi, s.storyEn)}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* tier bars */}
+      <div className="mt-4 rounded-lg border bg-background/60 p-4">
+        <h4 className="text-sm font-semibold">
+          {t("Pokritje po številu knjig (100 hiš)", "The coverage by the number of books (100 houses)")}
+        </h4>
+        <div className="mt-3 space-y-1.5" role="list" aria-label={t("Razporeditev pokritja", "The coverage distribution")}>
+          {HOUSE_STORY_TIERS.map((tier) => (
+            <div key={tier.books} role="listitem" className="flex items-center gap-2">
+              <span className={`w-14 shrink-0 text-right text-xs font-semibold ${tier.books === 6 ? "text-primary" : "text-muted-foreground"}`}>
+                {tier.books} {t("knjig", "books")}
+              </span>
+              <div className="h-5 flex-1 overflow-hidden rounded bg-secondary">
+                <div
+                  className={`h-full ${tier.books === 6 ? "bg-primary" : "bg-primary/40"}`}
+                  style={{ width: `${Math.max(2, Math.round((tier.houses / tierMax) * 100))}%` }}
+                />
+              </div>
+              <span className="w-8 shrink-0 text-xs tabular-nums text-muted-foreground">{tier.houses}</span>
+            </div>
+          ))}
+        </div>
+        <p className="mt-2 text-xs text-muted-foreground" style={{ overflowWrap: "anywhere" }}>
+          {t(
+            `Obe-eri pokritje: krstna 69 hiš · mrliška 75 · poročna SAMO ${HOUSE_STORY_TOTALS.bothEraPorocna} (01738 pokriva le leto 1873!). 52 od 53 pet-knjižnih manjka samo 01738; izjema = h25 brez 04106 (smrtna vrzel!).`,
+            `The both-era coverage: baptism 69 houses · death 75 · marriage ONLY ${HOUSE_STORY_TOTALS.bothEraPorocna} (the 01738 covers just 1873!). 52 of the 53 five-book houses miss only 01738; the exception = h25 without 04106 (a death gap!).`,
+          )}
+        </p>
+        <p className="mt-2 text-xs text-muted-foreground" style={{ overflowWrap: "anywhere" }}>
+          {t("Najglasnejše hiše: ", "The loudest houses: ")}
+          {[...HOUSE_STORIES]
+            .sort((a, b) => b.blocks - a.blocks)
+            .slice(0, 6)
+            .map((h, i) => `${i + 1}. h${h.houseNo} (${h.blocks})`)
+            .join(" · ")}
+        </p>
+      </div>
+
+      {/* osamelci */}
+      <div className="mt-4">
+        <h4 className="text-sm font-semibold">{t("Osamelci, rekordi in vrzeli — 7 zgodb", "Outliers, records and gaps — 7 stories")}</h4>
+        <div className="mt-2 grid gap-2 md:grid-cols-2">
+          {HOUSE_STORY_NOTABLES.map((n) => (
+            <div key={n.id} className="rounded-lg border border-dashed p-3">
+              <div className="text-xs font-semibold">{t(n.titleSi, n.titleEn)}</div>
+              <p className="mt-1 text-[11px] leading-relaxed text-muted-foreground" style={{ overflowWrap: "anywhere" }}>
+                {t(n.bodySi, n.bodyEn)}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* knjige */}
+      <div className="mt-4 overflow-x-auto pb-1">
+        <h4 className="text-sm font-semibold">{t("6 knjig mreže", "The 6 books of the network")}</h4>
+        <div className="mt-2 flex min-w-[640px] gap-2 sm:min-w-0" role="list">
+          {HOUSE_STORY_BOOKS.map((b) => (
+            <div key={b.sig} role="listitem" className="flex-1 rounded-lg border bg-background/60 p-3">
+              <span className="font-mono text-xs text-primary">{b.sig}</span>
+              <div className="mt-0.5 text-xs font-medium">{t(b.roleSi, b.roleEn)}</div>
+              <div className="text-[10px] text-muted-foreground">{b.years}</div>
+              <div className="mt-1 text-[10px] tabular-nums text-muted-foreground">
+                {b.blocks} {t("blokov", "blocks")} · {b.houses} {t("hiš", "houses")}
+              </div>
+              <div className="mt-1 text-[10px] leading-snug text-muted-foreground" style={{ overflowWrap: "anywhere" }}>
+                ★ {b.recordSi}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 function MarriageEarly1885() {
   const { t } = useLang();
@@ -2953,6 +3081,9 @@ function ParishTab() {
 
       {/* P253: PREDHODNIK knjige 04455 = 01738 (1828–1873) — leto 1873 m1–m17 + ŠIV! */}
       <MarriagePredhodnik1873 />
+
+      {/* P254: HIŠNE ZGODBE GLOBJE — mreže hiš čez 6 knjig (sinteza!) */}
+      <HouseStoriesP254 />
 
       {/* brskalnik knjig */}
       <div>
