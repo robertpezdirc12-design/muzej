@@ -19,7 +19,7 @@ check("I1 bloki 04455/1881 == 9 (3-POLNA ×2 + h27-×2!)",
 check("I1b vrstni-red-9 (27,4,28,8,42,27,41,52,16!)",
       bloki == ["27", "4", "28", "8", "42", "27", "41", "52", "16"], ",".join(bloki))
 skupaj = src.count('bookSignature: "04455"')
-check("I2 vitals-2012 + 04455==269", "HOUSE_VITALS.length !== 2011" not in src and skupaj == 269, f"04455={skupaj}")
+check("I2 vitals-2023 + 04455==269", "HOUSE_VITALS.length !== 2011" not in src and skupaj == 269, f"04455={skupaj}")
 
 nove = re.findall(r'houseNo: "([^"]+)",\s*bookSignature: "04455",\s*year: 1881,\s*scan: (\d+),\s*page: (\d+),', src)
 check("I3 skeni+pagi (39/38 · 42/41 · 43/42 · 44/43 — pag=sken−1!)",
@@ -45,7 +45,7 @@ check("I4c foliacija-3/3 + PRESKOK-12-[X-OPEN-DUEL] + v4-3-branja",
       and "4:8:47" in an)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 2012")
+st = qa.count("HOUSE_VITALS.length !== 2023")
 check("I5 qa-p242 + števec-2012", "qa-p242-parish-marriage-early-04455-1881" in qa and st >= 150, f"2012-številcev={st}")
 check("I5b sidra-262 + 1878:7-P246 + 1879:9-P244 + 1880:3-P243 (qa-sidra-message)", "poročna sidra ≠ 262 (1873:4-P251! · 1874:11-P250! · 1875:1-P249! · 1876:6-P248! · 1877:5-P247! · 1878:7-P246! · 1879:9-P244! · 1880:3-P243!" in qa)
 check("I5c dobe-202 + 32-pred-linijskih (P244-živo!)", "dobe-bloki ≠ 236/7/26" in qa and "66 pred-linijskih 1873-P251×4!+1874-P250×11!+1875-P249×1!+1876-P248×6!+1877-P247×5!" in qa)
@@ -68,7 +68,7 @@ check("I7b h52-DVIG-v-modulu + ZA-6-LET", "h52-firstYear-DVIG-1882→1881" in m 
 check("I7c forenzika-×237-ostaja", "×237 blokov čez 5 knjig" in open(f"{ROOT}/src/data/atlas/parish-forensics.ts", encoding="utf-8").read())
 
 pt = json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8"))
-check("I8a pt-luknja-2008 + byBook-04455=265 (P243-živo!)", pt.get("vitalsTotal") == 2012 and pt.get("corpus", {}).get("byBook", {}).get("04455") == 269,
+check("I8a pt-luknja-2008 + byBook-04455=265 (P243-živo!)", pt.get("vitalsTotal") == 2023 and pt.get("corpus", {}).get("byBook", {}).get("04455") == 269,
       f"vitalsTotal={pt.get('vitalsTotal')} 04455={pt.get('byBook', {}).get('04455')}")
 h52 = [x for x in pt["gapHouses"] if x["houseNo"] == "52"][0]
 check("I8b h52-posodobljen (10-blokov/04455=3/firstYear=1881/p242Note!)",

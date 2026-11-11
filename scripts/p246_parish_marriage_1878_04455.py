@@ -19,7 +19,7 @@ check("I1 bloki 04455/1878 == 7 (h2+h47+h63+h18+h23+h1+h36!)",
 check("I1b vrstni-red-7 (2,47,63,18,23,1,36!-bloki-po-skenih-s20×4+s21+s23+s24!)",
       bloki == ["2", "47", "63", "18", "23", "1", "36"], ",".join(bloki))
 skupaj = src.count('bookSignature: "04455"')
-check("I2 vitals-2012 + 04455==269", "HOUSE_VITALS.length !== 2011" not in src and skupaj == 269, f"04455={skupaj}")
+check("I2 vitals-2023 + 04455==269", "HOUSE_VITALS.length !== 2011" not in src and skupaj == 269, f"04455={skupaj}")
 
 nove = re.findall(r'houseNo: "([^"]+)",\s*bookSignature: "04455",\s*year: 1878,\s*scan: (\d+),\s*page: (\d+),', src)
 check("I3 skeni+pagi (20/19 ×4 · 21/20 · 23/22 · 24/23 — pag=sken−1!)",
@@ -52,7 +52,7 @@ check("I4c PEZDIRC-8.-leto-×2 + DOVGAN-8-let + MILEK-h65 + KELCHO-continuum + h
       and "Kelcho" in an2 and "BRULA" in an2)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 2012")
+st = qa.count("HOUSE_VITALS.length !== 2023")
 check("I5 qa-p246 + števec-2012 (×155!)", "HOUSE_VITALS.length !== 1978" not in qa and st >= 150, f"2012-številcev={st}")
 check("I5b sidra-262 + 1878:7-P246 (qa-sidra-message)", "poročna sidra ≠ 262 (1873:4-P251! · 1874:11-P250! · 1875:1-P249! · 1876:6-P248! · 1877:5-P247! · 1878:7-P246!" in qa)
 check("I5c dobe-209 + 39-pred-linijskih", "dobe-bloki ≠ 236/7/26" in qa and "66 pred-linijskih 1873-P251×4!+1874-P250×11!+1875-P249×1!+1876-P248×6!+1877-P247×5!" in qa)
@@ -86,7 +86,7 @@ check("I7c FOLIACIJA-6/6 + GLAVA-9.-VARIANTA-v-modulu",
 
 pt = json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8"))
 check("I8a pt-luknja-2008 + byBook-04455=265 + P246-note",
-      pt.get("vitalsTotal") == 2012 and pt.get("corpus", {}).get("byBook", {}).get("04455") == 269
+      pt.get("vitalsTotal") == 2023 and pt.get("corpus", {}).get("byBook", {}).get("04455") == 269
       and "P246" in pt.get("corpus", {}).get("housesNote", ""),
       f"vitalsTotal={pt.get('vitalsTotal')} 04455={pt.get('corpus', {}).get('byBook', {}).get('04455')}")
 
@@ -123,8 +123,8 @@ try:
     r = urllib.request.Request("http://localhost:3000/api/qa")
     with urllib.request.urlopen(r, timeout=30) as resp:
         qa_data = json.load(resp)
-    check("I10 QA-živo 245/245 ok:True (+qa-p246-id!)",
-          qa_data.get("ok") is True and qa_data.get("passed") == 246 and qa_data.get("failed") == 0,
+    check("I10 QA-živo 247/247 ok:True (+qa-p246-id!)",
+          qa_data.get("ok") is True and qa_data.get("passed") == 247 and qa_data.get("failed") == 0,
           f"passed={qa_data.get('passed')} failed={qa_data.get('failed')}")
 except Exception as e:
     check("I10 QA-živo", False, str(e)[:80])

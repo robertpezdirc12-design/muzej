@@ -495,7 +495,7 @@ export function baptismGribljeByYear(): Map<number, number> {
 // vseh 13 faz (P238 = 1885 … P251 = 1873). Vsi števci so preverljivi proti HOUSE_VITALS
 // (parish.ts) — qa-p252 jih živo preverja; paleografski dokazi so v
 // research/issue17/parish-marriage-<leto>-04455.json. NI NOVIH BRANJ, NI NOVIH SKENOV (MERI!):
-// korpus 2012/269 NESPREMENJEN — sinteza je izpeljana 1:1 iz obstoječih faz (cf. P236).
+// korpus-04455 269 NESPREMENJEN (sinteza = samo-04455!); skupni-vitals-po-P253: 2023 (+11-blokov-01738-predhodnika — P253!); sinteza je izpeljana 1:1 iz obstoječih faz (cf. P236).
 
 export interface MarriageEarlyYear {
   year: number;

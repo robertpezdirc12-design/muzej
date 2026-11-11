@@ -17,7 +17,7 @@ bloki = re.findall(r'houseNo: "([^"]+)",\s*bookSignature: "04455",\s*year: 1875,
 check("I1 bloki 04455/1875 == 1 (h8-nevesta!)",
       len(bloki) == 1 and bloki == ["8"], f"najdeno {len(bloki)}: {','.join(bloki)}")
 skupaj = src.count('bookSignature: "04455"')
-check("I2 vitals-2012 + 04455==269", "HOUSE_VITALS.length !== 2011" not in src and skupaj == 269, f"04455={skupaj}")
+check("I2 vitals-2023 + 04455==269", "HOUSE_VITALS.length !== 2011" not in src and skupaj == 269, f"04455={skupaj}")
 
 nove = re.findall(r'houseNo: "8",\s*bookSignature: "04455",\s*year: 1875,\s*scan: (\d+),\s*page: (\d+),', src)
 check("I3 sken+pag h8 (9/8 — pag=sken−1!)",
@@ -54,7 +54,7 @@ check("I4c P248-NAPAVED-FALSIFICIRANA + '4.'-×10 + mesec-samo-ob-spremembi + MI
       and "Anna-Milek" in an2 and "MIGRANT" in an2 and "Jatnopir" in an2)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 2012")
+st = qa.count("HOUSE_VITALS.length !== 2023")
 check("I5 qa-p249 + števec-2012 (×150!)", "HOUSE_VITALS.length !== 1996" not in qa and st >= 150, f"2012-številcev={st}")
 check("I5b sidra-262 + 1875:1-P249 (qa-sidra-message)", "poročna sidra ≠ 262 (1873:4-P251! · 1874:11-P250! · 1875:1-P249!" in qa)
 check("I5c dobe-221 + 51-pred-linijskih", "dobe-bloki ≠ 236/7/26" in qa and "66 pred-linijskih 1873-P251×4!+1874-P250×11!+1875-P249×1!" in qa)
@@ -92,7 +92,7 @@ check("I7c FOLIACIJA-23/23 + DUP-8 + '21'-anomalija + finis-1874-v-modulu",
 pt = json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8"))
 h42 = [x for x in pt["gapHouses"] if x["houseNo"] == "42"][0]
 check("I8a pt-luknja-2008 + byBook-04455=265",
-      pt.get("vitalsTotal") == 2012 and pt.get("corpus", {}).get("byBook", {}).get("04455") == 269,
+      pt.get("vitalsTotal") == 2023 and pt.get("corpus", {}).get("byBook", {}).get("04455") == 269,
       f"vitalsTotal={pt.get('vitalsTotal')} 04455={pt.get('corpus', {}).get('byBook', {}).get('04455')}")
 check("I8b h42-p249Note (tail-kandidat-PROMOCIJA-P250!-bloki-16!)",
       h42["blocksTotal"] == 16 and "p249Note" in h42 and "Maria Pegdirc" in h42["p249Note"]

@@ -3,7 +3,7 @@
 // preverja proti fiksnim vrednostim meritvene seje P237 (scripts/tmp/p237_measure*.ts,
 // 2026-11-09). Rezultati so naslovnica za X-open vprašanja iz sinteze P236.
 // Viri: krstna 04104 (1871–1885) · krstna 04105 (1886–1919) · mrliška 04106 (1857–1885)
-// · mrliška 04894 (1886–1924) · poročna 04455 (1886–1922) — vse Matricula Online.
+// · mrliška 04894 (1886–1924) · poročna 04455 (1886–1922) · poročna-01738-predhodnik (1828–1873 — P253: 11-blokov-1873!) — vse Matricula Online.
 
 import { HOUSE_VITALS } from "./parish";
 
@@ -12,7 +12,7 @@ import { HOUSE_VITALS } from "./parish";
 export const MILIC_FAMILY_RE =
   /MILIČ|MILEK|MIHELČ|MIHELIČ|MIHELIK|Mihelik|Milech|Milhoeluc|MILCH|Mihelk|Mihelt|Mihek|Milih|Mihelitsch|Mihelj|Mihelčič|Mihelovic|Milek\[|Mileh\[|Mek\/Milek|Milek-variant|MILEK-grafija/i;
 
-export const FORENSIC_BOOKS = ["04104", "04105", "04106", "04894", "04455"] as const;
+export const FORENSIC_BOOKS = ["04104", "04105", "04106", "04894", "04455", "01738"] as const; // P253: + 01738 (predhodnik-poročna-1828–1873 — m1–m17!)
 
 export interface MilicPerBook {
   signature: string;

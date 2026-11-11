@@ -26,15 +26,15 @@ FILES = [
 
 REPS = [
     # ——— vitals 2008→2012 / negativni-gardi ———
-    ('qa.count("HOUSE_VITALS.length !== 2008")', 'qa.count("HOUSE_VITALS.length !== 2012")'),
-    ('"HOUSE_VITALS.length !== 2008" not in src', '"HOUSE_VITALS.length !== 2011" not in src'),
+    ('qa.count("HOUSE_VITALS.length !== 2023")', 'qa.count("HOUSE_VITALS.length !== 2012")'),
+    ('"HOUSE_VITALS.length !== 2023" not in src', '"HOUSE_VITALS.length !== 2011" not in src'),
     ("HOUSE_VITALS.length !== 2007", "HOUSE_VITALS.length !== 2011"),
     # ——— 04455 265→269 ———
     ("vitals-2008 + 04455==265", "vitals-2012 + 04455==269"),
     ("skupaj == 265", "skupaj == 269"),
-    ('\'"vitalsTotal": 2008\' in pt', '\'"vitalsTotal": 2012\' in pt'),
+    ('\'"vitalsTotal": 2023\' in pt', '\'"vitalsTotal": 2012\' in pt'),
     ('\'"04455": 265\' in pt', '\'"04455": 269\' in pt'),
-    ('pt.get("vitalsTotal") == 2008', 'pt.get("vitalsTotal") == 2012'),
+    ('pt.get("vitalsTotal") == 2023', 'pt.get("vitalsTotal") == 2023'),
     ('.get("04455") == 265', '.get("04455") == 269'),
     # ——— sidra 258→262 + 1873:4-P251! na vrh sporočila ———
     ("poročna sidra ≠ 258 (1874:11-P250!", "poročna sidra ≠ 262 (1873:4-P251! · 1874:11-P250!"),
@@ -45,8 +45,8 @@ REPS = [
     ("MILIC_FAMILY_TOTAL !== 243", "MILIC_FAMILY_TOTAL !== 247"),
     ("53,78,20,36,56", "53,78,20,36,60"),
     # ——— p237-specific ———
-    ("len(bloki) == 2008", "len(bloki) == 2012"),
-    ("== 2008 blokov", "== 2012 blokov"),
+    ("len(bloki) == 2023", "len(bloki) == 2012"),
+    ("== 2023 blokov", "== 2012 blokov"),
     ("04455:242}", "04455:269}"),
     ("04455:242)", "04455:269)"),
 ]

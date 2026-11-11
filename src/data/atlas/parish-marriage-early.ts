@@ -1047,3 +1047,40 @@ export const MARRIAGE_1873_KORPUS = {
   sidra: 262,
   dobe: 236,
 } as const;
+
+
+// ——— P253: PREDHODNIK-KNJIGE-04455 = 01738 (Poročna 1828–1873) — leto 1873 m1–m17 + ŠIV-MED-KNJIGAMA! ———
+/** m1–m17 = leto 1873 v PREDHODNIKU (01738): 29. 1.–25. 5. 1873 — meja z m18 (11. 6. 1873, 04455 'Pag. 1') = ŠIV-MED-KNJIGAMA! */
+export const PREDHODNIK_1873_BLOCKS = HOUSE_VITALS.filter(
+  (h) => h.bookSignature === "01738" && h.year === 1873,
+);
+export const PREDHODNIK_1873_HOUSES = PREDHODNIK_1873_BLOCKS.map((h) => h.houseNo);
+export const PREDHODNIK_1873_TOTAL = 17;
+export const PREDHODNIK_1873_BLOCKI = 11;
+
+/** ★★★★★ ŠIV-MED-KNJIGAMA (s146 = zadnja stran 01738): zadnji FIZIČNI zapis = ISTI PAR kot 04455-m18! */
+export const PREDHODNIK_1873_SEAM = {
+  si: "★★★★★ ŠIV-MED-KNJIGAMA-FIZIČNO-DOKAZAN (P253!): s146 = ZADNJA-stran-01738 — zadnji-FIZIČNI-zapis-na-njej = Mathias-[Gabovšič-grable] (GRIBLJE 13!) × Maria HRIŽAN (GRIBLJE 62!) = ISTI-PAR-KOT-04455-'Pag. 1'-m18 (11. 6. 1873!!) — [~prekrižan?-X-OPEN]-začetek-VPISA-v-STARI-knigi → NADALJEVANJE-v-NOVI — štetje-17→18-TEČE-ČEZ-MEJO-KNJIG (1–21-leta-1873-SKUPAJ!) — P250/P251-'knjižno-odpiranje'-napoved-IZPOLNJENA-KOT-FIZIK! (seam3-zoom: hiša-13-1:1! · seam4-zoom: 'Griblje 62. Maria Hrižan'-1:1! · b1-datum-'Jün 11'-kand.)",
+  en: "THE-BOOK-SEAM-PHYSICALLY-PROVEN (P253!): s146 = the-LAST-page-of-01738 — its-last-PHYSICAL-entry = the-SAME-COUPLE-as-04455's-'Pag. 1'-m18 (Jun 11, 1873!!) — the-entry-STARTED-in-the-OLD-book → CONTINUED-in-the-NEW — the-numbering-17→18-RUNS-ACROSS-the-book-boundary (1–21-for-1873-TOGETHER!) — the-P250/P251-book-opening-forecast-FULFILLED-PHYSICALLY!",
+} as const;
+
+/** RESTART-1873-z-1 + 1872-tail-26–29 + meja-1872/73 na s143 (aritmetična!). */
+export const PREDHODNIK_1873_RESTART = {
+  si: "★★★★★ RESTART-1873-z-1 (s143): 1872-štetje-26–29 (Nov-1872–Jänner-1873-tail!) → 1873-RESTARTA-z-m1 (29. Jänner 1873!) — MEJA-1872/73-NA-SAMI-STRANI (aritmetična!); m1–m17-17-VPISOV-BREZ-PRESKOKOV (29. 1.–25. 5. 1873) — kronologija-SKLAD-cf.-m18-11. 6.! · datumi: m1-29. 1. [24-DUEL-REŠEN-3:1!]-m2-3. 2.-m4-9. 2.-m5-[~10. 2]-m6-[~12. 2]-m7/m8/m9/m10-19. 2.-m11-[~18. 2]-m12/m13-[~19. 2]-m14-[~1. 3]-m15/m16-27. 4.-m17-25. 5. [~'März'-PREČRTANO-POPRAVLJENO-'Mai'!]",
+  en: "THE-1873-RESTART-at-1 (s143): 1872's-tail-26–29 → 1873-restarts-at-m1 (Jan 29, 1873!) — the-1872/73-boundary-ON-ONE-PAGE; 17-entries-m1–m17-NO-gaps (Jan 29–May 25, 1873) — chronology-fits-m18-Jun-11!",
+} as const;
+
+/** PEZDIRC-nit-v-predhodniku + DOVGAN-vsi + POLNA-DVOJNA-m6 + bratje-Silak + h28-×2. */
+export const PREDHODNIK_1873_NITI = {
+  si: "★★★★★ PEZDIRC-NIT-V-PREDHODNIKU (m7-nevesta-Anna-PEZDIRC-oče-Martin!-[~+ m11-mati-'Pegdire' + m13/m14-Pegdirc/Legdire-garble-X-OPEN] — PEZDIRC-podaljšan-IZVEN-04455!) · ★★★★★ DOVGAN-PODPISUJE-VSE-m1–m17-+-1872-tail ([~Dergan-garble] — continuum-1872–1885!) · ★★★ POLNI-DVOJNI-m6 (h16-Kolbezen-×-h10-Muc!) + m3-[~h25×h18-DUEL] · ★★★ BRATJE-SILAK-m8×m9 (ISTA-starši-Mathias-Silak-+-Catharina!) · ★★★ h28-×2-DVOJNA (m2-ženin-MAVRIN-+-m4-nevesta-TOMC-ISTA-hiša-2-družini-cf.-krstna-1871!) · ★★★ MNOŽIČNI-DAN-19. 2.-×4-+[~6-kand.] + 27. 4.-×2 · MLADOLETNICE-m1-19-l-+-m11-18-l · ★★★ m12-POPRAVEK-h73←h13-PREČRTANO (pisarjev-popravek-cf.-P249-'21'!)",
+  en: "the-PEZDIRC-thread-IN-THE-PREDECESSOR (m7-bride-Anna-PEZDIRC-father-Martin!) + DOVGAN-signs-ALL + the-FULL-DOUBLE-m6 (h16×h10!) + the-SILAK-BROTHERS-m8×m9 (same-parents!) + h28-×2 (m2+m4!) + Feb-19-×4 + Apr-27-×2 + the-minors + the-h73←h13-correction!",
+} as const;
+
+/** P253-korpus: 11 blokov / 17 vpisov; vitals 2012→2023; 01738 = nova knjiga v korpusu! */
+export const PREDHODNIK_1873_KORPUS = {
+  noviBloki: 11,
+  vpisi: 17,
+  skupaj1873: 21,
+  vitalsTotal: 2023,
+  byBook01738: 11,
+} as const;

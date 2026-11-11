@@ -15,6 +15,7 @@ import {
   Home,
   X,
   Flag,
+  Link2,
   ChevronLeft,
   ChevronRight,
   Layers,
@@ -240,6 +241,14 @@ import {
   MLADOLETNICA_1875,
   MARRIAGE_1875_DUELS,
   MARRIAGE_1875_KONTEKST,
+  PREDHODNIK_1873_BLOCKS,
+  PREDHODNIK_1873_HOUSES,
+  PREDHODNIK_1873_TOTAL,
+  PREDHODNIK_1873_BLOCKI,
+  PREDHODNIK_1873_SEAM,
+  PREDHODNIK_1873_RESTART,
+  PREDHODNIK_1873_NITI,
+  PREDHODNIK_1873_KORPUS,
 } from "@/data/atlas/parish-marriage-early";
 import { LANDUSE_ZONES, LANDUSE_ENTITIES, HAMLETS } from "@/data/atlas/landuse";
 import { getCoverage, getArchiveInventory, parishStats, getHouseStory } from "@/lib/atlas";
@@ -1447,6 +1456,79 @@ function MarriageLineSynthesis() {
     </div>
   );
 }
+
+/* ——— P253: PREDHODNIK-KNJIGE-04455 = 01738 (Poročna 1828–1873) — leto 1873 m1–m17 + ŠIV-MED-KNJIGAMA! ——— */
+function MarriagePredhodnik1873() {
+  const { t } = useLang();
+  const entries: { m: number; d: string }[] = [
+    { m: 1, d: "29. 1." }, { m: 2, d: "3. 2." }, { m: 3, d: "[~8. 4.]" }, { m: 4, d: "9. 2." },
+    { m: 5, d: "[~10. 2.]" }, { m: 6, d: "[~12. 2.]" }, { m: 7, d: "19. 2." }, { m: 8, d: "19. 2." },
+    { m: 9, d: "19. 2." }, { m: 10, d: "19. 2." }, { m: 11, d: "[~18. 2.]" }, { m: 12, d: "[~19. 2.]" },
+    { m: 13, d: "[~19. 2.]" }, { m: 14, d: "[~1. 3.]" }, { m: 15, d: "27. 4." }, { m: 16, d: "27. 4." },
+    { m: 17, d: "25. 5." },
+  ];
+  return (
+    <div className="rounded-xl border bg-card/60 p-5">
+      <h3 className="flex items-center gap-2 font-serif text-lg font-semibold">
+        <Link2 className="h-4 w-4 text-primary" aria-hidden />
+        {t(
+          "Predhodnik knjige 04455: 01738 (1828–1873) — leto 1873 m1–m17",
+          "The predecessor of the book 04455: 01738 (1828–1873) — the year 1873 m1–m17",
+        )}
+      </h3>
+      <p className="mt-2 text-sm text-muted-foreground">
+        {t(
+          `Zadnja možnost matrične linije (P252-lead-①!): leto 1873 je v 04455 začeto pri m18 (11. 6. 1873, 'Pag. 1') — vpisi m1–m17 (29. 1.–25. 5. 1873) so v PREDHODNIKU 01738. Skupaj ${PREDHODNIK_1873_TOTAL} vpisov / ${PREDHODNIK_1873_BLOCKI} blokov Griblje; korpus 2023 (+11).`,
+          `The last matricular-line possibility (the P252 lead!): the year 1873 starts in 04455 at m18 (Jun 11, 1873, 'Pag. 1') — the entries m1–m17 (Jan 29–May 25, 1873) are in the PREDECESSOR 01738. Together ${PREDHODNIK_1873_TOTAL} entries / ${PREDHODNIK_1873_BLOCKI} Griblje blocks; the corpus 2023 (+11).`,
+        )}
+      </p>
+
+      {/* ŠIV — emerald */}
+      <div className="mt-4 rounded-lg border border-emerald-500/40 bg-emerald-500/10 p-4">
+        <p className="text-sm font-medium text-emerald-700 dark:text-emerald-300">
+          {t("★★★★★ ŠIV-MED-KNJIGAMA (s146): ", "★★★★★ THE BOOK SEAM (s146): ")}
+          {t(PREDHODNIK_1873_SEAM.si, PREDHODNIK_1873_SEAM.en)}
+        </p>
+      </div>
+
+      {/* RESTART + niti — two cards */}
+      <div className="mt-4 grid gap-3 md:grid-cols-2">
+        <div className="rounded-lg border bg-accent/40 p-4">
+          <p className="text-sm">{t(PREDHODNIK_1873_RESTART.si, PREDHODNIK_1873_RESTART.en)}</p>
+        </div>
+        <div className="rounded-lg border bg-accent/40 p-4">
+          <p className="text-sm">{t(PREDHODNIK_1873_NITI.si, PREDHODNIK_1873_NITI.en)}</p>
+        </div>
+      </div>
+
+      {/* m1–m17 timeline */}
+      <div className="mt-4 overflow-x-auto pb-1">
+        <div className="flex min-w-[620px] items-end gap-1 sm:min-w-0" role="listbox" aria-label={t("Vpisi m1–m17 predhodnika", "The predecessor entries m1–m17")}>
+          {entries.map((e) => {
+            const blk = PREDHODNIK_1873_BLOCKS.find((b) => b.whatSi.includes(`m${e.m} `) || b.whatSi.includes(`m${e.m} (`) || b.whatSi.startsWith(`poroka m${e.m} `));
+            const isSeam = e.m === 17;
+            return (
+              <div key={e.m} role="option" aria-selected={false} className="flex flex-1 flex-col items-center gap-1 rounded-lg border border-transparent px-1 py-2">
+                <span className="text-[10px] font-medium text-muted-foreground">{e.d}</span>
+                <span className={`flex h-9 w-9 items-center justify-center rounded-full border text-xs font-semibold ${isSeam ? "border-emerald-500 bg-emerald-500/20 text-emerald-700 dark:text-emerald-300" : blk ? "border-primary/50 bg-primary/10 text-primary" : "border-dashed border-muted-foreground/40 text-muted-foreground"}`}>m{e.m}</span>
+                <span className="text-[10px] text-muted-foreground" style={{ overflowWrap: "anywhere" }}>
+                  {blk ? `h${blk.houseNo}` : "—"}
+                </span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      <p className="mt-2 text-xs text-muted-foreground" style={{ overflowWrap: "anywhere" }}>
+        {t(
+          `Hiše (file-order): ${PREDHODNIK_1873_HOUSES.join(", ")} — h28 ×2 (m2+m4!). Polni dvojni: m6 h16×h10 (Kolbezen × Muc). m17 = zadnji vpis 01738 → ŠIV z m18.`,
+          `Houses (file order): ${PREDHODNIK_1873_HOUSES.join(", ")} — h28 ×2 (m2+m4!). The full double: m6 h16×h10. m17 = the last entry of 01738 → the seam with m18.`,
+        )}
+      </p>
+    </div>
+  );
+}
+
 
 function MarriageEarly1885() {
   const { t } = useLang();
@@ -2868,6 +2950,9 @@ function ParishTab() {
 
       {/* P252: sinteza poročne predzgodovine 04455 (1873–1885) — 13/13 KOMPLETNA! */}
       <MarriageLineSynthesis />
+
+      {/* P253: PREDHODNIK knjige 04455 = 01738 (1828–1873) — leto 1873 m1–m17 + ŠIV! */}
+      <MarriagePredhodnik1873 />
 
       {/* brskalnik knjig */}
       <div>
