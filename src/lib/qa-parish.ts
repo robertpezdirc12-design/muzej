@@ -17,6 +17,12 @@ import {
   PEZDIRC_PER_YEAR,
   PEZDIRC_TOTAL,
   X_OPEN_REMAINDERS,
+  MARRIAGE_EARLY_LINE_YEARS,
+  MARRIAGE_EARLY_TOTALS,
+  MARRIAGE_EARLY_THREADS,
+  MARRIAGE_EARLY_X_OPEN,
+  PEZDIRC_MARRIAGE_PER_YEAR,
+  PEZDIRC_MARRIAGE_TOTAL,
 } from "@/data/atlas/parish-synthesis";
 import {
   FORENSIC_VERDICTS,
@@ -8538,6 +8544,54 @@ function parishChecksPart4(push: Push): void {
       p240Errors.length === 0
         ? `poročna-1883: 12-vpisov/BREZ-preskokov-3.-leto! · 2-Griblje-bloka-[13,2] · h2 = 1.-poročni-04455-blok-KADARKOLI! · restart-s50-DNO-'1 8 8 3.'-števke-črez-stolpce! · s51-'2.-ne-1.'-ultra-zoom! · PEZDIRC-v4-'NI-Pegdirc'! · MILEK-v10-kandidat-IZVEN-korpusa-×237-ostaja! · HROVALJ-brat+sestra-13.-Mai! · duhovnik-Dovgan-×5 + v12-'Michael'-X-OPEN · ${MARRIAGE_1883_NUMBERING}`
         : p240Errors.join("; "),
+    );
+  }
+
+  // ——— qa-p252: SINTEZA POROČNE PREDZGODOVINE 04455 — 13/13 KOMPLETNA (P252; križnoletne niti + časovnica; NI novih branj — MERI!) ———
+  {
+    const p252Errors: string[] = [];
+    // Sinteza mora biti 1:1 konsistentna z runtime podatkom parish.ts — vsako leto
+    // MARRIAGE_EARLY_LINE_YEARS.griblje == št. blokov 04455/<leto>; skupaj == 74 (269 − 195).
+    for (const yl of MARRIAGE_EARLY_LINE_YEARS) {
+      const runtime = HOUSE_VITALS.filter((h) => h.bookSignature === "04455" && h.year === yl.year).length;
+      if (runtime !== yl.griblje)
+        p252Errors.push(`sinteza-1873–1885/${yl.year}: griblje=${yl.griblje} ≠ runtime-bloki=${runtime} (1:1-skladnost!)`);
+    }
+    if (MARRIAGE_EARLY_LINE_YEARS.length !== 13)
+      p252Errors.push(`MARRIAGE_EARLY_LINE_YEARS ≠ 13 let (${MARRIAGE_EARLY_LINE_YEARS.length})`);
+    if (MARRIAGE_EARLY_LINE_YEARS[0]?.year !== 1885 || MARRIAGE_EARLY_LINE_YEARS[12]?.year !== 1873)
+      p252Errors.push("MARRIAGE_EARLY_LINE_YEARS ni 1885→1873 (descending-kot-04104-linija!)");
+    if (MARRIAGE_EARLY_TOTALS.entries !== 266)
+      p252Errors.push(`seštevek-vpisov ≠ 266 (${MARRIAGE_EARLY_TOTALS.entries} — 22+18+12+26+25+20+33+23+18+15+18+32+4! (1873 = SAMO m18–m21 — m1–m17 v predhodniku!)`);
+    if (MARRIAGE_EARLY_TOTALS.griblje !== 74)
+      p252Errors.push(`seštevek-blokov ≠ 74 (${MARRIAGE_EARLY_TOTALS.griblje} — 7+3+2+7+9+3+9+7+5+6+1+11+4 = 269 − 195 (linija 1886–1922)!)`);
+    const p252Pre = HOUSE_VITALS.filter((h) => h.bookSignature === "04455" && h.year <= 1885).length;
+    const p252Line = HOUSE_VITALS.filter((h) => h.bookSignature === "04455" && h.year >= 1886).length;
+    if (p252Pre !== 74 || p252Line !== 195 || p252Pre + p252Line !== 269)
+      p252Errors.push(`korpus-04455 razcep ≠ 74 + 195 = 269 (najdeno ${p252Pre} + ${p252Line} — pt-luknja-1:1!)`);
+    if (PEZDIRC_MARRIAGE_PER_YEAR.length !== 13 || PEZDIRC_MARRIAGE_TOTAL !== 35)
+      p252Errors.push(`PEZDIRC-continuum ≠ ×35/13-let (${PEZDIRC_MARRIAGE_TOTAL}/${PEZDIRC_MARRIAGE_PER_YEAR.length} — 3+4+1+5+1+2+2+2+1+9-REKORD!+3+1+1!)`);
+    if (PEZDIRC_MARRIAGE_PER_YEAR.some((y) => y.count < 1))
+      p252Errors.push("PEZDIRC NI prisoten v vseh 13 letih (13/13-LET-VSEH — edini priimek!)");
+    if (MARRIAGE_EARLY_THREADS.length !== 6)
+      p252Errors.push(`MARRIAGE_EARLY_THREADS ≠ 6 niti (${MARRIAGE_EARLY_THREADS.length} — pezdirc/dovgan/foliacija/meje/hise/vzorci!)`);
+    if (MARRIAGE_EARLY_X_OPEN.length !== 5)
+      p252Errors.push(`MARRIAGE_EARLY_X_OPEN ≠ 5 (${MARRIAGE_EARLY_X_OPEN.length} — leinmannstochter/prodaric/vas-dueli/duhovniki/m19-m21!)`);
+    if (MARRIAGE_EARLY_LINE_YEARS.filter((y) => y.boundaryVariant && y.restart).length !== 13)
+      p252Errors.push("slog-meje/restart ni dokumentiran za vsa 13 let (13 variant!)");
+    const y1873 = MARRIAGE_EARLY_LINE_YEARS.find((y) => y.year === 1873);
+    if (!y1873 || y1873.entries !== 4 || !/PREDHODNIK/.test(y1873.highlights.join(" ")) || !/29\/29/.test(y1873.foliation))
+      p252Errors.push("1873: 4-vpisi-m18–m21 + KNIŽNO-ODPIRANJE-m1–m17-v-predhodniku + FOLIACIJA-1/1-29/29 manjkajo");
+    if (!MARRIAGE_EARLY_LINE_YEARS.some((y) => /FINIS/.test(y.boundaryNext)) || MARRIAGE_EARLY_TOTALS.finisInstances !== 4)
+      p252Errors.push("FINIS-SODA-vzorec (4 instance 1874/1876/1878/1880!) manjka");
+    push(
+      "qa-p252-parish-synthesis-04455-early",
+      "P252: ŽUPNIJA PODZEMELJ — SINTEZA POROČNE PREDZGODOVINE 04455, 13/13 KOMPLETNA (issue #18; P238–P251): knjiga »Podzemelj P 1873–1922« (naslovnica 1:1, P151!) — časovnica 13 let (P238=1885 … P251=1873): **266 vpisov / 74 blokov Griblje (269 − 195 — predzgodovina + linija 1:1!) / 13 mehnih variant (vsako leto svoj slog!) / foliacija 'Pag. = sken−1' 29/29 vključno NA ODPRTANJU s2-'Pag. 1'!** + **★★★ PEZDIRC/PEGDIRE-continuum ×35 vrstic = edini priimek v VSEH 13 letih** (vrh 1876 ×9-REKORD — 'Leinmannstochter' ×2!; dno 1877/1883 ×1; P236-04104-continuum ×131 skupaj 28/28 let!) + **★★★ DOVGAN-continuum 13 let (1873–1885!)** (1883/1884/1885 EDINI-vseh-vpisov; IZJEMA-EDINA 1875-violet-kaplan-Perschek + TERŽEK/Hegrič-[~X-OPEN]) + **★★★ FINIS-SODA-vzorec** ('finis / 1-8-7-X' SAMO v sodih letih — 4 instance 1874/1876/1878/1880, liha BREZ!) + **★★★ KNIŽNO-ODPIRANJE-04455** (s1 = VEZALO → s2 = 'Pag. 1' → prva-marginala-18 = m1–m17-v-PREDHODNIKU — 1873 = SAMO m18–m21!) + **★★★ 26-firstYear-DVIGOV** (h43 +34 = NOV-ABSOLUTNI-1908→1874! + h44 +23-1899→1876 + h22 +25-1898→1873 — vsako leto nazaj = NOV dvig!) + **★★★ vzorci** (MNOŽIČNI-DAN '4. Februar 1875' ×10-REKORD! + 10-porok-v-2-dneh-1874 + 2-POLNA-DVOJNA-1873 = 50%-REKORD! + IZMENA-VLOG ×4 + MLADOLETNICE s sodišči!) + **X-open preostanki ×5** ('Leinmannstochter'-družina? · 'Prodaric'-garble · 3-vas-dueli-1885 · TERŽEK/Hegrič · IBERER+VETRHVIŠČE); UI: časovnica-13-stolpcev + PEZDIRC-mini-grafikon + 6-niti-kartic + 5-X-open-kartic (ParishTab!) — 1:1-skladnost sinteze z runtime-podatkom ŽIVO preverjena (vsako leto!); NI NOVIH BRANJ, NI NOVIH SKENOV (MERI!) — korpus 2012/269 NESPREMENJEN; skripta scripts/p252_parish_synthesis_04455.py (I1–I10); status SINTEZA-PREDZGODOVINE-KOMPLETNA",
+      "P252: THE PARISH OF PODZEMELJ — THE SYNTHESIS OF THE MARRIAGE PREHISTORY 04455, 13/13 COMPLETE (issue #18; P238–P251): the book »Podzemelj P 1873–1922« (a 1:1 title page, P151!) — the 13-year timeline (P238=1885 … P251=1873): **266 entries / 74 Griblje blocks (269 − 195 — the prehistory + the line 1:1!) / 13 boundary variants (every year its own style!) / the foliation 'Pag. = scan − 1' 29/29 incl. AT THE OPENING s2-'Pag. 1'!** + **★★★ the PEZDIRC/PEGDIRE continuum ×35 rows = the only surname in ALL 13 years** (the peak 1876 ×9-THE-RECORD; the bottom 1877/1883 ×1; together with the P236-04104 continuum ×131 = 28/28 years!) + **★★★ the DOVGAN continuum 13 years (1873–1885!)** (the ONLY verified exception: the 1875-violet curate Perschek) + **★★★ the FINIS-EVEN pattern** (4 instances 1874/1876/1878/1880, the odd years without!) + **★★★ the BOOK OPENING** (s1 = the binding → s2 = 'Pag. 1' → the first margin 18 = m1–m17 in the PREDECESSOR — 1873 = ONLY m18–m21!) + **★★★ 26 firstYear LIFTS** (h43 +34 = the new absolute 1908→1874!) + **★★★ the patterns** (the mass-day 'Feb 4, 1875' ×10-THE-RECORD! + 10 weddings in 2 days 1874 + 2 full doubles 1873 = the 50% record!) + **the X-open remainders ×5**; the UI: the 13-column timeline + the PEZDIRC mini-chart + 6 thread cards + 5 X-open cards (ParishTab!) — the 1:1 consistency LIVE-verified (every year!); NO new readings, NO new scans — the corpus 2012/269 UNCHANGED; the script scripts/p252_parish_synthesis_04455.py (I1–I10); status THE-SYNTHESIS-OF-THE-PREHISTORY-COMPLETE",
+      p252Errors.length === 0,
+      p252Errors.length === 0
+        ? `13 let sinteze 1:1-z-runtime (74-blokov-križ!) · 266 vpisov · PEZDIRC ×35/13-13-let · DOVGAN-13-let · FINIS-SODA ×4 · 26-DVIGOV · 6 niti + 5 X-open · **SINTEZA-PREDZGODOVINE-KOMPLETNA!**`
+        : p252Errors.join("; "),
     );
   }
 

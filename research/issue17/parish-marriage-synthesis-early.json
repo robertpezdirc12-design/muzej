@@ -1,0 +1,69 @@
+{
+  "faza": "P252 — SINTEZA POROČNE PREDZGODOVINE 04455, 13/13 KOMPLETNA (2026-11-11)",
+  "vir": "poročna knjiga 04455 (Trauungs-Buch) 'Podzemelj P 1873–1922', Matricula Online — skeni s1–s61; izključno MERI (ni novih branj/skenov!); sinteza 1:1 iz faz P238–P251",
+  "stats": {
+    "leta": 13,
+    "vpisi": 266,
+    "vpisiPoLetih": "22+18+12+26+25+20+33+23+18+15+18+32+4 (1885→1873; 1873 = SAMO m18–m21 — m1–m17 v PREDHODNIKU knjige!)",
+    "blokiGriblje": 74,
+    "blokiPoLetih": "7+3+2+7+9+3+9+7+5+6+1+11+4 (1885→1873)",
+    "korpusRazcep": "74 (predzgodovina 1873–1885) + 195 (linija 1886–1922) = 269 — pt-luknja 1:1",
+    "pezdircSkupaj": 35,
+    "pezdircPoLetih": "3+4+1+5+1+2+2+2+1+9+3+1+1 — vrh 1876 ×9-REKORD, dno 1877/1883 ×1; 13/13 let VSEH (edini priimek!)",
+    "dovgan": "13 let (1873–1885!) — 1883/1884/1885 EDINI-vseh-vpisov; IZJEMA-EDINA 1875-violet-kaplan-Perschek + TERŽEK/Hegrič [~X-OPEN]",
+    "foliacija": "Pag. = sken−1 — 29/29 (1873–1879 serija) + 1885-razširitev Pag. 55–60 (3×1:1 + P80-sidro) + 2-duela (1880-s38 REŠEN-s-P244 + 1882-s45 [~X-OPEN])",
+    "mejneVariante": "1.–13. (vsako leto svoj slog; izvirna številčenja z vrzeljo 6 [~pošteno odprto])",
+    "knjiznoOdpiranje": "s1 = VEZALO → s2 = 'Pag. 1' = PRVA-tabelarna-stran → prva-marginala-18 = m1–m17-v-predhodniku — 1873 = SAMO m18–m21 (KONČNA-POTRDITEV-P251!)",
+    "firstYearDvigi": 26,
+    "dvigiRekordi": "h43 +34 (1908→1874 — NOV-ABSOLUTNI!) + h44 +23 (1899→1876) + h22 +25 (1898→1873 — 2.-največji)",
+    "finisSODA": 4,
+    "finisSODAOpis": "4 instance (1874-'f-i-n-i-s/-1-8-7-4' + 1876 + 1878-'FINIS PRO ANNO' + 1880-'finis/s 1880') — liha leta BREZ"
+  },
+  "bloki": [],
+  "niti": [
+    {
+      "id": "pezdirc-marriage",
+      "povzetek": "PEZDIRC/PEGDIRE-continuum ×35 vrstic / 13/13 let — edini priimek v VSEH letih; vrh 1876 ×9-REKORD ('Leinmannstochter' ×2!), dno 1877/1883 ×1; skupaj s P236-04104 (×131) = 28/28 let 1871–1885!"
+    },
+    {
+      "id": "dovgan-marriage",
+      "povzetek": "DOVGAN-continuum 13 let (1873–1885!) — podpisuje VSA leta; 1883/1884/1885 EDINI-vseh-vpisov; garble-Dorgan/Dergan/Dorgun; IZJEMA-EDINA 1875-violet-Perschek + TERŽEK/Hegrič-[~X-OPEN]"
+    },
+    {
+      "id": "foliacija-marriage",
+      "povzetek": "FOLIACIJA 'Pag. = sken−1' — 29/29 strani 1:1 (1873–1879) vključno NA ODPRTANJU s2-'Pag. 1' + 1885-razširitev (3×1:1) + 2-duela pošteno (1880-REŠEN-s-P244, 1882-[~X-OPEN])"
+    },
+    {
+      "id": "meje-marriage",
+      "povzetek": "MEJNE VARIANTE — 13 let = 13 slogov (sosednja leta se NE ponavljajo!) + FINIS-SODA-vzorec (4 instance v SODIH letih — liha BREZ!) + KNIŽNO-ODPIRANJE (s1-VEZALO → s2-'Pag. 1' — knjiga se odpre SREDI številčenja 1873!)"
+    },
+    {
+      "id": "hise-marriage",
+      "povzetek": "26-firstYear-DVIGOV (h43 +34 = NOV-ABSOLUTNI-1908→1874!) + h13/h36-MERGE (P80-sidra) + hišna-sinhronizacija-1878-9/10 + h51 = najtanjša-hiša-P191 (4 bloki samo-predzgodovina!)"
+    },
+    {
+      "id": "vzorci-marriage",
+      "povzetek": "MNOŽIČNI-DANI ('4. Februar 1875' ×10-REKORD + 10-porok-v-2-dneh-1874!) + POLNI-DVOJNI (1873 = 50%-REKORD!) + IZMENA-VLOG ×4 + MLADOLETNICE-s-sodišči + P249-KOREKCIJA-m28"
+    }
+  ],
+  "xOpen": [
+    "'Leinmannstochter' ×2 (1876 v13+v14) — PEGDIRE-LEINWEBER-družina? [X-OPEN]",
+    "v5-'Prodaric' (1877) — PEZDIRC-garble? [~NI-blok-pošteno]",
+    "3-vas-dueli 1885 (h29/h15/h9) — [~X-OPEN]",
+    "duhovniške izjeme: m19-TERŽEK (1873) + m27-Hegrič (1874) [~X-OPEN] — edini ZAGOTOVLJENI ne-Dovgan = Perschek-1875-violet",
+    "m19-IBERER-KLAGENFURT-uradnik/plemič-1.-te-vrste + m21-VETRHVIŠČE [X-OPEN-VAS] (1873)",
+    "m29–m31-1874-leta-kronološko-nemogoča-po-'28.-Avgust' [~X-OPEN — P253+-re-verifikacija]",
+    "1882-s45-'93/94' foliacijski duel [~X-OPEN-pošteno-odprto]",
+    "FINIS-SODA-vzorec [~X-OPEN — splošna-slika-2026: 4-instance-sodih-let-potrjene]",
+    "izvirna-številčenja-variant 1.–13. z vrzeljo 6 [~pošteno-odprto]"
+  ],
+  "honesty": [
+    "Sinteza IZKLJUČNO meri obstoječe faze P238–P251 — NI novih branj, NI novih skenov, korpus 2012/269 NESPREMENJEN",
+    "PEZDIRC-po-letih štet kot OMENJENE VRSTICE (vpisi) — [~]-garble-kandidati šteti pošteno samo kjer faza potrjuje (1877-'Prodaric' [~] NI blok!)",
+    "1877-'Prodaric' + 1878-PEGDIČ/PEGDIRIC-garble + MILEK-kandidati — IZVEN-Griblje ostajajo NE-bloki (iskreno!)",
+    "Mejne variante 1.–13. po izvirni številčenji faz — vrzel 6 in duplikat 9 (1878/1877 isti slog) pošteno odprta",
+    "FOLIACIJA 29/29 velja za serijo 1873–1879 + 3×1:1-1885 — 1880/1882-duela niso šteti v 29 (pošteno!)",
+    "firstYear-DVIGI šteti samo kjer faza IZRECNO dvig izmeri (26) — 1884/1885 blok-hiše brez dvig-ne obstajajo v evidence (pošteno!)"
+  ],
+  "lead": "P253+ (po izbiri uporabnika): ① predhodnik-knjige-04455 (m1–m17-leta-1873 — zadnja odprta možnost matrične linije!) · ② hišne-zgodbe-globlje (mreže hiš čez vse knjige) · ③ paleografska potrditev VLM-prepisov (issue #12) — VSE matrične linije Zaključene + sinteze (P152-linija + P236-krstna + P252-poročna predzgodovina!)"
+}

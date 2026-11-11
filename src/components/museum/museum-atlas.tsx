@@ -46,6 +46,12 @@ import {
   PEZDIRC_PER_YEAR,
   PEZDIRC_TOTAL,
   X_OPEN_REMAINDERS,
+  MARRIAGE_EARLY_LINE_YEARS,
+  MARRIAGE_EARLY_TOTALS,
+  MARRIAGE_EARLY_THREADS,
+  MARRIAGE_EARLY_X_OPEN,
+  PEZDIRC_MARRIAGE_PER_YEAR,
+  PEZDIRC_MARRIAGE_TOTAL,
 } from "@/data/atlas/parish-synthesis";
 import {
   FORENSIC_VERDICTS,
@@ -1269,6 +1275,168 @@ function BaptismLineSynthesis() {
         <h4 className="text-sm font-semibold">{t("X-open preostanki (P235-LEAD)", "X-open remainders (the P235-LEAD)")}</h4>
         <div className="mt-2 grid gap-2 md:grid-cols-3">
           {X_OPEN_REMAINDERS.map((x) => (
+            <div key={x.id} className="rounded-lg border border-dashed p-3">
+              <div className="text-xs font-semibold">{t(x.titleSi, x.titleEn)}</div>
+              <p className="mt-1 text-[11px] text-muted-foreground">{t(x.bodySi, x.bodyEn)}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ——— P252: SINTEZA POROČNE PREDZGODOVINE 04455 — časovnica 13 let (1873–1885 = 13/13 KOMPLETNA!) ——— */
+function MarriageLineSynthesis() {
+  const { t } = useLang();
+  const [openYear, setOpenYear] = useState<number | null>(1873);
+  const maxEntries = Math.max(...MARRIAGE_EARLY_LINE_YEARS.map((y) => y.entries));
+  const maxPez = Math.max(...PEZDIRC_MARRIAGE_PER_YEAR.map((y) => y.count));
+
+  return (
+    <div className="rounded-xl border bg-card/60 p-5">
+      <h3 className="flex items-center gap-2 font-serif text-lg font-semibold">
+        <Layers className="h-4 w-4 text-primary" aria-hidden />
+        {t(
+          "Poročna predzgodovina 04455: sinteza 13 let (1873–1885)",
+          "The marriage prehistory 04455: a 13-year synthesis (1873–1885)",
+        )}
+      </h3>
+      <p className="mt-2 text-sm text-muted-foreground">
+        {t(
+          `Knjiga »${MARRIAGE_EARLY_TOTALS.label}« (naslovnica 1:1!) je s fazami P238–P251 dokumentirana od vezala do konca predzgodovine: ${MARRIAGE_EARLY_TOTALS.entries} vpisov, od tega ${MARRIAGE_EARLY_TOTALS.griblje} blokov Griblje; 1873 = SAMO m18–m21 (m1–m17 v PREDHODNIKU knjige — knjižno odpiranje 1:1!); meje = ${MARRIAGE_EARLY_TOTALS.boundaryVariants} variant (vsako leto svoj slog!); foliacija 'Pag. = sken−1' 29/29. Klikni stolpec za podrobnosti leta.`,
+          `The book »${MARRIAGE_EARLY_TOTALS.label}« (a 1:1 title page!) was fully documented by phases P238–P251, from the binding to the end of the prehistory: ${MARRIAGE_EARLY_TOTALS.entries} entries, ${MARRIAGE_EARLY_TOTALS.griblje} Griblje blocks of them; 1873 = ONLY m18–m21 (m1–m17 in the book's PREDECESSOR — the book opening 1:1!); the boundaries = ${MARRIAGE_EARLY_TOTALS.boundaryVariants} variants (every year its own style!); the foliation 'Pag. = scan − 1' 29/29. Click a column for the year's details.`,
+        )}
+      </p>
+
+      {/* časovnica — 13 stolpcev */}
+      <div className="mt-4 overflow-x-auto pb-1">
+        <div
+          className="flex min-w-[560px] items-end gap-1.5 sm:min-w-0"
+          role="listbox"
+          aria-label={t("Časovnica vpisov po letih", "Entries timeline by year")}
+        >
+          {[...MARRIAGE_EARLY_LINE_YEARS].reverse().map((y) => {
+            const open = openYear === y.year;
+            const h = Math.round((y.entries / maxEntries) * 100);
+            const hg = Math.round((y.griblje / maxEntries) * 100);
+            return (
+              <button
+                key={y.year}
+                role="option"
+                aria-selected={open}
+                onClick={() => setOpenYear(open ? null : y.year)}
+                className={`group flex flex-1 flex-col items-center gap-1 rounded-lg border px-1 py-2 transition ${
+                  open ? "border-primary bg-accent" : "border-transparent hover:border-primary/30 hover:bg-accent/50"
+                }`}
+              >
+                <span className="text-[11px] font-semibold tabular-nums text-foreground">{y.entries}</span>
+                <span className="flex w-5 flex-col justify-end" style={{ height: 88 }} aria-hidden>
+                  <span
+                    className="w-full rounded-t-sm border border-primary/50 bg-primary/25"
+                    style={{ height: `${h}%`, display: "flex", flexDirection: "column", justifyContent: "flex-end" }}
+                  >
+                    <span className="w-full rounded-t-sm bg-primary/70" style={{ height: `${(hg / h) * 100}%` }} />
+                  </span>
+                </span>
+                <span className="text-[11px] font-medium tabular-nums">{y.year}</span>
+                <span className="text-[9px] text-muted-foreground">{y.phase}</span>
+              </button>
+            );
+          })}
+        </div>
+        <p className="mt-1 text-[10px] text-muted-foreground">
+          {t(
+            `polni stolpec = vpisi v knjigi · temnejši del = Griblje (${MARRIAGE_EARLY_LINE_YEARS.map((y) => y.griblje).join(" · ")})`,
+            `full column = entries in the book · darker part = Griblje (${MARRIAGE_EARLY_LINE_YEARS.map((y) => y.griblje).join(" · ")})`,
+          )}
+        </p>
+      </div>
+
+      {/* podrobnosti izbranega leta */}
+      {openYear != null &&
+        (() => {
+          const y = MARRIAGE_EARLY_LINE_YEARS.find((x) => x.year === openYear);
+          if (!y) return null;
+          return (
+            <div key={y.year} className="mt-3 rounded-lg border bg-background/60 p-4">
+              <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                <span className="font-display text-lg font-semibold tabular-nums">{y.year}</span>
+                <Badge variant="outline" className="font-mono text-[10px]">{y.phase} · {y.progress}</Badge>
+                <span className="text-sm text-muted-foreground">
+                  {t(`${y.entries} vpisov · ${y.griblje} blokov Griblje / ${y.houses} hiš`, `${y.entries} entries · ${y.griblje} Griblje blocks / ${y.houses} houses`)}
+                </span>
+              </div>
+              <dl className="mt-3 grid gap-x-6 gap-y-1.5 text-xs sm:grid-cols-2">
+                <div>
+                  <dt className="font-semibold text-muted-foreground">{t("okvir skenov", "scan window")}</dt>
+                  <dd>{y.scans} ({y.scanCount}) · {y.foliation}</dd>
+                </div>
+                <div>
+                  <dt className="font-semibold text-muted-foreground">{t("meja s prejšnjim letom", "boundary with the previous year")}</dt>
+                  <dd>{y.boundaryNext}</dd>
+                </div>
+                <div>
+                  <dt className="font-semibold text-muted-foreground">{t("slog meje/restarta", "boundary/restart style")}</dt>
+                  <dd>{y.boundaryVariant}</dd>
+                </div>
+                <div>
+                  <dt className="font-semibold text-muted-foreground">{t("restart-vpis-1", "restart entry 1")}</dt>
+                  <dd>{y.restart}</dd>
+                </div>
+              </dl>
+              <ul className="mt-3 space-y-1 text-xs">
+                {y.highlights.map((hl) => (
+                  <li key={hl} className="rounded border bg-card/60 px-2.5 py-1.5">{hl}</li>
+                ))}
+              </ul>
+            </div>
+          );
+        })()}
+
+      {/* PEZDIRC/PEGDIRE-continuum — mini grafikon */}
+      <div className="mt-5 rounded-lg border bg-background/60 p-4">
+        <h4 className="text-sm font-semibold">
+          {t("PEZDIRC/PEGDIRE-continuum", "The PEZDIRC/PEGDIRE continuum")}
+          <span className="ml-2 rounded-full border px-2 py-0.5 text-[10px] font-medium text-primary">
+            ×{PEZDIRC_MARRIAGE_TOTAL} {t("vrstic / 13/13 let", "rows / 13/13 years")}
+          </span>
+        </h4>
+        <div className="mt-2 flex items-end gap-1" aria-hidden>
+          {[...PEZDIRC_MARRIAGE_PER_YEAR].reverse().map((p) => (
+            <span key={p.year} className="flex flex-1 flex-col items-center gap-0.5">
+              <span className="text-[9px] tabular-nums text-muted-foreground">{p.count}</span>
+              <span
+                className="w-full rounded-t-sm bg-primary/60"
+                style={{ height: Math.max(4, Math.round((p.count / maxPez) * 56)) }}
+              />
+              <span className="text-[9px] tabular-nums text-muted-foreground">&rsquo;{String(p.year).slice(2)}</span>
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* križnoletne niti */}
+      <div className="mt-5 grid gap-3 md:grid-cols-2">
+        {MARRIAGE_EARLY_THREADS.map((th) => (
+          <div key={th.id} className="min-w-0 rounded-lg border bg-background/60 p-4">
+            <h4 className="text-sm font-semibold">{t(th.nameSi, th.nameEn)}</h4>
+            <p className="mt-1.5 text-xs text-muted-foreground [overflow-wrap:anywhere]">{t(th.summarySi, th.summaryEn)}</p>
+            <p className="mt-2 text-xs [overflow-wrap:anywhere]">{t(th.detailSi, th.detailEn)}</p>
+            {th.xOpen && (
+              <p className="mt-2 rounded border border-amber-500/40 bg-amber-500/10 px-2 py-1 text-[11px] text-amber-900 dark:text-amber-100 [overflow-wrap:anywhere]">
+                X-open: {t(th.xOpen, th.xOpen)}
+              </p>
+            )}
+          </div>
+        ))}
+      </div>
+
+      {/* X-open preostanki */}
+      <div className="mt-5">
+        <h4 className="text-sm font-semibold">{t("X-open preostanki (P251-LEAD)", "X-open remainders (the P251-LEAD)")}</h4>
+        <div className="mt-2 grid gap-2 md:grid-cols-3">
+          {MARRIAGE_EARLY_X_OPEN.map((x) => (
             <div key={x.id} className="rounded-lg border border-dashed p-3">
               <div className="text-xs font-semibold">{t(x.titleSi, x.titleEn)}</div>
               <p className="mt-1 text-[11px] text-muted-foreground">{t(x.bodySi, x.bodyEn)}</p>
@@ -2697,6 +2865,9 @@ function ParishTab() {
 
       {/* P238: poročna predzgodovina 04455 (1873–1885) */}
       <MarriageEarly1885 />
+
+      {/* P252: sinteza poročne predzgodovine 04455 (1873–1885) — 13/13 KOMPLETNA! */}
+      <MarriageLineSynthesis />
 
       {/* brskalnik knjig */}
       <div>

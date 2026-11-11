@@ -124,7 +124,7 @@ try:
     with urllib.request.urlopen(r, timeout=30) as resp:
         qa_data = json.load(resp)
     check("I10 QA-živo 245/245 ok:True (+qa-p246-id!)",
-          qa_data.get("ok") is True and qa_data.get("passed") == 245 and qa_data.get("failed") == 0,
+          qa_data.get("ok") is True and qa_data.get("passed") == 246 and qa_data.get("failed") == 0,
           f"passed={qa_data.get('passed')} failed={qa_data.get('failed')}")
 except Exception as e:
     check("I10 QA-živo", False, str(e)[:80])
