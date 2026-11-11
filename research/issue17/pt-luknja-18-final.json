@@ -1,674 +1,675 @@
 {
- "phase": "P239",
- "title": "PT-luknja-18 — finalni dokazi po zaključku mrliške linije 39/39 (knjiga 04894 popolnoma digitalizirana)",
- "generatedAt": "2026-11-10 (P248-posodobitev)",
- "definition": {
-  "gapRange": "hiše 41–60 brez h41 (izven vzorca) in h50 (04455-dokazana)",
+  "phase": "P239",
+  "title": "PT-luknja-18 — finalni dokazi po zaključku mrliške linije 39/39 (knjiga 04894 popolnoma digitalizirana)",
+  "generatedAt": "2026-11-10 (P248-posodobitev)",
+  "definition": {
+    "gapRange": "hiše 41–60 brez h41 (izven vzorca) in h50 (04455-dokazana)",
+    "gapHouses": [
+      "42",
+      "43",
+      "44",
+      "45",
+      "46",
+      "47",
+      "48",
+      "49",
+      "51",
+      "52",
+      "53",
+      "54",
+      "55",
+      "56",
+      "57",
+      "58",
+      "59",
+      "60"
+    ],
+    "note": "p80-skripta-set 18 (PT_GAP_HOUSES) ≠ qa doc-list 15 (P80_PT_GAP = 18 brez h45/h47/h55 — dokazi geometrija/filtra)"
+  },
+  "corpus": {
+    "vitalsTotal": 2008,
+    "byBook": {
+      "04105": 502,
+      "04894": 520,
+      "04106": 433,
+      "04455": 265,
+      "04104": 288
+    },
+    "housesDistinctAll": 95,
+    "housesNote": "raw-distinct v HOUSE_VITALS = 95; p80-vzorec = 94 · korpus = 93 (pogoji filtra v qa-parish I7) | P197: +13-blokov-1880 (04106 83→96, vitals 1302→1315) | P198: +9-blokov-1879 (04106 96→105, vitals 1315→1324; sanacija-re-run!) | P199: +23-blokov-1878 (04106 105→128, vitals 1324→1347) | P200: +8-blokov-1877 (04106 128→136, vitals 1347→1355) | P201: +20-blokov-1876 (04106 136→156, vitals 1355→1375) | P202: +10-blokov-1875 (04106 156→166, vitals 1375→1385, 5-NOVIH-hiš: h11/h35/h45/h59/h72!) | P203: +21-blokov-1874 (04106 166→187, vitals 1385→1406, LEKCIJA-#21-dvostavni-sken-s123==s124!) | P204: +38-blokov-1873-KOLERA (04106 187→225, vitals 1406→1444, DOUBLE-SCAN-s103==s104 + ordinal-dupkati-×4/luknje-×5!) | P205: +17-blokov-1872 (04106 225→242, vitals 1444→1461, 'vsota'-1.× + 'finis'-1.× + CHOLERA-nastop!) | P206: +11-blokov-1871 (04106 242→253, vitals 1461→1472, LUK-18 + DUP-19 + h11-nit-5.leto + 'Ablasser'!) | P207: +12-blokov-1870 (04106 253→265, vitals 1472→1484, ordinali-1–70-ČISTO + h1-Jessernigg + POŽEK-h28-2.leto!) | P208: +14-blokov-1869 (04106 265→279, vitals 1484→1498, ordinali-1–76-ČISTO-2.leto + ULEDBA-z1 + POŽEK-h28-3.leto + 'Noßgabianstho'!) | P208: +14-blokov-1869 (04106 265→292, vitals 1511→1511, ordinali-1–76-ČISTO-2.leto + ULEDBA-z1 + POŽEK-h28-3.leto + 'Noßgabianstho'!) | P209: +13-blokov-1868 (04106 279→292, vitals 1498→1511, ordinali-1–80-ČISTO-3.leto + 'nožgodanujeleg'-ANOMALIA + 2-smrti-v-1-dnevu!) | P210: +13-blokov-1867 (04106 279→312, vitals 1498→1531, ordinali-1–80-ČISTO-3.leto + 'nožgodanujeleg'-ANOMALIA + 2-smrti-v-1-dnevu!) | P211: +13-blokov-1866 (04106 312→325, vitals 1531→1544, ordinali-1–104-ČISTO-5.leto + DOUBLE-SCAN-4.× + DVOJČKA + ULEDBA-#10 + HUESTIČ-h41-kontinuiteta!) | P212: +13-blokov-1865 (04106 325→338, vitals 1544→1557, ordinali-1–66-ČISTO-6.leto + MEJA-'1865'-50.-POTRDITEV + z74-duel-REŠEN + ULEDBA-#11 + ANOMALIJA-pisar-mota-z13 + HUSIČ-h37-klaster!) | P213: +17-blokov-1864 (04106 338→355, vitals 1557→1574, ordinali-1–91-ČISTO-7.leto + MEJA-'1864'-51.-POTRDITEV + s41-SHIFT-SANACIJA + 8-KROP-VIZUALNIH-ADJUDIKACIJ + ANOMALIJA-z85 + PEZDIRC-×2-hiši + ŽELKO-h1-×2!) | P214: +7-blokov-1863 (04106 355→362, vitals 1574→1581, ordinali-1–64-ČISTO-8.leto + MEJA-'1863'-52.-POTRDITEV + NOV-INVARIANTA-TIP-vsotna=LETNICA-MARKER + ULEDBA-#11-12.×-EKSPLICITNO + 7-KROP-SKUPIN + ŠIMEC-h18-ČEZ-LETA + BRINC-h65-unehelich + STRAUS-h71-γ-7-korelacija!) | P215: +9-blokov-1862 (04106 362→371, vitals 1581→1590, ordinali-1–60-ČISTO-9.leto + MEJA-'1862'-3.-INSTANCE-vsotna-letnica-marker + NOVA-VARIANTA-brez-rokopisne-glave + s32=s33-DOUBLE-SCAN-2.× + FILAK-MREŽA-×3 + KUNE-h10-nit-'Kure'-5.-branja + ŽELKO-h1-nit + KRIŽAN-h63-nit-Typhus-TRI-branja + POŽEK-h67-tail-1861-nit + KROP-zap-stolpec-DOKAZ-'49–54'!) | P216: +10-blokov-1861 (04106 371→381, vitals 1590→1600, ordinali-1–54-ČISTO-10.leto + MEJA-'1861'-54.-POTRDITEV (vsotna-'1|8'-marker + rokopisna-glava-OBOJE!) + NOV-TIP-REGISTERJSKA-ŠTEVILČENJSKA-NAPAKA (s25-tail-written-53–59-'60'!) + s27=s26-DOUBLE-SCAN-3.× + h42-×3-APR-KLASTER-družina + PEZDIRC-MREŽA-×5 + ŽELKO-h1-4.-leto + ŠIMEC-h18-GLOBLJE + POŽEK-h67-ZADNJI-VNOS + VLM-margin-misreadi-KOREKCIJE!) | P216: +10-blokov-1861 (04106 371→381, vitals 1590→1600, ordinali-1–54-ČISTO-10.leto + MEJA-'1861'-54.-POTRDITEV (vsotna-'1|8'-marker + rokopisna-glava-OBOJE!) + NOV-TIP-REGISTERJSKA-ŠTEVILČENJSKA-NAPAKA (s25-tail-written-53–59-'60'!) + s27=s26-DOUBLE-SCAN-3.× + h42-×3-APR-KLASTER-družina + PEZDIRC-MREŽA-×5 + ŽELKO-h1-4.-leto + ŠIMEC-h18-GLOBLJE + POŽEK-h67-ZADNJI-VNOS + VLM-margin-misreadi-KOREKCIJE!) | P217: +9-blokov-1860 (04106 381→390, vitals 1600→1609, 73-vpisov-kronološko + REGISTERJSKA-NAPAKA-ordinali-NI-ČISTO-1.-leto (written-53–59-×2!) + MEJA-'1860'-55.-POTRDITEV (rokopisna-glava-KROP — VLM-'1800'-misread-KOREKCIJA!) + z27-'16.-Mai-1860'-EKSPLICITNO + POŽEK-h58-nit + VALENTIN-×2-h57 + PEZDIRC-niti-1859/60 + VLM-margin-misreadi-KOREKCIJE-s18-+10-s22-'27'-z53-avgust!) | P218: +23-blokov-1859 (04106 390→413, vitals 1609→1632, ŠTEVJE-IZ-VRSTIC-20.×-103 + 23-GRIBLJE-REKORD-PREDZGODOVINE + MEJA-1858/59-s11-NASLOVNI-LIST-DEEL-2-'1858'-glava-KROP-VSOTNA-'1 8 [5 9]'-marker-56.-POTRDITEV (P214-TIP!) + LUKNJA-92-NOV-TIP + NEŠTEVILČENA-Jalkič-NOV-TIP + s19-naslovni-list-potavljen + GENICKSTARRE-EPIDEMIJA-×4-NOV-VZROK + NOV-DUHOVNIK-'Joh.-Knavs' + P217-tail-KOREKCIJE (z94/z97-marginali-ime-starost-vzrok!) + PARIČ-klaster-×2 + z81-99J[~83!]-TRAJNI-DUEL + PEZDIRC-MREŽA-globlje + h65-×2-MILEK-3-obdobja!) | P219: +10-blokov-1858 (04106 413→423, vitals 1632→1642, ŠTEVJE-IZ-VRSTIC-21.×-58-kronološko (57-written-ČISTO + 1-NEŠTEVILČENA-s7) + 10-GRIBLJE/8-hiš (h19-×3-TRIPLE!) + MEJA-1857/58-s7-VSOTNA-'1 8 [5 8]'-P214-TIP-3.-INSTANCE-57.-POTRDITEV + NEŠTEVILČENA-s7-2.-instance + NASLOVNA-LISTA-s9+s10-sredi-1858 (page-VLM-s10-4/14-MISREAD-KOREKCIJA!) + DVOJČKI-SIMIC-h19 + GAUFIGALBRANN-×4 + PEZDIRC-'Padire'-h50-4-GENERACIJE + NOV-DUHOVNIK-'Auber[?]'-DUEL + Knavs-ŽE-Feb-1858-KOREKCIJA-P218!) | P220: +10-blokov-1857 (04106 423→433, vitals 1642→1652, ŠTEVJE-IZ-VRSTIC-22.×-73-kronološko (73-written + LUKNJA-32!) + 10-GRIBLJE/9-hiš (h36-×2-KRIŽAN + z71-hiša-NEBERLJIVA-3×!) + KNJIGA-START-'18 57'-RAZPETA-GLAVA + OKTOBER-×0 + SCARLATINA?-klaster-×13–14 + 8-od-10-hiš-PRVI-vpis-v-korpusu + z74-'Knauš/Kranz[?]'-MOŽEN-ZGODNJI-Knavs-podpis! — ★ PREDZGODOVINA-LINIJA-04106-KONČANA-29/29!) | P221: +25-blokov-1885-krstna-04104-NOVA-LINIJA-1/15 (vitals 1652→1677; 04104 0→25; ŠTEVJE-IZ-VRSTIC-1.×-104-kronološko + 25-GRIBLJE-NOV-REKORD-KORPUSA (prej-23!) + DVOJČKI-GRADAC-2-VRSTICI (page-VLM-SPOJIL-KOREKCIJA!) + z101-NEIDENTIFICIRANA (popravek-pisarja-DOKAZ!) + NASLOVNA-sredi-letnika-s190 + MISREAD-KOREKCIJE-×7 (h6→61/h45→42/h33→53/h33→35/h19→17/h39→23/'Škrilje'→GRIBLJE!) + pripisi-KRIŽ-z-mrliško-04106-NOVA-DIMENZIJA!) | P222: +21-blokov-1884-krstna-04104-2/15 (vitals 1677→1698; 04104 25→46; ŠTEVIE-IZ-VRSTIC-2.×-112-DISTINCT = P221-'1884-=-112'-1:1 + 21-GRIBLJE/20-hiš (h13-×2!) + PISARJEVE-ANOMALIJE-×6 (s175-prepiše-8–14! + s177-REORIZENTACIJA-61–68→31–38! + z84-DUPLIKAT-NOVA-TIP!) + s184-prazna-vrstica+revizije-×10 + vas-DUELI-REŠENI-krop-hi (z99-GRIBLJE! z52/z60-IZLOČENI!) + pripisi-KRIŽ-†1887-×2-MMK!) | P223: +19-blokov-1883-krstna-04104-3/15 (vitals 1698→1717; 04104 46→65; 99-DISTINCT = P222-LEAD-'1883-=-99'-1:1 + 19-GRIBLJE/18-hiš (h25-×2!) + MEJA-1882/83-s161-62.-POTRDITEV + MESEC-CARRY-OVER-VZOREC (NOVO!) + MÄRZ-LABEL-MISREAD-KOREKCIJA (April-sandwich-RAZREŠEN!) + DVOJNI-FOLIACIJSKI-SERIJI (NOVO! — gola-'sken−5'-VS-'Pag.'-'sken+13'! + P222-'s173=186'-KOREKCIJA-'168'!) + hišni-DUELI-REŠENI-×5 + pripisi-MMK-×8 + mreže-PEZDIRC-grafija-×6!) | P224: +25-blokov-1882-krstna-04104-4/15 (vitals 1717→1742; 04104 65→90; 106-DISTINCT = P223-LEAD-'z88–z106'-1:1 + 25-GRIBLJE/23-hiš = TIE-REKORD-P221 + MEJA-1881/82-s147/s148-63.-POTRDITEV ('Anni-1-8-8-1.'-RAZPETA!) + S160-DEZEMBER-KOREKCIJA (z96-'DECEMBER'-labela-VIZUALNO!-Dez-31-×4!) + Z71-OKT-KOREKCIJA + FOLIACIJA-TRI-SERIJE (sken−6 + LUKNJA-'158'!) + S149-z16-DUPLIKAT + Z55-ZAP-KOREKCIJA + hišne-VIZUALNE-×6 + pripisi-MMK-×6 + mreže-PEZDIRC-×4 + KLOBUČAR-×3) | P225: +17-blokov-1881-krstna-04104-5/15 (vitals 1742→1759; 04104 90→107; 89-DISTINCT = P224-LEAD-'z83–z89'-1:1 + 17-GRIBLJE/17-hiš-VSE-DISTINCT + MEJA-1880/81-s135/s136-64.-POTRDITEV (RESTART-z1-GRIBLJE-h55-'Finis'-BREZ-VSOTNE!) + FOLIACIJA-sken−6-13/13-SEKVENČNO (129–141!-sandwich-s143/s145!) + PEZDIRC-×9-REKORD-LETA (×12!) + 2-POROKE-'VNALILA' (z52-1959! + z57-1958!) + Z48-BOTRA-PRAZNA + Z66-NEZAKONSKI + Z14-APRIL-REŠEN + 1880 = 122-BONUS → P226-LEAD) | P226: +22-blokov-1880-krstna-04104-6/15 (vitals 1759→1781; 04104 107→129; 122-DISTINCT = P225-LEAD-'1880 = 122'-1:1 + 22-GRIBLJE/20-hiš (h27-×2 + h24-×2!) + MEJA-1879/80-s119/s120-65.-POTRDITEV (velike-cifre-'1/8/8/0'-P214-TIP!-RESTART-z1-Dobravce-h11!-'Jahr 1879'-BREZ-VSOTNE!) + FOLIACIJA-sken−6-17/17-SEKVENČNO (113–129!-2-VLM-misreada-REŠENA!) + PEZDIRC-×14-REKORD-LINJE (2-DVOJNI!-continuum-6-let!) + DVOJČKI-Boršt-h20 + Mißgeburt-×2 + z110-KRSTEN-PRAZEN + NEZAKONSKI-×7-REKORD + MODRI-PRIPISI-×9-REKORD + DUHOVNIŠKA-MENJAVA (Janičar→Dovgan!) + 1879 = 96-BONUS → P227-LEAD) | P227: +22-blokov-1879-krstna-04104-7/15 (vitals 1781→1803; 04104 129→151; 96-DISTINCT = P226-LEAD-'1879 = 96'-1:1 + 22-GRIBLJE/19-hiš (h31-×2 + h22-×2 + h17-×2!) + MEJA-1878/79-s105/s106-66.-POTRDITEV (VSOTNA-RAZPETA-'1 8'+'79'!-RESTART-z1-8./9.-JÄNNER-NAJPONEJŠI!-'Jahr 1878'-s-popravo!) + FOLIACIJA-sken−6-14/14-SEKVENČNO (100–113!-s112-'106'-PREDICTION!) + PEZDIRC-×12 (2-DVOJNI!-continuum-7-let!) + DVOJČKI-ZWILLINGE-×3-REKORD ('Zwillinge'-anotacije!) + TODTGEBOREN-×3 + NEZAKONSKI-z23 + MODRI-×12-REKORD + DUHOVNIŠKA-IZMENJAVA + 1878 = 94-BONUS → P228-LEAD) | P228: +16-blokov-1878-krstna-04104-8/15 (vitals 1803→1819; 04104 151→167; 94-DISTINCT = P227-LEAD-'1878 = 94'-1:1 + 16-GRIBLJE/14-hiš (h11-×2 + h64-×2!) + MEJA-1877/78-s92/s93-67.-POTRDITEV (RESTART-z1-[8↔9]-DUEL!-BREZ-VSOTNE!-mesec-PREČRTAN!) + FOLIACIJA-sken−5-13/14 (87–99!-LUKNJA-'94'-temna-'34'!) + s105-DUPLIKAT-SKEN → 'sken−6'-ARTEFAKT-RAZLAGA! + PEZDIRC-×17-REKORD (2-DVOJNI!-continuum-8-let!) + TROJNA-IZMENJAVA (3-PODPISA!) + TODTGEBOREN-GRIBLJE-z28 + NEZAKONSKI-×5 + DVOJČKI-×2 + MODRI-×12 (×2-MATCH!) + POPRAVKI-×5 + LEPLJENEC-1908 → P229-LEAD-1877) | P229: +20-blokov-1877-krstna-04104-9/15 (vitals 1819→1839; 04104 167→187; 108-DISTINCT = LEAD-KOREKCIJA-'91'→'108' + zap-1:1-×6-strani + 20-GRIBLJE/18-hiš (h6-×2 + h14-×2!) + MEJA-1876/77-s78-ENE-STRANI-68.-POTRDITEV ('Incipit-annus-Domini-1877'-KALLIGRAFIJA!-RESTART-z1-9./10.!-9.-restart!) + FOLIACIJA-sken−5-15/15 (s85='80'-LEAD-POTRJENA!-73–158!) + DVOJČKI-×4-REKORD + TODTGEBOREN-TIP-×3-REKORD ('Nurlygaburišt'-družina!) + Nov31-DUEL-×2 + RETRO-VPISI-×2 + z22-PREČRTANA-X + z15-Feb28→Mar1 + MODRI-×9 (MATCH-h37!-TORONTO!) → P230-LEAD-1876) | P230: +14-blokov-1876-krstna-04104-10/15 (vitals 1839→1853; 04104 187→201; 100-DISTINCT z1–z100 + zap-1:1-×6-strani + s77-zap-'94'-MODRA + 14-GRIBLJE/14-hiš-BREZ-DUPLIKATOV + MEJA-1875/76-s64/s65-DVO-STRANSKA-69.-POTRDITEV ('finis-Anni-1875'-KALLIGRAFIJA!-RESTART-z1-5./5.!-10.-restart!-BREZ-INCIPIT!) + FOLIACIJA-sken−5-15/15 (59–73!-3×-NARISE!) + PEZDIRC-×17-TIE-REKORD-P228-continuum-10-let + DVOJČKI-×4-NOVI-VARIANTI (2-BRACE + 2-SHARED-ROW!) + NEZAKONSKI-×6-REKORD + WOLFGR-DRUŽINA-×3-NOVA + MODRI-×11-REKORD (CHICAGO-1970!-MMK-×2!) + DUHOVNIKI-7/7-IZENAČEN → P231-LEAD-1875) | P231: +17-blokov-1875-krstna-04104-11/15 (vitals 1853→1870; 04104 201→218; 119-vpisov z1–z115+TAIL-z1–z4-LOKALNI-RESTART-NOVA-VARIANTA + MEJA-1874/75-s47-SREDI-PAGI-3.-varianta-70.-POTRDITEV (TAIL-1874-×5 + 'Jänner'-PRELIM + veliki-cifri-'1'+'8' + RESTART-z1-9./9.!-11.-restart!-BREZ-finis-kalligrafije!) + TROJNI-DUPLIKAT-SKENOV-folio-57-NOVO-ODKRITJE (sken−3-42–57!) + 17-GRIBLJE/16-hiš-h48-DUEL + PEZDIRC-×5-NAJNIŽJA-continuum-11-let + NEZAKONSKI-×2 + MODRI-×4-† + VIOLET-RETRO-z6-DATIRANI-NOVI-TIP + FEBER-1-BREZ-DATUMA + DUHOVNIKI-DOVGAN-×10/HOGGIA-×7 → P232-LEAD-1874) | P232: +19-blokov-1874-krstna-04104-12/15 (vitals 1870→1889; 04104 218→237; 92-vpisov z1–z92-LEAD-~92-1:1-POTRJENO + MEJA-1873/74-s37-SREDI-PAGI-'Initium-anni-Domini-1874'-KALLIGRAFIJA-NOVA-VARIANTA-1.-INITIUM-v-liniji-71.-POTRDITEV (TAIL-1873-zap-28! + RESTART-z1-1./1.!-12.-restart!-'Albin-Schwinger'-NOVI-duhovnik!) + 'sken−3'-33–44-SEKVENČNO-BREZ-duplikatov + zap-ARITMETIKA-4/4-POTRJENA (z73/z76/z81/z82!) + 19-GRIBLJE/18-hiš-h40-DUEL + PEZDIRC-×7-PORAST + MILEK-×7-REKORD + NEZ-×0-1.-LINIJI + MODRI-×4 + BREZ-PRAZNIH-MESECEV-1.-LINIJI + TRI-duhovnika-NOVI-×2 → P233-LEAD-1873) | P233: +17-blokov-1873-krstna-04104-13/15 (vitals 1889→1906; 04104 237→254; 98-vpisov z1–z98-X-ARITMETIČNI-MODEL-9-ANKER-s28=11–21-+10-KURRENT-'1'-'2'-MISREAD-P232-'zap-28'-REŠEN-'98' + MEJA-1872/73-PRED-s28-glave-9/9-13.-restart-X-open + foliacija-25–33-SEKVENČNO-BREZ-duplikatov + 17-GRIBLJE/16-hiš-h37-DUEL + PEZDIRC-×8-GARBLE-REKORD + JAKOFČIČ-×5 + BRODARIČ-×6-KOMPLET + ŠILAR-×3-NOVA + NEZ-×1-X-open + MODRI-×2 + 4-PRAZNI-MESECI + PENT-duhovnikov-X-open → P234-LEAD-1872) | P234: +17-blokov-1872-krstna-04104-14/15 (vitals 1906→1923; 04104 254→271; 115-vpisov z1–z115-116-vrstic-−-1-prečrtana-TAIL-VERIGA-6/6 + 12.-RESTART-z1-s14-r1-1.-vpis-leta-GRIBLJE-PARALELA-P223 + MEJA-1871/72-s13/s14-PAGE-BOUNDARY + MEJA-1872/73-s25/s26-PAGE-BOUNDARY-P233-NAPoved-1:1-restart-s26-SUPER-POTRJEN + DUPLIKAT-s28=s29-RESITEV-fol-25-2×-98-TOTAL-1873-INTAKTEN + 17-GRIBLJE/16-hiš-h30-×2-DUEL-ISENAČEN-1873 + PEZDIRC-×5-GARBLE-continuum + DRAGOŠ-×3-KOMPLET-PARALELA + HRIŽAN-×5 + HLOBUČAR-×3 + ŠIMEC-×3 + MODRI-×4 + NEZ-×0 + SEPTEMBER-×0 + PREČRTANA-KOPIJA-r7-s24-X + PRIMING-halucinacija-'Jänner'-RAZREŠENA-JUNI → P235-LEAD-1871) | P235: +17-blokov-1871-krstna-04104-15/15-LINIJA-KOMPLETNA (vitals 1923→1940; 04104 271→288; 108-vpisov z1–z108-116-−-8-DUPLIKAT-s3=s4-fol-1-2× + MEJA-1870/71-ZAČETEK-KNJIGE-nalepek-'PODZEMELJ-R-1871-1885'-KNJIGA = 15-LET-LINIJA-1:1 + MEJA-1871/72-s13/s14-P234-1:1-re-use + 13.-RESTART-z1-s3-r1-KRASINEC-VZOREC-PREKINJEN + TAIL-VERIGA-3/3-z108-Dez-31 + DVOJČKI-z72/z73-ZWILLINGE-X + PREČRTANI-z37/z38 + DUHOVNIKI-EKSTRAHIRANI-Weisel/Dotto/Feršlan/Wessely + PEZDIRC-×8-'Peter'-×3-z81-X-POTRJEN + MILIČ-×5-REKORD + JAKOFČIČ-×11-ish-REKORD + HRIŽAN-×9-REKORD + KLOBUČAR-×5 + BRODARIČ-×5 + DRAGOŠ-×6-DVOJNI-z46 + h28-×2-DUEL-3.-LETO + MODRI-×3-1957-NAJNOVEJŠI + NEZ-×1 + 2-PRAZNA-MESECA → LINIJA-15/15-KOMPLETNA-sinteza-P236+!) | P246: +7-blokov-1878-poročna-predzgovorina (04455 235→242, vitals 1978→1985, sidra 228→235, dobe 202→209!) | P247: +5-blokov-1877 (04455 242→247, vitals 1985→1990; h51-1.-04455-BLOK-KADARKOLI-PT-LUKNJA-HIŠA! + firstYear-DVIG-h10-1887→1877-h69-1887→1877-h8-1881→1877!) · P248: 04455-1876 +6 blokov (h31+h44+h35+h64+h41+h30!) — h44-posodobljen (24-blokov/04455=6/firstYear-1876/p248Note!-DVIG-1899→1876-ZA-23-LET-NOV-ABSOLUTNI-REKORD!) | P250: +11-blokov-1874 (04455 254→265, vitals 1997→2008!)"
+  },
+  "gapStatus": {
+    "total": 18,
+    "withDokaz": 18,
+    "trueHoles": [],
+    "dokazOnlyMrliška": [
+      "51"
+    ],
+    "dokazOnlyPoročna": []
+  },
   "gapHouses": [
-   "42",
-   "43",
-   "44",
-   "45",
-   "46",
-   "47",
-   "48",
-   "49",
-   "51",
-   "52",
-   "53",
-   "54",
-   "55",
-   "56",
-   "57",
-   "58",
-   "59",
-   "60"
+    {
+      "houseNo": "42",
+      "blocksTotal": 16,
+      "byBook": {
+        "04105": 5,
+        "04455": 3,
+        "04106": 0,
+        "04894": 8
+      },
+      "firstYear": 1874,
+      "lastYear": 1912,
+      "years": [
+        1874,
+        1890,
+        1894,
+        1896,
+        1897,
+        1904,
+        1905,
+        1906,
+        1908,
+        1909,
+        1910,
+        1911,
+        1912
+      ],
+      "dokazVia": [
+        "krstna-04105",
+        "poročna-04455",
+        "mrliška-04894"
+      ],
+      "p249Note": "P249: s7-m32-TAIL-1874-KANDIDAT-BLOK (nevesta Maria Pegdirc GRIBLJE 42 mikro-6×-1:1!-18. November 1874-ženin Nicolaus Marasinič Krasinice 12-48-l-½-g.) = h42-PARALELA-1:1-z-Georg-Pegdirc-1879-P244-v21-ISTA-HIŠA-ISTA-PRIIMEK (2-dokaza-5-let-narazen!-→-NAPAVED-P250-PROMOCIJA-tail-kontekst→blok-cf.-P248-h30-vzorec!-korpus-04455-nespremenjen-P249!) [P250-IZPOLNJENO!]",
+      "p250Note": "P250: s7-m32-PROMOCIJA-tail-kontekst→BLOK (NAPAVED-IZPOLNJENA!-cf.-P248-h30!) — nevesta-Maria-PEGDIRC-GRIBLJE 42-(P249-mikro-6×-1:1!)-18.-November-1874-ženin-Nicolaus-Marasinič = h42-PARALELA-1:1-z-Georg-Pegdirc-1879-P244-v21-ISTA-HIŠA-ISTA-PRIIMEK (PEZDIRC-družina-na-h42-2-dokaza-5-let-narazen!) — h42-04455-firstYear-1879→1874-ZA-5-LET!-bloki-15→16 (04455-2→3!)"
+    },
+    {
+      "houseNo": "43",
+      "blocksTotal": 10,
+      "byBook": {
+        "04105": 2,
+        "04455": 2,
+        "04106": 1,
+        "04894": 5
+      },
+      "firstYear": 1874,
+      "lastYear": 1924,
+      "years": [
+        1874,
+        1884,
+        1887,
+        1892,
+        1897,
+        1904,
+        1908,
+        1909,
+        1911,
+        1924
+      ],
+      "dokazVia": [
+        "krstna-04105",
+        "poročna-04455",
+        "mrliška-04894",
+        "mrliška-04106-predzgodovina"
+      ],
+      "p250Note": "P250: m25-s6-NEVESTA-Marina-[~Martin]-BRULA-GRIBLJE 43-14.-Juni-1874-'Gribje-43'-ultra-8×-1:1 (Kurrent-'4'-odprti-vrh-NE-'93'/'33'!) = H43-BRULA-PARALELA-1:1-z-Katharina-BRULA-1878-P246-v5-bride-KONTEKST-ISTA-HIŠA-ISTA-PRIIMEK (P249-h42-vzorec-2.-instance!) — h43-04455-firstYear-1908→1874-DVIG-ZA-34-LET-NOV-ABSOLUTNI-REKORD-DVIGA!-bloki-9→10 (04455-1→2!)"
+    },
+    {
+      "houseNo": "44",
+      "blocksTotal": 24,
+      "byBook": {
+        "04105": 8,
+        "04455": 6,
+        "04106": 3,
+        "04894": 7
+      },
+      "firstYear": 1876,
+      "lastYear": 1923,
+      "years": [
+        1876,
+        1881,
+        1883,
+        1884,
+        1887,
+        1888,
+        1899,
+        1901,
+        1903,
+        1905,
+        1906,
+        1906,
+        1908,
+        1908,
+        1908,
+        1910,
+        1912,
+        1913,
+        1913,
+        1914,
+        1915,
+        1918,
+        1921,
+        1923
+      ],
+      "dokazVia": [
+        "krstna-04105",
+        "poročna-04455",
+        "mrliška-04894",
+        "mrliška-04106-predzgodovina"
+      ],
+      "p248Note": "P248: poročna-04455-1876-vpis-1-NEVESTA-Katharina-PEGDIRE-GRIBLJE-44-×-Nicolaus-Krupanič-GRIBLJE-31-(s11-VRSTA-2-RESTART-1876!-INTRA-DVOJNI-h31×h44!) = h44-1.-04455-BLOK-V-PREDZGOVINI + ★★★★★ h44-firstYear-04455-DVIG-1899→1876-ZA-23-LET = NOV-ABSOLUTNI-REKORD-DVIG-LINIJE (prejšnji-h53-10-let-P243!-h10-h69-10-let-P247!) + PEZDIRC-×1-od-×9-v-1-letu!"
+    },
+    {
+      "houseNo": "45",
+      "blocksTotal": 17,
+      "byBook": {
+        "04105": 8,
+        "04455": 0,
+        "04106": 0,
+        "04894": 9
+      },
+      "firstYear": 1893,
+      "lastYear": 1924,
+      "years": [
+        1893,
+        1896,
+        1896,
+        1897,
+        1900,
+        1900,
+        1903,
+        1903,
+        1904,
+        1912,
+        1915,
+        1915,
+        1917,
+        1918,
+        1919,
+        1920,
+        1924
+      ],
+      "dokazVia": [
+        "krstna-04105",
+        "mrliška-04894"
+      ]
+    },
+    {
+      "houseNo": "46",
+      "blocksTotal": 30,
+      "byBook": {
+        "04105": 12,
+        "04455": 7,
+        "04106": 0,
+        "04894": 11
+      },
+      "firstYear": 1887,
+      "lastYear": 1920,
+      "years": [
+        1887,
+        1891,
+        1893,
+        1895,
+        1895,
+        1895,
+        1896,
+        1896,
+        1896,
+        1897,
+        1898,
+        1899,
+        1903,
+        1903,
+        1904,
+        1908,
+        1909,
+        1909,
+        1910,
+        1911,
+        1912,
+        1912,
+        1913,
+        1915,
+        1917,
+        1918,
+        1919,
+        1920,
+        1920,
+        1920
+      ],
+      "dokazVia": [
+        "krstna-04105",
+        "poročna-04455",
+        "mrliška-04894"
+      ]
+    },
+    {
+      "houseNo": "47",
+      "blocksTotal": 11,
+      "byBook": {
+        "04105": 5,
+        "04455": 1,
+        "04106": 2,
+        "04894": 3
+      },
+      "firstYear": 1884,
+      "lastYear": 1919,
+      "years": [
+        1884,
+        1887,
+        1888,
+        1890,
+        1900,
+        1911,
+        1913,
+        1919
+      ],
+      "dokazVia": [
+        "krstna-04105",
+        "mrliška-04894",
+        "mrliška-04106-predzgodovina"
+      ],
+      "p239Note": "P239: + poročna-04455-1884 vpis-16 (Peter HLOBUČAR × Maria SILAH-h34 — SESTRSKI-poroki-h34!)"
+    },
+    {
+      "houseNo": "48",
+      "blocksTotal": 20,
+      "byBook": {
+        "04105": 8,
+        "04455": 4,
+        "04106": 1,
+        "04894": 7
+      },
+      "firstYear": 1881,
+      "lastYear": 1922,
+      "years": [
+        1881,
+        1889,
+        1892,
+        1898,
+        1898,
+        1901,
+        1903,
+        1904,
+        1905,
+        1907,
+        1909,
+        1911,
+        1911,
+        1912,
+        1914,
+        1919,
+        1919,
+        1919,
+        1922,
+        1922
+      ],
+      "dokazVia": [
+        "krstna-04105",
+        "poročna-04455",
+        "mrliška-04894",
+        "mrliška-04106-predzgodovina"
+      ]
+    },
+    {
+      "houseNo": "49",
+      "blocksTotal": 16,
+      "byBook": {
+        "04105": 6,
+        "04455": 0,
+        "04106": 2,
+        "04894": 8
+      },
+      "firstYear": 1883,
+      "lastYear": 1918,
+      "years": [
+        1883,
+        1884,
+        1894,
+        1899,
+        1900,
+        1906,
+        1906,
+        1907,
+        1907,
+        1907,
+        1908,
+        1910,
+        1910,
+        1911,
+        1913,
+        1918
+      ],
+      "dokazVia": [
+        "krstna-04105",
+        "mrliška-04894",
+        "mrliška-04106-predzgodovina"
+      ]
+    },
+    {
+      "houseNo": "51",
+      "blocksTotal": 6,
+      "byBook": {
+        "04105": 0,
+        "04455": 2,
+        "04106": 0,
+        "04894": 4
+      },
+      "firstYear": 1877,
+      "lastYear": 1913,
+      "years": [
+        1877,
+        1877,
+        1896,
+        1896,
+        1897,
+        1913
+      ],
+      "dokazVia": [
+        "mrliška-04894",
+        "poročna-04455-predzgodovina"
+      ],
+      "p247Note": "P247: poročna-04455-1877-vpis-5-ŽENIN-Mathias-MOH-GRIBLJE-51-[~31-DUEL]-×-Maria-Brodarič-Krasinec-7 (s15!) + vpis-7-NEVESTA-Katharina-MOH-GRIBLJE-51-×-Johann-Brodavič-Krasinec-7 (s16!) = h51-×2-BLOKA-V-1-LETU + h51-1.-04455-BLOK-KADARKOLI (PT-LUKNJA-HIŠA-cf.-h50-P244!) + ★★★★★ h51-1877-poroka-→-h51-1881-krst-MATI-Maria-BRODARIČ-1:1-PARALELA! + MOH-TROJČEK (v4-Maria-v5-Mathias-v7-Katharina!) (cf.-04104-h51-1881/1884 — poročna-OUTRUNA-ZA-4-LET!)"
+    },
+    {
+      "houseNo": "52",
+      "blocksTotal": 10,
+      "byBook": {
+        "04105": 3,
+        "04455": 3,
+        "04106": 0,
+        "04894": 4
+      },
+      "firstYear": 1881,
+      "lastYear": 1908,
+      "years": [
+        1882,
+        1887,
+        1895,
+        1898,
+        1898,
+        1902,
+        1903,
+        1907,
+        1908
+      ],
+      "dokazVia": [
+        "krstna-04105",
+        "poročna-04455",
+        "mrliška-04894"
+      ],
+      "p242Note": "P242: poročna-1881-v17-Anna-Petrič-GRIBLJE-52-24.-Okt-uz-B-1:1! — h52-firstYear-DVIG-1882→1881-ZA-1-LETO!-P241-ZA-5-LET→ZA-6-LET!-9→10-blokov!"
+    },
+    {
+      "houseNo": "53",
+      "blocksTotal": 22,
+      "byBook": {
+        "04105": 7,
+        "04455": 4,
+        "04106": 0,
+        "04894": 11
+      },
+      "firstYear": 1880,
+      "lastYear": 1924,
+      "years": [
+        1887,
+        1888,
+        1889,
+        1890,
+        1891,
+        1894,
+        1896,
+        1897,
+        1897,
+        1898,
+        1913,
+        1914,
+        1915,
+        1917,
+        1918,
+        1918,
+        1918,
+        1918,
+        1921,
+        1922,
+        1924
+      ],
+      "dokazVia": [
+        "krstna-04105",
+        "poročna-04455",
+        "mrliška-04894"
+      ],
+      "p243Note": "P243: poročna-04455-1880-vpis-20-TAIL-Peter-PERDIRC-[~Pegdirc-DUEL!]-GRIBLJE-53 (s38!) — h53-firstYear-04455-1890→1880-DVIG-ZA-10-LET + margine-'Gaveldzettel-der-Gemeinde-Griblje-vom-21.-November-1880'-očetova-privolitev! (cf.-04105-h53-firstYear-1887 — poročna-OUTRUNA-ZA-7-LET!)"
+    },
+    {
+      "houseNo": "54",
+      "blocksTotal": 14,
+      "byBook": {
+        "04105": 6,
+        "04455": 3,
+        "04106": 3,
+        "04894": 2
+      },
+      "firstYear": 1882,
+      "lastYear": 1917,
+      "years": [
+        1882,
+        1884,
+        1885,
+        1886,
+        1889,
+        1897,
+        1898,
+        1900,
+        1901,
+        1904,
+        1909,
+        1917
+      ],
+      "dokazVia": [
+        "krstna-04105",
+        "poročna-04455",
+        "mrliška-04894",
+        "mrliška-04106-predzgodovina"
+      ],
+      "p239Note": "P239: + poročna-04455-1884 vpis-6 (Johann SIMEC-h54 × Anna STRUCELJ-h44 — POLNI-GRIBLJE!)"
+    },
+    {
+      "houseNo": "55",
+      "blocksTotal": 8,
+      "byBook": {
+        "04105": 3,
+        "04455": 0,
+        "04106": 1,
+        "04894": 4
+      },
+      "firstYear": 1882,
+      "lastYear": 1924,
+      "years": [
+        1882,
+        1887,
+        1889,
+        1890,
+        1891,
+        1911,
+        1924,
+        1924
+      ],
+      "dokazVia": [
+        "krstna-04105",
+        "mrliška-04894",
+        "mrliška-04106-predzgodovina"
+      ]
+    },
+    {
+      "houseNo": "56",
+      "blocksTotal": 8,
+      "byBook": {
+        "04105": 3,
+        "04455": 2,
+        "04106": 1,
+        "04894": 2
+      },
+      "firstYear": 1881,
+      "lastYear": 1908,
+      "years": [
+        1881,
+        1886,
+        1886,
+        1888,
+        1891,
+        1893,
+        1903,
+        1908
+      ],
+      "dokazVia": [
+        "krstna-04105",
+        "poročna-04455",
+        "mrliška-04894",
+        "mrliška-04106-predzgodovina"
+      ]
+    },
+    {
+      "houseNo": "57",
+      "blocksTotal": 12,
+      "byBook": {
+        "04105": 5,
+        "04455": 1,
+        "04106": 0,
+        "04894": 6
+      },
+      "firstYear": 1886,
+      "lastYear": 1912,
+      "years": [
+        1886,
+        1888,
+        1889,
+        1892,
+        1894,
+        1894,
+        1899,
+        1902,
+        1906,
+        1909,
+        1911,
+        1912
+      ],
+      "dokazVia": [
+        "krstna-04105",
+        "poročna-04455",
+        "mrliška-04894"
+      ]
+    },
+    {
+      "houseNo": "58",
+      "blocksTotal": 21,
+      "byBook": {
+        "04105": 8,
+        "04455": 1,
+        "04106": 1,
+        "04894": 11
+      },
+      "firstYear": 1885,
+      "lastYear": 1918,
+      "years": [
+        1885,
+        1887,
+        1889,
+        1890,
+        1890,
+        1892,
+        1892,
+        1893,
+        1893,
+        1895,
+        1896,
+        1900,
+        1902,
+        1903,
+        1903,
+        1904,
+        1905,
+        1906,
+        1906,
+        1918,
+        1918
+      ],
+      "dokazVia": [
+        "krstna-04105",
+        "poročna-04455",
+        "mrliška-04894",
+        "mrliška-04106-predzgodovina"
+      ]
+    },
+    {
+      "houseNo": "59",
+      "blocksTotal": 9,
+      "byBook": {
+        "04105": 4,
+        "04455": 1,
+        "04106": 0,
+        "04894": 4
+      },
+      "firstYear": 1886,
+      "lastYear": 1921,
+      "years": [
+        1886,
+        1889,
+        1899,
+        1905,
+        1912,
+        1913,
+        1913,
+        1913,
+        1921
+      ],
+      "dokazVia": [
+        "krstna-04105",
+        "poročna-04455",
+        "mrliška-04894"
+      ]
+    },
+    {
+      "houseNo": "60",
+      "blocksTotal": 22,
+      "byBook": {
+        "04105": 9,
+        "04455": 2,
+        "04106": 1,
+        "04894": 10
+      },
+      "firstYear": 1881,
+      "lastYear": 1923,
+      "years": [
+        1881,
+        1886,
+        1888,
+        1888,
+        1892,
+        1893,
+        1894,
+        1897,
+        1898,
+        1899,
+        1899,
+        1901,
+        1903,
+        1904,
+        1906,
+        1907,
+        1908,
+        1910,
+        1913,
+        1920,
+        1922,
+        1923
+      ],
+      "dokazVia": [
+        "krstna-04105",
+        "poročna-04455",
+        "mrliška-04894",
+        "mrliška-04106-predzgodovina"
+      ]
+    }
   ],
-  "note": "p80-skripta-set 18 (PT_GAP_HOUSES) ≠ qa doc-list 15 (P80_PT_GAP = 18 brez h45/h47/h55 — dokazi geometrija/filtra)"
- },
- "corpus": {
-  "vitalsTotal": 1997,
-  "byBook": {
-   "04105": 502,
-   "04894": 520,
-   "04106": 433,
-   "04455": 254,
-   "04104": 288
-  },
-  "housesDistinctAll": 95,
-  "housesNote": "raw-distinct v HOUSE_VITALS = 95; p80-vzorec = 94 · korpus = 93 (pogoji filtra v qa-parish I7) | P197: +13-blokov-1880 (04106 83→96, vitals 1302→1315) | P198: +9-blokov-1879 (04106 96→105, vitals 1315→1324; sanacija-re-run!) | P199: +23-blokov-1878 (04106 105→128, vitals 1324→1347) | P200: +8-blokov-1877 (04106 128→136, vitals 1347→1355) | P201: +20-blokov-1876 (04106 136→156, vitals 1355→1375) | P202: +10-blokov-1875 (04106 156→166, vitals 1375→1385, 5-NOVIH-hiš: h11/h35/h45/h59/h72!) | P203: +21-blokov-1874 (04106 166→187, vitals 1385→1406, LEKCIJA-#21-dvostavni-sken-s123==s124!) | P204: +38-blokov-1873-KOLERA (04106 187→225, vitals 1406→1444, DOUBLE-SCAN-s103==s104 + ordinal-dupkati-×4/luknje-×5!) | P205: +17-blokov-1872 (04106 225→242, vitals 1444→1461, 'vsota'-1.× + 'finis'-1.× + CHOLERA-nastop!) | P206: +11-blokov-1871 (04106 242→253, vitals 1461→1472, LUK-18 + DUP-19 + h11-nit-5.leto + 'Ablasser'!) | P207: +12-blokov-1870 (04106 253→265, vitals 1472→1484, ordinali-1–70-ČISTO + h1-Jessernigg + POŽEK-h28-2.leto!) | P208: +14-blokov-1869 (04106 265→279, vitals 1484→1498, ordinali-1–76-ČISTO-2.leto + ULEDBA-z1 + POŽEK-h28-3.leto + 'Noßgabianstho'!) | P208: +14-blokov-1869 (04106 265→292, vitals 1511→1511, ordinali-1–76-ČISTO-2.leto + ULEDBA-z1 + POŽEK-h28-3.leto + 'Noßgabianstho'!) | P209: +13-blokov-1868 (04106 279→292, vitals 1498→1511, ordinali-1–80-ČISTO-3.leto + 'nožgodanujeleg'-ANOMALIA + 2-smrti-v-1-dnevu!) | P210: +13-blokov-1867 (04106 279→312, vitals 1498→1531, ordinali-1–80-ČISTO-3.leto + 'nožgodanujeleg'-ANOMALIA + 2-smrti-v-1-dnevu!) | P211: +13-blokov-1866 (04106 312→325, vitals 1531→1544, ordinali-1–104-ČISTO-5.leto + DOUBLE-SCAN-4.× + DVOJČKA + ULEDBA-#10 + HUESTIČ-h41-kontinuiteta!) | P212: +13-blokov-1865 (04106 325→338, vitals 1544→1557, ordinali-1–66-ČISTO-6.leto + MEJA-'1865'-50.-POTRDITEV + z74-duel-REŠEN + ULEDBA-#11 + ANOMALIJA-pisar-mota-z13 + HUSIČ-h37-klaster!) | P213: +17-blokov-1864 (04106 338→355, vitals 1557→1574, ordinali-1–91-ČISTO-7.leto + MEJA-'1864'-51.-POTRDITEV + s41-SHIFT-SANACIJA + 8-KROP-VIZUALNIH-ADJUDIKACIJ + ANOMALIJA-z85 + PEZDIRC-×2-hiši + ŽELKO-h1-×2!) | P214: +7-blokov-1863 (04106 355→362, vitals 1574→1581, ordinali-1–64-ČISTO-8.leto + MEJA-'1863'-52.-POTRDITEV + NOV-INVARIANTA-TIP-vsotna=LETNICA-MARKER + ULEDBA-#11-12.×-EKSPLICITNO + 7-KROP-SKUPIN + ŠIMEC-h18-ČEZ-LETA + BRINC-h65-unehelich + STRAUS-h71-γ-7-korelacija!) | P215: +9-blokov-1862 (04106 362→371, vitals 1581→1590, ordinali-1–60-ČISTO-9.leto + MEJA-'1862'-3.-INSTANCE-vsotna-letnica-marker + NOVA-VARIANTA-brez-rokopisne-glave + s32=s33-DOUBLE-SCAN-2.× + FILAK-MREŽA-×3 + KUNE-h10-nit-'Kure'-5.-branja + ŽELKO-h1-nit + KRIŽAN-h63-nit-Typhus-TRI-branja + POŽEK-h67-tail-1861-nit + KROP-zap-stolpec-DOKAZ-'49–54'!) | P216: +10-blokov-1861 (04106 371→381, vitals 1590→1600, ordinali-1–54-ČISTO-10.leto + MEJA-'1861'-54.-POTRDITEV (vsotna-'1|8'-marker + rokopisna-glava-OBOJE!) + NOV-TIP-REGISTERJSKA-ŠTEVILČENJSKA-NAPAKA (s25-tail-written-53–59-'60'!) + s27=s26-DOUBLE-SCAN-3.× + h42-×3-APR-KLASTER-družina + PEZDIRC-MREŽA-×5 + ŽELKO-h1-4.-leto + ŠIMEC-h18-GLOBLJE + POŽEK-h67-ZADNJI-VNOS + VLM-margin-misreadi-KOREKCIJE!) | P216: +10-blokov-1861 (04106 371→381, vitals 1590→1600, ordinali-1–54-ČISTO-10.leto + MEJA-'1861'-54.-POTRDITEV (vsotna-'1|8'-marker + rokopisna-glava-OBOJE!) + NOV-TIP-REGISTERJSKA-ŠTEVILČENJSKA-NAPAKA (s25-tail-written-53–59-'60'!) + s27=s26-DOUBLE-SCAN-3.× + h42-×3-APR-KLASTER-družina + PEZDIRC-MREŽA-×5 + ŽELKO-h1-4.-leto + ŠIMEC-h18-GLOBLJE + POŽEK-h67-ZADNJI-VNOS + VLM-margin-misreadi-KOREKCIJE!) | P217: +9-blokov-1860 (04106 381→390, vitals 1600→1609, 73-vpisov-kronološko + REGISTERJSKA-NAPAKA-ordinali-NI-ČISTO-1.-leto (written-53–59-×2!) + MEJA-'1860'-55.-POTRDITEV (rokopisna-glava-KROP — VLM-'1800'-misread-KOREKCIJA!) + z27-'16.-Mai-1860'-EKSPLICITNO + POŽEK-h58-nit + VALENTIN-×2-h57 + PEZDIRC-niti-1859/60 + VLM-margin-misreadi-KOREKCIJE-s18-+10-s22-'27'-z53-avgust!) | P218: +23-blokov-1859 (04106 390→413, vitals 1609→1632, ŠTEVJE-IZ-VRSTIC-20.×-103 + 23-GRIBLJE-REKORD-PREDZGODOVINE + MEJA-1858/59-s11-NASLOVNI-LIST-DEEL-2-'1858'-glava-KROP-VSOTNA-'1 8 [5 9]'-marker-56.-POTRDITEV (P214-TIP!) + LUKNJA-92-NOV-TIP + NEŠTEVILČENA-Jalkič-NOV-TIP + s19-naslovni-list-potavljen + GENICKSTARRE-EPIDEMIJA-×4-NOV-VZROK + NOV-DUHOVNIK-'Joh.-Knavs' + P217-tail-KOREKCIJE (z94/z97-marginali-ime-starost-vzrok!) + PARIČ-klaster-×2 + z81-99J[~83!]-TRAJNI-DUEL + PEZDIRC-MREŽA-globlje + h65-×2-MILEK-3-obdobja!) | P219: +10-blokov-1858 (04106 413→423, vitals 1632→1642, ŠTEVJE-IZ-VRSTIC-21.×-58-kronološko (57-written-ČISTO + 1-NEŠTEVILČENA-s7) + 10-GRIBLJE/8-hiš (h19-×3-TRIPLE!) + MEJA-1857/58-s7-VSOTNA-'1 8 [5 8]'-P214-TIP-3.-INSTANCE-57.-POTRDITEV + NEŠTEVILČENA-s7-2.-instance + NASLOVNA-LISTA-s9+s10-sredi-1858 (page-VLM-s10-4/14-MISREAD-KOREKCIJA!) + DVOJČKI-SIMIC-h19 + GAUFIGALBRANN-×4 + PEZDIRC-'Padire'-h50-4-GENERACIJE + NOV-DUHOVNIK-'Auber[?]'-DUEL + Knavs-ŽE-Feb-1858-KOREKCIJA-P218!) | P220: +10-blokov-1857 (04106 423→433, vitals 1642→1652, ŠTEVJE-IZ-VRSTIC-22.×-73-kronološko (73-written + LUKNJA-32!) + 10-GRIBLJE/9-hiš (h36-×2-KRIŽAN + z71-hiša-NEBERLJIVA-3×!) + KNJIGA-START-'18 57'-RAZPETA-GLAVA + OKTOBER-×0 + SCARLATINA?-klaster-×13–14 + 8-od-10-hiš-PRVI-vpis-v-korpusu + z74-'Knauš/Kranz[?]'-MOŽEN-ZGODNJI-Knavs-podpis! — ★ PREDZGODOVINA-LINIJA-04106-KONČANA-29/29!) | P221: +25-blokov-1885-krstna-04104-NOVA-LINIJA-1/15 (vitals 1652→1677; 04104 0→25; ŠTEVJE-IZ-VRSTIC-1.×-104-kronološko + 25-GRIBLJE-NOV-REKORD-KORPUSA (prej-23!) + DVOJČKI-GRADAC-2-VRSTICI (page-VLM-SPOJIL-KOREKCIJA!) + z101-NEIDENTIFICIRANA (popravek-pisarja-DOKAZ!) + NASLOVNA-sredi-letnika-s190 + MISREAD-KOREKCIJE-×7 (h6→61/h45→42/h33→53/h33→35/h19→17/h39→23/'Škrilje'→GRIBLJE!) + pripisi-KRIŽ-z-mrliško-04106-NOVA-DIMENZIJA!) | P222: +21-blokov-1884-krstna-04104-2/15 (vitals 1677→1698; 04104 25→46; ŠTEVIE-IZ-VRSTIC-2.×-112-DISTINCT = P221-'1884-=-112'-1:1 + 21-GRIBLJE/20-hiš (h13-×2!) + PISARJEVE-ANOMALIJE-×6 (s175-prepiše-8–14! + s177-REORIZENTACIJA-61–68→31–38! + z84-DUPLIKAT-NOVA-TIP!) + s184-prazna-vrstica+revizije-×10 + vas-DUELI-REŠENI-krop-hi (z99-GRIBLJE! z52/z60-IZLOČENI!) + pripisi-KRIŽ-†1887-×2-MMK!) | P223: +19-blokov-1883-krstna-04104-3/15 (vitals 1698→1717; 04104 46→65; 99-DISTINCT = P222-LEAD-'1883-=-99'-1:1 + 19-GRIBLJE/18-hiš (h25-×2!) + MEJA-1882/83-s161-62.-POTRDITEV + MESEC-CARRY-OVER-VZOREC (NOVO!) + MÄRZ-LABEL-MISREAD-KOREKCIJA (April-sandwich-RAZREŠEN!) + DVOJNI-FOLIACIJSKI-SERIJI (NOVO! — gola-'sken−5'-VS-'Pag.'-'sken+13'! + P222-'s173=186'-KOREKCIJA-'168'!) + hišni-DUELI-REŠENI-×5 + pripisi-MMK-×8 + mreže-PEZDIRC-grafija-×6!) | P224: +25-blokov-1882-krstna-04104-4/15 (vitals 1717→1742; 04104 65→90; 106-DISTINCT = P223-LEAD-'z88–z106'-1:1 + 25-GRIBLJE/23-hiš = TIE-REKORD-P221 + MEJA-1881/82-s147/s148-63.-POTRDITEV ('Anni-1-8-8-1.'-RAZPETA!) + S160-DEZEMBER-KOREKCIJA (z96-'DECEMBER'-labela-VIZUALNO!-Dez-31-×4!) + Z71-OKT-KOREKCIJA + FOLIACIJA-TRI-SERIJE (sken−6 + LUKNJA-'158'!) + S149-z16-DUPLIKAT + Z55-ZAP-KOREKCIJA + hišne-VIZUALNE-×6 + pripisi-MMK-×6 + mreže-PEZDIRC-×4 + KLOBUČAR-×3) | P225: +17-blokov-1881-krstna-04104-5/15 (vitals 1742→1759; 04104 90→107; 89-DISTINCT = P224-LEAD-'z83–z89'-1:1 + 17-GRIBLJE/17-hiš-VSE-DISTINCT + MEJA-1880/81-s135/s136-64.-POTRDITEV (RESTART-z1-GRIBLJE-h55-'Finis'-BREZ-VSOTNE!) + FOLIACIJA-sken−6-13/13-SEKVENČNO (129–141!-sandwich-s143/s145!) + PEZDIRC-×9-REKORD-LETA (×12!) + 2-POROKE-'VNALILA' (z52-1959! + z57-1958!) + Z48-BOTRA-PRAZNA + Z66-NEZAKONSKI + Z14-APRIL-REŠEN + 1880 = 122-BONUS → P226-LEAD) | P226: +22-blokov-1880-krstna-04104-6/15 (vitals 1759→1781; 04104 107→129; 122-DISTINCT = P225-LEAD-'1880 = 122'-1:1 + 22-GRIBLJE/20-hiš (h27-×2 + h24-×2!) + MEJA-1879/80-s119/s120-65.-POTRDITEV (velike-cifre-'1/8/8/0'-P214-TIP!-RESTART-z1-Dobravce-h11!-'Jahr 1879'-BREZ-VSOTNE!) + FOLIACIJA-sken−6-17/17-SEKVENČNO (113–129!-2-VLM-misreada-REŠENA!) + PEZDIRC-×14-REKORD-LINJE (2-DVOJNI!-continuum-6-let!) + DVOJČKI-Boršt-h20 + Mißgeburt-×2 + z110-KRSTEN-PRAZEN + NEZAKONSKI-×7-REKORD + MODRI-PRIPISI-×9-REKORD + DUHOVNIŠKA-MENJAVA (Janičar→Dovgan!) + 1879 = 96-BONUS → P227-LEAD) | P227: +22-blokov-1879-krstna-04104-7/15 (vitals 1781→1803; 04104 129→151; 96-DISTINCT = P226-LEAD-'1879 = 96'-1:1 + 22-GRIBLJE/19-hiš (h31-×2 + h22-×2 + h17-×2!) + MEJA-1878/79-s105/s106-66.-POTRDITEV (VSOTNA-RAZPETA-'1 8'+'79'!-RESTART-z1-8./9.-JÄNNER-NAJPONEJŠI!-'Jahr 1878'-s-popravo!) + FOLIACIJA-sken−6-14/14-SEKVENČNO (100–113!-s112-'106'-PREDICTION!) + PEZDIRC-×12 (2-DVOJNI!-continuum-7-let!) + DVOJČKI-ZWILLINGE-×3-REKORD ('Zwillinge'-anotacije!) + TODTGEBOREN-×3 + NEZAKONSKI-z23 + MODRI-×12-REKORD + DUHOVNIŠKA-IZMENJAVA + 1878 = 94-BONUS → P228-LEAD) | P228: +16-blokov-1878-krstna-04104-8/15 (vitals 1803→1819; 04104 151→167; 94-DISTINCT = P227-LEAD-'1878 = 94'-1:1 + 16-GRIBLJE/14-hiš (h11-×2 + h64-×2!) + MEJA-1877/78-s92/s93-67.-POTRDITEV (RESTART-z1-[8↔9]-DUEL!-BREZ-VSOTNE!-mesec-PREČRTAN!) + FOLIACIJA-sken−5-13/14 (87–99!-LUKNJA-'94'-temna-'34'!) + s105-DUPLIKAT-SKEN → 'sken−6'-ARTEFAKT-RAZLAGA! + PEZDIRC-×17-REKORD (2-DVOJNI!-continuum-8-let!) + TROJNA-IZMENJAVA (3-PODPISA!) + TODTGEBOREN-GRIBLJE-z28 + NEZAKONSKI-×5 + DVOJČKI-×2 + MODRI-×12 (×2-MATCH!) + POPRAVKI-×5 + LEPLJENEC-1908 → P229-LEAD-1877) | P229: +20-blokov-1877-krstna-04104-9/15 (vitals 1819→1839; 04104 167→187; 108-DISTINCT = LEAD-KOREKCIJA-'91'→'108' + zap-1:1-×6-strani + 20-GRIBLJE/18-hiš (h6-×2 + h14-×2!) + MEJA-1876/77-s78-ENE-STRANI-68.-POTRDITEV ('Incipit-annus-Domini-1877'-KALLIGRAFIJA!-RESTART-z1-9./10.!-9.-restart!) + FOLIACIJA-sken−5-15/15 (s85='80'-LEAD-POTRJENA!-73–158!) + DVOJČKI-×4-REKORD + TODTGEBOREN-TIP-×3-REKORD ('Nurlygaburišt'-družina!) + Nov31-DUEL-×2 + RETRO-VPISI-×2 + z22-PREČRTANA-X + z15-Feb28→Mar1 + MODRI-×9 (MATCH-h37!-TORONTO!) → P230-LEAD-1876) | P230: +14-blokov-1876-krstna-04104-10/15 (vitals 1839→1853; 04104 187→201; 100-DISTINCT z1–z100 + zap-1:1-×6-strani + s77-zap-'94'-MODRA + 14-GRIBLJE/14-hiš-BREZ-DUPLIKATOV + MEJA-1875/76-s64/s65-DVO-STRANSKA-69.-POTRDITEV ('finis-Anni-1875'-KALLIGRAFIJA!-RESTART-z1-5./5.!-10.-restart!-BREZ-INCIPIT!) + FOLIACIJA-sken−5-15/15 (59–73!-3×-NARISE!) + PEZDIRC-×17-TIE-REKORD-P228-continuum-10-let + DVOJČKI-×4-NOVI-VARIANTI (2-BRACE + 2-SHARED-ROW!) + NEZAKONSKI-×6-REKORD + WOLFGR-DRUŽINA-×3-NOVA + MODRI-×11-REKORD (CHICAGO-1970!-MMK-×2!) + DUHOVNIKI-7/7-IZENAČEN → P231-LEAD-1875) | P231: +17-blokov-1875-krstna-04104-11/15 (vitals 1853→1870; 04104 201→218; 119-vpisov z1–z115+TAIL-z1–z4-LOKALNI-RESTART-NOVA-VARIANTA + MEJA-1874/75-s47-SREDI-PAGI-3.-varianta-70.-POTRDITEV (TAIL-1874-×5 + 'Jänner'-PRELIM + veliki-cifri-'1'+'8' + RESTART-z1-9./9.!-11.-restart!-BREZ-finis-kalligrafije!) + TROJNI-DUPLIKAT-SKENOV-folio-57-NOVO-ODKRITJE (sken−3-42–57!) + 17-GRIBLJE/16-hiš-h48-DUEL + PEZDIRC-×5-NAJNIŽJA-continuum-11-let + NEZAKONSKI-×2 + MODRI-×4-† + VIOLET-RETRO-z6-DATIRANI-NOVI-TIP + FEBER-1-BREZ-DATUMA + DUHOVNIKI-DOVGAN-×10/HOGGIA-×7 → P232-LEAD-1874) | P232: +19-blokov-1874-krstna-04104-12/15 (vitals 1870→1889; 04104 218→237; 92-vpisov z1–z92-LEAD-~92-1:1-POTRJENO + MEJA-1873/74-s37-SREDI-PAGI-'Initium-anni-Domini-1874'-KALLIGRAFIJA-NOVA-VARIANTA-1.-INITIUM-v-liniji-71.-POTRDITEV (TAIL-1873-zap-28! + RESTART-z1-1./1.!-12.-restart!-'Albin-Schwinger'-NOVI-duhovnik!) + 'sken−3'-33–44-SEKVENČNO-BREZ-duplikatov + zap-ARITMETIKA-4/4-POTRJENA (z73/z76/z81/z82!) + 19-GRIBLJE/18-hiš-h40-DUEL + PEZDIRC-×7-PORAST + MILEK-×7-REKORD + NEZ-×0-1.-LINIJI + MODRI-×4 + BREZ-PRAZNIH-MESECEV-1.-LINIJI + TRI-duhovnika-NOVI-×2 → P233-LEAD-1873) | P233: +17-blokov-1873-krstna-04104-13/15 (vitals 1889→1906; 04104 237→254; 98-vpisov z1–z98-X-ARITMETIČNI-MODEL-9-ANKER-s28=11–21-+10-KURRENT-'1'-'2'-MISREAD-P232-'zap-28'-REŠEN-'98' + MEJA-1872/73-PRED-s28-glave-9/9-13.-restart-X-open + foliacija-25–33-SEKVENČNO-BREZ-duplikatov + 17-GRIBLJE/16-hiš-h37-DUEL + PEZDIRC-×8-GARBLE-REKORD + JAKOFČIČ-×5 + BRODARIČ-×6-KOMPLET + ŠILAR-×3-NOVA + NEZ-×1-X-open + MODRI-×2 + 4-PRAZNI-MESECI + PENT-duhovnikov-X-open → P234-LEAD-1872) | P234: +17-blokov-1872-krstna-04104-14/15 (vitals 1906→1923; 04104 254→271; 115-vpisov z1–z115-116-vrstic-−-1-prečrtana-TAIL-VERIGA-6/6 + 12.-RESTART-z1-s14-r1-1.-vpis-leta-GRIBLJE-PARALELA-P223 + MEJA-1871/72-s13/s14-PAGE-BOUNDARY + MEJA-1872/73-s25/s26-PAGE-BOUNDARY-P233-NAPoved-1:1-restart-s26-SUPER-POTRJEN + DUPLIKAT-s28=s29-RESITEV-fol-25-2×-98-TOTAL-1873-INTAKTEN + 17-GRIBLJE/16-hiš-h30-×2-DUEL-ISENAČEN-1873 + PEZDIRC-×5-GARBLE-continuum + DRAGOŠ-×3-KOMPLET-PARALELA + HRIŽAN-×5 + HLOBUČAR-×3 + ŠIMEC-×3 + MODRI-×4 + NEZ-×0 + SEPTEMBER-×0 + PREČRTANA-KOPIJA-r7-s24-X + PRIMING-halucinacija-'Jänner'-RAZREŠENA-JUNI → P235-LEAD-1871) | P235: +17-blokov-1871-krstna-04104-15/15-LINIJA-KOMPLETNA (vitals 1923→1940; 04104 271→288; 108-vpisov z1–z108-116-−-8-DUPLIKAT-s3=s4-fol-1-2× + MEJA-1870/71-ZAČETEK-KNJIGE-nalepek-'PODZEMELJ-R-1871-1885'-KNJIGA = 15-LET-LINIJA-1:1 + MEJA-1871/72-s13/s14-P234-1:1-re-use + 13.-RESTART-z1-s3-r1-KRASINEC-VZOREC-PREKINJEN + TAIL-VERIGA-3/3-z108-Dez-31 + DVOJČKI-z72/z73-ZWILLINGE-X + PREČRTANI-z37/z38 + DUHOVNIKI-EKSTRAHIRANI-Weisel/Dotto/Feršlan/Wessely + PEZDIRC-×8-'Peter'-×3-z81-X-POTRJEN + MILIČ-×5-REKORD + JAKOFČIČ-×11-ish-REKORD + HRIŽAN-×9-REKORD + KLOBUČAR-×5 + BRODARIČ-×5 + DRAGOŠ-×6-DVOJNI-z46 + h28-×2-DUEL-3.-LETO + MODRI-×3-1957-NAJNOVEJŠI + NEZ-×1 + 2-PRAZNA-MESECA → LINIJA-15/15-KOMPLETNA-sinteza-P236+!) | P246: +7-blokov-1878-poročna-predzgovorina (04455 235→242, vitals 1978→1985, sidra 228→235, dobe 202→209!) | P247: +5-blokov-1877 (04455 242→247, vitals 1985→1990; h51-1.-04455-BLOK-KADARKOLI-PT-LUKNJA-HIŠA! + firstYear-DVIG-h10-1887→1877-h69-1887→1877-h8-1881→1877!) · P248: 04455-1876 +6 blokov (h31+h44+h35+h64+h41+h30!) — h44-posodobljen (24-blokov/04455=6/firstYear-1876/p248Note!-DVIG-1899→1876-ZA-23-LET-NOV-ABSOLUTNI-REKORD!)"
- },
- "gapStatus": {
-  "total": 18,
-  "withDokaz": 18,
-  "trueHoles": [],
-  "dokazOnlyMrliška": [
-   "51"
-  ],
-  "dokazOnlyPoročna": []
- },
- "gapHouses": [
-  {
-   "houseNo": "42",
-   "blocksTotal": 15,
-   "byBook": {
-    "04105": 5,
-    "04455": 2,
-    "04106": 0,
-    "04894": 8
-   },
-   "firstYear": 1890,
-   "lastYear": 1912,
-   "years": [
-    1890,
-    1894,
-    1896,
-    1897,
-    1904,
-    1904,
-    1905,
-    1905,
-    1906,
-    1908,
-    1909,
-    1910,
-    1911,
-    1912,
-    1912
-   ],
-   "dokazVia": [
-    "krstna-04105",
-    "poročna-04455",
-    "mrliška-04894"
-   ],
-   "p249Note": "P249: s7-m32-TAIL-1874-KANDIDAT-BLOK (nevesta Maria Pegdirc GRIBLJE 42 mikro-6×-1:1!-18. November 1874-ženin Nicolaus Marasinič Krasinice 12-48-l-½-g.) = h42-PARALELA-1:1-z-Georg-Pegdirc-1879-P244-v21-ISTA-HIŠA-ISTA-PRIIMEK (2-dokaza-5-let-narazen!-→-NAPAVED-P250-PROMOCIJA-tail-kontekst→blok-cf.-P248-h30-vzorec!-korpus-04455-nespremenjen-P249!)"
-  },
-  {
-   "houseNo": "43",
-   "blocksTotal": 9,
-   "byBook": {
-    "04105": 2,
-    "04455": 1,
-    "04106": 1,
-    "04894": 5
-   },
-   "firstYear": 1884,
-   "lastYear": 1924,
-   "years": [
-    1884,
-    1887,
-    1892,
-    1897,
-    1904,
-    1908,
-    1909,
-    1911,
-    1924
-   ],
-   "dokazVia": [
-    "krstna-04105",
-    "poročna-04455",
-    "mrliška-04894",
-    "mrliška-04106-predzgodovina"
-   ]
-  },
-  {
-   "houseNo": "44",
-   "blocksTotal": 24,
-   "byBook": {
-    "04105": 8,
-    "04455": 6,
-    "04106": 3,
-    "04894": 7
-   },
-   "firstYear": 1876,
-   "lastYear": 1923,
-   "years": [
-    1876,
-    1881,
-    1883,
-    1884,
-    1887,
-    1888,
-    1899,
-    1901,
-    1903,
-    1905,
-    1906,
-    1906,
-    1908,
-    1908,
-    1908,
-    1910,
-    1912,
-    1913,
-    1913,
-    1914,
-    1915,
-    1918,
-    1921,
-    1923
-   ],
-   "dokazVia": [
-    "krstna-04105",
-    "poročna-04455",
-    "mrliška-04894",
-    "mrliška-04106-predzgodovina"
-   ],
-   "p248Note": "P248: poročna-04455-1876-vpis-1-NEVESTA-Katharina-PEGDIRE-GRIBLJE-44-×-Nicolaus-Krupanič-GRIBLJE-31-(s11-VRSTA-2-RESTART-1876!-INTRA-DVOJNI-h31×h44!) = h44-1.-04455-BLOK-V-PREDZGOVINI + ★★★★★ h44-firstYear-04455-DVIG-1899→1876-ZA-23-LET = NOV-ABSOLUTNI-REKORD-DVIG-LINIJE (prejšnji-h53-10-let-P243!-h10-h69-10-let-P247!) + PEZDIRC-×1-od-×9-v-1-letu!"
-  },
-  {
-   "houseNo": "45",
-   "blocksTotal": 17,
-   "byBook": {
-    "04105": 8,
-    "04455": 0,
-    "04106": 0,
-    "04894": 9
-   },
-   "firstYear": 1893,
-   "lastYear": 1924,
-   "years": [
-    1893,
-    1896,
-    1896,
-    1897,
-    1900,
-    1900,
-    1903,
-    1903,
-    1904,
-    1912,
-    1915,
-    1915,
-    1917,
-    1918,
-    1919,
-    1920,
-    1924
-   ],
-   "dokazVia": [
-    "krstna-04105",
-    "mrliška-04894"
-   ]
-  },
-  {
-   "houseNo": "46",
-   "blocksTotal": 30,
-   "byBook": {
-    "04105": 12,
-    "04455": 7,
-    "04106": 0,
-    "04894": 11
-   },
-   "firstYear": 1887,
-   "lastYear": 1920,
-   "years": [
-    1887,
-    1891,
-    1893,
-    1895,
-    1895,
-    1895,
-    1896,
-    1896,
-    1896,
-    1897,
-    1898,
-    1899,
-    1903,
-    1903,
-    1904,
-    1908,
-    1909,
-    1909,
-    1910,
-    1911,
-    1912,
-    1912,
-    1913,
-    1915,
-    1917,
-    1918,
-    1919,
-    1920,
-    1920,
-    1920
-   ],
-   "dokazVia": [
-    "krstna-04105",
-    "poročna-04455",
-    "mrliška-04894"
-   ]
-  },
-  {
-   "houseNo": "47",
-   "blocksTotal": 11,
-   "byBook": {
-    "04105": 5,
-    "04455": 1,
-    "04106": 2,
-    "04894": 3
-   },
-   "firstYear": 1884,
-   "lastYear": 1919,
-   "years": [
-    1884,
-    1887,
-    1888,
-    1890,
-    1900,
-    1911,
-    1913,
-    1919
-   ],
-   "dokazVia": [
-    "krstna-04105",
-    "mrliška-04894",
-    "mrliška-04106-predzgodovina"
-   ],
-   "p239Note": "P239: + poročna-04455-1884 vpis-16 (Peter HLOBUČAR × Maria SILAH-h34 — SESTRSKI-poroki-h34!)"
-  },
-  {
-   "houseNo": "48",
-   "blocksTotal": 20,
-   "byBook": {
-    "04105": 8,
-    "04455": 4,
-    "04106": 1,
-    "04894": 7
-   },
-   "firstYear": 1881,
-   "lastYear": 1922,
-   "years": [
-    1881,
-    1889,
-    1892,
-    1898,
-    1898,
-    1901,
-    1903,
-    1904,
-    1905,
-    1907,
-    1909,
-    1911,
-    1911,
-    1912,
-    1914,
-    1919,
-    1919,
-    1919,
-    1922,
-    1922
-   ],
-   "dokazVia": [
-    "krstna-04105",
-    "poročna-04455",
-    "mrliška-04894",
-    "mrliška-04106-predzgodovina"
-   ]
-  },
-  {
-   "houseNo": "49",
-   "blocksTotal": 16,
-   "byBook": {
-    "04105": 6,
-    "04455": 0,
-    "04106": 2,
-    "04894": 8
-   },
-   "firstYear": 1883,
-   "lastYear": 1918,
-   "years": [
-    1883,
-    1884,
-    1894,
-    1899,
-    1900,
-    1906,
-    1906,
-    1907,
-    1907,
-    1907,
-    1908,
-    1910,
-    1910,
-    1911,
-    1913,
-    1918
-   ],
-   "dokazVia": [
-    "krstna-04105",
-    "mrliška-04894",
-    "mrliška-04106-predzgodovina"
-   ]
-  },
-  {
-   "houseNo": "51",
-   "blocksTotal": 6,
-   "byBook": {
-    "04105": 0,
-    "04455": 2,
-    "04106": 0,
-    "04894": 4
-   },
-   "firstYear": 1877,
-   "lastYear": 1913,
-   "years": [
-    1877,
-    1877,
-    1896,
-    1896,
-    1897,
-    1913
-   ],
-   "dokazVia": [
-    "mrliška-04894",
-    "poročna-04455-predzgodovina"
-   ],
-   "p247Note": "P247: poročna-04455-1877-vpis-5-ŽENIN-Mathias-MOH-GRIBLJE-51-[~31-DUEL]-×-Maria-Brodarič-Krasinec-7 (s15!) + vpis-7-NEVESTA-Katharina-MOH-GRIBLJE-51-×-Johann-Brodavič-Krasinec-7 (s16!) = h51-×2-BLOKA-V-1-LETU + h51-1.-04455-BLOK-KADARKOLI (PT-LUKNJA-HIŠA-cf.-h50-P244!) + ★★★★★ h51-1877-poroka-→-h51-1881-krst-MATI-Maria-BRODARIČ-1:1-PARALELA! + MOH-TROJČEK (v4-Maria-v5-Mathias-v7-Katharina!) (cf.-04104-h51-1881/1884 — poročna-OUTRUNA-ZA-4-LET!)"
-  },
-  {
-   "houseNo": "52",
-   "blocksTotal": 10,
-   "byBook": {
-    "04105": 3,
-    "04455": 3,
-    "04106": 0,
-    "04894": 4
-   },
-   "firstYear": 1881,
-   "lastYear": 1908,
-   "years": [
-    1882,
-    1887,
-    1895,
-    1898,
-    1898,
-    1902,
-    1903,
-    1907,
-    1908
-   ],
-   "dokazVia": [
-    "krstna-04105",
-    "poročna-04455",
-    "mrliška-04894"
-   ],
-   "p242Note": "P242: poročna-1881-v17-Anna-Petrič-GRIBLJE-52-24.-Okt-uz-B-1:1! — h52-firstYear-DVIG-1882→1881-ZA-1-LETO!-P241-ZA-5-LET→ZA-6-LET!-9→10-blokov!"
-  },
-  {
-   "houseNo": "53",
-   "blocksTotal": 22,
-   "byBook": {
-    "04105": 7,
-    "04455": 4,
-    "04106": 0,
-    "04894": 11
-   },
-   "firstYear": 1880,
-   "lastYear": 1924,
-   "years": [
-    1887,
-    1888,
-    1889,
-    1890,
-    1891,
-    1894,
-    1896,
-    1897,
-    1897,
-    1898,
-    1913,
-    1914,
-    1915,
-    1917,
-    1918,
-    1918,
-    1918,
-    1918,
-    1921,
-    1922,
-    1924
-   ],
-   "dokazVia": [
-    "krstna-04105",
-    "poročna-04455",
-    "mrliška-04894"
-   ],
-   "p243Note": "P243: poročna-04455-1880-vpis-20-TAIL-Peter-PERDIRC-[~Pegdirc-DUEL!]-GRIBLJE-53 (s38!) — h53-firstYear-04455-1890→1880-DVIG-ZA-10-LET + margine-'Gaveldzettel-der-Gemeinde-Griblje-vom-21.-November-1880'-očetova-privolitev! (cf.-04105-h53-firstYear-1887 — poročna-OUTRUNA-ZA-7-LET!)"
-  },
-  {
-   "houseNo": "54",
-   "blocksTotal": 14,
-   "byBook": {
-    "04105": 6,
-    "04455": 3,
-    "04106": 3,
-    "04894": 2
-   },
-   "firstYear": 1882,
-   "lastYear": 1917,
-   "years": [
-    1882,
-    1884,
-    1885,
-    1886,
-    1889,
-    1897,
-    1898,
-    1900,
-    1901,
-    1904,
-    1909,
-    1917
-   ],
-   "dokazVia": [
-    "krstna-04105",
-    "poročna-04455",
-    "mrliška-04894",
-    "mrliška-04106-predzgodovina"
-   ],
-   "p239Note": "P239: + poročna-04455-1884 vpis-6 (Johann SIMEC-h54 × Anna STRUCELJ-h44 — POLNI-GRIBLJE!)"
-  },
-  {
-   "houseNo": "55",
-   "blocksTotal": 8,
-   "byBook": {
-    "04105": 3,
-    "04455": 0,
-    "04106": 1,
-    "04894": 4
-   },
-   "firstYear": 1882,
-   "lastYear": 1924,
-   "years": [
-    1882,
-    1887,
-    1889,
-    1890,
-    1891,
-    1911,
-    1924,
-    1924
-   ],
-   "dokazVia": [
-    "krstna-04105",
-    "mrliška-04894",
-    "mrliška-04106-predzgodovina"
-   ]
-  },
-  {
-   "houseNo": "56",
-   "blocksTotal": 8,
-   "byBook": {
-    "04105": 3,
-    "04455": 2,
-    "04106": 1,
-    "04894": 2
-   },
-   "firstYear": 1881,
-   "lastYear": 1908,
-   "years": [
-    1881,
-    1886,
-    1886,
-    1888,
-    1891,
-    1893,
-    1903,
-    1908
-   ],
-   "dokazVia": [
-    "krstna-04105",
-    "poročna-04455",
-    "mrliška-04894",
-    "mrliška-04106-predzgodovina"
-   ]
-  },
-  {
-   "houseNo": "57",
-   "blocksTotal": 12,
-   "byBook": {
-    "04105": 5,
-    "04455": 1,
-    "04106": 0,
-    "04894": 6
-   },
-   "firstYear": 1886,
-   "lastYear": 1912,
-   "years": [
-    1886,
-    1888,
-    1889,
-    1892,
-    1894,
-    1894,
-    1899,
-    1902,
-    1906,
-    1909,
-    1911,
-    1912
-   ],
-   "dokazVia": [
-    "krstna-04105",
-    "poročna-04455",
-    "mrliška-04894"
-   ]
-  },
-  {
-   "houseNo": "58",
-   "blocksTotal": 21,
-   "byBook": {
-    "04105": 8,
-    "04455": 1,
-    "04106": 1,
-    "04894": 11
-   },
-   "firstYear": 1885,
-   "lastYear": 1918,
-   "years": [
-    1885,
-    1887,
-    1889,
-    1890,
-    1890,
-    1892,
-    1892,
-    1893,
-    1893,
-    1895,
-    1896,
-    1900,
-    1902,
-    1903,
-    1903,
-    1904,
-    1905,
-    1906,
-    1906,
-    1918,
-    1918
-   ],
-   "dokazVia": [
-    "krstna-04105",
-    "poročna-04455",
-    "mrliška-04894",
-    "mrliška-04106-predzgodovina"
-   ]
-  },
-  {
-   "houseNo": "59",
-   "blocksTotal": 9,
-   "byBook": {
-    "04105": 4,
-    "04455": 1,
-    "04106": 0,
-    "04894": 4
-   },
-   "firstYear": 1886,
-   "lastYear": 1921,
-   "years": [
-    1886,
-    1889,
-    1899,
-    1905,
-    1912,
-    1913,
-    1913,
-    1913,
-    1921
-   ],
-   "dokazVia": [
-    "krstna-04105",
-    "poročna-04455",
-    "mrliška-04894"
-   ]
-  },
-  {
-   "houseNo": "60",
-   "blocksTotal": 22,
-   "byBook": {
-    "04105": 9,
-    "04455": 2,
-    "04106": 1,
-    "04894": 10
-   },
-   "firstYear": 1881,
-   "lastYear": 1923,
-   "years": [
-    1881,
-    1886,
-    1888,
-    1888,
-    1892,
-    1893,
-    1894,
-    1897,
-    1898,
-    1899,
-    1899,
-    1901,
-    1903,
-    1904,
-    1906,
-    1907,
-    1908,
-    1910,
-    1913,
-    1920,
-    1922,
-    1923
-   ],
-   "dokazVia": [
-    "krstna-04105",
-    "poročna-04455",
-    "mrliška-04894",
-    "mrliška-04106-predzgodovina"
-   ]
-  }
- ],
- "vitalsTotal": 1997
+  "vitalsTotal": 2008
 }

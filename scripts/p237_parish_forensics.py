@@ -29,17 +29,17 @@ for m in BLOK_RE.finditer(src):
     house, sig, year, what = m.group(1), m.group(2), int(m.group(3)), m.group(4)
     bloki.append({"house": house, "sig": sig, "year": year, "what": what})
 
-check("I1 korpus razčlenjen == 1997 blokov (križ z HOUSE_VITALS) — P244-živo!",
-      len(bloki) == 1997, f"razčlenjenih={len(bloki)}")
+check("I1 korpus razčlenjen == 2008 blokov (križ z HOUSE_VITALS) — P244-živo!",
+      len(bloki) == 2008, f"razčlenjenih={len(bloki)}")
 po_knjigi = {k: sum(1 for b in bloki if b["sig"] == k) for k in ("04104", "04105", "04106", "04894", "04455")}
 check("I1b bloki-po-knjigah == {04104:288, 04105:502, 04106:433, 04894:520, 04455:242} (P246-živo!)",
-      po_knjigi == {"04104": 288, "04105": 502, "04106": 433, "04894": 520, "04455": 254},
+      po_knjigi == {"04104": 288, "04105": 502, "04106": 433, "04894": 520, "04455": 265},
       ",".join(f"{k}:{v}" for k, v in po_knjigi.items()))
 
 milic_po_knjigi = {k: sum(1 for b in bloki if b["sig"] == k and MILIC_RE.search(b["what"])) for k in po_knjigi}
 milic_skupaj = sum(milic_po_knjigi.values())
-check("I2 MILIČ↔MILEK-križ == [53,78,20,36,54] · skupaj 241 (Python-križ == TS-modul!-P248: +1-v9!)",
-      milic_po_knjigi == {"04104": 53, "04105": 78, "04106": 20, "04894": 36, "04455": 54} and milic_skupaj == 241,
+check("I2 MILIČ↔MILEK-križ == [53,78,20,36,56] · skupaj 243 (Python-križ == TS-modul!-P248-+1-v9!-P250-+2-1874!)",
+      milic_po_knjigi == {"04104": 53, "04105": 78, "04106": 20, "04894": 36, "04455": 56} and milic_skupaj == 243,
       ",".join(f"{k}:{v}" for k, v in milic_po_knjigi.items()) + f" · skupaj={milic_skupaj}")
 
 po_letih = {y: sum(1 for b in bloki if b["sig"] == "04104" and b["year"] == y and MILIC_RE.search(b["what"]))
@@ -53,10 +53,10 @@ h65 = [b for b in bloki if b["house"] == "65"]
 h65_druzina = [b for b in h65 if MILIC_RE.search(b["what"])]
 mathias = [b for b in h65 if re.search(r"Mathias|Matija|Matihe", b["what"], re.I)]
 leta_mathias = sorted(b["year"] for b in mathias)
-check("I4a h65 == {total:42, family:36, others:6}", len(h65) == 42 and len(h65_druzina) == 36,
+check("I4a h65 == {total:43, family:37, others:6}", len(h65) == 43 and len(h65_druzina) == 37,
       f"total={len(h65)} family={len(h65_druzina)} others={len(h65)-len(h65_druzina)}")
-check("I4b Mathias/Matija-h65-veriga == 22 blokov · span 1871–1914 (43 let!)",
-      len(mathias) == 22 and leta_mathias[0] == 1871 and leta_mathias[-1] == 1914,
+check("I4b Mathias/Matija-h65-veriga == 23 blokov · span 1871–1914 (43 let!)",
+      len(mathias) == 23 and leta_mathias[0] == 1871 and leta_mathias[-1] == 1914,
       f"n={len(mathias)} span={leta_mathias[0]}–{leta_mathias[-1]}")
 
 h69 = [b for b in bloki if b["house"] == "69"]
@@ -80,9 +80,9 @@ check("I7 modul parish-forensics.ts (regex + izpeljanke + 3 sodbe + VODENICA)",
       and mod.count("id: \"") >= 6)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-check("I8 qa-p237 (živi preverja 241/53-78-20-36-54/22/42-36-6/26/3-0-0-0-0!)",
-      "qa-p237-parish-forensics" in qa and "MILIC_FAMILY_TOTAL !== 241" in qa
-      and '"53,78,20,36,54"' in qa and "MATHIAS_H65_TOTAL !== 22" in qa
+check("I8 qa-p237 (živi preverja 243/53-78-20-36-56/23/43-37-6/26/3-0-0-0-0!)",
+      "qa-p237-parish-forensics" in qa and "MILIC_FAMILY_TOTAL !== 243" in qa
+      and '"53,78,20,36,56"' in qa and "MATHIAS_H65_TOTAL !== 23" in qa
       and "H69_TOTAL !== 26" in qa and "FORENZIKA-NITI-POTRJENA" in qa)
 
 ui = open(f"{ROOT}/src/components/museum/museum-atlas.tsx", encoding="utf-8").read()
