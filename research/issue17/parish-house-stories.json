@@ -1,12 +1,12 @@
 {
- "phase": "P254+P255 (regenerirano P255)",
- "title": "Hišne zgodbe globje — mreže hiš čez 6 knjig (+P255: 3 bloki 1828/01738!)",
+ "phase": "P254+P255+P256 (regenerirano P256)",
+ "title": "Hišne zgodbe globje — mreže hiš čez 6 knjig (+P256: 5 blokov 1829/01738!)",
  "date": "2026-11-11",
  "type": "sinteza-agregacija",
- "lead": "P252-lead-② + P253-korpus + P255-notranjost-01738-1828 (korpus-1857→1828!)",
+ "lead": "P252-lead-② + P253-korpus + P255-notranjost-1828 + P256-notranjost-1829 (korpus-1857→1828→1829!)",
  "source": {
   "corpus": "src/data/atlas/parish.ts HOUSE_VITALS",
-  "vitalsTotal": 2026,
+  "vitalsTotal": 2032,
   "books": 6,
   "bookSigs": [
    "01738",
@@ -16,7 +16,7 @@
    "04106",
    "04894"
   ],
-  "method": "agregacija vseh 2026 vitalnih blokov po hišni oznaki — 1:1 z runtime (qa-p254 živa rekalkulacija!)"
+  "method": "agregacija vseh 2032 vitalnih blokov po hišni oznaki — 1:1 z runtime (qa-p254 živa rekalkulacija!)"
  },
  "structure": {
   "housesTotal": 100,
@@ -32,8 +32,8 @@
    "sub dioe."
   ],
   "tiers": {
-   "six": 12,
-   "five": 50,
+   "six": 16,
+   "five": 46,
    "four": 14,
    "three": 8,
    "two": 8,
@@ -44,24 +44,32 @@
  "sixBookHouses": {
   "houses": [
    "3",
+   "5",
    "6",
    "10",
    "12",
    "16",
    "18",
+   "19",
    "20",
    "22",
    "28",
+   "32",
    "61",
+   "62",
    "63",
    "73"
   ],
-  "count": 12,
-  "note": "blok v VSEH 6 knjigah = polni življenjski cikel (obe eri × vse 3 vrste) — P255: 9→12 (h6/h22/h61 vstopajo prek m6/m13-1828!)",
+  "count": 16,
+  "note": "blok v VSEH 6 knjigah = polni življenjski cikel (obe eri × vse 3 vrste) — P255: 9→12 + P256: 12→16 (h5/h19/h32/h62 vstopajo prek m2/m10/m18-1829!)",
   "stories": {
    "3": {
     "si": "HRIŽAN/KRIŽAN-hiša: Peter Hrižan krstni oče 1872–1881 (4 krsti) + †1888 Peter Križar/Križan 80 let; 1864 Georg DRAGOŠ †70 (najstarejša omemba); m11-HLEBEC-1873 v predhodniku (P253!); 1907 PEZDIREC-poroka (h3 = 2. poročni dokaz).",
     "en": "The HRIŽAN/KRIŽAN house: Peter Hrižan the baptismal father 1872–1881 (4 baptisms) + Peter Križan †1888 aged 80; Georg DRAGOŠ †70 in 1864 (the oldest mention); the m11-HLEBEC-1873 in the predecessor (P253!); a PEZDIREC marriage 1907."
+   },
+   "5": {
+    "si": "MÜLLER-hiša: m10-1829 ženin Mathe MÜLLER (26 l, GRIBLJE 5 × [Šimek?]-h19 — POLNI-DVOJNI, P256!) — h5-firstYear-1859→1829 (DVIG 30!); 31 blokov 1829–1924 — h5-VSTOPA-V-ŠEST-KNJIŽNI-KLUB (12→16, P256!); MÜLLER-×2-družini-1829 (h5-hiša + h22-Millerji!).",
+    "en": "The MÜLLER house: the m10-1829 groom Mathe MÜLLER (26, GRIBLJE 5 × the h19-bride — the FULL DOUBLE, P256!) — the h5-firstYear-1859→1829 (LIFT 30!); 31 blocks 1829–1924 — h5-ENTERS-THE-SIX-BOOKS-CLUB (12→16, P256!); the MÜLLER-×2-families-of-1829 (the h5-house + the h22-Millers!)."
    },
    "6": {
     "si": "NAJDALJŠA-HIŠA-KORPUSA (96 let!): m6-1828-nevesta-Maria-[Jan/Spin]-GRIBLJE-6 × ženin-Jure-STARA = PRVI-GRIBLJE-VPIS-PREDHODNIKA-01738 (P255 — korpus 1857→1828!); h6-firstYear-1860→1828 (DVIG 32!); 04104-trospec (8) + 04106 (6) + 04455 (5 porok!) + 04105 (8) + 04894 (8) = 36 blokov 1828–1924 čez VSEH 6 knjig!",
@@ -83,21 +91,33 @@
     "si": "ŠIMEC-hiša (P246-h18-ŠIMEC-1:1!): 1863 Georg Simic †53; 1878 dve INTRA-poroki v 1 letu (h18 × h65, P246!); 1921 Karolina PEZDIRC †1,3 (zadnji PEZDIRC-blok hiše); 36 blokov = najglasnejša šest-knjižna hiša (skupaj z h6!).",
     "en": "The ŠIMEC house (P246-h18-ŠIMEC-1:1!): Georg Simic †53 in 1863; two INTRA-marriages in one year 1878 (h18 × h65, P246!); Karolina PEZDIRC †1.3 in 1921 (the house's last PEZDIRC block); 36 blocks = the loudest six-book house (together with h6!)."
    },
+   "19": {
+    "si": "[ŠIMEK?]-hiša: m10-1829 nevesta Maria [ŠIMEK?~Knimek/Thimnik — 4-branja-DUEL!] (21 l, GRIBLJE 19 × Müller-h5, P256!) — oče Georg [Šimek?~'Shimek'-garble — ŠIMEC-marker-kand.!] + mati [Salva?] TILLAR! (TILLAR-NIT-1829!); h19-firstYear-1858→1829 (DVIG 29!) — h19-VSTOPA-V-ŠEST-KNJIŽNI-KLUB (12→16, P256!).",
+    "en": "The [ŠIMEK?] house: the m10-1829 bride Maria [ŠIMEK?~4-reads-DUEL!] (21, GRIBLJE 19 × the Müller-h5, P256!) — the father Georg [Šimek?~garble] + the mother [Salva?] TILLAR! (the-1829-TILLAR-thread!); the h19-firstYear-1858→1829 (LIFT 29!) — h19-ENTERS-THE-SIX-BOOKS-CLUB (12→16, P256!)."
+   },
    "20": {
-    "si": "BORŠT-h20: z72/z73 DVOJČKI 1871 Georg + Catharina = 1. DVOJČKI KRSTNE LINIJE (P235!); 1869 Marko PEZDIRE †24 + 1859 [~Klara/Elena-Podire-garble]; 1919 Peter PEZDIRC poroka — PEZDIRC-nit čez 3 generacije (1859→1919 = 60 let!).",
-    "en": "The BORŠT h20: the z72/z73 TWINS 1871 Georg + Catharina = THE FIRST TWINS OF THE BAPTISM LINE (P235!); Marko PEZDIRE †24 in 1869 + the 1859 [~Klara/Elena-Podire garble]; Peter PEZDIRC marries 1919 — the PEZDIRC thread across 3 generations (1859→1919 = 60 years!)."
+    "si": "BORŠT-h20: ★★★ P256: m2-1829 [MALEŠIČ?]-nevesta (Griblje 20 × [Dehlič?]-h32 — POLNI-DVOJNI!) = h20-ŽE-DRUGI-01738-blok (1829+1873-m7-P253!) — h20-firstYear-1859→1829 (DVIG 30!) + span-1829–1922 = 93-let (IZENAČI-h22 — delita-2.-3.-mesto!); z72/z73 DVOJČKI 1871 = 1. DVOJČKI KRSTNE LINIJE (P235!); PEZDIRC-nit čez 3 generacije (1859→1919 = 60 let!).",
+    "en": "The BORŠT h20: ★★★ P256: the m2-1829 bride (Griblje 20 × the h32-groom — the FULL DOUBLE!) = h20-SECOND-01738-block (1829+1873!) — the h20-firstYear-1859→1829 (LIFT 30!) + span-1829–1922 = 93-years (ties-h22-for-2nd-3rd!); the z72/z73 TWINS 1871 (P235!); the PEZDIRC thread 1859→1919 (60 years!)."
    },
    "22": {
-    "si": "REKORD-DVIGA-41-LET: m13-1828-nevesta-Catra-[~Miller-garble-'Križan'-kand.!]-GRIBLJE-22 × Miko-TILLAR-h61 = POLNI-DVOJNI (P255!) — h22-firstYear-1869→1828 = ABSOLUTNI-REKORD-DVIGA-MATRIČNE-LINIJE (prej h43-34, P250!); cf.-P251-m20-MILEK-'Griblje-[22~26]-DUEL'-1873; 5-porok-04455 (1879–1919) + 33 blokov 1828–1921 = 93 let!",
-    "en": "THE-41-YEAR-LIFT-RECORD: the m13-1828 bride Catra-GRIBLJE-22 × Miko-TILLAR-h61 = the FULL DOUBLE (P255!) — the h22-firstYear-1869→1828 = the ABSOLUTE-LIFT-RECORD-of-the-matricular-line (the previous record h43-34, P250!); cf.-the-P251-m20-MILEK-'Griblje-[22~26]-DUEL'-1873; 5 marriages 04455 (1879–1919) + 33 blocks 1828–1921 = 93 years!"
+    "si": "REKORD-DVIGA-41-LET: m13-1828-nevesta-Catra-[~Miller-garble-'Križan'-kand.!]-GRIBLJE-22 × Miko-TILLAR-h61 = POLNI-DVOJNI (P255!) — h22-firstYear-1869→1828 = ABSOLUTNI-REKORD-DVIGA-MATRIČNE-LINIJE (prej h43-34, P250!); cf.-P251-m20-MILEK-'Griblje-[22~26]-DUEL'-1873; ★★★★★ P256: m18-1829-nevesta-Maria-MILLER (h22 × KRIŽAN-h62 — POLNI-DVOJNI!) = 2-LETNI-ZAPORED-MILLERjevih-nevest-na-h22 (1828-Catra-[Miller-garble] + 1829-Maria-MILLER — oče-Josc.-Miller!); 5-porok-04455 (1879–1919) + 35 blokov 1828–1921 = 93 let!",
+    "en": "THE-41-YEAR-LIFT-RECORD: the m13-1828 bride Catra-GRIBLJE-22 × Miko-TILLAR-h61 = the FULL DOUBLE (P255!) — the h22-firstYear-1869→1828 = the ABSOLUTE-LIFT-RECORD-of-the-matricular-line (the previous record h43-34, P250!); cf.-the-P251-m20-MILEK-'Griblje-[22~26]-DUEL'-1873; ★★★★★ P256: the m18-1829 bride Maria MILLER (h22 × the KRIŽAN-h62 — the FULL DOUBLE!) = TWO-CONSECUTIVE-YEARS-OF-MILLER-BRIDES-ON-h22 (1828-Catra-[Miller-garble] + 1829-Maria-MILLER!); 5 marriages 04455 (1879–1919) + 35 blocks 1828–1921 = 93 years!"
    },
    "28": {
     "si": "DVE-DRUŽINI-HIŠA — edina z ×2 blokoma v 01738 (P253: m2-MAVRIN + m4-TOMC!): 1871 Pezdirc (z81) + Požek (z83) krstni (P235-h28-dve-družini!); 1916/1917 Ana + Anton PEZDIREC — poročena 30. 1. 1861, Anton †78 let = 56-LETNA ZAKONSKA ZVEZA!",
     "en": "THE TWO-FAMILY HOUSE — the only one with ×2 blocks in 01738 (P253: m2-MAVRIN + m4-TOMC!): 1871 Pezdirc (z81) + Požek (z83) baptisms (P235-h28-two-families!); 1916/1917 Ana + Anton PEZDIREC — married Jan 30 1861, Anton †78 = A 56-YEAR MARRIAGE!"
    },
+   "32": {
+    "si": "[DEHLIČ?]-hiša: m2-1829 ženin Michael [DEHLIČ?~3-branja-DUEL] (28 l, GRIBLJE 32 [~DUEL-32|33!] × [Malešič?]-h20 — POLNI-DVOJNI, P256!) — MALEŠIČ×MALEŠIČ (mati-ženina + oče-neveste — KRVNO-SOROSTVO-KAND.!); h32-firstYear-1863→1829 (DVIG 34!) — h32-VSTOPA-V-ŠEST-KNJIŽNI-KLUB (12→16, P256!).",
+    "en": "The [DEHLIČ?] house: the m2-1829 groom Michael [DEHLIČ?~3-reads-DUEL] (28, GRIBLJE 32 [~DUEL-32|33!] × the h20-bride — the FULL DOUBLE, P256!) — the MALEŠIČ×MALEŠIČ-kinship-cand.!; the h32-firstYear-1863→1829 (LIFT 34!) — h32-ENTERS-THE-SIX-BOOKS-CLUB (12→16, P256!)."
+   },
    "61": {
     "si": "TILLAR-hiša: m13-1828-ženin-Miko-TILLAR-½-Gütl-GRIBLJE-61 × nevesta-h22 = POLNI-DVOJNI (P255!) — TILLAR-NIT-×2 (m2-1828-mati-Anna-Tillar-Boršt-13!); h61-firstYear-1862→1828 (DVIG 34!); 3-poroke-04455 (1879-29 + …) + 04105-×4 + 04894-×6 = 17 blokov 1828–1919 = 91 let.",
     "en": "The TILLAR house: the m13-1828 groom Miko-TILLAR-½-Gütl-GRIBLJE-61 × the h22-bride = the FULL DOUBLE (P255!) — the TILLAR-thread-×2 (the m2-1828 mother Anna Tillar of Boršt 13!); the h61-firstYear-1862→1828 (LIFT 34!); 3 marriages 04455 (the 1879-29 + …) + 04105-×4 + 04894-×6 = 17 blocks 1828–1919 = 91 years."
+   },
+   "62": {
+    "si": "★★★★★ KRIŽAN-HRIŽAN-hiša-44-LET: m18-1829 ŽENIN Matthe KRIŽAN (GRIBLJE 62 × Miller-h22 — POLNI-DVOJNI, P256!) + m18-1873 NEVESTA Maria HRIŽAN (h62 × Gabovšič-h13 — ŠIV-P253!) = ISTA-HIŠA-1829–1873!; oče Nikl. KRIŽAN + mati [TILLAR-garble — Barbara?|Dorothea?-DUEL!]; h62-firstYear-1864→1829 (DVIG 35 = največji P256!) — h62-VSTOPA-V-ŠEST-KNJIŽNI-KLUB (12→16, P256!); 29 blokov 1829–1924 = 95 let (2.-najdaljši-za-h6-96!)",
+    "en": "★★★★★ THE-KRIŽAN-HRIŽAN-HOUSE-44-YEARS: the m18-1829 GROOM Matthe KRIŽAN (GRIBLJE 62 × the Miller-h22 — the FULL DOUBLE, P256!) + the m18-1873 BRIDE Maria HRIŽAN (h62 × the Gabovšič-h13 — the-P253-SEAM!) = THE-SAME-HOUSE-1829–1873!; the father Nikl. KRIŽAN + the mother [TILLAR-garble — Barbara?|Dorothea?-DUEL!]; the h62-firstYear-1864→1829 (LIFT 35 = the-largest-of-P256!) — h62-ENTERS-THE-SIX-BOOKS-CLUB (12→16, P256!); 29 blocks 1829–1924 = 95 years (the-2nd-longest-after-h6-96!)"
    },
    "63": {
     "si": "KRIŽAN-HIŠA (korpus-uradno: 'h63 = KRIŽAN-hiša'!): Križan/Hrižan-continuum 1862–1921 (9+ blokov); m1-KURE-29. 1. 1873 = PRVI VPIS PREDHODNIKA (P253-RESTART-1!); tri poroke Križan 1911/1912/1921; PEZDIRC-mati ×4 (1881–1896).",
@@ -118,9 +138,6 @@
     "01738"
    ],
    "60": [
-    "01738"
-   ],
-   "5": [
     "01738"
    ],
    "46": [
@@ -195,16 +212,10 @@
    "53": [
     "01738"
    ],
-   "62": [
-    "01738"
-   ],
    "41": [
     "01738"
    ],
    "39": [
-    "01738"
-   ],
-   "32": [
     "01738"
    ],
    "64": [
@@ -234,9 +245,6 @@
    "78": [
     "01738"
    ],
-   "19": [
-    "01738"
-   ],
    "43": [
     "01738"
    ],
@@ -262,7 +270,7 @@
     "01738"
    ]
   },
-  "note": "P255: 52-od-53-pet-knjižnih-prej-manjkalo-SAMO-01738 — h6/h22/h61-izstopajo (odprt-v-1828!)"
+  "note": "P256: pet-knjižne 50→46 — h5/h19/h32/h62-izstopajo (odprto-v-1829!); preostalih-46-čaka-01738-1830/1831+"
  },
  "records": {
   "loudest": {
@@ -300,7 +308,15 @@
    "houses": [
     "6"
    ],
-   "note": "P255: h6 = 1828 (m6-01738!) → 1924 — stari rekord 66 (h2/h13/h50/h60/h64) presežen!"
+   "note": "P255: h6-1828→1924; P256: h20-90 (4.) + h62-pridobi-1829!"
+  },
+  "firstYearLiftsP256": {
+   "h62": 35,
+   "h32": 34,
+   "h5": 30,
+   "h20": 30,
+   "h19": 29,
+   "note": "P256: 5 dvigov (h62 −35 = največji P256; h22 −41 ostaja absolutni rekord P255!)"
   },
   "firstYearLiftsP255": {
    "h6": 32,
@@ -315,17 +331,17 @@
   "bothEraCoverage": {
    "krstna": 69,
    "mrlishka": 75,
-   "porocna": 13,
-   "note": "P255: poročna obe-eri 10→13 (h6/h22/h61 poročita v OBEH poročnih knjigah — 1828-predhodnik + 04455!)"
+   "porocna": 17,
+   "note": "P256: poročna obe-eri 13→17 (h5/h19/h32/h62 poročita v OBEH — 1829 + 04455!)"
   }
  },
  "bookMeta": [
   {
    "sig": "01738",
    "role": "poročna-predhodnik",
-   "years": "1828 + 1873",
-   "blocks": 14,
-   "houses": 13
+   "years": "1828 + 1829 + 1873",
+   "blocks": 20,
+   "houses": 17
   },
   {
    "sig": "04104",
@@ -432,18 +448,19 @@
   {
    "houseNo": "5",
    "kind": "griblje",
-   "blocks": 31,
-   "books": 5,
+   "blocks": 32,
+   "books": 6,
    "perBook": {
+    "01738": 1,
     "04104": 5,
     "04105": 9,
     "04455": 1,
     "04106": 10,
     "04894": 6
    },
-   "firstYear": 1859,
+   "firstYear": 1829,
    "lastYear": 1919,
-   "span": 60
+   "span": 90
   },
   {
    "houseNo": "6",
@@ -661,35 +678,36 @@
   {
    "houseNo": "19",
    "kind": "griblje",
-   "blocks": 21,
-   "books": 5,
+   "blocks": 22,
+   "books": 6,
    "perBook": {
+    "01738": 1,
     "04104": 3,
     "04105": 3,
     "04455": 1,
     "04106": 9,
     "04894": 5
    },
-   "firstYear": 1858,
+   "firstYear": 1829,
    "lastYear": 1918,
-   "span": 60
+   "span": 89
   },
   {
    "houseNo": "20",
    "kind": "griblje",
-   "blocks": 34,
+   "blocks": 35,
    "books": 6,
    "perBook": {
-    "01738": 1,
+    "01738": 2,
     "04104": 5,
     "04105": 5,
     "04455": 4,
     "04106": 11,
     "04894": 8
    },
-   "firstYear": 1859,
+   "firstYear": 1829,
    "lastYear": 1922,
-   "span": 63
+   "span": 93
   },
   {
    "houseNo": "21",
@@ -710,10 +728,10 @@
   {
    "houseNo": "22",
    "kind": "griblje",
-   "blocks": 33,
+   "blocks": 34,
    "books": 6,
    "perBook": {
-    "01738": 1,
+    "01738": 2,
     "04104": 7,
     "04105": 7,
     "04455": 5,
@@ -872,18 +890,19 @@
   {
    "houseNo": "32",
    "kind": "griblje",
-   "blocks": 26,
-   "books": 5,
+   "blocks": 27,
+   "books": 6,
    "perBook": {
+    "01738": 1,
     "04104": 1,
     "04105": 11,
     "04455": 4,
     "04106": 4,
     "04894": 6
    },
-   "firstYear": 1863,
+   "firstYear": 1829,
    "lastYear": 1915,
-   "span": 52
+   "span": 86
   },
   {
    "houseNo": "33",
@@ -1345,18 +1364,19 @@
   {
    "houseNo": "62",
    "kind": "griblje",
-   "blocks": 28,
-   "books": 5,
+   "blocks": 29,
+   "books": 6,
    "perBook": {
+    "01738": 1,
     "04104": 6,
     "04105": 4,
     "04455": 6,
     "04106": 6,
     "04894": 6
    },
-   "firstYear": 1864,
+   "firstYear": 1829,
    "lastYear": 1924,
-   "span": 60
+   "span": 95
   },
   {
    "houseNo": "63",
@@ -1892,11 +1912,12 @@
   }
  ],
  "korpusUcinek": {
-  "vitalsTotal": 2026,
-  "p255": "+3 bloki 1828 (h6-m6 + h61/h22-m13 polni-dvojni!) — šest-knjižne 9→12, bothEra-poročna 10→13, najdaljši-razpon 66→96 (h6)",
+  "vitalsTotal": 2032,
+  "p255": "+3 bloki 1828 — šest-knjižne 9→12, razpon 66→96 (h6)",
+  "p256": "+5 blokov 1829 (h32/h20-m2 + h5/h19-m10 + h62-m18!) — šest-knjižne 12→16, bothEra-poročna 13→17, dvigi 35/34/30/30/29 (h62/h32/h5/h20/h19!), h62-span-95 (2.) + h20-93 (izenači h22!) + h5-90 (5.)!",
   "newModule": "src/data/atlas/parish-house-stories.ts (regeneriran p255_gen.py)",
   "ui": "HouseStoriesP254 v ParishTab (Matrike) + Notranjost01738Zacetek (P255)",
   "qa": "qa-p254 (posodobljena živa rekalkulacija!) + qa-p255 (249. kontrola)",
-  "verifier": "scripts/p254_house_stories.py --check + scripts/p255_notranjost_01738.py (I1–I10)"
+  "verifier": "scripts/p254_house_stories.py --check + scripts/p256_1829.py (I1–I10 + --live!)"
  }
 }

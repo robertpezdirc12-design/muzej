@@ -1126,3 +1126,55 @@ export const PREDHODNIK_1828_KORPUS = {
   najdaljsiRazpon: "h6 = 96 let (1828–1924!)",
 } as const;
 
+
+
+// ——— P256: NOTRANJOST-01738 — NADALJEVANJE: leto 1829 (s4–s7) — 20 vpisov + RESTART-1830 ———
+/** 20 vrstic 1829 (m1–m9 s4 + m10–m17 s5 + m18–m20 s6); bloki = 5 (h32~h20-m2 + h5×h19-m10 + h62-m18!). */
+export const PREDHODNIK_1829_BLOCKS = HOUSE_VITALS.filter(
+  (h) => h.bookSignature === "01738" && h.year === 1829,
+);
+export const PREDHODNIK_1829_HOUSES = PREDHODNIK_1829_BLOCKS.map((h) => h.houseNo);
+export const PREDHODNIK_1829_TOTAL = 20;
+export const PREDHODNIK_1829_BLOCKI = 6;
+
+/** Struktura leta 1829: m1 = 18. Jänner (2. leto knjige!) + MNOŽIČNI-DAN-4.-Febr-×4 + RESTART-1830 na s6. */
+export const PREDHODNIK_1829_STRUNA = {
+  si: "★★★★★ STRUKTURA-1829 (s4/s5/s6 = Pag. 5/7/9 — foliacija-Pag-=-2·sken−3-potrjena-×5!): m1 = 18. Jänner 1829 (letnica-'1829'-NAD-vrstico — 2.-leto-knjige-po-RESTARTU-1828!) + ★★★ MNOŽIČNI-DAN-den-4.-Febr-×4 (m2–m5-VSI-'den 4.'!-vsi-Griblje/Otok/Gradac-vpisi!) + m6–m9 spodnji-s4 (datumi-[~17.|11.|18.|19.]-X-OPEN-battery) + m10–m17 s5 (11.[~trojni-DUEL]-Febr → 22. → 26.+26.ejusd → [~1. März|26.ejusd-DUALNO]) + m18–m20 s6 (1. März-duel-1:1! + 5. Juli + 25. November — leto-1829-KOPIJA-3-letni-časi!) + ★★★★★ RESTART-1830 na s6-r4 (12. Jänner 1830 — cf.-RESTART-1873-z-1-P253!)",
+  en: "THE-STRUCTURE-OF-1829 (pages 5/7/9): m1 = Jan 18, 1829 (the year-'1829'-header-above-the-row!) + the-MASS-DAY-Feb-4-×4 (m2–m5 all-'den 4.'!) + the-weak-bottom-rows-m6–m9 + m10–m17 (Feb 11→22→26→[Mar 1|Feb 26]-dual) + m18–m20 (Mar 1 + Jul 5 + Nov 25!) + the-RESTART-OF-1830-at-s6-r4 (Jan 12, 1830!)",
+} as const;
+
+/** Kraji 1829: Griblje ×3-dvojnih + Gradac/Otok/Semelj/Podzemelj/Boršt/Kaplja-vas — polna-geografija-župnije! */
+export const PREDHODNIK_1829_KRAJI = {
+  si: "★★★ KRAJI-1829 (GEOGRAFIJA-ŽUPNIJE-ČEZ-NOC!): Griblje ×3-POLNIH-DVOJNIH (m2-h32~×h20~ + m10-h5×h19 + m18-h62×h22 — 6-hiš!) + Gradac ×5-vpisov (m1-h1×h1-DVOJNI-ISTI-HIŠI! + m11-h24×h26 + m19-h3 + m20-h15 + m13-ne-[h1?]) + Otok ×4 (m3-h22×h10 + m4-h11×h22-KRIŽ-KRAMARIČ×JURJEVIČ + m5-ne-h[26|36] + m20-ne-h5) + SEMELJ ×2 (m6-h13 + m12-h15 — continuum-MUZ-Semelj-1828!) + PODBREŽJE-m14-ne-h22 + ★★★ BORŠT-m16-h18 (1.-BORŠT-vpis-01738!) + ★★★ KAPLJA-VAS-m17-h7 (1.-omemba-Kaplje-vas-v-01738!) + 13-garble-VASI-X-OPEN ([~Salo?]-m5 + [~Grimo?]-m12 + [~Kri-upp?]-m13 + [~Sernik?]-m14 + [~Vranoviri?]-m15 + [~Krafing?]-m16 + [~Gradina?]-m17 + [~Gradnik?]-m7/m9 + [~Gerstighn?]-m6 + [~Hoda?]-m8 + [~Vranovig?]-m9 + [~Krajnc?]-m8 + [~Podlog?]-m19)",
+  en: "THE-VILLAGES-OF-1829: Griblje ×3-full-doubles (6 houses!) + Gradac ×5 + Otok ×4 (the-KRAMARIČ×JURJEVIČ-cross!) + Semelj ×2 + the-Podzemelj-center + the-FIRST-Boršt-entry + the-FIRST-Kaplja-vas-entry + 13-garble-villages-X-OPEN",
+} as const;
+
+/** Niti 1829: TILLAR ×3 + KRIŽAN ×3 + MALEŠIČ ×5 + MÜLLER ×2 + BUTALA + KLEPEC-kand. + PEZDIRC-kand. */
+export const PREDHODNIK_1829_NITI = {
+  si: "★★★★★ NITI-1829: TILLAR-×3 (m2-priča-Mathe-[Tillen?~] + m10-mati-[Salva?]-TILLAR + m18-mati-[Fillar/Tílax-garble — Barbara?|Dorothea?-DUEL!] — continuum-1828-×2 → SKUPAJ-TILLAR-×5-v-2-letih!) + ★★★★★ KRIŽAN-×3 (m5-nevesta-Anna-[Kirishanl]-Otok-[26|36] + m18-ŽENIN-Matthe-h62! + m20-nevesta-Anna-Otok-5) + ★★★★★ MALEŠIČ-×5 (m2-mati + m2-nevesta + m2-oče + m11-nevesta + m18-mati — NAJVEČJA-NOVA-NIT-5-branj-garble-[Malešič?]-X-OPEN!) + MÜLLER-×2-družini (m10-ženin-Mathe-h5 + m18-nevesta-Maria-h22 — h5-Müllerji + h22-Millerji!) + BUTALA-m11-ženin-Jure-[Butala?~Bučar/Brutalla] (Gradac-24!-continuum-P255-m8!) + KLEPEC-m16-mati-[Anna-Klepek?~]-kand. + ★★★ PEZDIRC-KAND. (m16-Georg-[Pesdinž?~] × Anna-[Pe-Dirž?~] + s7-1831-Georg-[Pesdirz]-Grübln-50! — 3-omembe-1829–1831-X-OPEN!) + NOVAK-m19-ženin-Anton (Gradac-3!) + GREGORIČ-m15 + KRAMARIČ-brat-sestra-m3×m4 + JURJEVIČ-brat-sestra-m3×m4 (DVE-DRUŽINI-KRIŽNO-2-dneva!) + KAMBICH-m7/m8-[~2?] + HESS-m1-priča + BLUTH-m19-[~Ploj?]",
+  en: "the-1829-threads: TILLAR-×3 (the-continuum-1828 → ×5-in-2-years!) + KRIŽAN-×3 + MALEŠIČ-×5 (the-largest-new-thread!) + MÜLLER-×2-families + BUTALA + the-KLEPEC-cand. + the-PEZDIRC-cand. (3-mentions-1829–1831!) + the-KRAMARIČ×JURJEVIČ-cross-marriages",
+} as const;
+
+/** RESTART-1830: s6-r4 = 12. Jänner 1830 (meja-1829/30 na s6 — cf. RESTART-1873-z-1!); 1830-II-polovica PRAZNA! */
+export const PREDHODNIK_1829_RESTART1830 = {
+  si: "★★★★★ RESTART-1830 (s6-r4, Pag. 9): 12. Jänner 1830 — Marcus-[Vipavc?~Vißnyak/Vizgar] (Krajnog? 34, 43) × Catharina-[Aurnig?~Truniž] (Kaplja-vas? 7, 35); 8-vpisov-1830-NA-s6 (12. Jän + 17. Febr-×4 + 18. + 21. + 30. Juni — [~'Krajnog/Gurila-Mottling/Dobraiz/Zarkwishe/Krioglauz/Möttling-[140|10!]/Vastaniz'-garble-VASI — 0-GRIBLJE-hiš!) + ★★★ 1830-II-POLONICA-PRAZNA (Jul–Dec-1830: 0-vpisov-med-30. Juni-1830-in-26. Jän-1831-s7! — [~X-OPEN: vrzel-ali-RES-ni-bilo-porok?]) + s7 = 1831! (26. Jän-1831 + Grüble-3/50/56/65/1 — P257-material!)",
+  en: "THE-RESTART-OF-1830 (s6-r4): Jan 12, 1830 — 8-entries-of-1830-on-s6 + the-EMPTY-second-half-of-1830 (Jul–Dec: 0-entries!) + s7 = 1831 (the-P257-material!)",
+} as const;
+
+/** P256-korpus: +6 blokov; vitals 2026→2032; 01738 = 20; šest-knjižni klub 12→16! */
+export const PREDHODNIK_1829_KORPUS = {
+  noviBloki: 6,
+  vpisi: 20,
+  vitalsTotal: 2032,
+  byBook01738: 20,
+  dvigi: {
+    h32: "1863 → 1829 (34 let!) [~DUEL-32|33]",
+    h20: "1859 → 1829 (30 let!) [~DUEL-20|00] — h20-ŽE-01738-1873-blok (m7-P253!) → 01738-span-1829+1873!",
+    h5: "1859 → 1829 (30 let!)",
+    h19: "1858 → 1829 (29 let!)",
+    h62: "1864 → 1829 (35 let — NAJVEČJI-dvig-P256!) — h62-KRIŽAN-1829 + HRIŽAN-1873-ŠIV = 44-let-ISTA-hiša!",
+  },
+  h22dvojni: "m18 = 2. blok h22-1829 (nevesta!) — h22-ŽE-1828-firstYear (P255-m13!) = 2-letni-zapored-Millerjevih-nevest (1828+1829!)",
+  sestKnjiznih: "12 → 16 (h5+h19+h32+h62-VSTOPAJO — VSE-4-ŽE-IMELE-5-knjig!)",
+  h6rekord: "ostaja-96-let (1828); P256-preoblikuje-VRH: h62-95 (2.!) + h20-93 (izenači-h22!) + h5-90 (5.!) — za-h6-96!",
+} as const;

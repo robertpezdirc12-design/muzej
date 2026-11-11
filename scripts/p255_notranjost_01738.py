@@ -40,8 +40,8 @@ check("I1b m13 = dva bloka s3 (scan: 3-×2!)", src.count('bookSignature: "01738"
 vseh = re.findall(r'bookSignature: "01738"', src)
 skupaj = len(re.findall(r'bookSignature: "', src))
 leta = [int(y) for y in re.findall(r'bookSignature: "[^"]+",\s*year: (\d+)', src)]
-check("I2 vitals == 2026 + 01738 == 14 + korpus-prvi-vpis == 1828",
-      "HOUSE_VITALS.length !== 2026" not in src and len(vseh) == 14 and skupaj == 2026 and min(leta) == 1828,
+check("I2 vitals == 2032 + 01738 == 20 + korpus-prvi-vpis == 1828",
+      "HOUSE_VITALS.length !== 2032" not in src and len(vseh) == 20 and skupaj == 2032 and min(leta) == 1828,
       f"01738={len(vseh)} skupaj={skupaj} min-leto={min(leta)}")
 
 # ——— I3: modul PREDHODNIK_1828_* (10 izvozov) ———
@@ -54,7 +54,7 @@ check("I3 modul parish-marriage-early P255-sekcija (10 izvozov)", not manjka, f"
 check("I3b števci 16/13/3/3 + korpus 2026/14",
       "PREDHODNIK_1828_TOTAL = 16" in early and "PREDHODNIK_1828_STEVILCENIH = 13" in early
       and "PREDHODNIK_1828_NESTEVILCENIH = 3" in early and "PREDHODNIK_1828_BLOCKI = 3" in early
-      and "vitalsTotal: 2026" in early and "byBook01738: 14" in early, "-")
+      and "vitalsTotal: 2026" in early and "byBook01738: 14" in early, "-")  # P256: 1828-snapshot ostaja!
 
 # ——— I4: zgodbe — naslovnica + množični-dan-×7 + MUZ-duplikat + niti ———
 seg = early[early.find("P255: NOTRANJOST"):]
@@ -74,17 +74,17 @@ check("I5 dvigi: h6-32 + h22-41-ABSOLUTNI-REKORD + h61-34",
       and "DVIG-ZA-34-LET" in src and "prej-h43-34-P250" in src, "-")
 
 # ——— I6: hišne zgodbe regenerirane (12 šest-knjižnih + h6-96 + bothEra 13) ———
-check("I6 stories: SIX-×12 + h6-36-bl-96-let + bothEraPorocna-13 + blocks-2026",
-      stories.count('houseNo: "') >= 12 and 'blocks: 2026,' in stories
-      and "bothEraPorocna: 13" in stories and 'houseNo: "6", kind: "griblje", blocks: 36, books: 6' in stories
+check("I6 stories: SIX-×16 + h6-36-bl-96-let + bothEraPorocna-17 + blocks-2032",
+      stories.count('houseNo: "') >= 16 and 'blocks: 2032,' in stories
+      and "bothEraPorocna: 17" in stories and 'houseNo: "6", kind: "griblje", blocks: 36, books: 6' in stories
       and "firstYear: 1828" in stories and "longestSpan: 96" in stories
       and "longestSpanHouses: [\"6\"]" in stories
       and stories.count('export const HOUSE_STORY_SIX') == 1
-      and len(re.findall(r'houseNo: "\d+", blocks: \d+, years: "1828–\d+"', stories)) == 3, "-")
+      and len(re.findall(r'houseNo: "\d+", blocks: \d+, years: "1828–\d+"', stories)) == 3, "-")  # P256: 1828-šest-knjižne ostanejo 3!
 pt = json.load(open(f"{ROOT}/research/issue17/parish-house-stories.json", encoding="utf-8"))
-check("I6b dokaz-stories: 100-hiš + tiers-six-12 + stories-12",
-      len(pt.get("houses", [])) == 100 and pt["structure"]["tiers"]["six"] == 12
-      and len(pt["sixBookHouses"]["stories"]) == 12, "-")
+check("I6b dokaz-stories: 100-hiš + tiers-six-16 + stories-16",
+      len(pt.get("houses", [])) == 100 and pt["structure"]["tiers"]["six"] == 16
+      and len(pt["sixBookHouses"]["stories"]) == 16, "-")
 
 # ——— I7: qa-p255 (249.) + živa kontrola ———
 check("I7 qa-p255-notranjost kontrola obstaja + korpus-prvi-vpis-živo",
@@ -106,8 +106,8 @@ check("I9 dokaz: 16-vrstic + 13-številčenih + 3-neštevilčenih + 3-bloki + ni
 
 # ——— I10: LIVE Matricula-01738 + pt-luknja-2026 ———
 pt2 = json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8"))
-check("I9b pt-luknja-2026/01738:14",
-      pt2.get("vitalsTotal") == 2026 and pt2.get("corpus", {}).get("byBook", {}).get("01738") == 14, "-")
+check("I9b pt-luknja-2032/01738:20",
+      pt2.get("vitalsTotal") == 2032 and pt2.get("corpus", {}).get("byBook", {}).get("01738") == 20, "-")
 live = "--live" in sys.argv
 if live or "--check" not in sys.argv:
     try:

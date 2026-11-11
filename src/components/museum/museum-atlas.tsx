@@ -6,6 +6,7 @@ import {
   Search,
   Map as MapIcon,
   BookOpen,
+  BookOpenCheck,
   Users,
   Archive,
   Gauge,
@@ -254,6 +255,15 @@ import {
   PREDHODNIK_1828_NITI,
   PREDHODNIK_1828_KORPUS,
   PREDHODNIK_1828_TOTAL,
+  PREDHODNIK_1829_BLOCKS,
+  PREDHODNIK_1829_HOUSES,
+  PREDHODNIK_1829_TOTAL,
+  PREDHODNIK_1829_BLOCKI,
+  PREDHODNIK_1829_STRUNA,
+  PREDHODNIK_1829_KRAJI,
+  PREDHODNIK_1829_NITI,
+  PREDHODNIK_1829_RESTART1830,
+  PREDHODNIK_1829_KORPUS,
   PREDHODNIK_1828_STEVILCENIH,
   PREDHODNIK_1828_NESTEVILCENIH,
   PREDHODNIK_1828_BLOCKI,
@@ -1631,6 +1641,109 @@ function Notranjost01738Zacetek() {
 }
 
 
+/* ——— P256: NOTRANJOST-01738 — NADALJEVANJE: leto 1829 (m1–m20 + RESTART-1830!) ——— */
+function Notranjost01738Leto1829() {
+  const { t } = useLang();
+  const entries: { m: string; d: string; h?: string; x?: boolean }[] = [
+    { m: "1", d: "18. 1.", h: "1·1" },
+    { m: "2", d: "den 4. 2.", h: "32" },
+    { m: "3", d: "den 4. 2.", h: "22" },
+    { m: "4", d: "den 4. 2.", h: "11" },
+    { m: "5", d: "den 4. 2.", h: "[26]" },
+    { m: "6", d: "[~17.]", h: "13", x: true },
+    { m: "7", d: "[~17.]", h: "2", x: true },
+    { m: "8", d: "[~18.]", x: true },
+    { m: "9", d: "[~19.]", h: "9", x: true },
+    { m: "10", d: "[~11.]", h: "5" },
+    { m: "11", d: "[~11.]", h: "24" },
+    { m: "12", d: "[~18.]", h: "10?" },
+    { m: "13", d: "22. 2." },
+    { m: "14", d: "26. 2.", h: "19" },
+    { m: "15", d: "26. 2. ejusd", h: "8" },
+    { m: "16", d: "[~1. 3.]", h: "2", x: true },
+    { m: "17", d: "[~1. 3.]", h: "7", x: true },
+    { m: "18", d: "1. 3.", h: "62·22" },
+    { m: "19", d: "5. 7.", h: "3" },
+    { m: "20", d: "25. 11.", h: "5" },
+    { m: "1830", d: "12. 1. 1830", h: "RESTART!" },
+  ];
+  return (
+    <div className="rounded-xl border bg-card/60 p-5">
+      <h3 className="flex items-center gap-2 font-serif text-lg font-semibold">
+        <BookOpenCheck className="h-4 w-4 text-primary" aria-hidden />
+        {t(
+          "Notranjost knjige 01738: leto 1829 (m1–m20 + meja-1830)",
+          "The interior of the book 01738: the year 1829 (m1–m20 + the 1830 boundary)",
+        )}
+      </h3>
+      <p className="mt-2 text-sm text-muted-foreground [overflow-wrap:anywhere]">
+        {t(
+          `Nadaljevanje predhodnika 01738 (s4–s6, Pag. 5/7/9 — foliacija Pag = 2·sken − 3!): ${PREDHODNIK_1829_TOTAL} vrstic leta 1829 na 3 straneh — m1 = 18. Jänner (letnica nad vrstico!), množični dan 'den 4. Febr' ×4 (m2–m5!), spodnje vrstice s4 [~X-OPEN], FEbruar–März s5, na koncu pa 1. März (m18, duel 1:1!) / 5. Juli (m19) / 25. November (m20). RESTART-1830 na s6-r4 (12. Jänner 1830!), druga polovica 1830 PRAZNA (Jul–Dec: 0 vpisov!), s7 = že 1831. ${PREDHODNIK_1829_BLOCKI} blokov Griblje [${PREDHODNIK_1829_HOUSES.join(", ")}].`,
+          `The continuation of the predecessor 01738 (s4–s6, pages 5/7/9 — the foliation Pag = 2·scan − 3!): ${PREDHODNIK_1829_TOTAL} rows of 1829 across 3 pages — m1 = Jan 18, the mass day 'den 4. Feb' ×4, then Mar 1 (m18, duel 1:1!) / Jul 5 / Nov 25. The RESTART of 1830 at s6-r4 (Jan 12, 1830!), the second half of 1830 EMPTY, s7 = already 1831. ${PREDHODNIK_1829_BLOCKI} Griblje blocks [${PREDHODNIK_1829_HOUSES.join(", ")}].`,
+        )}
+      </p>
+
+      {/* 6 blokov 5 dvigov — emerald */}
+      <div className="mt-4 rounded-lg border border-emerald-500/40 bg-emerald-500/10 p-4">
+        <p className="text-sm font-medium text-emerald-700 dark:text-emerald-300">
+          {t("★★★★★ 6 BLOKOV — 5 DVOGOV firstYear: ", "★★★★★ 6 BLOCKS — 5 firstYear LIFTS: ")}
+          {t(
+            `h62 1864→1829 (+35 = največji dvig P256!) · h32 1863→1829 (+34, [~DUEL 32|33]) · h5/h20 1859→1829 (+30) · h19 1858→1829 (+29) — h5/h19/h32/h62 vstopajo v šest-knjižni klub (12→16!) in bothEra-poročna 13→17! ★★★ KRIŽAN-h62-ŽENIN-1829 + HRIŽAN-h62-NEVESTA-1873-ŠIV = ISTA hiša 44 let! P256 preoblikuje vrh: h62 95 let (2.!), h20 93 (izenači h22!), h5 90 — za h6 96. Korpus ${PREDHODNIK_1829_KORPUS.vitalsTotal} vitalov / 01738 = ${PREDHODNIK_1829_KORPUS.byBook01738} blokov.`,
+            `h62 1864→1829 (+35 = the largest lift of P256!) · h32 (+34, [~DUEL]) · h5/h20 (+30) · h19 (+29) — h5/h19/h32/h62 join the six-book club (12→16!) and the marriage both-era 13→17! ★★★ The KRIŽAN groom of 1829 + the HRIŽAN bride of 1873-SEAM = the same house 44 years! P256 reshapes the top: h62 95 (2nd!), h20 93 (ties h22!), h5 90 — after h6 96. The corpus ${PREDHODNIK_1829_KORPUS.vitalsTotal} vitals / 01738 = ${PREDHODNIK_1829_KORPUS.byBook01738} blocks.`,
+          )}
+        </p>
+      </div>
+
+      {/* STRUNA + KRAJI — two cards */}
+      <div className="mt-4 grid gap-3 md:grid-cols-2">
+        <div className="min-w-0 rounded-lg border bg-accent/40 p-4">
+          <p className="text-sm [overflow-wrap:anywhere]">{t(PREDHODNIK_1829_STRUNA.si, PREDHODNIK_1829_STRUNA.en)}</p>
+        </div>
+        <div className="min-w-0 rounded-lg border bg-accent/40 p-4">
+          <p className="text-sm [overflow-wrap:anywhere]">{t(PREDHODNIK_1829_KRAJI.si, PREDHODNIK_1829_KRAJI.en)}</p>
+        </div>
+      </div>
+
+      {/* m1–m20 + 1830 timeline */}
+      <div className="mt-4 overflow-x-auto pb-1">
+        <div className="flex min-w-[880px] items-end gap-1 sm:min-w-0" role="listbox" aria-label={t("Vrstice leta 1829", "The rows of 1829")}>
+          {entries.map((e, i) => {
+            const isRestart = e.m === "1830";
+            const isDouble = e.h === "62·22" || e.h === "1·1";
+            const weak = e.x;
+            return (
+              <div key={`${e.m}-${i}`} role="option" aria-selected={false} className="flex flex-1 flex-col items-center gap-1 rounded-lg border border-transparent px-1 py-2">
+                <span className="text-[10px] font-medium text-muted-foreground" style={{ overflowWrap: "anywhere" }}>{e.d}</span>
+                <span className={`flex h-9 min-w-9 items-center justify-center rounded-full border px-1 text-[11px] font-semibold ${isRestart ? "border-primary bg-primary/20 text-primary" : isDouble ? "border-emerald-500 bg-emerald-500/20 text-emerald-700 dark:text-emerald-300" : weak ? "border-dashed border-amber-500/60 bg-amber-500/10 text-amber-700 dark:text-amber-300" : e.h ? "border-primary/50 bg-primary/10 text-primary" : "border-dashed border-muted-foreground/40 text-muted-foreground"}`}>{e.m}</span>
+                <span className="text-[10px] text-muted-foreground" style={{ overflowWrap: "anywhere" }}>
+                  {e.h ? `h${e.h}` : ""}
+                </span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* NITI + RESTART1830 */}
+      <div className="mt-4 grid gap-3 md:grid-cols-2">
+        <div className="min-w-0 rounded-lg border bg-accent/40 p-4">
+          <p className="text-sm [overflow-wrap:anywhere]">{t(PREDHODNIK_1829_NITI.si, PREDHODNIK_1829_NITI.en)}</p>
+        </div>
+        <div className="min-w-0 rounded-lg border border-primary/40 bg-primary/5 p-4">
+          <p className="text-sm [overflow-wrap:anywhere]">{t(PREDHODNIK_1829_RESTART1830.si, PREDHODNIK_1829_RESTART1830.en)}</p>
+        </div>
+      </div>
+      <p className="mt-2 text-xs text-muted-foreground" style={{ overflowWrap: "anywhere" }}>
+        {t(
+          "Trije polni dvojni: m2 [Dehlič?]×[Malešič?] h32×h20 (kand. krvno sorodstvo!) · m10 Müller×[Šimek?] h5×h19 (mati Tillar!) · m18 KRIŽAN×[Miller?] h62×h22 (2-letni zapored Millerjevih nevest!). P257+: notranjost 1830/1831 (s6-r4–r11 + s7-1831: Grüble 3/50/56/65/1!).",
+          "Three full doubles: m2 h32×h20 (a kinship candidate!) · m10 Müller h5×h19 (the mother Tillar!) · m18 KRIŽAN h62×h22 (two consecutive years of Miller brides!). P257+: the interior of 1830/1831.",
+        )}
+      </p>
+    </div>
+  );
+}
+
+
 /* ——— P254: HIŠNE ZGODBE GLOBJE — mreže hiš čez 6 knjig (sinteza!) ——— */
 function HouseStoriesP254() {
   const { t } = useLang();
@@ -1654,7 +1767,7 @@ function HouseStoriesP254() {
       {/* 9 šest-knjižnih hiš */}
       <div className="mt-4 rounded-lg border bg-background/60 p-4">
         <h4 className="text-sm font-semibold">
-          {t("9 šest-knjižnih hiš — polni življenjski cikel", "The 9 six-book houses — the full life cycle")}
+          {t("16 šest-knjižnih hiš — polni življenjski cikel (P256!)", "The 16 six-book houses — the full life cycle (P256!)")}
           <span className="ml-2 rounded-full border px-2 py-0.5 text-[10px] font-medium text-primary">
             {t("blok v VSEH 6 knjigah!", "a block in ALL 6 books!")}
           </span>
@@ -1699,7 +1812,7 @@ function HouseStoriesP254() {
         </div>
         <p className="mt-2 text-xs text-muted-foreground" style={{ overflowWrap: "anywhere" }}>
           {t(
-            `Obe-eri pokritje: krstna 69 hiš · mrliška 75 · poročna ${HOUSE_STORY_TOTALS.bothEraPorocna} (P255: h6/h22/h61 poročita v OBEH poročnih knjigah — 1828 + 04455!). 50 pet-knjižnih hiš manjka samo 01738; izjema = h25 brez 04106 (smrtna vrzel!).`,
+            `Obe-eri pokritje: krstna 69 hiš · mrliška 75 · poročna ${HOUSE_STORY_TOTALS.bothEraPorocna} (P256: h5/h19/h32/h62 poročita v OBEH — 1829 + 04455!). 46 pet-knjižnih hiš manjka samo 01738; izjema = h25 brez 04106 (smrtna vrzel!).`,
             `The both-era coverage: baptism 69 houses · death 75 · marriage ${HOUSE_STORY_TOTALS.bothEraPorocna} (P255: h6/h22/h61 marry in BOTH marriage books — 1828 + 04455!). 50 five-book houses miss only 01738; the exception = h25 without 04106 (a death gap!).`,
           )}
         </p>
@@ -3180,6 +3293,9 @@ function ParishTab() {
 
       {/* P255: NOTRANJOST-01738 — ZAČETEK: leto 1828 (korpus 1857→1828!) */}
       <Notranjost01738Zacetek />
+
+      {/* P256: NOTRANJOST-01738 — NADALJEVANJE: leto 1829 (korpus +6 blokov!) */}
+      <Notranjost01738Leto1829 />
 
       {/* brskalnik knjig */}
       <div>

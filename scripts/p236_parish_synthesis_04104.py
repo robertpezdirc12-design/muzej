@@ -38,7 +38,7 @@ check("I4 UI-ParishTab (BaptismLineSynthesis + uvoz + render + časovnica/mini-g
       and "X_OPEN_REMAINDERS" in ui and "CROSS_YEAR_THREADS" in ui)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st2012 = qa.count("HOUSE_VITALS.length !== 2026")  # P252-update: 1940→2012 (žive-številke!)
+st2012 = qa.count("HOUSE_VITALS.length !== 2032")  # P252-update: 1940→2012 (žive-številke!)
 check("I5 qa-p236 (živi preveri vsako leto 1:1) + 2012-številcev (P252-update: 1940-zastarelo!)",
       "qa-p236-parish-synthesis-04104" in qa and "BAPTISM_LINE_YEARS" in qa
       and "runtime !== yl.griblje" in qa and st2012 >= 100, f"2012-številcev={st2012}")
@@ -61,7 +61,7 @@ check("I8 restart-z1-v-vseh-15-letih + X-open-preostanki-×3 (z81-hisna/z37-z38/
 
 check("I9a qa-p236 (236. kontrola!) + status-SINTEZA-LINIE-KOMPLETNA", "qa-p236" in qa and "SINTEZA-LINIE-KOMPLETNA" in qa)
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-check("I9b pt-luknja-288/2012 + byBook-04104 (P252-update: 1940-zastarelo!)", '"vitalsTotal": 2026' in pt and '"04104": 288' in pt)
+check("I9b pt-luknja-288/2012 + byBook-04104 (P252-update: 1940-zastarelo!)", '"vitalsTotal": 2032' in pt and '"04104": 288' in pt)
 src = open(f"{ROOT}/src/data/atlas/parish.ts", encoding="utf-8").read()
 skupaj = src.count('bookSignature: "04104"')
 check("I9c parish.ts-04104 == 288 (križ-s-sintezo)", skupaj == 288, f"04104={skupaj}")

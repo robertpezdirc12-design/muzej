@@ -56,7 +56,7 @@ check("I4c sreda-ritem + DISPENS-3.-GRAD + 'f'-forenzika + '8-vs-2' + IZMENA-×2
       and "IZMENA-VLOG-×2" in an2 and "P229-z79" in an2)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 2026")
+st = qa.count("HOUSE_VITALS.length !== 2032")
 check("I5 qa-p248 + števec-2012 (×150!)", "HOUSE_VITALS.length !== 1990" not in qa and st >= 150, f"2012-številcev={st}")
 check("I5b sidra-262 + 1876:6-P248 (qa-sidra-message)", "poročna sidra ≠ 262 (1873:4-P251! · 1874:11-P250! · 1875:1-P249! · 1876:6-P248!" in qa)
 check("I5c dobe-220 + 50-pred-linijskih", "dobe-bloki ≠ 236/7/26" in qa and "66 pred-linijskih 1873-P251×4!+1874-P250×11!+1875-P249×1!+1876-P248×6!" in qa)
@@ -93,7 +93,7 @@ pt = json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding
 h44 = [x for x in pt["gapHouses"] if x["houseNo"] == "44"][0]
 h51 = [x for x in pt["gapHouses"] if x["houseNo"] == "51"][0]
 check("I8a pt-luknja-2008 + byBook-04455=265",
-      pt.get("vitalsTotal") == 2026 and pt.get("corpus", {}).get("byBook", {}).get("04455") == 269,
+      pt.get("vitalsTotal") == 2032 and pt.get("corpus", {}).get("byBook", {}).get("04455") == 269,
       f"vitalsTotal={pt.get('vitalsTotal')} 04455={pt.get('corpus', {}).get('byBook', {}).get('04455')}")
 check("I8b h44-posodobljen (24-blokov/04455=6/firstYear=1876/p248Note!) + h51-intakten (6/2!)",
       h44["blocksTotal"] == 24 and h44["byBook"]["04455"] == 6 and h44["firstYear"] == 1876 and "p248Note" in h44
@@ -115,7 +115,7 @@ try:
     r = urllib.request.Request("http://localhost:3000/api/qa")
     with urllib.request.urlopen(r, timeout=30) as resp:
         qa_data = json.load(resp)
-    check("I10 QA-živo 249/249 ok:True", qa_data.get("ok") is True and qa_data.get("passed") == 249 and qa_data.get("failed") == 0,
+    check("I10 QA-živo 249/249 ok:True", qa_data.get("ok") is True and qa_data.get("passed") == 250 and qa_data.get("failed") == 0,
           f"passed={qa_data.get('passed')} failed={qa_data.get('failed')}")
 except Exception as e:
     check("I10 QA-živo", False, str(e)[:80])

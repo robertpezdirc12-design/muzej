@@ -36,7 +36,7 @@ check("I4c h2-1.-poročni-blok + PEZDIRC-'NI-Pegdirc' + MILEK-izven-korpusa + HR
       and "MILEK-križ-KANDIDAT" in an and "HROVALJ-brat+sestra" in an)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 2026")
+st = qa.count("HOUSE_VITALS.length !== 2032")
 check("I5 qa-p240 + števec-2012", "qa-p240-parish-marriage-early-04455-1883" in qa and st >= 145, f"2012-številcev={st}")
 
 i0 = src.find("P240: poročna PREDZGOVINA 04455, leto 1883")
@@ -55,7 +55,7 @@ check("I8b modul-1883 (MARRIAGE_1883_*-izvozi)", all(x in m for x in [
     "MARRIAGE_1883_XOPEN", "MARRIAGE_1883_MEJA", "MARRIAGE_1883_NUMBERING", "PEZDIRC_1883_NIT",
     "MILEK_1883_KANDIDAT", "PRIEST_1883", "HROVALJ_1883_SIBLINGS", "MARRIAGE_1883_VILLAGE_DUELS"]))
 check("I8c forenzika-×237-ostaja", "×237 blokov čez 5 knjig" in open(f"{ROOT}/src/data/atlas/parish-forensics.ts", encoding="utf-8").read())
-check("I9a pt-luknja-2008 + byBook-04455=265 (P241-živo!)", '"vitalsTotal": 2026' in open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
+check("I9a pt-luknja-2008 + byBook-04455=265 (P241-živo!)", '"vitalsTotal": 2032' in open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
       and '"04455": 269' in open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read())
 check("I9b worklog-P240-vnos", "## P240" in open(f"{ROOT}/worklog.md", encoding="utf-8").read())
 check("I9c UI-MarriageEarly1883-v-ParishTab", "MarriageEarly1883" in open(f"{ROOT}/src/components/museum/museum-atlas.tsx", encoding="utf-8").read())

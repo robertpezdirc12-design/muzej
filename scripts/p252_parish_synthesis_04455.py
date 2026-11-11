@@ -38,7 +38,7 @@ check("I1b griblje-po-letih 1:1-z-runtime (7+3+2+7+9+3+9+7+5+6+1+11+4 = 74!)",
 # ——— I2: razcep korpusa 74 + 195 = 269 — pt-luknja 1:1 (vitals 2012 NESPREMENJEN!) ———
 skupaj = src.count('bookSignature: "04455"')
 check("I2 vitals-2026 + 04455==269 + razcep-74/195 (NI novih branj — MERI!)",
-      "HOUSE_VITALS.length !== 2026" not in src and skupaj == 269 and sum(run.values()) == 74
+      "HOUSE_VITALS.length !== 2032" not in src and skupaj == 269 and sum(run.values()) == 74
       and skupaj - 74 == 195, f"04455={skupaj} predzgodovina={sum(run.values())}")
 
 # ——— I3: dokaz research/issue17/parish-marriage-synthesis-early.json ———
@@ -91,7 +91,7 @@ check("I6b restart-vpis-1 dokumentiran 13/13 + FOLIACIJA-29/29-na-odprtanj",
 
 # ——— I7: qa-parish.ts — qa-p252 sekcija + živi preveri vsako leto 1:1 ———
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st2012 = qa.count("HOUSE_VITALS.length !== 2026")
+st2012 = qa.count("HOUSE_VITALS.length !== 2032")
 check("I7 qa-p252 (živi preveri vsako leto 1:1) + 2012-številcev + FINIS + 74/195-razcep",
       "qa-p252-parish-synthesis-04455-early" in qa and "MARRIAGE_EARLY_LINE_YEARS" in qa
       and "runtime !== yl.griblje" in qa and st2012 >= 100
@@ -102,7 +102,7 @@ check("I7 qa-p252 (živi preveri vsako leto 1:1) + 2012-številcev + FINIS + 74/
 # ——— I8: pt-luknja-18-final.json NESPREMENJEN (2012/269 — vsota 1:1!) ———
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
 check("I8 pt-luknja-2026/269 vsota-1:1 (korpus-NESPREMENJEN!)",
-      '"vitalsTotal": 2026' in pt and '"04455": 269' in pt, "2012/269")
+      '"vitalsTotal": 2032' in pt and '"04455": 269' in pt, "2012/269")
 
 # ——— I9: README + worklog P252 vnos ———
 rd = open(f"{ROOT}/README.md", encoding="utf-8").read()
@@ -121,7 +121,7 @@ if live or "--check" not in sys.argv:
             qa_live = json.load(r)
         p252_live = [t for t in qa_live["tests"] if t["id"] == "qa-p252-parish-synthesis-04455-early"]
         check("I10 LIVE /api/qa ok=True — pass=246 + p252-pass",
-              qa_live.get("ok") is True and qa_live.get("passed") == 249 and p252_live and p252_live[0]["pass"] is True,
+              qa_live.get("ok") is True and qa_live.get("passed") == 250 and p252_live and p252_live[0]["pass"] is True,
               f"pass={qa_live.get('passed')}")
     except Exception as e:
         check("I10 LIVE /api/qa", False, str(e)[:80])
