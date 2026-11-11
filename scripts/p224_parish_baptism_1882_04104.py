@@ -36,7 +36,7 @@ check("I4b novosti (dezember-korekcija + z71-okt + z55-zap + hisne-vizualne + pr
       and "hisne-vizualne-resitve" in an and "pripisi-kriz-mmk-1882" in an and "mreze-1882" in an)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 2043")
+st = qa.count("HOUSE_VITALS.length !== 2059")
 check("I5 qa-p224 + števec-1940", "qa-p224-parish-baptism-1882-04104" in qa and st >= 136, f"1940-številcev={st}")
 
 i0 = src.find("P224: krstna PREDZGODOVINA 04104, leto 1882")
@@ -51,7 +51,7 @@ check("I8a mreže-1882 (PEZDIRC-×4 + KLOBUČAR-×3 + DRAGOŠ-×2 + KRIŽAN-×2!
 check("I8b DVOJČKI-GRIBLJE-h68-ZWILLINGE + 'Anni-1-8-8-1.'", "ZWILLINGE" in seg and "1 8 8 1" in seg and "P214-TIP-4.-instance" in seg)
 check("I9a qa-p224 (224. kontrola!)", "qa-p224" in qa and "224. kontrola" in qa)
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-check("I9b pt-luknja-271/2043 + byBook-04104", '"vitalsTotal": 2043' in pt and '"04104": 288' in pt)
+check("I9b pt-luknja-271/2043 + byBook-04104", '"vitalsTotal": 2059' in pt and '"04104": 288' in pt)
 
 live = "--live" in sys.argv
 if live or "--check" not in sys.argv:

@@ -58,7 +58,7 @@ check("I4 dokaz (71/10-griblje/14-anomalij + meja-s127-TAIL-10 + 42.-potrditev +
 
 # I5: qa-parish
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 2043")
+st = qa.count("HOUSE_VITALS.length !== 2059")
 check("I5 qa-p202 + števec-1385", "qa-p202-parish-death-1875-04106" in qa and st >= 100,
       f"1940-številcev={st}")
 
@@ -88,8 +88,8 @@ check("I8g otroška-umrljivost-30% (3/10-jasna + 2-[?]!)", "30%-3/10" in seg or 
 
 # I9: pt-luknja
 pt = json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8"))
-check("I9 pt-luknja (04106==433, vitals==1511)",
-      pt["corpus"]["byBook"]["04106"] == 433 and pt["corpus"]["vitalsTotal"] == 1940,
+check("I9 pt-luknja (04106==433, vitals==2059-P258!)",
+      pt["corpus"]["byBook"]["04106"] == 433 and pt["corpus"]["vitalsTotal"] == 2059,
       f"04106={pt['corpus']['byBook']['04106']} vitals={pt['corpus']['vitalsTotal']}")
 
 # I10: 04894 + leta-nabor

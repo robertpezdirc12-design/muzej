@@ -35,7 +35,7 @@ check("I4c knjiga-start-1857 + oktober-luknja + z58-honesty-max + popravki-pisar
       "knjiga-start-1857" in an and "oktober-luknja" in an and "z58-honesty-max" in an and "popravki-pisarja-×2" in an)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 2043")
+st = qa.count("HOUSE_VITALS.length !== 2059")
 check("I5 qa-p220 + števec-1940", "qa-p220-parish-death-1857-04106" in qa and st >= 132, f"1940-številcev={st}")
 
 i0 = src.find("P220: mrliška PREDZGODOVINA 04106, leto 1857")
@@ -51,7 +51,7 @@ check("I8b pag-sken−1-SVINČNIK-FOLIACIJA (konvencijski-prehod!)", "sken−1-S
 check("I8c otroška-umrljivost-30%-3/10 + ekstremi-3-tedne-→-73-J", "umrljivost-30%-3/10" in seg and "3-tedne-→-73-J" in seg)
 check("I9a qa-p220 (220. kontrola!)", "qa-p220" in qa and "220. kontrola" in qa)
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-check("I9b pt-luknja-433/2043", '"vitalsTotal": 2043' in pt and '"04106": 433' in pt)
+check("I9b pt-luknja-433/2043", '"vitalsTotal": 2059' in pt and '"04106": 433' in pt)
 
 live = "--live" in sys.argv
 if live or "--check" not in sys.argv:

@@ -45,8 +45,8 @@ check("I1c foliacija: Pag. 5/7/9 (2·sken−3)",
 vseh = re.findall(r'bookSignature: "01738"', src)
 skupaj = len(re.findall(r'bookSignature: "', src))
 leta = [int(y) for y in re.findall(r'bookSignature: "[^"]+",\s*year: (\d+)', src)]
-check("I2 vitals == 2043 + 01738 == 31 + korpus-prvi-vpis == 1828",
-      "HOUSE_VITALS.length !== 2043" not in src and len(vseh) == 31 and skupaj == 2043 and min(leta) == 1828,
+check("I2 vitals == 2059 + 01738 == 47 + korpus-prvi-vpis == 1828",
+      "HOUSE_VITALS.length !== 2059" not in src and len(vseh) == 47 and skupaj == 2059 and min(leta) == 1828,
       f"01738={len(vseh)} skupaj={skupaj} min-leto={min(leta)}")
 
 # ——— I3: modul PREDHODNIK_1829_* (9 izvozov) ———
@@ -81,9 +81,9 @@ check("I5b KRIŽAN-1829 + HRIŽAN-1873-ŠIV = ISTA-HIŠA-44-LET",
       and "THE-SAME-HOUSE-44-YEARS" in src, "-")
 
 # ——— I6: hišne zgodbe regenerirane (16 šest-knjižnih + h62-95 + bothEra 17) ———
-check("I6 stories: SIX-×23 + blocks-2043 + bothEraPorocna-26 + tierji-23/41",
-      stories.count('houseNo: "') >= 23 and 'blocks: 2043,' in stories
-      and "bothEraPorocna: 26" in stories and "sixBook: 23" in stories
+check("I6 stories: SIX-×31 + blocks-2043 + bothEraPorocna-34 + tierji-31/35",
+      stories.count('houseNo: "') >= 31 and 'blocks: 2059,' in stories
+      and "bothEraPorocna: 34" in stories and "sixBook: 23" in stories
       and "fiveBook: 41" in stories and "firstYear: 1829" in stories
       and "longestSpan: 96" in stories and 'longestSpanHouses: ["6"]' in stories
       and len(re.findall(r'houseNo: "\d+", blocks: \d+, years: "1829–\d+"', stories)) == 5, "-")
@@ -94,7 +94,7 @@ h20m = re.search(r'houseNo: "20", kind: "griblje", blocks: 35, books: 6.*?firstY
 check("I6c h20-story: 35-blokov-1829–1922-span-93 (izenači-h22!)",
       bool(h20m), "-" if h20m else "h20-ni-tako")
 pt = json.load(open(f"{ROOT}/research/issue17/parish-house-stories.json", encoding="utf-8"))
-check("I6d dokaz-stories: 100-hiš + tiers-six-23 + stories-23 + bothEra-26 (P257!)",
+check("I6d dokaz-stories: 100-hiš + tiers-six-31 + stories-23 + bothEra-34 (P258!)",
       len(pt.get("houses", [])) == 100 and pt["structure"]["tiers"]["six"] == 23
       and len(pt["sixBookHouses"]["stories"]) == 23
       and pt["records"]["firstYearLiftsP256"]["h62"] == 35, "-")
@@ -122,8 +122,8 @@ check("I9 dokaz: 20-vrstic + 6-blokov + restart1830 + niti-1829",
 
 # ——— I10: LIVE Matricula-01738 + pt-luknja-2032 ———
 pt2 = json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8"))
-check("I10b pt-luknja-2043/20438:31",
-      pt2.get("vitalsTotal") == 2043 and pt2.get("corpus", {}).get("byBook", {}).get("01738") == 31, "-")
+check("I10b pt-luknja-2059/20438:31",
+      pt2.get("vitalsTotal") == 2059 and pt2.get("corpus", {}).get("byBook", {}).get("01738") == 47, "-")
 live = "--live" in sys.argv
 if live or "--check" not in sys.argv:
     try:

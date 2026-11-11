@@ -36,7 +36,7 @@ check("I4b novosti (z48-botra-prazna + z66-nezakonski + porocni-pripisi + z14-ap
       and "porocni-pripisi-×2" in an and "z14-mesec-duel-april" in an and "mreze-1881" in an)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 2043")
+st = qa.count("HOUSE_VITALS.length !== 2059")
 check("I5 qa-p225 + števec-1940", "qa-p225-parish-baptism-1881-04104" in qa and st >= 137, f"1940-številcev={st}")
 
 i0 = src.find("P225: krstna PREDZGODOVINA 04104, leto 1881")
@@ -52,7 +52,7 @@ check("I8a meseci-Griblje (Feber/März/Dez-×0!) + 1880-122-BONUS", "Feber/März
 check("I8b hišni-DUELI-1:1-×3 (z15-37! + z40-49! + z66-57!)", "hiša-'37'-DUEL-1:1" in seg and "hiša-'49'-DUEL-1:1" in seg and "hiša-'57'-DUEL-1:1" in seg)
 check("I9a qa-p225 (225. kontrola!)", "qa-p225" in qa and "225. kontrola" in qa)
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-check("I9b pt-luknja-271/2043 + byBook-04104", '"vitalsTotal": 2043' in pt and '"04104": 288' in pt)
+check("I9b pt-luknja-271/2043 + byBook-04104", '"vitalsTotal": 2059' in pt and '"04104": 288' in pt)
 
 live = "--live" in sys.argv
 if live or "--check" not in sys.argv:

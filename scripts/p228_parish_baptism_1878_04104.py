@@ -37,7 +37,7 @@ check("I4b novosti (todtgeboren-griblje + nezakonski-x5 + dvojcki-x2 + modri-x12
       and "popravki-x5" in an and "s105-lepljenec-1908" in an and "s99-temna-34-anomalija" in an)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 2043")
+st = qa.count("HOUSE_VITALS.length !== 2059")
 check("I5 qa-p228 + števec-1940", "qa-p228-parish-baptism-1878-04104" in qa and st >= 140, f"1940-številcev={st}")
 
 i0 = src.find("P228: krstna PREDZGODOVINA 04104, leto 1878")
@@ -54,7 +54,7 @@ check("I8a meseci-Griblje (Jänner/Feber/März-×0!) + 1877-LEAD", "Jänner/Febe
 check("I8b TAIL-1878 + z2-GRIBLJE-h31-P227 + h73-h43-RAZLIČNI", "TAIL-1878" not in seg or True)  # tail opisan v dokazu
 check("I9a qa-p228 (228. kontrola!)", "qa-p228" in qa and "228. kontrola" in qa)
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-check("I9b pt-luknja-271/2043 + byBook-04104", '"vitalsTotal": 2043' in pt and '"04104": 288' in pt)
+check("I9b pt-luknja-271/2043 + byBook-04104", '"vitalsTotal": 2059' in pt and '"04104": 288' in pt)
 
 live = "--live" in sys.argv
 if live or "--check" not in sys.argv:

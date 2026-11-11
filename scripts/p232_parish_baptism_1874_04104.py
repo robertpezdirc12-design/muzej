@@ -38,7 +38,7 @@ check("I4b novosti (trioduhovnikov + pezdirc-x7-porast + brez-praznih-meseci + m
       and "s43-glava-1871-vlm-misread" in an and "s39-r3-skrile-vas-izkljucitev" in an)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 2043")
+st = qa.count("HOUSE_VITALS.length !== 2059")
 check("I5 qa-p232 + števec-1940", "qa-p232-parish-baptism-1874-04104" in qa and st >= 144, f"1940-številcev={st}")
 
 i0 = src.find("P232: krstna PREDZGODOVINA 04104, leto 1874")
@@ -55,7 +55,7 @@ check("I8a meseci-BREZ-PRAZNIH + 1873-LEAD", "BREZ-PRAZNIH-MESECEV-1.-LINIJI" in
 check("I8b s47-SREDI-PAGI-MEJA-1874/75-P231 + GLAVE-'Jahr 1873'-×2", "s47-SREDI-PAGI-MEJA-1874/75-P231" in seg and "GLAVE-'Jahr 1873'-×2 (s36–s37!" in seg)
 check("I9a qa-p232 (232. kontrola!)", "qa-p232" in qa and "232. kontrola" in qa)
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-check("I9b pt-luknja-271/2043 + byBook-04104", '"vitalsTotal": 2043' in pt and '"04104": 288' in pt)
+check("I9b pt-luknja-271/2043 + byBook-04104", '"vitalsTotal": 2059' in pt and '"04104": 288' in pt)
 
 live = "--live" in sys.argv
 if live or "--check" not in sys.argv:

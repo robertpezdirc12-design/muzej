@@ -56,12 +56,12 @@ check("I4c sreda-ritem + DISPENS-3.-GRAD + 'f'-forenzika + '8-vs-2' + IZMENA-×2
       and "IZMENA-VLOG-×2" in an2 and "P229-z79" in an2)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 2043")
-check("I5 qa-p248 + števec-2043 (×150!)", "HOUSE_VITALS.length !== 1990" not in qa and st >= 150, f"2043-številcev={st}")
+st = qa.count("HOUSE_VITALS.length !== 2059")
+check("I5 qa-p248 + števec-2012 (×150!)", "HOUSE_VITALS.length !== 1990" not in qa and st >= 150, f"2012-številcev={st}")
 check("I5b sidra-262 + 1876:6-P248 (qa-sidra-message)", "poročna sidra ≠ 262 (1873:4-P251! · 1874:11-P250! · 1875:1-P249! · 1876:6-P248!" in qa)
 check("I5c dobe-220 + 50-pred-linijskih", "dobe-bloki ≠ 236/7/26" in qa and "66 pred-linijskih 1873-P251×4!+1874-P250×11!+1875-P249×1!+1876-P248×6!" in qa)
 check("I5d p80-1876:6-garda + sken-range-11–14", 'p80MarrAnchors.filter((h) => h.year === 1876).length !== 6' in qa and "skeni izven 11–14" in qa and "skeni izven 10–14" not in qa)
-check("I5e MILIČ-250-P257 + p85-izjemi-h30/h41-1876", "MILIC_FAMILY_TOTAL !== 250" in qa and 'v.year === 1876 && (hn === "30" || hn === "41"))' in qa)
+check("I5e MILIČ-250-P257 + p85-izjemi-h30/h41-1876", "MILIC_FAMILY_TOTAL !== 252" in qa and 'v.year === 1876 && (hn === "30" || hn === "41"))' in qa)
 
 i0 = src.find("P248: POROČNA PREDZGOVINA 04455, leto 1876")
 seg = src[i0:] if i0 >= 0 else ""
@@ -93,7 +93,7 @@ pt = json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding
 h44 = [x for x in pt["gapHouses"] if x["houseNo"] == "44"][0]
 h51 = [x for x in pt["gapHouses"] if x["houseNo"] == "51"][0]
 check("I8a pt-luknja-2008 + byBook-04455=265",
-      pt.get("vitalsTotal") == 2043 and pt.get("corpus", {}).get("byBook", {}).get("04455") == 269,
+      pt.get("vitalsTotal") == 2059 and pt.get("corpus", {}).get("byBook", {}).get("04455") == 269,
       f"vitalsTotal={pt.get('vitalsTotal')} 04455={pt.get('corpus', {}).get('byBook', {}).get('04455')}")
 check("I8b h44-posodobljen (24-blokov/04455=6/firstYear=1876/p248Note!) + h51-intakten (6/2!)",
       h44["blocksTotal"] == 24 and h44["byBook"]["04455"] == 6 and h44["firstYear"] == 1876 and "p248Note" in h44
@@ -106,8 +106,8 @@ check("I9 UI-MarriageEarly1876-v-ParishTab + importi + DVIG-kartica!",
       and "MARRIAGE_1876_KONTEKST" in ui and "MARRIAGE_1876_NUMBERING" in ui
       and "Poročna predzgodovina 04455 (P248): leto 1876 = 10/13" in ui)
 check("I9b worklog-P248-vnos", "## P248" in open(f"{ROOT}/worklog.md", encoding="utf-8").read())
-check("I9c stari-verifikatorji-na-živih-številkah (P257: 2043!)",
-      "2043" in open(f"{ROOT}/scripts/p238_parish_marriage_1885_04455.py", encoding="utf-8").read()
+check("I9c stari-verifikatorji-na-živih-številkah (P258: 2059!)",
+      "2059" in open(f"{ROOT}/scripts/p238_parish_marriage_1885_04455.py", encoding="utf-8").read()
       and "265" in open(f"{ROOT}/scripts/p242_parish_marriage_1881_04455.py", encoding="utf-8").read())
 
 # ——— I10: QA-živo ———
@@ -115,7 +115,7 @@ try:
     r = urllib.request.Request("http://localhost:3000/api/qa")
     with urllib.request.urlopen(r, timeout=30) as resp:
         qa_data = json.load(resp)
-    check("I10 QA-živo 251/251 ok:True", qa_data.get("ok") is True and qa_data.get("passed") == 251 and qa_data.get("failed") == 0,
+    check("I10 QA-živo 252/252 ok:True", qa_data.get("ok") is True and qa_data.get("passed") == 252 and qa_data.get("failed") == 0,
           f"passed={qa_data.get('passed')} failed={qa_data.get('failed')}")
 except Exception as e:
     check("I10 QA-živo", False, str(e)[:80])

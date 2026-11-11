@@ -1,12 +1,12 @@
 {
- "phase": "P254+P255+P256+P257 (regenerirano P257)",
- "title": "Hišne zgodbe globje — mreže hiš čez 6 knjig (+P257: 11 blokov 1830/1831!)",
+ "phase": "P254+P255+P256+P257+P258 (regenerirano P258)",
+ "title": "Hišne zgodbe globje — mreže hiš čez 6 knjig (+P258: 16 blokov 1831-konec/1832/1833!)",
  "date": "2026-11-11",
  "type": "sinteza-agregacija",
- "lead": "P252-lead-② + P253-korpus + P255-1828 + P256-1829 + P257-1830/1831 (korpus-1857→1828→1829→1830/31!)",
+ "lead": "P252-lead-② + P253 + P255–P257 + P258-meja-1831/32/33 (korpus-leta-1828–1833+1873!)",
  "source": {
   "corpus": "src/data/atlas/parish.ts HOUSE_VITALS",
-  "vitalsTotal": 2043,
+  "vitalsTotal": 2059,
   "books": 6,
   "bookSigs": [
    "01738",
@@ -16,7 +16,7 @@
    "04106",
    "04894"
   ],
-  "method": "agregacija vseh 2043 vitalnih blokov po hišni oznaki — 1:1 z runtime (qa-p254 živa rekalkulacija!)"
+  "method": "agregacija vseh 2059 vitalnih blokov po hišni oznaki — 1:1 z runtime (qa-p254 živa rekalkulacija!)"
  },
  "structure": {
   "housesTotal": 100,
@@ -32,9 +32,9 @@
    "sub dioe."
   ],
   "tiers": {
-   "six": 23,
-   "five": 41,
-   "four": 12,
+   "six": 31,
+   "five": 35,
+   "four": 10,
    "three": 8,
    "two": 8,
    "one": 8
@@ -44,9 +44,11 @@
  "sixBookHouses": {
   "houses": [
    "1",
+   "2",
    "3",
    "5",
    "6",
+   "8",
    "10",
    "11",
    "12",
@@ -60,6 +62,12 @@
    "28",
    "32",
    "33",
+   "35",
+   "36",
+   "42",
+   "46",
+   "47",
+   "48",
    "56",
    "61",
    "62",
@@ -67,12 +75,16 @@
    "65",
    "73"
   ],
-  "count": 23,
+  "count": 31,
   "note": "blok v VSEH 6 knjigah = polni življenjski cikel — P254: 9 → P255: 12 → P256: 16 → P257: 23 (h1/h11/h26/h27/h33/h56/h65 vstopajo prek 1831!)",
   "stories": {
    "1": {
     "si": "★★★ P257-hiša: m13-1831-ŽENIN-Math.-[Ianigl?~Muniz/Kranigh — 3-variant-GARBLE!] (ledina, GRIBLJE 1 × [Podierz?]-h11 — POLNI-DVOJNI!) — h1-firstYear-1861→1831 (DVIG 30!); 42 blokov 1831–1914 = 83 let (11 v 04106!); [~Muniz?-MUZ-kand. (1828-Semelj-nit!)]; h1 = ena-najstarejših-hiš-Griblja-številka-1!",
     "en": "★★★ The P257 house: the m13-1831 GROOM Math. [Ianigl?~3-variant-GARBLE!] (GRIBLJE 1 × the h11-bride — the FULL DOUBLE!) — the h1-firstYear-1861→1831 (LIFT 30!); 42 blocks 1831–1914 = 83 years (11 in 04106!); [~Muniz?-a-MUZ-cand.!]; h1 = the lowest Griblje house-number!"
+   },
+   "2": {
+    "si": "★★★★★ P258-hiša-DVAKRAT-V-ZAPOREDNIH-LETIH: 1831-NEVESTA-Anna-[~Kleberz=KLEBEC-kand.!] (24, GRIBLJE 2 × Johann-KLOBUČAR-h48 — POLNI-DVOJNI-24.-Avg!) + 1832-ŽENIN-Johann-[HLEBEC!] (21, oče-Johann-kmet!, GRIBLJE 2 × Anna-[~Petriz]-h42-[~Gríblje|Smrečje-DUEL] — POLNI-DVOJNI-[~]-29.-Febr-PRESTOPNI!) = ★-ISTA-HIŠA-2-LETI-ZAPORED-2-DRUGI-VLOGI (nevesta→ženin!) — h2-firstYear-1858→1831 (DVIG 27!) + ★★★★★-HLEBEC-NIT: 1832-h2 ↔ 1873-m11-h3-P253 (41-let!-sosednji-hiši!); 34 blokov 1831–1924 = 93 let (IZENAČI-h20/h22/h50!); zdaj-ŠEST-knjižna (23→31!)",
+    "en": "★★★★★ The P258 house TWICE-IN-CONSECUTIVE-YEARS: the 1831 BRIDE Anna [~Kleberz?] (GRIBLJE 2 × the KLOBUČAR-h48 — the FULL DOUBLE!) + the 1832 GROOM Johann [HLEBEC!] (GRIBLJE 2 × the h42-bride — the leap-day-FULL-DOUBLE-[~]!) = ★-THE-SAME-HOUSE-2-YEARS-2-DIFFERENT-ROLES (bride→groom!) — the h2-firstYear-1858→1831 (LIFT 27!) + ★★★★★ THE-HLEBEC-THREAD: 1832-h2 ↔ 1873-m11-h3 (41-years!); 34 blocks 1831–1924 = 93 years (ties-h20/h22/h50!); now-SIX-book (23→31!)"
    },
    "3": {
     "si": "HRIŽAN/KRIŽAN-hiša: ★★★★★ P257: m1-1831-ŽENIN-Peter-KRIŽAN (GRIBLJE 3 × [Dehligl?]-h33 — POLNI-DVOJNI!) + ★-mati-neveste-Dorothea-KRIŽAN = KRIŽAN-×2-V-ENI-VRSTICI! — h3-firstYear-1858→1831 (DVIG 27!) + 24 blokov 1831–1917 = 86 let; Peter-Hrižan krstni oče 1872–1881 (4 krsti) + †1888 Peter Križar/Križan 80 let; 1864 Georg DRAGOŠ †70 (najstarejša omemba); m11-HLEBEC-1873 (P253!); 1907 PEZDIREC-poroka.",
@@ -85,6 +97,10 @@
    "6": {
     "si": "NAJDALJŠA-HIŠA-KORPUSA (96 let!): m6-1828-nevesta-Maria-[Jan/Spin]-GRIBLJE-6 × ženin-Jure-STARA = PRVI-GRIBLJE-VPIS-PREDHODNIKA-01738 (P255 — korpus 1857→1828!); h6-firstYear-1860→1828 (DVIG 32!); 04104-trospec (8) + 04106 (6) + 04455 (5 porok!) + 04105 (8) + 04894 (8) = 36 blokov 1828–1924 čez VSEH 6 knjig!",
     "en": "THE-LONGEST-SPAN-HOUSE-OF-THE-CORPUS (96 years!): the m6-1828 bride Maria-GRIBLJE-6 × groom Jure-STARA = the FIRST Griblje entry of the 01738 predecessor (P255 — the corpus 1857→1828!); the h6-firstYear-1860→1828 (LIFT 32!); 36 blocks 1828–1924 across ALL 6 books!"
+   },
+   "8": {
+    "si": "★★★★★ P258-hiša-DVIG-40 = 2.-NAJVEČJI-VSEH-ČASOV: 1831-NEVESTA-Catharina-[~Klofčič] (18, GRIBLJE 8 × Matthias-KLOBUČAR-h46 — POLNI-DVOJNI-24.-Avg!-KLOBUČAR-BRATJE-m19×m20-ISTI-DAN!) — h8-firstYear-1871→1831 (DVIG 40!-za-h22-41-P255!-pred-h46/h66-36!) + 39 blokov 1831–1919 = 88 let; zdaj-ŠEST-knjižna (23→31!)",
+    "en": "★★★★★ The P258 house — THE-LIFT-40 = THE-2ND-LARGEST-EVER: the 1831 BRIDE Catharina [~Klofčič] (18, GRIBLJE 8 × the KLOBUČAR-h46 — the FULL DOUBLE of Aug 24!-the-KLOBUČAR-brothers-same-day!) — the h8-firstYear-1871→1831 (LIFT 40!-after-h22-41-P255!) + 39 blocks 1831–1919 = 88 years; now-SIX-book (23→31!)"
    },
    "10": {
     "si": "MUC-hiša: m6-1873 poroka neveste Muc — KOLBEZEN h16 × MUC h10 polni dvojni (P253!); KRAUE-h10 52-letna nevesta 1874 = NAJSTAREJŠA PREDZGODOVINE (P250!); 11 mrliških blokov 04106 (1857–1885) — med najglobljimi smrtnimi zgodovinami.",
@@ -115,8 +131,8 @@
     "en": "The BORŠT h20: ★★★ P256: the m2-1829 bride (Griblje 20 × the h32-groom — the FULL DOUBLE!) = h20-SECOND-01738-block (1829+1873!) — the h20-firstYear-1859→1829 (LIFT 30!) + span-1829–1922 = 93-years (ties-h22!); the z72/z73 TWINS 1871 (P235!); the PEZDIRC thread 1859→1919 (60 years!)."
    },
    "22": {
-    "si": "REKORD-DVIGA-41-LET: m13-1828-nevesta-Catra-[~Miller-garble-'Križan'-kand.!]-GRIBLJE-22 × Miko-TILLAR-h61 = POLNI-DVOJNI (P255!) — h22-firstYear-1869→1828 = ABSOLUTNI-REKORD-DVIGA-MATRIČNE-LINIJE; P256: m18-1829-nevesta-Maria-MILLER (h22 × KRIŽAN-h62!); ★★★★★ P257: m4-1830-NEVESTA-Anna-MILEK (oče-Joh.-Milek!) = ★-3-ZAPOREDNA-LETA-NEVEST-IZ-h22 (1828+1829+1830 — edino-3-letno-zaporedje-v-01738!) — [~X-OPEN: Miller-ali-Milek-družina? + h65-Milek-1831-vezava-kand.!]; 35 blokov 1828–1921 = 93 let!",
-    "en": "THE-41-YEAR-LIFT-RECORD: the m13-1828 bride Catra-GRIBLJE-22 × Miko-TILLAR-h61 = the FULL DOUBLE (P255!) — the h22-firstYear-1869→1828 = the ABSOLUTE-LIFT-RECORD; P256: the m18-1829 bride Maria MILLER (h22 × the KRIŽAN-h62!); ★★★★★ P257: the m4-1830 BRIDE Anna MILEK (father Joh. Milek!) = THREE-CONSECUTIVE-YEARS-OF-BRIDES-FROM-h22 (1828+1829+1830 — the only 3-year run in 01738!) — [~X-OPEN: Miller-or-Milek + the h65-1831-link-cand.!]; 35 blocks 1828–1921 = 93 years!"
+    "si": "REKORD-DVIGA-41-LET: m13-1828-nevesta-Catra-[~Miller-garble-'Križan'-kand.!]-GRIBLJE-22 × Miko-TILLAR-h61 = POLNI-DVOJNI (P255!) — h22-firstYear-1869→1828 = ABSOLUTNI-REKORD-DVIGA-MATRIČNE-LINIJE; P256: m18-1829-nevesta-Maria-MILLER (h22 × KRIŽAN-h62!); ★★★★★ P257: m4-1830-NEVESTA-Anna-MILEK (oče-Joh.-Milek!); ★★★★★★ P258: m8-1832-ŽENIN-Johann-MILEK (oče-Johann!-duel-'k'-ne-'ch'!) = ★★★-MILEK-DOMNEVA-POTRJENA (1830-Anna-+-1832-Johann = brat-sesta-ISTA-družina!) — h22-4-BLOKI-V-5-LETIH (1828+1829+1830+1832!-1831-edina-luknja!) — [~X-OPEN: Miller-garble-1828/1829-verjetno-ista!]; 36 blokov 1828–1921 = 93 let!",
+    "en": "THE-41-YEAR-LIFT-RECORD: the m13-1828 bride Catra (P255!) — the ABSOLUTE-LIFT-RECORD; P256: the m18-1829 bride Maria MILLER; ★★★★★ P257: the m4-1830 BRIDE Anna MILEK; ★★★★★★ P258: the m8-1832 GROOM Johann MILEK (father Johann!-the-letter-k!) = ★★★ THE-MILEK-HYPOTHESIS-CONFIRMED (brother-and-sister!) — h22-4-BLOCKS-IN-5-YEARS (1828+1829+1830+1832!-1831-the-only-gap!) — [~the-1828/1829-Miller-garble-likely-the-same!]; 36 blocks 1828–1921 = 93 years!"
    },
    "26": {
     "si": "★★★ P257-ANOMALIJA-hiša: m7-1831-'ženin'-MARIA-Pödiz? [~Pesdirz?~Podierz?—ŽENSKO-IME-V-ŽENINSKEM-STOLPCU!] ([~26|20-DUEL-w3-'26'-4:2], GRIBLJE 26 × [Maly?]-h27 — POLNI-DVOJNI-ANOMALIJA!) — h26-firstYear-1859→1831 (DVIG 28-[~]); 27 blokov 1831–1921 = 90 let (5.-mesto!); očeN-Georg-[Pödiz?]-istim-imenom-kot-m2-ženin!",
@@ -138,13 +154,37 @@
     "si": "★★★ P257-hiša: m1-1831-NEVESTA-Anna-[Dehligl?~Pehligh/Dölker—3-branja + očeN-Mario-Doblioz-DVOJMA!] (GRIBLJE 33 [~33|39-w3-'33'-3:2] × KRIŽAN-h3 — POLNI-DVOJNI!) — h33-firstYear-1859→1831 (DVIG 28-[~]); 31 blokov 1831–1922 = 91 let (IZENAČI-h11!); mati-Dorothea-KRIŽAN!",
     "en": "★★★ The P257 house: the m1-1831 BRIDE Anna [Dehligl?~3-reads + the father's-surname-DVOJMA!] (GRIBLJE 33 [~33|39] × the-KRIŽAN-h3 — the FULL DOUBLE!) — the h33-firstYear-1859→1831 (LIFT 28-[~]); 31 blocks 1831–1922 = 91 years (ties-h11!); the mother Dorothea KRIŽAN!"
    },
+   "35": {
+    "si": "★★★★★ P258-hiša-DVE-DRUŽINI-V-ENEM-LETU: 1832-m8-NEVESTA-Anna-[~Štremuz] (21, GRIBLJE 35 × Johann-MILEK-h22 — POLNI-DVOJNI-15.-Febr!) + 1832-m17-NEVESTA-Catharina-[~FLACH] (17, oče-Peter!, GRIBLJE 35 × Nicol-KRIŽAN-h36 — POLNI-DVOJNI-29.-Febr-PRESTOPNI!) = ★-DVA-PAROV-IZ-h35-V-14-DNEH-ISTEGA-LETA (cf.-h28-×2-1873!) — h35-firstYear-1867→1832 (DVIG 35!) + ★-FLACH-×2-NIT (h35+h61!) + 37 blokov 1832–1922 = 90 let + HRIŽAN-družina-04894:15-REKORD; zdaj-ŠEST-knjižna (23→31!)",
+    "en": "★★★★★ The P258 house — TWO-FAMILIES-IN-ONE-YEAR: the m8-1832 BRIDE Anna [~Štremuz] (GRIBLJE 35 × the MILEK-h22 — the FULL DOUBLE!) + the m17-1832 BRIDE Catharina [~FLACH] (GRIBLJE 35 × the KRIŽAN-h36 — the leap-day-FULL-DOUBLE!) = ★-TWO-COUPLES-FROM-h35-IN-14-DAYS (cf.-h28-×2-1873!) — the h35-firstYear-1867→1832 (LIFT 35!) + ★-THE-FLACH-×2-THREAD (h35+h61!) + 37 blocks 1832–1922 = 90 years + the HRIŽAN-04894:15-RECORD; now-SIX-book (23→31!)"
+   },
+   "36": {
+    "si": "★★★ P258-KRIŽAN-hiša: 1832-ŽENIN-Nicol-KRIŽAN (20, oče-Matthias!, GRIBLJE 36 × Catharina-[~Flach]-h35 — POLNI-DVOJNI-29.-Febr-prestopni!) — ★★★★★-KRIŽAN-KONGLOMERAT: 1831-h3 + 1832-h36 + 1832-h66 + 1873-h63 = 4-GRIBLJE-HIŠE + HRIŽAN-h62-ŠIV = 5-hiš-istega-korena! — h36-firstYear-1857→1832 (DVIG 25!); 34 blokov 1832–1917 = 85 let; zdaj-ŠEST-knjižna (23→31!)",
+    "en": "★★★ The P258-KRIŽAN house: the 1832 GROOM Nicol KRIŽAN (20, father-Matthias!, GRIBLJE 36 × the h35-bride — the leap-day-FULL-DOUBLE!) — ★★★★★ THE-KRIŽAN-CONGLOMERATE: 1831-h3 + 1832-h36 + 1832-h66 + 1873-h63 = 4-GRIBLJE-HOUSES + the h62-seam = 5-houses-of-one-root! — the h36-firstYear-1857→1832 (LIFT 25!); 34 blocks 1832–1917 = 85 years; now-SIX-book (23→31!)"
+   },
+   "42": {
+    "si": "★★★ P258-hiša-[~village-DUEL]: 1832-NEVESTA-Anna-[~Petriz] (17, oče-Matthias-kmet!, [~GRIBLJE-2:1|Smrečje?-DUEL-VAS-X-OPEN!] 42 × Johann-[HLEBEC]-h2 — POLNI-DVOJNI-[~]-29.-Febr-PRESTOPNI!) — h42-firstYear-1861→1832 (DVIG 29-[~vas-DUEL-ostaja!]); 28 blokov 1832–1912 = 80 let; zdaj-ŠEST-knjižna-[~DUEL] (23→31!)",
+    "en": "★★★ The P258 house-[~village-DUEL]: the 1832 BRIDE Anna [~Petriz] (17, [~GRIBLJE-2:1|Smrečje?-DUEL] 42 × the [HLEBEC]-h2 — the leap-day-FULL-DOUBLE-[~]!) — the h42-firstYear-1861→1832 (LIFT 29-[~duel-remains!]); 28 blocks 1832–1912 = 80 years; now-SIX-book-[~] (23→31!)"
+   },
+   "46": {
+    "si": "★★★ P258-KLOBUČAR-hiša: 1831-ŽENIN-Matthias-KLOBUČAR (27, oče-Mathias!, GRIBLJE 46 × Catharina-[~Klofčič]-h8 — POLNI-DVOJNI-24.-Avg!) — ★-KLOBUČAR-BRATJE-m19×m20 (h46×h8-+-h48×h2-DVA-POLNA-DVOJNA-ISTEGA-DNE!-[~bratje-kand.]) — h46-firstYear-1867→1831 (DVIG 36 = 3.-mesto-TROJNO-h46/h56/h66!); 39 blokov 1831–1920 = 89 let; zdaj-ŠEST-knjižna (23→31!)",
+    "en": "★★★ The P258-KLOBUČAR house: the 1831 GROOM Matthias KLOBUČAR (27, father-Mathias!, GRIBLJE 46 × the h8-bride — the FULL DOUBLE of Aug 24!) — ★-THE-KLOBUČAR-BROTHERS-m19×m20 (TWO-FULL-DOUBLES-OF-THE-SAME-DAY!) — the h46-firstYear-1867→1831 (LIFT 36 = the-3rd-place-TRIPLE!); 39 blocks 1831–1920 = 89 years; now-SIX-book (23→31!)"
+   },
+   "47": {
+    "si": "★★★★★ P258-PEZDIRC-PRIČA-hiša: 1831-NEVESTA-Maria-KLOBUČAR (20, GRIBLJE 47 × Andreas-[~Mercina|Hribar|Luminanic?-3-variant-GARBLE]-ŠKRILJE-1 — 9.-Febr-d°-12.-poroka-dneva!) — ★★★★★-PRIČA-AND.-PEZDIRC (duel-'Pezdirc'-jasno!-[~Simon-zavrnjen]) = 5.-VRSTICA-Pesdirc-družine-1831 (ženin+nevesta+ANOMALIJA+nevesta+PRIČA!-vse-vrste!) — h47-firstYear-1862→1831 (DVIG 31!); 19 blokov 1831–1919 = 88 let (TIHA-nova-šest-knjižna!); zdaj-ŠEST-knjižna (23→31!)",
+    "en": "★★★★★ The P258 PEZDIRC-WITNESS house: the 1831 BRIDE Maria KLOBUČAR (20, GRIBLJE 47 × Andreas-[~3-variant-GARBLE]-of-ŠKRILJE-1 — the Feb-9-d°-12th-wedding!) — ★★★★★ THE-WITNESS-AND.-PEZDIRC = the-5th-ROW-of-the-1831-Pesdirc-family (all-kinds!) — the h47-firstYear-1862→1831 (LIFT 31!); 19 blocks 1831–1919 = 88 years (a-quiet-new-six-book!); now-SIX-book (23→31!)"
+   },
+   "48": {
+    "si": "★★★ P258-KLOBUČAR-2-hiša: 1831-ŽENIN-Johann-KLOBUČAR (29, GRIBLJE 48 × Anna-[~Kleberz]-h2 — POLNI-DVOJNI-24.-Avg-d°-ISTI-DAN-kot-m19!) — [~očeN-Vincenz-PARON?-BARON-m21-veza-kand.!] — h48-firstYear-1857→1831 (DVIG 26!); 33 blokov 1831–1922 = 91 let (IZENAČI-h11/h33!); zdaj-ŠEST-knjižna (23→31!)",
+    "en": "★★★ The P258-KLOBUČAR-2 house: the 1831 GROOM Johann KLOBUČAR (29, GRIBLJE 48 × the h2-bride — the FULL-DOUBLE-same-day-as-m19!) — [~the-father-Vincenz-BARON?-candidate!] — the h48-firstYear-1857→1831 (LIFT 26!); 33 blocks 1831–1922 = 91 years (ties-h11/h33!); now-SIX-book (23→31!)"
+   },
    "56": {
-    "si": "P257-hiša: m3-1831-ŽENIN-Math.-[Kiniz?~Schimiz/Štimic—3-branja] (32, GRIBLJE 56 × [Pedierz?]-Podzemelj-3 — pol-dvojni!) — h56-firstYear-1867→1831 (DVIG 36 — 3.-največji-vseh-časov!); 14 blokov 1831–1908 = 77 let; mati-[Klepz?]-KLEPEC-nit-kand. (continuum-1828/1829!)",
-    "en": "The P257 house: the m3-1831 GROOM Math. [Kiniz?~DUEL] (32, GRIBLJE 56 × the Podzemelj-3-bride — a half-double!) — the h56-firstYear-1867→1831 (LIFT 36 — the-3rd-largest!); 14 blocks 1831–1908 = 77 years; the-[Klepz?]-KLEPEC-thread"
+    "si": "P257-hiša: m3-1831-ŽENIN-Math.-[Kiniz?~Schimiz/Štimic—3-branja] (32, GRIBLJE 56 × [Pedierz?]-Podzemelj-3) — ★★★★ P258: m23-1832-ŽENIN-Peter-[~SIMIG=ŠIMIČ?|Himiz?—3-variant-DUEL-vsi-'-imiz'!] (36, oče-Nicol-[~Šimič!]!, GRIBLJE 56 × Anna-[~Filach]-h61 — POLNI-DVOJNI-28.-Nov!) = 2.-družina-h56-01738 (1831+1832!) + [~ŠIMIČ-kand.-nit-h49-1833!] — h56-firstYear-1867→1831 (DVIG 36 — 3.-največji-trojno-h46/h56/h66!); 15 blokov 1831–1908 = 77 let; mati-[Klepz?]-KLEPEC-nit-kand. (continuum-1828/1829!)",
+    "en": "The P257 house: the m3-1831 GROOM Math. [Kiniz?~DUEL] — ★★★★ P258: the m23-1832 GROOM Peter [~ŠIMIČ?] (36, father Nicol!, GRIBLJE 56 × the [Filach]-h61 — the FULL DOUBLE!) = the-2nd-family-of-h56 + [~the-ŠIMIČ-h49-1833-thread!] — the h56-firstYear-1867→1831 (LIFT 36 — the-triple-3rd!); 15 blocks 1831–1908 = 77 years; the-[Klepz?]-KLEPEC-thread"
    },
    "61": {
-    "si": "TILLAR-hiša: m13-1828-ženin-Miko-TILLAR-½-Gütl-GRIBLJE-61 × nevesta-h22 = POLNI-DVOJNI (P255!) — TILLAR-NIT-×2 (m2-1828-mati-Anna-Tillar-Boršt-13!); h61-firstYear-1862→1828 (DVIG 34!); 3-poroke-04455 (1879-29 + …) + 04105-×4 + 04894-×6 = 17 blokov 1828–1919 = 91 let.",
-    "en": "The TILLAR house: the m13-1828 groom Miko-TILLAR-½-Gütl-GRIBLJE-61 × the h22-bride = the FULL DOUBLE (P255!) — the TILLAR-thread-×2 (the m2-1828 mother Anna Tillar of Boršt 13!); the h61-firstYear-1862→1828 (LIFT 34!); 17 blocks 1828–1919 = 91 years."
+    "si": "TILLAR-hiša: m13-1828-ženin-Miko-TILLAR-½-Gütl-GRIBLJE-61 × nevesta-h22 = POLNI-DVOJNI (P255!) — TILLAR-NIT-×2 (m2-1828-mati-Anna-Tillar-Boršt-13!); ★★★★ P258: m23-1832-NEVESTA-Anna-[~FILACH=FLACH?] (22, oče-Nicol!, GRIBLJE 61 × Peter-[~Šimič]-h56 — POLNI-DVOJNI-28.-Nov!) = 3.-blok-01738 + ★-TILLAR→FILACH-ZAMENJAVA-DRUŽIN-h61 ([~X-OPEN: prodana-kmetija?]) + FLACH-×2-nit (h35!); h61-firstYear-1862→1828 (DVIG 34!); 18 blokov 1828–1919 = 91 let.",
+    "en": "The TILLAR house: the m13-1828 groom Miko-TILLAR × the h22-bride = the FULL DOUBLE (P255!) — the TILLAR-thread-×2; ★★★★ P258: the m23-1832 BRIDE Anna [~FILACH] (father Nicol!, GRIBLJE 61 × the [Šimič]-h56 — the FULL DOUBLE!) = the-3rd-01738-block + ★-THE-TILLAR→FILACH-FAMILY-CHANGE ([~X-OPEN]) + the-FLACH-×2-thread (h35!); the h61-firstYear-1862→1828 (LIFT 34!); 18 blocks 1828–1919 = 91 years."
    },
    "62": {
     "si": "★★★★★ KRIŽAN-HRIŽAN-hiša-44-LET: m18-1829 ŽENIN Matthe KRIŽAN (GRIBLJE 62 × Miller-h22 — POLNI-DVOJNI, P256!) + m18-1873 NEVESTA Maria HRIŽAN (h62 × Gabovšič-h13 — ŠIV-P253!) = ISTA-HIŠA-1829–1873!; h62-firstYear-1864→1829 (DVIG 35 = največji P256!); 29 blokov 1829–1924 = 95 let (2.-najdaljši-za-h6-96!)",
@@ -175,16 +215,10 @@
    "60": [
     "01738"
    ],
-   "46": [
-    "01738"
-   ],
    "4": [
     "01738"
    ],
    "69": [
-    "01738"
-   ],
-   "48": [
     "01738"
    ],
    "72": [
@@ -208,6 +242,9 @@
    "7": [
     "01738"
    ],
+   "66": [
+    "04455"
+   ],
    "29": [
     "01738"
    ],
@@ -223,10 +260,10 @@
    "31": [
     "01738"
    ],
-   "74": [
-    "01738"
+   "49": [
+    "04455"
    ],
-   "8": [
+   "74": [
     "01738"
    ],
    "53": [
@@ -250,16 +287,7 @@
    "25": [
     "04106"
    ],
-   "36": [
-    "01738"
-   ],
    "14": [
-    "01738"
-   ],
-   "2": [
-    "01738"
-   ],
-   "35": [
     "01738"
    ],
    "78": [
@@ -274,13 +302,7 @@
    "21": [
     "01738"
    ],
-   "42": [
-    "01738"
-   ],
    "58": [
-    "01738"
-   ],
-   "47": [
     "01738"
    ],
    "54": [
@@ -330,6 +352,19 @@
    ],
    "note": "P255: h6-1828→1924 (96!); P257: h50-93-NOVO-3.-mesto + h11/h33-91 + h26-90"
   },
+  "firstYearLiftsP258": {
+   "h8": 40,
+   "h46": 36,
+   "h66": 36,
+   "h35": 35,
+   "h47": 31,
+   "h42": 29,
+   "h2": 27,
+   "h48": 26,
+   "h36": 25,
+   "h49": 25,
+   "note": "P258: 10 dvigov (h8 −40 = 2. največji vseh časov za h22-41-P255!); h46/h56/h66 = 3.-mesto-TROJNO!; h22-BREZ-dviga-ampak-4.-BLOK-V-5-LETIH (1828/29/30/32!); h35-×2-DVE-DRUŽINI-1832!; h42-[~village-DUEL]"
+  },
   "firstYearLiftsP257": {
    "h54": 37,
    "h56": 36,
@@ -365,17 +400,19 @@
   "bothEraCoverage": {
    "krstna": 69,
    "mrlishka": 75,
-   "porocna": 26,
-   "note": "P257: poročna obe-eri 17→26 (+9 — vse-10-hiš-1831-imajo-04455-poročne!)"
-  }
+   "porocna": 34,
+   "note": "P258: poročna obe-eri 26→34 (+8 — h47/h46/h8/h48/h2/h35/h36/h42-dodane!-h66/h49-BREZ-04455-poročne-vrzeli!)"
+  },
+  "p258vrzeli": "h66 + h49 = 5 knjig BREZ 04455 (poročni vrzeli!); h50 = 5 knjig BREZ 04104!",
+  "m2anomalija1832": "P258: m2-1832-'ženin'-MARIA-VIPAVC — ŽENSKO-IME-V-ŽENINSKEM-STOLPCU (duel-črko-za-črko-'M-a-r-i-a'!-2.-za-P257-m7!) + m3-[~Marino-MOŠKI-DUEL]"
  },
  "bookMeta": [
   {
    "sig": "01738",
    "role": "poročna-predhodnik",
-   "years": "1828 + 1829 + 1830 + 1831 + 1873",
-   "blocks": 31,
-   "houses": 26
+   "years": "1828–1833 + 1873",
+   "blocks": 47,
+   "houses": 36
   },
   {
    "sig": "04104",
@@ -434,18 +471,19 @@
   {
    "houseNo": "2",
    "kind": "griblje",
-   "blocks": 32,
-   "books": 5,
+   "blocks": 34,
+   "books": 6,
    "perBook": {
+    "01738": 2,
     "04104": 4,
     "04105": 6,
     "04455": 3,
     "04106": 7,
     "04894": 12
    },
-   "firstYear": 1858,
+   "firstYear": 1831,
    "lastYear": 1924,
-   "span": 66
+   "span": 93
   },
   {
    "houseNo": "3",
@@ -533,18 +571,19 @@
   {
    "houseNo": "8",
    "kind": "griblje",
-   "blocks": 38,
-   "books": 5,
+   "blocks": 39,
+   "books": 6,
    "perBook": {
+    "01738": 1,
     "04104": 6,
     "04105": 7,
     "04455": 7,
     "04106": 11,
     "04894": 7
    },
-   "firstYear": 1871,
+   "firstYear": 1831,
    "lastYear": 1919,
-   "span": 48
+   "span": 88
   },
   {
    "houseNo": "9",
@@ -764,10 +803,10 @@
   {
    "houseNo": "22",
    "kind": "griblje",
-   "blocks": 35,
+   "blocks": 36,
    "books": 6,
    "perBook": {
-    "01738": 3,
+    "01738": 4,
     "04104": 7,
     "04105": 7,
     "04455": 5,
@@ -978,34 +1017,36 @@
   {
    "houseNo": "35",
    "kind": "griblje",
-   "blocks": 35,
-   "books": 5,
+   "blocks": 37,
+   "books": 6,
    "perBook": {
+    "01738": 2,
     "04104": 5,
     "04105": 7,
     "04455": 5,
     "04106": 3,
     "04894": 15
    },
-   "firstYear": 1867,
+   "firstYear": 1832,
    "lastYear": 1922,
-   "span": 55
+   "span": 90
   },
   {
    "houseNo": "36",
    "kind": "griblje",
-   "blocks": 33,
-   "books": 5,
+   "blocks": 34,
+   "books": 6,
    "perBook": {
+    "01738": 1,
     "04104": 2,
     "04105": 12,
     "04455": 4,
     "04106": 6,
     "04894": 9
    },
-   "firstYear": 1857,
+   "firstYear": 1832,
    "lastYear": 1917,
-   "span": 60
+   "span": 85
   },
   {
    "houseNo": "37",
@@ -1090,18 +1131,19 @@
   {
    "houseNo": "42",
    "kind": "griblje",
-   "blocks": 27,
-   "books": 5,
+   "blocks": 28,
+   "books": 6,
    "perBook": {
+    "01738": 1,
     "04104": 3,
     "04105": 5,
     "04455": 5,
     "04106": 6,
     "04894": 8
    },
-   "firstYear": 1861,
+   "firstYear": 1832,
    "lastYear": 1912,
-   "span": 51
+   "span": 80
   },
   {
    "houseNo": "43",
@@ -1153,73 +1195,77 @@
   {
    "houseNo": "46",
    "kind": "griblje",
-   "blocks": 38,
-   "books": 5,
+   "blocks": 39,
+   "books": 6,
    "perBook": {
+    "01738": 1,
     "04104": 4,
     "04105": 12,
     "04455": 7,
     "04106": 4,
     "04894": 11
    },
-   "firstYear": 1867,
+   "firstYear": 1831,
    "lastYear": 1920,
-   "span": 53
+   "span": 89
   },
   {
    "houseNo": "47",
    "kind": "griblje",
-   "blocks": 18,
-   "books": 5,
+   "blocks": 19,
+   "books": 6,
    "perBook": {
+    "01738": 1,
     "04104": 1,
     "04105": 5,
     "04455": 2,
     "04106": 7,
     "04894": 3
    },
-   "firstYear": 1862,
+   "firstYear": 1831,
    "lastYear": 1919,
-   "span": 57
+   "span": 88
   },
   {
    "houseNo": "48",
    "kind": "griblje",
-   "blocks": 32,
-   "books": 5,
+   "blocks": 33,
+   "books": 6,
    "perBook": {
+    "01738": 1,
     "04104": 5,
     "04105": 8,
     "04455": 4,
     "04106": 8,
     "04894": 7
    },
-   "firstYear": 1857,
+   "firstYear": 1831,
    "lastYear": 1922,
-   "span": 65
+   "span": 91
   },
   {
    "houseNo": "49",
    "kind": "griblje",
-   "blocks": 28,
-   "books": 4,
+   "blocks": 29,
+   "books": 5,
    "perBook": {
+    "01738": 1,
     "04104": 7,
     "04105": 6,
     "04106": 7,
     "04894": 8
    },
-   "firstYear": 1858,
+   "firstYear": 1833,
    "lastYear": 1918,
-   "span": 60
+   "span": 85
   },
   {
    "houseNo": "50",
    "kind": "griblje",
-   "blocks": 12,
+   "blocks": 13,
    "books": 5,
    "perBook": {
-    "01738": 1,
+    "01738": 2,
     "04105": 1,
     "04455": 3,
     "04106": 6,
@@ -1309,10 +1355,10 @@
   {
    "houseNo": "56",
    "kind": "griblje",
-   "blocks": 14,
+   "blocks": 15,
    "books": 6,
    "perBook": {
-    "01738": 1,
+    "01738": 2,
     "04104": 2,
     "04105": 3,
     "04455": 3,
@@ -1389,10 +1435,10 @@
   {
    "houseNo": "61",
    "kind": "griblje",
-   "blocks": 17,
+   "blocks": 18,
    "books": 6,
    "perBook": {
-    "01738": 1,
+    "01738": 2,
     "04104": 1,
     "04105": 4,
     "04455": 3,
@@ -1473,17 +1519,18 @@
   {
    "houseNo": "66",
    "kind": "griblje",
-   "blocks": 13,
-   "books": 4,
+   "blocks": 14,
+   "books": 5,
    "perBook": {
+    "01738": 1,
     "04104": 2,
     "04105": 4,
     "04106": 5,
     "04894": 2
    },
-   "firstYear": 1868,
+   "firstYear": 1832,
    "lastYear": 1909,
-   "span": 41
+   "span": 77
   },
   {
    "houseNo": "67",

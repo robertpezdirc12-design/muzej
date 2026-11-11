@@ -1,0 +1,838 @@
+{
+ "phase": "P258",
+ "title": "NOTRANJOST-01738: MEJA-1831/32/33 — 1831-konec (m14–m24) + leto 1832 (m1–m23) + začetek 1833 (m1–m6)",
+ "generatedAt": "2026-11-11 (P258)",
+ "vir": {
+  "bookSignature": "01738",
+  "bookTitle": "Poročna knjiga / Trauungsbuch (1828–1873)",
+  "source": "Matricula Online (data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/01738/)",
+  "scans": "s8 (Pag. 13/14) + s9 (Pag. 15/16) + s10 (Pag. 17/18) — foliacija Pag = 2·sken − 3 POTRJENA ×9 (svinčnik 15/16 na s9 + 17/18 na s10!)",
+  "md5": {
+   "s8": "15c120e88e48b485c89e53e3640f8111",
+   "s9": "959869b15f9725dc13898bbce7abba7d",
+   "s10": "cb608199ce471054fa8085874946f848"
+  },
+  "md5Metoda": "2× neodvisen prenos 1:1 (skupaj 5. prenos notranjosti — P255/P256/P257 + P258!)",
+  "inventar": "147 URL base64-dekodiranih 1:1 (P253/P255-zahteva!)"
+ },
+ "struktura": {
+  "leto1831konec": "s8 = Pag. 13/14 — 1831-se-nadaljuje-ČEZ-mejo-strani (P257-s7-m13-NI-bil-konec-leta!): m14 = 9. Febr-d° (12.-poroka-istega-dne!-skupaj-12-na-9.-Febr-1831!) + m15/m16 = 14. Febr-×2 + m17 = 6. Juni + m18 = [~24.|2.-DUEL]-Juli + m19/m20 = 24. Avg-×2 (KLOBUČAR!) + m21 = [~1.|13.]-Nov (BARON!) + m22 = 6. 9ber-d° + m23 = 20. 9ber + m24 = 23. 9ber-d° — leto-1831-SKUPAJ-24-VPISOV (13+11-na-2-straneh!)",
+  "leto1832": "s9 = Pag. 15/16 — RESTART-letnice-1832-v-glavi (prvi-vpis-18. Jänner!): m1–m3 = 18. Jän-×3 + m4 = 25. + m5 = 29. Jän + m6–m9 = 15. Febr-×4 + m10 = 22. Febr + m11–m15 = 29. Febr-×5; s10-zgornji-del: m16–m19 = 29. Febr-d°-×4 (SKUPAJ-★-9-POROK-NA-PRESTOPNI-DAN-29.-2.-1832 = NAJVEČJI-MNOŽIČNI-DAN-KORPUSA!) + m20 = 5. März + m21 = 28. Mai + m22 = 20. Juni + m23 = 28. Nov — 23-VPISOV",
+  "leto1833": "s10-spodnji-del — RESTART-letnice-1833-ROKOPISNO-NAD-datumom-prve-vrstice ([~3.|5.]-Febr-DUEL-2:2-census+region-'3.'-vs-pass1+row-'5.'!): m1 = [~3.|5.]-Febr + m2–m6 = 6. Febr-×5-d° (m6-=-Johann-PESDIRZ-h50-ZADNJA-VRSTICA-STRANI!) — 6-VPISOV-1833 (nadaljevanje-na-s11-Pag.-19-P259!)",
+  "foliacija": "Pag = 2·sken − 3: s8=13, s9=15 (svinčnik-15/16-VIDEN!), s10=17 (svinčnik-17/18-VIDEN!) — ×9-potrjeno",
+  "dolžinaFaze": "40-vpisov (11+15+14) — NAJVEČJA-NOTRANJOST-FAZA (prej-P256-20-+-P257-21!)"
+ },
+ "leta": {
+  "1831konec": [
+   {
+    "m": 14,
+    "datum": "9. Febr d°",
+    "zenin": {
+     "ime": "Andreas [~Mercina|Hribar|Luminanic?—3-variant-TEŽAK-GARBLE-X-OPEN]",
+     "starost": 19,
+     "vas": "Škrilje",
+     "hisa": 1
+    },
+    "nevesta": {
+     "ime": "Maria Klobučar",
+     "starost": 20,
+     "vas": "Griblje",
+     "hisa": 47
+    },
+    "starsi_zenin": "Josep [~Mercina]",
+    "price": "★ AND. PEZDIRC! (duel-'Pezdirc'-jasno!-[~Simon-zavrnjen]) + Dorothea [~]",
+    "scan": 8,
+    "opomba": "12.-poroka-9.-Febr-1831! + PEZDIRC-priča = 5.-vrstica-družine-1831!"
+   },
+   {
+    "m": 15,
+    "datum": "14. Febr",
+    "zenin": {
+     "ime": "Georg [~Staroling|Starohin?]",
+     "starost": 35,
+     "vas": "[~Krasting?]",
+     "hisa": 17
+    },
+    "nevesta": {
+     "ime": "Barbara [~Kostjan|Hribernik?]",
+     "starost": 28,
+     "vas": "Osilnica",
+     "hisa": 16
+    },
+    "starsi_zenin": "Johann [~Staroling]",
+    "starsi_nevesta": "Miha [~Kostjan]",
+    "scan": 8
+   },
+   {
+    "m": 16,
+    "datum": "14. Febr d°",
+    "zenin": {
+     "ime": "Joseph [~Kermann|Pavšelč?]",
+     "starost": 60,
+     "vas": "[~Gradač]",
+     "hisa": 35,
+     "status": "Wittwer (vdovec!)"
+    },
+    "nevesta": {
+     "ime": "Johanna [~Jakl]",
+     "starost": 38,
+     "vas": "[~Gradač]",
+     "hisa": 38
+    },
+    "scan": 8
+   },
+   {
+    "m": 17,
+    "datum": "6. Juni",
+    "zenin": {
+     "ime": "Michel BUTALA",
+     "starost": 42,
+     "vas": "Sodevci",
+     "hisa": 26,
+     "status": "ledina"
+    },
+    "nevesta": {
+     "ime": "Maria [~Krischan=KRIŽAN?]",
+     "starost": 26,
+     "vas": "[~Osilnica 2:1|Griblje 1]",
+     "hisa": 16
+    },
+    "starsi_zenin": "Peter Butala!",
+    "starsi_nevesta": "Joh. [~Krischan]",
+    "scan": 8,
+    "opomba": "BUTALA-oče-Peter (continuum-1828-Jakob-Butala-P255!)"
+   },
+   {
+    "m": 18,
+    "datum": "[~24.|2.-DUEL]-Juli",
+    "zenin": {
+     "ime": "Ignatius [~Ferjančec]",
+     "starost": 27,
+     "vas": "Metlika (Mödling)",
+     "hisa": 9
+    },
+    "nevesta": {
+     "ime": "Magdalena [~Trauttwein?|Schatzberg?]",
+     "starost": 23,
+     "vas": "[~Gradišče]",
+     "hisa": "[~1|7-DUEL]"
+    },
+    "scan": 8,
+    "opomba": "METLIKA-2.-omemba-notranjosti (za-1830-METLIKA-140-P257!)"
+   },
+   {
+    "m": 19,
+    "datum": "24. Avg",
+    "zenin": {
+     "ime": "Matthias KLOBUČAR",
+     "starost": 27,
+     "vas": "Griblje",
+     "hisa": 46
+    },
+    "nevesta": {
+     "ime": "Catharina [~Klofčič|Klopčič?]",
+     "starost": 18,
+     "vas": "Griblje",
+     "hisa": 8
+    },
+    "starsi_zenin": "Mathias Klobučar",
+    "starsi_nevesta": "Matthias [~Klofčič]",
+    "scan": 8,
+    "opomba": "POLNI-DVOJNI-h46×h8 + KLOBUČAR-BRATJE-m19×m20!"
+   },
+   {
+    "m": 20,
+    "datum": "24. Avg d°",
+    "zenin": {
+     "ime": "Johann KLOBUČAR",
+     "starost": 29,
+     "vas": "Griblje",
+     "hisa": 48
+    },
+    "nevesta": {
+     "ime": "Anna [~Kleberz=KLEBEC-kand.!|Scalec?]",
+     "starost": 24,
+     "vas": "Griblje",
+     "hisa": 2
+    },
+    "starsi_nevesta": "[~Vincenz Paron?-BARON-veza-kand.!]",
+    "scan": 8,
+    "opomba": "POLNI-DVOJNI-h48×h2 + ISTI-DAN-kot-m19!"
+   },
+   {
+    "m": 21,
+    "datum": "[~1.|13.]-Nov",
+    "zenin": {
+     "ime": "Aloys BARON (★-k.k.-[~Postmeister?|Zythman?]-v-pokoj-u!)",
+     "starost": 42,
+     "vas": "Gradac",
+     "hisa": 1,
+     "status": "upokojeni-cesarski-uradnik"
+    },
+    "nevesta": {
+     "ime": "Helena [~Rubi|Dubil?]",
+     "starost": 29,
+     "vas": "Gradac",
+     "hisa": 1
+    },
+    "scan": 8,
+    "opomba": "EDINA-plemiško-uradniška-vrstica-notranjosti! [~rojen-v-Bosovnjah?-X-OPEN]"
+   },
+   {
+    "m": 22,
+    "datum": "6. 9ber d°",
+    "zenin": {
+     "ime": "Nicolaus MUZ",
+     "starost": 32,
+     "vas": "Semelj (Podzemelj)",
+     "hisa": 24
+    },
+    "nevesta": {
+     "ime": "Anna [~Tönz?|Novigk?|Tomažič?—DUEL]",
+     "starost": 29,
+     "vas": "Semelj",
+     "hisa": 15
+    },
+    "starsi_zenin": "Lucas Muz!",
+    "starsi_nevesta": "Nicolaus [~Kovačič?]",
+    "scan": 8,
+    "opomba": "MUZ-continuum (1828-P255-×4!-oče-Lucas!)"
+   },
+   {
+    "m": 23,
+    "datum": "20. 9ber",
+    "zenin": {
+     "ime": "Martin [~Stephan=ŠTEFANČIČ?]",
+     "starost": 23,
+     "vas": "[~Wörth?|Niedoipriß?-garble]",
+     "hisa": 9,
+     "status": "tujg-iz-Semelja"
+    },
+    "nevesta": {
+     "ime": "Maria Josepha [~Stephanovič?]",
+     "starost": 27,
+     "vas": "Dobrava",
+     "hisa": 8,
+     "status": "nigh-Srümelj (iz-Semelja!)"
+    },
+    "starsi_zenin": "Marcus Stephan",
+    "starsi_nevesta": "Martin Stephan",
+    "scan": 8
+   },
+   {
+    "m": 24,
+    "datum": "23. 9ber d°",
+    "zenin": {
+     "ime": "Mathias HOČEVAR",
+     "starost": 30,
+     "vas": "Prest",
+     "hisa": 108,
+     "status": "tujg-Prest"
+    },
+    "nevesta": {
+     "ime": "Maria [~Hasle|Höffler?]",
+     "starost": 45,
+     "vas": "Dobrava",
+     "hisa": 36,
+     "status": "nigh-Srümelj + geborna-[~Baben-Mighl?]"
+    },
+    "starsi_zenin": "Johann Hočevar",
+    "starsi_nevesta": "Mathias [~Kalšič?]",
+    "scan": 8,
+    "opomba": "ZADNJI-VPIS-leta-1831 (m24!)"
+   }
+  ],
+  "1832": [
+   {
+    "m": 1,
+    "datum": "18. Jän 1832",
+    "zenin": {
+     "ime": "Georg [~Surajes|Surajofz|Harejž?—3-variant]",
+     "starost": 26,
+     "vas": "[~Gradac|Prädaz|Derštouz?]",
+     "hisa": 49
+    },
+    "nevesta": {
+     "ime": "Catharina [~Bergant?|Ber?]",
+     "starost": 23,
+     "vas": "[~Derberg?]",
+     "hisa": 1
+    },
+    "scan": 9,
+    "opomba": "RESTART-1832 (glava-'1832'!)"
+   },
+   {
+    "m": 2,
+    "datum": "18. Jän d°",
+    "zenin": {
+     "ime": "★-ANOMALIJA-MARIA VIPAVC (ŽENSKO-IME!-duel-'M-a-r-i-a'-končnica-'a'!)",
+     "starost": 48,
+     "vas": "[~Krajnc]",
+     "hisa": "[~34|24-DUEL]"
+    },
+    "nevesta": {
+     "ime": "Anna [~Klepez=KLEPEC?]",
+     "starost": 26,
+     "vas": "[~Boršt?]",
+     "hisa": 21
+    },
+    "starsi_zenin": "[~Maria-Vipavz?-ponovitev]",
+    "starsi_nevesta": "[~Janž-Klepec!]",
+    "scan": 9,
+    "opomba": "2.-ANOMALIJA-za-P257-m7!-[~vdova?-pisarska-napaka?-X-OPEN]"
+   },
+   {
+    "m": 3,
+    "datum": "18. Jän d°",
+    "zenin": {
+     "ime": "[~Marino-MOŠKI!|Maria?-DUEL]-[~Talkarigh|Tolkarigh?]",
+     "starost": 35,
+     "vas": "[~Prilogje?]",
+     "hisa": 30
+    },
+    "nevesta": {
+     "ime": "Anna [~Taschig?]-geb.-[~Botschel?]",
+     "starost": 32,
+     "vas": "[~Regina-vas?]",
+     "hisa": 13
+    },
+    "starsi_zenin": "[~Joh.-Pytala?]",
+    "scan": 9,
+    "opomba": "3.-ANOMALIJA-KANDIDAT (a-duel-'končnica-o'-MOŠKO!)"
+   },
+   {
+    "m": 4,
+    "datum": "25. Jän d°",
+    "zenin": {
+     "ime": "Johann [~Morauz|Moravc?]",
+     "starost": 27,
+     "vas": "[~Krajnc]",
+     "hisa": 22
+    },
+    "nevesta": {
+     "ime": "Cath. [~Petriž?]",
+     "starost": 23,
+     "vas": "[~Krajnc]",
+     "hisa": 3
+    },
+    "starsi_zenin": "Joh. [~Morauz]",
+    "scan": 9
+   },
+   {
+    "m": 5,
+    "datum": "29. Jän d°",
+    "zenin": {
+     "ime": "Martin [~Krefta?]",
+     "starost": 34,
+     "vas": "[~Gradac|Prädaz?]",
+     "hisa": "[~18|48-DUEL]",
+     "status": "[~vdovec?]"
+    },
+    "nevesta": {
+     "ime": "Gertrud [~Pevac?]",
+     "starost": 19,
+     "vas": "[~Gumnišče?]",
+     "hisa": 16
+    },
+    "starsi_zenin": "Math. [~Krefta]",
+    "scan": 9
+   },
+   {
+    "m": 6,
+    "datum": "15. Febr",
+    "zenin": {
+     "ime": "Matthias NOVAK",
+     "starost": 24,
+     "vas": "[~Vranovič?]",
+     "hisa": 11
+    },
+    "nevesta": {
+     "ime": "Maria [~Heipa?|Sipuš?|Hrija?]",
+     "starost": 24,
+     "vas": "[~Gradec?]",
+     "hisa": 6
+    },
+    "starsi_zenin": "Michael Novak",
+    "starsi_nevesta": "Martin [~Heipa]",
+    "scan": 9
+   },
+   {
+    "m": 7,
+    "datum": "15. Febr d°",
+    "zenin": {
+     "ime": "Georg [~Muz=MUC?|Matz?]",
+     "starost": 19,
+     "vas": "[~Görn?]",
+     "hisa": "[~27|24]"
+    },
+    "nevesta": {
+     "ime": "Maria [~Popič?|Popiž?]",
+     "starost": 19,
+     "vas": "[~Görprihl?]",
+     "hisa": 35
+    },
+    "starsi_zenin": "Martin [~Muz]",
+    "scan": 9
+   },
+   {
+    "m": 8,
+    "datum": "15. Febr d°",
+    "zenin": {
+     "ime": "★-Johann MILEK (duel-'k'-NE-'ch'!)",
+     "starost": 26,
+     "vas": "Griblje",
+     "hisa": 22
+    },
+    "nevesta": {
+     "ime": "Anna [~Štremuz|Štremiz?]",
+     "starost": 21,
+     "vas": "Griblje",
+     "hisa": 35
+    },
+    "starsi_zenin": "★-Johann [Milch/Milek]!",
+    "starsi_nevesta": "Johann [~Štremiz]",
+    "scan": 9,
+    "opomba": "★★★★★-POLNI-DVOJNI-h22×h35 + MILEK-DOMNEVA-POTRJENA (brat-1830-Anna!)"
+   },
+   {
+    "m": 9,
+    "datum": "15. Febr d°",
+    "zenin": {
+     "ime": "Martin [~Potha?|Pejka?—garble]",
+     "starost": 26,
+     "vas": "[~Višnja?]",
+     "hisa": 5
+    },
+    "nevesta": {
+     "ime": "Margaretha [~Sodržig?]",
+     "starost": 23,
+     "vas": "[~Dobrava?]",
+     "hisa": 19
+    },
+    "scan": 9
+   },
+   {
+    "m": 10,
+    "datum": "22. Febr d°",
+    "zenin": {
+     "ime": "Georg [~Muz?|Matz?]",
+     "starost": 22,
+     "vas": "[~Primostek?]",
+     "hisa": 7
+    },
+    "nevesta": {
+     "ime": "Barbara [~Marentig?]",
+     "starost": 19,
+     "vas": "Otok",
+     "hisa": 18
+    },
+    "starsi_zenin": "Georg [~Muz]",
+    "scan": 9
+   },
+   {
+    "m": 11,
+    "datum": "29. Febr d°",
+    "zenin": {
+     "ime": "Georg [~German?|Jurman?]",
+     "starost": 20,
+     "vas": "[~Dorfpt?]",
+     "hisa": 19
+    },
+    "nevesta": {
+     "ime": "Catharina [~Tomž?]",
+     "starost": 20,
+     "vas": "[~Kaplje?|Kraplje?]",
+     "hisa": 5
+    },
+    "scan": 9,
+    "opomba": "PRESTOPNI-DAN-29.-2.-1832!"
+   },
+   {
+    "m": 12,
+    "datum": "29. Febr d°",
+    "zenin": {
+     "ime": "Nicul [~Tskeliž?|Tehlig?—garble]",
+     "starost": 20,
+     "vas": "[~Semelj?]",
+     "hisa": 15
+    },
+    "nevesta": {
+     "ime": "Anna [~Tomž?]",
+     "starost": 17,
+     "vas": "[~Kraplje?]",
+     "hisa": 9
+    },
+    "starsi_nevesta": "Peter [~Tomž]-Ledin!",
+    "scan": 9
+   },
+   {
+    "m": 13,
+    "datum": "29. Febr d°",
+    "zenin": {
+     "ime": "Peter [~Kambig=KAMBIČ?!]",
+     "starost": 28,
+     "vas": "[~Krajnc]",
+     "hisa": 19
+    },
+    "nevesta": {
+     "ime": "Maria [~Tilah?|Kulah?—garble]",
+     "starost": 23,
+     "vas": "[~Görn?]",
+     "hisa": 25
+    },
+    "scan": 9,
+    "opomba": "KAMBIČ-continuum-1831!"
+   },
+   {
+    "m": 14,
+    "datum": "29. Febr d°",
+    "zenin": {
+     "ime": "Mathias [~Felah?]",
+     "starost": 24,
+     "vas": "[~Görn?]",
+     "hisa": 25
+    },
+    "nevesta": {
+     "ime": "Catharina [~Jurajefpich=JURJEVIČ?!]",
+     "starost": 19,
+     "vas": "[~Primošt?]",
+     "hisa": "[~11|41-DUEL]"
+    },
+    "scan": 9
+   },
+   {
+    "m": 15,
+    "datum": "29. Febr d°",
+    "zenin": {
+     "ime": "Michael [~Gricar?|Grižar?—garble]",
+     "starost": 18,
+     "vas": "[~Očavlje?|Ochlau?]",
+     "hisa": "[~16|10]"
+    },
+    "nevesta": {
+     "ime": "Anna [~Salher?]",
+     "starost": 18,
+     "vas": "[~Petolge?]",
+     "hisa": 29
+    },
+    "starsi_zenin": "Michael [~Griž]-Tuchmacher!",
+    "scan": 9
+   },
+   {
+    "m": 16,
+    "datum": "29. Febr d° (s10!)",
+    "zenin": {
+     "ime": "Johann [~Hlebez=HLEBEC!|Klebez?—Kurrent-'H'!]",
+     "starost": 21,
+     "vas": "Griblje",
+     "hisa": 2
+    },
+    "nevesta": {
+     "ime": "Anna [~Petriz?]",
+     "starost": 17,
+     "vas": "[~GRIBLJE-2:1|Smrečje?-DUEL-VAS]",
+     "hisa": 42
+    },
+    "starsi_zenin": "★-Johann [Hlebez]-kmet!",
+    "starsi_nevesta": "Matth. [~Petriz]-kmet",
+    "scan": 10,
+    "opomba": "POLNI-DVOJNI-[~]-h2×h42 + HLEBEC-NIT-1832→1873-m11-h3!"
+   },
+   {
+    "m": 17,
+    "datum": "29. Febr d°",
+    "zenin": {
+     "ime": "★-Nicol KRIŽAN",
+     "starost": 20,
+     "vas": "Griblje",
+     "hisa": 36
+    },
+    "nevesta": {
+     "ime": "Catharina [~Flach=FLAHA?]",
+     "starost": 17,
+     "vas": "Griblje",
+     "hisa": 35
+    },
+    "starsi_zenin": "★-Matthias Križan!",
+    "starsi_nevesta": "★-Peter Flach!",
+    "scan": 10,
+    "opomba": "★★★★★-POLNI-DVOJNI-h36×h35 + h35-2.-družina-14-dneh-za-m8!"
+   },
+   {
+    "m": 18,
+    "datum": "29. Febr d°",
+    "zenin": {
+     "ime": "[~Mario|Matias?]-[~Gerspich?|Gorshig?]",
+     "starost": 25,
+     "vas": "[~Laune?]",
+     "hisa": 23
+    },
+    "nevesta": {
+     "ime": "Margareth [~Angel?]",
+     "starost": 22,
+     "vas": "[~Dobravlje?]",
+     "hisa": 11
+    },
+    "scan": 10
+   },
+   {
+    "m": 19,
+    "datum": "29. Febr d°",
+    "zenin": {
+     "ime": "Joh. [~Kersna?|Heroman?—garble]",
+     "starost": 24,
+     "vas": "[~SALOKA-IN-CROATIA!]",
+     "hisa": "[~7|27]"
+    },
+    "nevesta": {
+     "ime": "Maria NOVAK",
+     "starost": 20,
+     "vas": "Otok",
+     "hisa": 15
+    },
+    "starsi_zenin": "Georg [~Kersna]",
+    "starsi_nevesta": "Math. Novak",
+    "scan": 10,
+    "opomba": "HRVAŠKA-2.-omemba-za-BROD-1828-P255!"
+   },
+   {
+    "m": 20,
+    "datum": "5. März",
+    "zenin": {
+     "ime": "Georg VIPAVC",
+     "starost": 28,
+     "vas": "[~Kreuz=Križ?|Kraplje?—DUEL]",
+     "hisa": "[~31|21]"
+    },
+    "nevesta": {
+     "ime": "Catharina [~Hurejzphigh?|Jurjevčič?—DUEL-2-družini]",
+     "starost": 22,
+     "vas": "[~Kreuz?|Kraplje?]",
+     "hisa": 21
+    },
+    "starsi_zenin": "Georg Vipavz",
+    "scan": 10
+   },
+   {
+    "m": 21,
+    "datum": "28. Mai",
+    "zenin": {
+     "ime": "Nicol. [~Petrin?]",
+     "starost": 34,
+     "vas": "[~Saloka-in-Krainz!]",
+     "hisa": "[~10|0-DUEL]"
+    },
+    "nevesta": {
+     "ime": "Anna [~Hafllig?]",
+     "starost": 21,
+     "vas": "[~Samei?|Smrečje?]",
+     "hisa": 21
+    },
+    "scan": 10
+   },
+   {
+    "m": 22,
+    "datum": "20. Juni",
+    "zenin": {
+     "ime": "★★-Johann KRIŽAN",
+     "starost": 21,
+     "vas": "Griblje",
+     "hisa": 66
+    },
+    "nevesta": {
+     "ime": "Anna KRIŽAN",
+     "starost": 26,
+     "vas": "[~Kreuz=Križ?|Kraplje?—DUEL-VAS]",
+     "hisa": 35
+    },
+    "starsi_zenin": "★-Georg Križan!",
+    "starsi_nevesta": "★-Johann Križan!",
+    "scan": 10,
+    "opomba": "★★★★★-KRIŽAN×KRIŽAN-PAR (2.-isti-priimek-za-MUZ-1828!) + h66-duel-'66'-3:1!"
+   },
+   {
+    "m": 23,
+    "datum": "28. Nov",
+    "zenin": {
+     "ime": "Peter [~Simig=ŠIMIČ?|Himiz?—3-variant-DUEL]",
+     "starost": 36,
+     "vas": "Griblje",
+     "hisa": 56
+    },
+    "nevesta": {
+     "ime": "Anna [~Filach=FLACH?|Tielak?]",
+     "starost": 22,
+     "vas": "Griblje",
+     "hisa": 61
+    },
+    "starsi_zenin": "★-Nicol [~Šimič]!",
+    "starsi_nevesta": "★-Nicol [~Filach]!",
+    "scan": 10,
+    "opomba": "★★★★-POLNI-DVOJNI-h56×h61 + ŠIMIČ-kand.-nit-h49-1833! + ZADNJI-VPIS-1832"
+   }
+  ],
+  "1833": [
+   {
+    "m": 1,
+    "datum": "[~3.|5.]-Febr 1833",
+    "zenin": {
+     "ime": "Anton [~Sipaž?|Seipa?]",
+     "starost": 38,
+     "vas": "[~Gradas?|Krainz?]",
+     "hisa": 6
+    },
+    "nevesta": {
+     "ime": "Anna [~Auffschein=AUFŠNAJTER?]",
+     "starost": 37,
+     "vas": "[~Klofter?]",
+     "hisa": 43,
+     "status": "Bauerstochter"
+    },
+    "starsi_zenin": "Martin [~Sipaž]",
+    "scan": 10,
+    "opomba": "★★★-RESTART-1833 (letnica-NAD-datumom!)-4.-restart-notranjosti!"
+   },
+   {
+    "m": 2,
+    "datum": "6. Febr d°",
+    "zenin": {
+     "ime": "Nicol TONZ",
+     "starost": 24,
+     "vas": "[~Kaplice!]",
+     "hisa": 3,
+     "status": "iz-Laune"
+    },
+    "nevesta": {
+     "ime": "Barbara [~Frithovigh?]",
+     "starost": 19,
+     "vas": "[~Mühle=Mlin?]",
+     "hisa": 2,
+     "status": "Müllersstochter"
+    },
+    "starsi_zenin": "Peter Tonz",
+    "scan": 10
+   },
+   {
+    "m": 3,
+    "datum": "6. Febr d°",
+    "zenin": {
+     "ime": "Mathias [~Jurajefzhigh=JURJEVIČ?]",
+     "starost": 22,
+     "vas": "[~Mlake?]",
+     "hisa": 11,
+     "status": "iz-Laune"
+    },
+    "nevesta": {
+     "ime": "Catharina [~Jaflligh?]",
+     "starost": 22,
+     "vas": "[~Podsemel=Podzemelj?]",
+     "hisa": 12
+    },
+    "starsi_zenin": "Georg [~Jurajefzhigh]-[~Hajdinov?]",
+    "scan": 10
+   },
+   {
+    "m": 4,
+    "datum": "6. Febr d°",
+    "zenin": {
+     "ime": "Marcus [~Papizh?]",
+     "starost": 21,
+     "vas": "[~Gorschiz?]",
+     "hisa": 6,
+     "status": "iz-Laune"
+    },
+    "nevesta": {
+     "ime": "Catharina [~Angel?]",
+     "starost": 22,
+     "vas": "[~Dobravlje?]",
+     "hisa": 22
+    },
+    "starsi_zenin": "Martin [~Papizh]",
+    "starsi_nevesta": "Mathias [~Angel]",
+    "scan": 10
+   },
+   {
+    "m": 5,
+    "datum": "6. Febr d°",
+    "zenin": {
+     "ime": "Nicolaus [~Petras?|Petrin?]",
+     "starost": 34,
+     "vas": "[~Traphigh?|Draphigh?]",
+     "hisa": "[~25|35]"
+    },
+    "nevesta": {
+     "ime": "★-Catharina MUZ",
+     "starost": 21,
+     "vas": "[~Primon?|Pino?]",
+     "hisa": 4
+    },
+    "starsi_nevesta": "★-Nicol MUZ (Semelj!)",
+    "scan": 10,
+    "opomba": "MUZ-continuum (1828-+-1831-+-1833!)"
+   },
+   {
+    "m": 6,
+    "datum": "6. Febr d°",
+    "zenin": {
+     "ime": "★★★-Johann PESDIRZ (triple-'P-e-s-d-i-r-z'!)",
+     "starost": 21,
+     "vas": "Griblje",
+     "hisa": 50
+    },
+    "nevesta": {
+     "ime": "Maria [~Himiz|Simig?=ŠIMIČ?—DUEL]",
+     "starost": 25,
+     "vas": "Griblje",
+     "hisa": 49
+    },
+    "starsi_zenin": "★★★-MARCO PESDIRZ!",
+    "starsi_nevesta": "[~Matthias?]",
+    "scan": 10,
+    "opomba": "★★★★★★-PEZDIRC-h50: 2.-SIN-MARCA (1831-Georg-+1833-Johann-oba-21-l!) + ZADNJA-VRSTICA-STRANI"
+   }
+  ]
+ },
+ "niti": {
+  "pezdircH50": "★★★★★★ 1831-Georg-PESDIRZ-h50 (oče-Marco!-P257-m2) + 1833-Johann-PESDIRZ-h50 (oče-MARCO!-triple-črko-za-črko-'P-e-s-d-i-r-z'-row+duel+region!-[~Petroviz-zavrnjen-2:1!]) = DVA-SINA-ISTEGA-OČETA-MARCA-(oba-21-let!) + 1873-Marcus-PEGDIRE-h50 (P251-m20!) = 3-VRSTICE-42-LET + priča-AND.-PEZDIRC-1831 (m14!-5.-vrstica-družine!)",
+  "milekH22": "★★★★★ 1830-Anna-MILEK-h22 (oče-Joh.!-P257) + 1832-Johann-MILEK-h22 (oče-Johann!-duel-'k'-ne-'ch'!) = BRAT-SESTA-ISTA-DRUŽINA (MILEK-DOMNEVA-POTRJENA!) — h22-4-bloki-v-5-letih (1828+1829+1830+1832!-1831-edina-luknja!)",
+  "krizanKonglomerat": "★★★★★ 1831-h3-Peter (P257-m1!) + 1832-h36-Nicol (m17-POLNI-DVOJNI-h36×h35!) + 1832-h66-Johann (m22-KRIŽAN×KRIŽAN-PAR!) + 1873-h63-m1-KURE-RESTART (P253!) = KRIŽAN-4-GRIBLJE-HIŠE (3+36+66+63) + HRIŽAN-h62-ŠIV = 5-hiš-istega-korena!",
+  "klobucarBratje": "★★★★ m19-Matthias-h46 × m20-Johann-h48 — 24.-Avg-1832-DVA-POROKI-ISTEGA-DNE-[~bratje-kand.-različni-očeti-Mathias/[~]?]",
+  "hlebec": "★★★★ 1832-Johann-[HLEBEC]-h2-ženin ↔ 1873-m11-Hlebec-h3 (P253!) = 41-let + h2/h3-sosednji-hiši!",
+  "muz": "★★★ Catharina-MUZ-1833 (oče-Nicol-Semelj!) — continuum-1828-P255-×4-+-1831-Nicolaus-h24-Semelj (oče-Lucas!) — 3-desetletja-MUZ!",
+  "simic": "★★★ [~ŠIMIČ-kand.]: 1832-Peter-[Simig]-h56 (oče-Nicol-Šimič!) ↔ 1833-Maria-[Himiz]-h49 (isti-garble-'-imiz'!) — [~ena-družina-2-hiši-X-OPEN]",
+  "flach": "★★★ FLACH-×2-1832: m17-Catharina-h35 (oče-Peter!) + m23-Anna-[Filach]-h61 (oče-Nicol!) — FLACH-družina-v-2-hišah!",
+  "baron": "★★★ Aloys-BARON-m21-1831 — k.k.-[~Postmeister?]-v-pokoj-u-Gradac-1-×-Helena-[~Rubi] — EDINA-uradniška-vrstica-notranjosti! [~rojen-v-Bosovnjah?-X-OPEN]",
+  "anomalije": "★★★ m2-1832-MARIA-VIPAVC-ŽENSKO-IME-V-ŽENINSKEM-STOLPCU (duel-'M-a-r-i-a'-končnica-'a'!-2.-za-P257-m7-Maria-Pödiz!) + m3-[~Marino-MOŠKI-DUEL-'končnica-o'!]-3.-kand. — vzorec-anomalnih-vrstic-1831/32 [~X-OPEN]"
+ },
+ "kraji": {
+  "novo": "ŠKRILJE (2.-omemba-za-1828-m11!) + OSILNICA-×2 (Kupa-dolina!) + SODEVCI + METLIKA-2.-omemba + GRADIŠČE + SALOKA-IN-CROATIA-×2 (HRVAŠKA!-2.-za-BROD-1828!) + SEMELJ-×5 + DOBRAVA-×5 + OTOK-×3 + KAPLICE + MLAKE + [~Mühle=Mlin]",
+  "garbleVasi": "[~Krasting?]-17 + [~Gradač]-35/38 + [~Wörth?|Niedoipriß?]-9 + [~Prest]-108 + [~Derberg?]-1 + [~Krajnc]-×4 + [~Boršt?]-21 + [~Prilogje?]-30 + [~Regina-vas?]-13 + [~Görn]-×3-25/26 + [~Görprihl?]-35 + [~Višnja?]-5 + [~Primostek?]-7 + [~Dorfpt?]-19 + [~Kaplje?|Kraplje?]-5 + [~Kraplje?]-9 + [~Primošt?]-11/41 + [~Očavlje?]-16 + [~Petolge?]-29 + [~Kreuz=Križ?|Kraplje?]-31/21/26/35 + [~Laune]-23/3/11/6/25 (iz-Laune-×4-1833!) + [~Dobravlje?]-11/22 + [~Krajing] + [~Vranovič?]-11 + [~Gostelj?]-6 + [~Gumnišče?]-16 + [~Samei?|Smrečje?]-21 + [~Gradas?]-6 + [~Klofter?]-43 + [~Primon?]-4 + [~Traphigh?]-25/35 + [~Gorschiz?]-6 — 30+-garble-VASI-[~X-OPEN]"
+ },
+ "korpusUcinek": {
+  "noviBlok": 16,
+  "noveVpisi": "40 (11 + 15 + 14 — NAJVEČJA-NOTRANJOST-FAZA!)",
+  "vitalsTotal": "2043 → 2059",
+  "byBook01738": "31 → 47",
+  "leta01738": "1828–1831 + 1873 → 1828–1833 + 1873 (6-let-notranjosti!)",
+  "dvigi": "10: h8-40 (2.-vseh-časov!) + h46-36 + h66-36 + h35-35 + h47-31 + h42-29 + h2-27 + h48-26 + h36-25 + h49-25",
+  "sestKnjizne": "23 → 31 (+8: h2/h8/h35/h36/h42/h46/h47/h48 — 2.-največji-skok!)",
+  "bothEraPorocna": "26 → 34 (+8)",
+  "vrzeli": "h66 + h49 = 5-knjig-BREZ-04455 (poročni-vrzeli!); h50-BREZ-04104",
+  "h35x2": "DVE-DRUŽINI-h35-1832 (m8-Štremuz + m17-Flach — 14-dneh!)"
+ },
+ "xOpen": [
+  "m14-ženin-priimek: Mercina|Hribar|Luminanic (3-variant-TEŽAK-GARBLE)",
+  "m18-datum: 24.-Juli-2:1-nad-2.-Juli (region) — [~DUEL-ostaja]",
+  "m21-BARON-datum: 1.-vs-13.-Nov (2:2-DUEL) + naziv-k.k.-Postmeister?|Zythman?",
+  "m2-1832-ANOMALIJA: MARIA-Vipavz-vdova?-razlaga-X-OPEN + hiša-34|24",
+  "m3-1832: Marino|Maria-DUEL-končnica-o/a + priimek-Talkarigh",
+  "m16-bride-vas: GRIBLJE-2:1-|Smrečje (DUEL-ostaja-vpliva-na-h42-blok!)",
+  "m20/m22-KRIŽAN-neveste: [~Kreuz=Križ?|Kraplje?]-VAS-DUEL + m22-hiša-66-potrjena-3:1",
+  "restart-1833-datum: 3.-vs-5.-Febr (2:2-DUEL)",
+  "m6-1833-nevesta: Himiz|Simig|Šimič-DUEL (h56-1832-Simig-vezava-kand.!)",
+  "ŠIMIČ/Himiz-družinska-vezava-h56+h49 [~X-OPEN]",
+  "priimki-3-variant: Mercina + Staroling + Kermann + Ferjančec + Štefančič + Surajes + Potha/Pejka + Tskeliž + Gricar + Kersna + Petras + Papizh",
+  "duhovniki-1831/32/33: [~Gregor-Plaper-curatus?] + [~Tomšič?] + [~Georg-Zakotnik-Parochus?] + [~Georg-Ambrusch-Kaplan?] — garble-continuum-X-OPEN"
+ ],
+ "p259": "1833-nadaljevanje (s11 = Pag. 19: 6.-Febr-1833-kaskada-se-nadaljuje!) → desetletja-1830er–1860er-do-šiva-1873 (s11–s139!) — alternativno: paleografska-potrditev (issue-#12) ali-hišne-zgodbe-podrobneje"
+}

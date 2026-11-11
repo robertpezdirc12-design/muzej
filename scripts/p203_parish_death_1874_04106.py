@@ -30,7 +30,7 @@ check("I4 dokaz (94/21-griblje/14-anomalij + LEKCIJA-#21 + meja-s119 + 94-vrstic
       f"entries={len(d['entries'])} griblje={len(grib)} anomalije={len(d['anomalije'])}")
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 2043")
+st = qa.count("HOUSE_VITALS.length !== 2059")
 check("I5 qa-p203 + števec-1406", "qa-p203-parish-death-1874-04106" in qa and st >= 100, f"1940-številcev={st}")
 
 i0 = src.find("P203: mrliška PREDZGODOVINA 04106, leto 1874")
@@ -52,8 +52,8 @@ check("I8f KROP-POPRAVKI-hišnih-št.-×5", "KROP-POPRAVKI-hišnih-št.-×5" in 
 check("I8g otroška-umrljivost-33% (7/21!)", "33%" in seg)
 
 pt = json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8"))
-check("I9 pt-luknja (04106==433, vitals==1511)",
-      pt["corpus"]["byBook"]["04106"] == 433 and pt["corpus"]["vitalsTotal"] == 1940,
+check("I9 pt-luknja (04106==433, vitals==2059-P258!)",
+      pt["corpus"]["byBook"]["04106"] == 433 and pt["corpus"]["vitalsTotal"] == 2059,
       f"04106={pt['corpus']['byBook']['04106']} vitals={pt['corpus']['vitalsTotal']}")
 bloki94 = re.findall(r'bookSignature:\s*"04894"', src)
 check("I10 04894 == 520", len(bloki94) == 520, f"najdeno {len(bloki94)}")

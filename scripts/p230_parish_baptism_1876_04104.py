@@ -39,7 +39,7 @@ check("I4b novosti (wolfgr-druzina-x3 + nezakonski-x6 + dvojcki-x4-novi-varianti
       and "duhovniki-7-7-izenačen" in an)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 2043")
+st = qa.count("HOUSE_VITALS.length !== 2059")
 check("I5 qa-p230 + števec-1940", "qa-p230-parish-baptism-1876-04104" in qa and st >= 142, f"1940-številcev={st}")
 
 i0 = src.find("P230: krstna PREDZGODOVINA 04104, leto 1876")
@@ -56,7 +56,7 @@ check("I8a meseci-Griblje (Jänner/Feber/Juni-×0!) + 1875-LEAD", "Jänner/Feber
 check("I8b TAIL-1876-s78-r1 + zap-100-X-open", "TAIL-1876-s78-r1" in seg or "s78-r1-zap-'100'-X-open" in seg)
 check("I9a qa-p230 (230. kontrola!)", "qa-p230" in qa and "230. kontrola" in qa)
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-check("I9b pt-luknja-271/2043 + byBook-04104", '"vitalsTotal": 2043' in pt and '"04104": 288' in pt)
+check("I9b pt-luknja-271/2043 + byBook-04104", '"vitalsTotal": 2059' in pt and '"04104": 288' in pt)
 
 live = "--live" in sys.argv
 if live or "--check" not in sys.argv:

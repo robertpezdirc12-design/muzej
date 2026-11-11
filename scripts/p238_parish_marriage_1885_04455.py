@@ -37,8 +37,8 @@ check("I4c PEZDIRC-×3 + BRINC-mreža + h71-STRAUS + P84-korekcija",
       and "straus-h71-1885" in an and "P84-okvir-korekcija-dokumentirana" in json.dumps(d["crossChecks"], ensure_ascii=False))
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 2043")
-check("I5 qa-p238 + števec-2043", "qa-p238-parish-marriage-early-04455" in qa and st >= 148, f"2043-številcev={st}")
+st = qa.count("HOUSE_VITALS.length !== 2059")
+check("I5 qa-p238 + števec-2012", "qa-p238-parish-marriage-early-04455" in qa and st >= 148, f"2012-številcev={st}")
 
 i0 = src.find("P238: poročna PREDZGOVINA 04455, leto 1885")
 seg = src[i0:] if i0 >= 0 else ""
@@ -54,7 +54,7 @@ check("I8b X-OPEN-vas-dueli-h29/h15/h9 + 3-X-OPEN", "X-OPEN-vas-dueli (h29/h15/h
 check("I8c korpus-1946-dokaz (duplikat-odstranjen)", "P239: + 3 bloka 04455-1884 = 1949" in qa)
 check("I9a qa-p238 (238. kontrola!)", "qa-p238" in qa and "qa-p238-parish-marriage-early-04455" in qa)
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-check("I9b pt-luknja-2008 + byBook-04455=265 (P241-živo!)", '"vitalsTotal": 2043' in pt and '"04455": 269' in pt)
+check("I9b pt-luknja-2008 + byBook-04455=265 (P241-živo!)", '"vitalsTotal": 2059' in pt and '"04455": 269' in pt)
 
 m = open(f"{ROOT}/src/data/atlas/parish-marriage-early.ts", encoding="utf-8").read()
 check("I9c modul-parish-marriage-early (15-izvozov)", all(x in m for x in

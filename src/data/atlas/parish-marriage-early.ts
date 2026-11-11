@@ -1216,7 +1216,7 @@ export const PREDHODNIK_1830_KORPUS = {
 // ——— P257: NOTRANJOST-01738 — LETO 1831 (s7 = Pag. 11; 13 vpisov v 15 dneh; 10 Griblje-blokov — REKORD!) ———
 /** 13 vpisov 1831 (m1–m13); bloki = 10 (h3/h33-m1 + h50/h54-m2 + h56-m3 + h26/h27-m7 + h65-m10 + h1/h11-m13!). */
 export const PREDHODNIK_1831_BLOCKS = HOUSE_VITALS.filter(
-  (h) => h.bookSignature === "01738" && h.year === 1831,
+  (h) => h.bookSignature === "01738" && h.year === 1831 && h.scan === 7, // P258: +scan-7-filter (s8-bloki = PREDHODNIK_1831K!)
 );
 export const PREDHODNIK_1831_HOUSES = PREDHODNIK_1831_BLOCKS.map((h) => h.houseNo);
 export const PREDHODNIK_1831_TOTAL = 13;
@@ -1264,4 +1264,84 @@ export const PREDHODNIK_257_KORPUS = {
   bothEra: "17 → 26 (+9 — vse-10-hiš-1831-imajo-04455-poročne-bloke!)",
   vrhRazponov: "h62-95-ostaja-2. + h50/h11/h33-NOVI-93/91/91 (h50-izenači-h20/h22!) + h26-90 + h27-87 + h3/h54-86 — h6-96-ostaja-1.",
   p258: "1832+ (s8+: meja-1831/32 in nadaljevanje-notranjosti — P258-material!)",
+} as const;
+
+// ——— P258: NOTRANJOST-01738 — MEJA-1831/32/33! (s8–s10 = Pag. 13/15/17; foliacija-Pag-=-2·sken−3-potrjena-×9-svinčnik-15/16-+17/18!) ———
+export const PREDHODNIK_1831K_BLOCKS = HOUSE_VITALS.filter(
+  (h) => h.bookSignature === "01738" && h.year === 1831 && h.scan === 8,
+);
+export const PREDHODNIK_1831K_HOUSES = PREDHODNIK_1831K_BLOCKS.map((h) => h.houseNo);
+export const PREDHODNIK_1831K_TOTAL = 11; // m14–m24 (9. Febr-d° + 14. Febr ×2 + 6. Juni + 24. Juli + 24. Aug ×2 + 1. Nov-BARON + 6./20./23. Nov)
+export const PREDHODNIK_1831K_BLOCKI = 5; // h47 + h46/h8 + h48/h2
+
+export const PREDHODNIK_1832_BLOCKS = HOUSE_VITALS.filter(
+  (h) => h.bookSignature === "01738" && h.year === 1832,
+);
+export const PREDHODNIK_1832_HOUSES = PREDHODNIK_1832_BLOCKS.map((h) => h.houseNo);
+export const PREDHODNIK_1832_TOTAL = 23; // m1–m23 (18. Jän ×3 + 25./29. Jän + 15. Febr ×4 + 22. + 29. Febr ×9-PRESTOPNI! + 5. März + 28. Mai + 20. Juni + 28. Nov)
+export const PREDHODNIK_1832_BLOCKI = 9; // h22/h35 + h2/h42 + h36/h35 + h66 + h56/h61
+
+export const PREDHODNIK_1833_BLOCKS = HOUSE_VITALS.filter(
+  (h) => h.bookSignature === "01738" && h.year === 1833,
+);
+export const PREDHODNIK_1833_HOUSES = PREDHODNIK_1833_BLOCKS.map((h) => h.houseNo);
+export const PREDHODNIK_1833_TOTAL = 6; // m1–m6 ([~3.|5.] Febr RESTART + 6. Febr ×5 d°)
+export const PREDHODNIK_1833_BLOCKI = 2; // h50/h49
+
+/** Struktura 1831-konec (s8 = Pag. 13): 9. Febr-d°-12.-poroka-istega-dne + 14. Febr ×2 + 6. Juni + 24. Juli + 24. Aug ×2 (KLOBUČAR!) + 1. Nov (BARON!) + 6./20./23. Nov. */
+export const PREDHODNIK_1831K_STRUNA = {
+  si: "★★★★★ STRUKTURA-1831-KONEC (s8 = Pag. 13 — 1831-se-nadaljuje-ČEZ-mejo-strani!-P257-s7-m13-NI-bil-konec-leta!): m14 = 9. Febr-d° (12.-poroka-istega-dne — Skupaj-12-na-9.-Febr-1831!) + m15/m16 = 14. Febr-×2 + m17 = 6. Juni (BUTALA!) + m18 = [~24.|2.-DUEL]-Juli (Ferjančec-METLIKA!) + m19/m20 = 24. Avg-×2 (KLOBUČAR-BRATJE!) + m21 = [~1.|13.]-Nov (★-BARON-vrstica!) + m22 = 6. 9ber-d° (MUZ!) + m23 = 20. 9ber + m24 = 23. 9ber-d° = ★-1831-SKUPAJ-24-VPISOV (m1–m24-na-2-straneh!-13+11!) — leto-1831-KONČA-na-Pag.-13/14-m24!",
+  en: "THE-STRUCTURE-OF-THE-1831-END (s8 = Pag. 13 — the-year-1831-CONTINUES-ACROSS-the-page-boundary!): m14 = Feb-9-d° (the-12th-wedding-of-that-day!) + Feb-14-×2 + Jun-6 (BUTALA!) + [~24.|2.]-Jul (FERJANČEC-METLIKA!) + Aug-24-×2 (THE-KLOBUČAR-BROTHERS!) + [~1.|13.]-Nov (THE-BARON-ROW!) + Nov-6/20/23 = 1831-TOTALS-24-ENTRIES-on-2-pages!",
+} as const;
+
+/** Struktura 1832 (s9 = Pag. 15 RESTART + s10 zgornji del): 15 + 8 = 23 vpisov; PRESTOPNI-DAN-29.-Febr-×9! */
+export const PREDHODNIK_1832_STRUNA = {
+  si: "★★★★★ STRUKTURA-1832 (s9 = Pag. 15 — RESTART-letnice-1832-v-glavi!-prvi-vpis-18.-Jänner!): m1–m3 = 18. Jän-×3 (m2-★-ANOMALIJA-MARIA-VIPAVC-ŽENSKO-IME!-m3-[~Marino-MOŠKI-DUEL]) + m4 = 25. + m5 = 29. Jän + m6–m9 = 15. Febr-×4 (m8-★-MILEK-h22!) + m10 = 22. Febr + m11–m15 = 29. Febr-×5 (PRESTOPNI-DAN-1832!) + m16–m19 = 29. Febr-d°-×4 (s10!-SKUPAJ-★-9-POROK-NA-PRESTOPNI-DAN-29.-2.-1832 = NAJVEČJI-MNOŽIČNI-DAN-KORPUSA!) + m20 = 5. März + m21 = 28. Mai + m22 = 20. Juni (KRIŽAN-h66!) + m23 = 28. Nov ([~Šimič]-h56!) = 23-VPISOV-1832!",
+  en: "THE-STRUCTURE-OF-1832 (s9 = Pag. 15 — the-1832-RESTART-in-the-header!): Jan-18-×3 + Jan-25/29 + Feb-15-×4 + Feb-22 + ★-Feb-29-×9-THE-LEAP-DAY (the-largest-mass-day-of-the-corpus!) + Mar-5 + May-28 + Jun-20 + Nov-28 = 23-ENTRIES!",
+} as const;
+
+/** Restart-1833 (s10 spodnji del): [~3.|5.] Febr + 6. Febr-×5-d° = 6 vpisov — tretji-restart-notranjosti (1830/1831/1833)! */
+export const PREDHODNIK_1833_RESTART = {
+  si: "★★★★★ RESTART-1833 (s10 = Pag. 17-spodaj — letnica-'1833'-ROKOPISNO-NAD-datumom-prve-vrstice!): m1 = [~3.|5.]-Febr-1833 (DUEL-census+region-'3.'-vs-pass1+row-'5.'-2:2!) — cf.-RESTART-1830-s6-r4 (P257!) + RESTART-1831-s7 (P257!) + RESTART-1873-z-1 (P253!) = 4.-restart-notranjosti/predhodnika! + m2–m6 = 6. Febr-×5-d° (m6-★★★-Johann-PESDIRZ-h50-ZADNJA-VRSTICA-STRANI!) — 1833-se-nadaljuje-na-s11-(Pag.-19-P259-material!)",
+  en: "THE-1833-RESTART (s10-lower — the-year-'1833'-HANDWRITTEN-ABOVE-the-first-date!): m1 = [~3.|5.]-Feb-1833 (a-2:2-DUEL!) — cf.-the-1830/1831/1873-restarts = the-4th-restart-of-the-interior! + m2–m6 = Feb-6-×5-d° (m6-the-★-Johann-PESDIRZ-h50-LAST-ROW!) — 1833-continues-on-s11-(P259!)",
+} as const;
+
+/** Niti 1831-konec/1832/1833: PEZDIRC-h50-3-vrstice + priča-AND. + MILEK-h22-potrjena + KRIŽAN-4-hiše + MUZ + ŠIMIČ + FLACH + HLEBEC. */
+export const PREDHODNIK_258_NITI = {
+  si: "★★★★★★ NITI-P258: ★★★★★★ PEZDIRC-h50-NIT-NADGRADNJA (1831-Georg-PESDIRZ-h50-oče-Marco!-+-1833-Johann-PESDIRZ-h50-oče-MARCO-★-triple-črko-za-črko-'P-e-s-d-i-r-z'! = ★-DVA-SINA-ISTEGA-OČETA-MARCA-h50-(oba-21-l!) + 1873-Marcus-PEGDIRE-h50-P251 = 3-VRSTICE-42-LET!) + ★-m14-priča-AND.-PEZDIRC-1831 (5.-vrstica-družine-1831:-ženin+nevesta+ANOMALIJA+nevesta+PRIČA!) · ★★★★★ MILEK-h22-DOMNEVA-POTRJENA (1830-Anna-oče-Joh.-↔-1832-Johann-oče-Johann-duel-'k'-ne-'ch'! = brat-sesta-ISTA-družina!-h22-4-bloki-v-5-letih-1828/29/30/32!) · ★★★★★ KRIŽAN-KONGLOMERAT-4-HIŠE (1831-h3-Peter + 1832-h36-Nicol + 1832-h66-Johann-★-KRIŽAN×KRIŽAN-PAR! + 1873-h63 = 3+36+66+63-+HRIŽAN-h62-ŠIV!) · ★★★★ KLOBUČAR-BRATJE-m19×m20-24.-Avg (h46×h8-+-h48×h2-DVA-POLNA-DVOJNA-ISTEGA-DNE!) · ★★★★ HLEBEC-NIT-1832→1873 (Johann-h2-1832-↔-m11-h3-1873-P253-41-let!) · ★★★ MUZ-NIT-1833 (Catharina-MUZ-oče-Nicol-Semelj!-continuum-1828-P255-×4-+-1831-Nicolaus-h24-Semelj!) · ★★★ ŠIMIČ-[~Simig/Himiz]-KANDIDAT-h56-1832-+-h49-1833 · ★★★ FLACH-×2-1832 (h35-+-h61-Filach!) · ★★★ BARON-vrstica-m21-1831 (Aloys-BARON-k.k.-[~Postmeister?]-v-pokoj-u!-EDINA-uradniška-vrstica-notranjosti!) + ★-ANOMALIJA-m2-1832-MARIA-VIPAVC (duel-črko-za-črko-'M-a-r-i-a'!-2.-ANOMALIJA-za-P257-m7!-[~m3-Marino-MOŠKI-DUEL-3.-kand.])",
+  en: "THE-P258-THREADS: ★★★★★★ THE-PEZDIRC-h50-UPGRADE (two-sons-of-MARCO-marry-1831+1833-+the-1873-Marcus = 3-rows-42-years!) + the-witness-AND.-PEZDIRC-1831 (the-5th-row-of-the-1831-family!) · ★★★★★ THE-MILEK-h22-HYPOTHESIS-CONFIRMED (brother-and-sister-both-children-of-Johann!) · ★★★★★ THE-KRIŽAN-CONGLOMERATE (4-Griblje-houses-3+36+66+63!) · the-KLOBUČAR-brothers · the-HLEBEC-1832→1873-thread · the-MUZ-1833-thread · the-ŠIMIČ-candidate · FLACH-×2 · THE-BARON-ROW + the-m2-1832-MARIA-ANOMALY",
+} as const;
+
+/** Kraji P258: ŠKRILJE + OSILNICA + SODEVCI + METLIKA (2.!) + GRADIŠČE + SEMELJ ×5 + SALOKA-IN-CROATIA ×2 + DORNAVA/DOBRAVA ×5 + OTOK ×3 + garble-VASI. */
+export const PREDHODNIK_258_KRAJI = {
+  si: "★★★★ KRAJI-P258 (GEOGRAFIJA-ŽUPNIJE-ŠIRI!:): ŠKRILJE-m14-ženin-h1 (2.-omemba-za-1828-m11-P255!) + OSILNICA-m15/m17 (2.-omemba!-Kupa-dolina!) + SODEVCI-m17 (BUTALA!) + ★-METLIKA-m18 (Mödling!-2.-omemba-za-1830-METLIKA-140-P257!-Ferjančec-h9!) + GRADIŠČE-m18 + SEMELJ/Podzemelj-×5 (m22-h24/15 + m12-1832-h15 + m3-1833-h12 + MUZ-1833-Primon) + ★-SALOKA-IN-CROATIA-×2-1832 (m19-h7-+-m21-[~10|0] — HRVAŠKA-2.-omemba-za-BROD-P255-m4!-tu-vas-'Saloka'-[~Suhor?-kand.-X-OPEN]) + DOBRAVA-×5 (m23-h8 + m24-h36 + m9-1832-h19 + m2-1833-Mühle/Mlin-h2!) + OTOK-×3 (m10-1832-h18 + m19-1832-h15 + m1-?) + KRAJNC-[~Krajing]-×4-1832 + [~Görn]-×3 + [~Kraplje|Kreuz]-DUEL + KAPLICE-m2-1833 + MLAKE-m3-1833 + [~Prilogje|Prilozje]-×2 + [~Regina-vas?] + [~Borfpt?=Boršt?] + [~Laune]-×4-1833 ('iz-Laune'-pripisi!) + [~Gerspich/Gorschiz]-×2 + [~Traphigh/Draphigh] + [~Klofter]-m1-1833 — 20-garble-VASI-[~X-OPEN]",
+  en: "THE-P258-VILLAGES: ŠKRILJE + OSILNICA + SODEVCI + METLIKA (the-2nd-mention!) + SEMELJ-×5 + SALOKA-IN-CROATIA-×2 (Croatia!-the-2nd-after-BROD-1828!) + DOBRAVA-×5 + OTOK-×3 + 20-garble-villages-X-OPEN",
+} as const;
+
+/** P258-korpus-skupaj: +16 blokov; vitals 2043→2059; 01738 = 47; 10 dvigov (h8-40 = 2. največji!); šest-knjižne 23→31 (+8!). */
+export const PREDHODNIK_258_KORPUS = {
+  noviBloki: 16,
+  vpisi1831k: 11,
+  vpisi1832: 23,
+  vpisi1833: 6,
+  vitalsTotal: 2059,
+  byBook01738: 47,
+  dvigi: {
+    h8: "1871 → 1831 (40 let — 2.-NAJVEČJI-DVIG-VSEH-ČASOV-za-h22-41-P255!)",
+    h46: "1867 → 1831 (36 let — IZENAČI-h56-P257 = 3.-mesto-trojno!)",
+    h66: "1868 → 1832 (36 let — IZENAČI-h46/h56 = 3.-mesto-trojno!)",
+    h35: "1867 → 1832 (35 let — 5. mesto!)",
+    h47: "1862 → 1831 (31 let!)",
+    h42: "1861 → 1832 (29 let!) [~village-DUEL-Griblje|Smrečje]",
+    h2: "1858 → 1831 (27 let!)",
+    h48: "1857 → 1831 (26 let!)",
+    h36: "1857 → 1832 (25 let!)",
+    h49: "1858 → 1833 (25 let!)",
+  },
+  sestKnjiznih: "23 → 31 (+8: h2/h8/h35/h36/h42/h46/h47/h48 — 2.-NAJVEČJI-SKOK-za-+7-P257!)",
+  h22petLet: "h22-BREZ-dviga-ampak-4.-BLOK-V-5-LETIH (1828+1829+1830+1832 — 1831-edina-luknja!)",
+  h35x2: "h35-×2-DVE-DRUŽINI-1832 (m8-Štremuz + m17-Flach — 2-para-v-14-dneh!-cf.-h28-×2-1873!)",
+  vrzeli: "h66+h49-5-knjig-BREZ-04455 (poročni-vrzeli!-cf.-h25-smrtna-vrzela-P254!) — h50-BREZ-04104!",
+  dokaz: "parish-marriage-notranjost-1832.json (40-vpisov-11+23+6 + md5-s8-15c120e8/s9-959869b1/s10-cb608199 + niti + kraji + korpusUcinek + xOpen + p259!)",
+  p259: "1833-nadaljevanje (s11 = Pag. 19: 6.-Febr-1833-restart-vrstice-šle-do-konca-strani!) → desetletja-1830er-do-šiva-1873",
 } as const;

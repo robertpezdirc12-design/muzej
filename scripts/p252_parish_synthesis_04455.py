@@ -91,7 +91,7 @@ check("I6b restart-vpis-1 dokumentiran 13/13 + FOLIACIJA-29/29-na-odprtanj",
 
 # ——— I7: qa-parish.ts — qa-p252 sekcija + živi preveri vsako leto 1:1 ———
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st2012 = qa.count("HOUSE_VITALS.length !== 2043")
+st2012 = qa.count("HOUSE_VITALS.length !== 2059")
 check("I7 qa-p252 (živi preveri vsako leto 1:1) + 2012-številcev + FINIS + 74/195-razcep",
       "qa-p252-parish-synthesis-04455-early" in qa and "MARRIAGE_EARLY_LINE_YEARS" in qa
       and "runtime !== yl.griblje" in qa and st2012 >= 100
@@ -102,7 +102,7 @@ check("I7 qa-p252 (živi preveri vsako leto 1:1) + 2012-številcev + FINIS + 74/
 # ——— I8: pt-luknja-18-final.json NESPREMENJEN (2012/269 — vsota 1:1!) ———
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
 check("I8 pt-luknja-2026/2043 vsota-1:1 (korpus-NESPREMENJEN!)",
-      '"vitalsTotal": 2043' in pt and '"04455": 269' in pt, "2012/269")
+      '"vitalsTotal": 2059' in pt and '"04455": 269' in pt, "2012/269")
 
 # ——— I9: README + worklog P252 vnos ———
 rd = open(f"{ROOT}/README.md", encoding="utf-8").read()
