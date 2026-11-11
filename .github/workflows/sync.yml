@@ -31,6 +31,19 @@ jobs:
           git config user.name "sync-bot"
           git config user.email "sync-bot@users.noreply.github.com"
           git remote add gitlab "https://oauth2:${GITLAB_TOKEN}@gitlab.com/${GITLAB_PROJECT_PATH}.git"
+          # P251-diagnostika (2026-11-11): "project not found" iz runnerja ob
+          # zetonu, ki lokalno deluje — razkrij KAJ pade (path vs. token),
+          # brez izpisa vrednosti skrivnosti (samo hash + HTTP koda).
+          echo "debug: sha256(path)=$(printf '%s' "$GITLAB_PROJECT_PATH" | sha256sum | cut -c1-16)"
+          echo "debug: sha256(token)=$(printf '%s' "$GITLAB_TOKEN" | sha256sum | cut -c1-16)"
+          ENC=$(python3 -c "import urllib.parse,os;print(urllib.parse.quote(os.environ['GITLAB_PROJECT_PATH'], safe=''))")
+          CODE=$(curl -s -o /tmp/glproj.json -w '%{http_code}' -H "PRIVATE-TOKEN: $GITLAB_TOKEN" "https://gitlab.com/api/v4/projects/$ENC")
+          echo "debug: GET /projects/$ENC -> HTTP $CODE"
+          if [ "$CODE" = "200" ]; then
+            python3 -c "import json;d=json.load(open('/tmp/glproj.json'));print('debug: project =',d.get('path_with_namespace'),'id =',d.get('id'))"
+          else
+            python3 -c "print('debug: body =',open('/tmp/glproj.json').read()[:300])"
+          fi
           # P21: overitev GitLaba PREJ vsemu — pretekel/neveljaven zeton mora
           # povzrociti VIDEN padec joba, ne tihe "uspesno" (povzetek incidenta
           # 2026-10-10: fetch 3x Access denied, vseeno exit 0 -> lazen zeleni klic).
