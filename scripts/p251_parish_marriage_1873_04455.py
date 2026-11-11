@@ -18,7 +18,7 @@ check("I1 bloki 04455/1873 == 4 hiše / 2 POLNA-DVOJNA (h13×h62 + h22×h50!)",
       len(bloki) == 4 and bloki == ["13", "62", "22", "50"],
       f"najdeno {len(bloki)}: {','.join(bloki)}")
 skupaj = src.count('bookSignature: "04455"')
-check("I2 vitals-2023 + 04455==269", "HOUSE_VITALS.length !== 2023" not in src and skupaj == 269, f"04455={skupaj}")
+check("I2 vitals-2026 + 04455==269", "HOUSE_VITALS.length !== 2026" not in src and skupaj == 269, f"04455={skupaj}")
 
 nove = re.findall(r'houseNo: "(\d+)",\s*bookSignature: "04455",\s*year: 1873,\s*scan: (\d+),\s*page: (\d+),', src)
 pag_ok = all(int(p) == int(s) - 1 for _, s, p in nove)
@@ -62,7 +62,7 @@ check("I4c kontekst-m19-KLAGENFURT-IBERER + m21-VETRHVIŠČE + FERCHER-TERŽEK +
       and "50%-količnik" in an and "GABOFAIČ" in an2)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 2023")
+st = qa.count("HOUSE_VITALS.length !== 2026")
 check("I5 qa-p251 + števec-2012 (×150!)", "HOUSE_VITALS.length !== 2011" not in qa and st >= 150, f"2012-številcev={st}")
 check("I5b sidra-262 + 1873:4-P251 (qa-sidra-message)", "poročna sidra ≠ 262 (1873:4-P251!" in qa)
 check("I5c dobe-236 + 66-pred-linijskih", "dobe-bloki ≠ 236/7/26" in qa and "66 pred-linijskih 1873-P251×4!" in qa)
@@ -101,8 +101,8 @@ check("I7c METODA-md5-2×-neodvisen + očesi-NAJPREJ + solo-×12 + letterform-re
       and "referenca-m20-'22'" in m and "kronološka-verifikacija" in m and "reconciliacija-z-P250-tail" in m)
 
 pt = json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8"))
-check("I8 pt-luknja-2023/269 vsota-1:1",
-      pt.get("vitalsTotal") == 2023 and pt.get("corpus", {}).get("byBook", {}).get("04455") == 269,
+check("I8 pt-luknja-2026/269 vsota-1:1",
+      pt.get("vitalsTotal") == 2026 and pt.get("corpus", {}).get("byBook", {}).get("04455") == 269,
       f"vitals={pt.get('vitalsTotal')} 04455={pt.get('corpus', {}).get('byBook', {}).get('04455')}")
 
 u = open(f"{ROOT}/src/components/museum/museum-atlas.tsx", encoding="utf-8").read()

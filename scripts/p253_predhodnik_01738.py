@@ -20,7 +20,7 @@ check("I2 hiše-1873-01738 (file-order, h28-×2-DVOJNA!)", bloki01738 == pri and
 
 vseh = re.findall(r'bookSignature: "01738"', src)
 skupaj = src.count('houseNo: "')
-check("I3 vitals == 2023 + 01738 == 11", "HOUSE_VITALS.length !== 2023" not in src and len(vseh) == 11 and skupaj == 2023, f"01738={len(vseh)} skupaj={skupaj}")
+check("I3 vitals == 2026 + 01738 == 14 (P255: +3-1828!)", "HOUSE_VITALS.length !== 2026" not in src and len(vseh) == 14 and skupaj == 2026, f"01738={len(vseh)} skupaj={skupaj}")
 
 d = json.load(open(f"{ROOT}/research/issue17/parish-marriage-predhodnik-1873.json", encoding="utf-8"))
 seam = json.dumps(d["seam"], ensure_ascii=False)
@@ -34,8 +34,8 @@ check("I4 dokaz (17-vpisov + seam-s146 + tail-1872 + niti + xOpen)",
       f"entries={len(d['entries'])} xOpen={len(d['xOpen'])}")
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 2023")
-check("I5 qa-p253 + števec-2023", "qa-p253-parish-marriage-predhodnik-01738-1873" in qa and st >= 152, f"2023-številcev={st}")
+st = qa.count("HOUSE_VITALS.length !== 2026")
+check("I5 qa-p253 + števec-2026", "qa-p253-parish-marriage-predhodnik-01738-1873" in qa and st >= 152, f"2026-številcev={st}")
 check("I5b kontrola-247", "247. kontrola" not in qa or True, "-")
 
 mod = open(f"{ROOT}/src/data/atlas/parish-marriage-early.ts", encoding="utf-8").read()
@@ -60,7 +60,7 @@ check("I8 m1-KURE-h63 + m2-MAVRIN-h28 + m4-TOMC-h28 + m7-GRABRIJAN-[~h20]",
       "-")
 
 pt = open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8").read()
-check("I9 pt-luknja-2023/01738:11 + byBook", '"vitalsTotal": 2023' in pt and '"01738": 11' in pt, "-")
+check("I9 pt-luknja-2026/01738:14 + byBook (P255!)", '"vitalsTotal": 2026' in pt and '"01738": 14' in pt, "-")
 
 live = "--live" in sys.argv
 if live or "--check" not in sys.argv:

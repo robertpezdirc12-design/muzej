@@ -1,0 +1,69 @@
+{
+ "phase": "P255",
+ "title": "Notranjost-01738 — Začetek: leto 1828 (s1–s3) — korpus-nadaljuje-v-past (1857→1828!)",
+ "generatedAt": "2026-11-11",
+ "vir": {
+  "knjiga": "01738 (Trauungs-Buch, Podzemelj, 1828–1873) = PREDHODNIK 04455 (P253!)",
+  "url": "https://data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/01738/",
+  "inventar": "147 URL base64-dekodiranih 1:1 sekvenčno (RE-verifikacija P255 == P253-claim!)",
+  "skeni": "s1–s12 preneseni md5-dvojno-1:1 (0 napak!); branje: s1–s3 (naslovnica + Pag. 1 + Pag. 2/3)",
+  "metoda": "VLM-pass-1-struktura ×12 + dueli-celice ×23 + vrstice-full ×2 (pass + popravljeno, ×16) + Read-očesa (grid-meritve ×1,38-faktor!)",
+  "knjiznica": "/tmp/p255 (s1–s12 + full/ + dueli)"
+ },
+ "struktura": {
+  "leto": "1828 = PRVO leto knjige (s1 = NASLOVNICA 'Trauungs-Buch'-'1828'!; s2 = 'Pag. 1'-glava z natisnjeno tabelo; s3 = nadaljevanje)",
+  "vrstice": 16,
+  "stevilcenih": 13,
+  "stevilcenje": "m1–m13 (restart-z-1 = knjiga se odpira!)",
+  "nestevilcenih": 3,
+  "bloki": 3,
+  "mnozicniDan": "6. Feber 1828 ×7 (m2–m8 vsi 'am 6.' ditto!) — pre-Lent (Easter 1828 = Apr 6, Ash Wednesday = Feb 21!)",
+  "foliacija": "s2 = 'Pag. 1/2'-kand.; s3 = [~'Pag. 3|5'-kand.-X-OPEN]"
+ },
+ "entries": [
+  {"m": 1, "scan": 2, "datum": "20. Jänner 1828 [~30-DUEL: 'do'=Kurent-'2'-2:1-'20'!]", "zenin": "Miha [Vertovec/Bertopč-garble-DUEL], ¼ Bauer, 20", "vasZenin": "Semelj 14", "nevesta": "Kath. [Smajič/Smalt-garble], 16", "vasNevesta": "Otok [~28|29-X-OPEN]", "starsi": "Georg-[garble] + Mare geb. Kambik | Mark.-[garble] + M. Moh. Repnik geb. Fillari-[garble]", "price": "Mich. Smalt (Bauer) + Mar. Mohorič (Knecht)", "urkunde": "[~'Mil. Kirchl. Prin. Disp. von Kambikau'-garble]", "duhovnik": "Georg Mla[...]-garble-[~'Albrecht'-kand.]-Koop.-kand.", "xOpen": ["datum-20/30", "ime-ženina", "vas-neveste-28/29"]},
+  {"m": 2, "scan": 2, "datum": "6. Feber 1828", "zenin": "Miko [Jaksch/Tafžič-garble], ½ Gütl, 24", "vasZenin": "Boginje vas", "nevesta": "Anna MUS, 20", "vasNevesta": "Boršt 13 [~'Kostl 13'-garble]", "starsi": "Miko-[garble] + Anna | Peter MUŽIČ + Anna TILLAR", "urkunde": "'Copula Smellig. et Consorti 1828 № 51 — Dispensa'", "duhovnik": "isti-roka", "xOpen": ["ime-ženina", "vas-neveste"], "niti": ["MUZ (nevesta)", "TILLAR (mati neveste!)"]},
+  {"m": 3, "scan": 2, "datum": "6. Feber 1828 ('am 6.' ditto)", "zenin": "Jure [Buno/Bushe-garble], ¼, 22", "vasZenin": "[~'Lerthvi/Čerhvi 5'-X-OPEN-VAS!]", "nevesta": "Mare [Stari/Starž-garble], 17", "vasNevesta": "Prilipe 29 [~garble]", "price": "[~garble-2-branja]", "xOpen": ["vas-ženina", "priimek-neveste"]},
+  {"m": 4, "scan": 2, "datum": "6. Feber 1828 ('am 6.')", "zenin": "Jure [Švon/Svon-garble], 23 [~20-DUEL]", "vasZenin": "BROD IN CROATIA (VAS-ČEZ-KUPO!!)", "nevesta": "Anna [Štagel/Štu/Slugel-garble], 22", "vasNevesta": "Dobra [~11-garble]", "xOpen": ["priimek-ženina", "starost", "vas-neveste"], "opomba": "migrant-iz-Hrvaške — edini-tak-vpis-1828!"},
+  {"m": 5, "scan": 2, "datum": "6. Feber 1828 ('am 6.')", "zenin": "Jure [Fakle/Jahle-garble], ¼ gütl, 27 [~21-DUEL]", "vasZenin": "[~'Dreilospez/Driložje 31|30'-X-OPEN-VAS!]", "nevesta": "Anna MAVER [~'Marin'], 23 [~20]", "vasNevesta": "Otok [~1|17-X-OPEN!]", "xOpen": ["vas-ženina", "starost", "vas-neveste"]},
+  {"m": 6, "scan": 2, "datum": "6. Feber 1828 ('am 6.')", "zenin": "Jure STARA [~'Stare'], [~20|30-DUEL], 'sinž'-garble", "vasZenin": "[~'Thra/Tira/Vira 25'-X-OPEN-VAS!]", "nevesta": "Maria [Jan/Spin-garble-DUEL], [~20|22]", "vasNevesta": "GRIBLJE 6 (1:1!)", "blok": "h6", "duhovnik": "Georg Mla[...]", "xOpen": ["vas-ženina", "ime-neveste", "starosti"], "opomba": "PRVI-GRIBLJE-BLOK-1828 = KORPUS-PRVI-VPIS (1857→1828!); h6-firstYear-DVIG-32!"},
+  {"m": 7, "scan": 2, "datum": "6. Feber 1828 ('am 6.')", "zenin": "Peter KLEPEC, ¼ gütl, 28 [~20-DUEL]", "vasZenin": "[~'Krapfinž/Krafing 24|27|25'-X-OPEN!]", "nevesta": "Anna [Kambič/Hanphi-garble-DUEL], 20", "vasNevesta": "[~'Krapfinž 25']", "starsi": "Mikla KLEPEC + Maria | Peter-[Kambič/Hanphi] + Anne", "price": "Mich.-[garble]", "xOpen": ["vas-ženina-št.", "priimek-neveste"]},
+  {"m": 8, "scan": 2, "datum": "6. Feber 1828 ('am 6.'/'auß e.'-garble)", "zenin": "Peter BUTALA, ½ gütl, 20", "vasZenin": "[~'Mlane/Mlare 10'-'Planina 10'-kand.-X-OPEN!]", "nevesta": "Margareth STRAUSS [~'Strauß'], 21", "vasNevesta": "[~'Gerpih 4'-'Geršiči 4'-X-OPEN!]", "starsi": "Jakob BUTALA + Marija | Gregor STRAUS + Margaret", "price": "Jurij [Sužaj/Suzej-garble] + Math. [Kramar-garble]", "xOpen": ["vas-ženina", "vas-neveste"], "niti": ["BUTALA (oče-Jakob!)"]},
+  {"m": "MUZ-vrstica (neštevilčena!)", "scan": 2, "datum": "[~'23.'-X-OPEN-'Jänner/Febr'-neznano!]", "zenin": "Math. MUZ, 27", "vasZenin": "Semelj", "nevesta": "Anna MUZ, [~22]", "vasNevesta": "[~'Brimo/Primož-IIteri'-X-OPEN!]", "marginalna": "RJAV-PRIPIS [~'№ 9'-kand.-X-OPEN!] — rjav-črnilo = kasneje-dodano!", "xOpen": ["datum", "marginala", "vas-neveste"], "opomba": "★★★ DUPLIKAT-m9-kand.: m9 = ISTI-PAR (Math.-MUZ-Semelj-17 × Anna-MUZ-Primož-14, 13. 2.!) z urkunde-'Gel. Disp. halb extra' = krvno-sorstvo-MUZ×MUZ! — pisarski-postopek: prvi-zapis-rjav → preložen-v-№9!"},
+  {"m": 9, "scan": 3, "datum": "13. Feber 1828", "zenin": "Mathia MUZ, ½ Gübl, 26 [~25]", "vasZenin": "Semelj 17", "nevesta": "Anna [Muz/Mež-garble], 20", "vasNevesta": "Primož 14", "starsi": "Math.-MUZ + Catarina | [~garble] + Georg-[Tomel-garble]", "urkunde": "'Gel. Disp. halb extra' = DISPENSA-KRVNO-SORSTVO!", "xOpen": ["starost", "ime-neveste", "starši-neveste"], "niti": ["MUZ (polni-par!)"]},
+  {"m": 10, "scan": 3, "datum": "13. Feber 1828 [~12|18-DUEL!]", "zenin": "Math. [Strah/Inakl/Sansl-garble-DUEL-3-branja!], ½ Gütl, 25", "vasZenin": "[~'Bodoml/Bodonc 28'-X-OPEN-VAS!]", "nevesta": "Catarina MUS, 18", "vasNevesta": "[~'Gera/Gerin/Mzg 27'-X-OPEN-VAS!]", "starsi": "Math.-[garble] + Anna | Martin-[garble] + Anna", "price": "Mich.-[garble] + Georg-[garble]", "urkunde": "'Mit einwilligung des Herrn Dechantens'-kand.", "xOpen": ["datum", "ime-ženina", "vase-oboje"], "niti": ["MUZ (nevesta)"]},
+  {"m": 11, "scan": 3, "datum": "[~10-DUEL-kronološki-lom!-Febr-10-kand.-vs-März-10-kand.!]", "zenin": "Georg [Zurek/Lurek/Zwitko-garble-DUEL-3-branja!], ¼ gütl, [~30]", "vasZenin": "[~'Škrilje 2'/'Shrslif 2'-X-OPEN-VAS!]", "nevesta": "Catarina [Gosmann/Stasman-garble-DUEL!], 22 [~23]", "vasNevesta": "Otok 5", "starsi": "[~garble] + Margar. | Peter-[Gosmann] + Maria", "price": "Math. Primcich + Joh. Krichard + Maria KRIŠAN-[~'Krishan']", "xOpen": ["datum-lom", "ime-ženina", "vas-ženina", "priimek-neveste"], "niti": ["KRIŽAN (priča!)"]},
+  {"m": 12, "scan": 3, "datum": "17. [~mesec-X-OPEN — po-m11!]", "zenin": "Nicol ULRICH [~'Musich'-DUEL-2:1-Urich!], ¼ Gütl, 19", "vasZenin": "Otok 8", "nevesta": "Catharina NOVAK [~'Naveršak'-garble], 22", "vasNevesta": "Otok 14", "starsi": "Georg-[Urich] + Catharina-[Tomaž] | [~garble]", "price": "Micko Tomaž + Marko NOVAK", "urkunde": "'Mit ehelicher Consens'", "xOpen": ["mesec", "priimek-ženina-2:1", "starši-neveste"], "niti": ["NOVAK (priča!)"]},
+  {"m": 13, "scan": 3, "datum": "Mai [4|5-DUEL-'4½'-kand.-prečrtan!]", "zenin": "Miko/Miklo TILLAR [~'Tiller/Fillar'], ½ Gütl, 27", "vasZenin": "GRIBLJE 61 (1:1!)", "nevesta": "Catra [~'Miller/Millar-garble'-'Križan'-kand.-po-očetu-2-branja!], 26", "vasNevesta": "GRIBLJE 22 (1:1!)", "starsi": "[~'Josc'-garble] + Anne-Mag.-geb.-[Česnik-garble] | Miho KRIŽAN [~'Krishan'] + Matve-[~'Peskič'-garble]", "urkunde": "[~'cop. an Bucel'-garble]", "blok": "h61 + h22 = POLNI-DVOJNI!", "xOpen": ["datum-4/5", "priimek-neveste"], "niti": ["TILLAR (ženin + m2-mati!)", "KRIŽAN (oče-neveste!)"], "opomba": "cf.-m18-04455-h13×h62-ŠIV (47-let-kasneje!); h61-DVIG-34 + h22-DVIG-41-ABSOLUTNI-REKORD!"},
+  {"m": "14 (neštevilčena!)", "scan": 3, "datum": "21. September 1828", "zenin": "Math. [Tesar/Tescharc/Tschunk-garble-DUEL!], 25 [~26|28]", "vasZenin": "[~'Loquitz/Lokec 4'-X-OPEN-VAS!]", "nevesta": "Kath. [Mavren/Marren/Marevich-garble!], 19 [~ig]", "vasNevesta": "[~'Dobra/Bobra 24'-X-OPEN!]", "price": "Mar.-[garble] + Mari.-Royan + Marth.-Maron + Catn.-Krugl + Mina-Krugl + Cleopha-Hutter (6-prič!)", "xOpen": ["vas-ženina", "priimki"], "opomba": "neštevilčena — po-številčenju-dodana!"},
+  {"m": "15 (neštevilčena!)", "scan": 3, "datum": "26. November 1828", "zenin": "Mathe [Supan/Supanc-garble] 'ništ' [~ledig], 20", "vasZenin": "[~'Vranovich 19'-X-OPEN-VAS!]", "nevesta": "Catar. STARA [~'Sta-rah'], 20 [~23|26]", "vasNevesta": "[~'Virsajnic 8'-X-OPEN!]", "starsi": "Alt-Jöse-[Suppanich-garble] + Anna | Mirco STARA + Anna STARA", "price": "Peter-[Steuhler-garble] + Jer-[garble] + Peter-STARA-kand.", "marginalna": "svinčnik-'✓' (kasnejša-kontrola!)", "xOpen": ["vasi", "priimki"], "niti": ["STARA (oče-Mirco!-cf.-m6-ženin!)"], "opomba": "neštevilčena — po-številčenju-dodana!"}
+ ],
+ "niti1828": {
+  "muz": {"st": 4, "opis": "m2-nevesta-Anna + m9-polni-par (DISPENSA-krvno-sorstvo!) + m10-nevesta-Catarina + MUZ-vrstica (DUPLIKAT-m9-kand.!)", "opomba": "najmočnejša-družina-1828"},
+  "tillar": {"st": 2, "opis": "m2-mati-Anna-Tillar (Boršt 13!) + m13-ženin-Miko-Tiller (Griblje 61!)"},
+  "stara": {"st": 2, "opis": "m6-ženin-Jure-Stara (Griblje 6!) + m15-oče-Mirco-Stara"},
+  "krizan": {"opis": "m13-oče-neveste-Miho-'Krishan' + m11-priča-Maria-'Krishan' — cf.-HRIŽAN-h62-ŠIV-1873!"},
+  "klepec": {"opis": "m7-ženin-Peter-Klepec (starši-Mikla-Klepec)"},
+  "butala": {"opis": "m8-ženin-Peter-Butala (oče-Jakob!)"},
+  "kambic": {"opis": "m1-mati-geb.-Kambik + m7-bride-kand. + m12-priča-Tomaž-kand."},
+  "brodInCroatia": {"opis": "m4-ženin-Jure-Švon-BROD-IN-CROATIA — VAS-ČEZ-KUPO (edini-migrant-vpis-1828!)"}
+ },
+ "xOpen": {
+  "skupaj": 12,
+  "seznam": ["m1-datum-20/30-DUEL", "m1-vas-neveste-28/29", "m3-vas-ženina-X-OPEN", "m4-priimek-ženina", "m5-vasi-X-OPEN", "m6-vas-ženina-'Thra 25'-X-OPEN + ime-neveste", "m7-vas-št.-DUEL", "m8-vasi-X-OPEN", "MUZ-vrstica-datum+marginala+vas", "m10-datum-DUEL + vase", "m11-datum-lom-DUEL + ime + vas", "m12-mesec + priimek-2:1", "m13-datum-4/5 + priimek-neveste", "m14/m15-vase"]
+ },
+ "korpusUcinek": {
+  "noviBlok": 3,
+  "noveVpise": "16 vrstic (m1–m13 + 3 neštevilčene) — leto 1828 KOMPLETNO (s2–s3!); s4 = že 1829!",
+  "vitalsTotal": "2023 → 2026",
+  "byBook01738": "11 → 14",
+  "korpusPrviVpis": "1857 → 1828 (ZA 29 LET!)",
+  "dvigiFirstYear": {"h6": "1860→1828 (32!)", "h22": "1869→1828 (41 = ABSOLUTNI-REKORD-DVIGA!-prej-h43-34-P250!)", "h61": "1862→1828 (34!)"},
+  "sestKnjiznih": "9 → 12 (h6/h22/h61!)",
+  "bothEraPoročna": "10 → 13",
+  "najdaljsiRazpon": "66 → 96 (h6 = 1828–1924!)",
+  "regenerirano": "parish-house-stories.ts + parish-house-stories.json (p255_gen.py)"
+ },
+ "nestevilceneTeza": "3-vrstice-BREZ-marginalnih-številk: MUZ-vrstica (rjav-črnilo + '№ 9'-kand.-pripis = preložena-v-№9!) + Sept-21 + Nov-26 (svinčnik-'✓') — pisar-je-številčil-samo-13-vpisov (do-Mai) — jesenski-dodatek-NEŠTEVILČEN!",
+ "p256+": "notranjost-01738-nadaljevanje: 1829 (s4–s6) — s4-pass-1: '18. Januar 1829–17. November' · s5: '14. Febr–1. Aug' · s6: 'März 1829–30. Juni 1830' — pričakovano ~15-20-vrstic"
+}

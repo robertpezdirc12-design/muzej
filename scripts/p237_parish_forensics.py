@@ -29,8 +29,8 @@ for m in BLOK_RE.finditer(src):
     house, sig, year, what = m.group(1), m.group(2), int(m.group(3)), m.group(4)
     bloki.append({"house": house, "sig": sig, "year": year, "what": what})
 
-check("I1 korpus razčlenjen == 2023 blokov (križ z HOUSE_VITALS) — P244-živo!",
-      len(bloki) == 2023, f"razčlenjenih={len(bloki)}")
+check("I1 korpus razčlenjen == 2026 blokov (križ z HOUSE_VITALS) — P244-živo!",
+      len(bloki) == 2026, f"razčlenjenih={len(bloki)}")
 po_knjigi = {k: sum(1 for b in bloki if b["sig"] == k) for k in ("04104", "04105", "04106", "04894", "04455")}
 check("I1b bloki-po-knjigah == {04104:288, 04105:502, 04106:433, 04894:520, 04455:269} (P246-živo!)",
       po_knjigi == {"04104": 288, "04105": 502, "04106": 433, "04894": 520, "04455": 269},

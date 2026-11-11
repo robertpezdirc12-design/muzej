@@ -18,7 +18,7 @@ check("I1 bloki 04455/1874 == 11 (REKORD!-h27-×2!)",
       len(bloki) == 11 and bloki == ["65", "7", "4", "27", "27", "33", "29", "30", "10", "43", "42"],
       f"najdeno {len(bloki)}: {','.join(bloki)}")
 skupaj = src.count('bookSignature: "04455"')
-check("I2 vitals-2023 + 04455==269", "HOUSE_VITALS.length !== 2011" not in src and skupaj == 269, f"04455={skupaj}")
+check("I2 vitals-2026 + 04455==269", "HOUSE_VITALS.length !== 2011" not in src and skupaj == 269, f"04455={skupaj}")
 
 nove = re.findall(r'houseNo: "(\d+)",\s*bookSignature: "04455",\s*year: 1874,\s*scan: (\d+),\s*page: (\d+),', src)
 pag_ok = all(int(p) == int(s) - 1 for _, s, p in nove)
@@ -72,7 +72,7 @@ check("I4c P249-KOREKCIJA-m28-'28.-Avgust' + MNOŽIČNI-DANI-×3 + H43-PARALELA 
       and "FERCHER" in an2 and "HEGRIČ" in an2)
 
 qa = open(f"{ROOT}/src/lib/qa-parish.ts", encoding="utf-8").read()
-st = qa.count("HOUSE_VITALS.length !== 2023")
+st = qa.count("HOUSE_VITALS.length !== 2026")
 check("I5 qa-p250 + števec-2012 (×150!)", "HOUSE_VITALS.length !== 2011" not in qa and st >= 150, f"2012-številcev={st}")
 check("I5b sidra-262 + 1874:11-P250 (qa-sidra-message)", "poročna sidra ≠ 262 (1873:4-P251! · 1874:11-P250!" in qa)
 check("I5c dobe-232 + 62-pred-linijskih", "dobe-bloki ≠ 236/7/26" in qa and "66 pred-linijskih 1873-P251×4!+1874-P250×11!" in qa)
@@ -116,7 +116,7 @@ check("I7c METODA-md5-7/7 + s7-križ-1:1-identičen-P249 + mikro-8×-×3 + pasme
 
 pt = json.dumps(json.load(open(f"{ROOT}/research/issue17/pt-luknja-18-final.json", encoding="utf-8")), ensure_ascii=False)
 check("I8 pt-luknja-2008/265 + h42/h43-firstYear-1874 + p250Note",
-      '"vitalsTotal": 2023' in pt and '"04455": 269' in pt
+      '"vitalsTotal": 2026' in pt and '"04455": 269' in pt
       and '"p250Note"' in pt and "H43-BRULA-PARALELA" in pt and "h43-04455-firstYear-1908→1874-DVIG-ZA-34-LET" in pt)
 
 u = open(f"{ROOT}/src/components/museum/museum-atlas.tsx", encoding="utf-8").read()

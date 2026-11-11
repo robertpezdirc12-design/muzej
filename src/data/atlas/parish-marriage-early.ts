@@ -1084,3 +1084,45 @@ export const PREDHODNIK_1873_KORPUS = {
   vitalsTotal: 2023,
   byBook01738: 11,
 } as const;
+
+
+// ——— P255: NOTRANJOST-01738 — ZAČETEK: leto 1828 (s1–s3) = PRVO LETO KNJIGE + KORPUS-NADALJUJE-V-PAST (1857→1828!) ———
+/** 16 vrstic 1828 (13 številčenih m1–m13 + 3 neštevilčene!); bloki = 3 (h6-m6 + h61/h22-m13 polni dvojni!). */
+export const PREDHODNIK_1828_BLOCKS = HOUSE_VITALS.filter(
+  (h) => h.bookSignature === "01738" && h.year === 1828,
+);
+export const PREDHODNIK_1828_HOUSES = PREDHODNIK_1828_BLOCKS.map((h) => h.houseNo);
+export const PREDHODNIK_1828_TOTAL = 16;
+export const PREDHODNIK_1828_STEVILCENIH = 13;
+export const PREDHODNIK_1828_NESTEVILCENIH = 3;
+export const PREDHODNIK_1828_BLOCKI = 3;
+
+/** s1 = NASLOVNICA ('Trauungs-Buch' 1828!) + m1 = 20. Jänner 1828 (RESTART-KNJIGE-z-1!) + množični dan 6. 2. ×7. */
+export const PREDHODNIK_1828_ODPIRANJE = {
+  si: "★★★★★ KNIŽNO-ODPIRANJE-01738 (s1–s2): s1 = NASLOVNICA ('Trauungs-Buch' + '1828' — cf.-s147-naslovnica-'Podzemelj III'-NA-KONCU-P253!) + s2 = 'Pag. 1'-glava-z-natisnjeno-tabelo ('Bräutigam/Braut/Eltern/Zeugen/Urkunden/Unterschrift') + m1 = 20. Jänner 1828 [~30-DUEL-'do'-Kurent-'2'-2:1-'20'!] = RESTART-KNJIGE-z-1 (prvi-številčeni-vpis-NOVE-knjige-cf.-RESTART-1873-P253!); nato m2–m8 = 6. Feber ×7 = MNOŽIČNI-DAN (vsi-'am 6.'-ditto!) — 8 porok-v-18-dneh (20. 1.–6. 2. 1828!)",
+  en: "THE-BOOK-OPENING-OF-01738 (s1–s2): s1 = the-TITLE-PAGE ('Trauungs-Buch' + '1828'!) + s2 = 'Pag. 1'-header-with-the-printed-table + m1 = Jan 20, 1828 = the-book's-RESTART-at-1; then m2–m8 = Feb 6 ×7 = the-MASS-WEDDING-DAY — 8 weddings in 18 days!",
+} as const;
+
+/** Neštevilčene vrstice: MUZ-vrstica (rjav pripis + DUPLIKAT-m9-kand.!) + Sept-21 + Nov-26 (svinčnik-✓!). */
+export const PREDHODNIK_1828_NESTEVILCENE = {
+  si: "★★★ 3-NEŠTEVILČENE-VRSTICE (po-številčenju-DODANE!): ① s2-MUZ-vrstica — Math. MUZ (Semelj) × Anna MUZ ([~'Brimo/Primož-IIteri'-X-OPEN!]) z [~'23.'-datumom-X-OPEN-'Jänner/Febr'-neznano!] + RJAV-PRIPIS-v-marginali [~'№ 9'-kand.-X-OPEN!] = DUPLIKAT-m9-kand. (m9 = ISTI-PAR-kot-domača-13. 2.!-m9-urkunde-'Gel. Disp. halb extra' = krvno-sorstvo-MUZ×MUZ!) — pisarski-postopek: prvi-zapis → preložen-v-№9 ② s3-Sept-21 (Math.-[Tesar/Tschunk]-[~'Loquitz 4'] × Kath.-[Mavren/Marren]-[~'Dobra 24']-6-prič!) ③ s3-Nov-26 (Mathe-[Supan/Supanc]-'ništ' [~'Vranovich 19'] × Catar.-STARA [oče-Mirco-Stara!] [~'Virsajnic 8']) — svinčnik-'✓'-v-marginali!",
+  en: "3-UNNUMBERED-ROWS (added-after-the-numbering!): ① the-s2-MUZ-row — the-same-couple-as-m9!-with-a-BROWN-margin-note-[~'№ 9'-cand.!] = the-DUPLICATE-of-m9-candidate (the-clerk's-transfer-procedure!) ② the-s3-Sep-21 row (6-witnesses!) ③ the-s3-Nov-26 row (the-STARA-bride!) — with-a-pencil-'✓'",
+} as const;
+
+/** Niti 1828: MUZ ×4 + TILLAR ×2 + STARA ×2 + KRIŽAN-oče + KLEPEC + BUTALA + KAMBIC + NOVAK. */
+export const PREDHODNIK_1828_NITI = {
+  si: "★★★ NITI-1828: MUZ-×4 (m2-nevesta-Anna + m9-par-Disp.-krvno-sorstvo! + m10-nevesta-Catarina + MUZ-vrstica!) + TILLAR-×2 (m2-mati-Anna-Tillar-Boršt-13! + m13-ženin-Miko-Tiller-h61!) + STARA-×2 (m6-ženin-Jure-Stara-h6! + m15-oče-Mirco-Stara!) + ★★★ KRIŽAN-oče-m13 (Miho-'Krishan'-nevesta-'Miller/Millar'-garble-'Križan'-kand.!-cf.-HRIŽAN-h62-ŠIV-1873!) + KLEPEC-m7 (starši-Mikla-Klepec!) + BUTALA-m8 (oče-Jakob!) + KAMBIC/Kambič-garble-×3 (m1-mati-geb.-Kambik + m7-bride + m12-priča!) + NOVAK-priča-m12 + KRIŽAN-priča-m11 (Maria-'Krishan'!) + ★★★ **BROD-IN-CROATIA-m4 (VAS-ČEZ-KUPO!!**-ženin-Jure-Švon-edini-migrant-vpis-1828!) + KRAJING-m7 + ŠKRILJE-[~2]-m11 + OTOK-×5 (m1/m5/m11/m12×2!)",
+  en: "the-1828-threads: MUZ-×4 + TILLAR-×2 + STARA-×2 + the-KRIŽAN-father-of-m13 (cf.-the-HRIŽAN-h62-SEAM-1873!) + KLEPEC-m7 + BUTALA-m8 + KAMBIC-garble-×3 + NOVAK-witness + a-KRIŽAN-witness-m11",
+} as const;
+
+/** P255-korpus: +3 bloki; vitals 2023→2026; 01738 = 14 blokov; korpus-prvi-vpis 1857→1828! */
+export const PREDHODNIK_1828_KORPUS = {
+  noviBloki: 3,
+  vpisi: 16,
+  vitalsTotal: 2026,
+  byBook01738: 14,
+  korpusPrviVpis: "1857 → 1828 (h6/h22/h61!)",
+  sestKnjiznih: 12,
+  najdaljsiRazpon: "h6 = 96 let (1828–1924!)",
+} as const;
+
