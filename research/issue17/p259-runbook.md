@@ -1,5 +1,25 @@
 # P259 RUNBOOK — nadaljevanje ko se VLM-kvota (daily) povrne
 
+## ★ POSODOBITEV 2026-11-12 07:30 UTC — VSI MEHANIZMI PRIPRAVLJENI (ne-VLM delo KONČANO!)
+- **Duel-kompoziti ×10 ŽE GENERIRANI:** /tmp/p259/duels/*.jpg (backup: research/issue17/p259-work/duels/!) —
+  3 datumski (s11/s12/s13_dates = VSE vrstice) + 7 imenskih (s11_r2_gosling ★GOSLING|PESDIRZ-h53|33+BRING|BRINC-h24 ·
+  s12_r1_r2 ★19.|12.-Febr+HOFFERER · s12_r5_schmig ★ŠIMIČ-h60+19.|10.|26.-Oct · s12_r7_restart ★22.|27.-Jän-1834 ·
+  s13_r1_restart ★5.|8.-Febr · s13_r6_vrh ★VRH-h58|68+h51 · s13_r11_marentic ★10.|17.-Febr+MARENTIČ-24|29).
+  Generator: scripts/tmp/p259_duelcrops.py (GEOM po p258-s8/s9-kalibraciji!).
+- **p259_duels.mjs** (10 jobov, skip-logika, argument = posamezen job-id!) — DODAN v p259_chunk.sh kot FAZA 5
+  (samodejno ŽENE ko so rows=36/36!). Zagon: `bun scripts/tmp/p259_duels.mjs [id]` (brez id-ja = vsi).
+- **p259_gen.py** (hišne zgodbe): CONFIG-na-vrhu (EXPECTED_TOTAL/TIERS/SIX/BOTH_P = 0 → izpiše dejanske vrednosti
+  in konča z exit-2! Izpolni po integraciji). SIX_STORIES: 31-starih + 7-DRAFT-kandidatov (h24/h28/h51/h53/h58/h60/h68
+  — potrdi/prilagodi po reconcile!). POZOR: h24-igra-vlogo-v-notables (najglasnejša-postaja-šest-knjižna!).
+- **p259_oldverifier_update.py**: CONFIG-DRIVEN — bere scripts/tmp/p259-config.json
+  {total, byBook01738, sixList, bothEraPorocna, p94exceptions:[{year,house,note}], housesNote} →
+  qa-parish.ts (HOUSE_VITALS ×N + SIX-lista ×2 + tiers + bothEra ×2 + byBook ×4 + p94-izjeme) + pt-luknja-kirurško!
+- **p259_docs.py**: CONFIG-DRIVEN — bere scripts/tmp/p259-docs.json
+  {worklogEntry, banner, bullet, tabelaRow, korpusNote, odprtoNew, evidenceNote, total, byBook01738, sixCount, bothEra}
+  → worklog.md + README.md (ankri = P258-besedila, stabilni!).
+- KORAK-2-konec je zdaj: rows=36/36 **IN** census=6/6 **IN** pass1=3/3 **IN** pag=3/3 **IN** duels=10/10
+  (chunk.sh poroča vse pet števk!). Po KORAKU-2+ izbriši preostale cron-sprožilče (cron list → delete).
+
 ## Kontekst (samozadostno)
 Projekt: Podzemelj matrice (Next.js, /home/z/my-project). Faza P259 = NOTRANJOST poročne knjige 01738:
 **1833-nadaljevanje + 1834-začetek (s11–s13 = Pag. 19/21/23).** Vsa priprava je ŽE opravljena:

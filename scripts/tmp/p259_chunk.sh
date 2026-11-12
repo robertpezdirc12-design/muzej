@@ -47,9 +47,23 @@ for S in 11 12 13; do
   else say "pag s${S} FAIL — umik 150s"; [ $(( $(elapsed) )) -le $BUDGET ] && sleep 150; fi
   [ $(( $(elapsed) )) -le $BUDGET ] && sleep 32
 done
+# FAZA 5: DUELI (samo ko so VSE vrstice prebrane — kompoziti v /tmp/p259/duels/!)
+if [ $(( $(ls /tmp/p259/full/s1*_r*.json 2>/dev/null | wc -l) )) -ge 36 ]; then
+  for D in s11_dates s12_dates s13_dates s11_r2_gosling s12_r1_r2 s12_r5_schmig s12_r7_restart s13_r1_restart s13_r6_vrh s13_r11_marentic; do
+    [ $(( $(elapsed) )) -gt $BUDGET ] && break
+    [ -s "/tmp/p259/duels/${D}.json" ] && continue
+    say "duel ${D} poskus"
+    timeout 110 bun scripts/tmp/p259_duels.mjs "${D}" >> $LOG 2>&1 || true
+    # p259_duels.mjs požene VSE jobe — skip-logika znotraj; preverimo ali je ta gotov:
+    if [ -s "/tmp/p259/duels/${D}.json" ]; then say "duel ${D} OK"
+    else say "duel ${D} FAIL/429 — umik 150s"; [ $(( $(elapsed) )) -le $BUDGET ] && sleep 150; fi
+    [ $(( $(elapsed) )) -le $BUDGET ] && sleep 32
+  done
+fi
 R=$(ls /tmp/p259/full/s1*_r*.json 2>/dev/null | wc -l)
 C=$(ls /tmp/p259/census_*.json 2>/dev/null | wc -l)
 P=$(ls /tmp/p259/pass1_s*.json 2>/dev/null | wc -l)
 G=$(ls /tmp/p259/pag_s*.json 2>/dev/null | wc -l)
-say "CHUNK-KONEC: rows=${R}/36 census=${C}/6 pass1=${P}/3 pag=${G}/3"
-echo "rows=${R}/36 census=${C}/6 pass1=${P}/3 pag=${G}/3"
+U=$(ls /tmp/p259/duels/*.json 2>/dev/null | wc -l)
+say "CHUNK-KONEC: rows=${R}/36 census=${C}/6 pass1=${P}/3 pag=${G}/3 duels=${U}/10"
+echo "rows=${R}/36 census=${C}/6 pass1=${P}/3 pag=${G}/3 duels=${U}/10"
