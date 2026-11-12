@@ -20,9 +20,13 @@ def main():
     if not m:
         print("SIDRO (h49-1833) NI NAJDENO!"); sys.exit(1)
 
-    header = blocks[0].get("_header", "  // ——— P259 header ———")
+    header = next((b.get("_header") for b in blocks if b.get("_header")), "  // ——— P259 ———")
     lines = ["\n" + header]
+    pravih = 0
     for b in blocks:
+        if "houseNo" not in b:
+            continue  # psevdo-vnos (samo _header/_vitals*) — PRESKOČI!
+        pravih += 1
         lines.append(f'''  {{
     houseNo: "{b["houseNo"]}",
     bookSignature: "01738",
@@ -33,15 +37,20 @@ def main():
     whatEn: "{esc(b["whatEn"])}",
     status: "DOCUMENTED" as const,
   }},''')
+    if pravih == 0:
+        print("NOBENIH PRAVIH BLOKOV (brez houseNo) — preveri blocks-p259.json!"); sys.exit(1)
     insert = "\n".join(lines) + "\n"
     src = src[:m.end(1)] + insert + src[m.end(1):]
 
-    # števci na vrhu datoteke (vitalsTotal ipd. — poišči komentar skupnega števca)
-    n_old, n_new = b.get("_vitalsOld"), b.get("_vitalsNew")
+    # števci: POZOR — 'N vitalov' v parish.ts NE obstaja (števci živijo v pt-luknja-18-final.json
+    # + qa-parish.ts — posodobita ju p259_oldverifier_update.py!). Tu le varnostna zamenjava:
+    n_old = next((b.get("_vitalsOld") for b in blocks if b.get("_vitalsOld")), None)
+    n_new = next((b.get("_vitalsNew") for b in blocks if b.get("_vitalsNew")), None)
     if n_old and n_new:
         c = src.count(f"{n_old} vitalov")
-        src = src.replace(f"{n_old} vitalov", f"{n_new} vitalov")
-        print(f"števec {n_old}→{n_new} vitalov: zamenjanih {c}")
+        if c:
+            src = src.replace(f"{n_old} vitalov", f"{n_new} vitalov")
+        print(f"števec {n_old}→{n_new} 'vitalov': zamenjanih {c} (0 = pričakovano, števci so v pt-luknja/qa!)")
 
     open(SRC, "w", encoding="utf-8").write(src)
     print(f"VSTAVLJENIH BLOKOV: {len([b for b in blocks if 'houseNo' in b])}")
