@@ -1,5 +1,15 @@
 # P259 RUNBOOK — nadaljevanje ko se VLM-kvota (daily) povrne
 
+## ★ POSODOBITEV 2026-11-12 08:35 UTC — PRE-RECONCILE DOKONČAN (KORAK-3 pospešitev!)
+- **Nova analiza: `research/issue17/p259-work/prereconcile.txt`** (326 vrstic — KORAK 3 začni TAM!)
+  = konsenz/konflikt tabela vseh 36 vrstic iz pass1+census L/R+datcol+hints (generator: scripts/tmp/p259_prereconcile.py).
+- ★★ NOVO ODKRITO — **s13 datumski SPOR (sistematičen!)**: datcol pravi rob8–14 = 5. Febr ×7,
+  censusL+pass1 pa rob9 = 9. Febr + rob10–14 = 10. Febr ×5 (2:1 proti datcol!).
+  facts.json '5febr1834 ×7'-claim VISI na tem → dvoboj s13_dates MORA razrešiti pred bloki!
+- s11 datumi = KONSENZ (6. Febr ×8 + 13. Febr ×5 — samo notacija 'd°'); KRIŽAN-×2-starši s12_r6;
+  pass1_s13 foliacija-zmeda (trdi Pag. 19/20 — vsebina veljavna, foliacija ne);
+  censusR_s13 v slovenskih imenih (Kržišnik/Kavčič/Zupanc — strip arbitrirà).
+
 ## ★ POSODOBITEV 2026-11-12 08:00 UTC — RAZDEDUPLIKACIJA SPOROČILCEV + PREVERJENO STANJE
 - Kvota ob 07:59 UTC še vedno 0 (429). Zadnji 429-umik v loop.log: 06:14 UTC.
 - **CRON razdedupliran:** watch-r2/r3/r4 (podvojeni z valovi 1–3!) IZBRISANI. Aktiven niz:

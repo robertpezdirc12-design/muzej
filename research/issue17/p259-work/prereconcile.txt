@@ -1,0 +1,326 @@
+###############################################################################
+# P259 PRE-RECONCILE ANALIZA (2026-11-12 08:30 UTC — pred full-strip branjem!)
+# Viri: pass1 + census L/R + datcol + hints (VSO že prebrano prej). Spodaj: 36 vrstic.
+###############################################################################
+# KLJUČNE UGOTOVITVE (za KORAK 3):
+#
+# 1) s11 DATUMI = KONSENZ (6. Febr ×8 r1–r8 + 13. Febr ×5 r9–r13; ✗ znamenja so
+#    le notacijske variantice 'd°' vs 'Febr'. NI duela potrebnega. 13 porok na
+#    6. Febr 1833 (z s10 ×5) = REKORD korpusa ostaja.
+#
+# 2) s12 DATUM-DUELI (že pokriti s kompoziti!): r1 [19.|12.]-Febr (kronologija:
+#    s11-konec 13. Febr → 19. skoraj gotovo!), r2 [19.d°|12.dito|13.dito],
+#    r5 [19.|10.|26.]-Oct, r7 ★RESTART-1834 [22.|27.]-Jän. Ostali konsenz:
+#    r3 21. April (GROSUPLJE h1×h1!), r4 5. Mai, r6 27. Nov (ROB-1!), r9–r12 29. Jän ×4.
+#
+# 3) ★★ s13 DATUMI — SISTEMATSKI SPOR (novo odkrito!):
+#    - datcol:        rob8–14 = 5. Febr ×7 + rob15 = 9. + rob16–18 = 10. ×3
+#    - censusL+pass1: rob8 = 5.|8. + rob9 = 9. Febr + rob10–14 = 10. Febr ×5 + rob15 = 9. + rob16–18 = 10.
+#    → 2:1 PROTI datcol- vzorcu za rob 9–14! facts.json je sledil datcol (»5. Febr ×7«) —
+#    dvoboj s13_dates (VSE vrstice na kompozitu!) MORA razrešiti vzorec rob 9–14.
+#    Obvezno preveriti v KORAKU 3 pred bloki-pisanjem! (masniDnevi-5febr1834-claim visi na tem!)
+#
+# 4) ROBNO-ŠTEVLJENJE (nova strukturna značilnost): 27. Nov 1833 = rob 1 → zvezno
+#    do rob 18 (10. Febr 1834) čez mejo leta! census_L12 r5 ima pomaknjeno rob-št. '2'
+#    (census-opomba: 'verjetno napačno zapisana') — pravi rob-1 = r6 (27. Nov).
+#
+# 5) KRIŽAN-NIT s12_r6: censusR oče ženina 'Nicolaus Woriz / Catharina KRISCHAN' +
+#    mati neveste 'Maria KRISCHAN' — dvakrat Krischan! (KRIŽAN-konglomerat-člen!)
+#
+# 6) GRIBLJE-BLOKI (korpusno kritični, vsi pokriti z dueli/stripi):
+#    s11_r2: ženin Pesdirz|Gosling|Gutting h33|53|50? + nevesta Bring|Brinc|Brung h24?
+#    s12_r5: ženin Šimič|Schmig|Amiz h60? (★ŠIMIČ-nit-h56/h49-P258!)
+#    s12_r6: ženin Bring|Brung h28 (ŠIV-hiša! dvig 32! + KRIŽAN-starši)
+#    s13_r6: ženin Vrh|Vrb h58|68 + nevesta Karafhainj|Haraghtinich h51 (dvig 33?)
+#
+# 7) GROSUPLJE s12_r3: Martin Havran × Josepha Lebstan, OBE hiša 1 (Grosuplje!)
+#    = POLNI DVOJNI h1×h1 + najbolj oddaljena vas korpusa (Ljubljanska!) [~X-OPEN]
+#
+# 8) pass1_s13 FOLIACIJA-ZMEDA: trdi 'Pag. 19/20' (napačno!) — VSEBINA pa 1:1 ustreza
+#    s13 (Georg × Anna, hiši 2/8 = census_L13 r1). Foliacija-neveljavna, vsebina-veljavna.
+#
+# 9) censusR_s13 STIL: slovenska imena (Kržišnik, Kavčič, Zupanc, Plavc...) — čitatelj
+#    je interpretiral po slovensko; polja bodo arbitrirali strip-branja (full/*.json).
+#
+# 10) s12_r8 DATUM: nezapisan/praznen (datcol) — censusL 'd° (27. Jän)'; verjetno
+#     d°-razširitev. Strip-bo pokazal.
+###############################################################################
+####################################################################################################
+# P259 PRE-RECONCILE — konsenz/konflikt tabela iz 4 virov (pass1/censusL/censusR/datcol)
+# NAMEN: KORAK-3 pospešitev. polja ✓✓ = konsenz, ✗ = konflikt (duel kand.), ? = en sam vir
+####################################################################################################
+
+==================================================================================================
+### s11  (13 censusL / 13 censusR / 13 pass1 / 13 datcol)
+==================================================================================================
+-- s11_r1 (rob 1) 
+   DATUM[✗]: datcol='6. Febr' censusL='6. Febr' pass1='6. Febr 1833'
+   ŽENIN[✗?]: censusL='Nicolaus Rup Dobroviz 13'
+              pass1 ='Nikolaus Gus[?] Lindart, Dobroviz [Dobravlje], hiša 13'
+   NEVESTA[✓]: censusL='Catharina Krischoviz Dobroviz 14'
+              pass1 ='Catharina Haushony [Haušonc?], Dobroviz [Dobravlje], hiša 14'
+   STARŠI/PRIČI (censusR): oZ='Nic. Ang(e)l Linard / Maria Gertschpig(h)' / oN='Martin Kerschnik(?) Linard / Barbara Angel' | priči='—'
+-- s11_r2 (rob 2) H!
+   DATUM[✗]: datcol='6. d°' censusL='6. d°' pass1='6. Febr'
+   ŽENIN[✗?]: censusL='Johann Pesdirz Griblje 33'
+              pass1 ='Joh. Gosling [Gošling?], Lindart, Griblje [Grilce], hiša 53'
+   NEVESTA[✓]: censusL='Maria Brung Griblje 24'
+              pass1 ='Maria Bring [Brinc], Griblě 24'
+   STARŠI/PRIČI (censusR): oZ='Johann Gutting(?) / Maria Poshel' / oN='Michael Being(?) Linard / Barbara Hager' | priči='Georg Poshel, Mich. Poshel'
+-- s11_r3 (rob 3) H!
+   DATUM[✗]: datcol='6. d°' censusL='6. d°' pass1='6. Febr'
+   ŽENIN[✗?]: censusL='Matthias Mosaic Otok 31'
+              pass1 ='Mathias Hvauf? [Hruš?/Hvauf] Lindart, Otok, hiša 31'
+   NEVESTA[✗?]: censusL='Anna Berhozez Igel 14'
+              pass1 ='Amal [Amalija?] Berkozy [Berkovič?], Seel? 14'
+   STARŠI/PRIČI (censusR): oZ='Joseph Kersh(?) Linard / Margareth Palgich' / oN='Georg Bartolg(?) Linard / Maria Kambisch' | priči='Andreas Palgich, Carl Bartolg(?)'
+-- s11_r4 (rob 4) H!
+   DATUM[✗]: datcol='6. d°' censusL='6. d°' pass1='6. Febr'
+   ŽENIN[✗?]: censusL='Nicolaus Brzin Grove 2'
+              pass1 ='Nikolaus Bogil [Bogiel?] Lindart, Grinstal [Grinstal?], hiša 2'
+   NEVESTA[✓]: censusL='Maria Lebulich Otok 22'
+              pass1 ='Maria Schallg [Šaljc?], Otok 22'
+   STARŠI/PRIČI (censusR): oZ='Martin Bajak / Catharina Teng' / oN='Joh. Felsch(?) Linard / Maria Maleschig' | priči='Martin Ang(?) Martin Maleschig'
+-- s11_r5 (rob 5) H!
+   DATUM[✗]: datcol='6. d°' censusL='6. d°' pass1='6. Febr'
+   ŽENIN[✓]: censusL='Georg Anizek Sastava 10'
+              pass1 ='Georg Hunczl [Huncik?] Lindart, Kostava [Kostanjevica?], hiša 10'
+   NEVESTA[✓]: censusL='Anna Batale Tschechel 33'
+              pass1 ='Anna Britala [Bretala?], Treblgla [Trebelno?] 35'
+   STARŠI/PRIČI (censusR): oZ='Martin Trunkig(?) Linard / Catharina Bras(?)' / oN='Joh. Kemperl(?) Linard / Maria Maleschig' | priči='Joh. Krisiga(?) Nicol. Kerschnik(?)'
+-- s11_r6 (rob 6) H!
+   DATUM[✗]: datcol='6. d°' censusL='6. d°' pass1='6. Febr'
+   ŽENIN[✓]: censusL='Johann Jotschitsch (Pfarr-Wigulum: Vele og Zulevnica) 3'
+              pass1 ='Johann Gutthorrgy [Gorjup?] Lindart, Vaser/Vas? (prej kaj?), hiša 3'
+   NEVESTA[✓]: censusL='Maria Bubur Zorkovica 4'
+              pass1 ='Maria Bukory [Bukovič?], Zeindorf? [Zajčje?] 4'
+   STARŠI/PRIČI (censusR): oZ='Nicel. Gertschnig(?) Linard / Anna Palgich(?) Linard' / oN='Nicel. Hohanig(?) Linard / Anna Hiponig(?)' | priči='Georg Bullog(?), Matthias Hoffschig(?)'
+-- s11_r7 (rob 7) H!
+   DATUM[✓✓]: datcol='6. Febr' censusL='6. Febr' pass1='6. Febr'
+   ŽENIN[✗?]: censusL='Matthias Tschirsch Luse 13'
+              pass1 ='Mathias Tardigl [Terdič?] Lindart, Döfja? [Depala vas?], hiša 13'
+   NEVESTA[✓]: censusL='Catharina Anizel Pavinge 10'
+              pass1 ='Catharina Hunczl, Panigha [Pavlova vas?] 10'
+   STARŠI/PRIČI (censusR): oZ='Matthias Lendig(?) Linard / Barbara Maschorg(?) Lausarin' / oN='Martin Hanig(?) Linard / Catharina Bras(?) Lausarin' | priči='Michael Tertig(?), Georg Tertig(?)'
+-- s11_r8 (rob 8) H!
+   DATUM[✗]: datcol='6. d°' censusL='6. d°' pass1='6. Febr'
+   ŽENIN[✗?]: censusL='Matthias Milsovic Luse 8'
+              pass1 ='Mathias Mulhorrgy [Mihelčič?] Lindart, Döfja? 5'
+   NEVESTA[✓]: censusL='Catharina Anizel Pavinge 9'
+              pass1 ='Catharina Durigh [Turk?], Panigha 9'
+   STARŠI/PRIČI (censusR): oZ='Michael Miltwig(?) Linard / Maria Tertig(?) Lausarin' / oN='Georg Trunkig(?) Linard / Maria Agnig(?) Lausarin' | priči='Stephan Tertig(?) Michael Klesy(?)'
+-- s11_r9 (rob 9) H!
+   DATUM[✗]: datcol='13. d°' censusL='13. d°' pass1='13. Febr'
+   ŽENIN[✓]: censusL='Georg Arahrinigel Kosting 22'
+              pass1 ='Georg Haushfinigl [Haušpinc?], Krajng [Kranjc?], hiša 32'
+   NEVESTA[✓]: censusL='Catharina Kurre Gern 29'
+              pass1 ='Catharina Kurra [Kurar?], Germ [Gorenje?], hiša 29'
+   STARŠI/PRIČI (censusR): oZ='Peter Harschping(?) Linard / Maria Horsang(?) Linarin' / oN='Matthias Horre(?) Linard / Anna Urbas(?) Linarin' | priči='Nicol. Harschping(?) Nicol. Zuzyffig(?)'
+-- s11_r10 (rob 10) H!
+   DATUM[✗]: datcol='13. d°' censusL='13. d°' pass1='13. Febr'
+   ŽENIN[✗?]: censusL='Nicolaus Kirchginzlich Otok 18'
+              pass1 ='Nikolaus Kuergfyhigl [Kurežič?], Ohlach [Otolj?], hiša 18'
+   NEVESTA[✓]: censusL='Catharina Jangcinovci Gern 30'
+              pass1 ='Catharina Tongl, Germ 20'
+   STARŠI/PRIČI (censusR): oZ='Martin Zerzaffig(?) Linard / Catharina Hapes(?) Linarin' / oN='Nicolaus Teng(?) Linard / Catharina Kramozg(?) Linarin' | priči='Nicol. Zuzyffig(?) Joh. Felah(?)'
+-- s11_r11 (rob 11) H!
+   DATUM[✗]: datcol='13. d°' censusL='13. d°' pass1='13. Febr'
+   ŽENIN[✓]: censusL='Georg Starshinigel Kosting 20'
+              pass1 ='Georg Haushfinigl [Haušpinc?], Krajng 20'
+   NEVESTA[✓]: censusL='Maria Milich Igel 16'
+              pass1 ='Maria Melill [Milh?], Seel 16'
+   STARŠI/PRIČI (censusR): oZ='Matthias Harschping(?) Linard / Maria Hombig(?) Linarin' / oN='Peter Mille(?) Linard / Maria Selli(g?) Linarin' | priči='Marlo Vipauz(?), Joh. Labschig(?)'
+-- s11_r12 (rob 12) H!
+   DATUM[✗]: datcol='13. d°' censusL='13. d°' pass1='13. Febr'
+   ŽENIN[✗?]: censusL='Matthias Milich Igel 26'
+              pass1 ='Mathias Melill [Milh?], Seel 16'
+   NEVESTA[✓]: censusL='Catharina Krischan Otok 16'
+              pass1 ='Catharina Kurran [Kurar?], Ohlach 16'
+   STARŠI/PRIČI (censusR): oZ='Peter Mille(?) Linard / Maria Selbig(?) Linarin' / oN='Michael Hirschan(?) Linard / Dorothea Hohozig(?) Linarin' | priči='Nicol. Zuzyffig(?) Nicol. Lellig(?)'
+-- s11_r13 (rob 13) H!
+   DATUM[✗]: datcol='13. d°' censusL='13. d°' pass1='13. Febr'
+   ŽENIN[✓]: censusL='Anton Malahtinigel Gradi 21'
+              pass1 ='Anton Malfghigl [Malešič?] Lindart, Gadig? [Gaj?], hiša 21'
+   NEVESTA[✓]: censusL='Maria Anashinigel Kosting 20'
+              pass1 ='Maria Haushfinigl, Krajng 20'
+   STARŠI/PRIČI (censusR): oZ='Anton Maleschig(?) Linard / Maria Angel' / oN='Michael Hanarshinig(?) Linard / Anna Vipauz' | priči='Joseph Simonzg(?) Mario Vipauz'
+
+==================================================================================================
+### s12  (12 censusL / 12 censusR / 12 pass1 / 12 datcol)
+==================================================================================================
+-- s12_r1 (rob 1) H!
+   DATUM[✗]: datcol='19. Febr.' censusL='12. Febr. 1833' pass1='12. Feb 1833'
+   ŽENIN[✓]: censusL='Georg Hohenauer, Kreuzdorf 13'
+              pass1 ='Georg Hofferer(?) [Hagmann?], Kreuzer(?) / Christoph(?) près Nötsch(?) hiša 13, 23 l.'
+   NEVESTA[✓]: censusL='Anna Stunigk, Prüstein 10'
+              pass1 ='Anna Tschesch(?), Goritschach(?) hiša 10, 23 l.'
+   STARŠI/PRIČI (censusR): oZ='Georg Hafner (Linar), Ana (Perfigh)' / oN='Peter Trunk (Linar), Margaretha Zwitting (Linar)' | priči='Matthias Torkel / Johannes Tscholig; Georg Hafner, curat.'
+-- s12_r2 (rob 2) H!
+   DATUM[✗]: datcol='12. dito (Febr.)' censusL='19. d° (Feb. 1833)' pass1='13. dito (Feb 1833)'
+   ŽENIN[✗?]: censusL='Mathias Mesing, Ott gedingt 18'
+              pass1 ='Matthias Messing(?) [Merzing?], Ottak(gorbetsch) hiša 18, 22 l.'
+   NEVESTA[✓]: censusL='Catharina Kerre geb. Petrug, Püble 10'
+              pass1 ='Catharina Hurrey(?) geb. Podurg(?) [Podberg?], Pröble(?) hiša 10, 31 l.'
+   STARŠI/PRIČI (censusR): oZ='Nicolaus Masving (Linar), Barbara Agran' / oN='Peter Pestig (Linar), Barbara Porell' | priči='Matth. Trunk, Georg Masving; Tomazin'
+-- s12_r3 (rob 3) H!
+   DATUM[✗]: datcol='21. April' censusL='21. April' pass1='21. April 1833'
+   ŽENIN[✓]: censusL='Martin Hoervan, Grosupl 1'
+              pass1 ='Martin Havran, Grosupl(?) hiša 1, 31 l.'
+   NEVESTA[✓]: censusL='Josepha Leopfan, Grosupl 1'
+              pass1 ='Josepha Lebstan [Lebstán], Grosupl hiša 1 (Zimmermannsg.), 30 l.'
+   STARŠI/PRIČI (censusR): oZ='Matthaus Marvan (Sumorgfund), Susana Horothin' / oN='Lorenz Lebotan (Sohomustries), Theresia Nichola' | priči='Matthaus Mulaffig, Joh. Mulaffig u. a.; Joseph Kapuanghif, Cooperat.'
+-- s12_r4 (rob 4) H!
+   DATUM[✗]: datcol='5. Mai' censusL='5. Mai' pass1='5. Mai 1833'
+   ŽENIN[✓]: censusL='Martin Muscan, Dobroviz 34'
+              pass1 ='Martin Musser(?), Dobravič(?) hiša 34, 48 l.'
+   NEVESTA[✓]: censusL='Barbara Koschehar, Ott am Leschnik (spela Wovach) 18'
+              pass1 ='Barbara Klebutschar(?) [Klobucar?], Ottak hiša 18, 27 l.'
+   STARŠI/PRIČI (censusR): oZ='Martin Musan (Linar), Catharina Torkel' / oN='Peter Habrighar (Linar), Anna Lonorg' | priči='Maria Paspich, Martin Gampich; Georg Ruvettering, curat.'
+-- s12_r5 (rob 2) H!
+   DATUM[✗]: datcol='10. Oct(ober)' censusL='19. Oct.' pass1='26. Oct 1833'
+   ŽENIN[✓]: censusL='Georg Amiz, Gribl 60'
+              pass1 ='Georg Schmig(?), Griblje hiša 6?/2? (60.? težko berljivo), 39 l.'
+   NEVESTA[✓]: censusL='Katharina Jureisjofrig, Kosting 21'
+              pass1 ='Katharina Harschpich(?) [Horvathpich?], Kresling(?) [Krešlin?] hiša 21, 38 l.'
+   STARŠI/PRIČI (censusR): oZ='Matthias Parity (Linar), Maria Hanig (Lerhan)' / oN='Matthias Petig (Linar), Maria Kamlig' | priči='Joseph Melko, Nicolaus Kabogigh; Joseph Kapuanghif, Cooperat.'
+-- s12_r6 (rob 1) H!
+   DATUM[✗]: datcol='27. Novem(ber)' censusL='27. Nov.' pass1='27. Nov 1833'
+   ŽENIN[✓]: censusL='Georg Brung, Gribl 28'
+              pass1 ='Georg Bring(?) [Pring?], Griblje hiša 28, 31 l. — v robu št. 1'
+   NEVESTA[✓]: censusL='Anna Tisch, Kosting 22'
+              pass1 ='Anna Tschekl(?) [Terček?], Kresling hiša 22, 30 l.'
+   STARŠI/PRIČI (censusR): oZ='Nicolaus Woriz (Linar), Catharina Krischan (Sumustun)' / oN='Johann Fillal (Linar), Maria Krischan (Linarin)' | priči='Georg Krischan, Nicolaus Kartau; Joseph Kapuanghif, Cooper.'
+-- s12_r7 (rob 2) H!
+   DATUM[✗]: datcol='22. Jänner' censusL='27. Jänner 1834' pass1='22. Dec(?) 1834 (vanockrat — leto 1834 v vpisu) — št. 2'
+   ŽENIN[✗?]: censusL='Stephan Pasfrig, Vivano (Vel. Vrh) 5'
+              pass1 ='Johann Kalmigh(?) [Kolmig?], Vano(neg.?) hiša 5, 31 l.'
+   NEVESTA[✓]: censusL='Maria Kosak, Gradiz 3'
+              pass1 ='Maria Dobrak, Gordej(?) hiša 3, 26 l.'
+   STARŠI/PRIČI (censusR): oZ='Johann Gapfich (Linar), Agna Sauel (Stumin)' / oN='Anton Novak (Linar), Katharina Kopaich (Linarin)' | priči='Matthias Musich, Georg Laugfich; Joseph Kapuanghif, Cooper.'
+-- s12_r8 (rob 3) H!
+   DATUM[✗]: datcol='(nezapisan/prazno)' censusL='d° (27. Jänner)' pass1='(po 22. Dec, nepisan datum) — št. 3'
+   ŽENIN[✓]: censusL='Jakob Heikel, Dobroviz 14'
+              pass1 ='Jakob Suchel(?) [Sukel?], Nötsch im Gailtal(?) hiša 11?, 26 l.'
+   NEVESTA[✓]: censusL='Katharina Rosmann, Skrile 2'
+              pass1 ='Katharina Roschmann, Kreite(?) hiša 2, 20 l.'
+   STARŠI/PRIČI (censusR): oZ='Georg Ljugal (Linar), Margaretha Bleith' / oN='Peter Prichman (Linar), Maria Krischan (Linarin)' | priči='Johann Trach, Peter Tomz; Joseph Kapuanghif, Cooper.'
+-- s12_r9 (rob 4) H!
+   DATUM[✗]: datcol='29. Jänner' censusL='29. Jänner 1834' pass1='29. Jän 1834 — št. 4'
+   ŽENIN[✗?]: censusL='Marius Kolniz, Sinel 23'
+              pass1 ='Mathias Kotler(?) [Kutler?], Semic hiša 28, 16 l.'
+   NEVESTA[✓]: censusL='Catharina Fabianz, Palonje 30'
+              pass1 ='Catharina Katuchig(?) [Kalšig?], Podloge hiša 30, 18 l.'
+   STARŠI/PRIČI (censusR): oZ='Marcus Holzel (Linar), Anna Kleper (Linmuster)' / oN='Matthias Trunkrig (Linar), Catharina Arazpino (Linmusterin)' | priči='Georg Tallich, Joseph Trukfariz; Joseph Kapuanghif, Cooper.'
+-- s12_r10 (rob 5) H!
+   DATUM[✗]: datcol='29. dito (Jänner)' censusL='29. d°' pass1='29. dito (Jän 1834) — št. 5'
+   ŽENIN[✗?]: censusL='Matthias Kerzejofrig, Ott 11'
+              pass1 ='Mathias Kurjotschig(?), Ottak hiša 11, 24 l.'
+   NEVESTA[✓]: censusL='Anna Mirz, Verm 27'
+              pass1 ='Anna Muz, Perni(?) hiša 27, 19 l.'
+   STARŠI/PRIČI (censusR): oZ='Georg Suragoffigh (Linar), Anna Torkel (Linmuster)' / oN='Martin Marz (Linar), Anna Tomz (Linmusterin)' | priči='Johannes Torkel, Johannes Jaupich; Joseph Kapuanghif.'
+-- s12_r11 (rob 6) H!
+   DATUM[✗]: datcol='29. dito (Jänner)' censusL='29. d°' pass1='29. dito (Jän 1834) — št. 6'
+   ŽENIN[✗?]: censusL='Matthias Novak, Ott 15'
+              pass1 ='Mathias Novak, Ottak hiša 18, 27 l.'
+   NEVESTA[✗?]: censusL='Margaretha Grpliz, Gasprig 6'
+              pass1 ='Margareth Pogiz(?) [Papiž?], Goritschach(?) hiša 6, 19 l.'
+   STARŠI/PRIČI (censusR): oZ='Matthias Novar (Linar), Catharina Kapp' / oN='Martin Paspich (Linar), Maria Krischan (Linmusterin)' | priči='Martin Novar, Matthias Tallich; Joseph Kapuanghif.'
+-- s12_r12 (rob 7) H!
+   DATUM[✗]: datcol='29. dito (Jänner)' censusL='29. d°' pass1='29. dito (Jän 1834) — št. 7'
+   ŽENIN[✗?]: censusL='Matthias Snavze, Sinel 23'
+              pass1 ='Mathias Smagel(?) [Smagl?], Semic hiša 23, 21 l.'
+   NEVESTA[✓]: censusL='Anna Kerzejofrig, Mlake 11'
+              pass1 ='Anna Kurjotschig(?), Može(?) hiša 11, 25 l.'
+   STARŠI/PRIČI (censusR): oZ='Matthias Amozil (Linar), Maria Ang (Linmusterin)' / oN='Georg Suragoffigh (Linar), Anna Arazpino (Linmusterin)' | priči='Marcus Anazil, Nicolaus Suragoffigh; Joseph Kapuanghif.'
+
+==================================================================================================
+### s13  (11 censusL / 11 censusR / 11 pass1 / 11 datcol)
+==================================================================================================
+-- s13_r1 (rob 8) H!
+   DATUM[✗]: datcol='5. Febr.' censusL='5. Febr' pass1='8. Febr'
+   ŽENIN[✓]: censusL='Georg Koschizhigl, Gerhuipa (Kostripa?) 2'
+              pass1 ='Georg Kapucžik(?) [Katuczich?], Gerhüpe(?) hiša 2, 29 let'
+   NEVESTA[✓]: censusL='Anna Viqnay (Vischnay), Gerhuipa 8'
+              pass1 ='Anna Vipotnik(?) [Vipavz?], Jeschnica(?) hiša 8, 22 let'
+   STARŠI/PRIČI (censusR): oZ='Jožef Kržišnik (oče), uradnik; mati Doroteja (roj. Ramšak?)' / oN='Jožef Vogrin, Pagaricev? sin; mati Marija' | priči='neberljivo'
+-- s13_r2 (rob 9) H!
+   DATUM[✗]: datcol='5. Februar' censusL='9. Febr' pass1='9. Febr'
+   ŽENIN[✗?]: censusL='Mathias Schweizer, Gradac 32'
+              pass1 ='Matthias Schweiger, Gradetz(?) hiša 32, 35 let'
+   NEVESTA[✓]: censusL='Maria Rabath, Gradac 23'
+              pass1 ='Maria Kovachich, Ptolaz(?) hiša 23, 21 let'
+   STARŠI/PRIČI (censusR): oZ='Martin Kováč/Kavčič (Lunigov sin); mati Ana Vipotnik?' / oN='Jurij Horvat?; mati Ana Skalnik?' | priči='Johann Panian, Johann Skok (ženin)'
+-- s13_r3 (rob 10) H!
+   DATUM[✗]: datcol='5. Februar' censusL='10. Febr' pass1='10. Febr'
+   ŽENIN[✓]: censusL='Mathias Kokhanich, Boršt 17'
+              pass1 ='Mathias Kokhanich(?) [Kohanich], Brodpt(?) [Brod?] hiša 17, 31 let'
+   NEVESTA[✓]: censusL='Maria Kokal, Dorfšt 22'
+              pass1 ='Maria Kral, Brodpt hiša 22, 26 let'
+   STARŠI/PRIČI (censusR): oZ='Miklavž Hrovat (Lovrecov sin); mati Doroteja' / oN='Jurij Kralj?; mati Marija Klepec?' | priči='Martin Cvikl?, Martin Vrhovec?'
+-- s13_r4 (rob 11) H!
+   DATUM[✗]: datcol='5. Februar' censusL='10. Febr' pass1='10. Febr'
+   ŽENIN[✓]: censusL='Michael Kokhanich, Dorfšt 18'
+              pass1 ='Michael Kokhanich(?) [Kohanich], Brodpt hiša 18, 21 let'
+   NEVESTA[✓]: censusL='Maria Kokhmann, Dorfšt 19'
+              pass1 ='Maria Koschmann(?) [Koßmann], Brodpt hiša 19, 16 let'
+   STARŠI/PRIČI (censusR): oZ='Miklavž Hrovat (Lovrecov sin); mati Ana Hribernik?' / oN='Jurij Roschmann; mati Ana Babnik?' | priči='Martin Majcen?, Johann Fekl?'
+-- s13_r5 (rob 12) H!
+   DATUM[✗]: datcol='5. Februar' censusL='10. Febr' pass1='10. Febr'
+   ŽENIN[✓]: censusL='Martin Anzel, Paunoviči (Avgarh) 8'
+              pass1 ='Martin Hruzl [Hrusl], Dolenei ob Crmo(?) hiša 8, 29 let'
+   NEVESTA[✓]: censusL='Maria Korešig, Gemna 32'
+              pass1 ='Maria Kocevar(?) [Kaschitz?], Gorn(?) hiša 32, 20 let'
+   STARŠI/PRIČI (censusR): oZ='Matija Kavčič?; mati Katarina Padovnik?' / oN='Matija Goršič?; mati Margareta Peterca?' | priči='Martin Jurca?, Jurij Hvaconjič?'
+-- s13_r6 (rob 13) H!
+   DATUM[✗]: datcol='5. Februar' censusL='10. Febr' pass1='10. Febr'
+   ŽENIN[✓]: censusL='Marcus Vrh, Griblje 68'
+              pass1 ='Marcus Vrb(?) [Vrb?], Griblje hiša 58, 19 let'
+   NEVESTA[✓]: censusL='Maria Karafhainj, Griblje 51'
+              pass1 ='Maria Haraghtinich(?) [Haraghtainich], Griblje hiša 51, 19 let'
+   STARŠI/PRIČI (censusR): oZ='Miklavž Vidmar?; mati Marija Padovnik?' / oN='Matija Kaučič?; mati Marija Padovnik?' | priči='Peter Vid?; Johann Krasevec?'
+-- s13_r7 (rob 14) H!
+   DATUM[✗]: datcol='5. Februar' censusL='10. Febr' pass1='10. Febr'
+   ŽENIN[✓]: censusL='Nicolaus Kraisfhuig, Hrause/Paun Natlange 8'
+              pass1 ='Nicolaus Kravtuch(?) [Krantuch?], Crnavo hiša 6, 22 let'
+   NEVESTA[✓]: censusL='Catharina Anzel, Dobravič 11'
+              pass1 ='Catharina Angel, Dobravicz hiša 11, 23 let'
+   STARŠI/PRIČI (censusR): oZ='Miklavž Vrhovnik?; mati Barbara Šalamon?' / oN='Martin Hugel?; mati Katarina Štefanič?' | priči='Jurij Kravos?, Jurij Šalamon?'
+-- s13_r8 (rob 15) H!
+   DATUM[✗]: datcol='9. Februar' censusL='9. Febr' pass1='10. Febr'
+   ŽENIN[✓]: censusL='Peter Cormaray, Paunoviči (Paustwa) 8'
+              pass1 ='Peter Goymerac(?) [Goymerat], Bratrina(?) hiša 6, 19 let'
+   NEVESTA[✓]: censusL='Anna Kambich, Kraönz 13'
+              pass1 ='Anna Kambich, Kapin?() [Kapin?] hiša 13, 20 let'
+   STARŠI/PRIČI (censusR): oZ='Matija Zupanc?; mati Ana Kunšok?' / oN='Matija Kamšič?; mati Marija Kolenc?' | priči='Janez Hribernik?, Kozmerca? Gorjup? (priči Jurij?, Kranjec? in Lavrič?)'
+-- s13_r9 (rob 16) H!
+   DATUM[✗]: datcol='10. Februar' censusL='10. Febr' pass1='10. Febr'
+   ŽENIN[✗?]: censusL='Mathias Falsfzhigl, Kerhuipa 26'
+              pass1 ='Marius Katuchich(?) [Kafuchich?], Gerhüpe hiša 26, 23 let'
+   NEVESTA[✓]: censusL='Katharina Karafzhigl (geb. Mihliov, geb. Lorkel), Kerhuipa 10'
+              pass1 ='Katharina Millauer glob. Porehen(?) [Poreher?], Gerhüpe hiša 10, 32 let'
+   STARŠI/PRIČI (censusR): oZ='Jurij Lakner?; mati Marija Hrovat?' / oN='Miklavž Podkoritnik?; mati Marija Grisonovič?' | priči='Jožef Plavc?; Peter Podkotnik?'
+-- s13_r10 (rob 17) H!
+   DATUM[✗]: datcol='10. Februar' censusL='10. Febr' pass1='10. Febr'
+   ŽENIN[✓]: censusL='Mathias Reyer, Dobravič 13'
+              pass1 ='Mathias Rigs, Dobravicz hiša 13, 27 let'
+   NEVESTA[✓]: censusL='Barbara Movrin g. b. Klobuchar, Dobravič 34'
+              pass1 ='Barbara Novak glob. Klobuchar, Dobravicz hiša 24, 28 let'
+   STARŠI/PRIČI (censusR): oZ='Miklavž Rus; mati Marija Bezlaj?' / oN='Peter Hladnik?; mati Ana Panovič?' | priči='Martin Pejič?; Miklavž Rus'
+-- s13_r11 (rob 18) H!
+   DATUM[✗]: datcol='10. Februar' censusL='10. Febr' pass1='10? Febr (morda 17ten)'
+   ŽENIN[✓]: censusL='Georg Koschheuel, Paunoviči (Aan) Mottling 13'
+              pass1 ='Georg Hozhoved(?) [Koshoved?], Konyev?() hiša 13, 23 let'
+   NEVESTA[✓]: censusL='Margareth Marcuteich, Dobravič 29'
+              pass1 ='Margareth Marentich, Dobravicz hiša 24, 22 let'
+   STARŠI/PRIČI (censusR): oZ='Juraj Hofferer?; mati Ana Gorjup?' / oN='Martin Baromič?; mati Katarina Hugel?' | priči='Miklavž Hugel?; Johan Poženel?'
+
+####################################################################################################
+# KRITIČNA POLJA ZA KORPUS (Griblje-bloki — potrditi s full-strip + duel-i):
+####################################################################################################
+  s11_r2: ženin: Pesdirz|Gosling|Gutting? + hiša 33|53|50? · nevesta: Bring|Brinc|Brung h24? → BLOK h53/h33 + h24!
+  s12_r5: ženin: Šimič|Schmig|Amiz? hiša 60? → BLOK h60 + DATUM-duel 19.|10.|26. Oct
+  s12_r6: ženin: Bring|Brung h28 → BLOK h28 (ŠIV-hiša! dvig 32!) + KRIŽAN-starši!
+  s13_r6: ženin: Vrh|Vrb hiša 58|68 + nevesta h51 → BLOKI h58|h68 + h51 (dvig 33?)
+  s13_r11: nevesta: MARENTIČ h24|29? + DATUM 10.|17. Febr → MARENTIČ-nit!
+  s12_r7: ★RESTART-1834: DATUM 22.|27. Jän + ime Johann|Stephan?
+  s13_r1: DATUM-duel 5.|8. Febr (Ash-Wednesday-1834=5.2.?) + priimka
