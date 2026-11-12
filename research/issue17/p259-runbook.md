@@ -1,5 +1,12 @@
 # P259 RUNBOOK — nadaljevanje ko se VLM-kvota (daily) povrne
 
+## ★ POSODOBITEV 2026-11-12 10:55 UTC — ★★★ CHUNK.SH SAMOCELJENJE + SNAP (utrditev po današnji izgubi /tmp!)
+- **Testirano na simuliranem brisanju /tmp** (mv + chunk BUDGET=3): 16 JSON korena + pilot + 118 JPG — **VSE BIT-IDENTIČNO**, 0 VLM klicev, izhod 0.
+- **heal()**: če ob zagonu manjka hints.json / s11.jpg / duels/ → chunk.sh SAM obnovi JSON-e+skeni iz p259-work/ + regenerira vse izreze (PIL, brez VLM). Cron-valovi nato nadaljujejo brez posega.
+- **snap()**: po vsakem uspelem branju (row/census/pass1/pag/duel) se JSON-i TAKOJ prepišejo v p259-work/ — novo branje ne more več izginiti z /tmp (danes ob 09:30 bi izgubili vse; zdaj tega ne more več usodno zadeti).
+- ★ STRANSKI UČINEK (pričakovano, NI napaka): p259-work/ se med valovi polni z novimi JSON-i → `git status` kaže nove datoteke do integracije (KORAK 4/6 jih doda v commit).
+- runbook KORAK 2 popravljen: p259_pass2.sh (ZASTARELO — samo vrstice!) → p259_chunk.sh (vse faze + samoceljenje).
+
 ## ★ POSODOBITEV 2026-11-12 09:42 UTC — ★★★ /tmp/p259 IZGUBLJEN (restart peskovnika!) + OBNOVLJEN 1:1
 - Med ~09:25 in 09:35 UTC je peskovnik ZAGNAL NA NOVO → **/tmp/p259 v celoti pobrisan** (rows/loop.log/pag/duels-json vsega ni bilo več).
 - **Obnova po postopku vrst. 116 (točno po predpisu!)** — stanje po obnovi **IDENTIČNO pred-izgubi**:
@@ -79,12 +86,14 @@ cd /home/z/my-project && bun run /tmp/p259_raw.mjs 2>&1 | rg 'STATUS|daily-remai
 - Če `daily-remaining: 0` → NE DELAJ NIČ VLM (vsak klic tudi zavrnjen porabi kvoto!). Odgovori kratko in počakaj naslednji sprožilec.
 - Če `daily-remaining` > 0 → NADALJUJ s KORAKOM 2.
 
-## KORAK 2 — preberi vrstice (35)
+## KORAK 2 — preberi vrstice (35) + vse ostale faze — SAMO prek chunk.sh!
 ```bash
-cd /home/z/my-project && bash scripts/tmp/p259_pass2.sh 540   # ponavljaj dokler ne konča; ~25 s/verstico (varčno < 30/10min!)
+cd /home/z/my-project && bash scripts/tmp/p259_chunk.sh 540   # ponavljaj dokler ne konča; ~32 s/zahtevo (varčno < 30/10min!)
 ```
-Ponavljaj `bash scripts/tmp/p259_pass2.sh 540` dokler `ls /tmp/p259/full/s1*_r*.json | wc -l` ne da **36**.
-Namigi za vsako vrstico so že v /tmp/p259/hints.json (bere jih scripts/tmp/p259_one.mjs).
+Ponavljaj `bash scripts/tmp/p259_chunk.sh 540` dokler `ls /tmp/p259/full/s1*_r*.json | wc -l` ne da **36** IN pag=3/3 IN duels=10/10.
+Chunk samodejno teče skozi faze: rows → census → pass1 → pag → duels (ko je rows=36/36); skip-logika + SAMOCELJENJE (heal) + snap()-varnostna kopija vsakega branja v p259-work/.
+NE uporabljaj p259_pass2.sh (zastarelo — samo vrstice, brez ostalih faz)!
+Namigi za vsako vrstico so v /tmp/p259/hints.json (bere jih scripts/tmp/p259_one.mjs).
 
 ## KORAK 3 — uskladitvena tabela
 ```bash
@@ -123,6 +132,6 @@ Kandidatni Griblje-bloki P259: h24 (s11_r2 nevesta Bring/Brinc? — dvig 26 + Š
 Vsi kandidati + firstYear-dvigi: research/issue17/p259-facts.json!
 
 ## NADZORNI podatki
-- Vsi prebrani artefakti so zavarovani v research/issue17/p259-work/ (pass1/census/ygrid/datcol/hints/s11_r1 + skrani s11–s13!). Če /tmp/p259 manjka: `mkdir -p /tmp/p259/full /tmp/p259/dates /tmp/p259/L /tmp/p259/R && cp research/issue17/p259-work/* /tmp/p259/ && python3 scripts/tmp/p259_rows.py` (regenerira izreze!).
+- Vsi prebrani artefakti so zavarovani v research/issue17/p259-work/ (pass1/census/ygrid/datcol/hints/s11_r1 + skrani s11–s13 + dueli-JPG!). snap() med tekom dodaja tudi vsa nova branja. Če /tmp/p259 manjka: **SAMO poženi `bash scripts/tmp/p259_chunk.sh 540`** — heal() sam obnovi vse iz p259-work/ + regenerira izreze (ročni postopek iz prejšnje različice ostaja kot rezerva).
 - Sprožilci: 06:15 · 10:45 · 13:15 · 16:15 · 22:30 UTC (cron). Po uspešnem zaključku KORAKA 2+ NE potrebuješ več ostalih sprožilcev (odstrani jih: cron list → delete).
-- Kvota-glava: x-ratelimit-user-daily-remaining (10-min limit 30 — pass2.sh 25s ritem = varno).
+- Kvota-glava: x-ratelimit-user-daily-remaining (10-min limit 30 — chunk.sh 32s ritem = varno).
