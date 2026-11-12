@@ -1,0 +1,54 @@
+  // ——— qa-p259: NOTRANJOST-01738 — 1833-NADALJEVANJE + 1834 (P259) ———
+  {
+    const p259Errors: string[] = [];
+    // živa kontrola: 6 blokov s11–s13 (s11: 2 = h53/h24-m8 + s12: 2 = h60-m24/h28-m25 + s13: 2 = h68/h51-m12-1834)
+    const p259Live = HOUSE_VITALS.filter((v) => v.bookSignature === "01738" && v.scan >= 11 && v.scan <= 13);
+    if (p259Live.length !== 6) p259Errors.push(`bloki-s11–s13 živo ≠ 6 (${p259Live.length})`);
+    const p259LiveHouseOrder = p259Live.map((h) => h.houseNo);
+    for (const hh of ["53", "24", "60", "28", "68", "51"] as const) {
+      if (!p259LiveHouseOrder.includes(hh)) p259Errors.push(`blok-h${hh}-s11–s13 manjka!`);
+    }
+    // PREDHODNIK_1833N_BLOCKS števci
+    if (PREDHODNIK_1833N_BLOCKS.noviBloki !== 6 || PREDHODNIK_1833N_BLOCKS.vpisi1833n !== 25 || PREDHODNIK_1833N_BLOCKS.vpisi1834 !== 17)
+      p259Errors.push("PREDHODNIK_1833N_BLOCKS ≠ 6/25/17");
+    if (PREDHODNIK_1833N_BLOCKS.vitalsTotal !== 2095 || PREDHODNIK_1833N_BLOCKS.byBook01738 !== 53)
+      p259Errors.push(`PREDHODNIK_1833N_BLOCKS ≠ 2095/53 (${PREDHODNIK_1833N_BLOCKS.vitalsTotal}/${PREDHODNIK_1833N_BLOCKS.byBook01738})`);
+    // dvigi: h51-33/h28-32/h53-30/h68-27/h24-26/h60-24
+    const p259Dvig = (h: string, oldY: string, nY: string) => {
+      const d = PREDHODNIK_1833N_BLOCKS.dvigi[h as keyof typeof PREDHODNIK_1833N_BLOCKS.dvigi];
+      if (!d || !d.includes(oldY) || !d.includes(nY)) p259Errors.push(`dvig-h${h} ≠ ${oldY}→${nY} (${d})`);
+    };
+    p259Dvig("51", "1867", "1834"); p259Dvig("28", "1865", "1833"); p259Dvig("53", "1863", "1833");
+    p259Dvig("68", "1861", "1834"); p259Dvig("24", "1859", "1833"); p259Dvig("60", "1857", "1833");
+    if (PREDHODNIK_1833N_BLOCKS.sestKnjiznih !== "31 → 34 (+3: h24/h53/h60 — h68/h51-pet-knjižna-brez-04105!)")
+      p259Errors.push("šest-knjižnih ≠ 31→34 (+3)!");
+    if (!PREDHODNIK_1833N_BLOCKS.dvorniDan.includes("×13")) p259Errors.push("dvorniDan: 13-porok-na-6.-Febr-1833 manjka!");
+    if (!PREDHODNIK_1833N_BLOCKS.masniDan1834.includes("×7")) p259Errors.push("masniDan1834: 5.-Febr-×7 manjka!");
+    if (!PREDHODNIK_1833N_BLOCKS.robnaStevilcenje.includes("1–18")) p259Errors.push("robnaStevilcenje 1–18 čez mejo let manjka!");
+    if (!PREDHODNIK_1833N_BLOCKS.vdove.includes("ISTA-oseba")) p259Errors.push("vdove: Barbara-Movin-ISTE-osebe-nit manjka!");
+    // korpus živo
+    if (HOUSE_VITALS.length !== 2065) p259Errors.push(`HOUSE_VITALS ≠ 2065 (${HOUSE_VITALS.length})`);
+    const p259ByBook = HOUSE_VITALS.filter((v) => v.bookSignature === "01738").length;
+    if (p259ByBook !== 53) p259Errors.push(`bloki-01738 ≠ 53 (${p259ByBook} — P259: +6!)`);
+    const p259MinYear = Math.min(...HOUSE_VITALS.map((v) => v.year));
+    if (p259MinYear !== 1828) p259Errors.push(`korpus-prvi-vpis ≠ 1828 (${p259MinYear})`);
+    // struna: datumski-duel + robna-številčenje + GROSUPL
+    if (!PREDHODNIK_1833N_STRUNA.si.includes("×7-množični-dan") || !PREDHODNIK_1833N_STRUNA.si.includes("RAZREŠEN-4×-dcol") || !PREDHODNIK_1833N_STRUNA.si.includes("GROSUPL"))
+      p259Errors.push("STRUNA-1833N: duel-4×-dcol + GROSUPL + 5.-Febr-×7 manjkajo!");
+    // niti: ŠIMIČ-1:1 + KRIŽAN-4× + BRING + PESDIRZ-isto-dnevna
+    if (!PREDHODNIK_259_NITI.si.includes("ŠIMIČ-NIT-1:1") || !PREDHODNIK_259_NITI.si.includes("4×-KRIŽAN") || !PREDHODNIK_259_NITI.si.includes("BRING-NIT") || !PREDHODNIK_259_NITI.si.includes("4-GRIBLJE-HIŠE"))
+      p259Errors.push("NITI-P259: ŠIMIČ-1:1 + KRIŽAN-4× + BRING + PESDIRZ-4-hiše manjkajo!");
+    if (!PREDHODNIK_259_NITI.si.includes("ISTA-oseba")) p259Errors.push("NITI-P259: Barbara-Movin-dvojna-poroka-nit manjka!");
+    // kraji
+    if (!PREDHODNIK_259_KRAJI.si.includes("GROSUPLJE") || !PREDHODNIK_259_KRAJI.si.includes("ŠKRILJE"))
+      p259Errors.push("KRAJI-P259: GROSUPLJE + ŠKRILJE manjkata!");
+    push(
+      "qa-p259-parish-marriage-notranjost-01738-1833n-1834",
+      "P259: ŽUPNIJA PODZEMELJ — NOTRANJOST-01738: 1833-NADALJEVANJE + 1834! (s11–s13 = Pag. 19/21/23 — foliacija-Pag-=-2·sken−3-potrjena-×6-agent-vizija-svinčnik-19/20-21/22-23/24!): **★★★★★ 36-VPISOV (13+12+11): 1833-m7–m25 (s11: 6.-Febr-×8 + 13.-Febr-×5 — SKUPAJ-Z-PAG.17-×5 = ★-13-POROK-NA-6.-FEBR-1833-NOV-REKORD-MNOŽIČNI-DAN! + s12: 19.-Febr-×2-VDOVA-PODRUG + 21.-April-GROSUPL-h1×h1-NAJBOLJ-ODDALJENA-VAS! + 5.-Mai-KLOBUČAR + 19.-Oct-[rob-'25.'-PREČRTAN!]-ŠIMIČ! + 27.-Nov-★-ROB-1-PRVIČ-V-KNJIGI!) + 1834-m1–m17 (RESTART-22.-Jän-DUEL-RAZREŠEN-'22.'! + 29.-Jän-×4-MUZ-×2! + ★★★-5.-Febr-×7-množični-dan-rob-8–14-DATUMSKI-DUEL-RAZREŠEN-4×-dcol-VSE-PETICE-datcol-1:1-census/pass1-NAPAČNA! + 9.-Febr + 10.-Febr-×3)** — ★-ROBNA-ŠTEVILČENJE-1–18-ZVEZNO-ČEZ-MEJO-LET-PRVIČ-V-KNJIGI! — **★★★★★★ ŠIMIČ-NIT-1:1-POTRJENA (duel-'S-h-i-m-i-g'-h60-ženin-59-l-±-mati-Maria-SHMIG-isto-garble!-P258-kandidata-h56/h49-dobila-1:1-referenco!) + ★★★★★★ KRIŽAN-GROZD-h28-m25 (4×-KRISCHAN-V-ENI-VRSTICI: mata-ženina + mata-neveste + 2-priči!-KONGLOMERAT-→-5.-GRIBLJE-HIŠA-3+36+66+63+28-+HRIŽAN-h62 = 6!) + ★★★★★ BRING-NIT (h24-nevesta-↔-h28-ženin-2-v-1-letu!) + ★★★★ PESDIRZ-ISTO-DNEVNA-NIT (6.-Febr-4-GRIBLJE-HIŠE-h50+h49+h53+h24!) + ★★★★ VDOVA-DVOJNA-POROKA-NIT (s13_r10-Barbara-Movin-geb.-KLEBUTSCHAR-ISTA-oseba-kot-s12_r4-nevesta-vdovela-v-9-mesecih!-REEDEK!)**; **6-BLOKOV-6-DVIGOV: h51-33 (NAJVEČJI-P259!-4→5-knjig!) + h28-32 (cf.-prereconcile-napoved-1:1!) + h53-30 + h68-27 + h24-26 + h60-24** + ŠEST-KNJIŽNI-KLUB-31→34 (+3!) + TELAH + HARASHPINAYGH + MUZ-nadaljnja + KLOBUČAR-nadaljnja niti; ★★★ KRAJI: GROSUPLJE (najbolj-oddaljena!) + ŠKRILJE-2. + MLAKE-2. + BORŠT-×2-KOKANIČ-BRATA-isti-oče! + GRADAG-×2 + 25-garble-vasi; [~X-OPEN-battery: nevesta-m24-priimek + ocetova-celica-'Boring??'-SPOR + stand-'fauwofaund??' ×3 + vas-2–4-vrstične-opombe ×5 + duhovnik-'Georg-Kraphoniz??-Parochus'-vs-'Joseph-[~]-Capell.'-2-podpisa + 'in-S?u?hna??-gu-Otok' + r6-s11-vas-PEČRTANA-'Pfarr-W...'!]; MODUS: agent-vizija-Read-tool-potrditev-×8-zoomov (zoomA–I) + seq13-ravnila + dcol13-4×-rešil-datumski-duel-BREZ-VLM-kvote-0! + parish.ts-6-blokov + modul-×4-izvozov + dokaz parish-marriage-notranjost-1833n.json; korpus: vitals-2059→2065 + byBook-01738-47→53 + leta-1828–1834+1873!",
+      "P259: THE PARISH OF PODZEMELJ — THE-01738-INTERIOR: 1833-CONTINUATION + 1834! (s11–s13 = Pag. 19/21/23): **36-ENTRIES (13+12+11): 1833-m7–m25 (Feb-6-×8 + Feb-13-×5 — WITH-Pag.17 = ★-13-WEDDINGS-ON-FEB-6-1833-THE-NEW-MASS-DAY-RECORD! + the-WIDOW-PODRUG + GROSUPL-h1×h1-the-most-distant! + KLOBUČAR + Oct-19-[margin-'25.'-STRUCK!]-ŠIMIČ! + Nov-27-★-MARGIN-1-FIRST-TIME!) + 1834 (the-RESTART-Jan-22-DUEL-RESOLVED! + ★★★-Feb-5-×7-THE-DATE-DUEL-RESOLVED-4×-dcol-ALL-FIVES!)** — ★-MARGIN-NUMBERING-1–18-ACROSS-THE-YEAR-BOUNDARY-FIRST-TIME! — **THE-ŠIMIČ-THREAD-CONFIRMED-1:1 + THE-KRIŽAN-CLUSTER-4×-IN-ONE-ROW (the-5th-GRIBLJE-house!) + THE-BRING-THREAD + THE-PESDIRZ-SAME-DAY-THREAD + THE-WIDOW-DOUBLE-MARRIAGE-THREAD (the-SAME-person-widowed-in-9-months!)**; **6-BLOCKS-6-LIFTS: h51-33-THE-LARGEST + h28-32 + h53-30 + h68-27 + h24-26 + h60-24** + THE-SIX-BOOK-CLUB-31→34 (+3!) + TELAH/HARASHPINAYGH/MUZ/KLOBUČAR threads; the-25-garble-village-battery; [~X-OPEN: bride-m24-surname + the-'Boring??'-mismatch + the-'fauwofaund??'-stand ×3 + multi-line-village-notes ×5 + the-two-priest-hands]; THE-MODE: agent-vision-Read-tool-verification-×8-zooms (A–I) + seq13-rulers + dcol13-4×-resolved-the-DATE-DUEL-WITHOUT-VLM-at-quota-0! + the-6-blocks + the-×4-export-module + the-proof-JSON; the corpus: 2059→2065 + the-01738-book-47→53 + years-1828–1834!",
+      p259Errors.length === 0,
+      p259Errors.length === 0
+        ? `notranjost-01738-1833n/1834: 36-vpisov (13+12+11!) · 6-blokov-[53,24-m8-1833]+[60-m24,28-m25-1833]+[68,51-m12-1834] (3-POLNIH-DVOJNIH: h53×h24-h60×-h28×-h68×h51!) · ★★★★★★ ŠIMIČ-1:1-h60 (ženin-59-l + mati-SHMIG!) · KRIŽAN-4×-h28 (5.-hiša-konglomerata!) · BRING-nit + PESDIRZ-4-hiše-isti-dan + Barbara-Klobučar-dvojna-poroka! · 6-dvigov-h51-33/h28-32/h53-30/h68-27/h24-26/h60-24! · šest-knjižne-31→34 (+3!) · 13-porok-6.-Febr-1833-REKORD + 5.-Febr-1834-×7-duel-4×-dcol! · robna-številčenje-1–18-čez-mejo-leta! · 2065-vitalov/53-01738/leta-1828–1834!`
+        : p259Errors.join("; "),
+    );
+  }

@@ -1,0 +1,33 @@
+{
+ "id": "s12_r2",
+ "vrstica": "polna (vas zenina = 2-vrsticna opomba)",
+ "datum": "19. tt°",
+ "leto": 1833,
+ "vasZenin": "in S?u?hna?? [~Smihel?] gu Otok za?avsig?? [~zapuscig?] haus Ti?ugha?? [4-vrsticna opomba — zoomI]",
+ "hisZenin": 18,
+ "zenin": "Mathias Mosing [~Messing/Masing?]",
+ "standZenin": "ledig",
+ "starZenin": 22,
+ "letoZenin": 0,
+ "vasNevesta": "Prible [~Gribl/Proble?]",
+ "hisNevesta": 10,
+ "nevesta": "Catharina Hurres geb. PODRUG — VDOVA [~Hurrey/Podurg]",
+ "standNevesta": "vdova (geb. Podrug)",
+ "starNevesta": 31,
+ "letoNevesta": 0,
+ "oceZenin": "Nicolaus Mosing",
+ "mataZenin": "Barbara Aguigh [~Agran?]",
+ "oceNevesta": "Simon PODRUG [~Podurg!]",
+ "mataNevesta": "Barbara Goshell [~Porell?]",
+ "price": "Math. Anuigh × Georg Mosing",
+ "urkunde": "Hausfami.? bean.? att° 2. April 1833 [~nejasno — ZOOM]",
+ "duhovnik": "Joseph [Kepanyhigh??] Capell.",
+ "xOpen": [
+  "vasZenin",
+  "nevesta",
+  "mataZenin",
+  "mataNevesta",
+  "urkunde"
+ ],
+ "razlaga": "r2: opomba berljivejsa (zoomI): '[in S?u?hna gu Otok za?avsig haus Ti?ugha]' — zenin zivi 'v S?u?hna pri Otok, haus Ti?ugha'. Priimka Mosing potrjena (oce Nicl. + price Georg Mosing)."
+}

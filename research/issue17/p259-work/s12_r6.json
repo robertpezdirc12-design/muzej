@@ -1,0 +1,31 @@
+{
+ "id": "s12_r6",
+ "vrstica": "polna (ROB-ŠT. 1!)",
+ "datum": "27. Novbr",
+ "leto": 1833,
+ "vasZenin": "Gribl [GRIBLJE]",
+ "hisZenin": 28,
+ "zenin": "Georg BRING [~Brung/Brinc?]",
+ "standZenin": "ledig",
+ "starZenin": 31,
+ "letoZenin": 0,
+ "vasNevesta": "Krafing",
+ "hisNevesta": 22,
+ "nevesta": "Anna Telah [~Tschekl/Tschelah?]",
+ "standNevesta": "ledig",
+ "starNevesta": 30,
+ "letoNevesta": 0,
+ "oceZenin": "Nicolaus BRING",
+ "mataZenin": "Catharina KRISCHAN [KRIŽAN!]",
+ "oceNevesta": "Johann TELAH",
+ "mataNevesta": "Maria KRISCHAN [KRIŽAN!]",
+ "price": "Georg KRISCHAN × Nicolaus KRISCHAN [KRIŽAN × 2!]",
+ "urkunde": "— (prazno)",
+ "duhovnik": "Joseph [Kepanyhigh??] Capell.",
+ "xOpen": [
+  "zenin",
+  "nevesta",
+  "duhovnik"
+ ],
+ "razlaga": "r6 = PRVA ROBNA-ST (1) + KRIŽAN-GROZD! Georg BRING Gribl 28, 31l × Anna TELAH Krafing 22, 30l. Mata z. Catharina KRISCHAN, mata n. Maria KRISCHAN, priče Georg + Nicolaus KRISCHAN — SKUPAJ 4x KRIŽAN v eni vrstici! Oce n. Johann TELAH (= s11_r4 priča 'Joh. Telah'?!). Urkunda prazna."
+}

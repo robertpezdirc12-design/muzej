@@ -1,0 +1,42 @@
+
+/** Struktura 1833-nadaljevanje + 1834 (s11–s13 = Pag. 19/21/23): 13 + 12 + 11 = 36 vpisov; datumski-duel-s13-rob-9–14-RAZREŠEN (5.-Febr-×7!); ROBNA-ŠTEVILČENJE-1–18-čez-mejo-leta! */
+export const PREDHODNIK_1833N_STRUNA = {
+  si: "★★★★★ STRUKTURA-1833N (s11 = Pag. 19 — 6.-Febr-kaskada-še-dalje! + 13.-Febr-×5 + s12-restart-vrstice! + s13-1834!): s11-m7–m14 = 6. Febr-×8-d° (skupaj-z-Pag.17-×5 = ★-13-POROK-NA-6.-FEBR-1833 = NOV-REKORD-MNOŽIČNI-DAN-KORPUSA-za-29.-2.-1832-×9!) + m15–m19 = 13. Febr-×5 + s12-m20/m21 = 19. Febr-×2-d° (m21-★-NEVESTA-VDOVA-Catharina-geb.-PODRUG!) + m22 = 21. April (GROSUPL-h1×h1!-najbolj-oddaljena-vas!) + m23 = 5. Mai (KLOBUČAR!) + m24 = 19. Oct-[rob-'25.'-PREČRTAN!] + m25 = 27. Nov-★-ROB-1-PRVIČ! + s12-m1/m2 = 22. Jän-1834-RESTART-[22.|27.]-DUEL-RAZREŠEN-'22.'! + m3–m6 = 29. Jän-×4 + s13-m7–m13 = ★★★-5. Febr-1834-×7-množični-dan (rob-8–14!-DATUMSKI-DUEL-RAZREŠEN-4×-dcol-VSE-PETICE-datcol-1:1-census/pass1-NAPAČNA!) + m14 = 9. Febr-rob-15 + m15–m17 = 10. Febr-×3-rob-16–18 — ★-ROBNA-ŠTEVILČENJE-1–18-ZVEZNO-ČEZ-MEJO-LET (27.-Nov-1833-rob-1-→-10.-Febr-1834-rob-18!) — leta: 1833-m7–m25 (19-vpisov!) + 1834-m1–m17 (17-vpisov!)",
+  en: "THE-STRUCTURE-OF-1833N (s11–s13 = Pag. 19/21/23): s11 = Feb-6-×8 (with-Pag.17-×5 = ★-13-WEDDINGS-ON-FEB-6-1833 = THE-NEW-MASS-DAY-RECORD-beating-the-leap-day-×9!) + Feb-13-×5 + s12: Feb-19-×2 (m21-★-the-WIDOW-Catharina-geb.-PODRUG!) + Apr-21 (GROSUPL-h1×h1-the-most-distant-village!) + May-5 (KLOBUČAR!) + Oct-19-[margin-'25.'-STRUCK!] + Nov-27-★-MARGIN-1-FIRST-TIME! + the-1834-RESTART-Jan-22-[22.|27.-DUEL-RESOLVED-'22.'!] + Jan-29-×4 + ★★★-Feb-5-1834-×7 (the-DATE-DUEL-RESOLVED-4×-dcol-ALL-FIVES-datcol-1:1-census/pass1-WRONG!) + Feb-9 + Feb-10-×3 — ★-MARGIN-NUMBERING-1–18-CONTINUOUS-ACROSS-THE-YEAR-BOUNDARY!",
+} as const;
+
+/** Niti P259: ŠIMIČ-1:1-h60 + KRIŽAN-5.-hiša-h28-grozd-4× + BRING-nit + PESDIRZ-isto-dnevna-4-hiš + VRH×HARAGHINIGH + TELAH + Harashpinaygh + VDOVA-2×-istih-staršev (Klobučar-Movin!). */
+export const PREDHODNIK_259_NITI = {
+  si: "★★★★★★ NITI-P259: ★★★★★★ ŠIMIČ-NIT-1:1-POTRJENA (duel-'S-h-i-m-i-g'-h60-1833-ženin-Georg-SCHIMIG-59-l-+-mati-Maria-SHMIG-isto-garble! — P258-kandidata-h56-'[~Simig]'-+-h49-'[~Himiz|Simig?]' → zdaj-1:1-referenca!-illegitimno-kand.?'-ocetova-celica-'Mathias-Anizigh??'-SPOR) · ★★★★★★ KRIŽAN-GROZD-h28-1833-m25 (mata-ženina-Catharina-KRISCHAN + mata-neveste-Maria-KRISCHAN + priče-Georg-×-Nicolaus-KRISCHAN = ★-4×-KRIŽAN-V-ENI-VRSTICI!-→-KONGLOMERAT-5.-GRIBLJE-HIŠA-3+36+66+63+28-+HRIŽAN-h62-ŠIV = 6-hiš!) · ★★★★★ BRING-NIT (m8-nevesta-Maria-BRING-h24-↔-m25-ženin-Georg-BRING-h28-2-BRING-vpisa-v-1-letu!-ocetova-Michael/Nicolaus) · ★★★★ PESDIRZ-ISTO-DNEVNA-NIT (6.-Febr-1833-4-GRIBLJE-HIŠE: h50×h49-m6-P258-+ h53×h24-m8-2-Pesdirz-ženina-19/21-l-ocetova-Marco-vs-Johann-NI-brat-sorodstvo-samo-priimek!) · ★★★★ VRH×HARAGHINIGH-h68×h51-DVOJNI (★-hiša-68-jasno-seq13-hint-'58'-ZAVRŽEN!-+ PRIČA-Peter-[~Vrh?]-priimka-ženina!) · ★★★ TELAH-NIT (oce-neveste-m25-Johann-TELAH-↔-s11_r4-priča-Joh.-Telah!-+ s12_r6-nevesta-Anna-TELAH!) · ★★★ HARASHPINAYGH-NIT (s13_r6-oce-neveste-Mathias-Harashpinaygh-↔-s11-HaraShpinigh-×3-ženini/oče-r9!-+ priča-Johann!) · ★★★ VDOVA-2× (m21-Catharina-geb.-PODRUG-dekliška-priimka-1:1-oce-Simon-PODRUG!-+ m15-1834-Katharina-Millauer-geb.-[Porehen?]-+ ★★★★ s13_r10-Barbara-Movin-geb.-KLEBUTSCHAR-ISTE-starši-kot-s12_r4-nevesta!-vdovela-po-Muscanu-v-9-mesecih-REDDA-dvojna-poroka-nit!) · ★★ MUZ-NIT-NADALJNJUJE (s12_r10-nevesta-Anna-MUZ-oce-Martin-MUZ-mata-Anna-TONG!-dva-sinova-Kurjotschigh-v-2-dneh-r10+r12!) · ★★ KLOBUČAR-NIT (s12_r4-nevesta-KLEBUTSCHAR!-+ s13_r10-geb.-KLEBUTSCHAR-→-s13_r10-ISTE-osebe!) · ★ ANOMALIJA-stand-'fauwofaund??' (s13_r5-zenin + r8-nevesta+oce-n. = 3×-morda-'Inwohner?')",
+  en: "THE-P259-THREADS: ★★★★★★ THE-ŠIMIČ-THREAD-CONFIRMED-1:1 (the-duel-'S-h-i-m-i-g'-h60!-the-P258-candidates-h56/h49-now-have-a-1:1-reference!) · ★★★★★★ THE-KRIŽAN-CLUSTER-h28 (4×-KRISCHAN-in-one-row!-the-5th-GRIBLJE-house!-6-with-Hrižan-h62!) · ★★★★★ THE-BRING-THREAD (two-BRING-entries-in-one-year-h24+h28!) · ★★★★ THE-PESDIRZ-SAME-DAY-THREAD (Feb-6-1833-4-GRIBLJE-HOUSES!) · ★★★★ VRH×HARAGHINIGH-double (house-68-clear!-hint-'58'-rejected!) · ★★★ TELAH + HARASHPINAYGH threads · ★★★ THE-WIDOW-×2 (+ ★★★★ Barbara-Movin-geb.-KLEBUTSCHAR = the-SAME-person-as-s12_r4's-bride-widowed-in-9-months!-a-RARE-double-marriage-thread!) · ★★ MUZ + KLOBUČAR threads continue · ★ the-'fauwofaund??'-stand-anomaly-×3",
+} as const;
+
+/** Kraji P259: GROSUPLJE (najbolj oddaljena!) + ŠKRILJE 2. + MLAKE 2. + KRAFING ×4 + SEMELJ/Somel ×4 + OTOK ×2 + DOBRAVLJE ×4 + BORŠT ×2 + GERMAN-phonetic-garble-battery. */
+export const PREDHODNIK_259_KRAJI = {
+  si: "★★★ KRAJI-P259: ★-GROSUPLJE-m22-1833 (h1×h1-obé-hiše-'1'!-NAJBOLJ-ODDALJENA-VAS-KORPUSA-~Ljubljanska-[~X-OPEN-RES-Grosuplje?]) + ŠKRILJE-m2-1834-nevesta (2.-omemba!-s12_r8!) + MLAKE-m6-1834-nevesta (2.!) + KRAFING-×4 (m24/m25-1833-nevesti + m15/m19-1833 + s13-!) + SEMELJ-[~Semel/Somel]-×4 (m19/m22-1833 + m3/m6-1834!) + DOBRAVLJE-[~Dobraviz]-×4 (m8/m19/m20-1833!-+ s13_r7/r10/r11!) + OTOK-[~Otok/Otod]-×2 (m9-1833-bride-vas + Ohlah?) + BORŠT-[~Borsft]-×2-1834 (m9/m10-brata-KOKANIČ-isti-oče-Nicolaus!) + GRADAG/GRADAC-×2-1834 (m8 + m16!) + GERMAN-phonetic-garble-battery-[~X-OPEN]: Grinstal/Grove? + Sastava + Trebughel/Tschechel? + Dofug/Dolga-vas? + Pavinghe + Krafing/Krajng? + Germ/Gern + Ohlah/Ohlach? + Gradag + Kreuzdorf + in-S?u?hna??-gu-Otok (4-vrstična!) + Vnano??/Vivano? + Gordeg + Döbling??-Oman?-Gheuwern?? + Skrile + Palonje + Perm + Gershigh?? + Mlake + Gerhuifa?? + Zerkuifa?? + Pravutina??-gwind-BLogust?? + Crnawo??-+2-opombe + Konyev??/Inangdong??-+Dolenja-vas??+Koplišhe?? (2-hiši!) + Prible + Ptojazd?? — 25-garble-vasi",
+  en: "THE-P259-VILLAGES: ★-GROSUPLJE (the-MOST-DISTANT-village!-both-houses-'1'!) + ŠKRILJE (2nd!) + MLAKE (2nd!) + KRAFING-×4 + SEMELJ-×4 + DOBRAVLJE-×4 + OTOK-×2 + BORŠT-×2 (the-KOKANIČ-BROTHERS-same-father!) + GRADAG-×2 + a-25-village-German-phonetic-garble-battery-X-OPEN",
+} as const;
+
+/** P259-korpus-skupaj: +6 blokov; vitals 2059→2065; 01738 = 53; 6 dvigov (h51-33 NAJVEČJI!); šest-knjižne 31→34 (+3!). */
+export const PREDHODNIK_1833N_BLOCKS = {
+  noviBloki: 6,
+  vpisi1833n: 25,
+  vpisi1834: 17,
+  vitalsTotal: 2065,
+  byBook01738: 53,
+  dvigi: {
+    h51: "1867 → 1834 (33 let — ★-NAJVEČJI-DVIG-P259!-11→12-blokov-01738-PRVIČ-4→5-knjig!)",
+    h28: "1865 → 1833 (32 let — 2.!-cf.-prereconcile-napoved-'dvig-32'-IZPOLNJENA-1:1!-+ KRIŽAN-4×-grozd!)",
+    h53: "1863 → 1833 (30 let — 3.!-PESDIRZ-isto-dnevna-nit-h50!-01738-PRVIČ!)",
+    h68: "1861 → 1834 (27 let — 4.!-VRH×HARAGHINIGH-DVOJNI!-01738-PRVIČ!)",
+    h24: "1859 → 1833 (26 let — 5.!-BRING-nit!-01738-PRVIČ!)",
+    h60: "1857 → 1833 (24 let — 6.!-★★★-ŠIMIČ-1:1!-01738-PRVIČ!)",
+  },
+  sestKnjiznih: "31 → 34 (+3: h24/h53/h60 — h68/h51-pet-knjižna-brez-04105!)",
+  dvorniDan: "6.-Febr-1833-×13-NOV-REKORD-MNOŽIČNI-DAN (Pag.17-×5 + Pag.19-×8!-prej-9×-na-29.-2.-1832!)",
+  masniDan1834: "5.-Febr-1834-×7-rob-8–14 (2.-največji-dan-1834-datumska-duel-RAZREŠEN-4×-dcol!)",
+  robnaStevilcenje: "1–18-zvezno-ČEZ-MEJO-LET (27.-Nov-1833-rob-1-→-10.-Febr-1834-rob-18!-NOVA-STRUKTURA-PRVIČ-V-KNJIGI!)",
+  vdove: "2-neveste-vdove + ★-Barbara-Movin-geb.-KLEBUTSCHAR = ISTA-oseba-kot-s12_r4-nevesta (vdovela-v-9-mesecih!)",
+  dokaz: "parish-marriage-notranjost-1833n.json (36-vpisov-13+12+11 + md5-s11-…/s12-…/s13-… + niti + kraji + korpusUcinek + xOpen + p259-agent-vizija-potrditev!)",
+  p260: "1834-nadaljevanje (s14+ = Pag. 25+) → desetletja-1830er-do-šiva-1873",
+} as const;

@@ -1,0 +1,74 @@
+{
+ "total": 2065,
+ "byBook01738": 53,
+ "sixList": [
+  "1",
+  "2",
+  "3",
+  "5",
+  "6",
+  "8",
+  "10",
+  "11",
+  "12",
+  "16",
+  "18",
+  "19",
+  "20",
+  "22",
+  "24",
+  "26",
+  "27",
+  "28",
+  "32",
+  "33",
+  "35",
+  "36",
+  "42",
+  "46",
+  "47",
+  "48",
+  "53",
+  "56",
+  "60",
+  "61",
+  "62",
+  "63",
+  "65",
+  "73"
+ ],
+ "bothEraPorocna": 39,
+ "p94exceptions": [
+  {
+   "year": 1833,
+   "house": "53",
+   "note": "PESDIRZ-isto-dnevna-nit-h50"
+  },
+  {
+   "year": 1833,
+   "house": "24",
+   "note": "BRING-nit-nevesta"
+  },
+  {
+   "year": 1833,
+   "house": "60",
+   "note": "SIMIC-1-1-duel"
+  },
+  {
+   "year": 1833,
+   "house": "28",
+   "note": "KRIZAN-4x-grozd"
+  },
+  {
+   "year": 1834,
+   "house": "68",
+   "note": "VRH-DVOJNI-h68xh51"
+  },
+  {
+   "year": 1834,
+   "house": "51",
+   "note": "HARAGHINIGH-DVOJNI-h68xh51"
+  }
+ ],
+ "housesNote": "+6-blokov-1833-nadaljevanje/1834-01738 (s11-s13 = Pag. 19/21/23; 36-vpisov-13+12+11; agent-vizija-potrditev) — vitals 2059→2065, 01738 47→53, šest-knjižne 31→34, bothEra 34→39, 6-dvigov h51-33/h28-32/h53-30/h68-27/h24-26/h60-24, ŠIMIČ-1:1-h60 + KRIŽAN-4×-h28 + PESDIRZ-4-hiše-isti-dan!"
+}

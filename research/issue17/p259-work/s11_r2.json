@@ -1,0 +1,33 @@
+{
+ "id": "s11_r2",
+ "vrstica": "polna",
+ "datum": "6. d°",
+ "leto": 1833,
+ "vasZenin": "Griblje",
+ "hisZenin": 53,
+ "zenin": "Joh. Pesdirz",
+ "standZenin": "ledig",
+ "starZenin": 19,
+ "letoZenin": 0,
+ "vasNevesta": "Griblje",
+ "hisNevesta": 24,
+ "nevesta": "Maria Bring",
+ "standNevesta": "ledig",
+ "starNevesta": 19,
+ "letoNevesta": 0,
+ "oceZenin": "Johann Pesdirz",
+ "mataZenin": "Maria Poschel?? [~Goschell? — Kurrent G/P]",
+ "oceNevesta": "Michael Bring [~ + druga beseda 'Laund?'/Lindart?]",
+ "mataNevesta": "Barbara Hager",
+ "price": "Georg Poschet [~Goshet?] × Mich. Poschet [~Poscher?]",
+ "urkunde": "Mit Vormundschaft. Bewill.? ddo 19. July 1833 [~nejasno]",
+ "duhovnik": "Joseph [Kepanyhigh??] Capell. (velika pompa-podpis; zupnik samo r1)",
+ "xOpen": [
+  "oceNevesta",
+  "mataZenin",
+  "price",
+  "urkunde",
+  "duhovnik"
+ ],
+ "razlaga": "6. Febr 1833 d°. ZENIN: vas Griblje (berem 'Gribile'), hisa 53 (jasno; census pravi 33! — duel s11_r2_gosling), 19 let, ledig. NEVESTA: Griblje 24, Maria Bring, 19 let. Starši: Johann [Pesdirz?]/Maria [Goschell?]; Michael [Bring? + 'Laund'?]/Barbara Hager. Urkunda: ddo 19. July 1833 (vormundschafts-bevill?). KONFLIKT: census 'Johann Pesdirz Griblje 33' vs trak 'Griblje 53' — hiša 53 ali 33? [DUEL s11_r2_gosling RAZRESEN (agent-vizija zoom): zenin PESDIRZ (ne Gosling — ujema s census-b + Pag.17-nit 'Johann PESDIRZ'), hiša 53 (ne 33 — census napaka), nevesta BRING jasno, hiša 24.]"
+}

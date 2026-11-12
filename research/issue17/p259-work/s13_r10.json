@@ -1,0 +1,33 @@
+{
+ "id": "s13_r10",
+ "vrstica": "polna (ROB-ŠT. 17)",
+ "datum": "10. t°",
+ "leto": 1834,
+ "vasZenin": "Dobraviz [DOBRAVLJE]",
+ "hisZenin": 13,
+ "zenin": "Mathias Reys [~Rigs/Reyer?]",
+ "standZenin": "ledig",
+ "starZenin": 27,
+ "letoZenin": 0,
+ "vasNevesta": "Dobraviz [DOBRAVLJE]",
+ "hisNevesta": 34,
+ "nevesta": "Barbara Movin geb. KLEBUTSCHAR — VDOVA",
+ "standNevesta": "vdova (geb. Klobučar)",
+ "starNevesta": 28,
+ "letoNevesta": 0,
+ "oceZenin": "Nicolaus Reys",
+ "mataZenin": "Maria Pedsephigh?? [~ — ZOOM]",
+ "oceNevesta": "Peter KLEBUTSCHAR (= s12_r4-ocetova neveste!)",
+ "mataNevesta": "Anna Panovz [~Lanovz — s12_r4!]",
+ "price": "Marius Popigh?? × Nicolaus Reys [priimka zenina]",
+ "urkunde": "Haus.? fakum.? + Mehrzahl? der? Seelen? Messbund?? [vecvrsticno — ZOOM]",
+ "duhovnik": "Joseph [Kepanyhigh??] Capell.",
+ "xOpen": [
+  "mataZenin",
+  "hisNevesta",
+  "urkunde",
+  "duhovnik"
+ ],
+ "razlaga": "r10 (rob17, zoomF): 'Mathias Reys' Dobraviz 13, 27l x 'Barbara Movin geb. Klebutschar' (VDOVA) Dobraviz 34, 28l — POTRJENO na 2x. Oce z. Nicolaus Reys, oce n. Peter KLEBUTSCHAR + mata Anna Panovz (= s12_r4 starši!) — ista Barbara kot s12_r4 (vdovela po Muscanu). Datum 10. Februar (10. t°).",
+ "datumRazresen": true
+}

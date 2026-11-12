@@ -1,0 +1,33 @@
+{
+ "id": "s13_r4",
+ "vrstica": "polna (ROB-ŠT. 11)",
+ "datum": "5. t°",
+ "leto": 1834,
+ "vasZenin": "Borsft [BORŠT]",
+ "hisZenin": 18,
+ "zenin": "Michael Kokanich (brat r3! ista ocetova celica)",
+ "standZenin": "ledig",
+ "starZenin": 21,
+ "letoZenin": 0,
+ "vasNevesta": "Borsft [BORŠT]",
+ "hisNevesta": 19,
+ "nevesta": "Maria Roschmann",
+ "standNevesta": "ledig",
+ "starNevesta": 16,
+ "letoNevesta": 0,
+ "oceZenin": "Nicolaus Kokanigh (ISTI oce kot r3 — brata!)",
+ "mataZenin": "Anna Hipanagh [~]",
+ "oceNevesta": "Georg Roschmann",
+ "mataNevesta": "Anna TELAH [TELAH-nit!]",
+ "price": "Martin Lapanyz?? × Johann Telah?? [ali Blath? — ZOOM]",
+ "urkunde": "Mit vorgchriftily.? hediligg.? zuwillign. [brez datuma]",
+ "duhovnik": "Joseph [Kepanyhigh??] Capell.",
+ "xOpen": [
+  "mataZenin",
+  "mataNevesta",
+  "price",
+  "duhovnik"
+ ],
+ "razlaga": "r4 (ROB-11): Michael KOKANICH Boršt 18, 21l × Maria ROSCHMANN Boršt 19, 16l. ISTI oce Nicolaus Kokanigh kot r3 → BRATA KOKANIČ (odgovor na hint-vprasanje: DA!). Mata n. Anna TELAH (s12_r6 oce n. Johann Telah!). Priče: Martin [Lapanyz?] + Johann [Telah?/Blath?]. [DATUM RAZRESEN 4x-dcol: rob11 = 5. t°; datcol POTRJEN, census/pass1 napacna pri rob 9-14]",
+ "datumRazresen": true
+}

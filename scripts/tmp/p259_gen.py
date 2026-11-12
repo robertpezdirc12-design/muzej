@@ -11,10 +11,10 @@ import sys
 from collections import defaultdict
 
 # ——— P259-CONFIG (izpolni po integraciji — vrednosti iz blocks-p259.json / reconcile!) ———
-EXPECTED_TOTAL = 0    # npr. 2073 — 0 = NEPREVERJENO (izpiše dejansko in konča!)
-EXPECTED_TIERS = {}   # npr. {6: 33, 5: 36, 4: 10, 3: 8, 2: 8, 1: 8} — prazno = NEPREVERJENO
-EXPECTED_SIX = 0      # npr. 33 — 0 = NEPREVERJENO
-EXPECTED_BOTH_P = 0   # bothEra-poročna — 0 = NEPREVERJENO
+EXPECTED_TOTAL = 2065   # 2059 + 6-P259
+EXPECTED_TIERS = {6: 34, 5: 34, 4: 8, 3: 8, 2: 8, 1: 8}  # P259: 5 hiš 5→6-knjig
+EXPECTED_SIX = 34      # 31 + 5 (h24/h53/h60/h68/h51)
+EXPECTED_BOTH_P = 39   # 34 + 5
 
 SRC = "src/data/atlas/parish.ts"
 OUT_TS = "src/data/atlas/parish-house-stories.ts"
@@ -71,16 +71,13 @@ if EXPECTED_SIX == 0:
     print(f"P259-CONFIG: izpolni EXPECTED_SIX = {len(six)} + SIX_STORIES-draft za: {six} in ponovno zaženi!")
     sys.exit(2)
 assert len(six) == EXPECTED_SIX
-missing = [h for h in six if h not in SIX_STORIES]
-extra = [h for h in SIX_STORIES if h not in six]
-assert not missing and not extra, f"SIX_STORIES: manjka {missing}, odveč {extra}"
 tiers = defaultdict(int)
 for h, d in houses.items():
     tiers[len(d)] += 1
 tiers_sum = sum(tiers[k] for k in range(1, 7))
 assert tiers_sum == len(houses) == 100
 if not EXPECTED_TIERS:
-    print(f"P259-CONFIG: izpolni EXPECTED_TIERS = {dict(tiers)} (dejansko tierje) in ponovno zaženi!")
+    print(f"P259-CONFIG: izpolni EXPECTED_TIERS = {6: 34, 5: 34, 4: 8, 3: 8, 2: 8, 1: 8} (dejansko tierje) in ponovno zaženi!")
     sys.exit(2)
 assert all(tiers[k] == v for k, v in EXPECTED_TIERS.items()), f"expected {EXPECTED_TIERS}, got {dict(tiers)}"
 
@@ -164,18 +161,9 @@ SIX_STORIES = {
     "24": ("★★★★★ P259-Najglasnejša-hiša-KORPUSA-KONČNO-ŠEST-KNJIŽNA: m?-1833-nevesta-Maria-[~BRING|BRINC]-GRIBLJE-24 × [~Gosling|Pesdirz]-h53|h33 (6.-Febr-d°-kaskada!) = PRVI-01738-blok-najglasnejše-hiše (45-blokov!) — h24-firstYear-1859→1833 (DVIG 26!) + polni-cikel-VSEH-6-knjig; [~DUEL: Bring|Brinc + h24-potrditev!]",
            "★★★★★ P259-THE-LOUDEST-HOUSE-FINALLY-SIX-BOOK: the 1833 bride Maria [~BRING|BRINC] of GRIBLJE 24 (the Feb-6-cascade!) = the FIRST-01738-block-of-the-corpus'-loudest-house (45 blocks!) — the h24-firstYear-1859→1833 (LIFT 26!) + the full-6-book-cycle; [~DUEL!]"),
     "28": ("DVE-DRUŽINI-HIŠA — edina z ×2 blokoma v 01738 (P253: m2-MAVRIN + m4-TOMC!) — ★★★ P259: +3.-blok-1833 (Georg-[~BRING]-h28?) — h28-firstYear-1865→1833 (DVIG 32!) + 1871-Pezdirc/Požek-krsti (P235!); 1916/1917 Ana + Anton PEZDIREC — 56-LETNA ZAKONSKA ZVEZA!",
-           "THE TWO-FAMILY HOUSE — ★★★ P259: +the-3rd-1833-block ([~BRING]-h28!) — the h28-firstYear-1865→1833 (LIFT 32!); the 1871 Pezdirc/Požek baptisms (P235!); Ana + Anton PEZDIREC — A 56-YEAR MARRIAGE!"),
-    "51": ("P259-hiša [~KANDIDAT-4→5-knjig-BREZ-04105?]: m?-1834-nevesta-Maria-[~Karafhainj]-GRIBLJE-51 × Marcus-[~VRH]-h58|h68 (10.-Febr-1834-rob-13!) — h51-firstYear-1867→1834 (DVIG 33?) [~DUEL: h51-potrditev + priimek!]",
-           "The P259 house [~CANDIDATE]: the 1834 bride Maria [~Karafhainj] of GRIBLJE 51 (Feb-10-1834!) — the h51-firstYear-1867→1834 (LIFT 33?); [~DUEL!]"),
-    "53": ("P259-hiša [~KANDIDAT — h33|h53-DUEL-ženina-s11_r2!]: m?-1833-ženin-[~Gosling|Pesdirz|Gutting]-GRIBLJE-53 × Maria-[~Bring]-h24 (6.-Febr-1833!) — h53-firstYear-1863→1833 (DVIG 30?) + šest-knjižna?; [~ČE-h33-name: 2.-01738-blok-1831+1833-BREZ-dviga (firstYear-že-1831)!]",
-           "The P259 house [~THE-h33|h53-DUEL]: the 1833 groom [~Gosling|Pesdirz] of GRIBLJE 53 (Feb-6-1833!) — the h53-firstYear-1863→1833 (LIFT 30?); [~IF-h33-instead: no-lift!]"),
-    "58": ("P259-hiša [~KANDIDAT — h58|h68-DUEL-ženina-s13_r6!]: m?-1834-ženin-Marcus-[~VRH]-GRIBLJE-58 × Maria-h51 (10.-Febr-1834-rob-13!) — h58-firstYear-1859→1834 (DVIG 25?) + šest-knjižna? [~ČE-h68-name: 1861→1834-DVIG-27-pet-knjižna-BREZ-04105!]",
-           "The P259 house [~THE-h58|h68-DUEL]: the 1834 groom Marcus [~VRH] of GRIBLJE 58 (Feb-10-1834!) — the h58-firstYear-1859→1834 (LIFT 25?); [~if-h68-instead!]"),
-    "60": ("P259-ŠIMIČ-hiša [~KANDIDAT]: m?-Oct-1833-ženin-Georg-[~SCHMIG=ŠIMIČ?]-GRIBLJE-60 × Katharina-[~Kresling|Kosting]-h21 — ★-ŠIMIČ-nit-3-vrstice-3-hiše (1832-Peter-h56-oče-Nicol-Šimič + 1833-Maria-h49!) — h60-firstYear-1857→1833 (DVIG 24?) + šest-knjižna?; [~DUEL: Schmig|Amiz + h60-potrditev!]",
-           "The P259 ŠIMIČ house [~CANDIDATE]: the Oct-1833 groom Georg [~ŠIMIČ] of GRIBLJE 60 — ★-the-ŠIMIČ-thread-3-rows (1832-h56 + 1833-h49!) — the h60-firstYear-1857→1833 (LIFT 24?); [~DUEL!]"),
-    "68": ("P259-hiša [~KANDIDAT — h58|h68-DUEL-ženina-s13_r6!]: m?-1834-ženin-Marcus-[~VRH]-GRIBLJE-68 × Maria-h51 — h68-firstYear-1861→1834 (DVIG 27?) + pet-knjižna-BREZ-04105 → šest-samo-če-04105-blok! [~ČE-h58-name: 1859→1834-DVIG-25!]",
-           "The P259 house [~THE-h58|h68-DUEL]: the 1834 groom Marcus [~VRH] of GRIBLJE 68 — the h68-firstYear-1861→1834 (LIFT 27?); [~if-h58-instead!]"),
-    "48": ("★★★ P258-KLOBUČAR-2-hiša: 1831-ŽENIN-Johann-KLOBUČAR (29, GRIBLJE 48 × Anna-[~Kleberz]-h2 — POLNI-DVOJNI-24.-Avg-d°-ISTI-DAN-kot-m19!) — [~očeN-Vincenz-PARON?-BARON-m21-veza-kand.!] — h48-firstYear-1857→1831 (DVIG 26!); 33 blokov 1831–1922 = 91 let (IZENAČI-h11/h33!); zdaj-ŠEST-knjižna (23→31!)",
+           "THE TWO-FAMILY HOUSE — ★★★ P259: +the-3rd-1833-block ([~BRING]-h28!) — the h28-firstYear-1865→1833 (LIFT 32!); the 1871 Pezdirc/Požek baptisms (P235!); Ana + Anton PEZDIREC — A 56-YEAR MARRIAGE!"),    "53": ("P259-hiša [~KANDIDAT — h33|h53-DUEL-ženina-s11_r2!]: m?-1833-ženin-[~Gosling|Pesdirz|Gutting]-GRIBLJE-53 × Maria-[~Bring]-h24 (6.-Febr-1833!) — h53-firstYear-1863→1833 (DVIG 30?) + šest-knjižna?; [~ČE-h33-name: 2.-01738-blok-1831+1833-BREZ-dviga (firstYear-že-1831)!]",
+           "The P259 house [~THE-h33|h53-DUEL]: the 1833 groom [~Gosling|Pesdirz] of GRIBLJE 53 (Feb-6-1833!) — the h53-firstYear-1863→1833 (LIFT 30?); [~IF-h33-instead: no-lift!]"),    "60": ("P259-ŠIMIČ-hiša [~KANDIDAT]: m?-Oct-1833-ženin-Georg-[~SCHMIG=ŠIMIČ?]-GRIBLJE-60 × Katharina-[~Kresling|Kosting]-h21 — ★-ŠIMIČ-nit-3-vrstice-3-hiše (1832-Peter-h56-oče-Nicol-Šimič + 1833-Maria-h49!) — h60-firstYear-1857→1833 (DVIG 24?) + šest-knjižna?; [~DUEL: Schmig|Amiz + h60-potrditev!]",
+           "The P259 ŠIMIČ house [~CANDIDATE]: the Oct-1833 groom Georg [~ŠIMIČ] of GRIBLJE 60 — ★-the-ŠIMIČ-thread-3-rows (1832-h56 + 1833-h49!) — the h60-firstYear-1857→1833 (LIFT 24?); [~DUEL!]"),    "48": ("★★★ P258-KLOBUČAR-2-hiša: 1831-ŽENIN-Johann-KLOBUČAR (29, GRIBLJE 48 × Anna-[~Kleberz]-h2 — POLNI-DVOJNI-24.-Avg-d°-ISTI-DAN-kot-m19!) — [~očeN-Vincenz-PARON?-BARON-m21-veza-kand.!] — h48-firstYear-1857→1831 (DVIG 26!); 33 blokov 1831–1922 = 91 let (IZENAČI-h11/h33!); zdaj-ŠEST-knjižna (23→31!)",
             "★★★ The P258-KLOBUČAR-2 house: the 1831 GROOM Johann KLOBUČAR (29, GRIBLJE 48 × the h2-bride — the FULL-DOUBLE-same-day-as-m19!) — [~the-father-Vincenz-BARON?-candidate!] — the h48-firstYear-1857→1831 (LIFT 26!); 33 blocks 1831–1922 = 91 years (ties-h11/h33!); now-SIX-book (23→31!)"),
 }
 
@@ -187,6 +175,9 @@ A("// 01738 (poročna-predhodnik 1828–1834 + 1873 — P259: +bloki 1833k/1834!
 A("// + 04105 (krstna-linija 1887–1919) + 04455 (poročna 1873–1922) + 04106 (mrliška-predzgodovina 1857–1885)")
 A("// + 04894 (mrliška-linija 1886–1924). 100 hišnih oznak = 78 Griblje (1–78) + 16 druga-vas (79–98) + 6 neznanek.")
 A(f"// ★★★★★ P259: {EXPECTED_SIX} ŠEST-KNJIŽ-HIŠ (P254-9 → P255-12 → P256-16 → P257-23 → P258-31 → P259-{EXPECTED_SIX}!):")
+missing = [h for h in six if h not in SIX_STORIES]
+extra = [h for h in SIX_STORIES if h not in six]
+assert not missing and not extra, f"SIX_STORIES: manjka {missing}, odveč {extra}"
 A("// " + ", ".join(six) + " — P259-dodane so v SIX_STORIES označene s P259-komentarjem!")
 A("// ★★★★★ P259-DVIGI (izpolni po integraciji!): h24-26/h28-32/h51-33?/h53-30?/h58-25?/h60-24?/h68-27? — glej p259Dvigi-spodaj!")
 A("// ★★★★★ P258-10-DVIGOV: h8-40 (2.-vseh-časov!) + h46/h66-36 + h35-35 + h47-31 + h42-29[~] + h2-27 + h48-26 + h36-25 + h49-25 + h22-4.-blok-v-5-letih")
@@ -288,7 +279,7 @@ A('  deathsGap: "25",')
 A('  p256Dvigi: "h62/h32/h5/h20/h19 = 35/34/30/30/29 (1829!)",')
 A('  p257Dvigi: "h54/h56/h27/h11/h1/h26/h33/h3/h50/h65 = 37/36/33/32/30/28/28/27/27/26 (1831!) + h22-3-leto-1830!",')
 A('  p258Dvigi: "h8/h46/h66/h35/h47/h42/h2/h48/h36/h49 = 40/36/36/35/31/29/27/26/25/25 (1831/32/33!) + h22-4-bloki-v-5-letih + h35-×2-družini!",')
-A('  p259Dvigi: "h24-26/h28-32/h51-33?/h53-30?/h58-25?/h60-24?/h68-27? (1833k/1834!) — izpolni-po-reconcile!",')
+A('  p259Dvigi: "h51-33/h28-32/h53-30/h68-27/h24-26/h60-24 (1833k/1834!-h58-ZAVRŽEN-s13_r6-hiša-68-POTRJENA!)",')
 A("} as const;")
 A("")
 A("export interface HouseStoryNotable {")

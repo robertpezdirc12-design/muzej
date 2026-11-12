@@ -1,3 +1,18 @@
+# P259 — RUNBOOK — ★ KONČANO 12. 11. 2026 ~19:30 UTC — METODA: AGENT-VIZIJA (alternativa pri kvoti 0!)
+
+**IZID: 36/36 vrstic + 3/3 pag + dueli REŠENI + integracija (6 blokov) + QA-253 + browser + commit — VSE BREZ VISION-KLICEV (kvota celi dan 0).**
+
+- **Ključna ugotovitev:** Agent (Read-tool) prebere Kurrent-pisavo 1:1 pri povečanih izrezih — L+R-celotni-strani (1058-px, 1:1) so dovolj legibilne; stacki (2×-vertikalno) + zoomi (×3–5) + seq13-ravnila + dcol13-4× razrešijo dvoumnosti. VLM-alternative (chat /chat/completions + video-understand) delijo ISTO dnevno kvoto (429 — preverjeno z glavami) — agent-vizija edina neodvisna pot.
+- **Datumski duel s13 (rob 9–14):** RAZREŠEN 4×-dcol — VSE PETICE (5. Febr ×7!) — datcol 1:1, census/pass1 NAPAČNA. Rob 15 = 9., rob 16–18 = 10.
+- **Restart-duel s12_r7:** 22. Jän 1834 (ne 27.).
+- **ŠIMIČ-h60-1:1:** Georg SCHIMIG 59 l (hint '39' napačen!) + mati Maria SHMIG — P258-kandidata h56/h49 dobila referenco.
+- **h53×h24 (m8):** Johann PESDIRZ (ne Gosling!) hiša 53 (census '33' napačna!) × Maria BRING 24.
+- **h68×h51 (m12):** hiša 68 (ne 58!) × 51.
+- **Duhovnika:** 'Georg [~Kraphoniz?] Parochus' (župnik) vs 'Joseph [~Kepanyhigh?] Capell.' (kaplan).
+- **Korpus:** 2059→2065 · 01738 47→53 · SIX 31→34 · bothEra 34→39 · 6 dvigov (h51-33/h28-32/h53-30/h68-27/h24-26/h60-24).
+- **Umetnine:** blocks-p259.json + module-p259.txt + qa-p259-section.txt + ui-p259-data.json + parish-marriage-notranjost-1833n.json + parish-house-stories.json (regeneriran).
+- **Push:** še vedno čaka na nov žeton (P258-token-mrtv 401). Commiti lokalni.
+
 # P259 RUNBOOK — nadaljevanje ko se VLM-kvota (daily) povrne
 
 ## ★ POSODOBITEV 2026-11-12 10:55 UTC — ★★★ CHUNK.SH SAMOCELJENJE + SNAP (utrditev po današnji izgubi /tmp!)
