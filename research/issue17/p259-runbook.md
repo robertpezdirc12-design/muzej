@@ -125,6 +125,7 @@ cd /home/z/my-project && bunx tsc --noEmit && bun run lint && bun scripts/tmp/ru
 - worklog.md: vnos P259 (po vzoru P258-vnosa, vrstica ~8255+)
 - README.md: banner + kazalo + tabela + korpus + Zadnje-stanje + Odprto-P260 (vzorec p258_docs.py)
 - git add + commit (sporočilo po vzoru P258-commit c95df6f!) + push (origin main; žeton v skladišču besedila zgodovine)
+- ★⚠ PUSH-TOKEN MRTEV (12. 11. ~11:05 UTC): ghp_-žeton iz zgodovine vrne **401 Bad credentials** (veljal je še 09:45 UTC!). Ni gh-CLI/netrc/credential-store nadomestkov. POSLEDICA: KORAK 6 push ČAKA na nov žeton od uporabnika (Settings → Developer settings → Personal access tokens → klasika ghp_ z repo-pravicami). VSE OSTALO (branja/integracija/QA/browser/worklog/README) poteka normalno — commiti ostanejo lokalni (varni: /home/z/my-project preživi /tmp-wipe); en sam push kasneje sinhronizira vse.
 
 ## KLJUČNE ŽIVE ŠTEVKE (pred-P259)
 Korpus: HOUSE_VITALS 2059 · byBook-01738 47 (leta 1828–1833+1873!) · SIX-klub 31 (tierji 31/35/10/8/8/8) · bothEra-poročna 34 · MILIČ 252 · QA 252/252.
