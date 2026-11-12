@@ -1,5 +1,15 @@
 # P259 RUNBOOK — nadaljevanje ko se VLM-kvota (daily) povrne
 
+## ★ POSODOBITEV 2026-11-12 09:42 UTC — ★★★ /tmp/p259 IZGUBLJEN (restart peskovnika!) + OBNOVLJEN 1:1
+- Med ~09:25 in 09:35 UTC je peskovnik ZAGNAL NA NOVO → **/tmp/p259 v celoti pobrisan** (rows/loop.log/pag/duels-json vsega ni bilo več).
+- **Obnova po postopku vrst. 116 (točno po predpisu!)** — stanje po obnovi **IDENTIČNO pred-izgubi**:
+  - JSON-i + skeni s11/s12/s13 vrnjeni iz `research/issue17/p259-work/` (md5 skenov 1:1: b56f04a5/ed62d632/8afbec80 ✓; pilot s11_r1 md5 b5223ba5 ✓).
+  - Izrezi regenerirani (deterministično, PIL, BREZ VLM): rows.py (36 full + 36 dates + L×12 + R×6 + census-LEFT/RIGHT×6) + hdrdates.py (hdr×3 + dates_full×3 + dates_grid×3) + duelcrops.py (kompoziti ×10 — md5 VSI OK proti repo-varnostni kopiji!).
+  - **Števke: rows=1/36 · census=6/6 · pass1=3/3 · pag=0/3 · duels=0/10** — ostali VLM-work nespremenjen: 35 vrstic + 3 pag + 10 dvobojev.
+  - hints.json = 35 ključev (brez s11_r1 — pravilno: pilot je prebran, _one.mjs ga preskoči pred namigom).
+- ★★ **PUSH-POPRAVEK:** predhodne seje so commitale BREZ pusha — bilo je **13 zadržanih commitov** (dbdd14c … f25b127). Zdaj pushano vse.
+- Cron-valovi (10:45 / 13:15 / 16:15 UTC) + watch-r5 (22:30 UTC) NEPRESNEJENI — epohe preverjene (1794480300 = 12. 11. 10:45 UTC točno!).
+
 ## ★ POSODOBITEV 2026-11-12 09:05 UTC — ★★ SANACIJA uigen.py + koledarska popravka (pred-poletna kontrola!)
 - **★★★ uigen.py JE IMEL SINTAKSNO NAPAKO** (f-string `}})}}}` — en `}` preveč; py-commit-claim
   P259-PRIPRAVE je bil napačen!) + **NEURAVNOVEŠEN JSX izpis** (68:64 — dvojni zaviti oklepaji
