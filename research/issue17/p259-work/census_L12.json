@@ -1,0 +1,16 @@
+```json
+{"stevilo":11,"leta_glava":"1833 / 1834 (restart pri '27. Jänner 1834')","rows":[
+{"r":1,"datum":"12. Febr. 1833","zenin":"Georg Hohenauer, Kreuzdorf 13","nevesta":"Anna Stunigk, Prüstein 10","rob":""},
+{"r":2,"datum":"19. d° (Feb. 1833)","zenin":"Mathias Mesing, Ott gedingt 18","nevesta":"Catharina Kerre geb. Petrug, Püble 10","rob":""},
+{"r":3,"datum":"21. April","zenin":"Martin Hoervan, Grosupl 1","nevesta":"Josepha Leopfan, Grosupl 1","rob":""},
+{"r":4,"datum":"5. Mai","zenin":"Martin Muscan, Dobroviz 34","nevesta":"Barbara Koschehar, Ott am Leschnik (spela Wovach) 18","rob":""},
+{"r":5,"datum":"19. Oct.","zenin":"Georg Amiz, Gribl 60","nevesta":"Katharina Jureisjofrig, Kosting 21","rob":"2"},
+{"r":6,"datum":"27. Nov.","zenin":"Georg Brung, Gribl 28","nevesta":"Anna Tisch, Kosting 22","rob":"1"},
+{"r":7,"datum":"27. Jänner 1834","zenin":"Stephan Pasfrig, Vivano (Vel. Vrh) 5","nevesta":"Maria Kosak, Gradiz 3","rob":"2"},
+{"r":8,"datum":"d° (27. Jänner)","zenin":"Jakob Heikel, Dobroviz 14","nevesta":"Katharina Rosmann, Skrile 2","rob":"3"},
+{"r":9,"datum":"29. Jänner 1834","zenin":"Marius Kolniz, Sinel 23","nevesta":"Catharina Fabianz, Palonje 30","rob":"4"},
+{"r":10,"datum":"29. d°","zenin":"Matthias Kerzejofrig, Ott 11","nevesta":"Anna Mirz, Verm 27","rob":"5"},
+{"r":11,"datum":"29. d°","zenin":"Matthias Novak, Ott 15","nevesta":"Margaretha Grpliz, Gasprig 6","rob":"6"},
+{"r":12,"datum":"29. d°","zenin":"Matthias Snavze, Sinel 23","nevesta":"Anna Kerzejofrig, Mlake 11","rob":"7"}],
+"opomba":"Potencialno 12 vpisov: pred zadnjim (29. d°, rob 7) je le 11 jasno vidljivih zasedenih vrstic; vpisi z robnimi št. 2–7 so iz leta 1834 (restart '27. Jänner 1834', nato 'd°'). Robna št. 2 ob vpisu 19. Oct. je verjetno napačno zapisana/pozen popravek. Imena so transkripcija Kurrent-pisave z negotovostjo (npr. Amiz/Amizig, Kerzejofrig, Tisch/Tisck)."}
+```

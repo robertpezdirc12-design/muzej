@@ -1,0 +1,25 @@
+```json
+{
+  "pag": "Leva stran = 'Pag. 19' (foliacija '19' zgoraj levo), desna stran = 'Pag. 20'. Opomba: pričakovano je bilo s12='Pag. 21', a je desna (verso) stran očitno Pag. 20 — širjenje tabele na verso.",
+  "vrstic": 11,
+  "stevilcene": true,
+  "leta_glava": "1834 — v glavi tabele pod 'Jahr Monat und Tag der Trauung'; vseh 11 vrstic je februar 1834",
+  "restart_kje": "RESTART novega leta je NA ZAČETKU te strani (Pag. 19, m8): prvi datum je '8. Febr 1834', torej se leto 1834 začee med stranma — prejšnja stran (Pag. 17/18) se je končala z vpisi januar/začetek 1834, ta stran nadaljuje z 8. februarjem dalje.",
+  "rows": [
+    {"r": 8, "datum": "8. Febr", "zenin": "Georg Kapucžik(?) [Katuczich?], Gerhüpe(?) hiša 2, 29 let", "nevesta": "Anna Vipotnik(?) [Vipavz?], Jeschnica(?) hiša 8, 22 let"},
+    {"r": 9, "datum": "9. Febr", "zenin": "Matthias Schweiger, Gradetz(?) hiša 32, 35 let", "nevesta": "Maria Kovachich, Ptolaz(?) hiša 23, 21 let"},
+    {"r": 10, "datum": "10. Febr", "zenin": "Mathias Kokhanich(?) [Kohanich], Brodpt(?) [Brod?] hiša 17, 31 let", "nevesta": "Maria Kral, Brodpt hiša 22, 26 let"},
+    {"r": 11, "datum": "10. Febr", "zenin": "Michael Kokhanich(?) [Kohanich], Brodpt hiša 18, 21 let", "nevesta": "Maria Koschmann(?) [Koßmann], Brodpt hiša 19, 16 let"},
+    {"r": 12, "datum": "10. Febr", "zenin": "Martin Hruzl [Hrusl], Dolenei ob Crmo(?) hiša 8, 29 let", "nevesta": "Maria Kocevar(?) [Kaschitz?], Gorn(?) hiša 32, 20 let"},
+    {"r": 13, "datum": "10. Febr", "zenin": "Marcus Vrb(?) [Vrb?], Griblje hiša 58, 19 let", "nevesta": "Maria Haraghtinich(?) [Haraghtainich], Griblje hiša 51, 19 let"},
+    {"r": 14, "datum": "10. Febr", "zenin": "Nicolaus Kravtuch(?) [Krantuch?], Crnavo hiša 6, 22 let", "nevesta": "Catharina Angel, Dobravicz hiša 11, 23 let"},
+    {"r": 15, "datum": "10. Febr", "zenin": "Peter Goymerac(?) [Goymerat], Bratrina(?) hiša 6, 19 let", "nevesta": "Anna Kambich, Kapin?() [Kapin?] hiša 13, 20 let"},
+    {"r": 16, "datum": "10. Febr", "zenin": "Marius Katuchich(?) [Kafuchich?], Gerhüpe hiša 26, 23 let", "nevesta": "Katharina Millauer glob. Porehen(?) [Poreher?], Gerhüpe hiša 10, 32 let"},
+    {"r": 17, "datum": "10. Febr", "zenin": "Mathias Rigs, Dobravicz hiša 13, 27 let", "nevesta": "Barbara Novak glob. Klobuchar, Dobravicz hiša 24, 28 let"},
+    {"r": 18, "datum": "10? Febr (morda 17ten)", "zenin": "Georg Hozhoved(?) [Koshoved?], Konyev?() hiša 13, 23 let", "nevesta": "Margareth Marentich, Dobravicz hiša 24, 22 let"}
+  ],
+  "duhovnik": "Desni strani (Pag. 20) v stolpcu 'Unterschrift des trauenden Priesters' so podpisi — večinoma isti kuraten trgalec (Georg Kraighovitsch(?) kot 'Trauungs-Curate' v r15) in drugi podpisniki (npr. 'Kraffzeitsch' r15, drugače legibilnost slaba). Na levi strani ni podpisa duhovnika.",
+  "spodaj_prazen": "Leva stran (Pag. 19) ima tabelo do dna; pod zadnjo vrstico (m18) je prazen del, ni 'finis' ali zaključnega zapisa. Desna stran (Pag. 20) ima v stolpcu 'Urkunden' podane cerkveno-pravne Dispense (Celibats-, Consummations-Dispens zapisi z datumi 1834) — zadnji zapis se konča z 'Molting dtb 26. Octobr 1834', kar dokazuje, da vpisi te strani trajajo v leto 1834.",
+  "razlaga": "To je razpon s11(+s12?): levo Pag. 19 z 11 vpisi (m8–m18), vsi februar 1834 — novo leto 1834 se je začelo že na prejšnji strani (Pag. 17/18), ker je ta stran odprta s 8. februarjem. Vse vrstice so številčene (8.–18. v prvi koloni). Poroke so za en dan ali istočasno — masovne poroke 8.–10. februar 1834. Opomba odstopanja: desna foliacija je '20', ne '21', kar kaže, da je vodstvo tabele natisnjeno tudi na verso straneh — to pomeni, da je foliacija 19/20 en list, s13 torej ni 'Pag. 23', ampak naslednji list prične s 'Pag. 21'."
+}
+```

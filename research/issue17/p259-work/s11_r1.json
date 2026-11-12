@@ -1,0 +1,29 @@
+```json
+{
+  "id": "s11_r1",
+  "vrstica": "polna (prva vrstica) + del druge vrstice na spodnjem robu traku",
+  "datum": "6. Febr",
+  "leto": 1833,
+  "vasZenin": "Dobroviz",
+  "hisZenin": 13,
+  "zenin": "Nicolaus Guß [~Quß/Gus]",
+  "standZenin": "labbv [~Ledig?]",
+  "starZenin": 29,
+  "letoZenin": 0,
+  "vasNevesta": "Dobroviz",
+  "hisNevesta": 14,
+  "nevesta": "Catharina Krapoviz [~Haushony/Krischoviz]",
+  "standNevesta": "ledig",
+  "starNevesta": 23,
+  "letoNevesta": 0,
+  "oceZenin": "Nicolaus Guß, Lindart [~vas/his očeta]",
+  "mataZenin": "Maria Gertschpig",
+  "oceNevesta": "Martin Haupoviz [~Kerschnik?]",
+  "mataNevesta": "Barbara Angel",
+  "price": "Nic. Angel, Joh. Bloitsch [~]",
+  "urkunde": "Copohir. Gwiling, king? att? S. Job. 1833 [~nejasno]",
+  "duhovnik": "Christoph Goring [~Chraphoni ... precibus]",
+  "xOpen": [],
+  "razlaga": "Prva vrstica traku: 6. Feb 1833, ženin Nicolaus Guß, Dobravlje št. 13, 29 let; nevesta Catharina Krapoviz [~], Dobravlje št. 14, 23 let. Oče ženina: Nicolaus Guß (Lindart?), mati Maria Gertschpig — to ustreza viru (c) 'Nic. Angel Lindart' le delno; priimek ženina je torej Guß (ne Angel). Nevestini starši: Martin Haupoviz [~] in Barbara Angel. Na spodnjem robu traku je še začetek naslednje vrstice (6. Feb, Grubb? 33 / 24, Th. Radinger?, Maria, starši Johann/Maria, Michael/Barbara, Georg Gorsche) — ni vsebinsko complete, zato je izpuščena iz polj."
+}
+```

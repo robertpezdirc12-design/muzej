@@ -1,0 +1,15 @@
+```json
+{"stevilo":11,"leta_glava":"1834","rows":[
+{"r":1,"datum":"5. Febr","zenin":"Georg Koschizhigl, Gerhuipa (Kostripa?) 2","nevesta":"Anna Viqnay (Vischnay), Gerhuipa 8","rob":"8"},
+{"r":2,"datum":"9. Febr","zenin":"Mathias Schweizer, Gradac 32","nevesta":"Maria Rabath, Gradac 23","rob":"9"},
+{"r":3,"datum":"10. Febr","zenin":"Mathias Kokhanich, Boršt 17","nevesta":"Maria Kokal, Dorfšt 22","rob":"10"},
+{"r":4,"datum":"10. Febr","zenin":"Michael Kokhanich, Dorfšt 18","nevesta":"Maria Kokhmann, Dorfšt 19","rob":"11"},
+{"r":5,"datum":"10. Febr","zenin":"Martin Anzel, Paunoviči (Avgarh) 8","nevesta":"Maria Korešig, Gemna 32","rob":"12"},
+{"r":6,"datum":"10. Febr","zenin":"Marcus Vrh, Griblje 68","nevesta":"Maria Karafhainj, Griblje 51","rob":"13"},
+{"r":7,"datum":"10. Febr","zenin":"Nicolaus Kraisfhuig, Hrause/Paun Natlange 8","nevesta":"Catharina Anzel, Dobravič 11","rob":"14"},
+{"r":8,"datum":"9. Febr","zenin":"Peter Cormaray, Paunoviči (Paustwa) 8","nevesta":"Anna Kambich, Kraönz 13","rob":"15"},
+{"r":9,"datum":"10. Febr","zenin":"Mathias Falsfzhigl, Kerhuipa 26","nevesta":"Katharina Karafzhigl (geb. Mihliov, geb. Lorkel), Kerhuipa 10","rob":"16"},
+{"r":10,"datum":"10. Febr","zenin":"Mathias Reyer, Dobravič 13","nevesta":"Barbara Movrin g. b. Klobuchar, Dobravič 34","rob":"17"},
+{"r":11,"datum":"10. Febr","zenin":"Georg Koschheuel, Paunoviči (Aan) Mottling 13","nevesta":"Margareth Marcuteich, Dobravič 29","rob":"18"}
+],"opomba":"Letnica 1834 je označena v glavi stolpca datuma. Prebrano je 11 vpisov z robnimi številkami 8–18 (brez praznih vrst). Datum po pričakovanjih: 5. Febr (rob 8–14), 9. Febr (rob 15), 10. Febr (rob 16–18); nekateri datumi v kurenti so slabo berljivi (nadpisani/dvojni zapisi), zato so interpretirani po pričakovani strukturi. Imena vasi in priimki v Kurrent-pisavi so delno fonetsko prepisani (npr. Gerhuipa/Kerhuipa, Dorfšt), ker so nejasni."}
+```

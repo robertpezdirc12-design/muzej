@@ -1,0 +1,65 @@
+{
+  "phase": "P259",
+  "scope": "NOTRANJOST-01738: LETO 1833 NADALJEVANJE + 1834 ZAČETEK (s11–s13 = Pag. 19/21/23)",
+  "vir": {
+    "bookSignature": "01738",
+    "source": "Matricula Online (data.matricula-online.eu/sl/slovenia/ljubljana/podzemelj/01738/)",
+    "scans": {
+      "s11": {"bytes": 565693, "md5": "b56f04a54af5715390630b1af460f4e1", "pag": "19/20", "rows": 13},
+      "s12": {"bytes": 559744, "md5": "ed62d632929a4468bd1088ceaabdd511", "pag": "21/22", "rows": 12},
+      "s13": {"bytes": 548185, "md5": "8afbec80bb368da1f177819afb94a16c", "pag": "23/24", "rows": 11}
+    },
+    "md5Metoda": "2× neodvisen prenos 1:1 (6. prenos notranjosti — P255/P256/P257/P258 + P259!)",
+    "inventar": "147 URL base64-dekodiranih 1:1 (P253/P255/P258-zahteva!)",
+    "foliacija": "Pag = 2·sken − 3 POTRJENA ×12: s11=19/20 (svinčnik obe!) + s12=21 (+22) + s13=23(+24-desno-jasno!)"
+  },
+  "struktura": {
+    "s11": "Pag. 19/20 — 1833-nadaljevanje: 6.-Febr-kaskada se NADALJUJE (r1–r8 = m7–m14 — skupaj 13 porok na 6. Febr 1833 = NOVI REKORD KORPUSA!) + r9–r13 = 13. Febr ×5 (m15–m19)",
+    "s12": "Pag. 21/22 — 1833-konec (r1–r6 = m20–m25: [~19.|12.]-Febr + [~19.-d°|12.-April?] + 21. April + 5. Mai + [~19.|10.|26.]-Oct + 27. Nov-ROB-1!) + 1834-RESTART (r7 = m1: [~22.|27.]-Jän-1834-ROB-2 + r8 = m2-d°-ROB-3 + r9–r12 = 29. Jän ×4 ROB-4–7)",
+    "s13": "Pag. 23/24 — 1834-nadaljevanje (letnica 1834 v glavi!): ROB-8–14 = 5. Febr ×7 (m7–m13) + ROB-15 = 9. Febr (m14) + ROB-16–18 = 10. Febr ×3 (m15–m17) — nadaljevanje na s14 (P260!)",
+    "robnoStevljenje": "★★★ NOVA STRUKTURNA ZNAČILNOST: robno številčenje vpisov se ZAČNE z rob=1 (27. Nov 1833, s12-r6) in teče ZAPOREDNO čez mejo leta do rob=18 (10. Febr 1834, s13-r11) — zakaj? [~X-OPEN: nova ureditev/duhovnik?]",
+    "restarti": "1834-s12-r7 = 5. restart notranjosti (1830/1831/1832/1833/1834 + 1873-P253!)",
+    "letaSkupaj": {"1828": 16, "1829": 20, "1830": 8, "1831": 24, "1832": 23, "1833": 25, "1834": "17+ (nadaljevanje s14!)"}
+  },
+  "masniDnevi": {
+    "6febr1833": "★ 13 POROK (m2–m14: s10 ×5 + s11 ×8) = NOVI REKORD MNOŽIČNEGA DNEVA KORPUSA (prej 9 na 29. 2. 1832-P258!)",
+    "13febr1833": "5 porok (m15–m19)",
+    "5febr1834": "7 porok (rob 8–14) [~DUEL 5.|8.-Febr — Ash-Wednesday-1834 = 5. 2.?!]",
+    "29jan1834": "4 poroke (rob 4–7)",
+    "10febr1834": "3+ poroke (rob 16–18)"
+  },
+  "datumDueli": [
+    "s12-r1: [~19.|12.]-Febr-1833 (kronologija: s11-konec = 13. Febr → 19. verjetneje!)",
+    "s12-r2: [~19.-d°|12.-April|13.-dito]",
+    "s12-r5: [~19.|10.|26.]-October",
+    "s12-r7: [~22.|27.]-Jänner-1834",
+    "s13-r1: [~5.|8.]-Febr-1834 (Ash-Wednesday-vprašanje!)",
+    "s13-r2: [~5.|9.]-Febr (rob-9)",
+    "s13-r11: [~10.|17.]-Febr (rob-18)"
+  ],
+  "znaneVrstice": {
+    "s11_r1_m7": "Nicolaus GUß (Guš?), Dobravlje 13, 29 l, oče Nicolaus Guß (Lindart), mati Maria Gertschpig × Catharina [~Krapoviz|Haushony|Krischoviz], Dobravlje 14, 23 l, oče Martin [~Haupoviz], mati Barbara ANGEL (družina Angel Dobravlje!); priči: Nic. Angel + Joh. Bloitsch; duhovnik [~Christoph Goring?]",
+    "kandidatniGribljeBloki": "h24 (Maria-Bring/Brinc-nevesta-s11-r2?) · h33|h53 (ženin-s11-r2?) · h60 (Georg-[Schmig|Amiz]-s12-r5?) · h28 (Georg-Bring-s12-r6!) · h58|h68 (Marcus-Vrh-s13-r6?) · h51 (Maria-[Karafhainj]-s13-r6?)"
+  },
+  "korpusUcinekPredviden": {
+    "opomba": "VSE odvisno od potrditev vrstičnih branj!",
+    "h28": "firstYear 1865→1833 (DVIG 32!) + 01738-bloki 2→3 + ŽE šest-knjižna (1873-ŠIV-hiša!)",
+    "h24": "firstYear 1859→1833 (DVIG 26!) + šest-knjižna 5→6 knjig (NAJGLASNEJŠA hiša korpusa 45 blokov KONČNO polni cikel!)",
+    "h53": "firstYear 1863→1833 (DVIG 30?) + šest-knjižna?",
+    "h60": "firstYear 1857→1833 (DVIG 24?) + šest-knjižna?",
+    "h58": "firstYear 1859→1834 (DVIG 25?) + šest-knjižna?",
+    "h68": "firstYear 1861→1834 (DVIG 27?) + pet-knjižna (BREZ 04105)",
+    "h51": "firstYear 1867→1834 (DVIG 33?) + pet-knjižna (BREZ 04105)",
+    "h33": "če ženin-s11-r2 = h33: 2.-01738-blok (1831+1833), brez dviga (firstYear že 1831)"
+  },
+  "nitiZnane": {
+    "angelDobravlje": "★ ANGEL-Dobravlje-continuum: 1833-m4-Catharina-Angel-Dobravlje-22 + 1833-m7-mati-Barbara-Angel + priča-Nic.-Angel + 1834-m13(rob14)-Catharina-[Angel]-Dobravlje-11!",
+    "klobucar": "★ KLOBUČAR-continuum: 1831-bratje-h46/h48 + 1833-m23-Barbara-Klobučar-Otok-18 + 1834-m16(rob17)-Barbara-[Novak|Movrin]-geb.-KLOBUČAR-Dobravlje (VDova!)",
+    "muz": "★★ MUZ-continuum-4-leta: 1828-×4 + 1831-Nicolaus-h24-Semelj + 1833-m5-Catharina + 1834-m4(rob5)-Anna-MUZ!",
+    "križan": "KRIŽAN-starši-s12-r6 (oče-Catharina-Krischan + mati-neveste-Maria-Krischan)? + 1833-m18?-Catharina-Krischan-Otok?",
+    "grosuplje": "★ 21. April 1833: Martin-[Havran?]-GROSUPL-1 × Josepha-[Lebstán?]-GROSUPL-1 — POLNI DVOJNI h1×h1 + GROSUPLJE = najbolj-oddaljena vas doslej (Ljubljanska!) [~X-OPEN]",
+    "kokhanic": "★★ KOKHANIČ-bratje-1834? Mathias-h17 + Michael-h18 (sosednji hiši, 10. Febr!)",
+    "marentic": "MARENTIČ-nit: 1832-Barbara-[Marentig]-Otok-18 + 1834-m17(rob18)-Margareth-[Marentich]-Dobravlje-24|29?",
+    "kambic": "KAMBIČ-continuum: 1831-m12-Nicol-[Kambicz]-Podlog + 1834-m14(rob15)-Anna-KAMBIČ-[Kapin?|Kraönz?]-13!"
+  }
+}

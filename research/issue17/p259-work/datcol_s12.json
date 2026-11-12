@@ -1,0 +1,3 @@
+```json
+{"rows":[{"r":1,"datum":"19. Febr.","leto":1833},{"r":2,"datum":"12. dito (Febr.)","leto":null},{"r":3,"datum":"21. April","leto":null},{"r":4,"datum":"5. Mai","leto":null},{"r":5,"datum":"10. Oct(ober)","leto":null},{"r":6,"datum":"27. Novem(ber)","leto":null},{"r":7,"datum":"22. Jänner","leto":1834},{"r":8,"datum":"(nezapisan/prazno)","leto":null},{"r":9,"datum":"29. Jänner","leto":1834},{"r":10,"datum":"29. dito (Jänner)","leto":null},{"r":11,"datum":"29. dito (Jänner)","leto":null},{"r":12,"datum":"29. dito (Jänner)","leto":null}],"razlaga":"Prva vrstica 19. Febr. 1833; druga '12. tt°' = dito Febr. 1833. Nadaljevanje 1834: 22. Jänner 1834, nato vrstica brez datuma (prazna/izbrisana), 29. Jänner 1834 in trije 'dito' vnosi (29. Jänner 1834)."}
+```

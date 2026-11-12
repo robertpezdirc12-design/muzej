@@ -1,0 +1,14 @@
+{"rows":[
+{"r":1,"datum":"19. Feb. 1833","y":"y250-y350","rob":""},
+{"r":2,"datum":"12. April (d°?)","y":"y350-y450","rob":""},
+{"r":3,"datum":"21. April","y":"y450-y550","rob":""},
+{"r":4,"datum":"5. Mai","y":"y550-y650","rob":""},
+{"r":5,"datum":"10. Oct.","y":"y550-y650","rob":"25"},
+{"r":6,"datum":"27. November","y":"y650-y750","rob":"1"},
+{"r":7,"datum":"22. Januar 1834","y":"y750-y850","rob":"2"},
+{"r":8,"datum":"d° (isto kot prejšnja vrstica)","y":"y850-y950","rob":"3"},
+{"r":9,"datum":"29. Januar 1834","y":"y850-y950","rob":"4"},
+{"r":10,"datum":"29. d° (Januar)","y":"y950-y1050","rob":"5"},
+{"r":11,"datum":"29. d° (Januar)","y":"y1050-y1150","rob":"6"},
+{"r":12,"datum":"29. d° (Januar)","y":"y1150-y1250","rob":"7"}
+],"razlaga":"Glava tabele ('Jahr, Monat und Tag der Trauung') med y150-y250 ni vključena, ker ni vpis podatka. Datum 'd°' pomeni ponovitev datuma iz prejšnje vrstice (29. Januar 1834). Delno vidne vnuse v desnem stolpcu (imena) ni bilo mogoče berljivo prebrati; marginalne številke so prebrane iz levega roba (25, 1–7). Zadnji prosti predel pod y1250 je brez vsebine."}

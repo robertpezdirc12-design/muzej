@@ -1,0 +1,27 @@
+```json
+{
+  "pag": "Leva stran = Pag. 19 (svinčnik zgoraj levo '19'); desna stran (nad kolonami starši/priče) = svinčnik '20' — glej razlago",
+  "vrstic": 13,
+  "stevilcene": false,
+  "leta_glava": "Tiskana glava stolpca: 'Jahr, Monat und Tag der Trauung 1833' — vse vpisi so 1833",
+  "restart_kje": "RESTART na letnost 1833 ni na tej strani — stran se nadaljuje z blokom porok 6. Febr 1833 (začetek bloka je na s10 = Pag. 17) in konča z 13. Febr 1833. Nova letnica (1834) se tu NE začne.",
+  "rows": [
+    {"r":1,"datum":"6. Febr 1833","zenin":"Nikolaus Gus[?] Lindart, Dobroviz [Dobravlje], hiša 13","nevesta":"Catharina Haushony [Haušonc?], Dobroviz [Dobravlje], hiša 14"},
+    {"r":2,"datum":"6. Febr","zenin":"Joh. Gosling [Gošling?], Lindart, Griblje [Grilce], hiša 53","nevesta":"Maria Bring [Brinc], Griblě 24"},
+    {"r":3,"datum":"6. Febr","zenin":"Mathias Hvauf? [Hruš?/Hvauf] Lindart, Otok, hiša 31","nevesta":"Amal [Amalija?] Berkozy [Berkovič?], Seel? 14"},
+    {"r":4,"datum":"6. Febr","zenin":"Nikolaus Bogil [Bogiel?] Lindart, Grinstal [Grinstal?], hiša 2","nevesta":"Maria Schallg [Šaljc?], Otok 22"},
+    {"r":5,"datum":"6. Febr","zenin":"Georg Hunczl [Huncik?] Lindart, Kostava [Kostanjevica?], hiša 10","nevesta":"Anna Britala [Bretala?], Treblgla [Trebelno?] 35"},
+    {"r":6,"datum":"6. Febr","zenin":"Johann Gutthorrgy [Gorjup?] Lindart, Vaser/Vas? (prej kaj?), hiša 3","nevesta":"Maria Bukory [Bukovič?], Zeindorf? [Zajčje?] 4"},
+    {"r":7,"datum":"6. Febr","zenin":"Mathias Tardigl [Terdič?] Lindart, Döfja? [Depala vas?], hiša 13","nevesta":"Catharina Hunczl, Panigha [Pavlova vas?] 10"},
+    {"r":8,"datum":"6. Febr","zenin":"Mathias Mulhorrgy [Mihelčič?] Lindart, Döfja? 5","nevesta":"Catharina Durigh [Turk?], Panigha 9"},
+    {"r":9,"datum":"13. Febr","zenin":"Georg Haushfinigl [Haušpinc?], Krajng [Kranjc?], hiša 32","nevesta":"Catharina Kurra [Kurar?], Germ [Gorenje?], hiša 29"},
+    {"r":10,"datum":"13. Febr","zenin":"Nikolaus Kuergfyhigl [Kurežič?], Ohlach [Otolj?], hiša 18","nevesta":"Catharina Tongl, Germ 20"},
+    {"r":11,"datum":"13. Febr","zenin":"Georg Haushfinigl [Haušpinc?], Krajng 20","nevesta":"Maria Melill [Milh?], Seel 16"},
+    {"r":12,"datum":"13. Febr","zenin":"Mathias Melill [Milh?], Seel 16","nevesta":"Catharina Kurran [Kurar?], Ohlach 16"},
+    {"r":13,"datum":"13. Febr","zenin":"Anton Malfghigl [Malešič?] Lindart, Gadig? [Gaj?], hiša 21","nevesta":"Maria Haushfinigl, Krajng 20"}
+  ],
+  "duhovnik": "Desno spodaj (stolpec 'Unterschrift des traumden Priesters') so podpisi vsake vrstice posebej, večinoma 'Trumpfy' / 'Trampy' (Traumfy [Trampe?]), dva skupna podpisa za vzorce 6. in 13. Febr. Ni enotnega podpisa na dnu strani.",
+  "spodaj_prazen": "Ne — tabela teče do dna obeh strani; vrstica 13 (13. Febr) je zadnja. Pod njo je še ena prazna vrstica tabele. Nobenega 'finis' ali zaključnega zapisa ni.",
+  "razlaga": "To je razprtje s11+s12 (Pag. 19 + naslednja). Leva stran = Pag. 19 z glavnimi stolpci (datum, ženin, nevesta, 1833), desna stran = nadaljevanje istih 13 vrstic po širini (starši ženina/ neveste, priče, urejeni dokumenti, podpis duhovnika); svinčna foliacija desne strani je '20', kar kaže na štetje po listih (folios) namesto po straneh. Vseh 13 vrstic je 1833 (blok 6. Febr r1–r8, blok 13. Febr r9–r13); vzorec se nadaljuje iz s10 (restart 3./5./6. Febr 1833). Številčenje m1… ni izpisano v vpisih — ni navpišnih št. vrstic. Hišne številke so majhne in delno neprehitne: prebrane z najboljšim prizadevanjem (13, 14; 53, 24; 31, 14; 2, 22; 10, 35; 3, 4; 13, 10; 5, 9; 32, 29; 18, 20; 20, 16; 16, 16; 21, 20). Imena so raba Kurrent-nemško: Lindart = Lindart/Brnek? (Župnija Podzemelj), Dobroviz = Dobravlje, Griblě = Grilce, Otok, Grinstal, Kostava, Panigha = Pavlova vas, Döfja = Depala vas?, Germ = Gorenje?, Ohlach = Otolj?, Seel, Krajng."
+}
+```
