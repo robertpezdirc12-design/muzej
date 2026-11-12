@@ -1,5 +1,13 @@
 # P259 RUNBOOK — nadaljevanje ko se VLM-kvota (daily) povrne
 
+## ★ POSODOBITEV 2026-11-12 08:00 UTC — RAZDEDUPLIKACIJA SPOROČILCEV + PREVERJENO STANJE
+- Kvota ob 07:59 UTC še vedno 0 (429). Zadnji 429-umik v loop.log: 06:14 UTC.
+- **CRON razdedupliran:** watch-r2/r3/r4 (podvojeni z valovi 1–3!) IZBRISANI. Aktiven niz:
+  **val-1 10:45 UTC · val-2 13:15 UTC · val-3 16:15 UTC** (samo branje: chunk.sh ×3–4) +
+  **watch-r5 22:30 UTC** (= 06:30 SH 13. 11. — polna rolling-24h obnova 22:21! → KORAKI 2–6 do konca).
+- Preverjeno: /tmp/p259+duels ×10 kompozitov + dates ×36 + L/R trakovi ✓ · rows=1/36 · census=6/6 · pass1=3/3 · pag=0/3 · git čisto · dev-server OK.
+- Ostali VLM-work: 35 vrstic + 3 pag + 10 dvobojev = ~48 klicev (+ retryji).
+
 ## ★ POSODOBITEV 2026-11-12 07:30 UTC — VSI MEHANIZMI PRIPRAVLJENI (ne-VLM delo KONČANO!)
 - **Duel-kompoziti ×10 ŽE GENERIRANI:** /tmp/p259/duels/*.jpg (backup: research/issue17/p259-work/duels/!) —
   3 datumski (s11/s12/s13_dates = VSE vrstice) + 7 imenskih (s11_r2_gosling ★GOSLING|PESDIRZ-h53|33+BRING|BRINC-h24 ·
