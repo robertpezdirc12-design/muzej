@@ -151,3 +151,12 @@ Vsi kandidati + firstYear-dvigi: research/issue17/p259-facts.json!
 - Vsi prebrani artefakti so zavarovani v research/issue17/p259-work/ (pass1/census/ygrid/datcol/hints/s11_r1 + skrani s11–s13 + dueli-JPG!). snap() med tekom dodaja tudi vsa nova branja. Če /tmp/p259 manjka: **SAMO poženi `bash scripts/tmp/p259_chunk.sh 540`** — heal() sam obnovi vse iz p259-work/ + regenerira izreze (ročni postopek iz prejšnje različice ostaja kot rezerva).
 - Sprožilci: 06:15 · 10:45 · 13:15 · 16:15 · 22:30 UTC (cron). Po uspešnem zaključku KORAKA 2+ NE potrebuješ več ostalih sprožilcev (odstrani jih: cron list → delete).
 - Kvota-glava: x-ratelimit-user-daily-remaining (10-min limit 30 — chunk.sh 32s ritem = varno).
+
+## ——— VAL-FIN (2026-11-12 18:20 UTC) — VLM-DUEL-VALIDACIJA + POPRAVEK m20/m21 ———
+- KVOTA OBNOVLJENA 496 → izvedena **neodvisna validacija vseh 9 preostalih duelov** (11 VLM klicov + 4 agent-vizija Read ×6/×10).
+- **9/10 POTRJENO**: s11-dates, s11_r2-PESDIRZ-h53/BRING-h24, s12_r7-RESTART-22.-Jän, s13-dates-5.-Febr-×7, s13_r1, **s13_r6-VRH-h68** (2. neodvisen vir: census_L13!), **s13_r11-MARENTIČ-Dobravlje-29** (iz xOpen → 1:1), s12_r5-SCHMIG-19.-Oct (2. potrditev: digit-'9'-descender-≠-'2'-referenca-r1/r3/r7!).
+- **1 POPRAVEK**: m20/m21 datum **19. → 12. Febr 1833 ×2** — r1 polni zapis '12. Feb. 1833.' + r2 '12. att°' (×6 agent-vizija, digit-shapes); 4 izvora (census+pass1+duelval+urkunda-celica-'12. Febr'); datcol-'19.' = misread 1:4. ANOMALIJA: 12. AFTER s11-tail 13. Febr = dopisani zamik (licence '2. + 12. Febr').
+- Metoda-novina: **DIGIT-SHAPE reference iz istega skena** (znane števe r3 '21.' / r7 '22.' kot primer za dvomljivo '2|3|9') — odločilno pri ×10 zoomu.
+- Popravljeni: parish.ts-header + STRUKTURA-si/en (parish-marriage-early.ts) + module-p259.txt + s12_r1.json; + VALIDACIJA.md + tiebreak/ + duel-vals/ backupi v repo.
+- QA po popravku: **253/253** · tsc-0 · lint-CISTO · browser re-verifikacija (render OK, 0 console-errors, footer-na-dnu, mobile-390-brez-preliva, iskanje dela).
+- Push: **28aa5cf** (nov žeton deluje — KORAK 6 dokončno zaprt).
