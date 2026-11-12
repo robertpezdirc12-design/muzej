@@ -1,0 +1,16 @@
+```json
+{"name":"s12_dates","rows":[
+{"r":1,"datum":"12. Feb. 1833.","leto":1833,"opomba":"prazna celica nad zapisom (vrhnji del), zapis jasno v spodnji celici"},
+{"r":2,"datum":"12. att°","leto":1833,"opomba":"vrhnji del prikazuje konec prejšnjega zapisa '1833.'; mesec v okrajšani obliki 'att°' (9bris/November)"},
+{"r":3,"datum":"21. April","leto":1833,"opomba":"nad zapisom ostanek prejšnje vrstice"},
+{"r":4,"datum":"5. Mai","leto":1833,"opomba":""},
+{"r":5,"datum":"10. Octob.","leto":1833,"opomba":"robovna številka '25' levo od zapisa (pripada sosednji vrstici)"},
+{"r":6,"datum":"27. November","leto":1833,"opomba":"mesec prelomljen: '27. Novem-/ber'; robovni številki '25' in '1' v levem robu"},
+{"r":7,"datum":"22. Jän. 1834.","leto":1834,"opomba":"robovna številka '2.'; nad zapiso ostanek 'ber' prejšnje vrstice; letoRestart na 1834"},
+{"r":8,"datum":"20.","leto":null,"opomba":"celica skoraj prazna, zapisan le številka '20' z podčrtajem; robovna številka '3.'"},
+{"r":9,"datum":"29. Jänner 1834","leto":1834,"opomba":"mesec v okrajšani obliki 'Jän-/ner'; robovna številka '4'"},
+{"r":10,"datum":"29. att°","leto":1834,"opomba":"robovna številka '5'; 'att°' okrajšava za mesec (9bris/November)"},
+{"r":11,"datum":"29. att°","leto":1834,"opomba":"robovna številka '6'"},
+{"r":12,"datum":"29. att°","leto":1834,"opomba":"robovna številka '7'"}],
+"razlaga":"Datumnostolpec Pag. 21: zapisi 1–6 v letu 1833 (feb–nov), od vrstice 7 restart na 1834 (Jän./Jänner). Mesec 'att°' je dobesedna okrajšava (najverjetneje 9bris = november). Robovne številke (25, 1., 2., 3., 4, 5, 6, 7) so naštete v opombah, niso del datuma. Vrstica 8 ima le '20' brez meseca/leta."}
+```

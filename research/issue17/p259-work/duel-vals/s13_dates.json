@@ -1,0 +1,13 @@
+{"name":"s13_dates","rows":[
+{"r":1,"datum":"5. Feb.","leto":1834,"rob":8,"opomba":"polni zapis »5. Feb.«"},
+{"r":2,"datum":"5. Februar","leto":1834,"rob":9,"opomba":"raztegnjen zapis »5. / Februar«"},
+{"r":3,"datum":"5. Febr","leto":1834,"rob":10,"opomba":"izrez delno odrezan; viden »5 Febr«"},
+{"r":4,"datum":"5. Februar","leto":1834,"rob":10,"opomba":"»5.. / Februar«, dito znak nad številko"},
+{"r":5,"datum":"5. Febr","leto":1834,"rob":11,"opomba":"»5 tm / Februar«"},
+{"r":6,"datum":"5. Februar","leto":1834,"rob":12,"opomba":"»5 tm / Februar«"},
+{"r":7,"datum":"","leto":1834,"rob":12,"opomba":"datum v tem izrezu ni viden (verjetno dito po vrstici 6)"},
+{"r":8,"datum":"12. Febr","leto":1834,"rob":13,"opomba":"viden »5 lm« nad izrezanim delom – najbrž »12..« (dito)","warning":""},
+{"r":9,"datum":"12. Februar","leto":1834,"rob":14,"opomba":"»12 tm / Februar«"},
+{"r":10,"datum":"9. Februar","leto":1834,"rob":15,"opomba":"»9 tm / Februar« – odklon od zaporedja 12."},
+{"r":11,"datum":"10. Febr","leto":1834,"rob":16,"opomba":"izrez delno odrezan; »10 tm / Febr«"}
+],"razlaga":"Datumski stolpec Pag. 23: večkrat zapored zapisan dan 5. februar (s dito znaki ~), nato prehod na 12., posamično 9. in 10. februar; letnica 1834 zapisana na vrhu stolpca. Robovne številke 8–16 so vidne v posameznih izrezih (17–18 niso zajete v izrezih). Pri vrsticah 7 in 8 je datum delno/izrezan, vzorec pa kaže dito."}

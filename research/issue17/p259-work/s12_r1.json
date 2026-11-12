@@ -1,11 +1,11 @@
 {
  "id": "s12_r1",
  "vrstica": "polna",
- "datum": "19. Feb 1833",
+ "datum": "12. Feb 1833",
  "leto": 1833,
  "vasZenin": "Kreuzdorf [~Kreuzdorf/Notsch?]",
  "hisZenin": 13,
- "zenin": "Georg Hoheuar [~Hofferer/Hohenauer?]",
+ "zenin": "Georg Hoheuar [~Hohenauer!—census+duelval-digit-shape; Hofferer-ZAVRŽEN]",
  "standZenin": "ledig",
  "starZenin": 23,
  "letoZenin": 0,
@@ -33,5 +33,5 @@
   "urkunde",
   "duhovnik"
  ],
- "razlaga": "s12-Pag21 zacne (1833-konec). r1: Georg [Hoheuar?] Kreuzdorf 13, 23l × Anna [Thurnigh?] Grinstal 10, 23l. Oce z. = Georg Hoheuar (ocetovo ime). Price: Johann [Oligh?] + Mathias TORKEL. Urkunda dva datuma (2. Febr + 12. Febr 1833). Zupnik-podpis 'Georg [?] Paroch'."
+ "razlaga": "s12-Pag21 zacne (1833-konec). r1: Georg [Hoheuar?] Kreuzdorf 13, 23l × Anna [Thurnigh?] Grinstal 10, 23l. Oce z. = Georg Hoheuar (ocetovo ime). Price: Johann [Oligh?] + Mathias TORKEL. Urkunda dva datuma (2. Febr + 12. Febr 1833). Zupnik-podpis 'Georg [?] Paroch'. — VALIDACIJA-2026-11-12: datum ×6-agent-vizija = 12. (polni zapis \"12. Feb. 1833.\" + r2 \"12. att°\"); 4 izvora (census 12./pass1 12./duelval 12./urkunda-celica \"12. Febr 1833\"); datcol \"19.\" = misread. ANOMALIJA: 12. Febr ZA s11-tail 13. Febr = dopisani zamik."
 }

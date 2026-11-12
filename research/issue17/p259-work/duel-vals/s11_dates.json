@@ -1,0 +1,21 @@
+```json
+{
+  "name": "s11_dates",
+  "rows": [
+    {"r": 1, "datum": "6. Febr", "leto": null, "opomba": ""},
+    {"r": 2, "datum": "6. tt°", "leto": null, "opomba": "dito (6. Febr)"},
+    {"r": 3, "datum": "6. tt°", "leto": null, "opomba": "dito"},
+    {"r": 4, "datum": "6. tt°", "leto": null, "opomba": "dito"},
+    {"r": 5, "datum": "6. tt°", "leto": null, "opomba": "dito"},
+    {"r": 6, "datum": "6. Feb.", "leto": null, "opomba": ""},
+    {"r": 7, "datum": "6. tt°", "leto": null, "opomba": "dito"},
+    {"r": 8, "datum": "13. tt°", "leto": null, "opomba": ""},
+    {"r": 9, "datum": "13. tt°", "leto": null, "opomba": ""},
+    {"r": 10, "datum": "13. tt°", "leto": null, "opomba": ""},
+    {"r": 11, "datum": "13. tt°", "leto": null, "opomba": ""},
+    {"r": 12, "datum": "13. tt°", "leto": null, "opomba": ""},
+    {"r": 13, "datum": "", "leto": null, "opomba": "datum v izrezu ni viden / ni zapisan"}
+  ],
+  "razlaga": "Stolpec datumov Pag. 19: vrstice 1–7 imajo '6. Febr' oziroma '6. tt°' (dito = 6. Februar); vrstice 8–12 '13. tt°' (dito = 13. Februar). 'tt°' je okrajšava za dito. Mesec Februar, letnica v tem izreku ni zapisana (kontekst ~1833/34). Vrstica 13 brez vidnega zapisa datuma. Prečrtanov v robu ni opaziti."
+}
+```
