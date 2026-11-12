@@ -96,6 +96,6 @@ for k, v in [
     ("s13_r6", "ženin: Vrh|Vrb hiša 58|68 + nevesta h51 → BLOKI h58|h68 + h51 (dvig 33?)"),
     ("s13_r11", "nevesta: MARENTIČ h24|29? + DATUM 10.|17. Febr → MARENTIČ-nit!"),
     ("s12_r7", "★RESTART-1834: DATUM 22.|27. Jän + ime Johann|Stephan?"),
-    ("s13_r1", "DATUM-duel 5.|8. Febr (Ash-Wednesday-1834=5.2.?) + priimka"),
+    ("s13_r1", "DATUM-duel 5.|8. Febr (post-1834=12.2.-koledar-ne-odloča) + SISTEMATIK-SPOR-rob9-14! + priimka"),
 ]:
     print(f"  {k}: {v}")

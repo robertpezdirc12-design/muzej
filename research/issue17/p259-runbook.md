@@ -1,5 +1,19 @@
 # P259 RUNBOOK — nadaljevanje ko se VLM-kvota (daily) povrne
 
+## ★ POSODOBITEV 2026-11-12 09:05 UTC — ★★ SANACIJA uigen.py + koledarska popravka (pred-poletna kontrola!)
+- **★★★ uigen.py JE IMEL SINTAKSNO NAPAKO** (f-string `}})}}}` — en `}` preveč; py-commit-claim
+  P259-PRIPRAVE je bil napačen!) + **NEURAVNOVEŠEN JSX izpis** (68:64 — dvojni zaviti oklepaji
+  namesto template-literal po P258-vzoru!). SANIRANO: timeline_jsx prepisana kot NAVADEN niz
+  z @@zamenjavami@@ (ne f-string!) — zdaj: py-compile OK + oklepaji 52:52 + **bun-build 5-modulov
+  OK** (funkcionalni test s sintetičnimi podatki!) + dry-run exit-2 z navodili + intro/labeli
+  iz DATA-JSON (introSi/introEn/label1833n/label1834!) + esc() zaščita.
+- **★ KOLEDARSKA NAPAKA ODSTRANJENA:** 'pepelna sreda 1834 = 5. 2.' je NAPAČNO — Gauss:
+  Velika noč 1834 = 30. 3. → pepelna sreda = **12. 2. 1834** (in 1833: 20. 2.!). Popravljeni
+  p259_duels.mjs (oba poziva — s13_dates sedaj izrecno sprašuje R3–R7!) + p259-facts.json
+  (2 polji) + uigen.py. Koledar za [5.|8.]-Febr NE odloča — odločajo SAMO ČRKE.
+- Zgodovinsko-dosledno: poroke 1833 (6.+13. 2.) in 1834 (do 10. 2.) so VSE predpostne — vzorec
+  'množične-poroke-pred-postom' se nadaljuje (1828-6.2. ×7! → 1834).
+
 ## ★ POSODOBITEV 2026-11-12 08:35 UTC — PRE-RECONCILE DOKONČAN (KORAK-3 pospešitev!)
 - **Nova analiza: `research/issue17/p259-work/prereconcile.txt`** (326 vrstic — KORAK 3 začni TAM!)
   = konsenz/konflikt tabela vseh 36 vrstic iz pass1+census L/R+datcol+hints (generator: scripts/tmp/p259_prereconcile.py).
