@@ -1,99 +1,99 @@
 {
- "phase": "P259",
- "title": "NOTRANJOST-01738 — 1833-nadaljevanje + 1834 (s11–s13 = Pag. 19/21/23)",
- "generatedAt": "2026-11-12",
- "vir": {
-  "metoda": "agent-vizija (Read-tool) — VLM-kvota-0-alternativa; L+R-celotni-strani ×3 + stacki ×36 + zoomi A–I + seq13-ravnila + dcol13-4× (datumski-duel)",
-  "skeni": {
-   "s11": "matricula-01738-Pag.19/20",
-   "s12": "Pag.21/22",
-   "s13": "Pag.23/24",
-   "md5": {
-    "s11": "b56f04a5",
-    "s12": "ed62d632",
-    "s13": "8afbec80"
-   }
+  "phase": "P259",
+  "title": "NOTRANJOST-01738 — 1833-nadaljevanje + 1834 (s11–s13 = Pag. 19/21/23)",
+  "generatedAt": "2026-11-12",
+  "vir": {
+    "metoda": "agent-vizija (Read-tool) — VLM-kvota-0-alternativa; L+R-celotni-strani ×3 + stacki ×36 + zoomi A–I + seq13-ravnila + dcol13-4× (datumski-duel)",
+    "skeni": {
+      "s11": "matricula-01738-Pag.19/20",
+      "s12": "Pag.21/22",
+      "s13": "Pag.23/24",
+      "md5": {
+        "s11": "b56f04a5",
+        "s12": "ed62d632",
+        "s13": "8afbec80"
+      }
+    },
+    "folicacija": "Pag = 2·sken−3 potrjena ×6 (svinčnik 19/20, 21/22, 23/24 — agent-vizija vogali)",
+    "branja": "36-vrstic (rows) + census-L/R ×6 + pass1 ×3 + pag ×3 + dueli: s11_dates/s13_dates/datumi-RAZREŠENI-4×-dcol; word-zoomi: r2-hiša-53, r5-s12-ŠIMIČ-1:1+59l, r7-s12-'22.'-Jän, r6-s13-hiša-68, r10/r11-s13, r5-s13-Anuzel-Dolenja-vas, r13-s11-Gradag-25l"
   },
-  "folicacija": "Pag = 2·sken−3 potrjena ×6 (svinčnik 19/20, 21/22, 23/24 — agent-vizija vogali)",
-  "branja": "36-vrstic (rows) + census-L/R ×6 + pass1 ×3 + pag ×3 + dueli: s11_dates/s13_dates/datumi-RAZREŠENI-4×-dcol; word-zoomi: r2-hiša-53, r5-s12-ŠIMIČ-1:1+59l, r7-s12-'22.'-Jän, r6-s13-hiša-68, r10/r11-s13, r5-s13-Anuzel-Dolenja-vas, r13-s11-Gradag-25l"
- },
- "struktura": {
-  "vpisi": 36,
-  "razclenitev": "s11: 13 (m7–m19-1833) + s12: 12 (m20–m25-1833 + m1–m6-1834) + s13: 11 (m7–m17-1834)",
-  "1833": "m7–m25 = 25-vpisov",
-  "1834": "m1–m17 = 17-vpisov",
-  "dvorniDan": "6. Febr 1833 ×13 (Pag.17 ×5 + Pag.19 ×8) = NOV-REKORD-množični-dan-korpusa (prej 9× na 29.-2.-1832)",
-  "masniDan1834": "5. Febr ×7 (rob 8–14) + 9. Febr (rob 15) + 10. Febr ×3 (rob 16–18)",
-  "datumskiDuel": "s13-rob-9–14: datcol-'5.'-vs-census/pass1-'9./10.' → RAZREŠEN-4×-dcol-VSE-PETICE (datcol 1:1!)",
-  "robnaStevilcenje": "rob-1 (27.-Nov-1833) → rob-18 (10.-Febr-1834) ZVEZNO ČEZ MEJO LET — prvič v knjigi; s11-levo-strani-pričevanje: prečrtan-'25.'-na-r5-s12",
-  "restarti": "1834-RESTART-s12-r7 (22. Jän 1834 — duel-'22.|27.'-RAZREŠEN-'22.'-agent-vizija!)"
- },
- "leta": {
-  "1833": {
-   "vpisi": 25,
-   "skeni": "s11 (13) + s12-r1–r6 (6)",
-   "gribljeBloki": "m8-h53×h24 + m24-h60 + m25-h28"
+  "struktura": {
+    "vpisi": 36,
+    "razclenitev": "s11: 13 (m7–m19-1833) + s12: 12 (m20–m25-1833 + m1–m6-1834) + s13: 11 (m7–m17-1834)",
+    "1833": "m7–m25 = 25-vpisov",
+    "1834": "m1–m17 = 17-vpisov",
+    "dvorniDan": "6. Febr 1833 ×13 (Pag.17 ×5 + Pag.19 ×8) = NOV-REKORD-množični-dan-korpusa (prej 9× na 29.-2.-1832)",
+    "masniDan1834": "5. Febr ×7 (rob 8–14) + 9. Febr (rob 15) + 10. Febr ×3 (rob 16–18)",
+    "datumskiDuel": "s13-rob-9–14: datcol-'5.'-vs-census/pass1-'9./10.' → RAZREŠEN-4×-dcol-VSE-PETICE (datcol 1:1!)",
+    "robnaStevilcenje": "rob-1 (27.-Nov-1833) → rob-18 (10.-Febr-1834) ZVEZNO ČEZ MEJO LET — prvič v knjigi; s11-levo-strani-pričevanje: prečrtan-'25.'-na-r5-s12",
+    "restarti": "1834-RESTART-s12-r7 (22. Jän 1834 — duel-'22.|27.'-RAZREŠEN-'22.'-agent-vizija!)"
   },
-  "1834": {
-   "vpisi": 17,
-   "skeni": "s12-r7–r12 (6) + s13 (11)",
-   "gribljeBloki": "m12-h68×h51"
+  "leta": {
+    "1833": {
+      "vpisi": 25,
+      "skeni": "s11 (13) + s12-r1–r6 (6)",
+      "gribljeBloki": "m8-h53×h24 + m24-h60 + m25-h28"
+    },
+    "1834": {
+      "vpisi": 17,
+      "skeni": "s12-r7–r12 (6) + s13 (11)",
+      "gribljeBloki": "m12-h68×h51"
+    }
+  },
+  "niti": {
+    "simic": "ŠIMIČ-1:1-POTRJENA (m24: ženin-Georg-SCHIMIG-59-l-duel-'S-h-i-m-i-g' + mati-Maria-SHMIG) — P258-kandidata-h56/h49-dobila-1:1-referenco",
+    "krizan": "KRIŽAN-GROZD-h28-m25: mata-ženina-Catharina-KRISCHAN + mata-neveste-Maria-KRISCHAN + priče-Georg-×-Nicolaus-KRISCHAN = 4×-v-eni-vrstici → KONGLOMERAT-5.-GRIBLJE-HIŠA (3+36+66+63+28) + HRIŽAN-h62 = 6-hiš",
+    "bring": "BRING-nit: m8-nevesta-Maria-BRING-h24 ↔ m25-ženin-Georg-BRING-h28 (2-BRING-vpisa-v-1-letu)",
+    "pesdirz": "PESDIRZ-ISTO-DNEVNA-NIT: 6.-Febr-1833-4-GRIBLJE-HIŠE (h50×h49-m6-Pag.17 + h53×h24-m8-Pag.19; 2-Pesdirz-ženina-19/21-l; ocetova-Marco-vs-Johann — NI-brat-sorodstvo)",
+    "vrhHaraghinigh": "VRH×HARAGHINIGH-h68×h51-m12-1834 (hiša-68-POTRJENO-seq13 — hint-'58'-ZAVRŽEN; priča-Peter-[~Vrh?])",
+    "telah": "TELAH-nit: oce-neveste-m25-Johann-TELAH ↔ s11_r4-priča-Joh.-Telah ↔ s12_r6-nevesta-Anna-TELAH",
+    "harashpinaygh": "HARASHPINAYGH-nit: s13_r6-oce-neveste-Mathias-Harashpinaygh ↔ s11-HaraShpinigh-×3",
+    "vdove": "2-vdove-neveste: m21-Catharina-geb.-PODRUG (oce-Simon-PODRUG-1:1) + m15-1834-Katharina-Millauer-geb.-[Porehen?]",
+    "klobucarDvojna": "★★★★-DVOJNA-POROKA-NIT: s13_r10-Barbara-Movin-geb.-KLEBUTSCHAR = ISTA-oseba-kot-s12_r4-nevesta-Barbara-KLEBUTSCHAR (isti-starši-Peter-KLEBUTSCHAR + Anna-Panovz/Lanovz!) — poroka-Muscan-5.-Mai-1833 → vdovela → poroka-Reys-10.-Febr-1834 (v-9-mesecih!)",
+    "muz": "MUZ-nadaljnja: s12_r10-nevesta-Anna-MUZ (oce-Martin-MUZ-mata-Anna-TONG) — dva-sinova-Georg-Kurjotschigh-v-2-dneh (r10+r12)",
+    "kokanic": "KOKANIČ-BRATA-1834: m9-Mathias-h17 + m10-Michael-h18-BORŠT (isti-oče-Nicolaus-Kokanigh)",
+    "klobucar": "KLOBUČAR: s12_r4-nevesta-KLEBUTSCHAR (oce-Peter) + s13_r10-geb.-KLEBUTSCHAR"
+  },
+  "kraji": {
+    "grosuplje": "m22-1833: Martin-Havran × Josepha-Lebstan-obé-hiši-'1' — NAJBOLJ-ODDALJENA-VAS-KORPUSA (~Ljubljanska!-X-OPEN)",
+    "skrilje": "m2-1834-nevesta (2.-omemba)",
+    "mlake": "m6-1834-nevesta (2.-omemba)",
+    "borst": "m9/m10-1834-×2 (KOKANIČ-brata)",
+    "krafing": "×4",
+    "semelj": "×4",
+    "dobravlje": "×4",
+    "garble": "25-vasi-[~X-OPEN]: Grinstal/Sastava/Trebughel/Dofug/Pavinghe/Germ/Ohlah/Gradag/Kreuzdorf/in-S?u?hna-gu-Otok/Vnano/Gordeg/Döbling-Skrile/Palonje/Perm/Gershigh/Gerhuifa/Zerkuifa/Pravutina/Crnawo/Konyev/Dolenja-vas+Koplišhe/Prible"
+  },
+  "korpusUcinek": {
+    "noviBlok": 6,
+    "noveVpisi": "36 (13 + 12 + 11)",
+    "vitalsTotal": "2059 → 2065",
+    "byBook01738": "47 → 53",
+    "leta01738": "1828–1833 + 1873 → 1828–1834 + 1873",
+    "dvigi": {
+      "h51": "1867→1834 (33!)",
+      "h28": "1865→1833 (32!)",
+      "h53": "1863→1833 (30!)",
+      "h68": "1861→1834 (27!)",
+      "h24": "1859→1833 (26!)",
+      "h60": "1857→1833 (24!)"
+    },
+    "sestKnjiznih": "31 → 34 (+3: h24/h53/h60; h68/h51-pet-knjižna-brez-04105)",
+    "bothEraPorocna": "34 → 39 (+5)"
+  },
+  "xOpen": [
+    "m24-nevesta-priimek-'Jurjshigh??'[~Jurejschig?]-ostaja-garble (VLM-jedro-1:1!-ocetova-celica-ŽE-REŠENA:-'PETIG'-VLM+hint-1:1-'Boring'-ZAVRŽEN!)",
+    "stand-'fauwofaund??' ×3 (s13_r5-zenin + s13_r8-nevesta + s13_r8-oce-n.) — morda-'Inwohner?'",
+    "s11_r6-vas-ženina-PEČRTANA (opomba-'Pfarr-W...'-vdovec-35-l)",
+    "s12_r2-vas-'in-S?u?hna??-gu-Otok-za?avšig??-haus-Ti?ugha??' (4-vrsticna)",
+    "s13_r5-vas-'Dolenja-vas??-24-+-Koplišhe??-8' (dve-hiši!)",
+    "s12_r7-vas-'Vnano??-migh' + ženin-'Stephan-[Pafhigh??]'",
+    "s13_r11-vas-'Konyev??/Inangdong??' + ženin-'Georg-[Krozhewer??]'",
+    "duhovniki: 'Georg-[Kraphoniz??]-Parochus' (s11_r1, s12_r1/r4, s13_r8) vs 'Joseph-[Kepanyhigh??]-Capell.' (ostali)"
+  ],
+  "p259": {
+    "metoda": "agent-vizija-alternativa-1:1 (VLM-kvota-0-cez-dan — 0-vision-klicev-v-vrsticah!-samo-1-429-proba)",
+    "kontrola": "36/36-vrstic + 6/6-census + 3/3-pass1 + 3/3-pag + dueli + zoomi-A–I",
+    "rezultat": "6-blokov-h53/h24/h60/h28/h68/h51 + dvigi + niti"
   }
- },
- "niti": {
-  "simic": "ŠIMIČ-1:1-POTRJENA (m24: ženin-Georg-SCHIMIG-59-l-duel-'S-h-i-m-i-g' + mati-Maria-SHMIG) — P258-kandidata-h56/h49-dobila-1:1-referenco",
-  "krizan": "KRIŽAN-GROZD-h28-m25: mata-ženina-Catharina-KRISCHAN + mata-neveste-Maria-KRISCHAN + priče-Georg-×-Nicolaus-KRISCHAN = 4×-v-eni-vrstici → KONGLOMERAT-5.-GRIBLJE-HIŠA (3+36+66+63+28) + HRIŽAN-h62 = 6-hiš",
-  "bring": "BRING-nit: m8-nevesta-Maria-BRING-h24 ↔ m25-ženin-Georg-BRING-h28 (2-BRING-vpisa-v-1-letu)",
-  "pesdirz": "PESDIRZ-ISTO-DNEVNA-NIT: 6.-Febr-1833-4-GRIBLJE-HIŠE (h50×h49-m6-Pag.17 + h53×h24-m8-Pag.19; 2-Pesdirz-ženina-19/21-l; ocetova-Marco-vs-Johann — NI-brat-sorodstvo)",
-  "vrhHaraghinigh": "VRH×HARAGHINIGH-h68×h51-m12-1834 (hiša-68-POTRJENO-seq13 — hint-'58'-ZAVRŽEN; priča-Peter-[~Vrh?])",
-  "telah": "TELAH-nit: oce-neveste-m25-Johann-TELAH ↔ s11_r4-priča-Joh.-Telah ↔ s12_r6-nevesta-Anna-TELAH",
-  "harashpinaygh": "HARASHPINAYGH-nit: s13_r6-oce-neveste-Mathias-Harashpinaygh ↔ s11-HaraShpinigh-×3",
-  "vdove": "2-vdove-neveste: m21-Catharina-geb.-PODRUG (oce-Simon-PODRUG-1:1) + m15-1834-Katharina-Millauer-geb.-[Porehen?]",
-  "klobucarDvojna": "★★★★-DVOJNA-POROKA-NIT: s13_r10-Barbara-Movin-geb.-KLEBUTSCHAR = ISTA-oseba-kot-s12_r4-nevesta-Barbara-KLEBUTSCHAR (isti-starši-Peter-KLEBUTSCHAR + Anna-Panovz/Lanovz!) — poroka-Muscan-5.-Mai-1833 → vdovela → poroka-Reys-10.-Febr-1834 (v-9-mesecih!)",
-  "muz": "MUZ-nadaljnja: s12_r10-nevesta-Anna-MUZ (oce-Martin-MUZ-mata-Anna-TONG) — dva-sinova-Georg-Kurjotschigh-v-2-dneh (r10+r12)",
-  "kokanic": "KOKANIČ-BRATA-1834: m9-Mathias-h17 + m10-Michael-h18-BORŠT (isti-oče-Nicolaus-Kokanigh)",
-  "klobucar": "KLOBUČAR: s12_r4-nevesta-KLEBUTSCHAR (oce-Peter) + s13_r10-geb.-KLEBUTSCHAR"
- },
- "kraji": {
-  "grosuplje": "m22-1833: Martin-Havran × Josepha-Lebstan-obé-hiši-'1' — NAJBOLJ-ODDALJENA-VAS-KORPUSA (~Ljubljanska!-X-OPEN)",
-  "skrilje": "m2-1834-nevesta (2.-omemba)",
-  "mlake": "m6-1834-nevesta (2.-omemba)",
-  "borst": "m9/m10-1834-×2 (KOKANIČ-brata)",
-  "krafing": "×4",
-  "semelj": "×4",
-  "dobravlje": "×4",
-  "garble": "25-vasi-[~X-OPEN]: Grinstal/Sastava/Trebughel/Dofug/Pavinghe/Germ/Ohlah/Gradag/Kreuzdorf/in-S?u?hna-gu-Otok/Vnano/Gordeg/Döbling-Skrile/Palonje/Perm/Gershigh/Gerhuifa/Zerkuifa/Pravutina/Crnawo/Konyev/Dolenja-vas+Koplišhe/Prible"
- },
- "korpusUcinek": {
-  "noviBlok": 6,
-  "noveVpisi": "36 (13 + 12 + 11)",
-  "vitalsTotal": "2059 → 2065",
-  "byBook01738": "47 → 53",
-  "leta01738": "1828–1833 + 1873 → 1828–1834 + 1873",
-  "dvigi": {
-   "h51": "1867→1834 (33!)",
-   "h28": "1865→1833 (32!)",
-   "h53": "1863→1833 (30!)",
-   "h68": "1861→1834 (27!)",
-   "h24": "1859→1833 (26!)",
-   "h60": "1857→1833 (24!)"
-  },
-  "sestKnjiznih": "31 → 34 (+3: h24/h53/h60; h68/h51-pet-knjižna-brez-04105)",
-  "bothEraPorocna": "34 → 39 (+5)"
- },
- "xOpen": [
-  "m24-nevesta-priimek [~Hurjshigh|Harschpigh?] + ocetova-celica-'Mathias-Boring??'-SPOR",
-  "stand-'fauwofaund??' ×3 (s13_r5-zenin + s13_r8-nevesta + s13_r8-oce-n.) — morda-'Inwohner?'",
-  "s11_r6-vas-ženina-PEČRTANA (opomba-'Pfarr-W...'-vdovec-35-l)",
-  "s12_r2-vas-'in-S?u?hna??-gu-Otok-za?avšig??-haus-Ti?ugha??' (4-vrsticna)",
-  "s13_r5-vas-'Dolenja-vas??-24-+-Koplišhe??-8' (dve-hiši!)",
-  "s12_r7-vas-'Vnano??-migh' + ženin-'Stephan-[Pafhigh??]'",
-  "s13_r11-vas-'Konyev??/Inangdong??' + ženin-'Georg-[Krozhewer??]'",
-  "duhovniki: 'Georg-[Kraphoniz??]-Parochus' (s11_r1, s12_r1/r4, s13_r8) vs 'Joseph-[Kepanyhigh??]-Capell.' (ostali)"
- ],
- "p259": {
-  "metoda": "agent-vizija-alternativa-1:1 (VLM-kvota-0-cez-dan — 0-vision-klicev-v-vrsticah!-samo-1-429-proba)",
-  "kontrola": "36/36-vrstic + 6/6-census + 3/3-pass1 + 3/3-pag + dueli + zoomi-A–I",
-  "rezultat": "6-blokov-h53/h24/h60/h28/h68/h51 + dvigi + niti"
- }
 }
