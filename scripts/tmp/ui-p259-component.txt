@@ -1,0 +1,82 @@
+function Notranjost01738Leto1833_1834() {
+  const { t } = useLang();
+  const e1833n: { m: string; d: string; h?: string; x?: boolean }[] = [
+    { m: "m7", d: "6.2.", h: "h13·h14" },
+    { m: "m8", d: "6.2.", h: "h53?·h24?" },
+    { m: "m9", d: "6.2." },
+    { m: "m10", d: "6.2.", h: "h1×h1", x: true },
+  ];
+  const e1834: { m: string; d: string; h?: string; x?: boolean }[] = [
+    { m: "m1", d: "27.1.", h: "h5?" },
+    { m: "m7", d: "5.2.", h: "h2" },
+    { m: "m13", d: "10.2.", h: "h68·h51" },
+  ];
+  return (
+    <div className="rounded-xl border bg-card/60 p-5">
+      <h3 className="flex items-center gap-2 font-serif text-lg font-semibold">
+        <BookOpenCheck className="h-4 w-4 text-primary" aria-hidden />
+        {t(
+          "Notranjost knjige 01738: 1833-konec + 1834-začetek (4 + 3 vpisov — 13 porok na 6. 2. 1833 = rekord!)",
+          "The interior of the book 01738: the 1833-end + the 1834-start (4 + 3 entries — 13 weddings on Feb 6 1833 = the record!)",
+        )}
+      </h3>
+      <p className="mt-2 text-sm text-muted-foreground [overflow-wrap:anywhere]">
+        {t(
+          "1833-NADALJEVANJE (s11+s12, Pag. 19/21): kaskada 6. Febr se nadaljuje — skupaj ★ 13 POROK NA 6. 2. 1833 (novi rekord korpusa!) + 13. 2. ×5 + leto 1833 = 25 vpisov (največje leto notranjosti!). ★ ROBNO ŠTEVLJENJE se začne z rob=1 (27. 11. 1833) in teče čez mejo leta do rob=18! 1834-RESTART (s12: [~22.|27.] Jän, rob=2 — 5. restart!) + 29. Jän ×4 + februarska kaskada rob 8–14 ([~5.×7-ali-9.+10.×5 — s13_dates-duel!]) + 9. Febr + 10. Febr ×3 — nadaljevanje na s14 (P260!)",
+          "The 1833-CONTINUATION (s11+s12, Pag. 19/21): the Feb-6 cascade continues — ★ 13 WEDDINGS ON FEB 6 1833 altogether (the new corpus record!) + Feb 13 ×5 + the year 1833 = 25 entries (the largest interior year!). ★ THE MARGIN NUMBERING begins with rob=1 (Nov 27 1833) and runs ACROSS the year boundary to rob=18! The 1834-RESTART (s12, rob=2 — the 5th restart!) + Jan 29 ×4 + the February cascade rob 8–14 ([~5×7-vs-9+10×5 — the s13_dates duel!]) + Feb 9 + Feb 10 ×3 — continues on s14 (P260!)",
+        )}
+      </p>
+
+      <div className="mt-4 rounded-lg border border-emerald-500/40 bg-emerald-500/10 p-4"><p className="text-sm">TEST-KORPUS</p></div>
+
+      <div className="mt-4 rounded-lg border border-primary/40 bg-primary/5 p-4"><p className="text-sm">TEST-NITI</p></div>
+
+      {/* e1833n timeline */}
+      <div className="mt-4 overflow-x-auto pb-1">
+        <p className="mb-1 text-xs font-semibold text-muted-foreground">{t("1833-konec (m7–m25 — 13 porok na 6. 2. + robno številčenje!)", "The 1833-end (m7–m25 — 13 weddings on Feb 6 + the margin numbering!)")}</p>
+        <div className="flex min-w-[880px] items-end gap-1 sm:min-w-0" role="listbox" aria-label={t("Vrstice e1833n", "The rows of e1833n")}>
+          {e1833n.map((e, i) => {
+            const isDouble = (e.h || "").includes("·");
+            const isViolet = e.h === "BARON" || e.h === "CRO" || e.h === "GROS";
+            return (
+              <div key={`g-${e.m}-${i}`} role="option" aria-selected={false} className="flex flex-1 flex-col items-center gap-1 rounded-lg border border-transparent px-1 py-2">
+                <span className="text-[10px] font-medium text-muted-foreground" style={{ overflowWrap: "anywhere" }}>{e.d}</span>
+                <span className={`flex h-9 min-w-9 items-center justify-center rounded-full border px-1 text-[11px] font-semibold ${isDouble ? "border-emerald-500 bg-emerald-500/20 text-emerald-700 dark:text-emerald-300" : isViolet ? "border-violet-500 bg-violet-500/20 text-violet-700 dark:text-violet-300" : e.x ? "border-dashed border-amber-500/60 bg-amber-500/10 text-amber-700 dark:text-amber-300" : "border-primary/50 bg-primary/10 text-primary"}`}>{e.m}</span>
+                <span className="text-[10px] text-muted-foreground" style={{ overflowWrap: "anywhere" }}>
+                  {e.h ? (isDouble ? e.h.replace("·", "×h").replace("★", "!") : e.h) : ""}
+                </span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      {/* e1834 timeline */}
+      <div className="mt-4 overflow-x-auto pb-1">
+        <p className="mb-1 text-xs font-semibold text-muted-foreground">{t("Leto 1834 (m1–m17 — restart + 10.2. kaskada!)", "The year 1834 (m1–m17 — the restart + the Feb 10 cascade!)")}</p>
+        <div className="flex min-w-[880px] items-end gap-1 sm:min-w-0" role="listbox" aria-label={t("Vrstice e1834", "The rows of e1834")}>
+          {e1834.map((e, i) => {
+            const isDouble = (e.h || "").includes("·");
+            const isViolet = e.h === "BARON" || e.h === "CRO" || e.h === "GROS";
+            return (
+              <div key={`h-${e.m}-${i}`} role="option" aria-selected={false} className="flex flex-1 flex-col items-center gap-1 rounded-lg border border-transparent px-1 py-2">
+                <span className="text-[10px] font-medium text-muted-foreground" style={{ overflowWrap: "anywhere" }}>{e.d}</span>
+                <span className={`flex h-9 min-w-9 items-center justify-center rounded-full border px-1 text-[11px] font-semibold ${isDouble ? "border-emerald-500 bg-emerald-500/20 text-emerald-700 dark:text-emerald-300" : isViolet ? "border-violet-500 bg-violet-500/20 text-violet-700 dark:text-violet-300" : e.x ? "border-dashed border-amber-500/60 bg-amber-500/10 text-amber-700 dark:text-amber-300" : "border-primary/50 bg-primary/10 text-primary"}`}>{e.m}</span>
+                <span className="text-[10px] text-muted-foreground" style={{ overflowWrap: "anywhere" }}>
+                  {e.h ? (isDouble ? e.h.replace("·", "×h").replace("★", "!") : e.h) : ""}
+                </span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      <div className="mt-4 rounded-lg border p-4"><p className="text-sm">TEST-KRAJI</p></div>
+      <p className="mt-2 text-xs text-muted-foreground" style={{ overflowWrap: "anywhere" }}>
+        {t(
+          "★★★★★ Datumska dueli: [~19.|12.]-Febr-m20 · [~19.|10.|26.]-Oct-m24 · [~22.|27.]-Jän-1834 · [~5.|8.]-Febr-rob8 (post-1834-začne-12.2. — koledar-ne-odloča!). P260+: 1834-nadaljevanje (s14 = Pag. 25!).",
+          "★★★★★ The date duels: [~19.|12.]-Feb-m20 · [~19.|10.|26.]-Oct-m24 · [~22.|27.]-Jan-1834 · [~5.|8.]-Feb-rob8 (Lent-1834-starts-12.2.-calendar-neutral!). P260+: the 1834 continuation (s14 = Pag. 25!).",
+        )}
+      </p>
+    </div>
+  );
+}
