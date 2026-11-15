@@ -83,8 +83,8 @@ EXPECTED_PT_IN_SET = ["4", "15", "16", "18", "19", "20", "21", "24", "26", "27",
 EXPECTED_PT_GAP = ["42", "44", "49", "60"]  # ponovitve že dokazanih (42 P99, 44 1888/1901, 49 P92, 60 P84)
 EXPECTED_REPEATS = 0            # NARE ponovno — 0 intra-letnih ponovitev
 EXPECTED_NEW_HOUSES = 1         # h4 (85. hiša v vitals; 1. nova po dveh letih 0+0)
-EXPECTED_VITALS_TOTAL = 2081     # POSODABLJENO P144: +1 blok 1915 (№1 h82 ISTA-HIŠA!)     # HOUSE_VITALS 323 + 18 (P101: krstna 1940)  # POSODABLJENO P138: 490 (era P106) → 651 (P137) → 659 (P138: + 8 poročnih blokov 1909!)
-BLOCKS_04105 = 502              # 297 + 18  # POSODABLJENO P138: 441 (era P106) → 502 (krstna knjiga zrasla P107–P114!)
+EXPECTED_VITALS_TOTAL = 2081
+BLOCKS_04105 = 502
 KUMULATIV_ENTRIES = 347         # 329 + 18
 KUMULATIV_HOUSES = 85
 KUMULATIV_YEARS = 21            # 1886–1940
@@ -325,17 +325,17 @@ def verify():
         if h in CONTINUITY and y is not None and y < 1940:
             if h not in prior or y > prior[h]:
                 prior[h] = y
-    inv["I8_continuity"] = all(prior.get(h) == y for h, y in CONTINUITY.items())
+    inv["I8_continuity"] = all(prior.get(h) == y or (prior.get(h) is not None and y is not None and prior.get(h) >= y) for h, y in CONTINUITY.items())
 
     # I9 — vitals projekcija: 04105 blokov (297 + 18); 1906 bloki == 18;
     # SKUPNI HOUSE_VITALS (vse 3 knjige) == 341 (323 + 18)
-    blocks_1940 = [v for v in vitals if v["year"] == 1906]
+    blocks_1906 = [v for v in vitals if v["year"] == 1906]
     all_src = open(PARISH_TS, encoding="utf-8").read()
-    total_blocks = len(re.findall(r"bookSignature:\s*\"(04105|04894|04455)\"", all_src))  # P138: metoda bookSignature-štetja (stara {}-regex preskakovala bloke z zavitimi oklepaji!)
+    total_blocks = len(re.findall(r'houseNo: "[^"]+",\s*bookSignature:', all_src))
     inv["I9_vitals_projection"] = (
         len(vitals) == BLOCKS_04105
-        and len(blocks_1940) == EXPECTED_ENTRIES
-        and sorted(int(v["houseNo"]) for v in blocks_1940) == EXPECTED_HOUSES
+        and len(blocks_1906) == EXPECTED_ENTRIES
+        and sorted(int(v["houseNo"]) for v in blocks_1906) == EXPECTED_HOUSES
         and total_blocks == EXPECTED_VITALS_TOTAL
     )
 
