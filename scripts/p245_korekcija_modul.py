@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """P245 — P244-KOREKCIJA modul parish-marriage-early.ts."""
-P = '/home/z/my-project/src/data/atlas/parish-marriage-early.ts'
+import os
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+P = f"{ROOT}/src/data/atlas/parish-marriage-early.ts"
 s = open(P, encoding='utf-8').read()
 n = 0
 

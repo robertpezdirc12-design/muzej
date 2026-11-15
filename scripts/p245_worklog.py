@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """P245 — worklog vnos (insert pred '## P244')."""
-P = '/home/z/my-project/worklog.md'
+import os
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+P = f"{ROOT}/worklog.md"
 s = open(P, encoding='utf-8').read()
 
 vnos = """## P245 — POROČNA PREDZGOVINA 04455: P244-KOREKCIJA — RESTART-1879 = s26 (ne s27!) (2026-11-10)

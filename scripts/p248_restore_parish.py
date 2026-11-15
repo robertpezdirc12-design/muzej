@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """P248-restore: ponovna vstavitev P248-sekcije v parish.ts (po git-checkout revert-u)."""
-F = "/home/z/my-project/src/data/atlas/parish.ts"
+import os
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+F = f"{ROOT}/src/data/atlas/parish.ts"
 s = open(F, encoding="utf-8").read()
 if "P248: POROČNA PREDZGOVINA" in s:
     print("ŽE vstavljeno — preskočim"); raise SystemExit

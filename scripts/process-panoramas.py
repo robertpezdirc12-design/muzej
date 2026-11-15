@@ -9,6 +9,8 @@
 
 Rezultat: public/panoramas/<ime>.jpg + <ime>-preview.jpg
 """
+import os
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 import sys
 from PIL import Image, ImageFilter
 
@@ -70,7 +72,7 @@ def blend_seam(img: Image.Image, width_px: int) -> Image.Image:
 def main() -> None:
     import os
 
-    os.makedirs("/home/z/my-project/public/panoramas", exist_ok=True)
+    os.makedirs(f"{ROOT}/public/panoramas", exist_ok=True)
     for name, (roll, horizon_v) in SPECS.items():
         src = f"/tmp/pano/{name}.png"
         img = Image.open(src).convert("RGB")
@@ -78,10 +80,10 @@ def main() -> None:
         img = roll_horizontal(img, roll)
         img = calibrate_horizon(img, horizon_v)
         img = blend_seam(img, SEAM_BLEND_PX)
-        out = f"/home/z/my-project/public/panoramas/{name}.jpg"
+        out = f"{ROOT}/public/panoramas/{name}.jpg"
         img.save(out, "JPEG", quality=80, optimize=True, progressive=True)
         prev = img.resize((640, 320), Image.LANCZOS)
-        prev_out = f"/home/z/my-project/public/panoramas/{name}-preview.jpg"
+        prev_out = f"{ROOT}/public/panoramas/{name}-preview.jpg"
         prev.save(prev_out, "JPEG", quality=65, optimize=True, progressive=True)
         print(
             f"OK {name}: roll={roll} horizon {horizon_v}->0.50, "

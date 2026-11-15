@@ -2,8 +2,10 @@
 # -*- coding: utf-8 -*-
 """P245 — P244-KOREKCIJA JSON: restart-1879 = s26 (ne s27!), številčenje-v-margini, finis-1878."""
 import json
+import os
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-P = '/home/z/my-project/research/issue17/parish-marriage-1879-04455.json'
+P = f"{ROOT}/research/issue17/parish-marriage-1879-04455.json"
 d = json.load(open(P, encoding='utf-8'))
 
 d['naslov'] = ('POROČNA PREDZGOVINA 04455, leto 1879 = 7/13 — s26–s35 (P245-KOREKCIJA: RESTART-1879 = s26-TOP-'

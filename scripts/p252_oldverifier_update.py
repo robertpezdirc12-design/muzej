@@ -7,6 +7,8 @@ DEL-1 (p236): obrez parish-synthesis.ts na baptism-blok (P252 je dodal MARRIAGE_
   + I9b pt-luknja 1940→2012 ('04104': 288 ostaja!).
 DEL-2 (p243/p244/p246/p247/p248): I10-QA-živo 245→246 (P252 je dodal 246. kontrolo!).
 """
+import os
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 import re
 
 def patch(path, old, new, tag):
@@ -20,7 +22,7 @@ def patch(path, old, new, tag):
 out = []
 
 # —— DEL-1: p236 ——
-P236 = "/home/z/my-project/scripts/p236_parish_synthesis_04104.py"
+P236 = f"{ROOT}/scripts/p236_parish_synthesis_04104.py"
 out.append(patch(P236,
     'syn = open(f"{ROOT}/src/data/atlas/parish-synthesis.ts", encoding="utf-8").read()\n',
     'syn = open(f"{ROOT}/src/data/atlas/parish-synthesis.ts", encoding="utf-8").read()\n'
@@ -54,7 +56,7 @@ else:
 # —— DEL-2: p243/p244/p246/p247/p248 — I10 245→246 ——
 for v in ("p243_parish_marriage_1880", "p244_parish_marriage_1879", "p246_parish_marriage_1878",
           "p247_parish_marriage_1877", "p248_parish_marriage_1876"):
-    p2 = f"/home/z/my-project/scripts/{v}_04455.py"
+    p2 = f"{ROOT}/scripts/{v}_04455.py"
     t = open(p2, encoding="utf-8").read()
     t2 = (t.replace('== 245', '== 246')
             .replace('"passed") == 245', '"passed") == 246')

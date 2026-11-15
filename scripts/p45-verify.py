@@ -8,6 +8,7 @@
   (d) oznake → naselja (point-in-polygon, pyproj TM→WGS84),
   (e) A05: alternativni translacijski optimumi (diskriminativnost).
 Izhod: research/georef-n83/p45-sheet-fits.json (dokazni artefakt #14)."""
+import os
 import json, math
 import numpy as np
 from PIL import Image
@@ -15,7 +16,7 @@ from scipy import ndimage
 from scipy.spatial import cKDTree
 from pyproj import Transformer
 
-ROOT = '/home/z/my-project/muzej'
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 M_LAT = 111320.0
 M_LNG = 78014.0
 TM2WGS = Transformer.from_crs(3794, 4326, always_xy=True)

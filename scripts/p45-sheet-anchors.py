@@ -13,13 +13,14 @@ Veriga dokazov:
   4. DISKRIMINACIJA: nič-testi (zasuki 90/180/270° + naključni zamiki).
   5. IZHOD: research/georef-n83/p45-sheet-fits.json (dokazni artefakt).
 """
+import os
 import json, math, sys
 import numpy as np
 from PIL import Image
 from scipy import ndimage
 from scipy.spatial import cKDTree
 
-ROOT = '/home/z/my-project/muzej'
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 M_LAT = 111320.0
 M_LNG = 78014.0  # cos(45.5°) * 111320
 

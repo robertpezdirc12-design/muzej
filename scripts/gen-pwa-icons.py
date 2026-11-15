@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """Generira PWA ikone za Muzej vasi Griblje iz monograma MV (kopia icon.svg)."""
 import os
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 from PIL import Image, ImageDraw, ImageFont
 
 CREAM = (242, 238, 230, 255)      # #F2EEE6
 TERRA = (159, 74, 43, 255)        # #9F4A2B
 FONT = "/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf"
-OUT = "/home/z/my-project/public/icons"
+OUT = f"{ROOT}/public/icons"
 os.makedirs(OUT, exist_ok=True)
 
 

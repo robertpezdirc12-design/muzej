@@ -20,9 +20,10 @@ Pet ugotovitev, popravljeno na podlagi virov:
 IDs se ne generirajo na novo — obstoječi ostanejo.
 """
 import json
+import os
 import sys
 
-BASE = "/home/z/my-project/muzej-analysis"
+BASE = os.environ.get("MUZEJ_ANALYSIS", os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "muzej-analysis"))
 sys.path.insert(0, BASE)
 
 def load(p):
