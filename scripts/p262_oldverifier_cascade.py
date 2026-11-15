@@ -3,10 +3,10 @@
 """P262 — KASKADA starih verifierjev (p200–p261): živi števci 2077→2081, 01738 65→69,
 leta-01738 +1838, sixBook 39→41/fiveBook 29→27, qa.count HOUSE_VITALS-length 2081."""
 import glob
+import os
 import re
 
-ROOT = "/home/z/my-project"
-
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # (stari, novi) splošni vzorci — uporabljeni v VSEH verifierjih
 GENERIC = [
     ('qa.count("HOUSE_VITALS.length !== 2077")', 'qa.count("HOUSE_VITALS.length !== 2081")'),

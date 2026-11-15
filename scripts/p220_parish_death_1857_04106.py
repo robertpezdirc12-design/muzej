@@ -2,8 +2,9 @@
 # -*- coding: utf-8 -*-
 """P220 — verifikator MRLIŠKE PREDZGODOVINE 04106, leto 1857 = 29/29 — ZADNJE leto knjige (I1–I10 + --live)."""
 import json, re, sys, urllib.request
+import os
 
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 results, ok = [], True
 
 def check(ime, cond, detail=""):

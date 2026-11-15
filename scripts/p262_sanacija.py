@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 """P262 — SANACIJA: posodobi vse ostale vzorce 2077/65/39/29/1828–1837 v starih verifierjih + qa-parish + pt-luknja-top."""
 import glob
+import os
 import re
 
-ROOT = "/home/z/my-project"
-
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # ——— 1. qa-parish.ts: VSE 'HOUSE_VITALS.length !== 2077' → 2081 (161×) ———
 PQ = f"{ROOT}/src/lib/qa-parish.ts"
 src = open(PQ, encoding="utf-8").read()

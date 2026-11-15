@@ -4,8 +4,9 @@
 (1876:6!) · dobe 214→220 (44→50 / 52→58-pred-linijskih!) + sken-range-11–14 +
 p80-1876:6-garda + narrativi."""
 import re
+import os
 
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 QA = f"{ROOT}/src/lib/qa-parish.ts"
 delo = 0
 

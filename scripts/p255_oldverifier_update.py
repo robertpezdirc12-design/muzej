@@ -5,7 +5,7 @@ Korpus: 2023 → 2026; pt-luknja vitalsTotal 2023 → 2026; 01738-byBook 11 → 
 p253-I3 01738-števec 11 → 14; QA-živo-števec 248 → 249 (p243/p244/p246/p247/p248/p252/p254)."""
 import os
 
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 changed = {}
 
 

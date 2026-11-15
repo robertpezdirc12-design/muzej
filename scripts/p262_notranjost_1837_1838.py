@@ -9,13 +9,14 @@ KRIŠAN-NIT-×4-s18 (m6-endogamija-Georg-×-Anna-KRISCHAN! + m8-Johann-20-l-NAJM
 foliacija-'Pag-=-2·sken−3'-serija-15/15 (s18-33/34!).
 Dokaz: research/issue17/p262-work/ (s18-REZERVA-1bb45fb3-2×-neodvisen-1:1!-≈83-izrezkov!)."""
 import json
+import os
 import re
 import sys
 import base64
 import urllib.request
 import hashlib
 
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OK = 0
 FAIL = 0
 LIVE = "--live" in sys.argv

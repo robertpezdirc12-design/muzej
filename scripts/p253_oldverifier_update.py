@@ -3,8 +3,9 @@
 """P253 — posodobitev STARIH VERIFIKATORJEV na žive številke po P253 (+11 blokov 01738).
 Korpus: 2012 → 2023; pt-luknja vitalsTotal 2012 → 2023; 04455-byBook ostaja 269 (01738 = NOVA knjiga!)."""
 import re, sys
+import os
 
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 changed = {}
 
 def patch(path, pairs, count_only=None):

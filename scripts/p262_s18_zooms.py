@@ -4,7 +4,7 @@
 import os
 import subprocess
 
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = f"{ROOT}/research/issue17/p261-work/s18.jpg"
 OUT = f"{ROOT}/research/issue17/p262-work"
 

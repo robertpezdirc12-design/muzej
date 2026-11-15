@@ -4,8 +4,9 @@
 2008→2012 · 04455 265→269 · sidra 258→262 (1873:4!) · dobe 232→236 (66-pred-linijskih!)
 + garda 1873:4 + sken-garda-1873 (s2!) + p85-izjeme-04455-1873."""
 import re
+import os
 
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 QA = f"{ROOT}/src/lib/qa-parish.ts"
 delo = 0
 

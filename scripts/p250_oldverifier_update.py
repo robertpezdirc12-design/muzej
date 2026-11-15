@@ -4,7 +4,7 @@
 sidra-message 247→258 (1874:11!) · dobe 221→232 (62-pred-linijskih!) ·
 MILIČ 241→243 (54→56!) · h65 {42,36,6}→{43,37,6} · Mathias-h65 22→23 ·
 pt-luknja-1997→2008 · + sken-range-2–7-garda (1875-garda-ostaja!)."""
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 delo = 0
 
 FILES = [

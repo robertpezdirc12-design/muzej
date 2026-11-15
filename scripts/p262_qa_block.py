@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """P262 — qa-p262 blok vstavljen za qa-p261 (po checkout-ab944b5)."""
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 P = f"{ROOT}/src/lib/qa-parish.ts"
 src = open(P, encoding="utf-8").read()
 if "qa-p262-parish-marriage-notranjost-01738-1837-1838" in src:

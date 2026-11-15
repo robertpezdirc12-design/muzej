@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """P248-fix: p85-izjemi (h30/h41-04455-1876) + MILIČ-garde 240→241 (v9-'Mihelič'-garble-kandidat!)."""
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 QA = f"{ROOT}/src/lib/qa-parish.ts"
 delo = 0
 

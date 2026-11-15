@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """P251 — popravki 2. kroga: MILIČ-križ 243→247 (04455 56→60!) + p94-h22-izjema-1873."""
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 QA = f"{ROOT}/src/lib/qa-parish.ts"
 delo = 0
 src = open(QA, encoding="utf-8").read()

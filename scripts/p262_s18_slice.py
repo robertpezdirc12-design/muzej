@@ -6,7 +6,7 @@ Izhod: research/issue17/p262-work/ — margin + 3 horizontalne slise × L/R + ce
 import os
 import subprocess
 
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = f"{ROOT}/research/issue17/p261-work/s18.jpg"
 OUT = f"{ROOT}/research/issue17/p262-work"
 os.makedirs(OUT, exist_ok=True)

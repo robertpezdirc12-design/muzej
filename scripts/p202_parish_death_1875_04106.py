@@ -17,8 +17,9 @@ I10: 04894-still-520 + 04106-leta == {1875,...,1885}
 I8b: 5-NOVIH-hiš-rekord + BRAUŠ-nit-×2 + otroška-umrljivost-30% (+2-[?])
 """
 import json, re, sys, urllib.request
+import os
 
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 results = []
 ok = True
 

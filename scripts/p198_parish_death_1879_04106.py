@@ -21,8 +21,9 @@ I10: 04894-still-520 + 04106-leta == {1879, 1880, 1881, 1882, 1883, 1884, 1885}
 --live: produkcija /api/qa == 198/198 + qa-p198 pass:True
 """
 import json, re, sys, urllib.request
+import os
 
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ok = True
 def check(name, cond, detail=""):
     global ok

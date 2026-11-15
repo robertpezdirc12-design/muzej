@@ -8,9 +8,10 @@ C) qa-parish.ts: odstrani zastarelo 'skeni izven 27–35' pogojnico (P245-KOREKC
 D) stari verifierji p200–p258: živi števci → 2069, 01738 → 57, QA-total → 254,
    h42/h50/h51/h53-story pričakovanja → živo, six-lista 31→36, TOTALS-36/32/8/41, bloki-1833-P259, anomalie-25."""
 import json
+import os
 import re
 
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 log = []
 
 # ============ A) pt-luknja-18-final.json ============

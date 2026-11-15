@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """P262 — qa-parish.ts ČISTI-fix (ob checkout ab944b5): vse P262-posodobitve v 1 skripti."""
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 P = f"{ROOT}/src/lib/qa-parish.ts"
 src = open(P, encoding="utf-8").read()
 

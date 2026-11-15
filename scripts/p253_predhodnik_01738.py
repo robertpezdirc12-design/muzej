@@ -2,8 +2,9 @@
 # -*- coding: utf-8 -*-
 """P253 — verifikator PREDHODNIKA-KNJIGE-04455 = 01738 (Poročna 1828–1873), leto 1873 m1–m17 + ŠIV-MED-KNJIGAMA (I1–I10 + --live)."""
 import json, re, sys, urllib.request
+import os
 
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 results, ok = [], True
 
 def check(ime, cond, detail=""):

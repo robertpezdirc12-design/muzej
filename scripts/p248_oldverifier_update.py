@@ -3,7 +3,7 @@
 """P248 — sanacija STARIH verifikatorjev na žive številke: 1990→1996 · 247→253 ·
 sidra-message 240→246 (1876:6!) · dobe 214→220 (50-pred-linijskih!) ·
 MILIČ 240→241 + [53,78,20,36,54] · pt-luknja-1990→1996."""
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 delo = 0
 
 FILES = [

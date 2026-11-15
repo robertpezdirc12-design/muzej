@@ -4,8 +4,9 @@
 sidra-message 258→262 (1873:4-P251! na vrh!) · dobe 232→236 (66-pred-linijskih!) ·
 MILIČ 243→247 (56→60!) · p237-2012/269 · p238-števec · oznake."""
 import re
+import os
 
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 delo = 0
 
 FILES = [

@@ -16,8 +16,9 @@ I10: 04894-still-520 + 04106-leta == {1876,...,1885}
 I8b: otroška-umrljivost-55% (11/20) + KRONOLOŠKA-NAPAKA-pisarja (z83-Nov-24-pred-z85-Nov-12!)
 """
 import json, re, sys, urllib.request
+import os
 
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 results = []
 ok = True
 

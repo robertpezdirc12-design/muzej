@@ -4,8 +4,9 @@
 1997→2008 · 04455 254→265 · sidra 247→258 (1874:11!) · dobe 221→232 (62-pred-linijskih!)
 + gardi 1874:11 + sken-range-2–7."""
 import re
+import os
 
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 QA = f"{ROOT}/src/lib/qa-parish.ts"
 delo = 0
 

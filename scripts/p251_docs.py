@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """P251 — posodobitev README.md na stanje po P251 (predzgodovina 13/13 KOMPLETNA)."""
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RD = f"{ROOT}/README.md"
 src = open(RD, encoding="utf-8").read()
 delo = 0

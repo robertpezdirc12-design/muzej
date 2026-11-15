@@ -3,8 +3,9 @@
 """P260 — update2: preostali precision-popravki starih preverjevalnikov + ponovna pt-luknja json sanacija.
 (bump-veriga iz enkratnega pomota je json povrnila na 2008/265 — part A ponovno nanesam.)"""
 import json
+import os
 
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 log = []
 
 # ============ A) pt-luknja-18-final.json (ponovno — bump-veriga je revertirala!) ============

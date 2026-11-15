@@ -6,8 +6,9 @@ Sinteza IZKLJUČNO meri obstoječe faze P238–P251 (NI novih branj/skenov!) —
 NESPREMENJEN; razcep 74 (predzgodovina 1873–1885) + 195 (linija 1886–1922) = 269 — pt-luknja 1:1.
 """
 import json, re, sys, urllib.request
+import os
 
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 results, ok = [], True
 
 def check(ime, cond, detail=""):

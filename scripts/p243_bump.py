@@ -2,8 +2,9 @@
 # -*- coding: utf-8 -*-
 """P243 — sanacija zastarelih agregatov: 1966→1969 · 223→226 · sidra 216→219 (1880:3!) · dobe 190→193 (23/31-pred-linijskih!) + p85-izjeme-h24/h63/h53-1880 + qa-p243 vstavitev."""
 import re, sys
+import os
 
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 QA = f"{ROOT}/src/lib/qa-parish.ts"
 delo = 0
 

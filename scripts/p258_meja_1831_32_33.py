@@ -6,12 +6,13 @@ bothEra 26 → 34; 10 dvigov (h8-40 = 2. vseh časov!); PEZDIRC-h50-3-vrstice; M
 KRIŽAN-konglomerat-4-hiše; 40-vpisov (11+15+14) = NAJVEČJA-NOTRANJOST-FAZA.
 Dokaz: parish-marriage-notranjost-1832.json (+ parish-house-stories.json)."""
 import json
+import os
 import re
 import sys
 import base64
 import urllib.request
 
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OK = 0
 FAIL = 0
 LIVE = "--live" in sys.argv

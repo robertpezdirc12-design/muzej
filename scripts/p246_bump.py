@@ -4,8 +4,9 @@
 (1878:7!) · dobe 202→209 (32→39-pred-linijskih! · 40→47!) + sken-range-19–24 +
 p80-1878:7-garda + qa-p246 vstavitev."""
 import re
+import os
 
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 QA = f"{ROOT}/src/lib/qa-parish.ts"
 delo = 0
 

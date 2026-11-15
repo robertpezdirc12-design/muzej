@@ -3,8 +3,9 @@
 """P247 — sanacija STARIH verifikatorjev na žive številke: 1985→1990 · 242→247 ·
 sidra-message 235→240 (1877:5!) · dobe 209→214 · pt-luknja-1985→1990."""
 import re
+import os
 
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 delo = 0
 
 FILES = [

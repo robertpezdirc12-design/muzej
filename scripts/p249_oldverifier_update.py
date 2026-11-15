@@ -3,7 +3,7 @@
 """P249 — sanacija STARIH verifikatorjev na žive številke: 1996→1997 · 253→254 ·
 sidra-message 246→247 (1875:1!) · dobe 220→221 (51-pred-linijskih!) ·
 pt-luknja-1996→1997 · + sken-range-8–10-garda-omejitev (1876-garda-ostaja!)."""
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 delo = 0
 
 FILES = [

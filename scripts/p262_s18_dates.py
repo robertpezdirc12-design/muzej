@@ -2,8 +2,9 @@
 # -*- coding: utf-8 -*-
 """P262 — s18 datum-celice mega-zoom (x=90–460, na vrstico) + margin-celica."""
 import subprocess
+import os
 
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = f"{ROOT}/research/issue17/p261-work/s18.jpg"
 OUT = f"{ROOT}/research/issue17/p262-work"
 

@@ -4,12 +4,13 @@
 Korpus 2026 → 2032 (+6 blokov 1829: h32/h20-m2 + h5/h19-m10 + h62/h22-m18!);
 šest-knjižne 12 → 16; bothEra-poročna 13 → 17; dokaz parish-marriage-notranjost-1829.json."""
 import json
+import os
 import re
 import sys
 import base64
 import urllib.request
 
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OK = 0
 FAIL = 0
 

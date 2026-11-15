@@ -2,8 +2,9 @@
 # -*- coding: utf-8 -*-
 """P242 — sanacija zastarelih agregatov: 1957→1966 · 214→223 · 207→216 · 181→190 + qa-p242 vstavitev."""
 import re, sys
+import os
 
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 QA = f"{ROOT}/src/lib/qa-parish.ts"
 PT = f"{ROOT}/research/issue17/pt-luknja-18-final.json"
 delo = 0

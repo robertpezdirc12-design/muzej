@@ -5,12 +5,13 @@ Korpus 2032 → 2043 (+11 blokov: 1×1830-h22 + 10×1831!); šest-knjižne 16 �
 10 dvigov (h54-37 = 2. vseh časov!); PEZDIRC-NIT-h50-42-let; ANOMALIJA-m7-Maria-Pödiz.
 Dokaza: parish-marriage-notranjost-1830.json + parish-marriage-notranjost-1831.json."""
 import json
+import os
 import re
 import sys
 import base64
 import urllib.request
 
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OK = 0
 FAIL = 0
 

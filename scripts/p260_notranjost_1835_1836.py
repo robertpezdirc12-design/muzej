@@ -9,12 +9,13 @@ KRIŽAN-NIT-42-let (1836→04455-1878!); 1.-VELIKA-GLAVA-'1836'-v-notranjosti;
 številčenje = serije restartov (A-rob-19/20 + B-pastoralno-Nov→Nov + C-koledarsko-1836!).
 Dokaz: research/issue17/p260-facts.json (+ p260-work/: s14-dc2f13e0 + s15-b130fa71 + s16-eef17788)."""
 import json
+import os
 import re
 import sys
 import base64
 import urllib.request
 
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OK = 0
 FAIL = 0
 LIVE = "--live" in sys.argv

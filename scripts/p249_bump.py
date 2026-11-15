@@ -3,8 +3,9 @@
 """P249 — sanacija zastarelih agregatov: 1996→1997 · 253→254 · sidra 246→247
 (1875:1!) · dobe 220→221 (58→59-pred-linijskih!) + sken-range-8–10 + p80-1875:1-garda."""
 import re
+import os
 
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 QA = f"{ROOT}/src/lib/qa-parish.ts"
 delo = 0
 

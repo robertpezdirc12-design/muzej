@@ -2,8 +2,9 @@
 # -*- coding: utf-8 -*-
 """P262 — s18 odločilni mega-zoomi: r1 Haus-Nr + prečrtan-ort, datumi 6x, r4-ort, starosti, r6-bride-Nr."""
 import subprocess
+import os
 
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = f"{ROOT}/research/issue17/p261-work/s18.jpg"
 OUT = f"{ROOT}/research/issue17/p262-work"
 

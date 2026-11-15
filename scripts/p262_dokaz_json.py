@@ -3,9 +3,9 @@
 """P262 — kirurška posodobitev dokaz-JSON datotek (json-indent-1 = forma-intakt! cf. P261-lekcija):
 parish-house-stories.json (six 39→41 + h17/h31-stories!) + pt-luknja-18-final.json (vitals 2077→2081, 01738 65→69)."""
 import json
+import os
 
-ROOT = "/home/z/my-project"
-
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # ——— 1. parish-house-stories.json ———
 P1 = f"{ROOT}/research/issue17/parish-house-stories.json"
 pt = json.load(open(P1, encoding="utf-8"))

@@ -4,13 +4,14 @@
 Korpus 2023 → 2026 (+3 bloki 1828: h6-m6 + h61/h22-m13 polni dvojni!);
 korpus-prvi-vpis 1857 → 1828; šest-knjižne 9 → 12; dokaz parish-marriage-notranjost-1828.json."""
 import json
+import os
 import re
 import sys
 import base64
 import hashlib
 import urllib.request
 
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OK = 0
 FAIL = 0
 

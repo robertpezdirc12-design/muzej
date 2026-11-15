@@ -2,8 +2,9 @@
 # -*- coding: utf-8 -*-
 """P237 — verifikator FORENZIKE NITI: MILIČ↔MILEK križ · h69 zgodba · duhovniški križ (I1–I10 + --live)."""
 import re, sys, urllib.request
+import os
 
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 results, ok = [], True
 
 def check(ime, cond, detail=""):

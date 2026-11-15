@@ -10,12 +10,13 @@ BRING×ŠHRING-endogamija (letterform-B-loop-VS-Š-hook!); NOTIZEN-soglasja-×4 
 foliacija-'Pag-=-2·sken−3'-serija-14/14 (s17-31/32!).
 Dokaz: research/issue17/p261-facts.json (+ p261-work/: s17-3b1f5b30 + s18-1bb45fb3)."""
 import json
+import os
 import re
 import sys
 import base64
 import urllib.request
 
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OK = 0
 FAIL = 0
 LIVE = "--live" in sys.argv

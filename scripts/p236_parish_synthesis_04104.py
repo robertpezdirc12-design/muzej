@@ -2,8 +2,9 @@
 # -*- coding: utf-8 -*-
 """P236 — verifikator SINTEZE KRSTNE PREDZGODOVINE 04104, 15/15 KOMPLETNA (I1–I10 + --live)."""
 import re, sys, urllib.request
+import os
 
-ROOT = "/home/z/my-project"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 results, ok = [], True
 
 def check(ime, cond, detail=""):
