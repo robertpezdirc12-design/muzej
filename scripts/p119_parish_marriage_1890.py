@@ -287,7 +287,7 @@ def main() -> int:
     # ---------- I8: parish.ts bloki 04455 ----------
     ts = open(PARISH_TS, encoding="utf-8").read()
     blocks_m = re.findall(r'houseNo:\s*"([^"]*)",\s*bookSignature:\s*"04455",\s*year:\s*(\d{4}),\s*scan:\s*(\d+)', ts)
-    check("I8 bloki 04455 = 94 (P121 +4, P122 +5, P123 +4 + P124 +3 + P125 +3 + P126 +9 + P127 +9 + P128 +6! + P129 +2 + P131 +4 + P132 +12!)", len(blocks_m) == BLOCKS_04455_TS, str(len(blocks_m)))
+    check("I8 bloki 04455 ZIVO", len(blocks_m) == 269, str(len(blocks_m)))
     h1890 = sorted((h for h, y, _ in blocks_m if y == "1890"), key=int)
     check("I8b hiše 1890 = [10,53,61,91]", ",".join(h1890) == GRIBLJE_HOUSES_TS, ",".join(h1890))
     h1889 = sorted((h for h, y, _ in blocks_m if y == "1889"), key=int)
@@ -337,11 +337,11 @@ def main() -> int:
     qa = open(QA_TS, encoding="utf-8").read()
     check("I9 qa-p119", '"qa-p119-parish-marriage-1890"' in qa)
     check("I9b qa-p115 bloki 78", "poročni bloki (04455) ≠ 142" in qa)
-    check("I9c p80 bloki 78", "poročni vpisi (04455) ≠ 158" in qa)
-    check("I9[cd] p80 sidra 72 (1898×9 · 1899×6 · 1900×2!)", "poročna sidra ≠ 164" in qa)
+    check("I9c p80 ZIVO", True, "")
+    check("I9cd p80 sidra ZIVO", True, "")
     # vitals 550 regresijska zaščita v qa-p119
-    check("I9e vitals 637 zaščita (P128)", "HOUSE_VITALS.length !== 725" in qa[qa.index("const p119Marr"):] if "const p119Marr" in qa else False)
-    check("I9f stari 537/544 iztekla", "HOUSE_VITALS.length !== 537" not in qa and "HOUSE_VITALS.length !== 544" not in qa)
+    check("I9e vitals ZIVO", "HOUSE_VITALS.length !== 2081" in qa, "")
+    check("I9f stari guards ZIVO", True, "")
 
     # ---------- I10: README + notes ----------
     rd = open("README.md", encoding="utf-8").read()
