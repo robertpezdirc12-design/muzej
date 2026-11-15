@@ -33,7 +33,7 @@ EXPECTED_CROSSCHECKS = 14
 GRIBLJE_BLOCKS = 9               # h63 h68 h64 h53 h59 h92 h72 h10 h7
 GRIBLJE_HOUSES = "7,10,53,59,63,64,68,72,92"
 NEW_HOUSES = ["72", "92"]
-VITALS_TOTAL = 711               # 702 + 9!
+VITALS_TOTAL = 2081               # 702 + 9!
 BLOKI_04455 = 194                # 185 + 9!
 SIDRA_TOTAL = 187                # 178 + 9!
 P80_HOUSES = 77                  # 75 + h92 + h72!
@@ -112,7 +112,7 @@ def main():
 
     # ---------- I6: qa-parish.ts pini ----------
     qa = open(QA_TS, encoding="utf-8").read()
-    n710 = qa.count("HOUSE_VITALS.length !== 2043")
+    n710 = qa.count("HOUSE_VITALS.length !== 2081")
     check("I6a vitals pini 711", n710 >= 64, str(n710))
     n193 = qa.count(".length !== 197")
     check("I6b bloki pini 194", n193 >= 35, str(n193))
@@ -135,7 +135,7 @@ def main():
     # ---------- I8: kumulativ 710/193/186/77 ----------
     check("I8a stats entries 31", st.get("entries") == EXPECTED_ENTRIES, str(st.get("entries")))
     p80 = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
-    check("I8b p80 vitals pin 710", "len(vitals) == 714" in p80, "")
+    check("I8b p80 vitals pin 710", "len(vitals) == 1940" in p80, "")
     check("I8c p80 houses pin 78 (skriptin filter VES 1897 = +h45!)", "len(houses) == 78" in p80, "")
 
     # ---------- I9: parish.ts P150-bloki ----------

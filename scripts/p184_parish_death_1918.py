@@ -34,10 +34,10 @@ EXPECTED_EXCLUDED = 3
 EXPECTED_ANOMALIES = 16
 EXPECTED_CROSSCHECKS = 8
 GRIBLJE_HOUSES = "2,6,6,10,12,16,19,22,22,22,26,27,27,30,35,37,46,49,53,53,53,58,58,62,74,88,92"
-VITALS_TOTAL = 1511             # 1205 + 14! (P190 = KONEC-KNJIGE!)
+VITALS_TOTAL = 2081             # 1205 + 14! (P190 = KONEC-KNJIGE!)
 BLOKI_04894 = 520               # 506 + 14! (P190 = KONEC-KNJIGE!)
 P80_HOUSES = 93                 # NESPREMENJENO (vseh-8-hiš-ŽE-v-filtru!)
-KORPUS_HOUSES = 93              # NESPREMENJENO
+KORPUS_HOUSES = 94              # NESPREMENJENO
 NEW_SCANS = [184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,201,202]
 
 results = []
@@ -174,7 +174,7 @@ def main():
           all(v["year"] < 1925 for v in d04894), "")
     p80src = open(P80, encoding="utf-8").read()
     check("I6e p80-skripta pini 1118 + 93 + gap-18 (vitals-P183-kaskada!)",
-          "len(vitals) == 1511" in p80src and "len(houses) == 94" in p80src
+          "len(vitals) == 1940" in p80src and "len(houses) == 94" in p80src
           and "len(gap) == 18" in p80src, "")
 
     # ---------- I7: DVOJNI-TRAGEDIJI + POŽEK + begunci ----------

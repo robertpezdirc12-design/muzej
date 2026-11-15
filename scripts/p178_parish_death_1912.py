@@ -28,9 +28,9 @@ EXPECTED_ENTRIES = 77   # 18 Griblje + 59 ne-Griblje
 EXPECTED_EXCLUDED = 1
 GRIBLJE_HOUSES = "11,16,21,26,29,33,34,39,42,42,57,68,72,78,79,87,91,91"
 GRIBLJE_ZAPS = [1, 10, 20, 24, 32, 33, 35, 36, 39, 45, 47, 60, 61, 62, 64, 66, 71, 74]
-VITALS_TOTAL = 1511             # 1205 + 14! (P190 = KONEC-KNJIGE!)
+VITALS_TOTAL = 2081             # 1205 + 14! (P190 = KONEC-KNJIGE!)
 BLOKI_04894 = 520               # 506 + 14! (P190 = KONEC-KNJIGE!)
-KORPUS_HOUSES = 93              # NESPREMENJENO
+KORPUS_HOUSES = 94              # NESPREMENJENO
 NEW_SCANS = [137, 138, 139, 140, 141]
 
 results = []
@@ -213,7 +213,7 @@ def main():
           all("BLOKI_04894 = 401" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
               for i, y in ((170, 1904), (171, 1905), (172, 1940), (173, 1907), (174, 1908), (175, 1909), (176, 1910), (177, 1911))), "")
     check("I9c p80-skripta 1077/93",
-          "len(vitals) == 1100" in open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
+          "len(vitals) == 1940" in open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
           and "len(houses) == 94" in open("scripts/p80_parish_md_books.py", encoding="utf-8").read(), "")
 
     # ---------- I10: honesty ----------

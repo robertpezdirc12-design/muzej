@@ -32,10 +32,10 @@ EXPECTED_EXCLUDED = 0
 EXPECTED_ANOMALIES = 14
 EXPECTED_CROSSCHECKS = 8
 GRIBLJE_HOUSES = "9,14,24,45,46,46,60,70,75,86"
-VITALS_TOTAL = 1511             # 1205 + 14! (P190 = KONEC-KNJIGE!)
+VITALS_TOTAL = 2081             # 1205 + 14! (P190 = KONEC-KNJIGE!)
 BLOKI_04894 = 520               # 506 + 14! (P190 = KONEC-KNJIGE!)
 P80_HOUSES = 94                 # NESPREMENJENO (h60-ŽE-v-42–60-luknja-setu!)
-KORPUS_HOUSES = 93              # NESPREMENJENO
+KORPUS_HOUSES = 94              # NESPREMENJENO
 NEW_SCANS = [212, 213, 214, 215, 216, 217, 218, 219, 220, 221]
 
 results = []
@@ -119,7 +119,7 @@ def main():
     check("I6d 0-blokov-04894-1925 (P190-KONEC-KNJIGE!)", len(b1921) == 0, str(len(b1921)))
     p80src = open(P80, encoding="utf-8").read()
     check("I6e p80-skripta pini 1180 + 94 + gap-18",
-          "len(vitals) == 1511" in p80src and "len(houses) == 94" in p80src
+          "len(vitals) == 1940" in p80src and "len(houses) == 94" in p80src
           and "len(gap) == 18" in p80src, "")
 
     # ---------- I7: qa-parish.ts pini ----------

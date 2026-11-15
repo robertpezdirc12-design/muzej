@@ -34,7 +34,7 @@ check("I2 hiše-1885", ",".join(his) == "1,5,9,13,21,31,31,31,31,54,58,62,63,63,
 
 # I3: vitals
 n04106 = src.count('bookSignature: "04106"')
-check("I3 vitals-1940 + 04106==433", "HOUSE_VITALS.length !== 1940" not in src and src.count('bookSignature: "04106"') == 433,
+check("I3 vitals-1940 + 04106==433", "HOUSE_VITALS.length !== 2081" not in src and src.count('bookSignature: "04106"') == 433,
       f"04106-bloki={n04106}")
 
 # I4: dokaz

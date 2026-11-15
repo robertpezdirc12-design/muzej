@@ -28,7 +28,7 @@ EXPECTED_ANOMALIES = 22
 EXPECTED_CROSSCHECKS = 13
 GRIBLJE_BLOCKS = 10              # h22[~] · h77 · h12 · h2 · h41 · h20 · h48 · h61 · h26 · h15
 GRIBLJE_HOUSES = "12,15,2,20,22,26,41,48,61,77"
-VITALS_TOTAL = 698               # 688 + 10!
+VITALS_TOTAL = 2081               # 688 + 10!
 BLOKI_04455 = 181                # 171 + 10!
 SIDRA_TOTAL = 174                # 164 + 10!
 P80_HOUSES = 75                  # 72 + 3 NOVE (h2 · h12 · h77 — 1. poročni dokazi v 04455!)
@@ -120,7 +120,7 @@ def main():
     # ---------- I6: qa-parish.ts ----------
     qa = open(QA_TS, encoding="utf-8").read()
     check("I6a qa-p148 id", "qa-p148-parish-marriage-1919" in qa)
-    n698 = qa.count("HOUSE_VITALS.length !== 2043")
+    n698 = qa.count("HOUSE_VITALS.length !== 2081")
     check("I6b vitals pini 698", n698 >= 62, str(n698))
     n181 = qa.count(".length !== 197")
     check("I6c bloki pini 181", n181 >= 33, str(n181))

@@ -34,10 +34,10 @@ EXPECTED_EXCLUDED = 4
 EXPECTED_ANOMALIES = 15
 EXPECTED_CROSSCHECKS = 8
 GRIBLJE_HOUSES = "9,15,21,28,31,35,37,88,88"
-VITALS_TOTAL = 1511             # 1205 + 14! (P190 = KONEC-KNJIGE!)
+VITALS_TOTAL = 2081             # 1205 + 14! (P190 = KONEC-KNJIGE!)
 BLOKI_04894 = 520               # 506 + 14! (P190 = KONEC-KNJIGE!)
 P80_HOUSES = 93                 # NESPREMENJENO (vseh-8-hiš-ŽE-v-filtru!)
-KORPUS_HOUSES = 93              # NESPREMENJENO
+KORPUS_HOUSES = 94              # NESPREMENJENO
 NEW_SCANS = [162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172]
 
 results = []
@@ -179,7 +179,7 @@ def main():
           all(v["year"] < 1925 for v in d04894), "")
     p80src = open(P80, encoding="utf-8").read()
     check("I6e p80-skripta pini 1118 + 93 + gap-18 (vitals-P183-kaskada!)",
-          "len(vitals) == 1511" in p80src and "len(houses) == 94" in p80src
+          "len(vitals) == 1940" in p80src and "len(houses) == 94" in p80src
           and "len(gap) == 18" in p80src, "")
 
     # ---------- I7: h88-×2-MATER-IN-DOTKA + vzroki-novi ----------

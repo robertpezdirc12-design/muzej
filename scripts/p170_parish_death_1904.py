@@ -26,10 +26,10 @@ EXPECTED_EXCLUDED = 7
 EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 5
 GRIBLJE_HOUSES = "1,2,14,31,34,35,48,58,62,63,66,91"
-VITALS_TOTAL = 1511             # 1205 + 14! (P190 = KONEC-KNJIGE!)
+VITALS_TOTAL = 2081             # 1205 + 14! (P190 = KONEC-KNJIGE!)
 BLOKI_04894 = 520               # 506 + 14! (P190 = KONEC-KNJIGE!)
 P80_HOUSES = 92                  # NESPREMENJENO (vseh-12-ŽE-v-p80!)
-KORPUS_HOUSES = 93               # NESPREMENJENO
+KORPUS_HOUSES = 94               # NESPREMENJENO
 NEW_SCANS = [95, 96, 97, 98]
 
 results = []
@@ -181,7 +181,7 @@ def main():
           all(v["year"] < 1925 for v in d04894), "")
     p80 = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
     check("I6f p80-skripta pini 950 + 91 + gap-18 (vitals-P170-kaskada!)",
-          "len(vitals) == 1100" in p80 and "len(houses) == 94" in p80 and "len(gap) == 18" in p80, "")
+          "len(vitals) == 1940" in p80 and "len(houses) == 94" in p80 and "len(gap) == 18" in p80, "")
     houses_all = {v["houseNo"] for v in vit if v["houseNo"].isdigit()}
     check("I6g korpus = 93 hiš (NESPREMENJENO — vseh-12-hiš-ŽE-v-korpusu!)",
           len(houses_all) == KORPUS_HOUSES, str(len(houses_all)))
@@ -269,7 +269,7 @@ def main():
           all("VITALS_TOTAL = 1100" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
               for i, y in ((153, 1887), (154, 1888), (155, 1889), (156, 1890), (157, 1891), (158, 1892), (159, 1893), (160, 1894), (161, 1895), (162, 1896), (163, 1897), (164, 1898), (165, 1899), (166, 1900), (167, 1901), (168, 1902), (169, 1903))), "")
     check("I12b p80-skripta P169-komentar-kaskada (938 → 950-pini!)",
-          "len(vitals) == 1100" in p80, "")
+          "len(vitals) == 1940" in p80, "")
     check("I12c stale-guardi → 1908 (20× qa)",
           all("1916+-mrliški bloki že v korpusu" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
               for i, y in ((155, 1889), (156, 1890), (157, 1891), (158, 1892), (159, 1893), (160, 1894), (162, 1896), (163, 1897), (164, 1898), (165, 1899), (166, 1900), (167, 1901), (168, 1902), (169, 1903))), "")

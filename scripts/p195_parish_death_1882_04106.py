@@ -34,7 +34,7 @@ check("I2 hiše-1882 (h1-×2 + h54-×2)", ",".join(his) == "1,1,3,8,10,13,20,29,
 
 # I3: vitals + 04106-skupaj
 skupaj = src.count('bookSignature: "04106"')
-check("I3 vitals-1940 + 04106==433", "HOUSE_VITALS.length !== 1940" not in src and skupaj == 433,
+check("I3 vitals-1940 + 04106==433", "HOUSE_VITALS.length !== 2081" not in src and skupaj == 433,
       f"04106-bloki={skupaj}")
 
 # I4: dokaz

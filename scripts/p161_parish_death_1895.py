@@ -32,10 +32,10 @@ EXPECTED_EXCLUDED = 8
 EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 10
 GRIBLJE_HOUSES = "8,12,26,30,33,35,36,37,38,46,87"
-VITALS_TOTAL = 1511             # 1205 + 14! (P190 = KONEC-KNJIGE!)
+VITALS_TOTAL = 2081             # 1205 + 14! (P190 = KONEC-KNJIGE!)
 BLOKI_04894 = 520               # 506 + 14! (P190 = KONEC-KNJIGE!)
 P80_HOUSES = 87                  # NESPREMENJENA — zasičanje 3. leto!
-KORPUS_HOUSES = 93               # POSODABLJENO P162: 92 + 1 (+h51 — 1. dokaz kadarkoli)!
+KORPUS_HOUSES = 94               # POSODABLJENO P162: 92 + 1 (+h51 — 1. dokaz kadarkoli)!
 NEW_SCANS = [51, 52, 53, 54, 55]
 
 results = []
@@ -154,7 +154,7 @@ def main():
           all(v["year"] < 1925 for v in d04894), "")
     p80 = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
     check("I6f p80-skripta pini 950 + 91 + gap-18 (P170-kaskada!)",
-          "len(vitals) == 1100" in p80 and "len(houses) == 94" in p80 and "len(gap) == 18" in p80, "")
+          "len(vitals) == 1940" in p80 and "len(houses) == 94" in p80 and "len(gap) == 18" in p80, "")
     houses_all = {v["houseNo"] for v in vit if v["houseNo"].isdigit()}
     check("I6g korpus = 93 hiš (POSODABLJENO P162: +h51!)", len(houses_all) == KORPUS_HOUSES, str(len(houses_all)))
 

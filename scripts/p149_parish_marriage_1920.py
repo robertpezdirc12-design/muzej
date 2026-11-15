@@ -31,7 +31,7 @@ EXPECTED_ANOMALIES = 22
 EXPECTED_CROSSCHECKS = 13
 GRIBLJE_BLOCKS = 4               # h46 (intra h41) · h18 · h21 · h6 (intra h36)
 GRIBLJE_HOUSES = "6,18,21,46"
-VITALS_TOTAL = 702               # 698 + 4!
+VITALS_TOTAL = 2081               # 698 + 4!
 BLOKI_04455 = 185                # 181 + 4!
 SIDRA_TOTAL = 178                # 174 + 4!
 P80_HOUSES = 75                  # 0 novih (h6/18/21/36/46 že v vzorci!)
@@ -103,7 +103,7 @@ def main():
 
     # ---------- I6: qa-parish.ts pini ----------
     qa = open(QA_TS, encoding="utf-8").read()
-    n702 = qa.count("HOUSE_VITALS.length !== 2043")
+    n702 = qa.count("HOUSE_VITALS.length !== 2081")
     check("I6b vitals pini 702", n702 >= 63, str(n702))
     n185 = qa.count(".length !== 197")
     check("I6c bloki pini 193", n185 >= 34, str(n185))
@@ -124,7 +124,7 @@ def main():
     check("I8a stats vitals 702 (+4!)", st.get("entries") == EXPECTED_ENTRIES, str(st.get("entries")))
     # parish.ts-kaskada: counts iz qa-parish (I6) + p80-skripta pin
     p80 = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
-    check("I8b p80 vitals pin 702", "len(vitals) == 714" in p80, "")
+    check("I8b p80 vitals pin 702", "len(vitals) == 1940" in p80, "")
     check("I8c p80 houses pin 75", "len(houses) == 78" in p80, "")
 
     # ---------- I9: parish.ts P149-bloki ----------

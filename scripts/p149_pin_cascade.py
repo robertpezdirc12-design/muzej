@@ -26,7 +26,7 @@ def sub_file(path, pairs, regex=False):
 
 # ---------- 1. qa-parish.ts ----------
 qa = open(QA, encoding="utf-8").read()
-n698 = qa.count("HOUSE_VITALS.length !== 2043")
+n698 = qa.count("HOUSE_VITALS.length !== 2081")
 n181 = qa.count(".length !== 197")
 n174 = qa.count("poročna sidra ≠ 174")
 qa = qa.replace("HOUSE_VITALS.length !== 725", "HOUSE_VITALS.length !== 711")
@@ -58,8 +58,8 @@ open(QA, "w", encoding="utf-8").write(qa)
 
 # ---------- 2. p80 ----------
 sub_file("scripts/p80_parish_md_books.py",
-         [("len(vitals) == 688  # POSODABLJENO P144: 578 (era P126) → 670 (P140) → 675 (P141) → 681 (P142) → 685 (P143) → 686 (živi korpus!; P127–P144: poročna linija 1898–1915)",
-           "len(vitals) == 714  # POSODABLJENO P149: 578 (era P126) → 686 (P144) → 688 (P146) → 698 (P148: +10 blokov 1919!) → 702 (P149: +4 blokov 1920!)")])
+         [("len(vitals) == 1940  # POSODABLJENO P144: 578 (era P126) → 670 (P140) → 675 (P141) → 681 (P142) → 685 (P143) → 686 (živi korpus!; P127–P144: poročna linija 1898–1915)",
+           "len(vitals) == 1940  # POSODABLJENO P149: 578 (era P126) → 686 (P144) → 688 (P146) → 698 (P148: +10 blokov 1919!) → 702 (P149: +4 blokov 1920!)")])
 
 # ---------- 3. p115 (anchors + BLOCKS + I9c) ----------
 p115 = "scripts/p115_parish_marriage_1886.py"
@@ -88,8 +88,8 @@ for f in glob.glob("scripts/p1*.py"):
 
 # ---------- 5. tekoči I6 v p140–p148 ----------
 i6_map = [
-    ('qa.count("HOUSE_VITALS.length !== 2043")', 'qa.count("HOUSE_VITALS.length !== 2043")'),
-    ('qa.count("HOUSE_VITALS.length !== 2043")', 'qa.count("HOUSE_VITALS.length !== 2043")'),
+    ('qa.count("HOUSE_VITALS.length !== 2081")', 'qa.count("HOUSE_VITALS.length !== 2081")'),
+    ('qa.count("HOUSE_VITALS.length !== 2081")', 'qa.count("HOUSE_VITALS.length !== 2081")'),
     ("qa.count('.length !== 171')", "qa.count('.length !== 197')"),
     ('qa.count(".length !== 197")', 'qa.count(".length !== 197")'),
     ('qa.count(".length !== 197")', 'qa.count(".length !== 197")'),

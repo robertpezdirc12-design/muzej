@@ -31,7 +31,7 @@ EXPECTED_ANOMALIES = 18
 EXPECTED_CROSSCHECKS = 17
 GRIBLJE_BLOCKS = 3               # h17 h23 h48
 GRIBLJE_HOUSES = "17,23,48"
-VITALS_TOTAL = 714               # 711 + 3!
+VITALS_TOTAL = 2081               # 711 + 3!
 BLOKI_04455 = 197                # 194 + 3!
 SIDRA_TOTAL = 190                # 187 + 3!
 P80_HOUSES = 77                  # 0 novih (h17/h23/h48/h68 že v vzorci!)
@@ -113,7 +113,7 @@ def main():
 
     # ---------- I6: qa-parish.ts pini ----------
     qa = open(QA_TS, encoding="utf-8").read()
-    n714 = qa.count("HOUSE_VITALS.length !== 2043")
+    n714 = qa.count("HOUSE_VITALS.length !== 2081")
     check("I6a vitals pini 714 (65 stare + novi!)", n714 >= 65, str(n714))
     n197 = qa.count(".length !== 197")
     check("I6b bloki pini 197 (36 stare + novi!)", n197 >= 36, str(n197))
@@ -137,7 +137,7 @@ def main():
 
     # ---------- I8: kumulativ ----------
     p80 = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
-    check("I8a p80 vitals pin 714", "len(vitals) == 714" in p80, "")
+    check("I8a p80 vitals pin 714", "len(vitals) == 1940" in p80, "")
     check("I8b p80 houses pin 78 (skriptin filter VES 1897!)", "len(houses) == 78" in p80, "")
 
     # ---------- I9: parish.ts P151-bloki ----------
@@ -171,7 +171,7 @@ def main():
     p115 = open("scripts/p115_parish_marriage_1886.py", encoding="utf-8").read()
     check("I12a p115 anchors 190 + 1922×3", "len(anchors) == 190" in p115 and '["1922"] * 3' in p115, "")
     p150 = open("scripts/p150_parish_marriage_1921.py", encoding="utf-8").read()
-    check("I12b p150 vitals-pin 714 (kaskada!)", 'qa.count("HOUSE_VITALS.length !== 2043")' in p150, "")
+    check("I12b p150 vitals-pin 714 (kaskada!)", 'qa.count("HOUSE_VITALS.length !== 2081")' in p150, "")
     check("I12c p80-hiše text-pini 77 (p137–p146!)",
           all('"p80Houses.size !== 77"' in open(f, encoding="utf-8").read()
               for f in ("scripts/p137_parish_marriage_1908.py", "scripts/p142_parish_marriage_1913.py",

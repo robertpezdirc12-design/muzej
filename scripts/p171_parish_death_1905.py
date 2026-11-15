@@ -30,10 +30,10 @@ EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 5
 GRIBLJE_HOUSES = "2,18,21,25,27,31,32,35,42,59,63,64,65,81"
 GRIBLJE_ZAPS = [1, 16, 19, 20, 24, 26, 29, 39, 40, 44, 47, 49, 50, 52, 59, 61]
-VITALS_TOTAL = 1511             # 1205 + 14! (P190 = KONEC-KNJIGE!)
+VITALS_TOTAL = 2081             # 1205 + 14! (P190 = KONEC-KNJIGE!)
 BLOKI_04894 = 520               # 506 + 14! (P190 = KONEC-KNJIGE!)
 P80_HOUSES = 92                  # NESPREMENJENO (vseh-14-ŽE-v-p80!)
-KORPUS_HOUSES = 93               # NESPREMENJENO
+KORPUS_HOUSES = 94               # NESPREMENJENO
 NEW_SCANS = [100, 101, 102, 103, 104]   # s99-reuse (diag iz P170 + VLM-datumi!)
 
 results = []
@@ -189,7 +189,7 @@ def main():
           all(v["year"] < 1925 for v in d04894), "")
     p80 = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
     check("I6f p80-skripta pini 966 + 91 + gap-18 (vitals-P171-kaskada!)",
-          "len(vitals) == 1100" in p80 and "len(houses) == 94" in p80 and "len(gap) == 18" in p80, "")
+          "len(vitals) == 1940" in p80 and "len(houses) == 94" in p80 and "len(gap) == 18" in p80, "")
     houses_all = {v["houseNo"] for v in vit if v["houseNo"].isdigit()}
     check("I6g korpus = 93 hiš (NESPREMENJENO — vseh-14-hiš-ŽE-v-korpusu!)",
           len(houses_all) == KORPUS_HOUSES, str(len(houses_all)))
@@ -284,7 +284,7 @@ def main():
           all("VITALS_TOTAL = 1100" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
               for i, y in ((153, 1887), (154, 1888), (155, 1889), (156, 1890), (157, 1891), (158, 1892), (159, 1893), (160, 1894), (161, 1895), (162, 1896), (163, 1897), (164, 1898), (165, 1899), (166, 1900), (167, 1901), (168, 1902), (169, 1903), (170, 1904))), "")
     check("I12b p80-skripta P171-komentar-kaskada (950 → 966-pini!)",
-          "len(vitals) == 1100" in p80 and "P171: 950 → 966" in p80, "")
+          "len(vitals) == 1940" in p80 and "P171: 950 → 966" in p80, "")
     check("I12c stale-guardi → 1908 (20× qa)",
           all("1916+-mrliški bloki že v korpusu" in open(f"scripts/p{i}_parish_death_{y}.py", encoding="utf-8").read()
               for i, y in ((155, 1889), (156, 1890), (157, 1891), (158, 1892), (159, 1893), (160, 1894), (161, 1895), (162, 1896), (163, 1897), (164, 1898), (165, 1899), (166, 1900), (167, 1901), (168, 1902), (169, 1903), (170, 1904))), "")

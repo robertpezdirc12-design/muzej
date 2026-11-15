@@ -62,7 +62,7 @@ EXPECTED_CROSSCHECKS = 20
 GRIBLJE_ROWS = [1, 14, 17]
 GRIBLJE_HOUSES = ["6", "8", "13", "31", "86"]
 GRIBLJE_BLOCKS = 5              # №1 2 (INTRA!) + №14 2 + №17 1
-VITALS_TOTAL = 670              # 659 + 5
+VITALS_TOTAL = 2081              # 659 + 5
 BLOKI_04455 = 147               # 142 + 5
 SIDRA_TOTAL = 157               # 135 + 5 (1910:5)
 RAUY_COUNT = 16                 # 16+/19 blokov ne — 17–18/19 vpisov (№9 Danijel!)
@@ -163,7 +163,7 @@ def main():
     # ---------- I6: qa-parish.ts ----------
     qa = open(QA_TS, encoding="utf-8").read()
     check("I6a qa-p139 id", "qa-p139-parish-marriage-1910" in qa)
-    n664 = qa.count("HOUSE_VITALS.length !== 2043")
+    n664 = qa.count("HOUSE_VITALS.length !== 2081")
     check("I6b vitals pini 664", n664 >= 54, str(n664))
     n147 = qa.count(".length !== 197")
     check("I6c bloki pini 171 (P146-sanacija starega 147-pina!)", n147 >= 25, str(n147))

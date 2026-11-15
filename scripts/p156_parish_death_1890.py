@@ -34,7 +34,7 @@ EXPECTED_EXCLUDED = 8            # skupine vrstic izven Gribelj + 1891-lead + 18
 EXPECTED_ANOMALIES = 10
 EXPECTED_CROSSCHECKS = 10
 GRIBLJE_HOUSES = "7,18,26,27,30,32,35,37,38,42,58,71,90,91"
-VITALS_TOTAL = 1511             # 1205 + 14! (P190 = KONEC-KNJIGE!)
+VITALS_TOTAL = 2081             # 1205 + 14! (P190 = KONEC-KNJIGE!)
 BLOKI_04894 = 520               # 506 + 14! (P190 = KONEC-KNJIGE!)
 P80_HOUSES = 82                  # 81 + h90! (EDINA nova p80-hiša 1890!)
 NEW_SCANS = [24, 25, 26, 27, 28]
@@ -190,7 +190,7 @@ def main():
           not [v for v in vit if v["bookSignature"] == "04894" and (v["year"] or 0) >= 1925], "")  # POSODABLJENO P173
     p80_script = open("scripts/p80_parish_md_books.py", encoding="utf-8").read()
     check("I6f p80-skripta pini 950 + 91 + gap-18 (P170-kaskada!)",
-          "len(vitals) == 1100" in p80_script and "len(houses) == 94" in p80_script and "len(gap) == 18" in p80_script, "")
+          "len(vitals) == 1940" in p80_script and "len(houses) == 94" in p80_script and "len(gap) == 18" in p80_script, "")
     houses_all = {v["houseNo"] for v in vit if v["houseNo"] and v["houseNo"].isdigit()}
     check("I6g korpus = 92 hiš (P159: +h98 EDINA!)", len(houses_all) == 93, str(len(houses_all)))
     # h90 = EDINA nova p80-hiša (krstni dokazi izven filtra!)
